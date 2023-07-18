@@ -1,18 +1,14 @@
 ---
 title: Skapa en ny GRE-fältkomponent
-seo-title: Creating a New Granite UI Field Component
 description: Gränssnittet i Granite innehåller en rad komponenter som är utformade för att användas i formulär, så kallade fält
-seo-description: Granite UI provides a range of components designed to be used in forms, called fields
-uuid: cf26e057-4b0c-45f4-8975-2c658517f20e
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: platform
 content-type: reference
-discoiquuid: 94b9eeee-aae3-4b28-9d6f-1be0e4acd982
 exl-id: e4820330-2ee6-4eca-83fd-462aa0b83647
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 26c0411d6cc16f4361cfa9e6b563eba0bfafab1e
 workflow-type: tm+mt
-source-wordcount: '539'
+source-wordcount: '527'
 ht-degree: 0%
 
 ---
@@ -29,7 +25,7 @@ Gränssnittet Granite innehåller ett antal komponenter som är avsedda att anv�
 
 >[!NOTE]
 >
->Mer information om fält finns i [Granite UI-dokumentation](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/index.html).
+>Mer information om fält finns i [Granite UI-dokumentation](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/index.html).
 
 Använd ramverket Granite UI Foundation för att utveckla och/eller utöka Granite-komponenter. Detta har två element:
 
@@ -39,19 +35,19 @@ Använd ramverket Granite UI Foundation för att utveckla och/eller utöka Grani
 
       * grund - modulär, sammansättningsbar, lagerhanterbar, återanvändbar
       * komponenter - Sling-komponenter
-   * hjälpmedel för utveckling av ansökningar
 
+   * hjälpmedel för utveckling av ansökningar
 
 * klientsidan:
 
-   * en samling klientlibs som innehåller vissa vokabulära tecken (dvs. en utökning av HTML) för att uppnå generiska interaktionsmönster via ett hypermediedrivet användargränssnitt
+   * en samling klientlibs som innehåller vokabulära tecken (dvs. HTML) för att uppnå generiska interaktionsmönster via ett hypermediastyrt användargränssnitt.
 
 Den generiska användargränssnittskomponenten Granite `field` består av två intressanta filer:
 
 * `init.jsp`: hanterar den allmänna behandlingen, etiketter, beskrivning och tillhandahåller formulärvärden som du behöver när du återger fältet.
 * `render.jsp`: Det är här som den faktiska återgivningen av fältet utförs och måste åsidosättas för ditt anpassade fält. ingår i `init.jsp`.
 
-Se [Bevilja gränssnittsdokumentation - fält](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/jcr_root/libs/granite/ui/components/foundation/form/field/index.html) om du vill ha mer information.
+Se [Bevilja gränssnittsdokumentation - fält](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/components/foundation/form/field/index.html) för mer information.
 
 Se till exempel:
 
@@ -69,9 +65,9 @@ Se till exempel:
 
 ## Skapa serverskriptet för komponenten {#creating-the-server-side-script-for-the-component}
 
-Ditt anpassade fält bör bara åsidosätta `render.jsp` skript, där du anger koden för komponenten. Du kan betrakta JSP (dvs. återgivningsskriptet) som en wrapper för koden.
+Ditt anpassade fält bör bara åsidosätta `render.jsp` skript, där du anger koden för komponenten. Du kan betrakta JSP-filen (det vill säga återgivningsskriptet) som en wrapper för koden.
 
-1. Skapa en ny komponent som använder `sling:resourceSuperType` egenskap att ärva från:
+1. Skapa en komponent som använder `sling:resourceSuperType` egenskap att ärva från:
 
    `/libs/granite/ui/components/foundation/form/field`
 
@@ -79,7 +75,7 @@ Ditt anpassade fält bör bara åsidosätta `render.jsp` skript, där du anger k
 
    `render.jsp`
 
-   I det här skriptet måste du generera hypermediemarkeringen (d.v.s. berikad kod som innehåller hypermedielagring) så att klienten vet hur man interagerar med det genererade elementet. Detta bör följa kodningsformatet för serversidan Granite.
+   I det här skriptet skapar du hypermediemarkeringen (d.v.s. berikad kod som innehåller hypermediatillägget) så att klienten kan interagera med det genererade elementet. Detta bör följa kodningsformatet för serversidan Granite.
 
    När du anpassar, det enda kontrakt som du *måste* fulfill är att läsa formulärvärdet (initierat i `init.jsp`) från begäran med:
 
@@ -89,11 +85,11 @@ Ditt anpassade fält bör bara åsidosätta `render.jsp` skript, där du anger k
    vm.get("value, String.class");
    ```
 
-   Mer information finns i implementeringen av användargränssnittsfält för Granite som är färdiga att användas. till exempel `/libs/granite/ui/components/foundation/form/textfield`.
+   Mer information finns i implementeringen av körklara GRÄNSSNITTSfält för Granite. till exempel `/libs/granite/ui/components/foundation/form/textfield`.
 
    >[!NOTE]
    >
-   >För närvarande är JSP den rekommenderade skriptmetoden eftersom det inte är lätt att skicka information från en komponent till en annan (vilket är ganska vanligt i formulärfält) i HTML.
+   >För närvarande är JSP den rekommenderade skriptmetoden eftersom det inte är lätt att skicka information från en komponent till en annan (vilket är vanligt i formulärfält) i HTML.
 
 ## Skapa klientbiblioteket för komponenten {#creating-the-client-library-for-the-component}
 

@@ -1,33 +1,35 @@
 ---
 title: Utvecklingsverktyg
-seo-title: Development Tools
-description: Det finns ett antal tillgängliga verktygsuppsättningar för att utveckla dina JCR-, Apache Sling- eller AEM-program
-seo-description: To develop your JCR, Apache Sling or AEM applications, a number of tool sets are available
-uuid: 1bee3a52-5d76-4b0c-a222-a02e12ff3a43
+description: Det finns flera verktygsuppsättningar för att utveckla dina JCR-, Apache Sling- eller Adobe Experience Manager-program.
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: development-tools
 content-type: reference
-discoiquuid: 76c570e5-46ed-46be-9864-4fe4a83f0caf
 exl-id: 97310ed5-f8fb-416c-8a66-68f652abeaa0
-source-git-commit: 4967a6d9ad92272a1ff442456fe65de51cc46a73
+source-git-commit: 26c0411d6cc16f4361cfa9e6b563eba0bfafab1e
 workflow-type: tm+mt
-source-wordcount: '373'
+source-wordcount: '379'
 ht-degree: 0%
 
 ---
 
 # Utvecklingsverktyg{#development-tools}
 
-Följande verktygsuppsättningar är tillgängliga för att utveckla dina JCR-, Apache Sling- eller AEM-program:
+Följande verktygsuppsättningar är tillgängliga för att utveckla dina JCR-, Apache Sling- eller Adobe Experience Manager-program (AEM):
 
 * en uppsättning bestående av [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md) och WebDAV. CRXDE Lite är inbäddat i CRX/AEM och gör att du kan utföra standardutvecklingsuppgifter i webbläsaren. Med CRXDE Lite kan du skapa och redigera filer (som .jsp och .java), mappar, mallar, komponenter, dialogrutor, noder, egenskaper och paket när du loggar och integrerar med SVN.
 
-   CRXDE Lite rekommenderas när du inte har direktåtkomst till CRX-/AEM-servern, när du utvecklar ett program genom att utöka eller ändra körklara komponenter och Java-paket eller när du inte behöver en dedikerad felsökare, kodkomplettering och syntaxmarkering.
+  CRXDE Lite rekommenderas när du inte har direktåtkomst till CRX/AEM-servern, när du utvecklar ett program genom att utöka eller ändra körklara komponenter och Java™-paket eller när du inte behöver en dedikerad felsökare, kodkomplettering och syntaxmarkering.
 
-* en uppsättning bestående av en integrerad utvecklingsmiljö (t.ex. [Eclipse](/help/sites-developing/howto-projects-eclipse.md) eller [IntelliJ](/help/sites-developing/ht-intellij.md)), ett byggverktyg (till exempel: [Apache Maven](/help/sites-developing/ht-projects-maven.md)), FileVault som har utvecklats av Adobe för att mappa en databas till ett filsystem, ett versionskontrollsystem (till exempel: Subversion), ett felsökningssystem (till exempel: Jira), ett centralt beroendehanteringssystem (till exempel: Apache Archiva) och ett system för automatisering av byggen (till exempel: Apache Continuum).
+* en uppsättning bestående av följande:
+   * En integrerad utvecklingsmiljö. Till exempel: [Eclipse](/help/sites-developing/howto-projects-eclipse.md) eller [IntelliJ](/help/sites-developing/ht-intellij.md).
+   * Ett byggverktyg. Till exempel: [Apache Maven](/help/sites-developing/ht-projects-maven.md).
+   * FileVault som har utvecklats av Adobe för att mappa en databas till ett filsystem, ett versionskontrollsystem. Exempel: Subversion.
+   * Ett felsökningssystem. Till exempel Jira.
+   * Ett centralt system för beroendehantering. Exempel: Apache Archiva.
+   * Och ett system för automatisering av bygge. Exempel: Apache Continuum.
 
-   Med den här konfigurationen kan du helt integrera ditt program (innehåll, kod, konfiguration) i alla utvecklingsmiljöer och processer. Länken mellan de olika elementen är filsystemrepresentationen av databasen via FileVault, eftersom alla tidigare nämnda utvecklingsverktyg kan fungera med filer.
+  Med den här installationen kan du helt integrera programmet (innehåll, kod, konfiguration) i alla utvecklingsmiljöer och processer. Länken mellan de olika elementen är filsystemrepresentationen av databasen via FileVault, eftersom alla tidigare nämnda utvecklingsverktyg kan användas med filer.
 
 ## Tillägg för integrerade utvecklingsmiljöer {#extensions-for-integrated-development-environments}
 
@@ -53,7 +55,7 @@ AEM levereras med andra verktyg som underlättar utvecklingen:
 
 Verktyg som underlättar skapandet av nya projekt:
 
-* [AEM Project Archetype](https://github.com/Adobe-Marketing-Cloud/aem-project-archetype)
+* [AEM Project Archetype](https://github.com/adobe/aem-project-archetype)
 * [AEM Lazybone Templates](https://github.com/Adobe-Consulting-Services/lazybones-aem-templates)
 
 >[!NOTE]

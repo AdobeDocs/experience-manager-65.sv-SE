@@ -1,20 +1,16 @@
 ---
 title: Hållbara uppgraderingar
-seo-title: Sustainable Upgrades
-description: Läs mer om hållbara uppgraderingar i AEM 6.4.
-seo-description: Learn about sustainable upgrades in AEM 6.4.
-uuid: 80673076-624b-4308-8233-129cb4422bd5
+description: Läs om hållbara uppgraderingar i Adobe Experience Manager 6.4.
 contentOwner: sarchiz
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: upgrading
-discoiquuid: e35c9352-f0d5-4db5-b88f-0720af8f6883
 docset: aem65
 feature: Upgrading
 exl-id: b777fdca-e7a5-427a-9e86-688dd7cac636
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 26c0411d6cc16f4361cfa9e6b563eba0bfafab1e
 workflow-type: tm+mt
-source-wordcount: '851'
+source-wordcount: '838'
 ht-degree: 0%
 
 ---
@@ -25,35 +21,35 @@ ht-degree: 0%
 
 ### Arkitektur (funktion/infrastruktur/innehåll/program)  {#architecture-functional-infrastructure-content-application}
 
-Customization Framework-funktionen är utformad för att minska antalet fel i icke-utökningsbara områden av koden (som APIS) eller innehåll (som övertäckningar) som inte är uppgraderingsvänliga.
+Customization Framework-funktionen är utformad för att minska antalet fel i icke-utökningsbara områden i koden (som APIS) eller innehåll (som övertäckningar) som inte är uppgraderingsvänliga.
 
 Det finns två komponenter i anpassningsramverket: den **API-gränssnitt** och **Innehållsklassificering**.
 
 #### API-gränssnitt {#api-surface}
 
-I tidigare versioner av AEM exponerades många API:er via Uber Jar. Vissa av dessa API:er var inte avsedda att användas av kunder, men exponerades för AEM funktioner i olika paket. I framtiden kommer Java-API:erna att markeras som Public eller Private för att visa kunderna vilka API:er som är säkra att använda i samband med uppgraderingar. Andra detaljer är:
+I tidigare versioner av Adobe Experience Manager (AEM) exponerades många API:er via Uber Jar. Vissa av dessa API:er var inte avsedda att användas av kunder, men var exponerade för AEM funktioner i olika paket. Framöver markeras Java™-API:erna som Public eller Private för att visa kunderna vilka API:er som är säkra att använda i samband med uppgraderingar. Andra detaljer är:
 
-* Java-API:er markerade som `Public` kan användas och refereras av anpassade implementeringspaket.
+* Java™-API:er markerade som `Public` kan användas och refereras av anpassade implementeringspaket.
 
 * Offentliga API:er är bakåtkompatibla med installationen av ett kompatibilitetspaket.
-* Kompatibilitetspaketet innehåller en Uber JAR-kompatibel för att säkerställa bakåtkompatibilitet
-* Java-API:er markerade som `Private` är avsedda att endast användas av AEM interna paket och ska inte användas av anpassade paket.
+* Kompatibilitetspaketet innehåller en Uber JAR-kompatibel komponent för att säkerställa bakåtkompatibilitet
+* Java™-API:er markerade som `Private` är avsedda att endast användas av AEM interna paket och ska inte användas av anpassade paket.
 
 >[!NOTE]
 >
->Begreppet `Private` och `Public` i detta sammanhang bör inte förväxlas med Java-föreläsningar av offentliga och privata klasser.
+>Begreppet `Private` och `Public` i detta sammanhang bör inte förväxlas med Java™-föreläsningar av offentliga och privata klasser.
 
 ![image2018-2-12_23-52-48](assets/image2018-2-12_23-52-48.png)
 
 #### Innehållsklassificeringar {#content-classifications}
 
-AEM har länge använt principen för övertäckningar och Sling Resource Merger för att ge kunderna möjlighet att utöka och anpassa AEM. Fördefinierade funktioner som driver AEM konsoler och användargränssnitt lagras i **/libs**. Kunderna kan aldrig ändra något under **/libs** men kan lägga till ytterligare innehåll under **/apps** för att täcka över och utöka funktionaliteten som definieras i **/libs** (Mer information finns i Utveckla med övertäckningar.) Detta orsakade fortfarande många problem när AEM uppgraderades som innehåll i **/libs** kan ändras så att övertäckningsfunktionen bryts på oväntade sätt. Kunderna kan också utöka AEM genom arv via `sling:resourceSuperType`eller bara referera till en komponent i **/libs** direkt via sling:resourceType. Liknande uppgraderingsproblem kan uppstå med referens- och åsidosättningsanvändningsfall.
+AEM har länge använt principen för övertäckningar och Sling Resource Merger för att ge kunderna möjlighet att utöka och anpassa AEM. Fördefinierade funktioner som driver AEM konsoler och användargränssnitt lagras i **/libs**. Kunderna kan aldrig ändra något under **/libs** men kan lägga till ytterligare innehåll under **/apps** för att täcka över och utöka funktionaliteten som definieras i **/libs** (Mer information finns i Utveckla med övertäckningar.) Detta orsakade fortfarande många problem när AEM uppgraderades som innehåll i **/libs** kan ändra så att övertäckningsfunktionen bryts på oväntade sätt. Kunderna kan också utöka AEM genom arv genom att använda `sling:resourceSuperType`eller bara referera till en komponent i **/libs** direkt som sling:resourceType. Liknande uppgraderingsproblem kan uppstå med referens- och åsidosättningsanvändningsfall.
 
-För att göra det säkrare och enklare för kunderna att förstå vilka områden i **/libs** är säkra att använda och täcka över innehållet i **/libs** har klassificerats med följande blandningar:
+För att göra det säkrare och enklare för kunderna att förstå vilka delar av **/libs** är säkra att använda och täcka över innehållet i **/libs** har klassificerats med följande blandningar:
 
-* **Offentlig (granit:PublicArea)** - Definierar en nod som offentlig så att den kan överlappas, ärvs ( `sling:resourceSuperType`) eller används direkt ( `sling:resourceType`). Noder under /libs markerade som Public (Offentliga) kan uppgraderas utan risk med ett kompatibilitetspaket. I allmänhet bör kunderna endast utnyttja noder som är markerade som offentliga.
+* **Offentlig (granit:PublicArea)** - Definierar en nod som offentlig så att den kan överlappas, ärvs ( `sling:resourceSuperType`) eller används direkt ( `sling:resourceType`). Noder under /libs markerade som Public (Offentliga) är säkra att uppgradera med ett kompatibilitetspaket. I allmänhet bör kunderna bara använda noder som är markerade som Public (Offentliga).
 
-* **Abstrakt (granit:AbstractArea)** - Definierar en nod som abstrakt. Noder kan överlappas eller ärvas ( `sling:resourceSupertype`) men får inte användas direkt ( `sling:resourceType`).
+* **Abstrakt (granit:AbstractArea)** - Definierar en nod som abstrakt. Noder kan överlappas eller ärvas ( `sling:resourceSupertype`) men används inte direkt ( `sling:resourceType`).
 
 * **Final (granite:FinalArea)** - Definierar en nod som final. Noder som klassificerats som slutliga bör inte överlappas eller ärvas. Slutnoder kan användas direkt via `sling:resourceType`. Undernoder under den sista noden betraktas som interna som standard.
 
@@ -63,11 +59,11 @@ För att göra det säkrare och enklare för kunderna att förstå vilka område
 
 >[!NOTE]
 >
->Dessa profiler används endast mot Sling-sökvägsbaserade mekanismer. Andra områden i **/libs** som ett klientbibliotek kan markeras som `Internal`, men kan ändå användas med standardinkludering av klientlib. Det är viktigt att kunden i dessa fall fortsätter att respektera den interna klassificeringen.
+Dessa profiler används endast mot Sling-sökvägsbaserade mekanismer. Andra områden i **/libs** som ett klientbibliotek kan markeras som `Internal`, men kan ändå användas med standardinkludering av klientlib. Det är viktigt att kunden i dessa fall fortsätter att respektera den interna klassificeringen.
 
 #### Indikatorer för CRXDE Lite-innehållstyp {#crxde-lite-content-type-indicators}
 
-Blandningar som används i CRXDE Lite visar innehållsnoder och träd som markerats som `INTERNAL` som att vara nedtonad. För `FINAL` bara ikonen är nedtonad. De underordnade noderna visas också i grått. Funktionen Overlay Node är inaktiverad i båda dessa fall.
+Blandningar som används i CRXDE Lite visar innehållsnoder och träd som markerats som `INTERNAL` som nedtonad (nedtonad). För `FINAL`är det bara ikonen som är nedtonad. De underordnade noderna visas också nedtonade. Funktionen Overlay Node är inaktiverad i båda dessa fall.
 
 **Offentlig**
 
@@ -85,20 +81,20 @@ Blandningar som används i CRXDE Lite visar innehållsnoder och träd som marker
 
 >[!NOTE]
 >
->Från och med AEM 6.5 rekommenderar Adobe att du använder mönsteravkännaren för att upptäcka åtkomstfel för innehåll. Mönsterdetektorrapporter är mer detaljerade, identifierar fler problem och minskar sannolikheten för falska positiva.
+Från och med AEM 6.5 rekommenderar Adobe att du använder mönsteravkännaren för att upptäcka åtkomstfel för innehåll. Mönsterdetektorrapporter är mer detaljerade, identifierar fler problem och minskar sannolikheten för falska positiva.
 >
->Mer information finns i [Utvärdera uppgraderingskomplexiteten med mönsteravkännaren](/help/sites-deploying/pattern-detector.md).
+Mer information finns i [Utvärdera uppgraderingskomplexiteten med mönsteravkännaren](/help/sites-deploying/pattern-detector.md).
 
-AEM 6.5 kommer att levereras med en hälsokontroll som varnar kunderna om överlagrat eller refererat innehåll används på ett sätt som inte är förenligt med innehållsklassificeringen.
+AEM 6.5 levereras med en hälsokontroll som varnar kunderna om överlagrat eller refererat innehåll används på ett sätt som inte är förenligt med innehållsklassificeringen.
 
 ** Kontroll av åtkomsten till innehåll som delas/beviljas** är en ny hälsokontroll som övervakar databasen för att se om kundkoden inte har åtkomst till skyddade noder i AEM.
 
-Detta kommer att skanna **/apps** och tar normalt några sekunder att slutföra.
+Detta skannar **/apps** och tar normalt några sekunder att slutföra.
 
-För att få tillgång till den nya hälsokontrollen måste du göra följande:
+Så här kommer du åt den nya hälsokontrollen:
 
 1. Navigera AEM hemskärmen till **Verktyg > Åtgärder > Hälsorapporter**
-1. Klicka på **Kontroll av innehållsåtkomst för Sling/Granite** enligt nedan:
+1. Klicka **Kontroll av innehållsåtkomst för Sling/Granite**.
 
    ![screen_shot_2017-12-14at5648pm](assets/screen_shot_2017-12-14at55648pm.png)
 
@@ -106,8 +102,8 @@ När sökningen är klar visas en lista med varningar som meddelar slutanvändar
 
 ![screenshot-2018-2-5healthreports](assets/screenshot-2018-2-5healthreports.png)
 
-Efter att ha åtgärdat överträdelserna återgår den till grön stat:
+När överträdelserna har åtgärdats återgår den till grönt:
 
 ![screenshot-2018-2-5healthreports-violerna](assets/screenshot-2018-2-5healthreports-violations.png)
 
-Hälsokontrollen visar information som samlats in av en bakgrundstjänst som kontrollerar asynkront när en övertäckning eller resurstyp används i alla Sling-sökvägar. Om innehållsblandningar används felaktigt rapporteras en överträdelse.
+Hälsokontrollen visar information som samlats in av en bakgrundstjänst som kontrollerar asynkront när en övertäckning eller resurstyp används i alla Sling-sökvägar. Om innehållsmixiner används felaktigt rapporteras en överträdelse.

@@ -1,8 +1,6 @@
 ---
-title: Uppgradera till AEM 6.5
-seo-title: Upgrading to AEM 6.5
-description: Lär dig grunderna i hur du uppgraderar en äldre AEM till AEM 6.5.
-seo-description: Learn about the basics of upgrading an older AEM installation to AEM 6.5.
+title: Uppgradera till Adobe Experience Manager 6.5
+description: Lär dig grunderna i hur du uppgraderar en äldre Adobe Experience Manager-installation (AEM) till AEM 6.5.
 contentOwner: sarchiz
 topic-tags: upgrading
 content-type: reference
@@ -10,22 +8,21 @@ docset: aem65
 targetaudience: target-audience upgrader
 feature: Upgrading
 exl-id: 722d544c-c342-4c1c-80e5-d0a1244f4d36
-source-git-commit: 3d713021ac410ca2925a282c5dfca98ed4e483ee
+source-git-commit: 26c0411d6cc16f4361cfa9e6b563eba0bfafab1e
 workflow-type: tm+mt
-source-wordcount: '681'
+source-wordcount: '678'
 ht-degree: 0%
 
 ---
 
-# Uppgradera till AEM 6.5 {#upgrading-to-aem}
+# Uppgradera till Adobe Experience Manager (AEM) 6.5 {#upgrading-to-aem}
 
-I detta avsnitt beskriver vi uppgradering av en AEM till AEM 6.5:
+Detta avsnitt behandlar uppgradering av en AEM till AEM 6.5:
 
 * [Planera din uppgradering](/help/sites-deploying/upgrade-planning.md)
 * [Utvärdera Upgrade Complexity med Pattern Detector](/help/sites-deploying/pattern-detector.md)
 * [Bakåtkompatibilitet i AEM 6.5](/help/sites-deploying/backward-compatibility.md)
-
-   <!--* [Using Offline Reindexing To Reduce Downtime During an Upgrade](/help/sites-deploying/upgrade-offline-reindexing.md)-->
+  <!--* [Using Offline Reindexing To Reduce Downtime During an Upgrade](/help/sites-deploying/upgrade-offline-reindexing.md)-->
 * [Uppgraderingsprocedur](/help/sites-deploying/upgrade-procedure.md)
 * [Uppgradera kod och anpassningar](/help/sites-deploying/upgrading-code-and-customizations.md)
 * [Underhållsaktiviteter före uppgraderingen](/help/sites-deploying/pre-upgrade-maintenance-tasks.md)
@@ -48,19 +45,19 @@ För att underlätta referensen till de AEM förekomsterna i dessa procedurer an
 
 Nedan följer viktiga ändringar av anmärkningar under de senaste versionerna av AEM:
 
-AEM 6.0 introducerade den nya Jackrabbit Oak-databasen. Persistence Managers ersattes av [Micro Kernels](/help/sites-deploying/platform.md#contentbody_title_4). Från och med version 6.1 stöds inte längre CRX2. Ett migreringsverktyg som kallas crx2oak måste köras för att kunna migrera CRX2-databaser från 5.6.1-instanser. Mer information finns i [Använda CRX2OAK-migreringsverktyget](/help/sites-deploying/using-crx2oak.md).
+AEM 6.0 introducerade den nya Jackrabbit Oak-databasen. Persistence Managers ersattes av [Micro Kernels](/help/sites-deploying/platform.md#contentbody_title_4). Från och med version 6.1 stöds inte längre CRX2. Ett migreringsverktyg som kallas crx2oak måste köras för att du ska kunna migrera CRX2-databaser från 5.6.1-instanser. Mer information finns i [Använda CRX2OAK-migreringsverktyget](/help/sites-deploying/using-crx2oak.md).
 
-Om Assets Insights ska användas och du uppgraderar från en version som är äldre än AEM 6.2, måste resurserna migreras och ha ID:n som genereras via en JMX-böna. I våra interna tester migrerades 125 K-resurser på en TjärMK-miljö på en timme, men resultatet kan variera.
+Om Assets Insights används och du uppgraderar från en version som är äldre än AEM 6.2, måste resurserna migreras och ha ID:n som genereras via en JMX-böna. För Adobe interna tester migrerades 125 K-resurser på en TjärMK-miljö på en timme, men resultatet kan variera.
 
-6.3 introducerade ett nytt format för `SegmentNodeStore`, som är grunden för TjärMK-implementeringen. Om du uppgraderar från en version som är äldre än AEM 6.3 måste du migrera databasen som en del av uppgraderingen, vilket innebär driftstopp.
+6.3 introducerade ett nytt format för `SegmentNodeStore`, som är grunden för TjärMK-implementeringen. Om du uppgraderar från en version som är äldre än AEM 6.3, kräver detta en databasmigrering som en del av uppgraderingen, inklusive driftstopp.
 
-Adobe Engineering beräknar att det är ca 20 minuter. Observera att omindexering inte behövs. Dessutom har en ny version av crx2oak-verktyget släppts för att fungera med det nya databasformatet.
+Adobe Engineering beräknar att det är ca 20 minuter. Omindexering behövs inte. Dessutom har en ny version av crx2oak-verktyget släppts för att fungera med det nya databasformatet.
 
 **Denna migrering krävs inte om du uppgraderar från AEM 6.3 till AEM 6.5.**
 
 Underhållsuppgifterna före uppgraderingen har optimerats för automatisering.
 
-Kommandoradsalternativen för crx2oak-verktyget har ändrats till att vara automatiseringsvänliga och ha stöd för fler uppgraderingsalternativ.
+Kommandoradsalternativen för crx2oak-verktyget har ändrats till att vara automatiseringsvänliga och stöder fler uppgraderingsalternativ.
 
 Kontrollerna efter uppgraderingen har också gjorts automatiseringsvänliga.
 
@@ -80,9 +77,9 @@ Uppgradering av AEM är en flerstegsprocess som ibland tar flera månader. Följ
 
 ## Uppgraderingsflöde {#upgrade-overview-1}
 
-Bilden nedan visar det rekommenderade arbetsflödet för uppgradering. Observera referensen till de nya funktioner som vi har infört. Uppgraderingen ska börja med Mönsteravkännaren (se [Utvärdera Upgrade Complexity med Pattern Detector](/help/sites-deploying/pattern-detector.md)) som låter dig bestämma vilken väg du vill ta för kompatibilitet med AEM 6.4 baserat på mönstren i den genererade rapporten.
+Bilden nedan visar det rekommenderade arbetsflödet för uppgradering. Notera referensen till de nya funktioner som Adobe har introducerat. Uppgraderingen ska börja med Mönsteravkännaren (se [Utvärdera Upgrade Complexity med Pattern Detector](/help/sites-deploying/pattern-detector.md)) som låter dig bestämma vilken väg du vill ta för kompatibilitet med AEM 6.4 baserat på mönstren i den genererade rapporten.
 
-I 6.5 fokuserades alla nya funktioner bakåt så att de var kompatibla, men i de fall där du fortfarande ser problem med bakåtkompatibilitet kan du i kompatibilitetsläget tillfälligt skjuta upp utvecklingen så att den anpassade koden är kompatibel med 6.5. Med den här metoden undviker du utvecklingsarbete direkt efter uppgraderingen (se [Bakåtkompatibilitet i AEM 6.5](/help/sites-deploying/backward-compatibility.md)).
+I 6.5 fokuserades allt för att göra alla nya funktioner bakåtkompatibla, men i de fall där vissa bakåtkompatibilitetsproblem kvarstår kan du i kompatibilitetsläget tillfälligt skjuta upp utvecklingen så att den anpassade koden är kompatibel med 6.5. Med den här metoden undviker du utvecklingsarbete direkt efter uppgraderingen (se [Bakåtkompatibilitet i AEM 6.5](/help/sites-deploying/backward-compatibility.md)).
 
 Slutligen, i din 6.5-utvecklingscykel, funktioner som introducerats under Hållbara uppgraderingar (se [Hållbara uppgraderingar](/help/sites-deploying/sustainable-upgrades.md)) hjälper er att följa bästa praxis för att göra framtida uppgraderingar ännu effektivare och smidigare.
 

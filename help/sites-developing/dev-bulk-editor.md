@@ -1,37 +1,33 @@
 ---
 title: Developing the Bulk Editor
-seo-title: Developing the Bulk Editor
 description: Taggar gör att innehållet kan kategoriseras och struktureras
-seo-description: Tagging allows content to be categorized and organized
-uuid: 3cd04c52-5bdb-47f6-9fa3-d7a4937e8e20
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: extending-aem
 content-type: reference
-discoiquuid: e9a1ff95-e88e-41f0-9731-9a59159b4653
 exl-id: 8753aaab-959f-459b-bdb6-057cbe05d480
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 26c0411d6cc16f4361cfa9e6b563eba0bfafab1e
 workflow-type: tm+mt
-source-wordcount: '1837'
+source-wordcount: '1836'
 ht-degree: 0%
 
 ---
 
 # Developing the Bulk Editor{#developing-the-bulk-editor}
 
-I det här avsnittet beskrivs hur du utvecklar ett gruppredigeringsverktyg och hur du utökar produktlistekomponenten, som baseras på gruppredigeraren.
+I det här avsnittet beskrivs hur du utvecklar verktyget Gruppredigerare och hur du utökar komponenten Produktlista, som baseras på gruppredigeraren.
 
 ## Frågeparametrar för gruppredigerare {#bulk-editor-query-parameters}
 
-När du arbetar med massredigeraren finns det flera frågeparametrar som du kan lägga till i URL:en för att anropa massredigeraren med en viss konfiguration. Om du vill att bulkredigeraren alltid ska användas med en viss konfiguration, till exempel som i produktlistekomponenten, måste du ändra bulkeditor.jsp (som finns i /libs/wcm/core/components/bulkeditor) eller skapa en komponent med den specifika konfigurationen. Ändringar som görs med frågeparametrar är inte permanenta.
+När du arbetar med gruppredigeraren finns det flera frågeparametrar som du kan lägga till i URL:en för att anropa gruppredigeraren med en viss konfiguration. Om du vill att gruppredigeraren alltid ska användas med en viss konfiguration, till exempel som i produktlistkomponenten, måste du redigera `bulkeditor.jsp` (i /libs/wcm/core/components/bulkeditor) eller skapa en komponent med den specifika konfigurationen. Ändringar som görs med frågeparametrar är inte permanenta.
 
-Om du till exempel skriver in följande i webbläsarens URL:
+Om du t.ex. skriver följande i webbläsarens URL:
 
 `https://<servername><port_number>/etc/importers/bulkeditor.html?rootPath=/content/geometrixx/en&queryParams=geometrixx&initialSearch=true&hrp=true`
 
-massredigeraren visas utan **Rotsökväg** fältet as hrp=true döljs. Med parametern hrp=false visas fältet (standardvärdet).
+Massredigeraren visas utan **Rotsökväg** fältet as hrp=true döljs. Med parametern hrp=false visas fältet (standardvärdet).
 
-Här följer en lista med frågeparametrar för massredigering:
+Här följer en lista med frågeparametrar för gruppredigeraren:
 
 >[!NOTE]
 >
@@ -166,14 +162,14 @@ Här följer en lista med frågeparametrar för massredigering:
 
 I det här avsnittet finns en översikt över hur du använder gruppredigeraren och en beskrivning av den befintliga Geometrixx baserat på gruppredigeraren: komponenten Produktlista.
 
-Med komponenten Produktlista kan användare visa och redigera en datatabell. Du kan till exempel använda komponenten Produktlista för att representera produkter i en katalog. Informationen visas i en HTML-tabell och redigering utförs i **Redigera** som innehåller en BulkEditor-widget. (Den här gruppredigeraren är exakt densamma som den som finns på /etc/importers/bulkeditor.html eller via Verktyg-menyn). Produktlistkomponenten har konfigurerats för specifika, begränsade massredigeringsfunktioner. Alla delar av gruppredigeraren (eller komponenter som härletts från gruppredigeraren) kan konfigureras.
+Med komponenten Produktlista kan användare visa och redigera en datatabell. Du kan till exempel använda komponenten Produktlista för att representera produkter i en katalog. Informationen visas i en HTML-tabell och redigering utförs i **Redigera** som innehåller en BulkEditor-widget. (Den här gruppredigeraren är samma som den som finns på /etc/importers/bulkeditor.html eller via Verktyg-menyn). Komponenten Produktlista har konfigurerats för specifika, begränsade funktioner i gruppredigeraren. Alla delar av gruppredigeraren (eller komponenter som härletts från gruppredigeraren) kan konfigureras.
 
 Med gruppredigeraren kan du lägga till, ändra, ta bort, filtrera och exportera raderna, spara ändringar och importera en uppsättning rader. Varje rad lagras som en nod under själva produktlistkomponentinstansen. Varje cell är en egenskap för varje nod. Det här är ett designalternativ och kan enkelt ändras. Du kan till exempel lagra noder någon annanstans i databasen. Frågeserverns roll är att returnera listan över noder som ska visas. sökvägen definieras som en produktlistinstans.
 
-Källkoden för produktlistkomponenten finns i databasen i /apps/geometrixx/components/productlist och består av flera delar, som alla AEM:
+Källkoden för produktlistkomponenten finns i databasen i /apps/geometrixx/components/productlist och består av flera delar som alla Adobe Experience Manager-komponenter (AEM):
 
 * HTML: återgivningen görs i en JSP-fil (/apps/geometrixx/components/productlist/productlist.jsp). JSP läser delnoderna för den aktuella produktlistkomponenten och visar var och en av dem som en rad i en HTML-tabell.
-* Dialogrutan Redigera, där du definierar konfigurationen för gruppredigeraren. Konfigurera dialogrutan så att den matchar komponentens behov: tillgängliga kolumner och möjliga åtgärder som utförs i rutnätet eller i sökningen. Se [konfigurationsegenskaper för massredigering](#bulk-editor-configuration-properties) om du vill ha information om alla konfigurationsegenskaper.
+* Dialogrutan Redigera, där du definierar konfigurationen för gruppredigeraren. Konfigurera dialogrutan så att den matchar komponentens behov: tillgängliga kolumner och möjliga åtgärder som utförs i rutnätet eller i sökningen. Se [Konfigurationsegenskaper för gruppredigeraren](#bulk-editor-configuration-properties) om du vill ha information om alla konfigurationsegenskaper.
 
 Här är en XML-representation av delnoderna i dialogrutan:
 
@@ -268,7 +264,7 @@ Här är en XML-representation av delnoderna i dialogrutan:
 
 ### Konfigurationsegenskaper för gruppredigeraren {#bulk-editor-configuration-properties}
 
-Alla delar av gruppredigeraren kan konfigureras. I följande tabell visas alla konfigurationsegenskaper för massredigeraren.
+Alla delar av gruppredigeraren kan konfigureras. I följande tabell visas alla konfigurationsegenskaper för gruppredigeraren.
 
 <table>
  <tbody>
@@ -294,7 +290,7 @@ Alla delar av gruppredigeraren kan konfigureras. I följande tabell visas alla k
   </tr>
   <tr>
    <td>extraCols</td>
-   <td>Extra sökta egenskaper (visas med kommaavgränsade textfält)</td>
+   <td>Extra sökta egenskaper (visas i ett textfält med kommaseparerad)</td>
   </tr>
   <tr>
    <td>initialSearch</td>
@@ -457,7 +453,7 @@ Du kan konfigurera för varje kolumn:
 
 CSS och skrivskyddade kolumner
 
-Massredigeraren har tre kolumnkonfigurationer:
+Gruppredigeraren har tre kolumnkonfigurationer:
 
 * Cell-CSS-klassnamn (cellCls): ett CSS-klassnamn som läggs till i varje cell i den konfigurerade kolumnen.
 * Cellformat (cellStyle): ett HTML-format som läggs till i varje cell i den konfigurerade kolumnen.
@@ -520,20 +516,20 @@ I det tidigare exemplet innehåller markeringskolumnen bara kryssrutor som check
 
 Med metadata för forcerad position i forcePosition kan du ange var kolumnen ska placeras i rutnätet: 0 är första plats och &lt;number of=&quot;&quot; columns=&quot;&quot;>-1 är den sista positionen. Alla andra värden ignoreras.
 
-I det tidigare exemplet är markeringskolumnen den första kolumnen som forcerad position=&quot;0&quot;.
+I det tidigare exemplet är markeringskolumnen den första kolumnen som forceradPosition=&quot;0&quot;.
 
 ### Frågeservlet {#query-servlet}
 
 Som standard finns frågeservern på `/libs/wcm/core/components/bulkeditor/json.java`. Du kan konfigurera en annan sökväg för att hämta data.
 
-Frågeservern fungerar så här: tar emot en GQL-fråga och de kolumner som ska returneras, beräknar resultaten och skickar tillbaka resultaten till massredigeraren som en JSON-ström.
+Frågeservern fungerar så här: tar emot en GQL-fråga och de kolumner som ska returneras, beräknar resultaten och skickar tillbaka resultaten till Bulk Editor som en JSON-ström.
 
 I produktlistekomponenterna är de två parametrar som skickas till frågeservern följande:
 
 * fråga: &quot;path:/content/geometrixx/en/customers/jcr:content/par/productlist Cube&quot;
 * Protokoll: &quot;Markering,ProductId,ProductName,Color,CatalogCode,SellingSku&quot;
 
-och den returnerade JSON-strömmen är följande:
+Och JSON-strömmen returneras enligt följande:
 
 ```
 {
@@ -556,7 +552,7 @@ Du kan utöka frågeservern för att returnera en komplex arvsmodell eller retur
 
 ### Spara server {#save-servlet}
 
-I standardkonfigurationen för gruppredigeraren är varje rad en nod och sökvägen för den här noden lagras i radposten. Massredigeraren behåller länken mellan raden och noden genom jcr-sökvägen. När en användare redigerar stödrastret skapas en lista över alla ändringar. När en användare klickar **Spara** skickas en POST till varje sökväg med de uppdaterade egenskapsvärdena. Detta är grunden för Sling-konceptet och fungerar bra om varje cell är en nodegenskap. Men om frågeservern implementeras för arvsberäkning kan modellen inte fungera som en egenskap som returneras av frågeservern kan ärvas från en annan nod.
+I standardkonfigurationen för gruppredigeraren är varje rad en nod och sökvägen för den här noden lagras i radposten. Med gruppredigeraren behålls länken mellan raden och noden genom jcr-sökvägen. När en användare redigerar stödrastret skapas en lista över alla ändringar. När en användare klickar **Spara** skickas en POST till varje sökväg med de uppdaterade egenskapsvärdena. Detta är grunden för Sling-konceptet och fungerar bra om varje cell är en nodegenskap. Men om frågeservern implementeras för arvsberäkning kan modellen inte fungera som en egenskap som returneras av frågeservern kan ärvas från en annan nod.
 
 Konceptet Spara serverlet är att ändringarna inte publiceras direkt till varje nod, utan att de bokförs på en server som utför sparandet. Detta ger den här servern möjlighet att analysera ändringarna och spara egenskaperna på rätt nod.
 
@@ -564,14 +560,14 @@ Varje uppdaterad egenskap skickas till servern i följande format:
 
 * Parameternamn: &lt;jcr path=&quot;&quot;>/&lt;property name=&quot;&quot;>
 
-   Exempel: /content/geometrixx/en/products/jcr:content/par/productlist/1258674859000/SellingSku
+  Exempel: /content/geometrixx/en/products/jcr:content/par/productlist/1258674859000/SellingSku
 
 * Värde: &lt;value>
 
-   Exempel: 12123
+  Exempel: 12123
 
 Servern behöver veta var egenskapen catalogCode lagras.
 
 En standardserverimplementering för Spara finns på /libs/wcm/bulkeditor/save/POST.jsp och används i produktlistkomponenten. Den tar alla parametrar från begäran (med en &lt;jcr path=&quot;&quot;>/&lt;property name=&quot;&quot;> format) och skriver egenskaper på noder med JCR-API:t. Noden skapas också om den inte finns (rutnätsinfogade rader).
 
-Standardkoden ska inte användas som den är eftersom den återimplementerar det som servern gör internt (en POST på &lt;jcr path=&quot;&quot;>/&lt;property name=&quot;&quot;>) och är därför bara en bra utgångspunkt för att skapa en Spara-server som hanterar en egenskapsarvsmodell.
+Standardkoden ska inte användas som den är eftersom den återimplementerar det som servern gör internt (en POST på &lt;jcr path=&quot;&quot;>/&lt;property name=&quot;&quot;>) och är därför bara en bra utgångspunkt för att skapa en Spara-server som kan hantera en egenskapsarvsmodell.
