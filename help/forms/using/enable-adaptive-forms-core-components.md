@@ -8,15 +8,24 @@ contentOwner: Khushwant Singh
 topic-tags: Adaptive Forms
 docset: aem65
 role: Admin, Developer
-source-git-commit: daf97f3d5c5f3c92ff5caeccff583e54f3f57364
+source-git-commit: 1b97dc536550da8904bc7da09e983e0722c42a3d
 workflow-type: tm+mt
-source-wordcount: '858'
+source-wordcount: '911'
 ht-degree: 0%
 
 ---
 
 
 # Aktivera adaptiva Forms Core-komponenter i AEM 6.5 Forms {#enable-adaptive-forms-core-components}
+
+<span class="preview"> Adobe rekommenderar att du använder kärnkomponenter för att [lägga till adaptiv Forms på en AEM Sites-sida](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md) eller till [skapa fristående Adaptive Forms](/help/forms/using/create-an-adaptive-form-core-components.md). </span>
+
+| Version | Artikellänk |
+| -------- | ---------------------------- |
+| AEM 6.5 | Denna artikel |
+| AEM as a Cloud Service | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/using-themes-in-core-components.html) |
+
+**Gäller för:** ✅ adaptiva Form Core-komponenter ❎ adaptiva Form Foundation-komponenter.
 
 Genom att aktivera adaptiva Forms Core-komponenter kan du börja skapa, publicera och leverera [Core Components based Adaptive Forms](create-an-adaptive-form-core-components.md) och [Headless Adaptive Forms](https://experienceleague.adobe.com/docs/experience-manager-headless-adaptive-forms/using/overview.html) från din AEM 6.5 Forms-miljö.
 

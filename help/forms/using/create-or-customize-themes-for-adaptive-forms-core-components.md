@@ -8,26 +8,30 @@ contentOwner: Khushwant Singh
 topic-tags: Adaptive Forms
 docset: aem65
 role: Admin, Developer
-source-git-commit: daf97f3d5c5f3c92ff5caeccff583e54f3f57364
+source-git-commit: 1b97dc536550da8904bc7da09e983e0722c42a3d
 workflow-type: tm+mt
-source-wordcount: '2066'
+source-wordcount: '1982'
 ht-degree: 0%
 
 ---
 
 
-# Introduktion till tema {#introduction-to-theme}
+# Skapa eller anpassa ett anpassat formulärtema {#introduction-to-theme}
+
+<span class="preview"> Adobe rekommenderar att du använder kärnkomponenter för att [lägga till adaptiv Forms på en AEM Sites-sida](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md) eller till [skapa fristående Adaptive Forms](/help/forms/using/create-an-adaptive-form-core-components.md). </span>
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
 | AEM 6.5 | Denna artikel |
 | AEM as a Cloud Service | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/using-themes-in-core-components.html) |
 
+**Gäller för:** ✅ adaptiva grundkomponenter ❎ [Komponenter i adaptiv Form Foundation](/help/forms/using/themes.md).
+
 I AEM Forms 6.5 är ett tema ett AEM klientbibliotek som du använder för att definiera format (utseende och känsla) för ett adaptivt formulär. Ett tema innehåller formatinformation för komponenterna och panelerna. Format innehåller egenskaper som bakgrundsfärger, lägesfärger, genomskinlighet, justering och storlek. När du använder ett tema återspeglas det angivna formatet i motsvarande komponenter. Ett tema hanteras separat utan referens till ett adaptivt formulär och kan återanvändas i flera adaptiva Forms.
 
-## Tillgängliga referensteman {#available-reference-theme}
+## Tillgängliga teman {#available-standard-theme}
 
-AEM 6.5-miljön innehåller följande listade referensteman för Core Components based Adaptive Forms:
+AEM 6.5-miljön innehåller följande teman för Core Components based Adaptive Forms:
 
 * [Tema Canvas](https://github.com/adobe/aem-forms-theme-canvas)
 * [WKND-tema](https://github.com/adobe/aem-forms-theme-wknd)
@@ -49,13 +53,13 @@ Ett tema är ett paket som omfattar CSS-filen, JavaScript-filer och resurser (so
 
 ## Skapa ett tema
 
-I AEM Forms 6.5 beskrivs nedan angivna referensteman för Core Components-baserade Adaptive Forms.
+AEM Forms 6.5 innehåller följande standardteman för Core Components-baserade Adaptive Forms.
 
 * [Tema Canvas](https://github.com/adobe/aem-forms-theme-canvas)
 * [WKND-tema](https://github.com/adobe/aem-forms-theme-wknd)
 * [EASEL-tema](https://github.com/adobe/aem-forms-theme-easel)
 
-Du kan [anpassa något av dessa referensteman för att skapa ett tema](#customize-a-theme-core-components).
+Du kan [anpassa något av dessa standardteman för att skapa ett tema](#customize-a-theme-core-components).
 
 ## Anpassa ett tema {#customize-a-theme-core-components-based-adaptive-forms}
 
@@ -90,26 +94,27 @@ Att anpassa ett tema avser processen att ändra och anpassa utseendet på ett te
 
 Att skapa eller anpassa ett tema är en process i flera steg. Utför stegen i listan för att skapa/anpassa temat:
 
-1. [Klona ett referenstema](#clone-git-repo-of-theme)
+1. [Klona ett standardtema](#clone-git-repo-of-theme)
 1. [Anpassa temats utseende](#customize-the-theme)
 1. [Förbered temat för lokal driftsättning](#generate-the-clientlib)
-1. [Distribuera temat i en lokal testmiljö](#deploy-the-theme-on-a-local-testing-environment)
-1. [Testa temat med en lokal adaptiv form](#test-the-theme-with-a-local-adaptive-form)
-1. Distribuera temat i produktionsmiljön
+1. [Distribuera temat i en lokal miljö](#deploy-the-theme-on-a-local-environment)
+1. [Distribuera temat i produktionsmiljön](#5-deploy-a-theme-on-your-production-environment)
 
-![Arbetsflöde för temaanpassning](/help/forms/using/assets/custom-theme-steps.png)
+<!--
+ ![Theme Customization workflow](/help/forms/using/assets/custom-theme-steps.png)
+-->
 
-Exemplen i dokumentet är baserade på **Arbetsyta** -temat, men du kan klona vilket referenstema som helst och anpassa det med samma instruktioner. Dessa instruktioner kan användas för alla teman och du kan ändra teman efter dina specifika behov.
+Exemplen i dokumentet är baserade på **Arbetsyta** men du kan klona vilket standardtema som helst och anpassa det med samma instruktioner. Dessa instruktioner kan användas för alla teman och du kan ändra teman efter dina specifika behov.
 
 #### 1. Klona Git-databasen för temat {#clone-git-repo-of-theme}
 
-Om du vill klona ett referenstema för Core Components-baserade Adaptive Forms väljer du något av följande referensteman:
+Om du vill klona ett standardtema för Core Components-baserade Adaptive Forms väljer du något av följande standardteman:
 
 * [Tema Canvas](https://github.com/adobe/aem-forms-theme-canvas)
 * [WKND-tema](https://github.com/adobe/aem-forms-theme-wknd)
 * [EASEL-tema](https://github.com/adobe/aem-forms-theme-easel)
 
-Utför följande instruktioner för att klona ett referenstema:
+Utför följande instruktioner för att klona ett standardtema:
 
 1. Öppna kommandotolken eller terminalfönstret i den lokala utvecklingsmiljön.
 
@@ -206,7 +211,7 @@ Om du vill distribuera ett tema till en AEM måste det konverteras till ett klie
 
    ![Klientbibliotekets plats](/help/forms/using/assets/adaptiveform.theme.easel.png)
 
-#### 4. Distribuera temat i en lokal testmiljö {#deploy-the-theme-on-a-local-testing-environment}
+#### 4. Distribuera temat i en lokal miljö {#deploy-the-theme-on-a-local-environment}
 
 Så här distribuerar du temat till din lokala utvecklings- eller testmiljö:
 
@@ -222,38 +227,40 @@ Så här distribuerar du temat till din lokala utvecklings- eller testmiljö:
 
    ![Client Library Build](/help/forms/using/assets/mvndeploy.png)
 
-#### 5. Testa temat med en lokal adaptiv form {#test-the-theme-with-a-local-adaptive-form}
+<!--
 
-Så här använder och testar du det anpassade temat med en adaptiv form:
+#### 5. Test the theme with a local Adaptive Form {#test-the-theme-with-a-local-adaptive-form}
 
-**Använd tema när du skapar ett anpassat formulär**
+To apply and test the customized theme with an Adaptive Form:
 
-1. Logga in på din AEM Forms-författarinstans.
+**Apply theme while creating an Adaptive Form**
 
-1. Tryck **Adobe Experience Manager** > **Forms** > **Forms och dokument**.
+1. Log in to your AEM Forms author instance. 
 
-1. Klicka **Skapa** > **Adaptiv Forms**. Guiden för att skapa adaptiva formulär öppnas.
+1. Tap **Adobe Experience Manager** > **Forms** > **Forms & Documents**.
 
-1. Välj kärnkomponentmallen i **Källa** -fliken.
-1. Välj temat i **Stil** -fliken.
-1. Klicka **Skapa**.
+1. Click **Create** > **Adaptive Forms**. The wizard for creating Adaptive Form opens.
 
-Ett anpassat formulär med det valda temat skapas.
+1. Select the core component template in the **Source** tab.
+1. Select the theme in the **Style** tab.
+1. Click **Create**.
 
-**Använd tema i ett befintligt anpassat formulär**
+An Adaptive Form with the selected theme is created. 
 
-1. Logga in på din AEM Forms-författarinstans.
+**Apply theme to an existing Adaptive Form**
 
-1. Tryck **Adobe Experience Manager** > **Forms** > **Forms och dokument**.
+1. Log in to your AEM Forms author instance. 
 
-1. Markera ett anpassat formulär och klicka på Egenskaper.
+1. Tap **Adobe Experience Manager** > **Forms** > **Forms & Documents**.
 
-1. För **Temaklientbibliotek** väljer du temat.
+1. Select an Adaptive Form and click Properties. 
 
-1. Klicka **Spara och stäng**.
+1. For the **Theme Client Library** option, select the theme. 
 
-Det valda temat används i det adaptiva formuläret.
+1. Click **Save & Close**.
 
+The selected theme is applied to the Adaptive Form. 
+-->
 
 #### 5. Distribuera ett tema i produktionsmiljön {#deploy-theme}
 
@@ -278,14 +285,17 @@ När paketet har installerats är temat tillgängligt för val.
 
 Steg för att tillämpa ett tema på ett adaptivt formulär är:
 
-1. Logga in på din AEM Forms-författarinstans.
+1. Logga in på den lokala AEM författarinstansen.
+1. Ange dina uppgifter på inloggningssidan för Experience Manager. Tryck **Adobe Experience Manager** > **Forms** > **Forms och dokument**.
+1. Klicka **Skapa** > **Adaptiv Forms**.
+1. Välj en adaptiv Forms Core Components-mall och klicka på **Nästa**. The **Lägg till egenskaper** visas
+1. Ange **Namn** för din adaptiva form.
 
-1. Tryck **Adobe Experience Manager** > **Forms** > **Forms och dokument**.
+   >[!NOTE]
+   >
+   > * Som standard är `adaptiveform.theme.canvas3` temat är valt.
+   > * Du kan välja ett annat tema från **Temaklientbibliotek** nedrullningsbar meny.
 
-1. Klicka **Skapa** > **Adaptiv Forms**. Guiden för att skapa adaptiva formulär öppnas.
-
-1. Välj kärnkomponentmallen i **Källa** -fliken.
-1. Välj temat i **Stil** -fliken.
 1. Klicka **Skapa**.
 
 Adaptiva formulärteman används som en del av en adaptiv formulärmall för att definiera format när du skapar ett adaptivt formulär.
