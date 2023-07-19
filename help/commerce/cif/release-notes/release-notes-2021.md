@@ -1,11 +1,11 @@
 ---
-title: AEM Content and Commerce Release Notes 2021
-description: AEM Content and Commerce Release Notes 2021
+title: Adobe Experience Manager Content and Commerce Release Notes 2021
+description: Adobe Experience Manager Content and Commerce Release Notes 2021
 exl-id: ec47c5f8-d4dd-469f-94df-5ee28f25d696
-source-git-commit: a467009851937c4a10b165a3d253c47bf990bbc5
+source-git-commit: 2810e34f642f4643fa4dc24b31a57a68e9194e39
 workflow-type: tm+mt
-source-wordcount: '1314'
-ht-degree: 6%
+source-wordcount: '1318'
+ht-degree: 5%
 
 ---
 
@@ -17,7 +17,7 @@ Granska de lägsta systemkraven i tabellen nedan för den CIF-version som du anv
 
 | Komponent | Systemkrav |
 |:-------|:-----:|
-| CIF-tillägg | Minimum: AEM 6.5.7, Adobe Commerce 2.3.5 GraphQL schemas |
+| CIF-tillägg | Minimum: Adobe Experience Manager (AEM) 6.5.7, Adobe Commerce 2.3.5 GraphQL-scheman |
 | CIF-kärnkomponenter | [Systemkrav](https://github.com/adobe/aem-core-cif-components/blob/master/VERSIONS.md) |
 | AEM Project Archetype | [Systemkrav](https://github.com/adobe/aem-project-archetype/blob/master/VERSIONS.md) |
 
@@ -71,11 +71,11 @@ Granska de lägsta systemkraven i tabellen nedan för den CIF-version som du anv
 
 * Ny flik för associerat e-handelsinnehåll i Sites editor ökar redigeringens effektivitet genom att snabbt få tillgång till relevant AEM för det aktuella sammanhanget
 
-   ![Associerat e-handelsinnehåll](/help/assets/CIF/associated-commerce-content.png)
+  ![Associerat e-handelsinnehåll](/help/assets/CIF/associated-commerce-content.png)
 
 * Förbättrat användargränssnitt för produktväljare för bättre användarupplevelse, ökad effektivitet och stöd för komplexa produktkataloger
 
-   ![Ny produktväljare](/help/assets/CIF/product-picker.png)
+  ![Ny produktväljare](/help/assets/CIF/product-picker.png)
 
 * Respektera egenskapen include_in_menu i navigeringskomponenten
 
@@ -83,7 +83,7 @@ Granska de lägsta systemkraven i tabellen nedan för den CIF-version som du anv
 
 * Borttagning av menycache fungerar inte som förväntat
 
-* JS-fel under AEM CS-driftsättningssteg och när komponenter på klientsidan inte används
+* JS-fel AEM CS-driftsättningssteget och när komponenter på klientsidan inte används
 
 * Det går inte att skapa CIF-molnkonfigurationen i mappar som har en sling:configs-nod
 
@@ -97,9 +97,9 @@ Granska de lägsta systemkraven i tabellen nedan för den CIF-version som du anv
 
 ### Nyheter {#what-is-new-august}
 
-* Nytt användargränssnitt för kategoriväljare för förbättrad användarupplevelse, ökad effektivitet och bättre stöd för komplexa produktkataloger
+* Nytt användargränssnitt för kategoriväljare för förbättrad användarupplevelse, ökad effektivitet och bättre stöd för komplex produktkatalog
 
-   ![Ny kategoriväljare](/help/assets/CIF/category-picker.png)
+  ![Ny kategoriväljare](/help/assets/CIF/category-picker.png)
 
 * Bättre stöd för A11Y för CIF Core-komponenter
 
@@ -165,7 +165,7 @@ Granska de lägsta systemkraven i tabellen nedan för den CIF-version som du anv
 
 * Breadcrumb återställer förhandsvisningsdata i produktkonsolen
 
-## Releasedatum: April, 2021
+## Releasedatum: April 2021
 
 | Komponent | Version | Detaljer |
 |:-------|:-----:|---------------------:|
