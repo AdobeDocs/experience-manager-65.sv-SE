@@ -1,8 +1,8 @@
 ---
-title: ContextHub Javascript API-referens
-seo-title: ContextHub Javascript API Reference
-description: ContextHub Javascript-API:t är tillgängligt för skript när ContextHub-komponenten har lagts till på sidan
-seo-description: The ContextHub Javascript API is available to your scripts when the ContextHub component has been added to the page
+title: ContextHub JavaScript API-referens
+seo-title: ContextHub JavaScript API Reference
+description: ContextHub JavaScript API är tillgängligt för skript när ContextHub-komponenten har lagts till på sidan
+seo-description: The ContextHub JavaScript API is available to your scripts when the ContextHub component has been added to the page
 uuid: 296d6c8e-517f-4837-9e86-ae571ea8aa17
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,20 +11,20 @@ content-type: reference
 discoiquuid: 90605f41-1861-4891-a7c8-b8b5918cd5c6
 feature: Context Hub
 exl-id: b472d96f-b1a5-40b7-be2a-52f3396f6884
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '5006'
+source-wordcount: '5007'
 ht-degree: 0%
 
 ---
 
-# ContextHub Javascript API-referens{#contexthub-javascript-api-reference}
+# ContextHub JavaScript API-referens{#contexthub-javascript-api-reference}
 
-ContextHub Javascript API är tillgängligt för skript när [ContextHub-komponenten har lagts till på sidan](/help/sites-developing/ch-adding.md#adding-contexthub-to-a-page-component).
+ContextHub JavaScript API är tillgängligt för skript när [ContextHub-komponenten har lagts till på sidan](/help/sites-developing/ch-adding.md#adding-contexthub-to-a-page-component).
 
 ## ContextHub-konstanter {#contexthub-constants}
 
-Konstantvärden som definieras av ContextHub Javascript-API:t.
+Konstantvärden som definieras av JavaScript-API:t för ContextHub.
 
 ### Händelsekonstanter {#event-constants}
 
@@ -67,11 +67,11 @@ I följande tabell visas namnen på händelser som inträffar för användargrä
 | ContextHub.Constants.EVENT_UI_CONTAINER_OPENED | Utlöses när ContextHub-gränssnittet öppnas | ui-container-opened |
 | ContextHub.Constants.EVENT_UI_CONTAINER_CLOSED | Utlöses när gränssnittet för ContextHub är komprimerat | ui-container-closed |
 | ContextHub.Constants.EVENT_UI_PROPERTY_MODIFIED | Utlöses när en egenskap ändras | ui-property-modified |
-| ContextHub.Constants.EVENT_UI_RENDERED | Utlöses varje gång ContextHub-gränssnittet återges (t.ex. efter en egenskapsändring) | ui-renderad |
+| ContextHub.Constants.EVENT_UI_RENDERED | Utlöses varje gång ContextHub-gränssnittet återges (till exempel efter en egenskapsändring) | ui-renderad |
 | ContextHub.Constants.EVENT_UI_INITIALIZED | Utlöses när gränssnittsbehållaren initieras | ui-initierad |
 | ContextHub.Constants.ACTIVE_UI_MODE | Anger aktivt användargränssnittsläge | /_/active-ui-mode |
 
-## ContextHub Javascript API-referens {#contexthub-javascript-api-reference-2}
+## ContextHub JavaScript API-referens {#contexthub-javascript-api-reference-2}
 
 ContextHub-objektet ger åtkomst till alla arkiv.
 
@@ -391,9 +391,9 @@ A `boolean` värde:
 
 ## ContextHub.Store.JSONPStore {#contexthub-store-jsonpstore}
 
-Ett arkiv som innehåller JSON-data. Data hämtas från en extern JSONP-tjänst, eller eventuellt från en tjänst som returnerar JSON-data. Ange tjänstinformationen med [ `init`](/help/sites-developing/contexthub-api.md#init-name-config) när du skapar en instans av den här klassen.
+Ett arkiv som innehåller JSON-data. Data hämtas från en extern JSONP-tjänst, eller eventuellt från en tjänst som returnerar JSON-data. Ange tjänstinformationen med [`init`](/help/sites-developing/contexthub-api.md#init-name-config) när du skapar en instans av den här klassen.
 
-Butiken använder beständighet i minnet (Javascript-variabel). Lagringsdata är bara tillgängliga under sidans livstid.
+Butiken använder beständighet i minnet (JavaScript-variabel). Lagringsdata är bara tillgängliga under sidans livstid.
 
 ContextHub.Store.JSONPStore extends [ContextHub.Store.Core](/help/sites-developing/contexthub-api.md#contexthub-store-core) och ärver funktionerna i den klassen.
 
@@ -471,7 +471,7 @@ initierar ContextHub.Store.JSONPStore-objektet.
 
    * eventDeferring: 32.
    * händelser: Objektet ContextHub.Utils.Eventing för det här arkivet. Standardvärdet är `ContextHub.eventing` -objekt.
-   * beständighet: ContextHub.Utils.Persistence-objektet för det här arkivet. Som standard används minnesbeständighet (Javascript-objekt).
+   * beständighet: ContextHub.Utils.Persistence-objektet för det här arkivet. Som standard används minnesbeständighet (JavaScript-objekt).
    * tjänst: (Objekt)
 
       * värd: (String) Servernamnet eller IP-adressen.
@@ -484,9 +484,9 @@ initierar ContextHub.Store.JSONPStore-objektet.
          * auto: //
          * true: https://
          * false: https://
+
       * timeout: (Nummer) Hur lång tid det tar att vänta på att JSONP-tjänsten ska svara före timeout, i millisekunder.
       * ttl: Den kortaste tiden i millisekunder som går mellan anrop till JSONP-tjänsten. (Se [queryService](/help/sites-developing/contexthub-api.md#queryservice-reload) funktion).
-
 
 #### queryService(reload) {#queryservice-reload}
 
@@ -522,7 +522,7 @@ ContextHub.Store.PersistedStore extends [ContextHub.Store.Core](/help/sites-deve
 
 ## ContextHub.Store.SessionStore {#contexthub-store-sessionstore}
 
-ContextHub.Store.SessionStore extends [ContextHub.Store.Core](/help/sites-developing/contexthub-api.md#contexthub-store-core) så den ärver alla funktioner i den klassen. Data i det här arkivet bevaras med beständighet i minnet (Javascript-objekt).
+ContextHub.Store.SessionStore extends [ContextHub.Store.Core](/help/sites-developing/contexthub-api.md#contexthub-store-core) så den ärver alla funktioner i den klassen. Data i det här arkivet bevaras med hjälp av en minnesbeständig (JavaScript-objekt).
 
 ## ContextHub.UI {#contexthub-ui}
 
@@ -900,7 +900,7 @@ Värdet som motsvarar nyckeln. När nyckeln har underordnade nycklar returnerar 
 
 **Exempel**
 
-Tänk på följande JavaScript-objekt:
+Titta på följande JavaScript-objekt:
 
 ```
 myObject {
@@ -1109,7 +1109,7 @@ Returnerar de butikstyper som är registrerade som butikskandidater. Hämta anti
 
 **Parametrar**
 
-* **storeType:** (String) Namnet på lagringstypen. Se `storeType` parametern för [ `ContextHub.Utils.storeCandidates.registerStoreCandidate`](/help/sites-developing/contexthub-api.md#contexthub-utils-storecandidates) funktion.
+* **storeType:** (String) Namnet på lagringstypen. Se `storeType` parametern för [`ContextHub.Utils.storeCandidates.registerStoreCandidate`](/help/sites-developing/contexthub-api.md#contexthub-utils-storecandidates) funktion.
 
 **Returnerar**
 
@@ -1121,7 +1121,7 @@ Returnerar en butikstyp från de registrerade anbudssökandena. Om mer än en la
 
 **Parametrar**
 
-* storeType: (String) Namnet på lagringskandidaten. Se `storeType` parametern för [ `ContextHub.Utils.storeCandidates.registerStoreCandidate`](/help/sites-developing/contexthub-api.md#registerstorecandidate-store-storetype-priority-applies) funktion.
+* storeType: (String) Namnet på lagringskandidaten. Se `storeType` parametern för [`ContextHub.Utils.storeCandidates.registerStoreCandidate`](/help/sites-developing/contexthub-api.md#registerstorecandidate-store-storetype-priority-applies) funktion.
 
 **Returnerar**
 
@@ -1133,7 +1133,7 @@ Returnerar namnen på de butikstyper som är registrerade som butikskandidater. 
 
 **Returnerar**
 
-En array med strängvärden, där varje sträng är den storetype som en lagringskandidat registrerades med. Se `storeType` parametern för [ `ContextHub.Utils.storeCandidates.registerStoreCandidate`](/help/sites-developing/contexthub-api.md#contexthub-utils-storecandidates) funktion.
+En array med strängvärden, där varje sträng är den storetype som en lagringskandidat registrerades med. Se `storeType` parametern för [`ContextHub.Utils.storeCandidates.registerStoreCandidate`](/help/sites-developing/contexthub-api.md#contexthub-utils-storecandidates) funktion.
 
 #### registerStoreCandidate(store, storeType, priority, apply) {#registerstorecandidate-store-storetype-priority-applies}
 

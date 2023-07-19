@@ -10,9 +10,9 @@ geptopics: SG_AEMFORMS/categories/setting_up_and_organizing_users
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 737fb4d1-adef-47e1-9a0d-8cddd13132cb
 exl-id: b447e545-f73e-4fde-a001-86e0e1cf4a12
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '2526'
+source-wordcount: '2525'
 ht-degree: 0%
 
 ---
@@ -87,7 +87,7 @@ Följande extra standardroller kan inkluderas, beroende på vilka AEM du har ins
 
 **PDFG-administratör:** Kan visa och ändra inställningar från PDF Generator-sidan i administrationskonsolen
 
-**PDFG-användare:** Har åtkomst till alla icke-administrativa funktioner för PDF Generator
+**PDFG-användare:** Har tillgång till alla icke-administrativa funktioner för PDF Generator
 
 **Acrobat Reader DC Extensions Web Application:** Kan använda webbprogrammet Acrobat Reader DC Extensions
 
@@ -291,7 +291,7 @@ Du kan ändra behörigheterna för alla roller som du har skapat. Du kan inte ä
 
 **Lägg till koordinator för Rights Management-principuppsättning:** Lägga till, ta bort och ändra behörigheter för koordinatorer för principuppsättningar
 
-**Skapa princip för Rights Management-principuppsättning:** Skapa en ny profil för en principuppsättning
+**Skapa princip för Rights Management-principuppsättning:** Skapa en ny princip för en principuppsättning
 
 **Ta bort princip för uppsättningsuppsättning för Rights Management-princip:** Ta bort en profil från en principuppsättning
 

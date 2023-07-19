@@ -10,9 +10,9 @@ content-type: reference
 topic-tags: components
 discoiquuid: adf3364c-11f1-45c6-b41d-2c7d48b626f9
 exl-id: a8d50c09-72d0-406e-874e-50a985227a56
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '2325'
+source-wordcount: '2327'
 ht-degree: 0%
 
 ---
@@ -85,11 +85,11 @@ Skapa en ordlista för hantering av lokaliserade gränssnittssträngar. När du 
    >
    >Det här är strukturen från [Modulen Sling i18n](https://sling.apache.org/site/internationalization-support.html).
 
-1. Läs in konverteraren och ordlistesökvägen igen (t.ex. `/apps/myProject/i18n`) är tillgängligt i den nedrullningsbara väljaren i verktygsfältet. Välj det här om du vill börja lägga till strängar och deras översättningar.
+1. Läs in konverteraren och ordlistesökvägen igen (till exempel `/apps/myProject/i18n`) är tillgängligt i den nedrullningsbara väljaren i verktygsfältet. Välj det här om du vill börja lägga till strängar och deras översättningar.
 
    >[!NOTE]
    >
-   >Översättaren sparar endast översättningar för språk som finns under sökvägen (t.ex. `/apps/myProject/i18n`).
+   >Översättaren sparar endast översättningar för språk som faktiskt finns under sökvägen (till exempel `/apps/myProject/i18n`).
    >
    >Kontrollera att de motsvarar de språk som visas i rutnätet.
 
@@ -353,17 +353,18 @@ Så här ändrar du standarddefinitionerna:
 
    `/apps/wcm/core/resources/languages`
 
-   Ändra eller utöka listan där. Egenskapen `defaultCountry` på en språknod (t.ex. `ja`) måste innehålla den fullständiga koden, till exempel `ja_jp`som skulle definiera `jp` som standardland för språket `ja`.
+   Ändra eller utöka listan där. Egenskapen `defaultCountry` på en språknod (till exempel `ja`) måste innehålla den fullständiga koden, till exempel `ja_jp`som skulle definiera `jp` som standardland för språket `ja`.
 
 1. Uppdatera **CQ WCM Language Manager**.
 
    * **Språklista**:
 
-      Sökvägen till språklistan i databasen. Ange det här för platsen som används för övertäckning:
+     Sökvägen till språklistan i databasen. Ange det här för platsen som används för övertäckning:
 
-      ```
-             /apps/wcm/core/resources/languages
-      ```
+     ```
+            /apps/wcm/core/resources/languages
+     ```
+
    Du kan göra detta med OSGi-webbkonsolen:
 
    ```shell

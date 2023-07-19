@@ -12,7 +12,7 @@ topic-tags: operations
 discoiquuid: 669ede46-ea55-444b-a23f-23a86e5aff8e
 role: Developer
 exl-id: e6887e45-a472-41d4-9620-c56fd5b72b4c
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
 source-wordcount: '4150'
 ht-degree: 0%
@@ -94,6 +94,7 @@ När du återger HTML-formulär som innehåller både sidnavigeringsfunktioner o
 Formulärskript som finns i formen:ready-händelsen körs bara en gång under den inledande återgivningen av formuläret och körs inte för efterföljande sidhämtningar. Händelsen form:calculate körs däremot för varje sidnavigering där formuläret återges.
 
 >[!NOTE]
+>
 På ett flersidigt formulär behålls inte ändringar som JavaScript gjort på en sida om du flyttar till en annan sida.
 
 Du kan anropa egna skript innan du skickar in ett formulär. Den här funktionen fungerar i alla tillgängliga webbläsare. Den kan dock bara användas när användare återger det HTML-formulär som har dess `Output Type` egenskap inställd på `Form Body`. Det fungerar inte när `Output Type` är `Full HTML`. Mer information om hur du konfigurerar den här funktionen finns i Konfigurera formulär i administrationshjälpen.
@@ -167,6 +168,7 @@ Följande skript bevarar `fillColor` för ett fält baserat på värdet för `hi
 ```
 
 >[!NOTE]
+>
 Statiska objekt visas inte i ett återgivet HTML-formulär när de är kapslade i en tabellcell. En cirkel och rektangel som är kapslad i en tabellcell visas till exempel inte i ett återgivningsformulär i HTML. Samma statiska objekt visas emellertid korrekt utanför tabellen.
 
 ## Signera HTML-formulär digitalt {#digitally-signing-html-forms}
@@ -189,6 +191,7 @@ Du kan återge ett fullständigt HTML-formulär som är kompatibelt med riktlinj
 Vi rekommenderar att du begränsar användningen av valideringsregler för formulärfält när du återger formuläret som ett HTML-formulär. Vissa valideringsregler kanske inte stöds för HTML-formulär. När valideringsmönstret MM-DD-YYY används på en `Date/Time` fält som finns i en formulärdesign som återges som ett HTML-formulär fungerar inte korrekt, även om datumet är korrekt angivet. Det här valideringsmönstret fungerar emellertid korrekt för formulär som återges som PDF.
 
 >[!NOTE]
+>
 Mer information om tjänsten Forms finns i [Tjänstreferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
 
 ## Sammanfattning av steg {#summary-of-steps}
@@ -217,16 +220,18 @@ Du anger körningsalternativ för HTML när du återger ett HTML-formulär. Du k
 * `Upload`: Innehåller ett användargränssnitt för att välja filer som ska bifogas det aktuella formuläret.
 * `Download`: Innehåller ett användargränssnitt för att visa de bifogade filerna.
 
-När ett verktygsfält i HTML visas i ett HTML-formulär kan användaren välja högst tio filer att skicka tillsammans med formulärdata. När filerna har skickats kan Forms-tjänsten hämta filerna.
+När verktygsfältet HTML visas i ett HTML-formulär kan användaren välja högst tio filer att skicka tillsammans med formulärdata. När filerna har skickats kan Forms-tjänsten hämta filerna.
 
 När du återger ett formulär som HTML kan du ange ett användaragentvärde. Ett användaragentvärde ger information om webbläsare och system. Detta är ett valfritt värde och du kan skicka ett tomt strängvärde. När du återger ett HTML-formulär med Java API-snabbstarten visas hur du får ett användaragentvärde och använder det för att återge ett formulär som HTML.
 
 HTTP-URL:er dit formulärdata skickas kan anges genom att ange mål-URL:en med hjälp av Forms Service Client-API:t eller anges i knappen Skicka i XDP-formulärdesignen. Om mål-URL:en anges i formulärdesignen ska du inte ange något värde med Forms Service Client API.
 
 >[!NOTE]
+>
 Det är valfritt att återge ett HTML-formulär med ett verktygsfält.
 
 >[!NOTE]
+>
 Om du återger ett AHTML-formulär bör du inte lägga till ett verktygsfält i formuläret.
 
 **Återge ett HTML-formulär**
@@ -278,6 +283,7 @@ När Forms-tjänsten återger ett HTML-formulär returneras en formulärdatastr�
    * Om du vill återge formuläret HTML i fullständiga HTML-taggar anropar du `HTMLRenderSpec` objektets `setOutputType` metod och skicka `OutputType.FullHTMLTags`. (Det här är en valfri inställning.)
 
    >[!NOTE]
+   >
    Forms återges inte korrekt i HTML när `StandAlone` option is `true` och `ApplicationWebRoot` refererar till en annan server än J2EE-programservern som är värd för AEM Forms ( `ApplicationWebRoot` värdet anges med `URLSpec` objekt som skickas till `FormsServiceClient` objektets `(Deprecated) renderHTMLForm` metod). När `ApplicationWebRoot` är en annan server från den som är värd för AEM Forms, måste värdet för webb-URI:n i administrationskonsolen anges som formulärets webbprogram-URI-värde. Detta kan du göra genom att logga in på administrationskonsolen, klicka på Tjänster > Forms och ange webbrots-URI som https://server-name:port/FormServer. Spara sedan inställningarna.
 
 1. Återge ett HTML-formulär
@@ -335,6 +341,7 @@ När Forms-tjänsten återger ett HTML-formulär returneras en formulärdatastr�
    * Om du vill återge formuläret HTML i fullständiga HTML-taggar anropar du `HTMLRenderSpec` objektets `setOutputType` metod och skicka `OutputType.FullHTMLTags`.
 
    >[!NOTE]
+   >
    Forms återges inte korrekt i HTML när `StandAlone` option is `true` och `ApplicationWebRoot` refererar till en annan server än J2EE-programservern som är värd för AEM Forms ( `ApplicationWebRoot` värdet anges med `URLSpec` objekt som skickas till `FormsServiceClient` objektets `(Deprecated) renderHTMLForm` metod). När `ApplicationWebRoot` är en annan server från den som är värd för AEM Forms, måste värdet för webb-URI:n i administrationskonsolen anges som formulärets webbprogram-URI-värde. Detta kan du göra genom att logga in på administrationskonsolen, klicka på Tjänster > Forms och ange webbrots-URI som https://server-name:port/FormServer. Spara sedan inställningarna.
 
 1. Återge ett HTML-formulär

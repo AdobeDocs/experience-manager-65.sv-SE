@@ -8,9 +8,9 @@ topic-tags: page-authoring
 content-type: reference
 discoiquuid: 668d1a8a-c757-4c9f-833f-e5dada4d0384
 exl-id: 760b8419-5cf8-49c5-8d4f-6691f5256c53
-source-git-commit: cae9890cd61d6d894f34c7299e2e15ee70e14ac9
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '1805'
+source-wordcount: '1806'
 ht-degree: 6%
 
 ---
@@ -24,7 +24,7 @@ Detta tillhandahåller ett styckesystem som gör att du kan placera komponenter 
 Layoutbehållaren:
 
 * Tillhandahåller vågrät fäst mot rutnät, tillsammans med möjligheten att placera komponenter i rutnätet sida vid sida och definiera när de ska komprimeras/omformas.
-* Använder fördefinierade brytpunkter (t.ex. för telefon, surfplatta osv.) så att du kan definiera vad som krävs för innehåll för relaterade enheter/orientering.
+* Använder fördefinierade brytpunkter (t.ex. för telefon, surfplatta) så att du kan definiera vad som krävs för innehåll för relaterade enheter/orientering.
 
    * Du kan till exempel anpassa komponentstorleken eller om komponenten kan visas på särskilda enheter.
 

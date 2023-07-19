@@ -10,16 +10,16 @@ topic-tags: operations
 content-type: reference
 discoiquuid: f3683696-663d-4de5-a388-1709f44d58c1
 exl-id: e25f0b7f-5f12-4363-b302-e51c81035c7d
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '86'
+source-wordcount: '85'
 ht-degree: 0%
 
 ---
 
 # Aktivera åtkomst till klassiskt gränssnitt{#enabling-access-to-classic-ui}
 
-Eftersom de beröringsaktiverade funktionerna i många AEM når samma nivå som det klassiska användargränssnittet, och dessutom är bättre än det, är åtkomst till det klassiska gränssnittet via det beröringsaktiverade gränssnittet nu inaktiverat som standard. På följande sidor beskrivs hur du återaktiverar åtkomsten om det behövs.
+Eftersom de beröringsaktiverade funktionerna i många AEM är mer lika och faktiskt bättre än det klassiska användargränssnittet, är åtkomst till det klassiska gränssnittet via det beröringsaktiverade gränssnittet nu inaktiverat som standard. På följande sidor beskrivs hur du återaktiverar åtkomsten om det behövs.
 
 * [Redigerare](/help/sites-administering/enable-classic-ui-editor.md)
 * [Admin Console](/help/sites-administering/enable-classic-ui-admin.md)

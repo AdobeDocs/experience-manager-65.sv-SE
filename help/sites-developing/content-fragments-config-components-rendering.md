@@ -10,9 +10,9 @@ content-type: reference
 discoiquuid: 2aef9048-9d6e-4f5d-b443-5e73f8066d76
 docset: aem65
 exl-id: 9ef9ae75-cd8c-4adb-9bcb-e951d200d492
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '455'
+source-wordcount: '460'
 ht-degree: 5%
 
 ---
@@ -76,27 +76,27 @@ OSGi-konfigurationen är:
   <tr>
    <td><strong>Resurstyp</strong></td>
    <td><code>dam.cfm.component.resourceType</code></td>
-   <td>Resurstypen som ska registreras. t.ex. <br /> <p><span class="cmp-examples-demo__property-value"><code>core/wcm/components/contentfragment/v1/contentfragment</code></code></p> </td>
+   <td>Resurstypen som ska registreras. till exempel <br /> <p><span class="cmp-examples-demo__property-value"><code>core/wcm/components/contentfragment/v1/contentfragment</code></code></p> </td>
   </tr>
   <tr>
    <td><strong>Referensegenskap</strong></td>
    <td><code>dam.cfm.component.fileReferenceProp</code></td>
-   <td>Namnet på den egenskap som innehåller referensen till fragmentet. t.ex. <code>fragmentPath</code> eller <code>fileReference</code></td>
+   <td>Namnet på den egenskap som innehåller referensen till fragmentet. till exempel <code>fragmentPath</code> eller <code>fileReference</code></td>
   </tr>
   <tr>
    <td><strong>Elementegenskap(er)</strong></td>
    <td><code>dam.cfm.component.elementsProp</code></td>
-   <td>Namnet på den egenskap som innehåller namnen på de element som ska återges. t.ex.<code>elementName</code></td>
+   <td>Namnet på den egenskap som innehåller namnen på de element som ska återges. till exempel<code>elementName</code></td>
   </tr>
   <tr>
    <td><strong>Variationsegenskap</strong><br /> </td>
    <td><code>dam.cfm.component.variationProp</code></td>
-   <td>Namnet på den egenskap som innehåller namnet på variationen som ska återges. t.ex.<code>variationName</code></td>
+   <td>Namnet på den egenskap som innehåller namnet på variationen som ska återges. till exempel<code>variationName</code></td>
   </tr>
  </tbody>
 </table>
 
-För vissa funktioner (t.ex. för att endast återge ett styckeintervall) måste du följa vissa konventioner:
+För vissa funktioner (till exempel för att endast återge ett styckeintervall) måste du följa vissa konventioner:
 
 <table>
  <tbody>

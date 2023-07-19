@@ -5,7 +5,7 @@ contentOwner: AG
 role: User, Admin
 feature: Asset Insights,Asset Reports
 exl-id: 80e8f84e-3235-4212-9dcd-6acdb9067893
-source-git-commit: afc72fb6b324cf2e0ad8168f783d9c1a6f96c614
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
 source-wordcount: '586'
 ht-degree: 1%
@@ -54,7 +54,6 @@ Utför dessa steg för att aktivera Assets Insights via DTM.
    >* Beroende på var Assets Insights Page Tracker finns (till exempel Experience Manager, CDN och så vidare) kan skriptkällans ursprung kräva ändringar.
    >* För sidspåraren som är värd för Experience Manager ska källan peka på en publiceringsinstans med hjälp av värdnamnet för dispatcher-instansen.
 
-
 1. Öppna `https://dtm.adobe.com`. Klicka **[!UICONTROL Overview]** i webbegenskapen och klicka på **[!UICONTROL Add Tool]** eller öppna ett befintligt Adobe Analytics-verktyg. När du skapar verktyget kan du ange **[!UICONTROL Configuration Method]** till **[!UICONTROL Automatic]**.
 
    ![Lägg till Adobe Analytics](assets/Add-Adobe-Analytics-Tool.png)
@@ -91,10 +90,10 @@ Utför dessa steg för att aktivera Assets Insights via DTM.
              "",  /** RSID to send tracking-call to */
              "",  /** Tracking Server to send tracking-call to */
              "",  /** Visitor Namespace to send tracking-call to */
-             "",  /** listVar to put comma-separated-list of Asset IDs for Asset Impression Events in tracking-call, e.g. 'listVar1' */
-             "",  /** eVar to put Asset ID for Asset Click Events in, e.g. 'eVar3' */
-             "",  /** event to include in tracking-calls for Asset Impression Events, e.g. 'event8' */
-             "",  /** event to include in tracking-calls for Asset Click Events, e.g. 'event7' */
+             "",  /** listVar to put comma-separated-list of Asset IDs for Asset Impression Events in tracking-call, for example, 'listVar1' */
+             "",  /** eVar to put Asset ID for Asset Click Events in, for example, 'eVar3' */
+             "",  /** event to include in tracking-calls for Asset Impression Events, for example, 'event8' */
+             "",  /** event to include in tracking-calls for Asset Click Events, for example, 'event7' */
              sObj  /** [OPTIONAL] if the webpage already has an AppMeasurement object, include the object here. If unspecified, Pagetracker Core shall create its own AppMeasurement object */
              );
        sObj.usePlugins = true;
@@ -110,8 +109,8 @@ Utför dessa steg för att aktivera Assets Insights via DTM.
    * Sidinläsningsregeln i DTM innehåller endast `pagetracker.js` kod. Alla `assetAnalytics` -fält betraktas som åsidosättningar för standardvärden. De är inte obligatoriska som standard.
    * Kodanrop `assetAnalytics.dispatcher.init()` efter att ha kontrollerat att `_satellite.getToolsByType('sc')[0].getS()` initieras och `assetAnalytics,dispatcher.init` är tillgängligt. Du kan därför hoppa över att lägga till den i steg 11.
    * Enligt kommentarerna i Insights Page Tracker-koden (**[!UICONTROL Tools > Assets > Insights Page Tracker]**), när sidspåraren inte skapar en `AppMeasurement` är de tre första argumenten (RSID, Tracking Server och Visitor Namespace) irrelevanta. Tomma strängar skickas i stället för att markera detta.\
-      De återstående argumenten motsvarar konfigurationen på sidan Insights Configuration (**[!UICONTROL Tools > Assets > Insights Configuration]**).
-   * AppMeasurement-objektet hämtas genom en fråga `satelliteLib` för alla tillgängliga SiteCatalyst-motorer. Om flera taggar har konfigurerats ändrar du indexvärdet för arrayväljaren på rätt sätt. Posterna i arrayen ordnas enligt de SiteCatalyst-verktyg som finns i DTM-gränssnittet.
+     De återstående argumenten motsvarar konfigurationen på sidan Insights Configuration (**[!UICONTROL Tools > Assets > Insights Configuration]**).
+   * AppMeasurementet hämtas genom att en fråga skickas `satelliteLib` för alla tillgängliga SiteCatalyst-motorer. Om flera taggar har konfigurerats ändrar du indexvärdet för arrayväljaren på rätt sätt. Posterna i arrayen ordnas enligt de SiteCatalyst-verktyg som finns i DTM-gränssnittet.
 
 1. Spara och stäng fönstret Kodredigeraren och spara sedan ändringarna i verktygskonfigurationen.
 1. I **[!UICONTROL Approvals]** godkänner du båda väntande godkännanden. DTM-taggen kan infogas på webbsidan.

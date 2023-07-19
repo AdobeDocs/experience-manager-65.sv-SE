@@ -5,9 +5,9 @@ contentOwner: AG
 role: Admin
 feature: Asset Management
 exl-id: e632dcdb-b2b9-45bc-89e7-337b44b6fc61
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '406'
+source-wordcount: '405'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 För effektiv hantering av resurser, för att säkerställa att olika översatta versioner förblir synkroniserade, skapar du [språkversioner](preparing-assets-for-translation.md) av resurser innan översättningsarbetsflöden körs.
 
-En språkkopia av en resurs eller en grupp av resurser är ett språkjämlikt (eller en version av resursen/resurserna på ett modersmål) med en liknande innehållshierarki.
+En språkkopia av en resurs eller en grupp av resurser är ett språkliknande objekt (eller en version av resurserna i ett modersmål) med en liknande innehållshierarki.
 
 Varje språkkopia är en oberoende resurs. Därför kan en översättning av resurser till flera språkområden drastiskt öka storleken på CRX-databasen. Om du till exempel översätter resurser med en kombinerad storlek på 10 GB till två språk kan databasstorleken öka med ungefär 20 GB (10 GB för varje språk).
 

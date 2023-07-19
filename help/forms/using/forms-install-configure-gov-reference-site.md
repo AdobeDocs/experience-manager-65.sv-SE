@@ -4,9 +4,9 @@ description: Installera, konfigurera och anpassa ett AEM Forms-demopaket.
 contentOwner: anujkapo
 docset: aem65
 exl-id: 1fee474e-7da5-4ab2-881a-34b8e055aa29
-source-git-commit: e068cee192c0837f1473802143e0793674d400e8
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '4607'
+source-wordcount: '4611'
 ht-degree: 0%
 
 ---
@@ -155,8 +155,8 @@ Det här avsnittet innehåller information och instruktioner om konfigurationen 
 
 1. Konfigurera tjänsten så att den ansluter till valfri SMTP-server:
 
-   1. **Värdnamn för SMTP-server**: t.ex. (smtp.gmail.com)
-   1. **Serverport**: t.ex. (465) för gmail med SSL
+   1. **Värdnamn för SMTP-server**: till exempel (smtp.gmail.com)
+   1. **Serverport**: till exempel (465) för gmail med SSL
    1. **SMTP-användare:** demo@ &lt;companyname> .com
    1. **&quot;Från&quot;-adress**: aemformsdemo@adobe.com
 
@@ -240,7 +240,7 @@ Det här avsnittet innehåller information och instruktioner om konfigurationen 
 1. Gå till fliken Autentiseringsinställningar.
 1. Ange följande information:
 
-   1. **Tjänstrot:** t.ex. `https://msdynamicsserver.api.crm3.dynamics.com/api/data/v9.1/`
+   1. **Tjänstrot:** till exempel `https://msdynamicsserver.api.crm3.dynamics.com/api/data/v9.1/`
    1. **Autentiseringstyp:** OAuth 2.0
    1. **Autentiseringsinställningar** (se [Konfigurationsinställningar för MS® Dynamics-molnet](../../forms/using/forms-install-configure-gov-reference-site.md#dynamicsconfig) för att samla in dessa uppgifter):
 
@@ -251,7 +251,7 @@ Det här avsnittet innehåller information och instruktioner om konfigurationen 
       1. Åtkomsttoken-URL, till exempel [https://login.windows.net/common/oauth2/token](https://login.windows.net/common/oauth2/token)
       1. Auktoriseringsomfång - **open**
       1. Autentiseringshuvud - **Authorization Bearer**
-      1. Resurs - t.ex. `https://msdynamicsserver.api.crm3.dynamics.com`
+      1. Resurs - till exempel `https://msdynamicsserver.api.crm3.dynamics.com`
 
    1. Klicka på Anslut till OAuth.
 
@@ -277,7 +277,7 @@ Stegen som beskrivs i det här avsnittet finns för att hjälpa dig att hitta kl
 1. Navigera till kontrollpanelen för instansen av MS® Dynamics för att hitta URL:en för resursen/tjänstroten.
 1. I det övre navigeringsfältet klickar du på&quot;Försäljning&quot; eller på din egen instanstyp och&quot;Välj inställningar&quot;.
 1. Klicka på&quot;Anpassningar&quot; och&quot;Resurser för utvecklare&quot; längst ned till höger.
-1. Där hittar du Service Root URL: t.ex.
+1. Där hittar du Service Root URL: till exempel
 
    *`https://msdynamicsserver.api.crm3.dynamics.com/api/data/v9.1/`
 

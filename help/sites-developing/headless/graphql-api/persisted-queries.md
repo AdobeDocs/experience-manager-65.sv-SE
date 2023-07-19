@@ -1,10 +1,10 @@
 ---
 title: Beständiga GraphQL-frågor
-description: Lär dig hur du bibehåller GraphQL-frågor i Adobe Experience Manager för att optimera prestandan. Beständiga frågor kan begäras av klientprogram med HTTP GET-metoden och svaret kan cachas i Dispatcher- och CDN-lagren, vilket i slutänden förbättrar klientprogrammens prestanda.
+description: Lär dig hur du bibehåller GraphQL-frågor i Adobe Experience Manager för att optimera prestanda. Beständiga frågor kan begäras av klientprogram med HTTP GET-metoden och svaret kan cachas i Dispatcher- och CDN-lagren, vilket i slutänden förbättrar klientprogrammens prestanda.
 exl-id: d7a1955d-b754-4700-b863-e9f66396cbe1
-source-git-commit: a8616b3b30ac04ea24c4a869cabd47518af1a35f
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '1424'
+source-wordcount: '1423'
 ht-degree: 1%
 
 ---
@@ -38,9 +38,9 @@ Om du till exempel vill skapa en beständig fråga specifikt för WKND-platskonf
 Om det till exempel finns en viss fråga som heter `my-query`, som använder en modell `my-model` från platskonfigurationen `my-conf`:
 
 * Du kan skapa en fråga med `my-conf` en specifik slutpunkt, och därefter sparas frågan enligt följande:
-   `/conf/my-conf/settings/graphql/persistentQueries/my-query`
+  `/conf/my-conf/settings/graphql/persistentQueries/my-query`
 * Du kan skapa samma fråga med `global` slutpunkten, men frågan sparas sedan enligt följande:
-   `/conf/global/settings/graphql/persistentQueries/my-query`
+  `/conf/global/settings/graphql/persistentQueries/my-query`
 
 >[!NOTE]
 >

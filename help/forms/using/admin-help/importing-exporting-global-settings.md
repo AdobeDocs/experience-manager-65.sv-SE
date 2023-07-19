@@ -10,9 +10,9 @@ geptopics: SG_AEMFORMS/categories/configuring_workspace
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 72fe5749-2fa2-442f-b679-7889faeafcac
 exl-id: cdb7ff54-7891-45b1-a921-10b01ef5188d
-source-git-commit: 0c7dba43dad8608b4a5de271e1e44942c950fb16
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '1245'
+source-wordcount: '1246'
 ht-degree: 0%
 
 ---
@@ -131,7 +131,7 @@ For additional information on JGroups and Workspace, see [JGroups and AEM forms 
 
 **client_pollingInterval:** Anger avsökningsintervallet (i sekunder) som används på Flex-arbetsytan (AEM borttaget för formulär i JEE) för att identifiera nya och ändrade uppgifter. Standardvärdet är 3 sekunder. Detta fungerar inte för AEM Forms Workspace.
 
-**client_systemContext_name:** Ange ett anpassat namn (t.ex. Medborgare) som ska visas i fältet Lägg till av (på fliken Bifogade filer) för de bifogade filerna för en uppgift i AEM Forms Workspace.
+**client_systemContext_name:** Ange ett anpassat namn (till exempel Medborgare) som ska visas i fältet Tillagd av (på fliken Bifogade filer) för de bifogade filerna för en uppgift i AEM Forms Workspace.
 
 Så här definierar du det anpassade namnet:
 

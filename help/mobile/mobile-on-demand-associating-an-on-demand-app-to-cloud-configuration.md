@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: authoring-on-demand-services-app
 discoiquuid: d0d29b99-53d4-4b0d-947b-39d91b381de7
 exl-id: 37428543-c310-4712-a4ec-1f482579fb4b
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '408'
+source-wordcount: '409'
 ht-degree: 1%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->Adobe rekommenderar att du använder SPA Editor för projekt som kräver ramverksbaserad klientåtergivning för en sida (t.ex. Reagera). [Läs mer](/help/sites-developing/spa-overview.md).
+>Adobe rekommenderar att du använder SPA Editor för projekt som kräver ramverksbaserad klientåtergivning för en sida (till exempel React). [Läs mer](/help/sites-developing/spa-overview.md).
 
 Genom att koppla en On-Demand-app till en molnkonfiguration kan Adobe Experience Manager (AEM) kommunicera direkt med ett Mobile On-Demand-projekt genom att skapa en tvåvägslänk. Genom att länka din app till ett Mobile On-Demand-projekt kan du skapa innehåll, till exempel artiklar, banners och samlingar i AEM, men även skicka det till Mobile On-Demand.
 

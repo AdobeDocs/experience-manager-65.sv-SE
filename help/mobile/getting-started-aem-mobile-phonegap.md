@@ -10,9 +10,9 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: fbcdea8a-72e9-431b-9c32-dc02d4cdb9c8
 exl-id: d989e235-5993-4738-8523-5b9a5f6bf712
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '488'
+source-wordcount: '489'
 ht-degree: 1%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->Adobe rekommenderar att du använder SPA Editor för projekt som kräver ramverksbaserad klientåtergivning för en sida (t.ex. Reagera). [Läs mer](/help/sites-developing/spa-overview.md).
+>Adobe rekommenderar att du använder SPA Editor för projekt som kräver ramverksbaserad klientåtergivning för en sida (till exempel React). [Läs mer](/help/sites-developing/spa-overview.md).
 
 AEM integreras med PhoneGap så att du enkelt kan skapa appar med AEM sidor. Med PhoneGap kan användaren skapa verktygsappar som gör att användaren kan arbeta med innehållet. Med Innehållssynkronisering kan du skapa versionshanterade arkiv med sidor som kan paketeras med appar.
 

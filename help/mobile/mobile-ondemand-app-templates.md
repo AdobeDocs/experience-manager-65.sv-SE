@@ -9,9 +9,9 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 discoiquuid: ec4ada04-e429-4ad4-a060-2dccac847cf0
 exl-id: 5f050baa-fe10-4acc-ad32-de20793edc13
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '1159'
+source-wordcount: '1160'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe rekommenderar att du använder SPA Editor för projekt som kräver ramverksbaserad klientåtergivning för en sida (t.ex. Reagera). [Läs mer](/help/sites-developing/spa-overview.md).
+>Adobe rekommenderar att du använder SPA Editor för projekt som kräver ramverksbaserad klientåtergivning för en sida (till exempel React). [Läs mer](/help/sites-developing/spa-overview.md).
 
 AEM Mobile On-Demand tillhandahåller en fullständigt konfigurerad programmall, en artikelmall och artikelkomponenter.
 
@@ -62,6 +62,7 @@ När du har skapat ett program med den här mallen kan du lägga till artiklar, 
 >The ***redirectTarget*** beräknas som en del av åtgärden skapa app och försöker matcha en sökväg, om det finns en redirectTarget-egenskap som är tillgänglig som en del av programmallen, och värdet för redirectTarget definieras som relative. När skapandeappprocessen hittar ett relativt värde för redirectTarget i appmallen läggs värdet till på den lösta platsen där appen skapades.
 >
 >Om en programmall till exempel definierar en ***redirectTarget*** med värdet &quot;*language-masters/en*&quot; och appen skapades i &quot;*/content/mobileapps/fooApp*&quot; kommer det slutliga värdet för redirectTarget efter att appen har skapats att vara &quot;*/content/mobileapps/fooApp/language-masters/en*&quot;.
+>
 
 ## Skapa innehållsmallar {#creating-content-templates}
 
@@ -124,6 +125,7 @@ En enkel komponent ingår i koddatabasen, vars källa finns i AEM. Därefter kan
 >[!NOTE]
 >
 >Det finns för närvarande inga färdiga komponenter för AEM Mobile.
+>
 
 Du kan lägga till komponenter på sidan. Alla komponenter kan användas i en AEM Mobile-app, men de kanske inte återges korrekt när de används.
 

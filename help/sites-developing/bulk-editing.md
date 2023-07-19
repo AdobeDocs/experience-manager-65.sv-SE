@@ -10,9 +10,9 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: fe61ee4b-51b6-4a6f-91d8-1c02b29cc1db
 exl-id: 1787e643-fc8e-40e0-8e14-97b222a7c320
-source-git-commit: b886844dc80482ae4aae5fc7ce09e466efecc3bd
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '414'
+source-wordcount: '415'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ På grund av möjligheten att det finns olika värden är sidegenskaperna inte a
 * Vissa fält är vanligtvis unika. till exempel en sidrubrik. Du måste bestämma om det är meningsfullt att aktivera sådana fält för massredigering, när ett värde ska användas.
 * Vissa fält kan ha flera värden - detta kräver en meningsfull representation vid återgivningen.
 
-   Till exempel en kryssruta som anger&quot;Klart för publikation&quot;. Detta kan ha flera värden före gruppredigering (t.ex. ready, in-review, in-progress).
+  Till exempel en kryssruta som anger&quot;Klart för publikation&quot;. Detta kan ha flera värden före gruppredigering (t.ex. ready, in-review, in-progress).
 
 >[!CAUTION]
 >
@@ -36,7 +36,6 @@ På grund av möjligheten att det finns olika värden är sidegenskaperna inte a
 >* Inte tillgängligt för sidor i en live-kopia.
 >* Endast tillgängligt för sidor med samma resurstyp.
 >
-
 
 >[!NOTE]
 >
@@ -55,7 +54,6 @@ På grund av möjligheten att det finns olika värden är sidegenskaperna inte a
 >* `/libs/granite/ui/components/foundation/form/pathbrowser`
 >* `/libs/granite/ui/components/foundation/form/checkbox`
 >
-
 
 Fält är aktiverade i sidkomponenten (*not* på mallen):
 
@@ -92,6 +90,5 @@ Fält är aktiverade i sidkomponenten (*not* på mallen):
    >
    >    1. Återskapa önskat objekt (d.v.s. som det finns i `/libs`) under `/apps`
    >    1. Gör ändringar i `/apps`
-
 
 1. Välj **Spara alla** för att behålla uppdateringarna.

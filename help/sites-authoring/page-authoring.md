@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: 2d4cda3d-3270-4294-a146-e5712746aebb
 docset: aem65
 exl-id: 07528cf0-e67a-46b5-a3b2-d1b74ad2228f
-source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '315'
+source-wordcount: '314'
 ht-degree: 0%
 
 ---
@@ -48,7 +48,7 @@ Till vänster på en redigerbar sida kan en skjutbar webbläsare öppnas. härif
 Till vänster på en redigerbar sida kan en skjutbar webbläsare öppnas. Här kan resurser dras till sidan. till exempel för att placera resurser eller skapa länkar till andra sidor.
 
 * **Komponentverktygsfältet**
-Både ett enkelt eller ett långsamt dubbelklick/tryck visar rätt verktygsfält (ett för redigeringsverktygsfältet på plats och sedan det långsamma dubbelklicket för hela verktygsfältet).
+Både en enkel eller en långsam dubbelklickning/tryckning visar rätt verktygsfält (en för verktygsfältet för redigering på plats och sedan långsam dubbelklickning för hela verktygsfältet).
 
 * **[Responsiv layout](/help/sites-authoring/responsive-layout.md)**
 Detta tillhandahåller ett styckesystem som gör att du kan placera komponenter i ett responsivt rutnät.

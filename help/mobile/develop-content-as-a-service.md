@@ -9,9 +9,9 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 discoiquuid: 3d65cc6b-5721-472f-a805-588d50f3571b
 exl-id: 85e73679-684e-402f-8186-8b56d8bd9372
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '968'
+source-wordcount: '969'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe rekommenderar att du använder SPA Editor för projekt som kräver ramverksbaserad klientåtergivning för en sida (t.ex. Reagera). [Läs mer](/help/sites-developing/spa-overview.md).
+>Adobe rekommenderar att du använder SPA Editor för projekt som kräver ramverksbaserad klientåtergivning för en sida (till exempel React). [Läs mer](/help/sites-developing/spa-overview.md).
 
 Mobilappar bör kunna använda allt innehåll i AEM efter behov för att leverera en målinriktad appupplevelse.
 

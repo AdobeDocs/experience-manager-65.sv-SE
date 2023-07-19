@@ -10,7 +10,7 @@ topic-tags: personalization
 content-type: reference
 discoiquuid: b9618913-5433-4baf-9ff6-490a26860505
 exl-id: c07692f7-3618-4e8c-96d7-4db09f2d9896
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
 source-wordcount: '1108'
 ht-degree: 0%
@@ -112,7 +112,6 @@ The **E-postverktyg** kan komponenten för ExactTarget lägga till fler e-postfu
 >* Två av e-postverktygen krävs: **Fysisk e-postadress (obligatoriskt)** och **Profilcenter (obligatoriskt)**. När e-postmeddelandet publiceras på ExactTarget läggs dessa två e-postverktyg till längst ned i varje e-post som standard.
 >
 
-
 ### Lägga till text- och anpassningsverktyg i e-postmeddelanden {#adding-text-and-personalization-tool-to-your-e-mail}
 
 Du kan lägga till anpassade fält i ett e-postmeddelande genom att lägga till **Text och personalisering** till sidan:
@@ -160,6 +159,7 @@ E-post/nyhetsbrev kan publiceras till din e-posttjänst genom att följa dessa s
 >Om ett e-postmeddelande/nyhetsbrev publiceras med samma namn som ett redan publicerat e-postmeddelande/nyhetsbrev ersätts inte det tidigare e-postmeddelandet/nyhetsbrevet. I stället skapas ett nytt e-postnyhetsbrev med samma namn (ID:n för två nyhetsbrev är dock olika).
 >
 >När du publicerar e-post/nyhetsbrev till e-postleverantören publiceras även e-post/nyhetsbrevet till den AEM publiceringsinstansen.
+>
 
 ### Uppdatera ett publicerat e-postmeddelande {#updating-a-published-e-mail}
 

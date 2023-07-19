@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 048f7b30-20c3-4567-bd32-38cf2643cf39
 role: Admin
 exl-id: 799d5ae1-caac-4c92-8835-696ad25de553
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '1156'
+source-wordcount: '1155'
 ht-degree: 0%
 
 ---
@@ -64,41 +64,39 @@ På författaren, för att komma åt lagringskonsolen:
 
    * **[!UICONTROL mongoDB URI]**
 
-      *standard*: mongodb://localhost/?maxPoolSize=10&amp;waitQueueMultiple=5&amp;readPreference=secondaryPreferred
+     *standard*: mongodb://localhost/?maxPoolSize=10&amp;waitQueueMultiple=5&amp;readPreference=secondaryPreferred
 
    * **[!UICONTROL mongoDB Database]**
 
-      *standard*: communities
+     *standard*: communities
 
    * **[!UICONTROL mongoDB UGC Collection]**
 
-      *standard*: innehåll
+     *standard*: innehåll
 
    * **[!UICONTROL mongoDB Attachment Collection]**
 
-      *standard*: bilagor
+     *standard*: bilagor
 
 * **[!UICONTROL SolrConfiguration]**
 
    * **[Zookeeper](https://cwiki.apache.org/confluence/display/solr/Using+ZooKeeper+to+Manage+Configuration+Files) Värd**
 
-      Vid körning [SolrCloud-läge](solr.md#solrcloud-mode) med en extern ZooKeeper anger du det här värdet till `HOST:PORT` för ZooKeeper, till exempel *my.server.com:2181*
+     Vid körning [SolrCloud-läge](solr.md#solrcloud-mode) med en extern ZooKeeper anger du det här värdet till `HOST:PORT` för ZooKeeper, till exempel *my.server.com:2181*
 
-      Ange kommaavgränsade för en ZooKeeper Ensemble `HOST:PORT` värden, som *host1:2181,host2:2181*
+     Ange kommaavgränsade för en ZooKeeper Ensemble `HOST:PORT` värden, som *host1:2181,host2:2181*
 
-      Lämna tomt om du kör Solr i fristående läge med den interna ZooKeeper.
-      *Standard*: *&lt;blank>*
+     Lämna tomt om du kör Solr i fristående läge med den interna ZooKeeper.
+     *Standard*: *&lt;blank>*
 
       * **[!UICONTROL Solr URL]**
 Den URL som används för att kommunicera med Solr i fristående läge.
 Lämna tomt om du kör i SolrCloud-läge.
-
-         *Standard*: https://127.0.0.1:8983/solr/
+        *Standard*: https://127.0.0.1:8983/solr/
 
       * **[!UICONTROL Solr Collection]**
 Solr-samlingens namn.
-
-         *Standard*: collection1
+        *Standard*: collection1
 
 * Välj **[!UICONTROL Submit]**
 
@@ -198,7 +196,7 @@ cURL -u *signera* -d *data* *reindex-url*
 *bana* = rotplatsen för UGC-trädet som ska indexeras om
 
 * Om du vill indexera om all UGC anger du värdet för `asipath`egenskap för
-   `/etc/socialconfig/srpc/defaultconfiguration`
+  `/etc/socialconfig/srpc/defaultconfiguration`
 * Om du vill begränsa indexvärdet till viss UGC anger du ett underträd till `asipath`
 
 *reindex-url* = slutpunkten för omindexering av SRP

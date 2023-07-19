@@ -8,7 +8,7 @@ topic-tags: installing
 discoiquuid: b53eae8c-16ba-47e7-9421-7c33e141d268
 role: Admin
 exl-id: 5d48e987-16c2-434b-8039-c82181d2e028
-source-git-commit: 420b7f83939aef548501b4676ddca1ec9fc2aa03
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
 source-wordcount: '5373'
 ht-degree: 0%
@@ -44,7 +44,7 @@ AEM Forms tillhandahåller en uppsättning OSGi-tjänster för att utföra olika
    * AEM validerar en signatur som lagts till i ett formulär med Acrobat eller Adobe Reader.
    * Den AEM servern signerar ett formulär för en offentlig notarius publicus.
 
-   Signaturtjänsten får åtkomst till certifikat och autentiseringsuppgifter som lagras i förtroendearkivet. Mer information finns i [Signaturtjänst](/help/forms/using/aem-document-services-programmatically.md).
+  Signaturtjänsten får åtkomst till certifikat och autentiseringsuppgifter som lagras i förtroendearkivet. Mer information finns i [Signaturtjänst](/help/forms/using/aem-document-services-programmatically.md).
 
 AEM Forms är en kraftfull plattform för större företag och dokumenttjänsterna är bara en av AEM Forms funktioner. En fullständig lista över funktioner finns på [Introduktion till AEM Forms](/help/forms/using/introduction-aem-forms.md).
 
@@ -83,9 +83,8 @@ Innan du börjar installera och konfigurera AEM Forms Document Services bör du 
 >[!NOTE]
 >
 >* I Microsoft® Windows stöder PDF Generator konverteringsvägar för WebKit, Acrobat WebCapture och PhantomJS för att konvertera HTML-filer till PDF-dokument.
->* På UNIX-baserade operativsystem stöder PDF Generator konverteringsvägar för WebKit och PhantomJS för att konvertera HTML-filer till PDF.
+>* På UNIX-baserade operativsystem stöder PDF Generator konverteringsvägar för WebKit och PhantomJS för att konvertera HTML-filer till PDF-dokument.
 >
-
 
 ### Extra krav för UNIX-baserat operativsystem {#extrarequirements}
 
@@ -173,7 +172,7 @@ Om du använder ett UNIX-baserat operativsystem installerar du följande 32-bita
    * /usr/lib/libcrypto.so
    * /usr/lib/libssl.so
 
-* **(Endast PDF Generator)** PDF Generator-tjänsten stöder WebKit- och PhantomJS-vägar för att konvertera HTML-filer till PDF-dokument. Installera nedanstående 64-bitarsbibliotek om du vill aktivera konvertering för PhantomJS-vägar. I allmänhet är dessa bibliotek redan installerade. Om något bibliotek saknas installerar du det manuellt:
+* **(endast PDF Generator)** PDF Generator-tjänsten stöder WebKit- och PhantomJS-vägar för att konvertera HTML-filer till PDF-dokument. Installera nedanstående 64-bitarsbibliotek om du vill aktivera konvertering för PhantomJS-vägar. I allmänhet är dessa bibliotek redan installerade. Om något bibliotek saknas installerar du det manuellt:
 
    * linux-gate.so.1
    * libz.so.1
@@ -191,7 +190,7 @@ Om du använder ett UNIX-baserat operativsystem installerar du följande 32-bita
 
 ## Konfigurationer före installation {#preinstallationconfigurations}
 
-Konfigurationer som listas i avsnittet med förinstallationskonfigurationer gäller endast för PDF Generator-tjänsten. Om du inte konfigurerar tjänsten PDF Generator kan du hoppa över konfigurationsavsnittet före installation.
+Konfigurationer som listas i avsnittet med förinstallationskonfigurationer gäller endast för tjänsten PDF Generator. Om du inte konfigurerar tjänsten PDF Generator kan du hoppa över konfigurationsavsnittet före installation.
 
 ### Installera Adobe Acrobat och tredjepartsprogram {#install-adobe-acrobat-and-third-party-applications}
 
@@ -205,8 +204,7 @@ Om du ska använda tjänsten PDF Generator för att konvertera inbyggda filforma
 >* Starta alla installerade program minst en gång. Stäng alla dialogrutor för alla användare som har konfigurerats att använda tjänsten PDF Generator.
 >* [Kontrollera utgångsdatum för dina Adobe Acrobat-serienummer](https://helpx.adobe.com/enterprise/kb/volume-license-expiration-check.html) och ange ett datum för uppdatering av licensen eller [migrera ditt serienummer](https://www.adobe.com/devnet-docs/acrobatetk/tools/AdminGuide/licensing.html#migrating-your-serial-number) baserat på utgångsdatum.
 
-
-När du har installerat Acrobat öppnar du Microsoft® Word. På **Acrobat** flik, klicka **Skapa PDF** och konvertera en .doc- eller .docx-fil som finns på datorn till ett PDF-dokument. Om konverteringen lyckas är AEM Forms redo att använda Acrobat med tjänsten PDF Generator.
+När du har installerat Acrobat öppnar du Microsoft® Word. På **Acrobat** flik, klicka **Skapa PDF** och konvertera en .doc- eller .docx-fil som finns på datorn till ett PDF-dokument. Om konverteringen lyckas är AEM Forms redo att använda Acrobat tillsammans med PDF Generator.
 
 ### Konfigurera miljövariabler {#setup-environment-variables}
 
@@ -248,7 +246,7 @@ Ange miljövariabler för 32- och 64-bitars Java Development Kit, tredjepartspro
 >* JAVA_HOME, JAVA_HOME_32 och Acrobat_PATH (endast Windows) är obligatoriska miljövariabler.
 >* Miljövariabeln OpenOffice_PATH ställs in på installationsmappen i stället för på sökvägen till den körbara filen.
 >* Ställ inte in miljövariabler för Microsoft® Office-program som Word, PowerPoint, Excel och Project, eller för AutoCAD. Om dessa program är installerade på servern startar tjänsten Generate PDF automatiskt dessa program.
->* Installera OpenOffice som /root på UNIX-baserade plattformar. Om OpenOffice inte är installerat som rot kan inte PDF Generator-tjänsten konvertera OpenOffice-dokument till PDF-dokument. Om du måste installera och köra OpenOffice som en icke-rotanvändare anger du sudo-rättigheter till användaren som inte är rotanvändare.
+>* Installera OpenOffice som /root på UNIX-baserade plattformar. Om OpenOffice inte är installerat som rot kan tjänsten PDF Generator inte konvertera OpenOffice-dokument till PDF-dokument. Om du måste installera och köra OpenOffice som en icke-rotanvändare anger du sudo-rättigheter till användaren som inte är rotanvändare.
 >* Om du använder OpenOffice på en UNIX-baserad plattform kör du följande kommando för att ange variabeln path:
 >
 >  `export OpenOffice_PATH=/opt/openoffice.org4`
@@ -294,7 +292,7 @@ Utför följande steg för att konfigurera IBM® SSL-socketprovidern:
 
 1. Klicka **[!UICONTROL Trust Center]** och klicka **[!UICONTROL Trust Center Settings]**.
 1. I **[!UICONTROL Trust Center settings]**, klicka **[!UICONTROL File Block Settings]**.
-1. I **[!UICONTROL File Type]** lista, avmarkera **[!UICONTROL Open]** för den filtyp som PDF Generator-tjänsten ska kunna konvertera till PDF-dokument.
+1. I **[!UICONTROL File Type]** lista, avmarkera **[!UICONTROL Open]** för den filtyp som PDF Generator ska kunna konvertera till PDF-dokument.
 
 ### (Endast Windows) Bevilja privilegiet Ersätt en token på processnivå {#grant-the-replace-a-process-level-token-privilege}
 
@@ -328,13 +326,13 @@ Du kan göra det möjligt för en icke-administratörsanvändare att använda tj
 
 ### (Endast Windows) Inaktivera felrapporteringstjänsten {#disable-error-reporting-service}
 
-När du konverterar ett dokument till PDF med hjälp av PDF Generator-tjänsten på Windows Server rapporterar Windows Server ibland att den körbara filen har stött på ett problem och måste avslutas. Den påverkar dock inte konverteringen av PDF eftersom den fortsätter i bakgrunden.
+När ett dokument konverteras till PDF med tjänsten PDF Generator på Windows Server rapporteras ibland om att den körbara filen har stött på ett problem och måste stängas. Den påverkar dock inte konverteringen av PDF eftersom den fortsätter i bakgrunden.
 
 Du kan undvika att få felmeddelanden genom att inaktivera Windows-felrapportering. Mer information om hur du inaktiverar felrapportering finns i [https://technet.microsoft.com/en-us/library/cc754364.aspx](https://technet.microsoft.com/en-us/library/cc754364.aspx).
 
 ### (Endast Windows) Konfigurera konvertering från HTML till PDF {#configure-html-to-pdf-conversion}
 
-PDF Generator-tjänsten tillhandahåller vägar eller metoder för WebKit, WebCapture och PhantomJS för att konvertera HTML-filer till PDF-dokument. Om du vill aktivera konvertering för WebKit- och Acrobat WebCapture-vägar i Windows kopierar du Unicode-teckensnittet till katalogen %windir%\fonts.
+Tjänsten PDF Generator tillhandahåller vägar eller metoder för WebKit, WebCapture och PhantomJS för att konvertera HTML-filer till PDF-dokument. Om du vill aktivera konvertering för WebKit- och Acrobat WebCapture-vägar i Windows kopierar du Unicode-teckensnittet till katalogen %windir%\fonts.
 
 >[!NOTE]
 >
@@ -342,7 +340,7 @@ PDF Generator-tjänsten tillhandahåller vägar eller metoder för WebKit, WebCa
 
 ### (Endast UNIX-baserade plattformar) Extra konfigurationer för konvertering från HTML till PDF  {#extra-configurations-for-html-to-pdf-conversion}
 
-På UNIX-baserade plattformar har PDF Generator-tjänsten stöd för WebKit- och PhantomJS-vägar för konvertering av HTML-filer till PDF-dokument. Om du vill aktivera konvertering från HTML till PDF ska du göra följande konfigurationer som passar din önskade konverteringsväg:
+På UNIX-baserade plattformar stöder tjänsten PDF Generator WebKit och PhantomJS-vägar för att konvertera HTML-filer till PDF-dokument. Om du vill aktivera konvertering från HTML till PDF ska du göra följande konfigurationer som passar din önskade konverteringsväg:
 
 ### (Endast UNIX-baserade plattformar) Aktivera stöd för Unicode-teckensnitt (endast WebKit) {#enable-support-for-unicode-fonts-webkit-only}
 
@@ -362,10 +360,9 @@ Kopiera Unicode-teckensnittet till någon av följande kataloger som passar ditt
 >* Ta bort alla .lst-teckensnittscachefiler från katalogerna Html2PdfSvc/bin och /usr/share/fonts.
 >* Kontrollera att katalogerna /usr/lib/X11/fonts och /usr/share/fonts finns. Om katalogerna inte finns använder du ln-kommandot för att skapa en symbolisk länk från /usr/share/X11/fonts till /usr/lib/X11/fonts och en annan symbolisk länk från /usr/share/fonts till /usr/share/X11/fonts. Se även till att teckensnitten finns på /usr/lib/X11/fonts.
 >* Kontrollera att alla teckensnitt (Unicode och icke-unicode) är tillgängliga i katalogen /usr/share/fonts eller /usr/share/X11/fonts.
->* När du kör PDF Generator-tjänsten som en icke-rotanvändare måste du ge icke-rotanvändaren läs- och skrivåtkomst till alla teckensnittskataloger.
+>* När du kör PDF Generator som en icke-rotanvändare ska du ge icke-rotanvändaren läs- och skrivåtkomst till alla teckensnittskataloger.
 >* När du installerar nya teckensnitt i teckensnittsmappen startar du om AEM Forms-instansen.
 >
-
 
 ## Installera AEM Forms tilläggspaket {#install-aem-forms-add-on-package}
 
@@ -415,6 +412,7 @@ AEM Forms tilläggspaket är ett program som distribueras till AEM. Paketet inne
    >
    >Din rätt att använda teckensnitt som tillhandahålls av andra parter än Adobe regleras av de licensavtal som dessa parter ger dig med dessa teckensnitt och omfattas inte av din licens att använda Adobe. Adobe rekommenderar att du granskar och ser till att du följer alla tillämpliga licensavtal som inte är Adobe innan du använder teckensnitt som inte är Adobe med Adobe, särskilt när det gäller användning av teckensnitt i servermiljöer.
    >När du installerar nya teckensnitt i teckensnittsmappen startar du om AEM Forms-instansen.
+   >
 
 ### Konfigurera ett lokalt användarkonto för att köra tjänsten PDF Generator  {#configure-a-local-user-account-to-run-the-pdf-generator-service}
 
@@ -455,7 +453,7 @@ Det krävs ett lokalt användarkonto för att köra tjänsten PDF Generator. Anv
   </tr>
   <tr>
    <td>Utgångsdatum i sekunder för jobb</td>
-   <td>Varaktighet som PDF Generator-tjänsten får utföra en konvertering för. Kontrollera att värdet för Sekunder för jobbförfallodatum är större än värdet för PDFG-rensningsgenomsökning.</td>
+   <td>Varaktighet som tjänsten PDF Generator får utföra en konvertering för. Kontrollera att värdet för Sekunder för jobbförfallodatum är större än värdet för PDFG-rensningsgenomsökning.</td>
    <td>7 200 sekunder</td>
   </tr>
  </tbody>
@@ -463,7 +461,7 @@ Det krävs ett lokalt användarkonto för att köra tjänsten PDF Generator. Anv
 
 ### (Endast Windows) Konfigurera Acrobat för tjänsten PDF Generator {#configure-acrobat-for-the-pdf-generator-service}
 
-I Microsoft® Windows använder PDF Generator-tjänsten Adobe Acrobat för att konvertera filformat som stöds till ett PDF-dokument. Så här konfigurerar du Adobe Acrobat för tjänsten PDF Generator:
+I Microsoft® Windows används Adobe Acrobat för att konvertera de filformat som stöds till ett PDF-dokument. Så här konfigurerar du Adobe Acrobat för tjänsten PDF Generator:
 
 1. Öppna Acrobat och välj **[!UICONTROL Edit]**> **[!UICONTROL Preferences]**> **[!UICONTROL Updater]**. I Sök efter uppdateringar avmarkerar **[!UICONTROL Automatically install updates]** och klicka **[!UICONTROL OK]**. Stäng Acrobat.
 1. Dubbelklicka på ett PDF-dokument på datorn. När Acrobat startas för första gången visas dialogrutorna för inloggning, välkomstskärm och licensavtal. Stäng de här dialogrutorna för alla användare som har konfigurerats att använda PDF Generator.
@@ -477,13 +475,13 @@ I Microsoft® Windows använder PDF Generator-tjänsten Adobe Acrobat för att k
 
       `Acrobat_for_PDFG_Configuration.bat`
 
-      Acrobat är konfigurerat att köras med PDF Generator-tjänsten.
+      Acrobat är konfigurerat att köras med tjänsten PDF Generator.
 
 1. Kör [Systemberedskap (SRT)](#SRT) för att validera installationen av Acrobat.
 
 ### (Endast Windows) Konfigurera primär väg för konvertering från HTML till PDF {#configure-primary-route-for-html-to-pdf-conversion-windows-only}
 
-PDF Generator-tjänsten erbjuder flera vägar för konvertering av HTML-filer till PDF-dokument: Webkit, Acrobat WebCapture (endast Windows) och PhantomJS. Adobe rekommenderar att du använder PhantomJS-vägen eftersom den kan hantera dynamiskt innehåll och inte har några beroenden till 32-bitars bibliotek, 32-bitars JDK eller inte kräver några extra teckensnitt. Inte heller PhantomJS-vägen kräver sudo- eller root-åtkomst för att köra konverteringen.
+Tjänsten PDF Generator erbjuder flera vägar för konvertering av HTML-filer till PDF: Webkit, Acrobat WebCapture (endast Windows) och PhantomJS. Adobe rekommenderar att du använder PhantomJS-vägen eftersom den kan hantera dynamiskt innehåll och inte har några beroenden till 32-bitars bibliotek, 32-bitars JDK eller inte kräver några extra teckensnitt. Inte heller PhantomJS-vägen kräver sudo- eller root-åtkomst för att köra konverteringen.
 
 Den primära standardvägen för konvertering från HTML till PDF är Webkit. Så här ändrar du konverteringsflödet:
 
@@ -510,7 +508,7 @@ Innan du konfigurerar certifikaten bör du kontrollera att du har en:
 * Lösenordet för den privata nyckeln som tillhandahålls med certifikatet.
 
 * Alias för privat nyckel. Du kan köra kommandot för Java-nyckelverktyget för att visa alias för den privata nyckeln:
-   `keytool -list -v -keystore [keystore-file] -storetype pkcs12`
+  `keytool -list -v -keystore [keystore-file] -storetype pkcs12`
 
 * Lösenord för nyckelbehållarfil. Om du använder certifikatet för Adobe Reader Extensions är lösenordet för nyckelfilen alltid detsamma som lösenordet för den privata nyckeln.
 
@@ -597,7 +595,6 @@ The [Verktyget Systemberedskap](#srt-configuration) kontrollerar om datorn är k
    >
    >* Om systemberedskapsverktyget rapporterar att filen pdfgen.api inte är tillgänglig i Acrobat plug-ins-mappen kopierar du filen pdfgen.api från `[extracted-adobe-aemfd-pdfg-common-pkg]\jcr_root\libs\fd\pdfg\tools\adobe-aemfd-pdfg-utilities-[version]\plugins\x86_win32` till `[Acrobat_root]\Acrobat\plug_ins` katalog.
 
-
 1. Navigera till `[Path_of_reports_folder]`. Öppna filen SystemReadinessTool.html. Verifiera rapporten och åtgärda problemen.
 
 ### Konfigurera alternativ för SRT-verktyget {#srt-configuration}
@@ -609,7 +606,7 @@ Du kan använda filen srt_config.yaml för att konfigurera olika inställningar 
    # SRT Configuration
    # =================================================================
    #Note - follow correct format to avoid parsing failures
-   #e.g. <param name>:<space><param value> 
+   #for example, <param name>:<space><param value> 
    #locale: (mandatory field)Locale to be used for SRT. Supported locales [en/fr/de/ja].
    locale: en
    
@@ -629,7 +626,7 @@ Du kan använda filen srt_config.yaml för att konfigurera olika inställningar 
    outputDir:
 ```
 
-* **Språk:** Det är en obligatorisk parameter. Det har stöd för engelska (en), tyska (de), franska (fr) och japanska (ja). Standardvärdet är en. Den påverkar inte PDF Generator-tjänster som körs på AEM Forms i OSGi.
+* **Språk:** Det är en obligatorisk parameter. Det har stöd för engelska (en), tyska (de), franska (fr) och japanska (ja). Standardvärdet är en. Det påverkar inte PDF Generator tjänster som körs på AEM Forms i OSGi.
 * **aemTempDir:** Det är en valfri parameter. Den anger tillfällig lagringsplats för Adobe Experience Manager.
 * **användare:** Det är en valfri parameter. Du kan ange en användare som ska kontrollera om användaren har nödvändig behörighet och läs-/skrivåtkomst för kataloger som krävs för att köra PDF Generator. Om ingen användare anges hoppas användarspecifika kontroller över och visas som misslyckade i rapporten.
 * **outputDir:** Ange platsen där SRT-rapporten ska sparas. Standardplatsen är den aktuella arbetskatalogen för SRT-verktyget.
@@ -646,7 +643,7 @@ Innan du utför följande kontroller bör du kontrollera att [Systemberedskap](#
 * Kontrollera att Adobe Acrobat Update Service är inaktiverad.
 * Se till att [Acrobat_for_PDFG_Configuration.bat](#configure-acrobat-for-the-pdf-generator-service) gruppfilen kördes med administratörsbehörighet.
 * Se till att en PDF Generator-användare läggs till i användargränssnittet för PDF-konfigurationen.
-* Se till att [Ersätta en processnivåtoken](#grant-the-replace-a-process-level-token-privilege) behörighet läggs till för PDF Generator-användaren.
+* Se till att [Ersätta en processnivåtoken](#grant-the-replace-a-process-level-token-privilege) behörigheter läggs till för PDF Generator-användaren.
 * Kontrollera att Office COM-tillägget för Acrobat PDFMaker är aktiverat för Microsoft Office-program.
 
 +++
@@ -655,11 +652,11 @@ Innan du utför följande kontroller bör du kontrollera att [Systemberedskap](#
 
 **Microsoft® Windows**
 
-* Kontrollera att 32-bitars [version som stöds ](aem-forms-jee-supported-platforms.md#software-support-for-pdf-generator) av Microsoft Office är installerat och dialogrutor för att öppna avbryts för alla program.
+* Kontrollera att 32-bitars [version som stöds](aem-forms-jee-supported-platforms.md#software-support-for-pdf-generator) av Microsoft Office är installerat och dialogrutor för att öppna avbryts för alla program.
 * Se till att en PDF Generator-användare läggs till i användargränssnittet för PDF-konfigurationen.
-* Kontrollera att PDF Generator-användaren är medlem i en administratörsgrupp och att [Ersätta en processnivåtoken](#grant-the-replace-a-process-level-token-privilege) privilegium har angetts för användaren.
-* Kontrollera att användaren är konfigurerad i användargränssnittet för PDF Generator och utför följande åtgärder:
-   1. Logga in på Microsoft® Windows med PDF Generator-användare.
+* Se till att PDF Generator är medlem i administratörsgruppen och att [Ersätta en processnivåtoken](#grant-the-replace-a-process-level-token-privilege) privilegium har angetts för användaren.
+* Se till att användaren är konfigurerad i användargränssnittet i PDF Generator och utför följande åtgärder:
+   1. Logga in på Microsoft® Windows med PDF Generator.
    1. Öppna Microsoft® Office- eller OpenOffice-program och avbryt alla dialogrutor.
    1. Ange Adobe PDF som standardskrivare.
    1. Ange Acrobat som standardprogram för PDF-filer.
@@ -678,7 +675,7 @@ Innan du utför följande kontroller bör du kontrollera att [Systemberedskap](#
 
 +++HTML till konverteringsproblem i PDF
 
-* Se till att teckensnittskataloger läggs till i användargränssnittet för PDF Generator-konfigurationen.
+* Se till att teckensnittskataloger läggs till i användargränssnittet för PDF Generator config.
 
 **Linux och Solaris (PhantomJS-konverteringsväg)**
 
@@ -686,9 +683,9 @@ Innan du utför följande kontroller bör du kontrollera att [Systemberedskap](#
 
 * Kör följande kommando för att lista saknade bibliotek för skenobjekt:
 
-   ```
-   ldd phantomjs | grep not
-   ```
+  ```
+  ldd phantomjs | grep not
+  ```
 
 * Kontrollera att miljövariabeln JAVA_HOME_32 pekar på rätt plats.
 
@@ -696,11 +693,11 @@ Innan du utför följande kontroller bör du kontrollera att [Systemberedskap](#
 
 * Se till att katalogerna `/usr/lib/X11/fonts` och `/usr/share/fonts` finns. Om katalogerna inte finns skapar du en symbolisk länk från `/usr/share/X11/fonts` till `/usr/lib/X11/fonts` och en annan symbolisk länk från `/usr/share/fonts` till `/usr/share/X11/fonts`.
 
-   ```
-   ln -s /usr/share/fonts /usr/share/X11/fonts
-   
-   ln -s /usr/share/X11/fonts /usr/lib/X11/fonts
-   ```
+  ```
+  ln -s /usr/share/fonts /usr/share/X11/fonts
+  
+  ln -s /usr/share/X11/fonts /usr/lib/X11/fonts
+  ```
 
 * Se till att IBM-teckensnitt kopieras under användare/resurs/teckensnitt.
 * Kontrollera att glibc för att åtgärda spöksårbarheter finns på datorn. Använd din standardpakethanterare för att uppdatera till den senaste versionen av glibc. Det innehåller åtgärder för att åtgärda spöksårbarheter.
@@ -733,7 +730,7 @@ Innan du utför följande kontroller bör du kontrollera att [Systemberedskap](#
 
 +++
 
-+++ Det går inte att lägga till en PDFG-användare (PDF Generator)
++++ Det går inte att lägga till en PDF Generator-användare (PDFG)
 
 * Kontrollera att omdistribuerbara Microsoft® Visual C++ 2012 x86 och Microsoft® Visual C++ 2013 x86 (32-bitars) är installerade på Windows.
 
@@ -751,9 +748,9 @@ Innan du utför följande kontroller bör du kontrollera att [Systemberedskap](#
 
 * Kontrollera serverloggarna för att kontrollera om konverteringen misslyckas för en viss användare.(Process Explorer kan hjälpa dig att kontrollera processen för olika användare)
 
-* Kontrollera att den användare som är konfigurerad för PDF Generator har lokala administratörsrättigheter.
+* Kontrollera att den användare som konfigurerats för PDF Generator har lokala administratörsrättigheter.
 
-* Se till att PDF Generator-användaren har läs-, skriv- och körbehörighet för tillfälliga LC- och PDFG-användare.
+* Kontrollera att PDF Generator har läs-, skriv- och körbehörighet för tillfälliga LC- och PDFG-användare.
 
 * För Microsoft® Office och OpenOffice utför du minst en konvertering manuellt (som varje användare) för att säkerställa att ingen dialogruta öppnas under konverteringen. Om någon dialogruta visas, stänger du den. Ingen sådan dialogruta ska visas vid automatisk konvertering.
 
@@ -767,19 +764,19 @@ Innan du utför följande kontroller bör du kontrollera att [Systemberedskap](#
 
    * Använd följande kommandon för att generera prov.xml och serialisera den befintliga installationen med prov.xml i stället för kommandona i [migrera ditt serienummer](https://www.adobe.com/devnet-docs/acrobatetk/tools/AdminGuide/licensing.html#migrating-your-serial-number) nummerartikel.
 
-          &quot;
-          
-          adobe_prtk —tool=VolumeSerialize —generate —serial=&lt;serialnum> [—leid=&lt;leid>] [—regsuppress=ss] [—eulasuppress] [—locales=limited list of locales in xx_XX format or ALL>] [—provfile=&lt;absolute path=&quot;&quot; to=&quot;&quot; prov.xml=&quot;&quot;>]
-          
-          &quot;
-      
+         &quot;
+         
+         adobe_prtk —tool=VolumeSerialize —generate —serial=&lt;serialnum> [—leid=&lt;leid>] [—regsuppress=ss] [—eulasuppress] [—locales=limited list of locales in xx_XX format or ALL>] [—provfile=&lt;absolute path=&quot;&quot; to=&quot;&quot; prov.xml=&quot;&quot;>]
+         
+         &quot;
+     
    * Volymserialisera paketet (serialisera om den befintliga installationen med prov.xml-filen och den nya serienumret): Kör följande kommando från installationsmappen för PRTK som administratör för att serialisera och aktivera distribuerade paket på klientdatorer:
 
-          &quot;
-          adobe_prtk —tool=VolumeSerialize —provfile=C:\prov.xml -stream
-          
-          &quot;
-      
+         &quot;
+         adobe_prtk —tool=VolumeSerialize —provfile=C:\prov.xml -stream
+         
+         &quot;
+     
 * För storskaliga installationer använder du [Acrobat Customization Wizard](https://www.adobe.com/devnet-docs/acrobatetk/tools/Wizard/index.html) för att ta bort tidigare versioner av Reader och Acrobat. Anpassa installationsprogrammet och distribuera det till alla datorer i organisationen.
 
 +++

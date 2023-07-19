@@ -3,9 +3,9 @@ title: Konfigurera RTF-redigeraren för att skapa tillgängliga webbsidor och we
 description: Konfigurera RTF-redigeraren för att skapa tillgängliga webbsidor och webbplatser.
 contentOwner: AG
 exl-id: d2451710-5abf-4816-8052-57d8f04a228e
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '933'
+source-wordcount: '932'
 ht-degree: 0%
 
 ---
@@ -59,7 +59,7 @@ Eftersom strukturella element är tillgängliga i textredigeraren via alternativ
 
 ## Användning av källredigeringsfunktionen {#use-of-the-source-edit-feature}
 
-I vissa fall måste innehållsförfattare granska och justera HTML källkoden som skapats med RTE. En del innehåll som skapats i en textredigerare kan till exempel kräva ytterligare kod för att säkerställa överensstämmelse med WCAG 2.0. Detta kan du göra med [källredigering](/help/sites-administering/rich-text-editor.md#aboutplugins) RTE-alternativ. Du kan ange [ `sourceedit` på `misctools` plugin](/help/sites-administering/rich-text-editor.md#aboutplugins).
+I vissa fall måste innehållsförfattare granska och justera HTML källkoden som skapats med RTE. En del innehåll som skapats i en textredigerare kan till exempel kräva ytterligare kod för att säkerställa överensstämmelse med WCAG 2.0. Detta kan du göra med [källredigering](/help/sites-administering/rich-text-editor.md#aboutplugins) RTE-alternativ. Du kan ange [`sourceedit` på `misctools` plugin](/help/sites-administering/rich-text-editor.md#aboutplugins).
 
 >[!CAUTION]
 >
@@ -193,9 +193,7 @@ RTE kan använda `strong` och `em` taggar istället för `b` och `i`. Lägg till
 >* The `itemId` egenskapen för varje motsvarande fält är inställd på namnet på lämpligt DOM-attribut (`TablePropertiesDialog`).
 >* Attributet anges och/eller tas bort explicit i DOM-elementet (`Table`).
 
-
 >[!MORELIKETHIS]
 >
 >* [Snabbguide till WCAG 2.0](/help/managing/qg-wcag.md)
 >* [Skapa tillgängligt innehåll (WCAG 2.0-överensstämmelse)](/help/sites-authoring/creating-accessible-content.md)
-

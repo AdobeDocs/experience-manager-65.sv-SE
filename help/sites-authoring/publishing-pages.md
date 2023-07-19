@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: 1f5eb646-acc7-49d5-b839-e451e68ada9e
 docset: aem65
 exl-id: 61144bbe-6710-4cae-a63e-e708936ff360
-source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '1662'
+source-wordcount: '1663'
 ht-degree: 6%
 
 ---
@@ -29,15 +29,14 @@ Du kan även publicera/avpublicera en sida direkt eller vid ett fördefinierat d
 >Vissa termer om publicering kan vara förvirrade:
 >
 >* **Publicera/avpublicera**
-   >  Detta är de primära villkoren för de åtgärder som gör innehållet tillgängligt för allmänheten i publiceringsmiljön (eller inte).
+>  Detta är de primära villkoren för de åtgärder som gör innehållet tillgängligt för allmänheten i publiceringsmiljön (eller inte).
 >
 >* **Aktivera/inaktivera**
-   >  Dessa termer är synonyma med publicera/avpublicera.
+>  Dessa termer är synonyma med publicera/avpublicera.
 >
 >* **Replikering/replikering**
-   >  Detta är de tekniska termer som beskriver hur data (t.ex. sidinnehåll, filer, kod, användarkommentarer) flyttas från en miljö till en annan, t.ex. vid publicering eller omvänd replikering av användarkommentarer.
+>  Detta är de tekniska termer som beskriver hur data flyttas (till exempel sidinnehåll, filer, kod, användarkommentarer) från en miljö till en annan, till exempel när användarkommentarer publiceras eller replikeras om.
 >
-
 
 >[!NOTE]
 >
@@ -47,7 +46,6 @@ Du kan även publicera/avpublicera en sida direkt eller vid ett fördefinierat d
 >* Detta [arbetsflödet kan ha anpassats](/help/sites-developing/workflows-models.md#main-pars-procedure-6fe6) av ditt utvecklingsteam.
 >* Ett meddelande visas kort för att meddela dig att arbetsflödet har utlösts.
 >
-
 
 ## Publicera sidor {#publishing-pages-1}
 
@@ -270,14 +268,14 @@ Du kan ange en sidas publiceringsstatus:
 
 * I [resursöversiktsinformation på webbplatskonsolen](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)
 
-   ![screen-shot_2019-03-05at112019](assets/screen-shot_2019-03-05at112019.png)
+  ![screen-shot_2019-03-05at112019](assets/screen-shot_2019-03-05at112019.png)
 
-   Publikationsstatusen visas i [kort](/help/sites-authoring/basic-handling.md#card-view)-, [kolumn](/help/sites-authoring/basic-handling.md#column-view)- och [list](/help/sites-authoring/basic-handling.md#list-view)vyerna i Sites-konsolen.
+  Publikationsstatusen visas i [kort](/help/sites-authoring/basic-handling.md#card-view)-, [kolumn](/help/sites-authoring/basic-handling.md#column-view)- och [list](/help/sites-authoring/basic-handling.md#list-view)vyerna i Sites-konsolen.
 
 * I [tidslinje](/help/sites-authoring/basic-handling.md#timeline)
 
-   ![screen_shot_2018-03-21at154420](assets/screen_shot_2018-03-21at154420.png)
+  ![screen_shot_2018-03-21at154420](assets/screen_shot_2018-03-21at154420.png)
 
 * I [Sidinformation-menyn](/help/sites-authoring/author-environment-tools.md#page-information) när du redigerar en sida
 
-   ![screen_shot_2018-03-21at154456](assets/screen_shot_2018-03-21at154456.png)
+  ![screen_shot_2018-03-21at154456](assets/screen_shot_2018-03-21at154456.png)

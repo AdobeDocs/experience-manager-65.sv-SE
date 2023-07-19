@@ -11,9 +11,9 @@ topic-tags: site-features
 discoiquuid: b53348ca-fc50-4e7d-953d-b4c03a5025bb
 docset: aem65
 exl-id: 363b8fab-6ce7-4338-8478-3f25f2a1f117
-source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '4872'
+source-wordcount: '4871'
 ht-degree: 9%
 
 ---
@@ -80,14 +80,14 @@ Om du vill skapa en ny mall med hjälp av **mallkonsolen** och **mallredigeraren
    * Detta är en specifik författare som är medlem i gruppen `template-authors`
 
       * Detta tilldelar de behörigheter och behörigheter som krävs.
+
    * Kan konfigurera användning av komponenter och annan högnivåinformation som kräver:
 
       * Vissa tekniska kunskaper
 
          * Du kan till exempel använda mönster när du definierar banor.
+
       * Teknisk information från utvecklaren.
-
-
 
 På grund av egenskaperna hos vissa uppgifter, som att skapa en mapp, behövs en utvecklingsmiljö som kräver kunskap/erfarenhet.
 
@@ -265,7 +265,7 @@ En mall kan göras tillgänglig eller otillgänglig för vissa sidgrenar.
 
 1. Öppna **Avancerat** -fliken.
 
-1. Under **Mallinställningar** använder du **Lägg till fält** för att ange sökvägen/sökvägarna till mallarna.
+1. Under **Mallinställningar** use **Lägg till fält** för att ange sökvägarna till mallarna.
 
    Sökvägen kan vara explicit eller använda mönster. Till exempel:
 
@@ -304,35 +304,35 @@ Följande aspekter av en mall kan redigeras:
 
 * [Struktur](#editingatemplatestructure)
 
-   Komponenter som läggs till här kan inte flyttas/tas bort från resultatsidor av sidförfattare. Om du vill att sidförfattare ska kunna lägga till och ta bort komponenter på resulterande sidor, måste du lägga till ett styckesystem i mallen.
+  Komponenter som läggs till här kan inte flyttas/tas bort från resultatsidor av sidförfattare. Om du vill att sidförfattare ska kunna lägga till och ta bort komponenter på resulterande sidor, måste du lägga till ett styckesystem i mallen.
 
-   När komponenter är låsta kan du lägga till innehåll som inte kan redigeras av sidförfattare. Du kan låsa upp komponenter så att du kan definiera [Ursprungligt innehåll](#editingatemplateinitialcontent).
+  När komponenter är låsta kan du lägga till innehåll som inte kan redigeras av sidförfattare. Du kan låsa upp komponenter så att du kan definiera [Ursprungligt innehåll](#editingatemplateinitialcontent).
 
-   >[!NOTE]
-   >
-   >I strukturläge kan inte komponenter som är överordnade en olåst komponent flyttas, klippas ut eller tas bort.
+  >[!NOTE]
+  >
+  >I strukturläge kan inte komponenter som är överordnade en olåst komponent flyttas, klippas ut eller tas bort.
 
 * [Ursprungligt innehåll](#editingatemplateinitialcontent)
 
-   När en komponent har låsts upp kan du definiera det ursprungliga innehåll som ska kopieras till den eller de resulterande sidorna som skapas från mallen. Dessa olåsta komponenter kan redigeras på den eller de slutliga sidorna.
+  När en komponent har låsts upp kan du definiera det ursprungliga innehåll som ska kopieras till den eller de resulterande sidorna som skapas från mallen. Dessa olåsta komponenter kan redigeras på den eller de slutliga sidorna.
 
-   >[!NOTE]
-   >
-   >I **Ursprungligt innehåll** samt på de resulterande sidorna kan alla olåsta komponenter som har en tillgänglig överordnad (dvs. komponenter i en layoutbehållare) tas bort.
+  >[!NOTE]
+  >
+  >I **Ursprungligt innehåll** samt på de resulterande sidorna kan alla olåsta komponenter som har en tillgänglig överordnad (dvs. komponenter i en layoutbehållare) tas bort.
 
 * [Layout](#editingatemplatelayout)
 
-   Här kan du fördefiniera mallayouten för de önskade enhetsformaten. **Layoutläget** för mallutveckling har samma funktioner som [**layoutläget** för sidredigering](/help/sites-authoring/responsive-layout.md#defining-layouts-layout-mode).
+  Här kan du fördefiniera mallayouten för de önskade enhetsformaten. **Layoutläget** för mallutveckling har samma funktioner som [**layoutläget** för sidredigering](/help/sites-authoring/responsive-layout.md#defining-layouts-layout-mode).
 
 * [Sidprofiler](#editingatemplatepagepolicies)
 
-   Under Sidprofiler kan du koppla fördefinierade sidprofiler till sidan. Dessa sidprofiler definierar de olika designkonfigurationerna.
+  Under Sidprofiler kan du koppla fördefinierade sidprofiler till sidan. Dessa sidprofiler definierar de olika designkonfigurationerna.
 
 * [Stilar](/help/sites-authoring/style-system.md)
 
-   Med Style System kan mallskapare definiera formatklasser i en komponents innehållsprincip så att en innehållsförfattare kan markera dem när komponenten på en sida redigeras. Dessa format kan vara alternativa visuella varianter av en komponent, vilket gör den mer flexibel.
+  Med Style System kan mallskapare definiera formatklasser i en komponents innehållsprincip så att en innehållsförfattare kan markera dem när komponenten på en sida redigeras. Dessa format kan vara alternativa visuella varianter av en komponent, vilket gör den mer flexibel.
 
-   Se [Systemdokumentation](/help/sites-authoring/style-system.md) för mer information.
+  Se [Systemdokumentation](/help/sites-authoring/style-system.md) för mer information.
 
 The **Läge** kan du välja och redigera lämplig del av mallen i verktygsfältet:
 
@@ -366,160 +366,160 @@ I **Struktur** mallredigerarens läge:
 
 * **Lägga till komponenter**
 
-   Det finns flera sätt att lägga till komponenter i mallen:
+  Det finns flera sätt att lägga till komponenter i mallen:
 
    * Från **Komponenter** webbläsaren på sidopanelen.
    * Genom att använda **Infoga komponent** option (**+** ) som finns i verktygsfältet för komponenter som redan finns i mallen eller **Dra komponenter hit** box.
 
    * Genom att dra en resurs (från **Resurser** webbläsare på sidpanelen) direkt till mallen för att generera lämplig komponent på plats.
 
-   När de lagts till markeras varje komponent med:
+  När de lagts till markeras varje komponent med:
 
    * En kant
    * En markör som visar komponenttypen
    * En markör som visas när komponenten har låsts upp
 
-   >[!NOTE]
-   >
-   >När du lägger till en färdig **titelkomponent** i mallen innehåller den **standardtextstrukturen**.
-   >
-   >
-   >Om du ändrar detta och lägger till egen text används den uppdaterade texten när en sida skapas från mallen.
-   >
-   >
-   >Om du låter standardtexten (strukturen) vara kvar används namnet på efterföljande sida som standard.
+  >[!NOTE]
+  >
+  >När du lägger till en färdig **titelkomponent** i mallen innehåller den **standardtextstrukturen**.
+  >
+  >
+  >Om du ändrar detta och lägger till egen text används den uppdaterade texten när en sida skapas från mallen.
+  >
+  >
+  >Om du låter standardtexten (strukturen) vara kvar används namnet på efterföljande sida som standard.
 
-   >[!NOTE]
-   >
-   >Att lägga till komponenter och resurser i en mall är inte identiskt men har många likheter med liknande åtgärder när [sidredigering](/help/sites-authoring/editing-content.md).
+  >[!NOTE]
+  >
+  >Att lägga till komponenter och resurser i en mall är inte identiskt men har många likheter med liknande åtgärder när [sidredigering](/help/sites-authoring/editing-content.md).
 
 * **Komponentåtgärder**
 
-   Vidta åtgärder för komponenterna när de har lagts till i mallen. Varje enskild instans har ett verktygsfält som gör att du kan komma åt de tillgängliga åtgärderna. Verktygsfältet är beroende av komponenttypen.
+  Vidta åtgärder för komponenterna när de har lagts till i mallen. Varje enskild instans har ett verktygsfält som gör att du kan komma åt de tillgängliga åtgärderna. Verktygsfältet är beroende av komponenttypen.
 
-   ![screen_shot_2018-03-23at120909](assets/screen_shot_2018-03-23at120909.png)
+  ![screen_shot_2018-03-23at120909](assets/screen_shot_2018-03-23at120909.png)
 
-   Den kan också vara beroende av åtgärder som vidtas, t.ex. när en profil har kopplats till komponenten, så blir ikonen för designkonfiguration tillgänglig.
+  Den kan också vara beroende av åtgärder som vidtas, t.ex. när en profil har kopplats till komponenten, så blir ikonen för designkonfiguration tillgänglig.
 
 * **Redigera och konfigurera**
 
-   Med dessa två åtgärder kan du lägga till innehåll i komponenterna.
+  Med dessa två åtgärder kan du lägga till innehåll i komponenterna.
 
 * **Kant som anger struktur**
 
-   När du arbetar i **Struktur** i ett orange läge anger den markerade komponenten. En prickad linje anger även den överordnade komponenten.
+  När du arbetar i **Struktur** i ett orange läge anger den markerade komponenten. En prickad linje anger även den överordnade komponenten.
 
-   I skärmbilden under **Text** -komponenten är markerad, inuti en **Layoutbehållare** (responsivegrid).
+  I skärmbilden under **Text** -komponenten är markerad, inuti en **Layoutbehållare** (responsivegrid).
 
-   ![chlimage_1-134](assets/chlimage_1-134.png)
+  ![chlimage_1-134](assets/chlimage_1-134.png)
 
 * **Policy &amp; Properties (General)**
 
-   Innehållets (eller designens) profiler definierar en komponents designegenskaper. Till exempel de tillgängliga komponenterna eller minimi-/maximidimensionerna. Dessa gäller för mallen (och sidor som skapas med mallen).
+  Innehållets (eller designens) profiler definierar en komponents designegenskaper. Till exempel de tillgängliga komponenterna eller minimi-/maximidimensionerna. Dessa gäller för mallen (och sidor som skapas med mallen).
 
-   Skapa en innehållsprincip, eller välj en befintlig, för en komponent. På så sätt kan du definiera designdetaljerna.
+  Skapa en innehållsprincip, eller välj en befintlig, för en komponent. På så sätt kan du definiera designdetaljerna.
 
-   ![chlimage_1-135](assets/chlimage_1-135.png) ![chlimage_1-136](assets/chlimage_1-136.png)
+  ![chlimage_1-135](assets/chlimage_1-135.png) ![chlimage_1-136](assets/chlimage_1-136.png)
 
-   Konfigurationsfönstret är uppdelat i två delar.
+  Konfigurationsfönstret är uppdelat i två delar.
 
    * Till vänster i dialogrutan under **Policy** kan du välja en befintlig princip eller välja en befintlig.
    * Till höger i dialogrutan under **Egenskaper** kan du ange egenskaper som är specifika för komponenttypen.
 
-   Vilka egenskaper som är tillgängliga beror på den valda komponenten. För en textkomponent definierar till exempel egenskaperna alternativ för kopiera och klistra in, formatering och styckeformat bland annat.
+  Vilka egenskaper som är tillgängliga beror på den valda komponenten. För en textkomponent definierar till exempel egenskaperna alternativ för kopiera och klistra in, formatering och styckeformat bland annat.
 
-   ***Policy***
+  ***Policy***
 
-   Innehållets (eller designens) profiler definierar en komponents designegenskaper. Till exempel de tillgängliga komponenterna eller minimi-/maximidimensionerna. Dessa gäller för mallen (och sidor som skapas med mallen).
+  Innehållets (eller designens) profiler definierar en komponents designegenskaper. Till exempel de tillgängliga komponenterna eller minimi-/maximidimensionerna. Dessa gäller för mallen (och sidor som skapas med mallen).
 
-   Under **Policy** Du kan välja en befintlig profil som ska tillämpas på komponenten via listrutan.
+  Under **Policy** Du kan välja en befintlig profil som ska tillämpas på komponenten via listrutan.
 
-   ![chlimage_1-137](assets/chlimage_1-137.png)
+  ![chlimage_1-137](assets/chlimage_1-137.png)
 
-   Du kan lägga till en ny profil genom att markera knappen Lägg till bredvid **Välj princip** listruta. En ny titel bör sedan anges i **Policytitel** fält.
+  Du kan lägga till en ny profil genom att markera knappen Lägg till bredvid **Välj princip** listruta. En ny titel bör sedan anges i **Policytitel** fält.
 
-   ![chlimage_1-138](assets/chlimage_1-138.png)
+  ![chlimage_1-138](assets/chlimage_1-138.png)
 
-   Den valda befintliga profilen i **Välj princip** listrutan kan kopieras som en ny princip med kopieringsknappen bredvid listrutan. En ny titel bör sedan anges i **Policytitel** fält. Som standard kommer den kopierade profilen att namnges **Kopia av X**, där X är namnet på den kopierade profilen.
+  Den valda befintliga profilen i **Välj princip** listrutan kan kopieras som en ny princip med kopieringsknappen bredvid listrutan. En ny titel bör sedan anges i **Policytitel** fält. Som standard kommer den kopierade profilen att namnges **Kopia av X**, där X är namnet på den kopierade profilen.
 
-   ![chlimage_1-139](assets/chlimage_1-139.png)
+  ![chlimage_1-139](assets/chlimage_1-139.png)
 
-   En beskrivning av profilen är valfri i **Principbeskrivning** fält.
+  En beskrivning av profilen är valfri i **Principbeskrivning** fält.
 
-   I **Andra mallar använder även den valda profilen** kan du enkelt se vilka andra mallar som använder den profil som valts i **Välj princip** listruta.
+  I **Andra mallar använder även den valda profilen** kan du enkelt se vilka andra mallar som använder den profil som valts i **Välj princip** listruta.
 
-   ![chlimage_1-140](assets/chlimage_1-140.png)
+  ![chlimage_1-140](assets/chlimage_1-140.png)
 
-   >[!NOTE]
-   >
-   >Om flera komponenter av samma typ läggs till som ursprungligt innehåll gäller samma princip för alla komponenter. Detta speglar samma begränsning i [**Designläge** för statiska mallar](/help/sites-authoring/default-components-designmode.md).
+  >[!NOTE]
+  >
+  >Om flera komponenter av samma typ läggs till som ursprungligt innehåll gäller samma princip för alla komponenter. Detta speglar samma begränsning i [**Designläge** för statiska mallar](/help/sites-authoring/default-components-designmode.md).
 
-   ***Egenskaper***
+  ***Egenskaper***
 
-   Under **Egenskaper** Du kan definiera komponentens inställningar. Rubriken har två flikar:
+  Under **Egenskaper** Du kan definiera komponentens inställningar. Rubriken har två flikar:
 
    * Huvud
    * Funktioner
 
-   *Huvud*
+  *Huvud*
 
-   På **Huvud** -fliken definieras de viktigaste inställningarna för komponenten.
+  På **Huvud** -fliken definieras de viktigaste inställningarna för komponenten.
 
-   För en bildkomponent kan till exempel de tillåtna bredderna definieras tillsammans med aktivering av lazy loading.
+  För en bildkomponent kan till exempel de tillåtna bredderna definieras tillsammans med aktivering av lazy loading.
 
-   Om en inställning tillåter flera konfigurationer klickar eller trycker du på **Lägg till** om du vill lägga till en annan konfiguration.
+  Om en inställning tillåter flera konfigurationer klickar eller trycker du på **Lägg till** om du vill lägga till en annan konfiguration.
 
-   ![chlimage_1-141](assets/chlimage_1-141.png)
+  ![chlimage_1-141](assets/chlimage_1-141.png)
 
-   Om du vill ta bort en konfiguration klickar eller trycker du på **Ta bort** till höger om konfigurationen.
+  Om du vill ta bort en konfiguration klickar eller trycker du på **Ta bort** till höger om konfigurationen.
 
-   Om du vill ta bort en konfiguration klickar eller trycker du på knappen** Delete**.
+  Om du vill ta bort en konfiguration klickar eller trycker du på knappen** Delete**.
 
-   ![chlimage_1-142](assets/chlimage_1-142.png)
+  ![chlimage_1-142](assets/chlimage_1-142.png)
 
-   *Funktioner*
+  *Funktioner*
 
-   The **Funktioner** kan du aktivera eller inaktivera ytterligare funktioner för komponenten.
+  The **Funktioner** kan du aktivera eller inaktivera ytterligare funktioner för komponenten.
 
-   För en bildkomponent kan du till exempel definiera beskärningsproportionerna, tillåtna bildorienteringar och om överföringar tillåts.
+  För en bildkomponent kan du till exempel definiera beskärningsproportionerna, tillåtna bildorienteringar och om överföringar tillåts.
 
-   ![chlimage_1-143](assets/chlimage_1-143.png)
+  ![chlimage_1-143](assets/chlimage_1-143.png)
 
-   >[!CAUTION]
-   >
-   >Observera att AEM beskärningsproportioner definieras som **höjd/bredd**. Detta skiljer sig från den vanliga definitionen av bredd/höjd och görs av kompatibilitetsskäl. Sidredigeringsanvändarna kommer inte att vara medvetna om några skillnader förutsatt att du definierar **Namn** så här visas det tydligt i användargränssnittet.
+  >[!CAUTION]
+  >
+  >Observera att AEM beskärningsproportioner definieras som **höjd/bredd**. Detta skiljer sig från den vanliga definitionen av bredd/höjd och görs av kompatibilitetsskäl. Sidredigeringsanvändarna kommer inte att vara medvetna om några skillnader förutsatt att du definierar **Namn** så här visas det tydligt i användargränssnittet.
 
-   >[!NOTE]
-   >
-   >[Innehållsprofiler för komponenter som implementerar textredigeraren](/help/sites-administering/rich-text-editor.md#main-pars-header-206036638) kan bara definieras för alternativ som är tillgängliga av textredigeraren via dess gränssnittsinställningar. [](/help/sites-administering/rich-text-editor.md#main-pars_header_206036638) [](/help/sites-administering/rich-text-editor.md#main-pars_header_206036638)
+  >[!NOTE]
+  >
+  >[Innehållsprofiler för komponenter som implementerar textredigeraren](/help/sites-administering/rich-text-editor.md#main-pars-header-206036638) kan bara definieras för alternativ som är tillgängliga av textredigeraren via dess gränssnittsinställningar. [](/help/sites-administering/rich-text-editor.md#main-pars_header_206036638) [](/help/sites-administering/rich-text-editor.md#main-pars_header_206036638)
 
 * **Princip och egenskaper (layoutbehållare)**
 
-   Inställningarna för principer och egenskaper för en layoutbehållare liknar den allmänna användningen, men med vissa skillnader.
+  Inställningarna för principer och egenskaper för en layoutbehållare liknar den allmänna användningen, men med vissa skillnader.
 
-   >[!NOTE]
-   >
-   >Det är obligatoriskt att konfigurera en princip för behållarkomponenter eftersom det gör att du kan definiera komponenter som ska vara tillgängliga i behållaren.
+  >[!NOTE]
+  >
+  >Det är obligatoriskt att konfigurera en princip för behållarkomponenter eftersom det gör att du kan definiera komponenter som ska vara tillgängliga i behållaren.
 
-   Konfigurationsfönstret är uppdelat i två delar, precis som i den allmänna användningen av fönstret.
+  Konfigurationsfönstret är uppdelat i två delar, precis som i den allmänna användningen av fönstret.
 
-   ***Policy***
+  ***Policy***
 
-   Innehållets (eller designens) profiler definierar en komponents designegenskaper. Till exempel de tillgängliga komponenterna eller minimi-/maximidimensionerna. Dessa gäller för mallen (och sidor som skapas med mallen).
+  Innehållets (eller designens) profiler definierar en komponents designegenskaper. Till exempel de tillgängliga komponenterna eller minimi-/maximidimensionerna. Dessa gäller för mallen (och sidor som skapas med mallen).
 
-   Under **Policy** Du kan välja en befintlig profil som ska tillämpas på komponenten via listrutan. Detta fungerar på samma sätt som vid allmän användning av fönstret.
+  Under **Policy** Du kan välja en befintlig profil som ska tillämpas på komponenten via listrutan. Detta fungerar på samma sätt som vid allmän användning av fönstret.
 
-   ***Egenskaper***
+  ***Egenskaper***
 
-   Under **Egenskaper** Du kan välja vilka komponenter som är tillgängliga för layoutbehållaren och ange deras inställningar. Rubriken har tre flikar:
+  Under **Egenskaper** Du kan välja vilka komponenter som är tillgängliga för layoutbehållaren och ange deras inställningar. Rubriken har tre flikar:
 
    * Tillåtna komponenter
    * Standardkomponenter
    * Responsiva inställningar
 
-   *Tillåtna komponenter*
+  *Tillåtna komponenter*
 
-   På **Tillåtna komponenter** definierar du vilka komponenter som är tillgängliga för layoutbehållaren.
+  På **Tillåtna komponenter** definierar du vilka komponenter som är tillgängliga för layoutbehållaren.
 
    * Komponenterna grupperas efter komponentgrupperna, som kan expanderas och komprimeras.
    * Du kan markera en hel grupp genom att markera gruppnamnet och avmarkera alla genom att avmarkera kryssrutan.
@@ -527,52 +527,53 @@ I **Struktur** mallredigerarens läge:
    * En sökning är tillgänglig för att filtrera efter en komponent efter namn.
    * Antalet som visas till höger om komponentgruppens namn representerar det totala antalet valda komponenter i dessa grupper oavsett filtret.
 
-   ![chlimage_1-144](assets/chlimage_1-144.png)
+  ![chlimage_1-144](assets/chlimage_1-144.png)
 
-   *Standardkomponenter*
+  *Standardkomponenter*
 
-   På **Standardkomponenter** definierar du vilka komponenter som automatiskt kopplas till vissa medietyper så att AEM vet vilken komponent som ska kopplas när en författare drar en resurs från resursläsaren. Observera att endast komponenter med släppzoner är tillgängliga för sådan konfiguration.
+  På **Standardkomponenter** definierar du vilka komponenter som automatiskt kopplas till vissa medietyper så att AEM vet vilken komponent som ska kopplas när en författare drar en resurs från resursläsaren. Observera att endast komponenter med släppzoner är tillgängliga för sådan konfiguration.
 
-   Klicka eller tryck **Lägg till mappning** för att lägga till en helt ny komponent och MIME-typmappning.
+  Klicka eller tryck **Lägg till mappning** för att lägga till en helt ny komponent och MIME-typmappning.
 
-   Markera en komponent i listan och klicka eller tryck på **Lägg till typ** för att lägga till ytterligare en MIME-typ i en redan mappad komponent. Klicka på ikonen **Ta bort** för att ta bort en MIME-typ.
+  Markera en komponent i listan och klicka eller tryck på **Lägg till typ** för att lägga till ytterligare en MIME-typ i en redan mappad komponent. Klicka på ikonen **Ta bort** för att ta bort en MIME-typ.
 
-   ![chlimage_1-145](assets/chlimage_1-145.png)
+  ![chlimage_1-145](assets/chlimage_1-145.png)
 
-   *Responsiva inställningar*
+  *Responsiva inställningar*
 
-   På **Responsiva inställningar** kan du konfigurera antalet kolumner i det resulterande stödrastret för layoutbehållaren.
+  På **Responsiva inställningar** kan du konfigurera antalet kolumner i det resulterande stödrastret för layoutbehållaren.
 
 * **Lås upp/lås komponenter**
 
-   Du låser upp/låser komponenter för att definiera om innehållet är tillgängligt för ändring i **Ursprungligt innehåll** läge.
+  Du låser upp/låser komponenter för att definiera om innehållet är tillgängligt för ändring i **Ursprungligt innehåll** läge.
 
-   När en komponent har låsts upp:
+  När en komponent har låsts upp:
 
    * En öppen hänglåsindikator visas i kanten.
    * Komponentverktygsfältet justeras därefter.
    * Innehåll som redan har angetts visas inte längre i **Struktur** läge.
 
       * Innehåll som redan har angetts betraktas som ursprungligt innehåll och är bara synligt i **Ursprungligt innehåll** läge.
+
    * Den olåsta komponentens överordnade kan inte flyttas, klippas ut eller tas bort.
 
-   ![chlimage_1-146](assets/chlimage_1-146.png)
+  ![chlimage_1-146](assets/chlimage_1-146.png)
 
-   Detta inkluderar upplåsning av behållarkomponenter så att ytterligare komponenter kan läggas till, antingen i läget **ursprungligt innehåll** eller på resulterande sidor. Om du redan har lagt till komponenter/innehåll i behållaren innan du låser upp den visas dessa inte längre i **strukturläget**, men de visas i **ursprungligt innehåll**. I **strukturläget** visas bara själva behållarkomponenten med dess lista över **tillåtna komponenter**.
+  Detta inkluderar upplåsning av behållarkomponenter så att ytterligare komponenter kan läggas till, antingen i läget **ursprungligt innehåll** eller på resulterande sidor. Om du redan har lagt till komponenter/innehåll i behållaren innan du låser upp den visas dessa inte längre i **strukturläget**, men de visas i **ursprungligt innehåll**. I **strukturläget** visas bara själva behållarkomponenten med dess lista över **tillåtna komponenter**.
 
-   ![chlimage_1-147](assets/chlimage_1-147.png)
+  ![chlimage_1-147](assets/chlimage_1-147.png)
 
-   För att spara utrymme växer inte layoutbehållaren så att den rymmer listan med tillåtna komponenter. Behållaren blir i stället en rullningsbar lista.
+  För att spara utrymme växer inte layoutbehållaren så att den rymmer listan med tillåtna komponenter. Behållaren blir i stället en rullningsbar lista.
 
-   Komponenter som kan konfigureras visas med en **policyikon**, som du kan trycka eller klicka på för att redigera policyn och egenskaperna för den komponenten.
+  Komponenter som kan konfigureras visas med en **policyikon**, som du kan trycka eller klicka på för att redigera policyn och egenskaperna för den komponenten.
 
-   ![chlimage_1-148](assets/chlimage_1-148.png)
+  ![chlimage_1-148](assets/chlimage_1-148.png)
 
 * **Relation till befintliga sidor**
 
-   Om strukturen uppdateras efter att sidor som är baserade på mallen har skapats, kommer dessa sidor att återspegla ändringarna av mallen. En varning visas i verktygsfältet för att påminna dig om detta tillsammans med bekräftelsedialogrutor.
+  Om strukturen uppdateras efter att sidor som är baserade på mallen har skapats, kommer dessa sidor att återspegla ändringarna av mallen. En varning visas i verktygsfältet för att påminna dig om detta tillsammans med bekräftelsedialogrutor.
 
-   ![chlimage_1-149](assets/chlimage_1-149.png)
+  ![chlimage_1-149](assets/chlimage_1-149.png)
 
 ### Redigera en mall - Ursprungligt innehåll - Författare {#editing-a-template-initial-content-author}
 
@@ -586,17 +587,17 @@ I **Struktur** mallredigerarens läge:
 
 * Olåsta komponenter som är tillgängliga för redigering markeras. När de är markerade har de en blå kant:
 
-   ![chlimage_1-150](assets/chlimage_1-150.png)
+  ![chlimage_1-150](assets/chlimage_1-150.png)
 
 * Olåsta komponenter har ett verktygsfält där du kan redigera och konfigurera innehållet:
 
-   ![chlimage_1-151](assets/chlimage_1-151.png)
+  ![chlimage_1-151](assets/chlimage_1-151.png)
 
 * Om en behållarkomponent har låsts upp (i **strukturläget**) kan du lägga till nya komponenter i behållaren (i **ursprungligt innehåll**). Komponenter som läggs till i **ursprungligt innehåll** kan flyttas på eller tas bort från resultatsidor.
 
-   Du kan lägga till en komponent med hjälp av antingen **Dra komponenter hit** eller **Infoga ny komponent** i verktygsfältet för lämplig behållare.
+  Du kan lägga till en komponent med hjälp av antingen **Dra komponenter hit** eller **Infoga ny komponent** i verktygsfältet för lämplig behållare.
 
-   ![chlimage_1-152](assets/chlimage_1-152.png) ![chlimage_1-153](assets/chlimage_1-153.png)
+  ![chlimage_1-152](assets/chlimage_1-152.png) ![chlimage_1-153](assets/chlimage_1-153.png)
 
 * Om mallens ursprungliga innehåll uppdateras efter att sidorna har skapats baserat på mallen påverkas inte dessa sidor av ändringarna av mallens ursprungliga innehåll.
 
@@ -638,24 +639,24 @@ Du kan tillämpa en innehållsprincip på antingen mallen eller de resulterande 
 
 * Du kan välja en befintlig profil för sidan på menyn **Välj princip** nedrullningsbar meny.
 
-   ![chlimage_1-157](assets/chlimage_1-157.png)
+  ![chlimage_1-157](assets/chlimage_1-157.png)
 
-   Du kan lägga till en ny profil genom att markera knappen Lägg till bredvid **Välj princip** listruta. En ny titel bör sedan anges i **Policytitel** fält.
+  Du kan lägga till en ny profil genom att markera knappen Lägg till bredvid **Välj princip** listruta. En ny titel bör sedan anges i **Policytitel** fält.
 
-   ![chlimage_1-158](assets/chlimage_1-158.png)
+  ![chlimage_1-158](assets/chlimage_1-158.png)
 
-   Den valda befintliga profilen i **Välj princip** listrutan kan kopieras som en ny princip med kopieringsknappen bredvid listrutan. En ny titel bör sedan anges i **Policytitel** fält. Som standard kommer den kopierade profilen att namnges **Kopia av X**, där X är namnet på den kopierade profilen.
+  Den valda befintliga profilen i **Välj princip** listrutan kan kopieras som en ny princip med kopieringsknappen bredvid listrutan. En ny titel bör sedan anges i **Policytitel** fält. Som standard kommer den kopierade profilen att namnges **Kopia av X**, där X är namnet på den kopierade profilen.
 
-   ![chlimage_1-159](assets/chlimage_1-159.png)
+  ![chlimage_1-159](assets/chlimage_1-159.png)
 
 * Definiera en rubrik för profilen i dialogrutan **Policytitel** fält. En profil måste ha en titel så att den enkelt kan väljas i **Välj princip** listruta.
 
-   ![chlimage_1-160](assets/chlimage_1-160.png)
+  ![chlimage_1-160](assets/chlimage_1-160.png)
 
 * En beskrivning av profilen är valfri i **Principbeskrivning** fält.
 * I **Andra mallar använder även den valda profilen** kan du enkelt se vilka andra mallar som använder den profil som valts i **Välj princip** listruta.
 
-   ![chlimage_1-161](assets/chlimage_1-161.png)
+  ![chlimage_1-161](assets/chlimage_1-161.png)
 
 #### Sidegenskaper {#page-properties}
 
@@ -665,19 +666,19 @@ Med hjälp av sidegenskaper kan du definiera nödvändiga klientbibliotek genom 
 
 * Ange de klientbibliotek som du vill använda på sidor som skapas med den här mallen. Ange namnet på ett bibliotek i textfältet i **Klientbibliotek** -avsnitt.
 
-   ![chlimage_1-163](assets/chlimage_1-163.png)
+  ![chlimage_1-163](assets/chlimage_1-163.png)
 
 * Om flera bibliotek behövs klickar du på knappen Lägg till för att lägga till ytterligare ett textfält för biblioteksnamnet.
 
-   ![chlimage_1-164](assets/chlimage_1-164.png)
+  ![chlimage_1-164](assets/chlimage_1-164.png)
 
-   Lägg till så många textfält som behövs för klientbiblioteken.
+  Lägg till så många textfält som behövs för klientbiblioteken.
 
-   ![chlimage_1-165](assets/chlimage_1-165.png)
+  ![chlimage_1-165](assets/chlimage_1-165.png)
 
 * Definiera bibliotekets relativa position om det behövs genom att dra fälten med draghandtaget.
 
-   ![chlimage_1-166](assets/chlimage_1-166.png)
+  ![chlimage_1-166](assets/chlimage_1-166.png)
 
 >[!NOTE]
 >
@@ -707,13 +708,16 @@ När du skapar mallar bör du tänka på följande:
 
       * De används omedelbart på de resulterande sidorna.
       * För att besökarna ska kunna se ändringarna måste den ändrade mallen fortfarande publiceras.
+
    * Ändringar i innehållsprinciper och designkonfigurationer:
 
       * Dessa gäller omedelbart för de resulterande sidorna.
       * För att besökarna ska kunna se ändringarna måste ändringarna publiceras.
+
    * Ändringar av det ursprungliga innehållet:
 
       * Dessa gäller endast sidor som skapas efter malländringarna.
+
    * Ändringar i layouten beror på om den ändrade komponenten är en del av:
 
       * Endast struktur - används omedelbart

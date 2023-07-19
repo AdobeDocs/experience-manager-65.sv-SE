@@ -10,9 +10,9 @@ discoiquuid: c30332b6-e012-442d-8e84-28832c116c7b
 noindex: true
 role: Admin
 exl-id: b87e07b1-4a19-4888-bad0-c0f5327b9ad3
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '404'
+source-wordcount: '403'
 ht-degree: 0%
 
 ---
@@ -42,4 +42,4 @@ AEM skrivbordsapp använder WebDAV-protokoll i Microsoft Windows och SMB1 i Mac 
 1. Starta om AEM Forms-servern. Efter omstarten är AEM Forms-servern aktiverad för att acceptera och dela innehåll med AEM skrivbordsapp.
 1. Öppna appen och anslut till AEM Forms-servern.
 
-   När anslutningen lyckades fyller programmet i `content/dam` och `content/dam/formsanddocuments` mappar. Förutom att flytta filer från mapparna ovan till lokala mappar kan du använda appen för att flytta innehåll mellan automatiskt ifyllda mappar.
+   När anslutningen lyckades fyller programmet i `content/dam` och `content/dam/formsanddocuments` mappar. Förutom att flytta filer från ovanstående mappar till lokala mappar kan du använda appen för att flytta innehåll mellan automatiskt ifyllda mappar.

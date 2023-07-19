@@ -10,9 +10,9 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: 6e913190-be92-4862-a8b9-517f8bde0044
 exl-id: f6f32290-422e-4037-89d8-d9f414332e8e
-source-git-commit: 4fa868f3ae4778d3a637e90b91f7c5909fe5f8aa
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '3324'
+source-wordcount: '3327'
 ht-degree: 0%
 
 ---
@@ -137,8 +137,8 @@ Med Sling anger du vilket skript som ska återge en viss enhet (genom att ange `
 
 Begäran har delats upp och nödvändig information har extraherats. Databasen genomsöks efter den begärda resursen (innehållsnod):
 
-* Först Sling kontrollerar om det finns en nod på den plats som anges i begäran. t.ex. `../content/corporate/jobs/developer.html`
-* Om ingen nod hittas tas tillägget bort och sökningen upprepas. t.ex. `../content/corporate/jobs/developer`
+* Först Sling kontrollerar om det finns en nod på den plats som anges i begäran. till exempel `../content/corporate/jobs/developer.html`
+* Om ingen nod hittas tas tillägget bort och sökningen upprepas. till exempel `../content/corporate/jobs/developer`
 * Om ingen nod hittas returnerar Sling http-koden 404 (Hittades inte).
 
 Med Sling kan även andra saker än JCR-noder vara resurser, men det här är en avancerad funktion.
@@ -152,7 +152,7 @@ Sökvägen som anges av `sling:resourceType` kan antingen vara:
 * absolut
 * relativt, till en konfigurationsparameter
 
-   Relativa sökvägar rekommenderas av Adobe när de ökar portabiliteten.
+  Relativa sökvägar rekommenderas av Adobe när de ökar portabiliteten.
 
 Alla Sling-skript lagras i undermappar till båda `/apps` eller `/libs`, som söks igenom i den här ordningen (se [Anpassa komponenter och andra element](/help/sites-developing/dev-guidelines-bestpractices.md#customizing-components-and-other-elements)).
 
@@ -175,39 +175,39 @@ Använda ovanstående exempel om `sling:resourceType` är `hr/jobs` sedan för:
 
 * GET/HEAD och URL:er som slutar på .html (standardtyper, standardformat)
 
-   Skriptet är /apps/hr/jobs/jobs.esp; den sista delen av sling:resourceType utgör filnamnet.
+  Skriptet är /apps/hr/jobs/jobs.esp; den sista delen av sling:resourceType utgör filnamnet.
 
 * Begäranden om POST (alla förfrågningstyper utom GET/HEAD, metodnamnet måste vara versaler)
 
-   POST används i skriptnamnet.
+  POST används i skriptnamnet.
 
-   Skriptet är `/apps/hr/jobs/jobs.POST.esp`.
+  Skriptet är `/apps/hr/jobs/jobs.POST.esp`.
 
 * URL-adresser i andra format, slutar inte med .html
 
-   Till exempel, `../content/corporate/jobs/developer.pdf`
+  Till exempel, `../content/corporate/jobs/developer.pdf`
 
-   Skriptet kommer att `/apps/hr/jobs/jobs.pdf.esp`; suffixet läggs till i skriptnamnet.
+  Skriptet kommer att `/apps/hr/jobs/jobs.pdf.esp`; suffixet läggs till i skriptnamnet.
 
 * URL:er med väljare
 
-   Väljare kan användas för att visa samma innehåll i ett alternativt format. Till exempel en utskriftsvänlig version, ett RSS-flöde eller en sammanfattning.
+  Väljare kan användas för att visa samma innehåll i ett alternativt format. Till exempel en utskriftsvänlig version, ett RSS-flöde eller en sammanfattning.
 
-   Om vi tittar på en utskriftsvänlig version där väljaren kan vara *print*; som i `../content/corporate/jobs/developer.print.html`
+  Om vi tittar på en utskriftsvänlig version där väljaren kan vara *print*; som i `../content/corporate/jobs/developer.print.html`
 
-   Skriptet kommer att `/apps/hr/jobs/jobs.print.esp`; väljaren läggs till i skriptnamnet.
+  Skriptet kommer att `/apps/hr/jobs/jobs.print.esp`; väljaren läggs till i skriptnamnet.
 
 * Om ingen sling:resourceType har definierats:
 
    * innehållssökvägen används för att söka efter ett lämpligt skript (om den sökvägsbaserade ResourceTypeProvider är aktiv).
 
-      Skriptet för `../content/corporate/jobs/developer.html` skulle generera en sökning i `/apps/content/corporate/jobs/`.
+     Skriptet för `../content/corporate/jobs/developer.html` skulle generera en sökning i `/apps/content/corporate/jobs/`.
 
    * den primära nodtypen kommer att användas.
 
 * Om inget skript hittas används standardskriptet.
 
-   Standardåtergivningen stöds för närvarande som oformaterad text (.txt), HTML (.html) och JSON (.json), som alla listar nodens egenskaper (lämpligt formaterade). Standardåtergivningen för filnamnstillägget .res, eller begäranden utan tillägg, är att resursen (där det är möjligt) ska placeras i mellanrum.
+  Standardåtergivningen stöds för närvarande som oformaterad text (.txt), HTML (.html) och JSON (.json), som alla listar nodens egenskaper (lämpligt formaterade). Standardåtergivningen för filnamnstillägget .res, eller begäranden utan tillägg, är att resursen (där det är möjligt) ska placeras i mellanrum.
 * För http-felhantering (kod 403 eller 404) söker Sling efter ett skript på antingen:
 
    * platsen /apps/sling/servlet/errorhandler för [anpassade skript](/help/sites-developing/customizing-errorhandler-pages.md)
@@ -248,19 +248,19 @@ Till exempel:
    * b
 
       * sling:resourceSuperType = a
+
    * c
 
       * sling:resourceSuperType = b
+
    * x
 
       * sling:resourceType = c
+
    * y
 
       * sling:resourceType = c
       * sling:resourceSuperType = a
-
-
-
 
 Typhierarkin för:
 
@@ -418,29 +418,29 @@ I följande lista visas en översikt över strukturen som du ser i databasen.
 
 * `/apps`
 
-   Ansökningsrelaterade; innehåller komponentdefinitioner som är specifika för din webbplats. Komponenterna som du utvecklar kan baseras på de färdiga komponenterna som finns på `/libs/foundation/components`.
+  Ansökningsrelaterade; innehåller komponentdefinitioner som är specifika för din webbplats. Komponenterna som du utvecklar kan baseras på de färdiga komponenterna som finns på `/libs/foundation/components`.
 
 * `/content`
 
-   Innehåll som skapats för din webbplats.
+  Innehåll som skapats för din webbplats.
 
 * `/etc`
 
 * `/home`
 
-   Användar- och gruppinformation.
+  Användar- och gruppinformation.
 
 * `/libs`
 
-   Bibliotek och definitioner som tillhör kärnan i AEM. Undermapparna i `/libs` representerar färdiga AEM funktioner som sökning eller replikering. Innehållet i `/libs` inte ändras eftersom det påverkar hur AEM fungerar. Funktioner som är specifika för din webbplats bör utvecklas under `/apps` (se [Anpassa komponenter och andra element](/help/sites-developing/dev-guidelines-bestpractices.md#customizing-components-and-other-elements)).
+  Bibliotek och definitioner som tillhör kärnan i AEM. Undermapparna i `/libs` representerar färdiga AEM funktioner som sökning eller replikering. Innehållet i `/libs` inte ändras eftersom det påverkar hur AEM fungerar. Funktioner som är specifika för din webbplats bör utvecklas under `/apps` (se [Anpassa komponenter och andra element](/help/sites-developing/dev-guidelines-bestpractices.md#customizing-components-and-other-elements)).
 
 * `/tmp`
 
-   Tillfälligt arbetsområde.
+  Tillfälligt arbetsområde.
 
 * `/var`
 
-   Filer som ändras och uppdateras av systemet. som granskningsloggar, statistik, händelsehantering.
+  Filer som ändras och uppdateras av systemet. som granskningsloggar, statistik, händelsehantering.
 
 ## Miljöer {#environments}
 

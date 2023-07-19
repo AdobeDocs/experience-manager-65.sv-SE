@@ -2,10 +2,10 @@
 title: Skapa och ordna sidor med AEM
 description: Skapa och hantera sidor med AEM
 exl-id: 74576e51-4b4e-464e-a0b8-0fae748a505d
-source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '2525'
-ht-degree: 4%
+source-wordcount: '2526'
+ht-degree: 3%
 
 ---
 
@@ -37,10 +37,10 @@ Strukturen på en webbplats kan ses som en trädstruktur som innehåller dina in
 Följande visar ett exempel från webbplatsen We.Retail, där en sida med vandrande kortkommandon ( `desert-sky-shorts`) används:
 
 * Författarmiljö
-   `https://localhost:4502/editor.html/content/we-retail/us/en/products/equipment/hiking/desert-sky-shorts.html`
+  `https://localhost:4502/editor.html/content/we-retail/us/en/products/equipment/hiking/desert-sky-shorts.html`
 
 * Publiceringsmiljö
-   `https://localhost:4503/content/we-retail/us/en/products/equipment/hiking/desert-sky-shorts.html`
+  `https://localhost:4503/content/we-retail/us/en/products/equipment/hiking/desert-sky-shorts.html`
 
 Beroende på instansens konfiguration kan du använda `/content` kan vara valfritt i publiceringsmiljön.
 
@@ -102,7 +102,7 @@ Sidans **titel** och **namn** kan skapas separat men hänger ihop:
 >
 >När du definierar ett sidnamn är en bra tumregel att hålla sidnamnet så kort, men så uttrycksfullt och minnesvärt som möjligt så att det blir lätt att förstå för läsaren. Se [Stödlinje för W3C-format](https://www.w3.org/Provider/Style/TITLE.html) för `title` för mer information.
 >
->Tänk också på att vissa webbläsare (t.ex. äldre versioner av IE) bara kan acceptera URL:er med en viss längd, så det finns också tekniska skäl att hålla sidnamnen korta.
+>Tänk också på att vissa webbläsare (till exempel äldre versioner av IE) bara kan acceptera URL:er med en viss längd, så det finns också tekniska skäl att hålla sidnamnen korta.
 
 AEM skapar en ny sida [validera sidnamnet enligt konventionerna](/help/sites-developing/naming-conventions.md) AEM och JCR.
 
@@ -209,12 +209,14 @@ Om du inte har skapat alla sidor åt dig i förväg måste du skapa en sida inna
    * **Titel**:
 
       * Detta visas för användaren och är obligatoriskt.
+
    * **Namn**:
 
       * Detta används för att generera URI:n. Om inget anges hämtas namnet från titeln.
       * Om du anger en sida **Namn** när du skapar en ny sida AEM [validera namnet enligt konventionerna](/help/sites-developing/naming-conventions.md) som ålagts av AEM och JCR.
 
       * Du **det går inte att skicka ogiltiga tecken** i **Namn** fält. När AEM upptäcker ogiltiga tecken markeras fältet och en förklaring visas som anger vilka tecken som behöver tas bort/ersättas.
+
    >[!NOTE]
    >
    >Se [Konventioner för sidnamngivning](#page-naming-conventions).
@@ -341,6 +343,7 @@ I AEM finns funktioner för att uppdatera interna länkar som refererar till sid
 
       * Markera målet genom att klicka på målets miniatyrbild.
       * Klicka **Nästa** för att fortsätta.
+
    * Använd **Bakåt** för att återgå till sidnamnsspecifikationen.
 
    >[!NOTE]
@@ -386,7 +389,7 @@ Om antalet sidor som påverkas ligger över en angiven gräns, kommer åtgärden
       * **Nu** kör det asynkrona jobbet omedelbart.
       * **Senare** låter användaren definiera när det asynkrona jobbet ska starta.
 
-         ![Asynkron flyttning av sida](assets/asynchronous-page-move.png)
+        ![Asynkron flyttning av sida](assets/asynchronous-page-move.png)
 
 Status för asynkrona jobb kan kontrolleras i [**Status för asynkrona jobb** kontrollpanel](/help/sites-administering/asynchronous-jobs.md#monitor-the-status-of-asynchronous-operations) på **Global navigering** -> **verktyg** -> **Operationer** -> **Jobb**
 
@@ -441,7 +444,6 @@ Du kan skapa mappar som hjälper dig att ordna dina filer och sidor.
 >* Standardåtgärderna för att flytta, kopiera, klistra in, ta bort, publicera, avpublicera och visa/redigera egenskaper kan utföras på en mapp.
 >* Det går inte att välja mappar i en live-kopia.
 >
-
 
 1. Öppna **Webbplatser** och navigera till önskad plats.
 1. Om du vill öppna alternativlistan väljer du **Skapa** från verktygsfältet

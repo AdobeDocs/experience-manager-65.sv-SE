@@ -10,9 +10,9 @@ content-type: reference
 topic-tags: components
 discoiquuid: 034f70f1-fbd2-4f6b-b07a-5758f0461a5b
 exl-id: 4acc5f7f-0bcb-4b5a-8531-52e146cffeae
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '476'
+source-wordcount: '477'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 0%
 Använd xgettext-maven-plugin för att extrahera strängar från källkoden som behöver översättas. Plugin-programmet Maven extraherar strängar till en XLIFF-fil som du skickar för översättning. Strängar extraheras från följande platser:
 
 * Java-källfiler
-* Javascript-källfiler
+* JavaScript-källfiler
 * XML-representationer av SVN-resurser (JCR-noder)
 
 ## Konfigurerar strängextrahering {#configuring-string-extraction}
@@ -138,7 +138,7 @@ mvn xgettext:extract
 * `raw.xliff`: extraherade strängar
 * `warn.log`: varningar (om sådana finns), om `CQ.I18n.getMessage()` API används felaktigt. De behöver alltid en fix och sedan en omstart.
 
-* `parserwarn.log`: parservarningar (om sådana finns), t.ex. problem med js-parsern
+* `parserwarn.log`: parservarningar (om sådana finns), t.ex. problem med JS-parsern
 * `potentials.xliff`: &quot;potentiella&quot; kandidater som inte extraheras, men som kan vara läsbara strängar som behöver översättas (kan ignoreras, men ändå skapa en enorm mängd falskt positiva resultat)
 * `strings.xliff`: förenklad xliff-fil, som ska importeras till ALF
 * `backrefs.txt`: möjliggör snabb sökning av källkodsplatser för en given sträng

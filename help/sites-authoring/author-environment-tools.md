@@ -9,10 +9,10 @@ content-type: reference
 discoiquuid: f488ba79-5bda-46e9-9c15-9a8c3dbfa2ce
 docset: aem65
 exl-id: 3b3c118b-ca35-484b-a62e-7bec98953123
-source-git-commit: d9155cdac183acbdd190da552512a1e9bcc43d64
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '2242'
-ht-degree: 8%
+source-wordcount: '2245'
+ht-degree: 7%
 
 ---
 
@@ -65,9 +65,9 @@ Det faktiska utseendet och hanteringen beror på vilken enhetstyp du använder:
 
 >[!NOTE]
 >
->En mobil enhet identifieras när bredden är mindre än 1 024 pixlar. Detta kan även vara fallet för ett litet skrivbordsfönster.
+>En mobil enhet identifieras när bredden är mindre än 1 024 pixlar. Detta kan också vara fallet för ett litet skrivbordsfönster.
 
-* **Mobil enhet (t.ex. iPad)**
+* **Mobil enhet (till exempel iPad)**
 
   Komponentwebbläsaren täcker hela sidan som redigeras.
 
@@ -317,7 +317,7 @@ Du kommer åt dem med hjälp av ikonerna i det övre högra hörnet. Den faktisk
 >* Beroende på sidans egenskaper kanske vissa lägen inte är tillgängliga.
 >* Åtkomst till vissa lägen kräver lämplig behörighet/behörighet.
 >* Utvecklarläget är inte tillgängligt på mobila enheter på grund av utrymmesbegränsningar.
->* Det finns ett [kortkommando](/help/sites-authoring/page-authoring-keyboard-shortcuts.md) (`Ctrl-Shift-M`) som du kan använda för att växla mellan **förhandsvisning** och det aktuella läget (t.ex. **Redigera** eller **Layout**).
+>* Det finns en [kortkommando](/help/sites-authoring/page-authoring-keyboard-shortcuts.md) ( `Ctrl-Shift-M`) för att växla mellan **Förhandsgranska** och det valda läget (till exempel **Redigera**, **Layout**, etc).
 >
 
 ## Banmarkering {#path-selection}

@@ -11,16 +11,16 @@ content-type: reference
 discoiquuid: 938469ad-f466-42f4-8b6f-bfc060ae2785
 docset: aem65
 exl-id: 971d6c25-1fbe-4c07-944e-be6b97a59922
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '500'
+source-wordcount: '501'
 ht-degree: 0%
 
 ---
 
 # Extern URL{#externalizing-urls}
 
-AEM **Externalizer** är en OSGI-tjänst som gör att du kan omforma en resurssökväg programmatiskt (t.ex. `/path/to/my/page`) till en extern och absolut URL (till exempel `https://www.mycompany.com/path/to/my/page`) genom att ange sökvägen som prefix med en förkonfigurerad DNS.
+AEM **Externalizer** är en OSGI-tjänst som gör att du kan omvandla en resurssökväg med programkod (till exempel `/path/to/my/page`) till en extern och absolut URL (till exempel `https://www.mycompany.com/path/to/my/page`) genom att ange sökvägen som prefix med en förkonfigurerad DNS.
 
 Eftersom en instans inte känner till sin externt synliga URL-adress om den körs bakom ett webblager, och eftersom en länk ibland måste skapas utanför det begärda omfånget, utgör den här tjänsten en central plats för att konfigurera de externa URL-adresserna och skapa dem.
 
@@ -54,6 +54,7 @@ Definiera en domänmappning för **Externalizer** tjänst:
 
       * använd https för att framtvinga https-länkar vid behov
       * den kommer att användas om klientkoden inte åsidosätter schemat när en URL-adress begärs externt.
+
    * **server** är värdnamnet (kan vara ett domännamn eller en IP-adress).
    * **port** (valfritt) är portnumret.
    * **kontextbana** (valfritt) anges bara om AEM har installerats som ett webbprogram under en annan kontextsökväg.
@@ -100,7 +101,6 @@ I det här avsnittet visas några exempel på hur **Externalizer** kan användas
 
    * `https://www.website.com/contextpath/my/page.html`
 
-
 1. **Så här gör du en extern sökväg med domänen &#39;författare&#39;:**
 
    ```java
@@ -115,7 +115,6 @@ I det här avsnittet visas några exempel på hur **Externalizer** kan användas
 
    * `https://author.website.com/contextpath/my/page.html`
 
-
 1. **Så här externaliserar du en sökväg med domänen&quot;local&quot;:**
 
    ```java
@@ -129,6 +128,5 @@ I det här avsnittet visas några exempel på hur **Externalizer** kan användas
    `myExternalizedUrl` slutar med värdet:
 
    * `https://publish-3.internal/contextpath/my/page.html`
-
 
 1. Du hittar fler exempel i [Javadocs](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/commons/Externalizer.html).

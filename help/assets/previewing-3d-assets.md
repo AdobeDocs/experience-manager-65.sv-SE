@@ -7,9 +7,9 @@ feature: 3D Assets
 role: User
 exl-id: fdebbc2b-c04d-4cdd-b7c2-8e9a2a854e79
 hide: true
-source-git-commit: 3d5e9ad8ee19756b05e5a77a3f748bc647fcf734
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '574'
+source-wordcount: '573'
 ht-degree: 1%
 
 ---
@@ -33,10 +33,10 @@ Interaktiv 3D-förhandsgranskning stöder följande filformat:
 
 | 3D-filtillägg | Filformat | MIME-typ | Anteckningar |
 |---|---|---|---|
-| GLB | Binär GL-överföring | model/gltf-binary |  |
+| GLB | Binär GL-överföring | model/gltf-binary | |
 | GLTF | GL-överföringsformat | model/gltf+json | Se **Anteckning** nedan. |
-| OBJ | WaveFront 3D-objektfil | application/x-tgif |  |
-| STL | Stereolitografi | application/vnd.ms-pki.stl |  |
+| OBJ | WaveFront 3D-objektfil | application/x-tgif | |
+| STL | Stereolitografi | application/vnd.ms-pki.stl | |
 | DN | Adobe Dimension | model/x-adobe-dn | Stöd endast för förtäring. förhandsgranskning är inte tillgänglig. |
 | USDZ | Zip-arkiv för universell scenbeskrivning | model/vnd.usdz+zip | Stöd endast för förtäring. förhandsgranskning är inte tillgänglig. |
 
@@ -82,7 +82,7 @@ Se [Format som stöds för 3D-förhandsgranskning](#supported-3d-previewing-asse
    | **Panorera kameran** | Panorera vyn åt vänster, åt höger, uppåt eller nedåt. | Högerklicka och dra. | Tryck med två fingrar och dra. |
    | **Zooma kameran** | Flytta in och ut från områden i 3D-scenen. | Rullningshjul. | Nyp med två fingrar. |
    | **Ange kameran igen** | Centrera kameran igen till en punkt på ett objekt i 3D-scenen. | Dubbelklicka. | Dubbeltryck. |
-   | **Återställ** | I närheten av det nedre högra hörnet av sidan väljer du ikonen Återställ om du vill återställa målpunkten till mitten av 3D-resursen. Återställ flyttar också kameran närmare eller längre bort för att visa resursen i dess helhet och med en rimlig visningsstorlek. |  |  |
-   | **Helskärmsläge** | Om du vill aktivera helskärmsläget väljer du Helskärmsikonen längst ned till höger på sidan. |  |  |
+   | **Återställ** | I närheten av det nedre högra hörnet av sidan väljer du ikonen Återställ om du vill återställa målpunkten till mitten av 3D-resursen. Återställ flyttar också kameran närmare eller längre bort för att visa resursen i dess helhet och med en rimlig visningsstorlek. |   |   |
+   | **Helskärmsläge** | Om du vill aktivera helskärmsläget väljer du Helskärmsikonen längst ned till höger på sidan. |   |   |
 
 1. När du är klar väljer du **[!UICONTROL Close]**.

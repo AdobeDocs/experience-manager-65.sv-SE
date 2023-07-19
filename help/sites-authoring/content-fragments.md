@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: 4049a7a5-4b33-4462-a25f-3c0daeb6a8a9
 docset: aem65
 exl-id: d5dad844-80ca-4ace-a082-38d892d9ffe2
-source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '1140'
+source-wordcount: '1141'
 ht-degree: 5%
 
 ---
@@ -74,6 +74,7 @@ Innehållsfragmenten aktiverar:
    * Öppna **Resurser** webbläsare och filter för **Innehållsfragment** (standard är Bilder). Dra sedan det önskade fragmentet till komponentinstansen.
 
    * Markera innehållets fragmentkomponent och sedan **Konfigurera** i verktygsfältet. I dialogrutan kan du öppna urvalsdialogrutan för att bläddra och välja önskat alternativ **Innehållsfragment**.
+
    >[!NOTE]
    >
    >Ett annat sätt är att dra ett visst innehållsfragment direkt till sidan. Då skapas automatiskt den associerade komponenten (innehållsfragment).
@@ -90,7 +91,8 @@ Innehållsfragmenten aktiverar:
    >
    >    * [Responsiv layout](/help/sites-authoring/responsive-layout.md)
    >    * [Redigera sidinnehåll](/help/sites-authoring/editing-content.md)
-
+   >
+   >
 
 ### Markera elementet eller variationen {#selecting-the-element-or-variation}
 
@@ -100,7 +102,7 @@ I rätt konfigurationsdialogruta kan du välja tillgängliga parametrar, bland a
 
 * **Innehållsfragment**
 
-   Ange det fragment som ska användas.
+  Ange det fragment som ska användas.
 
 * **Visningsläge**:
 
@@ -113,16 +115,16 @@ I rätt konfigurationsdialogruta kan du välja tillgängliga parametrar, bland a
    * Standardvärdet **Huvud** kommer alltid att vara tillgängligt.
    * En markering blir tillgänglig om fragmentet skapades med en lämplig mall.
 
-   >[!NOTE]
-   >
-   >Vilka element som är tillgängliga beror på vilken mall som används.
+  >[!NOTE]
+  >
+  >Vilka element som är tillgängliga beror på vilken mall som används.
 
 * **Variant**
 
    * **Standardmastern** är alltid tillgänglig.
    * En markering blir tillgänglig om variationer har skapats för fragmentet.
 
-* **Stycken**: ange det eller de stycken som ska ingå:
+* **Stycken**: ange det styckeintervall som ska ingå:
 
    * **Alla**
    * **Intervall**: till exempel `1`, `3-5`, `9-*`
@@ -175,14 +177,13 @@ För mellanliggande innehåll kan du:
 >* Om inte de två styckestrukturerna står i konflikt med varandra. I så fall visas inte det mellanliggande innehållet (även om det fortfarande finns internt).
 >
 
-
 ### Använda associerat innehåll {#using-associated-content}
 
 Om du har [associerat innehåll](/help/assets/content-fragments/content-fragments-assoc-content.md) med [innehållsfragmentet](/help/assets/content-fragments/content-fragments.md) är dessa resurser tillgängliga från sidopanelen (när du har placerat fragmentet på innehållssidan). Associerat innehåll är i själva verket en särskild innehållskälla för [mellanliggande innehåll](#adding-in-between-content).
 
 >[!NOTE]
 >
->Det finns olika metoder att lägga till [visuella resurser (t.ex. bilder)](/help/assets/content-fragments/content-fragments.md#fragments-with-visual-assets) till fragmentet och/eller sidan.
+>Det finns olika metoder att lägga till [visuella resurser (till exempel bilder)](/help/assets/content-fragments/content-fragments.md#fragments-with-visual-assets) till fragmentet och/eller sidan.
 
 >[!NOTE]
 >
@@ -196,7 +197,7 @@ Här kan du dra resurserna till önskad plats (antingen till en befintlig kompon
 
 ### Resurser som infogats i fragmentet {#assets-inserted-into-the-fragment}
 
-Om resurser (t.ex. bilder) har infogats i själva fragmentet är alternativen för att redigera dessa resurser i sidredigeraren begränsade. <!-- Removed link as it was a 404 on helpx -->
+Om resurser (till exempel bilder) har infogats i själva fragmentet är alternativen för att redigera dessa resurser i sidredigeraren begränsade. <!-- Removed link as it was a 404 on helpx -->
 
 För en bild kan du till exempel
 

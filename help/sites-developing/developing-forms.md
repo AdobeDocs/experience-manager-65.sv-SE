@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 6ee3bd3b-51d1-462f-b12e-3cbe24898b85
 docset: aem65
 exl-id: f43e9491-aa8f-40af-9800-123695142559
-source-git-commit: b886844dc80482ae4aae5fc7ce09e466efecc3bd
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '1940'
+source-wordcount: '1947'
 ht-degree: 0%
 
 ---
@@ -128,13 +128,13 @@ Du kan lägga till en egen åtgärd under `/apps` enligt följande:
 1. I mappen skapar du antingen:
 
    1. Ett postskript.
-Skriptnamnet är `post.POST.<extension>`, t.ex. `post.POST.jsp`
-Bokföringsskriptet anropas när ett formulär skickas för att bearbeta formuläret, det innehåller koden som hanterar data som kommer från formuläret 
-`POST`.
+Skriptnamnet är `post.POST.<extension>`, till exempel `post.POST.jsp`
+Bokföringsskriptet anropas när ett formulär skickas för att bearbeta formuläret, det innehåller koden som hanterar data som kommer från formuläret `POST`.
 
    1. Lägg till ett framåt-skript som anropas när formuläret skickas.
-Skriptnamnet är `forward.<extension`>, t.ex. `forward.jsp`
+Skriptnamnet är `forward.<extension`>, till exempel `forward.jsp`
 Skriptet kan definiera en sökväg. Den aktuella begäran vidarebefordras sedan till den angivna sökvägen.
+
    Det nödvändiga samtalet är `FormsHelper#setForwardPath` (2 varianter). Ett typiskt fall är att utföra viss validering, eller logik, för att hitta målsökvägen och sedan gå vidare till den sökvägen, så att standardserverservern för Sling-POST kan utföra den faktiska lagringen i JCR.
 
    Det kan också finnas en annan server som utför själva bearbetningen, i så fall formuläråtgärden och `forward.jsp` fungerar bara som&quot;limkod&quot;. Ett exempel på detta är e-poståtgärden på `/libs/foundation/components/form/actions/mail`som skickar information till `<currentpath>.mail.html`där en e-postserver sitter.
@@ -153,6 +153,7 @@ Skriptet kan definiera en sökväg. Den aktuella begäran vidarebefordras sedan 
       1. formulärets valideringRT: `clientvalidation.jsp`
       1. formuläret läses in via inläsningsresurs om det är inställt
       1. `addfields.jsp` vid återgivning `<form></form>`
+
    * vid hantering av ett formulär `POST`:
 
       1. `init.jsp`
@@ -163,22 +164,18 @@ Skriptet kan definiera en sökväg. Den aktuella begäran vidarebefordras sedan 
 
       1. om ingen framåtriktad sökväg har angetts, ring `post.POST.jsp` (slutar här, nej `cleanup.jsp` )
 
-
-
-
 1. Lägg till igen i mappen om du vill:
 
    1. Ett skript för att lägga till fält.
-Skriptnamnet är `addfields.<extension>`, t.ex. `addfields.jsp`
-An 
-`addfields` skriptet anropas omedelbart efter att HTML för att starta formuläret har skrivits. Detta gör att åtgärden kan lägga till anpassade inmatningsfält eller andra liknande HTML i formuläret.
+Skriptnamnet är `addfields.<extension>`, till exempel `addfields.jsp`
+An `addfields` skriptet anropas omedelbart efter att HTML för att starta formuläret har skrivits. Detta gör att åtgärden kan lägga till anpassade inmatningsfält eller andra liknande HTML i formuläret.
 
    1. Ett initieringsskript.
-Skriptnamnet är `init.<extension>`, t.ex. `init.jsp`
+Skriptnamnet är `init.<extension>`, till exempel `init.jsp`
 Skriptet anropas när formuläret återges. Den kan användas för att initiera åtgärdsinformation.
 
    1. Ett rensningsskript.
-Skriptnamnet är `cleanup.<extension>`, t.ex. `cleanup.jsp`
+Skriptnamnet är `cleanup.<extension>`, till exempel `cleanup.jsp`
 Skriptet kan användas för att rensa.
 
 1. Använd **Forms** i en parsys. The **Åtgärdstyp** kommer nu att innehålla din nya åtgärd.
@@ -220,10 +217,10 @@ Du kan lägga till egna begränsningar för ett enskilt fält (under `/apps`) en
 
 1. I den här mappen kan du behöva följande skript:
 
-   * Ett klientvalideringsskript: Skriptnamnet är `clientvalidation.<extension>`, t.ex. `clientvalidation.jsp`
+   * Ett klientvalideringsskript: Skriptnamnet är `clientvalidation.<extension>`, till exempel `clientvalidation.jsp`
 Detta anropas när formulärfältet återges. Den kan användas för att skapa klient-javascript för att validera fältet på klienten.
 
-   * Ett servervalideringsskript: Skriptnamnet är `servervalidation.<extension>`, t.ex. `servervalidation.jsp`
+   * Ett servervalideringsskript: Skriptnamnet är `servervalidation.<extension>`, till exempel `servervalidation.jsp`
 Detta anropas när formuläret skickas. Den kan användas för att validera fältet på servern efter att det har skickats.
 
 >[!NOTE]
@@ -268,7 +265,7 @@ En Radio Group-komponent med titeln `Receive email notifications?`* * innehålle
 
 ![showhidecondition](assets/showhidecondition.png)
 
-I Javascript används värdet för elementnamnsegenskapen för att referera till fält. I föregående exempel är elementnamnsegenskapen för komponenten Grupp med alternativknappar `contact`. Följande kod motsvarar JavaScript-koden för det exemplet:
+I JavaScript använder villkor värdet för egenskapen Elementnamn för att referera till fält. I föregående exempel är elementnamnsegenskapen för komponenten Grupp med alternativknappar `contact`. Följande kod motsvarar JavaScript-koden för det exemplet:
 
 `((contact == "Yes"))`
 
@@ -284,6 +281,7 @@ I Javascript används värdet för elementnamnsegenskapen för att referera till
 
       * **alla** - om alla villkor måste vara true för att komponenten ska kunna visas eller döljas
       * **alla** - om bara ett eller flera villkor måste vara true för att komponenten ska kunna visas eller döljas
+
    * Markera en komponent, operator och ange sedan ett värde på villkorslinjen (en visas som standard).
    * Lägg till fler villkor om det behövs genom att klicka **Lägg till villkor**.
 
@@ -306,7 +304,6 @@ I Javascript används värdet för elementnamnsegenskapen för att referera till
    >* in **Förhandsgranska** läge i redigeringsmiljön (kräver att sidan laddas om när du först växlar till förhandsgranskning)
    >
    >* publiceringsmiljön
-
 
 #### Hantera brutna komponentreferenser {#handling-broken-component-references}
 

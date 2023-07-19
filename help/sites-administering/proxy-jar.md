@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: ca98dc3c-7056-4cdc-b4d3-23e471da5730
 docset: aem65
 exl-id: 3df50303-5cdd-4df0-abec-80831d2ccef7
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '1161'
+source-wordcount: '1162'
 ht-degree: 0%
 
 ---
@@ -34,7 +34,7 @@ Du kan använda proxyservern för att övervaka all klient-server-interaktion, o
 * SMTP för e-postmeddelanden
 * LDAP för användarhantering
 
-Du kan till exempel placera proxyservern mellan två program som kommunicerar via ett TCP/IP-nätverk; t.ex. en webbläsare och AEM. På så sätt kan du övervaka exakt vad som händer när du begär en AEM.
+Du kan till exempel placera proxyservern mellan två program som kommunicerar via ett TCP/IP-nätverk; till exempel en webbläsare och AEM. På så sätt kan du övervaka exakt vad som händer när du begär en AEM.
 
 ## Starta proxyserververktyget {#starting-the-proxy-server-tool}
 

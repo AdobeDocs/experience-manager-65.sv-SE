@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 752235d2-21ac-46d2-82ed-5fec09c645e9
 docset: aem65
 exl-id: 55803b7a-9064-4392-9cc2-9f113fa8dc29
-source-git-commit: 1074843a0105df39382b64defe66fc262986b9c9
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '533'
+source-wordcount: '532'
 ht-degree: 1%
 
 ---
@@ -52,7 +52,7 @@ De här konsolerna liknar konsolen Communities Sites.
    * **[!UICONTROL Community Group Title]**: Konstnärliga
    * **[!UICONTROL Community Group Description]**: En överordnad grupp för olika konstgrupper
    * **[!UICONTROL Community Group Root]**: *lämna som standard*
-   * **[!UICONTROL Additional Available Community Group Language(s)]**: Använd listrutan för att välja tillgängliga språk för communitygrupper. Menyn innehåller alla språk som den överordnade communitywebbplatsen skapas i. Användarna kan välja mellan dessa språk för att skapa grupper i flera språkområden i det här steget. Samma grupp skapas på flera angivna språk i gruppkonsolen för respektive communityplats.
+   * **[!UICONTROL Additional Available Community Group Language(s)]**: Använd listrutan för att välja tillgängliga språk för communitygrupper. Menyn innehåller alla språk som den överordnade communitywebbplatsen skapas på. Användarna kan välja mellan dessa språk för att skapa grupper i flera språkområden i det här steget. Samma grupp skapas på flera angivna språk i gruppkonsolen för respektive communityplats.
    * **[!UICONTROL Community Group Name]**: konst
    * **[!UICONTROL Template]**: listruta för att välja `Reference Group`
    * Välj **[!UICONTROL Next]**
@@ -71,15 +71,15 @@ Fortsätt genom de andra panelerna med följande inställningar:
    * **[!UICONTROL Moderation]**
 
       * Lämna tomt (ärv från överordnad plats).
+
    * **[!UICONTROL Membership]**
 
       * Använd standard `Optional Membership.`
 
       * **[!UICONTROL Thumbnail]**
          * `optional.*`
+
       * **[!UICONTROL Select Next]**.
-
-
 
 * Välj **[!UICONTROL Create]**.
 

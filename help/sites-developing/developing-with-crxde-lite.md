@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 4537c1fb-f99c-42e2-a222-b037794bdb52
 docset: aem65
 exl-id: 9e88ca55-ac3d-4857-b6b2-aeb732562664
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '2134'
+source-wordcount: '2139'
 ht-degree: 0%
 
 ---
@@ -65,7 +65,7 @@ CRXDE Lite har följande funktioner:
   </tr>
   <tr>
    <td>Widgeten Nodbana</td>
-   <td><p>Visar sökvägen till den markerade noden.</p> <p>Du kan också använda den för att hoppa till en nod, ange sökvägen manuellt eller klistra in den någon annanstans och trycka på Retur.</p> <p>Det finns även stöd för att söka efter noder med ett specifikt nodnamn. Ange namnet på noden som du vill söka efter och vänta (eller tryck på söksymbolen till höger). Du kan försöka att ange t.ex. strängen <em>oak</em> i widgeten för att se hur den fungerar. Om en viss nod eller noder läses in i utforskarrutan visas listan och du kan välja sökvägen och klicka på Retur för att navigera till den. Observera att det bara fungerar för de noder som för närvarande är inlästa i CRXDE-klientprogrammet i webbläsaren. Om du vill söka i hela databasen använder du Verktyg och sedan Fråga.</p> </td>
+   <td><p>Visar sökvägen till den markerade noden.</p> <p>Du kan också använda den för att hoppa till en nod, ange sökvägen manuellt eller klistra in den någon annanstans och trycka på Retur.</p> <p>Det finns även stöd för att söka efter noder med ett specifikt nodnamn. Ange namnet på noden som du vill söka efter och vänta (eller tryck på söksymbolen till höger). Du kan till exempel försöka att ange strängen <em>oak</em> i widgeten för att se hur den fungerar. Om en viss nod eller noder läses in i utforskarrutan visas listan och du kan välja sökvägen och klicka på Retur för att navigera till den. Observera att det bara fungerar för de noder som för närvarande är inlästa i CRXDE-klientprogrammet i webbläsaren. Om du vill söka i hela databasen använder du Verktyg och sedan Fråga.</p> </td>
   </tr>
   <tr>
    <td>Utforskarfönster</td>
@@ -81,7 +81,7 @@ CRXDE Lite har följande funktioner:
   </tr>
   <tr>
    <td>Fliken Åtkomstkontroll</td>
-   <td><p>Visa behörigheter baserat på aktuell sökväg, databasnivå eller säkerhetsobjekt.</p> <p>Behörigheterna delas upp i</p> <p>- <strong>Tillämplig åtkomstkontrollprincip</strong>: De profiler som kan tillämpas på den aktuella markeringen.</p> <p>- <strong>Principer för lokal åtkomstkontroll</strong>: De aktuella principer som tillämpas lokalt på den aktuella markeringen.</p> <p>- <strong>Effektiva åtkomstkontrollprinciper</strong>: De aktuella principer som används för den aktuella markeringen kan anges lokalt eller ärvs från överordnade noder.</p> <p>Obs! För att kunna se åtkomstkontrollsinformationen alls måste användaren som är inloggad på CRXDE Lite ha behörighet att läsa åtkomstkontrollposter. Den anonyma användaren kan inte se den här informationen som standard - logga in som, t.ex., administratör för att se informationen.</p> </td>
+   <td><p>Visa behörigheter baserat på aktuell sökväg, databasnivå eller säkerhetsobjekt.</p> <p>Behörigheterna delas upp i</p> <p>- <strong>Tillämplig åtkomstkontrollprincip</strong>: De profiler som kan tillämpas på den aktuella markeringen.</p> <p>- <strong>Principer för lokal åtkomstkontroll</strong>: De aktuella principer som tillämpas lokalt på den aktuella markeringen.</p> <p>- <strong>Effektiva åtkomstkontrollprinciper</strong>: De aktuella principer som används för den aktuella markeringen kan anges lokalt eller ärvs från överordnade noder.</p> <p>Obs! För att kunna se åtkomstkontrollsinformationen alls måste användaren som är inloggad på CRXDE Lite ha behörighet att läsa åtkomstkontrollposter. Den anonyma användaren kan inte se den här informationen som standard - logga in som administratör för att se informationen.</p> </td>
   </tr>
   <tr>
    <td>Fliken Replikering</td>
@@ -137,7 +137,7 @@ CRXDE Lite har följande funktioner:
   </tr>
   <tr>
    <td>Inloggningswidget<br /> </td>
-   <td><p>Visar de inloggade användarna och arbetsytan de är inloggade på, t.ex. admin@crx.default.</p> <p>Klicka på den för att logga in eller logga in igen som en specifik användare. Om du inte anger en arbetsyta att logga in på loggas du in på standardarbetsytan, crx.default.</p> <p>Om du vill bläddra i databasen som anonym användare använder du <strong>anonym</strong> som inloggningsnamn och lösenord (t.ex. blanksteg eller punkt).<br /> </p> <p>Om din auktorisering inte längre är giltig (t.ex. har den gått ut) visas "<strong>Obehörig - Logga in..</strong>". Klicka på den för att logga in igen.</p> </td>
+   <td><p>Visar de inloggade användarna och arbetsytan de är inloggade på, till exempel admin@crx.default.</p> <p>Klicka på den för att logga in eller logga in igen som en specifik användare. Om du inte anger en arbetsyta att logga in på loggas du in på standardarbetsytan, crx.default.</p> <p>Om du vill bläddra i databasen som anonym användare använder du <strong>anonym</strong> som inloggningsnamn och lösenord (till exempel ett mellanslag eller en punkt).<br /> </p> <p>Om din auktorisering inte längre är giltig (till exempel att den har gått ut) visas "<strong>Obehörig - Logga in..</strong>". Klicka på den för att logga in igen.</p> </td>
   </tr>
  </tbody>
 </table>
@@ -237,7 +237,7 @@ Nu kan du anpassa noden efter dina behov genom att ändra egenskaper eller skapa
 >
 >De flesta redigeringsåtgärderna, inklusive Skapa nod, sparar alla ändringar i minnet och lagrar dem bara i databasen när de sparas (med knappen &quot;Spara alla&quot;). Vissa åtgärder, till exempel move, sparas dock automatiskt.
 >
->Valideringen av om den nyskapade noden tillåts av den överordnade nodens nodtyp utförs också av JCR-databasen först när ändringarna sparas. Om du får ett felmeddelande när du sparar en nod kontrollerar du om innehållsstrukturen är giltig (du kan t.ex. inte skapa en `nt:unstructured` nod som underordnad till `nt:folder` nod).
+>Valideringen av om den nyskapade noden tillåts av den överordnade nodens nodtyp utförs också av JCR-databasen först när ändringarna sparas. Om du får ett felmeddelande när du sparar en nod kontrollerar du om innehållsstrukturen är giltig (du kan till exempel inte skapa ett `nt:unstructured` nod som underordnad till `nt:folder` nod).
 
 ## Skapa en egenskap {#creating-a-property}
 

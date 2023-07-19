@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 6329301c-1a26-4a46-99ae-1b7cc15b08be
 docset: aem65
 exl-id: 0e9e2350-67ef-45c3-991f-6c1cd98fe93d
-source-git-commit: 17c198c744111753ffffcc0758f98859524c964e
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '730'
+source-wordcount: '732'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ I en SPA tillhandahåller inte sidkomponenten elementen HTML i de underordnade k
 
 >[!NOTE]
 >
->SPA Editor är den rekommenderade lösningen för projekt som kräver SPA ramverksbaserad återgivning på klientsidan (t.ex. Reaktion eller Angular).
+>SPA Editor är den rekommenderade lösningen för projekt som kräver SPA ramverksbaserad rendering på klientsidan (till exempel React eller Angular).
 
 ## Introduktion {#introduction}
 
@@ -32,7 +32,7 @@ Sidkomponenten för en SPA tillhandahåller inte HTML-elementen för dess undero
 
 ## Sidmodellshantering {#page-model-management}
 
-Lösning och hantering av sidmodellen delegeras till en angiven [ `PageModelManager`](/help/sites-developing/spa-blueprint.md#pagemodelmanager) -modul. SPA måste interagera med `PageModelManager` när det initieras för att hämta den första sidmodellen och registrera sig för modelluppdateringar - oftast när författaren redigerar sidan via sidredigeraren. The `PageModelManager` kan nås av SPA som ett npm-paket. Som tolk mellan AEM och SPA `PageModelManager` är avsedd att medfölja SPA.
+Lösning och hantering av sidmodellen delegeras till en angiven [`PageModelManager`](/help/sites-developing/spa-blueprint.md#pagemodelmanager) -modul. SPA måste interagera med `PageModelManager` när det initieras för att hämta den första sidmodellen och registrera sig för modelluppdateringar - oftast när författaren redigerar sidan via sidredigeraren. The `PageModelManager` kan nås av SPA som ett npm-paket. Som tolk mellan AEM och SPA `PageModelManager` är avsedd att medfölja SPA.
 
 Om du vill tillåta att sidan kan redigeras, ett klientbibliotek med namnet `cq.authoring.pagemodel.messaging` måste läggas till för att en kommunikationskanal ska kunna skapas mellan SPA och sidredigeraren. Om den SPA sidkomponenten ärver från sidans wcm/core-komponent finns det följande alternativ för att skapa `cq.authoring.pagemodel.messaging` tillgänglig klientbibliotekskategori:
 
@@ -82,7 +82,7 @@ Meta-resursegenskaperna som beskriver SPA innehåll:
 
 ## Metaegenskaper {#meta-properties}
 
-* `cq:wcmmode`: Redigerarnas WCM-läge (t.ex. sida, mall)
+* `cq:wcmmode`: Redigerarnas WCM-läge (till exempel sida, mall)
 * `cq:pagemodel_root_url`: URL för appens rotmodell. Viktigt vid direkt åtkomst till en underordnad sida eftersom den underordnade sidmodellen är ett fragment av appens rotmodell. The ` [PageModelManager](/help/sites-developing/spa-page-component.md)` disponerar sedan systematiskt om den inledande programmodellen när den anger programmet från dess rotstartpunkt.
 
 * `cq:pagemodel_router`: Aktivera eller inaktivera ` [ModelRouter](/help/sites-developing/spa-routing.md)` i `PageModelManager` bibliotek

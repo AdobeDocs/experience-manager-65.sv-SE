@@ -9,7 +9,7 @@ content-type: reference
 docset: aem65
 feature: Commerce Integration Framework
 exl-id: 3567bd28-73aa-401a-8aa9-a62a99d2a613
-source-git-commit: a467009851937c4a10b165a3d253c47bf990bbc5
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
 source-wordcount: '261'
 ht-degree: 0%
@@ -22,10 +22,10 @@ AEM allmänna e-handelslösningen är tillgänglig som en del av en standardinst
 
 Adobe tillhandahåller två versioner av Commerce Integration Framework:
 
-|  | CIF lokal | CIF Cloud |
+|                         | CIF lokal | CIF Cloud |
 |-------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------|
 | AEM | AEM på plats eller AMS 6.x | AEM AMS 6.4 och 6.5 |
-| Back-end | - AEM, Java <br> - Monolitisk integrering, mappning före bygge (mall)<br> - JCR-databas | - Adobe Commerce <br>- Java och Javascript <br>- Inga handelsdata lagras i JCR-databasen |
+| Back-end | - AEM, Java <br> - Monolitisk integrering, mappning före bygge (mall)<br> - JCR-databas | - Adobe Commerce <br>- Java och JavaScript <br>- Inga handelsdata lagras i JCR-databasen |
 | Front-end | AEM återgivna sidor på serversidan | Blandat sidprogram (hybridåtergivning) |
 | Produktkatalog | - Produktimport, redigerare, cachelagring i AEM <br>- Vanliga kataloger med AEM- eller proxysidor | - Ingen produktimport <br>- Allmänna mallar <br>- On demand-data via anslutning |
 | Skalbarhet | - Kan stödja upp till ett fåtal miljoner produkter (beroende på användningsfall) <br> - Cachelagring av Dispatcher | - Ingen volymbegränsning <br>- Cachelagring på Dispatcher eller CDN |

@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: deploying
 exl-id: 3a90f1d2-e53f-4cc4-8122-024ad6500de0
-source-git-commit: 69346a710708ee659ee97e9fdc193c8ea2658fe6
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '1162'
+source-wordcount: '1165'
 ht-degree: 0%
 
 ---
@@ -46,7 +46,7 @@ Om den distribueras händer följande som standard:
 * körningsläget är `author`
 * instansen (Repository, Felix OSGI environment, bundles, osv.) installeras i `${user.dir}/crx-quickstart`där `${user.dir}` är den aktuella arbetskatalogen, den här sökvägen till crx-quickstart anropas `sling.home`
 
-* kontextroten är krigsfilens namn, t.ex.: `aem-6`
+* kontextroten är krigsfilens namn, till exempel: `aem-6`
 
 #### Konfiguration {#configuration}
 
@@ -131,7 +131,7 @@ Ange minnesargument i din conf-fil (till exempel `standalone.conf`)
 
 * JAVA_OPTS=&quot;-Xms64m -Xmx2048m&quot;
 
-Om du använder distributionsskannern för att installera det AEM webbprogrammet kan det vara bra att öka `deployment-timeout,` för den uppsättningen `deployment-timeout` i xml-filen för instansen (t.ex. `configuration/standalone.xml)`:
+Om du använder distributionsskannern för att installera det AEM webbprogrammet kan det vara bra att öka `deployment-timeout,` för den uppsättningen `deployment-timeout` i xml-filen för instansen (till exempel `configuration/standalone.xml)`:
 
 ```xml
 <subsystem xmlns="urn:jboss:domain:deployment-scanner:1.1">
@@ -241,7 +241,7 @@ Före en distribution ska du läsa [Allmän beskrivning](#general-description) o
       * avkommentera slinga.initial startparameter och ange den här sökvägen efter behov
       * Replikera filen web.xml
 
-   * Byt namn AEM krigsfil till ROOT.war om du vill distribuera den som en rotwebbapp, byt namn på den till t.ex. aemauthor.war om du vill ha en aemauthor som kontextrot
+   * Byt namn AEM krigsfil till ROOT.war om du vill distribuera den som en rotwebbapp, byt namn på den till exempel aemauthor.war om du vill ha en aemauthor som kontextrot
    * kopiera det till Tomcat-webbappen
    * vänta tills AEM har installerats
 

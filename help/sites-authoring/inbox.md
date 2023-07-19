@@ -8,9 +8,9 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: 8b607b55-2412-469f-856b-0a3dea4b0efb
 exl-id: 80b7f179-b011-4f90-b5ab-9ef8a669d271
-source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '1143'
+source-wordcount: '1144'
 ht-degree: 7%
 
 ---
@@ -29,8 +29,8 @@ Du kan få meddelanden från olika AEM, inklusive arbetsflöden och projekt. om:
    * Arbetsobjekt som representerar åtgärder som du måste utföra på sidinnehåll.
 
       * det här är produkten av arbetsflöde **Deltagare** steg
-   * felobjekt, så att administratörer kan försöka utföra det misslyckade steget igen.
 
+   * felobjekt, så att administratörer kan försöka utföra det misslyckade steget igen.
 
 Du får dessa meddelanden i din egen Inkorg där du kan visa dem och vidta åtgärder.
 
@@ -47,7 +47,6 @@ Du får dessa meddelanden i din egen Inkorg där du kan visa dem och vidta åtg�
 >* [Arbetsflöden](/help/sites-authoring/workflows.md)
 >* [Forms](/help/forms/home.md)
 >
-
 
 ## Inkorgen i sidhuvudet {#inbox-in-the-header}
 
@@ -114,22 +113,22 @@ För båda vyerna (List och Calendar) kan du definiera inställningar:
 
 * **Kalendervy**
 
-   För **Kalendervy** du kan konfigurera:
+  För **Kalendervy** du kan konfigurera:
 
    * **Gruppera efter**
    * **Schema** eller **Ingen**
    * **Kortstorlek**
 
-   ![wf-92](assets/wf-92.png)
+  ![wf-92](assets/wf-92.png)
 
 * **Listvy**
 
-   För **Listvy** du kan konfigurera sorteringsmekanismen:
+  För **Listvy** du kan konfigurera sorteringsmekanismen:
 
    * **Sorteringsfält**
    * **Sorteringsordning**
 
-   ![wf-83](assets/inbox-settings.png)
+  ![wf-83](assets/inbox-settings.png)
 
 ### Inkorg - Administratörskontroll {#inbox-admin-control}
 
@@ -149,7 +148,7 @@ Alternativet Admin Control är bara synligt för medlemmarna i `administrators` 
    * **Ta bort kolumn**: Tryck på ![delete](assets/delete_updated.svg) om du vill ta bort kolumnen AEM Inkorgen.
    * **Flytta kolumn**: Dra ![move](assets/move_updated.svg) om du vill flytta en kolumn till en ny plats i AEM.
 
-   ![admin-control](assets/admin-control-column-customize.png)
+  ![admin-control](assets/admin-control-column-customize.png)
 
 * **Anpassning av varumärkesprofilering**
 
@@ -181,6 +180,7 @@ Alternativet Admin Control är bara synligt för medlemmarna i `administrators` 
       * visa objektegenskaperna
       * öppna en lämplig kontrollpanel eller guide för ytterligare åtgärder
       * öppna relaterad dokumentation
+
    * **Stega bakåt** till ett föregående steg.
    * Visa nyttolasten för ett arbetsflöde.
    * Skapa ett projekt från objektet.
@@ -190,7 +190,6 @@ Alternativet Admin Control är bara synligt för medlemmarna i `administrators` 
    >Mer information finns i:
    >
    >* Arbetsflödesobjekt - [Delta i arbetsflöden](/help/sites-authoring/workflows-participating.md)
-
 
 1. Beroende på vilket objekt som valts kommer en åtgärd att startas; till exempel:
 
@@ -204,10 +203,9 @@ Alternativet Admin Control är bara synligt för medlemmarna i `administrators` 
 
    Beroende på om en dialogruta, guide, dokumentationssida har öppnats kan du:
 
-   * Bekräfta lämpliga åtgärder. t.ex. Tilldela igen.
+   * Bekräfta lämpliga åtgärder. till exempel Tilldela igen.
    * Avbryt åtgärden.
    * Bakpil: Om en åtgärdsguide eller dokumentationssida till exempel har öppnats kan du gå tillbaka till Inkorgen.
-
 
 ## Skapa en uppgift {#creating-a-task}
 
@@ -260,9 +258,11 @@ För vissa uppgifter kan du skapa en [Projekt](/help/sites-authoring/projects.md
       * **Startdatum**
       * **Förfallodatum**
       * **Användare** och roll
+
    * **Avancerat**
 
       * **Namn**
+
    >[!NOTE]
    >
    >Se [Skapa ett projekt](/help/sites-authoring/touch-ui-managing-projects.md#creating-a-project) för fullständig information.

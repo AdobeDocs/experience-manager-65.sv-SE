@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: b610e19c-f8d9-4ae2-b056-9fd5cf541261
 docset: aem65
 exl-id: 6079431d-7d08-4973-8bb4-a8d10626a795
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '517'
+source-wordcount: '519'
 ht-degree: 4%
 
 ---
@@ -54,38 +54,38 @@ Varje användare kan ange vissa egenskaper för sig själv.
 
 * **Språk**
 
-   Detta definierar vilket språk som ska användas för redigeringsmiljöns användargränssnitt. Välj önskat språk i listan.
+  Detta definierar vilket språk som ska användas för redigeringsmiljöns användargränssnitt. Välj önskat språk i listan.
 
-   Den här konfigurationen används även för det klassiska användargränssnittet.
+  Den här konfigurationen används även för det klassiska användargränssnittet.
 
 * **Fönsterhantering**
 
-   Detta definierar beteendet för att öppna fönster. Välj något av följande:
+  Detta definierar beteendet för att öppna fönster. Välj något av följande:
 
    * **Flera fönster** (Standard)
 
       * Sidorna öppnas i ett nytt fönster.
+
    * **Ett fönster**
 
       * Sidorna öppnas i det aktuella fönstret.
 
-
 * **Visa skrivbordsåtgärder för Assets**
 
-   Det här alternativet kräver AEM datorprogram.
+  Det här alternativet kräver AEM datorprogram.
 
 * **Anteckningsfärg**
 
-   Detta definierar den standardfärg som används när anteckningar görs.
+  Detta definierar den standardfärg som används när anteckningar görs.
 
    * Klicka på färgblocket för att öppna väljaren för färgrutor och markera en färg.
    * Du kan också ange hexkoden för önskad färg i fältet.
 
 * **Relativ datumpresentation**
 
-   För att förbättra läsbarheten kommer AEM att återge datum inom de senaste sju dagarna som relativa datum (t.ex. för tre dagar sedan) och äldre datum som exakta datum (t.ex. den 20 mars 2017).
+  För att förbättra läsbarheten kommer AEM att återge datum inom de senaste sju dagarna som relativa datum (till exempel för tre dagar sedan) och äldre datum som exakta datum (till exempel den 20 mars 2017).
 
-   Det här alternativet definierar hur datum i systemet visas. Följande alternativ är tillgängliga:
+  Det här alternativet definierar hur datum i systemet visas. Följande alternativ är tillgängliga:
 
    * **Visa alltid exakt datum**: Det exakta datumet visas alltid (aldrig ett relativt datum).
    * **1 dag**: Det relativa datumet visas för datum inom en dag, annars visas ett exakt datum.
@@ -100,21 +100,21 @@ Varje användare kan ange vissa egenskaper för sig själv.
 
 * **Aktivera kortkommandon**
 
-   AEM stöder ett antal kortkommandon som gör redigeringen effektivare.
+  AEM stöder ett antal kortkommandon som gör redigeringen effektivare.
 
    * [Kortkommandon för att redigera sidor](/help/sites-authoring/page-authoring-keyboard-shortcuts.md)
    * [Kortkommandon för konsoler](/help/sites-authoring/keyboard-shortcuts.md)
 
-   Det här alternativet aktiverar kortkommandon. Som standard är de aktiverade, men kan inaktiveras om en användare har vissa tillgänglighetskrav.
+  Det här alternativet aktiverar kortkommandon. Som standard är de aktiverade, men kan inaktiveras om en användare har vissa tillgänglighetskrav.
 
 * **Använd klassisk redigeringsmiljö**
 
-   Det här alternativet aktiverar [klassiskt användargränssnitt](/help/sites-classic-ui-authoring/home.md)-baserad framtagning av sidor. Standardgränssnittet används som standard.
+  Det här alternativet aktiverar [klassiskt användargränssnitt](/help/sites-classic-ui-authoring/home.md)-baserad framtagning av sidor. Standardgränssnittet används som standard.
 
 * **Aktivera startsidan för resurser**
 
-   Det här alternativet är endast tillgängligt om systemadministratören har aktiverat Assets Home Page Experience för hela organisationen.
+  Det här alternativet är endast tillgängligt om systemadministratören har aktiverat Assets Home Page Experience för hela organisationen.
 
 * **Stock-konfiguration**
 
-   Med det här alternativet kan du ange önskad Adobe Stock-konfiguration och det är bara tillgängligt om systemadministratören har aktiverat [Integrering med Adobe Stock](/help/assets/aem-assets-adobe-stock.md).
+  Med det här alternativet kan du ange önskad Adobe Stock-konfiguration och det är bara tillgängligt om systemadministratören har aktiverat [Integrering med Adobe Stock](/help/assets/aem-assets-adobe-stock.md).

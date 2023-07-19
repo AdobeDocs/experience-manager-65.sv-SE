@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: 46d6bde0-8645-4cff-b79c-8e1615ba4ed4
 docset: aem65
 exl-id: 3f6aa06e-b5fd-4ab0-9ecc-14250cb3f55e
-source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '1036'
+source-wordcount: '1037'
 ht-degree: 0%
 
 ---
@@ -29,15 +29,14 @@ Du kan även publicera/avpublicera en sida direkt eller vid ett fördefinierat d
 >Vissa termer om publicering kan vara förvirrade:
 >
 >* **Publicera/avpublicera**
-   >  Detta är de primära villkoren för de åtgärder som gör innehållet tillgängligt för allmänheten i publiceringsmiljön (eller inte).
+>  Detta är de primära villkoren för de åtgärder som gör innehållet tillgängligt för allmänheten i publiceringsmiljön (eller inte).
 >
 >* **Aktivera/inaktivera**
-   >  Dessa termer är synonyma med publicera/avpublicera.
+>  Dessa termer är synonyma med publicera/avpublicera.
 >
 >* **Replikering/replikering**
-   >  Detta är de tekniska termer som beskriver hur data (t.ex. sidinnehåll, filer, kod, användarkommentarer) flyttas från en miljö till en annan, t.ex. vid publicering eller omvänd replikering av användarkommentarer.
+>  Detta är de tekniska termer som beskriver hur data flyttas (till exempel sidinnehåll, filer, kod, användarkommentarer) från en miljö till en annan, till exempel när användarkommentarer publiceras eller replikeras om.
 >
-
 
 >[!NOTE]
 >
@@ -46,7 +45,6 @@ Du kan även publicera/avpublicera en sida direkt eller vid ett fördefinierat d
 >* Ett arbetsflöde kommer att utlösas för att meddela lämplig person om din begäran om publicering.
 >* Ett meddelande om detta visas (under en kort tidsperiod).
 >
-
 
 ## Publicera en sida {#publishing-a-page}
 
@@ -73,6 +71,8 @@ Du kan aktivera sidor i webbplatskonsolen. När du har öppnat en sida och ändr
    >[!NOTE]
    >
    >Om det behövs begär AEM att du aktiverar eller återaktiverar alla resurser som är länkade till sidan. Du kan markera eller avmarkera kryssrutorna för att aktivera dessa resurser.
+   >
+   >
 
 1. Om det behövs begär AEM att du aktiverar eller återaktiverar alla resurser som är länkade till sidan. Du kan markera eller avmarkera kryssrutorna för att aktivera dessa resurser.
 
@@ -88,7 +88,7 @@ Du kan också aktivera en sida när du har den öppen för redigering.
 
 När du har öppnat sidan och ändrat innehållet i den:
 
-1. Välj **Sida** i The Sidekick.
+1. Välj **Sida** i Sidekick.
 1. Klicka **Aktivera sida**.
 Ett meddelande visas längst upp till höger i fönstret som bekräftar att sidan har aktiverats.
 

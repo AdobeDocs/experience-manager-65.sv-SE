@@ -8,9 +8,9 @@ content-type: reference
 feature: 3D Assets,Asset Management
 role: User, Admin
 exl-id: 01c96f1e-c0e6-497d-bd7a-c0fd547a34da
-source-git-commit: 787c0c25da2258f234d3c821038d62bf8ef68932
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '2287'
+source-wordcount: '2277'
 ht-degree: 2%
 
 ---
@@ -70,16 +70,16 @@ Se [Konfigurera Dynamic Media-Cloud Services](/help/assets/config-dms7.md#config
       * [Ordna digitala resurser](/help/assets/organize-assets.md#organize-digital-assets).
       * [Söka efter 3D-resurser](/help/assets/search-assets.md).
       * [Använd anpassade predikat för att filtrera sökresultat](/help/assets/search-assets.md#custompredicates).
+
    * Visa 3D-resurser
 
       * [Visa och interagera med 3D-resurser](#viewing-three-d-assets).
       * [Hantera förinställningen för Dimensional Viewer](/help/assets/managing-viewer-presets.md).
+
    * Arbeta med metadata för 3D-resurser
 
       * [Hantera metadata för digitala resurser](/help/assets/metadata.md).
       * [Metadata-scheman](/help/assets/metadata-schemas.md).
-
-
 
 1. **Publicera 3D-resurser**
 
@@ -128,8 +128,8 @@ Se även [Förhandsgranska resurser med hjälp av programgränssnittet](/help/as
    | **Panorera kameran** | Panorera vyn åt vänster, åt höger, uppåt eller nedåt. | Högerklicka och dra. | Tryck med två fingrar och dra. |
    | **Zooma kameran** | Flytta in och ut från områden i 3D-scenen. | Rullningshjul. | Nyp med två fingrar. |
    | **Ange kameran igen** | Centrera kameran igen till en punkt på ett objekt i 3D-scenen. | Dubbelklicka. | Dubbeltryck. |
-   | **Återställ** | I närheten av det nedre högra hörnet av sidan väljer du ikonen Återställ om du vill återställa målpunkten till mitten av 3D-resursen. Återställ flyttar också kameran närmare eller längre bort för att visa resursen i dess helhet och med en rimlig visningsstorlek. |  |  |
-   | **Helskärmsläge** | Om du vill aktivera helskärmsläget väljer du Helskärmsikonen längst ned till höger på sidan. |  |  |
+   | **Återställ** | I närheten av det nedre högra hörnet av sidan väljer du ikonen Återställ om du vill återställa målpunkten till mitten av 3D-resursen. Återställ flyttar också kameran närmare eller längre bort för att visa resursen i dess helhet och med en rimlig visningsstorlek. |   |   |
+   | **Helskärmsläge** | Om du vill aktivera helskärmsläget väljer du Helskärmsikonen längst ned till höger på sidan. |   |   |
 
 1. I det övre högra hörnet på sidan väljer du **[!UICONTROL Close]** för att återgå till Assets-sidan.
 
@@ -150,7 +150,7 @@ Se även [Förhandsgranska resurser med hjälp av programgränssnittet](/help/as
    * I närheten av sidans övre högra hörn väljer du **[!UICONTROL Preview]** att ange **[!UICONTROL Preview]** läge.
    * Ta bort `/editor.html` från sidans URL i webbläsaren.
 
-En helt interaktiv 3D-resurs som visas i    ![3D-resurs som visas inuti 3D-mediekomponenten](/help/assets/assets-dm/3d-asset-in-3d-media.png)
+   ![3D-resurs som visas inuti 3D-mediekomponenten](/help/assets/assets-dm/3d-asset-in-3d-media.png)
 En helt interaktiv 3D-resurs som visas i **[!UICONTROL Preview]** läge.
 
 1. När du är **[!UICONTROL Preview]** gör du något av följande:
@@ -161,8 +161,8 @@ En helt interaktiv 3D-resurs som visas i **[!UICONTROL Preview]** läge.
    | **Panorera kameran** | Panorera vyn åt vänster, åt höger, uppåt eller nedåt. | Högerklicka och dra. | Tryck med två fingrar och dra. |
    | **Zooma kameran** | Flytta in och ut från områden i 3D-scenen. | Rullningshjul. | Nyp med två fingrar. |
    | **Ange kameran igen** | Centrera kameran igen till en punkt på ett objekt i 3D-scenen. | Dubbelklicka. | Dubbeltryck. |
-   | **Återställ** | I närheten av det nedre högra hörnet av sidan väljer du ikonen Återställ om du vill återställa målpunkten till mitten av 3D-resursen. Återställ flyttar också kameran närmare eller längre bort för att visa resursen i dess helhet och med en rimlig visningsstorlek. |  |  |
-   | **Helskärmsläge** | Om du vill aktivera helskärmsläget väljer du Helskärmsikonen längst ned till höger på sidan. |  |  |
+   | **Återställ** | I närheten av det nedre högra hörnet av sidan väljer du ikonen Återställ om du vill återställa målpunkten till mitten av 3D-resursen. Återställ flyttar också kameran närmare eller längre bort för att visa resursen i dess helhet och med en rimlig visningsstorlek. |   |   |
+   | **Helskärmsläge** | Om du vill aktivera helskärmsläget väljer du Helskärmsikonen längst ned till höger på sidan. |   |   |
 
 ## Arbeta med 3D Media-komponenten {#working-with-three-d-media-component}
 
@@ -202,7 +202,7 @@ Se även [Lägga till Dynamic Media-resurser på sidor](/help/assets/adding-dyna
 
    ![3d-media-component-add](/help/assets/assets-dm/3d-media-component-edit.png)
 
-1. I verktygsfältet väljer du ikonen för panelen Sida för att växla eller aktivera visningen av panelen.
+1. I verktygsfältet väljer du ikonen Side Panel (Side Panel) för att växla eller aktivera visningen av panelen.
 
 1. I sidopanelen väljer du plustecknet för att öppna **[!UICONTROL Components]** lista.
 
@@ -287,8 +287,8 @@ Använd följande två metoder för att publicera Dynamic Media 3D-resurser om d
 
 * **[!UICONTROL URL]** - Användning **[!UICONTROL URL]** om du använder ett tredjepartssystem för hantering av webbinnehåll och vill länka Dynamic Media 3D-resurser till dina webbsidor med Dimensional Viewer.
 
-   Se [Länka URL:er till ditt webbprogram](/help/assets/linking-urls-to-yourwebapplication.md#obtaining-a-url-for-an-asset).
+  Se [Länka URL:er till ditt webbprogram](/help/assets/linking-urls-to-yourwebapplication.md#obtaining-a-url-for-an-asset).
 
 * **[!UICONTROL Embed]** - Användning **[!UICONTROL Embed]** när du vill visa en Dynamic Media 3D-resurs som är inbäddad på en webbsida med Dimensional Viewer. Du kopierar inbäddningskoden till Urklipp så att du kan klistra in den på webbsidorna. Det är inte tillåtet att redigera koden i dialogrutan **[!UICONTROL Embed]**.
 
-   Se [Bädda in Dynamic Media Video-, Image Viewer- eller Dimensional-visningsprogram på en webbsida](/help/assets/embed-code.md#embedding-the-video-or-image-viewer-on-a-web-page).
+  Se [Bädda in Dynamic Media Video-, Image Viewer- eller Dimensional-visningsprogram på en webbsida](/help/assets/embed-code.md#embedding-the-video-or-image-viewer-on-a-web-page).

@@ -4,9 +4,9 @@ description: I den här artikeln beskrivs begreppen för en SPA och du kan gå i
 topic-tags: spa
 content-type: reference
 exl-id: 95990112-2afc-420a-a7c7-9613f40d4c4a
-source-git-commit: 0e8ad326e883f73e795929ce7d5d36f1bcdc5347
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '1966'
+source-wordcount: '1967'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ SPA Editor erbjuder en omfattande lösning för SPA inom AEM. I den här artikel
 
 >[!NOTE]
 >
->SPA Editor är den rekommenderade lösningen för projekt som kräver SPA ramverksbaserad återgivning på klientsidan (t.ex. Reaktion eller Angular).
+>SPA Editor är den rekommenderade lösningen för projekt som kräver SPA ramverksbaserad rendering på klientsidan (till exempel React eller Angular).
 
 ## Introduktion {#introduction}
 
@@ -50,7 +50,7 @@ Genomgången baseras på AEM och exempelappen WKND SPA Project. Om du vill följ
 
 ### Vad är en SPA? {#what-is-a-spa}
 
-Ett enkelsidigt program (SPA) skiljer sig från en konventionell sida på så sätt att det återges på klientsidan och i huvudsak är Javascript-drivet, beroende på Ajax-anrop för att läsa in data och dynamiskt uppdatera sidan. Det mesta eller allt innehåll hämtas en gång på en sida, och ytterligare resurser läses in asynkront efter behov baserat på användarinteraktionen med sidan.
+Ett enkelsidigt program (SPA) skiljer sig från en konventionell sida genom att det återges på klientsidan och i huvudsak är JavaScript-styrt, beroende på Ajax-anrop för att läsa in data och dynamiskt uppdatera sidan. Det mesta eller allt innehåll hämtas en gång på en sida, och ytterligare resurser läses in asynkront efter behov baserat på användarinteraktionen med sidan.
 
 Detta minskar behovet av siduppdatering och ger användaren en upplevelse som är smidig, snabb och som känns mer som en appupplevelse.
 
@@ -183,7 +183,7 @@ Nästa avsnitt, [Läsa in ett SPA program,](#loading-an-spa-application) går dj
 
 1. Växla till **Nätverk** -fliken för utvecklingsverktygen och läsa in sidan igen.
 
-   Observera att de primära resurser som har lästs in för sidan är själva sidan, CSS, React Javascript, dess beroenden samt JSON-data för sidan.
+   Observera att de primära resurser som har lästs in för sidan är själva sidan, CSS, React JavaScript, dess beroenden samt JSON-data för sidan.
 
    ![Steg 5](assets/spa-walkthrough-step-1-5.png)
 

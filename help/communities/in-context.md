@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: ee104f6f-123b-4a6e-9031-849fc1318cc5
 role: Admin
 exl-id: 47b3c19c-5228-4b72-b78c-7ed71b308921
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '789'
+source-wordcount: '788'
 ht-degree: 0%
 
 ---
@@ -56,11 +56,11 @@ Mer information om användargrupper finns på [Hantera användare och användarg
    * Välj nytt inlägg
    * Ange ämne
 
-      När nektaret ska bytas ut mot födoämnen från Humming Bird
+     När nektaret ska bytas ut mot födoämnen från Humming Bird
 
    * Ange brödtexten
 
-      Jag har inte haft så stor framgång när jag har lagt på en matare till en luftfågel varje år. De verkar komma en dag eller två, då är det klart. Jag ändrar det en gång i veckan är det för långt? Måste jag ändra den tidigare?
+     Jag har inte haft så stor framgång när jag har lagt på en matare till en luftfågel varje år. De verkar komma en dag eller två, då är det klart. Jag ändrar det en gång i veckan är det för långt? Måste jag ändra den tidigare?
 
    * Välj inlägg
    * Välj Logga ut
@@ -71,7 +71,7 @@ Mer information om användargrupper finns på [Hantera användare och användarg
    * Välj Läs mer för ämnet Hummingbird
    * Ange kommentaren för Posta svar
 
-      Jag byter min en gång i veckan och får dem från maj till oktober.
+     Jag byter min en gång i veckan och får dem från maj till oktober.
 
    * Välj svar
    * Välj Logga ut
@@ -82,7 +82,7 @@ Mer information om användargrupper finns på [Hantera användare och användarg
    * Välj Läs mer för ämnet Hummingbird
    * Ange kommentaren för Posta svar
 
-      Jag säljer nektar och feeds - gå till https://my.viral.url/
+     Jag säljer nektar och feeds - gå till https://my.viral.url/
 
    * Välj svar
    * Välj Logga ut

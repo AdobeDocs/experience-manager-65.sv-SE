@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: platform
 exl-id: 1138a548-d112-4446-b0e1-b7a9ea7c7604
-source-git-commit: 58594be73372e128ba999a8290615fbcb447084e
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '1862'
+source-wordcount: '1863'
 ht-degree: 0%
 
 ---
@@ -49,8 +49,8 @@ eCommerce-ramverket kan användas tillsammans med alla e-handelslösningar, och 
 
       * Om det hittas används värdet för att filtrera e-handelstjänstens sökning.
       * Om den inte hittas används den mest rankade e-handelstjänsten.
-   * A `cq:Commerce` mixin används så att `cq:commerceProvider` kan läggas till i starkt typbestämda resurser.
 
+   * A `cq:Commerce` mixin används så att `cq:commerceProvider` kan läggas till i starkt typbestämda resurser.
 
 * The `cq:commerceProvider` -egenskapen används också för att referera till lämplig definition för handelsfabrik.
 
@@ -97,11 +97,11 @@ The **CommerceSession**:
    * utför Lägg till/ta bort/etc
    * utför de olika beräkningarna av varukorgen,
 
-      `commerceSession.getProductPriceInfo(Product product, Predicate filter)`
+     `commerceSession.getProductPriceInfo(Product product, Predicate filter)`
 
 * Ägarens beständighet för **order** data:
 
-   `CommerceSession.getUserContext()`
+  `CommerceSession.getUserContext()`
 
 * Kan hämta/uppdatera leveransinformation med `updateOrder(Map<String, Object> delta)`
 * Äger även **betalning** bearbetningsanslutning
@@ -129,7 +129,6 @@ Alla produktresurser kan representeras av en `Product API`. De flesta anrop i pr
 >
 >1. `size`
 >1. plus ytterligare
-
 >
 >   Den här extra varianten markeras via `variationAxis` egenskap för produktreferensen (vanligtvis `color` för Geometrixx Outdoors).
 
@@ -197,7 +196,7 @@ public interface Product extends Adaptable {
  * Interface for filtering variants and AxisFilter provided as common implementation
  *
  * The <code>VariantFilter</code> is used to filter variants,
- * e.g. when using {@link Product#getVariants(VariantFilter filter)}.
+ * for example, when using {@link Product#getVariants(VariantFilter filter)}.
  */
 public interface VariantFilter {
     public boolean includes(Product product);
@@ -249,11 +248,11 @@ public class AxisFilter implements VariantFilter {
          * Produktreferenser innehåller en `productData` -egenskap, som pekar på produktdata (vanligtvis under `/etc/commerce/products`).
          * Produktinformationen är hierarkisk. produktattribut ärvs från en produktdatanodens överordnade.
          * Produktreferenser kan också innehålla lokala egenskaper som åsidosätter de som anges i deras produktdata.
+
       * En produkt i sig:
 
          * Utan `productData` -egenskap.
          * En produktnod som innehåller alla egenskaper lokalt (och inte innehåller någon productData-egenskap) ärver produktattribut direkt från sina egna överordnade.
-
 
 * **AEM produktstruktur**
 
@@ -321,11 +320,11 @@ public class AxisFilter implements VariantFilter {
       * Kvantitetsrabatter.
       * Olika valutor.
       * momspliktig och momsfri.
+
    * Modifierarna är helt öppna med följande gränssnitt:
 
       * `int CommerceSession.getQuantityBreakpoints(Product product)`
       * `String CommerceSession.getProductPrice(Product product)`
-
 
 **Lagring**
 
@@ -432,36 +431,37 @@ Startpunkten för sökgränssnittet är `CommerceService#search` metod som retur
 
    * En Voucher är en sidbaserad komponent som skapas/redigeras med webbplatskonsolen och lagras under:
 
-      `/content/campaigns`
+     `/content/campaigns`
 
    * Kuponger:
 
       * En kupongkod (som anges i kundvagnen av kunden).
       * En verifikationsetikett (visas när kunden har skrivit in den i kundvagnen).
       * En kampanjsökväg (som definierar den åtgärd som vouchern tillämpar).
+
    * Vouchers har inte sina egna datum- och datumtider, utan använder dem från sina överordnade kampanjer.
    * Externa handelsmotorer kan också tillhandahålla vouchers, kräver minst
 
       * En verifikationskod
       * An `isValid()` method
+
    * The **Voucher** komponent ( `/libs/commerce/components/voucher`) innehåller:
 
       * En renderare för kupongadministration. visar eventuella verifikationer som finns i kundvagnen.
       * Redigeringsdialogrutorna (formuläret) för att administrera (lägga till/ta bort) verifikationerna.
       * De åtgärder som krävs för att lägga till/ta bort verifikationer i/från kundvagnen.
 
-
-
 * Kampanjer:
 
    * En kampanj är en sidbaserad komponent som skapas/redigeras med webbplatskonsolen och lagras under:
 
-      `/content/campaigns`
+     `/content/campaigns`
 
    * Erbjudanden:
 
       * En prioritet
       * En sökväg till en erbjudandehanterare
+
    * Du kan koppla kampanjer till en kampanj för att definiera datum/tid för på/av-kampanjer.
    * Du kan koppla kampanjer till en upplevelse för att definiera deras segment.
    * Kampanjer som inte är kopplade till en upplevelse kommer inte att utlösas fristående, men de kan fortfarande utlösas av en Voucher.
@@ -469,17 +469,16 @@ Startpunkten för sökgränssnittet är `CommerceService#search` metod som retur
 
       * renderare och dialogrutor för kampanjadministration
       * underkomponenter för återgivning och redigering av konfigurationsparametrar som är specifika för kampanjhanterarna
+
    * Två marknadsföringshanterare medföljer:
 
       * `DiscountPromotionHandler`som ger en absolut rabatt eller en procentuell rabatt som gäller för hela varukorgen
       * `PerfectPartnerPromotionHandler`, som ger en produkt i absolut eller procentuell rabatt om partnerprodukten också finns i kundvagnen
+
    * ClientContext `SegmentMgr` löser segment och ClientContext `CartMgr` löser kampanjer. Varje kampanj som gäller minst ett löst segment kommer att utlösas.
 
       * Utlösta kampanjer skickas tillbaka till servern via ett AJAX samtal för att beräkna kundvagnen på nytt.
       * Utlösta kampanjer (och tillagda Vouchers) visas också på panelen ClientContext.
-
-
-
 
 Du kan lägga till/ta bort en verifikation från en kundvagn via `CommerceSession` API:
 
@@ -522,7 +521,7 @@ The `AbstractJcrCommerceSession` kan använda verifikationer. Verifikationerna s
 
 * `jcr:title` (String) - för voucherns beskrivning
 * `code` (String) - den kod som användaren måste ange för att kunna använda vouchern
-* `promotion` (String) - den befordran som ska genomföras. t.ex. `/content/campaigns/geometrixx-outdoors/article/10-bucks-off`
+* `promotion` (String) - den befordran som ska genomföras. till exempel `/content/campaigns/geometrixx-outdoors/article/10-bucks-off`
 
 Kampanjhanterare är OSGi-tjänster som ändrar kundvagnen. Kundvagnen har stöd för flera krokar som definieras i `PromotionHandler` gränssnitt.
 

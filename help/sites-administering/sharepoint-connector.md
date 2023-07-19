@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 907316d1-3d23-4c46-bccb-bad6fe1bd1bb
 docset: aem65
 exl-id: 10ea7d2e-6e44-4d5c-a2b2-63c73b18f172
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '1562'
+source-wordcount: '1563'
 ht-degree: 0%
 
 ---
@@ -37,6 +37,7 @@ Alla funktioner implementeras med SharePoint inbyggda webbtjänster som gränssn
 >SharePoint Connector stöds även med AEM 6.1 Service Pack 2. Kopplingen stöder inte längre montering av virtuell databas och kan därför inte monteras. Om du vill komma åt SharePoint-databasen med Java API:er använder du SharePoint-anslutarens JCR-databasimplementering i ditt projekt.
 >
 >Installation, konfigurering, hantering och IT-drift av SharePoint-servern och relaterad IT-infrastruktur omfattas inte av detta dokument. Se leverantörsdokumentation på [SharePoint](https://www.microsoft.com/sharepoint) för information om dessa ämnen. Kopplingen kräver att dessa delar av infrastrukturen är korrekt installerade, konfigurerade och i drift.
+>
 
 ## Komma igång {#getting-started}
 
@@ -221,7 +222,7 @@ Gå till: [http://localhost:4502/system/console/bundles](http://localhost:4502/s
 
 Endast användare som är autentiserade på både AEM och SharePoint har åtkomst till SharePoint-innehållet via anslutningen.
 
-Du kan också använda anslutningstillägget för autentisering för att skapa en anpassad autentiseringsmodul, som t.ex. mappar åtkomsten AEM användare till specifika SharePoint-användare. Skapa AEM användare som motsvarar SharePoint-användare (användarnamn och lösenord måste matcha) för att kunna se SharePoint-innehåll mappat till anslutningsinstansen.
+Du kan också använda anslutningstillägget för autentisering för att skapa en anpassad autentiseringsmodul, som t.ex. mappar åtkomst AEM användare till specifika SharePoint-användare. Skapa AEM användare som motsvarar SharePoint-användare (användarnamn och lösenord måste matcha) för att kunna se SharePoint-innehåll mappat till anslutningsinstansen.
 
 Så här skapar du en användare i AEM:
 

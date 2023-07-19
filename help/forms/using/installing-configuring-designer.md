@@ -12,9 +12,9 @@ discoiquuid: f3a5b5ce-2262-4d5d-a8ae-d59a3a4229e7
 docset: aem65
 role: Admin
 exl-id: 90503d29-e079-43f4-a5dc-ce90ed7844c6
-source-git-commit: 1b2d743f8f2172c4e4663917d598734cb1ea1ea4
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '477'
+source-wordcount: '476'
 ht-degree: 0%
 
 ---
@@ -36,7 +36,6 @@ Designer är tillgängligt som ett fristående installationsprogram och ingår �
    >[!NOTE]
    >
    > * Adobe Experience Manager 6.5 Forms Service Pack 15 (6.5.15.0) och senare Forms Designer-version innehåller även Service Pack-versionen. Exempel: för Service Pack 15 är versionsnumret 6.5.15.2022112.1.0. I det här exemplet är 6.5.15 Service Pack-version.
-
 
 1. Starta installationsprogrammet för AEM Forms Designer genom att dubbelklicka på setup.exe.
 1. Fortsätt och ange dina uppgifter och serienumret på skärmen Personalisering.

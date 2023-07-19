@@ -9,9 +9,9 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 discoiquuid: c8281f98-9811-42f7-9a31-f82dd0f09319
 exl-id: 50785534-5784-4354-b123-5e640b7c0242
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '783'
+source-wordcount: '784'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe rekommenderar att du använder SPA Editor för projekt som kräver ramverksbaserad klientåtergivning för en sida (t.ex. Reagera). [Läs mer](/help/sites-developing/spa-overview.md).
+>Adobe rekommenderar att du använder SPA Editor för projekt som kräver ramverksbaserad klientåtergivning för en sida (till exempel React). [Läs mer](/help/sites-developing/spa-overview.md).
 
 Modellhantering innefattar att skapa och hantera modeller för att kunna kopplas till dataobjekt. Varje modell innehåller alla egenskaper och fältdefinitioner som behövs för att det ska bli enklare att skapa och återge objekt.
 
@@ -49,6 +49,7 @@ Modeller används för att avgöra hur enheter skapas. De definierar vad som är
 >[!NOTE]
 >
 >Det finns en modell utanför en app eftersom mer än en app kan använda den.
+>
 
 Se **[Modeller](/help/mobile/administer-mobile-apps.md)** för att skapa och hantera modeller på kontrollpanelen och i databasen.
 
@@ -65,6 +66,7 @@ Se **[Arbeta med entiteter](/help/mobile/spaces-and-entities.md)** för att skap
 >[!NOTE]
 >
 >Om modellen inte motsvarar ett befintligt AEM, t.ex. om kunden har skapat en ny modell, finns det ett användargränssnitt så att kunden kan skapa en ny enhet.
+>
 
 ### Blanksteg i innehållsmodellen {#spaces-in-content-model}
 

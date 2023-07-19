@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-app
 discoiquuid: 747d13d3-e7cc-4aa1-bcc8-4b57157e71ed
 exl-id: 6debb1a7-7889-4fdd-87c7-ecb87cc0b1f5
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
 source-wordcount: '296'
 ht-degree: 0%
@@ -47,27 +47,27 @@ I AEM Forms-appen öppnas en ny åtgärd med den vänstra svepningen eller start
 
    `"EventName Selector": "Function"`
 
-   När du utlöser en Javascript-händelse med namnet `EventName`på ett HTML-element som anges av `Selector`, `Function`anropas.
+   När du utlöser en JavaScript-händelse med namnet `EventName`på ett HTML-element som anges av `Selector`, `Function`anropas.
 
 1. Sök
 
    * &quot;tap.taskContentArea&quot; : &quot;onTaskClick&quot;,
 
-      &quot;tap.taskOpenArea&quot; : &quot;onTaskClick&quot;,
+     &quot;tap.taskOpenArea&quot; : &quot;onTaskClick&quot;,
 
-      &quot;tap.task-content&quot; : &quot;onTaskClick&quot;,
+     &quot;tap.task-content&quot; : &quot;onTaskClick&quot;,
 
-      &quot;tap.last_empty_div&quot; : &quot;onTaskClick&quot;,
+     &quot;tap.last_empty_div&quot; : &quot;onTaskClick&quot;,
+
    och ersätt med
 
    * &quot;swipe.taskContentArea&quot; : &quot;onTaskClick&quot;,
 
-      &quot;swipe.taskOpenArea&quot; : &quot;onTaskClick&quot;,
+     &quot;swipe.taskOpenArea&quot; : &quot;onTaskClick&quot;,
 
-      &quot;swipe .task-content&quot; : &quot;onTaskClick&quot;,
+     &quot;swipe .task-content&quot; : &quot;onTaskClick&quot;,
 
-      &quot;swipe .last_empty_div&quot; : &quot;onTaskClick&quot;,
-
+     &quot;swipe .last_empty_div&quot; : &quot;onTaskClick&quot;,
 
 1. Spara och stäng `task.js` -fil.
 1. Bygg och kör appen AEM Forms. Nu kan du öppna en med hjälp av vänstersvepning och högersvepning.

@@ -8,9 +8,9 @@ products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-on-demand-services-app
 discoiquuid: cfc7ad16-965e-4075-bc4d-5630abeaba55
 exl-id: 397def36-45b2-47a7-b103-99ca22b6dae1
-source-git-commit: 17d13e9b201629d9d1519fde4740cf651fe89d2c
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '2667'
+source-wordcount: '2668'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe rekommenderar att du använder SPA Editor för projekt som kräver ramverksbaserad klientåtergivning för en sida (t.ex. Reagera). [Läs mer](/help/sites-developing/spa-overview.md).
+>Adobe rekommenderar att du använder SPA Editor för projekt som kräver ramverksbaserad klientåtergivning för en sida (till exempel React). [Läs mer](/help/sites-developing/spa-overview.md).
 
 ## Sidmallar för mobilappar {#page-templates-for-mobile-apps-1}
 
@@ -61,7 +61,7 @@ Innehållet på en Angular återges på olika sätt beroende på om wcmMode iden
 
 I redigeringsläge återges varje enskild sida separat. Angular hanterar inte dirigering mellan sidor och inte heller en ng-view som används för att läsa in en del av en mall som innehåller sidans komponenter. I stället inkluderas sidmallens innehåll (template.jsp) på serversidan via `cq:include` -tagg.
 
-Den här strategin aktiverar författarfunktioner (som att lägga till och redigera komponenter i styckesystemet, Sidekick, designläge osv.) att fungera utan ändringar. Sidor som förlitar sig på klientsidans återgivning, t.ex. de för appar, fungerar inte så bra i AEM.
+Den här strategin aktiverar författarfunktionerna (som att lägga till och redigera komponenter i styckesystemet, Sidekick, designläget osv.) att fungera utan ändringar. Sidor som förlitar sig på klientsidans återgivning, t.ex. de för appar, fungerar inte så bra i AEM.
 
 Observera att include i template.jsp finns i en `div` elementet som innehåller `ng-controller` -direktivet. Den här strukturen gör att DOM-innehållet kan länkas till kontrollenheten. Även om sidor som återges på klientsidan misslyckas, fungerar därför enskilda komponenter som gör det bra (se avsnittet Komponenter nedan).
 

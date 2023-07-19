@@ -7,9 +7,9 @@ topic-tags: extending-aem
 content-type: reference
 docset: aem65
 exl-id: 08c88e70-4df9-4627-8a66-1fabe3aee50b
-source-git-commit: 9ad531738ac5e3c9d888f685b47c8b322712a89e
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '2778'
+source-wordcount: '2782'
 ht-degree: 0%
 
 ---
@@ -53,9 +53,9 @@ Beroende på fragmenttypen används även modeller eller mallar:
    * Modeller är inbyggda i datatyper.
    * Funktioner för att lägga till nya varianter, osv., måste uppdatera fragmentet därefter.
 
-   >[!CAUTION]
-   >
-   >Alla ändringar i en befintlig innehållsfragmentmodell kan påverka beroende fragment. detta kan leda till egenskaper som är överblivna i dessa fragment.
+  >[!CAUTION]
+  >
+  >Alla ändringar i en befintlig innehållsfragmentmodell kan påverka beroende fragment. detta kan leda till egenskaper som är överblivna i dessa fragment.
 
 * Mallar för innehållsfragment:
 
@@ -63,7 +63,7 @@ Beroende på fragmenttypen används även modeller eller mallar:
    * Mallar definierar (grundläggande, endast text) strukturen för ett innehållsfragment när det skapas.
    * Mallen kopieras till fragmentet när den skapas. så att ytterligare ändringar av mallen inte återspeglas i befintliga fragment.
    * Funktioner för att lägga till nya varianter, osv., måste uppdatera fragmentet därefter.
-   * [Mallar för innehållsfragment](/help/sites-developing/content-fragment-templates.md) fungerar på ett annat sätt än andra mallmekanismer inom det AEM ekosystemet (t.ex. sidmallar). De bör därför beaktas separat.
+   * [Mallar för innehållsfragment](/help/sites-developing/content-fragment-templates.md) fungerar på ett annat sätt än andra mallmekanismer i det AEM ekosystemet (t.ex. sidmallar). De bör därför beaktas separat.
    * När MIME-typen för innehållet baseras på en mall hanteras det faktiska innehållet. det innebär att varje element och variant kan ha olika MIME-typer.
 
 ### Integrering med Assets {#integration-with-assets}
@@ -83,15 +83,14 @@ Innehållsfragment med strukturerat innehåll (dvs. baserat på en innehållsfra
 * Allt innehåll lagras under `jcr:content/data` resursens nod:
 
    * Elementdata lagras under den överordnad undernoden:
-      `jcr:content/data/master`
+     `jcr:content/data/master`
 
-   * Variationer lagras under en undernod som har variantens namn: t.ex. `jcr:content/data/myvariation`
+   * Variationer lagras under en undernod som har variantens namn: till exempel `jcr:content/data/myvariation`
 
-   * Data för varje element lagras i respektive undernod som en egenskap med elementnamnet: t.ex. elementets innehåll `text` lagras som egenskap `text` på `jcr:content/data/master`
+   * Data för varje element lagras i respektive undernod som en egenskap med elementnamnet: till exempel elementets innehåll `text` lagras som egenskap `text` på `jcr:content/data/master`
 
 * Metadata och tillhörande innehåll lagras nedan `jcr:content/metadata`
-Förutom rubriken och beskrivningen, som inte betraktas som traditionella metadata och lagras på 
-`jcr:content`
+Förutom rubriken och beskrivningen, som inte betraktas som traditionella metadata och lagras på `jcr:content`
 
 #### Mappa enkla innehållsfragment till resurser {#mapping-simple-content-fragments-to-assets}
 
@@ -162,8 +161,7 @@ Serverdelsimplementeringen av innehållsfragment ansvarar till exempel för att 
 Parametrarna för detta kan konfigureras i [Webbkonsol](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console), för OSGi-paketet **Konfiguration av komponent för innehållsfragment**.
 
 * **Resurstyper**
-En lista med 
-`sling:resourceTypes` kan anges för att definiera komponenter som används för att återge innehållsfragment och var bakgrundsbearbetningen ska användas.
+En lista med `sling:resourceTypes` kan anges för att definiera komponenter som används för att återge innehållsfragment och var bakgrundsbearbetningen ska användas.
 
 * **Referensegenskaper**
 En lista med egenskaper kan konfigureras för att ange var referensen till fragmentet lagras för respektive komponent.
@@ -199,43 +197,44 @@ Innehållsfragment kan integreras med:
 
 * **Översättningar**
 
-   Innehållsfragment är helt integrerade med [Arbetsflöde för AEM](/help/sites-administering/tc-manage.md). Arkitekturnivå innebär följande:
+  Innehållsfragment är helt integrerade med [Arbetsflöde för AEM](/help/sites-administering/tc-manage.md). Arkitekturnivå innebär följande:
 
    * De enskilda översättningarna av ett innehållsfragment är i själva verket separata fragment. till exempel:
 
       * De finns under olika språkrötter:
 
-         `/content/dam/<path>/en/<to>/<fragment>`
+        `/content/dam/<path>/en/<to>/<fragment>`
 
-         jämfört med
+        jämfört med
 
-         `/content/dam/<path>/de/<to>/<fragment>`
+        `/content/dam/<path>/de/<to>/<fragment>`
 
       * men de delar exakt samma relativa sökväg under språkroten:
 
-         `/content/dam/<path>/en/<to>/<fragment>`
+        `/content/dam/<path>/en/<to>/<fragment>`
 
-         jämfört med
+        jämfört med
 
-         `/content/dam/<path>/de/<to>/<fragment>`
+        `/content/dam/<path>/de/<to>/<fragment>`
+
    * Förutom de regelbaserade sökvägarna finns det ingen ytterligare koppling mellan de olika språkversionerna av ett innehållsfragment. De hanteras som två separata fragment, även om användargränssnittet ger möjlighet att navigera mellan språkvarianterna.
-   >[!NOTE]
-   >
-   >Det AEM arbetsflödet för översättning fungerar med `/content`:
-   >
-   >* När innehållsfragmentsmodellerna finns i `/conf`, ingår de inte i sådana översättningar. Du kan [Internationalisera gränssnittssträngar](/help/sites-developing/i18n-dev.md).
-   >
-   >* Mallar kopieras för att skapa fragmentet så detta är implicit.
 
+  >[!NOTE]
+  >
+  >Det AEM arbetsflödet för översättning fungerar med `/content`:
+  >
+  >* När innehållsfragmentsmodellerna finns i `/conf`, ingår de inte i sådana översättningar. Du kan [Internationalisera gränssnittssträngar](/help/sites-developing/i18n-dev.md).
+  >
+  >* Mallar kopieras för att skapa fragmentet så detta är implicit.
 
 * **Metadata-scheman**
 
    * Innehållsfragment (återanvänd) [metadatamodeller](/help/assets/metadata-schemas.md), som kan definieras med standardresurser.
    * CFM har ett eget specifikt schema:
 
-      `/libs/dam/content/schemaeditors/forms/contentfragment`
+     `/libs/dam/content/schemaeditors/forms/contentfragment`
 
-      detta kan vid behov förlängas.
+     detta kan vid behov förlängas.
 
    * respektive schemaformulär är integrerat med fragmentredigeraren.
 
@@ -255,20 +254,20 @@ Följande tre gränssnitt kan fungera som startpunkter:
 
 * **Fragmentmall** ([FragmentTemplate](https://www.adobe.io/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/dam/cfm/FragmentTemplate.html))
 
-   Använd `FragmentTemplate.createFragment()` för att skapa ett nytt fragment.
+  Använd `FragmentTemplate.createFragment()` för att skapa ett nytt fragment.
 
-   ```
-   Resource templateOrModelRsc = resourceResolver.getResource("...");
-   FragmentTemplate tpl = templateOrModelRsc.adaptTo(FragmentTemplate.class);
-   ContentFragment newFragment = tpl.createFragment(parentRsc, "A fragment name", "A fragment description.");
-   ```
+  ```
+  Resource templateOrModelRsc = resourceResolver.getResource("...");
+  FragmentTemplate tpl = templateOrModelRsc.adaptTo(FragmentTemplate.class);
+  ContentFragment newFragment = tpl.createFragment(parentRsc, "A fragment name", "A fragment description.");
+  ```
 
-   Detta gränssnitt representerar:
+  Detta gränssnitt representerar:
 
    * antingen en modell för innehållsfragment eller en mall för innehållsfragment från vilken ett innehållsfragment ska skapas,
    * och (efter det att fragmentet har skapats) strukturinformationen
 
-   Denna information kan omfatta:
+  Denna information kan omfatta:
 
    * Få tillgång till grundläggande data (titel, beskrivning)
    * Få åtkomst till mallar/modeller för elementen i fragmentet:
@@ -276,39 +275,37 @@ Följande tre gränssnitt kan fungera som startpunkter:
       * Mallar för listelement
       * Hämta strukturinformation för ett givet element
       * Åtkomst till elementmallen (se `ElementTemplate`)
+
    * Åtkomstmallar för variationerna av fragmentet:
 
       * Lista variantmallar
       * Hämta strukturinformation för en viss variation
       * Åtkomst till variantmallen (se `VariationTemplate`)
+
    * Hämta initialt associerat innehåll
 
-   Gränssnitt som representerar viktig information:
+  Gränssnitt som representerar viktig information:
 
    * `ElementTemplate`
 
       * Hämta grundläggande data (namn, titel)
       * Hämta ursprungligt elementinnehåll
+
    * `VariationTemplate`
 
       * Hämta grundläggande data (namn, titel, beskrivning)
 
-
-
-
-
-
 * **Innehållsfragment** ([ContentFragment](https://www.adobe.io/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/dam/cfm/ContentFragment.html))
 
-   Med det här gränssnittet kan du arbeta med ett innehållsfragment på ett abstrakt sätt.
+  Med det här gränssnittet kan du arbeta med ett innehållsfragment på ett abstrakt sätt.
 
-   >[!CAUTION]
-   >
-   >Vi rekommenderar starkt att du använder ett fragment via det här gränssnittet. Man bör undvika att ändra innehållsstrukturen direkt.
+  >[!CAUTION]
+  >
+  >Vi rekommenderar starkt att du använder ett fragment via det här gränssnittet. Man bör undvika att ändra innehållsstrukturen direkt.
 
-   Gränssnittet ger dig möjlighet att
+  Gränssnittet ger dig möjlighet att
 
-   * Hantera grundläggande data (t.ex. get name;) get/set title/description)
+   * Hantera grundläggande data (till exempel get name;) get/set title/description)
    * Åtkomst till metadata
    * Åtkomstelement:
 
@@ -317,6 +314,7 @@ Följande tre gränssnitt kan fungera som startpunkter:
       * Skapa nya element (se [Caveats](#caveats))
 
       * Åtkomst till elementdata (se `ContentElement`)
+
    * Listvarianter definierade för fragmentet
    * Skapa nya varianter globalt
    * Hantera associerat innehåll:
@@ -324,9 +322,10 @@ Följande tre gränssnitt kan fungera som startpunkter:
       * Listsamlingar
       * Lägg till samlingar
       * Ta bort samlingar
+
    * Åtkomst till fragmentets modell eller mall
 
-   Gränssnitt som representerar de primära elementen i ett fragment är:
+  Gränssnitt som representerar de primära elementen i ett fragment är:
 
    * **Innehållselement** ([ContentElement](https://www.adobe.io/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/dam/cfm/ContentElement.html))
 
@@ -339,24 +338,20 @@ Följande tre gränssnitt kan fungera som startpunkter:
          * Skapa nya varianter (se [Caveats](#caveats))
          * Ta bort variationer (se [Caveats](#caveats))
          * Åtkomst till variantdata (se `ContentVariation`)
+
       * Kortkommando för att matcha variationer (tillämpa ytterligare, implementeringsspecifik reservlogik om den angivna varianten inte är tillgänglig för ett element)
+
    * **Innehållsvariation** ([ContentVariation](https://www.adobe.io/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/dam/cfm/ContentVariation.html))
 
       * Hämta grundläggande data (namn, titel, beskrivning)
       * Hämta/ange innehåll
       * Enkel synkronisering, baserat på den senast ändrade informationen
 
-   Alla tre gränssnitten ( `ContentFragment`, `ContentElement`, `ContentVariation`) utöka `Versionable` gränssnitt, som lägger till versionsfunktioner, som krävs för innehållsfragment:
+  Alla tre gränssnitten ( `ContentFragment`, `ContentElement`, `ContentVariation`) utöka `Versionable` gränssnitt, som lägger till versionsfunktioner, som krävs för innehållsfragment:
 
    * Skapa en ny version av elementet
    * Lista versioner av elementet
    * Hämta innehållet i en specifik version av det versionshanterade elementet
-
-
-
-
-
-
 
 ### Adapting - Using customito() {#adapting-using-adaptto}
 
@@ -408,7 +403,7 @@ Se följande:
 
 * `filter.xml`
 
-   The `filter.xml` för hantering av innehållsfragment konfigureras så att den inte överlappar det centrala resurspaketet.
+  The `filter.xml` för hantering av innehållsfragment konfigureras så att den inte överlappar det centrala resurspaketet.
 
 ## Redigera sessioner {#edit-sessions}
 
@@ -441,11 +436,11 @@ Processerna är följande:
 
       * Den senast ändrade informationen uppdateras.
       * Cookies tas bort.
+
    * Vid återställning:
 
       * Den version av innehållsfragmentet som skapades när redigeringssessionen startades återställs.
       * Cookies tas bort.
-
 
 * Redigering
 
@@ -464,10 +459,10 @@ Möjliga åtgärder är:
 
          * Om det aktuella fragmentet används återupprättar du sessionen.
          * Om inte, försök att avbryta redigeringen för det tidigare redigerade innehållsfragmentet och ta bort cookies (ingen redigeringssession finns efteråt).
+
       * Om det inte finns någon redigeringssession väntar du på den första ändringen som gjorts av användaren (se nedan).
+
    * Kontrollera om det redan finns referenser till innehållsfragmentet på en sida och visa lämplig information om så är fallet.
-
-
 
 * Innehållsändring
 

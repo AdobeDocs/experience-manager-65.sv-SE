@@ -10,9 +10,9 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: 50fafc64-d462-4386-93af-ce360588d294
 exl-id: 3891150e-9972-4bbc-ad61-7f46a1f9bbb4
-source-git-commit: 071bc0e36ed2d8eb4ce7bd0ba46823adc0e43095
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '5238'
+source-wordcount: '5241'
 ht-degree: 0%
 
 ---
@@ -50,12 +50,12 @@ För standardrapporter som levereras med AEM:
 >I exemplen och definitionerna nedan används följande notering:
 >
 >* Varje rad definierar en nod eller en egenskap där:
-   >  `N:<name> [<nodeType>]` : Beskriver en nod med namnet `<*name*>` och nodtyp för `<*nodeType*>`*.*
-   >  `P:<name> [<propertyType]` : Beskriver en egenskap med namnet `<*name*>` och en egenskapstyp för `<*propertyType*>`.
-   >  `P:<name> = <value>` : Beskriver en egenskap `<name>` som måste anges till värdet för `<value>`.
+>  `N:<name> [<nodeType>]` : Beskriver en nod med namnet `<*name*>` och nodtyp för `<*nodeType*>`*.*
+>  `P:<name> [<propertyType]` : Beskriver en egenskap med namnet `<*name*>` och en egenskapstyp för `<*propertyType*>`.
+>  `P:<name> = <value>` : Beskriver en egenskap `<name>` som måste anges till värdet för `<value>`.
 >
 >* Indrag visar hierarkiska beroenden mellan noderna.
->* Objekt avgränsade med | betecknar en lista över möjliga poster, till exempel typer eller namn, t.ex. `String|String[]` betyder att egenskapen kan vara String eller String[].
+>* Objekt avgränsade med | betecknar en lista över möjliga poster, till exempel typer eller namn, till exempel `String|String[]` betyder att egenskapen kan vara String eller String[].
 >
 >* `[]` avbildar en array, som String[] eller en array med noder som i [Frågedefinition](#query-definition).
 >
@@ -63,7 +63,6 @@ För standardrapporter som levereras med AEM:
 >
 >* Noder - `nt:unstructured`
 >* Egenskaper - `String`
-
 
 ## Rapporteringsramverk {#reporting-framework}
 
@@ -89,7 +88,7 @@ Rapportsidan:
 
 ### Rapportbas {#report-base}
 
-The [ `reportbase` komponent](#report-base-component) bygger på en rapport som
+The [`reportbase` komponent](#report-base-component) bygger på en rapport som
 
 * Innehåller definitionen av [fråga](#the-query-and-data-retrieval) som levererar den underliggande resultatmängden med data.
 
@@ -99,7 +98,7 @@ The [ `reportbase` komponent](#report-base-component) bygger på en rapport som
 
 ### Kolumnbas {#column-base}
 
-Varje kolumn är en instans av [ `columnbase` komponent](#column-base-component) som
+Varje kolumn är en instans av [`columnbase` komponent](#column-base-component) som
 
 * Är ett stycke som används av parsytan ( `reportbase`) i respektive rapport.
 * Definierar länken till [underliggande resultatuppsättning](#the-query-and-data-retrieval); d.v.s. definierar de specifika data som refereras i den här resultatuppsättningen och hur de behandlas.
@@ -109,7 +108,7 @@ Varje kolumn är en instans av [ `columnbase` komponent](#column-base-component)
 
 Frågan:
 
-* Definieras som en del av [ `reportbase`](#report-base) -komponenten.
+* Definieras som en del av [`reportbase`](#report-base) -komponenten.
 * Baseras på [CQ QueryBuilder](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/QueryBuilder.html).
 * Hämtar data som används som grund för rapporten. Varje rad i resultatmängden (tabellen) är kopplad till en nod som returneras av frågan. Specifik information för [enskilda kolumner](#column-base-component) extraheras sedan från den här datauppsättningen.
 
@@ -117,13 +116,13 @@ Frågan:
 
    * En rotsökväg.
 
-      Detta anger underträdet för databasen som ska genomsökas.
+     Detta anger underträdet för databasen som ska genomsökas.
 
-      För att minimera prestandapåverkan är det tillrådligt att (försöka) begränsa frågan till ett specifikt underträd i databasen. Rotsökvägen kan antingen vara fördefinierad i [rapportmall](#report-template) eller anges av användaren i [Dialogrutan Konfiguration (Redigera)](#configuration-dialog).
+     För att minimera prestandapåverkan är det tillrådligt att (försöka) begränsa frågan till ett specifikt underträd i databasen. Rotsökvägen kan antingen vara fördefinierad i [rapportmall](#report-template) eller anges av användaren i [Dialogrutan Konfiguration (Redigera)](#configuration-dialog).
 
    * [Ett eller flera villkor](#query-definition).
 
-      Dessa åläggs för att producera den (ursprungliga) resultatmängden. innehåller till exempel begränsningar för nodtypen eller egenskapsbegränsningar.
+     Dessa åläggs för att producera den (ursprungliga) resultatmängden. innehåller till exempel begränsningar för nodtypen eller egenskapsbegränsningar.
 
 **Nyckelpunkten här är att varje enskild nod som returneras i frågans resultatuppsättning används för att generera en enda rad i rapporten (så att en 1:1-relation skapas).**
 
@@ -137,16 +136,16 @@ Detta gör att:
 
 * Extrahera och härleda värden från den underliggande resultatmängden.
 
-   Du kan till exempel bearbeta två egenskapsvärden som ett enda värde genom att beräkna skillnaden mellan dem.
+  Du kan till exempel bearbeta två egenskapsvärden som ett enda värde genom att beräkna skillnaden mellan dem.
 
 * Lösa extraherade värden. detta kan göras på flera olika sätt.
 
-   Sökvägar kan t.ex. mappas till en titel (som i det mer läsbara innehållet i respektive *jcr:title* egenskap).
+  Sökvägar kan t.ex. mappas till en titel (som i det mer läsbara innehållet i respektive *jcr:title* egenskap).
 
 * Använda filter vid olika punkter.
 * Skapa sammansatta värden, om det behövs.
 
-   Exempel: en text som visas för användaren, ett värde som ska användas för sortering och en extra URL som används (på klientsidan) för att skapa en länk.
+  Exempel: en text som visas för användaren, ett värde som ska användas för sortering och en extra URL som används (på klientsidan) för att skapa en länk.
 
 #### Bearbetningsköns arbetsflöde {#workflow-of-the-processing-queue}
 
@@ -192,8 +191,8 @@ Där de detaljerade stegen och elementen är:
 Följande krävs för att skapa och konfigurera en rapport:
 
 * a [plats för definition av rapportkomponenter](#location-of-report-components)
-* a [ `reportbase` komponent](#report-base-component)
-* en eller flera, [ `columnbase` komponenter](#column-base-component)
+* a [`reportbase` komponent](#report-base-component)
+* en eller flera, [`columnbase` komponenter](#column-base-component)
 * a [sidkomponent](#page-component)
 * a [rapportdesign](#report-design)
 * a [rapportmall](#report-template)
@@ -266,31 +265,31 @@ N:queryBuilder
 
 * `propertyConstraints`
 
-   Kan användas för att begränsa resultatet som angetts till noder som har specifika egenskaper med specifika värden. Om flera begränsningar anges måste noden uppfylla alla (AND-åtgärd).
+  Kan användas för att begränsa resultatet som angetts till noder som har specifika egenskaper med specifika värden. Om flera begränsningar anges måste noden uppfylla alla (AND-åtgärd).
 
-   Till exempel:
+  Till exempel:
 
-   ```
-   N:propertyConstraints
-    [
-    N:0
-    P:sling:resourceType
-    P:foundation/components/textimage
-    N:1
-    P:jcr:modifiedBy
-    P:admin
-    ]
-   ```
+  ```
+  N:propertyConstraints
+   [
+   N:0
+   P:sling:resourceType
+   P:foundation/components/textimage
+   N:1
+   P:jcr:modifiedBy
+   P:admin
+   ]
+  ```
 
-   Returnerar alla `textimage` komponenter som senast ändrades av `admin` användare.
+  Returnerar alla `textimage` komponenter som senast ändrades av `admin` användare.
 
 * `nodeTypes`
 
-   Används för att begränsa resultatet som angetts till de angivna nodtyperna. Du kan ange flera nodtyper.
+  Används för att begränsa resultatet som angetts till de angivna nodtyperna. Du kan ange flera nodtyper.
 
 * `mandatoryProperties`
 
-   Kan användas för att begränsa resultatet som angetts till noder som har *alla* av de angivna egenskaperna. Egenskapernas värde beaktas inte.
+  Kan användas för att begränsa resultatet som angetts till noder som har *alla* av de angivna egenskaperna. Egenskapernas värde beaktas inte.
 
 Alla är valfria och kan kombineras om det behövs, men du måste definiera minst en av dem.
 
@@ -315,69 +314,69 @@ N:charting
 
 * `settings`
 
-   Innehåller definitioner för aktiva diagram.
+  Innehåller definitioner för aktiva diagram.
 
    * `active`
 
-      Eftersom det går att definiera flera inställningar kan du använda den här för att definiera vilka som är aktiva. Dessa definieras av en array med noder (det finns ingen obligatorisk namnkonvention för dessa noder, men standardrapporterna använder ofta `0`, `1`.. `x`) med följande egenskaper:
+     Eftersom det går att definiera flera inställningar kan du använda den här för att definiera vilka som är aktiva. Dessa definieras av en array med noder (det finns ingen obligatorisk namnkonvention för dessa noder, men standardrapporterna använder ofta `0`, `1`.. `x`) med följande egenskaper:
 
       * `id`
 
-         Identifiering för aktiva diagram. Detta måste matcha ID:t för ett av diagrammen `definitions`.
+        Identifiering för aktiva diagram. Detta måste matcha ID:t för ett av diagrammen `definitions`.
 
 * `definitions`
 
-   Definierar de diagramtyper som är tillgängliga för rapporten. The `definitions` som ska användas anges av `active` inställningar.
+  Definierar de diagramtyper som är tillgängliga för rapporten. The `definitions` som ska användas anges av `active` inställningar.
 
-   Definitionerna anges med en array med noder (även om de ofta namnges `0`, `1`.. `x`) med följande egenskaper:
+  Definitionerna anges med en array med noder (även om de ofta namnges `0`, `1`.. `x`) med följande egenskaper:
 
    * `id`
 
-      Diagrammets identifiering.
+     Diagrammets identifiering.
 
    * `type`
 
-      Diagramtyp som är tillgänglig. Välj  från:
+     Diagramtyp som är tillgänglig. Välj  från:
 
       * `pie`
 Cirkeldiagram. Genereras endast från aktuella data.
 
       * `lineseries`
 En serie linjer (anslutningspunkter som representerar de faktiska fixeringarna). Genereras endast från historikdata.
+
    * Ytterligare egenskaper är tillgängliga, beroende på diagramtyp:
 
       * för diagramtypen `pie`:
 
          * `maxRadius` ( `Double/Long`)
 
-            Den maximala radie som tillåts för cirkeldiagrammet. därför den största tillåtna storleken för diagrammet (utan teckenförklaring). Ignoreras om `fixedRadius` är definierad.
+           Den maximala radie som tillåts för cirkeldiagrammet. därför den största tillåtna storleken för diagrammet (utan teckenförklaring). Ignoreras om `fixedRadius` är definierad.
 
          * `minRadius` ( `Double/Long`)
 
-            Den minsta radie som tillåts för cirkeldiagrammet. Ignoreras om `fixedRadius` är definierad.
+           Den minsta radie som tillåts för cirkeldiagrammet. Ignoreras om `fixedRadius` är definierad.
 
          * `fixedRadius` ( `Double/Long`) Definierar en fast radie för cirkeldiagrammet.
+
       * för diagramtypen [`lineseries`](/help/sites-administering/reporting.md#display-limits):
 
          * `totals` ( `Boolean`)
 
-            True om en extra rad visar **Totalt** bör visas.
+           True om en extra rad visar **Totalt** bör visas.
 standard: `false`
 
          * `series` ( `Long`)
 
-            Antal rader/serier som ska visas.
+           Antal rader/serier som ska visas.
 standard: `9` (detta är också tillåtet)
 
          * `hoverLimit` ( `Long`)
 
-            Maximalt antal aggregerade ögonblicksbilder (punkter som visas på varje vågrät linje, som representerar distinkta värden) som popup-fönster ska visas för, dvs när användaren för musen över ett distinkt värde eller motsvarande etikett i diagramförklaringen.
+           Maximalt antal aggregerade ögonblicksbilder (punkter som visas på varje vågrät linje, som representerar distinkta värden) som popup-fönster ska visas för, dvs när användaren för musen över ett distinkt värde eller motsvarande etikett i diagramförklaringen.
 
-            standard: `35` (d.v.s. inga popup-fönster visas om fler än 35 distinkta värden kan användas för de aktuella diagraminställningarna).
+           standard: `35` (d.v.s. inga popup-fönster visas om fler än 35 distinkta värden kan användas för de aktuella diagraminställningarna).
 
-            Det finns ytterligare en begränsning på 10 popup-fönster som kan visas parallellt (flera popup-fönster kan visas när muspekaren förs över förklaringstexterna).
-
-
+           Det finns ytterligare en begränsning på 10 popup-fönster som kan visas parallellt (flera popup-fönster kan visas när muspekaren förs över förklaringstexterna).
 
 ### Konfigurationsdialogruta {#configuration-dialog}
 
@@ -428,27 +427,27 @@ Flera förkonfigurerade komponenter tillhandahålls. dessa kan du referera till 
 
 * **`title`**
 
-   `/libs/cq/reporting/components/commons/title`
+  `/libs/cq/reporting/components/commons/title`
 
-   Textfält som definierar rapportrubriken.
+  Textfält som definierar rapportrubriken.
 
 * **`description`**
 
-   `/libs/cq/reporting/components/commons/description`
+  `/libs/cq/reporting/components/commons/description`
 
-   Textområde som definierar rapportbeskrivningen.
+  Textområde som definierar rapportbeskrivningen.
 
 * **`processing`**
 
-   `/libs/cq/reporting/components/commons/processing`
+  `/libs/cq/reporting/components/commons/processing`
 
-   Väljare för rapportens behandlingsläge (läsa in data manuellt/automatiskt).
+  Väljare för rapportens behandlingsläge (läsa in data manuellt/automatiskt).
 
 * **`scheduling`**
 
-   `/libs/cq/reporting/components/commons/scheduling`
+  `/libs/cq/reporting/components/commons/scheduling`
 
-   Väljare för schemaläggning av ögonblicksbilder för det historiska diagrammet.
+  Väljare för schemaläggning av ögonblicksbilder för det historiska diagrammet.
 
 >[!NOTE]
 >
@@ -460,9 +459,9 @@ Dessutom kan en rotsökväg definieras för rapporten:
 
 * **`rootPath`**
 
-   Detta begränsar rapporten till ett visst avsnitt (träd eller underträd) i databasen, vilket rekommenderas för prestandaoptimering. Rotsökvägen anges av `rootPath` egenskapen för `report` noden för varje rapportsida (hämtas från mallen när sidan skapas).
+  Detta begränsar rapporten till ett visst avsnitt (träd eller underträd) i databasen, vilket rekommenderas för prestandaoptimering. Rotsökvägen anges av `rootPath` egenskapen för `report` noden för varje rapportsida (hämtas från mallen när sidan skapas).
 
-   Den kan anges av:
+  Den kan anges av:
 
    * den [rapportmall](#report-template) (antingen som ett fast värde eller som standardvärde för konfigurationsdialogrutan).
    * användaren (med den här parametern)
@@ -522,32 +521,32 @@ N:definitions
 
 * `property`
 
-   Definierar den egenskap som ska användas för att beräkna det faktiska cellvärdet.
+  Definierar den egenskap som ska användas för att beräkna det faktiska cellvärdet.
 
-   Om egenskapen definieras som String[] flera egenskaper skannas (i sekvens) för att hitta det faktiska värdet.
+  Om egenskapen definieras som String[] flera egenskaper skannas (i sekvens) för att hitta det faktiska värdet.
 
-   Exempel:
+  Exempel:
 
-   `property = [ "jcr:lastModified", "jcr:created" ]`
+  `property = [ "jcr:lastModified", "jcr:created" ]`
 
-   Motsvarande värdeextraherare (som styr här) kommer att:
+  Motsvarande värdeextraherare (som styr här) kommer att:
 
    * Kontrollera om det finns en jcr:lastModified-egenskap och använd den i så fall.
    * Om ingen jcr:lastModified-egenskap är tillgänglig kommer innehållet i jcr:created att användas i stället.
 
 * `subPath`
 
-   Om resultatet inte finns på noden som returneras av frågan, `subPath` definierar var egenskapen faktiskt finns.
+  Om resultatet inte finns på noden som returneras av frågan, `subPath` definierar var egenskapen faktiskt finns.
 
 * `secondaryProperty`
 
-   Definierar en andra egenskap som också måste användas för att beräkna det faktiska cellvärdet. detta används bara för vissa kolumntyper (diff och sortable).
+  Definierar en andra egenskap som också måste användas för att beräkna det faktiska cellvärdet. detta används bara för vissa kolumntyper (diff och sortable).
 
-   I fallet med instansrapporten för arbetsflöde används den angivna egenskapen för att lagra det faktiska värdet för tidsskillnaden (i millisekunder) mellan start- och sluttider.
+  I fallet med instansrapporten för arbetsflöde används den angivna egenskapen för att lagra det faktiska värdet för tidsskillnaden (i millisekunder) mellan start- och sluttider.
 
 * `secondarySubPath`
 
-   Liknar subPath, när `secondaryProperty` används.
+  Liknar subPath, när `secondaryProperty` används.
 
 I de flesta fall är det bara `property` kommer att användas.
 
@@ -598,83 +597,83 @@ N:definitions
 
 * `resolver`
 
-   Definierar den lösare som ska användas. Följande lösare är tillgängliga:
+  Definierar den lösare som ska användas. Följande lösare är tillgängliga:
 
    * `const`
 
-      Kopplar värden till andra värden. Detta används till exempel för att lösa konstanter som `en` motsvarande värde `English`.
+     Kopplar värden till andra värden. Detta används till exempel för att lösa konstanter som `en` motsvarande värde `English`.
 
    * `default`
 
-      Standardlösaren. Det här är en dummy-lösare som faktiskt inte löser någonting.
+     Standardlösaren. Det här är en dummy-lösare som faktiskt inte löser någonting.
 
    * `page`
 
-      Löser ett sökvägsvärde till sökvägen för rätt sida. mer exakt, till motsvarande `jcr:content` nod. Till exempel: `/content/.../page/jcr:content/par/xyz` har lösts till `/content/.../page/jcr:content`.
+     Löser ett sökvägsvärde till sökvägen för rätt sida. mer exakt, till motsvarande `jcr:content` nod. Till exempel: `/content/.../page/jcr:content/par/xyz` har lösts till `/content/.../page/jcr:content`.
 
    * `path`
 
-      Löser ett sökvägsvärde genom att lägga till en underbana och ta det faktiska värdet från en egenskap i noden (enligt definition i `resolverConfig`) på den lösta sökvägen. Till exempel en `path` av `/content/.../page/jcr:content` kan matchas med innehållet i `jcr:title` -egenskapen innebär det att en sidsökväg tolkas som sidans titel.
+     Löser ett sökvägsvärde genom att lägga till en underbana och ta det faktiska värdet från en egenskap i noden (enligt definition i `resolverConfig`) på den lösta sökvägen. Till exempel en `path` av `/content/.../page/jcr:content` kan matchas med innehållet i `jcr:title` -egenskapen innebär det att en sidsökväg tolkas som sidans titel.
 
    * `pathextension`
 
-      Löser ett värde genom att föregå en sökväg och ta det faktiska värdet från en egenskap för noden vid den lösta sökvägen. Ett värde till exempel `de` kan föregås av en bana som `/libs/wcm/core/resources/languages`, med värdet från egenskapen `language`för att lösa landskoden `de` till språkbeskrivningen `German`.
+     Löser ett värde genom att föregå en sökväg och ta det faktiska värdet från en egenskap för noden vid den lösta sökvägen. Ett värde till exempel `de` kan föregås av en bana som `/libs/wcm/core/resources/languages`, med värdet från egenskapen `language`för att lösa landskoden `de` till språkbeskrivningen `German`.
 
 * `resolverConfig`
 
-   Innehåller definitioner för lösaren. vilka alternativ som är tillgängliga beror på `resolver` markerat:
+  Innehåller definitioner för lösaren. vilka alternativ som är tillgängliga beror på `resolver` markerat:
 
    * `const`
 
-      Använd egenskaper för att ange konstanter för matchning. Egenskapens namn definierar konstanten som ska lösas. värdet för egenskapen definierar det lösta värdet.
+     Använd egenskaper för att ange konstanter för matchning. Egenskapens namn definierar konstanten som ska lösas. värdet för egenskapen definierar det lösta värdet.
 
-      Exempel: en egenskap med **Namn**= `1` och **Värde** `=One` 1 till 1.
+     Exempel: en egenskap med **Namn**= `1` och **Värde** `=One` 1 till 1.
 
    * `default`
 
-      Det finns ingen tillgänglig konfiguration.
+     Det finns ingen tillgänglig konfiguration.
 
    * `page`
 
       * `propertyName` (valfritt)
 
-         Definierar namnet på egenskapen som ska användas för att matcha värdet. Om inget anges används standardvärdet *jcr:title* (sidrubriken) används, för `page` resolver betyder det att först tolkas sökvägen till sidsökvägen och sedan matchas ytterligare till sidans rubrik.
+        Definierar namnet på egenskapen som ska användas för att matcha värdet. Om inget anges används standardvärdet *jcr:title* (sidrubriken) används, för `page` resolver betyder det att först tolkas sökvägen till sidsökvägen och sedan matchas ytterligare till sidans rubrik.
+
    * `path`
 
       * `propertyName` (valfritt)
 
-         Anger namnet på egenskapen som ska användas för att matcha värdet. Om inget anges används standardvärdet `jcr:title` används.
+        Anger namnet på egenskapen som ska användas för att matcha värdet. Om inget anges används standardvärdet `jcr:title` används.
 
       * `subPath` (valfritt)
 
-         Den här egenskapen kan användas för att ange ett suffix som ska läggas till i sökvägen innan värdet löses.
+        Den här egenskapen kan användas för att ange ett suffix som ska läggas till i sökvägen innan värdet löses.
+
    * `pathextension`
 
       * `path` (obligatoriskt)
 
-         Definierar den sökväg som ska användas som prepended.
+        Definierar den sökväg som ska användas som prepended.
 
       * `propertyName` (obligatoriskt)
 
-         Definierar egenskapen på den lösta sökvägen där det faktiska värdet finns.
+        Definierar egenskapen på den lösta sökvägen där det faktiska värdet finns.
 
       * `i18n` (frivilligt) type Boolean)
 
-         Avgör om det lösta värdet ska anges *internationaliserad* (dvs. använda [CQ5:s internationaliseringstjänster](/help/sites-administering/tc-manage.md)).
-
-
+        Avgör om det lösta värdet ska anges *internationaliserad* (dvs. använda [CQ5:s internationaliseringstjänster](/help/sites-administering/tc-manage.md)).
 
 * `preprocessing`
 
-   Förbearbetningen är valfri och kan bindas (separat) till bearbetningsfaserna *apply* eller *applyAfter*:
+  Förbearbetningen är valfri och kan bindas (separat) till bearbetningsfaserna *apply* eller *applyAfter*:
 
    * `apply`
 
-      Den inledande förbehandlingsfasen ([steg 3 i återgivningen av arbetskön](#processing-queue)).
+     Den inledande förbehandlingsfasen ([steg 3 i återgivningen av arbetskön](#processing-queue)).
 
    * `applyAfter`
 
-      Använd efter förbehandling ([steg 9 i återgivningen av bearbetningskön](#processing-queue)).
+     Använd efter förbehandling ([steg 9 i återgivningen av bearbetningskön](#processing-queue)).
 
 #### Resolvers {#resolvers}
 
@@ -740,13 +739,13 @@ The `preprocessing` kan användas på antingen:
 
 * ursprungligt värde:
 
-   Förbearbetningsdefinitionen för det ursprungliga värdet anges på `apply` och/eller `applyAfter` direkt.
+  Förbearbetningsdefinitionen för det ursprungliga värdet anges på `apply` och/eller `applyAfter` direkt.
 
 * värde i aggregerat tillstånd:
 
-   Vid behov kan en separat definition ges för varje aggregering.
+  Vid behov kan en separat definition ges för varje aggregering.
 
-   Om du vill ange explicit förbearbetning för aggregerade värden måste förbearbetningsdefinitionerna finnas på respektive `aggregated` underordnad nod ( `apply/aggregated`, `applyAfter/aggregated`). Om explicit förbearbetning för distinkta aggregat krävs, finns förbearbetningsdefinitionen på en underordnad nod med namnet på respektive aggregat (till exempel `apply/aggregated/min/max` eller andra aggregat).
+  Om du vill ange explicit förbearbetning för aggregerade värden måste förbearbetningsdefinitionerna finnas på respektive `aggregated` underordnad nod ( `apply/aggregated`, `applyAfter/aggregated`). Om explicit förbearbetning för distinkta aggregat krävs, finns förbearbetningsdefinitionen på en underordnad nod med namnet på respektive aggregat (till exempel `apply/aggregated/min/max` eller andra aggregat).
 
 Du kan ange något av följande för förbearbetning:
 
@@ -755,7 +754,7 @@ När ett angivet mönster (som definieras som ett reguljärt uttryck) hittas ers
 
 * [datatypsformaterare](#preprocessing-data-type-formatters)
 
-   Konverterar ett numeriskt värde till en relativ sträng; Värdet&quot;som representerar en tidsskillnad på 1 timme&quot; skulle till exempel matchas med en sträng som `1:24PM (1 hour ago)`.
+  Konverterar ett numeriskt värde till en relativ sträng; Värdet&quot;som representerar en tidsskillnad på 1 timme&quot; skulle till exempel matchas med en sträng som `1:24PM (1 hour ago)`.
 
 Till exempel:
 
@@ -776,11 +775,11 @@ För förbearbetning kan du ange en `pattern` (definierad som [reguljärt uttryc
 
 * `pattern`
 
-   Det reguljära uttryck som används för att hitta en delsträng.
+  Det reguljära uttryck som används för att hitta en delsträng.
 
 * `replace`
 
-   Strängen, eller representationen av strängen, som ska användas som ersättning för den ursprungliga strängen. Detta representerar ofta en delsträng av strängen som finns i det reguljära uttrycket `pattern`.
+  Strängen, eller representationen av strängen, som ska användas som ersättning för den ursprungliga strängen. Detta representerar ofta en delsträng av strängen som finns i det reguljära uttrycket `pattern`.
 
 En exempelersättning kan delas upp som:
 
@@ -814,19 +813,19 @@ Följande datatypsformaterare är tillgängliga:
 
 * `format`
 
-   Datatypsformaterare:
+  Datatypsformaterare:
 
    * `duration`
 
-      Varaktighet är tidsintervallet mellan två definierade datum. Exempel: början och slutet av en arbetsflödesåtgärd som tog en timme, med början 11:23 den 13 december och avslutning en timme senare kl. 2/13/11 12:23 h.
+     Varaktighet är tidsintervallet mellan två definierade datum. Exempel: början och slutet av en arbetsflödesåtgärd som tog en timme, med början 11:23 den 13 december och avslutning en timme senare kl. 2/13/11 12:23 h.
 
-      Det konverterar ett numeriskt värde (tolkas som millisekunder) till en varaktighetssträng. till exempel `30000` är formaterad som * `30s`.*
+     Det konverterar ett numeriskt värde (tolkas som millisekunder) till en varaktighetssträng. till exempel `30000` är formaterad som * `30s`.*
 
    * `datedelta`
 
-      DataDelta är tidsintervallet mellan ett tidigare datum och&quot;nu&quot; (så det får ett annat resultat om rapporten visas vid en senare tidpunkt).
+     DataDelta är tidsintervallet mellan ett tidigare datum och&quot;nu&quot; (så det får ett annat resultat om rapporten visas vid en senare tidpunkt).
 
-      Det konverterar det numeriska värdet (tolkas som en tidsskillnad i dagar) till en relativ datumsträng. 1 formateras till exempel som 1 dag sedan.
+     Det konverterar det numeriska värdet (tolkas som en tidsskillnad i dagar) till en relativ datumsträng. 1 formateras till exempel som 1 dag sedan.
 
 I följande exempel definieras `datedelta` formatera för `min` och `max` aggregat:
 
@@ -867,7 +866,7 @@ N:definitions
 
 * `type`
 
-   Följande är tillgängliga som standardalternativ:
+  Följande är tillgängliga som standardalternativ:
 
    * `string`
    * `number`
@@ -876,16 +875,17 @@ N:definitions
    * `diff`
    * `timeslot`
 
-      Används för att extrahera delar av ett datum som behövs för aggregering (t.ex. gruppera efter år för att samla in data för varje år).
+     Används för att extrahera delar av ett datum som behövs för aggregering (t.ex. gruppera efter år för att samla in data för varje år).
 
    * `sortable`
 
-      Används för värden som använder olika värden (från olika egenskaper) för sortering och visning.
-   Dessutom. något av ovanstående kan definieras som ett flervärde, till exempel `string[]` definierar en array med strängar.
+     Används för värden som använder olika värden (från olika egenskaper) för sortering och visning.
 
-   Värdeextraheraren väljs av kolumntypen. Om en värdeextraherare är tillgänglig för en kolumntyp används den här extraheraren. I annat fall används standardvärdeextraheraren.
+  Dessutom. något av ovanstående kan definieras som ett flervärde, till exempel `string[]` definierar en array med strängar.
 
-   En typ kan (valfritt) ta en parameter. Till exempel: `timeslot:year` extraherar året från ett datumfält. Typer med sina parametrar:
+  Värdeextraheraren väljs av kolumntypen. Om en värdeextraherare är tillgänglig för en kolumntyp används den här extraheraren. I annat fall används standardvärdeextraheraren.
+
+  En typ kan (valfritt) ta en parameter. Till exempel: `timeslot:year` extraherar året från ett datumfält. Typer med sina parametrar:
 
    * `timeslot` - Värdena är jämförbara med motsvarande konstanter i `java.utils.Calendar`.
 
@@ -898,86 +898,85 @@ N:definitions
       * `timeslot:hour-of-day` - `Calendar.HOUR_OF_DAY`
       * `timeslot:minute-of-hour` - `Calendar.MINUTE`
 
-
 * `groupable`
 
-   Definierar om rapporten kan grupperas efter den här kolumnen.
+  Definierar om rapporten kan grupperas efter den här kolumnen.
 
 * `filters`
 
-   Filterdefinitioner.
+  Filterdefinitioner.
 
    * `filterType`
 
-      Tillgängliga filter:
+     Tillgängliga filter:
 
       * `string`
 
-         Ett strängbaserat filter.
+        Ett strängbaserat filter.
+
    * `id`
 
-      Filteridentifierare.
+     Filteridentifierare.
 
    * `phase`
 
-      Tillgängliga faser:
+     Tillgängliga faser:
 
       * `raw`
 
-         Filtret används på rådata.
+        Filtret används på rådata.
 
       * `preprocessed`
 
-         Filter används på förbearbetade data.
+        Filter används på förbearbetade data.
 
       * `resolved`
 
-         Filter används på lösta data.
-
+        Filter används på lösta data.
 
 * `aggregates`
 
-   Sammanställningsdefinitioner.
+  Sammanställningsdefinitioner.
 
    * `text`
 
-      Sammanslagningens textnamn. If `text` inte anges, kommer den att använda standardbeskrivningen av aggregatet, till exempel `minimum` kommer att användas för `min` aggregat.
+     Sammanslagningens textnamn. If `text` inte anges, kommer den att använda standardbeskrivningen av aggregatet, till exempel `minimum` kommer att användas för `min` aggregat.
 
    * `type`
 
-      Samlingstyp. Tillgängliga aggregat är:
+     Samlingstyp. Tillgängliga aggregat är:
 
       * `count`
 
-         Räknar antalet rader.
+        Räknar antalet rader.
 
       * `count-nonempty`
 
-         Räknar antalet rader som inte är tomma.
+        Räknar antalet rader som inte är tomma.
 
       * `min`
 
-         Anger det minsta värdet.
+        Anger det minsta värdet.
 
       * `max`
 
-         Anger det maximala värdet.
+        Anger det maximala värdet.
 
       * `average`
 
-         Anger det genomsnittliga värdet.
+        Anger det genomsnittliga värdet.
 
       * `sum`
 
-         Anger summan av alla värden.
+        Anger summan av alla värden.
 
       * `median`
 
-         Anger medianvärdet.
+        Anger medianvärdet.
 
       * `percentile95`
 
-         Tar den 95:e percentilen av alla värden.
+        Tar den 95:e percentilen av alla värden.
 
 ### Standardvärden för kolumn {#column-default-values}
 
@@ -990,7 +989,7 @@ N:defaults
 
 * `aggregate`
 
-   Giltig `aggregate` värdena är desamma som för `type` under `aggregates` (se [Kolumnspecifika definitioner (definitioner - filter/aggregat)](#column-specific-definitions) ).
+  Giltig `aggregate` värdena är desamma som för `type` under `aggregates` (se [Kolumnspecifika definitioner (definitioner - filter/aggregat)](#column-specific-definitions) ).
 
 ### Händelser och åtgärder {#events-and-actions}
 
@@ -1024,27 +1023,27 @@ Så här gör du en kolumn generisk:
 
 * Ange `type` egenskap för kolumnens `definition` nod till `generic`.
 
-   Se `/libs/cq/reporting/components/userreport/genericcol/definitions`
+  Se `/libs/cq/reporting/components/userreport/genericcol/definitions`
 
 * Ange en (standard) dialogrutedefinition under kolumnens `definition` nod.
 
-   Se `/libs/cq/reporting/components/userreport/genericcol/definitions/dialog`
+  Se `/libs/cq/reporting/components/userreport/genericcol/definitions/dialog`
 
    * Fälten i dialogrutan måste referera till samma namn som motsvarande komponentegenskap (inklusive sökvägen).
 
-      Om du till exempel vill göra den allmänna kolumntypen konfigurerbar via dialogrutan, använder du ett fält med namnet `./definitions/type`.
+     Om du till exempel vill göra den allmänna kolumntypen konfigurerbar via dialogrutan, använder du ett fält med namnet `./definitions/type`.
 
    * Egenskaper som definierats med användargränssnittet/dialogrutan har högre prioritet än de som definierats i `columnbase` -komponenten.
 
 * Definiera redigeringskonfigurationen.
 
-   Se `/libs/cq/reporting/components/userreport/genericcol/cq:editConfig`
+  Se `/libs/cq/reporting/components/userreport/genericcol/cq:editConfig`
 
 * Använd AEM standardmetoder för att definiera (ytterligare) kolumnegenskaper.
 
-   Observera att för egenskaper som definieras för både komponent- och kolumninstanser har värdet för kolumninstansen företräde.
+  Observera att för egenskaper som definieras för både komponent- och kolumninstanser har värdet för kolumninstansen företräde.
 
-   De tillgängliga egenskaperna för en allmän kolumn är:
+  De tillgängliga egenskaperna för en allmän kolumn är:
 
    * `jcr:title` - kolumnnamn
    * `definitions/aggregates` - aggregat
@@ -1054,9 +1053,9 @@ Så här gör du en kolumn generisk:
    * `definitions/queryBuilder` - konfiguration av frågebyggaren
    * `defaults/aggregate` - standardsammanställningen
 
-   När det gäller en ny instans av den generiska kolumnen på **Användarrapport** De egenskaper som definierats med dialogrutan bevaras under:
+  När det gäller en ny instans av den generiska kolumnen på **Användarrapport** De egenskaper som definierats med dialogrutan bevaras under:
 
-   `/etc/reports/userreport/jcr:content/report/columns/genericcol/settings/generic`
+  `/etc/reports/userreport/jcr:content/report/columns/genericcol/settings/generic`
 
 ## Rapportdesign {#report-design}
 
@@ -1076,11 +1075,11 @@ Nödvändiga designegenskaper registreras på `jcr:content/reportpage/report/col
 
 * `components`
 
-   Alla komponenter och/eller komponentgrupper som tillåts i rapporten.
+  Alla komponenter och/eller komponentgrupper som tillåts i rapporten.
 
 * `sling:resourceType`
 
-   Egenskap med värde `cq/reporting/components/repparsys`.
+  Egenskap med värde `cq/reporting/components/repparsys`.
 
 Ett exempel på designutdrag (som tagits från komponentrapportens design) är:
 
@@ -1304,8 +1303,7 @@ För att illustrera dessa steg definierar följande exempel en rapport som visar
    >
    >Detta är samma som definitionerna:
    >
-   >
-   ```
+   >```
    >N:data [nt:unstructured]
    >   P:clientFilter [String] = "function(v) { return v; }"
    >```
@@ -1376,13 +1374,13 @@ En instans av din nya rapport kan nu skapas:
    >
    >Eftersom det här exemplet inte har några grupperbara kolumner är diagrammen inte tillgängliga. Om du vill visa diagram anger du `groupable` till `true`:
    >
-   >
-   ```
+   >```
    >N:osgireport [sling:Folder]
    > N:bundlecol [cq:Component]
    > N:definitions [nt:unstructured]
    > P:groupable [Boolean] = true
    >```
+   >
 
 ## Konfigurera Report Framework Services {#configuring-the-report-framework-services}
 
@@ -1402,15 +1400,15 @@ Dessa kan visas med hjälp av webbkonsolens konfigurationsmeny (finns t.ex. på 
 * **Rader (max)** definierar det maximala antalet rader som lagras för varje ögonblicksbild. Detta värde bör väljas på ett rimligt sätt. Om den är för hög kommer detta att påverka databasens storlek, om den är för låg, kanske data inte är korrekta på grund av det sätt på vilket historiska data hanteras.
 * **Fånga data** om det är aktiverat kan falska historiska data skapas med `fakedata` väljare, om det är inaktiverat, använd `fakedata` -väljaren genererar ett undantag.
 
-   Eftersom data är falska måste de *endast* användas för testning och felsökning.
+  Eftersom data är falska måste de *endast* användas för testning och felsökning.
 
-   Använda `fakedata` Väljaren slutför rapporten implicit, så att alla befintliga data går förlorade. data kan återställas manuellt, men det kan ta lång tid.
+  Använda `fakedata` Väljaren slutför rapporten implicit, så att alla befintliga data går förlorade. data kan återställas manuellt, men det kan ta lång tid.
 
 * **Snapshot-användare** definierar en valfri användare som kan användas för att ta ögonblicksbilder.
 
-   I princip tas ögonblicksbilder för användaren som är klar med rapporten. Det kan finnas situationer (till exempel i ett publiceringssystem där användaren inte finns eftersom kontot inte har replikerats) där du vill ange en reservanvändare som används i stället.
+  I princip tas ögonblicksbilder för användaren som är klar med rapporten. Det kan finnas situationer (till exempel i ett publiceringssystem där användaren inte finns eftersom kontot inte har replikerats) där du vill ange en reservanvändare som används i stället.
 
-   Att ange en användare kan dessutom innebära en säkerhetsrisk.
+  Att ange en användare kan dessutom innebära en säkerhetsrisk.
 
 * **Tvinga användare av ögonblicksbilder** om det är aktiverat tas alla ögonblicksbilder med användaren som anges under *Snapshot-användare*. Detta kan få allvarliga konsekvenser för säkerheten om det inte hanteras på rätt sätt.
 
@@ -1427,4 +1425,3 @@ Dessa kan visas med hjälp av webbkonsolens konfigurationsmeny (finns t.ex. på 
 >* en rapport för två användare med olika språkinställningar
 >* en användare och två rapporter
 >
-

@@ -11,9 +11,9 @@ topic-tags: best-practices
 discoiquuid: 8f06d4b6-7d30-4ebc-9c6a-3bb8607a9be8
 docset: aem65
 exl-id: 7b71119a-ff58-47c0-aeef-a705ed8c40e0
-source-git-commit: b886844dc80482ae4aae5fc7ce09e466efecc3bd
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '784'
+source-wordcount: '785'
 ht-degree: 0%
 
 ---
@@ -94,7 +94,7 @@ Nedan följer en lista över rekommendationer från Product Management för Adob
     </ol> </td>
   </tr>
   <tr>
-   <td><p>Har använt CQ/AEM i många år.</p> <p>Har utökat produktgränssnittet (t.ex. platsadministratör) och byggt komponenter med omfattande redigeringsdialogrutor.</p> </td>
+   <td><p>Har använt CQ/AEM i många år.</p> <p>Har utökat produktgränssnittet (till exempel Webbplatsadministratör) och byggt komponenter med omfattande redigeringsdialogrutor.</p> </td>
    <td><p>Uppdatera till 6.5 och konfigurera det klassiska användargränssnittet som standard för sidredigering för alla användare. Se <a href="#selecting-your-ui">Välja användargränssnitt</a>.</p> <p>Starta sedan ett projekt för att anpassa och optimera komponentdialogrutorna i Coral 3-format. Se <a href="#resources-to-help">Resurser att hjälpa</a>.<br /> </p> </td>
   </tr>
  </tbody>

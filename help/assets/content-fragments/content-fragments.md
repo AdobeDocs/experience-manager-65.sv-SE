@@ -4,9 +4,9 @@ description: Lär dig hur du med Content Fragments i Adobe Experience Manager (A
 feature: Content Fragments
 role: User
 exl-id: 0ee883c5-0cea-46b7-a759-600b8ea3bc3e
-source-git-commit: ad0f0bd8b0c230e002c734adca87da22bfa3a7cd
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '1989'
+source-wordcount: '1991'
 ht-degree: 3%
 
 ---
@@ -55,11 +55,10 @@ På den här och följande sidor beskrivs hur du skapar, konfigurerar, underhål
 >* [Stöd för Content Fragments i AEM Assets HTTP API](/help/assets/assets-api-content-fragments.md)
 >* [AEM GraphQL API för användning med innehållsfragment](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md)
 
-
 Antalet kommunikationskanaler ökar årligen. Kanalerna avser vanligen leveransmekanismen, antingen som
 
-* Fysisk kanal. t.ex. dator, mobil.
-* Leveranssätt i fysisk kanal. t.ex.&quot;produktinformationssida&quot;,&quot;produktkategorisida&quot; för datorer eller&quot;mobilwebben&quot;,&quot;mobilapp&quot; för mobiler.
+* Fysisk kanal. till exempel dator, mobil.
+* Leveranssätt i fysisk kanal. till exempel&quot;produktinformationssida&quot;,&quot;produktkategorisida&quot; för datorer eller&quot;mobilwebben&quot;,&quot;mobilapp&quot; för mobiler.
 
 Men du vill (förmodligen) inte använda exakt samma innehåll för alla kanaler - du måste optimera innehållet utifrån den specifika kanalen.
 
@@ -156,9 +155,9 @@ Resurser kan användas med ett innehållsfragment på flera sätt. var och en me
    * Definiera tillgångens position.
    * Se [Infoga resurser i fragment](/help/assets/content-fragments/content-fragments-variations.md#inserting-assets-into-your-fragment) i fragmentredigeraren om du vill ha mer information.
 
-   >[!NOTE]
-   >
-   >Visuella resurser som infogats i själva innehållsfragmentet kopplas till föregående stycke. När fragmentet läggs till på en sida flyttas dessa resurser i relation till det stycket när mellanliggande innehåll läggs till.
+  >[!NOTE]
+  >
+  >Visuella resurser som infogats i själva innehållsfragmentet kopplas till föregående stycke. När fragmentet läggs till på en sida flyttas dessa resurser i relation till det stycket när mellanliggande innehåll läggs till.
 
 * **Associerat innehåll**
 
@@ -204,13 +203,13 @@ Resurserna för innehållsfragmentet består av följande delar (antingen direkt
    * Kan endast läggas till i flerradiga textelement (alla fragmenttyper).
    * Kopplas till föregående text (stycke).
 
-      >[!CAUTION]
-      >
-      >Resurser kan tas bort (oavsiktligt) från ett fragment genom att växla till oformaterad text.
+     >[!CAUTION]
+     >
+     >Resurser kan tas bort (oavsiktligt) från ett fragment genom att växla till oformaterad text.
 
-      >[!NOTE]
-      >
-      >Resurser kan också läggas till som [extra (mellanliggande) innehåll](/help/sites-authoring/content-fragments.md#using-associated-content) när ett fragment används på en sida, med antingen Associerat innehåll eller resurser från Resurser-webbläsaren.
+     >[!NOTE]
+     >
+     >Resurser kan också läggas till som [extra (mellanliggande) innehåll](/help/sites-authoring/content-fragments.md#using-associated-content) när ett fragment används på en sida, med antingen Associerat innehåll eller resurser från Resurser-webbläsaren.
 
 * **Associerat innehåll**
 
@@ -233,9 +232,9 @@ Resurserna för innehållsfragmentet består av följande delar (antingen direkt
          * Genom att visa/redigera fragmentet **Egenskaper** från konsolen
          * Genom att redigera **Metadata** i fragmentredigeraren
 
-   >[!CAUTION]
-   >
-   >Metadatabearbetningsprofiler gäller inte för innehållsfragment.
+  >[!CAUTION]
+  >
+  >Metadatabearbetningsprofiler gäller inte för innehållsfragment.
 
 * **Överordnad**
 
@@ -243,9 +242,9 @@ Resurserna för innehållsfragmentet består av följande delar (antingen direkt
 
       * Alla innehållsfragment har en instans av Överordnad.
       * Överordnad kan inte tas bort.
+
    * Överordnad är tillgängligt i fragmentredigeraren under **[Variationer](/help/assets/content-fragments/content-fragments-variations.md)**.
    * Överordnad är inte en variation i sig, utan är grunden för alla variationer.
-
 
 * **Variationer**
 

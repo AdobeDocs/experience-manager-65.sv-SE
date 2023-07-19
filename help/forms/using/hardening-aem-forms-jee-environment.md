@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.4
 discoiquuid: 6b380e92-f90d-4875-b7a2-f3958daf2364
 role: Admin
 exl-id: 6fb260f9-d0f8-431e-8d4e-535b451e4124
-source-git-commit: 30327950779337ce869b6ca376120bc09826be21
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '7665'
+source-wordcount: '7669'
 ht-degree: 0%
 
 ---
@@ -208,7 +208,6 @@ Följ dessa anvisningar för att köra den programserver där AEM Forms on JEE d
    >
    >* Windows: C:\Adobe\Adobe_Experience_Manager_Forms\jboss
    >* Linux: /opt/jboss/
-
 
 1. Starta programservern.
 
@@ -433,7 +432,7 @@ Du kan ange antalet misslyckade försök och efterföljande låsningstid som AEM
 
 En korrekt och säker användning av programgranskning och loggning kan bidra till att säkerställa att säkerheten och andra avvikande händelser spåras och upptäcks så snabbt som möjligt. Effektiv användning av granskning och loggning i ett program omfattar bland annat att spåra genomförda och misslyckade inloggningar samt viktiga programhändelser som skapande eller borttagning av nyckelposter.
 
-Du kan använda granskning för att identifiera många typer av attacker, bland annat:
+Du kan använda granskning för att identifiera många typer av attacker, bland annat följande:
 
 * Tydliga lösenordsattacker
 * Denial of service-attacker
@@ -460,9 +459,9 @@ I den här tabellen beskrivs teknik för granskning och loggning som du kan anv�
  </tbody> 
 </table>
 
-### Aktivera en icke-administratörsanvändare för att köra PDF Generator
+### Aktivera en användare som inte är administratör för att köra PDF Generator
 
-Du kan göra det möjligt för en icke-administratörsanvändare att använda PDF Generator. Normalt kan bara användare med administratörsbehörighet använda PDF Generator. Gör så här för att göra det möjligt för en icke-administratörsanvändare att köra PDF Generator:
+Du kan aktivera användare som inte är administratörer för att använda PDF Generator. Normalt kan bara användare med administratörsbehörighet använda PDF Generator. Gör så här för att göra det möjligt för en icke-administratörsanvändare att köra PDF Generator:
 
 1. Skapa en miljövariabel med namnet PDFG_NON_ADMIN_ENABLED.
 
@@ -514,7 +513,7 @@ Vissa URL:er markeras som användarvänliga webbprogram. Du bör undvika att exp
   </tr> 
   <tr> 
    <td><p>/pdfgui/*</p> </td> 
-   <td><p>PDF Generator - administrationswebbprogram</p> </td> 
+   <td><p>PDF Generator administrationswebbprogram</p> </td> 
    <td><p>Ja</p> </td> 
    <td><p>Ja</p> </td> 
   </tr> 
@@ -705,7 +704,7 @@ Refererarfiltreringsprocessen kan beskrivas så här:
 
 ### Hantera referensfiltrering {#managing-referer-filtering}
 
-AEM Forms på JEE tillhandahåller ett referensfilter för att ange vilken referent som har behörighet till serverresurserna. Som standard filtrerar referensfiltret inte begäranden som använder en säker HTTP-metod, t.ex. GET, såvida inte *CSRF_CHECK_GETS* är inställt på true. Om portnumret för en post med tillåten referens är 0, tillåter AEM Forms på JEE alla förfrågningar från den värden oavsett portnummer. Om inget portnummer anges tillåts endast begäranden från standardporten 80 (HTTP) eller port 443 (HTTPS). Referensfiltrering är inaktiverat om alla poster i listan över tillåtna referenter tas bort.
+AEM Forms på JEE tillhandahåller ett referensfilter för att ange vilken referent som har behörighet till serverresurserna. Som standard filtrerar referensfiltret inte begäranden som använder en säker HTTP-metod, till exempel GET, såvida inte *CSRF_CHECK_GETS* är inställt på true. Om portnumret för en post med tillåten referens är 0, tillåter AEM Forms på JEE alla förfrågningar från den värden oavsett portnummer. Om inget portnummer anges tillåts endast begäranden från standardporten 80 (HTTP) eller port 443 (HTTPS). Referensfiltrering är inaktiverat om alla poster i listan över tillåtna referenter tas bort.
 
 När du först installerar Document Services uppdateras listan över tillåtna referenter med adressen till den server där Document Services är installerat. Posterna för servern omfattar servernamnet, IPv4-adressen, IPv6-adressen om IPv6 är aktiverat, loopback-adressen och en localhost-post. Namnen som läggs till i listan över tillåtna referenter returneras av värdoperativsystemet. En server med IP-adressen 10.40.54.187 kommer till exempel att innehålla följande poster: `https://server-name:0, https://10.40.54.187:0, https://127.0.0.1:0, http://localhost:0`. Tillåtelselista uppdateras inte för alla okvalificerade namn som returneras av värdoperativsystemet (namn som inte har IPv4-adress, IPv6-adress eller kvalificerat domännamn). Ändra listan över tillåtna referenter så att den passar din affärsmiljö. Distribuera inte formulärservern i produktionsmiljön med standardlistan Tillåten referent. När du har ändrat någon av de tillåtna referenserna, referensundantagen eller URI:erna måste du starta om servern för att ändringarna ska börja gälla.
 
@@ -728,7 +727,7 @@ AEM Forms på JEE innehåller API:er för att hantera listan över tillåtna ref
 
 Mer information om API:erna finns i* AEM Forms on JEE API Reference*.
 
-Använd ***LC_GLOBAL_ALLOWED_REFERER_EXCEPTION*** lista för tillåtna referensundantag på global nivå, dvs. för att definiera undantag som gäller för alla program. Den här listan innehåller bara URI:er med antingen en absolut sökväg (t.ex. `/index.html`) eller en relativ sökväg (t.ex. `/sample/`). Du kan också lägga till ett reguljärt uttryck i slutet av en relativ URI, t.ex. `/sample/(.)*`.
+Använd ***LC_GLOBAL_ALLOWED_REFERER_EXCEPTION*** lista för tillåtna referensundantag på global nivå, dvs. för att definiera undantag som gäller för alla program. Den här listan innehåller bara URI:er med antingen en absolut sökväg (till exempel `/index.html`) eller en relativ sökväg (till exempel `/sample/`). Du kan också lägga till ett reguljärt uttryck i slutet av en relativ URI, till exempel `/sample/(.)*`.
 
 The ***LC_GLOBAL_ALLOWED_REFERER_EXCEPTION*** list-ID definieras som en konstant i `UMConstants` klassen för `com.adobe.idp.um.api` namnutrymme, finns i `adobe-usermanager-client.jar`. Du kan använda AEM Forms API:er för att skapa, ändra eller redigera den här listan. Om du till exempel vill skapa listan Global Allowed Referrer Exceptions använder du:
 
@@ -1030,7 +1029,6 @@ AEM Forms på JEE-körkortsinstallationen konfigurerar som standard ett tjänstk
    >
    >* Windows: C:\Adobe\Adobe_Experience_Manager_Forms\jboss
    >* Linux: /opt/jboss/.
-
 
 1. Starta programservertjänsten.
 

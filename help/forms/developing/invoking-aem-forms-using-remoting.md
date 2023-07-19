@@ -11,9 +11,9 @@ topic-tags: coding
 discoiquuid: 3d8bb2d3-b1f8-49e1-a529-b3e7a28da4bb
 role: Developer
 exl-id: 94a48776-f537-4b4e-8d71-51b08e463cba
-source-git-commit: c47b4dcfd2fbdcb0b98ad815f5b04d8f593e4f64
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '4599'
+source-wordcount: '4597'
 ht-degree: 0%
 
 ---
@@ -84,7 +84,7 @@ Om du vill starta AEM Forms-processer programmatiskt med Remoting lägger du til
 
 * *&lt;install_directory>\Adobe_Experience_Manager_forms\sdk\misc\DataServices\Client-Libraries*
 
-   där &lt;*install_directory*> är den katalog där AEM Forms är installerat.
+  där &lt;*install_directory*> är den katalog där AEM Forms är installerat.
 
 **Se även**
 
@@ -133,6 +133,7 @@ docRef.text = "Text for my document";  // Optionally, you can override the ser
 * När dokumentet inte finns på servern kan du använda servern Remoting Upload för att överföra ett dokument till AEM Forms. Nytt i AEM Forms är möjligheten att ladda upp säkra dokument. När du överför ett säkert dokument måste du använda en användare som har *Användare av program för dokumentöverföring* roll. Utan den här rollen kan användaren inte överföra ett säkert dokument. Vi rekommenderar att du använder enkel inloggning för att överföra ett säkert dokument. (Se [Skicka säkra dokument för att starta processer med Remoting](invoking-aem-forms-using-remoting.md#passing-secure-documents-to-invoke-processes-using-remoting).)
 
 >[!NOTE]
+>
 Om AEM Forms är konfigurerat att tillåta osäkra dokument att överföras kan du använda en användare som inte har användarrollen Dokumentöverföring för att överföra ett dokument. En användare kan också ha behörigheten Dokumentöverföring. Om AEM Forms är konfigurerat för att endast tillåta säkra dokument måste du se till att användaren har användarrollen Dokumentöverföring eller behörigheten Dokumentöverföring. (Se [Konfigurera AEM Forms för att ta emot säkra och osäkra dokument](invoking-aem-forms-using-remoting.md#configuring-aem-forms-to-accept-secure-and-unsecure-documents).
 
 Du använder standardfunktionerna för överföring i Flash för den angivna överförings-URL:en: `https://SERVER:PORT/remoting/lcfileupload`. Du kan sedan använda `DocumentReference` objekt där en indataparameter av typen `Document` förväntades
@@ -197,6 +198,7 @@ Så här anropar du en AEM Forms-process från ett program som skapats med Flex:
 1. Hantera returvärden.
 
 >[!NOTE]
+>
 I det här avsnittet beskrivs hur du anropar en AEM Forms-process och överför ett dokument när AEM Forms är konfigurerat att överföra osäkra dokument. Mer information om hur du anropar AEM Forms-processer och överför säkra dokument och hur du konfigurerar AEM Forms att acceptera säkra och osäkra dokument finns i [Skicka säkra dokument för att starta processer med Remoting](invoking-aem-forms-using-remoting.md#passing-secure-documents-to-invoke-processes-using-remoting).
 
 **Skapa en mx:RemoteObject-instans**
@@ -302,6 +304,7 @@ Grundläggande autentisering är beroende av standardbaserad J2EE-autentisering 
 För anpassad autentisering skickar servern ett fel till klienten som anger att autentisering krävs.
 
 >[!NOTE]
+>
 Mer information om hur du utför autentisering med HTTP-tokens finns i [Skapa Flash Builder-program som utför SSO-autentisering med HTTP-tokens](/help/forms/developing/creating-flash-builder-applications-perform.md#creating-flash-builder-applications-that-perform-sso-authentication-using-http-tokens).
 
 ### Använda anpassad autentisering {#using-custom-authentication}
@@ -309,6 +312,7 @@ Mer information om hur du utför autentisering med HTTP-tokens finns i [Skapa Fl
 Du aktiverar anpassad autentisering i administrationskonsolen genom att ändra autentiseringsmetoden från Grundläggande till Anpassad på fjärrslutpunkten. Om du använder anpassad autentisering anropar klientprogrammet `ChannelSet.login` inloggningsmetod och `ChannelSet.logout` för att logga ut.
 
 >[!NOTE]
+>
 I den tidigare versionen av AEM Forms skickade du autentiseringsuppgifter till ett mål genom att ringa `RemoteObject.setCredentials` -metod. The `setCredentials` metoden skickade inte inloggningsuppgifterna till servern förrän komponenten försökte ansluta till servern för första gången. Om komponenten har utfärdat en felhändelse kan du därför inte vara säker på om felet har inträffat på grund av ett autentiseringsfel eller av en annan anledning. The `ChannelSet.login` -metoden ansluter till servern när du anropar den så att du kan hantera ett autentiseringsproblem omedelbart. Du kan fortsätta använda `setCredentials` rekommenderar vi att du använder `ChannelSet.login` -metod.
 
 Eftersom flera destinationer kan använda samma kanaler och motsvarande ChannelSet-objekt, loggas in på ett mål och användaren loggas in på ett annat mål som använder samma kanal eller kanaler. Om två komponenter använder olika inloggningsuppgifter för samma ChannelSet-objekt används de senaste inloggningsuppgifterna. Om flera komponenter använder samma autentiserade ChannelSet-objekt, anropar du `logout` metoden loggar ut alla komponenter från destinationen.
@@ -454,6 +458,7 @@ AEM Forms-utvecklare skriver klientprogram för att utöka funktionaliteten i fo
 När en AEM Forms-tjänst anropas med AEM Forms Remoting (borttaget för AEM) skickas autentiseringscookien som en del av begäran. Eftersom användaren redan har autentiserats krävs ingen ytterligare inloggning för att ansluta klientprogrammet till AEM Forms-tjänsten.
 
 >[!NOTE]
+>
 Om en cookie är ogiltig eller saknas finns ingen implicit omdirigering till en inloggningssida. Därför kan du fortfarande ringa en anonym tjänst.
 
 Du kan kringgå AEM Forms mekanism för enkel inloggning genom att skriva ett klientprogram som loggar in och loggar ut på egen hand. Om du kringgår inloggningsfunktionen kan du använda grundläggande eller anpassad autentisering med programmet.
@@ -548,6 +553,7 @@ Du kan skicka säkra dokument till AEM Forms när du anropar en process som krä
 När du skickar ett säkert dokument ska du använda enkel inloggning och ange en AEM som har *Användare av program för dokumentöverföring* roll. Utan den här rollen kan användaren inte överföra ett säkert dokument. Du kan tilldela en roll programmatiskt till en användare. (Se [Hantera roller och behörigheter](/help/forms/developing/users.md#managing-roles-and-permissions).)
 
 >[!NOTE]
+>
 När du skapar en ny roll och vill att medlemmar med den rollen ska överföra säkra dokument måste du ange behörigheten Dokumentöverföring.
 
 AEM Forms stöder en åtgärd med namnet `getFileUploadToken` som returnerar en token som skickas till överföringsservern. The `DocumentReference.constructRequestForUpload` -metoden kräver en URL till AEM Forms tillsammans med den token som returneras av `LC.FileUploadAuthenticator.getFileUploadToken` -metod. Den här metoden returnerar en `URLRequest` objekt som används i anropet till överföringsservern. I följande kod visas programlogiken.
@@ -616,6 +622,7 @@ Du kan använda administrationskonsolen för att ange om dokument är säkra nä
 1. Kontrollera att alternativet Tillåt oskyddad dokumentöverföring från Flex-program är avmarkerat.
 
 >[!NOTE]
+>
 Om du vill konfigurera AEM Forms att acceptera osäkra dokument väljer du alternativet Tillåt osäker dokumentöverföring från Flex-program. Starta sedan om ett program eller en tjänst för att se till att inställningen börjar gälla.
 
 ### Snabbstart: Anropa en kortvarig process genom att skicka ett säkert dokument med Remoting {#quick-start-invoking-a-short-lived-process-by-passing-a-secure-document-using-remoting}
@@ -969,6 +976,7 @@ Den fullständiga datatypen för den komplexa AEM Forms-typen tilldelas till ali
 ActionScript-klassens fält matchar fälten som tillhör den komplexa AEM Forms-typen. De sex fälten i klassen Customer ActionScript matchar fälten som tillhör `com.adobe.livecycle.sample.customer.Customer`.
 
 >[!NOTE]
+>
 Ett bra sätt att avgöra vilka fältnamn som tillhör en komplex Forms-typ är att visa tjänstens WSDL i en webbläsare. En WSDL anger en tjänsts komplexa typer och motsvarande datamedlemmar. Följande WSDL används för kundtjänsten: `https://[yourServer]:[yourPort]/soap/services/CustomerService?wsdl.`
 
 Klassen Customer ActionScript tillhör ett paket som heter customer. Vi rekommenderar att du placerar alla ActionScript-klasser som mappar till komplexa AEM Forms-datatyper i sina egna paket. Skapa en mapp i Flex-projektets src-mapp och placera ActionScript-filen i mappen, som på följande bild.
@@ -980,6 +988,7 @@ Klassen Customer ActionScript tillhör ett paket som heter customer. Vi rekommen
 I följande kodexempel anropas kundtjänsten och en kund skapas. När du kör det här kodexemplet måste du fylla i alla textrutor. Se även till att du skapar filen Customer.as som mappar till `com.adobe.livecycle.sample.customer.Customer`.
 
 >[!NOTE]
+>
 Innan du kan utföra den här snabbstarten måste du skapa och distribuera den anpassade komponenten Bank.
 
 ```java

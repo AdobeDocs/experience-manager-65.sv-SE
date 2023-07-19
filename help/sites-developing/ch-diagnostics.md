@@ -8,7 +8,7 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: personalization
 content-type: reference
 exl-id: b833c28b-76c6-42a2-b690-3e81ddf91bc2
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
 source-wordcount: '474'
 ht-degree: 0%
@@ -63,8 +63,8 @@ Avsnittet URL:er innehåller länkar till ContextHub-funktioner:
 
 * **Konfigurationsredigerare:** Öppnar [Konfigurationssida för ContextHub](ch-configuring.md) där du kan konfigurera butiker, gränssnittslägen och gränssnittsmoduler.
 
-* **Konfiguration av ContextHub-moduler:** Öppnar filen /etc/cloudsettings/default/contexthub.config.kernel.js, som innehåller Javascript-objektrepresentationen av ContextHub-lagringskonfigurationerna.
-* **Konfiguration av ContextHub-gränssnitt:** Öppnar filen /etc/cloudsettings/default/contexthub.config.ui.js, som innehåller Javascript-objektrepresentationen av ContextHub-gränssnittets lägeskonfigurationer.
+* **Konfiguration av ContextHub-moduler:** Öppnar filen /etc/cloudsettings/default/contexthub.config.kernel.js, som innehåller JavaScript-objektrepresentationen av ContextHub-lagringskonfigurationerna.
+* **Konfiguration av ContextHub-gränssnitt:** Öppnar filen /etc/cloudsettings/default/contexthub.config.ui.js, som innehåller JavaScript-objektrepresentationen av ContextHub-gränssnittskonfigurationerna.
 * **kernel.js:** Öppnar filen /etc/cloudsettings/default/contexthub.kernel.js, som innehåller källkoden för klientbiblioteken som implementerar ContextHub-ramverket, segmentmotorn och lagringstyperna.
 * **ui.js:** Öppnar filen /etc/cloudsettings/default/contexthub.ui.js, som innehåller källkoden för de klientbibliotek som implementerar gränssnittstyperna för ContextHub och UI.
 * **style.css:** Öppnar filen /etc/cloudsettings/default/contexthub.styles.css, som innehåller CSS-formaten för ContextHub-gränssnittsmodulerna och UI.

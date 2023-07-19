@@ -10,9 +10,9 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: 6f8e08d1-831e-441a-ad1a-f5c8788f32d7
 exl-id: 292874bf-2ee6-4638-937c-f8f26c93ca65
-source-git-commit: b886844dc80482ae4aae5fc7ce09e466efecc3bd
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '479'
+source-wordcount: '483'
 ht-degree: 0%
 
 ---
@@ -27,18 +27,18 @@ Varje sida har en uppsättning [egenskaper](/help/sites-authoring/editing-page-p
 
 Standardläget för varje sidegenskap är:
 
-* dolda i vyn Skapa (t.ex. **Skapa sida** guide)
+* dolt i vyn Skapa (till exempel **Skapa sida** guide)
 
-* som är tillgängliga i redigeringsvyn (t.ex. **Visa egenskaper**)
+* som finns i redigeringsvyn (t.ex. **Visa egenskaper**)
 
 Fälten måste vara specifikt konfigurerade om någon ändring krävs. Detta görs med lämpliga nodegenskaper:
 
-* Sidegenskap som ska vara tillgänglig i vyn Skapa (t.ex. **Skapa sida** guide):
+* Page-egenskap som ska vara tillgänglig i vyn create (till exempel **Skapa sida** guide):
 
    * Namn: `cq:showOnCreate`
    * Typ: `Boolean`
 
-* Sidegenskap som ska vara tillgänglig i redigeringsvyn (t.ex. **Visa**/**Redigera**) **Egenskaper** alternativ):
+* Page-egenskap som ska vara tillgänglig i redigeringsvyn (till exempel **Visa**/**Redigera**) **Egenskaper** alternativ):
 
    * Namn: `cq:hideOnEdit`
    * Typ: `Boolean`
@@ -71,12 +71,15 @@ Som standard är [**Skapa sida** guide](/help/sites-authoring/managing-pages.md#
    >Se följande som referens:
    >
    >    `/libs/wcm/foundation/components/basicpage/v1/basicpage/cq:dialog`
+   >
    Men du ***måste*** ändrar ingenting i `/libs` bana.
+   >
    Detta beror på innehållet i `/libs` skrivs över nästa gång du uppgraderar din instans (och kan mycket väl skrivas över när du använder en snabbkorrigering eller ett funktionspaket).
+   >
    Den rekommenderade metoden för konfiguration och andra ändringar är:
+   >
    1. Återskapa önskat objekt (d.v.s. som det finns i `/libs`) under `/apps`
    1. Gör ändringar i `/apps`
-
 
 1. Ange `path` egenskap på `basic` för att peka på åsidosättningen av den grundläggande fliken (se även nästa steg). Till exempel:
 
@@ -99,6 +102,7 @@ Som standard är [**Skapa sida** guide](/help/sites-authoring/managing-pages.md#
    The **Fler rubriker och beskrivning** -avsnittet visas inte längre i **Skapa sida** guide.
 
 >[!NOTE]
+>
 Information om hur du konfigurerar sidegenskaper för användning med live-kopior finns i [Konfigurera MSM-lås på sidegenskaper](/help/sites-developing/extending-msm.md#configuring-msm-locks-on-page-properties-touch-enabled-ui) för mer information.
 
 ## Exempelkonfiguration av sidegenskaper {#sample-configuration-of-page-properties}

@@ -5,10 +5,10 @@ contentOwner: AG
 role: Architect, Admin
 feature: Translation
 exl-id: 8990feca-cfda-4974-915e-27aa9d8f2ee1
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '1737'
-ht-degree: 11%
+source-wordcount: '1733'
+ht-degree: 10%
 
 ---
 
@@ -24,7 +24,6 @@ Om du vill skapa en språkkopia aktiverar du ett av följande språkkopieringsar
 >
 >* Användare som skapar översättningsprojekt är medlemmar i gruppen `projects-administrators`.
 >* Översättningstjänstleverantören stöder översättning av binära filer.
-
 
 ## Skapa och översätta arbetsflöde {#create-and-translate-workflow}
 
@@ -67,7 +66,7 @@ Om du använder det här alternativet kopieras resurser som ska översättas til
 
 1. Klicka **[!UICONTROL Create & Translate]** längst ned.
 
-1. I listan **[!UICONTROL Target Languages]** väljer du det/de språk du vill skapa en mappstruktur för.
+1. Från **[!UICONTROL Target Languages]** väljer du de språk som du vill skapa en mappstruktur för.
 
 1. Från **[!UICONTROL Project]** lista, välj **[!UICONTROL Create a new translation project]**.
 
@@ -118,7 +117,7 @@ Om du använder det här alternativet körs översättningsarbetsflödet för re
 1. Klicka **[!UICONTROL Language Copies]** under **[!UICONTROL Copies]**. En lista över tillgängliga översättningskopior visas.
 1. Klicka **[!UICONTROL Create & Translate]** längst ned.
 
-1. I listan **[!UICONTROL Target Languages]** väljer du det/de språk du vill skapa en mappstruktur för.
+1. Från **[!UICONTROL Target Languages]** väljer du de språk som du vill skapa en mappstruktur för.
 
 1. I listan **[!UICONTROL Project]** väljer du **[!UICONTROL Add to existing translation project]** för att köra översättningsarbetsflödet för mappen.
 
@@ -235,7 +234,7 @@ Om du använder det här alternativet läggs resursuppsättningen till i ett bef
 
 ## Skapa tillfälliga språkkopior {#creating-temporary-language-copies}
 
-När du kör ett översättningsarbetsflöde för att uppdatera en språkkopia med redigerade versioner av originalresurser bevaras den befintliga språkkopian tills du godkänner översatta resurser. [!DNL Adobe Experience Manager Assets] lagrar de nyligen översatta resurserna på en tillfällig plats och uppdaterar den befintliga språkkopian när du uttryckligen har godkänt resurserna. Om du avvisar resurserna ändras inte språkkopian.
+När du kör ett översättningsarbetsflöde för att uppdatera en språkkopia med redigerade versioner av originalresurser bevaras den befintliga språkkopian tills du godkänner översatta resurser. [!DNL Adobe Experience Manager Assets] lagrar de nyligen översatta resurserna på en tillfällig plats och uppdaterar den befintliga språkkopian efter att du uttryckligen har godkänt resurserna. Om du refuserar resurserna ändras inte språkkopian.
 
 1. Klicka på källrotmappen under **[!UICONTROL Language Copies]** som du redan har skapat en språkkopia av och sedan klicka på **[!UICONTROL Reveal in Assets]** för att öppna mappen i [!DNL Experience Manager Assets].
 

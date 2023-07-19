@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: a18ddac1-9e4c-4857-9cb3-4d5eeb8dd9ec
 docset: aem65
 exl-id: 5d51f898-b6d1-40ac-bdbf-127cda1dc777
-source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '1743'
+source-wordcount: '1747'
 ht-degree: 1%
 
 ---
@@ -97,7 +97,7 @@ I följande tabell beskrivs CQ-standardvariablerna som anges för metoden Milest
   </tr>
   <tr>
    <td>eventdata.events.a.media.timePlayed</td>
-   <td>Skickas varje gång en milstolpe aktiveras, skickas även antalet sekunder som användaren har ägnat åt att titta på det aktuella segmentet tillsammans med den här händelsen. t.ex. eventX=21<br /> </td>
+   <td>Skickas varje gång en milstolpe aktiveras, skickas även antalet sekunder som användaren har ägnat åt att titta på det aktuella segmentet tillsammans med den här händelsen. till exempel eventX=21<br /> </td>
   </tr>
   <tr>
    <td>eventdata.events.a.media.view </td>
@@ -121,7 +121,7 @@ I följande tabell beskrivs CQ-standardvariablerna som anges för metoden Milest
   </tr>
   <tr>
    <td>eventdata.a.media.segment </td>
-   <td>Innehåller information om det segment som har visats, t.ex. 2:O:4-8 </td>
+   <td>Innehåller information om det segment som har visats, till exempel 2:O:4-8 </td>
   </tr>
  </tbody>
 </table>
@@ -290,7 +290,7 @@ Den här metoden liknar metoden milstolpar med skillnaden att de milstolpar som 
 
 1. Ange spårförskjutning.
 
-   * e.g.10,50,75,100
+   * till exempel 10,50,75,100
 
    Dessutom är informationen som skickas till Adobe Analytics mindre anpassningsbar. det finns bara tre variabler för mappning:
 
@@ -343,7 +343,8 @@ När du använder metoden** för tidigare sekunder* aktiveras Adobe Analytics-an
 
 1. Ställ in spårförskjutningen till valfritt antal sekunder,
 
-   * t.ex. 6
+   * till exempel 6
+
    >[!NOTE]
    >
    >Fältet Spårningsförskjutning accepterar endast heltal som är högre än 0

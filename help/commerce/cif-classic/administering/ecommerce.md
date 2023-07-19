@@ -5,9 +5,9 @@ topic-tags: e-commerce
 content-type: reference
 docset: aem65
 exl-id: d995f0d6-9e48-4228-ac82-f33a0b25b9d3
-source-git-commit: 745ca1aa7bc96d0938ec550a357d9edcbea341db
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '751'
+source-wordcount: '753'
 ht-degree: 0%
 
 ---
@@ -42,7 +42,7 @@ Adobe tillhandahåller två versioner av Commerce Integration Framework:
    <td>
     <ul>
      <li>Adobe Commerce</li>
-     <li>Java &amp; Javascript</li>
+     <li>Java &amp; JavaScript</li>
      <li>Inga e-handelsdata lagras i JCR-databasen</li>
     </ul> </td>
   </tr>
@@ -163,7 +163,7 @@ AEM eCommerce tillhandahåller:
 * Möjligheten att utveckla **upplevelsestyrd e-handel baserad på kunddata och -aktivitet**. På så sätt kan du förverkliga många scenarier:
 
    * Ett exempel kan vara minskade fraktkostnader när den totala ordern överstiger ett visst belopp.
-   * Ett annat kan göra att du kan erbjuda säsongserbjudanden som använder profildata (t.ex. plats). Dessa kan sedan markeras ytterligare, beroende på andra faktorer vid behov.
+   * Ett annat kan göra att du kan erbjuda säsongserbjudanden som använder profildata (till exempel plats). Dessa kan sedan markeras ytterligare, beroende på andra faktorer vid behov.
 
   I exemplet nedan visas en teaser eftersom innehållet i vagnen är mindre än $75:
 

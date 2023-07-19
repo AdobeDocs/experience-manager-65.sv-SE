@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 73f37b3c-5dbe-4132-bb60-daa8de871884
 feature: Configuring
 exl-id: bfd5441c-19cc-4fa8-b597-b1221465f75d
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '414'
+source-wordcount: '416'
 ht-degree: 0%
 
 ---
@@ -53,7 +53,7 @@ Alla filer som inte är dynamiska och som inte ändras över tid kan och bör ca
    </Location>
    ```
 
-   Detta gör att det mellanliggande cacheminnet (t.ex. webbläsarens cacheminne) kan lagra CSS-, Javascript-, PNG- och GIF-filer i upp till en månad tills de upphör att gälla. Det innebär att de inte behöver begäras från AEM eller webbservern, men de kan finnas kvar i webbläsarens cache.
+   Detta gör att det mellanliggande cacheminnet (till exempel webbläsarens cacheminne) kan lagra CSS-, JavaScript-, PNG- och GIF-filer i upp till en månad tills de upphör att gälla. Det innebär att de inte behöver begäras från AEM eller webbservern, men de kan finnas kvar i webbläsarens cache.
 
    Andra delar av webbplatsen bör inte cachas i en författarinstans eftersom de kan ändras när som helst.
 
@@ -75,7 +75,7 @@ Alla filer som inte är dynamiska och som inte ändras över tid kan och bör ca
    </Location>
    ```
 
-   Detta gör att det mellanliggande cacheminnet (t.ex. webbläsarens cacheminne) kan lagra CSS-, Javascript-, PNG- och GIF-filer i upp till en dag i klientcachen. I det här exemplet visas globala inställningar för allt nedan `/content` och `/etc/designs`bör du göra det mer granulärt.
+   På så sätt kan den mellanliggande cachen (till exempel webbläsarens cacheminne) lagra CSS-, JavaScript-, PNG- och GIF-filer i upp till en dag i klientcachen. I det här exemplet visas globala inställningar för allt nedan `/content` och `/etc/designs`bör du göra det mer granulärt.
 
    Beroende på hur ofta webbplatsen uppdateras kan du även cachelagra HTML-sidor. En rimlig tidsperiod är 1 timme:
 

@@ -3,9 +3,9 @@ title: Skapa och synkronisera Live-kopior
 description: Lär dig hur du skapar och synkroniserar Live-kopior.
 feature: Multi Site Manager
 exl-id: 896b35dd-4510-4c94-8615-03d9649c2f64
-source-git-commit: 785d4897263bfeae6a0cd235abca3c96f2231392
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '4230'
+source-wordcount: '4229'
 ht-degree: 0%
 
 ---
@@ -154,7 +154,7 @@ Så här skapar du en live-kopia av en webbplats från en designkonfiguration:
 
    ![Välj en ritningskonfiguration som källa för live-kopia](assets/blueprint-configuration-select.png)
 
-1. Använd **Ursprungliga språk** för att ange vilket språk som ska användas för den publicerade kopian.
+1. Använd **Ursprungliga språk** för att ange vilka språk som ska användas för den publicerade kopian.
 
    Alla tillgängliga språk är markerade som standard. Om du vill ta bort ett språk klickar eller trycker du på **X** som visas bredvid språket.
 

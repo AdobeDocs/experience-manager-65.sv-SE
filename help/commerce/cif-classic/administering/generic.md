@@ -8,7 +8,7 @@ topic-tags: e-commerce
 content-type: reference
 docset: aem65
 exl-id: c29f6213-1df6-45af-91c8-14b255276d82
-source-git-commit: 6ebcc7bd5c72c01672244fdfba353a8949f6e331
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
 source-wordcount: '2979'
 ht-degree: 0%
@@ -196,7 +196,7 @@ Det behövs ett ställningar för varje enskild produkttyp. Den lämpliga strukt
 
    ![produktkonsol med öppna referenser](/help/sites-administering/assets/chlimage_1-88.png)
 
-1. Klicka/tryck på referenstypen (t.ex. produktsidor) för att utöka listan.
+1. Klicka/tryck på referenstypen (till exempel Produktsidor) för att utöka listan.
 1. Välj en specifik referens för att visa alternativen:
 
    * Navigera till produktsidan

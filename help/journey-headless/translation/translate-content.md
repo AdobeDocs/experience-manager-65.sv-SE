@@ -2,9 +2,9 @@
 title: Översätta innehåll
 description: Använd översättningskopplingen och reglerna för att översätta ditt headless-innehåll.
 exl-id: a2c2bb9f-97b9-42fd-9bd1-e75c113fb514
-source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '2174'
+source-wordcount: '2173'
 ht-degree: 0%
 
 ---
@@ -93,7 +93,7 @@ För översättningsprojektledare är det ofta nödvändigt att manuellt välja 
 
    ![Grundläggande projektflik](assets/project-basic-tab.png)
 
-1. På **Avancerat** -fliken använder du **Målspråk** för att välja vilket eller vilka språk ditt innehåll ska översättas till. Tryck eller klicka **Skapa**.
+1. På **Avancerat** -fliken använder du **Målspråk** för att välja vilka språk ditt innehåll ska översättas till. Tryck eller klicka **Skapa**.
 
    ![Avancerad flik i projekt](assets/project-advanced-tab.png)
 

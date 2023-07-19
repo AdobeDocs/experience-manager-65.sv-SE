@@ -9,7 +9,7 @@ content-type: reference
 topic-tags: site-features
 discoiquuid: e3ccddb6-be5e-4e5f-a017-0eed263555ce
 exl-id: 1772368a-f5c9-440c-a92a-0f1d34cc4bf8
-source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
 source-wordcount: '1312'
 ht-degree: 1%
@@ -53,7 +53,7 @@ Vanligtvis har du följande format när du använder Style System.
 
 1. AEM kan sedan välja de formgivna formaten i sidredigeraren via formatmenyn i komponentens verktygsfält.
 
-Observera att endast de tre sista stegen faktiskt utförs i AEM. Detta innebär att all utveckling av nödvändig CSS och Javascript kan göras utan AEM.
+Observera att endast de tre sista stegen faktiskt utförs i AEM. Detta innebär att all utveckling av nödvändig CSS och JavaScript kan göras utan AEM.
 
 För att kunna implementera formaten behöver du bara distribuera AEM och välja mellan komponenterna i de önskade mallarna.
 
@@ -156,9 +156,7 @@ Den här egenskapen ställs in på `cq:Component` nod. Till exempel:
 >1. HTML har företräde framför allt: `data-sly-resource="${'path/to/resource' @ decorationTagName='span'}`
 >1. Sedan används det första formatet i listan med format som är konfigurerade i komponentens profil bland flera aktiva format.
 >1. Slutligen är komponentens `cq:htmlTag`/ `cq:tagName` betraktas som ett reservvärde.
-
 >
-
 
 Den här möjligheten att definiera formatnamn är användbar för mycket generiska komponenter, som Layoutbehållaren eller komponenten Innehållsfragment, för att ge dem ytterligare innebörd.
 

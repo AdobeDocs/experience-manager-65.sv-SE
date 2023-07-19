@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 3d14837d-41a8-480a-83ba-392e32f84c65
 docset: aem65
 exl-id: 408ac30c-60ab-4d6c-855c-d544af8d5cf9
-source-git-commit: 7ceee6819618d785f04029b9ac1c6f763995b3ac
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '2861'
+source-wordcount: '2862'
 ht-degree: 0%
 
 ---
@@ -67,7 +67,7 @@ Eftersom HTML är den rekommenderade tekniken för att utveckla AEM webbplatser 
 
 ### Använda HTML {#using-htl}
 
-I HTML läses klientbibliotek in via en hjälpmall från AEM, som du kommer åt via [ `data-sly-use`](https://helpx.adobe.com/experience-manager/htl/using/block-statements.html#use). Det finns tre tillgängliga mallar i den här filen som du kan anropa genom [ `data-sly-call`](https://helpx.adobe.com/experience-manager/htl/using/block-statements.html#template-call):
+I HTML läses klientbibliotek in via en hjälpmall från AEM, som du kommer åt via [`data-sly-use`](https://helpx.adobe.com/experience-manager/htl/using/block-statements.html#use). Det finns tre tillgängliga mallar i den här filen som du kan anropa genom [`data-sly-call`](https://helpx.adobe.com/experience-manager/htl/using/block-statements.html#template-call):
 
 * **css** - Läser bara in CSS-filerna för de refererade klientbiblioteken.
 * **js** - Läser bara in JavaScript-filer från de refererade klientbiblioteken.
@@ -102,7 +102,7 @@ Fullständig information, inklusive attribut för filtrering av JS-, CSS- eller 
 
 >[!CAUTION]
 >
->`<cq:includeClientLib>`, som tidigare ofta användes för att inkludera klientbibliotek, har tagits bort sedan AEM 5.6. [ `<ui:includeClientLib>`](/help/sites-developing/taglib.md#lt-ui-includeclientlib) ska användas i stället så som beskrivs ovan.
+>`<cq:includeClientLib>`, som tidigare ofta användes för att inkludera klientbibliotek, har tagits bort sedan AEM 5.6. [`<ui:includeClientLib>`](/help/sites-developing/taglib.md#lt-ui-includeclientlib) ska användas i stället så som beskrivs ovan.
 
 ## Skapar klientbiblioteksmappar {#creating-client-library-folders}
 
@@ -115,7 +115,7 @@ Klientbiblioteksmappar innehåller följande objekt:
 * JS- och/eller CSS-källfilerna som ska sammanfogas.
 * Resurser som stöder CSS-format, t.ex. bildfiler.
 
-   **Obs!** Du kan använda undermappar för att ordna källfiler.
+  **Obs!** Du kan använda undermappar för att ordna källfiler.
 * Ett `js.txt` fil och/eller en `css.txt` som identifierar de källfiler som ska sammanfogas i de genererade JS- och/eller CSS-filerna.
 
 ![clientlibarch](assets/clientlibarch.png)
@@ -399,7 +399,7 @@ YUI anges som standardminifierare i AEM. Följ de här stegen för att ändra de
 1. Aktivera **Minify** (om det inte redan är aktiverat).
 1. Ange värdet **Standardkonfigurationer för JS-processor** till `min:gcc`.
 
-   Alternativ kan skickas om de avgränsas med ett semikolon, t.ex. `min:gcc;obfuscate=true`.
+   Alternativ kan skickas om de avgränsas med ett semikolon, till exempel `min:gcc;obfuscate=true`.
 
 1. Klicka **Spara** för att spara ändringarna.
 

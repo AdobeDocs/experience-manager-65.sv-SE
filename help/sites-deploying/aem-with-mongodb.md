@@ -9,7 +9,7 @@ content-type: reference
 discoiquuid: cd3b979f-53d4-4274-b4eb-a9533329192a
 docset: aem65
 exl-id: 70a39462-8584-4c76-a097-05ee436247b7
-source-git-commit: af60428255fb883265ade7b2d9f363aacb84b9ad
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
 source-wordcount: '6408'
 ht-degree: 0%
@@ -165,7 +165,7 @@ mongodburi=mongodb://aem:aempassword@mongodbserver1.customer.com:27000,mongodbse
 #Name of MongoDB database to use
 db=aem
 
-#Store binaries in custom BlobStore e.g. FileDataStore
+#Store binaries in custom BlobStore for example, FileDataStore
 customBlobStore=true
 
 cache=2048
@@ -178,16 +178,13 @@ Var:
 MongoDB-AEM måste ansluta till. Anslutningar görs till alla kända medlemmar i standardreplikuppsättningen. Om MongoDB Cloud Manager används aktiveras serversäkerhet. Därför måste anslutningssträngen innehålla ett lämpligt användarnamn och lösenord. Icke-företagsversioner av MongoDB stöder endast autentisering av användarnamn och lösenord. Mer information om syntaxen för anslutningssträngar finns i [dokumentation](https://docs.mongodb.org/manual/reference/connection-string/).
 
 * `db`
-Namnet på databasen. Standardvärdet för AEM är 
-`aem-author`.
+Namnet på databasen. Standardvärdet för AEM är `aem-author`.
 
 * `customBlobStore`
-Om distributionen lagrar binärfiler i databasen utgör de en del av arbetsuppsättningen. Av den anledningen bör binärfiler inte lagras i MongoDB, eftersom ett alternativt datalager bör användas som 
-`FileSystem` datastore på en NAS.
+Om distributionen lagrar binärfiler i databasen utgör de en del av arbetsuppsättningen. Av den anledningen bör binärfiler inte lagras i MongoDB, eftersom ett alternativt datalager bör användas som `FileSystem` datastore på en NAS.
 
 * `cache`
-Cachestorleken i MB. Det här utrymmet fördelas mellan olika cacheminnen som används i 
-`DocumentNodeStore`. Standardvärdet är 256 MB. Oak-läsningsprestanda har dock fördelar av ett större cacheminne.
+Cachestorleken i MB. Det här utrymmet fördelas mellan olika cacheminnen som används i `DocumentNodeStore`. Standardvärdet är 256 MB. Oak-läsningsprestanda har dock fördelar av ett större cacheminne.
 
 * `blobCacheSize`
 Ofta använda bloggar kan cachas av AEM för att undvika att de hämtas från datalagret. Detta har större inverkan på prestandan, särskilt när du lagrar blobbar i MongoDB-databasen. Alla filsystembaserade datalager drar nytta av diskcachen på operativsystemnivå.
@@ -210,16 +207,13 @@ cacheSizeInMB=128
 Var:
 
 * `minRecordLength`
-Storlek i byte. Binärfiler som är mindre än eller lika med den här storleken lagras med Document Node Store. I stället för att lagra blobbens ID lagras innehållet i binärfilen. Med binärfiler som är större än den här storleken lagras binärfilens ID som en dokumentegenskap i nodsamlingen. Och binärfilens brödtext lagras i 
-`FileDataStore` på disk. 4 096 byte är en typisk blockstorlek i filsystemet.
+Storlek i byte. Binärfiler som är mindre än eller lika med den här storleken lagras med Document Node Store. I stället för att lagra blobbens ID lagras innehållet i binärfilen. Med binärfiler som är större än den här storleken lagras binärfilens ID som en dokumentegenskap i nodsamlingen. Och binärfilens brödtext lagras i `FileDataStore` på disk. 4 096 byte är en typisk blockstorlek i filsystemet.
 
 * `path`
-Sökvägen till datalagrets rot. För en MongoMK-distribution måste sökvägen vara ett delat filsystem som är tillgängligt för alla AEM instanser. Vanligtvis används en NAS-server (Network Attached Storage). För molndistributioner som Amazon Web Services 
-`S3DataFileStore` finns också.
+Sökvägen till datalagrets rot. För en MongoMK-distribution måste sökvägen vara ett delat filsystem som är tillgängligt för alla AEM instanser. Vanligtvis används en NAS-server (Network Attached Storage). För molndistributioner som Amazon Web Services `S3DataFileStore` finns också.
 
 * `cacheSizeInMB`
-Den totala storleken på binärt cacheminne i megabyte. Den används för att cachelagra binärfiler som är mindre än 
-`maxCacheBinarySize` inställning.
+Den totala storleken på binärt cacheminne i megabyte. Den används för att cachelagra binärfiler som är mindre än `maxCacheBinarySize` inställning.
 
 * `maxCachedBinarySize`
 Maximal storlek i byte för en binär cache-lagring i den binära cachen. Om ett filsystembaserat datalager används bör du inte använda höga värden för datalagrets cache eftersom binärfilerna redan cachas av operativsystemet.
@@ -550,6 +544,7 @@ echo "{nThreads:32,fileSizeMB:1000,r:true,mmf:true}" | mongoperf
 Utdata från det andra testet bör vara betydligt högre än det första, vilket indikerar minnesöverföringsprestanda.
 
 >[!NOTE]
+>
 När du utför testerna ska du kontrollera I/O-användningsstatistik för de virtuella datorerna i operativsystemets övervakningssystem. Om de anger värden som är lägre än 100 procent för I/O-läsningar kan det vara problem med din virtuella dator.
 
 **Testa skrivprestanda för den primära MongoDB-instansen**
@@ -660,6 +655,7 @@ Det är önskvärt att begränsa varifrån resurser kan läsas in för att undvi
 Med CSP kan du finjustera principer. I ett komplext program måste emellertid CSP-huvuden utvecklas med försiktighet eftersom principer som är för restriktiva kan bryta delar av användargränssnittet.
 
 >[!NOTE]
+>
 Mer information om hur det här fungerar finns i [OWASP Page on Content Security Policy](https://owasp.deteact.com/cheat/cheatsheets/Content_Security_Policy_Cheat_Sheet.html).
 
 ### Storleksändring {#sizing}
@@ -683,4 +679,5 @@ För att lösa problemet måste du först köra installationen med en enda medle
 Om AEM körs på en distribution av en beständig MongoMK-hanterare, [sidnamn får innehålla högst 150 tecken.](/help/sites-authoring/managing-pages.md)
 
 >[!NOTE]
+>
 Se [MongoDB-dokumentation](https://docs.mongodb.com/manual/reference/limits/) så att du kan bekanta dig med de kända begränsningarna och tröskelvärdena i MongoDB.

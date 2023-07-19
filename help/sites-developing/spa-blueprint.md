@@ -10,9 +10,9 @@ content-type: reference
 discoiquuid: 04ac8203-320b-4671-aaad-6e1397b12b6f
 docset: aem65
 exl-id: 383f84fd-455c-49a4-9e2b-1c4757cc188b
-source-git-commit: afd2afe182d65e64c0ad851b86021886078a9dd5
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '2079'
+source-wordcount: '2080'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ Om du vill att författaren ska kunna använda AEM SPA Editor för att redigera 
 
 >[!NOTE]
 >
->SPA Editor är den rekommenderade lösningen för projekt som kräver SPA ramverksbaserad återgivning på klientsidan (t.ex. Reaktion eller Angular).
+>SPA Editor är den rekommenderade lösningen för projekt som kräver SPA ramverksbaserad rendering på klientsidan (till exempel React eller Angular).
 
 ## Introduktion {#introduction}
 
@@ -61,7 +61,7 @@ Varje objekt i modellen innehåller en `:type` fält som visar en AEM resurstyp.
 
 #### Dynamisk mappning av modell till komponent {#dynamic-model-to-component-mapping}
 
-Mer information om hur den dynamiska mappningen av modell till komponent sker i Javascript SPA SDK för AEM finns i artikeln [Dynamisk mappning av modell till komponent för SPA](/help/sites-developing/spa-dynamic-model-to-component-mapping.md).
+Mer information om hur den dynamiska mappningen av modell till komponent sker i JavaScript SPA SDK för AEM finns i artikeln [Dynamisk mappning av modell till komponent för SPA](/help/sites-developing/spa-dynamic-model-to-component-mapping.md).
 
 ### Ramverksspecifikt lager {#framework-specific-layer}
 
@@ -118,7 +118,7 @@ Följande enheter bör genomföras i enlighet med de riktlinjer som är specifik
 
 Projektkomponenter måste delegera åtkomst till en modells fragment till en modellprovider. Modellprovidern ansvarar sedan för att lyssna efter ändringar som gjorts i det angivna fragmentet i modellen och returnerar den uppdaterade modellen till den delegerande komponenten.
 
-För att göra detta måste modellprovidern registrera sig för ` [PageModelManager](/help/sites-developing/spa-blueprint.md#pagemodelmanager)`. När en ändring inträffar tar den emot och skickar den uppdaterade informationen till den delegerande komponenten. Egenskapen som gjorts tillgänglig för den delegerande komponenten som ska bära fragmentet av modellen namnges enligt konvention `cqModel`. Implementeringen kan fritt tillhandahålla den här egenskapen till komponenten men bör beakta aspekter som integrering med ramverksarkitekturen, upptäckbarhet och användarvänlighet.
+För att göra detta måste modellprovidern registrera sig för ` [PageModelManager](/help/sites-developing/spa-blueprint.md#pagemodelmanager)`. När en ändring inträffar tar den emot och skickar de uppdaterade data till den delegerande komponenten. Egenskapen som gjorts tillgänglig för den delegerande komponenten som ska bära fragmentet av modellen namnges enligt konvention `cqModel`. Implementeringen kan fritt tillhandahålla den här egenskapen till komponenten men bör beakta aspekter som integrering med ramverksarkitekturen, upptäckbarhet och användarvänlighet.
 
 ### Komponentens HTML-dekorator {#the-component-html-decorator}
 
@@ -184,7 +184,6 @@ Till exempel:
 >* `"new section"`: Anger att det aktuella elementet är behållarens platshållare
 >* `"aem-Grid-newComponent"`: Normaliserar komponenten för layoututveckling
 >
-
 
 #### Komponentmappning {#component-mapping}
 
@@ -272,7 +271,7 @@ Följande fragment illustrerar den typiska HTML-representationen av en sidinneh�
 
 Appen äger routningen. Utvecklaren måste först implementera en Navigation-komponent (mappas till en AEM navigeringskomponent). Den här komponenten återger URL-länkar som ska användas tillsammans med en serie vägar som visar eller döljer innehållsfragment.
 
-Den underliggande [ `PageModelManager`](/help/sites-developing/spa-blueprint.md#pagemodelmanager) bibliotek och ` [ModelRouter](/help/sites-developing/spa-routing.md)` (aktiverat som standard) ansvarar för förhämtning och ger åtkomst till modellen som är associerad med en given resurssökväg.
+Den underliggande [`PageModelManager`](/help/sites-developing/spa-blueprint.md#pagemodelmanager) bibliotek och ` [ModelRouter](/help/sites-developing/spa-routing.md)` (aktiverat som standard) ansvarar för förhämtning och ger åtkomst till modellen som är associerad med en given resurssökväg.
 
 De två enheterna avser begreppet routning men ` [ModelRouter](/help/sites-developing/spa-routing.md)` ansvarar endast för att ` [PageModelManager](/help/sites-developing/spa-blueprint.md#pagemodelmanager)` inläst med en datamodell som är strukturerad synkroniserad med det aktuella programtillståndet.
 

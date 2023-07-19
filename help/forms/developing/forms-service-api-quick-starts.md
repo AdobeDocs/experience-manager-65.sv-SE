@@ -11,7 +11,7 @@ topic-tags: develop
 discoiquuid: 9fe48243-24c6-4e08-9886-148cd99dec87
 role: Developer
 exl-id: acb33000-25b3-4471-9df9-b6e039ab2bda
-source-git-commit: 0c7dba43dad8608b4a5de271e1e44942c950fb16
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
 source-wordcount: '1549'
 ht-degree: 0%
@@ -1974,7 +1974,7 @@ I följande kodexempel förifylls ett formulär med en dynamisk datakälla. Det 
 * `convertDataSource`: Konverterar en `org.w3c.dom.Document` objekt till `com.adobe.idp.Document` -objekt. Den här metoden accepterar `org.w3c.dom.Document` objekt som indataparameter och returnerar ett `com.adobe.idp.Document` -objekt.
 * `renderPOForm`: Använder Forms Java API för tjänster för att återge ett dynamiskt inköpsorderformulär. The `com.adobe.idp.Document` objekt som returneras av `convertDataSource` -metoden används för att fylla i formuläret i förväg.
 
-   Alla dessa metoder anropas inifrån Java-serverns `doPost` -metod. (Se [Förifyll Forms med flödeslayouter](/help/forms/developing/rendering-forms.md#prepopulating-forms-with-flowable-layouts).)
+  Alla dessa metoder anropas inifrån Java-serverns `doPost` -metod. (Se [Förifyll Forms med flödeslayouter](/help/forms/developing/rendering-forms.md#prepopulating-forms-with-flowable-layouts).)
 
 ```java
 /*
@@ -2346,7 +2346,7 @@ I följande kodexempel bearbetas ett formulär som innehåller ett beräkningssk
              if (processState == 1)
              {
  
-                 //Write the data back to to the client web browser
+                 //Write the data back to the client web browser
                  ServletOutputStream oOutput = resp.getOutputStream();
                  Document calData = formOut.getOutputContent();
  

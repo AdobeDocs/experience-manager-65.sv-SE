@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: ef253905-87da-4fa2-9f6c-778f1b12bd58
 docset: aem65
 exl-id: 72cbe589-14a1-40f5-a7cb-8960f02e0ebb
-source-git-commit: 37d2c70bff770d13b8094c5959e488f5531aef55
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '774'
+source-wordcount: '776'
 ht-degree: 0%
 
 ---
@@ -52,7 +52,7 @@ Koden för den här sidan finns på GitHub
 
 En predikatutvärderare hanterar utvärderingen av vissa predikat, vilket är definieringsbegränsningarna för en fråga.
 
-Det mappar en sökbegränsning på högre nivå (t.ex. &quot;width > 200&quot;) till en specifik JCR-fråga som passar den faktiska innehållsmodellen (t.ex. metadata/@width > 200). Det kan också filtrera noder manuellt och kontrollera deras begränsningar.
+Det mappar en sökbegränsning på högre nivå (till exempel &quot;width > 200&quot;) till en specifik JCR-fråga som passar den faktiska innehållsmodellen (till exempel metadata/@width > 200). Det kan också filtrera noder manuellt och kontrollera deras begränsningar.
 
 >[!NOTE]
 >
@@ -66,7 +66,7 @@ I det här avsnittet beskrivs hur du skapar en anpassad predikatutvärderare som
 
 * `cq:lastReplicatedBy` som lagrar ID för den användare som utlöste den senaste replikeringsåtgärden
 
-* `cq:lastReplicationAction` som lagrar den senaste replikeringsåtgärden (t.ex. aktivering, inaktivering)
+* `cq:lastReplicationAction` som lagrar den senaste replikeringsåtgärden (till exempel Aktivering, Inaktivering)
 
 #### Frågar efter replikeringsmetadata med standardpredikatutvärderare {#querying-replication-metadata-with-default-predicate-evaluators}
 

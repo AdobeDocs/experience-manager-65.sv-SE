@@ -12,9 +12,9 @@ discoiquuid: b88edad4-2a2e-429b-86a2-cc68ba69697e
 docset: aem65
 feature: Language Copy
 exl-id: 1ae21d80-0683-4ab9-afaa-4d733ff47720
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '316'
+source-wordcount: '318'
 ht-degree: 0%
 
 ---
@@ -31,6 +31,7 @@ I följande procedur används det klassiska användargränssnittet för att skap
 
       * Den språkkod som stöds är en kod med två bokstäver och gemener som definieras av ISO-639-1
       * Den landskod som stöds är gemen eller versal, tvåbokstavskod enligt ISO 3166
+
    1. Markera mallen och klicka på Skapa.
 
    ![newpagefr](assets/newpagefr.png)

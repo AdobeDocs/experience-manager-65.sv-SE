@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 99528fda-5c8c-4034-bcbe-a4cea42f694b
 docset: aem65
 exl-id: b5f3d3a6-39c0-4aa5-8562-3cc6fa2b9e46
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '6086'
+source-wordcount: '6088'
 ht-degree: 0%
 
 ---
@@ -110,7 +110,7 @@ Portleten kan konfigureras med följande inställningar:
  <tbody>
   <tr>
    <td>startPath</td>
-   <td><p>Detta är portletens startsökväg: definierar innehållet som visas från början.</p> <p><strong>Viktigt</strong>: Om portleten är konfigurerad för att ansluta till AEM författare och publicera instanser som körs på en annan kontextsökväg än<strong> /</strong>måste du aktivera kraften <strong>CQUrlInfo</strong> i HTML Library Manager-konfigurationen för dessa AEM (t.ex. via Felix Webconsole) fungerar inte redigering och dialogrutan med inställningar visas inte.</p> </td>
+   <td><p>Detta är portletens startsökväg: definierar innehållet som visas från början.</p> <p><strong>Viktigt</strong>: Om portleten är konfigurerad för att ansluta till AEM författare och publicera instanser som körs på en annan kontextsökväg än<strong> /</strong>måste du aktivera kraften <strong>CQUrlInfo</strong> i HTML-bibliotekshanterarkonfigurationen för dessa AEM (till exempel via Felix Webconsole) fungerar inte redigering och dialogrutan med inställningar visas inte.</p> </td>
   </tr>
   <tr>
    <td>htmlSelector</td>
@@ -509,7 +509,7 @@ I HTML kan du använda följande platshållare, som ersätts av portleten med re
 | {id} | CSS-id för knappen. |
 | {url} | URL för knappens mål. |
 | {text} | Knappens etikett. |
-| {onclick} | Javascript **onclick** function (contains {url}). |
+| {onclick} | JavaScript **onclick** function (contains {url}). |
 
 Exempel på en button.html-fil:
 
@@ -638,7 +638,7 @@ Använd Portlet-komponenten för att lägga till portletfönster AEM sidor. Dela
 Utför följande uppgifter om du vill använda AEM som en portal:
 
 1. Installera Portlet-komponenten och delade bibliotek.
-1. Lägg till portletkomponenten i Sidespark.
+1. Lägg till portletkomponenten i Sidekick.
 1. Konfigurera och distribuera webbprogrammet som innehåller de portlets som du vill ska visas i portalkomponenten.
 1. Lägg till portletkomponenten på en sida och markera portleten som ska visas.
 
@@ -668,7 +668,7 @@ Den AEM QuickStart JAR-filen innehåller portletkomponentfilerna. Om du vill hä
 
 Lägg till portletkomponenten i styckesystemet så att den är tillgänglig för författare.
 
-1. Klicka på linjalens ikon i Sidspark för att gå till designläge.
+1. Klicka på linjalens ikon i Sidekick för att gå till designläge.
 1. Förutom `Design of par` rubrik ovanför första stycket, klicka **Redigera**.
 
 1. I **Allmänt** markerar du kryssrutan bredvid portletkomponenten och klickar på OK.
@@ -708,7 +708,7 @@ Distribuera portlets till programserverns webbbehållare så att de är tillgän
 
 Använd portalkomponenten för att lägga till ett portletfönster på webbsidan. Använd komponentegenskaperna för att ange vilken portlet som ska visas.
 
-1. På webbsidan drar du **Portlet** från gruppen General i Sidespark till sidan.
+1. På webbsidan drar du **Portlet** från gruppen Allmänt i Sidekick till sidan.
 
    >[!NOTE]
    >
@@ -766,7 +766,7 @@ Så här konfigurerar du portleten:
 
    >[!NOTE]
    >
-   >Om portleten är konfigurerad för att ansluta till AEM författare och publicera instanser som körs på en annan kontextsökväg än** /** måste du aktivera kraften **CQUrlInfo** i HTML Library Manager-konfigurationen för dessa AEM (t.ex. via Felix Webconsole) fungerar inte redigering och dialogrutan med inställningar visas inte.
+   >Om portleten är konfigurerad för att ansluta till AEM författare och publicera instanser som körs på en annan kontextsökväg än** /** måste du aktivera kraften **CQUrlInfo** i HTML-bibliotekshanterarkonfigurationen för dessa AEM (till exempel via Felix Webconsole) fungerar inte redigering och dialogrutan med inställningar visas inte.
 
 1. Spara konfigurationsändringarna i programservern.
 

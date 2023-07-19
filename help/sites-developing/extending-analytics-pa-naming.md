@@ -10,7 +10,7 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: be2aa297-5b78-4b1d-8ff1-e6a585a177dd
 exl-id: 17a4e4dc-804e-44a9-9942-c37dbfc8016f
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
 source-wordcount: '858'
 ht-degree: 0%
@@ -25,7 +25,7 @@ Adobe Analytics använder `s.pageName` för att unikt identifiera sidor och för
 
 * Utforma sidkomponenten så att den innehåller CQ-variabeln som du mappar till `s.pageName` -egenskap. (Se [Implementera Adobe Analytics Tracking för anpassade komponenter](/help/sites-developing/extending-analytics-components.md).)
 
-För att kunna visa analysrapportdata i Sites-konsolen och i Content Insight måste AEM ha värdet för `s.pageName` för varje sida. Java-API:t för AEM Analytics definierar `AnalyticsPageNameProvider` det gränssnitt som du implementerar för att tillhandahålla Sites-konsolen och Content Insights med värdet i `s.pageName` -egenskap. Dina `AnaltyicsPageNameProvider` -tjänsten löser egenskapen pageName på servern i rapporteringssyfte, eftersom den kan ställas in dynamiskt med Javascript på klienten i spårningssyfte.
+För att kunna visa analysrapportdata i Sites-konsolen och i Content Insight måste AEM ha värdet för `s.pageName` för varje sida. Java-API:t för AEM Analytics definierar `AnalyticsPageNameProvider` det gränssnitt som du implementerar för att tillhandahålla Sites-konsolen och Content Insights med värdet i `s.pageName` -egenskap. Dina `AnaltyicsPageNameProvider` -tjänsten löser egenskapen pageName på servern för rapportering, eftersom den kan ställas in dynamiskt med JavaScript på klienten för spårning.
 
 ## Sidnamnsprovidertjänsten för standardanalys {#the-default-analytics-page-name-provider-service}
 
@@ -43,7 +43,7 @@ The `DefaultPageNameProvider` avgör vilken av dessa CQ-variabler som mappas til
 
 * `pagedata.navTitle`: Tjänsten använder `page.getNavigationTitle()`
 
-The `page` objektet är [ `com.day.cq.wcm.api.Page`](https://helpx.adobe.com/experience-manager/6-3/sites-developing/reference-materials/javadoc/com/day/cq/wcm/api/Page.html) Java-objekt för sidan.
+The `page` objektet är [`com.day.cq.wcm.api.Page`](https://helpx.adobe.com/experience-manager/6-3/sites-developing/reference-materials/javadoc/com/day/cq/wcm/api/Page.html) Java-objekt för sidan.
 
 Om du inte kopplar en CQ-variabel till `s.pageName` i ramverket, värdet för `s.pageName` genereras från sidsökvägen. Till exempel sidan med banan `/content/geometrixx/en` använder värdet `content:geometrixx:en` for `s.pageName`.
 

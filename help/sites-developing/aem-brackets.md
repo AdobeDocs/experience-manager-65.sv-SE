@@ -10,9 +10,9 @@ topic-tags: development-tools
 content-type: reference
 discoiquuid: 8231a30a-dcb7-4156-bb45-c5a23e5b56ef
 exl-id: 829d8256-b415-4a44-a353-455ac16950f3
-source-git-commit: 43a30b5ba76ea470cc50a962d4f04b4a1508964d
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '925'
+source-wordcount: '930'
 ht-degree: 0%
 
 ---
@@ -69,9 +69,9 @@ När tillägget har installerats kan du börja utveckla AEM komponenter genom at
 
 Projektet måste innehålla minst följande:
 
-1. a `jcr_root` mapp (t.ex. `myproject/jcr_root`)
+1. a `jcr_root` mapp (till exempel `myproject/jcr_root`)
 
-1. a `filter.xml` fil (t.ex. `myproject/META-INF/vault/filter.xml`). för mer information om strukturen i `filter.xml` se filen [Filterdefinition för arbetsyta](https://jackrabbit.apache.org/filevault/filter.html).
+1. a `filter.xml` fil (till exempel `myproject/META-INF/vault/filter.xml`). för mer information om strukturen i `filter.xml` se filen [Filterdefinition för arbetsyta](https://jackrabbit.apache.org/filevault/filter.html).
 
 I hakparenteser **Fil** meny, välja **Öppna mapp...** och välj `jcr_root` eller den överordnade projektmappen.
 
@@ -89,10 +89,10 @@ Om du vill synkronisera ditt innehåll till och från en AEM utvecklingsinstans 
 
 Med projektinställningarna kan du definiera:
 
-1. Server-URL (t.ex. `http://localhost:4502`)
+1. Server-URL (till exempel `http://localhost:4502`)
 1. Om servrar som inte har ett giltigt HTTPS-certifikat ska tolereras (håll inte markerat om det inte krävs)
-1. Användarnamnet som används för att synkronisera innehåll (t.ex. `admin`)
-1. Användarens lösenord (t.ex. `admin`)
+1. Användarnamnet som används för att synkronisera innehåll (till exempel `admin`)
+1. Användarens lösenord (till exempel `admin`)
 
 ## Synkroniserar innehåll {#synchronizing-content}
 

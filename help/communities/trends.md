@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 4a0debdd-acb9-4646-80bb-fec66fae4088
 docset: aem65
 exl-id: 2a4297e4-2d88-4fa6-8fea-3fea06753605
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '346'
+source-wordcount: '345'
 ht-degree: 1%
 
 ---
@@ -62,39 +62,39 @@ Under **Kommentarer** anger du om och hur kommentarer för överförda filer ska
 
 * **Typ**
 
-   Ange om data ska visas för communitymedlemmar eller användargenererat innehåll (UGC).
+  Ange om data ska visas för communitymedlemmar eller användargenererat innehåll (UGC).
 
-   Välj  från:
+  Välj  från:
 
    * `Members`
    * `Content`
 
-   Standard är `Members`.
+  Standard är `Members`.
 
 * **Visa titel**
 
-   En beskrivande rubrik som ska visas ovanför data, till exempel `Trending Content`.
+  En beskrivande rubrik som ska visas ovanför data, till exempel `Trending Content`.
 Standard är ingen titel.
 
 * **Visa antal**
 
-   Antalet objekt som ska listas.
+  Antalet objekt som ska listas.
 Standardvärdet är 10.
 
 * **Typ av aktivitet**
 
-   Välj något av följande:
+  Välj något av följande:
 
    * `Views`(sidbesök)
    * `Posts`(skapa UGC)
    * `Follows`
    * `Likes`
 
-   Standardvärdet är Vyer.
+  Standardvärdet är Vyer.
 
 * **Tidsperiod**
 
-   Välj något av följande:
+  Välj något av följande:
 
    * `Last 24 hours`
    * `Last 7 days`
@@ -103,16 +103,16 @@ Standardvärdet är 10.
    * `This year (since Jan 1st)`
    * `Total`
 
-   Standard är `Total`.
+  Standard är `Total`.
 
 * **Kontextbana**
 
-   Gör det möjligt att omfång aktiviteten till en delmängd av platsen, t.ex. en viss blogg.
+  Gör det möjligt att omfång aktiviteten till en delmängd av platsen, t.ex. en viss blogg.
 Standard är hela communitywebbplatsen.
 
 * **Medlemsräkningsaggregering**
 
-   När du avmarkerar det här alternativet (inaktiverat) räknas endast inlägg på den översta nivån. Om kontexten till exempel är rotsidan (standardvärdet), kan du `Activity Type` av `Posts` kommer aldrig att visa någon aktivitet eftersom det inte går att publicera innehåll på rotsidan. När du markerar det här alternativet inkluderas antalet på alla underordnade sidor.
+  När du avmarkerar det här alternativet (inaktiverat) räknas endast inlägg på den översta nivån. Om kontexten till exempel är rotsidan (standardvärdet), kan du `Activity Type` av `Posts` kommer aldrig att visa någon aktivitet eftersom det inte går att publicera innehåll på rotsidan. När du markerar det här alternativet inkluderas antalet på alla underordnade sidor.
 Standard är markerat.
 
 ### Exempelsida med 4 komponenter {#example-page-with-components}

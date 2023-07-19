@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 12329e26-40bc-4c94-bc60-6d9cbd01345f
 feature: Configuring
 exl-id: 6d03cb1d-500e-4a23-80e5-347a43dff30e
-source-git-commit: 7d91fbdaae7ade27e9d6bf42bbcd5b16d3f6e358
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '747'
+source-wordcount: '748'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ Du kan:
 
 * [Definiera samlingar av konfigurationsparametrar för varje körningsläge](#defining-configuration-properties-for-a-run-mode).
 
-   En grundläggande uppsättning konfigurationsparametrar används för alla körningslägen, och du kan sedan justera ytterligare uppsättningar efter syftet med den specifika miljön. Dessa används efter behov.
+  En grundläggande uppsättning konfigurationsparametrar används för alla körningslägen, och du kan sedan justera ytterligare uppsättningar efter syftet med den specifika miljön. Dessa används efter behov.
 
 * [Definiera ytterligare paket som ska installeras för ett visst läge](#defining-additional-bundles-to-be-installed-for-a-run-mode).
 
@@ -89,25 +89,25 @@ Körningsläget anges med ett suffix i mappnamnet. På så sätt kan du spara al
 
 * `config`
 
-   Gäller för alla körningslägen
+  Gäller för alla körningslägen
 
 * `config.author`
 
-   Används för författarens körningsläge
+  Används för författarens körningsläge
 
 * `config.publish`
 
-   Används för publiceringskörningsläge
+  Används för publiceringskörningsläge
 
 * `config.<run-mode>`
 
-   Används för tillämpligt körläge. till exempel config
+  Används för tillämpligt körläge. till exempel config
 
 Se [OSGi-konfiguration i databasen](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository) om du vill ha mer information om hur du definierar enskilda konfigurationsnoder i dessa mappar och om hur du skapar konfigurationer för kombinationer av flera körningslägen.
 
 >[!NOTE]
 >
->För [Körningslägen för installation](#installation-run-modes) (t.ex. författare) Körningsläget kan inte ändras efter installationen. Ändringar av de enskilda konfigurationsegenskaperna börjar dock gälla efter omstart.
+>För [Körningslägen för installation](#installation-run-modes) (till exempel författare) Körningsläget kan inte ändras efter installationen. Ändringar av de enskilda konfigurationsegenskaperna börjar dock gälla efter omstart.
 
 ## Definiera ytterligare paket som ska installeras för ett körningsläge {#defining-additional-bundles-to-be-installed-for-a-run-mode}
 
@@ -123,8 +123,8 @@ De här mapparna är av typen `nt:folder` och ska innehålla rätt paket.
 Om du har definierat konfigurationer för flera körningslägen måste du definiera vilka som ska användas vid start. Det finns flera metoder för att specificera vilket körningsläge som ska användas. Upplösningsordningen är
 
 1. [systemegenskaper (](#using-a-system-property-in-the-start-script)
-1. [ ](#using-the-sling-properties-file)
-1. [ ](#using-the-r-option)
+1. [](#using-the-sling-properties-file)
+1. [](#using-the-r-option)
 1. [Filnamnsidentifiering](#filename-detection-renaming-the-jar-file)
 
 När du använder en programserver kan du även [definiera körningsläget i web.xml](#defining-the-run-mode-in-web-xml-with-application-server).
@@ -155,7 +155,7 @@ En systemegenskap i startskriptet kan användas för att ange körningsläget.
 
 * Använd till exempel följande för att starta en instans som publiceringsinstans för produktion i USA:
 
-   `-Dsling.run.modes=publish,prod,us`
+  `-Dsling.run.modes=publish,prod,us`
 
 ### Filnamnsidentifiering - byta namn på filen jar {#filename-detection-renaming-the-jar-file}
 

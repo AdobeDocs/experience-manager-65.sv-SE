@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: cc1e5c20-cc9c-4222-8a11-ec5a963d4466
 docset: aem65
 exl-id: 552649e7-6054-4ae8-b570-5ba7230e6f19
-source-git-commit: b886844dc80482ae4aae5fc7ce09e466efecc3bd
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '1166'
+source-wordcount: '1167'
 ht-degree: 0%
 
 ---
@@ -30,7 +30,7 @@ SPA innehåller en omfattande lösning för SPA inom AEM. I den här artikeln pr
 
 >[!NOTE]
 >
->SPA Editor är den rekommenderade lösningen för projekt som kräver SPA ramverksbaserad återgivning på klientsidan (t.ex. Reaktion eller Angular).
+>SPA Editor är den rekommenderade lösningen för projekt som kräver SPA ramverksbaserad rendering på klientsidan (till exempel React eller Angular).
 
 ## Introduktion {#introduction}
 
@@ -157,7 +157,7 @@ Det här är en standardanvändning av den här funktionen, som inte är unik f�
 
 #### Statisk instansiering {#static-instantiation}
 
-När komponenten instansieras statiskt med komponentmallen (t.ex. JSX), måste värdet skickas från modellen till komponentens egenskaper.
+När komponenten instansieras statiskt med komponentmallen (till exempel JSX), måste värdet skickas från modellen till komponentens egenskaper.
 
 ### App.js {#app-js}
 
@@ -226,7 +226,7 @@ class Image extends Component {
 MapTo('my-react-app/components/content/image')(Image, ImageEditConfig);
 ```
 
-Det centrala SPA i AEM är att mappa SPA komponenter till AEM och uppdatera komponenten när innehållet ändras (och vice versa). Se dokumentet [SPA](/help/sites-developing/spa-overview.md) för en sammanfattning av den här kommunikationsmodellen.
+Det centrala SPA i AEM är att mappa SPA komponenter till AEM och uppdatera komponenten när innehållet ändras (och omvänt). Se dokumentet [SPA](/help/sites-developing/spa-overview.md) för en sammanfattning av den här kommunikationsmodellen.
 
 `MapTo('my-react-app/components/content/image')(Image, ImageEditConfig);`
 

@@ -10,7 +10,7 @@ content-type: reference
 discoiquuid: 9cdd7648-d67e-414d-aedf-a5687da39326
 docset: aem65
 exl-id: 9528d92b-0989-4e2d-83be-ba6c07c845e2
-source-git-commit: b886844dc80482ae4aae5fc7ce09e466efecc3bd
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
 source-wordcount: '1016'
 ht-degree: 0%
@@ -29,7 +29,7 @@ SPA innehåller en omfattande lösning för SPA inom AEM. I den här artikeln pr
 
 >[!NOTE]
 >
->SPA Editor är den rekommenderade lösningen för projekt som kräver SPA ramverksbaserad återgivning på klientsidan (t.ex. Reaktion eller Angular).
+>SPA Editor är den rekommenderade lösningen för projekt som kräver SPA ramverksbaserad rendering på klientsidan (till exempel React eller Angular).
 
 ## Introduktion {#introduction}
 
@@ -255,7 +255,7 @@ export class ImageComponent {
 MapTo('my-angular-app/components/image')(ImageComponent, ImageEditConfig);
 ```
 
-Det centrala SPA i AEM är att mappa SPA komponenter till AEM och uppdatera komponenten när innehållet ändras (och vice versa). Se dokumentet [SPA](/help/sites-developing/spa-overview.md) för en sammanfattning av den här kommunikationsmodellen.
+Det centrala SPA i AEM är att mappa SPA komponenter till AEM och uppdatera komponenten när innehållet ändras (och omvänt). Se dokumentet [SPA](/help/sites-developing/spa-overview.md) för en sammanfattning av den här kommunikationsmodellen.
 
 `MapTo('my-angular-app/components/image')(Image, ImageEditConfig);`
 

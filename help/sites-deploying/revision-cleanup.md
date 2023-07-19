@@ -11,9 +11,9 @@ topic-tags: deploying
 discoiquuid: f03ebe60-88c0-4fc0-969f-949490a8e768
 feature: Configuring
 exl-id: e53c4c81-f62e-4b6d-929a-6649c8ced23c
-source-git-commit: 24a64e603d460c659467c7679934bbdfd381aaa8
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '5903'
+source-wordcount: '5902'
 ht-degree: 0%
 
 ---
@@ -182,7 +182,7 @@ I vissa fall kan rensningsprocessen fördröjas om du växlar mellan svansen och
   </tr>
   <tr>
    <td><strong>Vad händer om jag av misstag kör mot fel databasformat?</strong></td>
-   <td>Om du försöker köra eksegmentmodulen mot en eksegment-tjärdatabas (eller vice versa) misslyckas start med ett <em>IllegalStateException</em> med meddelandet"Ogiltigt segmentformat". Inga data skadas.</td>
+   <td>Om du försöker köra eksegmentmodulen mot en eksegment-tjärdatabas (eller omvänt) misslyckas start med ett <em>IllegalStateException</em> med meddelandet"Ogiltigt segmentformat". Inga data skadas.</td>
    <td> </td>
   </tr>
   <tr>
@@ -400,7 +400,7 @@ I vissa fall kan rensningsprocessen fördröjas om du växlar mellan svansen och
       </ul> </li>
      <li>Det diskutrymme som frigjorts vid rensning av revision
       <ul>
-       <li>Utrymmet återvinns endast när rensningsfasen är klar. Slutet av rensningsfasen markeras med loggmeddelandet "T<code>arMK GC #{}: cleanup completed in {} ({} ms</code>". Storleken efter rensning är {} ({} byte) och utrymmet återtogs {} ({} byte). Vikt/djup för komprimeringsmappning är {}/{} ({} bytes/{})."</li>
+       <li>Utrymmet återvinns endast när rensningsfasen är klar. Slutet av rensningsfasen markeras med loggmeddelandet "T<code>arMK GC #{}: cleanup completed in {} ({} ms</code>". Storleken efter rensning är {} ({} bytes) och återvunnet utrymme {} ({} byte). Vikt/djup för komprimeringskarta är {}/{} ({} byte/{})."</li>
       </ul> </li>
      <li>Ett problem uppstod under rensningen av revisionen
       <ul>

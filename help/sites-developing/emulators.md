@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: c51fca81-5dfc-4838-9672-acb6de62778b
 legacypath: /content/docs/en/aem/6-0/develop/mobile/emulators
 exl-id: 009b7e2c-ac37-4acc-a656-0a34d3853dfd
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '631'
+source-wordcount: '634'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe rekommenderar att du använder SPA Editor för projekt som kräver ramverksbaserad klientåtergivning för en sida (t.ex. Reagera). [Läs mer](/help/sites-developing/spa-overview.md).
+>Adobe rekommenderar att du använder SPA Editor för projekt som kräver ramverksbaserad klientåtergivning för en sida (till exempel React). [Läs mer](/help/sites-developing/spa-overview.md).
 
 Med Adobe Experience Manager (AEM) kan författare visa en sida i en emulator som simulerar den miljö i vilken slutanvändaren ska visa sidan, till exempel på en mobilenhet eller i en e-postklient.
 
@@ -43,7 +43,7 @@ En emulator:
 * Baseras på ExtJS.
 * Fungerar på sidan DOM.
 * Dess utseende regleras via CSS.
-* Stöder plugin-program (t.ex. plugin-programmet för mobilenhetsrotation).
+* Stöder plugin-program (till exempel plugin-programmet för mobilenhetsrotation).
 * Är bara aktivt på författare.
 * Dess baskomponent är vid `/libs/wcm/emulator/components/base`.
 
@@ -110,26 +110,26 @@ Befintliga mobilemulatorer:
 * Finns under /libs/wcm/mobile/components/emulators.
 * Finns via JSON-servleten på:
 
-   http://localhost:4502/bin/wcm/mobile/emulators.json
+  http://localhost:4502/bin/wcm/mobile/emulators.json
 
 När sidkomponenten är beroende av den mobila sidkomponenten ( `/libs/wcm/mobile/components/page`) integreras emulatorfunktionen automatiskt på sidan med följande mekanism:
 
 * Komponenten för mobilsidan `head.jsp` innehåller enhetsgruppens associerade init-komponent för emulering (endast i författarläge) och enhetsgruppens återgivnings-CSS via:
 
-   `deviceGroup.drawHead(pageContext);`
+  `deviceGroup.drawHead(pageContext);`
 
 * Metoden `DeviceGroup.drawHead(pageContext)` innehåller emulatorns init-komponent, d.v.s. anropar `init.html.jsp` för emulatorkomponenten. Om emulatorkomponenten inte har en egen `init.html.jsp` och förlitar sig på emulatorn för mobilbasen ( `wcm/mobile/components/emulators/base)`anropas initieringsskriptet för mobilbasemulatorn ( `/libs/wcm/mobile/components/emulators/base/init.html.jsp`).
 
-* Initieringsskriptet för mobilbasemulatorn definierar via Javascript:
+* Initieringsskriptet för mobilbasemulatorn definierar via JavaScript:
 
    * Konfigurationen för alla emulatorer som är definierade för sidan (emulatorConfigs)
    * Emulatorhanteraren som integrerar emulatorns funktioner på sidan genom:
 
-      `emulatorMgr.launch(config)`;
+     `emulatorMgr.launch(config)`;
 
-      Emulatorhanteraren definieras av:
+     Emulatorhanteraren definieras av:
 
-      `/libs/wcm/emulator/widgets/source/EmulatorManager.js`
+     `/libs/wcm/emulator/widgets/source/EmulatorManager.js`
 
 #### Skapa en anpassad mobilemulator {#creating-a-custom-mobile-emulator}
 
@@ -152,4 +152,5 @@ Så här skapar du en anpassad mobilemulator:
    * Namn = `canRotate`, typ = `Boolean`, värde = `true`: för att inkludera rotationsfunktionen.
 
    * Namn = `touchScrolling`, typ = `Boolean`, värde = `true`: för att inkludera pekskärmsfunktionen.
+
    Du kan lägga till fler funktioner genom att definiera egna plugin-program.

@@ -1,8 +1,8 @@
 ---
 title: Internationaliserar gränssnittssträngar
 seo-title: Internationalizing UI Strings
-description: Med Java- och Javascript-API:er kan du internationalisera strängar
-seo-description: Java and Javascript APIs enable you to internationalize strings
+description: Med Java- och JavaScript-API:er kan du internationalisera strängar
+seo-description: Java and JavaScript APIs enable you to internationalize strings
 uuid: 1cfa409f-9b1e-466f-8b03-5628db42bc57
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,7 +10,7 @@ content-type: reference
 topic-tags: components
 discoiquuid: 9da8823c-13a4-4244-bfab-a910a4fd44e7
 exl-id: bc5b1cb7-a011-42fe-8759-3c7ee3068aad
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
 source-wordcount: '1100'
 ht-degree: 0%
@@ -19,11 +19,11 @@ ht-degree: 0%
 
 # Internationaliserar gränssnittssträngar {#internationalizing-ui-strings}
 
-Med Java- och Javascript-API:er kan du internationalisera strängar i följande typer av resurser:
+Med Java- och JavaScript-API:er kan du internationalisera strängar i följande typer av resurser:
 
 * Java-källfiler.
 * JSP-skript.
-* Javascript i klientbibliotek eller i sidkällan.
+* JavaScript i klientbibliotek eller i sidkällan.
 * Egenskapsvärden för JCR-nod som används i dialogrutor och komponentkonfigurationsegenskaper.
 
 En översikt över internationalisering och lokalisering finns på [Internationalisering av komponenter](/help/sites-developing/i18n.md).
@@ -110,16 +110,16 @@ The `I18N` klassen definierar en statisk `get` -metod som är användbar när du
 
 * Använd användarens språkinställning: Ange SlingHttpRequest som den första parametern.
 
-   `I18n.get(slingHttpRequest, "Welcome back {}. You have {} messages.", "user name, number of messages", user.getDisplayName(), numItems);`
+  `I18n.get(slingHttpRequest, "Welcome back {}. You have {} messages.", "user name, number of messages", user.getDisplayName(), numItems);`
 * Använd sidspråket: Ange ResourceBundle som den första parametern.
 
-   `I18n.get(resourceBundle,"Welcome back {}. You have {} messages.", "user name, number of messages", user.getDisplayName(), numItems);`
+  `I18n.get(resourceBundle,"Welcome back {}. You have {} messages.", "user name, number of messages", user.getDisplayName(), numItems);`
 
 ### Internationalisering av strängar i JavaScript-kod {#internationalizing-strings-in-javascript-code}
 
-Med Javascript-API:t kan du lokalisera strängar på klienten. Som med [Java och JSP](#internationalizing-strings-in-java-and-jsp-code) Javascript-API:t gör att du kan identifiera strängar för att lokalisera, tillhandahålla lokaliseringstips och ta med variabler i de lokaliserade strängarna.
+Med JavaScript API kan du lokalisera strängar på klienten. Som med [Java och JSP](#internationalizing-strings-in-java-and-jsp-code) JavaScript API gör att du kan identifiera strängar för att lokalisera, ge lokaliseringstips och ta med variabler i de lokaliserade strängarna.
 
-The `granite.utils` [biblioteksmapp för klient](/help/sites-developing/clientlibs.md) innehåller Javascript-API:t. Om du vill använda API:t inkluderar du den här klientbiblioteksmappen på sidan. Lokaliseringsfunktionerna använder `Granite.I18n` namnutrymme.
+The `granite.utils` [biblioteksmapp för klient](/help/sites-developing/clientlibs.md) innehåller JavaScript-API:t. Om du vill använda API:t inkluderar du den här klientbiblioteksmappen på sidan. Lokaliseringsfunktionerna använder `Granite.I18n` namnutrymme.
 
 Innan du presenterar lokaliserade strängar måste du ange språkområdet med `Granite.I18n.setLocale` funktion. Funktionen kräver språkkoden för språkområdet som ett argument:
 
@@ -146,7 +146,7 @@ Funktionsparametrarna skiljer sig från Java I18n.get-metoden:
 * Den andra parametern är en array med värden som ska matas in i stränglitteralen.
 * Den tredje parametern är lokaliseringstipset.
 
-I följande exempel används Javascript för att lokalisera administratören för välkomstsidan. Du har två meddelanden i din inkorg.&quot; mening:
+I följande exempel används JavaScript för att lokalisera administratören för välkomstsidan. Du har två meddelanden i din inkorg.&quot; mening:
 
 ```
 Granite.I18n.setLocale("fr");

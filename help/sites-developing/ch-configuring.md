@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: personalization
 content-type: reference
 exl-id: 61208bd5-475b-40be-ba00-31bbbc952adf
-source-git-commit: 78ec31362f3aceb5cfc9cc0735bccb88082b8e2d
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
 source-wordcount: '1787'
 ht-degree: 0%
@@ -48,7 +48,6 @@ or
 >* `/libs/settings/cloudsettings`
 >* `/conf/global/settings/cloudsettings`
 >* `/conf/<tenant>/settings/cloudsettings`
-
 
 ## Visa och dölja ContextHub-gränssnittet {#showing-and-hiding-the-contexthub-ui}
 
@@ -189,7 +188,7 @@ Ett contextHub.generic-jsonp-arkiv har konfigurerats så att det lagrar data fö
 
 Med exempelarkivkandidaten contexthub.generic-jsonp kan du hämta data från en JSONP-tjänst eller en webbtjänst som returnerar JSON-data. För den här butikskandidaten använder du butikskonfigurationen för att ange information om den JSONP-tjänst som ska användas.
 
-The [init](/help/sites-developing/contexthub-api.md#init-name-config) funktionen i `ContextHub.Store.JSONPStore` Javascript-klassen definierar en `config` objekt som initierar den här lagringskanalen. The `config` objektet innehåller `service` objekt som innehåller information om JSONP-tjänsten. Om du vill konfigurera butiken anger du `service` -objekt i JSON-format som värde för egenskapen Detaljkonfiguration.
+The [init](/help/sites-developing/contexthub-api.md#init-name-config) funktionen i `ContextHub.Store.JSONPStore` JavaScript-klassen definierar en `config` objekt som initierar den här lagringskanalen. The `config` objektet innehåller `service` objekt som innehåller information om JSONP-tjänsten. Om du vill konfigurera butiken anger du `service` -objekt i JSON-format som värde för egenskapen Detaljkonfiguration.
 
 Om du vill spara data från MD5-tjänsten på jsontest.com-webbplatsen ska du göra så här: [Skapa ett ContextHub Store](/help/sites-developing/ch-configuring.md#creating-a-contexthub-store) med följande egenskaper:
 
@@ -199,21 +198,21 @@ Om du vill spara data från MD5-tjänsten på jsontest.com-webbplatsen ska du g�
 * **Aktiverad:** Välj
 * **Detaljkonfiguration (JSON):**
 
-   ```xml
-   {
-    "service": {
-    "jsonp": false,
-    "timeout": 1000,
-    "ttl": 1800000,
-    "secure": false,
-    "host": "md5.jsontest.com",
-    "port": 80,
-    "params":{
-    "text":"text to md5"
-        }
-      }
-    }
-   ```
+  ```xml
+  {
+   "service": {
+   "jsonp": false,
+   "timeout": 1000,
+   "ttl": 1800000,
+   "secure": false,
+   "host": "md5.jsontest.com",
+   "port": 80,
+   "params":{
+   "text":"text to md5"
+       }
+     }
+   }
+  ```
 
 ### Lägga till en gränssnittsmodul för md5-data {#adding-a-ui-module-for-the-md-data}
 
@@ -227,15 +226,15 @@ Använd proceduren i [Lägga till en gränssnittsmodul](#adding-a-ui-module) om 
 * **Modultyp:** contexthub.base
 * **Detaljkonfiguration (JSON):**
 
-   ```xml
-   {
-    "icon": "coral-Icon--data",
-    "title": "MD5 Converstion",
-    "storeMapping": { "md5": "md5" },
-    "template": "<p> {{md5.original}}</p>;
-                 <p>{{md5.md5}}</p>"
-   }
-   ```
+  ```xml
+  {
+   "icon": "coral-Icon--data",
+   "title": "MD5 Converstion",
+   "storeMapping": { "md5": "md5" },
+   "template": "<p> {{md5.original}}</p>;
+                <p>{{md5.md5}}</p>"
+  }
+  ```
 
 ## Debugging ContextHub {#debugging-contexthub}
 

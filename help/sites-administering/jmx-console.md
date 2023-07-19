@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 873ce073-0055-4e1b-b3c6-ae7967700894
 docset: aem65
 exl-id: eabd8335-6140-4c15-8cff-21608719aa5f
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '4957'
+source-wordcount: '4956'
 ht-degree: 0%
 
 ---
@@ -84,7 +84,7 @@ Mer information om hur du skapar MBeans för att hantera tjänster med JMX-konso
 
    * modell: ID för modellen som ska frågas. Ange inget värde om du vill se antalet misslyckade arbetsflödesinstanser för alla arbetsflödesmodeller. ID är sökvägen till modellnoden, till exempel:
 
-      `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
+     `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
 
 * Returnerat värde: Antalet misslyckade arbetsflödesinstanser.
 
@@ -101,7 +101,7 @@ Mer information om hur du skapar MBeans för att hantera tjänster med JMX-konso
    * Torr körning: (Valfritt) Ange värdet `true` för att se resultatet av åtgärden utan att faktiskt utföra åtgärden. Standardvärdet för `false` gör att åtgärden utförs.
    * Modell: (Valfritt) ID:t för den modell som åtgärden tillämpas på. Ange ingen modell för att använda åtgärden på misslyckade instanser av alla arbetsflödesmodeller. ID är sökvägen till modellnoden, till exempel:
 
-      `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
+     `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
 
 * Returnerat värde: Tabelldata om de instanser som avslutas, som innehåller följande kolumner:
 
@@ -119,7 +119,7 @@ Mer information om hur du skapar MBeans för att hantera tjänster med JMX-konso
    * Torr körning: (Valfritt) Ange värdet `true` för att se resultatet av åtgärden utan att faktiskt utföra åtgärden. Standardvärdet för `false` gör att åtgärden utförs.
    * Modell: (Valfritt) ID:t för den modell som åtgärden tillämpas på. Ange ingen modell för att använda åtgärden på misslyckade arbetsobjekt i alla arbetsflödesmodeller. ID är sökvägen till modellnoden, till exempel:
 
-      `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
+     `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
 
 * Returnerat värde: Tabelldata om misslyckade arbetsobjekt som har provats på nytt, inklusive följande kolumner:
 
@@ -136,7 +136,7 @@ Mer information om hur du skapar MBeans för att hantera tjänster med JMX-konso
 
    * Modell: (Valfritt) ID:t för den modell som åtgärden tillämpas på. Ange ingen modell för att använda åtgärden på arbetsflödesinstanserna för alla arbetsflödesmodeller. ID är sökvägen till modellnoden, till exempel:
 
-      `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
+     `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
    * Antal dagar sedan arbetsflödet startades: Åldern på arbetsflödesinstanserna som ska rensas, i dagar.
    * Torr körning: (Valfritt) Ange värdet `true` för att se resultatet av åtgärden utan att faktiskt utföra åtgärden. Standardvärdet för `false` gör att åtgärden utförs.
 
@@ -155,7 +155,7 @@ Mer information om hur du skapar MBeans för att hantera tjänster med JMX-konso
 
    * Modell: (Valfritt) ID:t för den modell som åtgärden tillämpas på. Ange ingen modell för att använda åtgärden på arbetsflödesinstanserna för alla arbetsflödesmodeller. ID är sökvägen till modellnoden, till exempel:
 
-      `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
+     `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
 
 * Returnerat värde: Antalet inaktuella arbetsflödesinstanser.
 
@@ -165,7 +165,7 @@ Mer information om hur du skapar MBeans för att hantera tjänster med JMX-konso
 
    * Modell: (Valfritt) ID:t för den modell som åtgärden tillämpas på. Ange ingen modell för att använda åtgärden på inaktuella instanser av alla arbetsflödesmodeller. ID är sökvägen till modellnoden, till exempel:
 
-      `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
+     `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
    * Torr körning: (Valfritt) Ange värdet `true` för att se resultatet av åtgärden utan att faktiskt utföra åtgärden. Standardvärdet för `false` gör att åtgärden utförs.
 
 * Returnerat värde: En lista över arbetsflödesinstanser som har startats om.
@@ -181,7 +181,7 @@ Mer information om hur du skapar MBeans för att hantera tjänster med JMX-konso
 
    * Modell: (Valfritt) ID:t för modellen som antalet instanser som körs returneras för. Ange ingen modell för att returnera antalet instanser som körs för alla arbetsflödesmodeller. ID är sökvägen till modellnoden, till exempel:
 
-      `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
+     `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
 
 * Returnerat värde: Antalet arbetsflödesinstanser som körs.
 
@@ -191,7 +191,7 @@ Mer information om hur du skapar MBeans för att hantera tjänster med JMX-konso
 
    * Modell: (Valfritt) ID:t för modellen som antalet slutförda instanser returneras för. Ange ingen modell för att returnera antalet slutförda instanser av alla arbetsflödesmodeller. ID är sökvägen till modellnoden, till exempel:
 
-      `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
+     `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
 
 * Returnerat värde: Antalet slutförda arbetsflödesinstanser.
 
@@ -201,7 +201,7 @@ Mer information om hur du skapar MBeans för att hantera tjänster med JMX-konso
 
    * Modell: (Valfritt) ID:t för den modell som åtgärden tillämpas på. Ange ingen modell för att använda åtgärden på arbetsflödesinstanserna för alla arbetsflödesmodeller. ID är sökvägen till modellnoden, till exempel:
 
-      `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
+     `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
    * Antal dagar sedan arbetsflödet har slutförts: Antalet dagar som arbetsflödesinstanserna har försatts i slutfört läge.
    * Torr körning: (Valfritt) Ange värdet `true` för att se resultatet av åtgärden utan att faktiskt utföra åtgärden. Standardvärdet för `false` gör att åtgärden utförs.
 
@@ -472,7 +472,7 @@ Information om CRX-databasen
   </tr>
   <tr>
    <td>option.activities.supported</td>
-   <td>true anger att databasen stöder aktiviteter. Aktiviteter är en uppsättning ändringar som utförs på en arbetsyta som sammanfogas till en annan arbetsyta.</td>
+   <td>true anger att databasen stöder aktiviteter. Aktiviteter är en uppsättning ändringar som utförs på en arbetsyta som sammanfogas med en annan arbetsyta.</td>
   </tr>
   <tr>
    <td>node.type.management.multivalued.properties.supported</td>
@@ -556,11 +556,11 @@ Skrivskyddad.
 
    * `target`: (Valfritt) A `String` värde som representerar namnet på den ZIP-fil eller katalog där databasdata ska arkiveras. Om du vill använda en ZIP-fil inkluderar du filnamnstillägget ZIP. Om du vill använda en katalog ska du inte inkludera något filnamnstillägg.
 
-      Om du vill utföra en stegvis säkerhetskopiering anger du katalogen som tidigare användes för säkerhetskopieringen.
+     Om du vill utföra en stegvis säkerhetskopiering anger du katalogen som tidigare användes för säkerhetskopieringen.
 
-      Du kan ange en absolut eller relativ sökväg. Relativa sökvägar är relativa till den överordnade för crx-quickstart-katalogen.
+     Du kan ange en absolut eller relativ sökväg. Relativa sökvägar är relativa till den överordnade för crx-quickstart-katalogen.
 
-      När du inte anger något värde används standardvärdet `backup-currentdate.zip` används, där `currentdate` är i formatet `yyyyMMdd-HHmm`.
+     När du inte anger något värde används standardvärdet `backup-currentdate.zip` används, där `currentdate` är i formatet `yyyyMMdd-HHmm`.
 
 * Returnerat värde: ingen
 

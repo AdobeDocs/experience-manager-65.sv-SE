@@ -10,9 +10,9 @@ topic-tags: site-features
 content-type: reference
 discoiquuid: c21debc3-ecf4-4aa9-ab5a-18ddd5cf2fff
 exl-id: 1e839845-fb5c-4200-8ec5-6ff744a96943
-source-git-commit: 785d4897263bfeae6a0cd235abca3c96f2231392
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '2667'
+source-wordcount: '2668'
 ht-degree: 0%
 
 ---
@@ -307,7 +307,7 @@ Den grundläggande formen av en live-kopia har:
 
 #### Live Copy med icke-Live-Copy-sidor {#live-copy-with-non-live-copy-pages}
 
-När du skapar en live-kopia i AEM kan du se och navigera genom den aktiva kopieringsgrenen - och använda normal AEM på den aktiva kopieringsgrenen. Det innebär att du (eller en process) kan skapa nya resurser (sidor och/eller stycken) inuti den aktiva kopiegrenen (t.ex. `myCanadaOnlyProduct`).
+När du skapar en live-kopia i AEM kan du se och navigera genom den aktiva kopieringsgrenen - och använda normal AEM på den aktiva kopieringsgrenen. Det innebär att du (eller en process) kan skapa nya resurser (sidor och/eller stycken) inuti den aktiva kopieringsgrenen (till exempel `myCanadaOnlyProduct`).
 
 * Sådana resurser har ingen aktiv relation till käll-/ritningssidorna och är inte synkroniserade.
 * Scenarier kan inträffa som MSM hanterar som specialfall. När du till exempel (eller en process) skapar en sida med samma position och namn i både källans/ritytans och live-kopians grenar. För sådana situationer finns [MSM-utrullningskonflikter](/help/sites-administering/msm-rollout-conflicts.md) för mer information.

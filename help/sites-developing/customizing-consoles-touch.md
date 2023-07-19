@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 61a4e196-bd53-4ef0-816b-c14401462457
 docset: aem65
 exl-id: 6e67f2b3-78b9-45f2-b496-61776b9fd9cc
-source-git-commit: b886844dc80482ae4aae5fc7ce09e466efecc3bd
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '670'
+source-wordcount: '671'
 ht-degree: 0%
 
 ---
@@ -42,7 +42,6 @@ De kan användas på många sätt för att utöka dina AEM. En liten markering b
 >
 
 
-
 >[!CAUTION]
 >
 >Du ***måste*** ändrar ingenting i `/libs` bana.
@@ -54,9 +53,7 @@ De kan användas på många sätt för att utöka dina AEM. En liten markering b
 >1. Återskapa önskat objekt (d.v.s. som det finns i `/libs`) under `/apps`
 >
 >1. Gör ändringar i `/apps`
-
 >
-
 
 Följande plats i `/libs` struktur kan överlappas:
 
@@ -142,17 +139,18 @@ Så här anpassar du kolumnerna i listvyn:
 
    * På noden:
 
-      ```
-             /apps/wcm/core/content/common/availablecolumns
-      ```
+     ```
+            /apps/wcm/core/content/common/availablecolumns
+     ```
 
    * Lägg till nya kolumner eller ta bort befintliga.
+
    Se [Använda övertäckningar (och Sling Resource Merger)](/help/sites-developing/overlays.md) för mer information.
 
 1. Valfritt:
 
    * Om du vill lägga till ytterligare data måste du skriva en [PageInforProvider](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/PageInfoProvider.html) med
-      `pageInfoProviderType` -egenskap.
+     `pageInfoProviderType` -egenskap.
 
    Se till exempel klassen/paketet som bifogas (från GitHub) nedan.
 
@@ -160,6 +158,6 @@ Så här anpassar du kolumnerna i listvyn:
 
 ### Filtreringsresurser {#filtering-resources}
 
-När du använder en konsol är ett vanligt användningsfall när användaren måste välja bland resurser (t.ex. sidor, komponenter, resurser osv.). Detta kan vara en lista som författaren till exempel måste välja ett objekt från.
+När du använder en konsol är ett vanligt användningsfall när användaren måste välja bland resurser (till exempel sidor, komponenter, resurser osv.). Detta kan vara en lista som författaren till exempel måste välja ett objekt från.
 
 För att hålla listan i en rimlig storlek och även relevant för användningsfallet kan ett filter implementeras i form av ett anpassat predikat. Se [den här artikeln](/help/sites-developing/customizing-page-authoring-touch.md#filtering-resources) för mer information.

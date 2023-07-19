@@ -4,9 +4,9 @@ description: Ta reda på hur du felsöker de vanligaste MSM-relaterade problemen
 feature: Multi Site Manager
 role: Admin
 exl-id: 23f3391b-5ce3-48e1-ab27-a37737778089
-source-git-commit: a323e6c30bf2c226f6613d1b9b037a0beedbfc0d
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '762'
+source-wordcount: '764'
 ht-degree: 0%
 
 ---
@@ -27,13 +27,13 @@ MSM registrerar flera servrar som kan begäras med väljare på resurs-URL:erna.
 1. `http://<host>:<port>/content/path/to/bluprint/page.blueprint.json?&maxSize=500&advancedStatus=true&returnRelationships=true&msm%3Atrigger=ROLLOUT`
    * Använd detta på en ritningssida för att hämta listan över alla Live-kopior som är länkade till den, med ytterligare statusinformation för Live Copy.
    * till exempel:
-      `http://localhost:4502/content/wknd/language-masters/en.blueprint.json?&maxSize=500&advancedStatus=true&returnRelationships=true&msm%3Atrigger=ROLLOUT`
+     `http://localhost:4502/content/wknd/language-masters/en.blueprint.json?&maxSize=500&advancedStatus=true&returnRelationships=true&msm%3Atrigger=ROLLOUT`
 
 
 1. `http://<host>:<port>/content/path/to/livecopy/page.msm.json`
    * Använd detta på Live Copy-sidor för att hämta avancerad information om deras anslutning till deras ritningssidor. Om sidan inte är en Live-kopia returneras ingenting.
    * till exempel:
-      `http://localhost:4502/content/wknd/ca/en.msm.json`
+     `http://localhost:4502/content/wknd/ca/en.msm.json`
 
 Dessa servrar genererar felsökningsloggmeddelanden via `com.day.cq.wcm.msm` loggare som också kan vara till hjälp.
 
@@ -64,7 +64,7 @@ Att känna till dessa egenskaper kan också vara användbart för att fråga dat
 
 Här är några vanliga frågor om MSM och Live Copy.
 
-### Varför uppdateras inte vissa egenskaper (t.ex. titel, anteckningar) under en MSM-utrullning? {#missing-properties}
+### Varför uppdateras inte vissa egenskaper (till exempel titel, anteckningar) under en MSM-utrullning? {#missing-properties}
 
 MSM-synkroniseringsåtgärder är mycket konfigurerbara. Vilka egenskaper eller komponenter som ändras under utrullningar beror direkt på egenskaperna för dessa konfigurationer.
 
@@ -81,7 +81,7 @@ Du kan också:
 
 ### Varför visas Live Copy-sidor med suffixet&quot;_msm_move&quot;? {#moved-pages}
 
-Om en ritningssida introduceras uppdaterar den antingen sin Live Copy-sida eller skapar en ny Live Copy-sida om den inte finns ännu (t.ex. när den introduceras för första gången eller när Live Copy-sidan tas bort manuellt).
+Om en ritningssida introduceras uppdaterar den antingen sin Live Copy-sida eller skapar en ny Live Copy-sida om den inte finns än (t.ex. när den introduceras för första gången eller när Live Copy-sidan tas bort manuellt).
 
 I det senare fallet om en sida utan `cq:LiveRelationship` -egenskapen finns med samma namn. Sidans namn ändras därefter innan sidan Live Copy skapas.
 

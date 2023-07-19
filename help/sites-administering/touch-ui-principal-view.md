@@ -11,9 +11,9 @@ topic-tags: Security
 discoiquuid: db8665fa-353f-45c2-8e37-169d5c1df873
 docset: aem65
 exl-id: 4ce19c95-32cb-4bb8-9d6f-a5bc08a3688d
-source-git-commit: d045fc1ac408f992d594a4cb68d1c4eeae2b0de1
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '774'
+source-wordcount: '773'
 ht-degree: 0%
 
 ---
@@ -49,7 +49,7 @@ Med ramen till vänster kan användare rulla nedåt för att hitta ett huvudnamn
 
 ![Visa behörigheter för ett huvudkonto](assets/doi-1.png)
 
-Om du klickar på namnet visas de tilldelade behörigheterna till höger. I behörighetsrutan visas listan med åtkomstkontrollposter på specifika sökvägar tillsammans med konfigurerade begränsningar.
+Om du klickar på namnet visas de tilldelade behörigheterna till höger. I behörighetsrutan visas en lista med åtkomstkontrollposter på specifika sökvägar tillsammans med konfigurerade begränsningar.
 
 ![Visa ACL-lista](assets/trei-1.png)
 

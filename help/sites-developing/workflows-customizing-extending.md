@@ -10,9 +10,9 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: f23408c3-6b37-4047-9cce-0cab97bb6c5c
 exl-id: 9e205912-50a6-414a-b8d4-a0865269d0e0
-source-git-commit: 13f15bee38b6b4af4cd59376849810a788f0c467
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '3583'
+source-wordcount: '3584'
 ht-degree: 0%
 
 ---
@@ -52,27 +52,26 @@ Som med [alla komponenter](/help/sites-developing/components.md), ärver kompone
 >1. Återskapa önskat objekt (d.v.s. som det finns i `/libs` under `/apps`
 >2. Gör ändringar i `/apps`
 
-
 The `/libs/cq/workflow/components/model/step` är närmaste gemensamma överordnade **Processsteg**, **Deltagarsteg** och **Dynamiskt deltagarsteg**, som alla ärver följande objekt:
 
 * `step.jsp`
 
-   The `step.jsp` skriptet återger titeln på stegkomponenten när den läggs till i en modell.
+  The `step.jsp` skriptet återger titeln på stegkomponenten när den läggs till i en modell.
 
-   ![wf-22-1](assets/wf-22-1.png)
+  ![wf-22-1](assets/wf-22-1.png)
 
 * [cq:dialog](/help/sites-developing/developing-components.md#creating-and-configuring-a-dialog)
 
-   En dialogruta med följande flikar:
+  En dialogruta med följande flikar:
 
    * **Vanliga**: för att redigera titeln och beskrivningen.
    * **Avancerat**: för att redigera egenskaper för e-postmeddelanden.
 
-   ![wf-44](assets/wf-44.png) ![wf-45](assets/wf-45.png)
+  ![wf-44](assets/wf-44.png) ![wf-45](assets/wf-45.png)
 
-   >[!NOTE]
-   >
-   >När flikarna i redigeringsdialogrutan för en stegkomponent inte matchar det här standardutseendet har stegkomponenten definierat skript, nodegenskaper eller dialogruteflikar som åsidosätter de ärvda flikarna.
+  >[!NOTE]
+  >
+  >När flikarna i redigeringsdialogrutan för en stegkomponent inte matchar det här standardutseendet har stegkomponenten definierat skript, nodegenskaper eller dialogruteflikar som åsidosätter de ärvda flikarna.
 
 ### ECMA-skript {#ecma-scripts}
 
@@ -92,7 +91,7 @@ Du kan använda arbetsflödets metadata för att behålla information som krävs
 
 Det finns tre typer av MetaDataMap-objekt - för `Workflow`, `WorkflowData` och `WorkItem` objekt. De har alla samma syfte - att lagra metadata.
 
-En WorkItem har en egen MetaDataMap som bara kan användas medan arbetsobjektet (t.ex. steg) körs.
+En WorkItem har en egen MetaDataMap som bara kan användas medan arbetsobjektet (till exempel steg) körs.
 
 Båda `Workflow` och `WorkflowData` metadatamapparna delas över hela arbetsflödet. I dessa fall rekommenderas att endast `WorkflowData` metadatamappning.
 
@@ -125,7 +124,6 @@ Använd följande procedur för att ange standardvärden för **Titel** och **Be
 >  Detta krav är uppfyllt när redigeringsdialogrutan använder fliken Allmänt och `/libs/cq/flow/components/step/step` -komponenten implementeras.
 >
 >* Stegkomponenten eller ett överordnat element för komponenten åsidosätter inte `step.jsp` skript som `/libs/cq/flow/components/step/step` -komponenten implementeras.
-
 
 1. Under `cq:Component` lägg till följande nod:
 
@@ -669,7 +667,6 @@ function getParticipant() {
 >* [`com.day.cq.wcm.workflow.process.DeactivatePageProcess`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/workflow/process/DeactivatePageProcess.html)
 >
 
-
 Du kan utveckla arbetsflödessteg som hämtar paketresurserna och bearbetar dem. Följande medlemmar i `com.day.cq.workflow.collection` paket ger åtkomst till arbetsflödespaket:
 
 * `ResourceCollection`: Klassen för arbetsflödespaket.
@@ -826,21 +823,21 @@ Ett enkelt sätt att börja skapa ett eget anpassat steg är att kopiera ett bef
 
    * `sling:resourceSuperType`
 
-      Måste ärva från ett befintligt steg.
+     Måste ärva från ett befintligt steg.
 
-      I det här exemplet ärver vi från bassteget vid `cq/workflow/components/model/step`men du kan använda andra supertyper som `participant`, `process`, osv.
+     I det här exemplet ärver vi från bassteget vid `cq/workflow/components/model/step`men du kan använda andra supertyper som `participant`, `process`, osv.
 
    * `jcr:title`
 
-      Visar titeln när komponenten visas i stegwebbläsaren (den vänstra panelen i arbetsflödesmodellredigeraren).
+     Visar titeln när komponenten visas i stegwebbläsaren (den vänstra panelen i arbetsflödesmodellredigeraren).
 
    * `cq:icon`
 
-      Används för att ange en [Korallsikon](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/coral-ui/coralui3/Coral.Icon.html) för steget.
+     Används för att ange en [Korallsikon](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/coral-ui/coralui3/Coral.Icon.html) för steget.
 
    * `componentGroup`
 
-      Måste vara något av följande:
+     Måste vara något av följande:
 
       * Arbetsflöde för samarbete
       * DAM-arbetsflöde
@@ -873,11 +870,12 @@ Efter [Skapa det grundläggande steget](#creating-the-basic-step), definiera ste
 
    * `cq:inherit`
 
-      När inställt på `true`ärver stegkomponenten egenskaperna från det steg som du angav i `sling:resourceSuperType`.
+     När inställt på `true`ärver stegkomponenten egenskaperna från det steg som du angav i `sling:resourceSuperType`.
 
    * `cq:disableTargeting`
 
-      Ange efter behov.
+     Ange efter behov.
+
    ![wf-39](assets/wf-39.png)
 
 1. Konfigurera egenskaperna på noden `cq:formsParameter` enligt följande:
@@ -886,7 +884,7 @@ Efter [Skapa det grundläggande steget](#creating-the-basic-step), definiera ste
 
    * `jcr:title`
 
-      Anger standardtiteln på stegkortet i modellkartan och i **Titel** fält för **Min egen - stegegenskaper** konfigurationsdialogruta.
+     Anger standardtiteln på stegkortet i modellkartan och i **Titel** fält för **Min egen - stegegenskaper** konfigurationsdialogruta.
 
    * Du kan också definiera egna anpassade egenskaper.
 

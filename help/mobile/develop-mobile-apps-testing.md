@@ -10,9 +10,9 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 5a98e1bd-f5c1-4f2f-ac02-dbd005dc1de7
 exl-id: e10e1904-7016-4eb0-9408-36297285f378
-source-git-commit: 17d13e9b201629d9d1519fde4740cf651fe89d2c
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '1023'
+source-wordcount: '1024'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe rekommenderar att du använder SPA Editor för projekt som kräver ramverksbaserad klientåtergivning för en sida (t.ex. Reagera). [Läs mer](/help/sites-developing/spa-overview.md).
+>Adobe rekommenderar att du använder SPA Editor för projekt som kräver ramverksbaserad klientåtergivning för en sida (till exempel React). [Läs mer](/help/sites-developing/spa-overview.md).
 
 Med tanke på det stora utbudet av enheter på marknaden och de enheter som släpps har testningen av apparna blivit oerhört viktig. Det här är ett område där funktionalitet och användbarhet kan ge låga granskningar i en appbutik, men ett enda fel kan leda till att appen avinstalleras. Ni måste vara noga med testplanerna och kvalitetssäkring. Följande länk täcker många av de ämnen som behöver tas upp i allmänhet, t.ex. hur du identifierar din miljö, definierar testfall, testtyper, antaganden, kundengagemang osv. De verktyg som är till hjälp vid testningen beskrivs också. Interna verktyg, som [Hobbes](/help/sites-developing/hobbes.md)kan hjälpa till med webbaserad UI-testning. [Tålig dag](/help/sites-developing/tough-day.md) kan stressa instanserna med en simulerad belastning. Om din testmiljö redan har erfarenhet av tredjepartsverktyg, som Selenium, kan även dessa användas.
 

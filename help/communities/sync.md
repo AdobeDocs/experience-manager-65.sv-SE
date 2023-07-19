@@ -12,9 +12,9 @@ discoiquuid: 97286c2c-f6e3-43ec-b1a9-2abb58616778
 docset: aem65
 role: Admin
 exl-id: ecd30f5d-ad31-4482-96d3-c92f1cf91336
-source-git-commit: 1d334c42088342954feb34f6179dc5b134f81bb8
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '2483'
+source-wordcount: '2482'
 ht-degree: 1%
 
 ---
@@ -53,11 +53,11 @@ Detaljerade stegvisa instruktioner om hur du aktiverar synkronisering i en publi
 
 * **vlt-paket**
 
-   Det är en zip-fil över alla ändringar som gjorts i en utgivare, som måste distribueras mellan olika utgivare. Ändringar på en utgivare genererar händelser som plockas av händelseavlyssnaren för ändring. Detta skapar ett virtuellt paket som innehåller alla ändringar.
+  Det är en zip-fil över alla ändringar som gjorts i en utgivare, som måste distribueras mellan olika utgivare. Ändringar på en utgivare genererar händelser som plockas av händelseavlyssnaren för ändring. Detta skapar ett virtuellt paket som innehåller alla ändringar.
 
 * **distributionspaket**
 
-   Det innehåller distributionsinformation för Sling. Det är information om var innehållet behöver distribueras och när distribuerades det senast.
+  Det innehåller distributionsinformation för Sling. Det är information om var innehållet behöver distribueras och när distribuerades det senast.
 
 ## Vad händer när ... {#what-happens-when}
 
@@ -79,7 +79,7 @@ Som en del av processen replikeras de nya webbplatssidorna till alla publicering
 
 ### Användare eller användargrupper skapas med säkerhetskonsolen {#users-or-user-groups-are-created-using-security-console}
 
-Användardata som skapats i publiceringsmiljön visas inte som avsett i redigeringsmiljön och vice versa.
+Användardata som skapas i publiceringsmiljön visas inte som avsett i redigeringsmiljön och omvänt.
 
 När [Användaradministration och -säkerhet](/help/sites-administering/security.md) konsolen används för att lägga till nya användare i publiceringsmiljön. Om det behövs synkroniseras de nya användarna och deras gruppmedlemskap med andra publiceringsinstanser. Användarsynkronisering synkroniserar även användargrupper som skapats via säkerhetskonsolen.
 
@@ -124,13 +124,14 @@ Så här konfigurerar du synkroniseringsagenter för Apache Sling:
 
    * Välj den befintliga konfiguration som ska öppnas för redigering (pennikon).
 
-      Verifiera namn: **social pubsync.**
+     Verifiera namn: **social pubsync.**
 
    * Välj **Aktiverad** kryssrutan.
    * Välj **Använd flera köer.**
    * Ange **Exporterarslutpunkter** och **Importerarslutpunkter** (du kan lägga till fler slutpunkter för exporterare och importerare).
 
-      Dessa slutpunkter definierar varifrån du vill hämta innehållet och var du vill överföra innehållet. Författaren hämtar innehållet från den angivna exporterarens slutpunkt och skickar innehållet till utgivaren (utom den utgivare som innehållet hämtades från).
+     Dessa slutpunkter definierar varifrån du vill hämta innehållet och var du vill överföra innehållet. Författaren hämtar innehållet från den angivna exporterarens slutpunkt och skickar innehållet till utgivaren (utom den utgivare som innehållet hämtades från).
+
    ![sync-agent-fact](assets/sync-agent-fact.png)
 
 ### Adobe Granite-distribution - krypterad lösenordsleverantör {#adobe-granite-distribution-encrypted-password-transport-secret-provider}
@@ -216,7 +217,7 @@ Så här ändrar du avsökningsintervallet:
 
    * Välj den befintliga konfiguration som ska öppnas för redigering (pennikon).
 
-      Verifiera **social pubsync-schedule-trigger**
+     Verifiera **social pubsync-schedule-trigger**
 
    * Ange intervallet i sekunder till önskat intervall och spara.
 

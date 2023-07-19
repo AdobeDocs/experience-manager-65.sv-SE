@@ -10,9 +10,9 @@ topic-tags: site-features
 content-type: reference
 discoiquuid: fabaa3e8-1657-4ed4-abb2-990117bec39c
 exl-id: 8f11f5de-f5af-4ce7-a448-2b4299de2930
-source-git-commit: 785d4897263bfeae6a0cd235abca3c96f2231392
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '348'
+source-wordcount: '351'
 ht-degree: 0%
 
 ---
@@ -40,7 +40,7 @@ Ni kan effektivt skapa innehåll för multinationella och flerspråkiga webbplat
 * Använd [Multi Site Manager](/help/sites-administering/msm.md) till:
 
    * Återanvänd innehåll från den överordnad sajten och översättningarna för att skapa sajter för andra länder och kulturer.
-   * Se till att begränsa användningen av Multi Site Manager till innehåll på ett språk, t.ex. engelska överordnad -> engelska språkgrenar på landsplatser, franska överordnad -> franska språkgrenar på landsplatser.
+   * Se till att begränsa användningen av Multi Site Manager till innehåll på ett språk, till exempel engelska överordnad -> engelska språkgrenar på landsplatser, franska överordnad -> franska språkgrenar på landsplatser.
    * Om det behövs frigör du element från live-kopiorna för att lägga till lokaliseringsinformation.
 
 I följande diagram visas hur huvudbegreppen överlappar (men inte alla nivåer/element som berörs):
@@ -51,7 +51,7 @@ I följande diagram visas hur huvudbegreppen överlappar (men inte alla nivåer/
 >
 >I detta fall, och på liknande sätt, hanterar inte MSM de olika språkversionerna som sådana.
 >
->* [MSM](/help/sites-administering/msm.md) hanterar distributionen av översatt innehåll från en plan (t.ex. en global överordnad) till live-kopior (t.ex. lokala webbplatser) inom ett språks gränser.
+>* [MSM](/help/sites-administering/msm.md) hanterar distributionen av översatt innehåll från en plan (t.ex. en global överordnad) till live-kopior (t.ex. lokala platser) inom ett språks gränser.
 >* The [översättning](/help/sites-administering/translation.md) integreringsfunktionerna i AEM, tillsammans med översättningshanteringstjänster från tredje part, hanterar språken och översätter innehåll till dessa olika språk.
 >
 >För mer avancerade användningsområden kan MSM användas även av flerspråkiga mallsidor.

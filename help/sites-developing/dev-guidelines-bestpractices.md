@@ -10,9 +10,9 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: b4cf0ffc-973a-473b-80c8-7f530d111435
 exl-id: 8eef7e4d-a6f2-4b87-a995-0761447283c6
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '1091'
+source-wordcount: '1093'
 ht-degree: 0%
 
 ---
@@ -62,7 +62,7 @@ Till exempel:
 
 * [Anpassa en komponent](/help/sites-developing/components.md)
 
-   Detta innebar att en komponentdefinition skulle ersättas:
+  Detta innebar att en komponentdefinition skulle ersättas:
 
    * Skapa en ny komponentmapp i `/apps/<website-name>/components/<MyComponent>` genom att kopiera en befintlig komponent:
 
@@ -73,7 +73,7 @@ Till exempel:
 
 * [Anpassa sidor som visas av felhanteraren](/help/sites-developing/customizing-errorhandler-pages.md#how-to-customize-pages-shown-by-the-error-handler)
 
-   Det här fallet handlar om att täcka över en serverdel:
+  Det här fallet handlar om att täcka över en serverdel:
 
    * Kopiera standardskripten i databasen:
 
@@ -91,7 +91,6 @@ Till exempel:
 >1. kopiera objektet i `/libs` till `/apps`
 >1. gör ändringar i `/apps`
 
-
 ## När JCR-frågor ska användas och när de inte ska användas {#when-to-use-jcr-queries-and-when-not-to-use-them}
 
 JCR-frågor är ett kraftfullt verktyg när de används på rätt sätt. De är lämpliga för
@@ -99,7 +98,7 @@ JCR-frågor är ett kraftfullt verktyg när de används på rätt sätt. De är 
 * riktiga slutanvändarfrågor, t.ex. fulltextsökningar i innehåll.
 * tillfällen då strukturerat innehåll måste hittas i hela databasen.
 
-   I sådana fall ska du se till att frågor endast körs när det är absolut nödvändigt, t.ex. vid komponentaktivering eller cacheogiltigförklaring (till skillnad från t.ex. arbetsflödessteg, händelsehanterare som utlöser vid innehållsändringar, filter etc.).
+  I sådana fall ska du se till att frågor endast körs när det är absolut nödvändigt, till exempel vid komponentaktivering eller cacheogiltigförklaring (till skillnad från till exempel Arbetsflödessteg, Händelsehanterare som utlöser vid innehållsändringar, filter etc.).
 
 JCR-frågor ska aldrig användas för renderingsbegäranden. JCR-frågor passar till exempel inte för
 
@@ -112,6 +111,7 @@ Använd navigeringsåtkomst till innehållsträdet i stället för att utföra e
 >[!NOTE]
 >
 >Om du använder [Query Builder](/help/sites-developing/querybuilder-api.md)använder du JCR-frågor när Query Builder genererar JCR-frågor under huven.
+>
 
 ## Säkerhetsaspekter {#security-considerations}
 

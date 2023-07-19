@@ -12,9 +12,9 @@ discoiquuid: 6bcf0fcc-481a-4283-b30d-80b517701280
 docset: aem65
 feature: Multi Site Manager
 exl-id: ac24b8b4-b3ed-47fa-9a73-03f0c9e68ac8
-source-git-commit: 785d4897263bfeae6a0cd235abca3c96f2231392
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '2702'
+source-wordcount: '2701'
 ht-degree: 0%
 
 ---
@@ -88,7 +88,7 @@ I följande tabell visas de utrullningskonfigurationer som har installerats med 
   </tr>
   <tr>
    <td>Skjut på ändring (grund)</td>
-   <td><p>Överför innehåll till live-kopian när ritningssidan ändras, utan att uppdatera referenser (t.ex. för tunna kopior).</p> <p>Använd den här utrullningskonfigurationen sparsamt när den använder utlösaren Vid ändring.</p> </td>
+   <td><p>Flyttar innehåll till live-kopian när ritningssidan ändras, utan att uppdatera referenser (till exempel för tunna kopior).</p> <p>Använd den här utrullningskonfigurationen sparsamt när den använder utlösaren Vid ändring.</p> </td>
    <td>Vid ändring</td>
    <td>contentUpdate<br /> contentCopy<br /> contentDelete<br /> orderChildren</td>
   </tr>

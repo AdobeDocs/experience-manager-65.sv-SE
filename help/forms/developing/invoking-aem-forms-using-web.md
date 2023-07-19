@@ -11,9 +11,9 @@ topic-tags: coding
 discoiquuid: d5722281-bea9-4fc7-abdc-e678899e0a15
 role: Developer
 exl-id: 3139564f-9346-4933-8e39-2e1642bff097
-source-git-commit: 135f50cc80f8bb449b2f1621db5e2564f5075968
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '9905'
+source-wordcount: '9902'
 ht-degree: 0%
 
 ---
@@ -231,7 +231,7 @@ Tilldela värden till fält som tillhör `BLOB` förekomst enligt följande:
 
    * Tjänstens SOAP-slutpunktsparameter Standardprotokoll för utdatablobjekt anges till Smart.
 
-      För varje tjänst med en SOAP-slutpunkt kan du med administrationskonsolen ange överföringsprotokoll för returnerade bloggar. (Se [administrationshjälp](https://www.adobe.com/go/learn_aemforms_admin_63).)
+     För varje tjänst med en SOAP-slutpunkt kan du med administrationskonsolen ange överföringsprotokoll för returnerade bloggar. (Se [administrationshjälp](https://www.adobe.com/go/learn_aemforms_admin_63).)
 
    * AEM Forms-tjänsten tar ett eller flera dokument som indata.
 
@@ -685,7 +685,7 @@ Du kan anropa en AEM Forms-tjänst med hjälp av Java-proxyklasser och Base64. S
 
    * Tilldela WSDL-slutpunkten och kodningstypen till `javax.xml.ws.BindingProvider` objektets `ENDPOINT_ADDRESS_PROPERTY` fält. Så här anropar du `MyApplication/EncryptDocument` tjänst med Base64-kodning, ange följande URL-värde:
 
-      `https://hiro-xp:8080/soap/services/MyApplication/EncryptDocument?blob=base64`
+     `https://hiro-xp:8080/soap/services/MyApplication/EncryptDocument?blob=base64`
 
    * Tilldela AEM formuläranvändare till `javax.xml.ws.BindingProvider` objektets `USERNAME_PROPERTY` fält.
    * Tilldela motsvarande lösenordsvärde till `javax.xml.ws.BindingProvider` objektets `PASSWORD_PROPERTY` fält.
@@ -880,7 +880,7 @@ Så här anropar du `MyApplication/EncryptDocument` utför följande steg med Ja
 
    * Tilldela WSDL-slutpunkten och kodningstypen till `javax.xml.ws.BindingProvider` objektets `ENDPOINT_ADDRESS_PROPERTY` fält. Så här anropar du `MyApplication/EncryptDocument` med SwaRef-kodning anger du följande URL-värde:
 
-      ` https://hiro-xp:8080/soap/services/MyApplication/EncryptDocument?blob=swaref`
+     ` https://hiro-xp:8080/soap/services/MyApplication/EncryptDocument?blob=swaref`
 
    * Tilldela AEM formuläranvändare till `javax.xml.ws.BindingProvider` objektets `USERNAME_PROPERTY` fält.
    * Tilldela motsvarande lösenordsvärde till `javax.xml.ws.BindingProvider` objektets `PASSWORD_PROPERTY` fält.
@@ -1003,7 +1003,7 @@ Du kan anropa en AEM Forms-tjänst med hjälp av Java-proxyklasser och BLOB-data
 
    * Tilldela WSDL-slutpunkten och kodningstypen till `javax.xml.ws.BindingProvider` objektets `ENDPOINT_ADDRESS_PROPERTY` fält. Så här anropar du `MyApplication/EncryptDocument` genom att använda BLOB över HTTP-kodning anger du följande URL-värde:
 
-      `https://hiro-xp:8080/soap/services/MyApplication/EncryptDocument?blob=http`
+     `https://hiro-xp:8080/soap/services/MyApplication/EncryptDocument?blob=http`
 
    * Tilldela AEM formuläranvändare till `javax.xml.ws.BindingProvider` objektets `USERNAME_PROPERTY` fält.
    * Tilldela motsvarande lösenordsvärde till `javax.xml.ws.BindingProvider` objektets `PASSWORD_PROPERTY` fält.

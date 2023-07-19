@@ -10,9 +10,9 @@ topic-tags: personalization
 content-type: reference
 discoiquuid: 03ebc494-8baa-4741-b8de-dac5ace743c8
 exl-id: 3a550a33-b54b-4217-b9a6-b5a7971276ee
-source-git-commit: d6b595b6b5477b5cad662e219f1abd483491897f
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '1686'
+source-wordcount: '1687'
 ht-degree: 0%
 
 ---
@@ -69,7 +69,7 @@ Personalisering kan användas i många fall, till exempel:
 
 * Användarna måste logga in för att kunna godkänna. Detta kommer att kopplas till en profil som tillhandahåller den information som krävs för personalisering. möjliga detaljer som plats, relation till produkten, användningshistorik, budgeteringsansvar osv.
 * Sådana instanser kan variera mellan webbplatser som:
-* Företag som tillhandahåller webbplatser till en mycket specialiserad del av sin marknad, t.ex. ett läkemedelsföretag som tillhandahåller en specialiserad webbplats för läkare.
+* Företag som tillhandahåller webbplatser till en mycket specialiserad del av sin marknad, till exempel ett läkemedelsföretag som tillhandahåller en specialiserad webbplats för läkare.
 * Företag som tillhandahåller webbplatser som gör det möjligt för sina kunder att se aktuell konto- och faktureringsinformation. till exempel telefonleverantörer.
 
 ### Försäljnings- och distributionswebbplats {#sales-site}
@@ -138,7 +138,7 @@ Personalisering i sig skapar inte någon form av åtkomstkontroll. Det är helt 
 
 Det finns olika komponenter med AEM för personalisering. Vissa tillåter användare att logga in och redigera sina profiler, andra (som Mina gadgets) tillåter användarna att konfigurera en viss sida:
 
-| Title in Sidekick | Syfte |
+| Titel i Sidekick | Syfte |
 |---|---|
 | Kontrollerat lösenordsfält | Begär lösenord och bekräftelse av lösenord. |
 | Kombinerad inloggningsregistrering | Låter användaren antingen logga in på ett befintligt konto eller registrera sig för ett nytt konto. |

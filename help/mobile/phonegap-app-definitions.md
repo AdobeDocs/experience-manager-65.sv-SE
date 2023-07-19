@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: authoring-adobe-phonegap-enterprise
 discoiquuid: 860dde0b-7cb4-4668-9fac-6f954f1ec0a7
 exl-id: 4c1c44fd-e685-462c-83a0-3cd2f74ab5c7
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '227'
+source-wordcount: '228'
 ht-degree: 1%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->Adobe rekommenderar att du använder SPA Editor för projekt som kräver ramverksbaserad klientåtergivning för en sida (t.ex. Reagera). [Läs mer](/help/sites-developing/spa-overview.md).
+>Adobe rekommenderar att du använder SPA Editor för projekt som kräver ramverksbaserad klientåtergivning för en sida (till exempel React). [Läs mer](/help/sites-developing/spa-overview.md).
 
 Appdefinitioner är ett sätt att identifiera vilka utrymmen och andra konfigurationer som är lämpliga för appen. Med appdefinitioner kan användaren lägga till utrymme utan att behöva kompilera om programmet. Programdefinitionen uppdateras och innehåller information om nya mellanslag.
 

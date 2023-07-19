@@ -2,10 +2,10 @@
 title: En snabbguide till WCAG 2.1
 description: En snabbguide till WCAG 2.1
 exl-id: 9cd37f5a-ff59-4617-a0f3-cd8994fbf4ab
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '1770'
-ht-degree: 99%
+source-wordcount: '1772'
+ht-degree: 97%
 
 ---
 
@@ -42,8 +42,7 @@ Det vill säga riktlinjer som kan tillämpas på en rad olika format för webbin
 Varje riktlinje är skriven på ett sådant sätt att den kan testas objektivt för att säkerställa att en allmän grupp tillgänglighetsexperter håller med om att riktlinjen har följts. En av utmaningarna med riktlinjerna för tillgänglighet är att vissa kan testas tekniskt medan andra kräver en mänsklig bedömning för att avgöra om riktlinjerna har följts eller inte.
 
 * Stöd för **prioriterad och sammanhangsbaserad implementering:**
-Riktlinjer för WCAG 2.1 är prioriteringar som rör den troliga effekten av att inte följa en riktlinje för en viss grupp användare med funktionshinder. Detta gör det möjligt för författare att fatta ett välgrundat beslut om de viktigaste riktlinjerna för sin särskilda situation. Dessutom introduceras begreppet 
-*tillgänglighet som stöds*. Detta gör att författare kan fatta beslut om hur de bäst använder webbtekniker som kanske inte har fullständigt stöd för tillgänglighet eller som kan kräva att användarna har särskilda hjälpmedelstekniker och/eller webbläsare för att kunna utnyttja tillgänglighetsfunktionerna.
+Riktlinjer för WCAG 2.1 är prioriteringar som rör den troliga effekten av att inte följa en riktlinje för en viss grupp användare med funktionshinder. Detta gör det möjligt för författare att fatta ett välgrundat beslut om de viktigaste riktlinjerna för sin särskilda situation. Dessutom introduceras begreppet *tillgänglighet som stöds*. Detta gör att författare kan fatta beslut om hur de bäst använder webbtekniker som kanske inte har fullständigt stöd för tillgänglighet eller som kan kräva att användarna har särskilda hjälpmedelstekniker och/eller webbläsare för att kunna utnyttja tillgänglighetsfunktionerna.
 
 Dessa mål har i hög grad påverkat strukturen i WCAG 2.1.
 
@@ -104,7 +103,7 @@ Techniques for WCAG 2.1 finns på sidan [Techniques for WCAG 2.1](https://www.w3
 
 **Tekniker** utgör nivån under framgångskriterierna i WCAG 2.1-hierarkin. De klassas av WAI som informativa, inte normativa. En specifik teknik behöver alltså inte följas för att en resurs ska uppfylla kraven i WCAG 2.1.
 
-Eftersom tekniker är mycket mer specifika än framgångskriterier avser de vanligtvis en viss teknologi eller innehållstyp (t.ex. HTML eller video) eller en situation (t.ex. e-handel eller e-utbildningsprogramvara). Du kan tänka på tekniker som beprövade exempel på hur specifika riktlinjer och framgångskriterier kan uppfyllas, därför är de till stor hjälp för författare och utvecklare som arbetar i särskilda sammanhang.
+Eftersom tekniker är mycket mer specifika än framgångskriterier avser de vanligtvis en viss teknik eller innehållstyp (till exempel HTML eller video), eller en situation (till exempel e-handel eller e-utbildningsprogram). Du kan tänka på tekniker som beprövade exempel på hur specifika riktlinjer och framgångskriterier kan uppfyllas, därför är de till stor hjälp för författare och utvecklare som arbetar i särskilda sammanhang.
 
 Du kan komma åt tekniker:
 

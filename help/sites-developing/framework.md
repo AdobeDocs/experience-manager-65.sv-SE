@@ -8,9 +8,9 @@ content-type: reference
 docset: aem65
 feature: Tagging
 exl-id: 53a37449-ef87-4fa6-82de-88fdc24cf988
-source-git-commit: 8dafa901bc628ee5e4823e9f8811bf4d09b7e072
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '1642'
+source-wordcount: '1645'
 ht-degree: 0%
 
 ---
@@ -76,7 +76,7 @@ I AEM är bassökvägen `/content/cq:tags` och rotnoden är av typen `cq:Folder`
 
 ### Namnutrymme för tagg {#tag-namespace}
 
-Med namnutrymmen kan du gruppera saker. Det vanligaste användningsexemplet är ett namnutrymme per webbplats (t.ex. public, internal och portal) eller per större program (t.ex. WCM, Assets, Communities). Men namnutrymmen kan användas för olika behov. Namnutrymmen används i användargränssnittet för att endast visa deluppsättningen taggar (d.v.s. taggar för ett visst namnutrymme) som är tillämpliga för det aktuella innehållet.
+Med namnutrymmen kan du gruppera saker. Det vanligaste användningsexemplet är ett namnutrymme per webbplats (till exempel public, internal och portal) eller per större program (till exempel WCM, Assets, Communities). Men namnutrymmen kan användas för olika behov. Namnutrymmen används i användargränssnittet för att endast visa deluppsättningen taggar (d.v.s. taggar för ett visst namnutrymme) som är tillämpliga för det aktuella innehållet.
 
 Taggens namnutrymme är den första nivån i taxonomiunderträdet, som är noden direkt under [taxonomirotnod](#taxonomy-root-node). Ett namnutrymme är en nod av typen `cq:Tag` vars överordnade inte är en `cq:Tag` nodtyp.
 

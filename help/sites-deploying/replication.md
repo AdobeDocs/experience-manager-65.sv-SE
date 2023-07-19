@@ -12,7 +12,7 @@ discoiquuid: 3cae081e-93e3-4317-b307-1316283c307a
 docset: aem65
 feature: Configuring
 exl-id: 09943de5-8d62-4354-a37f-0521a66b4c49
-source-git-commit: 840ea373537799af995c3b8ce0c8bf575752775b
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
 source-wordcount: '3416'
 ht-degree: 0%
@@ -100,8 +100,7 @@ Den här replikeringen utförs från redigeringsmiljön av:
 * **Standardagent (publicera)**
 Den här agenten replikerar innehåll till standardpubliceringsinstansen.
 Information om detta (konfiguration och loggar) finns på verktygskonsolen i författarmiljön. eller:
-
-   `https://localhost:4502/etc/replication/agents.author/publish.html`.
+  `https://localhost:4502/etc/replication/agents.author/publish.html`.
 
 #### Replikeringsagenter - utanför lådan {#replication-agents-out-of-the-box}
 
@@ -127,17 +126,17 @@ När du konfigurerar en replikeringsagent från verktygskonsolen är fyra flikar
 
 * **Namn**
 
-   Ett unikt namn för replikeringsagenten.
+  Ett unikt namn för replikeringsagenten.
 
 * **Beskrivning**
 
-   En beskrivning av syftet med den här replikeringsagenten.
+  En beskrivning av syftet med den här replikeringsagenten.
 
 * **Aktiverad**
 
-   Anger om replikeringsagenten är aktiverad.
+  Anger om replikeringsagenten är aktiverad.
 
-   När agenten är **aktiverad** Kön visas som:
+  När agenten är **aktiverad** Kön visas som:
 
    * **Aktiv** när objekt bearbetas.
    * **Ledig** när kön är tom.
@@ -145,94 +144,94 @@ När du konfigurerar en replikeringsagent från verktygskonsolen är fyra flikar
 
 * **Serialiseringstyp**
 
-   Typ av serialisering:
+  Typ av serialisering:
 
    * **Standard**: Ange om agenten ska väljas automatiskt.
    * **Dispatcher Flush**: Välj det här alternativet om agenten ska användas för att tömma dispatchercachen.
 
 * **Återförsöksfördröjning**
 
-   Fördröjningen (i millisekunder) mellan två försök om ett problem skulle uppstå.
+  Fördröjningen (i millisekunder) mellan två försök om ett problem skulle uppstå.
 
-   Standard: `60000`
+  Standard: `60000`
 
 * **Användar-ID för agent**
 
-   Beroende på miljön kommer agenten att använda det här användarkontot för att:
+  Beroende på miljön kommer agenten att använda det här användarkontot för att:
 
    * samla in och paketera innehåll från författarmiljön
    * skapa och skriva innehåll i publiceringsmiljön
 
-   Lämna det här fältet tomt om du vill använda systemanvändarkontot (det konto som definierats i sling som administratörsanvändare). som standard är detta `admin`).
+  Lämna det här fältet tomt om du vill använda systemanvändarkontot (det konto som definierats i sling som administratörsanvändare). som standard är detta `admin`).
 
-   >[!CAUTION]
-   >
-   >För en agent i författarmiljön är det här kontot *måste* har läsåtkomst till alla sökvägar som du vill ha replikerade.
+  >[!CAUTION]
+  >
+  >För en agent i författarmiljön är det här kontot *måste* har läsåtkomst till alla sökvägar som du vill ha replikerade.
 
-   >[!CAUTION]
-   >
-   >För en agent i publiceringsmiljön är det här kontot *måste* har den behörighet att skapa/skriva som krävs för att replikera innehållet.
+  >[!CAUTION]
+  >
+  >För en agent i publiceringsmiljön är det här kontot *måste* har den behörighet att skapa/skriva som krävs för att replikera innehållet.
 
-   >[!NOTE]
-   >
-   >Detta kan användas som en mekanism för att välja specifikt innehåll för replikering.
+  >[!NOTE]
+  >
+  >Detta kan användas som en mekanism för att välja specifikt innehåll för replikering.
 
 * **Loggnivå**
 
-   Anger den detaljnivå som ska användas för loggmeddelanden.
+  Anger den detaljnivå som ska användas för loggmeddelanden.
 
    * `Error`: endast fel loggas
    * `Info`: fel, varningar och andra informationsmeddelanden loggas
    * `Debug`: en hög detaljnivå kommer att användas i meddelandena, främst i felsökningssyfte
 
-   Standard: `Info`
+  Standard: `Info`
 
 * **Använd för omvänd replikering**
 
-   Anger om agenten ska användas för omvänd replikering. returnerar användarindata från publicerings- till författarmiljön.
+  Anger om agenten ska användas för omvänd replikering. returnerar användarindata från publicerings- till författarmiljön.
 
 * **Aliasuppdatering**
 
-   Om du väljer det här alternativet aktiveras ogiltiga aliassökvägar eller ogiltiga sökvägar för Dispatcher. Se även [Konfigurera en agent för utskickstömning](/help/sites-deploying/replication.md#configuring-a-dispatcher-flush-agent).
+  Om du väljer det här alternativet aktiveras ogiltiga aliassökvägar eller ogiltiga sökvägar för Dispatcher. Se även [Konfigurera en agent för utskickstömning](/help/sites-deploying/replication.md#configuring-a-dispatcher-flush-agent).
 
 #### Transport {#transport}
 
 * **URI**
 
-   Detta anger den mottagande servern på målplatsen. Du kan särskilt ange värdnamnet (eller aliaset) och kontextsökvägen till målinstansen här.
+  Detta anger den mottagande servern på målplatsen. Du kan särskilt ange värdnamnet (eller aliaset) och kontextsökvägen till målinstansen här.
 
-   Till exempel:
+  Till exempel:
 
    * En standardagent kan replikeras till `https://localhost:4503/bin/receive`
    * En agent för utskickstömning kan replikeras till `https://localhost:8000/dispatcher/invalidate.cache`
 
-   Det protokoll som anges här (HTTP eller HTTPS) avgör transportmetoden.
+  Det protokoll som anges här (HTTP eller HTTPS) avgör transportmetoden.
 
-   För Dispatcher Flush-agenter används URI-egenskapen endast om du använder sökvägsbaserade virtualhost-poster för att skilja mellan grupper, använder du det här fältet för att göra gruppen ogiltig. Servergrupp #1 har till exempel en virtuell värd för `www.mysite.com/path1/*` och grupp 2 har en virtuell värd för `www.mysite.com/path2/*`. Du kan använda en URL med `/path1/invalidate.cache` för att rikta in sig på den första gården och `/path2/invalidate.cache` för den andra gruppen.
+  För Dispatcher Flush-agenter används URI-egenskapen endast om du använder sökvägsbaserade virtualhost-poster för att skilja mellan grupper, använder du det här fältet för att göra gruppen ogiltig. Servergrupp #1 har till exempel en virtuell värd för `www.mysite.com/path1/*` och grupp 2 har en virtuell värd för `www.mysite.com/path2/*`. Du kan använda en URL med `/path1/invalidate.cache` för att rikta in sig på den första gården och `/path2/invalidate.cache` för den andra gruppen.
 
 * **Användare**
 
-   Användarnamn för kontot som ska användas för att komma åt målet.
+  Användarnamn för kontot som ska användas för att komma åt målet.
 
 * **Lösenord**
 
-   Lösenord för kontot som ska användas för att komma åt målet.
+  Lösenord för kontot som ska användas för att komma åt målet.
 
 * **NTLM-domän**
 
-   Domän för NTML-autentisering.
+  Domän för NTML-autentisering.
 
 * **NTLM-värd**
 
-   Värd för NTML-autentisering.
+  Värd för NTML-autentisering.
 
 * **Aktivera relaxerad SSL**
 
-   Aktivera om du vill att självcertifierade SSL-certifikat ska godkännas.
+  Aktivera om du vill att självcertifierade SSL-certifikat ska godkännas.
 
 * **Tillåt utgångna certifikat**
 
-   Aktivera om du vill att utgångna SSL-certifikat ska godkännas.
+  Aktivera om du vill att utgångna SSL-certifikat ska godkännas.
 
 #### Proxy {#proxy}
 
@@ -240,80 +239,80 @@ Följande inställningar behövs bara om en proxy behövs:
 
 * **Proxyvärd**
 
-   Värdnamn för proxyn som används för transport.
+  Värdnamn för proxyn som används för transport.
 
 * **Proxyport**
 
-   Proxyns port.
+  Proxyns port.
 
 * **Proxyanvändare**
 
-   Användarnamn för kontot som ska användas.
+  Användarnamn för kontot som ska användas.
 
 * **Proxylösenord**
 
-   Lösenord för kontot som ska användas.
+  Lösenord för kontot som ska användas.
 
 * **Proxy NTLM-domän**
 
-   NTLM-proxydomänen.
+  NTLM-proxydomänen.
 
 * **Proxy NTLM-värd**
 
-   NTLM-proxydomänen.
+  NTLM-proxydomänen.
 
 #### Utökad {#extended}
 
 * **Gränssnitt**
 
-   Här kan du definiera socketgränssnittet som du vill binda till.
+  Här kan du definiera socketgränssnittet som du vill binda till.
 
-   Detta anger den lokala adress som ska användas när anslutningar skapas. Om detta inte anges används standardadressen. Detta är användbart när du vill ange vilket gränssnitt som ska användas på system med flera hem eller kluster.
+  Detta anger den lokala adress som ska användas när anslutningar skapas. Om detta inte anges används standardadressen. Detta är användbart när du vill ange vilket gränssnitt som ska användas på system med flera hem eller kluster.
 
 * **HTTP-metod**
 
-   HTTP-metoden som ska användas.
+  HTTP-metoden som ska användas.
 
-   För en Dispatcher Flush-agent är detta nästan alltid GET och bör inte ändras (POSTEN skulle vara ett annat möjligt värde).
+  För en Dispatcher Flush-agent är detta nästan alltid GET och bör inte ändras (POSTEN skulle vara ett annat möjligt värde).
 
 * **HTTP-huvuden**
 
-   Dessa används för Dispatcher Flush-agenter och anger element som måste tömmas.
+  Dessa används för Dispatcher Flush-agenter och anger element som måste tömmas.
 
-   För en Dispatcher Flush-agent behöver de tre standardposterna inte ändras:
+  För en Dispatcher Flush-agent behöver de tre standardposterna inte ändras:
 
    * `CQ-Action:{action}`
    * `CQ-Handle:{path}`
    * `CQ-Path:{path}`
 
-   Dessa används, beroende på vad som är lämpligt, för att ange vilken åtgärd som ska användas när handtaget eller banan töms. Underparametrarna är dynamiska:
+  Dessa används, beroende på vad som är lämpligt, för att ange vilken åtgärd som ska användas när handtaget eller banan töms. Underparametrarna är dynamiska:
 
    * `{action}` anger en replikeringsåtgärd
 
    * `{path}` anger en bana
 
-   De ersätts av den sökväg/åtgärd som är relevant för begäran och behöver därför inte&quot;hårdkodas&quot;:
+  De ersätts av den sökväg/åtgärd som är relevant för begäran och behöver därför inte&quot;hårdkodas&quot;:
 
-   >[!NOTE]
-   >
-   >Om du har installerat AEM i en annan kontext än den rekommenderade måste du registrera kontexten i HTTP-rubrikerna. Till exempel:
-   >`CQ-Handle:/<*yourContext*>{path}`
+  >[!NOTE]
+  >
+  >Om du har installerat AEM i en annan kontext än den rekommenderade måste du registrera kontexten i HTTP-rubrikerna. Till exempel:
+  >`CQ-Handle:/<*yourContext*>{path}`
 
 * **Stäng anslutning**
 
-   Aktivera för att stänga anslutningen efter varje begäran.
+  Aktivera för att stänga anslutningen efter varje begäran.
 
 * **Timeout för anslutning**
 
-   Timeout (i millisekunder) som ska användas vid försök att upprätta en anslutning.
+  Timeout (i millisekunder) som ska användas vid försök att upprätta en anslutning.
 
 * **Tidsgräns för socket**
 
-   Timeout (i millisekunder) som ska användas vid väntan på trafik efter att en anslutning har upprättats.
+  Timeout (i millisekunder) som ska användas vid väntan på trafik efter att en anslutning har upprättats.
 
 * **Protokollversion**
 
-   Protokollets version. till exempel `1.0` för HTTP/1.0.
+  Protokollets version. till exempel `1.0` för HTTP/1.0.
 
 #### Utlösare {#triggers}
 
@@ -321,31 +320,31 @@ De här inställningarna används för att definiera utlösare för automatisera
 
 * **Ignorera standard**
 
-   Om du markerar detta utesluts agenten från standardreplikering. Detta innebär att det inte kommer att användas om en innehållsförfattare utfärdar en replikeringsåtgärd.
+  Om du markerar detta utesluts agenten från standardreplikering. Detta innebär att det inte kommer att användas om en innehållsförfattare utfärdar en replikeringsåtgärd.
 
 * **Vid ändring**
 
-   Här aktiveras en replikering från den här agenten automatiskt när en sida ändras. Detta används främst för Dispatcher Flush-agenter, men även för omvänd replikering.
+  Här aktiveras en replikering från den här agenten automatiskt när en sida ändras. Detta används främst för Dispatcher Flush-agenter, men även för omvänd replikering.
 
 * **Vid distribution**
 
-   Om det här alternativet är markerat kopieras automatiskt allt innehåll som är markerat för distribution när det ändras.
+  Om det här alternativet är markerat kopieras automatiskt allt innehåll som är markerat för distribution när det ändras.
 
 * **On-/Offtime uppnådd**
 
-   Detta startar automatisk replikering (för att aktivera eller inaktivera en sida efter behov) när de tider eller offtider som har definierats för en sida inträffar. Detta används främst för Dispatcher Flush-agenter.
+  Detta startar automatisk replikering (för att aktivera eller inaktivera en sida efter behov) när de tider eller offtider som har definierats för en sida inträffar. Detta används främst för Dispatcher Flush-agenter.
 
 * **Vid mottagning**
 
-   Om det här alternativet är markerat kommer agenten att kedja replikeringen när den tar emot replikeringshändelser.
+  Om det här alternativet är markerat kommer agenten att kedja replikeringen när den tar emot replikeringshändelser.
 
 * **Ingen statusuppdatering**
 
-   När det här alternativet är markerat framtvingar agenten ingen uppdatering av replikeringsstatusen.
+  När det här alternativet är markerat framtvingar agenten ingen uppdatering av replikeringsstatusen.
 
 * **Ingen versionshantering**
 
-   När det här alternativet är markerat framtvingar agenten inte versionshantering av aktiverade sidor.
+  När det här alternativet är markerat framtvingar agenten inte versionshantering av aktiverade sidor.
 
 ## Konfigurera replikeringsagenter {#configuring-your-replication-agents}
 
@@ -358,6 +357,7 @@ På fliken Verktyg i redigeringsmiljön kan du konfigurera replikeringsagenter s
 >[!NOTE]
 >
 >När en dispatcher hanterar HTTP-begäranden för författare- eller publiceringsinstanser måste HTTP-begäran från replikeringsagenten innehålla PATH-huvudet. Utöver följande procedur måste du lägga till PATH-huvudet i avsändarlistan med klientrubriker. (Se [/clientheaders (klientrubriker)](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html#specifying-the-http-headers-to-pass-through-clientheaders).
+>
 
 1. Öppna **verktyg** AEM.
 1. Klicka **Replikering** (vänster ruta för att öppna mappen).
@@ -429,14 +429,14 @@ Så här konfigurerar du replikering av innehåll för ytterligare en publicerin
       * Ange **Återförsöksfördröjning** till `60000`.
 
       * Lämna **Serialiseringstyp** as `Default`.
+
    * I **Transport** tab:
 
       * Ange den URI som krävs för den nya publiceringsinstansen. till exempel
-         `https://localhost:4504/bin/receive`.
+        `https://localhost:4504/bin/receive`.
 
       * Ange det platsspecifika användarkonto som används för replikering.
       * Du kan konfigurera andra parametrar efter behov.
-
 
 1. Klicka **OK** för att spara inställningarna.
 
@@ -453,9 +453,7 @@ Om du får problem kan du kontrollera loggarna på författarinstansen. Beroende
 >1. Konfigurera en replikeringsagent för replikering till den publiceringsmiljön.
 >1. Konfigurera ett användarkonto; med de åtkomsträttigheter som krävs för att läsa det innehåll som ska replikeras till den specifika publiceringsmiljön.
 >1. Tilldela användarkontot som **Användar-ID för agent** för replikeringsagenten.
-
 >
-
 
 ### Konfigurera en agent för utskickstömning {#configuring-a-dispatcher-flush-agent}
 
@@ -474,10 +472,11 @@ Standardagenter ingår i installationen. Men en viss konfiguration behövs fortf
       * Lämna **Serialiseringstyp** as `Dispatcher Flush`eller ange det som en sådan om du skapar en ny agent.
 
       * (valfritt) Välj **Aliasuppdatering** om du vill aktivera aliasbegäran eller ogiltighetsbegäran för ogiltighetssökvägen till Dispatcher.
+
    * I **Transport** tab:
 
       * Ange den URI som krävs för den nya publiceringsinstansen. till exempel
-         `https://localhost:80/dispatcher/invalidate.cache`.
+        `https://localhost:80/dispatcher/invalidate.cache`.
 
       * Ange det platsspecifika användarkonto som används för replikering.
       * Du kan konfigurera andra parametrar efter behov.
@@ -499,7 +498,7 @@ The **Dispatcher Flush** replikeringsagenten är inte aktiv på författaren. Du
 
 >[!NOTE]
 >
->Om du anger sådana behörigheter påverkas inte användare som replikerar innehåll (t.ex. från webbplatskonsolen eller sidosparsalternativet). Replikeringsramverket använder inte den aktuella användarens användarsession för att komma åt replikeringsagenter när sidor replikeras.
+>Inställningen påverkar inte användare som replikerar innehåll (t.ex. från webbplatskonsolen eller sidosparsalternativet). Replikeringsramverket använder inte den aktuella användarens användarsession för att komma åt replikeringsagenter när sidor replikeras.
 
 ### Konfigurera dina replikeringsagenter från CRXDE Lite {#configuring-your-replication-agents-from-crxde-lite}
 

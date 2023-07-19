@@ -12,9 +12,9 @@ discoiquuid: c061b358-8c0d-40d3-8090-dc9800309ab3
 docset: aem65
 exl-id: 89f55598-e749-42b8-8f2a-496f45face66
 feature: Security
-source-git-commit: f0acb130e1c68b927356c4e0ea625bbd88a6fc19
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '2527'
+source-wordcount: '2526'
 ht-degree: 1%
 
 ---
@@ -404,7 +404,7 @@ När topologin är en [publicera servergrupp](/help/sites-deploying/recommended-
 
 ### Användare eller användargrupper skapas med säkerhetskonsolen {#users-or-user-groups-are-created-using-security-console}
 
-Användardata som skapats i publiceringsmiljön visas inte som avsett i redigeringsmiljön och vice versa.
+Användardata som skapas i publiceringsmiljön visas inte som avsett i redigeringsmiljön och omvänt.
 
 När [Användaradministration och -säkerhet](/help/sites-administering/security.md) konsolen används för att lägga till nya användare i publiceringsmiljön. Om det behövs synkroniseras de nya användarna och deras gruppmedlemskap med andra publiceringsinstanser. Användarsynkronisering synkroniserar även användargrupper som skapats via säkerhetskonsolen.
 

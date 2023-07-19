@@ -2,9 +2,9 @@
 title: Hur konfigurerar och felsöker man ett AEM Forms på JEE-serverkluster?
 description: Lär dig hur du konfigurerar och felsöker ett AEM Forms på JEE-serverkluster
 exl-id: 230fc2f1-e6e5-4622-9950-dae9449ed3f6
-source-git-commit: 1cdd15800548362ccdd9e70847d9df8ce93ee06e
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '4033'
+source-wordcount: '4032'
 ht-degree: 0%
 
 ---
@@ -315,7 +315,7 @@ Vissa belastningsutjämnare kan konfigureras för att utföra en periodisk häls
 
 ## Tillfällig filsökväg och liknande klusterinställningar {#temporary-file-path-cluster-settings}
 
-Vissa filsökvägsinställningar i AEM Forms på JEE är klusteromfattande och har samma effektiva inställning på alla noder, men tolkas oberoende på varje nod för att referera till lokala filer. De viktigaste är teckensnittssökvägsinställningarna och tillfälliga kataloginställningar. Gå till skärmen med grundläggande AdminUI-konfigurationer (Hem > Inställningar > Kärnsystem > Huvudkonfigurationer)
+Vissa filsökvägsinställningar i AEM Forms på JEE är klusteromfattande och har samma effektiva inställning på alla noder, men tolkas separat på varje nod för att hänvisa till lokala filer. De viktigaste är teckensnittssökvägsinställningarna och tillfälliga kataloginställningar. Gå till skärmen med grundläggande AdminUI-konfigurationer (Hem > Inställningar > Kärnsystem > Huvudkonfigurationer)
 
 Följande inställningar bör vara markerade:
 

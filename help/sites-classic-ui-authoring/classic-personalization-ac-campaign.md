@@ -10,9 +10,9 @@ topic-tags: personalization
 content-type: reference
 discoiquuid: 61b2bd47-dcef-4107-87b1-6bf7bfd3043b
 exl-id: a4717cb8-b70c-4150-b816-35e9b871e792
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '1170'
+source-wordcount: '1169'
 ht-degree: 1%
 
 ---
@@ -50,6 +50,7 @@ Detaljerade instruktioner beskrivs i det här dokumentet.
 >[!NOTE]
 >
 >När du lägger till e-postmallar ska du se till att lägga till dem under **/content/campaign** för att göra dem tillgängliga.
+>
 
 1. I AEM väljer du **Webbplatser** bläddra sedan i utforskaren för att hitta var era e-postkampanjer hanteras. I följande exempel är den berörda noden **Webbplatser** > **Kampanjer** > **Geometrixx Outdoors** > **E-postkampanjer**.
 
@@ -124,7 +125,6 @@ Se [Adobe Campaign Components](/help/sites-classic-ui-authoring/classic-personal
 >* Endast Adobe Campaign **Profiler** målgruppsdimensionen beaktas.
 >* När egenskaper visas från **Webbplatser** har du inte åtkomst till Adobe Campaign kontextfält. Du kan komma åt dessa direkt från e-postmeddelandet när du redigerar.
 >
-
 
 1. Infoga en ny **Nyhetsbrev** > **Text och personalisering (Campaign)** -komponenten.
 1. Öppna komponenten genom att dubbelklicka på den. The **Redigera** -fönstret har en funktion som gör att du kan infoga anpassningselementen.

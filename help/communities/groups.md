@@ -13,9 +13,9 @@ docset: aem65
 pagetitle: Community Groups Console
 role: Admin
 exl-id: ef371ff8-6b4f-4e5a-98fb-d7c274927c46
-source-git-commit: 1074843a0105df39382b64defe66fc262986b9c9
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '1676'
+source-wordcount: '1675'
 ht-degree: 0%
 
 ---
@@ -60,15 +60,15 @@ Så här kommer du åt gruppkonsolen:
    * Strukturen på communitywebbplatsen måste innehålla en gruppfunktion.
    * Skärmbilderna kommer från självstudiekursen Komma igång efter [skapa grupper vid publicering](/help/communities/published-site.md).
 
-   ![create-group](assets/create-group.png)
+  ![create-group](assets/create-group.png)
 
 * Välj **Grupper, mapp** för att öppna den.
 
-   När de öppnas visas alla befintliga grupper, oavsett om de har skapats vid författare eller publicering.
+  När de öppnas visas alla befintliga grupper, oavsett om de har skapats vid författare eller publicering.
 
-   Från den här gruppkonsolen går det att skapa nya grupper.
+  Från den här gruppkonsolen går det att skapa nya grupper.
 
-   ![create-new-group](assets/create-new-group.png)
+  ![create-new-group](assets/create-new-group.png)
 
 * Välj **Skapa grupp** -knappen.
 
@@ -78,34 +78,34 @@ Så här kommer du åt gruppkonsolen:
 
 * **Gruppnamn**
 
-   En visningsrubrik för gruppen.
+  En visningsrubrik för gruppen.
 Titeln visas på den publicerade webbplatsen för gruppen.
 
 * **Beskrivning av communitygrupp**
 
-   En beskrivning av gruppen.
+  En beskrivning av gruppen.
 
 * **Grupprot för community**
 
-   Rotsökvägen till gruppen.
+  Rotsökvägen till gruppen.
 Standardroten är den överordnade platsen, men roten kan flyttas till valfri plats på webbplatsen. Vi rekommenderar inte att du ändrar den.
 
 * **Ytterligare tillgängliga språk för communitygrupper** meny
 
-   Använd listrutan för att välja tillgängliga språk i communitygruppen. Menyn innehåller alla språk som den överordnade communitywebbplatsen skapas i. Användarna kan välja mellan dessa språk för att skapa grupper i flera språkområden i det här steget. Samma grupp skapas på flera angivna språk i gruppkonsolen för respektive communityplats.
+  Använd listrutan för att välja tillgängliga språk i communitygruppen. Menyn innehåller alla språk som den överordnade communitywebbplatsen skapas på. Användarna kan välja mellan dessa språk för att skapa grupper i flera språkområden i det här steget. Samma grupp skapas på flera angivna språk i gruppkonsolen för respektive communityplats.
 
 * **Gruppnamn för community**
 
-   Namnet på gruppens rotsida som visas i URL:en. Undvik att använda understreck (_) och nyckelord som resurser och konfiguration i gruppnamn.
+  Namnet på gruppens rotsida som visas i URL:en. Undvik att använda understreck (_) och nyckelord som resurser och konfiguration i gruppnamn.
 
    * Dubbelkontrollera namnet eftersom det inte är lätt att ändra efter att gruppen har skapats.
    * Bas-URL:en visas under `Community Group Name`.
    * Lägg till &quot;.html&quot; för en giltig URL
-      *till exempel*, `https://localhost:4502/content/sites/mysight/en/mygroup.html`.
+     *till exempel*, `https://localhost:4502/content/sites/mysight/en/mygroup.html`.
 
 * **Community-gruppmall** meny
 
-   Använd listrutan för att välja en tillgänglig [community-gruppmall](/help/communities/tools.md).
+  Använd listrutan för att välja en tillgänglig [community-gruppmall](/help/communities/tools.md).
 
 ### Steg 2: Design {#step-design}
 
@@ -166,15 +166,15 @@ Med inställningen för medlemskap kan du välja ett av tre sätt att skydda en 
 
 * **Valfritt medlemskap**
 
-   Om du väljer det här alternativet är communitygruppen en offentlig grupp. Webbplatsmedlemmar kan delta i gruppen och publicera utan att explicit gå med i gruppen. Standard är valt.
+  Om du väljer det här alternativet är communitygruppen en offentlig grupp. Webbplatsmedlemmar kan delta i gruppen och publicera utan att explicit gå med i gruppen. Standard är valt.
 
 * **Obligatoriskt medlemskap**
 
-   Om du väljer det här alternativet är communitygruppen en öppen grupp. Medlemmar på en community kan visa innehållet i gruppen, men måste gå med i gruppen för att publicera innehållet. Medlemmar går med genom att välja `Join` i publiceringsmiljön. Standard är inte valt.
+  Om du väljer det här alternativet är communitygruppen en öppen grupp. Medlemmar på en community kan visa innehållet i gruppen, men måste gå med i gruppen för att publicera innehållet. Medlemmar går med genom att välja `Join` i publiceringsmiljön. Standard är inte valt.
 
 * **Begränsat medlemskap**
 
-   Om du väljer det här alternativet är communitygruppen en hemlig grupp. Community-medlemmar måste uttryckligen bjudas in. Inbjudna medlemmar anges i sökrutan. Medlemmar kan läggas till senare med [Konsoler för medlemmar och grupper](/help/communities/members.md) författarmiljön. Standard är inte valt.
+  Om du väljer det här alternativet är communitygruppen en hemlig grupp. Community-medlemmar måste uttryckligen bjudas in. Inbjudna medlemmar anges i sökrutan. Medlemmar kan läggas till senare med [Konsoler för medlemmar och grupper](/help/communities/members.md) författarmiljön. Standard är inte valt.
 
 **MINIATYRBILD**
 

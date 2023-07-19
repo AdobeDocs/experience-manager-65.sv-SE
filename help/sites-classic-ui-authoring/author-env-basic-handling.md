@@ -8,7 +8,7 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: 9737ead9-e324-43c9-9780-7abd292f4e5b
 exl-id: 2981dc20-b2ba-4ea2-a53b-8b5fe526aa9c
-source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
 source-wordcount: '1194'
 ht-degree: 0%
@@ -24,7 +24,6 @@ ht-degree: 0%
 >* Vissa funktioner är inte tillgängliga i alla konsoler och/eller så är ytterligare funktioner tillgängliga i vissa konsoler. Specifik information om de enskilda konsolerna och deras tillhörande funktioner beskrivs mer ingående på andra sidor.
 >* Kortkommandon är tillgängliga i hela AEM. I synnerhet när [använda konsoler](/help/sites-classic-ui-authoring/author-env-keyboard-shortcuts.md) och [redigera sidor](/help/sites-classic-ui-authoring/classic-page-author-keyboard-shortcuts.md).
 >
-
 
 ## Välkomstskärmen {#the-welcome-screen}
 
@@ -87,13 +86,13 @@ The **Webbplatser** I konsolen finns två rutor där du kan navigera och hantera
 
 * Vänster ruta
 
-   Här visas trädstrukturen för dina webbplatser och sidorna på dessa webbplatser.
+  Här visas trädstrukturen för dina webbplatser och sidorna på dessa webbplatser.
 
-   Här visas även information om andra aspekter eller AEM, bland annat projekt, ritningar och resurser.
+  Här visas även information om andra aspekter eller AEM, bland annat projekt, ritningar och resurser.
 
 * Höger ruta
 
-   Här visas sidorna (på den plats som är markerad i den vänstra rutan) och de kan användas för att utföra åtgärder.
+  Här visas sidorna (på den plats som är markerad i den vänstra rutan) och de kan användas för att utföra åtgärder.
 
 Här kan du [hantera sidor](/help/sites-authoring/managing-pages.md) med verktygsfältet, en snabbmeny eller genom att öppna en sida för ytterligare åtgärder.
 
@@ -105,7 +104,7 @@ Här kan du [hantera sidor](/help/sites-authoring/managing-pages.md) med verktyg
 
 ## Få hjälp {#accessing-help}
 
-På olika konsoler (t.ex. webbplatser) finns det också **Hjälp** om knappen är tillgänglig öppnas antingen packningsresursen eller dokumentationswebbplatsen.
+På olika konsoler (till exempel webbplatser) finns även **Hjälp** om knappen är tillgänglig öppnas antingen packningsresursen eller dokumentationswebbplatsen.
 
 ![chlimage_1-10](assets/chlimage_1-10a.png)
 
@@ -120,7 +119,7 @@ The **Webbplatser** konsolen visar sidorna i en trädstruktur (vänster ruta). F
    * Lista de underordnade sidorna i den högra rutan
    * Utvidga även strukturen i den vänstra rutan.
 
-      Av prestandaskäl är den här åtgärden beroende av antalet underordnade noder. Med en standardinstallation fungerar den här utbyggnadsmetoden när det finns `30` eller mindre underordnade noder.
+     Av prestandaskäl är den här åtgärden beroende av antalet underordnade noder. Med en standardinstallation fungerar den här utbyggnadsmetoden när det finns `30` eller mindre underordnade noder.
 
 * Om du dubbelklickar på sidnamnet (den vänstra rutan) expanderas också trädet, även om den här effekten inte är så självklar när sidan öppnas samtidigt.
 

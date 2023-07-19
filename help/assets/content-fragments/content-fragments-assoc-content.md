@@ -4,9 +4,9 @@ description: Förstå hur AEM tillhörande innehållsfunktion tillhandahåller a
 feature: Content Fragments
 role: User
 exl-id: 8b93fd6e-47d1-46fd-901b-621caa25be7b
-source-git-commit: de38dbb9d0ce523543c11e665c02034f4b38f1e6
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '244'
+source-wordcount: '245'
 ht-degree: 4%
 
 ---
@@ -19,7 +19,7 @@ Funktionen AEM associerat innehåll tillhandahåller anslutningen så att resurs
 
 >[!NOTE]
 >
->Det finns olika metoder att lägga till [visuella resurser (t.ex. bilder)](/help/assets/content-fragments/content-fragments.md#fragments-with-visual-assets) till fragmentet och/eller sidan.
+>Det finns olika metoder att lägga till [visuella resurser (till exempel bilder)](/help/assets/content-fragments/content-fragments.md#fragments-with-visual-assets) till fragmentet och/eller sidan.
 
 För att kunna skapa associationen måste du först [lägga till mediefiler i en samling](/help/assets/manage-collections.md). När det är klart kan du:
 

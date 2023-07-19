@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-adobe-phonegap-enterprise
 discoiquuid: fec86f03-f81e-460a-9f84-d6304c95128c
 exl-id: e2ddf5d1-0f5b-4f3b-9666-0f388915730e
-source-git-commit: 37d2c70bff770d13b8094c5959e488f5531aef55
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '1409'
+source-wordcount: '1410'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe rekommenderar att du använder SPA Editor för projekt som kräver ramverksbaserad klientåtergivning för en sida (t.ex. Reagera). [Läs mer](/help/sites-developing/spa-overview.md).
+>Adobe rekommenderar att du använder SPA Editor för projekt som kräver ramverksbaserad klientåtergivning för en sida (till exempel React). [Läs mer](/help/sites-developing/spa-overview.md).
 
 Se följande riktlinjer för utveckling av Hanterare för innehållssynkronisering:
 
@@ -52,7 +52,7 @@ I följande lista visas färdiga apphanterare:
 
 * ***includeModifiedPagesOnly - Boolean*** - Om värdet är false eller utelämnas återger du alla sidor och kontrollerar uppdateringarna vid återgivningen. Om värdet är true tonas basen av ändringar av sidorna lastModified.
 * ***+ rewrite (node)***
-   ***- relativeParentPath - String*** - sökvägen som alla andra sökvägar ska skrivas i förhållande till.
+  ***- relativeParentPath - String*** - sökvägen som alla andra sökvägar ska skrivas i förhållande till.
 
 >[!NOTE]
 >

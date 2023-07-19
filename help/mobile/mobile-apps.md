@@ -9,9 +9,9 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 discoiquuid: eda55579-4140-477b-b4d0-a87d14ec3237
 exl-id: 0a98881d-08f3-47e7-bae1-5500d1fe6514
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '118'
+source-wordcount: '119'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe rekommenderar att du använder SPA Editor för projekt som kräver ramverksbaserad klientåtergivning för en sida (t.ex. Reagera). [Läs mer](/help/sites-developing/spa-overview.md).
+>Adobe rekommenderar att du använder SPA Editor för projekt som kräver ramverksbaserad klientåtergivning för en sida (till exempel React). [Läs mer](/help/sites-developing/spa-overview.md).
 
 Adobe Experience Manager (AEM) Mobile är en del av Adobe Experience Manager flerkanaliga digitala plattform som också utnyttjar AEM Assets, Sites, Screens, Workflow, User Manager, Commerce och Forms. AEM Mobile erbjuder enastående flexibilitet vid driftsättningen, vilket gör det möjligt för företag att använda olika innehållskällor.
 

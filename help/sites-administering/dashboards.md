@@ -10,16 +10,16 @@ topic-tags: operations
 content-type: reference
 discoiquuid: 40560e06-2508-45a4-a648-39629ed54f28
 exl-id: 5b934e3a-f554-46ec-a913-8d570abb1503
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '835'
+source-wordcount: '839'
 ht-degree: 1%
 
 ---
 
 # Kontrollpaneler{#dashboards}
 
-När du använder AEM kan du hantera många olika typer av innehåll (t.ex. sidor, resurser). AEM Dashboards är ett enkelt och anpassningsbart sätt att definiera sidor som visar konsoliderade data.
+När du använder AEM kan du hantera många olika typer av innehåll (till exempel sidor, resurser). AEM Dashboards är ett enkelt och anpassningsbart sätt att definiera sidor som visar konsoliderade data.
 
 >[!NOTE]
 >
@@ -38,7 +38,7 @@ Så här skapar du en ny kontrollpanel:
 1. I **verktyg** avsnitt, klicka **Konfigurationskonsol**.
 1. Dubbelklicka i trädet **Kontrollpanel**.
 1. Klicka **Ny instrumentpanel**.
-1. Skriv **Titel** (t.ex. Min instrumentpanel) och **Namn**.
+1. Skriv **Titel** (till exempel Min instrumentpanel) och **Namn**.
 1. Klicka **Skapa**.
 
 ### Klona en instrumentpanel {#cloning-a-dashboard}
@@ -73,7 +73,7 @@ Kontrollpanelskomponenter är bara vanliga [AEM](/help/sites-developing/developi
 
 ### Rapporteringskomponenter för Web Analytics {#web-analytics-reporting-components}
 
-AEM levereras med en uppsättning komponenter som ger flera mätvärden av dina [SiteCatalyst](/help/sites-administering/adobeanalytics.md) data. De komponenterna listas i Sidekick under **Kontrollpanel** -avsnitt.
+AEM levereras med en uppsättning komponenter som ger flera mätvärden av dina [SiteCatalyst](/help/sites-administering/adobeanalytics.md) data. Dessa komponenter listas i Sidekick under **Kontrollpanel** -avsnitt.
 
 Varje rapportkomponent har minst tre flikar:
 
@@ -114,7 +114,7 @@ Varje komponent definierar också specifika inställningar.
 
 ![chlimage_1-26](assets/chlimage_1-26a.png)
 
-**Datumgranularitet** Tidsenhet för X-axeln (t.ex. dag, timme).
+**Datumgranularitet** Tidsenhet för X-axeln (till exempel dag, timme).
 
 **Mått** Listan med händelser som du vill visa.
 
@@ -150,7 +150,7 @@ Den här komponenten visar ett diagram över det mer besökta avsnittet på en w
 
 ![chlimage_1-30](assets/chlimage_1-30a.png)
 
-**Datumgranularitet** Tidsenhet för X-axeln (t.ex. dag, timme).
+**Datumgranularitet** Tidsenhet för X-axeln (till exempel dag, timme).
 
 **Mått** Händelsen som du vill visa.
 

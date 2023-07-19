@@ -10,9 +10,9 @@ topic-tags: development-tools
 content-type: reference
 discoiquuid: a76425e9-fd3b-4c73-80f9-0ebabb8fd94f
 exl-id: efbba312-9fc8-4670-b8f1-d2a86162d075
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '2718'
+source-wordcount: '2716'
 ht-degree: 0%
 
 ---
@@ -781,7 +781,7 @@ Statuskoderna som används av VLT är:
 
 ## Konfigurera FileVault-synkronisering {#setting-up-filevault-sync}
 
-Tjänsten vault sync används för att synkronisera databasinnehåll med en lokal filsystemrepresentation och vice versa. Detta uppnås genom att installera en OSGi-tjänst som avlyssnar databasändringar och regelbundet söker igenom filsystemets innehåll. Det använder samma serialiseringsformat som vault för att mappa databasinnehållet till disken.
+Tjänsten vault sync används för att synkronisera databasinnehåll med en lokal filsystemrepresentation och omvänt. Detta uppnås genom att installera en OSGi-tjänst som avlyssnar databasändringar och regelbundet söker igenom filsystemets innehåll. Det använder samma serialiseringsformat som vault för att mappa databasinnehållet till disken.
 
 >[!NOTE]
 >
@@ -944,7 +944,7 @@ Så här konfigurerar du en utvecklingsmiljö baserad på en synkroniseringsmapp
    ***
    ```
 
-Din lokala mapp är nu synkroniserad med databasen. Synkroniseringen är dubbelriktad, så ändringar från databasen tillämpas på din lokala synkroniseringsmapp och vice versa.
+Din lokala mapp är nu synkroniserad med databasen. Synkroniseringen är dubbelriktad, så ändringar från databasen tillämpas på din lokala synkroniseringsmapp och omvänt.
 
 >[!NOTE]
 >

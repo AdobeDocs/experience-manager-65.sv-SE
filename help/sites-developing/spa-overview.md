@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 06b8c0be-4362-4bd1-ad57-ea5503616b17
 docset: aem65
 exl-id: 7b34be66-bb61-4697-8cc8-428f7c63a887
-source-git-commit: a547b2e24205c63284a0e77f2e7f5678ae24968b
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '1657'
+source-wordcount: '1659'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ SPA Editor erbjuder en omfattande lösning för SPA inom AEM. På den här sidan
 
 >[!NOTE]
 >
->SPA Editor är den rekommenderade lösningen för projekt som kräver SPA ramverksbaserad återgivning på klientsidan (t.ex. Reaktion eller Angular).
+>SPA Editor är den rekommenderade lösningen för projekt som kräver SPA ramverksbaserad rendering på klientsidan (till exempel React eller Angular).
 
 ## Introduktion {#introduction}
 
@@ -101,7 +101,6 @@ Med tanke på de viktigaste elementen i SPA Editor visas arbetsflödet på hög 
 >* SPA är isolerad från själva SPA.
 >* I produktion (publicera) läses SPA aldrig in.
 >
-
 
 ### Sidredigeringsarbetsflöde för klient-server {#client-server-page-editing-workflow}
 
@@ -183,7 +182,7 @@ Ytterligare anpassade väljare kan definieras och användas som en del av en SPA
 Om du vill använda redigeraren i stället för en textkomponent som skapats i SPA måste du konfigurera ytterligare.
 
 1. Ange ett attribut (det kan vara valfritt) för behållarelementet som innehåller texten HTML. När det gäller exempelinnehållet i WKND Journal är det en `<div>` -elementet och väljaren som har använts är `data-rte-editelement`.
-1. Ange konfigurationen `editElementQuery` på motsvarande AEM `cq:InplaceEditingConfig` som pekar på den väljaren, t.ex. `data-rte-editelement`. På så sätt kan redigeraren veta vilket HTML-element som radbryter HTML-texten.
+1. Ange konfigurationen `editElementQuery` på motsvarande AEM `cq:InplaceEditingConfig` som pekar på den väljaren, till exempel `data-rte-editelement`. På så sätt kan redigeraren veta vilket HTML-element som radbryter HTML-texten.
 
 Ett exempel på hur detta görs finns i [Exempelinnehåll för WKND Journal.](https://github.com/adobe/aem-sample-we-retail-journal/pull/16/files)
 

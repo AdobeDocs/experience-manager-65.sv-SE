@@ -9,7 +9,7 @@ content-type: reference
 discoiquuid: 7b234f1f-4470-4de1-a3c3-ab19e5e001ad
 docset: aem65
 exl-id: 56a9591c-cd78-42e8-a5d7-6b48581d6af6
-source-git-commit: af60428255fb883265ade7b2d9f363aacb84b9ad
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
 source-wordcount: '4926'
 ht-degree: 0%
@@ -61,7 +61,7 @@ Så här skapar du ett klientbibliotek:
    * categories=&quot;[&lt;category-name>]&quot;
    * beroenden=&quot;[cq.widgets]&quot;
 
-   `Note: <category-name> is the name of the custom library (e.g. "cq.extjstraining") and is used to include the library on the page.`
+   `Note: <category-name> is the name of the custom library (for example, "cq.extjstraining") and is used to include the library on the page.`
 
 1. Nedanför `clientlib` skapa `css` och `js` mappar (not:folder).
 
@@ -96,12 +96,11 @@ Så här skapar du ett klientbibliotek:
 Så här inkluderar du klientbiblioteket i sidkomponentens jsp:
 
 * om du vill ta med både JavaScript-kod och formatmallar:
-   `<ui:includeClientLib categories="<category-name1>, <category-name2>, ..."/>`
-där 
-`<category-nameX>` är namnet på klientbiblioteket.
+  `<ui:includeClientLib categories="<category-name1>, <category-name2>, ..."/>`
+där `<category-nameX>` är namnet på klientbiblioteket.
 
 * så att endast JavaScript-kod inkluderas:
-   `<ui:includeClientLib js="<category-name>"/>`
+  `<ui:includeClientLib js="<category-name>"/>`
 
 Mer information finns i beskrivningen av [&lt;ui:includeclientlib>](/help/sites-developing/taglib.md#lt-ui-includeclientlib) -tagg.
 
@@ -122,7 +121,7 @@ Installera paketet om du vill följa självstudiekurserna på den här sidan **A
    `%><ui:includeClientLib categories="apps.geometrixx-main, cq.extjstraining"/><%`
 1. Skapa en sida i **Geometrixx** förgrening nedan `/content/geometrixx/en/products` och ringa **Använda ExtJS-widgetar**.
 1. Gå till designläge och lägg till alla komponenterna i gruppen som kallas **Använda ExtJS-widgetar** till utformningen av Geometrixx
-1. Gå tillbaka i redigeringsläge: komponenterna i gruppen **Använda ExtJS-widgetar** finns i The Sidekick.
+1. Gå tillbaka i redigeringsläge: komponenterna i gruppen **Använda ExtJS-widgetar** finns i Sidekick.
 
 >[!NOTE]
 >
@@ -134,7 +133,7 @@ Dialogrutor används ofta för att redigera innehåll, men kan även visa inform
 
 `https://localhost:4502/<path-to-dialog>.-1.json`
 
-Den första komponenten i **Använda ExtJS-widgetar** gruppen i Sidesparken kallas **1. Grundläggande om dialogrutor** och innehåller fyra grundläggande dialogrutor som är byggda med färdiga widgetar och utan anpassad JavaScript-logik. Dialogrutorna sparas nedan `/apps/extjstraining/components/dialogbasics`. De grundläggande dialogrutorna är:
+Den första komponenten i **Använda ExtJS-widgetar** gruppen i Sidekick anropas **1. Grundläggande om dialogrutor** och innehåller fyra grundläggande dialogrutor som är byggda med färdiga widgetar och utan anpassad JavaScript-logik. Dialogrutorna sparas nedan `/apps/extjstraining/components/dialogbasics`. De grundläggande dialogrutorna är:
 
 * Dialogrutan Fullständig ( `full` nod): visas ett fönster med tre flikar, där varje flik har två textfält.
 * dialogrutan Enstaka panel( `singlepanel` nod): visas ett fönster med en flik som innehåller två textfält.
@@ -158,9 +157,9 @@ The **Fullständig** visas ett fönster med tre flikar där varje flik har två 
 * Visar tre flikar (nodtyp = `cq:Panel`).
 * Varje flik har två textfält (nodtyp = `cq:Widget`, xtype = ` [textfield](/help/sites-developing/xtypes.md#textfield)`).
 * Definieras av noden:
-   `/apps/extjstraining/components/dialogbasics/full`
+  `/apps/extjstraining/components/dialogbasics/full`
 * Renderas i JSON-format genom att begära:
-   `https://localhost:4502/apps/extjstraining/components/dialogbasics/full.-1.json`
+  `https://localhost:4502/apps/extjstraining/components/dialogbasics/full.-1.json`
 
 Dialogrutan visas enligt följande:
 
@@ -173,9 +172,9 @@ The **Enkel panel** visas ett fönster med en flik som innehåller två textfäl
 * Visar en flik (nodtyp = `cq:Dialog`, xtype = ` [panel](/help/sites-developing/xtypes.md#panel)`)
 * Fliken har två textfält (nodtyp = `cq:Widget`, xtype = ` [textfield](/help/sites-developing/xtypes.md#textfield)`)
 * Definieras av noden:
-   `/apps/extjstraining/components/dialogbasics/singlepanel`
+  `/apps/extjstraining/components/dialogbasics/singlepanel`
 * Renderas i json-format genom att begära:
-   `https://localhost:4502/apps/extjstraining/components/dialogbasics/singlepanel.-1.json`
+  `https://localhost:4502/apps/extjstraining/components/dialogbasics/singlepanel.-1.json`
 * En fördel framför **Fullständig dialogruta** är att mindre konfiguration behövs.
 * Rekommenderad användning: för enkla dialogrutor som visar information eller bara har ett fåtal fält.
 
@@ -199,9 +198,9 @@ The **Flera paneler** visas på samma sätt som **Fullständig** men den är upp
 * Visar tre flikar (nodtyp = `cq:Panel`).
 * Varje flik har två textfält (nodtyp = `cq:Widget`, xtype = ` [textfield](/help/sites-developing/xtypes.md#textfield)`).
 * Definieras av noden:
-   `/apps/extjstraining/components/dialogbasics/multipanel`
+  `/apps/extjstraining/components/dialogbasics/multipanel`
 * Renderas i json-format genom att begära:
-   `https://localhost:4502/apps/extjstraining/components/dialogbasics/multipanel.-1.json`
+  `https://localhost:4502/apps/extjstraining/components/dialogbasics/multipanel.-1.json`
 * En fördel framför **Fullständig dialogruta** är att den har en förenklad struktur.
 * Rekommenderad användning: för dialogrutor med flera flikar.
 
@@ -221,9 +220,9 @@ The **Rich** visas ett fönster med två flikar. Den första fliken har ett text
 * Den första fliken har en ` [dialogfieldset](/help/sites-developing/xtypes.md#dialogfieldset)` widget med en ` [textfield](/help/sites-developing/xtypes.md#textfield)` och ` [selection](/help/sites-developing/xtypes.md#selection)` widget med tre alternativ och en komprimerbar ` [dialogfieldset](/help/sites-developing/xtypes.md#dialogfieldset)` med ` [textarea](/help/sites-developing/xtypes.md#textarea)` widget.
 * Den andra fliken har en ` [dialogfieldset](/help/sites-developing/xtypes.md#dialogfieldset)` widget med fyra ` [textfield](/help/sites-developing/xtypes.md#textfield)` och en komprimerbar `dialogfieldset` med två ` [textfield](/help/sites-developing/xtypes.md#textfield)` widgetar.
 * Definieras av noden:
-   `/apps/extjstraining/components/dialogbasics/rich`
+  `/apps/extjstraining/components/dialogbasics/rich`
 * Renderas i json-format genom att begära:
-   `https://localhost:4502/apps/extjstraining/components/dialogbasics/rich.-1.json`
+  `https://localhost:4502/apps/extjstraining/components/dialogbasics/rich.-1.json`
 
 Så här använder du **Rich** dialog:
 
@@ -234,7 +233,7 @@ Så här använder du **Rich** dialog:
 
 ### Dynamiska dialogrutor {#dynamic-dialogs}
 
-Den andra komponenten i **Använda ExtJS-widgetar** gruppen i Sidesparken kallas **2. Dynamiska dialogrutor** och innehåller tre dynamiska dialogrutor som är byggda med färdiga widgetar och **med anpassad JavaScript-logik**. Dialogrutorna sparas nedan `/apps/extjstraining/components/dynamicdialogs`. De dynamiska dialogrutorna är:
+Den andra komponenten i **Använda ExtJS-widgetar** gruppen i Sidekick anropas **2. Dynamiska dialogrutor** och innehåller tre dynamiska dialogrutor som är byggda med färdiga widgetar och **med anpassad JavaScript-logik**. Dialogrutorna sparas nedan `/apps/extjstraining/components/dynamicdialogs`. De dynamiska dialogrutorna är:
 
 * dialogrutan Byt flikar ( `switchtabs` nod): visas ett fönster med två flikar. Den första fliken har en alternativmarkering med tre alternativ: När ett alternativ är markerat visas en flik som relaterar till alternativet. Den andra fliken har två textfält.
 * den godtyckliga dialogen ( `arbitrary` nod): visas ett fönster med en flik. Fliken innehåller ett fält där en resurs och ett fält som visar information om sidan som innehåller objektet och om resursen, om det finns någon referens till det, ska släppas eller överföras.
@@ -259,33 +258,31 @@ Dess huvudsakliga egenskaper är:
 * Visar två flikar (nodtyp = `cq:Panel`): den andra fliken är beroende av vad som är markerat på den första fliken (tre alternativ).
 * Har tre valfria flikar (nodtyp = `cq:Panel`) har vart och ett två textfält (nodtyp = `cq:Widget`, xtype = ` [textfield](/help/sites-developing/xtypes.md#textfield)`). Endast en valfri flik i taget visas.
 * Definieras av `switchtabs` nod vid:
-   `/apps/extjstraining/components/dynamicdialogs/switchtabs`
+  `/apps/extjstraining/components/dynamicdialogs/switchtabs`
 * Renderas i json-format genom att begära:
-   `https://localhost:4502/apps/extjstraining/components/dynamicdialogs/switchtabs.-1.json`
+  `https://localhost:4502/apps/extjstraining/components/dynamicdialogs/switchtabs.-1.json`
 
 Logiken implementeras med händelseavlyssnare och JavaScript-kod enligt följande:
 
 * Dialognoden har en `beforeshow`&quot; som döljer alla valfria flikar innan dialogrutan visas:
-   `beforeshow="function(dialog){Ejst.x2.manageTabs(dialog.items.get(0));}"`
-
-   `dialog.items.get(0)` får `tabpanel` som innehåller markeringspanelen och de tre valfria panelerna.
+  `beforeshow="function(dialog){Ejst.x2.manageTabs(dialog.items.get(0));}"`
+  `dialog.items.get(0)` får `tabpanel` som innehåller markeringspanelen och de tre valfria panelerna.
 * The `Ejst.x2` -objektet definieras i `exercises.js` fil på:
-   `/apps/extjstraining/clientlib/js/exercises.js`
+  `/apps/extjstraining/clientlib/js/exercises.js`
 * I `Ejst.x2.manageTabs()` metod, som värdet för `index` är -1 är alla valfria flikar dolda (i går från 1 till 3).
 * Markeringsfliken har två avlyssnare: som visar den valda fliken när dialogrutan läses in (&quot; `loadcontent`&quot; -händelse) och en som visar den valda fliken när markeringen ändras (&quot; `selectionchanged`&quot; event):
-   `loadcontent="function(field,rec,path){Ejst.x2.showTab(field);}"`
-
-   `selectionchanged="function(field,value){Ejst.x2.showTab(field);}"`
+  `loadcontent="function(field,rec,path){Ejst.x2.showTab(field);}"`
+  `selectionchanged="function(field,value){Ejst.x2.showTab(field);}"`
 * För `Ejst.x2.showTab()` metod,
-   `field.findParentByType('tabpanel')` får `tabpanel` som innehåller alla flikar ( `field` representerar markeringswidgeten)
-   `field.getValue()` hämtar värdet för markeringen, till exempel tab2
-   `Ejst.x2.manageTabs()` visar den valda fliken.
+  `field.findParentByType('tabpanel')` får `tabpanel` som innehåller alla flikar ( `field` representerar markeringswidgeten)
+  `field.getValue()` hämtar värdet för markeringen, till exempel tab2
+  `Ejst.x2.manageTabs()` visar den valda fliken.
 * Varje valfri flik har en avlyssnare som döljer fliken på `render`&quot; event:
-   `render="function(tab){Ejst.x2.hideTab(tab);}"`
+  `render="function(tab){Ejst.x2.hideTab(tab);}"`
 * För `Ejst.x2.hideTab()` metod,
-   `tabPanel` är `tabpanel` som innehåller alla flikar
-   `index` är indexvärdet för den valfria fliken
-   `tabPanel.hideTabStripItem(index)` döljer fliken
+  `tabPanel` är `tabpanel` som innehåller alla flikar
+  `index` är indexvärdet för den valfria fliken
+  `tabPanel.hideTabStripItem(index)` döljer fliken
 
 Den visas enligt följande:
 
@@ -303,36 +300,35 @@ Dess huvudsakliga egenskaper är:
 * Visar ett `tabpanel` widget (nodtyp = `cq:Widget`, xtype = ` [tabpanel](/help/sites-developing/xtypes.md#tabpanel)`) med en panel (nodtyp = `cq:Panel`)
 * Panelen har en smartfile-widget (nodtyp = `cq:Widget`, xtype = ` [smartfile](/help/sites-developing/xtypes.md#smartfile)`) och en egen widget (nodtyp = `cq:Widget`, xtype = ` [ownerdraw](/help/sites-developing/xtypes.md#ownerdraw)`)
 * Definieras av `arbitrary` nod vid:
-   `/apps/extjstraining/components/dynamicdialogs/arbitrary`
+  `/apps/extjstraining/components/dynamicdialogs/arbitrary`
 * Renderas i json-format genom att begära:
-   `https://localhost:4502/apps/extjstraining/components/dynamicdialogs/arbitrary.-1.json`
+  `https://localhost:4502/apps/extjstraining/components/dynamicdialogs/arbitrary.-1.json`
 
 Logiken implementeras med händelseavlyssnare och JavaScript-kod enligt följande:
 
 * The `ownerdraw` widgeten har en `loadcontent`&quot; som visar information om sidan som innehåller komponenten. Det vill säga den resurs som smartfile-widgeten refererar till när innehållet läses in:
-   `loadcontent="function(field,rec,path){Ejst.x2.showInfo(field,rec,path);}"`
-
-   `field` är inställt med `ownerdraw` object
-   `path` anges med komponentens innehållssökväg (till exempel `/content/geometrixx/en/products/triangle/ui-tutorial/jcr:content/par/dynamicdialogs`)
+  `loadcontent="function(field,rec,path){Ejst.x2.showInfo(field,rec,path);}"`
+  `field` är inställt med `ownerdraw` object
+  `path` anges med komponentens innehållssökväg (till exempel `/content/geometrixx/en/products/triangle/ui-tutorial/jcr:content/par/dynamicdialogs`)
 * The `Ejst.x2` -objektet definieras i `exercises.js` fil på:
-   `/apps/extjstraining/clientlib/js/exercises.js`
+  `/apps/extjstraining/clientlib/js/exercises.js`
 * För `Ejst.x2.showInfo()` metod,
-   `pagePath` är banan för den sida som innehåller komponenten,
-   `pageInfo` representerar sidegenskaperna i json-format,
-   `reference` är sökvägen till den refererade tillgången,
-   `metadata` representerar tillgångens metadata i json-format,
-   `ownerdraw.getEl().update(html);` visar den skapade HTML-koden i dialogrutan
+  `pagePath` är banan för den sida som innehåller komponenten,
+  `pageInfo` representerar sidegenskaperna i json-format,
+  `reference` är sökvägen till den refererade tillgången,
+  `metadata` representerar tillgångens metadata i json-format,
+  `ownerdraw.getEl().update(html);` visar den skapade HTML-koden i dialogrutan
 
 Så här använder du **Godtycklig** dialog:
 
 1. Ersätta dialogrutan **Dynamisk dialogruta** med **Godtycklig** dialog: följer de steg som beskrivs för [Exempel 2: Dialogrutan En panel](#example-single-panel-dialog)
-1. Edit the component: the dialog displays as follows:
+1. Redigera komponenten: dialogrutan visas enligt följande:
 
 ![](assets/screen_shot_2012-02-01at115300am.png)
 
 #### Example 3: Toggle Fields Dialog {#example-toggle-fields-dialog}
 
-The **Växla fält** visas ett fönster med en flik. Fliken har en kryssruta: när den är markerad visas en fältuppsättning med två textfält.
+**** Fliken har en kryssruta: när den är markerad visas en fältuppsättning med två textfält.
 
 Dess huvudsakliga egenskaper är:
 
@@ -340,23 +336,22 @@ Dess huvudsakliga egenskaper är:
 * Visar ett `tabpanel` widget (nodtyp = `cq:Widget`, xtype = ` [tabpanel](/help/sites-developing/xtypes.md#textpanel)`) med en panel (nodtyp = `cq:Panel`).
 * Panelen har en widget för markering/kryssruta (nodtyp = `cq:Widget`, xtype = ` [selection](/help/sites-developing/xtypes.md#selection)`, typ = ` [checkbox](/help/sites-developing/xtypes.md#checkbox)`) och en komprimerbar dialogfältuppsättningswidget (nodtyp = `cq:Widget`, xtype = ` [dialogfieldset](/help/sites-developing/xtypes.md#dialogfieldset)`) som är dold som standard, med två textfältswidgetar (nodtyp = `cq:Widget`, xtype = ` [textfield](/help/sites-developing/xtypes.md#textfield)`).
 * Definieras av `togglefields` nod vid:
-   `/apps/extjstraining/components/dynamicdialogs/togglefields`
+  `/apps/extjstraining/components/dynamicdialogs/togglefields`
 * Renderas i json-format genom att begära:
-   `https://localhost:4502/apps/extjstraining/components/dynamicdialogs/togglefields.-1.json`
+  `https://localhost:4502/apps/extjstraining/components/dynamicdialogs/togglefields.-1.json`
 
 Logiken implementeras med händelseavlyssnare och JavaScript-kod enligt följande:
 
 * på markeringsfliken finns två avlyssnare: som visar dialogrutorna när innehållet läses in (&quot; `loadcontent`&quot; event) och en som visar dialogrutans fältuppsättning när markeringen ändras (&quot; `selectionchanged`&quot; event):
-   `loadcontent="function(field,rec,path){Ejst.x2.toggleFieldSet(field);}"`
-
-   `selectionchanged="function(field,value){Ejst.x2.toggleFieldSet(field);}"`
+  `loadcontent="function(field,rec,path){Ejst.x2.toggleFieldSet(field);}"`
+  `selectionchanged="function(field,value){Ejst.x2.toggleFieldSet(field);}"`
 * The `Ejst.x2` -objektet definieras i `exercises.js` fil på:
-   `/apps/extjstraining/clientlib/js/exercises.js`
+  `/apps/extjstraining/clientlib/js/exercises.js`
 * För `Ejst.x2.toggleFieldSet()` metod,
-   `box` är markeringsobjektet,
-   `panel` är den panel som innehåller markeringen och dialogfältuppsättningswidgetar,
-   `fieldSet` är dialogfältuppsättningsobjektet,
-   `show` är markeringens värde (true eller false), baserat på `show`&#39; dialogfältuppsättningen visas eller inte
+  `box` är markeringsobjektet,
+  `panel` är den panel som innehåller markeringen och dialogfältuppsättningswidgetar,
+  `fieldSet` är dialogfältuppsättningsobjektet,
+  `show` är markeringens värde (true eller false), baserat på `show`&#39; dialogfältuppsättningen visas eller inte
 
 Så här använder du **Växla fält** gör du följande:
 
@@ -393,31 +388,31 @@ The **Anpassat multifält** widgetbaserad dialogruta:
 * The `multifield` widgeten har en fältkonfiguration (nodtyp = `nt:unstructured`, xtype = `ejstcustom`, optionsProvider = `Ejst.x3.provideOptions`) som baseras på den anpassade xtype &#39; `ejstcustom`&#39;:
    * &#39; `fieldconfig`&#39; är ett config-alternativ för ` [CQ.form.MultiField](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html?class=CQ.form.MultiField)` -objekt.
    * &#39; `optionsProvider`&#39; är en konfiguration av `ejstcustom` widget. Den är inställd med `Ejst.x3.provideOptions` metod som definieras i `exercises.js` vid:
-      `/apps/extjstraining/clientlib/js/exercises.js`
+     `/apps/extjstraining/clientlib/js/exercises.js`
 och returnerar två alternativ.
 * Definieras av `multifield` nod vid:
-   `/apps/extjstraining/components/customwidgets/multifield`
+  `/apps/extjstraining/components/customwidgets/multifield`
 * Renderas i json-format genom att begära:
-   `https://localhost:4502/apps/extjstraining/components/customwidgets/multifield.-1.json`
+  `https://localhost:4502/apps/extjstraining/components/customwidgets/multifield.-1.json`
 
 Den anpassade `multifield` widget (xtype = `ejstcustom`):
 
 * Är ett JavaScript-objekt som anropas `Ejst.CustomWidget`
 * Är definierad i `CustomWidget.js` JavaScript-fil på:
-   `/apps/extjstraining/clientlib/js/CustomWidget.js`
+  `/apps/extjstraining/clientlib/js/CustomWidget.js`
 * Utökar ` [CQ.form.CompositeField](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html?class=CQ.form.CompositeField)` widget.
 * Har tre fält: `hiddenField` (textfält), `allowField` (ComboBox), och `otherField` (Textfält)
 * Åsidosättningar `CQ.Ext.Component#initComponent` för att lägga till de tre fälten:
    * `allowField` är en [CQ.form.Selection](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html?class=CQ.form.Selection) objekt av typen &#39;select&#39;. optionsProvider är en konfiguration av Selection-objektet som initieras med optionsProvider-konfigurationen för CustomWidget som definierats i dialogrutan
    * `otherField` är en [CQ.Ext.form.TextField](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html?class=CQ.Ext.form.TextField) object
-* `setValue``getValue``getRawValue`[](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html?class=CQ.form.CompositeField)
-   `<allowField value>/<otherField value>, for example: 'Bla1/hello'`.
+* Åsidosätter metoderna `setValue`, `getValue`och `getRawValue` av [CQ.form.CompositeField](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html?class=CQ.form.CompositeField) för att ange och hämta värdet för CustomWidget med formatet:
+  `<allowField value>/<otherField value>, for example: 'Bla1/hello'`.
 * `ejstcustom`
-   `CQ.Ext.reg('ejstcustom', Ejst.CustomWidget);`
+  `CQ.Ext.reg('ejstcustom', Ejst.CustomWidget);`
 
 ****
 
-![screen_shot_2012-02-01at115840am](assets/screen_shot_2012-02-01at115840am.png)
+![](assets/screen_shot_2012-02-01at115840am.png)
 
 #### Exempel 2: Egen `Treebrowse` Widget {#example-custom-treebrowse-widget}
 
@@ -429,15 +424,15 @@ Den anpassade `treebrowse` dialog:
 * Visar ett `tabpanel` widget (nodtyp = `cq:Widget`, xtype = ` [tabpanel](/help/sites-developing/xtypes.md#tabpanel)`) som innehåller en panel (nodtyp = `cq:Widget`, xtype = ` [panel](/help/sites-developing/xtypes.md#panel)`).
 * Panelen har en anpassad widget (nodtyp = `cq:Widget`, xtype = `ejstbrowse`)
 * Definieras av `treebrowse` nod vid:
-   `/apps/extjstraining/components/customwidgets/treebrowse`
+  `/apps/extjstraining/components/customwidgets/treebrowse`
 * Renderas i json-format genom att begära:
-   `https://localhost:4502/apps/extjstraining/components/customwidgets/treebrowse.-1.json`
+  `https://localhost:4502/apps/extjstraining/components/customwidgets/treebrowse.-1.json`
 
 Widgeten för anpassad webbläsare (xtype = `ejstbrowse`):
 
 * Är ett JavaScript-objekt som anropas `Ejst.CustomWidget`
 * Är definierad i `CustomBrowseField.js` JavaScript-fil på:
-   `/apps/extjstraining/clientlib/js/CustomBrowseField.js`
+  `/apps/extjstraining/clientlib/js/CustomBrowseField.js`
 * Utökar ` [CQ.Ext.form.TriggerField](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html?class=CQ.Ext.form.TriggerField)`.
 * Definierar ett bläddringsfönster med namnet `browseWindow`.
 * Åsidosättningar ` [CQ.Ext.form.TriggerField](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html?class=CQ.Ext.form.TriggerField)#onTriggerClick` för att visa bläddringsfönstret när någon klickar på pilen.
@@ -450,7 +445,7 @@ Widgeten för anpassad webbläsare (xtype = `ejstbrowse`):
 * Fönstret är förankrat under **Bana** fält.
 * Den valda sökvägen skickas från bläddringsfältet till fönstret på `show` -händelse.
 * Registrerar sig själv som `ejstbrowse`&#39; xtype:
-   `CQ.Ext.reg('ejstbrowse', Ejst.CustomBrowseField);`
+  `CQ.Ext.reg('ejstbrowse', Ejst.CustomBrowseField);`
 
 Så här använder du **Anpassad trädbläddring** widgetbaserad dialogruta:
 
@@ -466,16 +461,16 @@ The **RTE-plugin (Rich Text Editor)** är en dialogruta som är baserad på RTF-
 The **RTE-plugin** baserad dialogruta:
 
 * Definieras av plugin-programnoden på:
-   `/apps/extjstraining/components/customwidgets/rteplugin`
+  `/apps/extjstraining/components/customwidgets/rteplugin`
 * Renderas i json-format genom att begära:
-   `https://localhost:4502/apps/extjstraining/components/customwidgets/rteplugin.-1.json`
+  `https://localhost:4502/apps/extjstraining/components/customwidgets/rteplugin.-1.json`
 * The `rtePlugins` noden har en underordnad nod `inserttext` (nodtyp = `nt:unstructured`) som namnges efter plugin-programmet. Den har en egenskap som heter `features` som definierar vilka av plugin-programfunktionerna som är tillgängliga för RTE.
 
 RTE-plugin:
 
 * Är ett JavaScript-objekt som anropas `Ejst.InsertTextPlugin`
 * Är definierad i `InsertTextPlugin.js` JavaScript-fil på:
-   `/apps/extjstraining/clientlib/js/InsertTextPlugin.js`
+  `/apps/extjstraining/clientlib/js/InsertTextPlugin.js`
 * Utökar ` [CQ.form.rte.plugins.Plugin](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html?class=CQ.form.rte.plugins.Plugin)` -objekt.
 * Följande metoder definierar ` [CQ.form.rte.plugins.Plugin](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html?class=CQ.form.rte.plugins.Plugin)` -objekt och åsidosätts i implementerings-plugin-programmet:
    * `getFeatures()` returnerar en array med alla funktioner som plugin-programmet gör tillgängliga.
@@ -485,7 +480,7 @@ RTE-plugin:
 * `insertText()` infogar en text med hjälp av motsvarande dialogobjekt `Ejst.InsertTextPlugin.Dialog` (se efteråt).
 * `executeInsertText()` anropas av `apply()` metod i dialogrutan som aktiveras när **OK** klickas på knappen.
 * Registrerar sig själv som `inserttext`&#39; plugin:
-   `CQ.form.rte.plugins.PluginRegistry.register("inserttext", Ejst.InsertTextPlugin);`
+  `CQ.form.rte.plugins.PluginRegistry.register("inserttext", Ejst.InsertTextPlugin);`
 * den `Ejst.InsertTextPlugin.Dialog` -objektet definierar den dialogruta som öppnas när plugin-knappen klickas. Dialogrutan består av en panel, ett formulär, ett textfält och två knappar (**OK** och **Avbryt**).
 
 Så här använder du **RTE-plugin (Rich Text Editor)** baserad dialogruta:
@@ -501,11 +496,11 @@ The **RTE-plugin (Rich Text Editor)** visas enligt följande:
 
 >[!NOTE]
 >
->*[]*
+>I det här exemplet visas bara hur du implementerar klientdelen av logiken: platshållarna (*[text]*) måste sedan tolkas explicit på serversidan (till exempel i komponent-JSP).
 
 ### Tree Overview {#tree-overview}
 
-En färdig lösning ` [CQ.Ext.tree.TreePanel](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html?class=CQ.Ext.tree.TreePanel)` -objektet tillhandahåller trädstrukturerad gränssnittsrepresentation av trädstrukturerade data. Komponenten Trädöversikt som ingår i **Använda ExtJS-widgetar** paketet visar hur du använder `TreePanel` -objekt för att visa ett JCR-träd under en angiven sökväg. Själva fönstret kan dockas/avdockas. I det här exemplet är fönsterlogiken inbäddad i komponenten jsp mellan &lt;script>&lt;/script> -taggar.
+` [CQ.Ext.tree.TreePanel](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html?class=CQ.Ext.tree.TreePanel)` Komponenten Trädöversikt som ingår i **Använda ExtJS-widgetar** paketet visar hur du använder `TreePanel` -objekt för att visa ett JCR-träd under en angiven sökväg. Själva fönstret kan dockas/avdockas. I det här exemplet är fönsterlogiken inbäddad i komponenten jsp mellan &lt;script>&lt;/script> -taggar.
 
 Inkludera **Översikt över träd** -komponent till exempelsidan:
 
@@ -522,7 +517,7 @@ Komponenten visas enligt följande:
 Komponenten Trädöversikt:
 
 * Definieras vid:
-   `/apps/extjstraining/components/treeoverview`
+  `/apps/extjstraining/components/treeoverview`
 
 * I dialogrutan kan du ange fönstrets storlek och docka eller avdocka fönstret (se informationen nedan).
 
@@ -532,7 +527,7 @@ Komponenten jsp:
 * Visar text om trädöversiktens dataformat.
 * Bäddar in fönsterlogiken i komponent-jsp mellan JavaScript-taggar.
 * Definieras vid:
-   `apps/extjstraining/components/treeoverview/content.jsp`
+  `apps/extjstraining/components/treeoverview/content.jsp`
 
 Den JavaScript-kod som är inbäddad i komponent-jsp:
 
@@ -540,11 +535,11 @@ Den JavaScript-kod som är inbäddad i komponent-jsp:
 * Om fönstret som visar trädet inte finns, `treePanel` ([CQ.Ext.tree.TreePanel](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html?class=CQ.Ext.tree.TreePanel)) skapas:
    * `treePanel` innehåller de data som används för att skapa fönstret.
    * Data hämtas genom att anropa servern som är registrerad på:
-      `/bin/wcm/siteadmin/tree.json`
+     `/bin/wcm/siteadmin/tree.json`
 * The `beforeload` avlyssnaren kontrollerar att den valda noden har lästs in.
 * The `root` objektet anger sökvägen `apps/extjstraining` som trädroten.
 * `tree` ( ` [CQ.Ext.Window](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html?class=CQ.Ext.Window)`) anges baserat på fördefinierade `treePanel`och visas med:
-   `tree.show();`
+  `tree.show();`
 * Om fönstret finns visas det baserat på egenskaperna width, height och dockad som hämtats från databasen.
 
 Komponentdialogrutan:
@@ -553,9 +548,9 @@ Komponentdialogrutan:
 * Definieras av en nod (nodtyp = `cq:Dialog`, xtype = ` [panel](/help/sites-developing/xtypes.md#panel)`).
 * Panelen har en widget för storleksfält (nodtyp = `cq:Widget`, xtype = ` [sizefield](/help/sites-developing/xtypes.md#sizefield)`) och en markeringswidget (nodtyp = `cq:Widget`, xtype = ` [selection](/help/sites-developing/xtypes.md#selection)`, typ = `radio`) med två alternativ (true/false)
 * Definieras av dialognoden vid:
-   `/apps/extjstraining/components/treeoverview/dialog`
+  `/apps/extjstraining/components/treeoverview/dialog`
 * Renderas i json-format genom att begära:
-   `https://localhost:4502/apps/extjstraining/components/treeoverview/dialog.-1.json`
+  `https://localhost:4502/apps/extjstraining/components/treeoverview/dialog.-1.json`
 * Visar följande:
 
 ![screen_shot_2012-02-01at120745pm](assets/screen_shot_2012-02-01at120745pm.png)
@@ -591,12 +586,12 @@ Komponenten visas enligt följande:
 I den färdiga versionen är **Översikt över stödraster** visas ett fönster med statiska data i tabellformat. I det här exemplet är logiken inbäddad i komponentjsp på två sätt:
 
 * den generiska logiken definieras mellan &lt;script>&lt;/script> taggar
-* the specific logic is available in a separate .js file and is linked to in the jsp. This setup lets you switch between the two logic (static/dynamic) by commenting the desired &lt;script> tags.
+* den specifika logiken finns i en separat .js-fil och är länkad till den i jsp-filen. This setup lets you switch between the two logic (static/dynamic) by commenting the desired &lt;script> tags.
 
-Komponenten Stödrasteröversikt:
+The Grid Overview component:
 
 * Definieras vid:
-   `/apps/extjstraining/components/gridoverview`
+  `/apps/extjstraining/components/gridoverview`
 * I dialogrutan kan du ange fönstrets storlek och docka eller avdocka fönstret.
 
 Komponenten jsp:
@@ -604,17 +599,16 @@ Komponenten jsp:
 * Hämtar egenskaperna width, height och dockad från databasen.
 * Visar text som introduktion till dataformatet för översiktsrutnät.
 * Refererar till JavaScript-kod som definierar GridPanel-objektet:
-   `<script type="text/javascript" src="/apps/extjstraining/components/gridoverview/defaultgrid.js"></script>`
-
-   `defaultgrid.js` definierar vissa statiska data som bas för GridPanel-objektet.
+  `<script type="text/javascript" src="/apps/extjstraining/components/gridoverview/defaultgrid.js"></script>`
+  `defaultgrid.js` definierar vissa statiska data som bas för GridPanel-objektet.
 * Bäddar in JavaScript-kod mellan JavaScript-taggar som definierar det Window-objekt som använder GridPanel-objektet.
 * Definieras vid:
-   `apps/extjstraining/components/gridoverview/content.jsp`
+  `apps/extjstraining/components/gridoverview/content.jsp`
 
 Den JavaScript-kod som är inbäddad i komponent-jsp:
 
 * Definierar `grid` genom att försöka hämta fönsterkomponenten från sidan:
-   `var grid = CQ.Ext.getCmp("<%= node.getName() %>-grid");`
+  `var grid = CQ.Ext.getCmp("<%= node.getName() %>-grid");`
 * If `grid` finns inte, [CQ.Ext.grid.GridPanel](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html?class=CQ.Ext.grid.GridPanel) objekt ( `gridPanel`) definieras genom att anropa `getGridPanel()` metod (se nedan). Den här metoden definieras i `defaultgrid.js`.
 * `grid` är en ` [CQ.Ext.Window](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html?class=CQ.Ext.Window)` -objekt, baserat på den fördefinierade GridPanel, och visas: `grid.show();`
 * If `grid` finns, visas den baserat på bredd, höjd och dockade egenskaper som hämtats från databasen.
@@ -624,12 +618,12 @@ JavaScript-filen ( `defaultgrid.js`) som refereras i komponenten jsp definierar 
 * `myData` är en array med statiska data som formaterats som en tabell med fem kolumner och fyra rader.
 * `store` är en `CQ.Ext.data.Store` objekt som förbrukar `myData`.
 * `store` har lästs in i minnet:
-   `store.load();`
+  `store.load();`
 * `gridPanel` är en ` [CQ.Ext.grid.GridPanel](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html?class=CQ.Ext.grid.GridPanel)` objekt som förbrukar `store`:
    * kolumnbredderna ändras alltid:
-      `forceFit: true`
+     `forceFit: true`
    * bara en rad åt gången kan markeras:
-      `singleSelect:true`
+     `singleSelect:true`
 
 #### Exempel 2: Referenssökstödraster {#example-reference-search-grid}
 
@@ -659,9 +653,9 @@ JavaScript-koden som komponenten jsp refererar till ( `referencesearch.js`) defi
 * `reader` är en ` [CQ.Ext.data.JsonReader](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html?class=CQ.Ext.data.JsonReader)`objekt som läser serverletssvaret i json-format för tre kolumner.
 * `cm` är en ` [CQ.Ext.grid.ColumnModel](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html?class=CQ.Ext.grid.ColumnModel)` -objekt för tre kolumner.
 Kolumncellerna i kolumnen&quot;Testa&quot; kan redigeras så som de definieras med en redigerare:
-   `editor: new [CQ.Ext.form.TextField](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html?class=CQ.Ext.form.TextField)({})`
+  `editor: new [CQ.Ext.form.TextField](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html?class=CQ.Ext.form.TextField)({})`
 * kolumnerna kan sorteras:
-   `cm.defaultSortable = true;`
+  `cm.defaultSortable = true;`
 * `store` är en ` [CQ.Ext.data.GroupingStore](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html?class=CQ.Ext.data.GroupingStore)` objekt:
    * hämtar data genom att anropa den server som är registrerad på &quot; `/bin/querybuilder.json`&quot; med några parametrar som används för att filtrera frågan
    * baseras på `reader`, definierad i förväg
@@ -669,7 +663,7 @@ Kolumncellerna i kolumnen&quot;Testa&quot; kan redigeras så som de definieras m
 * `gridPanel` är en ` [CQ.Ext.grid.EditorGridPanel](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html?class=CQ.Ext.grid.EditorGridPanel)` objekt som kan redigeras:
    * baseras på den fördefinierade `store` och i kolumnmodellen `cm`
    * bara en rad åt gången kan markeras:
-      `sm: new [CQ.Ext.grid.RowSelectionModel](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html?class=CQ.Ext.grid.RowSelectionModel)({singleSelect:true})`
+     `sm: new [CQ.Ext.grid.RowSelectionModel](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html?class=CQ.Ext.grid.RowSelectionModel)({singleSelect:true})`
    * den `afteredit` avlyssnaren ser till att efter en cell i **Testa** kolumnen har redigerats:
       * egenskapen &#39; `test`&#39; för noden vid sökvägen som definieras av &quot;**jcr:sökväg**&quot; -kolumnen ställs in i databasen med cellens värde
       * om POSTEN lyckas läggs värdet till i `store` objekt, annars avvisas det

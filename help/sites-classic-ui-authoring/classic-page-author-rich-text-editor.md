@@ -7,9 +7,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 discoiquuid: ccc0e434-8847-4e12-8a18-84b55fb2964b
 docset: aem65
 exl-id: 5623dcf4-bda9-4dee-ace3-5a1f6057e96c
-source-git-commit: 75c6bb87bb06c5ac9378ccebf193b5416c080bb1
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '1829'
+source-wordcount: '1831'
 ht-degree: 0%
 
 ---
@@ -168,7 +168,7 @@ Du kan:
 
 * Skriv in en URI direkt
 * Använd webbplatskartan för att välja en sida på webbplatsen
-* Ange URI:n och lägg sedan till målankarpunkten; t.ex. `www.TargetUri.org#AnchorName`
+* Ange URI:n och lägg sedan till målankarpunkten; till exempel `www.TargetUri.org#AnchorName`
 * Ange endast en ankarpunkt (för att referera till&quot;den aktuella sidan&quot;); Till exempel: `#anchor`
 * Söka efter en sida i innehållssökaren och dra och släpp sidikonen i hyperlänksdialogrutan
 
@@ -331,7 +331,7 @@ Den aktuella kolumnen kan också tas bort.
 
 ![chlimage_1-106](assets/chlimage_1-106.png)
 
-Markerar hela den aktuella raden eller kolumnen. Särskilda åtgärder (t.ex. sammanslagning) är då tillgängliga.
+Markerar hela den aktuella raden eller kolumnen. Specifika åtgärder (till exempel sammanfogning) är sedan tillgängliga.
 
 #### Sammanfoga celler {#merge-cells}
 

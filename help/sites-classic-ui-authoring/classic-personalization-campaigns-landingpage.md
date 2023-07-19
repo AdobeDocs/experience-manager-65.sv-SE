@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 061dee36-a3bb-4166-a9c1-3ab7e4de1d1d
 docset: aem65
 exl-id: 0f1014a7-b0ba-4455-b3a4-5023bcd4c5a1
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
 source-wordcount: '3335'
 ht-degree: 0%
@@ -304,10 +304,10 @@ Detta är ett valfritt fält som anger sökvägen till en nod i databasen. När 
 Om du validerar det fullständiga formuläret ska du även inkludera något av följande:
 
 * Ett skript för klientvalidering:
-   ` /apps/<myApp>/form/<myValidation>/formclientvalidation.jsp`
+  ` /apps/<myApp>/form/<myValidation>/formclientvalidation.jsp`
 
 * Ett skript för validering på serversidan:
-   ` /apps/<myApp>/form/<myValidation>/formservervalidation.jsp`
+  ` /apps/<myApp>/form/<myValidation>/formservervalidation.jsp`
 
 **Åtgärdskonfiguration** Beroende på vad du väljer i Alternativ för inlägg ändras åtgärdskonfigurationen. Om du till exempel väljer Skapa lead kan du konfigurera vilken lista leadet ska läggas till i.
 

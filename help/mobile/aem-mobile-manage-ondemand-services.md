@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: administering-on-demand-services-app
 discoiquuid: c08729f6-1512-4aee-82bb-7cc05749a72f
 exl-id: 5d2b9743-9601-46e6-9d73-3bf734e04a30
-source-git-commit: 85d39e59b82fdfdcd310be61787a315668aebe38
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '259'
+source-wordcount: '260'
 ht-degree: 1%
 
 ---
@@ -23,7 +23,7 @@ Den här sidan förklarar Förhandsvisa med Preflight-appen.
 
 >[!NOTE]
 >
->Adobe rekommenderar att du använder SPA Editor för projekt som kräver ramverksbaserad klientåtergivning för en sida (t.ex. Reagera). [Läs mer](/help/sites-developing/spa-overview.md).
+>Adobe rekommenderar att du använder SPA Editor för projekt som kräver ramverksbaserad klientåtergivning för en sida (till exempel React). [Läs mer](/help/sites-developing/spa-overview.md).
 
 Följande åtgärder utförs i programmet som helhet.
 
@@ -46,6 +46,7 @@ Med preflight-appen Mobile On Demand kan du visa alla projekt som du har tillgå
 >[!NOTE]
 >
 >AEM Preflight-appen används för att förhandsgranska innehåll och bläddra bland sidor. Om du vill veta mer om Preflight-appen klickar du [här](https://helpx.adobe.com/digital-publishing-solution/help/aem-mobile-end-of-life-faq.html).
+>
 
 ### Komma framåt {#getting-ahead}
 

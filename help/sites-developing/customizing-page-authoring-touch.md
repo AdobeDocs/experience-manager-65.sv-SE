@@ -10,9 +10,9 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: 6825dcd6-fa75-4410-b6b2-e7bd4a391224
 exl-id: 90594588-db8e-4d4c-a208-22c1c6ea2a2d
-source-git-commit: b886844dc80482ae4aae5fc7ce09e466efecc3bd
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '1354'
+source-wordcount: '1357'
 ht-degree: 0%
 
 ---
@@ -27,14 +27,14 @@ AEM innehåller olika mekanismer som du kan använda för att anpassa sidrediger
 
 * Clientlibs
 
-   Med Clientlibs kan du utöka standardimplementeringen för att få nya funktioner, samtidigt som du återanvänder standardfunktioner, objekt och standardmetoder. När du anpassar kan du skapa en egen klientlib under `/apps.` Den nya klientlib måste:
+  Med Clientlibs kan du utöka standardimplementeringen för att få nya funktioner, samtidigt som du återanvänder standardfunktioner, objekt och standardmetoder. När du anpassar kan du skapa en egen klientlib under `/apps.` Den nya klientlib måste:
 
    * är beroende av redigeringsklientlib `cq.authoring.editor.sites.page`
    * vara en del av `cq.authoring.editor.sites.page.hook` kategori
 
 * Övertäckningar
 
-   Övertäckningar baseras på noddefinitioner och gör att du kan täcka över standardfunktionerna (i `/libs`) med din egen anpassade funktionalitet (i `/apps`). När du skapar en övertäckning krävs ingen 1:1-kopia av originalet, eftersom [sammanslagning av säljresurser](/help/sites-developing/sling-resource-merger.md) tillåter arv.
+  Övertäckningar baseras på noddefinitioner och gör att du kan täcka över standardfunktionerna (i `/libs`) med din egen anpassade funktionalitet (i `/apps`). När du skapar en övertäckning krävs ingen 1:1-kopia av originalet, eftersom [sammanslagning av säljresurser](/help/sites-developing/sling-resource-merger.md) tillåter arv.
 
 >[!NOTE]
 >
@@ -53,7 +53,6 @@ De kan användas på många sätt för att utöka sidredigeringsfunktionen i AEM
 >
 
 
-
 >[!CAUTION]
 >
 >Du ***måste*** ändrar ingenting i `/libs` bana.
@@ -64,7 +63,6 @@ De kan användas på många sätt för att utöka sidredigeringsfunktionen i AEM
 >
 >1. Återskapa önskat objekt (d.v.s. som det finns i `/libs`) under `/apps`
 >1. Gör ändringar i `/apps`
-
 
 ## Lägg till nytt lager (läge) {#add-new-layer-mode}
 
@@ -93,7 +91,7 @@ Koden för den här sidan finns på GitHub
 
 ## Lägg till ny markeringskategori i resursläsaren {#add-new-selection-category-to-asset-browser}
 
-Resursläsaren visar resurser av olika typer/kategorier (t.ex. bilder, dokument osv.). Resurserna kan också filtreras efter dessa tillgångskategorier.
+Resursläsaren visar resurser av olika typer/kategorier (till exempel bilder, dokument osv.). Resurserna kan också filtreras efter dessa tillgångskategorier.
 
 ### Kodexempel {#code-sample-1}
 
@@ -108,7 +106,7 @@ Koden för den här sidan finns på GitHub
 
 ## Filtreringsresurser {#filtering-resources}
 
-När användaren redigerar sidor måste han eller hon ofta välja bland resurser (t.ex. sidor, komponenter, resurser osv.). Detta kan vara en lista som författaren till exempel måste välja ett objekt från.
+När användaren redigerar sidor måste han eller hon ofta välja bland resurser (till exempel sidor, komponenter, resurser osv.). Detta kan vara en lista som författaren till exempel måste välja ett objekt från.
 
 För att hålla listan i en rimlig storlek och även relevant för användningsfallet kan ett filter implementeras i form av ett anpassat predikat. Om [`pathbrowser`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/index.html) [Granit](/help/sites-developing/touch-ui-concepts.md#granite-ui) -komponenten används för att användaren ska kunna välja sökvägen till en viss resurs. Sökvägarna kan filtreras på följande sätt:
 
@@ -152,14 +150,14 @@ I en vanlig AEM-installation:
 
    * `cq:inplaceEditing`
 
-      till exempel:
+     till exempel:
 
       * `/libs/foundation/components/text/cq:editConfig`
       * `/libs/foundation/components/image/cq:editConfig`
 
          * egenskap: `editorType`
 
-            Definierar vilken typ av infogad redigerare som ska användas när redigeringen på plats aktiveras för den komponenten. t.ex. `text`, `textimage`, `image`, `title`.
+           Definierar vilken typ av infogad redigerare som ska användas när redigeringen på plats aktiveras för den komponenten. till exempel `text`, `textimage`, `image`, `title`.
 
 1. Ytterligare konfigurationsinformation om redigeraren kan konfigureras med en `config` nod som innehåller konfigurationer samt ytterligare `plugin` nod som innehåller nödvändig konfigurationsinformation för plugin-programmet.
 
@@ -260,4 +258,4 @@ Om du vill ha ett anpassat beteende vid en sådan aktivering kan du täcka över
    >`/libs/cq/gui/content/common/managepublicationwizard`
 
 1. Uppdatera [arbetsflödesmodell](/help/sites-developing/workflows-models.md) och relaterade konfigurationer/skript efter behov.
-1. Ta bort höger till [ `replicate` åtgärd](/help/sites-administering/security.md#actions) från alla lämpliga användare för alla relevanta sidor, om du vill att det här arbetsflödet ska utlösas som en standardåtgärd när någon av användarna försöker publicera (eller replikera) en sida.
+1. Ta bort höger till [`replicate` åtgärd](/help/sites-administering/security.md#actions) från alla lämpliga användare för alla relevanta sidor, om du vill att det här arbetsflödet ska utlösas som en standardåtgärd när någon av användarna försöker publicera (eller replikera) en sida.
