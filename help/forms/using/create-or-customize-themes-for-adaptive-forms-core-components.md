@@ -8,7 +8,7 @@ contentOwner: Khushwant Singh
 topic-tags: Adaptive Forms
 docset: aem65
 role: Admin, Developer
-source-git-commit: 00f8b2c72aab37a57ab76e684f432250d2de3470
+source-git-commit: 90731516671ee0681ff91f2ac47888b1febee199
 workflow-type: tm+mt
 source-wordcount: '1962'
 ht-degree: 0%
@@ -179,10 +179,9 @@ Du kan också anpassa teckensnitt, färg, storlek och andra CSS-egenskaper för 
 
 -->
 
->
+>[!NOTE]
 >
 > När ett format definieras både på tema- och komponentnivå prioriteras det format som definieras på komponentnivå.
-
 
 #### 3. Gör temat klart för distribution {#generate-the-clientlib}
 
@@ -275,9 +274,10 @@ När paketet har installerats är temat tillgängligt för val.
 
 ![Temaklientbibliotek](/help/forms/using/assets/themeclientlibrary.png)
 
+>[!NOTE]
 >
 >
->Om du får problem med att komma åt inloggningsdialogrutan på en publiceringsinstans för att installera paketet via pakethanteraren kan du försöka med att logga in via följande URL: `http://[Publish Server URL]:[PORT]/system/console`. Detta ger dig åtkomst till att logga in på Publish-instansen, så att du kan fortsätta med installationsprocessen.
+> Om du får problem med att komma åt inloggningsdialogrutan på en publiceringsinstans för att installera paketet via pakethanteraren kan du försöka med att logga in via följande URL: `http://[Publish Server URL]:[PORT]/system/console`. Detta ger dig åtkomst till att logga in på Publish-instansen, så att du kan fortsätta med installationsprocessen.
 
 ## Använda ett tema i ett anpassat formulär {#using-theme-in-adaptive-form}
 
