@@ -8,9 +8,9 @@ contentOwner: Khushwant Singh
 topic-tags: Adaptive Forms
 docset: aem65
 role: Admin, Developer
-source-git-commit: 90731516671ee0681ff91f2ac47888b1febee199
+source-git-commit: a5d38ef6b3281992fd9ac3121cdb6c998631b205
 workflow-type: tm+mt
-source-wordcount: '1962'
+source-wordcount: '1955'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ ht-degree: 0%
 
 I AEM Forms 6.5 är ett tema ett AEM klientbibliotek som du använder för att definiera format (utseende och känsla) för ett adaptivt formulär. Ett tema innehåller formatinformation för komponenterna och panelerna. Format innehåller egenskaper som bakgrundsfärger, lägesfärger, genomskinlighet, justering och storlek. När du använder ett tema återspeglas det angivna formatet i motsvarande komponenter. Ett tema hanteras separat utan referens till ett adaptivt formulär och kan återanvändas i flera adaptiva Forms.
 
-## Tillgängliga teman {#available-standard-theme}
+## Tillgängliga teman {#available-theme}
 
 AEM 6.5-miljön innehåller följande teman för Core Components based Adaptive Forms:
 
@@ -51,13 +51,13 @@ Ett tema är ett paket som omfattar CSS-filen, JavaScript-filer och resurser (so
 
 ## Skapa ett tema
 
-AEM Forms 6.5 innehåller följande standardteman för Core Components-baserade Adaptive Forms.
+AEM Forms 6.5 innehåller följande teman för Core Components based Adaptive Forms.
 
 * [Tema Canvas](https://github.com/adobe/aem-forms-theme-canvas)
 * [WKND-tema](https://github.com/adobe/aem-forms-theme-wknd)
 * [EASEL-tema](https://github.com/adobe/aem-forms-theme-easel)
 
-Du kan [anpassa något av dessa standardteman för att skapa ett tema](#customize-a-theme-core-components).
+Du kan [anpassa något av dessa teman för att skapa ett tema](#customize-a-theme-core-components).
 
 ## Anpassa ett tema {#customize-a-theme-core-components-based-adaptive-forms}
 
@@ -92,7 +92,7 @@ Att anpassa ett tema avser processen att ändra och anpassa utseendet på ett te
 
 Att skapa eller anpassa ett tema är en process i flera steg. Utför stegen i listan för att skapa/anpassa temat:
 
-1. [Klona ett standardtema](#clone-git-repo-of-theme)
+1. [Klona ett tema](#clone-git-repo-of-theme)
 1. [Anpassa temats utseende](#customize-the-theme)
 1. [Förbered temat för lokal driftsättning](#generate-the-clientlib)
 1. [Distribuera temat i en lokal miljö](#deploy-the-theme-on-a-local-environment)
@@ -102,17 +102,17 @@ Att skapa eller anpassa ett tema är en process i flera steg. Utför stegen i li
  ![Theme Customization workflow](/help/forms/using/assets/custom-theme-steps.png)
 -->
 
-Exemplen i dokumentet är baserade på **Arbetsyta** men du kan klona vilket standardtema som helst och anpassa det med samma instruktioner. Dessa instruktioner kan användas för alla teman och du kan ändra teman efter dina specifika behov.
+Exemplen i dokumentet är baserade på **Arbetsyta** -temat, men du kan klona vilket tema som helst och anpassa det med samma instruktioner. Dessa instruktioner kan användas för alla teman och du kan ändra teman efter dina specifika behov.
 
 #### 1. Klona Git-databasen för temat {#clone-git-repo-of-theme}
 
-Om du vill klona ett standardtema för Core Components-baserade Adaptive Forms väljer du något av följande standardteman:
+Om du vill klona ett tema för Core Components based Adaptive Forms väljer du ett av följande teman:
 
 * [Tema Canvas](https://github.com/adobe/aem-forms-theme-canvas)
 * [WKND-tema](https://github.com/adobe/aem-forms-theme-wknd)
 * [EASEL-tema](https://github.com/adobe/aem-forms-theme-easel)
 
-Utför följande instruktioner för att klona ett standardtema:
+Utför följande instruktioner för att klona ett tema:
 
 1. Öppna kommandotolken eller terminalfönstret i den lokala utvecklingsmiljön.
 
