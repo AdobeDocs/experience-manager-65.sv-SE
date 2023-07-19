@@ -8,17 +8,15 @@ contentOwner: Khushwant Singh
 topic-tags: Adaptive Forms
 docset: aem65
 role: Admin, Developer
-source-git-commit: 1b97dc536550da8904bc7da09e983e0722c42a3d
+source-git-commit: 00f8b2c72aab37a57ab76e684f432250d2de3470
 workflow-type: tm+mt
-source-wordcount: '1982'
+source-wordcount: '1962'
 ht-degree: 0%
 
 ---
 
 
 # Skapa eller anpassa ett anpassat formulärtema {#introduction-to-theme}
-
-<span class="preview"> Adobe rekommenderar att du använder kärnkomponenter för att [lägga till adaptiv Forms på en AEM Sites-sida](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md) eller till [skapa fristående Adaptive Forms](/help/forms/using/create-an-adaptive-form-core-components.md). </span>
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
@@ -290,6 +288,7 @@ Steg för att tillämpa ett tema på ett adaptivt formulär är:
 1. Klicka **Skapa** > **Adaptiv Forms**.
 1. Välj en adaptiv Forms Core Components-mall och klicka på **Nästa**. The **Lägg till egenskaper** visas
 1. Ange **Namn** för din adaptiva form.
+
 
    >[!NOTE]
    >
