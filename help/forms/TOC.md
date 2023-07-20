@@ -8,7 +8,8 @@ user-guide-title: Användarhandbok om Adobe Experience Manager 6.5 Forms
 breadcrumb-title: Användarhandbok om Forms
 user-guide-description: Skapa, hantera, publicera och uppdatera digitala formulär.
 role: User
-source-git-commit: 91683330024fbf1059715447073f35cecde45b0a
+feature: Forms Service
+source-git-commit: fc148a5f5e0fcaac2980dc73004fa92ac3b91fb3
 workflow-type: tm+mt
 source-wordcount: '3889'
 ht-degree: 0%
@@ -568,7 +569,7 @@ ht-degree: 0%
       + [Säkerhetskopiera AEM formulärdata](/help/forms/using/admin-help/backing-aem-forms-data.md)
       + [Filer som ska säkerhetskopieras och återställas](/help/forms/using/admin-help/files-back-recover.md)
       + [Säkerhetskopierings- och återställningsstrategi för AEM formulär](/help/forms/using/admin-help/backup-recovery-strategy-aem-forms.md)
-      + [Begränsningar för säkerhetskopiering i PDF Generator](/help/forms/using/admin-help/pdf-generator-backup-limitations.md)
+      + [PDF Generator begränsningar för säkerhetskopiering](/help/forms/using/admin-help/pdf-generator-backup-limitations.md)
       + [Strategier för säkerhetskopiering av bevakade mappar](/help/forms/using/admin-help/backup-strategies-watched-folders.md)
       + [Återställa AEM formulärdata](/help/forms/using/admin-help/recovering-aem-forms-data.md)
       + [Säkerhetskopieringsstrategi för Connector for EMC Documentum-användare](/help/forms/using/admin-help/backup-strategy-connector-emc-documentum.md)
