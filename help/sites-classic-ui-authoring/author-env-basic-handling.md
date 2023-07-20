@@ -1,16 +1,14 @@
 ---
 title: Grundläggande hantering
-description: En översikt över grundläggande hantering när du använder AEM redigeringsmiljö. Den använder platskonsolen som grund.
-uuid: ab488d7c-7b7f-4a23-a80c-99d37ac84246
+description: Översikt över grundläggande hantering när du använder Adobe Experience Manager redigeringsmiljö. Den använder platskonsolen som grund.
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: introduction
 content-type: reference
-discoiquuid: 9737ead9-e324-43c9-9780-7abd292f4e5b
 exl-id: 2981dc20-b2ba-4ea2-a53b-8b5fe526aa9c
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 3885cc51f7e821cdb352737336a29f9c4f0c2f41
 workflow-type: tm+mt
-source-wordcount: '1194'
+source-wordcount: '1167'
 ht-degree: 0%
 
 ---
@@ -19,17 +17,17 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->* Den här sidan är avsedd att ge en översikt över grundläggande hantering när du använder AEM redigeringsmiljö. Den använder **Webbplatser** som bas.
+>* Den här sidan är avsedd att ge en översikt över grundläggande hantering när du använder Adobe Experience Manager (AEM) redigeringsmiljö. Den använder **Webbplatser** som bas.
 >
->* Vissa funktioner är inte tillgängliga i alla konsoler och/eller så är ytterligare funktioner tillgängliga i vissa konsoler. Specifik information om de enskilda konsolerna och deras tillhörande funktioner beskrivs mer ingående på andra sidor.
+>* Vissa funktioner är inte tillgängliga i alla konsoler och ytterligare funktioner är tillgängliga i vissa konsoler. Specifik information om de enskilda konsolerna och deras relaterade funktioner beskrivs mer ingående på andra sidor.
 >* Kortkommandon är tillgängliga i hela AEM. I synnerhet när [använda konsoler](/help/sites-classic-ui-authoring/author-env-keyboard-shortcuts.md) och [redigera sidor](/help/sites-classic-ui-authoring/classic-page-author-keyboard-shortcuts.md).
 >
 
 ## Välkomstskärmen {#the-welcome-screen}
 
-Det klassiska användargränssnittet innehåller ett urval konsoler med välkända metoder för att navigera och initiera åtgärder, inklusive klickning, dubbelklickning och [snabbmenyer](#context-menus).
+Det klassiska användargränssnittet innehåller ett urval av konsoler, med välkända metoder för att navigera och initiera åtgärder, bland annat klicka, dubbelklicka och [snabbmenyer](#context-menus).
 
-När du loggar in visas välkomstskärmen med en lista över länkar till konsoler och tjänster:
+När du har loggat in visas välkomstskärmen. Här finns en lista med länkar till konsoler och tjänster:
 
 ![screen_shot_2012-01-30at61745pm](assets/screen_shot_2012-01-30at61745pm.png)
 
@@ -57,15 +55,15 @@ Huvudkonsolerna är:
   </tr>
   <tr>
    <td><strong>Inkorg </strong></td>
-   <td>I många fall är ett antal personer inblandade i ett arbetsflödes underuppgifter och varje person måste slutföra sitt steg innan han eller hon kan lämna jobbet till nästa person. I Inkorgen kan du se meddelanden som rör sådana uppgifter. Se <a href="/help/sites-administering/workflows.md">Arbeta med arbetsflöden</a>. <br /> </td>
+   <td>Oftast är det olika personer som är inblandade i underuppgifterna i ett arbetsflöde och varje person måste slutföra sitt steg innan han eller hon kan lämna jobbet till nästa person. I Inkorgen kan du se meddelanden som rör sådana uppgifter. Se <a href="/help/sites-administering/workflows.md">Arbeta med arbetsflöden</a>. <br /> </td>
   </tr>
   <tr>
    <td><strong>Taggar</strong></td>
-   <td>Med taggningskonsolerna kan du administrera taggar. Taggar är korta namn eller fraser som du kan använda för att klassificera och kommentera innehållsdelar, vilket gör det enklare att hitta och ordna dem. Mer information finns på <a href="/help/sites-classic-ui-authoring/classic-feature-tags.md">Använda och hantera taggar</a>.</td>
+   <td>Med taggningskonsolerna kan du administrera taggar. Taggar är korta namn eller fraser som du kan använda för att klassificera och kommentera innehållsdelar, vilket gör det enklare att hitta och ordna dem. Mer information finns i <a href="/help/sites-classic-ui-authoring/classic-feature-tags.md">Använda och hantera taggar</a>.</td>
   </tr>
   <tr>
    <td><strong>verktyg</strong></td>
-   <td>The <a href="/help/sites-administering/tools-consoles.md">Verktygskonsoler</a> ger tillgång till ett antal specialverktyg och konsoler som hjälper dig att administrera dina webbplatser, digitala resurser och andra aspekter av innehållsdatabasen.</td>
+   <td>The <a href="/help/sites-administering/tools-consoles.md">Verktygskonsoler</a> ger tillgång till flera specialiserade verktyg och konsoler som hjälper dig att administrera dina webbplatser, digitala resurser och andra aspekter av innehållsdatabasen.</td>
   </tr>
   <tr>
    <td><strong>Användare</strong></td>
@@ -77,7 +75,7 @@ Huvudkonsolerna är:
   </tr>
   <tr>
    <td><strong>Arbetsflöden</strong></td>
-   <td>Ett arbetsflöde är en definierad serie steg som beskriver processen att slutföra en uppgift. I många fall är ett antal personer inblandade i en uppgift och varje person måste slutföra sitt steg innan han eller hon kan lämna jobbet till nästa person. Med arbetsflödeskonsolen kan du skapa arbetsflödesmodeller och hantera arbetsflödesinstanser som körs. Se <a href="/help/sites-administering/workflows.md">Arbeta med arbetsflöden</a>.<br /> </td>
+   <td>Ett arbetsflöde är en definierad serie steg som beskriver processen att slutföra en uppgift. Ofta är flera personer inblandade i en uppgift och varje person måste slutföra sitt steg innan han eller hon kan lämna jobbet till nästa person. Med arbetsflödeskonsolen kan du skapa arbetsflödesmodeller och hantera arbetsflödesinstanser som körs. Se <a href="/help/sites-administering/workflows.md">Arbeta med arbetsflöden</a>.<br /> </td>
   </tr>
  </tbody>
 </table>
@@ -92,7 +90,7 @@ The **Webbplatser** I konsolen finns två rutor där du kan navigera och hantera
 
 * Höger ruta
 
-  Här visas sidorna (på den plats som är markerad i den vänstra rutan) och de kan användas för att utföra åtgärder.
+  Här visas sidorna (på den plats som är markerad i den vänstra rutan) och de kan användas för att vidta åtgärder.
 
 Här kan du [hantera sidor](/help/sites-authoring/managing-pages.md) med verktygsfältet, en snabbmeny eller genom att öppna en sida för ytterligare åtgärder.
 
@@ -104,24 +102,24 @@ Här kan du [hantera sidor](/help/sites-authoring/managing-pages.md) med verktyg
 
 ## Få hjälp {#accessing-help}
 
-På olika konsoler (till exempel webbplatser) finns även **Hjälp** om knappen är tillgänglig öppnas antingen packningsresursen eller dokumentationswebbplatsen.
+På olika konsoler (till exempel Webbplatser) kan du **Hjälp** är tillgänglig. Klicka **Hjälp** öppnar antingen Package Share eller dokumentationswebbplatsen.
 
 ![chlimage_1-10](assets/chlimage_1-10a.png)
 
-När en sida redigeras [sidekick har även en knapp för att komma åt hjälpen](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md#accessing-help).
+När du redigerar en sida [sidekick har även en knapp för att komma åt hjälpen](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md#accessing-help).
 
 ## Navigera med webbplatskonsolen {#navigating-with-the-websites-console}
 
 The **Webbplatser** konsolen visar sidorna i en trädstruktur (vänster ruta). För att underlätta navigeringen kan delar av trädstrukturen expanderas (+) eller komprimeras (-) efter behov:
 
-* Ett enda klick på sidnamnet (i den vänstra rutan) gör att:
+* När du klickar på sidnamnet i den vänstra rutan händer följande:
 
-   * Lista de underordnade sidorna i den högra rutan
-   * Utvidga även strukturen i den vänstra rutan.
+   * Visar de underordnade sidorna i den högra rutan
+   * Expanderar strukturen i den vänstra rutan.
 
-     Av prestandaskäl är den här åtgärden beroende av antalet underordnade noder. Med en standardinstallation fungerar den här utbyggnadsmetoden när det finns `30` eller mindre underordnade noder.
+     Av prestandaskäl beror den här åtgärden på antalet underordnade noder. Med en standardinstallation fungerar den här utbyggnadsmetoden när det finns `30` eller färre underordnade noder.
 
-* Om du dubbelklickar på sidnamnet (den vänstra rutan) expanderas också trädet, även om den här effekten inte är så självklar när sidan öppnas samtidigt.
+* Om du dubbelklickar på sidnamnet (den vänstra rutan) expanderas trädet, men eftersom sidan öppnas samtidigt är effekten inte så självklar.
 
 >[!NOTE]
 >
@@ -140,7 +138,7 @@ The **Webbplatser** konsolen visar sidorna i en trädstruktur (vänster ruta). F
 >in:
 >`/apps/cq/ui/widgets/themes/default/widgets/wcm/SiteAdmin.js`
 >
->Se [SiteAdmin i CQ Widget API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.SiteAdmin) för mer information.
+>Se [SiteAdmin i CQ Widget API](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html?class=CQ.wcm.SiteAdmin) för mer information.
 
 ## Sidinformation på webbplatskonsolen {#page-information-on-the-websites-console}
 
@@ -174,7 +172,7 @@ Följande finns tillgängliga: en delmängd av dessa fält visas som standard:
   </tr>
   <tr>
    <td>Ändrad</td>
-   <td>Anger om sidan har ändrats och anger ändringsdatum och -tid. Om du vill spara ändringarna måste du aktivera sidan.</td>
+   <td>Anger om sidan har ändrats och anger ändringsdatum och -tid. Om du vill spara ändringar måste du aktivera sidan.</td>
   </tr>
   <tr>
    <td>Scene7 Publish</td>
@@ -182,7 +180,7 @@ Följande finns tillgängliga: en delmängd av dessa fält visas som standard:
   </tr>
   <tr>
    <td>Status</td>
-   <td>Anger sidans aktuella status, t.ex. om sidan är en del av ett arbetsflöde eller en livekopia, eller om en sida är låst.</td>
+   <td>Anger sidans status, t.ex. om sidan är en del av ett arbetsflöde eller en livekopia, eller om en sida är låst.</td>
   </tr>
   <tr>
    <td>Impressions</td>
@@ -209,7 +207,7 @@ Följande finns tillgängliga: en delmängd av dessa fält visas som standard:
 
 >[!NOTE]
 >
->Om du vill markera kolumnerna som visas håller du musen över en kolumnrubrik. En nedrullningsbar meny visas. Här kan du använda **Kolumner** alternativ.
+>Om du vill markera kolumnerna som visas håller du musen över en kolumnrubrik. En nedrullningsbar meny visas och härifrån kan du använda **Kolumner** alternativ.
 
 Färgerna bredvid sidorna i **Publicerad** och **Ändrad** kolumner anger publiceringsstatus:
 
@@ -224,6 +222,6 @@ Färgerna bredvid sidorna i **Publicerad** och **Ändrad** kolumner anger public
 
 ## Snabbmenyer {#context-menus}
 
-Det klassiska användargränssnittet använder välkända metoder för att navigera och initiera åtgärder, inklusive att klicka och dubbelklicka. Beroende på den aktuella situationen finns det även en rad snabbmenyer (som vanligtvis öppnas med höger musknapp):
+Det klassiska användargränssnittet använder välkända metoder för att navigera och initiera åtgärder, inklusive att klicka och dubbelklicka. Beroende på den aktuella situationen finns det även en rad snabbmenyer (som öppnas med höger musknapp):
 
 ![chlimage_1-11](assets/chlimage_1-11a.png)

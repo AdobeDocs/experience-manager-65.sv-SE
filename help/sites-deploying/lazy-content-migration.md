@@ -1,27 +1,23 @@
 ---
 title: Lazy Content Migration
-seo-title: Lazy Content Migration
-description: Läs mer om migrering av Lazy-innehåll i AEM 6.4.
-seo-description: Learn about Lazy Content Migration in AEM 6.4.
-uuid: f5b0aa84-5638-4708-9da2-89964d394632
+description: Läs om Lazy Content Migration i Adobe Experience Manager 6.4.
 contentOwner: sarchiz
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: upgrading
-discoiquuid: d72b8844-d782-4b5b-8999-338217dbefb9
 docset: aem65
 feature: Upgrading
 exl-id: 946c7c2a-806b-4461-a38b-9c2e5ef1e958
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 3885cc51f7e821cdb352737336a29f9c4f0c2f41
 workflow-type: tm+mt
-source-wordcount: '694'
+source-wordcount: '687'
 ht-degree: 3%
 
 ---
 
 # Lazy Content Migration {#lazy-content-migration}
 
-För bakåtkompatibilitet, innehåll och konfiguration i **/etc** och **/content** från och med AEM 6.3 inte kommer att ändras eller ändras omedelbart med uppgraderingen. Detta görs för att säkerställa att kundapplikationernas beroenden av dessa strukturer förblir intakta. Funktionerna för dessa innehållsstrukturer är fortfarande desamma även om innehållet i en av rutorna AEM 6.5 finns på en annan plats.
+För bakåtkompatibilitet, innehåll och konfiguration i **/etc** och **/content** som börjar med Adobe Experience Manager (AEM) 6.3 inte omedelbart kommer att ändras eller ändras med uppgraderingen. Detta görs för att säkerställa att kundapplikationernas beroenden av dessa strukturer förblir intakta. Funktionerna för dessa innehållsstrukturer är fortfarande desamma även om innehållet i en av rutorna AEM 6.5 finns på en annan plats.
 
 Även om inte alla dessa platser kan omvandlas automatiskt är det några fördröjda `CodeUpgradeTasks` kallas även Lazy Content Migration. Detta gör att kunderna kan utlösa dessa automatiska omformningar genom att starta om instansen med den här systemegenskapen:
 
@@ -31,9 +27,9 @@ För bakåtkompatibilitet, innehåll och konfiguration i **/etc** och **/content
 
 Detta orsakar `CodeUpgradeTasks` som ska köras under migreringen.
 
-Målet är en effektiv exekvering, men den här uppgraderingsprocessen är synkron och har därför en driftstopp beroende på hur mycket innehåll som behöver bearbetas. Vi rekommenderar att du utvärderar körningstiderna i en scenmiljö framför ett produktionssystem för att planera en underhållsperiod.
+Målet är en effektiv exekvering, men den här uppgraderingsprocessen är synkron och har därför en driftstopp beroende på hur mycket innehåll som måste bearbetas. Adobe rekommenderar att du utvärderar körtider i en scenmiljö framför ett produktionssystem för att planera en underhållsperiod.
 
-Eftersom detta vanligtvis även kräver att du justerar programmet bör aktiviteten utföras tillsammans med motsvarande programdistribution.
+Eftersom detta vanligtvis även kräver att du justerar programmet, bör den här aktiviteten utföras tillsammans med motsvarande programdistribution.
 
 Nedan finns en fullständig lista över `CodeUpgradeTasks` som introducerades i 6.5:
 
@@ -44,19 +40,19 @@ Nedan finns en fullständig lista över `CodeUpgradeTasks` som introducerades i 
 | `Cq61CloudServicesContentUpgrade` | &lt; 6.1 | Omedelbar | Omstrukturerar molntjänster för säker som standard |
 | `Cq62ConfContentUpgrade` | &lt; 6.2 | Omedelbar | Tar bort egenskapsbaserad länkning från **/content** till **/conf** (ersätts av OSGi-mekanismen), genererar motsvarande OSGi-konfiguration |
 | `Cq62FormsContentUpgrade` | &lt; 6.2 | Omedelbar | På grund av hanteringen av merge_preserve åsidosätter regeln för säkert som standard behörigheter som leder till behovet av att beställa om vid uppgradering |
-| `CQ62Html5SmartFileUpgrade` | &lt; 6.2 | Omedelbar | Identifierar komponenter med hjälp av HTML5SmartFile-widgeten, söker efter användning av komponenten i innehållet och omstrukturerar beständighet, vilket innebär att binärfilen flyttas en nivå nedåt och inte lagras på komponentnivå. |
+| `CQ62Html5SmartFileUpgrade` | &lt; 6.2 | Omedelbar | Identifierar komponenter med hjälp av HTML5SmartFile-widgeten, söker efter användning av komponenten i innehållet och omstrukturerar beständigheten, vilket innebär att binärfilen flyttas en nivå nedåt och inte lagras på komponentnivå. |
 | `Cq62ProjectsCodeUpgrade` | &lt; 6.2 | Omedelbar | Flyttar gamla stilprojekt från **/etc/projects** till **/content/projects** |
 | `Cq62TargetCampaignsContentUpgrade` | &lt; 6.2 | Omedelbar | Lägger till ett behållarlager i hierarkin (områden) och justerar referenser. |
 | `Cq62TargetContentUpgrade` | &lt; 6.2 | Omedelbar | Anger namn på fasta platser som målkomponenter. |
 | `Cq62WorkflowContentUpgrade` | &lt; 6.2 | Omedelbar | Komplex omvandling av arbetsflödesmodeller som föregår 6.2-strukturer, instanser, meddelanden och sedan sammanfogas från säkerhetskopieringsplatsen **/var/backup** |
-| `CQ63AssetsMetadataFormsUpdate` | &lt; 6.3 | Omedelbar | Flyttar resurser, anpassade metadatamatchningar och bearbetningsprofiler från **/apps** till **/conf** och översätter metadataram och metadataprofiler från coral2 till coral3. |
+| `CQ63AssetsMetadataFormsUpdate` | &lt; 6.3 | Omedelbar | Flyttar resurser, anpassade metadatamatcheman och bearbetningsprofiler från **/apps** till **/conf** och översätter metadataram och metadataprofiler från coral2 till coral3. |
 | `CQ63AssetsSearchFacetsUpdate` | &lt; 6.3 | Omedelbar | Flyttar resurser och anpassade sökfaktorer från **/apps** till **/conf** och översätter metadataram och metadataprofiler från coral2 till coral3. |
 | `CQ63InboxItemsUpgrade` | &lt; 6.3 | Omedelbar | Uppdaterar InboxItems för att ordna inkorgsobjekt (justera metadata för effektiv sortering) |
 | `CQ63MetadataSchemaConfigUpdate` | &lt; 6.3 | Omedelbar | Justerar egenskapen metadataSchema i mappen genom att ersätta relativa sökvägar till **/conf** i stället för **/apps** |
 | `CQ63MobileAppsNavUpgrade` | &lt; 6.3 | Omedelbar | Justera navigeringsstrukturen |
 | `CQ63MonitoringDashboardsConfigUpdate` | &lt; 6.3 | Omedelbar | Flyttar anpassade konfigurationer för kontrollpaneler från **/libs** och **/apps** |
-| `CQ63ProcessingProfileConfigUpdate` | &lt; 6.3 | Omedelbar | Översätter egenskapen processingProfile (används till och med 6.1) i Assets för att matcha 6.3-strukturen och senare. Justerar även profilens relativa sökvägar till **/conf** i stället för **/apps**. |
-| `CQ63ToolsMenuEntriesContentUpgrade` | &lt; 6.3 | Omedelbar | Uppgraderingsåtgärd som tar bort inaktuella menyposter i CRXDE Lite och webbkonsolen vid en uppgradering. |
+| `CQ63ProcessingProfileConfigUpdate` | &lt; 6.3 | Omedelbar | Översätter egenskapen processingProfile (används till och med 6.1) i Assets så att den matchar strukturen 6.3 och senare. Justerar även profilens relativa sökvägar till **/conf** i stället för **/apps**. |
+| `CQ63ToolsMenuEntriesContentUpgrade` | &lt; 6.3 | Omedelbar | Uppgraderingsåtgärd som tar bort inaktuella menyposter i CRXDE Lite och Web Console om det finns en uppgradering. |
 | `CQ64CommunitiesConfigsCleanupTask` | &lt; 6.3 | Fördröjd | Flytta SRP-molnkonfigurationer, community watchwords-konfigurationer, rensa upp **/etc/social** och **/etc/enablement** (alla referenser och data måste justeras när en lat migrering körs - ingen programdel ska längre vara beroende av den här strukturen). |
 | `CQ64LegacyCloudSettingsCleanupTask` | &lt; 6.4 | Fördröjd | Rensar **/etc/molninställningar** (innehåller ContextHub-konfiguration). Konfigurationen migreras automatiskt vid första åtkomsten. Om Lazy Content Migration startas tillsammans med en uppgradering av det här innehållet i **/etc/molninställningar** måste bevaras via paketet innan uppgraderingen och installeras om för att den implicita omvandlingen ska komma igång, tillsammans med en efterföljande avinstallation av paketet efter att det har slutförts. |
 | `CQ64UsersTitleFixTask` | &lt; 6.4 | Fördröjd | Justerar den äldre rubrikstrukturen till titeln i användarprofilnoden. |

@@ -2,9 +2,9 @@
 title: Valfritt - Så här skapar du enkelsidiga program (SPA) med Adobe Experience Manager
 description: I den här valfria fortsättningen av Adobe Experience Manager (AEM) Headless Developer Journey får du lära dig hur AEM kan kombinera headless-leverans med traditionella CMS-funktioner i full hög och hur du kan skapa redigerbara SPA med hjälp av AEM ramverk för SPA.
 exl-id: 91eadda2-b881-4e4a-867f-8c5c54e8f8b4
-source-git-commit: d3c40d1452217983b01245ec1c81111a3c4e7295
+source-git-commit: 3885cc51f7e821cdb352737336a29f9c4f0c2f41
 workflow-type: tm+mt
-source-wordcount: '1267'
+source-wordcount: '1264'
 ht-degree: 0%
 
 ---
@@ -24,9 +24,9 @@ Nu borde du ha slutfört hela [AEM Headless Developer Journey](overview.md) och 
 * Så här hämtar och uppdaterar du headless-innehåll i AEM.
 * Så här lever du med ett AEM Headless-projekt.
 
-Så du har nu antingen gått live med ditt första AEM Headless-projekt eller har all den kunskap som behövs för att göra det. Grattis!
+Så du har antingen gått live med ditt första projekt AEM Headless eller haft kunskapen om att göra det. Grattis!
 
-Varför läser du den här extra, valfria fortsatta resan? Kanske du minns det i [Komma igång](getting-started.md#integration-levels) Vi diskuterade kortfattat hur AEM inte bara stöder headless-leverans och traditionella fullstacksmodeller, utan även stöder hybridmodeller som kombinerar fördelarna med båda. Även om det inte är den traditionella headless-modellen kan sådana hybridmodeller ge oöverträffad flexibilitet till vissa projekt.
+Varför läser du den här extra, valfria fortsatta resan? Troligen minns du det i [Komma igång](getting-started.md#integration-levels)diskuterades i korthet hur AEM inte bara stöder headless-leverans och traditionella fullstacksmodeller, utan även stöder hybridmodeller som kombinerar fördelarna med båda. Även om det inte är den traditionella headless-modellen kan sådana hybridmodeller ge oöverträffad flexibilitet till vissa projekt.
 
 Den här artikeln bygger på dina kunskaper om AEM Headless genom att ingående utforska hur du kan skapa egna single-page-program (SPA) som kan redigeras i AEM. På så sätt kan du skapa innehåll och skicka det direkt till en SPA, men det SPA fortfarande redigerbart i AEM.
 
@@ -72,7 +72,7 @@ En fullständig beskrivning av SPA och varför du skulle använda dem finns i [y
 
 ## Hur AEM hanterar SPA
 
-Utveckla single page-applikationer AEM förutsätter att frontutvecklaren följer vedertagna standarder när han skapar en SPA. Om du som gränssnittsutvecklare följer dessa allmänna bästa metoder och några AEM specifika principer fungerar SPA med AEM och dess innehållsredigeringsfunktioner.
+Utveckla single page-applikationer AEM förutsätter att frontutvecklaren följer vedertagna standarder när han skapar en SPA. Om du som frontendutvecklare följer dessa allmänna bästa metoder och några AEM specifika principer fungerar SPA med AEM och dess innehållsredigeringsfunktioner.
 
 * **Portabilitet** - Precis som med andra komponenter ska SPA byggas så att de är så portabla som möjligt. SPA bör byggas med rörliga och återanvändbara komponenter.
 * **AEM diskar platsstruktur** - Utvecklaren skapar komponenter och äger sin interna struktur, men använder AEM för att definiera webbplatsens innehållsstruktur.

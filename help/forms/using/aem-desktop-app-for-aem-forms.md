@@ -1,27 +1,24 @@
 ---
-title: AEM datorprogram för AEM Forms
-seo-title: AEM desktop app for AEM Forms
-description: AEM datorprogram för AEM Forms
-uuid: 99e0f2fb-8623-45bb-8e2e-5c5d6f482366
+title: Adobe Experience Manager (AEM) för AEM Forms
+description: Adobe Experience Manager (AEM) för AEM Forms
 contentOwner: khsingh
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: manage
-discoiquuid: c30332b6-e012-442d-8e84-28832c116c7b
 noindex: true
 role: Admin
 exl-id: b87e07b1-4a19-4888-bad0-c0f5327b9ad3
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 3885cc51f7e821cdb352737336a29f9c4f0c2f41
 workflow-type: tm+mt
-source-wordcount: '403'
+source-wordcount: '415'
 ht-degree: 0%
 
 ---
 
-# AEM datorprogram för AEM Forms {#aem-desktop-app-for-aem-forms}
+# Adobe Experience Manager (AEM) för AEM Forms {#aem-desktop-app-for-aem-forms}
 
 AEM kan du mappa Adobe Experience Manager (AEM) Assets-databasen och AEM Forms binära filer till en nätverkskatalog på datorn. Du kan visa synkroniserade resurser och binära filer i en filutforskare och använda olika program för att redigera filerna efter behov. Förutom att visa filerna kan du även skapa, överföra och ta bort de binära filerna. Du kan också öppna, redigera och spara filer direkt från programmet. Du kan till exempel öppna och redigera en XDP-fil direkt i Designer. De ändringar du gör av resurserna lokalt återspeglas i AEM Assets-databasen och AEM Forms användargränssnitt.
 
-Du kan hämta programmet från en AEM. Mer information om hur du hämtar programmet finns i [Versionsinformation för AEM](https://helpx.adobe.com/experience-manager/desktop-app/release-notes.html).
+Du kan hämta programmet från en AEM. Mer information om hur du hämtar programmet finns i [Versionsinformation för AEM](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/release-notes.html?lang=en).
 
 ## AEM Forms-resurser som stöds AEM datorprogrammet {#aem-forms-assets-supported-in-aem-desktop-app}
 

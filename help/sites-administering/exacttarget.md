@@ -1,26 +1,22 @@
 ---
 title: Integrera med ExactTarget
-seo-title: Integrating with ExactTarget
-description: Lär dig hur du integrerar AEM med ExactTarget.
-seo-description: Learn how to integrate AEM with ExactTarget.
-uuid: a53bbdaa-98f7-4035-b842-aa7ea63712ca
+description: Lär dig hur du integrerar Adobe Experience Manager med ExactTarget.
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
 content-type: reference
-discoiquuid: 5b2f624d-e5b8-4484-a773-7784ebce58bd
 docset: aem65
 exl-id: 4183fe78-5055-4b77-8a54-55666e86a04e
-source-git-commit: 85d39e59b82fdfdcd310be61787a315668aebe38
+source-git-commit: 3885cc51f7e821cdb352737336a29f9c4f0c2f41
 workflow-type: tm+mt
-source-wordcount: '457'
+source-wordcount: '469'
 ht-degree: 1%
 
 ---
 
 # Integrera med ExactTarget{#integrating-with-exacttarget}
 
-Genom att integrera AEM med Exact Target kan du hantera och skicka e-post som skapats i AEM via Exact Target. Du kan också använda leadhanteringsfunktionerna i Exact Target via AEM på AEM sidor.
+Genom att integrera Adobe Experience Manager (AEM) med Exact Target kan du hantera och skicka e-post som skapats AEM med Exact Target. Du kan också använda leadhanteringsfunktionerna i Exact Target genom AEM formulär på AEM sidor.
 
 Integreringen ger dig följande funktioner:
 
@@ -31,9 +27,9 @@ När ExactTarget har konfigurerats kan du publicera nyhetsbrev och e-postmeddela
 
 ## Skapa en ExactTarget-konfiguration {#creating-an-exacttarget-configuration}
 
-ExactTarget-konfigurationer kan läggas till via molntjänster eller verktyg. Båda metoderna beskrivs i det här avsnittet.
+ExactTarget-konfigurationer kan läggas till med hjälp av molntjänster eller verktyg. Båda metoderna beskrivs i det här avsnittet.
 
-### Konfigurera ExactTarget via CloudServices {#configuring-exacttarget-via-cloudservices}
+### Konfigurera ExactTarget med hjälp av molntjänster {#configuring-exacttarget-via-cloudservices}
 
 Så här skapar du en ExactTarget-konfiguration i Cloud Services:
 
@@ -47,7 +43,7 @@ Så här skapar du en ExactTarget-konfiguration i Cloud Services:
    ![chlimage_1](assets/chlimage_1.jpeg)
 
 1. Ange användarnamn, lösenord och välj en API-slutpunkt (till exempel **https://webservice.exacttarget.com/Service.asmx**).
-1. Klicka **Anslut till ExactTarget.** När du har anslutit visas en dialogruta om att anslutningen lyckades. Klicka **OK** för att stänga fönstret.
+1. Klicka **Anslut till ExactTarget.** När du har anslutit visas en dialogruta om att anslutningen lyckades. box Click **OK** för att stänga fönstret.
 
    ![chlimage_1-1](assets/chlimage_1-1.jpeg)
 
@@ -61,7 +57,7 @@ Så här skapar du en ExactTarget-konfiguration i Cloud Services:
 
    ![chlimage_1-2](assets/chlimage_1-2.jpeg)
 
-### Konfigurera ExactTarget via verktyg {#configuring-exacttarget-via-tools}
+### Konfigurera ExactTarget med hjälp av verktyg {#configuring-exacttarget-via-tools}
 
 Så här skapar du en ExactTarget-konfiguration i verktygen:
 
@@ -78,5 +74,5 @@ Så här skapar du en ExactTarget-konfiguration i verktygen:
 
 Så här lägger du till flera konfigurationer:
 
-1. På välkomstsidan klickar du på **Cloud Services** och klicka **ExactTarget**. Klicka på **Visa konfigurationer** som visas om en eller flera ExactTarget-konfigurationer är tillgängliga. Alla tillgängliga konfigurationer visas.
-1. Klicka på **+** signera bredvid Tillgängliga konfigurationer. Då öppnas **Skapa konfigurationer** -fönstret. Följ den tidigare konfigurationsproceduren för att skapa en ny konfiguration.
+1. På välkomstsidan klickar du på **Cloud Services** och klicka **ExactTarget**. Klicka **Visa konfigurationer** som visas om en eller flera ExactTarget-konfigurationer är tillgängliga. Alla tillgängliga konfigurationer visas.
+1. Klicka på **+** signera bredvid Tillgängliga konfigurationer. Då öppnas **Skapa konfigurationer** -fönstret. Följ den tidigare konfigurationsproceduren för att skapa en konfiguration.

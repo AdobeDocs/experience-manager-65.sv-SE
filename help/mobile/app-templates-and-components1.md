@@ -1,18 +1,14 @@
 ---
 title: Appmallar och komponenter
-seo-title: App Templates and Components
 description: Följ den här sidan om du vill veta mer om appmallar och komponenter. Den innehåller detaljerad information om mallarnas struktur.
-seo-description: Follow this page to learn about App Templates and Components. It provides detailed information on the structure of templates.
-uuid: ba2fd91b-de5a-4f39-a976-5455f9983669
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-on-demand-services-app
-discoiquuid: 7f31c6a7-92d5-4a87-a9f0-68a82b834d5a
 exl-id: 58d95325-7cb1-4204-842d-17add70e1fbf
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 3885cc51f7e821cdb352737336a29f9c4f0c2f41
 workflow-type: tm+mt
-source-wordcount: '406'
+source-wordcount: '408'
 ht-degree: 1%
 
 ---
@@ -25,14 +21,14 @@ ht-degree: 1%
 
 En mall används för att skapa en sida och definierar vilka komponenter som kan användas i det valda omfånget. En mall är en hierarki med noder som har samma struktur som den sida som ska skapas, men utan något verkligt innehåll.
 
-Varje mall visar ett urval av komponenter som är tillgängliga för användning.
+Varje mall innehåller ett urval av komponenter som är tillgängliga för användning.
 
 * Mallar är inbyggda i [Komponenter](/help/sites-developing/components.md);
-* Komponenterna använder, och tillåter åtkomst till, widgetar och dessa används för att återge innehållet.
+* Komponenterna använder och tillåter åtkomst till widgetar och dessa används för att återge innehållet.
 
 >[!NOTE]
 >
->Mer information om hur du utvecklar AEM med CRXDE Lite finns i [Utveckla med CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md).
+>Mer information om hur du utvecklar ditt Adobe Experience Manager-program (AEM) med CRXDE Lite finns i [Utveckla med CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md).
 
 En mall är grunden för en sida.
 
@@ -54,7 +50,7 @@ Du kan ange olika egenskaper, särskilt:
 * **jcr:title** - Mallens titel. visas i dialogrutan när du skapar en sida.
 * **jcr:description** - En beskrivning av mallen. visas i dialogrutan när du skapar en sida.
 
-Den här noden innehåller *a jcr:content (cq:PageContent)* Nod som ska användas som grund för innehållsnoden för resulterande sidor. den här referensen, använda *sling:resourceType*, den komponent som ska användas för att återge det faktiska innehållet på en ny sida.
+Den här noden innehåller *a jcr:content (cq:PageContent)* nod som används som bas för innehållsnoden för resulterande sidor. Den här referensen, använda *sling:resourceType*, den komponent som ska användas för att återge det faktiska innehållet på en ny sida.
 
 >[!NOTE]
 >

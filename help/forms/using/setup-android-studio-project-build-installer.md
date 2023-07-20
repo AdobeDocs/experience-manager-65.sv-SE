@@ -1,24 +1,20 @@
 ---
-title: Konfigurera Android-studioprojektet och bygg Android-appen
-seo-title: Set up the Android studio project and build the Android app
-description: Steg för att konfigurera Android Studio-projektet och skapa installationsprogrammet för AEM Forms-appen
-seo-description: Steps to set up the Android Studio project and build the installer for the AEM Forms app
-uuid: 4c966cdc-d0f5-4b5b-b21f-f11e8a35ec8a
+title: Konfigurera Android-&handeln; Studieprojekt och bygg Android&trade. app
+description: Steg för att konfigurera Android&handeln; Studio-projekt och bygg installationsprogrammet för Forms-appen Adobe Experience Manager (AEM)
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.3/FORMS
 topic-tags: forms-app
-discoiquuid: fabc981e-0c9e-4157-b0a1-0c13717fb6cd
 exl-id: 47d6af00-34d8-4e5d-8117-86fc1b6f58cb
-source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
+source-git-commit: 3885cc51f7e821cdb352737336a29f9c4f0c2f41
 workflow-type: tm+mt
-source-wordcount: '566'
+source-wordcount: '573'
 ht-degree: 0%
 
 ---
 
-# Konfigurera Android-studioprojektet och bygg Android-appen {#set-up-the-android-studio-project-and-build-the-android-app}
+# Konfigurera Android™-studioprojektet och bygg Android™-appen {#set-up-the-android-studio-project-and-build-the-android-app}
 
-Den här artikeln handlar om att skapa AEM Forms App 6.3.1.1 och senare versioner. Information om hur du skapar en app utifrån källkoden för källkoden i AEM Forms App 6.3 finns i [Konfigurera Eclipse-projektet och bygg Android™-appen](/help/forms/using/setup-eclipse-project-build-installer.md).
+Den här artikeln handlar om att skapa AEM Forms App 6.3.1.1 och senare versioner. Information om hur du skapar en app från källkoden för AEM Forms App 6.3 finns i [Konfigurera Eclipse-projektet och bygg Android™-appen](/help/forms/using/setup-eclipse-project-build-installer.md).
 
 AEM Forms tillhandahåller den fullständiga källkoden för AEM Forms-appen. Källan innehåller alla komponenter som behövs för att skapa en anpassad AEM Forms-app. Källkodsarkivet `adobe-lc-mobileworkspace-src-<version>.zip` är en del av `adobe-aemfd-forms-app-src-pkg-<version>.zip` paket om programvarudistribution.
 
@@ -49,27 +45,27 @@ Följande bild visar katalogstrukturen för `android`i `src`mapp.
 
 1. Kopiera den hämtade filen `adobe-lc-mobileworkspace-src-<version>.zip` arkivera till:
 
-   **För MAC**: `[User_Home]/Projects`
+   **För Mac**: `[User_Home]/Projects`
 
    **För Windows®**: `%HOMEPATH%\Projects`
 
    >[!NOTE]
    >
-   >För Windows® rekommenderar vi att du behåller android-projektet i systemenheten.
+   >För Windows® rekommenderar vi att du behåller Android™-projektet i systemenheten.
 
 1. Extrahera arkivet i följande katalog:
 
-   **För MAC**: `[User_Home]/Projects/[your-project]`
+   **För Mac**: `[User_Home]/Projects/[your-project]`
 
    **För Windows®**: `%HOMEPATH%\Projects\[your-project]`
 
    >[!NOTE]
    >
-   >Vi rekommenderar att du behåller det extraherade android-projektet i systemenheten innan du importerar projektet till Android Studio.
+   Vi rekommenderar att du behåller det extraherade Android-projektet i systemenheten innan du importerar projektet till Android™ Studio.
 
 1. Starta Android™ Studio.
 
-   **För MAC**: Uppdatera `local.properties` filen finns i `[User_Home]/Projects/[your-project]/android` mapp och peka på `sdk.dir` variabel till `SDK` plats på datorn.
+   **För Mac**: Uppdatera `local.properties` filen finns i `[User_Home]/Projects/[your-project]/android` mapp och peka på `sdk.dir` variabel till `SDK` plats på datorn.
 
    **För Windows®**: Uppdatera `local.properties` filen finns i `%HOMEPATH%\Projects\[your-project]\android` mapp och peka på `sdk.dir` variabel till `SDK` plats på datorn.
 
@@ -102,8 +98,8 @@ När du har skapat projektet kan du välja att installera programmet med Android
 
 ### Använda Android™ Debug Bridge {#andriod-debug-bridge}
 
-Du kan installera programmet på en Android™-enhet via [Android™ Debug Bridge](https://developer.android.com/tools/help/adb.html) med följande kommando:
+Du kan installera programmet på en Android™-enhet med [Android™ Debug Bridge](https://developer.android.com/tools/adb) med följande kommando:
 
-**För MAC**: `adb install [User_Home]/Projects/[your-project]/adobe-lc-mobileworkspace-src-[version]/android/build/outputs/apk/android-debug.apk`
+**För Mac**: `adb install [User_Home]/Projects/[your-project]/adobe-lc-mobileworkspace-src-[version]/android/build/outputs/apk/android-debug.apk`
 
 **För Windows®**: `adb install %HOMEPATH%\Projects\[your-project]\adobe-lc-mobileworkspace-src-[version]\android\build\outputs\apk\android-debug.apk`

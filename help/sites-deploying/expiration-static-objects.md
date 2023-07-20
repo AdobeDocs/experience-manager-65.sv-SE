@@ -1,19 +1,15 @@
 ---
 title: Förfallotid för statiska objekt
-seo-title: Expiration of Static Objects
-description: Lär dig hur du konfigurerar AEM så att statiska objekt inte förfaller (under en rimlig tidsperiod).
-seo-description: Learn how to configure AEM so that static objects do not expire (for a reasonable period of time).
-uuid: ee019a3d-4133-4d40-98ec-e0914b751fb3
+description: Lär dig hur du konfigurerar Adobe Experience Manager så att statiska objekt inte upphör att gälla (under en rimlig tidsperiod).
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: configuring
 content-type: reference
-discoiquuid: 73f37b3c-5dbe-4132-bb60-daa8de871884
 feature: Configuring
 exl-id: bfd5441c-19cc-4fa8-b597-b1221465f75d
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 3885cc51f7e821cdb352737336a29f9c4f0c2f41
 workflow-type: tm+mt
-source-wordcount: '416'
+source-wordcount: '419'
 ht-degree: 0%
 
 ---
@@ -31,9 +27,9 @@ Förfallodatum anges av HTTP-standarden med avseende på &quot;förfallodatum&qu
 
 >[!NOTE]
 >
->Den här konfigurationen är helt skild från (och fungerar inte för) Dispatcher.
+>Den här konfigurationen är separat från (och fungerar inte för) Dispatcher.
 >
->Syftet med Dispatcher är att cachelagra data framför AEM.
+>Syftet med Dispatcher är att cachelagra data framför Adobe Experience Manager (AEM).
 
 Alla filer som inte är dynamiska och som inte ändras över tid kan och bör cachas. Konfigurationen för Apache HTTPD-servern kan se ut som något av följande, beroende på miljön:
 
@@ -77,7 +73,7 @@ Alla filer som inte är dynamiska och som inte ändras över tid kan och bör ca
 
    På så sätt kan den mellanliggande cachen (till exempel webbläsarens cacheminne) lagra CSS-, JavaScript-, PNG- och GIF-filer i upp till en dag i klientcachen. I det här exemplet visas globala inställningar för allt nedan `/content` och `/etc/designs`bör du göra det mer granulärt.
 
-   Beroende på hur ofta webbplatsen uppdateras kan du även cachelagra HTML-sidor. En rimlig tidsperiod är 1 timme:
+   Beroende på hur ofta webbplatsen uppdateras kan du även cachelagra HTML-sidor. En rimlig tidsperiod skulle vara en timme:
 
    ```xml
    <Location /content>
