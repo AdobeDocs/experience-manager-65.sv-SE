@@ -8,9 +8,9 @@ user-guide-title: Användarhandbok om Adobe Experience Manager 6.5 Forms
 breadcrumb-title: Användarhandbok om Forms
 user-guide-description: Skapa, hantera, publicera och uppdatera digitala formulär.
 role: User
-source-git-commit: daf97f3d5c5f3c92ff5caeccff583e54f3f57364
+source-git-commit: 91683330024fbf1059715447073f35cecde45b0a
 workflow-type: tm+mt
-source-wordcount: '3881'
+source-wordcount: '3889'
 ht-degree: 0%
 
 ---
@@ -127,6 +127,7 @@ ht-degree: 0%
    + [Introduktion till AEM Forms dataintegrering](using/data-integration.md)
    + [Konfigurera datakällor](using/configure-data-sources.md)
    + [Konfiguration av Microsoft Dynamics Odata](using/ms-dynamics-odata-configuration.md)
+   + [Salesforce-integrering med OAuth 2.0-flödesautentisering för klientautentiseringsuppgifter](/help/forms/using/oauth2-client-credentials-flow-for-server-to-server-integration.md)
    + [Skapa formulärdatamodell](using/create-form-data-models.md)
    + [Arbeta med formulärdatamodell](using/work-with-form-data-model.md)
    + [Använd formulärdatamodell](using/using-form-data-model.md)
