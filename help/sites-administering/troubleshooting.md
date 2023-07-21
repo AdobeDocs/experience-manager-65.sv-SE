@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: da92d751-6f14-4512-9d77-7ecf098bd58e
 docset: aem65
 exl-id: ab4fc41f-e0e9-4577-aab2-f0b4298f9a59
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 2f3168c9bd39926ee8cf86b48cc0daef9d783a1c
 workflow-type: tm+mt
-source-wordcount: '234'
+source-wordcount: '252'
 ht-degree: 2%
 
 ---
@@ -21,6 +21,13 @@ ht-degree: 2%
 # Arbeta med loggar{#working-with-logs}
 
 I det här avsnittet finns detaljerad information om loggar som du kan använda för att felsöka.
+
+>[!NOTE]
+>
+>Mer information om loggar finns i:
+>
+>* [Underhåll av granskningslogg i AEM](/help/sites-administering/operations-audit-log.md)
+>* [Arbeta med granskningsposter och loggfiler](/help/sites-deploying/monitoring-and-maintaining.md#working-with-audit-records-and-log-files)
 
 CRX registrerar detaljerade loggar. När du har packat upp och startat Quickstart finns loggarna på följande platser:
 
