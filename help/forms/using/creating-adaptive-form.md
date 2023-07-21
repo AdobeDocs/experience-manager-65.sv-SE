@@ -5,16 +5,18 @@ feature: Adaptive Forms
 role: User, Developer
 level: Beginner
 exl-id: 2c25a8b7-73f7-40fb-a303-9446a708c8eb
-source-git-commit: 6ab2538dd8095304a55433c15c8c3d095499d92c
+source-git-commit: f620966974b0f535d30a17a5fa3175a593e52fec
 workflow-type: tm+mt
-source-wordcount: '1803'
+source-wordcount: '1818'
 ht-degree: 0%
 
 ---
 
 # Skapa ett anpassat formulär {#creating-an-adaptive-form}
 
-<span class="preview"> I den här artikeln beskrivs ett äldre tillvägagångssätt för Adaptive Forms. Adobe rekommenderar att du använder [Adaptiva Forms Core-komponenter](/help/forms/using/create-an-adaptive-form-core-components.md) för att skapa nya formulär. Dessa komponenter representerar en [avsevärda framsteg när det gäller att skapa adaptiva Forms](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html), vilket ger imponerande användarupplevelser.</span>
+<span class="preview"> Adobe rekommenderar att man använder modern och utbyggbar datainhämtning [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) for [skapa ny Adaptive Forms](/help/forms/using/create-an-adaptive-form-core-components.md) eller [lägga till adaptiv Forms på AEM Sites-sidor](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-program, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptive Forms med grundläggande komponenter. </span>
+
+
 
 ## Skapa ett anpassat formulär {#strong-create-an-adaptive-form-strong}
 
