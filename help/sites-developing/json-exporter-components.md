@@ -1,18 +1,14 @@
 ---
 title: Aktivera JSON-export för en komponent
-seo-title: Enabling JSON Export for a Component
 description: Komponenter kan anpassas för att generera JSON-export av deras innehåll baserat på ett modellramverk.
-seo-description: Components can be adapted to generate JSON export of their content based on a modeler framework.
-uuid: d7cc3347-2adb-4ea5-94a4-a847a2e66d28
 contentOwner: User
 content-type: reference
 topic-tags: components
 products: SG_EXPERIENCEMANAGER/6.5/SITES
-discoiquuid: 448ad337-d4bb-4603-a27b-77da93feadbd
 exl-id: 6d127e14-767e-46ad-aaeb-0ce9dd14d553
-source-git-commit: b886844dc80482ae4aae5fc7ce09e466efecc3bd
+source-git-commit: a56d5121a6ce11b42a6c30dae9e479564d16af27
 workflow-type: tm+mt
-source-wordcount: '536'
+source-wordcount: '528'
 ht-degree: 0%
 
 ---
@@ -25,7 +21,7 @@ Komponenter kan anpassas för att generera JSON-export av deras innehåll basera
 
 JSON-exporten baseras på [Sling Models](https://sling.apache.org/documentation/bundles/models.html)och på [Export av försäljningsmodell](https://sling.apache.org/documentation/bundles/models.html#exporter-framework-since-130) som i sig förlitar sig på [Jackson annotations](https://github.com/FasterXML/jackson-annotations/wiki/Jackson-Annotations)).
 
-Det innebär att komponenten måste ha en Sling-modell om den behöver exportera JSON. Därför måste du följa dessa två steg för att aktivera JSON-export för alla komponenter.
+Det innebär att komponenten måste ha en Sling-modell om den måste exportera JSON. Följ därför de här två stegen för att aktivera JSON-export för alla komponenter.
 
 * [Definiera en segmentmodell för komponenten](/help/sites-developing/json-exporter-components.md#define-a-sling-model-for-the-component)
 * [Anteckna gränssnittet för segmenteringsmodellen](#annotate-the-sling-model-interface)
@@ -36,7 +32,7 @@ Först måste en segmentmodell definieras för komponenten.
 
 >[!NOTE]
 >
->Ett exempel på hur du använder modeller finns i artikeln [Utveckla export av försäljningsmodeller i AEM](https://helpx.adobe.com/experience-manager/kt/platform-repository/using/sling-model-exporter-tutorial-develop.html).
+>Ett exempel på hur du använder modeller finns i [Utveckla export av försäljningsmodeller i AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/develop-sling-model-exporter.html?lang=en).
 
 Implementeringsklassen för Sling-modellen måste kommenteras med följande:
 
@@ -52,7 +48,7 @@ Dessutom anger detta att klassen Sling Model kan anpassas till `ComponentExporte
 
 >[!NOTE]
 >
->Jackson-anteckningar anges vanligtvis inte på klassnivå för Sling Model, utan på gränssnittsnivå för Model. Detta för att säkerställa att JSON-exporten betraktas som en del av komponent-API:t.
+>Jackson-anteckningar anges inte på klassnivå för Sling Model, utan på gränssnittsnivå för Model. Detta för att säkerställa att JSON-exporten betraktas som en del av komponent-API:t.
 
 >[!NOTE]
 >
@@ -70,11 +66,11 @@ I sådana fall gäller dock att `model` väljaren måste vara den första välja
 
 ## Anteckna gränssnittet för segmenteringsmodellen {#annotate-the-sling-model-interface}
 
-Modellgränssnittet bör implementera `ComponentExporter` gränssnitt (eller `ContainerExporter`, om det är en behållarkomponent).
+Modellgränssnittet bör implementera `ComponentExporter` gränssnitt (eller `ContainerExporter`, om det finns en behållarkomponent).
 
 Motsvarande Sling Model-gränssnitt ( `MyComponent`) kommenteras sedan med [Jackson annotations](https://github.com/FasterXML/jackson-annotations/wiki/Jackson-Annotations) för att definiera hur den ska exporteras (serialiseras).
 
-Modellgränssnittet måste kommenteras ordentligt för att definiera vilka metoder som ska serialiseras. Som standard kommer alla metoder som respekterar den vanliga namnkonventionen för get-ters att serialiseras och härleder sina JSON-egenskapsnamn naturligt från get-namnen. Detta kan förhindras eller åsidosättas med `@JsonIgnore` eller `@JsonProperty` för att byta namn på JSON-egenskapen.
+Modellgränssnittet måste vara korrekt kommenterat för att definiera vilka metoder som ska serialiseras. Som standard serialiseras alla metoder som respekterar den vanliga namnkonventionen för get-ters och hämtar JSON-egenskapsnamnen naturligt från get-namnen. Detta kan förhindras eller åsidosättas med `@JsonIgnore` eller `@JsonProperty` för att byta namn på JSON-egenskapen.
 
 ## Exempel {#example}
 
@@ -91,7 +87,7 @@ Koden för den här sidan finns på GitHub
 
 ## Relaterad dokumentation {#related-documentation}
 
-Mer information finns i:
+Mer information finns i följande:
 
 * The [Avsnittet Innehållsfragment i användarhandboken för Assets](https://helpx.adobe.com/experience-manager/6-4/assets/user-guide.html?topic=/experience-manager/6-4/assets/morehelp/content-fragments.ug.js)
 

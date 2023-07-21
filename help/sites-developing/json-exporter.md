@@ -1,16 +1,12 @@
 ---
 title: JSON-exporterare för innehållstjänster
-seo-title: JSON Exporter for Content Services
 description: AEM Content Services är utformat för att generera beskrivning och leverans av innehåll i/från AEM utöver fokus på webbsidor. De levererar innehåll till kanaler som inte är traditionella AEM webbsidor, med standardiserade metoder som kan användas av alla kunder.
-seo-description: AEM Content Services are designed to generalize the description and delivery of content in/from AEM beyond a focus on web pages. They provide the delivery of content to channels that are not traditional AEM web pages, using standardized methods that can be consumed by any client.
-uuid: be6457b1-fa9c-4f3b-b219-01a4afc239e7
 contentOwner: User
 content-type: reference
 topic-tags: components
 products: SG_EXPERIENCEMANAGER/6.5/SITES
-discoiquuid: 4c7e33ea-f2d3-4d69-b676-aeb50c610d70
 exl-id: 647395c0-f392-427d-a998-e9ddf722b9f9
-source-git-commit: 3d713021ac410ca2925a282c5dfca98ed4e483ee
+source-git-commit: a56d5121a6ce11b42a6c30dae9e479564d16af27
 workflow-type: tm+mt
 source-wordcount: '431'
 ht-degree: 2%
@@ -61,21 +57,21 @@ Sidan kan innehålla antingen ett enda innehållsfragment eller flera komponente
 
 * En URL som:
 
-   ```shell
-   http://localhost:4502/content/we-retail/language-masters/en/manchester-airport/jcr:content/root/responsivegrid/contentfragment.model.json
-   ```
+  ```shell
+  http://localhost:4502/content/we-retail/language-masters/en/manchester-airport/jcr:content/root/responsivegrid/contentfragment.model.json
+  ```
 
 * Levererar innehåll som:
 
-   ![chlimage_1-193](assets/chlimage_1-193.png)
+  ![chlimage_1-193](assets/chlimage_1-193.png)
 
-   >[!NOTE]
-   >
-   >Du kan [anpassa era egna komponenter](/help/sites-developing/json-exporter-components.md) för att få tillgång till och använda dessa data.
+  >[!NOTE]
+  >
+  >Du kan [anpassa era egna komponenter](/help/sites-developing/json-exporter-components.md) för att få tillgång till och använda dessa data.
 
-   >[!NOTE]
-   >
-   >Även om det inte är en standardimplementering [flera väljare stöds,](json-exporter-components.md#multiple-selectors) men `model` måste vara först.
+  >[!NOTE]
+  >
+  >Även om det inte är en standardimplementering [flera väljare stöds,](json-exporter-components.md#multiple-selectors) men `model` måste vara först.
 
 ### Ytterligare information {#further-information}
 

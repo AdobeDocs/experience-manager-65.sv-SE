@@ -1,25 +1,21 @@
 ---
 title: Begränsningar för redigerare
-seo-title: Editor Limitations
-description: Redigeraren i det beröringsaktiverade användargränssnittet använder övertäckningar för att interagera med innehåll som begränsas i en iframe. Den här interaktionen skapar vissa begränsningar i både användningen av redigeraren och för utvecklare.
-seo-description: The editor in the touch-enabled UI makes use of overlays to interact with content confined in an iframe. This interaction creates some limitations in both usage of the editor and also for developers.
-uuid: ff524530-3f3a-4c5b-9f94-4aa9aeb9d461
+description: Redigeraren i det beröringsaktiverade gränssnittet använder övertäckningar för att interagera med innehåll som begränsas i en iframe. Den här interaktionen skapar vissa begränsningar i både användningen av redigeraren och för utvecklare.
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: introduction
-discoiquuid: d748decb-a614-4c9e-a502-d6176b720f1a
 exl-id: fd64f5dc-dfff-466b-8cdd-3c24ea1a15c8
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: a56d5121a6ce11b42a6c30dae9e479564d16af27
 workflow-type: tm+mt
-source-wordcount: '316'
+source-wordcount: '306'
 ht-degree: 0%
 
 ---
 
 # Begränsningar för redigerare{#editor-limitations}
 
-Redigeraren i det beröringsaktiverade användargränssnittet använder övertäckningar för att interagera med innehåll som begränsas i en iframe. Den här interaktionen skapar vissa begränsningar i både användningen av redigeraren och för utvecklare. På den här sidan sammanfattas dessa begränsningar och lösningar eller tillfälliga lösningar ges där det är möjligt.
+Redigeraren i det beröringsaktiverade gränssnittet använder övertäckningar för att interagera med innehåll som begränsas i en iframe. Den här interaktionen skapar vissa begränsningar i både användningen av redigeraren och för utvecklare. På den här sidan sammanfattas dessa begränsningar och lösningar eller tillfälliga lösningar ges där det är möjligt.
 
 ## Funktionsbegränsningar {#functional-limitations}
 
@@ -43,11 +39,11 @@ En utvecklare kan stöta på följande begränsningar när det gäller redigerar
 
 Absolut positionerade element kan orsaka problem i positionen för deras övertäckning.
 
-* Om det inträffar måste du kontrollera att dimensionerna för det absolut placerade elementet är korrekta eftersom redigeraren kommer att skapa en övertäckning med exakt samma dimensioner.
+* Om det inträffar kontrollerar du att dimensionerna för det absolut placerade elementet är korrekta eftersom redigeraren skapar en övertäckning med exakt samma dimensioner.
 
 ### vh Enheter {#vh-units}
 
-`vh` enheter stöds inte eftersom iframe-höjden måste justeras automatiskt av AEM.
+`vh` enheter stöds inte eftersom iframe-höjden måste justeras automatiskt av Adobe Experience Manager (AEM).
 
 ### Fasta bakgrundsbilder {#fixed-background-images}
 
@@ -59,7 +55,7 @@ Fasta bakgrundsbilder kanske inte visas som fasta vid bläddring eftersom de är
 
 Höjden 100 % stöds inte för en sidas body-element.
 
-* Du kan komma runt problemet om du vill implementera en helskärmsbrödtext genom att&quot;sträcka ut&quot; body-elementet enligt följande:
+* Du kan använda en tillfällig lösning för att implementera en helskärmsbrödtext genom att&quot;sträcka ut&quot; body-elementet enligt följande:
 
 ```xml
 body {

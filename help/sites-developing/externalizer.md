@@ -1,30 +1,26 @@
 ---
 title: Extern URL
-seo-title: Externalizing URLs
 description: Externalizer är en tjänst av typen OSGI som gör att du kan omvandla en resurssökväg programmatiskt till en extern och absolut URL
-seo-description: The Externalizer is an OSGI service that allows you to programmatically transform a resource path into an external and absolute URL
-uuid: 65bcc352-fc8c-4aa0-82fb-1321a035602d
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: platform
 content-type: reference
-discoiquuid: 938469ad-f466-42f4-8b6f-bfc060ae2785
 docset: aem65
 exl-id: 971d6c25-1fbe-4c07-944e-be6b97a59922
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: a56d5121a6ce11b42a6c30dae9e479564d16af27
 workflow-type: tm+mt
-source-wordcount: '501'
+source-wordcount: '495'
 ht-degree: 0%
 
 ---
 
 # Extern URL{#externalizing-urls}
 
-AEM **Externalizer** är en OSGI-tjänst som gör att du kan omvandla en resurssökväg med programkod (till exempel `/path/to/my/page`) till en extern och absolut URL (till exempel `https://www.mycompany.com/path/to/my/page`) genom att ange sökvägen som prefix med en förkonfigurerad DNS.
+I Adobe Experience Manager (AEM) **Externalizer** är en OSGI-tjänst som gör att du kan omvandla en resurssökväg med programkod (till exempel `/path/to/my/page`) till en extern och absolut URL (till exempel `https://www.mycompany.com/path/to/my/page`) genom att ange sökvägen som prefix med en förkonfigurerad DNS.
 
 Eftersom en instans inte känner till sin externt synliga URL-adress om den körs bakom ett webblager, och eftersom en länk ibland måste skapas utanför det begärda omfånget, utgör den här tjänsten en central plats för att konfigurera de externa URL-adresserna och skapa dem.
 
-På den här sidan beskrivs hur du konfigurerar **Externalizer** och hur du använder den. Mer information finns i [Javadocs](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/commons/Externalizer.html).
+På den här sidan beskrivs hur du konfigurerar **Externalizer** och hur du använder den. Mer information finns i [Javadocs](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/commons/Externalizer.html).
 
 ## Konfigurera tjänsten Externalizer {#configuring-the-externalizer-service}
 
@@ -50,10 +46,10 @@ Definiera en domänmappning för **Externalizer** tjänst:
 
    Var:
 
-   * **system** är vanligtvis http eller https, men kan också vara ftp osv.
+   * **system** är http eller https, men kan även vara ftp och så vidare.
 
-      * använd https för att framtvinga https-länkar vid behov
-      * den kommer att användas om klientkoden inte åsidosätter schemat när en URL-adress begärs externt.
+      * använd https för att framtvinga https-länkar, om det behövs
+      * den används om klientkoden inte åsidosätter schemat när den frågar efter en URL-adress.
 
    * **server** är värdnamnet (kan vara ett domännamn eller en IP-adress).
    * **port** (valfritt) är portnumret.
@@ -61,7 +57,7 @@ Definiera en domänmappning för **Externalizer** tjänst:
 
    Till exempel: `production https://my.production.instance`
 
-   Följande mappningsnamn är fördefinierade och måste alltid anges som AEM är beroende av dem:
+   Följande mappningsnamn är fördefinierade och måste anges eftersom AEM är beroende av dem:
 
    * `local` - den lokala instansen
    * `author` - redigeringssystemets DNS
@@ -69,7 +65,7 @@ Definiera en domänmappning för **Externalizer** tjänst:
 
    >[!NOTE]
    >
-   >Med en anpassad konfiguration kan du lägga till en ny kategori, till exempel `production`, `staging` eller till och med externa icke-AEM system som `my-internal-webservice`. Det är praktiskt att undvika hårdkodning av sådana URL:er på olika platser i ett projekts kodbas.
+   >Med en anpassad konfiguration kan du lägga till en kategori, till exempel `production`, `staging`eller till och med externa icke-AEM system som `my-internal-webservice`. Det är praktiskt att undvika hårdkodning av sådana URL:er på olika platser i ett projekts kodbas.
 
 1. Klicka **Spara** för att spara ändringarna.
 
@@ -129,4 +125,4 @@ I det här avsnittet visas några exempel på hur **Externalizer** kan användas
 
    * `https://publish-3.internal/contextpath/my/page.html`
 
-1. Du hittar fler exempel i [Javadocs](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/commons/Externalizer.html).
+1. Du hittar fler exempel i [Javadocs](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/commons/Externalizer.html).

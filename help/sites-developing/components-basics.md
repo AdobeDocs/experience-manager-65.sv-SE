@@ -1,24 +1,20 @@
 ---
-title: AEM - Grunderna
-seo-title: AEM Components - The Basics
-description: När du börjar utveckla nya komponenter måste du förstå grunderna i deras struktur och konfiguration
-seo-description: When you start to develop new components you need to understand the basics of their structure and configuration
-uuid: 0225b34d-5ac4-40c3-b226-0c9b24bdf782
+title: Adobe Experience Manager Components - The Basics
+description: När du börjar utveckla nya komponenter måste du förstå grunderna i deras struktur och konfiguration.
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: components
 content-type: reference
-discoiquuid: 1f9867f1-5089-46d0-8e21-30d62dbf4f45
 legacypath: /content/docs/en/aem/6-0/develop/components/components-develop
 exl-id: 7ff92872-697c-4e66-b654-15314a8cb429
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: a56d5121a6ce11b42a6c30dae9e479564d16af27
 workflow-type: tm+mt
-source-wordcount: '4953'
+source-wordcount: '4913'
 ht-degree: 0%
 
 ---
 
-# AEM - Grunderna{#aem-components-the-basics}
+# Adobe Experience Manager-komponenter (AEM) - Grunderna{#aem-components-the-basics}
 
 När du börjar utveckla nya komponenter måste du förstå grunderna i deras struktur och konfiguration.
 
@@ -36,20 +32,20 @@ Innan du börjar konfigurera eller koda komponenten bör du fråga:
    * En tydlig specifikation hjälper till i alla faser av utveckling, testning och överlämning. Detaljerna kan förändras över tid, men specifikationen kan uppdateras (men ändringarna bör också dokumenteras).
 * Behöver du skapa komponenten från grunden, eller kan du ärva grunderna från en befintlig komponent?
    * Man behöver inte förnya hjulet.
-   * Det finns flera sätt i AEM som gör att du kan ärva och utöka detaljer från en annan komponentdefinition, inklusive åsidosättning, övertäckning och [Samla resurser](/help/sites-developing/sling-resource-merger.md).
-* Kommer din komponent att behöva logik för att markera/ändra innehållet?
+   * Det finns flera mekanismer i AEM som gör att du kan ärva och utöka detaljer från en annan komponentdefinition, inklusive åsidosättning, övertäckning och [Samla resurser](/help/sites-developing/sling-resource-merger.md).
+* Kräver komponenten logik för att markera eller ändra innehållet?
    * Logiken ska hållas åtskild från användargränssnittets lager. HTML är utformat för att säkerställa att detta sker.
 * Behöver komponenten CSS-formatering?
    * CSS-formateringen ska hållas åtskild från komponentdefinitionerna. Definiera konventioner för att namnge elementen i HTML så att du kan ändra dem via externa CSS-filer.
-* Vilka säkerhetsaspekter bör jag ta hänsyn till?
+* Vilka säkerhetsaspekter bör jag tänka på?
    * Se [Checklista för säkerhet - Bästa metoder för utveckling](/help/sites-administering/security-checklist.md#development-best-practices) för mer information.
 
 ### Pekaktiverat eller klassiskt gränssnitt {#touch-enabled-vs-classic-ui}
 
-Innan du börjar diskutera hur du utvecklar komponenter måste du veta vilket gränssnitt författarna kommer att använda:
+Innan något allvarligt samtal börjar om att utveckla komponenter måste du veta vilket gränssnitt författarna använder:
 
 * **Pekaktiverat användargränssnitt**
-  [Standardanvändargränssnittet](/help/sites-developing/touch-ui-concepts.md) bygger på Adobe Marketing Cloud enhetliga användarupplevelse, med hjälp av de underliggande teknikerna i [Coral UI](/help/sites-developing/touch-ui-concepts.md#coral-ui) och [Granite-gränssnitt](/help/sites-developing/touch-ui-concepts.md#granite-ui).
+  [Standardanvändargränssnittet](/help/sites-developing/touch-ui-concepts.md) bygger på Adobe Experience Cloud enhetliga användarupplevelse, med hjälp av de underliggande teknikerna i [Coral UI](/help/sites-developing/touch-ui-concepts.md#coral-ui) och [Granite-gränssnitt](/help/sites-developing/touch-ui-concepts.md#granite-ui).
 * **Klassiskt användargränssnitt**
 Användargränssnitt som bygger på ExtJS-teknik som ersatts med AEM 6.4.
 
@@ -57,15 +53,15 @@ Se [Gränssnittet Recommendations för kunder](/help/sites-deploying/ui-recommen
 
 Komponenter kan implementeras för att stödja det beröringsaktiverade användargränssnittet, det klassiska användargränssnittet eller båda. När du tittar på en standardinstans ser du även färdiga komponenter som ursprungligen designats för det klassiska användargränssnittet, det pekaktiverade användargränssnittet eller båda.
 
-Därför ska vi ta upp grunderna för båda och hur de ska kännas igen på den här sidan.
+Grunderna för båda beskrivs på den här sidan och hur du känner igen dem.
 
 >[!NOTE]
 >
->Adobe rekommenderar att du utnyttjar det pekaktiverade användargränssnittet för att dra nytta av den senaste tekniken. [AEM](modernization-tools.md) kan göra migreringen enklare.
+>Adobe rekommenderar att du använder användargränssnittet med pekskärm för att utnyttja den senaste tekniken. [AEM](modernization-tools.md) kan göra migreringen enklare.
 
 ### Innehållslogik och återgivningsmarkeringar  {#content-logic-and-rendering-markup}
 
-Vi rekommenderar att koden som ansvarar för kod och återgivning hålls åtskild från koden som styr logiken som används för att markera komponentens innehåll.
+Adobe rekommenderar att koden som ansvarar för kod och återgivning hålls åtskild från koden som styr logiken som används för att markera komponentens innehåll.
 
 Denna filosofi stöds av [HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html), ett mallspråk som är avsiktligt begränsat för att säkerställa att ett verkligt programmeringsspråk används för att definiera den underliggande affärslogiken. Den här (valfria) logiken anropas från HTML med ett specifikt kommando. Den här mekanismen markerar koden som anropas för en viss vy och, om det behövs, tillåter specifik logik för olika vyer av samma komponent.
 
@@ -73,7 +69,7 @@ Denna filosofi stöds av [HTL](https://experienceleague.adobe.com/docs/experienc
 
 HTML är ett mallspråk för HTML som introducerades med AEM 6.0.
 
-Diskussion om huruvida ska användas [HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html) eller JSP (Java Server Pages) när du utvecklar egna komponenter bör vara okomplicerat eftersom HTML nu är det rekommenderade skriptspråket för AEM.
+Diskussion om huruvida ska användas [HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html) eller JSP (Java™ Server Pages) när du utvecklar egna komponenter bör vara okomplicerat eftersom HTML nu är det rekommenderade skriptspråket för AEM.
 
 Både HTML och JSP kan användas för att utveckla komponenter för både det klassiska och det beröringskänsliga användargränssnittet. Även om det finns en tendens att anta att HTML bara är för det beröringsaktiverade användargränssnittet och JSP för det klassiska användargränssnittet, är detta en missuppfattning och beror mer på timing. Användargränssnittet med pekfunktion och HTML integrerades i AEM under ungefär samma period. Eftersom HTML nu är det rekommenderade språket används det för nya komponenter, som ofta används för användargränssnittet med pekfunktioner.
 
@@ -83,7 +79,7 @@ Både HTML och JSP kan användas för att utveckla komponenter för både det kl
 
 ### Utveckla egna komponenter {#developing-your-own-components}
 
-Om du vill skapa egna komponenter för rätt användargränssnitt kan du läsa (efter att du har läst den här sidan):
+Information om hur du skapar egna komponenter för rätt användargränssnitt finns i (efter att du har läst den här sidan):
 
 * [AEM komponenter för det touchaktiverade gränssnittet](/help/sites-developing/developing-components.md)
 * [AEM för det klassiska användargränssnittet](/help/sites-developing/developing-components-classic.md)
@@ -137,7 +133,7 @@ Strukturen i en AEM är kraftfull och flexibel, de viktigaste aspekterna är:
 Ett nyckelelement i strukturen är resurstypen.
 
 * Innehållsstrukturen deklarerar avsikter.
-* Resurstyp som implementerar dem.
+* Resurstypen implementerar dem.
 
 Detta är en abstraktion som säkerställer att även när utseendet och känslan förändras över tid så stannar avsikten.
 
@@ -161,7 +157,7 @@ Definitionen av en komponent kan delas upp enligt följande:
 
    * jcr-egenskaper:
 
-     En lista med jcr-egenskaper; de här är variabler och vissa kan vara valfria genom en komponentnods grundläggande struktur, dess egenskaper och undernoder definieras av `cq:Component` definition
+     En lista med jcr-egenskaper; de här är variabla och vissa kan vara valfria genom att grundstrukturen för en komponentnod, dess egenskaper och undernoder definieras av `cq:Component` definition
 
    * Resurser:
 
@@ -202,36 +198,36 @@ Definitionen av en komponent kan delas upp enligt följande:
 
    * Klassiskt användargränssnitt:
 
-      * `dialog` ( `cq:Dialog`) - Dialog för den här komponenten. Definierar gränssnittet som tillåter användaren att konfigurera komponenten och/eller redigera innehåll.
+      * `dialog` ( `cq:Dialog`) - Dialog för den här komponenten. Definierar gränssnittet som låter användaren konfigurera komponenten, redigera innehåll eller båda.
       * `design_dialog` ( `cq:Dialog`) - Designredigering för den här komponenten.
 
 #### Komponentikon i Touch UI {#component-icon-in-touch-ui}
 
 Ikonen eller förkortningen för komponenten definieras via JCR-egenskaperna för komponenten när komponenten skapas av utvecklaren. Dessa egenskaper utvärderas i följande ordning och den första giltiga egenskapen som hittas används.
 
-1. `cq:icon` - String-egenskap som pekar på en standardikon i [Coral UI-bibliotek](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/coral-ui/coralui3/Coral.Icon.html) som visas i komponentwebbläsaren
+1. `cq:icon` - String-egenskap som pekar på en standardikon i [Coral UI-bibliotek](https://developer.adobe.com/experience-manager/reference-materials/6-5/coral-ui/coralui3/Coral.Icon.html) som visas i komponentwebbläsaren
    * Använd värdet för HTML-attributet för ikonen Koral.
 1. `abbreviation` - String-egenskap för att anpassa förkortningen av komponentnamnet i komponentwebbläsaren
    * Förkortningen ska vara begränsad till två tecken.
-   * Om du anger en tom sträng byggs förkortningen av de två första tecknen i `jcr:title` -egenskap.
+   * Genom att ange en tom sträng skapas förkortningen från de två första tecknen i `jcr:title` -egenskap.
       * Exempel:&quot;Im&quot; för&quot;Bild&quot;
       * Den lokaliserade titeln används för att skapa förkortningen.
    * Förkortningen översätts bara om komponenten har en `abbreviation_commentI18n` -egenskapen, som sedan används som översättningstips.
 1. `cq:icon.png` eller `cq:icon.svg` - Ikon för den här komponenten, som visas i komponentwebbläsaren
    * 20 x 20 pixlar är storleken på ikonerna för standardkomponenter.
-      * Storleken på större ikoner kommer att minskas (klientsidan).
+      * Storleken på större ikoner ändras (klientsidan).
    * Den rekommenderade färgen är rgb(112, 112, 112) > #707070
    * Bakgrunden för standardkomponentikoner är genomskinlig.
    * Endast `.png` och `.svg` filer stöds.
-   * Om du importerar från filsystemet via plugin-programmet Eclipse måste filnamnen escape-konverteras som `_cq_icon.png` eller `_cq_icon.svg` till exempel.
+   * Om du importerar från filsystemet med Eclipse-plugin-programmet måste filnamn escape-konverteras `_cq_icon.png` eller `_cq_icon.svg` till exempel.
    * `.png` tar över sitt prejudikat `.svg` om båda finns
 
-Om ingen av ovanstående egenskaper ( `cq:icon`, `abbreviation`, `cq:icon.png` eller `cq:icon.svg`) finns på komponenten:
+Om ingen av ovanstående egenskaper ( `cq:icon`, `abbreviation`, `cq:icon.png`, eller `cq:icon.svg`) finns på komponenten:
 
 * Systemet söker efter samma egenskaper i de överordnade komponenterna efter `sling:resourceSuperType` -egenskap.
-* Om inget eller en tom förkortning hittas på den överordnade komponentnivån, kommer systemet att skapa förkortningen från de första bokstäverna i `jcr:title` den aktuella komponentens egenskap.
+* Om inget eller en tom förkortning hittas på den överordnade komponentnivån skapas förkortningen från de första bokstäverna i `jcr:title` den aktuella komponentens egenskap.
 
-Om du vill avbryta arvet av ikoner från superkomponenter anger du ett tomt värde `abbreviation` -egenskapen för komponenten återställs till standardbeteendet.
+Om du vill avbryta arvet av ikoner från superkomponenter anger du ett tomt värde `abbreviation` egenskapen för komponenten återgår till standardbeteendet.
 
 The [Komponentkonsol](/help/sites-authoring/default-components-console.md#component-details) visar hur ikonen för en viss komponent definieras.
 
@@ -251,7 +247,7 @@ The [Komponentkonsol](/help/sites-authoring/default-components-console.md#compon
 
 ### Egenskaper och underordnade noder för en komponent {#properties-and-child-nodes-of-a-component}
 
-Många av de noder/egenskaper som behövs för att definiera en komponent är gemensamma för båda gränssnitten, men skillnaderna är fortfarande oberoende så att komponenten kan fungera i båda miljöerna.
+Många av de noder/egenskaper som behövs för att definiera en komponent är gemensamma för båda gränssnitten, med skillnader som förblir oberoende så att komponenten kan fungera i båda miljöerna.
 
 En komponent är en nod av typen `cq:Component` och har följande egenskaper och underordnade noder:
 
@@ -320,7 +316,7 @@ En komponent är en nod av typen `cq:Component` och har följande egenskaper och
   <tr>
    <td><code>cq:childEditConfig</code></td>
    <td><code>cq:EditConfig</code></td>
-   <td>När komponenten är en behållare, t.ex. ett styckesystem, styr detta redigeringskonfigurationen för de underordnade noderna.<br /> </td>
+   <td>När komponenten är en behållare, till exempel ett styckesystem, styr den redigeringskonfigurationen för de underordnade noderna.<br /> </td>
   </tr>
   <tr>
    <td><code>cq:editConfig</code></td>
@@ -390,7 +386,7 @@ En komponent är en nod av typen `cq:Component` och har följande egenskaper och
  </tbody>
 </table>
 
-Om vi tittar på **Text** kan vi se följande element (båda versionerna):
+Om du tittar på **Text** -komponent (båda versionerna) kan du se följande element:
 
 * HTL ( `/libs/wcm/foundation/components/text`)
 
@@ -423,7 +419,7 @@ Underordnade noder av särskilt intresse är:
 
 Dialogrutor är ett nyckelelement i komponenten eftersom de tillhandahåller ett gränssnitt där författare kan konfigurera och ange indata för den komponenten.
 
-Beroende på komponentens komplexitet kan din dialogruta behöva en eller flera flikar för att hålla dialogrutan kort och sortera indatafälten.
+Beroende på komponentens komplexitet kan det behövas en eller flera flikar i dialogrutan för att hålla dialogrutan kort och sortera indatafälten.
 
 Dialogrutedefinitioner är specifika för användargränssnittet:
 
@@ -439,7 +435,7 @@ Dialogrutedefinitioner är specifika för användargränssnittet:
       * specifikt för det pekaktiverade användargränssnittet
       * definieras med gränssnittskomponenter i Granite
       * har en egenskap `sling:resourceType`, som standard för Sling-innehållsstruktur
-      * kan ha en egenskap `helpPath` för att definiera den sammanhangsberoende hjälpresursen (absolut eller relativ sökväg) som öppnas när hjälpikonen (? ) är markerat.
+      * kan ha en egenskap `helpPath` om du vill definiera den sammanhangsberoende hjälpresursen (absolut eller relativ sökväg) som ska användas när hjälpikonen (ikonen `?` ) är markerat.
          * För körklara komponenter refererar detta ofta till en sida i dokumentationen.
          * Om nej `helpPath` anges visas standardwebbadressen (dokumentationsöversiktssidan).
 
@@ -455,7 +451,7 @@ Dialogrutedefinitioner är specifika för användargränssnittet:
       * specifikt för det klassiska användargränssnittet
       * definieras med ExtJS-widgetar
       * har en egenskap `xtype`, som refererar till ExtJS
-      * kan ha en egenskap `helpPath` för att definiera den sammanhangsberoende hjälpresursen (absolut eller relativ sökväg) som nås när **Hjälp** är markerad.
+      * kan ha en egenskap `helpPath` för att definiera den sammanhangsberoende hjälpresursen (absolut eller relativ sökväg) som ska användas när **Hjälp** är markerad.
          * För körklara komponenter refererar detta ofta till en sida i dokumentationen.
          * Om nej `helpPath` anges visas standardwebbadressen (dokumentationsöversiktssidan).
 
@@ -472,7 +468,7 @@ Dialogrutedefinitioner är specifika för användargränssnittet:
 
 ### Designdialogrutor {#design-dialogs}
 
-Designdialogrutor påminner mycket om dialogrutorna som används för att redigera och konfigurera innehåll, men de tillhandahåller ett gränssnitt där författare kan konfigurera och tillhandahålla designinformation för den komponenten.
+Designdialogrutor liknar dialogrutorna som används för att redigera och konfigurera innehåll, men de tillhandahåller gränssnittet för författare att konfigurera och tillhandahålla designinformation för den komponenten.
 
 [Designdialogrutor är tillgängliga i designläge](/help/sites-authoring/default-components-designmode.md)trots att de inte behövs för alla komponenter, till exempel **Titel** och **Bild** båda har designdialogrutor, men **Text** inte.
 
@@ -483,7 +479,7 @@ Designdialogrutan för styckesystemet (till exempel parsys) är ett specialfall 
 När en komponent har definierats måste den göras tillgänglig för användning. Om du vill göra en komponent tillgänglig för användning i ett styckesystem kan du antingen:
 
 1. Öppna [Designläge](/help/sites-authoring/default-components-designmode.md) för en sida och aktivera den nödvändiga komponenten.
-1. Lägg till de nödvändiga komponenterna i `components` egenskapen för malldefinitionen under:
+1. Lägg till nödvändiga komponenter i `components` egenskapen för malldefinitionen under:
 
    `/etc/designs/<*yourProject*>/jcr:content/<*yourTemplate*>/par`
 
@@ -495,7 +491,7 @@ När en komponent har definierats måste den göras tillgänglig för användnin
 
 ### Komponenter och det innehåll de skapar {#components-and-the-content-they-create}
 
-Om vi skapar och konfigurerar en instans av **Titel** på sidan: `<content-path>/Prototype.html`
+Om du skapar och konfigurerar en instans av **Titel** på sidan: `<content-path>/Prototype.html`
 
 * Pekaktiverat användargränssnitt
 
@@ -505,7 +501,7 @@ Om vi skapar och konfigurerar en instans av **Titel** på sidan: `<content-path>
 
   ![screen_shot_2012-02-01at34257pm](assets/screen_shot_2012-02-01at34257pm.png)
 
-Sedan kan vi se strukturen för det innehåll som skapas i databasen:
+Sedan kan du se strukturen för innehållet som skapas i databasen:
 
 ![screen_shot_2012-02-13at61405pm](assets/screen_shot_2012-02-13at61405pm.png)
 
@@ -518,7 +514,7 @@ Om du tittar på den faktiska texten för en **Titel**:
 
 * i innehållet genererar detta egenskapen `jcr:title` som innehåller författarens innehåll.
 
-De definierade egenskaperna är beroende av de enskilda definitionerna. Även om de kan vara mer komplexa än tidigare följer de fortfarande samma grundläggande principer.
+De egenskaper som definieras beror på de enskilda definitionerna. Även om de kan vara mer komplexa än ovan följer de fortfarande samma grundläggande principer.
 
 ## Komponenthierarki och arv {#component-hierarchy-and-inheritance}
 
@@ -530,7 +526,7 @@ Komponenterna i AEM har tre olika hierarkier:
 
    * skript (lösta av Sling)
    * dialogrutor
-   * beskrivningar (inklusive miniatyrbilder, ikoner etc.)
+   * beskrivningar (inklusive miniatyrbilder och ikoner)
 
 * **Behållarhierarki**
 
@@ -557,7 +553,7 @@ En komponents redigeringsbeteende konfigureras genom att en `cq:editConfig` nod 
 * [`cq:editConfig` nodegenskaper](#configuring-with-cq-editconfig-properties):
 
    * `cq:actions` ( `String array`): definierar de åtgärder som kan utföras på komponenten.
-   * `cq:layout` ( `String`): : definierar hur komponenten redigeras i det klassiska användargränssnittet.
+   * `cq:layout` ( `String`): definierar hur komponenten redigeras i det klassiska användargränssnittet.
    * `cq:dialogMode` ( `String`): definierar hur komponentdialogrutan öppnas i det klassiska användargränssnittet
 
       * I det beröringsaktiverade användargränssnittet flyter dialogrutorna alltid i skrivbordsläge och öppnas automatiskt som helskärm i mobilen.
@@ -571,7 +567,7 @@ En komponents redigeringsbeteende konfigureras genom att en `cq:editConfig` nod 
    * `cq:dropTargets` (nodtyp `nt:unstructured`): definierar en lista med släppmål som kan acceptera en släppning från en resurs i innehållshanteraren
 
       * Det finns bara flera släppmål i det klassiska användargränssnittet.
-      * I det beröringsaktiverade användargränssnittet tillåts en enda släppåtgärd.
+      * I det beröringskänsliga användargränssnittet tillåts en enda släppåtgärd.
 
    * `cq:actionConfigs` (nodtyp `nt:unstructured`): definierar en lista med nya åtgärder som läggs till i cq:actions-listan.
    * `cq:formParameters` (nodtyp `nt:unstructured`): definierar ytterligare parametrar som läggs till i dialogformuläret.
@@ -663,15 +659,15 @@ The `cq:actions` egenskap ( `String array`) definierar en eller flera åtgärder
   </tr>
       <tr>
     <td><code>editannotate</code></td>
-    <td>Lägger till en knapp för att redigera komponenten samt för att tillåta <a href="/help/sites-authoring/annotations.md">anteckningar</a>.</td>
+    <td>Lägger till en knapp för att redigera komponenten och tillåta <a href="/help/sites-authoring/annotations.md">anteckningar</a>.</td>
    </tr>
   <tr>
    <td><code>delete</code></td>
-   <td>Lägger till en knapp för att ta bort komponenten</td>
+   <td>Lägger till en knapp för att ta bort komponenten.</td>
   </tr>
   <tr>
    <td><code>insert</code></td>
-   <td>Lägger till en knapp för att infoga en ny komponent före den aktuella</td>
+   <td>Lägger till en knapp för att infoga en ny komponent före den aktuella.</td>
   </tr>
   <tr>
    <td><code>copymove</code></td>
@@ -710,7 +706,7 @@ The `cq:layout` egenskap ( `String`) definierar hur komponenten kan redigeras i 
   </tr>
   <tr>
    <td><code>rollover</code></td>
-   <td>Standardvärde. Komponentutgåvan är tillgänglig"när du för muspekaren över" genom att klicka och/eller snabbmenyn.<br /> Observera att motsvarande objekt på klientsidan är: <code>CQ.wcm.EditRollover</code>.</td>
+   <td>Standardvärde. Komponentutgåvan är tillgänglig"när du för muspekaren över" genom att klicka och/eller snabbmenyn.<br /> För avancerad användning är motsvarande objekt på klientsidan: <code>CQ.wcm.EditRollover</code>.</td>
   </tr>
   <tr>
    <td><code>editbar</code></td>
@@ -718,7 +714,7 @@ The `cq:layout` egenskap ( `String`) definierar hur komponenten kan redigeras i 
   </tr>
   <tr>
    <td><code>auto</code></td>
-   <td>Koden lämnas kvar på klientsidan.</td>
+   <td>Det är bara klientkoden som bestämmer.</td>
   </tr>
  </tbody>
 </table>
@@ -739,7 +735,7 @@ Följande konfiguration lägger till en redigeringsknapp i komponentens redigeri
 
 ### cq:dialogMode (endast Classic UI) {#cq-dialogmode-classic-ui-only}
 
-Komponenten kan länkas till en redigeringsdialogruta. The `cq:dialogMode` egenskap ( `String`) definierar hur komponentdialogen ska öppnas i det klassiska användargränssnittet. Följande värden är tillgängliga:
+Komponenten kan länkas till en redigeringsdialogruta. The `cq:dialogMode` egenskap ( `String`) definierar hur komponentdialogen öppnas i det klassiska användargränssnittet. Följande värden är tillgängliga:
 
 <table>
  <tbody>
@@ -791,7 +787,7 @@ The `dialogLayout` -egenskapen definierar hur en dialogruta ska öppnas som stan
 
 * Värdet för `fullscreen` öppnar dialogrutan i helskärmsläge.
 * Ett tomt värde eller en frånvaro av egenskapen öppnar normalt dialogrutan.
-* Observera att användaren alltid kan växla till helskärmsläge i dialogrutan.
+* Användaren kan alltid växla helskärmsläge i dialogrutan.
 * Gäller inte det klassiska användargränssnittet.
 
 ### Konfigurera med cq:EditConfig-underordnade noder {#configuring-with-cq-editconfig-child-nodes}
@@ -804,7 +800,7 @@ The `cq:dropTargets` nod (nodtyp) `nt:unstructured`) definierar en lista med sl�
 >
 >Det finns bara flera släppmål i det klassiska användargränssnittet.
 >
->I det beröringsaktiverade användargränssnittet används bara det första målet.
+>I det beröringskänsliga användargränssnittet används endast det första målet.
 
 Varje underordnad nod av typen `cq:DropTargetConfig` definierar ett släppmål i komponenten. Nodnamnet är viktigt eftersom det måste användas i JSP enligt följande för att generera CSS-klassnamnet som tilldelats DOM-elementet som är det gällande släppmålet:
 
@@ -813,7 +809,7 @@ Varje underordnad nod av typen `cq:DropTargetConfig` definierar ett släppmål i
  <node name of the drop target in the edit configuration>
 ```
 
-The `<drag and drop prefix>` definieras av Java-egenskapen:
+The `<drag and drop prefix>` definieras av egenskapen Java™:
 
 `com.day.cq.wcm.api.components.DropTarget.CSS_CLASS_PREFIX`.
 
@@ -1024,7 +1020,7 @@ The `cq:listeners` nod (nodtyp) `cq:EditListenersConfig`) definierar vad som hä
 
 >[!NOTE]
 >
->När det gäller kapslade komponenter finns det vissa begränsningar för åtgärder som definierats som egenskaper för `cq:listeners` nod:
+>Om det finns kapslade komponenter finns det vissa begränsningar för åtgärder som definierats som egenskaper i `cq:listeners` nod:
 >
 >* För kapslade komponenter är värdena för följande egenskaper *måste* be `REFRESH_PAGE`: >
 >  * `aftermove`
@@ -1040,7 +1036,7 @@ Följande exempel motsvarar `REFRESH_INSERTED` konfiguration:
 
 >[!NOTE]
 >
->Om du vill se vilka parametrar som kan användas i hanterarna för det klassiska användargränssnittet läser du i `before<action>` och `after<action>` händelseavsnittet i [`CQ.wcm.EditBar`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.EditBar) och [`CQ.wcm.EditRollover`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.EditRollover) widgetdokumentation.
+>Om du vill se vilka parametrar som kan användas i hanterarna för det klassiska användargränssnittet läser du i `before<action>` och `after<action>` händelseavsnittet i [`CQ.wcm.EditBar`](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html?class=CQ.wcm.EditBar) och [`CQ.wcm.EditRollover`](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html?class=CQ.wcm.EditRollover) widgetdokumentation.
 
 Med följande konfiguration uppdateras sidan när komponenten har tagits bort, redigerats, infogats eller flyttats:
 

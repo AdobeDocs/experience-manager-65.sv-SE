@@ -1,18 +1,14 @@
 ---
 title: Anpassa sidredigering
-seo-title: Customizing Page Authoring
-description: AEM innehåller olika mekanismer som gör att du kan anpassa sidredigeringsfunktionerna
-seo-description: AEM provides various mechanisms to enable you to customize page authoring functionality
-uuid: 9dc72d98-c5ff-4a00-b367-688ccf896526
+description: I Adobe Experience Manager (AEM) finns olika sätt att anpassa sidredigeringsfunktionerna.
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: extending-aem
 content-type: reference
-discoiquuid: 6825dcd6-fa75-4410-b6b2-e7bd4a391224
 exl-id: 90594588-db8e-4d4c-a208-22c1c6ea2a2d
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: a56d5121a6ce11b42a6c30dae9e479564d16af27
 workflow-type: tm+mt
-source-wordcount: '1357'
+source-wordcount: '1340'
 ht-degree: 0%
 
 ---
@@ -23,7 +19,7 @@ ht-degree: 0%
 >
 >I det här dokumentet beskrivs hur du anpassar sidredigering i det moderna, pekaktiverade användargränssnittet och det gäller inte det klassiska användargränssnittet.
 
-AEM innehåller olika mekanismer som du kan använda för att anpassa sidredigeringsfunktionen (och [konsoler](/help/sites-developing/customizing-consoles-touch.md)) i din redigeringsinstans.
+I Adobe Experience Manager (AEM) finns olika sätt att anpassa sidredigeringsfunktionerna (och [konsoler](/help/sites-developing/customizing-consoles-touch.md)) i din redigeringsinstans.
 
 * Clientlibs
 
@@ -38,26 +34,26 @@ AEM innehåller olika mekanismer som du kan använda för att anpassa sidrediger
 
 >[!NOTE]
 >
->Mer information finns i [JS-dokumentationsuppsättning](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/jsdoc/ui-touch/editor-core/index.html).
+>Mer information finns i [JS-dokumentationsuppsättning](https://developer.adobe.com/experience-manager/reference-materials/6-5/jsdoc/ui-touch/editor-core/index.html).
 
 De kan användas på många sätt för att utöka sidredigeringsfunktionen i AEM. En markering beskrivs nedan (på en hög nivå).
 
 >[!NOTE]
 >
->Mer information finns i:
+>Mer information finns i följande:
 >
 >* Använda och skapa [klientlibs](/help/sites-developing/clientlibs.md).
 >* Använda och skapa [övertäckningar](/help/sites-developing/overlays.md).
->* [Granit](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/jcr_root/libs/granite/ui/index.html)
+>* [Granit](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/index.html)
 >* [Struktur för det AEM användargränssnittet med pekskärm](/help/sites-developing/touch-ui-structure.md) om du vill ha information om de strukturella områden som används för sidredigering.
 >
 
 
 >[!CAUTION]
 >
->Du ***måste*** ändrar ingenting i `/libs` bana.
+>***Gör inte*** ändra något i `/libs` bana.
 >
->Detta beror på innehållet i `/libs` skrivs över nästa gång du uppgraderar din instans (och kan mycket väl skrivas över när du använder en snabbkorrigering eller ett funktionspaket).
+>Orsaken är att innehållet i `/libs` skrivs över nästa gång du uppgraderar din instans (och kan mycket väl skrivas över när du installerar en snabbkorrigering eller ett funktionspaket).
 >
 >Den rekommenderade metoden för konfiguration och andra ändringar är:
 >
@@ -72,7 +68,7 @@ När du redigerar en sida finns det olika [lägen](/help/sites-authoring/author-
 
 En AEM standardinstans innehåller MSM-lagret. Detta ger åtkomst till data relaterade till [hantering av flera webbplatser](/help/sites-administering/msm.md) och markerar det i lagret.
 
-För att se hur det fungerar kan du redigera [We.Retail Language copy](/help/sites-developing/we-retail-globalized-site-structure.md) sida (eller någon annan live-kopia-sida) och markera **Live Copy-status** läge.
+Om du vill se hur det fungerar kan du redigera [We.Retail Language copy](/help/sites-developing/we-retail-globalized-site-structure.md) sida (eller någon annan live-kopia-sida) och markera **Live Copy-status** läge.
 
 MSM-lagerdefinitionen (som referens) finns i:
 
@@ -80,7 +76,7 @@ MSM-lagerdefinitionen (som referens) finns i:
 
 ### Kodexempel {#code-sample}
 
-Detta är ett exempelpaket som visar hur du skapar ett nytt lager (läge), som är ett nytt lager för MSM-vyn.
+Detta är ett exempelpaket som visar hur du skapar ett lager (läge), som är ett nytt lager för MSM-vyn.
 
 KOD PÅ GITHUB
 
@@ -91,11 +87,11 @@ Koden för den här sidan finns på GitHub
 
 ## Lägg till ny markeringskategori i resursläsaren {#add-new-selection-category-to-asset-browser}
 
-Resursläsaren visar resurser av olika typer/kategorier (till exempel bilder, dokument osv.). Resurserna kan också filtreras efter dessa tillgångskategorier.
+Resursläsaren visar resurser av olika typer/kategorier (till exempel bilder och dokument). Resurserna kan också filtreras efter dessa tillgångskategorier.
 
 ### Kodexempel {#code-sample-1}
 
-`aem-authoring-extension-assetfinder-flickr` är ett exempelpaket som visar hur du lägger till en ny grupp i tillgångssökaren. Det här exemplet ansluter till [Flickr](https://www.flickr.com)Det är publika strömmar och visar dem på sidopanelen.
+`aem-authoring-extension-assetfinder-flickr` är ett exempelpaket som visar hur du lägger till en grupp i tillgångssökaren. Det här exemplet ansluter till [Flickr](https://www.flickr.com)Det offentliga flödet och visar dem på sidopanelen.
 
 KOD PÅ GITHUB
 
@@ -106,11 +102,11 @@ Koden för den här sidan finns på GitHub
 
 ## Filtreringsresurser {#filtering-resources}
 
-När användaren redigerar sidor måste han eller hon ofta välja bland resurser (till exempel sidor, komponenter, resurser osv.). Detta kan vara en lista som författaren till exempel måste välja ett objekt från.
+När användaren redigerar sidor måste han eller hon ofta välja bland resurser (till exempel sidor, komponenter och resurser). Detta kan vara en lista där författaren måste välja ett objekt.
 
-För att hålla listan i en rimlig storlek och även relevant för användningsfallet kan ett filter implementeras i form av ett anpassat predikat. Om [`pathbrowser`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/index.html) [Granit](/help/sites-developing/touch-ui-concepts.md#granite-ui) -komponenten används för att användaren ska kunna välja sökvägen till en viss resurs. Sökvägarna kan filtreras på följande sätt:
+För att hålla listan i en rimlig storlek och även relevant för användningsfallet kan ett filter implementeras i form av ett anpassat predikat. Om [`pathbrowser`](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/index.html) [Granit](/help/sites-developing/touch-ui-concepts.md#granite-ui) -komponenten används för att användaren ska kunna välja sökvägen till en viss resurs. Sökvägarna kan filtreras på följande sätt:
 
-* Implementera det anpassade predikatet genom att implementera [`com.day.cq.commons.predicate.AbstractNodePredicate`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/commons/predicate/package-summary.html) gränssnitt.
+* Implementera det anpassade predikatet genom att implementera [`com.day.cq.commons.predicate.AbstractNodePredicate`](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/commons/predicate/package-summary.html) gränssnitt.
 * Ange ett namn för predikatet och referera det namnet när du använder `pathbrowser`.
 
 Mer information om hur du skapar ett anpassat predikat finns i [den här artikeln](/help/sites-developing/implementing-custom-predicate-evaluator.md).
@@ -157,11 +153,11 @@ I en vanlig AEM-installation:
 
          * egenskap: `editorType`
 
-           Definierar vilken typ av infogad redigerare som ska användas när redigeringen på plats aktiveras för den komponenten. till exempel `text`, `textimage`, `image`, `title`.
+           Definierar vilken typ av infogad redigerare som används när redigeringen på plats aktiveras för den komponenten. till exempel `text`, `textimage`, `image`, `title`.
 
-1. Ytterligare konfigurationsinformation om redigeraren kan konfigureras med en `config` nod som innehåller konfigurationer samt ytterligare `plugin` nod som innehåller nödvändig konfigurationsinformation för plugin-programmet.
+1. Ytterligare konfigurationsinformation om redigeraren kan konfigureras med en `config` nod som innehåller konfigurationer och en `plugin` nod som innehåller nödvändig konfigurationsinformation för plugin-programmet.
 
-   Följande är ett exempel på hur du definierar bildproportioner för bildbeskärningsplugin-programmet för bildkomponenten. Observera att beskärningsproportionerna flyttades till helskärmsredigeraren på grund av risken för mycket begränsad skärmstorlek och att de bara kan ses där.
+   Följande är ett exempel på hur du definierar bildproportioner för bildbeskärningsplugin-programmet för bildkomponenten. På grund av den begränsade skärmstorleken har beskärningsproportionerna flyttats till helskärmsredigeraren och kan bara ses där.
 
    ```xml
    <cq:inplaceEditing
@@ -185,7 +181,7 @@ I en vanlig AEM-installation:
 
    >[!CAUTION]
    >
-   >Observera att i AEM beskärningsproportioner, enligt inställningen i `ratio` egenskap, definieras som **höjd/bredd**. Detta skiljer sig från den vanliga definitionen av bredd/höjd och görs av äldre kompatibilitetsskäl. Redigeringsanvändarna kommer inte att vara medvetna om några skillnader förutsatt att du definierar `name` egenskapen tydligt eftersom detta är vad som visas i användargränssnittet.
+   >AEM beskärningsproportioner, enligt inställningen i `ratio` egenskap, definieras som **höjd/bredd**. Detta skiljer sig från den vanliga definitionen av bredd/höjd och görs av kompatibilitetsskäl. Redigeringsanvändarna kommer inte att vara medvetna om några skillnader förutsatt att du definierar `name` egenskapen tydligt eftersom detta är vad som visas i användargränssnittet.
 
 #### Skapa en ny lokal redigerare {#creating-a-new-in-place-editor}
 
@@ -209,7 +205,7 @@ Så här implementerar du en ny redigerare på plats (i klientlib):
 
 #### Kodexempel för att skapa en ny lokal redigerare {#code-sample-for-creating-a-new-in-place-editor}
 
-`aem-authoring-extension-inplace-editor` är ett exempelpaket som visar hur du skapar en ny redigerare på plats i AEM.
+`aem-authoring-extension-inplace-editor` är ett exempelpaket som visar hur du skapar en redigerare på plats i AEM.
 
 KOD PÅ GITHUB
 
@@ -243,9 +239,9 @@ färdiga arbetsflöden, **Aktiveringsbegäran**:
 
 * Visas automatiskt på rätt meny när en innehållsförfattare **har inte** rätt replikeringsrättigheter, men **har** medlemskap för DAM-användare och författare.
 
-* I annat fall visas ingenting eftersom replikeringsrättigheterna har tagits bort.
+* I annat fall visas ingenting eftersom replikeringsrättigheter har tagits bort.
 
-Om du vill ha ett anpassat beteende vid en sådan aktivering kan du täcka över **Aktiveringsbegäran** arbetsflöde:
+Om du vill ha ett anpassat beteende för en sådan aktivering kan du täcka över **Aktiveringsbegäran** arbetsflöde:
 
 1. I `/apps` överlägg **Webbplatser** guide:
 

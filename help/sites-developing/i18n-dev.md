@@ -1,36 +1,32 @@
 ---
 title: Internationaliserar gränssnittssträngar
-seo-title: Internationalizing UI Strings
-description: Med Java- och JavaScript-API:er kan du internationalisera strängar
-seo-description: Java and JavaScript APIs enable you to internationalize strings
-uuid: 1cfa409f-9b1e-466f-8b03-5628db42bc57
+description: Java&trade; och JavaScript-API:er gör att du kan internationalisera strängar
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: components
-discoiquuid: 9da8823c-13a4-4244-bfab-a910a4fd44e7
 exl-id: bc5b1cb7-a011-42fe-8759-3c7ee3068aad
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: a56d5121a6ce11b42a6c30dae9e479564d16af27
 workflow-type: tm+mt
-source-wordcount: '1100'
+source-wordcount: '1097'
 ht-degree: 0%
 
 ---
 
 # Internationaliserar gränssnittssträngar {#internationalizing-ui-strings}
 
-Med Java- och JavaScript-API:er kan du internationalisera strängar i följande typer av resurser:
+Med Java™- och JavaScript-API:er kan du internationalisera strängar med följande typer av resurser:
 
-* Java-källfiler.
+* Java™-källfiler.
 * JSP-skript.
 * JavaScript i klientbibliotek eller i sidkällan.
 * Egenskapsvärden för JCR-nod som används i dialogrutor och komponentkonfigurationsegenskaper.
 
 En översikt över internationalisering och lokalisering finns på [Internationalisering av komponenter](/help/sites-developing/i18n.md).
 
-## Internationalisering av strängar i Java- och JSP-kod {#internationalizing-strings-in-java-and-jsp-code}
+## Internationalisering av strängar i Java™ och JSP Code {#internationalizing-strings-in-java-and-jsp-code}
 
-The `com.day.cq.i18n` Med Java-paketet kan du visa lokaliserade strängar i användargränssnittet. The `I18n` klassen innehåller `get` som hämtar lokaliserade strängar från AEM. Den enda obligatoriska parametern i `get` är stränglitteralen på engelska. Engelska är standardspråk för användargränssnittet. I följande exempel lokaliseras ordet `Search`:
+The `com.day.cq.i18n` Med Java™-paketet kan du visa lokaliserade strängar i användargränssnittet. The `I18n` klassen innehåller `get` metod som hämtar lokaliserade strängar från Adobe Experience Manager-ordlistan (AEM). Den enda obligatoriska parametern i `get` är stränglitteralen på engelska. Engelska är standardspråk för användargränssnittet. I följande exempel lokaliseras ordet `Search`:
 
 `i18n.get("Search");`
 
@@ -48,7 +44,7 @@ Det finns två sätt att avgöra vilket språk användaren föredrar:
 
 Användarkontots language-egenskap är den metod som rekommenderas eftersom den är mer tillförlitlig. Användaren måste dock vara inloggad för att kunna använda den här metoden.
 
-#### Skapa Java-objektet I18n {#creating-the-i-n-java-object}
+#### Skapa I18n Java™-objektet {#creating-the-i-n-java-object}
 
 I18n-klassen innehåller två konstruktorer. Hur du avgör vilket språk användaren föredrar avgör vilken konstruktor som ska användas.
 
@@ -60,7 +56,7 @@ I18n i18n = new I18n(slingRequest);
 
 Konstruktorn använder `SlingHTTPRequest` för att hämta användarens språkinställning.
 
-Om du vill använda sidans språkområde för att fastställa språket måste du först hämta ResourceBundle för den begärda sidans språk:
+Om du vill använda sidans språkområde för att fastställa språket hämtar du först ResourceBundle för den begärda sidans språk:
 
 ```java
 Locale pageLang = currentPage.getLanguage(false);
@@ -75,7 +71,7 @@ Använd `get` metoden `I18n` objekt för att internationalisera en sträng. Den 
 Det första argumentet i `get` Metoden måste följa följande regler:
 
 * Värdet måste vara en stränglitteral. En variabel av typen `String` är inte acceptabelt.
-* Stränglitteralen måste vara uttryck på en enda rad.
+* Stränglitteralen måste uttryckas på en rad.
 * Strängen är skiftlägeskänslig.
 
 ```xml
@@ -94,7 +90,7 @@ i18n.get("Request","A noun, as in a request for a web page");
 
 #### Inkludera variabler i lokaliserade meningar {#including-variables-in-localized-sentences}
 
-Inkludera variabler i den lokaliserade strängen för att skapa sammanhangsbaserad betydelse i en mening. När du har loggat in i ett webbprogram visas till exempel meddelandet &quot;Welcome back Administrator&quot; på startsidan. Du har två meddelanden i din inkorg.&quot; Sidkontexten bestämmer användarnamnet och antalet meddelanden.
+Inkludera variabler i den lokaliserade strängen för att skapa sammanhangsbaserad betydelse i en mening. När du har loggat in i ett webbprogram visas till exempel meddelandet &quot;Welcome back Administrator&quot; på startsidan. Du har två meddelanden i inkorgen.&quot; Sidkontexten bestämmer användarnamnet och antalet meddelanden.
 
 [I ordlistan](/help/sites-developing/i18n-translator.md#adding-changing-and-removing-strings), representeras variablerna i strängar som index inom hakparenteser. Ange värdena för variablerna som argument för `get` -metod. Argumenten placeras efter översättningstipset och indexen motsvarar argumentens ordning:
 
@@ -106,7 +102,7 @@ Den internationaliserade strängen och översättningstipset måste exakt matcha
 
 #### Använda metoden Statisk hämtning {#using-the-static-get-method}
 
-The `I18N` klassen definierar en statisk `get` -metod som är användbar när du behöver lokalisera ett litet antal strängar. Förutom parametrarna för ett objekts `get` -metoden kräver den statiska metoden `SlingHttpRequest` eller `ResourceBundle` som du använder, beroende på hur du avgör vilket språk som användaren föredrar:
+The `I18N` klassen definierar en statisk `get` -metod som är användbar när du måste lokalisera några strängar. Förutom parametrarna för ett objekts `get` -metoden kräver den statiska metoden `SlingHttpRequest` eller `ResourceBundle` som du använder, beroende på hur du avgör vilket språk som användaren föredrar:
 
 * Använd användarens språkinställning: Ange SlingHttpRequest som den första parametern.
 
@@ -117,11 +113,11 @@ The `I18N` klassen definierar en statisk `get` -metod som är användbar när du
 
 ### Internationalisering av strängar i JavaScript-kod {#internationalizing-strings-in-javascript-code}
 
-Med JavaScript API kan du lokalisera strängar på klienten. Som med [Java och JSP](#internationalizing-strings-in-java-and-jsp-code) JavaScript API gör att du kan identifiera strängar för att lokalisera, ge lokaliseringstips och ta med variabler i de lokaliserade strängarna.
+Med JavaScript API kan du lokalisera strängar på klienten. Som med [Java™ och JSP](#internationalizing-strings-in-java-and-jsp-code) JavaScript API gör att du kan identifiera strängar för att lokalisera, ge lokaliseringstips och ta med variabler i de lokaliserade strängarna.
 
 The `granite.utils` [biblioteksmapp för klient](/help/sites-developing/clientlibs.md) innehåller JavaScript-API:t. Om du vill använda API:t inkluderar du den här klientbiblioteksmappen på sidan. Lokaliseringsfunktionerna använder `Granite.I18n` namnutrymme.
 
-Innan du presenterar lokaliserade strängar måste du ange språkområdet med `Granite.I18n.setLocale` funktion. Funktionen kräver språkkoden för språkområdet som ett argument:
+Innan du presenterar lokaliserade strängar anger du språkområdet med `Granite.I18n.setLocale` funktion. Funktionen kräver språkkoden för språkområdet som ett argument:
 
 ```
 Granite.I18n.setLocale("fr");
@@ -140,13 +136,13 @@ Granite.I18n.setLocale("fr");
 Granite.I18n.get("string to localize", [variables], "localization hint");
 ```
 
-Funktionsparametrarna skiljer sig från Java I18n.get-metoden:
+Funktionsparametrarna skiljer sig från Java™ I18n.get-metoden:
 
 * Den första parametern är stränglitteralen som ska lokaliseras.
 * Den andra parametern är en array med värden som ska matas in i stränglitteralen.
 * Den tredje parametern är lokaliseringstipset.
 
-I följande exempel används JavaScript för att lokalisera administratören för välkomstsidan. Du har två meddelanden i din inkorg.&quot; mening:
+I följande exempel används JavaScript för att lokalisera administratören för välkomstsidan. Du har två meddelanden i inkorgen.&quot; mening:
 
 ```
 Granite.I18n.setLocale("fr");
@@ -166,7 +162,7 @@ Följande exempel på JSP-skript hämtar `jcr:title` från databasen och visar d
 
 #### Ange översättningstips för JCR-noder {#specifying-translation-hints-for-jcr-nodes}
 
-Liknar [översättningstips i Java API](#using-translation-hints)kan du ange översättningstips för att skilja på duplicerade strängar i ordlistan. Ange översättningstipset som en egenskap för noden som innehåller den internationaliserade egenskapen. Namnet på tipsegenskapen består av namnet på den internationaliserade egenskapen med namnet `_commentI18n` suffix:
+Liknar [översättningstips i Java™ API](#using-translation-hints)kan du ange översättningstips för att skilja på duplicerade strängar i ordlistan. Ange översättningstipset som en egenskap för noden som innehåller den internationaliserade egenskapen. Namnet på tipsegenskapen består av namnet på den internationaliserade egenskapen med namnet `_commentI18n` suffix:
 
 `${prop}_commentI18n`
 

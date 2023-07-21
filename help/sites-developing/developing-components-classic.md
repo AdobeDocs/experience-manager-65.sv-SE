@@ -1,26 +1,22 @@
 ---
-title: Utveckla AEM (Classic UI)
-seo-title: Developing AEM Components (Classic UI)
-description: I det klassiska användargränssnittet används ExtJS för att skapa widgetar som ger komponenternas utseende och känsla. HTML är inte det rekommenderade skriptspråket för AEM.
-seo-description: The classic UI uses ExtJS to create widgets that provide the look-and-feel of the components. HTL is not the recommended scripting language for AEM.
-uuid: ed53d7c6-5996-4892-81a4-4ac30df85f04
+title: Utveckla Adobe Experience Manager-komponenter (Classic UI)
+description: I det klassiska användargränssnittet används ExtJS för att skapa widgetar som ger komponenternas utseende och känsla. HTML är inte det rekommenderade skriptspråket för Adobe Experience Manager (AEM).
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: components
 content-type: reference
-discoiquuid: c68f724f-f9b3-4018-8d3a-1680c53d73f8
 legacypath: /content/docs/en/aem/6-2/develop/components/components-classic
 exl-id: 3f078139-73fd-4913-9d67-264fb2515f8a
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: a56d5121a6ce11b42a6c30dae9e479564d16af27
 workflow-type: tm+mt
-source-wordcount: '2393'
+source-wordcount: '2386'
 ht-degree: 0%
 
 ---
 
-# Utveckla AEM (Classic UI){#developing-aem-components-classic-ui}
+# Utveckla Adobe Experience Manager-komponenter (AEM) (Classic UI){#developing-aem-components-classic-ui}
 
-I det klassiska användargränssnittet används ExtJS för att skapa widgetar som ger komponenternas utseende och känsla. På grund av dessa widgetars karaktär finns det vissa skillnader mellan hur komponenterna interagerar med det klassiska användargränssnittet och [pekaktiverat användargränssnitt](/help/sites-developing/developing-components.md).
+I det klassiska användargränssnittet används ExtJS för att skapa widgetar som ger komponenternas utseende och känsla. På grund av de här widgetarnas karaktär finns det vissa skillnader mellan hur komponenterna interagerar med det klassiska användargränssnittet och [pekaktiverat användargränssnitt](/help/sites-developing/developing-components.md).
 
 >[!NOTE]
 >
@@ -34,7 +30,7 @@ I det klassiska användargränssnittet används ExtJS för att skapa widgetar so
 
 ## Struktur {#structure}
 
-En komponents grundläggande struktur beskrivs på sidan [AEM - Grunderna](/help/sites-developing/components-basics.md#structure), som använder både pekgränssnittet och det klassiska gränssnittet. Även om du inte behöver använda inställningarna för det beröringsaktiverade användargränssnittet i den nya komponenten kan det hjälpa att vara medveten om dem när du ärver från befintliga komponenter.
+En komponents grundläggande struktur beskrivs på sidan [AEM - Grunderna](/help/sites-developing/components-basics.md#structure), som använder både pekgränssnittet och det klassiska gränssnittet. Även om du inte behöver använda inställningarna för det beröringsaktiverade användargränssnittet i den nya komponenten kan det vara bra att känna till dem när du ärver från befintliga komponenter.
 
 ## JSP-skript {#jsp-scripts}
 
@@ -44,7 +40,7 @@ JSP-skript eller -servrar kan användas för att återge komponenter. Enligt reg
 
 ## global.jsp {#global-jsp}
 
-JSP-skriptfilen `global.jsp` används för att ge snabb åtkomst till specifika objekt (t.ex. för att komma åt innehåll) till alla JSP-skriptfiler som används för att återge en komponent.
+JSP-skriptfilen `global.jsp` används för att ge snabb åtkomst till specifika objekt (dvs. för att få åtkomst till innehåll) till alla JSP-skriptfiler som används för att återge en komponent.
 
 Därför `global.jsp` bör ingå i alla komponentåtergivnings-JSP-skript där ett eller flera av objekten i `global.jsp` används.
 
@@ -75,7 +71,7 @@ Sammanfattning:
    * `pageProperties` - Egenskaperna för sidan för den adresserade resursen.
    * `pageManager` - Sidhanteraren för åtkomst AEM innehållssidor ( `resourceResolver.adaptTo(PageManager.class);`).
    * `component` - Komponentobjektet för den aktuella AEM.
-   * `designer` - Designerobjektet för att hämta designinformation ( `resourceResolver.adaptTo(Designer.class);`).
+   * `designer` - Designer-objektet för att hämta designinformation ( `resourceResolver.adaptTo(Designer.class);`).
    * `currentDesign` - Den adresserade resursens design.
    * `currentStyle` - Den adresserade resursens format.
 
@@ -119,7 +115,7 @@ Se dokumentet [Använda HTML-bibliotek på klientsidan](/help/sites-developing/c
 
 ## Dialog {#dialog}
 
-Komponenten måste ha en dialogruta där författare kan lägga till och konfigurera innehållet.
+Komponenten behöver en dialogruta där författare kan lägga till och konfigurera innehållet.
 
 Se [AEM - Grunderna](/help/sites-developing/components-basics.md#dialogs) för mer information.
 
@@ -147,9 +143,9 @@ Ett exempel på hur du utvecklar en komponent beskrivs i detalj i [Utöka text- 
 
 ### Utveckla en ny komponent (Anpassa befintlig komponent) {#develop-a-new-component-adapt-existing-component}
 
-Om du vill utveckla nya komponenter för AEM baserat på en befintlig komponent kan du kopiera komponenten, skapa en javascript-fil för den nya komponenten och lagra den på en plats som är tillgänglig för AEM (se även [Anpassa komponenter och andra element](/help/sites-developing/dev-guidelines-bestpractices.md#customizing-components-and-other-elements)):
+Om du vill utveckla nya komponenter för AEM baserat på en befintlig komponent kan du kopiera komponenten, skapa en JavaScript-fil för den nya komponenten och lagra den på en plats som är tillgänglig för AEM (se även [Anpassa komponenter och andra element](/help/sites-developing/dev-guidelines-bestpractices.md#customizing-components-and-other-elements)):
 
-1. Skapa en ny komponentmapp i CRXDE Lite:
+1. Skapa en komponentmapp i CRXDE Lite:
 
    / `apps/<myProject>/components/<myComponent>`
 
@@ -163,7 +159,7 @@ Om du vill utveckla nya komponenter för AEM baserat på en befintlig komponent 
 
    Du kan göra ändringar som:
 
-   * lägga till ett nytt fält i dialogrutan
+   * lägga till ett fält i dialogrutan
 
       * `cq:dialog` - dialogruta för det beröringsaktiverade användargränssnittet
       * `dialog` - dialogruta för det klassiska användargränssnittet
@@ -171,22 +167,22 @@ Om du vill utveckla nya komponenter för AEM baserat på en befintlig komponent 
    * ersätta `.jsp` fil (namnge den efter den nya komponenten)
    * eller helt och hållet omarbeta hela komponenten om du vill
 
-   Om du till exempel kopierar standardkomponenten för text kan du lägga till ytterligare ett fält i dialogrutan och sedan uppdatera `.jsp` för att bearbeta indata som gjorts där.
+   Om du till exempel kopierar standardkomponenten för text kan du lägga till ett extra fält i dialogrutan och sedan uppdatera `.jsp` för att bearbeta indata som gjorts där.
 
    >[!NOTE]
    >
    >En komponent för:
    >
-   >* Pekaktiverat användargränssnitt använder [Granit](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/jcr_root/libs/granite/ui/index.html) komponenter
-   >* Klassiskt användargränssnitt använder [ExtJS-widgetar](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html)
+   >* Pekaktiverat användargränssnitt använder [Granit](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/index.html) komponenter
+   >* Klassiskt användargränssnitt använder [ExtJS-widgetar](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html)
 
    >[!NOTE]
    >
-   >En dialogruta som definieras för det klassiska användargränssnittet fungerar i det beröringsaktiverade användargränssnittet.
+   >En dialogruta som definieras för det klassiska användargränssnittet används i det beröringsaktiverade användargränssnittet.
    >
    >En dialogruta som definierats för det beröringsaktiverade användargränssnittet fungerar inte i det klassiska användargränssnittet.
    >
-   >Beroende på vilken instans- och redigeringsmiljö du använder kan du definiera båda typerna av dialogrutor för komponenten.
+   >Beroende på vilken instans- och redigeringsmiljö du använder kan det vara bra att definiera båda typerna av dialogrutor för komponenten.
 
 1. En av följande noder bör finnas och vara korrekt initierad för att den nya komponenten ska visas:
 
@@ -200,7 +196,7 @@ Om du vill utveckla nya komponenter för AEM baserat på en befintlig komponent 
    * använda CRXDE Lite för att lägga till värdet `<path-to-component>` (t.ex. `/apps/geometrixx/components/myComponent`) till nodens egenskapskomponenter `/etc/designs/geometrixx/jcr:content/contentpage/par`
    * följa instruktionerna i [Lägga till nya komponenter i styckesystem](#adding-a-new-component-to-the-paragraph-system-design-mode)
 
-1. I AEM WCM öppnar du en sida på webbplatsen och infogar ett nytt stycke av den typ som du just skapade för att säkerställa att komponenten fungerar som den ska.
+1. I AEM WCM öppnar du en sida på webbplatsen och infogar ett stycke av den typ som du just skapade för att säkerställa att komponenten fungerar som den ska.
 
 >[!NOTE]
 >
@@ -236,7 +232,7 @@ I det här avsnittet finns ett exempel på hur du kan utöka den ofta använda t
 Tillägget till text- och bildkomponenten gör att redigerare kan använda alla befintliga funktioner i komponenten plus ett extra alternativ för att ange bildens placering:
 
 * Till vänster om texten (nuvarande och ny standard)
-* samt till höger
+* Och till höger
 
 När du har utökat den här komponenten kan du konfigurera bildplaceringen via komponentens dialogruta.
 
@@ -256,7 +252,7 @@ Följande tekniker beskrivs i denna övning:
 
 #### Utöka befintlig textimage-komponent {#extending-the-existing-textimage-component}
 
-För att skapa den nya komponenten använder vi standardkomponenten för textimage som bas och ändrar den. Vi lagrar den nya komponenten i exempelprogrammet för Geometrixx AEM WCM.
+Om du vill skapa komponenten använder du standardtextimagekomponenten som bas och ändrar den. Du lagrar den nya komponenten i Geometrixx AEM exempelprogrammet för WCM.
 
 1. Kopiera standardtextimagekomponenten från `/libs/foundation/components/textimage` till Geometrixx komponentmapp, `/apps/geometrixx/components`, med textimage som målnodnamn. (Kopiera komponenten genom att navigera till komponenten, högerklicka och välja Kopiera och bläddra till målkatalogen.)
 
@@ -270,7 +266,7 @@ För att skapa den nya komponenten använder vi standardkomponenten för textima
 
    >[!NOTE]
    >
-   >Dialogrutedefinitionen är beroende av användargränssnittet:
+   >Dialogrutans definition beror på användargränssnittet:
    >
    >* Pekaktiverat användargränssnitt: `textimage/cq:dialog`
    >* Klassiskt användargränssnitt: `textimage/dialog`
@@ -298,7 +294,7 @@ För att skapa den nya komponenten använder vi standardkomponenten för textima
 
    På så sätt, när en bild släpps till komponenten på sidan, visas `sling:resourceType` egenskapen för den utökade textimage-komponenten är inställd på: `geometrixx/components/textimage.`
 
-1. Ändra komponentens dialogruta så att den innehåller det nya alternativet. Den nya komponenten ärver de delar av dialogrutan som är desamma som i originalet. Det enda vi kan göra är att utöka **Avancerat** flik, lägga till **Bildposition** listruta, med alternativ **Vänster** och **Höger**:
+1. Ändra komponentens dialogruta så att den innehåller det nya alternativet. Den nya komponenten ärver de delar av dialogrutan som är desamma som i originalet. Det enda tillägget du gör är att utöka **Avancerat** flik, lägga till **Bildposition** listruta, med alternativ **Vänster** och **Höger**:
 
    * Lämna `textimage/dialog`egenskaperna ändras inte.
 
@@ -313,7 +309,7 @@ För att skapa den nya komponenten använder vi standardkomponenten för textima
    * För flik3:
 
       * Lämna egenskaperna och delnoderna utan ändringar
-      * Lägg till en ny fältdefinition i `tab3/items`, nodposition för typ `cq:Widget`
+      * Lägg till en fältdefinition i `tab3/items`, nodposition för typ `cq:Widget`
       * Ange följande egenskaper (av typen String) för den nya `tab3/items/position`nod:
 
          * `name`: `./imagePosition`
@@ -340,7 +336,7 @@ För att skapa den nya komponenten använder vi standardkomponenten för textima
         image.loadStyleData(currentStyle);
    ```
 
-   Vi kommer att ersätta det framhävda kodfragmentet *%>&lt;div class=&quot;image&quot;>&lt;%* med ny kod som genererar en egen stil för den här taggen.
+   Du kommer att ersätta det framhävda kodfragmentet *%>&lt;div class=&quot;image&quot;>&lt;%* med ny kod som genererar en egen stil för den här taggen.
 
    ```xml
    // todo: add new CSS class for the 'right image' instead of using
@@ -371,7 +367,7 @@ Komponenten lagrar innehållet i ett stycke på företagssidan.
 
 ### Inaktivera överförbarhet för bildkomponenten {#disable-upload-capability-of-the-image-component}
 
-Om du vill inaktivera den här funktionen använder vi standardbildkomponenten som grund och ändrar den. Den nya komponenten lagras i exempelprogrammet för Geometrixx.
+Om du vill inaktivera den här funktionen använder du standardbildkomponenten som bas och ändrar den. Du lagrar den nya komponenten i exempelprogrammet för Geometrixx.
 
 1. Kopiera standardbildkomponenten från `/libs/foundation/components/image` till Geometrixx komponentmapp, `/apps/geometrixx/components`, med bilden som målnodnamn.
 
@@ -382,7 +378,7 @@ Om du vill inaktivera den här funktionen använder vi standardbildkomponenten s
    * Ange **jcr:title** till `Image (Extended)`
 
 1. Navigera till `/apps/geometrixx/components/image/dialog/items/image`.
-1. Lägg till en ny egenskap:
+1. Lägg till en egenskap:
 
    * **Namn**: `allowUpload`
    * **Typ**: `String`
@@ -393,7 +389,7 @@ Om du vill inaktivera den här funktionen använder vi standardbildkomponenten s
 1. Klicka **Spara alla**. Komponenten är redo att testas.
 1. Öppna en sida i en Geometrixx, t.ex. engelska/företag.
 1. Växla till designläge och aktivera Bild (Extended).
-1. Växla tillbaka till redigeringsläget och lägg till det i styckesystemet. På nästa bild ser du skillnaderna mellan den ursprungliga bildkomponenten och den du just skapade.
+1. Växla tillbaka till redigeringsläget och lägg till det i styckesystemet. På nästa bild ser du skillnaderna mellan den ursprungliga bildkomponenten och den som du skapade.
 
    Ursprunglig bildkomponent:
 

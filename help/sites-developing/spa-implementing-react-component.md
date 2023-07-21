@@ -1,26 +1,22 @@
 ---
 title: Implementera en React Component for SPA
-seo-title: Implementing a React Component for SPA
-description: I den här artikeln visas ett exempel på hur du anpassar en enkel, befintlig React-komponent så att den fungerar med AEM SPA Editor.
-seo-description: This article presents an example of how to adapt a simple, existing React component to work with the AEM SPA Editor.
-uuid: ae6a0a6f-0c3c-4820-9b58-c2a85a9f5291
+description: I den här artikeln finns ett exempel på hur du anpassar en enkel, befintlig React-komponent så att den fungerar med Adobe Experience Manager (AEM) SPA Editor.
 contentOwner: bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: spa
 content-type: reference
-discoiquuid: 6ed15763-02cc-45d1-adf6-cf9e5e8ebdb0
 docset: aem65
 exl-id: f4959c12-54c5-403a-9973-7a4ab5f16bed
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: a56d5121a6ce11b42a6c30dae9e479564d16af27
 workflow-type: tm+mt
-source-wordcount: '547'
+source-wordcount: '550'
 ht-degree: 0%
 
 ---
 
 # Implementera en React Component for SPA{#implementing-a-react-component-for-spa}
 
-Single page applications (SPA) can offer compelling experiences for website users. Utvecklare vill kunna skapa webbplatser med SPA ramverk och författare vill smidigt redigera innehåll i AEM för en webbplats som byggts med SPA ramverk.
+Single page applications (SPA) can offer compelling experiences for website users. Utvecklare vill kunna skapa webbplatser med SPA ramverk och författare vill smidigt redigera innehåll i Adobe Experience Manager (AEM) för en webbplats som byggts med SPA ramverk.
 
 SPA innehåller en omfattande lösning för SPA inom AEM. I den här artikeln visas ett exempel på hur du anpassar en enkel, befintlig React-komponent så att den fungerar med AEM SPA Editor.
 
@@ -37,9 +33,9 @@ I den här artikeln visas exemplet på väderkomponenten i exempelSPA för Web.R
 Du bör känna till [struktur i en SPA för AEM](/help/sites-developing/spa-getting-started-react.md) innan du läser den här artikeln.
 
 >[!CAUTION]
->Det här dokumentet använder [App för återförsäljningsjournal](https://github.com/adobe/aem-sample-we-retail-journal) endast i demonstrationssyfte. Det ska inte användas för något projektarbete.
+>Det här dokumentet använder [App för återförsäljningsjournal](https://github.com/adobe/aem-sample-we-retail-journal) endast i demonstrationssyfte. Använd den inte för något projektarbete.
 >
->Alla AEM ska utnyttja [AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html), som stöder SPA projekt med React eller Angular och använder SPA SDK.
+>Alla AEM ska använda [AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html), som stöder SPA projekt med React eller Angular och använder SPA SDK.
 
 ## Väderkomponenten {#the-weather-component}
 
@@ -63,7 +59,7 @@ Staden kan uppdateras i en dialog precis som andra AEM.
 
 ### Implementering av väderkomponent {#weather-component-implementation}
 
-väderkomponenten bygger i själva verket på en allmänt tillgänglig React-komponent som kallas [Reagera på öppet väder](https://www.npmjs.com/package/react-open-weather), som har anpassats för att fungera som en komponent i Web.Retail Journal-SPA.
+väderkomponenten bygger på en allmänt tillgänglig React-komponent som kallas [Reagera på öppet väder](https://www.npmjs.com/package/react-open-weather). Den har anpassats för att fungera som en komponent i exempelprogrammet för Web.Retail Journal SPA.
 
 Nedan följer NPM-dokumentation om hur komponenten React Open Weather används.
 
@@ -127,7 +123,7 @@ class Weather extends Component {
 MapTo('we-retail-journal/global/components/weather')(Weather, WeatherEditConfig);
 ```
 
-Även om det redan finns en backend-komponent kan den som utvecklar frontend utnyttja React Open Weather-komponenten i SPA We.Retail Journal med mycket liten kodning.
+Även om det redan måste finnas en backend-komponent kan frontendutvecklaren använda React Open Weather-komponenten i SPA We.Retail Journal med liten kodning.
 
 ## Nästa steg {#next-step}
 

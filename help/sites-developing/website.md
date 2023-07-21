@@ -1,17 +1,15 @@
 ---
 title: Skapa en fullfjädrad webbplats (JSP)
-description: Med den här självstudiekursen kan du skapa en komplett webbplats med AEM
-uuid: ec76ad5e-af6c-43ad-ae57-a4ae4ac7029f
+description: Den här självstudiekursen lär dig hur du skapar en komplett webbplats med Adobe Experience Manager (AEM).
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: introduction
 content-type: reference
-discoiquuid: 90bc05c9-e971-4e75-bc07-5e137c6c913e
 docset: aem65
 exl-id: d7cf843c-c837-4b97-b6c5-0fbd6793bdd4
-source-git-commit: 4fd5e9a1bc603202ee52e85a1c09125b13cec315
+source-git-commit: a56d5121a6ce11b42a6c30dae9e479564d16af27
 workflow-type: tm+mt
-source-wordcount: '4935'
+source-wordcount: '4941'
 ht-degree: 2%
 
 ---
@@ -20,9 +18,9 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->I den här artikeln beskrivs hur du skapar en webbplats med JSP och baserat på det klassiska användargränssnittet. Adobe rekommenderar att du utnyttjar den senaste AEM tekniken för dina webbplatser enligt den detaljerade beskrivningen i artikeln [Komma igång med att utveckla AEM Sites](/help/sites-developing/getting-started.md).
+>I den här artikeln beskrivs hur du skapar en webbplats med JSP och baserat på det klassiska användargränssnittet. Adobe rekommenderar att du använder den senaste Adobe Experience Manager-tekniken (AEM) för dina webbplatser enligt den detaljerade beskrivningen i artikeln [Komma igång med att utveckla AEM Sites](/help/sites-developing/getting-started.md).
 
-Med den här självstudiekursen kan du skapa en komplett webbplats med Adobe Experience Manager (AEM). Webbplatsen kommer att vara baserad på en allmän webbplats och riktar sig främst till webbutvecklare. All utveckling sker i en författarmiljö.
+Med den här självstudiekursen kan du skapa en komplett webbplats med AEM. Webbplatsen kommer att vara baserad på en allmän webbplats och riktar sig främst till webbutvecklare. All utveckling sker i en författarmiljö.
 
 I den här självstudien beskrivs hur du:
 
@@ -42,7 +40,7 @@ I den här självstudien beskrivs hur du:
 
 1. Inkludera olika grundkomponenter.
 
-När du har utfört alla steg ser sidorna ut så här:
+När du har utfört alla steg ska sidorna se ut så här:
 
 ![chlimage_1-24](assets/chlimage_1-24.png)
 
@@ -50,7 +48,7 @@ När du har utfört alla steg ser sidorna ut så här:
 
 Ladda ned webbplatsen-1.0.zip om du vill följa med i självstudiekursen i stället för att genomföra övningarna. Den här filen är ett AEM innehållspaket som innehåller resultatet av den här självstudiekursen. Använd [Pakethanteraren](/help/sites-administering/package-manager.md) för att installera paketet på författarinstansen.
 
-**OBS!** Om du installerar det här paketet skrivs alla resurser på din redigeringsinstans som du har skapat med den här självstudiekursen över.
+**OBS!** Om du installerar det här paketet skrivs resurser på den författarinstans som du har skapat med den här självstudiekursen över.
 
 Webbplatsinnehållspaket
 
@@ -110,9 +108,9 @@ Exempel på static.css-fil och bilder
 
 I det här avsnittet skapar du följande:
 
-* Den innehållsidesmall som ska användas för att skapa innehållssidor på exempelwebbplatsen
-* Den innehållsideskomponent som ska användas för att återge sidor med innehåll
-* Innehållssidans skript
+* Den innehållsidesmall som används för att skapa innehållssidor på exempelwebbplatsen.
+* Den innehållsideskomponent som används för att återge sidor med innehåll.
+* Innehållssidans skript.
 
 #### Skapa innehållsidesmallen {#creating-the-contentpage-template}
 
@@ -139,7 +137,7 @@ En mall definierar standardinnehållet för en ny sida. Komplexa webbplatser kan
 
    ![chlimage_1-30](assets/chlimage_1-30.png)
 
-   Värdet för den tillåtna sökvägsegenskapen är en *reguljärt uttryck.* Sidor som har en sökväg som matchar uttrycket kan använda mallen. I det här fallet matchar det reguljära uttrycket sökvägen till **/content** och alla undersidor.
+   Värdet för den tillåtna sökvägsegenskapen är en *reguljärt uttryck.* Sidor som har en sökväg som matchar uttrycket kan använda mallen. I det här fallet matchar det reguljära uttrycket sökvägen för **/content** och alla undersidor.
 
    När en författare skapar en sida under /content, **innehållsida** -mallen visas i en lista med tillgängliga mallar som ska användas.
 
@@ -273,7 +271,7 @@ I det här avsnittet skapar du följande sidor som alla använder innehållsides
 
 I det här avsnittet beskrivs hur du förbättrar innehållsidesskriptet med AEM Foundation-komponentskript och genom att skriva egna skript.
 
-The **Produkter** ser sidan ut så här:
+När du är klar **Produkter** sidan ska se ut så här:
 
 ![chlimage_1](assets/chlimage_1.jpeg)
 
@@ -311,7 +309,7 @@ I en komponent-JSP-kod kan du till exempel referera till de skript som supertyps
 
    ![chlimage_1-1](assets/chlimage_1-1.jpeg)
 
-   Öppna sidans källa för att se de javascript- och HTML-element som skripten head.jsp och body.jsp genererade. Följande skriptutdrag öppnar Sidekick när du öppnar sidan:
+   Öppna sidans källa för att se JavaScript- och HTML-elementen som genereras av head.jsp- och body.jsp-skripten. Följande skriptutdrag öppnas Sidekick när du öppnar sidan:
 
    ```java
    CQ.WCM.launchSidekick("/content/mywebsite/en/products",
@@ -409,7 +407,7 @@ I det här avsnittet skapar du en komponent som visar länkar till alla sidor p�
 
 I den första versionen av den översta navigeringskomponenten (överst) är navigeringsobjekten endast textlänkar. I den andra versionen implementerar du topnav med bildnavigeringslänkar.
 
-Den övre navigeringen ser ut så här:
+När du är klar bör den övre navigeringen se ut så här:
 
 ![chlimage_1-39](assets/chlimage_1-39.png)
 
@@ -518,7 +516,7 @@ I den här övningen matchar Sling dessa URL:er med det /apps/mywebsite/componen
 1. Högerklicka på `/apps/mywebsite/components/contentpage` nod och klicka **Skapa** > **Skapa fil**.
 1. I **Skapa fil** fönster, som **Namn**, typ `navimage.png.java`.
 
-   Filnamnstillägget .java anger för Sling att stödet för Apache Sling Scripting Java ska användas för att kompilera skriptet och skapa en serverlet.
+   Filnamnstillägget .java anger för Sling att stödet för Apache Sling Scripting Java™ ska användas för att kompilera skriptet och skapa en serverlet.
 
 1. Kopiera följande kod till `navimage.png.java.`Koden utökar klassen AbstractImageServlet:
 
@@ -844,9 +842,9 @@ Skapa en komponent som visar företagets logotyp och tillhandahåller en länk t
 * Egenskapsvärdena gäller för alla instanser av komponenten som läggs till på sidor som använder designen.
 * Egenskaperna kan konfigureras med valfri instans av komponenten som finns på en sida som använder designen.
 
-Dialogrutan för designläge innehåller egenskaper för att ange bilden och länksökvägen. Logotypkomponenten placeras på den övre vänstra sidan på alla sidor på webbplatsen.
+Dialogrutan för designläge innehåller egenskaper för att ange bilden och länksökvägen. Logotypkomponenten placeras uppe till vänster på alla sidor på webbplatsen.
 
-Den kommer att se ut så här:
+När du är klar ska den se ut så här:
 
 ![chlimage_1-46](assets/chlimage_1-46.png)
 
@@ -921,7 +919,7 @@ Skapa en dialogruta där du kan konfigurera logotypkomponenten i designläge. Di
       * **Titel:** `Logo (Design)`
 
 1. Högerklicka på noden tab1 i grenen design_dialog och klicka på Ta bort. Klicka på Spara alla.
-1. Under `design_dialog/items/items`nod, skapa en ny nod med namnet `img` av typen `cq:Widget`. Lägg till följande egenskaper och klicka sedan på Spara alla:
+1. Under `design_dialog/items/items`nod, skapa en nod med namnet `img` av typen `cq:Widget`. Lägg till följande egenskaper och klicka sedan på Spara alla:
 
    | Namn | Typ | Värde |
    |---|---|---|
@@ -1038,7 +1036,7 @@ I det här avsnittet beskrivs hur du anger en bild som logotyp i dialogrutan fö
 
    ![chlimage_1-49](assets/chlimage_1-49.png)
 
-1. Klicka på triangeln på namnlisten i Spark för att återgå till redigeringsläget.
+1. Klicka på triangeln på namnlisten Sidekick för att återgå till redigeringsläget.
 
    ![chlimage_1-3](assets/chlimage_1-3.jpeg)
 
@@ -1050,7 +1048,7 @@ I det här avsnittet beskrivs hur du anger en bild som logotyp i dialogrutan fö
 
 I det här avsnittet inkluderar du komponenten breadcrumb (trail), som är en av grundkomponenterna.
 
-1. I CRXDE Lite går du till `/apps/mywebsite/components/contentpage`öppnar du filen `center.jsp` och ersätt:
+1. I CRXDE Lite går du till `/apps/mywebsite/components/contentpage`öppnar du filen `center.jsp`och ersätt:
 
    ```java
    <div>trail</div>
@@ -1071,7 +1069,7 @@ I det här avsnittet inkluderar du komponenten breadcrumb (trail), som är en av
 
 I det här avsnittet inkluderar du titelkomponenten, som är en av grundkomponenterna.
 
-1. I CRXDE Lite går du till `/apps/mywebsite/components/contentpage`öppnar du filen `center.jsp` och ersätt:
+1. I CRXDE Lite går du till `/apps/mywebsite/components/contentpage`öppnar du filen `center.jsp`och ersätt:
 
    ```xml
    <div>title</div>
@@ -1096,7 +1094,7 @@ Styckesystemet (parsys) är en viktig del av en webbplats när det hanterar en l
 
 Lägg till den överordnade komponenten (en av grundkomponenterna) i innehållsideskomponenten.
 
-1. I CRXDE Lite går du till `/apps/mywebsite/components/contentpage`öppnar du filen `center.jsp` och hitta följande kodrad:
+1. I CRXDE Lite går du till `/apps/mywebsite/components/contentpage`öppnar du filen `center.jsp`och följande kodrad finns:
 
    ```xml
    <div>parsys</div>
@@ -1177,17 +1175,17 @@ The `cq:editConfig` Med nodtypen kan du konfigurera vissa beteenden för kompone
 
 I det här avsnittet använder du en cq:editConfig-nod för att dra resurser från Content Finder till bildkomponenten.
 
-1. I CRXDE Lite, under noden /apps/mywebsite/components/image, skapar du en ny nod enligt följande:
+1. I CRXDE Lite, under noden /apps/mywebsite/components/image, skapar du en nod enligt följande:
 
    * Namn: cq:editConfig.
    * Typ: cq:EditConfig.
 
-1. Skapa en ny nod under noden cq:editConfig enligt följande:
+1. Skapa en nod på följande sätt under noden cq:editConfig:
 
    * Namn: cq:dropTargets.
    * Typ: cq:DropTargetConfig.
 
-1. Skapa en ny nod under noden cq:dropTargets enligt följande:
+1. Skapa en nod enligt följande under noden cq:dropTargets:
 
    * Namn: bild.
    * Typ: nt:ostrukturerad.
@@ -1226,7 +1224,7 @@ I det här avsnittet visas **Produkter** och lägg till bildkomponenten i stycke
 
 I det här avsnittet inkluderar du verktygsfältskomponenten, som är en av grundkomponenterna.
 
-Det finns flera alternativ, både i redigeringsläge och designläge.
+Det finns flera alternativ i redigeringsläge och designläge.
 
 1. I CRXDE Lite går du till `/apps/mywebsite/components/contentpage`öppnar du `body.jsp` och leta reda på följande kod:
 
@@ -1264,7 +1262,7 @@ Det finns flera alternativ, både i redigeringsläge och designläge.
 
 I det här avsnittet skapar du komponenten som du vill söka efter innehåll på webbplatsen. Den här sökkomponenten kan placeras i styckesystemet på vilken sida som helst (till exempel på en specialiserad sökresultatsida).
 
-Din sökruta ser ut så här på **Engelska** sida:
+När du är klar bör sökrutan se ut så här på **Engelska** sida:
 
 ![chlimage_1-56](assets/chlimage_1-56.png)
 
@@ -1498,7 +1496,7 @@ Om du vill ta med en sökruta i det vänstra avsnittet av innehållssidan gör d
 I det här avsnittet lägger du till sökkomponenten i styckesystemet.
 
 1. Öppna söksidan i webbläsaren.
-1. Klicka på ikonen för designläge i sidsparken.
+1. Klicka på ikonen för designläge i Sidekick.
 1. Klicka på Redigera i designen av paragrafblocket (under sökrubriken).
 1. Bläddra nedåt till dialogrutan  **Mina webbplatser** grupp, markera **Min sökkomponent** och klicka **OK**.
 1. Klicka på triangeln på Sidekick för att återgå till redigeringsläget.
@@ -1516,7 +1514,7 @@ I det här avsnittet inkluderar du komponenten Inheritance Paragraph System (ipa
 
 För den här komponenten kan du ange flera parametrar i både redigeringsläge och designläge.
 
-1. I CRXDE Lite går du till `/apps/mywebsite/components/contentpage`öppnar du filen `right.jsp` och ersätt:
+1. I CRXDE Lite går du till `/apps/mywebsite/components/contentpage`öppnar du filen `right.jsp`och ersätt:
 
    ```java
    <div>iparsys</div>

@@ -1,26 +1,22 @@
 ---
 title: Köra två AEM Forms-arbetsyteinstanser på en server
-seo-title: Hosting two AEM Forms workspace instances on one server
 description: Hur LC-administratörer kan anpassa HTML WS för att ha två instanser på en enda server som kan nås via olika URL:er.
-seo-description: How LC administrators can customize HTML WS to host two instances on a single server accessible via different URLs.
-uuid: 0584f512-6b92-4418-b71c-93605cfa1927
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
-discoiquuid: 1254a7c2-2c67-4661-803e-afd53e817916
 exl-id: 32a546fc-e33f-46f9-ac3b-45eca0e12239
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: a56d5121a6ce11b42a6c30dae9e479564d16af27
 workflow-type: tm+mt
-source-wordcount: '293'
+source-wordcount: '296'
 ht-degree: 1%
 
 ---
 
 # Köra två AEM Forms-arbetsyteinstanser på en server {#hosting-two-aem-forms-workspace-instances-on-one-server}
 
-Standardinstallationen och standardinställningarna för AEM Forms tillåter endast att en AEM Forms-arbetsyta är tillgänglig på servern. Du kan dock behöva placera två olika instanser av AEM Forms-arbetsytan på en enda AEM Forms-server. De två instanserna är tillgängliga via olika URL:er.
+Standardinstallationen och standardinställningarna för AEM Forms tillåter endast att en AEM Forms-arbetsyta är tillgänglig på servern. Du kan dock behöva placera två olika instanser av AEM Forms-arbetsytan på en enda AEM Forms-server. De två instanserna är tillgängliga med olika URL:er.
 
-AEM Forms-administratörer anpassar arbetsytan för att skapa två olika URL:er och gör två arbetsytor tillgängliga på samma server. I den här artikeln antar vi att de två arbetsytorna är tillgängliga på `https://'[server]:[port]'/lc/ws` och `https://'[server]:[port]':/lc/ws2`.
+AEM Forms-administratörer anpassar arbetsytan för att skapa två olika URL:er och gör två arbetsytor tillgängliga på samma server. I den här anpassningsartikeln kan du anta att de två arbetsytorna är tillgängliga på `https://'[server]:[port]'/lc/ws` och `https://'[server]:[port]':/lc/ws2`.
 
 Följ de här stegen för att konfigurera AEM Forms arbetsyta.
 

@@ -1,21 +1,17 @@
 ---
 title: Uppgraderingsprocedur
-seo-title: Upgrade Procedure
-description: Läs mer om hur du uppgraderar AEM.
-seo-description: Learn about the procedure you need to follow in order to upgrade AEM.
-uuid: 81126a70-c082-4f01-a1ad-7152182da88b
+description: Läs om hur du uppgraderar Adobe Experience Manager (AEM).
 contentOwner: sarchiz
 topic-tags: upgrading
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
-discoiquuid: 5c035d4c-6e03-48b6-8404-800b52d659b8
 docset: aem65
 targetaudience: target-audience upgrader
 feature: Upgrading
 exl-id: 5242600c-2281-46f9-a347-d985b4e319b3
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: a56d5121a6ce11b42a6c30dae9e479564d16af27
 workflow-type: tm+mt
-source-wordcount: '820'
+source-wordcount: '815'
 ht-degree: 0%
 
 ---
@@ -24,9 +20,9 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Uppgraderingen kräver driftstopp för Author-nivån eftersom de flesta AEM uppgraderingar utförs på plats. Genom att följa dessa rutiner kan driftstopp i publiceringsskiktet minimeras eller elimineras.
+>Uppgraderingen kräver driftstopp för Author-nivån eftersom de flesta uppgraderingar av Adobe Experience Manager (AEM) utförs på plats. Genom att följa dessa rutiner kan du minimera eller eliminera driftstopp i publiceringsskiktet.
 
-När du uppgraderar dina AEM-miljöer måste du ta hänsyn till skillnaderna i tillvägagångssätt mellan att uppgradera författarmiljöer eller publiceringsmiljöer för att minimera driftstoppen för både författare och slutanvändare. På den här sidan beskrivs den höga nivån för uppgradering av en AEM topologi som för närvarande körs på en version av AEM 6.x. Eftersom processen skiljer sig mellan redigerings- och publiceringsnivåer samt Mongo- och TarmMK-baserade distributioner, har varje nivå och mikrokärna listats i ett separat avsnitt. När du utför din distribution rekommenderar vi att du först uppgraderar din utvecklingsmiljö, avgör om du lyckas och sedan fortsätter till publiceringsmiljöerna.
+När du uppgraderar dina AEM-miljöer måste du ta hänsyn till skillnaderna mellan att uppgradera författarmiljöer eller publiceringsmiljöer för att minimera driftstoppen för både författare och slutanvändare. På den här sidan beskrivs hur du uppgraderar en AEM topologi som för närvarande körs på en version av AEM 6.x. Eftersom processen skiljer sig mellan redigerings- och publiceringsnivåer samt Mongo- och TarmMK-baserade distributioner, har varje nivå och mikrokärna listats i ett separat avsnitt. När du utför distributionen rekommenderar Adobe att du först uppgraderar din författarmiljö, avgör om du lyckas och sedan fortsätter till publiceringsmiljöerna.
 
 <!--
 >[!IMPORTANT]
@@ -46,11 +42,11 @@ Den topologi som antas för det här avsnittet består av en författarserver so
 
 ![upgrade-prepare-author](assets/upgrade-preparation-author.png)
 
-1. Stoppa redigering av innehåll
+1. Stoppa framtagning av innehåll.
 
-1. Stoppa standby-instansen
+1. Stoppa standby-instansen.
 
-1. Inaktivera replikeringsagenter på författaren
+1. Inaktivera replikeringsagenter på författaren.
 
 1. Kör [underhållsarbete före uppgradering](/help/sites-deploying/pre-upgrade-maintenance-tasks.md).
 
@@ -58,10 +54,10 @@ Den topologi som antas för det här avsnittet består av en författarserver so
 
 ![execute_upgrade](assets/execute_upgrade.jpg)
 
-1. Kör [uppgradering på plats](/help/sites-deploying/in-place-upgrade.md)
-1. Uppdatera dispatchermodulen *vid behov*
+1. Kör [uppgradering på plats](/help/sites-deploying/in-place-upgrade.md).
+1. Uppdatera modulen Dispatcher *vid behov*.
 
-1. QA validerar uppgraderingen
+1. QA validerar uppgraderingen.
 
 1. Stäng författarinstansen.
 
@@ -69,9 +65,9 @@ Den topologi som antas för det här avsnittet består av en författarserver so
 
 ![if_success](assets/if_successful.jpg)
 
-1. Kopiera den uppgraderade instansen för att skapa en ny Cold Standby
+1. Kopiera den uppgraderade instansen för att skapa ett vänteläge i kallt format.
 
-1. Starta Author-instansen
+1. Starta Author-instansen.
 
 1. Starta Standby-instansen.
 
@@ -79,7 +75,7 @@ Den topologi som antas för det här avsnittet består av en författarserver so
 
 ![återställning](assets/rollback.jpg)
 
-1. Starta vänteläget som nytt primärt
+1. Starta vänteläget som nytt primärt.
 
 1. Bygg om redigeringsmiljön från vänteläget Cold.
 
@@ -95,35 +91,35 @@ Den topologi som antas för det här avsnittet består av ett MongoMK Author-klu
 
 ![mongo-upgrade_prep](assets/mongo-upgrade_prep.jpg)
 
-1. Stoppa redigering av innehåll
-1. Klona datalagret för säkerhetskopiering
-1. Stoppa alla utom en AEM Author-instans, din primära författare
-1. Ta bort alla MongoDB-noder utom en från replikuppsättningen, den primära Mongo-instansen
-1. Uppdatera `DocumentNodeStoreService.cfg` på den primära författaren för att återspegla replikuppsättningen för en enskild medlem
-1. Starta om den primära författaren för att säkerställa att den startar om ordentligt
-1. Inaktivera replikeringsagenter på den primära författaren
-1. Kör [underhållsarbete före uppgradering](/help/sites-deploying/pre-upgrade-maintenance-tasks.md) på den primära författarinstansen
-1. Uppgradera vid behov MongoDB på den primära Mongo-instansen till version 3.2 med WiredTiger
+1. Stoppa framtagning av innehåll.
+1. Klona datalagret för säkerhetskopiering.
+1. Stoppa alla instanser utom en av AEM Author, din primära författare.
+1. Ta bort alla MongoDB-noder utom en från replikuppsättningen, den primära Mongo-instansen.
+1. Uppdatera `DocumentNodeStoreService.cfg` på den primära författaren för att återspegla replikuppsättningen för en enskild medlem.
+1. Starta om den primära författaren för att säkerställa att den startar om ordentligt.
+1. Inaktivera replikeringsagenter på den primära författaren.
+1. Kör [underhållsarbete före uppgradering](/help/sites-deploying/pre-upgrade-maintenance-tasks.md) på den primära författarinstansen.
+1. Uppgradera vid behov MongoDB på den primära Mongo-instansen till version 3.2 med WiredTiger.
 
 ### Uppgraderingskörning {#Upgrade-execution-1}
 
 ![mongo-execution](assets/mongo-execution.jpg)
 
-1. Köra en [uppgradering på plats](/help/sites-deploying/in-place-upgrade.md) på den primära författaren
-1. Uppdatera Dispatcher eller webbmodulen *vid behov*
-1. QA validerar uppgraderingen
+1. Köra en [uppgradering på plats](/help/sites-deploying/in-place-upgrade.md) på den primära författaren.
+1. Uppdatera Dispatcher eller webbmodulen *vid behov*.
+1. QA validerar uppgraderingen.
 
 ### Om slutförd {#if-successful-1}
 
 ![mongo-Secondaries](assets/mongo-secondaries.jpg)
 
-1. Skapa nya 6.5 Author-instanser, anslutna till den uppgraderade Mongo-instansen
+1. Skapa nya 6.5 Author-instanser som är anslutna till den uppgraderade Mongo-instansen.
 
-1. Återskapa MongoDB-noder som tagits bort från klustret
+1. Återskapa de MongoDB-noder som tagits bort från klustret.
 
-1. Uppdatera `DocumentNodeStoreService.cfg` filer som återspeglar hela replikuppsättningen
+1. Uppdatera `DocumentNodeStoreService.cfg` som återspeglar hela replikuppsättningen.
 
-1. Starta om Author-instanserna, en i taget
+1. Starta om författarinstanserna, en åt gången.
 
 1. Ta bort det klonade datalagret.
 
@@ -131,17 +127,17 @@ Den topologi som antas för det här avsnittet består av ett MongoMK Author-klu
 
 ![mongo-rollback](assets/mongo-rollback.jpg)
 
-1. Konfigurera om de sekundära författarinstanserna för att ansluta till det klonade datalagret
+1. Konfigurera om de sekundära författarinstanserna för att ansluta till det klonade datalagret.
 
-1. Stäng den uppgraderade primära författarinstansen
+1. Stäng den uppgraderade primära författarinstansen.
 
 1. Stäng den uppgraderade primära instansen av Mongo.
 
-1. Starta de sekundära Mongo-instanserna med en av dem som ny primär
+1. Starta de sekundära Mongo-instanserna med en av dem som den nya primära instansen.
 
-1. Konfigurera `DocumentNodeStoreService.cfg` filer på den sekundära författarinstansen så att de pekar på replikuppsättningen ännu inte uppgraderade Mongo-instanser
+1. Konfigurera `DocumentNodeStoreService.cfg` filer på de sekundära författarinstanserna så att de pekar på replikuppsättningen med ännu inte uppgraderade Mongo-instanser.
 
-1. Starta de sekundära författarinstanserna
+1. Starta de sekundära författarinstanserna.
 
 1. Rensa de uppgraderade författarinstanserna, Mongo-noden och datalagret.
 
@@ -157,46 +153,46 @@ Den topologi som antas för det här avsnittet består av två TjärMK-publiceri
 
 ![upgrade-publish2](assets/upgrade-publish2.png)
 
-1. Stoppa trafiken till Publish 2-instansen vid belastningsutjämnaren
-1. Kör [underhåll före uppgradering](/help/sites-deploying/pre-upgrade-maintenance-tasks.md) vid publicering 2
-1. Köra en [uppgradering på plats](/help/sites-deploying/in-place-upgrade.md) vid publicering 2
-1. Uppdatera Dispatcher eller webbmodulen *vid behov*
-1. Rensa Dispatcher-cachen
-1. QA validerar Publish 2 via Dispatcher, bakom brandväggen
-1. Avsluta publicering 2
-1. Kopiera Publish 2-instansen
-1. Starta publicering 2
+1. Stoppa trafiken till Publish 2-instansen vid belastningsutjämnaren.
+1. Kör [underhåll före uppgradering](/help/sites-deploying/pre-upgrade-maintenance-tasks.md) vid publicering 2.
+1. Köra en [uppgradering på plats](/help/sites-deploying/in-place-upgrade.md) vid publicering 2.
+1. Uppdatera Dispatcher eller webbmodulen *vid behov*.
+1. Töm Dispatcher-cachen.
+1. QA validerar Publish 2 via Dispatcher, bakom brandväggen.
+1. Stäng publicering 2.
+1. Kopiera Publish 2-instansen.
+1. Starta Publicera 2.
 
 ### Om slutförd {#if-successful-2}
 
 ![upgrade-publish1](assets/upgrade-publish1.png)
 
-1. Aktivera trafik till Publish 2
-1. Stoppa trafik till Publish 1
-1. Stoppa Publish 1-instansen
-1. Ersätt Publish 1-instansen med en kopia av Publish 2
-1. Uppdatera Dispatcher eller webbmodulen *vid behov*
-1. Töm Dispatcher-cachen för Publish 1
-1. Starta publicering 1
-1. QA validerar Publish 1 via Dispatcher, bakom brandväggen
+1. Aktivera trafik till Publish 2.
+1. Stoppa trafiken till Publish 1.
+1. Stoppa Publish 1-instansen.
+1. Ersätt Publish 1-instansen med en kopia av Publish 2.
+1. Uppdatera Dispatcher eller webbmodulen *vid behov*.
+1. Töm Dispatcher-cachen för Publish 1.
+1. Starta Publicera 1.
+1. QA validerar Publish 1 via Dispatcher, bakom brandväggen.
 
 ### Om misslyckades (återställning) {#if-unsuccessful-rollback-1}
 
 ![pub_rollback](assets/pub_rollback.jpg)
 
-1. Skapa en kopia av Publish 1
-1. Ersätt Publish 2-instansen med en kopia av Publish 1
-1. Töm Dispatcher-cachen för Publish 2
-1. Starta publicering 2
-1. QA validerar Publish 2 via Dispatcher, bakom brandväggen
-1. Aktivera trafik till Publish 2
+1. Skapa en kopia av Publish 1.
+1. Ersätt Publish 2-instansen med en kopia av Publish 1.
+1. Töm Dispatcher-cachen för Publish 2.
+1. Starta Publicera 2.
+1. QA validerar Publish 2 via Dispatcher, bakom brandväggen.
+1. Aktivera trafik till Publish 2.
 
 ## Slutliga uppgraderingssteg {#final-upgrade-steps}
 
-1. Aktivera trafik till Publish 1
-1. QA utför slutlig validering från en offentlig URL
-1. Aktivera replikeringsagenter från redigeringsmiljön
-1. Återuppta redigering av innehåll
+1. Aktivera trafik till Publish 1.
+1. QA utför slutlig validering från en offentlig URL.
+1. Aktivera replikeringsagenter från redigeringsmiljön.
+1. Återuppta redigering av innehåll.
 1. Utför [kontroller efter uppgradering](/help/sites-deploying/post-upgrade-checks-and-troubleshooting.md).
 
 ![final](assets/final.jpg)
