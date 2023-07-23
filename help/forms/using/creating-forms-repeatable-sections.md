@@ -9,14 +9,16 @@ topic-tags: author
 discoiquuid: 01724ca0-6901-45e7-b045-f44814ed574e
 feature: Adaptive Forms
 exl-id: f2abae0a-f7fd-4a39-bd8c-03492ce06fe9
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: e7a3558ae04cd6816ed73589c67b0297f05adce2
 workflow-type: tm+mt
-source-wordcount: '1117'
+source-wordcount: '1174'
 ht-degree: 0%
 
 ---
 
 # Skapa formulär med repeterbara avsnitt {#creating-forms-with-repeatable-sections}
+
+<span class="preview"> Adobe rekommenderar att man använder modern och utbyggbar datainhämtning [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) for [skapa ny Adaptive Forms](/help/forms/using/create-an-adaptive-form-core-components.md) eller [lägga till adaptiv Forms på AEM Sites-sidor](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-program, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptive Forms med grundläggande komponenter. </span>
 
 Upprepningsbara avsnitt är paneler som kan läggas till eller tas bort dynamiskt i ett formulär.
 
@@ -93,8 +95,6 @@ Du kan använda någon av följande metoder för att skapa repeterbara paneler:
       >[!NOTE]
       >
       >När alla instanser av en panel har tagits bort från ett adaptivt formulär kan du lägga till en instans av den borttagna panelen med syntaxen _panelName för att fånga instanshanteraren på panelen och använda instanshanterarens addInstance API för att lägga till den borttagna instansen. Till exempel _panelName.addInstance(). En instans av den borttagna panelen läggs till.
-
-
 
 ## Använda dragspelslayouten för den överordnade panelen   {#using-the-accordion-layout-for-the-parent-panel-nbsp}
 

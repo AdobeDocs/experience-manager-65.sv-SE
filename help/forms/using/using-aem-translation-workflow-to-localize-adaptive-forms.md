@@ -10,14 +10,16 @@ discoiquuid: f5642571-9657-4ca1-93c5-4ae2eb91e967
 noindex: true
 feature: Adaptive Forms
 exl-id: ebec03a3-67a0-4ecd-84bb-8580388e048a
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: e7a3558ae04cd6816ed73589c67b0297f05adce2
 workflow-type: tm+mt
-source-wordcount: '753'
+source-wordcount: '810'
 ht-degree: 0%
 
 ---
 
 # Använda arbetsflöde för AEM översättning för att lokalisera anpassningsbara formulär och urkunder {#using-aem-translation-workflow-to-localize-adaptive-forms-and-document-of-record}
+
+<span class="preview"> Adobe rekommenderar att man använder modern och utbyggbar datainhämtning [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) for [skapa ny Adaptive Forms](/help/forms/using/create-an-adaptive-form-core-components.md) eller [lägga till adaptiv Forms på AEM Sites-sidor](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-program, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptive Forms med grundläggande komponenter. </span>
 
 Lokaliserade formulär hjälper er att nå en större publik över alla länder. Adobe Experience Manager arbetsflöde för översättning hjälper dig att lokalisera anpassningsbara formulär och deras urkunder. Du kan använda **maskinöversättning** eller **mänskliga översättare** för att lokalisera ett anpassat formulär.
 
@@ -41,7 +43,6 @@ Maskinöversättningstjänsten översätter omedelbart ditt innehåll i adaptiv 
    >
    >* Innan du öppnar den lokaliserade versionen av formuläret i webbläsarfönstret kontrollerar du att webbläsarens språkområde är inställt så att det matchar formulärets språkområde. Om formuläret t.ex. översätts till tyskt(de)-språk anger du språket för webbläsaren till tyskt(de).
    >* Adaptiva formulärkomponenter har inte stöd för RTL-språk. Till exempel hebreiska.
-
 
    Tillsammans med det adaptiva formuläret är det automatiskt genererade postdokumentet också lokaliserat.
 
@@ -78,4 +79,3 @@ Utför följande steg för att lokalisera ett formulär och dess urkunder med pe
 >
 >* Adaptiva formulärkomponenter har inte stöd för RTL-språk. Till exempel hebreiska.
 >
-

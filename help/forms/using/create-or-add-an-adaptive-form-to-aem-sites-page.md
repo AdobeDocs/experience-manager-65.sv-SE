@@ -3,14 +3,16 @@ title: Skapa eller lägga till ett anpassat formulär på AEM Sites-sidan
 description: Upptäck hur du enkelt kan skapa och lägga till anpassade formulär på din AEM Sites-sida. Lär dig stegvisa tekniker och metodtips för att integrera dynamiska och anpassningsbara formulär på er webbplats och optimera era era digitala upplevelser för maximal effekt.
 feature: Adaptive Forms
 exl-id: 1813ccfc-87ce-46fa-a1d5-5edffd91efb0
-source-git-commit: 762e918a2c65898fc518f131d44421fb82ce4d6f
+source-git-commit: e7a3558ae04cd6816ed73589c67b0297f05adce2
 workflow-type: tm+mt
-source-wordcount: '2861'
+source-wordcount: '2918'
 ht-degree: 0%
 
 ---
 
 # Skapa eller lägga till ett anpassat formulär på AEM Sites-sidan {#create-or-add-an-adaptive-form-to-aem-sites-page}
+
+<span class="preview"> Adobe rekommenderar att man använder modern och utbyggbar datainhämtning [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) for [skapa ny Adaptive Forms](/help/forms/using/create-an-adaptive-form-core-components.md) eller [lägga till adaptiv Forms på AEM Sites-sidor](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-program, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptive Forms med grundläggande komponenter. </span>
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
@@ -46,7 +48,7 @@ Du kan utnyttja den här funktionen till fullo genom att använda följande alte
 
 * **Lägg till ett anpassat anpassat formulär i ett Experience Fragments:** Nå ut bättre med formulären genom att lägga till dem i AEM Experience Fragments, vilket möjliggör smidig återanvändning på flera sidor eller webbplatser.
 
-* **Lägga till flera formulär på en AEM Sites-sida eller Experience Fragment:**  Lägg till flera formulär på en sida för att ge användarna flera alternativ baserat på deras önskemål och önskemål. Dessa kan vara en kombination av helt nya formulär från grunden och befintliga formulär.
+* **Lägga till flera formulär på en AEM Sites-sida eller Experience Fragment:**  Lägg till flera formulär på en sida för att ge användarna olika alternativ beroende på vilka önskemål och önskemål de har. Dessa kan vara en kombination av helt nya formulär från grunden och befintliga formulär.
 
 * **Konvertera ett anpassat formulär till Experience Fragment:** Konvertera ett anpassat formulär som lagts till på en AEM Sites-sida till ett Experience Fragment för återanvändning av formuläret på flera AEM Sites-sidor.
 

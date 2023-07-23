@@ -9,14 +9,16 @@ topic-tags: author
 discoiquuid: 43c431e4-5286-4f4e-b94f-5a7451c4a22c
 feature: Adaptive Forms
 exl-id: 5c75ce70-983e-4431-a13f-2c4c219e8dde
-source-git-commit: f05ddd2fb72258b7de5d361eb87f5e68e7ddd7ff
+source-git-commit: e7a3558ae04cd6816ed73589c67b0297f05adce2
 workflow-type: tm+mt
-source-wordcount: '4529'
+source-wordcount: '4586'
 ht-degree: 0%
 
 ---
 
 # Bästa tillvägagångssätt för arbete med anpassningsbara formulär {#best-practices-for-working-with-adaptive-forms}
+
+<span class="preview"> Adobe rekommenderar att man använder modern och utbyggbar datainhämtning [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) for [skapa ny Adaptive Forms](/help/forms/using/create-an-adaptive-form-core-components.md) eller [lägga till adaptiv Forms på AEM Sites-sidor](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-program, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptive Forms med grundläggande komponenter. </span>
 
 ## Översikt {#overview}
 
@@ -259,7 +261,7 @@ Nedan beskrivs några tips om hur du översätter anpassningsbara formulär:
 * Ändringar som att lägga till en ny komponent eller använda ett skript i ett lokaliserat formulär lokaliseras inte automatiskt. Därför måste du slutföra ett formulär innan du lokaliserar det för att undvika flera lokaliseringscykler.
 * Använd `afAcceptLang` begär-parameter för att åsidosätta webbläsarens språkområde och återge formuläret i det angivna språkområdet. Följande URL kommer till exempel att tvinga formuläret att återges på japanska, oavsett vilket språk som anges i webbläsarinställningen:
 
-   `https://'[server]:[port]'/<contextPath>/<formFolder>/<formName>.html?wcmmode=disabled&afAcceptLang=ja`
+  `https://'[server]:[port]'/<contextPath>/<formFolder>/<formName>.html?wcmmode=disabled&afAcceptLang=ja`
 
 * AEM Forms har för närvarande stöd för lokalisering av anpassningsbara formulärinnehåll på engelska (en), spanska (es), franska (fr), italienska (it), tyska (de), japanska (ja), portugisiska-brasilianska (pt-BR), kinesiska (zh-CN), kinesiska-taiwanesiska (zh-TW) och koreanska (ko-KR). Du kan dock lägga till stöd för nya språk för adaptiva formulär vid körning. Mer information finns i [Stöd för nya språk för lokalisering av adaptiva formulär](/help/forms/using/supporting-new-language-localization.md).
 
@@ -269,7 +271,7 @@ Nedan beskrivs några tips om hur du översätter anpassningsbara formulär:
 
 Du kan konfigurera ytterligare en instans av AEM Forms-servern som finns bakom brandväggen i en skyddad zon. Du kan använda den här instansen för:
 
-* **Gruppbearbetning**: jobb som är återkommande eller schemalagda i batchar med stor belastning. Du kan till exempel skriva ut satser, generera korrespondenser och använda dokumenttjänster som PDF Generator, Output och Assembler.
+* **Gruppbearbetning**: jobb som är återkommande eller schemalagda i batchar med stor belastning. Du kan till exempel skriva ut programsatser, generera korrespondenser och använda dokumenttjänster som PDF Generator, Utdata och Assembler.
 * **Lagra PII-data**: Spara PII-data på bearbetningsservern. Det är inte nödvändigt om du redan använder en anpassad lagringsleverantör för att lagra PII-data.
 
 ### Flyttar projekt till en annan miljö {#moving-project-to-another-environment}
@@ -312,7 +314,7 @@ I en produktionsmiljö bör du inte lagra inskickade formulärdata i AEM. I stan
 
 * **Lagra inskickningsdata**: Om du använder Form Portal Submit Store bör du implementera en anpassad SPI för att lagra data i en databas. Se [Exempel för att integrera komponent för utkast och inlämning med databas](/help/forms/using/integrate-draft-submission-database.md) för en exempelintegrering.
 
-   Du kan också skriva en anpassad skicka-åtgärd som lagrar formulärdata och bifogade filer i säker lagring. Se [Skriva anpassad skickaåtgärd för anpassningsbara formulär](/help/forms/using/custom-submit-action-form.md) för mer information.
+  Du kan också skriva en anpassad skicka-åtgärd som lagrar formulärdata och bifogade filer i säker lagring. Se [Skriva anpassad skickaåtgärd för anpassningsbara formulär](/help/forms/using/custom-submit-action-form.md) för mer information.
 
 * **Utkast-ID:ts längd**: När du sparar ett anpassat formulär som ett utkast genereras ett utkast-ID som unikt identifierar utkastet. Minsta tillåtna värde för längden på utkastets ID-fält är 26 tecken. Adobe rekommenderar att du anger 26 eller fler tecken för utkast-ID:t.
 

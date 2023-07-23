@@ -10,14 +10,16 @@ discoiquuid: 264aa8c0-ba64-4768-b3d1-1b9baa6b4d72
 docset: aem65
 feature: Adaptive Forms
 exl-id: 4254c2cb-66cc-4a46-b447-bc5e32def7a0
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: e7a3558ae04cd6816ed73589c67b0297f05adce2
 workflow-type: tm+mt
-source-wordcount: '569'
+source-wordcount: '626'
 ht-degree: 0%
 
 ---
 
 # Skapa ett anpassat formulär med hjälp av en uppsättning anpassningsbara formulär{#create-an-adaptive-form-using-a-set-of-adaptive-forms}
+
+<span class="preview"> Adobe rekommenderar att man använder modern och utbyggbar datainhämtning [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) for [skapa ny Adaptive Forms](/help/forms/using/create-an-adaptive-form-core-components.md) eller [lägga till adaptiv Forms på AEM Sites-sidor](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-program, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptive Forms med grundläggande komponenter. </span>
 
 ## Översikt {#overview}
 
@@ -141,7 +143,7 @@ Utför följande steg för att lägga till ett anpassat formulär som ett undero
 
 1. Öppna det överordnade formuläret i redigeringsläge.
 1. Klicka på **Resurser** ![assets-browser](assets/assets-browser.png). Under Resurser väljer du **Adaptiv form** i listrutan.
-   [ ![Välja anpassat formulär under Resurser](assets/asset.png)](assets/asset-1.png)
+   [![Välja anpassat formulär under Resurser](assets/asset.png)](assets/asset-1.png)
 
 1. Dra och släpp det adaptiva formulär som du vill lägga till som ett underordnat formulär.
-   [ ![Dra-och-släpp det anpassningsbara formuläret på webbplatsen](assets/drag-drop.png)](assets/drag-drop-1.png)Det anpassningsbara formuläret som du släpper läggs till som ett underordnat formulär.
+   [![Dra-och-släpp det anpassningsbara formuläret på webbplatsen](assets/drag-drop.png)](assets/drag-drop-1.png)Det anpassningsbara formuläret som du släpper läggs till som ett underordnat formulär.

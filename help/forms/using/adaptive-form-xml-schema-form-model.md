@@ -5,14 +5,16 @@ feature: Adaptive Forms
 role: User, Developer
 level: Beginner, Intermediate
 exl-id: 35d5859f-54c4-4d14-9c64-0d9291ef9029
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+source-git-commit: e7a3558ae04cd6816ed73589c67b0297f05adce2
 workflow-type: tm+mt
-source-wordcount: '1073'
+source-wordcount: '1130'
 ht-degree: 0%
 
 ---
 
 # Skapa anpassningsbara formulär med XML-schema {#creating-adaptive-forms-using-xml-schema}
+
+<span class="preview"> Adobe rekommenderar att man använder modern och utbyggbar datainhämtning [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) for [skapa ny Adaptive Forms](/help/forms/using/create-an-adaptive-form-core-components.md) eller [lägga till adaptiv Forms på AEM Sites-sidor](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-program, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptive Forms med grundläggande komponenter. </span>
 
 ## Förutsättningar {#prerequisites}
 
@@ -290,7 +292,7 @@ När du dubbelklickar på ett element i Innehållssökning visas ett snabbfönst
 
 ![Ett bindref-fält för ett XML-schemaelement](assets/dblclick.png)
 
-BindRef</code> fältet visar associationen mellan ett trädelement och ett element eller attribut i ett schema.
+The <code>bindRef</code> fältet visar associationen mellan ett trädelement och ett element eller attribut i ett schema.
 
 >[!NOTE]
 >

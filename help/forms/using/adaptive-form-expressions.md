@@ -10,14 +10,16 @@ discoiquuid: 2fd2276e-cfe3-47ad-94c1-9c7af56b7a17
 docset: aem65
 feature: Adaptive Forms
 exl-id: 048bd9e8-ef34-40fb-9f46-73743d7b47c8
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+source-git-commit: e7a3558ae04cd6816ed73589c67b0297f05adce2
 workflow-type: tm+mt
-source-wordcount: '2746'
+source-wordcount: '2803'
 ht-degree: 0%
 
 ---
 
 # Adaptiva formuläruttryck{#adaptive-form-expressions}
+
+<span class="preview"> Adobe rekommenderar att man använder modern och utbyggbar datainhämtning [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) for [skapa ny Adaptive Forms](/help/forms/using/create-an-adaptive-form-core-components.md) eller [lägga till adaptiv Forms på AEM Sites-sidor](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-program, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptive Forms med grundläggande komponenter. </span>
 
 Anpassningsbara formulär ger optimerad och förenklad formulärifyllning för slutanvändare med dynamiska skriptfunktioner. Det gör att du kan skriva uttryck för att lägga till olika beteenden, till exempel dynamiska visa/dölj-fält och paneler. Du kan också lägga till beräknade fält, skrivskydda fält, lägga till valideringslogik och mycket annat. Det dynamiska beteendet baseras på användarens indata eller förifyllda data.
 
@@ -282,7 +284,7 @@ Utför följande steg för att skapa ett anpassat mönster för en viss fälttyp
 1. Öppna fliken Egenskaper för noden som skapades. Öppna till exempel fliken Egenskaper för `textboxpatterns`. Lägg till `guideComponentType` egenskapen för den här noden och ange dess värde till *fd/af/components/formter/guideTextBox*.
 
 1. Värdet för den här egenskapen varierar beroende på vilket fält du vill definiera mönstren för. För numeriska fält är värdet för `guideComponentType` egenskapen är *fd/af/components/formter/guideNumericBox*. Värdet för Datepicker-fältet är *fd/af/components/formter/guideDatepicker*. &quot;
-1. Du kan lägga till ett eget mönster genom att tilldela en egenskap till `textboxpatterns` nod. Lägga till en egenskap med ett namn (till exempel `pattern1`) och ange värdet för mönstret som du vill lägga till. Lägg till en egenskap `pattern1` med värdet Fax=text{99-999-999999}. Mönstret är tillgängligt för alla textrutor som du använder i Adaptiv Forms.
+1. Du kan lägga till ett eget mönster genom att tilldela en egenskap till `textboxpatterns` nod. Lägga till en egenskap med ett namn (till exempel `pattern1`) och ange värdet för mönstret som du vill lägga till. Lägg till en egenskap `pattern1` med värdet Fax=text{99-999-9999999}. Mönstret är tillgängligt för alla textrutor som du använder i Adaptiv Forms.
 
    ![Skapa anpassade mönster för fält i CrxDe](assets/creating-custom-patterns.png)
 
