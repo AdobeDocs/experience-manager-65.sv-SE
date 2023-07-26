@@ -5,18 +5,21 @@ feature: Adaptive Forms
 role: User, Developer
 level: Beginner
 exl-id: 2c25a8b7-73f7-40fb-a303-9446a708c8eb
-source-git-commit: f620966974b0f535d30a17a5fa3175a593e52fec
+source-git-commit: 654dcb7c9bbb73420df7494b21fddb8cb4fdd39a
 workflow-type: tm+mt
-source-wordcount: '1818'
+source-wordcount: '1841'
 ht-degree: 0%
 
 ---
 
 # Skapa ett anpassat formulär {#creating-an-adaptive-form}
 
-<span class="preview"> Adobe rekommenderar att man använder modern och utbyggbar datainhämtning [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) for [skapa ny Adaptive Forms](/help/forms/using/create-an-adaptive-form-core-components.md) eller [lägga till adaptiv Forms på AEM Sites-sidor](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-program, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptive Forms med grundläggande komponenter. </span>
+<span class="preview"> Adobe rekommenderar att man använder modern och utbyggbar datainhämtning [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) for [skapa ny Adaptive Forms](/help/forms/using/create-an-adaptive-form-core-components.md) eller [lägga till adaptiv Forms på AEM Sites-sidor](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-filer, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptiv Forms med baskomponenter. </span>
 
-
+| Version | Artikellänk |
+| -------- | ---------------------------- |
+| AEM as a Cloud Service | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/create-an-adaptive-form-on-forms-cs/creating-adaptive-form.html) |
+| AEM 6.5 | Den här artikeln |
 
 ## Skapa ett anpassat formulär {#strong-create-an-adaptive-form-strong}
 
@@ -72,7 +75,7 @@ Följ de här stegen för att skapa ett anpassat formulär.
 
 Så här använder du en formulärdatamodell för att skapa ett anpassat formulär:
 
-1. På fliken Formulärmodell på skärmen Lägg till egenskaper väljer du **[!UICONTROL Form Data Model]** i **[!UICONTROL Select From]** nedrullningsbar lista.
+1. På fliken Formulärmodell på skärmen Lägg till egenskaper väljer du **[!UICONTROL Form Data Model]** i **[!UICONTROL Select From]** listruta.
 
    ![create-af-1-1](assets/create-af-1-1.png)
 
@@ -118,7 +121,7 @@ Se följande dokument för att förstå hur du utformar XML- eller JSON-schema f
 Gör följande om du vill använda XML- eller JSON-schema som formulärmodell för ett anpassat formulär:
 
 1. På **[!UICONTROL Add Properties]** steg på sidan där du skapar formulär med adaptiv form trycker du på **[!UICONTROL Form Model]** -fliken.
-1. På fliken Formulärmodell väljer du **[!UICONTROL Schema]** från **[!UICONTROL Select From]** nedrullningsbart fält.
+1. Välj **[!UICONTROL Schema]** från **[!UICONTROL Select From]** nedrullningsbart fält.
 
 1. Tryck **[!UICONTROL Select Schema]** och gör något av följande:
 
@@ -127,7 +130,7 @@ Gör följande om du vill använda XML- eller JSON-schema som formulärmodell f�
 
    >[!CAUTION]
    >
-   >Kontrollera att JSON-schemats filnamn slutar med **.schema.json**. Till exempel: mySchema.schema.json
+   >Kontrollera att JSON-schemats filnamn slutar med **.schema.json**. Exempel: mySchema.schema.json
 
    ![Välja XML- eller JSON-schema](assets/upload-schema.png)
    **Bild:** *Välja XML- eller JSON-schema*
@@ -155,7 +158,7 @@ Dessutom kan du använda mallredigeraren för att skapa egna mallar. Mer informa
 
 Anpassningsbara formulär skapas utan någon formulärmodell (med alternativet Ingen för formulärmodellen) eller med en formulärmodell som en formulärmall, XML-schema, JSON-schema eller formulärdatamodell. Du kan ändra formulärmodellen för ett anpassat formulär från Ingen till en annan formulärmodell. För anpassningsbara formulär baserade på en formulärmodell kan du välja en annan formulärmall, XML-schema, JSON-schema eller formulärdatamodell för samma formulärmodell. Du kan dock inte ändra från en formulärmodell till en annan.
 
-1. Välj det adaptiva formuläret och tryck på **Egenskaper** ikon.
+1. Välj det adaptiva formuläret och tryck på **Egenskaper** -ikon.
 1. Öppna **[!UICONTROL Form Model]** och gör något av följande.
 
    * Om det adaptiva formuläret saknar en formulärmodell kan du välja en annan formulärmodell och därefter välja en formulärmall, XML- eller JSON-schema eller formulärdatamodell.
@@ -165,7 +168,7 @@ Anpassningsbara formulär skapas utan någon formulärmodell (med alternativet I
 
 ## Spara ett anpassat formulär automatiskt {#auto-save-an-adaptive-form}
 
-Som standard sparas innehållet i ett anpassat formulär vid en användaråtgärd, t.ex. när du trycker på knappen Spara. Du kan också konfigurera ett anpassat formulär så att innehållet automatiskt börjar sparas baserat på en händelse eller ett tidsintervall. Alternativet Spara automatiskt är användbart i:
+Som standard sparas innehållet i ett anpassat formulär vid en användaråtgärd, t.ex. när du trycker på knappen Spara. Du kan också konfigurera ett adaptivt formulär så att innehållet automatiskt börjar sparas baserat på en händelse eller ett tidsintervall. Alternativet för att spara automatiskt är användbart i:
 
 * Spara automatiskt innehållet för anonyma och inloggade användare
 * Spara innehållet i ett formulär utan att användaren behöver göra något eller inte alls
@@ -174,17 +177,17 @@ Som standard sparas innehållet i ett anpassat formulär vid en användaråtgär
 
 ### Aktivera Spara automatiskt för ett anpassat formulär {#enable-auto-save-for-an-adaptive-form}
 
-Som standard är alternativet för att spara automatiskt inte aktiverat. Du kan aktivera alternativet Spara automatiskt på fliken Spara automatiskt i ett anpassat formulär. Fliken Spara automatiskt innehåller även flera andra konfigurationsalternativ. Utför följande steg för att aktivera och konfigurera alternativet för att spara automatiskt för ett anpassat formulär:
+Alternativet för att spara automatiskt är inte aktiverat som standard. Du kan aktivera alternativet Spara automatiskt på fliken Spara automatiskt i ett anpassat formulär. Fliken Spara automatiskt innehåller även flera andra konfigurationsalternativ. Utför följande steg för att aktivera och konfigurera alternativet för att spara automatiskt för ett anpassat formulär:
 
 1. Markera en komponent och tryck sedan på ![fältnivå](assets/field-level.png) > **[!UICONTROL Adaptive Form Container]** och sedan trycka ![cmppr](assets/cmppr.png).
 1. I **[!UICONTROL Auto Save]** sektion, **[!UICONTROL Enable]** alternativet för att spara automatiskt.
 1. I **[!UICONTROL Adaptive Form Event]** anger du 1 eller TRUE för att automatiskt börja spara formuläret när formuläret läses in i webbläsaren. Du kan också ange ett villkorsuttryck för en händelse som när den aktiveras och returnerar true börjar spara formulärets innehåll.
 1. Ange utlösaren. Automatiskt sparande aktiveras baserat på din konfiguration. Dina alternativ är:
 
-   * **[!UICONTROL Time based:]** Välj alternativet för att börja spara innehållet baserat på ett visst tidsintervall.
+   * **[!UICONTROL Time based:]** Välj alternativet om du vill börja spara innehållet baserat på ett visst tidsintervall.
    * **[!UICONTROL Event based:]** Välj alternativet för att börja spara innehållet baserat på när en händelse utlöses.
 
-   När du väljer en utlösare aktiveras rutan Strategisk konfiguration. I rutan Strategisk konfiguration kan du:
+   När du väljer en utlösare aktiveras rutan Strategisk konfiguration. I rutan Strategi:
 
    * Ange ett tidsintervall om du väljer **[!UICONTROL Time based]** utlösare.
    * Ange ett händelsenamn om du väljer **[!UICONTROL Event based]** utlösare.
@@ -199,10 +202,10 @@ Som standard är alternativet för att spara automatiskt inte aktiverat. Du kan 
 
    1. I **[!UICONTROL Auto save after this event]** ruta, ange [GuideBridge](https://helpx.adobe.com/aem-forms/6/javascript-api/GuideBridge.html) -händelse. Formuläret sparas varje gång uttrycket utvärderas till TRUE.
 
-1. (Valfritt) Om du vill spara innehållet automatiskt för anonyma användare väljer du **[!UICONTROL Enable Autosave for anonymous users]** och klicka **[!UICONTROL OK]**.
+1. (Valfritt) Om du vill spara innehållet automatiskt för anonyma användare väljer du **[!UICONTROL Enable Autosave for anonymous users]** och klicka på **[!UICONTROL OK]**.
 
    >[!NOTE]
    >
    >Om du vill att alternativet Spara automatiskt ska fungera för anonyma användare måste du konfigurera Forms Common Configuration Service så att alla användare kan förhandsgranska, verifiera och signera formulär.
    >
-   >Om du vill konfigurera tjänsten går du till Adobe Experience Manager Web Console-konfigurationen på `https://'[server]:[port]'system/console/configMgr` och redigera **[!UICONTROL Forms Common Configuration Service]** för att välja **[!UICONTROL All Users]** i **[!UICONTROL Allow]** och spara konfigurationen.
+   >Gå till Adobe Experience Manager Web Console-konfigurationen på `https://'[server]:[port]'system/console/configMgr` och redigera **[!UICONTROL Forms Common Configuration Service]** för att välja **[!UICONTROL All Users]** i **[!UICONTROL Allow]** och spara konfigurationen.
