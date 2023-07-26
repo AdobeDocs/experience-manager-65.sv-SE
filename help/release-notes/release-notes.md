@@ -1,11 +1,11 @@
 ---
 title: Versionsinformation för [!DNL Adobe Experience Manager] 6.5
 description: Hitta versionsinformation, nyheter, installationsanvisningar och en detaljerad ändringslista för [!DNL Adobe Experience Manager] 6.5.
-mini-toc-levels: 3
+mini-toc-levels: 4
 exl-id: fed4e110-9415-4740-aba1-75da522039a9
-source-git-commit: daf97f3d5c5f3c92ff5caeccff583e54f3f57364
+source-git-commit: ea0f4096ac76ed11ee84a3769725f527c13fb461
 workflow-type: tm+mt
-source-wordcount: '3765'
+source-wordcount: '3774'
 ht-degree: 0%
 
 ---
@@ -50,7 +50,9 @@ Några av de viktigaste funktionerna och förbättringarna i den här versionen 
 * **DASH-strömning med Dynamic Media** - Stöd för nya protokoll (DASH - Dynamic Adaptive Streaming over HTTP) har startats för Adaptive streaming i Dynamic Media (med CMAF aktiverat). Finns nu för alla regioner, [aktiveras via en supportanmälan](/help/assets/video.md#enable-dash-on-your-account-enable-dash).
 * **Integrering av Experience Manager Sites- och Content Fragments med Assets Next-Generation Dynamic Media** - Användare av Experience Manager Assets as a Cloud Service Next-Generation Dynamic Media kan nu använda dessa molnbaserade resurser för att skapa och leverera med lokala eller Managed Services-instanser av Experience Manager Sites 6.5.
 
-**AEM Forms**
+## Förbättringar i Service Pack 17 {#enhancements-sp17}
+
+### Forms{#aem-forms-6517}
 
 * **[Adaptiv Forms i AEM Page Editor](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)**: Nu kan du använda AEM Page Editor för att snabbt skapa och lägga till flera formulär på webbplatsens sidor. Med den här funktionen kan skribenter skapa sömlösa datainhämtningsmöjligheter på webbplatssidor med hjälp av kraften i adaptiva formulärkomponenter, inklusive dynamiskt beteende, validering, dataintegrering, generering av dokument för post- och affärsprocessautomatisering. Du kan:
    * Skapa ett anpassat formulär genom att dra och släppa formulärkomponenter i den adaptiva Forms Container-komponenten i AEM Sites Editor eller Experience Fragments.
@@ -58,25 +60,65 @@ Några av de viktigaste funktionerna och förbättringarna i den här versionen 
    * Lägg till flera formulär på en webbplatssida, effektivisera användarupplevelsen och ge större flexibilitet.
 * **[Stöd för reCAPTCHA Enterprise i Experience Manager Forms](/help/forms/using/captcha-adaptive-forms.md)**: Stöd för reCAPTCHA Enterprise i Experience Manager Forms har lagts till, vilket ger bättre skydd mot bedräglig aktivitet och skräppost utöver det befintliga stödet för Google reCAPTCHA v2.
 * **[Stöd för Adobe Acrobat Sign for Government med Experience Manager Forms](/help/forms/using/adobe-sign-integration-adaptive-forms.md)**: AEM Forms är nu integrerat med Adobe Acrobat Sign for Government (FedRAMP-kompatibelt). Integreringen ger en avancerad nivå av regelefterlevnad och säkerhet för e-signaturer med inskickade adaptiva formulär för myndighetskonton (myndigheter och myndigheter). Integrationen med Adobe Acrobat Sign for Government gör det möjligt för Adobe och myndighetskunder att använda elektroniska signaturer i Adaptive Forms för några av de mest verksamhetskritiska och känsliga verksamhetsområdena. Detta extra säkerhetsskikt säkerställer att alla e-signaturer är helt kompatibla med FedRAMP Moderate-kompatibiliteten, vilket ger Adobe myndighetskunder sinnesro.
-* **Aktivera Salesforce-integrering med Experience Manager Forms för datautbyte**: Konfigurera integreringen mellan Experience Manager Forms och Salesforce med hjälp av inloggningsflödet för OAuth 2.0-klienten. Denna funktion möjliggör säker och direkt autentisering och behörighet av programmet och möjliggör smidig kommunikation utan användarinblandning.
-* **Optimering och förbättrad funktionalitet i arbetsflödesmotorn**: Öka arbetsflödesmotorernas prestanda genom att minimera antalet arbetsflödesinstanser. Förutom `COMPLETED` och `RUNNING` statusvärden, arbetsflödet stöder även tre nya statusvärden: `ABORTED`, `SUSPENDED`och `FAILED`.
+* **Aktivera Salesforce-integrering med Experience Manager Forms för datautbyte**: Konfigurera integreringen mellan Experience Manager Forms och Salesforce med hjälp av inloggningsflödet för OAuth 2.0-klienten. Den här funktionen möjliggör säker och direkt autentisering och behörighet av programmet och möjliggör smidig kommunikation utan användarinblandning.
+* **Optimering och förbättrad funktionalitet i arbetsflödesmotorn**: Öka prestanda för arbetsflödesmotorer genom att minimera antalet arbetsflödesinstanser. Förutom `COMPLETED` och `RUNNING` statusvärden, arbetsflödet har även stöd för tre nya statusvärden: `ABORTED`, `SUSPENDED`och `FAILED`.
 
 
 <!-- UPDATE BELOW FOR EACH NEW RELEASE -->
 
-## [!DNL Assets]{#assets-6517}
+## Åtgärdade problem i Service Pack 17 {#fixed-issues}
+
+### [!DNL Sites]{#sites-6517}
+
+* Prestandaminskning i LinkCheckerTransformer. (SITES-11661)
+* Språkkopior av en sida uppdaterades inte som förväntat. (SITES-11191)
+* Öppnar samtal för icke-kampanjsidor `targeteditor.html` onödigt. Ta bort `targeteditor` ring när det inte behövs. (SITES-12469)
+* Live-kopior kan inte skapas för sidor med anteckningar. (SITES-12154)
+* Sidutrullning fungerar inte på Experience Manager 6.5.16. (SITES-12008)
+* Slut på minne, hög skräpinsamlingsaktivitet på grund av `NotificationManagerImpl`. `NotificationManager` uppgradering till Experience Manager 6.5. (SITES-11440)
+* Korrigerade IT-tester för WCM som blockerade Service Pack 17. (SITES-13089)
+* Det går inte att hämta platsreferenser på en server. (SITES-10901)
+
+#### Administratörsgränssnitt{#sites-adminui-6517}
+
+* Det går inte att stänga förhandsgranskningsfönstret för miniatyrbildsväljaren. (SITES-10459)
+
+#### [!DNL Content Fragments]{#sites-contentfragments-6517}
+
+* Konfiguration för anslutning till Polaris-tjänstobjekt (URL, autentiseringsuppgifter, återanrop och så vidare). (SITES-12149)
+* Användning av `SemanticDataType.REFERENCE` ska ha stöd för &quot;Remote-Asset-ID&quot;. (SITES-12127)
+* Integrera Polaris resursväljare i Content Fragment editor. (SITES-12125)
+* Ett obligatoriskt http-huvud krävs för att komma åt metadatatjänstens slutpunkt. (SITES-13068)
+* GraphQL implementering av 6.5 var inte i linje med Cloud Service (primär); identifierade problem korrigerades. (SITES-13096)
+* GraphQL paging/sorting och hybridfiltrering bör finnas på Experience Manager 6.5/AMS. (SITES-9154)
+
+#### Kärnkomponenter{#sites-core-components-6517}
+
+* Egenskapen `cq-msm-lockable` har fel omdirigeringsvärde i komponenten Foundation page. (SITES-10904)
+* Väljaren för fjärrresurser dirigeras alltid om till IMS-scenmiljön. (SITES-13433)
+
+#### [!DNL Experience Fragments]{#sites-experiencefragments-6517}
+
+* Om du väljer en Externalizer-konfiguration i ett Experience Fragment när du exporterar till Adobe Target skickas den felaktiga externa URL:en. (SITES-12402)
+* Ta bort villkor som inte är inkluderande. Använd riktlinjer för inkluderade villkor. (SITES-11244)
+
+#### Page Editor{#sites-pageeditor-6517}
+
+* Ingen miniatyrbild visas för en karuselluppsättning i Experience Manager innehållssökarens sidospår. (SITES-8593)
+
+### [!DNL Assets]{#assets-6517}
 
 * När du publicerar mer än 40 PDF samtidigt [!DNL Experience Manager] slutar svara och blir otillgänglig en tid. (ASSETS-21789)
 * Om du är inloggad som testanvändare kan du inte se resurser som hör till en viss resurs när du klickar på egenskaper för en resurs. (ASSETS-21648)
 * När resurser redigeras med `Desktop Actions`om du försöker checka in fler än fem resurser samtidigt, `Limit Reached` visas och de markerade resurserna checkas ut. (ASSETS-21121)
 * Det går inte att sortera resurser efter namn i en samling. (ASSETS-20924)
 * Det går inte att ange dimensioner för resurser av en bildformattyp. (ASSETS-20835)
-* Verktygstipstexten och dess bakgrund i fältet Sök/lägg till e-postadress visar inte rätt kontrastförhållande när en länk delas. (ASSETS-17347)
+* Verktygstipstexten och bakgrunden i fältet Sök/lägg till e-postadress visar inte rätt kontrastförhållande när en länk delas. (ASSETS-17347)
 * När du expanderar `Notifications`visas texten inte korrekt på grund av styckemellanrum. (ASSETS-17345)
-* När du kopierar en resurs i samlingen `Public Collection` kryssrutan inte visas korrekt. (ASSETS-17343)
+* När du kopierar en resurs i samlingen, `Public Collection` kryssrutan inte visas korrekt. (ASSETS-17343)
 * Elements använder ARIA-attribut utan roll. (ASSETS-17325,ASSETS-17323)
 * Länken är inte beskrivande när du expanderar `Notifications`. (ASSETS-17283)
-* När du navigerar och expanderar [!DNL Smart Crop] visas innehållet som en lista men inte som en osorterad lista. Därför känner skärmläsaren inte igen den osorterade listan och läser den som oformaterad text. (ASSETS-17247)
+* När du navigerar och visar [!DNL Smart Crop] visas innehållet som en lista men inte som en osorterad lista. Därför känner skärmläsaren inte igen den osorterade listan och läser den som oformaterad text. (ASSETS-17247)
 * The `Sort By` Etiketten är inte associerad med respektive listruta. Därför känner skärmläsaren inte igen de nedrullningsbara alternativen. (ASSETS-17239)
 * Det går inte att flytta framåt eller bakåt med tangentbordsfliken eller piltangenterna när du försöker lägga till en användare med `Add user` kombinationsruta. (ASSETS-17233)
 * Skärmläsaren förmedlar inte informationen för arbetsflödessteget korrekt (ASSETS-17285).
@@ -92,7 +134,7 @@ Några av de viktigaste funktionerna och förbättringarna i den här versionen 
 * When you select any file in a Collection and click `Download`, and then navigate to the email checkbox and expand it, regular text and email link is not recognizable due to background color. (ASSETS-17349) 
 * When you navigate to `Smart Crop` option, the screen reader does not announce the expand or collapse state of the button. (ASSETS-17335)-->
 
-## [!DNL Assets] - [!DNL Dynamic Media]{#dm-6517}
+#### [!DNL Assets] - [!DNL Dynamic Media]{#dm-6517}
 
 * Anslutningen till Dynamic Media bryts när det redan finns en Dynamic Media Cloud-konfiguration. (ASSETS-23057)
 * Förbättrade prestanda när du bläddrar bland mappar med många Dynamic Media-videor och lösta problem kan inte läsas in i mappkortsvyn. (ASSETS-23016)
@@ -104,11 +146,7 @@ Några av de viktigaste funktionerna och förbättringarna i den här versionen 
 * Användargränssnittet Bildprofil är begränsat för smarta beskärningar med samma namn, dimension eller både och. (ASSETS-16997)
 * Standardbredden och -höjden har nu angetts till 50 pixlar för Smart beskärning i användargränssnittet för bildprofil. (ASSETS-16997)
 
-## [!DNL Commerce]{#commerce-6517}
-
-* Flyttade taggar är skräpinsamlade men refereras fortfarande till av produkter under `/var`. (CQ-4351337)
-
-## [!DNL Forms]{#forms-6517}
+### [!DNL Forms]{#forms-6517}
 
 * När du har uppdaterat till AEM 6.5.15.0 Service Pack, fungerar inte HTML5-formulären eller läses in korrekt i Edge-webbläsaren med kompatibilitetsläget IE. (FORMS-8526, FORMS-8523)
 * När en användare använder AEM Service Pack 6.5.16.0 kan regelredigeraren inte öppnas. (FORMS-8290)
@@ -131,7 +169,7 @@ Några av de viktigaste funktionerna och förbättringarna i den här versionen 
 * När en användare använder ett filter i inkorgen skapas en `NullPointerException` fel. (FORMS-6706)
 * När en användare importerar en mallfil (.tds) med refererade fragment kraschar Experience Manager Designer. (FORMS-6702)
 * Om användaren skapar ett statiskt PDF med hjälp av utdatatjänsten i Experience Manager Forms Designer 6.5 inträffar ett fel `OCCD (optional content configuration dictionary) contains AS key`. (FORMS-6691)
-* När användaren skapar ett enkelt arbetsflöde och lägger till en enkel variabel, `set variable mapping` fel inträffar. (FORMS-5819)
+* När användaren skapar ett enkelt arbetsflöde och lägger till en enkel variabel, `set variable mapping` ett fel inträffar. (FORMS-5819)
 * När en användare försöker generera ett PDF med hjälp av utdatatjänsten, trots att den är markerad som `PDF/A-1a`, en kompatibilitetskontroll med`Preflight` tjänsten misslyckas. (LC-3920837)
 * När du har installerat Service Pack för Experience Manager 6.5.16.0 går det inte att öppna Experience Manager Designer. (LC-3921000)
 * När en användare lägger till en kryssruta och alternativknapp genereras inte strukturen för ett taggträd enligt PDF-standard. (LC-3920838)
@@ -146,16 +184,21 @@ Några av de viktigaste funktionerna och förbättringarna i den här versionen 
 * När en användare försöker anropa en LCA-process med ett PDF som innehåller `Chinese Full Width Characters`uppstår ett problem med `ValidateForm` -processen. (FORMS-7464)
 * I Experience Manager Forms Designer genererar XMLFM ZPL-utdata med olika pappersstorlekar, som A4 och A5, för XDP-baserade mallar. (FORMS-7898)
 
+### [!DNL Commerce]{#commerce-6517}
 
-## Integreringar{#integrations-6517}
+* Flyttade taggar är skräpinsamlade men refereras fortfarande till av produkter under `/var`. (CQ-4351337)
+
+### Foundation{#foundation-6517}
+
+#### Integreringar{#integrations-6517}
 
 * När du konverterar en Adobe Target IMS-konfiguration till en användarautentiseringsuppgift i äldre molnkonfigurationer visas `connectedWhen` egenskapen ändras inte. Detta gör att alla anrop går som om konfigurationen fortfarande var IMS-baserad. (CQ-4352810)
 * Lägger till `modifyProperties` behörighet att `fd-cloudservice` systemanvändare för Adobe Sign-konfiguration. (FORMS-6164)
 * När du skapar en AB-testaktivitet, som är integrerad med Adobe Target, synkroniseras inte de målgrupper som är kopplade till den med Target. (NPR-40085)
 
-## Oak{#oak-6517}
+#### Oak{#oak-6517}
 
-Från Service Pack 13 och senare har följande fellogg börjat visas som påverkar persistencecachen:
+Från Service Pack 13 och senare har följande fellogg börjat visas som påverkar persistence-cachen:
 
 ```shell
 org.h2.mvstore.MVStoreException: The write format 1 is smaller than the supported format 2 [2.0.202/5]
@@ -183,72 +226,34 @@ Så här löser du det här undantaget:
 1. Installera Service Pack eller starta om Experience Manager as a Cloud Service.
 Nya mappar med `cache` och `diff-cache` skapas automatiskt och du får inte längre något undantag relaterat till `mvstore` i `error.log`.
 
-## Plattform{#platform-6517}
+#### Plattform{#platform-6517}
 
 * I användargränssnittet för Experience Manager Tag Management (/aem/tags/) visas namnutrymmen och taggar i den ordning de skapas. Men om det finns många namnutrymmen och taggar är det svårt att visa och hantera dem. Problemet beror på att de inte kan sorteras på något annat sätt. (NPR-39620)
 * Google-versionen behöver uppdateras eftersom Minification JS inte fungerar för vissa klientbibliotek. (NPR-40043)
 
-## [!DNL Sites]{#sites-6517}
-
-* Prestandaminskning i LinkCheckerTransformer. (SITES-11661)
-* Språkkopior av en sida uppdaterades inte som förväntat. (SITES-11191)
-* Öppnar samtal för icke-kampanjsidor `targeteditor.html` i onödan. Ta bort `targeteditor` ring när det inte behövs. (SITES-12469)
-* Live-kopior kan inte skapas för sidor med anteckningar. (SITES-12154)
-* Sidutrullning fungerar inte på Experience Manager 6.5.16. (SITES-12008)
-* Slut på minne. hög skräpinsamling på grund av `NotificationManagerImpl`. `NotificationManager` uppgradera till Experience Manager 6.5. (SITES-11440)
-* Korrigerade IT-tester för WCM som blockerade Service Pack 17. (SITES-13089)
-* Det går inte att hämta platsreferenser på en server. (SITES-10901)
-
-### [!DNL Sites] - Administratörsgränssnitt{#sites-adminui-6517}
-
-* Det går inte att stänga förhandsgranskningsfönstret för miniatyrbildsväljaren. (SITES-10459)
-
-### [!DNL Sites] - [!DNL Content Fragments]{#sites-contentfragments-6517}
-
-* Konfiguration för anslutning till Polaris-tjänstobjekt (URL, autentiseringsuppgifter, återanrop och så vidare). (SITES-12149)
-* Användning av `SemanticDataType.REFERENCE` ska ha stöd för &quot;Remote-Asset-ID&quot;. (SITES-12127)
-* Integrera Polaris resursväljare i Content Fragment editor. (SITES-12125)
-* Ett obligatoriskt http-huvud krävs för att komma åt metadatatjänstens slutpunkt. (SITES-13068)
-* GraphQL implementering av 6.5 var inte i linje med Cloud Service (primär). identifierade problem har åtgärdats. (SITES-13096)
-* GraphQL paging/sorting och hybridfiltrering bör finnas på Experience Manager 6.5/AMS. (SITES-9154)
-
-### [!DNL Sites] - Kärnkomponenter{#sites-core-components-6517}
-
-* Egenskapen `cq-msm-lockable` har fel omdirigeringsvärde i komponenten Foundation page. (SITES-10904)
-* Väljaren för fjärrresurser dirigeras alltid om till IMS-scenmiljön. (SITES-13433)
-
-### [!DNL Sites] - [!DNL Experience Fragments]{#sites-experiencefragments-6517}
-
-* Om du väljer en Externalizer-konfiguration i ett Experience Fragment när du exporterar till Adobe Target skickas den felaktiga externa URL:en. (SITES-12402)
-* Ta bort villkor som inte är inkluderande; tillämpa riktlinjer för inkluderande villkor. (SITES-11244)
-
-### [!DNL Sites] - sidredigeraren{#sites-pageeditor-6517}
-
-* Ingen miniatyrbild visas för en karuselluppsättning i Experience Manager innehållssökarens sidospår. (SITES-8593)
-
-## Sling{#sling-6517}
+#### Sling{#sling-6517}
 
 * Sling `ResourceMerger` förbrukar en stor mängd CPU när den tillhandahålls med en fiktiv sökväg, vilket leder till denial of service. (NPR-40338)
 
-## Översättningsprojekt{#translation-6517}
+#### Översättningsprojekt{#translation-6517}
 
 <!-- REMOVED BY ENGINEERING FROM TOTAL RELEASE CANDIDATE LIST * The `translationrules.xml` is sorted poorly when adding a rule to a property by way of the translation configuration user interface. (NPR-40431) -->
 * Språkkopia skapas inte när användaren inte konfigurerar icke-obligatoriska fält. (NPR-40036)
 
-## Användargränssnitt{#ui-6517}
+#### Användargränssnitt{#ui-6517}
 
-* Knappen Avbryt i sidegenskaperna är inaktiv; det ska ta dig till användargränssnittet för platsadministratören. (NPR-40501)
+* Knappen Avbryt i sidegenskaperna är inaktiv. Du bör gå till användargränssnittet för Webbplatsadministratören. (NPR-40501)
 
 <!-- ## WCM{#wcm-6517}
 
 * TEXT -->
 
-## Arbetsflöde{#workflow-6517}
+#### Arbetsflöde{#workflow-6517}
 
 * Ändringar i arbetsflödeskonsolen. (NPR-40502)
 * `SegmentNotfound errors` i loggarna på en produktionsförfattarinstans, orsakad av en oavslutad resurshanterare i klassen `com.day.cq.workflow.impl.email.EMailNotificationServic`. (NPR-40187)
 * En stängd oavslutad `ResourceResolver` undantagsfel loggas. (ASSETS-22495)
-* Experience Manager-författaren kraschar när PSD/PDF har stora `DocumentAncestors` metadataattribut överförs. (ASSETS-22966)
+* Experience Manager-författaren kraschar när PSD/PDF med `DocumentAncestors` metadataattribut överförs. (ASSETS-22966)
 * Sessionsläcka i klass `InboxSharingCache` med `user-reader-service`. (CQ-4352513)
 * Ofullständig lista över användare och grupper visas när steget&quot;Deltagare i arbetsflödesinitierare&quot; visar användare och grupper för deltagarsteget. Problemet uppstod när en grupp också var medlem i en annan grupp. (NPR-40055)
 * Förbättrad rensning av arbetsflöden. (NPR-40459)
@@ -302,7 +307,7 @@ Om du vill veta vilka plattformar som är certifierade för att fungera med den 
 
 1. Produktinformationssidan (`/system/console/productinfo`) visar den uppdaterade versionssträngen `Adobe Experience Manager (6.5.17.0)` under [!UICONTROL Installed Products]. <!-- UPDATE FOR EACH NEW RELEASE -->
 
-1. Alla OSGi-paket är antingen **[!UICONTROL ACTIVE]** eller **[!UICONTROL FRAGMENT]** i OSGi Console (Use Web Console: `/system/console/bundles`).
+1. Alla OSGi-paket är **[!UICONTROL ACTIVE]** eller **[!UICONTROL FRAGMENT]** i OSGi Console (Use Web Console: `/system/console/bundles`).
 
 1. OSGi-paketet `org.apache.jackrabbit.oak-core` är version 1.2.2.15 eller senare (Använd webbkonsol: `/system/console/bundles`). <!-- NPR-40398 for 6.5.17.0 --> <!-- OAK Oak oak VERSION -MAY- NEED TO BE UPDATED FOR EACH NEW RELEASE -->
 
@@ -320,7 +325,7 @@ Om du inte installerar det här paketet kan GraphQL-frågor bli långsamma eller
 
 >[!NOTE]
 >
->Installera endast det här paketet en gång per instans; den behöver inte installeras om med varje Service Pack.
+>Installera bara det här paketet en gång per instans. Det behöver inte installeras om med varje Service Pack.
 
 ### UberJar{#uber-jar}
 
@@ -339,15 +344,15 @@ Information om hur du använder UberJar i ett Maven-projekt finns i [använda Ub
 
 >[!NOTE]
 >
->UberJar och andra tillhörande artefakter finns tillgängliga i Maven Central Repository i stället för i Adobe Public Maven-arkivet (`repo.adobe.com`). Huvudfilen för UberJar har bytt namn till `uber-jar-<version>.jar`. Så det finns ingen `classifier`, med `apis` som värdet, för `dependency` -tagg.
+>UberJar och andra tillhörande artefakter finns tillgängliga i Maven Central Repository i stället för i Adobe Public Maven-arkivet (`repo.adobe.com`). Huvudfilen för UberJar byter namn till `uber-jar-<version>.jar`. Så det finns ingen `classifier`, med `apis` som värdet, för `dependency` -tagg.
 
 ## Föråldrade funktioner{#removed-deprecated-features}
 
-Nedan finns en lista över funktioner som är markerade som borttagna [!DNL Experience Manager] 6.5.7.0 Funktioner markeras som borttagna från början och senare i en framtida version. Ett alternativt alternativ anges.
+Nedan finns en lista över funktioner som är markerade som borttagna [!DNL Experience Manager] 6.5.7.0. Funktioner markeras som borttagna från början och senare i en framtida version. Ett alternativt alternativ anges.
 
 Granska om du använder en funktion eller en funktion i en distribution. Planera också att ändra implementeringen så att ett alternativt alternativ används.
 
-| Yta | Funktion | Ersättning |
+| Område | Funktion | Ersättning |
 |---|---|---|
 | Integreringar | Skärmen **[!UICONTROL Experience Manager Cloud Services Opt-In]** har tagits bort sedan [!DNL Experience Manager] och [!DNL Adobe Target] integreringen uppdateras i [!DNL Experience Manager] 6.5. Integreringen stöder Adobe Target Standard API. API:t använder autentisering via Adobe IMS och [!DNL Adobe I/O Runtime]. Det stöder den växande rollen för Adobe Launch till instrument [!DNL Experience Manager] för analys och personalisering är anmälningsguiden funktionellt irrelevant. | Konfigurera systemanslutningar, Adobe IMS-autentisering och [!DNL Adobe I/O Runtime] integreringar via respektive [!DNL Experience Manager] molntjänster. |
 | Anslutningar | Adobe JCR Connector för Microsoft® SharePoint 2010 och Microsoft® SharePoint 2013 är föråldrad för [!DNL Experience Manager] 6.5. | Ej tillämpligt |
@@ -397,18 +402,18 @@ Du måste lägga till följande egenskaper i indexdefinitionsnoden för att få 
    * Validering på serversidan av adaptiva formulär misslyckas när sammanställningsfunktioner som SUM, MAX och MIN används (CQ-4274424).
    * `com.adobe.granite.maintenance.impl.TaskScheduler` - Inga underhållsfönster hittades vid granit/drift/underhåll.
    * Aktiveringspunkten i en interaktiv Dynamic Media-bild syns inte när du förhandsvisar mediefilen via Shoppable Banner Viewer.
-   * `com.adobe.cq.social.cq-social-jcr-provider bundle com.adobe.cq.social.cq-social-jcr-provider:1.3.5 (395)[com.adobe.cq.social.provider.jcr.impl.SpiSocialJcrResourceProviderImpl(2302)]` : Tidsgränsen överskreds i väntan på att registerändringen skulle slutföras utan registrering.
+   * `com.adobe.cq.social.cq-social-jcr-provider bundle com.adobe.cq.social.cq-social-jcr-provider:1.3.5 (395)[com.adobe.cq.social.provider.jcr.impl.SpiSocialJcrResourceProviderImpl(2302)]` : Timeout väntar på att registerändringen ska slutföras utan registrering.
 
 * På JBoss® 7.1.4-plattformen när användaren installerar Experience Manager 6.5.16.0 eller senare Service Pack, `adobe-livecycle-jboss.ear` distributionen misslyckas.
-* JDK-version senare än 1.8.0_281 stöds inte för WebLogic JEE-server.
-* Från och med AEM 6.5.15, JavaScript-motorn Rhino från ```org.apache.servicemix.bundles.rhino``` paket har ett nytt värdbeteende. Skript som använder strikt läge (```use strict;```) måste deklarera variablerna korrekt, annars körs de inte, utan utlöser i stället ett körningsfel.
+* JDK-version som är senare än 1.8.0_281 stöds inte för WebLogic JEE-server.
+* Från och med AEM 6.5.15, JavaScript-motorn i Rhino från ```org.apache.servicemix.bundles.rhino``` paket har ett nytt värdbeteende. Skript som använder strikt läge (```use strict;```) måste deklarera variablerna korrekt, annars körs de inte, utan genererar i stället ett körningsfel.
 
 ## OSGi-paket och innehållspaket som ingår{#osgi-bundles-and-content-packages-included}
 
 Följande textdokument listar de OSGi-paket och innehållspaket som ingår i [!DNL Experience Manager] 6.5.17.0: <!-- UPDATE FOR EACH NEW RELEASE -->
 
-* [Förteckning över OSGi-paket som ingår i Experience Manager 6.5.17.0](/help/release-notes/assets/65170_bundles.txt) <!-- UPDATE FOR EACH NEW RELEASE -->
-* [Förteckning över innehållspaket som ingår i Experience Manager 6.5.17.0](/help/release-notes/assets/65170_packages.txt) <!-- UPDATE FOR EACH NEW RELEASE -->
+* [Förteckning över OSGi-paket i Experience Manager 6.5.17.0](/help/release-notes/assets/65170_bundles.txt) <!-- UPDATE FOR EACH NEW RELEASE -->
+* [Förteckning över innehållspaket i Experience Manager 6.5.17.0](/help/release-notes/assets/65170_packages.txt) <!-- UPDATE FOR EACH NEW RELEASE -->
 
 ## Begränsade webbplatser{#restricted-sites}
 
