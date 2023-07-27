@@ -10,7 +10,7 @@ discoiquuid: d739c6da-3b41-4452-8728-d7cd1a3ae20b
 docset: aem65
 feature: Adaptive Forms
 exl-id: 2a237f74-fdfc-4e28-841c-f69afb7b99cf
-source-git-commit: e7a3558ae04cd6816ed73589c67b0297f05adce2
+source-git-commit: f114456d5571620772341cba9bd8203d91d0b053
 workflow-type: tm+mt
 source-wordcount: '1027'
 ht-degree: 0%
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 # Bädda in anpassningsbara formulär på en extern webbsida{#embed-adaptive-form-in-external-web-page}
 
-<span class="preview"> Adobe rekommenderar att man använder modern och utbyggbar datainhämtning [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) for [skapa ny Adaptive Forms](/help/forms/using/create-an-adaptive-form-core-components.md) eller [lägga till adaptiv Forms på AEM Sites-sidor](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-program, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptive Forms med grundläggande komponenter. </span>
+<span class="preview"> Adobe rekommenderar att man använder modern och utbyggbar datainhämtning [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) for [skapa ny Adaptive Forms](/help/forms/using/create-an-adaptive-form-core-components.md) eller [lägga till adaptiv Forms på AEM Sites-sidor](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-filer, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptiv Forms med baskomponenter. </span>
 
 Du kan [bädda in anpassningsbara formulär på en AEM Sites-sida](/help/forms/using/embed-adaptive-form-aem-sites.md) eller en webbsida som ligger på AEM. Det inbäddade adaptiva formuläret fungerar fullt ut och användarna kan fylla i och skicka formuläret utan att behöva lämna sidan. Det hjälper användaren att stanna kvar i sitt sammanhang för andra element på webbsidan och interagera med formuläret samtidigt.
 
@@ -28,7 +28,7 @@ Du kan [bädda in anpassningsbara formulär på en AEM Sites-sida](/help/forms/u
 Utför följande steg innan du bäddar in ett anpassat formulär på en extern webbplats
 
 * Publicera det adaptiva formulär som ska bäddas in i publiceringsinstansen på AEM Forms-servern.
-* Skapa eller identifiera en webbsida på din webbplats som värd för det adaptiva formuläret. Kontrollera att webbsidan kan [läsa jQuery-filer från ett CDN](https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js) eller har en lokal kopia av den inbäddade jQuery-frågan. jQuery krävs för att återge ett anpassat formulär.
+* Skapa eller identifiera en webbsida på din webbplats som värd för det adaptiva formuläret. Kontrollera att webbsidan kan [läsa jQuery-filer från ett CDN](https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js) eller har en lokal kopia av jQuery inbäddad. jQuery krävs för att återge ett anpassat formulär.
 * När AEM server och webbsida finns i olika domäner utför du de steg som anges i avsnittet, [göra det möjligt för AEM Forms att skicka adaptiva formulär till en domänövergripande webbplats](#cross-site).
 
 ## Bädda in anpassat formulär {#embed-adaptive-form}
@@ -56,8 +56,8 @@ Så här bäddar du in det anpassade formuläret:
     var loadAdaptiveForm = function(options){
     //alert(options.path);
        if(options.path) {
-           // options.path refers to the publish URL of the adaptive form
-           // For Example: https:myserver:4503/content/forms/af/ABC, where ABC is the adaptive form
+           // options.path refers to the path of the adaptive form
+           // For Example: /content/forms/af/ABC, where ABC is the adaptive form
            // Note: If AEM server is running on a context path, the adaptive form URL must contain the context path
            var path = options.path;
            path += "/jcr:content/guideContainer.html";
