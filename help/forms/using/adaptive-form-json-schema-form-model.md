@@ -5,7 +5,7 @@ feature: Adaptive Forms
 role: User, Developer
 level: Beginner, Intermediate
 exl-id: 1b402aef-a319-4d32-8ada-cadc86f5c872
-source-git-commit: f11bb43d914a43431cab408ca77690b6ba528a06
+source-git-commit: d0768679182567cc7cd618adaa78b6518f902f7c
 workflow-type: tm+mt
 source-wordcount: '1849'
 ht-degree: 0%
@@ -732,7 +732,7 @@ Du kan lägga till följande begränsningar i JSON-schemaelement för att begrä
 
 ## Aktivera schemakompatibla data {#enablig-schema-compliant-data}
 
-Så här aktiverar du det adaptiva formuläret för att generera schemakompatibla data när du skickar formulär:
+Följ de här stegen för att aktivera alla schemabaserade anpassningsbara Forms för att generera schemakompatibla data när formulär skickas:
 
 1. Gå till webbkonsolen Experience Manager på `https://server:host/system/console/configMgr`.
 1. Sök **[!UICONTROL Adaptive Form and Interactice Communication Web Channel Configuration]**.
