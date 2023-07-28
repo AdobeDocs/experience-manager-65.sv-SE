@@ -1,13 +1,13 @@
 ---
-title: Salesforce-integrering med AEM Forms med OAuth 2.0-klientautentiseringsflöde
+title: Salesforce-integrering med AEM Forms med OAuth 2.0-klientens autentiseringsflöde
 seo-title: Salesforce integration with AEM Forms using OAuth 2.0 client credentials flow
 description: Steg för att integrera Salesforce-integrering med AEM Forms med OAuth 2.0-klientens autentiseringsflöde
 seo-description: Steps to integrate Salesforce integration with AEM Forms using OAuth 2.0 client credentials flow
 exl-id: 31f2ccf8-1f4f-4d88-8c5f-ef1b7d1bfb4f
-source-git-commit: 91683330024fbf1059715447073f35cecde45b0a
+source-git-commit: f11bb43d914a43431cab408ca77690b6ba528a06
 workflow-type: tm+mt
-source-wordcount: '485'
-ht-degree: 1%
+source-wordcount: '385'
+ht-degree: 2%
 
 ---
 
@@ -15,37 +15,27 @@ ht-degree: 1%
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
-| AEM as a Cloud Service | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/integrate/use-form-data-model/configure-msdynamics-salesforce.html) |
+| AEM as a Cloud Service | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/integrate/use-form-data-model/oauth2-client-credentials-flow-for-server-to-server-integration.html) |
 | AEM 6.5 | Den här artikeln |
 
+Du kan använda klientautentiseringsuppgifter för OAuth 2.0 för att integrera AEM Forms med Salesforce-programmet. OAuth 2.0-klientens autentiseringsuppgifter är en standard och säker metod för direkt kommunikation utan användarinblandning.
 
-För att integrera AEM Forms med Salesforce-programmet används OAuth 2.0-klientens autentiseringsflöde. Det är en standardiserad och säker metod för direkt kommunikation utan att användaren behöver göra något. I det här flödet utbyter klientprogrammet (AEM formulär) klientautentiseringsuppgifterna, som definieras i det Salesforce-anslutna programmet, för att erhålla en åtkomsttoken. De nödvändiga klientautentiseringsuppgifterna innehåller konsumentnyckeln och konsumenthemligheten.
+![Arbetsflöde vid inställning av kommunikation mellan AEM Forms och Salesforce-program](/help/forms/using/assets/salesforce-workflow.png)
 
-## Fördelar med att integrera Salesforce med AEM Forms med OAuth 2.0-klientens autentiseringsflöde {#advantages-of-integrating-saleforce-aemforms}
+AEM Forms utbyter klientautentiseringsuppgifterna (konsumentnyckel och hemlighet), som definieras i det Salesforce-anslutna programmet, för att få en åtkomsttoken.
 
-AEM Forms stöder integreringen av Salesforce med Authorization Code Flow, utöver inloggningsflödet för OAuth 2.0-klienter. I OAuth 2.0 Authorization Code-flödet får klientprogrammet (AEM Forms) resursåtkomst för en Salesforce-användare, vilket har vissa begränsningar:
+Det finns många fördelar med att använda OAuth 2.0-klientautentiseringsuppgifter för autentisering över autentisering av Authorization Code Flow:
 
-* Max fem anslutningar per användare tillåts. Ytterligare anslutningar återkallar automatiskt äldre anslutningar.
-* Om en användare är inaktiverad, förlorar åtkomst eller uppdaterar ett lösenord slutar AEM att fungera.
+* Autentisering med OAuth 2.0-klientautentiseringsuppgifter tillåter mer än fem anslutningar per användare.
+* AEM datakällkonfiguration fortsätter att arbeta med inaktivering, åtkomständringar och lösenordsuppdatering för en AEM användare.
 
 ## Förutsättningar {#prerequisites}
 
-För att hämta och hämta data mellan Salesforce- och AEM-miljöer krävs vissa förutsättningar innan du fortsätter:
+Innan du ställer in kommunikation mellan ett Salesforce-program och en AEM-miljö:
 
-+++ **Konfigurera ett Saleforce-anslutet program med klientautentiseringsflöde och en API-användare**
+* Skapa en [Salesforce-ansluten app med OAuth 2.0-klientautentiseringsflöde](https://help.salesforce.com/s/articleView?id=sf.connected_app_client_credentials_setup.htm&amp;type=5) och en användare som bara har API för din organisation och som får tillgång till konsumentnyckeln och konsumenthemligheten för appen.
 
-Det är obligatoriskt att skapa en Salesforce-ansluten app med klientautentiseringsflödet OAuth 2.0 och en API-användare för din organisation. Detaljerade anvisningar finns i artikeln [OAuth 2.0 Client Credentials Flow for Server-to-Server Integration](https://help.salesforce.com/s/articleView?id=sf.connected_app_client_credentials_setup.htm&amp;type=5). De här stegen hjälper dig att få fram konsumentnyckeln och konsumenthemligheten.
-
->[!NOTE]
->
-> Tänk på att konsumentnyckeln och konsumenthemligheten måste anges när du skapar en AEM datakällkonfiguration.
-
-+++
-
-+++ **Skapa en Swagger-fil**
-
-Swagger är en öppen källkodsuppsättning regler, specifikationer och verktyg för att utveckla och beskriva RESTful API:er. [Skapa en swagger-fil](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/forms/integrate-with-salesforce/describe-rest-api.html) innan du integrerar Salesforce med AEM Forms.
-
+* Kontrollera att Swagger-filen är rätt konfigurerad för att matcha organisationens API:er. Du kan också välja att [skapa en Swagger-fil](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/forms/integrate-with-salesforce/describe-rest-api.html) från scratch, skräddarsytt för användning i AEM.
 >[!NOTE]
 >
 > AEM 6.5 stöder bara filspecifikationer i Swagger 2.0.
