@@ -10,9 +10,9 @@ role: User, Admin
 mini-toc-levels: 4
 exl-id: badd0f5c-2eb7-430d-ad77-fa79c4ff025a
 feature: Configuration,Scene7 Mode
-source-git-commit: 48540664fa80ac7ecc94a2d9dc56682ceaf67206
+source-git-commit: 78842fb50d5aa5e5c22801389713cb3c69cac4bf
 workflow-type: tm+mt
-source-wordcount: '6104'
+source-wordcount: '6102'
 ht-degree: 2%
 
 ---
@@ -236,7 +236,7 @@ När du kör Dynamic Media - Scene7-läge på AEM vidarebefordras det för närv
 
 1. På **com.adobe.cq.dam.s7imaging.impl.ps.PlatformServerServlet.name** markerar du kryssrutan för följande två inställningar:
 
-   * `com.adobe.cq.dam.s7imaging.impl.ps.PlatformServerServlet.cache.enable.name` - När den här inställningen är aktiverad cachelagras behörigheterna i 120 sekunder eller två minuter (standard) för att sparas.
+   * `com.adobe.cq.dam.s7imaging.impl.ps.PlatformServerServlet.cache.enable.name` - När den här inställningen är aktiverad cachelagras behörigheterna i 120 sekunder (två minuter) (standard) att spara.
    * `com.adobe.cq.dam.s7imaging.impl.ps.PlatformServerServlet.validate.userAccess.name` - När den här inställningen är aktiverad valideras användarens åtkomst medan användaren förhandsgranskar resurser via Dynamic Media Image Server.
 
    ![Aktivera inställningar för åtkomstkontrollistor i Dynamic Media - Scene7-läge](/help/assets/assets-dm/acl.png)
@@ -703,7 +703,7 @@ Inställningen Scene7 Upload Connection synkroniserar Experience Manager-resurse
 
    The **[!UICONTROL Number of connections]** inställningen styr det maximala antalet HTTP-anslutningar som tillåts för överföring från Experience Manager till Dynamic Media. Normalt är det fördefinierade värdet på tio anslutningar tillräckligt.
 
-   The **[!UICONTROL Active job timeout]** inställningen avgör väntetiden för överförda Dynamic Media-resurser som ska publiceras på leveransservern. Det här värdet är som standard 2 100 sekunder eller 35 minuter.
+   The **[!UICONTROL Active job timeout]** inställningen avgör väntetiden för överförda Dynamic Media-resurser som ska publiceras på leveransservern. Det här värdet är som standard 2 100 sekunder (35 minuter).
 
    I de flesta fall räcker det med inställningen 2 100.
 

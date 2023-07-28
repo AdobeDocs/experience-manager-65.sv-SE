@@ -1,7 +1,7 @@
 ---
 title: Ansluta till SQL-databaser
 seo-title: Connecting to SQL Databases
-description: Få åtkomst till en extern SQL-databas så att dina AEM program kan interagera med data
+description: Få åtkomst till en extern SQL-databas så att dina AEM kan interagera med data
 seo-description: Access an external SQL database to so that your AEM applications can interact with the data
 uuid: 0af0ed08-9487-4c37-87ce-049c9b4c1ea2
 contentOwner: Guillaume Carlino
@@ -10,9 +10,9 @@ topic-tags: platform
 content-type: reference
 discoiquuid: 11a11803-bce4-4099-9b50-92327608f37b
 exl-id: 1082b2d7-2d1b-4c8c-a31d-effa403b21b2
-source-git-commit: e147605ff4d5c3d2403632285956559db235c084
+source-git-commit: 061af6f3318d68b50c5f606ad50db7a39da0f4fd
 workflow-type: tm+mt
-source-wordcount: '920'
+source-wordcount: '917'
 ht-degree: 0%
 
 ---
@@ -35,7 +35,7 @@ Plugin-programmet bestämmer automatiskt vilka paket som ska importeras och visa
 
 * Ange i POM att paketen är valfria. Använd den här lösningen när JDBC-anslutningen egentligen inte kräver paketmedlemmarna. Använd elementet Import-Package för att ange valfria paket som i följande exempel:
 
-   `<Import-Package>org.jboss.*;resolution:=optional,*</Import-Package>`
+  `<Import-Package>org.jboss.*;resolution:=optional,*</Import-Package>`
 * Lägg in de JAR-filer som innehåller paketen i ett OSGi-paket som exporterar paketen och distribuera paketet. Använd den här lösningen när paketmedlemmarna krävs under kodkörningen.
 
 Om du känner till källkoden kan du bestämma vilken lösning som ska användas. Du kan också testa båda lösningarna och utföra testning för att validera lösningen.
@@ -86,7 +86,7 @@ Om du känner till källkoden kan du bestämma vilken lösning som ska användas
 
 Följande länkar öppnar hämtningssidorna för några populära databasprodukter:
 
-* [Microsoft® SQL Server](https://www.microsoft.com/en-us/download/details.aspx?displaylang=en&amp;id=11774)
+* [Microsoft® SQL Server](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)
 * [Oracle](https://www.oracle.com/database/technologies/appdev/jdbc-downloads.html)
 * [IBM® DB2®](https://www.ibm.com/support/pages/download-db2-fix-packs-version-db2-linux-unix-and-windows)
 
@@ -96,30 +96,30 @@ Lägg till en konfiguration för tjänsten JDBC Connections Pool som använder J
 
 JDBC-anslutningspool ( `com.day.commons.datasource.jdbcpool.JdbcPoolService`) är en fabrikstjänst. Om du behöver anslutningar som använder olika egenskaper, till exempel läsbehörighet eller läs-/skrivåtkomst, skapar du flera konfigurationer.
 
-När du arbetar med CQ finns det flera metoder för att hantera konfigurationsinställningarna för sådana tjänster. se [Konfigurerar OSGi](/help/sites-deploying/configuring-osgi.md) för fullständig information.
+När du arbetar med CQ finns det flera metoder för att hantera konfigurationsinställningarna för sådana tjänster. Se [Konfigurerar OSGi](/help/sites-deploying/configuring-osgi.md) för fullständig information.
 
 Följande egenskaper är tillgängliga för att konfigurera en poolad anslutningstjänst. Egenskapsnamnen visas så som de visas i webbkonsolen. Motsvarande namn för en `sling:OsgiConfig` visas inom parentes. Exempelvärden visas för en HSQLDB-server och en databas som har aliaset `mydb`:
 
-* JDBC-drivrutinsklass ( `jdbc.driver.class`): Den Java™-klass som ska användas som implementerar gränssnittet java.sql.Driver, till exempel `org.hsqldb.jdbc.JDBCDriver`. Datatypen är `String`.
+* JDBC-drivrutinsklass ( `jdbc.driver.class`): Den Java™-klass som till exempel implementerar gränssnittet java.sql.Driver `org.hsqldb.jdbc.JDBCDriver`. Datatypen är `String`.
 
-* JDBC Connection URI ( `jdbc.connection.uri`): URL:en för den databas som ska användas för att skapa anslutningen, till exempel `jdbc:hsqldb:hsql//10.36.79.223:9001/mydb`. URL-formatet måste vara giltigt för användning med metoden getConnection i klassen java.sql.DriverManager. Datatypen är `String`.
+* JDBC Connection URI ( `jdbc.connection.uri`): URL-adressen till den databas som ska användas för att skapa anslutningen, till exempel `jdbc:hsqldb:hsql//10.36.79.223:9001/mydb`. URL-formatet måste vara giltigt för användning med metoden getConnection i klassen java.sql.DriverManager. Datatypen är `String`.
 
-* Användarnamn ( `jdbc.username`): Användarnamnet som ska användas för att autentisera med databasservern. Datatypen är `String`.
+* Användarnamn ( `jdbc.username`): Det användarnamn som ska användas för att autentisera med databasservern. Datatypen är `String`.
 
 * Lösenord ( `jdbc.password`): Lösenordet som ska användas för autentisering av användaren. Datatypen är `String`.
 
-* Valideringsfråga ( `jdbc.validation.query`): SQL-satsen som ska användas för att verifiera att anslutningen fungerar, till exempel `select 1 from INFORMATION_SCHEMA.SYSTEM_USERS`. Datatypen är `String`.
+* Valideringsfråga ( `jdbc.validation.query`): Den SQL-sats som ska användas för att verifiera att anslutningen lyckas, till exempel `select 1 from INFORMATION_SCHEMA.SYSTEM_USERS`. Datatypen är `String`.
 
 * Skrivskyddad som standard (default.readonly): Välj det här alternativet om du vill att anslutningen ska ge skrivskyddad åtkomst. Datatypen är `Boolean`.
 * Genomför automatiskt som standard ( `default.autocommit`): Välj det här alternativet om du vill skapa separata transaktioner för varje SQL-kommando som skickas till databasen, och varje transaktion verkställs automatiskt. Välj inte det här alternativet när du implementerar transaktioner explicit i koden. Datatypen är `Boolean`.
 
 * Poolstorlek ( `pool.size`): Antalet samtidiga anslutningar som ska göras tillgängliga för databasen. Datatypen är `Long`.
 
-* Väntar på pool ( `pool.max.wait.msec`): Den tid det tar innan en anslutningsbegäran tar slut. Datatypen är `Long`.
+* Väntar på pool ( `pool.max.wait.msec`): Hur lång tid det tar innan en anslutningsbegäran tar slut. Datatypen är `Long`.
 
 * Datakällans namn ( `datasource.name`): Namnet på den här datakällan. Datatypen är `String`.
 
-* Ytterligare serviceegenskaper ( `datasource.svc.properties`): En uppsättning namn/värde-par som du vill lägga till i anslutnings-URL:en. Datatypen är `String[]`.
+* Ytterligare serviceegenskaper ( `datasource.svc.properties`): En uppsättning namn/värde-par som du vill lägga till i anslutningens URL. Datatypen är `String[]`.
 
 Tjänsten JDBC Connections Pool är en fabrik. Om du använder en `sling:OsgiConfig` för att konfigurera anslutningstjänsten måste nodens namn innehålla fabrikstjänstens-PID följt av *`-alias`*. Aliaset som du använder måste vara unikt för alla konfigurationsnoder för det PID:t. Ett exempel på nodnamn är `com.day.commons.datasource.jdbcpool.JdbcPoolService-myhsqldbpool`.
 
@@ -129,7 +129,7 @@ Tjänsten JDBC Connections Pool är en fabrik. Om du använder en `sling:OsgiCon
 
 Använd tjänsten DataSourcePool för att få en `javax.sql.DataSource` -objektet för konfigurationen som du skapade. Tjänsten DataSourcePool tillhandahåller `getDataSource` metod som returnerar en `DataSource` -objekt för ett angivet datakällnamn. Använd värdet på datakällans namn (eller `datasource.name`) som du angav för JDBC-anslutningspoolkonfigurationen.
 
-I följande exempel hämtas en instans av hsqldbds-datakällan, en enkel SQL-fråga körs och antalet resultat som returneras visas.
+Följande exempel på JSP-kod hämtar en instans av hsqldbds-datakällan, kör en enkel SQL-fråga och visar antalet resultat som returneras.
 
 #### JSP som utför en databassökning {#jsp-that-performs-a-database-lookup}
 
@@ -170,6 +170,7 @@ I följande exempel hämtas en instans av hsqldbds-datakällan, en enkel SQL-fr�
 >[!NOTE]
 >
 >Om metoden getDataSource genererar ett undantag eftersom datakällan inte hittas, kontrollerar du att tjänstkonfigurationen för anslutningspoolen är korrekt. Kontrollera egenskapsnamnen, värdena och datatyperna.
+>
 
 <!-- Link below redirects to the "Get started with AEM Sites - WKND tutorial"
 >[!NOTE]
