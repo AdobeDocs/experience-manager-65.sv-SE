@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 24b6d1d2-c118-4a25-959f-2783961c4ae3
 exl-id: bf34f564-ac93-4c8c-95f7-8690d99d85cb
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: c667a1658e43bb5b61daede5f94256dae582a4fc
 workflow-type: tm+mt
 source-wordcount: '1233'
 ht-degree: 0%
@@ -35,7 +35,7 @@ Två större metoder är att täcka över eller utöka en komponent.
 
 Att täcka över en komponent är ett sätt att göra ändringar i en standardkomponent och påverka alla förekomster som använder standardkomponenten.
 
-Övertäckningen åstadkoms genom att en kopia av standardkomponenten i / ändras **appar** i stället för att ändra den ursprungliga komponenten i **libs** katalog. Komponenten är konstruerad med en identisk relativ sökväg, förutom att &#39;libs&#39; ersätts med &#39;apps&#39;.
+Övertäckningen uppnås genom att en kopia av standardkomponenten i / ändras **appar** i stället för att ändra den ursprungliga komponenten i **libs** katalog. Komponenten är konstruerad med en identisk relativ sökväg, förutom att &#39;libs&#39; har ersatts med &#39;apps&#39;.
 
 Katalogen /apps är den första plats som genomsöks för att lösa begäranden, och om den inte hittas används standardversionen i katalogen /libs.
 
@@ -61,7 +61,7 @@ Värdet för `data-scf-component` attribut kan vara standard, till exempel **`so
 
 Om du vill binda en komponent måste hela komponentskriptet inneslutas i en &lt;div> element med följande attribut:
 
-* `data-component-id`=&quot;{{id}}&quot;
+* `data-component-id`=&quot;`{{id}}`&quot;
 
   matchar egenskapen id från kontexten
 
@@ -70,7 +70,7 @@ Om du vill binda en komponent måste hela komponentskriptet inneslutas i en &lt;
 Från `/apps/weretail/components/hbs/rating/rating.hbs`:
 
 ```xml
-<div class="we-Rating" data-component-id="{{id}}" data-scf-component="weretail/components/hbs/rating">
+<div class="we-Rating" data-component-id="`{{id}}`" data-scf-component="weretail/components/hbs/rating">
 
      <!-- HTML with HBS accessing the rating component -->
 
@@ -95,7 +95,7 @@ Så här skalförändrar du en komponent:
 
 1. Identifiera de element som du vill ändra (t.ex. dispositionsområde, knappar i verktygsfält, meddelandeteckensnitt).
 1. Identifiera CSS-klassen/reglerna som påverkar dessa element.
-1. Skapa en formatmallsfil (.css).
+1. Skapa en formatmall (.css).
 1. Inkludera formatmallen i en klientbiblioteksmapp ([klientlibs](#clientlibs-for-scf)) för din webbplats och se till att den ingår i dina mallar och sidor med [ui:includeClientLib](../../help/sites-developing/clientlibs.md).
 
 1. Definiera om CSS-klasserna och reglerna som du har identifierat (#2) i formatmallen och lägg till format.
@@ -113,12 +113,12 @@ De anpassade formaten åsidosätter nu standardramverksformaten och komponenten 
 Om du vill utöka en komponents JavaScript-implementering måste du:
 
 1. Skapa en komponent för programmet med jcr:resourceSuperType inställd på värdet för den utökade komponentens jcr:resourceType, till exempel social/forum/components/hbs/forum.
-1. Granska standardkomponentens JavaScript för att ta reda på vilka metoder som behöver registreras med SCF.registerComponent().
+1. Granska standardkomponentens JavaScript för att avgöra vilka metoder som behöver registreras med SCF.registerComponent().
 1. Kopiera den utökade komponentens JavaScript eller börja från början.
 1. Utöka metoden.
 1. Använd SCF.registerComponent() för att registrera alla metoder med antingen standardvärdena eller anpassade objekt och vyer.
 
-### forum.js: Exempeltillägg för forum - HBS  {#forum-js-sample-extension-of-forum-hbs}
+### forum.js: Sample Extension of Forum - HBS  {#forum-js-sample-extension-of-forum-hbs}
 
 ```xml
 (function($CQ, _, Backbone, SCF) {
@@ -151,7 +151,7 @@ Skripttaggar i SCF-skript bör inte tas bort när komponenter åsidosätts eller
 
 ## Clientlibs for SCF {#clientlibs-for-scf}
 
-Användning av [klientbibliotek](../../help/sites-developing/clientlibs.md) (clientlibs) är ett sätt att ordna och optimera JavaScript och CSS som används för att återge innehåll på klienten.
+Användning av [bibliotek på klientsidan](../../help/sites-developing/clientlibs.md) (clientlibs) är ett sätt att ordna och optimera JavaScript och CSS som används för att återge innehåll på klienten.
 
 Klientlibs for SCF följer ett mycket specifikt namngivningsmönster för två varianter, som endast varierar beroende på om det finns &#39;author&#39; i kategorinamnet:
 
@@ -171,7 +171,7 @@ Dessa versioner finns i:
 Till exempel:
 
 * Klientmappsnod: `/etc/clientlibs/social/hbs/forum`
-* Egenskapen Kategorier: `cq.social.hbs.forum`
+* Kategoriegenskap: `cq.social.hbs.forum`
 
 The [Community Components Guide](components-guide.md) listar de fullständiga klientlibs som krävs för varje SCF-komponent.
 
@@ -190,9 +190,9 @@ Dessa versioner finns i mappen SCF libs:
 Till exempel:
 
 * Klientmappsnod: `/libs/social/forum/hbs/forum/clientlibs`
-* Egenskapen Kategorier: `cq.social.author.hbs.forum`
+* Kategoriegenskap: `cq.social.author.hbs.forum`
 
-Obs! Även om författarklienter aldrig bäddar in andra bibliotek listar de sina beroenden. När beroendena är inbäddade i andra bibliotek hämtas de inte automatiskt in och måste även bäddas in.
+Obs! Medan författarklienter aldrig bäddar in andra bibliotek listar de sina beroenden. När beroendena är inbäddade i andra bibliotek hämtas de inte automatiskt in och måste även bäddas in.
 
 Du kan identifiera de nödvändiga författarklientlibs genom att infoga&quot;författare&quot; i de klientlibs som visas för varje SCF-komponent i [Community Components Guide](components-guide.md).
 
@@ -200,7 +200,7 @@ Du kan identifiera de nödvändiga författarklientlibs genom att infoga&quot;f�
 
 Alla webbplatser är olika när det gäller hantering av klientbibliotek. Olika faktorer kan vara:
 
-* Total hastighet: Kanske vill man att sajten ska vara responsiv, men den första sidan ska vara lite långsam att ladda. Om många av sidorna använder samma JavaScript kan de olika JavaScript-skript bäddas in i ett clientlib och refereras från den första sidan som ska läsas in. JavaScript-koden i den här hämtningen förblir cachelagrad, vilket minimerar mängden data som ska hämtas för efterföljande sidor.
+* Generell hastighet: kanske önskas att webbplatsen ska vara responsiv, men det är acceptabelt att den första sidan är lite långsam att läsa in. Om många av sidorna använder samma JavaScript kan de olika JavaScript-skript bäddas in i ett clientlib och refereras från den första sidan som ska läsas in. JavaScript-koden i den här hämtningen förblir cachelagrad, vilket minimerar mängden data som ska hämtas för efterföljande sidor.
 * Kort tid till första sidan: Kanske vill man att första sidan ska läsas in snabbt. I det här fallet finns JavaScript i flera små filer som bara ska refereras där det behövs.
 * Balans mellan första sidinläsning och efterföljande nedladdningar.
 

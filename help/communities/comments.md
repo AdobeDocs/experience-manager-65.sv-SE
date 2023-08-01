@@ -7,7 +7,7 @@ topic-tags: authoring
 content-type: reference
 docset: aem65
 exl-id: 30baebd9-13c5-4fde-a494-85601abc32a5
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: c667a1658e43bb5b61daede5f94256dae582a4fc
 workflow-type: tm+mt
 source-wordcount: '979'
 ht-degree: 0%
@@ -49,7 +49,7 @@ När [nödvändiga bibliotek på klientsidan](/help/communities/essentials-comme
 
 ### Konfigurera kommentarer {#configuring-comments}
 
-Markera den monterade `Comments` -komponenten som ska få åtkomst till och markera `Configure` som öppnar redigeringsdialogrutan.
+Markera den monterade `Comments` -komponenten som ska få åtkomst till och markera `Configure` -ikonen som öppnar redigeringsdialogrutan.
 
 ![konfigurera ikon](assets/configure.png)
 
@@ -57,7 +57,7 @@ Markera den monterade `Comments` -komponenten som ska få åtkomst till och mark
 
 #### Fliken Kommentarer {#comments-tab}
 
-Under **Kommentarer** anger du hur besökarna ska skriva sina kommentarer.
+Under **Kommentar** anger du hur besökarna ska skriva sina kommentarer.
 
 * **Tillåt svar**
 
@@ -81,7 +81,7 @@ Under **Kommentarer** anger du hur besökarna ska skriva sina kommentarer.
 
 * **Tillåtna filtyper**
 
-  Endast relevant om Tillåt filöverföringar är markerat. En kommaavgränsad lista med filnamnstillägg med punktavgränsaren. Till exempel: .jpg, .jpeg, .png, .doc, .docx, .pdf. Om någon filtyp anges tillåts inte de som inte anges. Ingen standard har angetts så att alla filtyper tillåts.
+  Endast relevant om Tillåt filöverföringar är markerat. En kommaavgränsad lista med filnamnstillägg med punktavgränsaren. Exempel: .jpg, .jpeg, .png, .doc, .docx, .pdf. Om någon filtyp anges tillåts inte de som inte anges. Ingen standard har angetts så att alla filtyper tillåts.
 
 * **RTF-redigerare**
 
@@ -121,7 +121,7 @@ Under **Användarmoderering** anger du hur de bokförda kommentarerna ska hanter
 
 * **Flagga kommentarer**
 
-  Om alternativet är markerat kan medlemmarna flagga kommentarer som olämpliga. Standard är avmarkerat.
+  Om det här alternativet är markerat kan medlemmarna flagga kommentarer som olämpliga. Standard är avmarkerat.
 
 * **Flaggorsakslista**
 
@@ -167,7 +167,7 @@ Under **Resurstyper** anger du anpassad resourceType för nya instanser av `Comm
 
   Den här resursen identifierar den resourceType för den UGC som skapas när en besökare publicerar en kommentar.
 
-* **Typ av röstningsresurs**
+* **Resurstyp för röstning**
 
   Navigera till resourceType för en utökad `voting` i /apps. Till exempel, `/apps/social/components/hbs/voting`
 
@@ -175,7 +175,7 @@ Under **Resurstyper** anger du anpassad resourceType för nya instanser av `Comm
 
 * **Resurstyp för kommentarsystem**
 
-  Navigera till resourceType för en utökad `comments`-komponent (kommentarsystem) i /apps. Lämna tomt om inte sidmallen [innehåller](/help/communities/scf.md#add-or-include-a-communities-component) kommentarsystemet i det underliggande skriptet i stället för att läggas till på sidan som en resurs (kommentarsnod). Läs mer om [{{include}} hjälpare](/help/communities/handlebars-helpers.md#include).
+  Navigera till resourceType för en utökad `comments`-komponent (kommentarsystem) i /apps. Lämna tomt om inte sidmallen [dynamiskt inkluderar](/help/communities/scf.md#add-or-include-a-communities-component) kommentarsystemet i det underliggande skriptet i stället för att läggas till på sidan som en resurs (kommentarsnod). Läs mer om [`{{include}}` hjälpare](/help/communities/handlebars-helpers.md#include).
 
 ### Site Visitor Experience {#site-visitor-experience}
 
