@@ -1,6 +1,6 @@
 ---
 title: Felsöka Dynamic Media - Scene7-läge
-description: Felsök Dynamic Media när det körs i Scene7-läge.
+description: Lär dig hur du felsöker och löser problem med installation, konfiguration och allmänna inställningar i Dynamic Media när programmet körs i Scene7-läge.
 uuid: 77e04ccf-33dc-4d2f-8950-318d4b008f74
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
@@ -12,9 +12,9 @@ role: User, Admin
 exl-id: d4507059-a54d-4dc9-a263-e55dfa27eeb1
 feature: Troubleshooting
 mini-toc-levels: 3
-source-git-commit: 9c3df2491f99fe31e4b64b47442dd583af06974e
+source-git-commit: 7f8cfe155af3b8831e746ced89c11c971e429f69
 workflow-type: tm+mt
-source-wordcount: '1378'
+source-wordcount: '1389'
 ht-degree: 0%
 
 ---
@@ -31,12 +31,12 @@ Kontrollera att Dynamic Media har konfigurerats korrekt genom att göra följand
 * Alla kumulativa Adobe Experience Manager 6.4-korrigeringspaket (CFP) har installerats först *före* alla Dynamic Media funktionspaket.
 * Tillvalspaket 18912 är installerat.
 
-   Det här tillvalspaketet är till för FTP-stöd eller om du migrerar resurser till Dynamic Media från Dynamic Media Classic.
+  Det här tillvalspaketet är till för FTP-stöd eller om du migrerar resurser till Dynamic Media från Dynamic Media Classic.
 
 * Navigera till användargränssnittet för Cloud Services och bekräfta att det tilldelade kontot visas under **[!UICONTROL Available Configurations]**.
 * Se till att `Dynamic Media Asset Activation (scene7)` replikeringsagenten är aktiverad.
 
-   Den här replikeringsagenten finns under Agenter på författare.
+  Den här replikeringsagenten finns under Agenter på författare.
 
 ## Allmänt (alla resurser) {#general-all-assets}
 
@@ -49,7 +49,7 @@ Följande resursegenskaper kan granskas i CRXDE Lite för att bekräfta att synk
 | **Egenskap** | **Exempel** | **Beskrivning** |
 |---|---|---|
 | `<object_node>/jcr:content/metadata/dam:scene7ID` | **`a\|364266`** | En allmän indikator på att noden är länkad till Dynamic Media. |
-| `<object_node>/jcr:content/metadata/dam:scene7FileStatus` | **PublishComplete** eller feltext | Status för överföring av resurs till Dynamic Media. |
+| `<object_node>/jcr:content/metadata/dam:scene7FileStatus` | **PublishComplete** eller feltext | Status för överföring av mediefil till Dynamic Media. |
 | `<object_node>/jcr:content/metadata/dam:scene7File` | **myCompany/myAssetID** | Måste fyllas i för att URL:er ska kunna genereras till Dynamic Media fjärråtkomst. |
 | `<object_node>/jcr:content/dam:lastSyncStatus` | **framgång** eller **misslyckades:`<error text>`** | Synkroniseringsstatus för uppsättningar (snurra uppsättningar, bilduppsättningar o.s.v.), bildförinställningar, visningsförinställningar, uppdateringar av bildscheman för en resurs eller bilder som har redigerats. |
 
@@ -122,7 +122,7 @@ Om du har problem med bilder och uppsättningar kan du läsa följande felsökni
   </tr>
   <tr>
    <td>Den överförda resursen visas inte i resursväljaren</td>
-   <td><p>Kontrollera att resursen har en egenskap <code>jcr:content</code> &gt; <strong><code>dam:assetState</code></strong> = <code>processed</code> (CRXDE Lite)</p> </td>
+   <td><p>Kontrollera resurs har egenskap <code>jcr:content</code> &gt; <strong><code>dam:assetState</code></strong> = <code>processed</code> (CRXDE Lite)</p> </td>
    <td><p>Kontrollera att alla resurser har avslutat bearbetningen.</p> </td>
   </tr>
   <tr>
@@ -154,7 +154,7 @@ Om du har problem med video kan du läsa följande felsökningsguide.
    <td>
     <ul>
      <li>Kontrollera att mappen har tilldelats en videoprofil (om filformatet inte stöds). Om det inte stöds visas bara en bild.</li>
-     <li>Videoprofilen måste innehålla mer än en kodningsförinställning för att generera en AVS-uppsättning (en kodning behandlas som videoinnehåll för MP4-filer). för filer som inte stöds, behandlas på samma sätt som obearbetade).</li>
+     <li>Videoprofilen måste innehålla mer än en kodningsförinställning för att generera en AVS-uppsättning (enstaka kodningar behandlas som videoinnehåll för MP4-filer; för filer som inte stöds behandlas samma som obearbetade).</li>
      <li>Kontrollera att videon har bearbetats klart genom att bekräfta <code>dam:scene7FileAvs</code> av <code>dam:scene7File</code> i metadata.</li>
     </ul> </td>
    <td>
@@ -229,7 +229,7 @@ Om du har problem med visningsprogram kan du läsa följande felsökningsguide.
 1. Markera alla förinställningar för visningsprogram och välj sedan **Publicera**.
 1. Navigera tillbaka till exempelhanteraren och observera att antalet oaktiverade resurser nu är noll.
 
-### Problem: En förinställd teckning i visningsprogrammet returnerar 404 från Förhandsgranska i resursinformation eller Kopiera URL/Bädda in kod {#viewer-preset-404}
+### Problem: Förinställda bilder i visningsprogrammet returnerar 404 från Förhandsgranska i resursinformation eller Kopiera URL/Bädda in kod {#viewer-preset-404}
 
 **Felsöka**
 
@@ -244,8 +244,7 @@ Gör följande i CRXDE Lite:
    * `"is/content"`
    * `dam:scene7Folder`
    * `<asset-name>`
-Exempel: 
-`https://<server>/is/content/myfolder/_CSS/_OOTB/CarouselDotsLeftButton_dark_sprite.png`
+Exempel: `https://<server>/is/content/myfolder/_CSS/_OOTB/CarouselDotsLeftButton_dark_sprite.png`
 
 **Lösning**
 
@@ -254,13 +253,13 @@ Om exempelmaterialet eller den förinställda teckningen i visningsprogrammet in
 1. Gå till CRXDE Lite.
 1. Ta bort `<sync-folder>/_CSS/_OOTB`.
 1. Navigera till CRX Package Manager: `https://localhost:4502/crx/packmgr/`.
-1. Sök efter visningsprogrampaket i listan; börjar med `cq-dam-scene7-viewers-content`.
+1. Sök efter visningsprogrampaket i listan. Det börjar med `cq-dam-scene7-viewers-content`.
 1. Välj **Installera om**.
 1. Gå till konfigurationssidan för Dynamic Media under Cloud Services och öppna sedan konfigurationsdialogrutan för din Dynamic Media - S7-konfiguration.
 1. Gör inga ändringar, markera **Spara**.
 Denna sparåtgärd aktiverar logiken igen för att skapa och synkronisera exempelresurserna, CSS-förinställningen för visningsprogrammet och teckningen.
 
-### Problem: Bildförhandsvisningen läses inte in vid redigering av visningsförinställningar {#image-preview-not-loading}
+### Problem: Förhandsvisning läses inte in i redigering av visningsprogramförinställningar {#image-preview-not-loading}
 
 **Lösning**
 
@@ -276,5 +275,5 @@ Denna sparåtgärd aktiverar logiken igen för att skapa och synkronisera exempe
 
 1. Ta bort `viewer` mapp.
 1. I närheten av det övre vänstra hörnet på CRXDE Lite-sidan väljer du **[!UICONTROL Save All]**.
-1. I det övre vänstra hörnet på CRXDE Lite-sidan väljer du **Tillbaka hem** ikon.
+1. I det övre vänstra hörnet på CRXDE Lite-sidan väljer du **Tillbaka hem** -ikon.
 1. Återskapa en [Dynamic Media Configuration in Cloud Services](/help/assets/config-dms7.md#configuring-dynamic-media-cloud-services).

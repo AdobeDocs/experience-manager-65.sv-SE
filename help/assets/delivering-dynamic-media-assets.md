@@ -1,6 +1,6 @@
 ---
 title: Leverera Dynamic Media-material
-description: Lär dig leverera Dynamic Media-material
+description: Lär dig hur du levererar Dynamic Media-material, som video och bilder, till dina webbsidor.
 uuid: 23eddf83-34f5-4aae-8b81-d1cd7a098a7e
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
@@ -11,9 +11,9 @@ docset: aem65
 role: User, Admin
 exl-id: 274af114-845a-46bd-b091-802cf589687a
 feature: Asset Management,Renditions
-source-git-commit: f4b7566abfa0a8dbb490baa0e849de6c355a3f06
+source-git-commit: 7f8cfe155af3b8831e746ced89c11c971e429f69
 workflow-type: tm+mt
-source-wordcount: '310'
+source-wordcount: '319'
 ht-degree: 1%
 
 ---
@@ -25,7 +25,7 @@ Hur du kan leverera dina Dynamic Media-resurser - både video och bilder - beror
 Med Dynamic Media har du flera alternativ:
 
 * Om webbplatsen finns på Adobe Experience Manager vill du lägga till Dynamic Media-resurserna direkt på sidan.
-* Om webbplatsen inte ligger på Experience Manager kan du välja något av följande:
+* Om din webbplats inte finns på Experience Manager kan du välja något av följande:
 
    * Bädda in videon eller bilden på webbplatsen.
    * Länka URL:er till webbprogrammet. Använd länkning när du vill leverera en videospelare som ett popup-fönster eller modalt fönster.
@@ -49,6 +49,6 @@ Mer information finns i följande avsnitt:
 
 ## HTTP/2-leverans av Dynamic Media-resurser {#http-delivery-of-dynamic-media-assets}
 
-Experience Manager stöder nu leverans av allt Dynamic Media-innehåll (bilder och video) via HTTP/2. Det betyder att en publicerad URL eller inbäddningskod för bilden eller videon är tillgänglig för integrering med alla program som accepterar en värdbaserad resurs. Den publicerade resursen levereras sedan via HTTP/2-protokollet. Den här leveransmetoden förbättrar kommunikationen mellan webbläsare och servrar, vilket ger bättre respons och laddningstider för alla dina Dynamic Media-resurser.
+Experience Manager stöder nu leverans av allt Dynamic Media-innehåll (bilder och video) via HTTP/2. Det betyder att en publicerad URL eller inbäddningskod för bilden eller videon är tillgänglig för integrering med alla program som accepterar en värdbaserad resurs. Den publicerade resursen levereras sedan via HTTP/2-protokollet. Den här leveransmetoden förbättrar sättet som webbläsare och servrar kommunicerar på, vilket ger bättre respons och laddningstider för alla era Dynamic Media-resurser.
 
-Mer information finns på [HTTP/2-leverans av innehåll, vanliga frågor och svar](/help/sites-administering/scene7-http2faq.md).
+Mer information finns på [HTTP/2-leverans av innehåll, vanliga frågor](/help/sites-administering/scene7-http2faq.md).

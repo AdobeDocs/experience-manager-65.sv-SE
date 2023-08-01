@@ -1,6 +1,6 @@
 ---
 title: Leverera innehåll med HTTP2
-description: HTTP/2 förbättrar kommunikationen mellan webbläsare och servrar, vilket ger snabbare överföring av information samtidigt som man minskar behovet av processorkraft.
+description: Läs om hur HTTP/2 förbättrar kommunikationen mellan webbläsare och servrar, vilket ger snabbare överföring av information och minskar behovet av processorkraft.
 uuid: d9deb945-bdf5-4d6b-95c8-8bae4442e618
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
@@ -10,9 +10,9 @@ discoiquuid: c8e145ad-f021-4043-8190-62151775e296
 role: User, Admin
 exl-id: 9eb9f309-33e5-4694-84d2-fb2cd3de50a6
 feature: Publishing,Configuration
-source-git-commit: a78de999992d4ab2fc63b5f7e796aa0d5527cb26
+source-git-commit: 7f8cfe155af3b8831e746ced89c11c971e429f69
 workflow-type: tm+mt
-source-wordcount: '732'
+source-wordcount: '735'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ Adobe är glada över att kunna meddela att det finns HTTP/2-leverans av innehå
 
 >[!NOTE]
 >
->Den här funktionen kräver att du använder det färdiga CDN som medföljer Adobe Experience Manager Dynamic Media. Eventuellt annat anpassat CDN stöds inte med den här funktionen.
+>Den här funktionen kräver att du använder det färdiga CDN som medföljer Adobe Experience Manager Dynamic Media. Andra anpassade CDN stöds inte med den här funktionen.
 
 ## Vad är HTTP/2? {#what-is-http}
 
@@ -54,13 +54,13 @@ Om du vill använda HTTP/2 måste du uppfylla följande krav:
 * Använd det Adobe-paketerade CDN (content delivery network) som en del av din Dynamic Media-licens.
 * Använd en dedikerad domän (non-company-h.assetsadobe#.com).
 
-   Om du redan har en dedikerad domän kan du anmäla dig via Adobe kundsupport.
+  Om du redan har en dedikerad domän kan du anmäla dig via Adobe kundsupport.
 
-   Om du inte har någon dedikerad domän planerar Adobe att schemalägga din övergång till HTTP/2 under 2018.
+  Om du inte har någon dedikerad domän planerar Adobe att schemalägga din övergång till HTTP/2 under 2018.
 
 ## Hur aktiverar jag HTTP/2 för mitt Dynamic Media-konto? {#what-is-the-process-for-enabling-http-for-my-dynamic-media-account}
 
-Du initierar begäran om att växla över till HTTP/2; det görs inte automatiskt åt dig.
+Du initierar begäran om att växla över till HTTP/2. Det görs inte automatiskt åt dig.
 
 1. Om du vill gå över till HTTP/2 initierar du en Adobe kundsupportförfrågan. Se [Öppna en supportanmälan](https://experienceleague.adobe.com/?support-solution=General&amp;lang=en&amp;support-tab=home#support).
 
@@ -71,14 +71,14 @@ Du initierar begäran om att växla över till HTTP/2; det görs inte automatisk
       1. Kontrollera att du använder säkra HTTPS för multimedieförfrågningar.
       1. Kontrollera att du använder CDN via Adobe och inte hanteras med en direkt relation.
       1. Kontrollera att du använder en dedikerad domän. Om du använder Dynamic Media använder du en dedikerad domän.
+
    1. Kundsupport lägger till dig i HTTP/2-väntelistan baserat på i vilken ordning förfrågningarna skickades.
    1. När Adobe är redo att hantera din begäran kontaktar kundsupporten dig för att koordinera övergången och ange ett måldatum.
    1. Du meddelas när du är klar och kan verifiera att övergången har slutförts till HTTP2.
 
-      Eftersom webbläsaren inte anger detta måste du hämta ett tillägg.
+      Eftersom webbläsaren inte anger detta är det nödvändigt att hämta ett tillägg.
 
-      För Firefox och Chrome finns det ett tillägg som heter HTTP/2 och SPDY Indicator. Webbläsarna stöder bara http/2 säkert, så det är nödvändigt att anropa en URL med https för att verifiera. Om http/2 stöds anges det av tillägget i form av en blå Flash-symbol och rubriken&quot;X-Firefox-Spdy&quot;: &quot;h2&quot;.
-
+      För Firefox och Chrome finns det ett tillägg som heter HTTP/2 och SPDY Indicator. Webbläsarna stöder bara http/2 på ett säkert sätt, så det är nödvändigt att anropa en URL med https för att verifiera. Om http/2 stöds anges det av tillägget i form av en blå Flash-symbol och rubriken&quot;X-Firefox-Spdy&quot; :&quot;h2&quot;.
 
 ## När kan jag förvänta mig att gå över till HTTP/2? {#when-can-i-expect-to-be-transitioned-over-to-http}
 
@@ -96,6 +96,6 @@ Det icke-cachelagrade innehållet träffar direkt på Adobe-servrar tills cachen
 
 ## Hur kan du verifiera om en URL eller webbplats är aktiverad med HTTP/2? {#how-can-you-verify-whether-a-url-or-website-is-activated-with-http}
 
-Eftersom webbläsaren inte anger detta måste du hämta ett tillägg.
+Eftersom webbläsaren inte anger detta är det nödvändigt att hämta ett tillägg.
 
-För Firefox och Chrome finns det ett tillägg som heter HTTP/2 och SPDY Indicator. Webbläsarna stöder bara http/2 säkert, så det är nödvändigt att anropa en URL med https för att verifiera. Om http/2 stöds anges det av tillägget i form av en blå Flash-symbol och en rubrik `X-Firefox-Spdy` : `h2`.
+För Firefox och Chrome finns det ett tillägg som heter HTTP/2 och SPDY Indicator. Webbläsarna stöder bara http/2 på ett säkert sätt, så det är nödvändigt att anropa en URL med https för att verifiera. Om http/2 stöds anges det av tillägget i form av en blå Flash-symbol och en rubrik `X-Firefox-Spdy` : `h2`.
