@@ -1,19 +1,15 @@
 ---
 title: DSRP - Resursprovider för relativ databaslagring
-seo-title: DSRP - Relational Database Storage Resource Provider
 description: Konfigurera AEM Communities för att använda en relationsdatabas som gemensam lagringsplats
-seo-description: Set up AEM Communities to use a relational database as its common store
-uuid: f364e7da-ee54-4ab2-a630-7ec9239005ac
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: administering
 content-type: reference
-discoiquuid: d23acb18-6761-4290-9e7a-a434582791bd
 role: Admin
 exl-id: 15b3a594-efde-4702-9233-232ba1c7e5b0
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+source-git-commit: f0dd1ac3ab9c17a8b331f5048d84ec97dd23924f
 workflow-type: tm+mt
-source-wordcount: '603'
+source-wordcount: '591'
 ht-degree: 0%
 
 ---
@@ -33,7 +29,7 @@ Se även [Egenskaper för SRP-alternativ](working-with-srp.md#characteristics-of
 
 >[!NOTE]
 >
->Standardlagringskonfigurationen lagras nu i conf path(`/conf/global/settings/community/srpc/defaultconfiguration`) i stället för osv-bana (`/etc/socialconfig/srpc/defaultconfiguration`). Du rekommenderas att följa [migreringssteg](#zerodt-migration-steps) för att få standardinställningarna att fungera som förväntat.
+>Standardlagringskonfigurationen lagras nu i conf path(`/conf/global/settings/community/srpc/defaultconfiguration`) istället för `etc` bana (`/etc/socialconfig/srpc/defaultconfiguration`). Du rekommenderas att följa [migreringssteg](#zerodt-migration-steps) så att standardinställningarna fungerar som förväntat.
 
 ## Konfiguration av relationsdatabas {#relational-database-configuration}
 
@@ -45,7 +41,7 @@ Installations- och konfigurationsinformation finns i [MySQL-konfiguration för D
 
 ### Solr-konfiguration {#solr-configuration}
 
-En Solr-installation kan delas mellan nodbutiken (Oak) och den gemensamma lagringsplatsen (SRP) med hjälp av olika samlingar.
+En Solr-installation kan delas mellan nodbutiken (Oak) och den gemensamma lagringsplatsen (SRP) med olika samlingar.
 
 Om både Oak- och SRP-samlingarna används intensivt kan en andra Solr installeras av prestandaskäl.
 
@@ -66,54 +62,56 @@ På författaren, för att komma åt lagringskonsolen
    * Välj **[!UICONTROL Communities]**
    * Välj **[!UICONTROL Storage Configuration]**
 
-      * Som ett exempel är den resulterande platsen: [http://localhost:4502/communities/admin/defaultsrp](http://localhost:4502/communities/admin/defaultsrp)
-      >[!NOTE]
-      >
-      >Standardlagringskonfigurationen lagras nu i conf path(`/conf/global/settings/community/srpc/defaultconfiguration`) i stället för osv-bana (`/etc/socialconfig/srpc/defaultconfiguration`). Du rekommenderas att följa [migreringssteg](#zerodt-migration-steps) för att få standardinställningarna att fungera som förväntat.
-   ![dsrp-config](assets/dsrp-config.png)
+      * Resultatet blir till exempel: [http://localhost:4502/communities/admin/defaultsrp](http://localhost:4502/communities/admin/defaultsrp)
+
+     >[!NOTE]
+     >
+     >Standardlagringskonfigurationen lagras nu i conf path(`/conf/global/settings/community/srpc/defaultconfiguration`) istället för `etc` bana (`/etc/socialconfig/srpc/defaultconfiguration`). Du rekommenderas att följa [migreringssteg](#zerodt-migration-steps) så att standardinställningarna fungerar som förväntat.
+
+  ![dsrp-config](assets/dsrp-config.png)
 
 * Välj **[!UICONTROL Database Storage Resource Provider (DSRP)]**
 * **Databaskonfiguration**
 
    * **[!UICONTROL JDBC datasource name]**
 
-      Namnet som ges till MySQL-anslutningen måste vara detsamma som anges i [JDBC OSGi-konfiguration](dsrp-mysql.md#configurejdbcconnections)
+     Namnet som ges till MySQL-anslutningen måste vara detsamma som anges i [JDBC OSGi-konfiguration](dsrp-mysql.md#configurejdbcconnections)
 
-      *standard*: communities
+     *standard*: communities
 
    * **[!UICONTROL Database name]**
 
-      Namnet ges till schemat i [init_schema.sql](dsrp-mysql.md#obtain-the-sql-script) script
+     Namnet ges till schemat i [init_schema.sql](dsrp-mysql.md#obtain-the-sql-script) script
 
-      *standard*: communities
+     *standard*: communities
 
 * **SolrConfiguration**
 
-   * **[Zookeeper](https://cwiki.apache.org/confluence/display/solr/Using+ZooKeeper+to+Manage+Configuration+Files) Värd**
+   * **[Zookeeper](https://solr.apache.org/guide/6_6/using-zookeeper-to-manage-configuration-files.html) Värd**
 
-      Lämna det här värdet tomt om du kör Solr med den interna ZooKeeper. Annars, när du kör i [SolrCloud-läge](solr.md#solrcloud-mode) med en extern ZooKeeper anger du det här värdet till URI:n för ZooKeeper, till exempel *my.server.com:80*
+     Lämna det här värdet tomt om du kör Solr med den interna ZooKeeper. Annars, när du kör i [SolrCloud-läge](solr.md#solrcloud-mode) med en extern ZooKeeper anger du det här värdet till URI:n för ZooKeeper, till exempel *my.server.com:80*
 
-      *standard*: *&lt;blank>*
+     *standard*: *&lt;blank>*
 
    * **[!UICONTROL Solr URL]**
 
-      *standard*: https://127.0.0.1:8983/solr/
+     *standard*: https://127.0.0.1:8983/solr/
 
    * **[!UICONTROL Solr Collection]**
 
-      *standard*: collection1
+     *standard*: collection1
 
 * Välj **[!UICONTROL Submit]**.
 
 ### Migreringssteg utan driftstopp för standardstart {#zerodt-migration-steps}
 
-Följ de här stegen för att kontrollera att standardsidan [http://localhost:4502/communities/admin/defaultsrp](http://localhost:4502/communities/admin/defaultsrp) fungerar som väntat:
+Kontrollera att standardsidan [http://localhost:4502/communities/admin/defaultsrp](http://localhost:4502/communities/admin/defaultsrp) fungerar som förväntat, gör så här:
 
 1. Byta namn på banan vid `/etc/socialconfig` till `/etc/socialconfig_old`så att systemkonfigurationen återgår till jsrp (standard).
 1. Gå till standardsidan [http://localhost:4502/communities/admin/defaultsrp](http://localhost:4502/communities/admin/defaultsrp), där jsrp är konfigurerat. Klicka på **[!UICONTROL submit]** så att en ny standardkonfigurationsnod skapas på `/conf/global/settings/community/srpc`.
 1. Ta bort den skapade standardkonfigurationen `/conf/global/settings/community/srpc/defaultconfiguration`.
 1. Kopiera den gamla konfigurationen `/etc/socialconfig_old/srpc/defaultconfiguration` i stället för den borttagna noden (`/conf/global/settings/community/srpc/defaultconfiguration`) i föregående steg.
-1. Ta bort den gamla etc-noden `/etc/socialconfig_old`.
+1. Ta bort gamla `etc` nod `/etc/socialconfig_old`.
 
 ## Publicera konfigurationen {#publishing-the-configuration}
 
@@ -128,9 +126,9 @@ Så här gör du den identiska konfigurationen tillgänglig i publiceringsmiljö
    * **Startbana**:
 
       * Bläddra till `/etc/socialconfig/srpc/`
+
    * Säkerställ `Only Modified` är inte markerat.
    * Välj **[!UICONTROL Activate]**.
-
 
 ## Hantera användardata {#managing-user-data}
 

@@ -2,9 +2,9 @@
 title: Komprimera och expandera filer med en AEM Forms på en anpassad JEE DSC
 description: Lär dig komprimera och expandera filer med en anpassad DSC för JEE i AEM Forms
 exl-id: 1b950d8f-6b54-452a-831b-f5644370691d
-source-git-commit: a2fd3c0c1892ac648c87ca0dec440e22144c37a2
+source-git-commit: f0dd1ac3ab9c17a8b331f5048d84ec97dd23924f
 workflow-type: tm+mt
-source-wordcount: '485'
+source-wordcount: '483'
 ht-degree: 0%
 
 ---
@@ -13,11 +13,11 @@ ht-degree: 0%
 
 ## Nödvändig kunskap {#prerequisites}
 
-Upplev AEM Forms i JEE Process Management, grundläggande Java-programmering och utveckling av anpassade komponenter.
+Upplev AEM Forms i JEE Process Management, grundläggande Java™-programmering och utveckling av anpassade komponenter.
 
 **Ytterligare obligatoriska andra produkter**
 
-Java editor som [Eclipse](https://www.eclipse.org/) eller [Netbeans IDE](https://netbeans.apache.org/)
+Java™-redigerare som [Eclipse](https://www.eclipse.org/) eller [Netbeans IDE](https://netbeans.apache.org/)
 
 ## Användarnivå {#user-level}
 
@@ -187,7 +187,7 @@ Filen component.xml visas här:
 
 ## Paketera och distribuera komponenten {#packaging-deploying-component}
 
-1. Kompilera java-projektet och skapa en JAR-fil.
+1. Kompilera Java™-projektet och skapa en JAR-fil.
 1. Distribuera komponenten (.JAR-fil) till AEM Forms på JEE-körning via Workbench.
 1. Starta tjänsten från Workbench (se figur nedan).
 
@@ -213,7 +213,7 @@ Du kan använda den här ZIP-tjänsten för följande användningsområden:
 
 * Sök efter alla filer i en viss mapp och returnera filerna som ett komprimerat dokument.
 
-* Ange en ZIP-fil som innehåller ett antal PDF-dokument som kan läsas upp när de har expanderats. Detta kräver AEM Forms på JEE Reader Extensions-modulen.
+* Ange en ZIP-fil som innehåller flera PDF-dokument som kan läsas upp när de har expanderats. Detta kräver AEM Forms på JEE Reader Extensions-modulen.
 
 * Ange en ZIP-fil som innehåller heterogena dokumenttyper som kan dekomprimeras och konverteras som PDF-dokument med hjälp av tjänsten Generate PDF.
 

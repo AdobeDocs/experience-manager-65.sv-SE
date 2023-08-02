@@ -1,16 +1,15 @@
 ---
 title: Hur skapar och arbetar man med hasharna i dynamiska PDF forms?
-description: Generera och arbeta med hashvärden i dynamisk PDF forms
+description: Generera och arbeta med hashvärden i dynamiska PDF forms.
 exl-id: 026f5686-39ea-4798-9d1f-031f15941060
-source-git-commit: 37d2c70bff770d13b8094c5959e488f5531aef55
+source-git-commit: f0dd1ac3ab9c17a8b331f5048d84ec97dd23924f
 workflow-type: tm+mt
-source-wordcount: '1249'
+source-wordcount: '1240'
 ht-degree: 0%
 
 ---
 
 # Generera och arbeta med hashvärden i dynamisk PDF forms {#generate-work-with-hashes-dynamic-pdf-forms}
-
 
 ## Nödvändig kunskap {#prerequisite-knowledge}
 
@@ -20,31 +19,31 @@ Det krävs viss erfarenhet av AEM Forms i JEE Designer, liksom möjligheten att 
 
 Början
 
-När du vill dölja ett lösenord i ditt PDF-formulär och inte vill ha det i klartext inuti källkoden eller någon annanstans i PDF-dokumentet, är det viktigt att du vet hur du genererar och arbetar med hash-koderna MD4, MD5, SHA-1 och SHA-256.
+När du vill dölja ett lösenord i ditt PDF-formulär och inte vill ha det i klartext i källkoden eller någon annanstans i PDF-dokumentet, är det viktigt att du vet hur du genererar och arbetar med hash-koderna MD4, MD5, SHA-1 och SHA-256.
 
-Tanken är att dölja lösenordet genom att generera en unik hash och lagra hash-koden i PDF-dokumentet. Den här unika hashen kan genereras av olika hash-funktioner, och i den här artikeln ska jag visa hur du genererar dem i PDF-formuläret och hur du arbetar med dem.
+Tanken är att dölja lösenordet genom att generera en unik hash och lagra hash-koden i PDF-dokumentet. Den här unika hashen kan genereras av olika hash-funktioner, och i den här artikeln visas hur du genererar dem i PDF-formuläret och hur du arbetar med dem.
 
 En hash-funktion tar en lång sträng (eller ett meddelande) av valfri längd som indata och skapar en sträng med fast längd som utdata, vilket ibland kallas meddelandesammandrag eller ett digitalt fingeravtryck.
 
-Med AEM Forms på JEE Designer kan du implementera de olika hash-funktionerna i skriptobjekt som JavaScript och köra dem i ett dynamiskt PDF-dokument. PDF example som ingår i exempelfilerna för den här artikeln använder implementeringar med öppen källkod för följande hash-funktioner:
+Med AEM Forms i JEE Designer kan du implementera de olika hash-funktionerna i skriptobjekt som JavaScript och köra dem i ett dynamiskt PDF-dokument. PDF example som ingår i exempelfilerna för den här artikeln använder implementeringar med öppen källkod för följande hash-funktioner:
 
 * MD4 och MD5 - designade av Ronald Rivest
 
-* SHA-1 och SHA-256 - så som de definieras av NIST
+* SHA-1 och SHA-256 - enligt definition av NIST
 
-Den största fördelen med hash-kodning är att du inte behöver jämföra lösenord direkt genom att jämföra tydliga textsträngar. I stället kan du jämföra de två hash-koderna för de två lösenorden. Eftersom det är mycket osannolikt att två olika strängar kommer att ha samma hash, kan du anta att de jämförda strängarna (i det här fallet lösenorden) också är identiska om båda hash-koderna är identiska.
+Den största fördelen med hash-kodning är att du inte behöver jämföra lösenord direkt genom att jämföra tydliga textsträngar. Du kan i stället jämföra de två hash-koderna för de två lösenorden. Eftersom det är osannolikt att två olika strängar har samma hash, kan du anta att de jämförda strängarna (i det här fallet lösenorden) också är identiska om båda hash-strängarna är identiska.
 
 >[!NOTE]
 >
->Det finns några välkända säkerhetsproblem (s.k. hash-kollisioner) med MD4 eller MD5. På grund av dessa hash-kollisioner och andra SHA-1-attacker (inklusive regnbågstabeller) bestämde jag mig för att koncentrera mig på SHA-256-hash-funktionen i det andra exemplet.  Mer information finns i [Kollision](https://en.wikipedia.org/wiki/Hash_collision) och [Regnbågstabell](https://en.wikipedia.org/wiki/Rainbow_table) sidor från Wikipedia.
+>Det finns några välkända säkerhetsproblem (s.k. hash-kollisioner) med MD4 eller MD5. På grund av dessa hash-kollisioner och andra SHA-1-attacker (inklusive regnbågstabeller) bestämde jag mig för att koncentrera mig på SHA-256-hash-funktionen i det andra exemplet. Mer information finns i [Kollision](https://en.wikipedia.org/wiki/Hash_collision) och [Regnbågstabell](https://en.wikipedia.org/wiki/Rainbow_table) sidor från Wikipedia.
 
 ## Undersöka skriptobjekten {#examining-script-objects}
 
 När du öppnar ett av de två exempelbilderna i AEM Forms i JEE Designer hittar du de fyra skriptobjekten på paletten Hierarki (se figur nedan).
 
-![Variabler](assets/variables.jpg)
+![Variabel](assets/variables.jpg)
 
-Om du vill se JavaScript-implementeringen av hash-funktionerna i dessa skriptobjekt markerar du skriptobjektet och utforskar koden i skriptredigeraren.  Du kan se hur följande hash-funktioner har implementerats:
+Om du vill se JavaScript-implementeringen av hash-funktionerna i dessa skriptobjekt markerar du skriptobjektet och utforskar koden i skriptredigeraren. Du kan se hur följande hash-funktioner har implementerats:
 
 * soHASHING_MD4.hex_md4()
 * soHASHING_MD4.b64_md4()
@@ -61,7 +60,7 @@ Om du vill se JavaScript-implementeringen av hash-funktionerna i dessa skriptobj
 
 Som du kan se i den här listan finns det olika funktioner tillgängliga för de olika utdatatyperna för hashen. Du kan välja mellan `hex_` för hexadecimala siffror, `b64_` för Base64-kodade utdata, eller `str_` för enkel strängkodning.
 
-Beroende på vilken hash-funktion du väljer kan hash-längden variera:
+Beroende på vilken hash-funktion du väljer varierar längden på hashen:
 
 * MD4: 128 bitar
 * MD5: 128 bitar
@@ -70,9 +69,9 @@ Beroende på vilken hash-funktion du väljer kan hash-längden variera:
 
 ## Provet PDF forms {#try-sample-pdf-forms}
 
-Exempelfilerna för den här artikeln är två PDF forms. I det första exemplet kan du skriva in en sträng och sedan generera hash-värden för strängen MD4, MD5, SHA-1 och SHA-256.  Det andra exemplet är ett enkelt formulär som låser upp textfält om rätt lösenord anges.
+Exempelfilerna för den här artikeln är två PDF forms. I det första exemplet kan du skriva in en sträng och sedan generera hash-värden för strängen MD4, MD5, SHA-1 och SHA-256. Det andra exemplet är ett enkelt formulär som låser upp textfält om rätt lösenord anges.
 
-### Exempel 1: generera hash {#generating-dashes}
+### Exempel 1: generera hash-värden {#generating-dashes}
 
 Prova det första exemplet genom att följa stegen nedan:
 
@@ -84,9 +83,9 @@ Resultatet av hash-åtgärden visas i fältet med etiketten [!UICONTROL hash]. H
 
 Alla samplingar använder hexadecimala siffror som utdatatyp. Du kan använda skriptredigeraren för att ändra exemplen och ändra utdatatypen till Base64 eller simple String.
 
-### Exempel 2: matchande lösenord {#matching-passwords}
+### Exempel 2: matcha lösenord {#matching-passwords}
 
-Det andra exemplet visar hur hash-värden jämförs i bakgrunden utan att det riktiga lösenordet behöver avslöjas. Lösenordet du anger är hashas. Det riktiga lösenordet, som lagras i ett osynligt fält, hashas också. Lösenordet är säkert, inte för att det är osynligt, utan för att det har hashats. Eftersom det är omöjligt att rekonstruera lösenordet från det hash-kodade värdet är det säkert att visa lösenordet i hash-kodad form. Jämförelsen görs bara mellan hasharna, inte mellan lösenorden i klartext. Om båda hasharna är desamma kan du anta att lösenorden är identiska.
+Det andra exemplet visar hur hash-värden jämförs i bakgrunden utan att det riktiga lösenordet behöver avslöjas. Lösenordet du anger är hashas. Det riktiga lösenordet, som lagras i ett osynligt fält, hashas också. Lösenordet är säkert, inte för att det är osynligt, utan för att det har hashats. Eftersom det är omöjligt att rekonstruera lösenordet från det hash-kodade värdet är det säkert att visa lösenordet i hash-kodad form. Jämförelsen görs bara mellan hasharna, inte mellan lösenorden i klartext. Om båda hash-koderna är desamma kan du anta att lösenorden är identiska.
 
 Prova det andra exemplet genom att följa stegen nedan:
 
