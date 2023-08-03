@@ -1,15 +1,15 @@
 ---
 title: Anpassa och utöka Content Fragments
 seo-title: Customizing and Extending Content Fragments
-description: Ett innehållsfragment utökar en standardresurs.
-seo-description: A content fragment extends a standard asset.
+description: Ett innehållsfragment utökar en standardresurs. Lär dig hur du kan anpassa dem.
+seo-description: A content fragment extends a standard asset. Learn how you can customize them.
 topic-tags: extending-aem
 content-type: reference
 docset: aem65
 exl-id: 08c88e70-4df9-4627-8a66-1fabe3aee50b
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: ada61b87753f3f3e70acdca0e946428511bd7b00
 workflow-type: tm+mt
-source-wordcount: '2782'
+source-wordcount: '2788'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 # Anpassa och utöka Content Fragments{#customizing-and-extending-content-fragments}
 
-Ett innehållsfragment utökar en standardresurs; se:
+Ett innehållsfragment utökar en standardresurs, se:
 
 * [Skapa och hantera innehållsfragment](/help/assets/content-fragments/content-fragments.md) och [Sidredigering med innehållsfragment](/help/sites-authoring/content-fragments.md) för mer information om innehållsfragment.
 
@@ -35,7 +35,7 @@ Beroende på fragmenttypen används även modeller eller mallar:
 
 >[!CAUTION]
 >
->[Modeller för innehållsfragment](/help/assets/content-fragments/content-fragments-models.md) rekommenderas för att skapa alla nya fragment.
+>[Modeller för innehållsfragment](/help/assets/content-fragments/content-fragments-models.md) Vi rekommenderar att du skapar alla nya fragment.
 >
 >Content Fragment Models används för alla exempel i WKND.
 
@@ -49,22 +49,22 @@ Beroende på fragmenttypen används även modeller eller mallar:
 
    * Används för att definiera innehållsfragment som innehåller strukturerat innehåll.
    * Modeller för innehållsfragment definierar strukturen för ett innehållsfragment när det skapas.
-   * Ett fragment refererar till modellen. så ändringar i modellen kan/kommer att påverka beroende fragment.
+   * Ett fragment refererar till modellen, så ändringar i modellen kan påverka alla beroende fragment.
    * Modeller är inbyggda i datatyper.
    * Funktioner för att lägga till nya varianter, osv., måste uppdatera fragmentet därefter.
 
   >[!CAUTION]
   >
-  >Alla ändringar i en befintlig innehållsfragmentmodell kan påverka beroende fragment. detta kan leda till egenskaper som är överblivna i dessa fragment.
+  >Alla ändringar i en befintlig innehållsfragmentmodell kan påverka beroende fragment, vilket kan leda till överblivna egenskaper i dessa fragment.
 
 * Mallar för innehållsfragment:
 
    * Används för att definiera enkla innehållsfragment.
    * Mallar definierar (grundläggande, endast text) strukturen för ett innehållsfragment när det skapas.
-   * Mallen kopieras till fragmentet när den skapas. så att ytterligare ändringar av mallen inte återspeglas i befintliga fragment.
+   * Mallen kopieras till fragmentet när den skapas, så fler ändringar av mallen återspeglas inte i befintliga fragment.
    * Funktioner för att lägga till nya varianter, osv., måste uppdatera fragmentet därefter.
    * [Mallar för innehållsfragment](/help/sites-developing/content-fragment-templates.md) fungerar på ett annat sätt än andra mallmekanismer i det AEM ekosystemet (t.ex. sidmallar). De bör därför beaktas separat.
-   * När MIME-typen för innehållet baseras på en mall hanteras det faktiska innehållet. det innebär att varje element och variant kan ha olika MIME-typer.
+   * När MIME-typen för innehållet baseras på en mall hanteras det faktiska innehållet. Det innebär att varje element och variant kan ha olika MIME-typer.
 
 ### Integrering med Assets {#integration-with-assets}
 
@@ -85,7 +85,7 @@ Innehållsfragment med strukturerat innehåll (dvs. baserat på en innehållsfra
    * Elementdata lagras under den överordnad undernoden:
      `jcr:content/data/master`
 
-   * Variationer lagras under en undernod som har variantens namn: till exempel `jcr:content/data/myvariation`
+   * Variationer lagras under en undernod som innehåller variantens namn, till exempel: `jcr:content/data/myvariation`
 
    * Data för varje element lagras i respektive undernod som en egenskap med elementnamnet: till exempel elementets innehåll `text` lagras som egenskap `text` på `jcr:content/data/master`
 
@@ -99,7 +99,7 @@ Förutom rubriken och beskrivningen, som inte betraktas som traditionella metada
 Enkla innehållsfragment (som baseras på en mall) mappas till en sammansatt resurs som består av en huvudresurs och (valfritt) underresurser:
 
 * All icke-innehållsinformation i ett fragment (som titel, beskrivning, metadata, struktur) hanteras exklusivt på huvudresursen.
-* Innehållet i det första elementet i ett fragment mappas till den ursprungliga återgivningen av huvudresursen.
+* Innehållet i det första elementet i ett fragment mappas till huvudresursens ursprungliga återgivning.
 
    * Variationerna (om det finns några) för det första elementet mappas till andra återgivningar av huvudresursen.
 
@@ -121,7 +121,7 @@ Mer information finns i [Innehållsfragment - Ta bort överväganden](/help/asse
 #### Funktionsintegrering {#feature-integration}
 
 * Funktionen Content Fragment Management (CFM) bygger på Assets core, men bör vara så oberoende som möjligt.
-* CFM tillhandahåller egna implementeringar för objekt i vyerna kort/kolumn/lista. dessa plugin-program i befintliga resursåtergivningsimplementationer.
+* CFM har sina egna implementeringar för objekt i vyerna kort, kolumn och lista. Dessa plugin finns i befintliga resursåtergivningsimplementationer.
 * Flera Assets-komponenter har utökats för att passa innehållsfragment.
 
 ### Använda innehållsfragment på sidor {#using-content-fragments-in-pages}
@@ -132,16 +132,16 @@ Mer information finns i [Innehållsfragment - Ta bort överväganden](/help/asse
 
 Innehållsfragment kan refereras från AEM sidor, precis som andra resurstyper. AEM tillhandahåller [**Innehållsfragment** kärnkomponent](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html) - en [som gör att du kan ta med innehållsfragment på sidorna](/help/sites-authoring/content-fragments.md#adding-a-content-fragment-to-your-page). Du kan också utöka **Innehållsfragment** kärnkomponent.
 
-* Komponenten använder `fragmentPath` -egenskap som refererar till det faktiska innehållsfragmentet. The `fragmentPath` Egenskapen hanteras på samma sätt som liknande egenskaper för andra tillgångstyper. till exempel när innehållsfragmentet flyttas till en annan plats.
+* Komponenten använder `fragmentPath` -egenskap som refererar till det faktiska innehållsfragmentet. The `fragmentPath` -egenskapen hanteras på samma sätt som liknande egenskaper för andra resurstyper, till exempel när innehållsfragmentet flyttas till en annan plats.
 
 * Med komponenten kan du välja varianten som ska visas.
-* Dessutom kan ett antal stycken väljas för att begränsa utdata. Detta kan till exempel användas för utdata med flera kolumner.
+* Dessutom kan ett styckeintervall markeras för att begränsa utdata. Det kan till exempel användas för utdata med flera kolumner.
 * Komponenten tillåter [mellanliggande innehåll](/help/sites-developing/components-content-fragments.md#in-between-content):
 
    * Här kan du placera andra resurser (bilder, etc.) mellan styckena i det refererade fragmentet.
    * För det mellanliggande innehållet behöver du:
 
-      * vara medvetna om risken för instabila referenser, mellanliggande innehåll (som läggs till när en sida redigeras) har ingen fast relation till det stycke som det placeras bredvid, och infogning av ett nytt stycke (i innehållsfragmentredigeraren) innan placeringen av det mellanliggande innehållet kan förlora den relativa positionen
+      * vara medveten om risken för instabila referenser. Mellanliggande innehåll (som läggs till när en sida redigeras) har ingen fast relation till det stycke som det placeras bredvid, infogning av ett nytt stycke (i innehållsfragmentredigeraren) innan placeringen av det mellanliggande innehållet kan förlora den relativa positionen
       * ta hänsyn till ytterligare parametrar (som variation och styckefilter) för att undvika falska positiva resultat i sökresultaten
 
 >[!NOTE]
@@ -182,7 +182,7 @@ Det finns fortfarande några riktlinjer som du måste följa för att se till at
 
 * Om utdata från flera element stöds (med `elementNames` om du vill ange flera element), definieras det faktiska visningsläget av egenskapen `displayMode`:
 
-   * Om värdet är `singleText` (och bara ett element är konfigurerat) återges elementet som en text med mellanliggande innehåll, layoutstöd osv. Det här är standard för fragment där bara ett element återges.
+   * Om värdet är `singleText` (och bara ett element är konfigurerat) återges elementet som en text med mellanliggande innehåll, layoutstöd osv. Det här är standardinställningen för fragment där endast ett element återges.
    * I annat fall används en mycket enklare metod (kan kallas&quot;formulärvy&quot;), där inget mellanliggande innehåll stöds och fragmentinnehållet återges som det är.
 
 * Om fragmentet återges för `displayMode` == `singleText` (implicit eller explicit) spelas följande ytterligare egenskaper upp:
@@ -199,7 +199,7 @@ Innehållsfragment kan integreras med:
 
   Innehållsfragment är helt integrerade med [Arbetsflöde för AEM](/help/sites-administering/tc-manage.md). Arkitekturnivå innebär följande:
 
-   * De enskilda översättningarna av ett innehållsfragment är i själva verket separata fragment. till exempel:
+   * De enskilda översättningarna av ett innehållsfragment är egentligen separata fragment, till exempel:
 
       * De finns under olika språkrötter:
 
@@ -217,7 +217,7 @@ Innehållsfragment kan integreras med:
 
         `/content/dam/<path>/de/<to>/<fragment>`
 
-   * Förutom de regelbaserade sökvägarna finns det ingen ytterligare koppling mellan de olika språkversionerna av ett innehållsfragment. De hanteras som två separata fragment, även om användargränssnittet ger möjlighet att navigera mellan språkvarianterna.
+   * Förutom de regelbaserade sökvägarna finns det ingen ytterligare koppling mellan de olika språkversionerna av ett innehållsfragment. De hanteras som två separata fragment, även om gränssnittet ger möjlighet att navigera mellan språkvarianterna.
 
   >[!NOTE]
   >
@@ -240,7 +240,7 @@ Innehållsfragment kan integreras med:
 
 ## API för hantering av innehållsfragment - serversidan {#the-content-fragment-management-api-server-side}
 
-Du kan använda serversidans API för att komma åt dina innehållsfragment; se:
+Du kan använda serversidans API för att komma åt dina innehållsfragment. Se:
 
 [com.adobe.cq.dam.cfm](https://www.adobe.io/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/dam/cfm/package-summary.html)
 
@@ -262,7 +262,7 @@ Följande tre gränssnitt kan fungera som startpunkter:
   ContentFragment newFragment = tpl.createFragment(parentRsc, "A fragment name", "A fragment description.");
   ```
 
-  Detta gränssnitt representerar:
+  Gränssnittet representerar:
 
    * antingen en modell för innehållsfragment eller en mall för innehållsfragment från vilken ett innehållsfragment ska skapas,
    * och (efter det att fragmentet har skapats) strukturinformationen
@@ -305,7 +305,7 @@ Följande tre gränssnitt kan fungera som startpunkter:
 
   Gränssnittet ger dig möjlighet att
 
-   * Hantera grundläggande data (till exempel get name;) get/set title/description)
+   * Hantera grundläggande data (till exempel get name; get/set title/description)
    * Åtkomst till metadata
    * Åtkomstelement:
 
@@ -359,9 +359,9 @@ Följande kan anpassas:
 
 * `ContentFragment` kan anpassas till
 
-   * `Resource` - den underliggande Sling-resursen, Observera att uppdateringen av underliggande `Resource` direkt, kräver att `ContentFragment` -objekt.
+   * `Resource` - den underliggande Sling-resursen, observera att uppdateringen av den underliggande `Resource` direkt, kräver att `ContentFragment` -objekt.
 
-   * `Asset` - DAM `Asset` abstraktion som representerar innehållsfragmentet, Observera att uppdaterar `Asset` direkt, kräver att `ContentFragment` -objekt.
+   * `Asset` - DAM `Asset` abstraktion som representerar innehållsfragmentet. Observera att uppdaterar `Asset` direkt, kräver att `ContentFragment` -objekt.
 
 * `ContentElement` kan anpassas till
 
@@ -415,7 +415,7 @@ Krav för att styra en redigeringssession är:
 
 * Att redigera ett innehållsfragment, som kan sträcka sig över flera vyer (= HTML-sidor), bör vara atomiskt.
 * Redigeringen bör också vara *transaktionsbaserad*; i slutet av redigeringssessionen måste ändringarna antingen verkställas (sparas) eller återställas (avbrytas).
-* Kantlådor ska hanteras på rätt sätt. Detta kan exempelvis gälla när användaren lämnar sidan genom att ange en URL manuellt eller med global navigering.
+* Kantärenden ska hanteras på rätt sätt, t.ex. när användaren lämnar sidan genom att ange en URL manuellt eller använda global navigering.
 * Det bör finnas en periodisk autosparfunktion (var x:e minut) för att förhindra dataförlust.
 * Om ett innehållsfragment redigeras av två användare samtidigt bör de inte skriva över varandras ändringar.
 
@@ -427,7 +427,7 @@ Processerna är följande:
 
    * En ny version av innehållsfragmentet skapas.
    * Spara automatiskt startas.
-   * Cookies är fastställda; dessa definierar det redigerade fragmentet och att en redigeringssession är öppen.
+   * Cookies är inställda. Dessa definierar det redigerade fragmentet och att en redigeringssession är öppen.
 
 * Avsluta en session
 
@@ -451,9 +451,9 @@ Processerna är följande:
 
 Möjliga åtgärder är:
 
-* Skriva in en sida
+* Ange en sida
 
-   * Kontrollera om det redan finns en redigeringssession; genom att kontrollera respektive cookie.
+   * Kontrollera om det redan finns en redigeringssession genom att markera respektive cookie.
 
       * Om det finns någon kontrollerar du att redigeringssessionen startades för det innehållsfragment som redigeras just nu
 
@@ -516,7 +516,7 @@ Intervallet för att spara automatiskt (anges i sekunder) kan definieras med kon
 
 * Standard: `600` (10 minuter); detta definieras på `/libs/settings/dam/cfm/jcr:content`
 
-Om du vill ange ett intervall för automatiskt sparande på 5 minuter måste du definiera egenskapen på din nod; till exempel:
+Om du vill ange ett intervall för automatiskt sparande på 5 minuter måste du definiera egenskapen på noden, till exempel:
 
 * Nod: `/conf/global/settings/dam/cfm/jcr:content`
 * Egenskapsnamn: `autoSaveInterval`
