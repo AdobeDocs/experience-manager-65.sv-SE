@@ -9,16 +9,16 @@ topic-tags: author
 discoiquuid: 43c431e4-5286-4f4e-b94f-5a7451c4a22c
 feature: Adaptive Forms
 exl-id: 5c75ce70-983e-4431-a13f-2c4c219e8dde
-source-git-commit: e7a3558ae04cd6816ed73589c67b0297f05adce2
+source-git-commit: 000ab7bc9a686b62fcfc122f9cf09129101ec9a8
 workflow-type: tm+mt
-source-wordcount: '4586'
+source-wordcount: '4738'
 ht-degree: 0%
 
 ---
 
 # Bästa tillvägagångssätt för arbete med anpassningsbara formulär {#best-practices-for-working-with-adaptive-forms}
 
-<span class="preview"> Adobe rekommenderar att man använder modern och utbyggbar datainhämtning [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) for [skapa ny Adaptive Forms](/help/forms/using/create-an-adaptive-form-core-components.md) eller [lägga till adaptiv Forms på AEM Sites-sidor](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-program, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptive Forms med grundläggande komponenter. </span>
+<span class="preview"> Adobe rekommenderar att man använder modern och utbyggbar datainhämtning [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) for [skapa ny Adaptive Forms](/help/forms/using/create-an-adaptive-form-core-components.md) eller [lägga till adaptiv Forms på AEM Sites-sidor](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-filer, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptiv Forms med baskomponenter. </span>
 
 ## Översikt {#overview}
 
@@ -26,9 +26,9 @@ Adobe Experience Manager (AEM)-formulär kan hjälpa er att omvandla komplexa tr
 
 Det här dokumentet innehåller riktlinjer och rekommendationer som formuläradministratörer, författare och utvecklare kan dra nytta av när de arbetar med AEM Forms, särskilt adaptiva formulärkomponenter. Här diskuteras de effektivaste strategierna, från att skapa ett formulärutvecklingsprojekt till att konfigurera, anpassa, skapa och optimera AEM Forms. Dessa bästa metoder bidrar tillsammans till AEM Forms ekosystems allmänna prestanda.
 
-Här följer dessutom några rekommenderade artiklar för allmänna AEM bästa praxis:
+Här finns dessutom några rekommenderade läsningar för allmänna AEM bästa praxis:
 
-* [God praxis: Driftsätta och underhålla AEM](/help/sites-deploying/best-practices.md)
+* [God praxis: distribuera och underhålla AEM](/help/sites-deploying/best-practices.md)
 * [God praxis: Skapa innehåll](/help/sites-authoring/best-practices.md)
 * [God praxis: Administrera AEM](/help/sites-administering/administer-best-practices.md)
 * [God praxis: Utveckla lösningar](/help/sites-developing/best-practices.md)
@@ -50,11 +50,11 @@ Mer information finns i [Skapa AEM projekt med Apache Maven](/help/sites-develop
 
 * Om du använder en Eclipse-integrerad utvecklingsmiljö kan du använda AEM utvecklingsverktyg för smidig integrering av Eclipse IDE med AEM instanser för att skapa AEM program. Mer information finns i [AEM för Eclipse](/help/sites-developing/aem-eclipse.md).
 
-* Spara inte något innehåll och gör inga ändringar i mappen /libs. Skapa övertäckningar i /app-mappar för att utöka eller skriva över standardfunktioner.
+* Lagra inte något innehåll och gör inga ändringar i mappen /libs. Skapa övertäckningar i /app-mappar för att utöka eller skriva över standardfunktioner.
 
 * När du skapar paket för att flytta innehåll måste du se till att paketfiltersökvägarna är korrekta och bara obligatoriska sökvägar anges.
 
-* Spara inte något innehåll och gör inga ändringar i mappen /libs. Skapa övertäckningar i /app-mappar för att utöka eller skriva över standardfunktioner.
+* Lagra inte något innehåll och gör inga ändringar i mappen /libs. Skapa övertäckningar i /app-mappar för att utöka eller skriva över standardfunktioner.
 
 * Definiera korrekta beroenden för paketen för att framtvinga en förbestämd installationsordning/sekvens.
 
@@ -70,7 +70,7 @@ När du väl har skapat AEM projekt kan du definiera en strategi för att skapa 
    * **Ingen**: Anpassningsbara formulär som skapas med det här alternativet använder inte någon formulärmodell. Data-XML som genereras från sådana formulär har en platt struktur med fält och motsvarande värden.
    * **XML- eller JSON-schema**: XML- och JSON-scheman representerar den struktur i vilken data produceras eller förbrukas av organisationens serversystem. Du kan koppla ett schema till ett anpassat formulär och använda dess element för att lägga till dynamiskt innehåll i det anpassningsbara formuläret. Elementen i schemat är tillgängliga på fliken Datamodellsobjekt i innehållsläsaren för att skapa adaptiva formulär. Du kan dra och släppa schemaelementen för att skapa formuläret.
    * **XFA-formulärmall**: Det är en idealisk formulärmodell om du har investeringar i XFA-baserade HTML5-formulär. Det är ett direkt sätt att konvertera XFA-baserade formulär till anpassningsbara formulär. Alla befintliga XFA-regler behålls i de tillhörande adaptiva formulären. De färdiga adaptiva formulären har stöd för XFA-konstruktioner, till exempel valideringar, händelser, egenskaper och mönster.
-   * **Formulärdatamodell**: Det är att föredra om du vill integrera backend-system som databaser, webbtjänster och AEM användarprofil för att förifylla anpassningsbara formulär och skriva in inlämnade formulärdata i bakomliggande system. Med en redigerare för formulärdatamodell kan du definiera och konfigurera enheter och tjänster i en formulärdatamodell som du kan använda för att skapa adaptiva formulär. Mer information finns i [AEM Forms dataintegrering](/help/forms/using/data-integration.md).
+   * **Formulärdatamodell**: Det är en standardformulärmodell om du vill integrera backend-system som databaser, webbtjänster och AEM användarprofil för att fylla i anpassade formulär i förväg och skriva in skickade formulärdata i backend-systemen. Med en redigerare för formulärdatamodell kan du definiera och konfigurera enheter och tjänster i en formulärdatamodell som du kan använda för att skapa adaptiva formulär. Mer information finns i [AEM Forms dataintegrering](/help/forms/using/data-integration.md).
 
 Det är viktigt att du noga väljer den datamodell som inte bara passar dina behov utan också utökar dina befintliga investeringar i XFA- och XSD-resurser, om det finns några. Vi rekommenderar att du använder XSD-modell för att skapa formulärmallar eftersom den genererade XML-filen innehåller data enligt XPATH som definieras av schemat. Att använda XSD-modell som standardval för formulärdatamodell är också till hjälp eftersom det frigör formulärdesignen från det bakomliggande system som bearbetar och förbrukar data och förbättrar formulärens prestanda på grund av en-till-en-mappning av formulärfält. Dessutom kan BindRef för fältet göras till XPATH för dess datavärde i XML.
 
@@ -93,7 +93,7 @@ Mer information finns i [Skapa ett anpassat formulär](/help/forms/using/creatin
 * Du kan också anpassa specifika adaptiva formulärkomponenter som fält och panellayout.
 
    * Använd [Övertäckning](/help/sites-developing/overlays.md) AEM funktioner för att ändra en kopia av en komponent. Du bör inte ändra standardkomponenter.
-   * Om du vill anpassa layouten för färdiga adaptiva formulärkomponenter i /libs [skapa anpassade layoutkomponenter](/help/forms/using/custom-layout-components-forms.md) utöver [standardlayouter](/help/forms/using/layout-capabilities-adaptive-forms.md).
+   * Om du vill anpassa layouten för färdiga adaptiva formulärkomponenter i /libs, [skapa anpassade layoutkomponenter](/help/forms/using/custom-layout-components-forms.md) utöver [standardlayouter](/help/forms/using/layout-capabilities-adaptive-forms.md).
    * Lägg in anpassade interaktiva funktioner genom att skapa anpassade widgetar eller utseenden. Du bör inte ändra standardkomponenter. Mer information finns i [Utseenderamverk](/help/forms/using/introduction-widgets.md).
 
 * Se [Hantera personligt identifierbar information](/help/forms/using/adaptive-forms-best-practices.md#p-handling-personally-identifiable-information-p) för rekommendationer om hur PII-data ska hanteras.
@@ -103,17 +103,18 @@ Mer information finns i [Skapa ett anpassat formulär](/help/forms/using/creatin
 Du kan skapa ett anpassat formulär med formulärmallarna som är aktiverade i **Konfigurationsläsaren**. Information om hur du aktiverar formulärmallarna finns i [Skapa anpassad formulärmall](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-adaptive-form/create-adaptive-form-template.html?lang=en).
 
 Formulärmallarna kan också laddas upp från adaptiva formulärpaket som skapats på en annan författardator. Formulärmallar är tillgängliga genom installation [aemforms-references-*-paket](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=en). Några av de bästa metoderna som rekommenderas är:
+
 * The **nosamplingContent** runmode rekommenderas endast för författaren och inte för publiceringsnoderna.
 * Redigering av resurser som anpassningsbara formulär, teman, mallar eller molnkonfigurationer utförs endast via redigeringsnoder, som kan publiceras på de konfigurerade publiceringsnoderna.
 Mer information finns i [Publicera och avpublicera formulär och dokument](https://experienceleague.adobe.com/docs/experience-manager-65/forms/publish-process-aem-forms/publishing-unpublishing-forms.html?lang=en)
-* Forms tilläggspaket krävs för redigering och publicering för att stödja dokumenttjänstens verksamhet. Därför kan det betraktas som ett beroende.
+* Forms tilläggspaket krävs för redigering och publicering för att dokumenttjänståtgärderna ska kunna hanteras. Det kan därför anses vara ett beroende.
 Om du bara vill hämta Forms-relaterade exempelmallar, teman och DOR-paket kan du hämta dem från [aemforms-references-*-paket](https://experienceleague.adobe.com/docs/experience-manager-65/forms/publish-process-aem-forms/publishing-unpublishing-forms.html?lang=en).
 
 Mer information finns i de effektivaste strategierna i [Introduktion till utveckling av anpassningsbara formulär](/help/forms/using/introduction-forms-authoring.md).
 
 ## Skapa anpassningsbara formulär {#author-adaptive-forms}
 
-### Använda pekoptimerat gränssnitt för redigering {#using-touch-optimized-ui-for-authoring}
+### Använda pekoptimerat användargränssnitt för redigering {#using-touch-optimized-ui-for-authoring}
 
 * Använd objektwebbläsaren i sidlisten för att snabbt komma åt fält som är djupa i formulärhierarkin. Du kan använda sökrutan för att söka efter objekt i formulär- eller objektträdet och navigera mellan olika objekt.
 * Om du vill visa och redigera egenskaperna för en komponent i komponentwebbläsaren i sidofältet markerar du komponenten och klickar på ![cmppr-1](assets/cmppr-1.png). Du kan också dubbelklicka på en komponent om du vill visa dess egenskaper i egenskapsläsaren.
@@ -141,7 +142,7 @@ Regelredigeraren innehåller en visuell redigerare och en kodredigerare för att
 
    * `guideBridge.reset()`: Återställer ett formulär.
    * `guideBridge.submit()`: Skickar ett formulär.
-   * `guideBridge.setFocus(somExp, focusOption, runCompletionExp)`: Ställer in fokus på ett fält.
+   * `guideBridge.setFocus(somExp, focusOption, runCompletionExp)`: Anger fokus till ett fält.
    * `guideBridge.validate(errorList, somExpression, focus)`: Validerar ett formulär.
    * `guideBridge.getDataXML(options)`: Hämtar formulärdata som XML.
    * `guideBridge.resolveNode(somExpression)`: Hämtar ett formulärobjekt.
@@ -153,7 +154,40 @@ Regelredigeraren innehåller en visuell redigerare och en kodredigerare för att
       * `field.visible` om du vill ändra synlighet för ett fält.
 
 * Anpassa formulärförfattare kan behöva skriva JavaScript-kod för att skapa affärslogik i ett formulär. JavaScript är kraftfullt och effektivt, men det kan troligtvis påverka säkerheten. Därför måste du se till att formulärförfattaren är en betrodd person och det finns processer för att granska och godkänna JavaScript-koden innan ett formulär börjar användas. Administratören kan begränsa åtkomsten till regelredigeraren till användargrupper baserat på deras roll eller funktion. Se [Bevilja regelredigeraråtkomst för valda användargrupper](/help/forms/using/rule-editor-access-user-groups.md).
-* Du kan använda uttryck i regler för att göra adaptiva formulär dynamiska. Alla uttryck är giltiga JavaScript-uttryck och använder API:er för skriptmodell för adaptiva formulär. Dessa uttryck returnerar värden av vissa typer. Mer information om uttryck och metodtips kring dem finns i [Adaptiva formuläruttryck](/help/forms/using/adaptive-form-expressions.md).
+* Du kan använda uttryck i regler för att göra adaptiva formulär dynamiska. Alla uttryck är giltiga JavaScript-uttryck och använder API:er för adaptiva formulär. Dessa uttryck returnerar värden av vissa typer. Mer information om uttryck och metodtips kring dem finns i [Adaptiva formuläruttryck](/help/forms/using/adaptive-form-expressions.md).
+
+* Adobe rekommenderar att du använder synkrona JavaScript-åtgärder över asynkrona när du skapar regler med Regelredigeraren. Asynkrona åtgärder bör inte användas. Om du befinner dig i en situation där asynkrona åtgärder inte kan undvikas är det viktigt att du implementerar JavaScript-stängningsfunktioner. På så sätt kan ni effektivt skydda er mot alla tänkbara konkurrensförhållanden och säkerställa att regelimplementeringarna ger optimala prestanda och upprätthåller stabilitet genom hela processen.
+
+  Låt oss anta att vi behöver hämta data från ett externt API och sedan tillämpa några regler som baseras på dessa data. Vi använder en stängning för att hantera det asynkrona API-anropet och se till att reglerna tillämpas efter att data har hämtats. Här är exempelkoden:
+
+  ```JavaScript
+       function fetchDataFromAPI(apiEndpoint, callback) {
+        // Simulate asynchronous API call with setTimeout
+        setTimeout(() => {
+          // Assuming the API call is successful, we receive some data
+          const data = {
+            someValue: 42,
+          };
+          // Invoke the callback with the fetched data
+          callback(data);
+        }, 2000); // Simulate a 2-second delay for the API call
+      }
+      // Rule implementation using Closure
+      function ruleImplementation(apiEndpoint) {
+        // Using a closure to handle the asynchronous API call and rule application
+        // say you have set this value in street field inside address panel
+        var streetField = address.street;
+        fetchDataFromAPI(apiEndpoint, (data) => {
+          streetField.value = data.someValue;
+        });
+      }
+      // Example usage of the rule implementation
+      const apiEndpoint = "https://example-api.com/data";
+      ruleImplementation(apiEndpoint);
+  ```
+
+  I detta exempel `fetchDataFromAPI` simulerar ett asynkront API-anrop med `setTimeout`. När data har hämtats anropas den angivna callback-funktionen, som är stängningen för att hantera det efterföljande regelprogrammet. The `ruleImplementation` -funktionen innehåller regellogiken.
+
 
 ### Arbeta med teman {#working-with-themes}
 
@@ -234,7 +268,7 @@ Ett urkunder är en förenklad PDF-version av ett adaptivt formulär som du kan 
 
 ### Felsöka och testa anpassningsbara formulär {#debugging-and-testing-adaptive-forms}
 
-[AEM Chrome-plugin](https://adobe-consulting-services.github.io/acs-aem-tools/aem-chrome-plugin/) är ett webbläsartillägg för Google Chrome som innehåller verktyg för felsökning av adaptiva formulär. Formulärförfattare och utvecklare kan använda dessa verktyg för att:
+[AEM Chrome Plug-in](https://adobe-consulting-services.github.io/acs-aem-tools/aem-chrome-plugin/) är ett webbläsartillägg för Google Chrome som innehåller verktyg för felsökning av adaptiva formulär. Formulärförfattare och utvecklare kan använda dessa verktyg för att:
 
 * Identifiera flaskhalsar och optimera formuläråtergivningens prestanda
 * Felsöka nyckelord och bindRef-fel i formuläret
