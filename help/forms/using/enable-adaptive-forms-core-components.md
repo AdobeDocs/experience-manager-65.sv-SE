@@ -8,9 +8,9 @@ contentOwner: Khushwant Singh
 topic-tags: Adaptive Forms
 docset: aem65
 role: Admin, Developer
-source-git-commit: 00f8b2c72aab37a57ab76e684f432250d2de3470
+source-git-commit: 3bc61e56d2fcd9f32c37a7ea04b0ffc6728bfc56
 workflow-type: tm+mt
-source-wordcount: '891'
+source-wordcount: '889'
 ht-degree: 0%
 
 ---
@@ -20,8 +20,8 @@ ht-degree: 0%
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
+| AEM as a Cloud Service | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/setup-configure-migrate/enable-adaptive-forms-core-components.html) |
 | AEM 6.5 | Denna artikel |
-| AEM as a Cloud Service | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/using-themes-in-core-components.html) |
 
 **Gäller för:** ✅ adaptiva Form Core-komponenter ❎ adaptiva Form Foundation-komponenter.
 
@@ -81,7 +81,7 @@ Så här skapar du en AEM Archetype 41 eller [senare](https://github.com/adobe/a
 
    * Ändra inte värdet för `aemVersion` egenskap från `6.5.15.0` till något annat.
 
-   * Ange `archetypeVersion` egenskap till `41` eller senare. Den senaste versionen finns i avsnittet om systemkrav i [AEM Project Archetype](https://github.com/adobe/aem-project-archetype) dokumentation.
+   * Ange `archetypeVersion` egenskap till `41` eller senare. Den senaste versionen finns i avsnittet om systemkrav i [AEM Project Archettype](https://github.com/adobe/aem-project-archetype) dokumentation.
 
    * Uppdatera kommandot så att det återspeglar de specifika värdena för miljön, inklusive `appTitle`, `appId`och `groupId`. Ange även värdet för  `includeFormsenrollment` egenskap till `y`. Om du använder Forms Portal anger du `includeExamples=y` om du vill inkludera Forms Portal Core Components i ditt projekt.
 
@@ -107,7 +107,7 @@ Så här skapar du en AEM Archetype 41 eller [senare](https://github.com/adobe/a
 1. Uppdatera projektet så att det innehåller den senaste versionen av Forms Core Components:
 
    1. Öppna [AEM Archetype-projektmapp]/pom.xml för redigering.
-   1. Ange version av `core.forms.components.version` och `core.forms.components.af.version` till [de senaste Forms Core-komponenterna](https://github.com/adobe/aem-core-forms-components/tree/release/650) version.
+   1. Ange version av `core.forms.components.version` och `core.forms.components.af.version` till [senaste Forms Core Components](https://github.com/adobe/aem-core-forms-components/tree/release/650) version.
 
    1. Spara och stäng filen.
 
@@ -152,11 +152,11 @@ När de adaptiva Forms Core-komponenterna är aktiverade för din miljö läggs 
 * Skapa grundkomponentbaserade adaptiva Forms.
 * Skapa grundkomponentbaserade adaptiva formulärmallar.
 * Skapa egna teman för grundkomponentbaserade adaptiva formulärmallar.
-* Servera Core Component-baserade Adaptive Form JSON-representationer för kanaler som mobiler, webben, inbyggda appar och tjänster som kräver att formuläret återges rubrikfritt.
+* Servera Core Component-baserade Adaptive Form JSON-representationer för kanaler som mobiler, webben, inbyggda appar och tjänster som kräver att ett formulär visas utan rubrik.
 
 ## What&#39;s Next
 
 * [Skapa en grundkomponentbaserad adaptiv form](/help/forms/using/create-an-adaptive-form-core-components.md)
 * [Skapa eller lägga till ett anpassat formulär på en AEM Sites-sida eller ett Experience Fragment](create-or-add-an-adaptive-form-to-aem-sites-page.md)
 * [Skapa teman för grundkomponentbaserade adaptiva Forms](create-or-customize-themes-for-adaptive-forms-core-components.md)
-* [Skapa en mall för grundkomponentbaserade adaptiva Forms](template-editor.md)
+* [Skapa en mall för Core Components-baserade Adaptive Forms](template-editor.md)

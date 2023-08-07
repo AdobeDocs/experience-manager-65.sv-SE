@@ -9,7 +9,7 @@ contentOwner: Khushwant Singh
 topic-tags: Adaptive Forms
 docset: aem65
 role: Admin, Developer
-source-git-commit: 1b97dc536550da8904bc7da09e983e0722c42a3d
+source-git-commit: 3bc61e56d2fcd9f32c37a7ea04b0ffc6728bfc56
 workflow-type: tm+mt
 source-wordcount: '1660'
 ht-degree: 0%
@@ -24,11 +24,10 @@ ht-degree: 0%
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
-| AEM 6.5 | Denna artikel |
 | AEM as a Cloud Service | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/creating-adaptive-form-core-components.html) |
+| AEM 6.5 | Denna artikel |
 
 **Gäller för:** ✅ adaptiva grundkomponenter ❎ [Komponenter i adaptiv Form Foundation](/help/forms/using/create-adaptive-form.md).
-
 
 Med adaptiva Forms kan du skapa engagerande, responsiva, dynamiska och anpassningsbara formulär. AEM Forms har ett användarvänligt gränssnitt för att snabbt skapa adaptiva Forms. Användargränssnittet erbjuder snabb tabbnavigering så att du enkelt kan välja förkonfigurerade mallar, format, fält och alternativ för att skicka formulär för att skapa ett anpassat formulär.
 
@@ -36,7 +35,7 @@ Innan du börjar får du lära dig mer om vilken typ av Forms-komponenter du kan
 
 * [Adaptiva Forms Core-komponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=en): Dessa är standardiserade komponenter för datainhämtning. Dessa komponenter har anpassningsmöjligheter, kortare utvecklingstid och lägre underhållskostnader för era digitala registreringsupplevelser. En utvecklare kan enkelt anpassa och utforma dessa komponenter. Adobe rekommenderar att man utnyttjar dessa moderna och utbyggbara komponenter för att utveckla Adaptiv Forms.
 
-* [Adaptiva Forms Foundation-komponenter](creating-adaptive-form.md): Dessa är klassiska (gamla) datainhämtningskomponenter. Du kan fortsätta att använda dessa för att redigera dina befintliga grundläggande komponentbaserade adaptiva formulär. Om du skapar formulär rekommenderar Adobe att du använder  [Adaptiva Forms Core-komponenter](/help/forms/using/create-adaptive-form.md) för att skapa en adaptiv Forms.
+* [Adaptiva Forms Foundation-komponenter](creating-adaptive-form.md): Dessa är klassiska (gamla) komponenter för datainhämtning. Du kan fortsätta att använda dessa för att redigera dina befintliga grundläggande komponentbaserade adaptiva formulär. Om du skapar formulär rekommenderar Adobe att du använder  [Adaptiva Forms Core-komponenter](/help/forms/using/create-adaptive-form.md) för att skapa en adaptiv Forms.
 
 ## Krav
 
@@ -44,7 +43,7 @@ Du behöver följande för att skapa ett adaptivt formulär:
 
 * **Aktivera adaptiva Forms Core-komponenter för din miljö**: AEM Archetype project version 41 or later is required to [aktivera kärnkomponenter för din miljö](/help/forms/using/enable-adaptive-forms-core-components.md). När du aktiverar kärnkomponenterna för din miljö, **Adaptiv Forms (kärnkomponent)** -mallar och Canvas-teman läggs till i din miljö.
 
-* **En anpassad formulärmall**: En mall innehåller en grundläggande struktur och definierar utseendet (layouter och format) för ett adaptivt formulär. Den har förformaterade komponenter som innehåller vissa egenskaper och innehållsstruktur. Här finns också alternativ för att definiera ett tema och en skicka-åtgärd. Temat definierar utseendet, känslan och skickaåtgärden definierar vilken åtgärd som ska vidtas när ett adaptivt formulär skickas in.
+* **En adaptiv formulärmall**: En mall innehåller en grundläggande struktur och definierar utseendet (layouter och format) för ett adaptivt formulär. Den har förformaterade komponenter som innehåller vissa egenskaper och innehållsstruktur. Här finns också alternativ för att definiera ett tema och en skicka-åtgärd. Temat definierar utseendet, känslan och skickaåtgärden definierar vilken åtgärd som ska vidtas när ett adaptivt formulär skickas in.
 
   >[!NOTE]
   >
@@ -62,14 +61,14 @@ Du behöver följande för att skapa ett adaptivt formulär:
 
 1. Tryck på **[!UICONTROL Create]**  > **[!UICONTROL Create Adaptive Forms]**.
 
-1. Välj en anpassad Forms Core Components-mall och klicka på **[!UICONTROL Next]**.
+1. Välj en adaptiv Forms Core Components-mall och klicka på **[!UICONTROL Next]**.
 
 1. The **[!UICONTROL Add Properties]** visas. Ange värdena för följande egenskapsfält. Fälten Titel och Namn är obligatoriska:
 
    * **[!UICONTROL Title:]** Anger formulärets visningsnamn. Titeln hjälper dig att identifiera formuläret i [!DNL Experience Manager Forms] användargränssnitt.
    * **[!UICONTROL Name:]** Anger formulärets namn. En nod med det angivna namnet skapas i databasen. När du börjar skriva en titel genereras värdet för namnfältet automatiskt. Du kan ändra det föreslagna värdet. Namnfältet får endast innehålla alfanumeriska tecken, bindestreck och understreck.
    * **[!UICONTROL Description:]** Anger detaljerad information om formuläret.
-   * **[!UICONTROL Theme Client Library]:** Anger temat för ett adaptivt formulär. Som standard är `adaptiveform.theme.canvas3` temat är valt. Du kan också välja ett annat tema från **[!UICONTROL Theme Client Library]** nedrullningsbar meny.
+   * **[!UICONTROL Theme Client Library]:** Anger temat för ett adaptivt formulär. Som standard är `adaptiveform.theme.canvas3` -temat är valt. Du kan också välja ett annat tema från **[!UICONTROL Theme Client Library]** listruta.
    * **[!UICONTROL Configuration Container:]**  Definierar en plats där konfigurationsfiler för Adaptive Forms lagras. Dessa konfigurationsfiler innehåller inställningar och egenskaper som är relaterade till beteendet och utseendet för Adaptive Forms.
    * **[!UICONTROL Tags:]** Anger taggar som unikt identifierar den adaptiva formen. Taggar hjälper dig att söka i formuläret. Om du vill skapa taggar skriver du nya taggnamn i **[!UICONTROL Tags]** box.
 1. Tryck på **[!UICONTROL Create]**. Ett anpassat formulär skapas och en dialogruta öppnas där du kan öppna formuläret för redigering.
@@ -80,14 +79,14 @@ Du behöver följande för att skapa ett adaptivt formulär:
 
 ## Använd adaptiva Forms Core-komponenter för att skapa ditt formulär
 
-När du har öppnat formuläret för redigering kan du använda tillgängliga adaptiva Forms Core-komponenter för att lägga till formulärfält i formuläret. Du kan dra och släppa eller använda [infoga komponent] om du vill lägga till de här komponenterna i ett formulär. Läs AEM Core Components-dokumentationen om du vill veta mer om tillgängliga komponenter [Adaptiva Forms Core-komponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=en#components). Du kan också besöka [https://aemcomponents.dev/](https://aemcomponents.dev/) för att se hur de tillgängliga kärnkomponenterna fungerar i praktiken.
+När du har öppnat formuläret för redigering kan du använda tillgängliga adaptiva Forms Core-komponenter för att lägga till formulärfält i formuläret. Du kan dra och släppa eller använda + [infoga komponent] för att lägga till dessa komponenter i ett formulär. Läs AEM Core Components-dokumentationen om du vill veta mer om tillgängliga komponenter [Adaptiva Forms Core-komponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=en#components). Du kan också besöka [https://aemcomponents.dev/](https://aemcomponents.dev/) för att se hur de tillgängliga kärnkomponenterna fungerar i praktiken.
 
 ## Konfigurera åtgärden Skicka för ett anpassat formulär {#configure-submit-action-for-form}
 
 Med en Skicka-åtgärd kan du välja målet för data som har hämtats via ett anpassat formulär. Den aktiveras när en användare klickar på knappen Skicka på ett anpassat formulär. Anpassade formulär innehåller några av de åtgärder som har vidtagits för att skicka in. Du kan också utöka en standardåtgärd för att skicka för att skapa en egen anpassad åtgärd. Så här konfigurerar du en Skicka-åtgärd för formuläret:
 
-1. Öppna innehållsläsaren och välj **[!UICONTROL Guide Container]** i din adaptiva form.
-1. Klicka på egenskaperna för stödlinjebehållaren ![Stödlinjeegenskaper](/help/forms/using/assets/configure-icon.svg) ikon. Dialogrutan Adaptiv formulärbehållare öppnas.
+1. Öppna innehållsläsaren och välj **[!UICONTROL Guide Container]** som ingår i det adaptiva formuläret.
+1. Klicka på egenskaperna för stödlinjebehållaren ![Stödlinjeegenskaper](/help/forms/using/assets/configure-icon.svg) -ikon. Dialogrutan Adaptiv formulärbehållare öppnas.
 
 1. Klicka på  **[!UICONTROL Submission]** -fliken.
 
@@ -105,8 +104,8 @@ Med en Skicka-åtgärd kan du välja målet för data som har hämtats via ett a
 
 När du skickar ett formulär kan du dirigera om användaren till en annan webbsida eller ett meddelande. Så här omdirigerar du användaren eller konfigurerar tackmeddelandet:
 
-1. Öppna innehållsläsaren och välj **[!UICONTROL Guide Container]** i din adaptiva form.
-1. Klicka på egenskaperna för stödlinjebehållaren ![Stödlinjeegenskaper](/help/forms/using/assets/configure-icon.svg) ikon. Dialogrutan Adaptiv formulärbehållare öppnas.
+1. Öppna innehållsläsaren och välj **[!UICONTROL Guide Container]** som ingår i det adaptiva formuläret.
+1. Klicka på egenskaperna för stödlinjebehållaren ![Stödlinjeegenskaper](/help/forms/using/assets/configure-icon.svg) -ikon. Dialogrutan Adaptiv formulärbehållare öppnas.
 1. Öppna **[!UICONTROL Submission]** -fliken.
 
    ![Klicka på ikonen för skiftnyckel för att öppna dialogrutan Adaptiv formulärbehållare för att konfigurera en omdirigeringssida eller ett tack för ditt meddelande](/help/forms/using/assets/adaptive-forms-submit-message.png)
@@ -117,7 +116,7 @@ När du skickar ett formulär kan du dirigera om användaren till en annan webbs
 
 ## Konfigurera ett schema eller en formulärdatamodell för ett anpassat formulär {#configure-schema-or-data-model-for-form}
 
-Du kan använda formulärdatamodellen för att ansluta ett formulär till en datakälla för att skicka och ta emot data baserat på användaråtgärder. Du kan också ansluta ett formulär till ett JSON-schema för att ta emot skickade data i ett fördefinierat format. Beroende på behovet kan du ansluta formuläret till ett JSON-schema eller en formulärdatamodell:
+Du kan använda formulärdatamodellen för att ansluta ett formulär till en datakälla för att skicka och ta emot data baserat på användaråtgärder. Du kan också ansluta ett formulär till ett JSON-schema för att ta emot skickade data i ett fördefinierat format. Beroende på vad som krävs kan du ansluta formuläret till ett JSON-schema eller en formulärdatamodell:
 
 * [Skapa ett JSON-schema och överför det till din miljö](/help/forms/using/adaptive-form-json-schema-form-model.md)
 * [Skapa en formulärdatamodell](/help/forms/using/create-form-data-models.md)
@@ -126,16 +125,16 @@ Du kan använda formulärdatamodellen för att ansluta ett formulär till en dat
 
 Så här konfigurerar du ett JSON-schema eller en formulärdatamodell för formuläret:
 
-1. Öppna innehållsläsaren och välj **[!UICONTROL Guide Container]** i din adaptiva form.
-1. Klicka på egenskaperna för stödlinjebehållaren ![Stödlinjeegenskaper](/help/forms/using/assets/configure-icon.svg) ikon. Dialogrutan Adaptiv formulärbehållare öppnas.
+1. Öppna innehållsläsaren och välj **[!UICONTROL Guide Container]** som ingår i det adaptiva formuläret.
+1. Klicka på egenskaperna för stödlinjebehållaren ![Stödlinjeegenskaper](/help/forms/using/assets/configure-icon.svg) -ikon. Dialogrutan Adaptiv formulärbehållare öppnas.
 1. Öppna **[!UICONTROL Data Model]** -fliken.
 
    ![Klicka på ikonen för skiftnyckel för att öppna dialogrutan Adaptiv formulärbehållare för att konfigurera ett JSON-schema eller en formulärdatamodell](/help/forms/using/assets/adaptive-forms-select-form-data-model-or-json-schema.png)
 
 1. Välj och konfigurera ett JSON-schema eller en formulärdatamodell utifrån dina krav:
 
-   * När du väljer **[!UICONTROL Form Model]** , använd **[!UICONTROL Select Form Data Model]** för att välja en förkonfigurerad formulärdatamodell.
-   * När du väljer **[!UICONTROL Schema]** , använd **[!UICONTROL Schema]** för att välja ett JSON-schema för formuläret.
+   * När du väljer **[!UICONTROL Form Model]** -alternativ, använd **[!UICONTROL Select Form Data Model]** för att välja en förkonfigurerad formulärdatamodell.
+   * När du väljer **[!UICONTROL Schema]** -alternativ, använd **[!UICONTROL Schema]** för att välja ett JSON-schema för formuläret.
 
 1. Klicka på **[!UICONTROL Done]**.
 
@@ -154,12 +153,12 @@ Du kan använda förifyllningstjänsten för att autofylla fält i ett adaptivt 
 
 Du kan använda förifyllningstjänsten för formulärdatamodell för att fylla i fält i ett adaptivt formulär i förväg med hjälp av en formulärdatamodell eller en anpassad förifyllningstjänst. Tjänsten för förifyllnad av formulärdatamodell använder [Hämta tjänst för konfigurerad formulärdatamodell](work-with-form-data-model.md#add-data-model-objects-and-services-add-data-model-objects-and-services) för att hämta data. Så här använder du förifyllningstjänsten för formulärdatamodell för ett adaptivt formulär:
 
-1. Öppna innehållsläsaren och välj **[!UICONTROL Guide Container]** i din adaptiva form.
-1. Klicka på egenskaperna för stödlinjebehållaren ![Stödlinjeegenskaper](/help/forms/using/assets/configure-icon.svg) ikon. Dialogrutan Adaptiv formulärbehållare öppnas.
-1. Klicka på egenskaperna för den adaptiva formulärbehållaren ![Egenskaper för adaptiv formulärbehållare](/help/forms/using/assets/configure-icon.svg) ikon. Dialogrutan Adaptiv formulärbehållare öppnas för att konfigurera datamodeller.
+1. Öppna innehållsläsaren och välj **[!UICONTROL Guide Container]** som ingår i det adaptiva formuläret.
+1. Klicka på egenskaperna för stödlinjebehållaren ![Stödlinjeegenskaper](/help/forms/using/assets/configure-icon.svg) -ikon. Dialogrutan Adaptiv formulärbehållare öppnas.
+1. Klicka på egenskaperna för den adaptiva formulärbehållaren ![Egenskaper för adaptiv formulärbehållare](/help/forms/using/assets/configure-icon.svg) -ikon. Dialogrutan Adaptiv formulärbehållare öppnas för att konfigurera datamodeller.
    ![Klicka på ikonen för skiftnyckel för att öppna dialogrutan Adaptiv formulärbehållare för att konfigurera en omdirigeringssida eller ett tack för ditt meddelande](/help/forms/using/assets/adaptive-forms-container-prefill-service.png)
 1. Välj en formulärdatamodell. Öppna **[!UICONTROL Basic]** -fliken. I förifyllningstjänsten väljer du **[!UICONTROL Form Data Model Prefill Service]**.
-1. Klicka på **[!UICONTROL Done]**. Ditt adaptiva formulär har nu konfigurerats för att använda förifyllning av formulärdatamodell. Nu kan du använda [regelredigerare](rule-editor.md) för att skapa regler för förifyllning av formulärfält.
+1. Klicka på **[!UICONTROL Done]**. Ditt adaptiva formulär har nu konfigurerats för att använda förifyllning av formulärdatamodell. Nu kan du använda [regelredigerare](rule-editor.md) om du vill skapa regler för förifyllning av formulärfält.
 
 <!--
 ## Edit Form Model properties of an Adaptive Form {#edit-form-model}
@@ -175,7 +174,7 @@ Du kan använda förifyllningstjänsten för formulärdatamodell för att fylla 
 
 * [Använd regelredigeraren för att lägga till dynamiskt beteende i formulär](rule-editor.md)
 * [Skapa eller anpassa teman för grundkomponentbaserade adaptiva Forms](create-or-customize-themes-for-adaptive-forms-core-components.md)
-* Skapa en mall för grundkomponentbaserade adaptiva Forms
+* Skapa en mall för Core Components-baserade Adaptive Forms
 
 ## Se även
 

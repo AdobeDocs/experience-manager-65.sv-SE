@@ -12,14 +12,19 @@ discoiquuid: 1717b1b4-1c2a-450e-8e79-4156a974d5fa
 docset: aem65
 role: Admin
 exl-id: d802ac53-e3db-45ca-afcb-7e99d0bb7877
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+source-git-commit: 3bc61e56d2fcd9f32c37a7ea04b0ffc6728bfc56
 workflow-type: tm+mt
-source-wordcount: '261'
-ht-degree: 0%
+source-wordcount: '282'
+ht-degree: 2%
 
 ---
 
 # AEM Forms on OSGi Groups and Privileges{#aem-forms-on-osgi-groups-and-privileges}
+
+| Version | Artikellänk |
+| -------- | ---------------------------- |
+| AEM as a Cloud Service | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/setup-configure-migrate/forms-groups-privileges-tasks.html) |
+| AEM 6.5 | Den här artikeln |
 
 Du kan [skapa grupper](/help/sites-administering/user-group-ac-admin.md#group-administration) och tilldela profiler och [användare](/help/sites-administering/user-group-ac-admin.md#user-administration) till grupperna i AEM. Dessa profiler styr behörigheter för de användare som är en del av gruppen.
 
@@ -62,7 +67,7 @@ När du har installerat [AEM Forms tilläggspaket](../../forms/using/installing-
     </ul> </td> 
   </tr>
   <tr>
-   <td>mallskapare <sup>[2]</sup></td> 
+   <td>template-authors <sup>[2]</sup></td> 
    <td>
     <ul> 
      <li>Skapa och förhandsgranska anpassningsbara formulär eller mallar för interaktiv kommunikation</li> 
@@ -79,7 +84,7 @@ När du har installerat [AEM Forms tilläggspaket](../../forms/using/installing-
    <td>cm-agent-users</td> 
    <td>
     <ul> 
-     <li>Få åtkomst till brev från Correspondence Management eller interaktiv kommunikation med hjälp av agentens användargränssnitt</li> 
+     <li>Få åtkomst till brev från Correspondence Management eller interaktiv kommunikation med hjälp av agentgränssnittet</li> 
     </ul> </td> 
   </tr>
   <tr>
@@ -110,5 +115,5 @@ När du har installerat [AEM Forms tilläggspaket](../../forms/using/installing-
  </tbody>
 </table>
 
-1. Användaren med gruppbehörighet för formuläranvändare kan inte skriva skript för anpassade formulär.
+1. Användaren med gruppbehörighet för formuläranvändare kan inte skriva skript för adaptiva formulär.
 1. Användaren med gruppbehörighet för mallförfattare kan inte skriva skript för mallar.
