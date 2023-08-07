@@ -1,6 +1,6 @@
 ---
 title: Fråga och indexering
-description: Lär dig hur du konfigurerar index i AEM.
+description: Lär dig konfigurera index i AEM.
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
@@ -8,9 +8,9 @@ topic-tags: deploying
 legacypath: /content/docs/en/aem/6-0/deploy/upgrade/queries-and-indexing
 feature: Configuring
 exl-id: d9ec7728-84f7-42c8-9c80-e59e029840da
-source-git-commit: b9c164321baa3ed82ae87a97a325fcf0ad2f6ca0
+source-git-commit: 2adc33b5f3ecb2a88f7ed2c5ac5cc31f98506989
 workflow-type: tm+mt
-source-wordcount: '2619'
+source-wordcount: '3033'
 ht-degree: 0%
 
 ---
@@ -64,7 +64,7 @@ Därefter används varje index för att beräkna kostnaden för frågan. När de
 
 >[!NOTE]
 >
->För stora databaser är det tidskrävande att skapa ett index. Detta gäller både när ett index skapas första gången och när ett index indexeras om (när definitionen ändrats). Se även [Felsöka ekindex](/help/sites-deploying/troubleshooting-oak-indexes.md) och [Förhindra långsam omindexering](/help/sites-deploying/troubleshooting-oak-indexes.md#preventing-slow-re-indexing).
+>För stora databaser är det tidskrävande att skapa ett index. Detta gäller både när ett index skapas första gången och när ett index indexeras om (när definitionen har ändrats). Se även [Felsökning av aktivitetsindex](/help/sites-deploying/troubleshooting-oak-indexes.md) och [Förhindra långsam omindexering](/help/sites-deploying/troubleshooting-oak-indexes.md#preventing-slow-re-indexing).
 
 Om omindexering behövs i stora databaser, särskilt när du använder MongoDB och fulltextindex, bör du överväga att extrahera text och använda eko-run för att skapa det ursprungliga indexet och indexera om.
 
@@ -76,7 +76,7 @@ Indexnodens typ måste vara **oak:QueryIndexDefinition.** Det finns flera konfig
 
 Egenskapsindexet är användbart för frågor som har egenskapsbegränsningar men inte är fulltextfrågor. Den kan konfigureras genom att följa proceduren nedan:
 
-1. Öppna CRXDE genom att gå till `http://localhost:4502/crx/de/index.jsp`
+1. Öppna CRXDE genom att `http://localhost:4502/crx/de/index.jsp`
 1. Skapa en nod under **oak:index**
 1. Namnge noden **PropertyIndex** och ange nodtypen till **oak:QueryIndexDefinition**
 1. Ange följande egenskaper för den nya noden:
@@ -131,6 +131,84 @@ Lucene-indexet har följande konfigurationsalternativ:
 * The **includePropertyTypes** som definierar vilken deluppsättning av egenskapstyper som ingår i indexet.
 * The **excludePropertyNames** som definierar en lista med egenskapsnamn - egenskaper som ska uteslutas från indexet.
 * The **reindex** flagga som **true**, utlöser en omindexering av fullständigt innehåll.
+
+### Förstå fulltextsökning {#understanding-fulltext-search}
+
+Dokumentationen i det här avsnittet gäller Apache Lucene, Elasticsearch och fulltextindex för exempelvis PostgreSQL, SQLite och MySQL. Följande exempel är för AEM / Oak / Lucene.
+
+<b>Data som ska indexeras</b>
+
+Startpunkten är de data som behöver indexeras. Ta följande dokument som exempel:
+
+| <b>Dokument-ID</b> | <b>Bana</b> | <b>Fulltext</b> |
+| --- | --- | --- |
+| 100 | /content/rubik | &quot;Rubik är ett finskt varumärke.&quot; |
+| 200 | /content/rubiksCube | &quot;Rubiks kub uppfanns 1974.&quot; |
+| 300 | /content/cube | &quot;En kub är ett tredimensionellt objekt.&quot; |
+
+
+<b>Inverterat index</b>
+
+Indexeringsfunktionen delar upp fulltexten i ord som kallas &quot;tokens&quot; och skapar ett index som kallas &quot;inverterat index&quot;. Indexet innehåller en lista med dokument där det visas för varje ord.
+
+Mycket kort, vanliga ord (kallas även&quot;stopwords&quot;) indexeras inte. Alla variabler konverteras till gemener och ordstam används.
+
+Lägg märke till specialtecken som *&quot;-&quot;* är inte indexerade.
+
+| <b>Token</b> | <b>Dokument-ID</b> |
+| --- | --- |
+| 194 | ..., 200,... |
+| varumärke | ..., 100,... |
+| kub | ..., 200, 300,... |
+| dimension | 300 |
+| avsluta | ..., 100,... |
+| uppfinna | 200 |
+| object | ..., 300,... |
+| rubik | .., 100, 200,... |
+
+Listan med dokument sorteras. Detta blir praktiskt när man frågar.
+
+<b>Söker</b>
+
+Nedan visas ett exempel på en fråga. Observera att alla specialtecken (som *&#39;*) ersattes med ett blanksteg:
+
+```
+/jcr:root/content//element(\*; cq:Page)`[` jcr:contains('Rubik s Cube')`]`
+```
+
+Orden tokeniseras och filtreras på samma sätt som vid indexering (enstaka teckenord tas till exempel bort). Så i det här fallet är sökningen för:
+
+```
++:fulltext:rubik +:fulltext:cube
+```
+
+Indexet läser sedan igenom listan med dokument för dessa ord. Om det finns många dokument kan listorna vara mycket stora. Låt oss anta att de innehåller följande:
+
+
+| <b>Token</b> | <b>Dokument-ID</b> |
+| --- | --- |
+| rubik | 10, 100, 200, 1000 |
+| kub | 30, 200, 300, 2000 |
+
+
+Lucene kommer att bläddra fram och tillbaka mellan de två listorna (eller rund-robin) `n` listor, vid sökning efter `n` ord):
+
+* Läs in&quot;rubik&quot; hämtar den första posten: hittar 10
+* Läs i &quot;cube&quot; hämtar den första posten `>` = 10. 10 hittas inte och nästa är 30.
+* Läs in &quot;rubik&quot; som hämtar den första posten `>` = 30: 100 hittas.
+* Läs i &quot;cube&quot; hämtar den första posten `>` = 100: 200 hittas.
+* Läs in &quot;rubik&quot; som hämtar den första posten `>` = 200. 200 hittades. Så dokument 200 är en matchning för båda villkoren. Det här kommer ihåg.
+* Läs in &quot;rubik&quot; hämtar nästa post: 1000.
+* Läs i &quot;cube&quot; hämtar den första posten `>` = 1000: 2000 hittas.
+* Läs in &quot;rubik&quot; som hämtar den första posten `>` = 2000: slut på listan.
+* Slutligen kan vi sluta söka.
+
+Det enda dokument som innehåller båda villkoren är 200, som i exemplet nedan:
+
+| 200 | /content/rubiksCube | &quot;Rubiks kub uppfanns 1974.&quot; |
+| --- | --- | --- |
+
+När flera poster hittas sorteras de sedan efter poäng.
 
 ### Egenskapsindexet Lucene {#the-lucene-property-index}
 
@@ -266,7 +344,7 @@ Se den här nodstrukturen som ett exempel:
 
                * **Typ:** `nt:file`
 
-Namnet på filtren, charFilters och tokenizers formas genom att fabrikssuffixen tas bort. Således:
+Namnet på filtren, charFilters och tokenizers formas genom att fabrikssuffixen tas bort. Således
 
 * `org.apache.lucene.analysis.standard.StandardTokenizerFactory` blir `standard`
 
@@ -366,7 +444,7 @@ AEM 6.1 integrerar även två indexeringsverktyg som finns i AEM 6.0 som en del 
 1. **Förklara fråga**, ett verktyg som hjälper administratörer att förstå hur frågor utförs.
 1. **Oak Index Manager**, ett webbanvändargränssnitt för att underhålla befintliga index.
 
-Nu kan du nå dem genom att gå till **Verktyg - Åtgärder - Kontrollpanel - Diagnostik** på AEM välkomstskärm.
+Nu kan du nå dem genom att **Verktyg - Åtgärder - Kontrollpanel - Diagnostik** på AEM välkomstskärm.
 
 Mer information om hur du använder dem finns i [Dokumentation för instrumentpanelen för åtgärder](/help/sites-administering/operations-dashboard.md).
 
@@ -386,7 +464,7 @@ I det här avsnittet ges rekommendationer om vad som måste göras för att spå
 
 #### Förbereder felsökningsinformation för analys {#preparing-debugging-info-for-analysis}
 
-Det enklaste sättet att få den information som krävs för frågan som körs är via [Förklara fråga](/help/sites-administering/operations-dashboard.md#explain-query). På så sätt kan du samla in exakt den information som behövs för att felsöka en långsam fråga utan att behöva läsa loggnivåinformationen. Detta är önskvärt om du känner till frågan som felsöks.
+Det enklaste sättet att få den information som krävs för frågan som körs är via [Förklara fråga, verktyg](/help/sites-administering/operations-dashboard.md#explain-query). På så sätt kan du samla in exakt den information som behövs för att felsöka en långsam fråga utan att behöva läsa loggnivåinformationen. Detta är önskvärt om du känner till frågan som felsöks.
 
 Om detta inte är möjligt av någon anledning, kan du samla indexeringsloggarna i en enda fil och använda den för att felsöka just det problemet.
 
@@ -409,7 +487,7 @@ Du kan aktivera loggning genom att följa den här proceduren:
 1. Peka webbläsaren till `https://serveraddress:port/system/console/slinglog`
 1. Klicka på **Lägg till ny loggare** i den nedre delen av konsolen.
 1. Lägg till de kategorier som nämns ovan på den nyligen skapade raden. Du kan använda **+** signera för att lägga till mer än en kategori i en enskild loggare.
-1. Välj **FELSÖKNING** från **Loggnivå** nedrullningsbar lista.
+1. Välj **FELSÖKNING** från **Loggnivå** listruta.
 1. Ställ in utdatafilen på `logs/queryDebug.log`. Detta korrelerar alla DEBUG-händelser till en enda loggfil.
 1. Kör frågan eller återge sidan som använder frågan som du vill felsöka.
 1. När du har kört frågan går du tillbaka till loggningskonsolen och ändrar loggnivån för den nyligen skapade loggboken till **INFORMATION**.
@@ -424,7 +502,7 @@ Vanligtvis lagras indexkonfigurationen under `/oak:index` i CRXDE kan du hämta 
 
 Om indexet är konfigurerat på en annan plats ändrar du sökvägen i enlighet med detta.
 
-#### MBean-utdata {#mbean-output}
+#### MBean output {#mbean-output}
 
 Ibland kan det vara praktiskt att ange utdata för indexrelaterade MBeans för felsökning. Du kan göra detta genom att:
 
@@ -435,7 +513,7 @@ Ibland kan det vara praktiskt att ange utdata för indexrelaterade MBeans för f
 
    * Lucene-indexstatistik
    * CopyOnRead - supportstatistik
-   * Oak Query Statistik
+   * Oak Query-statistik
    * IndexStats
 
 1. Klicka på var och en av MBeans för att få prestandastatistik. Skapa en skärmbild eller anteckna dem om du behöver ge support.
