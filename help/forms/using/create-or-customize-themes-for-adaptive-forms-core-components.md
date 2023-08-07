@@ -8,9 +8,9 @@ contentOwner: Khushwant Singh
 topic-tags: Adaptive Forms
 docset: aem65
 role: Admin, Developer
-source-git-commit: a5d38ef6b3281992fd9ac3121cdb6c998631b205
+source-git-commit: d958f616803f92190493cc3f1ef474d0987991bd
 workflow-type: tm+mt
-source-wordcount: '1955'
+source-wordcount: '1969'
 ht-degree: 0%
 
 ---
@@ -20,8 +20,9 @@ ht-degree: 0%
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
-| AEM 6.5 | Denna artikel |
 | AEM as a Cloud Service | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/using-themes-in-core-components.html) |
+| AEM 6.5 | Denna artikel |
+
 
 **Gäller för:** ✅ adaptiva grundkomponenter ❎ [Komponenter i adaptiv Form Foundation](/help/forms/using/themes.md).
 
@@ -39,7 +40,7 @@ AEM 6.5-miljön innehåller följande teman för Core Components based Adaptive 
 
 Ett tema är ett paket som omfattar CSS-filen, JavaScript-filer och resurser (som ikoner) som definierar formatet för din adaptiva Forms. Temat Adaptiv form följer en särskild organisation som består av följande komponenter:
 
-* `src/theme.scss`: Den här mappen innehåller CSS-filen som har stor effekt på hela temat. Det fungerar som en central plats för att definiera och hantera temats format och beteende. Genom att redigera den här filen kan du göra ändringar som har tillämpats överallt i temat och som påverkar både utseendet och funktionaliteten på dina adaptiva Forms- och AEM Sites-sidor.
+* `src/theme.scss`: Den här mappen innehåller CSS-filen som har stor effekt på hela temat. Det fungerar som en central plats för att definiera och hantera temats format och beteende. Genom att redigera den här filen kan du göra ändringar som tillämpas överallt i temat, vilket påverkar både utseendet och funktionaliteten på dina adaptiva Forms- och AEM Sites-sidor.
 
 * `src/site`: Den här mappen innehåller CSS-filer som används på en hel AEM. Dessa filer består av kod och format som påverkar den övergripande funktionen och layouten för AEM webbplats. Alla ändringar som görs här återspeglas på alla sidor på webbplatsen.
 
@@ -68,13 +69,13 @@ Att anpassa ett tema avser processen att ändra och anpassa utseendet på ett te
 > * Använd Pakethanteraren för att distribuera ett tema på alla författare- och publiceringsinstanser.
 > * Ett temaklientbibliotek importeras eller exporteras via Package Manager precis som andra paket.
 
-### Förutsättningar för att anpassa ett tema {#prerequisites}
+### Krav för att anpassa ett tema {#prerequisites}
 
 * [Aktivera adaptiva Forms Core-komponenter](/help/forms/using/enable-adaptive-forms-core-components.md) för din miljö.
 
 * Installera den senaste versionen av [Apache Maven.](https://maven.apache.org/download.cgi) Apache Maven är ett automatiserat byggverktyg som ofta används för Java™-projekt. Genom att installera den senaste versionen får du de beroenden du behöver för att anpassa temat.
 
-* Lär dig hur du skapar en [klientbibliotek i Adobe Experience Manager](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/clientlibs.html). AEM tillhandahåller klientbibliotek, som gör att du kan lagra din klientkod i databasen, ordna den i kategorier och definiera när och hur varje kodkategori ska skickas till klienten.
+* Lär dig skapa en [klientbibliotek i Adobe Experience Manager](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/clientlibs.html). AEM tillhandahåller klientbibliotek, som gör att du kan lagra din klientkod i databasen, ordna den i kategorier och definiera när och hur varje kodkategori ska skickas till klienten.
 
 * Installera en vanlig textredigerare. Exempel: Microsoft® Visual Studio Code. Med en vanlig textredigerare som Microsoft® Visual Studio Code får du en användarvänlig miljö där du kan redigera och ändra temafiler.
 
@@ -102,7 +103,7 @@ Att skapa eller anpassa ett tema är en process i flera steg. Utför stegen i li
  ![Theme Customization workflow](/help/forms/using/assets/custom-theme-steps.png)
 -->
 
-Exemplen i dokumentet är baserade på **Arbetsyta** -temat, men du kan klona vilket tema som helst och anpassa det med samma instruktioner. Dessa instruktioner kan användas för alla teman och du kan ändra teman efter dina specifika behov.
+Exemplen i dokumentet är baserade på **Arbetsyta** men du kan klona vilket tema som helst och anpassa det med samma instruktioner. Dessa instruktioner kan användas för alla teman och du kan ändra teman efter dina specifika behov.
 
 #### 1. Klona Git-databasen för temat {#clone-git-repo-of-theme}
 
@@ -183,7 +184,7 @@ Du kan också anpassa teckensnitt, färg, storlek och andra CSS-egenskaper för 
 >
 > När ett format definieras både på tema- och komponentnivå prioriteras det format som definieras på komponentnivå.
 
-#### 3. Gör temat klart för distribution {#generate-the-clientlib}
+#### 3. Temat är klart för distribution {#generate-the-clientlib}
 
 Om du vill distribuera ett tema till en AEM måste det konverteras till ett klientbibliotek. Så här konverterar du temat till ett klientbibliotek:
 
@@ -208,7 +209,7 @@ Om du vill distribuera ett tema till en AEM måste det konverteras till ett klie
 
    ![Klientbibliotekets plats](/help/forms/using/assets/adaptiveform.theme.easel.png)
 
-#### 4. Distribuera temat i en lokal miljö {#deploy-the-theme-on-a-local-environment}
+#### 4. Använd temat i en lokal miljö {#deploy-the-theme-on-a-local-environment}
 
 Så här distribuerar du temat till din lokala utvecklings- eller testmiljö:
 
@@ -259,11 +260,11 @@ An Adaptive Form with the selected theme is created.
 The selected theme is applied to the Adaptive Form. 
 -->
 
-#### 5. Distribuera ett tema i produktionsmiljön {#deploy-theme}
+#### 5. Använd ett tema i produktionsmiljön {#deploy-theme}
 
 När du har testat temat på den lokala utvecklingsmiljön kan du fortsätta att distribuera temat till produktionsmiljöerna, inklusive både författaren och publiceringsinstanser. Så här distribuerar du temat i dina produktionsmiljöer:
 
-1. Logga in i AEM.
+1. Logga in i din AEM.
 1. Öppna Pakethanteraren. Standardwebbadressen är `https://localhost:4502/crx/packmgr/index.jsp`.
 1. Klicka **Överför paket** och klicka **Bläddra**.
 1. Navigera till och markera `[AEM Archetype Project Folder]\all\target[appid].all-[version].zip`. Klicka **Öppna**.
@@ -292,8 +293,8 @@ Steg för att tillämpa ett tema på ett adaptivt formulär är:
 
    >[!NOTE]
    >
-   > * Som standard är `adaptiveform.theme.canvas3` temat är valt.
-   > * Du kan välja ett annat tema från **Temaklientbibliotek** nedrullningsbar meny.
+   > * Som standard är `adaptiveform.theme.canvas3` -temat är valt.
+   > * Du kan välja ett annat tema från **Temaklientbibliotek** listruta.
 
 1. Klicka **Skapa**.
 
@@ -335,6 +336,7 @@ Så här tar du bort oanvända eller oönskade teman:
 * [Skapa en grundkomponentbaserad adaptiv form](create-an-adaptive-form-core-components.md)
 * [Använd regelredigeraren för att lägga till dynamiskt beteende i formulär](rule-editor.md)
 * [Skapa eller anpassa teman för grundkomponentbaserade adaptiva Forms](create-or-customize-themes-for-adaptive-forms-core-components.md)
-* [Skapa en mall för grundkomponentbaserade adaptiva Forms](template-editor.md)
+* [Skapa en mall för Core Components-baserade Adaptive Forms](template-editor.md)
 * [Skapa eller lägga till ett anpassat formulär på en AEM Sites-sida eller ett Experience Fragment](create-or-add-an-adaptive-form-to-aem-sites-page.md)
+* [Exempelmallar för teman och formulärdatamodeller](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/sample-themes-templates-form-data-models-core-components.html)
 

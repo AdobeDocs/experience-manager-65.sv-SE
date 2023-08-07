@@ -9,9 +9,9 @@ contentOwner: Khushwant Singh
 topic-tags: Adaptive Forms
 docset: aem65
 role: Admin, Developer
-source-git-commit: 3bc61e56d2fcd9f32c37a7ea04b0ffc6728bfc56
+source-git-commit: d958f616803f92190493cc3f1ef474d0987991bd
 workflow-type: tm+mt
-source-wordcount: '1660'
+source-wordcount: '1665'
 ht-degree: 0%
 
 ---
@@ -174,10 +174,10 @@ Du kan använda förifyllningstjänsten för formulärdatamodell för att fylla 
 
 * [Använd regelredigeraren för att lägga till dynamiskt beteende i formulär](rule-editor.md)
 * [Skapa eller anpassa teman för grundkomponentbaserade adaptiva Forms](create-or-customize-themes-for-adaptive-forms-core-components.md)
-* Skapa en mall för Core Components-baserade Adaptive Forms
+
 
 ## Se även
 
 * [Skapa en grundkomponentbaserad adaptiv form](create-an-adaptive-form-core-components.md)
 * [Skapa eller lägga till ett anpassat formulär på en AEM Sites-sida eller ett Experience Fragment](create-or-add-an-adaptive-form-to-aem-sites-page.md)
-
+* [Exempelmallar för teman och formulärdatamodeller](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/sample-themes-templates-form-data-models-core-components.html)
