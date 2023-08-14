@@ -6,9 +6,9 @@ topic-tags: deploying
 docset: aem65
 feature: Configuring
 exl-id: c1c90d6a-ee5a-487d-9a8a-741b407c8c06
-source-git-commit: 30327950779337ce869b6ca376120bc09826be21
+source-git-commit: 2ed19ac8c60dbf49422b8f1f665be4004689e00e
 workflow-type: tm+mt
-source-wordcount: '3521'
+source-wordcount: '3550'
 ht-degree: 0%
 
 ---
@@ -48,7 +48,7 @@ Så här konfigurerar du både nodarkivet och datalagret:
 >
 >Om du uppgraderar från en äldre version av Oak måste du göra en säkerhetskopia av `crx-quickstart/install`mapp först. Efter uppgraderingen återställer du innehållet i mappen till den uppgraderade installationen och ändrar tillägget för konfigurationsfilerna från **.cfg** till **.config**.
 >
->Om du läser den här artikeln som förberedelse för en uppgradering från en **AEM 5.x** installerar du [uppgradera](https://experienceleague.adobe.com/docs/) dokumentation först.
+>Om du läser den här artikeln inför en uppgradering från en **AEM 5.x** installerar du [uppgradera](https://experienceleague.adobe.com/docs/) dokumentation först.
 
 ### Segmentnodarkiv {#segment-node-store}
 
@@ -63,7 +63,7 @@ Du kan konfigurera följande alternativ:
 * `repository.home`: Sökväg till databasstartplats där databasrelaterade data lagras. Segmentfiler lagras som standard under `crx-quickstart/segmentstore` katalog.
 
 * `tarmk.size`: Maximal storlek för ett segment i MB. Standardmaxstorleken är 256 MB.
-* `customBlobStore`: Booleskt värde som anger att ett anpassat datalager används. Standardvärdet är true för AEM 6.3 och senare versioner. Före AEM 6.3 var standardvärdet false.
+* `customBlobStore`: Ett booleskt värde som anger att ett anpassat datalager används. Standardvärdet är true för AEM 6.3 och senare versioner. Före AEM 6.3 var standardvärdet false.
 
 Följande är ett exempel `org.apache.jackrabbit.oak.segment.SegmentNodeStoreService.config` fil:
 
@@ -82,15 +82,15 @@ customBlobStore=B"true"
 
 Dokumentnodarkivet är grunden för AEM MongoMK-implementering. Den använder `org.apache.jackrabbit.oak.plugins.document.DocumentNodeStoreService`* *PID. Följande konfigurationsalternativ är tillgängliga:
 
-* `mongouri`: The [MongoURI](https://docs.mongodb.org/manual/reference/connection-string/) krävs för att ansluta till Mongo-databasen. Standardvärdet är `mongodb://localhost:27017`
+* `mongouri`: [MongoURI](https://docs.mongodb.org/manual/reference/connection-string/) krävs för att ansluta till Mongo-databasen. Standardvärdet är `mongodb://localhost:27017`
 
-* `db`: Namn på Mongo-databasen. Standardvärdet är **Oak** ``. However, new AEM 6 installations use **aem-author** ``som standarddatabasnamn.
+* `db`: Namnet på Mongo-databasen. Standardvärdet är **Oak** ``. However, new AEM 6 installations use **aem-author** ``som standarddatabasnamn.
 
 * `cache`: Cachestorleken i MB. Detta fördelas mellan olika cacheminnen som används i DocumentNodeStore. Standardvärdet är `256`
 
-* `changesSize`: Storlek i MB på den mappade samling som används i Mongo för cache-lagring av diff-utdata. Standardvärdet är `256`
+* `changesSize`: Storlek i MB på en kopplad samling som används i Mongo för cache-lagring av diff-utdata. Standardvärdet är `256`
 
-* `customBlobStore`: Booleskt värde som anger att ett anpassat datalager kommer att användas. Standardvärdet är `false`.
+* `customBlobStore`: Ett booleskt värde som anger att ett anpassat datalager kommer att användas. Standardvärdet är `false`.
 
 Följande är ett exempel `org.apache.jackrabbit.oak.plugins.document.DocumentNodeStoreService.config` fil:
 
@@ -139,7 +139,11 @@ Dessa konfigurationsalternativ är tillgängliga:
 
 AEM kan konfigureras för att lagra data i Amazon Simple Storage Service (S3). Den använder `org.apache.jackrabbit.oak.plugins.blob.datastore.S3DataStore.config` PID för konfiguration.
 
-Om du vill aktivera S3-datalagringsfunktionen måste ett funktionspaket som innehåller S3 Datastore Connector hämtas och installeras. Gå till [Adobe-databas](https://repo1.maven.org/maven2/com/adobe/granite/com.adobe.granite.oak.s3connector/) och ladda ned den senaste versionen från 1.10.x-versionerna av funktionspaketet (till exempel com.adobe.granite.oak.s3connector-1.10.0.zip). Du måste även hämta och installera det senaste AEM Service Pack som finns på [Versionsinformation för AEM 6.5](/help/release-notes/release-notes.md) sida.
+>[!NOTE]
+>
+>AEM 6.5 har stöd för datalagring i Amazon S3, men det finns inte stöd för att lagra data på andra plattformar, vars leverantörer kan ha egna implementeringar av Amazon S3-API:er.
+
+Om du vill aktivera S3-datalagringsfunktionen måste ett funktionspaket som innehåller S3 Datastore Connector hämtas och installeras. Gå till [Adobe Repository](https://repo1.maven.org/maven2/com/adobe/granite/com.adobe.granite.oak.s3connector/) och ladda ned den senaste versionen från 1.10.x-versionerna av funktionspaketet (till exempel com.adobe.granite.oak.s3connector-1.10.0.zip). Du måste även hämta och installera det senaste AEM Service Pack som finns på [Versionsinformation för AEM 6.5](/help/release-notes/release-notes.md) sida.
 
 >[!NOTE]
 >
@@ -174,7 +178,7 @@ När du har laddat ned den kan du installera och konfigurera S3 Connector på f�
 
    * `<aem-install>/crx-quickstart/install`
 
-   Kontrollera att du bara kopierar de konfigurationsfiler som behövs för den aktuella konfigurationen. Kopiera `org.apache.jackrabbit.oak.plugins.blob.datastore.S3DataStore.config` -fil.
+   Kontrollera att du bara kopierar de konfigurationsfiler som behövs för den aktuella konfigurationen. För både ett dedikerat datalager och ett delat datalager kopierar `org.apache.jackrabbit.oak.plugins.blob.datastore.S3DataStore.config` -fil.
 
    >[!NOTE]
    >
@@ -185,12 +189,12 @@ När du har laddat ned den kan du installera och konfigurera S3 Connector på f�
 
 ## Uppgradera till en ny version av 1.10.x S3 Connector {#upgrading-to-a-new-version-of-the-s-connector}
 
-Så här uppgraderar du till en ny version av 1.10.x S3-kontakten (t.ex. från 1.10.0 till 1.10.4):
+Så här uppgraderar du till en ny version av 1.10.x S3-kontakten (till exempel från 1.10.0 till 1.10.4):
 
 1. Stoppa AEM.
 
 1. Navigera till `<aem-install>/crx-quickstart/install/15` i AEM installationsmapp och gör en säkerhetskopia av innehållet.
-1. Efter säkerhetskopieringen tar du bort den gamla versionen av S3 Connector och dess beroenden genom att ta bort alla jar-filer i `<aem-install>/crx-quickstart/install/15` mapp, till exempel:
+1. Efter säkerhetskopieringen tar du bort den gamla versionen av S3 Connector och dess beroenden genom att ta bort alla jar-filer i `<aem-install>/crx-quickstart/install/15` till exempel:
 
    * **oak-blob-cloud-1.6.1.jar**
    * **aws-java-sdk-osgi-1.10.76.jar**
@@ -199,7 +203,7 @@ Så här uppgraderar du till en ny version av 1.10.x S3-kontakten (t.ex. från 1
    >
    >Filnamnen ovan används endast som illustrationer.
 
-1. Ladda ned den senaste versionen av funktionspaketet 1.10.x från [Adobe-databas](https://repo1.maven.org/maven2/com/adobe/granite/com.adobe.granite.oak.s3connector/).
+1. Ladda ned den senaste versionen av funktionspaketet 1.10.x från [Adobe Repository](https://repo1.maven.org/maven2/com/adobe/granite/com.adobe.granite.oak.s3connector/).
 1. Zippa upp innehållet i en separat mapp och navigera sedan till `jcr_root/libs/system/install/15`.
 1. Kopiera jar-filerna till **&lt;aem-install>**/crx-quickstart/install/15 i AEM installationsmapp.
 1. Starta AEM och kontrollera anslutningsfunktionen.
@@ -230,19 +234,19 @@ Du kan använda konfigurationsfilen med alternativen nedan.
 
 | Nyckel | Beskrivning | Standard | Obligatoriskt |
 | --- | --- | --- | --- |
-| accessKey | Åtkomstnyckel-ID för IAM-användaren med åtkomst till bucket. |  | Ja, när IAM-roller inte används. |
-| secretsKey | Hemlig åtkomstnyckel för IAM-användaren med åtkomst till bucket. |  | Ja, när IAM-roller inte används. |
-| cacheSize | Storleken (i byte) på det lokala cacheminnet. | 64GB | Nej. |
+| accessKey | Åtkomstnyckel-ID för IAM-användaren med åtkomst till bucket. | | Ja, när IAM-roller inte används. |
+| secretsKey | Hemlig åtkomstnyckel för IAM-användaren med åtkomst till bucket. | | Ja, när IAM-roller inte används. |
+| cacheSize | Den lokala cachens storlek (i byte). | 64GB | Nej. |
 | connectionTimeout | Ange väntetiden (i millisekunder) före timeout när anslutningen upprättas första gången. | 10000 | Nej. |
 | maxCachedBinarySize | Binärfiler som är mindre än eller lika med det här värdet (i byte) lagras i minnescachen. | 17408 (17 kB) | Nej. |
 | maxConnections | Ange maximalt antal tillåtna öppna HTTP-anslutningar. | 50 | Nej. |
 | maxErrorRetry | Ange det maximala antalet försök för misslyckade (hämtningsbara) begäranden. | 3 | Nej. |
 | minRecordLength | Den minsta storleken för ett objekt (i byte) som ska lagras i datalagret. | 16384 | Nej. |
 | bana | Den lokala sökvägen för AEM. | `crx-quickstart/repository/datastore` | Nej. |
-| proxyHost | Ange den valfria proxyvärd som klienten ansluter via. |  | Nej. |
-| proxyPort | Ange den valfria proxyport som klienten ansluter via. |  | Nej. |
-| s3Bucket | Namn på S3-bucket. |  | Ja |
-| s3EndPoint | S3 REST API-slutpunkt. |  | Nej. |
+| proxyHost | Ange den valfria proxyvärd som klienten ansluter via. | | Nej. |
+| proxyPort | Ange den valfria proxyport som klienten ansluter via. | | Nej. |
+| s3Bucket | Namn på S3-bucket. | | Ja |
+| s3EndPoint | S3 REST API-slutpunkt. | | Nej. |
 | s3Region | Region där bucket finns. Se det här [page](https://docs.aws.amazon.com/general/latest/gr/s3.html) för mer information. | Region där AWS-instansen körs. | Nej. |
 | socketTimeout | Ställ in väntetiden (i millisekunder) för data som ska överföras via en etablerad, öppen anslutning innan anslutningens timeout inträffar och stängs. | 50000 | Nej. |
 | stagingPurgeInterval | Intervallet (i sekunder) för tömning av slutförda överföringar från mellanlagringscachen. | 300 | Nej. |
@@ -324,7 +328,7 @@ Följande steg krävs för att konfigurera en binär replikering med S3:
 
 1. Installera författaren och publicera instanser och se till att de har startats korrekt.
 1. Gå till inställningarna för replikeringsagenten genom att öppna en sida till *https://localhost:4502/etc/replication/agents.author/publish.html*.
-1. Tryck på **Redigera** i **Inställningar** -avsnitt.
+1. Tryck på **Redigera** knappen i **Inställningar** -avsnitt.
 1. Ändra **Serialisering** textalternativ till **Binärt mindre**.
 
 1. Lägg till parametern &quot; `binaryless`= `true`&quot; i transport-URI:n. Efter ändringen bör URI:n se ut ungefär så här:
@@ -355,16 +359,16 @@ Följande steg krävs för att konfigurera en binär replikering med S3:
 
    `java -Xmx1024m -jar cq-quickstart.jar -r crx3,crx3mongo`
 
-1. Upprepa steg 1 till 4 för den andra AEM instansen.
+1. Upprepa steg 1 till 4 för den andra AEM.
 1. Starta den andra AEM.
 
 #### Konfigurera ett delat datalager {#configuring-a-shared-data-store}
 
 1. Skapa först konfigurationsfilen för datalagret för varje instans som krävs för att dela datalagret:
 
-   * Om du använder en `FileDataStore`, skapa en fil med namnet `org.apache.jackrabbit.oak.plugins.blob.datastore.FileDataStore.config` och placera den i `<aem-install>/crx-quickstart/install` mapp.
+   * Om du använder en `FileDataStore`, skapa en fil med namnet `org.apache.jackrabbit.oak.plugins.blob.datastore.FileDataStore.config` och montera den i `<aem-install>/crx-quickstart/install` mapp.
 
-   * Skapa en fil med namnet o `rg.apache.jackrabbit.oak.plugins.blob.datastore.S3DataStore.config` i `<aem-install>/crx-quickstart/install` enligt ovan.
+   * Om du använder S3 som datalager skapar du en fil med namnet `rg.apache.jackrabbit.oak.plugins.blob.datastore.S3DataStore.config` i `<aem-install>/crx-quickstart/install` enligt ovan.
 
 1. Ändra konfigurationsfilerna för datalagret på varje instans så att de pekar på samma datalager. Mer information finns i [den här artikeln](/help/sites-deploying/data-store-config.md#data-store-configurations).
 1. Om instansen har klonats från en befintlig server måste du ta bort `clusterId` den nya instansen genom att använda det senaste ekkörningsverktyget när databasen är offline. Kommandot du måste köra är:
@@ -391,22 +395,23 @@ Följande steg krävs för att konfigurera en binär replikering med S3:
    >
    >    * För ekversioner **1.2.x** använd Oak-run **1.2.12 eller senare**
    >    * För ekversioner **nyare än ovan** använder du den version av Oak-run som matchar Oak Core i AEM.
+   >
+   >
 
-
-1. Validera konfigurationen. Du validerar genom att leta efter en unik fil som lagts till i datalagret av varje databas som delar den. Filformatet är `repository-[UUID]`, där UUID är en unik identifierare för varje enskild databas.
+1. Validera konfigurationen till sist. Du validerar genom att leta efter en unik fil som lagts till i datalagret av varje databas som delar den. Filformatet är `repository-[UUID]`, där UUID är en unik identifierare för varje enskild databas.
 
    Därför bör en korrekt konfiguration ha så många unika filer som det finns databaser som delar datalagret.
 
    Filerna lagras på olika sätt beroende på datalagret:
 
-   * För `FileDataStore` filerna skapas under rotsökvägen för datalagringsmappen.
+   * För `FileDataStore` filerna skapas under rotsökvägen för datalagermappen.
    * För `S3DataStore` filerna skapas i den konfigurerade S3-bucket under `META` mapp.
 
 ## Azure Data Store {#azure-data-store}
 
 AEM kan konfigureras för att lagra data i Microsoft® Azure-lagringstjänst. Den använder `org.apache.jackrabbit.oak.plugins.blob.datastore.AzureDataStore.config` PID för konfiguration.
 
-Om du vill aktivera Azure-datalagrets funktioner måste ett funktionspaket som innehåller Azure Connector hämtas och installeras. Gå till [Adobe-databas](https://repo1.maven.org/maven2/com/adobe/granite/com.adobe.granite.oak.azureblobconnector/) och ladda ned den senaste versionen från 1.6.x-versionerna av funktionspaketet (till exempel com.adobe.granite.oak.azureblobconnector-1.6.3.zip).
+Om du vill aktivera Azure-datalagrets funktioner måste ett funktionspaket som innehåller Azure Connector hämtas och installeras. Gå till [Adobe Repository](https://repo1.maven.org/maven2/com/adobe/granite/com.adobe.granite.oak.azureblobconnector/) och ladda ned den senaste versionen från 1.6.x-versionerna av funktionspaketet (till exempel com.adobe.granite.oak.azureblobconnector-1.6.3.zip).
 
 >[!NOTE]
 >
@@ -437,25 +442,25 @@ När du har hämtat den kan du installera och konfigurera Azure-anslutningen på
 
 Du kan använda konfigurationsfilen med följande alternativ:
 
-* azureSas=&quot;&quot;: I version 1.6.3 av kopplingen lades stöd för Azure Shared Access Signature (SAS) till. **Om det finns både SAS- och lagringsuppgifter i konfigurationsfilen har SAS prioritet.** Mer information om SAS finns i [officiell dokumentation](https://learn.microsoft.com/en-us/azure/storage/common/storage-sas-overview). Se till att tecknet &#39;=&#39; föregås av &#39;\=&#39;.
+* azureSas=&quot;&quot;: I version 1.6.3 av anslutningsprogrammet har stöd för Azure Shared Access Signature (SAS) lagts till. **Om det finns både SAS- och lagringsuppgifter i konfigurationsfilen har SAS prioritet.** Mer information om SAS finns i [officiell dokumentation](https://learn.microsoft.com/en-us/azure/storage/common/storage-sas-overview). Se till att tecknet &#39;=&#39; escape-konverteras som &#39;\=&#39;.
 
-* azureBlobEndpoint=&quot;&quot;: Azure-blobslutpunkten. Till exempel https://&lt;storage-account>.blob.core.windows.net.
+* azureBlobEndpoint=&quot;&quot;: Azure Blob Endpoint. Till exempel https://&lt;storage-account>.blob.core.windows.net.
 * accessKey=&quot;&quot;: Lagringskontots namn. Mer information om autentiseringsuppgifter för Microsoft® Azure finns i [officiell dokumentation](https://azure.microsoft.com/en-us/documentation/articles/storage-create-storage-account).
 
-* secretsKey=&quot;&quot;: Lagringsåtkomstnyckeln. Se till att tecknet &#39;=&#39; föregås av &#39;\=&#39;.
-* container=&quot;&quot;: Microsoft® Azure-lagringsbehållarens namn. Behållaren är en gruppering av en uppsättning blober. Mer information finns i [officiell dokumentation](https://learn.microsoft.com/en-us/rest/api/storageservices/Naming-and-Referencing-Containers--Blobs--and-Metadata?redirectedfrom=MSDN).
-* maxConnections=&quot;&quot;: Antal samtidiga begäranden per åtgärd. Standardvärdet är 1.
-* maxErrorRetry=&quot;&quot;: Antal återförsök per begäran. Standardvärdet är 3.
-* socketTimeout=&quot;&quot;: Tidsgränsen i millisekunder som används för begäran. Standardvärdet är 5 minuter.
+* secretsKey=&quot;&quot;: Lagringsåtkomstnyckeln. Se till att tecknet &#39;=&#39; escape-konverteras som &#39;\=&#39;.
+* container=&quot;&quot;: Microsoft® Azure-blobbens lagringsbehållarnamn. Behållaren är en gruppering av en uppsättning blober. Mer information finns i [officiell dokumentation](https://learn.microsoft.com/en-us/rest/api/storageservices/Naming-and-Referencing-Containers--Blobs--and-Metadata?redirectedfrom=MSDN).
+* maxConnections=&quot;&quot;: Det samtidiga antalet samtidiga begäranden per åtgärd. Standardvärdet är 1.
+* maxErrorRetry=&quot;&quot;: Antal försök per begäran. Standardvärdet är 3.
+* socketTimeout=&quot;&quot;&quot;: Tidsgränsen i millisekunder som används för begäran. Standardvärdet är 5 minuter.
 
 Förutom inställningarna ovan kan följande inställningar också konfigureras:
 
-* sökväg: Datalagrets sökväg. Standardvärdet är `<aem-install>/repository/datastore.`
+* sökväg: Sökvägen till datalagret. Standardvärdet är `<aem-install>/repository/datastore.`
 * RecordLength: Den minsta storleken för ett objekt som ska lagras i datalagret. Standardvärdet är 16 kB.
-* maxCachedBinarySize: Binärfiler som är mindre än eller lika stora som den här storleken lagras i cacheminnet. Storleken anges i byte. Standardvärdet är 17 408 (17 kB).
+* maxCachedBinarySize: Binärfiler som är mindre än eller lika med den här storleken lagras i minnescachen. Storleken anges i byte. Standardvärdet är 17 408 (17 kB).
 * cacheSize: Cachens storlek. Värdet anges i byte. Standardvärdet är 64 GB.
-* hemlighet: Ska endast användas om binär replikering används för konfiguration av delade datalager.
-* stagingSplitPercentage: Procentandel av cachestorleken som är konfigurerad att användas för att mellanlagra asynkrona överföringar. Standardvärdet är 10.
+* hemlighet: Ska endast användas om binär replikering används för delad datalagringsinställning.
+* stagingSplitPercentage: Den procentandel av cachestorleken som har konfigurerats för att användas för att mellanlagra asynkrona överföringar. Standardvärdet är 10.
 * uploadThreads: Antalet överförda trådar som används för asynkrona överföringar. Standardvärdet är 10.
 * stagingPurgeInterval: Intervallet i sekunder för tömning av slutförda överföringar från mellanlagringscachen. Standardvärdet är 300 sekunder (5 minuter).
 * stagingRetryInterval: Återförsöksintervallet i sekunder för misslyckade överföringar. Standardvärdet är 600 sekunder (10 minuter).
@@ -471,12 +476,12 @@ secretKey="28932hfjlkwdo8fufsdfas\=\="
 
 ## Skräpinsamling för datalager {#data-store-garbage-collection}
 
-Datalagrets skräpinsamlingsprocess används för att ta bort oanvända filer i datalagret, vilket frigör värdefullt diskutrymme.
+Datalagrets skräpinsamlingsprocess används för att ta bort oanvända filer i datalagret, vilket frigör värdefullt diskutrymme under processen.
 
 Du kan köra skräpinsamling för datalager genom att:
 
 1. Gå till JMX-konsolen på *https://&lt;serveraddress:port>/system/console/jmx*
-1. Söker efter **RepositoryManagement.** När du har hittat Repository Manager MBean klickar du på det för att visa tillgängliga alternativ.
+1. Söker efter **Databashantering.** När du har hittat Repository Manager MBean klickar du på det för att visa tillgängliga alternativ.
 1. Bläddra till slutet av sidan och klicka på **startDataStoreGC(boolesk markOnly)** länk.
 1. I följande dialogruta anger du `false` för `markOnly` parameter, klicka sedan på **Anropa**:
 
@@ -490,7 +495,7 @@ Du kan köra skräpinsamling för datalager genom att:
 
 >[!NOTE]
 >
->När du utför skräpinsamling i ett klustrat eller delat datalager kan loggen konfigureras (med mongo- eller segmentmål) med varningsmeddelanden om att det inte går att ta bort vissa blob-ID:n. Blob-ID:n som tagits bort i en tidigare skräpinsamling refereras felaktigt igen av andra kluster eller delade noder som inte har information om ID-borttagningar. När skräpinsamlingen utförs loggas därför en varning när den försöker ta bort ett ID som redan har tagits bort i den senaste körningen. Det här beteendet påverkar inte prestanda eller funktioner.
+>När du utför skräpinsamling i ett klustrat eller delat datalager kan loggen konfigureras (med mongo- eller segmentmål) med varningsmeddelanden om att vissa blob-ID inte kan tas bort. Blob-ID:n som tagits bort i en tidigare skräpinsamling refereras felaktigt igen av andra kluster eller delade noder som inte har information om ID-borttagningar. När skräpinsamlingen utförs loggas därför en varning när den försöker ta bort ett ID som redan har tagits bort i den senaste körningen. Det här beteendet påverkar inte prestanda eller funktioner.
 
 >[!NOTE]
 >
@@ -499,7 +504,6 @@ Du kan köra skräpinsamling för datalager genom att:
 >1. Stoppa AEM.
 >2. Lägg till `blobTrackSnapshotIntervalInSecs=L"0"` -parametern i `crx-quickstart/install/org.apache.jackrabbit.oak.segment.SegmentNodeStoreService.config` -fil. Den här parametern kräver Oak 1.12.0, 1.10.2 eller senare.
 >3. Starta om AEM.
-
 
 Med senare versioner av AEM kan skräpinsamlingen i datalagret även köras på datalager som delas av mer än en databas. Så här kan du köra skräpinsamling i datalager på ett delat datalager:
 
@@ -513,4 +517,5 @@ Med senare versioner av AEM kan skräpinsamlingen i datalagret även köras på 
    1. Gå till JMX-konsolen och välj Repository Manager Mbean.
    1. Klicka på **Klicka på startDataStoreGC (boolesk markOnly)** länk.
    1. I följande dialogruta anger du `false` för `markOnly` parametern igen.
+
    Alla filer som hittas sorteras med markeringsfasen som användes före och tar bort resten som inte används från datalagret.
