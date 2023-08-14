@@ -1,17 +1,13 @@
 ---
 title: Bygg appen AEM Forms Android
-seo-title: Build the AEM Forms Android app
 description: Steg för att konfigurera Android Studio-projektet och skapa APK-filen för AEM Forms-appen för Android
-seo-description: Steps to set up the Android Studio project and build the .apk file for the AEM Forms app for Android
-uuid: 2e140aaf-5be5-4d5d-9941-9d1f4bf2debd
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-app
-discoiquuid: f5d6d9bd-4f36-4a4f-8008-15fb853a9219
 exl-id: 3fb069cf-d3ed-47b0-b6bf-82e110b3b059
-source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
+source-git-commit: f8643f6118e0bc6bfb2ee0e093155cf0907eb5d3
 workflow-type: tm+mt
-source-wordcount: '706'
+source-wordcount: '705'
 ht-degree: 0%
 
 ---
@@ -33,9 +29,9 @@ Utför följande steg för att hämta `adobe-aemfd-forms-app-src-pkg-<version>.z
 1. Öppna [Programvarudistribution](https://experience.adobe.com/downloads). Du behöver en Adobe ID för att logga in på Software Distribution.
 1. Tryck **[!UICONTROL Adobe Experience Manager]** finns i rubrikmenyn.
 1. I **[!UICONTROL Filters]** avsnitt:
-   1. Välj **[!UICONTROL Forms]** från **[!UICONTROL Solution]** nedrullningsbar lista.
+   1. Välj **[!UICONTROL Forms]** från **[!UICONTROL Solution]** listruta.
    2. Välj version och typ för paketet. Du kan också använda **[!UICONTROL Search Downloads]** för att filtrera resultaten.
-1. Tryck på det paketnamn som gäller för operativsystemet och välj **[!UICONTROL Accept EULA Terms]** och trycka **[!UICONTROL Download]**.
+1. Tryck på det paketnamn som gäller för ditt operativsystem och välj **[!UICONTROL Accept EULA Terms]** och trycka **[!UICONTROL Download]**.
 1. Öppna [Pakethanteraren](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html)  och klicka **[!UICONTROL Upload Package]** för att överföra paketet.
 1. Markera paketet och klicka på **[!UICONTROL Install]**.
 1. Öppna om du vill hämta källkodsarkivet **https://&lt;server>:&lt;port>/crx/de/content/forms/mobileapps/src/adobe-lc-mobileworkspace-src-&lt;version>.zip** i webbläsaren. ZIP-filen för Android-appen hämtas till din enhet.
@@ -51,16 +47,16 @@ Ange följande miljövariabler innan du startar byggprocessen för AEM Forms-pro
 
 * Ställ in miljövariabeln JAVA_HOME på JDK-programvarans plats i det lokala filsystemet. Exempel: C:\Program Files\Java\jdk1.8.0_181
 * Ange `ANDROID_SDK_ROOT` systemmiljövariabel till SDK-plats för Android. Till exempel C:\Users\&amp;lt;användarnamn>\AppData\Local\Android\Sdk
-* Ange `Path` systemmiljövariabel som inkluderar mapplatserna för plattformsverktyg och verktyg för Android. Till exempel C:\Users\&amp;lt;användarnamn>\AppData\Local\Android\Sdk\platform-tools and C:\Users\&amp;lt;användarnamn>\AppData\Local\Android\Sdk\tools.
+* Ange `Path` systemmiljövariabel som inkluderar mapplatserna för plattformsverktyg och verktyg för Android. Till exempel C:\Users\&amp;lt;användarnamn>\AppData\Local\Android\Sdk\platform-tools och C:\Users\&amp;lt;användarnamn>\AppData\Local\Android\Sdk\tools.
 
 ## Bygg AEM Forms standardapp {#set-up-the-xcode-project}
 
 När du har sparat adobe-lc-mobileworkspace-src-&lt;version>ZIP-fil i det lokala filsystemet och ange systemvariabler. Bygg en AEM Forms Android-standardapp med något av följande alternativ:
 
-* [Bygg AEM Forms-app med Android Studio](#using-android-studio)
+* [Bygg en AEM Forms-app med Android Studio](#using-android-studio)
 * [Generera APK-fil med Android Studio](#generate-apk-android-studio)
 
-### Bygg AEM Forms-app med Android Studio {#using-android-studio}
+### Bygg en AEM Forms-app med Android Studio {#using-android-studio}
 
 Utför följande steg för att skapa AEM Forms-program med Android Studio:
 
@@ -95,11 +91,11 @@ Så här genererar du APK-filen med Android Studio:
 
 1. Välj **Bygge** > **Bygg APK** för att generera APK-filen.
 
-   Valfritt, välj **Bygge** > **Generera signerad APK** för att generera [undertecknad version](https://developer.android.com/studio/publish/app-signing) av APK-filen.
+   Valfritt, välj **Bygge** > **Generera signerad APK** för att generera en [undertecknad version](https://developer.android.com/studio/publish/app-signing) av APK-filen.
 
 ## Använd Android Debug Bridge {#build-android-debug-bridge}
 
-När APK-filen har skapats kör du följande kommando för att installera programmet på en Android-enhet med [Android Debug Bridge](https://developer.android.com/tools/help/adb.html).
+När APK-filen har skapats kör du följande kommando för att installera programmet på en Android-enhet med [Android Debug Bridge](https://developer.android.com/tools/adb).
 
 **Windowsanvändare:** `adb install %HOMEPATH%\Projects\[your-project]\adobe-lc-mobileworkspace-src-[version]\android\build\outputs\apk\android-debug.apk`
 

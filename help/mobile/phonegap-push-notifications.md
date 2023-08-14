@@ -6,7 +6,7 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-adobe-phonegap-enterprise
 exl-id: 375f2f40-1b98-4e21-adee-cbea274e6a2a
-source-git-commit: 3885cc51f7e821cdb352737336a29f9c4f0c2f41
+source-git-commit: f8643f6118e0bc6bfb2ee0e093155cf0907eb5d3
 workflow-type: tm+mt
 source-wordcount: '3214'
 ht-degree: 0%
@@ -19,13 +19,13 @@ ht-degree: 0%
 >
 >Adobe rekommenderar att du använder SPA Editor för projekt som kräver ramverksbaserad klientåtergivning för en sida (till exempel React). [Läs mer](/help/sites-developing/spa-overview.md).
 
-Att omedelbart kunna informera användare av Adobe Experience Manager (AEM) mobilappar om viktiga meddelanden är avgörande för värdet av en mobilapp och dess marknadsföringskampanjer. Här beskrivs de steg som måste vidtas för att din app ska kunna ta emot push-meddelanden. Du får också lära dig hur du konfigurerar och skickar push-meddelanden från AEM Mobile till appen som är installerad på telefonen. I det här avsnittet beskrivs även hur du konfigurerar [Djuplänkning](#deeplinking) till dina push-meddelanden.
+Att omedelbart kunna informera användare av Adobe Experience Manager (AEM) mobilappar om viktiga meddelanden är avgörande för värdet av en mobilapp och dess marknadsföringskampanjer. Här beskrivs de steg som måste vidtas för att din app ska kunna ta emot push-meddelanden. Du får även lära dig hur du konfigurerar och skickar push-meddelanden från AEM Mobile till appen som är installerad på telefonen. I det här avsnittet beskrivs även hur du konfigurerar [Djuplänkning](#deeplinking) till dina push-meddelanden.
 
 >[!NOTE]
 >
->*Push-meddelanden garanteras inte. de är mer som meddelanden. Det bästa görs att se till att alla får dem, men de är inte en garanterad leveransmekanism. Tiden för att skicka en push-funktion kan variera från mindre än en sekund till upp till en halvtimme.*
+>*Push-meddelanden garanteras inte, de är mer som meddelanden. Det bästa görs att se till att alla får dem, men de är inte en garanterad leveransmekanism. Tiden för att skicka en push-funktion kan variera från mindre än en sekund till upp till en halvtimme.*
 
-Om du vill använda push-meddelanden med AEM måste du använda olika tekniker. Först måste en leverantör av push-meddelandetjänster användas för att hantera meddelanden och enheter (AEM gör inte detta ännu). Två leverantörer är färdiga att konfigureras med AEM: [Amazon Simple Notification Service](https://aws.amazon.com/sns/) (eller SNS), och [Pushwoosh](https://www.pushwoosh.com/). För det andra måste push-tekniken för det angivna mobiloperativsystemet gå via lämplig tjänst - Apple Push Notification Service (eller APNS) för iOS-enheter. och Google Cloud Messaging (eller GCM) för Android™-enheter. Även om AEM inte kommunicerar direkt med dessa plattformsspecifika tjänster måste viss relaterad konfigurationsinformation tillhandahållas av AEM tillsammans med meddelanden om att dessa tjänster ska utföra push-åtgärden.
+Om du vill använda push-meddelanden med AEM måste du använda olika tekniker. Först måste en leverantör av push-meddelandetjänster användas för att hantera meddelanden och enheter (AEM gör inte detta ännu). Två leverantörer är färdiga att konfigureras med AEM: [Amazon Simple Notification Service](https://aws.amazon.com/sns/) (eller SNS), och [Pushwoosh](https://www.pushwoosh.com/). För det andra måste push-tekniken för det angivna mobiloperativsystemet gå via rätt tjänst - Apple Push Notification Service (eller APNS) för iOS-enheter och Google Cloud Messaging (eller GCM) för Android™-enheter. Även om AEM inte kommunicerar direkt med dessa plattformsspecifika tjänster måste viss relaterad konfigurationsinformation tillhandahållas av AEM tillsammans med meddelanden om att dessa tjänster ska utföra push-åtgärden.
 
 Så här fungerar den när den har installerats och konfigurerats (se nedan):
 
@@ -50,7 +50,7 @@ En Experience Manager-utvecklare gör vanligtvis följande:
 När en Experience Manager-administratör gör följande:
 
 1. Konfigurera push-AEM
-1. Bygg och distribuera appen
+1. Skapa och distribuera appen
 1. Skicka ett push-meddelande
 1. Konfigurera djuplänkning *(valfritt)*
 
@@ -60,17 +60,17 @@ När en Experience Manager-administratör gör följande:
 
 Gå till Apple [här](https://developer.apple.com/documentation/usernotifications#//apple_ref/doc/uid/TP40008194-CH8-SW1) för att bekanta sig med Apple Push Notification Service.
 
-Om du vill använda APN:er behöver du en **Certifikat** -fil (en .cer-fil), en push-fil **Privat nyckel** (en P12-fil) och en **Lösenord för privat nyckel** från Apple. Instruktioner om hur du gör detta finns [här](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/).
+Om du vill använda APN:er behöver du en **Certifikat** en cer-fil, en push-fil **Privat nyckel** (en P12-fil) och en **Lösenord för privat nyckel** från Apple. Instruktioner om hur du gör detta finns [här](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/).
 
 #### Använda tjänsten Google Cloud Messaging (GCM) {#using-the-google-cloud-messaging-gcm-service}
 
 >[!NOTE]
 >
->Google ersätter GCM med en liknande tjänst som kallas Firebase Cloud Messaging (FCM). Mer information om FCM finns i [här](https://developers.google.com/cloud-messaging/faq).
+>Google ersätter GCM med en liknande tjänst som kallas Firebase Cloud Messaging (FCM). Mer information om FCM finns i [här](https://firebase.google.com/docs/cloud-messaging/).
 
 Gå till Google [här](https://developer.android.com/google/gcm/index.html) för att lära känna Google Cloud Messaging för Android™.
 
-[Följ dessa steg](https://developer.android.com/google/gcm/gs.html) till **Skapa ett Google API-projekt**, **Aktivera GCM-tjänsten** och **Hämta en API-nyckel**. Du behöver **API-nyckel** för att skicka push-meddelanden till Android™-enheter. Du kan även spela in **Projektnummer**, som ibland kallas **GCM-avsändar-ID**.
+[Följ de här stegen](https://developer.android.com/google/gcm/gs.html) till **Skapa ett Google API-projekt**, **Aktivera GCM-tjänsten** och **Hämta en API-nyckel**. Du behöver **API-nyckel** skicka push-meddelanden till Android™-enheter. Spela också in **Projektnummer**, som ibland kallas **GCM-avsändar-ID**.
 
 I följande steg visas en annan metod för att skapa GCM API-nycklar:
 
@@ -83,17 +83,17 @@ I följande steg visas en annan metod för att skapa GCM API-nycklar:
 
 >[!NOTE]
 >
->Registrera Server-API-nyckeln. Detta värde anges på din push-leverantörs webbplats.
+>Registrera Server-API-nyckeln. Det här värdet anges på din push-leverantörs webbplats.
 
 ### Steg 2: Registrera och konfigurera en push-meddelandetjänst {#step-register-and-configure-a-push-messaging-service}
 
 AEM är konfigurerad att använda en av tre tjänster för push-meddelanden:
 
-* Amazon SNS
+* AMAZON SNS
 * Pushwoosh
 * Adobe Mobile Services
 
-*Amazon SNS* och *Pushwoosh* Med konfigurationer kan du skicka push-meddelanden från AEM skärmar.
+*AMAZON SNS* och *Pushwoosh* Med konfigurationer kan du skicka push-meddelanden från AEM skärmar.
 
 *Adobe Mobile Services* Med kan du konfigurera och skicka push-meddelanden från Adobe Mobile Services med ett Adobe Analytics-konto (men appen måste skapas med den här konfigurationsuppsättningen för att AMS-push-meddelanden ska kunna aktiveras).
 
@@ -110,7 +110,7 @@ Så här konfigurerar du Amazon SNS för push-meddelanden:
 1. **Registrera dig hos Amazon SNS**
 
    1. Registrera ditt konto-ID. Formatet ska vara 12 siffror utan blanksteg eller streck, det vill säga &quot;123456789012&quot;.
-   1. Se till att du befinner dig i regionen&quot;us-East&quot; eller&quot;eu&quot;, vilket kräver ett av dessa steg i ett senare steg (Skapa identitetspool).
+   1. Se till att du befinner dig i regionen&quot;us-East&quot; eller&quot;eu&quot;, vilket kräver ett av dessa steg (Skapa identitetspool).
    1. Logga in på hanteringskonsolen och välj [SNS](https://console.aws.amazon.com/sns/) (Push Notification Service). Klicka på Kom igång om det visas.
 
 1. **Skapa åtkomstnyckel och ID**
@@ -118,7 +118,7 @@ Så här konfigurerar du Amazon SNS för push-meddelanden:
    1. Klicka på ditt inloggningsnamn i skärmens övre högra hörn och välj Säkerhetsuppgifter på menyn.
    1. Klicka på Åtkomsttangenter och klicka i utrymmet nedan **Skapa ny åtkomstnyckel**.
    1. Klicka **Visa åtkomstnyckel** och kopiera och spara ID:t för åtkomstnyckeln och den hemliga åtkomstnyckeln som visas. Om du väljer att hämta nycklarna får du en CSV-fil som innehåller samma värden.
-   1. Andra säkerhetsrelaterade certifikat, och andra, kan hanteras på den här sidan.
+   1. Andra säkerhetsrelaterade certifikat och andra kan hanteras på den här sidan.
 
    >[!NOTE]
    >
@@ -135,11 +135,11 @@ Så här konfigurerar du Amazon SNS för push-meddelanden:
 
    1. Klicka **Skapa ämne** och välj ett ämnesnamn. Spela in alla fält, t.ex. Ämnesnamn, Ämnesägare, Region och Visningsnamn.
    1. Klicka **Övriga ämnesåtgärder** > **Redigera ämnesprofil**. Under **Tillåt dessa användare att prenumerera på det här avsnittet**, markera **Alla.**
-   1. Klicka **Uppdatera princip**.
+   1. Klicka **Uppdateringsprincip**.
 
    >[!NOTE]
    >
-   >Du kan skapa flera ämnen för olika scenarier, till exempel dev, test och demo. Resten av SNS-konfigurationen kan vara densamma. Bygg appen med olika ämnen; push-meddelanden som skickas till det ämnet tas endast emot av appen som skapats med det ämnet.
+   >Du kan skapa flera ämnen för olika scenarier, till exempel dev, test och demo. Resten av SNS-konfigurationen kan vara densamma. Bygg appen med det olika ämnet. Push-meddelanden som skickas till det ämnet tas endast emot av appen som skapats med det ämnet.
 
 1. **Skapa plattformsprogram**
 
@@ -169,12 +169,12 @@ Så här konfigurerar du Amazon SNS för push-meddelanden:
    <table>
     <tbody>
      <tr>
-     <td><p> </p> <p>{</p> <p> "Version": "2012-10-17",</p> <p> "Programsats": [</p> <p> {</p> <p> Åtgärd: [</p> <p> "mobileanalytics:PutEvents",</p> <p> "cognito-sync:*",</p> <p> "SNS:CreatePlatformEndpoint",</p> <p> "SNS:Subscribe"</p> <p> ],</p> <p> "Effekt": "Tillåt",</p> <p> "Resurs": [</p> <p> "*"</p> <p> ]</p> <p> }</p> <p> ]</p> <p>}</p> <p> </p> </td>
+     <td><p> </p> <p>{</p> <p> "Version": "2012-10-17",</p> <p> "Programsats": [</p> <p> {</p> <p> "Åtgärd": [</p> <p> "mobileanalytics:PutEvents",</p> <p> "cognito-sync:*",</p> <p> "SNS:CreatePlatformEndpoint",</p> <p> "SNS:Subscribe"</p> <p> ],</p> <p> "Effekt": "Tillåt",</p> <p> "Resurs": [</p> <p> "*"</p> <p> ]</p> <p> }</p> <p> ]</p> <p>}</p> <p> </p> </td>
      </tr>
     </tbody>
     </table>
 
-   1. Klicka **Använd princip**.
+   1. Klicka **Tillämpa princip**.
 
 #### Använda meddelandetjänsten Pushwoosh {#using-the-pushwoosh-messaging-service}
 
@@ -194,12 +194,12 @@ Så här använder du Pushwoosh:
 
    1. För Android™-stöd måste du ange GCM API-nyckeln.
    1. När du konfigurerar programmet väljer du Cordova som ramverk.
-   1. För iOS-stöd måste du ange certifikatfilen (.cer), push-certifikatet (.p12) och lösenordet för den privata nyckeln. dessa bör ha hämtats från Apple APNS webbplats. Välj Cordova under Framework.
+   1. För iOS-stöd måste du ange certifikatfilen (.cer), push-certifikatet (.p12) och lösenordet för den privata nyckeln. Dessa bör ha hämtats från Apple APNS-webbplats. Välj Cordova under Framework.
    1. Pushwoosh genererar ett app-ID för den appen, i formatet&quot;XXXXX-XXXXX&quot;, där varje X är ett hexadecimalt värde (0 till F).
 
 >[!NOTE]
 >
->*Om en andra app har konfigurerats i AEM med samma app-ID (och andra relaterade värden): API Access Token och GCM-ID), alla push-meddelanden som skickas via den andra appen på AEM, kommer att skickas till andra appar med det app-ID:t.*
+>*Om en andra app har konfigurerats i AEM med samma app-ID (och andra relaterade värden: API Access Token och GCM-ID), kommer push-meddelanden som skickas via den andra appen på AEM att skickas till andra program med det app-ID:t.*
 
 ### Steg 3: Lägg till push-stöd i appen {#step-add-push-support-to-the-app}
 
@@ -242,7 +242,7 @@ I CRXDE Lite:
 >
 >*För push-meddelanden måste du testa på en faktisk enhet eftersom emulatorer inte kan ta emot push-meddelanden.*
 
-#### iOS {#ios}
+#### IOS {#ios}
 
 För iOS använder du en macOS-dator och går med i [iOS Developer Program](https://developer.apple.com/programs/ios/). Vissa företag har företagslicenser som kan vara tillgängliga för alla utvecklare.
 
@@ -252,19 +252,19 @@ I XCode 8.1 måste du gå till fliken Funktioner i projektet innan du använder 
 
 Installera appen på en Android™-telefon med CLI (se nedan: **Steg 6 - Bygg och distribuera appen**) måste du först ställa telefonen i&quot;utvecklarläge&quot;. Se [Aktivera alternativ för utvecklare på enheter](https://developer.android.com/tools/device.html#developer-device-options) om du vill ha mer information om hur du gör detta.
 
-### Steg 5: Konfigurera push-AEM {#step-configure-push-on-aem-apps}
+### Steg 5: Konfigurera push-AEM appar {#step-configure-push-on-aem-apps}
 
 Innan du skapar och distribuerar till din konfigurerade mobila enhet måste du konfigurera meddelandeinställningarna för den meddelandetjänst som du valde att använda.
 
 1. Skapa lämpliga auktoriseringsgrupper för push-meddelanden.
 1. Logga in AEM lämplig användare och klicka på fliken Appar.
 1. Klicka på appen.
-1. Hitta rutan Hantera Cloud Services och klicka på pennan för att ändra dina molnkonfigurationer.
+1. Hitta rutan Hantera Cloud Service och klicka på pennan för att ändra dina molnkonfigurationer.
 1. Välj Amazon SNS Connection, Pushwoosh Connection eller Adobe Mobile Services som meddelandekonfiguration.
 1. Ange leverantörsegenskaperna och klicka på Skicka för att spara dem och Klar. De verifieras inte på fjärrbasis i detta skede, utom om det finns AMS.
-1. Du bör nu se konfigurationen som du just angav på panelen Hantera Cloud Services.
+1. Du bör nu se konfigurationen som du just angav på panelen Hantera Cloud Service.
 
-### Steg 6: Bygg och distribuera appen {#step-build-and-deploy-the-app}
+### Steg 6: Skapa och distribuera appen {#step-build-and-deploy-the-app}
 
 **Obs!** Se instruktionerna [här](/help/mobile/building-app-mobile-phonegap.md) om att bygga PhoneGap-program.
 
@@ -272,7 +272,7 @@ Det finns två sätt att skapa och distribuera din app med PhoneGap.
 
 **Obs!** För testning av push-meddelanden räcker det inte med emulatorer eftersom push-meddelanden använder ett distinkt protokoll mellan push-providern (Apple eller Google) och enheten. Den aktuella maskinvaran och emulatorerna för Mac/PC stöder inte detta.
 
-1. *PhoneGap Build* är en tjänst som erbjuds av PhoneGap som skapar din app åt dig på deras servrar och gör att du kan hämta den direkt till din enhet. Läs PhoneGap Build dokumentation på `https://build.phonegap.com/` för att lära dig hur du konfigurerar och använder PhoneGap Build.
+1. *PhoneGap Build* är en tjänst som erbjuds av PhoneGap som skapar din app åt dig på deras servrar och gör att du kan hämta den direkt till din enhet. Se PhoneGap Build-dokumentationen på `https://build.phonegap.com/` om du vill lära dig hur du konfigurerar och använder PhoneGap Build.
 
 1. *Kommandoradsgränssnitt för PhoneGap* (CLI) kan du använda en mängd PhoneGap-kommandon på kommandoraden för att skapa, felsöka och distribuera din app. Mer information finns i PhoneGap-utvecklardokumentationen (`https://docs.phonegap.com/en/edge/guide_cli_index.md.html#The%20Command-Line%20Interface`) för att lära dig hur du konfigurerar och använder PhoneGap CLI.
 
@@ -283,7 +283,7 @@ Följ de här stegen för att skapa ett meddelande och skicka det.
 1. Skapa ett meddelande
 
    * På AEM Mobile-appens kontrollpanel hittar du panelen Push Notifications (Push-meddelanden).
-   * Välj &quot;Skapa&quot; på menyn uppe till höger. Den här knappen är inte tillgänglig förrän molnkonfigurationen har ställts in för första gången.
+   * Välj &quot;Skapa&quot; på menyn uppe till höger. Den här knappen är inte tillgänglig förrän molnkonfigurationen har ställts in.
    * I guiden Skapa meddelande anger du en titel och ett meddelande och klickar sedan på knappen&quot;Skapa&quot;. Meddelandet är nu klart att skickas omedelbart eller senare. Den kan redigeras och du kan ändra och spara meddelandet och/eller titeln.
 
 1. Skicka meddelandet
@@ -305,7 +305,7 @@ För AMS-push-meddelanden måste meddelanden skapas och skickas från AMS-server
 
 >[!NOTE]
 >
->*Push-meddelanden garanteras inte. de är mer som meddelanden. Det bästa görs att se till att alla hör det, men de är inte en garanterad leveransmekanism. Tiden för att skicka en push-funktion kan variera från mindre än en sekund till upp till en halvtimme.*
+>*Push-meddelanden garanteras inte, de är mer som meddelanden. Det bästa görs att se till att alla hör det, men de är inte en garanterad leveransmekanism. Tiden för att skicka en push-funktion kan variera från mindre än en sekund till upp till en halvtimme.*
 
 ### Konfigurera djup länkning med push-meddelanden {#configuring-deep-linking-with-push-notifications}
 
@@ -315,13 +315,13 @@ Hur fungerar det? Författaren av ett push-meddelande kan lägga till en knappet
 
 Om appen inte är öppen visas skuggan som vanligt. Om du utför en åtgärd på meddelandet i skuggan öppnas programmet och användaren får sedan tillgång till knapparna för djup länk baserat på vad som konfigurerats i push-meddelandet.
 
-Skapa meddelandet, lägg till knapptext och länksökväg för den valfria länken:
+Skapa meddelandet, lägg till en knapptext och länksökväg för den valfria länken:
 
 >[!CAUTION]
 >
 >Följ stegen nedan för att öppna panelen Push Notification (Push-meddelanden) på din instrumentpanel.
 
-1. Klicka på redigeringen i det övre högra hörnet av **Hantera Cloud Services** platta.
+1. Klicka på redigeringen i det övre högra hörnet av **Hantera Cloud Service** platta.
 
    ![chlimage_1-108](assets/chlimage_1-108.png)
 
