@@ -10,9 +10,9 @@ content-type: reference
 topic-tags: personalization
 discoiquuid: 2fd0047d-d0f6-4289-98cf-454486f9cd61
 exl-id: d7e4d424-0ca7-449f-95fb-c4fe19dd195d
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '2758'
+source-wordcount: '2755'
 ht-degree: 1%
 
 ---
@@ -66,8 +66,8 @@ Detaljerade instruktioner beskrivs i det här dokumentet.
 1. Välj **Skapa** sedan **Skapa sida**.
 1. Välj en av de tillgängliga mallarna som Adobe Campaign du är ansluten till och klicka sedan på **Nästa**. Tre mallar är tillgängliga som standard:
 
-   * **Adobe Campaign Classic Email**: Med kan du lägga till innehåll i en fördefinierad mall (två kolumner) innan du skickar den till Adobe Campaign Classic för leverans.
-   * **Adobe Campaign Standard Email**: Med kan du lägga till innehåll i en fördefinierad mall (två kolumner) innan du skickar den till Adobe Campaign Standard för leverans.
+   * **Adobe Campaign Classic Email**: gör att du kan lägga till innehåll i en fördefinierad mall (två kolumner) innan du skickar den till Adobe Campaign Classic för leverans.
+   * **Adobe Campaign Standard Email**: gör att du kan lägga till innehåll i en fördefinierad mall (två kolumner) innan du skickar den till Adobe Campaign Standard för leverans.
 
 1. Fyll i **Titel** och **Beskrivning** och klicka **Skapa**. Titeln används som ämne i nyhetsbrevet/e-postmeddelandet såvida du inte skriver över den när du redigerar e-postmeddelandet.
 
@@ -77,7 +77,7 @@ Om du vill integrera med Adobe Campaign måste du lägga till en molntjänst fr�
 
 Dessutom kan du behöva välja Adobe Campaign-mallen, ändra ämnet och lägga till oformaterad text för användare som inte vill visa e-postmeddelandet i HTML.
 
-Du kan välja molntjänsten på **Webbplatser** eller från e-post/nyhetsbrev när du har skapat det.
+Du kan välja molntjänsten på **Webbplatser** eller från e-post- eller nyhetsbrevet när du har skapat det.
 
 Välja molntjänst från **Webbplatser** är det rekommenderade tillvägagångssättet. Du måste lösa problemet genom att välja molntjänsten i e-postmeddelandet/nyhetsbrevet.
 
@@ -113,7 +113,7 @@ I det nyhetsbrev/e-postmeddelande som du skriver kanske du inte kan välja Adobe
    >Du kan också välja molntjänster genom att välja **Visa egenskaper** i **Webbplatser** -fliken.
 
 1. Välj den konfiguration som matchar din Adobe Campaign-instans i listrutan, ta bort den första konfigurationen som du skapade och som inte var för Adobe Campaign och bekräfta sedan genom att klicka på bockmarkeringen.
-1. Fortsätt med steg 4 i föregående procedur för att välja mallar och lägga till oformaterad text.
+1. Fortsätt med steg 4 i föregående procedur för att välja mallar och lägga till ren text.
 
 ### Redigera e-postinnehåll {#editing-email-content}
 
@@ -137,7 +137,7 @@ Så här redigerar du e-postinnehåll:
 
    ![chlimage_1-22](assets/chlimage_1-22a.png)
 
-1. Dra komponenter direkt till sidan och redigera dem därefter. Du kan till exempel dra en **Text och personalisering (Campaign)** och lägga till personlig text.
+1. Dra komponenter direkt till sidan och redigera dem därefter. Du kan till exempel dra en **Text och personalisering (kampanj)** och lägga till personlig text.
 
    ![chlimage_1-23](assets/chlimage_1-23a.png)
 
@@ -152,17 +152,16 @@ När du redigerar innehåll kan du infoga:
 * Adobe Campaign-kontextfält. Det här är fält som du kan infoga i texten och som anpassas efter mottagarens data (till exempel förnamn, efternamn eller andra data i måldimensionen).
 * Adobe Campaign personaliseringsblock. Detta är block med fördefinierat innehåll som inte är relaterat till mottagarens data, t.ex. en logotyp eller en länk till en spegelsida.
 
-Se [Adobe Campaign Components](/help/sites-authoring/adobe-campaign-components.md) om du vill ha en fullständig beskrivning av Campaign-komponenterna.
+Se [Adobe Campaign Components](/help/sites-authoring/adobe-campaign-components.md) för en fullständig beskrivning av Campaign-komponenterna.
 
 >[!NOTE]
 >
 >* Endast Adobe Campaign **Profiler** målgruppsdimensionen beaktas.
 >* När egenskaper visas från **Webbplatser** har du inte åtkomst till Adobe Campaign kontextfält. Du kan komma åt dessa direkt från e-postmeddelandet när du redigerar.
 
+Så här infogar du anpassning:
 
-Så här infogar du personalisering:
-
-1. Infoga en ny **Nyhetsbrev** > **Text och personalisering (Campaign)** genom att dra den till sidan.
+1. Infoga en ny **Nyhetsbrev** > **Text och personalisering (kampanj)** genom att dra den till sidan.
 
    ![chlimage_1-25](assets/chlimage_1-25a.png)
 
@@ -176,7 +175,6 @@ Så här infogar du personalisering:
    >
    >* Tillgängliga kontextfält motsvarar **Profiler** målgruppsdimensionen i Adobe Campaign.
    >* Se [Länka en AEM till ett Adobe Campaign-e-postmeddelande](#linking-an-aem-page-to-an-adobe-campaign-email-adobe-campaign-standard).
-
    >
    >**För Adobe Campaign Classic:**
    >
@@ -184,7 +182,6 @@ Så här infogar du personalisering:
    >
    >* Information om hur du lägger till eller döljer personaliseringselement finns i [Hantera fält och block för personalisering](/help/sites-administering/campaignonpremise.md#managing-personalization-fields-and-blocks).
    >* **Viktigt**: Alla startregisterfält måste också finnas i mottagartabellen (eller motsvarande kontakttabell).
-
 
 1. Infoga text genom att skriva. Infoga kontextfält eller personaliseringsblock genom att klicka på Adobe Campaign-komponenterna och markera dem. När du är klar markerar du kryssrutan.
 
@@ -214,9 +211,9 @@ Du kan förhandsgranska hur nyhetsbrevet kommer att se ut samt förhandsgranska 
 
 ### Godkänna innehåll i AEM {#approving-content-in-aem}
 
-När innehållet är klart kan du starta godkännandeprocessen. Gå till **Arbetsflöde** -fliken i verktygslådan och väljer **Godkänn för Adobe Campaign** arbetsflöde.
+När innehållet är klart kan du starta godkännandeprocessen. Gå till **Arbetsflöde** och väljer **Godkänn för Adobe Campaign** arbetsflöde.
 
-Detta färdiga arbetsflöde har två steg: revidering, godkännande eller revidering, och sedan refusering. Arbetsflödet kan dock utvidgas och anpassas till en mer komplex process.
+Det här färdiga arbetsflödet består av två steg: revision, godkännande eller revision och avvisande. Arbetsflödet kan dock utvidgas och anpassas till en mer komplex process.
 
 ![chlimage_1-31](assets/chlimage_1-31a.png)
 
@@ -235,6 +232,7 @@ I Adobe Campaign Classic:
 ![chlimage_1-34](assets/chlimage_1-34a.png)
 
 >[!NOTE]
+>
 Ej godkänt innehåll kan synkroniseras med en leverans i Adobe Campaign, men leveransen kan inte utföras. Endast godkänt innehåll kan skickas via kampanjleveranser.
 
 ## Länka AEM med Adobe Campaign Standard och Adobe Campaign Classic {#linking-aem-with-adobe-campaign-standard-and-adobe-campaign-classic}
@@ -248,9 +246,9 @@ I följande avsnitt finns instruktioner om din Adobe Campaign-lösning:
 
 ### Länka en AEM till ett Adobe Campaign-e-postmeddelande (Adobe Campaign Standard) {#linking-an-aem-page-to-an-adobe-campaign-email-adobe-campaign-standard}
 
-Med Adobe Campaign Standard kan du återskapa och länka innehåll som skapats i AEM med:
+Med Adobe Campaign Standard kan du återställa och länka innehåll som skapats i AEM med:
 
-* Ett e-postmeddelande.
+* Ett mejl.
 * En e-postmall.
 
 På så sätt kan ni leverera innehållet. Du ser om ett nyhetsbrev är länkat till en enskild leverans av koden som visas på sidan.
@@ -258,6 +256,7 @@ På så sätt kan ni leverera innehållet. Du ser om ett nyhetsbrev är länkat 
 ![chlimage_1-35](assets/chlimage_1-35a.png)
 
 >[!NOTE]
+>
 Om ett nyhetsbrev är länkat till flera leveranser visas antalet länkade leveranser (men inte varje ID).
 
 Så här länkar du en sida som skapats i AEM med ett e-postmeddelande från Adobe Campaign:
@@ -273,6 +272,7 @@ Så här länkar du en sida som skapats i AEM med ett e-postmeddelande från Ado
 1. Välj **Länka med Adobe Experience Manager-innehåll** i verktygsfältet för att visa innehållslistan i AEM.
 
    >[!NOTE]
+   >
    Om **Länka med en Adobe Experience Manager** alternativet inte visas i åtgärdsfältet, kontrollera att **Innehållsredigeringsläge** är korrekt konfigurerad till **Adobe Experience Manager** i e-postegenskaperna.
 
    ![chlimage_1-38](assets/chlimage_1-38a.png)
@@ -287,6 +287,7 @@ Så här länkar du en sida som skapats i AEM med ett e-postmeddelande från Ado
    * Allt innehåll som redan är länkat till en leverans.
 
    >[!NOTE]
+   >
    Som standard är det innehåll som redan är synkroniserat med en leverans dolt. Du kan dock visa den och använda den. Om du till exempel vill använda innehåll som mall för flera leveranser.
 
    När e-postmeddelandet är länkat till ett AEM kan innehållet inte redigeras i Adobe Campaign.
@@ -295,8 +296,11 @@ Så här länkar du en sida som skapats i AEM med ett e-postmeddelande från Ado
 1. Kör e-postleveransen. Under leveransanalysen hämtas den senaste versionen av AEM.
 
    >[!NOTE]
+   >
    Om innehållet uppdateras i AEM medan det länkas till ett e-postmeddelande uppdateras det automatiskt i Adobe Campaign under analysen. Synkroniseringen kan även utföras manuellt med **Uppdatera Adobe Experience Manager-innehåll** från innehållsåtgärdsfältet.
+   >
    Du kan avbryta länken mellan ett e-postmeddelande och AEM innehåll med **Ta bort länken till Adobe Experience Manager-innehållet** från innehållsåtgärdsfältet. Den här knappen är bara tillgänglig om innehållet redan är länkat till leveransen. Om du vill länka ett annat innehåll till en leverans måste du ta bort den aktuella innehållslänken innan du kan skapa en ny länk.
+   >
    När länken tas bort behålls det lokala innehållet och blir redigerbart i Adobe Campaign. Om du länkar innehållet igen efter att ha ändrat det går alla ändringar förlorade.
 
 ### Synkronisera innehåll som skapats i AEM med en leverans från Adobe Campaign Classic {#synchronizing-content-created-in-aem-with-a-delivery-from-adobe-campaign-classic}
@@ -315,11 +319,14 @@ Om ett nyhetsbrev är länkat till en enda leverans AEM visas leveranskoden på 
 ![chlimage_1-39](assets/chlimage_1-39a.png)
 
 >[!NOTE]
+>
 Om nyhetsbrevet är länkat till flera leveranser visas antalet länkade leveranser (men inte varje ID).
+>
 [!NOTE]
+>
 Arbetsflödessteget **Publicera till Adobe Campaign** är borttaget i AEM 6.1. Detta steg ingick i AEM 6.0-integreringen med Adobe Campaign och behövs inte längre.
 
-Så här synkroniserar du innehåll som skapats i AEM med en leverans från Adobe Campaign:
+Synkronisera innehåll som skapats i AEM med en leverans från Adobe Campaign:
 
 1. Skapa en leverans eller lägg till en leveransaktivitet i ett kampanjarbetsflöde genom att välja **E-postleverans med AEM (mailAEMContent)** leveransmall.
 
@@ -328,6 +335,7 @@ Så här synkroniserar du innehåll som skapats i AEM med en leverans från Adob
 1. Välj **Synkronisera** i verktygsfältet för att visa innehållslistan i AEM.
 
    >[!NOTE]
+   >
    Om **Synkronisera** alternativet inte visas i leveransens verktygsfält, kontrollera att **Innehållsredigeringsläge** fältet är korrekt konfigurerat i **AEM** genom att välja **Egenskaper** > **Avancerat**.
 
    ![chlimage_1-41](assets/chlimage_1-41a.png)
@@ -342,6 +350,7 @@ Så här synkroniserar du innehåll som skapats i AEM med en leverans från Adob
    * Allt innehåll som redan är länkat till en leverans.
 
    >[!NOTE]
+   >
    Som standard är det innehåll som redan är synkroniserat med en leverans dolt. Du kan dock visa den och använda den. Om du till exempel vill använda innehåll som mall för flera leveranser.
 
    ![chlimage_1-42](assets/chlimage_1-42a.png)
@@ -351,9 +360,9 @@ Så här synkroniserar du innehåll som skapats i AEM med en leverans från Adob
 1. Kör leveransen. Under leveransanalysen återställs den senaste versionen av det AEM innehållet.
 
    >[!NOTE]
+   >
    * När leverans och innehåll har synkroniserats blir leveransinnehållet i Adobe Campaign skrivskyddat. Ämnet och innehållet i e-postmeddelandet kan inte längre ändras.
    * Om innehållet uppdateras i AEM medan det är länkat till en leverans i Adobe Campaign uppdateras det automatiskt i leveransen under leveransanalysen. Synkroniseringen kan även utföras manuellt med **Uppdatera innehåll nu** -knappen.
    * Du kan avbryta synkroniseringen mellan en leverans och AEM innehåll med **Avsynkronisera** -knappen. Detta är bara tillgängligt om innehållet redan är synkroniserat med leveransen. Om du vill synkronisera ett annat innehåll med en leverans måste du avbryta den aktuella innehållssynkroniseringen innan du kan skapa en ny länk.
    * Om det lokala innehållet avsynkroniseras behålls det och blir redigerbart i Adobe Campaign. Om du synkroniserar om innehållet efter att ha ändrat det förlorar du alla ändringar.
    * För återkommande och kontinuerliga leveranser stoppas synkroniseringen med AEM innehåll varje gång leveransen utförs.
-

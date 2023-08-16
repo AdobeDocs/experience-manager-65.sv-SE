@@ -2,7 +2,7 @@
 title: Lägga till teckensnitt för grafikåtergivning
 seo-title: Adding Fonts for Graphic-Rendering
 description: Med AEM kan du skapa grafik som innehåller text dynamiskt från ditt innehåll
-seo-description: AEM allows you to generate graphics incorporating text dynamically taken from your content
+seo-description: AEM lets you generate graphics incorporating text dynamically taken from your content
 uuid: 67d9b10f-e986-4d29-bde2-10e08075fe17
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,9 +10,9 @@ topic-tags: platform
 content-type: reference
 discoiquuid: 6af48ef5-75e6-4b66-bc0d-ecf254b1c4ef
 exl-id: 725c81d0-0258-4118-8b01-29fd7bcaf9b3
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '183'
+source-wordcount: '181'
 ht-degree: 0%
 
 ---
@@ -36,13 +36,13 @@ För närvarande stöder alla implementeringar av Java Platform [TrueType](https
 
    Spara alla ändringar.
 
-1. Kopiera teckensnittsfilerna till denna mapp; till exempel med WebDAV.
+1. Kopiera teckensnittsfilerna till den här mappen, till exempel med WebDAV.
 
    >[!NOTE]
    >
    >Teckensnittsfiler i databasen måste ha suffixet `*.ttf` eller `*.TTF`.
 
-1. Uppdatera [OSGi-konfiguration](/help/sites-deploying/configuring-osgi.md) av [Day Commons GFX Font Helper](/help/sites-deploying/osgi-configuration-settings.md). Lägg till sökvägen till teckensnittsmappen; dvs. `/apps/<your-project>/fonts`.
+1. Uppdatera [OSGi-konfiguration](/help/sites-deploying/configuring-osgi.md) av [Day Commons GFX Font Helper](/help/sites-deploying/osgi-configuration-settings.md). Lägg till sökvägen till teckensnittsmappen, d.v.s. `/apps/<your-project>/fonts`.
 
 1. Återvänd till CRXDE Lite. Nu bör du se en `.fontlist` i mappen som innehåller namnet på de importerade teckensnitten.
 

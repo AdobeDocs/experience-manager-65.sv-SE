@@ -10,9 +10,9 @@ topic-tags: interactive-communications, introduction
 discoiquuid: 954da8da-a30b-477d-bde7-3edd86a5be11
 feature: Interactive Communication
 exl-id: b20bb719-5686-466e-8dde-279b8471bfe3
-source-git-commit: 471d7f48dc4653000b4852dbbeb886b05e28e644
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '981'
+source-wordcount: '980'
 ht-degree: 0%
 
 ---
@@ -23,9 +23,9 @@ Lär dig skapa din första interaktiva kommunikation.
 
 ![01-create-first-adaptive-form-hero-image](assets/01-create-first-adaptive-form-hero-image.png)
 
-Interactive Communications centraliserar och hanterar framtagning, sammanställning och leverans av säkra, personaliserade och interaktiva korrespondenser som affärskorrespondens, dokument, kontoutdrag, marknadsföringsmejl, räkningar och välkomstpaket. Interaktiv kommunikation kan levereras via två kanaler: Tryck och webb. Print-kanalen används för att skapa PDF- och papperskommunikation, medan webbkanalen används för att leverera onlineupplevelser.
+Interactive Communications centraliserar och hanterar framtagning, sammanställning och leverans av säkra, personaliserade och interaktiva korrespondenser som affärskorrespondens, dokument, kontoutdrag, marknadsföringsmejl, räkningar och välkomstpaket. Interaktiv kommunikation kan levereras via två kanaler: tryck och webb. Print-kanalen används för att skapa PDF- och papperskommunikation, medan webbkanalen används för att leverera onlineupplevelser.
 
-Den här självstudiekursen är ett komplett ramverk för interaktiv kommunikation. Självstudiekursen är indelad i ett användningsfall och flera guider. Varje guide hjälper dig att skapa funktioner som används som byggstenar för att skapa en interaktiv kommunikation.
+Den här självstudiekursen är ett komplett ramverk för interaktiv kommunikation. Självstudiekursen är indelad i ett användningsfall och i flera guider. Varje guide hjälper dig att skapa funktioner som används som byggstenar för att skapa en interaktiv kommunikation.
 
 Följande bild visar de byggstenar som krävs för att skapa ett interaktivt meddelande.
 
@@ -52,7 +52,7 @@ En telekomoperatör skickar månadsräkningar till kunderna via e-post. Fakturan
 * Konfigurera en AEM författarinstans.
 * Installera [AEM Forms-tillägg](/help/forms/using/installing-configuring-aem-forms-osgi.md) on author instance
 * Konfigurera MYSQL-databasen
-* Hämta JDBC-databasdrivrutin (JAR-fil) från databasprovidern. Exemplen i självstudien är baserade på MySQL-databasen och använder Oraclets [MySQL JDBC-databasdrivrutin](https://dev.mysql.com/downloads/connector/j/5.1.html).
+* Hämta JDBC-databasdrivrutin (JAR-fil) från databasprovidern. Exemplen i självstudiekursen är baserade på MySQL-databasen och använder Oraclets [MySQL JDBC-databasdrivrutin](https://dev.mysql.com/downloads/connector/j/5.1.html).
 
 ## Steg 1: Planera interaktiv kommunikation {#step-plan-the-interactive-communication}
 
@@ -70,13 +70,13 @@ Så här skapar du en anatomi för den interaktiva kommunikationen med följande
 * Villkorliga data
 * Bilder
 
-[ ](/help/forms/using/planning-interactive-communications.md)
+[](/help/forms/using/planning-interactive-communications.md)
 
 ## Steg 2: Skapa formulärdatamodell {#step-create-form-data-model}
 
 ![03-create-adaptive-form-main-image_small](assets/03-create-adaptive-form-main-image_small.png)
 
-Med en formulärdatamodell kan du koppla en interaktiv kommunikation till olika datakällor. Till exempel AEM användarprofil, RESTful-webbtjänster, SOAP-baserade webbtjänster, OData-tjänster och relationsdatabaser. En formulärdatamodell är ett enhetligt datarepresentationsschema för affärsenheter och tjänster som är tillgängliga i anslutna datakällor. Du kan använda formulärdatamodellen med en interaktiv kommunikation för att hämta data från anslutna datakällor. Mer information om formulärdatamodell finns i [AEM Forms dataintegrering](/help/forms/using/data-integration.md).
+Med en formulärdatamodell kan du koppla en interaktiv kommunikation till olika datakällor. AEM användarprofil, RESTful-webbtjänster, SOAP-baserade webbtjänster, OData-tjänster och relationsdatabaser. En formulärdatamodell är ett enhetligt datarepresentationsschema för affärsenheter och tjänster som är tillgängliga i anslutna datakällor. Du kan använda formulärdatamodellen med en interaktiv kommunikation för att hämta data från anslutna datakällor. Mer information om formulärdatamodell finns i [AEM Forms dataintegrering](/help/forms/using/data-integration.md).
 
 **Mål:**
 
@@ -89,13 +89,13 @@ Med en formulärdatamodell kan du koppla en interaktiv kommunikation till olika 
 * Redigera exempeldata
 * Testa formulärdatamodell och konfigurerade tjänster med testdata
 
-[ ](/help/forms/using/create-form-data-model0.md)
+[](/help/forms/using/create-form-data-model0.md)
 
 ## Steg 3: Skapa dokumentfragment {#step-create-document-fragments}
 
 ![05-create-form-data-model-main_small](assets/05-create-form-data-model-main_small.png)
 
-Dokumentfragment är återanvändbara komponenter i en korrespondens som används för att skapa en interaktiv kommunikation. Dokumentfragmenten är av följande typer: Text, Lista och Villkor.
+Dokumentfragment är återanvändbara komponenter i en korrespondens som används för att skapa en interaktiv kommunikation. Dokumentfragmenten är av följande typer: Text, List och Condition.
 
 **Mål:**
 
@@ -103,7 +103,7 @@ Dokumentfragment är återanvändbara komponenter i en korrespondens som använd
 * Skapa variabler
 * Skapa och tillämpa regler
 
-[ ](/help/forms/using/create-document-fragments.md)
+[](/help/forms/using/create-document-fragments.md)
 
 ## Steg 4: Skapa mallar {#step-create-templates}
 
@@ -121,7 +121,7 @@ Mallarna för webbkanalen skapas i AEM. Mallförfattare och administratörer kan
 * Överför XDP-mallarna till AEM Forms Server
 * Skapa och aktivera mallar för webbkanalen
 
-[ ](/help/forms/using/create-templates-print-web.md)
+[](/help/forms/using/create-templates-print-web.md)
 
 ## Steg 5: Skapa en interaktiv kommunikation {#step-create-an-interactive-communication}
 
@@ -129,18 +129,18 @@ Mallarna för webbkanalen skapas i AEM. Mallförfattare och administratörer kan
 
 När du har skapat alla byggstenar, t.ex. formulärdatamodell, dokumentfragment och mallar för webbversionen, kan du börja skapa en interaktiv kommunikation.
 
-Interaktiv kommunikation kan levereras via två kanaler: Tryck och webb. Du kan också skapa en interaktiv kommunikationskanal med utskriftskanalen som överordnad. Med alternativet Skriv ut som överordnad för webbkanalen kan du säkerställa att webbkanalens innehåll, arv och databindning kommer från utskriftskanalen.
+Interaktiv kommunikation kan distribueras via två kanaler: tryck och webb. Du kan också skapa en interaktiv kommunikationskanal med utskriftskanalen som master. Skriv ut som huvudalternativ för webbkanal säkerställer att innehållet, arvet och databindningen för webbkanalen hämtas från utskriftskanalen.
 
 **Mål:**
 
 * Skapa interaktiv kommunikation för tryckkanalen
 * Skapa interaktiv kommunikation för webbkanalen
-* Skapa trycksaker och interaktiv webbkommunikation med Överordnad trycksaksproduktion
+* Skapa trycksaker och webbinteraktiv kommunikation med Skriv ut som mall
 * Skapa en dynamisk tabell i webbversionen av Interactive Communication
 * Skapa ett diagram i webbversionen av Interactive Communication
 * Skapa hyperlänkar i webbversionen av interaktiv kommunikation
 
-[ ](/help/forms/using/create-interactive-communication0.md)
+[](/help/forms/using/create-interactive-communication0.md)
 
 ## Steg 6: Publicera interaktiv kommunikation {#step-publish-your-interactive-communication}
 

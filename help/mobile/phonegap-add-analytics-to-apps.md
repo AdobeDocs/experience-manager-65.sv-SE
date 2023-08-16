@@ -6,9 +6,9 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-adobe-phonegap-enterprise
 exl-id: 8d965e94-c368-481d-b000-6e22456c34db
-source-git-commit: b9c164321baa3ed82ae87a97a325fcf0ad2f6ca0
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '939'
+source-wordcount: '938'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ Utnyttja [Mobilappsanalys](https://business.adobe.com/products/analytics/mobile-
 
 Instrumentera era AEM appar för att spåra, rapportera och förstå hur användarna interagerar med mobilappen och -innehållet och för att mäta nyckeltal under livscykeln, som starter, apptid och kraschfrekvens.
 
-I det här avsnittet beskrivs hur AEM *Utvecklare* kan:
+Detta avsnitt beskriver hur AEM *Utvecklare* kan:
 
 * Integrera mobilanalys i mobilapplikationer
 * Testa er analysspårning med Bloodhound
@@ -45,7 +45,7 @@ AEM Mobile kräver ett Adobe Analytics-konto för att samla in och rapportera sp
 
 När Analytics-kontot har konfigurerats skapar du en konfiguration för innehållssynkronisering som hämtar in innehållet i ditt mobilprogram.
 
-Mer information finns i Konfigurera innehåll för innehållssynkronisering. Konfigurationen måste instruera Content Sync att lägga ADBMobleConfig i katalogen /www. I Geometrixx Outdoors App är till exempel konfigurationen för innehållssynkronisering följande: */content/phonegap/geometrixx-outdoor/shell/jcr:content/page-app/app-config/ams-ADBMobileConfig*. Det finns även en konfiguration för utveckling. Den är dock identisk med den icke-utvecklingsrelaterade konfigurationen för Geometrixx Outdoors.
+Mer information finns i Konfigurera innehåll för innehållssynkronisering. Konfigurationen måste instruera Content Sync att lägga ADBMobleConfig i katalogen /www. I Geometrixx Outdoors App är till exempel konfigurationen för innehållssynkronisering följande: */content/phonegap/geometrixx-outdoor/shell/jcr:content/page-app/app-config/ams-ADBMobileConfig*. Det finns även en konfiguration för utveckling, men den är identisk med den konfiguration som inte är utvecklad när det gäller Geometrixx Outdoors.
 
 Mer information om hur du hämtar ADBMomobileConfig från kontrollpanelen för mobilprogram AEM program finns i Analytics - Mobile Services - Adobe Mobile Services SDK-konfigurationsfilen.
 
@@ -63,7 +63,7 @@ För varje plattform krävs att ADBMomobileConfig kopieras till en viss plats.
 
 Om du bygger med PhoneGap CLI kan du göra detta med ett cordova-byggkrokskript. Detta kan du se i Geometrixx Outdoor App på:*content/phonegap/geometrixx-outdoors/shell/_jcr_content/pge-app/app-content/phonegap/scripts/restore_plugins.js.*
 
-För iOS måste filen kopieras till XCode-projektets **Resurser** katalog (till exempel&quot;platforms/ios/Geometrixx/Resources/ADBMobileConfig.json&quot;). Om appen är avsedd för Android™ är sökvägen till kopian&quot;platforms/android/assets/ADBMobileConfig.json&quot;. Mer information om hur du använder krokar under PhoneGap CLI-bygget finns i [Tre hookar upp ditt Cordova-/PhoneGap-projekt](https://gist.github.com/jlcarvalho/22402d013bc72f795d45a01836ce735c).
+För iOS måste filen kopieras till XCode-projektets **Resurs** katalog (till exempel&quot;platforms/ios/Geometrixx/Resources/ADBMobileConfig.json&quot;). Om appen är avsedd för Android™ är sökvägen till kopian&quot;platforms/android/assets/ADBMobileConfig.json&quot;. Mer information om hur du använder krokar under PhoneGap CLI-bygget finns i [Tre hookar upp ditt Cordova-/PhoneGap-projekt](https://gist.github.com/jlcarvalho/22402d013bc72f795d45a01836ce735c).
 
 ```xml
 ///////////////////////////
@@ -118,5 +118,5 @@ Genom att instrumentera källkoden med dessa metodanrop kan du samla in fullstä
 | **Etikett** | **Beskrivning** | **Standard** |
 |---|---|---|
 | API-slutpunkt | Bas-URL:en för Adobe Mobile Services HTTP API:er | https://api.omniture.com |
-| Konfigurationsslutpunkt | Den URL som används för att hämta ADB Mobile Config för det angivna rapportsvitens-ID:t | /ams/1.0/app/config/ |
+| Konfig. slutpunkt | Den URL som används för att hämta ADB Mobile Config för det angivna rapportsvitens-ID:t | /ams/1.0/app/config/ |
 | Appar för mobiltjänster | Få en lista över appar i användarföretaget | /ams/1.0/apps |

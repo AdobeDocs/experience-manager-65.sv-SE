@@ -2,7 +2,7 @@
 title: Stöd för nya språk för lokalisering av adaptiva formulär
 seo-title: Supporting new locales for adaptive forms localization
 description: Med AEM Forms kan du lägga till nya språk för lokalisering av anpassningsbara formulär. De språkområden som stöds är som standard engelska, franska, tyska och japanska.
-seo-description: AEM Forms allows you to add new locales for localizing adaptive forms. The supported locales by default are English, French, German, and Japanese.
+seo-description: AEM Forms lets you add new locales for localizing adaptive forms. The supported locales by default are English, French, German, and Japanese.
 uuid: 7f9fab6b-8d93-46bb-8c7c-7b723d5159ea
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -12,9 +12,9 @@ docset: aem65
 feature: Adaptive Forms
 role: Admin
 exl-id: 2ed4d99e-0e90-4b21-ac17-aa6707a3ba7d
-source-git-commit: 5ca6c5abeb5ed09d8929d1986aa24c1416e0cc06
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '804'
+source-wordcount: '803'
 ht-degree: 0%
 
 ---
@@ -59,7 +59,7 @@ När språkområdet har identifierats väljs den formulärspecifika ordlistan i 
 
 Om det inte finns någon språkinformation skickas ett anpassat formulär på formulärets originalspråk. Det ursprungliga språket är det språk som används vid utvecklingen av det anpassade formuläret.
 
-Om det inte finns något klientbibliotek för det begärda språket söker programmet efter språkkoden i klientbiblioteket. Om det begärda språket till exempel är `en_ZA` (sydafrikansk engelska) och klientbiblioteket för `en_ZA` finns inte, det adaptiva formuläret använder klientbiblioteket för `en` (Engelska), om det finns. Om det inte finns någon av dem används lexikonet för `en` språkinställning.
+Om det inte finns något klientbibliotek för det begärda språket söker programmet efter språkkoden i klientbiblioteket. Om det begärda språket till exempel är `en_ZA` (South Africa English) och klientbiblioteket för `en_ZA` finns inte, det adaptiva formuläret använder klientbiblioteket för `en` (Engelska), om det finns. Om det inte finns någon av dem används lexikonet för `en` språkinställning.
 
 ## Lägg till lokaliseringsstöd för språk som inte stöds {#add-localization-support-for-non-supported-locales}
 
@@ -103,7 +103,7 @@ Skapa en nod av typen `cq:ClientLibraryFolder` under `etc/<folderHierarchy>`, me
 
 Lägg till följande filer i klientbiblioteket:
 
-* **i18n.js** definiera `guidelib.i18n`, som har mönster av &quot;calendarSymbols&quot;, `datePatterns`, `timePatterns`, `dateTimeSymbols`, `numberPatterns`, `numberSymbols`, `currencySymbols`, `typefaces` för `<locale>` enligt XFA-specifikationerna som beskrivs i [Ange nationella inställningar](https://helpx.adobe.com/content/dam/Adobe/specs/xfa_spec_3_3.pdf). Du kan också se hur den är definierad för andra språkområden som stöds i `/etc/clientlibs/fd/af/I18N/fr/javascript/i18n.js`.
+* **i18n.js** definiera `guidelib.i18n`, som har mönster av &quot;calendarSymbols&quot;, `datePatterns`, `timePatterns`, `dateTimeSymbols`, `numberPatterns`, `numberSymbols`, `currencySymbols`, `typefaces` för `<locale>` enligt XFA-specifikationerna som beskrivs i [Specifikation för språkinställning](https://helpx.adobe.com/content/dam/Adobe/specs/xfa_spec_3_3.pdf). Du kan också se hur den är definierad för andra språkområden som stöds i `/etc/clientlibs/fd/af/I18N/fr/javascript/i18n.js`.
 * **LogMessages.js** definiera `guidelib.i18n.strings` och `guidelib.i18n.LogMessages` för `<locale>` enligt definition i `/etc/clientlibs/fd/af/I18N/fr/javascript/LogMessages.js`.
 * **js.txt** som innehåller följande:
 

@@ -5,7 +5,7 @@ contentOwner: AG
 role: Admin
 feature: Renditions,Developer Tools,Asset Processing
 exl-id: b67465f9-177c-49c4-b4eb-a1d6e09ac9a2
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: 10227bcfcfd5a9b0f126fee74dce6ec7842f5e95
 workflow-type: tm+mt
 source-wordcount: '942'
 ht-degree: 0%
@@ -27,9 +27,9 @@ Bildkonverteringsbiblioteket har stöd för CMYK och fullt stöd för alfa, för
 
 Förutom stöd för ett stort antal filformat och profiler har Imaging Transcoding Library betydande fördelar jämfört med andra tredjepartslösningar när det gäller prestanda, skalbarhet och kvalitet. Här är några av fördelarna med att använda Imaging Transcoding Library:
 
-* **Skalförändra med ökad filstorlek eller upplösning**: Skalning uppnås främst genom den patenterade möjligheten hos Imaging Transcoding Library att ändra storlek samtidigt som filer avkodas. Detta gör att minnesanvändningen vid körning alltid är optimal och inte är en kvadratisk funktion som ökar filstorleken eller upplösningsmegapixlar. Konverteringsbiblioteket för bilder kan bearbeta större och högupplösta filer (som innehåller högre megapixlar). Tredjepartsverktyg som ImageMagick kan inte hantera stora filer och krascher när sådana filer bearbetas.
-* **Komprimerings- och storleksändringsalgoritmer för Photoshop**: Överensstämmelse med branschstandard när det gäller kvalitet på nedsampling (mjuk, skarp och automatisk bikubisk) och komprimeringskvalitet. Imaging Transcoding Library utvärderar dessutom kvalitetsfaktorn för indatabilden och använder intelligent optimala tabeller och kvalitetsinställningar för utdatabilden. Detta ger filer av optimal storlek utan att den visuella kvaliteten äventyras.
-* **Hög genomströmning:** Svarstiden är kortare och genomströmningen är konsekvent högre än ImageMagick. Därför bör Imaging Transcoding Library minska väntetiden för användare och kostnaden för värdtjänster.
+* **Skalförändra med ökad filstorlek eller upplösning**: Skalning uppnås huvudsakligen genom den patenterade möjligheten i Imaging Transcoding Library att ändra storlek samtidigt som filer avkodas. Detta gör att minnesanvändningen vid körning alltid är optimal och inte är en kvadratisk funktion som ökar filstorleken eller upplösningsmegapixlar. Konverteringsbiblioteket för bildbehandling kan bearbeta större och högupplösta filer (som innehåller högre megapixlar). Tredjepartsverktyg som ImageMagick kan inte hantera stora filer och krascher när sådana filer bearbetas.
+* **Komprimerings- och storleksändringsalgoritmer för Photoshop**: Överensstämmelse med branschstandard när det gäller kvalitet på nedsampling (jämn, skarp och automatisk bikubisk) och komprimeringskvalitet. Imaging Transcoding Library utvärderar dessutom kvalitetsfaktorn för indatabilden och använder intelligent optimala tabeller och kvalitetsinställningar för utdatabilden. Detta ger filer av optimal storlek utan att den visuella kvaliteten äventyras.
+* **Hög genomströmning:** Svarstiden är kortare och genomströmningen är genomgående högre än ImageMagick. Därför bör Imaging Transcoding Library minska väntetiden för användare och kostnaden för värdtjänster.
 * **Skala bättre med samtidig inläsning:** Omkodningsbiblioteket för bilder fungerar optimalt under samtidiga inläsningsförhållanden. Den ger hög genomströmning med optimala processorprestanda, minnesanvändning och låg svarstid, vilket minskar kostnaderna för värdtjänster.
 
 ## Plattformar som stöds {#supported-platforms}
@@ -46,7 +46,7 @@ Kommandoradsargumenten för Imaging Transcoding Library kan innehålla följande
 
 ```shell
  -destMime PNG/JPEG: Mime type of output rendition
- -BitDepth 8/16: Preserves Bit Depth. Bitdepth ‘4’ is automatically converted to ‘8’
+ -BitDepth 8/16: Preserves Bit Depth. Bitdepth '4' is automatically converted to '8'
  -preserveBitDepth: Downscales Bit Depth (No upscaling)
  -preserveCMYK: Preserves CMYK color space
  -jpegQuality: Provides jpeg quality parameter (0-12 , corresponding to Photoshop qualities)
@@ -57,7 +57,7 @@ Kommandoradsargumenten för Imaging Transcoding Library kan innehålla följande
 Du kan konfigurera följande alternativ för `-resize` parameter:
 
 * `X`: Fungerar ungefär som [!DNL Experience Manager]. Till exempel -resize 319.
-* `WxH`: Proportionerna bevaras inte, till exempel `-resize 319x319`.
+* `WxH`: Proportionerna behålls inte, till exempel `-resize 319x319`.
 * `Wx`: Fastställer bredden och beräknar höjden med bibehållna proportioner. Till exempel `-resize 319x`.
 * `xH`: Korrigerar höjden och beräknar bredden med bibehållna proportioner. Till exempel `-resize x319`.
 
@@ -115,7 +115,7 @@ Om du till exempel vill skapa miniatyrbilder för en TIFF-bild med hjälp av Ima
 
 1. I **[!UICONTROL Web Enabled Image]** lägger du till de MIME-typer för vilka du vill hoppa över standardprocessen för generering av webbåtergivning i **[!UICONTROL Skip List]**. Om du till exempel hoppade över MIME-typen `image/tiff` i steget ovan lägger du till `image/tiff` till överhoppningslistan.
 
-1. Öppna **[!UICONTROL EPS thumbnails (powered by ImageMagick)]** steg, navigera till **[!UICONTROL Arguments]** -fliken. I **[!UICONTROL Mime Types]** lägger du till de MIME-typer som du vill att Imaging Transcoding Library ska bearbeta. Om du till exempel hoppade över MIME-typen `image/tiff` i steget ovan lägger du till `image/jpeg` till **[!UICONTROL Mime Types]** lista.
+1. Öppna **[!UICONTROL EPS thumbnails (powered by ImageMagick)]** går du till **[!UICONTROL Arguments]** -fliken. I **[!UICONTROL Mime Types]** lägger du till de MIME-typer som du vill att Imaging Transcoding Library ska bearbeta. Om du t.ex. hoppade över MIME-typen `image/tiff` i steget ovan lägger du till `image/jpeg` till **[!UICONTROL Mime Types]** lista.
 
 1. Ta bort eventuella standardkommandon.
 
@@ -138,9 +138,8 @@ Om du till exempel vill skapa miniatyrbilder för en TIFF-bild med hjälp av Ima
 
 1. Synkronisera den uppdaterade [!UICONTROL DAM Update Asset] arbetsflödesmodell. Spara arbetsflödet.
 
-Verifiera konfigurationen, överför en TIFF-avbildning och övervaka filen error.log. Du kommer att märka `INFO` meddelanden med omnämnanden av `SwitchEngineHandlingProcess execute: executing command line`. Loggarna anger de återgivningar som genereras. När arbetsflödet är klart kan du visa de nya återgivningarna i [!DNL Experience Manager].
+Du kontrollerar konfigurationen genom att överföra en TIFF-avbildning och övervaka filen error.log. Du kommer att märka `INFO` meddelanden med omnämnanden av `SwitchEngineHandlingProcess execute: executing command line`. Loggarna anger de återgivningar som genereras. När arbetsflödet är klart kan du visa de nya återgivningarna i [!DNL Experience Manager].
 
 >[!MORELIKETHIS]
 >
 >* [MIME-typer som stöds, artikel](assets-formats.md#supported-image-transcoding-library)
-

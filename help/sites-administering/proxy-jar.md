@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: ca98dc3c-7056-4cdc-b4d3-23e471da5730
 docset: aem65
 exl-id: 3df50303-5cdd-4df0-abec-80831d2ccef7
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '1162'
+source-wordcount: '1160'
 ht-degree: 0%
 
 ---
@@ -27,14 +27,14 @@ Proxyservern finns i lämplig installationsmapp:
 * &lt;cq_install_path>/opt/helpers/proxy.jar
 * &lt;crx_install_path>/opt/helpers/proxy.jar
 
-Du kan använda proxyservern för att övervaka all klient-server-interaktion, oavsett vilket kommunikationsprotokoll som ligger till grund för det. Du kan till exempel övervaka följande protokoll:
+Du kan använda proxyservern för att övervaka all klientserverinteraktion, oavsett vilket kommunikationsprotokoll som ligger till grund för det. Du kan till exempel övervaka följande protokoll:
 
 * HTTP för webbsidor
 * HTTPS för säkra webbsidor
 * SMTP för e-postmeddelanden
 * LDAP för användarhantering
 
-Du kan till exempel placera proxyservern mellan två program som kommunicerar via ett TCP/IP-nätverk; till exempel en webbläsare och AEM. På så sätt kan du övervaka exakt vad som händer när du begär en AEM.
+Du kan till exempel placera proxyservern mellan två program som kommunicerar via ett TCP/IP-nätverk, till exempel en webbläsare och AEM. På så sätt kan du övervaka exakt vad som händer när du begär en AEM.
 
 ## Starta proxyserververktyget {#starting-the-proxy-server-tool}
 
@@ -74,7 +74,7 @@ S-7-#000107 -> [Content-Length: 124 ]
 
 **Kontrollera om Keep-Alive fungerar**
 
-**Behåll** innebär att en klient återanvänder anslutningen till servern för att överföra flera filer (sidkod, bilder, formatmallar osv.). Utan att hålla kontakten vid liv måste klienten upprätta en ny anslutning för varje begäran.
+**Håll dig uppdaterad** innebär att en klient återanvänder anslutningen till servern för att överföra flera filer (sidkod, bilder, formatmallar osv.). Utan att hålla kontakten vid liv måste klienten upprätta en ny anslutning för varje begäran.
 
 Så här kontrollerar du om keep-alive-funktionen fungerar:
 
@@ -114,7 +114,7 @@ En begäran om en webbsida kan till exempel se ut så här:
 C-0-#000000 -> [GET /author/prox.html?CFC_cK=1102938422341 HTTP/1.1 ]
 ```
 
-* C anger att den här posten kommer från klienten (det är en begäran om en webbsida)
+* C anger att posten kommer från klienten (det är en begäran om en webbsida)
 * 0 är anslutningens nummer (anslutningsräknaren startar vid 0)
 * #00000 förskjutningen i byteflödet. Detta är den första posten, så förskjutningen är 0.
 * [GET &lt;?>] är innehållet i begäran, i exemplet en av HTTP-rubrikerna (url).
@@ -181,11 +181,11 @@ Klienten begär en anslutning som håller sig vid liv så att servern kan skicka
 C-0-#000369 -> [Connection: Keep-Alive ]
 ```
 
-Proxyservern är ett bra verktyg för att kontrollera om cookies är rätt inställda eller inte. Här ser vi följande:
+Proxyservern är ett bra verktyg för att kontrollera om cookies är rätt inställda eller inte. Här ser vi
 
 * cq3session cookie genererad av AEM
 * den cookie för växling av visningsläge som genererats av CFC:n
-* En cookie med namnet JSESSIONID. detta skapas automatiskt av JSP om det inte uttryckligen inaktiveras med &lt;%@ page session=&quot;false&quot; %>:
+* en cookie med namnet JSESSIONID. Den skapas automatiskt av JSP om den inte uttryckligen inaktiveras med &lt;%@ page session=&quot;false&quot; %>:
 
 ```xml
 C-0-#000393 -> [Cookie: Show=ShowMode; cq3session=3bce15cf-1575-1b4e-8ea6-0d1a0c64738e; JSESSIONID=4161a56b-f193-d748-88a5-e09c5ff7ef2a ]

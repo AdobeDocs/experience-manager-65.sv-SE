@@ -2,9 +2,9 @@
 title: Headless Development for AEM 6.5 Sites
 description: Läs om hur AEM 6.5 kraftfulla headless-funktioner som Content Models, Content Fragments och GraphQL API fungerar tillsammans så att ni kan hantera era upplevelser centralt och leverera dem i alla kanaler.
 exl-id: b6598bcf-b2ce-403a-87cf-6895fec8a91b
-source-git-commit: ac70fb534a95c9eee6f8340d9b8720a607b9f79f
+source-git-commit: 10227bcfcfd5a9b0f126fee74dce6ec7842f5e95
 workflow-type: tm+mt
-source-wordcount: '493'
+source-wordcount: '495'
 ht-degree: 1%
 
 ---
@@ -23,7 +23,7 @@ Den Headless-implementeringen förskjuter hantering av sidor och komponenter på
 
 ## Jämför Headful och Headless {#headful-headless}
 
-Det här dokumentet fokuserar på den fullständiga headless-implementeringsmodellen för AEM. Men headful kontra headless behöver inte vara ett binärt val i AEM. Headless-funktioner kan användas för att hantera och leverera innehåll till olika slutpunkter och samtidigt göra det möjligt för innehållsförfattare att redigera single page-applikationer. Allt i AEM.
+Det här dokumentet fokuserar på den fullständiga headless-implementeringsmodellen för AEM. Däremot behöver headful kontra headless inte vara ett binärt val i AEM. Headless-funktioner kan användas för att hantera och leverera innehåll till olika slutpunkter och samtidigt göra det möjligt för innehållsförfattare att redigera single page-applikationer. Allt i AEM.
 
 >[!TIP]
 >
@@ -54,4 +54,4 @@ Det finns ett antal resurser som du kan använda för att komma igång med AEM h
 |---|---|---|---|---|
 | [Headless Developer Journey](/help/journey-headless/developer/overview.md) | **För användare som inte är AEM och utan headless** börjar du här för att få en omfattande introduktion till AEM och dess headless-funktioner från teorin om headless genom att publicera ditt första headless-projekt. | Användarhandbok | Utvecklare **nya i AEM och utan huvud** | 1 timme |
 | [Starthandbok för Headless](/help/sites-developing/headless/getting-started/introduction.md) | **För erfarna AEM** som behöver en kort sammanfattning av de viktigaste AEM rubrikfria funktionerna, se den här snabbstartsöversikten. | Snabbstart | Utvecklare, administratörer **med AEM** | 20 minuter |
-| [Komma igång med AEM självstudiekurs utan hörn](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview.html) | **Om du föredrar en praktisk lösning och är bekant med AEM** går den här självstudiekursen direkt in i att skapa ett enkelt headless-projekt. | Självstudiekurs | Utvecklare | 2 timmar |
+| [Komma igång med AEM självstudiekurs utan hörn](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview.html) | **Om du föredrar en praktisk lösning och är bekant med AEM** går den här självstudiekursen direkt in i ett enkelt headless-projekt. | Självstudiekurs | Utvecklare | 2 timmar |

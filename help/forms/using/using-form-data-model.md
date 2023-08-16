@@ -10,9 +10,9 @@ discoiquuid: 87f5f9f5-2d03-4565-830e-eacc3757e542
 docset: aem65
 feature: Form Data Model
 exl-id: 9a73a643-7ad4-49aa-a971-08d52679158d
-source-git-commit: 1683338f02d01d5d9843368955fa42f309718f26
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '1214'
+source-wordcount: '1212'
 ht-degree: 0%
 
 ---
@@ -45,9 +45,9 @@ En formulärdatamodell är ett tillägg till JSON-schema som du kan använda fö
 
 ## Skapa anpassningsbara formulär och fragment {#create-af}
 
-Du kan skapa [anpassningsbara formulär](../../forms/using/creating-adaptive-form.md) och [adaptiva formulärfragment](../../forms/using/adaptive-form-fragments.md) baserat på en formulärdatamodell. Gör följande om du vill använda en formulärdatamodell när du skapar ett adaptivt formulär eller adaptivt formulärfragment:
+Du kan [anpassningsbara formulär](../../forms/using/creating-adaptive-form.md) och [adaptiva formulärfragment](../../forms/using/adaptive-form-fragments.md) baserat på en formulärdatamodell. Gör så här om du vill använda en formulärdatamodell när du skapar ett adaptivt formulär eller adaptivt formulärfragment:
 
-1. På fliken Formulärmodell på skärmen Lägg till egenskaper väljer du **[!UICONTROL Form Data Model]** i **[!UICONTROL Select From]** nedrullningsbar lista.
+1. På fliken Formulärmodell på skärmen Lägg till egenskaper väljer du **[!UICONTROL Form Data Model]** i **[!UICONTROL Select From]** listruta.
 
    ![create-af-1-1](assets/create-af-1-1.png)
 
@@ -93,12 +93,12 @@ Mer information finns i:
 
 ## Förhandsgranska med exempeldata {#preview-ic}
 
-Med redigeraren för formulärdatamodell kan du generera och redigera exempeldata för datamodellsobjekt i formulärdatamodellen. Du kan använda dessa data för att förhandsgranska och testa interaktiv kommunikation och anpassningsbara formulär. Du måste generera exempeldata innan du förhandsgranskar enligt beskrivningen i [Arbeta med formulärdatamodell](../../forms/using/work-with-form-data-model.md#sample).
+Med formulärdatamodellens redigerare kan du generera och redigera exempeldata för datamodellsobjekt i formulärdatamodellen. Du kan använda dessa data för att förhandsgranska och testa interaktiv kommunikation och anpassningsbara formulär. Du måste generera exempeldata innan du förhandsgranskar enligt beskrivningen i [Arbeta med formulärdatamodell](../../forms/using/work-with-form-data-model.md#sample).
 
-Så här förhandsgranskar du en interaktiv kommunikation med exempeldata för formulärdatamodell:
+Så här förhandsgranskar du en interaktiv kommunikation med exempelformulärdata:
 
 1. Navigera AEM författarinstansen till **[!UICONTROL Forms > Forms & Documents]**.
-1. Välj en interaktiv kommunikation och tryck **[!UICONTROL Preview]** i verktygsfältet för att markera **[!UICONTROL Web Channel]**, **[!UICONTROL Print Channel]**, eller **[!UICONTROL Both Channels]** för att förhandsgranska den interaktiva kommunikationen.
+1. Välj en interaktiv kommunikation och tryck **[!UICONTROL Preview]** i verktygsfältet för att markera **[!UICONTROL Web Channel]**, **[!UICONTROL Print Channel]**, eller **[!UICONTROL Both Channels]** för att förhandsgranska interaktiv kommunikation.
 1. I förhandsgranskningen [*kanal*] se till att **[!UICONTROL Test Data of Form Data Model]** är markerat och tryck **[!UICONTROL Preview]**.
 
 Den interaktiva kommunikationen öppnas med förfyllda exempeldata.
@@ -135,7 +135,7 @@ Du kan också skicka formulärbilagor till en datakälla med hjälp av objektege
 
 1. Lägg till ett datamodellsobjekt som innehåller en binär egenskap i formulärdatamodellen.
 1. Dra-och-släpp **[!UICONTROL File Attachment]** från komponentwebbläsaren till det adaptiva formuläret.
-1. Tryck för att markera den tillagda komponenten och tryck på ![settings_icon](assets/settings_icon.png) för att öppna egenskapsgranskaren för komponenten.
+1. Tryck för att markera den tillagda komponenten och tryck på ![settings_icon](assets/settings_icon.png) om du vill öppna egenskapsgranskaren för komponenten.
 1. I fältet Bindningsreferens trycker du på ![foldersearch_18](assets/foldersearch_18.png) och navigera till den binära egenskap som du lade till i formulärdatamodellen. Konfigurera andra egenskaper efter behov.
 
    Tryck ![check-button](assets/check-button.png) för att spara egenskaperna. Bilagefältet är nu bundet till den binära egenskapen för formulärdatamodellen.
@@ -144,7 +144,7 @@ Du kan också skicka formulärbilagor till en datakälla med hjälp av objektege
 
 ## Anropa tjänster i anpassningsbara formulär med hjälp av regler {#invoke-services}
 
-I ett anpassningsbart formulär baserat på en formulärdatamodell kan du [skapa regler](../../forms/using/rule-editor.md) för att anropa tjänster som konfigurerats i formulärdatamodellen. The **[!UICONTROL Invoke Services]** -åtgärden i en regel listar alla tillgängliga tjänster i formulärdatamodellen och gör att du kan välja in- och utdatafält för tjänsten. Du kan också använda **Ange värde** regeltyp som anropar en datamodelltjänst för formulär och ställer in värdet för ett fält på utdata som returneras av tjänsten.
+I ett anpassningsbart formulär baserat på en formulärdatamodell kan du [skapa regler](../../forms/using/rule-editor.md) för att anropa tjänster som konfigurerats i formulärdatamodellen. The **[!UICONTROL Invoke Services]** -åtgärden i en regel listar alla tillgängliga tjänster i formulärdatamodellen och låter dig välja in- och utdatafält för tjänsten. Du kan också använda **Ange värde** regeltyp som anropar en datamodelltjänst för formulär och ställer in värdet för ett fält på utdata som returneras av tjänsten.
 
 I följande regel anropas till exempel en get-tjänst som tar Employee Id som indata och de returnerade värdena fylls i i motsvarande fält för beroende ID, efternamn, förnamn och kön i formuläret.
 

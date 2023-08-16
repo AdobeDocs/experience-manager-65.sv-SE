@@ -11,9 +11,9 @@ topic-tags: operations
 discoiquuid: d2c95881-6c02-4e34-85af-84607df54287
 role: Developer
 exl-id: a07e51ca-fea0-4719-8071-1b7e805de2ae
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '9117'
+source-wordcount: '9113'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 0%
 
 **Om databastjänsten**
 
-Databastjänsten tillhandahåller lagringstjänster och hanteringstjänster för resurser till AEM Forms. När utvecklare skapar en *AEM Forms* kan de distribuera resurserna i databasen i stället för i filsystemet. Materialet kan innehålla alla typer av material, inklusive XML-formulär, PDF forms (inklusive Acrobat-formulär), formulärfragment, bilder, profiler, profiler, SWF-filer, DDX-filer, XML-scheman, WSDL-filer och testdata.
+Databastjänsten tillhandahåller lagringstjänster och hanteringstjänster till AEM Forms. När utvecklare skapar en *AEM Forms* kan de distribuera resurserna i databasen i stället för i filsystemet. Resurserna kan innehålla alla typer av material, inklusive XML-formulär, PDF forms (inklusive Acrobat-formulär), formulärfragment, bilder, profiler, profiler, SWF-filer, DDX-filer, XML-scheman, WSDL-filer och testdata.
 
 Ta till exempel följande Forms-program med namnet *Program/FormsApplication*:
 
@@ -48,7 +48,7 @@ Följande värden visar några exempel på URI-värden:
 
 >[!NOTE]
 >
->Du kan bläddra i AEM Forms-databasen med en webbläsare. Om du vill bläddra i databasen anger du följande URL-adress i en webbläsare `https://[server name]:[server port]/repository`. Du kan verifiera snabbstartsresultat som är kopplade till avsnittet Arbeta med AEM Forms-databas med en webbläsare. Om du till exempel lägger till innehåll i AEM Forms-databasen kan du se innehållet i en webbläsare. (Se [Snabbstart (SOAP-läge): Skriva en resurs med Java API](/help/forms/developing/repository-service-api-quick-starts.md#quick-start-soap-mode-writing-a-resource-using-the-java-api).)
+>Du kan bläddra i AEM Forms-databasen med en webbläsare. Om du vill bläddra i databasen anger du följande URL i en webbläsare `https://[server name]:[server port]/repository`. Du kan verifiera snabbstartsresultat som är kopplade till avsnittet Arbeta med AEM Forms-databas med en webbläsare. Om du till exempel lägger till innehåll i AEM Forms-databasen kan du se innehållet i en webbläsare. (Se [Snabbstart (SOAP-läge): Skriva en resurs med Java API](/help/forms/developing/repository-service-api-quick-starts.md#quick-start-soap-mode-writing-a-resource-using-the-java-api).)
 
 Databas-API:t innehåller ett antal åtgärder som du kan använda för att lagra och hämta information från databasen. Du kan till exempel få en lista med resurser eller hämta särskilda resurser som lagras i databasen när en resurs behövs som en del av bearbetningen av ett program.
 
@@ -84,7 +84,7 @@ Med hjälp av API:t för databastjänsten kan du utföra följande uppgifter:
 
 Mappar (resurssamlingar) används för att lagra objekt (filer eller resurser) i ordnade grupperingar. Mappar kan innehålla resurser och andra mappar, som också kallas undermappar. Resurser kan bara lagras i en mapp i taget.
 
-Filerna ärver åtkomstkontrollistor (ACL:er) från mappar, och undermappar ärver åtkomstkontrollistor från sina överordnade mappar. Därför måste de överordnade mapparna finnas innan du kan skapa underordnade mappar. Med IDE kan du bara interagera mappvis, inte fil för fil. Du kan inte versionsmappar och du behöver inte göra det. en mapp inte innehåller själva data. I stället är det bara en behållare för resurser som innehåller data. Standard-ACL är behörighet på systemnivå, vilket innebär att användare måste ha behörighet på systemnivå (läsa, skriva, bläddra, hantera åtkomstkontrollistor) tills någon ger dem behörighet för en viss mapp. ACL-listor fungerar bara i den integrerade utvecklingsmiljön.
+Filerna ärver åtkomstkontrollistor (ACL:er) från mappar, och undermappar ärver åtkomstkontrollistor från sina överordnade mappar. Därför måste de överordnade mapparna finnas innan du kan skapa underordnade mappar. Med IDE kan du bara interagera mappvis, inte fil för fil. Du kan inte versionsmappar och du behöver inte göra det. En mapp innehåller inga data. I stället är det bara en behållare för resurser som innehåller data. Standard-ACL är behörighet på systemnivå, vilket innebär att användare måste ha behörighet på systemnivå (läsa, skriva, bläddra, hantera åtkomstkontrollistor) tills någon ger dem behörighet för en viss mapp. ACL-listor fungerar bara i den integrerade utvecklingsmiljön.
 
 >[!NOTE]
 >
@@ -149,16 +149,15 @@ Skapa en mapp med hjälp av Repository Service API (Java):
    * A `com.adobe.repository.infomodel.Lid` UUID-identifierare som ska tilldelas resursen.
    * A `java.lang.String` som innehåller namnet på resurssamlingen. Till exempel, `FormsFolder`.
 
-   Metoden returnerar en `com.adobe.repository.infomodel.bean.ResourceCollection` objekt som representerar den nya mappen.
+   Metoden returnerar en `com.adobe.repository.infomodel.bean.ResourceCollection` -objekt som representerar den nya mappen.
 
-   Ange mappens beskrivning med `setDescription` och skicka följande parameter:
+   Ange mappens beskrivning med hjälp av `setDescription` och skicka följande parameter:
 
-   * A `String` som beskriver resurssamlingen. I det här exemplet `"test Folder"` används `.`
-
+   * A `String` som beskriver resurssamlingen. I detta exempel `"test Folder"` används `.`
 
 1. Skriv mappen till databasen
 
-   Anropa `ResourceRepositoryClient` objektets `writeResource` och skicka URI:n för mappen och `ResourceCollection` -objekt. URI:n till mappen kan till exempel vara följande värde `/Applications/FormsApplication/1.0/`.
+   Anropa `ResourceRepositoryClient` objektets `writeResource` och skicka URI:n för mappen och `ResourceCollection` -objekt. URI till mappen kan till exempel vara följande värde `/Applications/FormsApplication/1.0/`.
 
    Metoden returnerar en instans av den nyskapade `com.adobe.repository.infomodel.bean.Resource` -objekt. Du kan till exempel hämta identifierarvärdet för den nya resursen genom att anropa `com.adobe.repository.infomodel.bean.Resource` objektets `getId` -metod.
 
@@ -192,7 +191,7 @@ Skapa en mapp med hjälp av Repository-tjänstens API (webbtjänst):
    * An `Id` objekt, som skapas genom att standardkonstruktorn för `Id` -klassen och den har tilldelats `Resource` objektets `id` fält.
    * An `Lid` objekt, som skapas genom att standardkonstruktorn för `Lid` -klassen och den har tilldelats `Resource` objektets `lid` fält.
    * En sträng som innehåller namnet på resurssamlingen som är tilldelad till `Resource` objektets `name` fält. Namnet som används i det här exemplet är `"testfolder"`.
-   * En sträng som innehåller beskrivningen av resurssamlingen, som tilldelas till `Resource` objektets `description` fält. Beskrivningen som används i det här exemplet är `"test folder"`.
+   * En sträng som innehåller beskrivningen av resurssamlingen, som tilldelas till `Resource` objektets `description` fält. Beskrivningen i det här exemplet är `"test folder"`.
 
 1. Skriv mappen till databasen
 
@@ -200,7 +199,7 @@ Skapa en mapp med hjälp av Repository-tjänstens API (webbtjänst):
 
    * Sökvägen till den mapp som ska skapas.
    * The `ResourceCollection` -objekt som representerar mappen.
-   * Pass `null` för de andra två parametrarna.
+   * Godkänd `null` för de andra två parametrarna.
 
 **Se även**
 
@@ -212,7 +211,7 @@ Skapa en mapp med hjälp av Repository-tjänstens API (webbtjänst):
 
 Du kan skapa resurser på en viss plats i databasen. Den naturliga filstorleken kan begränsas av databasen och tidsgränsen för sessioner kan överskridas. För standardkonfigurationen är filerna begränsade till 25 MB. Om du vill öka eller minska den maximala filstorleken måste du ändra databaskonfigurationen.
 
-Att skriva resurser motsvarar att lagra data i databasen. När du har skrivit en resurs till databasen blir den tillgänglig för alla klienter i databasens ekosystem. När du skriver resurser, t.ex. XML-scheman, XDP-filer och XSD-filer, till databasen analyseras innehållet baserat på MIME-typen. Om MIME-typen stöds avgör parsern om det finns en underförstådd relation till annat innehåll. Om en CSS (Cascading Style Sheet) till exempel har en relativ URL som refererar till en vanlig CSS, förväntas du att du även ska skicka den vanliga CSS-koden till databasen. Relationen mellan de två resurserna lagras som en väntande relation under en icke-justerbar period på 30 dagar. När du skickar den vanliga CSS-koden till databasen inom 30 dagar skapas relationen.
+Att skriva resurser motsvarar att lagra data i databasen. När du har skrivit en resurs till databasen blir den tillgänglig för alla klienter i databasens ekosystem. När du skriver resurser, t.ex. XML-scheman, XDP-filer och XSD-filer, till databasen analyseras innehållet baserat på MIME-typen. Om MIME-typen stöds avgör parsern om det finns en underförstådd relation till annat innehåll. Om en CSS (Cascading Style Sheet) till exempel har en relativ URL som refererar till en vanlig CSS-formatmall förväntas du att du även ska skicka den vanliga CSS-koden till databasen. Relationen mellan de två resurserna lagras som en väntande relation under en icke-justerbar period på 30 dagar. När du skickar den vanliga CSS-koden till databasen inom 30 dagar skapas relationen.
 
 När du skapar en resurs ärvs åtkomstkontrollistan (ACL) från den överordnade mappen. Rotmappen har behörighet på systemnivå tills en ursprunglig resurs eller mapp skapas. Då får resursen eller mappen standardbehörigheter för åtkomstkontrollista.
 
@@ -293,7 +292,7 @@ Skriv en resurs med hjälp av Repository Service API (Java):
    * A `com.adobe.repository.infomodel.Lid` objekt, som skapas genom att standardkonstruktorn för `Lid` klassen.
    * A `java.lang.String` som innehåller resursens filnamn.
 
-   Om du vill ange en beskrivning av resursen anropar du `Resource` objektets `setDescription` och skicka en sträng som innehåller beskrivningen. I det här exemplet är beskrivningen `"test resource"`.
+   Om du vill ange resursens beskrivning anropar du `Resource` objektets `setDescription` och skicka en sträng som innehåller beskrivningen. I detta exempel är beskrivningen `"test resource"`.
 
 1. Ange resursinnehållet
 
@@ -337,12 +336,12 @@ Skriv en resurs med hjälp av Repository-tjänstens API (webbtjänst):
 
 1. Skapa resursen
 
-   Om du vill skapa en resurs anropar du standardkonstruktorn för `Resource` klassen. I det här exemplet lagras följande information i `Resource` objekt:
+   Anropa standardkonstruktorn för `Resource` klassen. I det här exemplet lagras följande information i `Resource` objekt:
 
    * A `com.adobe.repository.infomodel.Id` objekt, som skapas genom att standardkonstruktorn för `Id` -klassen och den har tilldelats `Resource` objektets `id` fält.
    * A `com.adobe.repository.infomodel.Lid` objekt, som skapas genom att standardkonstruktorn för `Lid` -klassen och den har tilldelats `Resource` objektets `lid` fält.
    * En sträng som innehåller resursens filnamn, som tilldelas resursen `Resource` objektets `name` fält. Namnet som används i det här exemplet är `"testResource"`.
-   * En sträng som innehåller beskrivningen av resursen, som tilldelas till `Resource` objektets `description` fält. Beskrivningen som används i det här exemplet är `"test resource"`.
+   * En sträng som innehåller beskrivningen av resursen, som tilldelas till `Resource` objektets `description` fält. Beskrivningen i det här exemplet är `"test resource"`.
 
 1. Ange resursinnehållet
 
@@ -355,7 +354,7 @@ Skriv en resurs med hjälp av Repository-tjänstens API (webbtjänst):
 
 1. Skriv resursen till målmappen
 
-   Anropa `RepositoryServiceService` objektets `writeResource` och skicka URI:n för mappen, samt `Resource` -objekt. Pass `null` för de andra två parametrarna.
+   Anropa `RepositoryServiceService` objektets `writeResource` och skicka URI:n för mappen, samt `Resource` -objekt. Godkänd `null` för de andra två parametrarna.
 
 **Se även**
 
@@ -369,7 +368,7 @@ Du kan identifiera resurser genom att lista resurser. En fråga utförs mot data
 
 När du har organiserat dina resurser kan du inspektera strukturen som du skapade genom att se en viss gren av strukturen, precis som i ett operativsystem.
 
-Listresurser hanteras efter relation: är medlemmar i mappar. Medlemskapet representeras av en relation av typen&quot;medlem av&quot;. När du listar resurser i en viss mapp frågar du efter resurser som är relaterade till en viss mapp av relationen &quot;medlem i&quot;. Relationer är riktade: en medlem i en relation har en källa som är medlem i målet. Källan är resursen. målet är den överordnade mappen.
+Listresurser hanteras efter relation: resurserna är medlemmar i mappar. Medlemskapet representeras av en relation av typen&quot;medlem av&quot;. När du listar resurser i en viss mapp frågar du efter resurser som är relaterade till en viss mapp av relationen &quot;medlem i&quot;. Relationer är riktade: en medlem i en relation har en källa som är medlem i målet. Källan är resursen och målet är den överordnade mappen.
 
 >[!NOTE]
 >
@@ -426,7 +425,7 @@ Visa resurser med hjälp av Repository Service API (Java):
 
 1. Ange mappsökväg
 
-   Ange URI:n för den resurssamling som ska efterfrågas. I det här fallet är dess URI `"/testFolder"`. URI:n lagras som en `java.lang.String` -objekt.
+   Ange URI:n för resurssamlingen som ska frågas. I det här fallet är dess URI `"/testFolder"`. URI:n lagras som en `java.lang.String` -objekt.
 
 1. Hämta listan över resurser
 
@@ -463,7 +462,7 @@ Visa resurser med hjälp av Repository-tjänstens API (webbtjänst):
 
 1. Hämta listan över resurser
 
-   Anropa `RepositoryServiceService` objektets `listMembers` och skicka URI:n för mappen som den första parametern. Pass `null` för de andra två parametrarna.
+   Anropa `RepositoryServiceService` objektets `listMembers` och skicka URI:n för mappen som den första parametern. Godkänd `null` för de andra två parametrarna.
 
    Metoden returnerar en array med objekt som kan bytas ut mot `Resource` objekt. Du kan iterera genom objektarrayen för att hämta de relaterade resurserna. I det här exemplet visas namn och beskrivning för varje resurs.
 
@@ -479,9 +478,9 @@ Du kan hämta resurser från en viss plats i databasen för att kunna läsa dera
 
 Databasen har följande fyra behörighetstyper:
 
-* **bläddra**: gör att du kan lista resurser, d.v.s. för att läsa resursmetadata, men inte resursinnehåll
+* **gå**: gör att du kan lista resurser, d.v.s. läsa resursmetadata, men inte resursinnehåll
 * **read**: gör att du kan läsa resursinnehåll
-* **skriva**: gör att du kan skriva resursinnehåll
+* **skriva**: låter dig skriva resursinnehåll
 * **hantera åtkomstkontrollistor**: gör att du kan hantera åtkomstkontrollistor på resurser
 
 Användare kan bara köra processer om de har behörighet att köra processen. IDE-användare behöver gå igenom och läsa behörigheter för att synkronisera med databasen. ACL-listor används endast i designläge eftersom körning sker i systemkontexten.
@@ -578,7 +577,7 @@ Läs en resurs med hjälp av Repository Service API (webbtjänsten):
 
 1. Läs resursen
 
-   Anropa `RepositoryServiceService` objektets `readResource` och skicka resursens URI som den första parametern. Pass `null` för de andra två parametrarna.
+   Anropa `RepositoryServiceService` objektets `readResource` och skicka resursens URI som den första parametern. Godkänd `null` för de andra två parametrarna.
 
 **Se även**
 
@@ -590,11 +589,11 @@ Läs en resurs med hjälp av Repository Service API (webbtjänsten):
 
 Du kan hämta och uppdatera innehållet för resurser i databasen. När du uppdaterar resurser ändras inte åtkomstkontrollen för dessa resurser mellan versionerna. När du utför en uppdatering kan du välja att öka huvudversionen. Om du inte väljer att öka den större versionen uppdateras den mindre versionen automatiskt.
 
-När du uppdaterar en resurs skapas den nya versionen baserat på de angivna resursattributen. När du uppdaterar en resurs anger du två viktiga parametrar: mål-URI och en resursinstans som innehåller alla uppdaterade metadata. Observera att om du inte ändrar ett visst attribut (till exempel namnet), krävs fortfarande attributet i den instans som du skickar in. De relationer som skapas när innehållet analyseras läggs till i den specifika versionen och överförs inte framåt om inte annat anges.
+När du uppdaterar en resurs skapas den nya versionen baserat på de angivna resursattributen. När du uppdaterar en resurs anger du två viktiga parametrar: mål-URI och en resursinstans som innehåller alla uppdaterade metadata. Observera att om du inte ändrar ett visst attribut (till exempel namnet), krävs fortfarande attributet i den instans som du skickar in. De relationer som skapas när innehållet tolkas läggs till i den specifika versionen och överförs inte framåt om inte annat anges.
 
-Om du till exempel uppdaterar en XDP-fil och den innehåller referenser till andra resurser, spelas även dessa ytterligare referenser in. Anta att form.xdp version 1.0 har två externa referenser: en logotyp och en formatmall, och du uppdaterar sedan form.xdp så att det nu finns tre referenser: en logotyp, en formatmall och en schemafil. Under uppdateringen lägger databasen till den tredje relationen (till schemafilen) i den väntande relationstabellen. När schemafilen finns i databasen kommer relationen automatiskt att formas. Om form.xdp version 2.0 inte längre använder logotypen kommer form.xdp version 2.0 inte att ha något samband med logotypen.
+Om du till exempel uppdaterar en XDP-fil och den innehåller referenser till andra resurser, spelas även dessa ytterligare referenser in. Anta att form.xdp version 1.0 har två externa referenser: en logotyp och en formatmall. Därefter uppdaterar du form.xdp så att den nu har tre referenser: en logotyp, en formatmall och en schemafil. Under uppdateringen lägger databasen till den tredje relationen (till schemafilen) i den väntande relationstabellen. När schemafilen finns i databasen kommer relationen automatiskt att formas. Om form.xdp version 2.0 inte längre använder logotypen kommer form.xdp version 2.0 inte att ha något samband med logotypen.
 
-Alla uppdateringsåtgärder är atomiska och transaktionella. Om två användare till exempel läser samma resurs och båda beslutar att uppdatera version 1.0 till version 2.0, kommer en av dem att lyckas och en av dem kommer att misslyckas, databasens integritet kommer att bevaras och båda får ett meddelande som bekräftar att åtgärden lyckades eller misslyckades. Om transaktionen inte genomförs återställs den vid databasfel och timeout eller återställning inträffar beroende på programservern.
+Alla uppdateringsåtgärder är atomiska och transaktionella. Om två användare till exempel läser samma resurs och båda beslutar att uppdatera version 1.0 till version 2.0, kommer en av dem att lyckas och en av dem kommer att misslyckas, databasens integritet kommer att bevaras och båda får ett meddelande som bekräftar att åtgärden lyckades eller misslyckades. Om transaktionen inte genomförs återställs den om det uppstår ett databasfel och timeout eller återställning inträffar beroende på programservern.
 
 Du kan uppdatera resurser programmatiskt med hjälp av Java API:t för databastjänsten eller webbtjänstens API.
 
@@ -690,7 +689,7 @@ Uppdatera en resurs med hjälp av Repository API (webbtjänsten):
 
 1. Hämta resursen som ska uppdateras
 
-   Ange URI:n för resursen som ska hämtas och läsa resursen. I det här exemplet är resursens URI `"/testFolder/testResource"`. Mer information finns i [Läser resurser](aem-forms-repository.md#reading-resources).
+   Ange URI för resursen som ska hämtas och läsa resursen. I det här exemplet är resursens URI `"/testFolder/testResource"`. Mer information finns i [Läser resurser](aem-forms-repository.md#reading-resources).
 
 1. Uppdatera resursen
 
@@ -701,7 +700,7 @@ Uppdatera en resurs med hjälp av Repository API (webbtjänsten):
    * A `System.String` objekt som innehåller resursens URI.
    * The `Resource` objekt som innehåller den uppdaterade resursinformationen.
    * A `boolean` som anger om huvudversionen eller delversionen ska uppdateras. I det här exemplet är värdet `true` skickas in för att ange att huvudversionen ska ökas.
-   * Pass `null` för de återstående två parametrarna.
+   * Godkänd `null` för de återstående två parametrarna.
 
 **Se även**
 
@@ -713,7 +712,7 @@ Uppdatera en resurs med hjälp av Repository API (webbtjänsten):
 
 Du kan skapa frågor som används för att söka efter resurser i databasen, inklusive historik, relaterade resurser och egenskaper.
 
-Du kan hämta relaterade resurser för att fastställa beroenden mellan ett formulär och dess fragment. Om du till exempel har ett formulär kan du avgöra vilka fragment eller externa resurser som används. Om du har en bild kan du även ta reda på vilka formulär som använder bilden. Du kan också söka efter relaterade resurser med filtrering baserat på egenskaper. Du kan t.ex. söka efter alla formulär som använder en bild med ett visst namn, eller hitta en bild som används av ett formulär med ett visst namn. Du kan också söka med hjälp av resursegenskaper. Du kan till exempel utföra en fråga för att hitta alla formulär eller resurser vars namn börjar med en sträng som kan innehålla jokertecknen&quot;%&quot; och&quot;_&quot;. Kom ihåg att sökningar som baseras på egenskaper inte baseras på relationer, sökningarna baseras på antagandet att du har specifik kunskap om en viss resurs.
+Du kan hämta relaterade resurser för att fastställa beroenden mellan ett formulär och dess fragment. Om du till exempel har ett formulär kan du avgöra vilka fragment eller externa resurser som används. Om du har en bild kan du även ta reda på vilka formulär som använder bilden. Du kan också söka efter relaterade resurser med filtrering baserat på egenskaper. Du kan t.ex. söka efter alla formulär som använder en bild med ett visst namn, eller hitta en bild som används av ett formulär med ett visst namn. Du kan också söka med hjälp av resursegenskaper. Du kan till exempel utföra en fråga för att hitta alla formulär eller resurser vars namn börjar med en sträng som kan innehålla jokertecknen&quot;%&quot; och&quot;_&quot;. Kom ihåg att sökningar som baseras på egenskaper inte baseras på relationer. Sådana sökningar baseras på antagandet att du har specifik kunskap om en viss resurs.
 
 **Frågesatser**
 
@@ -804,7 +803,7 @@ Sök efter en resurs med hjälp av Repository Service API (Java):
 
 1. Ange de attribut som används i sökningen
 
-   Ange värdena för attributen som sökningen ska utföras på. Attributen finns i en `com.adobe.repository.infomodel.bean.Resource` -objekt. I detta exempel kommer sökningen att utföras på namnattributet. därför `java.lang.String` innehåller `Resource` objektets namn används, vilket är `testResource` i detta fall.
+   Ange värdena för attributen som sökningen ska utföras på. Attributen finns i en `com.adobe.repository.infomodel.bean.Resource` -objekt. I det här exemplet kommer sökningen att utföras på name-attributet, vilket innebär att `java.lang.String` innehåller `Resource` objektets namn används, vilket är `testResource` i detta fall.
 
 1. Skapa frågan som används i sökningen
 
@@ -816,7 +815,7 @@ Sök efter en resurs med hjälp av Repository Service API (Java):
    * En operator som innehåller villkoret som används i sökningen efter attributet. Operatorn måste vara en av de statiska konstanterna i `Query.Statement` klassen. I det här exemplet är det statiska värdet `Query.Statement.OPERATOR_BEGINS_WITH` används.
    * En högeroperand som innehåller attributvärdet som sökningen ska utföras på. I det här exemplet är name-attributet `String` som innehåller värdet `"testResource"`, används.
 
-   Ange namnutrymmet för den vänstra operanden genom att anropa `Query.Statement` objektets `setNamespace` metoden och ange ett av de statiska värdena i `com.adobe.repository.infomodel.bean.ResourceProperty` klassen. I det här exemplet `ResourceProperty.RESERVED_NAMESPACE_REPOSITORY` används.
+   Ange namnutrymmet för den vänstra operanden genom att anropa `Query.Statement` objektets `setNamespace` metoden och ange ett av de statiska värdena i `com.adobe.repository.infomodel.bean.ResourceProperty` klassen. I detta exempel `ResourceProperty.RESERVED_NAMESPACE_REPOSITORY` används.
 
    Lägg till varje sats i frågan genom att anropa `Query` objektets `addStatement` metoden och skicka in `Query.Statement` -objekt.
 
@@ -834,16 +833,16 @@ Sök efter en resurs med hjälp av Repository Service API (Java):
 
    * A `String` som innehåller den bassökväg som sökningen ska utföras från. I detta fall `"/testFolder"` används.
    * Frågan som används i sökningen.
-   * Djupet på sökningen. I detta fall `com.adobe.repository.infomodel.bean.ResourceCollection.DEPTH_INFINITE` används för att ange att bassökvägen och alla dess mappar ska användas.
-   * An `int` värde som anger den första raden från vilken du vill välja den ej växlade resultatmängden. I det här exemplet `0` har angetts.
-   * An `int` värde som anger det maximala antalet resultat som ska returneras. I det här exemplet `10` har angetts.
+   * Sökningens djup. I detta fall `com.adobe.repository.infomodel.bean.ResourceCollection.DEPTH_INFINITE` används för att ange att bassökvägen och alla dess mappar ska användas.
+   * An `int` värde som anger den första raden från vilken du vill välja den ej växlade resultatmängden. I detta exempel `0` har angetts.
+   * An `int` ett värde som anger det maximala antalet resultat som ska returneras. I detta exempel `10` har angetts.
    * Sorteringsordningen som används i sökningen.
 
    Metoden returnerar en `java.util.List` av `Resource` objekt i den angivna sorteringsordningen.
 
 1. Hämta resurserna från sökresultatet
 
-   Om du vill hämta resurserna i sökresultatet itererar du genom `List` och omvandla varje objekt till `Resource` för att få fram uppgifter. I det här exemplet visas namnet på varje resurs.
+   Om du vill hämta resurserna i sökresultatet itererar du genom `List` och omvandla varje objekt till `Resource` för att kunna extrahera sina uppgifter. I det här exemplet visas namnet på varje resurs.
 
 **Se även**
 
@@ -861,7 +860,7 @@ Du kan ange relationer mellan resurser i databasen. Det finns tre typer av relat
 
 * **Beroende**: en relation där en resurs är beroende av andra resurser, vilket innebär att alla relaterade resurser behövs i databasen.
 * **Medlemskap (filsystem)**: en relation där en resurs finns i en viss mapp.
-* **Egen**: en relation som du anger mellan resurser. Om till exempel en resurs har tagits bort och en annan resurs har lagts till i databasen, kan du ange en egen ersättningsrelation.
+* **Egen**: en relation som du anger mellan resurser. Om till exempel en resurs har tagits bort och en annan resurs har introducerats i databasen, kan du ange en egen ersättningsrelation.
 
 Du kan skapa egna anpassade relationer. Om du till exempel lagrar en HTML-fil i databasen och en bild används, kan du ange en anpassad relation för att relatera HTML-filen till bilden (eftersom normalt bara XML-filer associeras med bilder som använder en databasdefinierad beroenderelation). Ett annat exempel på en anpassad relation är om du vill skapa en annan vy av databasen med en cyklisk diagramstruktur i stället för en trädstruktur. Du kan definiera ett cirkeldiagram tillsammans med ett visningsprogram för att gå igenom dessa relationer. Slutligen kan du ange att en resurs ersätter en annan resurs trots att de två resurserna är helt olika. I så fall kan du definiera en relationstyp utanför det reserverade intervallet och skapa en relation mellan dessa två resurser. Ditt program skulle vara den enda klienten som kunde identifiera och bearbeta relationen och det skulle kunna användas för att utföra sökningar i relationen.
 
@@ -922,7 +921,7 @@ Skapa relationsresurser genom att använda Java API för databastjänsten och ut
 
 1. Ange URI:erna för resurserna som ska relateras
 
-   Ange URI:erna för resurserna som ska relateras. I det här fallet eftersom resurserna har namn `testResource1` och `testResource2` och finns i mappen med namnet `testFolder`, deras URI:er är `"/testFolder/testResource1"` och `"/testFolder/testResource2"`. URI:erna sparas som `java.lang.String` objekt. I det här exemplet skrivs resurserna först till databasen och deras URI:er hämtas. Mer information om hur du skriver en resurs finns i [Skriver resurser](aem-forms-repository.md#writing-resources).
+   Ange URI:erna för resurserna som ska relateras. I det här fallet eftersom resurserna har namn `testResource1` och `testResource2` och finns i mappen med namnet `testFolder`, deras URI är `"/testFolder/testResource1"` och `"/testFolder/testResource2"`. URI:erna sparas som `java.lang.String` objekt. I det här exemplet skrivs resurserna först till databasen och deras URI:er hämtas. Mer information om hur du skriver en resurs finns i [Skriver resurser](aem-forms-repository.md#writing-resources).
 
 1. Skapa relationen
 
@@ -931,15 +930,15 @@ Skapa relationsresurser genom att använda Java API för databastjänsten och ut
    * Källresursens URI.
    * Målresursens URI.
    * Relationstypen, som är en av de statiska konstanterna i `com.adobe.repository.infomodel.bean.Relation` klassen. I det här exemplet skapas ett beroendeförhållande genom att ange värdet `Relation.TYPE_DEPENDANT_OF`.
-   * A `boolean` värde som anger om målresursen automatiskt uppdateras till `com.adobe.repository.infomodel.Id`-baserad identifierare för den nya huvudresursen. I det här exemplet, på grund av beroendeförhållandet, värdet `true` har angetts.
+   * A `boolean` värde som anger om målresursen automatiskt uppdateras till `com.adobe.repository.infomodel.Id`-baserad identifierare för den nya huvudresursen. I det här exemplet är värdet `true` har angetts.
 
    Du kan även hämta en lista över relaterade resurser för en viss resurs genom att anropa `ResourceRepositoryClient` objektets `getRelated` och skicka följande parametrar:
 
    * URI för resursen som relaterade resurser ska hämtas för. I det här exemplet är källresursen ( `"/testFolder/testResource1"`) har angetts.
-   * A `boolean` värde som anger om den angivna resursen är källresursen i relationen. I det här exemplet är värdet `true` anges eftersom så är fallet.
+   * A `boolean` ett värde som anger om den angivna resursen är källresursen i relationen. I det här exemplet är värdet `true` anges eftersom så är fallet.
    * Relationstypen, som är en av de statiska konstanterna i `Relation` klassen. I det här exemplet anges en beroenderelation med samma värde som användes tidigare: `Relation.TYPE_DEPENDANT_OF`.
 
-   The `getRelated` returnerar en `java.util.List` av `Resource` objekt genom vilka du kan iterera för att hämta de relaterade resurserna och byta ut objekten i `List` till `Resource` som du gör. I det här exemplet `testResource2` förväntas finnas i listan över returnerade resurser.
+   The `getRelated` returnerar en `java.util.List` av `Resource` objekt genom vilka du kan iterera för att hämta de relaterade resurserna och byta ut objekten i `List` till `Resource` som du gör. I detta exempel `testResource2` förväntas finnas med i listan över returnerade resurser.
 
 **Se även**
 
@@ -966,7 +965,7 @@ Skapa relationsresurser med hjälp av Repository API (webbtjänsten):
 
 1. Ange URI:erna för resurserna som ska relateras
 
-   Ange URI:erna för resurserna som ska relateras. I det här fallet eftersom resurserna har namn `testResource1` och `testResource2` och finns i mappen med namnet `testFolder`, deras URI:er är `"/testFolder/testResource1"` och `"/testFolder/testResource2"`. När du använder ett språk som är kompatibelt med Microsoft .NET Framework (till exempel C#), lagras URI:erna som `System.String` objekt. I det här exemplet skrivs resurserna först till databasen och deras URI:er hämtas. Mer information om hur du skriver en resurs finns i [Skriver resurser](aem-forms-repository.md#writing-resources).
+   Ange URI:erna för resurserna som ska relateras. I det här fallet eftersom resurserna har namn `testResource1` och `testResource2` och finns i mappen med namnet `testFolder`, deras URI är `"/testFolder/testResource1"` och `"/testFolder/testResource2"`. När du använder ett språk som är kompatibelt med Microsoft .NET Framework (till exempel C#), lagras URI:erna som `System.String` objekt. I det här exemplet skrivs resurserna först till databasen och deras URI:er hämtas. Mer information om hur du skriver en resurs finns i [Skriver resurser](aem-forms-repository.md#writing-resources).
 
 1. Skapa relationen
 
@@ -976,19 +975,19 @@ Skapa relationsresurser med hjälp av Repository API (webbtjänsten):
    * Målresursens URI.
    * Relationstypen. I det här exemplet skapas ett beroendeförhållande genom att ange värdet `3`.
    * A `boolean` värde som anger om relationstypen har angetts. I det här exemplet är värdet `true` har angetts.
-   * A `boolean` värde som anger om målresursen automatiskt uppdateras till `Id`-baserad identifierare för den nya huvudresursen. I det här exemplet, på grund av beroendeförhållandet, värdet `true` har angetts.
+   * A `boolean` värde som anger om målresursen automatiskt uppdateras till `Id`-baserad identifierare för den nya huvudresursen. I det här exemplet är värdet `true` har angetts.
    * A `boolean` ett värde som anger om målhuvudet har angetts. I det här exemplet är värdet `true` har angetts.
-   * Pass `null` för den sista parametern.
+   * Godkänd `null` för den sista parametern.
 
    Du kan även hämta en lista över relaterade resurser för en viss resurs genom att anropa `RepositoryServiceService` objektets `getRelated` och skicka följande parametrar:
 
    * URI för resursen som relaterade resurser ska hämtas för. I det här exemplet är källresursen ( `"/testFolder/testResource1"`) har angetts.
-   * A `boolean` värde som anger om den angivna resursen är källresursen i relationen. I det här exemplet är värdet `true` anges eftersom så är fallet.
+   * A `boolean` ett värde som anger om den angivna resursen är källresursen i relationen. I det här exemplet är värdet `true` anges eftersom så är fallet.
    * A `boolean` ett värde som anger om källresursen har angetts. I det här exemplet är värdet `true` anges.
    * En array med heltal som innehåller relationstyperna. I det här exemplet anges en beroenderelation med samma värde i arrayen som tidigare: `3`.
-   * Pass `null` för de återstående två parametrarna.
+   * Godkänd `null` för de återstående två parametrarna.
 
-   The `getRelated` returnerar en array med objekt som kan bytas ut mot `Resource` objekt genom vilka du kan iterera för att hämta de relaterade resurserna. I det här exemplet `testResource2` förväntas finnas i listan över returnerade resurser.
+   The `getRelated` returnerar en array med objekt som kan bytas ut mot `Resource` objekt genom vilka du kan iterera för att hämta de relaterade resurserna. I detta exempel `testResource2` förväntas finnas med i listan över returnerade resurser.
 
 **Se även**
 
@@ -1083,7 +1082,7 @@ Lås resurser med hjälp av Repository Service API (Java):
 
    >[!NOTE]
    >
-   >Den överlagrade versionen av `lockResource` -metod som kräver fyra parametrar genererar ett undantag. Se till att du använder `lockResource` metod som kräver tre parametrar enligt den här genomgången.
+   >Den överlagrade versionen av `lockResource` -metod som kräver fyra parametrar genererar ett undantag. Använd `lockResource` metod som kräver tre parametrar enligt den här genomgången.
 
 1. Hämta låsen för resursen
 
@@ -1128,15 +1127,15 @@ Lås resurser med hjälp av Repository-tjänstens API (webbtjänst):
    * Låsomfånget. I det här exemplet anges låsomfånget som `11`.
    * Låsdjupet. I det här exemplet anges låsningsdjupet som `2`.
    * An `int` värde som anger antalet sekunder innan låset förfaller. I det här exemplet är värdet för `1000` används.
-   * Pass `null` för den sista parametern.
+   * Godkänd `null` för den sista parametern.
 
 1. Hämta låsen för resursen
 
-   Anropa `RepositoryServiceService` objektets `getLocks` och skicka resursens URI som första parameter och `null` för den andra parametern. Metoden returnerar en `object` array som innehåller `Lock` objekt genom vilka du kan iterera. I det här exemplet skrivs låsägaren, djupet och omfånget ut för varje objekt genom att man får åtkomst till varje `Lock` objektets `ownerUserId`, `depth`och `type` fält.
+   Anropa `RepositoryServiceService` objektets `getLocks` och skicka resursens URI som den första parametern och `null` för den andra parametern. Metoden returnerar en `object` array som innehåller `Lock` objekt genom vilka du kan iterera. I det här exemplet skrivs låsägaren, djupet och omfånget ut för varje objekt genom att man får åtkomst till varje `Lock` objektets `ownerUserId`, `depth`och `type` fält.
 
 1. Lås upp resursen
 
-   Anropa `RepositoryServiceService` objektets `unlockResource` och skicka resursens URI som första parameter och `null` för den andra parametern.
+   Anropa `RepositoryServiceService` objektets `unlockResource` och skicka resursens URI som den första parametern och `null` för den andra parametern.
 
 **Se även**
 
@@ -1150,9 +1149,9 @@ Du kan ta bort resurser från en viss plats i databasen med hjälp av Java API(S
 
 När du tar bort en resurs är borttagningen vanligtvis permanent, men i vissa fall kan ECM-databaser lagra resursens versioner enligt deras historikmekanismer. När du tar bort en resurs är det därför viktigt att du aldrig behöver den igen. De vanligaste skälen till att en resurs tas bort är behovet av att öka det tillgängliga utrymmet i databasen. Du kan ta bort en version av en resurs, men om du gör det måste du ange resursidentifieraren och inte dess logiska identifierare (LID) eller sökväg. Om du tar bort en mapp tas allt i den mappen, inklusive undermappar och resurser, bort automatiskt.
 
-Relaterade resurser tas inte bort. Om du till exempel har ett formulär som använder filen logo.gif och du tar bort logo.gif, lagras en relation i den väntande relationstabellen. Du kan också ange att objektstatusen för den senaste versionen är inaktuell för borttagning av version.
+Relaterade resurser tas inte bort. Om du till exempel har ett formulär som använder filen logo.gif och du tar bort logo.gif, lagras en relation i den väntande relationstabellen. Du kan också ange att objektstatusen för den senaste versionen ska vara inaktuell för borttagning av version.
 
-En raderingsåtgärd är inte transaktionssäker i ECM-system. Om du till exempel försöker ta bort 100 resurser och åtgärden misslyckas på den 50:e resursen, tas de första 49 instanserna bort, men resten tas inte bort. I annat fall är standardbeteendet återställning (ej åtagande).
+En raderingsåtgärd är inte transaktionssäker i ECM-system. Om du till exempel försöker ta bort 100 resurser och åtgärden misslyckas på den 50:e resursen, tas de första 49 instanserna bort, men inte resten. I annat fall är standardbeteendet återställning (ej åtagande).
 
 >[!NOTE]
 >
@@ -1248,7 +1247,7 @@ Ta bort en resurs med Repository API (webbtjänsten):
 
 1. Ta bort resursen
 
-   Anropa `RepositoryServiceService` objektets `deleteResources` metod och skicka en `System.String` array som innehåller resursens URI som första parameter. Pass `null` för den andra parametern.
+   Anropa `RepositoryServiceService` objektets `deleteResources` metod och skicka en `System.String` arrayen som innehåller resursens URI som första parameter. Godkänd `null` för den andra parametern.
 
 **Se även**
 

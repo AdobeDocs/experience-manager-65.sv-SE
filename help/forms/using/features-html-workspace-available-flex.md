@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: 66c3cdc4-0e4c-4597-a107-f457dd0cc166
 exl-id: 4235e0ce-f1c4-432e-b486-2d72c390f320
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '381'
+source-wordcount: '380'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 AEM Forms arbetsyta är ett innovativt sätt än Flex-baserade arbetsytor och innehåller funktioner som förbättrar företagsintegrering och användarproduktivitet.
 
-Här följer en kort översikt över dessa funktioner. Mer information finns i de artiklar som hör till i slutet av den här artikeln.
+Här följer en kort översikt över dessa funktioner. Mer information finns i de artiklar som hör till i slutet av artikeln.
 
 ## Stöd för en sammanfattningsruta för uppgifter {#support-for-a-summary-pane-for-tasks}
 
@@ -37,8 +37,8 @@ Bilder, eller avatarer, för inloggade användare kan nu visas i det övre högr
 
 ## Stöd för integrering av tredjepartsprogram {#support-for-integrating-third-party-applications}
 
-Funktionen för integrering med tredjepartsprogram kan användas för att helt överföra dina arbetsflöden till AEM Forms arbetsyta. Du kan till exempel återge brevmallar för hantering av korrespondenshantering som uppgifter i AEM Forms-arbetsytefönstret. Därför kan du slutföra uppgiften utan att lämna arbetsytan i AEM Forms. Se [Integrera korrespondenshantering i AEM Forms arbetsyta](/help/forms/using/integrating-correspondence-management-html-workspace.md) för detaljerade anvisningar.
+Funktionen för integrering med tredjepartsprogram kan användas för att helt överföra dina arbetsflöden till AEM Forms arbetsyta. Du kan till exempel återge brevmallar för hantering av korrespondenshantering som uppgifter i AEM Forms-arbetsytefönstret. Därför kan du slutföra uppgiften utan att behöva lämna arbetsytan i AEM Forms. Se [Integrera korrespondenshantering i AEM Forms arbetsyta](/help/forms/using/integrating-correspondence-management-html-workspace.md) för detaljerade anvisningar.
 
 ## Stöd för anpassad aktivitetsåtergivning baserat på slutanvändarens enhet {#support-for-custom-task-rendering-based-on-end-user-s-device}
 
-AEM Forms arbetsyta har stöd för HTML-återgivning av XDP-formulär. Detta stöd gör att användare kan visa ett XDP-formulär som HTML på mobila enheter och som PDF på en dator när det används i en återgivningsprocess som dirigerar till olika återgivningar av XDP baserat på enheten eller användaragenten. Detta bidrar till att ge användare som arbetar i olika miljöer på olika enheter en smidig täckning av processhanteringen.
+AEM Forms arbetsyta har stöd för HTML-återgivning av XDP-formulär. Detta stöd gör att användare kan visa ett XDP-formulär som HTML på mobila enheter och som PDF på en stationär dator när det används i en återgivningsprocess som dirigerar till olika återgivningar av XDP baserat på enheten eller användaragenten. Detta bidrar till att ge användare som arbetar i olika miljöer på olika enheter en smidig täckning av processhanteringen.

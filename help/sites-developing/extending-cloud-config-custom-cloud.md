@@ -6,16 +6,16 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: extending-aem
 content-type: reference
 exl-id: 9414c77a-b180-4440-8386-e6eb4426e475
-source-git-commit: e068cee192c0837f1473802143e0793674d400e8
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '406'
+source-wordcount: '404'
 ht-degree: 0%
 
 ---
 
 # Skapa en anpassad Cloud Service{#creating-a-custom-cloud-service}
 
-Standarduppsättningen med Cloud Services kan utökas med anpassade Cloud Service. På så sätt kan du lägga in egen kod på sidan på ett strukturerat sätt. Detta är främst till för analytiker från tredje part, till exempel Google Analytics, Chartbeat osv. Cloud Services ärvs från överordnade sidor till underordnade sidor med möjlighet att bryta arvet på alla nivåer.
+Standarduppsättningen med Cloud Services kan utökas med anpassade Cloud Service. På så sätt kan du lägga in egna märkord på sidan på ett strukturerat sätt. Detta är främst till för analytiker från tredje part, till exempel Google Analytics, Chartbeat osv. Cloud Service ärvs från överordnade sidor till underordnade sidor med möjlighet att bryta arvet på alla nivåer.
 
 >[!NOTE]
 >
@@ -41,7 +41,7 @@ Standarduppsättningen med Cloud Services kan utökas med anpassade Cloud Servic
    * **Namn**: mallar
    * **Typ**: `sling:Folder`
 
-1. Högerklicka på `/apps/acs/analytics/components`. Välj **Skapa...** följt av **Skapa komponent...** I dialogrutan som öppnas kan du ange:
+1. Högerklicka på `/apps/acs/analytics/components`. Välj **Skapa...** följt av **Skapa komponent...** I den dialogruta som öppnas kan du ange:
 
    * **Etikett**: `googleanalyticspage`
    * **Titel**: `Google Analytics Page`
@@ -119,7 +119,7 @@ Standarduppsättningen med Cloud Services kan utökas med anpassade Cloud Servic
    * **Egenskaper**:
 
       * **Namn**: `fieldLabel`
-      * **Typ**: Sträng
+      * **Typ**: String
       * **Värde**: Konto-ID
 
       * **Namn**: `fieldDescription`
@@ -209,5 +209,5 @@ Standarduppsättningen med Cloud Services kan utökas med anpassade Cloud Servic
    Välj **Konfiguration av Google Analytics** och klicka **Skapa**.
 
 1. Ange en **Konto-ID**, till exempel `AA-11111111-1`. Klicka **OK**.
-1. Navigera till en sida och lägg till den nya konfigurationen i sidegenskaperna, under **Cloud Services** -fliken.
+1. Navigera till en sida och lägg till den nya konfigurationen i sidegenskaperna, under **Cloud Service** -fliken.
 1. Den anpassade koden läggs till på sidan.

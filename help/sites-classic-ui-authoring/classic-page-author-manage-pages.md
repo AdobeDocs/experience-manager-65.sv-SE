@@ -8,9 +8,9 @@ topic-tags: page-authoring
 content-type: reference
 discoiquuid: 14b8758b-f164-429a-b299-33b0703f8bec
 exl-id: bd2636d1-6f13-4c6c-b8cd-3bed9e83a101
-source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '1910'
+source-wordcount: '1909'
 ht-degree: 2%
 
 ---
@@ -36,17 +36,17 @@ Du kan också använda [mappar](#creating-a-new-folder) för att ordna innehåll
 
 Strukturen på en webbplats kan ses som en *trädstruktur* som innehåller dina innehållssidor. Namnen på dessa innehållssidor används för att skapa URL-adresserna, medan titeln visas när sidinnehållet visas.
 
-Följande visar ett utdrag från Geometrixx: där t.ex. `Triangle` sidan öppnas:
+I följande exempel visas ett utdrag från webbplatsen Geometrixx där t.ex. `Triangle` sidan öppnas:
 
 * Författarmiljö
 
-   `http://localhost:4502/cf#/content/geometrixx/en/products/triangle.html`
+  `http://localhost:4502/cf#/content/geometrixx/en/products/triangle.html`
 
 * Publiceringsmiljö
 
-   `http://localhost:4503/content/geometrixx/en/products/triangle.html`
+  `http://localhost:4503/content/geometrixx/en/products/triangle.html`
 
-   Beroende på instansens konfiguration kan du använda `/content` kan vara valfritt i publiceringsmiljön.
+  Beroende på instansens konfiguration kan du använda `/content` kan vara valfritt i publiceringsmiljön.
 
 ```xml
   /content
@@ -83,7 +83,7 @@ När du skapar en ny sida finns det två nyckelfält:
 
 * **[Namn](#name)**:
 
-   * Detta används för att generera URI:n.
+   * Detta används för att generera URI.
    * Användarindata för det här fältet är valfria. Om inget anges hämtas namnet från titeln.
 
 AEM skapar en ny sida [validera sidnamnet enligt konventionerna](/help/sites-developing/naming-conventions.md) som ålagts av AEM och JCR.
@@ -100,7 +100,7 @@ Använd bara dessa tecken om du vill vara säker på att de accepteras/används 
 
 #### Titel {#title}
 
-Om du bara anger en **sidtitel** när du skapar en ny sida härleds sidans **namn**[ i AEM från den här strängen och namnet valideras enligt konventionerna i AEM och JCR. ](/help/sites-developing/naming-conventions.md) I båda gränssnitten är **Titel** fält som innehåller ogiltiga tecken accepteras, men det härledda namnet får de ogiltiga tecknen understött. Till exempel:
+Om du bara anger en **sidtitel** när du skapar en ny sida härleds sidans **namn**[ i AEM från den här strängen och namnet valideras enligt konventionerna i AEM och JCR. ](/help/sites-developing/naming-conventions.md) I båda användargränssnitten är **Titel** fält som innehåller ogiltiga tecken accepteras, men det härledda namnet får de ogiltiga tecknen understött. Till exempel:
 
 | Titel | Härlett namn |
 |---|---|
@@ -111,10 +111,10 @@ Om du bara anger en **sidtitel** när du skapar en ny sida härleds sidans **nam
 
 Om du anger en sida **Namn** när du skapar en ny sida AEM [validera namnet enligt konventionerna](/help/sites-developing/naming-conventions.md) som ålagts av AEM och JCR.
 
-I det klassiska användargränssnittet **det går inte att ange ogiltiga tecken** i **Namn** fält.
+I det klassiska användargränssnittet **kan inte ange ogiltiga tecken** i **Namn** fält.
 
 >[!NOTE]
->I det pekaktiverade användargränssnittet **det går inte att skicka ogiltiga tecken** i **Namn** fält. När AEM upptäcker ogiltiga tecken markeras fältet och en förklaring visas som anger vilka tecken som behöver tas bort/ersättas.
+>I det pekaktiverade användargränssnittet **kan inte skicka ogiltiga tecken** i **Namn** fält. När AEM upptäcker ogiltiga tecken markeras fältet och en förklaring visas som anger vilka tecken som behöver tas bort/ersättas.
 
 >[!NOTE]
 >
@@ -126,7 +126,7 @@ I det klassiska användargränssnittet **det går inte att ange ogiltiga tecken*
 
 I AEM anger en mall en speciell typ av sida. En mall kommer att användas som bas för alla nya sidor som skapas.
 
-Mallen definierar strukturen för en sida. innehåller en miniatyrbild och andra egenskaper. Du kan till exempel ha separata mallar för produktsidor, platskartor och kontaktinformation. Mallar består av [komponenter](#components).
+Mallen definierar strukturen för en sida, inklusive en miniatyrbild och andra egenskaper. Du kan till exempel ha separata mallar för produktsidor, platskartor och kontaktinformation. Mallar består av [komponenter](#components).
 
 AEM innehåller flera färdiga mallar. Vilka mallar som visas beror på den enskilda webbplatsen och vilken information som behöver anges (när du skapar den nya sidan) beroende på vilket gränssnitt som används. Nyckelfälten är:
 
@@ -141,7 +141,7 @@ En lista med mallar som är tillgängliga för att användas när den nya sidan 
 
 ### Komponenter {#components}
 
-Komponenterna är de element som AEM tillhandahåller så att du kan lägga till specifika typer av innehåll. AEM innehåller en rad färdiga komponenter som ger omfattande funktionalitet. bland annat följande:
+Komponenterna är de element som AEM tillhandahåller så att du kan lägga till specifika typer av innehåll. AEM innehåller en rad färdiga komponenter som ger omfattande funktionalitet:
 
 * Text
 * Bild
@@ -159,7 +159,7 @@ Om du inte har skapat alla sidor åt dig i förväg måste du skapa en sida inna
 
 1. Från **Webbplatser** väljer du den nivå där du vill skapa en ny sida.
 
-   I följande exempel skapar du en sida under nivån **Produkter** - visas i den vänstra rutan, den högra rutan visar sidor som redan finns på nivån under **Produkter**.
+   I följande exempel skapar du en sida under nivån **Produkter** - visas i den vänstra rutan; den högra rutan visar sidor som redan finns på nivån under **Produkter**.
 
    ![screen_shot_2012-02-15at114413am](assets/screen_shot_2012-02-15at114413am.png)
 
@@ -167,21 +167,23 @@ Om du inte har skapat alla sidor åt dig i förväg måste du skapa en sida inna
 
    Klicka **Nytt...** fungerar också som en genväg till **Ny sida...** alternativ.
 
-1. The **Skapa sida** kan du göra följande:
+1. The **Skapa sida** kan du
 
    * Ange en **Titel**; detta visas för användaren.
-   * Ange en **Namn**; detta används för att generera URI:n. Om inget anges hämtas namnet från titeln.
+   * Ange en **Namn**; den används för att generera URI:n. Om inget anges hämtas namnet från titeln.
 
       * Om du anger en sida **Namn** när du skapar en ny sida AEM [validera namnet enligt konventionerna](/help/sites-developing/naming-conventions.md) av AEM och JCR.
-      * I det klassiska användargränssnittet **det går inte att ange ogiltiga tecken** i **Namn** fält.
+      * I det klassiska användargränssnittet **kan inte ange ogiltiga tecken** i **Namn** fält.
+
    * Klicka på den mall som du vill använda för att skapa den nya sidan.
 
-      Mallen används som grund för den nya sidan. till exempel för att bestämma den grundläggande layouten för en innehållssida.
+     Mallen används som bas för den nya sidan, till exempel för att fastställa den grundläggande layouten för en innehållssida.
+
    >[!NOTE]
    >
    >Se [Konventioner för sidnamngivning](#page-naming-conventions).
 
-   Den information som krävs för att skapa en ny sida är **Titel** och den mall som krävs.
+   Minimiinformationen som krävs för att skapa en ny sida är **Titel** och den mall som krävs.
 
    ![screen_shot_2012-02-15at114845am](assets/screen_shot_2012-02-15at114845am.png)
 
@@ -224,7 +226,7 @@ Vid kopiering kan du antingen kopiera:
 
 1. Navigera till den nya platsen och klicka på:
 
-   * **Klistra in** - om du vill klistra in sidan tillsammans med alla undersidor
+   * **Klistra in** - om du vill klistra in sidan tillsammans med alla underordnade sidor
    * **Skift + Klistra in** - om du bara vill klistra in den markerade sidan
 
    Sidorna klistras in på den nya platsen.
@@ -235,7 +237,7 @@ Vid kopiering kan du antingen kopiera:
 
    >[!NOTE]
    >
-   >Du kan också använda **Kopiera sida** från **Sida** sidosparkens flik. Då öppnas en dialogruta där du kan ange mål o.s.v.
+   >Du kan också använda **Kopiera sida** från **Sida** sidosparkens flik. Då öppnas en dialogruta där du kan ange mål, osv.
 
 ### Flytta eller byta namn på sida {#moving-or-renaming-page}
 
@@ -243,7 +245,7 @@ Vid kopiering kan du antingen kopiera:
 >
 >Om du byter namn på en sida gäller även [Konventioner för sidnamngivning](#page-naming-conventions) när du anger det nya sidnamnet.
 
-Proceduren för att flytta eller byta namn på en sida är densamma. Med samma åtgärd kan man
+Du flyttar eller byter namn på en sida på samma sätt. Med samma åtgärd kan man
 
 * flytta en sida till en ny plats
 * byta namn på en sida på samma plats
@@ -259,40 +261,41 @@ Så här flyttar eller byter du namn på en sida:
    * Från **Webbplatser** konsolen kan du också markera sidobjektet och sedan **högerklicka** och markera **Flytta...**
    * När du redigerar en sida kan du markera **Flytta sida** från **Sida** sidosparkens flik.
 
-1. The **Flytta** öppnas fönstret; Här kan du antingen ange en ny plats, ett nytt namn för sidan eller båda.
+1. The **Flytta** öppnas. Här kan du antingen ange en ny plats, ett nytt namn för sidan eller båda.
 
    ![screen_shot_2012-02-15at121336pm](assets/screen_shot_2012-02-15at121336pm.png)
 
    På sidan visas även alla sidor som refererar till den sida som flyttas. Beroende på status för referenssidan kan du eventuellt justera länkarna på och/eller publicera om sidorna.
 
-1. Fyll i följande fält efter behov:
+1. Fyll i följande fält, beroende på vad som är tillämpligt:
 
    * **Mål**
 
-      Använd platskartan (som är tillgänglig via den nedrullningsbara väljaren) för att välja platsen dit sidan ska flyttas.
+     Använd platskartan (som är tillgänglig via den nedrullningsbara väljaren) för att välja platsen dit sidan ska flyttas.
 
-      Ignorera det här fältet om du bara byter namn på sidan.
+     Ignorera det här fältet om du bara byter namn på sidan.
 
    * **Flytta**
 
-      Ange vilken sida som ska flyttas - den fylls vanligtvis i som standard, beroende på hur och var du startade flyttåtgärden.
+     Ange vilken sida som ska flyttas - den fylls vanligtvis i som standard, beroende på hur och var du startade flyttåtgärden.
 
    * **Byt namn till**
 
-      Den aktuella sidetiketten visas som standard. Ange vid behov den nya sidetiketten.
+     Den aktuella sidetiketten visas som standard. Ange vid behov den nya sidetiketten.
 
    * **Justera**
 
-      Uppdatera länkarna som pekar på den flyttade sidan i listan: Om till exempel sida A har länkar till sida B, justerar AEM länkarna på sida A om du flyttar sida B.
+     Uppdatera länkarna på den sida som listas där pekar på den flyttade sidan: om sidan A t.ex. har länkar till sidan B, AEM justerar länkarna på sidan A om du flyttar sidan B.
 
-      Detta kan markeras/avmarkeras för varje enskild referenssida.
+     Detta kan markeras/avmarkeras för varje enskild referenssida.
 
    * **Publicera igen**
 
-      Publicera referenssidan igen; igen kan du välja det här alternativet för varje sida.
+     Publicera om referenssidan. Återigen kan du välja detta för varje enskild sida.
+
    >[!NOTE]
    >
-   >Om sidan redan är aktiverad inaktiveras den automatiskt när du flyttar den. Som standard återaktiveras den när flytten är klar, men detta kan ändras genom att avmarkera **Publicera igen** för sidan i **Flytta** -fönstret.
+   >Om sidan redan är aktiverad inaktiveras den automatiskt när du flyttar den. Som standard återaktiveras den när flytten är klar, men detta kan ändras genom att avmarkera **Publicera igen** fält för sidan i **Flytta** -fönstret.
 
 1. Klicka **Flytta**. Bekräftelse krävs. Klicka **OK** för att bekräfta.
 
@@ -306,7 +309,7 @@ Så här flyttar eller byter du namn på en sida:
 
    * I **Webbplatser** konsol, klicka för att markera sidan, högerklicka och välj **Ta bort** från den resulterande menyn.
    * I **Webbplatser** konsol, klicka för att markera sidan och välj sedan **Ta bort** i verktygsfältmenyn.
-   * Använd **Sida** flik att välja **Ta bort sida** - den sida som är öppen tas bort.
+   * Använd **Sida** flik att välja **Ta bort sida** - den öppna sidan tas bort.
 
 1. När du har valt att ta bort en sida måste du bekräfta begäran eftersom åtgärden inte kan ångras.
 

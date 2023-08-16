@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: introduction
 content-type: reference
 exl-id: e562b289-5d8b-4fa8-ad1c-fff5f807a45e
-source-git-commit: 260f71acd330167572d817fdf145a018b09cbc65
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '857'
+source-wordcount: '855'
 ht-degree: 1%
 
 ---
@@ -39,7 +39,7 @@ Om upplösningen till exempel ligger under 1 024 pixlar (som på en mobil enhet)
 
 Rubrikraden visar globala element som:
 
-* logotypen och den specifika produkt/lösning som du för närvarande använder, för AEM utgör detta också en länk till den globala navigeringen
+* logotypen och den specifika produkt/lösning som du använder för närvarande. För AEM utgör detta också en länk till Global Navigation
 * Sökning
 * ikon för att komma åt hjälpresurserna
 * ikon för att komma åt andra lösningar
@@ -54,7 +54,7 @@ Alla tillgängliga åtgärder visas i verktygsfältet:
 
 ![chlimage_1-145](assets/chlimage_1-145.png)
 
-Beroende på om en resurs har valts:
+Även beroende på om en resurs är markerad:
 
 ![chlimage_1-146](assets/chlimage_1-146.png)
 
@@ -86,12 +86,12 @@ Innehållsramen finns till höger i fönstret, under verktygsfältet.
 
 Redigeringsramen har redigeringsfunktionerna.
 
-Redigeringsramen är en behållare (abstrakt) för alla *redigeringselement för sidor*. Den ligger ovanpå innehållsramen och innehåller:
+Redigeringsramen är en behållare (abstrakt) för alla *redigeringselement*. Den ligger ovanpå innehållsramen och innehåller:
 
 * det övre verktygsfältet
 * sidopanelen
 * alla övertäckningar
-* alla andra sidredigeringselement, komponentens verktygsfält
+* vilket annat sidredigeringselement som helst, till exempel komponentens verktygsfält
 
 ![chlimage_1-149](assets/chlimage_1-149.png)
 
@@ -99,7 +99,7 @@ Redigeringsramen är en behållare (abstrakt) för alla *redigeringselement för
 
 Detta innehåller två standardflikar där du kan välja resurser och komponenter. De kan dras härifrån och släppas på sidan.
 
-Sidpanelen är dold som standard. När du väljer det här alternativet visas det antingen på vänster sida, eller så glider det över för att täcka hela fönstret (när fönsterstorleken är under bredden 1024 px; som på en mobil enhet).
+Sidpanelen är dold som standard. När du väljer det här alternativet visas det antingen till vänster eller glids över så att det täcker hela fönstret (när fönsterstorleken är under bredden 1 024 px, till exempel på en mobil enhet).
 
 ![chlimage_1-150](assets/chlimage_1-150.png)
 
@@ -109,7 +109,7 @@ På fliken Resurser kan du välja bland flera resurser. Du kan också filtrera e
 
 ![chlimage_1-151](assets/chlimage_1-151.png)
 
-### Sida - Resursgrupper {#side-panel-asset-groups}
+### Side Panel - Resursgrupper {#side-panel-asset-groups}
 
 På fliken Resurser finns det en listruta som du kan använda för att välja specifika resursgrupper.
 
@@ -134,11 +134,11 @@ Dessa överlägg innehållsramen och används av [lager](#layer) för att utnytt
 Ett lager är ett oberoende funktionspaket som kan aktiveras för att:
 
 * ger en annan vy av sidan
-* kan du ändra och/eller interagera med en sida
+* kan du manipulera och/eller interagera med en sida
 
 Lagren har avancerade funktioner för hela sidan, i motsats till specifika åtgärder för en enskild komponent.
 
-AEM innehåller flera lager som redan har implementerats för sidredigering, som till exempel redigering, förhandsgranskning och anteckning.
+AEM innehåller flera lager som redan har implementerats för sidredigering, t.ex. redigering, förhandsgranskning och anteckning.
 
 >[!NOTE]
 >
@@ -164,4 +164,4 @@ Beroende på vilket utrymme som är tillgängligt placeras komponentens verktygs
 
 Mer information om begreppen kring det beröringskänsliga användargränssnittet finns i [Koncepten i det AEM användargränssnittet med pekskärm](/help/sites-developing/touch-ui-concepts.md).
 
-Mer teknisk information finns på [JS-dokumentationsuppsättning](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/jsdoc/ui-touch/editor-core/index.html) för den pekaktiverade sidredigeraren.
+Mer teknisk information finns på [JS-dokumentationsuppsättning](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/jsdoc/ui-touch/editor-core/index.html) för pekaktiverad sidredigerare.

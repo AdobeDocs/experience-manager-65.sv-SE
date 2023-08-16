@@ -1,15 +1,15 @@
 ---
 title: Webbkonsol i AEM
-description: Lär dig hur du använder webbkonsolen i AEM.
+description: Lär dig använda webbkonsolen i AEM.
 uuid: 047274ff-4d7d-4c7d-95be-06f363beae2e
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 discoiquuid: f934eb02-1f84-44f2-9f14-3f17250c9a90
 exl-id: bdfeaf85-e832-40c1-8769-7d027cdb021e
-source-git-commit: a17b25e55a0bf16a0df42a7ba4768503618a19e2
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '724'
+source-wordcount: '721'
 ht-degree: 0%
 
 ---
@@ -48,11 +48,11 @@ The **Konfiguration** -fliken kan nås av antingen:
 
 * Listrutan:
 
-   **OSGi >**
+  **OSGi >**
 
-* URL, till exempel:
+* URL-adressen, till exempel:
 
-   `http://localhost:4502/system/console/configMgr`
+  `http://localhost:4502/system/console/configMgr`
 
 En lista över konfigurationer visas:
 
@@ -62,16 +62,16 @@ Det finns två typer av konfigurationer tillgängliga i listrutorna på den här
 
 * **Konfigurationer**
 
-   Gör att du kan uppdatera befintliga konfigurationer. Dessa har en Persistent Identity (PID) och kan antingen vara:
+  Gör att du kan uppdatera befintliga konfigurationer. Dessa har en Persistent Identity (PID) och kan antingen vara:
 
-   * standard och integrerad i AEM, dessa är obligatoriska, om de tas bort återgår värdena till standardinställningarna.
-   * instanser som skapats från fabrikskonfigurationer, om instanserna skapas av användaren tas instansen bort.
+   * standard och integral till AEM. Dessa är obligatoriska, om de tas bort, återgår värdena till standardinställningarna.
+   * instanser skapade från fabrikskonfigurationer. De här instanserna skapas av användaren och tas bort.
 
 * **Fabrikskonfigurationer**
 
-   Gör att du kan skapa en instans av det nödvändiga funktionsobjektet.
+  Gör att du kan skapa en instans av det nödvändiga funktionsobjektet.
 
-   Detta tilldelas en beständig identitet och visas sedan i listrutan Konfigurationer.
+  Detta tilldelas en beständig identitet och visas sedan i listrutan Konfigurationer.
 
 Om du väljer en post i listorna visas de parametrar som är kopplade till den konfigurationen:
 
@@ -81,25 +81,25 @@ Du kan sedan uppdatera parametrarna efter behov och:
 
 * **Spara**
 
-   Spara ändringarna.
+  Spara ändringarna.
 
-   För en fabrikskonfiguration skapas en ny instans med en beständig identitet. Den nya instansen visas sedan under Konfigurationer.
+  För en fabrikskonfiguration skapas en ny instans med en beständig identitet. Den nya instansen visas sedan under Konfigurationer.
 
 * **Återställ**
 
-   Återställ parametrarna som visas på skärmen till de som senast sparades.
+  Återställ parametrarna som visas på skärmen till de som senast sparades.
 
 * **Ta bort**
 
-   Ta bort den aktuella konfigurationen. Om det är standard återställs parametrarna till standardinställningarna. Om den skapas från en fabrikskonfiguration tas den specifika instansen bort.
+  Ta bort den aktuella konfigurationen. Om det är standard återställs parametrarna till standardinställningarna. Om den skapas från en fabrikskonfiguration tas den specifika instansen bort.
 
 * **Lås upp**
 
-   Lås upp den aktuella konfigurationen från paketet.
+  Lås upp den aktuella konfigurationen från paketet.
 
 * **Avbryt**
 
-   Avbryt alla aktuella ändringar.
+  Avbryt alla aktuella ändringar.
 
 ## Paket {#bundles}
 
@@ -107,11 +107,11 @@ The **Paket** är den mekanism som används för att installera OSGi-paket som k
 
 * Listrutan:
 
-   **OSGi >**
+  **OSGi >**
 
-* URL, till exempel:
+* URL-adressen, till exempel:
 
-   `http://localhost:4502/system/console/bundles`
+  `http://localhost:4502/system/console/bundles`
 
 En lista över paket visas:
 
@@ -121,33 +121,33 @@ På den här fliken kan du:
 
 * **Installera eller uppdatera**
 
-   Du kan **Bläddra** för att hitta filen som innehåller ditt paket och ange om det ska **Starta** omedelbart och **Startnivå**.
+  Du kan **Bläddra** för att hitta filen som innehåller ditt paket och ange om det ska **Starta** omedelbart och **Startnivå**.
 
 * **Läs in igen**
 
-   Uppdaterar listan som visas.
+  Uppdaterar listan som visas.
 
 * **Uppdatera paket**
 
-   Detta kontrollerar referenserna för alla paket och uppdaterar vid behov.
+  Detta kontrollerar referenserna för alla paket och uppdaterar vid behov.
 
-   Efter en uppdatering kan till exempel både den gamla och den nya versionen fortfarande köras på grund av tidigare referenser. Med det här alternativet kontrolleras och flyttas alla referenser till den nya versionen så att den gamla versionen kan stoppas.
+  Efter en uppdatering kan till exempel både den gamla och den nya versionen fortfarande köras på grund av tidigare referenser. Med det här alternativet kontrolleras och flyttas alla referenser till den nya versionen så att den gamla versionen kan stoppas.
 
 * **Starta**
 
-   Startar ett paket enligt den angivna startnivån.
+  Startar ett paket enligt den angivna startnivån.
 
 * **Stoppa**
 
-   Stoppar paketet.
+  Stoppar paketet.
 
 * **Avinstallera**
 
-   Avinstallerar paketet från systemet.
+  Avinstallerar paketet från systemet.
 
 * **visa status**
 
-   Förteckningen anger paketets aktuella status. Klicka på namnet på ett specifikt paket och visa mer information.
+  Listan anger paketets aktuella status. Klicka på namnet på ett specifikt paket och visa mer information.
 
 >[!NOTE]
 >
@@ -159,13 +159,13 @@ The **Komponenter** På -fliken kan du aktivera och/eller inaktivera de olika ko
 
 * Listrutan:
 
-   **Main >**
+  **Main >**
 
-* URL, till exempel:
+* URL-adressen, till exempel:
 
-   `http://localhost:4502/system/console/components`
+  `http://localhost:4502/system/console/components`
 
-En lista över komponenter visas. Det finns olika ikoner som du kan använda för att aktivera, inaktivera eller (där det är lämpligt) öppna konfigurationsinformation för en viss komponent.
+En lista med komponenter visas. Det finns olika ikoner som du kan använda för att aktivera, inaktivera eller (där det är lämpligt) öppna konfigurationsinformation för en viss komponent.
 
 ![screen_shot_2012-02-15at52144pm-1](assets/screen_shot_2012-02-15at52144pm-1.png)
 

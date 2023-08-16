@@ -9,16 +9,16 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 discoiquuid: 813fda6a-e877-452b-82c3-e758720e7dd0
 docset: aem65
 exl-id: 90cb8893-65f3-4d82-9880-ce8dd80891b1
-source-git-commit: b3889b1897f0ec0c5bbf60c346b77b2906175904
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '264'
+source-wordcount: '263'
 ht-degree: 0%
 
 ---
 
 # Använda RTF-redigeraren för att skapa innehåll {#use-rich-text-editor-to-author-content}
 
-RTE (Rich Text Editor) är en grundläggande byggsten för att infoga textinnehåll i AEM. Den utgör grunden för olika komponenter, bland annat
+RTE (Rich Text Editor) är en grundläggande byggsten för att infoga textinnehåll i AEM. Den utgör grunden för olika komponenter, bland annat följande:
 
 * Text
 * Textbild
@@ -28,7 +28,7 @@ RTE (Rich Text Editor) är en grundläggande byggsten för att infoga textinneh�
 
 Om du markerar en textbaserad komponent med ett enda tryck eller klick visas [komponentverktygsfältet](/help/sites-authoring/editing-content.md#edit-configure-copy-cut-delete-paste) som med alla komponenter.
 
-![screen_shot_2018-03-21at163054](assets/screen_shot_2018-03-21at163054.png)
+![screen_shot_2018-03-2163054](assets/screen_shot_2018-03-21at163054.png)
 
 Om du trycker/klickar igen eller först markerar komponenten med en långsam dubbelknacka/klick öppnas redigering på plats, som har ett eget verktygsfält. Här kan du redigera innehållet och göra grundläggande formateringsändringar.
 
@@ -36,8 +36,8 @@ Om du trycker/klickar igen eller först markerar komponenten med en långsam dub
 
 Det här verktygsfältet innehåller följande alternativ:
 
-* **Format**: På så sätt kan du ange Fet, Kursiv och Understruken.
-* **Listor**: Med det här alternativet kan du skapa punktlistor eller numrerade listor eller ange indrag.
+* **Format**: Du kan då välja Fet, Kursiv och Understruken.
+* **Listor**: Med detta kan du skapa punktlistor eller numrerade listor eller ange indrag.
 * **Hyperlänk**
 * **Bryt länk**
 * **Helskärm**
@@ -61,7 +61,7 @@ Fler alternativ för textredigering:
 
 Stäng helskärmsläget genom att klicka på minimeringsikonen.
 
-![screen_shot_2018-03-21at163323](assets/screen_shot_2018-03-21at163323.png)
+![screen_shot_2018-03-2163323](assets/screen_shot_2018-03-21at163323.png)
 
 >[!NOTE]
 >

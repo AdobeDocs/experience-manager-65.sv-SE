@@ -10,20 +10,20 @@ content-type: reference
 topic-tags: best-practices
 discoiquuid: 2d374e88-ea09-43d5-986c-5d77b0705b93
 exl-id: 6df5fb10-a7f1-4d5d-ac00-b4be3d5d3d18
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '247'
+source-wordcount: '245'
 ht-degree: 1%
 
 ---
 
 # Provar Responsiv layout i We.Retail{#trying-out-responsive-layout-in-we-retail}
 
-Alla webbsidor använder komponenten Layoutbehållare för att implementera responsiv design. Layoutbehållaren har ett styckesystem som gör att du kan placera komponenter i ett responsivt rutnät. Rutnätet kan ändra layouten beroende på enhetens/fönstrets storlek och format. Komponenten används tillsammans med **Layout** i sidredigeraren, där du kan skapa och redigera din responsiva layout beroende på enhet.
+Alla webbsidor använder komponenten Layoutbehållare för att implementera responsiv design. Layoutbehållaren har ett styckesystem där du kan placera komponenter i ett responsivt rutnät. Rutnätet kan ändra layouten beroende på enhetens/fönstrets storlek och format. Komponenten används tillsammans med **Layout** i sidredigeraren, där du kan skapa och redigera din responsiva layout beroende på enhet.
 
 ## Prova {#trying-it-out}
 
-1. Redigera sidan Arktisk surfning i sektionen Erfarenheter i den överordnad språkgrenen.
+1. Redigera sidan Arktisk surfning i sektionen Erfarenheter i huvudgrenen för språk.
 
    http://localhost:4502/editor.html/content/we-retail/language-masters/en/experience/arctic-surfing-in-lofoten.html
 

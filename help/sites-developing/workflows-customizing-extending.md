@@ -10,9 +10,9 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: f23408c3-6b37-4047-9cce-0cab97bb6c5c
 exl-id: 9e205912-50a6-414a-b8d4-a0865269d0e0
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '3584'
+source-wordcount: '3582'
 ht-degree: 0%
 
 ---
@@ -43,9 +43,9 @@ Som med [alla komponenter](/help/sites-developing/components.md), ärver kompone
 
 >[!CAUTION]
 >
->Du ***måste*** ändrar ingenting i `/libs` bana.
+>Du ***måste*** ändrar ingenting i dialogrutan `/libs` bana.
 >
->Detta beror på innehållet i `/libs` skrivs över nästa gång du uppgraderar din instans (och kan mycket väl skrivas över när du använder en snabbkorrigering eller ett funktionspaket).
+>Detta beror på innehållet i `/libs` skrivs över nästa gång du uppgraderar din instans (och kan mycket väl skrivas över när du installerar en snabbkorrigering eller ett funktionspaket).
 >
 >Den rekommenderade metoden för konfiguration och andra ändringar är:
 >
@@ -65,7 +65,7 @@ The `/libs/cq/workflow/components/model/step` är närmaste gemensamma överordn
   En dialogruta med följande flikar:
 
    * **Vanliga**: för att redigera titeln och beskrivningen.
-   * **Avancerat**: för att redigera egenskaper för e-postmeddelanden.
+   * **Avancerat**: för redigering av egenskaper för e-postmeddelanden.
 
   ![wf-44](assets/wf-44.png) ![wf-45](assets/wf-45.png)
 
@@ -80,7 +80,7 @@ Följande objekt är tillgängliga (beroende på stegtyp) i ECMA-skript:
 * [WorkItem](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/workflow/exec/WorkItem.html) workItem
 * [WorkflowSession](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/workflow/WorkflowSession.html) workflowSession
 * [WorkflowData](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/workflow/exec/WorkflowData.html) workflowData
-* `args`: -array med processargumenten.
+* `args`: array med processargumenten.
 
 * `sling`: för att få tillgång till andra tjänster.
 * `jcrSession`
@@ -109,7 +109,7 @@ Om du vill ärva från en av de (befintliga) grundläggande stegkomponenterna l�
    * `cq/workflow/components/model/participant`
    * `cq/workflow/components/model/dynamic_participant`
 
-### Ange standardtitel och beskrivning för steginstanser {#specifying-the-default-title-and-description-for-step-instances}
+### Ange standardtitel och beskrivning för stegförekomster {#specifying-the-default-title-and-description-for-step-instances}
 
 Använd följande procedur för att ange standardvärden för **Titel** och **Beskrivning** fälten på **Vanliga** -fliken.
 
@@ -123,7 +123,7 @@ Använd följande procedur för att ange standardvärden för **Titel** och **Be
 >
 >  Detta krav är uppfyllt när redigeringsdialogrutan använder fliken Allmänt och `/libs/cq/flow/components/step/step` -komponenten implementeras.
 >
->* Stegkomponenten eller ett överordnat element för komponenten åsidosätter inte `step.jsp` skript som `/libs/cq/flow/components/step/step` -komponenten implementeras.
+>* Stegkomponenten eller en överordnad komponent åsidosätter inte `step.jsp` skript som `/libs/cq/flow/components/step/step` -komponenten implementeras.
 
 1. Under `cq:Component` lägg till följande nod:
 
@@ -141,14 +141,14 @@ Använd följande procedur för att ange standardvärden för **Titel** och **Be
 
 1. Lägg till `String` egenskaper för följande namn till `cq:formParameters` nod:
 
-   * `jcr:title`: Värdet fyller ut **Titel** fält för **Vanliga** -fliken.
-   * `jcr:description`: Värdet fyller ut **Beskrivning** fält för **Vanliga** -fliken.
+   * `jcr:title`: Värdet fyller **Titel** fält för **Vanliga** -fliken.
+   * `jcr:description`: Värdet fyller **Beskrivning** fält för **Vanliga** -fliken.
 
 ### Spara egenskapsvärden i arbetsflödesmetadata {#saving-property-values-in-workflow-metadata}
 
 >[!NOTE]
 >
->Se [Bevara och få åtkomst till data](#persisting-and-accessing-data). Mer information om hur du får åtkomst till egenskapsvärdet under körning finns i [Åtkomst till egenskapsvärden för dialogrutor vid körning](#accessing-dialog-property-values-at-runtime).
+>Se [Bevara och få åtkomst till data](#persisting-and-accessing-data). Mer information om hur du får åtkomst till egenskapsvärdet vid körning finns i [Åtkomst till egenskapsvärden för dialogrutor vid körning](#accessing-dialog-property-values-at-runtime).
 
 Egenskapen name för `cq:Widget` -objekt anger den JCR-nod som lagrar widgetens värde. När widgetar i arbetsflödesdialogrutan lagrar komponenter värden under `./metaData` nod läggs värdet till i arbetsflödet `MetaDataMap`.
 
@@ -160,7 +160,7 @@ Ett textfält i en dialogruta är till exempel ett `cq:Widget` nod som har följ
 | `name` | `String` | `./metaData/subject` |
 | `fieldLabel` | `String` | `Email Subject` |
 
-Värdet som anges i det här textfältet läggs till i arbetsflödesinstansens ` [MetaDataMap](#metadatamaps)` -objektet och är associerat med `subject` nyckel.
+Värdet som anges i det här textfältet läggs till i arbetsflödesinstansens ` [MetaDataMap](#metadatamaps)` -objektet och är associerat med `subject` -tangenten.
 
 >[!NOTE]
 >
@@ -171,7 +171,7 @@ Värdet som anges i det här textfältet läggs till i arbetsflödesinstansens `
 Med varje basstegskomponent kan utvecklare av arbetsflödesmodeller konfigurera följande nyckelfunktioner i designläge:
 
 * Processsteg: Tjänsten eller ECMA-skriptet som ska köras under körning.
-* Deltagarsteg: ID för den användare som har tilldelats den genererade arbetsposten.
+* Deltagarsteg: ID:t för den användare som har tilldelats det genererade arbetsobjektet.
 * Dynamiskt deltagarsteg: Tjänsten eller ECMA-skriptet som väljer ID för användaren som är tilldelad arbetsposten.
 
 Om du vill fokusera komponenten för användning i ett specifikt arbetsflödesscenario konfigurerar du nyckelfunktionen i designen och tar bort möjligheten för modellutvecklare att ändra den.
@@ -197,7 +197,7 @@ Om du vill fokusera komponenten för användning i ett specifikt arbetsflödessc
 1. Ange egenskapens värde:
 
    * `PROCESS`: Sökvägen till ECMA-skriptet eller PID för den tjänst som implementerar stegbeteendet.
-   * `PARTICIPANT`: ID för den användare som är tilldelad arbetsuppgiften.
+   * `PARTICIPANT`: ID för den användare som är tilldelad arbetsposten.
    * `DYNAMIC_PARTICIPANT`: Sökvägen till ECMA-skriptet eller PID för den tjänst som väljer användaren att tilldela arbetsposten.
 
 1. Om du vill ta bort möjligheten för modellutvecklare att ändra egenskapsvärden åsidosätter du dialogrutan för komponentens supertyp.
@@ -245,7 +245,7 @@ Under `cq:Component` nod, lägga till `cq:EditConfig` nod. Nedan läggs ett `nt:
    * Värde:
 
       * när inställt på `true` arbetsflödet kommer att köra det steget och fortsätta - det här är standard och rekommenderas också
-      * när `false`, kommer arbetsflödet att köras och stoppas, detta kräver extra hantering, så `true` rekommenderas
+      * när `false`, kommer arbetsflödet att köras och stoppas. Detta kräver extra hantering, så `true` rekommenderas
 
 * Namn: `DO_NOTIFY`
 
@@ -258,7 +258,7 @@ Under `cq:Component` nod, lägga till `cq:EditConfig` nod. Nedan läggs ett `nt:
 
 Du kan använda arbetsflödets metadata för att behålla information som krävs under arbetsflödets livstid - och mellan steg. Ett vanligt krav för arbetsflödessteg är att bevara data för framtida bruk eller att hämta beständiga data från tidigare steg.
 
-Metadata för arbetsflöde lagras i en [`MetaDataMap`](#metadatamaps) -objekt. Java API innehåller [`Workflow.getWorkflowData`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/exec/Workflow.html) metod som returnerar [`WorkflowData`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/exec/WorkflowData.html) objekt som ger rätt `MetaDataMap` -objekt. Detta `WorkflowData` `MetaDataMap` -objektet är tillgängligt för OSGi-tjänsten eller ECMA-skriptet för en stegkomponent.
+Metadata för arbetsflöde lagras i en [`MetaDataMap`](#metadatamaps) -objekt. Java API innehåller [`Workflow.getWorkflowData`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/exec/Workflow.html) metod som returnerar en [`WorkflowData`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/exec/WorkflowData.html) objekt som ger rätt `MetaDataMap` -objekt. Detta `WorkflowData` `MetaDataMap` -objektet är tillgängligt för OSGi-tjänsten eller ECMA-skriptet för en stegkomponent.
 
 #### Java {#java}
 
@@ -316,9 +316,9 @@ Arbetsflödet `MetaDataMap` är tillgängligt för implementering av Java- och E
 
 * I ECMA-skriptimplementeringar är värdet tillgängligt med `args` och `metadata` variabler.
 
-### Exempel: Hämtar argument för processtegskomponenten {#example-retrieving-the-arguments-of-the-process-step-component}
+### Exempel: Hämta argument för komponenten Processsteg {#example-retrieving-the-arguments-of-the-process-step-component}
 
-Redigeringsdialogrutan i **Processsteg** -komponenten innehåller **Argument** -egenskap. Värdet för **Argument** -egenskapen lagras i arbetsflödets metadata och är kopplad till `PROCESS_ARGS` nyckel.
+Redigeringsdialogrutan i **Processsteg** ingår i **Argument** -egenskap. Värdet för **Argument** -egenskapen lagras i arbetsflödets metadata och är kopplad till `PROCESS_ARGS` -tangenten.
 
 I följande diagram är värdet för **Argument** egenskapen är `argument1, argument2`:
 
@@ -326,7 +326,7 @@ I följande diagram är värdet för **Argument** egenskapen är `argument1, arg
 
 #### Java {#java-1}
 
-Följande Java-kod är `execute` metod för `WorkflowProcess` implementering. Metoden loggar värdet i `args` `MetaDataMap` som är associerad med `PROCESS_ARGS` nyckel.
+Följande Java-kod är `execute` metod för `WorkflowProcess` implementering. Metoden loggar värdet i `args` `MetaDataMap` som är associerad med `PROCESS_ARGS` -tangenten.
 
 ```java
 public void execute(WorkItem item, WorkflowSession session, MetaDataMap args) throws WorkflowException {
@@ -391,8 +391,8 @@ Så här definierar du ett processteg som en OSGI-tjänstkomponent (Java bundle)
    >
    >Paketnamnet måste läggas till i `<*Private-Package*>` i `maven-bundle-plugin` konfiguration.
 
-1. Lägg till SCR-egenskapen `process.label`  och ange värdet efter behov. Detta är det namn som processsteget listas som när du använder det generiska **Processsteg** -komponenten. Se exemplet nedan.
-1. I **Modeller** redigerare, lägga till processteget i arbetsflödet med hjälp av det generiska **Processsteg** -komponenten.
+1. Lägg till SCR-egenskapen `process.label`  och ange värdet efter behov. Detta är det namn som processsteget listas som när du använder det allmänna **Processsteg** -komponenten. Se exemplet nedan.
+1. I **Models** redigerare, lägga till processteget i arbetsflödet med hjälp av det generiska **Processsteg** -komponenten.
 1. I redigeringsdialogrutan (på **Processsteg**), gå till **Process** och välja processimplementering.
 1. Om du använder argument i koden anger du **Processargument**. Till exempel: false.
 1. Spara ändringarna för både steget och arbetsflödesmodellen (modellredigerarens övre vänstra hörn).
@@ -476,7 +476,7 @@ I följande tabell visas de variabler som är omedelbart tillgängliga för att 
 | `com.adobe.granite.workflow.exec.WorkItem` | `graniteWorkItem` | Den aktuella steginstansen. |
 | `com.adobe.granite.workflow.WorkflowSession` | `graniteWorkflowSession` | Arbetsflödessessionen för den aktuella steginstansen. |
 | `String[]` (innehåller processargument) | `args` | Stegargumenten. |
-| `com.adobe.granite.workflow.metadata.MetaDataMap` | `metaData` | Metadata för den aktuella steginstansen. |
+| `com.adobe.granite.workflow.metadata.MetaDataMap` | `metaData` | Metadata för aktuell steginstans. |
 | `org.apache.sling.scripting.core.impl.InternalScriptHelper` | `sling` | Ger åtkomst till Sling-miljön. |
 
 Följande exempelskript visar hur du får åtkomst till JCR-noden som representerar arbetsflödets nyttolast. The `graniteWorkflowSession` variabeln anpassas till en JCR-sessionsvariabel, som används för att hämta noden från nyttolastsökvägen.
@@ -610,14 +610,14 @@ Så här definierar du ett deltagarsteg som en OSGI-tjänstkomponent (Java-klass
    }
    ```
 
-1. I **Modeller** redigerare, lägga till steget för den dynamiska deltagaren i arbetsflödet med hjälp av det generiska **Dynamiskt deltagarsteg** -komponenten.
+1. I **Models** redigerare, lägga till steget för den dynamiska deltagaren i arbetsflödet med hjälp av det generiska **Dynamiskt deltagarsteg** -komponenten.
 1. I redigeringsdialogrutan väljer du **Väljare för deltagare** och välj implementering av väljaren.
-1. Om du använder argument i koden anger du **Processargument**. I det här exemplet: `/content/we-retail/de`.
+1. Om du använder argument i koden anger du **Processargument**. I detta exempel: `/content/we-retail/de`.
 1. Spara ändringarna för både steget och arbetsflödesmodellen.
 
-### Utveckla en deltagarväljare med hjälp av ett ECMA-skript {#developing-a-participant-chooser-using-an-ecma-script}
+### Utveckla en deltagarväljare med ett ECMA-skript {#developing-a-participant-chooser-using-an-ecma-script}
 
-Du kan skapa ett ECMA-skript som väljer användaren som är tilldelad arbetsposten som **Deltagarsteg** genererar. Skriptet måste innehålla en funktion med namnet `getParticipant` som inte kräver några argument och returnerar `String` som innehåller ID:t för en användare eller grupp.
+Du kan skapa ett ECMA-skript som väljer användaren som är tilldelad arbetsposten som **Deltagarsteg** genererar. Skriptet måste innehålla en funktion med namnet `getParticipant` som inte kräver några argument och returnerar en `String` som innehåller ID:t för en användare eller grupp.
 
 Skript finns i JCR-databasen och körs därifrån.
 
@@ -669,7 +669,7 @@ function getParticipant() {
 
 Du kan utveckla arbetsflödessteg som hämtar paketresurserna och bearbetar dem. Följande medlemmar i `com.day.cq.workflow.collection` paket ger åtkomst till arbetsflödespaket:
 
-* `ResourceCollection`: Klassen för arbetsflödespaket.
+* `ResourceCollection`: Paketklass för arbetsflöde.
 * `ResourceCollectionUtil`: Används för att hämta ResourceCollection-objekt.
 * `ResourceCollectionManager`: Skapar och hämtar samlingar. En implementering distribueras som en OSGi-tjänst.
 
@@ -779,13 +779,13 @@ private List<String> getPaths(String path, ResourceCollection rcCollection) {
 
 ## Exempel: Skapa ett anpassat steg {#example-creating-a-custom-step}
 
-Ett enkelt sätt att börja skapa ett eget anpassat steg är att kopiera ett befintligt steg från:
+Ett enkelt sätt att börja skapa egna anpassade steg är att kopiera ett befintligt steg från:
 
 `/libs/cq/workflow/components/model`
 
 ### Skapa det grundläggande steget {#creating-the-basic-step}
 
-1. Återskapa sökvägen under /apps; till exempel:
+1. Återskapa sökvägen under /apps, till exempel:
 
    `/apps/cq/workflow/components/model`
 
@@ -803,7 +803,7 @@ Ett enkelt sätt att börja skapa ett eget anpassat steg är att kopiera ett bef
    >
    >Det här steget gäller inte för den klassiska UI-modellredigeraren.
 
-1. Placera sedan det kopierade steget i mappen /apps; till exempel som:
+1. Placera sedan det kopierade steget i mappen /apps, till exempel:
 
    `/apps/cq/workflow/components/model/myCustomStep`
 
@@ -860,7 +860,7 @@ Ett enkelt sätt att börja skapa ett eget anpassat steg är att kopiera ett bef
 
    ![wf-38](assets/wf-38.png)
 
-#### Definiera dialogrutan Stega in konfiguration {#defining-the-step-configure-dialog}
+#### Definiera dialogrutan Konfigurera steg {#defining-the-step-configure-dialog}
 
 Efter [Skapa det grundläggande steget](#creating-the-basic-step), definiera steget **Konfigurera** dialogrutan enligt följande:
 
@@ -892,7 +892,7 @@ Efter [Skapa det grundläggande steget](#creating-the-basic-step), definiera ste
 
 1. Konfigurera egenskaperna på noden `cq:listeners`.
 
-   The `cq:listener` Med noden och dess egenskaper kan du ange händelsehanterare som reagerar på händelser i den pekaktiverade UI-modellredigeraren. som att dra ett steg till en modellsida eller redigera en stegegenskap.
+   The `cq:listener` Med noden och dess egenskaper kan du ange händelsehanterare som reagerar på händelser i den pekaktiverade modellredigeraren i användargränssnittet, till exempel dra ett steg till en modellsida eller redigera en stegegenskap.
 
    **Intresseområden:**
 
@@ -905,7 +905,7 @@ Efter [Skapa det grundläggande steget](#creating-the-basic-step), definiera ste
 
    Inställning `cq:inherit` till true (på `cq:editConfig` (se ovan) kan du ärva den här konfigurationen utan att behöva inkludera den explicit i stegdefinitionen. Om inget arv finns på plats måste du lägga till den här noden med följande egenskaper och värden.
 
-   I det här exemplet har arv aktiverats så att vi kan ta bort `cq:listeners` och steget fungerar fortfarande korrekt.
+   I det här exemplet har arv aktiverats så att vi kan ta bort `cq:listeners` och steget kommer fortfarande att fungera korrekt.
 
    ![wf-41](assets/wf-41.png)
 
@@ -915,7 +915,7 @@ Efter [Skapa det grundläggande steget](#creating-the-basic-step), definiera ste
 
 #### Exempelkod som används i det här exemplet {#sample-markup-used-in-this-example}
 
-Markering för ett anpassat steg visas i `.content.xml` för komponentens rotnod. Provet `.content.xml` som används i det här exemplet:
+Markering för ett anpassat steg visas i `.content.xml` för komponentens rotnod. Exemplet `.content.xml` som används i det här exemplet:
 
 `/apps/cq/workflow/components/model/myCustomStep/.content.xml`
 
@@ -930,7 +930,7 @@ Markering för ett anpassat steg visas i `.content.xml` för komponentens rotnod
     componentGroup="Workflow"/>
 ```
 
-The `_cq_editConfig.xml` exempel som används i det här exemplet:
+The `_cq_editConfig.xml` exempel som används i detta exempel:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -951,7 +951,7 @@ The `_cq_editConfig.xml` exempel som används i det här exemplet:
 </jcr:root>
 ```
 
-The `_cq_dialog/.content.xml` exempel som används i det här exemplet:
+The `_cq_dialog/.content.xml` exempel som används i detta exempel:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>

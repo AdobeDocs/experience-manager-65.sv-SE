@@ -11,9 +11,9 @@ discoiquuid: bd9bf095-d74d-458c-afe7-fab04050849d
 docset: aem65
 feature: Mobile Forms
 exl-id: 89118bb8-6ec8-4048-b3d6-5c73a9eea33e
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '393'
+source-wordcount: '392'
 ht-degree: 0%
 
 ---
@@ -31,7 +31,7 @@ Ett befintligt HTML-program kan utnyttja API:t för FormBridge för att interage
 1. **Välj en profil eller skapa en profil**
 
    1. I CRX DE-gränssnittet går du till: `https://'[server]:[port]'/crx/de`.
-   1. Logga in med administratörsautentiseringsuppgifter.
+   1. Logga in med administratörsbehörighet.
    1. Skapa en profil eller välj en befintlig profil.
 
       Mer information om hur du skapar en profil finns i [Skapa en ny profil](/help/forms/using/custom-profile.md).
@@ -40,7 +40,7 @@ Ett befintligt HTML-program kan utnyttja API:t för FormBridge för att interage
 
    Inkludera XFA-miljön, XFA-språkbiblioteket och kodavsnittet XFA från HTML i profilåtergivaren, utforma webbsidan och placera formuläret inuti webbsidan.
 
-   Använd till exempel följande kodfragment om du vill skapa en app med två indatafält och ett formulär som visar interaktionen mellan formuläret och en extern app.
+   Använd till exempel följande kodfragment om du vill skapa en app med två inmatningsfält och ett formulär som visar interaktionen mellan formuläret och en extern app.
 
    ```xml
    <%@ page session="false"
@@ -80,7 +80,11 @@ Ett befintligt HTML-program kan utnyttja API:t för FormBridge för att interage
    >
    >
    >The &lt;div id=&quot;rightdiv&quot;> tagg på **rad 18** innehåller HTML-fragmentet i XFA-formuläret.
+   >
+   >
    Sidan är formaterad i två behållare: **vänster** och **höger**. Den högra behållaren har formuläret. Den vänstra behållaren har två inmatningsfält och en del av den externa HTML-sidan.
+   >
+   >
    Följande skärmbild visar hur formuläret visas i en webbläsare.
 
    ![portal](assets/portal.jpg)

@@ -7,9 +7,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: interactive-communication
 feature: Interactive Communication
 exl-id: f65d8eb9-4d2c-4a6e-825f-45bcfaa7ca75
-source-git-commit: 3d713021ac410ca2925a282c5dfca98ed4e483ee
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '2167'
+source-wordcount: '2166'
 ht-degree: 0%
 
 ---
@@ -93,7 +93,7 @@ Så här skapar du interaktiv kommunikation från poster som sparats i en JSON-f
       |--- |--- |--- |
       | templatePath | Sträng | Ange sökvägen till den interaktiva kommunikationsmall som ska användas. Exempel: /content/dam/formsanddocuments/testsample/mediumic. Det är en obligatorisk egenskap. |
       | recordPath | Sträng | Värdet i fältet recordPath hjälper till att ange namnet på en interaktiv kommunikation. Du kan ange sökvägen till ett fält i en post som värde för fältet recordPath. Om du till exempel anger /employee/Id blir värdet på id-fältet namn för motsvarande interaktiva kommunikation. Standardvärdet är en slumpmässig [slumpmässigt UUID](https://docs.oracle.com/javase/7/docs/api/java/util/UUID.html#randomUUID()). |
-      | usePrefillService | Boolean | Ange värdet Falskt. Du kan använda parametern usePrefillService för att förifylla interaktiv kommunikation med data som hämtats från förifyllningstjänsten som konfigurerats för motsvarande interaktiv kommunikation. När usePrefillService är inställt på true behandlas indata-JSON-data (för varje post) som FDM-argument. Standardvärdet är false. |
+      | usePrefillService | Boolean | Ställ in värdet på Falskt. Du kan använda parametern usePrefillService för att förifylla interaktiv kommunikation med data som hämtats från förifyllningstjänsten som konfigurerats för motsvarande interaktiv kommunikation. När usePrefillService är inställt på true behandlas indata-JSON-data (för varje post) som FDM-argument. Standardvärdet är false. |
       | batchType | Sträng | Ange värdet PRINT, WEB eller WEB_AND_PRINT. Standardvärdet är WEB_AND_PRINT. |
       | locale | Sträng | Ange språkinställningen för interaktiv kommunikation vid utdata. Körklara tjänster använder inte språkområdesalternativet, men du kan skapa en anpassad tjänst för att generera lokaliserad interaktiv kommunikation. Standardvärdet är en_US |
 
@@ -171,12 +171,12 @@ Du kombinerar data (poster) som sparats i en extern datakälla med en interaktiv
 
 ## Anropa batch-API:t med REST-begäranden
 
-Du kan anropa [API:t för grupp](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/index.html) genom förfrågningar från representationsstatens överföring (REST). Det gör att du kan ge andra användare tillgång till API:t en REST-slutpunkt och konfigurera egna metoder för att bearbeta, lagra och anpassa interaktiv kommunikation. Du kan utveckla en egen anpassad Java-server för att distribuera API:t på din AEM.
+Du kan anropa [API:t för grupp](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/index.html) genom förfrågningar från representationsstatens överföring (REST). Med den kan du ge andra användare en REST-slutpunkt för åtkomst till API:t och konfigurera egna metoder för bearbetning, lagring och anpassning av interaktiv kommunikation. Du kan utveckla en egen anpassad Java-server för att distribuera API:t på din AEM.
 
 Innan du distribuerar Java-servern måste du se till att du har en interaktiv kommunikation och att motsvarande datafiler är klara. Utför följande steg för att skapa och distribuera Java-servern:
 
-1. Logga in på AEM och skapa en interaktiv kommunikation. För att använda den interaktiva kommunikation som anges i exempelkoden nedan [klicka här](assets/SimpleMediumIC.zip).
-1. [Bygg och driftsätt ett AEM-projekt med Apache Maven](https://helpx.adobe.com/experience-manager/using/maven_arch13.html) på AEM.
+1. Logga in i AEM och skapa en interaktiv kommunikation. För att använda den interaktiva kommunikation som anges i exempelkoden nedan [klicka här](assets/SimpleMediumIC.zip).
+1. [Bygg och driftsätt ett AEM med Apache Maven](https://helpx.adobe.com/experience-manager/using/maven_arch13.html) på din AEM.
 1. Lägg till [AEM Forms Client SDK version 6.0.12](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html) eller senare i beroendelistan över POM-filer för ditt AEM. Till exempel,
 
    ```xml
@@ -346,24 +346,20 @@ Sedan visas webbkanalen för den interaktiva kommunikationen i följande URL på
 Förutom att spara data i filsystemet kan du lagra JSON-filer i CRX-databas, filsystem, webbserver eller få åtkomst till data via OSGI-förifyllningstjänsten. Syntax för att sammanfoga data med olika protokoll är:
 
 * **CRX-protokoll**
-
-   `http://host:port/<path-to-ic>/jcr:content?channel=web&mode=preview&guideMergedJsonPath=crx:///tmp/fd/af/mergedJsonData.json`
+  `http://host:port/<path-to-ic>/jcr:content?channel=web&mode=preview&guideMergedJsonPath=crx:///tmp/fd/af/mergedJsonData.json`
 
 * **Filprotokoll**
-
-   `http://host:port/<path-to-ic>/jcr:content?channel=web&mode=preview&guideMergedJsonPath=file:///C:/Users/af/mergedJsonData.json`
+  `http://host:port/<path-to-ic>/jcr:content?channel=web&mode=preview&guideMergedJsonPath=file:///C:/Users/af/mergedJsonData.json`
 
 * **Prefill Service-protokoll**
+  `http://host:port/<path-to-ic>/jcr:content?channel=web&mode=preview&guideMergedJsonPath=service://[SERVICE_NAME]/[IDENTIFIER]`
 
-   `http://host:port/<path-to-ic>/jcr:content?channel=web&mode=preview&guideMergedJsonPath=service://[SERVICE_NAME]/[IDENTIFIER]`
+  SERVICE_NAME refererar till namnet på OSGI-förifyllningstjänsten. Se Skapa och kör en förifyllningstjänst.
 
-   SERVICE_NAME refererar till namnet på OSGI-förifyllningstjänsten. Se Skapa och kör en förifyllningstjänst.
-
-   IDENTIFIER avser alla metadata som krävs av OSGI-förifyllningstjänsten för att hämta förifyllda data. En identifierare för den inloggade användaren är ett exempel på metadata som kan användas.
+  IDENTIFIER avser alla metadata som krävs av OSGI-förifyllningstjänsten för att hämta förifyllda data. En identifierare för den inloggade användaren är ett exempel på metadata som kan användas.
 
 * **HTTP-protokoll**
-
-   `http://host:port/<path-to-ic>/jcr:content?channel=web&mode=preview&guideMergedJsonPath=http://localhost:8000/somesamplexmlfile.xml`
+  `http://host:port/<path-to-ic>/jcr:content?channel=web&mode=preview&guideMergedJsonPath=http://localhost:8000/somesamplexmlfile.xml`
 
 >[!NOTE]
 >

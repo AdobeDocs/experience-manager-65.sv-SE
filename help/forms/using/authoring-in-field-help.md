@@ -1,8 +1,8 @@
 ---
 title: Sammanhangsberoende hjälp för formulärfält
 seo-title: Authoring in-context help for form fields
-description: Med AEM Forms kan du lägga till sammanhangsberoende hjälp till anpassningsbara formulärfält och paneler, som text eller multimedia, inklusive videor.
-seo-description: AEM Forms allows you to add in-context help to adaptive form fields and panels, as text or rich media, including videos.
+description: Med AEM Forms kan du lägga till sammanhangsberoende hjälp i anpassningsbara formulärfält och paneler, som text eller multimedia, inklusive videor.
+seo-description: AEM Forms lets you add in-context help to adaptive form fields and panels, as text or rich media, including videos.
 uuid: 1865bf7b-66fc-4f89-bd98-904daa409320
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
@@ -10,16 +10,16 @@ discoiquuid: 78000342-a6a7-4c2e-acab-a88851b82c2a
 docset: aem65
 feature: Adaptive Forms
 exl-id: 6569bfba-9af5-4060-8640-e51d7af46614
-source-git-commit: e7a3558ae04cd6816ed73589c67b0297f05adce2
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '423'
+source-wordcount: '422'
 ht-degree: 0%
 
 ---
 
 # Sammanhangsberoende hjälp för formulärfält{#authoring-in-context-help-for-form-fields}
 
-<span class="preview"> Adobe rekommenderar att man använder modern och utbyggbar datainhämtning [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) for [skapa ny Adaptive Forms](/help/forms/using/create-an-adaptive-form-core-components.md) eller [lägga till adaptiv Forms på AEM Sites-sidor](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-program, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptive Forms med grundläggande komponenter. </span>
+<span class="preview"> Adobe rekommenderar att man använder modern och utbyggbar datainhämtning [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) for [skapa ny Adaptive Forms](/help/forms/using/create-an-adaptive-form-core-components.md) eller [lägga till adaptiv Forms på AEM Sites-sidor](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-filer, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptiv Forms med baskomponenter. </span>
 
 ## Introduktion {#introduction}
 
@@ -38,7 +38,7 @@ Du kan ange sammanhangsberoende hjälp med följande alternativ i hjälpavsnitte
 
 >[!NOTE]
 >
->Lång beskrivning åsidosätter den korta beskrivningen. Om du har angett båda visas bara Lång beskrivning.
+>Long description åsidosätter Short description. Om du har angett båda visas bara Lång beskrivning.
 
 ### Kort beskrivning {#short-description}
 

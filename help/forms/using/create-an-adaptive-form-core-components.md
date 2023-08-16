@@ -9,9 +9,9 @@ contentOwner: Khushwant Singh
 topic-tags: Adaptive Forms
 docset: aem65
 role: Admin, Developer
-source-git-commit: 3d7db26a85379e780b103c1e7d26b4116023ee9b
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '1731'
+source-wordcount: '1729'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ ht-degree: 0%
 
 **Gäller för:** ✅ adaptiva grundkomponenter ❎ [Komponenter i adaptiv Form Foundation](/help/forms/using/create-adaptive-form.md).
 
-Med adaptiva Forms kan du skapa engagerande, responsiva, dynamiska och anpassningsbara formulär. AEM Forms har ett användarvänligt gränssnitt för att snabbt skapa adaptiva Forms. Användargränssnittet erbjuder snabb tabbnavigering så att du enkelt kan välja förkonfigurerade mallar, format, fält och alternativ för att skicka formulär för att skapa ett anpassat formulär.
+Med anpassningsbara Forms kan du skapa engagerande, responsiva, dynamiska och anpassningsbara formulär. AEM Forms har ett användarvänligt gränssnitt för att snabbt skapa adaptiva Forms. Användargränssnittet erbjuder snabb tabbnavigering så att du enkelt kan välja förkonfigurerade mallar, format, fält och alternativ för att skicka formulär för att skapa ett anpassat formulär.
 
 Innan du börjar får du lära dig mer om vilken typ av Forms-komponenter du kan använda:
 

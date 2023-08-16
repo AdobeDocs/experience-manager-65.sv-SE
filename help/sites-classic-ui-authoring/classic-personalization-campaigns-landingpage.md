@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 061dee36-a3bb-4166-a9c1-3ab7e4de1d1d
 docset: aem65
 exl-id: 0f1014a7-b0ba-4455-b3a4-5023bcd4c5a1
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '3335'
+source-wordcount: '3333'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ Med funktionen för landningssidor kan du snabbt och enkelt importera en design 
 
 På den här sidan beskrivs följande:
 
-* hur landningssidorna ser ut i AEM med tillgängliga komponenter
+* hur landningssidorna ser ut i AEM, inklusive tillgängliga komponenter
 * hur du skapar en landningssida och importerar ett designpaket
 * Arbeta med landningssidor i AEM
 * konfigurera mobila landningssidor
@@ -64,7 +64,7 @@ En exempellandningssida i AEM ser ut så här:
 
 En landningssida kan också ha en mobilversion av sidan. Om du vill ha en separat mobilversion av landningssidan måste importdesignen ha två html-filer: *index.htm(l)* och *mobile.index.htm(l)*.
 
-Importproceduren för landningssidan är densamma som för en normal landningssida. Designen för landningssidan har en extra HTML-fil som motsvarar den mobila landningssidan. Även den här HTML-filen måste ha en arbetsyta `div` med `id=cqcanvas` precis som landningssidan för stationära datorer html och stöder alla redigerbara komponenter som beskrivs för startsidan för stationära datorer.
+Importproceduren för landningssidan är densamma som för en normal landningssida. Designen för landningssidan har en extra HTML-fil som motsvarar den mobila landningssidan. HTML-filen måste också ha en arbetsyta `div` med `id=cqcanvas` precis som landningssidan för stationära datorer html och stöder alla redigerbara komponenter som beskrivs för startsidan för stationära datorer.
 
 Startsidan för mobilen skapas som en underordnad sida till startsidan för skrivbordslandningen. Du öppnar den genom att navigera till landningssidan på webbplatser och öppna den underordnade sidan.
 
@@ -81,7 +81,7 @@ Om du vill göra delar av HTML som importeras redigerbara i AEM kan du mappa inn
 * Text, för all text
 * Titel, för innehåll i H1-6-taggar
 * Bild, för bilder som ska vara utbytbara
-* Call to Actions:
+* Uppmaning till åtgärder:
 
    * Klicka på länken
    * Grafisk länk
@@ -193,7 +193,7 @@ Ett exempel på ett CTA-formulär ser ut så här:
 CTA-formulär bygger på flera olika komponenter:
 
 * **Leadformulär**
-Huvudformulärkomponenten definierar början och slutet av ett nytt lead-formulär på en sida. Andra komponenter kan sedan placeras mellan dessa element, som e-post-ID, förnamn och så vidare.
+Formulärexponenten för lead definierar början och slutet av ett nytt lead-formulär på en sida. Andra komponenter kan sedan placeras mellan dessa element, som e-post-ID, förnamn och så vidare.
 
 * **Formulärfält och -element**
 Formulärfält och -element kan innehålla textrutor, alternativknappar, bilder och så vidare. Användaren slutför ofta en åtgärd i ett formulärfält, till exempel att skriva text. Mer information finns i enskilda formulärelement.
@@ -201,7 +201,7 @@ Formulärfält och -element kan innehålla textrutor, alternativknappar, bilder 
 * **Profilkomponenter**
 Profilkomponenter relaterar till besökarprofiler som används för socialt samarbete och andra områden där besökaranpassning krävs.
 
-I föregående exempel visas ett exempelformulär. den består av **Leadformulär** -komponent (start och slut), med **Förnamn** och **E-post-ID** fält som används för indata och **Skicka** fält
+I föregående exempel visas ett exempelformulär. Det består av **Leadformulär** -komponent (start och slut), med **Förnamn** och **E-post-ID** fält som används för indata och **Skicka** fält
 
 Följande komponenter finns tillgängliga för CTA Lead-formuläret:
 
@@ -217,7 +217,7 @@ När du konfigurerar någon av formulärkomponenterna är följande flikar tillg
 Här måste du ange grundläggande information, t.ex. komponentens namn och eventuell tillhörande text. Där det är lämpligt kan du även definiera annan nyckelinformation, t.ex. om fältet är flervalsbart och om det finns objekt tillgängliga för markering.
 
 * **Startvärden**
-Gör att du kan ange ett standardvärde.
+Här kan du ange ett standardvärde.
 
 * **Begränsningar**
 Här kan du ange om ett fält är obligatoriskt och om det finns platsbegränsningar i fältet (måste till exempel vara numeriska).
@@ -235,7 +235,7 @@ Anger fältets storlek och format.
 
 I följande avsnitt beskrivs de komponenter som är tillgängliga för formulär för lead-anrop-till-åtgärd.
 
-**Om** Tillåter användare att lägga till Om-information.
+**Om** Låter användarna lägga till Om-information.
 
 ![chlimage_1-35](assets/chlimage_1-35.png)
 
@@ -247,7 +247,7 @@ I följande avsnitt beskrivs de komponenter som är tillgängliga för formulär
 
 ![chlimage_1-37](assets/chlimage_1-37.png)
 
-**E-post-ID** Tillåter användare att ange en e-postadress (identifiering).
+**E-post-ID** Låter användarna ange en e-postadress (identifiering).
 
 ![chlimage_1-38](assets/chlimage_1-38.png)
 
@@ -273,7 +273,7 @@ När du har lagt till leadformuläret kan du konfigurera början eller slutet av
 
 **Början av leadformulär**
 
-Två flikar är tillgängliga för konfiguration **Formulär** och **Avancerat**:
+Det finns två flikar tillgängliga för konfiguration **Formulär** och **Avancerat**:
 
 ![chlimage_1-43](assets/chlimage_1-43.png)
 
@@ -288,10 +288,10 @@ Två flikar är tillgängliga för konfiguration **Formulär** och **Avancerat**
 * Skapa lead
 * E-posttjänst: Skapa prenumerant och lägg till i listan - Använd om du använder en e-postleverantör som ExactTarget.
 * E-posttjänst: Skicka e-post med automatiskt svar - Använd om du använder en e-postleverantör som ExactTarget.
-* E-posttjänst: Avbeställ användare från listan - Använd detta om du använder en e-postleverantör som ExactTarget.
+* E-posttjänst: Avbeställ användare från listan - Använd om du använder en e-postleverantör som ExactTarget.
 * Avbeställ
 
-**Formuläridentifierare** Formuläridentifieraren identifierar lead-formuläret unikt. Använd formuläridentifieraren om du har flera formulär på en sida, se till att de har olika identifierare.
+**Formuläridentifierare** Formuläridentifieraren identifierar lead-formuläret unikt. Använd formuläridentifieraren om du har flera formulär på en sida. Kontrollera att de har olika identifierare.
 
 **Läs in bana** Är sökvägen till nodegenskaper som används för att läsa in fördefinierade värden i lead-formulärfälten.
 
@@ -309,11 +309,11 @@ Om du validerar det fullständiga formuläret ska du även inkludera något av f
 * Ett skript för validering på serversidan:
   ` /apps/<myApp>/form/<myValidation>/formservervalidation.jsp`
 
-**Åtgärdskonfiguration** Beroende på vad du väljer i Alternativ för inlägg ändras åtgärdskonfigurationen. Om du till exempel väljer Skapa lead kan du konfigurera vilken lista leadet ska läggas till i.
+**Åtgärdskonfiguration** Beroende på vad du har valt i Alternativ för inlägg ändras åtgärdskonfigurationen. Om du till exempel väljer Skapa lead kan du konfigurera vilken lista leadet ska läggas till i.
 
 ![chlimage_1-45](assets/chlimage_1-45.png)
 
-* **Visa Skicka-knapp**
+* **Visa knappen Skicka**
 Anger om en Skicka-knapp ska visas eller inte.
 
 * **Skicka namn**
@@ -323,7 +323,7 @@ En identifierare om du använder flera skicka-knappar i ett formulär.
 Namnet som visas på knappen, till exempel Skicka eller Skicka.
 
 * **Visa knappen Återställ**
-Markera kryssrutan för att visa knappen Återställ.
+Markera kryssrutan om du vill att knappen Återställ ska visas.
 
 * **Återställ titel**
 Namnet som visas på knappen Återställ.
@@ -433,9 +433,9 @@ Om det importerade designpaketet innehåller vissa problem, till exempel om det 
 
 ### Återställa en landningssida {#resetting-a-landing-page}
 
-Om du vill importera om designpaketet för landningssidan efter att ha gjort några ändringar i det kan du&quot;rensa&quot; landningssidan genom att klicka på **Rensa** längst upp på landningssidan i det klassiska användargränssnittet eller klicka på Rensa på inställningsmenyn i det pekoptimerade användargränssnittet. Om du gör det tas den importerade landningssidan bort och en tom importsida skapas.
+Om du vill importera om designpaketet för landningssidan efter att ha gjort några ändringar i det kan du rensa landningssidan genom att klicka på **Rensa** längst upp på landningssidan i det klassiska användargränssnittet eller klicka på Rensa på inställningsmenyn i det pekoptimerade användargränssnittet. Om du gör det tas den importerade landningssidan bort och en tom importsida skapas.
 
-När du rensar landningssidan kan du ta bort innehållsändringarna. Om du klickar **Nej** och innehållsändringarna bevaras, det vill säga strukturen under `jcr:content/importer`bevaras och endast importsidans komponent och resurserna i `etc/design` tas bort. Om du klickar **Ja**, `jcr:content/importer` tas också bort.
+När du rensar landningssidan kan du ta bort innehållsändringarna. Klicka **Nej**, bevaras innehållsändringarna, det vill säga strukturen under `jcr:content/importer`bevaras och endast importsidans komponent och resurserna i `etc/design` tas bort. Om du klickar **Ja**, `jcr:content/importer` tas också bort.
 
 >[!NOTE]
 >

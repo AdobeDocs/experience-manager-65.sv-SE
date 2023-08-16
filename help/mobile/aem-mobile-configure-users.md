@@ -6,9 +6,9 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: administering-on-demand-services-app
 exl-id: 58b7d1b9-a851-442a-9d02-212cad8abbed
-source-git-commit: 60924e7ee204e43a2ff833fbc394beca8db9c9d9
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '512'
+source-wordcount: '511'
 ht-degree: 0%
 
 ---
@@ -78,7 +78,7 @@ Medlemmar i gruppen app-admins kan skapa programinnehåll med samma behörighete
 
    >[!NOTE]
    >
-   >arbetsflödesanvändare krävs för fjärrbygge med PhoneGap Build-tjänsten
+   >arbetsflödesanvändare krävs för att fjärrbygga med PhoneGap Build-tjänsten
 
 1. Navigera till [Behörighetskonsol](http://localhost:4502/useradmin) och lägga till behörigheter för att administrera molntjänster
 
@@ -103,7 +103,7 @@ Medlemmar i gruppen app-admins kan skapa programinnehåll med samma behörighete
 1. Exportera innehåll eller överföra
 
    * (Läs) på /etc/contentsync för att komma åt exportmallar
-   * (Läs) på /var till genomgång av sökväg vid läsning
+   * (Läs) på /var to path traversal on read
    * (Läs, skriv, ändra, ta bort) på /var/contentsync för att skriva, läsa och rensa cachelagrat ContentSync-exportinnehåll
 
 ### Ytterligare resurser {#additional-resources}

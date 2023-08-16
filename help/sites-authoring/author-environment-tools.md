@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: f488ba79-5bda-46e9-9c15-9a8c3dbfa2ce
 docset: aem65
 exl-id: 3b3c118b-ca35-484b-a62e-7bec98953123
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '2245'
+source-wordcount: '2240'
 ht-degree: 7%
 
 ---
@@ -22,7 +22,7 @@ I redigeringsmiljön i AEM finns olika sätt att ordna och redigera ditt innehå
 
 ## Hantera din webbplats {#managing-your-site}
 
-The **Webbplatser** Med konsolen kan du navigera och hantera din webbplats med hjälp av sidhuvudsfältet, verktygsfältet, åtgärdsikonerna (gäller för den valda resursen), vägbeskrivningar och, när du väljer det, sekundära spår (t.ex. tidslinje och referenser).
+The **Webbplatser** Med konsolen kan du navigera och hantera din webbplats med hjälp av sidhuvudsfältet, verktygsfältet, åtgärdsikonerna (gäller för den valda resursen), vägbeskrivningar och, om du väljer det, sekundära spår (t.ex. tidslinje och referenser).
 
 Till exempel kolumnvy:
 
@@ -46,8 +46,8 @@ Du kan redigera en sida med sidredigeraren. Till exempel:
 
 När du redigerar en sida **Hjälp** kan nås från:
 
-* den [**Sidinformation**](/help/sites-authoring/editing-page-properties.md#page-properties) väljare, Då visas introduktionsbilderna (som visas första gången du öppnar redigeraren).
-* den [konfiguration](/help/sites-authoring/editing-content.md#edit-configure-copy-cut-delete-paste) för specifika komponenter (med ? ikon i dialogrutans verktygsfält); detta visar sammanhangsberoende hjälp.
+* den [**Sidinformation**](/help/sites-authoring/editing-page-properties.md#page-properties) väljaren. Då visas introduktionsbilderna (som visas första gången du öppnar redigeraren).
+* den [konfiguration](/help/sites-authoring/editing-content.md#edit-configure-copy-cut-delete-paste) för specifika komponenter (med ? ikonen i dialogrutans verktygsfält); då visas sammanhangsberoende hjälp.
 
 Ytterligare [hjälprelaterade resurser är tillgängliga från konsoler](/help/sites-authoring/basic-handling.md#accessing-help).
 
@@ -89,7 +89,7 @@ Det faktiska utseendet och hanteringen beror på vilken enhetstyp du använder:
    * Komponentgrupp (i grått)
    * Ikon eller förkortning
 
-      * Standardkomponentens ikoner är monokroma.
+      * Standardkomponenternas ikoner är monokroma.
       * Förkortningar är alltid de två första tecknen i komponentnamnet.
 
   I det övre verktygsfältet i **Komponenter** webbläsare:
@@ -146,7 +146,7 @@ Det faktiska utseendet och hanteringen beror på vilken enhetstyp du använder:
 
 >[!NOTE]
 >
->En mobil enhet upptäcks när bredden är mindre än 1024px. dvs. även i ett litet skrivbordsfönster.
+>En mobil enhet identifieras när bredden är mindre än 1 024 px, dvs. även i ett litet skrivbordsfönster.
 
 * **Mobila enheter som iPad**
 
@@ -180,7 +180,7 @@ När du öppnar sidopanelen öppnas den (från vänster sida). Välj **Innehåll
 
 ![ateat-11](assets/ateat-11.png)
 
-En sida kan enkelt bestå av många av samma typ av komponenter, så innehållsträdet (komponentträdet) visar beskrivande text (i grått) efter komponenttypens namn (i svart). Den beskrivande texten kommer från vanliga egenskaper för komponenten, t.ex. rubrik eller text.
+En sida kan enkelt bestå av många av samma typ av komponenter, så innehållsträdet (komponentträdet) visar beskrivande text (i grått) efter komponenttypens namn (i svart). Den beskrivande texten kommer från vanliga egenskaper för komponenten, till exempel rubrik eller text.
 
 Komponenttyper visas på användarspråket, medan komponentbeskrivningstexten kommer från sidspråket.
 
@@ -194,7 +194,7 @@ Om du klickar på markören bredvid en komponent kommer den nivån att komprimer
 
 Om du klickar på komponenten markeras komponenten i sidredigeraren. Vilka åtgärder som är tillgängliga beror på sidstatus:
 
-* En grundsida:
+* En grundsida, till exempel:
 
   `https://localhost:4502/editor.html/content/we-retail/language-masters/en/equipment.html`
 
@@ -244,7 +244,7 @@ Välj lämplig referenstyp för mer information. I vissa situationer är ytterli
 * [Startar](/help/sites-authoring/launches.md), ger åtkomst till relaterade starter
 * [Live-kopior](/help/sites-administering/msm.md) visar sökvägarna för alla live-kopior som baseras på den valda resursen.
 * [Blueprint](/help/sites-administering/msm-best-practices.md), innehåller information och olika åtgärder
-* [Språkkopior](/help/sites-administering/tc-manage.md#creating-translation-projects-using-the-references-panel), innehåller information och olika åtgärder
+* [Språk Kopior](/help/sites-administering/tc-manage.md#creating-translation-projects-using-the-references-panel), innehåller information och olika åtgärder
 
 Du kan till exempel korrigera en bruten referens i en Reference-komponent:
 
@@ -292,7 +292,7 @@ Dessutom **Sidinformation** kan ge tillgång till analyser och rekommendationer,
 Det finns olika lägen när du redigerar en sida som tillåter olika åtgärder:
 
 * [Redigera](/help/sites-authoring/editing-content.md) - det läge som ska användas när sidinnehållet redigeras.
-* [Layout](/help/sites-authoring/responsive-layout.md) - gör att du kan skapa och redigera din responsiva layout beroende på enhet (om sidan är baserad på en layoutbehållare)
+* [Layout](/help/sites-authoring/responsive-layout.md) - låter dig skapa och redigera din responsiva layout beroende på enhet (om sidan är baserad på en layoutbehållare)
 
 * [Ställning](/help/sites-authoring/scaffolding.md) - hjälper dig att skapa en stor uppsättning sidor som har samma struktur men olika innehåll.
 * [Utvecklare](/help/sites-developing/developer-mode.md) - gör att du kan utföra olika åtgärder (kräver behörighet). Dessa omfattar granskning av den tekniska informationen på en sida och dess komponenter.
@@ -304,11 +304,11 @@ Det finns olika lägen när du redigerar en sida som tillåter olika åtgärder:
 
 * [Timewarp](/help/sites-authoring/working-with-page-versions.md#timewarp) - gör att du kan visa ett sidläge vid en viss tidpunkt.
 * [Live Copy-status](/help/sites-authoring/editing-content.md#live-copy-status) - ger dig en snabb översikt över live-kopians status och vilka komponenter som ärvs/inte ärvs.
-* [Förhandsgranska](/help/sites-authoring/editing-content.md#previewing-pages) - används för att visa sidan så som den kommer att visas i publiceringsmiljön, eller navigera med hjälp av länkar i innehållet.
+* [Förhandsgranska](/help/sites-authoring/editing-content.md#previewing-pages) - används för att visa sidan så som den kommer att visas i publiceringsmiljön, eller för att navigera med hjälp av länkar i innehållet.
 
 * [Anteckna](/help/sites-authoring/annotations.md) - används för att lägga till eller visa anteckningar på sidan.
 
-Du kommer åt dem med hjälp av ikonerna i det övre högra hörnet. Den faktiska ikonen ändras för att återspegla det läge som du använder för närvarande:
+Du kommer åt dessa med ikonerna i det övre högra hörnet. Den faktiska ikonen ändras för att återspegla det läge som du använder för närvarande:
 
 ![ateat-18](assets/ateat-18.png)
 

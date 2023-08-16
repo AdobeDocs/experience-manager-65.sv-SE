@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 5b1e46c5-7e56-433e-b62e-2a76ea7be0fd
 docset: aem65
 exl-id: 0dc4a8ce-5b0e-4bc9-a6f5-df2a67149e22
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 10227bcfcfd5a9b0f126fee74dce6ec7842f5e95
 workflow-type: tm+mt
-source-wordcount: '1887'
+source-wordcount: '1889'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 När en konventionell WCM-resurs tas bort kan referensen till den underliggande datalagreposten tas bort från nodhierarkin, men själva datalagreposten finns kvar. Den här dataarkivposten utan referenser blir då&quot;skräp&quot; som inte behöver behållas. Om det finns ett antal skräpinlägg är det bra att ta bort dem för att bevara utrymme och optimera prestanda för säkerhetskopiering och filsystemsunderhåll.
 
-För det mesta tenderar ett WCM-program att samla in information men inte ta bort information nästan lika ofta. Även om nya bilder läggs till, och till och med ersätter gamla versioner, behåller versionskontrollsystemet den gamla och kan återställas om det behövs. Därför lagras merparten av det innehåll som vi anser vara utökat i systemet permanent. Så vad är den typiska källan för&quot;skräp&quot; i databasen som vi kanske vill rensa?
+För det mesta tenderar ett WCM-program att samla in information men inte ta bort information nästan lika ofta. Även om nya bilder läggs till, och till och med ersätter gamla versioner, behåller versionskontrollsystemet den gamla och kan återställas om det behövs. Därför lagras merparten av det innehåll som vi anser vara utökat i systemet permanent. Så vad är den typiska källan för&quot;skräp&quot; i databasen som vi kanske vill rensa upp?
 
 AEM använder databasen som lagring för ett antal interna aktiviteter och hushållsaktiviteter:
 
@@ -114,7 +114,7 @@ Innan du kör skräpinsamlingen för datalagret bör du kontrollera att inga sä
 
    ![chlimage_1-64](assets/chlimage_1-64.png)
 
-1. Välj **Skräpinsamling för datalager** och sedan klicka eller trycka på **Kör** ikon.
+1. Välj **Skräpinsamling för datalager** och sedan klicka eller trycka på **Kör** -ikon.
 
    ![chlimage_1-65](assets/chlimage_1-65.png)
 
@@ -169,7 +169,7 @@ Om du inte vill köra skräpinsamlingen i datalagret med fönstret för veckound
 
 >[!CAUTION]
 >
->I följande exempel `curl` kommandon som olika parametrar kan behöva konfigureras för din instans; till exempel värdnamnet ( `localhost`), port ( `4502`), administratörslösenord ( `xyz`) och olika parametrar för den faktiska skräpinsamlingen i datalagret.
+>I följande exempel `curl` kommandon som olika parametrar kan behöva konfigureras för din instans, till exempel värdnamnet ( `localhost`), port ( `4502`), administratörslösenord ( `xyz`) och olika parametrar för den faktiska datalagringsskräpinsamlingen.
 
 Här är ett exempel på ett curl-kommando som anropar skräpinsamlingen för datalagring via kommandoraden:
 
@@ -179,7 +179,7 @@ curl -u admin:admin -X POST --data markOnly=true  https://localhost:4503/system/
 
 Kommandot curl returneras omedelbart.
 
-## Kontrollerar konsekvensen i datalagret {#checking-data-store-consistency}
+## Kontrollerar datalagrets konsekvens {#checking-data-store-consistency}
 
 Konsekvenskontrollen av datalagret rapporterar eventuella binära data som saknas men som fortfarande refereras. Så här startar du en konsekvenskontroll:
 

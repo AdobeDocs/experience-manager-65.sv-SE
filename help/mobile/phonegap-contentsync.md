@@ -7,9 +7,9 @@ products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-adobe-phonegap-enterprise
 docset: aem65
 exl-id: 2cadd9c5-4335-48d0-8d1c-941fca717409
-source-git-commit: 96e2e945012046e6eac878389b7332985221204e
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '2961'
+source-wordcount: '2959'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Det här dokumentet är en del av [Komma igång med Adobe Experience Manager (AEM) Mobile](/help/mobile/getting-started-aem-mobile.md) Guide, en rekommenderad startpunkt för AEM Mobile.
+>Det här dokumentet ingår i [Komma igång med Adobe Experience Manager (AEM) Mobile](/help/mobile/getting-started-aem-mobile.md) Guide, en rekommenderad startpunkt för AEM Mobile.
 
 Använd Innehållssynkronisering för att paketera innehåll så att det kan användas i inbyggda mobilprogram. Sidor som har skapats i AEM kan användas som appinnehåll, även när enheten är offline. Eftersom AEM bygger på webbstandarder fungerar de på olika plattformar så att du kan bädda in dem i alla inbyggda wrapper. Den här strategin minskar utvecklingsinsatserna och gör att du enkelt kan uppdatera appinnehåll.
 
@@ -34,7 +34,7 @@ I ramverket för innehållssynkronisering skapas en arkivfil som innehåller web
 
 Följande stegsekvens visar ett typiskt användningsfall för Innehållssynkronisering:
 
-1. AEM skapar en konfiguration för innehållssynkronisering som anger vilket innehåll som ska inkluderas.
+1. Den AEM utvecklaren skapar en konfiguration för innehållssynkronisering som anger vilket innehåll som ska inkluderas.
 1. Innehållssynkroniseringsramverket samlar in och cachelagrar innehållet.
 1. På en mobil enhet startas mobilprogrammet och begär innehåll från servern, som levereras i en ZIP-fil.
 1. Klienten packar upp ZIP-innehållet i det lokala filsystemet. Mappstrukturen i ZIP-filen simulerar de sökvägar som en klient (till exempel en webbläsare) normalt skulle begära från servern.
@@ -49,7 +49,7 @@ Följande stegsekvens visar ett typiskt användningsfall för Innehållssynkroni
 
 Skapa en konfiguration för innehållssynkronisering för att ange innehållet i ZIP-filen som levereras till klienten. Du kan skapa valfritt antal konfigurationer för innehållssynkronisering. Varje konfiguration har ett namn för identifieringsändamål.
 
-Om du vill skapa en konfiguration för innehållssynkronisering lägger du till en `cq:ContentSyncConfig` till databasen med `sling:resourceType` egenskap inställd på `contentsync/config`. The `cq:ContentSyncConfig` noden kan finnas var som helst i databasen, men noden måste vara tillgänglig för användare på AEM publiceringsinstans. Därför bör du lägga till noden nedan `/content`.
+Skapa en konfiguration för innehållssynkronisering genom att lägga till en `cq:ContentSyncConfig` till databasen med `sling:resourceType` egenskap inställd på `contentsync/config`. The `cq:ContentSyncConfig` noden kan finnas var som helst i databasen, men noden måste vara tillgänglig för användare på AEM publiceringsinstans. Därför bör du lägga till noden nedan `/content`.
 
 Om du vill ange innehållet i ZIP-filen för innehållssynkronisering lägger du till underordnade noder i cq:ContentSyncConfig-noden. Följande egenskaper för varje underordnad nod identifierar ett innehållsobjekt som ska inkluderas och hur det bearbetas när det läggs till:
 
@@ -86,7 +86,7 @@ Om du [konfigurera i databasen](/help/sites-deploying/configuring-osgi.md#osgi-c
 Om du vill konfigurera hämtningsåtkomst för en viss konfiguration för innehållssynkronisering lägger du till följande egenskap i `cq:ContentSyncConfig` nod:
 
 * Namn: auktoriseringsbar
-* Typ: Sträng
+* Typ: String
 * Värde: Namnet på den användare eller grupp som kan hämtas.
 
 Med din app kan användare till exempel installera uppdateringar direkt från innehållssynkronisering. Om du vill att alla användare ska kunna hämta uppdateringen anger du värdet för egenskapen authable till `everyone`.
@@ -102,7 +102,7 @@ Du kan åsidosätta standardanvändaren och ange en användare eller grupp som u
 Om du vill åsidosätta standardanvändaren anger du en användare eller grupp som utför uppdateringar för en specifik konfiguration för innehållssynkronisering genom att lägga till följande egenskap i cq:ContentSyncConfig-noden:
 
 * Namn: updateuser
-* Typ: Sträng
+* Typ: String
 * Värde: Namnet på den användare eller grupp som kan utföra uppdateringarna.
 
 Om cq:ContentSyncConfig-noden inte har `updateuser` -egenskapen uppdateras cachen av den anonyma användaren som standard.
@@ -173,7 +173,7 @@ Varje egenskap kan ha något av följande värden:
 
 * `REWRITE_RELATIVE`: skriver om sökvägen med en relativ position till HTML-filen på sidan i filsystemet.
 
-* `REWRITE_EXTERNAL`: skriver om sökvägen genom att peka på resursen på servern med hjälp av AEM [Tjänsten Externalizer](/help/sites-developing/externalizer.md).
+* `REWRITE_EXTERNAL`: skriver om sökvägen genom att peka på resursen på servern med AEM [Externalizer-tjänst](/help/sites-developing/externalizer.md).
 
 AEM anropade **PathRewriterTransformerFactory** I kan du konfigurera de specifika HTML-attribut som ska skrivas om. Tjänsten kan konfigureras i webbkonsolen och har en konfiguration för varje egenskap i `rewrite` nod: `clientlibs`, `images`och `links`.
 
@@ -254,7 +254,7 @@ Den ser ut så här:
 
 Även om antalet konfigurationsalternativ redan är stort kanske det inte täcker alla krav för ditt specifika användningsfall. I det här avsnittet beskrivs tilläggen för ramverket för innehållssynkronisering och hur du skapar anpassade konfigurationstyper.
 
-För varje konfigurationstyp finns det en *Hanterare för innehållsuppdatering*, som är en OSGi-komponentfabrik som är registrerad för den typen. Hanterarna samlar in, bearbetar och lägger till innehåll i ett cacheminne som underhålls av ramverket för innehållssynkronisering. Implementera följande gränssnitt eller abstrakt basklass:
+För varje konfigurationstyp finns en *Hanterare för innehållsuppdatering*, som är en OSGi-komponentfabrik som är registrerad för just den typen. Hanterarna samlar in, bearbetar och lägger till innehåll i ett cacheminne som underhålls av ramverket för innehållssynkronisering. Implementera följande gränssnitt eller abstrakt basklass:
 
 * `com.day.cq.contentsync.handler.ContentUpdateHandler` - Gränssnitt som alla uppdateringshanterare måste implementera
 * `com.day.cq.contentsync.handler.AbstractSlingResourceUpdateHandler` - en abstrakt klass som förenklar återgivningen av resurser med Sling
@@ -363,11 +363,11 @@ The `LogoUpdateHandler` klassen implementerar `ContentUpdateHandler` gränssnitt
 
 Om du vill implementera den anpassade hanteraren skapar du först en instans av klassen Image baserat på resursen som anges i konfigurationsposten. Detta är i princip samma procedur som den faktiska logotypkomponenten på våra sidor gör. Det ser till att målsökvägen för bilden är densamma som den som en sida refererar till.
 
-Kontrollera sedan om resursen har ändrats sedan den senaste uppdateringen. Anpassade implementeringar bör undvika onödiga uppdateringar av cachen och returnera false om inget ändras. Om resursen har ändrats kopierar du bilden till den förväntade målplatsen i förhållande till cacheroten. Äntligen `true` returneras för att ange för ramverket att cachen har uppdaterats.
+Kontrollera sedan om resursen har ändrats sedan den senaste uppdateringen. Anpassade implementeringar bör undvika onödiga uppdateringar av cacheminnet och returnera false om inget ändras. Om resursen har ändrats kopierar du bilden till den förväntade målplatsen i förhållande till cacheroten. Äntligen `true` returneras för att ange för ramverket att cachen har uppdaterats.
 
 ## Använda innehållet på klienten {#using-the-content-on-the-client}
 
-Om du vill använda innehåll i en mobilapp som tillhandahålls av Innehållssynkronisering måste du begära innehåll via en HTTP- eller HTTPS-anslutning. Det innebär att hämtat innehåll (packat i en ZIP-fil) kan extraheras och lagras lokalt på den mobila enheten. Innehållet avser inte bara data utan också logik, det vill säga fullständiga webbapplikationer. så att mobilanvändaren kan köra hämtade webbprogram och motsvarande data även utan nätverksanslutning.
+Om du vill använda innehåll i en mobilapp som tillhandahålls av Innehållssynkronisering måste du begära innehåll via en HTTP- eller HTTPS-anslutning. Det innebär att hämtat innehåll (packat i en ZIP-fil) kan extraheras och lagras lokalt på den mobila enheten. Innehållet avser inte bara data utan också logik, det vill säga kompletta webbprogram, vilket gör att mobilanvändaren kan köra hämtade webbprogram och motsvarande data även utan nätverksanslutning.
 
 Innehållssynkronisering levererar innehåll på ett intelligent sätt: Endast dataändringar sedan den senaste lyckade datasynkroniseringen levereras, vilket minskar tiden för dataöverföring. Vid den första körningen av en programdata begärs ändringar sedan den 1 januari 1970, medan endast data som ändrats sedan den senaste lyckade synkroniseringen efterfrågas. AEM använder ett ramverk för klientkommunikation för iOS för att förenkla datakommunikation och dataöverföring så att en minimal mängd systemspecifik kod krävs för att aktivera ett iOS-baserat webbprogram.
 
@@ -383,7 +383,7 @@ Vanlig körningssökväg för en iOS-baserad AEM Mobile-app:
 
 Om det inte gick att upprätta en anslutning visas tidigare hämtade data.
 
-### Komma framåt {#getting-ahead}
+### Komma i förväg {#getting-ahead}
 
 Mer information om roller och ansvar för en administratör och utvecklare finns i resurserna nedan:
 

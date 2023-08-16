@@ -6,9 +6,9 @@ role: User, Admin
 feature: Asset Management
 exl-id: bc0cfb0e-3f70-4377-8831-326a7cae73bd
 hide: true
-source-git-commit: 3d5e9ad8ee19756b05e5a77a3f748bc647fcf734
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '287'
+source-wordcount: '286'
 ht-degree: 1%
 
 ---
@@ -20,12 +20,12 @@ ht-degree: 1%
 | AEM as a Cloud Service | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/watermark-assets.html?lang=en) |
 | AEM 6.5 | Den här artikeln |
 
-[!DNL Adobe Experience Manager Assets] gör att du kan lägga till en digital vattenstämpel till resurser som hjälper användarna att verifiera autenticiteten och upphovsrätten till resurserna. [!DNL Experience Manager Assets] stöder text som ska användas som vattenstämpel i PNG- och JPEG-filer.
+[!DNL Adobe Experience Manager Assets] Med kan du lägga till en digital vattenstämpel till resurser som hjälper användarna att verifiera autenticiteten och upphovsrättsinnehållet i resurserna. [!DNL Experience Manager Assets] stöder text som ska användas som vattenstämpel i PNG- och JPEG-filer.
 
-Om du vill kunna använda vattenstämpel på resurser lägger du till vattenstämpelsteget i dialogrutan [!UICONTROL DAM Update Asset] arbetsflöde.
+Om du vill kunna använda vattenstämpel på resurser lägger du till vattenstämpelsteget i [!UICONTROL DAM Update Asset] arbetsflöde.
 
 1. Öppna [!DNL Experience Manager] användargränssnitt och gå till **[!UICONTROL Tools]** > **[!UICONTROL Workflow]** > **[!UICONTROL Models]**.
-1. Från **[!UICONTROL Workflow Models]** väljer du **[!UICONTROL DAM Update Asset]** arbetsflöde och klicka **[!UICONTROL Edit]**.
+1. Från **[!UICONTROL Workflow Models]** väljer du **[!UICONTROL DAM Update Asset]** och klicka **[!UICONTROL Edit]**.
 
 1. Dra från sidopanelen **[!UICONTROL Add Watermark]** till [!UICONTROL DAM Update Asset] arbetsflöde.
 
@@ -38,7 +38,7 @@ Om du vill kunna använda vattenstämpel på resurser lägger du till vattenstä
    >Placera [!UICONTROL Add Watermark] var som helst före [!UICONTROL Process Thumbnail] steg.
 
 1. Öppna **[!UICONTROL Add Watermark]** för att visa dess egenskaper.
-1. I **[!UICONTROL Arguments]** anger du giltiga värden i de olika fälten, inklusive text, teckensnittstyp, storlek, färg, position, orientering och så vidare. Bekräfta ändringarna genom att klicka på **[!UICONTROL Done]**.
+1. I **[!UICONTROL Arguments]** anger du giltiga värden i de olika fälten, inklusive text, teckensnittstyp, storlek, färg, position, orientering och så vidare. Bekräfta ändringarna genom att klicka **[!UICONTROL Done]**.
 
    ![Ange argumenten i steget Lägg till vattenstämpel i [!DNL Assets]](assets/arguments_add_watermark_aem_assets.png)
 

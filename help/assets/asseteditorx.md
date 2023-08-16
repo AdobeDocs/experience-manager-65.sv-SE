@@ -1,13 +1,13 @@
 ---
 title: Utöka resursredigeraren
-description: Lär dig hur du utökar funktionerna i Resursredigeraren med hjälp av anpassade komponenter.
+description: Lär dig hur du utökar funktionerna i Resursredigeraren med anpassade komponenter.
 contentOwner: AG
 role: User, Admin
 feature: Developer Tools
 exl-id: de1c63c1-a0e5-470b-8d83-b594513a5dbd
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '688'
+source-wordcount: '687'
 ht-degree: 13%
 
 ---
@@ -60,9 +60,9 @@ Vissa av [!DNL Assets] -komponenter använder widgetbiblioteket. För att kunna 
 
 ### Geometrixx formatmall {#geometrixx-style-sheet}
 
-Komponenterna för exempelsidorna kräver att alla väljare börjar med `.asseteditor` av `static.css` (`/etc/designs/geometrixx/static.css`). Bästa praxis: Kopiera alla `.asseteditor` väljare till formatmallen och justera reglerna efter behov.
+Komponenterna för exempelsidorna kräver att alla väljare börjar med `.asseteditor` av `static.css` (`/etc/designs/geometrixx/static.css`). God praxis: Kopiera alla `.asseteditor` väljare till formatmallen och justera reglerna efter behov.
 
-### FormChooser: Justeringar för resurser som slutligen läses in {#formchooser-adjustments-for-eventually-loaded-resources}
+### FormChooser: Justeringar för resurser som eventuellt lästs in {#formchooser-adjustments-for-eventually-loaded-resources}
 
 Resursredigeraren använder formulärväljaren, som gör att du kan redigera resurser - i det här fallet resurser - på samma formulärsida genom att lägga till en formulärväljare och formulärsökvägen till resursens URL.
 
@@ -204,7 +204,7 @@ I det här exemplet beskrivs hur du skapar en komponent som visar och visar meta
 
 ## Ändra metadataalternativ {#modifying-metadata-options}
 
-Du kan ändra de namnutrymmen som finns i dialogrutan [metadataformulär](assets-finder-editor.md#metadata-form-and-text-field-configuring-the-view-metadata-component).
+Du kan ändra de namnutrymmen som finns i dialogrutan [metadata-formulär](assets-finder-editor.md#metadata-form-and-text-field-configuring-the-view-metadata-component).
 
 Tillgängliga metadata definieras i `/libs/dam/options/metadata`:
 

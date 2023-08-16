@@ -3,16 +3,16 @@ title: Använd layoutläget för att ändra storlek på komponenter för anpassn
 description: Definiera placeringen av komponenterna med det responsiva stödrastret som finns i layoutläget
 feature: Adaptive Forms
 exl-id: 5cf76cb1-c92c-4aed-9945-37494fef2d29
-source-git-commit: e7a3558ae04cd6816ed73589c67b0297f05adce2
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '1093'
+source-wordcount: '1092'
 ht-degree: 0%
 
 ---
 
 # Använd layoutläget för att ändra storlek på komponenter {#use-layout-mode-to-resize-components}
 
-<span class="preview"> Adobe rekommenderar att man använder modern och utbyggbar datainhämtning [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) for [skapa ny Adaptive Forms](/help/forms/using/create-an-adaptive-form-core-components.md) eller [lägga till adaptiv Forms på AEM Sites-sidor](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-program, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptive Forms med grundläggande komponenter. </span>
+<span class="preview"> Adobe rekommenderar att man använder modern och utbyggbar datainhämtning [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) for [skapa ny Adaptive Forms](/help/forms/using/create-an-adaptive-form-core-components.md) eller [lägga till adaptiv Forms på AEM Sites-sidor](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-filer, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptiv Forms med baskomponenter. </span>
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
@@ -26,7 +26,7 @@ Du kan använda layoutläget för att ändra storlek på komponenter för alla e
 
 ## Åtkomst till layoutläge {#access-layout-mode}
 
-Välj **Layout** från listrutan som visas högst upp i gränssnittet för redigering av anpassningsbara formulär intill **Förhandsgranska** alternativ. Formuläret visas i layoutläget.
+Välj **Layout** från listrutan som visas högst upp i gränssnittet för redigering av anpassningsbara formulär bredvid **Förhandsgranska** alternativ. Formuläret visas i layoutläget.
 
 1. Logga in på AEM författarinstans och navigera till **Adobe Experience Manager** > **Forms** > **Forms och dokument**.
 1. Skapa ett nytt eller öppna ett befintligt [adaptiv form](../../forms/using/creating-adaptive-form.md).
@@ -43,15 +43,15 @@ Välj **Layout** från listrutan som visas högst upp i gränssnittet för redig
 
    Verktygsfältet som visas när du har tryckt på komponenter består av följande alternativ:
 
-   * **[!UICONTROL Parent]**: Markera den överordnade komponenten för en komponent.
+   * **[!UICONTROL Parent]**: Välj överordnad för en komponent.
    * **[!UICONTROL Revert breakpoint layout]**: Ångra alla storleksändringar och använd standardlayout på komponenten.
-   * **[!UICONTROL Float to new line]**: Flytta komponenten till nästa rad om det finns flera komponenter på samma rad.
+   * **[!UICONTROL Float to new line]**: Skift komponenten till nästa rad om det finns flera komponenter på samma rad.
 
    Du kan också använda **[!UICONTROL Revert breakpoint layout]** ( ![Återställ brytpunkt](assets/reverttopreviouslypublishedversion.png)) på panelnivå om du vill ångra alla storleksändringar.
 
    >[!NOTE]
    >
-   >Du kan inte ändra storlek på tabellkolumn, verktygsfält, verktygsfältsknapp och målområdeskomponenter i layoutläget. Använd stilläget om du vill ändra storlek på komponenterna.
+   >Du kan inte ändra storlek på tabellkolumn, verktygsfält, verktygsfältsknapp och målområdeskomponenter i layoutläget. Använd stilläget om du vill ändra storlek på de här komponenterna.
 
 ### Exempel {#example}
 
@@ -84,7 +84,7 @@ Du kan upprepa steg 1 och 2 och välja ![Markera överordnad](assets/float_to_ne
 
 Utför följande steg för att definiera antalet kolumner för en panel:
 
-1. I **[!UICONTROL Edit]** läge, tryck på panelen, välj ![Konfigurera](assets/configure_icon.png)och markera **[!UICONTROL Responsive - everything on the page without navigation]** från **[!UICONTROL Panel Layout]** nedrullningsbar lista.
+1. I **[!UICONTROL Edit]** läge, tryck på panelen, välj ![Konfigurera](assets/configure_icon.png)och markera **[!UICONTROL Responsive - everything on the page without navigation]** från **[!UICONTROL Panel Layout]** listruta.
 
 1. Tryck ![Spara](assets/save_icon.svg) för att spara egenskaperna.
 
@@ -109,7 +109,7 @@ Gör så här för att aktivera det nya responsiva rutnätet:
 
 ### Bädda in ett gammalt fragment i en adaptiv form med ny responsiv layout {#embed-an-old-fragment-in-an-adaptive-form-with-new-responsive-layout}
 
-Med den nya responsiva layouten för adaptiva formulär kan du lägga till ett adaptivt formulärfragment med den gamla responsiva layouten i formuläret. Den nya layouten tar dock bort de layoutegenskaper som redan har definierats för komponenter som används i fragmentet. Du kan växla till layoutläget för att definiera layoutegenskaperna för komponenter som används i fragmentet.
+Med den nya responsiva layouten för anpassningsbara formulär kan du lägga till ett adaptivt formulärfragment med den gamla responsiva layouten i formuläret. Den nya layouten tar dock bort de layoutegenskaper som redan har definierats för komponenter som används i fragmentet. Du kan växla till layoutläget för att definiera layoutegenskaperna för komponenter som används i fragmentet.
 
 ### Bädda in ett fragment med ny responsiv layout i ett gammalt anpassat formulär {#embed-a-fragment-with-new-responsive-layout-in-an-old-adaptive-form}
 

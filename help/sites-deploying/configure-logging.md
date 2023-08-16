@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 5aa69b10-2cd0-4d34-8104-8c3b88405926
 feature: Configuring
 exl-id: b32001a1-0078-43f6-89d6-781d6d2e9c94
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '664'
+source-wordcount: '662'
 ht-degree: 0%
 
 ---
@@ -23,8 +23,8 @@ ht-degree: 0%
 AEM ger dig möjlighet att konfigurera:
 
 * globala parametrar för den centrala loggningstjänsten
-* begära dataloggning, en särskild loggningskonfiguration för begärandeinformation
-* särskilda inställningar för de enskilda tjänsterna, t.ex. en enskild loggfil och ett format för loggmeddelandena
+* begär dataloggning; en särskild loggningskonfiguration för begärandeinformation
+* specifika inställningar för de enskilda tjänsterna, till exempel en enskild loggfil och ett format för loggmeddelandena
 
 De här är alla [OSGi-konfigurationer](/help/sites-deploying/configuring-osgi.md).
 
@@ -53,11 +53,11 @@ Förutom de globala loggningsinställningarna kan du med AEM konfigurera specifi
 * den specifika loggningsnivån
 * platsen för den enskilda loggfilen
 * antalet versioner som ska behållas
-* versionsrotation; antingen maxstorlek eller tidsintervall
+* versionsrotation; antingen maximal storlek eller tidsintervall
 * det format som ska användas när loggmeddelanden skrivs
 * loggaren (OSGi-tjänsten som tillhandahåller loggmeddelanden)
 
-På så sätt kan du kanalisera loggmeddelanden för en enskild tjänst till en separat fil. Detta kan vara särskilt användbart under utveckling eller testning. om du till exempel behöver en högre loggnivå för en viss tjänst.
+På så sätt kan du kanalisera loggmeddelanden för en enskild tjänst till en separat fil. Detta kan vara särskilt användbart under utveckling eller testning, till exempel när du behöver en högre loggnivå för en viss tjänst.
 
 AEM använder följande för att skriva loggmeddelanden till filen:
 
@@ -69,19 +69,19 @@ Dessa element är länkade med följande parametrar för de relevanta elementen:
 
 * **Logger (loggningsloggare)**
 
-   Definiera de tjänster som genererar meddelandena.
+  Definiera de tjänster som genererar meddelandena.
 
 * **Loggfil (loggningslogg)**
 
-   Definiera den fysiska filen för lagring av loggmeddelanden.
+  Definiera den fysiska filen för lagring av loggmeddelanden.
 
-   Detta används för att länka en loggningslogg till en loggningsförfattare. Värdet måste vara identiskt med samma parameter i loggningsskrivarens konfiguration för att anslutningen ska kunna upprättas.
+  Detta används för att länka en loggningslogg till en loggningsförfattare. Värdet måste vara identiskt med samma parameter i loggningsskrivarens konfiguration för att anslutningen ska kunna upprättas.
 
 * **Loggfil (loggningsskrivare)**
 
-   Definiera den fysiska fil som loggmeddelandena ska skrivas till.
+  Definiera den fysiska fil som loggmeddelandena ska skrivas till.
 
-   Detta måste vara identiskt med samma parameter i loggningsskrivarkonfigurationen, annars görs ingen matchning. Om det inte finns någon matchning skapas ett implicit skrivprogram med standardkonfigurationen (daglig loggrotation).
+  Detta måste vara identiskt med samma parameter i loggningsskrivarkonfigurationen, annars görs ingen matchning. Om det inte finns någon matchning skapas ett implicit skrivprogram med standardkonfigurationen (daglig loggrotation).
 
 ### Standardloggare och -författare {#standard-loggers-and-writers}
 
@@ -93,7 +93,7 @@ Det första är ett specialfall eftersom det styr både `request.log` och `acces
 
    * Dataloggning för anpassningsbara Apache Sling-begäranden
 
-      (org.apache.sling.engine.impl.log.RequestLoggerService)
+     (org.apache.sling.engine.impl.log.RequestLoggerService)
 
    * Skriv meddelanden om att begära innehåll till `request.log`.
 
@@ -101,7 +101,7 @@ Det första är ett specialfall eftersom det styr både `request.log` och `acces
 
    * Apache Sling Request Logger
 
-      (org.apache.sling.engine.impl.log.RequestLogger)
+     (org.apache.sling.engine.impl.log.RequestLogger)
 
    * Skriver meddelanden till antingen `request.log` eller `access.log`.
 
@@ -113,7 +113,7 @@ De andra paren följer standardkonfigurationen:
 
    * Konfiguration av loggningsloggare för Apache Sling
 
-      (org.apache.sling.Commons.log.LogManager.factory.config)
+     (org.apache.sling.Commons.log.LogManager.factory.config)
 
    * Skrivningar `Information` meddelanden till `logs/error.log`.
 
@@ -121,7 +121,7 @@ De andra paren följer standardkonfigurationen:
 
    * Konfiguration av skrivprogram för Apache Sling Logging
 
-      (org.apache.sling.Commons.log.LogManager.factory.writer)
+     (org.apache.sling.Commons.log.LogManager.factory.writer)
 
 * Loggaren:
 

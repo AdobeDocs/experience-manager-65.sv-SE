@@ -12,9 +12,9 @@ discoiquuid: b5607343-a13b-4520-a771-f1a555bfcc7b
 docset: aem65
 feature: Upgrading
 exl-id: c42373e9-712e-4c11-adbb-4e3626e0b217
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '522'
+source-wordcount: '521'
 ht-degree: 1%
 
 ---
@@ -23,9 +23,9 @@ ht-degree: 1%
 
 ## Översikt {#overview}
 
-Med den här funktionen kan du kontrollera om befintliga AEM kan uppgraderas genom att identifiera mönster som används:
+Med den här funktionen kan du kontrollera om befintliga AEM är uppgraderingsbara genom att identifiera mönster som används:
 
-1. Brott mot vissa regler och görs i områden som kommer att påverkas eller skrivas över av uppgraderingen
+1. Brott mot vissa regler och görs i områden som påverkas eller skrivs över av uppgraderingen
 1. Använd en AEM 6.x-funktion eller ett API som inte är bakåtkompatibelt med AEM 6.5 och som kan brytas efter uppgraderingen.
 
 Detta kan fungera som en bedömning av den utvecklingsinsats som är nödvändig för att uppgradera till AEM 6.5.
@@ -54,7 +54,7 @@ Du kan använda flera metoder för att kontrollera mönsteravkännarens utdata:
 
    ![screenshot-2018-2-5pattern-Dettor](assets/screenshot-2018-2-5pattern-detector.png)
 
-* **Via ett reaktivt textbaserat eller reguljärt JSON-gränssnitt**
+* **Via ett reaktivt textbaserat eller vanligt JSON-gränssnitt**
 * **Via ett reaktivt gränssnitt för JSON-rader, **som genererar ett separat JSON-dokument på varje rad.
 
 Båda dessa metoder beskrivs nedan:

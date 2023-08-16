@@ -5,9 +5,9 @@ topic-tags: e-commerce
 content-type: reference
 docset: aem65
 exl-id: d995f0d6-9e48-4228-ac82-f33a0b25b9d3
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '753'
+source-wordcount: '749'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ Adobe tillhandahåller två versioner av Commerce Integration Framework:
    <th><p>CIF Cloud</p> </th>
   </tr>
   <tr>
-   <td><p>AEM</p> </td>
+   <td><p>AEM som stöds</p> </td>
    <td><p>AEM på plats eller AMS 6.x</p> </td>
    <td>AEM AMS 6.4 och 6.5</td>
   </tr>
@@ -89,8 +89,8 @@ Adobe tillhandahåller två versioner av Commerce Integration Framework:
    <td>Ja via öppen källkod via GitHub. Adobe Commerce (Stöder 2.3.2 (standard) och är kompatibelt med 2.3.1).</td>
   </tr>
   <tr>
-   <td>När ska användas</td>
-   <td>Begränsad användning: Exempel: där små, statiska kataloger kan behöva importeras</td>
+   <td>När ska du använda</td>
+   <td>Begränsad användning: Exempelvis kan små, statiska kataloger behöva importeras</td>
    <td>Rekommenderad lösning i de flesta fall</td>
   </tr>
  </tbody>
@@ -105,7 +105,7 @@ eCommerce hanterar tillsammans med Product Information Management (PIM) verksamh
 * Live och centraliserad lagringspost
 * Webbgränssnitt
 
-AEM e-handel hjälper marknadsförare att leverera varumärkesanpassade, personaliserade shoppingupplevelser på webben, i mobilen och via sociala kontaktytor. I AEM kan du anpassa sidor och komponenter baserat på målgruppskontext och försäljningsstrategier. till exempel:
+AEM e-handel hjälper marknadsförare att leverera varumärkesanpassade, personaliserade shoppingupplevelser på webben, i mobilen och via sociala kontaktytor. I AEM redigeringsmiljö kan du anpassa sidor och komponenter baserat på målbesökarnas sammanhang och försäljningsstrategier, till exempel:
 
 * Produktsidor
 * Kundvagnskomponenter
@@ -141,18 +141,18 @@ AEM eCommerce tillhandahåller:
 
   >[!NOTE]
   >
-  >Integreringsramverket som AEM tillhandahåller gör det även möjligt att skapa ytterligare AEM komponenter för handelsfunktioner oberoende av din specifika e-handelsmotor.
+  >Med integreringsramverket som AEM tillhandahåller kan du även skapa ytterligare AEM komponenter för handelsfunktioner oberoende av din specifika e-handelsmotor.
 
 * **Sök** - med antingen:
 
-   * AEM
+   * AEM sökning
    * sökningen i e-handelssystemet
    * en tredje parts sökning
    * eller en kombination av dessa.
 
   ![sökexempel](/help/sites-administering/assets/chlimage_1-131.png)
 
-* Använder AEM möjlighet att **presentera innehållet i flera kanaler**, vara hela webbläsarfönstret eller den mobila enheten. Detta levererar innehållet i det format som besökarna behöver.
+* AEM kan **presentera innehållet i flera kanaler**, vara hela webbläsarfönstret eller den mobila enheten. Detta levererar innehållet i det format som besökarna behöver.
 
   ![mobilvy, exempel](/help/sites-administering/assets/chlimage_1-132.png)
 
@@ -163,7 +163,7 @@ AEM eCommerce tillhandahåller:
 * Möjligheten att utveckla **upplevelsestyrd e-handel baserad på kunddata och -aktivitet**. På så sätt kan du förverkliga många scenarier:
 
    * Ett exempel kan vara minskade fraktkostnader när den totala ordern överstiger ett visst belopp.
-   * Ett annat kan göra att du kan erbjuda säsongserbjudanden som använder profildata (till exempel plats). Dessa kan sedan markeras ytterligare, beroende på andra faktorer vid behov.
+   * Ett annat sätt kan vara att ange säsongserbjudanden som använder profildata (till exempel plats). Dessa kan sedan markeras ytterligare, beroende på andra faktorer vid behov.
 
   I exemplet nedan visas en teaser eftersom innehållet i vagnen är mindre än $75:
 
@@ -176,7 +176,7 @@ AEM eCommerce tillhandahåller:
 * Och andra funktioner:
 
    * Kundvagnsinnehåll behålls mellan sessioner
-   * Full orderhistorik
+   * Fullständig orderhistorik
    * Express catalog update
 
 ## Ramverket {#the-framework}

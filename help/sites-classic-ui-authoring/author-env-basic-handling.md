@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: introduction
 content-type: reference
 exl-id: 2981dc20-b2ba-4ea2-a53b-8b5fe526aa9c
-source-git-commit: 3885cc51f7e821cdb352737336a29f9c4f0c2f41
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '1167'
+source-wordcount: '1166'
 ht-degree: 0%
 
 ---
@@ -51,7 +51,7 @@ Huvudkonsolerna är:
   </tr>
   <tr>
    <td><strong>Launches</strong></td>
-   <td>Detta hjälper dig att hantera dina <a href="/help/sites-classic-ui-authoring/classic-launches.md">starter</a>; Med dessa kan du utveckla innehåll för en framtida release av en eller flera aktiverade webbsidor.<br /> <i>Obs! I det beröringskänsliga användargränssnittet finns mycket av samma funktioner i webbplatskonsolen tillsammans med referenslisten.</i> <i>Om det behövs är konsolen tillgänglig från verktygskonsolen. välj Åtgärder och startar sedan.</i></td>
+   <td>Detta hjälper dig att hantera dina <a href="/help/sites-classic-ui-authoring/classic-launches.md">starter</a>; dessa gör att du kan utveckla innehållet för en framtida release av en eller flera aktiverade webbsidor.<br /> <i>Obs! I det beröringskänsliga användargränssnittet finns mycket av samma funktionalitet i webbplatskonsolen, tillsammans med referenslisten.</i> <i>Om det behövs är konsolen tillgänglig från verktygskonsolen. Välj Åtgärder och starta sedan.</i></td>
   </tr>
   <tr>
    <td><strong>Inkorg </strong></td>
@@ -92,7 +92,7 @@ The **Webbplatser** I konsolen finns två rutor där du kan navigera och hantera
 
   Här visas sidorna (på den plats som är markerad i den vänstra rutan) och de kan användas för att vidta åtgärder.
 
-Här kan du [hantera sidor](/help/sites-authoring/managing-pages.md) med verktygsfältet, en snabbmeny eller genom att öppna en sida för ytterligare åtgärder.
+Härifrån kan du [hantera sidor](/help/sites-authoring/managing-pages.md) med verktygsfältet, en snabbmeny eller genom att öppna en sida för ytterligare åtgärder.
 
 >[!NOTE]
 >
@@ -123,7 +123,7 @@ The **Webbplatser** konsolen visar sidorna i en trädstruktur (vänster ruta). F
 
 >[!NOTE]
 >
->Detta standardvärde ( `30`) kan ändras per konsol i dina programspecifika konfigurationer av webbplatsadminwidgeten:
+>Det här standardvärdet ( `30`) kan ändras per konsol i dina programspecifika konfigurationer av webbplatsadmin-widgeten:
 >
 >På noden siteAdmin:
 >
@@ -146,7 +146,7 @@ Den högra rutan i **Webbplatser** konsolen innehåller en listvy med informatio
 
 ![page-info](assets/page-info.png)
 
-Följande finns tillgängliga: en delmängd av dessa fält visas som standard:
+Följande är tillgängliga. En delmängd av dessa fält visas som standard:
 
 <table>
  <tbody>
@@ -172,7 +172,7 @@ Följande finns tillgängliga: en delmängd av dessa fält visas som standard:
   </tr>
   <tr>
    <td>Ändrad</td>
-   <td>Anger om sidan har ändrats och anger ändringsdatum och -tid. Om du vill spara ändringar måste du aktivera sidan.</td>
+   <td>Anger om sidan har ändrats och anger ändringsdatum och -tid. Om du vill spara en ändring måste du aktivera sidan.</td>
   </tr>
   <tr>
    <td>Scene7 Publish</td>
@@ -200,14 +200,14 @@ Följande finns tillgängliga: en delmängd av dessa fält visas som standard:
   </tr>
   <tr>
    <td>Live Copy</td>
-   <td>Anger när sidan är en del av en live-kopia.</td>
+   <td>Anger när sidan ingår i en live-kopia.</td>
   </tr>
  </tbody>
 </table>
 
 >[!NOTE]
 >
->Om du vill markera kolumnerna som visas håller du musen över en kolumnrubrik. En nedrullningsbar meny visas och härifrån kan du använda **Kolumner** alternativ.
+>Om du vill markera kolumnerna som ska visas håller du musen över en kolumnrubrik. En nedrullningsbar meny visas, och härifrån kan du använda **Kolumner** alternativ.
 
 Färgerna bredvid sidorna i **Publicerad** och **Ändrad** kolumner anger publiceringsstatus:
 

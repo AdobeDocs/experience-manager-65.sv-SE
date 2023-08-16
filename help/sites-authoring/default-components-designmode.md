@@ -8,9 +8,9 @@ topic-tags: page-authoring
 content-type: reference
 discoiquuid: 8ae6817a-16d3-4740-b67a-498e75adf350
 exl-id: 5e232886-75c1-4f0f-b359-4739ae035fd3
-source-git-commit: e85aacd45a2bbc38f10d03915e68286f0a55364e
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '915'
+source-wordcount: '912'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 När AEM är installerad i körklart läge är ett urval av komponenter omedelbart tillgängliga i komponentwebbläsaren.
 
-Förutom dessa finns även andra komponenter tillgängliga. Du kan använda designläget för att [aktivera/inaktivera sådana komponenter](#enable-disable-components). När det är aktiverat och finns på sidan kan du sedan använda designläget för att [konfigurera olika aspekter av komponentdesignen](#configuring-the-design-of-a-component) genom att redigera attributparametrarna.
+Förutom dessa finns även andra komponenter tillgängliga. Du kan använda designläget för att [aktivera/inaktivera sådana komponenter](#enable-disable-components). När det är aktiverat och finns på sidan kan du sedan använda designläget för att [konfigurera komponentdesignens aspekter](#configuring-the-design-of-a-component) genom att redigera attributparametrarna.
 
 >[!NOTE]
 >
@@ -66,7 +66,7 @@ Så här aktiverar eller inaktiverar du en komponent:
 
    ![screen_shot_2018-03-22at103204](assets/screen_shot_2018-03-22at103204.png)
 
-1. Klicka eller tryck på **Överordnad** ikon.
+1. Klicka eller tryck på **Överordnad** -ikon.
 
    ![Överordnad](do-not-localize/screen_shot_2018-03-22at103204.png)
 
@@ -94,7 +94,7 @@ Så här aktiverar eller inaktiverar du en komponent:
    * Komponenterna grupperas efter komponentgrupperna, som kan expanderas och komprimeras.
    * Du kan markera en hel grupp genom att markera gruppnamnet och avmarkera alla genom att avmarkera kryssrutan.
    * Ett minustecken representerar minst ett, men inte alla, objekt i en grupp markeras.
-   * En sökning är tillgänglig för att filtrera efter en komponent efter namn.
+   * Det finns en sökning som du kan använda för att filtrera efter en komponent efter namn.
    * Antalet som visas till höger om komponentgruppens namn representerar det totala antalet valda komponenter i dessa grupper oavsett filtret.
 
    Du definierar konfigurationen per sidkomponent. Om underordnade sidor använder samma mall och/eller sidkomponent (vanligtvis justerad) används samma konfiguration för motsvarande styckesystem.
@@ -135,7 +135,7 @@ Så här aktiverar eller inaktiverar du en komponent:
 
    **Egenskaper**
 
-   The **Egenskaper** På -fliken kan du konfigurera komponentens viktiga designparametrar. För en bildkomponent kan du till exempel definiera den största och minsta tillåtna storleken för bilden.
+   The **Egenskaper** Med -fliken kan du konfigurera komponentens viktiga designparametrar. För en bildkomponent kan du till exempel definiera den största och minsta tillåtna storleken för bilden.
 
    **Funktioner**
 
@@ -143,7 +143,7 @@ Så här aktiverar eller inaktiverar du en komponent:
 
    **Stilar**
 
-   The **Stilar** kan du definiera de CSS-klasser och -format som ska användas med komponenten.
+   The **Stilar** Med -fliken kan du definiera de CSS-klasser och -format som ska användas med komponenten.
 
    ![screen_shot_2018-03-22at103741](assets/screen_shot_2018-03-22at103741.png)
 

@@ -5,9 +5,9 @@ contentOwner: AG
 role: Admin
 feature: Tagging,Smart Tags
 exl-id: 9f68804f-ba15-4f83-ab1b-c249424b1396
-source-git-commit: 3d713021ac410ca2925a282c5dfca98ed4e483ee
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '1982'
+source-wordcount: '1981'
 ht-degree: 26%
 
 ---
@@ -21,7 +21,6 @@ Innan du kan börja tagga dina resurser med smarta innehållstjänster måste du
 >* Smarta innehållstjänster är inte längre tillgängliga för nya [!DNL Experience Manager Assets] Lokala kunder. Befintliga lokala kunder, som redan har den här funktionen aktiverad, kan fortsätta använda smarta innehållstjänster.
 >* Smarta innehållstjänster är tillgängliga för befintliga [!DNL Experience Manager Assets] Managed Services-kunder som redan har den här funktionen aktiverad.
 >* Nytt [!DNL Experience Manager Assets] Managed Services-kunder kan följa instruktionerna i den här artikeln för att konfigurera tjänster för smart innehåll.
-
 
 Innan du använder tjänsten för smart innehåll bör du kontrollera följande:
 
@@ -52,7 +51,7 @@ Med ett offentligt certifikat kan du autentisera din profil på Adobe Developer 
 
 1. I användargränssnittet för [!DNL Experience Manager] går du till **[!UICONTROL Tools]** > **[!UICONTROL Cloud Services]** > **[!UICONTROL Legacy Cloud Services]**.
 
-1. På sidan Cloud Services klickar du på **[!UICONTROL Configure Now]** under **[!UICONTROL Assets Smart Tags]**.
+1. På sidan Cloud Service klickar du på **[!UICONTROL Configure Now]** under **[!UICONTROL Assets Smart Tags]**.
 
 1. I dialogrutan **[!UICONTROL Create Configuration]** anger du en rubrik och ett namn för konfigurationen av smarta taggar. Klicka på **[!UICONTROL Create]**.
 
@@ -60,7 +59,7 @@ Med ett offentligt certifikat kan du autentisera din profil på Adobe Developer 
 
    **[!UICONTROL Service URL]**: `https://smartcontent.adobe.io/<region where your Experience Manager author instance is hosted>`
 
-   Till exempel, `https://smartcontent.adobe.io/apac`. Du kan ange `na`, `emea`eller `apac` som de områden där din Experience Manager-författarinstans finns.
+   Till exempel, `https://smartcontent.adobe.io/apac`. Du kan ange `na`, `emea`, eller `apac` som de områden där din Experience Manager-författarinstans finns.
 
    >[!NOTE]
    >
@@ -178,11 +177,11 @@ Valideringsresultaten visas i samma dialogruta.
 
    ![Lägg till resurssteget för smarta taggar efter steget med processminiatyrer i arbetsflödet för DAM-uppdatering av resurser](assets/smart-tag-in-dam-update-asset-workflow.png)
 
-   *Bild: Lägga till resurssteget för smarta taggar efter steget med processminiatyrer i [!UICONTROL DAM Update Asset] arbetsflöde.*
+   *Bild: Lägg till resurssteget för smarta taggar efter steget med processminiatyrer i [!UICONTROL DAM Update Asset] arbetsflöde.*
 
 1. Öppna steget i redigeringsläge. Under **[!UICONTROL Advanced Settings]** kontrollerar du att alternativet **[!UICONTROL Handler Advance]** är markerat.
 
-   ![Konfigurera arbetsflödet för DAM-uppdatering och lägg till steg för smarta taggar](assets/smart-tag-step-properties-workflow1.png)
+   ![Konfigurera arbetsflödet för DAM-uppdatering och lägg till smart tagg](assets/smart-tag-step-properties-workflow1.png)
 
 
    *Bild: Konfigurera arbetsflödet för DAM-uppdatering och lägg till steg för smarta taggar*
@@ -199,13 +198,13 @@ Valideringsresultaten visas i samma dialogruta.
    ![Konfigurera arbetsflödet för DAM-uppdatering av resurser för att lägga till smart tagg och markera ignorera smart tagg](assets/smart-tag-step-properties-workflow3.png)
 
 
-   *Bild: Konfigurera arbetsflödet för DAM-uppdatering av resurser för att lägga till smart tagg och välj ignorera flagga för smart tagg.*
+   *Bild: Konfigurera arbetsflödet för DAM-uppdatering av resurs för att lägga till smart tagg och välj ignorera flagga för smart tagg.*
 
 1. Klicka på **[!UICONTROL OK]** för att stänga processsteget och spara sedan arbetsflödet.
 
 ## Utbilda tjänsten Smart Content {#training-the-smart-content-service}
 
-För att Smart Content Service ska känna igen din företagsklonomi kan du köra den på en uppsättning resurser som redan innehåller taggar som är relevanta för ditt företag. För att effektivt märka upp varumärkesbilderna måste utbildningsbilderna följa vissa riktlinjer. Efter utbildning kan tjänsten tillämpa samma taxonomi på liknande resurser.
+För att Smart Content Service ska känna igen din företagsklonomi kan du köra den på en uppsättning resurser som redan innehåller taggar som är relevanta för ditt företag. För att effektivt märka upp varumärkesbilderna kräver Smart Content Service att utbildningsbilderna följer vissa riktlinjer. Efter utbildning kan tjänsten tillämpa samma taxonomi på en liknande uppsättning resurser.
 
 Du kan utbilda tjänsten flera gånger för att förbättra dess förmåga att använda relevanta taggar. Efter varje utbildningscykel kör du ett taggningsarbetsflöde och kontrollerar om dina resurser är taggade på rätt sätt.
 
@@ -227,7 +226,7 @@ Det är till exempel ingen bra idé att tagga alla dessa bilder som `my-party` (
 
 ![Illustrativa bilder som exempel på riktlinjer för utbildning](/help/assets/assets/do-not-localize/coherence.png)
 
-**Täckning**: Använd tillräckligt med variation i bilderna i kursen. Tanken är att ge några men relativt olika exempel så att Experience Manager lär sig att fokusera på rätt saker. Om du använder samma tagg på bilder som ser olika ut bör du ta med minst fem exempel av varje typ.
+**Täckning**: Använd tillräcklig variation i bilderna i kursen. Tanken är att ge några men relativt olika exempel så att Experience Manager lär sig att fokusera på rätt saker. Om du använder samma tagg på bilder som ser olika ut bör du ta med minst fem exempel av varje typ.
 
 För taggen *model-down-pose* innehåller du fler utbildningsbilder som liknar den markerade bilden nedan för att tjänsten ska kunna identifiera liknande bilder mer exakt under taggningen.
 
@@ -278,7 +277,7 @@ Om du vill kontrollera om Smart Content Service är utbildad i dina taggar i öv
 1. I **[!UICONTROL Asset Reports]** sida, klicka **[!UICONTROL Create]**.
 1. Välj **[!UICONTROL Smart Tags Training]** rapport och klicka sedan på **[!UICONTROL Next]** i verktygsfältet.
 1. Ange en titel och beskrivning för rapporten. Under **[!UICONTROL Schedule Report]** låter du alternativet **[!UICONTROL Now]** vara markerat. Om du vill schemalägga rapporten till ett senare tillfälle väljer du **[!UICONTROL Later]** och anger ett datum och en tid. Klicka sedan på **[!UICONTROL Create]** i verktygsfältet.
-1. På sidan **[!UICONTROL Asset Reports]** markerar du rapporten som du skapat. Om du vill visa rapporten klickar du på **[!UICONTROL View]** i verktygsfältet.
+1. På sidan **[!UICONTROL Asset Reports]** markerar du rapporten som du skapat. Klicka på om du vill visa rapporten **[!UICONTROL View]** i verktygsfältet.
 1. Granska informationen i rapporten.
 
    Rapporten visar träningsstatusen för de taggar du har tränat. Den gröna färgen i kolumnen **[!UICONTROL Training Status]** anger att smarta innehållstjänster har tränats för taggen. Gul färg anger att tjänsten inte är helt tränad för en viss tagg. I det här fallet lägger du till fler bilder med just den taggen och kör träningsarbetsflödet för att träna tjänsten helt för taggen.
@@ -301,4 +300,3 @@ Om du vill kontrollera om Smart Content Service är utbildad i dina taggar i öv
 >
 >* [Översikt och utbildning av smarta taggar](enhanced-smart-tags.md)
 >* [Videosjälvstudiekurs om smarta taggar](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/metadata/image-smart-tags.html)
-

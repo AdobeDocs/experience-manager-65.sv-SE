@@ -6,9 +6,9 @@ role: User
 feature: Asset Management,Search
 exl-id: d6f815b5-e4fc-4f8c-a6c1-9e50035ab9f2
 hide: true
-source-git-commit: 681d1e6bd885b801b930e580d95645f160f17cea
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '804'
+source-wordcount: '803'
 ht-degree: 0%
 
 ---
@@ -31,20 +31,20 @@ Det mest grundläggande sättet att ordna resurser är att spara dessa i mappar.
 * Vanligtvis växer databasen med digitala resurser. Därför är det viktigt att formalisera metadataanvändning, mappstruktur och filnamngivning tidigt när du skapar innehåll.
 * Använd endast mappar för att få en enhetlig lagringsstruktur för dina digitala resurser. Denna konsekvens hjälper er att arbeta och hantera ert material bättre. Resurser som placerats i följande typer av mappar kan till exempel hjälpa dig att använda rätt [profiler som ska användas för bearbetning av tillgångar](processing-profiles.md):
 
-   * **Utvecklingsmappar**: innehåller digitala resurser som du arbetar med just nu.
+   * **Utvecklingsmappar**: innehåller digitala resurser som du för närvarande arbetar med.
    * **Klientmappar**: innehåller digitala resurser baserade på klienter eller projektnamn.
    * **Primära mappar**: innehåller digitala källresurser.
    * **Återgivningsmappar**: innehåller återgivningar och kopior av det ursprungliga digitala källmaterialet.
    * **Filstorleksmappar**: innehåller digitala resurser baserade på små, medelstora eller stora filstorlekar.
    * **Mellanlagringsmappar**: innehåller digitala resurser som är klara att publiceras live på din webbplats.
-   * **MIME-typmappar**: innehåller digitala resurser som är specifika för MIME-typer, som bilder, dokument och multimedia.
+   * **MIME-typmappar**: innehåller digitala resurser som är specifika för MIME-typer, t.ex. bilder, dokument och multimedia.
    * **Arkivera mappar**: innehåller pensionerade digitala resurser.
    * **Datumbaserade mappar**: innehåller digitala resurser baserat på skapandedatum eller senaste ändringsdatum.
 
 * Skapa en katalog med mappar som troligtvis inte ändras så att anpassningar och automatisering fortsätter att fungera. De tilldelade bearbetningsprofilerna fortsätter till exempel att fungera.
 * Om en resurs redan har publicerats använder du [!DNL Experience Manager] om du vill flytta resursen till en annan mapp och publicera på nytt från den nya platsen är den ursprungliga publicerade resursplatsen fortfarande tillgänglig, tillsammans med den nyligen publicerade resursen. Den ursprungliga publicerade resursen är dock *vilse* till [!DNL Experience Manager] och kan inte avpubliceras. Därför bör du först avpublicera en resurs och sedan flytta den till en annan mapp.
 
-## Ordna resurser med taggar {#use-tags-to-organize-assets}
+## Ordna resurser med hjälp av taggar {#use-tags-to-organize-assets}
 
 Med taggar, som metadata, kan du enkelt söka efter resurser, skapa samlingar med hjälp av sökresultaten, öka rankningen för vissa resurser och använda artificiella intelligensalgoritmer i Adobe Sensei för tillgångsidentifiering.
 
@@ -75,7 +75,7 @@ Genom att standardisera metadataanvändning, filnamngivning och mappstruktur sä
 
 >[!MORELIKETHIS]
 >
->* [Profiler för att bearbeta metadata, bilder och videoklipp](processing-profiles.md).
+>* [Profiler för att bearbeta metadata, bilder och videor](processing-profiles.md).
 >* [Metadataprofiler](/help/assets/metadata-config.md#metadata-profiles).
 >* [Videoprofiler](video-profiles.md).
 >* [Dynamic Media bildprofiler](image-profiles.md).

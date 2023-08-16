@@ -9,9 +9,9 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 discoiquuid: ef568577-c74e-4fc2-b66e-eedac2948310
 exl-id: 44591900-b01b-4a33-9910-839564477e7d
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '1193'
+source-wordcount: '1191'
 ht-degree: 2%
 
 ---
@@ -95,7 +95,7 @@ Blanksteg kan innehålla mappar för att ytterligare ordna utrymmets innehåll o
 
    ![chlimage_1-88](assets/chlimage_1-88.png)
 
-1. Klicka **Skapa** skapa en mapp i ett space
+1. Klicka **Skapa** för att skapa mappen i ett space
 
 ## Språkkopia {#language-copy}
 
@@ -103,7 +103,7 @@ Blanksteg kan innehålla mappar för att ytterligare ordna utrymmets innehåll o
 >
 >Språkkopian fungerar inte fullt ut i den här versionen. Den ställer bara in strukturen.
 
-The **Språkkopia** kan författare kopiera sin överordnad språkkopia och sedan skapa ett projekt och arbetsflöde för att automatiskt översätta innehållet. Med Language Copy skapas rätt struktur. När du har lagt till en mapp på ett space kan du lägga till språkkopia på ditt space.
+The **Språkkopia** kan författare kopiera sin huvudspråkkopia och sedan skapa ett projekt och arbetsflöde för att automatiskt översätta innehållet. Med Language Copy skapas rätt struktur. När du har lagt till en mapp på ett space kan du lägga till språkkopia på ditt space.
 
 >[!NOTE]
 >
@@ -148,9 +148,9 @@ The **Språkkopia** kan författare kopiera sin överordnad språkkopia och seda
 
 Enheter representerar innehåll som visas via webbtjänstens slutpunkt. Enheterna lagras i utrymmen så att de enkelt kan hittas och lagras oberoende av den AEM databasstruktur som innehåller deras relaterade innehåll.
 
-Du kanske vill gruppera enheter tillsammans i en logisk samling. Det gör du genom att skapa valfritt antal mappar.
+Du kanske vill gruppera enheter tillsammans i en logisk samling. Du kan skapa valfritt antal mappar.
 
-Om underordnade entiteter, som är andra entiteter, samlas in för datamodellering, kan utvecklaranvändaren skapa specifika gruppmodeller från modelltypen för enhetsgrupp, som finns i kartongen.
+Om underordnade entiteter, som är andra entiteter, samlas in för datamodellering, kan utvecklaranvändaren skapa specifika gruppmodeller från modelltypen&quot;Enhetsgrupp&quot;, som finns i kartongen.
 
 >[!NOTE]
 >
@@ -174,7 +174,7 @@ Om underordnade entiteter, som är andra entiteter, samlas in för datamodelleri
    >
    >Se [Skapa en modell](/help/mobile/administer-mobile-apps.md), för att skapa en egen enhet.
 
-1. Ange **Titel**, **Namn**, **Beskrivning** och **Taggar** för företaget. Klicka **Skapa**.
+1. Ange en **Titel**, **Namn**, **Beskrivning** och **Taggar** för företaget. Klicka **Skapa**.
 
    ![chlimage_1-94](assets/chlimage_1-94.png)
 
@@ -224,7 +224,7 @@ Om underordnade entiteter, som är andra entiteter, samlas in för datamodelleri
 
    ![chlimage_1-102](assets/chlimage_1-102.png)
 
-   Du kan redigera titeln, beskrivningen, taggarna och lägga till resurserna i enheten.
+   Du kan redigera titeln, beskrivningen, taggarna och lägga till resurserna i din enhet.
 
    ![chlimage_1-103](assets/chlimage_1-103.png)
 

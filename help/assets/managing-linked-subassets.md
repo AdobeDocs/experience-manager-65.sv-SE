@@ -5,9 +5,9 @@ contentOwner: AG
 role: User, Admin
 feature: Asset Management
 exl-id: 1ea9d8fe-602c-452b-9a24-4125b705aedf
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '1353'
+source-wordcount: '1351'
 ht-degree: 0%
 
 ---
@@ -31,7 +31,7 @@ Du kan referera till befintliga digitala resurser inifrån en [!DNL Adobe Illust
 
 1. Spara [!DNL Illustrator] till den monterade enheten, eller [ladda upp](/help/assets/manage-assets.md#uploading-assets) till [!DNL Experience Manager] databas.
 
-1. När arbetsflödet är klart går du till sidan med resursinformation för resursen. Referenserna till befintliga digitala resurser listas under **[!UICONTROL Dependencies]** i **[!UICONTROL References]** kolumn.
+1. När arbetsflödet är klart går du till sidan med tillgångsinformation för resursen. Referenserna till befintliga digitala resurser listas under **[!UICONTROL Dependencies]** i **[!UICONTROL References]** kolumn.
 
    ![chlimage_1-84](assets/chlimage_1-258.png)
 
@@ -43,7 +43,7 @@ Du kan referera till befintliga digitala resurser inifrån en [!DNL Adobe Illust
 
    ![visa referenserna för Experience Manager Assets i kolumnen Referenser i tillgångsinformationen](assets/asset-references.png)
 
-   *Bild: Resursreferenser i tillgångsinformation.*
+   *Bild: Resursreferenser i resursinformation.*
 
 ## [!DNL Adobe InDesign]: Lägg till digitala resurser som referenser {#add-aem-assets-as-references-in-adobe-indesign}
 
@@ -71,7 +71,7 @@ Den här proceduren liknar [lägga till digitala resurser som referenser i Adobe
 
 ## [!DNL Adobe Photoshop]: Lägg till digitala resurser som referenser {#refps}
 
-1. Använd [!DNL Experience Manager] datorprogram som du kommer åt [!DNL Experience Manager Assets]. Hämta och visa resurserna i det lokala filsystemet. Använd [!UICONTROL Place Linked] funktionalitet i [!DNL Adobe Photoshop]. Se [placera resurser i skrivbordsappen](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html#place-assets-in-native-documents).
+1. Använd [!DNL Experience Manager] datorprogram som du kommer åt [!DNL Experience Manager Assets]. Hämta och visa resurserna i det lokala filsystemet. Använd [!UICONTROL Place Linked] funktionalitet i [!DNL Adobe Photoshop]. Se [placera resurser i datorprogrammet](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html#place-assets-in-native-documents).
 
 1. Spara som [!DNL Photoshop] till den monterade enheten eller [ladda upp](/help/assets/manage-assets.md#uploading-assets) till [!DNL Experience Manager] databas.
 1. När arbetsflödet är klart refererar referenserna till befintliga [!DNL Experience Manager] resurser visas på sidan med tillgångsinformation.
@@ -91,16 +91,16 @@ För resurser som stöds i flersidiga format - PDF-filer, AI-filer, [!DNL Micros
 Generering av delresurser är inaktiverat som standard. Så här aktiverar du generering av delresurser:
 
 1. Logga in [!DNL Experience Manager] som administratör. Öppna **[!UICONTROL Tools]** > **[!UICONTROL Workflow]** > **[!UICONTROL Models]**.
-1. Välj **[!UICONTROL DAM Update Asset]** arbetsflöde och klicka **[!UICONTROL Edit]**.
+1. Välj **[!UICONTROL DAM Update Asset]** och klicka **[!UICONTROL Edit]**.
 1. Klicka **[!UICONTROL Toggle Side Panel]** och hitta **[!UICONTROL Create Sub Asset]** steg. Lägg till steget i arbetsflödet. Klicka på **[!UICONTROL Sync]**.
 
 Gör något av följande om du vill generera delresurserna:
 
-* Nya resurser: The [!UICONTROL DAM Update Assets] arbetsflödet körs på alla nya resurser som överförs till [!DNL Experience Manager]. Delresurser genereras automatiskt för nya flersidiga resurser.
-* Befintliga flersidiga resurser: Kör [!UICONTROL DAM Update Assets] arbetsflöde som följer något av stegen:
+* Nya resurser: [!UICONTROL DAM Update Assets] arbetsflödet körs på alla nya resurser som överförs till [!DNL Experience Manager]. Delresurser genereras automatiskt för nya flersidiga resurser.
+* Befintliga flersidiga resurser: Kör manuellt [!UICONTROL DAM Update Assets] arbetsflöde som följer något av stegen:
 
    * Markera en resurs och klicka på [!UICONTROL Timeline] för att öppna den vänstra panelen. Du kan även använda kortkommandot `alt + 3`. Klicka [!UICONTROL Start Workflow], markera [!UICONTROL DAM Update Asset], klicka [!UICONTROL Start]och klicka [!UICONTROL Proceed].
-   * Markera en resurs och klicka på [!UICONTROL Create] > [!UICONTROL Workflow] i verktygsfältet. I popup-dialogrutan väljer du [!UICONTROL DAM Update Asset] arbetsflöde, klicka [!UICONTROL Start]och klicka [!UICONTROL Proceed].
+   * Markera en resurs och klicka på [!UICONTROL Create] > [!UICONTROL Workflow] i verktygsfältet. Välj i popup-dialogrutan [!UICONTROL DAM Update Asset] arbetsflöde, klicka [!UICONTROL Start]och klicka [!UICONTROL Proceed].
 
 För Microsoft Word-dokument gäller följande: **[!UICONTROL DAM Parse Word Documents]** arbetsflöde. Det genererar en `cq:Page` från innehållet i Microsoft Word-dokumentet. De bilder som extraheras från dokumentet refereras från `cq:Page` -komponenten. Dessa bilder extraheras även om underresursgenerering är inaktiverad.
 
@@ -122,13 +122,13 @@ Du kan visa en flersidig fil, t.ex. PDF, INDD, PPT, PPTX och AI, med hjälp av s
 
 För [!DNL InDesign]kan du extrahera sidor med [!DNL InDesign Server]. Om förhandsgranskningar av sidor sparas under [!DNL InDesign] skapar sedan [!DNL InDesign Server] krävs inte för sidextrahering.
 
-Följande alternativ är tillgängliga i verktygsfältet, i den vänstra listen och i kontrollerna i sidvisningsprogrammet:
+Följande alternativ är tillgängliga i verktygsfältet, i den vänstra listen och i kontrollerna i Page Viewer:
 
 * **[!UICONTROL Desktop Actions]** för att öppna eller visa en viss underresurs med [!DNL Experience Manager] datorprogram. Se hur man [konfigurera skrivbordsåtgärder](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html#desktopactions-v2) om du använder [!DNL Experience Manager] datorprogram.
 
 * **[!UICONTROL Properties]** öppnar [!UICONTROL Properties] sidan för den specifika underresursen.
 
-* **[!UICONTROL Annotate]** kan du göra anteckningar i den specifika underresursen. De anteckningar du använder på separata underresurser samlas in och visas tillsammans när den överordnade resursen öppnas för visning.
+* **[!UICONTROL Annotate]** gör att du kan anteckna den specifika underresursen. De anteckningar du använder på separata underresurser samlas in och visas tillsammans när den överordnade resursen öppnas för visning.
 
 * **[!UICONTROL Page Overview]** visar alla delresurser samtidigt.
 

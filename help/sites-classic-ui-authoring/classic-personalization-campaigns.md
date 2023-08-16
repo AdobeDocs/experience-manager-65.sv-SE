@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: personalization
 content-type: reference
 exl-id: d1741525-a475-4a76-bd16-55318023495e
-source-git-commit: ae08247c7be0824151637d744f17665c3bd82f2d
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '623'
+source-wordcount: '621'
 ht-degree: 0%
 
 ---
@@ -47,13 +47,13 @@ Det fokuserade innehållet utgör de olika upplevelserna, som presenteras för b
      Teaser pages can:
 
       * har en rad alternativ som besökaren kan välja mellan
-      * visar endast ett steg som baseras på det specifika besökarsegmentet. Det streckade stycket kan till exempel vara beroende av besökarens ålder.
+      * visar endast ett steg som baseras på det specifika besökarsegmentet. Det streckade stycket kan t.ex. vara beroende av besökarens ålder.
 
      Vanligtvis är en&quot;teaser&quot;-sida en tillfällig åtgärd som varar en viss tidsperiod tills den ersätts av nästa&quot;teaser&quot;-sida.
 
    * **Nyhetsbrev**
 
-     [E-postkommunikation](#emailmarketing) används för att engagera användare och uppmuntra dem att besöka din webbplats. Dessa kan oftast fås i form av ett nyhetsbrev som skickas till **Leads** (som grupperas i **Listor**). **Obs!** Adobe planerar inte att ytterligare förbättra denna kapacitet. Rekommendationen är att [använda Adobe Campaign och integrationen för att AEM](/help/sites-administering/campaign.md).
+     [E-postkommunikation](#emailmarketing) används för att engagera användare och uppmuntra dem att besöka din webbplats. Dessa kan oftast fås som ett nyhetsbrev som skickas till **Leads** (som grupperas i **Listor**). **Obs!** Adobe planerar inte att ytterligare förbättra denna kapacitet. Rekommendationen är [använda Adobe Campaign och integrationen för att AEM](/help/sites-administering/campaign.md).
 
    * **Adobe Target**
 
@@ -69,13 +69,13 @@ Det fokuserade innehållet utgör de olika upplevelserna, som presenteras för b
 
   Den information som ni har samlat in om era besökare och hur ni kontaktar dem utgör grunden för era leads. **Obs!** Adobe planerar inte att ytterligare förbättra denna kapacitet.
 
-  Rekommendationen är att [använda Adobe Campaign och integrationen för att AEM](/help/sites-administering/campaign.md).
+  Rekommendationen är [använda Adobe Campaign och integrationen för att AEM](/help/sites-administering/campaign.md).
 
 * **Listor**
 
   Leads grupperas i listor så att du kan vidta kollektiva åtgärder för dem. Obs! **Obs!** Adobe planerar inte att ytterligare förbättra denna kapacitet.
 
-  Rekommendationen är att [använder Adobe Campaign och integreringen för att AEM.](/help/sites-administering/campaign.md)
+  Rekommendationen är [använder Adobe Campaign och integreringen för att AEM.](/help/sites-administering/campaign.md)
 
 * **Segment**
 

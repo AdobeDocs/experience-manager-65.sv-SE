@@ -10,9 +10,9 @@ topic-tags: projects
 content-type: reference
 discoiquuid: 9d2bf30c-5190-4924-82cd-bcdfde24eb39
 exl-id: 407fc164-291d-42f6-8c46-c1df9ba3d454
-source-git-commit: 200b47070b7ead54ee54eea504bd960d4e0731d9
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '798'
+source-wordcount: '797'
 ht-degree: 1%
 
 ---
@@ -26,12 +26,12 @@ De projektarbetsflöden som är tillgängliga från paketet innehåller följand
 * **Begär start** - Ett arbetsflöde som begär en start.
 * **Begär landningssida** - Det här arbetsflödet begär en landningssida.
 * **Begär e-post** - Arbetsflöde för att begära e-post.
-* **Fotofoto och fotografering av produkter (handel)** - Mappar resurser med produkter
+* **Fotofotografering och fotografering av produkter (handel)** - Mappar resurser med produkter
 * **DAM Skapa och översätt kopia och DAM Skapa språkkopia** - Skapar översatta binärfiler, metadata och taggar för resurser och mappar.
 
 Beroende på vilken projektmall du väljer finns det vissa arbetsflöden:
 
-|  | **Enkelt projekt** | **Medieprojekt** | **Fotoprojekt för produkt** | **Översättningsprojekt** |
+|   | **Enkelt projekt** | **Medieprojekt** | **Fotoprojekt för produkt** | **Översättningsprojekt** |
 |---|:-:|:-:|:-:|:-:|
 | Begär kopia |  | x |  |  |
 | Fotofotografering |  | x | x |  |
@@ -45,7 +45,7 @@ Beroende på vilken projektmall du väljer finns det vissa arbetsflöden:
 
 >[!NOTE]
 >
->&amp;ast; De här arbetsflödena har inte startats från **Arbetsflöde** i Projekt. Se [Skapa språkkopior för resurser.](/help/sites-administering/tc-manage.md)
+>&amp;ast; dessa arbetsflöden startas inte från **Arbetsflöde** sida vid sida i projekt. Se [Skapa språkkopior för resurser.](/help/sites-administering/tc-manage.md)
 
 Stegen för att starta och slutföra arbetsflöden är desamma oavsett vilket arbetsflöde du väljer. Bara stegen ändras.
 
@@ -63,9 +63,9 @@ I det här avsnittet beskrivs de arbetsflöden som är tillgängliga för projek
 
 Med det här arbetsflödet kan du begära ett manuskript från en användare och sedan godkänna det. Så här startar du arbetsflödet för begärandekopia:
 
-1. I ett medieprojekt trycker eller klickar du på nedåtpilen längst upp till höger på **Arbetsflöden** platta och markera **Starta arbetsflöde**.
+1. I ett medieprojekt trycker eller klickar du på nedåtpilen längst upp till höger på **Arbetsflöden** sida vid sida och markera **Starta arbetsflöde**.
 1. Välj **Begär kopia** och klicka **Nästa**.
-1. Ange en titel och en kort sammanfattning av vad du begär. Ange ett målordsantal, uppgiftsprioritet och ett förfallodatum om tillämpligt.
+1. Ange ett manuskriptnamn och en kort sammanfattning av vad du begär. Ange ett målordsantal, uppgiftsprioritet och ett förfallodatum om tillämpligt.
 
    ![Arbetsflödet Begär kopia](assets/project-request-copy-workflow.png)
 
@@ -81,9 +81,9 @@ The **Fotofotografering** arbetsflöden (både handel och utan handel) beskrivs 
 
 I **Projektgodkännande** arbetsflöde kan du tilldela innehåll till en användare, granska och sedan godkänna innehållet.
 
-1. I ett enkelt projekt: tryck eller klicka på nedåtpilen längst upp till höger i **Arbetsflöden** platta och markera **Starta arbetsflöde**.
+1. I ett enkelt projekt: tryck eller klicka på nedåtpilen längst upp till höger i **Arbetsflöden** sida vid sida och markera **Starta arbetsflöde**.
 1. Välj **Arbetsflöde för projektgodkännande** och klicka **Nästa**.
-1. Ange en titel och välj vem den ska tilldelas till. Ange en beskrivning, innehållssökväg, uppgiftsprioritet och ett förfallodatum om tillämpligt.
+1. Ange en titel och välj vem du vill tilldela den till. Ange en beskrivning, innehållssökväg, uppgiftsprioritet och ett förfallodatum om tillämpligt.
 
    ![Arbetsflöde för projektgodkännande](assets/project-approval-workflow.png)
 
@@ -93,9 +93,9 @@ Arbetsflödet startar. Uppgiften visas på **Uppgifter** kort.
 
 ## Begär startarbetsflöde {#request-launch-workflow}
 
-Med det här arbetsflödet kan du begära att programmet startas.
+Med det här arbetsflödet kan du begära en start.
 
-1. I ett enkelt projekt: tryck eller klicka på nedåtpilen längst upp till höger i **Arbetsflöden** platta och markera **Starta arbetsflöde**.
+1. I ett enkelt projekt: tryck eller klicka på nedåtpilen längst upp till höger i **Arbetsflöden** sida vid sida och markera **Starta arbetsflöde**.
 1. Välj **Begär startarbetsflöde** och klicka **Nästa**.
 1. Ange en rubrik för startprogrammet och ange startkällans sökväg. Du kan också lägga till en beskrivning och ett live-datum, om du vill. Välj Ärv källsidans livedata eller exkludera undersidor beroende på hur du vill att startsidan ska fungera.
 
@@ -109,7 +109,7 @@ Arbetsflödet startar. Arbetsflödet visas i **Arbetsflöden** lista.
 
 Med det här arbetsflödet kan du begära en landningssida.
 
-1. I ett enkelt projekt: tryck eller klicka på nedåtpilen längst upp till höger i **Arbetsflöden** platta och markera **Starta arbetsflöde**.
+1. I ett enkelt projekt: tryck eller klicka på nedåtpilen längst upp till höger i **Arbetsflöden** sida vid sida och markera **Starta arbetsflöde**.
 1. Välj **Begär landningssida** och klicka **Nästa**.
 1. Ange en rubrik för landningssidan och den överordnade sökvägen. Ange eventuellt ett live-datum eller välj en fil för landningssidan.
 
@@ -123,7 +123,7 @@ Arbetsflödet startar. Uppgiften visas på **Uppgifter** kort.
 
 Med det här arbetsflödet kan du begära ett e-postmeddelande. Det är samma arbetsflöde som visas i **E-post** platta.
 
-1. I ett enkelt projekt: tryck eller klicka på nedåtpilen längst upp till höger i **Arbetsflöden** platta och markera **Starta arbetsflöde**.
+1. I ett enkelt projekt: tryck eller klicka på nedåtpilen längst upp till höger i **Arbetsflöden** sida vid sida och markera **Starta arbetsflöde**.
 1. Välj **Begär e-post** och klicka **Nästa**.
 1. Ange en e-posttitel samt kampanj- och mallsökvägar. Dessutom kan du ange namn, beskrivning och live-datum.
 

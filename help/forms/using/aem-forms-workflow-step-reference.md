@@ -1,17 +1,13 @@
 ---
 title: Forms-centrerat arbetsflöde i OSGi - stegreferens
-seo-title: Forms-centric workflow on OSGi - Step Reference
 description: Med ett Forms-baserat arbetsflöde i OSGi-steg kan du snabbt skapa anpassningsbara formulärbaserade arbetsflöden.
-seo-description: Forms-centric workflow on OSGi steps allow you rapidly build adaptive forms based workflows.
-uuid: 6f791c45-0e35-4c55-9106-5340caab94b7
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: publish
-discoiquuid: f0a5588d-f210-4f04-bc35-b62834f90ab1
 docset: aem65
 exl-id: 470fcfda-dfde-437c-b539-d5af1e13a7d6
-source-git-commit: 5ca6c5abeb5ed09d8929d1986aa24c1416e0cc06
+source-git-commit: 10227bcfcfd5a9b0f126fee74dce6ec7842f5e95
 workflow-type: tm+mt
-source-wordcount: '7471'
+source-wordcount: '7466'
 ht-degree: 0%
 
 ---
@@ -29,7 +25,7 @@ Du använder arbetsflödesmodeller för att konvertera en affärslogik till en a
 
 Forms arbetsflödessteg utför AEM Forms-specifika åtgärder i ett AEM arbetsflöde. Med dessa steg kan du snabbt skapa anpassningsbara formulärbaserade Forms-baserade arbetsflöden i OSGi. Dessa arbetsflöden kan användas för att utveckla enkla arbetsflöden för granskning och godkännande, interna och övergripande affärsprocesser. Du kan också använda steg för Forms Workflow för att starta dokumenttjänster, integrera med Adobe Sign signaturarbetsflöde och utföra andra AEM Forms-åtgärder. Du behöver [AEM Forms-tillägg](https://www.adobe.com/go/learn_aemforms_documentation_63) om du vill använda de här stegen i ett arbetsflöde.
 
-Forms-baserade arbetsflödessteg utför AEM Forms-specifika åtgärder i ett AEM arbetsflöde. Med dessa steg kan du snabbt skapa ett adaptivt Forms-baserat Forms-baserat arbetsflöde i OSGi. Dessa arbetsflöden kan användas för att utveckla enkla arbetsflöden för granskning och godkännande, interna och övergripande affärsprocesser.
+Forms-centrerade arbetsflödessteg utför AEM Forms-specifika åtgärder i ett AEM arbetsflöde. Med de här stegen kan du snabbt skapa anpassningsbara Forms-baserade Forms-baserade arbetsflöden i OSGi. Dessa arbetsflöden kan användas för att utveckla enkla arbetsflöden för granskning och godkännande, interna och övergripande affärsprocesser.
 
 >[!NOTE]
 >
@@ -44,9 +40,9 @@ Du kan också använda komponenten för att styra aktivitetens beteende. Du kan 
 * **Titel:** Uppgiftens namn. Titeln visas AEM Inkorgen.
 * **Beskrivning:** Förklaring av de åtgärder som utförs i uppgiften. Den här informationen är användbar för andra processutvecklare när du arbetar i en delad utvecklingsmiljö.
 
-* **Miniatyrbildssökväg:** Sökväg till aktivitetsminiatyrbilden. Om ingen sökväg anges visas en standardminiatyrbild för ett anpassat formulär och en standardikon för Postdokument.
-* **Arbetsflödesfas:** Ett arbetsflöde kan ha flera steg. Dessa steg visas i AEM Inkorg. Du kan definiera de här stegen i modellens egenskaper (Sidspark > Sida > Sidegenskaper > Steg).
-* **Prioritet:** Den valda prioriteten visas i AEM. De tillgängliga alternativen är Hög, Medel och Låg. Standardvärdet är Medel.
+* **Miniatyrbildssökväg:** Sökväg till aktivitetsminiatyrbilden. Om ingen sökväg anges visas en standardminiatyrbild för ett anpassat formulär och en standardikon visas för Dokument för post.
+* **Arbetsflödesfas:** Ett arbetsflöde kan ha flera steg. Dessa steg visas i AEM Inkorg. Du kan definiera dessa steg i modellens egenskaper (Sidekick > Sida > Sidegenskaper > Steg).
+* **Prioritet:** Den valda prioriteten visas i AEM Inkorg. De tillgängliga alternativen är Hög, Medel och Låg. Standardvärdet är Medel.
 * **Förfallodatum:** Ange antalet dagar eller timmar efter vilka aktiviteten har markerats som försenad. Om du väljer **Av**, markeras uppgiften aldrig som försenad. Du kan också ange en uttidshanterare för att utföra vissa åtgärder när åtgärden är försenad.
 
 * **Dagar:** Antalet dagar innan uppgiften ska slutföras. Antalet dagar räknas efter att uppgiften har tilldelats en användare. Om en uppgift inte är fullständig och korsar det antal dagar som anges i fältet Dagar, aktiveras en timeout-hanterare efter förfallodatumet, om detta väljs.
@@ -64,9 +60,9 @@ Du kan också använda komponenten för att styra aktivitetens beteende. Du kan 
 >
 >Du måste ha grupptilldelningar för cm-agent-users och arbetsflödesanvändare för att få åtkomst till gränssnittet för Interactive Communications Agent i AEM.
 
-* **Adaptiv form eller interaktiv kommunikationsväg**: Ange sökvägen till det adaptiva formuläret eller interaktiv kommunikation. Du kan använda det adaptiva formuläret eller den interaktiva kommunikationen som skickas till arbetsflödet, som finns på en absolut sökväg, eller hämta det adaptiva formuläret från en sökväg som lagras i en variabel av strängdatatyp.
-* **Markera indata PDF med:** Ange sökvägen till ett icke-interaktivt PDF-dokument. Fältet är tillgängligt när du väljer ett icke-interaktivt PDF-dokument i textfältet. Du kan markera indata PDF med den sökväg som är relativ till nyttolasten, som har sparats med en absolut sökväg eller med en variabel av datatypen Document. Till exempel: [Payload_Directory]/Workflow/PDF/credit-card.pdf. Sökvägen finns inte i crx-databasen. En administratör skapar sökvägen innan den används. Du måste aktivera alternativet Dokument för post eller formulärmallsbaserade anpassade formulär för att kunna använda alternativet PDF-sökväg.
-* **Rendera det anpassade formuläret som**: När en åtgärd har markerats som slutförd kan du återge det anpassningsbara formuläret som ett skrivskyddat anpassat formulär eller som ett PDF-dokument. Du måste ha alternativet Dokument i post aktiverat eller formulärmallsbaserade adaptiva formulär för att kunna återge det adaptiva formuläret som Dokument i post.
+* **Adaptiv form eller interaktiv kommunikationsväg**: Ange sökvägen till det adaptiva formuläret eller interaktiva kommunikationen. Du kan använda det adaptiva formuläret eller den interaktiva kommunikationen som skickas till arbetsflödet, som finns på en absolut sökväg, eller hämta det adaptiva formuläret från en sökväg som lagras i en variabel av strängdatatyp.
+* **Markera indata-PDF med:** Ange sökvägen till ett icke-interaktivt PDF-dokument. Fältet är tillgängligt när du väljer ett icke-interaktivt PDF-dokument i textfältet. Du kan markera indata PDF med den sökväg som är relativ till nyttolasten, som har sparats med en absolut sökväg eller med en variabel av dokumentdatatypen. Till exempel: [Payload_Directory]/Workflow/PDF/credit-card.pdf. Sökvägen finns inte i crx-databasen. En administratör skapar sökvägen innan den används. Du måste aktivera alternativet Dokument för post eller formulärmallsbaserade anpassade formulär för att kunna använda alternativet PDF-sökväg.
+* **Rendera det anpassade formuläret som**: När en åtgärd har markerats som slutförd kan du återge det adaptiva formuläret som ett skrivskyddat anpassat formulär eller som ett PDF-dokument. Du måste ha alternativet Dokument i post aktiverat eller formulärmallsbaserade adaptiva formulär för att kunna återge det adaptiva formuläret som Dokument i post.
 * **Förifylld:** Följande fält i listan nedan fungerar som indata för uppgiften:
 
    * **[!UICONTROL Select input data file using]**: Sökväg till indatafil (.json, .xml, .doc eller formulärdatamodell). Du kan hämta indatafilen med en sökväg som är relativ till nyttolasten eller hämta filen som lagras i en variabel av datatypen Document, XML eller JSON. Filen innehåller till exempel de data som har skickats för formuläret via ett AEM Inkorgsprogram. En exempelsökväg är [Payload_Directory]/workflow/data.
@@ -96,17 +92,17 @@ Du kan också använda komponenten för att styra aktivitetens beteende. Du kan 
 
 * **Uppdragare:** Fältet är tillgängligt när **[!UICONTROL com.adobe.fd.workspace.step.service.VariableParticipantChooser]** är markerat i **Väljare för deltagare** fält. I fältet kan du välja en variabel av datatypen String för att definiera den som tilldelas.
 
-* **Argument:** Fältet är tillgängligt när ett annat skript än skriptet RandomParticipantChoose har valts i fältet för deltagarväljare. I fältet kan du ange en lista med kommaavgränsade argument för det skript som valts i fältet Deltagare.
+* **Argument:** Fältet är tillgängligt när ett annat skript än skriptet RandomParticipantChoose har valts i fältet för deltagarväljare. I fältet kan du ange en lista med kommaseparerade argument för det skript som valts i fältet Deltagare.
 
 * **Användare eller grupp:** Uppgiften tilldelas den valda användaren eller gruppen. Alternativet är tillgängligt när **Till en viss användare eller grupp** är markerat i **Tilldelningsalternativ** fält. I fältet visas alla användare och grupper i gruppen för arbetsflödesanvändare.\
   The **Användare eller grupp** listar de användare och grupper som den inloggade användaren har åtkomst till. Hur användarnamn visas beror på om du har åtkomstbehörighet för **användare** nod i crx-database för just den användaren.
 
 * **[!UICONTROL Send Notification Email]**: Välj det här alternativet om du vill skicka e-postmeddelanden till den tilldelade personen. Dessa meddelanden skickas när en uppgift tilldelas en användare eller grupp. Du kan använda **[!UICONTROL Recipient Email Address]** om du vill ange vilken mekanism som ska användas för att hämta e-postadressen.
 
-* **[!UICONTROL Recipient Email Address]**: Du kan lagra e-postadresser i en variabel, använda en litteral för att ange en permanent e-postadress eller använda den tilldelade personens standardadress som anges i den tilldelade personens profil. Du kan använda literalen eller en variabel för att ange en grupps e-postadress. Variabelalternativet är användbart när du dynamiskt vill hämta och använda en e-postadress. The **[!UICONTROL Use default email address of the assignee]** är bara för en tilldelad. I det här fallet används den e-postadress som lagras i användarprofilen för tilldelningar.
+* **[!UICONTROL Recipient Email Address]**: Du kan lagra e-postadresser i en variabel, använda en litteral för att ange en permanent e-postadress eller använda den e-postadress som är standard för den som tilldelades i profilen för den som tilldelades. Du kan använda literalen eller en variabel för att ange en grupps e-postadress. Variabelalternativet är användbart när du dynamiskt vill hämta och använda en e-postadress. The **[!UICONTROL Use default email address of the assignee]** är bara för en tilldelad. I det här fallet används den e-postadress som lagras i användarprofilen för tilldelningar.
 
 * **HTML e-postmall**: Välj e-postmall för e-postmeddelandet. Om du vill redigera en mall ändrar du filen på /libs/fd/dashboard/templates/email/htmlEmailTemplate.txt i crx-databasen.
-* **Tillåt delegering till:** I AEM Inkorg finns ett alternativ för den inloggade användaren att delegera det tilldelade arbetsflödet till en annan användare. Du får delegera inom samma grupp eller till arbetsflödesanvändaren i en annan grupp. Om uppgiften har tilldelats en enskild användare och **tillåt delegering till medlemmar i den grupp som tilldelats uppdraget** om du väljer det här alternativet går det inte att delegera uppgiften till en annan användare eller grupp.
+* **Tillåt delegering till:** I AEM Inkorg kan den inloggade användaren delegera det tilldelade arbetsflödet till en annan användare. Du får delegera inom samma grupp eller till arbetsflödesanvändaren i en annan grupp. Om uppgiften har tilldelats en enskild användare och **tillåt delegering till medlemmar i den grupp som tilldelats uppdraget** om du väljer det här alternativet går det inte att delegera uppgiften till en annan användare eller grupp.
 * **Delningsinställningar:** AEM Inkorg innehåller alternativ för att dela en enskild eller alla uppgifter i inkorgen med andra användare:
    * När **Tillåt att tilldelad delar explicit i inkorgen** om du väljer det här alternativet kan användaren klicka på uppgiften och dela den med en annan AEM.
    * När **Tillåt att den som ska tilldelas delar via inkorg** är valt och en användare delar sina inkorgsobjekt eller tillåter andra användare att komma åt sina inkorgsobjekt. Endast uppgifter med det tidigare alternativet aktiverat delas med andra användare.
@@ -117,11 +113,11 @@ Du kan också använda komponenten för att styra aktivitetens beteende. Du kan 
 
 * **Titel**: Ange ruttens titel. Den visas i AEM Inkorg.
 * **Korallikon**: Ange HTML-attribut för en korallikon. Adobe CorelUI-biblioteket innehåller en mängd ikoner som sätter pekskärpan först. Du kan välja och använda en ikon för rutten. Den visas tillsammans med titeln i AEM Inbox. Om du lagrar rutterna i en variabel använder rutterna en taggikon.
-* **Tillåt att den som tilldelats lägger till kommentarer**: Välj det här alternativet om du vill aktivera kommentarer för uppgiften. En tilldelad kan lägga till kommentarer från AEM Inkorg när uppgiften skickas.
-* **Spara kommentar i variabel:** Spara kommentaren i en variabel av datatypen String. Det här alternativet visas bara om du väljer **Tillåt att den som tilldelats lägger till kommentarer** kryssrutan.
+* **Tillåt att den som tilldelats kan lägga till kommentarer**: Välj det här alternativet om du vill aktivera kommentarer för uppgiften. En tilldelad kan lägga till kommentarer från AEM Inkorg när uppgiften skickas.
+* **Spara kommentar i variabel:** Spara kommentaren i en variabel av datatypen String. Det här alternativet visas bara om du väljer **Tillåt att den som tilldelats kan lägga till kommentarer** kryssrutan.
 
 * **Tillåt att den som tilldelas kan lägga till bifogade filer i uppgiften**: Välj det här alternativet om du vill aktivera bilagor för uppgiften. En tilldelad kan lägga till de bifogade filerna inifrån AEM Inkorg när uppgiften skickas.
-* **Spara bifogade utdatauppgifter med**: Ange platsen för den bifogade mappen. Du kan spara bilagor för utdatauppgifter med en sökväg som är relativ till nyttolasten eller med en variabel av dokumentdatatypen. Det här alternativet visas bara om du väljer **Tillåt att den som tilldelas kan lägga till bifogade filer i uppgiften** kryssruta och markera **Adaptiv form**, **Skrivskyddat anpassningsbart formulär**, eller **Icke-interaktivt PDF-dokument** från **Typ** nedrullningsbar lista i **Formulär/dokument** -fliken.
+* **Spara bifogade utdatauppgifter med**: Ange platsen för bilagemappen. Du kan spara bilagor för utdatauppgifter med en sökväg som är relativ till nyttolasten eller med en variabel av dokumentdatatypen. Det här alternativet visas bara om du väljer **Tillåt att den som tilldelas kan lägga till bifogade filer i uppgiften** kryssruta och markera **Adaptiv form**, **Skrivskyddat anpassningsbart formulär**, eller **Icke-interaktivt PDF-dokument** från **Typ** nedrullningsbar lista i **Formulär/dokument** -fliken.
 
 >[!NOTE]
 >
@@ -141,7 +137,7 @@ Du kan också använda komponenten för att styra aktivitetens beteende. Du kan 
 
 Använd e-poststeget för att skicka ett e-postmeddelande, till exempel ett e-postmeddelande med ett arkivdokument, en länk till ett anpassningsbart formulär, en länk till en interaktiv kommunikation eller med ett bifogat PDF-dokument. Skicka e-poststeg som stöds [HTML email](https://en.wikipedia.org/wiki/HTML_email). HTML e-postmeddelanden är responsiva och anpassar sig efter mottagarnas e-postklient och skärmstorlek. Du kan använda en HTML-e-postmall för att definiera utseendet, färgschemat och beteendet för e-postmeddelandet.
 
-I e-poststeget används Day CQ Mail Service för att skicka e-post. Innan du använder e-poststeget kontrollerar du att [e-posttjänst](../../forms/using/aem-forms-workflow.md) är konfigurerad. E-poststeget har följande egenskaper:
+I e-poststeget används Day CQ Mail Service för att skicka e-postmeddelanden. Innan du använder e-poststeget kontrollerar du att [e-posttjänst](../../forms/using/aem-forms-workflow.md) är konfigurerad. E-poststeget har följande egenskaper:
 
 **Titel:** Stegen är en titel som hjälper dig att identifiera steget i arbetsflödesredigeraren.
 
@@ -165,7 +161,7 @@ I e-poststeget används Day CQ Mail Service för att skicka e-post. Innan du anv
 
 **Avsändarens/mottagarens e-postadress:** Välj **Literal** om du vill ange en e-postadress manuellt eller välja **Hämta från arbetsflödesmetadata** alternativ för att hämta e-postadressen från en metadataegenskap. Du kan också ange en lista med egenskapsmatriser för metadata för **Hämta från arbetsflödesmetadata** alternativ. Välj **Variabel** om du vill hämta e-postadressen från värdet som lagras i en variabel av strängdatatyp.
 
-**Bifogad fil:** Den tillgängliga resursen på den angivna platsen är kopplad till e-postmeddelandet. Resursens sökväg kan vara relativ till nyttolasten eller den absoluta sökvägen. En exempelsökväg är [Payload_Directory]/attachments/.
+**Bifogad fil:** Tillgången som är tillgänglig på den angivna platsen är kopplad till e-postmeddelandet. Resursens sökväg kan vara relativ till nyttolasten eller den absoluta sökvägen. En exempelsökväg är [Payload_Directory]/attachments/.
 
 Välj **Variabel** om du vill hämta den bifogade filen som lagras i en variabel av datatypen Document, XML eller JSON.
 
@@ -177,24 +173,24 @@ När ett formulär fylls i eller skickas kan du spara en post med formuläret, i
 
 Dokumentsteget har följande egenskaper:
 
-**Använd adaptiv form**: Ange den metod som ska användas för att hitta indataadaptiva formulär. Du kan använda det adaptiva formuläret som skickas till arbetsflödet, som finns på en absolut sökväg eller som finns på en sökväg i en variabel. Du kan använda en variabel av datatypen String för att ange sökvägen i **Välj variabel som ska matchas** fält.\
+**Använd adaptiv form**: Ange vilken metod som ska användas för att hitta indataadaptiv form. Du kan använda det adaptiva formuläret som skickas till arbetsflödet, som finns på en absolut sökväg eller som finns på en sökväg i en variabel. Du kan använda en variabel av datatypen String för att ange sökvägen i **Välj variabel som ska matchas** fält.\
 Du kan koppla flera adaptiva formulär till ett arbetsflöde. Det innebär att du kan ange ett anpassningsbart formulär i körningsmiljön med hjälp av de tillgängliga indatametoderna.
 
-**Anpassad formulärsökväg**: Ange sökvägen för det adaptiva formuläret. Fältet är tillgängligt när du väljer **Tillgängligt på en absolut sökväg** från **Använd adaptiv form** fält.
+**Adaptiv formulärsökväg**: Ange sökvägen till det adaptiva formuläret. Fältet är tillgängligt när du väljer **Tillgängligt på en absolut sökväg** från **Använd adaptiv form** fält.
 
 **Välj Indata med:** Sökväg till indata för det adaptiva formuläret. Du kan behålla data på en plats i förhållande till nyttolasten, ange en absolut sökväg till data eller hämta data som lagras i en variabel av datatypen Document, JSON eller XML. Indata sammanfogas med det adaptiva formuläret för att skapa ett postdokument.
 
-**Välj sökväg för indatabilaga med:** Sökväg till de bifogade filerna. De här bifogade filerna ingår i dokumentdokumentet. Du kan behålla de bifogade filerna på en plats i förhållande till nyttolasten, ange en absolut sökväg för de bifogade filerna eller hämta bifogade filer som lagras i en variabel av dokumentdatatypen.
+**Välj sökväg för bifogad inmatningsfil med:** Sökväg till de bifogade filerna. De här bifogade filerna ingår i dokumentdokumentet. Du kan behålla de bifogade filerna på en plats i förhållande till nyttolasten, ange en absolut sökväg för de bifogade filerna eller hämta bifogade filer som lagras i en variabel av dokumentdatatypen.
 
 Om du anger sökvägen till en mapp, till exempel bilagor, bifogas alla filer som är direkt tillgängliga i mappen till Dokument för post. Om det finns filer i de mappar som är direkt tillgängliga i den angivna sökvägen inkluderas filerna i Postdokument som bilagor. Om det finns mappar i direkt tillgängliga mappar hoppas de över.
 
 **Spara genererat postdokument med följande alternativ:** Ange platsen där ett dokument med en postfil ska sparas. Du kan välja att skriva över nyttolastmappen, placera postdokumentet på en plats i nyttolastkatalogen eller lagra postdokumentet i en variabel av dokumentdatatypen.
 
-**Språk**: Ange språk för postdokumentet. Välj **Literal** för att välja språkinställning i en nedrullningsbar lista eller välja **Variabel** för att hämta språkinställningen från värdet som lagras i en variabel av strängdatatyp. Du måste definiera språkkoden medan du lagrar värdet för språkinställningen i en variabel. Ange till exempel **en_US** för engelska och **fr_FR** för franska.
+**Språk**: Ange språk för postdokumentet. Välj **Literal** om du vill välja språkinställning i en nedrullningsbar lista eller välja **Variabel** för att hämta språkinställningen från värdet som lagras i en variabel av strängdatatyp. Du måste definiera språkkoden medan du lagrar värdet för språkinställningen i en variabel. Ange till exempel **sv_SE** för engelska och **fr_FR** för franska.
 
 ## Anropa tjänststeg för formulärdatamodell {#invoke-form-data-model-service-step}
 
-Du kan använda [AEM Forms dataintegrering](../../forms/using/data-integration.md) för att konfigurera och ansluta till olika datakällor. Dessa datakällor kan vara en databas-, webbtjänst-, REST-tjänst-, OData-tjänst- och CRM-lösning. Med AEM Forms dataintegrering kan du skapa en formulärdatamodell som omfattar olika tjänster för att utföra datahämtnings-, additions- och uppdateringsåtgärder för den konfigurerade databasen. Du kan använda **Anropa datamodelltjänststeget** för att välja en formulärdatamodell (FDM) och använda FDM-tjänsterna för att hämta, uppdatera eller lägga till data till olika datakällor.
+Du kan använda [AEM Forms dataintegrering](../../forms/using/data-integration.md) för att konfigurera och ansluta till olika datakällor. Dessa datakällor kan vara en databas-, webbtjänst-, REST-tjänst-, OData-tjänst- och CRM-lösning. Med AEM Forms dataintegrering kan du skapa en formulärdatamodell som omfattar olika tjänster som utför datahämtnings-, additions- och uppdateringsåtgärder för den konfigurerade databasen. Du kan använda **Anropa datamodelltjänststeget** för att välja en formulärdatamodell (FDM) och använda FDM-tjänsterna för att hämta, uppdatera eller lägga till data till olika datakällor.
 
 Följande databastabell och JSON-filen används som exempel för att förklara indata för stegfält:
 
@@ -256,8 +252,8 @@ I steget Anropa formulärdatamodelltjänst visas följande fält för att underl
 
 * **Sökväg till formulärdatamodell**: Bläddra och välj en formulärdatamodell som finns på servern.
 
-* **Tjänst**: Lista över tjänster som den valda formulärdatamodellen tillhandahåller.
-* **Indata för tjänster > Ange indata med hjälp av litteral-, variabel- eller arbetsflödesmetadata och en JSON-fil**: En tjänst kan ha flera argument. Välj alternativet för att hämta värdet för tjänstargumenten från en metadataegenskap för arbetsflöde, ett JSON-objekt, en variabel eller ange värdet direkt i textrutan:
+* **Tjänst**: Lista över de tjänster som den valda formulärdatamodellen tillhandahåller.
+* **Indata för tjänster > Ange indata med hjälp av litteral, variabel eller arbetsflödesmetadata och en JSON-fil**: En tjänst kan ha flera argument. Välj alternativet för att hämta värdet för tjänstargumenten från en metadataegenskap för arbetsflöde, ett JSON-objekt, en variabel eller ange värdet direkt i textrutan:
 
    * **Literal:** Använd alternativet när du vet exakt vilket värde du ska ange. Exempel: srose@we.info.
    * **Variabel:** Använd alternativet för att hämta värdet som lagras i en variabel.
@@ -283,7 +279,7 @@ Med steget Signera dokument kan du använda Adobe Sign för att signera dokument
 
 * **Avtalsnamn:** Ange avtalets namn. Avtalsnamnet blir en del av ämnet och brödtexten i det e-postmeddelande som skickas till signerarna. Du kan antingen lagra namnet i en variabel av datatypen String eller välja **Literal** om du vill lägga till namnet manuellt.
 
-* **Språk:** Ange språk för alternativen för e-post och verifiering. Du kan antingen lagra språkinställningen i en variabel av datatypen String eller välja **Literal** om du vill välja språkområde i listan med tillgängliga alternativ. Du måste definiera språkkoden medan du lagrar värdet för språkinställningen i en variabel. Ange till exempel **en_US** för engelska och **fr_FR** för franska.
+* **Språk:** Ange språk för alternativen för e-post och verifiering. Du kan antingen lagra språkinställningen i en variabel av datatypen String eller välja **Literal** om du vill välja språkområde i listan med tillgängliga alternativ. Du måste definiera språkkoden medan du lagrar värdet för språkinställningen i en variabel. Ange till exempel **sv_SE** för engelska och **fr_FR** för franska.
 
 * **Konfiguration av Adobe Sign Cloud**: Välj en Adobe Sign Cloud-konfiguration. Om du inte har konfigurerat Adobe Sign för AEM Forms går du till [Integrera Adobe Sign med AEM Forms](../../forms/using/adobe-sign-integration-adaptive-forms.md).
 
@@ -302,7 +298,7 @@ Med steget Signera dokument kan du använda Adobe Sign för att signera dokument
 * **Arbetsflödesfas:** Ett arbetsflöde kan ha flera steg. Dessa steg visas i AEM Inkorg. Du kan definiera dessa steg i modellens egenskaper (Sidekick > Sida > Sidegenskaper > Steg).
 * **Välj signerare:** Ange metoden för att välja signerare för dokumentet. Du kan dynamiskt tilldela arbetsflödet till en användare eller en grupp eller manuellt lägga till information om en signerare.
 * **Skript eller tjänst för att välja signerare:** Alternativet är bara tillgängligt om alternativet Dynamiskt är markerat i fältet Välj signerare. Du kan ange ett ECMAScript eller en tjänst för att välja signerare och verifieringsalternativ för ett dokument.
-* **Signerarinformation:** Alternativet är bara tillgängligt om alternativet Manuellt är markerat i fältet Välj signerare. Ange e-postadress och välj en valfri verifieringsmekanism. Innan du väljer en verifieringsmekanism i två steg måste du se till att motsvarande verifieringsalternativ är aktiverat för det konfigurerade Adobe Sign-kontot. Du kan använda en variabel av datatypen String för att definiera värden för **[!UICONTROL Email]**, **[!UICONTROL Country Code]** och **[!UICONTROL Phone Number]** fält. The **[!UICONTROL Country Code]** och **[!UICONTROL Phone Number]** fält visas bara om du väljer **[!UICONTROL Phone Verification]** från **[!UICONTROL 2-step verification]** nedrullningsbar lista.
+* **Signerarinformation:** Alternativet är bara tillgängligt om alternativet Manuellt är markerat i fältet Välj signerare. Ange e-postadress och välj en valfri verifieringsmekanism. Innan du väljer en verifieringsmekanism i två steg måste du se till att motsvarande verifieringsalternativ är aktiverat för det konfigurerade Adobe Sign-kontot. Du kan använda en variabel av datatypen String för att definiera värden för **[!UICONTROL Email]**, **[!UICONTROL Country Code]** och **[!UICONTROL Phone Number]** fält. The **[!UICONTROL Country Code]** och **[!UICONTROL Phone Number]** fält visas bara om du väljer **[!UICONTROL Phone Verification]** från **[!UICONTROL 2-step verification]** listruta.
 * **Statusvariabel:** Ett Adobe Sign-aktiverat dokument lagrar dokumentets signeringsstatus i en variabel av datatypen String. Ange namnet på statusvariabeln (adobeSignStatus). En statusvariabel för en instans finns i CRXDE på /etc/workflow/instances/&lt;server>/&lt;date-time>/&lt;instance of=&quot;&quot; workflow=&quot;&quot; model=&quot;&quot;>/workItems/&lt;node>/metaData innehåller status för en variabel.
 * **Spara signerat dokument med följande alternativ:** Ange platsen där signerade dokument ska sparas. Du kan välja att skriva över nyttolastfilen, placera det signerade dokumentet på en plats i nyttolastkatalogen eller lagra det signerade dokumentet i en variabel av Dokumenttyp.
 
@@ -397,7 +393,7 @@ Kryptera, signera och certifiera ett dokument. AEM Forms stöder både lösenord
 
 Skicka ett dokument direkt till en skrivare. Det har stöd för följande åtkomstmekanismer för utskrift:
 
-* **Direktåtkomlig skrivare**: En skrivare som är installerad på samma dator kallas för en skrivare med direktåtkomst och datorn kallas för skrivarvärd. Den här typen av skrivare kan vara en lokal skrivare som är ansluten direkt till datorn.
+* **Direktåtkomlig skrivare**: En skrivare som är installerad på samma dator kallas för en skrivare med direktåtkomst och datorns namn är skrivarvärd. Den här typen av skrivare kan vara en lokal skrivare som är ansluten direkt till datorn.
 * **Indirekt tillgänglig skrivare**: Skrivaren som är installerad på en utskriftsserver är tillgänglig från andra datorer. Teknik som det gemensamma utskriftssystemet UNIX® (CUPS) och protokollet Line Printer Daemon (LPD) är tillgängliga för anslutning till en nätverksskrivare. Om du vill få åtkomst till en indirekt tillgänglig skrivare anger du utskriftsserverns IP-adress eller värdnamn. Med den här funktionen kan du skicka ett dokument till en LPD-URI när nätverket har ett LPD-program öppet. Med hjälp av den här funktionen kan du dirigera dokumentet till en skrivare som är ansluten till nätverket som har ett LPD-program öppet.
 
 ### Generera utskriftssteg {#generatePrintedOutput}
@@ -414,7 +410,7 @@ Stegen Generera utskrift har följande egenskaper:
 
 * **[!UICONTROL Select data document using]**: Ange sökvägen till en indatafil. Du kan markera indatafilen med den sökväg som är relativ till nyttolasten, som har sparats med en absolut sökväg eller med en variabel av dokumentdatatypen. Till exempel: [Payload_Directory]/Workflow/data.xml. Om sökvägen inte finns i crx-databasen kan en administratör skapa sökvägen innan den används.
 
-* **[!UICONTROL Printer Format]**: Ett värde för Utskriftsformat som anger vilket sidbeskrivningsspråk som ska användas när ingen XDC-fil anges för att generera utdataströmmen. Om du anger ett literalt värde väljer du något av följande värden:
+* **[!UICONTROL Printer Format]**: Ett värde för utskriftsformat som anger vilket sidbeskrivningsspråk som ska användas när ingen XDC-fil anges för att generera utdataströmmen. Om du anger ett literalt värde väljer du något av följande värden:
 
    * **[!UICONTROL Custom PCL]**: Använd alternativet för att ange en anpassad XDC-fil för PCL.
    * **[!UICONTROL Custom PostScript]**: Använd alternativet för att ange en anpassad XDC-fil för PostScript.
@@ -429,7 +425,7 @@ Stegen Generera utskrift har följande egenskaper:
    * **[!UICONTROL Custom TPCL]**: Använd alternativet för att ange en anpassad XDC-fil för TPCL.
    * **[!UICONTROL TPCL 305 DPI]**: Använd TPCL 300 DPI. Filen tpcl305.xdc används.
    * **[!UICONTROL PCL 600 DPI]**: Använd TPCL 600 DPI. Filen tpcl600.xdc används.
-   * **[!UICONTROL Custom DPL]**: Använd alternativet för att ange en anpassad XDC-fil som DPL.
+   * **[!UICONTROL Custom DPL]**: Använd alternativet för att ange en anpassad DPL för XDC-fil.
    * **[!UICONTROL DPL300DPI]**: Använd DPL 300 DPI. Filen dpl300.xdc används.
    * **[!UICONTROL DPL406DPI]**: Använd DPL 400 DPI. dpl406.xdc används.
    * **[!UICONTROL DPL600DPI]**: Använd DPL 600 DPI. dpl600.xdc används.
@@ -449,7 +445,7 @@ Stegen Generera utskrift har följande egenskaper:
 * **[!UICONTROL Locale]**: Anger vilket språk som ska användas för att generera PDF-dokumentet. Om du anger ett literalt värde väljer du ett språk i listan eller något av dessa värden:
    * **Använd serverns standardinställningar**: (Standard) Använd språkinställningen som är konfigurerad på AEM Forms-servern. Inställningen Språk konfigureras med administrationskonsolen. (Se [Designer - hjälp](https://www.adobe.com/go/learn_aemforms_designer_65).)
 
-   * **Använda anpassat värde**: Skriv språkkoden i den litterala rutan eller välj en strängvariabel som innehåller språkkoden. En fullständig lista över språkkoder som stöds finns på https://java.sun.com/j2se/1.5.0/docs/guide/intl/locale.doc.html.
+   * **Använda anpassat värde**: Ange språkkoden i den litterala rutan eller välj en strängvariabel som innehåller språkkoden. En fullständig lista över språkkoder som stöds finns på https://java.sun.com/j2se/1.5.0/docs/guide/intl/locale.doc.html.
 
 * **[!UICONTROL Copies]**: Ett heltalsvärde som anger antalet kopior som ska genereras för utdata. Standardvärdet är 1.
 

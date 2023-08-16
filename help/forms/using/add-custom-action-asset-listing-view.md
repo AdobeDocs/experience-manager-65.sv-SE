@@ -1,17 +1,13 @@
 ---
 title: Lägg till anpassad åtgärd i resurslista-vyn
-seo-title: Add custom action to the Asset Listing view
 description: I den här artikeln lär du dig hur du lägger till anpassade åtgärder i vyn Resurslista
-seo-description: This article teaches how to add custom action to the Asset Listing view
-uuid: 45f25cfb-f08f-42c6-99c5-01900dd8cdee
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: correspondence-management
-discoiquuid: 6378ae30-a351-49f7-8e9a-f0bd4287b9d3
 docset: aem65
 feature: Correspondence Management
 exl-id: bf6d3edb-6bf7-4d3e-b042-d75cb8e39e3f
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 10227bcfcfd5a9b0f126fee74dce6ec7842f5e95
 workflow-type: tm+mt
 source-wordcount: '1354'
 ht-degree: 0%
@@ -76,7 +72,7 @@ Följ de här stegen för att anpassa Correspondence Management så att använda
 
       Klicka **Spara alla**.
 
-1. Lägg till en nod för den anpassade knappen/åtgärden i en viss resurs under den nyligen skapade objektmappen (Exempel: downloadFlatPDF) med följande steg:
+1. Lägg till en nod för den anpassade knappen/åtgärden i en viss resurs (Exempel: downloadFlatPDF) i den nya objektmappen enligt följande steg:
 
    1. Högerklicka på **objekt** mapp och markera **Skapa** > **Skapa nod**.
 
@@ -105,7 +101,7 @@ Följ de här stegen för att anpassa Correspondence Management så att använda
         <tr>
         <td>Foundation-collection-action</td>
         <td>Sträng</td>
-        <td><p>{"target": ".cq-management asset-admin-childpages", "activeSelectionCount": "single","type": "LETTER"}<br /> <br /> <br /> <strong>activeSelectionCount</strong> kan vara en eller flera för att tillåta val av enskilda eller flera resurser som den anpassade åtgärden utförs på.</p> <p><strong>type</strong> kan vara en eller flera (kommaavgränsade flera poster) av följande: BOKSTAV,TEXT,LISTA,VILLKOR,DATADICTIONÄR</p> </td>
+        <td><p>{"target": ".cq-manageasset-admin-childpages", "activeSelectionCount": "single","type": "LETTER"}<br /> <br /> <br /> <strong>activeSelectionCount</strong> kan vara en eller flera för att tillåta val av enskilda eller flera resurser som den anpassade åtgärden utförs på.</p> <p><strong>type</strong> kan vara en eller flera (kommaavgränsade poster) av följande: LETTER,TEXT,LIST,CONDITION,DATADICTIONARY</p> </td>
         </tr>
         <tr>
         <td>icon</td>
@@ -162,7 +158,7 @@ Följ de här stegen för att anpassa Correspondence Management så att använda
 
       `/apps/fd/cm/ma/gui/components/admin/clientlibs/admin/js`
 
-      Ge filen namnet formaction.js.
+      Namnge filen som formaction.js.
 
    1. Dubbelklicka på filen för att öppna den i CRX.
    1. I filen formaction.js (under grenen /apps) kopierar du koden från filen formaction.js på följande plats:
@@ -248,7 +244,7 @@ Följ de här stegen för att anpassa Correspondence Management så att använda
 
    1. Klicka **Spara alla**.
 
-1. Under noden för nyligen skapade objekt lägger du till en nod för den anpassade knappen/åtgärden i en viss resurs (Exempel: letterpdfdownloader) med följande steg:
+1. Under noden för nyligen skapade objekt lägger du till en nod för den anpassade knappen/åtgärden i en viss resurs (Exempel: letterpdfdownloader) enligt följande steg:
 
    1. Högerklicka på objektmappen och välj **Skapa > Skapa nod**.
 
@@ -279,7 +275,7 @@ Följ de här stegen för att anpassa Correspondence Management så att använda
    1. Dubbelklicka på **POST.jsp** för att öppna den i CRX.
    1. Lägg till följande kod i filen POST.jsp och klicka på **Spara alla**:
 
-      Den här koden är specifik för bokstavsåtergivningstjänsten. För alla andra resurser lägger du till resursens Java™-bibliotek i den här koden. Mer information om AEM Forms API:er finns i [AEM Forms API](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html).
+      Den här koden är specifik för bokstavsåtergivningstjänsten. För alla andra resurser lägger du till resursens Java™-bibliotek i den här koden. Mer information om AEM Forms API:er finns i [AEM FORMS API](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html).
 
       Mer information om AEM finns i AEM [Komponenter](/help/sites-developing/components.md).
 
@@ -360,7 +356,7 @@ När du har lagt till en anpassad funktion för att ladda ned en PDF i dina brev
 
    Menyalternativets namn, funktion och alt-text är beroende av den anpassning som har skapats i [Scenario: Lägg till ett kommando i användargränssnittet för bokstavslistan om du vill hämta en PDF-version av ett brev.](#addcommandtoletters)
 
-   ![Anpassade funktioner: Ladda ned PDF](assets/5_downloadflatpdf.png)
+   ![Anpassad funktionalitet: Ladda ned PDF](assets/5_downloadflatpdf.png)
 
 1. I dialogrutan Hämta brev som PDF väljer du den XML som du vill fylla i data från i PDF.
 

@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: best-practices
 exl-id: bcebbdb4-20b9-4c2d-8a87-013549d686c1
-source-git-commit: 1ef5593495b4bf22d2635492a360168bccc1725d
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '427'
+source-wordcount: '426'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ David&#39;s Model skrevs av David Nuescheler för flera år sedan, men idéerna 
 
 * Data kommer först, strukturen senare. Kanske.
 * Låt inte innehållshierarkin hända.
-* Arbetsytor är till för `clone()`, `merge()`och `update()`.
+* Arbetsytor är för `clone()`, `merge()`och `update()`.
 * Se upp för samma namn som syskon.
 * Referenser anses vara skadliga.
 * Filer är filer.
@@ -31,7 +31,7 @@ David&#39;s Model finns på Jackrabbit wiki på [https://wiki.apache.org/jackrab
 
 ### Allt är innehåll {#everything-is-content}
 
-Allt ska lagras i databasen i stället för att förlita sig på separata datakällor från tredje part, som databaser. Detta gäller för redigerat innehåll, binära data som bilder, kod och konfigurationer. Detta gör att vi kan använda en uppsättning API:er för att hantera allt innehåll och för att hantera kampanjen av det här innehållet genom replikering. Du får också en enda källa för säkerhetskopiering, loggning och så vidare.
+Allt ska lagras i databasen i stället för att förlita sig på separata datakällor från tredje part, som till exempel databaser. Detta gäller för redigerat innehåll, binära data som bilder, kod och konfigurationer. Detta gör att vi kan använda en uppsättning API:er för att hantera allt innehåll och för att hantera kampanjen av det här innehållet genom replikering. Du får också en enda källa för säkerhetskopiering, loggning och så vidare.
 
 ### Använd designprincipen&quot;innehållsmodell först&quot; {#use-the-content-model-first-design-principle}
 

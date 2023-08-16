@@ -2,9 +2,9 @@
 title: Hantera översättningsprojekt
 description: Lär dig hantera översättningsprojekt i AEM.
 exl-id: 968bba02-98fe-4eaf-9937-ce5cfdf5b413
-source-git-commit: 106fc0e1ef6d65f13bd3875783102da44694581e
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '3587'
+source-wordcount: '3586'
 ht-degree: 1%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 1%
 
 När du har förberett innehåll för översättning måste du slutföra språkstrukturen genom att skapa saknade språkkopior och skapa översättningsprojekt.
 
-Med översättningsprojekt kan du hantera översättning av AEM. Ett översättningsprojekt är en typ av AEM [projekt](/help/sites-authoring/projects.md) som innehåller resurser som ska översättas till andra språk. Dessa resurser är sidorna och resurserna i [språkversioner](/help/sites-administering/tc-prep.md) som har skapats från överordnad.
+Med översättningsprojekt kan du hantera översättning av AEM. Ett översättningsprojekt är en typ av AEM [projekt](/help/sites-authoring/projects.md) som innehåller resurser som ska översättas till andra språk. Dessa resurser är sidorna och resurserna i [språkversioner](/help/sites-administering/tc-prep.md) som har skapats från språkinställaren.
 
 När resurser läggs till i ett översättningsprojekt skapas ett översättningsjobb för dem. Jobb innehåller kommandon och statusinformation som du använder för att hantera de mänskliga översättnings- och maskinöversättningsarbetsflödena som körs på resurserna.
 
@@ -31,7 +31,7 @@ När resurser läggs till i ett översättningsprojekt skapas ett översättning
 
 >[!NOTE]
 >
->Alternativ 3 är inte relaterat till översättningsjobb/översättningsprojekt. Du kan kopiera innehåll och strukturella ändringar på det överordnad språket till (oöversatta) språkversioner. Du kan använda detta för att synkronisera dina språkmallsidor, även utan översättning.
+>Alternativ 3 är inte relaterat till översättningsjobb/projekt. Du kan kopiera innehåll och strukturella ändringar i språkmallen till (oöversatta) språkkopior. Du kan använda detta för att synkronisera dina språkmallsidor, även utan översättning.
 
 ## Utföra initiala översättningar och uppdatera befintliga översättningar {#performing-initial-translations-and-updating-existing-translations}
 
@@ -43,14 +43,14 @@ AEM identifierar om ett översättningsprojekt skapas för den inledande övers�
    * När den översatta sidan importeras till AEM, skrivs sidan över vid start.
    * Den översatta sidan skriver bara över språkkopian när startsidan höjs.
 
-Språkroten /content/geometrixx/fr skapas till exempel för den franska översättningen av det överordnad språket /content/geometrixx/en. Det finns inga andra sidor i den franska språkversionen.
+Språkroten /content/geometrixx/fr skapas till exempel för den franska översättningen av huvudspråket /content/geometrixx/en. Det finns inga andra sidor i den franska språkversionen.
 
 * Ett översättningsprojekt skapas för sidan /content/geometrixx/en/products och alla underordnade sidor med den franska språkkopian som mål. Eftersom språkkopian inte innehåller sidan /content/geometrixx/fr/products kopierar AEM omedelbart sidan /content/geometrixx/en/products och alla underordnade sidor till den franska språkkopian. Kopiorna ingår också i översättningsprojektet.
 * Ett översättningsprojekt skapas för sidan /content/geometrixx/en och alla underordnade sidor med den franska språkkopian som mål. Eftersom språkkopian innehåller den sida som motsvarar sidan /content/geometrixx/en (språkroten), kopierar AEM sidan /content/geometrixx/en och alla underordnade sidor och lägger till dem i en start. Kopiorna ingår också i översättningsprojektet.
 
 ## Skapa översättningsprojekt med referenspanelen {#creating-translation-projects-using-the-references-panel}
 
-Skapa översättningsprojekt så att du kan köra och hantera arbetsflödet för översättning av språkresurserna på din överordnad. När du skapar projekt anger du sidan på det språk-överordnad som du översätter och de språkkopior som du utför översättningen för:
+Skapa översättningsprojekt så att du kan köra och hantera arbetsflödet för översättning av resurserna i din språkinställning. När du skapar projekt anger du sidan i den språkmall som du översätter och de språkkopior som du utför översättningen för:
 
 * Molnkonfigurationen för översättningsintegreringsramverket som är associerat med den valda sidan avgör många egenskaper för översättningsprojekten, till exempel översättningsarbetsflödet som ska användas.
 * Ett projekt skapas för varje vald språkkopia.
@@ -195,7 +195,7 @@ Din ordbok är nu i ditt översättningsjobb.
 
 >[!NOTE]
 >
->Mer information om i18n-ordlistor finns i [Använda översättare för att hantera ordlistor](/help/sites-developing/i18n-translator.md).
+>Läs mer om i18n-ordlistor [Använda översättare för att hantera ordlistor](/help/sites-developing/i18n-translator.md).
 
 ## Lägga till taggar i ett översättningsjobb {#adding-tags-to-a-translation-job}
 
@@ -222,11 +222,11 @@ Dina taggar läggs nu till i översättningsjobbet.
 Panelen Översättningssammanfattning innehåller egenskaperna som är konfigurerade för ett översättningsprojekt. Förutom generiska [projektinformation](/help/sites-authoring/projects.md#project-info)innehåller översättningsfliken översättningsspecifika egenskaper:
 
 * Källspråk: Språket för de sidor som översätts.
-* Målspråk: Språket som sidorna översätts till.
+* Målspråk: Det språk som sidorna översätts till.
 * Översättningsmetod: Översättningsarbetsflödet. Antingen Human Translation eller Machine Translation stöds.
-* Översättningsprovider: Översättningstjänstleverantören som utför översättningen.
+* Översättningsprovider: Den översättningstjänstleverantör som utför översättningen.
 * Innehållskategori: (Maskinöversättning) Innehållskategorin som används för översättning.
-* Molnkonfiguration: Molnkonfigurationen för översättningstjänstkopplingen som används för projektet.
+* Cloud Config: Molnkonfigurationen för översättningstjänstkopplingen som används för projektet.
 
 När ett projekt skapas med hjälp av en sidas resurspanel konfigureras dessa egenskaper automatiskt baserat på källsidans egenskaper.
 
@@ -250,7 +250,7 @@ I följande tabell beskrivs varje status som ett jobb eller ett objekt i jobbet 
 | Översättning pågår | För ett jobb är översättningen av en eller flera filer i jobbet inte slutförd än. För ett objekt i jobbet översätts objektet. |
 | Översatt | För ett jobb är översättningen av alla filer i jobbet slutförd. För ett objekt i jobbet översätts objektet. |
 | Klar för granskning | Objektet i jobbet översätts och filen har importerats till AEM. |
-| Slutförd | Projektägaren har angett att översättningskontraktet är slutfört. |
+| Complete | Projektägaren har angett att översättningskontraktet är slutfört. |
 | Avbryt | Anger att översättningsleverantören ska sluta arbeta med ett översättningsjobb. |
 | Feluppdatering | Ett fel uppstod när filer överfördes mellan AEM och översättningstjänsten. |
 | Okänt läge | Ett okänt fel har inträffat. |
@@ -350,7 +350,7 @@ När innehåll översätts för en befintlig språkkopia granskar du översättn
 
 ![chlimage_1-269](assets/chlimage_1-269.png)
 
-1. Markera sidan på överordnad, klicka eller tryck på Referenser och sedan på eller klicka på Språkkopior.
+1. Markera sidan i språkinställningen, klicka eller tryck på Referenser och sedan på eller klicka på Språkkopior.
 1. Klicka på eller tryck på den språkkopia som du vill granska.
 
    ![chlimage_1-270](assets/chlimage_1-270.png)
@@ -360,23 +360,23 @@ När innehåll översätts för en befintlig språkkopia granskar du översättn
    ![chlimage_1-271](assets/chlimage_1-271.png)
 
 1. Klicka på Öppna sida för att öppna startkopian av sidan för att granska och redigera innehållet.
-1. När du har granskat innehållet och gjort de ändringar som krävs för att befordra startkopian klickar du på Befordra.
+1. När du har granskat innehållet och gjort de ändringar du behöver kan du befordra startkopian genom att klicka på Befordra.
 1. På sidan Befordra start anger du vilka sidor som ska befordras och klickar eller trycker sedan på Befordra.
 
 ## Jämför språkkopior {#comparing-language-copies}
 
-Så här jämför du språkkopior med Överordnad:
+Så här jämför du språkkopior med språkinställningen:
 
 1. I **Webbplatser** navigera till den språkkopia som du vill jämföra.
 1. Öppna **[Referenser](/help/sites-authoring/basic-handling.md#references)** -panelen.
 1. Under **Kopior** rubrikmarkera **Språkkopior.**
-1. Välj en språkversion och klicka sedan på **Jämför med Överordnad **eller **Jämför med tidigare **om tillämpligt.
+1. Välj en viss språkkopia och klicka sedan på **Jämför med mallsida **eller **Jämför med föregående **om tillämpligt.
 
    ![chlimage_1-37](assets/chlimage_1-37.jpeg)
 
 1. De två sidorna (start och källa) öppnas sida vid sida.
 
-   Mer information om hur du använder funktionen finns i [Sidskillnader](/help/sites-authoring/page-diff.md).
+   Mer information om hur du använder den här funktionen finns i [Sidskillnader](/help/sites-authoring/page-diff.md).
 
 ## Slutföra och arkivera översättningsjobb {#completing-and-archiving-translation-jobs}
 
@@ -390,9 +390,9 @@ Arkivera ett översättningsjobb när det är klart och du behöver inte längre
 
 ## Skapa strukturen för en språkkopia {#creating-the-structure-of-a-language-copy}
 
-Fyll i din språkkopia så att den innehåller innehåll från det överordnad språk som du översätter. Du måste ha [skapade språkroten](/help/sites-administering/tc-prep.md#creating-a-language-root) av språkversionen.
+Fyll i din språkkopia så att den innehåller innehåll från huvudspråket som du översätter. Innan du fyller i din språkkopia måste du ha [skapade språkroten](/help/sites-administering/tc-prep.md#creating-a-language-root) av språkversionen.
 
-1. Använd webbplatskonsolen för att välja språkroten för det överordnad språk som du använder som källa. Om du till exempel vill översätta de engelska sidorna på demowebbplatsen väljer du Innehåll > Demonsplats för Geometrixx > Engelska.
+1. Använd webbplatskonsolen för att välja språkroten för huvudspråket som du använder som källa. Om du till exempel vill översätta de engelska sidorna på demowebbplatsen väljer du Innehåll > Demonsplats för Geometrixx > Engelska.
 1. Klicka på eller tryck på Referenser i verktygsfältet.
 
    ![chlimage_1-273](assets/chlimage_1-273.png)
@@ -417,7 +417,7 @@ Om en redan översatt källsida måste [ändrat namn eller flyttat](/help/sites-
 1. Flytta en sida som har en språkkopia.
 1. Välj språkkopieringsroten.
 1. Öppna **Referenser** -panelen.
-1. Välj **Språkkopior**.
+1. Välj **Språk Kopior**.
 1. Välj de målspråk som du vill uppdatera.
 1. Välj **Uppdatera språkkopior**.
 1. Klicka **Uppdatera**. A [Starta](/help/sites-authoring/launches-promoting.md) skapas.

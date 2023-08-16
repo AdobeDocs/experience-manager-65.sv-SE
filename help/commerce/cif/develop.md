@@ -7,7 +7,7 @@ doc-type: tutorial
 kt: 5826
 thumbnail: 39476.jpg
 exl-id: 48479725-8b52-4ff2-a599-d20958b26ee6
-source-git-commit: 78359fb8ecbcc0227ab5a3910175aed73d823902
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
 source-wordcount: '871'
 ht-degree: 0%
@@ -19,7 +19,7 @@ ht-degree: 0%
 Utveckla AEM handelsprojekt som bygger på Commerce Integration Framework (CIF) för AEM följer samma regler och bästa praxis som andra AEM. Granska dessa först:
 
 - [Användarhandbok om AEM 6.5-utveckling](/help/sites-developing/home.md)
-- [AEM kärnbegrepp](/help/sites-developing/the-basics.md)
+- [AEM Core Concepts](/help/sites-developing/the-basics.md)
 - [AEM - riktlinjer och bästa praxis](/help/sites-developing/dev-guidelines-bestpractices.md)
 - [Skapa AEM projekt med Apache Maven](/help/sites-developing/ht-projects-maven.md)
 
@@ -57,7 +57,7 @@ CIF-tillägget kan hämtas från [Programdistributionsportal](https://experience
 
 För lokal CIF-projektutveckling med AEM och CIF-tillägget:
 
-1. Hämta AEM 6.5 och installera AEM 6.5 Service Pack. AEM 6.5 Service Pack 7 krävs, men vi rekommenderar att du installerar det senaste tillgängliga Service Pack-paketet.
+1. Hämta AEM 6.5 och installera AEM 6.5 Service Pack. AEM 6.5 Service Pack 7 krävs, men Adobe rekommenderar att du installerar det senaste tillgängliga Service Pack-paketet.
 
 1. Packa upp AEM .jar för att skapa `crx-quickstart` mapp, kör:
 
@@ -83,7 +83,7 @@ Det finns två sätt att starta AEM Commerce-projekt med CIF.
 
 ### Använd AEM projekttyp
 
-The [AEM Project Archetype](https://github.com/adobe/aem-project-archetype) är huvudverktyget för att starta ett förkonfigurerat projekt för att komma igång med CIF. CIF Core Components och alla nödvändiga konfigurationer kan inkluderas i ett genererat projekt med ett extra alternativ.
+The [AEM Project Archettype](https://github.com/adobe/aem-project-archetype) är huvudverktyget för att starta ett förkonfigurerat projekt för att komma igång med CIF. CIF Core Components och alla nödvändiga konfigurationer kan inkluderas i ett genererat projekt med ett extra alternativ.
 
 >[!TIP]
 >
@@ -152,11 +152,11 @@ Kom igång med Venia Reference Store genom att klona [Git-databas](https://githu
 
 För att ansluta ditt projekt till e-handelssystemet måste AEM konfigureras med GraphQL slutpunkt i e-handelssystemet.
 
-Båda, ett projekt som skapats av [AEM Project Archetype](https://github.com/adobe/aem-project-archetype) eller [AEM Venia Reference Store](https://github.com/adobe/aem-cif-guides-venia), innehåller redan [standardkonfiguration](https://github.com/adobe/aem-cif-guides-venia/blob/main/ui.config/src/main/content/jcr_root/apps/venia/osgiconfig/config/com.adobe.cq.commerce.graphql.client.impl.GraphqlClientImpl~default.cfg.json) som måste justeras.
+Båda, ett projekt som genereras av [AEM Project Archettype](https://github.com/adobe/aem-project-archetype) eller [AEM Venia Reference Store](https://github.com/adobe/aem-cif-guides-venia), innehåller redan [standardkonfiguration](https://github.com/adobe/aem-cif-guides-venia/blob/main/ui.config/src/main/content/jcr_root/apps/venia/osgiconfig/config/com.adobe.cq.commerce.graphql.client.impl.GraphqlClientImpl~default.cfg.json) som måste justeras.
 
 Ersätt värdet för `url` in `com.adobe.cq.commerce.graphql.client.impl.GraphqlClientImpl~default.cfg.json` med GraphQL slutpunkt i e-handelssystemet som används av projektet.
 
-AEM Commerce Add-On och CIF Core Components ansluter till GraphQL-slutpunkten via AEM och direkt via webbläsaren. CIF Core Components och CIF Add-On-verktyg på klientsidan ansluter som standard till `/api/graphql`. Vid behov kan detta justeras via CIF-Cloud Servicens konfiguration (se nedan).
+AEM Commerce Add-On och CIF Core Components ansluter till GraphQL-slutpunkten via AEM och direkt via webbläsaren. CIF-kärnkomponenter på klientsidan och CIF-tilläggsverktyg som standard ansluter till `/api/graphql`. Vid behov kan detta justeras via CIF-Cloud Servicens konfiguration (se nedan).
 
 CIF-tillägget tillhandahåller en GraphQL-proxyserver på `/api/graphql`. Om du inte tänker använda en lokal AEM Dispatcher rekommenderar vi att du även konfigurerar GraphQL proxyserver.
 
@@ -164,5 +164,5 @@ Navigera till http://localhost:4502/system/console/configMgr och skapa en OSGI-k
 
 ## Ytterligare resurser
 
-- [AEM Project Archetype](https://github.com/adobe/aem-project-archetype)
+- [AEM Project Archettype](https://github.com/adobe/aem-project-archetype)
 - [AEM Venia Reference Store](https://github.com/adobe/aem-cif-guides-venia)

@@ -2,7 +2,7 @@
 title: Utöka händelsespårning
 seo-title: Extending Event Tracking
 description: Med AEM Analytics kan ni spåra användarinteraktion på er webbplats
-seo-description: AEM Analytics allows you to track user interaction on your website
+seo-description: AEM Analytics lets you track user interaction on your website
 uuid: 722798ac-4043-4918-a6df-9eda2c85020b
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,9 +10,9 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: e0372f4a-fe7b-4526-8391-5bb345b51d70
 exl-id: a71d20e6-0321-4afb-95fe-6de8b7b37245
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '487'
+source-wordcount: '485'
 ht-degree: 0%
 
 ---
@@ -60,7 +60,7 @@ Ett exempel kan se ut så här:
 </span>
 ```
 
-Vid sidinläsning, alla `data-tracking` attribut samlas in och läggs till i händelsearkivet för ContextHub, där de kan mappas till Adobe Analytics-händelser. Händelser som inte mappas kommer inte att spåras av Adobe Analytics. Se [Ansluta till Adobe Analytics](/help/sites-administering/adobeanalytics.md) om du vill ha mer information om mappningshändelser.
+Vid sidinläsning, alla `data-tracking` attribut samlas in och läggs till i händelsearkivet för ContextHub, där de kan mappas till Adobe Analytics-händelser. Händelser som inte mappas spåras inte av Adobe Analytics. Se [Ansluta till Adobe Analytics](/help/sites-administering/adobeanalytics.md) för mer information om mappningshändelser.
 
 ### Spåra anpassade händelser efter sidinläsning {#tracking-custom-events-after-page-load}
 

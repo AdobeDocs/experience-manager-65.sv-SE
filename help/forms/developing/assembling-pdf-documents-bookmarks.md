@@ -12,7 +12,7 @@ topic-tags: operations
 discoiquuid: 9f4711a8-033c-4051-ab41-65a26838899b
 role: Developer
 exl-id: 2b938410-f51b-420b-b5d4-2ed13ec29c5a
-source-git-commit: 135f50cc80f8bb449b2f1621db5e2564f5075968
+source-git-commit: 10227bcfcfd5a9b0f126fee74dce6ec7842f5e95
 workflow-type: tm+mt
 source-wordcount: '2558'
 ht-degree: 0%
@@ -45,7 +45,7 @@ Anta att följande DDX-dokument används för den här diskussionen.
 
 Observera att källattributet är tilldelat värdet i det här DDX-dokumentet `Loan.pdf`. Det här DDX-dokumentet anger att ett enda PDF-dokument skickas till Assembler-tjänsten. När du sammanställer ett PDF-dokument med bokmärken måste du ange ett XML-dokument för bokmärken som beskriver bokmärkena i resultatdokumentet. Om du vill ange ett XML-dokument för bokmärken kontrollerar du att `Bookmarks` -elementet anges i ditt DDX-dokument.
 
-I det här exemplet är DDX-dokumentet `Bookmarks` element specificeras `doc2` som värdet. Det här värdet anger att indatamappningen som skickas till Assembler-tjänsten innehåller en nyckel med namnet `doc2`. Värdet för `doc2` nyckel är en `com.adobe.idp.Document` det värde som representerar XML-dokumentet för bokmärket. (Se&quot;Bokmärkesspråk&quot; i [Assembler Service och DDX Reference](https://www.adobe.com/go/learn_aemforms_ddx_63).)
+I det här exemplet är DDX-dokumentet `Bookmarks` element specificeras `doc2` som värdet. Det här värdet anger att indatamappningen som skickas till Assembler-tjänsten innehåller en nyckel med namnet `doc2`. Värdet för `doc2` nyckel är en `com.adobe.idp.Document` det värde som representerar XML-dokumentet för bokmärket. (Se&quot;Bokmärkesspråk&quot; i dialogrutan [Assembler Service och DDX Reference](https://www.adobe.com/go/learn_aemforms_ddx_63).)
 
 I det här avsnittet används följande språk för XML-bokmärken för att sätta ihop ett PDF-dokument som innehåller bokmärken.
 
@@ -75,17 +75,17 @@ Lägg märke till det Action-element som definierar åtgärden som utförs när 
 
 >[!NOTE]
 >
->Fullständig information om åtgärder som stöds finns i &quot; `Action` element&quot; i [Assembler Service och DDX Reference](https://www.adobe.com/go/learn_aemforms_ddx_63).
+>Fullständig information om vilka åtgärder som stöds finns i &quot; `Action` element&quot; i [Assembler Service och DDX Reference](https://www.adobe.com/go/learn_aemforms_ddx_63).
 
 Med tanke på det DDX-dokument som anges i det här avsnittet och XML-filen för bokmärken som indata, sammanställer Assembler-tjänsten ett PDF-dokument som innehåller följande bokmärken.
 
 ![aw_aw_bmark](assets/aw_aw_bmark.png)
 
-När en användare klickar på *Öppna låninformation* bokmärke öppnas filen LoanDetails.pdf. På samma sätt när användaren klickar på *Starta NotePad* bokmärke, NotePad har startats.
+När en användare klickar på *Öppna låninformation* är LoanDetails.pdf öppet. När användaren klickar på *Starta NotePad* bokmärke, NotePad har startats.
 
 >[!NOTE]
 >
->Innan du läser det här avsnittet bör du känna till hur du sammanställer PDF-dokument med hjälp av tjänsten Assembler. I det här avsnittet beskrivs inte begrepp, till exempel att skapa ett samlingsobjekt som innehåller indatadokument eller att lära sig hur du extraherar resultaten från det returnerade samlingsobjektet. (Se [Programmisk sammanställning av PDF-dokument](/help/forms/developing/programmatically-assembling-pdf-documents.md#programmatically-assembling-pdf-documents).)
+>Innan du läser det här avsnittet bör du känna till hur du sammanställer PDF-dokument med hjälp av tjänsten Assembler. I det här avsnittet beskrivs inte koncept, t.ex. att skapa ett samlingsobjekt som innehåller indatadokument eller att lära sig hur du extraherar resultaten från det returnerade samlingsobjektet. (Se [Programmisk sammanställning av PDF-dokument](/help/forms/developing/programmatically-assembling-pdf-documents.md#programmatically-assembling-pdf-documents).)
 
 >[!NOTE]
 >
@@ -152,11 +152,11 @@ Om du vill montera ett PDF som innehåller nya bokmärken måste du referera til
 
 **Lägg till PDF-dokumentet och bokmärkets XML-dokument i en kartsamling**
 
-Du måste lägga till både PDF-dokumentet som bokmärken läggs till i och bokmärkets XML-dokument i kartsamlingen. Därför innehåller Map-samlingsobjektet två element: ett PDF-dokument och ett XML-dokument för bokmärken.
+Du måste lägga till både det PDF-dokument som bokmärken läggs till i och bokmärkets XML-dokument i kartsamlingen. Samlingsobjektet Map innehåller därför två element: ett PDF-dokument och ett bokmärkes-XML-dokument.
 
 **Ange körningsalternativ**
 
-Du kan ställa in körningsalternativ som styr beteendet för Assembler-tjänsten när den utför ett jobb. Du kan till exempel ange ett alternativ som instruerar Assembler-tjänsten att fortsätta bearbeta ett jobb om ett fel uppstår. Mer information om de körningsalternativ du kan ange finns i `AssemblerOptionSpec` klassreferens i [AEM Forms API-referens](https://www.adobe.com/go/learn_aemforms_javadocs_63_en).
+Du kan ställa in körningsalternativ som styr beteendet för Assembler-tjänsten när den utför ett jobb. Du kan till exempel ange ett alternativ som instruerar Assembler-tjänsten att fortsätta bearbeta ett jobb om ett fel uppstår. Mer information om alternativ för körning som du kan ange finns i `AssemblerOptionSpec` klassreferens i [AEM Forms API-referens](https://www.adobe.com/go/learn_aemforms_javadocs_63_en).
 
 **Sammanställa dokumentet PDF**
 
@@ -180,7 +180,7 @@ Sammanställa ett PDF-dokument med bokmärken med hjälp av Assembler Service AP
 
 1. Inkludera projektfiler.
 
-   Inkludera JAR-klientfiler, t.ex. adobe-assembler-client.jar, i Java-projektets klassökväg.
+   Inkludera JAR-klientfiler, som adobe-assembler-client.jar, i Java-projektets klassökväg.
 
 1. Skapa en PDF Assembler-klient.
 
@@ -189,18 +189,18 @@ Sammanställa ett PDF-dokument med bokmärken med hjälp av Assembler Service AP
 
 1. Referera till ett befintligt DDX-dokument.
 
-   * Skapa en `java.io.FileInputStream` som representerar DDX-dokumentet genom att använda dess konstruktor och skicka ett strängvärde som anger platsen för DDX-filen.
+   * Skapa en `java.io.FileInputStream` -objekt som representerar DDX-dokumentet genom att använda dess konstruktor och skicka ett strängvärde som anger platsen för DDX-filen.
    * Skapa en `com.adobe.idp.Document` genom att använda konstruktorn och skicka `java.io.FileInputStream` -objekt.
 
 1. Referera till ett PDF-dokument som bokmärken läggs till i.
 
-   * Skapa en `java.io.FileInputStream` genom att använda konstruktorn och skicka PDF-dokumentets placering.
-   * Skapa en `com.adobe.idp.Document` genom att använda konstruktorn och skicka `java.io.FileInputStream` som innehåller dokumentet PDF.
+   * Skapa en `java.io.FileInputStream` genom att använda dess konstruktor och skicka PDF-dokumentets plats.
+   * Skapa en `com.adobe.idp.Document` genom att använda konstruktorn och skicka `java.io.FileInputStream` -objekt som innehåller dokumentet PDF.
 
 1. Referera till XML-dokumentet för bokmärket.
 
    * Skapa en `java.io.FileInputStream` genom att använda dess konstruktor och skicka platsen för XML-filen som representerar bokmärkets XML-dokument.
-   * Skapa en `com.adobe.idp.Document` -objektet och skicka `java.io.FileInputStream` som innehåller dokumentet PDF.
+   * Skapa en `com.adobe.idp.Document` -objektet och skicka `java.io.FileInputStream` -objekt som innehåller dokumentet PDF.
 
 1. Lägg till PDF-dokumentet och bokmärkets XML-dokument i en kartsamling.
 
@@ -209,11 +209,11 @@ Sammanställa ett PDF-dokument med bokmärken med hjälp av Assembler Service AP
 
       * Ett strängvärde som representerar nyckelnamnet. Detta värde måste matcha värdet för källelementet PDF som anges i DDX-dokumentet.
       * A `com.adobe.idp.Document` som innehåller indatadokumentet PDF.
+
    * Lägg till XML-bokmärkesdokumentet genom att anropa `java.util.Map` objektets `put` och skicka följande argument:
 
       * Ett strängvärde som representerar nyckelnamnet. Värdet måste matcha värdet för källelementet för bokmärken som anges i DDX-dokumentet.
       * A `com.adobe.idp.Document` -objekt som innehåller bokmärkets XML-dokument.
-
 
 1. Ange körningsalternativ.
 
@@ -234,13 +234,13 @@ Sammanställa ett PDF-dokument med bokmärken med hjälp av Assembler Service AP
 
    Utför följande åtgärder för att hämta det nya PDF-dokumentet:
 
-   * Anropa `AssemblerResult` objektets `getDocuments` -metod. Detta returnerar `java.util.Map` -objekt.
+   * Anropa `AssemblerResult` objektets `getDocuments` -metod. Detta returnerar en `java.util.Map` -objekt.
    * Iterera genom `java.util.Map` tills du hittar resultatet `com.adobe.idp.Document` -objekt. (Du kan använda resultatelementet PDF som anges i DDX-dokumentet för att hämta dokumentet.)
    * Anropa `com.adobe.idp.Document` objektets `copyToFile` metod för att extrahera PDF-dokumentet.
 
 **Se även**
 
-[Snabbstart (SOAP-läge): Sammanställa PDF-dokument med bokmärken med Java API](/help/forms/developing/assembler-service-java-api-quick.md#quick-start-soap-mode-assembling-pdf-documents-with-bookmarks-using-the-java-api)
+[Snabbstart (SOAP-läge): Samla ihop PDF-dokument med bokmärken med Java API](/help/forms/developing/assembler-service-java-api-quick.md#quick-start-soap-mode-assembling-pdf-documents-with-bookmarks-using-the-java-api)
 
 [Inkludera AEM Forms Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -256,13 +256,13 @@ Sammanställa ett PDF-dokument med bokmärken med Assembler Service API (webbtj�
 
    >[!NOTE]
    >
-   >Ersätt `localhost` med IP-adressen till den server som är värd för AEM Forms.
+   >Ersätt `localhost` med IP-adressen till den server där AEM Forms finns.
 
 1. Skapa en PDF Assembler-klient.
 
    * Skapa en `AssemblerServiceClient` genom att använda dess standardkonstruktor.
    * Skapa en `AssemblerServiceClient.Endpoint.Address` genom att använda `System.ServiceModel.EndpointAddress` konstruktor. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/AssemblerService?blob=mtom`). Du behöver inte använda `lc_version` -attribut. Det här attributet används när du skapar en tjänstreferens.
-   * Skapa en `System.ServiceModel.BasicHttpBinding` genom att hämta värdet för `AssemblerServiceClient.Endpoint.Binding` fält. Sänd returvärdet till `BasicHttpBinding`.
+   * Skapa en `System.ServiceModel.BasicHttpBinding` genom att hämta värdet för `AssemblerServiceClient.Endpoint.Binding` fält. Skicka returvärdet till `BasicHttpBinding`.
    * Ange `System.ServiceModel.BasicHttpBinding` objektets `MessageEncoding` fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
    * Aktivera grundläggande HTTP-autentisering genom att utföra följande åtgärder:
 
@@ -300,7 +300,7 @@ Sammanställa ett PDF-dokument med bokmärken med Assembler Service API (webbtj�
    * Skapa en `MyMapOf_xsd_string_To_xsd_anyType` -objekt. Det här samlingsobjektet används för att lagra indata-PDF-dokument och bokmärkes-XML-dokument.
    * För varje inmatningsdokument i PDF och bokmärkes-XML-dokument skapar du ett `MyMapOf_xsd_string_To_xsd_anyType_Item` -objekt.
    * Tilldela ett strängvärde som representerar nyckelnamnet till `MyMapOf_xsd_string_To_xsd_anyType_Item` objektets `key` fält. Detta värde måste matcha värdet för källelementet PDF som anges i DDX-dokumentet.
-   * Tilldela `BLOB` objekt som lagrar PDF-dokumentet till `MyMapOf_xsd_string_To_xsd_anyType_Item` objektets `value` fält.
+   * Tilldela `BLOB` det objekt som lagrar PDF-dokumentet till `MyMapOf_xsd_string_To_xsd_anyType_Item` objektets `value` fält.
    * Lägg till `MyMapOf_xsd_string_To_xsd_anyType_Item` objekt till `MyMapOf_xsd_string_To_xsd_anyType` -objekt. Anropa `MyMapOf_xsd_string_To_xsd_anyType` objektets `Add` och skicka `MyMapOf_xsd_string_To_xsd_anyType` -objekt. (Utför den här åtgärden för varje inmatningsdokument i PDF och för bokmärkets XML-dokument.)
 
 1. Ange körningsalternativ.
@@ -323,7 +323,7 @@ Sammanställa ett PDF-dokument med bokmärken med Assembler Service API (webbtj�
    Utför följande åtgärder för att hämta det nya PDF-dokumentet:
 
    * Öppna `AssemblerResult` objektets `documents` fält, vilket är ett `Map` -objekt som innehåller de resulterande PDF-dokumenten.
-   * Iterera genom `Map` tills du hittar nyckeln som matchar namnet på det resulterande dokumentet. Sätt sedan den arraymedlemmens `value` till `BLOB`.
+   * Iterera genom `Map` tills du hittar nyckeln som matchar namnet på det resulterande dokumentet. Byt sedan ut arraymedlemmens `value` till `BLOB`.
    * Extrahera de binära data som representerar PDF-dokumentet genom att öppna dess `BLOB` objektets `MTOM` fält. Detta returnerar en array med byte som du kan skriva ut till en PDF-fil.
 
 **Se även**

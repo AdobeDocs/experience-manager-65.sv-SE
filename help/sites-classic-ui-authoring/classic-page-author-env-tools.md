@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: 67625e62-7035-4eb5-8dd5-6840d775a547
 docset: aem65
 exl-id: 5d7b6b2e-d1d8-4efe-b9ff-c9542b4e67d7
-source-git-commit: 75c6bb87bb06c5ac9378ccebf193b5416c080bb1
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '902'
+source-wordcount: '897'
 ht-degree: 1%
 
 ---
@@ -22,7 +22,7 @@ I redigeringsmiljön i AEM finns olika sätt att ordna och redigera ditt innehå
 
 ## Webbplatsadministration {#site-administration}
 
-The **Webbplatser** kan du hantera och navigera på webbplatsen med konsolen. Med hjälp av de två rutorna kan webbplatsens struktur utökas och åtgärder vidtas för det element som krävs:
+The **Webbplatser** konsolen gör att du kan hantera och navigera på webbplatsen. Med hjälp av de två rutorna kan webbplatsens struktur utökas och åtgärder vidtas för det element som krävs:
 
 ![chlimage_1-108](assets/chlimage_1-108.png)
 
@@ -36,13 +36,13 @@ Det finns en separat sidredigerare med det klassiska användargränssnittet som 
 
 ## Få hjälp {#accessing-help}
 
-Olika **Hjälp** -resurser kan nås direkt från AEM:
+Olika **Hjälp** kan nås direkt från AEM:
 
 Förutom att få tillgång till [hjälp från konsolens verktygsfält](/help/sites-classic-ui-authoring/author-env-basic-handling.md#accessing-help)kan du även komma åt hjälpen från sidan (med ? ikon) när du redigerar en sida:
 
 ![Sidekick, komprimerad](do-not-localize/sidekick-collapsed-2.png)
 
-Eller genom att använda **Hjälp** knappen i redigeringsdialogrutan för specifika komponenter, detta visar sammanhangsberoende hjälp.
+Eller genom att använda **Hjälp** i redigeringsdialogrutan för specifika komponenter. Då visas sammanhangsberoende hjälp.
 
 ## Sidekick {#sidekick}
 
@@ -68,7 +68,7 @@ Du kan använda innehållssökaren för att hitta en rad olika resurser. Om det 
 
 Med alla alternativ kan du [söka efter specifika objekt](#the-content-finder).
 
-### Söker efter bilder {#finding-images}
+### Hitta bilder {#finding-images}
 
 På den här fliken visas alla bilder i databasen.
 
@@ -86,7 +86,7 @@ När du har skapat ett nedladdningsstycke på sidan kan du dra ett objekt och sl
 
 ### Söka efter filmer {#finding-movies}
 
-På den här fliken visas alla filmer (till exempel Flash) i databasen.
+På den här fliken visas alla filmer (till exempel Flashar) i databasen.
 
 När du har skapat ett lämpligt stycke (till exempel Flash) på sidan kan du dra ett objekt och släppa det i stycket.
 
@@ -98,7 +98,7 @@ På den här fliken visas alla produkter. När du har skapat ett lämpligt styck
 
 ![chlimage_1-114](assets/chlimage_1-114.png)
 
-### Söker efter sidor {#finding-pages}
+### Hitta sidor {#finding-pages}
 
 På den här fliken visas alla sidor. Dubbelklicka på en sida för att öppna den för redigering.
 
@@ -157,7 +157,7 @@ AEM låter dig se vilka sidor som är länkade till den sida du arbetar med just
 
 Så här visar du direkta sidreferenser:
 
-1. I sidosparken väljer du **Sida** -flikikon.
+1. I sidosparken väljer du **Sida** -tabbikonen.
 
    ![screen_shot_2012-02-16at83127pm](assets/screen_shot_2012-02-16at83127pm.png)
 
@@ -176,7 +176,7 @@ I vissa situationer finns det ytterligare åtgärder att vidta från Sidekick, b
 
 ## Granskningslogg {#audit-log}
 
-The **Granskningslogg** kan nås via **Information** sidosparkens flik. Den innehåller en förteckning över de senaste åtgärder som vidtagits på den aktuella sidan. till exempel:
+The **Granskningslogg** kan nås via **Information** sidosparkens flik. Här listas de senaste åtgärderna som har utförts på den aktuella sidan, till exempel:
 
 ![chlimage_1-118](assets/chlimage_1-118.png)
 

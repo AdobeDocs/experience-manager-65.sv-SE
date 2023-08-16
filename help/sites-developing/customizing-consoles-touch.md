@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 61a4e196-bd53-4ef0-816b-c14401462457
 docset: aem65
 exl-id: 6e67f2b3-78b9-45f2-b496-61776b9fd9cc
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '671'
+source-wordcount: '669'
 ht-degree: 0%
 
 ---
@@ -44,9 +44,9 @@ De kan användas på många sätt för att utöka dina AEM. En liten markering b
 
 >[!CAUTION]
 >
->Du ***måste*** ändrar ingenting i `/libs` bana.
+>Du ***måste*** ändrar ingenting i dialogrutan `/libs` bana.
 >
->Detta beror på innehållet i `/libs` skrivs över nästa gång du uppgraderar din instans (och kan mycket väl skrivas över när du använder en snabbkorrigering eller ett funktionspaket).
+>Detta beror på innehållet i `/libs` skrivs över nästa gång du uppgraderar din instans (och kan mycket väl skrivas över när du installerar en snabbkorrigering eller ett funktionspaket).
 >
 >Den rekommenderade metoden för konfiguration och andra ändringar är:
 >
@@ -57,7 +57,7 @@ De kan användas på många sätt för att utöka dina AEM. En liten markering b
 
 Följande plats i `/libs` struktur kan överlappas:
 
-* Konsoler (alla konsoler baserade på GRA-sidor). till exempel:
+* konsoler (alla konsoler baserade på GRA-sidor), till exempel:
 
    * `/libs/wcm/core/content`
 
@@ -125,13 +125,13 @@ Du kan anpassa standardvyn (kolumn, kort, lista) för en konsol:
 
    `jcr:content/body/content/header/items/default/items/create/items/createsite/rendercondition`
 
-   Med hjälp av egenskaper på den här noden kan du definiera `groups` får utföra den specifika åtgärden, till exempel `administrators`
+   Med hjälp av egenskaper på den här noden kan du definiera `groups` som kan utföra den specifika åtgärden, till exempel `administrators`
 
 ### Anpassa kolumner i listvyn {#customizing-columns-in-the-list-view}
 
 >[!NOTE]
 >
->Den här funktionen är optimerad för kolumner med textfält; för andra datatyper är det möjligt att täcka över `cq/gui/components/siteadmin/admin/listview/columns/analyticscolumnrenderer` in `/apps`.
+>Den här funktionen är optimerad för kolumner med textfält. För andra datatyper är det möjligt att täcka över `cq/gui/components/siteadmin/admin/listview/columns/analyticscolumnrenderer` in `/apps`.
 
 Så här anpassar du kolumnerna i listvyn:
 
@@ -158,6 +158,6 @@ Så här anpassar du kolumnerna i listvyn:
 
 ### Filtreringsresurser {#filtering-resources}
 
-När du använder en konsol är ett vanligt användningsfall när användaren måste välja bland resurser (till exempel sidor, komponenter, resurser osv.). Detta kan vara en lista som författaren till exempel måste välja ett objekt från.
+När du använder en konsol är det vanligt att användaren måste välja bland resurser (till exempel sidor, komponenter, resurser osv.). Detta kan vara en lista som författaren till exempel måste välja ett objekt från.
 
 För att hålla listan i en rimlig storlek och även relevant för användningsfallet kan ett filter implementeras i form av ett anpassat predikat. Se [den här artikeln](/help/sites-developing/customizing-page-authoring-touch.md#filtering-resources) för mer information.

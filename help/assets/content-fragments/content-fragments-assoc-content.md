@@ -4,7 +4,7 @@ description: Förstå hur AEM tillhörande innehållsfunktion tillhandahåller a
 feature: Content Fragments
 role: User
 exl-id: 8b93fd6e-47d1-46fd-901b-621caa25be7b
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 10227bcfcfd5a9b0f126fee74dce6ec7842f5e95
 workflow-type: tm+mt
 source-wordcount: '245'
 ht-degree: 4%
@@ -30,11 +30,11 @@ För att kunna skapa associationen måste du först [lägga till mediefiler i en
 1. Beroende på om några samlingar redan har associerats eller inte väljer du antingen:
 
    * **Associera innehåll** - det här blir den första associerade samlingen
-   * **Associera samling** - associerade samlingar har redan konfigurerats
+   * **Associera samling** - associerade samlingar som redan har konfigurerats
 
 1. Välj önskad samling.
 
-   Du kan också lägga till själva fragmentet i den valda samlingen; detta hjälper till att spåra.
+   Du kan också lägga till själva fragmentet i den valda samlingen. Detta hjälper till att spåra.
 
    ![Välj samling](assets/cfm-assoc-content-02.png)
 

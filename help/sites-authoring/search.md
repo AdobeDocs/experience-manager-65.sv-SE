@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: 4ec15013-f7ab-44d6-8053-ed28b14f95e2
 docset: aem65
 exl-id: dd65b308-c449-4f64-9f46-0797b922910f
-source-git-commit: b3889b1897f0ec0c5bbf60c346b77b2906175904
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '507'
+source-wordcount: '506'
 ht-degree: 6%
 
 ---
@@ -22,7 +22,7 @@ I författarmiljön i AEM finns olika sätt att söka efter innehåll, beroende 
 
 >[!NOTE]
 >
->Utanför redigeringsmiljön finns det även andra sökfunktioner, till exempel [Query Builder](/help/sites-developing/querybuilder-api.md) och [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md).
+>Utanför redigeringsmiljön finns det även andra sökfunktioner, till exempel [Frågebyggaren](/help/sites-developing/querybuilder-api.md) och [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md).
 
 ## Grunderna i sökning {#search-basics}
 
@@ -52,10 +52,10 @@ Så här söker och filtrerar du resurser:
 
    ![screen_shot_2018-03-23at101445](assets/screen_shot_2018-03-23at101445.png)
 
-1. Om det behövs kan du ta bort platsfiltret (välj **X** på det filter som du vill ta bort) för att söka i alla konsoler/resurstyper.
+1. Om det behövs kan du ta bort platsfiltret (välj **X** på filtret som du vill ta bort) för att söka i alla konsoler/resurstyper.
 1. Resultaten visas, grupperade efter konsol och relaterad resurstyp.
 
-   Du kan antingen välja en specifik resurs (för ytterligare åtgärder) eller gå nedåt genom att välja önskad resurstyp; till exempel **Visa alla platser**:
+   Du kan antingen välja en specifik resurs (för ytterligare åtgärd) eller gå ned på detaljnivå genom att välja önskad resurstyp, till exempel **Visa alla platser**:
 
    ![screen-shot_2019-03-05at101900](assets/screen-shot_2019-03-05at101900.png)
 
@@ -70,7 +70,7 @@ Så här söker och filtrerar du resurser:
    * Sparade sökningar
    * Sökkatalog
    * Taggar
-   * Sökvillkor; till exempel Ändrade datum, Publiceringsstatus, LiveCopy-status.
+   * Sökvillkor, till exempel Ändrade datum, Publiceringsstatus, LiveCopy-status.
 
    >[!NOTE]
    >
@@ -78,7 +78,7 @@ Så här söker och filtrerar du resurser:
    >
    >
    >
-   >    * Beroende på vilken resurstyp du har valt; Exempelvis är kriterierna Assets och Communities begripligt specialiserade.
+   >    * Beroende på vilken resurstyp du har valt, är t.ex. kriterierna Resurser och Communities begripligt specialiserade.
    >    * Din instans som [Sök i Forms](/help/sites-administering/search-forms.md) kan anpassas (lämpligt för platsen i AEM).
    >
    >
@@ -105,7 +105,7 @@ Förutom att söka efter en mängd olika aspekter kan du även spara en viss sö
 
    ![screen-shot_2019-03-05at102613-1](assets/screen-shot_2019-03-05at102613-1.png)
 
-1. Tilldela ett namn och använd sedan **Spara** för att bekräfta:
+1. Tilldela ett namn och använd sedan **Spara** bekräfta:
 
    ![screen-shot_2019-03-05at102725](assets/screen-shot_2019-03-05at102725.png)
 

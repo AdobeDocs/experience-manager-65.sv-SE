@@ -4,9 +4,9 @@ description: Det går inte att öppna XFA-baserad PDF forms i Google Chrome, Fir
 seo-title: Unable to open XFA-based PDF forms in Google Chrome, Firefox, Microsoft Edge, Microsoft Internet Explorer, or Apple Safari
 feature: Adaptive Forms
 exl-id: fdd15315-e0d6-4d80-acb4-2e0ecec716c4
-source-git-commit: c47b4dcfd2fbdcb0b98ad815f5b04d8f593e4f64
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '385'
+source-wordcount: '384'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 Många senaste webbläsarversioner har fått sitt eget begränsade stöd för XFA-baserad PDF forms. Även om dessa webbläsare kan öppna XFA-baserad PDF forms är de tillgängliga funktionerna begränsade. Om du inte kan öppna eller skicka ett XFA-baserat PDF-formulär i en modern webbläsare använder du någon av följande metoder:
 
 * Använd [Adobe® Acrobat®](https://www.adobe.com/acrobat.html) eller [Adobe® Adobe® Reader®](https://get.adobe.com/reader/), version 8 eller senare för att öppna och skicka XFA-baserad PDF forms.
-* Med Acrobat och Reader i Microsoft® Windows® kan du konfigurera så att PDF öppnas i skyddat läge, vilket förhindrar att XFA-baserat PDF forms öppnas. Kontrollera att Protected View-läget i Acrobat eller Reader är inaktiverat. Mer information finns i [Skyddad vy (endast Windows)](https://helpx.adobe.com/in/reader/using/protected-mode-windows.html).
+* I Microsoft® Windows® kan du konfigurera till att öppna PDF i läget Skyddad vy i Acrobat och Reader, vilket förhindrar att XFA-baserade PDF forms öppnas. Kontrollera att Protected View-läget i Acrobat eller Reader är inaktiverat. Mer information finns i [Skyddad vy (endast Windows)](https://helpx.adobe.com/in/reader/using/protected-mode-windows.html).
 * (För Forms-utvecklare) Adobe Experience Manager Forms erbjuder även support för:
 
    * [återge XFA-baserade formulär i HTML5 Forms](https://experienceleague.adobe.com/docs/experience-manager-65/forms/html5-forms/introduction.html?#key-capabilities-of-html-forms-br) så att formulären kan öppnas i webbläsare som har stöd för HTML5, inklusive webbläsare som körs på mobila enheter som iPad. Formuläråtergivningen i HTML5 bevarar layouten i formulärdesignen och stöder de flesta formulärlogik (till exempel JavaScript, formulärberäkning och formulärvalidering) som är inbäddad i XFA-formulärmallen.

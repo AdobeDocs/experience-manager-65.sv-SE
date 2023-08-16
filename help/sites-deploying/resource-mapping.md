@@ -8,9 +8,9 @@ content-type: reference
 docset: aem65
 feature: Configuring
 exl-id: 3eebdd38-da5b-4c38-868a-22c3c7a97b66
-source-git-commit: 260f71acd330167572d817fdf145a018b09cbc65
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '522'
+source-wordcount: '521'
 ht-degree: 0%
 
 ---
@@ -40,17 +40,17 @@ När mappningen automatiskt lägger till prefixet `/content` till `/we-retail/en
 
 >[!NOTE]
 >
->Läs Sling-dokumentationen och [Mappningar för resursupplösning](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html) och [Resurser](https://sling.apache.org/documentation/the-sling-engine/resources.html) för ytterligare information.
+>Läs Sling-dokumentationen och [Mappningar för resursupplösning](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html) och [Resurs](https://sling.apache.org/documentation/the-sling-engine/resources.html) för ytterligare information.
 
 ## Visa mappningsdefinitioner {#viewing-mapping-definitions}
 
 Mappningarna består av två listor som JCR-resurslösaren utvärderar (högst upp) för att hitta en matchning.
 
-De här listorna kan visas (tillsammans med konfigurationsinformation) under **JCR ResourceResolver** Valet av Felix-konsolen. till exempel `https://<*host*>:<*port*>/system/console/jcrresolver`:
+De här listorna kan visas (tillsammans med konfigurationsinformation) under **JCR ResourceResolver** Valet av Felix-konsolen, till exempel `https://<*host*>:<*port*>/system/console/jcrresolver`:
 
 * Konfiguration Visar den aktuella konfigurationen (enligt definition för [Resurslösare för Apache Sling](/help/sites-deploying/osgi-configuration-settings.md#apacheslingresourceresolver)).
 
-* Konfigurationstest Detta gör att du kan ange en URL eller resurssökväg. Klicka **Lös** eller **Karta** för att bekräfta hur systemet ska omforma posten.
+* Konfigurationstest Här kan du ange en URL eller resurssökväg. Klicka **Lös** eller **Karta** för att bekräfta hur systemet ska omforma posten.
 
 * **Matcha mappningsposter**
 Listan över poster som används av metoderna ResourceResolver.resolve för att mappa URL:er till Resources.
@@ -130,7 +130,7 @@ hade blivit ombedd.
 
 >[!NOTE]
 >
->Se [Resurser](https://sling.apache.org/documentation/the-sling-engine/resources.html) I Sling Documentation finns mer information om vilka snedsättningsegenskaper som finns och hur de kan konfigureras.
+>Se [Resurs](https://sling.apache.org/documentation/the-sling-engine/resources.html) I Sling Documentation finns mer information om vilka snedsättningsegenskaper som finns och hur de kan konfigureras.
 
 >[!NOTE]
 >

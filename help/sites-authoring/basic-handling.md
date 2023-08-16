@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: 21181a6f-b434-40ed-8eb1-ebdfc98964dd
 docset: aem65
 exl-id: ef1a3997-feb4-4cb0-9396-c8335b69bb10
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '3025'
+source-wordcount: '3017'
 ht-degree: 3%
 
 ---
@@ -30,7 +30,7 @@ ht-degree: 3%
 
 ### Ett pekaktiverat användargränssnitt {#a-touch-enabled-ui}
 
-AEM användargränssnitt har aktiverats för beröring. Med ett pekaktiverat gränssnitt kan du använda touchfunktioner för att interagera med programvaran med gester som att trycka, hålla ned och dra. Detta står i kontrast till hur ett vanligt skrivbordsgränssnitt fungerar med musåtgärder som att klicka, dubbelklicka, högerklicka och föra musen över.
+AEM användargränssnitt har aktiverats för beröring. Med ett pekaktiverat gränssnitt kan du använda touchfunktioner för att interagera med programmet med gester som att trycka, hålla ned och dra. Detta står i kontrast till hur ett vanligt skrivbordsgränssnitt fungerar med musåtgärder som att klicka, dubbelklicka, högerklicka och föra musen över.
 
 När användargränssnittet för AEM är pekaktiverat kan du använda pekgester på dina touchenheter (till exempel mobilenheter eller surfplattor) och musåtgärder på en vanlig stationär dator.
 
@@ -48,7 +48,7 @@ Omedelbart efter att du loggat in kommer du till [Navigeringspanelen](#navigatio
 
 ### Produktnavigering {#product-navigation}
 
-När en användare först kommer åt en konsol startas en produktnavigeringssjälvstudiekurs. Klicka eller tryck en minut för att få en bra överblick över den grundläggande hanteringen av AEM.
+När en användare först kommer åt en konsol startas en produktnavigeringssjälvstudie. Klicka eller tryck en minut för att få en bra överblick över den grundläggande hanteringen av AEM.
 
 ![Produktnavigering](assets/bh-02.png)
 
@@ -109,7 +109,7 @@ Följande konsoler finns i Navigation:
   </tr>
   <tr>
    <td>Forms</td>
-   <td>Med den här konsolen kan du skapa, hantera och bearbeta <a href="/help/forms/home.md">formulär och dokument</a>.</td>
+   <td>Med konsolen kan du skapa, hantera och bearbeta <a href="/help/forms/home.md">formulär och dokument</a>.</td>
   </tr>
   <tr>
    <td>Personanpassning</td>
@@ -170,7 +170,7 @@ Rubriken visas alltid längst upp på skärmen. De flesta alternativen i huvudet
 
   >[!NOTE]
   >
-  >AEM levereras förinläst med administrativa uppgifter som tilldelats administratörsanvändargruppen. Se [Inkorgen - administrativa uppgifter som inte är tillgängliga](/help/sites-authoring/inbox.md#out-of-the-box-administrative-tasks) för mer information.
+  >AEM levereras förinläst med administrativa uppgifter som tilldelats administratörsanvändargruppen. Se [Din inkorg - administrativa uppgifter som inte finns att tillgå](/help/sites-authoring/inbox.md#out-of-the-box-administrative-tasks) för mer information.
 
 * [Användaregenskaper](/help/sites-authoring/user-properties.md)
 
@@ -180,7 +180,7 @@ Rubriken visas alltid längst upp på skärmen. De flesta alternativen i huvudet
 
   ![Rälsväljarlistan visas till vänster på Adobe Experience Manager-skärmen.](do-not-localize/screen_shot_2018-03-23at103943.png)
 
-  Vilka alternativ som visas beror på den aktuella konsolen. I **Webbplatser** Du kan bara markera innehåll (standardvärdet), tidslinjen, referenser eller sidopanelen för filter.
+  Vilka alternativ som visas beror på den aktuella konsolen. Till exempel i **Webbplatser** Du kan bara markera innehåll (standardvärdet), tidslinjen, referenser eller sidopanelen för filter.
 
   ![Järnvägsväljare](assets/screen_shot_2018-03-23at104029.png)
 
@@ -204,7 +204,7 @@ Rubriken visas alltid längst upp på skärmen. De flesta alternativen i huvudet
 
   ![Skapa](assets/screen_shot_2018-03-23at104301.png)
 
-  När du klickar på det här alternativet lämpar sig de alternativ som visas för konsolen/kontexten.
+  När du klickar på det här alternativet passar de alternativ som visas konsolen/kontexten.
 
 * [Vyer](/help/sites-authoring/basic-handling.md#viewingandselectingyourresourcescardlistcolumn)
 
@@ -212,7 +212,7 @@ Rubriken visas alltid längst upp på skärmen. De flesta alternativen i huvudet
 
   ![Kolumnvy](assets/bh-07.png)
 
-  Du kan växla mellan kolumnvy, kortvy och listvy; i listvyn visas även visningsinställningarna.
+  Du kan växla mellan kolumnvy, kortvy och listvy. I listvyn visas även visningsinställningarna.
 
   ![Växla vy](assets/bh-09.png)
 
@@ -220,7 +220,7 @@ Rubriken visas alltid längst upp på skärmen. De flesta alternativen i huvudet
 
   Du kan bara navigera på en webbplats med hjälp av tangentbordet. Detta använder webbläsarens standardfunktioner i **TABB** tangent (eller **OPT+TAB**) för att flytta dig mellan element på sidan som *fokuserbar*.
 
-  I **Webbplatser** konsolen där det finns ett tillagt alternativ för  **Hoppa till huvudinnehåll**. Detta syns när du *tab* genom rubrikalternativen och snabbar upp navigeringen genom att du kan hoppa över standardelementen i verktygsfältet (produkten) och ta dig direkt till huvudinnehållet.
+  I **Webbplatser** konsolen där det finns ett tillagt alternativ  **Hoppa till huvudinnehåll**. Detta syns när du *tab* genom rubrikalternativen och snabbar upp navigeringen genom att du kan hoppa över standardelementen i verktygsfältet (produkten) och ta dig direkt till huvudinnehållet.
 
   ![Hoppa till huvudinnehåll](assets/bh-30.png)
 
@@ -250,7 +250,7 @@ Det finns olika hjälpresurser:
 
 * **Verktygskonsol**
 
-  Från **verktyg** konsolen som du också kan komma åt externt **Resurser**:
+  Från **verktyg** konsolen som du också kan komma åt externt **Resurs**:
 
    * **Dokumentation**
 Visa dokumentationen för Web Experience Management
@@ -264,7 +264,7 @@ Resurser och nedladdningar för utvecklare
   >
   >En översikt över alla kortkommandon finns i följande dokumentation:
   >
-  >* [Kortkommandon för att redigera sidor](/help/sites-authoring/page-authoring-keyboard-shortcuts.md)
+  >* [Kortkommandon för redigering av sidor](/help/sites-authoring/page-authoring-keyboard-shortcuts.md)
   >* [Kortkommandon för konsoler](/help/sites-authoring/keyboard-shortcuts.md)
 
 ## Verktygsfältet Åtgärder {#actions-toolbar}
@@ -272,7 +272,7 @@ Resurser och nedladdningar för utvecklare
 När en resurs är markerad (till exempel en sida eller en resurs) visas olika åtgärder med ikoner med förklarande text i verktygsfältet. Dessa åtgärder är beroende av:
 
 * Den aktuella konsolen.
-* Det aktuella sammanhanget.
+* Den aktuella kontexten.
 * Om du är [markeringsläge](#navigatingandselectionmode).
 
 Den åtgärd som är tillgänglig i verktygsfältet ändras så att den återspeglar de åtgärder du kan vidta för de valda objekten.
@@ -291,7 +291,7 @@ På grund av utrymmesbegränsningar i vissa fönster kan verktygsfältet snabbt 
 
 I [Kortvy](#cardviewquickactions) vissa åtgärder är tillgängliga både som snabbikoner och i verktygsfältet. Snabbåtgärdsikoner är tillgängliga för ett enskilt objekt i taget och eliminerar behovet av att välja i förväg.
 
-Snabbåtgärderna är synliga när du för musen över ett resurskort (en stationär enhet). Vilka snabbåtgärder som är tillgängliga beror på konsolen och sammanhanget. Här följer t.ex. snabbåtgärderna för en sida i **Webbplatser** konsol:
+Snabbåtgärderna visas när du för musen över ett resurskort (en stationär enhet). Vilka snabbåtgärder som är tillgängliga beror på konsolen och sammanhanget. Här följer t.ex. snabbåtgärderna för en sida i **Webbplatser** konsol:
 
 ![Snabbåtgärder](assets/bh-13.png)
 
@@ -308,7 +308,7 @@ Du kan visa, navigera i och välja (för ytterligare åtgärder) dina resurser m
 
 >[!NOTE]
 >
->Som standard visas inte de ursprungliga återgivningarna av resurser i användargränssnittet som miniatyrbilder i någon av vyerna i AEM Assets. Om du är administratör kan du använda övertäckningar för att konfigurera AEM Assets så att ursprungliga återgivningar visas som miniatyrbilder.
+>Som standard visas inte de ursprungliga återgivningarna av resurser i användargränssnittet som miniatyrbilder i någon av vyerna i AEM Assets. Om du är administratör kan du använda övertäckningar för att konfigurera AEM Assets så att de ursprungliga återgivningarna visas som miniatyrbilder.
 
 ### Välja resurser {#selecting-resources}
 
@@ -377,7 +377,7 @@ Du kan markera alla objekt i valfri vy genom att klicka på **Markera alla** i k
 
 När du markerar objekt visas antalet markerade objekt längst upp till höger i verktygsfältet.
 
-Du kan avmarkera alla objekt och avsluta markeringsläget genom att antingen:
+Du kan avmarkera alla objekt och avsluta markeringsläget antingen:
 
 * klicka eller trycka på **X** bredvid antalet,
 
@@ -389,13 +389,13 @@ I alla vyer kan du avmarkera alla objekt genom att trycka på Esc på tangentbor
 
 #### Markera exempel {#selecting-example}
 
-1. I kortvyn:
+1. Till exempel i kortvyn:
 
    ![Välj - kortvy](assets/bh-15.png)
 
-1. När du har valt en resurs täcks den översta rubriken av [åtgärdsverktygsfält](#actionstoolbar) som ger åtkomst till åtgärder som för närvarande gäller för den valda resursen.
+1. När du har valt en resurs täcks den översta rubriken av [funktionsmakron, verktygsfält](#actionstoolbar) som ger åtkomst till åtgärder som för närvarande gäller för den valda resursen.
 
-   Om du vill avsluta markeringsläget väljer du **X** längst upp till höger, eller använd **escape**.
+   Välj **X** längst upp till höger, eller använd **escape**.
 
 ### Kolumnvy {#column-view}
 
@@ -424,7 +424,7 @@ Om du väljer en resurs i kolumnen längst till vänster visas de underordnade r
 
   När en sida är markerad i kolumnvyn visas den markerade sidan i den sista kolumnen tillsammans med följande information:
 
-   * Sidtitel
+   * Sidrubrik
    * Sidnamn (del av sidans URL)
    * Mall som sidan baseras på
    * Ändringsinformation
@@ -537,13 +537,13 @@ Med innehållsträdets sidopanel i kombination med en listvy eller kortvy kan an
 
 Tidslinjen kan användas för att visa och/eller initiera händelser som har inträffat på den valda resursen. Om du vill öppna tidslinjekolumnen använder du järnvägsväljaren:
 
-I tidslinjekolumnen kan du:
+Med tidslinjekolumnen kan du:
 
 * [Visa olika händelser](#timelineviewevents) relaterat till ett valt objekt.
 
    * Händelsetyperna kan väljas i listrutan:
 
-      * [Kommentarer](#timelineaddingandviewingcomments)
+      * [Kommentar](#timelineaddingandviewingcomments)
       * Anteckningar
       * Verksamhet
       * [Launches](/help/sites-authoring/launches.md)

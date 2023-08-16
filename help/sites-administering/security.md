@@ -1,6 +1,6 @@
 ---
 title: Användaradministration och -säkerhet
-description: Läs mer om användaradministration och säkerhet i AEM.
+description: Läs mer om användaradministration och -säkerhet i AEM.
 uuid: 4512c0bf-71bf-4f64-99f6-f4fa5a61d572
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,9 +10,9 @@ discoiquuid: e72da81b-4085-49b0-86c3-11ad48978a8a
 docset: aem65
 exl-id: 53d8c654-8017-4528-a44e-e362d8b59f82
 feature: Security
-source-git-commit: 7803f1df1e05dc838cb458026f8dbd27de9cb924
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '5402'
+source-wordcount: '5401'
 ht-degree: 0%
 
 ---
@@ -37,8 +37,8 @@ Grupper är samlingar med användare, andra grupper eller båda. Alla dessa saml
 
 Deras främsta syfte är att förenkla underhållsprocessen genom att minska antalet enheter som ska uppdateras, eftersom en ändring görs i en grupp tillämpas på alla medlemmar i gruppen. Grupper återspeglar ofta:
 
-* En roll i ansökan. till exempel någon som har rätt att surfa innehållet eller någon som har rätt att bidra med innehåll.
-* din egen organisation, kan du utöka rollerna för att skilja mellan medarbetare från olika avdelningar när de är begränsade till olika grenar i innehållsträdet.
+* en roll i programmet, t.ex. någon som har rätt att surfa innehållet eller någon som har rätt att bidra med innehåll.
+* din egen organisation. Du kanske vill utöka rollerna för att skilja på medverkande från olika avdelningar när de är begränsade till olika grenar i innehållsträdet.
 
 Därför tenderar grupperna att förbli stabila, medan användarna kommer och går oftare.
 
@@ -96,13 +96,13 @@ I följande tabeller visas varje objekt tillsammans med:
   <tr>
    <td>medverkande</td>
    <td>Grupp</td>
-   <td><p>Grundläggande behörigheter som tillåter användaren att skriva innehåll (som i, endast funktioner).</p> <p>Tilldelar inga privilegier till /content-trädet. Måste tilldelas för de enskilda grupperna eller användarna.</p> </td>
+   <td><p>Grundläggande behörigheter som tillåter användaren att skriva innehåll (som i, endast funktionalitet).</p> <p>Tilldelar inga privilegier till /content-trädet. Måste tilldelas för de enskilda grupperna eller användarna.</p> </td>
    <td> </td>
   </tr>
   <tr>
    <td>dam-users</td>
    <td>Grupp</td>
-   <td>Körklar referensgrupp för en typisk AEM Assets-användare. Medlemmar i den här gruppen har lämplig behörighet för att aktivera överföring/delning av resurser och samlingar.</td>
+   <td>Körklar referensgrupp för vanliga AEM Assets-användare. Medlemmar i den här gruppen har lämplig behörighet för att aktivera överföring/delning av resurser och samlingar.</td>
    <td> </td>
   </tr>
   <tr>
@@ -132,7 +132,7 @@ I följande tabeller visas varje objekt tillsammans med:
   <tr>
    <td>arbetsflöde-användare</td>
    <td>Grupp</td>
-   <td><p>En användare som deltar i ett arbetsflöde måste vara medlem i ett grupparbetsflöde-användare. Ger användaren fullständig åtkomst till: /etc/workflow/instances så att de kan uppdatera arbetsflödesinstansen.</p> <p>Gruppen ingår i standardinstallationen, men du måste lägga till dina användare manuellt i gruppen.</p> </td>
+   <td><p>En användare som deltar i ett arbetsflöde måste vara medlem i ett grupparbetsflöde-användare. Ger användaren fullständig åtkomst till: /etc/workflow/instances så att han/hon kan uppdatera arbetsflödesinstansen.</p> <p>Gruppen ingår i standardinstallationen, men du måste lägga till dina användare manuellt i gruppen.</p> </td>
   </tr>
  </tbody>
 </table>
@@ -151,7 +151,7 @@ Där bockmarkeringen är i rutnätet visas även vilka behörigheter användarna
 
 ### Åtgärder {#actions}
 
-Åtgärder kan utföras på en sida (resurs). För varje sida i hierarkin kan du ange vilken åtgärd användaren får utföra på sidan. [Behörigheter](#permissions-and-acls) gör att du kan tillåta eller neka en åtgärd.
+Åtgärder kan utföras på en sida (resurs). För varje sida i hierarkin kan du ange vilken åtgärd användaren får utföra på sidan. [Behörigheter](#permissions-and-acls) kan du tillåta eller neka en åtgärd.
 
 <table>
  <tbody>
@@ -223,7 +223,7 @@ AEM WCM använder ACL-listor (Access Control Lists) för att organisera de behö
 >* `*/social/relationships/friend/*`
 >* eller `*/social/relationships/pending-following/*`.
 >
->När du skapar åtkomstkontrollistor som är specifika för communities, kan medlemmar som ansluter till de communityn beviljas ytterligare behörigheter. När användare ansluter till communities på: `/content/we-retail/us/en/community`
+>När du skapar åtkomstkontrollistor som är specifika för communities, kan medlemmar som ansluter till de communityn beviljas ytterligare behörigheter. När användare till exempel går med i communities på: `/content/we-retail/us/en/community`
 
 ### Behörighetsstater {#permission-states}
 
@@ -231,9 +231,9 @@ AEM WCM använder ACL-listor (Access Control Lists) för att organisera de behö
 >
 >För CQ 5.3-användare:
 >
->Till skillnad från tidigare CQ-versioner **skapa** och **delete** ska inte längre beviljas om en användare endast får ändra sidor. I stället ger du **ändra** bara om du vill att användarna ska kunna skapa, ändra eller ta bort komponenter på befintliga sidor.
+>Till skillnad från tidigare CQ-versioner **skapa** och **delete** ska inte längre beviljas om en användare endast får ändra sidor. I stället ska du tilldela **ändra** bara om du vill att användarna ska kunna skapa, ändra eller ta bort komponenter på befintliga sidor.
 >
->Av bakåtkompatibilitetsskäl utförs inte den speciella behandlingen av noder som definierar i funktionsmakrotesten. **jcr:innehåll** med hänsyn till.
+>Av bakåtkompatibilitetsskäl utförs inte den speciella behandlingen av noder som definierar i åtgärdsproven **jcr:innehåll** med hänsyn till.
 
 | **Åtgärd** | **Beskrivning** |
 |---|---|
@@ -311,7 +311,7 @@ Tillsammans med stödrastervyn AEM en detaljerad vy över behörigheter för en 
 
 Förutom att visa information kan du även inkludera eller exkludera den aktuella användaren eller gruppen från en grupp. Se [Lägga till användare eller grupper när behörigheter läggs till](#adding-users-or-groups-while-adding-permissions). Ändringarna som görs här visas omedelbart i den övre delen av den detaljerade vyn.
 
-Om du vill öppna detaljvyn går du till **Behörigheter** flik, klicka **Detaljer** för alla valda grupper/användare och sökvägar.
+Du öppnar detaljvyn i dialogrutan **Behörigheter** flik, klicka **Information** för alla valda grupper/användare och sökvägar.
 
 ![behörighetsinformation](assets/permissiondetails.png)
 
@@ -369,7 +369,7 @@ Nedan beskrivs de bästa sätten att arbeta med behörigheter och behörigheter:
 
 | Regel | Orsak |
 |--- |--- |
-| *Använd grupper* | Undvik att tilldela åtkomsträttigheter per användare. Det finns flera skäl till detta råd:<ul><li>Du har många fler användare än grupper, så grupper förenklar strukturen.</li><li>Grupper ger en översikt över alla konton.</li> <li>Arv är enklare med grupper.</li><li>Användarna kommer och går. Grupper är långsiktiga.</li></ul> |
+| *Använd grupper* | Undvik att tilldela behörigheter per användare. Det finns flera skäl till detta råd:<ul><li>Du har många fler användare än grupper, så grupper förenklar strukturen.</li><li>Grupper ger en översikt över alla konton.</li> <li>Arv är enklare med grupper.</li><li>Användarna kommer och går. Grupper är långsiktiga.</li></ul> |
 | *Var positiv* | Använd alltid Allow-satser för att ange gruppens rättigheter (när det är möjligt). Undvik att använda programsatsen Neka. Grupper utvärderas i ordning och ordningen kan definieras olika för olika användare. Med andra ord: Du kan ha liten kontroll över i vilken ordning programsatserna implementeras och utvärderas. Om du bara använder Tillåt-satser spelar ordningen ingen roll. |
 | *Behåll det enkelt* | Det är värt att investera lite tid och fundera när du konfigurerar en ny installation. Genom att använda en tydlig struktur förenklas det pågående underhållet och administrationen, vilket säkerställer att både dina nuvarande kollegor och framtida efterföljare enkelt kan förstå vad som implementeras. |
 | *Testa* | Använd en testinstallation för att öva och se till att du förstår relationen mellan olika användare och grupper. |
@@ -409,14 +409,14 @@ Flikarna ger åtkomst till olika konfigurationer:
 
 | Tabb | Beskrivning |
 |--- |--- |
-| Filterruta | En mekanism för filtrering av användare, grupper eller båda. Se [Filtrera användare och grupper](#filtering-users-and-groups). |
+| Filterruta | En mekanism för att filtrera användare, grupper eller båda i listan. Se [Filtrera användare och grupper](#filtering-users-and-groups). |
 | Dölj användare | En växlingsväxling som döljer alla listade användare och bara lämnar grupper. Se [Dölja användare och grupper](#hiding-users-and-groups). |
 | Göm grupper | En växlingsknapp som döljer alla grupper i listan och endast låter användare göra det. Se [Dölja användare och grupper](#hiding-users-and-groups). |
 | Redigera | En meny där du kan skapa och ta bort samt aktivera och inaktivera användare och grupper. Se [Skapa användare och grupper](#creating-users-and-groups) och [Ta bort användare och grupper](#deleting-users-and-groups). |
-| Egenskaper | Visar information om användaren eller gruppen som kan innehålla e-postinformation, en beskrivning och namninformation. Du kan även ändra en användares lösenord. Se [Skapa användare och grupper](#creating-users-and-groups), [Ändra användar- och gruppegenskaper](#modifying-user-and-group-properties) och [Ändra ett användarlösenord](#changing-a-user-password). |
+| Egenskaper | Visar information om användaren eller gruppen som kan innehålla e-postinformation, en beskrivning och namninformation. Här kan du även ändra en användares lösenord. Se [Skapa användare och grupper](#creating-users-and-groups), [Ändra användar- och gruppegenskaper](#modifying-user-and-group-properties) och [Ändra ett användarlösenord](#changing-a-user-password). |
 | Grupper | Visar alla grupper som den markerade användaren eller gruppen tillhör. Du kan tilldela den eller de markerade användarna till ytterligare grupper eller ta bort dem från grupper. Se [Grupper](#adding-users-or-groups-to-a-group). |
 | Medlemmar | Endast tillgängligt för grupper. Visar medlemmarna i en viss grupp. Se [Medlemmar](#members-adding-users-or-groups-to-a-group). |
-| Behörigheter | Du kan tilldela behörigheter till en användare eller grupp. Här kan du styra följande:<ul><li>Behörigheter för särskilda sidor/noder. Se [Ange behörigheter](#setting-permissions). </li><li>Behörigheter för att skapa och ta bort sidor och ändra hierarkin. ?? låter dig [tilldela behörigheter](#settingprivileges), t.ex. ändrad hierarki, med vilken du kan skapa och ta bort sidor,</li><li>Behörigheter relaterade till [replikeringsbehörigheter](#setting-replication-privileges) (vanligtvis från författare till publicering) enligt en sökväg.</li></ul> |
+| Behörigheter | Du kan tilldela behörigheter till en användare eller grupp. Här kan du styra följande:<ul><li>Behörigheter för särskilda sidor/noder. Se [Ange behörigheter](#setting-permissions). </li><li>Behörigheter för att skapa och ta bort sidor och ändra hierarkin. ???? [tilldela behörigheter](#settingprivileges), t.ex. ändrad hierarki, med vilken du kan skapa och ta bort sidor,</li><li>Behörigheter relaterade till [replikeringsbehörigheter](#setting-replication-privileges) (vanligtvis från författare till publicering) enligt en sökväg.</li></ul> |
 | Personifierare | Tillåter en annan användare att personifiera kontot. Användbar när du behöver en användare för att agera för en annan användares räkning. Se [Personifiera användare](#impersonating-another-user). |
 | Inställningar | Uppsättningar [inställningar för gruppen eller användaren](#setting-user-and-group-preferences). Till exempel språkinställningar. |
 
@@ -435,9 +435,9 @@ Så här filtrerar du användare eller grupper:
 
 ### Dölja användare och grupper {#hiding-users-and-groups}
 
-Att dölja användare eller grupper är ett annat sätt att filtrera listan över alla användare och grupper i ett system. Det finns två växlingsmekanismer. Om du klickar på Dölj användare döljs alla användare och om du klickar på Dölj grupper döljs alla grupper från vyn (du kan inte dölja både användare och grupper samtidigt). Information om hur du filtrerar listan med hjälp av ett filteruttryck finns i [Filtrera användare och grupper](#filtering-users-and-groups).
+Att dölja användare eller grupper är ett annat sätt att filtrera listan över alla användare och grupper i ett system. Det finns två växlingsmekanismer. Om du klickar på Dölj användare döljs alla användare och om du klickar på Dölj grupper döljs alla grupper (du kan inte dölja både användare och grupper samtidigt). Information om hur du filtrerar listan med hjälp av ett filteruttryck finns i [Filtrera användare och grupper](#filtering-users-and-groups).
 
-Så här döljer du användare och grupper:
+Dölj användare och grupper:
 
 1. I **Säkerhet** konsol, klicka **Dölj användare** eller **Göm grupper**. Den valda knappen visas markerad.
 
@@ -461,7 +461,7 @@ Så här skapar du en användare eller grupp:
 
    * Om du väljer **Skapa grupp** anger du ett grupp-ID och en valfri beskrivning.
 
-   ![creategroupdialog](assets/creategroupdialog.png)
+   ![creategroupDialog](assets/creategroupdialog.png)
 
 1. Klicka **Skapa**. Användaren eller gruppen som du skapade visas i trädlistan.
 
@@ -503,7 +503,7 @@ Använd följande procedur för att ändra en användares lösenord.
 
    ![cqsecurityuslösenord](assets/cqsecurityuserpassword.png)
 
-1. Ange det nya lösenordet två gånger; eftersom de inte visas i klartext är den här åtgärden till för bekräftelse - om de inte matchar visas ett fel.
+1. Ange det nya lösenordet två gånger. Eftersom de inte visas i klartext är den här åtgärden en bekräftelse - om de inte matchar visas ett fel i systemet.
 1. Klicka **Ange** för att aktivera det nya lösenordet för kontot.
 
 ### Lägga till användare eller grupper i en grupp {#adding-users-or-groups-to-a-group}
@@ -526,7 +526,7 @@ The **Grupper** visas vilka grupper det aktuella kontot tillhör. Du kan använd
 
 1. Klicka **Spara** för att spara ändringarna.
 
-### Medlemmar - lägga till användare eller grupper i en grupp {#members-adding-users-or-groups-to-a-group}
+### Medlemmar - Lägga till användare eller grupper i en grupp {#members-adding-users-or-groups-to-a-group}
 
 The **Medlemmar** Fliken fungerar bara för grupper och visar vilka användare och grupper som tillhör den aktuella gruppen. Du kan använda den för att lägga till konton i en grupp:
 
@@ -546,7 +546,7 @@ Så här lägger du till medlemmar i en grupp på en viss sökväg:
 
 1. Klicka på **Behörigheter** -fliken.
 
-1. Navigera till sökvägen som du vill lägga till behörigheter i och klicka på **Detaljer**. Den nedre delen av informationsfönstret innehåller information om vem som har behörighet för den sidan.
+1. Navigera till sökvägen som du vill lägga till behörigheter i och klicka på **Information**. Den nedre delen av informationsfönstret innehåller information om vem som har behörighet för den sidan.
 
    ![chlimage_1-113](assets/chlimage_1-113.png)
 
@@ -593,7 +593,7 @@ Så här tar du bort medlemmar från en grupp på en viss sökväg:
 
 1. Klicka på **Behörigheter** -fliken.
 
-1. Navigera till sökvägen som du vill ta bort behörigheter till och klicka på **Detaljer**. Den nedre delen av informationsfönstret innehåller information om vem som har behörighet för den sidan.
+1. Navigera till sökvägen som du vill ta bort behörigheter till och klicka på **Information**. Den nedre delen av informationsfönstret innehåller information om vem som har behörighet för den sidan.
 
    ![chlimage_1-114](assets/chlimage_1-114.png)
 
@@ -616,7 +616,7 @@ I det här avsnittet beskrivs hur du anger behörigheter, inklusive replikerings
 
 ### Ange behörigheter {#setting-permissions}
 
-Med behörigheter kan användare utföra vissa åtgärder på resurser på vissa sökvägar. Den innehåller även möjlighet att skapa eller ta bort sidor.
+Med behörigheter kan användare utföra vissa åtgärder på resurser på vissa sökvägar. Den innehåller även funktioner för att skapa eller ta bort sidor.
 
 Så här lägger du till, ändrar eller tar bort behörigheter:
 
@@ -626,11 +626,11 @@ Så här lägger du till, ändrar eller tar bort behörigheter:
 
    ![cquserpermissions](assets/cquserpermissions.png)
 
-1. Markera en kryssruta i trädstödrastret om du vill att den markerade användaren eller gruppen ska kunna utföra en åtgärd, eller avmarkera en kryssruta om du vill neka användaren eller gruppen att utföra en åtgärd. Mer information finns på **Detaljer**.
+1. Markera en kryssruta i trädstödrastret om du vill att den markerade användaren eller gruppen ska kunna utföra en åtgärd, eller avmarkera en kryssruta om du vill neka användaren eller gruppen att utföra en åtgärd. Mer information får du genom att klicka **Information**.
 
-1. När du är klar klickar du på **Spara**.
+1. När du är klar klickar du **Spara**.
 
-### Ange replikeringsprivilegier {#setting-replication-privileges}
+### Ange replikeringsbehörighet {#setting-replication-privileges}
 
 Replikeringsprivilegium är rätten att publicera innehåll, och det kan anges för grupper och användare.
 
@@ -644,7 +644,7 @@ Replikeringsprivilegium är rätten att publicera innehåll, och det kan anges f
 Så här anger du replikeringsbehörighet:
 
 1. Markera användaren eller gruppen i listan, dubbelklicka för att öppna och klicka på **Behörigheter**.
-1. Navigera till den sökväg där du vill att användaren ska ha replikeringsbehörighet eller [sök efter noder.](#searching-for-nodes)
+1. I rutnätet navigerar du till den sökväg där du vill att användaren ska ha replikeringsbehörighet eller [sök efter noder.](#searching-for-nodes)
 
 1. I **Replikera** vid den valda sökvägen markerar du en kryssruta för att lägga till replikeringsbehörighet för den användaren eller gruppen, eller avmarkerar kryssrutan för att ta bort replikeringsbehörighet. AEM visar en röd triangel var som helst där du har gjort ändringar som ännu inte har sparats.
 
@@ -670,7 +670,7 @@ I sökrutan kan du göra följande:
 | Nedåtpil | Startar sökningen igen. |
 | Retur-tangenten | Markerar en undernod och läser in den i trädstödrastret |
 
-* Fulltextsökning - Om söksträngen inte börjar med &quot;/&quot; utförs en fulltextsökning på alla noder under sökvägen &quot;/content&quot;.
+* Fulltextsökning - Om söksträngen inte börjar med ett &quot;/&quot; utförs en fulltextsökning på alla noder under sökvägen &quot;/content&quot;.
 
 ![cqsecurityfulltextsearch](assets/cqsecurityfulltextsearch.png)
 
@@ -710,7 +710,7 @@ Så här anger du användar- och gruppinställningar, inklusive språk, fönster
 
    ![cqsecuritypreferences](assets/cqsecuritypreferences.png)
 
-1. Gör de ändringar som behövs för gruppen eller användarinställningarna och klicka på **Spara** när du är klar.
+1. Gör de ändringar som behövs i grupp- eller användarinställningarna och klicka på **Spara** när du är klar.
 
 ### Ange att användare eller administratörer ska ha behörighet att hantera andra användare {#setting-users-or-administrators-to-have-the-privilege-to-manage-other-users}
 
@@ -732,11 +732,11 @@ Om du tänker implementera programspecifika behörigheter beskriver följande in
 
 Privilegiet för att ändra hierarkin täcks av en kombination av jcr-privilegier. Replikeringsprivilegiet är namngivet **crx:replikera** som lagras/utvärderas tillsammans med andra behörigheter i jcr-databasen. Den tillämpas dock inte på jcr-nivån.
 
-Definitionen och registreringen av anpassade behörigheter är officiellt en del av [Jackrabbit API](https://jackrabbit.apache.org/oak/docs/security/privilege.html) från och med version 2.4 (se även [JCR-2887](https://issues.apache.org/jira/browse/JCR-2887)). Ytterligare användning täcks av JCR Access Control Management som definieras av [JSR 283](https://jcp.org/en/jsr/detail?id=283) (avsnitt 16). API:t Jackrabbit definierar dessutom ett par tillägg.
+Definitionen och registreringen av anpassade behörigheter är officiellt en del av [Jackrabbit API](https://jackrabbit.apache.org/oak/docs/security/privilege.html) från version 2.4 (se även [JCR-2887](https://issues.apache.org/jira/browse/JCR-2887)). Ytterligare användning täcks av JCR Access Control Management som definieras av [JSR 283](https://jcp.org/en/jsr/detail?id=283) (avsnitt 16). API:t Jackrabbit definierar dessutom ett par tillägg.
 
 Behörighetsregistreringsmekanismen återspeglas i användargränssnittet under **Databaskonfiguration**.
 
-Registreringen av nya (anpassade) behörigheter skyddas av ett inbyggt privilegium som måste beviljas på databasnivån. I JCR: Om du skickar &#39;null&#39; som &#39;absPath&#39;-parameter i Mac mgt api finns mer information i jsr 333. Som standard **admin** och alla administratörer har denna behörighet.
+Registreringen av nya (anpassade) behörigheter skyddas av ett inbyggt privilegium som måste beviljas på databasnivån. I JCR: skicka &#39;null&#39; som &#39;absPath&#39;-parameter i ac mgt api finns mer information i jsr 333. Som standard **admin** och alla administratörer har denna behörighet.
 
 >[!NOTE]
 >

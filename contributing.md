@@ -1,7 +1,7 @@
 ---
-source-git-commit: 69346a710708ee659ee97e9fdc193c8ea2658fe6
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '524'
+source-wordcount: '522'
 ht-degree: 2%
 
 ---
@@ -36,7 +36,7 @@ Vilken metod du väljer beror på hur bekväm du själv redigerar dokumentatione
 
 Har du ett förslag, synpunkter på aktuella dokument eller frågor om hur något beskrivs? Skapa sedan ett problem. Problem är också bra om du har något att bidra med, men inte känner dig bekväm med att redigera dokumenten eller göra en pull-förfrågan själv.
 
-Med hjälp av olika problem kan du enkelt beskriva din idé om hur du kan förbättra dokumenten, och en AEM Docs Team-medlem kan granska den. Klicka bara på **Logga ett problem** överst på den högra navigeringspanelen på en sida för att skapa ett problem.
+Du kan enkelt beskriva din idé om förbättringar i dokumenten och en AEM Docs Team-medlem kan granska den. Klicka bara på **Logga ett problem** överst på den högra navigeringspanelen på en sida för att skapa ett problem.
 
 ### Skapa en pull-begäran {#create-a-pull-request}
 

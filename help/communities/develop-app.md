@@ -10,9 +10,9 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 910229a3-38b1-44f1-9c09-55f8fd6cbb1d
 exl-id: 7ac0056c-a742-49f4-8312-2cf90ab9f23a
-source-git-commit: 1d334c42088342954feb34f6179dc5b134f81bb8
+source-git-commit: 10227bcfcfd5a9b0f126fee74dce6ec7842f5e95
 workflow-type: tm+mt
-source-wordcount: '552'
+source-wordcount: '554'
 ht-degree: 1%
 
 ---
@@ -66,9 +66,9 @@ Använda CRXDE Lite:
    %>
    ```
 
-1. Ersätt &quot; // TODO ...&quot; eftersom du är medveten om att det finns öppna/stängda skripttaggar. med skript för huvud- och kroppsdelar i &lt;html>.
+1. Ersätt &quot; // TODO ...&quot; med skript för huvud- och kroppsdelar i , eftersom du är medveten om att det finns öppna/stängda script-taggar &lt;html>.
 
-   Med en överordnad typ av `foundation/components/page`, kommer alla skript som inte är definierade i samma mapp att tolkas som ett skript i `/apps/foundation/components/page` mapp (om den finns), else to a script in `/libs/foundation/components/page` mapp.
+   Med en överordnad typ av `foundation/components/page`kommer alla skript som inte är definierade i samma mapp att tolkas som skript i `/apps/foundation/components/page` mapp (om den finns), else to a script in `/libs/foundation/components/page` mapp.
 
    `/apps/an-scf-sandbox/components/playpage/playpage.jsp`
 
@@ -97,6 +97,7 @@ Använda CRXDE Lite:
    1. Högerklicka och välj `Create > Create File...`
 
       * Namn: **body.jsp**
+
    1. Klicka på **[!UICONTROL Save All]**.
 
    Öppna `/apps/an-scf-sandbox/components/playpage/body.jsp` och klistra in i följande text:
@@ -131,7 +132,7 @@ Panelen Resurser/Komponenter visas när både sidopanelen är öppen och fönstr
 
 * Klassiskt användargränssnitt: `http://localhost:4502/cf#/content/an-scf-sandbox/en/play.html`
 
-Så här visas uppspelningssidan i det klassiska användargränssnittet, inklusive med innehållssökaren (cf):
+Här beskrivs hur uppspelningssidan visas i det klassiska användargränssnittet, inklusive med innehållssökaren (cf):
 
 ![play-page-view](assets/play-page-view.png)
 
@@ -143,7 +144,7 @@ Om du vill aktivera communitykomponenter för redigering börjar du med att föl
 
 I den här sandlådan börjar du med dessa **Communities** komponenter (aktivera genom att markera rutan):
 
-* Kommentarer
+* Kommentar
 * Forum
 * Klassificering
 * Recensioner
@@ -175,11 +176,11 @@ I det här enkla exemplet ställs rotsidan in statiskt för att dirigera om till
 * Välj **[!UICONTROL Open Properties]**
 * På fliken AVANCERAT
 
-   * Bläddra till posten Omdirigering **[!UICONTROL Websites]** > **[!UICONTROL SCF Sandbox Site]** > **[!UICONTROL SCF Sandbox]**
+   * Bläddra till posten Omdirigering: **[!UICONTROL Websites]** > **[!UICONTROL SCF Sandbox Site]** > **[!UICONTROL SCF Sandbox]**
    * Klicka på **[!UICONTROL OK]**
 
 * Klicka på **[!UICONTROL OK]**
 
 När webbplatsen har publicerats dirigeras en gång till den engelska sidan om du bläddrar till rotsidan på en publiceringsinstans.
 
-Det sista steget innan du spelar med communitykomponenterna i SCF är att lägga till en klientbiblioteksmapp (clientlibs) .... [Lägg till bibliotek](add-clientlibs.md)
+Det sista steget innan du spelar med communitykomponenterna i SCF är att lägga till en klientbiblioteksmapp (clientlibs) ... [Lägg till bibliotek](add-clientlibs.md)

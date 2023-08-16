@@ -10,9 +10,9 @@ topic-tags: personalization
 content-type: reference
 discoiquuid: 03ebc494-8baa-4741-b8de-dac5ace743c8
 exl-id: 3a550a33-b54b-4217-b9a6-b5a7971276ee
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '1687'
+source-wordcount: '1685'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 Det finns en allt större mängd innehåll idag, oavsett om det gäller webbplatser på internet, extranät eller intranät.
 
-Personalisering handlar om att ge användaren en skräddarsydd miljö med dynamiskt innehåll som väljs ut utifrån deras specifika behov. baseras på fördefinierade profiler, användarval eller interaktivt användarbeteende.
+Personalisering handlar om att förse användaren med en skräddarsydd miljö med dynamiskt innehåll som väljs ut utifrån deras specifika behov, oavsett om det handlar om fördefinierade profiler, användarval eller interaktivt användarbeteende.
 
 Personaliseringen består av tre huvuddelar:
 
@@ -48,13 +48,13 @@ Personalisering kan antingen vara:
 
 #### Explicit {#explicit}
 
-* Anpassning: där användaren gör val från ett urval av innehållskällor.
+* Anpassning: Används för att göra val från olika innehållskällor.
 
 #### Implicit {#implicit}
 
-* Regelbaserade: Företagsledare definierar specifika regler för åtgärder baserat på specifika profiler och/eller beteenden.
+* Regelbaserade: affärschefer definierar specifika regler för åtgärder baserade på specifika profiler och/eller beteenden.
 * Enkel filtrering: val görs utifrån fördefinierade profiler på användar- och/eller gruppnivå.
-* Filtrering av samverkan/rekommendation: användarbeteendet registreras enligt fördefinierade regler. Dessa regler bygger på beteenden som observeras med likasinnade individer. Den insamlade informationen används för att anpassa den information som visas för användaren, särskilt i form av rekommendationer.
+* Kollaborativ-/rekommendationsfiltrering: användarbeteendet registreras enligt fördefinierade regler. Dessa regler bygger på beteenden som observeras med likasinnade individer. Den insamlade informationen används för att anpassa den information som visas för användaren, särskilt i form av rekommendationer.
 
 ## Hur och när kan personalisering användas? {#how-and-when-can-personalization-be-used}
 
@@ -67,10 +67,10 @@ Personalisering kan användas i många fall, till exempel:
 
 ### Specifika, begränsade, målanvändargrupper - extranät {#extranets}
 
-* Användarna måste logga in för att kunna godkänna. Detta kommer att kopplas till en profil som tillhandahåller den information som krävs för personalisering. möjliga detaljer som plats, relation till produkten, användningshistorik, budgeteringsansvar osv.
+* Användare kräver en inloggning för auktorisering. Den länkas till en profil som innehåller information som krävs för personalisering, och kan innehålla information som plats, relation till produkten, användningshistorik, budgeteringsansvar osv.
 * Sådana instanser kan variera mellan webbplatser som:
 * Företag som tillhandahåller webbplatser till en mycket specialiserad del av sin marknad, till exempel ett läkemedelsföretag som tillhandahåller en specialiserad webbplats för läkare.
-* Företag som tillhandahåller webbplatser som gör det möjligt för sina kunder att se aktuell konto- och faktureringsinformation. till exempel telefonleverantörer.
+* Företag som tillhandahåller webbplatser som gör det möjligt för sina kunder att se aktuell konto- och faktureringsinformation, till exempel telefonleverantörer.
 
 ### Försäljnings- och distributionswebbplats {#sales-site}
 
@@ -102,7 +102,7 @@ Tänk på följande när du använder personalisering:
 
 * Personalisering kräver en inloggningsfunktion eftersom webbplatsen måste kunna identifiera användaren.
 
-#### Cachelagring {#caching}
+#### Cachning {#caching}
 
 * Cachelagring är en aspekt som användaren kommer att se när det gäller prestanda och precision - hur snabbt levererar webbplatsen personaliserat innehåll, och är det alltid aktuellt.
 * Cachelagring är en viktig faktor när personalisering konfigureras och man måste se till att rätt implementering används.
@@ -115,7 +115,7 @@ Tänk på följande när du använder personalisering:
 
 * Personalisering som uppnås genom att spåra användarens beteende, eller genom att ställa in regler som baseras på användarens profil, måste vara korrekt och logiskt.
 * Det finns inget mer frustrerande för användaren än att ha innehåll som tvingats på eller nekats till dem på grund av den felaktiga logiken i en regel.
-* Därför måste regler vara väl genomtänkta - med användarens krav i förgrunden. Detta kan kräva mycket arbete och ska inte underskattas. Att definiera affärsreglerna uppväger ofta den tekniska ansträngningen vid personalisering.
+* Därför måste regler vara väl genomtänkta - med användarens krav i förgrunden. Detta kan ta en hel del ansträngning och ska inte underskattas. Att definiera affärsreglerna uppväger ofta den tekniska ansträngningen vid personalisering.
 
 #### När ska användas {#when-to-use}
 
@@ -130,13 +130,13 @@ Tänk på följande när du använder personalisering:
 
 Personalisering bör beaktas separat från åtkomstkontroll, men de har en inbördes relation.
 
-Personalisering i sig skapar inte någon form av åtkomstkontroll. Det är helt enkelt ett sätt att styra vad användaren ser. det förhindrar inte användaren från att få åtkomst till annat innehåll, och precis som med allt innehåll måste de ha rätt åtkomstkontroller tilldelade.
+Personalisering i sig skapar inte någon form av åtkomstkontroll. Det är helt enkelt ett sätt att styra vad användaren ser. Det hindrar inte användaren från att få åtkomst till annat innehåll, och precis som med allt innehåll måste användaren ha rätt åtkomstkontroll tilldelad.
 
 Åtkomstkontroll kan dock användas för att skapa en form av personalisering. Om du tillåter eller nekar en användare åtkomst till innehåll påverkar detta oundvikligen valet av innehåll som han/hon har tillgängligt, vilket innebär att hans/hennes webbupplevelse anpassas.
 
 ## Komponenter tillgängliga för personalisering {#components-available-for-personalization}
 
-Det finns olika komponenter med AEM för personalisering. Vissa tillåter användare att logga in och redigera sina profiler, andra (som Mina gadgets) tillåter användarna att konfigurera en viss sida:
+Det finns olika komponenter för AEM. Vissa tillåter användare att logga in och redigera sina profiler, andra (som Mina gadgets) tillåter användarna att konfigurera en viss sida:
 
 | Titel i Sidekick | Syfte |
 |---|---|
@@ -155,7 +155,7 @@ Det finns olika komponenter med AEM för personalisering. Vissa tillåter använ
 | Forms Radio Group | Flera objekt ordnade i en lista föregås av en alternativknapp. Användare får bara välja en alternativknapp. |
 | Forms Submit Button | En extra Skicka-knapp för formuläret där titeln visas som text på knappen. |
 | Forms textfält | Textfält där användarna kan ange information. |
-| Mina gadgets | Gör att du kan ta med en av flera tillgängliga gadgets. |
+| Mina gadgets | Gör att du kan ta med ett urval av tillgängliga gadgets. |
 | Profil Avatar Photo | Tillåter indata från ett Avatar-foto. |
 | Detaljerat profilnamn | Ange namndetaljer, inklusive element som titel, mellannamn och suffix om det behövs. |
 | Profilvisningsnamn | Namn som ska visas. |
@@ -164,7 +164,7 @@ Det finns olika komponenter med AEM för personalisering. Vissa tillåter använ
 | Profilens primära telefonnummer | Tillåter inmatning av ett telefonnummer. |
 | Primär URL för profil | Tillåter indata för en URL. |
 | Profil, allmän text, egenskap | Profilegenskaper. |
-| Logga in | Gör att du kan skicka ett användarnamn och lösenord när du loggar in. |
+| Logga in | Gör att du kan ange ett användarnamn och lösenord när du loggar in. |
 | Logga ut | Anger användaren som är inloggad och ger dig en länk för att logga ut. |
 | Tag Cloud | Ett taggmoln som visar ett grafiskt presenterat urval av taggar på webbplatsen |
 | Teaser | Ett innehåll (vanligtvis en bild) som visas på en huvudsida för att&quot;lura&quot; användarna att komma åt det underliggande innehållet. |
@@ -173,7 +173,7 @@ Det finns olika komponenter med AEM för personalisering. Vissa tillåter använ
 
 Community-funktioner som bloggar, forum och kalendrar resulterar i att användargenererat innehåll skapas, vilket ofta kallas användargenererat innehåll (UGC). När UGC anges i en publiceringsmiljö som består av flera AEM (en [publicera servergrupp](/help/communities/topologies.md)) har ett stort problem varit hur UGC ska synkroniseras i alla instanser.
 
-Med [AEM Communities 6.1](/help/communities/overview.md) kan problemet lösas med en [gemensam butik för UGC](/help/communities/working-with-srp.md). När det gäller personalisering innehåller Communities [Social inloggning](/help/communities/social-login.md) - möjlighet att ge besökarna möjlighet att logga in med Facebook och Twitter.
+Med [AEM Communities 6.1](/help/communities/overview.md) kan problemet lösas med en [gemensam butik för UGC](/help/communities/working-with-srp.md). När det gäller personalisering innehåller Communities [Social inloggning](/help/communities/social-login.md) - möjligheten att ge besökarna möjlighet att logga in med Facebook och Twitter.
 
 Utan Communities-tillägg kan olika metoder för att undersöka frågan om enhetlighet i användargenererat innehåll vara:
 

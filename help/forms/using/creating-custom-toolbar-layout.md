@@ -10,9 +10,9 @@ topic-tags: customization
 discoiquuid: 0d817a7e-2758-4308-abda-6194716c2d97
 docset: aem65
 exl-id: 44516956-00aa-41d5-a7e9-746c7618e5db
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '524'
+source-wordcount: '523'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 När du skapar ett anpassat formulär kan du ange en verktygsfältslayout för formuläret. Verktygsfältets layout definierar kommandona och layouten för verktygsfältet i formuläret.
 
-Verktygsfältslayouten använder i hög grad klientbearbetning som styrs av komplex JavaScript- och CSS-kod. Det kan vara komplicerat att organisera och optimera serveringen av koden. AEM tillhandahåller biblioteksmappar på klientsidan som du kan använda för att lagra din klientkod i databasen, ordna den i kategorier och definiera när och hur varje kodkategori ska skickas till klienten. Klientsidans bibliotekssystem tar sedan hand om att skapa rätt länkar på den slutliga webbsidan för att läsa in rätt kod. Mer information finns i [Hur bibliotek på klientsidan fungerar i AEM.](/help/sites-developing/clientlibs.md)
+Verktygsfältslayouten använder i hög grad klientbearbetning som styrs av komplex JavaScript- och CSS-kod. Det kan vara komplicerat att organisera och optimera serveringen av den här koden. För att underlätta hanteringen av det här problemet tillhandahåller AEM biblioteksmappar på klientsidan, som gör att du kan lagra din klientkod i databasen, ordna den i kategorier och definiera när och hur varje kodkategori ska skickas till klienten. Klientsidans bibliotekssystem tar sedan hand om att skapa rätt länkar på den slutliga webbsidan för att läsa in rätt kod. Mer information finns i [Hur klientbibliotek fungerar i AEM.](/help/sites-developing/clientlibs.md)
 
 ![Exempellayout för verktygsfältet](assets/default_toolbar_layout.png)
 
@@ -44,7 +44,7 @@ Det bifogade innehållspaketet innehåller hela koden som beskrivs nedan. När d
 CustomToolbarLayoutDemo.zip
 
 [Hämta fil](assets/customtoolbarlayoutdemo.zip)
-Anpassad verktygslayout för demo
+Demonstrera anpassad verktygsfältslayout
 
 ## Skapa en anpassad verktygsfältslayout {#layout-1}
 

@@ -1,7 +1,7 @@
 ---
 title: Installera och konfigurera interaktiv kommunikation
 seo-title: Install and configure Interactive Communications
-description: Installera och konfigurera AEM Forms Interactive Communications för att skapa affärskorrespondenser, dokument, kontoutdrag, förmånsmeddelanden, marknadsföringsmejl, fakturor och välkomstpaket.
+description: Installera och konfigurera AEM Forms Interactive Communications för att skapa affärskorrespondenser, dokument, utdrag, förmånsmeddelanden, marknadsföringsmeddelanden, fakturor och välkomstpaket.
 seo-description: Install and configure AEM Forms Interactive Communications to create business correspondences, documents, statements, benefit notices, marketing mails, bills, and welcome kits.
 uuid: 8acb7f68-0b52-4acd-97e2-af31c9408e8d
 topic-tags: installing
@@ -9,9 +9,9 @@ discoiquuid: 225f2bc1-6842-4c79-a66d-8024a29325c0
 docset: aem65
 role: Admin
 exl-id: 37fcfad9-2f84-4f0c-aed8-e4a5a3303a06
-source-git-commit: 18cfefb794382b5314b18a62645f1fba28d314a2
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '1367'
+source-wordcount: '1366'
 ht-degree: 0%
 
 ---
@@ -24,13 +24,13 @@ AEM Form kan centralisera framtagning, sammanställning, hantering och distribut
 
 Du kan använda den interaktiva kommunikationsfunktionen för att producera kommunikation i flera format. Till exempel webb och PDF. Ni kan integrera interaktiv kommunikation med AEM arbetsflöde för att bearbeta och leverera den sammansatta kommunikationen till kunderna via valfri kanal. Du kan till exempel skicka en kommunikation till slutanvändaren via e-post.
 
-Om du uppgraderar från en tidigare version och redan har investerat i korrespondenshantering kan du installera [kompatibilitetspaket](../../forms/using/installing-configuring-intreactive-communication-correspondence-management.md#install-compatibility-package) fortsätta att använda korrespondenshantering. Mer information om skillnaderna mellan interaktiv kommunikation och korrespondenshantering finns i [Översikt över interaktiv kommunikation](/help/forms/using/interactive-communications-overview.md#interactive-communications-vs-correspondence-management).
+Om du uppgraderar från en tidigare version och redan har investerat i korrespondenshantering kan du installera [kompatibilitet](../../forms/using/installing-configuring-intreactive-communication-correspondence-management.md#install-compatibility-package) fortsätta att använda korrespondenshantering. Mer information om skillnaderna mellan interaktiv kommunikation och korrespondenshantering finns i [Översikt över interaktiv kommunikation](/help/forms/using/interactive-communications-overview.md#interactive-communications-vs-correspondence-management).
 
 AEM Forms är en kraftfull plattform för större företag. Interaktiv kommunikation är bara en av AEM Forms funktioner. En fullständig lista över funktioner finns på [Introduktion till AEM Forms](../../forms/using/introduction-aem-forms.md).
 
 ## Distributionstopologi {#deployment-topology}
 
-AEM Forms tilläggspaket är ett program som distribueras till AEM. Du behöver bara minst en AEM Author and Processing-instans för att kunna köra funktionen Interactive Communications. Följande topologi är en indikativ topologi för att köra AEM Forms Interactive Communications, Correspondence Management, AEM Forms datainhämtning och Forms-Centric-arbetsflöden för OSGi-funktioner. Mer information om topologin finns i [Arkitektur och driftsättningstopologier för AEM Forms](/help/forms/using/aem-forms-architecture-deployment.md).
+AEM Forms tilläggspaket är ett program som distribueras till AEM. Du behöver bara minst en instans av AEM författare och bearbetning för att köra funktionen Interactive Communications. Följande topologi är en indikativ topologi för att köra AEM Forms Interactive Communications, Correspondence Management, AEM Forms datainhämtning och Forms-Centric-arbetsflöden för OSGi-funktioner. Mer information om topologin finns i [Arkitektur och driftsättningstopologier för AEM Forms](/help/forms/using/aem-forms-architecture-deployment.md).
 
 ![rekommenderad topologi](assets/recommended-topology.png)
 
@@ -43,16 +43,16 @@ Innan du börjar installera och konfigurera interaktiva kommunikations- och korr
 * Maskinvaru- och programvaruinfrastruktur finns på plats. En detaljerad lista över maskin- och programvara som stöds finns på [tekniska krav](/help/sites-deploying/technical-requirements.md).
 
 * Installationssökvägen för AEM-instansen innehåller inte blanksteg.
-* En AEM körs. I AEM är &quot;instance&quot; en kopia av AEM som körs på en server i författar- eller publiceringsläge. Du behöver minst en AEM (Författare eller Bearbetning) för att kunna köra AEM Forms interaktiva kommunikations- och korrespondenshanteringsfunktioner:
+* En AEM-instans körs. I AEM är &quot;instance&quot; en kopia av AEM som körs på en server i författar- eller publiceringsläge. Du behöver minst en AEM (Författare eller Bearbetning) för att kunna köra AEM Forms interaktiva kommunikations- och korrespondenshanteringsfunktioner:
 
    * **Upphovsman**: En AEM som används för att skapa, överföra och redigera innehåll och för att administrera webbplatsen. När innehållet är klart att publiceras replikeras det till publiceringsinstansen.
-   * **Bearbetar:** En bearbetningsinstans är en [härdad AEM-författare](/help/forms/using/hardening-securing-aem-forms-environment.md) -instans. Du kan ställa in en Author-instans och göra den oskarp efter att du har utfört installationen.
+   * **Bearbetar:** En bearbetningsinstans är en [härdad AEM](/help/forms/using/hardening-securing-aem-forms-environment.md) -instans. Du kan ställa in en Author-instans och göra den oskarp efter att du har utfört installationen.
 
-   * **Publicera**: En AEM som skickar det publicerade innehållet till allmänheten via Internet eller ett internt nätverk.
+   * **Publicera**: En AEM som visar det publicerade innehållet för allmänheten via Internet eller ett internt nätverk.
 
-* Minneskraven uppfylls. AEM Forms tilläggspaket kräver:
+* Minneskraven är uppfyllda. AEM Forms tilläggspaket kräver:
 
-   * 15 GB temporärt utrymme för Microsoft® Windows-baserade installationer.
+   * 15 GB tillfälligt utrymme för Microsoft® Windows-baserade installationer.
    * 6 GB temporärt utrymme för UNIX-baserade installationer.
 
 * Extra krav för UNIX-baserade system: Om du använder det UNIX-baserade operativsystemet installerar du följande paket från installationsmediet för respektive operativsystem.
@@ -86,29 +86,29 @@ Innan du börjar installera och konfigurera interaktiva kommunikations- och korr
  </tbody>
 </table>
 
-## Installera AEM Forms tilläggspaket {#install-aem-forms-add-on-package}
+## Installera AEM Forms-tilläggspaket {#install-aem-forms-add-on-package}
 
 AEM Forms tilläggspaket är ett program som distribueras till AEM. Paketet innehåller interaktiv kommunikation med AEM Forms, korrespondenshantering och andra funktioner. Så här installerar du tilläggspaketet:
 
 1. Öppna [Programvarudistribution](https://experience.adobe.com/downloads). Du behöver en Adobe ID för att logga in på Software Distribution.
-1. Tryck **[!UICONTROL Adobe Experience Manager]** finns i rubrikmenyn.
-1. I **[!UICONTROL Filters]** avsnitt:
-   1. Välj **[!UICONTROL Forms]** från **[!UICONTROL Solution]** nedrullningsbar lista.
+1. Tryck på **[!UICONTROL Adobe Experience Manager]** tillgänglig i rubrikmenyn.
+1. I avsnittet **[!UICONTROL Filters]** :
+   1. Välj **[!UICONTROL Forms]** i **[!UICONTROL Solution]** listrutan.
    2. Välj version och typ för paketet. Du kan också använda **[!UICONTROL Search Downloads]** för att filtrera resultaten.
-1. Tryck på det paketnamn som gäller för operativsystemet och välj **[!UICONTROL Accept EULA Terms]** och trycka **[!UICONTROL Download]**.
-1. Öppna [Pakethanteraren](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html)  och klicka **[!UICONTROL Upload Package]** för att överföra paketet.
+1. Tryck på det paketnamn som gäller för ditt operativsystem och välj **[!UICONTROL Accept EULA Terms]** och trycka **[!UICONTROL Download]**.
+1. Öppna [Package Manager](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html)  och klicka för **[!UICONTROL Upload Package]** att ladda upp paketet.
 1. Markera paketet och klicka på **[!UICONTROL Install]**.
 
-   Du kan även hämta paketet via länken direkt i [AEM Forms](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=en) artikel.
+   Du kan också hämta paketet via direktlänken som anges i [AEM Forms versionsartikel](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=en) .
 
-1. När paketet har installerats uppmanas du att starta om AEM. **Starta inte om servern omedelbart.** Innan du stoppar AEM Forms Server väntar du tills meddelandena ServiceEvent REGISTERED och ServiceEvent UNREGISTERED inte visas i [AEM-installationskatalog]/crx-quickstart/logs/error.log och loggen är stabil.
+1. När paketet har installerats uppmanas du att starta om AEM. **Starta inte omedelbart om servern.** Innan du stoppar AEM Forms Server väntar du tills meddelandena ServiceEvent REGISTERED och ServiceEvent UNREGISTERED slutar visas i [filen AEM-Installation-Directory]/crx-quickstart/logs/error.log och loggen är stabil.
 1. Upprepa steg 1-7 för alla författare- och publiceringsinstanser.
 
 ## Konfiguration efter installation {#post-installation-configurations}
 
 AEM Forms har några obligatoriska och valfria konfigurationer. De obligatoriska konfigurationerna är bland annat att konfigurera BouncyCastle-bibliotek och serialiseringsagent. De valfria konfigurationerna är bland annat att konfigurera Dispatcher och Adobe Target.
 
-### Obligatoriska efterinstallationskonfigurationer {#mandatory-post-installation-configurations}
+### Obligatoriska konfigurationer efter installation {#mandatory-post-installation-configurations}
 
 #### Konfigurera RSA- och BouncyCastle-bibliotek  {#configure-rsa-and-bouncycastle-libraries}
 
@@ -152,7 +152,7 @@ Med AEMFD-kompatibilitetspaketet kan du använda följande resurser från AEM 6.
 
 #### Konfigurera Dispatcher {#configure-dispatcher}
 
-Dispatcher är ett Adobe Experience Manager verktyg för cachelagring och belastningsutjämning som används med en webbserver i företagsklass. Om du använder [Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en)och sedan utföra följande konfigurationer för AEM Forms:
+Dispatcher är ett Adobe Experience Manager verktyg för cachelagring och belastningsutjämning som används med en webbserver i företagsklass. Om du [Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en)och sedan utföra följande konfigurationer för AEM Forms:
 
 1. Konfigurera åtkomst för AEM Forms:
 
@@ -184,6 +184,6 @@ Du har konfigurerat en miljö för interaktiv kommunikation och korrespondenshan
 
 * [Översikt över korrespondenshantering](/help/forms/using/interactive-communications-overview.md)
 
-* [Skapa interaktiv kommunikation](../../forms/using/create-interactive-communication.md)
+* [Skapa en interaktiv kommunikation](../../forms/using/create-interactive-communication.md)
 
 * [Skapa ett brev för korrespondenshantering](../../forms/using/create-letter.md)

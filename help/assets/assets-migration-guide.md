@@ -5,9 +5,9 @@ contentOwner: AG
 role: Architect, Admin
 feature: Migration,Renditions,Asset Management
 exl-id: 184f1645-894a-43c1-85f5-8e0d2d77aa73
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '1781'
+source-wordcount: '1779'
 ht-degree: 8%
 
 ---
@@ -57,7 +57,7 @@ Du kanske redan har en tagg-taxonomi på plats som du tillämpar på dina bilder
 
 Prestanda och stabilitet är viktiga frågor när du ska hämta in resurser i systemet. Eftersom du läser in en stor mängd data i systemet bör du se till att systemet fungerar så bra som möjligt för att minimera tidsåtgången och undvika att överbelasta systemet, vilket kan leda till att systemet kraschar, särskilt i system som redan är i produktion.
 
-Det finns två sätt att läsa in resurser i systemet: en push-baserad metod med HTTP eller en pull-baserad metod med JCR-API:erna.
+Det finns två sätt att läsa in resurser i systemet: en push-baserad metod med HTTP eller en pull-baserad metod med JCR API:erna.
 
 #### Skicka via HTTP {#pushing-through-http}
 
@@ -74,7 +74,7 @@ Det andra sättet att importera resurser är att hämta resurser från det lokal
 
 The [ACS AEM Tools CSV Asset Importer](https://adobe-consulting-services.github.io/acs-aem-tools/features/csv-asset-importer/index.html) hämtar resurser från filsystemet och metadata för resurser från en CSV-fil för resursimporten. Experience Manager Asset Manager API används för att importera resurserna till systemet och använda de konfigurerade metadataegenskaperna. Resurser monteras helst på servern via en nätverksfilmontering eller via en extern enhet.
 
-Eftersom resurser inte behöver överföras via ett nätverk förbättras prestandan avsevärt, och den här metoden anses generellt vara det mest effektiva sättet att läsa in resurser i databasen. Eftersom verktyget har stöd för metadatainmatning kan du dessutom importera alla resurser och metadata i ett enda steg i stället för att skapa ett andra steg för att använda metadata med hjälp av ett separat verktyg.
+Eftersom resurser inte behöver överföras via ett nätverk förbättras prestandan avsevärt, och den här metoden anses generellt vara det mest effektiva sättet att läsa in resurser i databasen. Eftersom verktyget har stöd för metadatainmatning kan du dessutom importera alla resurser och metadata i ett enda steg i stället för att skapa ett andra steg för att använda metadata via ett separat verktyg.
 
 ### Bearbeta återgivningar {#processing-renditions}
 
@@ -87,9 +87,9 @@ När du har konfigurerat arbetsflödet efter dina behov finns det två alternati
 
 ### Aktivera resurser {#activating-assets}
 
-För distributioner som har en publiceringsnivå måste du aktivera resurserna i publiceringsgruppen. Adobe rekommenderar att du kör mer än en publiceringsinstans, men det är mest effektivt att replikera alla resurser till en publiceringsinstans och sedan klona den instansen. När du aktiverar ett stort antal resurser kan du behöva ingripa efter att ha aktiverat ett träd. Därför: När aktiveringar utlöses läggs objekt till i kön för delningsuppgifter/händelser. När storleken på den här kön börjar bli över cirka 40 000 objekt tar det dramatiskt lång tid att bearbeta. När storleken på den här kön överstiger 100 000 objekt börjar systemstabiliteten försämras.
+För distributioner som har en publiceringsnivå måste du aktivera resurserna i publiceringsgruppen. Adobe rekommenderar att du kör mer än en publiceringsinstans, men det är mest effektivt att replikera alla resurser till en publiceringsinstans och sedan klona den instansen. När du aktiverar ett stort antal resurser kan du behöva ingripa efter att ha aktiverat ett träd. Därför: När aktiveringar utlöses läggs objekt till i kön för Samling-jobb/händelse. När storleken på den här kön börjar bli över cirka 40 000 objekt tar det dramatiskt lång tid att bearbeta. När storleken på den här kön överstiger 100 000 objekt börjar systemstabiliteten försämras.
 
-Du kan använda [Snabb Action Manager](https://adobe-consulting-services.github.io/acs-aem-commons/features/fast-action-manager.html) för att hantera resursreplikering. Detta fungerar utan att använda Sling-köerna, vilket sänker overheadkostnaderna samtidigt som arbetsbelastningen begränsas för att förhindra att servern blir överbelastad. Ett exempel på hur du använder FAM för att hantera replikering visas på funktionens dokumentationssida.
+Du kan lösa det här problemet genom att använda [Snabb Action Manager](https://adobe-consulting-services.github.io/acs-aem-commons/features/fast-action-manager.html) för att hantera resursreplikering. Detta fungerar utan att använda Sling-köerna, vilket sänker overheadkostnaderna samtidigt som arbetsbelastningen begränsas för att förhindra att servern blir överbelastad. Ett exempel på hur du använder FAM för att hantera replikering visas på funktionens dokumentationssida.
 
 Andra alternativ för att hämta resurser till publiceringsgruppen är bland annat att använda [vlt-rcp](https://jackrabbit.apache.org/filevault/rcp.html) eller [oak-run](https://github.com/apache/jackrabbit-oak/tree/trunk/oak-run), som ingår i Jackrabbit. Ett annat alternativ är att använda ett verktyg som bygger på öppen källkod för [!DNL Experience Manager] infrastruktur anropad [Grabbit](https://github.com/TWCable/grabbit), som sägs ha snabbare prestanda än Valt.
 
@@ -115,9 +115,9 @@ När resurserna har aktiverats kan du klona publiceringsinstansen och skapa så 
 
 När vi är klara med migreringen är startarna för [!UICONTROL DAM Update Asset] arbetsflödena bör återaktiveras för att stödja generering av återgivningar och extrahering av metadata för den dagliga systemanvändningen.
 
-## Migrera över [!DNL Experience Manager] distributioner {#migrating-between-aem-instances}
+## Migrera tvärs över [!DNL Experience Manager] distributioner {#migrating-between-aem-instances}
 
-Även om det inte är nästan lika vanligt, behöver du ibland migrera stora mängder data från en [!DNL Experience Manager] utplacering till en annan, till exempel när du utför en [!DNL Experience Manager] uppgradera, uppgradera din maskinvara eller migrera till ett nytt datacenter, till exempel med en AMS-migrering.
+Även om det inte är nästan lika vanligt måste du ibland migrera stora mängder data från en [!DNL Experience Manager] distribuera till en annan, till exempel när du utför en [!DNL Experience Manager] uppgradera, uppgradera din maskinvara eller migrera till ett nytt datacenter, till exempel med en AMS-migrering.
 
 I det här fallet är dina resurser redan ifyllda med metadata och återgivningar har redan genererats. Du kan helt enkelt fokusera på att flytta resurser från en instans till en annan. Vid migrering mellan [!DNL Experience Manager] utför du följande steg:
 
@@ -125,13 +125,13 @@ I det här fallet är dina resurser redan ifyllda med metadata och återgivninga
 
 1. Migrera taggar: Eftersom du redan har taggar inlästa i källan [!DNL Experience Manager] kan du bygga dem i ett innehållspaket och installera paketet på målinstansen.
 
-1. Migrera resurser: Det finns två verktyg som rekommenderas för att flytta resurser från en [!DNL Experience Manager] distribution till en annan:
+1. Migrera resurser: Det finns två verktyg som rekommenderas för att flytta resurser från ett [!DNL Experience Manager] distribution till en annan:
 
    * **Fjärrkopia av valv** eller vlt rcp, gör att du kan använda VLT i ett nätverk. Du kan ange en käll- och målkatalog och hämta alla databasdata från en instans och läsa in dem i en annan. Vlt rcp finns dokumenterad på [https://jackrabbit.apache.org/filevault/rcp.html](https://jackrabbit.apache.org/filevault/rcp.html)
    * **Grabbit** är ett verktyg för innehållssynkronisering med öppen källkod som utvecklats av Time Warner Cable för deras [!DNL Experience Manager] implementering. Eftersom den använder kontinuerliga dataströmmar har den en lägre fördröjning jämfört med vlt rcp och kräver en hastighetsförbättring på två till tio gånger snabbare än vlt rcp. Grabbit har även stöd för synkronisering av deltainnehåll, vilket gör att det kan synkronisera ändringar efter att en första migreringspass har slutförts.
 
 1. Aktivera resurser: Följ instruktionerna för [aktivera resurser](#activating-assets) dokumenteras för den första migreringen till [!DNL Experience Manager].
 
-1. Klonpublicering: Precis som med en ny migrering är det effektivare att läsa in en publiceringsinstans och klona den än att aktivera innehållet på båda noderna. Se [Klonar publicering.](#cloning-publish)
+1. Klona publicering: Precis som med en ny migrering är det effektivare att läsa in en enda publiceringsinstans och klona den än att aktivera innehållet på båda noderna. Se [Klonar publicering.](#cloning-publish)
 
-1. Aktivera arbetsflöden: När migreringen är klar kan du aktivera startprogrammet för [!UICONTROL DAM Update Asset] arbetsflöde som stöder generering av renderingar och extrahering av metadata för löpande systemanvändning.
+1. Aktivera arbetsflöden: När du har slutfört migreringen aktiverar du startprogrammet för [!UICONTROL DAM Update Asset] arbetsflöde som stöder generering av renderingar och extrahering av metadata för löpande systemanvändning.

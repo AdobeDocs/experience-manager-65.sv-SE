@@ -10,9 +10,9 @@ discoiquuid: 56b6a573-8aba-43e7-acb7-c2da45869d95
 docset: aem65
 feature: Adaptive Forms
 exl-id: 466b7e85-a2f8-4e1e-8afc-1566b0ccb84c
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '228'
+source-wordcount: '227'
 ht-degree: 2%
 
 ---
@@ -23,7 +23,7 @@ Sidnollinnehåll visas som standard när ett visningsprogram som inte är Adobe 
 
 ![defaultpage0message](assets/defaultpage0message.png)
 
-[!DNL AEM Forms] version av Designer låter dig ändra meddelandet som visas på sidan noll. Gör så här om du vill ändra sidans nollmeddelande:
+[!DNL AEM Forms] i Designer kan du ändra meddelandet som visas på sidan noll. Gör så här om du vill ändra sidans nollmeddelande:
 
 1. Se till att du har [!DNL AEM Forms] version av Designer installerad. Du kan kontrollera versionen från Om-skärmen i Designer.
 

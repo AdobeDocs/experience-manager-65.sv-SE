@@ -10,9 +10,9 @@ topic-tags: personalization
 content-type: reference
 discoiquuid: 295cb0a6-29db-42aa-824e-9141b37b5086
 exl-id: add05d22-3a11-49e9-a554-2315962552d5
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '916'
+source-wordcount: '914'
 ht-degree: 0%
 
 ---
@@ -22,9 +22,9 @@ ht-degree: 0%
 >[!NOTE]
 >
 >Adobe planerar inte att ytterligare förbättra denna funktion (Hantera leads och listor).
->Rekommendationen är att [Adobe Campaign och dess AEM](/help/sites-administering/campaign.md).
+>Rekommendationen är att [Adobe Campaign och dess AEM integrering](/help/sites-administering/campaign.md).
 
-Användare kan uppmanas att prenumerera på **E-postleverantörens** e-postlistor med hjälp av **Formulär** -komponent som används på en AEM webbsida. Om du vill förbereda en AEM sida med ett registreringsformulär för prenumeration på e-posttjänstens e-postlistor måste du använda motsvarande tjänstkonfiguration på den AEM sidan som den potentiella prenumeranten kommer att besöka.
+Användare kan uppmanas att prenumerera på **E-postleverantörens** e-postlistor med hjälp av **Formulär** som används på en AEM webbsida. Om du vill förbereda en AEM sida med ett registreringsformulär för prenumeration på e-posttjänstens e-postlistor måste du använda motsvarande tjänstkonfiguration på den AEM sidan som den potentiella prenumeranten kommer att besöka.
 
 ## Tillämpar e-posttjänstkonfiguration på en sida {#applying-email-service-configuration-to-a-page}
 
@@ -33,7 +33,7 @@ Så här konfigurerar du en AEM:
 1. Navigera till **Webbplatser** -fliken.
 1. Välj den sida som ska konfigureras för tjänsten. Högerklicka på sidan och välj **Egenskaper**.
 
-1. Välj **Cloud Services** sedan **Lägg till tjänst**. Välj en konfiguration i listan över tillgängliga konfigurationer.
+1. Välj **Cloud Service** sedan **Lägg till tjänst**. Välj en konfiguration i listan över tillgängliga konfigurationer.
 
    ![chlimage_1-164](assets/chlimage_1-164.png)
 
@@ -43,13 +43,13 @@ Så här konfigurerar du en AEM:
 
 Så här skapar du ett anmälningsformulär och konfigurerar det för prenumerationer på e-postleverantörens sändlistor:
 
-1. Öppna AEM som användaren ska besöka.
+1. Öppna den AEM sidan som användaren ska besöka.
 1. Använd e-postleverantörens konfiguration på sidan.
 
 1. Lägg till en **Formulär** till sidan genom att dra komponenten från sidosparken. Om komponenten inte är tillgänglig växlar du till designläge och aktiverar **Formulär** grupp.
 1. Klicka **Redigera** i **Formulärets början** och navigera till **Avancerat** -fliken.
 1. I **Formulär** nedrullningsbar meny, välja **E-posttjänst: Skapa prenumerant** och lägg till i listan.
-1. Längst ned i dialogrutan öppnar du **Åtgärdskonfiguration** som gör att du kan välja en eller flera prenumerationslistor.
+1. Längst ned i dialogrutan öppnar du **Åtgärdskonfiguration** där du kan välja en eller flera prenumerationslistor.
 1. I **Välj lista** markerar du den lista som du vill att användarna ska prenumerera på. Du kan lägga till flera listor med plusknappen (**Lägg till objekt**).
 
    ![chlimage_1-10](assets/chlimage_1-10.jpeg)
@@ -67,7 +67,7 @@ Så här skapar du ett anmälningsformulär och konfigurerar det för prenumerat
    >
    >Om du vill att formulärprenumerationen ska fungera korrekt [krypteringsnycklar från författaren måste exporteras och importeras till publiceringsinstansen](#exporting-keys-from-author-and-importing-on-publish).
 
-## Exportera nycklar från författaren och importera vid publicering {#exporting-keys-from-author-and-importing-on-publish}
+## Exportera nycklar från författare och importera vid publicering {#exporting-keys-from-author-and-importing-on-publish}
 
 För att e-posttjänsten ska kunna prenumerera och sluta prenumerera via anmälningsformuläret på publiceringsinstansen måste du följa dessa steg:
 
@@ -104,7 +104,7 @@ Så här konfigurerar du ett e-postmeddelande med automatiskt svar för en prenu
 1. **Välj ett e-postmeddelande** (det här är det e-postmeddelande som skickas som ett e-postmeddelande med automatiskt svar).
 
 1. **Välj klassificering** (den här klassificeringen används för att skicka e-postmeddelandet).
-1. Välj **Tack** sida (den sida som användarna dirigeras till när de har skickat formuläret).
+1. Välj **Tack** sida (den sida som användarna dirigeras till när de har skickat in formuläret).
 
    I **Formulär** väljer du den tacksida som du vill att användarna ska gå till när de har skickat in formuläret. (Om formuläret lämnas tomt visas det igen när det skickas.) Klicka **OK**.
 

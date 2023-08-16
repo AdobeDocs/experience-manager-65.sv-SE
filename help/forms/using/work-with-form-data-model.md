@@ -10,9 +10,9 @@ discoiquuid: c47ef627-261e-4b4b-8846-873d3d84234b
 docset: aem65
 feature: Form Data Model
 exl-id: 16b76265-9ec4-4993-9ac0-b7aef1b1e5f1
-source-git-commit: 1683338f02d01d5d9843368955fa42f309718f26
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '4073'
+source-wordcount: '4070'
 ht-degree: 0%
 
 ---
@@ -60,17 +60,17 @@ Så här lägger du till datamodellsobjekt och -tjänster:
    >
    > Om din Forms datamodell innehåller ett objekt som är ett reserverat nyckelord för relationsdatabasen kan det leda till problem med tillägg, uppdatering eller hämtning av data. Undvik därför att använda sådana objekt i formulärdatamodellen.
 
-   På fliken Modell visas en grafisk representation av alla datamodellsobjekt och deras egenskaper som lagts till i formulärdatamodellen. Varje datamodellobjekt representeras av en ruta i formulärdatamodellen.
+   På fliken Modell visas en grafisk representation av alla datamodellsobjekt och deras egenskaper som har lagts till i formulärdatamodellen. Varje datamodellobjekt representeras av en ruta i formulärdatamodellen.
 
    ![model-tab](assets/model-tab.png)
 
-   Fliken Modell visar tillagda datamodellsobjekt
+   Fliken Modell visar nya datamodellsobjekt
 
    >[!NOTE]
    >
    >Du kan hålla kvar och dra runt datamodellsobjektrutor för att ordna dem i innehållsområdet. Alla datamodellsobjekt som läggs till i formulärdatamodellen är nedtonade i rutan Datakällor.
 
-   Fliken Tjänster visar tillagda tjänster.
+   Fliken Tjänster innehåller nya tjänster.
 
    ![services-tab](assets/services-tab.png)
 
@@ -90,7 +90,7 @@ Så här lägger du till datamodellsobjekt och -tjänster:
 
 ### Skapa datamodellsobjekt {#create-data-model-objects}
 
-Du kan lägga till datamodellsobjekt från konfigurerade datakällor, men du kan också skapa datamodellsobjekt eller -enheter utan datakällor. Det är särskilt användbart om du inte har konfigurerat datakällor i formulärdatamodellen.
+Du kan lägga till datamodellsobjekt från konfigurerade datakällor, men du kan även skapa datamodellsobjekt eller -enheter utan datakällor. Det är särskilt användbart om du inte har konfigurerat datakällor i formulärdatamodellen.
 
 Så här skapar du ett datamodellsobjekt utan datakällor:
 
@@ -117,7 +117,7 @@ Så här skapar du en underordnad egenskap:
 
 1. Tryck **[!UICONTROL Done]** för att spara egenskapen child och trycka **[!UICONTROL Save]** för att spara formulärdatamodellen.. Egenskapen child läggs nu till i datamodellsobjektet.
 
-När du har skapat datamodellsobjekt och egenskaper kan du fortsätta att skapa anpassningsbara formulär och interaktiv kommunikation baserat på formulärdatamodellen. När du har datakällor tillgängliga och konfigurerade kan du senare binda formulärdatamodellen till datakällor. Bindningen uppdateras automatiskt i tillhörande adaptiva formulär och interaktiv kommunikation. Mer information om hur du skapar adaptiva formulär och interaktiv kommunikation med hjälp av formulärdatamodell finns i [Använd formulärdatamodell](/help/forms/using/using-form-data-model.md).
+När du har skapat datamodellsobjekt och -egenskaper kan du fortsätta att skapa anpassningsbara formulär och interaktiv kommunikation baserat på formulärdatamodellen. När du har datakällor tillgängliga och konfigurerade kan du senare binda formulärdatamodellen till datakällor. Bindningen uppdateras automatiskt i tillhörande adaptiva formulär och interaktiv kommunikation. Mer information om hur du skapar adaptiva formulär och interaktiv kommunikation med hjälp av formulärdatamodell finns i [Använd formulärdatamodell](/help/forms/using/using-form-data-model.md).
 
 ### Binda datamodellsobjekt och egenskaper {#bind-data-model-objects-and-properties}
 
@@ -176,15 +176,15 @@ Bind lästjänstargumentet till ett användarprofilattribut, begärandeattribut 
 
 #### Litteralt värde {#literal-value}
 
-Välj **[!UICONTROL Literal]** från **[!UICONTROL Binding To]** nedrullningsbar meny och ange ett värde i **[!UICONTROL Binding Value]** fält. Information som är associerad med värdet hämtas från datakällan. Använd det här alternativet om du vill hämta information som är kopplad till ett statiskt värde.
+Välj **[!UICONTROL Literal]** från **[!UICONTROL Binding To]** och ange ett värde i listrutan **[!UICONTROL Binding Value]** fält. Information som är associerad med värdet hämtas från datakällan. Använd det här alternativet om du vill hämta information som är kopplad till ett statiskt värde.
 
 I det här exemplet är informationen som är kopplad till **4367655678**, som värdet för `mobilenum` -argument hämtas från datakällan. Den associerade informationen om du skickar värdet för ett mobilnummerargument kan innehålla egenskaper som kundnamn, kundadress och ort.
 
 ![Litteralt värde](assets/fdm_binding_literal_new.png)
 
-#### Användarprofilattribut {#user-profile-attribute}
+#### Attribut för användarprofil {#user-profile-attribute}
 
-Välj **[!UICONTROL User Profile Attribute]** från **[!UICONTROL Binding To]** nedrullningsbar meny och ange attributnamnet i **[!UICONTROL Binding Value]** fält. Information om användaren som är inloggad på AEM hämtas från datakällan baserat på attributnamnet.
+Välj **[!UICONTROL User Profile Attribute]** från **[!UICONTROL Binding To]** nedrullningsbar meny och ange attributnamnet i **[!UICONTROL Binding Value]** fält. Information om den användare som är inloggad på AEM hämtas från datakällan baserat på attributnamnet.
 
 Attributnamnet som anges i **[!UICONTROL Binding Value]** fältet måste innehålla den fullständiga bindningssökvägen till användarens attributnamn. Öppna följande URL för att komma åt användarinformationen på CRXDE:
 
@@ -204,7 +204,7 @@ Använd attributet request för att hämta associerade egenskaper från datakäl
 
 1. Välj **[!UICONTROL Request Attribute]** från **[!UICONTROL Binding To]** nedrullningsbar meny och ange attributnamnet i **[!UICONTROL Binding Value]** fält.
 
-1. Skapa en [övertäckning](../../../help/sites-developing/overlays.md) for the head.jsp. Om du vill skapa övertäckningen öppnar du CRX DE och kopierar `https://<server-name>:<port number>/crx/de/index.jsp#/libs/fd/af/components/page2/afStaticTemplatePage/head.jsp` fil till `https://<server-name>:<port number>/crx/de/index.jsp#/apps/fd/af/components/page2/afStaticTemplatePage/head.jsp`
+1. Skapa en [övertäckning](../../../help/sites-developing/overlays.md) for the head.jsp. Skapa övertäckningen genom att öppna CRX DE och kopiera `https://<server-name>:<port number>/crx/de/index.jsp#/libs/fd/af/components/page2/afStaticTemplatePage/head.jsp` fil till `https://<server-name>:<port number>/crx/de/index.jsp#/apps/fd/af/components/page2/afStaticTemplatePage/head.jsp`
 
    >[!NOTE]
    >
@@ -273,7 +273,7 @@ Så här lägger du till en association:
 
    Standardargumentet för tjänsten för läsning av beroenden är beroendestyrt
 
-   Argumentet måste dock vara en vanlig egenskap mellan det associerade datamodellobjektet, vilket i det här exemplet är `Employeeid`. Därför är `Employeeid` argument måste bindas till `id` egenskapen för Employee-datamodellobjektet för att hämta associerade beroendedetaljer från datamodellobjektet Dependents.
+   Argumentet måste dock vara en vanlig egenskap mellan det associerade datamodellobjektet, vilket i det här exemplet är `Employeeid`. Därför är `Employeeid` argument måste vara bundna till `id` egenskapen för Employee-datamodellobjektet för att hämta associerade beroendedetaljer från datamodellobjektet Dependents.
 
    ![add-association-example-2](assets/add-association-example-2.png)
 
@@ -318,7 +318,7 @@ En beräknad egenskap är den vars värde beräknas baserat på en regel eller e
 Du kan till exempel skapa en beräknad egenskap **FullName** vars värde är ett resultat av sammanfogning av den befintliga **FirstName** och **LastName** egenskaper. Så här gör du:
 
 1. Skapa en ny egenskap med namnet `FullName` vars datatyp är String.
-1. Aktivera **[!UICONTROL Computed]** och trycka **[!UICONTROL Done]** för att skapa egenskapen.
+1. Aktivera **[!UICONTROL Computed]** och knacka **[!UICONTROL Done]** för att skapa egenskapen.
 
    ![beräknad](assets/computed.png)
 
@@ -329,7 +329,7 @@ Du kan till exempel skapa en beräknad egenskap **FullName** vars värde är ett
 1. Välj egenskapen FullName och tryck på **[!UICONTROL Edit Rule]**. Ett regelredigeringsfönster öppnas.
 1. I regelredigeringsfönstret trycker du på **[!UICONTROL Create]**. A **[!UICONTROL Set Value]** regelfönstret öppnas.
 
-   I listrutan Välj alternativ väljer du **[!UICONTROL Mathematical Expression]**. Andra tillgängliga alternativ är **[!UICONTROL Form Data Model Object]** och **[!UICONTROL String]**.
+   Välj i listrutan Välj alternativ **[!UICONTROL Mathematical Expression]**. Andra tillgängliga alternativ är **[!UICONTROL Form Data Model Object]** och **[!UICONTROL String]**.
 
 1. I det matematiska uttrycket väljer du **[!UICONTROL FirstName]** och **[!UICONTROL LastName]** i första och andra objektet. Välj **[!UICONTROL plus]** som -operatorn.
 
@@ -337,7 +337,7 @@ Du kan till exempel skapa en beräknad egenskap **FullName** vars värde är ett
 
    ![regel](assets/rule.png)
 
-1. Tryck på **[!UICONTROL Save]**. Den beräknade egenskapen är konfigurerad.
+1. Tryck på formulärdatamodellen **[!UICONTROL Save]**. Den beräknade egenskapen är konfigurerad.
 
 ## Arbeta med navigeringsegenskaper för OData-tjänster {#work-with-navigation-properties-of-odata-services}
 
@@ -383,7 +383,7 @@ När du har lagt till `GET LINK` på fliken Tjänster i formulärdatamodellen ka
 
 >[!NOTE]
 >
->De värden som finns i **Standardvärde** fält för **NavigationPropertyName** -argumentet beror på läget för **Returnera matris?** växlingsknapp. När den är aktiverad visas navigeringsegenskaper av samlingstyp.
+>De värden som är tillgängliga i **Standardvärde** fält för **NavigationPropertyName** -argumentet beror på läget för **Returnera matris?** växlingsknapp. När den är aktiverad visas navigeringsegenskaper av samlingstyp.
 
 I det här exemplet kan du även välja utdatamodellsobjektet som Person och navigeringsegenskapsargument som Friends eller BestFriend (beroende på om **Returnera matris?** är aktiverat eller inaktiverat).
 
@@ -411,7 +411,7 @@ Därefter kan du använda exempeldata för att fylla i och testa interaktiv komm
 
 Din formulärdatamodell är konfigurerad, men innan den används kanske du vill testa om de konfigurerade datamodellsobjekten och -tjänsterna fungerar som förväntat. Så här testar du datamodellsobjekt och -tjänster:
 
-1. Markera ett datamodellsobjekt eller en tjänst i formulärdatamodellen och tryck **[!UICONTROL Test Model Object]** eller **[!UICONTROL Test Service]**, respektive.
+1. Markera ett datamodellsobjekt eller en tjänst i formulärdatamodellen och tryck **[!UICONTROL Test Model Object]** eller **[!UICONTROL Test Service]**, respektive
 
    Fönstret Testa formulärdatamodell öppnas.
 

@@ -2,7 +2,7 @@
 title: Konfigurera din sida för gruppredigering av sidegenskaper
 seo-title: Configuring your Page for Bulk Editing of Page Properties
 description: Med gruppredigering av sidegenskaper kan du redigera egenskaperna för flera sidor samtidigt
-seo-description: Bulk editing of page properties allows you to edit the properties of multiple pages at once
+seo-description: Bulk editing of page properties lets you edit the properties of multiple pages at once
 uuid: 1ad403d2-4b93-4943-ae45-74bf20705b81
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,20 +10,20 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: fe61ee4b-51b6-4a6f-91d8-1c02b29cc1db
 exl-id: 1787e643-fc8e-40e0-8e14-97b222a7c320
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '415'
+source-wordcount: '413'
 ht-degree: 0%
 
 ---
 
 # Konfigurera din sida för gruppredigering av sidegenskaper {#configuring-your-page-for-bulk-editing-of-page-properties}
 
-[Massredigering av sidegenskaper](/help/sites-authoring/editing-page-properties.md#from-the-sites-console-multiple-pages) gör att du kan redigera egenskaperna för flera sidor samtidigt.
+[Massredigering av sidegenskaper](/help/sites-authoring/editing-page-properties.md#from-the-sites-console-multiple-pages) Med kan du redigera egenskaper för flera sidor samtidigt.
 
 På grund av möjligheten att det finns olika värden är sidegenskaperna inte aktiverade för massredigering som standard. De måste vara uttryckligen tillåtna (aktiverade). När du definierar vilka sidegenskaper som ska vara tillgängliga för massredigering måste du ta hänsyn till vissa konsekvenser, till exempel:
 
-* Vissa fält är vanligtvis unika. till exempel en sidrubrik. Du måste bestämma om det är meningsfullt att aktivera sådana fält för massredigering, när ett värde ska användas.
+* Vissa fält är vanligtvis unika, till exempel en sidtitel. Du måste bestämma om det är meningsfullt att aktivera sådana fält för massredigering, när ett värde ska användas.
 * Vissa fält kan ha flera värden - detta kräver en meningsfull representation vid återgivningen.
 
   Till exempel en kryssruta som anger&quot;Klart för publikation&quot;. Detta kan ha flera värden före gruppredigering (t.ex. ready, in-review, in-progress).
@@ -82,9 +82,9 @@ Fält är aktiverade i sidkomponenten (*not* på mallen):
 
    >[!CAUTION]
    >
-   >Du ***måste*** ändrar ingenting i `/libs` bana.
+   >Du ***måste*** ändrar ingenting i dialogrutan `/libs` bana.
    >
-   >Detta beror på innehållet i `/libs` skrivs över nästa gång du uppgraderar din instans (och kan mycket väl skrivas över när du använder en snabbkorrigering eller ett funktionspaket).
+   >Detta beror på innehållet i `/libs` skrivs över nästa gång du uppgraderar din instans (och kan mycket väl skrivas över när du installerar en snabbkorrigering eller ett funktionspaket).
    >
    >Den rekommenderade metoden för konfiguration och andra ändringar är:
    >

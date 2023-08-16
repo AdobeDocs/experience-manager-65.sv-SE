@@ -1,7 +1,7 @@
 ---
 title: Konfigurera segmentering
 seo-title: Configuring Segmentation
-description: Lär dig hur du konfigurerar segmentering för AEM Campaign.
+description: Lär dig konfigurera segmentering för AEM Campaign.
 seo-description: Learn how to configure segmentation for AEM Campaign.
 uuid: 604ca34d-cdb9-49ff-8f75-02a44b60a8a2
 contentOwner: msm-service
@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: c68d5853-684f-42f2-a215-c1eaee06f58a
 docset: aem65
 exl-id: 6d759907-8796-4749-bd80-306ec7f2c819
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '1140'
+source-wordcount: '1136'
 ht-degree: 0%
 
 ---
@@ -31,7 +31,7 @@ Beroende på den information du redan har samlat in om webbplatsbesökarna och v
 
 Dessa segment används sedan för att förse en besökare med specifikt riktat innehåll. Det här innehållet bevaras i [Kampanjer](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md) på webbplatsen. Teaser pages defined here can be included as teaser paragraphs on any page and define which visitor segment the specialized content is applicable for.
 
-AEM gör det enkelt att skapa och uppdatera segment, teasers och kampanjer. Du kan även verifiera resultatet av dina definitioner.
+AEM gör det enkelt att skapa och uppdatera segment, teasers och kampanjer. Du kan även kontrollera resultatet av dina definitioner.
 
 The **Segmentredigerare** gör att du enkelt kan definiera ett segment:
 
@@ -41,14 +41,14 @@ Du kan **Redigera** varje segment för att ange **Titel**, **Beskrivning** och *
 
 ## Förstärkningsfaktor {#boost-factor}
 
-Varje segment har en **Öka** parameter som används som viktningsfaktor, ett högre tal anger att segmentet kommer att markeras framför ett segment med ett lägre tal.
+Varje segment har en **Öka** parameter som används som viktningsfaktor. Ett högre värde anger att segmentet väljs före ett segment med ett lägre värde.
 
 * Minsta värde: `0`
 * Högsta värde: `1000000`
 
 ## Segmentlogik {#segment-logic}
 
-Följande logikbehållare är tillgängliga när de är klara och gör att du kan skapa logiken för ditt segmentval. De kan dras från sidosparken till redigeraren:
+Följande logikbehållare är tillgängliga när du vill och du kan skapa logiken för ditt segmentval. De kan dras från sidosparken till redigeraren:
 
 <table>
  <tbody>
@@ -65,7 +65,7 @@ Följande logikbehållare är tillgängliga när de är klara och gör att du ka
 
 ## Segmentegenskaper {#segment-traits}
 
-Följande segmentegenskaper är färdiga att användas: de kan dras från sidosparken till redigeraren:
+Följande segmentegenskaper är tillgängliga när som helst. De kan dras från sidosparken till redigeraren:
 
 <table>
  <tbody>
@@ -134,7 +134,7 @@ Så här definierar du det nya segmentet:
    ![Det första steget i att skapa ett nytt segment i segmentredigeraren](assets/screen_shot_2012-02-02at101726am.png)
 
 1. Använd antingen sidosparken eller snabbmenyn (oftast högerklickar du med musknappen och väljer sedan **Nytt...** för att öppna fönstret Infoga ny komponent) för att hitta det segment du behöver. Dra den sedan till **Segmentredigerare** kommer det att visas i standardinställningarna **OCH** behållare.
-1. Dubbelklicka på den nya egenskapen för att redigera de specifika parametrarna. till exempel musens position:
+1. Dubbelklicka på det nya tecknet för att redigera de specifika parametrarna, till exempel musens position:
 
    ![Redigera en komponent i segmentredigeraren](assets/screen_shot_2012-02-02at103135am.png)
 
@@ -149,7 +149,7 @@ Så här definierar du det nya segmentet:
 
 Du kan skapa komplexa segment i AEM. Man bör vara medveten om några grundläggande punkter:
 
-* Definitionens översta nivå är alltid den AND-behållare som skapas från början. detta kan inte ändras, men påverkar inte resten av segmentdefinitionen.
+* Den översta nivån i definitionen är alltid den AND-behållare som ursprungligen skapades. Den kan inte ändras, men har ingen effekt på resten av segmentdefinitionen.
 * Se till att det är rimligt att kapsla behållaren. Behållarna kan ses som parenteser i ditt booleska uttryck.
 
 Följande exempel används för att välja besökare som antingen är:
@@ -169,7 +169,7 @@ Som huvudoperator är OR måste du börja med ett **ELLER-behållare**. Här fin
 När segmentet är definierat kan man testa potentiella resultat med hjälp av **[Klientkontext](/help/sites-administering/client-context.md)**:
 
 1. Välj det segment som ska testas.
-1. Tryck **[Ctrl-Alt-C](/help/sites-authoring/page-authoring.md#keyboardshortcuts)** för att öppna **[Klientkontext](/help/sites-administering/client-context.md)**, som visar de data som har samlats in. I testsyfte kan du **Redigera** vissa värden, eller **Läs in** en annan profil för att se effekten där.
+1. Tryck **[Ctrl-Alt-C](/help/sites-authoring/page-authoring.md#keyboardshortcuts)** för att öppna **[Klientkontext](/help/sites-administering/client-context.md)**, som visar de data som har samlats in. I testsyfte kan du **Redigera** vissa värden eller **Läs in** en annan profil för att se effekten där.
 
 1. Beroende på vilka egenskaper som har definierats, kanske data som är tillgängliga för den aktuella sidan inte matchar segmentdefinitionen. Status för matchningen visas under definitionen.
 

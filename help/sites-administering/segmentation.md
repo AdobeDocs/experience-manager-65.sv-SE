@@ -10,9 +10,9 @@ topic-tags: personalization
 content-type: reference
 discoiquuid: 6cade87c-9ed5-47d7-9b39-c942268afdad
 exl-id: 8bd6c88b-f36a-422f-ae6c-0d59f365079a
-source-git-commit: a5f3e33a6abe7ac1bbd610a8528fd599d1ffd2aa
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '1787'
+source-wordcount: '1783'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,8 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->I det här avsnittet beskrivs hur du konfigurerar segmentering när du använder ContextHub. Om du använder funktionen för klientkontext, se relevant dokumentation för [konfigurera segmentering för klientkontext](/help/sites-administering/campaign-segmentation.md).
+>I det här avsnittet beskrivs hur du konfigurerar segmentering när du använder ContextHub. Om du använder funktionen för klientkontext läser du den relevanta dokumentationen för [konfigurera segmentering för klientkontext](/help/sites-administering/campaign-segmentation.md).
+>
 
 Segmentering är en viktig faktor när man skapar en kampanj. Se [Hantera målgrupper](/help/sites-authoring/managing-audiences.md) för information om hur segmentering fungerar och nyckeltermer.
 
@@ -29,17 +30,17 @@ Beroende på den information du redan har samlat in om webbplatsbesökarna och v
 
 Dessa segment används sedan för att förse en besökare med specifikt riktat innehåll. Det här innehållet bevaras i [Personalisering](/help/sites-authoring/personalization.md) på webbplatsen. [Verksamhet](/help/sites-authoring/activitylib.md) som definieras här kan inkluderas på alla sidor och definiera vilket besökarsegment som det specialiserade innehållet gäller.
 
-AEM gör det enkelt att personalisera användarnas upplevelse. Du kan även kontrollera resultatet av segmentdefinitionerna.
+AEM gör det enkelt att personalisera användarnas upplevelse. Du kan också kontrollera resultatet av segmentdefinitionerna.
 
 ## Åtkomst till segment {#accessing-segments}
 
 The [Målgrupper](/help/sites-authoring/managing-audiences.md) konsolen används för att hantera segment för ContextHub eller Client Context samt målgrupper för ditt Adobe Target-konto. I den här dokumentationen beskrivs hur du hanterar segment för ContextHub. För [Kundkontextsegment](/help/sites-administering/campaign-segmentation.md) och Adobe Target segment, se relevant dokumentation.
 
-För att få tillgång till dina segment måste du välja din konfiguration. I global navigering väljer du **Navigering > Personalisering > Publiker**. De tillgängliga konfigurationerna visas:
+För att få tillgång till dina segment måste du välja din konfiguration. Välj **Navigering > Personalisering > Publiker**. De tillgängliga konfigurationerna visas:
 
 ![Målgrupper - konfigurationer](assets/segmentation-access-confs.png)
 
-Välj konfigurationen för att se segmenten, till exempel WKND-plats:
+Välj din konfiguration för att se segmenten, till exempel WKND-plats:
 
 ![Målgrupper - segment](assets/segmentation-access-segments.png)
 
@@ -49,9 +50,9 @@ The **Segmentredigerare** gör att du enkelt kan ändra ett segment. Om du vill 
 
 ![segmenteditor](assets/segmenteditor.png)
 
-Med komponentwebbläsaren kan du lägga till **OCH** och **ELLER** behållare för att definiera segmentlogiken och sedan lägga till ytterligare komponenter för att jämföra egenskaper och värden eller referensskript och andra segment för att definiera urvalskriterierna (se [Skapa ett nytt segment](#creating-a-new-segment)) för att definiera det exakta scenariot för att markera segmentet.
+Med komponentwebbläsaren kan du lägga till **OCH** och **ELLER** behållare för att definiera segmentlogiken och sedan lägga till ytterligare komponenter för att jämföra egenskaper och värden eller referensskript och andra segment för att definiera urvalskriterierna (se [Skapa ett nytt segment](#creating-a-new-segment)) för att definiera det exakta scenariot för markering av segmentet.
 
-När hela programsatsen utvärderas till true är segmentet löst. Om flera segment är tillämpliga ska **Öka** Även faktor används. Se [Skapa ett nytt segment](#creating-a-new-segment) om du vill ha mer information om [förstärkningsfaktor.](/help/sites-administering/campaign-segmentation.md#boost-factor)
+När hela programsatsen utvärderas till true har segmentet lösts. Om flera segment är tillämpliga ska **Öka** Även faktor används. Se [Skapa ett nytt segment](#creating-a-new-segment) för mer information om [förstärkningsfaktor.](/help/sites-administering/campaign-segmentation.md#boost-factor)
 
 >[!CAUTION]
 >
@@ -59,7 +60,7 @@ När hela programsatsen utvärderas till true är segmentet löst. Om flera segm
 
 ### Behållare {#containers}
 
-Följande behållare är tillgängliga när de är klara och gör att du kan gruppera jämförelser och referenser tillsammans för boolesk utvärdering. De kan dras från komponentwebbläsaren till redigeraren. Se följande avsnitt [Använda OCH- och ELLER-behållare](/help/sites-administering/segmentation.md#using-and-and-or-containers) för mer information.
+Följande behållare är tillgängliga när du vill och du kan gruppera jämförelser och referenser tillsammans för boolesk utvärdering. De kan dras från komponentwebbläsaren till redigeraren. Se följande avsnitt [Använda OCH- och ELLER-behållare](/help/sites-administering/segmentation.md#using-and-and-or-containers) för mer information.
 
 <table>
  <tbody>
@@ -140,7 +141,7 @@ Så här definierar du det nya segmentet:
 
    ![chlimage_1-311](assets/chlimage_1-311.png)
 
-1. I **Nytt ContextHub-segment**, ange en titel för segmentet samt ett ökningsvärde om det behövs och tryck eller klicka sedan på **Skapa**.
+1. I **Nytt ContextHub-segment**, ange en titel för segmentet samt ett ökningsvärde om det behövs och tryck eller klicka sedan **Skapa**.
 
    ![chlimage_1-312](assets/chlimage_1-312.png)
 
@@ -161,7 +162,7 @@ Så här definierar du det nya segmentet:
 
 ### Använda OCH- och ELLER-behållare {#using-and-and-or-containers}
 
-Med hjälp av komponenterna AND och OR kan du skapa komplexa segment i AEM. När du gör detta är det bra att tänka på några grundläggande saker:
+Med hjälp av komponenterna AND och OR kan du skapa komplexa segment i AEM. När du gör det är det bra att tänka på några grundläggande saker:
 
 * Definitionens översta nivå är alltid den AND-behållare som skapas från början. Detta kan inte ändras, men påverkar inte resten av segmentdefinitionen.
 * Se till att det är rimligt att kapsla behållaren. Behållarna kan ses som parenteser i ditt booleska uttryck.
@@ -180,7 +181,7 @@ Du börjar med att placera en OR-behållarkomponent i standardbehållaren AND. I
 
 ### Använda skriptreferenser {#using-script-references}
 
-Genom att använda komponenten Skriptreferens kan utvärderingen av en segmentegenskap delegeras till ett externt skript. När skriptet har konfigurerats korrekt kan det användas som en annan komponent i ett segmentvillkor.
+Genom att använda komponenten Skriptreferens kan utvärderingen av en segmentegenskap delegeras till ett externt skript. När skriptet har konfigurerats på rätt sätt kan det användas som en annan komponent i ett segmentvillkor.
 
 #### Definiera ett skript som ska refereras {#defining-a-script-to-reference}
 
@@ -236,7 +237,7 @@ Om du har många segment kan det bli svårt att hantera dem som en platt lista. 
 
 ### Skapa en ny mapp {#create-folder}
 
-1. Efter [komma åt segment](#accessing-segments), klicka eller tryck på **Skapa** och markera **Mapp**.
+1. Efter [komma åt segment](#accessing-segments), klicka eller tryck på **Skapa** knapp och markera **Mapp**.
 
    ![Lägg till mapp](assets/contexthub-create-segment.png)
 
@@ -255,7 +256,7 @@ Om du har många segment kan det bli svårt att hantera dem som en platt lista. 
 1. Mappen visas i segmentlistan.
    * Hur du sorterar kolumnerna påverkar var i listan den nya mappen visas.
    * Du kan justera sorteringen genom att trycka eller klicka på kolumnrubrikerna.
-      ![Den nya mappen](assets/contexthub-folder.png)
+     ![Den nya mappen](assets/contexthub-folder.png)
 
 ### Ändra befintliga mappar {#modify-folders}
 
@@ -265,7 +266,7 @@ Om du har många segment kan det bli svårt att hantera dem som en platt lista. 
 
 1. Tryck eller klicka **Byt namn** i verktygsfältet för att byta namn på mappen.
 
-1. Ange en ny **Mappnamn** och klicka **Spara**.
+1. Ange en ny **Mapptitel** och trycka eller klicka **Spara**.
 
    ![Byt namn på mapp](assets/contexthub-rename-folder.png)
 
@@ -320,7 +321,7 @@ Eller om den inte är löst:
 >
 >Alla egenskaper åtgärdas omedelbart, men de flesta ändras bara vid sidinläsning.
 
-Sådana tester kan även utföras på innehållssidor och i kombination med riktat innehåll och relaterat innehåll **Verksamhet** och **Erfarenheter**.
+Sådana tester kan även utföras på innehållssidor och i kombination med riktat innehåll och tillhörande **Verksamhet** och **Erfarenheter**.
 
 Om du har konfigurerat en aktivitet och en upplevelse med hjälp av det primära åldersgruppssegmentet ovan kan du enkelt testa ditt segment med aktiviteten. Mer information om hur du konfigurerar en aktivitet finns i [dokumentation om framtagning av riktat innehåll](/help/sites-authoring/content-targeting-touch.md).
 
@@ -338,4 +339,4 @@ Om du har konfigurerat en aktivitet och en upplevelse med hjälp av det primära
 
 ## Använda ditt segment {#using-your-segment}
 
-Segment används för att styra det faktiska innehåll som ses av specifika målgrupper. Se [Hantera målgrupper](/help/sites-authoring/managing-audiences.md) för mer information om målgrupper och segment och [Skapa riktat innehåll](/help/sites-authoring/content-targeting-touch.md) om att använda målgrupper och segment för att rikta innehåll.
+Segment används för att styra det faktiska innehåll som ses av specifika målgrupper. Se [Hantera målgrupper](/help/sites-authoring/managing-audiences.md) för mer information om målgrupper och segment och [Skapa riktat innehåll](/help/sites-authoring/content-targeting-touch.md) om att använda målgrupper och segment för att målinrikta innehåll.

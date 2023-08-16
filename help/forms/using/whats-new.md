@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 0e949429-cd5f-4301-aa72-14803cdfab00
 docset: aem65
 exl-id: 47b9de1f-b16a-424c-b8b4-e9d7b3dcca86
-source-git-commit: 1683338f02d01d5d9843368955fa42f309718f26
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '1245'
+source-wordcount: '1243'
 ht-degree: 0%
 
 ---
@@ -116,11 +116,11 @@ Steget Gå till, eller Dela, och alla AEM Forms arbetsflödessteg har stöd för
 
 #### Använda ett arbetsflöde med olika adaptiva Forms  {#use-a-workflow-with-different-adaptive-forms}
 
-Du kan [ange ett anpassat formulär för tilldelningsuppgifterna](../../forms/using/aem-forms-workflow-step-reference.md#assign-task-step) och dokument med dokumentsteg för formulärbaserade arbetsflöden i körningsmiljön. Det gör att ett arbetsflöde kan fungera med olika adaptiva Forms. Du kan bestämma vilken metod som ska användas för att välja ett anpassat formulär när du utformar arbetsflödet. Det adaptiva formuläret kan placeras på en absolut sökväg, skickas som nyttolast till arbetsflödet eller vara tillgängligt på en sökväg som beräknas med hjälp av en variabel.
+Du kan [ange ett anpassat formulär för tilldelningsuppgifterna](../../forms/using/aem-forms-workflow-step-reference.md#assign-task-step) och dokument med dokumentsteg för formulärbaserade arbetsflöden i körningsmiljön. Det gör att ett arbetsflöde kan fungera med olika adaptiva Forms. Du kan bestämma vilken metod som ska användas för att välja ett anpassat formulär när du utformar arbetsflödet. Det adaptiva formuläret kan placeras på en absolut sökväg, skickas som nyttolast till arbetsflödet eller vara tillgängligt på en sökväg som beräknas med en variabel.
 
 #### Använd de förbättrade loggningsfunktionerna i formulärbaserade arbetsflödessteg {#use-enhanced-logging-capabilities-of-forms-centric-workflow-steps}
 
-Loggningsfunktionerna i blankettbaserade arbetsflöden är standardiserade. Nu kan alla formulärbaserade arbetsflödessteg producera loggar som är lika standardiserade. Det hjälper till att förbättra felsökningshastigheten.
+Loggningsfunktionerna i blankettbaserade arbetsflödessteg är standardiserade. Nu kan alla formulärbaserade arbetsflödessteg producera loggar som är lika standardiserade. Det förbättrar felsökningshastigheten.
 
 ## Dataintegrering {#data-integration}
 
@@ -165,7 +165,7 @@ AEM Forms kan konfigureras med valfri kombination av operativsystem, programserv
    <td>
     <ul>
      <li>IBM DB2 <br /> </li>
-     <li>Oraclets RAC</li>
+     <li>ORACLETS RAC</li>
     </ul> </td>
   </tr>
   <tr>
@@ -213,13 +213,13 @@ AEM Forms kan konfigureras med valfri kombination av operativsystem, programserv
 
 #### Nytt HTML5-baserat användargränssnitt {#new-html-based-uis}
 
-I linje med det planerade EOL-programmet för Adobe Flash Player och den övergripande inriktningen på att migrera Flash-baserat innehåll till öppna standarder har AEM 6.5 Forms ersatt det Flash-baserade gränssnittet för hälsoövervakning, processhantering, Reader-tillägg och användargränssnittet för kategorihantering i AEM Forms på JEE Administration Console med HTML5-baserat användargränssnitt.
+I linje med det planerade EOL-programmet för Flash Player i Adobe och den övergripande inriktningen på att migrera Flash-baserat innehåll till öppna standarder har AEM 6.5 Forms ersatt det Flash-baserade gränssnittet för hälsoövervakning, processhantering, Reader-tillägg och användargränssnittet för kategorihantering i AEM Forms på JEE Administration Console med HTML5-baserat användargränssnitt.
 
 #### Säkerhetsförbättringar {#security-improvements}
 
 * AEM 6.5 Forms på JEE-administrationskonsolens gränssnitt baseras nu på Apache Struts 2.5.
 * AEM 6.5 Forms använder nu jQuery till 3.2.1 och jQuery UI 1.12.1. Se, [uppgraderingsdokumentation](/help/forms/home.md) för ändringens inverkan.
 
-#### Förbättringar av hjälpmedel {#accessibility-improvements}
+#### Förbättrad tillgänglighet {#accessibility-improvements}
 
 AEM 6.5 Forms har förbättrat tillgängligheten till AEM Forms Workspace.

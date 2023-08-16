@@ -2,7 +2,7 @@
 title: Hämta XDP- och PDF-dokument i AEM Forms
 seo-title: Getting XDP and PDF documents in AEM Forms
 description: Med AEM Forms kan du överföra formulär och resurser som stöds och använda dem med adaptiva formulär. Du kan också ladda upp formulär och relaterade resurser i grupp som en ZIP-adress.
-seo-description: AEM Forms allows you to upload forms and supported assets to use with adaptive forms. You can also bulk upload forms and related resources as a ZIP.
+seo-description: AEM Forms lets you upload forms and supported assets to use with adaptive forms. You can also bulk upload forms and related resources as a ZIP.
 uuid: cd49b4a8-c282-4059-95a0-c98f6c92ab14
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -11,9 +11,9 @@ discoiquuid: 28b9f1d6-6a52-458f-a8ed-a206502eda0d
 docset: aem65
 role: Admin
 exl-id: 9ecdc50a-31e3-46ae-948a-d1f6e6085734
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '673'
+source-wordcount: '671'
 ht-degree: 0%
 
 ---
@@ -81,7 +81,7 @@ Ett adaptivt formulär som refererar till en XFA har sina fält bundna till de f
 Om du tar bort en formulärmall skadas det beroende adaptiva formuläret eller formulärmallen. En sådan anpassningsbar form kallas ibland i allmänhet för en smutsig form. I AEM Forms användargränssnitt kan du hitta de felaktiga formulären på följande två sätt.
 
 * En varningsikon visas på miniatyrbilden för det adaptiva formuläret i resurslistan och följande meddelande visas när du håller pekaren över varningsikonen.\
-   `Schema/Form Template for this adaptive form has been updated so please go to Authoring mode and rebase it with new version.`
+  `Schema/Form Template for this adaptive form has been updated so please go to Authoring mode and rebase it with new version.`
 
 ![Varning för ett anpassat formulär som inte är synkroniserat efter att tillhörande XFA har uppdaterats](assets/dirtyaf.png)
 

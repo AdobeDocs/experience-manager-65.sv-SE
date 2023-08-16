@@ -12,9 +12,9 @@ discoiquuid: 97286c2c-f6e3-43ec-b1a9-2abb58616778
 docset: aem65
 role: Admin
 exl-id: ecd30f5d-ad31-4482-96d3-c92f1cf91336
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '2482'
+source-wordcount: '2481'
 ht-degree: 1%
 
 ---
@@ -69,7 +69,7 @@ Om en författare, när en communitywebbplats publiceras från [Konsolen Webbpla
 
 Användare och profiler som skapas i publiceringsmiljön (t.ex. genom självregistrering, social inloggning, LDAP-autentisering) visas inte i författarmiljön.
 
-När topologin är en [publicera servergrupp](/help/communities/topologies.md) och användarsynkroniseringen har konfigurerats korrekt, *användare* och *användarprofil* synkroniseras över hela publiceringsgruppen med Sling-distribution.
+När topologin är [publicera servergrupp](/help/communities/topologies.md) och användarsynkroniseringen har konfigurerats korrekt, *användare* och *användarprofil* synkroniseras över hela publiceringsgruppen med Sling-distribution.
 
 ### Ny community-grupp skapas vid publicering {#new-community-group-is-created-on-publish}
 
@@ -130,7 +130,7 @@ Så här konfigurerar du synkroniseringsagenter för Apache Sling:
    * Välj **Använd flera köer.**
    * Ange **Exporterarslutpunkter** och **Importerarslutpunkter** (du kan lägga till fler slutpunkter för exporterare och importerare).
 
-     Dessa slutpunkter definierar varifrån du vill hämta innehållet och var du vill överföra innehållet. Författaren hämtar innehållet från den angivna exporterarens slutpunkt och skickar innehållet till utgivaren (utom den utgivare som innehållet hämtades från).
+     Dessa slutpunkter definierar var du vill hämta innehållet från och var du vill skicka innehållet. Författaren hämtar innehållet från den angivna exporterarens slutpunkt och skickar innehållet till utgivaren (utom den utgivare som innehållet hämtades från).
 
    ![sync-agent-fact](assets/sync-agent-fact.png)
 
@@ -138,7 +138,7 @@ Så här konfigurerar du synkroniseringsagenter för Apache Sling:
 
 Det gör att författaren kan identifiera den behöriga användaren som har behörighet att synkronisera användardata från författaren till publiceringen.
 
-The [auktoriserad användare har skapats](/help/sites-administering/sync.md#createauthuser) på alla publiceringsinstanser hjälper utgivaren att ansluta till författaren och konfigurera Sling-distributionen på författaren. Den här behöriga användaren har alla nödvändiga [ACL](/help/sites-administering/sync.md#howtoaddacl).
+The [auktoriserad användare har skapats](/help/sites-administering/sync.md#createauthuser) på alla publiceringsinstanser hjälper utgivaren att ansluta till författaren och konfigurera Sling-distributionen på författaren. Den här behöriga användaren har allt som krävs [ACL:er](/help/sites-administering/sync.md#howtoaddacl).
 
 När data ska installeras på eller hämtas från utgivare ansluter författaren till utgivare med de autentiseringsuppgifter (användarnamn och lösenord) som anges i den här konfigurationen.
 
@@ -196,7 +196,7 @@ Så här ser du till att medlemskapet synkroniseras:
 1. Sök **Adobe Granite Distribution - Diff Observer Factory**.
 1. Välj den befintliga konfiguration som ska öppnas för redigering (pennikon).
 
-   Verifiera **agentnamn: social pubsync-reverse**.
+   Verifiera **agentnamn: socialpubsync -reverse**.
 
 1. Välj **Aktiverad** kryssrutan.
 1. Ange **rep:medlemmar** som beskrivning av propertyName i **namn på utsökta egenskaper** och Spara.
@@ -225,14 +225,14 @@ Så här ändrar du avsökningsintervallet:
 
 ### AEM Communities Sync Listener {#aem-communities-user-sync-listener}
 
-Om det finns problem med Sling-distributionen där det finns skillnader i prenumerationer och följningar kontrollerar du om följande egenskaper i **AEM Communities Sync Listener** konfigurationer anges:
+Kontrollera om följande egenskaper i **AEM Communities Sync Listener** konfigurationer anges:
 
 * NodeTypes
 * IgnorableProperties
 * IgnorableNodes
-* DistributedFolders
+* Distribuerade mappar
 
-Så här synkroniserar du prenumerationer: följningar och meddelanden
+Så här synkroniserar du prenumerationer:
 
 I varje AEM publiceringsinstans:
 
@@ -259,7 +259,7 @@ I varje AEM publiceringsinstans:
 
    De nodtyper som anges i den här egenskapen synkroniseras och meddelandeinformationen (bloggar och konfigurationer som följs) synkroniseras mellan olika utgivare.
 
-1. Lägg till alla mappar att synkronisera i **DistributedFolders**. Till exempel,
+1. Lägg till alla mappar att synkronisera i **Distribuerade mappar**. Till exempel,
 
    `segments/scoring`
 
@@ -285,7 +285,7 @@ Se till att alla utgivare i en publiceringsgrupp har ett unikt Sling ID. Om Slin
 
 För att säkerställa ett unikt Sling-ID för utgivaren i publiceringsgruppen, på varje publiceringsinstans:
 
-1. Bläddra till [https://_värd:port_/system/console/status-slingsettings](https://localhost:4503/system/console/status-slingsettings).
+1. Bläddra till [https://_värd:port_/system/console/status-slingssettings](https://localhost:4503/system/console/status-slingsettings).
 1. Kontrollera värdet för **Sling-ID**.
 
    ![slingid](assets/slingid.png)
@@ -293,13 +293,13 @@ För att säkerställa ett unikt Sling-ID för utgivaren i publiceringsgruppen, 
    Om Sling ID för en publiceringsinstans matchar Sling ID för någon annan publiceringsinstans:
 
 1. Stoppa en av publiceringsinstanserna som har ett matchande Sling-ID.
-1. I `crx-quickstart/launchpad/felix` katalog, söka efter och ta bort filen med namnet *sling.id.file.*
+1. I `crx-quickstart/launchpad/felix` katalog, söka efter och ta bort filen med namnet *sling.id.file*
 
    På ett Linux-system:
 
    `rm -i $(find . -type f -name sling.id.file)`
 
-   Exempel:
+   På ett Windows-system:
 
    Använd Utforskaren och sök efter `sling.id.file`
 
@@ -322,7 +322,7 @@ Så här ser du till att uppdateringarna synkroniseras korrekt mellan olika utgi
    Till exempel: [https://localhost:4503/system/console/configMgr](https://localhost:4503/system/console/configMgr).
 1. Leta reda på **Paket för distribution av Apache Sling - Vaultpaketbyggare**
 
-   Builder-namn: socialpubsync-vlt.
+   Builder name: social pubsync-vlt.
 
 1. Välj redigeringsikonen.
 1. Lägg till två paketnodsfilter:
@@ -343,7 +343,7 @@ Om Sling-distributionen misslyckas provar du följande felsökningssteg:
    Se till att flera konfigurationer inte läggs till eller redigeras, i stället bör de befintliga standardkonfigurationerna redigeras.
 1. **Kontrollera konfigurationer**
 
-   Se till att alla [konfigurationer](/help/communities/sync.md#bestpractices) är korrekt inställda i din AEM Author-instans, vilket anges i [Bästa praxis](/help/communities/sync.md#main-pars-header-863110628).
+   Se till att alla [konfigurationer](/help/communities/sync.md#bestpractices) är korrekt inställda i AEM Author-instansen, vilket anges i [Bästa praxis](/help/communities/sync.md#main-pars-header-863110628).
 
 1. **Kontrollera behörigheter**
 
@@ -361,7 +361,7 @@ Om Sling-distributionen misslyckas provar du följande felsökningssteg:
    * Ignorerbara noder - inställd på **.tokens**, **system** och **rep:cache**.
    * Distribuerade mappar - Ange de mappar som du vill distribuera.
 
-1. **Kontrollera loggar som genereras när användare skapas vid publiceringsinstansen**
+1. **Kontrollera loggar som genereras när användare skapas vid publiceringsinstans**
 
    Om ovanstående konfigurationer är korrekt inställda men användarsynkroniseringen inte fungerar kontrollerar du loggarna som genereras när användaren skapas.
 
@@ -379,7 +379,7 @@ Om Sling-distributionen misslyckas provar du följande felsökningssteg:
    15.05.2016 18:33:02.273 *INFO* [sling-oak-observation-7430] org.apache.jackrabbit.vault.packaging.impl.JcrPackageDefinitionImpl unwrapping package sling/distribution:socialpubsync-vlt_1463337182039_f34f4fa6-10b9-42eb-8740-4da9d4d38f99:0.0.1
    ```
 
-Så här felsöker du:
+Felsök:
 
 1. Inaktivera användarsynkronisering:
 1. Logga in AEM författarinstansen med administratörsbehörighet.

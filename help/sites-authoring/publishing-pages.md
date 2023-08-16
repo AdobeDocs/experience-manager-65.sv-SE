@@ -1,6 +1,6 @@
 ---
 title: Publicera innehållssidor
-description: Lär dig hur du publicerar innehållssidor.
+description: Lär dig publicera innehållssidor.
 uuid: 57795e4a-e528-4e74-ad9c-e13f868daebb
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: 1f5eb646-acc7-49d5-b839-e451e68ada9e
 docset: aem65
 exl-id: 61144bbe-6710-4cae-a63e-e708936ff360
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '1663'
+source-wordcount: '1662'
 ht-degree: 6%
 
 ---
@@ -49,7 +49,7 @@ Du kan även publicera/avpublicera en sida direkt eller vid ett fördefinierat d
 
 ## Publicera sidor {#publishing-pages-1}
 
-Beroende på var du befinner dig kan du publicera:
+Beroende på din plats kan du publicera:
 
 * [Från sidredigeraren](/help/sites-authoring/publishing-pages.md#publishing-from-the-editor)
 * [Från webbplatskonsolen](/help/sites-authoring/publishing-pages.md#publishing-from-the-console)
@@ -65,7 +65,7 @@ Om du redigerar en sida kan den publiceras direkt från redigeraren.
 1. Beroende på om sidan har referenser som behöver publiceras:
 
    * Sidan publiceras direkt om det inte finns några referenser att publicera.
-   * Om sidan innehåller referenser som behöver publiceras visas dessa i **Publicera** guide, där du kan antingen:
+   * Om sidan innehåller referenser som behöver publiceras visas dessa i **Publicera** guide, där du kan
 
       * Ange vilket av resurserna/taggarna/etc. du vill publicera tillsammans med sidan och sedan använda **Publicera** för att slutföra processen.
 
@@ -126,7 +126,7 @@ Så här publicerar eller avpublicerar du en sida med Hantera publikation:
 
    ![pp-02-1](assets/pp-02-1.png)
 
-1. Guiden **Hantera publikation** startar. Det första steget, **Alternativ** kan du:
+1. Guiden **Hantera publikation** startar. Det första steget **Alternativ** kan du:
 
    * Välj om du vill publicera eller avpublicera de markerade sidorna.
    * Välj om du vill utföra åtgärden nu eller vid ett senare datum.
@@ -141,7 +141,7 @@ Så här publicerar eller avpublicerar du en sida med Hantera publikation:
 
 1. I nästa steg i guiden Hantera publikation **Omfång** kan du definiera omfattningen för publikationen/avpublikationen, t.ex. inkludera underordnade sidor och/eller inkludera referenser.
 
-   ![screen_shot_2018-03-21at153354](assets/screen_shot_2018-03-21at153354.png)
+   ![screen_shot_2018-03-2153354](assets/screen_shot_2018-03-21at153354.png)
 
    Du kan använda knappen **Lägg till innehåll** för att lägga till ytterligare sidor i listan över sidor som ska publiceras, om du inte valde någon innan du startade guiden Hantera publikation.
 
@@ -185,11 +185,11 @@ Så här publicerar eller avpublicerar du en sida med Hantera publikation:
 
    I webbplatskonsolen bekräftar ett meddelande publikationen.
 
-1. Om de publicerade sidorna är kopplade till arbetsflöden kan de visas i en **Arbetsflöden** steg i publikationsguiden.
+1. Om de publicerade sidorna är kopplade till arbetsflöden kan de visas i en **Arbetsflöden** steg i guiden.
 
    >[!NOTE]
    >
-   >The **Arbetsflöden** visas baserat på vilka rättigheter din användare har eller inte har. Se [föregående anteckning på denna sida](/help/sites-authoring/publishing-pages.md#main-pars-note-0-ejsjqg-refd) om publiceringsrättigheter och [Hantera åtkomst till arbetsflöden](/help/sites-administering/workflows-managing.md) och [Använda arbetsflöden på sidor](/help/sites-authoring/workflows-applying.md#main-pars-text-5-bvhbkh-refd) för mer information.
+   >The **Arbetsflöden** visas baserat på vilka rättigheter din användare har eller inte har. Se [föregående anteckning på denna sida](/help/sites-authoring/publishing-pages.md#main-pars-note-0-ejsjqg-refd) om publiceringsrättigheter samt [Hantera åtkomst till arbetsflöden](/help/sites-administering/workflows-managing.md) och [Använda arbetsflöden på sidor](/help/sites-authoring/workflows-applying.md#main-pars-text-5-bvhbkh-refd) för mer information.
 
    Resurserna grupperas efter de arbetsflöden som utlöses och de olika alternativen:
 
@@ -235,7 +235,7 @@ Precis som du [publicera med alternativet Hantera publikation](/help/sites-autho
 
 ## Publicera och avpublicera ett träd {#publishing-and-unpublishing-a-tree}
 
-När du har angett eller uppdaterat ett stort antal innehållssidor, som alla finns på samma rotsida, kan det vara enklare att publicera hela trädet i en åtgärd.
+När du har angett eller uppdaterat ett stort antal innehållssidor, som alla finns på samma rotsida, kan det vara enklare att publicera hela trädet i en enda åtgärd.
 
 Du kan använda [Hantera publikation](/help/sites-authoring/publishing-pages.md#manage-publication) på webbplatskonsolen för att göra detta.
 
@@ -250,11 +250,11 @@ Du kan använda [Hantera publikation](/help/sites-authoring/publishing-pages.md#
    * Inkludera endast omedelbart underordnade
    * Inkludera endast redan publicerade sidor
 
-   Dessa alternativ är markerade som standard, så du måste komma ihåg att avmarkera dem. Klicka **Lägg till** för att bekräfta och lägga till innehållet i publikationen/avpublikationen.
+   De här alternativen är markerade som standard, så du måste komma ihåg att avmarkera dem. Klicka **Lägg till** för att bekräfta och lägga till innehållet i publikationen/avpublikationen.
 
    ![chlimage_1-7](assets/chlimage_1-7.png)
 
-1. The **Hantera publikation** guiden listar innehållet i trädet för granskning. Du kan anpassa markeringen ytterligare genom att lägga till ytterligare sidor eller ta bort de markerade sidorna.
+1. The **Hantera publikation** guiden listar innehållet i trädet för granskning. Du kan anpassa markeringen ytterligare genom att lägga till eller ta bort de markerade sidorna.
 
    ![screen_shot_2018-03-21at154237](assets/screen_shot_2018-03-21at154237.png)
 
@@ -274,8 +274,8 @@ Du kan ange en sidas publiceringsstatus:
 
 * I [tidslinje](/help/sites-authoring/basic-handling.md#timeline)
 
-  ![screen_shot_2018-03-21at154420](assets/screen_shot_2018-03-21at154420.png)
+  ![screen_shot_2018-03-2154420](assets/screen_shot_2018-03-21at154420.png)
 
 * I [Sidinformation-menyn](/help/sites-authoring/author-environment-tools.md#page-information) när du redigerar en sida
 
-  ![screen_shot_2018-03-21at154456](assets/screen_shot_2018-03-21at154456.png)
+  ![screen_shot_2018-03-2154456](assets/screen_shot_2018-03-21at154456.png)

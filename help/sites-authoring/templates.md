@@ -11,9 +11,9 @@ topic-tags: site-features
 discoiquuid: b53348ca-fc50-4e7d-953d-b4c03a5025bb
 docset: aem65
 exl-id: 363b8fab-6ce7-4338-8478-3f25f2a1f117
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '4871'
+source-wordcount: '4864'
 ht-degree: 9%
 
 ---
@@ -57,7 +57,7 @@ Följande punkter är viktiga att tänka på innan du börjar:
 
 * Att skapa en ny mall kräver samarbete. Därför är [Roll](#roles) anges för varje uppgift.
 
-* Beroende på hur instansen är konfigurerad kan det vara bra att vara medveten om att AEM nu innehåller [två grundläggande typer av mallar](/help/sites-authoring/templates.md#editable-and-static-templates). Detta påverkar inte hur du faktiskt [använda en mall för att skapa en sida](#using-a-template-to-create-a-page)men det påverkar malltypen som du kan skapa och hur en sida relaterar till dess mall.
+* Beroende på hur instansen är konfigurerad kan det vara bra att vara medveten om att AEM nu innehåller [två grundläggande typer av mallar](/help/sites-authoring/templates.md#editable-and-static-templates). Det här påverkar inte hur du faktiskt [använda en mall för att skapa en sida](#using-a-template-to-create-a-page), men det påverkar malltypen som du kan skapa och hur en sida relaterar till dess mall.
 
 ### Roller {#roles}
 
@@ -87,7 +87,7 @@ Om du vill skapa en ny mall med hjälp av **mallkonsolen** och **mallredigeraren
 
          * Du kan till exempel använda mönster när du definierar banor.
 
-      * Teknisk information från utvecklaren.
+      * Teknik från utvecklaren.
 
 På grund av egenskaperna hos vissa uppgifter, som att skapa en mapp, behövs en utvecklingsmiljö som kräver kunskap/erfarenhet.
 
@@ -114,7 +114,7 @@ AEM har nu två grundläggande typer av mallar:
 
 I mallkonsolen och mallredigeraren går det bara att skapa och redigera redigerbara mallar. Därför fokuserar det här dokumentet enbart på redigerbara mallar.
 
-### Använda en mall för att skapa en sida {#using-a-template-to-create-a-page}
+### Skapa en sida med en mall {#using-a-template-to-create-a-page}
 
 När en mall används för [skapa en ny sida](/help/sites-authoring/managing-pages.md#creating-a-new-page) det inte finns någon synlig skillnad och ingen indikation mellan statiska och redigerbara mallar. För sidförfattaren är processen genomskinlig.
 
@@ -122,7 +122,7 @@ När en mall används för [skapa en ny sida](/help/sites-authoring/managing-pag
 
 När du skapar en ny redigerbar mall:
 
-* Använd **Mall** konsol. Det här finns i **Allmänt** i **verktyg** konsol.
+* Använd **Mall** konsol. Det här är tillgängligt i **Allmänt** i **verktyg** konsol.
 
    * Eller direkt på: [https://localhost:4502/libs/wcm/core/content/sites/templates.html/conf](https://localhost:4502/libs/wcm/core/content/sites/templates.html/conf)
 
@@ -247,11 +247,11 @@ En mall kan aktiveras eller inaktiveras så att den blir tillgänglig eller inte
 
 >[!CAUTION]
 >
->När en mall är aktiverad visas en varning när en mallskapare börjar uppdatera mallen ytterligare. Detta är till för att informera användaren om att mallen kan refereras, så eventuella ändringar kan påverka sidorna som refererar till mallen.
+>När en mall är aktiverad visas en varning när en mallskapare börjar uppdatera mallen ytterligare. Detta är till för att informera användaren om att det finns referenser till mallen, så eventuella ändringar kan påverka de sidor som refererar till mallen.
 
 1. I **Mallkonsol** markerar du mallen.
 1. Välj **Aktivera** eller **Inaktivera** i verktygsfältet och i bekräftelsedialogrutan igen.
-1. Nu kan du använda mallen när [skapa en ny sida](/help/sites-authoring/managing-pages.md#creating-a-new-page)men du vill nog [redigera mallen](#editingatemplate) enligt dina krav.
+1. Nu kan du använda mallen när [skapa en ny sida](/help/sites-authoring/managing-pages.md#creating-a-new-page), även om du antagligen vill [redigera mallen](#editingatemplate) enligt dina krav.
 
 >[!NOTE]
 >
@@ -291,8 +291,8 @@ En mall kan göras tillgänglig eller otillgänglig för vissa sidgrenar.
 När det refereras till mallen när en sida återges måste den fullständigt konfigurerade mallen publiceras så att den är tillgänglig i publiceringsmiljön.
 
 1. I **Mallkonsol** markerar du mallen.
-1. Välj **Publicera** i verktygsfältet för att öppna guiden.
-1. Välj **Innehållsprofiler** publiceras tillsammans.
+1. Välj **Publicera** Öppna guiden i verktygsfältet.
+1. Välj **Innehållsprinciper** publiceras tillsammans.
 
 1. Välj **Publicera** från verktygsfältet för att slutföra åtgärden.
 
@@ -334,7 +334,7 @@ Följande aspekter av en mall kan redigeras:
 
   Se [Systemdokumentation](/help/sites-authoring/style-system.md) för mer information.
 
-The **Läge** kan du välja och redigera lämplig del av mallen i verktygsfältet:
+The **Läge** Med -väljaren i verktygsfältet kan du markera och redigera rätt aspekt av mallen:
 
 * [Struktur](#editingatemplatestructure)
 * [Ursprungligt innehåll](#editingatemplateinitialcontent)
@@ -342,13 +342,13 @@ The **Läge** kan du välja och redigera lämplig del av mallen i verktygsfälte
 
 ![chlimage_1-133](assets/chlimage_1-133.png)
 
-Med **Sidprofil** på **Sidinformation** kan du [välj önskade sidprofiler](#editingatemplatepagepolicies):
+Med **Sidprofil** på **Sidinformation** -menyn [välj önskade sidprofiler](#editingatemplatepagepolicies):
 
 ![screen_shot_2018-03-23at120604](assets/screen_shot_2018-03-23at120604.png)
 
 >[!CAUTION]
 >
->Om en författare börjar redigera en mall som redan har aktiverats visas en varning. Detta är till för att informera användaren om att mallen kan refereras, så eventuella ändringar kan påverka sidorna som refererar till mallen.
+>Om en författare börjar redigera en mall som redan har aktiverats visas en varning. Detta är till för att informera användaren om att det finns referenser till mallen, så eventuella ändringar kan påverka de sidor som refererar till mallen.
 
 ### Redigera en mall - Struktur - Mallförfattare {#editing-a-template-structure-template-author}
 
@@ -436,17 +436,17 @@ I **Struktur** mallredigerarens läge:
 
   ![chlimage_1-137](assets/chlimage_1-137.png)
 
-  Du kan lägga till en ny profil genom att markera knappen Lägg till bredvid **Välj princip** listruta. En ny titel bör sedan anges i **Policytitel** fält.
+  Du kan lägga till en ny profil genom att markera knappen Lägg till bredvid **Välj princip** nedrullningsbar meny. En ny titel bör sedan anges i **Principtitel** fält.
 
   ![chlimage_1-138](assets/chlimage_1-138.png)
 
-  Den valda befintliga profilen i **Välj princip** listrutan kan kopieras som en ny princip med kopieringsknappen bredvid listrutan. En ny titel bör sedan anges i **Policytitel** fält. Som standard kommer den kopierade profilen att namnges **Kopia av X**, där X är namnet på den kopierade profilen.
+  Den valda befintliga profilen i **Välj princip** listrutan kan kopieras som en ny princip med kopieringsknappen bredvid listrutan. En ny titel bör sedan anges i **Principtitel** fält. Som standard kommer den kopierade profilen att namnges **Kopia av X**, där X är namnet på den kopierade profilen.
 
   ![chlimage_1-139](assets/chlimage_1-139.png)
 
   En beskrivning av profilen är valfri i **Principbeskrivning** fält.
 
-  I **Andra mallar använder även den valda profilen** kan du enkelt se vilka andra mallar som använder den profil som valts i **Välj princip** listruta.
+  I **Andra mallar använder även den valda profilen** kan du enkelt se vilka andra mallar som använder den profil som valts i **Välj princip** nedrullningsbar meny.
 
   ![chlimage_1-140](assets/chlimage_1-140.png)
 
@@ -467,7 +467,7 @@ I **Struktur** mallredigerarens läge:
 
   För en bildkomponent kan till exempel de tillåtna bredderna definieras tillsammans med aktivering av lazy loading.
 
-  Om en inställning tillåter flera konfigurationer klickar eller trycker du på **Lägg till** om du vill lägga till en annan konfiguration.
+  Om en inställning tillåter flera konfigurationer klickar du på eller trycker på **Lägg till** om du vill lägga till en annan konfiguration.
 
   ![chlimage_1-141](assets/chlimage_1-141.png)
 
@@ -487,7 +487,7 @@ I **Struktur** mallredigerarens läge:
 
   >[!CAUTION]
   >
-  >Observera att AEM beskärningsproportioner definieras som **höjd/bredd**. Detta skiljer sig från den vanliga definitionen av bredd/höjd och görs av kompatibilitetsskäl. Sidredigeringsanvändarna kommer inte att vara medvetna om några skillnader förutsatt att du definierar **Namn** så här visas det tydligt i användargränssnittet.
+  >Observera att AEM beskärningsproportioner definieras som **höjd/bredd**. Detta skiljer sig från den vanliga definitionen av bredd/höjd och görs av bakåtkompatibilitetsskäl. Sidredigeringsanvändarna kommer inte att vara medvetna om några skillnader förutsatt att du definierar **Namn** så här visas det tydligt i användargränssnittet.
 
   >[!NOTE]
   >
@@ -524,7 +524,7 @@ I **Struktur** mallredigerarens läge:
    * Komponenterna grupperas efter komponentgrupperna, som kan expanderas och komprimeras.
    * Du kan markera en hel grupp genom att markera gruppnamnet och avmarkera alla genom att avmarkera kryssrutan.
    * Ett minustecken representerar minst ett, men inte alla, objekt i en grupp markeras.
-   * En sökning är tillgänglig för att filtrera efter en komponent efter namn.
+   * Det finns en sökning som du kan använda för att filtrera efter en komponent efter namn.
    * Antalet som visas till höger om komponentgruppens namn representerar det totala antalet valda komponenter i dessa grupper oavsett filtret.
 
   ![chlimage_1-144](assets/chlimage_1-144.png)
@@ -555,7 +555,7 @@ I **Struktur** mallredigerarens läge:
 
       * Innehåll som redan har angetts betraktas som ursprungligt innehåll och är bara synligt i **Ursprungligt innehåll** läge.
 
-   * Den olåsta komponentens överordnade kan inte flyttas, klippas ut eller tas bort.
+   * Det går inte att flytta, klippa ut eller ta bort överordnade för den olåsta komponenten.
 
   ![chlimage_1-146](assets/chlimage_1-146.png)
 
@@ -585,7 +585,7 @@ I **Struktur** mallredigerarens läge:
 >
 >**Ursprungligt innehåll** kan användas för redigeringsläge för sidor som skapas med den mallen. Därför har profiler inte definierats i **Ursprungligt innehåll** läge, men inte i [**Struktur** läge](/help/sites-authoring/templates.md#editing-a-template-structure-template-author).
 
-* Olåsta komponenter som är tillgängliga för redigering markeras. När de är markerade har de en blå kant:
+* Olåsta komponenter som är tillgängliga för redigering markeras. När de är markerade har de en blå kantlinje:
 
   ![chlimage_1-150](assets/chlimage_1-150.png)
 
@@ -641,20 +641,20 @@ Du kan tillämpa en innehållsprincip på antingen mallen eller de resulterande 
 
   ![chlimage_1-157](assets/chlimage_1-157.png)
 
-  Du kan lägga till en ny profil genom att markera knappen Lägg till bredvid **Välj princip** listruta. En ny titel bör sedan anges i **Policytitel** fält.
+  Du kan lägga till en ny profil genom att markera knappen Lägg till bredvid **Välj princip** nedrullningsbar meny. En ny titel bör sedan anges i **Principtitel** fält.
 
   ![chlimage_1-158](assets/chlimage_1-158.png)
 
-  Den valda befintliga profilen i **Välj princip** listrutan kan kopieras som en ny princip med kopieringsknappen bredvid listrutan. En ny titel bör sedan anges i **Policytitel** fält. Som standard kommer den kopierade profilen att namnges **Kopia av X**, där X är namnet på den kopierade profilen.
+  Den valda befintliga profilen i **Välj princip** listrutan kan kopieras som en ny princip med kopieringsknappen bredvid listrutan. En ny titel bör sedan anges i **Principtitel** fält. Som standard kommer den kopierade profilen att namnges **Kopia av X**, där X är namnet på den kopierade profilen.
 
   ![chlimage_1-159](assets/chlimage_1-159.png)
 
-* Definiera en rubrik för profilen i dialogrutan **Policytitel** fält. En profil måste ha en titel så att den enkelt kan väljas i **Välj princip** listruta.
+* Definiera en rubrik för profilen i dialogrutan **Principtitel** fält. En profil måste ha en titel så att den enkelt kan väljas i **Välj princip** nedrullningsbar meny.
 
   ![chlimage_1-160](assets/chlimage_1-160.png)
 
 * En beskrivning av profilen är valfri i **Principbeskrivning** fält.
-* I **Andra mallar använder även den valda profilen** kan du enkelt se vilka andra mallar som använder den profil som valts i **Välj princip** listruta.
+* I **Andra mallar använder även den valda profilen** kan du enkelt se vilka andra mallar som använder den profil som valts i **Välj princip** nedrullningsbar meny.
 
   ![chlimage_1-161](assets/chlimage_1-161.png)
 
@@ -664,7 +664,7 @@ Med hjälp av sidegenskaper kan du definiera nödvändiga klientbibliotek genom 
 
 ![chlimage_1-162](assets/chlimage_1-162.png)
 
-* Ange de klientbibliotek som du vill använda på sidor som skapas med den här mallen. Ange namnet på ett bibliotek i textfältet i **Klientbibliotek** -avsnitt.
+* Ange de klientbibliotek som du vill använda på sidor som skapas med den här mallen. Ange namnet på ett bibliotek i textfältet i **Bibliotek på klientsidan** -avsnitt.
 
   ![chlimage_1-163](assets/chlimage_1-163.png)
 
@@ -707,7 +707,7 @@ När du skapar mallar bör du tänka på följande:
    * Ändringar i strukturen:
 
       * De används omedelbart på de resulterande sidorna.
-      * För att besökarna ska kunna se ändringarna måste den ändrade mallen fortfarande publiceras.
+      * Det krävs fortfarande publicering av den ändrade mallen för att besökarna ska kunna se ändringarna.
 
    * Ändringar i innehållsprinciper och designkonfigurationer:
 

@@ -2,16 +2,16 @@
 title: Läs om CMS Headless Development
 description: I den här delen av AEM Headless Developer Journey kan du lära dig mer om headless-teknik och varför du skulle använda den.
 exl-id: f0989cea-3102-43cd-976e-9a6b265d9c15
-source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '1595'
+source-wordcount: '1594'
 ht-degree: 0%
 
 ---
 
 # Läs om CMS Headless Development {#learn-about}
 
-I den här delen av [AEM Headless Developer Journey,](overview.md) lär dig mer om headless-teknik och varför du skulle använda den.
+I den här delen av [AEM Headless Developer Journey](overview.md) lär dig mer om headless-teknik och varför du skulle använda den.
 
 ## Syfte {#objective}
 
@@ -56,7 +56,7 @@ Användarna förväntar sig engagemang oavsett plattform eller kontaktyta och be
 
 Huvudet för alla system är vanligtvis systemets utdatarenderare, vanligtvis i form av ett grafiskt gränssnitt eller andra grafiska utdata.
 
-En server utan headlessserver sitter till exempel förmodligen i ett rack i ett serverrum någonstans och har ingen övervakare ansluten. För att få tillgång till den måste du fjärransluta till den. I det här fallet är monitorn huvudet när den tar hand om återgivningen av serverns utdata. Du som kund för tjänsten kan ge dig ett eget huvud (bildskärmen) när du fjärransluter till den.
+En headless-server sitter till exempel förmodligen i ett rack i ett serverrum någonstans och har ingen övervakare ansluten. För att få tillgång till den måste du fjärransluta till den. I det här fallet är monitorn huvudet när den tar hand om återgivningen av serverns utdata. Du som kund för tjänsten kan ge dig ett eget huvud (bildskärmen) när du fjärransluter till den.
 
 När vi talar om ett headless CMS hanterar CMS-systemet innehållet och fortsätter att leverera det till konsumenterna. Genom att bara leverera **innehåll** på ett standardiserat sätt utelämnar ett headless CMS den slutliga återgivningen och lämnar kvar **presentation** av innehållet till den konsumerande tjänsten.
 
@@ -76,7 +76,7 @@ Den här frikopplingen innebär att varje konsumtionstjänst (frontend) kan bygg
 
 ## Teknisk bakgrund {#technology}
 
-Med en headless-strategi kan ni bygga en tekniklösning som enkelt och snabbt kan anpassas efter framtida behov av digitala upplevelser.
+Med ett headless-tillvägagångssätt kan ni bygga en tekniklösning som enkelt och snabbt kan anpassas till framtida krav på digitala upplevelser.
 
 Tidigare var API:er för CMS:er vanligtvis REST-baserade. REST (Representational State transfer) tillhandahåller resurser som text på ett statslöst sätt. Detta gör att resurserna kan läsas och ändras med en fördefinierad uppsättning åtgärder. REST möjliggör stor interoperabilitet mellan tjänster på webben genom att säkerställa en tillståndslös representation av innehållet.
 
@@ -88,7 +88,7 @@ Oavsett vilket API du väljer kan du, genom att definiera ett headless-system ba
 
 Normalt återges innehållet på klientsidan. Detta innebär normalt att någon anropar ditt innehåll på en mobil enhet, att ditt CMS-system skickar innehållet och att den mobila enheten (klienten) sedan ansvarar för återgivningen av det innehåll som du betjänade. Om enheten är gammal eller långsam på något annat sätt är den digitala upplevelsen också långsam.
 
-Att frigöra innehåll från presentation innebär att det kan finnas mer kontroll över sådana prestandaproblem på klientsidan. SSR (Server-side rendering) överför ansvaret för återgivningen av innehållet från klientens webbläsare till servern. På så sätt kan ni som innehållsleverantör erbjuda en garanterad prestandanivå för er målgrupp om det är vad som krävs.
+Att frigöra innehåll från presentation innebär att det kan finnas mer kontroll över sådana prestandaproblem på klientsidan. SSR-återgivning (Server-side rendering) överför ansvaret för återgivningen av innehållet från klientens webbläsare till servern. På så sätt kan ni som innehållsleverantör erbjuda en garanterad prestandanivå för er målgrupp om det är vad som krävs.
 
 ## Organisationsutmaningar {#organization}
 
@@ -110,7 +110,7 @@ När du fortsätter med den här utvecklarresan får du lära dig hur AEM stöde
 
 Som branschledare inom digital upplevelsehantering inser Adobe att den idealiska lösningen på verkliga utmaningar som upplevelseskapare står inför sällan är ett binärt val. Det är därför AEM inte bara stöder båda modellerna, utan också ger en unik kombination av de båda, vilket kombinerar fördelarna med headless och full stack, så att ni kan hjälpa era kunder med ert innehåll, oavsett var de befinner sig.
 
-Den här resan fokuserar på den headless-baserade modellen för innehållsleverans. Men när ni väl har den här grundläggande kunskapen kan ni utforska hur ni kan utnyttja båda modellernas möjligheter ytterligare.
+Den här resan fokuserar på den headless-baserade modellen för innehållsleverans. Men när ni väl har den här grundläggande kunskapen kan ni ytterligare utforska hur ni kan utnyttja båda modellernas möjligheter.
 
 ## What&#39;s Next {#what-is-next}
 

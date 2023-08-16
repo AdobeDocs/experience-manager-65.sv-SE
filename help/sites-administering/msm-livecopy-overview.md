@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 3763e985-7dd8-47fd-bfdf-2368b424c270
 feature: Multi Site Manager
 exl-id: 0c3488bd-5f32-4956-882c-93326a45b379
-source-git-commit: 785d4897263bfeae6a0cd235abca3c96f2231392
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '553'
+source-wordcount: '551'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ The **Live Copy - översikt** gör att du kan:
 * Visa/hantera arv på en webbplats:
 
    * Visa det blå trädet och motsvarande Live-kopia-struktur, tillsammans med deras arvsstatus
-   * Ändra arvsstatus; till exempel göra uppehåll, återuppta
+   * Ändra arvsstatus, till exempel göra uppehåll, återuppta
    * Visa egenskaper för utkast och live-kopia
 
 * Utför utrullningsåtgärder
@@ -60,13 +60,13 @@ The **Live Copy - översikt** kan öppnas när du visar egenskaper för en ritni
 1. Öppna **Egenskaper** för lämplig ritningssida.
 1. Öppna **Blueprint** -fliken - **Live Copy - översikt** visas i det övre verktygsfältet:
 
-   ![Fliken Utskrift - Live Copy-översikt](assets/chlimage_1-360.png)
+   ![Fliken Utskrift - Live-kopia - översikt](assets/chlimage_1-360.png)
 
-1. Välj **Live Copy - översikt** för att visa och använda översikten över alla live-kopior som hör till den aktuella planen.
+1. Välj **Live Copy - översikt** om du vill visa och använda översikten över alla live-kopior som hör till den aktuella planen.
 
    >[!NOTE]
    >
-   >Mer information finns även i artikeln i kunskapsbasen [LiveCopy-statusmeddelande - uppdaterad/grön/synkroniserad](https://helpx.adobe.com/experience-manager/kb/livecopy-status-message---up-to-date-green-in-sync.html).
+   >Mer information finns även i artikeln i kunskapsbasen [LiveCycle-statusmeddelande - uppdaterad/grön/synkroniserad](https://helpx.adobe.com/experience-manager/kb/livecopy-status-message---up-to-date-green-in-sync.html).
 
 1. Använd **Stäng** för att avsluta och återgå till **Webbplatser** konsol.
 
@@ -75,7 +75,7 @@ The **Live Copy - översikt** kan öppnas när du visar egenskaper för en ritni
 The **Live Copy - översikt** kan även användas för att utföra åtgärder på live-kopian:
 
 1. Öppna **Live Copy - översikt**.
-1. Välj önskad skiss- eller Live copy-sida - verktygsfältet uppdateras för att visa tillgängliga åtgärder. The [funktionsmakron](/help/sites-administering/msm.md#terms-used) beroende på om du väljer [skiss](#actions-for-a-blueprint-page) eller [live copy](#actions-for-a-live-copy-page) sida:
+1. Välj önskad skiss- eller Live copy-sida - verktygsfältet uppdateras för att visa tillgängliga åtgärder. The [funktionsmakron](/help/sites-administering/msm.md#terms-used) beroende på om du väljer en [skiss](#actions-for-a-blueprint-page) eller [live copy](#actions-for-a-live-copy-page) sida:
 
 ### Åtgärder för en designsida {#actions-for-a-blueprint-page}
 
@@ -99,7 +99,7 @@ När du väljer en live-kopieringssida är följande åtgärder tillgängliga:
 
 * Redigera
 
-   * Öppna den aktiva kopieringssidan för redigering.
+   * Öppna kopieringssidan för redigering.
 
 * [Relationsstatus](#relationship-status)
 
@@ -115,11 +115,11 @@ När du väljer en live-kopieringssida är följande åtgärder tillgängliga:
 
 * [Gör uppehåll](/help/sites-administering/msm.md#suspending-and-cancelling-inheritance-and-synchronization)
 
-   * Inaktiverar tillfälligt relationen mellan en live-kopia och dess ritningssida.
+   * Inaktiverar tillfälligt relationen mellan en live-kopia och dess planeringssida.
 
 * [Återuppta](/help/sites-administering/msm-livecopy.md#resuming-inheritance-for-a-page)
 
-   * Med Återuppta kan du återskapa en pausad relation.
+   * Med Fortsätt kan du återskapa en pausad relation.
 
 * [Koppla loss](/help/sites-administering/msm.md#detaching-a-live-copy)
 
@@ -134,7 +134,7 @@ The **Relationsstatus** konsolen har två flikar med en rad funktioner:
 
 ### Statusinformation för relation {#relationship-status-information}
 
-På den här fliken finns detaljerad information om relationen mellan ritningen och den aktiva kopian:
+På den här fliken finns detaljerad information om statusen för relationen mellan ritningen och den aktiva kopian:
 
 ![Statusinformation för relation](assets/chlimage_1-363.png)
 

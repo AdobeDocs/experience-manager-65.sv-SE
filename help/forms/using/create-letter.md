@@ -9,9 +9,9 @@ topic-tags: correspondence-management
 discoiquuid: 6cef0bcf-e2f0-4a5a-85a1-6d8a5dd9bd01
 feature: Correspondence Management
 exl-id: 2f996a50-7c7d-41b6-84b2-523b6609254b
-source-git-commit: 37d2c70bff770d13b8094c5959e488f5531aef55
+source-git-commit: 10227bcfcfd5a9b0f126fee74dce6ec7842f5e95
 workflow-type: tm+mt
-source-wordcount: '3979'
+source-wordcount: '3980'
 ht-degree: 0%
 
 ---
@@ -51,7 +51,7 @@ I stället för att skapa en layoutmall från grunden kan du välja att ändra o
 
 ### Skapa dokumentfragment {#document-fragment-creation}
 
-Dokumentfragment är återanvändbara delar\komponenter i en korrespondens som du kan använda för att skapa bokstäver\korrespondens.
+Dokumentfragment är återanvändbara delar\komponenter av en korrespondens som du kan använda för att skapa bokstäver\korrespondens.
 
 Dokumentfragmenten är av följande typer:
 
@@ -73,11 +73,11 @@ Ett layoutfragment är en layout som kan användas i en eller flera bokstäver. 
 
 ### Skapa brev {#letter-creation}
 
-Det finns två sätt att generera korrespondensen som skickas till dina kunder: användardriven och systemdriven.
+Det finns två sätt att generera korrespondensen som skickas till dina kunder: användarstyrd och systemstyrd.
 
 #### Användardriven {#user-driven}
 
-Kundcentrerade medarbetare som skadejusteringsföretag eller handläggare kan skapa anpassad korrespondens. Med ett enkelt och intuitivt bokstavsfyllningsgränssnitt kan man lägga in valfri text i korrespondensen, anpassa redigerbart innehåll och samtidigt förhandsgranska korrespondensen i realtid. De kan sedan skicka den anpassade korrespondensen till en back-end-process.
+Kundcentrerade medarbetare som skadejusteringsföretag eller handläggare kan skapa anpassad korrespondens. Med ett enkelt och intuitivt bokstavsfyllningsgränssnitt kan man lägga in valfri text i korrespondensen, anpassa redigerbart innehåll och samtidigt förhandsgranska korrespondensen i realtid. De kan sedan skicka in den anpassade korrespondensen till en back-end-process.
 
 ![Användarstyrd, anpassad korrespondens](assets/02.png)
 
@@ -89,13 +89,13 @@ Korrespondensgenereringen automatiseras och styrs av händelseutlösare. Ett på
 
 ### Efterbearbetning {#post-processing}
 
-Den slutliga korrespondensen kan skickas till en back-end-process för efterbearbetning. Korrespondensen kan vara:
+Den slutliga korrespondensen kan skickas till en back-end-process för efterbearbetning. Posten kan vara:
 
 1. Bearbetas för e-post, fax eller grupputskrift, eller placeras i en mapp för utskrift eller e-post.
 1. Skickat för granskning och godkännande.
 1. Skyddas genom digitala signaturer, certifiering, kryptering eller behörighetshantering.
 1. Konverteras till ett sökbart PDF-dokument som innehåller alla metadata som behövs för arkivering och revision.
-1. Ingår i ett PDF Portfolio som innehåller fler dokument, t.ex. marknadsföringsmaterial. PDF Portfolio kan sedan skickas som slutgiltig korrespondens.
+1. Ingår i ett PDF Portfolio som innehåller fler dokument, till exempel marknadsföringsmaterial. PDF Portfolio kan sedan skickas som slutgiltig korrespondens.
 
 ### Correspondence Management-lösningsarkitektur {#correspondence-management-solution-architecture}
 
@@ -117,7 +117,7 @@ Detta meddelande om annullering är ett exempel på en vanlig korrespondens:
    <td><strong>Formad med</strong></td> 
   </tr> 
   <tr> 
-   <td>Data från back-end Enterprise-system</td> 
+   <td>Data från affärssystem</td> 
    <td>Data som hämtas från serverbaserade företagssystem. Informationen sammanfogas dynamiskt med brevbrevmallar.</td> 
    <td>The<br /> Datafil skapad utifrån en datamordlista</td> 
   </tr> 
@@ -146,13 +146,13 @@ Detta meddelande om annullering är ett exempel på en vanlig korrespondens:
 
 ## Analysera ett brev innan du skapar det {#analyze-a-letter-before-you-construct-it}
 
-Analysera varje brev för att identifiera de olika delarna som brevet består av. Application Specialist analyserar de korrespondenser som genereras.
+Analysera varje brev för att identifiera de olika delarna som brevet består av. Programexperten analyserar de korrespondenser som genereras.
 
 * Vilka delar av korrespondensen som är statiska och dynamiska. Variabler som fylls från backend-datakällor eller av slutanvändare.
 * Den ordning i vilken de olika textstyckena visas i korrespondensen, t.ex. om en affärsanvändare kan ändra stycken när korrespondensen skapas.
 * Genereras korrespondenssystemet eller kräver det att slutanvändaren redigerar korrespondensen? Hur många korrespondenser genereras av systemet och hur många kräver åtgärder från användaren?
 * Hur ofta ändras korrespondensmallen? Kommer den att uppdateras varje år, varje kvartal eller endast när en viss lagstiftning ändras? Vilken typ av ändringar förväntas? Är det en ändring att åtgärda typografiska fel, layoutändringar, lägga till fler fält, lägga till fler stycken och så vidare?
-* När ni planerar er korrespondenskrav ska ni sammanställa en lista över nya brevmallar. För varje brevmall krävs:
+* När ni planerar er korrespondenskrav ska ni sammanställa en lista med nya brevmallar. För varje brevmall krävs följande:
 
    * Textsatser, bilder och tabeller
    * Datavärden från backend-system
@@ -166,13 +166,13 @@ Analysera varje brev för att identifiera de olika delarna som brevet består av
 
 ## Fördelar med att utföra analysen {#benefits-of-performing-the-analysis}
 
-**Återanvändning av innehåll** Du har en konsoliderad lista över nytt innehåll som krävs för att generera korrespondens. En stor del av innehållet, som sidhuvuden, sidfötter, friskrivningsklausuler och introduktioner, är vanligt för många bokstäver och kan återanvändas för olika bokstäver. Allt sådant gemensamt innehåll kan skapas och godkännas av experter en gång och sedan återanvändas i många meddelanden.
+**Återanvändning av innehåll** Du har en konsoliderad lista över nytt innehåll som krävs för att generera korrespondens. En stor del av innehållet, som sidhuvuden, sidfötter, friskrivningar och introduktioner, är vanligt för många bokstäver och kan återanvändas för olika bokstäver. Allt sådant gemensamt innehåll kan skapas och godkännas av experter en gång och sedan återanvändas i många meddelanden.
 
 **Skapa dataordlistan** Det kommer att finnas datavärden som &quot;Kund-ID&quot; och &quot;Kundnamn&quot; som är gemensamma för många bokstäver. Du kan skapa en konsoliderad lista över alla sådana datavärden. Vanligtvis kontaktas någon från företagets mellanvaruteam när de planerar strukturen. Detta utgör grunden för att skapa datamordlistan.
 
 **Hämta data från serverbaserade företagssystem** Du känner också till alla datavärden som behövs och varifrån dessa data hämtas. Sedan kan du skapa implementeringen för att extrahera data från företagssystemet och mata in till bokstavslösningen.
 
-**Uppskattar bokstavens komplexitet** Det är viktigt att fastställa hur komplicerat det är att skapa en viss korrespondens. Denna analys hjälper till att fastställa hur lång tid och kompetens som krävs för att skapa brevmallarna. Detta kommer i sin tur att hjälpa till att beräkna resurser och kostnader för att implementera bokstavslösningen.
+**Uppskattar bokstavens komplexitet** Det är viktigt att fastställa hur komplicerat det kommer att vara att skapa en viss korrespondens. Denna analys hjälper till att fastställa hur lång tid och kompetens som krävs för att skapa brevmallarna. Detta kommer i sin tur att hjälpa till att beräkna resurser och kostnader för att implementera bokstavslösningen.
 
 ## Korrespondenskomplexitet {#correspondence-complexity}
 
@@ -202,7 +202,7 @@ Tabellen innehåller några riktlinjer som du kan använda för att klassificera
   </tr> 
   <tr> 
    <td><p>Medelkomplexitet</p> </td> 
-   <td><p>Mellankomplex layout. Inkluderar strukturer som tabeller. Vanligtvis mer än en sida lång.</p> </td> 
+   <td><p>Mellankomplex layout. Inkluderar strukturer som tabeller. Vanligtvis flera sidor långa.</p> </td> 
    <td><p>16</p> </td> 
    <td><p>2</p> </td> 
    <td><p>Medium Designer-kunskaper.</p> <p> </p> <p>Möjlighet att skapa komplexa uttryck med användargränssnitt.</p> </td> 
@@ -226,12 +226,12 @@ Tabellen innehåller några riktlinjer som du kan använda för att klassificera
 
 ### Förutsättningar {#prerequisites}
 
-Du behöver följande innan du kan skapa en korrespondens:
+Du måste ha följande på plats innan du kan skapa en korrespondens:
 
 * [Kompatibilitetspaket](compatibility-package.md). Installera Kompatibilitetspaketet för att visa **Bokstäver** på **Forms** sida.
 * Bokstaven XDP ([layout](/help/forms/using/document-fragments.md)).
 * Andra XDP-filer ([layoutfragment](document-fragments.md#document-fragments)) som utgör delar av brevet. XDP:er\Layouts skapas i [Designer](https://www.adobe.com/go/learn_aemforms_designer_65).
-* Den relevanta [dataordlista](/help/forms/using/data-dictionary.md) (Valfritt).
+* Relevant [dataordlista](/help/forms/using/data-dictionary.md) (Valfritt).
 * The [datamoduler](/help/forms/using/document-fragments.md) som du vill använda i korrespondensen.
 * [Testdata](/help/forms/using/data-dictionary.md#p-working-with-test-data-p) är XML-filen med de testdata som finns i den. Du måste testa data om du använder ett datalexikon.
 
@@ -241,7 +241,7 @@ Du behöver följande innan du kan skapa en korrespondens:
 
 1. Välj **Forms** > **Bokstäver**.
 
-1. Välj **Skapa > Brev**. Correspondence Management visar tillgängliga layouter (XDP). De här layouterna kommer från Designer. Layouterna innehåller också brevmallar som Correspondence Management tillhandahåller direkt. Mer information om Correspondence Management-mallar finns i [Mallar för referensbrev](/help/forms/using/reference-cm-layout-templates.md). Om du vill lägga till egna layouter skapar du XDP-filer (layout) i Designer och sedan [ladda upp dem till AEM Forms](/help/forms/using/get-xdp-pdf-documents-aem.md).
+1. Välj **Skapa > Bokstaven**. Correspondence Management visar tillgängliga layouter (XDP). Dessa layouter kommer från Designer. Layouterna innehåller också brevmallar som Correspondence Management tillhandahåller direkt. Mer information om Correspondence Management-mallar finns i [Mallar för referensbrev](/help/forms/using/reference-cm-layout-templates.md). Skapa XDP-filer (layout) i Designer och sedan lägga till egna layouter [ladda upp dem till AEM Forms](/help/forms/using/get-xdp-pdf-documents-aem.md).
 
    ![create-letter](assets/create-letter.png)
 
@@ -253,18 +253,18 @@ Du behöver följande innan du kan skapa en korrespondens:
 
    * **Titel (valfritt):** Ange brevets titel. Titeln behöver inte vara unik och kan innehålla specialtecken och tecken som inte är engelska.
    * **Namn:** Brevets unika namn. Det får inte finnas två bokstäver i något läge med samma namn. I fältet Namn kan du bara ange engelska tecken, siffror och bindestreck. Fältet Namn fylls i automatiskt baserat på fältet Titel. De specialtecken, blanksteg, siffror och icke-engelska tecken som anges i fältet Titel ersätts med bindestreck i fältet Namn. Även om värdet i fältet Titel automatiskt kopieras till namnet kan du redigera värdet.
-   * **Beskrivning (valfritt):** Beskriv referensbrevet.
+   * **Beskrivning (valfritt):** Beskriv bokstaven för din referens.
    * **Dataordlista (valfritt)**: Dataordlistan kan kopplas till korrespondensen. Resurserna som du senare infogar i den här korrespondensen bör antingen ha samma dataordlista som den du väljer för korrespondensen här eller ingen dataordlista.
    * **Taggar (valfritt):** Markera de taggar som ska användas för korrespondensen. Du kan också skriva in ett nytt/anpassat taggnamn och trycka på Retur för att skapa det.
    * **Efterprocess (valfritt):** Välj den bokföringsprocess som ska användas för brevmallen. Det finns färdiga publiceringsprocesser och de som du har skapat med AEM, som e-post och utskrift.
 
    ![Korrespondensegenskaper](assets/createcorrespondenceproperties.png)
 
-1. Systemet visar ett meddelande: &quot;Bokstaven har skapats.&quot; (i varningsmeddelandet) Tryck på **Öppna** för att konfigurera datamoduler och layoutfragment i den. Eller tryck **Klar** för att gå tillbaka till föregående sida.
+1. Systemet visar meddelandet&quot;Brev har skapats&quot;. (i varningsmeddelandet) Tryck på **Öppna** för att konfigurera datamoduler och layoutfragment i den. Eller tryck **Klar** för att gå tillbaka till föregående sida.
 
    ![Varningsmeddelande: brevet har skapats](assets/createcorrespondencecreated.png)
 
-   **Nästa**: När du trycker **Öppna** visas en representation av layouten med alla komponenter i layouten (XDP). Fortsätt med att infoga [Datamoduler och layoutfragment samt konfigurera dem](/help/forms/using/create-letter.md#p-insert-data-modules-and-layout-fragments-in-a-letter-and-configure-them-p).
+   **Nästa**: När du trycker **Öppna** visas en representation av layouten med alla komponenter i layouten (XDP). Sätt igång med att infoga [Datamoduler och layoutfragment och konfigurera dem](/help/forms/using/create-letter.md#p-insert-data-modules-and-layout-fragments-in-a-letter-and-configure-them-p).
 
 ### Infoga datamoduler och layoutfragment i en bokstav och konfigurera dem {#insert-data-modules-and-layout-fragments-in-a-letter-and-configure-them}
 
@@ -283,18 +283,18 @@ När du har skapat en korrespondens när du trycker på Öppna, visar Korrespond
    ![nestedlf](assets/nestedlf.png)
 
 1. Om du infogar ett layoutfragment visas namnet på layoutfragmentet i delformuläret. Och enligt det valda fragmentet visas kapslade delformulär i delformuläret.
-1. När de valda datamodulerna har infogats i layouten kan du trycka på konfigurationsläget och ange följande när du har tryckt på redigeringsikonen för var och en av modulerna:
+1. När de valda datamodulerna har infogats i layouten kan du trycka på konfigurationsläget och ange följande när du har tryckt på redigeringsikonen för varje modul:
 
    1. **Redigerbar**: När det här alternativet är markerat kan innehållet redigeras i användargränssnittet Skapa korrespondens. Markera innehåll som redigerbart endast om det kräver att företagsanvändaren (till exempel en anspråksjustering) ändrar det.
    1. **Obligatoriskt**: När det här alternativet är markerat krävs innehållet i användargränssnittet Skapa korrespondens.
    1. **Markerad**: När det här alternativet är markerat markeras innehållet som standard i användargränssnittet Skapa korrespondens.
    1. **Indrag**: Öka eller minska indraget för modulen/innehållet i bokstaven. Indrag anges som nivåer, med början 0. Varje nivå drar in 36pts. Mer information om hur du anpassar formulär finns i **[!UICONTROL Correspondence Management Configurations]** in [Forms arbetsflöde](submit-letter-topostprocess.md#formsworkflow).
-   1. **Sidbrytning före**: Om du anger sidbrytningen före visas alltid innehållet i den här modulen på en ny sida.
-   1. **Sidbrytning efter**: Om du anger att sidbrytning efter ska vara aktiverat för en viss modul visas alltid innehållet i NÄSTA-modulen på en ny sida.
+   1. **Sidbrytning före**: Om du ställer in sidbrytningen före på visas alltid innehållet i den här modulen på en ny sida.
+   1. **Sidbrytning efter**: Om du anger sidbrytningen efter för en viss modul visas alltid innehållet i NÄSTA-modulen på en ny sida.
 
    ![Infogade datamoduler och layoutfragment](assets/insertdmandlf2.png)
 
-1. Om du vill redigera en modul trycker du på ikonen Redigera bredvid den. Tryck på **Spara**.
+1. Om du vill redigera en modul trycker du på ikonen Redigera bredvid den. När du har redigerat modulerna trycker du **Spara**.
 
    På den här sidan kan du även göra följande för delformulären:
 
@@ -305,8 +305,7 @@ När du har skapat en korrespondens när du trycker på Öppna, visar Korrespond
 
    1. **Ändra ordningen på resurserna**: dra och släpp en resurs som innehåller en sorteringsikon för en tillgång ( ![dragndrop](assets/dragndrop.png)).
    1. **Ta bort resurser**: Tryck på ikonen Ta bort bredvid en resurs för att ta bort den.
-   1. **Förhandsgranska resurser**: Tryck på ikonen för att visa förhandsvisning ( ![showpreview](assets/showpreview.png)) bredvid en resurs.
-
+   1. **Förhandsgranska resurser**: Tryck på förhandsvisningsikonen ( ![showpreview](assets/showpreview.png)) bredvid en resurs.
 
 1. Tryck **Nästa**.
 1. På sidan Data visas hur datafält och variabler används i mallen. Data kan länkas till datakällor som t.ex. ett datalexikon eller användarindata. Varje fält definierar egenskaper från vilka dataordlistan mappar data eller vilken bildtext som visas för användarinmatningsfält.
@@ -322,7 +321,7 @@ När du har skapat en korrespondens när du trycker på Öppna, visar Korrespond
    * **Valfritt**: Du kan ange om värdet för fältet eller variabeln är valfritt eller inte. Alternativet för valfritt fält är tillgängligt för fält och variabler med länkningstypen Användare eller oskyddade element i dataordlistan.
 
    * **Fält/variabelvalidering**: Om du vill ha förbättrad validering av värdet för ett fält eller en variabel kan du tilldela en validerare till fältet eller variabeln. Det här alternativet är endast tillgängligt för fält och variabler med länkningstypen Användare eller oskyddade element i datamordlistan.
-   * **Bildtext** och **Verktygstips**: Bildtext är etiketten för det fält som visas före fältet i CCR-användargränssnittet. Det här alternativet är tillgängligt för fält och variabler med länktypen Användare eller oskyddade element i dataordlistan.
+   * **Bildtext** och **Verktygstips**: Bildtext är etiketten för fältet som visas före fältet i CCR-användargränssnittet. Det här alternativet är tillgängligt för fält och variabler med länktypen Användare eller oskyddade element i dataordlistan.
 
    Följande valideringstyper kan du använda för fälten:
 
@@ -331,37 +330,38 @@ När du har skapat en korrespondens när du trycker på Öppna, visar Korrespond
    * **Nummervaliderare**: Använd talvalideraren för att ange det lägsta och högsta numeriska värdet som anges i ett fält eller en variabel. När du skapar en Number Validator måste du ange giltiga valideringsparametrar. Ange numeriska värden för både min- och maxvärdena.
 
    * **Validerare för reguljära uttryck**: Använd valideraren för reguljära uttryck för att definiera ett reguljärt uttryck som används för att validera värdet för ett fält eller en variabel. Dessutom kan du anpassa felmeddelandet. När du skapar en reguljär uttrycksvaliderare måste du ange ett giltigt reguljärt uttryck.
+
    >[!NOTE]
    >
    >Fältets och variabelns validerare är bara tillgängliga i fält eller variabler med länktypen Användare eller oskyddade element i dataordlistan.
 
    ![länkar](assets/linkages.png)
 
-1. Tryck på **Nästa**. Korrespondenshanteringen visar skärmen Bifogade filer.
+1. När du har angett länkning trycker du **Nästa**. Korrespondenshanteringen visar skärmen Bifogade filer.
 
-### Konfigurera bilagor {#set-up-the-attachments}
+### Ställ in bilagor {#set-up-the-attachments}
 
 1. Välj **Lägg till resurs**.
 1. På skärmen Välj resurs trycker du på de resurser som ska bifogas med brevet och trycker sedan **Klar**. Du måste först överföra resurserna till Assets. Vi rekommenderar att du bara bifogar PDF- och Microsoft Office-dokument, men du kan även bifoga bilder. Mer information om hur du överför resurser i DAM finns i [Överför resurser](/help/assets/manage-assets.md).
 1. Om du vill låsa ordningen för resurserna i listan så att anspråksjusteraren inte kan ändra ordningen trycker du **Lås ordning**. Om du inte markerar det här alternativet kan du ändra ordningen på listobjekten med Anspråksjustering.
 1. Om du vill ändra ordningen på resurserna drar och släpper du en resurs som har en omsorteringsikon för en tillgång ( ![dragndrop](assets/dragndrop.png)).
 1. Tryck **Redigera** framför en bifogad fil och ange en bifogad fil som obligatorisk om du inte vill att författaren ska kunna ta bort den. Ange en bifogad fil som markerad om du vill att den ska vara förmarkerad i CCR-gränssnittet.
-1. Välj **Biblioteksåtkomst** för att ge åtkomst till biblioteket. Om biblioteksåtkomst är aktiverad kan anspråksjusteraren komma åt innehållsbiblioteket när ett brev skapas och bilagor infogas.
+1. Välj **Bibliotekåtkomst** för att ge åtkomst till biblioteket. Om biblioteksåtkomst är aktiverad kan anspråksjusteraren komma åt innehållsbiblioteket när ett brev skapas och bilagor infogas.
 1. Välj **Konfiguration av bifogade filer** och ange maximalt antal bilagor.
 
 1. Tryck **Spara**. Din korrespondens skapas och visas på sidan Bokstäver.
 
 När en brevmall har skapats i Correspondence Management kan slutanvändaren/agenten/anspråksjusteraren öppna brevet i användargränssnittet för CCR och skapa en korrespondens genom att ange data, konfigurera innehåll och hantera bilagor. Mer information finns i [Skapa korrespondens](/help/forms/using/create-correspondence.md).
 
-## Tillgängliga länkningstyper för vart och ett av fälten {#types-of-linkage-available-for-each-of-the-fields}
+## Tillgängliga länkningstyper för varje fält {#types-of-linkage-available-for-each-of-the-fields}
 
 I följande tabell beskrivs vilka typer av länkar som är tillgängliga för olika typer av fält.
 
 Följande värden i tabellen
 
-* **Ja**: Fälttypen i kolumnen längst till vänster har stöd för den typen av mappning
+* **Ja**: Fälttypen i kolumnen längst till vänster stöder den typen av mappning
 * **Nej**: Fälttypen i kolumnen längst till vänster stöder inte den typen av mappning
-* **Ej tillämpligt**: Fälttypen i kolumnen längst till vänster kan inte användas
+* **Ej tillämpligt**: Fälttypen i kolumnen längst till vänster är inte tillämplig
 
 <table> 
  <tbody> 

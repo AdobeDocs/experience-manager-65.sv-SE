@@ -1,7 +1,7 @@
 ---
 title: Konfigurera åtgärden Skicka
 seo-title: Configuring the Submit action
-description: Med Forms kan du konfigurera en skicka-åtgärd för att definiera hur ett anpassat formulär ska bearbetas när det har skickats in. Du kan använda inbyggda skicka-åtgärder eller skriva egna från grunden.
+description: Med Forms kan du konfigurera en skicka-åtgärd för att definiera hur ett adaptivt formulär ska bearbetas när det har skickats in. Du kan använda inbyggda skicka-åtgärder eller skriva egna från grunden.
 uuid: 4368d648-88ea-4f84-a051-46296a1a084e
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
@@ -9,16 +9,16 @@ discoiquuid: 9d8d7044-ffce-4ab4-9543-a2d2f9da31e3
 docset: aem65
 feature: Adaptive Forms
 exl-id: 04efb4ad-cff6-4e05-bcd2-98102f052452
-source-git-commit: e7a3558ae04cd6816ed73589c67b0297f05adce2
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '1937'
+source-wordcount: '1936'
 ht-degree: 0%
 
 ---
 
 # Konfigurera åtgärden Skicka{#configuring-the-submit-action}
 
-<span class="preview"> Adobe rekommenderar att man använder modern och utbyggbar datainhämtning [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) for [skapa ny Adaptive Forms](/help/forms/using/create-an-adaptive-form-core-components.md) eller [lägga till adaptiv Forms på AEM Sites-sidor](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-program, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptive Forms med grundläggande komponenter. </span>
+<span class="preview"> Adobe rekommenderar att man använder modern och utbyggbar datainhämtning [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) for [skapa ny Adaptive Forms](/help/forms/using/create-an-adaptive-form-core-components.md) eller [lägga till adaptiv Forms på AEM Sites-sidor](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-filer, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptiv Forms med baskomponenter. </span>
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
@@ -26,7 +26,7 @@ ht-degree: 0%
 | AEM 6.5 | Den här artikeln |
 
 
-## Introduktion till att skicka åtgärder {#introduction-to-submit-actions}
+## Introduktion till att skicka in åtgärder {#introduction-to-submit-actions}
 
 En sändningsåtgärd utlöses när en användare klickar på knappen Skicka i ett anpassat formulär. Du kan konfigurera åtgärden skicka i anpassningsbara formulär. Med adaptiva formulär kan du skicka in ett antal åtgärder direkt. Du kan kopiera och utöka standardåtgärderna för att skicka och skapa en egen sändningsåtgärd. Baserat på dina krav kan du dock skriva och registrera din egen skicka-åtgärd för att bearbeta data i det skickade formuläret. Skicka-åtgärden kan använda [synkron eller asynkron överföring](../../forms/using/asynchronous-submissions-adaptive-forms.md).
 
@@ -52,7 +52,7 @@ Standardåtgärderna för att skicka in anpassningsbara formulär är:
 
 >[!NOTE]
 >
->Se till att [AEM_Installation_Directory]\crx-quickstart\temp\datamanager\ASM folder
+>Se till att [AEM_Installation_Directory]\crx-quickstart\temp\datamanager\ASM
 >finns. Katalogen krävs för att temporärt lagra bilagor. Om katalogen inte finns skapar du den.
 
 >[!CAUTION]
@@ -67,7 +67,7 @@ The **Skicka till REST-slutpunkt** Skicka-alternativet skickar data som fylls i 
 
 `{fieldName}={request parameter name}`
 
-Som visas i bilden nedan `param1` och `param2` skickas som parametrar med värden som kopierats från **textruta** och **numeric box** fält för nästa åtgärd.
+Som visas i bilden nedan, `param1` och `param2` skickas som parametrar med värden som kopierats från **textruta** och **numeric box** fält för nästa åtgärd.
 
 Du kan också **Aktivera begäran om POST** och ange en URL för att skicka begäran. Om du vill skicka data till Experience Manager-servern som är värd för formuläret använder du en relativ sökväg som motsvarar rotsökvägen för Experience Manager-servern. Exempel: /content/forms/af/SampleForm.html. Om du vill skicka data till en annan server använder du den absoluta sökvägen.
 
@@ -100,7 +100,7 @@ Du kan till exempel använda de här två parametrarna i skriptet för att tolka
 `String data=request.getParameter("dataXml");`
 `String att=request.getParameter("attachments");`
 
-I det här exemplet `data` lagrar XML-data, och `att` lagrar data för bifogade filer.
+I detta exempel `data` lagrar XML-data, och `att` lagrar data för bifogade filer.
 
 ## Skicka e-post {#send-email}
 
@@ -120,7 +120,7 @@ Den här överföringsåtgärden är tillgänglig för XFA-baserade adaptiva for
 
 ## Anropa en Forms Workflow {#invoke-a-forms-workflow}
 
-The **Skicka till Forms Workflow** Skicka-alternativet skickar en XML-datafil och eventuella bifogade filer till en befintlig JEE-process i Adobe eller AEM Forms.
+The **Skicka till Forms Workflow** Skicka-alternativet skickar XML-data och eventuella bifogade filer till ett befintligt Adobe-LiveCycle eller AEM Forms om JEE-processen.
 
 Mer information om hur du konfigurerar åtgärden Skicka till Forms Workflow finns i [Skicka och bearbeta formulärdata med hjälp av formulärarbetsflöden](../../forms/using/submit-form-data-livecycle-process.md).
 
@@ -138,11 +138,11 @@ The **Forms Portal Submit Action** gör formulärdata tillgängliga via en AEM F
 
 Mer information om Forms Portal och skicka-åtgärden finns i [Komponenten Utkast och inskickat material](../../forms/using/draft-submission-component.md).
 
-## Anropa ett AEM arbetsflöde {#invoke-an-aem-workflow}
+## Anropa ett AEM {#invoke-an-aem-workflow}
 
 The **[!UICONTROL Invoke an AEM Workflow]** Åtgärden Skicka associerar ett anpassat formulär med ett [AEM](/help/sites-developing/workflows-models.md). När ett formulär skickas startar det associerade arbetsflödet automatiskt på författarinstansen. Du kan spara datafilen, bifogade filer och postdokument i mappen relativt eller under arbetsflödets eller variabelns nyttolast. Om arbetsflödet är markerat för extern datalagring är variabelalternativet tillgängligt och inte nyttolastalternativet. Du kan välja i listan över variabler som är tillgängliga för arbetsflödesmodellen. Om arbetsflödet markeras för extern datalagring i ett senare skede och inte när arbetsflödet skapas, kontrollerar du att de variabelkonfigurationer som krävs finns på plats.
 
-Innan du använder **Anropa ett AEM arbetsflöde** skicka-åtgärd, [konfigurera inställningarna för Experience Manager DS](../../forms/using/configuring-the-processing-server-url-.md). Mer information om hur du skapar ett AEM arbetsflöde finns i [Formulärbaserade arbetsflöden i OSGi](../../forms/using/aem-forms-workflow.md).
+Innan du använder **Anropa ett AEM** skicka-åtgärd, [konfigurera inställningarna för Experience Manager DS](../../forms/using/configuring-the-processing-server-url-.md). Mer information om hur du skapar ett AEM arbetsflöde finns i [Formulärbaserade arbetsflöden i OSGi](../../forms/using/aem-forms-workflow.md).
 
 Åtgärden Skicka placerar följande på arbetsflödets nyttolastplats. Observera dock att endast alternativet Variabel visas om arbetsflödesmodellen är markerad för extern datalagring, och inte nyttolastalternativet.
 
@@ -154,7 +154,7 @@ Variabler kan användas oavsett om arbetsflödesmodellen är markerad för exter
 
 * **Bifogade filer**: Du kan använda **[!UICONTROL Attachment Path]** om du vill ange mappnamnet för lagring av de bilagor som överförts till det adaptiva formuläret. Mappen skapas i förhållande till nyttolasten. Om arbetsflödet är markerat för extern datalagring använder du variabelalternativet och väljer variabeln i listan med variabler som är tillgängliga för arbetsflödesmodellen.
 
-* **Dokument**: Det innehåller det dokument med post som genererats för det adaptiva formuläret. Du kan använda **[!UICONTROL Document of Record Path]** om du vill ange namnet på filen Dokument för post och sökvägen till filen i förhållande till nyttolasten. Till exempel `/addresschange/DoR.pdf` sökväg skapar en mapp med namnet `addresschange` i förhållande till nyttolasten och placerar `DoR.pdf` i förhållande till nyttolast. Du kan också bara ange `DoR.pdf` om du bara vill spara postdokument utan att skapa en mapphierarki. Om arbetsflödet är markerat för extern datalagring använder du variabelalternativet och väljer variabeln i listan med variabler som är tillgängliga för arbetsflödesmodellen.
+* **Dokument för registrering**: Det innehåller det dokument som genererats för det adaptiva formuläret. Du kan använda **[!UICONTROL Document of Record Path]** om du vill ange namnet på filen Dokument för post och sökvägen till filen i förhållande till nyttolasten. Till exempel `/addresschange/DoR.pdf` sökväg skapar en mapp med namnet `addresschange` i förhållande till nyttolasten och placerar `DoR.pdf` i förhållande till nyttolast. Du kan också bara ange `DoR.pdf` om du bara vill spara postdokument utan att skapa en mapphierarki. Om arbetsflödet är markerat för extern datalagring använder du variabelalternativet och väljer variabeln i listan med variabler som är tillgängliga för arbetsflödesmodellen.
 
 ## Förtroende på serversidan i adaptiv form {#server-side-revalidation-in-adaptive-form}
 
@@ -186,7 +186,7 @@ Validering på serversidan validerar formulärmodellen. Vi rekommenderar att du 
 
 ### Stöd för anpassade funktioner i valideringsuttryck {#supporting-custom-functions-in-validation-expressions-br}
 
-Ibland finns det komplexa valideringsregler, men det exakta valideringsskriptet finns i anpassade funktioner och författaren anropar dessa anpassade funktioner från fältvalideringsuttryck. Om du vill att det här anpassade funktionsbiblioteket ska vara känt och tillgängligt vid validering på serversidan kan formulärförfattaren konfigurera namnet på AEM klientbibliotek under **Grundläggande** fliken med egenskaper för adaptiv formulärbehållare enligt nedan.
+Ibland finns det komplexa valideringsregler, men det exakta valideringsskriptet finns i anpassade funktioner och författaren anropar dessa anpassade funktioner från fältvalideringsuttryck. Om du vill att det här anpassade funktionsbiblioteket ska vara känt och tillgängligt vid validering på serversidan kan formulärförfattaren konfigurera namnet på AEM klientbibliotek under **Grundläggande** fliken med egenskaper för adaptiv formulärbehållare så som visas nedan.
 
 ![Stöd för anpassade funktioner i valideringsuttryck](assets/clientlib-cat.png)
 

@@ -5,9 +5,9 @@ contentOwner: Vishabh Gupta
 role: Admin
 feature: Asset Management
 exl-id: 3a9b44d4-1756-4ad5-91df-df8d53e82193
-source-git-commit: 84b16dd1a60f731b568dd87ef89699875cb86596
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '2943'
+source-wordcount: '2942'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ Implementera följande uppgifter om du vill konfigurera Experience Manager Asset
 
 1. Installera paketen efter behov. Information finns i [krav](#prerequisites).
 
-1. Konfigurera Experience Manager antingen [manuellt](#manual-configuration) eller använda [package](#configure-using-package).
+1. Konfigurera Experience Manager antingen [manuellt](#manual-configuration) eller använda en [package](#configure-using-package).
 
 1. Om du vill mappa användare med Creative Cloud-licens till användare med Experience Manager hanterar du [åtkomstkontroll](#user-access).
 
@@ -44,7 +44,7 @@ Adobe rekommenderar att du installerar [adobe-asset-link-config](https://experie
 
 >[!CAUTION]
 >
->Om din Experience Manager-instans är konfigurerad för användarinloggning med Adobe IMS-konton ska du inte använda konfigurationspaketet. Istället [konfigurera manuellt](#manual-configuration) din Experience Manager-instans.
+>Använd inte konfigurationspaketet om din Experience Manager-instans har konfigurerats för användarinloggning med Adobe IMS-konton. Istället [konfigurera manuellt](#manual-configuration) din Experience Manager-instans.
 
 1. Öppna Package Manager via webbgränssnittet i Experience Manager **[!UICONTROL Tools]** > **[!UICONTROL Deployment]** > **[!UICONTROL Package Share]**. Installera `adobe-asset-link-config` paket.
 
@@ -57,7 +57,7 @@ Adobe rekommenderar att du installerar [adobe-asset-link-config](https://experie
 
 1. Sök **[!UICONTROL Adobe Granite Bearer Authentication Handler]** och klicka för att redigera den.
 
-   Lägg till **[!UICONTROL InDesignAem2]** Klient-ID till **[!UICONTROL Allowed OAuth client ids]** konfigurationsegenskap.
+   Lägg till **[!UICONTROL InDesignAem2]** Klient-ID till **[!UICONTROL Allowed OAuth client ids]** configuration property.
 
 
 ## Konfigurera Experience Manager manuellt {#manual-configuration}
@@ -81,11 +81,11 @@ Så här konfigurerar du Experience Manager manuellt:
 
 1. Sök **[!UICONTROL Adobe Granite Bearer Authentication Handler]** och klicka för att redigera den.
 
-   Lägg till följande klient-ID i **[!UICONTROL Allowed OAuth client ids]** konfigurationsegenskap: `InDesignAem2, cc-europa-desktop_0_1, cc-europa-desktop_1_0, cc-europa-desktop_2_0, cc-europa-desktop_3_0, cc-europa-desktop_4_0, cc-europa-desktop_5_0, cc-europa-desktop_6_0, cc-europa-desktop_7_0, cc-europa-desktop_8_0, cc-europa-desktop_9_0, and cc-europa-desktop_10_0`.
+   Lägg till följande klient-ID i **[!UICONTROL Allowed OAuth client ids]** configuration property: `InDesignAem2, cc-europa-desktop_0_1, cc-europa-desktop_1_0, cc-europa-desktop_2_0, cc-europa-desktop_3_0, cc-europa-desktop_4_0, cc-europa-desktop_5_0, cc-europa-desktop_6_0, cc-europa-desktop_7_0, cc-europa-desktop_8_0, cc-europa-desktop_9_0, and cc-europa-desktop_10_0`.
 
-   Lägga till `Client ID`, klicka `+`. Klicka **[!UICONTROL Save]** efter att alla ID har lagts till.
+   Lägga till varje `Client ID`, klicka `+`. Klicka **[!UICONTROL Save]** efter att alla ID har lagts till.
 
-1. I **[!UICONTROL Adobe Granite OAuth Application and Provider]** konfiguration, inspektera befintlig **[!UICONTROL Adobe Granite OAuth Authentication Handler]** -instanser. Om du hittar en instans med `Config ID` värde för `ims`använder du den för instruktionerna i den här proceduren. I annat fall klickar du på `+` för att skapa en konfigurationsinstans. Ange följande egenskapsvärden och klicka på **[!UICONTROL Save]**.
+1. I **[!UICONTROL Adobe Granite OAuth Application and Provider]** konfiguration, inspektera befintlig **[!UICONTROL Adobe Granite OAuth Authentication Handler]** -instanser. Om du hittar en instans med `Config ID` värde för `ims`använder du den för instruktionerna i den här proceduren. Annars klickar du på `+` för att skapa en konfigurationsinstans. Ange följande egenskapsvärden och klicka på **[!UICONTROL Save]**.
 
    * [!UICONTROL Client ID]: Ändra inte
    * [!UICONTROL Client Secret]: Ändra inte
@@ -93,19 +93,19 @@ Så här konfigurerar du Experience Manager manuellt:
    * [!UICONTROL Scope]: `AdobeID, OpenID, read_organizations` (andra värden kan också finnas i konfigurationen)
    * [!UICONTROL Provider ID]: ` ims`
    * [!UICONTROL Create users]: ` Checked`
-   * [!UICONTROL User ID Property]: `Email` för den nya konfigurationen. Annars ändras inte.
+   * [!UICONTROL User ID Property]: `Email` för den nya konfigurationen. I annat fall ska du inte ändra.
 
 1. Leta reda på **[!UICONTROL Apache Jackrabbit Oak Default Sync Handler]** med **[!UICONTROL Sync Handler Name]** `ims` och klicka för att redigera den.
 
    Ange följande konfigurationsegenskaper och klicka på **[!UICONTROL Save]**.
 
-   * [!UICONTROL User Expiration Time and User Membership Expiration]: Tid i minuter efter &#39;m&#39; utan utrymme. Till exempel: `15m` i 15 minuter. Mer information finns i [Gruppmappning](#group-mapping).
+   * [!UICONTROL User Expiration Time and User Membership Expiration]: Tid i minuter efter &#39;m&#39; utan blanksteg. Till exempel: `15m` i 15 minuter. Mer information finns i [Gruppmappning](#group-mapping).
    * [!UICONTROL User auto membership]: Ändra inte
    * [!UICONTROL User Dynamic Membership]: ` Deslect`
 
 1. Leta reda på **[!UICONTROL Adobe Granite OAuth Authentication Handler]** och klicka för att redigera den. Klicka utan att göra några ändringar **[!UICONTROL Save]**.
 
-1. Om du vill justera den relativa prioriteten för hanteraren för innehavarautentisering går du till CRXDE `/apps/system/config`. Sök `com.adobe.granite.auth.oauth.impl.BearerAuthenticationHandler.config` och öppna konfigurationen. Lägg till i slutet `service.ranking=I"-10"`. Spara ändringarna.
+1. Om du vill justera den relativa prioriteten för hanteraren för innehavarautentisering går du till `/apps/system/config`. Sök `com.adobe.granite.auth.oauth.impl.BearerAuthenticationHandler.config` och öppna konfigurationen. Lägg till i slutet `service.ranking=I"-10"`. Spara ändringarna.
 
    >[!NOTE]
    >
@@ -125,13 +125,12 @@ Ytterligare konfiguration krävs bara om du använder olika Adobe IMS-organisati
 >* Den befintliga konfigurationen fortsätter att fungera om du använder samma Adobe IMS-organisation som Experience Manager och CCE.
 
 
-
 **Förutsättningar**
 
-1. En Experience Manager-instans som är igång och som har Bearer Authentication konfigurerats för AAL.
+1. En Experience Manager-instans som är igång och som har Bearer Authentication konfigurerat för AAL.
 1. Installera följande paket (Service Pack 11) på Experience Manager 6.5-instansen.
 
-   [Ladda ned Experience Manager 6.5.11.0](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.11.zip)
+   [Hämta Experience Manager 6.5.11.0](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.11.zip)
 
 1. Kontakt [!UICONTROL Customer Support] för att hämta klient-ID och hemlig nyckel för Bearer Authentication av din IMS-organisation.
 
@@ -157,7 +156,7 @@ Följande ytterligare konfigurationer krävs efter migrering till affärsprofile
 
 1. Öppna **[!UICONTROL Adobe Granite IMS Cluster Exchange Token Preprocessor]** konfigurera och ange den till `enable`.
 
-## Hantera användaråtkomstkontroll {#user-access}
+## Hantera åtkomstkontroll för användare {#user-access}
 
 I det här avsnittet beskrivs hur du hanterar användare och deras åtkomst till Experience Manager-databasen.
 
@@ -176,12 +175,12 @@ Grupper i Experience Manager som motsvarar och synkroniseras med grupper i Adobe
 Följande regler gäller för gruppmappningar i Experience Manager:
 
 * Se till att **[!UICONTROL Group Mappings]** egenskap i **[!UICONTROL Adobe Granite OAuth IMS Provider]** konfigurationen är tom.
-* Medlemskap i användargruppen Adobe Asset Link utvärderas när användaren autentiseras och tidsperioden i **[!UICONTROL User Expiration Time]** egenskap i **[!UICONTROL Apache Jackrabbit Oak Default Sync Handler]** konfigurationen har gått ut. För närvarande kan användare läggas till och tas bort från grupper i Experience Manager för att synkronisera med det som finns i Adobe IMS.
+* Medlemskap i användargruppen Adobe Asset Link utvärderas när användaren autentiseras och tidsperioden i **[!UICONTROL User Expiration Time]** egenskap i **[!UICONTROL Apache Jackrabbit Oak Default Sync Handler]** konfigurationen har gått ut. För närvarande kan användare läggas till i och tas bort från grupper i Experience Manager för att synkronisera med det som finns i Adobe IMS.
 * Undvik gruppnamnskonflikter. Se till att namnen som används för grupper som skapats i Adobe IMS (för att hantera användare) skiljer sig från systemgruppsnamnen i Experience Manager.
 
-   Kontrollera till exempel att de inte är desamma som `dam-users` gruppen och de grupper som skapats av Experience Manager-administratören.
+  Kontrollera till exempel att de skiljer sig från `dam-users` gruppen och de grupper som skapats av Experience Manager-administratören.
 
-   En Adobe IMS-grupp vars namn står i konflikt med namnet på en Experience Manager-systemgrupp eller grupp som skapats manuellt används inte för att styra användarbehörigheter.
+  En Adobe IMS-grupp vars namn står i konflikt med namnet på en Experience Manager-systemgrupp eller grupp som skapats manuellt används inte för att styra användarbehörigheter.
 * Om en Adobe IMS-användare ansluter till en Experience Manager-instans där användarens namn står i konflikt med en tidigare skapad Experience Manager-användare, får Adobe IMS-användaren ett annat namn med siffror som gör den unik.
 
 **Konfigurera förstagångskontroll för åtkomst**
@@ -193,7 +192,7 @@ För varje Experience Manager-grupp som synkroniseras med en Adobe IMS-grupp (so
 1. Se till att gruppen har en medlem som kan användas för en första anslutning från Adobe Asset Link.
 1. Använd den användaren för att logga in på Adobe Asset Link och ansluta till Experience Manager. Den här anslutningen förväntas misslyckas.
 1. I Experience Manager letar du reda på den grupp som motsvarar gruppen i Adobe IMS och ger den den åtkomstkontroll som du behöver. Den nya gruppen blir till exempel medlem i gruppen dam-users.
-1. Stäng Adobe Asset Link och starta om Creative Cloud.
+1. Stäng Adobe Asset Link och starta om programmet Creative Cloud.
 1. Om du vill verifiera att användaren har rätt åtkomst öppnar du Adobe Asset Link igen.
 
 När dessa steg har utförts kan andra användare i samma grupp ansluta till Experience Manager med Adobe Asset Link i sitt första försök. De får automatiskt samma behörigheter som de andra användarna i gruppen.
@@ -223,7 +222,7 @@ Så här uppdaterar du användare i Experience Manager så att de kan arbeta med
 1. Om du vill komma åt användarhanteringsgränssnittet i Experience Manager går du till **[!UICONTROL Tools]** > **[!UICONTROL Security]** > **[!UICONTROL Users]**. Markera den användare som du vill uppdatera och notera sedan slutet på webbläsarens URL-sökväg för den användaren, med början `/home/users`. Du kan också söka efter användarnamnet i CRXDE. Exempel på användarsökväg: `/home/users/x/xTac082TDh-guJzzG7WM`.
 1. I CRXDE navigerar du till användarsökvägen, markerar användarnoden och visar nodens egenskaper genom att välja **[!UICONTROL Properties]** i området längst ned i mitten. Den här noden har en `jcr:primaryType` egenskapsvärde för `rep:User`.
 1. Längst ned på **[!UICONTROL Properties]** tabbområde, ange `Name` värde för `rep:externalId`, `Type` värde för `String`och en `Value` värde för `rep:authorizableId`;`ims`, där `rep:authorizableId` är värdet för `rep:authorizableId` -egenskap för noden. (Ett semikolon används utan blanksteg för att separera `rep:authorizableId` värde från `ims`.)
-1. Klicka på **[!UICONTROL Add]** till höger om ditt nya inlägg och klicka sedan på **[!UICONTROL Save All]**.
+1. Klicka på **[!UICONTROL Add]** till höger om det nya bidraget och klicka sedan på **[!UICONTROL Save All]**.
 1. Upprepa steg 2 till 5 för alla andra användare som du vill uppgradera för att arbeta med Adobe Asset Link.
 1. Gå till webbkonsolen Experience Manager **[!UICONTROL Apache Jackrabbit Oak External PrincipalConfiguration]** och klicka för att redigera den. Avmarkera **[!UICONTROL External Identity Protection]** och klicka **[!UICONTROL Save]**.
 
@@ -248,7 +247,7 @@ Mer information och konfigurationsinformation för Experience Manager finns i [a
 
 ## Skapa ett anpassat index i Experience Manager 6.4.x-versioner {#create-custom-index}
 
-Experience Manager innehåller index som används för frågor. Skapa följande anpassade index för den angivna versionen. Experience Manager 6.5.0 innehåller detta index som standard. Adobe Asset Link kräver det här indexet för att avgöra vilka resurser en användare har checkat ut.
+Experience Manager innehåller index som används för frågor. Skapa följande anpassade index för den angivna versionen. Experience Manager 6.5.0 innehåller detta index som standard. Adobe Asset Link kräver detta index för att avgöra vilka resurser en användare har checkat ut.
 
 1. I CRXDE, leta upp `/oak:index` nod. Skapa en nod med namnet `cqDrivelock` och ange `Type` till `oak:QueryIndexDefinition`.
 
@@ -261,7 +260,7 @@ Experience Manager innehåller index som används för frågor. Skapa följande 
 
 ## Konfigurera visuell sökning eller likhetssökning {#configure-visual-similarity-search}
 
-Med funktionen för visuell sökning kan du söka efter visuellt liknande resurser i AEM Assets-databasen med hjälp av panelen Länk till Adobe. Funktionen är tillgänglig i version 6.5.0 eller senare och endast indexerade resurser söks igenom. Mer information finns i [konfigurera visuell sökning](https://experienceleague.adobe.com/docs/experience-manager-65/assets/using/search-assets.html#configvisualsearch).
+Med funktionen för visuell sökning kan du söka efter visuellt liknande resurser i AEM Assets-databasen med hjälp av panelen Adobe Asset Link. Funktionen är tillgänglig i version 6.5.0 eller senare och endast indexerade resurser söks igenom. Mer information finns i [konfigurera visuell sökning](https://experienceleague.adobe.com/docs/experience-manager-65/assets/using/search-assets.html#configvisualsearch).
 
 ## Generera renderingar endast för placering för Adobe InDesign {#fpo-renditions}
 
@@ -291,4 +290,3 @@ Om du får problem när du konfigurerar eller använder Adobe Asset Link kan du 
 >* [Om Adobe Asset Link](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html)
 >* [Använd Asset Link i Creative Cloud-datorprogrammet och hantera resurser](https://helpx.adobe.com/se/enterprise/using/manage-assets-using-adobe-asset-link.html)
 >* [Konfigurera Adobe Experience Manager Assets as a Cloud Service](https://helpx.adobe.com/enterprise/using/configure-aem-assets-for-asset-link.html).
-

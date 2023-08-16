@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 9aa0521f-f321-42e9-b022-7ff968a36212
 docset: aem65
 exl-id: 88af99df-846b-47b3-9b1f-68bfdfc40eb8
-source-git-commit: 75c6bb87bb06c5ac9378ccebf193b5416c080bb1
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '6036'
+source-wordcount: '6026'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 Följande komponenter är avsedda att användas vid utveckling av innehåll för en standardwebbsida. Komponenterna utgör en deluppsättning av de komponenter som finns tillgängliga direkt för en standardinstallation av AEM.
 
-Vissa är omedelbart tillgängliga via sidbrytaren, andra är också tillgängliga genom att använda [Designläge](/help/sites-classic-ui-authoring/classic-page-author-design-mode.md) för att aktivera/inaktivera dem.
+Vissa är omedelbart tillgängliga via sidbrytaren, andra är också tillgängliga via [Designläge](/help/sites-classic-ui-authoring/classic-page-author-design-mode.md) för att aktivera/inaktivera dem.
 
 >[!CAUTION]
 >
@@ -44,7 +44,7 @@ Komponenterna sorteras efter olika kategorier (komponentgrupper), inklusive (fö
 
 De allmänna komponenterna är de grundläggande komponenter som du använder för att skapa innehåll.
 
-### Kontoobjekt {#account-item}
+### Kontouppsättning {#account-item}
 
 Du kan definiera en länk med rubrik och beskrivning.
 
@@ -103,7 +103,7 @@ I dialogrutan kan du redigera egenskaper för din instans av komponenten Adaptiv
 Dra en bild från innehållssökaren eller klicka för att öppna ett bläddringsfönster där du kan läsa in en bild. När bilden har lästs in kan du beskära bilden, rotera den eller ta bort den. Om du vill zooma in och ut i bilden använder du bildfältet under bilden (ovanför knapparna OK och Avbryt)
 
    * **Beskär**
-Gör att du kan klippa ut delar av en bild. Dra kanten för att beskära bilden.
+Klipp ut delar av en bild. Dra kanten för att beskära bilden.
 
    * **Rotera**
 Klicka på Rotera upprepade gånger tills bilden roteras som du vill.
@@ -149,7 +149,7 @@ Här anger du hur karusellen fungerar:
 
    * Uppspelningshastighet Tiden i millisekunder innan nästa bild visas.
    * Övergångstid Tiden i millisekunder för övergången mellan två bildrutor.
-   * Kontrollformat Olika alternativ finns på en listruta. Exempel: Föregående/Nästa-knappar, Överst till höger-växlar.
+   * Kontrollformat Olika alternativ finns på en nedrullningsbar meny, t.ex. knapparna Föregående och Nästa, Överst till höger.
 
 * **Lista**
 Här anger du hur sidorna ska inkluderas i Carousel:
@@ -162,7 +162,7 @@ Beroende på vilket objekt du väljer visas en ny panel:
       * **Alternativ för underordnade sidor**
 
          * **Överordnad sida**
-Ange en bana manuellt eller med väljaren. Lämna tomt om du vill använda den aktuella sidan som överordnad.
+Ange en bana antingen manuellt eller med väljaren. Lämna tomt om du vill använda den aktuella sidan som överordnad.
 
       * **Alternativ för fast lista**
 
@@ -175,7 +175,7 @@ Välj en lista med sidor. Använd `+` om du vill lägga till fler poster och upp
 Ange en startbana, antingen manuellt eller med väljaren.
 
          * **Sökfråga**
-Du kan ange en sökfråga med oformaterad text.
+Du kan ange en vanlig textsökningsfråga.
 
       * **Alternativ för avancerad sökning**
 
@@ -200,7 +200,7 @@ Med diagramkomponenten kan du lägga till ett stapel-, linje- eller cirkeldiagra
 * **Data**
 
    * **Diagramdata**
-Ange diagramdata i CSV-format; I formatet för kommaseparerade värden används kommatecken (&quot;,&quot;) som fältavgränsare.
+Ange diagramdata i CSV-format. För formatet Kommaavgränsade värden används kommatecken (&quot;,&quot;) som fältavgränsare.
 
 * **Avancerat**
 
@@ -236,11 +236,11 @@ I följande exempel visas ett exempel på diagramdata följt av det resulterande
 
 Gör att du kan överföra en ZIP-fil som innehåller ett designpaket.
 
-### Hämta {#download}
+### Ladda ned {#download}
 
 Komponenten Download skapar en länk på den valda webbsidan för att hämta en viss fil. Du kan antingen dra en resurs från Content Finder eller överföra en fil.
 
-* **Hämta**
+* **Ladda ned**
 
    * **Beskrivning**
 En kort beskrivning med nedladdningslänken.
@@ -260,7 +260,7 @@ Integrationskomponenten för det externa programmet (**Extern**) kan du bädda i
 
    * **Målprogram**
 
-     Ange URL-adressen till det webbprogram som ska integreras. till exempel:
+     Ange URL-adressen till webbprogrammet som ska integreras, till exempel:
 
      ```
      https://en.wikipedia.org/wiki/Main_Page
@@ -274,7 +274,7 @@ Integrationskomponenten för det externa programmet (**Extern**) kan du bädda i
 
      Definiera storleken på iframe
 
-Den externa tillämpningen är integrerad i den AEM sidans styckesystem. till exempel när du använder ett Target-program med `https://en.wikipedia.org/wiki/Main_Page`:
+Det externa programmet är integrerat i styckesystemet på AEM, t.ex. när ett Target-program i `https://en.wikipedia.org/wiki/Main_Page`:
 
 ![chlimage_1-7](assets/chlimage_1-7.png)
 
@@ -284,7 +284,7 @@ Den externa tillämpningen är integrerad i den AEM sidans styckesystem. till ex
 
 ### Flash {#flash}
 
-Med komponenten Flash kan du läsa in en Flash-film. Du kan dra en Flash-resurs från innehållssökaren till komponenten eller använda dialogrutan:
+Med komponenten Flash kan du läsa in en Flash film. Du kan dra en Flash-resurs från innehållssökaren till komponenten eller använda dialogrutan:
 
 * **Flash**
 
@@ -312,7 +312,7 @@ Med komponenten Flash kan du läsa in en Flash-film. Du kan dra en Flash-resurs 
 
    * **Bakgrundsfärg**
 
-     En bakgrundsfärg som valts i det angivna färgdiagrammet.
+     En bakgrundsfärg som valts i färgdiagrammet.
 
    * **Minimiversion**
 
@@ -352,7 +352,7 @@ När en bild har lästs in kan du konfigurera följande:
 
 * **Rotera**
 
-  Om du vill rotera en bild väljer du Rotera. Använd detta upprepade gånger tills bilden roteras som du vill ha den.
+  Om du vill rotera en bild väljer du Rotera. Använd det här alternativet upprepade gånger tills bilden roteras som du vill ha den.
 
 * **Rensa**
 
@@ -422,7 +422,7 @@ Med List-komponenten kan du konfigurera sökvillkor för att visa en lista:
 
          * **Sökfråga**
 
-           Du kan ange en sökfråga med oformaterad text.
+           Du kan ange en vanlig textsökningsfråga.
 
       * **Alternativ för avancerad sökning**
 
@@ -438,7 +438,7 @@ Med List-komponenten kan du konfigurera sökvillkor för att visa en lista:
 
    * **Visa som**
 
-     Hur du vill att objekten ska listas; innehåller länkar, lärare och nyheter.
+     Hur du vill att objekten ska visas: innehåller länkar, lärare och nyheter.
 
    * **Beställ av**
 
@@ -456,7 +456,7 @@ Med List-komponenten kan du konfigurera sökvillkor för att visa en lista:
 
      Här kan du ange hur många listobjekt som ska visas samtidigt. En lista med fler objekt än angivet använder sidnumrering för att visa listan i flera delar.
 
-I följande exempel visas en **Lista** på samma sätt som en lista med underordnade sidor visas (designen styrs av en webbplatsdesigns anpassade CSS-definitioner).
+I följande exempel visas en **Lista** -komponenten på samma sätt som den kan visa en lista med underordnade sidor (designen styrs av en webbplatsdesigns anpassade CSS-definitioner).
 
 ![dc_list_use](assets/dc_list_use.png)
 
@@ -466,7 +466,7 @@ Tillhandahåller fälten Användarnamn och Lösenord.
 
 ![chlimage_1-9](assets/chlimage_1-9.png)
 
-Du kan konfigurera:
+Du kan konfigurera
 
 * Logga in
 
@@ -516,7 +516,7 @@ Du kan konfigurera:
 
 ### Referens {#reference}
 
-The **Referens** kan du referera till text från en annan sida på AEM webbplats (i den aktuella instansen). Innehållet i det refererade stycket visas sedan som om det fanns på den aktuella sidan. Innehållet uppdateras när källstycket ändras (du kan behöva uppdatera sidan).
+The **Referens** kan du referera till text från en annan sida på AEM webbplats (i den aktuella instansen). Innehållet i det refererade stycket visas sedan som om det fanns på den aktuella sidan. Innehållet uppdateras när källstycket ändras (kan behöva uppdateras).
 
 * **Styckereferens**
 
@@ -548,13 +548,13 @@ Efter konfigurationen visas innehållet exakt som på källsidan. Det faktum att
 
 Sökkomponenten lägger till sökfunktioner på sidan.
 
-Du kan konfigurera:
+Du kan konfigurera
 
 * Sökning
 
    * **Nodtyper**
 
-     Om sökningen ska begränsas till en viss nodtypslista de här. till exempel `cq:Page`.
+     Om sökningen ska begränsas till en viss nodtypslista dem här, till exempel `cq:Page`.
 
    * **Sökväg att söka i**
 
@@ -575,11 +575,11 @@ Du kan konfigurera:
    * **Stavningskontrollera text**
 
      Om någon skriver in en liknande term visas den här texten före termen.
-Om du till exempel skriver `Geometrixxe`visas &quot;Menade du? Geometrixx&quot;.
+Om du t.ex. skriver `Geometrixxe`visas &quot;Menade du? Geometrixx&quot;.
 
    * **Text för liknande sidor**
 
-     Den text som visas bredvid ett resultat för liknande sidor. Klicka på den här länken om du vill klippa ut en del av en bild.
+     Den text som visas bredvid ett resultat för liknande sidor. Klicka på länken om du vill klippa ut en del av en bild.
 
    * **Text för relaterade sökningar**
 
@@ -627,7 +627,7 @@ Om det behövs kan du konfigurera:
 
 Med den här komponenten kan du läsa in en serie bilder som ska visas som ett bildspel på sidan. Du kan lägga till eller ta bort bilder och tilldela varje titel. Under Avancerat kan du även ange storleken på visningsområdet.
 
-Du kan konfigurera:
+Du kan konfigurera
 
 * **Bilder**
 
@@ -645,7 +645,7 @@ Du kan konfigurera:
 
      Ange bredd och höjd i pixlar.
 
-Bildspelskomponenten visar sedan upprepade gånger i sekvens under en kort tid innan den tonas in i nästa bild:
+Bildspelskomponenten visar sedan upprepade gånger i sekvens, under en kort tid, innan den tonas in i nästa bild:
 
 ![dc_slideshow_use](assets/dc_slideshow_use.png)
 
@@ -661,7 +661,7 @@ The **Tabell** -komponenten är förkonfigurerad så att du kan skapa, fylla i o
 
 ![dc_table](assets/dc_table.png)
 
-I följande skärmbild visas ett exempel på tabellkomponenten: designen bestäms av den platsspecifika CSS:en:
+I följande skärmbild visas ett exempel på tabellkomponenten. Designen bestäms av den platsspecifika CSS:en:
 
 ![dc_table_use](assets/dc_table_use.png)
 
@@ -692,7 +692,7 @@ Mer information om märkord finns på [Använda taggar](/help/sites-classic-ui-a
 >
 >Adobe rekommenderar att du använder **Tabell** för tabeller, även om de också kan skapas med **Text** -komponenten.
 
-Med komponenten Text kan du ange ett textblock med en WYSIWYG-redigerare, som har funktioner från [RTF-redigerare](/help/sites-classic-ui-authoring/classic-page-author-rich-text-editor.md). Med ett urval ikoner kan du formatera texten, inklusive teckensnittsegenskaper, justering, länkar, listor och indrag.
+Med komponenten Text kan du ange ett textblock med en WYSIWYG-redigerare, med funktioner som finns i [RTF-redigerare](/help/sites-classic-ui-authoring/classic-page-author-rich-text-editor.md). Med ett urval ikoner kan du formatera texten, inklusive teckensnittsegenskaper, justering, länkar, listor och indrag.
 
 ![dc_text](assets/dc_text.png)
 
@@ -717,7 +717,7 @@ Komponenten Text och bild lägger till ett textblock och en bild. Du kan också 
 
 ![chlimage_1-12](assets/chlimage_1-12.png) ![chlimage_1-13](assets/chlimage_1-13.png)
 
-Du kan konfigurera:
+Du kan konfigurera
 
 * **Komponentformat** (**Stilar**)
 
@@ -725,7 +725,7 @@ Du kan konfigurera:
 
 * **Bildegenskaper** (**Avancerade bildegenskaper**)
 
-  Gör att du kan ange följande:
+  Här kan du ange följande:
 
    * **Bildresurs**
 
@@ -776,7 +776,7 @@ Du kan konfigurera följande:
 
   Välj Liten eller Stor i listrutan. Liten genereras som en bild. Stor genereras som text.
 
-I följande exempel visas en **Titel** som visas, designen bestäms av den platsspecifika CSS:n.
+I följande exempel visas en **Titel** som visas; designen bestäms av den platsspecifika CSS:en.
 
 ![dc_title_use](assets/dc_title_use.png)
 
@@ -800,11 +800,11 @@ När du har placerat en instans av komponenten på sidan kan du konfigurera föl
 
 >[!NOTE]
 >
->Format som stöds:
+>De format som stöds är:
 >
 >* `.mp4`
 >* `Ogg`
->* `FLV` (Flash)
+>* `FLV` (Flash video)
 >
 
 ## Kolumner {#columns}
@@ -839,7 +839,7 @@ Formulärkomponenter används för att skapa formulär som besökare kan skicka 
 
 >[!NOTE]
 >
->Se [Hjälp om AEM Forms](/help/forms/home.md) om du vill ha information om AEM Forms.
+>Se [Hjälp om AEM Forms](/help/forms/home.md) för information om AEM Forms.
 
 Forms är uppbyggt av flera olika komponenter:
 
@@ -875,11 +875,11 @@ När du konfigurerar någon av formulärkomponenterna är följande flikar tillg
 
 * **Startvärden**
 
-  Gör att du kan ange ett standardvärde.
+  Här kan du ange ett standardvärde.
 
 * **Begränsningar**
 
-  Här kan du ange om ett fält är obligatoriskt och om det finns begränsningar för att placera fält, t.ex. numeriska fält.
+  Här kan du ange om ett fält är obligatoriskt och om det finns begränsningar för att placera fält, till exempel numeriska fält.
 
 * **Stilar**
 
@@ -984,7 +984,7 @@ Den här nödvändiga komponenten definierar början på ett nytt formulär på 
       * **Skapa lead**
       * **Skapa och uppdatera konto**
       * **E-posttjänst: Skapa prenumerant och lägg till i listan**
-      * **E-posttjänst: Skicka e-post med automatisk svarare**
+      * **E-posttjänst: Skicka e-post som svarar automatiskt**
       * **E-posttjänst: Avbeställ användare från listan**
       * **Redigera community**
       * **Redigera resurser**
@@ -1005,7 +1005,7 @@ Den här nödvändiga komponenten definierar början på ett nytt formulär på 
 
    * **Formuläridentifierare**
 
-     Formuläridentifieraren identifierar formuläret unikt. Använd formuläridentifieraren om du har flera formulär på en sida, se till att de har olika identifierare.
+     Formuläridentifieraren identifierar formuläret unikt. Använd formuläridentifieraren om du har flera formulär på en sida. Kontrollera att de har olika identifierare.
 
    * **Läs in bana**
 
@@ -1040,12 +1040,12 @@ Sidan som används när ett konto skapas.
 
       * **Skapa innehåll**
 
-         * Innehållssökväg Innehållssökvägen för allt innehåll som formuläret dumpar. Ange en bana som slutar med ett snedstreck `/`. Snedstrecket innebär att för varje formulärport skapas en ny nod på den angivna platsen. till exempel:
+         * Innehållssökväg Innehållssökvägen för allt innehåll som formuläret dumpar. Ange en bana som slutar med ett snedstreck `/`. Snedstrecket innebär att för varje formulärport skapas en ny nod på den angivna platsen, till exempel:
            `/forms/feedback/`
 
          * **Typ**
 
-           Välj önskad typ.
+           Välj typ.
 
          * **Formulär**
 
@@ -1063,7 +1063,7 @@ Sidan som används när ett konto skapas.
 
       * **Skapa lead**
 
-         * **Lead kommer att läggas till i den här listan**
+         * **Lead kommer att läggas till i listan**
 Ange önskad leadlista.
 
       * **Skapa och uppdatera konto**
@@ -1082,7 +1082,7 @@ Ange önskad leadlista.
 
          * **Visa data...**
 
-           Markera en knapp så att du kan komma åt informationen om formulärresultaten i gruppredigeraren. Härifrån kan du exportera informationen till en `.tsv` (tabbseparerad) fil (används t.ex. i ett Excel-kalkylblad).
+           Markera en knapp så att du kan komma åt informationen om formulärresultaten i gruppredigeraren. Härifrån kan du exportera informationen till `.tsv` (tabbseparerad) fil (används t.ex. i ett Excel-kalkylblad).
 
       * **E-post**
 
@@ -1116,12 +1116,12 @@ Ange önskad leadlista.
 
          * **Innehållsbana**
 
-           Innehållssökvägen för allt innehåll som formuläret dumpar. Ange en bana som slutar med ett snedstreck `/`. Snedstrecket innebär att för varje formulärport skapas en ny nod på den angivna platsen. till exempel:
+           Innehållssökvägen för allt innehåll som formuläret dumpar. Ange en bana som slutar med ett snedstreck `/`. Snedstrecket innebär att för varje formulärport skapas en ny nod på den angivna platsen, till exempel:
            `/forms/feedback/`
 
          * **Visa data...**
 
-           Markera en knapp så att du kan komma åt informationen om formulärresultaten i gruppredigeraren. Härifrån kan du exportera informationen till en .tsv-fil (tabbseparerad) (som exempelvis kan användas i ett Excel-kalkylblad).
+           Markera en knapp så att du kan komma åt informationen om formulärresultaten i gruppredigeraren. Härifrån kan du exportera informationen till en .tsv-fil (tabbseparerad) (som t.ex. kan användas i ett Excel-kalkylblad).
 
       * **Lagra innehåll med överföringar**
 
@@ -1129,7 +1129,7 @@ Ange önskad leadlista.
 
       * **Avbeställ prenumeration**
 
-         * **Lead kommer att tas bort från den här listan**
+         * **Lead tas bort från den här listan**
 
            Ange önskad leadlista.
 
@@ -1139,7 +1139,7 @@ Markerar formulärets slut. Du kan konfigurera följande:
 
 * **Formulärslut**
 
-   * **Visa Skicka-knapp**
+   * **Visa knappen Skicka**
 
      Anger om en Skicka-knapp ska visas eller inte.
 
@@ -1276,7 +1276,7 @@ Med standardinställningarna visas komponenten som följande:
 
 ![dc_password_reset](assets/dc_password_reset.png)
 
-### Grupp med alternativknappar {#radio-group}
+### Alternativgrupp {#radio-group}
 
 En alternativknappsgrupp ger dig en lista över en eller flera kryssrutor, där bara en av kryssrutorna kan markeras vid en viss tidpunkt.
 

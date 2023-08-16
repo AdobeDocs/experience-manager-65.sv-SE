@@ -8,9 +8,9 @@ products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-adobe-phonegap-enterprise
 discoiquuid: 9890d045-cead-4d70-b797-95319284e0d8
 exl-id: 49e0b3f6-7ac7-4417-9c31-cc3d3c2305f3
-source-git-commit: 4fd5e9a1bc603202ee52e85a1c09125b13cec315
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '2695'
+source-wordcount: '2692'
 ht-degree: 0%
 
 ---
@@ -73,11 +73,11 @@ Mobilprogram bygger på en plan som definierar en sidstruktur och egenskaper. Du
 * **Beskrivning:** En beskrivning av programmet.
 * **Server-URL:** Den URL som innehåller OTA-innehåll (Over-the-Air) uppdateras i programmet. Standardvärdet är publiceringsserverns URL-adress för instansen som används för att skapa ett program (hämtas från externaliseringstjänsten). Observera att detta måste vara en publiceringsserverinstans i stället för en författare, vilket kräver autentisering.
 
-Du kan också tillhandahålla en bildfil som du kan använda som programminiatyrbild, välja vilken PhoneGap Build som ska användas och välja vilken mobilappsanalyskonfiguration som ska användas. Den här bilden används bara som miniatyrbild för att representera ditt mobilprogram i mobilappskonsolen i Experience Manager.
+Du kan också tillhandahålla en bildfil som du kan använda som programminiatyrbild, välja vilken PhoneGap Build-konfiguration som ska användas och välja vilken mobilappsanalyskonfiguration som ska användas. Den här bilden används bara som miniatyrbild för att representera ditt mobilprogram i mobilappskonsolen i Experience Manager.
 
 Det finns ytterligare (och valfria) flikar för att bygga molntjänster och integrera plugin-programmet Adobe Mobile Services SDK i appen.
 
-* Bygg: Klicka på Hantera konfigurationer och konfigurera bygg.phonegap.com här. I listrutan kan du sedan välja den nya molntjänsten PhoneGap build.
+* Bygg: Klicka på Hantera konfigurationer och konfigurera build.phonegap.com här. I listrutan kan du sedan välja den nya molntjänsten PhoneGap build.
 * Analyser: Klicka på Hantera konfigurationer och konfigurera [Adobe Mobile Services SDK](https://experienceleague.adobe.com/docs/mobile-services/using/home.html) molntjänst. I listrutan kan du sedan välja den nya mobiltjänsten som ska integreras i din mobilapp.
 
 >[!NOTE]
@@ -176,7 +176,7 @@ När du skapar ett nytt program baserat på en mall för ett annat program får 
 
 Du måste ha en befintlig mobilappsmall (eller en app som har en appmall) för att kunna använda den här funktionen.
 
-Det senaste exempelpaketet AEM Apps 6.1 innehåller en uppdaterad version av Geometrixx app med en appmall. Du kan också installera StarterKit, som även innehåller en mall.
+Det senaste exempelpaketet AEM Apps 6.1 innehåller en uppdaterad version av Geometrixx-appen med en appmall. Du kan också installera StarterKit, som även innehåller en mall.
 
 Steg för att skapa ett nytt program baserat på en appmall:
 
@@ -267,7 +267,7 @@ När du använder programmet är News page tillgängligt från karusellen på de
 
 ### Sidan Om oss - mobilappen Geometrixx {#the-about-us-page-geometrixx-mobile-app}
 
-Sidan Om oss innehåller flera komponenter med två kolumnrader. Varje kolumn innehåller antingen en bild- eller en textkomponent. Komponenterna kan redigeras och styckesystemet gör att du kan lägga till komponenter.
+Sidan Om oss innehåller flera komponenter med två kolumnrader. Varje kolumn innehåller en bild- eller textkomponent. Komponenterna kan redigeras och med styckesystemet kan du lägga till komponenter.
 
 När du använder programmet är sidan Om oss tillgänglig från karusellen på den engelska sidan.
 
@@ -289,12 +289,12 @@ Observera att bilder visas i karusellen för sidor som är kopplade till en bild
 
 ![chlimage_1-151](assets/chlimage_1-151.png)
 
-**Fliken Carousel-egenskaper**
+**fliken Carousel-egenskaper**
 
 Konfigurera karusellens beteende:
 
 * Uppspelningshastighet: Tiden i millisekunder som varje bild visas innan nästa bild visas.
-* Övergångstid: Animeringens längd i millisekunder för bildövergångar.
+* Övergångstid: Animeringens varaktighet i millisekunder för bildövergångar.
 * Kontrollformat: Den typ av kontroller som finns för att flytta mellan bilder.
 
 **Fliken Listegenskaper**
@@ -303,7 +303,7 @@ Ange hur sidlistan ska genereras:
 
 * Skapa lista med: Den metod som ska användas för att ange vilka sidor som ska inkluderas i karusellen. Se Skapa sidlistan.
 * Ordna efter: Välj en sidegenskap som ska användas för att sortera sidlistan. Välj t.ex. jcr:title om du vill sortera sidor i bokstavsordning efter rubrik.
-* Gräns: Det maximala antalet sidor som ska inkluderas. Den här egenskapen är lämplig för sökbaserade metoder för att skapa sidlistan.
+* Gräns: Maximalt antal sidor som ska inkluderas. Den här egenskapen är lämplig för sökbaserade metoder för att skapa sidlistan.
 
 #### Bygga sidlistan {#building-the-page-list}
 
@@ -344,7 +344,7 @@ Lägg till formaterad text i programinnehållet.
 
 ### Lagringsplatser {#store-locations}
 
-Komponenten Store Locations ger användarna verktyg för att hitta affärsplatser:
+Komponenten Store Locations ger användarna verktyg för att hitta affärskommunikation:
 
 * Sökning
 * Listor över platser som ligger nära eller långt från enhetens GPS-koordinater.

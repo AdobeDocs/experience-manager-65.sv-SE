@@ -7,9 +7,9 @@ topic-tags: page-authoring
 content-type: reference
 docset: aem65
 exl-id: 4eb0de5e-0306-4166-9cee-1297a5cd14ce
-source-git-commit: 260f71acd330167572d817fdf145a018b09cbc65
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '1353'
+source-wordcount: '1352'
 ht-degree: 0%
 
 ---
@@ -18,22 +18,22 @@ ht-degree: 0%
 
 Versionshantering skapar en ögonblicksbild av en sida vid en viss tidpunkt. Med versionshantering kan du utföra följande åtgärder:
 
-* Skapa en version av en sida.
+* Skapa en sidversion.
 * Återställ en sida till en tidigare version om du till exempel vill ångra en ändring som du har gjort på en sida.
 * Jämför den aktuella versionen av en sida med en tidigare version med skillnader i markerad text och bild.
 
 ## Skapa en ny version {#creating-a-new-version}
 
-Så här skapar du en ny version av en sida:
+Skapa en ny version av en sida:
 
 1. Öppna sidan som du vill skapa en ny version för i webbläsaren.
-1. I Sidekick väljer du **Versionshantering** -fliken och sedan **Skapa version** underflik.
+1. I Sidekick väljer du **Versioner** -fliken och sedan **Skapa version** underflik.
 
    ![screen_shot_2012-02-14at40259pm](assets/screen_shot_2012-02-14at40259pm.png)
 
-1. Ange **Kommentar** (valfritt).
+1. Ange en **Kommentar** (valfritt).
 1. Om du vill ange en etikett för versionen (valfritt) klickar du på **Mer >>** och ange **Etikett** för att namnge versionen. Om etiketten inte är inställd blir versionen ett automatiskt ökande nummer.
-1. Klicka **Skapa version**. Ett grått meddelande visas på sidan. till exempel: Version 1.2 har skapats för: Skruvar.
+1. Klicka **Skapa version**. Ett grått meddelande visas på sidan, t.ex.: Version 1.2 skapad för: Sköldar.
 
 >[!NOTE]
 >
@@ -44,7 +44,7 @@ Så här skapar du en ny version av en sida:
 Så här återställer du sidan till en tidigare version:
 
 1. Öppna sidan som du vill återställa en tidigare version för.
-1. I sidosparken väljer du **Versionshantering** -fliken och sedan **Återställ version** underflik.
+1. I sidosparken väljer du **Versioner** -fliken och sedan **Återställ version** underflik.
 
    ![screen_shot_2012-02-14at42949pm](assets/screen_shot_2012-02-14at42949pm.png)
 
@@ -82,7 +82,7 @@ Den här metoden kan användas för att återställa en sidversion. Den kan äve
 Så här jämför du den aktuella versionen av sidan med en tidigare version:
 
 1. I webbläsaren öppnar du sidan som du vill jämföra med en tidigare version för.
-1. I Sidekick väljer du **Versionshantering** -fliken och sedan **Återställ version** en underflik.
+1. I Sidekick väljer du **Versioner** -fliken och sedan **Återställ version** en underflik.
 
    ![screen_shot_2012-02-14at42949pm-1](assets/screen_shot_2012-02-14at42949pm-1.png)
 
@@ -114,13 +114,13 @@ Så här gör du:
 >
 >Om versioner tas bort från databasen kan inte Timewarp visa rätt vy. Om elementen (till exempel kod, css och bilder) för återgivning av webbplatsen har ändrats skiljer sig vyn från den ursprungliga vyn, eftersom dessa objekt inte versionsindelas i databasen.
 
-### Använda tidskonverteringskalendern {#using-the-timewarp-calendar}
+### Använda tidskonturkalendern {#using-the-timewarp-calendar}
 
 Timewarp är tillgängligt från sidosparken.
 
 Kalenderversionen används om du har en viss dag att visa:
 
-1. Öppna **Versionshantering** och sedan klicka **Timewarp** (nära sidesparkens nederkant). Följande dialogruta visas:
+1. Öppna **Versioner** och sedan klicka på **Timewarp** (nära sidesparkens nederkant). Följande dialogruta visas:
 
    ![chlimage_1-76](assets/chlimage_1-76.png)
 
@@ -134,13 +134,13 @@ Kalenderversionen används om du har en viss dag att visa:
 
    >[!NOTE]
    >
-   >Om du navigerar till en sida som har tagits bort eller tagits bort från databasen kommer den att återges korrekt om äldre versioner av sidan fortfarande är tillgängliga i databasen.
+   >Om du navigerar till en sida som har tagits bort eller tagits bort från databasen, kommer den att återges korrekt om äldre versioner av sidan fortfarande är tillgängliga i databasen.
 
    >[!NOTE]
    >
    >Du kan inte redigera den gamla versionen av sidan. Det är bara tillgängligt för visning. Om du vill återställa den äldre versionen gör du det manuellt med [återställ](/help/sites-classic-ui-authoring/classic-page-author-work-with-versions.md#restoring-a-page-version-from-sidekick).
 
-1. När du är klar med visningen av sidan klickar du på:
+1. När du är klar klickar du på:
 
    * **Avsluta tidsförvrängning** för att avsluta och återgå till den aktuella författarsidan.
    * [Visa tidslinje](#using-the-timewarp-timeline) för att visa tidslinjen.
@@ -155,7 +155,7 @@ Om du vill visa tidslinjen i dokumentet:
 
 1. Gör något av följande om du vill visa tidslinjen:
 
-   1. Öppna **Versionshantering** och sedan klicka på **Timewarp** (nära sidesparkens nederkant).
+   1. Öppna **Versioner** och sedan klicka på **Timewarp** (nära sidesparkens nederkant).
 
    1. Använd dialogrutan för sidspark som visas efter [med tidskonverteringskalendern](#using-the-timewarp-calendar).
 
@@ -176,7 +176,7 @@ I exemplet nedan anger den röda linjen att sidan redigerades under tidsramen f�
    1. **Gå** för att visa innehållet på den publicerade sidan vid den valda tidpunkten.
    1. När du visar innehållet ska du använda **Avsluta tidsförvrängning** för att avsluta och återgå till den aktuella författarsidan.
 
-### Begränsningar för tidsförvrängning {#timewarp-limitations}
+### Begränsningar för Timewarp {#timewarp-limitations}
 
 Med Timewarp kan du göra ett bra försök att återskapa en sida vid en viss tidpunkt. På grund av komplexiteten i den kontinuerliga redigeringen av innehåll i AEM är detta dock inte alltid möjligt. Dessa begränsningar bör beaktas när du använder Timewarp.
 

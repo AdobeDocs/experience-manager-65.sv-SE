@@ -1,15 +1,15 @@
 ---
-title: AEM Headless Translation Journey
+title: AEM översättningsresa utan rubrik
 description: Börja här för en guidad resa genom att översätta ert headless-innehåll med AEM kraftfulla översättningsverktyg.
 exl-id: 1a9d4c88-b676-4168-a9ef-7d218b39129f
-source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
 source-wordcount: '1037'
 ht-degree: 1%
 
 ---
 
-# AEM Headless Translation Journey {#aem-headless-translation-journey}
+# AEM översättningsresa utan rubrik {#aem-headless-translation-journey}
 
 Börja här för en guidad resa genom att översätta ert headless-innehåll med AEM kraftfulla översättningsverktyg.
 
@@ -32,9 +32,9 @@ Om du redan är bekant med AEM, headless och translation kanske du redan har gru
 
 ## AEM dokumentationsresor {#documentation-journeys}
 
-[En dokumentationsresa](/help/journey-documentation/home.md) binder samman många olika och kanske komplicerade ämnen och funktioner genom att tillhandahålla en berättarröst som hjälper läsaren, som kan vara ny att AEM, förstå och lösa ett affärsproblem från början till slut, samtidigt som man antar minimala tidigare ämnesområden eller AEM kunskap.
+[En dokumentationsresa](/help/journey-documentation/home.md) binder samman många olika och kanske komplicerade ämnen och funktioner genom att tillhandahålla en berättarröst som hjälper läsaren att, som kan vara ny att AEM, förstå och lösa ett affärsproblem från början till slut, samtidigt som man antar minimala tidigare ämnesområden eller AEM kunskap.
 
-Dokumentation Journeys bygger på principer för god praxis, grundade på Adobe senaste forskning, beprövade implementeringserfarenheter från Adobe-konsulter och återkoppling från kundprojekt.
+Dokumentation Journeys bygger på principer för god praxis, grundade på Adobe senaste forskning, beprövade implementeringserfarenheter från Adobe konsulter och återkoppling från kundprojekt.
 
 Om du vill veta hur Adobe rekommenderar att man löser problem med headless business case med AEM, [AEM Headless Journeys](/help/journey-headless/home.md) var du ska börja.
 
@@ -53,18 +53,18 @@ Följande personer interagerar på den här resan.
 | Administratör | Hanterar AEM grundinställningar och konfiguration | Översättningsexperten arbetar tillsammans med administratören för att göra konfigurationsändringar som behövs för översättning, till exempel installation av en översättningsanslutning. |
 | Innehållsarkitekt | Analyserar kraven för de data som måste levereras utan huvud och definierar strukturen för dessa data | Översättningsspecialister arbetar med innehållsarkitekten för att definiera hur innehållet ska ordnas så att det enkelt kan översättas. |
 
-Information under denna resa kan förstås vara användbar för alla personer, men viss information kan vara överflödig för vissa roller. Stanna kvar på [kommande resor som omfattar ytterligare roller.](/help/journey-documentation/home.md#journeys)
+Information i den här resan kan förstås vara användbar för alla personer, men viss information kan vara överflödig för vissa roller. Stanna kvar på [kommande resor som omfattar ytterligare roller.](/help/journey-documentation/home.md#journeys)
 
 ## The Headless Translation Journey {#the-journey}
 
 Du kommer att utforska många ämnen under den här resan. I följande artiklar får du grundläggande kunskaper om hur du översätter headless-innehåll i AEM och länkar till detaljerad teknisk dokumentation.
 
-Även om du kan gå direkt till en viss del av resan bygger många koncept på en del i tidigare artiklar. Om du inte har använt rubrikfri översättning i AEM rekommenderar vi att du börjar i början och fortsätter sekventiellt.
+Även om du kan gå direkt till en viss del av resan bygger många koncept på en del i tidigare artiklar. Om du inte har använt rubrikfri översättning i AEM rekommenderar Adobe att du börjar i början och gör en sekventiell förskjutning.
 
 | # | Artikel | Beskrivning |
 |---|---|---|
-| 0 | AEM Headless Translation Journey | Det här dokumentet |
-| 1 | [Lär dig mer om headless-innehåll och hur du översätter det i AEM](learn-about.md) | Lär dig headless-koncept, hur de mappas till AEM och teorin om AEM översättning. |
+| 0 | AEM översättningsresa utan rubrik | Det här dokumentet |
+| 1 | [Lär dig mer om headless-innehåll och hur du översätter det i AEM](learn-about.md) | Lär dig headless-koncept, hur de AEM och teorin om AEM översättning. |
 | 2 | [Kom igång med AEM headless translation](getting-started.md) | Lär dig hur du ordnar ditt headless-innehåll och hur AEM översättningsverktyg fungerar. |
 | 3 | [Konfigurera översättningskopplingen](configure-connector.md) | Lär dig hur du ansluter AEM till en översättningstjänst. |
 | 4 | [Konfigurera översättningsregler](translation-rules.md) | Lär dig hur du definierar översättningsregler för att identifiera innehåll för översättning. |
@@ -77,7 +77,7 @@ Du är nu redo att sätta igång med din Adobe headless översättningsresa. Vi 
 
 ## Ytterligare resurser {#additional-resources}
 
-Dokumentationsresor visar hur AEM löser ett affärsproblem genom att tillhandahålla en berättelse som vägleder dig genom komplexa, sammanhörande processer och funktioner. En resa visar hur flera funktioner fungerar tillsammans för att tillgodose ett enda affärsbehov.
+Dokumentationsresor visar hur AEM löser ett affärsproblem genom att tillhandahålla en berättarröst som vägleder dig genom komplexa, samhörande processer och funktioner. En resa visar hur flera funktioner fungerar tillsammans för att tillgodose ett enda affärsbehov.
 
 Som sådana resor är utformade för att stå på egen hand. Ett antal av dem kan dock vara relaterade till varandra. Kolla in de här extra resorna för mer information om hur AEM kraftfulla funktioner fungerar tillsammans.
 

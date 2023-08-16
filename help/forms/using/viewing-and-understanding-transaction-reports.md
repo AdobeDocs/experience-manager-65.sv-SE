@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: c04c488b-73f3-49ba-9e89-f97497965757
 docset: aem65
 exl-id: 3c7cbe1f-ac81-4df9-96b2-662cbc5f2075
-source-git-commit: 75e1697c301dca3a649833a45caa1753fdc81514
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '859'
+source-wordcount: '858'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ Med transaktionsrapporter kan du samla in och spåra antalet skickade formulär,
 
 ## Ställa in transaktionsrapporter  {#setting-up-transaction-reports}
 
-Funktionen för transaktionsrapporter är tillgänglig som en del av AEM paket. Mer information om hur du installerar tilläggspaketet på alla författare- och publiceringsinstanser finns i [Installera och konfigurera AEM](/help/forms/using/installing-configuring-aem-forms-osgi.md). När du har AEM tilläggspaket för formulär installerat gör du följande:
+Funktionen för transaktionsrapporter är tillgänglig som en del av AEM paket. Mer information om hur du installerar tilläggspaketet på alla författare- och publiceringsinstanser finns i [Installera och konfigurera AEM formulär](/help/forms/using/installing-configuring-aem-forms-osgi.md). När du har AEM tilläggspaket för formulär installerat gör du följande:
 
 * Aktivera omvänd replikering för alla publiceringsinstanser
 * Aktivera transaktionsrapporter
@@ -32,10 +32,9 @@ Funktionen för transaktionsrapporter är tillgänglig som en del av AEM paket. 
 >[!NOTE]
 >
 >* AEM Forms transaktionsrapporter stöder inte topologier som bara innehåller publiceringsinstanser.
->* Innan du använder transaktionsrapportering måste du se till att omvänd replikering är aktiverat för alla publiceringsinstanser.
+>* Innan du använder transaktionsrapportering kontrollerar du att omvänd replikering är aktiverat för alla publiceringsinstanser.
 >* Transaktionsdata återreplikeras från en publiceringsinstans till endast motsvarande författare eller bearbetningsinstans. Författaren eller bearbetningsinstansen kan inte replikera data till en annan instans.
 >
-
 
 ### Aktivera omvänd replikering för alla publiceringsinstanser {#enable-reverse-replication-on-all-the-publish-instances}
 
@@ -60,13 +59,13 @@ Det är bara medlemmar i gruppen som har administratörer som kan visa transakti
 Transaktioner cachelagras i minnet innan de lagras i databasen. Processen utförs för att säkerställa att det inte ofta förekommer några skrivningar i databasen. Som standard är cachelagringsperioden (perioden för tömning av transaktion) inställd på 60 sekunder. Du kan ändra standardperioden så att den passar din miljö. Utför följande steg för att ändra standardcachelagringsperioden:
 
 1. Logga in för att skapa instanser som administratör. Gå till **verktyg** > **Operationer** > **Webbkonsol**.
-1. Leta reda på och öppna **Lagringsprovider för Forms-transaktionsarkiv** service.
+1. Leta reda på och öppna **Lagringsprovider för Forms transaktionsdatabas** service.
 1. Ange antalet sekunder i dialogrutan **Transaktionstömningsperiod** fält. Klicka **Spara**.
 
 Omvänd replikering kopierar transaktionsdata till författarinstansens standardutkorg. Du kan placera transaktionsdata i en anpassad utkorg. Gör så här för att ange en anpassad utkorg:
 
 1. Logga in för att skapa instanser som administratör. Gå till **verktyg** > **Operationer** > **Webbkonsol**.
-1. Leta reda på och öppna **Lagringsprovider för Forms-transaktionsarkiv** service.
+1. Leta reda på och öppna **Lagringsprovider för Forms transaktionsdatabas** service.
 1. Ange namnet på den anpassade utkorgen i **Utkorgar** fält. Klicka **Spara**. En utkorg med det angivna namnet skapas för alla författarinstanser.
 
 ## Visa transaktionsrapporten {#viewing-the-transaction-report}
@@ -76,7 +75,7 @@ Du kan visa transaktionsrapporter om författare eller publiceringsinstanser. Tr
 1. Logga in på AEM Forms-servern på `https://[hostname]:'port'`.
 1. Navigera till **verktyg** > **Forms**>**Visa transaktionsrapport**.
 
-## Förstå rapporten {#understanding-the-report}
+## Rapporten {#understanding-the-report}
 
 AEM Forms visar transaktionsrapporter sedan det konfigurerade datumet, vilket visas i en sammanfattningsrapport nedan:
 

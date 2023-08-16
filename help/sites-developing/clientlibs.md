@@ -1,26 +1,22 @@
 ---
 title: Använda bibliotek på klientsidan
-seo-title: Using Client-Side Libraries
-description: AEM tillhandahåller biblioteksmappar på klientsidan, som gör att du kan lagra klientsidans kod i databasen, ordna den i kategorier och definiera när och hur varje kodkategori ska skickas till klienten
-seo-description: AEM provides Client-side Library Folders, which allow you to store your client-side code in the repository, organize it into categories, and define when and how each category of code is to be served to the client
-uuid: f12b13cc-6651-4c9a-9c52-19a22bb82b28
+description: AEM innehåller biblioteksmappar på klientsidan, som du använder för att lagra klientkoden i databasen, ordna den i kategorier och definiera när och hur varje kodkategori ska skickas till klienten
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: introduction
 content-type: reference
-discoiquuid: 3d14837d-41a8-480a-83ba-392e32f84c65
 docset: aem65
 exl-id: 408ac30c-60ab-4d6c-855c-d544af8d5cf9
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '2862'
+source-wordcount: '2860'
 ht-degree: 0%
 
 ---
 
 # Använda bibliotek på klientsidan{#using-client-side-libraries}
 
-Moderna webbplatser är starkt beroende av bearbetning på klientsidan som styrs av komplex JavaScript- och CSS-kod. Det kan vara komplicerat att organisera och optimera serveringen av koden.
+Moderna webbplatser är starkt beroende av bearbetning på klientsidan som styrs av komplex JavaScript- och CSS-kod. Det kan vara komplicerat att organisera och optimera serveringen av den här koden.
 
 AEM tillhandahåller **Biblioteksmappar på klientsidan**, som gör att du kan lagra din klientkod i databasen, ordna den i kategorier och definiera när och hur varje kodkategori ska skickas till klienten. Klientsidans bibliotekssystem tar sedan hand om att skapa rätt länkar på den slutliga webbsidan för att läsa in rätt kod.
 
@@ -50,11 +46,11 @@ En biblioteksmapp på klientsidan är en databasnod av typen `cq:ClientLibraryFo
   - channels (string) multiple
 ```
 
-Som standard `cq:ClientLibraryFolder` kan placeras var som helst i `/apps`, `/libs` och `/etc` underträd i databasen (dessa standardinställningar och andra inställningar kan styras via **Bibliotekshanteraren Adobe Granite HTML** panelen [Systemkonsol](https://localhost:4502/system/console/configMgr)).
+Som standard `cq:ClientLibraryFolder` kan placeras var som helst i `/apps`, `/libs` och `/etc` underträd i databasen (dessa standardinställningar och andra inställningar kan styras via **Bibliotekshanteraren Adobe Granite HTML** panelen i [Systemkonsol](https://localhost:4502/system/console/configMgr)).
 
 Varje `cq:ClientLibraryFolder` innehåller en uppsättning JS- och/eller CSS-filer, tillsammans med några stödfiler (se nedan). Egenskaperna för `cq:ClientLibraryFolder` är konfigurerade enligt följande:
 
-* `categories`: Identifierar de kategorier i vilka uppsättningen JS- och/eller CSS-filer i den här `cq:ClientLibraryFolder` höst. The `categories` eftersom en biblioteksmapp är flervärdesdel kan den ingå i mer än en kategori (se nedan hur detta kan vara användbart).
+* `categories`: Identifierar de kategorier i vilka uppsättningen JS- och/eller CSS-filer i detta `cq:ClientLibraryFolder` höst. The `categories` eftersom en biblioteksmapp är flervärdesdel kan den ingå i mer än en kategori (se nedan hur detta kan vara användbart).
 
 * `dependencies`: Det här är en lista över andra klientbibliotekskategorier som den här biblioteksmappen är beroende av. Anges till exempel två `cq:ClientLibraryFolder` noder `F` och `G`, om det finns en fil i `F` kräver en annan fil i `G` för att fungera på rätt sätt måste minst en av `categories` av `G` ska vara bland `dependencies` av `F`.
 
@@ -71,11 +67,11 @@ I HTML läses klientbibliotek in via en hjälpmall från AEM, som du kommer åt 
 
 * **css** - Läser bara in CSS-filerna för de refererade klientbiblioteken.
 * **js** - Läser bara in JavaScript-filer från de refererade klientbiblioteken.
-* **alla** - Läser in alla filer i de refererade klientbiblioteken (både CSS och JavaScript).
+* **alla** - Läser in alla filer i klientbiblioteken (både CSS och JavaScript).
 
 Varje hjälpmall förväntar sig en `categories` för att referera till önskade klientbibliotek. Det alternativet kan antingen vara en array med strängvärden eller en sträng som innehåller en kommaseparerad värdelista.
 
-Mer information och exempel på användning finns i dokumentet [Komma igång med mallspråket HTML](https://helpx.adobe.com/experience-manager/htl/using/getting-started.html#loading-client-libraries).
+Mer information och exempel finns i dokumentet [Komma igång med mallspråket HTML](https://helpx.adobe.com/experience-manager/htl/using/getting-started.html#loading-client-libraries).
 
 ### Använda JSP {#using-jsp}
 
@@ -102,7 +98,7 @@ Fullständig information, inklusive attribut för filtrering av JS-, CSS- eller 
 
 >[!CAUTION]
 >
->`<cq:includeClientLib>`, som tidigare ofta användes för att inkludera klientbibliotek, har tagits bort sedan AEM 5.6. [`<ui:includeClientLib>`](/help/sites-developing/taglib.md#lt-ui-includeclientlib) ska användas i stället så som beskrivs ovan.
+>`<cq:includeClientLib>`som tidigare ofta användes för att inkludera klientbibliotek har tagits bort sedan AEM 5.6. [`<ui:includeClientLib>`](/help/sites-developing/taglib.md#lt-ui-includeclientlib) ska användas i stället så som beskrivs ovan.
 
 ## Skapar klientbiblioteksmappar {#creating-client-library-folders}
 
@@ -170,9 +166,9 @@ Sedan ställer du in `allowProxy` egenskap på `foo` till true.
 1. Om du vill ange den eller de kategorier som biblioteket tillhör väljer du `cq:ClientLibraryFolder` lägg till följande egenskap och klicka sedan på **Spara alla**:
 
    * Namn: kategorier
-   * Typ: Sträng
+   * Typ: String
    * Värde: Kategorinamnet
-   * Flera: Välj
+   * Flera: Markera
 
 1. Lägg till källfiler i biblioteksmappen på alla sätt. Använd till exempel en WebDav-klient för att kopiera filer, eller skapa en fil och redigera innehållet manuellt.
 
@@ -196,7 +192,7 @@ Sedan ställer du in `allowProxy` egenskap på `foo` till true.
 
    `#base=mobile`
 
-1. På raderna nedan `#base=[root]`anger du sökvägarna för källfilerna i förhållande till roten. Placera varje filnamn på en separat rad.
+1. På raderna nedan `#base=[root]`anger du sökvägarna för källfilerna i förhållande till roten. Placera filnamnen på separata rader.
 1. Klicka **Spara alla**.
 
 ### Länka till beroenden {#linking-to-dependencies}
@@ -209,7 +205,7 @@ Beroenden måste vara ett annat `cq:ClientLibraryFolder`. Om du vill identifiera
 * **Typ:** Sträng[]
 * **Värden:** Värdet på egenskapen categories för den cq:ClientLibraryFolder-nod som den aktuella biblioteksmappen är beroende av.
 
-Till exempel är / `etc/clientlibs/myclientlibs/publicmain` är beroende av `cq.jquery` bibliotek. Den JSP som refererar till huvudklientbiblioteket genererar HTML som innehåller följande kod:
+Till exempel är `etc/clientlibs/myclientlibs/publicmain` är beroende av `cq.jquery` bibliotek. Den JSP som refererar till huvudklientbiblioteket genererar HTML som innehåller följande kod:
 
 ```xml
 <script src="/etc/clientlibs/foundation/cq.jquery.js" type="text/javascript">
@@ -230,7 +226,7 @@ Använd egenskapen categories för att identifiera klientbiblioteksmappen som sk
 
 * **Namn:** embed
 * **Typ:** Sträng[]
-* **Värde:** Värdet för egenskapen categories i `cq:ClientLibraryFolder` nod att bädda in.
+* **Värde:** Värdet för egenskapen categories i `cq:ClientLibraryFolder` nod som ska bäddas in.
 
 #### Använda inbäddning för att minimera begäranden {#using-embedding-to-minimize-requests}
 
@@ -323,7 +319,7 @@ I följande tabell visas till exempel värdet för `channels` egenskapen för va
 
 ## Använda preprocessorer {#using-preprocessors}
 
-AEM gör det möjligt att ansluta till förprocessorer och levereras med stöd för [YUI-kompressor](https://github.com/yui/yuicompressor#yui-compressor---the-yahoo-javascript-and-css-compressor) för CSS och JavaScript och [Google Closure Compiler (GCC)](https://developers.google.com/closure/compiler/) för JavaScript med YUI inställt som AEM standardpreprocessor.
+AEM möjliggör anslutningsbara preprocessorer och levereras med stöd för [YUI-kompressor](https://github.com/yui/yuicompressor#yui-compressor---the-yahoo-javascript-and-css-compressor) för CSS och JavaScript och [Google Closure Compiler (GCC)](https://developers.google.com/closure/compiler/) för JavaScript med YUI inställt som AEM standardpreprocessor.
 
 De anslutningsbara preprocessorerna möjliggör flexibel användning, inklusive:
 
@@ -396,7 +392,7 @@ YUI anges som standardminifierare i AEM. Följ de här stegen för att ändra de
 
 1. Gå till Apache Felix Config Manager på [https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr)
 1. Sök och redigera **Bibliotekshanteraren Adobe Granite HTML**.
-1. Aktivera **Minify** (om det inte redan är aktiverat).
+1. Aktivera **Minify** (om inte redan aktiverat).
 1. Ange värdet **Standardkonfigurationer för JS-processor** till `min:gcc`.
 
    Alternativ kan skickas om de avgränsas med ett semikolon, till exempel `min:gcc;obfuscate=true`.

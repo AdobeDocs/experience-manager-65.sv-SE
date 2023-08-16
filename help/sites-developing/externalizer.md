@@ -1,22 +1,22 @@
 ---
 title: Extern URL
-description: Externalizer är en tjänst av typen OSGI som gör att du kan omvandla en resurssökväg programmatiskt till en extern och absolut URL
+description: Externalizer är en tjänst av typen OSGI som gör att du kan omvandla en resurssökväg till en extern och absolut URL-adress med hjälp av programmet
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: platform
 content-type: reference
 docset: aem65
 exl-id: 971d6c25-1fbe-4c07-944e-be6b97a59922
-source-git-commit: a56d5121a6ce11b42a6c30dae9e479564d16af27
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '495'
+source-wordcount: '492'
 ht-degree: 0%
 
 ---
 
 # Extern URL{#externalizing-urls}
 
-I Adobe Experience Manager (AEM) **Externalizer** är en OSGI-tjänst som gör att du kan omvandla en resurssökväg med programkod (till exempel `/path/to/my/page`) till en extern och absolut URL (till exempel `https://www.mycompany.com/path/to/my/page`) genom att ange sökvägen som prefix med en förkonfigurerad DNS.
+I Adobe Experience Manager (AEM) **Externalizer** är en OSGI-tjänst som gör att du programmässigt kan omvandla en resurssökväg (till exempel `/path/to/my/page`) till en extern och absolut URL (till exempel `https://www.mycompany.com/path/to/my/page`) genom att ange sökvägen som prefix med en förkonfigurerad DNS.
 
 Eftersom en instans inte känner till sin externt synliga URL-adress om den körs bakom ett webblager, och eftersom en länk ibland måste skapas utanför det begärda omfånget, utgör den här tjänsten en central plats för att konfigurera de externa URL-adresserna och skapa dem.
 

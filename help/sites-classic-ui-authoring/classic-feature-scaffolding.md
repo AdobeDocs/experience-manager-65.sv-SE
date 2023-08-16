@@ -7,9 +7,9 @@ content-type: reference
 topic-tags: site-features
 docset: aem65
 exl-id: 58e61302-cfb4-4a3d-98d4-3c92baa2ad42
-source-git-commit: fd937341e26edd0c3edfced8e862066ebc30f9a3
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '1432'
+source-wordcount: '1431'
 ht-degree: 0%
 
 ---
@@ -42,13 +42,13 @@ Skolningssidans egenskaper är:
 
 * **Titeltext**: Det här är namnet på själva byggnadssidan. I det här exemplet kallas det&quot;News&quot;.
 * **Beskrivning**: Detta visas under rubriken på byggnadssidan.
-* **Målmall**: Det här är mallen som används för det här skalet när en sida skapas. I det här exemplet är det en *Geometrixx innehållssida* mall.
+* **Målmall**: Det här är den mall som det här skalet använder när en sida skapas. I det här exemplet är det en *Geometrixx innehållssida* mall.
 * **Målsökväg**: Det här är sökvägen till den överordnade sidan under vilken den här strukturen skapar sidor. I det här exemplet är sökvägen */content/geometrixx/en/news*.
 
 Skaffets brödtext är formen. När en användare vill skapa en sida med hjälp av skalet fyller han i formuläret och klickar *Skapa*, längst ned. I **Nyheter** exemplet ovan innehåller följande fält:
 
 * **Titel**: Det här är namnet på sidan som ska skapas. Det här fältet finns alltid på alla ställningar.
-* **Text**: Det här fältet motsvarar en textkomponent på den slutliga sidan.
+* **Text**: Det här fältet motsvarar en textkomponent på den resulterande sidan.
 * **Bild**: Det här fältet motsvarar en bildkomponent på den slutliga sidan.
 * **Bild/Avancerat**: **Titel**: Bildens titel.
 * **Bild/Avancerat**: **Alt-text**: Alt-texten för bilden.
@@ -62,7 +62,7 @@ Om du vill skapa ett nytt ställningar går du till **verktyg** konsol, sedan **
 
 Gå till **Sidegenskaper** på den nya sidan och ange *Titeltext*, *Beskrivning*, *Målmall* och *Målsökväg*, enligt beskrivningen ovan.
 
-Därefter måste du definiera strukturen för sidan som det här skalet ska skapa. För att göra detta, gå till **[designläge](/help/sites-authoring/page-authoring.md#sidekick)** på scensidan. En länk visas där du kan redigera skalet i **dialogruteredigerare**.
+Därefter måste du definiera strukturen för sidan som det här skalet ska skapa. För att göra detta, gå till **[designläge](/help/sites-authoring/page-authoring.md#sidekick)** på scensidan. En länk visas som gör att du kan redigera skalet i **dialogruteredigerare**.
 
 ![cq5_dialog_editor](assets/cq5_dialog_editor.png)
 
@@ -76,7 +76,7 @@ Dialogrutedefinitionen för ett ställningar fungerar på liknande sätt som fö
 
 En titt på exemplet **Nyheter** i dialogrutan kan du förklara hur det fungerar. Gå till designläge på scensidan och klicka på länken för dialogruteredigeraren.
 
-Klicka nu på dialogfältet **Dialogruta > Tabb-panel > Text > Text**, så här:
+Klicka nu på dialogrutan **Dialog > Tab Panel > Text > Text**, så här:
 
 ![textedit](assets/textedit.png)
 
@@ -92,7 +92,7 @@ Det här är namnet på den egenskap som innehållet i det här fältet ska skri
 
 Detta definierar platsen för innehållslagringen för texten som ska infogas i det här fältet. Men vi måste också specificera ytterligare två egenskaper för detta innehåll:
 
-* Det faktum att strängen som lagras här måste tolkas som *RTF* och
+* Att strängen som lagras här måste tolkas som *RTF* och
 * vilken komponent som ska användas för att återge innehållet till den resulterande sidan.
 
 I en normal komponentdialogruta behöver du inte ange den här informationen eftersom den är implicit eftersom dialogrutan redan är bunden till en viss komponent.
@@ -115,7 +115,7 @@ Eftersom vi vet att texten ska tolkas som en RTF-text kan vi specificera `value`
 
 >[!CAUTION]
 >
->I dialogruteredigeraren kan användaren ändra värdena för *befintlig* egenskaper i dialogdefinitionen. Användaren måste använda för att lägga till en ny egenskap [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md). När ett nytt dolt fält läggs till i en dialogrutedefinition med dialogruteredigeraren har det inte något *value* -egenskapen (d.v.s. en egenskap med namnet&quot;value&quot;). Om det dolda fältet kräver att en standardvärdeegenskap ställs in, måste den här egenskapen läggas till manuellt med något av CRX-verktygen. Värdet kan inte läggas till med själva dialogruteredigeraren. Men när egenskapen finns kan dess värde redigeras med dialogruteredigeraren.
+>I dialogruteredigeraren kan användaren ändra värdena för *befintlig* egenskaper i dialogdefinitionen. Användaren måste använda för att lägga till en ny egenskap [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md). När ett nytt dolt fält läggs till i en dialogrutedefinition med dialogruteredigeraren har det inte något *value* -egenskap (det vill säga en egenskap med namnet&quot;value&quot;). Om det dolda fältet i fråga kräver att en standardvärdeegenskap ställs in, måste den här egenskapen läggas till manuellt med något av CRX-verktygen. Värdet kan inte läggas till med själva dialogruteredigeraren. Men när egenskapen finns kan dess värde redigeras med dialogruteredigeraren.
 
 Det andra dolda fältet visas om du klickar på det så här:
 
@@ -141,7 +141,7 @@ I det klassiska användargränssnittet är ställningar helt integrerade med MSM
 
 När du öppnar en sida i **Ställning** läge (med ikonen längst ned i sidosparken) alla komponenter som är föremål för arv indikeras av:
 
-* en låssymbol (för de flesta komponenter), till exempel Text och rubrik)
+* en låssymbol (för de flesta komponenter, till exempel Text och Titel)
 * en mask med texten **Klicka för att avbryta arv** (för bildkomponenter)
 
 Dessa visar att komponenten inte kan redigeras - förrän arvet avbryts.

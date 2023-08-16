@@ -4,7 +4,7 @@ description: Lär dig hur du utför en uppgradering på plats.
 topic-tags: upgrading
 feature: Upgrading
 exl-id: aef6ef00-993c-4252-b0ad-ddc4917beaf7
-source-git-commit: c0574b50f3504a4792405d6fcd8aa3a2e8e6c686
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
 source-wordcount: '1244'
 ht-degree: 0%
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->På den här sidan beskrivs uppgraderingsproceduren för AEM 6.5. Om du har en installation som distribueras till en programserver finns mer information i [Uppgradera steg för programserverinstallationer](/help/sites-deploying/app-server-upgrade.md).
+>På den här sidan beskrivs uppgraderingsproceduren för AEM 6.5. Om du har en installation som distribueras till en programserver läser du [Uppgradera steg för programserverinstallationer](/help/sites-deploying/app-server-upgrade.md).
 
 ## Steg före uppgradering {#pre-upgrade-steps}
 
@@ -53,7 +53,6 @@ Den faktiska migreringen utförs med AEM snabbredigeringsfil som körs med en ny
 >
 >* `--promote-runmode nosamplecontent`
 >
-
 
 Använd följande kommando för att bestämma vilket kommando du ska köra:
 
@@ -106,15 +105,15 @@ Plats `<<YOUR_PROFILE>>` och `<<ADDITIONAL_FLAGS>>` ersätts med profilen och fl
 
 **Var:**
 
-* `mongo-host` är MongoDB-serverns IP-adress (till exempel 127.0.0.1)
+* `mongo-host` är MongoDB-server-IP (till exempel 127.0.0.1)
 
 * `mongo-port` är MongoDB-serverporten (till exempel: 27017)
 
-* `mongo-database-name` representerar databasens namn (till exempel: aem-author)
+* `mongo-database-name` representerar namnet på databasen (till exempel: aem-author)
 
 **Du kan också behöva ytterligare växlar för följande scenarier:**
 
-* Om du utför uppgraderingen på ett Windows-system där Java-minnesmappningen inte hanteras på rätt sätt lägger du till `--disable-mmap` -parametern till kommandot.
+* Om du utför uppgraderingen på ett Windows-system där Java-minnesmappningen inte hanteras korrekt lägger du till `--disable-mmap` -parametern till kommandot.
 
 Mer information om hur du använder verktyget crx2oak finns i Använda [CRX2Oak Migration Tool](/help/sites-deploying/using-crx2oak.md). JAR-hjälpfilen för crx2oak kan vid behov uppgraderas manuellt genom att manuellt ersätta den med senare versioner efter att snabbstarten har packats upp. Sökvägen i AEM installationsmapp är: `<aem-install>/crx-quickstart/opt/extensions/crx2oak.jar`. Den senaste versionen av CRX2Oak-migreringsverktyget kan hämtas från Adobe-databasen på: [https://repo1.maven.org/maven2/com/adobe/granite/crx2oak/](https://repo1.maven.org/maven2/com/adobe/granite/crx2oak/)
 
@@ -124,7 +123,7 @@ Kontrollera konfigurationsfilerna under `crx-quickstart/install` mapp. Om en mig
 
 **En anteckning om datalager:**
 
-while `FileDataStore` är det nya standardvärdet för AEM 6.3-installationer, och att använda ett externt datalager krävs inte. Även om du bör använda ett externt datalager som bästa praxis för produktionsdistributioner är det inte en förutsättning för uppgradering. På grund av den komplexitet som redan finns vid uppgradering av AEM rekommenderar vi att du utför uppgraderingen utan att behöva göra en datastrimmigrering. Om du vill kan du utföra en datalagermigrering efteråt som en separat åtgärd.
+while `FileDataStore` är det nya standardvärdet för AEM 6.3-installationer, och att använda ett externt datalager krävs inte. Även om du bör använda ett externt datalager som bästa praxis för produktionsdistributioner är det inte en förutsättning för uppgradering. På grund av den komplexitet som redan finns när du uppgraderar AEM rekommenderar Adobe att du utför uppgraderingen utan att utföra en datastorteringsmigrering. Om du vill kan du utföra en datalagermigrering efteråt som en separat åtgärd.
 
 ## Felsöka migreringsproblem {#troubleshooting-migration-issues}
 
@@ -168,7 +167,7 @@ För att kunna genomföra uppgraderingen är det viktigt att du börjar AEM anv�
 >
 >Om du kör Oracle Java 11 (eller i allmänhet versioner av Java nyare än 8) måste ytterligare växlar läggas till på kommandoraden när du startar AEM. Mer information finns i [Java 11 - överväganden](/help/sites-deploying/custom-standalone-install.md#java-considerations).
 
-Observera att AEM från startskriptet inte startar uppgraderingen. De flesta kunder börjar AEM med startskriptet och har anpassat det här startskriptet för att inkludera växlar för miljökonfigurationer som minnesinställningar, säkerhetscertifikat osv. Därför rekommenderar vi att du följer den här proceduren för att fastställa rätt uppgraderingskommando:
+Observera att AEM från startskriptet inte startar uppgraderingen. De flesta kunder börjar AEM med startskriptet och har anpassat det här startskriptet för att inkludera växlar för miljökonfigurationer som minnesinställningar, säkerhetscertifikat osv. Adobe rekommenderar därför att du följer den här proceduren för att fastställa rätt uppgraderingskommando:
 
 1. Kör följande från kommandoraden på en AEM som körs:
 
@@ -176,7 +175,7 @@ Observera att AEM från startskriptet inte startar uppgraderingen. De flesta kun
    ps -ef | grep java
    ```
 
-1. Leta efter AEM. Det ser ut ungefär så här:
+1. Håll utkik efter AEM. Det ser ut ungefär så här:
 
    ```shell
    /usr/bin/java -server -Xmx1024m -Djava.awt.headless=true -Dsling.run.modes=author,crx3,crx3tar -jar crx-quickstart/app/cq-quickstart-6.5.0-standalone-quickstart.jar start -c crx-quickstart -i launchpad -p 4502 -Dsling.properties=conf/sling.properties

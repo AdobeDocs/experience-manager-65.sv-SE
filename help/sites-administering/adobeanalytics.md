@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 444c522e-2f33-4f41-846c-8d317e799659
 docset: aem65
 exl-id: 0a87ece4-57ed-4022-a78a-264c1edf4b4e
-source-git-commit: 1683338f02d01d5d9843368955fa42f309718f26
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '314'
+source-wordcount: '313'
 ht-degree: 20%
 
 ---
@@ -31,7 +31,7 @@ Genom att integrera Adobe Analytics och AEM kan du spåra webbsidans aktivitet:
 * Med en Adobe Analytics-konfiguration kan AEM autentisera med Adobe Analytics.
 * Ett ramverk identifierar de data som skickas till din Adobe Analytics-rapportsserie.
 
-Informationen innehåller sid- och användardata. till exempel:
+Data innehåller sid- och användardata, till exempel:
 
 * data som AEM komponenter samla in
 * länkklick
@@ -57,7 +57,7 @@ Du kan också använda [Guiden Anmäl dig](/help/sites-administering/opt-in.md) 
 Se:
 
 * [Utöka Adobe Analytics-integreringen](/help/sites-developing/extending-analytics.md) för information om utveckling av komponenter som samlar in användardata och anpassar Adobe Analytics-ramverket.
-* Kunskapsbasartikeln [Adobe Analytics-integrering - felsökningsproblem](https://helpx.adobe.com/experience-manager/kb/sitecatalystintegrationtroubleshooting.html), för information om felsökning av Adobe Analytics-integrering.
+* Kunskapsbasartikeln, [Adobe Analytics-integrering - felsökningsproblem](https://helpx.adobe.com/experience-manager/kb/sitecatalystintegrationtroubleshooting.html), för information om felsökning av Adobe Analytics-integrering.
 
 >[!NOTE]
 >

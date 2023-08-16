@@ -10,9 +10,9 @@ discoiquuid: 30aa3177-bcf4-4260-8f64-e73bc907942a
 docset: aem65
 legacypath: /content/docs/en/aem/6-0/author/site-page-features/launches
 exl-id: 2d441820-b394-47c8-b4ca-a8aede590937
-source-git-commit: f4b6eb2ded17ec641f23a1fc3b977ce77169c8a1
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '524'
+source-wordcount: '523'
 ht-degree: 18%
 
 ---
@@ -30,8 +30,7 @@ När en startsida har skapats för en sida (eller en uppsättning sidor) kan du 
 >
 >Du får inte flytta en sida inom en start. Om du försöker utföra den här åtgärden utlöses ett varningsmeddelande:
 >
->* Varning: Den här sidan är startkällan. Det är inte tillåtet att flytta sidan.
-
+>* Varning! Den här sidan är källan till en start. Det är inte tillåtet att flytta sidan.
 
 ### Redigera startsidor som är beroende av en Live-kopia {#editing-launch-pages-subject-to-a-live-copy}
 
@@ -42,7 +41,7 @@ Om din lansering baseras på en [live copy](/help/sites-administering/msm.md) d�
 
 En live-kopia används för att synkronisera innehåll *från* källgrenen *till* startgrenen (för att hålla startsidan uppdaterad med ändringarna i källan).
 
-Du kan göra ändringar på samma sätt som du kan redigera en vanlig Live-kopia; till exempel:
+Du kan göra ändringar på samma sätt som du kan redigera en vanlig Live-kopia, till exempel:
 
 * Om du klickar på ett stängt hänglås bryts synkroniseringen och du kan göra nya uppdateringar av innehållet när du startar programmet. När du har låst upp (öppet hänglås) skrivs inte ändringarna över av ändringar som gjorts på samma plats i källgrenen.
 * **Gör uppehåll i** (och **återuppta**) arv för en viss sida.
@@ -61,7 +60,7 @@ Om du vill spåra de ändringar du har gjort kan du visa startsidan i **Referens
 
 1. De två sidorna (start och källa) öppnas sida vid sida.
 
-   Mer information om hur du använder funktionen finns i [Sidskillnader](/help/sites-authoring/page-diff.md).
+   Mer information om hur du använder den här funktionen finns i [Sidskillnader](/help/sites-authoring/page-diff.md).
 
 ## Ändra använda källsidor {#changing-the-source-pages-used}
 
@@ -72,6 +71,7 @@ Du kan när som helst lägga till eller ta bort sidor till/från intervallet med
    * den [Startar konsolen](/help/sites-authoring/launches.md#the-launches-console):
 
       * Välj **Redigera**.
+
    * [Referenser (platskonsolen)](/help/sites-authoring/launches.md#launches-in-references-sites-console) för att visa tillgängliga åtgärder:
 
       * Välj **Redigera start**.
@@ -82,7 +82,7 @@ Du kan när som helst lägga till eller ta bort sidor till/från intervallet med
 
    >[!NOTE]
    >
-   >Om du vill lägga till sidor i en programstart måste de ligga under en gemensam språkrot. dvs. inom en enda plats.
+   >Om du vill lägga till sidor i en programstart måste de ligga under en gemensam språkrot, dvs. inom en och samma webbplats.
 
 ## Redigera en startkonfiguration {#editing-a-launch-configuration}
 
@@ -93,6 +93,7 @@ Du kan när som helst redigera egenskaperna för en start:
    * den [Startar konsolen](/help/sites-authoring/launches.md#the-launches-console):
 
       * Välj **Egenskaper**.
+
    * [Referenser (platskonsolen)](/help/sites-authoring/launches.md#launches-in-references-sites-console) för att visa tillgängliga åtgärder:
 
       * Välj **Redigera egenskaper**.

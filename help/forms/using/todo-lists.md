@@ -11,9 +11,9 @@ topic-tags: forms-workspace
 discoiquuid: d8546227-d78d-4fe2-a092-222482bb69c9
 docset: aem65
 exl-id: c80bf347-d1ed-488f-a41a-ceb05a6df9e4
-source-git-commit: e961ce67e5b1a71e3af6dded304d99cd9e6896bc
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '4033'
+source-wordcount: '4032'
 ht-degree: 0%
 
 ---
@@ -51,7 +51,7 @@ När du öppnar och arbetar med en uppgift beror de verktyg som är tillgänglig
    * Visa kommentarer för alla användare som har tilldelats uppgiften
    * Lägga till kommentarer till uppgiften själv
 
-Ytterligare verktyg som kan vara tillgängliga med någon av ovanstående åtgärder är bland annat följande:
+Ytterligare verktyg som kan vara tillgängliga med någon av ovanstående uppgifter är:
 
 * Framåt
 * Dela
@@ -62,7 +62,7 @@ Ytterligare verktyg som kan vara tillgängliga med någon av ovanstående åtgä
 
 ## Öppna uppgifter {#opening-tasks}
 
-Du kan öppna och låsa uppgifter från din att göra-lista eller göra anspråk på och öppna uppgifter från en grupp eller delad att göra-lista. När du öppnar en uppgift visas den i huvudrutan. De andra uppgifterna visas i uppgiftslistan bredvid listan Att göra.
+Du kan öppna och låsa uppgifter från din att göra-lista eller göra anspråk på och öppna uppgifter från en grupp eller delad att göra-lista. När du öppnar en uppgift visas den i huvudrutan. Övriga åtgärder visas i uppgiftslistan bredvid Att göra-listan.
 
 Om det finns en URL för uppgiftssammanfattning öppnas vyn Sammanfattning som standard i stället för formuläret som är kopplat till en uppgift. Även om en användare aktiverar alternativet&quot;Öppna formuläret i maximerat läge&quot; i Tilldela uppgift, öppnas inte formuläret i maximerat läge.
 
@@ -106,17 +106,17 @@ När du öppnar och gör anspråk på en uppgift från en grupp eller delad list
 
 När du har öppnat en uppgift beror uppgiften på vilka flikar som visas i huvudrutan och vilka verktyg som är tillgängliga. Flikarna som du kan se beskrivs nedan:
 
-* **Sammanfattning av uppgifter**: När en uppgift öppnas kan du i rutan Sammanfattning av uppgifter visa information om uppgiften, om den finns, med en URL som anges i processen vid steget Tilldela uppgift. Om du använder åtgärdssammanfattningsfönstret kan ytterligare och relevant information för en uppgift visas för att öka värdet för slutanvändaren av arbetsytan i AEM Forms. Fliken är inte tillgänglig om URL:en för uppgiftssammanfattning inte finns.
+* **Sammanfattning av uppgifter**: När en uppgift öppnas kan du i rutan Sammanfattning av uppgifter visa information om uppgiften, om den finns, med en URL som anges i processen i steget Tilldela uppgift. Om du använder åtgärdssammanfattningsfönstret kan ytterligare och relevant information för en uppgift visas för att öka värdet för slutanvändaren av arbetsytan i AEM Forms. Fliken är inte tillgänglig om URL:en för uppgiftssammanfattning inte finns.
 
-* **Detaljer**: Ger information om den aktuella uppgiften och processen som den tillhör.
+* **Information**: Visar information om den aktuella uppgiften och processen som den tillhör.
 
-* **Formulär**: Visar formuläret som är associerat med uppgiften. Formuläret kan vara av många filtyper, bland annat PDF, HTML, Guide och SWF. Formuläret kan se ut som ett vanligt utskrivbart eller webbaserat formulär eller vägleda dig genom en serie guideliknande paneler för att samla in information.
+* **Formulär**: Visar det formulär som är associerat med uppgiften. Formuläret kan vara av många filtyper, bland annat PDF, HTML, Guide och SWF. Formuläret kan se ut som ett vanligt utskrivbart eller webbaserat formulär eller vägleda dig genom en serie guideliknande paneler för att samla in information.
 
-* **Historik**: Visar de uppgifter som ingår i processinstansen och det tillhörande formuläret, uppgiftstilldelningar och bilagor för varje uppgift.
+* **Historik**: Visar en lista över de uppgifter som är en del av processinstansen och det tillhörande formuläret, uppgiftstilldelningar och bilagor för varje uppgift.
 
 * **Bifogade filer**: Visar befintliga bilagor som är associerade med uppgiften och lägger till bilagor, om det behövs.
 
-* **Anteckningar**: Visar befintliga anteckningar som är associerade med uppgiften och lägger till anteckningar om det behövs.
+* **Anteckningar**: Visar befintliga anteckningar som är kopplade till uppgiften och lägger till anteckningar om det behövs.
 
 När du arbetar med en uppgift beskrivs de verktyg du kan se och de åtgärder du kan vidta nedan.
 
@@ -182,7 +182,7 @@ Du kan lägga till, uppdatera, ta bort eller spara bifogade filer lokalt.
 
 **Ta bort en bifogad fil**
 
-1. Klicka **Ta bort** för en bifogad fil.
+1. Klicka **Ta bort** för en bilaga.
 
 ### Spara arbetet utan att slutföra uppgiften {#save-your-work-without-completing-the-task}
 
@@ -223,7 +223,7 @@ Du kan slutföra en uppgift på flera olika sätt:
 
 * Om du får e-postmeddelanden via e-post
 
-När du har slutfört en uppgift kan en bekräftelsedialogruta visas som bekräftar åtgärden. Du kan till exempel se en dialogruta där du ombeds bekräfta att den information du har angett är giltig.
+När du har slutfört en uppgift kan en bekräftelsedialogruta visas som bekräftar åtgärden. Du kan till exempel se en dialogruta där du ombeds bekräfta att den information som du har angett är giltig.
 
 >[!NOTE]
 >
@@ -231,10 +231,10 @@ När du har slutfört en uppgift kan en bekräftelsedialogruta visas som bekräf
 
 ### Slutför en uppgift {#complete-a-task}
 
-1. Utför något av följande steg:
+1. Gör något av följande:
 
    * Markera uppgiften och klicka på lämplig knapp för nästa steg som krävs i processen längst ned i listan.
-   * Om formuläret inte har några knappar och knappen Slutför finns tillgänglig på arbetsytan i AEM Forms klickar du på **Slutförd**.
+   * Om formuläret inte har några knappar och knappen Slutför finns tillgänglig på arbetsytan i AEM Forms klickar du på **Complete**.
    * Om formuläret har knappar och knappen Slutför i AEM Forms inte är tillgänglig klickar du på lämplig knapp i formuläret för nästa steg som ska utföras.
 
    Om formuläret inte har några knappar och knappen Slutför i AEM Forms inte är tillgänglig visas ett meddelande om att formuläret inte kan skickas.
@@ -250,7 +250,7 @@ När du har slutfört en uppgift kan en bekräftelsedialogruta visas som bekräf
 
 ### Godkänn uppgifter gruppvis {#bulk-approve-tasks}
 
-Du kan skicka flera uppgifter från din Att göra-lista. Det går endast att skicka uppgifter med samma process, med samma uppgiftsnamn, och samma flödesalternativ.
+Du kan skicka flera uppgifter från din Att göra-lista. Det går endast att skicka uppgifter med samma process, med samma uppgiftsnamn, och samma flödesalternativ tillsammans.
 
 >[!NOTE]
 >
@@ -285,7 +285,6 @@ E-postmeddelandena kan innehålla en länk som öppnar uppgiften i AEM Forms arb
 >
 >* Om utkast vidarebefordras efter att uppgiften har skickats in på arbetsytan i AEM Forms skickas e-postmeddelanden. Om utkast vidarebefordras från startpunkten för AEM Forms-arbetsytan skickas inga e-postmeddelanden.
 
-
 När du slutför en uppgift via e-post tas uppgiften bort från din att göra-lista i AEM Forms arbetsyta.
 
 >[!NOTE]
@@ -314,15 +313,15 @@ A *påminnelse* meddelar dig om en uppgift som kräver din uppmärksamhet. Påmi
 
 Affärsprocessen avgör beteende och tidpunkt för deadlines och påminnelser. Alla processer har inte deadlines och påminnelser. Administratören anger om e-postmeddelanden ska skickas för deadlines och påminnelser. Du kan ange om du vill få e-postmeddelanden.
 
-## Arbeta med uppgifter från gruppköer och delade köer {#working-with-tasks-from-group-and-shared-queues}
+## Arbeta med uppgifter från grupper och delade köer {#working-with-tasks-from-group-and-shared-queues}
 
 Alla uppgifter som är tilldelade dig visas i listan Att göra (kö).
 
 Alla grupper och delade Att göra-listor som du har åtkomst till visas också i den vänstra rutan på Att göra-sidan. Du kan slutföra uppgifter från alla Att göra-listor som du har tillgång till.
 
-En lista med att göra-uppgifter för en grupp kan ha fler än en medlem. En administratör konfigurerar grupper att göra-listor baserat på organisationens specifika krav. Gruppera Att göra-listor är ett sätt att distribuera arbete bland flera personer som har liknande ansvarsområden.
+En lista med att göra-uppgifter för en grupp kan ha fler än en medlem. En administratör konfigurerar grupper att göra-listor baserat på organisationens specifika krav. Gruppera Att göra-listor är ett sätt att distribuera arbete bland flera personer som delar liknande ansvarsområden.
 
-Alla i teamet hanterar t.ex. låneblanketter. Alla dessa uppgifter skickas till en gruppAtt göra-lista som alla medlemmar i gruppen har åtkomst till. Varje medlem i din grupp har åtkomst till uppgifterna från Att göra-listan.
+Till exempel behandlar alla medlemmar i teamet låneansökningar. Alla dessa uppgifter skickas till en gruppAtt göra-lista som alla medlemmar i gruppen har åtkomst till. Varje medlem i din grupp har åtkomst till uppgifterna från Att göra-listan.
 
 En delad Att göra-lista visas när en annan användare delar sin Att göra-lista med dig eller delar en uppgift explicit med dig. Sedan kan du visa uppgifterna i användarens Att göra-lista och slutföra dem för användarens räkning. Om du till exempel tar semester kan du välja att dela din Att göra-lista med en medarbetare som slutför dina uppgifter medan du är borta.
 
@@ -330,7 +329,7 @@ En delad Att göra-lista visas när en annan användare delar sin Att göra-list
 >
 >Du kan även ange inställningar för frånvaro för att vidarebefordra uppgifter till andra användare medan du är borta.
 
-Om du vill arbeta med en uppgift från en grupp eller en delad Att göra-lista, gör anspråk på uppgiften först. Du blir sedan ägare av uppgiften tills du slutför den eller vidarebefordrar den till en annan användare.
+Om du vill arbeta med en uppgift från en grupp eller delad Att göra-lista, gör anspråk på uppgiften först. Du blir sedan ägare av uppgiften tills du slutför den eller vidarebefordrar den till en annan användare.
 
 ### Delningsköer {#sharing-queues}
 
@@ -342,7 +341,7 @@ Tänk på att för att en användare ska kunna se en uppgift i en delad kö mås
 >
 >Om du tänker vara borta från kontoret kan du även ange inställningar för att vidarebefordra uppgifter till andra användare när du är borta, i stället för att dela hela din Att göra-lista.
 
-**Dela din kö**
+**Dela kön**
 
 1. I **Köer** i **Inställningar** klickar du på +-ikonen för Användare som för närvarande delar min kö.
 1. Sök efter och välj namnet på användaren.
@@ -369,7 +368,7 @@ Om du får åtkomst till en annan användares Att göra-lista kan du inte visa n
 
    >[!NOTE]
    >
-   >Du kan ta bort din åtkomst till en annan Att göra-lista genom att välja användarnamnet i listan Användare som jag har åtkomst till och klicka på **X** i slutet av raden där användarnamnet anges. Du kan inte ta bort din åtkomst till en annan Att göra-lista när en begäran om att få åtkomst till Att göra-listan fortfarande väntar.
+   >Du kan ta bort din åtkomst till en annan Att göra-lista genom att välja användarnamnet i listan Användare som jag har åtkomst till och klicka på **X** i slutet av raden där användarens namn ska anges. Du kan inte ta bort din åtkomst till en annan Att göra-lista när en begäran om att få åtkomst till Att göra-listan fortfarande väntar.
 
 ## Ange inställningar utanför kontoret {#setting-out-of-office-preferences}
 
@@ -391,7 +390,7 @@ Du kan ange en standardperson som alla dina uppgifter skickas till. Du kan ocks�
    * För att ange att du inte är på kontoret nu på obestämd tid, i **Jag är för närvarande** lista, välj **Frånvarande** men lägg inte till ett datumintervall.
    * Om du vill ange ett startdatum och en starttid som du inte är på kontoret och klickar på + för **Schema för frånvaro**. Använd kalendern och tidslistan för att ange startdatum och starttid. Om du inte anger något slutdatum eller någon sluttid räknas du som ledig från kontoret på obestämd tid från startdatumet och -tiden tills du ändrar dina inställningar.
 
-1. Om du vill ange hur dina uppgifter ska hanteras som standard väljer du något av dessa alternativ på menyn **Vid frånvaro: Standardanvändare för aktiviteter utanför kontoret** lista:
+1. Om du vill ange hur dina uppgifter ska hanteras som standard väljer du något av dessa alternativ på menyn **Vid frånvaro: Standardanvändare för frånvarouppgifter** lista:
 
    * Välj **Tilldela inte** för att behålla uppgifter i din Att göra-lista tills du kommer tillbaka.
    * Välj **Sök användare** om du vill söka efter en användare som du kan tilldela uppgifter till. När du väljer en användare kan du även visa användarens frånvaroschema.

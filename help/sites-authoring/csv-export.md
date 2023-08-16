@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: 7be506fb-f5c4-48dd-bec2-a3ea3ea19397
 docset: aem65
 exl-id: 18910143-f2f2-4cfe-88b9-651df90d9cb9
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '191'
-ht-degree: 21%
+source-wordcount: '190'
+ht-degree: 16%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 21%
 
 **Skapa CSV-rapport** Med kan du exportera information om sidorna till en CSV-fil på det lokala systemet.
 
-* Den hämtade filen kallas `export.csv`
+* Den hämtade filen anropas `export.csv`
 * Innehållet beror på de egenskaper du väljer.
 * Du kan definiera banan tillsammans med exportens djup.
 
@@ -30,7 +30,7 @@ ht-degree: 21%
 >
 >Hämtningsfunktionen och standarddestinationen för webbläsaren används.
 
-I guiden **Skapa CSV-export** kan du välja:
+The **Skapa CSV-export** kan du välja:
 
 * Egenskaper att exportera
    * Metadata
@@ -51,11 +51,11 @@ I guiden **Skapa CSV-export** kan du välja:
    * Ytterligare nivåer av barn
    * Nivåer
 
-Resultatet `export.csv` kan öppnas i Excel eller något annat kompatibelt program.
+Resultatet `export.csv` filen kan öppnas i Excel eller något annat kompatibelt program.
 
 ![etc-01](assets/etc-01.png)
 
-Skapa **CSV-rapport** är tillgängligt när du bläddrar bland **Webbplatser** konsol (i listvyn): det är ett alternativ i **Skapa** nedrullningsbar meny:
+Skapa **CSV-rapport** är tillgängligt när du bläddrar bland **Webbplatser** konsol (i listvyn): det är ett alternativ för **Skapa** listruta:
 
 ![etc-02](assets/etc-02.png)
 

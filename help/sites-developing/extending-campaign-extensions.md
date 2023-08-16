@@ -8,9 +8,9 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: f536bcc1-7744-4f05-ac6a-4cec94a1ffb6
 exl-id: 0702858e-5e46-451f-9ac3-40a4fec68ca0
-source-git-commit: 4fd5e9a1bc603202ee52e85a1c09125b13cec315
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '525'
+source-wordcount: '524'
 ht-degree: 0%
 
 ---
@@ -30,7 +30,7 @@ Se [Integrera AEM med Adobe Campaign 6.1](/help/sites-administering/campaignonpr
 
 ## Exempel 1: AEM till Adobe Campaign {#example-aem-to-adobe-campaign}
 
-Standardintegrationen mellan AEM och Campaign baseras på JSON och JSSP (JavaScript Server Page). Dessa JSSP-filer finns i Campaign-konsolen och börjar med **aec** (Adobe Experience Cloud).
+Standardintegrationen mellan AEM och Campaign baseras på JSON och JSSP (JavaScript Server Page). Dessa JSSP-filer finns i Campaign-konsolen och börjar med **aec** (Adobe Experience Cloud)
 
 ![chlimage_1-15](assets/chlimage_1-15a.png)
 
@@ -38,13 +38,13 @@ Standardintegrationen mellan AEM och Campaign baseras på JSON och JSSP (JavaScr
 >
 >[I det här exemplet finns mer information i Geometrixx](/help/sites-developing/we-retail.md), som är tillgängligt från Paketresurs.
 
-I det här exemplet skapades en ny anpassad JSSP-fil som anropar den från AEM sida för att hämta resultatet. Den kan till exempel användas för att hämta data från Adobe Campaign eller för att spara data i Adobe Campaign.
+I det här exemplet skapades en ny anpassad JSSP-fil som anropar den från AEM sida för att hämta resultatet. Den kan till exempel användas för att hämta data från Adobe Campaign eller spara data i Adobe Campaign.
 
-1. Om du vill skapa en JSSP-fil i Adobe Campaign klickar du på **Nytt** ikon.
+1. Om du vill skapa en JSSP-fil i Adobe Campaign klickar du på **Nytt** -ikon.
 
    ![Ikonen Nytt visas med en stjärna i det övre vänstra hörnet.](do-not-localize/chlimage_1-4a.png)
 
-1. Ange namnet på den här JSSP-filen. I det här exemplet **cus:custom.jssp** används (vilket betyder att det finns i **kus** namnutrymme).
+1. Ange namnet på JSSP-filen. I detta exempel **cus:custom.jssp** används (vilket betyder att det finns i **kus** namnutrymme).
 
    ![chlimage_1-16](assets/chlimage_1-16a.png)
 
@@ -63,7 +63,7 @@ I det här exemplet skapades en ny anpassad JSSP-fil som anropar den från AEM s
    * Kopplingen fungerar mellan AEM och Campaign
    * Kampanjmolntjänsten är konfigurerad för **/content/geometrixx-outdoor**
 
-   Det viktigaste objektet i det här exemplet är **GenericCampaignConnector**, som gör att du kan anropa (hämta och posta) jssp-filer på Adobe Campaign-sidan.
+   Det viktigaste objektet i detta exempel är **GenericCampaignConnector** som gör att du kan ringa (hämta och posta) jssp-filer på Adobe Campaign-sidan.
 
    Här är ett litet kodfragment:
 
@@ -178,7 +178,7 @@ API:t är:
 
 * [http://localhost:4502/content/campaigns/geometrixx/scott-recommends.1.json](http://localhost:4502/content/campaigns/geometrixx/scott-recommends.2.json)
 
-Slutet av URL:en **.1.json** kan ersättas med **.2.json**, **.3.json**, beroende på hur många delnivåer du är intresserad av att få. Om du vill få alla nyckelordet, **oändlighet** kan användas:
+Slutet av URL:en **.1.json** kan ersättas med **.2.json**, **.3.json**, beroende på hur många delnivåer du är intresserad av att få. Om du vill att alla ska få nyckelordet **oändlighet** kan användas:
 
 * [http://localhost:4502/content/campaigns/geometrixx/scott-recommends.infinity.json](http://localhost:4502/content/campaigns/geometrixx/scott-recommends.2.json)
 

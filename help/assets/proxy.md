@@ -1,12 +1,12 @@
 ---
 title: "[!DNL Assets] proxyutveckling"
-description: En proxy är en [!DNL Experience Manager] -instans som använder proxyarbetare för att bearbeta jobb. Lär dig hur du konfigurerar en [!DNL Experience Manager] proxy, åtgärder som stöds, proxykomponenter och hur du utvecklar en anpassad proxyarbetare.
+description: En proxy är en [!DNL Experience Manager] -instans som använder proxyarbetare för att bearbeta jobb. Lär dig hur du konfigurerar [!DNL Experience Manager] proxy, åtgärder som stöds, proxykomponenter och hur du utvecklar en anpassad proxyarbetare.
 contentOwner: AG
 role: Admin, Architect
 exl-id: 42fff236-b4e1-4f42-922c-97da32a933cf
-source-git-commit: e24316cb9495a552960ae0620e4198f10a08b691
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '844'
+source-wordcount: '843'
 ht-degree: 0%
 
 ---
@@ -27,9 +27,9 @@ En proxy är tillgänglig via HTTP-servern när den är konfigurerad att accepte
 
 * `job`
 
-   **Krav**: parametern `jobevent` måste anges som en serialiserad värdekarta. Detta används för att skapa en `Event` för en jobbprocessor.
+  **Krav**: parametern `jobevent` måste anges som en serialiserad värdekarta. Detta används för att skapa en `Event` för en jobbprocessor.
 
-   **Resultat**: Lägger till ett nytt jobb. Om det lyckas returneras ett unikt jobb-ID.
+  **Resultat**: Lägger till ett nytt jobb. Om det lyckas returneras ett unikt jobb-ID.
 
 ```shell
 curl -u admin:admin -F":operation=job" -F"someproperty=xxxxxxxxxxxx"
@@ -38,9 +38,9 @@ curl -u admin:admin -F":operation=job" -F"someproperty=xxxxxxxxxxxx"
 
 * `result`
 
-   **Krav**: parametern `jobid` måste anges.
+  **Krav**: parametern `jobid` måste anges.
 
-   **Resultat**: Returnerar en JSON-representation av den resulterande noden som skapats av jobbprocessorn.
+  **Resultat**: Returnerar en JSON-representation av den resulterande noden som skapats av jobbprocessorn.
 
 ```shell
 curl -u admin:admin -F":operation=result" -F"jobid=xxxxxxxxxxxx"
@@ -49,9 +49,9 @@ curl -u admin:admin -F":operation=result" -F"jobid=xxxxxxxxxxxx"
 
 * `resource`
 
-   **Krav**: parametern jobid måste anges.
+  **Krav**: parametern jobid måste anges.
 
-   **Resultat**: Returnerar en resurs som är associerad med det angivna jobbet.
+  **Resultat**: Returnerar en resurs som är associerad med det angivna jobbet.
 
 ```shell
 curl -u admin:admin -F":operation=resource" -F"jobid=xxxxxxxxxxxx"
@@ -60,9 +60,9 @@ curl -u admin:admin -F":operation=resource" -F"jobid=xxxxxxxxxxxx"
 
 * `remove`
 
-   **Krav**: parametern jobid måste anges.
+  **Krav**: parametern jobid måste anges.
 
-   **Resultat**: Tar bort ett jobb om det hittas.
+  **Resultat**: Tar bort ett jobb om det hittas.
 
 ```shell
 curl -u admin:admin -F":operation=remove" -F"jobid=xxxxxxxxxxxx"
@@ -81,7 +81,7 @@ En proxyarbetare är en processor som hanterar ett jobb och skapar ett resultat.
 
 [`JobService`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/index.html) är tillgänglig som en OSGi-tjänst som tillhandahåller metoder för att skapa jobb, ta bort jobb och hämta resultat från dessa jobb. Standardimplementeringen av den här tjänsten (`JobServiceImpl`) använder HTTP-klienten för att kommunicera med fjärrproxyservern.
 
-Här följer ett exempel på API-användning:
+Nedan följer ett exempel på API-användning:
 
 ```java
 @Reference
@@ -115,9 +115,9 @@ Både proxy- och proxy-arbetskonfigurationer är tillgängliga via molntjänster
 
 >[!NOTE]
 >
->Se [Konfiguration av proxyarbetaren i InDesign Server](indesign.md#configuring-the-proxy-worker-for-indesign-server) och [Konfiguration av Cloud Services](../sites-developing/extending-cloud-config.md) för mer information.
+>Se [InDesign Server Proxy Worker-konfiguration](indesign.md#configuring-the-proxy-worker-for-indesign-server) och [Konfiguration av Cloud Service](../sites-developing/extending-cloud-config.md) för mer information.
 
-Här följer ett exempel på API-användning:
+Nedan följer ett exempel på API-användning:
 
 ```java
 @Reference(policy = ReferencePolicy.STATIC)
@@ -134,7 +134,7 @@ Här följer ett exempel på API-användning:
 
 ### Utveckla en anpassad proxyarbetare {#developing-a-customized-proxy-worker}
 
-The [IDS-proxyarbetare](indesign.md) är ett exempel på en [!DNL Assets] proxyarbetare som redan finns att tillgå direkt för att lägga ut bearbetning av tillgångar i InDesign.
+The [IDS-proxyarbetare](indesign.md) är ett exempel på en [!DNL Assets] proxyarbetare som redan är färdiga att använda för att lägga ut bearbetning av InDesigner.
 
 Du kan också utveckla och konfigurera egna [!DNL Assets] proxyarbetare för att skapa en specialiserad arbetare som skickar ut och lägger ut [!DNL Assets] bearbeta uppgifter.
 
@@ -158,17 +158,17 @@ Följande diagram och steg visar hur du fortsätter:
 
 >[!NOTE]
 >
->I följande steg anges motsvarigheter i InDesign som referensexempel.
+>I följande steg anges motsvarigheter till InDesigner som referensexempel.
 
 1. A [Sling-jobb](https://sling.apache.org/site/eventing-and-jobs.html) används, så du måste definiera ett jobbämne för ditt användningsfall.
 
    Ett exempel finns i `IDSJob.IDS_EXTENDSCRIPT_JOB` för IDS-proxyarbetaren.
 
-1. Det externa steget används för att utlösa händelsen och sedan vänta tills det är klart. detta görs genom att avfråga ID:t. Du måste utveckla ett eget steg för att implementera nya funktioner.
+1. Det externa steget används för att utlösa händelsen och sedan vänta tills det är klart. Detta görs genom att avfråga ID:t. Du måste utveckla ett eget steg för att implementera nya funktioner.
 
    Implementera en `WorkflowExternalProcess`använder du sedan JobService API och ditt jobbämne för att förbereda en jobbhändelse och skicka den till JobService (en OSGi-tjänst).
 
-   Ett exempel finns i `INDDMediaExtractProcess`.java för IDS-proxyarbetaren.
+   Ett exempel finns i `INDDMediaExtractProcess`.java for the IDS proxy worker.
 
 1. Implementera en jobbhanterare för ditt ämne. Hanteraren kräver utveckling så att den utför din specifika åtgärd och anses vara implementeringen av arbetaren.
 

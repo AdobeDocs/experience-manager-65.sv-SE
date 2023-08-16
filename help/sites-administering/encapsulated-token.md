@@ -10,7 +10,7 @@ topic-tags: Security
 content-type: reference
 discoiquuid: 2c263c0d-2521-49df-88ba-f304a25af8ab
 exl-id: e24d815c-83e2-4639-8273-b4c0a6bb008a
-source-git-commit: ed2cb35593780cd627c15f493e58d3b68c55519b
+source-git-commit: 10227bcfcfd5a9b0f126fee74dce6ec7842f5e95
 workflow-type: tm+mt
 source-wordcount: '801'
 ht-degree: 0%
@@ -50,6 +50,7 @@ Du kan se hur detta fungerar i en geografiskt distribuerad distribution med Mong
 >Observera att den inkapslade token handlar om autentisering. Den ser till att cookien kan valideras utan att du behöver komma åt databasen. Det är dock fortfarande nödvändigt att användaren finns i alla instanser och att informationen som lagras under den användaren kan nås av alla instanser.
 >
 >Om en ny användare till exempel skapas på publiceringsinstans nummer ett på grund av hur den inkapslade token fungerar, kommer den att autentiseras korrekt på publiceringsinstans nummer två. Om användaren inte finns i den andra publiceringsinstansen kommer begäran fortfarande inte att lyckas.
+>
 
 ## Konfigurera den inkapslade token {#configuring-the-encapsulated-token}
 
@@ -59,7 +60,6 @@ Du kan se hur detta fungerar i en geografiskt distribuerad distribution med Mong
 >* Anteckningssessioner är aktiverade, eller
 >
 >* Användare skapas redan i AEM när synkroniseringen startar. Detta innebär att inkapslade token inte stöds i situationer där hanterarna **skapa** -användare under synkroniseringsprocessen.
-
 
 Det finns några saker du behöver tänka på när du konfigurerar den inkapslade token:
 
@@ -81,7 +81,7 @@ För att replikera nyckeln mellan instanser måste du:
 
    * `<author-aem-install-dir>/crx-quickstart/launchpad/felix/bundle25/data`
 
-1. Kopiera HMAC-filer och överordnad filer.
+1. Kopiera HMAC- och mallfilerna.
 1. Gå sedan till den målinstans som du vill duplicera HMAC-nyckeln till och navigera till datamappen. Till exempel:
 
    * `<publish-aem-install-dir>/crx-quickstart/launchpad/felix/bundle25/data`

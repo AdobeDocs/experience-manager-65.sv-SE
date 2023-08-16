@@ -10,7 +10,7 @@ discoiquuid: fe59d260-d392-4d6f-bb7e-2f2a1d701f51
 docset: aem65
 feature: Interactive Communication
 exl-id: 0c0dc6a2-b889-4516-8e08-1e9d31be2cce
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 10227bcfcfd5a9b0f126fee74dce6ec7842f5e95
 workflow-type: tm+mt
 source-wordcount: '1455'
 ht-degree: 0%
@@ -49,7 +49,7 @@ Resurserna i de villkor som återges baserat på de regler som tillämpas och de
    * **[!UICONTROL Name]**: Villkorets unika namn i en mapp. Det får inte finnas två dokumentfragment (text, villkor eller lista) i något läge med samma namn i en mapp. I fältet Namn kan du bara ange engelska tecken, siffror och bindestreck. Fältet Namn fylls i automatiskt baserat på fältet Titel. De specialtecken, blanksteg, siffror och icke-engelska tecken som anges i fältet Titel ersätts med bindestreck i fältet Namn. Även om värdet i fältet Titel automatiskt kopieras till namnet kan du redigera värdet.
 
    * **[!UICONTROL Description]**: Skriv en beskrivning av dokumentfragmentet.
-   * **[!UICONTROL Form Data Model]**: Alternativknappen Formulärdatamodell kan också användas för att skapa villkoret baserat på en formulärdatamodell. När du väljer alternativknappen Formulärdatamodell **[!UICONTROL Form Data Model]** visas. Bläddra och välj en formulärdatamodell. När du skapar villkor för en interaktiv kommunikation måste du se till att du använder samma datamodell som du tänker använda i den interaktiva kommunikationen. Mer information om formulärdatamodell finns i [Dataintegrering](../../forms/using/data-integration.md).
+   * **[!UICONTROL Form Data Model]**: Om du vill kan du välja alternativknappen Formulärdatamodell för att skapa villkoret baserat på en formulärdatamodell. När du väljer alternativknappen Formulärdatamodell **[!UICONTROL Form Data Model]** visas. Bläddra och välj en formulärdatamodell. När du skapar villkor för en interaktiv kommunikation måste du se till att du använder samma datamodell som du tänker använda i den interaktiva kommunikationen. Mer information om formulärdatamodell finns i [Dataintegrering](../../forms/using/data-integration.md).
 
    * **[!UICONTROL Tags]**: Om du vill skapa en egen tagg anger du ett värde i textfältet och trycker på Retur. När du sparar det här villkoret skapas de nya taggarna.
 
@@ -65,7 +65,7 @@ Resurserna i de villkor som återges baserat på de regler som tillämpas och de
 
    >[!NOTE]
    >
-   >Endast icke-baserade, nyskapade resurser och FDM-baserade resurser (som skapats med samma FDM som villkoret som skapas) visas på sidan Välj resurser.
+   >Endast icke-baserade, nyskapade resurser och FDM-baserade resurser (som skapats med samma FDM som det villkor som skapas) visas på sidan Välj resurser.
 
 1. Tryck på lämpliga resurser för att markera de som ska ingå i villkoret och tryck sedan på **[!UICONTROL Done]**.
 
@@ -85,7 +85,7 @@ Resurserna i de villkor som återges baserat på de regler som tillämpas och de
 
    Du kan välja följande alternativ för att ange hur villkoret fungerar under körning:
 
-   * **Utvärdering av flera resultat har inaktiverats\Utvärdering av flera resultat har aktiverats**: När det här alternativet är aktiverat (visas som&quot;Flera resultatutvärderingar är aktiverade&quot;) utvärderas alla regler och resultatet är summan av alla true-regler. Om det här alternativet är inaktiverat (visas som&quot;Flera resultatutvärderingar är inaktiverade&quot;) utvärderas endast den första regeln som är true och blir villkorets utdata.
+   * **Utvärdering av flera resultat har inaktiverats\Utvärdering av flera resultat har aktiverats**: När det här alternativet är aktiverat (visas som&quot;Flera resultatutvärderingar aktiverade&quot;) utvärderas alla regler och resultatet är summan av alla true-regler. Om det här alternativet är inaktiverat (visas som&quot;Flera resultatutvärderingar är inaktiverade&quot;) utvärderas endast den första regeln som är true och blir villkorets utdata.
 
    * **Sidbrytning**: Välj det här alternativet ( ![break](assets/break.png)) för att lägga till en sidbrytning mellan villkorens resurser. När det här alternativet inte är markerat ( ![nobreak](assets/nobreak.png)), om ett villkor flödar över till nästa sida i utskriften, flyttas hela villkoret till nästa sida i stället för att brytas i sidan mellan resurserna i villkoret.
 
@@ -152,7 +152,7 @@ Med regelredigeraren i ett villkor kan du skapa regler för att visa eller dölj
 
    Regel som visar en resurs när policytypen är standard
 
-   * När du skapar eller redigerar en regel kan du också trycka på ![icon_resize](assets/icon_resize.png) (Ändra storlek) för att utöka dialogrutan Skapa regel/Redigera regel. I den utökade dialogrutan med hela fönstret kan du skapa [variabler](#variables) för att skapa regler. Tryck på Ändra storlek igen för att gå tillbaka till den vanliga dialogrutan Skapa regel.
+   * När du skapar eller redigerar en regel kan du också trycka på ![icon_resize](assets/icon_resize.png) (Ändra storlek) för att utöka dialogrutan Skapa regel/Redigera regel. I den utökade fullfönsterdialogen kan du skapa [variabler](#variables) för att skapa regler. Tryck på Ändra storlek igen för att gå tillbaka till den vanliga dialogrutan Skapa regel.
 
    * Du kan också skapa flera villkor i en regel.
 
@@ -190,15 +190,15 @@ Tryck på Ändra storlek igen för att gå tillbaka till dialogrutan Skapa regel
 1. Ange följande information och tryck på **[!UICONTROL Create]**:
 
    * **[!UICONTROL Name]**: Variabelns namn.
-   * **[!UICONTROL Description]**: Du kan också ange en beskrivning av variabeln.
-   * **[!UICONTROL Type]**: Välj en typ av variabel: Sträng, Nummer, Boolean eller Datum.
-   * **[!UICONTROL Allow Specific Values Only]**: För String- och Number-variabler kan du se till att agenten väljer från en viss uppsättning värden för en platshållare i agentens användargränssnitt. Om du vill ange värdeuppsättningen markerar du det här alternativet och anger sedan kommaavgränsade värden som är tillåtna i **[!UICONTROL Values]** fält.
+   * **[!UICONTROL Description]**: Om du vill kan du ange en beskrivning av variabeln.
+   * **[!UICONTROL Type]**: Välj en typ av variabel: String, Number, Boolean eller Date.
+   * **[!UICONTROL Allow Specific Values Only]**: För String- och Number-variabler kan du se till att agenten väljer från en viss uppsättning värden för en platshållare i agentens användargränssnitt. Om du vill ange värdeuppsättningen markerar du det här alternativet och anger sedan kommaavgränsade värden som är tillåtna i dialogrutan **[!UICONTROL Values]** fält.
 
 1. Tryck på **[!UICONTROL Create]**.
 
    Variabeln skapas och visas i variabelrutan.
 
 1. Om du vill infoga en variabel i regeln drar och släpper du variabeln i en platshållare för ett alternativ i regeln.
-1. När du har skapat en giltig regel trycker du på **[!UICONTROL Done]**.
+1. När du har skapat en giltig regel trycker du **[!UICONTROL Done]**.
 
    Fortsätt att göra ytterligare ändringar, om det behövs, i villkoret och spara det.

@@ -6,28 +6,28 @@ seo-description: Learn about the options available when installing a standalone 
 content-type: reference
 topic-tags: deploying
 exl-id: d6484bb7-8123-4f42-96e8-aa441b1093f3
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '1622'
+source-wordcount: '1620'
 ht-degree: 0%
 
 ---
 
 # Anpassad fristående installation{#custom-standalone-install}
 
-I det här avsnittet beskrivs de alternativ som är tillgängliga när du installerar en fristående AEM. Du kan även läsa [Lagringselement](/help/sites-deploying/storage-elements-in-aem-6.md) om du vill ha mer information om hur du väljer lagringstyp för serverdelen efter att du har installerat AEM 6.
+I det här avsnittet beskrivs de alternativ som är tillgängliga när du installerar en fristående AEM. Du kan även läsa [Lagringselement](/help/sites-deploying/storage-elements-in-aem-6.md) om du vill ha mer information om hur du väljer lagringstyp för serverdelen efter att du nyligen har installerat AEM 6.
 
 ## Ändra portnumret genom att byta namn på filen {#changing-the-port-number-by-renaming-the-file}
 
-Standardporten för AEM är 4502. Om porten inte är tillgänglig eller redan används, konfigureras Quickstart automatiskt till att använda det första tillgängliga portnumret enligt följande: 4502, 8080, 8081, 8082, 8083, 8084, 8085, 8888, 9362, `<*random*>`.
+Standardporten för AEM är 4502. Om porten inte är tillgänglig eller redan används konfigureras Quickstart automatiskt till att använda det första tillgängliga portnumret enligt följande: 4502, 8080, 8081, 8082, 8083, 8084, 8085, 888, 9362, `<*random*>`.
 
-Du kan också ange portnumret genom att byta namn på filen quickstart jar så att filnamnet innehåller portnumret; till exempel `cq5-publish-p4503.jar` eller `cq5-author-p6754.jar`.
+Du kan också ange portnumret genom att byta namn på filen quickstart jar så att filnamnet innehåller portnumret, till exempel `cq5-publish-p4503.jar` eller `cq5-author-p6754.jar`.
 
 Det finns olika regler som ska följas när man byter namn på filen quickstart jar:
 
 * När du byter namn på filen måste den börja med `cq;` som i `cq5-publish-p4503.jar`.
 
-* Vi rekommenderar att du *alltid* prefix för portnumret med -p; som i cq5-publish-p4503.jar eller cq5-author-p6754.jar.
+* Vi rekommenderar att du *alltid* ange portnumret med -p; som i cq5-publish-p4503.jar eller cq5-author-p6754.jar.
 
 >[!NOTE]
 >
@@ -36,7 +36,7 @@ Det finns olika regler som ska följas när man byter namn på filen quickstart 
 >* portnumret måste bestå av 4 eller 5 siffror
 >* dessa siffror måste komma efter ett streck
 >* om det finns andra siffror i filnamnet måste portnumret föregås av `-p`
->* &quot;cq5&quot;-prefixet i början av filnamnet ignoreras
+>* &quot;cq5&quot; i början av filnamnet ignoreras
 >
 
 >[!NOTE]
@@ -67,7 +67,7 @@ Om du kör en instans som är uppgraderad från AEM 6.3 ska du kontrollera att f
 
 ## Körningslägen {#run-modes}
 
-**Körningslägen** gör att du kan justera AEM för ett visst ändamål, till exempel författare eller publicera, testa, utveckla, intranät etc. Med dessa lägen kan du styra användningen av exempelinnehåll. Det här exempelinnehållet definieras innan snabbstarten byggs och kan innehålla paket, konfigurationer osv. Detta kan vara särskilt användbart för produktionsklara installationer när du vill hålla installationen ren och utan exempelinnehåll. Mer information finns i:
+**Körningslägen** kan du trimma AEM för ett specifikt ändamål, till exempel författare eller publicera, testa, utveckling, intranät osv. Med de här lägena kan du styra användningen av exempelinnehåll. Det här exempelinnehållet definieras innan snabbstarten byggs och kan innehålla paket, konfigurationer osv. Detta kan vara särskilt användbart för produktionsklara installationer när du vill hålla installationen smidig och utan exempelinnehåll. Mer information finns i:
 
 * [Körningslägen](/help/sites-deploying/configure-runmodes.md)
 
@@ -93,7 +93,7 @@ Detta är särskilt intressant för flera användningsområden:
 
 >[!NOTE]
 >
->Var noga med att utföra följande procedur när du är inloggad som administratör eller starta/kör dessa steg med **Kör som administratör** val av snabbmeny.
+>Var noga med att utföra följande procedur när du är inloggad som administratör eller starta/kör dessa steg med hjälp av **Kör som administratör** val av snabbmeny.
 >
 >Loggas in som en användare med administratörsbehörighet **otillräcklig**. Om du inte är inloggad som administratör när du slutför dessa steg får du **Åtkomst nekad** fel.
 
@@ -127,7 +127,7 @@ Så här installerar och startar du AEM som en Windows-tjänst:
 
    ![chlimage_1-12](assets/chlimage_1-12.png)
 
-1. Windows anger att tjänsten körs. AEM startar och den körbara filen prunsrv visas i Task Manager. I webbläsaren går du till AEM, till exempel `https://localhost:4502` för att börja använda AEM.
+1. Windows anger att tjänsten körs. AEM startas och den körbara filen prunsrv visas i Aktivitetshanteraren. I webbläsaren går du till AEM, till exempel `https://localhost:4502` för att börja använda AEM.
 
    ![chlimage_1-13](assets/chlimage_1-13.png)
 
@@ -156,7 +156,7 @@ till antingen
 
 ## Fler alternativ är tillgängliga från QuickStart-filen {#further-options-available-from-the-quickstart-file}
 
-Ytterligare alternativ och namnbyteskonventioner beskrivs i hjälpfilen för QuickStart, som är tillgänglig via alternativet -help. Om du vill komma åt hjälpen skriver du:
+Ytterligare alternativ och namnbyteskonventioner beskrivs i hjälpfilen för QuickStart, som är tillgänglig via alternativet -help. Om du vill få hjälp skriver du:
 
 * `java -jar cq-quickstart-6.5.0.jar -help`
 
@@ -273,7 +273,7 @@ Log files
 
 ## Installera AEM i Amazon EC2-miljön {#installing-aem-in-the-amazon-ec-environment}
 
-När du installerar AEM på en Amazon Elastic Compute Cloud-instans (EC2) installeras Author-instansen korrekt om du installerar både författaren och publicerar på EC2-instansen enligt proceduren [Installerar instanser av AEM Manager](#installinginstancesofaemmanager); Publiceringsinstansen blir dock författare.
+När du installerar AEM på en Amazon Elastic Compute Cloud-instans (EC2) installeras Author-instansen korrekt om du installerar både författaren och publicerar på EC2-instansen enligt proceduren [Installerar instanser av AEM Manager](#installinginstancesofaemmanager); publiceringsinstansen blir dock författare.
 
 Innan du installerar Publish-instansen i EC2-miljön gör du följande:
 
@@ -381,10 +381,10 @@ Information om hur du hanterar problem som kan uppstå under installationen finn
 
 Eftersom AEM installeras i en enda katalog behövs inget avinstallationsverktyg. Avinstallationen kan vara så enkel som att ta bort hela installationskatalogen, men hur du avinstallerar AEM beror på vad du vill uppnå och vilken beständig lagring du använder.
 
-Om beständig lagring är inbäddad i installationskatalogen, till exempel i standardinstallationen av TPM, tas även data bort när du tar bort mappar.
+Om beständig lagring är inbäddad i installationskatalogen, till exempel i standardinstallationen för TPM, tas även data bort om du tar bort mappar.
 
 >[!NOTE]
 >
->Adobe rekommenderar att du säkerhetskopierar databasen innan du tar bort AEM. Om du tar bort hela &lt;cq-installation-directory>tar du bort databasen. Om du vill behålla databasdata innan du tar bort, flyttar eller kopierar du &lt;cq-installation-directory>/crx-quickstart/databasmapp någon annanstans innan de andra mapparna tas bort.
+>Adobe rekommenderar att du säkerhetskopierar databasen innan du tar bort AEM. Om du tar bort hela &lt;cq-installation-directory>tar du bort databasen. Behåll databasdata innan du tar bort, flytta eller kopiera &lt;cq-installation-directory>/crx-quickstart/databasmapp någon annanstans innan de andra mapparna tas bort.
 
 Om din installation av AEM använder extern lagring, till exempel en databasserver, tas inte data bort automatiskt när du tar bort mappen, men lagringskonfigurationen tas bort, vilket gör det svårt att återställa JCR-innehållet.

@@ -8,9 +8,9 @@ content-type: reference
 topic-tags: site-features
 discoiquuid: 1d7a4889-82c5-4096-8567-8f66215a8458
 exl-id: 2f1a3a73-7a20-48c7-8f3e-54252f5fb71c
-source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '543'
+source-wordcount: '542'
 ht-degree: 4%
 
 ---
@@ -23,23 +23,23 @@ Arbetsflödena omfattar vanligtvis steg som kräver att en person utför en akti
 
 Du kan utföra följande åtgärder för att bearbeta ett arbetsobjekt:
 
-* **Slutförd**
+* **Complete**
 
-   Du kan slutföra ett objekt så att arbetsflödet kan fortsätta till nästa steg.
+  Du kan slutföra ett objekt så att arbetsflödet kan fortsätta till nästa steg.
 
 * **Delegera**
 
-   Om du har tilldelats ett steg, men av någon anledning inte kan utföra någon åtgärd, kan du delegera steget till en annan användare eller grupp.
+  Om du har tilldelats ett steg, men av någon anledning inte kan utföra någon åtgärd, kan du delegera steget till en annan användare eller grupp.
 
-   Vilka användare som är tillgängliga för delegering beror på vem som har tilldelats arbetsposten:
+  Vilka användare som är tillgängliga för delegering beror på vem som har tilldelats arbetsposten:
 
    * Om arbetsuppgiften har tilldelats en grupp är gruppmedlemmarna tillgängliga.
    * Om arbetsuppgiften har tilldelats en grupp och sedan delegerats till en användare, är gruppmedlemmarna och gruppen tillgängliga.
    * Om arbetsuppgiften har tilldelats en enskild användare kan arbetsuppgiften inte delegeras.
 
-* **Stega bakåt**
+* **Gå bakåt**
 
-   Om du upptäcker att ett steg, eller en serie steg, måste upprepas, kan du stega tillbaka. På så sätt kan du välja ett steg som inträffade tidigare i arbetsflödet för ombearbetning. Arbetsflödet återgår till det steg du anger och fortsätter sedan därifrån.
+  Om du upptäcker att ett steg, eller en serie steg, måste upprepas, kan du stega tillbaka. På så sätt kan du välja ett steg som inträffade tidigare i arbetsflödet för ombearbetning. Arbetsflödet återgår till det steg du anger och fortsätter sedan därifrån.
 
 ## Delta i ett arbetsflöde {#participating-in-a-workflow}
 
@@ -49,18 +49,18 @@ När du tilldelas en arbetsuppgift (till exempel **Godkänn innehåll**) visas o
 
 * The **Status** -kolumnen i webbplatskonsolen anger när en sida är i ett arbetsflöde:
 
-   ![arbetsflödenstatus-1](assets/workflowstatus-1.png)
+  ![arbetsflödenstatus-1](assets/workflowstatus-1.png)
 
 * När du, eller en grupp som du tillhör, tilldelas en arbetsuppgift som en del av ett arbetsflöde, visas arbetsuppgiften i AEM arbetsflödesinkorg.
 
-   ![arbetsflödewinbox](assets/workflowinbox.png)
+  ![arbetsflödewinbox](assets/workflowinbox.png)
 
 ### Slutför ett deltagarsteg {#completing-a-participant-step}
 
 När du har vidtagit den angivna åtgärden kan du slutföra arbetsuppgiften och på så sätt tillåta arbetsflödet att fortsätta. Använd följande procedur för att slutföra arbetsuppgiften.
 
-1. Välj arbetsflödessteget och klicka på **Slutförd** i det övre navigeringsfältet.
-1. I dialogrutan som visas väljer du **Nästa steg**; det vill säga nästa steg. En nedrullningsbar lista visar alla lämpliga destinationer. A **Kommentar** kan också anges.
+1. Välj arbetsflödessteget och klicka på **Complete** i det övre navigeringsfältet.
+1. I dialogrutan som visas väljer du **Nästa steg**, d.v.s. steget som ska köras nästa. En nedrullningsbar lista visar alla lämpliga destinationer. A **Kommentar** kan också anges.
 
    ![arbetsflöde slutfört](assets/workflowcomplete.png)
 
@@ -84,7 +84,7 @@ Använd följande procedur för att delegera en arbetsuppgift.
 Använd följande procedur för att stega bakåt.
 
 1. Klicka på knappen Stega bakåt i det övre navigeringsfältet.
-1. Välj Föregående steg i dialogrutan som visas. det vill säga det steg som ska köras nästa gång, även om det är ett steg som inträffar tidigare i arbetsflödet. En nedrullningsbar lista visar alla lämpliga destinationer.
+1. Välj Föregående steg i den dialogruta som visas, d.v.s. det steg som ska köras nästa gång, även om det är ett steg som inträffar tidigare i arbetsflödet. En nedrullningsbar lista visar alla lämpliga destinationer.
 
    ![screen_shot_2018-08-10at155325](assets/screen_shot_2018-08-10at155325.jpg)
 

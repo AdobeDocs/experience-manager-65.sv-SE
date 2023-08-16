@@ -10,9 +10,9 @@ content-type: reference
 discoiquuid: 90e36522-3af1-4a8a-b044-1c828c52974e
 description: Katalogproducent
 exl-id: 76a46c62-d47d-4970-8a3a-d56015639548
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '882'
+source-wordcount: '881'
 ht-degree: 0%
 
 ---
@@ -21,17 +21,17 @@ ht-degree: 0%
 
 Lär dig hur du använder Catalog Producer i AEM Assets för att generera produktkataloger med dina digitala resurser.
 
-Med Adobe Experience Manager (AEM) Assets Catalog Producer kan du skapa kataloger för dina varumärkesprodukter med hjälp av InDesign-mallar som importeras från ett InDesign-program. Om du vill importera InDesign-mallar måste du först integrera AEM Assets med en InDesign-server.
+Med Adobe Experience Manager (AEM) Assets Catalog Producer kan du skapa kataloger för dina varumärkesprodukter med hjälp av InDesigner som importeras från en InDesign. Om du vill importera mallar för InDesigner måste du först integrera AEM Assets med en InDesign-server.
 
-## Integrering med InDesign-server {#integrating-with-indesign-server}
+## Integrera med InDesign server {#integrating-with-indesign-server}
 
 Som en del av integrationsprocessen konfigurerar du **DAM-uppdateringsresurs** arbetsflöde som är lämpligt för integrering med InDesign. Konfigurera dessutom en proxyarbetare för InDesign-servern. Mer information finns i [Integrera AEM Assets med InDesign Server](/help/assets/indesign.md).
 
 >[!NOTE]
 >
->Du kan generera mallar för InDesign från InDesign-filer innan du importerar dem till AEM Assets. Mer information finns i [Arbeta med filer och mallar](https://helpx.adobe.com/indesign/using/files-templates.html).
+>Du kan generera mallar för InDesign från InDesigner innan du importerar dem till AEM Assets. Mer information finns i [Arbeta med filer och mallar](https://helpx.adobe.com/indesign/using/files-templates.html).
 >
->Du kan mappa elementen i dina InDesign-mallar till XML-märkord. De mappade taggarna visas som egenskaper när du mappar produktegenskaper med mallegenskaper i Catalog Producer. Mer information om XML-märkord i InDesign-filer finns i [Tagga innehåll för XML](https://helpx.adobe.com/indesign/using/tagging-content-xml.html).
+>Du kan mappa elementen i InDesignens mallar till XML-märkord. De mappade taggarna visas som egenskaper när du mappar produktegenskaper med mallegenskaper i Catalog Producer. Mer information om XML-märkord i InDesigner finns i [Tagga innehåll för XML](https://helpx.adobe.com/indesign/using/tagging-content-xml.html).
 
 >[!NOTE]
 >
@@ -41,7 +41,7 @@ Som en del av integrationsprocessen konfigurerar du **DAM-uppdateringsresurs** a
 
 I Catalog Producer används PIM-data (Product Information Management) för att mappa produktegenskaper med de XML-egenskaper som visas i mallen. Så här skapar du en katalog:
 
-1. Tryck/klicka på knappen **AEM logotyp** och går till **Resurser > Kataloger**.
+1. I Assets-användargränssnittet: tryck/klicka på **AEM** och går till **Resurser > Kataloger**.
 1. I **Kataloger** sida, tryck/klicka **Skapa** i verktygsfältet och välj **Katalog** från listan.
 1. I **Skapa katalog** anger du ett namn och en beskrivning (valfritt) för katalogen och anger eventuella taggar. Du kan också lägga till en miniatyrbild för katalogen.
 
@@ -55,10 +55,10 @@ I Catalog Producer används PIM-data (Product Information Management) för att m
    >Om du vill öppna katalogen kan du även trycka/klicka **Öppna** i bekräftelsedialogrutan som nämns i föregående steg.
 
 1. Tryck/klicka för att lägga till sidor i katalogen **Skapa** i verktygsfältet och välj sedan **Ny sida** alternativ.
-1. I guiden väljer du en InDesign-mall för sidan. Tryck/klicka sedan **Nästa**.
+1. I guiden väljer du en sidmall för InDesignen. Tryck/klicka sedan **Nästa**.
 1. Ange ett namn för sidan och en valfri beskrivning. Ange eventuella taggar.
 1. Tryck/klicka på **Skapa** i verktygsfältet. Tryck/klicka sedan **Öppna** i dialogrutan. Egenskaperna för produkten visas i den vänstra rutan. De fördefinierade egenskaperna för mallen InDesign visas i den högra rutan.
-1. Dra produktegenskaperna från den vänstra rutan till mallegenskaperna för InDesign och skapa en mappning mellan dem.
+1. Dra produktegenskaperna från den vänstra rutan till InDesignens mallegenskaper och skapa en mappning mellan dem.
 
    Om du vill visa hur sidan ser ut i realtid trycker du/klickar på knappen **Förhandsgranska** till höger.
 
@@ -75,8 +75,8 @@ I Catalog Producer används PIM-data (Product Information Management) för att m
    ![select_product](assets/select_product.png)
 
 1. Klicka/tryck på verktygsfältet **Skapa**. Tryck/klicka **Klar** för att stänga dialogrutan. Liknande sidor tas med i katalogen.
-1. Om du vill lägga till en befintlig InDesign-fil i katalogen trycker du/klickar **Skapa** i verktygsfältet och väljer **Lägg till på befintlig sida** alternativ.
-1. Markera filen InDesign och tryck/klicka **Lägg till** i verktygsfältet. Tryck/klicka sedan **OK** för att stänga dialogrutan.
+1. Om du vill lägga till en InDesign i katalogen trycker du/klickar **Skapa** i verktygsfältet och väljer **Lägg till på befintlig sida** alternativ.
+1. Markera InDesignen och tryck/klicka **Lägg till** i verktygsfältet. Tryck/klicka sedan **OK** för att stänga dialogrutan.
 
    Om metadata för produkterna som du refererar till på katalogsidorna ändras, återspeglas inte ändringarna automatiskt på katalogsidorna. En banderoll med etiketten **Inaktuell** visas på produktbilderna på de refererande katalogsidorna, vilket anger att metadata för de refererade produkterna inte är aktuella.
 
@@ -88,14 +88,14 @@ I Catalog Producer används PIM-data (Product Information Management) för att m
 
    >[!NOTE]
    >
-   >Om du vill ändra metadata för en refererad produkt går du till produktkonsolen (**AEM** > **Handel** > **Produkter**) och välj produkt. Klicka/tryck sedan på **Visa egenskaper** -ikonen i verktygsfältet och redigera metadata på egenskapssidan för resursen.
+   >Om du vill ändra metadata för en refererad produkt går du till produktkonsolen (**AEM logotyp** > **Handel** > **Produkter**) och välj produkt. Klicka/tryck sedan på **Visa egenskaper** -ikonen i verktygsfältet och redigera metadata på egenskapssidan för resursen.
 
-1. Om du vill ordna om sidorna i katalogen trycker/klickar du på **Skapa** ikonen i verktygsfältet och välj **Sammanfoga** på menyn. I guiden kan du med Carousel överst ändra ordning på sidorna genom att dra dem. Du kan också ta bort sidor.
+1. Om du vill ordna om sidorna i katalogen trycker/klickar du på **Skapa** ikonen i verktygsfältet och välj **Sammanfoga** på menyn. I guiden kan du ändra ordningen på sidorna genom att dra dem med karusellen överst. Du kan också ta bort sidor.
 
-1. Tryck/klicka **Nästa**. Om du vill lägga till en befintlig InDesign-fil som en försättsblad trycker/klickar du **Bläddra** bredvid **Välj försättsblad** och ange sökvägen för försättsbladet.
+1. Tryck/klicka **Nästa**. Om du vill lägga till en InDesign som försättsblad trycker du/klickar **Bläddra** bredvid **Välj försättsblad** och ange sökvägen för försättsbladet.
 1. Tryck/klicka **Spara** och sedan trycka/klicka **Klar** för att stänga bekräftelsedialogrutan.
 Vid val av **Klar** öppnas en dialogruta där du kan välja om du vill ha en PDF-rendering.
-   ![exportera till pdf](assets/CatalogPDF.png)
+   ![exportera till PDF](assets/CatalogPDF.png)
 Om alternativet Acrobat(PDF) är markerat skapas en PDF-återgivning i  **/jcr:content/renditions** förutom indesign-rendering. Du kan hämta alla återgivningar genom att markera kryssrutan Återgivningar i hämtningsdialogrutan.
 
 1. Om du vill generera en förhandsvisning för den katalog du skapade markerar du den i dialogrutan **Kataloger** konsolen och klicka sedan på **Förhandsgranska** -ikonen i verktygsfältet.

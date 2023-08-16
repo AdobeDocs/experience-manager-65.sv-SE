@@ -10,16 +10,16 @@ topic-tags: integrations
 discoiquuid: 3690fa80-6332-4df8-afea-77b5490fe0d1
 docset: aem65
 exl-id: c5a4e6f6-f331-41e9-a0a9-51a30df6e2cd
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '1050'
+source-wordcount: '1049'
 ht-degree: 0%
 
 ---
 
 # Visa och förstå AEM Forms analysrapporter {#view-and-understand-aem-forms-analytics-reports}
 
-Adobe Experience Manager Forms kan integreras med Adobe Analytics så att ni kan samla in och spåra prestandamått för era publicerade formulär och dokument. Syftet med att analysera dessa värden är att fatta välgrundade beslut baserat på uppgifter om de ändringar som krävs för att göra formulär eller dokument mer användbara.
+Adobe Experience Manager Forms kan integreras med Adobe Analytics så att ni kan hämta in och spåra prestandamått för era publicerade formulär och dokument. Syftet med att analysera dessa värden är att fatta välgrundade beslut baserat på uppgifter om de ändringar som krävs för att göra formulär eller dokument mer användbara.
 
 ## Ställa in analyser {#setting-up-analytics}
 
@@ -36,7 +36,7 @@ När en användare interagerar med formuläret registreras interaktionerna och s
 * 2 samtal per fält per besök
 * 1 för panelbesök
 * 1 för att spara
-* 2 för att skicka
+* 2 för att skicka in
 * 2 för att spara
 * 1 för hjälp
 * 1 för varje valideringsfel
@@ -64,7 +64,7 @@ AEM Forms visar analysrapporter för formuläret och för varje panel i formulä
 
 ![Sammanfattningsrapport för ett anpassat formulär](assets/analyticsdashboard_callout.png)
 
-**S.** Konverteringar **B.** Sammanfattning på formulärnivå **C.** Sammanfattning på panelnivå **D.** Webbläsare för besökare - filtrera **E.** Operativsystem för besökare - filter **F.** Besökarnas språk - filter
+**S.** Konverteringar **B.** Sammanfattning på formulärnivå **C.** Sammanfattning på panelnivå **D.** Webbläsare för besökare - filter **E.** Operativsystem för besökare - filter **F.** Besökarnas språk - filter
 
 Som standard visas analysrapporten för de senaste sju dagarna. Du kan visa rapporter för de senaste 15 dagarna, den senaste månaden och så vidare, eller ange ett datumintervall.
 
@@ -78,8 +78,8 @@ Som standard visas analysrapporten för de senaste sju dagarna. Du kan visa rapp
 
 Med konverteringsdiagrammet på formulärnivå får du insikt i hur formuläret fungerar med följande nyckeltal:
 
-* **Återgivningar**: Antalet gånger som ett formulär öppnas
-* **Besökare**: Antalet besökare i formuläret
+* **Återgivningar**: Antal gånger ett formulär öppnas
+* **Besökare**: Antal besökare i formuläret
 * **Inlämningar**: Antal gånger som formuläret skickas in
 
 ![konvertering](assets/conversion-graph.png)
@@ -88,11 +88,11 @@ Med konverteringsdiagrammet på formulärnivå får du insikt i hur formuläret 
 
 I avsnittet Sammanfattning på formulärnivå får du information om hur formuläret fungerar med följande nyckeltal:
 
-* **Genomsnittlig fyllningstid**: Genomsnittlig tid för att fylla i formuläret. När användarna lägger tid på formuläret men inte skickar in det, inkluderas den tiden inte i beräkningen.
+* **Genomsnittlig fyllningstid**: Genomsnittlig tid för att fylla i formuläret. När användarna lägger tid på formuläret men inte skickar in det, inkluderas den tiden inte i den här beräkningen.
 * **Återgivningar**: Antal gånger som formuläret har återgetts eller öppnats
 * **Utkast**: Antal gånger som formuläret har sparats som utkast
 * **Inlämningar**: Antal gånger som formuläret har skickats in
-* **Avbryt**: Antal gånger som användarna började fylla i formuläret och sedan gick utan att fylla i det
+* **Avbryt**: Antal gånger som användarna började fylla i formuläret och sedan lämnade det utan att fylla i formuläret
 * **Unika besökare**: Antal gånger som formuläret återges av unika besökare. Mer information om unika besökare finns på [Unika besökare, besök och kundbeteende](https://helpx.adobe.com/analytics/kb/unique-visitors-visitor-behavior.html).
 
 ![Utökad sammanfattningsanalysrapport på formulärnivå](assets/analytics-report.png)
@@ -101,7 +101,7 @@ I avsnittet Sammanfattning på formulärnivå får du information om hur formul�
 
 I avsnittet Sammanfattning på panelnivå finns följande information om varje panel i formuläret:
 
-* **Genomsnittlig fyllningstid**: Genomsnittlig tid som har ägnats åt panelen, oavsett om formuläret har skickats eller inte
+* **Genomsnittlig fyllningstid**: Genomsnittlig tid för panelen, oavsett om formuläret skickas eller inte
 * **Fel påträffades**: Genomsnittligt antal fel som användarna har påträffat i fälten på en panel. Fel som påträffas uppstår genom att det totala antalet fel i ett fält divideras med antalet återgivningar av formuläret.
 * **Hjälp använd**: Genomsnittligt antal gånger som användare har använt sammanhangsberoende hjälp för fälten i panelen. Hjälpen Åtkomst fås genom att det totala antalet gånger som hjälpen är tillgänglig för ett fält divideras med antalet återgivningar av formuläret.
 
@@ -115,9 +115,9 @@ Den detaljerade rapporten visar värden för alla fält i panelen.
 
 Panelrapporten har tre flikar:
 
-* **Tidsrapport**(Standard): Visar hur många sekunder som har ägnats åt att fylla i fälten på panelen
-* **Felrapport**: Visar antalet fel som användare har råkat ut för när de fyller i fälten
-* **Hjälprapport**: Antal gånger som hjälpen för ett visst fält användes
+* **Tidsrapport**(Standard): Visar hur många sekunder som har ägnats åt att fylla i fälten i panelen
+* **Felrapport**: Visar antalet fel som användare råkade ut för när de fyllde i fälten
+* **Hjälprapport**: Antal gånger som hjälp för ett visst fält användes
 
 Du kan navigera mellan panelerna om det finns flera tillgängliga paneler.
 

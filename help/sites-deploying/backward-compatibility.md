@@ -12,9 +12,9 @@ discoiquuid: f3b4ec1d-9054-47d4-afcb-0a0121b94190
 docset: aem65
 feature: Upgrading
 exl-id: c432a014-2dab-4c49-a25b-e4f461d13f9b
-source-git-commit: 50a11e30ccd720065962e8dd03cbcc71ec9f715a
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '500'
+source-wordcount: '499'
 ht-degree: 1%
 
 ---
@@ -31,7 +31,7 @@ I AEM 6.5 har alla funktioner utvecklats med bakåtkompatibilitet i åtanke.
 
 I de flesta fall behöver inte kunder som kör AEM 6.3 ändra koden eller anpassningarna när de gör uppgraderingen. För AEM 6.1- och 6.2-kunder finns det inga ytterligare brytningsförändringar än vad man skulle få vid en uppgradering till 6.3.
 
-För undantag där funktioner inte kan hållas bakåtkompatibla kan bakåtinkompatibilitetsproblem för paket och innehåll minskas genom installation av ett kompatibilitetspaket för 6.4 (se hur du konfigurerar nedan för mer information om var du ska hämta). Kompileringspaketet hjälper dig att återställa kompatibiliteten i de flesta fall för program som är kompatibla med AEM 6.4.
+För undantag där funktioner inte kan hållas bakåtkompatibla kan bakåtinkompatibilitetsproblem för paket och innehåll minskas genom installation av ett kompatibilitetspaket för 6.4 (se hur du konfigurerar nedan för mer information om var du ska hämta). Kompileringspaketet återställer i de flesta fall kompatibiliteten för program som är kompatibla med AEM 6.4.
 
 Med Kompatibilitetspaketet kan du köra AEM i kompatibilitetsläge och skjuta upp anpassad utveckling mot nya AEM funktioner:
 

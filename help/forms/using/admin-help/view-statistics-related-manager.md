@@ -10,16 +10,16 @@ geptopics: SG_AEMFORMS/categories/health_monitor
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 8e1b2f7c-2609-474b-a1b2-fa820df74ae3
 exl-id: ce8f7257-bb9a-428d-b816-27b1d1632ee1
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '1213'
+source-wordcount: '1211'
 ht-degree: 0%
 
 ---
 
 # Visa statistik för Work Manager {#view-statistics-related-to-work-manager}
 
-Fliken Arbetshanterare visar statistik som relaterar till Work Manager-objekt. Dessa arbetsobjekt är i olika lägen beroende på var de befinner sig i processen. (Se [Status (endast för kategorierna Standard, Arbetsflöde och Händelser)](view-statistics-related-manager.md#status-for-default-workflow-or-events-categories-only).) Du kan filtrera informationen så att endast en delmängd av objekten visas genom att använda de olika alternativ som är tillgängliga (till exempel Status eller Kategori). Du kan sortera resulterande arbete eller jobbobjekt (i stigande eller fallande ordning) genom att klicka på en av kolumnrubrikerna. Du kan också hantera arbetsobjekten med de åtgärdsverktyg som visas ovanför listan med arbetsobjekt.
+Fliken Arbetshanterare visar statistik som relaterar till Work Manager-objekt. De här arbetsobjekten är i olika lägen beroende på var de befinner sig i processen. (Se [Status (endast för kategorierna Standard, Arbetsflöde och Händelser)](view-statistics-related-manager.md#status-for-default-workflow-or-events-categories-only).) Du kan filtrera informationen så att endast en delmängd av objekten visas genom att använda de olika alternativ som är tillgängliga (till exempel Status eller Kategori). Du kan sortera resulterande arbete eller jobbobjekt (i stigande eller fallande ordning) genom att klicka på en av kolumnrubrikerna. Du kan också hantera arbetsobjekten med de åtgärdsverktyg som visas ovanför listan med arbetsobjekt.
 
 ## Filtrera arbetsobjekten {#filter-the-work-items}
 
@@ -30,19 +30,19 @@ Fliken Arbetshanterare visar statistik som relaterar till Work Manager-objekt. D
 
 **Standard:** Alla arbetsobjekt som klienten inte tilldelade en kategori till när de skickades. Work Manager hanterar dessa objekt och statusvärdena tillhör Work Manager.
 
-**Jobbhanteraren:** Alla jobb som tillhör jobbhanteraren. Jobbhanteraren hanterar sina egna jobb och har egna jobbstatusvärden. Se jobbstatusvärdena som beskrivs nedan.
+**Jobbhanteraren:** Alla jobb som tillhör jobbhanteraren. Jobbhanteraren hanterar sina egna jobb och har egna jobbstatusvärden. Se de specifika jobbstatusarna som beskrivs nedan.
 
-**Arbetsflöde:** Alla arbetsobjekt som tillhör arbetsflödeskörningen. Arbetsflödet hanterar inte sina egna arbetsuppgifter utan är beroende av Work Manager. Statusen tillhör därför Work Manager.
+**Arbetsflöde:** Alla arbetsobjekt som tillhör arbetsflödeskörningen. Arbetsflödet hanterar inte sina egna arbetsobjekt utan är beroende av Work Manager. Statusen tillhör Work Manager.
 
-**Händelser:** Alla arbetsobjekt som tillhör händelsehantering. Händelsehantering hanterar inte sina egna arbetsobjekt utan är beroende av Work Manager. Statusen tillhör därför Work Manager.
+**Händelser:** Alla arbetsobjekt som tillhör händelsehantering. Händelsehantering hanterar inte sina egna arbetsobjekt utan förlitar sig på Work Manager. Statusen tillhör Work Manager.
 
 ### Status (endast för kategorierna Standard, Arbetsflöde och Händelser) {#status-for-default-workflow-or-events-categories-only}
 
-**Visa alla:** Visar alla aktuella arbetsobjekt.
+**Visa alla:** Visar alla aktuella arbetsuppgifter.
 
 **Schemalagd:** Visar alla arbetsobjekt som är klara för körning av programservern men som ännu inte startats.
 
-**Pausad:** Visar alla schemalagda arbetsobjekt som klientprogrammet har pausat. Dessa objekt kan köras eller tas bort. (Se Hantera arbetsobjekt eller jobb.)
+**Pausad:** Visar alla schemalagda arbetsuppgifter som klientprogrammet har pausat. Dessa objekt kan köras eller tas bort. (Se Hantera arbetsobjekt eller jobb.)
 
 **Pågår:** Visar alla arbetsobjekt som programserverns Work Manager har hämtat och som antingen kommer att slutföras eller misslyckas. Du kan inte använda åtgärder för dessa arbetsobjekt.
 
@@ -72,7 +72,7 @@ Fliken Arbetshanterare visar statistik som relaterar till Work Manager-objekt. D
 
 **Återuppta begärd:** Visar jobb för vilka en CV-begäran har gjorts.
 
-**Köad:** Visar jobb som finns i kön.
+**I kö:** Visar jobb som finns i kön.
 
 **Körs:** Visar jobb som körs.
 
@@ -96,7 +96,7 @@ Om du till exempel väljer Skapa tid = 1 dag och Föregående = Använd aktuellt
 
 ## Om flikgränssnittet Arbetshanteraren {#about-the-work-manager-tab-interface}
 
-När du kör en arbetshanterarfråga eller utför en åtgärd på ett arbetsobjekt eller jobb visas ett meddelande ovanför listan. Det här meddelandet ger feedback om den åtgärd du har initierat och i vissa fall en länk till Mer information som ger information. Om den åtgärd du initierade till exempel misslyckades, anges så mycket som möjligt i meddelandet och en länk för att få information om felet.
+När du kör en arbetshanterarfråga eller utför en åtgärd på ett arbetsobjekt eller jobb visas ett meddelande ovanför listan. Det här meddelandet ger feedback om den åtgärd du har initierat och i vissa fall en länk till Mer information som ger mer information. Om den åtgärd du initierade till exempel misslyckades, anges så mycket som möjligt i meddelandet och en länk för att få information om felet.
 
 När du klickar på Mer information visas en lista med de arbetsobjekt eller jobb som valdes under åtgärden i dialogrutan Åtgärdsinformation. Du kan klicka på varje listobjekt för att visa felinformationen längst ned i dialogrutan.
 
@@ -124,6 +124,6 @@ En vanlig övergång för ett arbetsobjekt är Nytt > Schemalagt > Pågår > Slu
 
 Läget Pausad avbryter det här normala flödet. Antingen klientprogrammet eller systemadministratören kan initiera det här avbrottet (till exempel för underhåll eller uppgradering). Du kan ångra den här åtgärden genom att använda åtgärden Återuppta för att flytta arbetsobjektet tillbaka till ett schemalagt läge.
 
-En arbetsuppgift i ett schemalagt läge är köad för körning som ännu inte har startats. Dessa objekt kan pausas eller tas bort, eller flyttas till läget Pågår när de tas från kön i Arbetshanteraren. Det går inte att ändra pågående arbetsobjekt. De kommer antingen att slutföras eller misslyckas.
+En arbetsuppgift i ett schemalagt läge är köad för körning som ännu inte har startats. Dessa objekt kan pausas eller tas bort, eller flyttas till läget Pågår när de tas från kön i Arbetshanteraren. Det går inte att ändra pågående arbetsuppgifter. De kommer antingen att slutföras eller misslyckas.
 
-Tillståndet Misslyckades inträffar som ett resultat av ett feltillstånd som inträffar när arbetsobjektet körs. Om du misstänker att fel är indicier (på grund av kontexten vid tidpunkten för körningen) kan du försöka utföra körningen igen och placera arbetsposten i kön igen. Endast ett begränsat antal försök tillåts.
+Tillståndet Misslyckades inträffar som ett resultat av ett feltillstånd som inträffar under körningen av arbetsobjektet. Om du misstänker att fel är indicier (på grund av kontexten vid tidpunkten för körningen) kan du försöka utföra körningen igen och placera arbetsposten i kön igen. Endast ett begränsat antal försök tillåts.

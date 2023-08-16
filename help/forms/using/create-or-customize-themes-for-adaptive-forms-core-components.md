@@ -8,9 +8,9 @@ contentOwner: Khushwant Singh
 topic-tags: Adaptive Forms
 docset: aem65
 role: Admin, Developer
-source-git-commit: d958f616803f92190493cc3f1ef474d0987991bd
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '1969'
+source-wordcount: '1967'
 ht-degree: 0%
 
 ---
@@ -62,7 +62,7 @@ Du kan [anpassa något av dessa teman för att skapa ett tema](#customize-a-them
 
 ## Anpassa ett tema {#customize-a-theme-core-components-based-adaptive-forms}
 
-Att anpassa ett tema avser processen att ändra och anpassa utseendet på ett tema. När du anpassar ett tema ändrar du dess designelement, layout, färger, typografi och ibland den underliggande koden. På så sätt kan du skapa ett unikt och skräddarsytt utseende för din webbplats eller ditt program samtidigt som du bibehåller den grundläggande strukturen och funktionaliteten som temat ger.
+Att anpassa ett tema avser processen att ändra och anpassa utseendet på ett tema. När du anpassar ett tema ändrar du dess designelement, layout, färger, typografi och ibland den underliggande koden. På så sätt kan du skapa ett unikt och skräddarsytt utseende för webbplatsen eller tillämpningen, samtidigt som du bibehåller den grundläggande strukturen och funktionaliteten som temat ger.
 
 >[!NOTE]
 >

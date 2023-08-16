@@ -10,9 +10,9 @@ content-type: reference
 discoiquuid: dee7ac7c-ca86-48e9-8d95-7826fa926c68
 docset: aem65
 exl-id: 632c0608-2ab8-4a5b-8251-cd747535449b
-source-git-commit: 85e993000c016240c0fbf398ec8192990e60eee6
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '1366'
+source-wordcount: '1365'
 ht-degree: 5%
 
 ---
@@ -34,7 +34,7 @@ Projicerar en AEM standardfunktion och kräver ingen ytterligare konfiguration.
 
 Men för användare i projekt som vill se andra användare/grupper medan de använder projekt, till exempel när de skapar projekt, skapar uppgifter/arbetsflöden eller visar och hanterar teamet, måste de användarna ha läsåtkomst på `/home/users` och `/home/groups`.
 
-Det enklaste sättet att göra detta är att ge **projekt-användare** gruppläsåtkomst till `/home/users` och `/home/groups`.
+Det enklaste sättet är att ge **projekt-användare** gruppläsåtkomst till `/home/users` och `/home/groups`.
 
 ## Projektkonsol {#projects-console}
 
@@ -84,7 +84,7 @@ Klicka **Skapa** för att lägga till ett nytt projekt.
 
 ## Projektpaneler {#project-tiles}
 
-Projekt består av olika typer av information som du vill hantera tillsammans. Den här informationen representeras av olika **Plattor**.
+Projekt består av olika typer av information som du vill hantera tillsammans. Informationen representeras av olika **Plattor**.
 
 Du kan associera följande rutor med ditt projekt.
 
@@ -114,7 +114,7 @@ Du överför resurser direkt i rutan.
 
 ### Resurssamlingar {#asset-collections}
 
-På samma sätt som resurser kan du lägga till [resurssamlingar](/help/assets/manage-collections.md) direkt till projektet. Du definierar samlingar i Resurser.
+Precis som resurser kan du lägga till [resurssamlingar](/help/assets/manage-collections.md) direkt till projektet. Du definierar samlingar i Resurser.
 
 ![Resurssamlingsplatta](assets/project-tile-asset-collection.png)
 
@@ -167,7 +167,7 @@ The **Landningssidor** kan du begära en ny landningssida.
 
 ![Landing page tile](assets/project-tile-landing.png)
 
-Det här arbetsflödet beskrivs i dokumentet[Skapa ett arbetsflöde för landningssida.](/help/sites-authoring/projects-with-workflows.md#request-landing-page-workflow)
+Arbetsflödet beskrivs i dokumentet[Skapa ett arbetsflöde för landningssida.](/help/sites-authoring/projects-with-workflows.md#request-landing-page-workflow)
 
 ### E-post {#emails}
 
@@ -214,8 +214,8 @@ Beroende på vilken mall du väljer kan du välja mellan olika alternativ i proj
 
 De olika användarrollerna definieras i projektmallen och används av två primära orsaker:
 
-1. Behörigheter: Användarrollerna tillhör en av de tre kategorier som visas: observatör, redaktör, ägare. En fotograf eller copywriter har till exempel samma behörighet som en redigerare. Behörigheterna avgör vad en användare kan göra med innehållet i ett projekt.
-1. Arbetsflöden: Arbetsflödena avgör vem som tilldelas uppgifter i ett projekt. Uppgifterna kan kopplas till en projektroll. En uppgift kan t.ex. tilldelas fotografer så att alla gruppmedlemmar som har rollen fotograf får uppgiften.
+1. Behörigheter: Användarrollerna tillhör en av de tre kategorier som visas: observatör, redigerare, ägare. En fotograf eller copywriter har till exempel samma behörighet som en redigerare. Behörigheterna avgör vad en användare kan göra med innehållet i ett projekt.
+1. Arbetsflöden: Arbetsflödena avgör vem som tilldelas uppgifter i ett projekt. Uppgifterna kan associeras med en projektroll. En uppgift kan t.ex. tilldelas fotografer så att alla gruppmedlemmar som har rollen fotograf får uppgiften.
 
 Alla projekt har stöd för följande standardroller så att du kan administrera säkerhets- och kontrollbehörigheter.
 
@@ -233,7 +233,7 @@ När du skapar projektet och lägger till användare för de olika rollerna skap
 
 Ett projekt med namnet Myproject skulle till exempel ha tre grupper, **Myproject Owners**, **Myproject Editors** och **Myproject Observers**.
 
-Om projektet tas bort tas dessa grupper bara bort om du väljer lämpligt alternativ [när projektet tas bort.](/help/sites-authoring/touch-ui-managing-projects.md#deleting-a-project) En administratör kan även ta bort grupper manuellt i **verktyg** > **Säkerhet** > **Grupper**.
+Om projektet tas bort tas dessa grupper bara bort om du väljer lämpligt alternativ [när du tar bort projektet.](/help/sites-authoring/touch-ui-managing-projects.md#deleting-a-project) En administratör kan även ta bort grupper manuellt i **verktyg** > **Säkerhet** > **Grupper**.
 
 ## Ytterligare resurser {#additional-resources}
 

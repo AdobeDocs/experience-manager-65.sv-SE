@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: 8d32960c-47c3-4e92-b02e-ad4d8fea7b2d
 docset: aem65
 exl-id: 1f46a57f-4966-4dd1-8c99-c0740718ae76
-source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '470'
+source-wordcount: '469'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ I författarmiljön i AEM finns olika sätt att söka efter innehåll, beroende 
 
 >[!NOTE]
 >
->Utanför redigeringsmiljön finns det även andra sökfunktioner, till exempel [Query Builder](/help/sites-developing/querybuilder-api.md) och [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md).
+>Utanför redigeringsmiljön finns det även andra sökfunktioner, till exempel [Frågebyggaren](/help/sites-developing/querybuilder-api.md) och [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md).
 
 ## Grunderna i sökning {#search-basics}
 
@@ -32,7 +32,7 @@ Du öppnar sökpanelen genom att klicka på **Sök** överst i den vänstra ruta
 
 Med sökpanelen kan du söka på alla webbplatssidor. Den innehåller fält och widgetar för följande:
 
-* **Fulltext**: Sök efter den angivna texten
+* **Fulltext**: Sök efter angiven text
 * **Ändrad efter/före**: Sök bara på de sidor som har ändrats mellan de angivna datumen
 * **Mall**: Sök bara på de sidor som är baserade på den angivna mallen
 * **Taggar**: Sök bara på de sidor som har de angivna taggarna
@@ -48,7 +48,6 @@ Med sökpanelen kan du söka på alla webbplatssidor. Den innehåller fält och 
 >* [Fältgruppering](https://lucene.apache.org/core/5_3_1/queryparser/org/apache/lucene/queryparser/classic/package-summary.html#Field_Grouping)
 >* [Boosting](https://lucene.apache.org/core/5_3_1/queryparser/org/apache/lucene/queryparser/classic/package-summary.html#Boosting_a_Term)
 >
-
 
 Utför sökningen genom att klicka **Sök** längst ned i rutan. Klicka **Återställ** för att rensa sökvillkoren.
 
@@ -75,7 +74,7 @@ I **Webbplatser** konsol a **Sök och ersätt** kan du söka efter och ersätta 
    * anger om sökningen ska vara skiftlägeskänslig
    * anger om endast hela ord ska hittas (i annat fall hittas även delsträngar)
 
-   Klicka **Förhandsgranska** listor där termen har hittats. Du kan markera/rensa specifika förekomster som ska ersättas:
+   Klicka **Förhandsgranska** listor där termen finns. Du kan markera/rensa specifika förekomster som ska ersättas:
 
    ![screen_shot_2012-02-15at120719pm](assets/screen_shot_2012-02-15at120719pm.png)
 

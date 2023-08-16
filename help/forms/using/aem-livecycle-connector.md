@@ -1,8 +1,8 @@
 ---
 title: Ansluta AEM Forms till Adobe LiveCycle
 seo-title: Connecting AEM Forms with Adobe LiveCycle
-description: Med AEM LiveCycle Connector kan du starta LiveCycle ES4 Document Services inifrån AEM program och arbetsflöden.
-seo-description: AEM LiveCycle connector allows you to start LiveCycle ES4 Document Services from within AEM apps and workflows.
+description: AEM LiveCycle Connector gör att du kan starta LiveCycle ES4 Document Services inifrån AEM program och arbetsflöden.
+seo-description: AEM LiveCycle connector lets you start LiveCycle ES4 Document Services from within AEM apps and workflows.
 uuid: 7dc9d5ec-7b19-4d93-936d-81ceb45dfffa
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -10,53 +10,53 @@ topic-tags: Configuration
 discoiquuid: 7e404b45-1302-4dd1-b3c9-3f47fedb5f94
 role: Admin
 exl-id: 562f8a22-cbab-4915-bc0d-da9bea7d18fa
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '1006'
+source-wordcount: '1004'
 ht-degree: 0%
 
 ---
 
 # Ansluta AEM Forms till Adobe LiveCycle {#connecting-aem-forms-with-adobe-livecycle}
 
-Adobe Experience Manager (AEM) LiveCycle Connector gör det möjligt att smidigt anropa Adobe LiveCycle ES4 Document Services inifrån AEM webbprogram och arbetsflöden. LiveCycle har ett omfattande klient-SDK som gör att klientapplikationer kan starta LiveCycle-tjänster med Java API:er. AEM LiveCycle Connector förenklar användningen av dessa API:er i OSGi-miljön.
+Adobe Experience Manager (AEM) LiveCycle Connector möjliggör smidigt anrop av Adobe LiveCycle ES4 Document Services inifrån AEM webbprogram och arbetsflöden. LiveCyclet har en omfattande klient-SDK som gör att klientprogram kan starta LiveCycle-tjänster med Java API:er. AEM LiveCycle Connector förenklar användningen av dessa API:er i OSGi-miljön.
 
 ## Ansluta AEM till Adobe LiveCycle {#connecting-aem-server-to-adobe-livecycle}
 
-AEM LiveCycle Connector är en del av [AEM Forms tilläggspaket](/help/forms/using/installing-configuring-aem-forms-osgi.md). När du har installerat AEM Forms-tilläggspaketet utför du följande steg för att lägga till information om LiveCycle-servern AEM webbkonsolen.
+AEM LiveCycle Connector ingår i [AEM Forms tilläggspaket](/help/forms/using/installing-configuring-aem-forms-osgi.md). När du har installerat AEM Forms-tilläggspaketet utför du följande steg för att lägga till information om LiveCyclena server AEM webbkonsolen.
 
-1. Gå AEM konfigurationshanteraren för webbkonsolen och leta reda på konfigurationskomponenten för Adobe-klient-SDK.
+1. Gå AEM konfigurationshanteraren för webbkonsolen och leta reda på konfigurationskomponenten för Adobe LiveCycle Client SDK.
 1. Klicka på komponenten för att redigera konfigurationsserverns URL-adress, användarnamn och lösenord.
 1. Granska inställningarna och klicka på **Spara**.
 
 Även om egenskaperna är självförklarande är de viktiga följande:
 
-* **Server-URL** - Anger URL till LiveCycle-servern. Om du vill att LiveCycle och AEM ska kommunicera via https, kan du starta AEM med följande JVM
+* **Server-URL** - Anger URL till LiveCyclet. Om du vill att LiveCycle och AEM ska kommunicera via https, kan du starta AEM med följande JVM
 
-   ```java
-   argument
-    -Djavax.net.ssl.trustStore=<<em>path to LC keystore</em>>
-   ```
+  ```java
+  argument
+   -Djavax.net.ssl.trustStore=<<em>path to LC keystore</em>>
+  ```
 
-   alternativ.
+  alternativ.
 
-* **Användarnamn**- Anger användarnamnet för kontot som används för att upprätta kommunikation mellan AEM och LiveCycle. Kontot är ett LiveCycle-användarkonto som har behörighet att starta Document Services.
+* **Användarnamn**- Anger användarnamnet för kontot som används för att upprätta kommunikation mellan AEM och LiveCycle. LiveCyclet är ett användarkonto som har behörighet att starta Document Services.
 * **Lösenord**- Anger lösenordet.
-* **Tjänstnamn** - Anger vilka tjänster som startas med de inloggningsuppgifter som anges i fälten Användarnamn och Lösenord. Som standard skickas inga autentiseringsuppgifter när LiveCycle-tjänster startas.
+* **Tjänstnamn** - Anger vilka tjänster som startas med de inloggningsuppgifter som anges i fälten Användarnamn och Lösenord. Som standard skickas inga autentiseringsuppgifter när LiveCyclet startas.
 
 ## Startar dokumenttjänster {#starting-document-services}
 
-Klientprogram kan starta LiveCycle-tjänster med hjälp av ett Java API, Web Services, Remoting och REST. För Java-klienter kan programmet använda LiveCycle SDK. LiveCycle SDK tillhandahåller ett Java-API för fjärrstart av dessa tjänster. Om du till exempel vill konvertera ett Microsoft Word-dokument till PDF startar klienten GeneratePDFService. Anropsflödet består av följande steg:
+Klientprogram kan starta LiveCycle-tjänster med hjälp av ett Java API, Web Services, Remoting och REST. För Java-klienter kan programmet använda LiveCycle SDK. LiveCyclets SDK innehåller ett Java-API för fjärrstart av dessa tjänster. Om du till exempel vill konvertera ett Microsoft Word-dokument till PDF startar klienten GeneratePDFService. Anropsflödet består av följande steg:
 
 1. Skapa en ServiceClientFactory-instans.
 1. Varje tjänst tillhandahåller en klientklass. Om du vill starta en tjänst skapar du en klientinstans av tjänsten.
 1. Starta tjänsten och bearbeta resultatet.
 
-AEM LiveCycle Connector förenklar flödet genom att visa dessa klientinstanser som OSGi-tjänster som kan nås med vanliga OSGi-metoder. Kopplingen LiveCycle har följande funktioner:
+AEM LiveCycle Connector förenklar flödet genom att visa de här klientinstanserna som OSGi-tjänster som kan nås med vanliga OSGi-metoder. Anslutningsenheten för LiveCyclet har följande funktioner:
 
-* Klientinstanser som OSGi-tjänst: Klienterna som paketerats som OSGI-paket listas i [Dokumenttjänstlista](/help/forms/using/aem-livecycle-connector.md#p-document-services-list-p) -avsnitt. Varje klientjar registrerar klientinstansen som OSGi-tjänst med OSGi-tjänstregistret.
-* Spridning av användarautentiseringsuppgifter: Den anslutningsinformation som krävs för att ansluta till LiveCycle-servern hanteras på en central plats.
-* ServiceClientFactory-tjänst: Klientprogrammet kan starta processerna genom att komma åt ServiceClientFactory-instansen.
+* Klientinstanser som OSGi-tjänst: Klienterna som paketeras som OSGI-paket listas i [Dokumenttjänstlista](/help/forms/using/aem-livecycle-connector.md#p-document-services-list-p) -avsnitt. Varje klientjar registrerar klientinstansen som OSGi-tjänst med OSGi-tjänstregistret.
+* Spridning av autentiseringsuppgifter för användare: Anslutningsinformationen som krävs för att ansluta till LiveCyclet hanteras på en central plats.
+* ServiceClientFactory-tjänst: För att starta processerna kan klientprogrammet få åtkomst till ServiceClientFactory-instansen.
 
 ### Starta via tjänstreferenser från OSGi-tjänstregistret {#starting-via-service-references-from-osgi-service-registry}
 
@@ -154,15 +154,15 @@ ServiceClientFactory scf = scfProvider.getDefaultServiceClientFactory();
 
 ## Stöd för RunAs {#runas-support}
 
-Nästan alla dokumenttjänster i LiveCycle kräver autentisering. Du kan använda något av följande alternativ för att starta de här tjänsterna utan att ange specifika autentiseringsuppgifter i koden:
+Nästan alla dokumenttjänster i LiveCyclet kräver autentisering. Du kan använda något av följande alternativ för att starta de här tjänsterna utan att ange specifika autentiseringsuppgifter i koden:
 
 ### Tillåtelselista-konfiguration {#allowlist-configuration}
 
-SDK-konfigurationen för LiveCycle-klienten innehåller en inställning för tjänstnamn. Den här konfigurationen är en lista över tjänster som anropslogiken använder administratörsautentiseringsuppgifter för. Om du till exempel lägger till DirectoryManager-tjänster (som ingår i API:t för användarhantering) i den här listan, kan all klientkod använda tjänsten direkt och anropslagret skickar automatiskt de konfigurerade autentiseringsuppgifterna som en del av den begäran som skickas till LiveCycle-servern
+SDK-konfigurationen för LiveCycle-klienten innehåller en inställning för tjänstnamn. Den här konfigurationen är en lista över tjänster som anropslogiken använder administratörsautentiseringsuppgifter för. Om du till exempel lägger till DirectoryManager-tjänster (som ingår i API:t för användarhantering) i den här listan kan all klientkod använda tjänsten direkt och anropslagret skickar automatiskt de konfigurerade autentiseringsuppgifterna som en del av den begäran som skickas till LiveCyclet
 
 ### RunAsManager {#runasmanager}
 
-Som en del av integreringen tillhandahålls en ny tjänst, RunAsManager. Det gör att du kan programmässigt styra de autentiseringsuppgifter som ska användas vid anrop till LiveCycle-servern.
+Som en del av integreringen tillhandahålls en ny tjänst, RunAsManager. Du kan programmässigt styra de autentiseringsuppgifter som ska användas vid anrop till LiveCycle-servern.
 
 ```java
 import com.adobe.livecycle.dsc.clientsdk.security.PasswordCredential;
@@ -215,7 +215,7 @@ InvocationResponse response = serviceClientFactory.getServiceClient().invoke(ir)
 
 ## Dokumenttjänstlista {#document-services-list}
 
-### Adobe LiveCycle Client SDK API bundle {#adobe-livecycle-client-sdk-api-bundle}
+### Adobe LiveCycle Client SDK API-paket {#adobe-livecycle-client-sdk-api-bundle}
 
 Följande tjänster är tillgängliga:
 
@@ -257,7 +257,7 @@ Följande tjänster är tillgängliga:
 </dependency>
 ```
 
-### Klientpaket för Adobe TaskManager LiveCycle {#adobe-livecycle-taskmanager-client-bundle}
+### Adobe LiveCycle TaskManager-klientpaket {#adobe-livecycle-taskmanager-client-bundle}
 
 Följande tjänster är tillgängliga:
 
@@ -278,7 +278,7 @@ Följande tjänster är tillgängliga:
 </dependency>
 ```
 
-### Klientpaketet Adobe LiveCycle Workflow {#adobe-livecycle-workflow-client-bundle}
+### Adobe LiveCycle Workflow Client Bundle {#adobe-livecycle-workflow-client-bundle}
 
 Följande tjänst är tillgänglig:
 
@@ -328,7 +328,7 @@ Följande tjänster är tillgängliga:
 </dependency>
 ```
 
-### Adobe LiveCycle Assembler Client bundle {#adobe-livecycle-assembler-client-bundle}
+### Klientpaket för Adobe LiveCycle Assembler {#adobe-livecycle-assembler-client-bundle}
 
 Följande tjänst är tillgänglig:
 
@@ -344,7 +344,7 @@ Följande tjänst är tillgänglig:
 </dependency>
 ```
 
-### Klientpaket för dataintegrering för Adobe LiveCycle {#adobe-livecycle-form-data-integration-client-bundle}
+### Klientpaket för dataintegrering för LiveCyclet Adobe {#adobe-livecycle-form-data-integration-client-bundle}
 
 Följande tjänst är tillgänglig:
 
@@ -446,7 +446,7 @@ Följande tjänst är tillgänglig:
 </dependency>
 ```
 
-### Klientpaket för Adobe LiveCycle-butik {#adobe-livecycle-truststore-client-bundle}
+### Klientpaket för Adobe LiveCycle Truststore {#adobe-livecycle-truststore-client-bundle}
 
 Följande tjänster är tillgängliga:
 
@@ -465,7 +465,7 @@ Följande tjänster är tillgängliga:
 </dependency>
 ```
 
-### Adobe LiveCycle Repository Client bundle {#adobe-livecycle-repository-client-bundle}
+### Klientpaket för Adobe LiveCycle-databas {#adobe-livecycle-repository-client-bundle}
 
 Följande tjänster är tillgängliga:
 

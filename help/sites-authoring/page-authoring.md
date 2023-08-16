@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: 2d4cda3d-3270-4294-a146-e5712746aebb
 docset: aem65
 exl-id: 07528cf0-e67a-46b5-a3b2-d1b74ad2228f
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '314'
+source-wordcount: '313'
 ht-degree: 0%
 
 ---
@@ -30,7 +30,7 @@ Här följer två typer av översiktstyper för att skapa med AEM:
 
 ## Snabböversikt över funktioner som används för att skapa sidor {#quick-overview-of-features-used-for-authoring-pages}
 
-För att underlätta utvecklingen av sidor innehåller redigeringsmiljön funktioner som:
+För att du ska få hjälp med att skapa sidor innehåller redigeringsmiljön funktioner som:
 
 * **Dra och släpp**
 Komponenter (t.ex. Text, Bild) och digitala resurser (t.ex. bilder) kan placeras på sidan genom att dra och släppa dem på önskad plats.
@@ -42,16 +42,16 @@ När du har placerat den på sidan kan du öppna en komponentspecifik dialogruta
 Text- och bildkomponenter kan redigeras direkt på webbsidan utan att du behöver öppna en dialogruta eller någon explicit sparåtgärd.
 
 * **[Komponentbläddraren](/help/sites-authoring/author-environment-tools.md#componentsbrowsertouchoptimizedui)**
-Till vänster på en redigerbar sida kan en skjutbar webbläsare öppnas. härifrån kan komponenter dras till sidan och sedan redigeras.
+Till vänster på en redigerbar sida kan en skjutbar webbläsare öppnas. Därifrån kan komponenterna dras till sidan och sedan redigeras.
 
 * **[Resursläsaren](/help/sites-authoring/author-environment-tools.md#assetsbrowsertouchoptimizedui)**
-Till vänster på en redigerbar sida kan en skjutbar webbläsare öppnas. Här kan resurser dras till sidan. till exempel för att placera resurser eller skapa länkar till andra sidor.
+Till vänster på en redigerbar sida kan en skjutbar webbläsare öppnas. Här kan resurser dras till sidan, t.ex. för att placera resurser eller skapa länkar till andra sidor.
 
 * **Komponentverktygsfältet**
 Både en enkel eller en långsam dubbelklickning/tryckning visar rätt verktygsfält (en för verktygsfältet för redigering på plats och sedan långsam dubbelklickning för hela verktygsfältet).
 
 * **[Responsiv layout](/help/sites-authoring/responsive-layout.md)**
-Detta tillhandahåller ett styckesystem som gör att du kan placera komponenter i ett responsivt rutnät.
+Detta ger ett styckesystem där du kan placera komponenter i ett responsivt rutnät.
 
 * **Sök medan du skriver**
 I vissa scenarier (t.ex. sökvägsval i redigeringsdialogrutor) visas dynamiska matchningar när du skriver frågan när du söker efter innehåll via AEM.

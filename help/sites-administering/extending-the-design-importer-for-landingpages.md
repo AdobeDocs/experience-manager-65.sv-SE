@@ -7,9 +7,9 @@ topic-tags: personalization
 content-type: reference
 docset: aem65
 exl-id: 1b8c6075-13c6-4277-b726-8dea7991efec
-source-git-commit: 260f71acd330167572d817fdf145a018b09cbc65
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '3502'
+source-wordcount: '3501'
 ht-degree: 0%
 
 ---
@@ -42,7 +42,7 @@ Här följer de logiska stegen för att få designimporteraren att känna igen d
 
 ## Förbereda HTML för import {#preparing-the-html-for-import}
 
-När du har skapat en importsida kan du importera den fullständiga landningssidan för HTML. Om du vill importera landningssidan för HTML måste du först komprimera innehållet till ett designpaket. Designpaketet innehåller landningssidan för HTML tillsammans med de refererade resurserna (bilder, css, ikoner, skript och så vidare).
+När du har skapat en importsida kan du importera den fullständiga landningssidan för HTML. Om du vill importera landningssidan för HTML måste du först zippa innehållet i den till ett designpaket. Designpaketet innehåller landningssidan för HTML tillsammans med de refererade resurserna (bilder, css, ikoner, skript och så vidare).
 
 I följande exempeltabell visas hur du förbereder HTML för import:
 
@@ -101,7 +101,7 @@ Innan du importerar landningssidan kanske du vill konvertera vissa delar av land
 
 Du gör detta genom att lägga till `data-cq-component` till lämplig komponent i den HTML-fil som du importerar.
 
-I följande avsnitt beskrivs hur du redigerar din HTML-fil så att du konverterar vissa delar av dina landningssidor till olika redigerbara AEM. Komponenterna beskrivs i detalj på [Komponenter för landningssidor](/help/sites-classic-ui-authoring/classic-personalization-campaigns-landingpage.md).
+I följande avsnitt beskrivs hur du redigerar din HTML-fil så att du konverterar vissa delar av dina landningssidor till olika redigerbara AEM. Komponenterna beskrivs i detalj på [Landningssidkomponenter](/help/sites-classic-ui-authoring/classic-personalization-campaigns-landingpage.md).
 
 >[!NOTE]
 >
@@ -113,7 +113,7 @@ Observera följande begränsningar innan du importerar:
 
 ### Alla attribut, som klass eller id, som används i taggen lt;body> bevaras inte {#any-attribute-like-class-or-id-applied-on-the-amp-lt-body-tag-is-not-preserved}
 
-Om till exempel ett attribut som id eller class tillämpas på body-taggen `<body id="container">` bevaras inte efter importen. Det innebär att designen som importeras inte ska ha några beroenden av attributen som används på `<body>` -tagg.
+Om till exempel ett attribut som id eller class tillämpas på body-taggen `<body id="container">` bevaras inte efter importen. Därför bör designen som importeras inte vara beroende av attributen som används på `<body>` -tagg.
 
 ### Dra och släpp zip {#drag-and-drop-zip}
 
@@ -144,7 +144,7 @@ HTML som infogar en textkomponent ( `foundation/components/text`) i designpakete
 Om du tar med ovanstående kod i HTML görs följande:
 
 * Skapar en redigerbar AEM ( `sling:resourceType=foundation/components/text`) på landningssidan som skapas efter att designpaketet har importerats.
-* Anger `text` egenskapen för den skapade textkomponenten till HTML i `div`.
+* Anger `text` egenskapen för den skapade textkomponenten till HTML som omges av `div`.
 
 **Kortfattad deklaration om komponenttaggar**:
 
@@ -187,7 +187,7 @@ Om du tar med ovanstående kod i HTML görs följande:
 * Anger `jcr:title` egenskapen för den skapade titelkomponenten till texten inom rubriktaggen omsluten i div.
 * Anger `type` -egenskap till rubriktaggen, i det här fallet `h1`.
 
-Titelkomponenten stöder sju typer - `h1, h2, h3, h4, h5, h6` och `default`.
+Titelkomponenten har stöd för sju typer - `h1, h2, h3, h4, h5, h6` och `default`.
 
 **Kortfattad deklaration om komponenttaggar**:
 
@@ -247,7 +247,7 @@ Egenskaper som stöds
 
 * Etikett, med fet stil, kursiv stil och understrykning
 * Mål-URL, stöder tredje part och AEM-URL
-* Alternativ för sidåtergivning (samma fönster, nytt fönster o.s.v.)
+* Alternativ för sidåtergivning (samma fönster, nytt fönster, osv.)
 
 Taggen HTML om du vill ta med klickningen genom komponenten i den importerade zippen. Här mappas href till mål-URL, &quot;Visa produktinformation&quot; mappas till etikett och så vidare.
 
@@ -280,9 +280,9 @@ Egenskaper som stöds
 * Bildbeskärning, rotering
 * Hovringstext, beskrivning, storlek i px
 * Mål-URL, stöder tredje part och AEM-URL
-* Alternativ för sidåtergivning (samma fönster, nytt fönster o.s.v.)
+* Alternativ för sidåtergivning (samma fönster, nytt fönster, osv.)
 
-Taggen HTML om du vill ta med en grafisk länkkomponent i det importerade postnumret. Här mappas href till target url, img src är återgivningsbilden, &quot;title&quot; är taggen hover text o.s.v.
+Taggen HTML om du vill ta med en grafisk länkkomponent i det importerade postnumret. Här mappas href till target url, img src är återgivningsbilden, &quot;title&quot; är taggen hover text osv.
 
 ```xml
 <div id="cqcanvas">
@@ -319,11 +319,11 @@ Ett lead-formulär är ett formulär som används för att samla in profilinform
 
 **Funktioner som stöds**
 
-* Fördefinierade lead-fält - förnamn, efternamn, adress, dob, kön, about, userId, emailId, submit-knapp är tillgängliga i sidosparken. Dra-och-släpp den nödvändiga komponenten i ditt lead-formulär.
+* Fördefinierade lead-fält - förnamn, efternamn, adress, dob, kön, about, userId, emailId, submit-knapp är tillgängliga i sidosparken. Dra-och-släpp den komponent du behöver i ditt lead-formulär.
 * Med hjälp av dessa komponenter kan författaren utforma ett fristående lead-formulär, motsvarar dessa fält formulärfält lead. I det fristående eller importerade ZIP-programmet kan användaren lägga till extra fält med cq:form eller cta lead-formulärfält, namn och utforma dem enligt kraven.
 * Mappa lead-formulärfält med specifika fördefinierade namn för CTA-lead-formulär, till exempel firstName för förnamn i lead-formulär och så vidare.
 * Fält som inte är mappade till lead-formulärmappar till cq:formulärkomponenter - text, radio, kryssruta, listruta, dold, lösenord.
-* Användaren kan ange titeln med taggen&quot;label&quot; och formateringen med formatattributet&quot;class&quot; (endast tillgängligt för CTA-komponenter för inledande formulär).
+* Användaren kan ange titeln med taggen&quot;label&quot; och formateringen med hjälp av formatattributet&quot;class&quot; (endast tillgängligt för CTA-formulärkomponenter).
 * Tack! Sidan och prenumerationslistan kan anges som en dold parameter i formuläret (finns i index.htm) eller kan läggas till/redigeras från redigeringsfältet i &quot;Början av lead-formuläret&quot;
 
   &lt;input type=&quot;hidden&quot; name=&quot;redirectUrl&quot; value=&quot;/content/we-retail/en/user/register/thank_you&quot;/>
@@ -382,7 +382,7 @@ Att ta med markeringen ovan i HTML gör följande:
 
 * Infogar en AEM parsys-komponent (grund/komponenter/parsys) på landningssidan som skapas när designpaketet har importerats.
 * Initierar sidsparken med standardkomponenter. Du kan lägga till nya komponenter på landningssidan genom att dra komponenter från sidosparken till den parsytiska komponenten.
-* Två titelkomponenter ingår också i parsytan.
+* Två titelkomponenter är också en del av parsysen.
 
 ### Mål {#target}
 
@@ -420,7 +420,7 @@ Följande metadata som deklarerats i huvudet på det importerade HTML ska extrah
 
 * &lt;meta name=&quot;description&quot; content=&quot;&quot;>
 
-Lang-attributet som anges i taggen HTML ska extraheras och bevaras av designimportören som egenskapen &quot;jcr:language&quot;
+Lang-attributet i taggen HTML ska extraheras och bevaras av designimportören som egenskapen &quot;jcr:language&quot;
 
 * &lt;html lang=&quot;en&quot;>
 
@@ -454,12 +454,12 @@ Sökvägen i data-cq-komponenten ska vara resourceType för komponenten.
 
 Du bör inte använda CSS-väljare som liknar följande för element som är markerade för komponentkonvertering vid import.
 
-| E > F | ett F-element som är underordnat ett E-element | [Underordnad kombination](https://www.w3.org/TR/css3-selectors/#child-combinators) |
+| E > F | ett F-element underordnat ett E-element | [Underordnad kombination](https://www.w3.org/TR/css3-selectors/#child-combinators) |
 |---|---|---|
 | E + F | ett F-element som omedelbart föregås av ett E-element | [Angränsande jämställd kombination](https://www.w3.org/TR/css3-selectors/#adjacent-sibling-combinators) |
 | E ~ F | ett F-element föregås av ett E-element | [Kombination av allmänna jämställda](https://www.w3.org/TR/css3-selectors/#general-sibling-combinators) |
 | E:root | ett E-element, dokumentets rot | [Strukturella pseudoklasser](https://www.w3.org/TR/css3-selectors/#structural-pseudos) |
-| E:nth-child(n) | ett E-element, det n:te underordnade elementet till det överordnade elementet | [Strukturella pseudoklasser](https://www.w3.org/TR/css3-selectors/#structural-pseudos) |
+| E:nth-child(n) | ett E-element, det n:te underordnade elementet till dess överordnade | [Strukturella pseudoklasser](https://www.w3.org/TR/css3-selectors/#structural-pseudos) |
 | E:nth-last-child(n) | ett E-element, det n:te underordnade elementet till det överordnade elementet, räknat från det sista | [Strukturella pseudoklasser](https://www.w3.org/TR/css3-selectors/#structural-pseudos) |
 | E:n:n av typen (n) | ett E-element, det n:te jämställda i sin typ | [Strukturella pseudoklasser](https://www.w3.org/TR/css3-selectors/#structural-pseudos) |
 | E:nth-last-of-type(n) | ett E-element, det n:te jämställda i sin typ, räknat från det sista | [Strukturella pseudoklasser](https://www.w3.org/TR/css3-selectors/#structural-pseudos) |
@@ -490,7 +490,7 @@ Tabellen nedan beskriver kortfattat egenskaperna:
   </tr>
   <tr>
    <td>Import av landningssiddesign</td>
-   <td>Extrahera filter</td>
+   <td>Filtret Extrahera</td>
    <td>Listan med reguljära uttryck som ska användas för att filtrera filer från extraheringen. <br /> Postnummer som matchar något av de angivna mönstren tas inte med vid extraheringen</td>
   </tr>
   <tr>
@@ -555,7 +555,7 @@ Om det finns några varningar (till exempel refererar HTML till bilder som inte 
 
 * HTML avser bilder som inte finns i paketet.
 * HTML avser skript som inte finns i paketet.
-* HTML avser format som inte finns i paketet.
+* HTML refererar till format som inte finns i paketet.
 
 ### Var lagras filerna i ZIP-filen i AEM? {#where-are-the-files-of-the-zip-file-being-stored-in-aem}
 

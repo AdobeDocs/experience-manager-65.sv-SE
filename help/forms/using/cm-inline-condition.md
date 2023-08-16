@@ -11,9 +11,9 @@ discoiquuid: bbaba39b-e15a-4143-b6fc-7789fa2917b4
 docset: aem65
 feature: Correspondence Management
 exl-id: bc5d6c5b-c833-4849-aace-e07f8a522b32
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '1664'
+source-wordcount: '1659'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 ## Textbundna villkor {#inline-conditions}
 
-I AEM Forms kan du använda textbundna villkor i textmoduler för att automatisera återgivning av text som är beroende av sammanhanget eller data som är kopplade till formulärdatamodellen (i Interactive Communication) eller datamordlistan (med bokstäver). Textbundna villkor visar specifikt innehåll baserat på att villkorsutvärderingen är true eller false.
+Med AEM Forms kan du använda textbundna villkor i textmoduler för att automatisera återgivning av text som är beroende av sammanhanget eller data som är kopplade till formulärdatamodellen (i interaktiv kommunikation) eller datamordlistan (med bokstäver). Textbundna villkor visar specifikt innehåll baserat på att villkorsutvärderingen är true eller false.
 
 Villkoren utför beräkningar på datavärden som tillhandahålls av formulärdatamodellen/datamordlistan eller av slutanvändarna. Med textbundna villkor kan du spara tid och minska antalet mänskliga fel samtidigt som du skapar sammanhangsberoende och personaliserade interaktiva kommunikationer/brev.
 
@@ -40,7 +40,7 @@ Mer information finns i Skapa regel i text i [Texter i interaktiv kommunikation]
 
 När du har inkluderat textavsnittet i ett interaktivt kommunikations- och agentgränssnitt för att förbereda en interaktiv kommunikation, utvärderas (formulärdatamodell)-data för mottagarna och texten visas endast för mottagarna i USA.
 
-### Exempel: Använda textbundna villkor i en bokstav för att återge rätt adress  {#example-using-inline-condition-in-a-letter-to-render-the-appropriate-address}
+### Exempel: Använda infogade villkor i en bokstav för att återge rätt adress  {#example-using-inline-condition-in-a-letter-to-render-the-appropriate-address}
 
 Du kan infoga ett textbundet villkor i en bokstav genom att infoga det textbundna villkoret i rätt textmodul. I följande exempel används två villkor för att utvärdera och visa lämplig adress, Sir eller Ma&#39;am, i ett brev baserat på DD-elementets kön. Om du använder liknande steg kan du skapa andra villkor.
 
@@ -99,7 +99,7 @@ Du kan dessutom ange regel/villkor i den upprepade konstruktionen för att villk
 
 I följande exempel visas hur du använder upprepning för att strukturera och återge kreditkortstransaktionerna i en interaktiv kommunikation.
 
-1. I ett formulärdatamodellbaserat textdokumentfragment infogar du relevanta datamodellsobjekt (och inbäddad text som krävs för etiketterna, som i det här exemplet):
+1. I ett formulärdatamodellbaserat textdokumentfragment infogar du relevanta formulärdatamodellsobjekt (och inbäddad text som krävs för etiketterna, som i det här exemplet):
 
    ![1_elementstext](assets/1_elementstext.png)
 
@@ -139,7 +139,7 @@ I följande exempel visas hur du använder upprepning för att strukturera och �
 
    ![screen_shot_2018-03-09at155516copy](assets/screen_shot_2018-03-09at155516copy.png)
 
-### Exempel: Använda upprepa i en bokstav för att formatera, strukturera och visa en lista över kreditkortstransaktioner {#example-using-repeat-in-a-letter-to-format-structure-and-display-a-list-of-credit-card-transactions}
+### Exempel: Använda upprepning i en bokstav för att formatera, strukturera och visa en lista över kreditkortstransaktioner {#example-using-repeat-in-a-letter-to-format-structure-and-display-a-list-of-credit-card-transactions}
 
 I följande exempel visas hur du använder upprepning för att strukturera och återge kreditkortstransaktionerna i en bokstav. Om du använder liknande steg kan du använda upprepning i ett annat scenario.
 
@@ -152,7 +152,7 @@ I följande exempel visas hur du använder upprepning för att strukturera och �
 
    Dessa DD-element återger en lista över de transaktioner som gjorts på kreditkortet med följande information:
 
-   Transaktionsdatum, Transaktionsbelopp och Transaktionstyp (Debit eller Credit)
+   Transaktionsdatum, Transaktionsbelopp och Transaktionstyp (debet eller kredit)
 
 1. Bädda in texten i DD-elementen för att göra satsen mer läsbar, till exempel:
 
@@ -182,7 +182,7 @@ I följande exempel visas hur du använder upprepning för att strukturera och �
    ${DD_creditcard_TransactionAmount > 0.5}
    ```
 
-   Om du inte behöver återge informationen (här transaktioner) selektivt, ska du annars låta villkoret vara tomt genom att ta bort följande i dialogrutan: `${}`. Att spara ett upprepningsuttryck aktiveras antingen när fönstret för upprepningsuttrycket är tomt (utan ${} när ingen upprepning behövs) eller när det innehåller ett giltigt villkor för upprepning.
+   Om du inte behöver återge informationen (här transaktioner) selektivt, ska du annars låta villkoret vara tomt genom att ta bort följande i dialogrutan: `${}`. Att spara ett upprepningsuttryck aktiveras antingen när fönstret för upprepningsuttrycket är tomt (utan ${} när ingen upprepning behövs) eller när den innehåller ett giltigt villkor för upprepning.
 
 1. Välj en avgränsare för formatering av den dynamiska texten och tryck på bockmarkeringen för att spara:
 
@@ -193,7 +193,7 @@ I följande exempel visas hur du använder upprepning för att strukturera och �
 
    ![4_repeat_hoverdetail](assets/4_repeat_hoverdetail.png)
 
-   Du kan trycka på handtaget för att visa snabbmenyn för upprepningen, som gör att du kan redigera eller ta bort den upprepade konstruktionen.
+   Du kan trycka på handtaget för att visa snabbmenyn för upprepningen, där du kan redigera eller ta bort den upprepade konstruktionen.
 
    ![5_repeatEditTa bort](assets/5_repeateditremove.png)
 
@@ -206,7 +206,7 @@ I följande exempel visas hur du använder upprepning för att strukturera och �
 
    ![6_repeatOutputPreview](assets/6_repeatoutputpreview.png)
 
-   Den statiska texten upprepas med transaktionsinformationen. Upprepad statisk text underlättas av den upprepning som används för texten i den här proceduren. Villkoret ${DD_creditcard_TransactionAmount > 0.5} säkerställer att transaktioner under USD 5 inte återges i brevet.
+   Den statiska texten upprepas med transaktionsinformationen. Upprepad statisk text underlättas av den upprepning som används för texten i den här proceduren. Villkoret ${DD_creditcard_TransactionAmount > 0.5}, säkerställer att transaktioner under USD 5 inte återges i brevet.
 
    >[!NOTE]
    >
@@ -220,7 +220,7 @@ Du kan behöva upprepa detta inom ett villkor. Med Korrespondence Management kan
 
 Till exempel upprepas följande (med rött format) i ett villkor (med grönt format).
 
-När upprepningen återger kreditkortstransaktionerna säkerställer villkoret ${DD_creditcard_nooftransaction > 0} att den upprepade konstruktionen endast återges om det finns minst en transaktion.
+När upprepningen återger kreditkortstransaktionerna är villkoret ${DD_creditcard_nooftransaction > 0} säkerställer att den upprepade konstruktionen endast återges om det finns minst en transaktion.
 
 ![upprepningsvillkor](assets/repeatwitincondition.png)
 

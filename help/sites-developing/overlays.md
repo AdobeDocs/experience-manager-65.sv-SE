@@ -6,24 +6,24 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: platform
 content-type: reference
 exl-id: e57a6971-6a6f-427b-a8cd-a2f2e8cdf9e2
-source-git-commit: 26c0411d6cc16f4361cfa9e6b563eba0bfafab1e
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '605'
+source-wordcount: '604'
 ht-degree: 0%
 
 ---
 
 # Övertäckningar{#overlays}
 
-Adobe Experience Manager (AEM) - och tidigare CQ - har länge använt principen med övertäckningar för att kunna utöka och anpassa [konsoler](/help/sites-developing/customizing-consoles-touch.md) och andra funktioner (till exempel [sidredigering](/help/sites-developing/customizing-page-authoring-touch.md)).
+Adobe Experience Manager (AEM) - och tidigare CQ - har länge använt principen med övertäckningar för att utöka och anpassa [konsoler](/help/sites-developing/customizing-consoles-touch.md) och andra funktioner (till exempel [sidredigering](/help/sites-developing/customizing-page-authoring-touch.md)).
 
 Övertäckning är en term som används i många sammanhang. I det här sammanhanget (utökning av AEM) innebär en övertäckning att använda de fördefinierade funktionerna och lägga in egna definitioner över dessa (för att anpassa standardfunktionerna).
 
-I en standardinstans finns de fördefinierade funktionerna under `/libs` och vi rekommenderar att du definierar övertäckningen (anpassningarna) under `/apps` förgrening. AEM använder en söksökväg för att hitta en resurs och söker först i `/apps` förgrening och sedan `/libs` förgrening [sökvägar kan konfigureras](#configuring-the-search-paths)). Den här mekanismen innebär att övertäckningen (och de anpassningar som definieras där) har prioritet.
+I en standardinstans finns de fördefinierade funktionerna under `/libs` och vi rekommenderar att du definierar övertäckningen (anpassningarna) under `/apps` gren. AEM använder en söksökväg för att hitta en resurs och söker först i `/apps` förgrening och sedan `/libs` förgrening [sökvägar kan konfigureras](#configuring-the-search-paths)). Den här mekanismen innebär att övertäckningen (och de anpassningar som definieras där) har prioritet.
 
 Sedan AEM 6.0 har ändringar gjorts i hur övertäckningar implementeras och används:
 
-* AEM 6.0 och senare - för [Granit](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/index.html)-relaterade övertäckningar (det vill säga det beröringskänsliga användargränssnittet)
+* AEM 6.0 och senare - för [Granit](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/index.html)-relaterade övertäckningar (det vill säga det pekaktiverade användargränssnittet)
 
    * Metod
 
@@ -58,7 +58,7 @@ Sedan AEM 6.0 har ändringar gjorts i hur övertäckningar implementeras och anv
 >
 >Övertäckningar för andra områden (inklusive det klassiska användargränssnittet) innebär att rätt nod och hela understruktur kopieras och att nödvändiga ändringar görs.
 
-Övertäckningar rekommenderas för många ändringar, t.ex. [konfigurera dina konsoler](/help/sites-developing/customizing-consoles-touch.md#create-a-custom-console) eller [skapa din markeringskategori för resursläsaren på sidopanelen](/help/sites-developing/customizing-page-authoring-touch.md#add-new-selection-category-to-asset-browser) (används vid redigering av sidor). De krävs enligt följande:
+Övertäckningar rekommenderas för många ändringar, till exempel [konfigurera dina konsoler](/help/sites-developing/customizing-consoles-touch.md#create-a-custom-console) eller [skapa din markeringskategori för resursläsaren på sidopanelen](/help/sites-developing/customizing-page-authoring-touch.md#add-new-selection-category-to-asset-browser) (används vid redigering av sidor). De krävs enligt följande:
 
 * ***Gör inte* gör ändringar i `/libs` bankkontor **Alla ändringar du gör kan gå förlorade eftersom den här grenen kan ändras när du:
 
@@ -66,7 +66,7 @@ Sedan AEM 6.0 har ändringar gjorts i hur övertäckningar implementeras och anv
    * tillämpa en snabbkorrigering
    * installera ett funktionspaket
 
-* De koncentrerar dina ändringar på ett ställe; gör det enklare för dig att spåra, migrera, säkerhetskopiera eller felsöka ändringar efter behov.
+* De koncentrerar dina ändringar på en plats, vilket gör det enklare för dig att spåra, migrera, säkerhetskopiera eller felsöka ändringarna efter behov.
 
 ## Konfigurera sökvägar {#configuring-the-search-paths}
 
@@ -77,7 +77,7 @@ För övertäckningar är den levererade resursen en sammanställning av resurse
    * Sökvägarnas övre och nedre ordning anger deras respektive prioriteringar.
    * I en standardinstallation är de primära standardinställningarna `/apps`, `/libs` - så att innehållet i `/apps` har högre prioritet än `/libs` (dvs. *övertäckningar* den).
 
-* Två tjänstanvändare behöver JCR:READ-åtkomst till den plats där skripten lagras. Dessa användare är: components-search-service (används av komponenterna com.day.cq.wcm.coreto access/cache) och sling-scripting (används av org.apache.sling.servlets.resolver för att hitta servrar).
+* Två tjänstanvändare behöver JCR:READ-åtkomst till den plats där skripten lagras. Dessa användare är: components-search-service (används av com.day.cq.wcm.coreto-åtkomst/cache-komponenter) och sling-scripting (används av org.apache.sling.servlets.resolver för att hitta servrar).
 * Följande konfiguration måste även konfigureras efter var du placerade dina skript (i det här exemplet under /etc, /libs eller /apps).
 
   ```

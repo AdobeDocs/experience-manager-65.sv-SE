@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: document_services
 discoiquuid: 8b85bdc7-3864-49c9-81b0-cf15b8e986d9
 exl-id: 123087a2-9d09-4579-9185-2ccd7d25bf8d
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '1164'
+source-wordcount: '1160'
 ht-degree: 0%
 
 ---
@@ -22,8 +22,8 @@ ht-degree: 0%
 
 AEM Forms tillhandahåller anpassade arbetsflöden för att anropa följande API:er för Assembler-tjänster:
 
-* **invoke**: Anropar åtgärder som anges i in-DDX för angivna indata.
-* **toPDFA**: Konverterar dokument i PDF till PDF/A-format.
+* **invoke**: Anropar åtgärder som anges i indata-DDX för angivna indata.
+* **toPDFA**: Konverterar indatadokument från PDF till PDF/A-dokument.
 
 ### Anropa DDX-arbetsflöde {#invoke-ddx-workflow}
 
@@ -45,7 +45,7 @@ Anropa DDX-arbetsflödet kräver följande indatadokument:
 
 * **Skapa karta från PayLoad**: När du väljer det här alternativet läggs alla dokument under nyttolastmappen till i Input Document-kartan för `invoke` API i Assembler. Nodnamnet för varje dokument används som en nyckel på kartan.
 
-* **Inmatningsdokumentets karta**: Anger indatadokumentets karta. Du kan lägga till valfritt antal poster, där varje post anger dokumentets nyckel på kartan och dokumentets källa.
+* **Karta för indatadokument**: Anger kartan för indatadokumentet. Du kan lägga till valfritt antal poster, där varje post anger dokumentets nyckel på kartan och dokumentets källa.
 
 #### Miljöalternativ {#environment-options}
 
@@ -60,8 +60,8 @@ På fliken Miljöalternativ kan du ange olika bearbetningsalternativ för anrops
 
 Beroende på indata-DDX kan invoke-API:t generera flera utdatadokument. På fliken Utdatadokument kan du välja var utdatadokumentet ska sparas.
 
-1. *Spara utdata i nyttolast*: Sparar utdatadokument under nyttolastmappen, eller skriver över nyttolasten om nyttolasten är en fil.
-1. *Karta för utdatadokument*: Tillåter att du uttryckligen anger var varje utdatadokument ska sparas genom att lägga till en post per utdatadokument. Varje post anger dokumentet och var det ska sparas. Ett utdatadokument kan skriva över nyttolasten eller sparas under nyttolastmappen. Det är användbart när det finns flera utdatadokument.
+1. *Spara utdata i nyttolast*: Sparar utdatadokument under nyttolastmappen, eller skriver över nyttolasten, om nyttolasten är en fil.
+1. *Karta för utdatadokument*: Gör att du uttryckligen kan ange var varje utdatadokument ska sparas genom att lägga till en post per utdatadokument. Varje post anger dokumentet och var det ska sparas. Ett utdatadokument kan skriva över nyttolasten eller sparas under nyttolastmappen. Det är användbart när det finns flera utdatadokument.
 
 1. *Jobblogg*: Anger var jobbloggdokumentet ska sparas, vilket är praktiskt vid felsökning.
 
@@ -86,9 +86,9 @@ Ange källan till dokumentet som ska konverteras till ett PDF/A-kompatibelt doku
 
 Med konverteringsalternativen kan du ange alternativ som ändrar konverteringsprocessen för PDF/A.
 
-* *Regelefterlevnad* : Anger den PDF/A-standard som utdata PDF/A måste uppfylla.
+* *Regelefterlevnad* : Anger den PDF/A-standard som utdata från PDF/A måste uppfylla.
 * *Resultatnivå* : Anger loggnivån som ska användas för konverteringsloggarna PDF/A.
-* *Signaturer* : Anger hur signaturer i indatadokument måste bearbetas under konverteringen.
+* *Signaturer* : Anger hur signaturerna i indatadokumentet måste bearbetas under konverteringen.
 * *Färgmodell* : Anger den fördefinierade färgrymd som ska användas för utdata i PDF/A-dokument.
 * *Verifiera* Konvertering: Anger om det konverterade PDF/A-dokumentet ska verifieras för PDF/A-kompatibilitet efter konvertering.
 * *Jobbloggnivå* : Anger loggnivån som ska användas för bearbetning av loggar.
@@ -114,7 +114,7 @@ Arbetsflödet Återge formulär i PDF är en wrapper runt `renderPDFForm` Forms 
 
 #### Indatadokument {#input-documents-2}
 
-* *Mallfil*: Anger XDP-mallens plats. Det är ett obligatoriskt fält.
+* *Mallfil*: Anger platsen för XDP-mallen. Det är ett obligatoriskt fält.
 
 * *Datadokument*: Anger platsen för data-XML som behöver sammanfogas med mallen.
 
@@ -126,7 +126,7 @@ Arbetsflödet Återge formulär i PDF är en wrapper runt `renderPDFForm` Forms 
 
 * *Innehållsrot*: Anger sökvägen till mappen i databasen där fragment eller bilder som används i XDP-indatamallen lagras.
 * *Skicka URL*: Anger standardwebbadressen för sändning för det genererade PDF-formuläret.
-* *Språk*: Anger standardspråket för det genererade PDF-formuläret.
+* *Språk*: Anger standardspråkområdet för det genererade PDF-formuläret.
 * *Acrobat Version*: Anger Acrobat-målversionen för det genererade PDF-formuläret.
 * *Tagged PDF*: Anger om den genererade PDF ska vara tillgänglig.
 * *XCI-dokument*: Anger sökvägen till XCI-filen.
@@ -143,7 +143,7 @@ Arbetsflödet Generera icke-interaktiv PDF är en wrapper runt `generatePDFOutpu
 
 #### Indatadokument {#input-documents-3}
 
-* *Mallfil*: Anger XDP-mallens plats. Det är ett obligatoriskt fält.
+* *Mallfil*: Anger platsen för XDP-mallen. Det är ett obligatoriskt fält.
 
 * *Datadokument*: Anger platsen för den data-XML som behöver sammanfogas med mallen.
 

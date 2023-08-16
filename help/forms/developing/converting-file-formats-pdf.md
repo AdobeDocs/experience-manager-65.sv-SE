@@ -1,7 +1,7 @@
 ---
 title: Konvertera mellan filformat och PDF
 seo-title: Converting Between File Formats and PDF
-description: Använd tjänsten Generate PDF för att konvertera inbyggda filformat till PDF. Generate PDF konverterar också PDF till andra filformat och optimerar storleken på PDF-dokument.
+description: Använd tjänsten Generate PDF för att konvertera inbyggda filformat till PDF. Tjänsten Generate PDF konverterar också PDF till andra filformat och optimerar storleken på PDF-dokument.
 seo-description: Use the Generate PDF service to convert native file formats to PDF. Generate PDF service also converts PDF to other file formats and optimizes the size of PDF documents.
 uuid: f72ad603-c996-4d48-9bfc-bed7bf776af6
 contentOwner: admin
@@ -11,7 +11,7 @@ topic-tags: operations
 discoiquuid: 180cac3f-6378-42bc-9a47-60f9f08a7103
 role: Developer
 exl-id: 10535740-e3c2-4347-a88f-86706ad699b4
-source-git-commit: 0c7dba43dad8608b4a5de271e1e44942c950fb16
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
 source-wordcount: '7850'
 ht-degree: 0%
@@ -40,13 +40,13 @@ Tjänsten Generate PDF använder inbyggda program för att konvertera följande 
 
 >[!NOTE]
 >
->Tjänsten Generate PDF stöder inte 64-bitarsversionerna av OpenOffice.
+Tjänsten Generate PDF stöder inte 64-bitarsversionerna av OpenOffice.
 
 * Adobe Photoshop® CS2 för att konvertera PSD (endast Windows)
 
 >[!NOTE]
 >
->Photoshop CS3 och CS4 stöds inte eftersom de inte har stöd för Windows Server 2003 eller Windows Server 2008.
+Photoshop CS3 och CS4 stöds inte eftersom de inte stöder Windows Server 2003 eller Windows Server 2008.
 
 * Adobe FrameMaker® 7.2 och 8 för att konvertera FM (endast Windows)
 * Adobe PageMaker® 7.0 för att konvertera PMD, PM6, P65 och PM (endast Windows)
@@ -72,8 +72,8 @@ Tjänsten Generate PDF konverterar PDF till följande filformat (endast Windows)
 
 Tjänsten Generera PDF kräver att du utför följande administrativa uppgifter:
 
-* Installera nödvändiga inbyggda program på den dator som är värd för AEM Forms
-* Installera Adobe Acrobat Professional eller Acrobat Pro Extended 9.2 på den dator som är värd för AEM Forms
+* Installera nödvändiga inbyggda program på den dator där AEM Forms finns
+* Installera Adobe Acrobat Professional eller Acrobat Pro Extended 9.2 på den dator där AEM Forms finns
 * Utför konfigurationsuppgifter efter installation
 
 Dessa åtgärder beskrivs i Installera och distribuera AEM formulär med JBoss-tangenten.
@@ -86,7 +86,7 @@ Du kan utföra följande uppgifter med tjänsten Generate PDF:
 
 >[!NOTE]
 >
->Mer information om tjänsten Generate PDF finns i [Tjänstreferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
+Mer information om tjänsten Generate PDF finns i [Tjänstreferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
 
 ## Konvertera Word-dokument till PDF-dokument {#converting-word-documents-to-pdf-documents}
 
@@ -94,11 +94,11 @@ I det här avsnittet beskrivs hur du kan använda Generate PDF API för att prog
 
 >[!NOTE]
 >
->Mer information om ytterligare filformat finns i [Stöd för fler inbyggda filformat](converting-file-formats-pdf.md#adding-support-for-additional-native-file-formats).
+Mer information om ytterligare filformat finns i [Stöd för fler filformat](converting-file-formats-pdf.md#adding-support-for-additional-native-file-formats).
 
 >[!NOTE]
 >
->Mer information om tjänsten Generate PDF finns i [Tjänstreferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
+Mer information om tjänsten Generate PDF finns i [Tjänstreferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
 
 ### Sammanfattning av steg {#summary-of-steps}
 
@@ -148,7 +148,7 @@ Konvertera ett Microsoft Word-dokument till ett PDF-dokument med hjälp av API:t
 
 1. Inkludera projektfiler.
 
-   Inkludera JAR-klientfiler, t.ex. adobe-generatepdf-client.jar, i Java-projektets klassökväg.
+   Inkludera JAR-klientfiler, som adobe-generatepdf-client.jar, i Java-projektets klassökväg.
 
 1. Skapa en Generate PDF-klient.
 
@@ -183,9 +183,8 @@ Konvertera ett Microsoft Word-dokument till ett PDF-dokument med hjälp av API:t
 
    Om du använde `createPDF2` för att få fram loggdokumentet (gäller inte konverteringar i HTML), utföra följande åtgärder:
 
-   * Anropa `CreatePDFResult` objektets `getLogDocument` -metod. Detta returnerar `com.adobe.idp.Document` -objekt.
+   * Anropa `CreatePDFResult` objektets `getLogDocument` -metod. Detta returnerar en `com.adobe.idp.Document` -objekt.
    * Anropa `com.adobe.idp.Document` objektets `copyToFile` metod för att extrahera loggdokumentet.
-
 
 **Se även**
 
@@ -207,13 +206,13 @@ Konvertera ett Microsoft Word-dokument till ett PDF-dokument med hjälp av API:t
 
    >[!NOTE]
    >
-   >Ersätt `localhost` med IP-adressen till den server som är värd för AEM Forms.
+   Ersätt `localhost` med IP-adressen till den server där AEM Forms finns.
 
 1. Skapa en Generate PDF-klient.
 
    * Skapa en `GeneratePDFServiceClient` genom att använda dess standardkonstruktor.
    * Skapa en `GeneratePDFServiceClient.Endpoint.Address` genom att använda `System.ServiceModel.EndpointAddress` konstruktor. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/GeneratePDFService?blob=mtom`.) Du behöver inte använda `lc_version` -attribut. Ange dock `?blob=mtom`.
-   * Skapa en `System.ServiceModel.BasicHttpBinding` genom att hämta värdet för `GeneratePDFServiceClient.Endpoint.Binding` fält. Sänd returvärdet till `BasicHttpBinding`.
+   * Skapa en `System.ServiceModel.BasicHttpBinding` genom att hämta värdet för `GeneratePDFServiceClient.Endpoint.Binding` fält. Skicka returvärdet till `BasicHttpBinding`.
    * Ange `System.ServiceModel.BasicHttpBinding` objektets `MessageEncoding` fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
    * Aktivera grundläggande HTTP-autentisering genom att utföra följande åtgärder:
 
@@ -228,7 +227,7 @@ Konvertera ett Microsoft Word-dokument till ett PDF-dokument med hjälp av API:t
    * Skapa en `System.IO.FileStream` genom att anropa dess konstruktor. Skicka ett strängvärde som representerar filplatsen för filen som ska konverteras och läget som filen ska öppnas i.
    * Skapa en bytearray som lagrar innehållet i `System.IO.FileStream` -objekt. Du kan bestämma storleken på bytearrayen genom att hämta `System.IO.FileStream` objektets `Length` -egenskap.
    * Fylla i bytearrayen med strömdata genom att anropa `System.IO.FileStream` objektets `Read` och skickar bytearrayen, startpositionen och den flödeslängd som ska läsas.
-   * Fyll i `BLOB` objekt genom att tilldela det `MTOM` egenskapen för bytearrayens innehåll.
+   * Fyll i `BLOB` objekt genom att tilldela till dess `MTOM` egenskapen för bytearrayens innehåll.
 
 1. Konvertera filen till ett PDF-dokument.
 
@@ -265,7 +264,7 @@ I det här avsnittet beskrivs hur du kan använda Generate PDF API för att prog
 
 >[!NOTE]
 >
->Mer information om tjänsten Generate PDF finns i [Tjänstreferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
+Mer information om tjänsten Generate PDF finns i [Tjänstreferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
 
 ### Sammanfattning av steg {#summary_of_steps-1}
 
@@ -315,7 +314,7 @@ Konvertera ett HTML-dokument till ett PDF-dokument med hjälp av API:t Generate 
 
 1. Inkludera projektfiler.
 
-   Inkludera JAR-klientfiler, t.ex. adobe-generatepdf-client.jar, i Java-projektets klassökväg.
+   Inkludera JAR-klientfiler, som adobe-generatepdf-client.jar, i Java-projektets klassökväg.
 
 1. Skapa en Generate PDF-klient.
 
@@ -339,7 +338,7 @@ Konvertera ett HTML-dokument till ett PDF-dokument med hjälp av API:t Generate 
 
    The `htmlToPDF2` returnerar en `HtmlToPdfResult` objekt som innehåller det nya PDF-dokumentet som skapades. Utför följande åtgärder för att hämta det nya PDF-dokumentet:
 
-   * Anropa `HtmlToPdfResult` objektets `getCreatedDocument` -metod. Detta returnerar `com.adobe.idp.Document` -objekt.
+   * Anropa `HtmlToPdfResult` objektets `getCreatedDocument` -metod. Detta returnerar en `com.adobe.idp.Document` -objekt.
    * Anropa `com.adobe.idp.Document` objektets `copyToFile` metod för att extrahera PDF-dokumentet från det objekt som skapades i föregående steg.
 
 **Se även**
@@ -364,13 +363,13 @@ Konvertera HTML-innehåll till ett PDF-dokument med hjälp av API:t Generate PDF
 
    >[!NOTE]
    >
-   >Ersätt `localhost` med IP-adressen till den server som är värd för AEM Forms.
+   Ersätt `localhost` med IP-adressen till den server där AEM Forms finns.
 
 1. Skapa en Generate PDF-klient.
 
    * Skapa en `GeneratePDFServiceClient` genom att använda dess standardkonstruktor.
    * Skapa en `GeneratePDFServiceClient.Endpoint.Address` genom att använda `System.ServiceModel.EndpointAddress` konstruktor. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/GeneratePDFService?blob=mtom`.) Du behöver inte använda `lc_version` -attribut. Ange dock `?blob=mtom`.
-   * Skapa en `System.ServiceModel.BasicHttpBinding` genom att hämta värdet för `GeneratePDFServiceClient.Endpoint.Binding` fält. Sänd returvärdet till `BasicHttpBinding`.
+   * Skapa en `System.ServiceModel.BasicHttpBinding` genom att hämta värdet för `GeneratePDFServiceClient.Endpoint.Binding` fält. Skicka returvärdet till `BasicHttpBinding`.
    * Ange `System.ServiceModel.BasicHttpBinding` objektets `MessageEncoding` fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
    * Aktivera grundläggande HTTP-autentisering genom att utföra följande åtgärder:
 
@@ -415,7 +414,7 @@ I det här avsnittet beskrivs hur du kan använda Generate PDF Java API och webb
 
 >[!NOTE]
 >
->Mer information om tjänsten Generate PDF finns i [Tjänstreferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
+Mer information om tjänsten Generate PDF finns i [Tjänstreferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
 
 ### Sammanfattning av steg {#summary_of_steps-2}
 
@@ -465,7 +464,7 @@ Konvertera ett PDF-dokument till en RTF-fil med hjälp av Java-API:t (Generate P
 
 1. Inkludera projektfiler.
 
-   Inkludera JAR-klientfiler, t.ex. adobe-generatepdf-client.jar, i Java-projektets klassökväg.
+   Inkludera JAR-klientfiler, som adobe-generatepdf-client.jar, i Java-projektets klassökväg.
 
 1. Skapa en Generate PDF-klient.
 
@@ -492,7 +491,7 @@ Konvertera ett PDF-dokument till en RTF-fil med hjälp av Java-API:t (Generate P
 
    Utför följande åtgärder för att hämta den nya filen:
 
-   * Anropa `ExportPDFResult` objektets `getConvertedDocument` -metod. Detta returnerar `com.adobe.idp.Document` -objekt.
+   * Anropa `ExportPDFResult` objektets `getConvertedDocument` -metod. Detta returnerar en `com.adobe.idp.Document` -objekt.
    * Anropa `com.adobe.idp.Document` objektets `copyToFile` metod för att extrahera det nya dokumentet.
 
 **Se även**
@@ -515,13 +514,13 @@ Konvertera ett PDF-dokument till en RTF-fil med hjälp av API:t för Generate PD
 
    >[!NOTE]
    >
-   >Ersätt `localhost` med IP-adressen till den server som är värd för AEM Forms.
+   Ersätt `localhost` med IP-adressen till den server där AEM Forms finns.
 
 1. Skapa en Generate PDf-klient.
 
    * Skapa en `GeneratePDFServiceClient` genom att använda dess standardkonstruktor.
    * Skapa en `GeneratePDFServiceClient.Endpoint.Address` genom att använda `System.ServiceModel.EndpointAddress` konstruktor. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/GeneratePDFService?blob=mtom`.) Du behöver inte använda `lc_version` -attribut. Ange dock `?blob=mtom`.
-   * Skapa en `System.ServiceModel.BasicHttpBinding` genom att hämta värdet för `GeneratePDFServiceClient.Endpoint.Binding` fält. Sänd returvärdet till `BasicHttpBinding`.
+   * Skapa en `System.ServiceModel.BasicHttpBinding` genom att hämta värdet för `GeneratePDFServiceClient.Endpoint.Binding` fält. Skicka returvärdet till `BasicHttpBinding`.
    * Ange `System.ServiceModel.BasicHttpBinding` objektets `MessageEncoding` fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
    * Aktivera grundläggande HTTP-autentisering genom att utföra följande åtgärder:
 
@@ -532,11 +531,11 @@ Konvertera ett PDF-dokument till en RTF-fil med hjälp av API:t för Generate PD
 
 1. Hämta det PDF-dokument som ska konverteras.
 
-   * Skapa en `BLOB` genom att använda dess konstruktor. The `BLOB` används för att lagra ett PDF-dokument som konverteras.
+   * Skapa en `BLOB` genom att använda dess konstruktor. The `BLOB` -objektet används för att lagra ett PDF-dokument som konverteras.
    * Skapa en `System.IO.FileStream` genom att anropa dess konstruktor och skicka ett strängvärde som representerar filplatsen för PDF-dokumentet och läget som filen ska öppnas i.
    * Skapa en bytearray som lagrar innehållet i `System.IO.FileStream` -objekt. Du kan bestämma storleken på bytearrayen genom att hämta `System.IO.FileStream` objektets `Length` -egenskap.
    * Fylla i bytearrayen med strömdata genom att anropa `System.IO.FileStream` objektets `Read` och skickar bytearrayen, startpositionen och den flödeslängd som ska läsas.
-   * Fyll i `BLOB` objekt genom att tilldela det `MTOM` egenskapen för bytearrayens innehåll.
+   * Fyll i `BLOB` objekt genom att tilldela till dess `MTOM` egenskapen för bytearrayens innehåll.
 
 1. Konvertera dokumentet PDF.
 
@@ -564,19 +563,19 @@ Konvertera ett PDF-dokument till en RTF-fil med hjälp av API:t för Generate PD
 
 [Anropa AEM Forms med SwaRef](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
 
-## Stöd för fler inbyggda filformat {#adding-support-for-additional-native-file-formats}
+## Stöd för fler filformat {#adding-support-for-additional-native-file-formats}
 
 I det här avsnittet beskrivs hur du lägger till stöd för fler inbyggda filformat. Här finns en översikt över interaktionen mellan Generate PDF-tjänsten och de inbyggda program som den här tjänsten använder för att konvertera inbyggda filformat till PDF.
 
 I det här avsnittet förklaras även följande:
 
-* Hur man ändrar det svar som tjänsten Generate PDF ger de inbyggda programmen som den här produkten redan använder för att konvertera inbyggda filformat till PDF
+* Hur man ändrar det svar som tjänsten Generate PDF ger de inbyggda programmen som redan används för att konvertera inbyggda filformat till PDF
 * Interaktionerna mellan tjänsten Generate PDF, komponenten Generate PDF Application Monitor (AppMon) och inbyggda program som Microsoft Word
 * Rollerna som XML-grammatiken spelar i dessa interaktioner
 
 ### Komponentinteraktioner {#component-interactions}
 
-Tjänsten Generate PDF konverterar de ursprungliga filformaten genom att anropa det program som är kopplat till filformatet och sedan interagera med programmet för att skriva ut dokumentet med standardskrivaren. Standardskrivaren måste ställas in som Adobe PDF-skrivare.
+Tjänsten Generate PDF konverterar de ursprungliga filformaten genom att anropa det program som är associerat med filformatet och sedan interagera med programmet för att skriva ut dokumentet med standardskrivaren. Standardskrivaren måste ställas in som Adobe PDF-skrivare.
 
 Den här bilden visar vilka komponenter och drivrutiner som har inbyggt programstöd. Där omnämns också XML-grammatiken som påverkar interaktionen.
 
@@ -587,7 +586,7 @@ I det här dokumentet används termen *internt program* för att ange vilket pro
 *AppMon* är en företagskomponent som interagerar med ett systemspecifikt program på samma sätt som en användare navigerar genom de dialogrutor som visas i det programmet. Den XML-grammatik som används av AppMon för att instruera ett program, som Microsoft Word, att öppna och skriva ut en fil omfattar följande sekventiella uppgifter:
 
 1. Öppna filen genom att välja Arkiv > Öppna
-1. se till att dialogrutan Öppna visas, om inte, hantera felet
+1. Kontrollera att dialogrutan Öppna visas. Om inte hanterar du felet
 1. Ange filnamnet i fältet Filnamn och klicka sedan på knappen Öppna
 1. Kontrollera att filen verkligen öppnas
 1. Öppna dialogrutan Skriv ut genom att välja Arkiv > Skriv ut
@@ -597,7 +596,7 @@ AppMon använder Win32-API:er av standardtyp för att interagera med tredjeparts
 
 På grund av en begränsning med dessa Win32 API:er kan AppMon inte skicka dessa UI-händelser till vissa specifika typer av fönster, till exempel flytande menyrader (som finns i vissa program som TextPad) och vissa typer av dialogrutor vars innehåll inte kan hämtas med Win32 API:er.
 
-Det är lätt att se en flytande menyrad. Det kanske inte går att identifiera särskilda typer av dialogrutor enbart genom visuell kontroll. Du behöver ett tredjepartsprogram som Microsoft Spy++ (ingår i Microsoft Visual C++-utvecklingsmiljön) eller motsvarande WinID (som kan laddas ned kostnadsfritt från [https://www.dennisbabkin.com/php/download.php?what=WinID](https://www.dennisbabkin.com/php/download.php?what=WinID)) för att undersöka en dialogruta för att avgöra om AppMon kan interagera med den med Win32-standardprogrammeringsgränssnitt.
+Det är enkelt att se en flytande menyrad, men det är inte säkert att det går att identifiera särskilda typer av dialogrutor bara genom visuell kontroll. Du behöver ett tredjepartsprogram som Microsoft Spy++ (ingår i Microsoft Visual C++-utvecklingsmiljön) eller motsvarande WinID (som kan laddas ned kostnadsfritt från [https://www.dennisbabkin.com/php/download.php?what=WinID](https://www.dennisbabkin.com/php/download.php?what=WinID)) för att undersöka en dialogruta för att avgöra om AppMon kan interagera med den med Win32-standardprogrammeringsgränssnitt.
 
 Om WinID kan extrahera dialoginnehåll som text, underfönster, fönsterklass-ID och så vidare, kan AppMon också göra det.
 
@@ -614,27 +613,27 @@ I den här tabellen visas vilken typ av information som används vid utskrift av
  <tbody>
   <tr>
    <td><p>Administrativa inställningar </p></td>
-   <td><p>Innehåller inställningar för PDF, skyddsinställningar och filtypsinställningar. </p><p>Filtypsinställningar associerar filnamnstillägg med motsvarande systemspecifika program. Filtypsinställningarna anger även inbyggda programinställningar som används för att skriva ut inbyggda filer. </p></td>
+   <td><p>Innehåller inställningar för PDF, skyddsinställningar och filtypsinställningar. </p><p>Filtypsinställningarna associerar filnamnstillägg med motsvarande systemspecifika program. Filtypsinställningarna anger även inbyggda programinställningar som används för att skriva ut inbyggda filer. </p></td>
    <td><p>Om du vill ändra inställningarna för ett inbyggt program som redan stöds anger systemadministratören filtypsinställningarna i administrationskonsolen. </p><p>Om du vill lägga till stöd för ett nytt inbyggt filformat måste du redigera filen manuellt. (Se <a href="converting-file-formats-pdf.md#adding-or-modifying-support-for-a-native-file-format">Lägga till eller ändra stöd för ett ursprungligt filformat</a>.) </p></td>
   </tr>
   <tr>
    <td><p>Skript </p></td>
    <td><p>Anger interaktioner mellan Generate PDF-tjänsten och ett systemspecifikt program. Sådana interaktioner dirigerar vanligtvis programmet till Adobe PDF-drivrutinen för att skriva ut en fil. </p><p>Skriptet innehåller instruktioner som instruerar det ursprungliga programmet att öppna specifika dialogrutor och som ger specifika svar på fält och knappar i dessa dialogrutor. </p></td>
-   <td><p>Tjänsten Generate PDF innehåller skriptfiler för alla systemspecifika program som stöds. Du kan ändra dessa filer med ett XML-redigeringsprogram.</p><p>Om du vill lägga till stöd för ett nytt inbyggt program måste du skapa en ny skriptfil. (Se <a href="converting-file-formats-pdf.md#creating-or-modifying-an-additional-dialog-xml-file-for-a-native-application">Skapa eller ändra ytterligare en dialogrute-XML-fil för ett ursprungligt program</a>.) </p></td>
+   <td><p>Tjänsten Generate PDF innehåller skriptfiler för alla systemspecifika program som stöds. Du kan ändra dessa filer med ett XML-redigeringsprogram.</p><p>Om du vill lägga till stöd för ett nytt systemspecifikt program måste du skapa en ny skriptfil. (Se <a href="converting-file-formats-pdf.md#creating-or-modifying-an-additional-dialog-xml-file-for-a-native-application">Skapa eller ändra ytterligare en dialogrute-XML-fil för ett ursprungligt program</a>.) </p></td>
   </tr>
   <tr>
    <td><p>Allmänna instruktioner i dialogrutan </p></td>
    <td><p>Anger hur du ska svara på dialogrutor som är gemensamma för flera program. Sådana dialogrutor genereras av operativsystem, hjälpprogram (till exempel PDFMaker) och drivrutiner. </p><p>Filen som innehåller den här informationen är appmon.global.en_US.xml.</p></td>
-   <td><p>Ändra inte den här filen. </p></td>
+   <td><p>Ändra inte filen. </p></td>
   </tr>
   <tr>
    <td><p>Programspecifika dialogruteinstruktioner</p></td>
    <td><p>Anger hur programspecifika dialogrutor ska besvaras. </p><p>Filen som innehåller den här informationen är giltig.<i>`[appname]`</i>.dialog.<i>`[locale]`</i>.xml (till exempel appmon.word.en_US.xml).</p></td>
-   <td><p>Ändra inte den här filen. </p><p>Information om hur du lägger till dialogruteinstruktioner för ett nytt inbyggt program finns i <a href="converting-file-formats-pdf.md#creating_or_modifying_an_additional_dialog_xml_file_for_a_native_application">Skapa eller ändra ytterligare en dialogrute-XML-fil för ett ursprungligt program</a>.</p></td>
+   <td><p>Ändra inte filen. </p><p>Information om hur du lägger till dialogruteinstruktioner för ett nytt inbyggt program finns i <a href="converting-file-formats-pdf.md#creating_or_modifying_an_additional_dialog_xml_file_for_a_native_application">Skapa eller ändra ytterligare en dialogrute-XML-fil för ett ursprungligt program</a>.</p></td>
   </tr>
   <tr>
    <td><p>Ytterligare programspecifika dialogruteinstruktioner </p></td>
-   <td><p>Anger åsidosättningar och tillägg till programspecifika dialogruteinstruktioner. I avsnittet visas ett exempel på sådan information. </p><p>Filen som innehåller den här informationen är giltig.<i>`[appname]`</i>.addition.<i>`[locale]`</i>.xml. Ett exempel är appmon.addition.en_US.xml.</p></td>
+   <td><p>Anger åsidosättningar och tillägg till programspecifika dialogruteinstruktioner. I avsnittet visas ett exempel på sådan information. </p><p>Filen som innehåller den här informationen är giltig.<i>`[appname]`</i>.addition.<i>`[locale]`</i>.xml Ett exempel är appmon.addition.en_US.xml.</p></td>
    <td><p>Filer av den här typen kan skapas och ändras med ett XML-redigeringsprogram. (Se <a href="converting-file-formats-pdf.md#creating-or-modifying-an-additional-dialog-xml-file-for-a-native-application">Skapa eller ändra ytterligare en dialogrute-XML-fil för ett ursprungligt program</a>.) </p><p><strong>Viktigt</strong>: Du måste skapa ytterligare programspecifika dialogruteinstruktioner för varje systemspecifikt program som servern stöder. </p></td>
   </tr>
  </tbody>
@@ -652,7 +651,7 @@ I det här avsnittet och i nästa avsnitt används olika terminologi för dialog
 
 När det här avsnittet och nästa avsnitt beskriver dialogrutor och deras komponenter ur användarens perspektiv, termer som *dialogruta*, *knapp*, *fält* och *kombinationsruta* används.
 
-När det här avsnittet och nästa avsnitt beskriver dialogrutor och deras komponenter utifrån deras interna representation är termen *window-element* används. Den interna representationen av fönsterelement är en hierarki där varje fönsterelementinstans identifieras med etiketter. Fönsterelementinstansen beskriver också dess fysiska egenskaper och beteende.
+När det här avsnittet och nästa avsnitt beskriver dialogrutor och deras komponenter utifrån deras interna representation är termen *window-element* används. Den interna representationen av fönsterelement är en hierarki, där varje fönsterelementinstans identifieras med etiketter. Fönsterelementinstansen beskriver också dess fysiska egenskaper och beteende.
 
 Från användarens perspektiv visar dialogrutorna och deras komponenter olika beteenden, där vissa dialogruteelement är dolda tills de aktiveras. Från ett internt representationsperspektiv finns det ingen sådan beteendefråga. Den interna representationen av en dialogruta liknar till exempel komponenterna i den, med undantag för att komponenterna är kapslade i dialogrutan.
 
@@ -670,7 +669,7 @@ Hierarki för skript och dialogrute-XML
 
 A *script XML-fil* anger en serie steg som instruerar det inbyggda programmet att navigera till vissa fönsterelement och sedan ange svar på dessa element. De flesta svar är text eller tangenttryckningar som motsvarar de indata en användare skulle ge till ett fält, en kombinationsruta eller en knapp i motsvarande dialogruta.
 
-Generate PDF-tjänstens stöd för skript-XML-filer avser att instruera ett program att skriva ut en intern fil. Skript-XML-filer kan dock användas för att utföra alla uppgifter som en användare kan utföra när han eller hon interagerar med programmets dialogrutor.
+Avsikten med Generate PDF-tjänstens stöd för skript-XML-filer är att instruera ett program att skriva ut en intern fil. Skript-XML-filer kan dock användas för att utföra alla åtgärder som en användare kan utföra när han eller hon interagerar med programmets dialogrutor.
 
 Stegen i en skript-XML-fil körs i ordning, utan möjlighet till förgreningar. Det enda villkorstest som stöds är timeout/retry, vilket gör att ett skript avslutas om ett steg inte slutförs korrekt inom en viss tidsperiod och efter ett visst antal försök.
 
@@ -686,13 +685,13 @@ A *dialog-XML-fil* används för att ange hur tjänsten Generate PDF ska svara p
 
 När systemet eller det inbyggda programmet visar en dialogruta som inte hanteras av den XML-fil som för närvarande körs, söker tjänsten Generate PDF igenom XML-filer i dialogrutan i den här ordningen och stoppar när en matchning hittas:
 
-* appmon.`[appname]`.additional.`[locale]`.xml
+* appmon.`[appname]`.additional.`[locale]`XML
 * appmon.`[appname]`.`[locale]`.xml (Ändra inte den här filen.)
 * appmon.global.`[locale]`.xml (Ändra inte den här filen.)
 
-Om tjänsten Generate PDF hittar en matchning för dialogrutan stängs den av genom att den skickas med tangentbordet eller någon annan åtgärd som har angetts för dialogrutan. Om instruktionerna för dialogrutan anger ett avbrottsmeddelande avbryter tjänsten Generate PDF det jobb som körs och genererar ett felmeddelande. Ett sådant meddelande skulle anges i `abortMessage` -element i skriptets XML-grammatik.
+Om tjänsten Generate PDF hittar en matchning för dialogrutan stängs den av genom att den skickas med tangentbordet eller någon annan åtgärd som har angetts för dialogrutan. Om instruktionerna för dialogrutan anger ett avbrottsmeddelande avbryter tjänsten Generate PDF det jobb som körs och genererar ett felmeddelande. Ett sådant meddelande skulle anges i `abortMessage` i skriptets XML-grammatik.
 
-Om tjänsten Generate PDF påträffar en dialogruta som inte beskrivs i någon av de tidigare listade filerna, infogar tjänsten Generate PDF dialogrutans beskrivning i loggfilsposten. Tidsgränsen för det jobb som körs för närvarande har uppnåtts. Du kan sedan använda informationen i loggfilen för att skapa nya instruktioner i XML-filen för ytterligare dialogrutor för det ursprungliga programmet.
+Om tjänsten Generate PDF påträffar en dialogruta som inte beskrivs i någon av de tidigare listade filerna, infogar tjänsten Generate PDF dialogrutans bildtext i loggfilsposten. Tidsgränsen för det jobb som körs för närvarande har uppnåtts. Du kan sedan använda informationen i loggfilen för att skapa nya instruktioner i XML-filen för ytterligare dialogrutor för det ursprungliga programmet.
 
 ### Lägga till eller ändra stöd för ett ursprungligt filformat {#adding-or-modifying-support-for-a-native-file-format}
 
@@ -706,7 +705,7 @@ Dialogrutan och skriptets XML-filer kräver att du identifierar det fönsterelem
 
 Du kan enkelt identifiera en dialogruta med den bildtext som visas i namnlisten. Du måste dock använda ett verktyg som Microsoft Spy++ för att identifiera element på lägre nivå i fönstret. Fönsterelementen på den lägre nivån kan identifieras med hjälp av en mängd olika attribut, som inte är uppenbara. Dessutom kan varje inbyggt program identifiera sitt fönsterelement på olika sätt. Det finns därför flera sätt att identifiera ett fönsterelement. Här är den föreslagna ordningen för att överväga identifiering av fönsterelement:
 
-1. Själva bildtexten om den är unik
+1. Beskrivningen är unik
 1. Kontroll-ID, som kan vara unikt för en viss dialogruta
 1. Klassnamn, som kan vara unika
 
@@ -731,10 +730,10 @@ Dialogrutan och skriptfilerna finns i filen appmondata.jar. Innan du kan ändra 
 
 När du har lagt till dessa XML-filer i filen adobe-appmondata.jar måste du distribuera om komponenten GeneratePDF. Så här lägger du till dialogrute- och skript-XML-filer i filen adobe-appmondata.jar:
 
-1. Använd ett verktyg som WinZip eller WinRAR och öppna filen adobe-livecycle-native-jboss-x86_win32.earfile > adobe-Native2PDFSvc.war\WEB-INF\lib > adobe-native.jar > Native2PDFSvc-native.jar\bin > adobe filen obe-appmondata.jar.
-1. Lägg till dialogruta- och skript-XML-filer i filen appmondata.jar eller ändra befintliga XML-filer i filen. (Se [Skapa eller ändra en skript-XML-fil för ett program](converting-file-formats-pdf.md#creating-or-modifying-a-script-xml-file-for-a-native-application)och [Skapa eller ändra ytterligare en dialogrute-XML-fil för ett ursprungligt program](converting-file-formats-pdf.md#creating-or-modifying-an-additional-dialog-xml-file-for-a-native-application).)
+1. Använd ett verktyg som WinZip eller WinRAR och öppna filen adobe-livecycle-native-jboss-x86_win32.earfile > adobe-Native2PDFSvc.war\WEB-INF\lib > adobe-native.jar > Native2PDFSvc-native.jar\bin > filen obe-appmondata.jar.
+1. Lägg till dialogruta- och skript-XML-filer i filen appmondata.jar eller ändra befintliga XML-filer i filen. (Se [Skapa eller ändra en skript-XML-fil för ett internt program](converting-file-formats-pdf.md#creating-or-modifying-a-script-xml-file-for-a-native-application)och [Skapa eller ändra ytterligare en dialogrute-XML-fil för ett ursprungligt program](converting-file-formats-pdf.md#creating-or-modifying-an-additional-dialog-xml-file-for-a-native-application).)
 1. Öppna adobe-generatepdf-dsc.jar > adobe-appmondata.jar med ett verktyg som WinZip eller WinRAR.
-1. Lägg till dialogruta- och skript-XML-filer i filen appmondata.jar eller ändra befintliga XML-filer i filen. (Se [Skapa eller ändra en skript-XML-fil för ett program](converting-file-formats-pdf.md#creating-or-modifying-a-script-xml-file-for-a-native-application)och [Skapa eller ändra ytterligare en dialogrute-XML-fil för ett ursprungligt program](converting-file-formats-pdf.md#creating-or-modifying-an-additional-dialog-xml-file-for-a-native-application).) När du har lagt till XML-filerna i filen adobe-appmondata.jar lägger du in den nya filen adobe-appmondata.jar i filen adobe-generatepdf-dsc.jar.
+1. Lägg till dialogruta- och skript-XML-filer i filen appmondata.jar eller ändra befintliga XML-filer i filen. (Se [Skapa eller ändra en skript-XML-fil för ett internt program](converting-file-formats-pdf.md#creating-or-modifying-a-script-xml-file-for-a-native-application)och [Skapa eller ändra ytterligare en dialogrute-XML-fil för ett ursprungligt program](converting-file-formats-pdf.md#creating-or-modifying-an-additional-dialog-xml-file-for-a-native-application).) När du har lagt till XML-filerna i filen adobe-appmondata.jar lägger du in den nya filen adobe-appmondata.jar i filen adobe-generatepdf-dsc.jar.
 1. Om du har lagt till stöd för ytterligare ett inbyggt filformat skapar du en systemmiljövariabel som anger programmets sökväg (se [Skapa en miljövariabel för att hitta det inbyggda programmet](converting-file-formats-pdf.md#creating-an-environment-variable-to-locate-the-native-application).)
 
 **Så här distribuerar du om komponenten GeneratePDF**
@@ -748,10 +747,10 @@ När du har lagt till dessa XML-filer i filen adobe-appmondata.jar måste du dis
 1. Expandera komponenten GeneratePDF, välj Tjänstbeskrivare och högerklicka sedan på GeneratePDFService och välj Aktivera tjänst.
 1. Ange tillämpliga konfigurationsvärden i konfigurationsdialogrutan som visas. Om du lämnar dessa värden tomma används standardkonfigurationsvärdena.
 1. Högerklicka på GeneratePDF och välj Start Component (Starta komponent).
-1. Expandera Aktiva tjänster. En grön pil visas bredvid tjänstnamnet om det körs. Annars är tjänsten i stoppat läge.
+1. Utöka aktiva tjänster. En grön pil visas bredvid tjänstnamnet om det körs. Annars är tjänsten i stoppat läge.
 1. Om tjänsten är stoppad högerklickar du på tjänstnamnet och väljer Starta tjänst.
 
-### Skapa eller ändra en skript-XML-fil för ett program {#creating-or-modifying-a-script-xml-file-for-a-native-application}
+### Skapa eller ändra en skript-XML-fil för ett internt program {#creating-or-modifying-a-script-xml-file-for-a-native-application}
 
 Om du vill dirigera filer till ett nytt originalprogram måste du skapa en skript-XML-fil för det programmet. Om du vill ändra hur tjänsten Generate PDF interagerar med ett program som redan stöds måste du ändra skriptet för det programmet.
 
@@ -799,8 +798,8 @@ Du kan använda reguljära uttryck i beskrivningsspecifikationer. Tjänsten Gene
 
 Du måste beställa `window` och `windowList` element enligt följande:
 
-* Vid flera `window` -element visas som underordnade i `windowList` eller `dialog` element, beställa dessa `window` -element i fallande ordning, med längden på `caption` namn som anger positionen i ordningen.
-* Vid flera `windowList` elementen visas i `window` element, beställa dessa `windowList` -element i fallande ordning, med längden på `caption` attribut för den första `indexes/`-element som anger positionen i ordningen.
+* Vid flera `window` -element visas som underordnade i `windowList` eller `dialog` element, beställa dessa `window` i fallande ordning, med längden på `caption` namn som anger positionen i ordningen.
+* Vid flera `windowList` elementen visas i en `window` element, beställa dessa `windowList` i fallande ordning, med längden på `caption` den första `indexes/`-element som anger positionen i ordningen.
 
 **Ordna fönsterelement i en dialogrutefil**
 
@@ -850,7 +849,7 @@ Om du skapar ett skript för ett internt program som inte stöds tidigare, måst
 
 >[!NOTE]
 >
->I det här sammanhanget innebär termen ytterligare innehållet i `appmon.[applicationname].addition.[locale].xml` -fil. En sådan fil anger åsidosättningar och tillägg till XML-filen i dialogrutan.
+I det här sammanhanget innebär termen ytterligare innehållet i `appmon.[applicationname].addition.[locale].xml` -fil. En sådan fil anger åsidosättningar och tillägg till XML-filen i dialogrutan.
 
 Du kan också ändra XML-filen för ytterligare dialogrutor för ett internt program för följande syften:
 
@@ -863,7 +862,7 @@ Namnet på XML-filen för ytterligare dialogrutor måste ha formatet `appmon.[ap
 
 >[!NOTE]
 >
->Inget av de allmänna program som anges i konfigurationsfilen native2pdfconfig.xml har en primär dialogrute-XML-fil. Avsnittet [Lägga till eller ändra stöd för ett ursprungligt filformat](converting-file-formats-pdf.md#adding-or-modifying-support-for-a-native-file-format) beskriver sådana specifikationer.
+Inget av de allmänna program som anges i konfigurationsfilen native2pdfconfig.xml har en primär dialogrute-XML-fil. Avsnittet [Lägga till eller ändra stöd för ett ursprungligt filformat](converting-file-formats-pdf.md#adding-or-modifying-support-for-a-native-file-format) beskriver sådana specifikationer.
 
 Du måste beställa `windowList` element som visas som underordnade i `window` -element. (Se [Ordna elementen window och windowList](converting-file-formats-pdf.md#ordering-the-window-and-windowlist-elements).)
 
@@ -883,11 +882,11 @@ I den här proceduren beskrivs hur du uppdaterar tjänstkonfigurationsfilen Gene
 
 >[!NOTE]
 >
->Programmets namn anges som värdet för `GenericApp` element `name` -attribut. Värdet måste exakt matcha motsvarande namn som anges i skriptet som du utvecklar för det programmet. På samma sätt visas `GenericApp` element `displayName` -attributet ska exakt matcha motsvarande skripts `expectedWindow` fönsterbeskrivning. En sådan motsvarighet utvärderas efter att eventuella reguljära uttryck som visas i `displayName` eller `caption` attribut.
+Programmets namn anges som värdet för `GenericApp` element `name` -attribut. Värdet måste exakt matcha motsvarande namn som anges i skriptet som du utvecklar för det programmet. På samma sätt visas `GenericApp` element `displayName` -attributet ska exakt matcha motsvarande skripts `expectedWindow` fönsterbeskrivning. En sådan motsvarighet utvärderas efter att eventuella reguljära uttryck som visas i `displayName` eller `caption` attribut.
 
 I det här exemplet ändrades standardkonfigurationsdata som medföljde tjänsten Generate PDF så att Anteckningar (inte Microsoft Word) skulle användas för att bearbeta filer med filnamnstillägget .txt. Innan den här ändringen utfördes specificerades Microsoft Word som det ursprungliga program som ska bearbeta sådana filer.
 
-**Modifieringar för att dirigera textfiler till Notepad (native2pdfconfig.xml)**
+**Ändringar för att dirigera textfiler till Notepad (native2pdfconfig.xml)**
 
 ```xml
  <filetype-settings>
@@ -919,7 +918,7 @@ När du har skapat den nya systemvariabeln måste du starta om servern som tjän
 **Skapa en systemvariabel i Windows XP-miljön**
 
 1. Välj **Kontrollpanelen > System**.
-1. I dialogrutan Systemegenskaper klickar du på **Avancerat** och sedan klicka **Miljövariabler**.
+1. I dialogrutan Systemegenskaper klickar du på **Avancerat** och sedan klicka på **Miljövariabler**.
 1. Under Systemvariabler i dialogrutan Miljövariabler klickar du på **Nytt**.
 1. I dialogrutan Ny systemvariabel, i **Variabelnamn** anger du ett namn som använder formatet `[applicationname]_PATH`.
 1. I **Variabelvärde** skriver du den fullständiga sökvägen och filnamnet för programmets körbara fil och klickar sedan på **OK**. Skriv till exempel: `c:\windows\Notepad.exe`
@@ -939,7 +938,7 @@ När du har skapat den nya systemvariabeln måste du starta om servern som tjän
 
 #### XML-filer {#xml-files}
 
-AEM Forms innehåller XML-exempelfiler som gör att tjänsten Generate PDF kan använda Anteckningar för att bearbeta filer med filnamnstillägget .txt. Den här koden ingår i det här avsnittet. Dessutom måste du göra övriga ändringar som beskrivs i det här avsnittet.
+AEM Forms innehåller XML-exempelfiler som gör att tjänsten Generate PDF kan använda Anteckningar för att bearbeta filer med filnamnstillägget .txt. Den här koden ingår i det här avsnittet. Dessutom måste du göra de andra ändringarna som beskrivs i det här avsnittet.
 
 #### XML-fil för ytterligare dialogrutor {#additional-dialog-xml-file}
 
@@ -957,7 +956,7 @@ Det här exemplet innehåller ytterligare dialogrutor för programmet Anteckning
  </dialogs>
 ```
 
-#### Script XML-fil {#script-xml-file}
+#### Skript-XML-fil {#script-xml-file}
 
 I det här exemplet anges hur tjänsten Generate PDF ska samverka med Anteckningar för att skriva ut filer med Adobe PDF-skrivaren.
 
@@ -983,7 +982,7 @@ I det här exemplet anges hur tjänsten Generate PDF ska samverka med Anteckning
 * from Adobe Systems Incorporated.
 *-->
 
-<!-- This file automates printing of text files via notepad to Adobe PDF printer. In order to see the complete hierarchy we recommend using the Microsoft Spy++ which details the properties of windows necessary to write scripts. In this sample there are total of eight steps-->
+<!-- This file automates printing of text files via notepad to Adobe PDF printer. In order to see the complete hierarchy Adobe recommends using the Microsoft Spy++ which details the properties of windows necessary to write scripts. In this sample there are total of eight steps-->
 
 <application name="Notepad" version="9.0" locale="en_US" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="scripts.xsd">
 

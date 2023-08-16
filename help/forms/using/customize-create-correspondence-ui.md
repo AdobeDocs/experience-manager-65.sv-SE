@@ -11,9 +11,9 @@ discoiquuid: 13a93111-c08c-4457-b69a-a6f6eb6da330
 docset: aem65
 feature: Correspondence Management
 exl-id: 9593ca2a-7f9e-4487-a1a5-ca44114bff17
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '1087'
+source-wordcount: '1086'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 ## Översikt {#overview}
 
-Med Correspondence Management kan ni varumärka om sin lösningsmall för att få ett bättre varumärkesvärde och följa företagets varumärkestandarder. När du ändrar användargränssnittet innebär det att du ändrar organisationslogotypen, som visas i det övre vänstra hörnet av användargränssnittet Create Correspondence.
+Med Correspondence Management kan ni ommärka sin lösningsmall för att få ett bättre varumärkesvärde och följa företagets varumärkesstandarder. När du ändrar användargränssnittet innebär det att du ändrar organisationslogotypen, som visas i det övre vänstra hörnet av användargränssnittet Create Correspondence.
 
 Du kan ändra logotypen i användargränssnittet Create Correspondence med din organisations logotyp.
 
@@ -32,7 +32,7 @@ Den anpassade ikonen i gränssnittet Skapa korrespondens
 
 ### Ändra logotypen i användargränssnittet för Create Correspondence {#changing-the-logo-in-the-create-correspondence-ui}
 
-Så här ställer du in en logobild:
+Så här ställer du in en logotypbild:
 
 1. Skapa lämplig [mappstruktur i CRX](#creatingfolderstructure).
 1. [Ladda upp den nya logotypfilen](#uploadlogo) i mappen som du har skapat i CRX.
@@ -117,7 +117,7 @@ Följ de här stegen för att skapa den nödvändiga mappstrukturen i grenen /ap
 Följ de här stegen för att överföra den anpassade logotypfilen till CRX:
 
 1. Gå till `https://'[server]:[port]'/[contextpath]/crx/de`. Logga in som administratör om det behövs.
-1. I CRXDE högerklickar du på **imgs** mapp på följande sökväg och välj **Skapa > Skapa fil**:
+1. Högerklicka på **imgs** mapp på följande sökväg och välj **Skapa > Skapa fil**:
 
    `/apps/fd/cm/ccr/gui/components/admin/clientlibs/ccrui/imgs/`
 
@@ -149,7 +149,7 @@ Följ de här stegen för att överföra den anpassade logotypfilen till CRX:
 
    ![Exempel på anpassad logotypfil](assets/geometrixx-outdoors.png)
 
-   Exempel: CustomLogo.png som ska användas som egen logotyp
+   Exempel: CustomLogo.png som ska användas som anpassad logotyp
 
 1. Klicka **Spara alla**.
 

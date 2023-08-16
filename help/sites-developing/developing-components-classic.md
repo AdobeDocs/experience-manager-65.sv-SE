@@ -7,9 +7,9 @@ topic-tags: components
 content-type: reference
 legacypath: /content/docs/en/aem/6-2/develop/components/components-classic
 exl-id: 3f078139-73fd-4913-9d67-264fb2515f8a
-source-git-commit: a56d5121a6ce11b42a6c30dae9e479564d16af27
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '2386'
+source-wordcount: '2385'
 ht-degree: 0%
 
 ---
@@ -42,7 +42,7 @@ JSP-skript eller -servrar kan användas för att återge komponenter. Enligt reg
 
 JSP-skriptfilen `global.jsp` används för att ge snabb åtkomst till specifika objekt (dvs. för att få åtkomst till innehåll) till alla JSP-skriptfiler som används för att återge en komponent.
 
-Därför `global.jsp` bör ingå i alla komponentåtergivnings-JSP-skript där ett eller flera av objekten i `global.jsp` används.
+Därför `global.jsp` ska inkluderas i alla komponentåtergivnings-JSP-skript där ett eller flera av objekten i `global.jsp` används.
 
 Standardplatsen `global.jsp` är:
 
@@ -107,7 +107,7 @@ Mer information finns i dokumentet [Taggbibliotek](/help/sites-developing/taglib
 
 ## Använda HTML-bibliotek på klientsidan {#using-client-side-html-libraries}
 
-Moderna webbplatser är starkt beroende av bearbetning på klientsidan som styrs av komplex JavaScript- och CSS-kod. Det kan vara komplicerat att organisera och optimera serveringen av koden.
+Moderna webbplatser är starkt beroende av bearbetning på klientsidan som styrs av komplex JavaScript- och CSS-kod. Det kan vara komplicerat att organisera och optimera serveringen av den här koden.
 
 AEM tillhandahåller **Biblioteksmappar på klientsidan**, som gör att du kan lagra din klientkod i databasen, ordna den i kategorier och definiera när och hur varje kodkategori ska skickas till klienten. Klientsidans bibliotekssystem tar sedan hand om att skapa rätt länkar på den slutliga webbsidan för att läsa in rätt kod.
 
@@ -161,7 +161,7 @@ Om du vill utveckla nya komponenter för AEM baserat på en befintlig komponent 
 
    * lägga till ett fält i dialogrutan
 
-      * `cq:dialog` - dialogruta för det beröringsaktiverade användargränssnittet
+      * `cq:dialog` - dialogruta för det beröringsaktiverade gränssnittet
       * `dialog` - dialogruta för det klassiska användargränssnittet
 
    * ersätta `.jsp` fil (namnge den efter den nya komponenten)
@@ -186,14 +186,14 @@ Om du vill utveckla nya komponenter för AEM baserat på en befintlig komponent 
 
 1. En av följande noder bör finnas och vara korrekt initierad för att den nya komponenten ska visas:
 
-   * `cq:dialog` - dialogruta för det beröringsaktiverade användargränssnittet
+   * `cq:dialog` - dialogruta för det beröringsaktiverade gränssnittet
    * `dialog` - dialogruta för det klassiska användargränssnittet
-   * `cq:editConfig` - hur komponenterna fungerar i redigeringsmiljön (till exempel dra och släpp)
+   * `cq:editConfig` - hur komponenterna fungerar i redigeringsmiljön (t.ex. dra och släpp)
    * `design_dialog` - dialogruta för designläge (endast klassiskt användargränssnitt)
 
 1. Aktivera den nya komponenten i styckesystemet genom att antingen:
 
-   * använda CRXDE Lite för att lägga till värdet `<path-to-component>` (t.ex. `/apps/geometrixx/components/myComponent`) till nodens egenskapskomponenter `/etc/designs/geometrixx/jcr:content/contentpage/par`
+   * använda CRXDE Lite för att lägga till värdet `<path-to-component>` (till exempel `/apps/geometrixx/components/myComponent`) till nodens egenskapskomponenter `/etc/designs/geometrixx/jcr:content/contentpage/par`
    * följa instruktionerna i [Lägga till nya komponenter i styckesystem](#adding-a-new-component-to-the-paragraph-system-design-mode)
 
 1. I AEM WCM öppnar du en sida på webbplatsen och infogar ett stycke av den typ som du just skapade för att säkerställa att komponenten fungerar som den ska.
@@ -204,7 +204,7 @@ Om du vill utveckla nya komponenter för AEM baserat på en befintlig komponent 
 
 ### Lägga till en ny komponent i styckesystemet (designläge) {#adding-a-new-component-to-the-paragraph-system-design-mode}
 
-När komponenten har utvecklats lägger du till den i styckesystemet, vilket gör att författare kan markera och använda komponenten när en sida redigeras.
+När komponenten har utvecklats lägger du till den i styckesystemet, vilket gör det möjligt för författare att markera och använda komponenten när en sida redigeras.
 
 1. Öppna en sida i redigeringsmiljön som t.ex. använder styckesystemet `<contentPath>/Test.html`.
 1. Växla till designläge genom att antingen:
@@ -254,7 +254,7 @@ Följande tekniker beskrivs i denna övning:
 
 Om du vill skapa komponenten använder du standardtextimagekomponenten som bas och ändrar den. Du lagrar den nya komponenten i Geometrixx AEM exempelprogrammet för WCM.
 
-1. Kopiera standardtextimagekomponenten från `/libs/foundation/components/textimage` till Geometrixx komponentmapp, `/apps/geometrixx/components`, med textimage som målnodnamn. (Kopiera komponenten genom att navigera till komponenten, högerklicka och välja Kopiera och bläddra till målkatalogen.)
+1. Kopiera standardkomponenten för textimage från `/libs/foundation/components/textimage` till Geometrixx komponentmapp, `/apps/geometrixx/components`, med textimage som målnodnamn. (Kopiera komponenten genom att navigera till komponenten, högerklicka och välja Kopiera och bläddra till målkatalogen.)
 
    ![chlimage_1-59](assets/chlimage_1-59a.png)
 
@@ -303,7 +303,7 @@ Om du vill skapa komponenten använder du standardtextimagekomponenten som bas o
    * För de första två flikarna (tab1 och tab2):
 
       * Ändra xtype till cqinclude (för att ärva från standardkomponenten).
-      * Lägga till en sökvägsegenskap med värden `/libs/foundation/components/textimage/dialog/items/tab1.infinity.json`och `/libs/foundation/components/textimage/dialog/items/tab2.infinity.json`, respektive.
+      * Lägga till en banegenskap med värden `/libs/foundation/components/textimage/dialog/items/tab1.infinity.json`och `/libs/foundation/components/textimage/dialog/items/tab2.infinity.json`, respektive
       * Ta bort alla andra egenskaper eller undernoder.
 
    * För flik3:

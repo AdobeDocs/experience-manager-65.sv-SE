@@ -1,5 +1,5 @@
 ---
-title: "Självstudiekurs: Skapa formulärdatamodell i AEM Forms"
+title: "Självstudie: Skapa formulärdatamodell i AEM Forms"
 description: Skapa formulärdatamodell för interaktiv kommunikation
 uuid: b56d3dac-be54-4812-b958-38a085686218
 contentOwner: anujkapo
@@ -8,22 +8,22 @@ discoiquuid: e5413fb3-9d50-4f4f-9db8-7e53cd5145d5
 docset: aem65
 feature: Interactive Communication
 exl-id: c8a6037c-46bd-4058-8314-61cb925ba5a8
-source-git-commit: a2fd3c0c1892ac648c87ca0dec440e22144c37a2
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '2739'
+source-wordcount: '2737'
 ht-degree: 0%
 
 ---
 
-# Självstudiekurs: Skapa formulärdatamodell i AEM Forms{#tutorial-create-form-data-model}
+# Självstudie: Skapa formulärdatamodell i AEM Forms{#tutorial-create-form-data-model}
 
 ![04-create-form-data-model-main](assets/04-create-form-data-model-main.png)
 
-Den här självstudiekursen är ett steg i [Skapa din första interaktiva kommunikation](/help/forms/using/create-your-first-interactive-communication.md) serie. Vi rekommenderar att du följer serien i kronologisk ordning för att förstå, utföra och demonstrera det fullständiga exemplet på självstudiekurser.
+Den här självstudiekursen är ett steg i [Skapa din första interaktiva kommunikation](/help/forms/using/create-your-first-interactive-communication.md) serie. Vi rekommenderar att du följer serien i kronologisk ordning för att förstå, utföra och demonstrera det fullständiga självstudiekurserna.
 
 ## Om självstudiekursen {#about-the-tutorial}
 
-Med dataintegreringsmodulen i AEM Forms kan du skapa en formulärdatamodell från olika backend-datakällor som AEM användarprofil, RESTful web services, SOAP-baserade webbtjänster, OData services och relationsdatabaser. Du kan konfigurera datamodellsobjekt och datatjänster i en formulärdatamodell och koppla den till ett anpassat formulär. Anpassningsbara formulärfält är bundna till objektegenskaper för datamodell. Med tjänsterna kan du förifylla det anpassningsbara formuläret och skriva skickade formulärdata tillbaka till datamodellobjektet.
+Med dataintegreringsmodulen i AEM Forms kan du skapa en formulärdatamodell från olika backend-datakällor som AEM användarprofil, RESTful web services, SOAP-baserade webbtjänster, OData services och relationsdatabaser. Du kan konfigurera datamodellsobjekt och datatjänster i en formulärdatamodell och koppla den till ett anpassat formulär. Anpassningsbara formulärfält är bundna till objektegenskaper för datamodell. Med tjänsterna kan du förifylla det adaptiva formuläret och skriva skickade formulärdata tillbaka till datamodellobjektet.
 
 Mer information om integration av formulärdata och formulärdatamodell finns i [AEM Forms dataintegrering](https://helpx.adobe.com/experience-manager/6-3/forms/using/data-integration.html).
 
@@ -109,7 +109,7 @@ CREATE TABLE `calls` (
 
 The **samtal** tabellen innehåller samtalsinformation som samtalsdatum, samtalstid, samtalsnummer, samtalslängd och samtalsavgifter. The **kund** tabellen är länkad till anropstabellen med hjälp av fältet Mobilnummer (mobiltelefonnummer). För varje mobilnummer som visas i **kund** tabellen, det finns flera poster i **samtal** tabell. Du kan till exempel hämta samtalsinformationen för **1457892541** mobilnummer genom att referera till **samtal** tabell.
 
-The **växlar** tabellen innehåller fakturainformation som faktureringsdatum, faktureringsperiod, månadsavgifter och samtalsavgifter. The **kund** tabellen är länkad till **växlar** tabellen med hjälp av fältet Faktureringsplan. Det finns en plan för varje kund i **kund** tabell. The **växlar** tabellen innehåller prisuppgifter för alla befintliga planer. Du kan till exempel hämta avtalsinformation för **Sarah** från **kund** tabellen och använd dessa detaljer för att hämta prisinformation från **växlar** tabell.
+The **växlar** tabellen innehåller fakturainformation som faktureringsdatum, faktureringsperiod, månadsavgifter och samtalsavgifter. The **kund** tabellen är länkad till **växlar** tabellen med hjälp av faktureringsplanfältet. Det finns en plan för varje kund i **kund** tabell. The **växlar** tabellen innehåller prisuppgifter för alla befintliga planer. Du kan till exempel hämta avtalsinformation för **Sarah** från **kund** tabellen och använd dessa detaljer för att hämta prisinformation från **växlar** tabell.
 
 ## Steg 2: Konfigurera MySQL-databasen som datakälla {#step-configure-mysql-database-as-data-source}
 
@@ -132,21 +132,22 @@ Gör följande för att konfigurera MySQL-databasen:
 
       * **Datakällans namn:** Du kan ange vilket namn som helst. Ange till exempel **MySQL**.
 
-      * **Egenskapsnamn för DataSource-tjänst**: Ange namnet på den tjänsteegenskap som innehåller DataSource-namnet. Den anges när datakällinstansen registreras som OSGi-tjänst. Till exempel: **datakälla.namn**.
+      * **Egenskapsnamn för DataSource-tjänst**: Ange namnet på den tjänsteegenskap som innehåller namnet på datakällan. Den anges när datakällinstansen registreras som OSGi-tjänst. Till exempel: **datakälla.namn**.
 
       * **JDBC-drivrutinsklass**: Ange Java-klassnamnet för JDBC-drivrutinen. För MySQL-databas anger du **com.mysql.jdbc.Driver**.
 
       * **URI för JDBC-anslutning**: Ange anslutnings-URL för databasen. För MySQL-databaser som körs på port 3306 och schematabell är URL:en: `jdbc:mysql://'server':3306/teleca?autoReconnect=true&useUnicode=true&characterEncoding=utf-8`
       * **Användarnamn:** Användarnamn för databasen. Det krävs för att JDBC-drivrutinen ska kunna upprätta en anslutning till databasen.
       * **Lösenord:** Lösenord för databasen. Det krävs för att JDBC-drivrutinen ska kunna upprätta en anslutning till databasen.
-      * **Test on Borgo:** Aktivera **Testa om Born** alternativ.
+      * **Test on Borgo:** Aktivera **Testa om Borgen** alternativ.
 
       * **Test vid retur:** Aktivera **Test vid retur** alternativ.
 
       * **Valideringsfråga:** Ange en SELECT-fråga (SQL) för att validera anslutningar från poolen. Frågan måste returnera minst en rad. Till exempel: **välj &#42; från kund**.
 
       * **Transaktionsisolering**: Ange värdet till **READ_COMMTED**.
-   Lämna övriga egenskaper som standard [values](https://tomcat.apache.org/tomcat-7.0-doc/jdbc-pool.html) och trycka **Spara**.
+
+   Lämna övriga egenskaper som standard [values](https://tomcat.apache.org/tomcat-7.0-doc/jdbc-pool.html) och knacka **Spara**.
 
    En konfiguration som liknar följande skapas.
 
@@ -160,12 +161,12 @@ Gör följande för att skapa formulärdatamodell:
 
 1. I AEM författarinstans går du till **Forms** > **Dataintegrering**.
 1. Tryck **Skapa** > **Formulärdatamodell**.
-1. I guiden Skapa formulärdatamodell anger du en **name** för formulärdatamodellen. Till exempel: **FDM_Create_First_IC**. Tryck **Nästa**.
+1. I guiden Skapa formulärdatamodell anger du **name** för formulärdatamodellen. Till exempel: **FDM_Create_First_IC**. Tryck **Nästa**.
 1. På skärmen Välj datakälla visas alla konfigurerade datakällor. Välj **MySQL** datakälla och knacka **Skapa**.
 
    ![MYSQL-datakälla](assets/fdm_mysql_data_source_new.png)
 
-1. Klicka **Klar**. The **FDM_Create_First_IC** formulärdatamodell skapas.
+1. Klicka **Klar**. The **FDM_Create_First_IC** formulärdatamodellen skapas.
 
 ## Steg 4: Konfigurera formulärdatamodell {#step-configure-form-data-model}
 
@@ -193,12 +194,13 @@ I konfigurationen av formulärdatamodellen ingår:
       * växlar
       * samtal
       * kund
+
    * **Tjänster:**
 
       * get
       * uppdatera
 
-   Tryck **Lägg till markerade** om du vill lägga till valda datamodellsobjekt och datatjänster i formulärdatamodellen.
+   Tryck **Lägg till markerade** om du vill lägga till markerade datamodellsobjekt och tjänster i formulärdatamodellen.
 
    ![Markera datamodellsobjektstjänster](assets/select_data_model_object_services_new.png)
 
@@ -210,7 +212,7 @@ I konfigurationen av formulärdatamodellen ingår:
 
 En beräknad egenskap är den vars värde beräknas baserat på en regel eller ett uttryck. Med hjälp av en regel kan du ange värdet för en beräknad egenskap till en litteral sträng, ett tal, resultatet av ett matematiskt uttryck eller värdet för en annan egenskap i formulärdatamodellen.
 
-Baserat på användningsexemplet skapar du **usagecharges** underordnad beräknad egenskap i **växlar** datamodellsobjekt med följande matematiska uttryck:
+Baserat på användningsfallet skapar du **usagecharges** underordnad beräknad egenskap i **växlar** datamodellsobjekt med följande matematiska uttryck:
 
 * Användningsavgifter = samtalsavgifter + konferenssamtalsavgifter + SMS-avgifter + mobilinternetavgifter + roaming nationellt + roaming internationellt + VAS (alla dessa egenskaper finns i räkningens datamodell) Mer information om **usagecharges** underordnad beräknad egenskap, se [Planera interaktiv kommunikation](/help/forms/using/planning-interactive-communications.md).
 
@@ -227,11 +229,11 @@ Utför följande steg för att skapa beräknade underordnade egenskaper för dat
 
 1. Tryck **Redigera regel** för att öppna regelredigeraren.
 1. Tryck **Skapa**. The **Ange värde** regelfönstret öppnas.
-1. I listrutan Välj alternativ väljer du **Matematiskt uttryck**.
+1. Välj i listrutan Välj alternativ **Matematiskt uttryck**.
 
    ![Regelredigerare för användningsavgifter](assets/usage_charges_rule_editor_new.png)
 
-1. I det matematiska uttrycket väljer du **callCharts** och **sammandragande** som första respektive andra objekt. Välj **plus** som -operatorn. Tryck inom det matematiska uttrycket och tryck **Utöka uttryck** lägga till **smscharges**, **internetavgifter**, **roamingnationell**, **roamingInl** och **arbetsyta** objekt till uttrycket.
+1. I det matematiska uttrycket väljer du **callCharts** och **sammandragande** som första respektive andra objekt. Välj **plus** som -operatorn. Tryck inom det matematiska uttrycket och tryck **Utöka uttryck** att lägga till **smscharges**, **internetavgifter**, **roamingnationell**, **roamingInl** och **arbetsyta** -objekt till uttrycket.
 
    Följande bild visar det matematiska uttrycket i regelredigeraren:
 
@@ -259,11 +261,11 @@ Utför följande steg för att skapa associationer mellan datamodellsobjekt:
 1. I **Lägg till association** ruta:
 
    * Ange en titel för associationen. Det är ett valfritt fält.
-   * Välj **En till många** från **Typ** nedrullningsbar lista.
+   * Välj **En till många** från **Typ** listruta.
 
-   * Välj **samtal** från **Modellobjekt** nedrullningsbar lista.
+   * Välj **samtal** från **Modellobjekt** listruta.
 
-   * Välj **get** från **Tjänst** nedrullningsbar lista.
+   * Välj **get** från **Tjänst** listruta.
 
    * Tryck **Lägg till** för att länka **kund** datamodellobjekt till **samtal** datamodellsobjekt som använder en egenskap. Baserat på användningsfallet måste anropsdatamodellsobjektet länkas till mobilnummeregenskapen i kunddatamodellsobjektet. The **Lägg till argument** öppnas.
 
@@ -271,13 +273,13 @@ Utför följande steg för att skapa associationer mellan datamodellsobjekt:
 
 1. I **Lägg till argument** dialogruta:
 
-   * Välj **mobilenum** från **Namn** nedrullningsbar lista. Egenskapen för mobilnummer är en vanlig egenskap som är tillgänglig i kunden och anropar datamodellsobjekt. Det innebär att det används för att skapa en association mellan kund- och anropsdatamodellsobjekt.
+   * Välj **mobilenum** från **Namn** listruta. Egenskapen för mobilnummer är en vanlig egenskap som är tillgänglig i kunden och anropar datamodellsobjekt. Det innebär att det används för att skapa en association mellan kund- och anropsdatamodellsobjekt.
 För varje mobilnummer som är tillgängligt i kunddatamodellobjektet finns det flera samtalsposter tillgängliga i samtalstabellen.
 
    * Ange en valfri titel och beskrivning för argumentet.
-   * Välj **kund** från **Binda till** nedrullningsbar lista.
+   * Välj **kund** från **Bindning till** listruta.
 
-   * Välj **mobilenum** från **Bindningsvärde** nedrullningsbar lista.
+   * Välj **mobilenum** från **Bindningsvärde** listruta.
 
    * Tryck **Lägg till**.
 
@@ -295,16 +297,16 @@ För varje mobilnummer som är tillgängligt i kunddatamodellobjektet finns det 
 1. I **Lägg till association** ruta:
 
    * Ange en titel för associationen. Det är ett valfritt fält.
-   * Välj **En till en** från **Typ** nedrullningsbar lista.
+   * Välj **En till en** från **Typ** listruta.
 
-   * Välj **växlar** från **Modellobjekt** nedrullningsbar lista.
+   * Välj **växlar** från **Modellobjekt** listruta.
 
-   * Välj **get** från **Tjänst** nedrullningsbar lista. The **faktureringsplan** egenskapen, som är primärnyckeln för räkningstabellen, är redan tillgänglig i **Argument** -avsnitt.
+   * Välj **get** från **Tjänst** listruta. The **faktureringsplan** egenskapen, som är primärnyckeln för räkningstabellen, är redan tillgänglig i **Argument** -avsnitt.
 Fakturorna och modellobjekten för kunddata länkas med egenskaperna för faktureringsplanen (räkningarna) respektive kundplanen (kunden). Skapa en bindning mellan de här egenskaperna för att hämta avtalsinformationen för alla kunder som är tillgängliga i MySQL-databasen.
 
-   * Välj **kund** från **Binda till** nedrullningsbar lista.
+   * Välj **kund** från **Bindning till** listruta.
 
-   * Välj **kundplan** från **Bindningsvärde** nedrullningsbar lista.
+   * Välj **kundplan** från **Bindningsvärde** listruta.
 
    * Tryck **Klar** för att skapa en bindning mellan egenskaperna för faktureringsplanen och kundplanen.
 
@@ -316,23 +318,23 @@ Fakturorna och modellobjekten för kunddata länkas med egenskaperna för faktur
 
 ### Redigera objektegenskaper för datamodell {#edit-data-model-object-properties}
 
-När du har skapat associationer mellan kunden och andra datamodellsobjekt kan du redigera kundegenskaperna för att definiera den egenskap som data hämtas från datamodellsobjektet. Baserat på användningsfallet används mobilnummer som egenskap för att hämta data från kunddatamodellobjektet.
+När du har skapat associationer mellan kunden och andra datamodellsobjekt kan du redigera kundegenskaperna för att definiera den egenskap som data hämtas från datamodellsobjektet. Baserat på användningsfallet används mobilnummer som egenskap för att hämta data från kunddatamodellsobjektet.
 
 1. Markera kryssrutan högst upp i **kund** datamodellsobjekt för att markera det och trycka **Redigera egenskaper**. The **Redigera egenskaper** öppnas.
 1. Ange **kund** som **Modellobjekt på översta nivån**.
-1. Välj **get** från **Läs tjänsten** nedrullningsbar lista.
+1. Välj **get** från **Läs tjänsten** listruta.
 1. I **Argument** avsnitt:
 
-   * Välj **Begär attribut** från **Binda till** nedrullningsbar lista.
+   * Välj **Begär attribut** från **Bindning till** listruta.
 
    * Ange **mobilenum** som bindningsvärde.
 
 1. Välj **uppdatera** från **Skriv** Listruta för tjänst.
 1. I **Argument** avsnitt:
 
-   * För **mobilenum** egenskap, välj **kund** från **Binda till** nedrullningsbar lista.
+   * För **mobilenum** egenskap, välj **kund** från **Bindning till** listruta.
 
-   * Välj **mobilenum** från **Bindningsvärde** nedrullningsbar lista.
+   * Välj **mobilenum** från **Bindningsvärde** listruta.
 
 1. Tryck **Klar** för att spara egenskaperna.
 
@@ -351,7 +353,7 @@ När du har skapat associationer mellan kunden och andra datamodellsobjekt kan d
 1. I **Redigera egenskaper** ruta:
 
    * Ange en valfri titel och beskrivning.
-   * Välj **kund** från **Objekt för utdatamodell** nedrullningsbar lista.
+   * Välj **kund** från **Objekt för utdatamodell** listruta.
 
    * Tryck **Klar** för att spara egenskaperna.
 
@@ -361,7 +363,7 @@ När du har skapat associationer mellan kunden och andra datamodellsobjekt kan d
 1. I **Redigera egenskaper** ruta:
 
    * Ange en valfri titel och beskrivning.
-   * Välj **kund** från **Indatamodellsobjekt** nedrullningsbar lista.
+   * Välj **kund** från **Indatamodellsobjekt** listruta.
 
    * Tryck **Klar**.
    * Tryck **Spara** för att spara formulärdatamodellen.
@@ -375,7 +377,7 @@ Du kan testa datamodellsobjektet och datatjänsterna för att verifiera att form
 Gör följande för att köra testet:
 
 1. Gå till **Modell** väljer du **kund** datamodellsobjekt, och tryck **Testmodellobjekt**.
-1. I **Testa formulärdatamodell** fönster, markera **Läs modellobjekt** från **Välj modell/tjänst** nedrullningsbar lista.
+1. I **Testa formulärdatamodell** fönster, markera **Läs modellobjekt** från **Välj modell/tjänst** listruta.
 1. I **Indata** anger du ett värde för **mobilenum** egenskap som finns i den konfigurerade MySQL-databasen och tryck på **Testa**.
 
    Kundinformationen som är associerad med den angivna mobilegenskapen hämtas och visas i utdataavsnittet enligt nedan. Stäng dialogrutan.

@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: platform
 content-type: reference
 exl-id: 50e608d5-951f-4a3f-bed4-9e92ff5d7bd4
-source-git-commit: 260f71acd330167572d817fdf145a018b09cbc65
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '2465'
+source-wordcount: '2462'
 ht-degree: 0%
 
 ---
@@ -109,7 +109,7 @@ Den har följande valfria attribut:
 
 **escapeXml** - Definierar om tecknen &lt;, >, &amp;, &#39; och &quot; i den resulterande strängen ska konverteras till motsvarande teckenentitetskoder. Standardvärdet är false. Den nya inställningen används efter den valfria formateringen.
 
-**format** - Valfritt java.text.Format som används för att formatera texten.
+**format** - Valfritt java.text.Format som ska användas för att formatera texten.
 
 **noDiff** - Utelämnar beräkningen av ett diff-resultat, även om det finns en diff-information.
 
@@ -159,9 +159,9 @@ The `<cq:setContentBundle>` -taggen skapar en i18n-lokaliseringskontext och lagr
 
 Den har följande attribut:
 
-**språk** - Språket för det språk som resurspaketet ska hämtas för.
+**språk** - Språket för det språkområde som resurspaketet ska hämtas för.
 
-**källa** - Källan varifrån språkinställningen ska hämtas. Den kan anges med något av följande värden:
+**källa** - Källan varifrån språkinställningen ska hämtas. Den kan ställas in på ett av följande värden:
 
 * **static** - språkinställningen hämtas från `language` om det är tillgängligt, annars från serverns standardspråkområde.
 
@@ -173,11 +173,11 @@ Den har följande attribut:
 
 Om `source` inget attribut har angetts:
 
-* Om `language` -attributet är inställt, `source` som standard är &quot; `static`.
+* Om `language` -attribut anges, `source` som standard är &quot; `static`.
 
-* Om `language` -attributet har inte angetts, `source` som standard för attribut till `auto`.
+* Om `language` inget attribut har angetts, `source` som standard för attribut till `auto`.
 
-&quot;Innehållspaketet&quot; kan användas av standard-JSTL `<fmt:message>` -taggar. Nyckelsökningen efter meddelanden är två gånger:
+Innehållspaketet kan användas av standard-JSTL `<fmt:message>` -taggar. Nyckelsökningen efter meddelanden är två gånger:
 
 1. Först genomsöks JCR-egenskaperna för den underliggande resurs som återges efter översättningar. På så sätt kan du definiera en enkel komponentdialogruta för att redigera dessa värden.
 1. Om noden inte innehåller någon egenskap med namnet exakt som nyckeln, är reservdelen att läsa in ett resurspaket från försäljningsbegäran ( `SlingHttpServletRequest.getResourceBundle(Locale)`). Språket eller språkområdet för det här paketet definieras av språk- och källattributen för `<cq:setContentBundle>` -tagg.
@@ -216,7 +216,7 @@ Den har följande attribut:
 
 **resourceType**
 
-* Resurstypen för resursen som ska inkluderas. Om resurstypen anges måste sökvägen vara den exakta sökvägen till ett resursobjekt: I det här fallet stöds inte tillägg av parametrar, väljare och tillägg till sökvägen.
+* Resurstypen för resursen som ska inkluderas. Om resurstypen anges måste sökvägen vara den exakta sökvägen till ett resursobjekt: i det här fallet stöds inte tillägg av parametrar, väljare och tillägg till sökvägen.
 * Om resursen som ska inkluderas anges med sökvägsattributet som inte kan matchas för en resurs, kan taggen skapa ett syntetiskt resursobjekt från sökvägen och den här resurstypen.
 * Sökväg och resourceType, eller skript måste anges.
 
@@ -248,7 +248,7 @@ Ska du använda `<%@ include file="myScript.jsp" %>` eller `<cq:include script="
 Ska du använda `<cq:include>` eller `<sling:include>`?
 
 * När du utvecklar AEM bör du använda `<cq:include>`.
-* `<cq:include>` gör att du kan inkludera skriptfiler direkt efter deras namn när du använder skriptattributet. Detta tar hänsyn till arv av komponent- och resurstyp och är ofta enklare än att följa Sling:s skriptupplösning med väljare och tillägg.
+* `<cq:include>` I kan du direkt inkludera skriptfiler efter deras namn när du använder skriptattributet. Detta tar hänsyn till arv av komponent- och resurstyp och är ofta enklare än att följa Sling:s skriptupplösning med väljare och tillägg.
 
 ### &lt;cq:includeClientLib> {#cq-includeclientlib}
 
@@ -324,7 +324,7 @@ The `<cq:defineObjects>` -taggen visar följande, ofta använda, skriptobjekt so
 
 **editContext**
 
-* redigeringskontextobjektet för AEM (com.day.cq.wcm.api.components.EditContext interface).
+* Redigera context-objektet för AEM (com.day.cq.wcm.api.components.EditContext interface).
 
 **pageManager**
 
@@ -349,31 +349,31 @@ The `<cq:defineObjects>` -taggen visar följande, ofta använda, skriptobjekt so
 
 **requestName**
 
-* ärvs från sling
+* ärvd från sling
 
 **responseName**
 
-* ärvs från sling
+* ärvd från sling
 
 **resourceName**
 
-* ärvs från sling
+* ärvd från sling
 
 **nodeName**
 
-* ärvs från sling
+* ärvd från sling
 
 **logName**
 
-* ärvs från sling
+* ärvd från sling
 
 **resourceResolverName**
 
-* ärvs från sling
+* ärvd från sling
 
 **slingName**
 
-* ärvs från sling
+* ärvd från sling
 
 **componentContextName**
 
@@ -528,7 +528,7 @@ Den har följande attribut:
 
 **resourceType**
 
-* Resurstypen för resursen som ska inkluderas. Om resurstypen anges måste sökvägen vara den exakta sökvägen till ett resursobjekt: I det här fallet stöds inte tillägg av parametrar, väljare och tillägg till sökvägen.
+* Resurstypen för resursen som ska inkluderas. Om resurstypen anges måste sökvägen vara den exakta sökvägen till ett resursobjekt: i det här fallet stöds inte tillägg av parametrar, väljare och tillägg till sökvägen.
 * Om resursen som ska inkluderas anges med sökvägsattributet som inte kan matchas för en resurs, kan taggen skapa ett syntetiskt resursobjekt från sökvägen och den här resurstypen.
 
 **replaceSelectors**
@@ -597,15 +597,15 @@ The `<sling:defineObjects>` -taggen visar följande, ofta använda, skriptobjekt
 
 **resurs**
 
-* det aktuella resursobjekt som ska hanteras, beroende på begärans URL. Det är samma som slingRequest.getResource().
+* det aktuella resursobjekt som ska hanteras, beroende på URL:en för begäran. Det är samma som slingRequest.getResource().
 
 **currentNode**
 
-* Om den aktuella resursen pekar på en JCR-nod (vilket vanligtvis är fallet i Sling) ger detta direktåtkomst till nodobjektet. Annars är det här objektet inte definierat.
+* Om den aktuella resursen pekar på en JCR-nod (vilket vanligtvis är fallet i Sling) ger detta direktåtkomst till nodobjektet. I annat fall är det här objektet inte definierat.
 
 **logg**
 
-* Tillhandahåller en SLF4J-loggare för loggning till Sling-loggsystemet från skript, till exempel log.info(&quot;Kör mitt skript&quot;).
+* Innehåller en SLF4J-loggare för loggning till Sling-loggsystemet från skript, till exempel log.info(&quot;Kör mitt skript&quot;).
 
 * Den har följande attribut:
 
@@ -640,4 +640,4 @@ The [JavaServer Pages Standard Tag Library](https://www.oracle.com/java/technolo
 <%@taglib prefix="fn" uri="https://java.sun.com/jsp/jstl/functions" %>
 ```
 
-När du har importerat `/libs/foundation/global.jsp` så som beskrivs ovan kan du använda `c`, `fmt` och `fn` -prefix för att komma åt dessa taglibs. JSTL:s officiella dokumentation finns på [Självstudiekursen Java™ EE 5 - JavaServer Pages Standard Tag Library](https://docs.oracle.com/javaee/5/tutorial/doc/bnakc.html).
+Efter import av `/libs/foundation/global.jsp` så som beskrivs ovan kan du använda `c`, `fmt` och `fn` -prefix för att komma åt dessa taglibs. JSTL:s officiella dokumentation finns på [Självstudiekursen Java™ EE 5 - JavaServer Pages Standard Tag Library](https://docs.oracle.com/javaee/5/tutorial/doc/bnakc.html).

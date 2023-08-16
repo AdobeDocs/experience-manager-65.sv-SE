@@ -11,16 +11,16 @@ content-type: reference
 discoiquuid: 10940000-808a-48ae-8e46-61eccef71eab
 legacypath: /content/docs/en/aem/6-2/administer/operations/page-authoring/configuring-responsive-layouting
 exl-id: 61152b2d-4c0b-4cfd-9669-cf03d32cb7c7
-source-git-commit: 30327950779337ce869b6ca376120bc09826be21
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '1288'
+source-wordcount: '1285'
 ht-degree: 0%
 
 ---
 
 # Konfigurera layoutbehållare och layoutläge{#configuring-layout-container-and-layout-mode}
 
-[Responsiv layout](/help/sites-authoring/responsive-layout.md) är en mekanism för att implementera [responsiv webbdesign](https://en.wikipedia.org/wiki/Responsive_web_design). På så sätt kan användaren skapa webbsidor som har en layout och dimensioner som är beroende av vilka enheter som användarna använder.
+[Responsiv layout](/help/sites-authoring/responsive-layout.md) är en mekanism för att förverkliga [responsiv webbdesign](https://en.wikipedia.org/wiki/Responsive_web_design). På så sätt kan användaren skapa webbsidor som har en layout och dimensioner som är beroende av vilka enheter som användarna använder.
 
 >[!NOTE]
 >
@@ -30,11 +30,11 @@ AEM realiserar responsiv layout för dina sidor med en kombination av mekanismer
 
 * [**Layoutbehållare**](/help/sites-authoring/responsive-layout.md#adding-a-layout-container-and-its-content-edit-mode) komponent
 
-   Den här komponenten har ett rutnätsstyckesystem där du kan lägga till och placera komponenter i ett responsivt rutnät. Den kan användas som standardparsyta för sidan och/eller göras tillgänglig för författare i komponentwebbläsaren.
+  Den här komponenten har ett rutnätsstyckesystem där du kan lägga till och placera komponenter i ett responsivt rutnät. Den kan användas som standardparsyta för sidan och/eller göras tillgänglig för författare i komponentwebbläsaren.
 
    * Standardvärdet **Layoutbehållare** -komponenten definieras under:
 
-      /libs/wcm/foundation/components/responsivegrid
+     /libs/wcm/foundation/components/responsivegrid
 
    * Du kan definiera layoutbehållare:
 
@@ -42,18 +42,17 @@ AEM realiserar responsiv layout för dina sidor med en kombination av mekanismer
       * Som standardparsys för sidan.
       * Båda.
 
-         Du kan ha layoutbehållaren som standard för sidan, samtidigt som användaren kan lägga till fler layoutbehållare i den här versionen. till exempel för att uppnå kolumnkontroll.
+        Du kan ha layoutbehållaren som standard för sidan, samtidigt som användaren kan lägga till fler layoutbehållare i den, till exempel för att uppnå kolumnkontroll.
 
 * **[Layoutläge](/help/sites-authoring/responsive-layout.md#defining-layouts-layout-mode)**
-När layoutbehållaren är placerad på sidan kan du använda 
-**Layout** läge för att placera innehåll i det responsiva rutnätet.
+När layoutbehållaren är placerad på sidan kan du använda **Layout** läge för att placera innehåll i det responsiva rutnätet.
 
 * [**Emulator**](/help/sites-authoring/responsive-layout.md#selecting-a-device-to-emulate)
-På så sätt kan du skapa och redigera responsiva webbplatser som ändrar layouten efter enhetens/fönstrets storlek genom att ändra komponenternas storlek interaktivt. Användaren kan sedan se hur innehållet återges med hjälp av emulatorn.
+På så sätt kan du skapa och redigera responsiva webbplatser som ändrar layouten beroende på enhetens/fönstrets storlek genom att ändra komponenternas storlek interaktivt. Användaren kan sedan se hur innehållet återges med hjälp av emulatorn.
 
 >[!CAUTION]
 >
->Även om **Layoutbehållare** finns i det klassiska användargränssnittet. Dess fullständiga funktionalitet finns bara i det beröringskänsliga användargränssnittet.
+>Även om **Layoutbehållare** finns i det klassiska användargränssnittet. Dess fullständiga funktionalitet är bara tillgänglig i det beröringskänsliga användargränssnittet.
 
 Med dessa responsiva rutnätsmekanismer kan du:
 
@@ -68,7 +67,7 @@ Med dessa responsiva rutnätsmekanismer kan du:
 
 ## Konfigurera den responsiva emulatorn {#configuring-the-responsive-emulator}
 
-Med de här åtgärderna kan du se de responsiva **Emulator** på din webbplats.
+Med den här uppgiften kan du se hur responsiv **Emulator** på din webbplats.
 
 ### Registrera dina sidkomponenter för emulering {#register-your-page-components-for-emulation}
 
@@ -98,7 +97,7 @@ Dessa procedurer används för att aktivera **Layout** läge på din webbplats.
 
 * Definiera en titel och en bredd:
 
-   * Titeln beskriver den generiska enhetsgrupperingen, vid behov med orientering. till exempel telefon, surfplatta, bordslandskap.
+   * Titeln beskriver den allmänna enhetsgrupperingen, med orientering om det behövs, till exempel telefon, surfplatta, bordslandskap.
    * Bredden definierar den maximala bredden i pixlar för den allmänna enhetsgrupperingen. Om till exempel brytpunktstelefonen har en bredd på 768 är det den maximala bredden för den layout som används för en telefonenhet.
 
 * Är synliga som markörer högst upp i sidredigeraren när du använder emulatorn.
@@ -179,24 +178,24 @@ Om du vill ange att huvudparsytan på sidan ska vara en layoutbehållare definie
 
 `wcm/foundation/components/responsivegrid`
 
-I något av följande:
+I antingen
 
 * Sidkomponent
 * Sidmall (för framtida bruk)
 
-I följande två exempel visas definitionen:
+I följande två exempel illustreras definitionen:
 
 * **HTML:**
 
-   ```xml
-   <sly data-sly-resource="${'par' @ resourceType='wcm/foundation/components/responsivegrid'}/>
-   ```
+  ```xml
+  <sly data-sly-resource="${'par' @ resourceType='wcm/foundation/components/responsivegrid'}/>
+  ```
 
 * **JSP:**
 
-   ```
-   <cq:include path="par" resourceType="wcm/foundation/components/responsivegrid" />
-   ```
+  ```
+  <cq:include path="par" resourceType="wcm/foundation/components/responsivegrid" />
+  ```
 
 ### Inkludera responsiv CSS {#include-the-responsive-css}
 
@@ -282,11 +281,11 @@ Om du vill att författare ska kunna lägga till fler responsiva rutnät på inn
 
 * **Författarmiljö**
 
-   Använd [Designläge](/help/sites-authoring/default-components-designmode.md) för att aktivera **Lagerbehållare** -komponent för en sida.
+  Använd [Designläge](/help/sites-authoring/default-components-designmode.md) för att aktivera **Lagerbehållare** -komponent för en sida.
 
 * **Komponentdefinition**
 
-   Använd `allowedComponent` eller en statisk include när komponenten definieras.
+  Använd `allowedComponent` eller en statisk include när komponenten definieras.
 
 ### Konfigurera stödrastret för layoutbehållaren {#configure-the-grid-of-the-layout-container}
 
@@ -309,6 +308,7 @@ Du kan konfigurera antalet kolumner som är tillgängliga för varje särskild i
    * Antal tillgängliga kolumner:
 
       * `columns="{String}8"`
+
    * Komponenter som kan läggas till i den aktuella komponenten:
 
       * `components="[/libs/wcm/foundation/components/responsivegrid, ...`

@@ -1,6 +1,6 @@
 ---
 title: Uppgradera till Adobe Experience Manager 6.5
-description: Lär dig grunderna i hur du uppgraderar en äldre Adobe Experience Manager-installation (AEM) till AEM 6.5.
+description: Lär dig mer om grunderna för uppgradering av en äldre Adobe Experience Manager-installation (AEM) till AEM 6.5.
 contentOwner: sarchiz
 topic-tags: upgrading
 content-type: reference
@@ -8,9 +8,9 @@ docset: aem65
 targetaudience: target-audience upgrader
 feature: Upgrading
 exl-id: 722d544c-c342-4c1c-80e5-d0a1244f4d36
-source-git-commit: 26c0411d6cc16f4361cfa9e6b563eba0bfafab1e
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '678'
+source-wordcount: '677'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ Detta avsnitt behandlar uppgradering av en AEM till AEM 6.5:
 * [Utvärdera Upgrade Complexity med Pattern Detector](/help/sites-deploying/pattern-detector.md)
 * [Bakåtkompatibilitet i AEM 6.5](/help/sites-deploying/backward-compatibility.md)
   <!--* [Using Offline Reindexing To Reduce Downtime During an Upgrade](/help/sites-deploying/upgrade-offline-reindexing.md)-->
-* [Uppgraderingsprocedur](/help/sites-deploying/upgrade-procedure.md)
+* [Uppgraderingsförfarande](/help/sites-deploying/upgrade-procedure.md)
 * [Uppgradera kod och anpassningar](/help/sites-deploying/upgrading-code-and-customizations.md)
 * [Underhållsaktiviteter före uppgraderingen](/help/sites-deploying/pre-upgrade-maintenance-tasks.md)
 * [Utföra en uppgradering på plats](/help/sites-deploying/in-place-upgrade.md)
@@ -39,7 +39,7 @@ För att underlätta referensen till de AEM förekomsterna i dessa procedurer an
 
 >[!NOTE]
 >
->Som en del av arbetet med att förbättra uppgraderingarnas tillförlitlighet har AEM genomgått en omfattande omstrukturering av databasen. Mer information om hur du justerar med den nya strukturen finns i [Omstrukturering av lager i AEM.](/help/sites-deploying/repository-restructuring.md)
+>Som en del av arbetet med att förbättra uppgraderingarnas tillförlitlighet har AEM genomgått en omfattande omstrukturering av databasen. Mer information om hur du justerar med den nya strukturen finns i [Omstrukturering av AEM.](/help/sites-deploying/repository-restructuring.md)
 
 ## Vad har ändrats? {#what-has-changed}
 
@@ -77,9 +77,9 @@ Uppgradering av AEM är en flerstegsprocess som ibland tar flera månader. Följ
 
 ## Uppgraderingsflöde {#upgrade-overview-1}
 
-Bilden nedan visar det rekommenderade arbetsflödet för uppgradering. Notera referensen till de nya funktioner som Adobe har introducerat. Uppgraderingen ska börja med Mönsteravkännaren (se [Utvärdera Upgrade Complexity med Pattern Detector](/help/sites-deploying/pattern-detector.md)) som låter dig bestämma vilken väg du vill ta för kompatibilitet med AEM 6.4 baserat på mönstren i den genererade rapporten.
+Bilden nedan visar det rekommenderade arbetsflödet för uppgradering. Notera referensen till de nya funktioner som Adobe har infört. Uppgraderingen ska börja med Mönsteravkännaren (se [Utvärdera Upgrade Complexity med Pattern Detector](/help/sites-deploying/pattern-detector.md)) som låter dig bestämma vilken väg du vill ta för kompatibilitet med AEM 6.4 baserat på mönstren i den genererade rapporten.
 
-I 6.5 fokuserades allt för att göra alla nya funktioner bakåtkompatibla, men i de fall där vissa bakåtkompatibilitetsproblem kvarstår kan du i kompatibilitetsläget tillfälligt skjuta upp utvecklingen så att den anpassade koden är kompatibel med 6.5. Med den här metoden undviker du utvecklingsarbete direkt efter uppgraderingen (se [Bakåtkompatibilitet i AEM 6.5](/help/sites-deploying/backward-compatibility.md)).
+I 6.5 fokuserades allt för att bakåtkompatibiliteten skulle bli bättre, men i de fall där vissa bakåtkompatibilitetsproblem kvarstår kan du i kompatibilitetsläget tillfälligt skjuta upp utvecklingen så att den anpassade koden är kompatibel med 6.5. Med den här metoden undviker du utvecklingsinsatser direkt efter uppgraderingen (se [Bakåtkompatibilitet i AEM 6.5](/help/sites-deploying/backward-compatibility.md)).
 
 Slutligen, i din 6.5-utvecklingscykel, funktioner som introducerats under Hållbara uppgraderingar (se [Hållbara uppgraderingar](/help/sites-deploying/sustainable-upgrades.md)) hjälper er att följa bästa praxis för att göra framtida uppgraderingar ännu effektivare och smidigare.
 

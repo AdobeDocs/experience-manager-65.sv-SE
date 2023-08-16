@@ -10,9 +10,9 @@ topic-tags: hTML5_forms
 discoiquuid: 9cd22244-9aa6-4b5f-96cf-c9cb3d6f9c8a
 feature: Mobile Forms
 exl-id: cf86c810-c466-4894-acc2-d4faf49754cc
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '660'
+source-wordcount: '659'
 ht-degree: 0%
 
 ---
@@ -35,7 +35,7 @@ Modulerna formRuntime.jsp innehåller referenser till klientbiblioteken. Det vis
 
 ## config.jsp {#config-jsp}
 
-Modulen config.jsp innehåller olika konfigurationer som loggning, proxytjänster och beteendeversion. Du kan lägga till egna konfigurations- och widgetanpassningar i modulen config.jsp. Du kan också lägga till konfigurationer som anpassad widgetregistrering i modulen config.jsp.
+Modulen config.jsp innehåller olika konfigurationer som loggning, proxytjänster och beteendeversion. Du kan lägga till din egen konfiguration och widgetanpassning i modulen config.jsp. Du kan också lägga till konfigurationer som anpassad widgetregistrering i modulen config.jsp.
 
 ## toolbar.jsp {#toolbar-jsp}
 
@@ -51,7 +51,7 @@ Först återges bara den första sidan i formuläret HTML5. När en användare r
 
 ## footer.jsp {#footer-jsp}
 
-Modulen footer.jsp är tom. Det gör att du kan lägga till skript som bara används för användarinteraktion.
+Modulen footer.jsp är tom. Här kan du lägga till skript som bara används för användarinteraktion.
 
 ## Skapa anpassade profiler {#creating-custom-profiles}
 
@@ -83,4 +83,4 @@ När du har skapat en anpassad profil lägger du till återgivningsinformation i
 
 1. Kontrollera att profilen har skapats genom att öppna URL `https://'[server]:[port]'/content/xfaforms/profiles/hrform.html`
 
-Verifiera formulären [Importera formulär](/help/forms/using/get-xdp-pdf-documents-aem.md) från det lokala filsystemet till AEM Forms och [förhandsgranska formuläret](/help/forms/using/previewing-forms.md) AEM serverförfattarinstans.
+För att verifiera formulären [Importera formulär](/help/forms/using/get-xdp-pdf-documents-aem.md) från det lokala filsystemet till AEM Forms och [förhandsgranska formuläret](/help/forms/using/previewing-forms.md) AEM serverförfattarinstans.

@@ -10,9 +10,9 @@ topic-tags: integrations
 discoiquuid: 96a77980-4213-4779-a540-00905ea8f7e3
 docset: aem65
 exl-id: 72f0f8e3-e70b-4f78-aa0e-b31768b536f7
-source-git-commit: fef4f47794942b1fca4b30ce518b2faa8951f482
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '1533'
+source-wordcount: '1532'
 ht-degree: 0%
 
 ---
@@ -31,7 +31,7 @@ Du kan också utföra analyser med Adobe Launch. Mer information om hur du integ
 
 ## Översikt {#overview}
 
-Du kan använda Adobe Analytics för att upptäcka interaktionsmönster och problem som användare ställs inför när de använder adaptiva formulär, HTML5-formulär och interaktiv kommunikation. Med Adobe analytics kan du spåra och lagra information om följande parametrar:
+Du kan använda Adobe Analytics för att upptäcka interaktionsmönster och problem som användare ställs inför när de använder adaptiva formulär, HTML5-formulär och interaktiv kommunikation. Med Adobe kan man spåra och lagra information om följande parametrar:
 
 * **Genomsnittlig fyllningstid**: Genomsnittlig tid för att fylla i formuläret.
 * **Återgivningar**: Antal gånger ett formulär öppnas.
@@ -59,8 +59,8 @@ Utför följande steg för att skapa en rapportserie.
 
    Skapa ny rapportsvit
 
-1. Kontrollera att den första listrutan är inställd på **Skapa från en mall** och sedan markera **Handel**.
-1. Leta reda på **Report Suite-ID** och lägg till nytt Report Suite-ID. Till exempel JEsquire. Ett rapportsvit-ID visas under fältet för rapportsvitens-ID. Det innehåller ett automatiskt prefix, som ofta är företagsnamnet.
+1. Kontrollera att den första listrutan är inställd på **Skapa från en mall** och sedan **Handel**.
+1. Leta reda på **Report Suite-ID** och lägg till ett nytt Report Suite-ID. Till exempel JEsquire. Ett rapportsvit-ID visas under fältet för rapportsvitens-ID. Det innehåller ett automatiskt prefix, som ofta är företagsnamnet.
 1. Lägg till ny **Platsrubrik**. JJEsquire Getting Started Suite. Den här titeln används i analysgränssnittet. Använd rapportsvitens ID i koden.
 1. Välj en **Tidszon** i listrutan. Alla data som ingår i den här rapportsviten registreras baserat på den definierade tidszonen.
 1. Lämna **Bas-URL** och **Standardsida** fält är tomma. Dessa två värden används bara från Adobe Marketing Cloud gränssnitt för att länka till din webbplats.
@@ -79,11 +79,11 @@ Utför följande steg för att skapa en rapportserie.
 1. Konfigurera och aktivera följande trafikvariabler i rapportsviten.
 
    * **formName**: Identifierare för ett adaptivt formulär.
-   * **formInstance**: Identifierare för en instans av ett adaptivt formulär. Aktivera sökvägsrapporter för den här variabeln.
-   * **fieldName**: Identifierare för ett adaptivt formulärfält. Aktivera sökvägsrapporter för den här variabeln.
-   * **panelName**: Identifierare för en adaptiv formulärpanel. Aktivera sökvägsrapporter för den här variabeln.
+   * **formInstance**: Identifierare för en instans av ett adaptivt formulär. Aktivera sökvägsrapporter för variabeln.
+   * **fieldName**: Identifierare för ett adaptivt formulärfält. Aktivera sökvägsrapporter för variabeln.
+   * **panelName**: Identifierare för en anpassad formulärpanel. Aktivera sökvägsrapporter för variabeln.
    * **formTitle**: Formulärets namn.
-   * **fieldTitle**: Formulärfältets titel.
+   * **fieldTitle**: Formulärfältets namn.
    * **panelTitle**: Formulärpanelens namn.
    * **analyticsVersion**: Version av formuläranalys.
 
@@ -112,8 +112,8 @@ Utför följande steg för att skapa en rapportserie.
 Konfigurationen av Cloud Servicen är information om ditt Adobe Analytics-konto. Med konfigurationen kan Adobe Experience Manager (AEM) ansluta till Adobe Analytics. Skapa en separat konfiguration för varje Analytics-konto som du använder.
 
 1. Logga in på AEM författarinstans som administratör.
-1. Klicka på i det övre vänstra hörnet **Adobe Experience Manager** > **verktyg** ![hamikon](/help/forms/using/assets/tools.png) > **Cloud Services** > **Äldre Cloud Services**.
-1. Sök **Adobe Analytics** ikon. Klicka **Visa konfigurationer** och sedan fortsätta med att klicka **[+]** för att lägga till ny konfiguration.
+1. Klicka på i det övre vänstra hörnet **Adobe Experience Manager** > **verktyg** ![hamikon](/help/forms/using/assets/tools.png) > **Cloud Service** > **Äldre Cloud Service**.
+1. Sök **Adobe Analytics** -ikon. Klicka **Visa konfigurationer** och sedan fortsätta klicka **[+]** för att lägga till ny konfiguration.
 
    Om du är förstagångsanvändare klickar du på **Konfigurera nu**.
 
@@ -132,8 +132,8 @@ Konfigurationen av Cloud Servicen är information om ditt Adobe Analytics-konto.
 
 Ett Adobe Analytics-ramverk är en uppsättning mappningar mellan Adobe Analytics-variabler och AEM. Använd ett ramverk för att konfigurera hur formulären fyller i data i Adobe Analytics-rapporter. Ramverk är kopplade till en Adobe Analytics-konfiguration. Du kan skapa flera ramverk för varje konfiguration.
 
-1. På AEM Cloud Services-konsolen klickar du på **Visa konfigurationer**, under Adobe Analytics.
-1. Klicka på **[+]** bredvid Analytics-konfigurationen.
+1. På AEM molntjänstkonsol klickar du på **Visa konfigurationer**, under Adobe Analytics.
+1. Klicka på **[+]** länk bredvid din Analytics-konfiguration.
 
    ![Adobe Analytics-konfiguration](assets/adobe-analytics-cloud-services.png)
 
@@ -164,7 +164,7 @@ Ett Adobe Analytics-ramverk är en uppsättning mappningar mellan Adobe Analytic
 1. Ange lämpliga värden för följande fält och klicka på **Spara**.
 
    * **SiteCatalyst Framework**: Välj ramverket/konfigurationen som du definierade i avsnittet Konfigurera ett ramverk för spårning.
-   * **Fälttidsspårning - baslinje**: Ange efter hur lång tid (i sekunder) som fältbesöket ska spåras. Standardvärdet är 0. När värdet är större än 0 (noll) skickas två separata spårningshändelser till Adobe Analytics-servern. Den första händelsen instruerar analysservern att sluta spåra det avslutade fältet. Den andra händelsen skickas efter att den angivna längden har gått. Den andra händelsen instruerar analysservern att börja spåra det besökta fältet. Genom att använda två olika händelser kan du mäta tiden som läggs på ett fält på ett korrekt sätt. När värdet är 0 (noll) skickas en enda spårningshändelse till Adobe Analytics-servern.
+   * **Fälttidsspårning - baslinje**: Ange hur länge (i sekunder) som fältbesöket ska spåras. Standardvärdet är 0. När värdet är större än 0 (noll) skickas två separata spårningshändelser till Adobe Analytics-servern. Den första händelsen instruerar analysservern att sluta spåra det avslutade fältet. Den andra händelsen skickas efter att den angivna längden har gått. Den andra händelsen instruerar analysservern att börja spåra det besökta fältet. Genom att använda två olika händelser kan du mäta tiden som läggs på ett fält på ett korrekt sätt. När värdet är 0 (noll) skickas en enda spårningshändelse till Adobe Analytics-servern.
 
    * **Synkroniseringscron för analysrapport**: Ange cron-uttryck för att hämta rapporter från Adobe Analytics. Standardvärdet är 0 0 2 ? &#42; &#42;.
 

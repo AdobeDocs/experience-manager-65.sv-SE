@@ -10,9 +10,9 @@ topic-tags: site-features
 content-type: reference
 discoiquuid: fabaa3e8-1657-4ed4-abb2-990117bec39c
 exl-id: 8f11f5de-f5af-4ce7-a448-2b4299de2930
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '351'
+source-wordcount: '350'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ Följande administrationsverktyg finns för att hantera webbplatser och sidor:
 
    * [Återanvända innehåll: Multi Site Manager och Live Copy](/help/sites-administering/msm.md)
 
-* Översättning gör att du kan automatisera översättning av sidinnehåll, resurser och användargenererat innehåll för att skapa och underhålla flerspråkiga webbplatser:
+* Med översättningen kan ni automatisera översättningen av sidinnehåll, resurser och användargenererat innehåll för att skapa och underhålla flerspråkiga webbplatser:
 
    * [Översätta innehåll för flerspråkiga webbplatser](/help/sites-administering/translation.md)
 
@@ -33,14 +33,14 @@ Följande administrationsverktyg finns för att hantera webbplatser och sidor:
 
 ## Flerspråkiga och flerspråkiga webbplatser {#multinational-and-multilingual-sites}
 
-Ni kan effektivt skapa innehåll för multinationella och flerspråkiga webbplatser genom att kombinera Multi Site Manager och arbetsflödet för översättning. Skapa en överordnad webbplats på ett språk, för ett visst land, och använd sedan innehållet som grund för de andra webbplatserna, med översättning där det behövs:
+Ni kan effektivt skapa innehåll för multinationella och flerspråkiga webbplatser genom att kombinera Multi Site Manager och arbetsflödet för översättning. Skapa en huvudwebbplats på ett språk, för ett visst land, och använd sedan innehållet som grund för de andra webbplatserna, med översättning där det behövs:
 
-* [Översätt](/help/sites-administering/translation.md) den överordnad webbplatsen till olika språk.
+* [Översätt](/help/sites-administering/translation.md) huvudwebbplatsen till olika språk.
 
 * Använd [Multi Site Manager](/help/sites-administering/msm.md) till:
 
-   * Återanvänd innehåll från den överordnad sajten och översättningarna för att skapa sajter för andra länder och kulturer.
-   * Se till att begränsa användningen av Multi Site Manager till innehåll på ett språk, till exempel engelska överordnad -> engelska språkgrenar på landsplatser, franska överordnad -> franska språkgrenar på landsplatser.
+   * Återanvänd innehåll från huvudwebbplatsen och översättningarna för att skapa webbplatser för andra länder och kulturer.
+   * Se till att begränsa användningen av Multi Site Manager till innehåll på ett språk, till exempel engelsk master -> Engelsk språkgren på landsplatser, fransk master -> Franska språkgrenar på landsplatser.
    * Om det behövs frigör du element från live-kopiorna för att lägga till lokaliseringsinformation.
 
 I följande diagram visas hur huvudbegreppen överlappar (men inte alla nivåer/element som berörs):
@@ -51,7 +51,7 @@ I följande diagram visas hur huvudbegreppen överlappar (men inte alla nivåer/
 >
 >I detta fall, och på liknande sätt, hanterar inte MSM de olika språkversionerna som sådana.
 >
->* [MSM](/help/sites-administering/msm.md) hanterar distributionen av översatt innehåll från en plan (t.ex. en global överordnad) till live-kopior (t.ex. lokala platser) inom ett språks gränser.
+>* [MSM](/help/sites-administering/msm.md) hanterar distributionen av översatt innehåll från en plan (till exempel en global master) till live-kopiorna (till exempel de lokala webbplatserna) inom ett språks gränser.
 >* The [översättning](/help/sites-administering/translation.md) integreringsfunktionerna i AEM, tillsammans med översättningshanteringstjänster från tredje part, hanterar språken och översätter innehåll till dessa olika språk.
 >
 >För mer avancerade användningsområden kan MSM användas även av flerspråkiga mallsidor.

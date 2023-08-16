@@ -10,16 +10,16 @@ discoiquuid: fc418da9-496f-4a2b-bfe4-2add3ac4f468
 docset: aem65
 feature: Adaptive Forms
 exl-id: 1a139530-27bd-44da-8bf4-5b375e75cf32
-source-git-commit: e7a3558ae04cd6816ed73589c67b0297f05adce2
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '2472'
+source-wordcount: '2469'
 ht-degree: 0%
 
 ---
 
 # Tabeller i anpassningsbara former{#tables-in-adaptive-forms}
 
-<span class="preview"> Adobe rekommenderar att man använder modern och utbyggbar datainhämtning [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) for [skapa ny Adaptive Forms](/help/forms/using/create-an-adaptive-form-core-components.md) eller [lägga till adaptiv Forms på AEM Sites-sidor](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-program, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptive Forms med grundläggande komponenter. </span>
+<span class="preview"> Adobe rekommenderar att man använder modern och utbyggbar datainhämtning [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) for [skapa ny Adaptive Forms](/help/forms/using/create-an-adaptive-form-core-components.md) eller [lägga till adaptiv Forms på AEM Sites-sidor](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-filer, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptiv Forms med baskomponenter. </span>
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
@@ -27,7 +27,7 @@ ht-degree: 0%
 | AEM 6.5 | Den här artikeln |
 
 
-Att använda tabeller är ett effektivt, förenklat och organiserat sätt att presentera komplexa data. Det gör det enkelt för användarna att identifiera information och ge indata i en ordnad ordning av rader och kolumner. De flesta formulär från finanssektorn och myndigheter kräver stora datatabeller för att skicka siffror och utföra beräkningar.
+Att använda tabeller är ett effektivt, förenklat och organiserat sätt att presentera komplexa data. Det gör det enkelt för användarna att identifiera information och lägga in data i en ordnad ordning av rader och kolumner. De flesta formulär från finanssektorn och myndigheter kräver stora datatabeller för att skicka siffror och utföra beräkningar.
 
 AEM Forms tillhandahåller en tabellkomponent i komponentwebbläsaren i sidofältet som gör att du kan skapa tabeller i adaptiva formulär. Några av de viktigaste funktionerna i den är:
 
@@ -51,9 +51,9 @@ Om du vill skapa en tabell drar och släpper du tabellkomponenten från komponen
 
 Rubrikcellerna är textfält. Om du vill ändra rubrikens etikett högerklickar du på rubrikcellen och klickar på **Redigera**. Uppdatera etiketten i dialogrutan Redigera **Värde** fält och klicka **OK**.
 
-Tabellcellerna är som standard textrutor. Du kan ersätta en innehållscell med andra adaptiva formulärkomponenter som är tillgängliga i sidosparken, till exempel en numerisk ruta, datumväljare eller nedrullningsbar lista.
+Tabellcellerna är som standard textrutor. Du kan ersätta en innehållscell med andra adaptiva formulärkomponenter som är tillgängliga i sidosparken, till exempel en numerisk ruta, datumväljare eller listruta.
 
-Den första innehållsraden i följande tabell innehåller till exempel textruta, datumväljare och nedrullningsbara listkomponenter som celler.
+Den första innehållsraden i följande tabell innehåller t.ex. textruta, datumväljare och nedrullningsbara listkomponenter som celler.
 
 ![radcellstyper](assets/row-cell-types.png)
 
@@ -63,11 +63,11 @@ Du kan sammanfoga två eller flera innehållsceller genom att markera cellerna s
 
 Du kan lägga till och ta bort en rad eller kolumn och flytta en rad uppåt och nedåt i en tabell.
 
-Om du vill lägga till eller ta bort en rad eller kolumn, eller flytta en rad, klickar du på en cell i raden eller kolumnen. En nedrullningsbar meny visas längst upp i kolumnen och till vänster om raden. Menyn längst upp innehåller alternativ för att lägga till eller ta bort kolumnen, medan menyn till vänster gör att du kan lägga till, ta bort eller flytta raden.
+Om du vill lägga till eller ta bort en rad eller kolumn, eller flytta en rad, klickar du på en cell i raden eller kolumnen. En nedrullningsbar meny visas längst upp i kolumnen och till vänster om raden. Menyn längst upp innehåller alternativ för att lägga till eller ta bort kolumnen, medan menyn till vänster låter dig lägga till, ta bort eller flytta raden.
 
 * Åtgärden Lägg till lägger till en rad nedanför eller en kolumn till höger om den markerade raden eller kolumnen.
 * Radera-åtgärden tar bort den markerade raden eller kolumnen.
-* Åtgärden Flytta upp och Flytta ned flyttar den markerade raden uppåt och nedåt.
+* Åtgärden Flytta uppåt och Flytta nedåt flyttar den markerade raden uppåt och nedåt.
 
 I den nedrullningsbara menyn för raden finns även redigeringsåtgärden för att redigera radegenskaper, inställningar och formateringsalternativ.
 
@@ -101,7 +101,7 @@ Så här aktiverar du sortering:
 
 1. Markera tabellen och tryck på ![configure_icon](assets/configure_icon.png) (Konfigurera). Du kan också markera tabellen med **Innehåll** webbläsaren i sidospåret av Interactive Communication.
 1. Välj **Aktivera sortering**.
-1. Tryck ![ready_icon](assets/done_icon.png) för att spara tabellegenskaperna. Sorteringsikonerna, uppåt- och nedåtpilarna, i kolumnrubriker representerar att sorteringen har aktiverats.
+1. Tryck ![ready_icon](assets/done_icon.png) om du vill spara tabellegenskaperna. Sorteringsikonerna, uppåt- och nedåtpilarna, i kolumnrubriker representerar att sorteringen har aktiverats.
 
    ![Aktivera sortering](assets/enable_sorting_new.png)
 
@@ -120,7 +120,7 @@ Så här aktiverar du sortering:
 
 Gör så här för att ange kolumnbredd för en tabell:
 
-1. I **[!UICONTROL Content]** trycker du på **[!UICONTROL Table]** och tryck på Konfigurera (![Konfigurera](assets/configure-icon.svg))ikon.
+1. I **[!UICONTROL Content]** trycker du på **[!UICONTROL Table]** och tryck på Konfigurera (![Konfigurera](assets/configure-icon.svg)).
 
 1. Ange en kommaavgränsad lista med värden i **[!UICONTROL Column Width]** -fält för att ange den proportionella bredden för varje kolumn i tabellen. För en tabell som innehåller 3 kolumner anger du till exempel 2,4,6 som värde i **[!UICONTROL Column Width]** resulterar i att kolumnbredden ställs in som 2/12 för den första kolumnen, 4/12 för den andra kolumnen och 6/12 för den tredje kolumnen. 2/12 som bredd för den första kolumnen avser en sjättedel av tabellbredden. På samma sätt anger 4/12 den andra kolumnbredden som en tredjedel av tabellbredden och 6/12 den tredje kolumnbredden som halva tabellbredden.
 
@@ -141,7 +141,7 @@ Du kan se formategenskaperna i sidofältet.
 
 ## Lägga till eller ta bort en rad dynamiskt {#add-or-delete-a-row-dynamically}
 
-Tabeller har körklara funktioner för att dynamiskt lägga till eller ta bort rader vid körning.
+Tabeller har färdiga funktioner för att dynamiskt lägga till eller ta bort rader vid körning.
 
 1. Markera en tabellrad och tryck på ![cmppr](assets/cmppr.png).
 1. På fliken Upprepa inställningar anger du minsta och högsta antal rader för att begränsa antalet rader i tabellen.
@@ -157,18 +157,18 @@ Under körningen visas **+** och *-* för att lägga till eller ta bort en rad.
 
 ## Uttryck i en tabell {#expressions-in-a-table}
 
-Tabeller i anpassningsbara formulär gör att du kan skriva uttryck i JavaScript för att skapa beteenden som att visa eller dölja en tabell eller en rad, lägga till alla tal och visa summan i en cell, aktivera eller inaktivera en cell, validera användarindata och så vidare. Dessa uttryck använder API:er för adaptiva formulärskriptmodeller.
+Tabeller i anpassningsbara formulär gör att du kan skriva uttryck i JavaScript för att få beteenden som att visa eller dölja en tabell eller en rad, lägga till alla tal och visa summan i en cell, aktivera eller inaktivera en cell, validera användarindata och så vidare. Dessa uttryck använder API:er för adaptiva formulärskriptmodeller.
 
 Tabellerna och raderna har endast stöd för synlighetsuttryck som styr synligheten baserat på värdet som returneras av ett uttryck, men cellerna har stöd för följande uttryck:
 
 * **Initieringsskript:** för att utföra en åtgärd vid initiering av ett fält.
-* **Värde för implementeringsskript:** om du vill ändra komponenterna i ett formulär efter att värdet för ett fält har ändrats.
+* **Value Commit Script:** om du vill ändra komponenterna i ett formulär efter att värdet för ett fält har ändrats.
 
 >[!NOTE]
 >
 >Om XFA-skriptet för ändring/utträde också tillämpas på samma fält, körs XFA-skriptet för ändring/utträde före skriptet för värdeimplementering.
 
-* **Beräkna uttryck**: till automatisk beräkning av ett fälts värde.
+* **Beräkna uttryck**: för automatisk beräkning av ett fälts värde.
 * **Valideringsuttryck**: för att validera ett fält.
 * **Åtkomstuttryck**: för att aktivera/inaktivera ett fält.
 * **Synlighetsuttryck**: för att styra visningen av ett fält och en panel.
@@ -179,7 +179,7 @@ En fullständig lista över adaptiva formulärklasser, händelser, objekt och of
 
 ## Mobillayouter {#mobile-layouts}
 
-Tabeller i anpassningsbara formulär ger oöverträffad upplevelse i mobila enheter tack vare dess flytande och responsiva layouter. AEM Forms har två typer av mobila layouter för tabeller - rubriker till vänster och fällbara kolumner.
+Tabeller i anpassningsbara formulär ger oöverträffad upplevelse i mobila enheter tack vare dess flytande och responsiva layouter. AEM Forms erbjuder två typer av mobila layouter för tabeller - rubriker till vänster och Komprimerbara kolumner.
 
 Du kan konfigurera en mobil layout för en tabell på fliken Format i dialogrutan Redigera komponent för en tabell.
 
@@ -189,7 +189,7 @@ I sidhuvudena i den vänstra layouten flyttas tabellhuvudet till vänster och ba
 
 ![skrivbordsvy](assets/desktopview_new.png)
 
-Skrivbordsvy av en tabell med sidhuvud i den vänstra layouten
+Skrivbordsvy av en tabell med sidhuvud i vänsterlayout
 
 ![Sidhuvuden till vänster](assets/headersontheleft_new.png)
 
@@ -215,13 +215,13 @@ Utökad kolumn i en tabell på en mobil enhet
 
 ## Sammanfoga data i en tabell {#merge-data-in-a-table}
 
-Tabeller i anpassningsbara formulär gör att du kan fylla i tabellen under körning med data från en XML-fil. Data-XML-filen kan finnas i det lokala filsystemet på den dator där AEM Forms-servern körs eller i CRX-databasen.
+Tabeller i anpassningsbara formulär gör att du kan fylla i tabellen vid körning med data från en XML-fil. Data-XML-filen kan finnas i det lokala filsystemet på den dator där AEM Forms-servern körs eller i CRX-databasen.
 
 Låt oss ta ett exempel på följande sammanfattande tabell över banktransaktioner som vi vill fylla med data från en XML-fil.
 
 ![data-merge-table](assets/data-merge-table.png)
 
-I det här exemplet används elementnamnsegenskapen för:
+I det här exemplet används elementnamnegenskapen för:
 
 * raden är **Rad1**
 * innehållscellen under transaktionsdatumet är **tableItem1**
@@ -311,9 +311,9 @@ Dessutom kan du dra och släppa en grupp XSD-element med komplex typ för att sk
 
 >[!NOTE]
 >
->Antalet element i en XDP-tabellkomponent, ett delformulär eller en XSD-komplex typ får inte överstiga antalet celler i en rad. Du kan till exempel inte släppa fyra element på en rad som bara har tre celler. Det resulterar i ett fel.
+>Antalet element i en XDP-tabellkomponent, ett delformulär eller en XSD-komplex typ får inte överstiga antalet celler i en rad. Du kan till exempel inte släppa fyra element på en rad som bara har tre celler. Det kommer att resultera i ett fel.
 >
->Om antalet element är mindre än antalet celler i en rad lägger den nya raden först till celler som baseras på elementen, och därefter läggs standardcellerna till för att fylla i de återstående cellerna i raden. Om du till exempel släpper en grupp med tre element på en rad som har fyra celler, baseras de första tre cellerna på de element som du har tagit bort och de återstående en cellerna blir standardtabellcellen.
+>Om antalet element är mindre än antalet celler i en rad lägger den nya raden först till celler som är baserade på elementen, och därefter läggs standardcellerna till för att fylla i de återstående cellerna i raden. Om du till exempel släpper en grupp med tre element på en rad som har fyra celler, baseras de första tre cellerna på de element som du har tagit bort och de återstående en cellerna blir standardtabellcellen.
 
 ## Viktiga överväganden {#key-considerations}
 

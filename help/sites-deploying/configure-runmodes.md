@@ -11,16 +11,16 @@ content-type: reference
 discoiquuid: 12329e26-40bc-4c94-bc60-6d9cbd01345f
 feature: Configuring
 exl-id: 6d03cb1d-500e-4a23-80e5-347a43dff30e
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '748'
+source-wordcount: '745'
 ht-degree: 0%
 
 ---
 
 # Körningslägen{#run-modes}
 
-Med körningslägena kan du justera AEM för ett specifikt ändamål; till exempel författare eller publicera, testa, utveckla, intranät eller andra.
+Med körningslägen kan du trimma AEM för ett specifikt ändamål, till exempel författare eller publicera, testa, utveckla, intranät eller andra.
 
 Du kan:
 
@@ -43,7 +43,7 @@ Installationslägena är färdiga:
 * `samplecontent`
 * `nosamplecontent`
 
-Detta är två par av ömsesidigt uteslutande körlägen. Du kan till exempel:
+Det här är två par körningslägen som inte kan köras samtidigt. Du kan till exempel:
 
 * definiera antingen `author` eller `publish`, inte båda samtidigt
 
@@ -93,7 +93,7 @@ Körningsläget anges med ett suffix i mappnamnet. På så sätt kan du spara al
 
 * `config.author`
 
-  Används för författarens körningsläge
+  Används för redigeringsläge
 
 * `config.publish`
 
@@ -101,7 +101,7 @@ Körningsläget anges med ett suffix i mappnamnet. På så sätt kan du spara al
 
 * `config.<run-mode>`
 
-  Används för tillämpligt körläge. till exempel config
+  Används för det tillämpliga körningsläget, till exempel config
 
 Se [OSGi-konfiguration i databasen](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository) om du vill ha mer information om hur du definierar enskilda konfigurationsnoder i dessa mappar och om hur du skapar konfigurationer för kombinationer av flera körningslägen.
 
@@ -111,7 +111,7 @@ Se [OSGi-konfiguration i databasen](/help/sites-deploying/configuring-osgi.md#os
 
 ## Definiera ytterligare paket som ska installeras för ett körningsläge {#defining-additional-bundles-to-be-installed-for-a-run-mode}
 
-Ytterligare paket som ska installeras för ett visst körläge kan också anges. För dessa definitioner används installationsmappar för att lagra paketen. Återigen anges körningsläget med ett prefix:
+Ytterligare paket som ska installeras för ett visst körningsläge kan också anges. För dessa definitioner används installationsmappar för att lagra paketen. Återigen anges körningsläget med ett prefix:
 
 * `install.author`
 * `install.publish`
@@ -120,7 +120,7 @@ De här mapparna är av typen `nt:folder` och ska innehålla rätt paket.
 
 ## Starta CQ med ett specifikt körningsläge {#starting-cq-with-a-specific-run-mode}
 
-Om du har definierat konfigurationer för flera körningslägen måste du definiera vilka som ska användas vid start. Det finns flera metoder för att specificera vilket körningsläge som ska användas. Upplösningsordningen är
+Om du har definierat konfigurationer för flera körningslägen måste du definiera vilka som ska användas vid start. Det finns flera metoder för att ange vilket körningsläge som ska användas. Upplösningsordningen är:
 
 1. [systemegenskaper (](#using-a-system-property-in-the-start-script)
 1. [](#using-the-sling-properties-file)
@@ -137,7 +137,7 @@ The `sling.properties` filen kan användas för att definiera det körningsläge
 
    `<cq-installation-dir>/crx-quickstart/conf/sling.properties`
 
-1. Lägg till följande egenskaper: följande exempel är för författaren:
+1. Lägg till följande egenskaper. Följande exempel är för författaren:
 
    `sling.run.modes=author`
 

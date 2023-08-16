@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: best-practices
 exl-id: 1e5d8184-7164-4984-b43e-421015e8bf52
-source-git-commit: 69346a710708ee659ee97e9fdc193c8ea2658fe6
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '455'
+source-wordcount: '454'
 ht-degree: 3%
 
 ---
@@ -34,7 +34,7 @@ Den fullständiga dokumentationen om hur du skapar, hanterar, använder och utve
 >**Innehållsfragment** och **[Upplevelsefragment](/help/sites-authoring/experience-fragments.md)** har olika funktioner i AEM:
 >
 >* **Innehållsfragment** är redaktionellt innehåll, främst text, och relaterade bilder. De är rent innehåll, utan design och layout.
->* **Upplevelsefragment** är helt utformat, ett fragment av en webbsida.
+>* **Upplevelsefragment** är helt utformat för innehåll, ett fragment av en webbsida.
 >
 >Upplevelsefragment kan innehålla innehåll i form av innehållsfragment, men inte tvärtom.
 
@@ -44,11 +44,11 @@ Det finns flera exempelinnehållsfragment i We.Retail; navigera via **Resurser**
 
 Dessa innehåller **Arktisk surfning i Lofoten**, ett fragment tillsammans med relaterade visuella resurser:
 
-* Navigera med hjälp av **Resurser**, **Filer**, **Vi.butik**, **Engelska**, **Erfarenheter**, **Arktisk surfning i Lofoten**:
+* Navigera genom **Resurser**, **Filer**, **Vi.butik**, **Engelska**, **Erfarenheter**, **Arktisk surfning i Lofoten**:
 
    * [http://localhost:4502/assets.html/content/dam/we-retail/en/experiences/arctic-surfing-in-lofoten](http://localhost:4502/assets.html/content/dam/we-retail/en/experiences/arctic-surfing-in-lofoten)
 
-![cf-44](assets/cf-44.png)
+![cf-4](assets/cf-44.png)
 
 Du kan markera och redigera **Arktisk surfning i Lofoten** fragment:
 
@@ -90,7 +90,7 @@ Mer information finns i:
 
    * Använd ditt innehållsfragment när du redigerar en sida.
 
-* [Utveckla AEM - Komponenter för innehållsfragment](/help/sites-developing/components-content-fragments.md)
+* [Utveckla AEM - komponenter för innehållsfragment](/help/sites-developing/components-content-fragments.md)
 
    * En översikt över komponenterna för innehållsfragment.
 

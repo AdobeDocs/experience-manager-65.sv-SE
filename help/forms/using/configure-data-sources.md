@@ -10,9 +10,9 @@ discoiquuid: 9d78a6dc-fc9c-415b-b817-164fe6648b30
 docset: aem65
 feature: Form Data Model
 exl-id: 7a1d9d57-66f4-4f20-91c2-ace5a71a52f2
-source-git-commit: 1683338f02d01d5d9843368955fa42f309718f26
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '1935'
+source-wordcount: '1934'
 ht-degree: 0%
 
 ---
@@ -35,14 +35,14 @@ Med AEM Forms dataintegrering kan du konfigurera och ansluta till olika datakäl
 * SOAP-baserade webbtjänster
 * OData-tjänster
 
-Dataintegrering stöder OAuth2.0([Auktoriseringskod](https://oauth.net/2/grant-types/authorization-code/), [Klientautentiseringsuppgifter](https://oauth.net/2/grant-types/client-credentials/)), grundläggande autentisering och API-nyckelautentiseringstyper är körklara och tillåter implementering av anpassad autentisering för åtkomst till webbtjänster. Medan RESTful-, SOAP-baserade och OData-tjänster är konfigurerade i AEM Cloud Services, konfigureras JDBC för relationsdatabaser och koppling för AEM användarprofil i AEM webbkonsol.
+Dataintegrering stöder OAuth2.0([Auktoriseringskod](https://oauth.net/2/grant-types/authorization-code/), [Klientautentiseringsuppgifter](https://oauth.net/2/grant-types/client-credentials/)), grundläggande autentisering och API-nyckelautentiseringstyper är körklara och tillåter implementering av anpassad autentisering för åtkomst till webbtjänster. Medan RESTful-, SOAP-baserade och OData-tjänster konfigureras i AEM Cloud Service, konfigureras JDBC för relationsdatabaser och koppling för AEM användarprofil i AEM webbkonsol.
 
 ## Konfigurera relationsdatabas {#configure-relational-database}
 
 Du kan konfigurera relationsdatabaser med hjälp AEM Konfiguration av webbkonsol. Gör följande:
 
 1. Gå till AEM webbkonsol på `https://server:host/system/console/configMgr`.
-1. Sök efter **[!UICONTROL Apache Sling Connection Pooled DataSource]** konfiguration. Tryck för att öppna konfigurationen i redigeringsläge.
+1. Leta efter **[!UICONTROL Apache Sling Connection Pooled DataSource]** konfiguration. Tryck för att öppna konfigurationen i redigeringsläge.
 1. I konfigurationsdialogrutan anger du information för den databas som du vill konfigurera, till exempel:
 
    * Datakällans namn
@@ -53,7 +53,7 @@ Du kan konfigurera relationsdatabaser med hjälp AEM Konfiguration av webbkonsol
 
    >[!NOTE]
    >
-   >Kontrollera att du krypterar känslig information, t.ex. lösenord, innan du konfigurerar datakällan. Så här krypterar du:
+   >Kontrollera att du krypterar känslig information, t.ex. lösenord, innan du konfigurerar datakällan. Kryptera:
    >
    > 1. Gå till https://&#39;[server]:[port]/system/console/crypto.
    > 1. I **[!UICONTROL Plain Text]** anger du lösenordet eller en sträng som ska krypteras och trycker på **[!UICONTROL Protect]**.
@@ -77,7 +77,7 @@ Du kan konfigurera relationsdatabaser med hjälp AEM Konfiguration av webbkonsol
 Du kan konfigurera AEM användarprofil med hjälp av konfigurationen för anslutning av användarprofil i AEM webbkonsol. Gör följande:
 
 1. Gå till AEM webbkonsol på https://&#39;[server]:[port]system/console/configMgr.
-1. Sök efter **[!UICONTROL AEM Forms Data Integrations - User Profile Connector Configuration]** och tryck för att öppna konfigurationen i redigeringsläge.
+1. Leta efter **[!UICONTROL AEM Forms Data Integrations - User Profile Connector Configuration]** och tryck för att öppna konfigurationen i redigeringsläge.
 1. I dialogrutan Konfiguration av anslutning till användarprofil kan du lägga till, ta bort eller uppdatera egenskaper för användarprofiler. De angivna egenskaperna är tillgängliga för användning i formulärdatamodellen. Använd följande format för att ange egenskaper för användarprofiler:
 
    `name=[property_name_with_location_in_user_profile],type=[property_type]`
@@ -119,13 +119,13 @@ Så här konfigurerar du mappen för molntjänstkonfigurationer:
 
 ## Konfigurera RESTful-webbtjänster {#configure-restful-web-services}
 
-RESTful-webbtjänsten kan beskrivas med [Swagger-specifikationer](https://swagger.io/specification/) i JSON- eller YAML-format i en Swagger-definitionsfil. Om du vill konfigurera RESTful-webbtjänsten i AEM-molntjänster måste du ha antingen Swagger-filen i filsystemet eller URL:en där filen finns.
+RESTful-webbtjänsten kan beskrivas med [Swagger-specifikationer](https://swagger.io/specification/) i JSON- eller YAML-format i en Swagger-definitionsfil. Om du vill konfigurera RESTful-webbtjänsten i AEM molntjänster måste du se till att du antingen har Swagger-filen i filsystemet eller URL:en där filen finns.
 
 Gör följande för att konfigurera RESTful-tjänster:
 
 1. Gå till **[!UICONTROL Tools > Cloud Services > Data Sources]**. Tryck för att välja den mapp där du vill skapa en molnkonfiguration.
 
-   Se [Konfigurera mapp för molntjänstkonfigurationer](../../forms/using/configure-data-sources.md#cloud-folder) om du vill ha information om hur du skapar och konfigurerar en mapp för molntjänstkonfigurationer.
+   Se [Konfigurera mapp för molntjänstkonfigurationer](../../forms/using/configure-data-sources.md#cloud-folder) för information om hur du skapar och konfigurerar en mapp för molntjänstkonfigurationer.
 
 1. Tryck **[!UICONTROL Create]** för att öppna **[!UICONTROL Create Data Source Configuration wizard]**. Ange ett namn och eventuellt en rubrik för konfigurationen, välj **[!UICONTROL RESTful Service]** från **[!UICONTROL Service Type]** nedrullningsbar meny, där du kan bläddra och välja en miniatyrbild för konfigurationen, och trycka på **[!UICONTROL Next]**.
 1. Ange följande information för RESTful-tjänsten:
@@ -135,12 +135,12 @@ Gör följande för att konfigurera RESTful-tjänster:
 
       * Schema: De överföringsprotokoll som används av REST API. Antalet schematyper som visas i listrutan beror på scheman som definieras i Swagger-källan.
       * Värd: Domännamnet eller IP-adressen för värden som använder REST API. Det är ett obligatoriskt fält.
-      * Grundsökväg: URL-prefixet för alla API-sökvägar. Det är ett valfritt fält.\
+      * Bassökväg: URL-prefixet för alla API-sökvägar. Det är ett valfritt fält.\
         Om det behövs kan du redigera de förifyllda värdena för dessa fält.
 
    * Välj autentiseringstyp - Ingen, OAuth2.0([Auktoriseringskod](https://oauth.net/2/grant-types/authorization-code/), [Klientautentiseringsuppgifter](https://oauth.net/2/grant-types/client-credentials/)), Basic Authentication, API Key, Custom Authentication eller Mutual Authentication - för att få åtkomst till RESTful-tjänsten och ange därmed information för autentisering.
 
-   Om du väljer **[!UICONTROL API Key]** Ange värdet för API-nyckeln som autentiseringstyp. API-nyckeln kan skickas som en begäranderubrik eller som en frågeparameter. Välj ett av dessa alternativ på menyn **[!UICONTROL Location]** nedrullningsbar lista och ange namnet på huvudet eller frågeparametern i **[!UICONTROL Parameter Name]** i enlighet med detta.
+   Om du väljer **[!UICONTROL API Key]** Ange värdet för API-nyckeln som autentiseringstyp. API-nyckeln kan skickas som en begäranderubrik eller som en frågeparameter. Välj ett av dessa alternativ på menyn **[!UICONTROL Location]** nedrullningsbar lista och ange namnet på huvudet eller frågeparametern i **[!UICONTROL Parameter Name]** efter behov.
 
    Om du väljer **[!UICONTROL Mutual Authentication]** som autentiseringstyp, se [Certifikatbaserad ömsesidig autentisering för RESTful- och SOAP-webbtjänster](#mutual-authentication).
 
@@ -149,7 +149,7 @@ Gör följande för att konfigurera RESTful-tjänster:
 ### HTTP-klientkonfiguration för formulärdatamodell för optimering av prestanda {#fdm-http-client-configuration}
 
 [!DNL Experience Manager Forms] formulärdatamodell vid integrering med RESTful-webbtjänster som datakälla inkluderar HTTP-klientkonfigurationer för prestandaoptimering.
-Utför följande steg för att konfigurera HTTP-klienten för formulärdatamodellen:
+Utför följande steg för att konfigurera HTTP-klientmodellen för formulärdata:
 
 1. Logga in på [!DNL Experience Manager Forms] Skapa instans som administratör och gå till [!DNL Experience Manager] webbkonsolpaket. Standardwebbadressen är [https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr).
 
@@ -157,7 +157,7 @@ Utför följande steg för att konfigurera HTTP-klienten för formulärdatamodel
 
 1. I [!UICONTROL Form Data Model Http Client Configuration for REST data source] dialog:
 
-   * Ange maximalt antal tillåtna anslutningar mellan formulärdatamodell och RESTful-webbtjänster i dialogrutan **[!UICONTROL Connection limit in total]** fält. Standardvärdet är 20 anslutningar.
+   * Ange maximalt antal tillåtna anslutningar mellan formulärdatamodellen och RESTful-webbtjänster i dialogrutan **[!UICONTROL Connection limit in total]** fält. Standardvärdet är 20 anslutningar.
 
    * Ange maximalt antal tillåtna anslutningar för varje flöde i dialogrutan **[!UICONTROL Connection limit on per route basis]** fält. Standardvärdet är 2 anslutningar.
 
@@ -169,11 +169,11 @@ Utför följande steg för att konfigurera HTTP-klienten för formulärdatamodel
 
 ## Konfigurera SOAP-webbtjänster {#configure-soap-web-services}
 
-SOAP-baserade webbtjänster beskrivs med [WSDL-specifikationer (Web Services Description Language)](https://www.w3.org/TR/wsdl). Om du vill konfigurera en SOAP-baserad webbtjänst i AEM-molntjänster kontrollerar du att du har WSDL-webbadressen för webbtjänsten och gör följande:
+SOAP-baserade webbtjänster beskrivs med [WSDL-specifikationer (Web Services Description Language)](https://www.w3.org/TR/wsdl). Om du vill konfigurera en SOAP-baserad webbtjänst i AEM molntjänster kontrollerar du att du har WSDL-webbadressen för webbtjänsten och gör följande:
 
 1. Gå till **[!UICONTROL Tools > Cloud Services > Data Sources]**. Tryck för att välja den mapp där du vill skapa en molnkonfiguration.
 
-   Se [Konfigurera mapp för molntjänstkonfigurationer](../../forms/using/configure-data-sources.md#cloud-folder) om du vill ha information om hur du skapar och konfigurerar en mapp för molntjänstkonfigurationer.
+   Se [Konfigurera mapp för molntjänstkonfigurationer](../../forms/using/configure-data-sources.md#cloud-folder) för information om hur du skapar och konfigurerar en mapp för molntjänstkonfigurationer.
 
 1. Tryck **[!UICONTROL Create]** för att öppna **[!UICONTROL Create Data Source Configuration wizard]**. Ange ett namn och eventuellt en rubrik för konfigurationen, välj **[!UICONTROL SOAP Web Service]** från **[!UICONTROL Service Type]** nedrullningsbar meny, där du kan bläddra och välja en miniatyrbild för konfigurationen, och trycka på **[!UICONTROL Next]**.
 1. Ange följande för SOAP-webbtjänsten:
@@ -191,7 +191,7 @@ Ange KeyStore-alias för X509-certifikatet i **[!UICONTROL Key Alias]** fält. A
 
 ## Konfigurera OData-tjänster {#config-odata}
 
-En OData-tjänst identifieras av tjänstens rot-URL. Om du vill konfigurera en OData-tjänst i AEM-molntjänster kontrollerar du att du har tjänstens rot-URL och gör följande:
+En OData-tjänst identifieras av tjänstens rot-URL. Om du vill konfigurera en OData-tjänst i AEM molntjänster kontrollerar du att du har tjänstens rot-URL och gör följande:
 
 >[!NOTE]
 >
@@ -200,7 +200,7 @@ En OData-tjänst identifieras av tjänstens rot-URL. Om du vill konfigurera en O
 
 1. Gå till **[!UICONTROL Tools > Cloud Services > Data Sources]**. Tryck för att välja den mapp där du vill skapa en molnkonfiguration.
 
-   Se [Konfigurera mapp för molntjänstkonfigurationer](../../forms/using/configure-data-sources.md#cloud-folder) om du vill ha information om hur du skapar och konfigurerar en mapp för molntjänstkonfigurationer.
+   Se [Konfigurera mapp för molntjänstkonfigurationer](../../forms/using/configure-data-sources.md#cloud-folder) för information om hur du skapar och konfigurerar en mapp för molntjänstkonfigurationer.
 
 1. Tryck **[!UICONTROL Create]** för att öppna **[!UICONTROL Create Data Source Configuration wizard]**. Ange ett namn och eventuellt en rubrik för konfigurationen, välj **[!UICONTROL OData Service]** från **[!UICONTROL Service Type]** nedrullningsbar meny, där du kan bläddra och välja en miniatyrbild för konfigurationen, och trycka på **[!UICONTROL Next]**.
 1. Ange följande information för OData-tjänsten:

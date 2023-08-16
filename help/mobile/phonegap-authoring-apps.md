@@ -8,9 +8,9 @@ products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: authoring-adobe-phonegap-enterprise
 discoiquuid: abfeea65-102d-4800-abeb-304d61afcc13
 exl-id: 073daff7-0c1d-4715-bfd4-3e2336e4cb88
-source-git-commit: 4fd5e9a1bc603202ee52e85a1c09125b13cec315
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '1016'
+source-wordcount: '1013'
 ht-degree: 0%
 
 ---
@@ -35,7 +35,7 @@ Se den här katalogen som&quot;landningssida&quot; för AEM Mobile, där adminis
 
 Följ de här stegen för att komma till startsidan för programkatalogen:
 
-1. Bläddra till **Navigering** och sedan välja **Mobil**.
+1. Bläddra till **Navigering** välj **Mobil**.
 
 1. Välj **Appar** för att öppna programkatalogen.
 
@@ -45,7 +45,7 @@ Följ de här stegen för att komma till startsidan för programkatalogen:
 
 Om du väljer ett AEM Mobile-program i katalogen visas dess kontrollpanel. Här kan du hantera ditt program, visa statistik, bygga, distribuera och hantera ditt mobilappsinnehåll.
 
-Du kan expandera till varje platta i AEM Mobile Dashboard om du vill visa eller redigera information genom att klicka på.. i det nedre högra hörnet.
+Du kan expandera till varje ruta i AEM Mobile Dashboard för att visa eller redigera detaljer genom att klicka på ... längst ned till höger.
 
 ![AEM Mobile Applications Command Center](assets/chlimage_1-136.png)
 
@@ -81,21 +81,21 @@ The **Mellanlagrad** visas när den senaste innehållsuppdateringen skapades. Om
 
 The **Publicerad** visas när den senaste innehållsuppdateringen publicerades och gjordes tillgänglig för dina kunder. Om du vill publicera innehåll måste du först mellanlagra innehållet och sedan publicera uppdateringen genom att gå in i den här rutan och publicera från konsolen för information om innehållsrelease.
 
-![Sida för innehållsrelease](assets/chlimage_1-139.png) ![ContentSync-paket för appskalet](do-not-localize/chlimage_1-5.png)
+![Frisläpp innehållsruta](assets/chlimage_1-139.png) ![ContentSync-paket för appskalet](do-not-localize/chlimage_1-5.png)
 
 Den här ikonen representerar ett innehålls-releasepaket för programskalet
 
-![Paketikonen för innehållsrelease indikeras av två fyrkantiga, överlappande paketsymboler.](do-not-localize/chlimage_1-6.png)
+![Ikonen för innehållsaviseringspaket visas med två fyrkantiga, överlappande paketsymboler.](do-not-localize/chlimage_1-6.png)
 
-De här ikonerna representerar ett innehålls-releasepaket för appinnehåll
+De här ikonerna representerar ett paket för innehållsrelease för appinnehåll
 
-### The PhoneGap Build Tile {#the-phonegap-build-tile}
+### PhoneGap Build Tile {#the-phonegap-build-tile}
 
-The **PhoneGap Build** ansluter med `https://build.phonegap.com` för att bygga och vara värd för fjärrbyggen. När bygget har byggts blir det tillgängligt antingen som nedladdning eller direkt till enheten via en QR-kod.
+The **PhoneGap Build Tile** ansluter med `https://build.phonegap.com` för att bygga och vara värd för fjärrbyggen. När bygget har byggts blir det tillgängligt antingen som nedladdning eller direkt till enheten via en QR-kod.
 
 Du kan även hämta enhetskällan för att bygga lokalt via PhoneGap CLI (`https://docs.phonegap.com/en/3.5.0/guide_cli_index.md.html`).
 
-![PhoneGap Build](assets/chlimage_1-140.png)
+![PhoneGap Build Tile](assets/chlimage_1-140.png)
 
 ### Mätplattan {#the-metrics-tile}
 
@@ -107,7 +107,7 @@ Du kan även hämta enhetskällan för att bygga lokalt via PhoneGap CLI (`https
 
 AEM Mobile kan integreras med Adobe Analytics via [Adobe Mobile Services SDK](https://experienceleague.adobe.com/docs/mobile.html?lang=en) (AMS).
 
-Kontrollcentret **Mätplatta** visar sammanfattningsanalyser som hämtats från AMS för ditt program. Du kan gå in på kontrollpanelen för analyser genom att klicka på ... längst ned till höger.
+Kontrollcentret **Mätplatta** visar sammanfattningsanalyser som hämtats från AMS för ditt program. Du kan gå in på kontrollpanelen för analyser genom att klicka på&quot;..&quot; längst ned till höger.
 
 ![Mätplatta](assets/chlimage_1-141.png)
 

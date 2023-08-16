@@ -9,9 +9,9 @@ topic-tags: personalization
 discoiquuid: 9da34dab-7e89-4127-ab26-532687746b2a
 docset: aem65
 exl-id: d1132fcd-e6a0-44a2-8753-d250f68fbd78
-source-git-commit: b3889b1897f0ec0c5bbf60c346b77b2906175904
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '2837'
+source-wordcount: '2834'
 ht-degree: 0%
 
 ---
@@ -33,12 +33,12 @@ Alla Campaign-komponenter följer de bästa metoderna som beskrivs i [Metodtips 
 När du öppnar ett nyhetsbrev/e-postmeddelande som är konfigurerat för integrering med Adobe Campaign, bör du se följande komponenter i **Adobe Campaign Newsletter** avsnitt:
 
 * Rubrik (kampanj)
-* Bild (Campaign)
+* Bild (kampanj)
 * Länk (kampanj)
 * Scene7 Image Template (Campaign)
 * Riktad referens (Campaign)
 * Text och bild (kampanj)
-* Text och personalisering (Campaign)
+* Text och personalisering (kampanj)
 
 En beskrivning av de här komponenterna finns i följande avsnitt.
 
@@ -69,21 +69,21 @@ I följande exempel visas en rubrikkomponent (Campaign).
 
 ![chlimage_1-45](assets/chlimage_1-45.png)
 
-### Bild (Campaign) {#image-campaign}
+### Bild (kampanj) {#image-campaign}
 
 Komponenten image (campaign) visar en bild och tillhörande text enligt de angivna parametrarna.
 
 Du kan överföra en bild och sedan redigera den (till exempel beskära, rotera, lägga till länk/titel/text).
 
-Du kan antingen dra och släppa en bild från [Resursläsaren](/help/sites-authoring/author-environment-tools.md#assetsbrowsertouchoptimizedui) direkt till komponenten eller dess [Konfigurera dialogruta](/help/sites-authoring/editing-content.md#editconfigurecopycutdeletepastetouchoptimizedui). Du kan också överföra en bild från dialogrutan Konfigurera. Den här dialogrutan styr också alla definitioner och ändringar av bilden:
+Du kan antingen dra och släppa en bild från [Resursläsaren](/help/sites-authoring/author-environment-tools.md#assetsbrowsertouchoptimizedui) direkt till komponenten eller dess [Konfigurera dialogruta](/help/sites-authoring/editing-content.md#editconfigurecopycutdeletepastetouchoptimizedui). Du kan också överföra en bild från dialogrutan Konfigurera. I den här dialogrutan finns även information om alla definitioner och ändringar av bilden:
 
 ![chlimage_1-46](assets/chlimage_1-46.png)
 
 >[!NOTE]
 >
->Du måste ange information i **Alt-text** eller så går det inte att spara bilden.
+>Du måste ange information i **Alt-text** eller så kan bilden inte sparas.
 
-När bilden har överförts (och inte tidigare) kan du använda [redigering på plats](/help/sites-authoring/editing-content.md#editcontenttouchoptimizedui) för att beskära/rotera bilden efter behov:
+När bilden har överförts (och inte tidigare) kan du använda [redigering på plats](/help/sites-authoring/editing-content.md#editcontenttouchoptimizedui) beskära/rotera bilden efter behov:
 
 ![Verktygsfältet för infogad redigering](do-not-localize/chlimage_1-10.png)
 
@@ -91,9 +91,9 @@ När bilden har överförts (och inte tidigare) kan du använda [redigering på 
 >
 >I redigeraren på plats används bildens ursprungliga storlek och proportioner vid redigering. Du kan också ange höjd- och breddegenskaper. Alla storleks- och proportionsbegränsningar som definieras i egenskaperna används när du sparar redigeringsändringarna.
 >
->Beroende på din instans kan minimi- och maximinivåer även anges av [sidans design](/help/sites-developing/designer.md); dessa utvecklas under projektgenomförandet.
+>Beroende på din instans kan minimi- och maximinivåer även anges av [sidans design](/help/sites-developing/designer.md), som utvecklas under projektgenomförandet.
 
-Flera ytterligare alternativ finns i helskärmsläge. till exempel mappa och zooma:
+Flera ytterligare alternativ finns i helskärmsläge, till exempel karta och zoomning:
 
 ![Fullskärmsläge](do-not-localize/chlimage_1-11.png)
 
@@ -106,7 +106,7 @@ Om du vill mappa en bild väljer du Karta. Du kan ange hur du vill skapa bildsch
 Välj Beskär för att beskära en bild. Beskär bilden med musen.
 
 * **Rotera**
-Om du vill rotera en bild väljer du Rotera. Använd detta upprepade gånger tills bilden roteras som du vill ha den.
+Om du vill rotera en bild väljer du Rotera. Använd det här alternativet upprepade gånger tills bilden roteras som du vill ha den.
 
 * **Rensa**
 Ta bort den aktuella bilden.
@@ -129,7 +129,7 @@ Anger bildens höjd och bredd.
 
 >[!NOTE]
 >
->Du måste ange information i **Alt-text** i **Avancerat** eller så kan bilden inte sparas och följande felmeddelande visas:
+>Du måste ange information i **Alt-text** fältet i **Avancerat** eller så kan bilden inte sparas och följande felmeddelande visas:
 >
 >`Validation failed. Verify the values of the marked fields.`
 >
@@ -151,14 +151,14 @@ Länkens bildtext. Det här är den text som användarna ser.
 Lägger till ytterligare information om hur länken används.
 
 * **LinkType**
-I listrutan väljer du mellan en **Anpassad URL** och **Adaptivt dokument**. Det här fältet är obligatoriskt. Om du väljer Anpassad URL kan du ange länkens URL. Om du väljer Adaptivt dokument kan du ange dokumentets sökväg.
+I listrutan väljer du mellan **Anpassad URL** och **Adaptivt dokument**. Det här fältet är obligatoriskt. Om du väljer Anpassad URL kan du ange länkens URL. Om du väljer Adaptivt dokument kan du ange dokumentets sökväg.
 
 * **Ytterligare URL-parameter**
 Lägg till eventuella ytterligare URL-parametrar. Klicka på Lägg till objekt om du vill lägga till flera objekt.
 
 >[!NOTE]
 >
->Du måste ange information i **Länktyp** i **URL-information** eller så kan komponenten inte spara och följande felmeddelande visas:
+>Du måste ange information i **Länktyp** fältet i **URL-information** eller så kan komponenten inte spara och följande felmeddelande visas:
 >
 >`Validation failed. Verify the values of the marked fields.`
 >
@@ -173,7 +173,7 @@ Dynamic Media Classic (Scene7) Bildmallar är lageruppbyggda bildfiler, där inn
 
 ![chlimage_1-49](assets/chlimage_1-49.png)
 
-Klicka **Redigera** för att konfigurera komponenten. Du kan konfigurera inställningarna som beskrivs i det här avsnittet. Den här Scene7 Image-mallen beskrivs i detalj i [Komponenten Scene7 Image Template](/help/assets/scene7.md#image-template).
+Klicka **Redigera** för att konfigurera komponenten. Du kan konfigurera inställningarna som beskrivs i det här avsnittet. Den här Scene7 Image-mallen beskrivs i detalj i [Scene7 Image Template](/help/assets/scene7.md#image-template).
 
 Dessutom listas alla mallparametrar som har definierats för mallen i Scene7 på parameterpanelen. För var och en av dessa parametrar kan du anpassa värdet, infoga variabler eller återställa dem till deras standardvärde.
 
@@ -213,10 +213,10 @@ Ange text. Använd verktygsfältet för att ändra formatering, skapa listor och
 * **Bild**
 Dra en bild från innehållssökaren eller klicka för att bläddra till en bild. Beskär eller rotera efter behov.
 
-* **Bildegenskaper** (**Avancerade bildegenskaper**) Gör att du kan ange följande:
+* **Bildegenskaper** (**Avancerade bildegenskaper**) Här kan du ange följande:
 
    * **Titel**
-Blockets titel. visas med muspekaren.
+Blockets titel; visas med muspekaren.
 
    * **Alt-text**
 Alternativ text som visas om bilden inte kan visas.
@@ -232,7 +232,7 @@ Anger bildens höjd och bredd.
 
 >[!NOTE]
 >
->The **Alt-text** i **Avancerat** -fliken är obligatorisk eller komponenten kan inte sparas och följande felmeddelande visas:
+>The **Alt-text** fältet i **Avancerat** -fliken är obligatorisk eller komponenten kan inte sparas och följande felmeddelande visas:
 >
 >`Validation failed. Verify the values of the marked fields.`
 >
@@ -241,15 +241,15 @@ I följande exempel visas en text- och bildkomponent (Campaign).
 
 ![chlimage_1-52](assets/chlimage_1-52.png)
 
-### Text och personalisering (Campaign) {#text-personalization-campaign}
+### Text och personalisering (kampanj) {#text-personalization-campaign}
 
-Komponenten Text &amp; Personalization (Campaign) gör att du kan ange ett textblock med en WYSIWYG-redigerare med de funktioner som finns i [RTF-redigerare](/help/sites-authoring/rich-text-editor.md). Med den här komponenten kan du dessutom använda kontextfält och anpassningsblock som finns i Adobe Campaign; se [Infogar personalisering](/help/sites-authoring/campaign.md#inserting-personalization).
+Komponenten Text &amp; Personalization (Campaign) gör att du kan ange ett textblock med en WYSIWYG-redigerare med de funktioner som finns i [RTF-redigerare](/help/sites-authoring/rich-text-editor.md). Med den här komponenten kan du dessutom använda kontextfält och anpassningsblock som finns i Adobe Campaign, men även se [Infogar personalisering](/help/sites-authoring/campaign.md#inserting-personalization).
 
 Om du väljer ikoner kan du formatera texten, inklusive teckensnittsegenskaper, justering, länkar, listor och indrag. Funktionerna är i stort sett desamma i [båda gränssnitten](/help/sites-authoring/editing-content.md)även om utseendet och känslan är annorlunda:
 
 ![chlimage_1-53](assets/chlimage_1-53.png)
 
-I redigeraren kan du lägga till text, ändra justeringen, lägga till och ta bort länkar, lägga till kontextfält eller anpassningsblock och ange helskärmsläge. När du är klar med att lägga till text/personalisering markerar du kryssrutan för att spara ändringarna (eller x för att avbryta). Se [In-redigering](/help/sites-authoring/editing-content.md#editcontenttouchoptimizedui) för mer information.
+I redigeraren kan du lägga till text, ändra justeringen, lägga till och ta bort länkar, lägga till kontextfält eller anpassningsblock och ange helskärmsläge. När du är klar med att lägga till text/personalisering markerar du kryssrutan för att spara ändringarna (eller x för att avbryta). Se [Ingångsredigering](/help/sites-authoring/editing-content.md#editcontenttouchoptimizedui) för mer information.
 
 >[!NOTE]
 >
@@ -262,7 +262,7 @@ I redigeraren kan du lägga till text, ändra justeringen, lägga till och ta bo
 
 >[!NOTE]
 >
->Endast de fält som definierats i **nms:seedMember** schemat eller något av dess tillägg tas med i beräkningen. Attributen för de tabeller som är länkade till **nms:seedMember** är inte tillgängliga.
+>Endast de fält som definierats i **nms:seedMember** schemat eller något av dess tillägg beaktas. Attributen för de tabeller som är länkade till **nms:seedMember** är inte tillgängliga.
 
 ## Adobe Campaign Form Components {#adobe-campaign-form-components}
 
@@ -363,7 +363,7 @@ Markera den här kryssrutan om det här fältet är en del av avstämningsnyckel
 
 #### Begränsningar {#constraints}
 
-* **Obligatoriskt** Markera den här kryssrutan om du vill att komponenten ska vara obligatorisk. alltså måste användaren ange ett värde.
+* **Obligatoriskt** Markera den här kryssrutan om du vill att komponenten ska vara obligatorisk, d.v.s. att användaren måste ange ett värde.
 * **Nödvändigt meddelande** Du kan också lägga till ett meddelande om att fältet är obligatoriskt.
 
 ![chlimage_1-58](assets/chlimage_1-58.png)
@@ -387,7 +387,7 @@ I följande exempel visas en CheckBox-komponent (Campaign).
 
 ### Datumfält (kampanj) och Datumfält/HTML 5 (kampanj) {#date-field-campaign-and-date-field-html-campaign}
 
-Använd datumfältet för att tillåta mottagarna att ange ett datum, Du kanske till exempel vill att mottagarna ska ange sina födelsedatum. Datumformatet matchar det format som används i din Adobe Campaign-instans.
+Använd datumfältet om du vill tillåta mottagarna att ange sina födelsedatum. Datumformatet matchar det format som används i din Adobe Campaign-instans.
 
 Förutom [gemensamma inställningar för de flesta Adobe Campaign-komponenter](#settings-common-to-most-components)kan du konfigurera följande:
 
@@ -453,7 +453,7 @@ I följande exempel visas en Numeric Field-komponent (Campaign) med den konfigur
 
 ### Alternativfält (kampanj) {#option-field-campaign}
 
-I den här nedrullningsbara listan kan du välja ett alternativ; till exempel en mottagares kön eller status.
+I den här listrutan kan du välja ett alternativ, t.ex. kön eller status för en mottagare.
 
 Du kan [konfigurera inställningar som är gemensamma för de flesta Adobe Campaign-komponenter](#settings-common-to-most-components) i alternativfältskomponenten (Campaign). Om du vill fylla i den nedrullningsbara listan väljer du lämpligt fält i Adobe Campaign personaliseringsfält genom att klicka eller trycka på Adobe Campaign-symbolen och navigera till fältet.
 
@@ -467,7 +467,7 @@ I följande exempel visas en alternativfältskomponent (Campaign).
 
 Använd **Checklista för prenumerationer (kampanj)** om du vill ändra de prenumerationer som är kopplade till en Adobe Campaign-profil.
 
-När den här komponenten läggs till i ett formulär visas alla tillgängliga prenumerationer som kryssrutor där användaren kan välja önskad prenumeration. När användare skickar formuläret prenumererar den här komponenten på eller avbryter prenumerationen för användaren från de valda tjänsterna beroende på typ av formuläråtgärd (**Adobe Campaign: Prenumerera på tjänster** eller **Adobe Campaign: Avbeställ Services**).
+När den här komponenten läggs till i ett formulär visas alla tillgängliga prenumerationer som kryssrutor där användaren kan välja önskad prenumeration. När användare skickar formuläret prenumererar den här komponenten på eller avbryter prenumerationen för användaren från de valda tjänsterna beroende på typ av formuläråtgärd (**Adobe Campaign: Prenumerera på tjänster** eller **Adobe Campaign: Avbeställ tjänsterna**).
 
 >[!NOTE]
 >
@@ -481,7 +481,7 @@ I följande exempel visas en komponent för checklista för prenumerationer (Cam
 
 ### Textfält (kampanj) {#text-field-campaign}
 
-Komponenten Textfält (Campaign) som gör att du kan ange strängtypsdata, t.ex. förnamn, efternamn, adress, e-postadress osv.
+Komponenten Textfält (Campaign) som gör att du kan ange strängtypsdata, till exempel förnamn, efternamn, adress, e-postadress osv.
 
 Förutom [gemensamma inställningar för de flesta Adobe Campaign-komponenter](#settings-common-to-most-components)kan du konfigurera följande:
 

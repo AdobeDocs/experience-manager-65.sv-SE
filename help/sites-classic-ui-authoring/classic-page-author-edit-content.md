@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: de321869-ebf9-41a1-8203-e12bdb088678
 docset: aem65
 exl-id: e1b5aea0-983c-4e7b-9d35-d7beeee45dc7
-source-git-commit: 4fd5e9a1bc603202ee52e85a1c09125b13cec315
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '1836'
+source-wordcount: '1832'
 ht-degree: 0%
 
 ---
@@ -20,11 +20,11 @@ ht-degree: 0%
 
 När sidan har skapats (antingen ny eller som en del av en lansering eller en live-kopia) kan du redigera innehållet för att få de uppdateringar du behöver.
 
-Innehåll läggs till med [komponenter](/help/sites-classic-ui-authoring/classic-page-author-default-components.md) (som passar för innehållstypen) som kan dras till sidan. Du kan sedan redigera dem på plats, flytta eller ta bort dem.
+Innehåll läggs till med [komponenter](/help/sites-classic-ui-authoring/classic-page-author-default-components.md) (anpassat till innehållstypen) som kan dras till sidan. Du kan sedan redigera dem på plats, flytta eller ta bort dem.
 
 >[!NOTE]
 >
->Ditt konto behöver [lämpliga åtkomsträttigheter](/help/sites-administering/security.md) och [behörigheter](/help/sites-administering/security.md#permissions) redigera sidor, till exempel lägga till, redigera eller ta bort komponenter, anteckna, låsa upp.
+>Ditt konto behöver [lämpliga åtkomsträttigheter](/help/sites-administering/security.md) och [behörigheter](/help/sites-administering/security.md#permissions) om du vill redigera sidor, till exempel lägga till, redigera eller ta bort komponenter, göra anteckningar, låsa upp.
 >
 >Om du råkar ut för problem rekommenderar vi att du kontaktar systemadministratören.
 
@@ -37,7 +37,7 @@ Det finns flera flikar och ikoner, bland annat:
 * Komponenter
 * Sida
 * Information
-* Versionshantering
+* Versioner
 * Arbetsflöde
 * Lägen
 * Ställning
@@ -46,12 +46,12 @@ Det finns flera flikar och ikoner, bland annat:
 
 ![chlimage_1-71](assets/chlimage_1-71.png)
 
-Dessa ger tillgång till ett brett urval av funktioner. inklusive:
+Dessa ger tillgång till ett brett urval av funktioner, bland annat:
 
 * [markera komponenter](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md#sidekick)
 * [visa referenser](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md#showing-references)
 * [åtkomst till granskningsloggen](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md#audit-log)
-* [växlingslägen](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md#page-modes)
+* [byta läge](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md#page-modes)
 * [skapa](/help/sites-classic-ui-authoring/classic-page-author-work-with-versions.md#creating-a-new-version), [återställa](/help/sites-classic-ui-authoring/classic-page-author-work-with-versions.md#restoring-a-page-version-from-sidekick) och [jämföra](/help/sites-classic-ui-authoring/classic-page-author-work-with-versions.md#comparing-with-a-previous-version) versioner
 
 * [publicera](/help/sites-classic-ui-authoring/classic-page-author-publish-pages.md#publishing-a-page), [avpublicera](/help/sites-classic-ui-authoring/classic-page-author-publish-pages.md#unpublishing-a-page) en sida
@@ -94,7 +94,7 @@ Detta gäller för följande tillgångstyper (vissa kommer att vara beroende av 
 | Resurstyp | Resulterande komponenttyp |
 |---|---|
 | Bild | Bild |
-| Dokument | Hämta |
+| Dokument | Ladda ned |
 | Produkt | Produkt |
 | Video | Flash |
 
@@ -106,7 +106,7 @@ Så här skapar du en komponent genom att dra en av resurstyperna ovan:
 
 1. Kontrollera att sidan finns i [**Redigera** läge](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md#page-modes).
 1. Öppna [Content Finder](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md#the-content-finder).
-1. Dra den önskade resursen till önskad position. The [komponentplatshållare](#componentplaceholder) visar var komponenten kommer att placeras.
+1. Dra den önskade resursen till önskad position. The [platshållare för komponent](#componentplaceholder) visar var komponenten kommer att placeras.
 
    En komponent som passar resurstypen skapas på den önskade platsen, den innehåller den valda resursen.
 
@@ -120,11 +120,11 @@ Om du vill redigera ett befintligt stycke gör du något av följande:
 
 * **Högerklicka** stycket och klicka på **Redigera**.
 
-* **Klicka** två gånger på stycket (ett långsamt dubbelklick) för att gå in i redigeringsläget på plats. Du kan redigera texten direkt på sidan i stället för i ett dialogrutefönster. I det här läget visas ett verktygsfält högst upp på sidan. Gör bara ändringarna så sparas de automatiskt.
+* **Klicka** två gånger på stycket (ett långsamt dubbelklick) för att gå in i redigeringsläget på plats. Du kan redigera texten direkt på sidan i stället för i ett dialogrutefönster. I det här läget visas ett verktygsfält högst upp på sidan. Gör bara dina ändringar så sparas de automatiskt.
 
 ## Flytta en komponent {#moving-a-component}
 
-Så här flyttar du ett stycke:
+Flytta ett stycke:
 
 >[!NOTE]
 >
@@ -134,20 +134,20 @@ Så här flyttar du ett stycke:
 
    ![screen_shot_2012-02-15at115855am](assets/screen_shot_2012-02-15at115855am.png)
 
-1. Dra stycket till den nya platsen - AEM anger var stycket kan flyttas med en grön bockmarkering. Släpp den där du vill.
+1. Dra stycket till den nya platsen - AEM anger var stycket kan flyttas med en grön bock. Släpp den där du vill.
 1. Stycket flyttas:
 
    ![screen_shot_2012-02-15at120030pm](assets/screen_shot_2012-02-15at120030pm.png)
 
 ## Ta bort en komponent {#deleting-a-component}
 
-Så här tar du bort ett stycke:
+Ta bort ett stycke:
 
 1. Markera stycket och **högerklicka**:
 
    ![screen_shot_2012-02-15at120220pm](assets/screen_shot_2012-02-15at120220pm.png)
 
-1. Välj **Ta bort** på menyn. AEM WCM begär en bekräftelse på att du vill ta bort stycket eftersom den här åtgärden inte kan ångras.
+1. Välj **Ta bort** på menyn. AEM WCM begär en bekräftelse på att du vill ta bort stycket eftersom åtgärden inte kan ångras.
 1. Klicka **OK**.
 
 >[!NOTE]
@@ -174,10 +174,10 @@ Som när [Ta bort en komponent](#deleting-a-component) du kan använda snabbmeny
 
 Ärvda komponenter kan vara produkten av olika scenarier, bland annat:
 
-* [Hantering av flera webbplatser](/help/sites-administering/msm.md); i kombination med [ställningar](/help/sites-classic-ui-authoring/classic-feature-scaffolding.md#scaffolding-with-msm-inheritance).
+* [Hantering av flera webbplatser](/help/sites-administering/msm.md), även i kombination med [ställningar](/help/sites-classic-ui-authoring/classic-feature-scaffolding.md#scaffolding-with-msm-inheritance).
 
 * [Startar](/help/sites-classic-ui-authoring/classic-launches.md) (baserat på livecopy).
-* Särskilda komponenter. till exempel det ärvda styckesystemet i Geometrixx.
+* Specifika komponenter, till exempel det ärvda styckesystemet i Geometrixx.
 
 Du kan avbryta (och sedan återaktivera) arvet. Beroende på vilken komponent det gäller kan det här vara tillgängligt från:
 
@@ -185,7 +185,7 @@ Du kan avbryta (och sedan återaktivera) arvet. Beroende på vilken komponent de
 
    Om en komponent är en del av en livecopy eller en start visas den med en hänglåsikon. Du kan klicka på hänglåset för att avbryta arvet.
 
-   * hänglåsikonen visas när komponenten är markerad; till exempel:
+   * hänglåsikonen visas när komponenten är markerad, till exempel:
 
    ![chlimage_1-72](assets/chlimage_1-72.png)
 
@@ -211,7 +211,7 @@ Det finns två ikoner i den nedre kanten av sidesparten som är viktiga för att
 
 * Pennikonen visar att du befinner dig i redigeringsläge där du kan lägga till, ändra, flytta eller ta bort innehåll.
 
-  ![Redigeringsikonen visas med en pennsymbol.](do-not-localize/chlimage_1-6.png)
+  ![Redigeringsikonen indikeras av en pennsymbol.](do-not-localize/chlimage_1-6.png)
 
 * Med förstoringsglaset kan du välja förhandsvisningsläge där sidan visas som den kommer att visas i publiceringsmiljön (en uppdatering av sidan behövs ibland):
 
@@ -227,13 +227,13 @@ För större skalredigeringar av samma fras är **[Sök och ersätt](/help/sites
 
 ## Låsa en sida {#locking-a-page}
 
-AEM kan du låsa en sida så att ingen annan kan ändra innehållet. Detta är praktiskt när du gör många ändringar på en viss sida eller när du behöver frysa en sida en kort stund.
+AEM kan du låsa en sida så att ingen annan kan ändra innehållet. Det här är användbart när du gör många ändringar på en viss sida eller när du behöver frysa en sida en kort stund.
 
 >[!CAUTION]
 >
 >Låsning av en sida bör användas med försiktighet eftersom den enda person som kan låsa upp en sida är den person som låste den (eller ett konto med administratörsbehörighet).
 
-Så här låser du en sida:
+Lås en sida:
 
 1. I **Webbplatser** markerar du sidan som du vill låsa.
 1. Dubbelklicka på sidan för att öppna den för redigering.
@@ -247,7 +247,7 @@ Så här låser du en sida:
 
 ## Låsa upp en sida {#unlocking-a-page}
 
-Så här låser du upp en sida:
+Lås upp en sida:
 
 1. I **Webbplatser** markerar du sidan som du vill låsa upp.
 1. Dubbelklicka på sidan för att öppna den.
@@ -276,7 +276,7 @@ AEM lagrar en historik över åtgärder som du utför och i vilken ordning du ut
 
 Om ett element på innehållssidan är markerat gäller kommandot ångra och gör om det markerade objektet, till exempel en textkomponent.
 
-Funktionen för kommandona ångra och gör om liknar den i andra program. Använd kommandona för att återställa webbsidans senaste status när du fattar beslut om innehållet. Om du till exempel flyttar ett textstycke till en annan plats på sidan kan du använda kommandot Ångra för att flytta tillbaka stycket. Om du sedan bestämmer dig för att flytta stycket igen använder du kommandot gör om.
+Funktionen för kommandona Ångra och Gör om liknar den i andra program. Använd kommandona för att återställa webbsidans senaste status när du fattar beslut om innehållet. Om du till exempel flyttar ett textstycke till en annan plats på sidan kan du använda kommandot Ångra för att flytta tillbaka stycket. Om du sedan bestämmer dig för att flytta stycket igen använder du kommandot gör om.
 
 >[!NOTE]
 >
@@ -284,13 +284,13 @@ Funktionen för kommandona ångra och gör om liknar den i andra program. Använ
 >
 >* gör om åtgärder så länge du inte har gjort någon sidredigering sedan du använde Ångra.
 >* Ångra högst 20 redigeringsåtgärder (standardinställning).
->* använder [Kortkommandon](/help/sites-classic-ui-authoring/classic-page-author-keyboard-shortcuts.md) för att ångra och göra om.
+>* också använda [Kortkommandon](/help/sites-classic-ui-authoring/classic-page-author-keyboard-shortcuts.md) för att ångra och göra om.
 >
 
 Du kan använda Ångra och Gör om för följande typer av sidändringar:
 
 * Lägga till, redigera, ta bort och flytta stycken
-* In-place editing of paragraph content
+* Redigera styckeinnehåll direkt
 * Kopiera, klippa ut och klistra in objekt på en sida
 * Kopiera, klippa ut och klistra in objekt över sidor
 * Lägga till, ta bort och ändra filer och bilder

@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: best-practices
 exl-id: 6dfaa14d-5dcf-4e89-993a-8d476a36d668
-source-git-commit: 1ef5593495b4bf22d2635492a360168bccc1725d
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '4614'
+source-wordcount: '4613'
 ht-degree: 0%
 
 ---
@@ -63,7 +63,7 @@ Om data eller innehåll ändras regelbundet, kan frågan köras enligt ett schem
 
 ## Frågeoptimering {#query-optimization}
 
-När du kör en fråga som inte använder ett index loggas varningar om nodgenomgång. Skapa ett index om detta är en fråga som kommer att köras ofta. För att avgöra vilket index en viss fråga använder [Förklara fråga](/help/sites-administering/operations-dashboard.md#explain-query) rekommenderas. Om du vill ha mer information kan du aktivera DEBUG-loggning för de relevanta söknings-API:erna.
+När du kör en fråga som inte använder ett index loggas varningar om nodgenomgång. Skapa ett index om detta är en fråga som kommer att köras ofta. För att avgöra vilket index en viss fråga använder [Förklara fråga, verktyg](/help/sites-administering/operations-dashboard.md#explain-query) rekommenderas. Om du vill ha mer information kan du aktivera DEBUG-loggning för de relevanta söknings-API:erna.
 
 >[!NOTE]
 >
@@ -85,7 +85,7 @@ Medan alla frågor konverteras till SQL2 innan de körs är overheadkostnaden f�
 
 ### Verktyget Förklara fråga {#the-explain-query-tool}
 
-Precis som med andra frågespråk är det första steget för att optimera en fråga att förstå hur den kommer att köras. Om du vill aktivera den här aktiviteten kan du använda [Förklara fråga](/help/sites-administering/operations-dashboard.md#explain-query) som ingår i kontrollpanelen för åtgärder. Med det här verktyget kan en fråga kopplas in och förklaras. En varning visas om frågan kommer att orsaka problem med en stor databas och körningstid samt de index som kommer att användas. Verktyget kan även läsa in en lista med långsamma och populära frågor som sedan kan förklaras och optimeras.
+Precis som med andra frågespråk är det första steget för att optimera en fråga att förstå hur den kommer att köras. Om du vill aktivera aktiviteten kan du använda [Förklara fråga, verktyg](/help/sites-administering/operations-dashboard.md#explain-query) som ingår i kontrollpanelen för åtgärder. Med det här verktyget kan en fråga kopplas in och förklaras. En varning visas om frågan kommer att orsaka problem med en stor databas och körningstid samt de index som kommer att användas. Verktyget kan även läsa in en lista med långsamma och populära frågor som sedan kan förklaras och optimeras.
 
 ### DEBUG-loggning för frågor {#debug-logging-for-queries}
 
@@ -103,15 +103,15 @@ Mer information om hur du gör detta finns i [Loggningsdokumentation](/help/site
 
 Lucene registrerar en JMX-böna som ger information om indexerat innehåll, inklusive storlek och antal dokument som finns i varje index.
 
-Du kan nå den genom att gå till JMX-konsolen på `https://server:port/system/console/jmx`
+Du kan nå den via JMX-konsolen på `https://server:port/system/console/jmx`
 
 När du är inloggad på JMX-konsolen söker du efter **Lucene Index Statistik** för att hitta den. Annan indexstatistik finns i **IndexStats** MBean.
 
-För frågestatistik kan du titta på MBean med namnet **Oak Query Statistik**.
+För frågestatistik kan du titta på MBean med namnet **Oak Query-statistik**.
 
 Om du vill gå in i indexen med ett verktyg som [Luke](https://code.google.com/archive/p/luke/)måste du använda Oak-konsolen för att dumpa indexvärdet från `NodeStore` till en filsystemkatalog. Anvisningar om hur du gör detta finns i [Lucene-dokumentation](https://jackrabbit.apache.org/oak/docs/query/lucene.html).
 
-Du kan också extrahera indexvärdena i systemet i JSON-format. För att kunna göra detta måste du ha tillgång till `https://server:port/oak:index.tidy.-1.json`
+Du kan också extrahera indexvärdena i systemet i JSON-format. För att kunna göra detta måste du ha `https://server:port/oak:index.tidy.-1.json`
 
 ### Frågegränser {#query-limits}
 
@@ -154,7 +154,7 @@ När du har skapat ett index måste indexvärdet också uppdateras varje gång i
 
 Index är bara användbara om de data som finns i indexet är unika nog att motivera det. Tänk på ett index i en bok och de ämnen den omfattar. När du indexerar en uppsättning ämnen i en text kommer det oftast att finnas hundratals eller tusentals poster, vilket gör att du snabbt kan gå till en delmängd av sidor och snabbt hitta den information du söker efter. Om indexet bara har två eller tre poster, där var och en pekar på flera hundra sidor, skulle indexet inte vara användbart. Samma sak gäller för databasindex. Om det bara finns ett par unika värden är indexet inte användbart. Med andra ord kan ett index också bli för stort för att vara användbart. Om du vill se indexstatistik kan du läsa [Indexstatistik](/help/sites-deploying/best-practices-for-queries-and-indexing.md#index-statistics) ovan.
 
-### Lucene eller Property Indexes? {#lucene-or-property-indexes}
+### Lucene eller Property Index? {#lucene-or-property-indexes}
 
 Lucene-index introducerades i Oak 1.0.9 och erbjuder några kraftfulla optimeringar av egenskapsindexen som introducerades i den första starten av AEM 6. När du bestämmer dig för att använda Lucene-index eller egenskapsindex ska du ta hänsyn till följande:
 
@@ -186,16 +186,16 @@ I Oak-dokumentationen för Lucene-index finns flera saker att tänka på när du
 * Om frågan använder sortering, har du en explicit egenskapsdefinition för den sorterade egenskapen och anger `ordered` till `true` för den. Detta gör att resultaten kan sorteras som sådana i indexet och sparas på kostsamma sorteringsåtgärder vid körning av frågor.
 
 * Placera bara det som behövs i indexet. Om du lägger till funktioner eller egenskaper som inte behövs växer indexet och prestandan blir långsam.
-* I ett egenskapsindex kan det vara till hjälp att minska storleken på ett index om du har ett unikt egenskapsnamn, men för Lucene-index kan du använda `nodeTypes` och `mixins` bör göras för att uppnå sammanhängande index. Fråga en viss `nodeType` eller `mixin` blir mer prestandaförbättrande än att fråga `nt:base`. Definiera `indexRules` för `nodeTypes` i fråga.
+* I ett egenskapsindex kan det vara till hjälp att minska storleken på ett index om du har ett unikt egenskapsnamn, men för Lucene-index kan du använda `nodeTypes` och `mixins` bör göras för att uppnå sammanhängande index. Fråga en viss `nodeType` eller `mixin` blir mer prestandaförbättrande än att fråga `nt:base`. När du använder det här arbetssättet definierar du `indexRules` för `nodeTypes` i fråga.
 
 * Om dina frågor bara körs under vissa sökvägar skapar du dessa index under dessa sökvägar. Index behöver inte finnas i databasens rot.
 * Du bör använda ett enda index när alla egenskaper som indexeras är relaterade så att Lucene kan utvärdera så många egenskapsbegränsningar som möjligt internt. Dessutom kommer en fråga endast att använda ett index, även när en koppling görs.
 
 ### CopyOnRead {#copyonread}
 
-I de fall där `NodeStore` fjärrlagras ett alternativ som anropas `CopyOnRead` kan aktiveras. Alternativet gör att fjärrindexet skrivs till det lokala filsystemet när det läses. Detta kan förbättra prestanda för frågor som ofta körs mot dessa fjärrindex.
+Om `NodeStore` fjärrlagras ett alternativ som anropas `CopyOnRead` kan aktiveras. Alternativet gör att fjärrindexet skrivs till det lokala filsystemet när det läses. Detta kan förbättra prestanda för frågor som ofta körs mot dessa fjärrindex.
 
-Detta kan konfigureras i OSGi-konsolen under **LuceneIndexProvider** och är aktiverat som standard från och med Oak 1.0.13.
+Detta kan konfigureras i OSGi-konsolen under **LuceneIndexProvider** och aktiveras som standard från och med Oak 1.0.13.
 
 ### Tar bort index {#removing-indexes}
 
@@ -209,7 +209,7 @@ När du tar bort ett index för en MongoDB-instans är borttagningskostnaden pro
 >
 >Mer information om oak-mongo.js finns i [Verktyg för kommandorad](https://jackrabbit.apache.org/oak/docs/command_line.html) i dokumentationen för eken.
 
-### JCR-frågechebladet {#jcrquerycheatsheet}
+### JCR-frågecheblad {#jcrquerycheatsheet}
 
 För att skapa effektiva JCR-frågor och indexdefinitioner har [JCR Query Cheat Sheet](assets/JCR_query_cheatsheet-v1.1.pdf) finns att hämta och använda som referens under utvecklingen. Den innehåller exempelfrågor för QueryBuilder, XPath och SQL-2, som omfattar flera scenarier som beter sig på olika sätt när det gäller frågeprestanda. Här finns också rekommendationer för hur du skapar eller anpassar ekindexeringar. Innehållet i detta värmeblad gäller AEM 6.5 och AEM as a Cloud Service.
 
@@ -226,7 +226,7 @@ Omindexering av ekindexering skall undvikas om inte annat anges i tabellen nedan
 >Innan du läser tabellerna nedan för att avgöra om omindexering är användbar, **alltid** verifiera:
 >
 >* frågan är korrekt
->* frågan löses till förväntat index (med [Förklara fråga](/help/sites-administering/operations-dashboard.md#diagnosis-tools))
+>* frågan löses till det förväntade indexvärdet (med [Förklara fråga](/help/sites-administering/operations-dashboard.md#diagnosis-tools))
 >* indexeringsprocessen har slutförts
 >
 
@@ -252,7 +252,7 @@ Här följer information om möjliga problem tillsammans med lösningar:
 
    * Noder som fanns före egenskapsindexets definitionsuppdatering saknas i resultaten
 
-* Så här verifierar du:
+* Verifiera:
 
    * Kontrollera om saknade noder skapades/ändrades innan den uppdaterade indexdefinitionen distribuerades.
    * Verifiera `jcr:created` eller `jcr:lastModified` egenskaper för noder som saknas i förhållande till indexets ändrade tid
@@ -279,7 +279,7 @@ Här följer information om möjliga problem tillsammans med lösningar:
    * Frågeresultat återspeglar inte det förväntade beteendet för indexdefinitionen
    * Frågeplanen rapporterar inte förväntade utdata baserat på indexdefinition
 
-* Så här verifierar du:
+* Verifiera:
 
    * Kontrollera att indexdefinitionen ändrades med Lucene Index-statistik, JMX Mbean (LuceneIndex), metod `diffStoredIndexDefinition`.
 
@@ -321,13 +321,13 @@ Här följer information om möjliga problem tillsammans med lösningar:
 
    * Lucene-indexet innehåller inte förväntade resultat
 
-* Så här verifierar du:
+* Verifiera:
 
    * Felloggfilen innehåller ett undantag som anger att en binär fil saknas i Lucene-indexet
 
 * Så här löser du:
 
-   * Genomför en genomgående kontroll av databasen. till exempel:
+   * Genomför en genomgång av databasen, till exempel:
 
      [http://localhost:4502/system/console/repositorycheck](http://localhost:4502/system/console/repositorycheck)
 
@@ -352,7 +352,7 @@ Här följer information om möjliga problem tillsammans med lösningar:
 
    * Lucene-indexet innehåller inte förväntade resultat
 
-* Så här verifierar du:
+* Verifiera:
 
    * The `AsyncIndexUpdate` (var femte sekund) kommer att misslyckas med ett undantag i error.log:
 
@@ -364,12 +364,12 @@ Här följer information om möjliga problem tillsammans med lösningar:
 
       1. Stoppa AEM
       1. Ta bort den lokala kopian av lucene-indexet vid `crx-quickstart/repository/index`
-      1. Starta om AEM
+      1. AEM
 
    * Om detta inte löser problemet, och `AsyncIndexUpdate` undantag kvarstår då:
 
       1. [Indexera om](#how-to-re-index) felsökningsindex
-      1. Du kan även arkivera en [Stöd för Adobe](https://helpx.adobe.com/support.html) biljett
+      1. Du kan även arkivera [Stöd för Adobe](https://helpx.adobe.com/support.html) biljett
 
 ### Indexera om {#how-to-re-index}
 
@@ -379,7 +379,7 @@ Här följer information om möjliga problem tillsammans med lösningar:
 
 #### Indexerar om egenskapsindex {#re-indexing-property-indexes}
 
-* Använd [oak-run.jar](/help/sites-deploying/oak-run-indexing-usecases.md#usecase3reindexing) för att indexera om egenskapsindexet
+* Använd [oak-run.jar](/help/sites-deploying/oak-run-indexing-usecases.md#usecase3reindexing) indexera om egenskapsindexet
 * Ange egenskapen async-reindex till true för egenskapsindexet
 
    * `[oak:queryIndexDefinition]@reindex-async=true`
@@ -405,7 +405,7 @@ Här följer information om möjliga problem tillsammans med lösningar:
 
 Textförextrahering är processen att extrahera och bearbeta text från binärfiler, direkt från datalagret via en isolerad process, och direkt exponera den extraherade texten för efterföljande omindexering/indexering av Oak-index.
 
-* Förextrahering av oak-text rekommenderas för indexering av Lucene-index i databaser med stora volymer filer (binärfiler) som innehåller extraherbar text (t.ex. PDF, Word Docs, PPT, TXT o.s.v.) som är kvalificerade för fulltextsökning via distribuerade Oak-index. till exempel `/oak:index/damAssetLucene`.
+* Förextrahering av oak-text rekommenderas för indexering av Lucene-index i databaser med stora volymer filer (binärfiler) som innehåller extraherbar text (t.ex. PDF, Word-dokument, PPT, TXT och så vidare) som är kvalificerade för fulltextsökning via distribuerade Oak-index, t.ex. `/oak:index/damAssetLucene`.
 * Förextrahering av text ger endast fördelar vid omindexering/indexering av Lucene-index och NOT Oak-egenskapsindex, eftersom egenskapsindex inte extraherar text från binärfiler.
 * Textförextraheringen har stor positiv effekt när du omindexerar text i fulltext till stora binärfiler (PDF, Doc, TXT och så vidare), medan en databas med bilder inte har samma effektivitet eftersom bilder inte innehåller text som kan extraheras.
 * Textförextrahering utför extraheringen av fulltextsöksrelaterad text på ett extra effektivt sätt och exponerar den för Oak-omindexeringsprocessen på ett sätt som är extra effektivt att förbruka.
@@ -414,7 +414,7 @@ Textförextrahering är processen att extrahera och bearbeta text från binärfi
 
 Indexera om en **befintlig** lucenindex med binär extrahering aktiverad
 
-* Omindexering **alla** kandidatinnehåll i databasen, om de binärfiler som ska extraheras är många eller komplexa, läggs en ökad beräkningskostnad på AEM. Textförextrahering flyttar det&quot;beräkningsmässigt kostsamma arbetet&quot; med textredigering till en isolerad process som har direkt åtkomst AEM datalagret och undviker problem med overhead och resurser i AEM.
+* Omindexering **alla** kandidatinnehåll i databasen; när binärfilerna som ska extraheras är många eller komplexa, läggs en ökad arbetsbörda vid extraheringen av hela texten på AEM. Textförextrahering flyttar det&quot;beräkningsmässigt kostsamma arbetet&quot; med textredigering till en isolerad process som har direkt åtkomst AEM datalagret och undviker problem med overhead och resurser i AEM.
 
 Stöd för driftsättning av en **new** lucenindex till AEM med binär extrahering aktiverad
 
@@ -432,7 +432,7 @@ Vid normal AEM, till exempel överföring av resurser via webbgränssnittet elle
 
 * Du kommer att indexera om ett indexvärde som utför binär extrahering i heltext eller distribuera ett nytt index som kommer att innehålla binära fulltextindex
 * Innehållet (binärfiler) som texten ska förextraheras från måste finnas i databasen
-* Ett underhållsfönster för att generera CSV-filen OCH för att utföra den slutliga omindexeringen
+* Ett underhållsfönster där CSV-filen och den slutliga omindexeringen genereras
 * Oak-version: 1.0.18+, 1.2.3+
 * [oak-run.jar](https://mvnrepository.com/artifact/org.apache.jackrabbit/oak-run/)version 1.7.4+
 * En mapp/resurs i filsystemet för lagring av extraherad text som är tillgänglig från AEM indexinstanser
@@ -469,9 +469,9 @@ Hela nodarkivet gås igenom (enligt sökvägarna i kommandot eka run) varje gån
 
 2c. Extraherad text lagras i ett filsystem i ett format som kan hanteras av omindexeringsprocessen för eken (3a)
 
-Förextraherad text identifieras i CSV-filen av det binära fingeravtrycket. Om den binära filen är densamma kan samma extraherade text användas i alla AEM. Eftersom AEM Publish vanligtvis är en delmängd av AEM Author kan den förextraherade texten från AEM Author ofta användas för att indexera om AEM Publish också (förutsatt att AEM Publish har tillgång till de extraherade textfilerna i filsystemet).
+Förextraherad text identifieras i CSV-filen av det binära fingeravtrycket. Om den binära filen är densamma kan samma extraherade text användas i alla AEM. Eftersom AEM Publish vanligtvis är en delmängd av AEM Author kan den förextraherade texten från AEM Author ofta användas för att omindexera AEM Publish (förutsatt att AEM Publish har tillgång till de extraherade textfilerna).
 
-Förutextraherad text kan läggas till i efterhand. Extrahering av text i förväg hoppar över extrahering för tidigare extraherade binärfiler, så det är bäst att behålla den extraherade texten om omindexering måste ske igen i framtiden (förutsatt att det extraherade innehållet inte är oöverkomligt stort). Om den är det, bör du utvärdera om innehållet i mellanrummet ska zippa, eftersom texten komprimeras väl).
+Förutextraherad text kan läggas till stegvis över tid. Extrahering av text i förväg hoppar över extrahering för tidigare extraherade binärfiler, så det är bäst att behålla den extraherade texten om omindexering måste ske igen i framtiden (förutsatt att det extraherade innehållet inte är oöverkomligt stort). Om den är det, bör du utvärdera om innehållet i mellanrummet ska zippa, eftersom texten komprimeras väl).
 
 **Indexera om index, hämta fulltext från extraherade textfiler**
 

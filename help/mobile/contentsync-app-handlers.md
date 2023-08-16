@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-adobe-phonegap-enterprise
 discoiquuid: fec86f03-f81e-460a-9f84-d6304c95128c
 exl-id: e2ddf5d1-0f5b-4f3b-9666-0f388915730e
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '1410'
+source-wordcount: '1409'
 ht-degree: 0%
 
 ---
@@ -52,7 +52,7 @@ I följande lista visas färdiga apphanterare:
 
 * ***includeModifiedPagesOnly - Boolean*** - Om värdet är false eller utelämnas återger du alla sidor och kontrollerar uppdateringarna vid återgivningen. Om värdet är true tonas basen av ändringar av sidorna lastModified.
 * ***+ rewrite (node)***
-  ***- relativeParentPath - String*** - sökvägen som alla andra sökvägar ska skrivas i förhållande till.
+  ***- relativeParentPath - String*** - sökvägen till alla andra sökvägar i förhållande till.
 
 >[!NOTE]
 >
@@ -65,7 +65,7 @@ I följande lista visas färdiga apphanterare:
 Hanteraren bör läggas till i alla AEM Apps ContentSync Config.
 
 * ***type - String - mobilecontentlisting***
-* ***bana*** - String - behåll tom, måste finnas för att kunna ses som en giltig hanterare, men sökvägen härleds till aktuell ContentSync-cache. Detta värde ignoreras.
+* ***bana*** - String - behåll tom, måste finnas för att kunna ses som en giltig hanterare, men sökvägen härleds till aktuell ContentSync-cache. Det här värdet ignoreras.
 * ***targetRootDirectory* -**Sträng - det prefix som ska läggas till i sökvägar som målrot för innehållsuppdatering för hanteraren.
 * ***order - lång* -**Beställ så att ContentSync kör hanteraren. Det här talet ska anges högre än alla andra hanterare, till exempel 100. Den ska köras efter traditionella innehållshanterare.
 
@@ -89,7 +89,7 @@ Hanteraren bör läggas till i alla AEM Apps ContentSync Config.
 
 **mobilinnehållpaketerlista** Listar AEM innehållspaket i en viss app samt serverURL att göra uppdateringsbegäranden till. Detta används för att begära innehållsuppdateringar från klientsidan på enheten
 
-Hanteraren ska användas AEM App Shell ContentSync Config (nod med page-type=app-instance)
+Hanteraren ska användas i AEM App Shell ContentSync Config (nod med page-type=app-instance)
 
 * ***type - String - mobilecontentpackageslista***
 * ***bana **-**Sträng*** - Sökväg till ett programskal (nod med page-type=app-instance).
@@ -135,7 +135,7 @@ Hanteraren ska användas i en AEM App Shell ContentSync-konfiguration (nod med p
 
 Detta används vid kompileringen för att konfigurera AMS-plugin-programmet för analysstöd.
 
-Hanteraren ska användas AEM App Shell ContentSync Config (nod med page-type=app-instance)
+Hanteraren ska användas i AEM App Shell ContentSync Config (nod med page-type=app-instance)
 
 * ***type - String*** - mobileADBMomobileConfigJSON
 * ***path - String*** - Sökväg till ett programskal (nod med pge-type=app-instance eller en RT som utökar /libs/mobileapps/core/components/instance)
@@ -179,7 +179,7 @@ Hanteraren för mobileappers utökar hanteraren för mobileappspages och lägger
 * ***selector - String*** - ska anges till Standard
 * ***path - String***- vägen till kampanjens varumärke
 
-**mobileappconfig** Hanteraren för innehållssynkronisering i mobileappconfig erbjuder ett sätt att injicera JSON-data i MobileAppsConfig.json. För att registrera en leverantörsklass lägger utvecklare till sin MobileAppsInfoProvider-klass med listan över providers. Hanteraren itererar över listan med MobileAppsInfoProviders och tillåter att providern matar in data i den resulterande JSON-filen. Listan med egenskaper som den här hanteraren stöder är:
+**mobileappconfig** Hanteraren för innehållssynkronisering i mobileappconfig erbjuder ett sätt att injicera JSON-data i MobileAppsConfig.json. För att registrera en leverantörsklass lägger utvecklare till sin MobileAppsInfoProvider-klass med listan över providers. Hanteraren itererar över listan med MobileAppsInfoProviders och tillåter att providern matar in data i den resulterande JSON-filen. Listan med egenskaper som hanteraren stöder är:
 
 * ***bana **-**Sträng*** - sökvägen till en programinstansnod med pge-type=app-instance eller en RT som utökar /libs/mobileapps/core/components/instance
 * ***providers - String*** `[]` - listan över kvalificerade MobileAppsInfoProviders
@@ -193,7 +193,7 @@ Det går att ha flera hanterare för mobilappconfig konfigurerade var och en med
 **Steg för att kontrollera integriteten** Rensa cache
 
 * Rensa cache
-* Kör hanteraren (cachen har uppdaterats)
+* Kör hanteraren (cache uppdaterad)
 * Kör hanteraren igen (cachen bör inte uppdateras)
 
 **Steg för felsökning**

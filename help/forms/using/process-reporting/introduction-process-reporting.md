@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 4e83ed7b-3f48-4bf6-be4c-89f79949c1df
 docset: aem65
 exl-id: 674d28dc-7353-49de-9e12-b1998e1509c7
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '294'
+source-wordcount: '293'
 ht-degree: 0%
 
 ---
@@ -41,7 +41,7 @@ Processrapportering bygger på moduler som:
 
 ![platshantering](assets/site-management.png)
 
-Visa listan över långvariga processer, processens tidsplaneringsdiagram och kör anpassade frågor med filter.
+Visa en lista över processer som körs länge, tidsscheman för processer och kör anpassade frågor med filter.
 
 Med Process Reporting kan du också exportera rapport- och frågedata i CSV-format.
 

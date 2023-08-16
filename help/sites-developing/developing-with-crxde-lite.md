@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 4537c1fb-f99c-42e2-a222-b037794bdb52
 docset: aem65
 exl-id: 9e88ca55-ac3d-4857-b6b2-aeb732562664
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '2139'
+source-wordcount: '2137'
 ht-degree: 0%
 
 ---
@@ -69,19 +69,19 @@ CRXDE Lite har följande funktioner:
   </tr>
   <tr>
    <td>Utforskarfönster</td>
-   <td><p>Visar ett träd med alla noder i databasen.</p> <p>Klicka på en nod för att visa dess egenskaper i <strong>Egenskaper</strong> -fliken. När du har klickat på en nod kan du välja en åtgärd i verktygsfältet. Klicka på noden igen för att byta namn på den.</p> <p>Trädnavigeringsfilter (binokulär ikon): Med kan du filtrera noderna i databasen som namnet innehåller indatatexten för. Det gäller endast noder som har lästs in lokalt.<br /> </p> </td>
+   <td><p>Visar ett träd med alla noder i databasen.</p> <p>Klicka på en nod för att visa dess egenskaper i <strong>Egenskaper</strong> -fliken. När du har klickat på en nod kan du välja en åtgärd i verktygsfältet. Klicka på noden igen för att byta namn på den.</p> <p>Trädnavigeringsfilter (binokulär ikon): gör att du kan filtrera noderna i databasen som namnet innehåller indatatexten för. Det gäller endast noder som har lästs in lokalt.<br /> </p> </td>
   </tr>
   <tr>
    <td>Redigeringsruta</td>
-   <td><p><strong>Startsida</strong> tab: Med kan du söka efter innehåll och/eller dokumentation och få tillgång till utvecklarresurser (dokumentation, utvecklarblogg, kunskapsbas) och support (Adobe hemsida och supportcenter).<br /> </p> <p>Dubbelklicka på en fil i <strong>Utforskaren</strong> ruta för att visa dess innehåll, som till exempel en .jsp- eller .java-fil. Du kan sedan ändra den och spara ändringarna.</p> <p>När en fil har redigerats i <strong>Redigera</strong> finns följande verktyg i verktygsfältet:<br /> </p> - <strong>Visa i träd: </strong>visar filen i databasträdet.<br /> - <strong>Sök/ersätt ...</strong>: sök och ersätt.<br /> <br /> Dubbelklicka på statusraden i <strong>Redigera</strong> öppnas <strong>Gå till rad</strong> så att du kan ange ett visst radnummer att gå till.<br /> </td>
+   <td><p><strong>Startsida</strong> -fliken: gör att du kan söka efter innehåll och/eller dokumentation och komma åt utvecklarresurser (dokumentation, utvecklarblogg, kunskapsbas) och support (Adobe hemsida och supportcenter).<br /> </p> <p>Dubbelklicka på en fil i <strong>Explorer</strong> för att visa innehållet, t.ex. en .jsp- eller .java-fil. Du kan sedan ändra den och spara ändringarna.</p> <p>När en fil har redigerats i <strong>Redigera</strong> finns följande verktyg i verktygsfältet:<br /> </p> - <strong>Visa i träd: </strong>visar filen i databasträdet.<br /> - <strong>Sök/ersätt ...</strong>: gör sök eller ersätt.<br /> <br /> Dubbelklicka på statusraden i <strong>Redigera</strong> öppnar fönstret <strong>Gå till rad</strong> så att du kan ange ett visst radnummer att gå till.<br /> </td>
   </tr>
   <tr>
    <td>Fliken Egenskaper<br /> </td>
-   <td>Visar egenskaperna för den nod som du har valt. Du kan lägga till nya eller ta bort befintliga egenskaper.<br /> </td>
+   <td>Visar egenskaperna för den nod som du har markerat. Du kan lägga till nya eller ta bort befintliga egenskaper.<br /> </td>
   </tr>
   <tr>
    <td>Fliken Åtkomstkontroll</td>
-   <td><p>Visa behörigheter baserat på aktuell sökväg, databasnivå eller säkerhetsobjekt.</p> <p>Behörigheterna delas upp i</p> <p>- <strong>Tillämplig åtkomstkontrollprincip</strong>: De profiler som kan tillämpas på den aktuella markeringen.</p> <p>- <strong>Principer för lokal åtkomstkontroll</strong>: De aktuella principer som tillämpas lokalt på den aktuella markeringen.</p> <p>- <strong>Effektiva åtkomstkontrollprinciper</strong>: De aktuella principer som används för den aktuella markeringen kan anges lokalt eller ärvs från överordnade noder.</p> <p>Obs! För att kunna se åtkomstkontrollsinformationen alls måste användaren som är inloggad på CRXDE Lite ha behörighet att läsa åtkomstkontrollposter. Den anonyma användaren kan inte se den här informationen som standard - logga in som administratör för att se informationen.</p> </td>
+   <td><p>Visa behörigheter baserat på aktuell sökväg, databasnivå eller säkerhetsobjekt.</p> <p>Behörigheterna delas upp i</p> <p>- <strong>Tillämplig åtkomstkontrollprincip</strong>: De profiler som kan tillämpas på den aktuella markeringen.</p> <p>- <strong>Principer för lokal åtkomstkontroll</strong>: Aktuella principer som används lokalt för den aktuella markeringen.</p> <p>- <strong>Effektiva åtkomstkontrollprinciper</strong>: De aktuella principer som används för den aktuella markeringen kan anges lokalt eller ärvs från överordnade noder.</p> <p>Obs! För att kunna se åtkomstkontrollsinformationen alls måste användaren som är inloggad på CRXDE Lite ha behörighet att läsa åtkomstkontrollposter. Den anonyma användaren kan inte se den här informationen som standard - logga in som administratör för att se informationen.</p> </td>
   </tr>
   <tr>
    <td>Fliken Replikering</td>
@@ -133,7 +133,7 @@ CRXDE Lite har följande funktioner:
   </tr>
   <tr>
    <td>verktyg<br /> </td>
-   <td><p>Listruta med följande verktyg:</p> <p>- <strong>Serverkonfiguration...</strong>: för åtkomst till Felix Console.</p> <p>- <strong>Fråga ...</strong>: för att fråga databasen.</p> <p>- <strong>Behörigheter ...</strong>: för att öppna behörighetshantering, där du kan visa och lägga till behörigheter.</p> <p>- <strong>Testa åtkomstkontroll ...</strong>: en plats där du kan testa behörigheten för en viss sökväg och/eller huvudman.</p> <p>- <strong>Exportera nodtyp</strong>: om du vill exportera nodtyper i systemet som slutnotation.</p> <p>- <strong>Importera nodtyp..</strong>: om du vill importera nodtyper med hjälp av slutnotation.</p> <p>- <strong>Installera SiteCatalyst Debugger ...</strong>: anvisningar om hur du installerar Analytics Debugger.</p> </td>
+   <td><p>Listruta med följande verktyg:</p> <p>- <strong>Serverkonfiguration...</strong>: för åtkomst till Felix Console.</p> <p>- <strong>Fråga ...</strong>: för att fråga databasen.</p> <p>- <strong>Behörigheter ...</strong>: för att öppna behörighetshantering, där du kan visa och lägga till behörigheter.</p> <p>- <strong>Testa åtkomstkontroll ...</strong>: en plats där du kan testa behörigheten för en viss sökväg och/eller huvudman.</p> <p>- <strong>Exportera nodtyp</strong>: om du vill exportera nodtyper i systemet som slutnotation.</p> <p>- <strong>Importera nodtyp..</strong>: om du vill importera nodtyper med slutnotation.</p> <p>- <strong>Installera SiteCatalyst Debugger ...</strong>: anvisningar om hur du installerar Analytics Debugger.</p> </td>
   </tr>
   <tr>
    <td>Inloggningswidget<br /> </td>
@@ -176,7 +176,7 @@ Det skapar:
 
 * En underordnad nod av typen `cq:PageContent` med egenskaper för sidinnehåll
 
-Du kan lägga till egenskaper i mallen: referera till [Skapa en egenskap](#creating-a-property) -avsnitt.
+Du kan lägga till egenskaper i mallen: se [Skapa en egenskap](#creating-a-property) -avsnitt.
 
 ## Skapa en komponent {#creating-a-component}
 
@@ -191,9 +191,9 @@ Så här skapar du en komponent med CRXDE Lite:
 
 1. Det här steget är valfritt: ange komponentegenskaperna **Är behållare,** **Ingen dekoration**, **Cellnamn** och **Dialogrutesökväg**. Klicka på **Nästa**.
 
-1. Det här steget är valfritt: ange egenskapen component **Tillåtna överordnade**. Klicka på **Nästa**.
+1. Det här steget är valfritt: ange komponentegenskapen **Tillåtna överordnade**. Klicka på **Nästa**.
 
-1. Det här steget är valfritt: ange egenskapen component **Tillåtna underordnade**. Klicka **OK**.
+1. Det här steget är valfritt: ange komponentegenskapen **Tillåtna underordnade**. Klicka **OK**.
 
 1. Klicka **Spara alla** för att spara ändringarna på servern.
 
@@ -237,7 +237,7 @@ Nu kan du anpassa noden efter dina behov genom att ändra egenskaper eller skapa
 >
 >De flesta redigeringsåtgärderna, inklusive Skapa nod, sparar alla ändringar i minnet och lagrar dem bara i databasen när de sparas (med knappen &quot;Spara alla&quot;). Vissa åtgärder, till exempel move, sparas dock automatiskt.
 >
->Valideringen av om den nyskapade noden tillåts av den överordnade nodens nodtyp utförs också av JCR-databasen först när ändringarna sparas. Om du får ett felmeddelande när du sparar en nod kontrollerar du om innehållsstrukturen är giltig (du kan till exempel inte skapa ett `nt:unstructured` nod som underordnad till `nt:folder` nod).
+>Valideringen av om den nyskapade noden tillåts av den överordnade nodens nodtyp utförs också av JCR-databasen först när ändringarna sparas. Om du får ett felmeddelande när du sparar en nod kontrollerar du om innehållsstrukturen är giltig (du kan till exempel inte skapa ett `nt:unstructured` nod som underordnad `nt:folder` nod).
 
 ## Skapa en egenskap {#creating-a-property}
 
@@ -251,7 +251,7 @@ Så här skapar du en egenskap med CRXDE Lite:
 
 ## Skapa ett skript {#creating-a-script}
 
-Så här skapar du ett nytt skript:
+Skapa ett nytt skript:
 
 1. Öppna CRXDE Lite i webbläsaren.
 1. Högerklicka på den komponent där du vill skapa skriptet i navigeringsrutan och välj **Skapa ...** sedan **Skapa fil...**.
@@ -294,10 +294,10 @@ Med CRXDE Lite kan du visa filen `error.log` som finns i filsystemet på `<crx-i
 
 Du kan:
 
-* Justera loggparametrarna i Felix Console genom att klicka på **Loggningskonfigurationer** ikon.
-* Rensa meddelandena genom att klicka på knappen **Pensel** ikon.
-* Fäst meddelandet vid den aktuella markeringen genom att klicka på knappen **Fäst** ikon.
-* Aktivera eller inaktivera visning av meddelanden genom att klicka på **Stoppa** ikon.
+* Justera loggparametrarna i Felix Console genom att klicka på **Loggningskonfigurationer** -ikon.
+* Rensa meddelandena genom att klicka på knappen **Pensel** -ikon.
+* Fäst meddelandet vid den aktuella markeringen genom att klicka på knappen **Fäst** -ikon.
+* Aktivera eller inaktivera visning av meddelanden genom att klicka på **Stoppa** -ikon.
 
 ## Åtkomstkontroll {#access-control}
 

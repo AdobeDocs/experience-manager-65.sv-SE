@@ -11,9 +11,9 @@ topic-tags: site-features
 discoiquuid: 8386a16a-9d47-46d5-bc60-5f290c59e60e
 docset: aem65
 exl-id: 3beea5cd-5ae0-485b-8dfc-8b3a23c11586
-source-git-commit: e85aacd45a2bbc38f10d03915e68286f0a55364e
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '578'
+source-wordcount: '577'
 ht-degree: 1%
 
 ---
@@ -28,7 +28,7 @@ Med funktionen för sidskillnader kan du enkelt jämföra två sidor sida vid si
 
 >[!TIP]
 >
->Se [Developing and Page Diff](/help/sites-developing/pagediff.md#operation-details) om du vill ha mer teknisk information om den här funktionen.
+>Se [Developing and Page Diff](/help/sites-developing/pagediff.md#operation-details) för mer teknisk information om den här funktionen.
 
 ## Använd {#use}
 
@@ -54,7 +54,7 @@ Källan för båda sidorna visas tydligt i sidhuvudsfältet högst upp i webblä
 
 ![Källa visas i rubriken](assets/chlimage_1-109.png)
 
-Skillnaden identifierar ändringar på komponentnivå och HTML. Objekt som har ändrats markeras med olika färger.
+Skillnaden identifierar ändringar på komponentnivå och HTML-nivå. Objekt som har ändrats markeras med olika färger.
 
 **Komponentändringar**
 
@@ -78,7 +78,7 @@ Om du vill fokusera på ett visst innehåll kan du klicka på helskärmsikonen f
 
 Den markerade sidan fyller hela fönstret, men fältet förblir överst så att du kan växla mellan de två sidorna.
 
-![Med fältet överst kan du växla mellan sidor](assets/chlimage_1-110.png)
+![Med fältet längst upp kan du växla mellan sidor](assets/chlimage_1-110.png)
 
 Du kan också stänga helskärmsläget genom att klicka på ikonen för att avsluta helskärmsläget.
 

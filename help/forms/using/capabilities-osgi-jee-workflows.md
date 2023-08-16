@@ -3,9 +3,9 @@ title: Åtgärder och funktioner i formulärcentrerade AEM arbetsflöden i OSGi-
 description: Åtgärder och funktioner i formulärcentrerade AEM arbetsflöden i OSGi- och AEM Forms JEE-arbetsflöden
 contentOwner: khsingh
 exl-id: 505b8988-b2b3-4222-b3cb-9b3c6259fdd2
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '928'
+source-wordcount: '927'
 ht-degree: 19%
 
 ---
@@ -203,7 +203,7 @@ Formulärbaserade AEM arbetsflöden för OSGi- och AEM Forms JEE-arbetsflöden (
    <td>Stöds</td>
   </tr>
   <tr>
-   <td>Anropa en webbtjänst från ett arbetsflöde</td>
+   <td>Ring en webbtjänst från ett arbetsflöde</td>
    <td>Stöds</td>
    <td>Stöds</td>
   </tr>
@@ -263,7 +263,7 @@ Formulärbaserade AEM arbetsflöden för OSGi- och AEM Forms JEE-arbetsflöden (
    <td>Stöds</td>
   </tr>
   <tr>
-   <td>Utdatatjänst</td>
+   <td>Output Service</td>
    <td>Stöds</td>
    <td>Stöds</td>
   </tr>
@@ -308,7 +308,7 @@ Formulärbaserade AEM arbetsflöden för OSGi- och AEM Forms JEE-arbetsflöden (
    <td>Stöds </td>
   </tr>
   <tr>
-   <td>Spara utkast med ett eget namn</td>
+   <td>Spara utkast med ett anpassat namn</td>
    <td>Stöds ej </td>
    <td>Stöds </td>
   </tr>
@@ -385,7 +385,7 @@ Formulärbaserade AEM arbetsflöden för OSGi- och AEM Forms JEE-arbetsflöden (
  </tbody>
 </table>
 
-1. Du kan använda formulärbaserade AEM arbetsflöden i OSGi för att signera ett ifyllt anpassat formulär. Formulärbaserade AEM i OSGi-arbetsflöden stöder inte formulärsignering. The [signering i formulär](../../forms/using/working-with-adobe-sign.md#create-in-form-signing-experience) upplevelsen stöds inte.
+1. Du kan använda formulärbaserade AEM arbetsflöden i OSGi för att signera ett ifyllt anpassat formulär. Formulärbaserade AEM i OSGi-arbetsflöden har stöd för formulärsignering. The [signering i formulär](../../forms/using/working-with-adobe-sign.md#create-in-form-signing-experience) upplevelsen stöds inte.
 
 1. Du måste ha tillgång till AEM Inbox för att kunna köra och övervaka formulärcentrerade arbetsflöden på AEM Forms OSGi och HTML Workspace för att kunna köra och övervaka AEM Forms JEE-arbetsflöden.
 1. AEM Forms Document Services finns för både formulärbaserade AEM arbetsflöden i OSGi och AEM Forms i JEE-arbetsflöden. AEM Workflow använder inbyggda dokumenttjänster för formulärbaserade AEM arbetsflöden i OSGi- och AEM Forms JEE-arbetsflöden (Process Management).

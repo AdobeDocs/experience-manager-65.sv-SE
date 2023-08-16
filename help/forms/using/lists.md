@@ -8,9 +8,9 @@ discoiquuid: 0d5436c6-1976-496c-b9a7-7dc6e830bb5d
 docset: aem65
 feature: Correspondence Management
 exl-id: 71754e41-45d7-4cc5-ba49-0748bd51c0cf
-source-git-commit: a2fd3c0c1892ac648c87ca0dec440e22144c37a2
+source-git-commit: 10227bcfcfd5a9b0f126fee74dce6ec7842f5e95
 workflow-type: tm+mt
-source-wordcount: '6905'
+source-wordcount: '6910'
 ht-degree: 0%
 
 ---
@@ -32,7 +32,7 @@ En textresurs är en del av innehållet som består av ett eller flera textstyck
 
 Correspondence Management Solution har stöd för två typer av dynamiska dataobjekt (variabeldata):
 
-* **Dataordlisteelement**: Dessa element är bundna till dataordlistan och hämtar deras värden från den angivna datakällan. En dataordlistevariabel kan vara skyddad eller oskyddad. När korrespondens skapas kan användaren ändra standardvärdet för oskyddade dataordlistevariabler, men inte ändra skyddade.
+* **Dataordlisteelement**: Dessa element är bundna till dataordlistan och hämtar sina värden från den angivna datakällan. En dataordlistevariabel kan vara skyddad eller oskyddad. När korrespondens skapas kan användaren ändra standardvärdet för oskyddade dataordlistevariabler, men inte ändra skyddade.
 * **Platshållare**: Dessa är variabler som inte är bundna till någon backend-datakälla. De kräver att användaren fyller i ett värde när korrespondens skapas. Platshållarna är som standard oskyddade.
 
 >[!NOTE]
@@ -45,11 +45,11 @@ Correspondence Management Solution har stöd för två typer av dynamiska dataob
 1. Tryck **Skapa** > **Text** Eller välj en textresurs och tryck **Redigera**.
 1. Ange följande information för texten:
 
-   * **Titel: (Valfritt)** Ange textresursens titel. Titlar behöver inte vara unika och kan innehålla specialtecken och tecken som inte är engelska. Texterna refereras till av sina titlar (när de är tillgängliga) som miniatyrbilder och resursegenskaper.
-   * **Namn:** Det unika namnet för textresursen. Det finns inga två resurser (text, villkor eller lista) i något läge med samma namn. I fältet Namn kan du bara ange engelska tecken, siffror och bindestreck. Fältet Namn fylls i automatiskt baserat på fältet Titel. De specialtecken, blanksteg, siffror och icke-engelska tecken som anges i fältet Titel ersätts med bindestreck i fältet Namn. Även om värdet i fältet Titel automatiskt kopieras till namnet kan du redigera värdet.
-   * **Beskrivning**: Ange en beskrivning av resursen.
-   * **Dataordlista**: Du kan också markera det datalexikon som du vill mappa till. Med det här attributet kan du lägga till referenser till dataordlisteelement i textresursen.
-   * **Taggar**: Om du vill skapa en egen tagg anger du ett värde i textfältet och trycker på Retur. Du kan se taggen under textfältet med taggar. När du sparar den här texten skapas även de nya taggarna.
+   * **Titel: (valfritt)** Ange textresursens titel. Titlar behöver inte vara unika och kan innehålla specialtecken och tecken som inte är engelska. Texterna refereras till av sina titlar (när de är tillgängliga) som miniatyrbilder och resursegenskaper.
+   * **Namn:** Textresursens unika namn. Det finns inga två resurser (text, villkor eller lista) i något läge med samma namn. I fältet Namn kan du bara ange engelska tecken, siffror och bindestreck. Fältet Namn fylls i automatiskt baserat på fältet Titel. De specialtecken, blanksteg, siffror och icke-engelska tecken som anges i fältet Titel ersätts med bindestreck i fältet Namn. Även om värdet i fältet Titel automatiskt kopieras till namnet kan du redigera värdet.
+   * **Beskrivning**: Skriv en beskrivning av resursen.
+   * **Dataordlista**: Om du vill kan du välja vilken datamordlista som ska mappas. Med det här attributet kan du lägga till referenser till dataordlisteelement i textresursen.
+   * **Taggar**: Om du vill skapa en egen tagg anger du ett värde i textfältet och trycker på Retur. Taggen visas under textfältet med taggar. När du sparar den här texten skapas även de nya taggarna.
 
 1. Tryck **Nästa**. Korrespondenshanteringen visar redigeringssidan där du kan lägga till textstycken och dataelement i texten.
 
@@ -62,10 +62,10 @@ Correspondence Management Solution har stöd för två typer av dynamiska dataob
    ![Verktygsfält](assets/advancedediting.png)
 
    * **Länk**: Infoga [hypertext](#insert-hyperlink) i texten.
-   * **Upprepa**: Upprepa skriver ut samlingselement i Data Dictionary med hjälp av en avgränsare.
+   * **Upprepa**: Upprepa skriver ut samlingselement i Data Dictionary med en avgränsare.
    * **Villkor**: Tryck för att infoga ett villkor. Infoga text baserad på villkor. Om villkoret är true visas texten med bokstaven, i annat fall inte.
-   * **Lägg till beskrivning**: Lägg till anteckning i ett textstycke. Detta är metadata som är synliga för författaren men inte en del av det brev som skapas.
-   * **Sidbrytning**: Om du anger sidbrytningsattributet för en textmodul som false bryts inte textmodulen över sidorna.
+   * **Lägg till beskrivning**: Lägg till anteckning i text. Detta är metadata som är synliga för författaren men inte en del av det brev som skapas.
+   * **Sidbrytning**: Om du anger sidbrytningsattributet för en textmodul till false bryts inte textmodulen över sidorna.
 
    En textredigerare öppnas. Ange texten. Verktygsfältet ändras beroende på vilken typ av redigeringar du väljer att göra: Stycke, Justering eller Lista:
 
@@ -76,7 +76,7 @@ Correspondence Management Solution har stöd för två typer av dynamiska dataob
    ![Verktygsfältet Stycke](assets/fonteditingtoolbar.png)
 
    Verktygsfältet Stycke
-   [ ![Justering (verktygsfält)](assets/paragrapheditingtoolbar.png)](assets/paragrapheditingtoolbar-1.png)Justering (verktygsfält)
+   [![Justering (verktygsfält)](assets/paragrapheditingtoolbar.png)](assets/paragrapheditingtoolbar-1.png)Justering (verktygsfält)
 
    ![Verktygsfältet Lista](assets/bulleteditingtoolbar.png)
 
@@ -129,7 +129,7 @@ Correspondence Management Solution har stöd för två typer av dynamiska dataob
 
    ![Platshållarelement med bokstav](assets/placeholder_elements_in_text.png)
 
-   Värden för platshållarelement i CCR-vyn ifyllda från variablerna i datamappen som anges i exempeldatafilen
+   Värden för platshållarelement i CCR-vyn ifyllda från variablerna i datamappen enligt exempeldatafilen
 
    Du kan också använda symbolen @ för att söka efter och lägga till dataordlista och platshållarelement i textredigeraren. Placera markören där du vill infoga elementet. Skriv @ följt av söksträngen. Textredigeraren utför sökåtgärden på alla dataordlisteelement och platshållarelement som finns i textdokumentfragmentet. Sökåtgärden hämtar och visar elementen som innehåller söksträngen som en nedrullningsbar lista. Navigera genom sökresultaten och klicka på elementet som du vill infoga vid markörens plats. Tryck på Esc för att dölja sökresultaten.
 
@@ -170,7 +170,7 @@ Med funktionen Sök och ersätt kan du söka efter (och ersätta) alla textsträ
 
 #### Sökalternativ {#search-options}
 
-**Matcha gemener/VERSALER:** Sökningen returnerar bara resultat med samma skiftläge.
+**Matcha skiftläge:** Sökningen returnerar bara resultat med samma skiftläge.
 
 **Hela ord:** Sökningen returnerar bara hela ord.
 
@@ -222,13 +222,13 @@ Implementeringslistorna består av två steg:
 
 En lista är en grupp med relaterat innehåll som kan användas i en brevmall som en enda enhet. Alla typer av innehåll kan läggas till i en lista. Listor kan också kapslas. Listmoduler kan anges som:
 
-* **BESTÄLLD**: Det går inte att ändra ordningen i körningsmiljön Create Correspondence.
-* **Biblioteksåtkomst**: Användare kan lägga till moduler i listan. Den här flaggan anger om biblioteksåtkomst är aktiverad. Om den är aktiverad (öppen) kan användaren lägga till moduler i listan när bokstaven förhandsgranskas.
+* **BESTÄLLD**: Ordningen kan inte ändras i körningsmiljön Create Correspondence.
+* **Bibliotekåtkomst**: Användare kan lägga till moduler i listan. Den här flaggan anger om biblioteksåtkomst är aktiverad. Om den är aktiverad (öppen) kan användaren lägga till moduler i listan när bokstaven förhandsgranskas.
 * När du skapar en lista kan du ange en typ, till exempel:
 * **Oformaterad**: Ingen ytterligare formatering används i listan.
 * **Punktlista**: En lista formaterad med en enkel punkt.
 * **Numrerad**: En numerisk lista där du kan välja mellan siffrorna Standard (1,2,..), Upper Roman (I, II, ...) och Lower Roman (i, ii, ...).
-* **Löpande**: En alfabetisk lista där du kan välja mellan gemener (a, b,..) och versaler (A, B,..).
+* **Löpande**: En alfabetisk lista där du kan välja mellan gemener (a,b,..) och versaler (A,B,..).
 * **Egen**: Du kan skapa valfria värden för Numrerad/Letter-typ och prefix och suffix.
 
 1. Välj **Forms** > **Dokumentfragment**.
@@ -237,10 +237,10 @@ En lista är en grupp med relaterat innehåll som kan användas i en brevmall so
 
 1. Ange följande information för listan:
 
-   * **Titel (valfritt): Retur** titeln på listan. Titeln behöver inte vara unik och kan innehålla specialtecken och tecken som inte är engelska. Listor refereras till av deras titlar (om de är tillgängliga), t.ex. i miniatyrbilder och resursegenskaper.
+   * **Titel (valfritt): Ange** titeln på listan. Titeln behöver inte vara unik och kan innehålla specialtecken och tecken som inte är engelska. Listor refereras till av deras titlar (om de är tillgängliga) som miniatyrbilder och resursegenskaper.
    * **Namn:** Listans unika namn. Det finns inga två resurser (text, villkor eller lista) i något läge med samma namn. I fältet Namn kan du bara ange engelska tecken, siffror och bindestreck. Fältet Namn fylls automatiskt i med värdet i fältet Titel. De specialtecken, blanksteg, siffror och icke-engelska tecken som anges i fältet Titel ersätts med bindestreck i fältet Namn. Även om värdet i fältet Titel automatiskt kopieras till namnet kan du redigera värdet.
-   * **Beskrivning (valfritt)**: Ange en beskrivning av resursen.
-   * **Dataordlista (valfritt)**: Du kan också välja vilken datamordlista du vill ansluta till. Endast resurser som använder samma dataordlista som listan, eller resurser som inte har någon dataordlista tilldelad, kan läggas till i listan. Om du tilldelar ett datalexikon till en lista blir det enklare för personen som skapar en brevmall att hitta rätt lista.
+   * **Beskrivning (valfritt)**: Skriv en beskrivning av resursen.
+   * **Dataordlista (valfritt)**: Om du vill kan du välja vilken datamordlista som du vill ansluta till. Endast resurser som använder samma dataordlista som listan, eller resurser som inte har någon dataordlista tilldelad, kan läggas till i listan. Om du tilldelar ett datalexikon till en lista blir det enklare för personen som skapar en brevmall att hitta rätt lista.
    * **Taggar (valfritt)**: Markera de taggar som ska användas. Du kan också skriva namnet på en ny tagg och skapa den. (Den nya taggen skapas när du trycker på **Spara**.)
 
 1. Tryck **Nästa**.
@@ -256,11 +256,11 @@ Om du vill ändra ordningen på resurserna i listan trycker du på och håller n
 
 1. Du kan välja följande alternativ för att ange hur listan fungerar i CCR-användargränssnittet:
 
-   * **Biblioteksåtkomst**: Tryck på Library Access om du vill aktivera biblioteksåtkomst för att lägga till resurser. När Library Access är aktiverat kan anspråksjusteraren lägga till mer innehåll i listan. I annat fall begränsas Anspråksjusteraren till det innehåll som du har definierat för listan.
+   * **Bibliotekåtkomst**: Tryck på Library Access om du vill aktivera biblioteksåtkomst för att lägga till resurser. När Library Access är aktiverat kan anspråksjusteraren lägga till mer innehåll i listan. I annat fall begränsas Anspråksjusteraren till det innehåll som du har definierat för listan.
    * **Lås ordning**: Om du vill låsa ordningen för resurserna i listan så att anspråksjusteraren inte kan ändra ordningen trycker du på Lås ordning. Om du inte markerar det här alternativet kan du ändra ordningen på listobjekten med Anspråksjustering.
 
    * **Lägg till punkter**: Använd det här alternativet om du vill använda ett punkt- eller nummerformat i modulen. Du kan antingen använda ett fördesignat listformat eller ett anpassat. Du kan också ange den text som ska visas före och efter varje listobjekt.
-   * **Sidbrytning**: Välj det här alternativet ( ![break](assets/break.png)) för att lägga till en sidbrytning mellan listinnehållet. När det här alternativet inte är markerat ( ![nobreak](assets/nobreak.png)), om innehållet i listan flödar över till nästa sida, flyttas hela listan till nästa sida i stället för att brytas i sidan mellan listan.
+   * **Sidbrytning**: Välj det här alternativet ( ![break](assets/break.png)) om du vill lägga till en sidbrytning mellan listinnehållet. När det här alternativet inte är markerat ( ![nobreak](assets/nobreak.png)), om innehållet i listan flödar över till nästa sida, flyttas hela listan till nästa sida i stället för att brytas i sidan mellan listan.
 
    * **Tilldelningskonfiguration**: Använd det här alternativet om du vill ange minsta och högsta antal resurser som kan läggas till i listan.
 
@@ -283,7 +283,7 @@ Om du vill ändra ordningen på resurserna i listan trycker du på och håller n
 * Använd lämplig databordsbindning
 * Följande regler gäller när du använder listredigeraren för att ändra en lista:
 
-   * Uppdatering av egenskaper: Tillåtet
+   * Egenskapsuppdatering: Tillåten
    * **Dataordlista har ändrats:** Tillåts tills inget objekt som använder dataordlistan är associerat med det. Du kan inte ändra dataordlistan vid uppdatering.
 
 ## Villkor {#conditions}
@@ -309,18 +309,18 @@ Med Villkorsredigeraren kan du ange ett standardvillkor. Om värdet för kontrol
 1. Välj **Skapa > Villkor**.
 1. Ange följande information för listan:
 
-   * **Titel (valfritt):** Ange villkorets titel. Titeln behöver inte vara unik och kan innehålla specialtecken och tecken som inte är engelska. Villkoren refereras till av deras titlar (om de är tillgängliga), t.ex. i miniatyrbilder och resursegenskaper.
+   * **Titel (valfritt):** Ange villkorets titel. Titeln behöver inte vara unik och kan innehålla specialtecken och tecken som inte är engelska. Villkoren refereras till av deras titlar (om de är tillgängliga) som miniatyrbilder och resursegenskaper.
    * **Namn:** Villkorets unika namn. Det finns inga två resurser (text, villkor eller lista) i något läge med samma namn. I fältet Namn kan du bara ange engelska tecken, siffror och bindestreck. Fältet Namn fylls i automatiskt baserat på fältet Titel. De specialtecken, blanksteg, siffror och icke-engelska tecken som anges i fältet Titel ersätts med bindestreck i fältet Namn. Även om värdet i fältet Titel automatiskt kopieras till namnet kan du redigera värdet.
    * **Beskrivning (valfritt)** Ange en beskrivning av villkoret.
-   * **Dataordlista (valfritt)**: Du kan också välja vilken datamordlista du vill ansluta till. Endast resurser som använder samma dataordlista som villkoret, eller resurser som inte har någon dataordlista tilldelad, kan läggas till i listan. Om du tilldelar ett datalexikon till en lista blir det enklare för den som skapar en brevmall att hitta rätt villkor.
-   * **Taggar (valfritt)**: Du kan också markera de taggar som ska användas. Du kan också skriva namnet på en ny tagg och skapa den. (Den nya taggen skapas när du trycker på **Spara**.)
+   * **Dataordlista (valfritt)**: Om du vill kan du välja vilken datamordlista som du vill ansluta till. Endast resurser som använder samma dataordlista som villkoret, eller resurser som inte har någon dataordlista tilldelad, kan läggas till i listan. Om du tilldelar ett datalexikon till en lista blir det enklare för den som skapar en brevmall att hitta rätt villkor.
+   * **Taggar (valfritt)**: Om du vill kan du markera de taggar som ska användas. Du kan också skriva namnet på en ny tagg och skapa den. (Den nya taggen skapas när du trycker på **Spara**.)
 
 1. Tryck **Nästa**.
 1. Tryck **Lägg till resurs**.
 1. Om du vill lägga till en resurs i villkoret markerar du den på sidan Välj resurser och trycker på **Klar**. Resurserna läggs till i rutan Uttryck.
 1. Du kan välja följande alternativ för att ange hur villkoret fungerar under körning:
 
-   * **Inaktivera utvärdering av flera resultat\Aktivera utvärdering av flera resultat**: När det här alternativet är aktiverat (visas som&quot;Aktivera flera..&quot;) utvärderas alla villkor och resultatet är summan av alla verkliga villkor. Om det här alternativet är inaktiverat (visas som&quot;Inaktivera flera..&quot;) utvärderas endast det första villkoret som är sant och blir villkorets utdata.
+   * **Inaktivera utvärdering av flera resultat\Aktivera utvärdering av flera resultat**: När det här alternativet är aktiverat (visas som&quot;Aktivera flera..&quot;) utvärderas alla villkor och resultatet är summan av alla sanna villkor. Om det här alternativet är inaktiverat (visas som&quot;Inaktivera flera..&quot;) utvärderas endast det första villkoret som är sant och blir villkorets utdata.
    * **Sidbrytning**: Välj det här alternativet ( ![break](assets/break.png)) för att lägga till en sidbrytning mellan villkorens moduler. När det här alternativet inte är markerat ( ![nobreak](assets/nobreak.png)), om ett villkor flödar över till nästa sida, flyttas hela villkoret till nästa sida i stället för att brytas i sidan mellan villkoret.
 
 1. Om du vill ändra ordningen på resurserna i villkoret trycker du på och håller ned pilikonen ( ![dragndrop](assets/dragndrop.png) ) och dra och släpp. När användaren öppnar en brevmall i användargränssnittet Skapa korrespondens, monteras innehållet i den ordning som du definierade här.
@@ -361,9 +361,9 @@ Om du använder fragment som är bundna till målområden kan bokstaven ändras 
 1. Du kan ange sidhuvud och sidfot för fler rader och kolumner.
 1. Du kan definiera förhållandet mellan tabellkolumnbredden. Vid körning ändras tabellkolumnernas storlek enligt den definierade kvoten och det tillgängliga utrymmet. Summan av breddförhållandet måste vara 100. I annat fall är det inte tillämpligt.
 1. Om en tabell är en platshållare (innehåller endast en tom cell) kan du definiera typen (målområde/fält) för nya kolumner.
-1. Du kan dölja sidhuvud- och sidfotsrader.
+1. Du kan dölja huvud- och fotrader.
 
-Skapa ett XFA-fragment med Designer innan du utför den här proceduren. Fragmentet kan innehålla tabeller för att ordna fält och målområden. I Designer kan du skapa två typer av tabeller: statisk och dynamisk. Statiska tabeller innehåller ett fast antal rader. Statiska tabeller kan innehålla målområden och fält. Målområdet och fälten kan inte bindas till upprepade DDE:er. En dynamisk tabell kan också ha en rad. De data som är bundna till tabellceller avgör antalet rader för dynamiska tabeller. En dynamisk tabell kan bara innehålla fält. DDE:er kan vara upprepande eller icke-upprepande.
+Skapa ett XFA-fragment med Designer innan du utför den här proceduren. Fragmentet kan innehålla tabeller för att ordna fält och målområden. I Designer kan du skapa två typer av tabeller: statiska och dynamiska. Statiska tabeller innehåller ett fast antal rader. Statiska tabeller kan innehålla målområden och fält. Målområdet och fälten kan inte bindas till upprepade DDE:er. En dynamisk tabell kan också ha en rad. De data som är bundna till tabellceller avgör antalet rader för dynamiska tabeller. En dynamisk tabell kan bara innehålla fält. DDE:er kan vara upprepande eller icke-upprepande.
 
 Tänk på följande när du utformar tabeller:
 
@@ -373,7 +373,7 @@ Tänk på följande när du utformar tabeller:
 1. När du sammanfogar layoutfragment i överordnade målområdestabeller ändras storleken enligt tillgängligt utrymme, men storleksändringen sker bara när layoutfragmentet inte innehåller något målområde eller fält direkt i det översta delformuläret. Målområde och fält i tabellen tillåts.
 1. Du kan skapa platshållartabeller. Platshållartabeller har bara en tom cell.
 
-* För platshållartabeller kan du anpassa följande egenskaper när fragment skapas.
+* För platshållartabeller kan du anpassa följande egenskaper när du skapar fragment.
 
    * radantal
    * antal kolumner
@@ -401,20 +401,20 @@ Ett detaljerat exempel på hur du använder statiska och dynamiska tabeller i la
    * **Titel (valfritt):** Ange layoutfragmentets titel. Titeln behöver inte vara unik och kan innehålla specialtecken och tecken som inte är engelska. Layoutfragment refereras till av sina titlar (när de är tillgängliga) som miniatyrbilder och resursegenskaper.
    * **Namn:** Layoutfragmentets unika namn. Det finns inga två resurser (text, villkor eller lista) i något läge med samma namn. I fältet Namn kan du bara ange engelska tecken, siffror och bindestreck. Fältet Namn fylls i automatiskt baserat på fältet Titel. De specialtecken, blanksteg, siffror och icke-engelska tecken som anges i fältet Titel ersätts med bindestreck i fältet Namn. Även om värdet i fältet Titel automatiskt kopieras till namnet kan du redigera värdet. Det här namnet visas i listan i användargränssnittet Hantera resurser.
    * **Beskrivning (valfritt)**: Beskrivning som visas i listan i användargränssnittet Hantera resurser.
-   * **Taggar (valfritt)**: Du kan också markera de taggar som ska användas för villkoret. Du kan också skriva namnet på en ny tagg och skapa den.
+   * **Taggar (valfritt)**: Om du vill kan du markera de taggar som ska användas för villkoret. Du kan också skriva namnet på en ny tagg och skapa den.
 
 1. Tryck på **Tabell** och ange följande information för layouten:
 
-   * **Konfiguration för**: Markera tabellen som konfigureras.Som ett suffix till tabellnamnet i listrutan är (statiskt) om tabellen är statisk eller (dynamiskt) om tabellen är en dynamisk tabell. Statiska tabeller innehåller ett fast antal rader. Statiska tabeller kan innehålla målområden och fält. Målområdet och fälten kan inte bindas till upprepade DDE:er. De data som är bundna till tabellceller avgör antalet rader för dynamiska tabeller.
+   * **Konfiguration för**: Välj den tabell som konfigureras.Som ett suffix till tabellnamnet i listrutan är (statiskt) om tabellen är statisk eller (dynamiskt) om tabellen är en dynamisk tabell. Statiska tabeller innehåller ett fast antal rader. Statiska tabeller kan innehålla målområden och fält. Målområdet och fälten kan inte bindas till upprepade DDE:er. De data som är bundna till tabellceller avgör antalet rader för dynamiska tabeller.
 
-   * **Rader**: Välj antalet rader för layouten. Det konfigurerade radantalet måste vara större än eller lika med det ursprungliga radantalet.
-   * **Kolumner**: välj antalet kolumner för layouten. Det konfigurerade kolumnantalet måste vara större än eller lika med det ursprungliga kolumnantalet.
+   * **Rader**: Välj antal rader för layouten. Det konfigurerade radantalet måste vara större än eller lika med det ursprungliga radantalet.
+   * **Kolumner**: välj antal kolumner för layouten. Det konfigurerade kolumnantalet måste vara större än eller lika med det ursprungliga kolumnantalet.
 
    För varje kolumn krävs följande uppgifter:
 
    * **Sidhuvud**: text som ska visas för rubriken
    * **Sidfot**: text som ska visas för sidfoten
-   * **Typ**: typ av extra kolumn. Fält eller målområde. Typ är aktiverat för statiska platshållartabeller. Text kan definieras på kolumnnivå och inte på cellnivå. Alla celler i en utökad kolumn är av samma typ. För en dynamisk tabell är alla kolumner av fälttyp. För tabeller som inte är platshållare kan du inte definiera typen av ytterligare kolumner. I detta fall är typen av ytterligare celler i den utökade kolumnen densamma som typen av sista kolumn i den raden. och celltypen i ytterligare rader är samma som typen för den sista cellen i den kolumnen.
+   * **Typ**: typ av extra kolumn. Fält eller målområde. Typ är aktiverat för statiska platshållartabeller. Text kan definieras på kolumnnivå och inte på cellnivå. Alla celler i en utökad kolumn är av samma typ. För en dynamisk tabell är alla kolumner av fälttyp. För tabeller som inte är platshållare kan du inte definiera typen av ytterligare kolumner. I det här fallet är typen av ytterligare celler i den utökade kolumnen densamma som typen för den sista kolumnen i den raden, och typen av cell i den andra raden är densamma som typen för den sista cellen i den kolumnen.
    * **Breddförhållande:** förhållandet mellan tabellkolumnbredderna.
 
    Ett detaljerat exempel på hur du använder statiska och dynamiska tabeller i layoutfragment finns i [Exempel med exempelfiler: använda statiska och dynamiska tabeller i en bokstav](#examplewithsamplefiles).
@@ -433,7 +433,7 @@ När du skapar målområden i Designer är det bra att ange standardbindningen f
 
 Så här anger du standardbindning:
 
-1. Tryck på **verktyg** > **Alternativ** > **Databindningar** > **Bindning av delformulär**.
+1. I Designer trycker du **verktyg** > **Alternativ** > **Databindningar** > **Bindning av delformulär**.
 
 1. I listan Standardbindning för nya delformulär väljer du **Ingen databindning**.
 
@@ -461,31 +461,31 @@ När du hanterar en kombination av datum, till exempel startDate - endDate, ska 
 
 När en layout innehåller många fält och målområden som är mappade till enskilda XML-element använder du bindning på formulärnivå och skapar en separat nod för varje element. Fält som är bundna på formulärnivå ignoreras när data mappas i Correspondence Management.
 
-#### Använd inte målområden för delformulär på en överordnad sida {#do-not-use-subform-target-areas-in-a-master-page}
+#### Använd inte målområden för delformulär på en mallsida {#do-not-use-subform-target-areas-in-a-master-page}
 
-Delformulärets målområden på en överordnad sida är inte synliga i användargränssnittet Hantera resurser och det går inte att mappa data till dem.
+Delformulärets målområden på en mallsida är inte synliga i användargränssnittet Hantera resurser och det går inte att mappa data till dem.
 
 #### Välja lämpliga positioner och typer för målområden {#choosing-appropriate-positions-and-types-for-target-areas}
 
 Var försiktig när du utformar layouten när du väljer delformulär. Om layouten innehåller ett enskilt delformulär kan det vara en flödestyp. När du har placerat fält i delformuläret kan du kapsla in det i ett annat delformulär så att även det inkapslade delformuläret flödas och layouten inte störs.
 
-#### Placera fält på överordnad sidor {#placing-fields-on-master-pages}
+#### Placera fält på mallsidor {#placing-fields-on-master-pages}
 
-Observera följande när du placerar ett fält på en överordnad sida:
+Observera följande när du placerar ett fält på en mallsida:
 
-* Ange bindning för överordnad sidfält till Använd globala data
-* Placera inte fältet direkt under den överordnad sidans rotsidområde.
+* Ange bindning för mallsidans fält till Använd globala data
+* Placera inte fältet direkt under mallsidans rotsidområde.
 * Lägg in fältet i ett namngivet delformulär och se till att bindningen för det namngivna delformuläret är inställd på Använd namn.
 
 ## Skapa tabeller med layoutfragment {#creating-tables-using-layout-fragments}
 
 Många bokstavsmallar innehåller tabeller. Tabeller kan vara statiska, t.ex. en tabell med termer och villkor, där varje rad representerar ett villkor och varje del visas i en separat kolumn. Tabeller kan också vara dynamiska, till exempel kontoinformation, som innehåller information som kundnamn, konto-id, transaktionsnummer och transaktionsbelopp.
 
-* **Statiska tabeller**: Tabeller skapas ibland med rader som har ett annat antal kolumner, t.ex. för en tabell med termer och villkor. Där varje rad representerar ett villkor och varje villkor kan ha olika underdelar. Varje del visas i en separat kolumn.
-* **Dynamiska tabeller**: Med layoutfragment kan du binda en dynamisk tabells fält till DDE-samlingar. Vid tidpunkten för teckengenereringstabellen genereras rader enligt storleken på DDE:er för samlingar.
+* **Statiska tabeller**: Tabeller skapas ibland med rader med ett annat antal kolumner, t.ex. för en tabell med termer och villkor. Där varje rad representerar ett villkor och varje villkor kan ha olika underdelar. Varje del visas i en separat kolumn.
+* **Dynamiska tabeller**: Med layoutfragment kan du binda en dynamisk tabells fält till DDE-samlingsfält. Vid tidpunkten för teckengenereringstabellen genereras rader enligt storleken på DDE:er för samlingar.
 
 Dvd:n har ett samlingselement Nominee_details som har ett sammansatt element med tre primitiva element: Nominee_name, Nominee_address och Nominee_kön.
-Den dynamiska XDP-filen har också samma rubriker. Du kan mappa dynamiska XDP-fält med de ovannämnda fälten i DD.
+Den dynamiska XDP-filen har också samma rubriker. Du kan mappa de dynamiska XDP-fälten med de ovannämnda fälten i DD.
 
 ### Exempel med exempelfiler: Använda statiska och dynamiska tabeller i en bokstav {#examplewithsamplefiles}
 
@@ -527,19 +527,19 @@ Mer information om hur du utformar layouter finns i [Designer - hjälp](https://
 1. Skapa ett layoutfragment baserat på den statiska XDP-filen. Egenskapernas flik Tabell visar att tabellen är statisk (fältet Konfiguration för). Antalet rader (1) och kolumner (3) härleds från XDP-/layoutfragmentet.
 
    Du kan ändra antalet kolumner och rader här. Beroende på vad du väljer på den här skärmen förblir antalet rader och kolumner i en statisk tabell fast i den bokstav som skapas med den här layouten.
-   [ ![Skapa en layoutfragmentskärm](assets/statictableproperties.png)](assets/statictableproperties-1.png)
+   [![Skapa en layoutfragmentskärm](assets/statictableproperties.png)](assets/statictableproperties-1.png)
 
 1. Skapa ett brev med hjälp av båda layoutfragmenten i det. När du infogar den dynamiska XDP-filen i brevet anger du bindningen av fälten till datamappningslexikonets samlingselement.
 
    Mer information om hur du skapar bokstavs- och brevmallar finns i [Skapa brev](/help/forms/using/create-letter.md).
 
-1. Spara brevet och förhandsgranska det. När du förhandsgranskar bokstaven visas värdena från datamordlistan i bokstaven. För den dynamiska tabellen finns det tre rader. Detta beror på att testdata har tre poster för dessa rader.
+1. Spara brevet och förhandsgranska det. När du förhandsgranskar bokstaven visas värdena från datamordlistan i bokstaven. För den dynamiska tabellen finns det tre rader. Detta beror på att testdata har tre poster för de här raderna.
 
    För den statiska tabellen finns det så många rader och kolumner som du angav när du skapade layoutfragmentet.
 
    ![Statisk tabell i bokstaven](assets/statictableletter.png)
 
-   För den dynamiska tabellen visas de tre raderna enligt antalet poster i testdatafilen. Detta inträffade eftersom du när du lade till layouten till brevet skapade en bindning mellan den dynamiska tabellens fält och datamordlisteelementen. Värdena Namn, Adress och Kön fylls i från den testdatafil som du använde.
+   För den dynamiska tabellen visas de tre raderna enligt antalet poster i testdatafilen. Detta inträffade eftersom du när du lade till layouten till brevet skapade en bindning mellan den dynamiska tabellens fält och dataglexikonets samlingselement. Värdena Namn, Adress och Kön fylls i från den testdatafil som du använde.
 
    ![Dynamisk tabell i bokstaven](assets/dynamictableletter.png)
 
@@ -549,6 +549,6 @@ Om du snabbt vill skapa ett dokumentfragment med egenskaper och innehåll som li
 
 1. Välj ett eller flera dokumentfragment i listan med dokumentfragment. Gränssnittet visar ikonen Kopiera.
 1. Tryck på Kopiera. Gränssnittet visar ikonen Klistra in. Du kan också välja att gå in i en mapp innan du klistrar in. Olika mappar kan innehålla resurser med samma namn. Mer information om mappar finns i [Mappar och ordna resurser](/help/forms/using/import-export-forms-templates.md#folders-and-organizing-assets).
-1. Tryck på Klistra in. Dialogrutan Klistra in visas. Om du kopierar och klistrar in dokumentfragmenten på samma plats, tilldelas namn och titlar automatiskt till de nya kopiorna av bokstäverna, men du kan redigera bokstävernas titlar och namn.
+1. Tryck på Klistra in. Dialogrutan Klistra in visas. Om du kopierar och klistrar in dokumentfragmenten på samma plats, tilldelas namn och titlar automatiskt till de nya kopiorna av bokstäverna, men du kan redigera bokstävernas namn.
 1. Om det behövs kan du redigera titeln och namnet som du vill spara kopian av dokumentfragmentet med.
 1. Tryck på Klistra in. Kopian av dokumentfragmentet skapas.

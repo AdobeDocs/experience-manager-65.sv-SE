@@ -7,9 +7,9 @@ topic-tags: configuring
 content-type: reference
 feature: Configuring
 exl-id: 3777a1ba-cc4e-41b9-9098-236f8141925f
-source-git-commit: ae08247c7be0824151637d744f17665c3bd82f2d
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '2112'
+source-wordcount: '2111'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ Adobe Experience Manager (AEM) installeras med standardinställningar för alla 
 Det finns många aspekter av AEM som kan konfigureras:
 
 * Vissa är [konfigureras vanligtvis för varje projektinstallation](#primary-configuration-considerations) och måste granskas för att bekräfta om de är tillämpliga på ditt projekt.
-* [Ytterligare konfigurationer](#further-configuration-considerations) kan vara vanlig men inte tvingande, relaterade till funktioner, eller systemprestanda och stabilitet.
+* [Ytterligare konfigurationer](#further-configuration-considerations) kan vara vanligt men inte absolut nödvändigt, det kan gälla funktioner eller systemprestanda och stabilitet.
 * Andra är bara obligatoriska för vissa valfria funktioner i AEM (dessa dokumenteras tillsammans med lämplig funktion).
 
 Beroende på den specifika konfigurationen kan dessa ändringar göras med något av följande:
@@ -105,7 +105,7 @@ Det innebär att när en IP-adress måste anges kan du välja (efter behov) blan
 
 ### Rensning av version {#version-purging}
 
-I en standardinstallation skapar AEM en version av en sida eller nod när du aktiverar en sida (efter att innehållet har uppdaterats). Du kan också skapa ytterligare versioner på begäran med **Versionshantering** sidosparkens flik. Alla dessa versioner lagras i databasen och kan återställas om det behövs.
+I en standardinstallation skapar AEM en version av en sida eller nod när du aktiverar en sida (efter att innehållet har uppdaterats). Du kan också skapa ytterligare versioner på begäran med **Versioner** sidosparkens flik. Alla dessa versioner lagras i databasen och kan återställas om det behövs.
 
 Dessa versioner rensas aldrig, så databasstorleken ökar med tiden och måste därför hanteras.
 
@@ -116,14 +116,14 @@ Se [Rensning av version](/help/sites-deploying/version-purging.md) för fullstä
 AEM ger dig möjlighet att konfigurera:
 
 * globala parametrar för den centrala loggningstjänsten
-* begära dataloggning, en särskild loggningskonfiguration för begärandeinformation
-* särskilda inställningar för de enskilda tjänsterna, t.ex. en enskild loggfil och ett format för loggmeddelandena
+* begär dataloggning; en särskild loggningskonfiguration för begärandeinformation
+* specifika inställningar för de enskilda tjänsterna, till exempel en enskild loggfil och ett format för loggmeddelandena
 
 Se [Loggning](/help/sites-deploying/configure-logging.md) för fullständig information.
 
 ### Körningslägen {#run-modes}
 
-Med körningslägena kan du trimma AEM för ett visst ändamål. Du kan till exempel skriva eller publicera, testa, utveckla eller intranät.
+Med körningslägena kan du trimma AEM för ett visst ändamål. Du kan till exempel skriva eller publicera, testa, utveckla eller intranäta och så vidare.
 
 Detta görs genom att definiera samlingar av konfigurationsparametrar för varje körningsläge. En grundläggande uppsättning konfigurationsparametrar används för alla körningslägen, och du kan sedan justera ytterligare uppsättningar efter syftet med den specifika miljön. Dessa används sedan efter behov.
 
@@ -152,7 +152,7 @@ Se [Resursmappning](/help/sites-deploying/resource-mapping.md) för mer informat
 
 Replikeringsagenter AEM som den mekanism som används för att:
 
-* [Publicera (aktivera)](/help/sites-authoring/publishing-pages.md) innehåll från en författare till en publiceringsmiljö.
+* [Publicera (aktivera)](/help/sites-authoring/publishing-pages.md) innehåll från författare till publiceringsmiljö.
 * Rensa innehåll explicit från Dispatcher-cachen.
 * Returnera användarindata (till exempel formulärindata) från publiceringsmiljön till författarmiljön (under kontroll av författarmiljön).
 
@@ -160,11 +160,11 @@ Mer information finns i [Replikering](/help/sites-deploying/replication.md).
 
 ### Konfigurationsinställningar för OSGi {#osgi-configuration-settings}
 
-[OSGi](https://www.osgi.org/) är en grundläggande del i AEM. Det används för att styra de sammansatta AEM och deras konfiguration.
+[OSGi](https://www.osgi.org/) är en grundläggande del i den tekniska AEM. Det används för att styra de sammansatta AEM och deras konfiguration.
 
-Se [Konfigurationsinställningar för OSGi](/help/sites-deploying/osgi-configuration-settings.md) för en lista över de olika programpaket som är relevanta för projektimplementeringen (listade efter paket). Alla inställningar som visas behöver inte justeras, vissa anges för att du ska förstå hur AEM fungerar.
+Se [Konfigurationsinställningar för OSGi](/help/sites-deploying/osgi-configuration-settings.md) för en lista över de olika programpaket som är relevanta för projektimplementering (listade efter paket). Alla inställningar som visas behöver inte justeras, vissa anges för att du ska förstå hur AEM fungerar.
 
-När du arbetar med AEM finns det flera metoder för att hantera konfigurationsinställningarna för sådana tjänster. se [Konfigurerar OSGi](/help/sites-deploying/configuring-osgi.md) om du vill ha mer information och rekommenderade rutiner.
+När du arbetar med AEM finns det flera metoder för att hantera konfigurationsinställningarna för sådana tjänster. Se [Konfigurerar OSGi](/help/sites-deploying/configuring-osgi.md) om du vill ha mer information och rekommenderade rutiner.
 
 ### Konfigurerar LDAP {#configuring-ldap}
 
@@ -178,11 +178,11 @@ Användarhantering inom AEM (inklusive tilldelning av åtkomsträttigheter) finn
 
 Dispatcher är ett Adobe Experience Manager-verktyg för cachelagring, eller belastningsutjämning, eller båda. Den kan användas med en webbserver i företagsklass.
 
-Se [Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=en) för fullständig information, särskilt [Konfigurera Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en) för mer konfigurationsinformation.
+Se [Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=en) för fullständig information, särskilt [Konfigurera Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en) om du vill ha mer konfigurationsinformation.
 
 ### Konfigurerar AEM LiveCycle Connector {#configuring-aem-livecycle-connector}
 
-I och med AEM Doc Services och AEM Doc Security kan AEM nu anropa LiveCycle doc services för att återge ett XFA-formulär, konvertera ett dokument till PDF och skydda ett dokument med hjälp av policyfunktioner. Se [AEM LiveCycle Connector](https://helpx.adobe.com/livecycle/help/aem/aem-livecycle-connector.html) för mer information.
+I och med att AEM Doc Services och AEM Doc Security släpps kan AEM nu anropa LiveCyclets dokumenttjänster för att återge ett XFA-formulär, konvertera ett dokument till PDF och skydda ett dokument med hjälp av policyfunktioner. Se [AEM LiveCycle Connector](https://helpx.adobe.com/livecycle/help/aem/aem-livecycle-connector.html) för mer information.
 
 ### Jobbavlastning och topologiadministration {#job-offloading-and-topology-administration}
 
@@ -242,11 +242,11 @@ Se [Förfallotid för statiska objekt](/help/sites-deploying/expiration-static-o
 
 Varje Java™-process kan komma åt filer - detta kräver systemresurser. Av den anledningen definieras en övre gräns för hur många filer varje process har åtkomst till samtidigt. Om detta överskrids kan ett undantagsfel uppstå.
 
-Om AEM överstiger det högsta tillåtna antalet får meddelandet `too many open files`&quot; visas i `error.log`.
+Om AEM överstiger det högsta tillåtna antalet får meddelandet &quot; `too many open files`&quot; visas i `error.log`.
 
 Så här undviker du sådana undantag:
 
-1. Kontrollera hur många öppna filer som AEM använder.
+1. Kontrollera hur många öppna filer som används i AEM.
 
    Den här kontrollen beror på vilken plattform instansen körs på. Verktyg som LSOF (UNIX®) eller Process Explorer (Windows) kan användas.
 
@@ -263,7 +263,7 @@ Så här undviker du sådana undantag:
 
 ### Konfigurera RTF-redigeraren {#configuring-the-rich-text-editor}
 
-The **RTF-redigerare** (**RTE**) har ett stort antal [funktionalitet](/help/sites-authoring/rich-text-editor.md) för redigering av textinnehåll, som ger dem ikoner, valrutor och menyer för en WYSIWYG-upplevelse.
+The **RTF-redigerare** (**RTE**) har ett stort antal [funktionalitet](/help/sites-authoring/rich-text-editor.md) för redigering av textinnehåll, med ikoner, markeringsrutor och menyer för en WYSIWYG-upplevelse.
 
 Se [Konfigurera RTF-redigeraren](/help/sites-administering/rich-text-editor.md) för mer information.
 
@@ -275,7 +275,7 @@ Det finns flera egenskaper som styr hur kommandona Ångra och Gör om fungerar n
 
 The [Videokomponent](/help/sites-authoring/default-components-foundation.md#video) Med kan du placera ett fördefinierat videoelement direkt på sidan.
 
-Administratören måste [Installera FFmpeg](/help/sites-administering/config-video.md#install-ffmpeg) separat. De kan också [Konfigurera videoprofiler](/help/sites-administering/config-video.md#configure-video-profiles) för användning med html5-element.
+För att korrekt omkodning ska ske måste administratören [Installera FFmpeg](/help/sites-administering/config-video.md#install-ffmpeg) separat. De kan också [Konfigurera videoprofiler](/help/sites-administering/config-video.md#configure-video-profiles) för användning med html5-element.
 
 ### Konfigurera och anpassa rapporter {#configuring-and-customizing-reports}
 
@@ -287,7 +287,7 @@ Se [Grunderna i anpassning av rapporter](/help/sites-administering/reporting.md#
 
 CQ skickar e-postmeddelanden till användare som:
 
-* Prenumerera på sidhändelser, t.ex. ändring eller replikering.
+* Prenumerera på sidhändelser, till exempel ändringar eller replikering.
 * Prenumerera på forumevent.
 * Måste utföra ett steg i ett arbetsflöde.
 

@@ -1,7 +1,7 @@
 ---
 title: Importera och hantera arkiv
 seo-title: Import and manage archives
-description: Lär dig hur du importerar och hanterar arkiv.
+description: Lär dig importera och hantera arkiv.
 seo-description: Learn how to import and manage archives.
 uuid: aa1613dd-6350-49a7-9643-44365e2acdcc
 contentOwner: admin
@@ -10,9 +10,9 @@ geptopics: SG_AEMFORMS/categories/importing_and_managing_applications_and_archiv
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: b6f6463a-2ae4-43d2-8d16-cc20a954e50e
 exl-id: 0c15677a-ee17-425e-a261-fb3ae8688eb2
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 10227bcfcfd5a9b0f126fee74dce6ec7842f5e95
 workflow-type: tm+mt
-source-wordcount: '1454'
+source-wordcount: '1456'
 ht-degree: 0%
 
 ---
@@ -55,41 +55,41 @@ Använd fliken Arkiv för att importera och hantera LCA:er som har skapats i Wor
 
    * **Kräv att anropare autentiserar:** Den här inställningen anger om tjänsten kan anropas med eller utan autentiseringsuppgifter.
 
-      If *Uppringare måste för närvarande autentisera* visas, uppringaren av tjänsten måste autentiseras och uppringarens huvudnamn måste vara auktoriserat att anropa tjänsten, I annat fall avvisas anropsförsöket. Klicka på Tillåt oautentiserade anropare för att ta bort behovet av autentisering.
+     If *Uppringare måste för närvarande autentisera* visas måste anroparen till tjänsten autentiseras och uppringarens huvudnamn måste ha behörighet att anropa tjänsten. I annat fall nekas anropet. Klicka på Tillåt oautentiserade anropare för att ta bort behovet av autentisering.
 
-      If *Uppringare behöver inte autentisera* visas behöver anroparen inte autentiseras. Anropet av tjänsten lyckas alltid eftersom det inte finns någon auktoriseringskontroll. Klicka på Kräv att anropare autentiserar för att begära autentisering.
+     If *Uppringare behöver inte autentisera* visas behöver anroparen inte autentiseras. Anropet av tjänsten lyckas alltid eftersom det inte finns någon auktoriseringskontroll. Klicka på Kräv att anropare autentiserar för att begära autentisering.
 
-   * **Kör som:** Anger den körningsidentitet som används av en tjänst efter att den har anropats. Klicka på Ändra om du vill ändra det här alternativet. Välj bland följande alternativ:
+   * **Kör som:** Anger den körningsidentitet som används av en tjänst efter att den har anropats. Om du vill ändra det här alternativet klickar du på Ändra. Välj bland följande alternativ:
 
-      **Ospecificerad:** Standardbeteendet används.
+     **Ospecificerad:** Standardbeteendet används.
 
-      **Anropare:** Använder samma identitet som användaren som anropade tjänsten.
+     **Anropare:** Använder samma identitet som användaren som anropade tjänsten.
 
-      **System:** Kör tjänsten med fullständig behörighet. Det här är standardinställningen för långvariga processer.
+     **System:** Kör tjänsten med fullständig behörighet. Det här är standardinställningen för långvariga processer.
 
-      **Namngiven användare:** Gör att du kan köra tjänsten som en specifik användare. Det här är standardinställningen för kortlivade processer. När du väljer det här alternativet klickar du på Välj användare för att visa sidan Välj huvudnamn, där du kan söka efter och välja användaren.
+     **Namngiven användare:** Gör att du kan köra tjänsten som en specifik användare. Det här är standardinställningen för kortlivade processer. När du väljer det här alternativet klickar du på Välj användare för att visa sidan Välj huvudnamn, där du kan söka efter och välja användaren.
 
    * Om du vill lägga till ett huvudnamn i säkerhetsprofilen klickar du på Lägg till huvudnamn och väljer den användare eller grupp som ska läggas till som huvudnamn. Klicka på Nästa och välj sedan de behörigheter du vill tilldela detta huvudkonto:
 
-      **INVOKE_PERM:** Så här anropar du alla åtgärder på tjänsten
+     **INVOKE_PERM:** Så här anropar du alla åtgärder på tjänsten
 
-      **MODIFY_CONFIG_PERM:** Ändra konfigurationen för en tjänst
+     **ÄNDRA_KONFIG_PERM:** Så här ändrar du konfigurationen för en tjänst
 
-      **SUPERVISOR_PERM:** Så här visar du processinstansdata för en tjänst som skapats från en process
+     **SUPERVISOR_PERM:** Så här visar du processinstansdata för en tjänst som skapats från en process
 
-      **START_STOP_PERM:** Starta och stoppa en tjänst
+     **START_STOP_PERM:** Starta och stoppa en tjänst
 
-      **ADD_REMOVE_ENDPOINTS_PERM:** Lägga till, ta bort och ändra slutpunkter för en tjänst
+     **ADD_REMOVE_ENDPOINTS_PERM:** Lägga till, ta bort och ändra slutpunkter för en tjänst
 
-      **CREATE_VERSION_PERM:** Skapa en ny version av tjänsten
+     **CREATE_VERSION_PERM:** Skapa en ny version av tjänsten
 
-      **DELETE_VERSION_PERM:** Så här tar du bort en version av tjänsten
+     **DELETE_VERSION_PERM:** Ta bort en version av tjänsten
 
-      **MODIFY_VERSION_PERM:** Ändra en version av tjänsten
+     **MODIFY_VERSION_PERM:** Ändra en version av tjänsten
 
-      **READ_PERM:** Så här visar du tjänsten
+     **READ_PERM:** Så här visar du tjänsten
 
-      Klicka på Slutför för att lägga till säkerhetsobjektet i säkerhetsprofilen.
+     Klicka på Slutför för att lägga till säkerhetsobjektet i säkerhetsprofilen.
 
 1. Klicka på Slutför för att slutföra konfigurationen.
 
@@ -122,41 +122,41 @@ Använd fliken Arkiv för att importera och hantera LCA:er som har skapats i Wor
 
    * **Kräv att anropare autentiserar:** Den här inställningen anger om tjänsten kan anropas med eller utan autentiseringsuppgifter.
 
-      If *Uppringare måste för närvarande autentisera* visas, uppringaren av tjänsten måste autentiseras och uppringarens huvudnamn måste vara auktoriserat att anropa tjänsten, I annat fall avvisas anropsförsöket. Klicka på Tillåt oautentiserade anropare för att ta bort behovet av autentisering.
+     If *Uppringare måste för närvarande autentisera* visas måste anroparen till tjänsten autentiseras och uppringarens huvudnamn måste ha behörighet att anropa tjänsten. I annat fall nekas anropet. Klicka på Tillåt oautentiserade anropare för att ta bort behovet av autentisering.
 
-      If *Uppringare behöver inte autentisera* visas kan anroparen av tjänsten vara autentiserad eller inte vara det. Anropet av tjänsten lyckas alltid eftersom det inte finns någon auktoriseringskontroll. Klicka på Kräv att anropare autentiserar för att begära autentisering.
+     If *Uppringare behöver inte autentisera* visas kan anroparen av tjänsten vara autentiserad eller inte vara det. Anropet av tjänsten lyckas alltid eftersom det inte finns någon auktoriseringskontroll. Klicka på Kräv att anropare autentiserar för att begära autentisering.
 
-   * **Kör som:** Anger den körningsidentitet som används av en tjänst efter att den har anropats. Klicka på Ändra om du vill ändra det här alternativet. Välj bland följande alternativ:
+   * **Kör som:** Anger den körningsidentitet som används av en tjänst efter att den har anropats. Om du vill ändra det här alternativet klickar du på Ändra. Välj bland följande alternativ:
 
-      **Ospecificerad:** Standardbeteendet används.
+     **Ospecificerad:** Standardbeteendet används.
 
-      **Anropare:** Använder samma identitet som användaren som anropade tjänsten.
+     **Anropare:** Använder samma identitet som användaren som anropade tjänsten.
 
-      **System:** Kör tjänsten med fullständig behörighet. Det här är standardinställningen för långvariga processer.
+     **System:** Kör tjänsten med fullständig behörighet. Det här är standardinställningen för långvariga processer.
 
-      **Namngiven användare:** Gör att du kan köra tjänsten som en specifik användare. Det här är standardinställningen för kortlivade processer. När du väljer det här alternativet klickar du på Välj användare för att visa sidan Välj huvudnamn, där du kan söka efter och välja användaren.
+     **Namngiven användare:** Gör att du kan köra tjänsten som en specifik användare. Det här är standardinställningen för kortlivade processer. När du väljer det här alternativet klickar du på Välj användare för att visa sidan Välj huvudnamn, där du kan söka efter och välja användaren.
 
    * Om du vill lägga till ett huvudnamn i säkerhetsprofilen klickar du på Lägg till huvudnamn och väljer den användare eller grupp som ska läggas till som huvudnamn. Klicka på Nästa och välj sedan de behörigheter du vill tilldela detta huvudkonto:
 
-      **INVOKE_PERM:** Så här anropar du alla åtgärder på tjänsten
+     **INVOKE_PERM:** Så här anropar du alla åtgärder på tjänsten
 
-      **MODIFY_CONFIG_PERM:** Ändra konfigurationen för en tjänst
+     **ÄNDRA_KONFIG_PERM:** Så här ändrar du konfigurationen för en tjänst
 
-      **SUPERVISOR_PERM:** Så här visar du processinstansdata för en tjänst som skapats från en process
+     **SUPERVISOR_PERM:** Så här visar du processinstansdata för en tjänst som skapats från en process
 
-      **START_STOP_PERM:** Starta och stoppa en tjänst
+     **START_STOP_PERM:** Starta och stoppa en tjänst
 
-      **ADD_REMOVE_ENDPOINTS_PERM:** Lägga till, ta bort och ändra slutpunkter för en tjänst
+     **ADD_REMOVE_ENDPOINTS_PERM:** Lägga till, ta bort och ändra slutpunkter för en tjänst
 
-      **CREATE_VERSION_PERM:** Skapa en ny version av tjänsten
+     **CREATE_VERSION_PERM:** Skapa en ny version av tjänsten
 
-      **DELETE_VERSION_PERM:** Så här tar du bort en version av tjänsten
+     **DELETE_VERSION_PERM:** Ta bort en version av tjänsten
 
-      **MODIFY_VERSION_PERM:** Ändra en version av tjänsten
+     **MODIFY_VERSION_PERM:** Ändra en version av tjänsten
 
-      **READ_PERM:** Så här visar du tjänsten
+     **READ_PERM:** Så här visar du tjänsten
 
-      Klicka på Slutför för att lägga till säkerhetsobjektet i säkerhetsprofilen.
+     Klicka på Slutför för att lägga till säkerhetsobjektet i säkerhetsprofilen.
 
 ## Ta bort ett arkiv {#remove-an-archive}
 

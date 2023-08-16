@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: 4049a7a5-4b33-4462-a25f-3c0daeb6a8a9
 docset: aem65
 exl-id: d5dad844-80ca-4ace-a082-38d892d9ffe2
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '1141'
+source-wordcount: '1138'
 ht-degree: 5%
 
 ---
@@ -29,13 +29,13 @@ Tillsammans med den uppdaterade JSON-exporteraren kan strukturerade innehållsfr
 >**Innehållsfragment** och **[Upplevelsefragment](/help/sites-authoring/experience-fragments.md)** har olika funktioner i AEM:
 >
 >* **Innehållsfragment** är redaktionellt innehåll, främst text och relaterade bilder. De är rent innehåll, utan design och layout.
->* **Upplevelsefragment** är helt utformat, ett fragment av en webbsida.
+>* **Upplevelsefragment** är helt utformat för innehåll, ett fragment av en webbsida.
 >
 >Upplevelsefragment kan innehålla innehåll i form av innehållsfragment, men inte tvärtom.
 
 >[!CAUTION]
 >
->Den här sidan måste läsas tillsammans med [Arbeta med innehållsfragment](/help/assets/content-fragments/content-fragments.md) (och relaterade sidor) när det introducerar grundläggande terminologi och koncept, tillsammans med att skapa och hantera fragment.
+>Den här sidan måste läsas tillsammans med [Arbeta med innehållsfragment](/help/assets/content-fragments/content-fragments.md) (och relaterade sidor) eftersom det innehåller grundläggande terminologi och begrepp, tillsammans med att skapa och hantera fragment.
 
 Innehållsfragmenten aktiverar:
 
@@ -58,7 +58,7 @@ Innehållsfragmenten aktiverar:
 
 * **Producenter och reseansvariga**
 
-   * Välj bland fördefinierade fragment och variationer med redigering i AEM.
+   * Välj bland fördefinierade fragment och variationer med AEM.
    * Kan förlita sig på att fragment och tillhörande innehåll alltid är uppdaterade när kopieringsförfattare och kreatörer uppdaterar centralt hanterade fragment och resurser.
    * Kan lita på att tillhörande medieinnehåll kurateras för relevans.
    * Kan skapa tillfälliga innehållsvariationer direkt samtidigt som dessa variationer förblir centralt hanterade i fragmentet.
@@ -67,7 +67,7 @@ Innehållsfragmenten aktiverar:
 
 1. Öppna sidan för redigering.
 
-1. Lägg till **Innehållsfragment** komponent, från **Komponenter** webbläsare eller **Infoga ny komponent**.
+1. Lägg till **Innehållsfragment** från någon av **Komponenter** webbläsare **Infoga ny komponent**.
 
 1. Du kan antingen:
 
@@ -79,7 +79,7 @@ Innehållsfragmenten aktiverar:
    >
    >Ett annat sätt är att dra ett visst innehållsfragment direkt till sidan. Då skapas automatiskt den associerade komponenten (innehållsfragment).
 
-1. Inledningsvis innehållet från **Huvud** Element och **Överordnad** (variation) visas. Du kan [markera andra element och/eller variationer](#selecting-the-element-or-variation) efter behov.
+1. Inledningsvis innehållet från **Huvud** Element och **Master** (variation) visas. Du kan [markera andra element och/eller variationer](#selecting-the-element-or-variation) efter behov.
 
    ![cfm-6420-01](assets/cfm-6420-01.png)
 
@@ -113,7 +113,7 @@ I rätt konfigurationsdialogruta kan du välja tillgängliga parametrar, bland a
 * **Element**
 
    * Standardvärdet **Huvud** kommer alltid att vara tillgängligt.
-   * En markering blir tillgänglig om fragmentet skapades med en lämplig mall.
+   * En markering blir tillgänglig om fragmentet har skapats med en lämplig mall.
 
   >[!NOTE]
   >
@@ -124,7 +124,7 @@ I rätt konfigurationsdialogruta kan du välja tillgängliga parametrar, bland a
    * **Standardmastern** är alltid tillgänglig.
    * En markering blir tillgänglig om variationer har skapats för fragmentet.
 
-* **Stycken**: ange det styckeintervall som ska ingå:
+* **Stycken**: ange det styckeintervall som ska tas med:
 
    * **Alla**
    * **Intervall**: till exempel `1`, `3-5`, `9-*`
@@ -135,7 +135,7 @@ I rätt konfigurationsdialogruta kan du välja tillgängliga parametrar, bland a
 
 ### Snabb anslutning till Fragment Editor {#quick-connection-to-fragment-editor}
 
-Du kan öppna fragmentkällan för redigering (resursen) med **Redigera** -ikonen i komponentens verktygsfält. Då kan du [redigera och hantera innehållsfragmentet](/help/assets/content-fragments/content-fragments.md).
+Du kan öppna fragmentkällan för redigering (resursen) med **Redigera** -ikonen i komponentens verktygsfält. Det här låter dig [redigera och hantera innehållsfragmentet](/help/assets/content-fragments/content-fragments.md).
 
 >[!CAUTION]
 >
@@ -174,7 +174,7 @@ För mellanliggande innehåll kan du:
 >* Mellanliggande komponenter har en absolut position inom komponentsekvensen i fragmentflödet. Den här positionen ändras inte, även när innehållet i styckena i fragmentet ändras.
 >
 >  Detta kan få det att se ut som om den relativa placeringen har ändrats, eftersom mellanliggande stycken inte har någon kontextuell relation till (fragmentet) stycken som de är placerade bredvid.
->* Om inte de två styckestrukturerna står i konflikt med varandra. I så fall visas inte det mellanliggande innehållet (även om det fortfarande finns internt).
+>* Såvida inte de två styckestrukturerna står i konflikt med varandra, visas inte det mellanliggande innehållet (även om det fortfarande finns internt).
 >
 
 ### Använda associerat innehåll {#using-associated-content}
@@ -206,7 +206,7 @@ För en bild kan du till exempel
 * Ange en storlek.
 * Du kan också konfigurera layouten.
 
-Andra ändringar, till exempel move, copy, delete, måste göras i fragmentredigeraren.
+Andra ändringar, som att flytta, kopiera och ta bort, måste göras i fragmentredigeraren.
 
 ### Publicering {#publishing}
 

@@ -12,9 +12,9 @@ discoiquuid: fb4d7337-7b94-430b-80d2-f1754f823c2b
 docset: aem65
 feature: Configuring
 exl-id: 6f0b1951-bdda-475f-b6c0-bc18de082b7c
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '728'
+source-wordcount: '727'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ I en standardinstallation AEM en ny version av en sida eller nod när du aktiver
 >
 >Om inga innehållsändringar görs visas ett meddelande om att sidan har aktiverats, men ingen ny version skapas
 
-Du kan skapa ytterligare versioner på begäran med **Versionshantering** sidosparkens flik. Dessa versioner lagras i databasen och kan återställas om det behövs.
+Du kan skapa ytterligare versioner på begäran med **Versioner** sidosparkens flik. Dessa versioner lagras i databasen och kan återställas om det behövs.
 
 Dessa versioner rensas aldrig, så databasstorleken kommer att öka med tiden och måste därför hanteras.
 
@@ -36,7 +36,7 @@ AEM levereras med olika mekanismer som hjälper dig att hantera din databas:
 * den [Versionshanteraren](#version-manager)
 Detta kan konfigureras för att rensa gamla versioner när nya versioner skapas.
 
-* den [Rensa versioner](/help/sites-deploying/monitoring-and-maintaining.md#purgeversionstool) -verktyg Detta används som en del i övervakningen och underhållet av din databas.
+* den [Rensa versioner](/help/sites-deploying/monitoring-and-maintaining.md#purgeversionstool) -verktyg Detta används som en del av övervakningen och underhållet av din databas.
 Du kan ingripa för att ta bort gamla versioner av en nod, eller en hierarki av noder, enligt följande parametrar:
 
    * Det maximala antalet versioner som ska behållas i databasen.
@@ -45,7 +45,7 @@ När den här siffran överskrids tas den äldsta versionen bort.
    * Högsta ålder för alla versioner som lagras i databasen.
 När en versions ålder överskrider det här värdet rensas den från databasen.
 
-* den [Underhållsaktivitet för versionsrensning](/help/sites-administering/operations-dashboard.md#automated-maintenance-tasks). Du kan schemalägga underhållsaktiviteten Rensa version så att tidigare versioner tas bort automatiskt. Därför minimeras behovet av att manuellt använda verktygen för versionsrensning.
+* den [Underhållsuppgift för versionsrensning](/help/sites-administering/operations-dashboard.md#automated-maintenance-tasks). Du kan schemalägga underhållsaktiviteten Rensa version så att tidigare versioner tas bort automatiskt. Därför minimeras behovet av att manuellt använda verktygen för versionsrensning.
 
 >[!CAUTION]
 >
@@ -71,7 +71,7 @@ En version skapas bara om aktiveringen sker på en sökväg som finns i `version
 
 * `versionmanager.purgePaths` (String[], standard: {&quot;/content&quot;}) Anger på vilka sökvägar versioner ska rensas när nya versioner skapas.
 
-* `versionmanager.maxAgeDays` (int, standard: 30) Vid versionsrensning tas alla versioner som är äldre än det konfigurerade värdet bort. Om värdet är mindre än 1 utförs inte rensning baserat på versionens ålder.
+* `versionmanager.maxAgeDays` (int, default: 30) Vid versionsrensning tas alla versioner som är äldre än det konfigurerade värdet bort. Om värdet är mindre än 1 utförs inte rensning baserat på versionens ålder.
 
 * `versionmanager.maxNumberVersions` (int, standard 5) Vid versionsrensning tas alla versioner som är äldre än den n:te nyaste versionen bort. Om värdet är mindre än 1 utförs inte rensning baserat på antalet versioner.
 
@@ -102,7 +102,7 @@ Om du till exempel definierar det maximala antalet versioner som ska behållas O
 
    * De senaste 3 versionerna behålls
 
-Om du till exempel definierar det högsta OCH lägsta antalet versioner som ska behållas OCH den äldsta versionen som ska behållas:
+När du definierar t.ex. det högsta OCH lägsta antalet versioner som ska behållas OCH den äldsta versionen som ska behållas:
 
 * Inställning:
 

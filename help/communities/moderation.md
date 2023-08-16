@@ -12,9 +12,9 @@ discoiquuid: 404582ab-bb4c-4775-9ae3-17356d376dca
 docset: aem65
 role: Admin
 exl-id: 829da16a-4083-43c1-857d-f2666b363bfc
-source-git-commit: 1d334c42088342954feb34f6179dc5b134f81bb8
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '2040'
+source-wordcount: '2039'
 ht-degree: 0%
 
 ---
@@ -31,7 +31,7 @@ Från modereringskonsolen har administratörer och moderatorer åtkomst till all
 
 Mer detaljerad information finns på [Hantera användare och användargrupper](/help/communities/users.md).
 
-Moderationskonsolen har stöd för:
+Moderationskonsolen stöder:
 
 * Utföra flera modereringsåtgärder samtidigt.
 * Söker i UGC.
@@ -52,9 +52,9 @@ Genom att välja administrationslänken visas modereringskonsolen:
 
 ## Åtkomst till författarmiljö {#author-environment-access}
 
-I författarmiljön kan du nå Kontrollen för moderering
+För att nå Kontrollpanelen i författarmiljön
 
-* Från global navigering väljer du **[!UICONTROL Communities]** > **[!UICONTROL Moderation]**.
+* Välj **[!UICONTROL Communities]** > **[!UICONTROL Moderation]**.
 
 Endast när du är inloggad som administratör eller som medlem med [moderatorbehörigheter](/help/communities/in-context.md#identifyingtrustedmembers)kan modereringsuppgifter utföras. Det enda communityinnehåll som visas är det som den inloggade medlemmen får moderera.
 
@@ -88,7 +88,7 @@ Verktygsfältet, som finns under det övre navigeringsfältet, har följande vä
 ![växlarSwitch](assets/toggleswitch.png)
 
 [Filterspår](/help/communities/moderation.md#filterrail)
-öppnar en ratt när du väljer Sök, vilket gör att du kan välja vilka egenskaper som innehållet ska filtreras efter.
+öppnar en räl när du väljer Sök, vilket gör att du kan välja vilka egenskaper som innehållet ska filtreras efter.
 
 ![filterrail](assets/filterrail.png)
 
@@ -161,8 +161,8 @@ Innehållstyp begränsar den refererade UGC-enheten som visas till inlägg av de
 * **Kommentar**
 * **Forum**
 * **Forum Reply**
-* **QnA-fråga**
-* **QnA-svar**
+* **Fråga**
+* **Svar på fråga**
 * **Bloggartikel**
 * **Bloggkommentar**
 * **Kalenderhändelse**
@@ -186,8 +186,9 @@ Så här lägger du till ytterligare resurser att filtrera:
 
    * Om du till exempel vill filtrera på de medföljande röstkomponenterna anger du:
 
-      `Voting=social/tally/components/hbs/voting`
-   ![additional-contenttype](assets/additional-contenttype.png)
+     `Voting=social/tally/components/hbs/voting`
+
+  ![additional-contenttype](assets/additional-contenttype.png)
 
 * Välj Spara.
 * Uppdatera webbcommunityn - modereringskonsolen.
@@ -242,11 +243,11 @@ The [exempelprojekt](https://github.com/Adobe-Marketing-Cloud/aem-communities-ex
 
 Så här installerar du exemplet för taggfiltret:
 
-1. Öppna pakethanteraren på AEM Author (`https://[aem-author]:4502/crx/packmgr/index.jsp`) och AEM Publish (`https://[aem-publish]:4503/crx/packmgr/index.jsp`).
+1. Öppna pakethanteraren på AEM författare (`https://[aem-author]:4502/crx/packmgr/index.jsp`) och AEM publicera (`https://[aem-publish]:4503/crx/packmgr/index.jsp`).
 1. Bygg paketet `com.adobe.social.sample.moderation.filter.ui.apps-1.0-SNAPSHOT.zip` från Github-koden och installera och aktivera det.
-1. Öppna paketkonsolen på AEM Author ( `https://[aem-author]:4502/system/console/bundles`) och AEM Publish ( `https://[aem-publish]:4503/system/console/bundles`).
-1. Skapa paketet (`[com](https://sample-moderation-filter.com/).adobe.social.sample.moderation.filter.core-1.0-SNAPSHOT.jar`) från Github, och installera och aktivera det.
-1. Gå till **/apps/social/moderation/facets** nod på AEM Author (`https://[aem-author]:4502/crx/de/index.jsp#/apps/social/moderation/facets`) och AEM Publish (`https://[aem-publish]:4502/crx/de/index.jsp#/apps/social/moderation/facets`).
+1. Öppna paketkonsolen på AEM författare ( `https://[aem-author]:4502/system/console/bundles`) och AEM publicera ( `https://[aem-publish]:4503/system/console/bundles`).
+1. Bygg paketet (`[com](https://sample-moderation-filter.com/).adobe.social.sample.moderation.filter.core-1.0-SNAPSHOT.jar`) från Github, och installera och aktivera det.
+1. Gå till **/apps/social/moderation/facets** nod på AEM författare (`https://[aem-author]:4502/crx/de/index.jsp#/apps/social/moderation/facets`) och AEM Publish (`https://[aem-publish]:4502/crx/de/index.jsp#/apps/social/moderation/facets`).
 1. Lägg till en teknisk användare **communities-utility-reader** med `jcr:read` behörigheter.
 
 Så här visar du anpassade filter på befintliga communityplatser:
@@ -267,7 +268,7 @@ Så här visar du anpassade filter på befintliga communityplatser:
 
 [Modereringsåtgärder](/help/communities/moderate-ugc.md#moderation-actions) kan utföras på en eller flera markeringar som gjorts i innehållsområdet eller när du visar innehållsdetaljer.
 
-Om du vill moderera inläggen i stor skala klickar du på Välj (![selecticon](assets/selecticon.png)) på ett inlägg, som visas när du hovrar över det med musen (skrivbordet) eller när du trycker och håller ett finger på inlägget (mobilen). Genom att göra detta aktiverar du flervalsläget och kan nu välja de efterföljande inlägg som ska gruppmodereras genom att klicka på dem. Använd de knappar som visas i verktygsfältet för att utföra modereringsåtgärder för de valda inläggen. Alla åtgärder uppmanas att bekräfta.
+Om du vill moderera inläggen i stor skala klickar du på Välj (![selecticon](assets/selecticon.png)) på ett inlägg, som visas när du hovrar över det med musen (skrivbordet) eller trycker och håller ett finger på inlägget (mobilen). Genom att göra detta aktiverar du flervalsläget och kan nu välja de efterföljande inlägg som ska gruppmodereras genom att klicka på dem. Använd de knappar som visas i verktygsfältet för att utföra modereringsåtgärder för de valda inläggen. Alla åtgärder uppmanas att bekräfta.
 
 Om du vill ändra ett inlägg i innehållsområdet till en viss nivå håller du pekaren över det med musen (skrivbordet) eller trycker och håller ned ett finger på posten (mobilen) så att knapparna visas på posten. När du arbetar med en enskild innehållsdetalj uppmanas du bara att bekräfta borttagningsåtgärden.
 
@@ -291,7 +292,7 @@ Ikonerna som tillåter dessa åtgärder visas bara i verktygsfältet när flera 
 
 ### Moderera ett enstaka inlägg {#moderating-a-single-post}
 
-I läget för en markering är det möjligt att:
+I läget för en markering är det möjligt att
 
 * Visa användarinformation genom att välja användarens namn.
 * Visa inlägget i sitt sammanhang genom att markera länken till inlägget.
@@ -366,7 +367,7 @@ Till exempel:
 
 När du arbetar med ett enstaka inlägg kan du visa mer information genom att öppna UGC i detaljerat läge.
 
-Om du vill göra det håller du pekaren över inlägget för att visa `View Detail` och markera den för att visa en panel med mer information om inlägget.
+Om du vill göra det håller du muspekaren över inlägget för att visa `View Detail` och markera den för att visa en panel med mer information om inlägget.
 
 Om du vill återgå till visning av flera UGC-inlägg i innehållsområdet markerar du X:et i det övre högra hörnet av rutan med vydetaljer.
 

@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: b2c09e6b-a1d8-4b30-af2c-988442a3a986
 docset: aem65
 exl-id: bb812614-f4d8-4f57-bea2-8f7d31457039
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '550'
+source-wordcount: '549'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 ## Introduktion {#introduction}
 
-Med transaktionsrapporter i AEM Forms kan du räkna med alla transaktioner som har utförts sedan ett visst datum i din AEM Forms-distribution. Målet är att tillhandahålla information om produktanvändning och hjälpa företagsintressenter att förstå sina digitala bearbetningsvolymer. Exempel på en transaktion är:
+Med transaktionsrapporter i AEM Forms kan du räkna med alla transaktioner som har utförts sedan ett visst datum i din AEM Forms-distribution. Målet är att tillhandahålla information om produktanvändning och hjälpa företagsintressenter att förstå sina digitala bearbetningsvolymer. Exempel på transaktioner:
 
 * Inlämning av ett anpassningsbart formulär, ett HTML5-formulär eller en formuläruppsättning
 * Återgivning av en utskrift eller webbversion av en interaktiv kommunikation
@@ -56,7 +56,7 @@ Transaktionsantalet replikeras baklänges från publiceringsinstanser till förf
 * Aktivera **Visa endast transaktioner från publicering** på författarinstansen för att visa kumulativa transaktioner från alla publiceringsinstanser. Du kan också visa transaktionsrapporter för varje publiceringsinstans för faktiska transaktioner endast för den aktuella publiceringsinstansen.
 * Använd inte författarinstanser för att köra arbetsflöden och bearbeta dokument.
 * Innan du använder transaktionsrapportering måste du se till att omvänd replikering är aktiverat för alla publiceringsinstanser om du har en tologi med publiceringsservrar.
-* Transaktionsdata återreplikeras från en publiceringsinstans till endast motsvarande författare eller bearbetningsinstans. Författaren eller bearbetningsinstansen kan inte replikera data till en annan instans. Om du till exempel har topologi för redigeringsbearbetning/publicering, replikeras aggregerade transaktionsdata bara till bearbetningsinstansen.
+* Transaktionsdata återreplikeras från en publiceringsinstans till endast motsvarande författare eller bearbetningsinstans. Författaren eller bearbetningsinstansen kan inte replikera data till en annan instans. Om du till exempel har en topologi för redigeringsbearbetning/publicering, replikeras aggregerade transaktionsdata bara till bearbetningsinstansen.
 
 ## Relaterade artiklar {#related-articles}
 

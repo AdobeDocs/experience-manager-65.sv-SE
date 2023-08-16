@@ -2,25 +2,25 @@
 title: Få åtkomst till ditt innehåll via AEM-API:er
 description: I den här delen av AEM Headless Developer Journey kan du lära dig hur du använder GraphQL-frågor för att komma åt ditt innehåll i Content Fragments.
 exl-id: 44f85d00-a958-470a-8a6e-e2ae1580525a
-source-git-commit: ad0f0bd8b0c230e002c734adca87da22bfa3a7cd
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '1335'
+source-wordcount: '1333'
 ht-degree: 0%
 
 ---
 
 # Få åtkomst till ditt innehåll via AEM-API:er {#access-your-content}
 
-I den här delen av [AEM Headless Developer Journey,](overview.md) du kan lära dig hur du använder GraphQL-frågor för att komma åt innehållet i dina innehållsfragment och skicka det till din app (headless-leverans).
+I den här delen av [AEM Headless Developer Journey](overview.md) du kan lära dig hur du använder GraphQL-frågor för att komma åt innehållet i dina innehållsfragment och skicka det till din app (headless-leverans).
 
 ## Story hittills {#story-so-far}
 
-I det föregående dokumentet om den AEM resan utan headless [Så här modellerar du innehåll](model-your-content.md) Du lärde dig grunderna i innehållsmodellering i AEM, så du bör nu förstå hur du modellerar innehållsstrukturen och sedan inse den strukturen med hjälp AEM Content Fragment Models och Content Fragments:
+I det föregående dokumentet om den AEM resan utan headless [Så här modellerar du ditt innehåll](model-your-content.md) Du lärde dig grunderna i innehållsmodellering i AEM, så du bör nu förstå hur du modellerar innehållsstrukturen och sedan inse den strukturen med hjälp AEM Content Fragment Models och Content Fragments:
 
 * Identifiera koncept och terminologi i samband med innehållsmodellering.
 * Förstå varför innehållsmodellering behövs för leverans av Headless-innehåll.
-* Förstå hur du kan förverkliga den här strukturen med AEM Content Fragment Models (och skapa innehåll med Content Fragments).
-* Förstå hur ni modellerar ert innehåll. principer med grundläggande urval.
+* Förstå hur ni kan förverkliga den här strukturen med AEM Content Fragment Models (och skapa innehåll med Content Fragments).
+* Förstå hur du modellerar innehåll, principer med grundläggande exempel.
 
 Den här artikeln bygger på dessa grundläggande funktioner så att du förstår hur du får tillgång till ditt befintliga headless-innehåll i AEM med hjälp av det AEM GraphQL-API:t.
 
@@ -32,7 +32,7 @@ Den här artikeln bygger på dessa grundläggande funktioner så att du förstå
 
 ## Så du vill komma åt ditt innehåll? {#so-youd-like-to-access-your-content}
 
-Så..har du allt det här innehållet, har en struktur (i innehållsfragment) och väntar bara på att mata in din nya app. Frågan är hur man får dit den?
+Så.. du har allt det här innehållet, snyggt strukturerat (i innehållsfragment) och bara väntat på att mata din nya app. Frågan är - hur man får dit den?
 
 Vad du behöver är ett sätt att rikta specifikt innehåll, välja vad du behöver och returnera det till appen för vidare bearbetning.
 
@@ -49,7 +49,7 @@ GraphQL är en öppen källkodsspecifikation som innehåller:
 * ett frågespråk där du kan välja specifikt innehåll från strukturerade objekt.
 * en körningsmiljö där du kan utföra dessa frågor med ditt strukturerade innehåll.
 
-GraphQL är en *starkt* typbestämd API. Detta innebär att *alla* innehållet måste vara tydligt strukturerat och strukturerat efter typ, så att GraphQL *förstår* vad du ska komma åt och hur. Datafälten definieras i GraphQL-scheman, som definierar strukturen för innehållsobjekten.
+GraphQL är *starkt* typbestämd API. Detta innebär att *alla* innehållet måste vara tydligt strukturerat och strukturerat efter typ, så att GraphQL *förstår* vad du ska komma åt och hur. Datafälten definieras i GraphQL-scheman, som definierar strukturen för innehållsobjekten.
 
 GraphQL slutpunkter innehåller sedan de sökvägar som svarar på GraphQL-frågorna.
 
@@ -77,11 +77,11 @@ GraphQL is used in various locations in AEM; for example:
 >This step of the Headless Journey is only concerned with the AEM GraphQL API and Content Fragments.
 -->
 
-## AEM GraphQL API {#aem-graphql-api}
+## AEM GRAPHQL API {#aem-graphql-api}
 
-AEM GraphQL API är en anpassad version som baseras på GraphQL API-standardspecifikationen som är särskilt konfigurerad för att du ska kunna utföra (komplexa) frågor på dina innehållsfragment.
+AEM GraphQL API är en anpassad version som baseras på GraphQL API-standardspecifikationen, som är särskilt konfigurerad för att du ska kunna utföra (komplexa) frågor på dina innehållsfragment.
 
-Innehållsfragment används eftersom innehållet är strukturerat enligt modeller för innehållsfragment. Detta uppfyller ett grundläggande krav från GraphQL.
+Innehållsfragment används eftersom innehållet är strukturerat enligt modeller för innehållsfragment. Detta uppfyller GraphQL grundläggande krav.
 
 * En innehållsfragmentmodell består av ett eller flera fält.
    * Varje fält definieras enligt en datatyp.
@@ -139,7 +139,7 @@ The **Fragmentreferens**:
 
 ### JSON Preview {#json-preview}
 
-Om du vill ha hjälp med att utforma och utveckla dina modeller för innehållsfragment kan du förhandsgranska JSON-utdata i redigeraren för innehållsfragment.
+Om du vill ha hjälp med att designa och utveckla dina modeller för innehållsfragment kan du förhandsgranska JSON-utdata i redigeraren för innehållsfragment.
 
 ![JSON Preview](assets/cfm-model-json-preview.png "JSON Preview")
 
@@ -246,7 +246,7 @@ Innan du börjar med frågor om ditt innehåll måste du:
    * [Aktivera din GraphQL-slutpunkt](/help/sites-developing/headless/graphql-api/graphql-endpoint.md#enabling-graphql-endpoint)
 
 * Åtkomst till GraphiQL (vid behov)
-   * [AEM GraphiQL-gränssnitt](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md#graphiql-interface)
+   * [AEM GraphiQL](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md#graphiql-interface)
 
 ### Exempelstruktur {#sample-structure}
 
@@ -359,7 +359,7 @@ Nu när du har lärt dig hur du får åtkomst till och frågar efter headless-in
 
 * [GraphQL.org](https://graphql.org)
    * [Scheman](https://graphql.org/learn/schema/)
-   * [Variabler](https://graphql.org/learn/queries/#variables)
+   * [Variabel](https://graphql.org/learn/queries/#variables)
    * [GraphQL Java-bibliotek](https://graphql.org/code/#java)
 * [GraphiQL](https://graphql.org/learn/serving-over-http/#graphiql)
 * [Lär dig använda GraphQL med AEM](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md)

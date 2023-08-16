@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: b0a544e2-2ce4-48e2-a721-82f481d36004
 docset: aem65
 exl-id: a096eea0-b2fb-4d86-b729-ca47611135b2
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '1669'
+source-wordcount: '1668'
 ht-degree: 0%
 
 ---
@@ -29,13 +29,13 @@ Dessutom kan ad hoc-frågor definieras med hjälp av egenskapsfilter för proces
 
 [**Processinformation**](/help/forms/using/process-reporting/adhoc-queries-in-process-reporting.md#p-process-task-details-p): Visa information om en processinstans genom att ange process-ID.
 
-**Uppgiftssökning**: Sök efter aktivitetsinstanser med ett användardefinierat sökfilter baserat på aktivitetsattribut.
+**Uppgiftssökning**: Sök efter aktivitetsinstanser med ett användardefinierat sökfilter baserat på uppgiftsattribut.
 
 **Uppgiftsinformation**: Visa information om en aktivitetsinstans genom att ange uppgifts-ID.
 
 ### Processer och uppgifter {#processes-and-tasks}
 
-De steg du följer för att skapa filter och köra frågor för processinformation är desamma som för uppgifter.
+De steg som du följer för att skapa filter och köra frågor för processinformation är desamma som för uppgifter.
 
 Det innebär att användargränssnitten för processsökning och uppgiftssökning endast skiljer sig åt i de fält som du kan söka efter och i de fält som returneras i sökresultaten. Detta beror helt enkelt på att även om många av fälten är identiska är vissa fält specifika för processer och vissa fält är specifika för uppgifter.
 
@@ -58,7 +58,7 @@ Du använder process-/uppgiftssökning för att definiera filter för frågor i 
    ![my_filters_panel](assets/my_filters_panel.png)
 
 1. Om du vill köra en befintlig fråga klickar du bara på frågan i dialogrutan **Mina filter** -panelen.
-1. Om du vill skapa en fråga klickar du på **Lägg till** (+).
+1. Om du vill skapa en fråga klickar du **Lägg till** (+).
 
    The **Skapa filter** visas.
 
@@ -90,7 +90,7 @@ Du använder process-/uppgiftssökning för att definiera filter för frågor i 
 
    1. Om du vill lägga till ytterligare ett filter i frågan klickar du på **Lägg till (+)** till höger om filterraden.
 
-      Om du vill ta bort ett filter från frågan klickar du på **Ta bort (-)** till höger om filterraden.
+      Om du vill ta bort ett filter från frågan klickar du **Ta bort (-)** till höger om filterraden.
 
       ![filter_add_del](assets/filter_add_del.png)
 
@@ -98,7 +98,7 @@ När du har skapat en fråga använder du alternativen i det övre högra hörne
 
 * **Avbryt**: Avbryt ändringarna och gå tillbaka till **Mina filter** -panelen.
 * **Kör**: Kör den aktuella frågan för att se och/eller verifiera resultatet. I det här fallet behöver du inte spara frågan innan du kör frågan. Du kan verifiera resultatet, göra eventuella ändringar och sedan spara frågan när du är nöjd med resultatet.
-* **Spara**: Spara filtret. Filtret kan sedan visas och köras från **Mina filter** -panelen.
+* **Spara**: Spara filtret Filtret kan sedan visas och köras från **Mina filter** -panelen.
 
 ### Alternativ på panelen Mina filter {#options-in-my-filters-panel}
 
@@ -109,7 +109,7 @@ Använd alternativen i dialogrutan **Mina filter** panel till **Lägg till** ![l
 ### Så här kör du en sökfråga {#to-execute-a-search-query}
 
 1. Om du vill köra en fråga klickar du på filtret i **Mina filter** eller klicka på **Kör** om du skapar eller redigerar ett filter.
-1. Resultatet av frågan visas i **Rapport** panelen **Processrapportering** -fönstret.
+1. Resultatet av frågan visas i **Rapport** panelen i **Processrapportering** -fönstret.
 
    ![process_search_result](assets/process_search_result.png)
 
@@ -125,7 +125,7 @@ Använd alternativen i dialogrutan **Mina filter** panel till **Lägg till** ![l
 
    * **Process-ID**: ID för processen. Fältet är hyperlänkat. Om du klickar på ett process-ID i det här fältet omdirigeras du till **[!UICONTROL Process Details]** för processen.
    * **Initierare**: Den AEM Forms-användare som startade processinstansen
-   * **Skapad**: Datum och tid då processinstansen startades
+   * **Skapad**: Det datum och den tid då processinstansen startades
    * **Slutförandetid**: Datum och tid då processinstansen slutfördes
    * **Varaktighet**: Varaktigheten från start till slutförande av processinstansen
    * **Status**: Processinstansens aktuella status.
@@ -138,7 +138,7 @@ Använd alternativen i dialogrutan **Mina filter** panel till **Lägg till** ![l
 
    * **Aktivitets-ID**: Aktivitetens ID. Fältet är hyperlänkat. Om du klickar på ett uppgifts-ID i det här fältet omdirigeras du till **[!UICONTROL Task Details]** för uppgiften.
    * **Initierare**: Den AEM Forms-användare som startade processinstansen
-   * **Skapad**: Datum och tid då processinstansen startades
+   * **Skapad**: Det datum och den tid då processinstansen startades
    * **Slutförandetid**: Datum och tid då processinstansen slutfördes
    * **Varaktighet**: Varaktigheten från start till slutförande av processinstansen
    * **Status**: Processinstansens aktuella status.
@@ -155,6 +155,7 @@ Använd alternativen i dialogrutan **Mina filter** panel till **Lägg till** ![l
    * **Uppdatera**: Uppdaterar rapporten med de senaste data som finns i lagringen
 
    * **Exportera till CSV**: Exportera rapportdata till en kommaavgränsad fil.
+
    >[!NOTE]
    >
    >När du exporterar en rapport exporteras hela sökresultatet till en CSV-fil och inte bara till den aktuella sidan
@@ -248,11 +249,6 @@ Du kan visa information om en viss AEM Forms-process/uppgift:
    * Aktivitetsägare
    * Datum/tid då uppgiftstilldelningar skapades
    * Datum/tid för aktivitetsuppdatering
-
-
-
-
-
 
 1. Klicka **Tillbaka till process-/uppgiftssökning** om du vill gå tillbaka till sökresultatet där process-/uppgiftsinformationen har fördjupats.
 

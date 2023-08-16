@@ -2,7 +2,7 @@
 title: AEM Headless Developer Journey
 description: AEM Headless CMS Documentation. Börja här för en guidad resa med de kraftfulla och flexibla headless-funktionerna i AEM, deras funktioner och hur du kan utnyttja dem i ditt första utvecklingsprojekt.
 exl-id: f24fb308-daa7-426f-ba45-37a236b5a500
-source-git-commit: a5f3e33a6abe7ac1bbd610a8528fd599d1ffd2aa
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
 source-wordcount: '1212'
 ht-degree: 1%
@@ -25,7 +25,7 @@ Den här guiden leder dig igenom de mest rubrikfria implementeringsämnena i AEM
 
 ## AEM dokumentationsresor {#documentation-journeys}
 
-[En dokumentationsresa](/help/journey-documentation/home.md) binder samman många olika och kanske komplicerade ämnen och funktioner genom att tillhandahålla en berättarröst som hjälper läsaren, som kan vara ny att AEM, förstå och lösa ett affärsproblem från början till slut, samtidigt som man antar minimala tidigare ämnesområden eller AEM kunskap.
+[En dokumentationsresa](/help/journey-documentation/home.md) binder samman många olika och kanske komplicerade ämnen och funktioner genom att tillhandahålla en berättarröst som hjälper läsaren att, som kan vara ny att AEM, förstå och lösa ett affärsproblem från början till slut, samtidigt som man antar minimala tidigare ämnesområden eller AEM kunskap.
 
 Dokumentation Journeys bygger på principer för god praxis, grundade på Adobe senaste forskning, beprövade implementeringserfarenheter från Adobe konsulter och återkoppling från kundprojekt.
 
@@ -33,7 +33,7 @@ Om du vill veta hur Adobe rekommenderar att man löser problem med headless busi
 
 >[!TIP]
 >
->Om du föredrar att **lära sig göra** och tekniskt sett finns med på självstudiekurserna AEM Headless, som är ordnade i API och ramverk och finns i [Avsnittet Ytterligare resurser](#additional-resources) i slutet av det här dokumentet.
+>Om du föredrar att **lära sig göra** och tekniskt sett finns med på självstudiekurserna AEM Headless, som är ordnade i API och ramverk och finns i [Avsnittet Ytterligare resurser](#additional-resources) i slutet av dokumentet.
 
 ## Målgrupp {#audience}
 
@@ -48,13 +48,13 @@ Följande personer interagerar på den här resan.
 | Administratör | Hanterar AEM grundinställningar och konfiguration | Utvecklaren arbetar tillsammans med administratören för att göra de konfigurationsändringar som behövs för utvecklingen. |
 | Innehållsarkitekt | Analyserar kraven för de data som måste levereras utan huvud och definierar strukturen för dessa data | Utvecklarna arbetar tillsammans med innehållsarkitekten för att förstå datastrukturen och kraven för att kunna leverera den utan problem. |
 
-Information under denna resa kan förstås vara användbar för alla personer, men viss information kan vara överflödig för vissa roller. Stanna kvar på [kommande resor som omfattar ytterligare roller.](/help/journey-documentation/home.md#journeys)
+Information i den här resan kan förstås vara användbar för alla personer, men viss information kan vara överflödig för vissa roller. Stanna kvar på [kommande resor som omfattar ytterligare roller.](/help/journey-documentation/home.md#journeys)
 
 ## The Headless Developer Journey {#the-journey}
 
 Du kommer att utforska många ämnen under den här resan. I följande artiklar får du grundläggande kunskaper om AEM och länkar till detaljerad teknisk dokumentation.
 
-Även om du kan gå direkt till en viss del av resan bygger många koncept på en del i tidigare artiklar. Om du inte är van vid AEM rekommenderar vi att du börjar i början och fortsätter sekventiellt.
+Även om du kan gå direkt till en viss del av resan bygger många koncept på en del i tidigare artiklar. Om du inte är van vid AEM rekommenderar Adobe att du börjar i början och fortsätter sekventiellt.
 
 | # | Artikel | Beskrivning |
 |---|---|---|
@@ -71,23 +71,23 @@ Du kommer att utforska många ämnen under den här resan. I följande artiklar 
 
 ## What&#39;s Next {#what-is-next}
 
-Du är nu redo att sätta igång med din resa utan Adobe Headless. Vi rekommenderar att du fortsätter till nästa del av resan och läser artikeln [Läs om CMS Headless Development.](learn-about.md)
+Du är nu redo att sätta igång med din resa utan Adobe Headless. Vi rekommenderar att du fortsätter till nästa del av resan och läser artikeln [Läs mer om CMS Headless Development.](learn-about.md)
 
-### Välj egen Adventure {#choose-your-path}
+### Välj din egen Adventure {#choose-your-path}
 
-Adobe vill dock att du ska lyckas när du börjar med AEM Headless-projekt, oavsett vilken typ av utbildning du använder. Överväg därför dessa två alternativ.
+Adobe vill dock att du ska lyckas när du börjar med ditt AEM Headless-projekt, oavsett vilken typ av lärande du har. Överväg därför dessa två alternativ.
 
-* Om du föredrar att fortsätta **lära sig om headless-koncept och AEM headless-teknik** bör du fortsätta din AEM resa utan att ha något att göra, enligt vad som rekommenderas i nästa granskning av dokumentet [Så här modellerar du innehåll som AEM innehållsmodeller](model-your-content.md) där du lär dig att utforma innehållsstrukturen i AEM.
+* Om du föredrar att fortsätta **lära sig om headless-koncept och AEM headless-teknik** bör du fortsätta din AEM resa utan att ha något att göra så som rekommenderas i nästa granskning av dokumentet [Så här modellerar du innehåll som AEM innehållsmodeller](model-your-content.md) där du lär dig att utforma innehållsstrukturen i AEM.
 * Om du föredrar att **lära sig göra** går du till [Komma igång med AEM självstudiekurs utan hörn](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview.html) där du kommer att gå direkt in i AEM Headless-utveckling genom att implementera ett enkelt projekt som visar AEM headless-innehåll.
 
 ## Ytterligare resurser {#additional-resources}
 
-Dokumentationsresor visar hur AEM löser ett affärsproblem genom att tillhandahålla en berättelse som vägleder dig genom komplexa, sammanhörande processer och funktioner. En resa visar hur flera funktioner fungerar tillsammans för att tillgodose ett enda affärsbehov.
+Dokumentationsresor visar hur AEM löser ett affärsproblem genom att tillhandahålla en berättarröst som vägleder dig genom komplexa, samhörande processer och funktioner. En resa visar hur flera funktioner fungerar tillsammans för att tillgodose ett enda affärsbehov.
 
 Som sådana resor är utformade för att stå på egen hand. Ett antal av dem kan dock vara relaterade till varandra. Kolla in de här extra resorna för mer information om hur AEM kraftfulla funktioner fungerar tillsammans.
 
 * [AEM Headless-självstudiekurser](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html) - Om du föredrar att lära dig genom att göra något och är tekniskt inriktad kan du ta del av våra praktiska självstudiekurser ordnade efter API och ramverk, som utforskar att skapa och använda program som bygger på AEM Headless.
-* [AEM Headless Translation Journey](/help/journey-headless/translation/overview.md) - Den här dokumentationsresan ger er en bred förståelse för headless-teknik, hur AEM levererar headless-innehåll och hur ni kan översätta det.
+* [AEM översättningsresa utan rubrik](/help/journey-headless/translation/overview.md) - Den här dokumentationsresan ger er en bred förståelse för headless-teknik, hur AEM levererar headless-innehåll och hur ni kan översätta det.
 * [Headless Authoring Journey](/help/journey-headless/author/overview.md) - Börja här för att få en guidad resa genom de kraftfulla och flexibla headless-funktionerna i AEM, deras funktioner och hur du modellerar ditt innehåll i ditt första headless-projekt.
 * [Headless Architect Journey](/help/journey-headless/architect/overview.md) - Börja här för att få en introduktion till de kraftfulla och flexibla headless-funktionerna i Adobe Experience Manager och hur du skapar material för ditt projekt.
 * [AEM teknisk dokumentation](https://experienceleague.adobe.com/docs/experience-manager-65.html) - Om du redan har en god förståelse för AEM och headless-teknik kan du behöva läsa våra detaljerade tekniska dokument direkt.

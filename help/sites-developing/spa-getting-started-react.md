@@ -2,7 +2,7 @@
 title: Getting Started with SPA in AEM - React
 seo-title: Getting Started with SPAs in AEM - React
 description: I den här artikeln visas ett exempel SPA programmet, hur det sätts ihop och hur du snabbt kommer igång med ditt eget SPA med React Framework.
-seo-description: This article presents a sample SPA application, explains how it is put together, and allows you to get up-and-running with your own SPA quickly using the React framework.
+seo-description: This article presents a sample SPA application, explains how it is put together, and lets you get up-and-running with your own SPA quickly using the React framework.
 uuid: 2beca277-a381-4482-99f6-85005d826d06
 contentOwner: bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: cc1e5c20-cc9c-4222-8a11-ec5a963d4466
 docset: aem65
 exl-id: 552649e7-6054-4ae8-b570-5ba7230e6f19
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '1167'
+source-wordcount: '1166'
 ht-degree: 0%
 
 ---
@@ -40,7 +40,7 @@ Mer information om hur SPA fungerar i AEM finns i följande dokument:
 
 * [SPA introduktion och genomgång](/help/sites-developing/spa-walkthrough.md)
 * [Introduktion till SPA](/help/sites-developing/spa-overview.md)
-* [SPA Blueprint](/help/sites-developing/spa-blueprint.md)
+* [SPA](/help/sites-developing/spa-blueprint.md)
 
 >[!NOTE]
 >
@@ -56,7 +56,7 @@ Förutom det förväntade React-beroendet kan SPA utnyttja ytterligare bibliotek
 
 ### Beroenden {#dependencies}
 
-The `package.json` -filen definierar kraven för det övergripande SPA. Här listas de minsta AEM beroendena för en fungerande SPA.
+The `package.json` -filen definierar kraven för det övergripande SPA. Här listas AEM beroenden för en fungerande SPA.
 
 ```
   "dependencies": {
@@ -83,7 +83,7 @@ Mer information finns [på GitHub här](https://github.com/wcm-io-frontend/aem-c
 >
 >Den lägsta versionen av `aem-clientlib-generator` krävs är 1.4.1.
 
-The `aem-clientlib-generator` är konfigurerad i `clientlib.config.js` så här.
+The `aem-clientlib-generator` är konfigurerad i `clientlib.config.js` filen enligt följande.
 
 ```
 module.exports = {
@@ -120,9 +120,9 @@ Bygg appen faktiskt [Webpack](https://webpack.js.org/) för implementering föru
 
 När paketet har skapats kan det överföras till en AEM.
 
-### AEM Project Archetype {#aem-project-archetype}
+### AEM Project Archettype {#aem-project-archetype}
 
-Alla AEM ska utnyttja [AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html), som stöder SPA projekt med React eller Angular och använder SPA SDK.
+Alla AEM ska utnyttja [AEM Project Archettype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html), som stöder SPA projekt med React eller Angular och använder SPA SDK.
 
 ## Programstruktur {#application-structure}
 
@@ -151,7 +151,7 @@ ReactDOM.render(
 });
 ```
 
-Huvudfunktionen i `index.js` använder `ReactDOM.render` för att bestämma var i DOM programmet ska injiceras.
+Huvudfunktionen i `index.js` är att utnyttja `ReactDOM.render` för att bestämma var i DOM programmet ska injiceras.
 
 Det här är en standardanvändning av den här funktionen, som inte är unik för det här exempelprogrammet.
 
@@ -175,7 +175,7 @@ class App extends Page {
 export default withModel(App);
 ```
 
-`App.js` används främst för att kapsla in rotkomponenterna som appen består av. Startpunkten för alla program är sidan.
+`App.js` används främst för att kapsla in rotkomponenterna som utgör programmet. Startpunkten för alla program är sidan.
 
 ### Page.js {#page-js}
 
@@ -193,9 +193,9 @@ class AppPage extends Page {
 MapTo('my-react-app/components/structure/page')(withComponentMappingContext(AppPage));
 ```
 
-I det här exemplet `AppPage` class extends `Page`, som innehåller de metoder för internt innehåll som sedan kan användas.
+I detta exempel `AppPage` class extends `Page`, som innehåller de metoder för internt innehåll som sedan kan användas.
 
-The `Page` infogar JSON-representationen av sidmodellen och bearbetar innehållet för att kapsla in/dekorera varje element på sidan. Mer information om `Page` finns i dokumentet [SPA Blueprint](/help/sites-developing/spa-blueprint.md#main-pars-header-1694932501).
+The `Page` infogar JSON-representationen av sidmodellen och bearbetar innehållet för att kapsla in/dekorera varje element på sidan. Mer information om `Page` finns i dokumentet [SPA](/help/sites-developing/spa-blueprint.md#main-pars-header-1694932501).
 
 ### Image.js {#image-js}
 
@@ -236,7 +236,7 @@ The `MapTo` metoden mappar SPA till AEM. Det stöder användningen av en enda st
 
 Om det inte finns något innehåll visas etiketter som platshållare för det tomma innehållet.
 
-#### Dynamiskt överförda egenskaper {#dynamically-passed-properties}
+#### Egenskaper som skickats dynamiskt {#dynamically-passed-properties}
 
 Data som kommer från modellen skickas dynamiskt som egenskaper för komponenten.
 
@@ -279,10 +279,10 @@ Det är regelbundet nödvändigt att komponenter i ett ensidigt program delar in
 
 ## Nästa steg {#next-steps}
 
-En stegvis guide till hur du skapar egna SPA finns i [Getting Started with the AEM SPA Editor - WKND Events Tutorial](https://helpx.adobe.com/experience-manager/kt/sites/using/getting-started-spa-wknd-tutorial-develop.html).
+En steg-för-steg-guide till hur du skapar egna SPA finns i [Getting Started with the AEM SPA Editor - WKND Events Tutorial](https://helpx.adobe.com/experience-manager/kt/sites/using/getting-started-spa-wknd-tutorial-develop.html).
 
 Mer information om hur du organiserar dig för att utveckla SPA för AEM finns i artikeln [Utveckla SPA för AEM](/help/sites-developing/spa-architecture.md).
 
 Mer information om den dynamiska modellen till komponentmappning och hur den fungerar i SPA i AEM finns i artikeln [Dynamisk mappning av modell till komponent för SPA](/help/sites-developing/spa-dynamic-model-to-component-mapping.md).
 
-Om du vill implementera SPA i AEM för ett annat ramverk än React eller Angular eller bara vill fördjupa dig i hur SPA SDK för AEM fungerar, se [SPA Blueprint](/help/sites-developing/spa-blueprint.md) artikel.
+Om du vill implementera SPA i AEM för ett annat ramverk än React eller Angular eller bara vill fördjupa dig i hur SPA SDK för AEM fungerar, se [SPA](/help/sites-developing/spa-blueprint.md) artikel.

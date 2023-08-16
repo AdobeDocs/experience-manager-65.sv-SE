@@ -10,9 +10,9 @@ discoiquuid: a1a0ad6b-023a-4822-9cce-0618657c3f9d
 docset: aem65
 feature: Correspondence Management
 exl-id: aaed75e6-8849-46a8-b986-896ad729adda
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+source-git-commit: 10227bcfcfd5a9b0f126fee74dce6ec7842f5e95
 workflow-type: tm+mt
-source-wordcount: '3838'
+source-wordcount: '3840'
 ht-degree: 0%
 
 ---
@@ -25,9 +25,9 @@ Med ett datalexikon kan man använda information från backend-datakällor utan 
 
 En dataordlista är en oberoende representation av metadata som beskriver underliggande datastrukturer och tillhörande attribut. En dataordlista skapas med hjälp av ett företagstokabulär. Den kan mappas till en eller flera underliggande datamodeller.
 
-Dataordlistan består av element av tre typer: Enkla element, sammansatta element och samlingselement. Enkla DDE:er är primitiva element som strängar, siffror, datum och booleska värden som innehåller information som stadsnamn. En sammansatt DDE innehåller andra DDE:er, som kan vara av typen primitiv, sammansatt eller samling. Till exempel en adress som består av en gatuadress, ort, provins, land och postnummer. En samling är en lista med liknande enkla eller sammansatta DDE:er. Exempel: en kund med flera platser eller olika fakturerings- och leveransadresser.
+Dataordlistan består av element av tre typer: enkla, sammansatta och samlingselement. Enkla DDE:er är primitiva element som strängar, siffror, datum och booleska värden som innehåller information som stadsnamn. En sammansatt DDE innehåller andra DDE:er, som kan vara av typen primitiv, sammansatt eller samling. Till exempel en adress som består av en gatuadress, ort, provins, land och postnummer. En samling är en lista med liknande enkla eller sammansatta DDE:er. Exempel: en kund med flera platser eller olika fakturerings- och leveransadresser.
 
-Correspondence Management använder backend-, kund- eller mottagarspecifika data som lagras enligt dataordbokens struktur för att skapa korrespondens avsedd för olika kunder. Ett dokument kan t.ex. skapas med egna namn, t.ex. &quot;Bästa {Förnamn}&quot;,&quot;Herr {Efternamn}&quot;.
+Correspondence Management använder backend-, kund- eller mottagarspecifika data som lagras enligt dataordbokens struktur för att skapa korrespondens som är avsedd för olika kunder. Ett dokument kan till exempel skapas med egna namn, som &quot;Bästa {Förnamn}&quot;,&quot;Herr {Efternamn}&quot;.
 
 Vanligtvis behöver företagsanvändare inte känna till metadata-representationer som XSD (XML-schema) eller Java-klasser. De kräver dock vanligtvis åtkomst till dessa datastrukturer och attribut för att kunna bygga lösningar.
 
@@ -36,7 +36,7 @@ Vanligtvis behöver företagsanvändare inte känna till metadata-representation
 1. En författare [skapar dataordlistan](#createdatadictionary) genom att överföra ett schema eller från början.
 1. Skribenten skapar brev och interaktiv kommunikation baserat på dataordlistan och kopplar dataordlisteelement i brev och interaktiv kommunikation när det behövs.
 1. En författare kan hämta XML-exempeldatafil, som baseras på ett dataglexikons schema. Författaren kan ändra XML-exempelfilen, som kan kopplas som testdata med dataordlistan. Samma sak används vid förhandsgranskningen av brevet.
-1. while [förhandsgranska en bokstav](../../forms/using/create-letter.md#p-types-of-linkage-available-for-each-of-the-fields-p)väljer en författare att förhandsgranska brevet med data (anpassad förhandsgranskning). Bokstaven öppnas i förväg med de data som författaren har angett. Detta öppnas i gränssnittet för att skapa korrespondens. Agenten som förhandsgranskar det här brevet kan ändra innehållet, data och bilagor i det här brevet och kan skicka det slutliga brevet. Mer information om hur du skapar bokstäver finns i [Skapa korrespondens](../../forms/using/create-letter.md).
+1. while [förhandsgranska en bokstav](../../forms/using/create-letter.md#p-types-of-linkage-available-for-each-of-the-fields-p), väljer en författare att förhandsgranska bokstaven med data (anpassad förhandsgranskning). Bokstaven öppnas i förväg med de data som författaren har angett. Detta öppnas i gränssnittet för att skapa korrespondens. Agenten som förhandsgranskar det här brevet kan ändra innehållet, data och bilagor i det här brevet och kan skicka det slutliga brevet. Mer information om hur du skapar bokstäver finns i [Skapa korrespondens](../../forms/using/create-letter.md).
 
 ## Förutsättning {#prerequisite}
 
@@ -58,7 +58,7 @@ Du använder Data Dictionary Editor för att skapa ett datalexikon eller du kan 
    * **Namn:** Det unika namnet för dataordlistan. I fältet Namn kan du bara ange engelska tecken, siffror och bindestreck. Fältet Namn fylls i automatiskt baserat på fältet Titel och de specialtecken, blanksteg, siffror och icke-engelska tecken som anges i fältet Titel ersätts med bindestreck. Även om värdet i fältet Titel automatiskt kopieras till namnet kan du redigera värdet.
 
    * **Beskrivning**: (Valfritt) Beskrivning av dataordlistan.
-   * **Taggar:** (Valfritt) Om du vill skapa en egen tagg anger du ett värde i textfältet och trycker på Retur. Du kan se taggen under textfältet med taggar. När du sparar den här texten skapas även de nya taggarna.
+   * **Taggar:** (Valfritt) Om du vill skapa en egen tagg anger du ett värde i textfältet och trycker på Retur. Taggen visas under textfältet med taggar. När du sparar den här texten skapas även de nya taggarna.
    * **Utökade egenskaper**: (Valfritt) Tryck **Lägg till fält** om du vill ange metadataattribut för dataordlistan. Ange ett unikt egenskapsnamn i kolumnen Egenskapsnamn. Ange ett värde som ska associeras med egenskapen i kolumnen Värde.
 
    ![Dataordlistegenskaper som anges på tyska](do-not-localize/1_ddproperties.png)
@@ -141,14 +141,14 @@ När du redigerar eller visar ett datalexikon kan du se vilka element i dataordl
 
 1. Tryck på Skickat innehåll.
 
-   Fliken Innehåll för lånat innehåll visas med följande: Texter, villkor, brev och interaktiv kommunikation. Var och en av dessa rubriker visar också antalet referenser till det markerade elementet.
+   Fliken för innehåll som har lånats ut visas med följande: Text, Villkor, Bokstäver och Interaktiv kommunikation. Var och en av dessa rubriker visar också antalet referenser till det markerade elementet.
 
 1. Tryck på en rubrik för att se namnet på resurserna som refererar till elementet.
 
    ![lentcontent](assets/lentcontent.png)
 
 1. Om du vill visa utlånat innehåll för ett annat element trycker du på elementet.
-1. Om du vill visa en resurs som refererar till elementet trycker du på dess namn. Webbläsaren visar resursen, bokstaven eller interaktiv kommunikation.
+1. Visa en resurs som refererar till elementet genom att trycka på dess namn. Webbläsaren visar resursen, bokstaven eller interaktiv kommunikation.
 
 ## Arbeta med testdata {#working-with-test-data}
 
@@ -347,7 +347,7 @@ En beräknad DDE PersonFullName kan associeras med ett EL-sammanfogningsuttryck 
 
 ## Datatypsmappning mellan XSD och dataordlista {#data-type-mapping-between-xsd-and-data-dictionary-br}
 
-För export av en XSD krävs en specifik datamappning, vilket beskrivs i följande tabell. DDI-kolumnen anger typen av DDE-värde som finns i DDI.
+För export av en XSD krävs en specifik datamappning, vilket beskrivs i följande tabell. DDI-kolumnen anger typen av DDE-värde som är tillgängligt i DDI.
 
 <table>
  <tbody>
@@ -377,7 +377,7 @@ För export av en XSD krävs en specifik datamappning, vilket beskrivs i följan
    <td>java.lang.String<br /> </td>
   </tr>
   <tr>
-   <td>xs:attribute /xs:element of type - xs: boolesk <br /> </td>
+   <td>xs:attribute /xs:element of type - xs: boolean <br /> </td>
    <td>DDE av typen Boolean <br /> </td>
    <td>java.lang.Boolean<br /> </td>
   </tr>
@@ -456,7 +456,7 @@ När du vill skicka samma bokstav på olika språk till dina kunder kan du lokal
 
 1. Arkivera .properties-filen (eller filer för flera språk) i en och samma ZIP-fil.
 
-1. På sidan Dataordlistor väljer du **Mer** > **Överför lokaliseringsdata** och markera zip-filen med lokaliserade egenskapsfiler.
+1. Välj på sidan Dataordlistor **Mer** > **Överför lokaliseringsdata** och markera zip-filen med lokaliserade egenskapsfiler.
 1. Om du vill visa lokaliseringsändringarna ändrar du språkområdet i webbläsaren.
 
 ## Valideringar av datamordlista {#ddvalidations}
@@ -494,7 +494,7 @@ Valideringar som används på elementnivån i datamappen.
 * ENUM-undertypen används bara för elementen String och Number.
 * Det går inte att beräkna samlings- och sammansatta element.
 * En DDE kan inte vara både beräknad och nödvändig.
-* Beräknade DDE:er måste innehålla ett giltigt uttryck.
+* Beräknade DDE måste innehålla ett giltigt uttryck.
 * Beräknade DDE:er får inte ha XML-bindning.
 * En DDE som anger typen för en samling DDE kan inte beräknas eller krävas.
 * DDE:er av undertypen ENUM får inte innehålla null eller tomma värdeuppsättningar.

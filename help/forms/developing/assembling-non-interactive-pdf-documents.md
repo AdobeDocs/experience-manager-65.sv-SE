@@ -12,7 +12,7 @@ topic-tags: operations
 discoiquuid: 8a75c201-bd88-4809-be08-69de94656489
 role: Developer
 exl-id: 4677b9e5-3811-4de3-b4f4-9574b5898486
-source-git-commit: 135f50cc80f8bb449b2f1621db5e2564f5075968
+source-git-commit: 10227bcfcfd5a9b0f126fee74dce6ec7842f5e95
 workflow-type: tm+mt
 source-wordcount: '1775'
 ht-degree: 0%
@@ -45,7 +45,7 @@ Med Assembler-tjänsten kan du samla ihop icke-interaktiva PDF-dokument utan att
 
 >[!NOTE]
 >
->Innan du läser det här avsnittet bör du känna till hur du sammanställer PDF-dokument med hjälp av tjänsten Assembler. I det här avsnittet beskrivs inte begrepp, till exempel att skapa ett samlingsobjekt som innehåller indatadokument eller att lära sig hur du extraherar resultaten från det returnerade samlingsobjektet. (Se [Programmisk sammanställning av PDF-dokument](/help/forms/developing/programmatically-assembling-pdf-documents.md).)
+>Innan du läser det här avsnittet bör du känna till hur du sammanställer PDF-dokument med hjälp av tjänsten Assembler. I det här avsnittet beskrivs inte koncept, t.ex. att skapa ett samlingsobjekt som innehåller indatadokument eller att lära sig hur du extraherar resultaten från det returnerade samlingsobjektet. (Se [Programmisk sammanställning av PDF-dokument](/help/forms/developing/programmatically-assembling-pdf-documents.md).)
 
 >[!NOTE]
 >
@@ -119,7 +119,7 @@ Sammanställa ett icke-interaktivt PDF-dokument med hjälp av Assembler Service 
 
 1. Inkludera projektfiler.
 
-   Inkludera JAR-klientfiler, t.ex. adobe-assembler-client.jar, i Java-projektets klassökväg.
+   Inkludera JAR-klientfiler, som adobe-assembler-client.jar, i Java-projektets klassökväg.
 
 1. Skapa en Assembler-klient.
 
@@ -128,13 +128,13 @@ Sammanställa ett icke-interaktivt PDF-dokument med hjälp av Assembler Service 
 
 1. Referera till ett befintligt DDX-dokument.
 
-   * Skapa en `java.io.FileInputStream` som representerar DDX-dokumentet genom att använda dess konstruktor och skicka ett strängvärde som anger platsen för DDX-filen.
+   * Skapa en `java.io.FileInputStream` -objekt som representerar DDX-dokumentet genom att använda dess konstruktor och skicka ett strängvärde som anger platsen för DDX-filen.
    * Skapa en `com.adobe.idp.Document` genom att använda konstruktorn och skicka `java.io.FileInputStream` -objekt.
 
 1. Referera till ett interaktivt PDF-dokument.
 
    * Skapa en `java.io.FileInputStream` genom att använda dess konstruktor och skicka platsen för ett interaktivt PDF-dokument.
-   * Skapa en `com.adobe.idp.Document` -objektet och skicka `java.io.FileInputStream` som innehåller dokumentet PDF. Detta `com.adobe.idp.Document` objektet skickas till `invokeOneDocument` -metod.
+   * Skapa en `com.adobe.idp.Document` -objektet och skicka `java.io.FileInputStream` -objekt som innehåller dokumentet PDF. Detta `com.adobe.idp.Document` objektet skickas till `invokeOneDocument` -metod.
 
 1. Ange körningsalternativ.
 
@@ -168,13 +168,13 @@ Sammanställa ett icke-interaktivt PDF-dokument med Assembler Service API (webbt
 
    >[!NOTE]
    >
-   >Ersätt `localhost` med IP-adressen till den server som är värd för AEM Forms.
+   >Ersätt `localhost` med IP-adressen till den server där AEM Forms finns.
 
 1. Skapa en Assembler-klient.
 
    * Skapa en `AssemblerServiceClient` genom att använda dess standardkonstruktor.
    * Skapa en `AssemblerServiceClient.Endpoint.Address` genom att använda `System.ServiceModel.EndpointAddress` konstruktor. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/AssemblerService?blob=mtom`). Du behöver inte använda `lc_version` -attribut. Det här attributet används när du skapar en tjänstreferens.
-   * Skapa en `System.ServiceModel.BasicHttpBinding` genom att hämta värdet för `AssemblerServiceClient.Endpoint.Binding` fält. Sänd returvärdet till `BasicHttpBinding`.
+   * Skapa en `System.ServiceModel.BasicHttpBinding` genom att hämta värdet för `AssemblerServiceClient.Endpoint.Binding` fält. Skicka returvärdet till `BasicHttpBinding`.
    * Ange `System.ServiceModel.BasicHttpBinding` objektets `MessageEncoding` fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
    * Aktivera grundläggande HTTP-autentisering genom att utföra följande åtgärder:
 
@@ -221,7 +221,7 @@ Sammanställa ett icke-interaktivt PDF-dokument med Assembler Service API (webbt
    * Skapa en `System.IO.BinaryWriter` genom att anropa dess konstruktor och skicka `System.IO.FileStream` -objekt.
    * Skriv bytearrayens innehåll till en PDF-fil genom att anropa `System.IO.BinaryWriter` objektets `Write` och skicka bytearrayen.
 
-* &quot;Snabbstart (MTOM): Sammanställa ett icke-interaktivt PDF-dokument med webbtjänstens API&quot;.
+* &quot;Snabbstart (MTOM): Sammanställa ett icke-interaktivt PDF-dokument med hjälp av webbtjänstens API.&quot;
 
 **Se även**
 

@@ -10,9 +10,9 @@ topic-tags: development-tools
 content-type: reference
 discoiquuid: a76425e9-fd3b-4c73-80f9-0ebabb8fd94f
 exl-id: efbba312-9fc8-4670-b8f1-d2a86162d075
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '2716'
+source-wordcount: '2715'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ Du kör VLT-verktyget från kommandoraden. I det här dokumentet beskrivs hur du
 
 ## Koncept och arkitektur {#concepts-and-architecture}
 
-Se [Översikt över felsökning](https://jackrabbit.apache.org/filevault/overview.html) och [Valv-FS](https://jackrabbit.apache.org/filevault/vaultfs.html) sida från officiell sida [Dokumentation till Apache Jackrabbit Filevault](https://jackrabbit.apache.org/filevault/index.html) om du vill ha en detaljerad översikt över koncept och struktur i verktyget Filevault.
+Se [Översikt över felsökning](https://jackrabbit.apache.org/filevault/overview.html) och [Vault FS](https://jackrabbit.apache.org/filevault/vaultfs.html) sida från officiell sida [Dokumentation till Apache Jackrabbit Filevault](https://jackrabbit.apache.org/filevault/index.html) om du vill ha en detaljerad översikt över koncept och struktur i verktyget Filevault.
 
 ## Komma igång med VLT {#getting-started-with-vlt}
 
@@ -45,7 +45,7 @@ Om du vill använda VLT-verktyget måste du först installera det. Det installer
    >[!NOTE]
    >
    >VLT-verktygets källa är [finns på GitHub.](https://github.com/apache/jackrabbit-filevault)
-1. Extrahera arkivet.
+1. Hämta arkivet.
 1. Lägg till `<archive-dir>/vault-cli-<version>/bin` i din miljö `PATH` så att kommandofilerna `vlt` eller `vlt.bat` används på lämpligt sätt. Till exempel:
 
    `<aem-installation-dir>/crx-quickstart/opt/helpers/vault-cli-3.1.16/bin>`
@@ -122,7 +122,7 @@ svn co https://svn.server.com/repos/myproject
 
 Du måste synkronisera filnivå med databasen. Så här gör du:
 
-1. Navigera till `content/jcr_root`.
+1. Gå till kommandoraden `content/jcr_root`.
 1. Checka ut databasen genom att skriva följande (ditt portnummer ersätts för **4502** och dina administratörslösenord):
 
    ```shell
@@ -135,7 +135,7 @@ Du måste synkronisera filnivå med databasen. Så här gör du:
 
 ### Testar om synkroniseringen fungerade {#testing-whether-the-synchronization-worked}
 
-När du har checkat ut databasen och synkroniserat den bör du testa att se till att allt fungerar som det ska. Ett enkelt sätt att göra detta är att redigera en **.jsp** och se om ändringarna återspeglas när ändringarna har verkställts.
+När du har checkat ut databasen och synkroniserat den bör du testa att se till att allt fungerar som det ska. Ett enkelt sätt är att redigera **.jsp** och se om ändringarna återspeglas när ändringarna har verkställts.
 
 Så här testar du synkroniseringen:
 
@@ -143,7 +143,7 @@ Så här testar du synkroniseringen:
 1. Redigera något i `text.jsp`.
 1. Se de ändrade filerna genom att skriva `vlt st`
 1. Se ändringarna genom att skriva `vlt diff text.jsp`
-1. Verkställ ändringarna: `vlt ci test.jsp`.
+1. Genomför ändringarna: `vlt ci test.jsp`.
 1. Läs in en sida som innehåller en textkomponent igen och se om ändringarna finns där.
 
 ## Få hjälp med VLT-verktyget {#getting-help-with-the-vlt-tool}
@@ -251,7 +251,7 @@ Du kan importera och exportera innehåll mellan en JCR-databas och det lokala fi
 
 Importera och exportera innehåll utan att använda `.vlt` kontroll:
 
-1. Konfigurera databasen från början:
+1. Inledningsvis konfigurera databasen:
 
    ```shell
    $ cd /projects
@@ -329,7 +329,7 @@ I följande tabell beskrivs alla tillgängliga VLT-kommandon. I de enskilda komm
 | `proplist` | `pl` | Skriver ut egenskaperna för filer eller kataloger. |
 | `propset` | `ps` | Anger värdet för en egenskap i filer eller kataloger. |
 | `add` |  | Placerar filer och kataloger under versionskontroll. |
-| `delete` | `del` eller `rm` | Tar bort filer och kataloger från versionskontroll. |
+| `delete` | `del` eller `rm` | Tar bort filer och kataloger från versionskontrollen. |
 | `diff` | `di` | Visar skillnaderna mellan två banor. |
 | `console` |  | Kör en interaktiv konsol. |
 | `rcp` |  | Kopierar ett nodträd från en fjärrdatabas till en annan. |
@@ -364,7 +364,7 @@ vlt export http://localhost:4502/crx /apps/geometrixx myproject
 
 ### Importera {#import}
 
-Importerar det lokala filsystemet (med början vid `<local-path>` till valvfilsystemet på `<uri>`. Du kan ange en `<jcr-path>` som importrot. If `--sync` anges placeras de importerade filerna automatiskt under vaultkontroll.
+Importerar det lokala filsystemet (med början `<local-path>` till valvfilsystemet på `<uri>`. Du kan ange en `<jcr-path>` som importrot. If `--sync` anges placeras de importerade filerna automatiskt under vaultkontroll.
 
 #### Syntax {#syntax-1}
 
@@ -526,7 +526,7 @@ commit -v|-q|--force|-N <file1> [<file2> ...]
 |--- |--- |
 | `-v (--verbose)` | utförlig utskrift |
 | `-q (--quiet)` | så lite som möjligt |
-| `--force` | Tvingar att genomföra även om fjärrkopian ändras |
+| `--force` | Tvingar att implementera även om fjärrkopian ändras |
 | `-N (--non-recursive)` | arbetar i en enda katalog |
 | `<file> [<file> ...]` | fil eller katalog som ska implementeras |
 
@@ -554,7 +554,7 @@ Tar bort **motstridig** läge för arbetskopiera filer eller kataloger.
 
 >[!NOTE]
 >
->Det här kommandot löser inte konflikter semantiskt eller tar bort konfliktmarkörer. den tar bara bort de konfliktrelaterade artefaktfilerna och tillåter att PATH implementeras igen.
+>Det här kommandot löser inte konflikter semantiskt och tar inte bort konfliktmarkörer. Det tar bara bort konfliktrelaterade artefaktfiler och tillåter att PATH verkställs igen.
 
 #### Syntax {#syntax-9}
 
@@ -568,7 +568,7 @@ resolved -q|-R|--force <file1> [<file2> ...]
 |--- |--- |
 | `-q (--quiet)` | så lite som möjligt |
 | `-R (--recursive)` | nedtonar rekursivt |
-| `--force` | löser, även om det finns konfliktmarkörer |
+| `--force` | löses, även om det finns konfliktmarkörer |
 | `<file> [<file> ...]` | fil eller katalog som ska tolkas |
 
 ### Propget {#propget}
@@ -618,7 +618,7 @@ Anger värdet för en egenskap i filer eller kataloger.
 >
 >`vlt:mime-type`
 >
->Filens mimetyp. Används för att avgöra om filen ska sammanfogas. En mime-text som börjar med &quot;text/&quot; (eller en mime-typ som saknas) behandlas som text. Allt annat behandlas som binärt.
+>Filens mime-typ. Används för att avgöra om filen ska sammanfogas. En mime-text som börjar med &quot;text/&quot; (eller en mime-typ som saknas) behandlas som text. Allt annat behandlas som binärt.
 
 #### Syntax {#syntax-12}
 
@@ -658,7 +658,7 @@ add -v|-q|-N|--force <file1> [<file2> ...]
 
 ### Ta bort {#delete}
 
-Tar bort filer och kataloger från versionskontroll.
+Tar bort filer och kataloger från versionskontrollen.
 
 #### Syntax {#syntax-14}
 
@@ -690,7 +690,7 @@ diff -N <file1> [<file2> ...]
 |  |  |
 |--- |--- |
 | `-N (--non-recursive)` | arbetar i en enda katalog |
-| `<file> [<file> ...]` | fil eller katalog som skillnaderna från |
+| `<file> [<file> ...]` | fil eller katalog som skillnaderna ska visas från |
 
 ### Konsol {#console}
 
@@ -727,7 +727,7 @@ rcp -q|-r|-b <size>|-t <seconds>|-u|-n|-e <arg1> [<arg2> ...] <src> <dst>
 | `-b (--batchSize) <size>` | Antal noder som ska bearbetas innan en mellanliggande spara sparas. |
 | `-t (--throttle) <seconds>` | Antal sekunder som ska förflyta efter en mellanliggande sparning. |
 | `-u (--update)` | Skriv över/ta bort befintliga noder. |
-| `-n (--newer)` | Respektera senaste ändrade egenskaper för uppdatering. |
+| `-n (--newer)` | Respektera egenskaperna lastModified för uppdatering. |
 | `-e (--exclude) <arg> [<arg> ...]` | Regexp för uteslutna källsökvägar. |
 | `<src>` | Källträdets databasadress. |
 | `<dst>` | Målnodens databasadress. |
@@ -760,7 +760,7 @@ sync -v|--force|-u <uri> <command> <localPath>
 |--- |--- |
 | `-v (--verbose)` | utförlig utskrift. |
 | `--force` | tvinga vissa kommandon att köras. |
-| `-u (--uri) <uri>` | Anger URI för synkroniseringsvärden. |
+| `-u (--uri) <uri>` | Anger URI:n för synkroniseringsvärden. |
 | `<command>` | synkroniseringskommando som ska köras. |
 | `<localPath>` | lokal mapp att synkronisera. |
 
@@ -775,7 +775,7 @@ Statuskoderna som används av VLT är:
 * I ignorerades
 * M har ändrats
 * R har ersatts
-* &#39;?&#39; objektet är inte under versionskontroll
+* ? objektet är inte under versionskontroll
 * &#39;!&#39; objektet saknas (tas bort av ett icke-svn-kommando) eller är ofullständigt
 * Versionsobjektet &#39;~&#39; hindrades av något objekt av en annan typ
 
@@ -813,7 +813,7 @@ Listing sync status for http://localhost:4502/crx/server/-/jcr:root
 
 >[!NOTE]
 >
->The `status` -kommandot hämtar inga livedata från tjänsten utan läser konfigurationen på `/libs/crx/vault/com.day.jcr.sync.impl.VaultSyncServiceImpl`.
+>The `status` -kommandot hämtar inga livedata från tjänsten, utan läser i stället konfigurationen på `/libs/crx/vault/com.day.jcr.sync.impl.VaultSyncServiceImpl`.
 
 ### Lägga till en synkroniseringsmapp {#adding-a-sync-folder}
 
@@ -852,13 +852,13 @@ När tjänsten körs kan den konfigureras med följande parametrar:
 * `vault.sync.syncroots`: En eller flera sökvägar till det lokala filsystemet som definierar synkroniseringsrötterna.
 
 * `vault.sync.fscheckinterval`: Täthet (i sekunder) som filsystemet ska genomsökas efter ändringar. Standardvärdet är 5 sekunder.
-* `vault.sync.enabled`: Flagga som aktiverar/inaktiverar tjänsten.
+* `vault.sync.enabled`: Allmän flagga som aktiverar/inaktiverar tjänsten.
 
 >[!NOTE]
 >
 >Tjänsten kan konfigureras med webbkonsolen eller en `sling:OsgiConfig` nod (med namnet `com.day.jcr.sync.impl.VaultSyncServiceImpl`) i databasen.
 >
->När du arbetar med AEM finns det flera metoder för att hantera konfigurationsinställningarna för sådana tjänster. se [Konfigurerar OSGi](/help/sites-deploying/configuring-osgi.md) för fullständig information.
+>När du arbetar med AEM finns det flera metoder för att hantera konfigurationsinställningarna för sådana tjänster. Mer information finns i [Konfigurerar OSGi](/help/sites-deploying/configuring-osgi.md) för fullständig information.
 
 #### Synkronisera mappkonfiguration {#sync-folder-configuration}
 
@@ -867,7 +867,7 @@ I varje synkroniseringsmapp lagras konfiguration och status i tre filer:
 * `.vlt-sync-config.properties`: konfigurationsfil.
 
 * `.vlt-sync.log`: loggfil som innehåller information om de åtgärder som utfördes under synkroniseringen.
-* `.vlt-sync-filter.xml`: filter som definierar vilka delar av databasen som ska synkroniseras. Filens format beskrivs i [Utföra en filtrerad utcheckning](#performing-a-filtered-checkout) -avsnitt.
+* `.vlt-sync-filter.xml`: -filter som definierar vilka delar av databasen som ska synkroniseras. Filens format beskrivs i [Utföra en filtrerad utcheckning](#performing-a-filtered-checkout) -avsnitt.
 
 The `.vlt-sync-config.properties` kan du konfigurera följande egenskaper:
 
@@ -892,7 +892,7 @@ Så här konfigurerar du en utvecklingsmiljö baserad på en synkroniseringsmapp
 
    >[!NOTE]
    >
-   >Du kan bara använda filter för att checka ut lämpliga sökvägar. Se [Utföra en filtrerad utcheckning](#performing-a-filtered-checkout) för information.
+   >Du kan bara använda filter för att checka ut lämpliga sökvägar. Se [Utföra en filtrerad utcheckning](#performing-a-filtered-checkout) för mer information.
 
 1. Gå till rotmappen för arbetskopian:
 

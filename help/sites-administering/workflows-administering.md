@@ -10,9 +10,9 @@ topic-tags: operations
 content-type: reference
 discoiquuid: d9c96e7f-9416-48e1-a6af-47384f7bee92
 exl-id: 90923d39-3ac5-4028-976c-d011f0404476
-source-git-commit: 25f7218355b7715949273c84eb72ddde3d6a0a65
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '994'
+source-wordcount: '993'
 ht-degree: 0%
 
 ---
@@ -27,16 +27,16 @@ Arbetsflödeskonsolen innehåller flera verktyg för att administrera arbetsflö
 
 Det finns en rad konsoler som du kan använda för att administrera dina arbetsflöden. Använd [global navigering](/help/sites-authoring/basic-handling.md#global-navigation) för att öppna **verktyg** välj **Arbetsflöde**:
 
-* **Modeller**: Hantera arbetsflödesdefinitioner
+* **Models**: Hantera arbetsflödesdefinitioner
 * **Instanser**: Visa och hantera pågående arbetsflödesinstanser
-* **Startare**: Hantera hur arbetsflöden ska startas
+* **Startare**: Hantera hur arbetsflöden startas
 * **Arkiv**: Visa historik över arbetsflöden som har slutförts
 * **Fel**: Visa historik över arbetsflöden som slutförts med fel
 * **Tilldela automatiskt**: Konfigurera automatisk tilldelning av arbetsflöden till mallar
 
 ## Övervaka status för arbetsflödesinstanser {#monitoring-the-status-of-workflow-instances}
 
-1. Använd navigeringsval **verktyg** sedan **Arbetsflöde**.
+1. Använda navigeringsval **verktyg** sedan **Arbetsflöde**.
 1. Välj **Instanser** om du vill visa en lista över pågående arbetsflödesinstanser.
 
    ![wf-96](assets/wf-96.png)
@@ -65,41 +65,39 @@ Det finns en rad konsoler som du kan använda för att administrera dina arbetsf
 
 ## Göra uppehåll, återuppta och avsluta en arbetsflödesinstans {#suspending-resuming-and-terminating-a-workflow-instance}
 
-1. Använd navigeringsval **verktyg** sedan **Arbetsflöde**.
+1. Använda navigeringsval **verktyg** sedan **Arbetsflöde**.
 1. Välj **Instanser** om du vill visa en lista över pågående arbetsflödesinstanser.
 
    ![wf-96-1](assets/wf-96-1.png)
 
-1. Markera ett specifikt objekt och använd sedan **Avsluta**, **Gör uppehåll**, eller **Återuppta**, beroende på vad som är lämpligt, bekräftelse och/eller ytterligare uppgifter krävs:
+1. Markera ett specifikt objekt och använd sedan **Avsluta**, **Gör uppehåll**, eller **Återuppta**, beroende på vad som är tillämpligt; bekräftelse och/eller ytterligare uppgifter krävs:
 
    ![wf-97-1](assets/wf-97-1.png)
 
 ## Visa arkiverade arbetsflöden {#viewing-archived-workflows}
 
-1. Använd navigeringsval **verktyg** sedan **Arbetsflöde**.
+1. Använda navigeringsval **verktyg** sedan **Arbetsflöde**.
 1. Välj **Arkiv** om du vill visa en lista över arbetsflödesinstanser som har slutförts.
 
    ![wf-98](assets/wf-98.png)
 
    >[!NOTE]
    >
-   >Avbruten status betraktas som en avslutad åtgärd eftersom den inträffar till följd av en användaråtgärd. till exempel:
+   >Avbrottsstatusen betraktas som ett slutfört avbrott eftersom det inträffar som ett resultat av en användaråtgärd, till exempel:
    >
    >* användning av **Avsluta** åtgärd
-   >* när en sida, som är underställd ett arbetsflöde, tas bort (framtvingar), avslutas arbetsflödet
+   >* när en sida, som är underställd ett arbetsflöde, tas bort (framtvingar), kommer arbetsflödet att avslutas
 
-
-1. Markera ett specifikt objekt och sedan **Öppna historik** för mer information:
+1. Markera ett specifikt objekt och sedan **Öppna historik** om du vill ha mer information:
 
    ![wf-99](assets/wf-99.png)
 
 ## Åtgärdar fel i arbetsflödesinstansen {#fixing-workflow-instance-failures}
 
-När ett arbetsflöde misslyckas, innehåller AEM **Fel** så att du kan undersöka och vidta lämpliga åtgärder när originalorsaken har hanterats:
+När ett arbetsflöde misslyckas, innehåller AEM **Fel** konsol där du kan undersöka och vidta lämpliga åtgärder när originalorsaken har hanterats:
 
 * **Felinformation**
-Öppnar ett fönster för att visa 
-**Felmeddelande**, **Steg** och **Felstapel**.
+Öppnar ett fönster för att visa **Felmeddelande**, **Steg** och **Felstapel**.
 
 * **Öppna historik**
 Visar information om arbetsflödeshistoriken.
@@ -110,7 +108,7 @@ Visar information om arbetsflödeshistoriken.
 
 Så här undersöker du fel och sedan återupptar eller avslutar du arbetsflödet:
 
-1. Använd navigeringsval **verktyg** sedan **Arbetsflöde**.
+1. Använda navigeringsval **verktyg** sedan **Arbetsflöde**.
 1. Välj **Fel** för att visa en lista över arbetsflödesinstanser som inte har slutförts korrekt.
 1. Välj ett specifikt objekt och sedan lämplig åtgärd:
 
@@ -154,7 +152,7 @@ Om du vill konfigurera tjänsten kan du använda [Webbkonsol](/help/sites-deploy
    <td><p>Status för de arbetsflödesinstanser som ska rensas. Följande värden är giltiga:</p>
     <ul>
      <li>SLUTFÖRT: Slutförda arbetsflödesinstanser rensas.</li>
-     <li>KÖRS: Körande arbetsflödesinstanser rensas.</li>
+     <li>KÖRNING: Körande arbetsflödesinstanser rensas.</li>
     </ul> </td>
   </tr>
   <tr>

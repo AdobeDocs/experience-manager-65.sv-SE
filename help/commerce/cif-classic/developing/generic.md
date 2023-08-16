@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: platform
 exl-id: 1138a548-d112-4446-b0e1-b7a9ea7c7604
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '1863'
+source-wordcount: '1860'
 ht-degree: 0%
 
 ---
@@ -20,9 +20,9 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->[API-dokumentation](/help/commerce/cif-classic/developing/ecommerce.md#api-documentation) finns också.
+>[API-dokumentation](/help/commerce/cif-classic/developing/ecommerce.md#api-documentation) är också tillgängligt.
 
-Integreringsramverket innehåller ett integreringslager med ett API. Detta gör att du kan bygga AEM komponenter för e-handelsfunktioner (oberoende av din specifika e-handelsmotor). Man kan också använda den interna CRX-databasen eller koppla in ett e-handelssystem och hämta in produktdata i AEM.
+Integreringsramverket innehåller ett integreringslager med ett API. Detta gör att du kan bygga AEM komponenter för e-handelsfunktioner (oberoende av din specifika e-handelsmotor). Du kan också använda den interna CRX-databasen eller koppla in ett e-handelssystem och hämta produktdata till AEM.
 
 Det finns ett antal färdiga AEM för att använda integreringslagret. För närvarande är följande:
 
@@ -61,7 +61,7 @@ I en AEM krävs en specifik implementering, till exempel:
 
 |  |  |
 |---|---|
-| `cq:commerceProvider = geometrixx` | Geometrixx-exempel; detta inkluderar minimala tillägg till det generiska API:t |
+| `cq:commerceProvider = geometrixx` | geometrixx-exempel; detta inkluderar minimala tillägg till det generiska API:t |
 
 ### Exempel {#example}
 
@@ -95,11 +95,11 @@ The **CommerceSession**:
 * Äger **kundvagn**
 
    * utför Lägg till/ta bort/etc
-   * utför de olika beräkningarna av varukorgen,
+   * utför de olika beräkningarna av vagnen,
 
      `commerceSession.getProductPriceInfo(Product product, Predicate filter)`
 
-* Ägarens beständighet för **order** data:
+* Ägarens beständighet för **beställa** data:
 
   `CommerceSession.getUserContext()`
 
@@ -111,7 +111,7 @@ The **CommerceSession**:
 
 #### Arkitektur för produkt och varianter {#architecture-of-product-and-variants}
 
-En och samma produkt kan ha flera variationer. den kan till exempel variera beroende på färg och/eller storlek. En produkt måste definiera vilka egenskaper som driver variationen. vi kallar dem *variantaxlar*.
+En enskild produkt kan ha flera variationer, t.ex. beroende på färg och/eller storlek. En produkt måste definiera vilka egenskaper som driver variationen; vi definierar dessa *variantaxlar*.
 
 Alla egenskaper är dock inte olika axlar. Variationer kan också påverka andra egenskaper. Priset kan till exempel vara beroende av storleken. Dessa egenskaper kan inte väljas av kunden och betraktas därför inte som olika axlar.
 
@@ -128,7 +128,7 @@ Alla produktresurser kan representeras av en `Product API`. De flesta anrop i pr
 >Produkter (i allmänhet) kan ha många olika axlar, men produktkomponenten som finns i paketet hanterar bara två:
 >
 >1. `size`
->1. plus ytterligare
+>1. plus en till
 >
 >   Den här extra varianten markeras via `variationAxis` egenskap för produktreferensen (vanligtvis `color` för Geometrixx Outdoors).
 
@@ -163,7 +163,7 @@ content
       shirt-l
 ```
 
-Slutligen finns det inget krav på att använda produktdata. Du kan placera alla produktdata under referenserna i katalogen; men du kan inte ha flera kataloger utan att duplicera alla produktdata.
+Slutligen finns det inget krav på att använda produktdata. Du kan placera alla produktdata under referenserna i katalogen, men du kan inte ha flera kataloger utan att duplicera alla produktdata.
 
 **API**
 
@@ -246,7 +246,7 @@ public class AxisFilter implements VariantFilter {
       * En referens med produktdata lagrade någon annanstans:
 
          * Produktreferenser innehåller en `productData` -egenskap, som pekar på produktdata (vanligtvis under `/etc/commerce/products`).
-         * Produktinformationen är hierarkisk. produktattribut ärvs från en produktdatanodens överordnade.
+         * Produktinformationen är hierarkisk. Produktattribut ärvs från en produktdatanodens överordnade.
          * Produktreferenser kan också innehålla lokala egenskaper som åsidosätter de som anges i deras produktdata.
 
       * En produkt i sig:
@@ -335,11 +335,11 @@ public class AxisFilter implements VariantFilter {
 **Personanpassning**
 
 * Personalisering bör alltid styras av [ClientContext](/help/sites-administering/client-context.md).
-* A ClientContext `/version/` av kundvagnen skapas i samtliga fall:
+* En ClientContext `/version/` av kundvagnen skapas i samtliga fall:
 
    * Produkterna ska läggas till med `CommerceSession.addCartEntry()` -metod.
 
-* Följande illustrerar ett exempel på kundvagnsinformation i kundvagnen i ClientContext:
+* Följande illustrerar ett exempel på kundvagnsinformation i kundvagnen:
 
 ![chlimage_1-33](/help/sites-developing/assets/chlimage_1-33a.png)
 
@@ -374,7 +374,7 @@ The `CommerceSession` äger de tre elementen:
 
 1. **Beställningsinformation**
 
-   Beställningsinformationen är dock *not* åtgärdat av API:
+   Beställningsinformationen är dock *not* som har åtgärdats av API:
 
    ```java
        public void updateOrderDetails(Map<String, String> orderDetails);
@@ -386,7 +386,7 @@ The `CommerceSession` äger de tre elementen:
 
 * Beställningsblanketter måste ofta innehålla flera olika leveransalternativ (och priser).
 * Priserna kan baseras på artiklar och detaljer i beställningen, t.ex. vikt och/eller leveransadress.
-* The `CommerceSession` har tillgång till alla beroenden, så det kan behandlas på liknande sätt som produktpriser:
+* The `CommerceSession` har tillgång till alla beroenden, så att de kan behandlas på ett liknande sätt som produktpriser:
 
    * The `CommerceSession` äger fraktpriser.
    * Använd `updateOrder(Map<String, Object> delta)` för att hämta/uppdatera leveransinformation.
@@ -403,7 +403,7 @@ I enlighet med standardtjänstens API-modell innehåller e-handelsprojektet en u
 >
 >Även om den generiska implementeringen inte implementerar det här API:t kan du utöka det och lägga till sökfunktionen.
 
-eCommerce-projektet innehåller en standardsökkomponent som finns i:
+E-handelsprojektet innehåller en standardsökkomponent som finns i:
 
 `/libs/commerce/components/search`
 
@@ -440,14 +440,14 @@ Startpunkten för sökgränssnittet är `CommerceService#search` metod som retur
       * En kampanjsökväg (som definierar den åtgärd som vouchern tillämpar).
 
    * Vouchers har inte sina egna datum- och datumtider, utan använder dem från sina överordnade kampanjer.
-   * Externa handelsmotorer kan också tillhandahålla vouchers, kräver minst
+   * Externa handelsmotorer kan också tillhandahålla vouchers, som kräver minst
 
       * En verifikationskod
       * An `isValid()` method
 
    * The **Voucher** komponent ( `/libs/commerce/components/voucher`) innehåller:
 
-      * En renderare för kupongadministration. visar eventuella verifikationer som finns i kundvagnen.
+      * En renderare för verifikationsadministration. Detta visar eventuella verifikationer som finns i kundvagnen.
       * Redigeringsdialogrutorna (formuläret) för att administrera (lägga till/ta bort) verifikationerna.
       * De åtgärder som krävs för att lägga till/ta bort verifikationer i/från kundvagnen.
 
@@ -472,10 +472,10 @@ Startpunkten för sökgränssnittet är `CommerceService#search` metod som retur
 
    * Två marknadsföringshanterare medföljer:
 
-      * `DiscountPromotionHandler`som ger en absolut rabatt eller en procentuell rabatt som gäller för hela varukorgen
+      * `DiscountPromotionHandler`, vilket ger en absolut rabatt eller en procentuell rabatt som gäller för hela varukorgen
       * `PerfectPartnerPromotionHandler`, som ger en produkt i absolut eller procentuell rabatt om partnerprodukten också finns i kundvagnen
 
-   * ClientContext `SegmentMgr` löser segment och ClientContext `CartMgr` löser kampanjer. Varje kampanj som gäller minst ett löst segment kommer att utlösas.
+   * ClientContexten `SegmentMgr` löser segment och ClientContexten `CartMgr` löser kampanjer. Varje kampanj som gäller minst ett löst segment kommer att utlösas.
 
       * Utlösta kampanjer skickas tillbaka till servern via ett AJAX samtal för att beräkna kundvagnen på nytt.
       * Utlösta kampanjer (och tillagda Vouchers) visas också på panelen ClientContext.
@@ -507,7 +507,7 @@ public void removeVoucher(String code) throws CommerceException;
 public List<Voucher> getVouchers() throws CommerceException;
 ```
 
-Den här vägen, `CommerceSession` ansvarar för att kontrollera om det finns en verifikation och om den kan användas eller inte. Detta kan vara för kuponger som bara kan tillämpas om ett visst villkor är uppfyllt. till exempel om det totala kundvagnspriset är större än $100). Om en verifikation inte kan användas av någon anledning `addVoucher` -metoden genererar ett undantag. Dessutom `CommerceSession` ansvarar för att uppdatera kundvagnens priser efter att en verifikation har lagts till/tagits bort.
+Den här vägen, `CommerceSession` ansvarar för att kontrollera om det finns en verifikation och om den kan användas eller inte. Detta kan vara för verifikationer som bara kan tillämpas om ett visst villkor är uppfyllt, till exempel när det totala kundvagnspriset är större än 100 USD). Om en verifikation inte kan användas av någon anledning `addVoucher` -metoden genererar ett undantag. Dessutom finns `CommerceSession` ansvarar för att uppdatera kundvagnens priser efter att en verifikation har lagts till/tagits bort.
 
 The `Voucher` är en böldliknande klass som innehåller fält för:
 
@@ -521,7 +521,7 @@ The `AbstractJcrCommerceSession` kan använda verifikationer. Verifikationerna s
 
 * `jcr:title` (String) - för voucherns beskrivning
 * `code` (String) - den kod som användaren måste ange för att kunna använda vouchern
-* `promotion` (String) - den befordran som ska genomföras. till exempel `/content/campaigns/geometrixx-outdoors/article/10-bucks-off`
+* `promotion` (String) - den kampanj som ska användas, till exempel `/content/campaigns/geometrixx-outdoors/article/10-bucks-off`
 
 Kampanjhanterare är OSGi-tjänster som ändrar kundvagnen. Kundvagnen har stöd för flera krokar som definieras i `PromotionHandler` gränssnitt.
 
@@ -575,4 +575,4 @@ Tre marknadsföringshanterare ingår:
 
 * `DiscountPromotionHandler` använder en absolut rabatt eller en procentuell rabatt för hela varukorgen
 * `PerfectPartnerPromotionHandler` tillämpar en absolut eller procentuell rabatt på produkten om produktpartnern också finns i kundvagnen
-* `FreeShippingPromotionHandler` kostnadsfri frakt
+* `FreeShippingPromotionHandler` använder kostnadsfri frakt

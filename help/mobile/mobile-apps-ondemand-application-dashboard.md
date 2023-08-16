@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: authoring-on-demand-services-app
 discoiquuid: 42a38399-f5a7-4d2f-aa6a-d409a7ec60f7
 exl-id: daafc8b8-3c01-4c97-a14b-f1b706600249
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '598'
+source-wordcount: '595'
 ht-degree: 2%
 
 ---
@@ -77,16 +77,16 @@ Du kan expandera varje ruta för att få en mer detaljerad listvy genom att klic
 
 ### Panelen Hantera banderoller {#the-manage-banners-tile}
 
-The **Hantera banners** kan du hantera innehållet för en banderoll. Följande information visas för en banderoll:
+The **Hantera banderoller** kan du hantera innehållet för en banderoll. Följande information visas för en banderoll:
 
 * bild
-* **RUBRIK**: banderollens namn
+* **RUBRIK**: bannerns namn
 * **ÄNDRAD**: senast ändrad i AEM
 * **ÖVERFÖRD**: senast överförd från AEM
 * **PUBLICERAT**: senaste publicerade AEM
 * **KÄLLA**: källa (AEM lokal eller fjärransluten från Mobile On Demand)
 
-Följande bild visar **Hantera banners** i AEM Mobile Application Dashboard:
+Följande bild visar **Hantera banderoller** i AEM Mobile Application Dashboard:
 
 ![chlimage_1-57](assets/chlimage_1-57.png)
 

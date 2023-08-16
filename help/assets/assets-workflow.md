@@ -5,16 +5,16 @@ contentOwner: AG
 feature: Workflow, Renditions
 role: User, Admin
 exl-id: e7c84385-efb3-4997-83ff-7a7f31582469
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '924'
+source-wordcount: '923'
 ht-degree: 3%
 
 ---
 
 # Bearbeta digitala resurser {#process-assets}
 
-[!DNL Adobe Experience Manager Assets] gör att du kan arbeta med dina digitala resurser på många olika sätt för att möjliggöra robust materialbearbetning. Du kan använda standardmetoderna eller anpassade bearbetningsmetoder för att säkerställa att hela processen slutförs, att alla granskningar och att de efterlevs, att identifieringen och distributionen samt att de digitala resurserna är rena. Du kan utföra resurshanteringsuppgifterna samtidigt som du uppnår önskad skala och anpassning.
+[!DNL Adobe Experience Manager Assets] gör att du kan arbeta med dina digitala resurser på många olika sätt för att få en robust materialbearbetning. Du kan använda standardmetoderna eller anpassade bearbetningsmetoder för att säkerställa att hela processen slutförs, att alla granskningar och att de efterlevs, att identifieringen och distributionen samt att de digitala resurserna är rena. Du kan utföra resurshanteringsuppgifterna samtidigt som du uppnår önskad skala och anpassning.
 
 ## Förstå arbetsflöden {#understand-workflows}
 
@@ -28,13 +28,13 @@ Information om de olika arbetsflödesmodellerna som är tillgängliga som standa
 
 ![En del av standardarbetsflödet](assets/aem-default-workflows.png)
 
-*Bild: Vissa standardarbetsflöden som är tillgängliga i [!DNL Experience Manager].*
+*Bild: Vissa av standardarbetsflödena i [!DNL Experience Manager].*
 
 ## Använda arbetsflöden för att bearbeta resurser {#applying-workflows-to-assets}
 
 Att använda arbetsflöden på digitala resurser är detsamma som för webbsidor. En fullständig guide om hur du skapar och använder arbetsflöden finns på [starta arbetsflöden](/help/sites-authoring/workflows-participating.md).
 
-Använd arbetsflöden i digitala resurser för att aktivera resursen eller skapa vattenstämplar. Många av arbetsflödena för resurser aktiveras automatiskt. Arbetsflödet som automatiskt skapar en återgivning efter att en bild har redigerats aktiveras till exempel automatiskt.
+Använd arbetsflöden i digitala resurser för att aktivera resursen eller skapa vattenstämplar. Många av arbetsflödena för resurser aktiveras automatiskt. Arbetsflödet som automatiskt skapar en återgivning efter att en bild har redigerats aktiveras automatiskt.
 
 >[!NOTE]
 >
@@ -96,9 +96,9 @@ För en arbetsflödesmodell kan användare skapa en startfil för arbetsflödet 
 * Skapa en kopia av [!UICONTROL DAM Update Asset] arbetsflöde och ändra det så att det körs i en viss mapphierarki. Den här metoden är användbar för ett fåtal mappar.
 * De extra bearbetningsstegen kan läggas till med en [ELLER dela](/help/sites-developing/workflows-step-ref.md#or-split) enligt villkor som gäller för så många mappar som behövs.
 
-## God praxis och begränsningar {#best-practices-limitations-tips}
+## Bästa praxis och begränsningar {#best-practices-limitations-tips}
 
-* Tänk på dina behov av alla typer av återgivningar när du utformar arbetsflöden. Om du inte förutser att en återgivning behövs i framtiden tar du bort steget när du skapar den från arbetsflödet. Det går inte att ta bort återgivningar gruppvis efteråt. Oönskade återgivningar kan ta upp mycket lagringsutrymme efter långvarig användning av [!DNL Experience Manager]. För enskilda resurser kan du ta bort återgivningar manuellt från användargränssnittet. För flera resurser kan du antingen anpassa [!DNL Experience Manager] om du vill ta bort specifika återgivningar eller ta bort resurserna och överföra dem igen.
+* Tänk på dina behov av alla typer av återgivningar när du utformar arbetsflöden. Om du inte förutser att en återgivning behövs i framtiden tar du bort steget när du skapar den från arbetsflödet. Återgivningar kan inte tas bort gruppvis efteråt. Oönskade återgivningar kan ta upp mycket lagringsutrymme efter långvarig användning av [!DNL Experience Manager]. För enskilda resurser kan du ta bort återgivningar manuellt från användargränssnittet. För flera resurser kan du antingen anpassa [!DNL Experience Manager] om du vill ta bort specifika återgivningar eller ta bort resurserna och överföra dem igen.
 * Som standard [!UICONTROL DAM Update Asset] arbetsflödet innehåller några steg för att skapa miniatyrbilder och webbåtergivningar. Om någon standardåtergivning tas bort från arbetsflödet används användargränssnittet i [!DNL Assets] återger inte korrekt.
 
 >[!MORELIKETHIS]
@@ -106,5 +106,4 @@ För en arbetsflödesmodell kan användare skapa en startfil för arbetsflödet 
 >* [Använda och delta i arbetsflöden](/help/sites-authoring/workflows.md)
 >* [Skapa arbetsflödesmodeller och utöka arbetsflödesfunktioner](/help/sites-developing/workflows.md)
 >* [Metoder som kör arbetsflöden](/help/sites-administering/workflows-starting.md)
->* [Bästa arbetsflöden](/help/sites-developing/workflows-best-practices.md)
-
+>* [Bästa praxis för arbetsflöden](/help/sites-developing/workflows-best-practices.md)

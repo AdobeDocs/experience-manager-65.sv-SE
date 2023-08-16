@@ -7,9 +7,9 @@ topic-tags: extending-aem
 content-type: reference
 docset: aem65
 exl-id: c4fb1b5e-e15e-450e-b882-fe27b165ff9f
-source-git-commit: 26c0411d6cc16f4361cfa9e6b563eba0bfafab1e
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '1777'
+source-wordcount: '1776'
 ht-degree: 0%
 
 ---
@@ -20,11 +20,11 @@ ht-degree: 0%
 
 An [Experience Fragment](/help/sites-authoring/experience-fragments.md) är en grupp med en eller flera komponenter, inklusive innehåll och layout, som kan refereras till på sidor.
 
-En Experience Fragment-Överordnad och/eller Variant använder:
+En Experience Fragment Master och/eller Variant använder:
 
 * `sling:resourceType` : `/libs/cq/experience-fragments/components/xfpage`
 
-Som det inte finns `/libs/cq/experience-fragments/components/xfpage/xfpage.html` återgår till
+Som om det inte finns `/libs/cq/experience-fragments/components/xfpage/xfpage.html` återgår till
 
 * `sling:resourceSuperType` : `wcm/foundation/components/page`
 
@@ -50,7 +50,7 @@ Till exempel:
 
 ![xf-14](assets/xf-14.png)
 
-Väljaren för ren återgivning använder en transformator i stället för ytterligare skript. den [Sling Rewriter](https://sling.apache.org/documentation/bundles/output-rewriting-pipelines-org-apache-sling-rewriter.html) används som transformator. Detta är konfigurerat på
+Väljaren för ren återgivning använder en transformator i stället för ytterligare skript. [Sling Rewriter](https://sling.apache.org/documentation/bundles/output-rewriting-pipelines-org-apache-sling-rewriter.html) används som transformator. Detta är konfigurerat på
 
 * `/libs/experience-fragments/config/rewriter/experiencefragments`
 
@@ -69,7 +69,7 @@ Vi rekommenderar att du konfigurerar omskrivaren med en övertäckning. Se [Öve
 
 ## Sociala variationer {#social-variations}
 
-Sociala varianter kan publiceras på sociala medier (text och bild). I Adobe Experience Manager (AEM) kan dessa sociala varianter innehålla komponenter. till exempel textkomponenter, bildkomponenter.
+Sociala varianter kan publiceras på sociala medier (text och bild). I Adobe Experience Manager (AEM) kan dessa sociala varianter innehålla komponenter, till exempel textkomponenter och bildkomponenter.
 
 Bilden och texten för det sociala inlägget kan hämtas från alla bildresurstyper eller textresurstyper på alla djupnivåer (antingen i byggblocket eller layoutbehållaren).
 
@@ -84,7 +84,7 @@ För detta måste följande egenskaper användas:
    * `fileReference`
    * `fileName`
 
-* Extrahera texten
+* För att extrahera texten
 
    * `text`
 
@@ -136,7 +136,7 @@ Ett av användningsområdena för sådana grupper är att bädda in innehåll i 
 
 ### Omskrivning av standardlänk {#default-link-rewriting}
 
-Använda [Exportera till mål](/help/sites-administering/experience-fragments-target.md) kan du
+Använda [Exportera till mål](/help/sites-administering/experience-fragments-target.md) kan du:
 
 * skapa en upplevelsefragment,
 * lägga till komponenter i den,
@@ -144,19 +144,19 @@ Använda [Exportera till mål](/help/sites-administering/experience-fragments-ta
 
 Den här funktionen kan [aktiverat för en författarinstans av AEM](/help/sites-administering/experience-fragments-target.md#Prerequisites). Det kräver en giltig Adobe Target-konfiguration och konfigurationer för länkutökningen.
 
-Länkutjämnaren används för att fastställa rätt URL:er som behövs när du skapar målerbjudandets HTML-version, som sedan skickas till Adobe Target. Detta är nödvändigt eftersom Adobe Target kräver att alla länkar i erbjudandet Target HTML ska vara tillgängliga för allmänheten. det innebär att alla resurser som länkarna refererar till, och själva Experience Fragment, måste publiceras innan de kan användas.
+Länkutjämnaren används för att fastställa rätt URL:er som behövs när du skapar målerbjudandets HTML-version, som sedan skickas till Adobe Target. Detta är nödvändigt eftersom Adobe Target kräver att alla länkar i Target HTML-erbjudandet ska vara tillgängliga för allmänheten, vilket innebär att alla resurser som länkreferensen och själva Experience Fragment måste publiceras innan de kan användas.
 
 När du skapar ett Target-erbjudande skickas som standard en begäran till en anpassad Sling-väljare i AEM. Den här väljaren anropas `.nocloudconfigs.html`. Som namnet antyder skapas en vanlig HTML-återgivning av ett Experience Fragment, men inte molnkonfigurationer (vilket skulle vara överflödig information).
 
 När du har skapat HTML-sidan ändrar Sling Rewriter-flödet utdata:
 
-1. The `html`, `head`och `body` -element ersätts med `div` -element. The `meta`, `noscript` och `title` elementen tas bort (de är underordnade element till originalet) `head` -element och beaktas inte när detta ersätts med `div` element).
+1. The `html`, `head`och `body` -element ersätts med `div` -element. The `meta`, `noscript` och `title` elementen tas bort (de är underordnade element till originalet) `head` -element, och beaktas inte när detta ersätts med `div` element).
 
    Detta görs för att se till att HTML Target-erbjudandet kan inkluderas i målaktiviteter.
 
 1. AEM ändrar alla interna länkar i HTML så att de pekar på en publicerad resurs.
 
-   AEM här mönstret används för att fastställa vilka länkar som ska ändras:
+   AEM här mönstret visar attributen för HTML-element för att fastställa vilka länkar som ska ändras:
 
    1. `src` attributes
    1. `href` attributes
@@ -169,7 +169,7 @@ När du har skapat HTML-sidan ändrar Sling Rewriter-flödet utdata:
 
    Länkarna i dessa attribut körs via AEM Link Externalizer `publishLink()` för att återskapa URL:en som om den fanns på en publicerad instans och som sådan offentligt tillgänglig.
 
-När du använder en körklar implementering bör den process som beskrivs ovan vara tillräcklig för att generera målerbjudandet från Experience Fragment och sedan exportera det till Adobe Target. Det finns dock vissa användningsfall som inte har beaktats i denna process. bland annat följande:
+När du använder en körklar implementering bör den process som beskrivs ovan vara tillräcklig för att generera målerbjudandet från Experience Fragment och sedan exportera det till Adobe Target. Det finns dock vissa användningsområden som inte ingår i den här processen. Exempel:
 
 * Samlingsmappning är bara tillgängligt på publiceringsinstansen
 * Dispatcher-omdirigeringar
@@ -304,7 +304,7 @@ Om systemet Exportera till mål bearbetar det här elementet kan du definiera `C
 <link rel="stylesheet" href="/etc.clientlibs/foundation/clientlibs/main.css" type="text/css">
 ```
 
-Samtalet till `rewriteLink()` metoden utförs med följande parametrar:
+Anropet till `rewriteLink()` metoden utförs med följande parametrar:
 
 ```java
 rewriteLink(link="/etc.clientlibs/foundation/clientlibs/main.css", tag="link", attribute="href" )
@@ -312,7 +312,7 @@ rewriteLink(link="/etc.clientlibs/foundation/clientlibs/main.css", tag="link", a
 
 När du skapar tjänsten kan du fatta beslut baserat på angivna indata och sedan skriva om länken i enlighet med detta.
 
-Vi vill till exempel ta bort `/etc.clientlibs` del av URL-adressen och lägg till lämplig extern domän. För att förenkla saker och ting anser vi att vi har tillgång till en resurslösare för din tjänst, som i `rewriteLinkExample2`:
+Vi vill till exempel ta bort `/etc.clientlibs` del av URL-adressen och lägg till lämplig extern domän. För att förenkla allt anser vi att vi har tillgång till en resurslösare för din tjänst, som i `rewriteLinkExample2`:
 
 >[!NOTE]
 >
@@ -345,7 +345,7 @@ public String rewriteLink(String link, String tag, String attribute) {
 
 >[!NOTE]
 >
->Om ovanstående metod returnerar `null`lämnar Export to Target-systemet länken som den är, en relativ länk till en resurs.
+>Om ovanstående metod returnerar `null`lämnar Export to Target-systemet länken som den är, som en relativ länk till en resurs.
 
 #### Prioriteringar - getPriority {#priorities-getpriority}
 

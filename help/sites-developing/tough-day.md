@@ -4,9 +4,9 @@ description: Tough Day-testet simulerar den dagliga belastningen för cirka 1 00
 topic-tags: testing
 content-type: reference
 exl-id: ceb9671c-57f9-4d81-94c0-0dbccd4d90a2
-source-git-commit: b9c164321baa3ed82ae87a97a325fcf0ad2f6ca0
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '1824'
+source-wordcount: '1823'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 ## Köra tuff dag 2 {#how-to-run-tough-day}
 
-Ladda ned den senaste versionen av Tough Day 2 från [Adobe-databas](https://repo1.maven.org/maven2/com/adobe/qe/toughday2/). När du har laddat ned programmet kan du köra det direkt genom att ange `host` parameter. I följande exempel körs den AEM instansen lokalt så att `localhost` värde används:
+Ladda ned den senaste versionen av Tough Day 2 från [Adobe Repository](https://repo1.maven.org/maven2/com/adobe/qe/toughday2/). När du har laddat ned programmet kan du köra det direkt genom att ange `host` parameter. I följande exempel körs den AEM instansen lokalt så att `localhost` värde används:
 
 ```xml
 java -jar toughday2.jar --host=localhost
@@ -37,7 +37,7 @@ Standardsviten som körs när du lägger till parametrar får namnet `toughday`.
 * Skapa resurshierarkier
 * Ta bort resurser
 
-Programsviten innehåller 15 % skrivåtgärder och 85 % läsåtgärder.
+Paketet innehåller 15 % skrivåtgärder och 85 % läsåtgärder.
 
 För att köra testerna av sviten installerar Tough Day 2 standardinnehållspaketet. Detta kan undvikas genom att ställa in `installsamplecontent`parameter till `false`men kom ihåg att du också bör ändra standardsökvägarna för de tester som du tänker köra. Om burken körs utan parametrar visar Tough Day 2 [hjälpinformation](/help/sites-developing/tough-day.md#getting-help).
 
@@ -71,7 +71,7 @@ I tabellen nedan hittar du relevanta hjälpparametrar.
   </tr>
   <tr>
    <td>—help</td>
-   <td>Skriver ut global information, till exempel: tillgängliga åtgärder, fördefinierade programsviter, körningslägen och globala parametrar.</td>
+   <td>Skriver ut global information, t.ex. tillgängliga åtgärder, fördefinierade sviter, körningslägen och globala parametrar.</td>
    <td> </td>
   </tr>
   <tr>
@@ -132,15 +132,15 @@ Du hittar de relevanta parametrarna i listan nedan:
 | `--password=<Val>` | Lösenord för den angivna användaren. | admin |  |
 | `--duration=<Val>` | Provningens varaktighet. Kan uttryckas i (**s**)sekunder, (**m**)minuter, (**h**)ours och (**d**)dagar. | 1d |  |
 | `--timeout=<Val>` | Hur länge ett test ska köras innan det avbryts och markeras som misslyckat. Uttryckt i sekunder. | 180 |  |
-| `--suite=<Val>` | Värdet kan vara en eller en lista (avgränsad med kommatecken) med fördefinierade testsviter. | tuffing |  |
+| `--suite=<Val>` | Värdet kan vara en eller en lista (avgränsad med kommatecken) med fördefinierade testsviter. | tughday |  |
 | `--configfile=<Val>` | Den målformade dynamiska konfigurationsfilen. |  |  |
 | `--contextpath=<Val>` | Instansens kontextsökväg. |  |  |
-| `--loglevel=<Val>` | Loggnivån för motorn Tough Day 2. | INFO | ALL, DEBUG, INFO, VARNING, FEL, FATAL, AV |
+| `--loglevel=<Val>` | Loggnivån för motorn Tough Day 2. | INFO | ALLA, FELSÖKNING, INFORMATION, VARNING, FEL, ALLVARLIGT, AV |
 | `--dryrun=<Val>` | Om true skrivs den resulterande konfigurationen ut och inga tester körs. | false | true eller false |
 
 ## Anpassa {#customizing}
 
-Anpassning kan göras på två sätt: kommandoradsparametrar eller dynamiska konfigurationsfiler. **Konfigurationsfiler används för stora anpassade programsviter och de åsidosätter standardparametrarna för Tough Day 2. Kommandoradsparametrar åsidosätter både konfigurationsfiler och standardparametrar.**
+Anpassningen kan göras på två sätt: kommandoradsparametrar eller dynamiska konfigurationsfiler. **Konfigurationsfiler används för stora anpassade programsviter och de åsidosätter standardparametrarna för Tough Day 2. Kommandoradsparametrar åsidosätter både konfigurationsfiler och standardparametrar.**
 
 Det enda sättet att spara en testkonfiguration är att kopiera den i yaml-format.
 
@@ -220,7 +220,7 @@ tests:
 
 I exemplen nedan visas hur du lägger till ett test i en fördefinierad svit och hur du konfigurerar om och exkluderar ett befintligt test från en fördefinierad svit.
 
-Du kan lägga till ett nytt test i en fördefinierad svit med `add` och ange den fördefinierade målsviten.
+Du kan lägga till ett nytt test i en fördefinierad svit med `add` och ange målsviten.
 
 Genom att använda kommandoradsparametrar:
 
@@ -284,7 +284,7 @@ Dag 2 kan köras i något av följande lägen: **normal** och **konstant belastn
 
 The **normal** körningsläget har två parametrar:
 
-* `concurrency` - samtidig representerar antalet trådar som Tough Day 2 skapar för testkörning. På dessa trådar kommer tester att utföras tills antingen varaktigheten är slut eller tills det inte finns fler tester att köra.
+* `concurrency` - samtidighet representerar antalet trådar som Tough Day 2 skapar för testkörning. På dessa trådar kommer tester att utföras tills antingen varaktigheten är slut eller tills det inte finns fler tester att köra.
 
 * `waittime` - väntetiden mellan två på varandra följande testkörningar i samma tråd. Värdet måste anges i millisekunder.
 
@@ -305,9 +305,9 @@ runmode:
 
 The **konstant belastning** körningsläget skiljer sig från det normala körningsläget genom att generera ett konstant antal startade testkörningar i stället för ett konstant antal trådar. Du kan ställa in inläsningen med parametern för körningsläge med samma namn.
 
-### Testa markering {#test-selection}
+### Testa val {#test-selection}
 
-Testmarkeringsprocessen är densamma för båda körningslägena och följande fungerar: alla tester har `weight` som avgör sannolikheten för körning i en tråd. Om du till exempel har två tester, ett med en vikt på 5 och det andra med en vikt på 10, är det två gånger mer troligt att det senare utförs än det första.
+Testmarkeringsprocessen är densamma för båda körningslägena och följande: alla tester har en `weight` som avgör sannolikheten för körning i en tråd. Om du till exempel har två tester, ett med en vikt på 5 och det andra med en vikt på 10, är det två gånger mer troligt att det senare utförs än det första.
 
 Dessutom kan tester ha en `count` -egenskap, som begränsar antalet körningar till ett givet tal. När detta antal har passerats kommer inga fler testkörningar att utföras. Alla testinstanser som redan körs kommer att slutföra körningen enligt konfigurationen. I följande exempel visas hur du lägger till de här parametrarna antingen på kommandoraden eller med hjälp av en dynamisk konfigurationsfil.
 
@@ -342,7 +342,7 @@ java -jar toughday2.jar --host=localhost --suite=toughday --add CreatePageTreeTe
 
 ## Utdata {#output}
 
-Dag 2 ger både testvärden och loggar. Mer information finns i följande avsnitt.
+Tough Day 2 outputs both test metrics and logs. Mer information finns i följande avsnitt.
 
 ### Testmått {#test-metrics}
 

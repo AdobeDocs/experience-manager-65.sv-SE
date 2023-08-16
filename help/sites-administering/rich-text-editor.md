@@ -3,9 +3,9 @@ title: Konfigurera RTF-redigeraren för att skapa innehåll i Adobe Experience M
 description: Lär dig konfigurera Adobe Experience Manager RTF-redigeraren så att du kan skapa innehåll i Adobe Experience Manager.
 contentOwner: AG
 exl-id: 2e7ec22f-0856-44c4-bb15-1086dae0b85a
-source-git-commit: 53a18ec48331f1c25c15e8f7a59bd57e95639895
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '2924'
+source-wordcount: '2923'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ Om du vill veta hur du använder RTE-funktioner för redigering kan du läsa [An
 
 *Bild: Stegen för att lära sig hur man konfigurerar RTE*
 
-## Förstå användargränssnittet med pekskärmsfunktioner och det klassiska användargränssnittet {#understand-touch-enabled-ui-and-classic-ui}
+## Förstå användargränssnittet med pekskärm och det klassiska användargränssnittet {#understand-touch-enabled-ui-and-classic-ui}
 
 Det användargränssnitt som har stöd för pekfunktioner är standardgränssnittet för Experience Manager. Adobe introducerade ett användargränssnitt med pekskärmsfunktioner med [responsiv design](/help/sites-authoring/responsive-layout.md) för redigeringsmiljön. Det användargränssnitt som har stöd för pekskärm är utformat för enheter med pekskärm och stationära datorer. Gränssnittet skiljer sig avsevärt från det ursprungliga klassiska gränssnittet.
 
@@ -39,29 +39,28 @@ Det användargränssnitt som har stöd för pekfunktioner är standardgränssnit
 >* Skillnaden mellan användargränssnitten finns i [Touch-gränssnittet och det klassiska gränssnittet](https://aemcq5pedia.wordpress.com/2018/01/05/touch-enabled-ui-aem6-3/)
 >* Mer information om användargränssnittet med pekfunktioner finns i [Experience Manager Touch-användargränssnittet](/help/sites-developing/touch-ui-concepts.md)
 
-
 ## Olika redigeringslägen {#editingmodes}
 
 Författare kan skapa och redigera textinnehåll i Experience Manager med hjälp av de olika komponentlägena. Alternativen i verktygsfältet för att skapa och formatera innehåll och användarupplevelsen i komponenter med RTE-funktioner i olika redigeringslägen varierar beroende på RTE-konfigurationer.
 
 | Redigeringsläge | Redigeringsområde | Rekommenderade funktioner som ska aktiveras | Pekgränssnitt | Klassiskt användargränssnitt |
 |--- |--- |--- |--- |--- |
-| Textbunden | On-place editing for quick, minor edits; Formatera utan att öppna en dialogruta | Minimala RTE-funktioner | Y | Y |
+| Textbunden | On-place editing for quick, minor edits; Format without opening a dialog box | Minimala RTE-funktioner | Y | Y |
 | RTE helskärm | Täcker hela sidan | Alla RTE-funktioner som krävs | Y | N |
-| Dialog | Dialogrutan visas ovanpå sidinnehållet men täcker inte hela sidan | Alla nödvändiga RTE-funktioner i Classic UI. aktivera funktioner i Touch-gränssnittet | Y | Y |
-| Dialogruta i helskärmsläge | Samma som helskärmsläge. innehåller fält i dialogrutan vid sidan om textredigeringsprojektet | Alla RTE-funktioner som krävs | Y | N |
+| Dialog | Dialogrutan visas ovanpå sidinnehållet men täcker inte hela sidan | Alla RTE-funktioner som krävs i det klassiska användargränssnittet. Aktivera funktionerna i det här användargränssnittet med gott omdöme | Y | Y |
+| Dialogruta i helskärmsläge | Samma som helskärmsläge; innehåller fält i dialogrutan tillsammans med textredigeraren | Alla RTE-funktioner som krävs | Y | N |
 
 >[!NOTE]
 >
 >Funktionen för källredigering är inte tillgänglig i inline-redigeringsläge i det användargränssnitt som har stöd för pekfunktioner. Du kan inte dra bilder i helskärmsläge. Alla andra funktioner fungerar i alla lägen.
 
-### Inline-redigering {#inline-editing}
+### Redigering direkt {#inline-editing}
 
 När innehållet öppnas (med en långsam dubbeltryckning/klick) kan det redigeras på sidan. Ett kompakt verktygsfält med mycket grundläggande alternativ visas.
 
 ![Inline-redigering med grundläggande verktygsfält i Touch-aktiverat användargränssnitt](assets/chlimage_1-36.png)
 
-*Bild: Inline-redigering med grundläggande verktygsfält i Touch-aktiverat användargränssnitt*
+*Bild: Inline-redigering med grundläggande verktygsfält i användargränssnittet med pekfunktioner*
 
 I det klassiska användargränssnittet kan du med en långsam dubbelklickning på komponenten redigera textbundet och med en orange kontur markeras innehållet. Om Innehållssökning är öppet visas ett verktygsfält med tillgängliga alternativ för RTF-formatering högst upp i fönstret. Om Innehållssökning inte är öppet visas inte formateringsalternativen och du kan bara göra grundläggande textredigeringar.
 
@@ -83,9 +82,9 @@ När du dubbelklickar på en komponent öppnas en dialogruta där du kan rediger
 
 *Bild: Dialogruteredigeringsläge i användargränssnittet med pekfunktioner*
 
-![Dialogruta i Classic UI som innehåller ett detaljerat verktygsfält för redigering](assets/chlimage_1-38.png)
+![Dialogruta i Classic UI med detaljerade verktygsfält för redigering](assets/chlimage_1-38.png)
 
-*Bild: Dialogruta i Classic UI som innehåller ett detaljerat verktygsfält för redigering*
+*Bild: Dialogrutan i det klassiska användargränssnittet som innehåller detaljerade verktygsfält för redigering*
 
 ## Om RTE-plugin-program och associerade funktioner {#aboutplugins}
 
@@ -146,17 +145,17 @@ The [RTE-redigeringsläge (och användargränssnittet)](#editingmodes) som du an
 >* **Typ**: `String`
 >* **Värde**: sökväg till noden som innehåller den faktiska konfigurationen
 >
->Namnge inte RTE-konfigurationsnoden som `config`. I annat fall gäller RTE-konfigurationerna bara för administratörerna och inte för användarna i gruppen `content-author`.
+>Ge inte RTE-konfigurationsnoden namnet `config`. I annat fall gäller RTE-konfigurationerna bara för administratörerna och inte för användarna i gruppen `content-author`.
 
 Konfigurera följande egenskaper som gäller i redigeringsläget för dialogrutor endast i Touch-gränssnittet:
 
 * `useFixedInlineToolbar`: Ange den här booleska egenskapen som är definierad på RTE-noden (en med sling:resourceType= `cq/gui/components/authoring/dialog/richtext`) till `True`, om du vill att verktygsfältet RTE ska vara fast i stället för flytande.
 
-   När den här egenskapen är true startas Richtext-redigering som standard på händelsen &quot;foundation-contentloaded&quot;.
+  När den här egenskapen är true startas Richtext-redigering som standard på händelsen &quot;foundation-contentloaded&quot;.
 
-   Du kan förhindra detta genom att ange egenskapen `customStart` till `True`och utlöser händelsen&quot;start-start&quot; för att starta redigering av textredigering. När den här egenskapen är true fungerar inte standardbeteendet, som börjar med klickning.
+  Du kan förhindra detta genom att ange egenskapen `customStart` till `True`och utlöser händelsen&quot;start-start&quot; för att starta redigering av textredigering. När den här egenskapen är true fungerar inte standardbeteendet, som börjar med klickning.
 
-* `customStart`: Ställ in den här booleska egenskapen som definierats på RTE-noden på `True`för att styra när RTE ska startas genom att händelsen utlöses `rte-start`.
+* `customStart`: Ange den här booleska egenskapen som definieras på RTE-noden till `True`för att styra när RTE ska startas genom att händelsen utlöses `rte-start`.
 
 * `rte-start`: Utlös den här händelsen på `contenteditable-div` av RTE, när redigering av RTE ska börja. Detta fungerar bara om `customStart` har angetts till true.
 
@@ -167,7 +166,7 @@ När textredigeraren används i den beröringsaktiverade dialogrutan anger du eg
 Du kan definiera på vilken HTML-väljare textredigeraren ska starta genom att konfigurera följande egenskaper:
 
 * **`editElementQuery`** - Definierad den `cq:InplaceEditingConfig`används den här egenskapen för att ange en väljare för det HTML-element som textbundna redigeringar för textkomponenten ska startas på. Om inget anges startas den infogade redigeringen direkt på HTML i textkomponenten.
-* **`textPropertyName`** - Definierad den `cq:InplaceEditingConfig`används den här egenskapen för att ange namnet på egenskapen som ska sparas på noden content där textkomponentens HTML-värde ska bevaras efter infogad redigering.
+* **`textPropertyName`** - Definierad den `cq:InplaceEditingConfig`används den här egenskapen för att ange namnet på den egenskap som ska sparas på noden content där textkomponentens HTML-värde ska bevaras efter infogad redigering.
 
 Motsvarande egenskap för dialogläge är `name`.
 
@@ -175,7 +174,7 @@ Motsvarande egenskap för dialogläge är `name`.
 
 RTE-funktioner är tillgängliga via en serie plugin-program, var och en med features-egenskaper. Du kan konfigurera egenskapen features för att aktivera eller inaktivera de olika funktionerna i varje plugin-program.
 
-Detaljerade konfigurationer av RTE-plugin-program finns i [hur du aktiverar och konfigurerar RTE-plugin-program](/help/sites-administering/configure-rich-text-editor-plug-ins.md).
+Detaljerade konfigurationer av RTE-plugin-program finns i [aktivera och konfigurera RTE-plugin-program](/help/sites-administering/configure-rich-text-editor-plug-ins.md).
 
 **Exempel**: Hämta [den här exempelkonfigurationen](/help/sites-administering/assets/rte-sample-all-features-enabled-10.zip) som visar hur du konfigurerar RTE. I det här paketet är alla funktioner aktiverade.
 
@@ -196,7 +195,7 @@ Detaljerade konfigurationer av RTE-plugin-program finns i [hur du aktiverar och 
 
 ## Verktygsfältet Konfigurera RTE {#dialogfullscreen}
 
-I AEM kan du konfigurera gränssnittet för RTF-redigeraren på olika sätt för de olika redigeringslägena. Standardinställningarna anges nedan. Du kan åsidosätta dessa standardinställningar baserat på dina behov. Du anpassar bara de verktygsfältsfunktioner som du vill ge författarna. Du behöver inte ange alla verktygsfältskonfigurationer.
+I AEM kan du konfigurera gränssnittet för textredigeraren på ett annat sätt för de olika redigeringslägena. Standardinställningarna anges nedan. Du kan åsidosätta dessa standardinställningar baserat på dina behov. Du anpassar bara de verktygsfältsfunktioner som du vill ge författarna. Du behöver inte ange alla verktygsfältskonfigurationer.
 
 Konfigurera verktygsfältet för `dialogFullScreen`använder du följande exempelkonfiguration.
 
@@ -241,9 +240,9 @@ Konfigurera verktygsfältet för `dialogFullScreen`använder du följande exempe
 
 Olika gränssnittsinställningar används för textbundet läge och helskärmsläge. Verktygsfältsegenskapen används för att ange knapparna i verktygsfältet.
 
-Om till exempel själva knappen är en funktion (till exempel `Bold`), anges som `PluginName#FeatureName` (t.ex. `links#modifylink`).
+Om till exempel själva knappen är en funktion (till exempel `Bold`), anges som `PluginName#FeatureName` (till exempel `links#modifylink`).
 
-Om knappen är en pekare (som innehåller vissa funktioner i ett plugin-program) anges den som `#PluginName` (t.ex. `#format`).
+Om knappen är en pekare (som innehåller vissa funktioner i ett plugin-program) anges den som `#PluginName` (till exempel `#format`).
 
 Avgränsare (`|`) mellan en grupp knappar kan anges med `-`.
 
@@ -256,7 +255,7 @@ Administratörer kan styra textredigeringsalternativen med hjälp av innehållsp
 De tillgängliga alternativen i textredigeraren flödar nedåt från användargränssnittskonfigurationerna till innehållsprinciperna.
 
 * Konfigurationsinställningarna för användargränssnittet definierar vilka alternativ som är tillgängliga för innehållsprinciperna.
-* Om användargränssnittskonfigurationen för RTE har tagits bort eller inte aktiverar ett objekt kan innehållsprincipen inte konfigurera det.
+* Om användargränssnittskonfigurationen för textredigeraren har tagits bort eller inte aktiverar ett objekt kan innehållsprincipen inte konfigurera det.
 * En författare har bara tillgång till funktioner som är tillgängliga i användargränssnittskonfigurationerna och i innehållsprinciperna.
 
 Du kan till exempel se [Dokumentation för komponenten Text Core](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/text.html?lang=en#the-text-component-and-the-rich-text-editor).
@@ -294,13 +293,13 @@ Nedan finns ett exempelfragment som kopplar kommandot Fet till koralikonen med n
 
 ## Växla till CoralUI 2 Rich Text Editor {#switch-to-coralui-rich-text-editor}
 
-På en sida kan du antingen inkludera CoralUI 2 RTE clientlib eller CoralUI 3 RTE clientlib. Som standard innehåller textredigeraren klienten CoralUI 3 RTE. Så här byter du till CoralUI 2 RTE:
+På en sida kan du antingen inkludera CoralUI 2 RTE clientlib eller CoralUI 3 RTE clientlib. Som standard innehåller textredigeraren klienten CoralUI 3 RTE. Utför följande steg för att växla till CoralUI 2 RTE.
 
 >[!NOTE]
 >
 >Adobe rekommenderar inte detta som en god praxis. Växla till CoralUI 2 RTE som sista utväg. Anpassade plugin-program för CoralUI 2 RTE fungerar med CoralUI 3 RTE om plugin-programmen inte är beroende av interna RTE-värden, till exempel klasser.
 >
->Om du använder anpassade plugin-program för CoralUI3 RTE ska du använda `rte.coralui3` bibliotek.
+>Använd anpassade plugin-program för CoralUI3 RTE `rte.coralui3` bibliotek.
 
 
 1. Täck över noden `/libs/cq/gui/components/authoring/editors/clientlibs/core` under `/apps`och gör följande:
@@ -313,7 +312,7 @@ På en sida kan du antingen inkludera CoralUI 2 RTE clientlib eller CoralUI 3 RT
 
    Ta bort kategori `cq.authoring.dialog` från `/apps/cq/gui/components/authoring/dialog/richtext/clientlibs/rte/coralui3` och lägg till `/apps/cq/gui/components/authoring/dialog/richtext/clientlibs/rte/coralui2`.
 
-1. Ändra eventuellt annat beroende som ska tas med på sidan från `rte.coralui3` till `rte.coralui2`. Till exempel efter att noden har ersatts `/libs/mcm/campaign/components/touch-ui/clientlibs/rte` under `/apps`, ändra beroende av det från `rte.coralui3` till `rte.coralui2`.
+1. Ändra eventuella andra beroenden som ska tas med på sidan från `rte.coralui3` till `rte.coralui2`. Till exempel efter att noden har ersatts `/libs/mcm/campaign/components/touch-ui/clientlibs/rte` under `/apps`, ändra beroende av det från `rte.coralui3` till `rte.coralui2`.
 
 1. Täck över noden `cq/ui/widgets` under `/apps`. Ersätt beroendet `cq.rte` på noden `/apps/cq/ui/widgets` med `cq.coralui2.rte`.
 
@@ -323,7 +322,7 @@ På en sida kan du antingen inkludera CoralUI 2 RTE clientlib eller CoralUI 3 RT
 
 ## Ytterligare information {#further-information}
 
-Mer information om hur du konfigurerar RTE finns i [API för AEM](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html?class=CQ.form.RichText) referens.
+Mer information om hur du konfigurerar RTE finns i [AEM Widget API](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html?class=CQ.form.RichText) referens.
 
 Du kan särskilt se vilka plugin-program och relaterade alternativ som är tillgängliga:
 
@@ -339,7 +338,7 @@ Dessa kan användas för att utöka och anpassa din egen RTE. Om du till exempel
 
 ## Kända begränsningar {#known-limitations}
 
-AEM har följande begränsningar:
+AEM RTE-kapacitet har följande begränsningar:
 
 * RTE-funktioner stöds bara i AEM komponentdialogrutor. RTE stöds inte i guider eller Foundation-formulär som [Sidegenskaper](/help/sites-developing/page-properties-views.md) och [Ställning](/help/sites-authoring/scaffolding.md) på användargränssnittet med pekskärm.
 
@@ -353,7 +352,7 @@ AEM har följande begränsningar:
 
 * Aktivera bara plugin-program utan popup-fönster för en flytande dialogruta. Plugin-program utan popup-fönster är mindre och lämpar sig bäst för en flytande dialogruta.
 * Aktivera plugin-programmen med större popup-fönster, till exempel `Paste` plugin-program, endast i helskärmsläge eller helskärmsläge. Plugin-program med stor popup-meny behöver mer utrymme på skärmen för att kunna skapa på ett bra sätt.
-* Om du använder anpassade plugin-program för CoralUI3 RTE ska du använda `rte.coralui3` bibliotek.
+* Använd anpassade plugin-program för CoralUI3 RTE `rte.coralui3` bibliotek.
 
 ## Felsöka vanliga problem med RTE {#troubleshoot-issues-with-aem-rich-text-editor}
 
@@ -373,7 +372,7 @@ Problemet åtgärdas i AEM 6.3 och senare.
 
 **Innehåll i HTML som lagts till i källredigeringsläge förloras**
 
-Lägg inte till en XSS-HTML. AEM, och inte RTE, kan ta bort en del HTML-innehåll som följer XSS-antisamitetsreglerna.
+Lägg inte till en XSS-benägenhet HTML. AEM, och inte RTE, kan ta bort en del HTML-innehåll som följer XSS-antisamitetsreglerna.
 
 Om du vill verifiera att det inklistrade HTML har sparats kontrollerar du det sparade innehållet i CRXDE (i innehållsnoden).
 
@@ -398,4 +397,3 @@ Om uppdateringarna av gränssnittskonfigurationerna återspeglas för administra
 >* [Konfigurera RTE för hjälpmedelsanpassade webbplatser](rte-accessible-content.md)
 >* [Funktionsparitet för Touch UI och Classic UI](../release-notes/touch-ui-features-status.md)
 >* [Självstudiekurs för att skapa en sammansatt flerfältskomponent](https://experience-aem.blogspot.com/2019/05/aem-65-touchui-composite-multifield-with-coral3-rte-rich-text.html)
-

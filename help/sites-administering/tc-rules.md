@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: eedff940-4a46-4c24-894e-a5aa1080d23d
 feature: Language Copy
 exl-id: 8ca7bbcc-413a-49a8-a836-7083a9cadda1
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '1150'
+source-wordcount: '1149'
 ht-degree: 0%
 
 ---
@@ -64,7 +64,7 @@ En regel är en `node` element med ett eller flera underordnade `property` eleme
 </node>
 ```
 
-Var och en av dessa `node` elementen har följande egenskaper:
+Alla dessa `node` elementen har följande egenskaper:
 
 * The `path` -attributet innehåller sökvägen till rotnoden för grenen som reglerna gäller för.
 * Underordnad `property` element identifierar de nodegenskaper som ska översättas för alla resurstyper:
@@ -134,7 +134,7 @@ Filen translation_rules.xml består av en `nodelist` element med flera underordn
 
 ## Filteregenskaper {#filtering-properties}
 
-Du kan filtrera noder som har en viss egenskap genom att använda en `filter` -element.
+Du kan filtrera noder som har en viss egenskap med en `filter` -element.
 
 Följande regler skapar till exempel allt innehåll i `text` egenskaper som ska översättas, förutom de noder som har egenskapen `draft` ange till `true`.
 
@@ -163,7 +163,7 @@ Så här kommer du åt den:
 
    ![chlimage_1-56](assets/chlimage_1-56.jpeg)
 
-Härifrån kan du **Lägg till kontext**. På så sätt kan du lägga till en sökväg.
+Härifrån kan du **Lägg till kontext**. På så sätt kan du lägga till en bana.
 
 ![chlimage_1-57](assets/chlimage_1-57.jpeg)
 
@@ -203,7 +203,7 @@ I användargränssnittet kan du checka in/avmarkera **Översätt** i **Egenskape
 
 I användargränssnittet kan du checka in/avmarkera **Översätt** i **Egenskaper** -tabb, men för de specifika egenskaper som har språkkoder som värde.
 
-För att förtydliga skillnaden mellan `updateDestinationLanguage` och `translate`Här följer ett enkelt exempel på ett sammanhang med bara två regler:
+Förtydliga skillnaden mellan `updateDestinationLanguage` och `translate`Här följer ett enkelt exempel på ett sammanhang med bara två regler:
 
 ![chlimage_1-61](assets/chlimage_1-61.jpeg)
 

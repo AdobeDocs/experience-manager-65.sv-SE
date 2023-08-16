@@ -1,5 +1,5 @@
 ---
-title: Sammanställa dokument med hjälp av Bates-numrering
+title: Sammanställa dokument med Bates-numrering
 seo-title: Assembling Documents Using Bates Numbering
 description: Använd Bates-numrering för att sammanställa PDF-dokument med Java- och Web Service API.
 seo-description: Use Bates numbering to assemble PDF documents using the Java and Web Service API.
@@ -12,14 +12,14 @@ topic-tags: operations
 discoiquuid: 77e9b895-1313-4a5b-a2d5-cdb65bdc1966
 role: Developer
 exl-id: 2a4e21c4-f2f5-44cd-b8ed-7b572782a2f1
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 10227bcfcfd5a9b0f126fee74dce6ec7842f5e95
 workflow-type: tm+mt
 source-wordcount: '1922'
 ht-degree: 0%
 
 ---
 
-# Sammanställa dokument med hjälp av Bates-numrering {#assembling-documents-using-bates-numbering}
+# Sammanställa dokument med Bates-numrering {#assembling-documents-using-bates-numbering}
 
 **Exempel och exempel i det här dokumentet är bara för AEM Forms i JEE-miljö.**
 
@@ -48,7 +48,7 @@ I det här avsnittet placeras den unika sididentifieraren i ett dokuments sidhuv
  </DDX>
 ```
 
-Det här DDX-dokumentet sammanfogar två PDF-dokument med namnet *map.pdf* och *vägbeskrivning.pdf* till ett enda dokument i PDF. Det resulterande PDF-dokumentet innehåller en rubrik som består av en unik sididentifierare. Dokumentet i ovanstående bild visar till exempel 000016.
+Det här DDX-dokumentet sammanfogar två PDF-dokument med namnet *map.pdf* och *vägbeskrivning.pdf* till ett enda dokument i PDF. Det resulterande PDF-dokumentet innehåller ett sidhuvud som består av en unik sididentifierare. Dokumentet i ovanstående bild visar till exempel 000016.
 
 >[!NOTE]
 >
@@ -130,7 +130,7 @@ Sammanställa ett PDF-dokument som använder unika sididentifierare (Bates-numre
 
 1. Inkludera projektfiler.
 
-   Inkludera JAR-klientfiler, t.ex. adobe-assembler-client.jar, i Java-projektets klassökväg.
+   Inkludera JAR-klientfiler, som adobe-assembler-client.jar, i Java-projektets klassökväg.
 
 1. Skapa en PDF Assembler-klient.
 
@@ -139,14 +139,14 @@ Sammanställa ett PDF-dokument som använder unika sididentifierare (Bates-numre
 
 1. Referera till ett befintligt DDX-dokument.
 
-   * Skapa en `java.io.FileInputStream` som representerar DDX-dokumentet genom att använda dess konstruktor och skicka ett strängvärde som anger platsen för DDX-filen.
+   * Skapa en `java.io.FileInputStream` -objekt som representerar DDX-dokumentet genom att använda dess konstruktor och skicka ett strängvärde som anger platsen för DDX-filen.
    * Skapa en `com.adobe.idp.Document` genom att använda konstruktorn och skicka `java.io.FileInputStream` -objekt.
 
 1. Referera PDF-dokument för indata.
 
    * Skapa en `java.util.Map` objekt som används för att lagra indatadokument i PDF genom att använda en `HashMap` konstruktor.
    * För varje indatadokument i PDF skapar du en `java.io.FileInputStream` genom att använda dess konstruktor och skicka indatadokumentets plats i PDF. I så fall ska du skicka platsen för ett oskyddat PDF-dokument.
-   * För varje indatadokument i PDF skapar du en `com.adobe.idp.Document` -objektet och skicka `java.io.FileInputStream` som innehåller dokumentet PDF.
+   * För varje indatadokument i PDF skapar du en `com.adobe.idp.Document` -objektet och skicka `java.io.FileInputStream` -objekt som innehåller dokumentet PDF.
    * Lägg till en post i `java.util.Map` genom att anropa dess `put` och skicka följande argument:
 
       * Ett strängvärde som representerar nyckelnamnet. Detta värde måste matcha värdet för källelementet PDF som anges i DDX-dokumentet. Namnet på källfilen i PDF som anges i DDX-dokumentet som introduceras i det här avsnittet är Loan.pdf.
@@ -193,13 +193,13 @@ Sammanställa ett PDF-dokument som använder unika sididentifierare (Bates-numre
 
    >[!NOTE]
    >
-   >Ersätt `localhost` med IP-adressen till den server som är värd för AEM Forms.
+   >Ersätt `localhost` med IP-adressen till den server där AEM Forms finns.
 
 1. Skapa en PDF Assembler-klient.
 
    * Skapa en `AssemblerServiceClient` genom att använda dess standardkonstruktor.
    * Skapa en `AssemblerServiceClient.Endpoint.Address` genom att använda `System.ServiceModel.EndpointAddress` konstruktor. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/AssemblerService?blob=mtom`). Du behöver inte använda `lc_version` -attribut. Det här attributet används när du skapar en tjänstreferens.
-   * Skapa en `System.ServiceModel.BasicHttpBinding` genom att hämta värdet för `AssemblerServiceClient.Endpoint.Binding` fält. Sänd returvärdet till `BasicHttpBinding`.
+   * Skapa en `System.ServiceModel.BasicHttpBinding` genom att hämta värdet för `AssemblerServiceClient.Endpoint.Binding` fält. Skicka returvärdet till `BasicHttpBinding`.
    * Ange `System.ServiceModel.BasicHttpBinding` objektets `MessageEncoding` fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
    * Aktivera grundläggande HTTP-autentisering genom att utföra följande åtgärder:
 
@@ -226,7 +226,7 @@ Sammanställa ett PDF-dokument som använder unika sididentifierare (Bates-numre
    * Skapa en `MyMapOf_xsd_string_To_xsd_anyType` -objekt. Det här samlingsobjektet används för att lagra PDF-indatadokument.
    * För varje indatadokument i PDF skapar du en `MyMapOf_xsd_string_To_xsd_anyType_Item` -objekt. Om du t.ex. använder två indata-PDF-dokument skapar du två `MyMapOf_xsd_string_To_xsd_anyType_Item` objekt.
    * Tilldela ett strängvärde som representerar nyckelnamnet till `MyMapOf_xsd_string_To_xsd_anyType_Item` objektets `key` fält. Detta värde måste matcha värdet för källelementet PDF som anges i DDX-dokumentet. (Utför den här åtgärden för varje dokument i PDF.)
-   * Tilldela `BLOB` objekt som lagrar PDF-dokumentet till `MyMapOf_xsd_string_To_xsd_anyType_Item` objektets `value` fält. (Utför den här åtgärden för varje dokument i PDF.)
+   * Tilldela `BLOB` det objekt som lagrar PDF-dokumentet till `MyMapOf_xsd_string_To_xsd_anyType_Item` objektets `value` fält. (Utför den här åtgärden för varje dokument i PDF.)
    * Lägg till `MyMapOf_xsd_string_To_xsd_anyType_Item` objekt till `MyMapOf_xsd_string_To_xsd_anyType` -objekt. Anropa `MyMapOf_xsd_string_To_xsd_anyType` objektets `Add` och skicka `MyMapOf_xsd_string_To_xsd_anyType` -objekt. (Utför den här åtgärden för varje dokument i PDF.)
 
 1. Ange det inledande Bates-nummervärdet.
@@ -249,7 +249,7 @@ Sammanställa ett PDF-dokument som använder unika sididentifierare (Bates-numre
    Utför följande åtgärder för att hämta det nya PDF-dokumentet:
 
    * Öppna `AssemblerResult` objektets `documents` fält, vilket är ett `Map` -objekt som innehåller de resulterande PDF-dokumenten.
-   * Iterera genom `Map` tills du hittar nyckeln som matchar namnet på det resulterande dokumentet. Sätt sedan den arraymedlemmens `value` till `BLOB`.
+   * Iterera genom `Map` tills du hittar nyckeln som matchar namnet på det resulterande dokumentet. Byt sedan ut arraymedlemmens `value` till `BLOB`.
    * Extrahera de binära data som representerar PDF-dokumentet genom att öppna dess `BLOB` objektets `MTOM` -egenskap. Detta returnerar en array med byte som du kan skriva ut till en PDF-fil.
 
 **Se även**

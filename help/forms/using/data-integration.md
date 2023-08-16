@@ -11,9 +11,9 @@ discoiquuid: e397c6ce-d73f-4183-8445-1897a8906960
 docset: aem65
 feature: Form Data Model
 exl-id: dd1146e4-952d-4dfa-8084-46c6096c4177
-source-git-commit: e9f64722ba7df0a7f43aaf1005161483e04142f5
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '522'
+source-wordcount: '520'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 0%
 
 Företagsinfrastrukturer omfattar olika datasystem eller datakällor som databaser, webbtjänster, REST-tjänster, OData-tjänster och CRM-lösningar. Tillsammans utgör de ett informationssystem som skickar data till affärssystemen för att utföra den dagliga verksamheten. Å andra sidan hämtar applikationerna in data och skickar tillbaka dem för att uppdatera datakällorna.
 
-[!DNL AEM Forms] program som adaptiva formulär och interaktiv kommunikation kräver integration med datakällor för att hämta in kunddata när formulär återges och för att skapa interaktiv kommunikation. Det finns situationer när data hämtas från datakällor baserat på användarindata i anpassningsbara formulär. Dessutom kan inskickade data i anpassningsbara formulär skrivas tillbaka för att uppdatera respektive datakälla.
+[!DNL AEM Forms] program som adaptiva formulär och interaktiv kommunikation kräver integration med datakällor för att hämta in kunddata när formulär återges och interaktiv kommunikation skapas. Det finns situationer när data hämtas från datakällor baserat på användarindata i anpassningsbara formulär. Dessutom kan inskickade data i anpassningsbara formulär skrivas tillbaka för att uppdatera respektive datakälla.
 
 Ett distribuerat modulärt system har sina fördelar, men utmaningen består i att integrera och skapa dataassociationer mellan datakällor. Dataintegrering är nyckeln till en fungerande och effektiv företagsinfrastruktur med olika datakällor kopplade till applikationer för utbyte av affärsdata.
 
@@ -44,13 +44,13 @@ När du har skapat en formulärdatamodell kan du använda den i olika anpassning
 * Skapa anpassningsbara formulär och interaktiv kommunikation baserat på formulärdatamodell
 * Förifyll adaptiva formulär och interaktiv kommunikation från konfigurerade datakällor
 * Anropa datakälltjänster/åtgärder med hjälp av anpassningsbara formulärregler
-* Skriv data från anpassningsbara formulär till datakällor
+* Skriv anpassade formulärdata till datakällor
 
 ## Kom igång med dataintegrering {#get-started-with-data-integration}
 
 Det första steget för att implementera dataintegrering är att identifiera och konfigurera datakällor som lagrar information som du vill använda i adaptiva formulär och interaktiva kommunikationssituationer. Därefter skapar du en formulärdatamodell som använder datamodellsobjekt, egenskaper och tjänster från en eller flera datakällor. Du kan skapa anpassningsbara formulär och interaktiv kommunikation baserat på en formulärdatamodell där adaptiva formulärfält eller platshållare i interaktiv kommunikation är bundna till respektive datakällegenskap.
 
-[!DNL AEM Forms] kan du också skapa en formulärdatamodell som är oberoende av datakällor och senare associera eller binda datamodellsobjekt och egenskaper i formulärdatamodellen med datakällan. Det eliminerar eventuella beroenden till datakällor när du arbetar med en formulärdatamodell.
+[!DNL AEM Forms] Med kan du också skapa en formulärdatamodell som är oberoende av datakällor och associera eller binda datamodellsobjekt och egenskaper i formulärdatamodellen med datakällan senare. Det eliminerar eventuella beroenden till datakällor när du arbetar med en formulärdatamodell.
 
 Läs följande för att komma igång, förstå och implementera dataintegrering.
 

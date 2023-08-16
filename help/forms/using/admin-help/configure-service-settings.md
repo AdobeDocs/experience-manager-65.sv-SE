@@ -10,16 +10,16 @@ geptopics: SG_AEMFORMS/categories/managing_services
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 2fab4b0c-e5db-47cd-b85a-4ff5ad6eb178
 exl-id: a6a10ff0-6f4d-42df-9b4e-f98a53cf1806
-source-git-commit: 3e6eba85dbd9e98ac29fed55c1787e5633bafc04
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '10683'
+source-wordcount: '10678'
 ht-degree: 0%
 
 ---
 
 # Konfigurera tjänstinställningar {#configure-service-settings}
 
-Du kan använda sidan Tjänsthantering för att konfigurera inställningar för var och en av de tjänster som är en del av AEM formulär. De tillgängliga inställningarna varierar beroende på vilken tjänst som konfigureras.
+Du kan använda sidan Tjänsthantering för att konfigurera inställningar för var och en av de tjänster som ingår i AEM formulär. De tillgängliga inställningarna varierar beroende på vilken tjänst som konfigureras.
 
 1. I administrationskonsolen klickar du på Tjänster > Program och tjänster > Tjänsthantering.
 1. Stoppa tjänsten innan du ändrar den. (Se [Starta och stoppa tjänster](/help/forms/using/admin-help/starting-stopping-services.md#starting-and-stopping-services).)
@@ -28,7 +28,7 @@ Du kan använda sidan Tjänsthantering för att konfigurera inställningar för 
 
    >[!NOTE]
    >
-   >Alla tjänster som listas på sidan Tjänsthantering har inte fliken Konfiguration. För processer som du har skapat visas bara fliken Konfiguration om du har lagt till en konfigurationsparameter till processen i Workbench. (Se&quot;Konfigurationsparametrar&quot; i [Workbench - hjälp](https://www.adobe.com/go/learn_aemforms_workbench_63) .)
+   >Alla tjänster på sidan Tjänsthantering har inte fliken Konfiguration. För processer som du har skapat visas bara fliken Konfiguration om du har lagt till en konfigurationsparameter till processen i Workbench. (Se&quot;Konfigurationsparametrar&quot; i [Workbench - hjälp](https://www.adobe.com/go/learn_aemforms_workbench_63) .)
 
 
 1. Klicka på fliken Säkerhet och ange säkerhetsinställningarna för tjänsten. Se [Ändra säkerhetsinställningar för en tjänst](configure-service-settings.md#modifying-security-settings-for-a-service).
@@ -63,13 +63,13 @@ Följande inställningar är tillgängliga för den streckkodade formulärtjäns
 >
 >Som standard är alla alternativ markerade. Avmarkera bara ett alternativ om du är säker på att inga streckkoder visas på det sättet i formulären.
 
-**Bas filsökväg:** Den filsökväg som är relativ till vilka parametrarna för gruppindata och utdata för åtgärderna Kör XML-filjobb och Kör Flat File-jobb tolkas. I klustrade konfigurationer måste sökvägen till basfilen vara en delad filsystemplats som alla klusternoder har läs-/skrivåtkomst till.
+**Sökväg till basfil:** Den filsökväg som är relativ till vilka parametrarna för gruppindata och utdata för åtgärderna Kör XML-filjobb och Kör Flat File-jobb tolkas. I klustrade konfigurationer måste sökvägen till basfilen vara en delad filsystemplats som alla klusternoder har läs-/skrivåtkomst till.
 
-**Namn på datakälla:** Namnet på datakällan som används för att underhålla status- och historikinformation om batchbearbetningsjobb. Den angivna datakällan måste ha stöd för globala (XA) transaktioner.
+**Namn på datakälla:** Namnet på den datakälla som används för att underhålla status- och historikinformation om batchbearbetningsjobb. Den angivna datakällan måste ha stöd för globala (XA) transaktioner.
 
 ## Inställningar för tjänsten Central Migration Bridge (inaktuellt) {#central-migration-bridge-service-settings}
 
-Tjänsten Central Migration Bridge ( `CentralMigrationBridge`) anropar en delmängd av funktionaliteten i Adobe Central Pro Output Server (Central) som innehåller kommandona JFMERGE, JFTRANS och XMLIMPORT. Med tjänståtgärderna för central migreringsbrygga kan du återanvända följande centrala resurser i AEM formulär:
+Tjänsten Central Migration Bridge ( `CentralMigrationBridge`) anropar en delmängd av funktionaliteten i Adobe Central Pro Output Server (Central) som innehåller kommandona JFMERGE, JFTRANS och XMLIMPORT. Med tjänsten för central migreringsbrygga kan du återanvända följande centrala resurser i AEM formulär:
 
 * malldesign (&amp;ast;.ifd)
 * utdatamallar (&amp;ast;.mdf)
@@ -93,7 +93,7 @@ Om standardsökvägen till exempel är inställd på `/LiveCycleES/ConnectorforE
 
 `/LiveCycleES/ConnectorforEMCDocumentum/AssetLinkObjects/Docbase/forms/`
 
-Standardvärdet för den här inställningen är `/LiveCycleES/ConnectorforEMCDocumentum/AssetLinkObjects`.
+Standardvärdet för inställningen är `/LiveCycleES/ConnectorforEMCDocumentum/AssetLinkObjects`.
 
 ## Content Repository Connector for IBM FileNet service settings {#content-repository-connector-for-ibm-filenet-service-settings}
 
@@ -107,7 +107,7 @@ Om standardsökvägen till exempel är inställd på `/LiveCycleES/ConnectorforI
 
 `/LiveCycleES/ConnectorforIBMFileNet/AssetLinkObjects/Docbase/forms/`
 
-Standardvärdet för den här inställningen är `/LiveCycleES/ConnectorforIBMFileNet/AssetLinkObjects`.
+Standardvärdet för inställningen är `/LiveCycleES/ConnectorforIBMFileNet/AssetLinkObjects`.
 
 ## Konvertera tjänstinställningar för PDF {#convert-pdf-service-settings}
 
@@ -117,7 +117,7 @@ Följande inställningar är tillgängliga för tjänsten Convert PDF.
 
 **Transaktionstyp:** Anger hur en transaktionskontext ska spridas till en åtgärd.
 
-**Obligatoriskt:** Stöder en transaktionskontext om en sådan finns. i annat fall skapas en ny transaktionskontext. Detta är standardvärdet.
+**Obligatoriskt:** Stöder en transaktionskontext om en sådan finns, annars skapas en ny transaktionskontext. Det här är standardvärdet.
 
 **Kräver nytt:** Skapar alltid en ny transaktionskontext. Om det finns en aktiv transaktionskontext pausas den.
 
@@ -133,7 +133,7 @@ Följande inställningar är tillgängliga för tjänsten Convert PDF.
 
 ## Distiller tjänstinställningar {#distiller-service-settings}
 
-Tjänsten Distiller ( `DistillerService`) konverterar PostScript-, Encapsulated PostScript- (EPS) och PRN-filer till PDF över ett nätverk.
+Distiller-tjänsten ( `DistillerService`) konverterar PostScript-, Encapsulated PostScript- (EPS) och PRN-filer till PDF över ett nätverk.
 
 Följande inställningar är tillgängliga för tjänsten Distiller.
 
@@ -151,7 +151,7 @@ Följande inställningar är tillgängliga för tjänsten Distiller.
 
 Nya inställningar kan skapas via användargränssnittet i PDF Generator.
 
-**Säkerhetsinställningar:** Förkonfigurerade säkerhetsinställningar som används för genererade PDF-dokument. Standardvärdet är Ingen säkerhet. Du måste skapa skyddsinställningar med PDF Generator och sedan ange inställningen här.
+**Skyddsinställningar:** Förkonfigurerade säkerhetsinställningar som används för genererade PDF-dokument. Standardvärdet är Ingen säkerhet. Du måste skapa skyddsinställningar med PDF Generator och sedan ange inställningen här.
 
 **Poolstorlek:** Poolens ursprungliga storlek. När Distiller-tjänsten distribueras används det här numret för att avgöra hur många instanser av tjänstimplementering som skapas och tilldelas den kostnadsfria poolen som väntar på anrop. Tjänstbehållaren kan sedan svara direkt på anropsbegäranden utan att först initiera en tjänstinstans.
 
@@ -159,7 +159,7 @@ Nya inställningar kan skapas via användargränssnittet i PDF Generator.
 
 >[!NOTE]
 >
->Adobe® LiveCycle® Content Services ES (utgått) är ett innehållshanteringssystem som installeras med LiveCycle. Det gör det möjligt för användarna att utforma, hantera, övervaka och optimera humancentrerade processer. Supporten för innehållstjänster (borttaget) upphör 2014-12-31. Se [Adobe produktlivscykeldokument](https://www.adobe.com/support/products/enterprise/eol/eol_matrix.html).
+>Adobe® LiveCycle® Content Services ES (Borttagen) är ett innehållshanteringssystem som installeras med LiveCycle. Det gör det möjligt för användarna att utforma, hantera, övervaka och optimera humancentrerade processer. Supporten för innehållstjänster (borttaget) upphör 2014-12-31. Se [Adobe product lifecycle document](https://www.adobe.com/support/products/enterprise/eol/eol_matrix.html).
 
 Dokumenthanteringstjänsten ( `DocumentManagementService`) gör det möjligt för processer att använda innehållshanteringsfunktionen som tillhandahålls av Content Services (Borttagen). Dokumenthanteringsåtgärder innehåller grundläggande uppgifter som krävs för att underhålla utrymme och innehåll i innehållshanteringssystemet. Exempel på sådana uppgifter är kopiera, ta bort, flytta, hämta och lagra innehåll, skapa blanksteg och associationer samt hämta och ange innehållsattribut.
 
@@ -249,11 +249,11 @@ Tjänsten Generate PDF ( `GeneratePDFService`) konverterar filer i olika format 
 
 Följande inställningar är tillgängliga för tjänsten Generate PDF.
 
-**Adobe PDF-inställningar:** Namnet på de förkonfigurerade Adobe PDF-inställningarna som ska tillämpas på ett konverteringsjobb, om dessa inställningar inte anges som en del av API-anropsparametrarna. Adobe PDF-inställningarna konfigureras i administrationskonsolen genom att klicka på Tjänster > PDF Generator > Adobe PDF-inställningar. De här inställningarna gäller endast för PDFMaker-baserade konverteringar.
+**Adobe PDF-inställningar:** Namnet på de förkonfigurerade Adobe PDF-inställningarna som ska tillämpas på ett konverteringsjobb, om dessa inställningar inte anges som en del av API-anropsparametrarna. Adobe PDF-inställningarna konfigureras i administrationskonsolen genom att klicka på Tjänster > PDF Generator> Adobe PDF-inställningar. De här inställningarna gäller endast för PDFMaker-baserade konverteringar.
 
-**Säkerhetsinställningar:** Namnet på de förkonfigurerade säkerhetsinställningarna som ska tillämpas på ett konverteringsjobb, om dessa inställningar inte anges som en del av API-anropsparametrarna. Säkerhetsinställningarna konfigureras i administrationskonsolen genom att klicka på Tjänster > PDF Generator > Säkerhetsinställningar.
+**Skyddsinställningar:** Namnet på de förkonfigurerade säkerhetsinställningarna som ska tillämpas på ett konverteringsjobb, om dessa inställningar inte anges som en del av API-anropsparametrarna. Säkerhetsinställningarna konfigureras i administrationskonsolen genom att klicka på Tjänster > PDF Generator> Säkerhetsinställningar.
 
-**Filtypsinställningar:** Namnet på den förkonfigurerade filtypsinställningen som ska användas för ett konverteringsjobb, om dessa inställningar inte anges som en del av API-anropsparametrarna. Filtypsinställningarna konfigureras i administrationskonsolen genom att klicka på Tjänster > PDF Generator > Filtypsinställningar.
+**Filtypsinställningar:** Namnet på den förkonfigurerade filtypsinställningen som ska användas för ett konverteringsjobb, om dessa inställningar inte anges som en del av API-anropsparametrarna. Filtypsinställningarna konfigureras i administrationskonsolen genom att klicka på Tjänster > PDF Generator> Filtypsinställningar.
 
 **Använd Acrobat WebCapture (endast Windows):** När den här inställningen är true använder Generate PDF-tjänsten Acrobat X Pro för alla HTML till PDF-konverteringar. Detta kan förbättra kvaliteten på PDF-filer som skapas från HTML, men prestandan kan vara något lägre. Standardvärdet är false.
 
@@ -263,11 +263,11 @@ Följande inställningar är tillgängliga för tjänsten Generate PDF.
 
 **Reguljära uttryck för att hitta förbjudna specialtecken i användarnamnet (endast Windows):** Anger tecken som stör åtgärderna Export PDF och Optimize PDF när tecknen visas i användarens namn.
 
-**Poolstorlek för ImageToPDF:** Poolstorleken för standardkonverteraren (ren Java) för bild till PDF i tjänsten Generate PDF. Den här inställningen styr de maximala samtidiga Image-to-PDF-konverteringar som tjänsten Generate PDF kan utföra. Standardvärdet för den här inställningen (rekommenderas för enprocessorsystem) är 3, som du kan öka på flerprocessorsystem.
+**Poolstorlek för ImageToPDF:** Poolstorleken för standardkonverteraren (ren Java) Image-to-PDF i tjänsten Generate PDF. Den här inställningen styr de maximala samtidiga Image-to-PDF-konverteringar som tjänsten Generate PDF kan utföra. Standardvärdet för den här inställningen (rekommenderas för enprocessorsystem) är 3, som du kan öka på flerprocessorsystem.
 
 **Poolstorlek HTML till PDF:** Poolstorleken för konverteraren HTML till PDF i tjänsten Generate PDF. Den här inställningen styr de maximala samtidiga HTML-till-PDF-konverteringar som tjänsten Generate PDF kan utföra. Standardvärdet för den här inställningen (rekommenderas för enprocessorsystem) är 3, som du kan öka på flerprocessorsystem.
 
-**OCR-poolstorlek:** Poolstorleken för den PaperCaptureService som PDF Generator använder för OCR. Standardvärdet för den här inställningen (rekommenderas för enprocessorsystem) är 3, som du kan öka på flerprocessorsystem. Den här inställningen gäller endast Windows-system.
+**OCR-poolstorlek:** Poolstorleken för den PaperCaptureService som PDF Generator använder för OCR. Standardvärdet för den här inställningen (rekommenderas för enprocessorsystem) är 3, som du kan öka på flerprocessorsystem. Den här inställningen är endast giltig i Windows-system.
 
 **Reservteckensnittsfamilj för konverteringar från HTML till PDF:** Namnet på teckensnittsfamiljen som ska användas i PDF-dokument när teckensnittet som användes i det ursprungliga HTML inte är tillgängligt för AEM formulärserver. Ange en teckensnittsfamilj om du förväntar dig att konvertera HTML-sidor som använder otillgängliga teckensnitt. På sidor som skapats på regionala språk kan t.ex. otillgängliga teckensnitt användas.
 
@@ -283,13 +283,13 @@ Försök konvertera PDF på nytt oavsett om tidsgränsen har nåtts eller inte. 
 
 **Försök igen om tiden tillåter**
 
-Försök konvertera PDF igen om den tid som förbrukats för det första konverteringsförsöket var kortare än den angivna tidsgränsen. Om tidsgränsen till exempel är 270 och det första försöket är 200-tal, kommer PDF Generator att försöka konvertera igen. Om det första försöket självt förbrukade 270-talet kommer konverteringen inte att försökas igen.
+Försök konvertera PDF igen om den tid som förbrukats för det första konverteringsförsöket var kortare än den angivna tidsgränsen. Om tidsgränsen till exempel är 270 och det första försöket är 200-tal försöker PDF Generator konverteringen igen. Om det första försöket självt förbrukade 270-talet kommer konverteringen inte att försökas igen.
 
 ## Guides ES4 Utilities service settings {#guides-es4-utilities-service-settings}
 
 När du skapar en stödlinje bäddas vissa resurser, till exempel en definition av stödlinjen, in i stödlinjen. Resurser kan också finnas som referenser till programresurser som lagras lokalt eller på AEM formulärserver. Handboken innehåller inga data, och värdena för sändningsplatsen och indata passar inte för alla externa miljöer.
 
-I de flesta fall räcker standardåtergivningstjänsten för stödlinjer för att förbereda en guide för användning i arbetsytor eller andra externa miljöer. (I vyn Tjänster i Workbench är standardtjänsten Guides (system)/Processes/Render Guide - 1.0.) Tjänsten Guide Utilities ( `GuidesUtility`) kan du skapa en anpassad process för att återge en guide, om det behövs.
+I de flesta fall räcker standardåtergivningstjänsten för stödlinjer för att förbereda en guide för användning i arbetsytor eller andra externa miljöer. (I vyn Tjänster i Workbench är standardtjänsten Guides (system)/Processes/Render Guide - 1.0.) Tjänsten Guide Utilities ( `GuidesUtility`) kan du skapa en anpassad process för att återge en stödlinje, om det behövs.
 
 Med guideverktygen kan du lägga till följande guideåtergivningsåtgärder i en process:
 
@@ -302,7 +302,7 @@ Med guideverktygen kan du lägga till följande guideåtergivningsåtgärder i e
 * Skapa en parameter som representerar refererat innehåll
 * Om det finns tillgängliga variationer anger du en variant
 
-Standardvärdena för tjänsten Guide Utilities stöder de flesta fall. Om det behövs kan du dock ändra följande värden.
+Standardvärdena för tjänsten Guide Utilities har stöd för de flesta fall. Om det behövs kan du dock ändra följande värden.
 
 **publicPaths:** Det här alternativet har tagits bort. Använd inte det här alternativet för AEM formulär.
 
@@ -334,7 +334,7 @@ Om du använder stödlinjer i ett serverkluster som inte använder kladdiga sess
 
 Värdet macKeySeed är startvärdet för den slumpmässiga talgeneratorn som används för att generera säkra URL:er. Om du anger det här värdet initierar varje klusternod den slumpmässiga talgeneratorn på samma sätt och får tillgång till samma säkra URL:er. Du kan använda valfri slumpmässig sträng för detta dirigerade värde.
 
-Ändra värdet för macKeySeed när du behöver uppdatera säkra URL:er. Uppdatering av säkra URL:er beror på din säkerhetsprincip och liknar uppdateringsprincipen för att ändra serverns överordnad rotlösenord. macSeedValue är detsamma som det överordnad lösenordet för säkra URL:er, eftersom det används för att generera ett nytt unikt slumpmässigt nummer som kan användas för att skapa och hämta säkra URL:er.
+Ändra värdet för macKeySeed när du behöver uppdatera säkra URL:er. Uppdatering av säkra URL:er beror på din säkerhetsprincip och liknar uppdateringsprincipen för ändring av huvudrotlösenordet för servern. macSeedValue är detsamma som huvudlösenordet för säkra URL:er, eftersom det används för att generera ett nytt unikt slumpmässigt nummer som kan användas för säker URL-generering och hämtning.
 
 Du måste starta om klustret eftersom macSeedValue är skrivskyddat när datorn startas. Alla noder måste startas om för att kunna läsa värdet, eftersom de använder det oberoende av varandra för att initiera sina interna slumptal med startvärdet.
 
@@ -366,7 +366,7 @@ Följande inställningar är tillgängliga för JMS-tjänsten.
 
 **JNDI-lösenord:** Lösenordet som är associerat med det användarnamn som har angetts för JNDI-användarnamn. Standardvärdet är gäst.
 
-**Initial Context Factory:** Den Java-klass som ska användas som inledande kontextfabrik. JMS-tjänsten använder den här klassen för att skapa en inledande kontext, som är utgångspunkten för att matcha namn på ämnen och köer. Standardvärdet är den inledande kontextfabriken för JMS-tjänsten på JBoss. Följande klasser är de inledande kontextfabrikerna för de programservrar som AEM formulär stöder:
+**Startkontextfabrik:** Den Java-klass som ska användas som inledande kontextfabrik. JMS-tjänsten använder den här klassen för att skapa en inledande kontext, som är utgångspunkten för att matcha namn på ämnen och köer. Standardvärdet är den inledande kontextfabriken för JMS-tjänsten på JBoss. Följande klasser är de inledande kontextfabrikerna för de programservrar som AEM formulär stöder:
 
 **JBoss:** org.jnp.interfaces.NamingContextFactory
 
@@ -386,21 +386,21 @@ Egenskapsnamnet och värdeparen avgränsas med semikolon **;**. I följande text
 
 ## LDAP-tjänstinställningar {#ldap-service-settings}
 
-LDAP-tjänsten ( `LDAPService`) innehåller åtgärder för att fråga LDAP-kataloger. LDAP-kataloger används vanligtvis för att lagra information om personer, grupper och tjänster i en organisation.
+LDAP-tjänsten ( `LDAPService`) innehåller åtgärder för att fråga i LDAP-kataloger. LDAP-kataloger används vanligtvis för att lagra information om personer, grupper och tjänster i en organisation.
 
 Följande inställningar är tillgängliga för LDAP-tjänsten.
 
-**Initial Context Factory:** Den Java-klass som ska användas som kontextfabrik. Den här klassen används för att skapa en anslutning till LDAP-servern. Standardvärdet är com.sun.jndi.ldap.LdapCtxFactory, vilket är lämpligt för de flesta LDAP-servrar.
+**Startkontextfabrik:** Den Java-klass som ska användas som kontextfabrik. Den här klassen används för att skapa en anslutning till LDAP-servern. Standardvärdet är com.sun.jndi.ldap.LdapCtxFactory, vilket är lämpligt för de flesta LDAP-servrar.
 
 **Provider-URL:** Den URL som ska användas för att ansluta till LDAP-tjänsten. Värdets format är `ldap://server name:port`
 
-*servernamn* är namnet på den dator som är värd för LDAP-servern
+*servernamn* är namnet på den dator där LDAP-servern finns
 
 *port* är den kommunikationsport som LDAP-tjänsten använder. Standardvärdet är 389, som är standardporten som används för LDAP-anslutningar.
 
-**Användarnamn:** Användarnamnet för användarkontot som ska användas för att logga in på LDAP-servern. Användarkontot måste ha behörighet att ansluta till servern och läsa informationen i LDAP-katalogen.
+**Användarnamn:** Användarnamnet för det användarkonto som ska användas för att logga in på LDAP-servern. Användarkontot måste ha behörighet att ansluta till servern och läsa informationen i LDAP-katalogen.
 
-Beroende på LDAP-servern kan användarnamnet vara ett enkelt användarnamn som `myname` eller ett unikt namn, som `cn=myname,cn=users,dc=myorg`.
+Beroende på LDAP-servern kan användarnamnet vara ett enkelt användarnamn som `myname` eller ett unikt namn, till exempel `cn=myname,cn=users,dc=myorg`.
 
 **Lösenord:** Lösenordet som motsvarar användarnamnet som anges för inställningen Användarnamn.
 
@@ -427,7 +427,7 @@ Följande inställningar är tillgängliga för konfigurationstjänsten för Mic
 
 **Aktivitetsprogram:** Aktiverar funktionen Uppgifter i mobilklientprogrammen. När det här alternativet är markerat kan användare komma åt sina uppgiftslistor och slutföra uppgifter från sina mobila enheter.
 
-**Content Services Application:** Aktiverar Content Services-funktionen i mobilklientprogrammet. Den här funktionen är endast tillgänglig för iOS. När det här alternativet är markerat kan iPhone- och iPad-användare komma åt filer som lagras i organisationens WebDAV-server.
+**Innehållstjänstprogram:** Aktiverar Content Services-funktionen i mobilklientprogrammet. Den här funktionen är endast tillgänglig för iOS. När det här alternativet är markerat kan iPhone- och iPad-användare komma åt filer som lagras i organisationens WebDAV-server.
 
 **Offlinesupport:** Gör det möjligt för användare att fortsätta använda mobilklientprogrammen även när de inte har någon anslutning till servern (t.ex. när de är utanför cellområdet eller i flygplansläge). Användarna måste även aktivera offlinesupport på sina mobila enheter. Den här funktionen är tillgänglig för Android- och iOS-enheter. Som standard är den här funktionen inaktiverad.
 
@@ -445,9 +445,9 @@ Följande inställningar är tillgängliga för konfigurationstjänsten för Mic
 
 **Android Microsoft Exchange ActiveSync krävs:** Anger om principhanteraren (EA) för Microsoft Exchange ActiveSync måste installeras och vara aktiv på Android-enheter. När det här alternativet är markerat måste EA tillämpas på Android-enheten. När det här alternativet inte är markerat utförs ingen kontroll, även om andra krav fortfarande gäller.
 
-**Minsta PIN-kodslängd för Android:** Android-enheter måste ha en global inställning som tvingar PIN-koden eller lösenordet att vara minst så lång. Det räcker inte att bara ha en PIN-kod med den angivna längden. PIN-kodens längd måste framtvingas av systemet så att användare inte kan ta bort eller korta ned PIN-koden senare. Standardvärdet är 4.
+**Minsta PIN-kod för Android:** Android-enheter måste ha en global inställning som tvingar PIN-koden eller lösenordet att vara minst så lång. Det räcker inte att bara ha en PIN-kod med den angivna längden. PIN-kodens längd måste framtvingas av systemet så att användare inte kan ta bort eller korta ned PIN-koden senare. Standardvärdet är 4.
 
-**Maximalt antal lösenordsförsök för Android innan rensning:** Android-enheter har en global inställning som rensar systemet efter ett angivet antal ogiltiga lösenordsförsök. Den här globala inställningen är aktiverad och lika med eller lägre än värdet som anges här. Standardvärdet är 5.
+**Maximalt lösenord för Android-användare återställs innan rensning:** Android-enheter har en global inställning som rensar systemet efter ett angivet antal ogiltiga lösenordsförsök. Den här globala inställningen är aktiverad och lika med eller lägre än det värde som anges här. Standardvärdet är 5.
 
 **Android-rensning vid borttagning:** Anger vad som händer när en principöverträdelse inträffar på en Android-enhet. När det här alternativet är markerat tas kontot bort. När det här alternativet inte är markerat tas lösenordet för det lagrade kontot och cachelagrade data bort. Inga fler synkroniseringsförsök görs förrän användaren åtgärdar principöverträdelsen.
 
@@ -466,11 +466,11 @@ Följande inställningar är tillgängliga för utdatatjänsten.
 
 **Transaktionstyp:** Anger hur en transaktionskontext ska spridas till en åtgärd:
 
-**Obligatoriskt:** stöder en transaktionskontext om en sådan redan finns, i annat fall skapas en ny transaktionskontext. Detta är standardvärdet.
+**Obligatoriskt:** har stöd för en transaktionskontext om en sådan redan finns. I annat fall skapas en ny transaktionskontext. Det här är standardvärdet.
 
 **Kräver nytt:** Skapar alltid en ny transaktionskontext. Om det finns en aktiv transaktionskontext pausas den.
 
-**Timeout för transaktion (i sek):** Antalet sekunder som den underliggande transaktionsprovidern väntar innan en transaktion som omsluter den här åtgärden återställs. Det här värdet ignoreras om en befintlig transaktionskontext sprids.
+**Timeout för transaktion (i sek):** Antalet sekunder som den underliggande transaktionsprovidern väntar innan en transaktion som omsluter åtgärden återställs. Det här värdet ignoreras om en befintlig transaktionskontext sprids.
 
 När du bearbetar stora datafiler eller arbetar på en server med många operativsystem kan det vara nödvändigt att öka tidsgränsen för Output-tjänsten. Om du vill ändra timeout-värdet kontrollerar du att maskinvaruservrarna har tillräckligt med minne och att minnet är tillgängligt för Java Application Server-heap. Standardvärdet är `180`.
 
@@ -490,7 +490,7 @@ Följande inställningar är tillgängliga för tjänsten PDFG Config ( `PDFGCon
 
 **Prefix för jobbalternativ:** Ett prefix som används av tjänsten Generate PDF för att lägga till en kort sträng i jobbalternativsfilerna som skapas temporärt för Acrobat Distiller. Standardvärdet är pdfg.
 
-**Icke-Unicode-appar:** En kommaavgränsad lista med programnamn som är kända för att inte vara Unicode-kompatibla. Listan är förifylld med namnen på flera program, som har förkonfigurerats i PDF Generator. Om du väljer att lägga till stöd för PDF-konverteringar via andra program från tredje part som inte kan använda Unicode måste du lägga till dem i den här listan. Standardvärdet är AutoCAD, Excel, PowerPoint, Project, Publisher, Visio, Word, WordPerfect.
+**Icke-Unicode-appar:** En kommaavgränsad lista med programnamn som är kända för att inte vara Unicode-kompatibla. Listan är förifylld med namnen på flera program, som har stöd för i PDF Generator. Om du väljer att lägga till stöd för PDF-konverteringar via andra program från tredje part som inte kan använda Unicode måste du lägga till dem i den här listan. Standardvärdet är AutoCAD, Excel, PowerPoint, Project, Publisher, Visio, Word, WordPerfect.
 
 **Antal servertrådpooler:** Styr storleken på den trådpool som tjänsten Generate PDF använder internt för att hantera konverteringsbegäranden från HTML till PDF som innefattar spikning (konvertering av länkade sidor som är tillgängliga från huvudsidan). Standardvärdet är 20.
 
@@ -526,7 +526,7 @@ Följande inställningar är tillgängliga för tjänsten Remoting.
 
 ## Inställningar för databastjänst {#repository-service-settings}
 
-Databastjänsten ( `RepositoryService`) tillhandahåller tjänster för lagring och hantering av resurser för att AEM formulär. När utvecklare skapar ett program kan de distribuera resurserna i databasen i stället för i ett filsystem. Materialet kan innehålla alla typer av material, inklusive XML-formulär, PDF forms (inklusive Acrobat-formulär), formulärfragment, bilder, profiler, profiler, SWF-filer, DDX-filer, XML-scheman, WSDL-filer och testdata.
+Databastjänsten ( `RepositoryService`) tillhandahåller tjänster för lagring och hantering av resurser för att AEM formulär. När utvecklare skapar ett program kan de distribuera resurserna i databasen i stället för i ett filsystem. Resurserna kan innehålla alla typer av material, inklusive XML-formulär, PDF forms (inklusive Acrobat-formulär), formulärfragment, bilder, profiler, profiler, SWF-filer, DDX-filer, XML-scheman, WSDL-filer och testdata.
 
 Du kan använda standarddatabasen som ingår i AEM formulär eller använda en tredjepartsdatabas (EMC Documentum Content Server, IBM FileNet Content Manager eller IBM Content Manager).
 
@@ -538,7 +538,7 @@ Följande inställning är tillgänglig för databastjänsten.
 
 ## Inställningar för signaturtjänst {#signature-service-settings}
 
-Signaturtjänsten ( `SignatureService`) kan man skydda de Adobe PDF-dokument man distribuerar och tar emot. Den här tjänsten använder digitala signaturer och certifiering för att säkerställa att dokumenten inte ändras. Om du ändrar ett dokument bryts signaturen. Eftersom säkerhetsfunktionerna tillämpas på själva dokumentet förblir dokumentet säkert och kontrollerat under hela sin livscykel. utanför brandväggen, när den laddas ned offline och när den skickas tillbaka till din organisation.
+Signaturtjänsten ( `SignatureService`) kan man skydda de Adobe PDF-dokument man distribuerar och tar emot. Den här tjänsten använder digitala signaturer och certifiering för att säkerställa att dokumenten inte ändras. Om du ändrar ett dokument bryts signaturen. Eftersom säkerhetsfunktionerna tillämpas på själva dokumentet förblir dokumentet säkert och kontrollerat under hela sin livscykel, utanför brandväggen, när det laddas ned offline och när det skickas tillbaka till organisationen.
 
 Följande inställningar är tillgängliga för signaturtjänsten.
 
@@ -548,9 +548,9 @@ Följande inställningar är tillgängliga för signaturtjänsten.
 
 **Certifiering för att inkludera formulärinläsningsändringar:** När det här alternativet är markerat certifieras XFA-formulärstatusen utöver XFA-mallen. Observera att aktivering av det här alternativet kan ha en negativ inverkan på prestandan. Standardvärdet är true.
 
-**Kör JavaScript-skript för dokument:** Anger om Document JavaScript-skript ska köras under signeringsåtgärder. Standardvärdet är false.
+**Kör JavaScript-skript för dokument:** Anger om dokument-JavaScript-skript ska köras under signeringsåtgärder. Standardvärdet är false.
 
-**Bearbeta dokument som är kompatibla med Acrobat 9:** Anger om Acrobat 9-kompatibilitet ska aktiveras. Om du till exempel markerar det här alternativet aktiveras Synlig certifiering i Dynamisk PDF. Standardvärdet är false.
+**Bearbeta dokument med Acrobat 9-kompatibilitet:** Anger om Acrobat 9-kompatibilitet ska aktiveras. Om du till exempel markerar det här alternativet aktiveras Synlig certifiering i Dynamisk PDF. Standardvärdet är false.
 
 **Bädda in spärrinformation vid undertecknande:** Anger om spärrinformation bäddas in när PDF-dokumentet signeras. Standardvärdet är false.
 
@@ -558,15 +558,15 @@ Följande inställningar är tillgängliga för signaturtjänsten.
 
 **Tvinga inbäddning av återkallningsinformation för alla certifikat under undertecknande/certifiering:** Anger om en signerings- eller certifieringsåtgärd misslyckas om giltig återkallningsinformation för alla certifikat inte bäddas in. Observera att om ett certifikat inte innehåller någon CRL- eller OCSP-information, anses det vara giltigt, även om ingen återkallningsinformation hämtas. Standardvärdet är false.
 
-**Återkallningskontrollordning:** Anger ordningen för spärrkontroll när det är möjligt att kontrollera detta med hjälp av både CRL- (Certificate Revocation List) och OCSP-mekanismer (Online Certificate Status Protocol). Standardvärdet är OCSPFirst.
+**Återkallningskontrollordning:** Anger ordningen för spärrkontroll när det är möjligt att kontrollera detta med hjälp av både CRL- och OCSP-mekanismer (Online Certificate Status Protocol). Standardvärdet är OCSPFfirst.
 
-**Maximal storlek för information om återkallningsarkivering:** Den största tillåtna storleken för arkiveringsinformation för återkallning i kB. AEM försöker lagra så mycket spärrinformation som möjligt utan att överskrida gränsen. Standardvärdet är 10 kB.
+**Maximal storlek för information om återkallningsarkivering:** Den största tillåtna storleken för arkiveringsinformation för återkallning i kilobyte. AEM försöker lagra så mycket spärrinformation som möjligt utan att överskrida gränsen. Standardvärdet är 10 kB.
 
 **Supportsignaturer som skapats i PreRelease-versioner av Adobe-produkter:** När det här alternativet är markerat valideras signaturen som skapats med en förhandsversion av Adobe-produkter korrekt. Standardvärdet är false.
 
 **Alternativ för verifieringstid:** Anger tidpunkten för verifiering av en signerares certifikat. Standardvärdet är Säker tid för annan aktuell tid.
 
-**Använd återkallningsinformation som arkiverats i signaturen under validering:** Anger om spärrinformationen som arkiveras med signaturen används för spärrkontroll. Standardvärdet är true.
+**Använd återkallningsinformation som arkiverats i signaturen under validering:** Anger om den spärrinformation som arkiveras med signaturen används för spärrkontroll. Standardvärdet är true.
 
 **Använd valideringsinformation som lagras i dokumentet för validering av signaturer:** När det här alternativet är markerat används den valideringsinformation (inklusive information om återkallning och tidsstämplar) som är inbäddad i dokumentet för att validera signaturer. Standardvärdet är true.
 
@@ -658,7 +658,7 @@ Följande inställningar är tillgängliga för signaturtjänsten.
 
 **Maximal tid för skevning av klocka:** Maximal tillåten skevning, i minuter, mellan svarstid och lokal tid. Det minsta värdet är 0 och det högsta värdet är 2147483647m. Standardvärdet är 5 m.
 
-**Svarets varaktighet:** Maximal tid, i minuter, för vilken ett förkonstruerat OCSP-svar anses vara giltigt. Det minsta värdet är 1 m och det högsta tillåtna värdet är 2147483647. Standardvärdet är 525600 (ett år).
+**Svarets varaktighet för färdighet:** Maximal tid, i minuter, för vilken ett förkonstruerat OCSP-svar anses vara giltigt. Det minsta värdet är 1 m och det högsta tillåtna värdet är 2147483647. Standardvärdet är 525600 (ett år).
 
 **Underteckna OCSP-begäran:** Anger om OCSP-begäran ska signeras. Standardvärdet är false.
 
@@ -694,7 +694,7 @@ Följande inställningar är tillgängliga för tjänsten Bevakade mappar.
 
 **Asynkron:** Identifierar anropstypen som asynkron eller synkron. Övergående och synkrona processer kan bara anropas synkront. Standardvärdet är asynkront.
 
-**Väntetid:** Standardvärdet för tid, i sekunder, efter vilken filerna hämtas från indatamapparna. Om filen eller mappen är äldre än den tid som anges i väntetiden hämtas den för bearbetning. Standardvärdet är 0.
+**Vänta:** Standardvärdet för tid, i sekunder, efter vilken filerna hämtas från indatamapparna. Om filen eller mappen är äldre än den tid som anges i väntetiden hämtas den för bearbetning. Standardvärdet är 0.
 
 **Batchstorlek:** Standardvärdet för antalet filer eller mappar som bearbetas per sökning. Standardvärdet är 2.
 
@@ -747,7 +747,7 @@ Om sökvägen inte är absolut men relativ skapas mappen i den bevakade mappen. 
 
 ## Inställningar för webbtjänst {#web-service-service-settings}
 
-Webbtjänsten ( `WebService`) kan processer starta webbtjänståtgärder.
+Webbtjänsten ( `WebService`) används för att processer ska kunna starta webbtjänståtgärder.
 
 Med webbtjänsten kan processer starta webbtjänståtgärder. En organisation kan till exempel vilja integrera en process för att lagra och hämta information som kontakt- och kontoinformation genom att anropa en tjänsteleverantörs exponerade webbtjänster. Webbtjänsten anropar en angiven webbtjänst och skickar värden för var och en av dess parametrar. Returvärdena från åtgärden sparas sedan i en angiven variabel i en process.
 
@@ -768,7 +768,7 @@ Följande inställningar är tillgängliga för webbtjänsten.
 
 **Trust Store:** Den fullständiga sökvägen till förtroendearkivfilen som innehåller den offentliga nyckeln för webbtjänstservern.
 
-**Lösenord för betrodd lagring:** Lösenordet för förvaltarfilen.
+**Lösenord för betrodd lagringsplats:** Lösenordet för förvaltarfilen.
 
 **Typ av förtroendearkiv:** Typ av förvaltararkiv. Ange inget värde för att använda standardnyckelbehållartypen som är konfigurerad för den JVM som kör formulärservern. Annars anger du något av följande värden:
 
@@ -779,7 +779,7 @@ Följande inställningar är tillgängliga för webbtjänsten.
 
 ## Inställningar för XSLT-omvandlingstjänsten {#xslt-transformation-service-settings}
 
-Tjänsten XSLT Transformation ( `XSLTService`) kan processer använda XSLT (Extensible Stylesheet Language Transformations) i XML-dokument.
+Tjänsten XSLT Transformation ( `XSLTService`) används för att processer ska kunna använda XSLT (Extensible Stylesheet Language Transformations) i XML-dokument.
 
 Följande inställning är tillgänglig för tjänsten XSLT-omvandling.
 
@@ -787,7 +787,7 @@ Följande inställning är tillgänglig för tjänsten XSLT-omvandling.
 
 ## Ändra säkerhetsinställningar för en tjänst {#modifying-security-settings-for-a-service}
 
-Med formulärservern kan du konfigurera säkerhetsinställningar för varje tjänst, vilket gör att du kan konfigurera detaljerad åtkomstkontroll på en tjänst-för-tjänst-nivå.
+Med formulärservern kan du konfigurera säkerhetsinställningar för varje tjänst, vilket gör att du kan konfigurera en detaljerad åtkomstkontroll på en tjänst-för-tjänst-nivå.
 
 Standardsäkerhetsprofiler installeras, som sedan kan konfigureras för att uppfylla dina systembehov. Varje säkerhetsprofil har en associerad domän och skapas antingen på användarnivå eller gruppnivå.
 
@@ -798,7 +798,7 @@ Standardsäkerhetsprofiler installeras, som sedan kan konfigureras för att uppf
 1. Klicka på fliken Säkerhet.
 1. I listan Kräv att anropare autentiserar väljer du antingen Ja eller Nej för att ange om tjänsten kan anropas med eller utan autentiseringsuppgifter.
 
-   Om du väljer Ja måste uppringaren autentiseras och uppringarens huvudnamn måste ha behörighet att anropa tjänsten. I annat fall avvisas anropsförsöket.
+   Om du väljer Ja måste anroparen autentiseras och användarens huvudnamn för anroparen måste ha behörighet att anropa tjänsten. I annat fall nekas anropet.
 
    Om du väljer Nej kan anroparen av tjänsten vara autentiserad eller inte. Anropet av tjänsten lyckas alltid eftersom det inte finns någon auktoriseringskontroll.
 
@@ -820,21 +820,21 @@ Standardsäkerhetsprofiler installeras, som sedan kan konfigureras för att uppf
    >Renderings- och skicka-tjänster som används med variablerna xfaForm, Document Form och Form körs alltid med användarkontot i System.
 
 1. Klicka på Lägg till huvudnamn för att ange behörigheter som användare och grupper har för tjänsten.
-1. På skärmen Välj huvudnamn visas de användare och grupper som har konfigurerats i Användarhantering. Om användaren eller gruppen som du vill använda inte visas använder du sökfunktionen för att hitta den. Klicka på ett användar- eller gruppnamn.
+1. På skärmen Välj huvudnamn visas de användare och grupper som är konfigurerade i Användarhantering. Om användaren eller gruppen som du vill använda inte visas använder du sökfunktionen för att hitta den. Klicka på ett användar- eller gruppnamn.
 1. På skärmen Lägg till behörigheter väljer du de behörigheter som ska tilldelas till användaren eller gruppen för den här tjänsten:
 
    * **INVOKE_PERM:** Så här anropar du alla åtgärder på tjänsten
-   * **MODIFY_CONFIG_PERM:** Ändra konfigurationen för en tjänst
+   * **ÄNDRA_KONFIG_PERM:** Så här ändrar du konfigurationen för en tjänst
    * **SUPERVISOR_PERM:** Så här visar du processinstansdata för en tjänst som skapats från en process
    * **START_STOP_PERM:** Starta och stoppa en tjänst
    * **ADD_REMOVE_ENDPOINTS_PERM:** Lägga till, ta bort och ändra slutpunkter för en tjänst
    * **CREATE_VERSION_PERM:** Skapa en ny version av tjänsten
-   * **DELETE_VERSION_PERM:** Så här tar du bort en version av tjänsten
+   * **DELETE_VERSION_PERM:** Ta bort en version av tjänsten
    * **MODIFY_VERSION_PERM:** Ändra en version av tjänsten
    * **READ_PERM:** Så här visar du tjänsten
-   * **PROCESS_OWNER_PERM:** För användning i en framtida version av AEM formulär. Använd inte den här behörigheten.
-   * **SERVICE_MANAGER_PERM:** För användning i en framtida version av AEM formulär. Använd inte den här behörigheten.
-   * **SERVICE_AGENT_PERM:** För användning i en framtida version av AEM formulär. Använd inte den här behörigheten.
+   * **PROCESS_OWNER_PERM:** För användning i en framtida version av AEM formulär. Använd inte denna behörighet.
+   * **SERVICE_MANAGER_PERM:** För användning i en framtida version av AEM formulär. Använd inte denna behörighet.
+   * **SERVICE_AGENT_PERM:** För användning i en framtida version av AEM formulär. Använd inte denna behörighet.
 
 1. Klicka på Lägg till.
 

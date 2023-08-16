@@ -2,9 +2,9 @@
 title: Läs om hur du använder referenser i innehållsfragment
 description: Lär dig hur du använder referenser i innehållsfragment, för innehåll, andra fragment och andra resurser (media). Lägg in behovet av och mekanismerna i kapslade fragment för Headless CMS Authoring.
 exl-id: d54a0a40-a8af-456a-9bf5-219d84540c97
-source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '731'
+source-wordcount: '726'
 ht-degree: 1%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 1%
 
 ## Story hittills {#story-so-far}
 
-I början av [AEM Headless Content Author Journey](overview.md) den [Introduktion](introduction.md) har omfattat de grundläggande begrepp och termer som är relevanta för utvecklingen av headless.
+I början av [AEM Headless Content Author Trney](overview.md) den [Introduktion](introduction.md) har omfattat de grundläggande begrepp och termer som är relevanta för utvecklingen av headless.
 
 Du har lärt dig grunderna i Headless CMS Authoring, med en introduktion till redigering med AEMaaCS och i synnerhet framtagning av Content Fragments.
 
@@ -39,7 +39,7 @@ Vissa referenser har särskilda datatyper (till exempel Innehållsreferenser och
 
 ## Innehållsreferenser {#content-references}
 
-Innehållsreferenser gör just det - de gör det möjligt att referera till annat innehåll. Då öppnas en webbläsare där du kan välja innehållsobjektet.
+Innehållsreferenser gör just det - de låter dig referera till allt annat innehåll. Då öppnas en webbläsare där du kan välja innehållsobjektet.
 
 ## Resurs-/mediereferenser {#assets-media-references}
 
@@ -49,7 +49,7 @@ Resurser (till exempel bilder eller media) kan refereras inom ett textblock med 
 
 ## Fragmentreferenser {#fragment-references}
 
-Fragmentreferenser gör det igen - de gör att du kan referera till ett annat fragment. Det här är viktigt och behöver en mer förklaring.
+Fragmentreferenser gör det igen - de låter dig referera till ett annat fragment. Det här är viktigt och behöver en mer förklaring.
 
 Du kan till exempel ha definierat följande modeller för innehållsfragment:
 
@@ -58,11 +58,11 @@ Du kan till exempel ha definierat följande modeller för innehållsfragment:
 * Person
 * Utmärkelser
 
-Det verkar ganska okomplicerat, men ett företag har förstås både en koncernchef och anställda ....och dessa är alla människor, var och en definierade som en person.
+Det verkar ganska okomplicerat, men ett företag har förstås både en koncernchef och anställda ...och dessa är alla människor, var och en definierade som en person.
 
 Och en person kan ha en utmärkelse (eller kanske två).
 
-* Mitt företag - Företag
+* Mitt företag
    * VD - person
    * Medarbetare - person
       * Personliga utmärkelser - Utmärkelse
@@ -82,7 +82,7 @@ Att skapa fragmentreferenser är ganska okomplicerat (men vanligtvis kommer fäl
 Definitionen av kontrollerna för innehållsfragmentmodellen:
 
 * om du kan välja att lägga till flera referenser
-* Modelltyper för innehållsfragment som du kan välja. I Content Fragment Model definieras de fragmentmodeller som tillåts för referensen, så AEM endast presenterar fragment som baseras på dessa modeller.
+* modelltyperna för de innehållsfragment som du kan välja. I Content Fragment Model definieras fragmentmodellerna som tillåts för referensen, så AEM endast presenterar fragment som baseras på dessa modeller.
 
 ### Navigera i kapslade fragment {#navigate-nested-fragment}
 
@@ -113,6 +113,7 @@ Nu när du har lärt dig mer om referenser och struktur i innehållsfragment är
       * [Använd konfigurationen i resursmappen](/help/assets/content-fragments/content-fragments-configuration-browser.md#apply-the-configuration-to-your-assets-folder)
 
       * [Skapa ett innehållsfragment](/help/assets/content-fragments/content-fragments-managing.md#creating-a-content-fragment)
+
    * [Variationer - Skapa innehållsfragment](/help/assets/content-fragments/content-fragments-variations.md)
 
    * [Modeller för innehållsfragment](/help/assets/content-fragments/content-fragments-models.md)
@@ -121,10 +122,9 @@ Nu när du har lärt dig mer om referenser och struktur i innehållsfragment är
 
       * [Modeller för innehållsfragment - egenskaper](/help/assets/content-fragments/content-fragments-models.md#properties)
 
-
 * Komma igång-guider
    * [Skapa en startguide för en resursmapp utan rubrik](/help/sites-developing/headless/getting-started/create-assets-folder.md)
 
 * [AEM Headless Content Architect Journey](/help/journey-headless/architect/overview.md)
 
-* [AEM Headless Translation Journey](/help/journey-headless/translation/overview.md)
+* [AEM översättningsresa utan rubrik](/help/journey-headless/translation/overview.md)

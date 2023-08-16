@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: platform
 exl-id: b3de1a4a-f334-44bd-addc-463433204c99
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '2297'
+source-wordcount: '2296'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ Integreringsramverket innehåller ett integreringslager med ett API. På så sä
 
 >[!NOTE]
 >
->[API-dokumentation](/help/commerce/cif-classic/developing/ecommerce.md#api-documentation) finns också.
+>[API-dokumentation](/help/commerce/cif-classic/developing/ecommerce.md#api-documentation) är också tillgängligt.
 
 Det finns flera färdiga AEM för att använda integreringslagret. För närvarande är följande:
 
@@ -65,7 +65,7 @@ eCommerce-ramverket kan användas tillsammans med alla e-handelslösningar, och 
 
 Se följande exempel nedan:
 
-| `cq:commerceProvider = geometrixx` | i en standardinstallation AEM en specifik implementering krävs. Exempel på Geometrixx, som innehåller minimala tillägg till det generiska API:t |
+| `cq:commerceProvider = geometrixx` | i en AEM krävs en specifik implementering. Exempel på Geometrixx, som innehåller minimala tillägg till det allmänna API:t |
 |--- |--- |
 | `cq:commerceProvider = hybris` | hybriimplementering |
 
@@ -109,7 +109,7 @@ För att utveckla för Hybris 4 krävs följande:
 
   `-P hybris4`
 
-  Den laddar ned den förkonfigurerade hybris 4-distributionen och bäddar in den i paketet `cq-commerce-hybris-server`.
+  Den hämtar den förkonfigurerade distributionen av Hybris 4 och bäddar in den i paketet `cq-commerce-hybris-server`.
 
 * I OSGi-konfigurationshanteraren:
 
@@ -119,9 +119,9 @@ För att utveckla för Hybris 4 krävs följande:
 
 ### Sessionshantering {#session-handling}
 
-hybris använder en användarsession för att lagra information som kundens kundvagn. sessions-ID returneras från hybris i en `JSESSIONID` cookie som ska skickas vid efterföljande förfrågningar till hybris. För att undvika att lagra sessions-ID i databasen kodas det i en annan cookie som lagras i kundens webbläsare. Följande steg utförs:
+hybris använder en användarsession för att lagra information som kundens kundvagn. Sessions-ID returneras från hybris i en `JSESSIONID` cookie som ska skickas vid efterföljande förfrågningar till hybris. För att undvika att lagra sessions-ID i databasen kodas det i en annan cookie som lagras i kundens webbläsare. Följande steg utförs:
 
-* På första begäran anges ingen cookie på köparens begäran. så att en begäran skickas till hybris-instansen för att skapa en session.
+* På den första begäran anges ingen cookie på köparens begäran, så en begäran skickas till hybris-instansen för att skapa en session.
 
 * Sessionscookies extraheras från svaret, kodas i en ny cookie (till exempel `hybris-session-rest`) och anpassa sig till kundresponsen. Kodningen i en ny cookie krävs eftersom den ursprungliga cookien bara är giltig för en viss sökväg och annars inte skulle skickas tillbaka från webbläsaren i efterföljande begäranden. Sökvägsinformationen måste också läggas till i cookie-filens värde.
 
@@ -133,15 +133,15 @@ hybris använder en användarsession för att lagra information som kundens kund
 
 #### CommerceSession {#commercesession}
 
-* Den här sessionen&quot;äger&quot; **kundvagn**
+* Den här sessionen äger **kundvagn**
 
    * utför Lägg till/ta bort/etc
 
-   * utför de olika beräkningarna av varukorgen,
+   * utför de olika beräkningarna av vagnen,
 
      `commerceSession.getProductPrice(Product product)`
 
-* Äger *lagringsplats* för **order** data
+* Äger *lagringsplats* för **beställa** data
 
   `CommerceSession.getUserContext()`
 
@@ -149,7 +149,7 @@ hybris använder en användarsession för att lagra information som kundens kund
 
 * Äger även **uppfyllelse** anslutning
 
-### Produktsynkronisering och -publicering {#product-synchronization-and-publishing}
+### Produktsynkronisering och publicering {#product-synchronization-and-publishing}
 
 Produktdata som finns i hybris måste finnas i AEM. Följande mekanism har implementerats:
 
@@ -157,7 +157,7 @@ Produktdata som finns i hybris måste finnas i AEM. Följande mekanism har imple
 * hybris kommer att tillhandahålla uppdateringsinformation via ett foder (som AEM undersökningar).
 * När AEM använder produktdata skickas begäranden tillbaka till hybris för aktuella data (villkorlig begäran om hämtning med det senaste ändringsdatumet).
 * På hybris är det möjligt att ange foderinnehållet på ett deklarativt sätt.
-* Matningsstrukturen mappas till AEM innehållsmodell i matningsadaptern på AEM.
+* Mappning av matningsstrukturen till AEM innehållsmodell sker i matningsadaptern på AEM.
 
 ![chlimage_1-12](/help/sites-developing/assets/chlimage_1-12a.png)
 
@@ -189,13 +189,13 @@ Produktdata som finns i hybris måste finnas i AEM. Följande mekanism har imple
 
    * Borttagning av en produkt kräver inaktivering.
 
-* Aktivering av en sida i AEM c kräver en kontroll b och är endast möjlig om
+* Aktivering av en sida i AEM c kräver en kontroll (b) och är endast möjlig om
 
    * Produkten finns i **Online** katalogversion för produktsidor.
 
    * De refererade produkterna är tillgängliga i en **Online** katalogversion för andra sidor (till exempel kampanjsidor).
 
-* Aktiverade produktsidor måste ha åtkomst till produktdata **Online** version (d).
+* Aktiverade produktsidor måste ha åtkomst till produktdata **Online** version d.
 
 * Den AEM publiceringsinstansen kräver tillgång till hybris för hämtning av produktdata och personaliserade data (d).
 
@@ -203,9 +203,9 @@ Produktdata som finns i hybris måste finnas i AEM. Följande mekanism har imple
 
 #### Arkitektur för produkt och varianter {#architecture-of-product-and-variants}
 
-En och samma produkt kan ha flera variationer. den kan till exempel variera beroende på färg och/eller storlek. En produkt måste definiera vilka egenskaper som driver variationen. Adobe villkor *variantaxlar*.
+En enskild produkt kan ha flera variationer, t.ex. beroende på färg och/eller storlek. En produkt måste definiera vilka egenskaper som driver variationen; Adobe definierar dessa *variantaxlar*.
 
-Alla egenskaper är dock inte olika axlar. Variationer kan också påverka andra egenskaper. Priset kan till exempel bero på storleken. Dessa egenskaper kan inte väljas av kunden och betraktas därför inte som olika axlar.
+Alla egenskaper är dock inte olika axlar. Variationer kan också påverka andra egenskaper. Priset kan till exempel vara beroende av storleken. Dessa egenskaper kan inte väljas av kunden och betraktas därför inte som olika axlar.
 
 Varje produkt och/eller variant representeras av en resurs och mappar därför 1:1 till en databasnod. Det är en extra konsekvens att en specifik produkt och/eller variant kan identifieras unikt genom sin sökväg.
 
@@ -222,7 +222,7 @@ Alla produktresurser kan representeras av en `Product API`. De flesta anrop i pr
 >
 >1. `size`
 >
->1. plus ytterligare
+>1. plus en till
 >
 >Den här extra varianten markeras via `variationAxis` egenskap för produktreferensen (vanligtvis `color` för Geometrixx Outdoors).
 
@@ -253,7 +253,7 @@ content
 |     |──shirt-l
 ```
 
-Slutligen finns det inget krav på att använda produktdata. Du kan placera alla produktdata under referenserna i katalogen; men du kan inte ha flera kataloger utan att duplicera alla produktdata.
+Slutligen finns det inget krav på att använda produktdata. Du kan placera alla produktdata under referenserna i katalogen, men du kan inte ha flera kataloger utan att duplicera alla produktdata.
 
 **API**
 
@@ -338,7 +338,7 @@ public class AxisFilter implements VariantFilter {
 
          * Produktreferenser innehåller en `productData` -egenskap, som pekar på produktdata (vanligtvis under `/etc/commerce/products`).
 
-         * Produktinformationen är hierarkisk. produktattribut ärvs från en produktdatanodens överordnade.
+         * Produktinformationen är hierarkisk. Produktattribut ärvs från en produktdatanodens överordnade.
 
          * Produktreferenser kan också innehålla lokala egenskaper som åsidosätter de som anges i deras produktdata.
 
@@ -431,11 +431,11 @@ public class AxisFilter implements VariantFilter {
 **Personanpassning**
 
 * Driv alltid personaliseringen genom [ClientContext](/help/sites-administering/client-context.md).
-* A ClientContext `/version/` av kundvagnen skapas i samtliga fall:
+* En ClientContext `/version/` av kundvagnen skapas i samtliga fall:
 
    * Produkterna ska läggas till med `CommerceSession.addCartEntry()` -metod.
 
-* Följande illustrerar ett exempel på kundvagnsinformation i kundvagnen i ClientContext:
+* Följande illustrerar ett exempel på kundvagnsinformation i kundvagnen:
 
 ![chlimage_1-13](/help/sites-developing/assets/chlimage_1-13a.png)
 
@@ -474,7 +474,7 @@ The `CommerceSession` äger de tre elementen:
 
 1. **Beställningsinformation**
 
-   Beställningsinformationen är dock *not* åtgärdat av API:
+   Beställningsinformationen är dock *not* som har åtgärdats av API:
 
    ```java
    public void updateOrderDetails(Map<String, String> orderDetails);
@@ -486,14 +486,14 @@ The `CommerceSession` äger de tre elementen:
 
 * Beställningsblanketterna måste ofta innehålla flera leveransalternativ (och priser).
 * Priserna kan baseras på artiklar och detaljer i beställningen, t.ex. vikt och/eller leveransadress.
-* The `CommerceSession` har tillgång till alla beroenden, så det kan behandlas på liknande sätt som produktpriser:
+* The `CommerceSession` har tillgång till alla beroenden, så att de kan behandlas på ett liknande sätt som produktpriser:
 
    * The `CommerceSession` äger fraktpriser.
    * Kan hämta/uppdatera leveransinformation med `updateOrder(Map<String, Object> delta)`
 
 >[!NOTE]
 >
->Du kan implementera en leveransväljare; till exempel:
+>Du kan implementera en leveransväljare, till exempel:
 >
 >`yourProject/commerce/components/shippingpicker`:
 >
@@ -524,7 +524,7 @@ I enlighet med standardtjänstens API-modell innehåller e-handelsprojektet en u
 >
 >Söknings-API:t är dock allmänt och kan implementeras av varje enskild CommerceService.
 
-eCommerce-projektet innehåller en standardsökkomponent som finns i:
+E-handelsprojektet innehåller en standardsökkomponent som finns i:
 
 `/libs/commerce/components/search`
 
@@ -575,7 +575,7 @@ En AEM framände kan placeras framför en befintlig hybris-implementering. En hy
 
    * När du loggar in på AEM, om systemet känner igen användaren:
 
-      * försök att logga in på hybris med angivet användarnamn/pwd
+      * försök att logga in på hybris med angivet användarnamn/lösenord
       * Om det lyckas skapar du den nya användaren i AEM med samma lösenord (AEM-specifikt salt-värde ger AEM-specifik hash-kod)
 
    * Ovanstående algoritm implementeras i en Sling `AuthenticationInfoPostProcessor`

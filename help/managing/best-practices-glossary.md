@@ -7,9 +7,9 @@ topic-tags: managing-checklist
 content-type: reference
 docset: aem65
 exl-id: 9672f7a4-82b7-4175-874d-181846115442
-source-git-commit: f21b0b5cb4246ffb22c9d9a219a622f36741d9b8
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '6949'
+source-wordcount: '6948'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ I den här ordlistan visas (i bokstavsordning) information om alla dokument i sl
 
 ## Godkännande från affärsintressenter {#acceptance-from-business-stakeholders}
 
-Godkännande från affärsintressenter bekräftar att de, som viktiga intressenter, är anpassade till lösningen och har gett sitt godkännande av hur affärsbehoven uppfyller affärsärendet.
+Godkännande från affärsintressenter bekräftar att de, som viktiga intressenter, är anpassade till lösningen och har gett sitt godkännande av hur affärskraven uppfyller affärsärendet.
 
 ### Godkännandetester {#acceptance-tests}
 
@@ -49,13 +49,13 @@ The [Adobe Security Checklist](/help/sites-administering/security-checklist.md) 
 
 På Adobe Support Portal kan implementeringspartners och kunder ställa in AEM implementering som ett projekt i supportportalen.
 
-Uppgifter kan registreras. till exempel om de tekniker och versioner som implementeras. Dessa ger transparens mellan kunden och Adobe.
+Information kan registreras, t.ex. om de tekniker och versioner som implementeras. Dessa ger transparens mellan kunden och Adobe.
 
 ### Utbildning av AEM {#aem-administrator-training}
 
 Utbildning för administrativ personal i lösningen. Se [Adobe Training Services](https://training.adobe.com/training/courses.html#solution=adobeExperienceManager) för mer information.
 
-### AEM Author Training {#aem-author-training}
+### Utbildning av AEM {#aem-author-training}
 
 Utbildning för personal som ska producera (skriva) innehåll för lösningen. Se [Adobe Training Services](https://training.adobe.com/training/courses.html#solution=adobeExperienceManager) för mer information.
 
@@ -69,7 +69,7 @@ Se till att rätt person har passerat den relevanta [certifieringsprov](https://
 
 ### AEM teknisk utbildning {#aem-technical-training}
 
-tillhandahålla teknisk utbildning för lämplig person, till exempel utvecklare, arkitekter, ingenjörer och yrkesverksamma.
+Erbjuda teknisk utbildning för lämplig personal, t.ex. utvecklare, arkitekter, ingenjörer och yrkesverksamma.
 
 ### Avtal om nyckeltal definierade som mål för projektet {#agreement-on-kpis-defined-as-goals-for-the-project}
 
@@ -89,7 +89,7 @@ Kundens färdplan består av milstolpar på hög nivå och affärsmål. Projekte
 
 ### Programarkitekturdefinition {#application-architecture-definition}
 
-The [programarkitektur](/help/managing/best-practices.md#development-preparation) bör tydligt definiera beteendet hos de föreslagna tillämpningarna.
+The [applikationsarkitektur](/help/managing/best-practices.md#development-preparation) bör tydligt definiera beteendet hos de föreslagna tillämpningarna.
 
 Den fokuserar på:
 
@@ -106,7 +106,7 @@ Se till att ditt team består av personal med lämplig utbildning. För projektt
 
 * minst en AEM certifierad Lead Developer
 * minst en AEM certifierad arkitekt
-* minst 75 % av utvecklarna AEM certifierade; detta gör att certifierade utvecklare kan mentera ledande utvecklare och säkerställa kunskapsutbyte och öppenhet
+* minst 75 % av dina utvecklare AEM certifierade; detta gör att certifierade utvecklare kan styra viktiga utvecklare och säkerställa kunskapsdelning och transparens
 
 ### Arkitekturdiagram {#architecture-diagram}
 
@@ -150,7 +150,7 @@ Den automatiserade testningsstrategin måste valideras och justeras i enlighet m
 
 ### Automatiseringsstrategi {#automation-strategy}
 
-Automatisering av driftsättningar ger snabbare och enhetligare driftsättning. I automatiseringsstrategin beskrivs konfigurationen av sådana automatiseringsmekanismer. inklusive:
+Automatisering av driftsättningar ger snabbare och enhetligare driftsättning. I automatiseringsstrategin beskrivs konfigurationen av sådana automatiseringsmekanismer, inklusive
 
 * frekvens
 * verktyg som ska användas
@@ -168,7 +168,7 @@ Hela projektgruppen och alla intressenter måste bekräfta att de är medvetna o
 
 Hela projektgruppen och alla intressenter måste bekräfta att de är medvetna om följande:
 
-* definitioner av framgång
+* definitioner av lyckade resultat
 * kriterier för framgång
 
 ### Koncept för säkerhetskopiering och återställning {#backup-and-restore-concept}
@@ -203,7 +203,7 @@ Affärs-KPI:er definierar mätbara värden som visar hur effektivt ett företag 
 
 Ett dokument med affärskrav (BRD, business requirements document) innehåller en detaljerad beskrivning av affärslösningen för ett projekt och en tydlig specifikation av kundens behov och förväntningar. BRD skiljer också mellan affärslösningen och den tekniska lösningen.
 
-Vid granskningen av affärslösningen bör företagsledningen svara på frågan: &quot;Vad vill företaget göra?&quot;
+När BRD undersöker affärslösningen bör det svara på frågan:&quot;Vad vill företaget göra?&quot;
 
 ### Business Sign Off on any required adjustments to the Solution or Architecture Identified and Alignment Against ROI and KPI Expectations {#business-sign-off-on-any-required-adjustments-to-the-solution-or-architecture-identified-and-aligned-against-roi-and-kpi-expectations}
 
@@ -279,7 +279,7 @@ Dokumentation om innehållets föreslagna arkitektur. Detaljerna bör bland anna
 * tagga begrepp
 * strategier för återanvändning av innehåll
 
-### Innehåll verifierat för migrering {#content-validated-for-migration}
+### Innehållet har validerats för migrering {#content-validated-for-migration}
 
 Det gamla systeminnehållet granskas och det valda innehållet valideras för migrering till den nya lösningen.
 
@@ -289,7 +289,7 @@ Ett första utkast till det rättsliga kontraktet.
 
 ### Aktuell innehållsstruktur och format {#current-content-structure-and-format}
 
-Dokumentation om den aktuella innehållsarkitekturen och det aktuella innehållsformatet. Detta kommer att användas för att generera den framtida innehållsarkitekturen. Det kommer också att användas för migreringskonceptet.
+Dokumentation om aktuell innehållsarkitektur och format. Detta används för att generera den framtida innehållsarkitekturen. Det kommer också att användas för migreringskonceptet.
 
 ### Policy för säkerhetskopiering och återställning av kund {#customer-backup-and-restore-policy}
 
@@ -336,7 +336,7 @@ Kunden (företag och IT) kommer att ha policyer som definierar de säkerhetsniv�
 
 * Krav för att godkänna en riskbedömning.
 * Krav för godkännande av penetrationsprovningar.
-* Eventuella särskilda säkerhetskrav. som att kringgå alla inmatningsfält, krypteringsanvändning (SSL), certifikat samt autentisering och session.
+* Eventuella specifika säkerhetskrav, t.ex. att alla indatafält, krypteringsanvändning (SSL), certifikat samt autentisering och sessioner inte får plats.
 
 ### Riktlinjer för kundspecifikationer {#customer-specification-guidelines}
 
@@ -351,9 +351,9 @@ Rapporter från kunden till kvalitetsledaren under UAT-perioden (User Acceptance
 Alla anpassningar och/eller tillämpade snabbkorrigeringar måste dokumenteras eftersom de kan påverka framtida uppgraderingar:
 
 * AEM kan anpassas mycket efter företagets behov. Alla anpassningar som kan påverka uppgraderingen måste dokumenteras fullt ut. Till exempel alla större ändringar i användargränssnittet för AEM.
-* Alla uppdateringar som krävs för den aktuella lösningen måste dokumenteras fullt ut. dessa kan omfatta:
+* Alla uppdateringar som krävs för den aktuella lösningen måste dokumenteras fullt ut. Dessa kan omfatta:
 
-   * kumulativa korrigeringspaket (CFP)
+   * kumulativa korrigeringspaket
    * Service Pack (SP)
    * snabbkorrigeringar
    * uppgraderingar
@@ -458,7 +458,7 @@ Ett diagram (eller en uppsättning diagram) över befintliga system och beroende
 
 ### Definitioner och kriterier för lyckade resultat förväntades {#expected-success-definitions-and-criteria}
 
-Projektsponsorn samlar in de affärsförväntningar som är förknippade med projektets framgång. Det är viktigt att ha alla de förväntningar som finns tillgängliga i början av ett projekt, eftersom dessa bör påverka alla beslut som fattas under hela genomförandet.
+Projektsponsorn samlar in de affärsförväntningar som är förknippade med projektets framgång. Det är viktigt att ha alla förväntningar tillgängliga i början av ett projekt, eftersom dessa bör påverka alla beslut som fattas under hela genomförandet.
 
 Förväntningarna kan vara:
 
@@ -545,7 +545,7 @@ Den högnivåbaserade lösningen förklarar arkitekturen som används för att u
 
 ### Systemöversikt {#high-level-system-map}
 
-Den här systemkartan bör innehålla ett diagram över systemets nivå. Den skiljer sig från lösningssammanhanget genom att det är en generaliserad karta över alla system som ingår, det finns inga gränssnitt i det här diagrammet.
+Den här systemkartan bör innehålla ett diagram på hög nivå av systemet. Den skiljer sig från lösningssammanhanget genom att det är en generaliserad karta över alla system som ingår, det finns inga gränssnitt i det här diagrammet.
 
 ### Struktur för historiskt innehåll {#historical-content-structure}
 
@@ -579,7 +579,7 @@ Implementering av innehållsarkitekturen, taggningskoncept och återanvändning 
 
 Implementering av kraven för Experience Design.
 
-### Implementering - Reservsystem och -procedurer {#implementation-fallback-system-and-procedures}
+### Implementering - Reservsystem och förfaranden {#implementation-fallback-system-and-procedures}
 
 Implementering av reservsystemet och tillhörande förfaranden.
 
@@ -613,7 +613,7 @@ Implementering av URL-hanteringskonceptet.
 
 ### Implementering - arbetsflöden {#implementation-workflows}
 
-Implementering av de designade arbetsflödena.
+Implementering av designade arbetsflöden.
 
 ### Implementeringskoncept {#implementation-concept}
 
@@ -666,12 +666,12 @@ Information om det äldre systemet bör samlas in så att du vet vad som kan tas
 
 ### Lista över utvecklingsverktyg som ska användas {#list-of-development-tools-to-be-used}
 
-En översikt över de verktyg som kommer att användas vid genomförandet. verktygen bör omfatta
+En översikt över de verktyg som kommer att användas vid implementeringen; verktygen bör omfatta följande:
 
 * dokumentationsverktyg
 * verktyg för ärendeuppföljning
 * distributionsverktyg
-* verktyg
+* bygga verktyg
 
 ### Lista över användare som behöver åtkomst till Adobe supportportal {#list-of-users-that-require-access-to-adobe-support-portal}
 
@@ -683,7 +683,7 @@ Listan består normalt av Solution Architect och/eller kundens IT-personal.
 
 En analys, tillsammans med de rekommendationer som blir resultatet, som definierar vad som måste loggas för att övervaka lösningen:
 
-* aktiviteter som ska loggas
+* aktiviteter att logga
 * granularitetsnivå
 * information som loggats för varje aktivitet
 
@@ -697,7 +697,7 @@ Testa och aktivera AEM underhållsuppgifter som:
 
 ### Migreringsplan {#migration-plan}
 
-dokumentera migreringen, inkluderar
+dokumentera migreringen, inklusive
 
 * tidslinje för migreringen
 * innehållets underhållsplan, enligt migreringsstrategin
@@ -763,10 +763,10 @@ Du bör övervaka användningen genom att:
 
 ### Övervakning - system {#monitoring-system}
 
-övervaka hela systemet, till exempel:
+Övervaka det övergripande systemet, till exempel:
 
 * tillgänglighet
-* medelprestanda
+* medelhög prestanda
 * toppresultat
 * varningar
 
@@ -776,17 +776,17 @@ Du bör övervaka användningen genom att:
 
 ### Övervakningskoncept {#monitoring-concept}
 
-De övervakningskoncept som ska tillämpas på din lösning. som innehåller
+De övervakningskoncept som ska tillämpas på din lösning, inklusive:
 
 * AEM
 * systemövervakning
 * kundspecifika övervakningskrav
 
-### Övervaka potentiella läckagepunkter {#monitoring-potential-weak-points}
+### Övervakning av potentiella läckagepunkter {#monitoring-potential-weak-points}
 
 Specifika punkter som kan vara felbenägna bör identifieras och definieras. Alla övervakningsuppgifter som rör dessa bör också definieras.
 
-Exempel på detta är (bland annat):
+Exemplen är bland annat:
 
 * viktiga arbetsflöden
 * transaktionsbearbetning
@@ -801,7 +801,7 @@ Se till att systemingenjörer och driftspersonal känner till och förstår even
 Definiera:
 
 * när övervakningsrapporter ska skapas
-* som de ska levereras till
+* till
 
 ### Dokumentation om operativa uppgifter {#operational-tasks-documentation}
 
@@ -817,7 +817,7 @@ Handbok som innehåller all information som krävs för att lösningen ska kunna
 * checklistor före/efter driftsättning
 * andra viktiga uppgifter
 
-Ska även innehålla en detaljerad beskrivning av implementeringskoncept för:
+Ska även innehålla en detaljerad beskrivning av implementeringskoncept för
 
 * uppfylla nyckeltal för prestanda
 * skala lösningen så att den även fortsättningsvis uppfyller dessa nyckeltal
@@ -892,7 +892,7 @@ Innan Go Live lanseras i produktionsmiljön måste man bevilja Production Sign-o
 
 Den policy och process som krävs för att få Production Sign av innan paketet flyttas till produktionsmiljön.
 
-### Project Communication Plan {#project-communication-plan}
+### Plan för projektkommunikation {#project-communication-plan}
 
 Definiera kommunikationsplanen för både affärsintressenter och projektteamet.
 
@@ -952,10 +952,10 @@ Projektledaren koordinerar alla roller som krävs för frisläppningen till prod
 
 ### Versionsinformation {#release-notes}
 
-Versionsinformation är en del av dokumentationen för releasen. Versionsinformationen ska omfatta:
+Versionsinformation är en del av dokumentationen för releasen. Versionsinformationen ska omfatta följande:
 
 * krav
-* krav som ingår
+* krav
 * lösta problem
 * kända fel i versionen
 
@@ -971,7 +971,7 @@ Slutversionen körs och är aktiv i produktion.
 
 ### Relevanta avtalsvillkor {#relevant-contract-terms}
 
-lyfta fram specifika avtalsvillkor som är relevanta för genomförandet av projektet, t.ex. avtalsenliga milstolpar, faktureringsperioder eller personalkrav.
+Framhäv specifika avtalsvillkor som är relevanta för projektets genomförande, t.ex. avtalsenliga milstolpar, faktureringsperioder eller personalkrav.
 
 ### Rapporteringsgräns {#reporting-cadence}
 
@@ -1065,7 +1065,7 @@ En översikt på hög nivå som täcker säkerhetsinställningarna för
 
 ### Säkerhetsproblem listade och utvärderade {#security-issues-listed-and-assessed}
 
-Alla säkerhetsfrågor i den listade och bedömda lösningen. inklusive uppskattningar av fiskeansträngningen.
+Alla säkerhetsfrågor i den listade och bedömda lösningen, inklusive uppskattningar av fiskeansträngningen.
 
 ### Säkerhetssignering från affärsintressenter {#security-sign-off-from-business-stakeholders}
 
@@ -1077,7 +1077,7 @@ Ställ in de supportprocesser som krävs.
 
 ### SLA för tredjepartssystem {#slas-for-third-party-systems}
 
-Se till att serviceavtal (SLA) är tillgängliga och kommunicerade med både utvecklings- och verksamhetsteamen för användning under implementering och support.
+Se till att servicenivåavtal (SLA) är tillgängliga och kommunicerade med både utvecklings- och verksamhetsteamen för användning under implementering och support.
 
 ### Röktestskoncept {#smoke-test-concept}
 
@@ -1091,11 +1091,11 @@ Röktest ska köras på alla system för att säkerställa att lösningens grund
 
 ### Software Architecture Strategy {#software-architecture-strategy}
 
-Den övergripande strategin för programvaruarkitekturen. inklusive tjänster, servrar, ramverk och andra implementeringsbeslut.
+Den övergripande strategin för programvaruarkitekturen, inklusive tjänster, serverar, ramverk och andra implementeringsbeslut.
 
 ### Konferensgruppen för lösningsgranskning har inrättats och möteskonferenser har angetts {#solution-review-board-established-and-meeting-cadence-set}
 
-Solution Review Board består av kundintressenter.
+Översynsnämnden för lösningar består av kundintressenter.
 
 Styrelsen har regelbundna möten för att fortlöpande se över de krav och specifikationer som för närvarande gäller. Målet är att säkerställa att de överensstämmer med definitionen och kriterierna för framgång och även ge underlag för utvecklingen av kraven.
 
@@ -1133,7 +1133,7 @@ Intern personal som behöver utbildning för att administrera lösningen.
 
 Intern personal som behöver utbildning för att kunna utveckla lösningen.
 
-### intressenter {#stakeholders}
+### Intressenter {#stakeholders}
 
 Intressenter är de viktigaste personer och/eller roller som har ett betydande intresse för projektet. Vissa kommer att bidra till projektbudgeten.
 
@@ -1143,7 +1143,7 @@ Intresset kan vara internt och/eller externt.
 
 Bekräftelse på att alla intressenter utanför det faktiska implementeringsteamet är medvetna om:
 
-* definitioner av framgång
+* definitioner av lyckade resultat
 * kriterier för framgång
 
 ### Intressenter förstår projekt och förväntningar {#stakeholders-understand-project-and-expectations}
@@ -1154,7 +1154,7 @@ Bekräftelse på att alla intressenter utanför det faktiska implementeringsteam
 
 Statusrapporter är ett viktigt kommunikationsverktyg. Formatet bör anpassas till eventuella rapporteringskrav från kunden.
 
-### Villkor och definition för lyckade försök {#success-criteria-and-definition}
+### Kriterier och definition för lyckade försök {#success-criteria-and-definition}
 
 Kunden, projektsponsorn och projektledaren eller konsulten ska specificera
 
@@ -1172,7 +1172,7 @@ En del av ansvaret för kvalitetsledaren är att se till att det finns resurser 
 
 ### Supportprocesser och åtkomst till Adobe supportportal {#support-processes-and-access-to-adobe-support-portal}
 
-Tillgång till Adobe supportportal är avgörande för att skicka in biljetter om produktrelaterade problem som kan uppstå under implementeringen.
+Tillgång till Adobe Support Portal är avgörande för att skicka in biljetter om produktrelaterade problem som kan uppstå under implementeringen.
 
 Nyckelmedlemmar i teamet bör tilldelas åtkomst.
 
@@ -1182,7 +1182,7 @@ Ett första förslag och en definition av arkitekturen för alla miljöer i lös
 
 ### Systemarkitekturdokumentation {#system-architecture-documentation}
 
-Ett dokument som beskriver systemarkitekturen. inklusive gränssnitt, nätverksplats och integreringar för alla miljöer, bland annat information.
+Ett dokument som beskriver systemarkitekturen, inklusive gränssnitt, nätverksplats och integreringar för alla miljöer, bland annat information.
 
 ### Systemarkitekturens säkerhetskoncept {#system-architecture-security-concept}
 
@@ -1207,7 +1207,7 @@ Bekräftelse på att hela teamet känner till framgångens definitioner och krit
 
 ### Teamet är medvetet om kommunikationsplanen {#team-is-aware-of-the-communication-plan}
 
-Bekräftelse på att alla medlemmar i teamet är medvetna om vem som ska kommunicera med kunden, samt hur och när.
+Bekräftelse på att alla medlemmar i teamet är medvetna om vem som ska kommunicera med kunden, tillsammans med information om hur och när.
 
 ### Team förstår projekt och förväntningar {#team-understands-project-and-expectations}
 
@@ -1249,7 +1249,7 @@ Testfall är specifika de detaljerade steg som krävs för att utföra funktions
 
 ### Testa innehåll {#test-content}
 
-Testinnehållet ska vara så nära produktionsinnehållet som möjligt. Den måste vara tillräckligt bred för att alla scenarier ska kunna testas.
+Testinnehållet ska vara så nära produktionsinnehållet som möjligt. Den måste vara tillräckligt bred för att kunna testa alla scenarier.
 
 ### Testmiljö klar {#test-environment-ready}
 
@@ -1257,7 +1257,7 @@ Se till att testmiljön är klar, med automatiserade driftsättningar på plats,
 
 ### Testrapporter {#test-reports}
 
-Rapporter med detaljerad information om testresultaten. inklusive:
+Rapporter med detaljerad information om testresultaten, inklusive
 
 * upphöjda defekter
 * status för testfall som körts
@@ -1278,7 +1278,7 @@ Automatiseringssvit och verktyg som valts ut för fallautomatisering och andra t
 
 ### Testningskoncept {#testing-concept}
 
-Testkonceptet är en översikt på hög nivå över testningen av projektet. inklusive testning av QA, UAT, prestanda, säkerhet och integrering.
+Testkonceptet är en översikt på hög nivå över testningen av projektet, inklusive QA-, UAT-, prestanda-, säkerhets- och integrationstestning.
 
 ### Testningsplaner {#testing-plans}
 
@@ -1308,7 +1308,7 @@ Koncept för att säkerställa säkerheten för alla tredjepartsintegreringar. M
 
 Se till att alla tredjepartssystem finns tillgängliga, med lämplig dokumentation, för implementering av integrering.
 
-### Åtkomst till system från tredje part aktiverad {#third-party-systems-access-enabled}
+### Åtkomst till system från tredje part har aktiverats {#third-party-systems-access-enabled}
 
 Nödvändiga åtkomsträttigheter som beviljas respektive roller som används i tredjepartssystem.
 
@@ -1337,7 +1337,7 @@ Detta bör definiera projekttidslinjer och avtalsenliga milstolpar som ska anvä
 
 ### Totalt antal projektansträngningar {#total-project-efforts}
 
-Alla uppskattningar av ansträngningen, från var och en av projektets leads, bör konsolideras. bland annat, driftskostnader, utveckling, systemteknik, arkitektur och testning.
+Alla insatsuppskattningar, från varje lead i projektet, bör konsolideras, inklusive allmänna, utvecklingsrelaterade, systemtekniska, arkitektoniska och testrelaterade insatser.
 
 Om avtalet innehåller en stödnivå bör även insatser för stöd och insatser ingå.
 
@@ -1405,9 +1405,9 @@ Specifikationen för varje arbetsflöde bör omfatta (minst):
 * utfall
 * felhantering
 
-### Koncept för arbetsflöden {#workflows-concept}
+### Löpande begrepp {#workflows-concept}
 
-Med arbetsflöden kan du automatisera AEM. Konturer för arbetsflöden:
+Med arbetsflöden kan ni automatisera AEM. Konturer för arbetsflöden:
 
 * de processer som kräver automatisering
 * vilka tjänster och roller i AEM som kommer att påverkas

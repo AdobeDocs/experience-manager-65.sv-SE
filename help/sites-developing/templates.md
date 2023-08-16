@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: 7c723773-7c23-43d7-85dc-53e54556b648
 legacypath: /content/docs/en/aem/6-1/develop/the-basics/templates
 exl-id: 59f01bb1-4ff1-42b6-afc9-56d448b1f803
-source-git-commit: 95638b6dd9527c567b38d8cd9da14633bd4142b5
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '931'
+source-wordcount: '930'
 ht-degree: 0%
 
 ---
@@ -45,7 +45,7 @@ Redigerbara mallar anses nu vara de bästa sätten att utveckla med AEM.
 
 Fördelarna med redigerbara mallar:
 
-* Kan [skapad](/help/sites-authoring/templates.md#creating-a-new-template-template-author) och [redigerad](/help/sites-authoring/templates.md#editing-a-template-structure-template-author) av författarna.
+* Kan [skapad](/help/sites-authoring/templates.md#creating-a-new-template-template-author) och [redigerad](/help/sites-authoring/templates.md#editing-a-template-structure-template-author) av dina författare.
 
 * Har introducerats för att du ska kunna definiera följande för alla sidor som skapas med mallen:
 
@@ -53,7 +53,7 @@ Fördelarna med redigerbara mallar:
    * det ursprungliga innehållet
    * innehållsprinciper
 
-* När den nya sidan har skapats upprätthålls en dynamisk anslutning mellan sidan och mallen. Denna koppling innebär att ändringar i mallstrukturen återspeglas på alla sidor som skapas med den mallen. ändringar i det ursprungliga innehållet återspeglas inte.
+* När den nya sidan har skapats upprätthålls en dynamisk anslutning mellan sidan och mallen. Den här anslutningen innebär att ändringar i mallstrukturen återspeglas på alla sidor som skapas med den mallen. Ändringar av det ursprungliga innehållet återspeglas inte.
 * Innehållsprinciper (redigerade från mallredigeraren) används för att bevara designegenskaperna (designläget används inte i sidredigeraren).
 * lagras under `/conf`
 * Se [Redigerbara mallar](/help/sites-developing/page-templates-editable.md) för ytterligare information.
@@ -94,7 +94,7 @@ Statiska mallar:
 >
 >Se till exempel We.Retail: `/content/we-retail/jcr:content`
 >
->Egenskaperna `allowedPaths`, `allowedParents`och `allowedChildren` kan också placeras i mallar för att definiera mer avancerade regler. Men när det är möjligt är det *mycket* enklare att definiera `cq:allowedTemplates` egenskaper på underavsnitt av platsen om det finns behov av att ytterligare begränsa de tillåtna mallarna.
+>Egenskaperna `allowedPaths`, `allowedParents`och `allowedChildren` kan också placeras i mallar för att definiera mer avancerade regler. Men om möjligt är det *mycket* enklare att definiera `cq:allowedTemplates` egenskaper på underavsnitt av platsen om det finns behov av att ytterligare begränsa de tillåtna mallarna.
 >
 >En extra fördel är att `cq:allowedTemplates` kan uppdateras av en författare i **Avancerat** -fliken i **Sidegenskaper**. De andra mallegenskaperna kan inte uppdateras med (standard) användargränssnittet, så behöver en utvecklare för att behålla reglerna och en koddistribution för varje ändring.
 
@@ -116,7 +116,7 @@ Utvärderingen fungerar enligt följande:
 
 * If `T` har ett värde som inte är tomt `allowedPaths` -egenskapen, men inget av värdena matchar sökvägen för `P`, `T` avvisas.
 
-* Om båda ovanstående egenskaper är tomma eller inte finns, `T` avvisas om det inte tillhör samma program som `P`. `T` tillhör samma program som `P` om och bara om namnet på den andra nivån i sökvägen för `T` är samma som namnet på den andra nivån i sökvägen för `P`. Mallen `/apps/geometrixx/templates/foo` tillhör samma program som sidan `/content/geometrixx`.
+* Om båda ovanstående egenskaper är tomma eller inte finns, `T` avvisas om det inte tillhör samma program som `P`. `T` tillhör samma program som `P` if och only if the name of the second level of the path of `T` är samma som namnet på den andra nivån i sökvägen för `P`. Mallen `/apps/geometrixx/templates/foo` tillhör samma program som sidan `/content/geometrixx`.
 
 * If `T` har ett värde som inte är tomt `allowedParents` -egenskapen, men inget av värdena matchar sökvägen för `P`, `T` avvisas.
 
@@ -132,9 +132,9 @@ I följande diagram visas mallutvärderingsprocessen:
 
 Om du vill begränsa vilka mallar som kan användas för att skapa underordnade sidor under en viss sida använder du `cq:allowedTemplates` egenskap för `jcr:content` nod på sidan för att ange listan med mallar som ska tillåtas som underordnade sidor. Varje värde i listan måste vara en absolut sökväg till en mall för en tillåten underordnad sida, till exempel `/apps/geometrixx/templates/contentpage`.
 
-Du kan använda `cq:allowedTemplates` -egenskap i mallens  `jcr:content` nod som den här konfigurationen ska tillämpas på alla nyskapade sidor som använder den här mallen.
+Du kan använda `cq:allowedTemplates` på mallens  `jcr:content` nod som den här konfigurationen ska tillämpas på alla nyskapade sidor som använder den här mallen.
 
-Om du vill lägga till fler begränsningar, till exempel för mallhierarkin, kan du använda `allowedParents/allowedChildren` -egenskaper i mallen. Du kan sedan uttryckligen ange att sidor som skapats från en mall T måste vara överordnade/underordnade sidor till sidor som skapats från en mall T.
+Om du vill lägga till fler begränsningar för mallhierarkin kan du använda `allowedParents/allowedChildren` -egenskaper i mallen. Du kan sedan uttryckligen ange att sidor som skapats från en mall T måste vara överordnade/underordnade sidor till sidor som skapats från en mall T.
 
 ## Mallar - Innehållsfragment {#templates-content-fragments}
 

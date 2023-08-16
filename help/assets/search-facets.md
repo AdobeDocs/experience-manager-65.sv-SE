@@ -6,9 +6,9 @@ role: Admin, Developer
 feature: Search
 exl-id: acaf46e6-ff70-4825-8922-ce8f82905a92
 hide: true
-source-git-commit: 3d5e9ad8ee19756b05e5a77a3f748bc647fcf734
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '2265'
+source-wordcount: '2264'
 ht-degree: 13%
 
 ---
@@ -45,7 +45,6 @@ Lägg till **[!UICONTROL Fulltext]** förutsäga formuläret. Använd predikatet
    >1. Ta bort `type` nod.
    >1. Från banan `/libs/settings/dam/search/facets/assets/jcr:content/items`, kopiera noderna `asset`, `directory`, `typeor`, `excludepaths`och `searchtype` till den väg som anges i steg 1.
    >1. Spara ändringarna.
-
 
 1. I [!UICONTROL Edit Search Forms] drar du ett predikat från **[!UICONTROL Select Predicate]** till huvudfönstret. Dra till exempel **[!UICONTROL Property Predicate]**.
 
@@ -136,7 +135,7 @@ Med Multi Value Property-predikatet kan du söka efter resurser efter flera vär
 1. Klicka på [!DNL Experience Manager] logotyp och sedan gå till **[!UICONTROL Tools]** > **[!UICONTROL General]** > **[!UICONTROL Search Forms]**.
 1. På sidan Sök i Forms väljer du **[!UICONTROL Assets Admin Search Rail]** klickar du **[!UICONTROL Edit]** ![redigeringsikon](assets/do-not-localize/aemassets_edit.png).
 1. På sidan Redigera sökformulär drar du **[!UICONTROL Multi Value Property Predicate]** från fliken **[!UICONTROL Select Predicate]** till huvudrutan.
-1. I **[!UICONTROL Settings]** anger du en etikett och platshållartext för predikatet. Ange egenskapsnamnet som ska användas för sökningen i egenskapsfältet, till exempel `jcr:content/metadata/dc:value`. Du kan också använda valdialogrutan för att välja en nod.
+1. I **[!UICONTROL Settings]** anger du en etikett och platshållartext för predikatet. Ange egenskapsnamnet som ska användas för att utföra sökningen i egenskapsfältet, till exempel `jcr:content/metadata/dc:value`. Du kan också använda valdialogrutan för att välja en nod.
 1. Kontrollera att **[!UICONTROL Delimiter Support]** är markerat. I fältet **[!UICONTROL Input Delimiters]** anger du avgränsare för att separera enskilda värden. Som standard anges kommatecken som avgränsare. Du kan ange en annan avgränsare.
 1. I **Beskrivning** ange en valfri beskrivning och klicka sedan på **[!UICONTROL Done]**.
 1. Navigera till panelen Filter i [!DNL Assets] användargränssnitt. Predikatet **[!UICONTROL Multi Value Property]** läggs till på panelen.
@@ -149,7 +148,7 @@ Med taggpredikatet kan du utföra taggbaserade sökningar efter resurser. Som st
 1. Klicka på [!DNL Experience Manager] logotyp och sedan gå till **[!UICONTROL Tools]** > **[!UICONTROL General]** > **[!UICONTROL Search Forms]**.
 1. På sidan Sök i Forms väljer du **[!UICONTROL Assets Admin Search Rail]** och sedan klicka **[!UICONTROL Edit]** ![redigeringsikon](assets/do-not-localize/aemassets_edit.png).
 1. Dra på sidan Redigera sökformulär **[!UICONTROL Tags Predicate]** från fliken Välj predikat till huvudrutan.
-1. Ange en platshållartext för predikatet på fliken Inställningar. Ange egenskapsnamnet som ska användas för sökningen i egenskapsfältet, till exempel *jcr:content/metadata/cq:taggar*. Du kan också välja en nod i CRXDE i urvalsdialogrutan.
+1. Ange en platshållartext för predikatet på fliken Inställningar. Ange egenskapsnamnet som ska användas för att utföra sökningen i egenskapsfältet, till exempel *jcr:content/metadata/cq:taggar*. Du kan också välja en nod i CRXDE i urvalsdialogrutan.
 1. Konfigurera sökvägsegenskapen för rottaggar för det här predikatet för att fylla i olika taggar i listan Taggar.
 1. Välj **[!UICONTROL Show match all tags option]** om du vill söka efter resurser som innehåller alla taggar du anger.
 
@@ -170,7 +169,7 @@ På samma sätt som du lägger till ett egenskapsprediat eller ett alternativpre
 | [!UICONTROL Path] | Använd den för att filtrera resultaten på plats. Du kan ange olika banor som alternativ. | <ul><li>Etikett</li><li>Bana</li><li>Beskrivning</li></ul> |
 | [!UICONTROL Publish Status] | Sök efter predikat för att söka efter resurser baserat på deras publiceringsstatus | <ul><li>Etikett</li><li>Egenskapsnamn</li><li>Beskrivning</li></ul> |
 | [!UICONTROL Relative Date] | Sökpredikatet för att söka efter resurser baserat på det relativa datumet då de skapades. Du kan till exempel konfigurera alternativ som för 2 månader sedan, för 3 veckor sedan och så vidare. | <ul><li>Etikett</li><li>Egenskapsnamn</li><li>Relativt datum</li></ul> |
-| [!UICONTROL Range] | Sök predikatet för att söka efter resurser som ligger inom ett angivet intervall. På sökpanelen kan du ange lägsta och högsta värden för intervallet. | <ul><li>Etikett</li><li>Egenskapsnamn</li><li>Beskrivning</li></ul> |
+| [!UICONTROL Range] | Sök på predikatet för att söka efter resurser som ligger inom ett angivet intervall. På sökpanelen kan du ange lägsta och högsta värden för intervallet. | <ul><li>Etikett</li><li>Egenskapsnamn</li><li>Beskrivning</li></ul> |
 | [!UICONTROL Date Range] | Sökpredikatet för att söka efter resurser som skapats inom ett angivet intervall efter en datumegenskap. På sökpanelen kan du ange start- och slutdatum med datumväljare. | <ul><li>Etikett</li><li>Platshållare</li><li>Egenskapsnamn</li><li>Intervalltext (från)</li><li>Intervalltext (till)</li><li>Beskrivning</li></ul> |
 | [!UICONTROL Date] | Sökpredikatet för en skjutreglagebaserad sökning efter resurser baserat på en date-egenskap. | <ul><li>Etikett</li><li>Egenskapsnamn</li><li>Beskrivning</li></ul> |
 | [!UICONTROL File Size] | Sök efter predikatorn för att söka efter resurser baserat på deras storlek. Det är ett sifferbaserat predikat där du väljer skjutreglagealternativ från en konfigurerbar nod. Standardalternativen finns i /libs/dam/options/preates/filesize i CRXDE-databasen. Filstorleken anges i byte. | <ul><li>Etikett</li><li>Egenskapsnamn</li><li>Bana</li><li>Beskrivning</li></ul> |
@@ -184,7 +183,7 @@ På samma sätt som du lägger till ett egenskapsprediat eller ett alternativpre
 
 Som standard är en låsikon ![lås stängd ikon](assets/do-not-localize/lock_closed_icon.svg) visas före **[!UICONTROL Assets Admin Search Rail]** i **[!UICONTROL Search Forms]** sida. Låsikonen mot ett alternativ på söksidan i Forms anger att standardinställningarna är intakta och inte anpassade. Ikonen ![lås stängd ikon](assets/do-not-localize/lock_closed_icon.svg) försvinner om du lägger till sökfaktorer i formuläret, vilket anger att standardformuläret har ändrats.
 
-![Låsikon](assets/locked_admin_rail.png)
+![Lås-ikon](assets/locked_admin_rail.png)
 
 Så här återställer du standardsökaspekten:
 
@@ -208,4 +207,3 @@ Om du inte har tilldelats en administratörsroll finns det en lista med behörig
 >
 >* [Utöka sökfunktionen för resurser](searchx.md)
 >* [Söka efter resurser](search-assets.md)
-

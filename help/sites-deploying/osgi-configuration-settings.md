@@ -12,20 +12,20 @@ discoiquuid: ed3a858c-7a43-4515-a2ff-43ca465c7d7d
 docset: aem65
 feature: Configuring
 exl-id: 19eedcf2-140a-452d-aa8f-6fd7f219e5f8
-source-git-commit: d3923e5e693e7426ee57e81e203f31964a23af3a
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '3430'
+source-wordcount: '3429'
 ht-degree: 0%
 
 ---
 
 # Konfigurationsinställningar för OSGi{#osgi-configuration-settings}
 
-[OSGi](https://www.osgi.org/) är en grundläggande del i AEM. Det används för att styra de sammansatta AEM och deras konfiguration.
+[OSGi](https://www.osgi.org/) är en grundläggande del i den tekniska AEM. Det används för att styra de sammansatta AEM och deras konfiguration.
 
 OSGi &quot;*innehåller standardmallar som gör det möjligt att konstruera program utifrån små, återanvändbara och samverkansbaserade komponenter. Dessa komponenter kan sammanställas i ett program och distribueras*&quot;.
 
-Den här funktionen gör det enkelt att hantera paket när de kan stoppas, installeras och startas individuellt. De inbördes beroendena hanteras automatiskt. Varje OSGi-komponent (se [OSGi-specifikation](https://docs.osgi.org/specification/)) finns i ett av de olika paketen. När du arbetar med AEM finns det flera metoder för att hantera konfigurationsinställningarna för sådana paket. se [Konfigurerar OSGi](/help/sites-deploying/configuring-osgi.md) om du vill ha mer information och rekommenderade rutiner.
+Den här funktionen gör det enkelt att hantera paket när de kan stoppas, installeras och startas individuellt. De inbördes beroendena hanteras automatiskt. Varje OSGi-komponent (se [OSGi-specifikation](https://docs.osgi.org/specification/)) finns i ett av de olika paketen. När du arbetar med AEM finns det flera metoder för att hantera konfigurationsinställningarna för sådana paket. Se [Konfigurerar OSGi](/help/sites-deploying/configuring-osgi.md) om du vill ha mer information och rekommenderade rutiner.
 
 Följande OSGi-konfigurationsinställningar (listade efter paket) är relevanta för projektimplementeringen. Alla inställningar som visas behöver inte justeras, vissa anges för att du ska förstå hur AEM fungerar.
 
@@ -45,7 +45,7 @@ Följande OSGi-konfigurationsinställningar (listade efter paket) är relevanta 
 >
 >Ytterligare programpaket kan behövas för specifika funktionsområden inom AEM. I dessa fall finns konfigurationsinformation på sidan som rör lämplig funktion.
 
-**Händelseavlyssnare för AEM** Konfigurera:
+**Händelseavlyssnare för AEM-replikering** Konfigurera:
 
 * The **Körningslägen**, där replikeringshändelser distribueras till avlyssnare. Om det till exempel definieras som författare är det systemet som&quot;initierar&quot; replikeringen.
 
@@ -108,7 +108,7 @@ Vissa inställningar kan påverka prestanda. Inaktivera de här inställningarna
 
 * **Käll-VM** och **Mål-VM** definierar du JDK-versionen som används som JVM för körningsmiljön
 
-* för produktionsinstanser:
+* för produktionsenheter:
 
    * disable **Generera felsökningsinformation**
 
@@ -122,7 +122,7 @@ Vissa inställningar kan påverka prestanda. Inaktivera de här inställningarna
 
 * **Återförsöksintervall**, **Maximalt antal återförsök**, **Maximalt antal parallella jobb**, **Bekräfta väntetid**, bland annat.
 
-* Om du ändrar dessa inställningar kan prestandan förbättras i scenarier med ett stort antal jobb. till exempel stor användning av AEM DAM och arbetsflöden.
+* Om du ändrar de här inställningarna kan du förbättra prestandan i scenarier med ett stort antal jobb, till exempel stor användning av AEM DAM och arbetsflöden.
 * Värden som är specifika för ditt scenario bör fastställas med hjälp av tester.
 * Ändra inte de här inställningarna utan orsak. Ändra bara efter vederbörlig hänsyn.
 
@@ -153,11 +153,11 @@ Se [AEM loggning](/help/sites-deploying/configure-logging.md#global-logging) och
 
 * **Loggnivå**, **Loggfil** och **Meddelandeformat** om du vill definiera information om loggfilen och meddelanden.
 
-* **Logger** Definiera kategorin. till exempel bara log för com.day.cq.
+* **Logger** för att definiera kategorin, till exempel bara log för com.day.cq.
 
-* Genom att använda **Fabrikskonfigurationer** kan valfritt antal ytterligare konfigurationer läggas till för att tillgodose de olika loggnivåer och kategorier som behövs.
-* Sådana konfigurationer är till hjälp vid utvecklingen. om du till exempel vill logga TRACE-meddelanden för en viss tjänst i en viss loggfil.
-* Sådana konfigurationer är användbara i en produktionsmiljö. om du till exempel vill att meddelanden om en viss tjänst ska loggas i en enskild loggfil för enklare övervakning.
+* Genom att **Fabrikskonfigurationer** kan valfritt antal ytterligare konfigurationer läggas till för att tillgodose de olika loggnivåer och kategorier som behövs.
+* Sådana konfigurationer är användbara under utvecklingen, till exempel för att logga TRACE-meddelanden för en viss tjänst i en specifik loggfil.
+* Sådana konfigurationer är användbara i en produktionsmiljö, t.ex. för att få meddelanden om en viss tjänst loggade till en enskild loggfil för enklare övervakning.
 
 Se [AEM loggning](/help/sites-deploying/configure-logging.md) och [Sling Logging](https://sling.apache.org/documentation/development/logging.html).
 
@@ -168,8 +168,8 @@ Se [AEM loggning](/help/sites-deploying/configure-logging.md) och [Sling Logging
 
 * Skrivaren kan användas av en **Konfiguration av loggningsloggare för Apache Sling** konfiguration.
 
-* Sådana konfigurationer är till hjälp vid utvecklingen. om du till exempel vill logga TRACE-meddelanden för en viss tjänst i en viss loggfil.
-* Sådana konfigurationer är användbara i en produktionsmiljö. om du till exempel vill att meddelanden om en viss tjänst ska loggas i en enskild loggfil för enklare övervakning.
+* Sådana konfigurationer är användbara under utvecklingen, till exempel för att logga TRACE-meddelanden för en viss tjänst i en specifik loggfil.
+* Sådana konfigurationer är användbara i en produktionsmiljö, t.ex. för att få meddelanden om en viss tjänst loggade till en enskild loggfil för enklare övervakning.
 
 Se [AEM loggning](/help/sites-deploying/configure-logging.md) och [Sling Logging](https://sling.apache.org/documentation/development/logging.html).
 
@@ -183,7 +183,7 @@ Se [AEM loggning](/help/sites-deploying/configure-logging.md) och [Sling Logging
 
 **Apache Sling Referer-filter** För att åtgärda kända säkerhetsproblem med CSRF (Cross-Site Request Forgery) i CRX WebDAV och Apache Sling måste du konfigurera filtret Referer.
 
-Refererarfiltertjänsten är en OSGi-tjänst som gör att du kan konfigurera:
+Refererarfiltertjänsten är en OSGi-tjänst som du kan konfigurera:
 
 * vilka http-metoder som ska filtreras
 * om en tom referensrubrik tillåts
@@ -197,7 +197,7 @@ Se [Säkerhetschecklista - Problem med förfalska begäran mellan webbplatser](/
 
 **Apache Sling Request Logger** Konfigurera:
 
-* olika parametrar för att definiera hur begäranden loggas.
+* olika parametrar för att definiera hur förfrågningar loggas.
 * **Aktivera begärandelogg**, för att aktivera eller inaktivera.
 
 * **Aktivera åtkomstlogg**, för att aktivera eller inaktivera.
@@ -245,7 +245,7 @@ Om ett konfigurerat sökvägsvärde avslutas med ett snedstreck genomsöks hela 
 
 **Proxykonfiguration för Apache HTTP-komponenter** - Proxykonfigurationen för all kod som använder Apache HTTP-klienten, som används när en HTTP görs. Till exempel vid replikering.
 
-Ändra inte fabrikskonfigurationen när du skapar en konfiguration. Skapa i stället en fabrikskonfiguration för den här komponenten med konfigurationshanteraren som finns här: **https://localhost:4502/system/console/configMgr/**. Proxykonfigurationen är tillgänglig i **org.apache.http.proxyconfigurator.**
+När du skapar en konfiguration ska du inte ändra fabrikskonfigurationen. Skapa i stället en fabrikskonfiguration för den här komponenten med konfigurationshanteraren som finns här: **https://localhost:4502/system/console/configMgr/**. Proxykonfigurationen är tillgänglig i **org.apache.http.proxyconfigurator.**
 
 >[!NOTE]
 >
@@ -275,7 +275,7 @@ Om ett konfigurerat sökvägsvärde avslutas med ett snedstreck genomsöks hela 
 
 >[!CAUTION]
 >
->När du ändrar inställningen för antingen **Minify** eller **Gzip**, tar bort innehållet i cacheminnet för klienter. Se [Kunskapsbasartikel](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-16543.html?lang=en) för mer information.
+>När du ändrar inställningen för **Minify** eller **Gzip**, tar bort innehållet i cacheminnet för klienter. Se [Kunskapsbasartikel](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-16543.html?lang=en) för mer information.
 
 >[!NOTE]
 >
@@ -301,7 +301,7 @@ När du använder [stängda användargrupper](/help/sites-administering/cug.md)k
 
 * De olika parametrar som rör proxy för Internetåtkomst och NTLM som behövs för extern åtkomst när en länk kontrolleras.
 
-**Dagens CQ-posttjänst** Konfigurera värdnamn och åtkomstinformation för e-postservern. Mer information finns i avsnittet Konfigurera e-posttjänsten.
+**Dagens CQ-tjänst för e-post** Konfigurera värdnamn och åtkomstinformation för e-postservern. Mer information finns i avsnittet Konfigurera e-posttjänsten.
 
 **Day CQ MCM Newsletter** Konfigurera de olika inställningar som används för nyhetsbrevet.
 
@@ -318,15 +318,15 @@ Med hjälp AEM rotmappning kan du konfigurera det användargränssnitt som du vi
 
 * Om du vill att det pekaktiverade användargränssnittet ska vara standardanvändargränssnittet väljer du **Målsökväg** bör peka på följande:
 
-   ```shell
-      /projects.html
-   ```
+  ```shell
+     /projects.html
+  ```
 
 * Om du vill att det klassiska användargränssnittet ska vara standardanvändargränssnittet väljer du **Målsökväg** bör peka på följande:
 
-   ```shell
-      /welcome.html
-   ```
+  ```shell
+     /welcome.html
+  ```
 
 >[!NOTE]
 >
@@ -340,8 +340,7 @@ Det finns olika konfigurationsegenskaper:
 Sökvägen som den här autentiseringshanteraren är aktiv för. Om den här parametern lämnas tom inaktiveras autentiseringshanteraren. Sökvägen / gör att autentiseringshanteraren används för hela databasen.
 
 * **Servicerangordning**
-OSGi Framework Service Ranking-värdet används för att ange den order som används för att anropa den här tjänsten. Det här värdet är ett 
-`int` där högre värden anger högre prioritet.
+OSGi Framework Service Ranking-värdet används för att ange den order som används för att anropa den här tjänsten. Det här värdet är ett `int` där högre värden anger högre prioritet.
 Standardvärdet är `0`.
 
 * **Rubriknamn**
@@ -354,8 +353,7 @@ Namnen på cookies som kan innehålla ett användar-ID.
 Namnen på parametrarna som kan ge användar-ID.
 
 * **Användarkarta**
-För valda användare kan användarnamnet som extraheras från HTTP-begäran ersättas med ett annat i autentiseringsobjektet. Mappningen definieras här. Om användarnamnet 
-`admin` visas på båda sidor om kartan, mappningen ignoreras. Tecknet &quot;=&quot; måste föregås av ett inledande &quot;\&quot;.
+För valda användare kan användarnamnet som extraheras från HTTP-begäran ersättas med ett annat i autentiseringsobjektet. Mappningen definieras här. Om användarnamnet `admin` visas på båda sidor om kartan, mappningen ignoreras. Tecknet &quot;=&quot; måste föregås av ett inledande &quot;\&quot;.
 
 * **Format**
 Anger i vilket format användar-ID:t anges. Använd:
@@ -365,11 +363,11 @@ Anger i vilket format användar-ID:t anges. Använd:
 
 **Dag CQ WCM-felsökningsfilter** Detta är användbart vid utveckling eftersom det tillåter användning av suffix som ?debug=layout vid åtkomst till en sida. https://localhost:4502/cf#/content/geometrixx/en/support.html?debug=layout innehåller till exempel layoutinformation som kan vara av intresse för utvecklaren.
 
-* För att säkerställa prestanda och säkerhet ska du inaktivera på produktionsinstanser.
+* För att säkerställa prestanda och säkerhet ska du inaktivera på produktionsenheter.
 
 **Dag CQ WCM-filter** Konfigurera:
 
-* **WCM-läge** för att definiera standardläget.
+* **WCM Mode** för att definiera standardläget.
 * På en författarinstans kan det här läget vara `edit`, `disable,preview`, eller `analytics`.
 De andra lägena kan nås från sidosparken eller suffixet `?wcmmode=disabled` kan användas för att emulera en produktionsmiljö.
 
@@ -405,9 +403,9 @@ De andra lägena kan nås från sidosparken eller suffixet `?wcmmode=disabled` k
 
 **Dagens CQ WCM-sidstatistik** Konfigurera för en publiceringsinstans:
 
-* **URL för att skicka data** konfigurera den URL som används för att spåra sidstatistik (är avgörande om en spårningsbegäran går igenom Dispatcher), Standardvärdet är till exempel `https://localhost:4502/libs/wcm/stats/tracker`.
+* **URL för att skicka data** för att konfigurera URL:en som används för att spåra sidstatistik (är viktig om en spårningsbegäran går igenom Dispatcher). Standardvärdet är till exempel `https://localhost:4502/libs/wcm/stats/tracker`.
 
-* **Spårningsskript har aktiverats** för att aktivera ( `true`) eller inaktivera ( `false`) inkluderar spårningsskriptet på sidorna. Standardvärdet är `false`.
+* **Spårningsskript har aktiverats** aktivera ( `true`) eller inaktivera ( `false`) inkluderar spårningsskriptet på sidorna. Standardvärdet är `false`.
 
 >[!NOTE]
 >
@@ -436,7 +434,7 @@ Styr HTML-parsern för CQ-omskrivaren.
 * **Ytterligare taggar att bearbeta** - Du kan lägga till eller ta bort HTML-taggar som ska bearbetas av tolken. Som standard bearbetas följande taggar: A,IMG,AREA,FORM,BASE,LINK,SCRIPT,BODY,HEAD.
 * **Bevara kamerafall** - Som standard konverterar HTML-tolken attribut i kameraläge (till exempel `eBay`) till gemener (till exempel `ebay`). Du kan inaktivera den här inställningen om du vill bevara attributen för kamerans skiftläge. Den här inställningen är användbar när du använder ramverk som t.ex. Angular 2.
 
-**JDBC-anslutningspool för dagkommentarer** Konfigurera åtkomst till en extern databas som används som innehållskälla.
+**JDBC-anslutningspool för dagskommandon** Konfigurera åtkomst till en extern databas som används som innehållskälla.
 
 En fabrikskonfiguration, så att flera instanser kan konfigureras.
 
@@ -458,7 +456,7 @@ Det övergripande flödet är följande:
 1. CDN bör konfigureras för att vidarebefordra begäran till AEM med `cdn_sign` parameter.
 1. En autentiseringshanterare validerar `cdn_sign` parametern och returnerar resursen till CDN som sedan levereras till användaren
 
-Flödet mellan användarens webbläsare, CDN och AEM kan visas på följande sätt.
+Flödet mellan användarens webbläsare, CDN och AEM kan visualiseras enligt följande.
 
 ![chlimage_1-8](assets/chlimage_1-8.png)
 
@@ -472,6 +470,6 @@ CDN-omskrivningsfunktionen kan aktiveras med **Namn på CDN-distributionsdomän*
 
 Tjänsten innehåller även andra konfigurationsalternativ som att aktivera/inaktivera CDN-omskrivning, sökvägsprefix som CDN-omskrivning utförs för, TTL-värden och protokoll (HTTP eller HTTPS).
 
-**CDNRewriter** En omskrivare för att skriva om URL:er för interna bilder till CDN-URL:er
+**CDNRewriter** En omskrivare för att skriva om interna URL:er till CDN-URL:er
 
 The **Taggattribut** värdet i com.adobe.cq.cdn.rewriter.impl.CDNRewriter kan definieras så att endast selektiva bildlänkar skrivs om.

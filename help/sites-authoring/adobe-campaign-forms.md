@@ -8,9 +8,9 @@ content-type: reference
 topic-tags: personalization
 discoiquuid: d53ef3e2-14ca-4444-b563-be67be15c040
 exl-id: 7d60673e-484a-4447-83cf-d62a0d7ad745
-source-git-commit: f4b6eb2ded17ec641f23a1fc3b977ce77169c8a1
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '1289'
+source-wordcount: '1288'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ Om du vill använda Adobe Campaign-formulär i AEM måste du följa de här steg
 1. Skapa ett formulär.
 1. Redigera formulärinnehåll.
 
-Tre typer av formulär som är specifika för Adobe Campaign är tillgängliga som standard:
+Tre typer av formulär, som är specifika för Adobe Campaign, är tillgängliga som standard:
 
 * Spara en profil
 * Prenumerera på en tjänst
@@ -52,6 +52,7 @@ Först och främst bör du kontrollera anslutningen mellan författaren och publ
 >[!NOTE]
 >
 >Se till att **acMapping** på sidans **jcr:innehåll** noden är inställd på **mapRecipient** eller **profil** när du använder Adobe Campaign Classic eller Adobe Campaign Standard
+>
 
 1. I AEM navigerar du till den plats där du vill skapa en ny sida.
 1. Skapa en sida och markera **Adobe Campaign Classic-profil** eller **Adobe Campaign Standard-profil** och klicka **Nästa**.
@@ -64,7 +65,7 @@ Först och främst bör du kontrollera anslutningen mellan författaren och publ
 
 1. I **Namn** lägger du till sidans namn. Det måste vara ett giltigt JCR-namn.
 1. I **Titel** ange en titel och klicka på **Skapa**.
-1. Öppna sidan och markera **Öppna egenskaper** och i Cloud Services lägger du till Adobe Campaign-konfigurationen och markerar kryssrutan för att spara ändringarna.
+1. Öppna sidan och markera **Öppna egenskaper** och i Cloud Service lägger du till Adobe Campaign-konfigurationen och markerar kryssrutan för att spara ändringarna.
 
    ![chlimage_1-44](assets/chlimage_1-44a.png)
 
@@ -80,7 +81,7 @@ Forms som riktar sig till Adobe Campaign har specifika komponenter. Dessa kompon
 
 I det här avsnittet beskrivs endast specifika länkar till Adobe Campaign. Mer information om hur du använder formulär i Adobe Experience Manager finns i [Redigeringslägeskomponenter](/help/sites-authoring/default-components-foundation.md).
 
-1. Välj **Öppna egenskaper** och i Cloud Services lägger du till Adobe Campaign-konfigurationen och markerar kryssrutan för att spara ändringarna.
+1. Välj **Öppna egenskaper** och i Cloud Service lägger du till Adobe Campaign-konfigurationen och markerar kryssrutan för att spara ändringarna.
 
    ![chlimage_1-45](assets/chlimage_1-45a.png)
 
@@ -88,21 +89,21 @@ I det här avsnittet beskrivs endast specifika länkar till Adobe Campaign. Mer 
 
    ![chlimage_1-46](assets/chlimage_1-46a.png)
 
-1. Klicka på **Avancerat** och väljer typ av formulär - **Prenumerera, avbeställ,** eller **Spara profil** och klicka **OK.** Du kan bara ha en typ per formulär.
+1. Klicka på **Avancerat** och väljer typ av formulär - **Prenumerera, avbeställ,** eller **Spara profil** och klicka **Okej.** Du kan bara ha en typ per formulär.
 
-   * **Adobe Campaign: Spara profil**: Med kan du skapa eller uppdatera en mottagare i Adobe Campaign (standardvärde).
+   * **Adobe Campaign: Spara profil**: låter dig skapa eller uppdatera en mottagare i Adobe Campaign (standardvärde).
    * **Adobe Campaign: Prenumerera på tjänster**: gör att du kan hantera prenumerationer för en mottagare i Adobe Campaign.
-   * **Adobe Campaign: Avbeställ Services**: Med kan du avbryta prenumerationer på en mottagare i Adobe Campaign.
+   * **Adobe Campaign: Avbeställ tjänsterna**: gör att du kan avbryta prenumerationen på en mottagare i Adobe Campaign.
 
 1. Du måste ha en **Krypterad primärnyckel** -komponenten i varje formulär. Den här komponenten definierar vilken URL-parameter som ska användas för att acceptera den krypterade primärnyckeln för en Adobe Campaign-profil. I Komponenter väljer du Adobe Campaign så att bara de komponenterna visas.
-1. Dra komponenten **Krypterad primärnyckel** till formuläret (var som helst) och klicka eller tryck på **Konfiguration** ikon. I **Adobe Campaign** anger du ett namn för URL-parametern. Klicka eller tryck på bockmarkeringen för att spara ändringarna.
+1. Dra komponenten **Krypterad primärnyckel** till formuläret (var som helst) och klicka eller tryck på **Konfiguration** -ikon. I **Adobe Campaign** anger du ett namn för URL-parametern. Klicka eller tryck på bockmarkeringen för att spara ändringarna.
 
    Genererade länkar till det här formuläret måste använda den här URL-parametern och tilldela den krypterade primärnyckeln till en Adobe Campaign-profil. Den krypterade primärnyckeln måste vara rätt URL-kodad (procent).
 
    ![chlimage_1-47](assets/chlimage_1-47a.png)
 
 1. Lägg till komponenter i formuläret efter behov, t.ex. textfält, datumfält, kryssrutefält, alternativfält osv. Se [Adobe Campaign Form Components](/help/sites-authoring/adobe-campaign-components.md) för mer information om varje komponent.
-1. Klicka på ikonen Konfiguration för att öppna komponenten. I **Textfält (kampanj)** ändrar du titeln och texten.
+1. Klicka på ikonen Konfiguration för att öppna komponenten. Till exempel i **Textfält (kampanj)** ändrar du titeln och texten.
 
    Klicka **Adobe Campaign** för att mappa formulärfältet till en Adobe Campaign-metadatavariabel. När du skickar formuläret uppdateras det mappade fältet i Adobe Campaign. Endast fält med matchande typer är tillgängliga i variabelväljaren (till exempel strängvariabler för textfält).
 
@@ -116,7 +117,7 @@ I det här avsnittet beskrivs endast specifika länkar till Adobe Campaign. Mer 
 
    >[!CAUTION]
    >
-   >Du måste ange läsbehörigheter till den anonyma användaren i molntjänsten för att kunna använda formulär vid publicering. Tänk dock på de potentiella säkerhetsproblemen med att ge läsbehörigheter till den anonyma användaren och se till att minska risken genom att till exempel konfigurera dispatchern.
+   >Du måste ange läsbehörighet för den anonyma användaren i molntjänsten för att kunna använda formulär vid publicering. Tänk dock på de potentiella säkerhetsproblemen med att ge läsbehörigheter till den anonyma användaren och se till att minska risken genom att till exempel konfigurera dispatchern.
 
 ## Testa ett formulär {#testing-a-form}
 
@@ -128,16 +129,16 @@ När du har skapat ett formulär och redigerat formulärinnehållet kanske du vi
 >
 >I den här proceduren anger du telefonnumret manuellt, men i praktiken får användarna en länk till den här sidan (om de vill avbeställa, prenumerera eller uppdatera din profil) i ett nyhetsbrev. Paketet uppdateras automatiskt beroende på användaren.
 >
->Om du vill skapa länken använder du variabeln **Identifierare för huvudresurs**(Adobe Campaign Standard) eller **Krypterad identifierare** (Adobe Campaign Classic) (t.ex. i en **Text och personalisering (Campaign)** ) som länkar till sidorna i Adobe Campaign.
+>Om du vill skapa länken använder du variabeln **Identifierare för huvudresurs**(Adobe Campaign Standard) eller **Krypterad identifierare** (Adobe Campaign Classic) (till exempel i en **Text och personalisering (kampanj)** ), som är länkad till sidan i Adobe Campaign.
 
 Om du vill göra det måste du hämta EPK-filen för en Adobe Campaign-profil manuellt och sedan bifoga den till webbadressen:
 
 1. Så här hämtar du den krypterade primärnyckeln (EPK) för en Adobe Campaign-profil:
 
-   * I Adobe Campaign Standard - Navigera till **Profiler och målgrupper** > **Profiler**, som listar de befintliga profilerna. Se till att tabellen visar **Identifierare för huvudresurs** fält i en kolumn (detta kan konfigureras genom att klicka/trycka på **Konfigurera lista**). Kopiera huvudresursidentifieraren för den önskade profilen.
-   * I Adobe Campaign Classic går du till **Profiler och mål** >  **Mottagare**, som listar de befintliga profilerna. Se till att tabellen visar **Krypterad identifierare** fält i en kolumn (Detta kan konfigureras genom att högerklicka på en post och välja **Konfigurera lista...**). Kopiera den krypterade identifieraren för den önskade profilen.
+   * I Adobe Campaign Standard - Navigera till **Profiler och målgrupper** > **Profiler**, som listar befintliga profiler. Se till att tabellen visar **Identifierare för huvudresurs** fält i en kolumn (detta kan konfigureras genom att klicka/trycka på **Konfigurera lista**). Kopiera huvudresursidentifieraren för den önskade profilen.
+   * I Adobe Campaign Classic går du till **Profiler och mål** >  **Mottagare**, som listar befintliga profiler. Se till att tabellen visar **Krypterad identifierare** fält i en kolumn (Detta kan konfigureras genom att högerklicka på en post och välja **Konfigurera lista...**). Kopiera den krypterade identifieraren för den önskade profilen.
 
-1. I AEM öppnar du formulärsidan i publiceringsinstansen och lägger till EPK från steg 1 som en URL-parameter: Använd samma namn som du tidigare definierade i EPK-komponenten när du redigerar formuläret (till exempel: `?epk=...`)
+1. I AEM öppnar du formulärsidan i publiceringsinstansen och lägger till EPK från steg 1 som en URL-parameter: använd samma namn som du tidigare definierade i EPK-komponenten när du redigerar formuläret (till exempel: `?epk=...`)
 1. Formuläret kan nu användas för att ändra data och prenumerationer som är kopplade till den länkade Adobe Campaign-profilen. När du har ändrat vissa fält och skickat in formuläret kan du verifiera i Adobe Campaign att data har uppdaterats.
 
 Data i Adobe Campaign-databasen uppdateras när ett formulär har validerats.

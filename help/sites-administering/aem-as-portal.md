@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 99528fda-5c8c-4034-bcbe-a4cea42f694b
 docset: aem65
 exl-id: b5f3d3a6-39c0-4aa5-8562-3cc6fa2b9e46
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '6088'
+source-wordcount: '6086'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 I det här dokumentet beskrivs följande:
 
-* AEM Portal-arkitektur
+* AEM portalarkitektur
 * Administrera och konfigurera AEM som en portal
 * Använda AEM som portal
 * Installera, konfigurera och visa AEM innehåll i en portlet (till exempel en webbserver)
@@ -53,7 +53,7 @@ Information om hur du konfigurerar AEM innehåll att visas i en portal finns i [
 
 Med den AEM innehållsportleten kan du visa AEM innehåll i en portal. Portleten är tillgänglig på `/crx-quickstart/opt/portal`och kan anpassas på olika sätt. Du kan till exempel anpassa hanteringen av enkel inloggning/autentisering genom att distribuera din egen autentiseringstjänst och generera den autentiseringsinformation som krävs för AEM skriva över standardbeteendet. Plugin-programmen använder ett definierat API som gör att du kan lägga till egna funktioner genom att skapa plugin-programmet mot API:t. Plugin-programmet kan distribueras till den portlet som körs. För att funktionen ska fungera på rätt sätt måste AEM författare och publiceringsinstans ha en konfiguration tillsammans med innehållssökvägen som ska visas vid start.
 
-Vissa konfigurationer kan ändras via portletinställningar och andra genom OSGi-tjänstkonfigurationer. Du ändrar dessa konfigurationer med **config** filer eller OSGi-webbkonsolen.
+Vissa konfigurationer kan ändras via portletinställningar och andra genom OSGi-tjänstkonfigurationer. Du ändrar dessa konfigurationer med **config** -filer eller OSGi-webbkonsolen.
 
 ### Portletinställningar {#portlet-preferences}
 
@@ -110,7 +110,7 @@ Portleten kan konfigureras med följande inställningar:
  <tbody>
   <tr>
    <td>startPath</td>
-   <td><p>Detta är portletens startsökväg: definierar innehållet som visas från början.</p> <p><strong>Viktigt</strong>: Om portleten är konfigurerad för att ansluta till AEM författare och publicera instanser som körs på en annan kontextsökväg än<strong> /</strong>måste du aktivera kraften <strong>CQUrlInfo</strong> i HTML-bibliotekshanterarkonfigurationen för dessa AEM (till exempel via Felix Webconsole) fungerar inte redigering och dialogrutan med inställningar visas inte.</p> </td>
+   <td><p>Detta är portletens startsökväg: den definierar innehållet som visas från början.</p> <p><strong>Viktigt</strong>: Om portleten är konfigurerad att ansluta till AEM författare och publicera instanser som körs på en annan kontextsökväg än<strong> /</strong>måste du aktivera kraften <strong>CQUrlInfo</strong> i HTML-bibliotekshanterarkonfigurationen för dessa AEM (till exempel via Felix Webconsole) fungerar inte redigering och dialogrutan med inställningar visas inte.</p> </td>
   </tr>
   <tr>
    <td>htmlSelector</td>
@@ -125,7 +125,7 @@ Portleten kan konfigureras med följande inställningar:
    <td>Som standard återges ett verktygsfält i innehållsportleten för hanteringsfunktioner. Om du inaktiverar det här alternativet återges inget verktygsfält.</td>
   </tr>
   <tr>
-   <td>urlParameterNames</td>
+   <td>urlParameterName</td>
    <td><p>Lista med alternativa URL-parameternamn som kan innehålla den nya innehålls-URL som ska visas för portleten. Listan bearbetas uppifrån och ned, den första parametern som innehåller ett värde används. Om ingen URL hittas används standardparametern för URL. Den angivna URL:en används, som den är, utan ytterligare ändringar.</p> <p>Den här inställningen är per distribuerad portlet - det är även att globalt konfigurera vissa URL-parametrar i OSGi-konfigurationen för"Day Portal Director Portlet Bridge".</p> </td>
   </tr>
   <tr>
@@ -141,7 +141,7 @@ Portleten kan konfigureras med följande inställningar:
 
 #### OSGi Web Console {#osgi-web-console}
 
-Anta att portalservern körs på värddatorns lokala värd, port 8080 och att AEM portletens webbprogram är monterat i webbprogramskontexten *cqportlet*, webbadressen till webbkonsolen är `https://localhost:8080/cqportlet/cqbridge/system/console`. Standardanvändare och lösenord är **admin**.
+Anta att portalservern körs på värddatorns lokala värd, port 8080 och att AEM portletens webbprogram monteras i webbprogramskontexten *cqportlet*, webbadressen till webbkonsolen är `https://localhost:8080/cqportlet/cqbridge/system/console`. Standardanvändare och lösenord är **admin**.
 
 Öppna **Konfigurationer** och markera **Konfiguration av CQ-server för portalkatalog**. Här anger du bas-URL:en till författaren och publiceringsinstansen. Denna procedur beskrivs i [Konfigurera portleten](#configuring-the-portlet).
 
@@ -155,7 +155,7 @@ För att stödja automatiserad driftsättning och konfigureringsetablering har A
 
 Vid start är egenskapen system **com.day.cq.portet.config** läses för att identifiera den aktuella miljön. Vanligtvis är värdet för den här egenskapen något liknande **dev**, **prod**, **test** och så vidare. Om ingen miljö är inställd läses inga konfigurationer.
 
-Om en miljö är inställd genomsöks en config-fil i klassökvägen på* ***com/day/cq/portlet/{env}.config** där **env** ersätts med det verkliga värdet för miljön. Den här filen bör innehålla en lista över alla konfigurationsfiler för den här miljön. Dessa filer söks igenom relativt till platsen för konfigurationsfilen. Om filen till exempel innehåller en rad `my.service.xml,` den här filen läses från klassökvägen på `com/day/cq/portlet/my.service.config.` Namnet på filen består av tjänstens beständiga ID, följt av **.config**. I föregående exempel är beständighets-ID:t **my.service**. Konfigurationsfilens format är det format som används av installationsprogrammet för Apache Sling OSGi.
+Om en miljö är inställd genomsöks en config-fil i klassökvägen på* ***com/day/cq/portlet/{env}.config** där **env** ersätts med det verkliga värdet för miljön. Den här filen bör innehålla en lista över alla konfigurationsfiler för den här miljön. Dessa filer söks igenom i förhållande till platsen för konfigurationsfilen. Om filen till exempel innehåller en rad `my.service.xml,` den här filen läses från klassökvägen på `com/day/cq/portlet/my.service.config.` Namnet på filen består av tjänstens beständiga ID, följt av **.config**. I föregående exempel är beständighets-ID:t **my.service**. Konfigurationsfilens format är det format som används av installationsprogrammet för Apache Sling OSGi.
 
 Det innebär att en motsvarande konfigurationsfil måste läggas till för varje miljö. En konfiguration som ska användas i alla miljöer måste anges i alla dessa filer - om den bara är för en enda miljö anges den bara i den filen. Denna mekanism ger fullständig kontroll över vilken konfiguration som läses i vilken miljö.
 
@@ -175,7 +175,7 @@ När cacheminnet har distribuerats cachelagrar portleten innehållet från publi
 1. Anta att portalservern körs på värden **localhost**, **port 8080 **och webbprogrammet för AEM portlet är monterat i kontexten **cqportlet**, den URL som ska tömmas cachen är `https://localhost:8080/cqportlet/cqbridge/cqpcache?Path=$(path)`. Använd GET som metod.
    **Obs!** I stället för att använda en frågeparameter kan du skicka ett http-huvud med namnet **Bana**.
 
-#### Tömmer cachen via replikeringsagenten {#flushing-the-cache-via-replication-agent}
+#### Tömmer cache via replikeringsagenten {#flushing-the-cache-via-replication-agent}
 
 Precis som vid normal invalidering av dispatcher kan en replikeringsagent konfigureras för portalens AEM portletcache. När du har konfigurerat replikeringsagenten rensas portalcachen vid varje vanlig sidaktivering.
 
@@ -225,11 +225,11 @@ Så här konfigurerar du en replikeringsagent för portalen:
 
 #### Manuell tömning av portletcachen {#manually-flushing-the-portlet-cache}
 
-Du kan manuellt tömma portletcachen genom att gå till samma URL som konfigurerats för replikeringsagenten. Se [Tömmer cache](#flushing-the-cache-via-replication-agent) för URL-formatet. Dessutom måste URL-adressen utökas med URL-parametern Path=&lt;path> för att ange vad som ska rensas.
+Du kan manuellt tömma portletcachen genom att gå till samma URL som konfigurerats för replikeringsagenten. Se [Tömmer cache](#flushing-the-cache-via-replication-agent) för formatet på URL:en. Dessutom måste URL-adressen utökas med URL-parametern Path=&lt;path> för att ange vad som ska rensas.
 
 Till exempel:
 
-`https://10.0.20.99:10040/wps/PA_CQ5_Portlet/cqbridge/cqpcache?Path=*` tömmer hela cacheminnet. `https://10.0.20.99:10040/wps/PA_CQ5_Portlet/cqbridge/cqpcache?Path=/content/mypage/xyz` tömningar `/content/mypage/xyz` från cacheminnet.
+`https://10.0.20.99:10040/wps/PA_CQ5_Portlet/cqbridge/cqpcache?Path=*` tömmer hela cachen. `https://10.0.20.99:10040/wps/PA_CQ5_Portlet/cqbridge/cqpcache?Path=/content/mypage/xyz` tömningar `/content/mypage/xyz` från cachen.
 
 ### Portal Security {#portal-security}
 
@@ -239,7 +239,7 @@ Portalen är den drivande autentiseringsmekanismen. Du kan logga in AEM med en t
 
 I det här avsnittet beskrivs de tillgängliga autentiseringslägena som portleten kan använda för att kommunicera med de underliggande AEM WCM-instanserna.
 
-Som standard skickas ingen användarinformation till publiceringsinstansen för AEM. innehållet alltid visas som anonym användare. Om användarspecifik information ska skickas från AEM eller om användarautentisering krävs för publicering måste detta vara aktiverat.
+Som standard skickas ingen användarinformation till publiceringsinstansen för AEM. Innehållet visas alltid som anonym användare. Om användarspecifik information ska skickas från AEM eller om användarautentisering krävs för publicering måste detta vara aktiverat.
 
 #### Åtkomst till portletens autentiseringskonfiguration {#accessing-the-portlet-s-authentication-configuration}
 
@@ -262,7 +262,7 @@ Så här kommer du åt portletens autentiseringskonfiguration:
    `https://wps-host:10040/wps/PA_CQ5_Portlet/cqbridge/system/console`
 
 1. Logga in på webbkonsolen. Standardautentiseringsuppgifterna är `admin/admin`.
-1. I konsolen väljer du **Konfiguration**.
+1. Välj **Konfiguration**.
 1. I **Konfiguration** väljer du en viss tjänst att konfigurera. Tjänsterna tillhandahålls av portleten i OSGi-ramverket.
 
    | Tjänstnamn | Beskrivning |
@@ -270,7 +270,7 @@ Så här kommer du åt portletens autentiseringskonfiguration:
    | Day Portal Director Authenticator | Konfigurera vilket autentiseringsläge som används för AEM WCM-instanser. Beroende på det valda läget kan en teknisk användare eller namnet på SSO-cookien anges. Autentisering för AEM WCM-publiceringsinstanser kan också aktiveras. |
    | Dagsportalens Director-filcache | Konfigurera parametrarna för hur portleten cachelagrar svar som tas emot från AEM WCM-instanser. |
    | Day Portal Director HTTP Client Service | Konfigurera hur portleten ansluter via HTTP till underliggande AEM WCM-instanser. Du kan till exempel ange en proxyserver. |
-   | Day Portal Director Locale Handler | Konfigurera vilka språk portleten stöder. Förfrågningar om att AEM WCM-instanser baseras på användarens språkområde. till exempel användarspråk *German *skulle begära `/content/geometrixx/de/`.... |
+   | Day Portal Director Locale Handler | Konfigurera vilka språk portleten stöder. Begäranden till AEM WCM-instanser baseras på användarens språkområde, t.ex. användarspråket *German *skulle begära `/content/geometrixx/de/`... |
    | Day Portal Director Privilege Manager | Konfigurera om portleten ska testa fliken Webbplatser baserat på den inloggade användaren. |
    | Day Portal Director Toolbar Renderer | Anpassa återgivningen av portletens verktygsfält. |
 
@@ -280,7 +280,7 @@ Så här kommer du åt portletens autentiseringskonfiguration:
 
 I standardläge autentiseras alla begäranden som skickas av portleten för den AEM WCM-författarinstansen med samma tekniska användare, oavsett vilken portalanvändare som används. Tekniskt användarläge är aktiverat som standard. Du aktiverar/inaktiverar det här läget i respektive konfigurationsskärm i OSGi-hanteringskonsolen:
 
-Den angivna tekniska användaren måste finnas på AEM WCM-författarinstans och på publiceringsinstansen om **Autentisera vid publicering** är aktiverat. Se till att ge användaren tillräcklig behörighet för redigeringsarbetet.
+Den angivna tekniska användaren måste finnas på den AEM WCM-författarinstansen och på publiceringsinstansen om **Autentisera vid publicering** är aktiverat. Se till att ge användaren tillräcklig behörighet för redigeringsarbetet.
 
 #### SSO {#sso}
 
@@ -331,7 +331,7 @@ Innan enkel inloggning kan aktiveras för AEM WCM måste den underliggande datab
 Om du vill aktivera enkel inloggning AEM WCM öppnar du den relevanta konfigurationsposten i AEM WCM:s Apache Felix Web Management Console (OSGi):
 
 1. Gå till konsolen via dess URI på https://&lt;aem-host>:&lt;port>/system/console.
-1. Välj SSO-autentiseringshanterare på menyn Konfiguration. I det här exemplet accepterar SSO-hanteraren SSO-begäranden för alla sökvägar baserat på den cookie som tillhandahålls av den AEM portleten. Konfigurationen kan variera.
+1. Välj SSO-autentiseringshanterare på menyn Konfiguration. I det här exemplet accepterar SSO-hanteraren SSO-begäranden för alla sökvägar baserat på den cookie som tillhandahålls av AEM portlet. Konfigurationen kan variera.
 
    | Bana | / | Aktiverar enkel inloggning för alla begäranden |
    |---|---|---|
@@ -343,7 +343,7 @@ För varje begäran AEM WCM tar emot görs först ett försök att utföra SSO-b
 
 #### Aktivera SSO-autentisering i en AEM {#enabling-sso-authentication-in-a-aem-portlet}
 
-För att den underliggande AEM WCM-instansen ska kunna acceptera SSO-begäranden måste portletens autentiseringsläge växlas från **Teknik** till **SSO**.
+För att den underliggande AEM WCM-instansen ska kunna acceptera SSO-begäranden måste portletens autentiseringsläge växlas från **Teknisk** till **SSO**.
 
 Så här aktiverar du SSO-autentisering i en AEM portlet:
 
@@ -398,14 +398,14 @@ Om du vill öppna administrationssidan för webbplatsen eller redigera en sida f
 Vissa funktioner i portleten skyddas av behörigheter. Den aktuella användaren måste ha denna behörighet för att kunna komma åt den här funktionen. Följande privilegier är fördefinierade:
 
 * &quot;toolbar&quot; : Detta är den allmänna behörigheten att visa/använda verktygsfältet i portleten.
-* &quot;prefs&quot; : Om användaren har den här behörigheten får användaren se/ändra portletens inställningar.
+* &quot;prefs&quot; : Om användaren har denna behörighet kan användaren se/ändra portletens inställningar.
 * &quot;cq-author:edit&quot; : Med det här privilegiet kan användaren anropa redigeringsvyn för innehållet.
-* &quot;cq-author:preview&quot; : Med det här privilegiet kan användaren se förhandsgranskningen.
-* &quot;cq-author:siteadmin&quot; : Med den här behörigheten kan användaren öppna webbplatsadministratören i AEM.
+* &quot;cq-author:preview&quot; : Med detta privilegium får användaren se förhandsgranskningen.
+* &quot;cq-author:siteadmin&quot; : Med den här behörigheten kan användaren öppna webbplatsadmin i AEM.
 
 Det bästa sättet att hantera behörigheter är att använda portalroller och tilldela roller till dessa behörigheter. Detta kan du göra med en OSGi-konfiguration. &quot;Day Portal Director Privilege Manager&quot; kan konfigureras med en uppsättning roller för varje privilegium. Om användaren har en av rollerna har användaren motsvarande behörighet.
 
-Dessutom är det möjligt att definiera den här rollen baserat på åtkomst per portlet-instansbas. Dialogrutan med inställningar för portleten innehåller ett indatafält för var och en av ovanstående privilegier. För varje privilegium kan en kommaavgränsad lista över portletroller konfigureras. Om ett värde är konfigurerat åsidosätter detta den globala konfigurationen från tjänsten &quot;Day Portal Director Privilege Manager&quot; och det kan krävas att samma roller läggs till från den här globala inställningen eftersom rollerna inte sammanfogas! Om inget värde anges används den globala konfigurationen.
+Dessutom är det möjligt att definiera den här rollen baserat på åtkomst per portlet-instansbas. Dialogrutan med inställningar för portleten innehåller ett indatafält för var och en av de ovanstående behörigheterna. För varje privilegium kan en kommaavgränsad lista över portletroller konfigureras. Om ett värde är konfigurerat åsidosätter detta den globala konfigurationen från tjänsten &quot;Day Portal Director Privilege Manager&quot; och det kan krävas att samma roller läggs till från den här globala inställningen eftersom rollerna inte sammanfogas! Om inget värde anges används den globala konfigurationen.
 
 ### Anpassa AEM portletprogram {#customizing-the-aem-portlet-application}
 
@@ -419,7 +419,7 @@ Angivet AEM portletprogram startar en OSGi-behållare i webbprogrammet precis so
 
 Verktygsfältet och dess knappar är konfigurerbara och kan anpassas. Du kan lägga till egna knappar i verktygsfältet eller definiera vilka knappar som ska visas i vilket läge. Varje knapp är en OSGi-tjänst som kan konfigureras via en OSGi-konfiguration.
 
-OSGi-webbkonsolen visar alla knappkonfigurationer på **Konfiguration** -fliken. För varje knapp kan du definiera i vilket läge knappen ska visas. På så sätt kan du inaktivera en knapp genom att t.ex. ta bort alla lägen.
+OSGi-webbkonsolen visar alla knappkonfigurationer på **Konfiguration** -fliken. För varje knapp kan du definiera i vilket läge knappen ska visas. På så sätt kan du inaktivera en knapp genom att till exempel ta bort alla lägen.
 
 Som standard använder AEM innehållsportlet redigeringsfunktionen. Om du föredrar att växla till AEM författarinstans för redigering aktiverar du **SiteAdmin-knapp** och **ContentFinder-knapp**, men inaktivera **Knappen Redigera**. I så fall måste du konfigurera PIN-autentiseringen korrekt i AEM.
 
@@ -464,13 +464,13 @@ Bundle-SymbolicName: com.day.cq.portlet.company.toolbarlayout
 Tool: Bnd-0.0.255
 ```
 
-Det faktum att HTML/CSS/images finns i mappen /com/day/cq/portlet/toolbar/layout krävs av portleten och kan inte ändras. På samma rader måste även rubrikerna Import-Package och Export-Package i MANIFEST.MF heta /com/day/cq/portlet/toolbar/layout. Bundle-SymbolicName måste vara ett unikt, fullständigt kvalificerat paketnamn.
+Det faktum att HTML/CSS/images finns i mappen /com/day/cq/portlet/toolbar/layout krävs av portleten och kan inte ändras. På samma rader måste även rubrikerna Import-Package och Export-Package i MANIFEST.MF heta /com/day/cq/portlet/toolbar/layout. Bundle-SymbolicName måste vara ett unikt, fullständigt paketnamn.
 
 Du kan skapa den med ett verktyg som maven eller manuellt skapa en sådan jar-fil med den relevanta rubrikuppsättningen som visas i det här avsnittet.
 
 #### Vyer i verktygsfältet Portlet {#portlet-toolbar-views}
 
-Portletens verktygsfält har i princip två visningslägen. Varje vy och tillhörande knappar kan anpassas med en HTML-fil.
+Portletens verktygsfält har i stort sett två visningslägen. Varje vy och tillhörande knappar kan anpassas med en HTML-fil.
 
 #### Publiceringsvy {#publish-view}
 
@@ -484,7 +484,7 @@ Publiceringsvyn har bara en knapp som växlar verktygsfältet till vyn Hantera. 
 
 #### Hantera vy {#manage-view}
 
-I vyn Hantera finns fyra knappar: Redigera, fliken Webbplatser, Uppdatera och Bakåt. Den hanterade vyn representeras av filen manage.html i [föregående paket](/help/sites-deploying/configuring-osgi.md#bundles). I HTML kan du använda följande platshållare, som ersätts av portleten med respektive innehåll när de återges:
+I vyn Hantera finns fyra knappar: Redigera, Fliken Webbplatser, Uppdatera och Bakåt. I vyn Hantera representeras filen manage.html i [föregående paket](/help/sites-deploying/configuring-osgi.md#bundles). I HTML kan du använda följande platshållare, som ersätts av portleten med respektive innehåll när de återges:
 
 #### Hantera visning av platshållare {#manage-view-placeholders}
 
@@ -511,7 +511,7 @@ I HTML kan du använda följande platshållare, som ersätts av portleten med re
 | {text} | Knappens etikett. |
 | {onclick} | JavaScript **onclick** function (contains {url}). |
 
-Exempel på en button.html-fil:
+Exempel på filen button.html:
 
 ```xml
 <div class="cqp_button">
@@ -548,7 +548,7 @@ Den AEM innehållsportleten har en inbyggd lokaliseringsfunktion som ser till at
 Detta görs i två steg:
 
 1. Språkavkännaren för portalkatalogen identifierar portalanvändarens språkområde genom att hämta språkinställningen från portalen. Den här tjänsten måste konfigureras med listan över tillgängliga språk i AEM.
-1. Hanteraren för portalens Director-språk hanterar lokaliseringen av den aktuella begäran. Det tar sökvägen till det begärda innehållet, till exempel `/content/geometrixx/en/company.html`och enligt konfigurationen skrivs **en** med användarens faktiska språkområde.
+1. Hanteraren för Director-språkversioner för portaler hanterar lokaliseringen av den aktuella begäran. Det tar sökvägen till det begärda innehållet, till exempel `/content/geometrixx/en/company.html`och enligt konfigurationen skrivs **en** med användarens faktiska språkområde.
 
 Portal Director Locale Handler kan konfigureras med sökvägar för att kontrollera språkinformation - vanligtvis innehåller detta allt under `/content` och med positionen för språkinformationen i sökvägen. Som standard följer språkhanteraren rekommendationen att strukturera flerspråkiga webbplatser i AEM.
 
@@ -598,7 +598,7 @@ OSGi-tjänster som tillval kan implementeras för att anpassa olika delar av por
   </tr>
   <tr>
    <td>UrlMapper</td>
-   <td>Lägg till en tjänst för att använda en anpassad URL-mappning eller omskrivning.</td>
+   <td>Lägg till en tjänst om du vill använda en anpassad URL-mappning eller omskrivning.</td>
   </tr>
   <tr>
    <td>UserInfoProvider</td>
@@ -615,7 +615,7 @@ När du implementerar en sådan tjänst ska du se till att ange **service.rankin
 
 | **Namn** | **Beskrivning** | **Standardbeteende** |
 |---|---|---|
-| Autentiserare | Tillhandahåller autentiseringsinformation till AEM | Använder en konfigurerbar teknisk användare för både författare och publicering. Eller SSO kan användas. |
+| Autentiserare | Tillhandahåller autentiseringsinformation till AEM | Använder en konfigurerbar teknisk användare för både författare och publicering. Du kan också använda enkel inloggning. |
 | HTMLRewriter | Skriver om länkar, bilder osv. | Skriver om AEM länkar till portallänkar, kan utökas av en UrlMapper och en TextMapper |
 | HttpClientService | Hanterar alla http-anslutningar | Standardimplementering |
 | LocaleHandler | Hanterar språkinformationen | Skriver om en länk till innehållet med avseende på språkområdet. |
@@ -653,7 +653,7 @@ Den AEM QuickStart JAR-filen innehåller portletkomponentfilerna. Om du vill hä
 1. Kör eller extrahera innehållet i JAR-filen Quickstart och leta reda på filen cq-portlet-components.zip i enlighet med detta:
 
    * Kör snabbstart: crx-quickstart/opt/portal
-   * Extract Quickstart contents: static/opt/portal
+   * Extrahera innehåll från snabbstart: statiskt/opt/portal
 
 1. Öppna Package Manager för den CQ5-författarinstans som distribueras till programservern. (https://*appserverhost*:*port*/cq5author/crx/packmgr)
 
@@ -681,7 +681,7 @@ Distribuera portlets till programserverns webbbehållare så att de är tillgän
 
 1. Extrahera innehållet i portletprogrammets WAR-fil.
 
-   **Tips:** jar xf *nameofapp*.war-kommandot extraherar filerna.
+   **Tips:** jar xf *nameofapp* Kommandot .war extraherar filerna.
 
 1. Öppna filen web.xml i en textredigerare.
 1. Lägg till följande serverkonfiguration i elementet för webbprogram:
@@ -737,11 +737,11 @@ Portleten ansluter som standard till publiceringsinstansen vid localhost:4503 oc
 
 1. Navigera till /libs/portal/director med hjälp av antingen Webdav eller CRXDE Lite.
 
-1. Hämta *cq-portlet-webapp.war*.
+1. Ladda ned *cq-portlet-webapp.war*.
 
 >[!NOTE]
 >
->I dessa förfaranden används Websphere-portalen som exempel, även om de är så allmänna som möjligt. Observera att rutinerna varierar för andra webbportaler. Stegen är i stort sett identiska för alla webbportaler, men du måste återanvända stegen för din webbportal.
+>Dessa procedurer använder webbsfär-portalen som exempel, även om de är så allmänna som möjligt. Observera att procedurer varierar för andra webbportaler. Stegen är i stort sett identiska för alla webbportaler, men du måste återanvända stegen för din webbportal.
 
 #### Installera portleten {#installing-the-portlet}
 
@@ -759,7 +759,7 @@ Så här installerar du portleten:
 
 När du har installerat portleten måste du konfigurera den så att den känner till URL:erna för de underliggande AEM instanserna (författare och publicering). Du kan också konfigurera andra alternativ.
 
-Så här konfigurerar du portleten:
+Så här konfigurerar du portlet:
 
 1. I portaladministrationsfönstret på programservern navigerar du till portlethantering, där alla portlets är listade och väljer AEM Portal Director portlet.
 1. Konfigurera portleten efter behov. Du kan till exempel behöva ändra URL:en för författaren och publiceringsinstanserna samt URL:en för startsökvägen. Standardkonfigurationer beskrivs i [Portletinställningar](/help/sites-administering/aem-as-portal.md#portlet-preferences).
@@ -790,7 +790,7 @@ Om portleten växlar till hjälpläget och `appendHelpViewModeAsSelector` är ma
 
 Väljarna kan utvärderas i AEM och en annan mall kan användas för olika väljare.
 
-### Använda en innehålls-URL-karta i AEM {#using-a-content-url-map-in-aem}
+### Använda URL-karta för innehåll i AEM {#using-a-content-url-map-in-aem}
 
 Vanligtvis pekar startbanan direkt mot innehållet i AEM. Om du vill behålla startbanorna i AEM i stället för i portletinställningarna kan du peka startbanan mot en innehållskarta i AEM, som `/var/portlets`. I det här fallet kan ett skript som körs i AEM använda den skickade informationen från portleten för att avgöra vilken URL som är start-URL:en. Den ska skicka en omdirigering till rätt URL.
 
@@ -799,7 +799,7 @@ Vanligtvis pekar startbanan direkt mot innehållet i AEM. Om du vill behålla st
 Så här lägger du till portleten på portalsidan:
 
 1. Se till att du är i administrationsfönstret på programservern och navigerar till den plats där du hanterar sidor. (i t.ex. WebSphere 6.1 klickar du **Hantera sidor**).
-1. Markera namnet på portleten och välj sedan en befintlig sida eller skapa en ny sida.
+1. Markera portletens namn och välj sedan en befintlig sida eller skapa en ny.
 1. Redigera sidlayouten.
 1. Markera portleten och lägg till den i en behållare.
 1. Spara ändringarna.

@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: development-tools
 content-type: reference
 exl-id: 7222a0c3-cdb9-4c73-9d53-26f00792e439
-source-git-commit: e068cee192c0837f1473802143e0793674d400e8
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '937'
+source-wordcount: '936'
 ht-degree: 0%
 
 ---
@@ -21,14 +21,14 @@ Proxyservern finns i AEM här:
 
 `crx-quickstart/opt/helpers/proxy-2.1.jar`
 
-Du kan använda proxyservern för att övervaka all klient-server-interaktion, oavsett vilket kommunikationsprotokoll som ligger till grund för det. Du kan till exempel övervaka följande protokoll:
+Du kan använda proxyservern för att övervaka all klientserverinteraktion, oavsett vilket kommunikationsprotokoll som ligger till grund för det. Du kan till exempel övervaka följande protokoll:
 
 * HTTP för webbsidor
 * HTTPS för säkra webbsidor
 * SMTP för e-postmeddelanden
 * LDAP för användarhantering
 
-Du kan till exempel placera proxyservern mellan två program som kommunicerar via ett TCP/IP-nätverk; till exempel en webbläsare och AEM. På så sätt kan du övervaka exakt vad som händer när du begär en CQ-sida.
+Du kan till exempel placera proxyservern mellan två program som kommunicerar via ett TCP/IP-nätverk, till exempel en webbläsare och AEM. På så sätt kan du övervaka exakt vad som händer när du begär en CQ-sida.
 
 ## Starta proxyserververktyget {#starting-the-proxy-server-tool}
 
@@ -82,7 +82,7 @@ En begäran om en webbsida kan till exempel se ut så här:
 
 `C-0-#000000 -> [GET /author/prox.html?CFC_cK=1102938422341 HTTP/1.1 ]`
 
-* C anger att den här posten kommer från klienten (det är en begäran om en webbsida)
+* C anger att posten kommer från klienten (det är en begäran om en webbsida)
 * 0 är anslutningens nummer (anslutningsräknaren startar vid 0)
 * #00000 förskjutningen i byteflödet. Detta är den första posten, så förskjutningen är 0.
 * `[GET <?>]` är innehållet i begäran, i exemplet en av HTTP-rubrikerna (url).
@@ -160,7 +160,7 @@ C-0-#000684 -> [59-7913-4285-8857-832c087bafd5_c484727d3b3665ad%3acrx.default; y
 C-0-#000824 -> [ ]
 ```
 
-AEM svarar med filens innehåll `test.html`:
+Den AEM instansen svarar med filens innehåll `test.html`:
 
 ```shell
 S-0-#000000 -> [HTTP/1.1 200 OK ]

@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 16db5334-604f-44e2-9993-10d683dee5bb
 feature: Multi Site Manager
 exl-id: e145e79a-c363-4a33-b9f9-99502ed20563
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '910'
+source-wordcount: '906'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ Sådana konflikter måste hanteras och lösas vid utrullning.
 
 ## Konflikthantering {#conflict-handling}
 
-När det finns sidor som är i konflikt (i grenarna utkast och live copy) kan du med MSM definiera hur (eller till och med om) de ska hanteras.
+När det finns sidor som är i konflikt (i grenarna utkast och live copy) kan du definiera hur (eller till och med om) de ska hanteras.
 
 För att säkerställa att utrullningen inte blockeras kan möjliga definitioner omfatta:
 
@@ -34,7 +34,7 @@ För att säkerställa att utrullningen inte blockeras kan möjliga definitioner
 * vilka sidor som ska namnändras (och hur),
 * hur detta påverkar publicerat innehåll.
 
-   Standardbeteendet för AEM (färdiga) är att publicerat innehåll inte påverkas. Om en sida som skapades manuellt i en livekopiegren har publicerats kommer det innehållet fortfarande att publiceras efter konflikthanteringen och utrullningen.
+  Standardbeteendet för AEM (färdiga) är att publicerat innehåll inte påverkas. Om en sida som skapades manuellt i en livekopiegren har publicerats kommer det innehållet fortfarande att publiceras efter konflikthanteringen och utrullningen.
 
 Förutom standardfunktionerna kan anpassade konflikthanterare läggas till för att implementera olika regler. Detta kan även möjliggöra publiceringsåtgärder som en enskild process.
 
@@ -44,11 +44,11 @@ I följande avsnitt använder vi exemplet på en ny sida `b`, som har skapats b�
 
 * skiss: `/b`
 
-   En överordnad sida; med 1 underordnad sida, bp-level-1.
+  En mallsida, med 1 underordnad sida, bp-level-1.
 
 * live copy: `/b`
 
-   En sida som har skapats manuellt i den aktiva kopiegrenen; med 1 underordnad sida, `lc-level-1`.
+  En sida som har skapats manuellt i den aktiva kopiegrenen, med en underordnad sida, `lc-level-1`.
 
    * Aktiverat vid publicering som `/b`tillsammans med den underordnade sidan.
 
@@ -57,19 +57,19 @@ I följande avsnitt använder vi exemplet på en ny sida `b`, som har skapats b�
 <table>
  <tbody>
   <tr>
-   <td><strong>utkast före utrullning</strong></td>
+   <td><strong>skiss före utrullning</strong></td>
    <td><strong>live copy före utrullning</strong></td>
    <td><strong>publicera före lansering</strong></td>
   </tr>
   <tr>
-   <td><code>b</code> <br /> (skapat i en skissgren, klar för utrullning)<br /> </td>
-   <td><code>b</code> <br /> (skapat manuellt i en förgrening för live-kopia)<br /> </td>
-   <td><code>b</code> <br /> (innehåller innehållet på sidan b som skapades manuellt i den aktiva kopiegrenen)</td>
+   <td><code>b</code><br /> <br /> (skapat i en skissgren, klar för utrullning)<br /> </td>
+   <td><code>b</code><br /> <br /> (skapat manuellt i en förgrening för live-kopia)<br /> </td>
+   <td><code>b</code><br /> <br /> (innehåller innehållet på sidan b som skapades manuellt i den aktiva kopiegrenen)</td>
   </tr>
   <tr>
    <td><code> /bp-level-1</code></td>
-   <td><code> /lc-level-1</code> <br /> (skapat manuellt i en förgrening för live-kopia)<br /> </td>
-   <td><code> /lc-level-1</code> <br /> (innehåller sidans innehåll<br /> underordnad nivå-1 som skapades manuellt i livekopiegrenen)</td>
+   <td><code> /lc-level-1</code><br /> <br /> (skapat manuellt i en förgrening för live-kopia)<br /> </td>
+   <td><code> /lc-level-1</code><br /> <br /> (innehåller sidans innehåll<br /> underordnad nivå-1 som skapades manuellt i livekopiegrenen)</td>
   </tr>
  </tbody>
 </table>
@@ -82,9 +82,9 @@ Detta görs med [OSGi-konfiguration](/help/sites-deploying/configuring-osgi.md) 
 
 * **Hantera konflikt med manuellt skapade sidor**:
 
-   ( `rolloutmgr.conflicthandling.enabled`)
+  ( `rolloutmgr.conflicthandling.enabled`)
 
-   Ange som true om rullningshanteraren ska hantera konflikter från en sida som skapats i live-kopian med ett namn som finns i ritningen.
+  Ange som true om rullningshanteraren ska hantera konflikter från en sida som skapats i live-kopian med ett namn som finns i ritningen.
 
 AEM har [fördefinierat beteende när konflikthantering har inaktiverats](#behavior-when-conflict-handling-deactivated).
 
@@ -114,13 +114,13 @@ Den här konflikthanteraren ger prioritet åt ritningen. Live copy-sidan `/b` fl
 
 * live copy: `/b`
 
-   Flyttas (inom den aktiva kopian) till `/b_msm_moved`. Detta fungerar som en säkerhetskopia och säkerställer att inget innehåll går förlorat.
+  Flyttas (inom den aktiva kopian) till `/b_msm_moved`. Detta fungerar som en säkerhetskopia och säkerställer att inget innehåll går förlorat.
 
    * `lc-level-1` flyttas inte.
 
 * skiss: `/b`
 
-   Är utrullad till live-kopieringssidan `/b`.
+  Är utrullad till live-kopieringssidan `/b`.
 
    * `bp-level-1` har rullats ut i livecopy.
 
@@ -137,17 +137,17 @@ Den här konflikthanteraren ger prioritet åt ritningen. Live copy-sidan `/b` fl
   </tr>
   <tr>
    <td><code>b</code></td>
-   <td><code>b</code> <br /> (har innehållet på den plana sidan b som lanserades)<br /> </td>
+   <td><code>b</code><br /> <br /> (har innehållet på den plana sidan b som lanserades)<br /> </td>
    <td></td>
-   <td><code>b_msm_moved</code> <br /> (har innehållet på sidan b som skapades manuellt i den aktiva kopiegrenen)</td>
-   <td><code>b</code> <br /> (Ingen ändring.) innehåller innehållet på originalsidan b som skapades manuellt i den aktiva kopiegrenen och nu kallas b_msm_move)<br /> </td>
+   <td><code>b_msm_moved</code><br /> <br /> (har innehållet på sidan b som skapades manuellt i den aktiva kopiegrenen)</td>
+   <td><code>b</code><br /> <br /> (ingen ändring; innehåller innehållet på originalsidan b som skapades manuellt i den aktiva kopiegrenen och nu kallas b_msm_move)<br /> </td>
   </tr>
   <tr>
    <td><code> /bp-level-1</code></td>
    <td><code class="code"> /bp-level-1</code></td>
-   <td><code> /lc-level-1</code> <br /> (ingen ändring)</td>
+   <td><code> /lc-level-1</code><br /> <br /> (ingen ändring)</td>
    <td><code> </code></td>
-   <td><code> /lc-level-1</code> <br /> (ingen ändring)</td>
+   <td><code> /lc-level-1</code><br /> <br /> (ingen ändring)</td>
   </tr>
  </tbody>
 </table>
@@ -159,14 +159,14 @@ Med anpassade konflikthanterare kan du implementera egna regler. Med servicerang
 Anpassade konflikthanterare kan:
 
 * Namnge efter behov.
-* utvecklas/konfigureras enligt dina krav, Du kan t.ex. utveckla en hanterare så att den aktiva kopieringssidan ges företräde.
-* Kan konfigureras med [OSGi-konfiguration](/help/sites-deploying/configuring-osgi.md); särskilt
+* Utvecklas/konfigureras enligt dina krav. Du kan t.ex. utveckla en hanterare så att sidan med live-kopia har prioritet.
+* Kan konfigureras med [OSGi-konfiguration](/help/sites-deploying/configuring-osgi.md), särskilt
 
    * **Servicerangordning**:
 
-      Definierar ordningen för andra konflikthanterare ( `service.ranking`).
+     Definierar ordningen som hör till andra konflikthanterare ( `service.ranking`).
 
-      Standardvärdet är 0.
+     Standardvärdet är 0.
 
 ### Beteende vid inaktiverad konflikthantering {#behavior-when-conflict-handling-deactivated}
 
@@ -180,11 +180,11 @@ I det här fallet har live-kopian företräde. Planeringssidan `/b` kopieras int
 
 * skiss: `/b`
 
-   Kopieras inte alls, men ignoreras.
+  Kopieras inte alls, men ignoreras.
 
 * live copy: `/b`
 
-   Står detsamma.
+  Står detsamma.
 
 <table>
  <caption>
@@ -198,13 +198,13 @@ I det här fallet har live-kopian företräde. Planeringssidan `/b` kopieras int
   </tr>
   <tr>
    <td><code>b</code></td>
-   <td><code>b</code> <br /> (Ingen ändring.) har innehållet på sidan b som skapades manuellt i den aktiva kopiegrenen)</td>
-   <td><code>b</code> <br /> (Ingen ändring.) innehåller innehållet på sidan b som skapades manuellt i den aktiva kopiegrenen)<br /> </td>
+   <td><code>b</code><br /> <br /> (ingen ändring; har innehållet på sidan b som skapades manuellt i den aktiva kopiegrenen)</td>
+   <td><code>b</code><br /> <br /> (ingen ändring; innehåller innehållet på sidan b som skapades manuellt i den aktiva kopiegrenen)<br /> </td>
   </tr>
   <tr>
-   <td><code> /bp-level-1</code> </td>
-   <td><code> /lc-level-1</code> <br /> (ingen ändring)</td>
-   <td><code> /lc-level-1</code> <br /> (ingen ändring)</td>
+   <td><code> /bp-level-1</code><br /> </td>
+   <td><code> /lc-level-1</code><br /> <br /> (ingen ändring)</td>
+   <td><code> /lc-level-1</code><br /> <br /> (ingen ändring)</td>
   </tr>
  </tbody>
 </table>

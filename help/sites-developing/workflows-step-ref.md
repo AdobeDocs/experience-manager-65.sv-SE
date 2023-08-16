@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: e3afffd0-d90c-4bd0-b814-f7aeac6ceb6d
 docset: aem65
 exl-id: 8de78bde-2fcb-4221-873e-59e347ff2d74
-source-git-commit: 768576e300b655962adc3e1db20fc5ec06a5ba6c
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '3246'
+source-wordcount: '3242'
 ht-degree: 0%
 
 ---
@@ -32,10 +32,9 @@ Arbetsflödesmodeller består av en serie steg av olika typer. Beroende på typ 
 >* [Bearbeta resurser med mediehanterare och arbetsflöden](/help/assets/media-handlers.md)
 >
 
-
 ## Stegegenskaper {#step-properties}
 
-Varje stegkomponent har en **Stegegenskaper** som gör att du kan definiera och redigera de egenskaper som krävs.
+Varje stegkomponent har en **Stegegenskaper** som gör att du kan definiera och redigera de önskade egenskaperna.
 
 ### Stegegenskaper - fliken Allmänt {#step-properties-common-tab}
 
@@ -49,20 +48,20 @@ En beskrivning av steget.
 
 * **Arbetsflödesfas**
 
-   En nedrullningsbar väljare för att använda en [Scen](/help/sites-developing/workflows.md#workflow-stages) till steget.
+  En nedrullningsbar väljare för att använda en [Scen](/help/sites-developing/workflows.md#workflow-stages) till steget.
 
 * **Timeout**
 
-   Den period efter vilken steget&quot;timeout&quot; inträffar.
+  Den period efter vilken steget&quot;timeout&quot; inträffar.
 Du kan välja mellan: **Av**, **Omedelbar**, **1h**, **6 tim**, **12h**, **24h**.
 
 * **Timeout-hanterare**
 
-   Hanteraren som styr arbetsflödet när steget avbryts. Till exempel, `Auto Advancer`
+  Hanteraren som styr arbetsflödet när steget avbryts. Till exempel, `Auto Advancer`
 
 * **Avancerad hanterare**
 
-   Välj det här alternativet om du vill att arbetsflödet automatiskt ska gå vidare till nästa steg efter körningen. Om du inte väljer det här alternativet måste implementeringsskriptet hantera arbetsflödets utveckling.
+  Välj det här alternativet om du vill att arbetsflödet automatiskt ska gå vidare till nästa steg efter körningen. Om du inte väljer det här alternativet måste implementeringsskriptet hantera arbetsflödets utveckling.
 
 ### Stegegenskaper - fliken Användare/grupp {#step-properties-user-group-tab}
 
@@ -82,7 +81,7 @@ Följande egenskaper är tillgängliga för många arbetsflödesstegkomponenter 
 
 ## OCH dela {#and-split}
 
-The **OCH dela** skapar en delning i arbetsflödet, efter vilken båda grenarna är aktiva. Du kan lägga till arbetsflödessteg i varje gren efter behov. I det här steget kan du infoga flera bearbetningssökvägar i arbetsflödet. Du kan till exempel tillåta att vissa granskningssteg utförs parallellt, vilket sparar tid.
+The **OCH dela** skapar en delning i arbetsflödet, efter vilken båda grenarna är aktiva. Du kan lägga till arbetsflödessteg i varje gren efter behov. I det här steget kan du lägga in flera bearbetningssökvägar i arbetsflödet. Du kan till exempel tillåta att vissa granskningssteg utförs parallellt, vilket sparar tid.
 
 ![wf-26](assets/wf-26.png)
 
@@ -92,12 +91,12 @@ Så här konfigurerar du delningen:
 
 * Redigera **OCH Dela egenskaper**:
 
-   * **Delningsnamn**: tilldela ett namn i förklarande syfte
-   * Ange antalet filialer som krävs. 2, 3, 4 eller 5.
+   * **Delningsnamn**: tilldela ett namn för förklarande ändamål
+   * Ange antalet förgreningar som krävs: 2, 3, 4 eller 5.
 
 * Lägg till arbetsflödessteg i grenarna efter behov.
 
-   ![wf-27](assets/wf-27.png)
+  ![wf-27](assets/wf-27.png)
 
 ## Behållarsteg {#container-step}
 
@@ -136,7 +135,7 @@ Om du vill konfigurera steget redigerar du och använder följande flikar:
    * **Routningsuttryck**: Välj regeldefinition, externt skript eller ett ECMA-skript som avgör om körningen av **Målsteg**.
 
       * **Regeldefinition:** Använd [uttrycksredigerare](/help/forms/using/variable-in-aem-workflows.md#use-expression-editor) för att definiera regeln.
-      * **Externt skript:** Sökvägen för det externa skriptet.
+      * **Externt skript:** Det externa skriptets sökväg.
       * **ECMA-skript**: Skriptet som avgör om körningen av **Gå till steg**.
 
 #### Simulera en for-slinga {#simulating-a-for-loop}
@@ -146,7 +145,7 @@ Simulering av en for-slinga kräver att du håller reda på antalet upprepningar
 * Antalet representerar vanligtvis ett index med objekt som hanteras i arbetsflödet.
 * Antalet utvärderas som avslutningskriterier för slingan.
 
-Om du till exempel vill implementera ett arbetsflöde som utför en åtgärd på flera JCR-noder kan du använda en loopräknare som index för noderna. Spara ett `integer` värdet i datamappningen för arbetsflödesinstansen. Om du vill öka antalet och jämföra antalet med avslutningskriterierna använder du skriptet i **Gå till steg**.
+Om du till exempel vill implementera ett arbetsflöde som utför en åtgärd på flera JCR-noder kan du använda en loopräknare som index för noderna. Om du vill behålla antalet lagrar du en `integer` värdet i datamappningen för arbetsflödesinstansen. Om du vill öka antalet och jämföra antalet med avslutningskriterierna använder du skriptet i **Gå till steg**.
 
 ```
 function check(){
@@ -182,7 +181,7 @@ I **Gå till steg**, använda **Ange variabel** som **Målsteg** och **antal &lt
 
 ![Villkor för simulering av en for-slinga](assets/variable_use_case_count1_new.png)
 
-The **Ange variabel** körs upprepade gånger och värdet för **antal** variabel med 1 för varje körning tills värdet når 5.
+The **Ange variabel** stegen körs upprepade gånger och värdet för **antal** variabel med 1 för varje körning tills värdet når 5.
 
 ## ELLER Dela {#or-split}
 
@@ -203,6 +202,7 @@ Så här konfigurerar du delningen:
    * **Vanliga**
 
       * Ange delningsnamnet.
+
    * **Förgreningar (*x)***
 
       * **Lägg till gren:** Lägg till fler grenar i steget.
@@ -212,17 +212,18 @@ Så här konfigurerar du delningen:
       * **Skript**: Lägg till skriptet i rutan för att utvärdera den aktiva grenen om du väljer **ECMA-skript** som routningsuttryck.
       * **Standardflöde**: Standardförgreningen följs om det finns flera förgreningar. Du kan bara ange en gren som standard.
 
-   >[!NOTE]
-   >
-   >    * En gren utvärderas i taget baserat på routningsuttrycket.
-   >    * Förgreningarna utvärderas uppifrån och ned.
-   >    * Det första skriptet som utvärderas till true körs.
-   >    * Om ingen gren utvärderas till true, går arbetsflödet inte framåt.
+  >[!NOTE]
+  >
+  >    * En gren utvärderas i taget baserat på routningsuttrycket.
+  >    * Förgreningarna utvärderas uppifrån och ned.
+  >    * Det första skriptet som utvärderas till true körs.
+  >    * Om ingen gren utvärderas till true, går arbetsflödet inte framåt.
+  >
+  >
 
-
-   >[!NOTE]
-   >
-   >Se [Definiera en regel för en OR-delning](/help/sites-developing/workflows-models.md#defineruleecmascript).
+  >[!NOTE]
+  >
+  >Se [Definiera en regel för en OR-delning](/help/sites-developing/workflows-models.md#defineruleecmascript).
 
 * Lägg till arbetsflödessteg i grenarna efter behov.
 
@@ -232,7 +233,7 @@ Så här konfigurerar du delningen:
 
 A **Deltagarsteg** I kan du tilldela ägarskap för en viss åtgärd. Arbetsflödet fortsätter bara när användaren har bekräftat steget manuellt. Det här arbetsflödet används när du vill att någon ska arbeta med arbetsflödet. Exempel: ett granskningssteg.
 
-Även om det inte är direkt relaterat måste användarauktorisering beaktas när en åtgärd tilldelas. användaren måste ha åtkomst till sidan som är arbetsflödets nyttolast.
+Även om det inte är direkt relaterat måste användarauktorisering beaktas när en åtgärd tilldelas. Användaren måste ha åtkomst till sidan som är arbetsflödets nyttolast.
 
 #### Deltagarsteg - konfiguration {#participant-step-configuration}
 
@@ -248,7 +249,6 @@ Om du vill konfigurera steget redigerar du och använder följande flikar:
 >* Arbetsflödet är slutfört (färdigt).
 >* Arbetsflödet avbryts (avslutas).
 >
-
 
 >[!NOTE]
 >
@@ -277,7 +277,7 @@ Om du vill konfigurera steget redigerar du och använder följande flikar:
 Om du vill skapa en dialogruta måste du skapa den:
 
 * Bestäm var de resulterande uppgifterna finns [lagras i nyttolasten](#dialog-participant-step-storing-data-in-the-payload).
-* [Definiera dialogrutan. innehåller definitioner av de fält som används för att samla in och spara data](#dialog-participant-step-dialog-definition).
+* [Definiera dialogrutan; innehåller definitioner av de fält som används för att samla in och spara data](#dialog-participant-step-dialog-definition).
 
 #### Steg för dialogdeltagare - lagra data i nyttolasten {#dialog-participant-step-storing-data-in-the-payload}
 
@@ -286,7 +286,7 @@ Du kan lagra widgetdata i arbetsflödets nyttolast eller i arbetsobjektets metad
 * **Lagra data med nyttolasten**
 
    * Om du vill lagra widgetdata som en egenskap för arbetsflödets nyttolast använder du följande format för värdet för namnegenskapen för widgetnoden:
-      `./jcr:content/nodename`
+     `./jcr:content/nodename`
 
    * Data lagras i `nodename` nyttolastnodens egenskap. Om noden inte innehåller den egenskapen skapas egenskapen.
    * När den lagras med nyttolasten skriver efterföljande användning av dialogrutan med samma nyttolast över egenskapens värde.
@@ -294,13 +294,13 @@ Du kan lagra widgetdata i arbetsflödets nyttolast eller i arbetsobjektets metad
 * **Lagra data med arbetsobjektet**
 
    * Om du vill lagra widgetdata som en egenskap för arbetsobjektets metadata använder du följande format för värdet för egenskapen name:
-      `nodename`
+     `nodename`
 
    * Data lagras i `nodename` arbetsuppgiftens egenskap `metadata`. Data bevaras om dialogrutan senare används med samma nyttolast.
 
 #### Steg för dialogdeltagare - Dialogrutedefinition {#dialog-participant-step-dialog-definition}
 
-1. **Dialogrutans struktur**
+1. **Dialogstruktur**
 
    Dialogrutorna för Dialog Deltagare-steg liknar dialogrutor som du skapar för redigeringskomponenter. De lagras under:
 
@@ -341,7 +341,7 @@ Du kan lagra widgetdata i arbetsflödets nyttolast eller i arbetsobjektets metad
 
 1. **Exempeldialogrutedefinition**
 
-   Följande XML-kodfragment representerar en dialogruta som lagrar en `String` värdet i `watchEmail` Nod för nyttolastinnehållet. Titelnoden representerar [TextField](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/components/coral/foundation/form/textfield/index.html) komponent:
+   Följande XML-kodfragment representerar en dialogruta där en `String` värdet i `watchEmail` Nod för nyttolastinnehållet. Titelnoden representerar [TextField](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/components/coral/foundation/form/textfield/index.html) komponent:
 
    ```xml
    jcr:primaryType="nt:unstructured"
@@ -388,7 +388,7 @@ Om du vill konfigurera steget redigerar du och använder följande flikar:
 
    * **Väljare för deltagare**: Namnet på [deltagarväljaren som du skapar](#developingtheparticipantchooser).
    * **Argument**: Alla obligatoriska argument.
-   * **E-post**: Anger om ett e-postmeddelande ska skickas till användaren.
+   * **E-post**: Om ett e-postmeddelande ska skickas till användaren.
 
 * **Dialog**
 
@@ -402,54 +402,55 @@ Skapa en OSGi-tjänst eller ett ECMAScript-skript som väljer en användare att 
 
 * **ECMAscript**
 
-   Skript måste innehålla en funktion med namnet getParticipant som returnerar ett användar-ID som `String` värde. Lagra egna skript i `/apps/myapp/workflow/scripts` eller en undermapp.
+  Skript måste innehålla funktionen getParticipant som returnerar ett användar-ID som `String` värde. Lagra egna skript i `/apps/myapp/workflow/scripts` eller en undermapp.
 
-   Ett exempelskript ingår i en AEM standardinstans:
+  Ett exempelskript ingår i en AEM standardinstans:
 
-   `/libs/workflow/scripts/initiator-participant-chooser.ecma`
+  `/libs/workflow/scripts/initiator-participant-chooser.ecma`
 
-   >[!CAUTION]
-   >
-   >Ändra ingenting i dialogrutan `/libs` bana.
-   >
-   >
-   >Orsaken är att innehållet i `/libs` skrivs över nästa gång du uppgraderar din instans (och kan skrivas över när du använder en snabbkorrigering eller ett funktionspaket).
+  >[!CAUTION]
+  >
+  >Ändra ingenting i dialogrutan `/libs` bana.
+  >
+  >
+  >Orsaken är att innehållet i `/libs` skrivs över nästa gång du uppgraderar din instans (och kan skrivas över när du använder en snabbkorrigering eller ett funktionspaket).
 
-   Det här skriptet väljer arbetsflödesinitieraren som deltagare:
+  Det här skriptet väljer arbetsflödesinitieraren som deltagare:
 
-   ```
-   function getParticipant() {
-       return workItem.getWorkflow().getInitiator();
-   }
-   ```
+  ```
+  function getParticipant() {
+      return workItem.getWorkflow().getInitiator();
+  }
+  ```
 
-   >[!NOTE]
-   >
-   >The **Väljare för deltagare i arbetsflödesinitieraren** -komponenten utökar **Dynamiskt deltagarsteg** och använder det här skriptet som stegimplementering.
+  >[!NOTE]
+  >
+  >The **Väljare för deltagare i arbetsflödesinitieraren** -komponenten utökar **Dynamiskt deltagarsteg** och använder det här skriptet som stegimplementering.
 
 * **OSGi-tjänst**
 
-   Tjänsterna måste implementera [com.day.cq.workflow.exec.ParticipantStepChooser](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/workflow/exec/ParticipantStepChooser.html) gränssnitt. Gränssnittet definierar följande medlemmar:
+  Tjänsterna måste implementera [com.day.cq.workflow.exec.ParticipantStepChooser](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/workflow/exec/ParticipantStepChooser.html) gränssnitt. Gränssnittet definierar följande medlemmar:
 
    * `SERVICE_PROPERTY_LABEL` fält: Använd det här fältet för att ange namnet på deltagarväljaren. Namnet visas i en lista med tillgängliga deltagarval i dialogrutan **Dynamiskt deltagarsteg** egenskaper.
 
-   * `getParticipant` metod: Returnerar det dynamiskt lösta huvud-ID:t som en `String` värde.
-   >[!CAUTION]
-   >
-   >The `getParticipant` returnerar det dynamiskt lösta huvud-ID:t. Detta ID kan antingen vara ett grupp-ID eller ett användar-ID.
-   >
-   >
-   >Ett grupp-ID kan dock bara användas för **Deltagarsteg**, när en lista över deltagare returneras. För **Dynamiskt deltagarsteg**, returneras en tom lista som inte kan användas för delegering.
+   * `getParticipant` metod: Returnerar det dynamiskt lösta huvud-ID:t som `String` värde.
 
-   Gör implementeringen tillgänglig för **Dynamiskt deltagarsteg** lägger du till Java™-klassen i ett OSGi-paket som exporterar tjänsten och distribuerar paketet till den AEM servern.
+  >[!CAUTION]
+  >
+  >The `getParticipant` returnerar det dynamiskt lösta huvud-ID:t. Detta ID kan antingen vara ett grupp-ID eller ett användar-ID.
+  >
+  >
+  >Ett grupp-ID kan dock bara användas för **Deltagarsteg**, när en lista över deltagare returneras. För **Dynamiskt deltagarsteg**, returneras en tom lista som inte kan användas för delegering.
 
-   >[!NOTE]
-   >
-   >**Slumpmässig deltagarväljare** är en exempeltjänst som väljer en slumpmässig användare ( `com.day.cq.workflow.impl.process.RandomParticipantChooser`). The **Välj slumpmässig deltagare** r step component sample extends the **Dynamiskt deltagarsteg** och använder den här tjänsten som stegimplementering.
+  Gör implementeringen tillgänglig för **Dynamiskt deltagarsteg** lägger du till Java™-klassen i ett OSGi-paket som exporterar tjänsten och distribuerar paketet till AEM.
+
+  >[!NOTE]
+  >
+  >**Slumpmässig deltagarväljare** är en exempeltjänst som väljer en slumpmässig användare ( `com.day.cq.workflow.impl.process.RandomParticipantChooser`). The **Välj slumpmässig deltagare** r step component sample extends the **Dynamiskt deltagarsteg** och använder den här tjänsten som stegimplementering.
 
 #### Dynamiskt deltagarsteg - Exempel på deltagarväljartjänst {#dynamic-participant-step-example-participant-chooser-service}
 
-Följande Java™-klass implementerar `ParticipantStepChooser` gränssnitt. Klassen returnerar namnet på deltagaren som initierade arbetsflödet. Koden använder samma logik som exempelskriptet (`initiator-participant-chooser.ecma`).
+Följande Java™-klass implementerar `ParticipantStepChooser` gränssnitt. Klassen returnerar namnet på deltagaren som initierade arbetsflödet. Koden använder samma logik som exempelskriptet (`initiator-participant-chooser.ecma`) används.
 
 The `@Property` anteckningen anger värdet för `SERVICE_PROPERTY_LABEL` fält till `Workflow Initiator Participant Chooser`.
 
@@ -492,7 +493,7 @@ public class InitiatorParticipantChooser implements ParticipantStepChooser {
 
 I **Dynamiskt deltagarsteg** egenskapsdialogrutan, **Väljare för deltagare** listan innehåller objektet `Workflow Initiator Participant Chooser (script)`, som representerar den här tjänsten.
 
-När arbetsflödesmodellen startas anger loggen ID:t för användaren som initierade arbetsflödet och vem som tilldelats arbetsposten. I det här exemplet `admin` användaren startade arbetsflödet.
+När arbetsflödesmodellen startas anger loggen ID:t för användaren som initierade arbetsflödet och vem som tilldelats arbetsposten. I det här exemplet `admin` användaren har startat arbetsflödet.
 
 `13.09.2015 15:48:53.037 *INFO* [10.176.129.223 [1347565733037] POST /etc/workflow/instances HTTP/1.1] com.adobe.example.InitiatorParticipantChooser Assigning Dynamic Participant Step work item to admin`
 
@@ -524,7 +525,7 @@ Skapa ett formulär som ska användas med en **Steg för formulärdeltagare** so
 * The **Formulärets början** måste ha ett värde för `Form Identifier` -egenskap.
 * Formulärkomponenterna måste ha **Elementnamn** egenskapen är angiven till sökvägen för noden där fältdata lagras. Sökvägen måste hitta en nod i arbetsflödets nyttolastinnehåll. Värdet har följande format:
 
-   `./jcr:content/path_to_node`
+  `./jcr:content/path_to_node`
 
 * Formuläret måste innehålla en **Skicka-knapp för arbetsflöde** -komponenten. Du konfigurerar inga egenskaper för komponenten.
 
@@ -536,7 +537,7 @@ I följande exempel används fältdata som innehåll i en **Text** på nyttolast
 
 `./jcr:content/par/text_3/text`
 
-Det första exemplet kan användas för alla sidor som `cq:Page` komponentåtergivning. Det andra exemplet kan bara användas när nyttolastsidan innehåller en **Text** -komponent som har ett ID för `text_3`.
+Det första exemplet kan användas för alla sidor som `cq:Page` komponentåtergivningar. Det andra exemplet kan bara användas när nyttolastsidan innehåller en **Text** -komponent som har ett ID för `text_3`.
 
 Formuläret kan finnas var som helst i databasen, men arbetsflödesanvändare måste ha behörighet att läsa formuläret.
 
@@ -557,7 +558,7 @@ Om du vill konfigurera steget redigerar du och använder följande flikar:
 
 ### Väljare för deltagare i arbetsflödesinitieraren {#workflow-initiator-participant-chooser}
 
-The **Väljare för deltagare i arbetsflödesinitieraren** är en deltagarväljare som tilldelar den genererade arbetsposten till användaren som startade arbetsflödet. Det finns inga andra egenskaper att konfigurera än **Vanliga** egenskaper.
+The **Väljare för deltagare i arbetsflödesinitieraren** är en deltagarväljare som tilldelar den genererade arbetsposten till användaren som startade arbetsflödet. Det finns inga andra egenskaper än **Vanliga** egenskaper.
 
 #### Väljare för deltagare i arbetsflödesinitiering - Konfiguration {#workflow-initiator-participant-chooser-configuration}
 
@@ -578,14 +579,14 @@ Om du vill konfigurera steget redigerar du och använder följande flikar:
 * [Vanliga](#step-properties-common-tab)
 * **Process**
 
-   * **Process**: Processimplementeringen som ska köras. Använd listrutan för att välja ECMAScript- eller OSGi-tjänsten. Mer information om:
+   * **Process**: Den processimplementering som ska köras. Använd listrutan för att välja ECMAScript- eller OSGi-tjänsten. Mer information om:
 
       * Standardtjänsterna ECMAScripts och OSGi, se [Inbyggda processer för processteg](/help/sites-developing/workflows-process-ref.md).
       * Skapa ECMAScript för ett steg i processen, se [Implementera ett processsteg med ett ECMAScript](/help/sites-developing/workflows-customizing-extending.md#using-ecmascript).
       * Skapa OSGi-tjänster för ett steg i processen, se [Implementera ett processsteg med en Java™-klass](/help/sites-developing/workflows-customizing-extending.md#implementing-a-process-step-with-a-java-class).
+
    * **Avancerad hanterare**: Välj det här alternativet om du vill att arbetsflödet automatiskt ska gå vidare till nästa steg efter körningen. Om du inte väljer det här alternativet måste implementeringsskriptet hantera arbetsflödets utveckling.
    * **Argument**: Argument som ska skickas till processen.
-
 
 ## Ange variabel {#set-variable}
 
@@ -604,10 +605,11 @@ Om du vill konfigurera steget redigerar du och använder följande flikar:
    * **Välj mappningsläge:**  Välj ett mappningsläge för att ange variabelns värde. Beroende på variabelns datatyp kan du använda följande alternativ för att ange värdet för en variabel:
 
       * **Literal:** Använd alternativet när du vet exakt vilket värde du ska ange.
-      * **Uttryck:** Använd alternativet när värdet som ska användas beräknas baserat på ett uttryck. Uttrycket skapas i den angivna uttrycksredigeraren.
+      * **Uttryck:** Använd alternativet när värdet som ska användas beräknas baserat på ett uttryck. Uttrycket skapas i angiven uttrycksredigerare.
       * **JSON-punktnotation:** Använd alternativet för att hämta ett värde från en JSON- eller FDM-typvariabel.
       * **XPATH:** Använd alternativet för att hämta ett värde från en XML-typvariabel.
       * **I förhållande till nyttolast:** Använd alternativet när värdet som ska sparas till variabeln är tillgängligt på en sökväg som är relativ till nyttolasten.
       * **Absolut sökväg:** Använd alternativet när värdet som ska sparas i variabeln är tillgängligt på en absolut sökväg.
+
    * **Ange värde:** Om du vill mappa till variabeln anger du ett värde. Vilket värde du anger i det här fältet beror på mappningsläget.
    * **Lägg till mappning:** Använd det här alternativet om du vill lägga till fler mappningar för att ange ett värde för variabeln.

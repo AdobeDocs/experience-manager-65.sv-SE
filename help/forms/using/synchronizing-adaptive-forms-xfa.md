@@ -10,20 +10,20 @@ discoiquuid: dac4539b-804d-4420-9170-68000ebb2638
 docset: aem65
 feature: Adaptive Forms
 exl-id: fed67c23-a9b7-403e-9199-dfd527d5f209
-source-git-commit: e7a3558ae04cd6816ed73589c67b0297f05adce2
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '1212'
+source-wordcount: '1211'
 ht-degree: 0%
 
 ---
 
 # Synkronisera adaptiv Forms med XFA-formulärmallar{#synchronizing-adaptive-forms-with-xfa-form-templates}
 
-<span class="preview"> Adobe rekommenderar att man använder modern och utbyggbar datainhämtning [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) for [skapa ny Adaptive Forms](/help/forms/using/create-an-adaptive-form-core-components.md) eller [lägga till adaptiv Forms på AEM Sites-sidor](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-program, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptive Forms med grundläggande komponenter. </span>
+<span class="preview"> Adobe rekommenderar att man använder modern och utbyggbar datainhämtning [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) for [skapa ny Adaptive Forms](/help/forms/using/create-an-adaptive-form-core-components.md) eller [lägga till adaptiv Forms på AEM Sites-sidor](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-filer, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptiv Forms med baskomponenter. </span>
 
 ## Introduktion {#introduction}
 
-Du kan skapa ett anpassat formulär baserat på en XFA-formulärmall ( `*.XDP` fil). Tack vare detta återanvändning kan du bevara din investering i befintliga XFA-formulär. Information om hur du använder en XFA-formulärmall för att skapa ett anpassat formulär finns i [Skapa ett anpassat formulär baserat på en mall](../../forms/using/creating-adaptive-form.md#p-create-an-adaptive-form-based-on-an-xfa-form-template-p).
+Du kan skapa ett anpassat formulär baserat på en XFA-formulärmall ( `*.XDP` fil). Tack vare detta återanvändande kan du behålla din investering i befintliga XFA-formulär. Information om hur du använder en XFA-formulärmall för att skapa ett anpassat formulär finns i [Skapa ett anpassat formulär baserat på en mall](../../forms/using/creating-adaptive-form.md#p-create-an-adaptive-form-based-on-an-xfa-form-template-p).
 
 Du kan återanvända fält från XDP-filen i ditt adaptiva formulär. Dessa fält kallas för binda fält. Egenskaperna för de bindade fälten (till exempel skript, etiketter och visningsformat) kopieras från XDP-filen. Du kan också välja att åsidosätta värdet för vissa av dessa egenskaper.
 
@@ -45,7 +45,7 @@ Om du vill använda resurserna som innehåller exemplet i artikeln hämtar du ex
 
 ## Exempelpaket {#sample-package}
 
-I artikeln används ett exempel som visar hur du synkroniserar det adaptiva formuläret med en uppdaterad XFA-formulärmall. Resurserna som används i exemplet finns i ett paket som kan hämtas från [Nedladdningar](../../forms/using/synchronizing-adaptive-forms-xfa.md#p-downloads-p) i den här artikeln.
+I artikeln används ett exempel som visar hur du synkroniserar det adaptiva formuläret med en uppdaterad XFA-formulärmall. Resurserna som används i exemplet är tillgängliga i ett paket som kan hämtas från [Nedladdningar](../../forms/using/synchronizing-adaptive-forms-xfa.md#p-downloads-p) i den här artikeln.
 
 När du har överfört paketet kan du visa de här resurserna i användargränssnittet för AEM Forms.
 
@@ -62,7 +62,7 @@ Paketet innehåller följande resurser:
 1. Navigera till https://&lt;server>:&lt;port>/aem/forms.html. Ange dina autentiseringsuppgifter om du tillfrågas.
 1. Öppna exemplet-af-xfa för redigering i redigeringsläge.
 1. Välj fliken Datamodellobjekt i innehållsläsaren i sidlisten. Dra NumericField1 och TextField1 till det adaptiva formuläret.
-1. Ändra titeln för NumericField1 från **Numeriskt fält** till **Numeriskt AF-fält.**
+1. Ändra titeln för NumericField1 från **Numeriskt fält** till **AF numeriskt fält.**
 
 >[!NOTE]
 >
@@ -82,7 +82,7 @@ Låt oss till exempel uppdatera `sample-form.xdp` i följande steg:
 
 1. Öppna `sample-form.xdp` och ändra titeln för fältet TextField1 från **Textfält** till **Mitt textfält**.
 
-1. Överför `sample-form.xdp` tillbaka till AEM Forms UI.
+1. Ladda upp `sample-form.xdp` gå tillbaka till AEM Forms UI.
 
 Om en XDP-fil uppdateras visas en ikon i redigeraren när du redigerar de adaptiva formulären baserat på XDP-filen. Den här ikonen anger att det adaptiva formuläret inte är synkroniserat med XDP-filen. I följande bild ser du ikonen bredvid i sidlisten.
 
@@ -102,7 +102,7 @@ När du klickar på meddelandet synkroniseras fälten i det adaptiva formuläret
 
 Alla egenskaper som kopierades från XDP-filen till det adaptiva formuläret uppdateras, förutom de egenskaper som explicit åsidosatts i det adaptiva formuläret (från komponentdialogrutan) av författaren. Listan över egenskaper som har uppdaterats är tillgänglig i serverloggarna.
 
-Om du vill uppdatera egenskaperna i det adaptiva formuläret klickar du på länken (märkt) `"Click Here"`) i meddelandet. Titeln för TextField1 ändras från **Textfält** till **Mitt textfält**.
+Om du vill uppdatera egenskaperna i det adaptiva formuläret klickar du på länken (märkt) `"Click Here"`). Titeln för TextField1 ändras från **Textfält** till **Mitt textfält**.
 
 ![update-property](assets/update-property.png)
 
@@ -123,10 +123,10 @@ Om ett fält som tidigare kopierats till ett adaptivt formulär tas bort från e
 Följande steg visar det här användningsflödet för resurserna i exemplet som används i den här artikeln:
 
 1. Uppdatera `sample-form.xdp` och ta bort NumericField1.
-1. Överför `sample-form.xdp` i AEM Forms UI
-1. Öppna `sample-xfa-af` anpassat formulär för redigering. Följande felmeddelande visas: Schema/formulärmall för det anpassade formuläret har uppdaterats. `Click Here` för att basera den på den nya versionen.
+1. Ladda upp `sample-form.xdp` i AEM Forms UI
+1. Öppna `sample-xfa-af` anpassat formulär för redigering. Följande felmeddelande visas: Schema/Formulärmall för det adaptiva formuläret har uppdaterats. `Click Here` för att basera den på den nya versionen.
 
-1. Klicka på länken (märkt &quot; `Click Here`&quot;) i meddelandet. Ett felmeddelande visas som anger att fältet inte längre finns i XDP-filen.
+1. Klicka på länken (märkt &quot; `Click Here`i meddelandet. Ett felmeddelande visas som anger att fältet inte längre finns i XDP-filen.
 
 ![Ett fel uppstod när du tog bort ett element i XDP-filen](assets/no-element-xdp.png)
 

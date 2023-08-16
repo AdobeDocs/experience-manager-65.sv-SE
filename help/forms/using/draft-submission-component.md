@@ -10,9 +10,9 @@ topic-tags: publish
 discoiquuid: ad71b423-02e1-4476-9c7c-f832cea6b0a6
 docset: aem65
 exl-id: f3f013a7-a399-4178-a901-d4a8c65ddbd3
-source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '747'
+source-wordcount: '745'
 ht-degree: 0%
 
 ---
@@ -23,11 +23,11 @@ Komponenten Utkast och inskickningar visar alla formulär som är i utkastläge 
 
 ## Konfigurera komponenten {#configuring-the-component}
 
-Komponenten Utkast och överföringar har två flikar: Utkast och inskickat material.
+Komponenten Utkast och inskickningar har två flikar: Utkast och inskickningar.
 
-Om du vill att ett anpassat formulär ska kunna skickas på fliken Skicka anger du **Skicka åtgärd** till **[Forms Portal Submit Action](../../forms/using/configuring-submit-actions.md). Alternativt kan** aktivera alternativet Forms Portal Submit. När en användare skickar formuläret läggs formuläret till på fliken Skicka.
+Om du vill att ett anpassat formulär ska kunna skickas på fliken Skicka anger du **Skicka åtgärd** till **[Forms Portal Submit Action](../../forms/using/configuring-submit-actions.md). Alternativt** aktivera alternativet Forms Portal Submit. När en användare skickar formuläret läggs formuläret till på fliken Skicka.
 
-Funktionen Utkast är aktiverad direkt. När en användare klickar **Spara** i ett anpassat formulär läggs formuläret till på fliken Utkast.
+Funktionen Utkast är aktiverad direkt. När en användare klickar **Spara** i ett adaptivt formulär läggs formuläret till på fliken Utkast.
 
 Utför följande steg för att lägga till och konfigurera en komponent för utkast och överföringar:
 
@@ -78,12 +78,12 @@ Utför följande steg för att lägga till och konfigurera en komponent för utk
   <tr>
    <td> </td>
    <td>Layoutmall</td>
-   <td>Anger vilken layout som ska användas för listan med utkast till Forms.</td>
+   <td>Anger layouten som ska användas för listan med utkast till Forms.</td>
   </tr>
   <tr>
    <td>Inskickad Forms-flikkonfiguration</td>
    <td>Egen titel </td>
-   <td>Anger titeln på <strong>Forms har skickats </strong>-fliken. Standardvärdet är <strong>Forms har skickats.</strong></td>
+   <td>Anger titeln på <strong>Forms har skickats </strong>-fliken. Standardvärdet är <strong>Forms har skickats in.</strong></td>
   </tr>
   <tr>
    <td> </td>

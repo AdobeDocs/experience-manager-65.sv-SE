@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: publish
 docset: aem65
 exl-id: 240ed4d8-b21b-46eb-80a9-9e8093b77235
-source-git-commit: 5ca6c5abeb5ed09d8929d1986aa24c1416e0cc06
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '1054'
+source-wordcount: '1050'
 ht-degree: 0%
 
 ---
@@ -50,7 +50,7 @@ AEM Forms tillhandahåller följande portalkomponenter direkt, grupperade under 
 
 ### Sök och visa {#search-amp-lister}
 
-Med komponenten Sök och lista kan du lista formulär från formulärdatabasen på din portalsida, och du får konfigurationsalternativ för att lista formulär baserat på angivna villkor. Du kan också ange sökvillkor så att portalanvändarna kan söka i formulärlistan.
+Med komponenten Sök och lista kan du lista formulär från formulärdatabasen på portalsidan och visa konfigurationsalternativ för formulär baserat på angivna villkor. Du kan också ange sökvillkor så att portalanvändarna kan söka i formulärlistan.
 
 ### Utkast och inskickat material {#drafts-amp-submissions}
 
@@ -64,10 +64,10 @@ Med länkkomponenten kan du skapa en länk till ett formulär var som helst på 
 
 Med Forms Portal kan du lista formulär från formulärdatabasen på din portalsida. Du kan också ange sökvillkor så att portalanvändarna kan söka i formulärlistan. Du kan också använda komponenten Utkast och inskickningar för att visa formulär som har sparats som ett utkast för att fylla i senare och skickade formulär. Du utför en viss uppsättning åtgärder innan de här funktionerna blir tillgängliga på en webbplatssida. Utför stegen i den listade sekvensen för att göra komponenterna och respektive funktioner tillgängliga på en webbplatssida:
 
-1. **Aktivera Forms Portal-komponenter**: Forms Portal-komponenterna är inte tillgängliga för användning. [Aktivera komponenterna från AEM](/help/forms/using/enabling-forms-portal-components.md) för en AEM Sites-sida.
+1. **Aktivera Forms Portal-komponenter**: Forms Portal-komponenter är inte tillgängliga för användning. [Aktivera komponenterna från AEM](/help/forms/using/enabling-forms-portal-components.md) för en AEM Sites-sida.
 1. **Visa formulär på en sida (skapa en Forms Portal-sida):** Du kan lista formulär både på AEM Sites-sidor och på andra AEM webbplatssidor. Listan innehåller formulär som är tillgängliga på publiceringsinstansen. Användaren kan öppna formulär och börja fylla i dem. När en användare öppnar ett formulär skapas en ny instans av formuläret:
 
-   1. **Visa formulär på en AEM Sites-sida**: Lägg till **[Sök och visa](../../forms/using/creating-form-portal-page.md)** till sidan och konfigurera **[Listruta](../../forms/using/creating-form-portal-page.md#p-list-pane-p)** i den för att lista formulär på en sida. Lägg till och konfigurera **Sökruta** till **Sök och visa** -komponenten för att lägga till sökfunktioner på sidan. Sidan med Forms Portal-komponenten kallas [Forms Portal page](../../forms/using/creating-form-portal-page.md).
+   1. **Visa formulär på en AEM Sites-sida**: Lägg till **[Sök och visa](../../forms/using/creating-form-portal-page.md)** till sidan och konfigurera **[Listruta](../../forms/using/creating-form-portal-page.md#p-list-pane-p)** för att lista formulär på en sida. Lägg till och konfigurera **Sökruta** -komponenten till **Sök och visa** -komponenten för att lägga till sökfunktioner på sidan. Sidan med Forms Portal-komponenten kallas [Forms Portal page](../../forms/using/creating-form-portal-page.md).
 
    1. **Visa formulär på en sida som inte är AEM Sites:** Använd [Forms Portal - söknings-API:er](/help/forms/using/listing-forms-webpage-using-apis.md) att söka, hämta och lista formulär på icke-AEM Sites-sidor.
 
@@ -75,10 +75,10 @@ Med Forms Portal kan du lista formulär från formulärdatabasen på din portals
 
    Om du vill att ett skickat anpassat formulär ska visas på fliken Skicka anger du **Skicka åtgärd** till **[Forms Portal Submit Action](configuring-submit-actions.md).** Du kan också aktivera alternativet Skicka i Forms Portal. När en användare skickar formuläret läggs formuläret till på fliken Skicka.
 
-1. **Konfigurera lagring för formulärdata som ska skickas och skickas:** Som standard lagras utkast- och inskickningsdata i AEM. I en produktionsmiljö bör du inte lagra utkast eller skickade formulärdata i AEM. [Konfigurera Forms Portal-komponenten för att spara data på en säker plats](../../forms/using/draft-submission-component.md#customizing-the-storage).
+1. **Konfigurera lagring för formulärdata som skickas och skickas:** Som standard lagras utkast- och inskickningsdata i AEM. I en produktionsmiljö bör du inte lagra utkast eller skickade formulärdata i AEM. [Konfigurera Forms Portal-komponenten för att spara data på en säker plats](../../forms/using/draft-submission-component.md#customizing-the-storage).
 1. **(Valfritt) Anpassa komponenterna i Forms Portal:** [Anpassa sidmallar i Forms Portal](../../forms/using/customizing-templates-forms-portal-components.md) för att ge komponenterna ett distinkt utseende.
 1. **(Valfritt) Lägg till anpassade metadata i formulär:** [Lägga till anpassade metadata i formulär](../../forms/using/customizing-templates-forms-portal-components.md) för att förbättra listnings- och sökupplevelsen.
-1. **Publicera Forms Portal-sidan:** Nu är din Forms Portal-sida klar. Publicera sidan.
+1. **Publicera Forms Portal:** Nu är din Forms Portal-sida klar. Publicera sidan.
 
 ## Relaterade artiklar {#related-articles}
 

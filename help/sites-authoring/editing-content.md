@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: f92ed674-5865-4a53-8c3a-369536861f14
 docset: aem65
 exl-id: d5cf4478-51e4-4ca8-b3f8-6d7caed7d515
-source-git-commit: f6d6fcd1f174cc32a172f70ee3da8eff15156c15
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '3080'
+source-wordcount: '3067'
 ht-degree: 5%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 5%
 
 När sidan har skapats (antingen ny eller som en del av en lansering eller en live-kopia) kan du redigera innehållet för att få de uppdateringar du behöver.
 
-Innehåll läggs till med [komponenter](/help/sites-authoring/default-components-console.md) (som passar för innehållstypen) som kan dras till sidan. Du kan sedan redigera dem på plats, flytta eller ta bort dem.
+Innehåll läggs till med [komponenter](/help/sites-authoring/default-components-console.md) (anpassat till innehållstypen) som kan dras till sidan. Du kan sedan redigera dem på plats, flytta eller ta bort dem.
 
 >[!NOTE]
 >
@@ -30,7 +30,7 @@ Innehåll läggs till med [komponenter](/help/sites-authoring/default-components
 
 >[!NOTE]
 >
->Om sidan och/eller mallen har konfigurerats på rätt sätt kan du använda [responsiv layout](/help/sites-authoring/responsive-layout.md) vid redigering.
+>Om sidan och/eller mallen har konfigurerats korrekt kan du använda [responsiv layout](/help/sites-authoring/responsive-layout.md) vid redigering.
 
 >[!NOTE]
 >
@@ -76,7 +76,7 @@ Verktygsfältet har många alternativ. Beroende på ditt aktuella sammanhang och
 
 * **Lägesväljare**
 
-  Visar aktuell [läge](/help/sites-authoring/author-environment-tools.md#page-modes) och gör att du kan välja ett annat läge, som redigering, layout, tidsförvrängning eller målinriktning.
+  Visar aktuell [läge](/help/sites-authoring/author-environment-tools.md#page-modes) och låter dig välja ett annat läge, t.ex. redigering, layout, tidsförvrängning eller målinriktning.
 
   ![Lägesväljare](assets/chlimage_1-120.png)
 
@@ -104,11 +104,11 @@ Om en sida är en del av en [arbetsflöde](/help/sites-authoring/workflows.md) f
 
 I meddelandet visas arbetsflödet som körs mot sidan. Om användaren är involverad i det aktuella arbetsflödessteget kan du välja [påverka arbetsflödets status](/help/sites-authoring/workflows-participating.md) och det finns även mer information om arbetsflödet:
 
-* **Slutförd** - Öppnar **Slutför arbetsuppgift** dialog
+* **Complete** - Öppnar **Slutför arbetsuppgift** dialog
 
 * **Delegera** - Öppnar **Slutför arbetsuppgift** dialog
 
-* **Visa detaljer** - Öppnar **Detaljer** arbetsflödets fönster
+* **Visa detaljer** - Öppnar **Information** arbetsflödets fönster
 
 Att slutföra och delegera arbetsflödessteg via meddelandefältet fungerar som när [delta i arbetsflöden](/help/sites-authoring/workflows-participating.md) från meddelandeinkorgen.
 
@@ -132,7 +132,7 @@ Komponentplatshållaren är en indikator som visar var en komponent placeras nä
 
 ### Infoga en komponent från komponentwebbläsaren {#inserting-a-component-from-the-components-browser}
 
-Du kan lägga till en ny komponent med [komponentwebbläsare](/help/sites-authoring/author-environment-tools.md#components-browser). The [komponentplatshållare](#component-placeholder) visar var komponenten kommer att placeras:
+Du kan lägga till en ny komponent med [komponentwebbläsare](/help/sites-authoring/author-environment-tools.md#components-browser). The [platshållare för komponent](#component-placeholder) visar var komponenten kommer att placeras:
 
 1. Kontrollera att sidan finns i [**Redigera** läge](/help/sites-authoring/author-environment-tools.md#page-modes).
 1. Öppna [komponentwebbläsare](/help/sites-authoring/author-environment-tools.md#components-browser).
@@ -181,7 +181,7 @@ Detta gäller för följande tillgångstyper (vissa kommer att vara beroende av 
   </tr>
   <tr>
    <td>Dokument</td>
-   <td>Hämta</td>
+   <td>Ladda ned</td>
   </tr>
   <tr>
    <td>Produkt</td>
@@ -206,7 +206,7 @@ Så här skapar du en komponent genom att dra en av resurstyperna ovan:
 
 1. Kontrollera att sidan finns i [**Redigera** läge](/help/sites-authoring/author-environment-tools.md#page-modes).
 1. Öppna [resursläsare](/help/sites-authoring/author-environment-tools.md#assets-browser).
-1. Dra den önskade resursen till önskad position. The [komponentplatshållare](#component-placeholder) visar var komponenten kommer att placeras.
+1. Dra den önskade resursen till önskad position. The [platshållare för komponent](#component-placeholder) visar var komponenten kommer att placeras.
 
    En komponent som passar resurstypen skapas på den önskade platsen, den innehåller den valda resursen.
 
@@ -230,7 +230,7 @@ De faktiska åtgärder som är tillgängliga för användaren visas som lämplig
 
 * **Redigera**
 
-  [Beroende på komponenttypen](/help/sites-authoring/default-components.md) kan du [redigera innehållet i komponenten](#edit-content). Ofta finns det ett verktygsfält.
+  [Beroende på komponenttypen](/help/sites-authoring/default-components.md) det här låter dig [redigera innehållet i komponenten](#edit-content). Ofta finns det ett verktygsfält.
 
   ![Redigera](do-not-localize/screen_shot_2018-03-22at112936.png)
 
@@ -260,7 +260,7 @@ De faktiska åtgärder som är tillgängliga för användaren visas som lämplig
 
 * **Infoga komponent**
 
-  Dialogrutan öppnas för [lägga till en ny komponent](/help/sites-authoring/editing-content.md#inserting-a-component-from-the-paragraph-system).
+  Dialogrutan öppnas [lägga till en ny komponent](/help/sites-authoring/editing-content.md#inserting-a-component-from-the-paragraph-system).
 
   ![Infoga komponent](do-not-localize/screen_shot_2018-03-22at113017.png)
 
@@ -286,7 +286,7 @@ De faktiska åtgärder som är tillgängliga för användaren visas som lämplig
 
 * **Överordnad**
 
-  Gör att du kan välja den överordnade komponenten för den markerade komponenten.
+  Gör att du kan markera den överordnade komponenten för den markerade komponenten.
 
   ![Överordnad](assets/screen_shot_2018-03-22at113028.png)
 
@@ -309,7 +309,7 @@ Det finns två sätt att lägga till och/eller redigera innehåll i komponenter:
 * Öppna [komponentdialogruta för redigering](#component-edit-dialog).
 * [Dra och släpp en resurs](#draganddropintocomponent) från resursläsaren för att lägga till innehåll direkt.
 
-### Dialogrutan Komponentredigering {#component-edit-dialog}
+### Komponentredigeringsdialogruta {#component-edit-dialog}
 
 Du kan öppna en komponent och redigera innehållet med ikonen [Redigera (penna) i komponentverktygsfältet](#edit-configure-copy-cut-delete-paste).
 
@@ -336,7 +336,7 @@ De exakta redigeringsalternativen beror på komponenten. För vissa komponenter 
 
   ![Bildkomponent, helskärm](assets/screen_shot_2018-03-22at120529.png)
 
-* Komponenter som konstruerats av mer än en grundläggande komponent, t.ex. [Grundkomponenten Text och bild](/help/sites-authoring/default-components-foundation.md#text-image)ber du först att bekräfta vilken uppsättning redigeringsalternativ du vill använda:
+* Komponenter som konstruerats av mer än en grundläggande komponent, t.ex. [Text- och bildstiftskomponent](/help/sites-authoring/default-components-foundation.md#text-image)ber du först att bekräfta vilken uppsättning redigeringsalternativ du vill använda:
 
   ![Alternativ för komponentredigering](assets/chlimage_1-123.png)
 
@@ -347,14 +347,14 @@ För specifika komponenttyper kan du dra och släppa resurser från resursläsar
 | **Resurstyp** | **Komponenttyp** |
 |---|---|
 | Bild | Bild |
-| Dokument | Hämta |
+| Dokument | Ladda ned |
 | Produkt | Produkt |
 | Video | Flash |
 | Innehållsfragment | Innehållsfragment |
 
 ## Redigera (innehåll) helskärmsläge {#edit-content-full-screen-mode}
 
-För alla komponenter går det att komma åt helskärmsläget med (och avsluta från):
+För alla komponenter kan helskärmsläget nås med (och avslutas från):
 
 ![Redigera helskärmsläge](do-not-localize/chlimage_1-20.png)
 
@@ -389,7 +389,7 @@ I stället för att växla från redigeringsläge till [layoutläge](/help/sites
 
    ![Redigeringsläge i formulär](assets/screen_shot_2018-03-22at133756.png)
 
-   Klicka eller tryck på **Layout** för att justera komponentens layout.
+   Klicka eller tryck på **Layout** åtgärd för att justera komponentens layout.
 
    ![Komponentverktygsfältet](do-not-localize/chlimage_1-21.png)
 
@@ -459,8 +459,8 @@ Du kan enkelt se vilken mall sidan baseras på när du markerar sidan i [kolumnv
 
 The [Sidläget Live Copy-status](/help/sites-authoring/author-environment-tools.md#page-modes) ger dig en snabb översikt över live-kopians status och vilka komponenter som ärvs/inte ärvs:
 
-* Grön kantlinje: Ärvd
-* Rosa kantlinje: Arvet har annullerats
+* Grön kant: Ärvd
+* Rosa kantlinje: Arvet har avbrutits
 
 Till exempel:
 
@@ -516,7 +516,7 @@ En sida kan låsas från:
    1. Markera sidan med [markeringsläge](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources).
    1. Välj låsikonen.
 
-  ![Låsikon](assets/screen_shot_2018-03-22at134928.png)
+  ![Lås-ikon](assets/screen_shot_2018-03-22at134928.png)
 
 * **Page Editor**
 
@@ -529,7 +529,7 @@ När konsolvyn är låst uppdateras informationen och när du redigerar en låss
 
 >[!CAUTION]
 >
->Du kan låsa en sida när [personifiera en användare](/help/sites-administering/security.md#impersonating-another-user). En sida som är låst på det här sättet kan bara låsas upp av den användare som är imiterad eller av administratörsanvändaren.
+>Låsning av en sida kan utföras när [personifiera en användare](/help/sites-administering/security.md#impersonating-another-user). En sida som är låst på det här sättet kan bara låsas upp av den användare som är imiterad eller av administratörsanvändaren.
 >
 >Sidorna kan inte låsas upp genom att den användare som låste sidan personifieras.
 
@@ -543,7 +543,7 @@ På menyn Sidinformation visas **Lås upp** som ett alternativ och låsikonen p�
 
 >[!CAUTION]
 >
->Du kan låsa en sida när [personifiera en användare](/help/sites-administering/security.md#impersonating-another-user). En sida som är låst på det här sättet kan bara låsas upp av den användare som är imiterad eller av administratörsanvändaren.
+>Låsning av en sida kan utföras när [personifiera en användare](/help/sites-administering/security.md#impersonating-another-user). En sida som är låst på det här sättet kan bara låsas upp av den användare som är imiterad eller av administratörsanvändaren.
 >
 >Sidorna kan inte låsas upp genom att den användare som låste sidan personifieras.
 
@@ -573,7 +573,7 @@ AEM lagrar en historik över åtgärder som du utför och i vilken ordning du ut
 
 Om ett element på innehållssidan är markerat (till exempel en textkomponent) gäller kommandot ångra och gör om det markerade objektet.
 
-Funktionen för kommandona ångra och gör om liknar den i andra program. Använd kommandona för att återställa webbsidans senaste status när du fattar beslut om innehållet. Om du till exempel flyttar ett textstycke till en annan plats på sidan kan du använda kommandot Ångra för att flytta tillbaka stycket. Om du sedan bestämmer dig för att den föregående positionen var bättre använder du kommandot gör om för att ångra.
+Funktionen för kommandona Ångra och Gör om liknar den i andra program. Använd kommandona för att återställa webbsidans senaste status när du fattar beslut om innehållet. Om du till exempel flyttar ett textstycke till en annan plats på sidan kan du använda kommandot Ångra för att flytta tillbaka stycket. Om du sedan bestämmer dig för att den föregående positionen var bättre använder du kommandot gör om för att ångra.
 
 >[!NOTE]
 >
@@ -587,7 +587,7 @@ Funktionen för kommandona ångra och gör om liknar den i andra program. Använ
 Du kan använda Ångra och Gör om för följande typer av sidändringar:
 
 * Lägga till, redigera, ta bort och flytta stycken
-* In-place editing of paragraph content
+* Redigera styckeinnehåll direkt
 * Kopiera, klippa ut och klistra in objekt på en sida
 
 Formulärfält som formulärkomponenter återger ska inte ha värden som anges vid redigering av sidor. Kommandona Ångra och Gör om påverkar därför inte ändringar som du gör i värdena för dessa typer av komponenter. Du kan till exempel inte ångra valet av ett värde i en nedrullningsbar lista.

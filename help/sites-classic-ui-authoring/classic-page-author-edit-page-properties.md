@@ -8,9 +8,9 @@ topic-tags: page-authoring
 content-type: reference
 discoiquuid: 23768c73-ac64-4727-8313-160c8c131b05
 exl-id: 1a77e4cd-bbf8-4d05-bb35-fd43c02eaf30
-source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '763'
+source-wordcount: '761'
 ht-degree: 1%
 
 ---
@@ -27,157 +27,156 @@ Egenskaperna fördelas på flera flikar:
 
 * **Titel**
 
-   Sidans rubrik visas på olika platser. Till exempel **Webbplatser** tabblista och **Webbplatser** kort-/listvyer.
+  Sidans rubrik visas på olika platser. Till exempel **Webbplatser** tabblista och **Webbplatser** kort-/listvyer.
 
-   Detta är ett obligatoriskt fält.
+  Detta är ett obligatoriskt fält.
 
 * **Taggar**
 
-   Här kan du lägga till eller ta bort taggar från sidan genom att uppdatera listan i valrutan:
+  Här kan du lägga till eller ta bort taggar från sidan genom att uppdatera listan i valrutan:
 
    * När du har valt en tagg visas den under markeringsrutan. Du kan ta bort en tagg från den här listan med hjälp av x.
    * Du kan ange en helt ny tagg genom att skriva namnet i en tom markeringsruta.
 
-      Den nya taggen skapas när du trycker på Enter. Den nya taggen visas sedan i en ruta med en liten stjärna till höger som anger att det är en ny tagg.
+     Den nya taggen skapas när du trycker på Enter. Den nya taggen visas sedan i en ruta med en liten stjärna till höger som anger att det är en ny tagg.
 
    * Med den nedrullningsbara menyn kan du välja bland befintliga taggar.
-   * Ett x-tecken visas när du håller muspekaren över en taggpost i markeringsrutan; den här taggen kan användas för att ta bort taggen för den här sidan.
+   * Ett x-tecken visas när du för musen över en taggpost i markeringsrutan. Det kan användas för att ta bort taggen för den här sidan.
 
 * **Dölj i navigering**
 
-   En växlingsknapp som anger om sidan visas eller döljs i sidnavigeringen.
+  En växlingsknapp som anger om sidan visas eller döljs i sidnavigeringen.
 
 * **Sidrubrik**
 
-   En rubrik som ska användas på sidan.
+  En rubrik som ska användas på sidan.
 
 * **Navigeringsrubrik**
 
-   Du kan ange en separat rubrik som ska användas i navigeringen (om du till exempel vill ha något mer koncist). Om den är tom visas **Titel** kommer att användas.
+  Du kan ange en separat rubrik som ska användas i navigeringen (om du till exempel vill ha något mer koncist). Om den är tom visas **Titel** kommer att användas.
 
 * **Underrubrik**
 
-   En underrubrik som ska användas på sidan.
+  En underrubrik som ska användas på sidan.
 
 * **Beskrivning**
 
-   Din beskrivning av sidan, dess syfte eller annan information som du vill lägga till.
+  Din beskrivning av sidan, dess syfte eller annan information som du vill lägga till.
 
 * **I tid**
 
-   Det datum och den tidpunkt då den publicerade sidan ska aktiveras. När den publiceras kommer den här sidan att vara vilande tills den angivna tiden.
+  Det datum och den tidpunkt då den publicerade sidan aktiveras. När den publiceras kommer den här sidan att vara vilande tills den angivna tiden.
 
-   Lämna dessa fält tomma för sidor som du vill publicera omedelbart (det normala scenariot).
+  Lämna dessa fält tomma för sidor som du vill publicera omedelbart (det normala scenariot).
 
 * **Fråntid**
 
-   Den tidpunkt då den publicerade sidan inaktiveras.
+  Den tidpunkt då den publicerade sidan inaktiveras.
 
-   Lämna dessa fält tomma igen för sidor som du vill publicera omedelbart.
+  Lämna dessa fält tomma igen för sidor som du vill publicera omedelbart.
 
 * **Vanity URL**
 
-   Gör att du kan ange en fågel-URL för den här sidan. Det gör att du kan ha en kortare och mer uttrycksfull URL.
+  Här kan du ange en fågel-URL för sidan. Det gör att du kan ha en kortare och mer uttrycksfull URL.
 
-   Om Vanity-URL:en till exempel är inställd på w `elcome`till den sida som identifieras av sökvägen / `v1.0/startpage`för webbplatsen h `ttp://example.com,` sedan h `ttp://example.com/welcome`skulle vara den vanligaste URL:en för h `ttp://example.com/content/v1.0/startpage`
+  Om Vanity-URL:en till exempel är inställd på w `elcome`till den sida som identifieras av sökvägen / `v1.0/startpage`för webbplatsen h `ttp://example.com,` sedan h `ttp://example.com/welcome`skulle vara den vanligaste URL:en för h `ttp://example.com/content/v1.0/startpage`
 
-   >[!CAUTION]
-   >
-   >Alternativa URL:er:
-   >
-   >* måste vara unik så du bör vara försiktig med att värdet inte redan används av en annan sida.
-   >* stöder inte regex-mönster.
+  >[!CAUTION]
+  >
+  >Alternativa URL:er:
+  >
+  >* måste vara unik så du bör vara försiktig med att värdet inte redan används av en annan sida.
+  >* saknar stöd för regex-mönster.
 
+* **URL för omdirigering av vanity**
 
-* **URL för omdirigering**
-
-   Anger om du vill att sidan ska använda fågel-URL:en.
+  Anger om du vill att sidan ska använda fågel-URL:en.
 
 ### Avancerat {#advanced}
 
 * **Språk**
 
-   Sidspråket.
+  Sidspråket.
 
 * **Omdirigering**
 
-   Ange den sida som den här sidan automatiskt ska omdirigeras till.
+  Ange den sida som den här sidan automatiskt ska omdirigeras till.
 
 * **Design**
 
-   Ange [design](/help/sites-developing/designer.md) som ska användas för den här sidan.
+  Ange [design](/help/sites-developing/designer.md) som ska användas för den här sidan.
 
 * **Alias**
 
-   Ange ett alias som ska användas med den här sidan.
+  Ange ett alias som ska användas med den här sidan.
 
 * **Aktivera stängd användargrupp**
 
-   Aktiverar (eller inaktiverar) användning av [stängda användargrupper](/help/sites-administering/cug.md) (CUG).
+  Aktiverar (eller inaktiverar) användning av [stängda användargrupper](/help/sites-administering/cug.md) (CUG).
 
 * **Inloggningssida**
 
-   Den sida som ska användas för inloggning.
+  Den sida som ska användas för inloggning.
 
 * **Tillåtna grupper**
 
-   Grupper som är berättigade att logga in i CUG.
+  Grupper som är berättigade att logga in i CUG.
 
 * **Sfär**
 
-   CUG:ens verkliga namn.
+  CUG:ens verkliga namn.
 
 * **Exportera konfiguration**
 
-   Ange en exportkonfiguration.
+  Ange en exportkonfiguration.
 
 ### Miniatyrbild {#thumbnail}
 
 * **Sidminiatyr**
 
-   Visar sidminiatyrbilden. Du kan:
+  Visar sidminiatyrbilden. Du kan:
 
    * **Generera förhandsgranskning**
 
-      Generera en förhandsgranskning av sidan som ska användas som miniatyrbild.
+     Generera en förhandsgranskning av sidan som ska användas som miniatyrbild.
 
    * **Överför bild**
 
-      Överför en bild som ska användas som miniatyrbild.
+     Överför en bild som ska användas som miniatyrbild.
 
 ### Cloud Services {#cloud-services}
 
 * **Cloud Services**
 
-   Definiera egenskaper för [molntjänster](/help/sites-developing/extending-cloud-config.md).
+  Definiera egenskaper för [molntjänster](/help/sites-developing/extending-cloud-config.md).
 
 ### Personanpassning {#personalization}
 
 * **Personanpassning**
 
-   Välj en [Varumärke som anger ett omfång för målanpassning](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md).
+  Välj en [Varumärke som anger ett omfång för målanpassning](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md).
 
 ### Behörigheter {#permissions}
 
 * **Behörigheter** (pekoptimerat användargränssnitt)
 
-   Visa [effektiva behörigheter och lägga till nya behörigheter](/help/sites-administering/user-group-ac-admin.md).
+  Visa [effektiva behörigheter och lägga till nya behörigheter](/help/sites-administering/user-group-ac-admin.md).
 
 ### Blueprint {#blueprint}
 
 * **Blueprint**
 
-   Definiera egenskaper för en designsida i [hantering av flera webbplatser](/help/sites-administering/msm.md). Styr under vilka omständigheter ändringar ska spridas till Live Copy.
+  Definiera egenskaper för en designsida i [hantering av flera webbplatser](/help/sites-administering/msm.md). Styr under vilka omständigheter ändringar ska spridas till Live Copy.
 
 ### Live Copy {#live-copy}
 
 * **Livecopy**
 
-   Definiera egenskaper för en Live Copy-sida i [hantering av flera webbplatser](/help/sites-administering/msm.md). Styr under vilka omständigheter ändringar ska spridas från utkast.
+  Definiera egenskaper för en Live Copy-sida i [hantering av flera webbplatser](/help/sites-administering/msm.md). Styr under vilka omständigheter ändringar ska spridas från utkast.
 
 ### Webbplatsstruktur {#site-structure}
 
-* Tillhandahålla länkar till sidor som innehåller funktioner för hela webbplatsen, som **Registreringssida**, **Offlinesida**, bland annat.
+* Tillhandahålla länkar till sidor som innehåller funktioner för hela webbplatsen, till exempel **Registreringssida**, **Offlinesida**, bland annat.
 
 ## Redigera sidegenskaper {#editing-page-properties-2}
 

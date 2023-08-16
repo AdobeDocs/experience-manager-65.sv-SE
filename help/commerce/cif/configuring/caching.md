@@ -2,7 +2,7 @@
 title: Cachelagring och prestanda
 description: Lär dig mer om de olika konfigurationer som är tillgängliga för att aktivera GraphQL- och innehållscachning för att optimera prestanda för implementeringen av din e-handel.
 exl-id: ecce64bf-5960-4ddb-b6e3-dad401038c11
-source-git-commit: a467009851937c4a10b165a3d253c47bf990bbc5
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
 source-wordcount: '849'
 ht-degree: 0%
@@ -27,7 +27,7 @@ Innan klienten skickar en GraphQL-begäran kontrollerar den om **exakt** samma G
 
 ### Exempel
 
-Vi rekommenderar att du konfigurerar viss cachelagring för söktjänsten som hämtar alla tillgängliga aggregations-/facets-värden som visas på produktsöknings- och kategorisidorna. Dessa värden ändras vanligtvis bara när ett nytt attribut läggs till i produkter, så varaktigheten för den här cacheposten kan vara&quot;stor&quot; om uppsättningen produktattribut inte ändras så ofta. Detta är projektspecifikt, men vi rekommenderar värden på några minuter i projektutvecklingsfaserna och några timmar i stabila produktionssystem.
+Vi rekommenderar att du konfigurerar viss cachelagring för söktjänsten som hämtar alla tillgängliga aggregations-/facets-värden som visas på produktsöknings- och kategorisidorna. Dessa värden ändras vanligtvis bara när ett nytt attribut läggs till i produkter, så varaktigheten för den här cacheposten kan vara&quot;stor&quot; om uppsättningen produktattribut inte ändras så ofta. Detta är projektspecifikt, men Adobe rekommenderar ett värde på några minuter i projektutvecklingsfaserna och några timmar i stabila produktionssystem.
 
 Detta konfigureras vanligtvis med följande cachepost:
 
@@ -47,7 +47,7 @@ Cachelagring för andra komponenter bör definieras på projektbasis, vanligtvis
 
 ## Dispatcher Caching {#dispatcher}
 
-Cachelagra AEM sidor eller fragment i [AEM Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html) är den bästa metoden för alla AEM projekt. Oftast bygger det på invalideringstekniker som säkerställer att allt innehåll som ändras i AEM uppdateras korrekt i Dispatcher. Detta är en viktig egenskap i AEM Dispatcher-cachningsstrategi.
+Cachelagra AEM sidor eller fragment i [AEM](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html) är den bästa metoden för alla AEM projekt. Oftast bygger det på invalideringstekniker som säkerställer att allt innehåll som ändras i AEM uppdateras korrekt i Dispatcher. Detta är en viktig egenskap i AEM Dispatcher-cachningsstrategi.
 
 Förutom rent AEM hanterat innehåll-CIF kan en sida vanligtvis visa e-handelsdata som hämtas dynamiskt från Adobe Commerce via GraphQL. Även om sidstrukturen i sig kanske aldrig ändras kan e-handelsinnehållet ändras, till exempel om vissa produktdata (till exempel namn eller pris) ändras i Adobe Commerce.
 
@@ -63,4 +63,4 @@ Med TTL-baserad cachning definierar en utvecklare vanligtvis en eller flera cach
 
 - [Referensarkiv för Venedig](https://github.com/adobe/aem-cif-guides-venia)
 - [Konfiguration av GraphQL-cachning](https://github.com/adobe/commerce-cif-graphql-client#caching)
-- [AEM Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html)
+- [AEM](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html)

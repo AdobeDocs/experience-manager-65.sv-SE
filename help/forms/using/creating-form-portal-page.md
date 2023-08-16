@@ -11,9 +11,9 @@ discoiquuid: 8fff78cb-9ef9-426e-8b30-d70b4f26887f
 docset: aem65
 feature: Forms Portal
 exl-id: 22d7c24e-7a77-4324-afdf-74c1fbf15773
-source-git-commit: 1683338f02d01d5d9843368955fa42f309718f26
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '1652'
+source-wordcount: '1650'
 ht-degree: 0%
 
 ---
@@ -151,7 +151,7 @@ The **Redigera** innehåller flera flikar med konfigurationsalternativ som beskr
   <tr>
    <td><span class="uicontrol"><strong>Stil</strong></code></td>
    <td>Formattyp</td>
-   <td>Gör att du kan ange <strong>Inget format, standardformat</strong>, eller <strong>Eget format </strong>för att lista formulären.</td>
+   <td>Här kan du ange <strong>Inget format, standardformat</strong>, eller <strong>Eget format </strong>för att lista formulären.</td>
   </tr>
   <tr>
    <td> </td>
@@ -197,7 +197,7 @@ Komponenten Full Text Predicate implementerar fullständig textsökning i formul
 Så här konfigurerar du komponenten Full Text Predicate:
 
 1. Tryck på komponenten och tryck sedan på ![settings_icon](assets/settings_icon.png). Dialogrutan Redigera öppnas.
-1. Ange rubriken i **Huvudrubrik** fält.
+1. Ange rubriken i dialogrutan **Huvudrubrik** fält.
 1. Tryck **OK**
 
 #### Egenskapspredikat {#properties-predicate}
@@ -239,7 +239,7 @@ Använd **[!UICONTROL Drafts and Submissions]** -komponenten. Mer information fi
 
 ## Mobil enhetsvänlighet {#mobile-device-friendliness}
 
-Komponenten Forms Portal Search &amp; Lister är anpassad för mobila enheter och anpassas därefter. Alla tre standardvyerna: Rutnät, kort och panel återlayoutas beroende på vilken enhet som webbplatsen är öppen på, vilket innebär att webbsidan också anpassas. Det enkla är att Sök och lista bara är en komponent och inte styr formateringen på sidnivå.
+Komponenten Forms Portal Search &amp; Lister är anpassad för mobila enheter och anpassas därefter. Alla tre standardvyerna: stödraster, kort och panel återlayoutas beroende på vilken enhet som webbplatsen öppnas i, vilket innebär att webbsidan också anpassas. Det enkla är att Sök och lista bara är en komponent och inte styr formateringen på sidnivå.
 
 I följande bild visas komponenten Sök och Lister när den öppnas på en mobil enhet:
 
@@ -249,9 +249,9 @@ Komponenten Search &amp; Lister
 
 ## Anpassa en formulärportalsida {#customizing-a-forms-portal-page-br}
 
-Du kan anpassa en formulärportalsida för att ge sidan ett distinkt utseende. Du kan också lägga till metadata för att förbättra sökupplevelsen, ändra sidans layout och lägga till anpassade CSS-format. Mer information finns i [Anpassa mallar för Forms Portal-komponenter](../../forms/using/customizing-templates-forms-portal-components.md).
+Du kan anpassa en formulärportalsida för att ge sidan ett tydligt utseende. Du kan också lägga till metadata för att förbättra sökupplevelsen, ändra sidans layout och lägga till anpassade CSS-format. Mer information finns i [Anpassa mallar för Forms Portal-komponenter](../../forms/using/customizing-templates-forms-portal-components.md).
 
-Med AEM Forms UI kan du lägga till anpassade metadata i formulär. Anpassade metadata är användbara när du vill visa en lista och söka efter formulär för slutanvändarna. Mer information om anpassade metadata finns i [Anpassa mallar för Forms Portal-komponenter](../../forms/using/customizing-templates-forms-portal-components.md).
+Med AEM Forms-gränssnittet kan du lägga till anpassade metadata i formulär. Anpassade metadata är användbara när du vill visa en lista och söka efter formulär för slutanvändarna. Mer information om anpassade metadata finns i [Anpassa mallar för Forms Portal-komponenter](../../forms/using/customizing-templates-forms-portal-components.md).
 
 I själva verket innehåller formulärportalen återgivningsåtgärder. Du kan anpassa formulärportalen för att lägga till fler åtgärder. Mer information finns i [Lägga till anpassad åtgärd för formulärlisteobjekt.](../../forms/using/add-custom-action-form-lister.md)
 

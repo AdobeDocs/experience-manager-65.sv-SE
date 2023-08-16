@@ -1,15 +1,15 @@
 ---
 title: Massredigeraren
-description: Lär dig hur du använder gruppredigeraren.
+description: Lär dig använda gruppredigeraren.
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: operations
 content-type: reference
 docset: aem65
 exl-id: c63e044c-4d2a-44d3-853b-8e7337e1ee03
-source-git-commit: 1ef5593495b4bf22d2635492a360168bccc1725d
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '1159'
+source-wordcount: '1158'
 ht-degree: 0%
 
 ---
@@ -19,8 +19,8 @@ ht-degree: 0%
 
 Med gruppredigeraren kan du redigera effektivt när den visuella sidkontexten inte behövs så som du kan:
 
-* söka efter (och visa) innehåll från flera sidor, detta görs med GQL (Google Query Language)
-* redigera innehållet direkt i gruppredigeraren
+* söka efter (och visa) innehåll från flera sidor; detta görs med GQL (Google Query Language)
+* redigera det här innehållet direkt i gruppredigeraren
 * spara ändringarna (på originalsidorna)
 * exportera det här innehållet till en tabbavgränsad (.tsv) kalkylbladsfil
 
@@ -41,7 +41,7 @@ Om du t.ex. behöver alla namn och e-postadresser för användare som fyllt i en
 Ett exempel som illustrerar en sådan användning finns på Geometrixx webbplats:
 
 1. Navigera till **Support** sidan och sedan till **Nöjd kundtjänst** enkät.
-1. **Redigera** den **Formulärets början** stycke. I dialogrutan klickar du på **Avancerat** -fliken, expandera **Åtgärdskonfiguration** och sedan klicka **Visa data...**.
+1. **Redigera** den **Formulärets början** stycke. Klicka på **Avancerat** -fliken, expandera **Åtgärdskonfiguration** och sedan klicka **Visa data...**.
 
    ![Exempel på enkät om kundnöjdhet](assets/custsatsurvey.png)
 
@@ -51,7 +51,7 @@ Ett exempel som illustrerar en sådan användning finns på Geometrixx webbplats
 
 ## Så här använder du gruppredigeraren {#how-to-use-the-bulk-editor}
 
-Med gruppredigeraren kan du:
+Med gruppredigeraren kan du
 
 * [söka efter innehåll baserat på frågeparametrar, för att visa angivna egenskaper för resultaten i kolumner, för att redigera innehållet och spara ändringarna](#searching-and-editing-content)
 * [om du vill exportera det här innehållet till ett tabbseparerat kalkylblad](#exporting-content)
@@ -78,7 +78,7 @@ Så här använder du gruppredigeraren för att redigera flera objekt samtidigt:
   </tr>
   <tr>
    <td>Frågeparametrar</td>
-   <td>Använd GQL-parametrar för att ange söksträngen som du vill att den gruppredigerade ska söka efter i databasen; till exempel <code>type:Page</code> söker efter alla sidor i rotsökvägen, <code>text:professional</code> söker efter alla sidor som innehåller ordet "professionell", och <code>"jcr:title":English</code> söker efter alla sidor som har "engelska" som titel. Du kan bara söka efter strängar.</td>
+   <td>Använd GQL-parametrar för att ange den söksträng som du vill att den gruppredigerare ska leta efter i databasen, till exempel <code>type:Page</code> söker efter alla sidor i rotsökvägen, <code>text:professional</code> söker efter alla sidor som innehåller ordet "professionell", och <code>"jcr:title":English</code> söker efter alla sidor som har "engelska" som titel. Du kan bara söka efter strängar.</td>
   </tr>
   <tr>
    <td>Kryssrutan Innehållsläge</td>
@@ -97,7 +97,7 @@ Så här använder du gruppredigeraren för att redigera flera objekt samtidigt:
 
 Till exempel:
 
-![Alternativ för filtret Massredigeraren](assets/searchfilter.png)
+![Alternativ för filtret Massredigering](assets/searchfilter.png)
 
 1. Klicka **Sök**. Resultaten visas i gruppredigeraren.
 I exemplet ovan returneras alla sidor som uppfyller dina sökvillkor och visas med de begärda kolumnerna.
@@ -112,12 +112,12 @@ I exemplet ovan returneras alla sidor som uppfyller dina sökvillkor och visas m
 
    >[!CAUTION]
    >
-   >De ändringar du gör här skrivs till databasinnehållet; till exempel sidan som refereras i **Bana**.
+   >De ändringar du gör här skrivs till databasinnehållet, till exempel sidan som refereras i **Bana**.
 
 #### Ytterligare GQL-frågeparametrar {#additional-gql-query-parameters}
 
 * **sökväg:** bara söknoder under den här sökvägen. Om du anger mer än en term med ett sökvägsprefix beaktas endast den sista termen.
-* **typ:** bara returnera noder av de angivna nodtyperna. Detta inkluderar primära typer och blandningstyper. Du kan ange flera kommaavgränsade nodtyper. GQL returnerar noder som är av någon av de angivna typerna.
+* **typ:** bara returnera noder av de angivna nodtyperna. Detta inkluderar primära och blandade typer. Du kan ange flera kommaavgränsade nodtyper. GQL returnerar noder som är av någon av de angivna typerna.
 * **beställning:** sortera resultatet efter de angivna egenskaperna. Du kan ange flera kommaavgränsade egenskapsnamn. Om du vill ordna resultatet i fallande ordning lägger du bara till ett minustecken som prefix för egenskapsnamnet. Till exempel order:-name. Om du använder ett plustecken returneras resultatet i stigande ordning, vilket också är standard.
 * **gräns:** begränsar antalet resultat med ett intervall. Till exempel limit:10..20 Intervallet är nollbaserat, start är inkluderat och slut är exklusivt. Du kan även ange ett öppet intervall:limit:10.. eller limit:..20 Om punkterna utelämnas och endast ett värde anges kommer GQL att returnera maximalt detta antal resultat. Till exempel limit:10 (returnerar de första tio resultaten).
 
@@ -147,12 +147,12 @@ Som standard är importfunktionen dold när du öppnar gruppredigeraren. Lägg b
 
 >[!NOTE]
 >
->När du återimporterar innehåll raderar du allt tidigare innehåll för de noderna. Var försiktig så att du inte skriver över viktig information.
+>När du återimporterar innehåll raderar du allt tidigare innehåll för de noderna. Se till att inte skriva över viktig information.
 
 Så här importerar du innehåll:
 
 1. Öppna gruppredigeraren.
-1. Lägg till `?hib=false` till webbadressen, till exempel:
+1. Lägg till `?hib=false` till URL-adressen, till exempel:
    `https://localhost:4502/etc/importers/bulkeditor.html?hib=false`
 1. Klicka **Importera**.
 1. Välj `.tsv` -fil. Data importeras till databasen.

@@ -1,14 +1,14 @@
 ---
 title: Integrera med Adobe Experience Cloud
-description: Lär dig hur du integrerar Adobe Experience Manager med Adobe Experience Cloud.
+description: Lär dig integrera Adobe Experience Manager med Adobe Experience Cloud.
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
 content-type: reference
 exl-id: ba518290-dd82-44dc-ae7c-c8152df89179
-source-git-commit: a51a863a4edf7e8b951a8361c5c7f0517b09f12a
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '846'
+source-wordcount: '845'
 ht-degree: 1%
 
 ---
@@ -30,7 +30,7 @@ Dessutom kan du [integrera AEM med Creative Cloud](/help/assets/aem-cc-integrati
 
 ## Integrera med Adobe Analytics {#integrating-with-adobe-analytics}
 
-[Adobe Analytics](https://business.adobe.com/products/analytics/adobe-analytics.html) är den branschledande lösningen som ger digitala marknadsförare en plats där de kan mäta, analysera och optimera integrerade data från alla onlineinitiativ över flera marknadsföringskanaler. Det ger marknadsförarna användbar webbanalysinformation i realtid om digitala strategier och marknadsföringsinitiativ. Adobe Analytics hjälper marknadsförarna att snabbt identifiera de mest lönsamma vägarna via en webbplats, segmentera trafiken för att hitta värdefulla webbbesökare, avgöra var besökarna navigerar bort från webbplatsen och identifiera viktiga framgångsmått för onlinemarknadsföringskampanjer.
+[Adobe Analytics](https://business.adobe.com/products/analytics/adobe-analytics.html) är den branschledande lösningen som ger digitala marknadsförare en plats där de kan mäta, analysera och optimera integrerade data från alla onlineinitiativ över flera marknadsföringskanaler. Det ger marknadsförarna användbar webbanalysinformation i realtid om digitala strategier och marknadsföringsinitiativ. Adobe Analytics hjälper marknadsförarna att snabbt identifiera de mest lönsamma vägarna via en webbplats, segmentera trafiken för att hitta värdefulla webbbesökare, avgöra var besökarna navigerar bort från webbplatsen och identifiera viktiga framgångsmått för webbkampanjer.
 
 Du kan använda Adobe Analytics för att analysera data från dina webbplatser.
 
@@ -51,7 +51,7 @@ Du kan också använda [Guiden Anmäl dig](/help/sites-administering/opt-in.md) 
 
 [Adobe Target](https://business.adobe.com/products/target/adobe-target.html) används av marknadsförare för att utforma och genomföra onlinetester, skapa direktsända målgruppssegment (baserat på beteende) och automatisera målgruppsanpassningen för innehåll och onlineupplevelser.
 
-Dagens onlinekonsumenter har ständigt nya behov och förväntar sig relevant, till och med personaliserat innehåll från en mängd olika webbplatser och innehållskällor som de kan välja bland. För att engagera en webbpublik är det viktigt att onlinemarknadsförarna snabbt kan identifiera vilka erbjudanden och vilket innehåll som är relevant och engagerande för deras målgrupper. Med denna kunskap i ryggen behöver marknadsförarna möjlighet att kontinuerligt utveckla sina webbplatser och rikta lämpligt innehåll till olika målgrupper.
+Dagens onlinekonsumenter har ständigt nya behov och förväntar sig relevant, till och med personaliserat innehåll från en mängd olika webbplatser och innehållskällor som de kan välja bland. För att engagera en webbpublik är det viktigt att marknadsförarna snabbt kan identifiera vilka erbjudanden och vilket innehåll som är relevanta och övertygande för deras målgrupper. Med denna kunskap i ryggen behöver marknadsförarna möjlighet att kontinuerligt utveckla sina webbplatser och rikta lämpligt innehåll till olika målgrupper.
 
 [Integrera med Adobe Target](/help/sites-administering/target.md) förklarar hur du kan integrera din webbplats med Target.
 

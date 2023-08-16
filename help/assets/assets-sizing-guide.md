@@ -5,9 +5,9 @@ contentOwner: AG
 role: Architect, Admin
 feature: Asset Management
 exl-id: fd58ead9-5e18-4f55-8d20-1cf4402fad97
-source-git-commit: e24316cb9495a552960ae0620e4198f10a08b691
+source-git-commit: 10227bcfcfd5a9b0f126fee74dce6ec7842f5e95
 workflow-type: tm+mt
-source-wordcount: '1615'
+source-wordcount: '1614'
 ht-degree: 0%
 
 ---
@@ -33,7 +33,7 @@ Med tanke på dessa faktorer behöver du en metod för att beräkna ett tillräc
 1. Definiera de återgivningar som ska användas.
 1. Skapa återgivningarna i [!DNL Experience Manager] använda [!DNL ImageMagick] eller [!DNL Adobe Creative Cloud] program. Förutom de återgivningar som användarna anger skapar du färdiga återgivningar. För användare som implementerar Dynamic Media kan du använda IC-binärfilen för att generera PTIFF-återgivningar som ska lagras i Experience Manager.
 1. Om du tänker använda delresurser genererar du dem för rätt filtyper.
-1. Jämför storleken på utdatabilder, återgivningar och delresurser med originalbilderna. Det gör att du kan generera en förväntad tillväxtfaktor när systemet har lästs in. Om du till exempel genererar återgivningar och delresurser med en kombinerad storlek på 3 GB efter att ha bearbetat 1 GB resurser, blir återgivningens tillväxtfaktor 3.
+1. Jämför storleken på utdatabilder, återgivningar och delresurser med originalbilderna. Du kan generera en förväntad tillväxtfaktor när systemet är inläst. Om du till exempel genererar återgivningar och delresurser med en kombinerad storlek på 3 GB efter att ha bearbetat 1 GB resurser, blir återgivningens tillväxtfaktor 3.
 1. Fastställer den maximala tid som tillgångsversionerna ska underhållas i systemet.
 1. Bestäm hur ofta befintliga resurser ändras i systemet. If [!DNL Experience Manager] används som ett samarbetscentrum i kreativa arbetsflöden och antalet ändringar är höga. Om endast färdiga resurser överförs till systemet är det här antalet mycket lägre.
 1. Bestäm hur många resurser som ska läsas in i systemet varje månad. Om du är osäker kan du kontrollera antalet tillgängliga resurser och dividera antalet med åldern på den äldsta resursen för att beräkna ett ungefärligt antal.
@@ -43,7 +43,7 @@ Genom att utföra ovanstående steg kan du fastställa följande:
 * Råstorlek för resurser som ska läsas in.
 * Antal resurser som ska läsas in.
 * Renderingstillväxtfaktor.
-* Antal tillgångsändringar som gjorts per månad.
+* Antal tillgångsändringar per månad.
 * Antal månader att underhålla tillgångsversioner.
 * Antal nya resurser som läses in varje månad.
 * År av tillväxt för tilldelning av lagringsutrymme.
@@ -56,7 +56,7 @@ De exempeldata som finns i verktyget visar hur viktigt det är att utföra de an
 
 ### Delade datalager {#shared-datastores}
 
-För stora datalager kan du implementera ett delat datalager antingen via ett delat fildatalager på en nätverksansluten enhet eller via ett Amazon S3-datalager. I det här fallet behöver enskilda instanser inte ha en kopia av binärfilerna. Dessutom underlättar ett delat datalager binär replikering utan extra intervall och minskar bandbredden som används för att replikera resurser till publiceringsmiljöer.
+För stora datalager kan du implementera ett delat datalager antingen via ett delat fildatalager på en nätverksansluten enhet eller via ett Amazon S3-datalager. I det här fallet behöver enskilda instanser inte behålla en kopia av binärfilerna. Dessutom underlättar ett delat datalager binär replikering utan extra intervall och minskar bandbredden som används för att replikera resurser till publiceringsmiljöer.
 
 #### Användningsexempel {#use-cases}
 
@@ -84,9 +84,9 @@ Ett delat datalager kräver att binärfilerna lagras på en nätverksansluten en
 
 #### Latens {#latency}
 
-Latens i S3-implementeringar introduceras av skrivtrådar i bakgrunden. Säkerhetskopieringsprocedurer måste ta hänsyn till denna fördröjning. Dessutom kan Lucene-index vara ofullständiga vid säkerhetskopiering. Det gäller för alla tidskänsliga filer som skrivs till S3-datalagret och som öppnas från en annan instans.
+Latens i S3-implementeringar orsakas av skrivtrådar i bakgrunden. Säkerhetskopieringsprocedurer måste ta hänsyn till denna fördröjning. Dessutom kan Lucene-index vara ofullständiga vid säkerhetskopiering. Det gäller för alla tidskänsliga filer som skrivs till S3-datalagret och som öppnas från en annan instans.
 
-### Nodarkiv eller dokumentarkiv {#node-store-document-store}
+### Node store or document store {#node-store-document-store}
 
 Det är svårt att få fram exakta siffror för storleken för en NodeStore eller DocumentStore på grund av de resurser som används av följande:
 
@@ -123,4 +123,4 @@ Det är svårt att göra en korrekt uppskattning av storleken på den TIFF-fil s
 
 ## Storlek på resurser {#size-of-assets}
 
-Som standard [!DNL Experience Manager] gör att du kan överföra resurser med en filstorlek på upp till 2 GB. Så här överför du mycket stora resurser i [!DNL Experience Manager], se [Konfiguration för överföring av mycket stora resurser](managing-video-assets.md#configuration-to-upload-assets-that-are-larger-than-gb).
+Som standard [!DNL Experience Manager] Med kan du överföra resurser med en filstorlek på upp till 2 GB. Så här överför du mycket stora resurser i [!DNL Experience Manager], se [Konfiguration för överföring av mycket stora resurser](managing-video-assets.md#configuration-to-upload-assets-that-are-larger-than-gb).

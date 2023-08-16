@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 6732ef1f-0bfd-44e6-b24d-e22fe427d8b4
 docset: aem65
 exl-id: c9f55ec9-83ea-4115-97c2-59b5c179e90f
-source-git-commit: a51a863a4edf7e8b951a8361c5c7f0517b09f12a
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '607'
+source-wordcount: '604'
 ht-degree: 25%
 
 ---
@@ -47,7 +47,7 @@ Med **verktygskonsolerna** får du tillgång till ett antal specialverktyg som h
   </tr>
   <tr>
    <td> </td>
-   <td>CRXDE Lite</td>
+   <td>CRXDE LITE</td>
   </tr>
   <tr>
    <td> </td>
@@ -311,7 +311,7 @@ Med **verktygskonsolerna** får du tillgång till ett antal specialverktyg som h
   </tr>
   <tr>
    <td> </td>
-   <td>Konfiguration av twitter Social Login<br /> </td>
+   <td>Konfiguration för social inloggning för twitter<br /> </td>
   </tr>
   <tr>
    <td> </td>
@@ -377,7 +377,7 @@ Med **verktygskonsolerna** får du tillgång till ett antal specialverktyg som h
    <td>Klientkontexten representerar en dynamiskt sammansatt samling med användardata. Standardkonfigurationerna och marknadsföringskonfigurationerna för molnet finns här.<br /> </td>
   </tr>
   <tr>
-   <td>Konfigurationer av Cloud Services<br /> </td>
+   <td>Konfigurationer av Cloud Service<br /> </td>
    <td>Innehåller konfigurationer som rör integrering med Adobe Marketing Cloud.</td>
   </tr>
   <tr>
@@ -394,7 +394,7 @@ Med **verktygskonsolerna** får du tillgång till ett antal specialverktyg som h
   </tr>
   <tr>
    <td>Kontrollpaneler</td>
-   <td>Gör att du kan skapa rapportinstrumentpaneler; dessa är ett anpassningsbart sätt att definiera sidor som visar konsoliderade data.</td>
+   <td>Här kan du skapa rapportinstrumentpaneler. De här är ett anpassningsbart sätt att definiera sidor som visar konsoliderade data.</td>
   </tr>
   <tr>
    <td>Anpassad dokumentation</td>
@@ -430,7 +430,7 @@ Med **verktygskonsolerna** får du tillgång till ett antal specialverktyg som h
   </tr>
   <tr>
    <td>Rapporter</td>
-   <td>AEM innehåller ett antal anpassade rapporter, med vilka du kan skapa anpassade rapporter och/eller utveckla egna.</td>
+   <td>AEM innehåller en mängd anpassade rapporter, med vilka du kan skapa anpassade rapporter och/eller utveckla egna.</td>
   </tr>
   <tr>
    <td>Standardsidans placering</td>
@@ -449,7 +449,7 @@ Med **verktygskonsolerna** får du tillgång till ett antal specialverktyg som h
    <td>Det finns inga aktiva funktioner som är relaterade till den här posten.</td>
   </tr>
   <tr>
-   <td>förvaltare</td>
+   <td>förvaltararkiv</td>
    <td>Det finns inga aktiva funktioner som är relaterade till den här posten.</td>
   </tr>
   <tr>

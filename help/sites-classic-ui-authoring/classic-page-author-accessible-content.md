@@ -11,9 +11,9 @@ topic-tags: page-authoring
 content-type: reference
 discoiquuid: 378bc33d-ab6c-4651-9688-102c961561fc
 exl-id: 01c69aa9-2623-42dc-9e2d-62bc5e01cf0e
-source-git-commit: ce6d24e53a27b64a5d0a9db2e4b6672bd77cf9ec
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '9153'
+source-wordcount: '9152'
 ht-degree: 6%
 
 ---
@@ -30,7 +30,6 @@ ht-degree: 6%
 >* [En snabbguide till WCAG 2.1](/help/managing/qg-wcag.md)
 >* [Skapa tillgängligt innehåll (WCAG 2.1-överensstämmelse)](/help/sites-authoring/creating-accessible-content.md)
 
-
 WCAG 2.0 består av en uppsättning teknikoberoende riktlinjer och framgångskriterier för att göra webbinnehåll tillgängligt för och användbart för personer med funktionshinder.
 
 >[!NOTE]
@@ -41,8 +40,7 @@ WCAG 2.0 består av en uppsättning teknikoberoende riktlinjer och framgångskri
 >* [Konfigurera RTF-redigeraren för att skapa tillgängligt innehåll](/help/sites-administering/rte-accessible-content.md)
 >
 
-
-Riktlinjerna är indelade i tre överensstämmelsenivåer: Nivå A (lägst), Nivå AA och Nivå AAA (högst). Nivåerna definieras kortfattat enligt följande:
+Riktlinjerna är indelade i tre överensstämmelsenivåer: Nivå A (lägsta), Nivå AA och Nivå AAA (högsta). Nivåerna definieras kortfattat enligt följande:
 
 * **Nivå A:** Webbplatsen har en grundläggande, lägsta tillgänglighetsnivå. För att den här nivån ska uppnås måste alla kriterier på nivå A uppfyllas.
 * **Nivå AA:** Den idealiska tillgänglighetsnivån att eftersträva, där webbplatsen når en högre tillgänglighetsnivå, så att den är tillgänglig för de flesta människor i de flesta situationer som använder de flesta tekniker. För att den här nivån ska uppnås måste alla kriterier nivå A och nivå AA uppfyllas.
@@ -50,7 +48,7 @@ Riktlinjerna är indelade i tre överensstämmelsenivåer: Nivå A (lägst), Niv
 
 När du skapar din webbplats bör du bestämma den övergripande nivån som du vill att din plats ska anpassas efter.
 
-I följande avsnitt presenteras [WCAG 2.0 - riktlinjer](https://www.w3.org/TR/WCAG20/#guidelines) med tillhörande kriterier för framgång på nivå A och nivå AA [överensstämmelsenivåer](https://www.w3.org/TR/UNDERSTANDING-WCAG20/conformance.html).
+I följande avsnitt presenteras [WCAG 2.0 - riktlinjer](https://www.w3.org/TR/WCAG20/#guidelines) med tillhörande kriterier för framgång på nivå A och nivå AA [anpassningsnivåer](https://www.w3.org/TR/UNDERSTANDING-WCAG20/conformance.html).
 
 >[!NOTE]
 >
@@ -64,18 +62,17 @@ I följande avsnitt presenteras [WCAG 2.0 - riktlinjer](https://www.w3.org/TR/WC
 >* den numrering som används i [WCAG 2.0 - riktlinjer](https://www.w3.org/TR/WCAG20/#guidelines) för att underlätta korsreferenser med WCAG:s webbplats.
 >
 
-
-## Princip 1: Förväntningsbar {#principle-perceivable}
+## Princip 1: Förutsägbar {#principle-perceivable}
 
 [Princip 1: Perfekt - Information och komponenter i användargränssnittet måste kunna presenteras för användarna på ett sätt som de kan uppfatta.](https://www.w3.org/TR/WCAG20/#perceivable)
 
 ### Textalternativ (1.1) {#text-alternatives}
 
-[Riktlinje 1.1 Textalternativ: Tillhandahåll textalternativ för allt innehåll som inte är text så att det kan ändras till andra formulär som användarna behöver, till exempel stor utskrift, blindskrift, tal, symboler eller enklare språk.](https://www.w3.org/TR/WCAG20/#text-equiv)
+[Riktlinje 1.1 Textalternativ: Tillhandahåll textalternativ för allt innehåll som inte är text så att det kan ändras till andra former som människor behöver, t.ex. stor trycksak, blindskrift, tal, symboler eller enklare språk.](https://www.w3.org/TR/WCAG20/#text-equiv)
 
 ### Innehåll som inte är text (1.1.1) {#non-text-content}
 
-* Villkor för lyckat resultat 1.1.1
+* Kriteriet 1.1.1 lyckades
 * Nivå A
 * Innehåll som inte är text: Allt innehåll som inte är text och som visas för användaren har ett textalternativ som har samma syfte, förutom de situationer som anges nedan.
 
@@ -85,23 +82,23 @@ Information på en webbsida kan finnas i många olika format som inte är text, 
 
 En annan fördel är att textalternativ gör det möjligt att indexera icke-textinnehåll med sökmotorteknik.
 
-#### Så här möts du - innehåll som inte är text (1.1.1) {#how-to-meet-non-text-content}
+#### Så här möts innehåll som inte är text (1.1.1) {#how-to-meet-non-text-content}
 
 För statisk grafik är det grundläggande kravet att tillhandahålla ett motsvarande textalternativ för grafiken. Den här metoden utförs i **Alt-text** fält:
 
 >[!NOTE]
 >
->I vissa färdiga komponenter, som **karuseller** och **bildspel**, går det inte att lägga till alternativa textbeskrivningar för bilder. När du implementerar versioner av de här komponenterna för din AEM ska utvecklingsteamet konfigurera sådana komponenter så att de stöder `alt` -attribut. Detta säkerställer att författare kan lägga till det i innehållet (se [Lägga till stöd för ytterligare HTML-element och attribut](/help/sites-administering/rte-accessible-content.md#add-support-for-more-html-elements-and-attributes)).
+>I vissa färdiga komponenter, som **karuseller** och **bildspel**, går det inte att lägga till alternativa textbeskrivningar för bilder. När du implementerar versioner av de här komponenterna för din AEM ska utvecklingsteamet konfigurera sådana komponenter så att de stöder `alt` -attribut. Detta säkerställer att författare kan lägga till det i innehållet (se [Stöd för ytterligare element och attribut i HTML](/help/sites-administering/rte-accessible-content.md#add-support-for-more-html-elements-and-attributes)).
 
-The **Alt-text** fältet är tillgängligt i **Avancerat** fliken för bildegenskaper i **Bild** komponentdialogruta:
+The **Alt-text** fältet är tillgängligt i **Avancerat** fliken image properties på **Bild** komponentdialogruta:
 
-![Redigera dialogrutan för bildkomponenten i det klassiska användargränssnittet; visar fältet Alt-text.](assets/chlimage_1-17a.png)
+![Dialogrutan Redigera för bildkomponenten i det klassiska användargränssnittet. Visar fältet Alt-text.](assets/chlimage_1-17a.png)
 
-AEM lägger till en **Alt-text** till dina bilder som standard. För det klassiska användargränssnittet finns det två olika scenarier för hur standardattributet skapas, men standardvärdet kanske inte är tillräckligt som ett alternativ och det är sannolikt att det måste redigeras i **Avancerat** fliken för bildegenskaper:
+AEM lägger till en **Alt-text** till dina bilder som standard. För det klassiska användargränssnittet finns det två olika scenarier för hur standardattributet skapas, men standardvärdet kanske inte är tillräckligt som ett alternativ och det är sannolikt att det måste redigeras i **Avancerat** fliken image properties:
 
 * Fil:
 
-En bild överförs från användarens hårddisk. Om du lägger till en bildkomponent på en sida och sedan väljer en bild från hårddisken, eller en annan källa, är standardvärdet för **Alt-text** är `file`. Värdet måste ändras i **Avancerat** fliken bildegenskaper. Det här värdet visas inte i **Alt-text** men när värdet ändras visas det nya värdet i fältet.
+En bild överförs från användarens hårddisk. Om du lägger till en bildkomponent på en sida och sedan väljer en bild från hårddisken, eller en annan källa, är standardvärdet för **Alt-text** är `file`. Värdet måste ändras i **Avancerat** fliken för bildegenskaper. Det här värdet visas inte i dialogrutan **Alt-text** men när värdet ändras visas det nya värdet i fältet.
 
 * Resurs:
 
@@ -117,7 +114,7 @@ En bild läggs till från databasen med digitala resurser. Om du drar en bild fr
 
 #### Skapa bra textalternativ {#creating-good-text-alternatives}
 
-Det finns olika former av innehåll som inte är text, så textalternativets värde beror på vilken roll bilden spelar på webbsidan. Några allmänna regler för tummen är följande:
+Det finns olika former av innehåll som inte är text, så textalternativets värde beror på vilken roll bilden spelar på webbsidan. Följande allmänna tumregler gäller:
 
 * Textalternativen bör vara kortfattade men ändå tydligt återge den viktiga information som icke-textinnehållet ger.
 * För långa beskrivningar (över 100 tecken) bör undvikas. Om ett textalternativ kräver mer information:
@@ -130,13 +127,13 @@ Det finns olika former av innehåll som inte är text, så textalternativets vä
 * Om innehållet som inte är text finns i ett knappelement och det inte finns någon text som tillhör samma knapp, måste den alternativa texten i bilden ange knappens funktion, inte bilden.
 * Det går bra att ge en bild tom (null), alternativ text, men bara om bilden inte har någon alternativ text. Det är till exempel en helt dekorativ bild. Eller om motsvarande text redan finns i sidtexten.
 
-The [W3C-utkast: HTML5-tekniker för att tillhandahålla användbara textalternativ](https://html.spec.whatwg.org/multipage/images.html#alt) innehåller fler detaljer och exempel på lämpliga alternativa textalternativ för bilder av olika typer.
+The [W3C-utkast: HTML5-tekniker för användbara textalternativ](https://html.spec.whatwg.org/multipage/images.html#alt) innehåller fler detaljer och exempel på lämpliga alternativa textalternativ för bilder av olika typer.
 
 Specifika typer av icke-textinnehåll som kräver textalternativ kan vara:
 
 * Illustrativa foton:
 
-Det här är bilder på människor, objekt eller platser. Tänk på fotots roll på sidan; en lämplig textmotsvarighet sannolikt är *Foto av [object]*, men kan bero på den omgivande texten.
+Det här är bilder på människor, objekt eller platser. Tänk på fotots roll på sidan. En lämplig textmotsvarighet är troligtvis *Foto av [object]*, men kan bero på den omgivande texten.
 
 * Ikoner:
 
@@ -144,7 +141,7 @@ Små symboler (grafik) som förmedlar specifik information. De måste användas 
 
 * Diagram och diagram:
 
-Dessa representerar vanligtvis numeriska data. Ett alternativ för att tillhandahålla ett textalternativ kan vara att ta med en kort sammanfattning av huvudtrenderna som visas i diagrammet eller grafiken. Om det behövs kan du även ge en mer detaljerad beskrivning i texten med hjälp av **Beskrivning** i **Avancerat** fliken bildegenskaper. Du kan även tillhandahålla källdata i tabellformat någon annanstans på sidan eller webbplatsen.
+Dessa representerar vanligtvis numeriska data. Ett alternativ för att tillhandahålla ett textalternativ kan vara att ta med en kort sammanfattning av huvudtrenderna som visas i diagrammet eller grafiken. Om det behövs kan du även ge en mer detaljerad beskrivning i texten med hjälp av **Beskrivning** fältet i **Avancerat** fliken för bildegenskaper. Du kan även tillhandahålla källdata i tabellformat någon annanstans på sidan eller webbplatsen.
 
 ![Exempel på ett diagram. Nedan visas det bästa sättet att erbjuda ett alternativ.](assets/chlimage_1-2a.jpeg)
 
@@ -160,11 +157,11 @@ Pie chart: Language=68%, Education=14% and Science=18%.</p>
 >
 >Ovanstående utdrag används bara för att illustrera ordningen. Använd **Bild** i stället för `img src` som används ovan.
 
-I AEM kan du använda en kombination av **Alt-text** och **Beskrivning** fält i bildens konfigurationsdialogruta - som i [Så här möts du - innehåll som inte är text (1.1.1)](#how-to-meet-non-text-content).
+I AEM kan du använda en kombination av **Alt-text** och **Beskrivning** fält i bildens konfigurationsdialogruta - som i [Så här möts innehåll som inte är text (1.1.1)](#how-to-meet-non-text-content).
 
 * Kartor, diagram, flödesscheman:
 
-För grafik som tillhandahåller rumsliga data (till exempel. om du vill ha stöd för att beskriva relationer mellan objekt eller en process) kontrollerar du att nyckelmeddelandet finns i textformat. För kartor är det troligtvis opraktiskt att ange en fullständig textmotsvarighet, men om kartan tillhandahålls som ett sätt att hjälpa människor att hitta till en viss plats, kan kartbildens alternativa text kortfattat ange *Karta över X* anger du sedan en beskrivning av den platsen i text någon annanstans på sidan eller genom **Beskrivning** i **Avancerat** -fliken i **Bild** -komponenten.
+För grafik som tillhandahåller rumsliga data (till exempel. om du vill ha stöd för att beskriva relationer mellan objekt eller en process) kontrollerar du att nyckelmeddelandet finns i textformat. För kartor är det troligtvis opraktiskt att ange en fullständig textmotsvarighet, men om kartan tillhandahålls som ett sätt att hjälpa människor att hitta till en viss plats, kan kartbildens alternativa text kortfattat ange *Karta över X* anger du sedan en beskrivning av den platsen i text någon annanstans på sidan eller genom **Beskrivning** fältet i **Avancerat** -fliken i **Bild** -komponenten.
 
 * CAPTCHA:
 
@@ -190,7 +187,7 @@ Det är dock viktigt att en alternativ bakgrund visas när bilden inte kan visas
 
 * [Förstå villkor 1.1.1](https://www.w3.org/TR/UNDERSTANDING-WCAG20/text-equiv-all.html)
 * [Så här uppfyller du kriterierna 1.1.1](https://www.w3.org/WAI/WCAG21/quickref/?versions=2.0#text-alternatives)
-* [W3C: HTML5-tekniker för att tillhandahålla användbara textalternativ](https://html.spec.whatwg.org/multipage/images.html#alt)
+* [W3C: HTML5-tekniker för användbara textalternativ](https://html.spec.whatwg.org/multipage/images.html#alt)
 * [W3C-förklaring och alternativ till CAPTCHA](https://www.w3.org/TR/turingtest/)
 
 ### Tidsbaserade media (1.2) {#time-based-media}
@@ -201,12 +198,12 @@ Den här informationen handlar om webbinnehåll som *tidsbaserad*. Detta omfatta
 
 ### Endast ljud och endast video (inspelat i förväg) (1.2.1) {#audio-only-and-video-only-pre-recorded}
 
-* Villkor för lyckat resultat 1.2.1
+* Kriteriet 1.2.1 lyckades
 * Nivå A
-* Endast ljud och endast video (inspelat i förväg): För förinspelat ljud och förinspelat videomaterial gäller följande, utom när ljudet eller videon är ett mediaalternativ för text och är tydligt märkt som sådan:
+* Endast ljud och endast video (inspelat i förväg): För förinspelat ljud och förinspelat video gäller följande, utom när ljud eller video är ett meditalternativ för text och är tydligt märkt som sådant:
 
-   * Endast inspelat ljud: Ett alternativ för tidsbaserade medier tillhandahålls som ger motsvarande information för förinspelat ljudinnehåll.
-   * Endast inspelad video: Det finns antingen ett alternativ för tidsbaserade medier eller ett ljudspår som ger motsvarande information för förinspelat videomaterial.
+   * Inspelat endast ljud i förväg: Ett alternativ för tidsbaserade media tillhandahålls som ger motsvarande information för förinspelat innehåll med endast ljud.
+   * Inspelad video endast i förväg: Antingen finns det ett alternativ för tidsbaserade medier eller så finns det ett ljudspår som ger motsvarande information för förinspelat videomaterial.
 
 #### Syfte - Endast ljud och endast video (inspelat i förväg) (1.2.1) {#purpose-audio-only-and-video-only-pre-recorded}
 
@@ -220,13 +217,13 @@ Video eller ljud kan också vara otillgängligt för personer som använder webb
 
 Om du anger den här informationen i ett annat format, till exempel text (eller ljud för video utan ljud), kan det göra den tillgänglig för personer som inte kan komma åt det ursprungliga innehållet.
 
-#### Så här möts du - endast ljud och endast video (förinspelat) (1.2.1) {#how-to-meet-audio-only-and-video-only-pre-recorded}
+#### Så här möts du - endast ljud och endast video (inspelat i förväg) (1.2.1) {#how-to-meet-audio-only-and-video-only-pre-recorded}
 
 * Om innehållet är förinspelat ljud utan video (till exempel en poddsändning):
 
    * Ange en länk omedelbart före eller efter innehållet till en textavskrift av ljudinnehållet.
 
-   Avskriften ska vara en HTML-sida med en textmotsvarighet till allt tal och viktigt icke-talat innehåll. Det ska även ange vem som talar, en beskrivning av inställningen, röstuttryck och en beskrivning av eventuellt annat viktigt ljud.
+  Avskriften ska vara en HTML-sida med en textmotsvarighet till allt tal och viktigt icke-talat innehåll. Det ska även ange vem som talar, en beskrivning av inställningen, röstuttryck och en beskrivning av eventuellt annat viktigt ljud.
 
 * Om innehållet är en animering eller förinspelad video utan ljud:
 
@@ -237,7 +234,7 @@ Om du anger den här informationen i ett annat format, till exempel text (eller 
 >
 >Om ljud- eller videoinnehållet tillhandahålls som ett alternativ till innehåll som finns i ett annat format på en webbsida behöver du inte uppfylla ovanstående krav. Om en video till exempel visar en lista med textinstruktioner behöver den här videon inget alternativ eftersom textinstruktionerna redan fungerar som ett alternativ till videon.
 
-Att infoga multimedia, speciellt Flash-innehåll, i dina AEM webbsidor liknar att infoga en bild. Men eftersom multimediainnehåll är mycket mer än en stillbild finns det olika inställningar och alternativ för att styra hur multimedia spelas upp.
+Att infoga multimedia, speciellt Flash, på dina AEM webbsidor liknar att infoga en . Men eftersom multimediainnehåll är mycket mer än en stillbild finns det olika inställningar och alternativ för att styra hur multimedia spelas upp.
 
 >[!NOTE]
 >
@@ -250,9 +247,9 @@ Att infoga multimedia, speciellt Flash-innehåll, i dina AEM webbsidor liknar at
 
 ### Bildtexter (inspelade i förväg) (1.2.2) {#captions-pre-recorded}
 
-* Villkor för lyckat resultat 1.2.2
+* Kriteriet 1.2.2 lyckades
 * Nivå A
-* Bildtexter (inspelade i förväg): Bildtexter tillhandahålls för allt förinspelat ljudinnehåll i synkroniserade medier, utom när mediet är ett mediaalternativ för text och är tydligt märkt som sådant.
+* Bildtexter (inspelade i förväg): Bildtexter tillhandahålls för allt inspelat ljudinnehåll i synkroniserade medier, utom när mediet är ett mediaalternativ för text och är tydligt märkt som sådant.
 
 #### Syfte - Textning (inspelad i förväg) (1.2.2) {#purpose-captions-pre-recorded}
 
@@ -266,10 +263,10 @@ Personer som är döva eller hörselskadade kan inte eller har stora svårighete
 
 Bildtexter kan antingen vara:
 
-* Öppna: alltid synlig när videon spelas upp
+* Öppna: alltid synligt när videon spelas upp
 * Stängd: bildtexterna kan aktiveras och inaktiveras av användaren
 
-Använd undertexter där det är möjligt. Det ger användarna möjlighet att välja om de vill visa bildtexter eller inte.
+Använd undertextning där det är möjligt. Det ger användarna möjlighet att välja om de vill visa bildtexter eller inte.
 
 För undertexter skapar och tillhandahåller du en synkroniserad bildtextfil i lämpligt format, till exempel [SMIL](https://www.w3.org/AudioVideo/), tillsammans med videofilen.
 
@@ -286,9 +283,9 @@ Om du måste använda öppna bildtexter bäddar du in texten i videospåret. Den
 
 ### Ljudbeskrivning eller mediaalternativ (inspelat i förväg) (1.2.3) {#audio-description-or-media-alternative-pre-recorded}
 
-* Villkor för lyckat resultat 1.2.3
+* Kriteriet 1.2.3 lyckades
 * Nivå A
-* Ljudbeskrivning eller mediaalternativ (inspelat i förväg): Ett alternativ för tidsbaserade medier eller ljudbeskrivning av det inspelade videoinnehållet tillhandahålls för synkroniserade medier, utom när mediet är ett mediaalternativ för text och är tydligt märkt som ett sådant.
+* Ljudbeskrivning eller mediaalternativ (inspelat i förväg): Ett alternativ för tidsbaserad media- eller ljudbeskrivning av det inspelade videoinnehållet tillhandahålls för synkroniserade media, utom när mediet är ett mediaalternativ för text och är tydligt märkt som ett sådant.
 
 #### Syfte - Ljudbeskrivning eller mediealternativ (inspelat i förväg) (1.2.3) {#purpose-audio-description-or-media-alternative-pre-recorded}
 
@@ -305,10 +302,10 @@ Det finns två strategier som kan användas för att uppfylla detta kriterium. B
 
       * Användare kan växla mellan det befintliga ljudspåret (som *inte* innehåller en ljudbeskrivning) och det nya ljudspåret (som *gör* innehåller en ljudbeskrivning).
       * Den här metoden förhindrar avbrott för användare som inte behöver ytterligare beskrivning.
+
    * Skapa en andra version av videoinnehållet som tillåter utökade ljudbeskrivningar. Om du gör det minskar du de svårigheter som är förknippade med att tillhandahålla detaljerade ljudbeskrivningar i mellanrummen mellan de befintliga dialogrutorna genom att tillfälligt pausa ljudet och videon vid lämpliga tidpunkter. Därför kan en mycket längre ljudbeskrivning ges innan åtgärden startar om. Precis som i föregående exempel är detta det bästa som finns som ett extra ljudspår för att förhindra avbrott för användare som inte behöver den extra beskrivningen.
 
-
-1. Ange en textavskrift som är en lämplig textmotsvarighet till ljud- och visuella element i videon eller animeringen. Där så är lämpligt bör det finnas en uppgift om vem som talar, en beskrivning av inställningen, röstuttryck. Beroende på längden kan du placera utskriften på samma sida som videon eller animeringen, eller på en separat sida; Om du väljer det senare alternativet anger du en länk till utskriften bredvid videon eller animeringen.
+1. Ange en textavskrift som är en lämplig textmotsvarighet till ljud- och visuella element i videon eller animeringen. Där så är lämpligt bör det finnas en uppgift om vem som talar, en beskrivning av inställningen, röstuttryck. Beroende på hur lång den är kan du placera utskriften på samma sida som videon eller animeringen, eller på en separat sida. Om du väljer det senare alternativet anger du en länk till utskriften bredvid videon eller animeringen.
 
 Exakta detaljer om hur du skapar ljudbeskrivad video ligger utanför den här handbokens räckvidd. Det kan ta lång tid att skapa videoklipp och ljudbeskrivningar, men med andra Adobe-produkter kan du göra detta. Om du skapar innehåll i Adobe Flash Professional bör du också skapa ett skript som uppmanar användaren att hämta lämpligt plugin-program och tillhandahålla ett textalternativ via `<noscript>` -element.
 
@@ -320,9 +317,9 @@ Exakta detaljer om hur du skapar ljudbeskrivad video ligger utanför den här ha
 
 ### Bildtexter (Live) (1.2.4)  {#captions-live}
 
-* Villkor för lyckat resultat 1.2.4
+* Kriteriet 1.2.4 lyckades
 * Nivå AA
-* Bildtexter (Live): Bildtexter finns för allt direktsänt ljudinnehåll i synkroniserade medier.
+* Bildtexter (Live): Bildtexter finns för allt live-ljudinnehåll i synkroniserade media.
 
 #### Syfte - Textning (live) (1.2.4) {#purpose-captions-live}
 
@@ -344,17 +341,17 @@ Detaljerade instruktioner ligger utanför det här dokumentets räckvidd, men me
 
 ### Ljudbeskrivning (inspelad i förväg) (1.2.5)  {#audio-description-pre-recorded}
 
-* Villkor för lyckat resultat 1.2.5
+* Kriteriet 1.2.5 lyckades
 * Nivå AA
-* Ljudbeskrivning (inspelad i förväg): Ljudbeskrivning ges för allt förinspelat videoinnehåll i synkroniserade media.
+* Ljudbeskrivning (inspelad i förväg): Ljudbeskrivning ges för allt inspelat videoinnehåll i synkroniserade media.
 
 #### Syfte - ljudbeskrivning (inspelad i förväg) (1.2.5) {#purpose-audio-description-pre-recorded}
 
-Detta kriterium är identiskt med [Ljudbeskrivning eller mediealternativ (inspelat i förväg)](#audio-description-or-media-alternative-pre-recorded), förutom att författare måste ange en mycket mer detaljerad ljudbeskrivning för att följa nivå AA.
+Detta kriterium är identiskt med [Ljudbeskrivning eller mediaalternativ (inspelat i förväg)](#audio-description-or-media-alternative-pre-recorded), förutom att författare måste ange en mycket mer detaljerad ljudbeskrivning för att följa nivå AA.
 
 #### Hur man uppfyller kraven - ljudbeskrivning (inspelad i förväg) (1.2.5) {#how-to-meet-audio-description-pre-recorded}
 
-Följ anvisningarna i [Ljudbeskrivning eller mediealternativ (inspelat i förväg)](#audio-description-or-media-alternative-pre-recorded).
+Följ anvisningarna i [Ljudbeskrivning eller mediaalternativ (inspelat i förväg)](#audio-description-or-media-alternative-pre-recorded).
 
 #### Mer information - ljudbeskrivning (inspelad i förväg) (1.2.5) {#more-information-audio-description-pre-recorded}
 
@@ -367,15 +364,15 @@ Följ anvisningarna i [Ljudbeskrivning eller mediealternativ (inspelat i förvä
 
 Denna riktlinje omfattar de krav som är nödvändiga för att stödja personer som
 
-* kanske inte kan komma åt information som presenteras av en författare i en *standard* tvådimensionell flerspaltig webbsideslayout med färg
+* kanske inte kan komma åt information som presenterats av en författare i en *standard* tvådimensionell flerspaltig webbsideslayout med färg
 
 * kan använda enbart ljud eller alternativ visuell visning som stor text eller hög kontrast.
 
 ### Information och relationer (1.3.1)  {#info-and-relationships}
 
-* Villkor för lyckat resultat 1.3.1
+* Kriteriet 1.3.1 lyckades
 * Nivå A
-* Information och relationer: Information, struktur och relationer som förmedlas genom presentationen kan bestämmas programmatiskt eller vara tillgängliga i text.
+* Information och relationer: Information, struktur och relationer som förmedlas genom presentationen kan fastställas programmatiskt eller vara tillgängliga i text.
 
 #### Syfte - Information och relationer (1.3.1) {#purpose-info-and-relationships}
 
@@ -387,7 +384,7 @@ Detta kriterium gäller för att säkerställa att sådan strukturell informatio
 
 AEM gör det enkelt att skapa webbsidor med lämpliga HTML-element. Öppna sidinnehållet i textredigeraren (en textkomponent) och använd **Format** för att ange rätt strukturelement (t.ex. stycke och rubrik).
 
-Följande bild visar text som har formaterats som stycketext: källkodsvyn som används visar att den har rätt öppning och stängning &lt;p> och &lt;/p> -taggar.
+Följande bild visar text som har formaterats som stycketext. I källkodsvyn som används visas att den har rätt inledande och avslutande &lt;p> och &lt;/p> -taggar.
 
 ![Ett exempel på styckeelementet som visas i källredigeringsläge (klassiskt användargränssnitt).](assets/chlimage_1-18a.png)
 
@@ -414,22 +411,23 @@ Använd eller elementet för att ange betoning. Använd inte rubriker för att m
 >
 >* &lt;b> for &lt;strong>
 * &lt;i> for &lt;em>
-  >
+>
 De är i princip desamma, men och är att föredra eftersom de är semantiskt korrekta i html. Utvecklingsteamet kan konfigurera RTE-programmet så att det kan användas och (i stället för och) när projektinstansen utvecklas.
 
 * **Använd listor**: Du kan använda HTML för att ange tre olika typer av listor:
 
-   * The `<ul>` element används för *oordnad* listor (punktlistor). Enskilda listobjekt identifieras med `<li>` -element.
+   * The `<ul>` element används för *oordnad* punktlistor. Enskilda listobjekt identifieras med `<li>` -element.
 
-   i RTE använder du **Punktlista** ikon.
+  i RTE använder du **Punktlista** -ikon.
 
    * The `<ol>` element används för *numrerad* listor. Enskilda listobjekt identifieras med `<li>` -element.
 
-   I RTE använder du **Numrerad lista** ikon.
+  I RTE använder du **Numrerad lista** -ikon.
 
 Om du vill ändra befintligt innehåll till en viss listtyp markerar du lämplig text och väljer lämplig listtyp. Precis som i det tidigare exemplet som visar hur stycketext skrivs in, läggs de rätta listelementen automatiskt till i HTML, men du kan visa detta i källredigeringsvyn.
 
 >[!NOTE]
+>
 The `<dl>` -elementet stöds inte av RTE.
 
 * **Använd tabeller**:
@@ -442,6 +440,7 @@ Datatabeller måste identifieras med tabellelement i HTML:
     * a `&lt;td>`-element för varje datacell
 
 >[!NOTE]
+>
 Tabeller ska realiseras med **Tabell** -komponenten. Även om tabeller kan skapas i Text-komponenten rekommenderas inte detta.
 
 Tillgängliga tabeller använder dessutom följande element och attribut:
@@ -451,9 +450,10 @@ Tillgängliga tabeller använder dessutom följande element och attribut:
     * The &quot;scope&quot; attribute of the `&lt;th>`-element används för att ange om en cell representerar en rubrik för en viss rad eller för en viss kolumn. Ett liknande sätt är att använda attributen header och id i komplexa tabeller, där dataceller kan kopplas till en eller flera rubriker.
 
 >[!NOTE]
+>
 Som standard är dessa element och attribut inte direkt tillgängliga, men systemadministratören kan lägga till stöd för dessa värden i dialogrutan **Tabellegenskaper**[ (se Lägga till stöd för ytterligare HTML-element och attribut](/help/sites-administering/rte-accessible-content.md#add-support-for-more-html-elements-and-attributes)).
 
-När du lägger till en **Tabell** kan du konfigurera **Tabellegenskaper** i dialogrutan.
+När en **Tabell** kan du konfigurera **Tabellegenskaper** genom att använda dialogrutan.
 
     * en lämplig **Bildtext**.
     * Ta helst bort alla standardvärden för **Width**, **Height**, **Border**, **Cellutfyllnad*, **Cellmellanrum**. eftersom dessa egenskaper kan anges i en global formatmall.
@@ -462,16 +462,18 @@ När du lägger till en **Tabell** kan du konfigurera **Tabellegenskaper** i dia
 
 Du kan sedan använda **Cellegenskaper** för att välja om cellen är en data- eller rubrikcell och, om det är en rubrikcell, om den hör till en rad eller kolumn eller både och:
 
-![Dialogruta för samtalsegenskaper. ange en rad (vanligtvis den första) som en rubrikrad.](assets/chlimage_1-21a.png)
+![Dialogrutan Anropa egenskaper. Ange en rad (vanligtvis den första) som en rubrikrad.](assets/chlimage_1-21a.png)
 
 * **Komplexa datatabeller:**
 
 Om det finns komplexa tabeller med två eller flera rubriknivåer kan det hända att de grundläggande tabellegenskaperna inte räcker till för att ge all nödvändig strukturinformation. För den här typen av komplexa tabeller måste direkta relationer skapas mellan rubrikerna och deras relaterade celler med hjälp av **header** och **id** attribut. I tabellen nedan matchas till exempel rubriker och ID:n för att skapa en programmatisk association för hjälpmedelsanvändare.
 
 >[!NOTE]
+>
 Attributet id är inte tillgängligt i en körklar installation. Den kan aktiveras genom att konfigurera HTML-regler och serialiseraren i textredigeraren.
 
 >[!NOTE]
+>
 Tabeller ska realiseras med **Tabell** -komponenten. Även om tabeller kan skapas i Text-komponenten rekommenderas inte detta.
 
 ```xml
@@ -504,7 +506,8 @@ Tabeller ska realiseras med **Tabell** -komponenten. Även om tabeller kan skapa
 För att uppnå detta i AEM måste du lägga till markeringen direkt i källredigeringsläget.
 
 >[!NOTE]
-Den här funktionen är inte omedelbart tillgänglig i en standardinstallation. Det kräver att RTE konfigureras. HTML regler och serialisering.
+>
+Den här funktionen är inte omedelbart tillgänglig i en standardinstallation. RTE måste konfigureras; HTML-regler och serialisering.
 
 #### Mer information - Info och relationer (1.3.1) {#more-information-info-and-relationships}
 
@@ -513,9 +516,9 @@ Den här funktionen är inte omedelbart tillgänglig i en standardinstallation. 
 
 ### Sensoriska egenskaper (1.3.3)  {#sensory-characteristics}
 
-* Villkor för lyckat resultat 1.3.3
+* Kriteriet 1.3.3 lyckades
 * Nivå A
-* Sensoriska egenskaper: Instruktioner för att förstå och använda innehåll är inte enbart beroende av de sensoriska egenskaperna hos komponenter som form, storlek, visuell placering, orientering eller ljud.
+* Sensoriska egenskaper: Instruktioner för att förstå och hantera innehåll är inte enbart beroende av sensoriska egenskaper hos komponenter som form, storlek, visuell placering, orientering eller ljud.
 
 #### Syfte - Sensoriska egenskaper (1.3.3) {#purpose-sensory-characteristics}
 
@@ -524,17 +527,19 @@ Designers fokuserar ofta på visuella designfunktioner som färg, form, textstil
 På samma sätt innebär information som kräver att man skiljer mellan olika ljud (till exempel manligt eller kvinnligt talt innehåll) tillgänglighetshinder för personer med nedsatt hörsel, om den inte återspeglas i något textalternativ för ljudinnehållet.
 
 >[!NOTE]
+>
 Information om krav för alternativ till färg finns i [Användning av färg](#use-of-color).
 
 #### Hur man uppfyller kraven - sensoriska egenskaper (1.3.3) {#how-to-meet-sensory-characteristics}
 
 Se till att all information som bygger på visuella egenskaper för sidinnehåll också presenteras i ett alternativt format.
 
-* Förlita dig inte på visuell position för att ge information. Om du till exempel vill hänvisa användare till en meny till höger på sidan för att få tillgång till mer information, ska du inte hänvisa till *menyn till höger*; I stället ger du menyn ett namn (t.ex. via en rubrik) och refererar till namnet i texten.
+* Förlita dig inte på visuell position för att ge information. Om du till exempel vill hänvisa användare till en meny till höger på sidan för att få tillgång till mer information, ska du inte hänvisa till *menyn till höger*; i stället ger du menyn ett namn (till exempel via en rubrik) och refererar till det namnet i texten.
 * Förlita dig inte på att textformatering (till exempel fet eller kursiv text) är det enda sättet att förmedla information.
 
 >[!NOTE]
-Beskrivande termer får användas om de anses ha betydelse i ett icke-visuellt sammanhang. Använd till exempel *ovan* och *nedan* skulle i allmänhet vara godtagbara, eftersom de innebär innehåll före och efter en viss innehållspost. Det skulle fortfarande verka vettigt när innehållet talas högt.
+>
+Beskrivande termer får användas om de anses ha betydelse i ett icke-visuellt sammanhang. Använd till exempel *ovan* och *nedan* skulle i allmänhet vara godtagbart eftersom de antyder innehåll före och efter en viss innehållspost. Det skulle fortfarande verka vettigt när innehållet talas högt.
 
 #### Mer information - Sensoriska egenskaper (1.3.3) {#more-information-sensory-characteristics}
 
@@ -543,16 +548,17 @@ Beskrivande termer får användas om de anses ha betydelse i ett icke-visuellt s
 
 ### Skiljbar (1.4) {#distinguishable}
 
-[Riktlinje 1.4 Skiljbar: Gör det enklare för användarna att se och höra innehåll, inklusive att separera förgrunden från bakgrunden.](https://www.w3.org/TR/WCAG20/#visual-audio-contrast)
+[Riktlinje 1.4 Skiljaktig: Gör det enklare för användarna att se och höra innehåll, inklusive att separera förgrunden från bakgrunden.](https://www.w3.org/TR/WCAG20/#visual-audio-contrast)
 
 ### Användning av färg (1.4.1)  {#use-of-color}
 
-* Villkor för lyckat resultat 1.4.1
+* Kriteriet 1.4.1 lyckades
 * Nivå A
-* Användning av färg: Färg används inte som det enda visuella sättet att förmedla information, ange en åtgärd, fråga ett svar eller ange ett visuellt element.
+* Användning av Färg: Färg används inte som det enda visuella sättet att förmedla information, indikera en åtgärd, fråga ett svar eller särskilja ett visuellt element.
 
 >[!NOTE]
-Detta kriterium gäller specifikt färguppfattningen. Andra former av uppfattningar beskrivs i [Anpassningsbar (1.3)](#adaptable); med programmatisk åtkomst till färg och annan visuell presentationskodning.
+>
+Detta kriterium gäller specifikt färguppfattningen. Andra former av uppfattningar beskrivs i [Anpassningsbar (1.3)](#adaptable), inklusive programmatisk åtkomst till färg och annan visuell presentationskodning.
 
 #### Syfte - Användning av färg (1.4.1) {#purpose-use-of-color}
 
@@ -599,13 +605,13 @@ Om färg används som en referenspunkt för att ge information bör du ange en e
 
 ### Kontrast (minimal) (1.4.3) {#contrast-minimum}
 
-* Villkor för lyckat resultat 1.4.3
+* Kriteriet 1.4.3 lyckades
 * Nivå AA
 * Kontrast (minimal): Den visuella presentationen av text och bilder av text har ett kontrastförhållande på minst 4,5:1, utom följande:
 
    * Stor text: Storskalig text och bilder av storskalig text har ett kontrastförhållande på minst 3:1.
-   * Oavsiktlig: Text eller bilder av text som är en del av ett inaktivt användargränssnitt, som är rena dekorationer, som inte är synliga för någon eller som är en del av en bild som innehåller annat visuellt innehåll, har inget kontrastkrav.
-   * Logotyper: Text som är en del av en logotyp eller ett varumärkesnamn har inget minimikrav på kontrast.
+   * Incidentellt: Text eller bilder av text som är en del av ett inaktivt användargränssnitt, som är rena dekorationer, som inte är synliga för någon eller som är en del av en bild som innehåller annat visuellt innehåll, har inget kontrastkrav.
+   * Logotyper: Text som ingår i en logotyp eller ett varumärkesnamn har inget minimikrav på kontrast.
 
 #### Syfte - Kontrast (minimum) (1.4.3) {#purpose-contrast-minimum}
 
@@ -615,6 +621,7 @@ Personer med vissa nedsatt syn kanske inte kan skilja mellan vissa färgpar med 
 * Färgkodningen för text (t.ex. länktext och icke-länktext) är viktig för att kunna skilja information åt.
 
 >[!NOTE]
+>
 Text som endast används för dekorationsändamål ingår inte i detta kriterium.
 
 #### Hur man klarar - Kontrast (minimum) (1.4.3) {#how-to-meet-contrast-minimum}
@@ -625,7 +632,7 @@ Se till att texten kontrasterar tillräckligt med bakgrunden. Kontrastförhålla
 * För text som är minst 18 punkter (eller 14 punkter fet) bör kontrastförhållandet vara minst 3:1.
 * Om en bakgrund är mönstrad ska bakgrunden runt all text skuggas så att proportionerna 4.5:1 eller 3:1 behålls.
 
-Om du vill kontrollera kontrastförhållanden använder du ett färgkontrastverktyg, till exempel [Pacific Group Color Contrast Analyzer](https://www.paciellogroup.com/resources/contrast-analyser.html) eller [WebAIM-färgkontrastkontroll](https://webaim.org/resources/contrastchecker/). Med dessa verktyg kan du kontrollera färgpar och rapportera om eventuella kontrastproblem.
+Använd ett färgkontrastverktyg, till exempel [Pacific Group Color Contrast Analyzer](https://www.paciellogroup.com/resources/contrast-analyser.html) eller [WebAIM-färgkontrastkontroll](https://webaim.org/resources/contrastchecker/). Med dessa verktyg kan du kontrollera färgpar och rapportera om eventuella kontrastproblem.
 
 Om du inte är lika orolig för hur sidan ska se ut kan du välja att inte ange färg för bakgrunds- och förgrundstext. Ingen kontrastkontroll krävs eftersom användarens webbläsare bestämmer färgerna för texten och bakgrunden.
 
@@ -638,19 +645,20 @@ Om det inte går att följa de rekommenderade kontrastnivåerna skapar du en lä
 
 ### Bilder av text (1.4.5) {#images-of-text}
 
-* Villkor för lyckat resultat 1.4.5
+* Kriteriet 1.4.5 lyckades
 * Nivå AA
-* Bilder av text: Om den teknik som används kan åstadkomma den visuella presentationen, används text för att förmedla information i stället för bilder av text, med undantag för följande:
+* Bilder av text: Om den teknik som används kan åstadkomma den visuella presentationen används texten för att förmedla information i stället för bilder av text, med undantag för följande:
 
-   * Anpassningsbart: Bilden av texten kan anpassas visuellt efter användarens behov.
+   * Anpassningsbar: Bilden av texten kan anpassas visuellt efter användarens behov.
    * Grundläggande: En viss presentation av texten är väsentlig för den information som förmedlas.
 
 >[!NOTE]
+>
 Logotyper (text som är en del av en logotyp eller ett varumärkesnamn) anses vara viktiga.
 
 #### Syfte - Textbilder (1.4.5) {#purpose-images-of-text}
 
-Bilder av text används ofta när ett visst textformat är att föredra. t.ex. en logotyp eller om text har genererats från en annan källa (t.ex. en skanning av ett pappersdokument). Jämfört med text som visas i HTML och är formaterad med CSS saknar dock bilder av text flexibiliteten att ändra storlek eller utseende som kan behövas för personer med nedsatt syn eller nedsatt läsförmåga.
+Bilder av text används ofta när ett visst textformat är att föredra, t.ex. en logotyp eller om text har genererats från en annan källa (t.ex. en skanning av ett pappersdokument). Jämfört med text som visas i HTML och är formaterad med CSS saknar dock bilder av text flexibiliteten att ändra storlek eller utseende som kan behövas för personer med nedsatt syn eller nedsatt läsförmåga.
 
 #### Så här möts - bilder av text (1.4.5) {#how-to-meet-images-of-text}
 
@@ -661,25 +669,25 @@ Om bilder av text måste användas, använder du CSS för att ersätta bilder av
 * [Förstå villkor 1.4.5](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-text-presentation.html)
 * [Så här uppfyller du kriterierna 1.4.5](https://www.w3.org/WAI/WCAG21/quickref/?versions=2.0#qr-visual-audio-contrast-text-presentation)
 
-## Princip 2: Operativ {#principle-operable}
+## Princip 2: Användbar {#principle-operable}
 
-[Princip 2: Operable - Användargränssnittets komponenter och navigering måste vara operabla.](https://www.w3.org/TR/WCAG20/#operable)
+[Princip 2: Användbar - Användargränssnittets komponenter och navigering måste vara användbara.](https://www.w3.org/TR/WCAG20/#operable)
 
 ### Pausa, Stoppa, Dölj (2.2.2)  {#pause-stop-hide}
 
-* Villkor för lyckat resultat 2.2.2
+* Kriteriet 2.2.2 lyckades
 * Nivå A
-* Pausa, Stoppa, Dölj: Följande gäller för flyttning, blinkning, rullning och automatisk uppdatering:
+* Pausa, Stoppa, Dölj: Följande gäller för flyttning, blinkning, rullning eller automatisk uppdatering:
 
-   * Rörelse, blinkning, rullning: För all rörlig, blinkande eller rullande information som a) startar automatiskt, b) varar mer än fem sekunder och c presenteras parallellt med annat innehåll, finns det en mekanism för användaren att pausa, stoppa eller dölja den, såvida inte rörelsen, blinkningen eller rullningen är en del av en verksamhet där den är nödvändig.
-   * Automatisk uppdatering: För all information som uppdateras automatiskt och som (a) startas automatiskt och (b) presenteras parallellt med annat innehåll finns det en mekanism som användaren kan använda för att pausa, stoppa eller dölja den eller för att styra uppdateringens frekvens, såvida inte den automatiska uppdateringen är en del av en aktivitet där det är nödvändigt.
+   * Rörelse, blinkning, rullning: För all rörlig, blinkande eller rullningsinformation som (a) startar automatiskt, (b) varar mer än fem sekunder och (c) presenteras parallellt med annat innehåll, finns det en mekanism som användaren kan pausa, stoppa eller dölja om inte rörelsen, blinkningen eller rullningen är en del av en aktivitet där det är nödvändigt.
+   * Automatisk uppdatering: För all automatiskt uppdaterad information som (a) startar automatiskt och (b) presenteras parallellt med annat innehåll finns det en funktion som användaren kan använda för att pausa, stoppa eller dölja eller styra uppdateringsfrekvensen, såvida inte den automatiska uppdateringen är en del av en aktivitet där det är nödvändigt.
 
 Poängen är:
 
 1. Krav för flimmer och blinkande innehåll finns i [Designa inte innehåll på ett sätt som är känt för att orsaka kramper (2.3)](#seizures).
-1. Eftersom innehåll som inte uppfyller detta kriterium kan påverka användarens möjlighet att använda hela sidan, måste allt innehåll på webbsidan (vare sig det används för att uppfylla andra kriterier för framgång eller inte) uppfylla detta kriterium. Se [Krav på överensstämmelse 5: Icke-interferens](https://www.w3.org/TR/WCAG20/#cc5).
+1. Eftersom innehåll som inte uppfyller detta kriterium kan påverka användarens möjlighet att använda hela sidan, måste allt innehåll på webbsidan (vare sig det används för att uppfylla andra kriterier för framgång eller inte) uppfylla detta kriterium. Se [Överensstämmelsekrav 5: Störningar](https://www.w3.org/TR/WCAG20/#cc5).
 1. Innehåll som uppdateras regelbundet av programvara eller som direktuppspelas till användaragenten behöver inte bevara eller presentera information som genereras eller tas emot mellan inledandet av paus och återupptagandet, eftersom detta kanske inte är tekniskt möjligt, och i många situationer kan det vara vilseledande.
-1. En animering som är en del av en förinläsningsfas eller liknande situation kan anses vara nödvändig om interaktion inte kan ske under den fasen för alla användare, och om inte förloppet visar sig kan det förvirra användarna eller få dem att tro att innehållet har frysts eller brutits.
+1. En animering som är en del av en förinläsningsfas eller liknande situation kan anses vara nödvändig om interaktion inte kan ske under den fasen för alla användare och om inte förloppet visar sig kan det förvirra användarna eller få dem att tro att innehållet frystes eller förstörs.
 
 #### Syfte - Pausa, stoppa, dölj (2.2.2) {#purpose-pause-stop-hide}
 
@@ -702,42 +710,43 @@ Beroende på innehållets natur kan du använda ett eller flera av följande fö
 
 ### Kramper (2.3) {#seizures}
 
-[Riktlinje 2.3 Kriser: Skapa inte innehåll på ett sätt som man vet orsakar kramper.](https://www.w3.org/TR/WCAG20/#seizure)
+[Riktlinje 2.3 Kramper: Utforma inte innehåll på ett sätt som är känt för att orsaka kramper.](https://www.w3.org/TR/WCAG20/#seizure)
 
-### Tre Flash eller under tröskelvärde (2.3.1) {#three-flashes-or-below-threshold}
+### Tre Flashar eller under tröskelvärdet (2.3.1) {#three-flashes-or-below-threshold}
 
-* Villkor för lyckat resultat 2.3.1
+* Kriteriet 2.3.1 lyckades
 * Nivå A
-* Tre Flash eller under tröskelvärde: Webbsidor innehåller inte något som blinkar mer än tre gånger under en sekund, eller så är blixten under de allmänna tröskelvärdena för blixt och rött.
+* Tre Flashar eller under tröskelvärdet: Webbsidor innehåller inte något som blinkar mer än tre gånger under en ensekundersperiod, eller blixten är under det allmänna tröskelvärdet för blixt och rött.
 
 >[!NOTE]
-Eftersom innehåll som inte uppfyller detta kriterium kan påverka användarens förmåga att använda hela sidan, måste allt innehåll på webbsidan (vare sig det används för att uppfylla andra kriterier för framgång eller inte) uppfylla detta kriterium. Se [Krav på överensstämmelse 5: Icke-interferens](https://www.w3.org/TR/WCAG20/#cc5).
+>
+Eftersom innehåll som inte uppfyller detta kriterium kan påverka användarens förmåga att använda hela sidan, måste allt innehåll på webbsidan (vare sig det används för att uppfylla andra kriterier för framgång eller inte) uppfylla detta kriterium. Se [Överensstämmelsekrav 5: Störningar](https://www.w3.org/TR/WCAG20/#cc5).
 
-#### Syfte - Tre Flash eller under tröskelvärde (2.3.1) {#purpose-three-flashes-or-below-threshold}
+#### Syfte - Tre Flashar eller under tröskelvärde (2.3.1) {#purpose-three-flashes-or-below-threshold}
 
 I vissa fall kan blinkande innehåll orsaka fotokänsliga anfall. Detta kriterium ger användarna möjlighet att få tillgång till och uppleva allt innehåll utan att behöva oroa sig för att innehållet blinkar.
 
-#### Så här möts du - tre Flash eller lägre tröskelvärde (2.3.1) {#how-to-meet-three-flashes-or-below-threshold}
+#### Så här möts du - tre Flashar eller under tröskelvärde (2.3.1) {#how-to-meet-three-flashes-or-below-threshold}
 
 Se till att följande tekniker används:
 
 * Se till att komponenterna inte blinkar mer än tre gånger under en 1-sekundersperiod.
-* Om ovanstående villkor inte kan uppfyllas visas blinkande innehåll i en *litet säkert område* i pixlar på skärmen. Detta område beräknas med hjälp av en komplex formel, som täcks av [G176: Behålla blinkningsområdet tillräckligt litet](https://www.w3.org/TR/2008/NOTE-WCAG20-TECHS-20081211/G176)så den här tekniken bör bara följas om flashinnehåll är nödvändigt.
+* Om ovanstående villkor inte kan uppfyllas visas blinkande innehåll i en *litet säkert område* i pixlar på skärmen. Detta område beräknas med hjälp av en komplex formel, som täcks av [G176: Hålla blinkningsområdet tillräckligt litet](https://www.w3.org/TR/2008/NOTE-WCAG20-TECHS-20081211/G176), så den här tekniken bör bara följas om flashinnehåll är nödvändigt.
 
-#### Mer information - tre Flash eller lägre tröskelvärde (2.3.1) {#more-information-three-flashes-or-below-threshold}
+#### Mer information - tre Flashar eller under tröskelvärde (2.3.1) {#more-information-three-flashes-or-below-threshold}
 
 * [Förstå villkor för framgång 2.3.1](https://www.w3.org/TR/UNDERSTANDING-WCAG20/seizure-does-not-violate.html)
 * [Hur man uppfyller kriterierna för framgång 2.3.1](https://www.w3.org/WAI/WCAG21/quickref/?versions=2.0#seizure)
 
 ### Sida med rubriker (2.4.2)  {#page-titled}
 
-* Villkor för lyckat resultat 2.4.2
+* Kriteriet 2.4.2
 * Nivå A
-* Sidrubrik: Webbsidor har rubriker som beskriver ämne eller syfte.
+* Sidans namn: Webbsidor har rubriker som beskriver ämnet eller syftet.
 
 #### Syfte - Sidtitlar (2.4.2) {#purpose-page-titled}
 
-Detta kriterium hjälper alla att snabbt identifiera innehållet på en webbsida utan att behöva läsa hela sidan, oavsett eventuella försämringar. Den här designen är användbar när flera webbsidor öppnas på webbläsarflikar, eftersom sidrubriken visas på fliken och därför kan hittas snabbt.
+Detta kriterium hjälper alla att snabbt identifiera innehållet på en webbsida utan att behöva läsa hela sidan, oavsett eventuella försämringar. Den här designen är användbar när flera webbsidor öppnas på webbläsarflikar, eftersom sidans titel visas på fliken och därför kan hittas snabbt.
 
 #### Så här möts du - sida titel (2.4.2) {#how-to-meet-page-titled}
 
@@ -752,9 +761,9 @@ Du kan också redigera sidans titel när du redigerar en sida, som du kommer åt
 
 ### Länksyfte (i sitt sammanhang) (2.4.4)  {#link-purpose-in-context}
 
-* Villkor för lyckat resultat 2.4.4
+* Kriteriet 2.4.4
 * Nivå A
-* Länksyfte (i sammanhang): Syftet med varje länk kan avgöras av länktexten eller av länktexten tillsammans med dess programmatiskt bestämda länkkontext. Undantaget är när länkens syfte är tvetydigt för användarna i allmänhet.
+* Länksyfte (i kontext): Syftet med varje länk kan avgöras av länktexten eller av länktexten tillsammans med dess programmatiskt fastställda länkkontext. Undantaget är när länkens syfte är tvetydigt för användarna i allmänhet.
 
 #### Syfte - Länksyfte (i sammanhang) (2.4.4) {#purpose-link-purpose-in-context}
 
@@ -766,20 +775,20 @@ Se framför allt till att länkens syfte tydligt beskrivs i länktexten.
 
 * Felaktigt exempel:
 
-   * Text: Mer information om kvällsklasser för hösten 2010 finns här.
-   * Orsak: den inte tydligt och otvetydigt anger sin destination.
+   * Text: Klicka här för information om kvällsklasser för hösten 2010.
+   * Orsak: Den anger inte tydligt och otvetydigt sin destination.
 
 * Exempel:
 
    * Text: Kvällsklasser för hösten 2010 - detaljer.
    * Orsak: Genom att justera texten och placeringen av länkelementet något kan länktexten förbättras:
 
-Länkarna ska vara enhetliga på olika sidor, särskilt för navigeringsfält. Om en länk till en viss sida heter **Publikationer** på en sida använder du den texten på andra sidor för att säkerställa konsekvens.
+Länkarna ska vara enhetliga på olika sidor, särskilt för navigeringsfält. Om till exempel en länk till en viss sida heter **Publikationer** på en sida använder du den texten på andra sidor för att säkerställa konsekvens.
 
 Vid skrivandet finns det dock vissa problem som omger användningen av titlar:
 
 * Texten i rubrikattributet är bara tillgänglig för musanvändare som popup-fönster med verktygstips och går inte att komma åt med tangentbordet.
-* Skärmläsare kan läsa upp rubrikattribut, men denna funktion kanske inte är aktiverad som standard. så att användare kanske inte känner till att det finns ett rubrikattribut.
+* Skärmläsare kan läsa upp rubrikattribut, men den här funktionen kanske inte är aktiverad som standard. Därför kanske användarna inte känner till att det finns ett rubrikattribut.
 * Det är svårt att ändra utseendet på titeltexten, vilket innebär att det kan vara svårt eller omöjligt att läsa av vissa personer.
 
 Titelattributet kan användas för att ge en länk extra kontext, men tänk på dess begränsningar och använd det inte som ett alternativ till lämplig länktext.
@@ -796,6 +805,7 @@ John Smith's publications
 ```
 
 >[!NOTE]
+>
 Ovanstående kodutdrag är en illustration, du bör använda **Bild** -komponenten.
 
 Även om det är tillrådligt att ange länktext som identifierar länkens syfte utan att behöva ytterligare kontext, är det inte alltid möjligt. Kontextfria länkar kan användas i följande fall, där HTML finns som exempel i [Hur man uppfyller kriterierna för framgång 2.4.4](https://www.w3.org/WAI/WCAG21/quickref/?versions=2.0#qr-navigation-mechanisms-refs).
@@ -818,7 +828,7 @@ Du kan också använda skript så att bara en liten del av texten finns i själv
 
 ## Princip 3: Förstå {#principle-understandable}
 
-[Princip 3: Förstå - Information och hur användargränssnittet fungerar måste vara begripligt.](https://www.w3.org/TR/WCAG20/#understandable)
+[Princip 3: Förstå - Information och hur användargränssnittet fungerar måste vara begriplig.](https://www.w3.org/TR/WCAG20/#understandable)
 
 ### Gör textinnehåll läsbart och begripligt (3.1) {#make-text-content-readable-and-understandable}
 
@@ -836,7 +846,7 @@ Syftet med detta kriterium är att säkerställa att text och annat språkligt i
 
 #### Hur man uppfyller kraven - sidans språk (3.1.1) {#how-to-meet-language-of-page}
 
-För att uppfylla det här kriteriet kan standardspråket på en webbsida identifieras med `lang` i `<html>` -element överst på sidan. Till exempel:
+För att uppfylla det här kriteriet kan standardspråket på en webbsida identifieras med `lang` -attribut i `<html>` -element överst på sidan. Till exempel:
 
 * Om en sida är skriven på engelska är `<html>` -elementet ska vara:
 
@@ -858,7 +868,7 @@ I AEM anges sidans standardspråk när sidan skapas, men det kan också ändras 
 
 * Villkor för lyckat resultat 3.1.2
 * Nivå AA
-* Delarnas språk: Det mänskliga språket i varje stycke eller fras i innehållet kan fastställas programmatiskt, med undantag för egennamn, tekniska termer, ord av obestämt språk samt ord eller fraser som har blivit en del av språket i den omedelbart omgivande texten.
+* Språk för delar: Det mänskliga språket för varje stycke eller fras i innehållet kan fastställas programmatiskt med undantag för egennamn, tekniska termer, obestämda språkord och ord eller fraser som har blivit en del av språket för den omedelbart omgivande texten.
 
 #### Syfte - Språk för delar (3.1.2) {#purpose-language-of-parts}
 
@@ -881,6 +891,7 @@ The `lang` kan användas för att identifiera ändringar i innehållsspråket. E
 ```
 
 >[!NOTE]
+>
 Blockcitattecken stöds inte i en körklar instans. En anpassad komponent kan utvecklas som stöd för funktionen.
 
 På samma sätt kan webbläsaren återge ett ovanligt låneord eller en ovanlig fras korrekt om `span` -elementet används enligt följande:
@@ -890,9 +901,10 @@ På samma sätt kan webbläsaren återge ett ovanligt låneord eller en ovanlig 
 ```
 
 >[!NOTE]
+>
 Det är inte nödvändigt att följa detta kriterium när namn eller städer på olika språk inkluderas eller när man använder låneord eller fraser som har blivit vanliga på standardspråket (t.ex. *schadenfreude* på eng).
 
-Om du vill lägga till intervallelementet med ett lämpligt språk kan du redigera HTML-koden manuellt i källredigeringsläget för textredigeraren så att den läses upp som ovan. Alternativt `lang` attribut kan inkluderas i textredigeraren av en systemadministratör (se [Lägga till stöd för ytterligare HTML-element och attribut](/help/sites-administering/rte-accessible-content.md#add-support-for-more-html-elements-and-attributes)).
+Om du vill lägga till intervallelementet med ett lämpligt språk kan du redigera HTML-koden manuellt i källredigeringsläget för textredigeraren så att den läses upp som ovan. Alternativt `lang` attribut kan inkluderas i textredigeraren av en systemadministratör (se [Stöd för ytterligare element och attribut i HTML](/help/sites-administering/rte-accessible-content.md#add-support-for-more-html-elements-and-attributes)).
 
 #### Mer information - Språk för delar (3.1.2) {#more-information-language-of-parts}
 
@@ -901,13 +913,13 @@ Om du vill lägga till intervallelementet med ett lämpligt språk kan du redige
 
 ### Hjälp användarna att undvika och rätta till fel (3.3) {#help-users-avoid-and-correct-mistakes}
 
-[Riktlinje 3.3 Ingångsstöd: Hjälp användarna att undvika och rätta till misstag.](https://www.w3.org/TR/WCAG20/#minimize-error)
+[Riktlinje 3.3 Inmatningsassistans: Hjälp användarna att undvika och rätta till misstag.](https://www.w3.org/TR/WCAG20/#minimize-error)
 
 ### Etiketter eller instruktioner (3.3.2) {#labels-or-instructions}
 
 * Villkor för lyckat resultat 3.3.2
 * Nivå A
-* Etiketter eller instruktioner: Etiketter eller instruktioner tillhandahålls när innehållet kräver användarindata.
+* Etiketter eller instruktioner: Etiketter eller instruktioner tillhandahålls när innehållet kräver indata från användaren.
 
 #### Syfte - Etiketter eller instruktioner (3.3.2) {#purpose-labels-or-instructions}
 
@@ -915,7 +927,7 @@ Att ge instruktioner som hjälper människor att fylla i formulär är en grundl
 
 I AEM läggs en standardetikett till när du lägger till en formulärkomponent, till exempel en **Textfält**, till sidan. Den här standardtiteln beror på komponenttypen. Du kan lägga till en egen titel i **Titel och text** -fliken i redigeringsdialogrutan för det fältet. Det är viktigt att se till att etiketter hjälper användarna att förstå informationen som är kopplad till varje formulärkomponent.
 
-![Fliken Titel och Text (dialogrutan Redigera); rubriken&quot;Beskrivning&quot; har lagts till.](assets/chlimage_1-22a.png)
+![Fliken Titel och Text (dialogrutan Redigera). Titeln Beskrivning har lagts till.](assets/chlimage_1-22a.png)
 
 Detta **Titel** fältet måste användas för fältelement eftersom det innehåller en etikett som är tillgänglig för hjälpfunktioner. Det räcker inte att bara skriva en etikett bredvid fältet.
 
@@ -929,11 +941,11 @@ Där bildknappar används (t.ex. komponenten **bildknapp**) innehåller fältet 
 
 #### Grupper med formulärfält {#groups-of-form-fields}
 
-Om det finns en grupp av relaterade kontroller, till exempel **Grupp med alternativknappar**, kan en titel behövas för gruppen och enskilda kontroller. När du lägger till en uppsättning med alternativknappar i AEM visas den här grupptiteln i fältet **Titel**, medan enskilda titlar anges när alternativknapparna (**Objekt**) skapas.
+Om det finns en grupp av relaterade kontroller, till exempel **Alternativgrupp**, kan en titel behövas för gruppen och enskilda kontroller. När du lägger till en uppsättning med alternativknappar i AEM visas den här grupptiteln i fältet **Titel**, medan enskilda titlar anges när alternativknapparna (**Objekt**) skapas.
 
-![Lägger till objekt i gruppen med alternativknappar. Grupptiteln är &#39;Kontakta mig via&#39; - definieras i fältet Titel.](assets/chlimage_1-24a.png)
+![Lägger till objekt i alternativgruppen. Grupptiteln är &#39;Kontakta mig via&#39; - definieras i fältet Titel.](assets/chlimage_1-24a.png)
 
-Det finns dock ingen programmatisk koppling mellan grupptiteln och alternativknapparna själva. Mallredigerare måste omsluta titeln `fieldset` och `legend` -taggar för att skapa den här associationen och detta kan bara göras genom att redigera sidans källkod. En systemadministratör kan också lägga till stöd för dessa element så att de visas i dialogrutan **Fältegenskaper**[ (se Lägga till stöd för ytterligare HTML-element och attribut](/help/sites-administering/rte-accessible-content.md#add-support-for-more-html-elements-and-attributes)).
+Det finns dock ingen programmatisk koppling mellan grupptiteln och alternativknapparna själva. Mallredigerare måste omsluta titeln i `fieldset` och `legend` -taggar för att skapa den här associationen och detta kan bara göras genom att redigera sidans källkod. En systemadministratör kan också lägga till stöd för dessa element så att de visas i dialogrutan **Fältegenskaper**[ (se Lägga till stöd för ytterligare HTML-element och attribut](/help/sites-administering/rte-accessible-content.md#add-support-for-more-html-elements-and-attributes)).
 
 #### Ytterligare överväganden för Forms {#additional-considerations-for-forms}
 
@@ -949,7 +961,7 @@ Placeringen av etiketter är också viktig eftersom den hjälper dem att hitta r
 
 Etiketterna placeras direkt till höger om fältet.
 
-* Alla andra formulärkomponenter (t.ex. textrutor, kombinationsrutor):
+* Alla andra formulärkomponenter (till exempel textrutor, kombinationsrutor):
 
 Etiketterna placeras antingen direkt ovanför eller direkt till vänster om fältet.
 

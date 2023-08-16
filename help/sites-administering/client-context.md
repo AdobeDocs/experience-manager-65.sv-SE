@@ -1,7 +1,7 @@
 ---
 title: Klientkontext
 seo-title: Client Context
-description: Lär dig hur du använder klientkontexten i AEM.
+description: Lär dig använda klientkontexten i AEM.
 seo-description: Learn how to use the Client Context in AEM.
 uuid: 82b2f976-cb41-42f8-ad4b-3a5cd23cc5f5
 contentOwner: msm-service
@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 7a3322fe-554e-479e-a27c-4259cdd3ba2e
 docset: aem65
 exl-id: 69c66c82-fbd6-406e-aefd-b85480a62109
-source-git-commit: aaeef8fcc0ed5f205aeb7ab40cc61f60912c9869
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '1973'
+source-wordcount: '1969'
 ht-degree: 0%
 
 ---
@@ -25,17 +25,17 @@ ht-degree: 0%
 >
 >Klientkontext har ersatts av ContextHub. Mer information finns i relaterade [konfiguration](/help/sites-developing/ch-configuring.md) och [utvecklare](/help/sites-developing/contexthub.md) dokumentation.
 
-Klientkontexten är en mekanism som ger dig viss information om den aktuella sidan och besökaren. Den kan öppnas med **Ctrl-Alt-c** (fönster) eller **control-option-c** (Mac):
+Klientkontexten är en mekanism som ger dig viss information om den aktuella sidan och besökaren. Den kan öppnas med **Ctrl-Alt-c** (fönster) eller **control-option-c** (Mac)
 
 ![Ett exempel på fönstret Client Context](assets/clientcontext_alisonparker.png)
 
 I både publicerings- och författarmiljön visas information om:
 
-* Besökaren. beroende på din instans, begärs viss information eller hämtas.
+* Besökaren. Beroende på din instans begärs viss information eller hämtas.
 * Sida-taggar och det antal gånger som den aktuella besökaren har haft åtkomst till dessa taggar (visas när du flyttar musen över en viss tagg).
 * Sidinformation.
-* Information om den tekniska miljön. som IP-adressen, webbläsaren och skärmupplösningen.
-* Alla segment som för närvarande är lösta.
+* Information om den tekniska miljön, t.ex. IP-adressen, webbläsaren och skärmupplösningen.
+* Alla segment som är lösta.
 
 Med ikonerna (endast tillgängliga i författarmiljön) kan du konfigurera informationen för klientkontexten:
 
@@ -64,13 +64,13 @@ Klientkontexten kan visa följande egenskaper ([beroende på vad som har markera
 * den **mus X** position
 * den **mus Y** position
 
-**Aktivitetsström** Detta ger information om användarens sociala aktivitet på olika plattformar. till exempel AEM forum, bloggar, omdömen etc.
+**Aktivitetsström** Detta ger information om användarens sociala aktivitet på olika plattformar, t.ex. AEM forum, bloggar, omdömen etc.
 
 **Campaign** Gör att författare kan simulera en specifik upplevelse för en kampanj. Den här komponenten åsidosätter normal kampanjupplösning och val av upplevelse för att möjliggöra testning av olika permutationer.
 
 Kampanjupplösning baseras vanligtvis på kampanjens prioritetsegenskap. Upplevelsen väljs vanligtvis baserat på segmentering.
 
-**Kundvagn** Visar kundvagnsinformation, inklusive produktposter (titel, kvantitet, prisFormaterat osv.), lösta kampanjer (titel, meddelande osv.) och verifikationer (kod, beskrivning osv.).
+**Kundvagn** Visar kundvagnsinformation inklusive produktposter (titel, kvantitet, prisFormaterat osv.), lösta kampanjer (titel, meddelande osv.) och verifikationer (kod, beskrivning osv.).
 
 Kundsessionslagringen meddelar också servern om lösta kampanjändringar (baserat på segmenteringsändringar) med hjälp av ClientContextCartServlet.
 
@@ -114,7 +114,7 @@ Om musen till exempel befinner sig över den vänstra eller högra delen av fön
 >
 >`/home/users/geometrixx/aparker@geometrixx.info/profile` Egenskapen => för vänner
 
-**Tag Cloud** Visar taggar som angetts på den aktuella sidan och de som samlats in medan webbplatsen surrades. När du för musen över en tagg visas antalet gånger som den aktuella användaren har kommit åt sidor som innehåller den aktuella taggen.
+**Tag Cloud** Visar taggar som angetts på den aktuella sidan och de som samlats in medan webbplatsen surrades. När du för musen över en tagg visas det antal gånger som den aktuella användaren har kommit åt sidor som innehåller den aktuella taggen.
 
 >[!NOTE]
 >
@@ -143,7 +143,7 @@ Med klientkontexten kan du interaktivt ändra information:
 
 Du kan ändra profilen genom att antingen:
 
-* [med ikonen för inläsning](#loading-a-new-visitor-profile-with-the-load-profile-icon)
+* [med ikonen Läs in](#loading-a-new-visitor-profile-with-the-load-profile-icon)
 * [med markeringsreglaget](#loadinganewvisitorprofilewiththeselectionslider)
 
 När du är klar kan du [återställa profilen](#resetting-the-profile-to-the-current-user).
@@ -212,13 +212,13 @@ När du redigerar en klientkontext kan du ange (eller återställa) värden för
 
 ### Lägga till en egenskapskomponent {#adding-a-property-component}
 
-När du har öppnat **ClientContext designsida** kan du också **Lägg till** en helt ny egenskap som använder de tillgängliga komponenterna (komponenterna listas både på sidosparken eller från **Infoga ny komponent** som öppnas när du dubbelklickar på **Dra komponenter eller resurser hit** box):
+När du har öppnat **ClientContextens designsida** kan du också **Lägg till** en helt ny egenskap som använder de tillgängliga komponenterna (komponenterna listas både på sidosparken eller från **Infoga ny komponent** som öppnas när du dubbelklickar på **Dra komponenter eller resurser hit** box):
 
 ![Lägga till en egenskap i fönstret Klientkontext](assets/clientcontext_alisonparker_new.png)
 
 ### Ta bort en egenskapskomponent {#removing-a-property-component}
 
-När du har öppnat **ClientContext designsida** kan du också **Ta bort** en egenskap om den inte längre behövs. Detta omfattar egendomar som levereras färdiga för leverans. **Återställ** återskapar dessa om de har tagits bort.
+När du har öppnat **ClientContextens designsida** kan du också **Ta bort** en egenskap om den inte längre behövs. Detta omfattar egendomar som levereras färdiga för leverans. **Återställ** återskapar dessa om de har tagits bort.
 
 ## Lagra data i klientkontext via JSONP {#storing-data-in-client-context-via-jsonp}
 
@@ -231,7 +231,7 @@ I det här exemplet används Geometrixx Outdoors exempelwebbplatsen för att få
 Lägg till JSONP Store-komponenten i klientkontexten och använd den för att hämta och lagra geolokaliseringsinformation om webbklienten.
 
 1. Öppna den engelska startsidan för Geometrixx Outdoors-webbplatsen på AEM författarinstans. ([https://localhost:4502/content/geometrixx-outdoors/en.html](https://localhost:4502/content/geometrixx-outdoors/en.html)).
-1. Om du vill öppna klientkontexten trycker du på Ctrl-Alt-c (Windows) eller Ctrl-Option-c (Mac).
+1. Tryck på Ctrl-Alt-c (Windows) eller Ctrl-Option-c (Mac) för att öppna klientkontexten.
 1. Klicka på redigeringsikonen högst upp i klientkontexten för att öppna Client Context Designer.
 
    ![Länkikon](do-not-localize/chlimage_1.png)
@@ -261,7 +261,7 @@ Använd data från det sessionsarkiv som du skapade med JSONP-lagringskomponente
 1. Öppna verktygskonsolen i webbläsaren (`https://localhost:4502/miscadmin#/etc`).
 1. Klicka på mappen Verktyg/Segmentering i mappträdet och klicka sedan på Ny > Ny mapp. Ange följande egenskapsvärden och klicka sedan på Skapa:
 
-   * Namn: mysegment
+   * Namn: minsegment
    * Titel: Mina segment
 
 1. Markera mappen Mina segment och klicka på Ny > Ny sida:
@@ -277,7 +277,7 @@ Använd data från det sessionsarkiv som du skapade med JSONP-lagringskomponente
 
 1. Dubbelklicka på komponenten för att öppna redigeringsdialogrutan, ange följande egenskapsvärden och klicka sedan på OK:
 
-   * Butik: wipmania
+   * Lagra: wipmania
    * Egenskapsnamn: latitud
    * Operatör: är större än
    * Egenskapsvärde: 30

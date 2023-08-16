@@ -10,9 +10,9 @@ content-type: reference
 topic-tags: best-practices
 discoiquuid: 3cc8ac23-98ff-449f-bd76-1203c7cbbed7
 exl-id: efebe66d-3d30-4033-9c4c-ae347e134f2f
-source-git-commit: b886844dc80482ae4aae5fc7ce09e466efecc3bd
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '481'
+source-wordcount: '479'
 ht-degree: 9%
 
 ---
@@ -25,7 +25,7 @@ Alla sidor i We.Retail baseras på redigerbara mallar, vilket gör att icke-utve
 
 ## Prova {#trying-it-out}
 
-1. Redigera utrustningssidan för den överordnad språkgrenen.
+1. Redigera sidan Utrustning i huvudgrenen för språk.
 
    http://localhost:4502/editor.html/content/we-retail/language-masters/en/equipment.html
 
@@ -61,7 +61,7 @@ Alla sidor i We.Retail baseras på redigerbara mallar, vilket gör att icke-utve
       * Tillåtna inklistringskällor
       * Formateringsalternativ
       * Tillåtna styckeformat
-      * Tillåtna specialtecken
+      * Specialtecken tillåts
 
    Många komponenter som bygger på kärnkomponenterna gör det möjligt att konfigurera alternativ på komponentnivå med hjälp av redigerbara mallar, vilket eliminerar behovet av anpassning av utvecklare.
 
@@ -69,7 +69,7 @@ Alla sidor i We.Retail baseras på redigerbara mallar, vilket gör att icke-utve
 
 1. I mallredigeraren kan du använda lägesväljaren för att ändra till **Ursprungligt innehåll** läge för att definiera vilket innehåll som krävs på sidan.
 
-   **Layout** kan användas som på en normal sida för att definiera mallens layout.
+   **Layout** Du kan använda läget som det är på en normal sida för att definiera mallens layout.
 
 ## Mer information {#more-information}
 

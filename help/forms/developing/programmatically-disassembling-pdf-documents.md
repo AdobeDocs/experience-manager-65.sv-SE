@@ -11,7 +11,7 @@ topic-tags: operations
 discoiquuid: 8e38a597-5d22-4d83-95fe-4494fb04e4a3
 role: Developer
 exl-id: c5e712e0-5c3f-48cd-91cf-fd347222a6b2
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 10227bcfcfd5a9b0f126fee74dce6ec7842f5e95
 workflow-type: tm+mt
 source-wordcount: '1761'
 ht-degree: 0%
@@ -26,7 +26,7 @@ Du kan dela upp ett PDF-dokument genom att skicka det till Assembler-tjänsten. 
 
 ![pd_pd_pdfsfrombokmärken](assets/pd_pd_pdfsfrombookmarks.png)
 
-Om du vill dela upp ett PDF-dokument måste du se till att `PDFsFromBookmarks` -elementet finns i DDX-dokumentet. The `PDFsFromBookmarks` -elementet är ett resultatelement och kan bara vara ett underordnat element till `DDX` -element. Den har ingen `result` eftersom det kan leda till att flera dokument genereras.
+Om du vill dela upp ett PDF-dokument måste du se till att `PDFsFromBookmarks` -elementet finns i DDX-dokumentet. The `PDFsFromBookmarks` -elementet är ett resultatelement och kan bara vara ett underordnat element till `DDX` -element. Den har inte en `result` eftersom det kan leda till att flera dokument genereras.
 
 The `PDFsFromBookmarks` gör att ett dokument genereras för varje nivå 1-bokmärke i källdokumentet.
 
@@ -121,7 +121,7 @@ Dela upp ett PDF-dokument med Assembler Service API (Java):
 
 1. Inkludera projektfiler.
 
-   Inkludera JAR-klientfiler, t.ex. adobe-assembler-client.jar, i Java-projektets klassökväg.
+   Inkludera JAR-klientfiler, som adobe-assembler-client.jar, i Java-projektets klassökväg.
 
 1. Skapa en PDF Assembler-klient.
 
@@ -130,13 +130,13 @@ Dela upp ett PDF-dokument med Assembler Service API (Java):
 
 1. Referera till ett befintligt DDX-dokument.
 
-   * Skapa en `java.io.FileInputStream` som representerar DDX-dokumentet genom att använda dess konstruktor och skicka ett strängvärde som anger platsen för DDX-filen.
+   * Skapa en `java.io.FileInputStream` -objekt som representerar DDX-dokumentet genom att använda dess konstruktor och skicka ett strängvärde som anger platsen för DDX-filen.
    * Skapa en `com.adobe.idp.Document` genom att använda konstruktorn och skicka `java.io.FileInputStream` -objekt.
 
 1. Referera ett PDF-dokument som ska demonteras.
 
    * Skapa en `java.util.Map` objekt som används för att lagra indatadokument i PDF genom att använda en `HashMap` konstruktor.
-   * Skapa en `java.io.FileInputStream` genom att använda konstruktorn och skicka platsen för det PDF-dokument som ska demonteras.
+   * Skapa en `java.io.FileInputStream` genom att använda sin konstruktor och skicka platsen för det PDF-dokument som ska demonteras.
    * Skapa en `com.adobe.idp.Document` -objektet och skicka `java.io.FileInputStream` objekt som innehåller det PDF-dokument som ska demonteras.
    * Lägg till en post i `java.util.Map` genom att anropa dess `put` och skicka följande argument:
 
@@ -162,7 +162,7 @@ Dela upp ett PDF-dokument med Assembler Service API (Java):
 
    Gör så här för att få fram de uppdelade PDF-dokumenten:
 
-   * Anropa `AssemblerResult` objektets `getDocuments` -metod. Detta returnerar `java.util.Map` -objekt.
+   * Anropa `AssemblerResult` objektets `getDocuments` -metod. Detta returnerar en `java.util.Map` -objekt.
    * Iterera genom `java.util.Map` tills du hittar resultatet `com.adobe.idp.Document` -objekt.
    * Anropa `com.adobe.idp.Document` objektets `copyToFile` metod för att extrahera PDF-dokumentet.
 
@@ -186,13 +186,13 @@ Dela upp ett PDF-dokument med Assembler Service API (webbtjänst):
 
    >[!NOTE]
    >
-   >Ersätt `localhost` med IP-adressen till den server som är värd för AEM Forms.
+   >Ersätt `localhost` med IP-adressen till den server där AEM Forms finns.
 
 1. Skapa en PDF Assembler-klient.
 
    * Skapa en `AssemblerServiceClient` genom att använda dess standardkonstruktor.
    * Skapa en `AssemblerServiceClient.Endpoint.Address` genom att använda `System.ServiceModel.EndpointAddress` konstruktor. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/AssemblerService?blob=mtom`). Du behöver inte använda `lc_version` -attribut. Det här attributet används när du skapar en tjänstreferens.
-   * Skapa en `System.ServiceModel.BasicHttpBinding` genom att hämta värdet för `AssemblerServiceClient.Endpoint.Binding` fält. Sänd returvärdet till `BasicHttpBinding`.
+   * Skapa en `System.ServiceModel.BasicHttpBinding` genom att hämta värdet för `AssemblerServiceClient.Endpoint.Binding` fält. Skicka returvärdet till `BasicHttpBinding`.
    * Ange `System.ServiceModel.BasicHttpBinding` objektets `MessageEncoding` fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
    * Aktivera grundläggande HTTP-autentisering genom att utföra följande åtgärder:
 
@@ -219,8 +219,8 @@ Dela upp ett PDF-dokument med Assembler Service API (webbtjänst):
    * Skapa en `MyMapOf_xsd_string_To_xsd_anyType` -objekt. Samlingsobjektet används för att lagra PDF som ska demonteras.
    * Skapa en `MyMapOf_xsd_string_To_xsd_anyType_Item` -objekt.
    * Tilldela ett strängvärde som representerar nyckelnamnet till `MyMapOf_xsd_string_To_xsd_anyType_Item` objektets `key` fält. Detta värde måste matcha värdet för källelementet PDF som anges i DDX-dokumentet.
-   * Tilldela `BLOB` objekt som lagrar PDF-dokumentet till `MyMapOf_xsd_string_To_xsd_anyType_Item` objektets `value` fält.
-   * Lägg till `MyMapOf_xsd_string_To_xsd_anyType_Item` objekt till `MyMapOf_xsd_string_To_xsd_anyType` -objekt. Anropa `MyMapOf_xsd_string_To_xsd_anyType` object&quot; `Add` och skicka `MyMapOf_xsd_string_To_xsd_anyType` -objekt.
+   * Tilldela `BLOB` det objekt som lagrar PDF-dokumentet till `MyMapOf_xsd_string_To_xsd_anyType_Item` objektets `value` fält.
+   * Lägg till `MyMapOf_xsd_string_To_xsd_anyType_Item` objekt till `MyMapOf_xsd_string_To_xsd_anyType` -objekt. Anropa `MyMapOf_xsd_string_To_xsd_anyType` object&#39; `Add` och skicka `MyMapOf_xsd_string_To_xsd_anyType` -objekt.
 
 1. Ange körningsalternativ.
 
@@ -235,14 +235,14 @@ Dela upp ett PDF-dokument med Assembler Service API (webbtjänst):
    * The `MyMapOf_xsd_string_To_xsd_anyType` objekt som innehåller det PDF-dokument som ska demonteras
    * An `AssemblerOptionSpec` objekt som anger körningsalternativ
 
-   The `invokeDDX` returnerar en `AssemblerResult` objekt som innehåller jobbresultaten och eventuella undantag som inträffade.
+   The `invokeDDX` returnerar en `AssemblerResult` objekt som innehåller jobbresultaten och eventuella undantag som har inträffat.
 
 1. Spara de upplösta PDF-dokumenten.
 
    Gör så här för att hämta de nya PDF-dokumenten:
 
    * Öppna `AssemblerResult` objektets `documents` fält, vilket är ett `Map` objekt som innehåller de uppdelade PDF-dokumenten.
-   * Iterera genom `Map` -objekt för att hämta varje resulterande dokument. Sedan måste du byta ut den arraymedlemmens `value` till `BLOB`.
+   * Iterera genom `Map` -objekt för att hämta varje resulterande dokument. Sedan, byta ut den arraymedlemmens `value` till `BLOB`.
    * Extrahera de binära data som representerar PDF-dokumentet genom att öppna dess `BLOB` objektets `MTOM` -egenskap. Detta returnerar en array med byte som du kan skriva ut till en PDF-fil.
 
 **Se även**

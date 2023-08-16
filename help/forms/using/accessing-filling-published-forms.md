@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: publish
 docset: aem65
 exl-id: aedf890c-a2f1-412f-8897-2492ffab335a
-source-git-commit: f0dd1ac3ab9c17a8b331f5048d84ec97dd23924f
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '927'
+source-wordcount: '924'
 ht-degree: 0%
 
 ---
@@ -50,13 +50,13 @@ Du kan söka efter formulär på Forms Portal-sidan med följande alternativ:
 * Fullständig textsökning
 * Avancerad sökning
 
-Med fulltextsökning kan du söka efter och lista formulär baserat på de angivna nyckelorden.
+Med fulltextsökning kan du söka efter och lista formulär baserat på angivna nyckelord.
 
 ![En avancerad sökdialogruta](assets/search-panel.png)
 
 En avancerad sökdialogruta
 
-Med avancerad sökning kan du söka efter formulär baserat på angivna formuläregenskaper. Detta ger ett mer specifikt resultat än fulltextsökning. I avancerad sökning ingår sökning baserat på taggar, egenskaper (till exempel Författare, Beskrivning och Titel), ändringsdatum och fullständig text.
+Med avancerad sökning kan du söka i formulär baserat på angivna formuläregenskaper. Detta ger ett mer specifikt resultat än fulltextsökning. I avancerad sökning ingår sökning baserat på taggar, egenskaper (till exempel Författare, Beskrivning och Titel), ändringsdatum och fullständig text.
 
 Lister visar formulär baserade på sökparametrar. Varje formulär i sökresultatet visas med en ikon, som är hyperlänkad till det associerade formuläret. Du kan klicka på ikonen för att öppna och arbeta med det associerade formuläret.
 

@@ -10,9 +10,9 @@ topic-tags: personalization
 content-type: reference
 discoiquuid: 61b2bd47-dcef-4107-87b1-6bf7bfd3043b
 exl-id: a4717cb8-b70c-4150-b816-35e9b871e792
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '1169'
+source-wordcount: '1168'
 ht-degree: 1%
 
 ---
@@ -52,7 +52,7 @@ Detaljerade instruktioner beskrivs i det här dokumentet.
 >När du lägger till e-postmallar ska du se till att lägga till dem under **/content/campaign** för att göra dem tillgängliga.
 >
 
-1. I AEM väljer du **Webbplatser** bläddra sedan i utforskaren för att hitta var era e-postkampanjer hanteras. I följande exempel är den berörda noden **Webbplatser** > **Kampanjer** > **Geometrixx Outdoors** > **E-postkampanjer**.
+1. AEM väljer du **Webbplatser** bläddra sedan i utforskaren för att hitta var era e-postkampanjer hanteras. I följande exempel är den berörda noden **Webbplatser** > **Kampanjer** > **Geometrixx Outdoors** > **E-postkampanjer**.
 
    >[!NOTE]
    >
@@ -63,8 +63,8 @@ Detaljerade instruktioner beskrivs i det här dokumentet.
 1. Välj **Nytt** > **Ny sida** för att skapa nytt e-postinnehåll.
 1. Välj en av de tillgängliga mallarna för Adobe Campaign och fyll sedan i de allmänna egenskaperna för sidan. Tre mallar är tillgängliga som standard:
 
-   * **Adobe Campaign Email (AC 6.1)**: I kan du lägga till innehåll i en fördefinierad mall innan du skickar den till Adobe Campaign 6.1 för leverans.
-   * **Adobe Campaign Email (ACS)**: Med kan du lägga till innehåll i en fördefinierad mall innan du skickar den till Adobe Campaign Standard för leverans.
+   * **Adobe Campaign Email (AC 6.1)**: gör att du kan lägga till innehåll i en fördefinierad mall innan du skickar den till Adobe Campaign 6.1 för leverans.
+   * **Adobe Campaign Email (ACS)**: gör att du kan lägga till innehåll i en fördefinierad mall innan du skickar den till Adobe Campaign Standard för leverans.
 
    ![chlimage_1-173](assets/chlimage_1-173.png)
 
@@ -85,7 +85,7 @@ Dessutom kan du behöva välja Adobe Campaign-mallen, ändra ämnet och lägga t
 
    >[!NOTE]
    >
-   >Var noga med att trycka/klicka **OK** eller **Använd** efter att du lagt till molntjänsten. Detta aktiverar **Adobe Campaign** för att fungera.
+   >Tryck/klicka **OK** eller **Använd** efter att du lagt till molntjänsten. Detta aktiverar **Adobe Campaign** för att fungera.
 
 1. Om du vill använda en särskild e-postleveransmall (från Adobe Campaign), annan än standardmallen **mail** mall, välja **Sidegenskaper** igen. I **Adobe Campaign** anger du e-postleveransmallens interna namn i den relaterade Adobe Campaign-instansen.
 
@@ -118,7 +118,7 @@ När du redigerar innehåll kan du infoga:
 * Adobe Campaign-kontextfält. Det här är fält som du kan infoga i texten och som anpassas efter mottagarens data (till exempel förnamn, efternamn eller andra data i måldimensionen).
 * Adobe Campaign personaliseringsblock. Detta är block med fördefinierat innehåll som inte är relaterat till mottagarens data, t.ex. en logotyp eller en länk till en spegelsida.
 
-Se [Adobe Campaign Components](/help/sites-classic-ui-authoring/classic-personalization-ac-components.md) om du vill ha en fullständig beskrivning av Campaign-komponenterna.
+Se [Adobe Campaign Components](/help/sites-classic-ui-authoring/classic-personalization-ac-components.md) för en fullständig beskrivning av Campaign-komponenterna.
 
 >[!NOTE]
 >
@@ -126,8 +126,8 @@ Se [Adobe Campaign Components](/help/sites-classic-ui-authoring/classic-personal
 >* När egenskaper visas från **Webbplatser** har du inte åtkomst till Adobe Campaign kontextfält. Du kan komma åt dessa direkt från e-postmeddelandet när du redigerar.
 >
 
-1. Infoga en ny **Nyhetsbrev** > **Text och personalisering (Campaign)** -komponenten.
-1. Öppna komponenten genom att dubbelklicka på den. The **Redigera** -fönstret har en funktion som gör att du kan infoga anpassningselementen.
+1. Infoga en ny **Nyhetsbrev** > **Text och personalisering (kampanj)** -komponenten.
+1. Öppna komponenten genom att dubbelklicka. The **Redigera** -fönstret har en funktion som gör att du kan infoga anpassningselementen.
 
    >[!NOTE]
    >
@@ -149,7 +149,7 @@ Se [Adobe Campaign Components](/help/sites-classic-ui-authoring/classic-personal
 
 Du kan förhandsgranska hur nyhetsbrevet kommer att se ut samt förhandsgranska personaliseringen.
 
-1. Öppna det nyhetsbrev som du vill förhandsgranska och klicka på Förhandsgranska (förstoringsglas) för att krympa sidbrytaren.
+1. Öppna nyhetsbrevet som du vill förhandsgranska och klicka på Förhandsgranska (förstoringsglas) för att krympa sidbrytaren.
 1. Klicka på en av ikonerna för e-postklienten för att se hur nyhetsbrevet ser ut i varje e-postklient.
 
    ![chlimage_1-181](assets/chlimage_1-181.png)
@@ -158,9 +158,9 @@ Du kan förhandsgranska hur nyhetsbrevet kommer att se ut samt förhandsgranska 
 
 ### Godkänna innehåll i AEM {#approving-content-in-aem}
 
-När innehållet är klart kan du starta godkännandeprocessen. Gå till **Arbetsflöde** -fliken i verktygslådan och väljer **Godkänn för Adobe Campaign** arbetsflöde.
+När innehållet är klart kan du starta godkännandeprocessen. Gå till **Arbetsflöde** och väljer **Godkänn för Adobe Campaign** arbetsflöde.
 
-Detta färdiga arbetsflöde har två steg: revidering, godkännande eller revidering, och sedan refusering. Arbetsflödet kan dock utvidgas och anpassas till en mer komplex process.
+Det här färdiga arbetsflödet består av två steg: revision, godkännande eller revision och avvisande. Arbetsflödet kan dock utvidgas och anpassas till en mer komplex process.
 
 ![chlimage_1-182](assets/chlimage_1-182.png)
 

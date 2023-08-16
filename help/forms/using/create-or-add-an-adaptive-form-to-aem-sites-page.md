@@ -4,9 +4,9 @@ description: Upptäck hur du enkelt kan skapa och lägga till anpassade formulä
 Keywords: AEM Forms in sites, AF in Sites editor, af in aem sites, aem sites af, add af to a sites page, af aem sites, af sites, create af in a sites page, adaptive form in aem sites, forms aem sites, add form to a sites page, adaptive forms aem sites, add adaptive forms to aem page, create forms in an aem sites page
 feature: Adaptive Forms
 exl-id: 1813ccfc-87ce-46fa-a1d5-5edffd91efb0
-source-git-commit: 600dcc52829ff2c5e54176bda7631845ef24f986
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '2918'
+source-wordcount: '2908'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 Med AEM Forms kan du smidigt lägga in anpassningsbara formulär på webbsidorna. På så sätt kan besökarna enkelt fylla i och skicka in formulär utan att lämna den sida de är på. På så sätt kan de enkelt hålla kontakten med andra element på webbplatsen samtidigt som de interagerar aktivt med formuläret.
 
-Du kan använda AEM Page Editor för att snabbt skapa och lägga till flera formulär på dina AEM Sites-sidor. Med AEM Page Editor kan skribenter skapa smidiga datainhämtningsupplevelser på en webbplatssida med hjälp av kraften i adaptiva formulärkomponenter, inklusive dynamiskt beteende, validering, dataintegrering, generering av dokument för automatisering av register- och affärsprocesser. Det gör det även möjligt att använda olika funktioner på AEM Sites-sidor, som versionshantering, målgruppsanpassning, översättning och hantering av flera webbplatser.
+Du kan använda AEM Page Editor för att snabbt skapa och lägga till flera formulär på dina AEM Sites-sidor. Med AEM Page Editor kan skribenter skapa smidiga datainhämtningsupplevelser på en webbplatssida med hjälp av kraften i adaptiva formulärkomponenter, inklusive dynamiskt beteende, validering, dataintegrering, generering av dokument för automatisering av register- och affärsprocesser. Du kan även använda olika funktioner på AEM Sites-sidor, som versionshantering, målgruppsanpassning, översättning och hantering av flera webbplatser.
 
 AEM Forms har adaptiv formulärbehållare och adaptiv Forms - inbäddningskomponenter. Du kan använda adaptiv formulärbehållare för att skapa ett nytt formulär på en Experience Fragment- eller AEM Sites-sida, medan adaptiv Forms - Embed-komponent gör att du kan lägga till ett befintligt adaptivt formulär eller skapa ett nytt formulär med Adaptiv Forms Editor.
 
@@ -30,14 +30,14 @@ AEM Forms har adaptiv formulärbehållare och adaptiv Forms - inbäddningskompon
 
 ## Fördelar med att använda komponenten Adaptiv formulärbehållare i AEM Page Editor eller Experience Fragment
 
-Med hjälp av adaptiv formulärbehållare AEM sidredigeraren kan du skapa sömlösa datainhämtningsupplevelser på en sajtsida med hjälp av kraften i adaptiva Forms-komponenter, inklusive dynamiskt beteende, validering, dataintegrering, generering av dokument för post- och affärsprocessautomatisering. Man kan också använda olika funktioner på AEM Sites-sidor, som versionshantering, målgruppsanpassning, översättning och hantering av flera webbplatser, vilket förbättrar den övergripande upplevelsen av att skapa och hantera formulär. Låt oss utforska några av dessa funktioner:
+Med hjälp av adaptiv formulärbehållare AEM sidredigeraren kan du skapa sömlösa datainhämtningsupplevelser på en sajtsida med hjälp av kraften i adaptiva Forms-komponenter, inklusive dynamiskt beteende, validering, dataintegrering, generera dokument för post- och affärsprocessautomatisering. Här kan du också använda olika funktioner på AEM Sites-sidor, som versionshantering, målgruppsanpassning, översättning och hantering av flera webbplatser, vilket förbättrar den övergripande upplevelsen av att skapa och hantera formulär. Låt oss utforska några av dessa funktioner:
 
 * **Versionshantering:** Erbjudande om AEM Sites-sidor [robust versionshantering](/help/sites-authoring/working-with-page-versions.md), så att du kan spåra och hantera olika versioner av formulären. På så sätt kan du göra ändringar och förbättringar i formulär samtidigt som du behåller möjligheten att vid behov gå tillbaka till tidigare versioner. Versionshantering säkerställer ett kontrollerat och organiserat tillvägagångssätt för blankettutveckling och -utveckling.
 * **Målinriktning (integrering med Adobe Target):** Med målgruppsfunktionerna i AEM Sites kan man också [personalisera formulärupplevelsen för olika målgrupper](/help/sites-administering/target.md). Genom att utnyttja användarsegment och kriterier för målinriktning kan du skräddarsy formulärets innehåll, design eller beteende för specifika användargrupper. På så sätt kan ni leverera en personaliserad och relevant formulärupplevelse, vilket ökar engagemanget och konverteringsgraden.
 * **Översättning:** AEM Sites [smidig integrering med översättningstjänster](/help/sites-administering/translation.md)så att du enkelt kan översätta formulär till flera språk. Den här funktionen förenklar lokaliseringsprocessen och säkerställer att formulären är tillgängliga för en global publik. Ni kan hantera översättningar effektivt i AEM översättningsprojekt, vilket minskar den tid och det arbete som krävs för stöd av flerspråkiga formulär. Mer information om översättning finns i avsnittet med överväganden.
 * **Hantering av flera webbplatser och Live Copy:** AEM Sites ger robusta [Funktioner för hantering av flera webbplatser och Live Copy](/help/sites-administering/msm.md), vilket gör att du kan skapa och hantera flera webbplatser i en och samma miljö. Med den här funktionen kan du nu återanvända formulär på olika webbplatser, vilket ger enhetlighet och minskar dubbelarbetet. Med centraliserad kontroll och hantering kan ni effektivt hantera och uppdatera formulär på flera webbplatser.
 * **Teman:** På AEM Sites-sidor finns ett ramverk för att utforma och underhålla enhetliga visuella format för flera webbsidor. Dessa definierar färger, teckensnitt, formatmallar och andra visuella element som bidrar till webbplatsens allmänna utseende och känsla. [Du kan använda teman som är utformade för en AEM Sites-sida för ett adaptivt formulär, vilket sparar både tid och arbete](/help/sites-authoring/style-system.md).
-* **Taggning:** På AEM Sites sidor kan du [tilldela taggar eller etiketter till en sida, en resurs eller annat innehåll](/help/sites-authoring/tags.md). Taggar är nyckelord eller metadataetiketter som gör det möjligt att kategorisera och ordna innehåll baserat på specifika kriterier. Du kan tilldela en eller flera taggar till sidor, resurser eller andra innehållsobjekt i AEM för att förbättra sökningen och kategorisera resurserna.
+* **Taggning:** På AEM Sites-sidor kan du [tilldela taggar eller etiketter till en sida, en resurs eller annat innehåll](/help/sites-authoring/tags.md). Taggar är nyckelord eller metadataetiketter som gör det möjligt att kategorisera och ordna innehåll baserat på specifika kriterier. Du kan tilldela en eller flera taggar till sidor, resurser eller andra innehållsobjekt i AEM för att förbättra sökningen och kategorisera resurserna.
 * **Låsa och låsa upp innehåll:** AEM Sites tillåter användare att [styra åtkomst till och ändringar av sidor](/help/sites-authoring/editing-content.md#locking-a-page-locking-a-page) i AEM Sites. När en sida är låst innebär det att den skyddas från obehöriga ändringar och redigeringar av andra användare. Endast den användare som har låst innehållet eller en utsedd administratör kan låsa upp det för att tillåta ändringar.
 
 
@@ -76,7 +76,7 @@ Se till att [Adaptiva Forms Core-komponenter är aktiverade för din miljö](htt
 
 Om du vill aktivera alla funktioner för den adaptiva Forms-behållarkomponenten lägger du till klientbiblioteken CustomHeaderlibs och CustomFoterlibs på din AEM Sites-sida via distributionsflödet. Så här lägger du till biblioteken:
 
-1. Logga in på din AEM Author-instans och öppna CRX DE. Standardwebbadressen för en Author-instans som körs lokalt är `http://localhost:4502/crx/de`.
+1. Logga in på AEM Author och öppna CRX DE. Standardwebbadressen för en Author-instans som körs lokalt är `http://localhost:4502/crx/de`.
 
 1. Öppna `/apps/[your-sites-project]/components/page/customheaderlibs.html` och lägg till följande kod i filen:
 

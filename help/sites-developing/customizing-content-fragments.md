@@ -7,9 +7,9 @@ topic-tags: extending-aem
 content-type: reference
 docset: aem65
 exl-id: 08c88e70-4df9-4627-8a66-1fabe3aee50b
-source-git-commit: ada61b87753f3f3e70acdca0e946428511bd7b00
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '2788'
+source-wordcount: '2784'
 ht-degree: 0%
 
 ---
@@ -82,7 +82,7 @@ Innehållsfragment med strukturerat innehåll (dvs. baserat på en innehållsfra
 
 * Allt innehåll lagras under `jcr:content/data` resursens nod:
 
-   * Elementdata lagras under den överordnad undernoden:
+   * Elementdata lagras under huvudundernoden:
      `jcr:content/data/master`
 
    * Variationer lagras under en undernod som innehåller variantens namn, till exempel: `jcr:content/data/myvariation`
@@ -134,11 +134,11 @@ Innehållsfragment kan refereras från AEM sidor, precis som andra resurstyper. 
 
 * Komponenten använder `fragmentPath` -egenskap som refererar till det faktiska innehållsfragmentet. The `fragmentPath` -egenskapen hanteras på samma sätt som liknande egenskaper för andra resurstyper, till exempel när innehållsfragmentet flyttas till en annan plats.
 
-* Med komponenten kan du välja varianten som ska visas.
+* Med komponenten kan du välja den variant som ska visas.
 * Dessutom kan ett styckeintervall markeras för att begränsa utdata. Det kan till exempel användas för utdata med flera kolumner.
 * Komponenten tillåter [mellanliggande innehåll](/help/sites-developing/components-content-fragments.md#in-between-content):
 
-   * Här kan du placera andra resurser (bilder, etc.) mellan styckena i det refererade fragmentet.
+   * Här kan du montera andra resurser (bilder osv.) mellan styckena i det refererade fragmentet.
    * För det mellanliggande innehållet behöver du:
 
       * vara medveten om risken för instabila referenser. Mellanliggande innehåll (som läggs till när en sida redigeras) har ingen fast relation till det stycke som det placeras bredvid, infogning av ett nytt stycke (i innehållsfragmentredigeraren) innan placeringen av det mellanliggande innehållet kan förlora den relativa positionen

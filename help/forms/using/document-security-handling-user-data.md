@@ -8,9 +8,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 898268cb-4426-421f-8f63-d75bd85cb57f
 role: Admin
 exl-id: 00c01a12-1180-4f35-9179-461bf177c787
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '933'
+source-wordcount: '932'
 ht-degree: 0%
 
 ---
@@ -30,7 +30,7 @@ Följande tabell visar hur dokumentsäkerhet organiserar data i databastabeller.
 <table>
  <tbody>
   <tr>
-   <td>Databastabell</td>
+   <td>Databas</td>
    <td>Beskrivning</td>
   </tr>
   <tr>
@@ -63,14 +63,14 @@ Följande tabell visar hur dokumentsäkerhet organiserar data i databastabeller.
   </tr>
   <tr>
    <td><code>EdcPolicyXmlEntity</code></td>
-   <td>Lagrar XML-filer för aktiva profiler. XML för en policy<sup> </sup>innehåller referenser till huvud-ID för användare som är associerade med profilen. Princip-XML lagras som ett Blob-objekt.</td>
+   <td>Lagrar XML-filer för aktiva profiler. XML för en policy<sup> </sup>innehåller referenser till säkerhetsobjekt-ID för användare som är kopplade till profilen. Princip-XML lagras som ett Blob-objekt.</td>
   </tr>
   <tr>
    <td><code>EdcPolicyArchiveEntity</code></td>
    <td>Lagrar information om arkiverade profiler. En arkiverad princip innehåller XML-principfilen som lagras som ett Blob-objekt.</td>
   </tr>
   <tr>
-   <td><p><code>EdcPolicySetPrincipalEntity</code></p> <p><code>EdcPolicySetPrincipalEnt</code> (Oracle- och MS SQL-databaser)</p> </td>
+   <td><p><code>EdcPolicySetPrincipalEntity</code></p> <p><code>EdcPolicySetPrincipalEnt</code><br /> (Oracle- och MS SQL-databaser)</p> </td>
    <td>Lagrar mappningen mellan principuppsättningar och användare.</td>
   </tr>
   <tr>
@@ -96,7 +96,7 @@ När du känner till ditt huvuds-ID kan du exportera eller ta bort användardata
 
 ### Exportera användardata {#export-user-data}
 
-Kör följande databaskommandon för att exportera användardata för ett huvud-ID från databastabeller. I `select` kommando, ersätta `<principal_id>` med användarens huvud-ID vars data du vill exportera.
+Kör följande databaskommandon för att exportera användardata för ett huvud-ID från databastabeller. I `select` kommando, ersätt `<principal_id>` med användarens huvud-ID vars data du vill exportera.
 
 >[!NOTE]
 >
@@ -135,7 +135,7 @@ Om du vill få fram fullständiga data om en användare i systemet måste du få
 Gör följande för att ta bort dokumentsäkerhetsdata för ett säkerhetsobjekt-ID från databastabeller.
 
 1. Stäng av AEM Forms-servern.
-1. Kör följande databaskommandon för att ta bort data för det primära ID:t från databastabeller för dokumentsäkerhet. I `Delete` kommando, ersätta `<principal_id>` med användarens huvud-ID vars data du vill ta bort.
+1. Kör följande databaskommandon för att ta bort data för det primära ID:t från databastabeller för dokumentsäkerhet. I `Delete` kommando, ersätt `<principal_id>` med användarens huvud-ID vars data du vill ta bort.
 
    ```sql
    Delete from EdcPrincipalKeyEntity where principalid = '<principal_id>';

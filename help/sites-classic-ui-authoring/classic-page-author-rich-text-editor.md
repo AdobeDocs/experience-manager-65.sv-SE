@@ -1,22 +1,22 @@
 ---
 title: RTF-redigerare
-description: RTF-redigeraren är en grundläggande byggsten för inmatning av textinnehåll i AEM.
+description: RTF-redigeraren är en grundläggande byggsten för att infoga textinnehåll i AEM.
 uuid: 4bcce45a-e14f-41b7-8c6f-89d1e1bb595c
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 discoiquuid: ccc0e434-8847-4e12-8a18-84b55fb2964b
 docset: aem65
 exl-id: 5623dcf4-bda9-4dee-ace3-5a1f6057e96c
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '1831'
+source-wordcount: '1828'
 ht-degree: 0%
 
 ---
 
 # RTF-redigerare {#rich-text-editor}
 
-RTF-redigeraren är en grundläggande byggsten för inmatning av textinnehåll i AEM. Den utgör grunden för olika komponenter, bland annat
+RTF-redigeraren är en grundläggande byggsten för att infoga textinnehåll i AEM. Den utgör grunden för olika komponenter, bland annat följande:
 
 * Text
 * Textbild
@@ -38,7 +38,7 @@ Förutom det dialogbaserade läget för textredigering i Rich Text, innehåller 
 
 Klicka två gånger på ett stycke (ett långsamt dubbelklick) för att gå in i redigeringsläget (komponentens kantlinje är nu orange).
 
-Du kan redigera texten direkt på sidan i stället för i ett dialogrutefönster. Gör bara ändringarna så sparas de automatiskt.
+Du kan redigera texten direkt på sidan i stället för i ett dialogrutefönster. Gör bara dina ändringar så sparas de automatiskt.
 
 ![cq55_rte_inlineediting](assets/cq55_rte_inlineediting.png)
 
@@ -62,7 +62,7 @@ RTF-redigeraren har en rad funktioner, som [beroende på konfigurationen](/help/
 
 ![Verktygsfältet Teckenformat](do-not-localize/cq55_rte_basicchars.png)
 
-Här kan du formatera markerade tecken (markerade); Vissa alternativ har även kortkommandon:
+Här kan du formatera tecken som du har markerat (markerat). Vissa alternativ har även kortkommandon:
 
 * Fet (Ctrl-B)
 * Kursiv (Ctrl-I)
@@ -90,7 +90,7 @@ Ett format tillämpas på hela textstycket (ett format är HTML-baserat):
 
 Ett specifikt format kan bara ändras (standardvärdet är **[!UICONTROL Paragraph]**).
 
-Ett format kan tas bort; placera markören i texten som formatet har tillämpats på och klicka på ikonen Ta bort:
+Ett format kan tas bort. Placera markören i texten som formatet har tillämpats på och klicka på ikonen Ta bort:
 
 >[!CAUTION]
 >
@@ -104,15 +104,15 @@ Standardfunktionerna i **[!UICONTROL Cut]** och **[!UICONTROL Copy]** är tillg�
 
 * Klipp ut (Ctrl-X)
 * Kopiera (Ctrl-C)
-* Klistra in Det här är standardmekanismen för inklistring (Ctrl-V) av komponenten. vid installation i skal är detta konfigurerat att [!UICONTROL Paste from Word].
+* Klistra in Det här är standardmekanismen för inklistring (Ctrl-V) av komponenten. När den är installerad utanför rutan är den konfigurerad att [!UICONTROL Paste from Word].
 
-* Klistra in som text: Tar bort alla format och formatering så att endast oformaterad text klistras in.
+* Klistra in som text: Tar bort alla format och formatering så att endast den oformaterade texten klistras in.
 
 * Klistra in från Word: Innehållet klistras in som HTML (med viss nödvändig formatering).
 
 ### Ångra, Gör om {#undo-redo}
 
-![Ångra, Gör om, verktygsfält](do-not-localize/cq55_rte_undoredo.png)
+![Verktygsfältet Ångra, Gör om](do-not-localize/cq55_rte_undoredo.png)
 
 AEM sparar information om dina senaste 50 åtgärder i den aktuella komponenten, som hålls i kronologisk ordning. Dessa åtgärder kan ångras (och sedan göras om) i strikt ordning om det behövs.
 
@@ -142,7 +142,7 @@ Indraget för ett stycke kan ökas eller minskas. Det markerade stycket dras in 
 
 ### Listor {#lists}
 
-![Verktygsfältet Listor](do-not-localize/cq55_rte_lists.png)
+![Visar verktygsfältet](do-not-localize/cq55_rte_lists.png)
 
 Du kan skapa både punktlistor och numrerade listor i texten. Välj listtyp och börja skriva eller markera texten som ska konverteras. I båda fallen startar en radmatning ett nytt listobjekt.
 
@@ -160,7 +160,7 @@ En länk till en URL-adress (antingen på din webbplats eller på en extern plat
 
 ![Ikon för hyperlänk](do-not-localize/chlimage_1-9.png)
 
-I en dialogruta kan du ange mål-URL; även om den ska öppnas i ett nytt fönster.
+I en dialogruta kan du ange mål-URL:en och även ange om den ska öppnas i ett nytt fönster.
 
 ![cq55_rte_link_use](assets/cq55_rte_link_use.png)
 
@@ -168,15 +168,15 @@ Du kan:
 
 * Skriv in en URI direkt
 * Använd webbplatskartan för att välja en sida på webbplatsen
-* Ange URI:n och lägg sedan till målankarpunkten; till exempel `www.TargetUri.org#AnchorName`
-* Ange endast en ankarpunkt (för att referera till&quot;den aktuella sidan&quot;); Till exempel: `#anchor`
+* Ange URI:n och lägg sedan till målankarpunkten, till exempel `www.TargetUri.org#AnchorName`
+* Ange endast en ankarpunkt (för att referera till&quot;den aktuella sidan&quot;), till exempel `#anchor`
 * Söka efter en sida i innehållssökaren och dra och släpp sidikonen i hyperlänksdialogrutan
 
 >[!NOTE]
 >
->URI:n kan prepended med något av de protokoll som är konfigurerade för din installation. I en standardinstallation finns följande `https://`, `ftp://`och `mailto:`. Protokoll som inte har konfigurerats för din installation kommer att avvisas och markeras som ogiltiga.
+>URI:n kan prepended med vilket som helst av de protokoll som är konfigurerade för din installation. I en standardinstallation finns följande `https://`, `ftp://`och `mailto:`. Protokoll som inte har konfigurerats för din installation kommer att avvisas och markeras som ogiltiga.
 
-Om du vill bryta länken placerar du markören var som helst i länktexten och klickar på knappen [!UICONTROL Unlink] ikon:
+Om du vill bryta länken placerar du markören någonstans i länktexten och klickar på knappen [!UICONTROL Unlink] ikon:
 
 ![Ikonen Bryt länk](do-not-localize/chlimage_1-10.png)
 
@@ -218,7 +218,7 @@ Du kan dra bilder från innehållssökaren för att lägga till dem i texten.
 
 >[!NOTE]
 >
->AEM erbjuder också specialkomponenter för mer detaljerad bildkonfiguration. Till exempel **Bild** och **Textbild** -komponenter är tillgängliga.
+>AEM erbjuder också specialkomponenter för mer detaljerad bildkonfiguration. Till exempel **Bild** och **Textbild** finns tillgängliga.
 
 ### Stavningskontroll {#spelling-checker}
 
@@ -248,15 +248,15 @@ Tabeller är tillgängliga båda:
 
   >[!NOTE]
   >
-  >Även om tabeller är tillgängliga i RTE rekommenderar vi att du använder **Tabell** -komponenten när du skapar tabeller.
+  >Även om tabeller är tillgängliga i RTE bör du använda **Tabell** -komponenten när du skapar tabeller.
 
-I båda **Text** och **Tabell** Komponenttabellens funktionalitet är tillgänglig via snabbmenyn (oftast högermusknappen) som klickas i tabellen. till exempel:
+I båda **Text** och **Tabell** funktionaliteten i komponenttabellen är tillgänglig via snabbmenyn (oftast högermusknappen) som klickas i tabellen, till exempel:
 
 ![cq55_rte_tablemenu](assets/cq55_rte_tablemenu.png)
 
 >[!NOTE]
 >
->I **Tabell** finns det också ett specialverktygsfält, som innehåller olika RTF-redigeringsfunktioner och en delmängd av tabellspecifika funktioner.
+>I **Tabell** finns det också ett specialverktygsfält, som innehåller olika RTF-redigeringsfunktioner och en delmängd av de tabellspecifika funktionerna.
 
 Tabellspecifika funktioner är:
 
@@ -272,7 +272,7 @@ Tabellspecifika funktioner är:
 
 #### Tabellegenskaper {#table-properties}
 
-![cq55_te_tableproperties_icon](assets/cq55_rte_tableproperties_icon.png)
+![cq55_rte_tableproperties_icon](assets/cq55_rte_tableproperties_icon.png)
 
 Tabellens grundläggande egenskaper kan konfigureras innan du klickar på **OK** att spara:
 
@@ -286,7 +286,7 @@ Tabellens grundläggande egenskaper kan konfigureras innan du klickar på **OK**
 
 * **Cellutfyllnad**: Detta definierar det tomma utrymmet mellan cellinnehållet och dess kanter.
 
-* **Cellmellanrum**: Här definierar du avståndet mellan cellerna.
+* **Cellmellanrum**: Detta definierar avståndet mellan cellerna.
 
 >[!NOTE]
 >
@@ -359,8 +359,8 @@ Om du skapar en kapslad tabell skapas en ny, fristående tabell i den aktuella c
 >
 >Viss ytterligare beteende är webbläsarberoende:
 >
->* Windows IE: Använd Ctrl+primär-musknapp-klicka (vanligen vänster) för att markera flera celler.
->* Firefox: Markera ett cellområde genom att dra pekaren.
+>* Windows IE: Använd Ctrl+primär musknapp-klicka (vanligtvis vänster) för att markera flera celler.
+>* Firefox: Dra pekaren för att markera ett cellområde.
 
 #### Ta bort tabell {#remove-table}
 
@@ -372,7 +372,7 @@ Använd alternativet för att ta bort tabellen från **[!UICONTROL Text]** -komp
 
 ![Verktygsfältet Specialtecken](do-not-localize/cq55_rte_specialchars.png)
 
-Specialtecken kan göras tillgängliga för textredigeraren; de kan variera beroende på installationen.
+Specialtecken kan göras tillgängliga för textredigeraren. De kan variera beroende på installationen.
 
 ![cq55_rte_specialchars_use](assets/cq55_rte_specialchars_use.png)
 

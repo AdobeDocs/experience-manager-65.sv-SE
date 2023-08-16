@@ -2,7 +2,7 @@
 title: AEM Headless Content Architect Journey
 description: Börja här för en guidad resa med de kraftfulla och flexibla headless-funktionerna i AEM, deras funktioner och hur du kan modellera ditt innehåll i ditt första headless-projekt.
 exl-id: 44c58ece-225e-4361-929c-faa110fe2842
-source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
 source-wordcount: '786'
 ht-degree: 1%
@@ -27,7 +27,7 @@ Den här guiden leder dig igenom de viktigaste avsnitten så att du när du är 
 
 ## AEM dokumentationsresor {#documentation-journeys}
 
-[En dokumentationsresa](/help/journey-documentation/home.md) binder samman många olika och kanske komplicerade ämnen och funktioner genom att tillhandahålla en berättarröst som hjälper läsaren, som kan vara ny att AEM, förstå och lösa ett affärsproblem från början till slut, samtidigt som man antar minimala tidigare ämnesområden eller AEM kunskap.
+[En dokumentationsresa](/help/journey-documentation/home.md) binder samman många olika och kanske komplicerade ämnen och funktioner genom att tillhandahålla en berättarröst som hjälper läsaren att, som kan vara ny att AEM, förstå och lösa ett affärsproblem från början till slut, samtidigt som man antar minimala tidigare ämnesområden eller AEM kunskap.
 
 Dokumentation Journeys bygger på principer för god praxis, grundade på Adobe senaste forskning, beprövade implementeringserfarenheter från Adobe konsulter och återkoppling från kundprojekt.
 
@@ -45,12 +45,12 @@ Information i den här resan kan förstås vara användbar för andra personer, 
 
 Du kommer att utforska många ämnen under den här resan. I följande artiklar får du grundläggande kunskaper om AEM och länkar till detaljerad teknisk dokumentation.
 
-Även om du kan gå direkt till en viss del av resan bygger många koncept på en del i tidigare artiklar. Om du inte är van vid AEM rekommenderar vi att du börjar i början och fortsätter sekventiellt.
+Även om du kan gå direkt till en viss del av resan bygger många koncept på en del i tidigare artiklar. Om du inte är van vid AEM rekommenderar Adobe att du börjar i början och fortsätter sekventiellt.
 
 | # | Artikel | Beskrivning |
 |---|---|---|
 | 0 | AEM Headless Content Architect Journey | Det här dokumentet |
-| 1 | [Modellering för Headless med AEM - en introduktion](introduction.md) | Läs om Headless Technology och vad det innebär för modellering. |
+| 1 | [Modellering för Headless med AEM - en introduktion](introduction.md) | Läs mer om Headless Technology och vad det innebär för modellering. |
 | 2 | [Lär dig grunderna i modellering](basics.md) | Lär dig grunderna i modellering med AEM |
 | 3 | [Så här skapar du modellstrukturer](model-structure.md) | Lär dig modellera strukturer med flera lager för headless |
 
@@ -60,11 +60,11 @@ Du är nu redo att sätta igång med din resa utan Adobe Headless. Vi rekommende
 
 ## Ytterligare resurser {#additional-resources}
 
-Dokumentationsresor visar hur AEM löser ett affärsproblem genom att tillhandahålla en berättelse som vägleder dig genom komplexa, sammanhörande processer och funktioner. En resa visar hur flera funktioner fungerar tillsammans för att tillgodose ett enda affärsbehov.
+Dokumentationsresor visar hur AEM löser ett affärsproblem genom att tillhandahålla en berättarröst som vägleder dig genom komplexa, samhörande processer och funktioner. En resa visar hur flera funktioner fungerar tillsammans för att tillgodose ett enda affärsbehov.
 
 Som sådana resor är utformade för att stå på egen hand. Ett antal av dem kan dock vara relaterade till varandra. Kolla in de här extra resorna för mer information om hur AEM kraftfulla funktioner fungerar tillsammans.
 
-* [AEM Headless Translation Journey](/help/journey-headless/translation/overview.md) - Den här dokumentationsresan ger er en bred förståelse för headless-teknik, hur AEM levererar headless-innehåll och hur ni kan översätta det.
+* [AEM översättningsresa utan rubrik](/help/journey-headless/translation/overview.md) - Den här dokumentationsresan ger er en bred förståelse för headless-teknik, hur AEM levererar headless-innehåll och hur ni kan översätta det.
 * [Headless Authoring Journey](/help/journey-headless/author/overview.md) - Börja här för att få en guidad resa genom de kraftfulla och flexibla headless-funktionerna i AEM, deras funktioner och hur du modellerar ditt innehåll i ditt första headless-projekt.
 * [AEM Headless Developer Journey](/help/journey-headless/developer/overview.md) - Börja här för att få en guidad resa genom de kraftfulla och flexibla headless-funktionerna i AEM, deras funktioner och hur du kan utnyttja dem i ditt första utvecklingsprojekt.
 * [AEM teknisk dokumentation](https://experienceleague.adobe.com/docs/experience-manager-65.html) - Om du redan har en god förståelse för AEM och headless-teknik kan du behöva läsa våra detaljerade tekniska dokument direkt.

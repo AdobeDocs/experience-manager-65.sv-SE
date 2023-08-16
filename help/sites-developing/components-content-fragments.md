@@ -12,9 +12,9 @@ discoiquuid: b7777dc5-a867-4799-9e2c-a1f4bb5dd96a
 docset: aem65
 pagetitle: Components for Content Fragments
 exl-id: f2edd9b2-f231-42f3-a25e-428cd1d96c2a
-source-git-commit: 53c39e4aa250b18d4fae0327b313b18901677f2c
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '962'
+source-wordcount: '960'
 ht-degree: 1%
 
 ---
@@ -27,7 +27,7 @@ ht-degree: 1%
 >
 >Vi rekommenderar inte att du utökar eller ändrar de faktiska komponenterna som används i Fragment Editor eftersom de fortfarande kan ändras.
 
-Se [API för hantering av innehållsfragment - klientsidan](/help/sites-developing/customizing-content-fragments.md#the-content-fragment-management-api-client-side).
+Se [API för hantering av innehållsfragment - klientsida](/help/sites-developing/customizing-content-fragments.md#the-content-fragment-management-api-client-side).
 
 ## Komponenter för sidredigering {#components-for-page-authoring}
 
@@ -69,7 +69,7 @@ Det här biblioteket lägger till funktioner som är specifika för innehållsfr
 
 ### Mellan innehåll {#in-between-content}
 
-The **Content Fragmen** Med komponenten kan du släppa ytterligare komponenter mellan de olika styckena i den visade [element](/help/assets/content-fragments/content-fragments.md#constituent-parts-of-a-content-fragment). Elementet som visas består i själva verket av olika stycken (varje stycke markeras med en radmatning). Du kan infoga innehåll med andra komponenter mellan styckena.
+The **Content Fragmen** Med den här komponenten kan du släppa ytterligare komponenter mellan de olika styckena i den visade [element](/help/assets/content-fragments/content-fragments.md#constituent-parts-of-a-content-fragment). Elementet som visas består i själva verket av olika stycken (varje stycke markeras med en radmatning). Du kan infoga innehåll med andra komponenter mellan styckena.
 
 Ur teknisk synvinkel finns varje stycke i det visade elementet* *i en egen parsys, och varje komponent som du lägger till mellan styckena infogas (under huven) i parsytan.
 
@@ -124,7 +124,6 @@ Internt används Sling Rewriter för den återgivningen. Motsvarande konfigurati
 >sedan `serializerType` **måste** uppdateras till:
 >
 >* `serializerType="html5-serializer"`
-
 
 I konfigurationen som är klar att användas används följande transformatorer:
 

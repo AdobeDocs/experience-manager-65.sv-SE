@@ -7,9 +7,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: page-authoring
 content-type: reference
 exl-id: d60e9601-d15b-4378-a33e-e90961f63195
-source-git-commit: 1ef5593495b4bf22d2635492a360168bccc1725d
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '767'
+source-wordcount: '764'
 ht-degree: 0%
 
 ---
@@ -26,11 +26,11 @@ En anteckning placerar en färgmarkör/anteckning på sidan. Med anteckningen ka
 
 >[!NOTE]
 >
->Anteckningar som skapas i det klassiska användargränssnittet visas också i det pekoptimerade användargränssnittet. Skisser är dock användargränssnittsspecifika och visas endast i det användargränssnitt där de skapades.
+>Anteckningar som skapas i det klassiska användargränssnittet visas också i det pekoptimerade användargränssnittet. Skisser är dock gränssnittsspecifika och visas endast i det användargränssnitt där de skapades.
 
 >[!CAUTION]
 >
->Om du tar bort en resurs (till exempel stycke) tas alla anteckningar och skisser som är kopplade till den resursen bort. oavsett deras placering på sidan som helhet.
+>Om du tar bort en resurs (till exempel ett stycke) tas alla anteckningar och skisser som är kopplade till resursen bort, oavsett deras position på sidan som helhet.
 
 >[!NOTE]
 >
@@ -40,7 +40,7 @@ En anteckning placerar en färgmarkör/anteckning på sidan. Med anteckningen ka
 
 Beroende på styckedesignen är anteckningen antingen tillgänglig som ett alternativ på snabbmenyn (vanligtvis högerknappen när den placeras över det önskade stycket) eller som en knapp på styckets redigeringsfält.
 
-I båda fallen väljer du **Anteckna**. En färgad anteckning används i stycket. Du är direkt i redigeringsläget och kan lägga till text direkt:
+Välj i båda fallen **Anteckna**. En färgad anteckning används i stycket. Du är direkt i redigeringsläget och kan lägga till text direkt:
 
 ![chlimage_1-137](assets/chlimage_1-137.png)
 
@@ -85,16 +85,16 @@ Skisser är en funktion av anteckningar som gör att du kan skapa enkla linjereg
 
    * frihand
 
-     standardläget, avsluta genom att släppa musknappen.
+     standardläget. Avsluta genom att släppa musknappen.
 
    * rak:
 
-     håll ned `ALT` och klicka på start- och slutpunkterna, avsluta med ett dubbelklick.
+     håll ned `ALT` och klicka på start- och slutpunkterna. Avsluta med ett dubbelklick.
 
 * När du har avslutat skissläget kan du klicka på en skiss för att markera den.
 * Flytta en skiss genom att markera skissen och sedan dra den till önskad plats.
 * En skiss täcker över innehållet. Det innebär att du inte kan klicka på det underliggande stycket i skissens fyra hörn. Om du till exempel måste redigera eller komma åt en länk. Om det här blir ett problem (du till exempel har en skiss som täcker ett stort område på sidan) minimerar du sedan lämplig anteckning, eftersom detta även minimerar alla relaterade skisser och ger dig tillgång till det underliggande området.
 * Om du vill ta bort en enskild skiss markerar du önskad skiss och trycker sedan på **Ta bort** tangent (**fn**-**backspace** på en Mac).
 
-* Om du flyttar, eller kopierar, ett stycke kommer alla relaterade anteckningar och skisser också att flyttas, eller kopieras; deras position i förhållande till stycket förblir densamma.
+* Om du flyttar, eller kopierar, ett stycke flyttas eller kopieras även alla relaterade anteckningar och skisser, och deras placering i förhållande till stycket ändras inte.
 * Om du tar bort en anteckning tas även alla skisser som är kopplade till den anteckningen bort.

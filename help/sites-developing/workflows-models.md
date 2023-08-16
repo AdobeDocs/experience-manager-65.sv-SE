@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: c097b60f-bcdf-45de-babe-b4c2e2b746a1
 docset: aem65
 exl-id: 6790202f-0542-4779-b3ce-d394cdba77b4
-source-git-commit: 840ea373537799af995c3b8ce0c8bf575752775b
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '2427'
+source-wordcount: '2426'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ ht-degree: 0%
 
 Du skapar en [arbetsflödesmodell](/help/sites-developing/workflows.md#model) för att definiera serie steg som körs när en användare startar arbetsflödet. Du kan också definiera modellegenskaper, t.ex. om arbetsflödet är tillfälligt eller använder flera resurser.
 
-När en användare startar ett arbetsflöde startas en instans; detta är motsvarande körningsmodell som skapades när du [Synkronisera](#sync-your-workflow-generate-a-runtime-model) dina ändringar.
+När en användare startar ett arbetsflöde startas en instans. Det här är motsvarande körningsmodell som skapas när du [Synkronisera](#sync-your-workflow-generate-a-runtime-model) dina ändringar.
 
 ## Skapa ett nytt arbetsflöde {#creating-a-new-workflow}
 
@@ -39,7 +39,7 @@ Det här steget är konfigurerat för att tilldela en arbetsuppgift till arbetsf
 
 Så här skapar du ett nytt arbetsflöde med redigeraren:
 
-1. Öppna **Arbetsflödesmodeller** konsol, via **verktyg**, **Arbetsflöde**, **Modeller** eller, till exempel: [https://localhost:4502/aem/workflow](https://localhost:4502/aem/workflow)
+1. Öppna **Arbetsflödesmodeller** konsol, via **verktyg**, **Arbetsflöde**, **Models** eller, till exempel: [https://localhost:4502/aem/workflow](https://localhost:4502/aem/workflow)
 1. Välj **Skapa** sedan **Skapa modell**.
 1. The **Lägg till arbetsflödesmodell** visas. Ange **Titel** och **Namn** (valfritt) före markering **Klar**.
 1. Den nya modellen listas i **Arbetsflödesmodeller** konsol.
@@ -69,13 +69,13 @@ När uppdateringarna av arbetsflödet är klara måste du använda **Synkroniser
 
 ### Synkronisera arbetsflödet - Skapa en körningsmodell {#sync-your-workflow-generate-a-runtime-model}
 
-**Synkronisera** (direkt i redigeringsverktygsfältet) genererar ett [körningsmodell](/help/sites-developing/workflows.md#runtime-model). Körningsmodellen är den modell som faktiskt används när en användare startar ett arbetsflöde. Om du inte gör det **Synkronisera** Om du ändrar något kommer ändringarna inte att vara tillgängliga vid körning.
+**Synkronisera** (direkt i redigeringsverktygsfältet) genererar ett [körningsmodell](/help/sites-developing/workflows.md#runtime-model). Körningsmodellen är den modell som faktiskt används när en användare startar ett arbetsflöde. Om du inte **Synkronisera** Om du ändrar något kommer ändringarna inte att vara tillgängliga vid körning.
 
-När du (eller någon annan användare) gör ändringar i arbetsflödet måste du använda **Synkronisera** för att generera en körningsmodell - även när enskilda dialogrutor (till exempel för steg) har egna sparalternativ.
+När du (eller någon annan användare) gör några ändringar i arbetsflödet måste du använda **Synkronisera** för att generera en körningsmodell - även när enskilda dialogrutor (till exempel för steg) har egna sparalternativ.
 
 När ändringarna synkroniseras med körningsmodellen (sparad), **Synkroniserad** visas i stället.
 
-Vissa steg har obligatoriska fält och/eller inbyggd validering. När dessa villkor inte uppfylls visas ett fel när du försöker **Synkronisera** modellen. Om till exempel ingen deltagare har definierats för en **Deltagare** steg:
+Vissa steg har obligatoriska fält och/eller inbyggd validering. När dessa villkor inte uppfylls visas ett fel när du försöker **Synkronisera** modellen. Om till exempel ingen deltagare har definierats för **Deltagare** steg:
 
 ![wf-21](assets/wf-21.png)
 
@@ -88,8 +88,7 @@ När du öppnar en [Standardmodell och/eller äldre modell](/help/sites-developi
 * Till att börja med visas modellen och dess egenskaper i skrivskyddat läge som:
    * Standardarbetsflöden finns i `/libs`
    * Äldre arbetsflöden finns i `/etc`
-Markera 
-**Redigera** kommer att:
+Markera **Redigera** kommer att
 * ta en kopia av arbetsflödet till `/conf`
 * göra stegwebbläsaren tillgänglig
 * gör att du kan göra ändringar
@@ -104,7 +103,7 @@ Markera
 
 Du måste lägga till steg i modellen för att representera aktiviteten som ska utföras - varje steg utför en specifik aktivitet. Ett urval stegkomponenter är tillgängliga i en AEM.
 
-När du redigerar en modell visas de tillgängliga stegen i de olika grupperna i **Stegen**. Till exempel:
+När du redigerar en modell visas de tillgängliga stegen i de olika grupperna i **Steg, webbläsare**. Till exempel:
 
 ![wf-10](assets/wf-10.png)
 
@@ -114,8 +113,8 @@ När du redigerar en modell visas de tillgängliga stegen i de olika grupperna i
 
 Så här lägger du till steg i arbetsflödesmodellen:
 
-1. Öppna en befintlig arbetsflödesmodell för redigering. Från **Arbetsflödesmodell** väljer du önskad modell och sedan **Redigera**.
-1. Öppna stegwebbläsaren; använda **Växla sidopanel**, längst till vänster i det övre verktygsfältet. Här kan du:
+1. Öppna en befintlig arbetsflödesmodell för redigering. Från **Arbetsflödesmodell** konsol, välj önskad modell och sedan **Redigera**.
+1. Öppna stegwebbläsaren med **Växla sidopanel**, längst till vänster i det övre verktygsfältet. Här kan du:
 
    * **Filter** för specifika steg.
    * Använd listruteväljaren för att begränsa markeringen till en viss grupp steg.
@@ -127,7 +126,7 @@ Så här lägger du till steg i arbetsflödesmodellen:
 
    Till exempel en **Deltagarsteg**.
 
-   När du har lagt till i flödet kan du [konfigurera steget](#configuring-a-workflow-step).
+   När du har lagt till det i flödet kan du [konfigurera steget](#configuring-a-workflow-step).
 
    ![wf-03](assets/wf-03.png)
 
@@ -135,7 +134,7 @@ Så här lägger du till steg i arbetsflödesmodellen:
 
    Vid körning utförs stegen i den ordning som de visas i modellen. När du har lagt till stegkomponenter kan du dra dem till en annan plats i modellen.
 
-   Du kan också kopiera, klippa ut, klistra in, gruppera eller ta bort befintliga steg; som med [sidredigeraren.](/help/sites-authoring/editing-content.md)
+   Du kan också kopiera, klippa ut, klistra in, gruppera eller ta bort befintliga steg, som med [sidredigeraren.](/help/sites-authoring/editing-content.md)
 
    Delade steg kan också komprimeras/expanderas med verktygsfältsalternativet: ![wf-collap-expand-toolbar-icon](assets/wf-collapseexpand-toolbar-icon.png)
 
@@ -152,11 +151,12 @@ Du kan **Konfigurera** och anpassa ett arbetsflödesstegs beteende med **Stegege
    * Klicka/tryck på steget* *i arbetsflödesmodellen och välj **Konfigurera** i komponentens verktygsfält.
 
    * Dubbelklicka på steget.
+
    >[!NOTE]
    >
    >Mer information om de komponenter i det primära steget som installeras med AEM finns i [Referens för arbetsflödessteg](/help/sites-developing/workflows-step-ref.md).
 
-1. Konfigurera **Stegegenskaper** vid behov, Vilka egenskaper som är tillgängliga beror på stegtypen. Det kan också finnas flera tillgängliga flikar. Som standard **Deltagarsteg**, visas i ett nytt arbetsflöde som `Step 1`:
+1. Konfigurera **Stegegenskaper** om det behövs. Vilka egenskaper som är tillgängliga beror på stegtypen. Det kan också finnas flera tillgängliga flikar. Som standard **Deltagarsteg**, visas i ett nytt arbetsflöde som `Step 1`:
 
    ![wf-11](assets/wf-11.png)
 
@@ -167,7 +167,7 @@ Du kan **Konfigurera** och anpassa ett arbetsflödesstegs beteende med **Stegege
 
 ### Skapa ett tillfälligt arbetsflöde {#creating-a-transient-workflow}
 
-Du kan skapa en [Övergående](/help/sites-developing/workflows.md#transient-workflows) arbetsflödesmodell när du skapar en ny modell eller redigerar en befintlig:
+Du kan skapa [Övergående](/help/sites-developing/workflows.md#transient-workflows) arbetsflödesmodell när du skapar en ny modell eller redigerar en befintlig:
 
 1. Öppna arbetsflödesmodellen för [redigera](#editinganexistingworkflow).
 1. Välj **Egenskaper för arbetsflödesmodell** i verktygsfältet.
@@ -181,7 +181,7 @@ Du kan skapa en [Övergående](/help/sites-developing/workflows.md#transient-wor
 
 >[!NOTE]
 >
->När du kör ett arbetsflöde i [övergående](/help/sites-developing/workflows.md#transient-workflows) AEM lagrar ingen arbetsflödeshistorik. Därför [Tidslinje](/help/sites-authoring/basic-handling.md#timeline) visar inte någon information om det arbetsflödet.
+>När du kör ett arbetsflöde i [övergående](/help/sites-developing/workflows.md#transient-workflows) AEM lagrar ingen arbetsflödeshistorik. Därför bör [Tidslinje](/help/sites-authoring/basic-handling.md#timeline) visar inte någon information om det arbetsflödet.
 
 ## Göra arbetsflödesmodeller tillgängliga i Touch UI {#classic2touchui}
 
@@ -222,13 +222,13 @@ Du kan konfigurera en arbetsflödesmodell för [Stöd för flera resurser](/help
 
 ### Konfigurera arbetsflödessteg (som visar förlopp för arbetsflöde) {#configuring-workflow-stages-that-show-workflow-progress}
 
-[Arbetsflödessteg](/help/sites-developing/workflows.md#workflow-stages) hjälper dig att visualisera förloppet för ett arbetsflöde när du hanterar uppgifter.
+[Arbetsflödessteg](/help/sites-developing/workflows.md#workflow-stages) visualisera arbetsflödets förlopp när du hanterar uppgifter.
 
 >[!CAUTION]
 >
 >Om arbetsflödesfaser definieras i **Sidegenskaper** men inte för något av arbetsflödesstegen kommer förloppsindikatorn inte att visa några förlopp (oavsett aktuellt arbetsflödessteg).
 
-De steg som ska vara tillgängliga definieras i arbetsflödesmodellerna. befintliga arbetsflödesmodeller kan uppdateras så att de innehåller scendefinitioner. Du kan definiera valfritt antal steg för arbetsflödesmodellen.
+De steg som ska vara tillgängliga definieras i arbetsflödesmodellerna. Befintliga arbetsflödesmodeller kan uppdateras för att inkludera scendefinitioner. Du kan definiera valfritt antal steg för arbetsflödesmodellen.
 
 Definiera **Steg** för ditt arbetsflöde:
 
@@ -254,7 +254,7 @@ Definiera **Steg** för ditt arbetsflöde:
    | Steg 3 | Granska |
    | Steg 4 | Godkänn |
    | Steg 5 | Godkänn |
-   | Steg 6 | Slutförd |
+   | Steg 6 | Complete |
 
 1. Bekräfta ändringarna med **Synkronisera** (redigeringsverktygsfältet) för att generera körningsmodellen.
 
@@ -291,7 +291,7 @@ Så här exporterar du en arbetsflödesmodell i ett paket:
 1. Lägg till ytterligare filter för anpassade skript som används av modellen.
 1. Klicka **Spara** för att bekräfta filterdefinitionerna.
 1. Välj **Bygge** i verktygsfältet i paketdefinitionen.
-1. Välj **Hämta** i paketets verktygsfält.
+1. Välj **Ladda ned** i paketets verktygsfält.
 
 ## Använda arbetsflöden för att bearbeta inskickade formulär {#using-workflows-to-process-form-submissions}
 
@@ -310,7 +310,7 @@ Så här konfigurerar du arbetsflödet som ska användas med formuläret:
 
 ## Testa arbetsflöden {#testing-workflows}
 
-Det är en god vana att testa ett arbetsflöde för att använda olika typer av nyttolast. inklusive typer som skiljer sig från den för vilken den har utvecklats. Om du t.ex. vill att ditt arbetsflöde ska hantera resurser testar du det genom att ange en sida som nyttolast och se till att den inte orsakar fel.
+Det är en god vana att testa ett arbetsflöde för att använda olika typer av nyttolast, inklusive typer som skiljer sig från den som arbetsflödet har utvecklats för. Om du t.ex. vill att ditt arbetsflöde ska hantera resurser testar du det genom att ange en sida som nyttolast och se till att den inte orsakar fel.
 
 Testa till exempel ditt nya arbetsflöde på följande sätt:
 
@@ -364,13 +364,13 @@ För att illustrera några av möjligheterna att skapa ett arbetsflöde skapar f
 1. Öppna **Eller dela** för konfiguration.
 1. Konfigurera:
 
-   * **Vanliga**: Ange delningsnamnet.
-   * **Gren 1**: välj **Standardflöde**.
+   * **Vanliga**: ange delningens namn.
+   * **Gren 1**: select **Standardflöde**.
 
-   * **Gren 2**: säkerställa **Standardflöde** är inte markerat.
+   * **Gren 2**: se **Standardflöde** är inte markerat.
 
 1. Bekräfta dina uppdateringar av **ELLER Dela**.
-1. Dra en **Deltagarsteg** till den vänstra grenen öppnar du egenskaperna, anger följande värden och bekräftar sedan ändringarna:
+1. Dra en **Deltagarsteg** till vänster gren öppnar du egenskaperna, anger följande värden och bekräftar sedan ändringarna:
 
    * **Titel**: `Reject Publish Request`
 
@@ -382,7 +382,7 @@ För att illustrera några av möjligheterna att skapa ett arbetsflöde skapar f
 
    * **Titel**: `Publish Page as Requested`
 
-   * **Process**: välj `Activate Page`. Den här processen publicerar den valda sidan till utgivarinstanserna.
+   * **Process**: select `Activate Page`. Den här processen publicerar den valda sidan till utgivarinstanserna.
 
 1. Klicka **Synkronisera** (redigeringsverktygsfältet) för att generera körningsmodellen.
 
@@ -392,7 +392,7 @@ För att illustrera några av möjligheterna att skapa ett arbetsflöde skapar f
 
    ![wf-13](assets/wf-13.png)
 
-1. Använd det här arbetsflödet på sidan så att när användaren flyttar till **Slutförd** den **Validera innehåll** kan de välja om de vill **Publicera sidan som begärd**, eller **Avvisa publiceringsbegäran**.
+1. Använd det här arbetsflödet på sidan så att när användaren flyttar till **Complete** den **Validera innehåll** kan de välja om de vill **Publicera sidan som begärd**, eller **Avvisa publiceringsbegäran**.
 
    ![chlimage_1-72](assets/chlimage_1-72.png)
 
@@ -416,7 +416,8 @@ Så här definierar du en OR-regel:
    * Definiera det här som **Standardflöde** genom att ange **Värde** till `true`.
 
    * Som **Regel**, anger sökvägen till skriptet. Till exempel:
-      `/apps/myapp/workflow/scripts/myscript1.ecma`
+     `/apps/myapp/workflow/scripts/myscript1.ecma`
+
    >[!NOTE]
    >
    >Du kan ändra grenordningen om det behövs.
@@ -424,7 +425,7 @@ Så här definierar du en OR-regel:
 1. Redigera egenskaperna för **Gren 2** i **ELLER Dela**.
 
    * Som **Regel**anger du sökvägen till det andra skriptet. Till exempel:
-      `/apps/myapp/workflow/scripts/myscript2.ecma`
+     `/apps/myapp/workflow/scripts/myscript2.ecma`
 
 1. Ange egenskaperna för de enskilda stegen i varje gren. Se till att **Användare/grupp** är inställt.
 1. Klicka **Synkronisera** (redigeringsverktygsfältet) för att behålla ändringarna i körningsmodellen.
@@ -460,4 +461,4 @@ function check() {
 
 Du kan anpassa alla färdiga arbetsflöden. Om du vill ha ett anpassat beteende lägger du över information om rätt arbetsflöde.
 
-Till exempel: **Aktiveringsbegäran**. Det här arbetsflödet används för att publicera sidor i **Webbplatser** och aktiveras automatiskt när en innehållsförfattare inte har rätt replikeringsbehörighet. Se [Anpassa sidredigering - Anpassa arbetsflödet för begäran om aktivering](/help/sites-developing/customizing-page-authoring-touch.md#customizing-the-request-for-activation-workflow) för mer information.
+Till exempel: **Ansökan om aktivering**. Det här arbetsflödet används för att publicera sidor i **Webbplatser** och aktiveras automatiskt när en innehållsförfattare inte har rätt replikeringsbehörighet. Se [Anpassa sidredigering - Anpassa arbetsflödet för begäran om aktivering](/help/sites-developing/customizing-page-authoring-touch.md#customizing-the-request-for-activation-workflow) för mer information.

@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: extending-aem
 content-type: reference
 exl-id: 90594588-db8e-4d4c-a208-22c1c6ea2a2d
-source-git-commit: a56d5121a6ce11b42a6c30dae9e479564d16af27
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '1340'
+source-wordcount: '1339'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ I Adobe Experience Manager (AEM) finns olika sätt att anpassa sidredigeringsfun
   Med Clientlibs kan du utöka standardimplementeringen för att få nya funktioner, samtidigt som du återanvänder standardfunktioner, objekt och standardmetoder. När du anpassar kan du skapa en egen klientlib under `/apps.` Den nya klientlib måste:
 
    * är beroende av redigeringsklientlib `cq.authoring.editor.sites.page`
-   * vara en del av `cq.authoring.editor.sites.page.hook` kategori
+   * ingå i lämplig `cq.authoring.editor.sites.page.hook` kategori
 
 * Övertäckningar
 
@@ -62,7 +62,7 @@ De kan användas på många sätt för att utöka sidredigeringsfunktionen i AEM
 
 ## Lägg till nytt lager (läge) {#add-new-layer-mode}
 
-När du redigerar en sida finns det olika [lägen](/help/sites-authoring/author-environment-tools.md#page-modes) tillgängliga. Dessa lägen implementeras med [lager](/help/sites-developing/touch-ui-structure.md#layer). Dessa ger åtkomst till olika typer av funktioner för samma sidinnehåll. Standardlagren är: redigera, förhandsgranska, kommentera, utveckla och målinrikta.
+När du redigerar en sida finns det olika [lägen](/help/sites-authoring/author-environment-tools.md#page-modes) tillgängliga. Dessa lägen implementeras med [lager](/help/sites-developing/touch-ui-structure.md#layer). Dessa ger åtkomst till olika typer av funktioner för samma sidinnehåll. Standardlagren är: redigera, förhandsgranska, kommentera, utvecklare och målinriktning.
 
 ### Exempel på lager: Live Copy-status {#layer-example-live-copy-status}
 
@@ -102,7 +102,7 @@ Koden för den här sidan finns på GitHub
 
 ## Filtreringsresurser {#filtering-resources}
 
-När användaren redigerar sidor måste han eller hon ofta välja bland resurser (till exempel sidor, komponenter och resurser). Detta kan vara en lista där författaren måste välja ett objekt.
+När användaren redigerar sidor måste han/hon ofta välja bland resurser (till exempel sidor, komponenter och resurser). Detta kan vara en lista där författaren måste välja ett objekt.
 
 För att hålla listan i en rimlig storlek och även relevant för användningsfallet kan ett filter implementeras i form av ett anpassat predikat. Om [`pathbrowser`](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/index.html) [Granit](/help/sites-developing/touch-ui-concepts.md#granite-ui) -komponenten används för att användaren ska kunna välja sökvägen till en viss resurs. Sökvägarna kan filtreras på följande sätt:
 
@@ -140,7 +140,7 @@ I en vanlig AEM-installation:
 
 1. `/libs/cq/gui/components/authoring/editors/clientlibs/core/js/editors/editorExample.js`
 
-   Innehåller definitioner av de olika redigeringsprogrammen som är tillgängliga.
+   Innehåller definitioner av de olika redigeringsprogrammen.
 
 1. Det finns en anslutning mellan redigeraren och varje resurstyp (som i komponenten) som kan använda den:
 
@@ -153,7 +153,7 @@ I en vanlig AEM-installation:
 
          * egenskap: `editorType`
 
-           Definierar vilken typ av infogad redigerare som används när redigeringen på plats aktiveras för den komponenten. till exempel `text`, `textimage`, `image`, `title`.
+           Definierar den typ av infogad redigerare som används när redigeringen på plats aktiveras för den komponenten, till exempel `text`, `textimage`, `image`, `title`.
 
 1. Ytterligare konfigurationsinformation om redigeraren kan konfigureras med en `config` nod som innehåller konfigurationer och en `plugin` nod som innehåller nödvändig konfigurationsinformation för plugin-programmet.
 
@@ -181,7 +181,7 @@ I en vanlig AEM-installation:
 
    >[!CAUTION]
    >
-   >AEM beskärningsproportioner, enligt inställningen i `ratio` egenskap, definieras som **höjd/bredd**. Detta skiljer sig från den vanliga definitionen av bredd/höjd och görs av kompatibilitetsskäl. Redigeringsanvändarna kommer inte att vara medvetna om några skillnader förutsatt att du definierar `name` egenskapen tydligt eftersom detta är vad som visas i användargränssnittet.
+   >AEM beskärningsproportioner, enligt inställningen i `ratio` egenskap, definieras som **höjd/bredd**. Detta skiljer sig från den vanliga definitionen av bredd/höjd och görs av bakåtkompatibilitetsskäl. Redigeringsanvändarna kommer inte att vara medvetna om några skillnader förutsatt att du definierar `name` egenskapen tydligt eftersom detta är vad som visas i användargränssnittet.
 
 #### Skapa en ny lokal redigerare {#creating-a-new-in-place-editor}
 
@@ -235,13 +235,13 @@ Koden för den här sidan finns på GitHub
 
 ## Anpassa arbetsflödet för begäran om aktivering {#customizing-the-request-for-activation-workflow}
 
-färdiga arbetsflöden, **Aktiveringsbegäran**:
+färdiga arbetsflöden, **Ansökan om aktivering**:
 
 * Visas automatiskt på rätt meny när en innehållsförfattare **har inte** rätt replikeringsrättigheter, men **har** medlemskap för DAM-användare och författare.
 
 * I annat fall visas ingenting eftersom replikeringsrättigheter har tagits bort.
 
-Om du vill ha ett anpassat beteende för en sådan aktivering kan du täcka över **Aktiveringsbegäran** arbetsflöde:
+Om du vill ha ett anpassat beteende för en sådan aktivering kan du täcka över **Ansökan om aktivering** arbetsflöde:
 
 1. I `/apps` överlägg **Webbplatser** guide:
 
@@ -249,9 +249,9 @@ Om du vill ha ett anpassat beteende för en sådan aktivering kan du täcka öve
 
    >[!NOTE]
    >
-   >Detta åsidosätter den vanliga förekomsten av:
+   >Själva den här åsidosätter den vanliga förekomsten av:
    >
    >`/libs/cq/gui/content/common/managepublicationwizard`
 
 1. Uppdatera [arbetsflödesmodell](/help/sites-developing/workflows-models.md) och relaterade konfigurationer/skript efter behov.
-1. Ta bort höger till [`replicate` åtgärd](/help/sites-administering/security.md#actions) från alla lämpliga användare för alla relevanta sidor, om du vill att det här arbetsflödet ska utlösas som en standardåtgärd när någon av användarna försöker publicera (eller replikera) en sida.
+1. Ta bort höger till [`replicate` åtgärd](/help/sites-administering/security.md#actions) från alla lämpliga användare för alla relevanta sidor, om arbetsflödet ska aktiveras som standardåtgärd när någon av användarna försöker publicera (eller replikera) en sida.

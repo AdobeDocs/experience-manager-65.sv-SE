@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: operations
 content-type: reference
 exl-id: f82391d7-e30d-48d2-8f66-88fcae3dfb5f
-source-git-commit: e9f64722ba7df0a7f43aaf1005161483e04142f5
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '2068'
+source-wordcount: '2067'
 ht-degree: 1%
 
 ---
@@ -38,27 +38,27 @@ Standardkonfigurationerna är:
 
 * **Sidredigeraren (dokumentsökning):**
 
-  Den här konfigurationen definierar de alternativ som är tillgängliga när du söker efter dokument i resursläsaren (när du redigerar en sida).
+  Den här konfigurationen definierar de alternativ som är tillgängliga vid sökning efter dokument i resursläsaren (när en sida redigeras).
 
 * **Sidredigeraren (bildsökning):**
 
-  Den här konfigurationen definierar de alternativ som är tillgängliga när du söker efter bilder i resursläsaren (när du redigerar en sida).
+  Den här konfigurationen definierar de alternativ som är tillgängliga vid sökning efter bilder i resursläsaren (när en sida redigeras).
 
 * **Page Editor (Manuscript search):**
 
-  Den här konfigurationen definierar de alternativ som är tillgängliga när du söker efter manuskript i resursläsaren (när du redigerar en sida).
+  Den här konfigurationen definierar de alternativ som är tillgängliga vid sökning efter manuskript i resursläsaren (när en sida redigeras).
 
 * **Sidredigeraren (sidsökning):**
 
-  Den här konfigurationen definierar de alternativ som är tillgängliga när du söker efter sidor i resursläsaren (när du redigerar en sida).
+  Den här konfigurationen definierar de alternativ som är tillgängliga vid sökning efter sidor i resursläsaren (när en sida redigeras).
 
 * **Page Editor (Styckesökning):**
 
-  Den här konfigurationen definierar de alternativ som är tillgängliga när du söker efter stycken i resursläsaren (när du redigerar en sida).
+  Den här konfigurationen definierar de alternativ som är tillgängliga vid sökning efter stycken i resursläsaren (när en sida redigeras).
 
 * **Page Editor (produktsökning):**
 
-  Den här konfigurationen definierar de alternativ som är tillgängliga när du söker efter produkter i resursläsaren (när du redigerar en sida).
+  Den här konfigurationen definierar de alternativ som är tillgängliga vid sökning efter produkter i resursläsaren (när en sida redigeras).
 
 * **Page Editor (Dynamic Media Classic [tidigare Scene7] sök)**:
 
@@ -70,7 +70,7 @@ Standardkonfigurationerna är:
 
 * **Sidredigeraren (videosökning):**
 
-  Den här konfigurationen definierar de alternativ som är tillgängliga när du söker efter videoklipp i resursläsaren (när du redigerar en sida).
+  Den här konfigurationen definierar de alternativ som är tillgängliga när du söker efter videofilmer i resursläsaren (när du redigerar en sida).
 
 * **Resursadministratörssökväg:**
 
@@ -358,7 +358,7 @@ Beroende på predikatet finns ett urval av inställningar tillgängliga för kon
 
   Egenskapen som ska genomsökas. Den använder en relativ sökväg och jokertecknen `*/*/*` ange egenskapens djup i förhållande till `jcr:content` nod (varje asterisk representerar en nodnivå).
 
-  Om du bara vill söka på en underordnad nod på första nivån för resursen som har `x` på `jcr:content` nod `*/jcr:content/x`
+  Om du bara vill söka på en underordnad nod på första nivån för resursen som har `x` -egenskapen på `jcr:content` nod använder `*/jcr:content/x`
 
 * **Egenskapsdjup**
 
@@ -366,7 +366,7 @@ Beroende på predikatet finns ett urval av inställningar tillgängliga för kon
 
 * **Egenskapsvärde**
 
-  Egenskapsvärdet som en absolut sträng eller som ett uttrycksspråk. till exempel `cq:Page` eller
+  Egenskapsvärdet som en absolut sträng eller som ett uttrycksspråk, till exempel `cq:Page` eller
 
   `${empty requestPathInfo.suffix ? "/content" : requestPathInfo.suffix}`.
 
@@ -389,9 +389,9 @@ I praktiken samma som **Sökväg till alternativ**, det är bara det här som fi
 Om det här alternativet är markerat återges alternativen som kryssrutor som bara tillåter ett urval. Om du av misstag markerar kryssrutan kan den avmarkeras.
 
 * **Egenskapsnamn för Publicera och Live-kopia**
-Etiketterna för publicerings- och Live copy-kryssrutorna för det platsspecifika predikatet.
+Etiketterna för publicerings- och Live copy-kryssrutorna för platsspecifika predikat.
 
-* &amp;Sista; på fältetiketterna i **Inställningar** -fliken betyder att fälten är obligatoriska och om de lämnas tomma visas ett felmeddelande
+* Det &amp;sista; på fältetiketterna i **Inställningar** -fliken betyder att fälten är obligatoriska och om de lämnas tomma visas ett felmeddelande
 
 ## Konfigurera din sökning i Forms {#configuring-your-search-forms}
 
@@ -400,7 +400,7 @@ Etiketterna för publicerings- och Live copy-kryssrutorna för det platsspecifik
 1. Navigera till **verktyg** >>  **Allmänt** >> **Sök i Forms**.
 
 1. Välj den konfiguration som du vill anpassa.
-1. Använd **Redigera** om du vill öppna konfigurationen för uppdatering.
+1. Använd **Redigera** -ikonen för att öppna konfigurationen för uppdatering.
 1. Om du gör en ny anpassning vill du antagligen [lägga till nya predikatfält och definiera inställningarna](#add-edit-a-predicate-field-and-define-field-settings) efter behov. Om en befintlig anpassning finns kan du välja ett befintligt fält och [uppdatera inställningarna](#add-edit-a-predicate-field-and-define-field-settings).
 1. Välj **Klar** för att spara konfigurationen.
 
@@ -434,7 +434,7 @@ Du kan lägga till eller redigera fält och definiera/uppdatera deras inställni
 
    ![Egenskaper för predikat för datumintervall](assets/chlimage_1-376.png)
 
-1. Gör önskade ändringar och bekräfta med **Klar**.
+1. Gör dina ändringar efter behov och bekräfta med **Klar**.
 
 ### Förhandsgranska sökkonfigurationen {#previewing-the-search-configuration}
 
@@ -477,7 +477,7 @@ En anpassad konfiguration tas bort från konsolen:
 
 ### Förutsägelser för tillägg av alternativ {#adding-options-predicates}
 
-Alternativpredikat (Alternativ, Alternativ-egenskap) gör att du kan konfigurera ett objekt som du vill söka efter. De används vanligtvis för att söka efter något direkt under sidan. till exempel en egenskap på sidnoden.
+Alternativpredikat (Alternativ, Alternativ-egenskap) gör att du kan konfigurera ett objekt som du vill söka efter. De används vanligtvis för att söka efter något direkt under sidan, till exempel en egenskap på sidnoden.
 
 I följande exempel (som används för att söka efter mallen som används för att skapa en sida) visas stegen som ingår:
 
@@ -494,9 +494,9 @@ I följande exempel (som används för att söka efter mallen som används för 
 
    >[!NOTE]
    >
-   >Du ***måste*** ändrar ingenting i `/libs` bana.
+   >Du ***måste*** ändrar ingenting i dialogrutan `/libs` bana.
    >
-   >Detta beror på innehållet i `/libs` skrivs över nästa gång du uppgraderar din instans (och kan mycket väl skrivas över när du använder en snabbkorrigering eller ett funktionspaket).
+   >Detta beror på innehållet i `/libs` skrivs över nästa gång du uppgraderar din instans (och kan mycket väl skrivas över när du installerar en snabbkorrigering eller ett funktionspaket).
    >
    >Den rekommenderade metoden för konfiguration och andra ändringar är:
    >
@@ -506,7 +506,7 @@ I följande exempel (som används för att söka efter mallen som används för 
 
 1. Öppna **Sök i Forms** och välj den konfiguration som du vill uppdatera. Till exempel: **Webbplatsadministratörens sökväg**.
 
-   Klicka/tryck sedan på **Redigera sökformulär** ikon.
+   Klicka/tryck sedan på **Redigera sökformulär** -ikon.
 
 1. Beroende på konfigurationen lägger du till en **Alternativ** eller **Alternativ, egenskap** till konfigurationen.
 1. Uppdatera fälten, särskilt:

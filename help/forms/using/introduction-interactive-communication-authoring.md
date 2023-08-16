@@ -1,7 +1,7 @@
 ---
 title: Introduktion till gränssnittet för utveckling av interaktiv kommunikation
 seo-title: An introduction to the various user interface elements you can use to author Interactive Communication
-description: En introduktion till de olika elementen i användargränssnittet som du kan använda för att skapa interaktiv kommunikation
+description: En introduktion till olika element i användargränssnittet som du kan använda för att skapa interaktiv kommunikation
 seo-description: An introduction to the various user interface elements you can use to author Interactive Communication
 uuid: e8c5b1e8-b2bb-46b4-b42e-1f343192641a
 content-type: reference
@@ -11,9 +11,9 @@ discoiquuid: 5855d21b-340c-4139-aabe-c3a534cedb98
 docset: aem65
 feature: Interactive Communication
 exl-id: 3d15a723-df6c-4b4a-992e-a6636f4cf3dc
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '1315'
+source-wordcount: '1312'
 ht-degree: 0%
 
 ---
@@ -40,7 +40,7 @@ När du [skapa en ny eller redigera en befintlig interaktiv kommunikation](../..
 
 ![Sidebar](assets/sidebar-comps-2.png)
 
-**S.** Kanalwebbläsare **B.** Innehållsläsare **C.** Egenskapswebbläsaren **D.** Resursläsare **E.** Komponentwebbläsare **F.** Webbläsaren Datakällor - datamodell **G.** Webbläsaren Datakällor - Överordnad innehåll
+**S.** Kanalwebbläsare **B.** Innehållsläsare **C.** Egenskapswebbläsaren **D.** Resursläsare **E.** Komponentwebbläsare **F.** Webbläsaren Datakällor - datamodell **G.** Webbläsaren Datakällor - Huvudinnehåll
 
 <!-- Click to enlarge
 
@@ -57,7 +57,7 @@ I innehållsläsaren kan du se dokumentets objekthierarki för den valda kanalen
 
 * **Egenskapswebbläsaren**
 
-   Gör att du kan redigera egenskaperna för en komponent. Egenskaperna ändras beroende på komponenten. Om du till exempel vill se egenskaper för dokumentbehållaren: Markera en komponent och tryck sedan på ![fältnivå](assets/field-level.png) > **Dokumentbehållare** och sedan trycka ![cmppr](assets/cmppr.png).
+  Gör att du kan redigera egenskaperna för en komponent. Egenskaperna ändras beroende på komponenten. Om du till exempel vill visa egenskaper för dokumentbehållaren markerar du en komponent och trycker sedan ![fältnivå](assets/field-level.png) > **Dokumentbehållare** och sedan trycka ![cmppr](assets/cmppr.png).
 
 * **Resursläsaren**
 Segmenterar olika typer av innehåll, t.ex. layoutfragment, bilder, dokument, sidor, videor. Författaren kan dra och släppa material i den interaktiva kommunikationen.
@@ -69,7 +69,7 @@ Innehåller komponenter som du kan använda för att skapa utskrifts- och webbka
 |---|---|---|---|
 | Diagram | ✓ | ✓ | Lägger till ett diagram som du kan använda i en interaktiv kommunikation för visuell representation av tvådimensionella data som hämtats från ett objekt i en datamodell för formulär. |
 | Dokumentfragment | ✓ | ✓ | Gör att du kan lägga till en återanvändbar komponent, text, lista eller villkor i en interaktiv kommunikation. Den återanvändbara komponenten som du lägger till i en interaktiv kommunikation kan antingen vara modellbaserad i form av formulärdata eller utan någon formulärdatamodell. |
-| Bild | ✓ | ✓ | Gör att du kan infoga en bild. |
+| Bild | ✓ | ✓ | Infoga en bild. |
 | Panel | - | ✓ | Panelkomponenten är en platshållare för att gruppera andra komponenter och styr hur en grupp med komponenter placeras i ett interaktivt meddelande. Med en panelkomponent kan du också göra en grupp komponenter repeterbara för slutanvändaren, t.ex. i flera poster som krävs för att fylla i inloggningsuppgifter. Det är också bra att använda en panel var för en flik i en interaktiv kommunikation med flera flikar. |
 | Tabell | &#42; | ✓ | Lägger till en tabell där du kan ordna data i rader och kolumner. |
 | Målområde | &#42;&#42; | ✓ | Infogar ett målområde i en webbkanal för att ordna de webbkanalsspecifika komponenterna. |
@@ -107,9 +107,9 @@ B.**Redigera regler**: När du trycker på Redigera regler visas Regelredigerare
 
 C.**Kopiera**: Du kan använda kopieringsalternativet för att kopiera en komponent och klistra in den på andra platser i den interaktiva kommunikationen.
 
-D.**Klipp ut**: Du kan använda alternativet Klipp ut för att flytta en komponent från en plats till en annan i den interaktiva kommunikationen.
+D.**Klipp ut**: Du kan använda alternativet cut för att flytta en komponent från en plats till en annan i den interaktiva kommunikationen.
 
-E. **Ta bort**: Gör att du kan ta bort komponenten från den interaktiva kommunikationen.
+E. **Ta bort**: Du kan ta bort komponenten från den interaktiva kommunikationen.
 
 F. **Infoga komponent**: Gör att du kan infoga en komponent ovanför den markerade komponenten.
 
@@ -117,11 +117,11 @@ G. **Klistra in**: Gör att du kan klistra in komponenten som du klipper ut elle
 
 H. **Grupp**: Gör att du kan markera flera komponenter om du vill klippa ut, kopiera eller klistra in mer än en komponent tillsammans.
 
-Jag. **Överordnad**: Gör att du kan välja en komponents överordnade.
+Jag. **Överordnad**: Gör att du kan välja överordnad för en komponent.
 
 J. **Visa SOM-uttryck:** Här kan du visa [SOM-uttryck](../../forms/using/using-som-expressions-adaptive-forms.md) för komponenten.
 
-K: **Gruppera objekt i panelen:** Gör att du kan gruppera komponenterna på en panel för att kunna utföra åtgärder på dessa komponenter samtidigt. Mer information finns i [Gruppera objekt i panelen](create-interactive-communication.md#groupobjectspanel).
+K: **Gruppera objekt i panelen:** Gör att du kan gruppera komponenterna på en panel så att du kan utföra åtgärder på dessa komponenter samtidigt. Mer information finns i [Gruppera objekt i panelen](create-interactive-communication.md#groupobjectspanel).
 
 L. **Lägg till underordnad panel** (endast för paneler): Gör att du kan lägga till en underordnad panel på panelen.
 
@@ -133,18 +133,18 @@ Dessutom är **Ersätt** kan du ersätta den befintliga komponenten med en alter
 
 Verktygsfältet Sida överst innehåller alternativ som gör att du kan förhandsgranska den interaktiva kommunikationen och ändra dess egenskaper. Du kan förhandsgranska den interaktiva kommunikationen när du redigerar den och göra ändringar i den. I verktygsfältet visas:
 
-* Växla sidopanel ![växlingspanel](assets/toggle-side-panel.png): Här kan du visa eller dölja sidofältet.
+* Växla sidopanel ![växlingspanel](assets/toggle-side-panel.png): Visa eller dölj sidofältet.
 * Sidinformation ![pageinformationad](assets/pageinformationad.png): Här kan du visa sidegenskaper.
-* Emulator ![linjal](assets/ruler.png): Gör att du kan emulera utseendet i din interaktiva kommunikation för olika visningsstorlekar, som surfplattor och telefoner.
-* Redigera: Här kan du välja andra lägen, till exempel: Redigera, Formatera, Utvecklare och Design.
+* Emulator ![linjal](assets/ruler.png): Gör att du kan emulera utseendet i din interaktiva kommunikation för olika visningsstorlekar, till exempel surfplattor och telefoner.
+* Redigera: Här kan du välja andra lägen, t.ex. Redigera, Format, Utvecklare och Design.
 
    * Redigera: Här kan du redigera egenskaperna för den interaktiva kommunikationen och dess komponenter. Du kan till exempel lägga till en komponent, släppa en bild och ange obligatoriska fält.
-   * Format: Gör att du kan formatera komponenterna i din interaktiva kommunikation. I stilläge kan du till exempel markera en panel och ange dess bakgrundsfärg.
-   * Utvecklare: Låter en utvecklare:
+   * Stil: Gör att du kan formatera utseendet på komponenterna i din interaktiva kommunikation. I stilläge kan du till exempel markera en panel och ange dess bakgrundsfärg.
+   * Utvecklare: Gör att en utvecklare kan:
 
       * Upptäck vad interaktiv kommunikation består av.
       * Felsök vad som händer var och när, vilket i sin tur hjälper till att lösa problem.
+
    * Mål: Gör att du kan aktivera eller inaktivera anpassade komponenter eller komponenter som inte finns med i sidofältet.
 
-
-* Förhandsgranska: Här kan du förhandsgranska hur den interaktiva kommunikationen ser ut när du publicerar den.
+* Förhandsgranska: Du kan förhandsgranska hur den interaktiva kommunikationen ser ut när du publicerar den.

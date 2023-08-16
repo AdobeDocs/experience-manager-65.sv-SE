@@ -3,9 +3,9 @@ title: AEM GraphQL API för användning med innehållsfragment
 description: Lär dig hur du använder innehållsfragment i Adobe Experience Manager (AEM) med AEM GraphQL API för leverans av headless-innehåll.
 feature: Content Fragments,GraphQL API
 exl-id: beae1f1f-0a76-4186-9e58-9cab8de4236d
-source-git-commit: 1481d613783089046b44d4652d38f7b4b16acc4d
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '4479'
+source-wordcount: '4477'
 ht-degree: 0%
 
 ---
@@ -29,26 +29,25 @@ Genom att använda GraphQL API i AEM kan du effektivt leverera innehållsfragmen
 >* [AEM Commerce använder data från en Commerce-plattform via GraphQL](/help/commerce/cif/integrating/magento.md).
 >* AEM Content Fragments fungerar tillsammans med det AEM GraphQL-API:t (en anpassad implementering som baseras på standard-GraphQL) för att leverera strukturerat innehåll som kan användas i dina program.
 
-
 ## Förutsättningar {#prerequisites}
 
 Kunder som använder GraphQL bör installera AEM Content Fragment med GraphQL Index Package 1.0.5. Se [Versionsinformation](/help/release-notes/release-notes.md#install-aem-graphql-index-add-on-package) för mer information.
 
-## GraphQL API {#graphql-api}
+## GRAPHQL API {#graphql-api}
 
 GraphQL är:
 
 * &quot;*...ett frågespråk för API:er och en körningsmiljö för att utföra dessa frågor med dina befintliga data. GraphQL ger en fullständig och begriplig beskrivning av data i ditt API. Det ger kunderna möjlighet att fråga efter exakt vad de behöver och ingenting mer, gör det enklare att utveckla API:er över tid och möjliggör kraftfulla utvecklingsverktyg.*&quot;.
 
-   Se [GraphQL.org](https://graphql.org)
+  Se [GraphQL.org](https://graphql.org)
 
-* &quot;*...en öppen specifikation för ett flexibelt API-lager. Placera GraphQL över era befintliga backend-system så att ni kan skapa produkter snabbare än någonsin....*&quot;.
+* &quot;*...en öppen specifikation för ett flexibelt API-lager. Placera GraphQL över era befintliga backend-system så att ni kan skapa produkter snabbare än någonsin ...*&quot;.
 
-   Se [Utforska GraphQL](https://graphql.com/).
+  Se [Utforska GraphQL](https://graphql.com/).
 
-* *&quot;...ett datameddelande och en specifikation som utvecklats internt av Facebook 2012 innan man började använda öppen källkod 2015. Det är ett alternativ till REST-baserade arkitekturer i syfte att öka utvecklarnas produktivitet och minimera mängden data som överförs. GraphQL används i produktionen av hundratals organisationer av alla storlekar..&quot;*
+* *&quot;... ett språk och en specifikation för datafrågor som utvecklats internt av Facebook under 2012 innan man började använda öppen källkod 2015. Det är ett alternativ till REST-baserade arkitekturer i syfte att öka utvecklarnas produktivitet och minimera mängden data som överförs. GraphQL används i produktionen av hundratals organisationer av alla storlekar..&quot;*
 
-   Se [GraphQL Foundation](https://graphql.org/foundation).
+  Se [GraphQL Foundation](https://graphql.org/foundation).
 
 <!--
 "*Explore GraphQL is maintained by the Apollo team. Our goal is to give developers and technical leaders around the world all of the tools they need to understand and adopt GraphQL.*". 
@@ -97,7 +96,7 @@ Se [(GraphQL.org) Introduktion till GraphQL](https://graphql.org/learn/) för ut
 
 Med GraphQL kan du utföra frågor för att returnera:
 
-* A **enkel inmatning**
+* A **enkel post**
 
 * A **[lista över poster](https://graphql.org/learn/schema/#lists-and-non-null)**
 
@@ -107,13 +106,13 @@ AEM innehåller funktioner för att konvertera frågor (båda typerna) till [Bes
 
 The [Beständiga frågor](/help/sites-developing/headless/graphql-api/persisted-queries.md) är den rekommenderade metod som ska användas för publiceringsinstanser som:
 
-* de cachelagras
+* de är cachelagrade
 * de hanteras centralt av AEM
 
 <!-- is this fully accurate? -->
 >[!NOTE]
 >
->Vanligtvis finns det ingen dispatcher/CDN på författaren, så det blir ingen prestandavinst att använda beständiga frågor där. förutom att testa dem.
+>Vanligtvis finns det ingen dispatcher/CDN på författaren, så det blir ingen prestandavinst att använda beständiga frågor där, förutom att testa dem.
 
 GraphQL-frågor som använder förfrågningar om POST rekommenderas inte eftersom de inte cachelagras, så i en standardinstans är Dispatcher konfigurerad att blockera sådana frågor.
 
@@ -151,10 +150,10 @@ Den innehåller funktioner som syntaxmarkering, automatisk komplettering, autof�
 
 Användningsexemplen kan bero på vilken typ av AEM som används:
 
-* Publiceringsmiljö. används för att:
+* Publiceringsmiljö; används för att:
    * Frågedata för JS-program (standardfall)
 
-* Författarmiljö; används för att:
+* Författarmiljö, används för att:
    * Fråga efter data för&quot;innehållshanteringssyften&quot;:
       * GraphQL i AEM är ett skrivskyddat API.
       * REST API kan användas för CR(u)D-åtgärder.
@@ -194,11 +193,11 @@ Om en användare till exempel har skapat en innehållsfragmentmodell som kallas 
 
    * Tre av dem har kontrollerats av användaren: `author`, `main`och `referencearticle`.
 
-   * De andra fälten lades till automatiskt av AEM och representerar användbara metoder för att tillhandahålla information om ett visst innehållsfragment. I det här exemplet [hjälpfält](#helper-fields)) `_path`, `_metadata`, `_variations`.
+   * De andra fälten lades till automatiskt av AEM och representerar användbara metoder för att tillhandahålla information om ett visst innehållsfragment. I detta exempel [hjälpfält](#helper-fields)) `_path`, `_metadata`, `_variations`.
 
 1. När en användare har skapat ett innehållsfragment baserat på artikelmodellen kan det sedan förhöras via GraphQL. Mer information finns i [Exempelfrågor](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md#graphql-sample-queries) (baserat på [exempelstruktur för innehållsfragment för användning med GraphQL](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md#content-fragment-structure-graphql)).
 
-I GraphQL for AEM är schemat flexibelt. Den här flexibiliteten innebär att den genereras automatiskt varje gång en innehållsfragmentmodell skapas, uppdateras eller tas bort. Cacheminnen för dataschemat uppdateras också när du uppdaterar en innehållsfragmentmodell.
+I GraphQL for AEM är schemat flexibelt. Denna flexibilitet innebär att den genereras automatiskt varje gång en innehållsfragmentmodell skapas, uppdateras eller tas bort. Cacheminnen för dataschemat uppdateras också när du uppdaterar en innehållsfragmentmodell.
 
 Tjänsten Sites GraphQL avlyssnar (i bakgrunden) alla ändringar som görs i en innehållsfragmentmodell. När uppdateringar upptäcks återskapas endast den delen av schemat. Denna optimering sparar tid och ger stabilitet.
 
@@ -236,13 +235,13 @@ Inom schemat finns det enskilda fält av två baskategorier:
 
 * Fält som du genererar.
 
-   Ett urval av [Datatyper](#data-types) används för att skapa fält baserat på hur du konfigurerar innehållsfragmentmodellen. Fältnamnen hämtas från **Egenskapsnamn** fält för **Datatyp**.
+  Ett urval av [Datatyper](#data-types) används för att skapa fält baserat på hur du konfigurerar innehållsfragmentmodellen. Fältnamnen hämtas från **Egenskapsnamn** fält för **Datatyp**.
 
    * Det finns också **Återge som** inställningar som ska beaktas, eftersom användare kan konfigurera vissa datatyper. Ett textfält med en rad kan till exempel konfigureras att innehålla flera enkelradiga texter genom att välja `multifield` i listrutan.
 
 * GraphQL för AEM genererar också flera [hjälpfält](#helper-fields).
 
-   Dessa fält används för att identifiera ett innehållsfragment eller för att få mer information om ett innehållsfragment.
+  Dessa fält används för att identifiera ett innehållsfragment eller för att få mer information om ett innehållsfragment.
 
 ### Datatyper {#data-types}
 
@@ -264,7 +263,7 @@ GraphQL för AEM har stöd för en lista med typer. Alla Content Fragment Model-
 
 ### Hjälpfält {#helper-fields}
 
-Förutom datatyperna för användargenererade fält genererar GraphQL för AEM även flera *hjälpare* fält för att hjälpa till att identifiera ett innehållsfragment eller för att ge ytterligare information om ett innehållsfragment.
+Förutom datatyperna för användargenererade fält genererar GraphQL för AEM även flera *hjälpare* fält som hjälper dig att identifiera ett innehållsfragment eller att ge mer information om ett innehållsfragment.
 
 Dessa [hjälpfält](#helper-fields) markeras med föregående `_` för att skilja mellan vad som har definierats av användaren och vad som har genererats automatiskt.
 
@@ -376,13 +375,13 @@ The `_variations` -fältet har implementerats för att förenkla frågor om vari
 
 >[!NOTE]
 >
->The `_variations` fältet innehåller inte `master` variation, som tekniskt sett originaldata (refereras som *Överordnad* i användargränssnittet) inte betraktas som en explicit variation.
+>The `_variations` fältet innehåller inte `master` variation, som tekniskt sett originaldata (refereras som *Master* i användargränssnittet) inte betraktas som en explicit variation.
 
 Se [Exempelfråga - Alla städer med en namngiven variant](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md#sample-cities-named-variation).
 
 >[!NOTE]
 >
->Om den angivna varianten inte finns för ett innehållsfragment returneras originaldata (kallas även för den överordnad variationen) som standard (fallback).
+>Om den angivna variationen inte finns för ett innehållsfragment returneras originaldata (kallas även huvudvariant) som ett (reservformat) standardvärde.
 
 <!--
 ## Security Considerations {#security-considerations}
@@ -414,13 +413,13 @@ query GetArticlesByVariation($variation: String!) {
 }
 ```
 
-## GraphQL-direktiv {#graphql-directives}
+## GraphQL Direktiv {#graphql-directives}
 
 I GraphQL finns det en möjlighet att ändra frågan baserat på variabler, så kallade GraphQL-direktiv.
 
-Du kan till exempel inkludera `adventurePrice` fält i en fråga för alla `AdventureModels`, baserat på en variabel `includePrice`.
+Du kan t.ex. inkludera `adventurePrice` fält i en fråga för alla `AdventureModels`, baserat på en variabel `includePrice`.
 
-![GraphQL-direktiv](assets/cfm-graphqlapi-04.png "GraphQL-direktiv")
+![GraphQL Direktiv](assets/cfm-graphqlapi-04.png "GraphQL Direktiv")
 
 ```graphql
 ### query
@@ -460,22 +459,22 @@ Följande operatorer kan användas för att jämföra fält med ett visst värde
 
 | Operator | Typer | Uttrycket lyckas om ... |
 |--- |--- |--- |
-| `EQUALS` | `String`, `ID`, `Boolean` | ... värdet är detsamma som fältets innehåll |
+| `EQUALS` | `String`, `ID`, `Boolean` | ... värdet är detsamma som innehållet i fältet |
 | `EQUALS_NOT` | `String`, `ID` | ... värdet är *not* samma som fältets innehåll |
 | `CONTAINS` | `String` | ... innehållet i fältet innehåller värdet (`{ value: "mas", _op: CONTAINS }` matchar `Christmas`, `Xmas`, `master`, ...) |
 | `CONTAINS_NOT` | `String` | ... fältets innehåll *not* innehåller värdet |
 | `STARTS_WITH` | `ID` | ... ID:t börjar med ett visst värde (`{ value: "/content/dam/", _op: STARTS_WITH` matchar `/content/dam/path/to/fragment`, men inte `/namespace/content/dam/something` |
-| `EQUAL` | `Int`, `Float` | ... värdet är detsamma som fältets innehåll |
+| `EQUAL` | `Int`, `Float` | ... värdet är detsamma som innehållet i fältet |
 | `UNEQUAL` | `Int`, `Float` | ... värdet är *not* samma som fältets innehåll |
-| `GREATER` | `Int`, `Float` | ... innehållet i fältet är större än värdet |
-| `GREATER_EQUAL` | `Int`, `Float` | ... innehållet i fältet är större än eller lika med värdet |
-| `LOWER` | `Int`, `Float` | ... innehållet i fältet är lägre än värdet |
-| `LOWER_EQUAL` | `Int`, `Float` | ... innehållet i fältet är mindre än eller lika med värdet |
+| `GREATER` | `Int`, `Float` | ... fältets innehåll är större än värdet |
+| `GREATER_EQUAL` | `Int`, `Float` | ... fältets innehåll är större än eller lika med värdet |
+| `LOWER` | `Int`, `Float` | ... fältets innehåll är lägre än värdet |
+| `LOWER_EQUAL` | `Int`, `Float` | ... fältets innehåll är lägre än eller lika med värdet |
 | `AT` | `Calendar`, `Date`, `Time` | ... fältets innehåll är detsamma som värdet (inklusive tidszonsinställning) |
-| `NOT_AT` | `Calendar`, `Date`, `Time` | ... innehållet i fältet är *not* samma som värdet |
-| `BEFORE` | `Calendar`, `Date`, `Time` | ... den tidpunkt som anges av värdet är före den tidpunkt som anges av fältets innehåll |
+| `NOT_AT` | `Calendar`, `Date`, `Time` | ... fältets innehåll är *not* samma som värdet |
+| `BEFORE` | `Calendar`, `Date`, `Time` | ... den tidpunkt som anges av värdet ligger före den tidpunkt som anges av fältets innehåll |
 | `AT_OR_BEFORE` | `Calendar`, `Date`, `Time` | ... den tidpunkt som anges av värdet är före eller vid samma tidpunkt som anges av fältets innehåll |
-| `AFTER` | `Calendar`, `Date`, `Time` | ... den tidpunkt som anges av värdet är efter den tidpunkt som anges av fältets innehåll |
+| `AFTER` | `Calendar`, `Date`, `Time` | ... tidpunkten som anges av värdet är efter tidpunkten som anges av fältets innehåll |
 | `AT_OR_AFTER` | `Calendar`, `Date`, `Time` | ... den tidpunkt som anges av värdet är efter eller vid samma tidpunkt som anges av fältets innehåll |
 
 I vissa typer kan du även ange ytterligare alternativ som ändrar hur ett uttryck utvärderas:
@@ -483,7 +482,7 @@ I vissa typer kan du även ange ytterligare alternativ som ändrar hur ett uttry
 | Alternativ | Typer | Beskrivning |
 |--- |--- |--- |
 | `_ignoreCase` | `String` | Ignorerar skiftläget för en sträng, till exempel värdet `time` matchar `TIME`, `time`, `tImE`, ... |
-| `_sensitiveness` | `Float` | Tillåter en viss marginal för `float` värden som ska anses vara desamma (för att kringgå tekniska begränsningar på grund av den interna representationen av `float` Värden. bör undvikas eftersom detta alternativ kan ha en negativ inverkan på prestandan |
+| `_sensitiveness` | `Float` | Tillåter en viss marginal för `float` värden som ska anses vara desamma (för att kringgå tekniska begränsningar på grund av den interna representationen av `float` värden; bör undvikas eftersom detta alternativ kan ha en negativ inverkan på prestandan |
 
 Uttryck kan kombineras till en uppsättning med hjälp av en logisk operator (`_logOp`):
 
@@ -495,7 +494,7 @@ Varje fält kan filtreras med en egen uppsättning uttryck. Uttrycksuppsättning
 En filterdefinition (skickas som `filter` argument till en fråga) innehåller:
 
 * En underdefinition för varje fält (fältet kan nås via namnet, till exempel finns det en `lastName` i filtret för `lastName` i fältet Data (fälttyp)
-* Varje underdefinition innehåller `_expressions` -array som innehåller uttrycksuppsättningen och `_logOp` fält som definierar den logiska operatorn ska uttrycken kombineras med
+* Varje underdefinition innehåller `_expressions` -array, som innehåller uttrycksuppsättningen och `_logOp` fält som definierar den logiska operatorn ska uttrycken kombineras med
 * Varje uttryck definieras av värdet (`value` fält) och operatorn (`_operator` fält) innehållet i ett fält ska jämföras med
 
 Du kan utesluta `_logOp` om du vill kombinera objekt med `AND` och `_operator` om du vill kontrollera om de är lika, eftersom dessa värden är standardvärden.
@@ -531,7 +530,7 @@ Du kan även filtrera efter kapslade fält, men det rekommenderas inte eftersom 
 
 Ytterligare exempel finns i:
 
-* information om [GraphQL för AEM tillägg](#graphql-extensions)
+* information om [GraphQL for AEM extensions](#graphql-extensions)
 
 * [Exempelfrågor med detta exempelinnehåll och -struktur](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md#graphql-sample-queries-sample-content-fragment-structure)
 
@@ -545,7 +544,7 @@ Ytterligare exempel finns i:
 >
 >För bästa prestanda bör du tänka på [Uppdatera dina innehållsfragment för sidindelning och sortering i GraphQL-filtrering](/help/sites-developing/headless/graphql-api/graphql-optimized-filtering-content-update.md).
 
-Med den här funktionen kan du sortera frågeresultaten efter ett angivet fält.
+Med den här funktionen kan du sortera frågeresultaten enligt ett angivet fält.
 
 Sorteringskriterierna:
 
@@ -555,8 +554,8 @@ Sorteringskriterierna:
       * det tredje fältet används om de första två kriterierna är lika, och så vidare.
    * punktnotation, t.ex. field1.subfield.subfield och så vidare...
 * med valfri orderriktning
-   * ASC (stigande) eller DESC (fallande). som standard används ASC
-   * Riktningen kan anges per fält. den här funktionen innebär att du kan sortera ett fält i stigande ordning och ett annat i fallande ordning (name, firstName DESC)
+   * ASC (stigande) eller DESC (fallande); som standard används ASC
+   * riktningen kan anges per fält. Det innebär att du kan sortera ett fält i stigande ordning och ett annat i fallande ordning (namn, firstName DESC)
 
 Till exempel:
 
@@ -624,7 +623,7 @@ Med den här funktionen kan du utföra sidindelning på frågetyper som returner
 I en `...List`fråga som du kan använda `offset` och `limit` om du vill returnera en viss delmängd av resultaten:
 
 * `offset`: Anger den första datauppsättningen som ska returneras
-* `limit`: Anger det maximala antalet datauppsättningar som ska returneras
+* `limit`: Anger maximalt antal datauppsättningar som ska returneras
 
 Om du till exempel vill visa en resultatsida som innehåller upp till fem artiklar, med början från den femte artikeln från *complete* resultatlista:
 
@@ -647,21 +646,20 @@ query {
 
 >[!NOTE]
 >
->* Sidindelning kräver en stabil sorteringsordning för att fungera korrekt i flera frågor som begär olika sidor i samma resultatuppsättning. Som standard används databassökvägen för varje objekt i resultatuppsättningen för att säkerställa att ordningen alltid är densamma. Om en annan sorteringsordning används, och om sorteringen inte kan göras på JCR-frågenivå, så har resultatet en negativ inverkan. Orsaken är att hela resultatuppsättningen måste läsas in i minnet innan sidorna bestäms.
+>* Sidindelning kräver en stabil sorteringsordning för att fungera korrekt i flera frågor som begär olika sidor i samma resultatuppsättning. Som standard används databassökvägen för varje objekt i resultatuppsättningen för att säkerställa att ordningen alltid är densamma. Om en annan sorteringsordning används, och om sorteringen inte kan göras på JCR-frågenivå, så har resultatet en negativ effekt. Orsaken är att hela resultatuppsättningen måste läsas in i minnet innan sidorna bestäms.
 >
 >* Ju högre förskjutning, desto längre tid tar det att hoppa över objekten från den fullständiga JCR-frågeresultatuppsättningen. En alternativ lösning för stora resultatuppsättningar är att använda den numrerade frågan med `first` och `after` -metod.
-
 
 ### Sidnumrerad fråga - första och efter {#paginated-first-after}
 
 The `...Paginated` frågetypen återanvänder de flesta `...List` frågetypsfunktioner (filtrering, sortering), men i stället för att använda `offset`/`limit` argument, använder `first`/`after` argument som definieras av [GraphQL Cursor Connections Specification](https://relay.dev/graphql/connections.htm). Du hittar en mindre formell introduktion i [GraphQL introduktion](https://graphql.org/learn/pagination/#pagination-and-edges).
 
-* `first`: The `n` de första objekten som ska returneras.
+* `first`: `n` första objekt som ska returneras.
 Standardvärdet är `50`.
 Maxvärdet är `100`.
 * `after`: Markören som bestämmer början på den begärda sidan. Det objekt som markören representerar tas inte med i resultatuppsättningen. Markören för ett objekt bestäms av `cursor` fält för `edges` struktur.
 
-Du kan till exempel skriva ut en resultatsida som innehåller upp till fem äventyr, med början från det angivna markörobjektet i *complete* resultatlista:
+Du kan till exempel skriva ut en resultatsida som innehåller upp till fem äventyr, med början från markörobjektet i *complete* resultatlista:
 
 ```graphql
 query {
@@ -685,40 +683,38 @@ query {
 
 >[!NOTE]
 >
->* Vid sidindelning används som standard UUID för databasnoden som representerar fragmentet för att säkerställa att resultatordningen alltid är densamma. När `sort` används UUID implicit för att säkerställa en unik sortering, även för två objekt med identiska sorteringsnycklar.
+>* Som standard används UUID för databasnoden som representerar fragmentet för att säkerställa att resultatordningen alltid är densamma. När `sort` används UUID implicit för att säkerställa en unik sortering, även för två objekt med identiska sorteringsnycklar.
 >
 >* På grund av interna tekniska begränsningar försämras prestanda om sortering och filtrering används i kapslade fält. Använd därför filter-/sorteringsfält som lagras på rotnivå. Den här tekniken rekommenderas också om du vill fråga efter stora sidnumrerade resultatuppsättningar.
-
 
 ## GraphQL for AEM - i korthet {#graphql-extensions}
 
 Den grundläggande funktionen för frågor med GraphQL för AEM följer GraphQL standardspecifikation. Det finns några tillägg för GraphQL-frågor med AEM:
 
 * Om du behöver ett enda resultat:
-   * använda modellnamnet, till exempel stad
+   * använd modellnamnet, till exempel ort
 
 * Om du förväntar dig en resultatlista:
-   * add `List` till modellnamnet, till exempel  `cityList`
+   * lägg till `List` till modellnamnet, till exempel  `cityList`
    * Se [Exempelfråga - All information om alla städer](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md#sample-all-information-all-cities)
 
-   Då kan du:
+  Då kan du:
 
    * [Sortera resultaten](#sorting)
 
       * `ASC` : stigande
       * `DESC` : fallande
+
    * Returnera en resultatsida med antingen:
 
       * [En listfråga med förskjutning och begränsning](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md#list-offset-limit)
       * [En sidnumrerad fråga med första och efter](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md#paginated-first-after)
    * Se [Exempelfråga - All information om alla städer](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md#sample-all-information-all-cities)
 
-
-
 * Filtret `includeVariations` ingår i `List` frågetyp. Om du vill hämta variationer för innehållsfragment i frågeresultaten, `includeVariations` filter måste anges till `true`.
 
-   >[!CAUTION]
-   >Filtret `includeVariations` kan inte användas tillsammans med det systemgenererade fältet `_variation`.
+  >[!CAUTION]
+  >Filtret `includeVariations` kan inte användas tillsammans med det systemgenererade fältet `_variation`.
 
 * Om du vill använda ett logiskt OR:
    * use ` _logOp: OR`
@@ -733,53 +729,52 @@ Den grundläggande funktionen för frågor med GraphQL för AEM följer GraphQL 
 
    * För innehåll:
 
-      * `_locale` : för att avslöja språket, baserat på Language Manager
+      * `_locale` : för att visa språket, baserat på Språkhanteraren
          * Se [Exempelfråga för flera innehållsfragment för en viss språkinställning](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md#sample-wknd-multiple-fragments-given-locale)
+
       * `_metadata` : för att visa metadata för ditt fragment
          * Se [Exempelfråga för metadata - Ange metadata för utmärkelserna med namnet GB](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md#sample-metadata-awards-gb)
+
       * `_model` : tillåt frågor för en innehållsfragmentmodell (sökväg och rubrik)
          * Se [Exempelfråga för en innehållsfragmentmodell från en modell](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md#sample-wknd-content-fragment-model-from-model)
+
       * `_path` : sökvägen till ditt innehållsfragment i databasen
          * Se [Exempelfråga - Ett enskilt specifikt stadsfragment](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md#sample-single-specific-city-fragment)
-      * `_reference` : avslöja referenser, inkludera textbundna referenser i RTF-redigeraren
+
+      * `_reference` : för att visa referenser, inklusive textbundna referenser i RTF-redigeraren
          * Se [Exempelfråga för flera innehållsfragment med förhämtade referenser](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md#sample-wknd-multiple-fragments-prefetched-references)
+
       * `_variation` : för att visa specifika variationer i ditt innehållsfragment
 
-         >[!NOTE]
-         >
-         >Om den angivna varianten inte finns för ett innehållsfragment returneras den överordnad variationen som ett (fallback) standardvärde.
+        >[!NOTE]
+        >
+        >Om den angivna variationen inte finns för ett innehållsfragment returneras huvudvarianten som ett (fallback) standardvärde.
 
-         >[!CAUTION]
-         >Det systemgenererade fältet `_variation` kan inte användas tillsammans med filtret `includeVariations`.
+        >[!CAUTION]
+        >Det systemgenererade fältet `_variation` kan inte användas tillsammans med filtret `includeVariations`.
 
          * Se [Exempelfråga - Alla städer med en namngiven variant](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md#sample-cities-named-variation)
-      * `_tags` : visa ID:n för innehållsfragment eller variationer som innehåller taggar, den här listan är en array med `cq:tags` identifierare.
+
+      * `_tags` : för att visa ID:n för innehållsfragment eller variationer som innehåller taggar; den här listan är en array med `cq:tags` identifierare.
 
          * Se [Exempelfråga - namn på alla städer som taggats som stadbrytningar](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md#sample-names-all-cities-tagged-city-breaks)
          * Se [Exempelfråga för innehållsfragmentvariationer för en viss modell som har en specifik tagg bifogad](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md#sample-wknd-fragment-variations-given-model-specific-tag)
 
-         >[!NOTE]
-         >
-         >Taggar kan också efterfrågas genom att en lista med metadata för ett innehållsfragment visas.
+        >[!NOTE]
+        >
+        >Taggar kan också efterfrågas genom att en lista med metadata för ett innehållsfragment visas.
+
    * Och åtgärder:
 
       * `_operator` : tillämpa särskilda operatörer, `EQUALS`, `EQUALS_NOT`, `GREATER_EQUAL`, `LOWER`, `CONTAINS`, `STARTS_WITH`
          * Se [Exempelfråga - Alla personer som inte har namnet &quot;Jobs&quot;](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md#sample-all-persons-not-jobs)
          * Se [Exempelfråga - Alla annonser där `_path` börjar med ett visst prefix](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md#sample-wknd-all-adventures-cycling-path-filter)
-      * `_apply` : tillämpa särskilda villkor, till exempel  `AT_LEAST_ONCE`
+
+      * `_apply` : att tillämpa särskilda villkor, till exempel  `AT_LEAST_ONCE`
          * Se [Exempelfråga - Filtrera en array med ett objekt som måste förekomma minst en gång](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md#sample-array-item-occur-at-least-once)
-      * `_ignoreCase` : för att ignorera skiftläget vid fråga
+
+      * `_ignoreCase` : att ignorera skiftläget vid fråga
          * Se [Exempelfråga - Alla städer med SAN i namnet, oavsett fall](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md#sample-all-cities-san-ignore-case)
-
-
-
-
-
-
-
-
-
-
 
 * GraphQL-unionstyper stöds:
 
@@ -788,7 +783,7 @@ Den grundläggande funktionen för frågor med GraphQL för AEM följer GraphQL 
 
 * Reservation vid fråga om kapslade fragment:
 
-   * Om den begärda varianten inte finns i ett kapslat fragment, kommer **Överordnad** variationen returneras.
+   * Om den begärda varianten inte finns i ett kapslat fragment, kommer **Master** variationen returneras.
 
 ### CORS-filter {#cors-filter}
 
@@ -841,7 +836,7 @@ Om du har konfigurerat en hjälpsökväg för slutpunkten kan du även använda 
 
 Förutom CORS-konfigurationen måste ett referensfilter konfigureras så att åtkomst från tredjepartsvärdar tillåts.
 
-Det här filtret görs genom att en lämplig konfigurationsfil för OSGi Referrer-filtret läggs till som:
+Det här filtret görs genom att en lämplig konfigurationsfil för OSGi-referensfiltret läggs till:
 
 * anger ett betrott värdnamn för en webbplats, antingen `allow.hosts` eller `allow.hosts.regexp`,
 * ger åtkomst till det här värdnamnet.
@@ -876,8 +871,7 @@ Om du till exempel vill ge åtkomst för begäranden med referenten `my.domain` 
 >
 >* endast ge åtkomst till betrodda domäner
 >* se till att ingen känslig information exponeras
->* inte använda jokertecken [*] syntax, den här funktionen inaktiverar autentiserad åtkomst till GraphQL-slutpunkten och dessutom exponerar den för hela världen.
-
+>* inte använda jokertecken [*] syntax; den här funktionen inaktiverar autentiserad åtkomst till GraphQL-slutpunkten och exponerar den även för hela världen.
 
 >[!CAUTION]
 >

@@ -4,9 +4,9 @@ description: Här hittar du de bästa arbetssätten som skapats av Adobe teknike
 topic-tags: site-features, best-practices
 feature: Multi Site Manager
 exl-id: 3fedc1ba-64f5-4fbe-9ee5-9b96b75dda58
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '1617'
+source-wordcount: '1614'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 0%
 MSM är ett konfigurerbart ramverk för automatisering av innehållsdistribution. Implementeringar omfattar ofta större delar av en webbplats och omfattar organisationer och geografiska områden. Vi rekommenderar därför att du planerar MSM-implementeringar lika noggrant som du planerar din webbplats:
 
 * Försiktigt **planstruktur och innehållsflöden** innan implementeringen startas.
-* **Minimera antalet kopior.** Att bearbeta kopior är en resurskrävande uppgift. Ju fler live-kopior som finns i systemet, desto mer prestanda kan påverkas: från bearbetning av interna Live copy-index, över live copy-åtgärder som rollouts, till gränssnittsåtgärder som att visa live-kopia-relationer i referenslisten Sites Admin. Bästa sättet är att skapa live-kopior av webbplatser eller grenar av en webbplats, där live-kopierelationerna ärvs till sidorna på webbplatsen eller grenen. Undvik att skapa individuella live-kopior för sidor på en webbplats eller en gren när hela strukturen kan göras till en live-kopia.
+* **Minimera antalet kopior.** Att bearbeta kopior är en resurskrävande uppgift. Ju fler live-kopior som finns i systemet, desto bättre prestanda kan påverkas: från bearbetning av interna live-kopieringsindex, över live-kopieringsåtgärder som rollouts, till gränssnittsåtgärder som att visa live-kopieringsrelationer i referenslisten för Sites Admin. Bästa sättet är att skapa live-kopior av webbplatser eller grenar av en webbplats, där live-kopierelationerna ärvs till sidorna på webbplatsen eller grenen. Undvik att skapa individuella live-kopior för sidor på en webbplats eller en gren när hela strukturen kan göras till en live-kopia.
 * **Anpassa så mycket som behövs, men så lite som möjligt.** MSM har stöd för en hög grad av anpassning (till exempel utrullningskonfigurationer), men oftast är det bäst att minimera anpassningar av webbplatsens prestanda, tillförlitlighet och uppgraderingsbarhet.
 * Upprätta en **styrning** modellera tidigt och utbilda användare därefter för att säkerställa framgång. Ett bra tillvägagångssätt från styrningssynpunkt är att **minimera den auktoritet som lokala innehållsproducenter har** för att tilldela/koppla innehåll till andra lokala användare och deras respektive livekopior. Detta beror på att icke-styrda, kedjade arv kan öka komplexiteten i en MSM-struktur avsevärt och påverka dess prestanda och tillförlitlighet.
 
@@ -44,10 +44,10 @@ MSM är ett konfigurerbart ramverk för automatisering av innehållsdistribution
 
 Kom ihåg att en live-kopia kan skapas med antingen [vanliga sidor](/help/sites-administering/msm-livecopy.md#creating-a-live-copy-of-a-page) eller en [konfiguration av utkast](/help/sites-administering/msm-livecopy.md#creating-a-live-copy-of-a-site-from-a-blueprint-configuration). Båda är giltiga användningsfall.
 
-Ytterligare fördelar med att använda en ritkonfiguration är att de
+Ytterligare fördelar med att använda en ritkonfiguration är att de:
 
-* Tillåt författaren att använda **Utrullning** på en plan - att (explicit) överföra ändringar till live-kopior som ärver från denna plan.
-* Tillåt författaren att använda **Skapa webbplats**; på så sätt kan användaren enkelt välja språk och konfigurera strukturen för live-kopian.
+* Tillåt författaren att använda **Utrullning** på en plan - att (explicit) överföra ändringar till live-kopior som ärver från den här planen.
+* Tillåt författaren att använda **Skapa webbplats**; det gör att användaren enkelt kan välja språk och konfigurera strukturen för live-kopian.
 * Definiera en standardkonfiguration för utrullning för live-kopior som har en relation till ritningen.
 
 Om det inte finns någon referens till en ritningskonfiguration kan rollouts bara initieras från själva live-kopiorna, vilket i själva verket leder till att innehållet hämtas från källan.
@@ -114,7 +114,7 @@ MSM kan hjälpa till att skapa flerspråkiga webbplatser på två sätt:
 
 * När du distribuerar innehåll från språkmallsidor.
 
-   * Till exempel från franska överordnad till landsspecifika webbplatser, som Frankrike/Frankrike, Kanada/franska, Schweiz/franska.
+   * Till exempel, från den franska huvudpersonen till landsspecifika webbplatser, som Frankrike/Frankrike, Kanada/franska, Schweiz/franska.
 
 Mer information finns i [Översätta innehåll för flerspråkiga webbplatser](/help/sites-administering/translation.md) och [Bästa praxis för översättning](/help/sites-administering/tc-bp.md).
 
@@ -124,9 +124,9 @@ Mer information finns i [Översätta innehåll för flerspråkiga webbplatser](/
 
 * **Skapar** nya sidor i en plan resulterar i att motsvarande sidor skapas i live-kopior efter utrullning med standardkonfigurationen.
 
-* **Tar bort** sidor i en plan kommer att resultera i att motsvarande sidor tas bort från live-kopior efter utrullning med standardkonfiguration för utrullning.
+* **Tar bort** sidor i en plan kommer att resultera i att motsvarande sidor tas bort från live-kopior efter utrullning med standardkonfiguration.
 
-* **Flyttar** sidor i en plan som **not** resulterar i att motsvarande sidor flyttas i live-kopior efter utrullning med standardkonfigurationen för utrullning:
+* **Flyttar** sidor i en plan kommer att **not** resulterar i att motsvarande sidor flyttas i live-kopior efter utrullning med standardkonfigurationen för utrullning:
 
    * Orsaken till detta är att en sidflyttning implicit inkluderar en sidborttagning. Detta kan potentiellt leda till oväntat beteende vid publicering, eftersom borttagning av sidor på författaren automatiskt inaktiverar motsvarande innehåll vid publicering. Detta kan också få en &quot;spara på&quot;-effekt på relaterade objekt som länkar, bokmärken och andra.
    * Innehållsarv i respektive live-kopia uppdateras för att återspegla den nya platsen för deras källor i planen.
@@ -162,14 +162,14 @@ Mer information finns i [Översätta innehåll för flerspråkiga webbplatser](/
 
 MSM-utrullningskonfigurationer är mycket anpassningsbara. Du bör vara medveten om att automatisering av utrullningar kan få omfattande konsekvenser. Det bästa sättet är att planera *mycket* noggrant före, till exempel:
 
-* automatisera utrullningar, med [onModify-utlösare](#onmodify),
+* automatisera utrullningar, till exempel med [onModify-utlösare](#onmodify),
 * anpassa [nodtyper/egenskaper](#node-types-properties),
 * starta efterföljande arbetsflöden,
 * och/eller aktivering av innehåll som en del av utrullningar.
 
 ### onModify {#onmodify}
 
-När du använder [utlösare för utrullning](/help/sites-administering/msm-sync.md#rollout-triggers) `onModify` Tänk på följande:
+När du använder [utlösare](/help/sites-administering/msm-sync.md#rollout-triggers) `onModify` Tänk på följande:
 
 * Automatisera utrullningar med `onModify` utlösare kan ha en negativ inverkan på redigeringsprestanda när de utlöser utrullningar efter *var* sidändring.
 

@@ -10,9 +10,9 @@ discoiquuid: dfc473eb-6091-4f5d-a5a0-789972c513a9
 docset: aem65
 role: Admin
 exl-id: 19b5765e-50bc-4fed-8af5-f6bb464516c8
-source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '1867'
+source-wordcount: '1866'
 ht-degree: 0%
 
 ---
@@ -33,7 +33,7 @@ AEM Forms är en kraftfull plattform i företagsklass och datainhämtning (adapt
 
 ## Distributionstopologi {#deployment-topology}
 
-AEM Forms tilläggspaket är ett program som distribueras till AEM. Du behöver bara minst en AEM Author- och AEM Publish-instans för att kunna köra AEM Forms datainhämtningsfunktioner. Följande topologi rekommenderas för att köra AEM Forms AEM Forms datainsamlingsfunktioner. Mer information om topologin finns i [Arkitektur och driftsättningstopologier för AEM Forms](/help/forms/using/aem-forms-architecture-deployment.md).
+AEM Forms tilläggspaket är ett program som distribueras till AEM. Du behöver bara minst en AEM Author och AEM Publish-instans för att kunna köra AEM Forms datainhämtningsfunktioner. Följande topologi rekommenderas för att köra AEM Forms AEM Forms datainsamlingsfunktioner. Mer information om topologin finns i [Arkitektur och driftsättningstopologier för AEM Forms](/help/forms/using/aem-forms-architecture-deployment.md).
 
 ![rekommenderad topologi](assets/recommended-topology.png)
 
@@ -44,12 +44,12 @@ Innan du börjar installera och konfigurera datainhämtningsfunktionen i AEM For
 * Maskinvaru- och programvaruinfrastruktur finns på plats. En detaljerad lista över maskin- och programvara som stöds finns på [tekniska krav](/help/sites-deploying/technical-requirements.md).
 
 * Installationssökvägen för AEM-instansen innehåller inte blanksteg.
-* En AEM körs. För Windows-användare måste du installera AEM i förhöjt läge. I AEM är &quot;instance&quot; en kopia av AEM som körs på en server i författar- eller publiceringsläge. Du behöver minst två [AEM (en författare och en publicering)](/help/sites-deploying/deploy.md) för att köra AEM Forms datainhämtningsfunktioner:
+* En AEM-instans körs. För Windows-användare måste du installera AEM i förhöjt läge. I AEM är &quot;instance&quot; en kopia av AEM som körs på en server i författar- eller publiceringsläge. Du behöver minst två [AEM (en författare och en publicering)](/help/sites-deploying/deploy.md) för att köra AEM Forms datainhämtningsfunktioner:
 
    * **Upphovsman**: En AEM som används för att skapa, överföra och redigera innehåll och för att administrera webbplatsen. När innehållet är klart att publiceras replikeras det till publiceringsinstansen.
-   * **Publicera**: En AEM som skickar det publicerade innehållet till allmänheten via Internet eller ett internt nätverk.
+   * **Publicera**: En AEM instans som skickar det publicerade innehållet till allmänheten via internet eller ett internt nätverk.
 
-* Minneskraven uppfylls. AEM Forms tilläggspaket kräver:
+* Minneskraven är uppfyllda. AEM Forms tilläggspaket kräver:
 
    * 15 GB temporärt utrymme för Microsoft Windows-baserade installationer.
    * 6 GB temporärt utrymme för UNIX-baserade installationer.
@@ -100,7 +100,6 @@ Innan du börjar installera och konfigurera datainhämtningsfunktionen i AEM For
 >* Skapa symbolerna libcurl.so, libcrypto.so och libssl.so som pekar på den senaste versionen av biblioteken libcurl, libcrypto och libssl.
 >
 
-
 * Installera följande 64-bitarspaket från installationsmediet:
 
    * libicu
@@ -108,20 +107,20 @@ Innan du börjar installera och konfigurera datainhämtningsfunktionen i AEM For
 * Installera [Microsoft Visual Studio 2019 32-bitars Redistributable](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170).
 
 
-## Installera AEM Forms tilläggspaket {#install-aem-forms-add-on-package}
+## Installera AEM Forms-tilläggspaket {#install-aem-forms-add-on-package}
 
 AEM Forms tilläggspaket är ett program som distribueras till AEM. Paketet innehåller AEM Forms datainhämtning och andra funktioner. Så här installerar du tilläggspaketet:
 
 1. Öppna [Programvarudistribution](https://experience.adobe.com/downloads). Du behöver en Adobe ID för att logga in på Software Distribution.
 1. Tryck **[!UICONTROL Adobe Experience Manager]** finns i rubrikmenyn.
 1. I **[!UICONTROL Filters]** avsnitt:
-   1. Välj **[!UICONTROL Forms]** från **[!UICONTROL Solution]** nedrullningsbar lista.
+   1. Välj **[!UICONTROL Forms]** från **[!UICONTROL Solution]** listruta.
    2. Välj version och typ för paketet. Du kan också använda **[!UICONTROL Search Downloads]** för att filtrera resultaten.
-1. Tryck på det paketnamn som gäller för operativsystemet och välj **[!UICONTROL Accept EULA Terms]** och trycka **[!UICONTROL Download]**.
+1. Tryck på det paketnamn som gäller för ditt operativsystem och välj **[!UICONTROL Accept EULA Terms]** och trycka **[!UICONTROL Download]**.
 1. Öppna [Pakethanteraren](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html)  och klicka **[!UICONTROL Upload Package]** för att överföra paketet.
 1. Markera paketet och klicka på **[!UICONTROL Install]**.
 
-   Du kan även hämta paketet via länken direkt i [AEM Forms](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) artikel.
+   Du kan även hämta paketet via länken direkt i [AEM Forms-versioner](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) artikel.
 1. När paketet har installerats uppmanas du att starta om AEM. **Starta inte om servern omedelbart.** Innan du stoppar AEM Forms-servern väntar du tills meddelandena ServiceEvent REGISTERED och ServiceEvent UNREGISTERED inte visas i `[AEM-Installation-Directory]/crx-quickstart/logs/error.log` och loggen är stabil.
 1. Upprepa steg 1-7 för alla författare- och publiceringsinstanser.
 
@@ -147,7 +146,7 @@ Om behörighetskontrollen misslyckas innehåller loggarna följande meddelande:
 
 AEM Forms har några obligatoriska och valfria konfigurationer. De obligatoriska konfigurationerna är bland annat att konfigurera BouncyCastle-bibliotek och serialiseringsagent. De valfria konfigurationerna är bland annat att konfigurera dispatcher, Forms-portalen, Adobe Sign, Adobe Analytics och Adobe Target.
 
-### Obligatoriska efterinstallationskonfigurationer {#mandatory-post-installation-configurations}
+### Obligatoriska konfigurationer efter installation {#mandatory-post-installation-configurations}
 
 #### Konfigurera RSA- och BouncyCastle-bibliotek  {#configure-rsa-and-bouncycastle-libraries}
 
@@ -180,7 +179,7 @@ Utför följande steg på alla Author- och Publish-instanser för att lägga til
 
 #### Konfigurera Dispatcher {#configure-dispatcher}
 
-Dispatcher är ett Adobe Experience Manager verktyg för cachelagring och/eller belastningsutjämning som kan användas tillsammans med en webbserver i företagsklass. Om du använder [Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html)och sedan utföra följande konfigurationer för AEM Forms:
+Dispatcher är ett Adobe Experience Manager verktyg för cachelagring och/eller belastningsutjämning som kan användas tillsammans med en webbserver i företagsklass. Om du [Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html)och sedan utföra följande konfigurationer för AEM Forms:
 
 1. Konfigurera åtkomst för AEM Forms:
 
@@ -198,13 +197,13 @@ Dispatcher är ett Adobe Experience Manager verktyg för cachelagring och/eller 
 
 Cachelagring är en mekanism som förkortar dataåtkomsttider, minskar fördröjningen och förbättrar in-/utdatahastigheter (I/O). Cacheminnet för adaptiva formulär lagrar endast HTML-innehåll och JSON-struktur i ett adaptivt formulär utan att några förfyllda data sparas. Det minskar tiden som krävs för att återge ett anpassat formulär.
 
-* När du använder cacheminnet för anpassade formulär använder du [AEM Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html) för att cachelagra klientbibliotek (CSS och JavaScript) för ett adaptivt formulär.
+* När du använder cacheminnet för anpassade formulär använder du [AEM](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html) för att cachelagra klientbibliotek (CSS och JavaScript) för ett adaptivt formulär.
 * När du utvecklar anpassade komponenter bör du se till att cachen för anpassade formulär är inaktiverad på servern som används för utveckling.
 
 Utför följande steg för att konfigurera cachen för adaptiva formulär:
 
 1. Gå till konfigurationshanteraren AEM webbkonsolen på https://&#39;[server]:[port]&#39;/system/console/configMgr.
-1. Klicka **Konfiguration av webbkanal för adaptiv form och interaktiv kommunikation** om du vill redigera dess konfigurationsvärden. I dialogrutan Redigera konfigurationsvärden anger du det maximala antalet formulär eller dokument som en instans av AEM Forms-servern kan cachelagra i **Antal adaptiva Forms** fält. Standardvärdet är 100. Klicka **Spara**.
+1. Klicka **Konfiguration av webbkanal för adaptiv form och interaktiv kommunikation** om du vill redigera dess konfigurationsvärden. I dialogrutan Redigera konfigurationsvärden anger du det maximala antalet formulär eller dokument som en instans av AEM Forms-servern kan cachelagra i dialogrutan Redigera konfigurationsvärden **Antal adaptiva Forms** fält. Standardvärdet är 100. Klicka **Spara**.
 
    >[!NOTE]
    >
@@ -226,7 +225,7 @@ Om du vill använda Adobe Sign med AEM Forms [Integrera Adobe Sign med AEM Forms
 
 #### Konfigurera Adobe Analytics {#configure-adobe-analytics}
 
-AEM Forms kan integreras med Adobe Analytics så att ni kan samla in och spåra prestandamått för era publicerade formulär och dokument. Syftet med att analysera dessa värden är att fatta välgrundade beslut baserat på uppgifter om de ändringar som krävs för att göra formulär eller dokument mer användbara.
+AEM Forms kan integreras med Adobe Analytics så att ni kan hämta in och spåra prestandamått för era publicerade formulär och dokument. Syftet med att analysera dessa värden är att fatta välgrundade beslut baserat på uppgifter om de ändringar som krävs för att göra formulär eller dokument mer användbara.
 
 Information om hur du använder Adobe Analytics med AEM Forms finns i [Konfigurera analyser och rapporter](/help/forms/using/configure-analytics-forms-documents.md).
 
@@ -234,11 +233,11 @@ Information om hur du använder Adobe Analytics med AEM Forms finns i [Konfigure
 
 Kunderna överger troligtvis ett formulär om upplevelsen inte är engagerande. Även om det är frustrerande för kunderna kan det också öka supportvolymen och kostnaderna för organisationen. Det är både viktigt och utmanande att identifiera och tillhandahålla rätt kundupplevelse som ökar konverteringsgraden. AEM innehåller nyckeln till detta problem.
 
-AEM kan integreras med Adobe Target, en Adobe Marketing Cloud-lösning, för att leverera personaliserade och engagerande kundupplevelser i flera digitala kanaler. Om du vill använda Adobe Target för att A/B-testa adaptiva formulär, [Integrera Adobe Target med AEM Forms](/help/forms/using/ab-testing-adaptive-forms.md#setupandintegratetargetinaemforms).
+AEM kan integreras med Adobe Target, en Adobe Marketing Cloud-lösning, för att leverera personaliserade och engagerande kundupplevelser i flera digitala kanaler. Om du vill använda Adobe Target för att A/B-testa adaptiva formulär [Integrera Adobe Target med AEM Forms](/help/forms/using/ab-testing-adaptive-forms.md#setupandintegratetargetinaemforms).
 
 ## Nästa steg {#next-steps}
 
-Du har konfigurerat en miljö för att använda AEM Forms datainhämtningsfunktioner. Nästa steg mot att använda funktionen är:
+Du har konfigurerat en miljö för att använda AEM Forms datainsamlingsfunktioner. Nästa steg mot att använda funktionen är:
 
 * [Skapa ditt första anpassningsbara formulär](/help/forms/using/create-your-first-adaptive-form.md)
 * [Skapa ditt första PDF-formulär](https://www.adobe.com/go/learn_aemforms_designer_quick_start_65)

@@ -2,7 +2,7 @@
 title: Hantera Forms-program och -uppgifter i AEM Inkorg
 seo-title: Manage Forms applications and tasks in AEM Inbox
 description: Med AEM Inbox kan du starta Forms-centrerade arbetsflöden genom att skicka program och hantera uppgifter.
-seo-description: AEM Inbox allows you to launch Forms-centric workflows through submitting applications and manage tasks.
+seo-description: AEM Inbox lets you launch Forms-centric workflows through submitting applications and manage tasks.
 uuid: c6c0d8ea-743f-4852-99d1-69fd50a0994e
 contentOwner: vishgupt
 topic-tags: document_services, publish
@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: dd11fd83-3df1-4727-8340-8c5426812823
 docset: aem65
 exl-id: 8d17194b-8baf-4878-b3ae-d351a056aebf
-source-git-commit: 30327950779337ce869b6ca376120bc09826be21
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '1080'
+source-wordcount: '1078'
 ht-degree: 0%
 
 ---
@@ -55,7 +55,7 @@ Uppgifter som tilldelas en grupp visas i Inkorgen för alla gruppmedlemmar. Alla
 
    ![delegera](assets/delegate.png)
 
-   * Tryck för att göra anspråk på uppgiften **[!UICONTROL Open]**. Dialogrutan Tilldela till mig själv öppnas. Tryck **[!UICONTROL Proceed]** för att göra anspråk på uppgiften. Uppgiften visas med dig som tilldelad i din inkorg.
+   * Om du vill göra anspråk på uppgiften trycker du **[!UICONTROL Open]**. Dialogrutan Tilldela till mig själv öppnas. Tryck **[!UICONTROL Proceed]** för att göra anspråk på uppgiften. Uppgiften visas med dig som tilldelad i din inkorg.
 
    ![krav](assets/claim.png)
 
@@ -124,21 +124,21 @@ The **[!UICONTROL Workflow Details]** -fliken visar varje steg i arbetsflödet. 
 
 ## Felsökning {#troubleshooting-workflows}
 
-### Det går inte att visa objekt som är relaterade till AEM arbetsflöde i AEM inkorg {#unable-to-see-aem-worklow-items}
+### Det går inte att visa objekt som är relaterade till AEM arbetsflöde i AEM {#unable-to-see-aem-worklow-items}
 
-En arbetsflödesmodellägare kan inte visa objekt som är relaterade till AEM arbetsflöde i AEM inkorg. Lös problemet genom att lägga till indexen nedan i din AEM databas och återskapa indexet.
+En arbetsflödesmodellägare kan inte visa objekt som är relaterade till AEM i AEM. Lös problemet genom att lägga till indexen nedan i din AEM databas och återskapa indexet.
 
 1. Använd någon av följande metoder för att lägga till index:
 
    * Skapa följande noder i CRX DE på `/oak:index/workflowDataLucene/indexRules/granite:InboxItem/properties` med respektive egenskaper enligt följande tabell:
 
-      | Nod | Egenskap | Typ |
-      |---|---|---|
-      | sharedWith | sharedWith | STRÄNG |
-      | låst | låst | BOOLEAN |
-      | returnerade | returnerade | BOOLEAN |
-      | allowInboxSharing | allowInboxSharing | BOOLEAN |
-      | allowExplicitSharing | allowExplicitSharing | BOOLEAN |
+     | Nod | Egenskap | Typ |
+     |---|---|---|
+     | sharedWith | sharedWith | STRÄNG |
+     | låst | låst | BOOLEAN |
+     | returnerade | returnerade | BOOLEAN |
+     | allowInboxSharing | allowInboxSharing | BOOLEAN |
+     | allowExplicitSharing | allowExplicitSharing | BOOLEAN |
 
 
    * Distribuera indexen via ett AEM. Du kan använda en [AEM](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/using.html?lang=en) för att skapa ett AEM som kan distribueras. Använd följande exempelkod för att lägga till index i ett AEM Archetype-projekt:

@@ -10,9 +10,9 @@ topic-tags: development-tools
 content-type: reference
 discoiquuid: b7ac457d-3689-4f5d-9ceb-ff6a9944e7eb
 exl-id: 57303608-c3e1-4201-8054-1a1798613e2c
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '490'
+source-wordcount: '489'
 ht-degree: 0%
 
 ---
@@ -33,7 +33,7 @@ Dialogrutenoden öppnas i **dialogruteredigerare**:
 
 Dialogrutans redigeringsgränssnitt består av fyra rutor:
 
-* The **palett**, i det övre vänstra hörnet. Den här rutan innehåller de widgetar som är tillgängliga för att skapa en dialogruta, t.ex. flikpaneler, textfält, markeringslistor och knappar. Du kan expandera de olika kategorierna på paletten genom att klicka på den avgränsande listen.
+* The **palett**, längst upp till vänster. Den här rutan innehåller de widgetar som är tillgängliga för att skapa en dialogruta, t.ex. flikpaneler, textfält, markeringslistor och knappar. Du kan expandera de olika kategorierna på paletten genom att klicka på den avgränsande listen.
 * The **struktur** i det nedre vänstra hörnet. I den här rutan visas den hierarkiska strukturen för noder som utgör dialogdefinitionen. Du kan se samma struktur genom att expandera dialognoden i CRXDE Lite eller CRX Content Explorer.
 * The **återge** i mitten av fönstret. I det här fönstret visas hur den dialogrutedefinition som definierats i strukturpanelen återges som en faktisk dialogruta.
 * The **egenskaper** fönster. I den här rutan visas egenskaperna för den nod som är markerad i strukturpanelen.

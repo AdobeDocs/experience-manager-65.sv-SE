@@ -2,7 +2,7 @@
 title: Migrera AEM Forms-resurser och -dokument
 seo-title: Migrate AEM Forms assets and documents
 description: Med migreringsverktyget kan du migrera AEM Forms-resurser och -dokument från AEM 6.3 Forms eller tidigare versioner till AEM 6.4 Forms.
-seo-description: The Migration utility allows you to Migrate AEM Forms assets and documents from AEM 6.3 Forms or prior versions to AEM 6.4 Forms.
+seo-description: The Migration utility lets you Migrate AEM Forms assets and documents from AEM 6.3 Forms or prior versions to AEM 6.4 Forms.
 uuid: a3fdf940-7fc2-441c-91c8-ad66ba47e5f2
 content-type: reference
 topic-tags: correspondence-management, installing
@@ -13,9 +13,9 @@ discoiquuid: 39dfef85-d047-4b6d-a0f5-92bd77df103b
 docset: aem65
 role: Admin
 exl-id: 0f9aab7d-8e41-449a-804b-7e1bfa90befd
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '1743'
+source-wordcount: '1742'
 ht-degree: 0%
 
 ---
@@ -56,8 +56,8 @@ Förfaller [bakåtkompatibilitetsrelaterad](/help/sites-deploying/backward-compa
 För Correspondence Management-resurser:
 
 * För resurser som importeras från den tidigare plattformen läggs en egenskap till: **fd:version=1.0**.
-* Eftersom AEM 6.1 Forms inte kan kommentera direkt i dokumentet. Kommentarerna som lades till tidigare är tillgängliga i resurserna men visas inte automatiskt i gränssnittet. Du måste anpassa egenskapen extendedProperties i AEM Forms användargränssnitt för att göra kommentarerna synliga.
-* I vissa tidigare versioner, till exempel LiveCycle ES4, redigerades text med Flex RichTextEditor, men sedan AEM 6.1 Forms används HTML Editor. På grund av den här återgivningen och utseendet på teckensnitten kan teckenstorlekar och marginaler skilja sig från de tidigare versionerna i användargränssnittet för författare. Bokstäverna ser dock likadana ut när de återges.
+* Eftersom AEM 6.1 Forms inte kan kommentera direkt i dokumentet. Kommentarerna som lades till tidigare är tillgängliga i resurserna, men visas inte automatiskt i gränssnittet. Du måste anpassa egenskapen extendedProperties i AEM Forms användargränssnitt för att göra kommentarerna synliga.
+* I vissa av de tidigare versionerna, till exempel LiveCycle ES4, redigerades text med Flex RichTextEditor, men sedan AEM 6.1 Forms används HTML Editor. På grund av den här återgivningen och utseendet på teckensnitten kan teckenstorlekar och marginaler skilja sig från de tidigare versionerna i användargränssnittet för författare. Bokstäverna ser dock likadana ut när de återges.
 * Listor i textmoduler har förbättrats och återges nu annorlunda. Det kan finnas skillnader i synen. Vi rekommenderar att du återger och ser bokstäverna där du använder listor i textmoduler.
 * Eftersom bildinnehållsmoduler konverteras till DAM-resurser och layouter och fragment läggs till i formulär under migreringen ändras egenskapen Uppdaterat av för dessa moduler till admin.
 * Resursernas versionshistorik migreras inte och är inte tillgänglig efter migreringen. Den efterföljande versionshistoriken efter migreringen bevaras.
@@ -89,7 +89,7 @@ När du kör migreringsverktyget för första gången skapas en logg med följan
    Webbläsaren visar fyra alternativ:
 
    * Migrering av AEM Forms Assets
-   * Anpassad migrering av anpassade Forms-komponenter
+   * Adaptiv migrering av anpassade Forms-komponenter
    * Migrering av adaptiva Forms-mallar
    * Migrering av konfigurationer i AEM Forms Cloud
 
@@ -105,16 +105,18 @@ När du kör migreringsverktyget för första gången skapas en logg med följan
 
    >[!NOTE]
    >
-   >Vid resursmigrering kan du hitta varningsmeddelanden som &quot;Konflikt hittad för...&quot;. Sådana meddelanden visar att reglerna för vissa komponenter i anpassade formulär inte kan migreras. Om komponenten till exempel har en händelse som har både regler och skript, kommer inga regler för komponenten att migreras om regler inträffar efter skript. Du kan [migrera sådana regler genom att öppna regelredigeraren](#migrate-rules) i flexibla formulär.
+   >Vid resursmigrering kan du hitta varningsmeddelanden som &quot;Konflikt hittad för...&quot;. Sådana meddelanden visar att reglerna för vissa komponenter i anpassade formulär inte kan migreras. Om komponenten till exempel har en händelse som har både regler och skript, kommer inga regler för komponenten att migreras om regler inträffar efter skript. Du kan [migrera sådana regler genom att öppna regelredigeraren](#migrate-rules) i anpassningsbara formulär.
 
-   * Om du vill migrera anpassade formulärkomponenter trycker du **Anpassad migrering av anpassade Forms-komponenter** och på sidan för migrering av anpassade komponenter trycker du på **Starta migrering**. Följande migreras:
+   * Om du vill migrera anpassade formulärkomponenter trycker du **Adaptiv migrering av anpassade Forms-komponenter** och på sidan för migrering av anpassade komponenter trycker du på **Starta migrering**. Följande migreras:
 
       * Anpassade komponenter skrivna för Adaptive Forms
       * Komponentövertäckningar, om sådana finns.
+
    * Om du vill migrera adaptiva formulärmallar trycker du **Adaptiv migrering av Forms-mallar** och på sidan för migrering av anpassade komponenter trycker du på **Starta migrering**. Följande migreras:
 
       * Anpassningsbara blankettmallar som skapats i `/apps` eller `/conf` med AEM mallredigerare.
-   * Migrera konfigurationstjänsterna i AEM Forms Cloud för att utnyttja det nya sammanhangsberoende molntjänstparadigmet, som innehåller det beröringsaktiverade användargränssnittet (under `/conf`). När du migrerar konfigurationstjänsterna i AEM Forms Cloud är molntjänsterna i `/etc` flyttas till `/conf`. Om du inte har några anpassningar av molntjänster som är beroende av de äldre sökvägarna (`/etc`) rekommenderar vi att du kör migreringsverktyget direkt efter att du uppgraderat till 6.5 och använder Touch-gränssnittet i molnkonfiguration för ytterligare arbete. Om du har befintliga anpassningar av molntjänster kan du fortsätta använda det klassiska användargränssnittet i uppgraderad konfiguration tills anpassningarna har uppdaterats för att passa de migrerade sökvägarna (`/conf`) och kör sedan migreringsverktyget.
+
+   * Migrera konfigurationstjänsterna i AEM Forms Cloud för att utnyttja det nya sammanhangsberoende molntjänstparadigmet, som innehåller det beröringsaktiverade användargränssnittet (under `/conf`). När du migrerar AEM Forms Cloud Configuration Services är molntjänsterna i `/etc` flyttas till `/conf`. Om du inte har några anpassningar av molntjänster som är beroende av de äldre sökvägarna (`/etc`) rekommenderar vi att du kör migreringsverktyget direkt efter att du uppgraderat till 6.5 och använder Touch-gränssnittet i molnkonfiguration för ytterligare arbete. Om du har befintliga anpassningar av molntjänster kan du fortsätta använda det klassiska användargränssnittet i uppgraderad konfiguration tills anpassningarna har uppdaterats för att passa de migrerade sökvägarna (`/conf`) och kör sedan migreringsverktyget.
 
    Migrera **AEM Forms molntjänster**, som innehåller följande: tryck på migrering av AEM Forms Cloud-konfiguration (molnkonfigurationsmigreringen är oberoende av AEMFD-kompatibilitetspaketet), tryck på migrering av AEM Forms Cloud-konfigurationer och tryck sedan på sidan Konfigurationsmigrering **Starta migrering**:
 
@@ -122,15 +124,18 @@ När du kör migreringsverktyget för första gången skapas en logg med följan
 
       * Källsökväg: `/etc/cloudservices/fdm`
       * Målsökväg: `/conf/global/settings/cloudconfigs/fdm`
+
    * Recaptcha
 
       * Källsökväg: `/etc/cloudservices/recaptcha`
       * Målsökväg: `/conf/global/settings/cloudconfigs/recaptcha`
+
    * Adobe Sign
 
       * Källsökväg: `/etc/cloudservices/echosign`
       * Målsökväg: `/conf/global/settings/cloudconfigs/echosign`
-   * Typekit-molntjänster
+
+   * Typekit cloud services
 
       * Källsökväg: `/etc/cloudservices/typekit`
       * Målsökväg: `/conf/global/settings/cloudconfigs/typekit`
@@ -138,25 +143,16 @@ När du kör migreringsverktyget för första gången skapas en logg med följan
    I webbläsarfönstret visas följande när migreringsprocessen utförs:
 
    * När resurserna uppdateras: Resurserna har uppdaterats.
-   * När migreringen är klar: Slutförde migrering av resurser.
+   * När migreringen är klar: Slutförde migreringen av resurser.
 
    När migreringsverktyget körs gör det följande:
 
-   * **Lägger till taggar i resurserna**: Lägger till taggen &quot;Correspondence Management: Migrerade resurser/Adaptiv Forms: Migrerade resurser&quot;. till de migrerade resurserna, så att användarna kan identifiera migrerade resurser. När du kör migreringsverktyget markeras alla befintliga resurser i systemet som migrerade.
-   * **Skapar taggar**: Kategorier och underkategorier som finns i det tidigare systemet skapas som taggar, och sedan associeras dessa taggar med relevanta Correspondence Management-resurser i AEM. Exempelvis genereras en kategori (anspråk) och en underkategori (anspråk) för en bokstavsmall som taggar.
+   * **Lägger till taggar i resurserna**: Lägger till taggen &quot;Correspondence Management : Migrated Assets&quot; / &quot;Adaptive Forms : Migrated Assets&quot;. till de migrerade resurserna, så att användarna kan identifiera migrerade resurser. När du kör migreringsverktyget markeras alla befintliga resurser i systemet som migrerade.
+   * **Skapar taggar**: Kategorier och underkategorier i det föregående systemet skapas som taggar, och sedan kopplas dessa taggar till de relevanta Correspondence Management-resurserna i AEM. Exempelvis genereras en kategori (anspråk) och en underkategori (anspråk) för en bokstavsmall som taggar.
 
+1. När migreringsverktyget är klart går du till [hushållsarbete](#housekeepingtasks).
 
-
-
-
-
-
-
-
-
-1. När migreringsverktyget är klart går du till [hushållssysslor](#housekeepingtasks).
-
-#### Migrera regler med hjälp av regelredigeraren {#migrate-rules}
+#### Migrera regler med regelredigeraren {#migrate-rules}
 
 Dessa komponenter kan migreras genom att de öppnas i regelredigeraren i den adaptiva Forms-redigeraren.
 
@@ -179,10 +175,10 @@ När du har kört migreringsverktyget ska du sköta följande uppgifter:
 1. Kontrollera att XFA-versionen av layouter och fragmentlayouter är 3.3 eller senare. Om du använder layouter och fragmentlayouter av en äldre version kan det uppstå problem när bokstaven återges. Så här uppdaterar du en äldre XFA-version till den senaste versionen:
 
    1. [Hämta XFA som en zip-fil](../../forms/using/import-export-forms-templates.md#p-import-and-export-assets-in-correspondence-management-p) från Forms användargränssnitt.
-   1. Extrahera filen.
+   1. Hämta filen.
    1. Öppna XFA-filen i den senaste Designer-filen och spara den. Versionen av XFA uppdateras till den senaste.
    1. Överför XFA i Forms användargränssnitt.
 
 1. Publicera alla resurser som publicerades i det tidigare systemet före migreringen. Flyttningsverktyget uppdaterar bara resurserna på författarinstansen och uppdaterar resurserna på den eller de publiceringsinstanser du behöver för att publicera resurserna.
 
-1. I AEM Forms 6.4 och 6.5 ändras vissa rättigheter för användargrupperna. Om du vill att någon av dina användare ska kunna överföra XDP-filer och adaptiva Forms-skript eller använda kodredigeraren måste du lägga till dem i en grupp för användare som har avancerade formulär. På samma sätt kan mallskapare inte längre använda kodredigeraren i regelredigeraren. För att användare ska kunna använda kodredigeraren lägger du till dem i gruppen af-template-script-writers. Instruktioner om hur du lägger till användare i grupper finns i [Hantera användare och användargrupper](/help/communities/users.md).
+1. I AEM Forms 6.4 och 6.5 ändras vissa rättigheter för användargrupperna. Om du vill att någon av dina användare ska kunna överföra XDP-filer och adaptiva Forms-skript eller använda kodredigeraren måste du lägga till dem i en grupp för användare som har avancerade formulär. Mallförfattare kan inte heller längre använda kodredigeraren i regelredigeraren. För att användare ska kunna använda kodredigeraren lägger du till dem i gruppen af-template-script-writers. Instruktioner om hur du lägger till användare i grupper finns i [Hantera användare och användargrupper](/help/communities/users.md).
