@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 929a298d-7f22-487f-bf7d-8ab2556d0d81
 docset: aem65
 exl-id: 1bc99f3b-3f28-4e74-b259-6ebddc11ffc5
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 4eb4a15961e7b6e83d9e8a38f34ad92d829cb9b6
 workflow-type: tm+mt
-source-wordcount: '1949'
+source-wordcount: '2084'
 ht-degree: 0%
 
 ---
@@ -24,20 +24,20 @@ AEM Forms har flera API:er för att skicka formulär, bearbeta dokument och åte
 * Återge en tryckt eller webbversion av en interaktiv kommunikation
 * Konvertera ett dokument från ett format till ett annat
 * Förenkla ett dynamiskt PDF-dokument
-* Skapa ett postdokument
+* Generera ett postdokument
 * Sammanfoga ett interaktivt PDF-dokument med ett annat PDF-dokument
 * Tilldela uppgiftssteg och dokumenttjänststeg i AEM
-* Använda anpassningsbara formulär i ett anpassat formulär
+* Använda anpassningsbara formulär i ett adaptivt formulär
 
-Fakturerings-API:erna tar inte hänsyn till antalet sidor, längden på ett dokument eller formulär eller det återgivna dokumentets slutliga format. En transaktionsrapport delar upp transaktionerna i två kategorier: Återgivna dokument och Forms har skickats.
+Fakturerings-API:erna tar inte hänsyn till antalet sidor, längden på ett dokument eller formulär eller det återgivna dokumentets slutliga format. En transaktionsrapport delar upp transaktionerna i två kategorier: Dokument som återges och Forms som skickas.
 
 * **Forms:** När data skickas in från någon typ av formulär som skapats med AEM Forms och data skickas till en datalagringsplats eller databas anses det som en formuläröverföring. Om du t.ex. skickar in ett anpassningsbart formulär, HTML5-formulär, PDF forms och formuläruppsättning, räknas de som inskickade formulär. Varje formulär i en formuläruppsättning betraktas som en inlämning. Om en formuläruppsättning till exempel har fem formulär, räknas den som 5 inskickade när formuläruppsättningen skickas.
 
-* **Återgivna dokument:** Generering av ett dokument genom att kombinera en mall och data, digitalt signera eller certifiera ett dokument, använda ett fakturerbart API:er för dokumenttjänster eller konvertering av ett dokument från ett format till ett annat, räknas som dokument som återges.
+* **Återgivna dokument:** Att generera ett dokument genom att kombinera en mall och data, digitalt signera eller certifiera ett dokument, använda ett fakturerbart dokument-API för dokumenttjänster eller konvertera ett dokument från ett format till ett annat, räknas som dokument som återges.
 
 >[!NOTE]
 >
->Gränssnittet för transaktionsrapporter visar tre kategorier: Forms har skickats, dokument har återgetts och dokument har bearbetats. Både återgivna dokument och behandlade dokument räknas som återgivna dokument.
+>Gränssnittet för transaktionsrapporter visar tre kategorier: Forms skickat, Dokument återgivet och Bearbetade dokument. Både återgivna dokument och behandlade dokument räknas som återgivna dokument.
 
 ## Fakturerbara API:er för dokumenttjänster {#billable-document-services-apis}
 
@@ -108,6 +108,26 @@ Fakturerings-API:erna tar inte hänsyn till antalet sidor, längden på ett doku
  </tbody>
 </table>
 
+### DocAssurance-tjänst {#DocAssurance-Service}
+
+<table>
+ <tbody>
+  <tr>
+   <td><p>API</p> </td>
+   <td>Beskrivning</td>
+   <td>Kategori för transaktionsrapport</td>
+   <td>Ytterligare information</td>
+  </tr>
+  <tr>
+   <td><a href="https://helpx.adobe.com/experience-manager/6-4/forms/javadocs/com/adobe/fd/docassurance/client/api/DocAssuranceService.html#secureDocument-com.adobe.aemfd.docmanager.Document-com.adobe.fd.docassurance.client.api.EncryptionOptions-com.adobe.fd.docassurance.client.api.SignatureOptions-com.adobe.fd.docassurance.client.api.ReaderExtensionOptions-com.adobe.fd.signatures.pdf.inputs.UnlockOptions-" target="_blank">secureDocument</a><br /> </td>
+   <td>Med detta API kan du skydda ditt dokument. Du kan använda API:t för att signera, certifiera, utöka eller kryptera ett PDF-dokument.</td>
+   <td>Bearbetade dokument</td>
+   <td>Endast signerings- och certifieringsåtgärden för secureDocument faktureras.</td>
+  </tr>
+ </tbody>
+</table>
+
+
 ### Distiller Service {#distiller-service}
 
 <table>
@@ -152,7 +172,7 @@ Fakturerings-API:erna tar inte hänsyn till antalet sidor, längden på ett doku
  </tbody>
 </table>
 
-### Utdatatjänst {#output-service}
+### Output Service {#output-service}
 
 <table>
  <tbody>
@@ -305,12 +325,16 @@ Fakturerings-API:erna tar inte hänsyn till antalet sidor, längden på ett doku
  </tbody>
 </table>
 
+Anrop betraktas som en transaktion som är beroende av vilken åtgärd som utförs. Den betraktas som en transaktion när du utför en eller flera av följande åtgärder:
+1. Konvertering från andra format än PDF till PDF. Exempel: konvertering från XDP-format till PDF (för interaktiv och icke-interaktiv kommunikation), konvertering från Word till PDF.
+1. PDF-format till PDF/A-format.
+1. PDF-format till icke-PDF-formatkonvertering. Exempel: konvertering från PDF till bildformat, konvertering från PDF till textformat.
+
+
 >[!NOTE]
 >
 >* Anrop-API:t för sammansättartjänsten kan internt anropa ett fakturerbart API för en annan tjänst beroende på indata. Detta innebär att invoke-API:t kan redovisas som inga, enskilda eller flera transaktioner. Antalet transaktioner som räknas beror på indata och de interna API:erna som anropas.
 >* Ett enda PDF-dokument som skapats med en monteringsfunktion kan redovisas som inga, enstaka eller flera transaktioner. Antalet transaktioner som räknas beror på den angivna DDX-koden.
->
-
 
 ### Verktygstjänsten PDF  {#pdf-utility-service}
 
@@ -333,7 +357,7 @@ Fakturerings-API:erna tar inte hänsyn till antalet sidor, längden på ett doku
 
 ## Fakturerbara API:er för datainhämtning {#billable-data-capture-apis}
 
-Alla överföringshändelser för adaptiva formulär, HTML5 Forms och formuläruppsättningar redovisas som transaktioner. Som standard räknas inte inlämning av ett PDF-formulär som en transaktion. Använd den angivna [API för transaktionsregistrering](record-transaction-custom-implementation.md) för att registrera en inlämning av PDF forms som en transaktion.
+Alla överföringshändelser för adaptiva formulär, HTML5 Forms och formuläruppsättningar redovisas som transaktioner. Som standard räknas inte inlämning av ett PDF-formulär som en transaktion. Använd den angivna [API för transaktionsregistrering](record-transaction-custom-implementation.md) för att registrera en PDF forms som en transaktion.
 
 ### Adaptiv Forms {#adaptive-forms}
 
@@ -477,7 +501,7 @@ Tilldela uppgifter och dokumenttjänster steg i formulärbaserade AEM arbetsflö
 
 ## Registrera fakturerbara API:er som transaktioner för anpassad kod {#recording-billable-apis-as-transactions-for-custom-code}
 
-Åtgärder som att skicka ett PDF-formulär, använda agentanvändargränssnittet för att förhandsgranska interaktiv kommunikation, skicka formulär som inte är standard och anpassade implementeringar räknas inte som transaktioner. AEM Forms tillhandahåller ett API för att spela in sådana åtgärder som transaktioner. Du kan anropa API:t från dina anpassade implementeringar till [registrera en transaktion](/help/forms/using/record-transaction-custom-implementation.md).
+Åtgärder som att skicka ett PDF-formulär, använda agentanvändargränssnittet för att förhandsgranska interaktiv kommunikation, skicka formulär som inte är standard och anpassade implementeringar räknas inte som transaktioner. AEM Forms tillhandahåller ett API för att spela in sådana åtgärder som transaktioner. Du kan anropa API:t från dina anpassade implementeringar till [spela in en transaktion](/help/forms/using/record-transaction-custom-implementation.md).
 
 ## Relaterade artiklar {#related-articles}
 
