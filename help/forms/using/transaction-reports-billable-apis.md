@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 929a298d-7f22-487f-bf7d-8ab2556d0d81
 docset: aem65
 exl-id: 1bc99f3b-3f28-4e74-b259-6ebddc11ffc5
-source-git-commit: 4eb4a15961e7b6e83d9e8a38f34ad92d829cb9b6
+source-git-commit: d636d987f5d62c9169bc4015d7ac50090e362faa
 workflow-type: tm+mt
-source-wordcount: '2084'
+source-wordcount: '2089'
 ht-degree: 0%
 
 ---
@@ -325,11 +325,10 @@ Fakturerings-API:erna tar inte hänsyn till antalet sidor, längden på ett doku
  </tbody>
 </table>
 
-Anrop betraktas som en transaktion som är beroende av vilken åtgärd som utförs. Den betraktas som en transaktion när du utför en eller flera av följande åtgärder:
-1. Konvertering från andra format än PDF till PDF. Exempel: konvertering från XDP-format till PDF (för interaktiv och icke-interaktiv kommunikation), konvertering från Word till PDF.
-1. PDF-format till PDF/A-format.
-1. PDF-format till icke-PDF-formatkonvertering. Exempel: konvertering från PDF till bildformat, konvertering från PDF till textformat.
-
+API:ts användning räknas som en transaktion när du utför en eller flera av följande åtgärder:
+1. Konvertering från andra format än PDF till PDF. Konverteringen från XDP-format till PDF, till exempel både interaktiva och icke-interaktiva kommunikationsformer och konverteringen från Word till PDF.
+1. Konvertering från PDF till PDF/A-format.
+1. Konvertering från PDF till andra format än PDF. Exempel omfattar omformningen från PDF till bildformat eller konverteringen från PDF till textformat.
 
 >[!NOTE]
 >
