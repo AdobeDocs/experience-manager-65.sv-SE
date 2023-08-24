@@ -9,14 +9,14 @@ discoiquuid: 9d8d7044-ffce-4ab4-9543-a2d2f9da31e3
 docset: aem65
 feature: Adaptive Forms
 exl-id: 04efb4ad-cff6-4e05-bcd2-98102f052452
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: e19a7e617bdabb678bd804cab3fea228ce19acfa
 workflow-type: tm+mt
-source-wordcount: '1936'
+source-wordcount: '2141'
 ht-degree: 0%
 
 ---
 
-# Konfigurera åtgärden Skicka{#configuring-the-submit-action}
+# Konfigurera åtgärden Skicka {#configuring-the-submit-action}
 
 <span class="preview"> Adobe rekommenderar att man använder modern och utbyggbar datainhämtning [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) for [skapa ny Adaptive Forms](/help/forms/using/create-an-adaptive-form-core-components.md) eller [lägga till adaptiv Forms på AEM Sites-sidor](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-filer, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptiv Forms med baskomponenter. </span>
 
@@ -45,6 +45,7 @@ Standardåtgärderna för att skicka in anpassningsbara formulär är:
 * Skicka med formulärdatamodell
 * Forms Portal Submit Action
 * Anropa ett AEM arbetsflöde
+* Skicka till Power Automate
 
 >[!NOTE]
 >
@@ -155,6 +156,19 @@ Variabler kan användas oavsett om arbetsflödesmodellen är markerad för exter
 * **Bifogade filer**: Du kan använda **[!UICONTROL Attachment Path]** om du vill ange mappnamnet för lagring av de bilagor som överförts till det adaptiva formuläret. Mappen skapas i förhållande till nyttolasten. Om arbetsflödet är markerat för extern datalagring använder du variabelalternativet och väljer variabeln i listan med variabler som är tillgängliga för arbetsflödesmodellen.
 
 * **Dokument för registrering**: Det innehåller det dokument som genererats för det adaptiva formuläret. Du kan använda **[!UICONTROL Document of Record Path]** om du vill ange namnet på filen Dokument för post och sökvägen till filen i förhållande till nyttolasten. Till exempel `/addresschange/DoR.pdf` sökväg skapar en mapp med namnet `addresschange` i förhållande till nyttolasten och placerar `DoR.pdf` i förhållande till nyttolast. Du kan också bara ange `DoR.pdf` om du bara vill spara postdokument utan att skapa en mapphierarki. Om arbetsflödet är markerat för extern datalagring använder du variabelalternativet och väljer variabeln i listan med variabler som är tillgängliga för arbetsflödesmodellen.
+
+## Skicka till Power Automate {#microsoft-power-automate}
+
+Du kan konfigurera ett adaptivt formulär så att det kör ett Microsoft® Power Automate Cloud-flöde när du skickar in det. Den konfigurerade adaptiva formen skickar inhämtade data, bilagor och arkivdokument till Power Automate Cloud Flow för bearbetning. Det hjälper er att bygga upp en anpassad datainhämtningsupplevelse och samtidigt utnyttja kraften i Microsoft® Power Automate för att skapa affärslogik kring insamlade data och automatisera kundarbetsflöden. Här är några exempel på vad du kan göra efter att ha integrerat ett adaptivt formulär med Microsoft® Power Automate:
+
+* Använd adaptiva Forms-data i en Power Automate-affärsprocess
+* Använd Power Automate för att skicka inhämtade data till fler än 500 datakällor eller till något offentligt tillgängligt API
+* Utför komplexa beräkningar på inhämtade data
+* Spara adaptiva Forms-data i lagringssystemen enligt ett fördefinierat schema
+
+Adaptive Forms editor har **Anropa ett Microsoft® Power Automate-flöde** skicka en åtgärd för att skicka adaptiva formulärdata, bilagor och arkivdokument till Power Automate Cloud Flow. Om du vill skicka inhämtade data till Microsoft® Power Automate med åtgärden Skicka [Koppla samman din AEM Forms-instans med Microsoft® Power Automate](/help/forms/using/forms-microsoft-power-automate-integration.md)
+
+När konfigurationen är klar använder du [Anropa ett Microsoft® Power Automate-flöde](/help/forms/using/forms-microsoft-power-automate-integration.md#use-the-invoke-a-microsoft&reg;-power-automate-flow-submit-action-to-send-data-to-a-power-automate-flow-use-the-invoke-microsoft-power-automate-flow-submit-action) skicka-åtgärd för att skicka data till ett Power Automate-flöde.
 
 ## Förtroende på serversidan i adaptiv form {#server-side-revalidation-in-adaptive-form}
 
