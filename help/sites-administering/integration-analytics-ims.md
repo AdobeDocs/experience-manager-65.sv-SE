@@ -2,9 +2,9 @@
 title: Integrering med Adobe Analytics med IMS
 description: Läs om hur du integrerar AEM med Adobe Analytics med IMS
 exl-id: 2833a6df-ef32-48ab-8395-0f26816f8443
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 06ed2329840e151083bd238ee3a4d33663463c9c
 workflow-type: tm+mt
-source-wordcount: '1057'
+source-wordcount: '1085'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ Integreringen av AEM med Adobe Analytics via API:t för Analytics Standard kräv
 >
 >Stöd för Adobe Analytics Standard API 2.0 är nytt i AEM 6.5.12.0. Den här versionen av API:t stöder IMS-autentisering.
 >
->För bakåtkompatibilitet stöds fortfarande Adobe Analytics Classic API 1.4 i AEM. The [API:t för Analytics Classic använder autentisering av användarautentiseringsuppgifter](/help/sites-administering/adobeanalytics-connect.md).
+>För bakåtkompatibilitet stöds fortfarande Adobe Analytics Classic API 1.4 i AEM. The [API:t för Analytics Classic använder inloggningsuppgifter](/help/sites-administering/adobeanalytics-connect.md).
 >
 >API-valet styrs av den autentiseringsmetod som används för AEM-/Analytics-integrering.
 >
@@ -54,11 +54,11 @@ Det första steget i konfigurationen är att skapa en IMS-konfiguration i AEM oc
 
    ![Guiden Konfigurera Adobe IMS Technical Account](assets/integrate-analytics-io-01.png)
 
-1. Välj **Hämta** (eller **Hämta offentlig nyckel**) för att hämta filen till den lokala hårddisken, så att den är klar att användas när [konfigurera IMS för Adobe Analytics-integrering med AEM](#configuring-ims-for-adobe-analytics-integration-with-aem).
+1. Välj **Ladda ned** (eller **Hämta offentlig nyckel**) för att hämta filen till den lokala hårddisken, så att den är klar att användas när [konfigurera IMS för Adobe Analytics-integrering med AEM](#configuring-ims-for-adobe-analytics-integration-with-aem).
 
    >[!CAUTION]
    >
-   >Låt konfigurationen vara öppen, den behövs igen när [Slutför IMS-konfigurationen i AEM](#completing-the-ims-configuration-in-aem).
+   >Ha den här konfigurationen öppen, den behövs igen när [Slutför IMS-konfigurationen i AEM](#completing-the-ims-configuration-in-aem).
 
    ![Dialogrutan Info där du kan lägga till nyckeln i Adobe I/O](assets/integrate-analytics-io-02.png)
 
@@ -70,13 +70,19 @@ Med Adobe Developer Console måste du skapa ett projekt (integration) med Adobe 
 
 Öppna Adobe Developer Console och skapa ett projekt med Adobe Analytics som AEM ska använda:
 
+>[!CAUTION]
+>
+>För närvarande stöder vi endast Adobe Developer Console **Tjänstkonto (JWT)** autentiseringsuppgiftstyp.
+>
+>Använd inte **OAuth Server-till-server** autentiseringsuppgiftstyp, som kommer att stödjas i framtiden.
+
 1. Öppna Adobe Developer Console for Projects:
 
    [https://developer.adobe.com/console/projects](https://developer.adobe.com/console/projects)
 
 1. Alla projekt du har visas. Välj **Skapa nytt projekt** - platsen och användningen beror på:
 
-   * Om du inte har något projekt än **Skapa nytt projekt** kommer att vara i mitten, nederst.
+   * Om du inte har något projekt än, **Skapa nytt projekt** kommer att vara i mitten, nederst.
      ![Skapa nytt projekt - första projektet](assets/integration-analytics-io-02.png)
    * Om du redan har befintliga projekt listas dessa och **Skapa nytt projekt** kommer att vara överst till höger.
      ![Skapa nytt projekt - flera projekt](assets/integration-analytics-io-03.png)
@@ -120,7 +126,7 @@ Du måste nu tilldela nödvändig behörighet till integreringen:
 
    * [https://adminconsole.adobe.com](https://adminconsole.adobe.com/)
 
-1. Navigera till **Produkter** (övre verktygsfältet) och sedan välja **Adobe Analytics - &lt;*din-tenant-id*>** (från den vänstra panelen).
+1. Navigera till **Produkter** (övre verktygsfältet) och sedan välja **ADOBE ANALYTICS - &lt;*din-tenant-id*>** (från vänster panel).
 1. Välj **Produktprofiler** och sedan den arbetsyta du behöver i den lista som visas. Exempel: Standardarbetsyta.
 1. Välj **API-autentiseringsuppgifter** och sedan den integreringskonfiguration som krävs.
 1. Välj **Redigerare** som **Produktroll**; i stället för **Observer**.
@@ -135,7 +141,7 @@ Välj en specifik projektpost om du vill visa mer information om konfigurationen
 
 * Projektöversikt
 * Insikter
-* Autentiseringsuppgifter
+* Referenser
    * Tjänstkonto (JWT)
       * Information om autentiseringsuppgifter
       * Generera JWT
@@ -155,7 +161,7 @@ Om du går tillbaka till AEM kan du slutföra IMS-konfigurationen genom att läg
 
    * **Titel**: Din text.
    * **Auktoriseringsserver**: Kopiera/klistra in detta från `aud` rad i **Nyttolast** avsnitt nedan, till exempel `https://ims-na1.adobelogin.com` i exemplet nedan
-   * **API-nyckel**: Kopiera detta från **Autentiseringsuppgifter** i [Projektöversikt](#details-stored-for-the-ims-integration-project)
+   * **API-nyckel**: Kopiera detta från **Referenser** i [Projektöversikt](#details-stored-for-the-ims-integration-project)
    * **Klienthemlighet**: Generera detta i [Fliken Klienthemlighet i avsnittet Tjänstkonto (JWT)](#details-stored-for-the-ims-integration-project)och kopiera
    * **Nyttolast**: Kopiera detta från [Generera JWT-flik i avsnittet Tjänstkonto (JWT)](#details-stored-for-the-ims-integration-project)
 
@@ -190,12 +196,12 @@ Så här bekräftar du att konfigurationen fungerar som förväntat:
 
 Det går nu att referera till konfigurationen för en Cloud Service som använder API:t för Analytics Standard:
 
-1. Öppna **verktyg** -menyn. Sedan, i **Cloud Services** avsnitt, markera **Äldre Cloud Services**.
+1. Öppna **verktyg** -menyn. Sedan, i **Cloud Service** avsnitt, markera **Äldre Cloud Service**.
 1. Bläddra nedåt till **Adobe Analytics** och markera **Konfigurera nu**.
 
    The **Skapa konfiguration** öppnas.
 
-1. Ange **Titel** och, om du vill, en **Namn** (Om inget anges genereras detta från titeln).
+1. Ange en **Titel** och, om du vill, en **Namn** (Om inget anges genereras detta från titeln).
 
    Du kan också välja önskad mall (om fler än en är tillgänglig).
 

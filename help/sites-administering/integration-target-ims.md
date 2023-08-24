@@ -2,9 +2,9 @@
 title: Integrering med Adobe Target med IMS
 description: Läs om hur du integrerar AEM med Adobe Target med IMS
 exl-id: 8ddd86d5-a5a9-4907-b07b-b6552d7afdc8
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 06ed2329840e151083bd238ee3a4d33663463c9c
 workflow-type: tm+mt
-source-wordcount: '1549'
+source-wordcount: '1577'
 ht-degree: 0%
 
 ---
@@ -53,11 +53,11 @@ Det första steget i konfigurationen är att skapa en IMS-konfiguration i AEM oc
 
    ![Guiden Konfigurera Adobe IMS Technical Account](assets/integrate-target-io-01.png)
 
-1. Välj **Hämta** (eller **Hämta offentlig nyckel**) för att hämta filen till den lokala hårddisken, så att den är klar att användas när [konfigurera IMS för Adobe Target-integrering med AEM](#configuring-ims-for-adobe-target-integration-with-aem).
+1. Välj **Ladda ned** (eller **Hämta offentlig nyckel**) för att hämta filen till den lokala hårddisken, så att den är klar att användas när [konfigurera IMS för Adobe Target-integrering med AEM](#configuring-ims-for-adobe-target-integration-with-aem).
 
    >[!CAUTION]
    >
-   >Låt konfigurationen vara öppen, den behövs igen när [Slutför IMS-konfigurationen i AEM](#completing-the-ims-configuration-in-aem).
+   >Ha den här konfigurationen öppen, den behövs igen när [Slutför IMS-konfigurationen i AEM](#completing-the-ims-configuration-in-aem).
 
    ![Informationsmeddelande om att lägga till certifikat på Adobe I/O](assets/integrate-target-io-02.png)
 
@@ -69,13 +69,19 @@ Med Adobe Developer Console måste du skapa ett projekt (integration) med Adobe 
 
 Öppna Adobe Developer Console och skapa ett projekt med Adobe Target som AEM ska använda:
 
+>[!CAUTION]
+>
+>För närvarande stöder vi endast Adobe Developer Console **Tjänstkonto (JWT)** autentiseringsuppgiftstyp.
+>
+>Använd inte **OAuth Server-till-server** autentiseringsuppgiftstyp, som kommer att stödjas i framtiden.
+
 1. Öppna Adobe Developer Console for Projects:
 
    [https://developer.adobe.com/console/projects](https://developer.adobe.com/console/projects)
 
 1. Alla projekt du har visas. Välj **Skapa nytt projekt** - platsen och användningen beror på:
 
-   * Om du inte har något projekt än **Skapa nytt projekt** kommer att vara i mitten, nederst.
+   * Om du inte har något projekt än, **Skapa nytt projekt** kommer att vara i mitten, nederst.
      ![Skapa nytt projekt - första projektet](assets/integration-target-io-02.png)
    * Om du redan har befintliga projekt listas dessa och **Skapa nytt projekt** kommer att vara överst till höger.
      ![Skapa nytt projekt - flera projekt](assets/integration-target-io-03.png)
@@ -112,7 +118,7 @@ Med Adobe Developer Console måste du skapa ett projekt (integration) med Adobe 
 
    ![Välja ett API att lägga till](assets/integration-target-io-16.png)
 
-1. Skapandet bekräftas.
+1. Skapandet kommer att bekräftas.
 
 <!--
 1. The creation will be confirmed, you can now **Continue to integration details**; these are needed for [Completing the IMS Configuration in AEM](#completing-the-ims-configuration-in-aem).
@@ -128,7 +134,7 @@ Du måste nu tilldela nödvändig behörighet till integreringen:
 
    * [https://adminconsole.adobe.com](https://adminconsole.adobe.com/)
 
-1. Navigera till **Produkter** (övre verktygsfältet) och sedan välja **Adobe Target - &lt;*din-tenant-id*>** (från den vänstra panelen).
+1. Navigera till **Produkter** (övre verktygsfältet) och sedan välja **ADOBE TARGET - &lt;*din-tenant-id*>** (från vänster panel).
 1. Välj **Produktprofiler** och sedan den arbetsyta du behöver i den lista som visas. Exempel: Standardarbetsyta.
 1. Välj **API-autentiseringsuppgifter** och sedan den integreringskonfiguration som krävs.
 1. Välj **Redigerare** som **Produktroll**; i stället för **Observer**.
@@ -143,7 +149,7 @@ Välj **Visa** (till höger om en viss projektpost) om du vill visa mer informat
 
 * Projektöversikt
 * Insikter
-* Autentiseringsuppgifter
+* Referenser
    * Tjänstkonto (JWT)
       * Information om autentiseringsuppgifter
       * Generera JWT
@@ -163,8 +169,8 @@ Om du går tillbaka till AEM kan du slutföra IMS-konfigurationen genom att läg
 
    * **Titel**: Din text.
    * **Auktoriseringsserver**: Kopiera/klistra in detta från `aud` rad i **Nyttolast** avsnitt nedan, till exempel `https://ims-na1.adobelogin.com` i exemplet nedan
-   * **API-nyckel**: Kopiera detta från [Översikt](#details-stored-for-the-ims-integration-project) section
-   * **Klienthemlighet**: Generera detta i [Översikt](#details-stored-for-the-ims-integration-project) och kopiera
+   * **API-nyckel**: Kopiera detta från [Ökning](#details-stored-for-the-ims-integration-project) section
+   * **Klienthemlighet**: Generera detta i [Ökning](#details-stored-for-the-ims-integration-project) och kopiera
    * **Nyttolast**: Kopiera detta från [Generera JWT](#details-stored-for-the-ims-integration-project) section
 
    ![Konfiguration av tekniskt konto](assets/integrate-target-io-10.png)
@@ -200,12 +206,12 @@ Så här bekräftar du att konfigurationen fungerar som förväntat:
 
 Det går nu att referera till konfigurationen för en Cloud Service som använder Target Standard API:
 
-1. Öppna **verktyg** -menyn. Sedan, i **Cloud Services** avsnitt, markera **Äldre Cloud Services**.
+1. Öppna **verktyg** -menyn. Sedan, i **Cloud Service** avsnitt, markera **Äldre Cloud Service**.
 1. Bläddra nedåt till **Adobe Target** och markera **Konfigurera nu**.
 
    The **Skapa konfiguration** öppnas.
 
-1. Ange **Titel** och, om du vill, en **Namn** (Om inget anges genereras detta från titeln).
+1. Ange en **Titel** och, om du vill, en **Namn** (Om inget anges genereras detta från titeln).
 
    Du kan också välja önskad mall (om fler än en är tillgänglig).
 
@@ -235,7 +241,7 @@ Det går nu att referera till konfigurationen för en Cloud Service som använde
 
    * **API-typ**: REST
 
-   * **A4T Analytics Cloud-konfiguration**: Välj den Analytics-molnkonfiguration som används för målaktivitetsmål och -mått. Du behöver detta om du använder Adobe Analytics som rapportkälla när du skapar innehåll för målgruppsanpassning. Om du inte ser din molnkonfiguration kan du läsa mer i [Konfigurera A4T Analytics Cloud-konfiguration](/help/sites-administering/target-configuring.md#configuring-a-t-analytics-cloud-configuration).
+   * **A4T Analytics Cloud-konfiguration**: Välj den Analytics-molnkonfiguration som används för mål och mått för aktivitet. Du behöver detta om du använder Adobe Analytics som rapportkälla när du skapar innehåll för målgruppsanpassning. Om du inte ser din molnkonfiguration kan du läsa mer i [Konfigurera A4T Analytics Cloud-konfiguration](/help/sites-administering/target-configuring.md#configuring-a-t-analytics-cloud-configuration).
 
    * **Använd exakt målinriktning**: Som standard är den här kryssrutan markerad. Om du väljer det här alternativet väntar molntjänstkonfigurationen på att kontexten ska läsas in innan innehållet läses in. Se följande.
 
