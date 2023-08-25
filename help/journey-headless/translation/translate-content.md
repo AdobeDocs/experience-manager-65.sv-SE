@@ -2,9 +2,9 @@
 title: Översätta innehåll
 description: Använd översättningskopplingen och reglerna för att översätta ditt headless-innehåll.
 exl-id: a2c2bb9f-97b9-42fd-9bd1-e75c113fb514
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 29fb61f9fdcb72864068662d935bc01779b9e451
 workflow-type: tm+mt
-source-wordcount: '2173'
+source-wordcount: '2163'
 ht-degree: 0%
 
 ---
@@ -18,16 +18,16 @@ Använd översättningskopplingen och reglerna för att översätta ditt headles
 I det föregående dokumentet om den AEM översättningsresan utan headless [Konfigurera översättningsregler](translation-rules.md) du lärde dig att använda AEM översättningsregler för att identifiera översättningsinnehåll. Nu bör du:
 
 * Förstå vad översättningsreglerna gör.
-* Du kan definiera egna översättningsregler.
+* Ange egna översättningsregler.
 
 Nu när du har konfigurerat reglerna för anslutning och översättning tar den här artikeln dig igenom nästa steg när du översätter ditt headless-innehåll.
 
 ## Syfte {#objective}
 
-Det här dokumentet hjälper dig att förstå hur du använder AEM översättningsprojekt tillsammans med kopplingen och dina översättningsregler för att översätta innehåll. När du har läst det här dokumentet bör du:
+Det här dokumentet hjälper dig att förstå hur du använder AEM översättningsprojekt tillsammans med kopplingen och dina översättningsregler för att översätta innehåll. När du har läst det här dokumentet bör du göra följande:
 
 * Förstå vad ett översättningsprojekt är.
-* Skapa nya översättningsprojekt.
+* Skapa översättningsprojekt.
 * Använd översättningsprojekt för att översätta ert headless-innehåll.
 
 ## Skapa ett översättningsprojekt {#creating-translation-project}
@@ -41,7 +41,7 @@ När innehåll läggs till i ett översättningsprojekt skapas ett översättnin
 1. Välj språkroten för innehållet och låt AEM automatiskt skapa översättningsprojektet baserat på innehållssökvägen.
 1. Skapa ett tomt projekt och välj manuellt det innehåll som ska läggas till i översättningsprojektet
 
-Båda metoderna är vanligtvis bara olika beroende på vilken person som utför översättningen:
+Båda är giltiga strategier som endast skiljer sig åt utifrån den person som utför översättningen:
 
 * Översättningsprojektledaren (TPM) behöver ofta flexibiliteten att manuellt välja innehåll till översättningsprojektet.
 * Om innehållsägaren också ansvarar för översättning är det ofta enklare att låta AEM automatiskt skapa projektet baserat på den valda innehållssökvägen.
@@ -53,9 +53,9 @@ Båda metoderna beskrivs i följande avsnitt.
 För rättighetsinnehavare som också ansvarar för översättning är det ofta enklare att AEM automatiskt skapa översättningsprojektet. Så här skapar AEM automatiskt ett översättningsprojekt baserat på din innehållssökväg:
 
 1. Navigera till **Navigering** -> **Resurser** -> **Filer**. Kom ihåg att innehåll utan rubrik i AEM lagras som resurser som kallas för innehållsfragment.
-1. Välj språkroten för projektet. I det här fallet har vi valt `/content/dam/wknd/en`.
+1. Välj språkroten för projektet. I detta fall `/content/dam/wknd/en` är markerat.
 1. Tryck eller klicka på rälsväljaren och visa **Referenser** -panelen.
-1. Tryck eller klicka på **Språkkopior**.
+1. Tryck eller klicka **Språkkopior**.
 1. Kontrollera **Språkkopior** kryssrutan.
 1. Expandera avsnittet **Uppdatera språkkopior** längst ned på referenspanelen.
 1. I **Projekt** listruta, välja **Skapa översättningsprojekt**.
@@ -79,12 +79,12 @@ För översättningsprojektledare är det ofta nödvändigt att manuellt välja 
 1. Navigera till **Navigering** -> **Projekt**.
 1. Tryck eller klicka **Skapa** -> **Mapp** för att skapa en mapp för dina projekt.
    * Detta är valfritt, men användbart om du vill organisera översättningsarbetet.
-1. I **Skapa mapp** fönster, lägga till **Titel** för mappen och sedan trycka eller klicka **Skapa**.
+1. I **Skapa mapp** fönster, lägga till **Titel** för mappen och tryck eller klicka **Skapa**.
 
    ![Skapa projektmapp](assets/create-project-folder.png)
 
 1. Tryck eller klicka på mappen för att öppna den.
-1. Tryck eller klicka på **Skapa** -> **Projekt**.
+1. I den nya projektmappen: tryck eller klicka **Skapa** -> **Projekt**.
 1. Projekten bygger på mallar. Tryck eller klicka på **Översättningsprojekt** för att markera den och sedan trycka eller klicka på **Nästa**.
 
    ![Välj översättningsprojektmall](assets/select-translation-project-template.png)
@@ -117,7 +117,7 @@ Så här visar du översättningsprojektet:
 Projektet är uppdelat i flera kort.
 
 * **Sammanfattning** - Det här kortet visar grundläggande rubrikinformation för projektet inklusive ägare, språk och översättningsleverantör.
-* **Översättningsjobb** - Kortet eller korten ger en översikt över det faktiska översättningsjobbet inklusive status, antal tillgångar osv. Vanligtvis finns det ett jobb per språk med ISO-2-språkkoden tillagd till jobbnamnet.
+* **Översättningsjobb** - Kortet eller korten ger en översikt över det faktiska översättningsjobbet inklusive status, antal resurser och så vidare. Vanligtvis finns det ett jobb per språk med ISO-2-språkkoden tillagd till jobbnamnet.
 * **Team** - Det här kortet visar vilka användare som samarbetar i det här översättningsprojektet. Den här resan täcker inte det här ämnet.
 * **Uppgifter** - Ytterligare uppgifter som är kopplade till översättning av innehåll som att göra objekt eller arbetsflödesobjekt. Den här resan täcker inte det här ämnet.
 
@@ -138,19 +138,19 @@ Om du vill se detaljerna om det headless-innehåll som ingår i projektet:
 
 Översättningsjobbets innehåll startar vanligtvis i **Utkast** enligt **Läge** kolumn i **Översättningsjobb** -fönstret.
 
-Starta översättningsjobbet genom att gå tillbaka till översättningsprojektöversikten och trycka eller klicka på knappen för att markera översättningen längst upp i **Översättningsjobb** och välj **Starta**.
+Om du vill starta översättningsjobbet går du tillbaka till översikten över översättningsprojektet och trycker eller klickar på knappen för att markera översättningen längst upp i dialogrutan **Översättningsjobb** och välj **Starta**.
 
 ![Starta översättningsjobb](assets/start-translation-job.png)
 
 AEM kommunicerar nu med din översättningskonfiguration och koppling för att skicka innehållet till översättningstjänsten. Du kan visa översättningens förlopp genom att gå tillbaka till **Översättningsjobb** och visa **Läge** kolumn för posterna.
 
-![Översättningsjobb godkänt](assets/translation-job-approved.png)
+![Översättningsjobbet har godkänts](assets/translation-job-approved.png)
 
 Maskinöversättningar returneras automatiskt med statusen **Godkänd**. Översättning till människor möjliggör mer interaktion, men ligger utanför den här resan.
 
 ### Använda ett manuellt skapat översättningsprojekt {#using-manual-project}
 
-När du skapar ett översättningsprojekt manuellt skapar AEM de nödvändiga jobben, men väljer inte automatiskt något innehåll som ska inkluderas. Detta ger översättningsprojektledaren flexibilitet att välja och välja vilket innehåll som ska översättas.
+När du skapar ett översättningsprojekt manuellt skapar AEM de nödvändiga jobben, men väljer inte automatiskt något innehåll som ska inkluderas. På så sätt kan översättningsprojektledaren välja och välja vilket innehåll som ska översättas.
 
 Så här lägger du till innehåll i ett översättningsjobb:
 
@@ -164,7 +164,7 @@ Så här lägger du till innehåll i ett översättningsjobb:
    ![Sökvägsläsare](assets/path-browser.png)
 
 1. Tryck eller klicka **Välj** för att lägga till det markerade innehållet i jobbet.
-1. I **Översätt** dialogruta, ange att du vill **Skapa språkkopia**.
+1. I **Översätt** anger du att du vill **Skapa språkkopia**.
 
    ![Skapa språkkopia](assets/translate-copy-master.png)
 
@@ -179,27 +179,27 @@ Så här lägger du till innehåll i ett översättningsjobb:
 
 >[!TIP]
 >
->Sökvägsläsaren är ett kraftfullt verktyg som du kan använda för att söka efter, filtrera och navigera i ditt innehåll. Tryck eller klicka på **Endast innehåll/filter** för att växla sidopanelen och visa avancerade filter som **Ändringsdatum** eller **Översättningsstatus**.
+>Sökvägsläsaren är ett kraftfullt verktyg med vilket du kan söka efter, filtrera och navigera i innehållet. Tryck eller klicka på **Endast innehåll/filter** för att växla sidopanelen och visa avancerade filter som **Ändringsdatum** eller **Översättningsstatus**.
 >
 >Du kan läsa mer om sökvägsläsaren i [ytterligare resursavsnitt.](#additional-resources)
 
-Du kan använda föregående steg för att lägga till nödvändigt innehåll till alla språk (jobb) för projektet. När du har markerat allt innehåll kan du starta översättningen.
+Du kan använda de föregående stegen för att lägga till nödvändigt innehåll till alla språk (jobb) för projektet. När du har markerat allt innehåll kan du starta översättningen.
 
 Översättningsjobbets innehåll startar vanligtvis i **Utkast** enligt **Läge** kolumn i **Översättningsjobb** -fönstret.
 
-Starta översättningsjobbet genom att gå tillbaka till översättningsprojektöversikten och trycka eller klicka på knappen för att markera översättningen längst upp i **Översättningsjobb** och välj **Starta**.
+Om du vill starta översättningsjobbet går du tillbaka till översikten över översättningsprojektet och trycker eller klickar på knappen för att markera översättningen längst upp i dialogrutan **Översättningsjobb** och välj **Starta**.
 
 ![Starta översättningsjobb](assets/start-translation-job-manual.png)
 
 AEM kommunicerar nu med din översättningskonfiguration och koppling för att skicka innehållet till översättningstjänsten. Du kan visa översättningens förlopp genom att gå tillbaka till **Översättningsjobb** och visa **Läge** kolumn för posterna.
 
-![Översättningsjobb godkänt](assets/translation-job-approved-manual.png)
+![Översättningsjobbet har godkänts](assets/translation-job-approved-manual.png)
 
 Maskinöversättningar returneras automatiskt med statusen **Godkänd**. Översättning till människor möjliggör mer interaktion, men ligger utanför den här resan.
 
 ## Granskning av översatt innehåll {#reviewing}
 
-[Som tidigare visats](#using-translation-project) maskinöversatt innehåll flödas tillbaka till AEM med statusen **Godkänd** Eftersom antagandet är att maskinöversättning används krävs ingen mänsklig åtgärd. Det är dock fortfarande möjligt att granska det översatta innehållet.
+[Som tidigare visats](#using-translation-project) maskinöversatt innehåll flödar tillbaka till AEM med statusen **Godkänd** Eftersom antagandet är att maskinöversättning används krävs ingen mänsklig åtgärd. Det går dock fortfarande att granska det översatta innehållet.
 
 Gå bara till det slutförda översättningsjobbet och markera ett radobjekt genom att trycka eller klicka i kryssrutan. Ikonen **Visa i innehållsfragment** visas i verktygsfältet.
 
@@ -211,7 +211,7 @@ Tryck eller klicka på den ikonen för att öppna det översatta innehållsfragm
 
 Du kan ändra innehållsfragmentet ytterligare om det behövs, förutsatt att du har rätt behörighet, men att redigera innehållsfragment ligger utanför den här kundresan. Se [Ytterligare resurser](#additional-resources) i slutet av det här dokumentet om du vill ha mer information om det här avsnittet.
 
-Projektets syfte är att samla alla resurser som hör till en översättning på ett och samma ställe för enkel åtkomst och en tydlig översikt. Men som du kan se genom att visa detaljerna för ett översatt objekt, flödar översättningarna tillbaka till resursmappen för översättningsspråket. I det här exemplet är mappen
+Projektets syfte är att samla alla resurser som hör till en översättning på ett och samma ställe för enkel åtkomst och en tydlig översikt. Men som du kan se genom att visa detaljerna för ett översatt objekt, flödar översättningarna i sig tillbaka till resursmappen för översättningsspråket. I det här exemplet är mappen:
 
 ```text
 /content/dam/wknd/es
@@ -223,7 +223,7 @@ Om du navigerar till den här mappen via **Navigering** -> **Resurser** -> **Fil
 
 AEM översättningsramverk tar emot översättningarna från översättningskopplingen och skapar sedan automatiskt innehållsstrukturen baserat på språkroten och med hjälp av översättningarna från kopplingen.
 
-Det är viktigt att förstå att detta innehåll inte publiceras och därför inte är tillgängligt för era headless-tjänster. Vi kommer att lära oss om den här strukturen för författarpublicering och se hur vi kan publicera vårt översatta innehåll i nästa steg av översättningsresan.
+Det är viktigt att förstå att detta innehåll inte publiceras och därför inte är tillgängligt för era headless-tjänster. Du lär dig mer om den här strukturen för författarpublicering och hur du publicerar det översatta innehållet i nästa steg av översättningsresan.
 
 ## Översättning av människor {#human-translation}
 
@@ -233,17 +233,17 @@ Om översättningstjänsten tillhandahåller mänsklig översättning erbjuder g
 
 ## What&#39;s Next {#what-is-next}
 
-Nu när du är klar med den här delen av den headless översättningsresan ska du:
+Nu när du har slutfört den här delen av den headless översättningsresan ska du kunna göra följande:
 
 * Förstå vad ett översättningsprojekt är.
-* Skapa nya översättningsprojekt.
+* Skapa översättningsprojekt.
 * Använd översättningsprojekt för att översätta ert headless-innehåll.
 
-Bygg vidare på den här kunskapen och fortsätt din AEM resa med headless translation genom att nästa gång du granskar dokumentet [Publicera översatt innehåll](publish-content.md) där du får lära dig hur du publicerar översatt innehåll och hur du uppdaterar översättningarna när rotinnehållet för ditt språk ändras.
+Bygg vidare på den här kunskapen och fortsätt din AEM resa med headless translation genom att nästa gång du granskar dokumentet [Publicera översatt innehåll](publish-content.md) där du lär dig hur du publicerar översatt innehåll och hur du uppdaterar översättningarna när rotinnehållet för ditt språk ändras.
 
 ## Ytterligare resurser {#additional-resources}
 
 Vi rekommenderar att du går vidare till nästa del av den headless-översättningsresan genom att granska dokumentet [Publicera översatt innehåll,](publish-content.md) Nedan följer ytterligare, valfria resurser som gör en djupdykning i vissa koncept som nämns i det här dokumentet, men som inte behöver fortsätta på den headless-resan.
 
 * [Hantera översättningsprojekt](/help/sites-administering/tc-manage.md) - Läs mer om översättningsprojekt och andra funktioner som arbetsflöden för översättning och flerspråkiga projekt.
-* [Redigeringsmiljö och -verktyg](/help/sites-authoring/author-environment-tools.md##path-selection) - AEM innehåller olika sätt att ordna och redigera ditt innehåll, bland annat en robust sökvägsläsare.
+* [Redigeringsmiljö och -verktyg](/help/sites-authoring/author-environment-tools.md#path-selection) - AEM innehåller olika sätt att ordna och redigera ditt innehåll, bland annat en robust sökvägsläsare.
