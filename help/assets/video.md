@@ -10,7 +10,7 @@ docset: aem65
 feature: Asset Management
 role: User, Admin
 exl-id: 28cf9e39-cab4-4278-b6c9-e84cc31964db
-source-git-commit: 6ef87e4f86181f83b7c340e4954e9e85e6bb9ab1
+source-git-commit: 29fb61f9fdcb72864068662d935bc01779b9e451
 workflow-type: tm+mt
 source-wordcount: '11097'
 ht-degree: 1%
@@ -449,7 +449,7 @@ Samtidigt som du skapar ett Adobe Support-ärende där DASH ska aktiveras för d
 
 >[!IMPORTANT]
 >
->Alla videofilmer som du har överfört *föregående* för att möjliggöra stöd för flera undertexter och flerljudspår på ditt Dynamic Media-konto, [måste bearbetas på nytt](/help/assets/processing-profiles.md##reprocessing-assets). Det här steget för videoombearbetning är nödvändigt för att de ska kunna använda spår med flera undertexter och flera ljud. Video-URL:erna fortsätter att fungera och spelas upp som vanligt efter ombearbetningen.
+>Alla videofilmer som du har överfört *föregående* för att möjliggöra stöd för flera undertexter och flerljudspår på ditt Dynamic Media-konto, [måste bearbetas på nytt](/help/assets/processing-profiles.md#reprocessing-assets). Det här steget för videoombearbetning är nödvändigt för att de ska kunna använda spår med flera undertexter och flera ljud. Video-URL:erna fortsätter att fungera och spelas upp som vanligt efter ombearbetningen.
 
 **Så här aktiverar du stöd för DASH, multi-subtitle och multi-audio-spår på ditt Dynamic Media-konto:**
 
@@ -625,7 +625,7 @@ Undertexter och bildtexter som lagts till stöds i formaten WebVTT och Adobe VTT
 
 >[!IMPORTANT]
 >
->Alla videofilmer som du har överfört *föregående* för att möjliggöra stöd för flera undertexter och flerljudspår på ditt Dynamic Media-konto, [måste bearbetas på nytt](/help/assets/processing-profiles.md##reprocessing-assets). Det här steget för videoombearbetning är nödvändigt för att de ska kunna använda spår med flera undertexter och flera ljud. Video-URL:erna fortsätter att fungera och spelas upp som vanligt efter ombearbetningen.
+>Alla videofilmer som du har överfört *föregående* för att möjliggöra stöd för flera undertexter och flerljudspår på ditt Dynamic Media-konto, [måste bearbetas på nytt](/help/assets/processing-profiles.md#reprocessing-assets). Det här steget för videoombearbetning är nödvändigt för att de ska kunna använda spår med flera undertexter och flera ljud. Video-URL:erna fortsätter att fungera och spelas upp som vanligt efter ombearbetningen.
 
 **Så här lägger du till multiundertexter och flerljudspår i videon:**
 
@@ -693,7 +693,7 @@ Om du har konfigurerat Dynamic Media för omedelbar publicering kommer överför
 
 >[!CAUTION]
 >
->När du överför undertextningsfiler eller ljudfiler till en video som redan har publicerats tas dessa filer bort om du [*ombearbeta*](/help/assets/processing-profiles.md##reprocessing-assets) videon. Endast videons ursprungliga ljud bevaras. I så fall måste du ladda upp undertextningsfilerna och ljudspårsfilerna till videon igen.
+>När du överför undertextningsfiler eller ljudfiler till en video som redan har publicerats tas dessa filer bort om du [*ombearbeta*](/help/assets/processing-profiles.md#reprocessing-assets) videon. Endast videons ursprungliga ljud bevaras. I så fall måste du ladda upp undertextningsfilerna och ljudspårsfilerna till videon igen.
 
 #### Lägga till flera bildtexter i en video som har en befintlig URL med bildtextmodifierare
 
