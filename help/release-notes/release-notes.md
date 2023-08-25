@@ -2,9 +2,9 @@
 title: Versionsinformation för [!DNL Adobe Experience Manager] 6.5
 description: Hitta versionsinformation, nyheter, installationsanvisningar och en detaljerad ändringslista för [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 4
-source-git-commit: 8edc6a97e2fc002d6dbbc4ce8b1828616b6c1cc6
+source-git-commit: 2209ab8498072744091f5af22887c8f13dbb3ac6
 workflow-type: tm+mt
-source-wordcount: '3415'
+source-wordcount: '3439'
 ht-degree: 0%
 
 ---
@@ -54,6 +54,10 @@ Några av de viktigaste funktionerna och förbättringarna i den här versionen 
 * För att snabbt hitta ett projekt i listvyn där du kan ha många projekt i systemet har Adobe nu stöd för sortering på serversidan. Projektnoder sorteras på serverdelen baserat på den kolumn som valts av användaren innan de återges i användargränssnittet. (NPR-41027)
 
 * AEM 6.5.18.0 stöder MongoDB 5.0 till 6.0.
+
+**Inaktuell funktion**
+
+* ActiveMQ i AEM är föråldrat. ActiveMQ användes för kommunikation mellan två AEM publiceringsinstanser. Adobe rekommenderar att man nu använder belastningsutjämnare.
 
 **Forms**
 
