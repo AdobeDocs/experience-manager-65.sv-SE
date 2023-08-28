@@ -10,9 +10,9 @@ docset: aem65
 feature: Asset Management
 role: User, Admin
 exl-id: 28cf9e39-cab4-4278-b6c9-e84cc31964db
-source-git-commit: 29fb61f9fdcb72864068662d935bc01779b9e451
+source-git-commit: ee1a0866aafd56fa53f5d3b936beab8f500d335c
 workflow-type: tm+mt
-source-wordcount: '11097'
+source-wordcount: '11191'
 ht-degree: 1%
 
 ---
@@ -33,7 +33,7 @@ Följande steg-för-steg-beskrivning av arbetsflödet hjälper dig att komma ig�
 >
 >* Se [Konfigurera Dynamic Media-Cloud Service](/help/assets/config-dynamic.md#configuring-dynamic-media-cloud-services) i Konfigurera Dynamic Media - hybrid-läge.
 >
->Problem med videouppspelning i Dynamic Media *endast på Experience Manager 6.5.9.0*:
+>Aktuellt känt problem med videouppspelning i Dynamic Media *endast på Experience Manager 6.5.9.0*:
 >
 >* Om en publicerad video uppdateras måste den publiceras igen för att återspegla leveransändringar.
 >
@@ -111,12 +111,12 @@ Läs mer om [Bästa tillvägagångssätt för att ordna digitala resurser för a
       * Integrera video med URL:
         [Länka URL:er till ditt webbprogram](linking-urls-to-yourwebapplication.md).
 
-      * Integrera video med inbäddad kod på webbsidan:
+      * Integrera video med inbäddad kod på en webbsida:
         [Bädda in videovisningsprogrammet på en webbsida](embed-code.md).
 
    * [Generera videorapporter](#viewing-video-reports).
 
-   * [Lägga till bildtexter i video](#adding-captions-to-video).
+   * [Lägga till bildtexter i videon](#adding-captions-to-video).
 
 ## Arbeta med video i Dynamic Media {#working-with-video-in-dynamic-media}
 
@@ -128,7 +128,7 @@ Dessutom ändras videokvaliteten dynamiskt automatiskt om nätverksförhållande
 
 Den logik som en videospelare använder för att avgöra vilken kodad video som ska spelas upp eller väljas under uppspelningen baseras på följande algoritm:
 
-1. Videospelaren läser in det inledande videofragmentet baserat på den bithastighet som ligger närmast värdet som är inställt för&quot;inledande bithastighet&quot; i spelaren.
+1. Videospelaren läser in det inledande videofragmentet baserat på den bithastighet som ligger närmast värdet som är inställt för&quot;inledande bithastighet&quot; i själva spelaren.
 1. Videospelaren växlar baserat på ändringar av bandbreddshastigheten med följande kriterier:
 
    1. Spelaren väljer den högsta bandbreddsströmmen under eller lika med den beräknade bandbredden.
@@ -449,7 +449,7 @@ Samtidigt som du skapar ett Adobe Support-ärende där DASH ska aktiveras för d
 
 >[!IMPORTANT]
 >
->Alla videofilmer som du har överfört *föregående* för att möjliggöra stöd för flera undertexter och flerljudspår på ditt Dynamic Media-konto, [måste bearbetas på nytt](/help/assets/processing-profiles.md#reprocessing-assets). Det här steget för videoombearbetning är nödvändigt för att de ska kunna använda spår med flera undertexter och flera ljud. Video-URL:erna fortsätter att fungera och spelas upp som vanligt efter ombearbetningen.
+>Alla videofilmer som du har överfört *före* stöd för flera undertexter och flerljudspår på ditt Dynamic Media-konto, [måste bearbetas på nytt](/help/assets/processing-profiles.md#reprocessing-assets). Det här steget för videoombearbetning är nödvändigt för att de ska kunna använda spår med flera undertexter och flera ljud. Video-URL:erna fortsätter att fungera och spelas upp som vanligt efter ombearbetningen.
 
 **Så här aktiverar du stöd för DASH, multi-subtitle och multi-audio-spår på ditt Dynamic Media-konto:**
 
@@ -625,7 +625,7 @@ Undertexter och bildtexter som lagts till stöds i formaten WebVTT och Adobe VTT
 
 >[!IMPORTANT]
 >
->Alla videofilmer som du har överfört *föregående* för att möjliggöra stöd för flera undertexter och flerljudspår på ditt Dynamic Media-konto, [måste bearbetas på nytt](/help/assets/processing-profiles.md#reprocessing-assets). Det här steget för videoombearbetning är nödvändigt för att de ska kunna använda spår med flera undertexter och flera ljud. Video-URL:erna fortsätter att fungera och spelas upp som vanligt efter ombearbetningen.
+>Alla videofilmer som du har överfört *före* stöd för flera undertexter och flerljudspår på ditt Dynamic Media-konto, [måste bearbetas på nytt](/help/assets/processing-profiles.md#reprocessing-assets). Det här steget för videoombearbetning är nödvändigt för att de ska kunna använda spår med flera undertexter och flera ljud. Video-URL:erna fortsätter att fungera och spelas upp som vanligt efter ombearbetningen.
 
 **Så här lägger du till multiundertexter och flerljudspår i videon:**
 
@@ -637,9 +637,14 @@ Undertexter och bildtexter som lagts till stöds i formaten WebVTT och Adobe VTT
 1. På videons egenskapssida väljer du **[!UICONTROL Subtitles & Audio Tracks]** -fliken.
 
    >[!TIP]
-   >Om du inte ser **[!UICONTROL Subtitles & Audio Tracks]** betyder det att mappen där den markerade videon finns inte har tilldelats någon videoprofil. [Använda en videoprofil på mappen](/help/assets/video-profiles.md#applying-video-profiles-to-specific-folders)och sedan återgå till dessa steg.
+   >Om du inte ser **[!UICONTROL Subtitles & Audio Tracks]** betyder det något av två:
+   >
+   >* Mappen där den valda videon finns har ingen tilldelad videoprofil. I så fall, se [Använda en videoprofil på mappen](/help/assets/video-profiles.md#applying-video-profiles-to-specific-folders).
+   >* Eller så måste videon bearbetas på nytt av Dynamic Media. I så fall, se [Bearbeta resurser igen i en mapp](/help/assets/processing-profiles.md#reprocessing-assets).
+   >
+   >När du har slutfört någon av ovanstående åtgärder går du tillbaka till dessa steg.
 
-   ![Undertexter och ljudspår på egenskapssidan.](assets-dm/msma-audiotracks.png)*Underrubriker och fliken Ljudspår på videons egenskapssida. Observera att det inte finns något ursprungligt ljudspår kopplat till videon, vilket anges i en tom listruta för ljudspår. När videobearbetningen är klar visas spåret.*
+   ![Undertexter och ljudspår på egenskapssidan.](assets-dm/msma-audiotracks.png)*Underrubriker och fliken Ljudspår på videons egenskapssida.*
 
 1. (Valfritt) Gör så här om du vill lägga till en eller flera undertextningsfiler i en video:
    * Välj **[!UICONTROL Upload Subtitles]**.
@@ -693,7 +698,7 @@ Om du har konfigurerat Dynamic Media för omedelbar publicering kommer överför
 
 >[!CAUTION]
 >
->När du överför undertextningsfiler eller ljudfiler till en video som redan har publicerats tas dessa filer bort om du [*ombearbeta*](/help/assets/processing-profiles.md#reprocessing-assets) videon. Endast videons ursprungliga ljud bevaras. I så fall måste du ladda upp undertextningsfilerna och ljudspårsfilerna till videon igen.
+>När du överför undertextningsfiler eller ljudfiler till en video som redan har publicerats tas dessa filer bort om du [*ombearbeta*](/help/assets/processing-profiles.md#reprocessing-assets) videon. Endast videons ursprungliga ljud förblir intakt. I så fall måste du ladda upp undertextningsfilerna och ljudspårsfilerna till videon igen.
 
 #### Lägga till flera bildtexter i en video som har en befintlig URL med bildtextmodifierare
 
@@ -725,11 +730,11 @@ Du kan följa livscykelstatusen för alla undertexter eller ljudspårsfiler som 
 
 | Status för underrubrik eller ljudspår | Beskrivning |
 | --- | --- |
-| Bearbetar | Bearbetningen pågår. |
-| Behandlad | Bearbetningen har slutförts. |
-| Publicerad | Publicerat på Dynamic Media. |
-| Misslyckades | Bearbetningen slutfördes inte. Ta bort filen och försök överföra igen. |
-| Opublicerad | Bearbetar men publiceras ännu inte till Dynamic Media. |
+| Bearbetar | När en ny undertitel- eller ljudspårsfil läggs till och sparas, försätts den i tillståndet&quot;Bearbetar&quot;. Dynamic Media bearbetar filen genom att bifoga det direktuppspelade manifestet till den primära videon. |
+| Behandlad | När bearbetningen är klar visas undertitels- eller ljudspårsfilen i läget Behandlad. Du kan förhandsgranska undertitel- och ljudspårsfiler som visas som &quot;Behandlad&quot; *före* publicerar du videon live. |
+| Publicerad | Ett publicerat läge representerar ett läge som liknar publicerat för en primär video. Resurser publiceras när den primära videon publiceras och är tillgängliga på den offentliga Dynamic Media-URL:en. |
+| Misslyckades | Ett &quot;Misslyckat&quot;-läge innebär att bearbetningen av en undertitel- eller ljudspårsfil inte slutfördes. Ta bort undertitel- eller ljudspårsfilen och överför igen. |
+| Opublicerad | När en publicerad primär video avpubliceras explicit avpubliceras även eventuella undertitel- eller ljudspårsfiler som du har lagt till i videon. |
 
 ![Statuskolumnen är markerad för fälten Undertexter och Ljudspår.](assets-dm/msma-lifecycle-status.png)*Livscykelstatus för varje överförd undertitel- och ljudspårfil.*
 
@@ -763,7 +768,7 @@ I **Ange som standard** väljer **[!UICONTROL Replace]**.
 
 ### Förhandsgranska en video med flera undertexter och ljudspår{#preview-video-audio-subtitle}
 
-När du har överfört undertextningsfiler och ljudspårsfiler till en video och bearbetat dem kan du använda Dynamic Media videovisningsprogram för att förhandsgranska alla olika spår. Om du gör det blir det lättare att se hur videon ser ut och låter som den är för kunderna, och du kan vara säker på att den beter sig som förväntat.
+När du har överfört undertextningsfiler och ljudspårsfiler till en video och bearbetat dem kan du använda Dynamic Media videovisningsprogram (eller andra visningsprogramtyper om du vill) för att förhandsgranska alla olika spår. Genom att förhandsgranska kan du se vad videon ser ut och låter som för kunderna och se till att den beter sig som förväntat.
 
 När du är nöjd med videon kan du [publicera](publishing-dynamicmedia-assets.md) med någon av följande metoder.
 
@@ -783,15 +788,15 @@ På standardfliken för förhandsgranskning i Experience Manager visas inte fler
 
    ![Listruta med alternativet Visare.](assets-dm/msma-selectviewers.png)
 
-1. I visningslistan väljer du **[!UICONTROL Video]**.
+1. Välj ett visningsprogram som du vill använda för videoförhandsvisningen i listan Visare. I följande skärmbild visas **[!UICONTROL Video]** visningsprogrammet väljs.
 
    ![Välj Video Viewer i listrutan Viewer.](assets-dm/msma-dmviewerselected.png)
 
-1. I närheten av det nedre högra hörnet, till vänster om volymikonen, väljer du ikonen för pratbubblan och sedan det ljud eller den undertext som du vill höra eller se, eller båda. Om du vill kan du under Underrubriker välja **[!UICONTROL Off]** om du inte vill visa några undertexter eller bildtexter.
+1. I närheten av det nedre högra hörnet, till vänster om volymikonen, väljer du ikonen för pratbubblan och sedan det ljud eller den underrubrik som du vill höra eller se eller båda. Om du vill kan du under Underrubriker välja **[!UICONTROL Off]** om du inte vill visa några undertexter eller bildtexter.
 
    ![Popup-listan Ljud och underrubriker i Video Viewer.](assets-dm/msma-selectaudiosubtitle.png)*Simulering av en användare som väljer ljud och undertext för videouppspelning.*
 
-1. Välj videons **[!UICONTROL Play]** för att påbörja uppspelningen.
+1. För att börja spela upp väljer du videons **[!UICONTROL Play]** -knappen.
 Anteckna **[!UICONTROL URL]** och **[!UICONTROL Embed]** i det nedre vänstra hörnet. Använd de här knapparna för att [länka videons URL till ditt webbprogram](/help/assets/linking-urls-to-yourwebapplication.md) eller till [bädda in videon på en webbsida](/help/assets/embed-code.md), respektive
 1. I det övre högra hörnet av förhandsvisningssidan väljer du **[!UICONTROL Close]**.
 
@@ -915,11 +920,7 @@ Se [Hantera statiskt innehåll (inte bildinnehåll)](https://experienceleague.ad
 
 ## Lägga till kapitelmarkörer i video {#adding-chapter-markers-to-video}
 
->[!IMPORTANT]
->
-Det här avsnittet underhålls inte längre aktivt. Det tillhandahålls i befintligt skick för äldre användare av Dynamic Media. Adobe rekommenderar att du [möjliggör funktioner för flera undertexter och flerljudspår](#enable-dash) på ditt Dynamic Media-konto. På så sätt kan du dra nytta av den senaste Dynamic Media backend-arkitekturen och ett förenklat arbetsflöde för att lägga till bildtexter, undertexter och ljudspår i videoklipp.
-
-Du kan göra det enklare att titta på och navigera i videoklipp med långa formulär genom att lägga till kapitelmarkörer i enstaka videor eller i adaptiva videouppsättningar. När en användare spelar upp videon kan han/hon klicka på kapitelmarkörerna på tidslinjen (kallas även videobandskrubbaren) för att enkelt navigera till sin intressepunkt. Eller så kan de direkt gå över till nytt innehåll, demonstrationer och självstudiekurser.
+Du kan göra dina videoklipp i långa format enklare att titta på och navigera genom att lägga till kapitelmarkörer i enstaka videor eller i adaptiva videouppsättningar. När en användare spelar upp videon kan han/hon klicka på kapitelmarkörerna på tidslinjen (kallas även videobandskrubbaren) för att enkelt navigera till sin intressepunkt. Eller så kan de direkt gå över till nytt innehåll, demonstrationer och självstudiekurser.
 
 >[!NOTE]
 >
