@@ -7,9 +7,9 @@ geptopics: SG_AEMFORMS/categories/jee
 docset: aem65
 role: Admin
 exl-id: 74d22cf4-56b2-48f5-92d9-928eaa134866
-source-git-commit: 25d7f93137e2410ecafc22dc4899e0ce5f654083
+source-git-commit: 018ffe71d0186e1eb07e5f59e3d6a48ed316de47
 workflow-type: tm+mt
-source-wordcount: '3639'
+source-wordcount: '3660'
 ht-degree: 0%
 
 ---
@@ -759,6 +759,8 @@ Följande plattformar är markerade som borttagna i AEM Forms 6.5.10.0 den 7 sep
       - Microsoft® SQL Server JDBC-drivrutin 6.2.1.0
       - Microsoft® SQL Server JDBC Driver 6.2.2.0
       - Microsoft® JDBC Driver 8.x för SQL Server
+
+   - **Plattformsuppdateringar för tjänsten PDF Generator**: [!DNL Adobe Experience Manager Forms] på JEE har tagit bort stöd för följande plattformar för PDF Generator och i allmänhet:
       - Microsoft® Sharepoint 2016
       - Microsoft® Office 2016
       - Microsoft® Office Visio 2016
