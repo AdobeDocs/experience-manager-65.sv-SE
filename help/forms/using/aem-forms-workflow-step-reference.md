@@ -5,9 +5,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: publish
 docset: aem65
 exl-id: 470fcfda-dfde-437c-b539-d5af1e13a7d6
-source-git-commit: 10227bcfcfd5a9b0f126fee74dce6ec7842f5e95
+source-git-commit: 2bba1d5209fe64679c6ba6db0028562ff1415a10
 workflow-type: tm+mt
-source-wordcount: '7466'
+source-wordcount: '7565'
 ht-degree: 0%
 
 ---
@@ -23,13 +23,13 @@ Du använder arbetsflödesmodeller för att konvertera en affärslogik till en a
 
 ## Forms Workflow {#forms-workflow-steps}
 
-Forms arbetsflödessteg utför AEM Forms-specifika åtgärder i ett AEM arbetsflöde. Med dessa steg kan du snabbt skapa anpassningsbara formulärbaserade Forms-baserade arbetsflöden i OSGi. Dessa arbetsflöden kan användas för att utveckla enkla arbetsflöden för granskning och godkännande, interna och övergripande affärsprocesser. Du kan också använda steg för Forms Workflow för att starta dokumenttjänster, integrera med Adobe Sign signaturarbetsflöde och utföra andra AEM Forms-åtgärder. Du behöver [AEM Forms-tillägg](https://www.adobe.com/go/learn_aemforms_documentation_63) om du vill använda de här stegen i ett arbetsflöde.
+Formens Workflow utför AEM Forms-specifika åtgärder i ett AEM arbetsflöde. Med dessa steg kan du snabbt skapa anpassningsbara formulärbaserade Forms-baserade arbetsflöden i OSGi. Dessa arbetsflöden kan användas för att utveckla enkla arbetsflöden för granskning och godkännande, interna och övergripande affärsprocesser. Du kan också använda steg för Forms Workflow för att starta dokumenttjänster, integrera med Adobe Sign signaturarbetsflöde och utföra andra AEM Forms-åtgärder. Du behöver [AEM Forms-tillägg](https://www.adobe.com/go/learn_aemforms_documentation_63) om du vill använda de här stegen i ett arbetsflöde.
 
 Forms-centrerade arbetsflödessteg utför AEM Forms-specifika åtgärder i ett AEM arbetsflöde. Med de här stegen kan du snabbt skapa anpassningsbara Forms-baserade Forms-baserade arbetsflöden i OSGi. Dessa arbetsflöden kan användas för att utveckla enkla arbetsflöden för granskning och godkännande, interna och övergripande affärsprocesser.
 
 >[!NOTE]
 >
->Om arbetsflödesmodellen är markerad för ett externt lagringsutrymme kan du bara välja variabelalternativet för lagring eller hämtning av datafiler och bilagor för alla Forms-arbetsflödessteg.
+>Om arbetsflödesmodellen är markerad för ett externt lagringsutrymme kan du bara välja variabelalternativet för lagring eller hämtning av datafiler och bilagor för alla steg i Formens Workflow.
 
 ## Tilldela aktivitetssteg {#assign-task-step}
 
@@ -58,7 +58,7 @@ Du kan också använda komponenten för att styra aktivitetens beteende. Du kan 
 
 >[!NOTE]
 >
->Du måste ha grupptilldelningar för cm-agent-users och arbetsflödesanvändare för att få åtkomst till gränssnittet för Interactive Communications Agent i AEM.
+>Du måste ha grupptilldelningar för cm-agent-users och arbetsflödesanvändare för att få tillgång till gränssnittet för Interactive Communications Agent i AEM Inbox.
 
 * **Adaptiv form eller interaktiv kommunikationsväg**: Ange sökvägen till det adaptiva formuläret eller interaktiva kommunikationen. Du kan använda det adaptiva formuläret eller den interaktiva kommunikationen som skickas till arbetsflödet, som finns på en absolut sökväg, eller hämta det adaptiva formuläret från en sökväg som lagras i en variabel av strängdatatyp.
 * **Markera indata-PDF med:** Ange sökvägen till ett icke-interaktivt PDF-dokument. Fältet är tillgängligt när du väljer ett icke-interaktivt PDF-dokument i textfältet. Du kan markera indata PDF med den sökväg som är relativ till nyttolasten, som har sparats med en absolut sökväg eller med en variabel av dokumentdatatypen. Till exempel: [Payload_Directory]/Workflow/PDF/credit-card.pdf. Sökvägen finns inte i crx-databasen. En administratör skapar sökvägen innan den används. Du måste aktivera alternativet Dokument för post eller formulärmallsbaserade anpassade formulär för att kunna använda alternativet PDF-sökväg.
@@ -268,7 +268,7 @@ I steget Anropa formulärdatamodelltjänst visas följande fält för att underl
 * **Välj Indata-JSON-dokument med**: JSON-filen innehåller värden för alla tjänstargument. JSON-filens sökväg kan vara **i förhållande till nyttolasten** eller en **absolut sökväg.** Du kan även hämta JSON-indata-dokumentet med hjälp av en variabel av datatypen JSON eller Form Data Model.
 
 * **JSON-punktnotation:** Lämna fältet tomt om du vill använda alla objekt i den angivna JSON-filen som indata för tjänstargument. Om du vill läsa ett specifikt JSON-objekt från den angivna JSON-filen som indata för serviceargument anger du punktnotation för JSON-objektet, till exempel, om du har en JSON som liknar den som anges i början av avsnittet, anger du försäkring.customerDetails för att ge all information om en kund som indata till tjänsten.
-* **Utdata för tjänsten > Mappa och skriv utdatavärden till variabel eller metadata:** Välj alternativet att spara utdatavärdena som egenskaper för arbetsflödesinstansens metadatanod i crx-databasen. Ange namnet på metadataegenskapen och välj det motsvarande tjänstutdataattribut som ska mappas med metadataegenskapen, till exempel mappa det telefonnummer som returneras av utdatatjänsten med egenskapen phone_number för arbetsflödets metadata. På samma sätt kan du lagra utdata i en variabel med datatypen Long.När du väljer en egenskap för **[!UICONTROL Service output attribute to be mapped]** , fylls endast variabler som kan lagra data för den valda egenskapen i för **[!UICONTROL Save the output to]** alternativ.
+* **Utdata för tjänsten > Mappa och skriv utdatavärden till variabel eller metadata:** Välj alternativet att spara utdatavärdena som egenskaper för arbetsflödesinstansens metadatanod i crx-databasen. Ange namnet på metadataegenskapen och välj det motsvarande tjänstutdataattribut som ska mappas med metadataegenskapen, till exempel mappa det telefonnummer som returneras av utdatatjänsten med egenskapen phone_number för arbetsflödets metadata. På samma sätt kan du lagra utdata i en variabel med datatypen Long. När du väljer en egenskap för **[!UICONTROL Service output attribute to be mapped]** , fylls endast variabler som kan lagra data för den valda egenskapen i för **[!UICONTROL Save the output to]** alternativ.
 
 * **Utdata från tjänst > Spara utdata till variabel eller en JSON-fil:** Välj alternativet att spara utdatavärdena i en JSON-fil med en absolut sökväg, med en sökväg som är relativ till nyttolasten eller i en variabel.
 * **Spara JSON-utdatadokument med alternativen nedan:** Spara JSON-utdatafilen. Sökvägen till JSON-utdatafilen kan vara relativ till nyttolasten eller en absolut sökväg. Du kan också spara JSON-utdatafilen med en variabel av datatypen JSON eller Form Data Model.
@@ -277,7 +277,7 @@ I steget Anropa formulärdatamodelltjänst visas följande fält för att underl
 
 Med steget Signera dokument kan du använda Adobe Sign för att signera dokument. Stegen Signera dokument har följande egenskaper:
 
-* **Avtalsnamn:** Ange avtalets namn. Avtalsnamnet blir en del av ämnet och brödtexten i det e-postmeddelande som skickas till signerarna. Du kan antingen lagra namnet i en variabel av datatypen String eller välja **Literal** om du vill lägga till namnet manuellt.
+* **Avtalsnamn:** Ange avtalets namn. Avtalsnamnet blir en del av ämnet och brödtexten i det e-postmeddelande som skickas till mottagarna. Du kan antingen lagra namnet i en variabel av datatypen String eller välja **Literal** om du vill lägga till namnet manuellt.
 
 * **Språk:** Ange språk för alternativen för e-post och verifiering. Du kan antingen lagra språkinställningen i en variabel av datatypen String eller välja **Literal** om du vill välja språkområde i listan med tillgängliga alternativ. Du måste definiera språkkoden medan du lagrar värdet för språkinställningen i en variabel. Ange till exempel **sv_SE** för engelska och **fr_FR** för franska.
 
@@ -292,21 +292,33 @@ Med steget Signera dokument kan du använda Adobe Sign för att signera dokument
   Om du anger sökvägen till en mapp, till exempel bilagor, bifogas alla filer som är direkt tillgängliga i mappen till Signera dokument. Om några filer är tillgängliga i de mappar som är direkt tillgängliga i den angivna sökvägen för bifogade filer, inkluderas filerna i Signera dokument som bifogade filer. Om det finns mappar i direkt tillgängliga mappar hoppas de över.
 
 * **Dagar till deadline:** Ett dokument markeras som förfallet (passerat deadline) efter det att det inte finns någon aktivitet för uppgiften för det antal dagar som anges i **Dagar till deadline** fält. Antalet dagar räknas efter att den dokumenterade har tilldelats en användare för signering.
-* **E-postfrekvens för påminnelse:** Du kan skicka en påminnelse via e-post varje dag eller vecka. Veckan räknas från den dag som den dokumenterade tilldelas en användare för signering.
-* **Underskriftsprocess:** Du kan välja att signera ett dokument i en sekventiell eller parallell ordning. I sekventiell ordning tar en signerare emot dokumentet i taget för signering. När den första signeraren har slutfört signeringen av dokumentet skickas dokumentet till den andra signeraren och så vidare. Flera signerare kan signera ett dokument samtidigt i parallell ordning.
+* **E-postfrekvens för påminnelse:** Du kan skicka en påminnelse via e-post varje dag eller vecka. Veckan räknas från den dag dokumentet tilldelas en användare för signering.
+* **Underskriftsprocess:** Du kan välja att signera ett dokument i en sekventiell eller parallell ordning. I sekventiell ordning tar en mottagare emot dokumentet i taget för signering. När den första mottagaren har slutfört signeringen av dokumentet skickas dokumentet till den andra mottagaren och så vidare. Flera mottagare kan signera ett dokument i taget i parallell ordning.
 * **URL för omdirigering:** Ange en URL för omdirigering. När dokumentet har signerats kan du dirigera om den som tilldelats till en URL. Oftast innehåller denna URL ett tackmeddelande eller ytterligare instruktioner.
 * **Arbetsflödesfas:** Ett arbetsflöde kan ha flera steg. Dessa steg visas i AEM Inkorg. Du kan definiera dessa steg i modellens egenskaper (Sidekick > Sida > Sidegenskaper > Steg).
-* **Välj signerare:** Ange metoden för att välja signerare för dokumentet. Du kan dynamiskt tilldela arbetsflödet till en användare eller en grupp eller manuellt lägga till information om en signerare.
-* **Skript eller tjänst för att välja signerare:** Alternativet är bara tillgängligt om alternativet Dynamiskt är markerat i fältet Välj signerare. Du kan ange ett ECMAScript eller en tjänst för att välja signerare och verifieringsalternativ för ett dokument.
-* **Signerarinformation:** Alternativet är bara tillgängligt om alternativet Manuellt är markerat i fältet Välj signerare. Ange e-postadress och välj en valfri verifieringsmekanism. Innan du väljer en verifieringsmekanism i två steg måste du se till att motsvarande verifieringsalternativ är aktiverat för det konfigurerade Adobe Sign-kontot. Du kan använda en variabel av datatypen String för att definiera värden för **[!UICONTROL Email]**, **[!UICONTROL Country Code]** och **[!UICONTROL Phone Number]** fält. The **[!UICONTROL Country Code]** och **[!UICONTROL Phone Number]** fält visas bara om du väljer **[!UICONTROL Phone Verification]** från **[!UICONTROL 2-step verification]** listruta.
+* **Välj mottagare:** Ange metoden för att välja mottagare för dokumentet. Du kan dynamiskt tilldela arbetsflödet till en användare eller en grupp eller manuellt lägga till information om en mottagare. När du väljer Manuellt i listrutan lägger du till mottagarinformation som e-post, roll och autentiseringsmetod.
+
+  >[!NOTE]
+  >
+  >* I rollavsnittet kan du ange mottagarrollen som signerare, godkännare, godkännare, certifierad mottagare, formulärifyllare och delegerande.
+  >* Om du väljer Delegerande i alternativet Roll kan delegeraren tilldela signeringsaktiviteten till en annan mottagare.
+  >* Om du har konfigurerat en autentiseringsmetod för [!DNL Adobe Sign], baserat på din konfiguration, väljer du en autentiseringsmetod som telefonbaserad autentisering, autentisering via social identitet, kunskapsbaserad autentisering, autentisering baserad på myndighetsidentitet.
+* **Skript eller tjänst för att välja mottagare:** Alternativet är bara tillgängligt om du väljer alternativet Dynamiskt i fältet Välj mottagare. Du kan ange ett ECMAScript eller en tjänst för att välja mottagare och verifieringsalternativ för ett dokument.
+* **Mottagarinformation:** Alternativet är bara tillgängligt om alternativet Manuellt är markerat i fältet Välj mottagare. Ange e-postadress och välj en valfri verifieringsmekanism. Innan du väljer en verifieringsmekanism i två steg måste du se till att motsvarande verifieringsalternativ är aktiverat för det konfigurerade Adobe Sign-kontot. Du kan använda en variabel av datatypen String för att definiera värden för **[!UICONTROL Email]**, **[!UICONTROL Country Code]** och **[!UICONTROL Phone Number]** fält. The **[!UICONTROL Country Code]** och **[!UICONTROL Phone Number]** fält visas bara om du väljer **[!UICONTROL Phone Verification]** från **[!UICONTROL 2-step verification]** listruta.
 * **Statusvariabel:** Ett Adobe Sign-aktiverat dokument lagrar dokumentets signeringsstatus i en variabel av datatypen String. Ange namnet på statusvariabeln (adobeSignStatus). En statusvariabel för en instans finns i CRXDE på /etc/workflow/instances/&lt;server>/&lt;date-time>/&lt;instance of=&quot;&quot; workflow=&quot;&quot; model=&quot;&quot;>/workItems/&lt;node>/metaData innehåller status för en variabel.
-* **Spara signerat dokument med följande alternativ:** Ange platsen där signerade dokument ska sparas. Du kan välja att skriva över nyttolastfilen, placera det signerade dokumentet på en plats i nyttolastkatalogen eller lagra det signerade dokumentet i en variabel av Dokumenttyp.
+* **[!UICONTROL Signed Document]**: Du kan spara statusen för det signerade dokumentet till Variabel. Om du vill lägga till granskningsspår för elektroniska signaturer för bättre säkerhet och laglighet i det signerade dokumentet kan du inkludera revideringsrapport. Du kan spara det signerade dokumentet med hjälp av en variabel- eller nyttolastmapp.
+  >[!NOTE]
+  >
+  > Revideringsrapporten läggs till den sista sidan i det signerade dokumentet.
+<!--
+* **Save signed document using below options:** Specify the location to keep signed documents. You can choose to overwrite the payload file, place the signed document at a location within the payload directory, or store the signed document in a variable of Document type.
+-->
 
 ## Steg för Document Services {#document-services-steps}
 
 AEM dokumenttjänster är en uppsättning tjänster för att skapa, sammanställa och skydda dokument i PDF. AEM Forms tillhandahåller ett separat AEM arbetsflöde för varje dokumenttjänst.
 
-På samma sätt som andra arbetsflödessteg i AEM Forms, till exempel Tilldela uppgift, Skicka e-post och Signera dokument, kan du använda variabler i alla steg i AEM dokumenttjänster. Mer information om att skapa och hantera variabler finns i [Variabler i AEM arbetsflöden](../../forms/using/variable-in-aem-workflows.md).
+På samma sätt som andra AEM Forms-arbetsflödessteg, som Tilldela uppgift, Skicka e-post och Signera dokument, kan du använda variabler i alla steg AEM dokumenttjänster. Mer information om att skapa och hantera variabler finns i [Variabler i AEM arbetsflöden](../../forms/using/variable-in-aem-workflows.md).
 
 ### Använd tidsstämpelsteg för dokument {#apply-document-time-stamp-step}
 
@@ -398,7 +410,7 @@ Skicka ett dokument direkt till en skrivare. Det har stöd för följande åtkom
 
 ### Generera utskriftssteg {#generatePrintedOutput}
 
-Steget genererar ett PCL-, PostScript-, ZPL-, IPL-, TPCL- eller DPL-utdata baserat på en formulärdesign och datafil. Datafilen sammanfogas med formulärdesignen och formateras för utskrift. De utdata som genereras i det här steget kan skickas direkt till en skrivare eller sparas som en fil. Vi rekommenderar att du använder det här steget när du vill använda formulärdesigner eller data från ett program. Om dina formulärdesigner eller formulärdesigner finns i nätverket, det lokala filsystemet eller på HTTP-platsen använder du åtgärden generatePrintedOutput.
+Steget genererar ett PCL-, PostScript-, ZPL-, IPL-, TPCL- eller DPL-utdata baserat på en formulärdesign och datafil. Datafilen sammanfogas med formulärdesignen och formateras för utskrift. De utdata som genereras i det här steget kan skickas direkt till en skrivare eller sparas som en fil. Vi rekommenderar att du använder det här steget när du vill använda formulärdesigner eller data från ett program. Om dina formulärdesigner eller formulärdesigner finns i nätverket, det lokala filsystemet eller HTTP-platsen använder du åtgärden generatePrintedOutput.
 
 Programmet kräver till exempel att du sammanfogar en formulärdesign med en datafil. Informationen innehåller hundratals poster. Dessutom krävs att utdata skickas till en skrivare som stöder ZPL. Formulärdesignen och dina indata finns i ett program. Använd åtgärden generatePrintedOutput för att sammanfoga varje post med en formulärdesign och skicka utdata till en skrivare som stöder ZPL.
 
@@ -449,7 +461,7 @@ Stegen Generera utskrift har följande egenskaper:
 
 * **[!UICONTROL Copies]**: Ett heltalsvärde som anger antalet kopior som ska genereras för utdata. Standardvärdet är 1.
 
-* **[!UICONTROL Duplex Printing]**: Ett sidnumreringsvärde som anger om dubbelsidig eller enkelsidig utskrift ska användas. Skrivare som stöder PostScript och PCL använder det här värdet.Om du anger ett literalt värde väljer du något av följande värden:
+* **[!UICONTROL Duplex Printing]**: Ett sidnumreringsvärde som anger om dubbelsidig eller enkelsidig utskrift ska användas. Skrivare som stöder PostScript och PCL använder det här värdet. Om du anger ett literalt värde väljer du något av följande värden:
    * **[!UICONTROL Duplex Long Edge]**: Använd dubbelsidig utskrift och utskrift med sidnumrering i långkant.
    * **[!UICONTROL Duplex Short Edge]**: Använd dubbelsidig utskrift och utskrift med hjälp av sidnumrering med kort kant.
    * **[!UICONTROL Simplex]**: Använd enkelsidig utskrift.
