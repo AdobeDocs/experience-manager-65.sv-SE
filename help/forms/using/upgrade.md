@@ -11,14 +11,14 @@ discoiquuid: f89921ef-c638-4a07-88d5-3dd8614c5166
 docset: aem65
 role: Admin
 exl-id: 2fc8abec-8ba6-40b7-bbb1-4288eeea7c86
-source-git-commit: 1683338f02d01d5d9843368955fa42f309718f26
+source-git-commit: 077208ed8fea6a644487dbb46efb54ea44f303b4
 workflow-type: tm+mt
-source-wordcount: '356'
+source-wordcount: '341'
 ht-degree: 1%
 
 ---
 
-# Uppgradera till AEM 6.5 Forms{#upgrade-to-aem-forms}
+# Uppgradera till AEM 6.5 Forms {#upgrade-to-aem-forms}
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
@@ -49,6 +49,7 @@ I följande diagram visas de tillgängliga uppgraderingsmöjligheterna för AEM 
 
 ![JEE upgrade 6.5](do-not-localize/jee-upgrade-6-5.png)
 
+
 Du kan uppgradera direkt från:
 
 * AEM 6.3 Forms on JEE
@@ -57,18 +58,16 @@ Du kan uppgradera direkt från:
 
 Du kan också utföra en uppgradering från
 
-* LiveCycle ES2
-* LiveCycle ES3
 * LiveCycle ES4 SP1
 * AEM 6.0 Forms on JEE
 * AEM 6.1 Forms on JEE
 * AEM 6.2 Forms on JEE
 
-AEM 6.5.12.0 Forms on JEE innehåller två typer av installationsprogram: [Fullständig installationsfil](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html) och [Installationsprogram för korrigeringsfiler](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html).
+AEM 6.5.18.0 Forms on JEE innehåller två typer av installationsprogram: [Fullständig installationsfil](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html) och [Installationsprogram för korrigering](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html).
 
-**Fullständig installationsfil**: Du kan använda det fullständiga installationsprogrammet för att ställa in nya AEM Forms-instanser eller utföra uppgraderingar från AEM 6.3 Forms på JEE, AEM 6.4 på JEE och uppgradering från AEM 6.5.x.x Forms på JEE till AEM 6.5.12.0 Forms på JEE.
+**Fullständig installationsfil**: Du kan använda det fullständiga installationsprogrammet för att ställa in nya AEM Forms-instanser eller utföra uppgraderingar från AEM 6.5.x.x Forms på JEE till AEM 6.5.18.0 Forms på JEE.
 
-**Installationsprogram för korrigeringsfiler**: Patch installer är avsett för kunder som redan använder AEM 6.5.x.x. Du kan använda installationsprogrammet för korrigeringsfilen för att uppgradera till den senaste versionen av AEM Forms.
+**Installationsprogram för korrigering**: Patch installer är avsett för kunder som redan använder AEM 6.5.x.x. Du kan använda installationsprogrammet för korrigeringsfilen för att uppgradera till den senaste versionen av AEM Forms.
 
 I följande bild visas avsändare som använder det fullständiga installationsprogrammet och korrigeringsprogrammet.
 

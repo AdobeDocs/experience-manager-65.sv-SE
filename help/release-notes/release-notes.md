@@ -2,9 +2,9 @@
 title: Versionsinformation för [!DNL Adobe Experience Manager] 6.5
 description: Hitta versionsinformation, nyheter, installationsanvisningar och en detaljerad ändringslista för [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 4
-source-git-commit: 2209ab8498072744091f5af22887c8f13dbb3ac6
+source-git-commit: d63355e1042f6ad63a848b97c26dc2f29bab47b1
 workflow-type: tm+mt
-source-wordcount: '3439'
+source-wordcount: '4434'
 ht-degree: 0%
 
 ---
@@ -61,25 +61,24 @@ Några av de viktigaste funktionerna och förbättringarna i den här versionen 
 
 **Forms**
 
-* **Förbättrad felhantering med anpassade felhanterare i regelredigeraren:** Du kan nu anropa en anpassad funktion (med Klientbibliotek) som svar på ett fel som returnerats av en extern tjänst och ge ett skräddarsytt svar till slutanvändarna. Du kan också vidta specifika åtgärder för fel som returneras av en tjänst. Du kan till exempel anropa ett anpassat arbetsflöde i serverdelen för specifika felkoder eller informera kunden om att tjänsten är nere
+* **[Förbättrad felhantering med anpassade felhanterare i regelredigeraren](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/standard-validation-error-messages-adaptive-forms.html):** Du kan nu anropa en anpassad funktion (med Klientbibliotek) som svar på ett fel som returnerats av en extern tjänst och ge ett skräddarsytt svar till slutanvändarna. Du kan också vidta specifika åtgärder för fel som returneras av en tjänst. Du kan till exempel anropa ett anpassat arbetsflöde i serverdelen för specifika felkoder eller informera kunden om att tjänsten är nere
 
-* **Förbättrat arbetsflöde i Adobe Sign:** Adobe Sign arbetsflödessteg i AEM arbetsflöden är tillgängligt med följande förbättringar.
+* **[Förbättrat arbetsflöde i Adobe Sign](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/adobe-sign-integration-adaptive-forms.html):** Adobe Sign arbetsflödessteg i AEM arbetsflöden är tillgängligt med följande förbättringar.
 
    * **Förbättrad säkerhet med ID-baserad autentisering för Adobe Sign för myndigheter:** Adobe Acrobat Sign Government ID Based Authentication erbjuder ytterligare ett verifieringslager genom att användarna kan autentisera sin identitet med hjälp av foto-ID:n (körkort, nationellt ID, pass). Genom att utnyttja pålitliga identifieringsdokument ger den här förbättringen ett extra förtroende för signeringsprocessen, vilket gör den idealisk för scenarier som kräver högre säkerhet, regelefterlevnad och användarvalidering.
 
    * **Förbättrad transparens med granskningsspår för Adobe Sign-dokument:** Använd funktionen Granskningsspår för att få detaljerade insikter om livscykeln för dina Adobe Sign-dokument. Med granskningsspåret kan du nu föra ett omfattande register över alla åtgärder och interaktioner som rör dina dokument. Detta inkluderar information som vem som visade, redigerade eller signerade dokumentet, tillsammans med tidsstämplar för varje händelse. Den här förbättringen är avgörande för att upprätthålla regelefterlevnaden, lösa tvister och säkerställa integriteten för dina digitala avtal.
 
 
-  **Utöka rollerna för avtalsmottagare till andra än bara signeraren:** Adobe Acrobat Sign har möjlighet att utöka rollerna för avtalsmottagare utöver bara signeraren för att bättre matcha deras arbetsflödeskrav. När det här alternativet är aktiverat kan varje mottagare i ett avtal konfigureras individuellt, med signerare som standard.
+   * **Utökade roller för avtalsmottagare utöver bara signeraren:** Adobe Acrobat Sign har möjlighet att utöka rollerna för avtalsmottagare utöver bara signeraren för att bättre matcha deras arbetsflödeskrav. När det här alternativet är aktiverat kan varje mottagare i ett avtal konfigureras individuellt, med signerare som standard.
 
 
-* **AEM Forms på JEE, komplett installationsprogram**: Service Pack innehåller ett komplett installationsprogram för AEM Forms i JEE som har stöd för flera nya programkombinationer, bland annat:
+* **[AEM Forms på JEE, komplett installationsprogram](https://experienceleague.adobe.com/docs/experience-manager-65/forms/install-aem-forms/jee-installation/aem-forms-jee-supported-platforms.html)**: Service Pack innehåller ett komplett installationsprogram för AEM Forms i JEE som har stöd för flera nya programkombinationer, bland annat:
    * Microsoft Windows Server 2022
    * Microsoft Active Directory 2022
-   * Oracle WebLogic 14C och 12.2.1.4 i Windows Server 2022
-   * RedHat JBoss 7.4.10 i Windows Server 2022
+   * Oracle WebLogic 14C på Windows Server 2022
+   * RedHat JBoss 7.4.10
    * MongoDB 4.4
-   * Microsoft JDBC Driver 12.2 för SQL Server
    * MySQL JDBC Connector 8
 
 Om du håller på med en ny installation eller planerar att använda den senaste programvaran för din AEM 6.5 Forms i JEE-miljö rekommenderar Adobe att du använder AEM 6.5.18.0 Forms i JEE-fullversionen. En fullständig lista över nyligen tillagda och ersatta program finns i dokumentationen för AEM Forms on JEE eller AEM Forms on OSGi.
@@ -161,10 +160,58 @@ Om du håller på med en ny installation eller planerar att använda den senaste
 
 ### [!DNL Forms]{#forms-6518}
 
-Korrigeringar i [!DNL Experience Manager] Forms levereras via ett separat tilläggspaket en vecka efter den schemalagda [!DNL Experience Manager] Lanseringsdatum för Service Pack. I det här fallet planeras AEM 6.5.18.0 Forms-tilläggspaketen att släppas torsdagen den 31 augusti 2023. En lista över Forms-korrigeringar och förbättringar kommer att läggas till i det här avsnittet när utgåvan släpps.
 <!--
-* After Experience Manager, Service Pack 16 is installed on the servers, all the Interactive communication Letters starts to clock if they try to edit these letters. If they provide any sample payload to preview or view/edit the properties page, they work. However, they are not able to edit the letters. (FORMS-9067) 
+Fixes in [!DNL Experience Manager] Forms are delivered through a separate add-on package one week after the scheduled [!DNL Experience Manager] Service Pack release date. In this case, the AEM 6.5.18.0 Forms add-on packages release is scheduled for Thursday, August 31, 2023. A list of Forms fixes and enhancements would be added to this section post the release.
 -->
+
+* **Dokumenttjänster**
+   * När en användare använder en transformPDF-tjänst misslyckas den med ett undantag: `java.lang.ClassNotFoundException: default task-158Class name com.adobe.internal.afml.AFMLExceptionInvalidParameter from package com.adobe.internal.afml` (FORMS-9957)
+   * Om servern stängs av under dokumentgenereringen i PDF genereras fel vid bearbetning av jobb efter serverstart. Argumentet -Dcom.adobe.livecycle.dsc.deferServiceStart=true måste läggas till när servern startas. (FORMS-9836)
+   * Om en användare försöker sammanfoga PDF med metoden AssemblerService.Invoke, kan inte sammansättaren utföra åtgärden. (FORMS-9550)
+   * När du uppgraderar till AEM 6.5.15.0 Service Pack i OSGI- och JEE-miljöer slutar Assembler-tjänsten som använder en viss mall att fungera. (FORMS-9355, FORMS-9445, FORMS-9408)
+   * Java-skräpinsamlingen kan inte rensa gammal heap på en AEM Forms OSGi-server eftersom Global Timeout för XMLFormService inte är konfigurerad till ett korrekt värde. (FORMS-9384, FORMS-9035)
+   * När du återger förhandsgranskningen av ett adaptivt formulär i PDF visas de oönskade Java-stackarna i felloggarna. (FORMS-8865)
+   * När en användare granskar dokumentstatus för dokument i dokumentinformationsavsnittet visas det inte korrekt. (FORMS-8946, FORMS-10424)
+   * När en användare uppgraderar till AEM Forms och använder tjänsten sendToPrinter ökar heap-användningen kontinuerligt. (FORMS-10148)
+   * På JBoss 7.4 EAP-servern misslyckas e-postfunktionen med `java.io.IOException`. (FORMS-10138)
+   * När en användare använder tjänsten transformPDF misslyckas den med ett fel: `java.lang.ClassNotFoundException: default task-158Class name com.adobe.internal.afml.AFMLExceptionInvalidParameter from package com.adobe.internal.afml`(FORMS-9957)
+   * Efter uppgradering till AEM Service Pack 6.5.14.0 uppstår problemet i monteringsverktyget när en viss mall används. (FORMS-9445, FORMS-9408)
+  <!-- *  When a user configures the watched folder endpoint for PDF Generator, it fails to pick documents on JDK 11. (FORMS-10152) -->
+* **Adaptiv Forms**
+   * När en användare försöker anropa en anpassad funktion utan att ändra ett fält, t.ex. ange värdet för ett annat fält, misslyckas det. (FORMS-9921)
+   * När du arbetar med den anpassade felfunktionen för regelredigeraren i ett adaptivt format inträffar följande fel:
+      * När en användare försöker använda @param{boolean} med en funktion tillåter inte regelredigeraren att booleska värden skickas till en funktion.
+      * När en användare försöker använda @param{string} om en funktion används misslyckas regelredigeraren att skicka de valfria värdena och en varning om ofullständiga regler visas. (FORMS-9816, FORMS-9815)
+   * Formuläranvändargruppen kan inte anropa regelredigeraren två gånger i ett anpassat formulär. (FORMS-9051)
+   * När en användare väljer ett formulärobjekt i den visuella redigeraren skickas hela fältinstansobjekt till den anpassade funktionen i stället för bara fältets värde. (FORMS-10015)
+   * När en användare skapar ett huvudkomponentbaserat adaptivt formulär och lägger till en textindatakomponent, `Is Empty` och `Is Not Empty` fungerar inte i regelredigeraren. (FORMS-10098)
+   * Om ett fält har markerats som ogiltigt i en huvudkomponentbaserad Adaptiv form, startar det en change-händelse i fältet. (FORMS-10087)
+   * När en användare försöker skapa ett adaptivt formulär med ett komplext JSON-schema misslyckas det. Felet inträffar som:
+     `GET /content/forms/af/katezeroone/testaf1.html HTTP/1.1] com.adobe.aemds.guide.service.impl.JsonObjectCreatorImpl Could not emit JSON with context java.lang.ArrayIndexOutOfBoundsException:0`. (FORMS-9639)
+   * När en användare avmarkerar kryssrutan Jag godkänner villkoren i ett anpassat formulär aktiveras det igen så fort användaren rullar nedåt. (FORMS-9458)
+   * När en användare öppnar ett adaptivt formulär på en Android-enhet med Google Chrome/Firefox och anger det högsta tillåtna antalet tecken i en textruta, raderas inte värdet i textrutan. (FORMS-9354)
+   * När kryssrutans etikett innehåller specialtecken som &#39;,&#39;, &#39;/&#39; eller &#39;.&#39;, markerar inte kryssrutan när du klickar på texten/etiketten. (FORMS-9313)
+   * När en användare försöker att validera villkorskomponenten misslyckas det att validera om komponenten inte är i fokus medan den andra komponenten valideras. (FORMS-8725, FORMS-8913)
+   * Om ett anpassat formulär laddas om efter uppgradering till AEM 6.5.16.0 Service Pack, misslyckas hämtningen av den bifogade filen. (FORMS-8906)
+   * Om en kryssrutekomponent i ett adaptivt formulär som är baserat på en XDP-fil innehåller en titel som tilldelats ett numeriskt värde, kortas texten av och matchar inte det tilldelade värdet. (FORMS-8743)
+   * Om en användare försöker implementera lat inläsning på ett fragment som är inbäddat i ett adaptivt formulär för författarmiljön, återspeglas inte reglerna/logiken som är definierad för fragmentet i formuläret. (FORMS-8554, FORMS-9182)
+   * När du försöker öppna en koralldialogruta i AEM 6.5.16.0 Service Pack genereras `error.log: cannot render resource` undantag. (FORMS-8942)
+   * När en användare försöker att översätta en kryssruta med ett alternativ i ett adaptivt formulär, misslyckas den. (FORMS-10181)
+* **Tillgänglighet**
+   * När du använder komponenten Klottsignatur i ett adaptivt formulär inträffar följande fel:
+      * När det finns fler komponenter efter komponenten Skriptsignatur går inte tabbtangenten till signaturdialogrutan när det finns fler komponenter. I stället flyttas den till nästa komponent. Först efter att ha gått igenom alla komponenter, flyttas det till signaturdialogrutan.
+      * När en användare signerar i signaturdialogrutan med en pensel eller ett tangentbord stängs inte dialogrutan om du trycker på Retur.
+      * Det går inte att komma åt bekräftelsedialogrutan för rensad signatur via ett tangentbord.
+      * Skärmläsaren kan inte läsa information som angetts i en dialogruta.
+      * Det går inte att rensa signaturen utan att använda en mus.  (FORMS-9317)
+   * När en användare skickar ett adaptivt formulär kan skärmläsaren inte läsa felmeddelanden för de obligatoriska fälten. (FORMS-9316)
+   * När en skärmläsare läser upp ett HTML-formulär uppstår problemet när texten läses med kerning (mellanrum). (FORMS-9258)
+   * I ett adaptivt formulär anropas inte de referenser/fotnoter som är länkade till texten med skärmläsaren. (FORMS-8920)
+   * Hjälpmedelstaggar känns inte igen korrekt i den senaste designern. (FORMS-10139)
+* **Interaktiv kommunikation**
+   * I Correspondence Management fungerar inte lokaliseringen. (FORMS-8926)
+   * Utkastbrevet kan inte öppnas när tjänsten publishAll används. (FORMS-8589)
+   * Efter Experience Manager har Service Pack 16 installerats på servrarna och alla interaktiva kommunikationsbokstäver börjar klockan om de försöker redigera dessa bokstäver. Om de tillhandahåller någon provnyttolast för att förhandsgranska eller visa/redigera egenskapssidan fungerar de. De kan dock inte redigera bokstäverna. (FORMS-9067)
 
 
 <!-- ### [!DNL Commerce]{#commerce-6518}
@@ -380,13 +427,9 @@ Du måste lägga till följande egenskaper i indexdefinitionsnoden för att få 
   "refresh": true
   ```
 
-* Som [!DNL Microsoft® Windows Server 2019] stöder inte [!DNL MySQL 5.7] och [!DNL JBoss® EAP 7.1], [!DNL Microsoft® Windows Server 2019] stöder inte körklara installationer för [!DNL Experience Manager Forms 6.5.10.0].
-
 * Om du uppgraderar [!DNL Experience Manager] från 6.5.0 till 6.5.4 till senaste Service Pack på Java™ 11, se `RRD4JReporter` undantag i `error.log` -fil. Starta om instansen av [!DNL Experience Manager]. <!-- THIS BULLET POINT WAS UPDATED AS PER CQDOC-20021, JANUARY 23, 2023 -->
 
 * Användare kan byta namn på en mapp i en hierarki i [!DNL Assets] och publicera en kapslad mapp i [!DNL Brand Portal]. Mappens namn uppdateras dock inte i [!DNL Brand Portal] tills rotmappen publiceras på nytt.
-
-* När en användare väljer att konfigurera ett fält för första gången i ett adaptivt formulär visas inte alternativet att spara en konfiguration i egenskapsläsaren. Om du väljer att konfigurera ett annat fält i det adaptiva formuläret i samma redigerare åtgärdas problemet.
 
 * Följande fel och varningsmeddelanden kan visas under installationen av [!DNL Experience Manager] 6.5.x.x:
    * &quot;När Adobe Target-integreringen är konfigurerad i [!DNL Experience Manager] med Target Standard API (IMS-autentisering) och sedan exportera Experience Fragments till Target så att fel erbjudandetyper skapas. I stället för att skriva&quot;Experience Fragment&quot;/källa&quot;Adobe Experience Manager&quot; skapar Target flera erbjudanden med typen&quot;HTML&quot;/källa&quot;Adobe Target Classic&quot;.
@@ -396,9 +439,29 @@ Du måste lägga till följande egenskaper i indexdefinitionsnoden för att få 
    * Aktiveringspunkten i en interaktiv Dynamic Media-bild syns inte när du förhandsvisar mediefilen via Shoppable Banner Viewer.
    * `com.adobe.cq.social.cq-social-jcr-provider bundle com.adobe.cq.social.cq-social-jcr-provider:1.3.5 (395)[com.adobe.cq.social.provider.jcr.impl.SpiSocialJcrResourceProviderImpl(2302)]` : Timeout väntar på att registerändringen ska slutföras utan registrering.
 
-* På JBoss® 7.1.4-plattformen när användaren installerar Experience Manager 6.5.16.0 eller senare Service Pack, `adobe-livecycle-jboss.ear` distributionen misslyckas.
-* JDK-version senare än 1.8.0_281 stöds inte för WebLogic JEE-server.
 * Från och med AEM 6.5.15, JavaScript-motorn i Rhino från ```org.apache.servicemix.bundles.rhino``` paket har ett nytt värdbeteende. Skript som använder strikt läge (```use strict;```) måste deklarera variablerna korrekt, annars körs de inte, utan genererar i stället ett körningsfel.
+
+### Kända fel för AEM Forms
+
+#### Plattformar som stöds
+
+* JDK-version senare än 1.8.0_281 stöds inte för WebLogic JEE-server. (FORMS-8498, CQDOC-20383)
+* Som [!DNL Microsoft® Windows Server 2019] stöder inte [!DNL MySQL 5.7] och [!DNL JBoss® EAP 7.1], [!DNL Microsoft® Windows Server 2019] stöder inte körklara installationer för [!DNL Experience Manager Forms 6.5.10.0]. (CQDOC-18312)
+* JDK 11.0.20 stöds inte för installation av AEM Forms i JEE Installer. Endast JDK 11.0.19 och tidigare versioner stöds för installation av AEM Forms i JEE Installer. (FORMS-10659)
+
+#### Installation
+
+* På JBoss® 7.1.4-plattformen när användaren installerar Experience Manager 6.5.16.0 eller senare Service Pack, `adobe-livecycle-jboss.ear` distributionen misslyckas. (CQ-4351522, CQDOC-20159)
+
+#### Adaptiv Forms
+
+* När ett adaptivt formulär publiceras kommer alla dess beroenden, inklusive profiler, att publiceras på nytt, även om inga ändringar har gjorts i dem. (FORMS-10454)
+* När en användare väljer att konfigurera ett fält för första gången i ett adaptivt formulär visas inte alternativet att spara en konfiguration i egenskapsläsaren. Problemet åtgärdas genom att ett annat fält i det adaptiva formuläret konfigureras i samma redigerare.
+* När en omdirigerings-URL anges i stödlinjebehållaren för ett adaptivt formulär slutar den infogade signeringen att fungera. (FORMS-10493)
+
+#### Interaktiv kommunikation
+
+* När du har uppgraderat till AEM Service Pack 18 går det inte att redigera interaktiva kommunikationsbrev. (FORMS-10578)
 
 ## OSGi-paket och innehållspaket som ingår{#osgi-bundles-and-content-packages-included}
 

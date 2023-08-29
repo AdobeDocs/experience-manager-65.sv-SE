@@ -9,9 +9,9 @@ breadcrumb-title: Användarhandbok om Forms
 user-guide-description: Skapa, hantera, publicera och uppdatera digitala formulär.
 role: User
 feature: Forms Service
-source-git-commit: e19a7e617bdabb678bd804cab3fea228ce19acfa
+source-git-commit: 28cc10b79d2ac8cf12ddfd0bf7d1a8e013fe6238
 workflow-type: tm+mt
-source-wordcount: '3897'
+source-wordcount: '3912'
 ht-degree: 0%
 
 ---
@@ -136,6 +136,7 @@ ht-degree: 0%
    + [Aktivera kärnkomponenter för din miljö](/help/forms/using/enable-adaptive-forms-core-components.md)
    + [Skapa en grundkomponentbaserad adaptiv form](/help/forms/using/create-an-adaptive-form-core-components.md)
    + [Skapa teman för grundkomponentbaserade adaptiva Forms](/help/forms/using/create-or-customize-themes-for-adaptive-forms-core-components.md)
+   + [Skapa och använd anpassad felhanterare för Core Components-baserade Adaptive Forms](/help/forms/using/add-custom-error-handler-adaptive-forms-core-components.md)
 + Adaptiv Forms - grundläggande redigering {#adaptive-forms-basic-authoring}
    + [Bästa tillvägagångssätt för arbete med anpassningsbara formulär](using/adaptive-forms-best-practices.md)
    + [Skapa ett anpassat formulär](using/creating-adaptive-form.md)
@@ -188,7 +189,7 @@ ht-degree: 0%
    + [Integrera Adobe Sign med AEM Forms](using/adobe-sign-integration-adaptive-forms.md)
    + [Skapa och hantera granskningar av resurser i formulär](using/create-reviews-forms.md)
    + [Bädda in ett anpassningsbart formulär eller interaktiv kommunikation i AEM Sites Single Page Application](/help/forms/using/embed-adaptive-form-aem-sites-spa.md)
-   + [Standardvalideringsfelmeddelanden Adaptiv Forms](/help/forms/using/standard-validation-error-messages-adaptive-forms.md)
+   + [Skapa och använda en anpassad felhanterare för Adaptive Forms](/help/forms/using/standard-validation-error-messages-adaptive-forms.md)
 + Interaktiv kommunikation {#interactive-communications}
    + [Introduktion till gränssnittet för utveckling av interaktiv kommunikation](using/introduction-interactive-communication-authoring.md)
    + [Skapa en interaktiv kommunikation](using/create-interactive-communication.md)

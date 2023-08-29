@@ -1,31 +1,21 @@
 ---
-title: Standardvalideringsfelmeddelanden för anpassade formulär
-seo-title: Standard validation error messages for adaptive forms
-description: Omvandla valideringsfelmeddelanden för adaptiva formulär till standardformat med anpassade felhanterare
-seo-description: Transform the validation error messages for adaptive forms into standard format using custom error handlers
-uuid: 0d1f9835-3e28-41d3-a3b1-e36d95384328
-contentOwner: anujkapo
+title: Lägg till en anpassad felhanterare i Adaptive Forms baserat på kärnkomponenter för AEM Adaptive Forms
+seo-title: Error Handlers in Adaptive Forms for AEM Adaptive Forms core components
+description: AEM Forms har körklara hanterare och felhanterare för ett formulär som använder REST-slutpunkten som konfigurerats för att anropa en extern tjänst. Du kan lägga till en standardfelhanterare och en anpassad felhanterare i en AEM anpassad form.
+seo-description: Error handler function and Rule Editor in Adaptive Forms core components helps you to effectively manage and customize error handling. You can add a default error handler as well as custom error handler in an AEM Adaptive Form.
+keywords: Lägg till en anpassad felhanterare, lägg till en standardfelhanterare, lägg till en felhanterare i formuläret, använd regelredigerarens anropstjänst för att lägga till en anpassad felhanterare, konfigurera regelredigeraren för att lägga till en anpassad felhanterare, lägg till en anpassad felhanterare med regelredigeraren
+contentOwner: Ruchita Srivastav
 content-type: reference
-geptopics: SG_AEMFORMS/categories/setting_up_and_managing_domains
-discoiquuid: ec062567-1c6b-497b-a1e7-1dbac2d60852
 feature: Adaptive Forms
-exl-id: 54a76d5c-d19b-4026-b71c-7b9e862874bc
-source-git-commit: 5a475d73ce88035c3f5db47c03b652f3d491420c
+source-git-commit: 28cc10b79d2ac8cf12ddfd0bf7d1a8e013fe6238
 workflow-type: tm+mt
-source-wordcount: '2315'
+source-wordcount: '2257'
 ht-degree: 0%
 
 ---
 
-# Felhanterare i adaptiv Forms {#error-handlers-in-adaptive-form}
 
-<span class="preview"> Adobe rekommenderar att man använder modern och utbyggbar datainhämtning [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) for [skapa ny Adaptive Forms](/help/forms/using/create-an-adaptive-form-core-components.md) eller [lägga till adaptiv Forms på AEM Sites-sidor](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-filer, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptiv Forms med baskomponenter. </span>
-
-| Version | Artikellänk |
-| -------- | ---------------------------- |
-| AEM as a Cloud Service | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/add-rules-and-use-expressions-in-an-adaptive-form/add-custom-error-handler-adaptive-forms.html) |
-| AEM 6.5 | Den här artikeln |
-
+# Felhanterare i adaptiv Forms (kärnkomponenter) {#error-handlers-in-adaptive-form}
 
 AEM Forms har färdiga funktioner och felhanterare för att skicka in formulär. Den innehåller även funktioner för att anpassa felhanterarfunktioner. Du kan till exempel anropa ett anpassat arbetsflöde i serverdelen för specifika felkoder eller informera kunden om att tjänsten inte fungerar. Hanterare är funktioner på klientsidan som körs baserat på serversvaret. När en extern tjänst anropas med API:er överförs data till servern för validering, som returnerar ett svar till klienten med information om lyckad eller felhändelse för överföringen. Informationen skickas som parametrar till den relevanta hanteraren för att köra funktionen. En felhanterare hjälper till att hantera och visa fel eller valideringsproblem som påträffats.
 
@@ -39,6 +29,7 @@ Om indatavärdena uppfyller valideringskriterierna skickas värdena till datakä
 ## Användning av felhanterare {#uses-of-error-handler}
 
 Felhanterare används för olika syften. Några av användningsområdena för felhanterarfunktioner visas nedan:
+
 * **Utför validering**: Felhanteringen börjar med att användarindata valideras mot fördefinierade regler eller villkor. När användarna fyller i ett adaptivt formulär validerar felhanteraren indata så att det uppfyller det format, den längd eller andra begränsningar som krävs.
 
 * **Ge feedback i realtid**: När ett fel upptäcks visar felhanteraren direkt feedback till användaren, t.ex. textbundna felmeddelanden under motsvarande formulärfält. Denna feedback hjälper användarna att identifiera och åtgärda fel utan att behöva skicka in formuläret och vänta på ett svar.
@@ -59,7 +50,6 @@ Koden nedan visar den befintliga strukturen för felsvar:
     errorCausedBy : "SERVER_SIDE_VALIDATION/SERVICE_INVOCATION_FAILURE"
     errors : [
         {
-             somExpression  : <somexpr>
              errorMessage / errorMessages : <validationMsg> / [<validationMsg>, <validationMsg>]
         }
     ]
@@ -72,7 +62,7 @@ Koden nedan visar den befintliga strukturen för felsvar:
 Var:
 
 * `errorCausedBy` beskriver orsaken till felet.
-* `errors` Ange SOM-uttrycket för de fält som underkändes i valideringskriterierna tillsammans med valideringsfelmeddelandet.
+* `errors` Ange det kvalificerade fältnamnet för de fält som underkändes i valideringskriterierna tillsammans med valideringsfelmeddelandet.
 * `originCode` fält som lagts till av AEM och innehåller http-statuskoden som returneras av den externa tjänsten.
 * `originMessage` fält som lagts till av AEM och innehåller rådata som returnerats av den externa tjänsten.
 
@@ -86,7 +76,7 @@ Med förbättringarna i funktioner och efterföljande uppdateringar i AEM Forms-
         "instance": "", (optional)
         "validationErrors" : [ (required)
             {
-                "fieldName":"<SOM expression of the field whose data sent is invalid>",
+                "fieldName":"<qualified fieldname of the field whose data sent is invalid>",
                 "dataRef":<JSONPath (or XPath) of the data element which is invalid>
                 "details": ["Error Message(s) for the field"] (required)
     
@@ -115,7 +105,7 @@ Var:
 * `detail (optional)` innehåller ytterligare information om felet om det behövs.
 * `instance (optional)` representerar en instans eller identifierare som är associerad med felet och hjälper till att spåra eller identifiera den specifika förekomsten av felet.
 * `validationErrors (required)` innehåller information om valideringsfel. Den innehåller följande fält:
-   * `fieldname` omnämns SOM-uttrycket för de fält som underkändes i valideringskriterierna.
+   * `fieldname` anger det kvalificerade fältnamnet för de fält som inte uppfyller valideringskriterierna.
    * `dataRef` representerar JSON-sökvägen eller XPath för de fält som underkändes vid valideringen.
    * `details` innehåller valideringsfelmeddelandet med det felaktiga fältet.
 * `originCode (optional)` fält som lagts till av AEM och innehåller http-statuskoden som returneras av den externa tjänsten
@@ -136,7 +126,7 @@ Vissa av alternativen för att visa felsvaren är:
               "type": "VALIDATION_ERROR",
               "validationErrors": [
               {
-              "fieldName": "guide[0].guide1[0].guideRootPanel[0].textbox1686647736683[0]",
+              "fieldName": "$form.PetId",
               "dataRef": "",
               "details": [
               "Invalid ID supplied. Provided value is not correct!"
@@ -145,9 +135,6 @@ Vissa av alternativen för att visa felsvaren är:
           ]}
   ```
 
-  Du kan visa SOM-uttrycket för vilket fält som helst i ett adaptivt formulär genom att trycka på fältet och välja **[!UICONTROL View SOM Expression]**.
-
-  ![Som uttryck för ett adaptivt formulärfält för att visa felsvar i en anpassad felhanterare](/help/forms/using/assets/custom-error-handler-somexpression.png)
 
 +++
 
@@ -163,7 +150,7 @@ Vissa av alternativen för att visa felsvaren är:
           "validationErrors": [
           {
               "fieldName": "",
-              "dataRef": "/Pet/id",
+              "dataRef": "$.Pet.id",
               "details": [
               "Invalid ID supplied. Provided value is not correct!"
               ]
@@ -171,19 +158,15 @@ Vissa av alternativen för att visa felsvaren är:
       ]}
   ```
 
-  ![Datareferens för ett adaptivt formulärfält som visar felsvar i anpassad felhanterare](/help/forms/using/assets/custom-errorhandler-dataref.png)
-
-Du kan visa värdet för dataRef i **[!UICONTROL Properties]** -fönstret för en formulärkomponent.
-
 +++
 
 ## Förutsättningar {#prerequisites}
 
-Innan du använder en anpassad felhanterare i en adaptiv Forms:
+Innan du använder felhanterare i en adaptiv Forms:
 
+* [Aktivera adaptiva Forms Core-komponenter för din AEM Cloud Service-miljö](enable-adaptive-forms-core-components.md).
 * Grundläggande kunskap till [skapa en anpassad funktion](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/adaptive-forms/custom-functions-aem-forms.html?lang=en#:~:text=AEM%20Forms%206.5%20introduced%20the,use%20them%20across%20multiple%20forms.).
 * Installera den senaste versionen av [Apache Maven](https://maven.apache.org/download.cgi).
-
 
 ## Lägg till felhanterare med Regelredigeraren {#add-error-handler-using-rule-editor}
 
@@ -228,7 +211,7 @@ Du kan lägga till en anpassad felhanterarfunktion för att utföra några av å
 * skicka analyshändelser till alla analysplattformar. Exempel: Adobe Analytics.
 * visa modal dialog med felmeddelanden.
 
-Förutom de nämnda åtgärderna kan de anpassade felhanterarna användas för att utföra anpassade funktioner som uppfyller specifika användarkrav.
+Förutom de ovannämnda åtgärderna kan de anpassade felhanterarna användas för att utföra anpassade funktioner som uppfyller specifika användarkrav.
 
 Den anpassade felhanteraren är en funktion (klientbibliotek) som är utformad för att svara på fel som returneras av en extern tjänst och leverera ett anpassat svar till slutanvändarna. Alla klientbibliotek med anteckningar `@errorHandler` betraktas som en anpassad felhanterarfunktion. Den här anteckningen hjälper till att identifiera felhanterarfunktionen som anges i `.js` -fil.
 
@@ -268,24 +251,24 @@ Den skapade mappstrukturen ser ut så här:
 Låt oss lägga till följande kod i JavaScript-filen för att visa svar och rubriker som tagits emot från REST-tjänstens slutpunkt i webbläsarkonsolen.
 
    ```javascript
-       /**
-       * Custom Error handler
+       /** 
+       Custom Error handler
        * @name customErrorHandler Custom Error Handler Function
        * @errorHandler
        */
-       function customErrorHandler(response, headers)
+       function customErrorHandler(response, headers, globals)
        {
            console.log("Custom Error Handler processing start...");
            console.log("response:"+JSON.stringify(response));
            console.log("headers:"+JSON.stringify(headers));
-           guidelib.dataIntegrationUtils.defaultErrorHandler(response, headers);
+           alert("CustomErrorHandler - Please enter valid PetId.")
+           globals.invoke('defaultErrorHandler',response, headers)
            console.log("Custom Error Handler processing end...");
        }
    ```
 
    Följande rad i exempelkoden används för att anropa standardfelhanteraren från din anpassade felhanterare:
-   `guidelib.dataIntegrationUtils.defaultErrorHandler(response, headers) `
-
+   `globals.invoke('defaultErrorHandler',response, headers) `
 
 1. Spara `function.js`.
 1. Navigera till `js.txt` och lägg till följande kod:
@@ -303,7 +286,7 @@ Nu ska vi förstå hur du konfigurerar och använder en anpassad felhanterare me
 
 Innan du implementerar den anpassade felhanteraren i ett adaptivt formulär måste du kontrollera att klientbibliotekets namn finns i **[!UICONTROL Client Library Category]** justerar med namnet som anges i kategorialternativet i `.content.xml` -fil.
 
-![Lägga till namnet på klientbiblioteket i konfigurationen för adaptiv formulärbehållare](/help/forms/using/assets/client-library-category-name.png)
+![Lägga till namnet på klientbiblioteket i konfigurationen för adaptiv formulärbehållare](/help/forms/using/assets/client-library-category-name-core-component.png)
 
 I det här fallet anges klientbiblioteksnamnet som `customfunctionsdemo` i `.content.xml` -fil.
 
@@ -322,87 +305,8 @@ Använda en anpassad felhanterare med **[!UICONTROL Rule Editor's Invoke Service
 
 Som ett resultat av den här regeln anger du värden för **Djurs-ID** kontrollerar validering för **Djurnamn** med en extern tjänst som anropas av REST-slutpunkten. Om valideringskriterierna som baseras på datakällan misslyckas, visas felmeddelandena på fältnivå.
 
-![lägga till en anpassad felhanterare i ett formulär för att hantera felsvar](/help/forms/using/assets/custom-error-handler-message.png)
+![lägga till en anpassad felhanterare i ett formulär för att hantera felsvar](/help/forms/using/assets/custom-error-handler-message-core-component.png)
 
 Öppna webbläsarkonsolen och kontrollera svaret och rubriken som tagits emot från REST-tjänstens slutpunkt för valideringsfelmeddelandet.
 
 Den anpassade felhanterarfunktionen ansvarar för att utföra ytterligare åtgärder, som att visa en modal dialogruta eller skicka en analyshändelse, baserat på felsvaret. En anpassad felhanterarfunktion ger flexibilitet att anpassa felhanteringen efter specifika användarkrav.
-
-<!-- 
-
-## Configure Adaptive Form submission to add custom handlers {#configure-adaptive-form-submission}
-
-If the server validation error message does not display in the standard format, you can enable asynchronous submission and add a custom error handler on Adaptive Form submission to convert the message into a standard format.
-
-### Configure asynchronous Adaptive Form submission {#configure-asynchronous-adaptive-form-submission}
-
-Before adding custom handler, you must configure the adaptive form for asynchronous submission. Execute the following steps:
-
-1. In adaptive form authoring mode, select the Form Container object and tap ![adaptive form properties](assets/configure_icon.png) to open its properties.
-1. In the **[!UICONTROL Submission]** properties section, enable **[!UICONTROL Use asynchronous submission]**.
-1. Select **[!UICONTROL Revalidate on server]** to validate the input field values on server before submission.
-1. Select the Submit Action:
-
-    * Select **[!UICONTROL Submit using Form Data Model]** and select the appropriate data model, if you are using RESTful web service based [form data model](work-with-form-data-model.md) as the data source.
-    * Select **[!UICONTROL Submit to REST Service endpoint]** and specify the **[!UICONTROL Redirect URL/Path]**, if you are using RESTful web services as the data source.
-
-    ![adaptive form submission properties](assets/af_submission_properties.png)
-
-1. Tap ![Save](assets/save_icon.png) to save the properties.
-
-### Add custom error handler on Adaptive Form submission {#add-custom-error-handler-af-submission}
-
-AEM Forms provides out-of-the-box success and error handlers for form submissions. Handlers are client-side functions that execute based on the server response. When an Adaptive Form is submitted, the data is transmitted to the server for validation, which returns a response to the client with information about the success or error event for the submission. The information is passed as parameters to the relevant handler to execute the function.
-
-Execute the following steps to add custom error handler on Adaptive Form submission:
-
-1. Open an Adaptive Form in authoring mode, select any form object, and tap  to open the rule editor.
-1. Select **[!UICONTROL Form]** in the Form Objects tree and tap **[!UICONTROL Create]**.
-1. Select **[!UICONTROL Error in Submission]** from the Event drop-down list.
-1. Write a rule to convert custom error structure to the standard error structure and tap **[!UICONTROL Done]** to save the rule.
-
-The following is a sample code to convert a custom error structure to the standard error structure:
-
-```javascript
-var data = $event.data;
-var som_map = {
-    "id": "guide[0].guide1[0].guideRootPanel[0].Pet[0].id_1[0]",
-    "name": "guide[0].guide1[0].guideRootPanel[0].Pet[0].name_2[0]",
-    "status": "guide[0].guide1[0].guideRootPanel[0].Pet[0].status[0]"
-};
-
-var errorJson = {};
-errorJson.errors = [];
-
-if (data) {
-    if (data.originMessage) {
-        var errorData;
-        try {
-            errorData = JSON.parse(data.originMessage);
-        } catch (err) {
-            // not in json format
-        }
-
-        if (errorData) {
-            Object.keys(errorData).forEach(function(key) {
-                var som_key = som_map[key];
-                if (som_key) {
-                    var error = {};
-                    error.somExpression = som_key;
-                    error.errorMessage = errorData[key];
-                    errorJson.errors.push(error);
-                }
-            });
-        }
-        window.guideBridge.handleServerValidationError(errorJson);
-    } else {
-        window.guideBridge.handleServerValidationError(data);
-    }
-}
-```
-
-The `var som_map` lists the SOM expression of the Adaptive Form fields that you want to transform into the standard format. You can view the SOM expression of any field in an adaptive form by tapping the field and selecting **[!UICONTROL View SOM Expression]**.
-
-Using this custom error handler, the adaptive form converts the fields listed in `var som_map` to standard error message format. As a result, the validation error messages display at field-level in the adaptive form.
-
- -->
