@@ -10,9 +10,9 @@ docset: aem65
 feature: Asset Management
 role: User, Admin
 exl-id: 28cf9e39-cab4-4278-b6c9-e84cc31964db
-source-git-commit: ee1a0866aafd56fa53f5d3b936beab8f500d335c
+source-git-commit: 051e6838bea0be9f826183db935d33725c18386d
 workflow-type: tm+mt
-source-wordcount: '11191'
+source-wordcount: '11141'
 ht-degree: 1%
 
 ---
@@ -702,11 +702,7 @@ Om du har konfigurerat Dynamic Media för omedelbar publicering kommer överför
 
 #### Lägga till flera bildtexter i en video som har en befintlig URL med bildtextmodifierare
 
-Dynamic Media har stöd för att lägga till en enda bildtext med video via en URL-modifierare (se [bildtext](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/command-reference-url-video/r-html5-video-viewer-url-caption.html?lang=en)).
-
-<!-- IS THE CORRECT LINK THE ONE ABOVE OR IS IT THE LINK BELOW???? -->
-
-Se [Hantera statiskt innehåll (inte bildinnehåll)](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/c-serving-static-nonimage-contents.html#image-serving-api) i *Hjälp om Dynamic Media Image Serving and Rendering API* om du vill ha mer information om hur du använder JSON-funktionen i en URL.
+Dynamic Media har stöd för att lägga till en enda bildtext med video via en URL-modifierare. Se [Lägga till bildtexter i video](#adding-captions-to-video).
 
 Ändringar av flera bildtexter har företräde framför en bildtext som har lagts till med en URL-modifierare för publicerade videor.
 
@@ -731,7 +727,7 @@ Du kan följa livscykelstatusen för alla undertexter eller ljudspårsfiler som 
 | Status för underrubrik eller ljudspår | Beskrivning |
 | --- | --- |
 | Bearbetar | När en ny undertitel- eller ljudspårsfil läggs till och sparas, försätts den i tillståndet&quot;Bearbetar&quot;. Dynamic Media bearbetar filen genom att bifoga det direktuppspelade manifestet till den primära videon. |
-| Behandlad | När bearbetningen är klar visas undertitels- eller ljudspårsfilen i läget Behandlad. Du kan förhandsgranska undertitel- och ljudspårsfiler som visas som &quot;Behandlad&quot; *före* publicerar du videon live. |
+| Behandlad | När bearbetningen är klar visas undertextnings- eller ljudspårsfilen, eller det ursprungliga ljudspåret som är associerat med den primära videon, i läget Behandlad. Du kan förhandsgranska undertitel- och ljudspårsfiler som visas som &quot;Behandlad&quot; *före* publicerar du videon live. |
 | Publicerad | Ett publicerat läge representerar ett läge som liknar publicerat för en primär video. Resurser publiceras när den primära videon publiceras och är tillgängliga på den offentliga Dynamic Media-URL:en. |
 | Misslyckades | Ett &quot;Misslyckat&quot;-läge innebär att bearbetningen av en undertitel- eller ljudspårsfil inte slutfördes. Ta bort undertitel- eller ljudspårsfilen och överför igen. |
 | Opublicerad | När en publicerad primär video avpubliceras explicit avpubliceras även eventuella undertitel- eller ljudspårsfiler som du har lagt till i videon. |
@@ -857,7 +853,7 @@ Det går inte att hämta det ursprungliga ljudspåret som har extraherats från 
 
 >[!IMPORTANT]
 >
-Det här avsnittet underhålls inte längre aktivt. Det tillhandahålls i befintligt skick för äldre användare av Dynamic Media. Adobe rekommenderar att du [möjliggör funktioner för flera undertexter och flerljudspår](#enable-dash) på ditt Dynamic Media-konto. På så sätt kan du dra nytta av den senaste Dynamic Media backend-arkitekturen och ett förenklat arbetsflöde för att lägga till bildtexter, undertexter och ljudspår i videoklipp.
+Adobe rekommenderar att du [möjliggör funktioner för flera undertexter och flerljudspår](#enable-dash) på ditt Dynamic Media-konto. På så sätt kan du dra nytta av den senaste Dynamic Media backend-arkitekturen och ett förenklat arbetsflöde för att lägga till bildtexter, undertexter och ljudspår i videoklipp.
 
 Du kan utöka räckvidden för dina videor till globala marknader genom att lägga till undertexter till enskilda videor eller till adaptiva videouppsättningar. Genom att lägga till undertextning slipper du att duplicera ljudet eller att du behöver använda inbyggda högtalare för att spela in ljudet igen för varje språk. Videon spelas upp på det språk den spelades in på. Undertexter på främmande språk visas så att personer på olika språk fortfarande kan förstå ljuddelen.
 
