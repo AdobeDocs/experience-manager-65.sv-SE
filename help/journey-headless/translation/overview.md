@@ -2,9 +2,9 @@
 title: AEM översättningsresa utan rubrik
 description: Börja här för en guidad resa genom att översätta ert headless-innehåll med AEM kraftfulla översättningsverktyg.
 exl-id: 1a9d4c88-b676-4168-a9ef-7d218b39129f
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 9c517590c2b78eed7c52e33e0a106237a2af3bb7
 workflow-type: tm+mt
-source-wordcount: '1037'
+source-wordcount: '1055'
 ht-degree: 1%
 
 ---
@@ -85,4 +85,6 @@ Som sådana resor är utformade för att stå på egen hand. Ett antal av dem ka
 * [Headless Architect Journey](/help/journey-headless/architect/overview.md) - Börja här för att få en introduktion till de kraftfulla och flexibla headless-funktionerna i Adobe Experience Manager och hur du skapar material för ditt projekt.
 * [AEM Headless Developer Journey](/help/journey-headless/developer/overview.md) - Börja här för att få en guidad resa genom de kraftfulla och flexibla headless-funktionerna i AEM, deras funktioner och hur du kan utnyttja dem i ditt första utvecklingsprojekt.
 * [AEM teknisk dokumentation](https://experienceleague.adobe.com/docs/experience-manager-65.html) - Om du redan har en god förståelse för AEM och headless-teknik kan du behöva läsa våra detaljerade tekniska dokument direkt.
+   * An [Introduktion till AEM som headless CMS](/help/sites-developing/headless/introduction.md)
 * [AEM Headless-självstudiekurser](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html) - Om du föredrar att lära dig genom att göra något och är tekniskt inriktad kan du ta del av våra praktiska självstudiekurser ordnade efter API och ramverk, som utforskar att skapa och använda program som bygger på AEM Headless.
+* The [AEM Developer Portal](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html)

@@ -2,9 +2,9 @@
 title: Adobe Experience Manager Headless Content Architect Journey
 description: En introduktion till de kraftfulla och flexibla headless-funktionerna i Adobe Experience Manager och hur du modellerar innehåll för ditt projekt.
 exl-id: 49ba0d6d-dde4-42e2-92fd-c7655c0eebc0
-source-git-commit: a2fd3c0c1892ac648c87ca0dec440e22144c37a2
+source-git-commit: 9c517590c2b78eed7c52e33e0a106237a2af3bb7
 workflow-type: tm+mt
-source-wordcount: '704'
+source-wordcount: '731'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ Det här dokumentet hjälper er att förstå hur headless-innehåll levereras, h
 ## Syfte {#objective}
 
 * **Målgrupp**: Nybörjare
-* **Syfte**: Lägg in de koncept och termer som är relevanta för Headless Content Modeling.
+* **Syfte**: Presentera de koncept och den terminologi som är relevanta för Headless Content Modeling.
 
 ## Leverans av högklassigt innehåll {#full-stack}
 
@@ -64,7 +64,7 @@ För AEM som innehållsarkitekt kommer du att göra innehållsmodelleringen för
 
 ### Åtkomst till innehållet {#access-content}
 
-Det här är mer av en detalj - men det kan intressera dig, bara för att slutföra artikeln.
+Det här är mer av en detaljfråga - men det kan intressera dig, bara för att slutföra artikeln.
 
 När du har skapat modellerna för innehållsfragment, och dina författare har använt dem för att generera innehållet, måste de headless-program ha tillgång till det här innehållet.
 
@@ -81,3 +81,6 @@ Nu när du har lärt dig koncept och terminologi är nästa steg att [Lär dig g
 * AEM Headless Developer Journey
    * [Läs om CMS Headless Development](/help/journey-headless/developer/learn-about.md)
    * [Lär dig modellera ditt innehåll](/help/journey-headless/developer/model-your-content.md)
+* [Introduktion till AEM som headless CMS](/help/sites-developing/headless/introduction.md)
+* [AEM Developer Portal](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html)
+* [Tutorials för Headless i AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html)

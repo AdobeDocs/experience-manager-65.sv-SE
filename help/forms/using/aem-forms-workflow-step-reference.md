@@ -5,7 +5,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: publish
 docset: aem65
 exl-id: 470fcfda-dfde-437c-b539-d5af1e13a7d6
-source-git-commit: 3c7b46c20b2f34bd83941649cbff2ac16c3aade2
+source-git-commit: 5675d69a5bdf296782339f02162db8068daf29e3
 workflow-type: tm+mt
 source-wordcount: '7565'
 ht-degree: 0%
@@ -268,7 +268,7 @@ I steget Anropa formulärdatamodelltjänst visas följande fält för att underl
 * **Välj Indata-JSON-dokument med**: JSON-filen innehåller värden för alla tjänstargument. JSON-filens sökväg kan vara **i förhållande till nyttolasten** eller en **absolut sökväg.** Du kan även hämta JSON-indata-dokumentet med hjälp av en variabel av datatypen JSON eller Form Data Model.
 
 * **JSON-punktnotation:** Lämna fältet tomt om du vill använda alla objekt i den angivna JSON-filen som indata för tjänstargument. Om du vill läsa ett specifikt JSON-objekt från den angivna JSON-filen som indata för serviceargument anger du punktnotation för JSON-objektet, till exempel, om du har en JSON som liknar den som anges i början av avsnittet, anger du försäkring.customerDetails för att ge all information om en kund som indata till tjänsten.
-* **Utdata för tjänsten > Mappa och skriv utdatavärden till variabel eller metadata:** Välj alternativet att spara utdatavärdena som egenskaper för arbetsflödesinstansens metadatanod i crx-databasen. Ange namnet på metadataegenskapen och välj det motsvarande tjänstutdataattribut som ska mappas med metadataegenskapen, till exempel mappa det telefonnummer som returneras av utdatatjänsten med egenskapen phone_number för arbetsflödets metadata. På samma sätt kan du lagra utdata i en variabel med datatypen Long. När du väljer en egenskap för **[!UICONTROL Service output attribute to be mapped]** , fylls endast variabler som kan lagra data för den valda egenskapen i för **[!UICONTROL Save the output to]** alternativ.
+* **Utdata för tjänsten > Mappa och skriv utdatavärden till variabel eller metadata:** Välj alternativet att spara utdatavärdena som egenskaper för arbetsflödesinstansens metadatanod i crx-databasen. Ange namnet på metadataegenskapen och välj det motsvarande tjänstutdataattribut som ska mappas med metadataegenskapen, till exempel mappa det telefonnummer som returneras av utdatatjänsten med egenskapen phone_number för arbetsflödets metadata. På samma sätt kan du lagra utdata i en variabel med datatypen Long. När du väljer en egenskap för **[!UICONTROL Service output attribute to be mapped]** , fylls endast variabler som kan lagra data för den valda egenskapen i för **[!UICONTROL Save the output to]** alternativ.
 
 * **Utdata från tjänst > Spara utdata till variabel eller en JSON-fil:** Välj alternativet att spara utdatavärdena i en JSON-fil med en absolut sökväg, med en sökväg som är relativ till nyttolasten eller i en variabel.
 * **Spara JSON-utdatadokument med alternativen nedan:** Spara JSON-utdatafilen. Sökvägen till JSON-utdatafilen kan vara relativ till nyttolasten eller en absolut sökväg. Du kan också spara JSON-utdatafilen med en variabel av datatypen JSON eller Form Data Model.
@@ -303,6 +303,7 @@ Med steget Signera dokument kan du använda Adobe Sign för att signera dokument
   >* I rollavsnittet kan du ange mottagarrollen som signerare, godkännare, godkännare, certifierad mottagare, formulärifyllare och delegerande.
   >* Om du väljer Delegerande i alternativet Roll kan delegeraren tilldela signeringsaktiviteten till en annan mottagare.
   >* Om du har konfigurerat en autentiseringsmetod för [!DNL Adobe Sign], baserat på din konfiguration, väljer du en autentiseringsmetod som telefonbaserad autentisering, autentisering via social identitet, kunskapsbaserad autentisering, autentisering baserad på myndighetsidentitet.
+
 
 * **Skript eller tjänst för att välja mottagare:** Alternativet är bara tillgängligt om du väljer alternativet Dynamiskt i fältet Välj mottagare. Du kan ange ett ECMAScript eller en tjänst för att välja mottagare och verifieringsalternativ för ett dokument.
 * **Mottagarinformation:** Alternativet är bara tillgängligt om alternativet Manuellt är markerat i fältet Välj mottagare. Ange e-postadress och välj en valfri verifieringsmekanism. Innan du väljer en verifieringsmekanism i två steg måste du se till att motsvarande verifieringsalternativ är aktiverat för det konfigurerade Adobe Sign-kontot. Du kan använda en variabel av datatypen String för att definiera värden för **[!UICONTROL Email]**, **[!UICONTROL Country Code]** och **[!UICONTROL Phone Number]** fält. The **[!UICONTROL Country Code]** och **[!UICONTROL Phone Number]** fält visas bara om du väljer **[!UICONTROL Phone Verification]** från **[!UICONTROL 2-step verification]** listruta.

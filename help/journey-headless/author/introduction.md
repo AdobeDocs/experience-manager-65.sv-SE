@@ -2,21 +2,21 @@
 title: Skapa för Headless med Adobe Experience Manager
 description: En introduktion till de kraftfulla och flexibla headlessfunktionerna i Adobe Experience Manager och hur du skapar innehåll för ditt projekt.
 exl-id: 39d2218a-4f11-459d-8514-cfd312246be5
-source-git-commit: f4b6eb2ded17ec641f23a1fc3b977ce77169c8a1
+source-git-commit: 9c517590c2b78eed7c52e33e0a106237a2af3bb7
 workflow-type: tm+mt
-source-wordcount: '632'
+source-wordcount: '659'
 ht-degree: 0%
 
 ---
 
-# Om du skriver för Headless med AEM - en introduktion {#author-headless-introduction}
+# Om du skriver för Headless med AEM - introduktion {#author-headless-introduction}
 
-I den här delen av [AEM Headless Content Author Journey](overview.md)kan du lära dig de (grundläggande) begrepp och termer som behövs för att förstå hur du skapar innehåll för rubrikfri innehållsleverans med Adobe Experience Manager (AEM).
+I den här delen av [AEM Headless Content Author Trney](overview.md)kan du lära dig de (grundläggande) begrepp och termer som behövs för att förstå hur du skapar innehåll för rubrikfri innehållsleverans med Adobe Experience Manager (AEM).
 
 ## Syfte {#objective}
 
 * **Målgrupp**: Nybörjare
-* **Syfte**: Innehåller koncept och terminologi för Headless Authoring.
+* **Syfte**: Innehåller koncept och terminologi som är relevanta för Headless Authoring.
 
 ## CMS (Content Management System) {#content-management-system}
 
@@ -81,3 +81,9 @@ Nu när du har lärt dig koncept och terminologi är nästa steg att [Lär dig g
 * [AEM Headless Content Architect Journey](/help/journey-headless/architect/overview.md)
 
 * [AEM Headless Content Translation Journey](/help/journey-headless/translation/overview.md)
+
+* [Introduktion till AEM som headless CMS](/help/sites-developing/headless/introduction.md)
+
+* [AEM Developer Portal](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html)
+
+* [Tutorials för Headless i AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html)

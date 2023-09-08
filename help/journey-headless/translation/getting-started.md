@@ -2,9 +2,9 @@
 title: Kom igång med AEM headless translation
 description: Lär dig hur du ordnar ditt headless-innehåll och hur AEM översättningsverktyg fungerar.
 exl-id: 764f78a7-1d3d-4406-85b1-b80dffae2350
-source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
+source-git-commit: 9c517590c2b78eed7c52e33e0a106237a2af3bb7
 workflow-type: tm+mt
-source-wordcount: '1466'
+source-wordcount: '1495'
 ht-degree: 0%
 
 ---
@@ -36,7 +36,7 @@ Det finns ett antal krav innan du börjar översätta ditt AEM innehåll.
 
 ### Kunskap {#knowledge}
 
-* Upplev hur man översätter innehåll i ett CMS-system
+* Upplev översättning av innehåll i ett CMS-system
 * Upplev de grundläggande funktionerna i ett storskaligt CMS-system
 * Kunskap AEM grundläggande hantering
 * Förståelse för översättningstjänsten som du använder
@@ -68,7 +68,7 @@ För översättningsspecialisten är det inte viktigt att förstå hur AEM hante
 
 ### Innehållsmodeller {#content-models}
 
-För att headless-innehåll ska kunna levereras på ett enhetligt sätt i alla kanaler, regioner och på alla språk måste innehållet vara välstrukturerat. AEM använder innehållsmodeller för att tillämpa den här strukturen. Tänk på Innehållsmodeller som en typ av mall eller mönster för att skapa headless-innehåll. Eftersom alla projekt har sina egna behov definierar alla projekt sina egna modeller för innehållsfragment. AEM har inga fasta krav eller strukturer för sådana modeller.
+För att headless-innehåll ska kunna levereras på ett enhetligt sätt i alla kanaler, regioner och på alla språk måste innehållet vara välstrukturerat. AEM använder innehållsmodeller för att tillämpa den här strukturen. Tänk på Innehållsmodeller som en typ av mall eller mönster för att skapa headless-innehåll. Eftersom alla projekt har sina egna behov definierar alla projekt sina egna Content Fragment Models. AEM har inga fasta krav eller strukturer för sådana modeller.
 
 Innehållsarkitekten arbetar tidigt i projektet för att definiera den här strukturen. Som översättningsspecialist bör ni ha ett nära samarbete med innehållsarkitekten för att förstå och organisera innehållet.
 
@@ -190,3 +190,6 @@ Vi rekommenderar att du går vidare till nästa del av den headless-översättni
 * [Identifiera innehåll som ska översättas](/help/sites-administering/tc-rules.md) - Lär dig hur översättningsregler identifierar innehåll som behöver översättas.
 * [Konfigurera översättningsintegreringsramverket](/help/sites-administering/tc-tic.md) - Lär dig hur du konfigurerar TLF (Translation Integration Framework) för integrering med översättningstjänster från tredje part.
 * [Hantera översättningsprojekt](/help/sites-administering/tc-manage.md) - Lär dig att skapa och hantera både maskinöversättning och mänsklig översättning i AEM.
+* An [Introduktion till AEM som headless CMS](/help/sites-developing/headless/introduction.md)
+* The [AEM Developer Portal](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html)
+* [Tutorials för Headless i AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html)

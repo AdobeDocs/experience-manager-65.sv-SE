@@ -10,9 +10,9 @@ docset: aem65
 feature: Asset Management
 role: User, Admin
 exl-id: 28cf9e39-cab4-4278-b6c9-e84cc31964db
-source-git-commit: 051e6838bea0be9f826183db935d33725c18386d
+source-git-commit: 0738f53564cb2e2607d739d97bdd1bb2fc64ac6e
 workflow-type: tm+mt
-source-wordcount: '11141'
+source-wordcount: '11138'
 ht-degree: 1%
 
 ---
@@ -605,7 +605,6 @@ Några av användningsområdena för att lägga till multiundertexter och flerlj
 | **Undertexter** | Stöd för flera språk |
 |  | Beskrivande text för tillgänglighet |
 | **Ljudspår** | Stöd för flera språk |
-|  | Stereo jämfört med flerkanaligt (surroundljud) |
 |  | Kommentarspår |
 |  | Beskrivande ljud |
 
@@ -698,7 +697,7 @@ Om du har konfigurerat Dynamic Media för omedelbar publicering kommer överför
 
 >[!CAUTION]
 >
->När du överför undertextningsfiler eller ljudfiler till en video som redan har publicerats tas dessa filer bort om du [*ombearbeta*](/help/assets/processing-profiles.md#reprocessing-assets) videon. Endast videons ursprungliga ljud förblir intakt. I så fall måste du ladda upp undertextningsfilerna och ljudspårsfilerna till videon igen.
+>När du överför undertextningsfiler eller ljudfiler till en video som antingen är publicerad eller opublicerad tas filerna bort om du [*ombearbeta*](/help/assets/processing-profiles.md#reprocessing-assets) videon. Endast videons ursprungliga ljud förblir intakt. I så fall måste du ladda upp undertextningsfilerna och ljudspårsfilerna till videon igen.
 
 #### Lägga till flera bildtexter i en video som har en befintlig URL med bildtextmodifierare
 

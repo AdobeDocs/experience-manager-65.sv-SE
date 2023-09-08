@@ -2,23 +2,23 @@
 title: Vägen till din första upplevelse med AEM utan headless
 description: I den här delen av den AEM Headless Developer Journey kommer du att förstå hur du implementerar din första headless-upplevelse i AEM, inklusive planeringsöverväganden, och också lära dig bästa praxis för att göra din väg så smidig som möjligt.
 exl-id: 64a87b6b-67ff-4d88-9dfb-c3e5de65bbe6
-source-git-commit: ad0f0bd8b0c230e002c734adca87da22bfa3a7cd
+source-git-commit: 9c517590c2b78eed7c52e33e0a106237a2af3bb7
 workflow-type: tm+mt
-source-wordcount: '1982'
+source-wordcount: '1992'
 ht-degree: 0%
 
 ---
 
 # Vägen till din första upplevelse med AEM utan headless {#path-to-first-experience}
 
-I den här delen av [AEM Headless Developer Journey,](overview.md) du kommer att förstå hur du implementerar din första headless-upplevelse av AEM, inklusive planeringsöverväganden, och även lära dig bästa praxis för att göra din väg så smidig som möjligt.
+I den här delen av [AEM Headless Developer Journey](overview.md) du kommer att förstå hur du implementerar din första headless-upplevelse av AEM, inklusive planeringsöverväganden, och även lära dig bästa praxis för att göra din väg så smidig som möjligt.
 
 ## Story hittills {#story-so-far}
 
 I det föregående dokumentet om den AEM resan utan headless [Komma igång med AEM Headless](getting-started.md) du lärde dig den grundläggande teorin om vad ett headless CMS är och du bör nu:
 
 * Förstå grunderna i AEM headless-funktioner.
-* Lär känna förutsättningarna för AEM headless-funktioner.
+* Lär dig grunderna för AEM headless-funktioner.
 * Tänk på AEM integrationsnivåer utan motstycke.
 * Du kan definiera projektet utifrån dess omfång.
 
@@ -106,11 +106,11 @@ Ett headless-projekt är inte bara framgångsrikt på grund av den teknik som an
 * Gruppera liknande innehåll i en mapp.
    * Det är troligare att en innehållsförfattare kopierar och klistrar in befintligt innehåll för att skapa nytt innehåll. Om du gör detta i samma mapp blir det därför effektivare.
    * AEM tillåter att tillåtna modeller anges per mapp så att **Skapa nytt** visas endast de modeller som stöds på den platsen.
-* Det går att förenkla skapandet av nya innehållsfragment i den infogade redigeraren för innehållsfragment om rotmappen är inställd i modellen. Sedan behöver inte administratören välja en plats, utan bara ange ett namn och kan börja redigera den nya referensen.
+* Det går att förenkla skapandet av nya innehållsfragment i den infogade redigeraren för innehållsfragment om rotmappen är angiven i modellen. Sedan behöver inte administratören välja en plats, utan bara ange ett namn och kan börja redigera den nya referensen.
 
 ### Skapa innehåll {#authoring}
 
-* För kanalspecifika versioner av ditt innehåll bör du överväga att använda variationer för innehållsfragment. Variationer synkroniseras mot det överordnad innehållet för att effektivisera hanteringen av innehållsändringar.
+* För kanalspecifika versioner av ditt innehåll bör du överväga att använda variationer för innehållsfragment. Variationer synkroniseras mot innehållshanteraren för att effektivisera hanteringen av innehållsändringar.
 * Bjud in andra innehållsproducenter att granska materialet och ge feedback med kommentarer och kommentarer som är tillgängliga i innehållsfragmentredigeraren och globalt över fragment i innehållsfragment Admin Console.
 * Håll saker i rörelse med så få obligatoriska element som möjligt. Obligatoriska element kan blockera arbetsflödet.
 
@@ -131,7 +131,7 @@ Nu när du är klar med den här delen av AEM Headless Developer Journey ska du:
 
 Vi vill att du bygger vidare på denna grundläggande kunskap för att till fullo förstå styrkan och flexibiliteten hos AEM Headless så att du kan utnyttja den för dina egna projekt. För att göra detta har du alternativ.
 
-### Välj egen Adventure {#choose-your-path}
+### Välj din egen Adventure {#choose-your-path}
 
 Oavsett vilken inlärningsstil du har vill Adobe att du ska lyckas när du börjar med AEM Headless-projekt.
 
@@ -142,8 +142,8 @@ Oavsett vilken inlärningsstil du har vill Adobe att du ska lyckas när du börj
 
 Vi rekommenderar att du går vidare till nästa del av den headless-utvecklingsresan genom att granska dokumentet [Så här modellerar du ditt innehåll som AEM innehållsmodeller,](model-your-content.md) Nedan följer ytterligare, valfria resurser som gör en djupdykning i vissa koncept som nämns i det här dokumentet, men som inte behöver fortsätta på den headless-resan.
 
-* [AEM Headless Translation Journey](/help/journey-headless/translation/overview.md) - Den här dokumentationsresan ger er en bred förståelse för headless-teknik, hur AEM levererar headless-innehåll och hur ni kan översätta det.
-* [Headless Development for AEM Sites](/help/sites-developing/headless/introduction.md) - En snabb introduktion som ger den AEM Headless-utvecklaren de funktioner som krävs
+* [AEM översättningsresa utan rubrik](/help/journey-headless/translation/overview.md) - Den här dokumentationsresan ger er en bred förståelse för headless-teknik, hur AEM levererar headless-innehåll och hur ni kan översätta det.
+* [Headless Development for AEM Sites](/help/sites-developing/headless/introduction.md) - En snabb introduktion till att ge den AEM Headless-utvecklaren de funktioner som krävs
 * [AEM Headless Tutorials](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html) - Använd dessa praktiska självstudiekurser för att utforska hur du kan använda de olika alternativen för att leverera innehåll till headless-slutpunkter med AEM och välja vad som passar dig bäst.
 * [Headless Content Management Using GraphQL APIs](https://experienceleague.adobe.com/?Solution=Experience+Manager&amp;Solution=Experience+Manager+Sites&amp;Solution=Experience+Manager+Forms&amp;Solution=Experience+Manager+Screens&amp;launch=ExperienceManager-D-1-2020.1.headless#courses) - Följ den här kursen för att få en översikt över GraphQL API som implementerats i AEM. Autentisering via AdobeID krävs.
 * [AEM Guides WKND - GraphQL](https://github.com/adobe/aem-guides-wknd-graphql) - Det här GitHub-projektet innehåller exempelprogram AEM GraphQL API:er.
@@ -151,3 +151,4 @@ Vi rekommenderar att du går vidare till nästa del av den headless-utvecklingsr
 * [Skapa modeller för innehållsfragment](/help/assets/content-fragments/content-fragments-models.md) - Teknisk dokumentation om modeller för innehållsfragment
 * [Skapa innehållsfragment](/help/assets/content-fragments/content-fragments.md) - Teknisk dokumentation om innehållsfragment
 * [Fråga innehåll med GraphQL](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md) - Teknisk dokumentation om GraphQL API
+* The [AEM Developer Portal](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html)

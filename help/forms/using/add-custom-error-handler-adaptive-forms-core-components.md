@@ -7,9 +7,9 @@ keywords: Lägg till en anpassad felhanterare, lägg till en standardfelhanterar
 contentOwner: Ruchita Srivastav
 content-type: reference
 feature: Adaptive Forms
-source-git-commit: 28cc10b79d2ac8cf12ddfd0bf7d1a8e013fe6238
+source-git-commit: f8e0ac45d98d6485ccb60e754657caf9d190c3ea
 workflow-type: tm+mt
-source-wordcount: '2257'
+source-wordcount: '2254'
 ht-degree: 0%
 
 ---
@@ -164,7 +164,7 @@ Vissa av alternativen för att visa felsvaren är:
 
 Innan du använder felhanterare i en adaptiv Forms:
 
-* [Aktivera adaptiva Forms Core-komponenter för din AEM Cloud Service-miljö](enable-adaptive-forms-core-components.md).
+* [Aktivera adaptiva Forms Core-komponenter för din miljö](enable-adaptive-forms-core-components.md).
 * Grundläggande kunskap till [skapa en anpassad funktion](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/adaptive-forms/custom-functions-aem-forms.html?lang=en#:~:text=AEM%20Forms%206.5%20introduced%20the,use%20them%20across%20multiple%20forms.).
 * Installera den senaste versionen av [Apache Maven](https://maven.apache.org/download.cgi).
 

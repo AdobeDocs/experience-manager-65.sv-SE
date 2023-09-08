@@ -2,9 +2,9 @@
 title: Så här Live med ditt headless-program
 description: I den här delen av AEM Headless Developer Journey lär du dig hur du driftsätter en headless-applikation live.
 exl-id: ec3356ef-9e60-4151-984d-3ebdab593b96
-source-git-commit: 71842228dd3cb1ce3b79728912e8333d25fccefc
+source-git-commit: 9c517590c2b78eed7c52e33e0a106237a2af3bb7
 workflow-type: tm+mt
-source-wordcount: '1846'
+source-wordcount: '1873'
 ht-degree: 0%
 
 ---
@@ -35,7 +35,7 @@ Det här dokumentet hjälper dig att förstå den AEM rubrikfria publiceringspro
 
 AEM SDK används för att skapa och distribuera anpassad kod. Det är huvudverktyget som du måste utveckla och testa din headless-applikation innan du kan börja använda den. Den innehåller följande artefakter:
 
-* Quickstart jar - en körbar jar-fil som kan användas för att ställa in både en författare och en publiceringsinstans
+* Quickstart jar - en körbar jar-fil som kan användas för att ställa in både författare och publiceringsinstans
 * Dispatcher-verktyg - Dispatcher-modulen och dess beroenden för Windows- och UNIX-baserade system
 * Java™ API Jar - Java™ Jar/Maven Dependency som visar alla Java™-API:er som kan användas för att utveckla mot AEM
 * Javadoc jar - javadocs for the Java™ API jar
@@ -47,7 +47,7 @@ Förutom AEM SDK behöver du ytterligare verktyg som gör det lättare att utvec
 * Java™
 * Git
 * Apache Maven
-* Biblioteket Node.js
+* The Node.js library
 * Den utvecklingsmiljö du vill använda
 
 Eftersom AEM är ett Java™-program måste du installera Java™ och Java™ SDK för att stödja utvecklingen av AEM as a Cloud Service.
@@ -66,9 +66,9 @@ En komplett AEM består av en författare, en publiceringsversion och en utskick
 
 * **Författartjänsten** är den plats där interna användare skapar, hanterar och förhandsgranskar innehåll.
 
-* **Publiceringstjänsten** är&quot;Live&quot;-miljön och det är vanligtvis den slutanvändaren interagerar med. När innehållet har redigerats och godkänts av författartjänsten distribueras det (replikeras) till publiceringstjänsten. Det vanligaste distributionsmönstret med AEM headless-program är att ha produktionsversionen av programmet ansluten till en AEM Publish-tjänst.
+* **Publiceringstjänsten** är&quot;Live&quot;-miljön och det är vanligtvis den slutanvändaren interagerar med. När innehållet har redigerats och godkänts av författartjänsten distribueras det (replikeras) till publiceringstjänsten. Det vanligaste distributionsmönstret med AEM headless-program är att få produktionsversionen av programmet att ansluta till en AEM Publish-tjänst.
 
-* **Dispatcher** är en statisk webbserver som utökas med AEM Dispatcher-modulen. Den cachelagrar webbsidor som skapats av publiceringsinstansen för att förbättra prestandan.
+* **Dispatcher** är en statisk webbserver som utökas med modulen AEM. Den cachelagrar webbsidor som skapats av publiceringsinstansen för att förbättra prestandan.
 
 ## Arbetsflödet för lokal utveckling {#the-local-development-workflow}
 
@@ -82,9 +82,9 @@ I ett produktionssystem placeras Dispatcher och en http Apache-server alltid fra
 
 ## Förhandsgranska kod och innehåll lokalt med den lokala utvecklingsmiljön {#previewing-your-code-and-content-locally-with-the-local-development-environment}
 
-Förbered AEM headless-projekt för lansering genom att se till att alla delar av projektet fungerar bra.
+Förbered AEM headless-projekt för lansering genom att se till att alla delar av projektet fungerar som de ska.
 
-För att göra det måste ni sätta ihop allt: kod, innehåll och konfiguration, och testa det i en lokal utvecklingsmiljö för live-beredskap.
+För att göra det måste ni sätta ihop allt: kod, innehåll och konfiguration, och testa det i en lokal utvecklingsmiljö för att kunna vara redo att användas live.
 
 Den lokala utvecklingsmiljön består av tre huvudområden:
 
@@ -96,11 +96,11 @@ När den lokala utvecklingsmiljön har konfigurerats kan du simulera innehåll s
 
 Mer information om hur du konfigurerar en lokal utvecklingsmiljö och alla beroenden som behövs för förhandsgranskning av innehåll finns i [Produktionsdistributionsdokumentation](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/overview.html?lang=en).
 
-## Förbered ditt AEM Headless-program för GoLive {#prepare-your-aem-headless-application-for-golive}
+## Förbered AEM Headless Application for GoLive {#prepare-your-aem-headless-application-for-golive}
 
 <!-- Start of CDN Review -->
 
-Nu är det dags att göra ditt AEM headless-program redo för lansering enligt de rutiner som beskrivs nedan.
+Nu är det dags att göra ditt AEM headless-program redo för lansering genom att följa de rutiner som beskrivs nedan.
 
 ### Skydda ditt Headless-program innan du startar {#secure-and-scale-before-launch}
 
@@ -114,7 +114,7 @@ Nu är det dags att göra ditt AEM headless-program redo för lansering enligt d
 
 ### Maximera CDN-cacheträffrekvens {#maximize-cdn}
 
-* Använd inte direkta GraphQL-frågor om du inte begär direktinnehåll från ytan.
+* Använd inte direkta GraphQL-frågor, såvida du inte begär direktinnehåll från ytan.
    * Använd beständiga frågor när det är möjligt.
    * Tillhandahåll CDN TTL över 600 sekunder så att CDN kan cachelagra dem.
    * AEM kan beräkna effekten av en modelländring av befintliga frågor.
@@ -137,7 +137,7 @@ Nu är det dags att göra ditt AEM headless-program redo för lansering enligt d
 
 ## Distribuera till produktion {#deploy-to-production}
 
-Distribuering till produktion kan vara beroende av om du har en *traditionell* AEM som distribuerar med hjälp av Maven, eller använder Adobe Managed Services (AMS) och därför använder Cloud Manager.
+Distribuering till produktion kan vara beroende av om du har en *traditionell* AEM som distribuerar med Maven, eller finns i Adobe Managed Services (AMS) och därför använder Cloud Manager.
 
 ## Distribuera till produktion med Maven {#deploy-to-production-maven}
 
@@ -158,7 +158,7 @@ You can start deploying your code by leveraging the Cloud Manager CI/CD pipeline
 
 För att användarna ska få bästa möjliga upplevelse när de använder det AEM headless-programmet är det viktigt att du övervakar nyckeltal enligt beskrivningen nedan:
 
-* Validera förhandsgransknings- och produktionsversioner av appen
+* Validera förhandsgransknings- och produktionsversionerna av appen
 * Verifiera AEM statussidor för den aktuella tjänsttillgänglighetsstatusen
 * Få resultatrapporter
    * Leveransprestanda
@@ -185,7 +185,7 @@ Följ dessa metodtips som ett allmänt tillvägagångssätt vid felsökning:
 
 ### Logga ett fel med support {#logging-a-bug-with-support}
 
-Om du behöver mer hjälp kan du logga ett fel med Support på ett effektivt sätt genom att utföra följande steg:
+Om du behöver mer hjälp kan du logga ett fel med Support på ett effektivt sätt:
 
 * Ta skärmbilder av problemet, om det behövs
 * Dokumentera ett sätt att återskapa problemet
@@ -204,7 +204,7 @@ Grattis! Du har slutfört AEM Headless Developer Journey! Nu bör du förstå:
 * Så här lever du med ett AEM Headless-projekt.
 * Vad du ska göra när du är klar.
 
-Antingen har du redan startat ditt första AEM Headless-projekt eller så har du nu all kunskap som behövs för att göra det. Bra jobbat!
+Antingen har du redan startat ditt första AEM Headless-projekt eller så har du nu all kunskap som behövs för att göra det. Snyggt jobb!
 
 ### Utforska Single Page-program {#explore-spa}
 
@@ -225,3 +225,7 @@ Om den här typen av flexibilitet är något du behöver för ditt projekt kan d
    * [Kontrollera en CDN-cache](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html#controlling-a-cdn-cache)
 
    * Konfigurera [CDN Rewriter](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/osgi-configuration-settings.html) (*sök efter CDN Rewriter*)
+
+* [Introduktion till AEM som headless CMS](/help/sites-developing/headless/introduction.md)
+* [AEM Developer Portal](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html)
+* [Tutorials för Headless i AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html)

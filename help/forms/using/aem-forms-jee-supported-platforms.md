@@ -7,9 +7,9 @@ geptopics: SG_AEMFORMS/categories/jee
 docset: aem65
 role: Admin
 exl-id: 74d22cf4-56b2-48f5-92d9-928eaa134866
-source-git-commit: 018ffe71d0186e1eb07e5f59e3d6a48ed316de47
+source-git-commit: 54bed871375ddc9d18af564318ceac95dd1dd2f9
 workflow-type: tm+mt
-source-wordcount: '3660'
+source-wordcount: '3667'
 ht-degree: 0%
 
 ---
@@ -22,8 +22,7 @@ ht-degree: 0%
 <div class="preview">
 
 Adobe har släppt en [fullständig installationsfil](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html) med AEM 6.5 Forms Service Pack 18 (6.5.18.0) på JEE tillsammans med patch-installerarna. Det fullständiga installationsprogrammet har stöd för nya plattformar medan installationsprogrammet för korrigeringsfilen endast innehåller felkorrigeringar.
-
-Om du gör en ny installation eller planerar att använda den senaste programvaran för din AEM 6.5 Forms i JEE-miljö rekommenderar Adobe att du använder [AEM 6.5.18.0 Forms i JEE fullinstallerare](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html) släppt den 29 augusti 2023 i stället för AEM 6.5 Forms installationsprogram som släpptes den 8 april 2019.
+Om du gör en ny installation eller planerar att använda den senaste programvaran för din AEM 6.5 Forms i JEE-miljö rekommenderar Adobe att du använder [AEM 6.5.18.0 Forms i JEE fullinstallerare](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html) släppt den 31 augusti 2023 i stället för AEM 6.5 Forms installationsprogram släppt den 8 april 2019 eller AEM 6.5.12 Forms Installer släppt den 30 mars 2022.
 
 </div>
 
@@ -804,4 +803,3 @@ Följande plattformar är markerade som borttagna i AEM Forms 6.5.10.0 den 7 sep
 - 9 september 2020
 
    - Ändrad version av iOS for AEM Forms App som stöds till iOS 12. Den tidigare versionen var iOS 11.
-

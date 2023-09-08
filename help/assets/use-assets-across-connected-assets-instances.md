@@ -7,7 +7,7 @@ role: User, Admin, Leader
 feature: Connected Assets,User and Groups
 exl-id: 4ceb49d8-b619-42b1-81e7-c3e83d4e6e62
 hide: true
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: bc6a97a55f392cba03131ee3ca7cad35b8c1e69b
 workflow-type: tm+mt
 source-wordcount: '3832'
 ht-degree: 16%
@@ -92,7 +92,7 @@ Konfigurera anslutna resurser och lokala [!DNL Sites] anslutning, följ dessa st
 1. Åtkomst till en befintlig [!DNL Sites] distribuera eller skapa en distribution med följande kommando:
 
    1. I JAR-filens mapp kör du följande kommando på en terminal för att skapa varje [!DNL Experience Manager] server.
-      `java -XX:MaxPermSize=768m -Xmx4096m -jar <quickstart jar filepath> -r samplecontent -p 4502 -nofork -gui -nointeractive &`
+      `java -Xmx4096m -jar <quickstart jar filepath> -r samplecontent -p 4502 -nofork -gui -nointeractive &`
 
    1. Efter några minuter har [!DNL Experience Manager] servern har startats. Tänk på det här [!DNL Sites] distribuera som lokal dator för webbsidesutveckling, till exempel på `https://[local_sites]:4502`.
 

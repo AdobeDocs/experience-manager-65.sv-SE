@@ -2,9 +2,9 @@
 title: AEM Headless Developer Journey
 description: AEM Headless CMS Documentation. Börja här för en guidad resa med de kraftfulla och flexibla headless-funktionerna i AEM, deras funktioner och hur du kan utnyttja dem i ditt första utvecklingsprojekt.
 exl-id: f24fb308-daa7-426f-ba45-37a236b5a500
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 9c517590c2b78eed7c52e33e0a106237a2af3bb7
 workflow-type: tm+mt
-source-wordcount: '1212'
+source-wordcount: '1230'
 ht-degree: 1%
 
 ---
@@ -91,3 +91,7 @@ Som sådana resor är utformade för att stå på egen hand. Ett antal av dem ka
 * [Headless Authoring Journey](/help/journey-headless/author/overview.md) - Börja här för att få en guidad resa genom de kraftfulla och flexibla headless-funktionerna i AEM, deras funktioner och hur du modellerar ditt innehåll i ditt första headless-projekt.
 * [Headless Architect Journey](/help/journey-headless/architect/overview.md) - Börja här för att få en introduktion till de kraftfulla och flexibla headless-funktionerna i Adobe Experience Manager och hur du skapar material för ditt projekt.
 * [AEM teknisk dokumentation](https://experienceleague.adobe.com/docs/experience-manager-65.html) - Om du redan har en god förståelse för AEM och headless-teknik kan du behöva läsa våra detaljerade tekniska dokument direkt.
+
+   * An [Introduktion till AEM som headless CMS](/help/sites-developing/headless/introduction.md)
+
+* The [AEM Developer Portal](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html)

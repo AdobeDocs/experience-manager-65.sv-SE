@@ -2,9 +2,9 @@
 title: Kom igång med AEM Headless
 description: I den här delen av AEM Headless Developer Journey kan du läsa om AEM Headless-krav.
 exl-id: a94794a4-bf8b-4f3b-a761-3f02feedd5c0
-source-git-commit: 10227bcfcfd5a9b0f126fee74dce6ec7842f5e95
+source-git-commit: 9c517590c2b78eed7c52e33e0a106237a2af3bb7
 workflow-type: tm+mt
-source-wordcount: '3024'
+source-wordcount: '3042'
 ht-degree: 0%
 
 ---
@@ -275,7 +275,12 @@ Du bör fortsätta den AEM resan utan trassel genom att nästa gång du granskar
 
 Vi rekommenderar att du går vidare till nästa del av den headless-utvecklingsresan genom att granska dokumentet [Vägen till er första upplevelse med AEM Headless,](path-to-first-experience.md) Nedan följer ytterligare, valfria resurser som gör en djupdykning i vissa koncept som nämns i det här dokumentet, men som inte behöver fortsätta på den headless-resan.
 
+* [Headless and Headless in AEM](/help/sites-developing/headful-headless.md) - En fullständig beskrivning av den headless integration som finns i AEM
+
+* An [Introduktion till AEM som headless CMS](/help/sites-developing/headless/introduction.md)
+
 * [AEM översättningsresa utan rubrik](/help/journey-headless/translation/overview.md) - Den här dokumentationsresan ger er en bred förståelse för headless-teknik, hur AEM levererar headless-innehåll och hur ni kan översätta det.
+
 * [AEM Headless Tutorials](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html) - Använd dessa praktiska självstudiekurser för att utforska hur du kan använda de olika alternativen för att leverera innehåll till headless-slutpunkter med AEM och välja vad som passar dig bäst.
 * [Headless Content Management Using GraphQL APIs](https://experienceleague.adobe.com/?Solution=Experience+Manager&amp;Solution=Experience+Manager+Sites&amp;Solution=Experience+Manager+Forms&amp;Solution=Experience+Manager+Screens&amp;launch=ExperienceManager-D-1-2020.1.headless#courses) - Följ den här kursen för att få en översikt över GraphQL API som implementerats i AEM. Autentisering via AdobeID krävs.
 * [AEM Guides WKND - GraphQL](https://github.com/adobe/aem-guides-wknd-graphql) - Det här GitHub-projektet innehåller exempelprogram AEM GraphQL API:er.
@@ -290,4 +295,4 @@ Vi rekommenderar att du går vidare till nästa del av den headless-utvecklingsr
 * [GRAPHQL API](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md) - Teknisk dokumentation som förklarar hur man skapar förfrågningar om åtkomst och leverans av innehållsfragment
 * [Resurser REST API](/help/assets/assets-api-content-fragments.md) - Teknisk dokumentation som förklarar hur du skapar och ändrar innehållsfragment (och andra resurser)
 * [Beständiga frågor](/help/sites-developing/headless/graphql-api/persisted-queries.md) - Teknisk dokumentation om beständiga frågor i AEM
-* [Headless and Headless in AEM](/help/sites-developing/headful-headless.md) - En fullständig beskrivning av den headless integration som finns i AEM
+* The [AEM Developer Portal](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html)
