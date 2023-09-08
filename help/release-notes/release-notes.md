@@ -2,9 +2,9 @@
 title: Versionsinformation för [!DNL Adobe Experience Manager] 6.5
 description: Hitta versionsinformation, nyheter, installationsanvisningar och en detaljerad ändringslista för [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 4
-source-git-commit: 26cea35dcbdbafe622f975bac7920ea5fd5fbd6c
+source-git-commit: e330d69b7644e8f99498d0ed60afab009c649b40
 workflow-type: tm+mt
-source-wordcount: '4435'
+source-wordcount: '4527'
 ht-degree: 0%
 
 ---
@@ -450,6 +450,8 @@ Du måste lägga till följande egenskaper i indexdefinitionsnoden för att få 
 #### Installation
 
 * På JBoss® 7.1.4-plattformen när användaren installerar Experience Manager 6.5.16.0 eller senare Service Pack, `adobe-livecycle-jboss.ear` distributionen misslyckas. (CQ-4351522, CQDOC-20159)
+* När du har installerat AEM Service Pack 6.5.18.0, fullständigt installationsprogram, misslyckas EAR-distributionen på JEE med JBoss Turnkey (CQDOC-20803).
+Du löser problemet genom att leta reda på `<AEM_Forms_Installation_dir>\jboss\bin\standalone.bat` fil och uppdatera `Adobe_Adobe_JAVA_HOME` till `Adobe_JAVA_HOME` för alla förekomster innan konfigurationshanteraren körs.
 
 #### Adaptiv Forms
 
@@ -459,7 +461,12 @@ Du måste lägga till följande egenskaper i indexdefinitionsnoden för att få 
 
 #### Interaktiv kommunikation
 
-* När du har uppgraderat till AEM Service Pack 18 går det inte att redigera interaktiva kommunikationsbrev. (FORMS-10578)
+* När du har uppgraderat till AEM Service Pack 18 går det inte att redigera interaktiva kommunikationsbrev. (FORMS-10578) Åtgärda problemet genom att utföra följande steg:
+
+   1. Ladda ned [Programfix-FORMS-10578](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html) från SD-länk.
+   1. Extrahera Hotfix-arkivfilen för att få ett Experience Manager-paket (.zip) och en paketfil (.jar).
+   1. Överför och installera paketet (.zip) via Package Manager.
+   1. Öppna konfigurationshanterarpaketen `https://server:host/system/console/bundles`, ladda upp och installera paketet (.jar).
 
 ## OSGi-paket och innehållspaket som ingår{#osgi-bundles-and-content-packages-included}
 
