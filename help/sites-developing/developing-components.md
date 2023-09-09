@@ -12,7 +12,7 @@ discoiquuid: 8cdb6db4-adaa-4eda-af7d-310a0b44b80b
 docset: aem65
 legacypath: /content/docs/en/aem/6-2/develop/components/components-touch-optimized
 exl-id: 573cdc36-e9c3-4803-9c4e-cebd0cf0a56f
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 823e756f470b0599f7d53a3e08fdf650b4e892d1
 workflow-type: tm+mt
 source-wordcount: '3454'
 ht-degree: 0%
@@ -228,7 +228,7 @@ När du har skapat resurstypen kan du skapa en instans av fältet genom att läg
 
 Om du vill definiera format och beteende för komponenten kan du skapa en dedikerad [klientbibliotek](/help/sites-developing/clientlibs.md) som definierar din egen CSS/LESS och JS.
 
-Om du vill att klientbiblioteket ska läsas in enbart för komponentdialogrutan (d.v.s. den inte ska läsas in för en annan komponent) måste du ange egenskapen `extraClientlibs`** **i dialogrutan till kategorinamnet för det klientbibliotek du just har skapat. Detta rekommenderas om klientbiblioteket är stort och/eller om fältet är specifikt för den dialogrutan och inte behövs i andra dialogrutor.
+Om du vill att klientbiblioteket ska läsas in enbart för komponentdialogrutan (d.v.s. den inte ska läsas in för en annan komponent) måste du ange egenskapen `extraClientlibs` i dialogrutan till kategorinamnet för det klientbibliotek du just har skapat. Detta rekommenderas om klientbiblioteket är stort och/eller om fältet är specifikt för den dialogrutan och inte behövs i andra dialogrutor.
 
 Om du vill att klientbiblioteket ska läsas in för alla dialogrutor anger du kategoriegenskapen för klientbiblioteket till `cq.authoring.dialog`. Det här är kategorinamnet för klientbiblioteket som inkluderas som standard när alla dialogrutor återges. Du vill göra det om klientbiblioteket är litet och/eller fältet är generiskt och kan återanvändas i andra dialogrutor.
 
