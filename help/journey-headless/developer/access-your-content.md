@@ -4,7 +4,7 @@ description: I den här delen av AEM Headless Developer Journey kan du lära dig
 exl-id: 44f85d00-a958-470a-8a6e-e2ae1580525a
 source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '1333'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---

@@ -78,7 +78,7 @@ Du initierar begäran om att växla över till HTTP/2. Det görs inte automatisk
 
       Eftersom webbläsaren inte anger detta är det nödvändigt att hämta ett tillägg.
 
-      För Firefox och Chrome finns det ett tillägg som heter HTTP/2 och SPDY Indicator. Webbläsarna stöder bara http/2 på ett säkert sätt, så det är nödvändigt att anropa en URL med https för att verifiera. Om http/2 stöds anges det av tillägget i form av en blå Flash-symbol och rubriken&quot;X-Firefox-Spdy&quot; :&quot;h2&quot;.
+      För Firefox och Chrome finns det ett tillägg som heter HTTP/2 och SPDY Indicator. Webbläsarna stöder bara http/2 på ett säkert sätt, så det är nödvändigt att anropa en URL med https för att verifiera. Om det finns stöd för http/2 anges det av tillägget i form av en blå Flash-symbol och rubriken&quot;X-Firefox-Spdy&quot; :&quot;h2&quot;.
 
 ## När kan jag förvänta mig att gå över till HTTP/2? {#when-can-i-expect-to-be-transitioned-over-to-http}
 
@@ -98,4 +98,4 @@ Det icke-cachelagrade innehållet träffar direkt på Adobe-servrar tills cachen
 
 Eftersom webbläsaren inte anger detta är det nödvändigt att hämta ett tillägg.
 
-För Firefox och Chrome finns det ett tillägg som heter HTTP/2 och SPDY Indicator. Webbläsarna stöder bara http/2 på ett säkert sätt, så det är nödvändigt att anropa en URL med https för att verifiera. Om http/2 stöds anges det av tillägget i form av en blå Flash-symbol och en rubrik `X-Firefox-Spdy` : `h2`.
+För Firefox och Chrome finns det ett tillägg som heter HTTP/2 och SPDY Indicator. Webbläsarna stöder bara http/2 på ett säkert sätt, så det är nödvändigt att anropa en URL med https för att verifiera. Om http/2 stöds anges det av tillägget i form av en blå Flash och en rubrik `X-Firefox-Spdy` : `h2`.

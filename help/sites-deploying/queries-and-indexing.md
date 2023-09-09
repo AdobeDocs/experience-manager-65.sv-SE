@@ -64,7 +64,7 @@ Därefter används varje index för att beräkna kostnaden för frågan. När de
 
 >[!NOTE]
 >
->För stora databaser är det tidskrävande att skapa ett index. Detta gäller både när ett index skapas första gången och när ett index indexeras om (när definitionen har ändrats). Se även [Felsökning av aktivitetsindex](/help/sites-deploying/troubleshooting-oak-indexes.md) och [Förhindra långsam omindexering](/help/sites-deploying/troubleshooting-oak-indexes.md#preventing-slow-re-indexing).
+>För stora databaser är det tidskrävande att skapa ett index. Detta gäller både när ett index skapas första gången och när ett index indexeras om (när definitionen ändrats). Se även [Felsökning av aktivitetsindex](/help/sites-deploying/troubleshooting-oak-indexes.md) och [Förhindra långsam omindexering](/help/sites-deploying/troubleshooting-oak-indexes.md#preventing-slow-re-indexing).
 
 Om omindexering behövs i stora databaser, särskilt när du använder MongoDB och fulltextindex, bör du överväga att extrahera text och använda eko-run för att skapa det ursprungliga indexet och indexera om.
 

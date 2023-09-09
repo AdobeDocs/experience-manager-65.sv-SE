@@ -41,7 +41,7 @@ Mer information om Adobe-tillägg och tredjepartstillägg finns i [Adobe-tilläg
 
 ### Användningsexempel för integreringen {#use-cases-for-the-integration}
 
-Det viktigaste användningsområdet för integreringen med Experience Platform Tags är kunder som använder både Adobe Experience Manager Assets och Adobe Experience Manager Sites. I sådana fall kan du skapa en standardintegrering mellan författarnoden i Experience Manager och Experience Platform-taggar och sedan associera platsinstansen med egenskapen Experience Platform-taggar. Efter det kommer alla Dynamic Media WCM-komponenter som läggs till på en Sites-sida att spåra data och händelser från tittarna.
+Det viktigaste användningsområdet för integreringen med Experience Platform Tags är kunder som använder både Adobe Experience Manager Assets och Adobe Experience Manager Sites. I så fall kan du konfigurera en standardintegrering mellan författarnoden i Experience Manager och Experience Platform-taggar och sedan associera platsinstansen med egenskapen Experience Platform-taggar. Efter det kommer alla Dynamic Media WCM-komponenter som läggs till på en Sites-sida att spåra data och händelser från tittarna.
 
 Se [Spåra Dynamic Media-visningsprogram i Experience Manager Sites](#tracking-dynamic-media-viewers-in-aem-sites).
 

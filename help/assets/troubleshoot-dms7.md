@@ -33,7 +33,7 @@ Kontrollera att Dynamic Media har konfigurerats korrekt genom att göra följand
 
   Det här tillvalspaketet är till för FTP-stöd eller om du migrerar resurser till Dynamic Media från Dynamic Media Classic.
 
-* Navigera till användargränssnittet för Cloud Services och bekräfta att det tilldelade kontot visas under **[!UICONTROL Available Configurations]**.
+* Navigera till användargränssnittet för Cloud Service och bekräfta att det tilldelade kontot visas under **[!UICONTROL Available Configurations]**.
 * Se till att `Dynamic Media Asset Activation (scene7)` replikeringsagenten är aktiverad.
 
   Den här replikeringsagenten finns under Agenter på författare.
@@ -255,7 +255,7 @@ Om exempelmaterialet eller den förinställda teckningen i visningsprogrammet in
 1. Navigera till CRX Package Manager: `https://localhost:4502/crx/packmgr/`.
 1. Sök efter visningsprogrampaket i listan. Det börjar med `cq-dam-scene7-viewers-content`.
 1. Välj **Installera om**.
-1. Gå till konfigurationssidan för Dynamic Media under Cloud Services och öppna sedan konfigurationsdialogrutan för din Dynamic Media - S7-konfiguration.
+1. Gå till konfigurationssidan för Dynamic Media under Cloud Service och öppna sedan konfigurationsdialogrutan för din Dynamic Media - S7-konfiguration.
 1. Gör inga ändringar, markera **Spara**.
 Denna sparåtgärd aktiverar logiken igen för att skapa och synkronisera exempelresurserna, CSS-förinställningen för visningsprogrammet och teckningen.
 

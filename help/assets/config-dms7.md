@@ -19,7 +19,7 @@ ht-degree: 2%
 
 # Konfigurera Dynamic Media - Scene7 läge{#configuring-dynamic-media-scene-mode}
 
-Om du använder Adobe Experience Manager för olika miljöer, som utveckling, staging och produktion, konfigurerar du Dynamic Media-Cloud Services för var och en av dessa miljöer.
+Om du använder Adobe Experience Manager för olika miljöer, som utveckling, staging och produktion, konfigurerar du Dynamic Media-Cloud Service för var och en av dessa miljöer.
 
 ## Arkitekturdiagram över Dynamic Media - Scene7-läge {#architecture-diagram-of-dynamic-media-scene-mode}
 
@@ -83,7 +83,7 @@ Med funktionspaketet 18912 kan du antingen importera resurser gruppvis via FTP e
 
 Se [Installera funktionspaket 18912 för migrering av gruppresurser](/help/assets/bulk-ingest-migrate.md) för mer information.
 
-## Skapa en Dynamic Media-konfiguration i Cloud Services {#configuring-dynamic-media-cloud-services}
+## Skapa en Dynamic Media-konfiguration i Cloud Service {#configuring-dynamic-media-cloud-services}
 
 <!-- **Before you configure Dynamic Media** - After you receive your provisioning email with Dynamic Media credentials, you must open the [Dynamic Media Classic desktop application](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started), then sign in to your account to change your password. The password provided in the provisioning email is system-generated and intended to be a temporary password only. It is important that you update the password so that Dynamic Media Cloud Service is set up with the correct credentials.
 
@@ -121,7 +121,7 @@ Se [Installera funktionspaket 18912 för migrering av gruppresurser](/help/asset
    * **[!UICONTROL Company]** - namnet på Dynamic Media-kontot.
      >[!IMPORTANT]
      >
-     Endast en Dynamic Media-konfiguration i Cloud Services stöds i en instans av Experience Manager. Lägg inte till mer än en konfiguration. Flera Dynamic Media-konfigurationer i en Experience Manager-instans är _not_ som stöds eller rekommenderas av Adobe.
+     Endast en Dynamic Media-konfiguration i Cloud Service stöds i en instans av Experience Manager. Lägg inte till mer än en konfiguration. Flera Dynamic Media-konfigurationer i en Experience Manager-instans är _not_ som stöds eller rekommenderas av Adobe.
 
      <!-- CQDOC-19579 and CQDOC-19612 -->
 
