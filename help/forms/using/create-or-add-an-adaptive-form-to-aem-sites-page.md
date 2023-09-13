@@ -4,9 +4,9 @@ description: Upptäck hur du enkelt kan skapa och lägga till anpassade formulä
 Keywords: AEM Forms in sites, AF in Sites editor, af in aem sites, aem sites af, add af to a sites page, af aem sites, af sites, create af in a sites page, adaptive form in aem sites, forms aem sites, add form to a sites page, adaptive forms aem sites, add adaptive forms to aem page, create forms in an aem sites page
 feature: Adaptive Forms
 exl-id: 1813ccfc-87ce-46fa-a1d5-5edffd91efb0
-source-git-commit: 3649df0e2a2672bc1742b3c02386f12ff6991935
+source-git-commit: 6d6e74c61b2ecb13e7cc352d5278c40d2677d44d
 workflow-type: tm+mt
-source-wordcount: '2836'
+source-wordcount: '2853'
 ht-degree: 0%
 
 ---
@@ -250,3 +250,8 @@ När du skickar ett formulär kan du dirigera om användaren till en annan webbs
    * Om du vill konfigurera en omdirigerings-URL, för alternativet Skicka, markerar du alternativet Omdirigera till URL och anger en absolut adress eller en omdirigerings-URL eller relativ sökväg för en AEM Sites-sida.
 
    * Om du vill konfigurera ett anpassat meddelande eller ett tackmeddelande för alternativet Skicka, markerar du alternativet Visa meddelande och anger ett meddelande i rutan Meddelandeinnehåll. Det är en RTF-ruta som du kan använda helskärmsalternativet för att visa alla tillgängliga RTF-objekt.
+
+## Se även {#see-also}
+
+* [Skapa en fristående grundkomponentbaserad adaptiv form](/help/forms/using/create-an-adaptive-form-core-components.md)
+* [Skapa stilar eller teman för formulären](/help/forms/using/create-or-customize-themes-for-adaptive-forms-core-components.md)

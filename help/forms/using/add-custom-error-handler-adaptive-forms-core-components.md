@@ -7,15 +7,20 @@ keywords: Lägg till en anpassad felhanterare, lägg till en standardfelhanterar
 contentOwner: Ruchita Srivastav
 content-type: reference
 feature: Adaptive Forms
-source-git-commit: f8e0ac45d98d6485ccb60e754657caf9d190c3ea
+source-git-commit: 6d6e74c61b2ecb13e7cc352d5278c40d2677d44d
 workflow-type: tm+mt
-source-wordcount: '2254'
+source-wordcount: '2304'
 ht-degree: 0%
 
 ---
 
 
 # Felhanterare i adaptiv Forms (kärnkomponenter) {#error-handlers-in-adaptive-form}
+
+| Version | Artikellänk |
+| -------- | ---------------------------- |
+| AEM as a Cloud Service | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/add-custom-error-handler-adaptive-forms-core-components.html) |
+| AEM 6.5 | Den här artikeln |
 
 AEM Forms har färdiga funktioner och felhanterare för att skicka in formulär. Den innehåller även funktioner för att anpassa felhanterarfunktioner. Du kan till exempel anropa ett anpassat arbetsflöde i serverdelen för specifika felkoder eller informera kunden om att tjänsten inte fungerar. Hanterare är funktioner på klientsidan som körs baserat på serversvaret. När en extern tjänst anropas med API:er överförs data till servern för validering, som returnerar ett svar till klienten med information om lyckad eller felhändelse för överföringen. Informationen skickas som parametrar till den relevanta hanteraren för att köra funktionen. En felhanterare hjälper till att hantera och visa fel eller valideringsproblem som påträffats.
 
@@ -310,3 +315,9 @@ Som ett resultat av den här regeln anger du värden för **Djurs-ID** kontrolle
 Öppna webbläsarkonsolen och kontrollera svaret och rubriken som tagits emot från REST-tjänstens slutpunkt för valideringsfelmeddelandet.
 
 Den anpassade felhanterarfunktionen ansvarar för att utföra ytterligare åtgärder, som att visa en modal dialogruta eller skicka en analyshändelse, baserat på felsvaret. En anpassad felhanterarfunktion ger flexibilitet att anpassa felhanteringen efter specifika användarkrav.
+
+## Se även {#see-also}
+
+* [Skapa en fristående grundkomponentbaserad adaptiv form](/help/forms/using/create-an-adaptive-form-core-components.md)
+* [Skapa stilar eller teman för formulären](/help/forms/using/create-or-customize-themes-for-adaptive-forms-core-components.md)
+* [Skapa eller lägga till ett anpassat formulär på AEM Sites-sidan](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)

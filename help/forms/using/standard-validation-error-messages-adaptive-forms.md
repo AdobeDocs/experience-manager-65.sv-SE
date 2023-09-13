@@ -6,13 +6,14 @@ seo-description: Transform the validation error messages for adaptive forms into
 uuid: 0d1f9835-3e28-41d3-a3b1-e36d95384328
 contentOwner: anujkapo
 content-type: reference
+keywords: Lägg till en anpassad felhanterare, lägg till en standardfelhanterare, lägg till en felhanterare i formuläret, använd regelredigerarens anropstjänst för att lägga till en anpassad felhanterare, konfigurera regelredigeraren för att lägga till en anpassad felhanterare, lägg till en anpassad felhanterare med regelredigeraren
 geptopics: SG_AEMFORMS/categories/setting_up_and_managing_domains
 discoiquuid: ec062567-1c6b-497b-a1e7-1dbac2d60852
 feature: Adaptive Forms
 exl-id: 54a76d5c-d19b-4026-b71c-7b9e862874bc
-source-git-commit: fbc371e59c4f80195fe90da5f635267141c8849e
+source-git-commit: 2b1daa1dcd7b5d81c0012ca0de65e9e9043fd4dc
 workflow-type: tm+mt
-source-wordcount: '2315'
+source-wordcount: '2385'
 ht-degree: 0%
 
 ---
@@ -406,3 +407,10 @@ The `var som_map` lists the SOM expression of the Adaptive Form fields that you 
 Using this custom error handler, the adaptive form converts the fields listed in `var som_map` to standard error message format. As a result, the validation error messages display at field-level in the adaptive form.
 
  -->
+
+
+## Ytterligare information {#additional-information}
+
+* [Skapa en fristående grundkomponentbaserad adaptiv form](/help/forms/using/create-an-adaptive-form-core-components.md)
+* [Skapa stilar eller teman för formulären](/help/forms/using/create-or-customize-themes-for-adaptive-forms-core-components.md)
+* [Skapa eller lägga till ett anpassat formulär på AEM Sites-sidan](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)
