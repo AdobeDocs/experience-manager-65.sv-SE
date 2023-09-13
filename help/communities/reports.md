@@ -1,20 +1,16 @@
 ---
 title: Rapportkonsol
-seo-title: Reports Console
-description: Lär dig hur du får åtkomst till rapporter
-seo-description: Learn how to access reports
-uuid: 7bb15a15-077b-4bfb-aaf4-50fddc67f237
+description: Lär dig hur du får åtkomst till olika rapporter som du kan få åtkomst till på flera sätt i Adobe Experience Manager redigeringsmiljö.
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: administering
 content-type: reference
-discoiquuid: fde053ff-b671-456b-869c-81f16ea1f1be
 docset: aem65
 role: Admin
 exl-id: 2aff2ffe-ba6f-4cc9-a126-40fc2a1161e2
-source-git-commit: 942db8fe3dad16be53dc6abe0e519d97a659e480
+source-git-commit: 5af420c8e95fed88a8516cce27b8bbc7d3974e75
 workflow-type: tm+mt
-source-wordcount: '360'
+source-wordcount: '384'
 ht-degree: 0%
 
 ---
@@ -29,11 +25,11 @@ De olika rapporterna är i allmänhet följande:
 
 * [Vyrapport](#views-report)
 
-   Ger en översikt över vad communitymedlemmar och besökare tycker om communitysajter.
+  Ger en översikt över vad communitymedlemmar och besökare tycker om communitysajter.
 
 * [Inläggsrapport](#posts-report)
 
-   Ger en översikt över olika typer av inlägg från communitymedlemmar på alla communitysajter.
+  Ger en översikt över olika typer av inlägg från communitymedlemmar på alla communitysajter.
 
 Tabellrapporter kan exporteras i CSV-format för efterföljande bearbetning.
 
@@ -48,20 +44,20 @@ Tabellrapporter kan exporteras i CSV-format för efterföljande bearbetning.
    * **[!UICONTROL Assignments Report]**
 
       * Generera en rapport för den valda communityplatsen, användaren eller gruppen och tilldelningen.
+
    * **[!UICONTROL Posts Report]**
 
       * Generera en rapport för den valda communityplatsen, innehållstypen och tidsperioden.
+
    * **[!UICONTROL Views Report]**
 
       * generera en rapport för den valda communityplatsen, innehållstypen och tidsperioden.
-
-
 
 ![rapporter](assets/reports1.png)
 
 ## Vyrapport {#views-report}
 
-Med hjälp av vykonsolen kan rapporter genereras på sidvisningar av communityfunktioner under en viss tidsperiod.
+Med hjälp av vykonsolen kan rapporter genereras på sidvyer av communityfunktioner under en viss tidsperiod.
 
 ![view-report](assets/view-report.png)
 
@@ -69,15 +65,15 @@ Välj villkor för rapporten:
 
 * **[!UICONTROL Site]**
 
-   Välj en community-webbplats.
+  Välj en community-webbplats.
 
 * **[!UICONTROL Content Type]**
 
-   Välj Allt innehåll eller någon av funktionerna på webbplatsen.
+  Välj Allt innehåll eller någon av funktionerna på webbplatsen.
 
 * **[!UICONTROL Time frame]**
 
-   Välj något av följande:
+  Välj något av följande:
 
    * De senaste 7 dagarna
    * De senaste 30 dagarna
@@ -90,23 +86,23 @@ Välj **[!UICONTROL Generate]** för att skapa rapporten.
 
 ## Inläggsrapport {#posts-report}
 
-Med publiceringskonsolen kan rapporter genereras om antalet inlägg till communityfunktioner under en viss tidsperiod.
+På postkonsolen kan rapporter skapas om antalet inlägg i communityfunktioner under en viss tidsperiod.
 
-![rapport](assets/posts-report.png)
+![postrapport](assets/posts-report.png)
 
 Välj villkor för rapporten:
 
 * **[!UICONTROL Site]**
 
-   Välj en community-webbplats.
+  Välj en community-webbplats.
 
 * **[!UICONTROL Content Type]**
 
-   Välj Allt innehåll eller någon av funktionerna på webbplatsen.
+  Välj Allt innehåll eller någon av funktionerna på webbplatsen.
 
 * **[!UICONTROL Time frame]**
 
-   Välj något av följande:
+  Välj något av följande:
 
    * De senaste 7 dagarna
    * De senaste 30 dagarna
@@ -125,6 +121,6 @@ Om det inte finns några communitysajter i listan kontrollerar du att Adobe Anal
 
 ### Rapporterna visas inte i AEM Author-instansen {#reports-do-not-show-in-aem-author-instance}
 
-Om rapporter inte visas i AEM Author-instansen kontrollerar du om det finns anpassningar, till exempel URL-mappning i Publish-instansen. Om URL-mappning endast görs på AEM Publish-instansen av communitywebbplatsen kontrollerar du att samma har konfigurerats i AEM Author-instansen i **Trend Report Social Component Factory** konfiguration.
+Om rapporter inte visas i AEM Author-instansen kontrollerar du om anpassningarna finns, t.ex. URL-mappning i Publish-instansen. Om URL-mappning endast görs på AEM publiceringsinstans på communitywebbplatsen, kontrollerar du att samma har konfigurerats i AEM Author-instans i **Trend Report Social Component Factory för webbplats** konfiguration.
 
-![URL-mappning på AEM Author](assets/sitetrend.png)
+![URL-mappning AEM författare](assets/sitetrend.png)

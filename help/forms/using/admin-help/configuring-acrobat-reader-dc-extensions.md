@@ -1,29 +1,25 @@
 ---
-title: Konfigurera Acrobat Reader DC-tillägg för datainhämtning
-seo-title: Configuring Acrobat Reader DC extensions for data capture
-description: Lär dig hur du konfigurerar Acrobat Reader DC-tillägg för datainhämtning.
-seo-description: Learn how to configure Acrobat Reader DC extensions for data capture.
-uuid: af6b3c72-601e-4f54-8343-a323eeee5906
+title: Konfigurera Acrobat Reader DC Extensions för datainhämtning
+description: Lär dig hur du konfigurerar Acrobat Reader DC Extensions för datainhämtning.
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/configuring_acrobat_reader_dc_extensions
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: 8f8367fe-a8e9-46ee-a980-1633be02932d
 exl-id: 0f8e1e46-4fc5-43f6-abb1-19a3f20e1f1d
-source-git-commit: 0c7dba43dad8608b4a5de271e1e44942c950fb16
+source-git-commit: 5af420c8e95fed88a8516cce27b8bbc7d3974e75
 workflow-type: tm+mt
-source-wordcount: '320'
+source-wordcount: '318'
 ht-degree: 0%
 
 ---
 
-# Konfigurera Acrobat Reader DC-tillägg för datainhämtning {#configuring-acrobat-reader-dc-extensions-for-data-capture}
+# Konfigurera Acrobat Reader DC Extensions för datainhämtning {#configuring-acrobat-reader-dc-extensions-for-data-capture}
 
 Om användare av AEM använder datainhämtningsfunktionen i Content Services (Borttagen) rekommenderar vi att du skapar en roll med skrivskyddad åtkomst för dessa användare.
 
-***anteckning **: Adobe® LiveCycle® Content Services ES (utgått) är ett innehållshanteringssystem som installeras med LiveCycle. Det gör det möjligt för användarna att utforma, hantera, övervaka och optimera humancentrerade processer. Supporten för innehållstjänster (borttaget) upphör 2014-12-31. Se [Adobe produktlivscykeldokument](https://www.adobe.com/support/products/enterprise/eol/eol_matrix.html).*
+***Anteckning **: Adobe® LiveCycle® Content Services ES (utgått) är ett innehållshanteringssystem som installeras med LiveCycle. Det gör det möjligt för användarna att utforma, hantera, övervaka och optimera humancentrerade processer. Supporten för innehållstjänster (borttaget) upphör 2014-12-31. Se [Adobe product lifecycle document](https://helpx.adobe.com/support/programs/eol-matrix.html).*
 
-För datainhämtning krävs att du tilldelar en användarroll för att få åtkomst till SampleReaderExtensionsCredential. Du kan tilldela rollen som pålitlig standardadministratör, men tänk på att den här rollen ger allmänna, icke-administrativa användare de administratörsbehörigheter som styr PKI-förtroendeinställningarna och hanterar PKI-autentiseringsuppgifter, vilket kan äventyra säkerheten för dina AEM i en produktionsmiljö. Vi rekommenderar att systemadministratören för AEM formulär skapar en roll som endast ger skrivskyddad åtkomst till Trust Store och tilldelar den nya rollen till icke-administratörsanvändare som använder datainhämtning.
+För datainhämtning krävs att du tilldelar en användarroll för att få åtkomst till SampleReaderExtensionsCredential. Du kan tilldela den förvalda rollen Pålitlighetsadministratör. Tänk dock på att den här rollen ger allmänna, icke-administrativa användaradministratörsbehörigheter som styr PKI Trust-inställningarna och hanterar PKI-autentiseringsuppgifter, vilket kan äventyra säkerheten för dina AEM formulär i en produktionsmiljö. Vi rekommenderar att systemadministratören för AEM formulär skapar en roll som endast ger skrivskyddad åtkomst till Trust Store och tilldelar den nya rollen till icke-administratörsanvändare som använder datainhämtning.
 
 ## Skapa en roll för datainhämtningsanvändare {#create-a-role-for-data-capture-users}
 

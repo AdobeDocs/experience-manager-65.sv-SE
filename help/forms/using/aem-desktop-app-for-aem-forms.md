@@ -7,9 +7,9 @@ topic-tags: manage
 noindex: true
 role: Admin
 exl-id: b87e07b1-4a19-4888-bad0-c0f5327b9ad3
-source-git-commit: 3885cc51f7e821cdb352737336a29f9c4f0c2f41
+source-git-commit: 5af420c8e95fed88a8516cce27b8bbc7d3974e75
 workflow-type: tm+mt
-source-wordcount: '415'
+source-wordcount: '426'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ Du kan hämta programmet från en AEM. Mer information om hur du hämtar program
 
 ## AEM Forms-resurser som stöds AEM datorprogrammet {#aem-forms-assets-supported-in-aem-desktop-app}
 
-Du kan använda appen för att synkronisera binära AEM Forms-filer av följande typ: Formulärmallar (.xdp), PDF-formulär (.pdf), Dokument (.pdf), Bilder, XML-schema (.xsd) och formatmallar (.xfs). I programmet visas alla andra filer (filer som inte stöds) som 0-byte-filer. Om du listar filer som inte stöds som 0-byte-filer ser du till att användaren är medveten om att det finns andra resurser på AEM Forms-servern.
+Du kan använda appen för att synkronisera binära AEM Forms-filer av följande typ: Formulärmallar (.xdp), PDF-formulär (.pdf), Dokument (.pdf), Bilder, XML-schema (.xsd) och formatmallar (.xfs). I programmet visas alla andra filer (filer som inte stöds) som 0-byte-filer. Om du listar filer som inte stöds som 0-byte-filer ser du till att användaren är medveten om att det finns andra resurser som är tillgängliga på AEM Forms Server.
 
 >[!NOTE]
 >
@@ -30,13 +30,13 @@ Du kan använda appen för att synkronisera binära AEM Forms-filer av följande
 
 ## Aktivera AEM Forms för AEM {#enable-aem-forms-for-aem-desktop-app}
 
-AEM skrivbordsapp använder WebDAV-protokoll i Microsoft Windows och SMB1 i Mac OS X för att ansluta till en AEM Forms-server. AEM Forms-servern är inte aktiverad att synkronisera binära filer och andra resurser med en WebDAV- eller SMB-klient. Så här aktiverar du AEM Forms för AEM datorprogram:
+AEM använder WebDAV-protokoll i Microsoft® Windows och SMB1 i macOS X för att ansluta till en AEM Forms Server. AEM Forms Server är inte aktiverad för att synkronisera binära filer och andra resurser med en WebDAV- eller SMB-klient. Så här aktiverar du AEM Forms för AEM datorprogram:
 
 1. Logga in på AEM Forms som administratör.
 1. Klicka på i författarinstansen ![adobeexperienceManager](assets/adobeexperiencemanager.png) **[!UICONTROL Adobe Experience Manager > Tools]** ![hammare](assets/hammer.png) **[!UICONTROL > Deployment > Operations > Web Console]**. Webbkonsolen öppnas i ett nytt fönster.
 1. I webbkonsolfönstret letar du upp och öppnar **[!UICONTROL FormsManager AddOn Configuration]** alternativ.
-1. Avmarkera alternativet **[!UICONTROL Asynchronously Sync Resources]** och klicka **[!UICONTROL Save]**.
-1. Starta om AEM Forms-servern. Efter omstarten är AEM Forms-servern aktiverad för att acceptera och dela innehåll med AEM skrivbordsapp.
-1. Öppna appen och anslut till AEM Forms-servern.
+1. I dialogrutan Lägg till i konfiguration för FormsManager avmarkerar du **[!UICONTROL Asynchronously Sync Resources]** och klicka **[!UICONTROL Save]**.
+1. Starta om AEM Forms Server. Efter omstarten är AEM Forms Server aktiverad för att acceptera och dela innehåll med AEM skrivbordsapp.
+1. Öppna appen och anslut till AEM Forms Server.
 
    När anslutningen lyckades fyller programmet i `content/dam` och `content/dam/formsanddocuments` mappar. Förutom att flytta filer från ovanstående mappar till lokala mappar kan du använda appen för att flytta innehåll mellan automatiskt ifyllda mappar.

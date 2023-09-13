@@ -7,10 +7,10 @@ breadcrumb-title: Versionsinformation
 user-guide-description: Läs om de senaste nya funktionerna i AEM 6.5 i versionsinformationen.
 feature: Release Information
 role: Leader, Architect, Developer, Data Architect, Data Engineer, Admin, User
-source-git-commit: 8a7ca99d896fd1ce2ace5b17a91987c6b8535615
+source-git-commit: 474a726058b141985f52a0faec6161a34be1e9dc
 workflow-type: tm+mt
 source-wordcount: '70'
-ht-degree: 28%
+ht-degree: 25%
 
 ---
 
@@ -18,8 +18,7 @@ ht-degree: 28%
 # Versionsinformation om Adobe Experience Manager 6.5 {#release-notes}
 
 + [Versionsinformation för AEM 6.5](home.md)
-+ [Aktuell versionsinformation](release-notes.md)
-+ [Installationsanvisningar för AEM Forms Service Pack](aem-forms-current-service-pack-installation-instructions.md)
++ [Aktuella versionsinformation](release-notes.md)
 + [Tidigare versionsinformation]{#service-pack}
    + [6.5.17](previous/6.5.17.md)
    + [6.5.16](previous/6.5.16.md)
@@ -39,6 +38,7 @@ ht-degree: 28%
    + [6.5.2](previous/6.5.2.md)
    + [6.5.1](previous/6.5.1.md)
    + [6.5.0](previous/ga.md)
-+ [AEM Forms JEE Patch Installer](jee-patch-installer-65.md)
++ [Installationsanvisningar för AEM Forms Service Pack](aem-forms-current-service-pack-installation-instructions.md)
++ [AEM Forms JEE patch installer](jee-patch-installer-65.md)
 + [Föråldrade och borttagna funktioner](deprecated-removed-features.md)
 + [Funktionsstatus för Touch UI](touch-ui-features-status.md)

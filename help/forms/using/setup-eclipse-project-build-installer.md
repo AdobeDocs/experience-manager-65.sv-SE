@@ -5,9 +5,9 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-app
 exl-id: 3fb069cf-d3ed-47b0-b6bf-82e110b3b059
-source-git-commit: f8643f6118e0bc6bfb2ee0e093155cf0907eb5d3
+source-git-commit: 474a726058b141985f52a0faec6161a34be1e9dc
 workflow-type: tm+mt
-source-wordcount: '705'
+source-wordcount: '708'
 ht-degree: 0%
 
 ---
@@ -18,13 +18,13 @@ Utför följande steg i den rekommenderade sekvensen för att skapa Android-appe
 
 1. [Ladda ned källkodspaketet för AEM Forms App](#download-android-zip)
 1. [Ange miljövariabler](#set-environment-variable-android)
-1. [Bygg AEM Forms standardapp](#set-up-the-xcode-project)
+1. [Bygg en standardapp för AEM Forms](#set-up-the-xcode-project)
 
 ## Ladda ned källkodspaketet för AEM Forms App {#download-android-zip}
 
 Källkodspaketet för AEM Forms App refererar till `adobe-lc-mobileworkspace-src-<version>.zip` arkiv. Detta arkiv innehåller den källkod som krävs för att skapa en anpassad AEM Forms-app. Arkivet ingår i `adobe-aemfd-forms-app-src-pkg-<version>.zip`som finns på Software Distribution.
 
-Utför följande steg för att hämta `adobe-aemfd-forms-app-src-pkg-<version>.zip` fil:
+Ladda ned `adobe-aemfd-forms-app-src-pkg-<version>.zip` utför du följande steg:
 
 1. Öppna [Programvarudistribution](https://experience.adobe.com/downloads). Du behöver en Adobe ID för att logga in på Software Distribution.
 1. Tryck **[!UICONTROL Adobe Experience Manager]** finns i rubrikmenyn.
@@ -49,7 +49,7 @@ Ange följande miljövariabler innan du startar byggprocessen för AEM Forms-pro
 * Ange `ANDROID_SDK_ROOT` systemmiljövariabel till SDK-plats för Android. Till exempel C:\Users\&amp;lt;användarnamn>\AppData\Local\Android\Sdk
 * Ange `Path` systemmiljövariabel som inkluderar mapplatserna för plattformsverktyg och verktyg för Android. Till exempel C:\Users\&amp;lt;användarnamn>\AppData\Local\Android\Sdk\platform-tools och C:\Users\&amp;lt;användarnamn>\AppData\Local\Android\Sdk\tools.
 
-## Bygg AEM Forms standardapp {#set-up-the-xcode-project}
+## Bygg en standardapp för AEM Forms {#set-up-the-xcode-project}
 
 När du har sparat adobe-lc-mobileworkspace-src-&lt;version>ZIP-fil i det lokala filsystemet och ange systemvariabler. Bygg en AEM Forms Android-standardapp med något av följande alternativ:
 
@@ -58,7 +58,7 @@ När du har sparat adobe-lc-mobileworkspace-src-&lt;version>ZIP-fil i det lokala
 
 ### Bygg en AEM Forms-app med Android Studio {#using-android-studio}
 
-Utför följande steg för att skapa AEM Forms-program med Android Studio:
+Så här skapar du en AEM Forms-app med Android Studio:
 
 1. Starta Android Studio-programmet på datorn.
 1. Klicka **Öppna ett befintligt Android Studio-projekt**. Om dialogrutan för att öppna ett befintligt projekt inte visas automatiskt väljer du **Fil** > **Öppna**.
@@ -81,7 +81,7 @@ Utför följande steg för att skapa AEM Forms-program med Android Studio:
 
 ### Generera APK-fil med Android Studio {#generate-apk-android-studio}
 
-Så här genererar du APK-filen med Android Studio:
+Så här skapar du .apk-filen med Android Studio:
 
 1. Starta Android Studio-programmet på datorn.
 1. Välj **Öppna ett befintligt Android Studio-projekt**. Om dialogrutan för att öppna ett befintligt projekt inte visas automatiskt väljer du **Fil** > **Öppna**.
@@ -89,7 +89,7 @@ Så här genererar du APK-filen med Android Studio:
 
    Android-alternativet visas i den vänstra rutan.
 
-1. Välj **Bygge** > **Bygg APK** för att generera APK-filen.
+1. Om du vill generera APK-filen väljer du **Bygge** > **Bygg APK**.
 
    Valfritt, välj **Bygge** > **Generera signerad APK** för att generera en [undertecknad version](https://developer.android.com/studio/publish/app-signing) av APK-filen.
 

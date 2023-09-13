@@ -4,10 +4,10 @@ description: Förstå hur variationer kan göra ert headless-innehåll i AEM än
 feature: Content Fragments
 role: User
 exl-id: 50982ede-7ccf-45b2-b0dd-a49d23e0f971
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 474a726058b141985f52a0faec6161a34be1e9dc
 workflow-type: tm+mt
-source-wordcount: '2422'
-ht-degree: 9%
+source-wordcount: '2391'
+ht-degree: 4%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 9%
 
 [Variationer](/help/assets/content-fragments/content-fragments.md#constituent-parts-of-a-content-fragment) är en viktig egenskap hos AEM innehållsfragment, eftersom de gör det möjligt att skapa och redigera kopior av huvudinnehållet för användning i specifika kanaler och/eller scenarier, vilket gör headless content delivery ännu flexiblare.
 
-Från **Variationer** -flik:
+Från **Variationer** kan du göra följande:
 
 * [Ange innehållet](#authoring-your-content) för ditt fragment,
 * [Skapa och hantera variationer](#managing-variations) i **Master** innehåll,
@@ -24,7 +24,7 @@ Utför en mängd andra åtgärder beroende på vilken datatyp som redigeras, til
 
 * [Infoga visuella resurser i fragmentet](#inserting-assets-into-your-fragment) (bilder)
 
-* Välj mellan [RTF](#rich-text), [Oformaterad text](#plain-text) och [Markering](#markdown) för redigering
+* Välj mellan [RTF](#rich-text), [Oformaterad text](#plain-text)och [Markering](#markdown) för redigering
 
 * [Överför innehåll](#uploading-content)
 
@@ -36,11 +36,11 @@ Utför en mängd andra åtgärder beroende på vilken datatyp som redigeras, til
 
 >[!CAUTION]
 >
->När ett fragment har publicerats och/eller refererats visar AEM en varning när en författare öppnar fragmentet för redigering igen. Detta är för att varna för att ändringar i fragmentet även påverkar de refererade sidorna.
+>När ett fragment har publicerats och/eller refererats visar AEM en varning när en författare öppnar fragmentet för redigering igen. Detta för att varna för att ändringar i fragmentet även påverkar de refererade sidorna.
 
 ## Redigera ditt innehåll {#authoring-your-content}
 
-När du öppnar ditt innehållsfragment för redigering visas **Variationer** som standard är fliken öppen. Här kan du skapa innehållet, för mallsidor eller andra varianter som du har. Det strukturerade fragmentet innehåller olika fält, av olika datatyper, som har definierats i innehållsmodellen.
+När du öppnar ditt innehållsfragment för redigering visas **Variationer** -fliken öppnas som standard. Här kan du skapa innehållet, för mallsidor eller andra varianter som du har. Det strukturerade fragmentet innehåller olika fält med olika datatyper som har definierats i innehållsmodellen.
 
 Till exempel:
 
@@ -50,19 +50,19 @@ Du kan:
 
 * Redigera direkt i **Variationer** -tabb; varje datatyp innehåller olika redigeringsalternativ, till exempel:
 
-   * for **Flerradstext** fält som du också kan öppna [helskärmsredigerare](#full-screen-editor) till:
+   * for **Flerradstext** -fält kan du även öppna [helskärmsredigerare](#full-screen-editor) till:
 
       * välj [Format](#formats)
       * se fler redigeringsalternativ (för [RTF](#rich-text) format)
       * få tillgång till ett antal [funktionsmakron](#actions)
 
-   * För **Fragmentreferens** fälten [Redigera innehållsfragment](#fragment-references-edit-content-fragment) kan vara tillgängligt, beroende på modelldefinitionen.
+   * För **Fragmentreferens** fält, [Redigera innehållsfragment](#fragment-references-edit-content-fragment) kan vara tillgängligt, beroende på modelldefinitionen.
 
-* Tilldela **Taggar** till den aktuella varianten; taggarna kan läggas till, uppdateras och tas bort
+* Tilldela **Taggar** till den aktuella varianten. Du kan lägga till, uppdatera och ta bort taggarna
 
-   * [Taggar](/help/sites-authoring/tags.md) är särskilt kraftfulla när du organiserar dina fragment eftersom de kan användas för innehållsklassificering och taxonomi. Taggar kan användas för att hitta innehåll (med taggar) och tillämpa gruppåtgärder.
+   * [Taggar](/help/sites-authoring/tags.md) är kraftfulla när du organiserar dina fragment eftersom de kan användas för innehållsklassificering och taxonomi. Taggar kan användas för att söka efter innehåll (efter taggar) och tillämpa gruppåtgärder.
 
-      * Sökningar efter en tagg returnerar fragmentet med den taggade varianten markerad.
+      * Sökningar efter en tagg returnerar fragmentet, med taggvariationen markerad.
       * Variationstaggar kan också användas för att gruppera variationer för en viss CDN-profil (Content Delivery Network) (för CDN-cache) i stället för att använda variantnamnet.
 
      Du kan till exempel tagga relevanta fragment som&quot;Julstart&quot; så att du bara kan bläddra bland dem som en delmängd, eller kopiera dem för användning med en annan framtida start i en ny mapp.
@@ -83,14 +83,14 @@ Då öppnas textredigeraren i helskärmsläge:
 
 ![helskärmsredigerare](assets/cfm-variations-fullscreentexteditor.png)
 
-Textredigeraren i helskärmsläge innehåller:
+Textredigeraren i helskärmsläge innehåller följande:
 
 * Åtkomst till olika [funktionsmakron](#actions)
 * Beroende på [format](#formats), ytterligare formateringsalternativ ([RTF](#rich-text))
 
 ### Åtgärder {#actions}
 
-Följande åtgärder är också tillgängliga (för alla [format](#formats)) när helskärmsredigeraren (d.v.s. text med flera rader) är öppen:
+Följande åtgärder är också tillgängliga (för alla [format](#formats)) när helskärmsredigeraren (d.v.s. flerradig text) är öppen:
 
 * Välj [format](#formats) ([RTF](#rich-text), [Oformaterad text,](#plain-text) [Markering](#markdown))
 
@@ -143,7 +143,7 @@ Med oformaterad text kan du snabbt lägga in innehåll utan formaterings- eller 
 
 >[!CAUTION]
 >
->Om du väljer **Oformaterad text** kan du förlora formatering, markdown-kod och/eller resurser som du har infogat i **RTF** eller **Markdown-kod**.
+>Om du väljer **Oformaterad text** kan du förlora formatering, markeringar och/eller resurser som du har infogat i antingen **RTF** eller **Markering**.
 
 ### Markdown {#markdown}
 
@@ -180,7 +180,7 @@ Om innehållsfragmentmodellen innehåller fragmentreferenser kan fragmentförfat
 
 #### Redigera innehållsfragment {#fragment-references-edit-content-fragment}
 
-Alternativet **Redigera innehållsfragment** öppnar fragmentet på en ny fönsterflik.
+Alternativet **Redigera innehållsfragment** öppnar det avsnittet på en ny fönsterflik.
 
 <!--
 The option **Edit Content Fragment** will open that fragment in a new editor tab (within the same browser tab).
@@ -192,9 +192,9 @@ Selecting the original tab again (for example, **Little Pony Inc.**), will close
 
 #### Nytt innehållsfragment {#fragment-references-new-content-fragment}
 
-Alternativet **Nytt innehållsfragment** gör att du kan skapa ett helt nytt fragment. En variant av guiden för att skapa innehållsfragment öppnas i redigeraren.
+Alternativet **Nytt innehållsfragment** I kan du skapa ett fragment. För att uppnå detta öppnas en variant av guiden Skapa innehållsfragment i redigeraren.
 
-Sedan kan du skapa ett nytt fragment genom att:
+Du kan sedan skapa ett fragment genom att:
 
 1. Navigera till och markera önskad mapp.
 1. Markera **Nästa**.
@@ -202,11 +202,11 @@ Sedan kan du skapa ett nytt fragment genom att:
 1. Markera **Skapa**.
 1. Äntligen:
    1. **Klar** återgår (till det ursprungliga fragmentet) och refererar till det nya fragmentet.
-   1. **Öppna** refererar till det nya fragmentet samt öppnar det nya fragmentet, för redigering, på en ny flik i webbläsaren.
+   1. **Öppna** refererar till det nya fragmentet och öppnar det nya fragmentet för redigering på en ny webbläsarflik.
 
 ### Visa nyckelstatistik {#viewing-key-statistics}
 
-När helskärmsredigeraren är öppen visar åtgärden **Textstatistik** information om texten.
+När helskärmsredigeraren är öppen händer det **Textstatistik** visar en mängd information om texten.
 
 Till exempel:
 
@@ -214,7 +214,7 @@ Till exempel:
 
 ### Överför innehåll {#uploading-content}
 
-För att underlätta redigeringen av innehållsfragment kan du överföra text, förberedd i en extern redigerare och lägga till den direkt i fragmentet.
+Om du vill förenkla redigeringen av innehållsfragment kan du överföra text, som har förberetts i en extern redigerare och lägga till den direkt i fragmentet.
 
 ### Sammanfatta text {#summarizing-text}
 
@@ -222,7 +222,7 @@ Att sammanfatta text är utformat för att hjälpa användare att minska längde
 
 >[!NOTE]
 >
->På en mer teknisk nivå håller systemet kvar de meningar som det bedömer som att det tillhandahåller *bästa förhållandet mellan informationstäthet och unikhet* enligt specifika algoritmer.
+>På en mer teknisk nivå håller systemet kvar de meningar som det anser vara att tillhandahålla *bästa förhållandet mellan informationstäthet och unikhet* enligt specifika algoritmer.
 
 >[!CAUTION]
 >
@@ -256,7 +256,7 @@ Andra språk är tillgängliga som språkmodellpaket från paketresurs:
 
    * Alla meningar som ska tas bort markeras med rött, med genomstrykning.
    * Klicka på en markerad mening om du vill behålla den i det sammanfattande innehållet.
-   * Klicka på en mening som inte är markerad för att ta bort den.
+   * Klicka på en mening som inte är markerad om du vill ta bort den.
 
 1. Välj **Sammanfatta** för att bekräfta ändringarna.
 
@@ -264,7 +264,7 @@ Andra språk är tillgängliga som språkmodellpaket från paketresurs:
 
    * Alla meningar som ska tas bort markeras med rött, med genomstrykning.
    * Klicka på en markerad mening om du vill behålla den i det sammanfattande innehållet.
-   * Klicka på en mening som inte är markerad för att ta bort den.
+   * Klicka på en mening som inte är markerad om du vill ta bort den.
    * Sammanfattningsstatistiken visas: **Faktisk** och **Mål**-
    * Du kan **Förhandsgranska** ändringarna.
 
@@ -294,11 +294,11 @@ Så här kommenterar du ett fragment:
 
    ![anteckna](assets/cfm-variations-07b.png)
 
-1. Stäng helskärmsredigeraren, anteckningarna är fortfarande markerade. Om du väljer det här alternativet öppnas en dialogruta där du kan redigera kommentaren ytterligare.
+1. Stäng helskärmsredigeraren, anteckningarna är fortfarande markerade. Om du väljer det här alternativet öppnas en dialogruta så att du kan redigera anteckningen ytterligare.
 
 1. Välj **Spara**.
 
-1. Stäng helskärmsredigeraren, anteckningarna är fortfarande markerade. Om du väljer det här alternativet öppnas en dialogruta där du kan redigera kommentaren ytterligare.
+1. Stäng helskärmsredigeraren, anteckningarna är fortfarande markerade. Om du väljer det här alternativet öppnas en dialogruta så att du kan redigera anteckningen ytterligare.
 
    ![anteckna](assets/cfm-variations-07c.png)
 
@@ -318,13 +318,13 @@ Anteckningar:
 
   ![anteckningar](assets/cfm-variations-08.png)
 
-* Kan visas, tas bort och visas i [Tidslinje](/help/assets/content-fragments/content-fragments-managing.md#timeline-for-content-fragments) för det valda fragmentet.
+* Kan visas och tas bort i [Tidslinje](/help/assets/content-fragments/content-fragments-managing.md#timeline-for-content-fragments) för det valda fragmentet.
 
 ### Infoga resurser i fragment {#inserting-assets-into-your-fragment}
 
-För att underlätta redigeringen av innehållsfragment kan du lägga till [Resurser](/help/assets/manage-assets.md) (bilder) direkt till fragmentet.
+Om du vill skapa innehållsfragment enklare kan du lägga till [Resurser](/help/assets/manage-assets.md) (bilder) direkt till fragmentet.
 
-De läggs till i fragmentets styckesekvens utan formatering. Formatering kan göras när [fragment används/refereras på en sida](/help/sites-authoring/content-fragments.md).
+De läggs till i fragmentets styckesekvens utan formatering. Formateringen kan göras när [fragment används/refereras på en sida](/help/sites-authoring/content-fragments.md).
 
 >[!CAUTION]
 >
@@ -352,15 +352,16 @@ Det finns olika metoder att lägga till [bilder](/help/assets/content-fragments/
 
    >[!CAUTION]
    >
-   Om du efter att ha lagt till en resurs ändrar formatet till:
-   * **Oformaterad text**: Resursen kommer att förloras helt från fragmentet.
-   * **Markdown-kod**: Resursen visas inte, men finns fortfarande kvar när du återgår till **RTF**.
+   Om du ändrar formatet efter att du har lagt till som resurs i:
+   >
+   * **Oformaterad text**: resursen förloras från fragmentet.
+   * **Markering**: resursen är inte synlig, men finns fortfarande här när du återgår till **RTF**.
 
 ### Infoga ett innehållsfragment i fragmentet {#inserting-content-fragment-into-your-fragment}
 
 Om du vill skapa innehållsfragment enklare kan du även lägga till ytterligare ett innehållsfragment i fragmentet.
 
-De kommer att läggas till som en referens på din aktuella plats i fragmentet.
+De läggs till som en referens på din aktuella plats i fragmentet.
 
 >[!NOTE]
 >
@@ -386,41 +387,42 @@ Det finns olika metoder att lägga till [bilder](/help/assets/content-fragments/
    * navigera till det nödvändiga fragmentet i resursmappen
    * sök efter fragmentet
 
-   När du är placerad väljer du önskat fragment genom att klicka på miniatyrbilden.
+   När fragmentet är placerat markerar du det genom att klicka på miniatyrbilden.
 
 1. Använd **Välj** om du vill lägga till en referens till det markerade innehållsfragmentet i det aktuella innehållsfragmentet (på den aktuella platsen).
 
    >[!CAUTION]
    >
-   Om du efter att ha lagt till en referens till ett annat fragment ändrar formatet till:
-   * **Oformaterad text**: referensen tas bort helt från fragmentet.
+   Om du ändrar formatet, efter att ha lagt till en referens till ett annat fragment, till:
+   >
+   * **Oformaterad text**: referensen tas bort från fragmentet.
    * **Markering**: referensen kvarstår.
 
 ## Hantera variationer {#managing-variations}
 
 ### Skapa en variant {#creating-a-variation}
 
-Med variationer kan du ta **Master** innehållet och variera det beroende på syfte (om det behövs).
+Med variationer kan du ta **Master** innehåll och variera det beroende på syfte (om det behövs).
 
-Så här skapar du en ny variant:
+Så här skapar du en variant:
 
 1. Öppna fragmentet och se till att sidopanelen är synlig.
 1. Välj **Variationer** från ikonfältet på sidopanelen.
 1. Välj **Skapa variant**.
-1. En dialogruta öppnas där du anger **titel** och **beskrivning** för den nya varianten.
-1. Välj **Lägg till**. **Fragmentmastern** kopieras till den nya varianten, som nu är öppen för [redigering](#editing-a-variation).
+1. En dialogruta öppnas. Ange **Titel** och **Beskrivning** för den nya variationen.
+1. Välj **Lägg till**; fragmentet **Master** kopieras till den nya varianten som nu är öppen för [redigera](#editing-a-variation).
 
    >[!NOTE]
    >
-   När du skapar en ny variant är det alltid **Master** som kopieras, inte varianten som är öppen.
+   När du skapar en variant är det alltid **Master** som kopieras, inte varianten som är öppen.
 
    >[!NOTE]
    >
-   När du skapar en ny variant är alla **Taggar** som för närvarande är tilldelad **Master** ändras till din nya variant.
+   När du skapar en variant, alla **Taggar** som för närvarande är tilldelad **Master** ändras till din nya variant.
 
 ### Redigera en variant {#editing-a-variation}
 
-Du kan ändra variantinnehållet efter antingen:
+Ändra variantinnehållet efter antingen:
 
 * [Skapa en variant](#creating-a-variation).
 * Öppna ett befintligt fragment och välj sedan önskad variation på sidopanelen.
@@ -459,7 +461,7 @@ Du kan inte ta bort **Master**.
 
 ### Synkroniserar med mallsida {#synchronizing-with-master}
 
-**Master** är en integrerad del av ett innehållsfragment och innehåller per definition huvudkopian av innehållet, medan varianterna innehåller de individuella uppdaterade och anpassade versionerna av det innehållet. När mallsidan uppdateras är det möjligt att dessa ändringar också är relevanta för variationerna och därför måste spridas till dem.
+**Master** är en del av ett innehållsfragment och innehåller per definition huvudkopian av innehållet, medan varianterna innehåller de individuella uppdaterade och anpassade versionerna av det innehållet. När mallsidan uppdateras är det möjligt att dessa ändringar också är relevanta för variationerna och därför måste spridas till dem.
 
 När du redigerar en variant har du tillgång till åtgärden för att synkronisera det aktuella elementet i variationen med mallsidan. På så sätt kan du automatiskt kopiera ändringar som gjorts i mallsidan till önskad variant.
 
@@ -467,7 +469,7 @@ När du redigerar en variant har du tillgång till åtgärden för att synkronis
 >
 Synkronisering är bara tillgängligt för att kopiera ändringar *från **mastern**till varianten*.
 >
-Endast det aktuella elementet i variationen synkroniseras.
+Endast varianternas aktuella element synkroniseras.
 >
 Synkronisering fungerar bara på **Flerradstext** datatyp.
 >
@@ -489,7 +491,7 @@ Du kan inte överföra ändringar *från en variant till **mastern***.
 
 1. Mallen och variationen visas sida vid sida:
 
-   * grönt anger innehåll som lagts till (i varianten)
+   * grönt anger att innehåll har lagts till (i varianten)
    * rött anger att innehållet har tagits bort (från varianten)
    * blå anger ersatt text
 

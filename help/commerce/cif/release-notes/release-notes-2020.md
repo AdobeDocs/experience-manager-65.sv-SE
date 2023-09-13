@@ -2,16 +2,16 @@
 title: AEM Content and Commerce Release Notes 2020
 description: AEM Content and Commerce Release Notes 2020
 exl-id: 440ecd8e-55dc-4606-8678-c65cda1d2b3a
-source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
+source-git-commit: 474a726058b141985f52a0faec6161a34be1e9dc
 workflow-type: tm+mt
-source-wordcount: '1328'
+source-wordcount: '1352'
 ht-degree: 8%
 
 ---
 
 # GitHub-versionsöversikt för Commerce Integration Framework
 
-## Releasedatum: November 2020
+## Releasedatum: november 2020
 
 | GitHub | Version | Detaljerade versionsinformation |
 |:-------|:-----:|---------------------:|
@@ -33,7 +33,7 @@ ht-degree: 8%
 
 * Flera felkorrigeringar.
 
-## Releasedatum: Oktober 2020
+## Releasedatum: oktober 2020
 
 | GitHub | Version | Detaljerade versionsinformation |
 |:-------|:-----:|---------------------:|
@@ -43,15 +43,15 @@ ht-degree: 8%
 
 ### Nyheter {#what-is-new-october}
 
-* En ny kategoriCarousel-komponent har lagts till för att göra det möjligt för affärsanvändare att dra och släppa den här komponenten på AEM innehållssidor för att berika innehållssidor med handelsdata.
+* En ny kategoriCarousel-komponent lades till för att göra det möjligt för företagsanvändare att dra och släppa den här komponenten på AEM innehållssidor för att berika innehållssidor med handelsdata.
 
-* CIF-kärnkomponenter har utökats för att hydratisera Adobe Client Data Layer genom att skicka e-handelsdata. Adobe Client Data Layer är en standardiserad metod för att samla in data och kommunicera data till digitala analyser och rapportservrar. Mer information finns i [Adobe-klientdatalager](https://github.com/adobe/adobe-client-data-layer/wiki).
+* CIF-kärnkomponenter har utökats för att hydratisera Adobe klientdatalagret genom att skicka e-handelsdata. Adobe Client Data Layer är en standardiserad metod för att samla in data och kommunicera data till digitala analyser och rapportservrar. Mer information finns i [Adobe-klientdatalager](https://github.com/adobe/adobe-client-data-layer/wiki).
 
 * Sidorna Produktinformation och Produktlista utökas för att automatiskt fylla i SEO-metadata (som titel, metabeskrivning, meta-nyckelord) som konfigurerats inifrån Adobe Commerce administratörsgränssnitt
 
 * Fel i Commerce teaser-komponent har åtgärdats.
 
-## Releasedatum: September 2020
+## Releasedatum: september 2020
 
 | GitHub | Version | Detaljerade versionsinformation |
 |:-------|:-----:|---------------------:|
@@ -65,19 +65,19 @@ ht-degree: 8%
 
 * Funktioner för kontoinformation har lagts till så att kunderna kan uppdatera personlig information.
 
-* Lazy loading av sidnumreringsformat som implementerats för produktlistor och sökresultatsidor för att utvecklare ska kunna konfigurera de här komponenterna så att knappen Läs in mer visas som sidnumreringsformat.
+* En lat sidnumreringsstil för inläsning implementeras för produktlistor och sökresultatsidor så att utvecklare kan konfigurera de här komponenterna så att knappen Läs in mer visas som sidnumreringsstil.
 
-* Sidan för återställning av lösenord har implementerats så att kunderna kan uppdatera/återställa sitt kontolösenord.
+* Sidan för återställning av lösenord implementeras så att kunderna kan uppdatera/återställa sitt kontolösenord.
 
-* Stöd för tillgängliga produkttyper.
+* Det finns stöd för olika produkttyper.
 
 * Utvecklare kan konfigurera HTML-taggarna för komponenterna Product Carousel, Related Products och Featured Category List så att de följer SEO:s bästa praxis.
 
-* Mina kontobuggar har åtgärdats.
+* Mina kontofel har åtgärdats.
 
 * Flera felkorrigeringar.
 
-## Releasedatum: Augusti 2020
+## Releasedatum: augusti 2020
 
 | GitHub | Version | Detaljerade versionsinformation |
 |:-------|:-----:|---------------------:|
@@ -91,17 +91,17 @@ ht-degree: 8%
 
 * Fliken Commerce har lagts till i sidegenskaper för att visa CIF-egenskaper för landningssidor och upplevelsefragment.
 
-* Sökfältskomponenten har förbättrats med stöd för att visa platshållartext
+* Sökfältskomponenten har förbättrats med stöd för alternativet att visa platshållartext
 
 * Flexibilitet i komponenterna Product och Product Teaser ger stöd för enkla anpassningar.
 
-* Flexibilitet att åsidosätta och konfigurera CTA-knappetiketten för Product Teaser-komponenten har lagts till.
+* Flexibilitet att åsidosätta och konfigurera standardetiketten för CTA-knappen för Product Teaser-komponenten har lagts till.
 
-* Adressbokskomponenten har förbättrats så att registrerade kunder kan välja frakt- och faktureringsadresser som sparats i adressboken under utcheckningen.
+* Adressbokskomponenten har förbättrats så att registrerade kunder kan välja frakt- och faktureringsadresser som sparats i adressboken vid utcheckning.
 
 * Flera felkorrigeringar.
 
-## Releasedatum: Juli 2020
+## Releasedatum: juli 2020
 
 | GitHub | Version | Detaljerade versionsinformation |
 |:-------|:-----:|---------------------:|
@@ -113,7 +113,7 @@ ht-degree: 8%
 
 * CIF Venia Reference Site extraherades från CIF Archetype-repo och är nu en fristående GitHub-databas.
 
-* CIF-arkityp som sammanfogats med AEM Project Archetype. Använd för nya projekt [AEM Project Archetype](https://github.com/adobe/aem-project-archetype) som startpunkt.
+* CIF-arkityp som sammanfogats med AEM Project Archetype. Använd för nya projekt [AEM Project Archettype](https://github.com/adobe/aem-project-archetype) som startpunkt.
 
 * Adressbokshantering har lagts till för att tillåta inloggade användare att hantera sina adresser.
 
@@ -127,7 +127,7 @@ ht-degree: 8%
 
 * Flera felkorrigeringar.
 
-## Releasedatum: Juni 2020
+## Releasedatum: juni 2020
 
 | GitHub | Version | Detaljerade versionsinformation |
 |:-------|:-----:|---------------------:|
@@ -147,15 +147,15 @@ Detta är den första versionen av CIF Core Components som stöds i Adobe Experi
 
 ### Vad har förbättrats {#what-is-improved-june}
 
-* Sidan Produktlista och sidan Sökresultat visar totalt antal objekt. Antalet objekt uppdateras när användaren använder filter.
+* På sidan Produktlista och sidan Sökresultat visas det totala antalet objekt. Antalet objekt uppdateras när användaren använder filter.
 
-* Fasetterad sökning optimerad genom att kombinera kategorifrågan med produktsökfrågan.
+* Fasetterad sökning optimeras genom att en kategorifråga kombineras med en produktsökfråga.
 
 * Kategori-/produktväljare för sidförhandsgranskning följer cq:catalogPath.
 
 * Flera felkorrigeringar.
 
-## Releasedatum: Maj 2020
+## Releasedatum: maj 2020
 
 | GitHub | Version | Detaljerade versionsinformation |
 |:-------|:-----:|---------------------:|
@@ -169,7 +169,7 @@ Detta är den första versionen av CIF Core Components som stöds i Adobe Experi
 
 * Stöd för fasetterad sökning har lagts till i sidan Sök och produktlista så att kunderna kan filtrera sökresultat baserat på produktaspekter.
 
-* Ny OSGi-tjänst har lagts till för att anpassa PDP/PLP-URL:er för SEO. Mer information finns i [dokumentation](https://github.com/adobe/aem-core-cif-components/wiki/configuration).
+* Ny OSGi-tjänst har lagts till för att anpassa PDP/PLP-URL:er för SEO-syften. Mer information finns i [dokumentation](https://github.com/adobe/aem-core-cif-components).
 
 * Produktbindning skapas automatiskt när en molnkonfiguration skapas.
 
@@ -179,7 +179,7 @@ Detta är den första versionen av CIF Core Components som stöds i Adobe Experi
 
 * Flera felkorrigeringar har tillämpats.
 
-## Releasedatum: April, 2020
+## Releasedatum: april 2020
 
 | GitHub | Version | Detaljerade versionsinformation |
 |:-------|:-----:|---------------------:|
@@ -189,7 +189,7 @@ Detta är den första versionen av CIF Core Components som stöds i Adobe Experi
 
 ### Nyheter {#what-is-new-april}
 
-* Konfigurationsinställningar för CIF Connector är enhetliga och förenklade. Mer info: utcheckning [Komma igång](https://www.adobe.io/apis/experiencecloud/commerce-integration-framework/getting-started.html) eller [Ny inställning AEM CIF-projekt](https://www.adobe.io/apis/experiencecloud/commerce-integration-framework/getting-started.html#!AdobeDocs/commerce-cif-documentation/master/getting-started/02-new-cif-project.md)
+* Konfigurationsinställningarna för CIF Connector är enhetliga och förenklade. Mer info: utcheckning [Komma igång](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/content-and-commerce/home.html) eller [Ny inställning AEM CIF-projekt](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/content-and-commerce/home.html)
 
 ### Vad har förbättrats {#what-is-improved-april}
 
@@ -197,13 +197,13 @@ Detta är den första versionen av CIF Core Components som stöds i Adobe Experi
 
 * Utökat stöd för internationalisering i alla komponenter.
 
-* Stöd för grupperade produkter och virtuella produkter finns.
+* Det finns stöd för grupperade produkter och virtuella produkter.
 
 * Komponenter i relaterade produkter, produktkaruseller och den aktuella kategorin har förbättrats för att ge stöd åt valfri titel.
 
 * Flera felkorrigeringar har tillämpats.
 
-## Releasedatum: Februari 2020
+## Releasedatum: februari 2020
 
 | GitHub | Version | Detaljerade versionsinformation |
 |:-------|:-----:|---------------------:|
@@ -223,13 +223,13 @@ Detta är den första versionen av CIF Core Components som stöds i Adobe Experi
 
 * Kundvagnen har förbättrats och visar rabatter.
 
-* Produktinformation, Product Teaser och Product List-komponenter har stöd för visning av avancerad prisinformation.
+* Komponenterna Produktinformation, Product Teaser och Product List har stöd för visning av avancerad prisinformation.
 
 * Produktsökning i produktkonsolen och produktväljaren har förbättrats.
 
 * Flera felkorrigeringar har tillämpats.
 
-## Releasedatum: Januari 2020
+## Releasedatum: januari 2020
 
 | GitHub | Version | Detaljerade versionsinformation |
 |:-------|:-----:|---------------------:|
@@ -241,11 +241,11 @@ Detta är den första versionen av CIF Core Components som stöds i Adobe Experi
 
 * Komponenten Experience Fragment (XF) har lagts till så att kunderna kan skapa XF i sina e-handelsprojekt.
 
-* Ändra lösenordsfunktionaliteten som finns på mitt konto.
+* Ändra de lösenordsfunktioner som är tillgängliga på mitt konto.
 
 * i18n-stöd för AEM CIF-kärnkomponenter på serversidan.
 
-* Allmän relaterad produktkomponent tillgänglig.
+* Allmän relaterad produktkomponent finns tillgänglig.
 
 ### Vad har förbättrats {#what-is-improved-january}
 
@@ -255,6 +255,6 @@ Detta är den första versionen av CIF Core Components som stöds i Adobe Experi
 
 * Alternativ för att dölja/visa rubrik/banderoll i produktlistkomponenten.
 
-* Dra-och-släpp-funktionen som används på Product Carousel-komponenten.
+* Dra och släpp-funktionen som används på Product Carousel-komponenten.
 
 * Flera felkorrigeringar har tillämpats.

@@ -1,6 +1,6 @@
 ---
 title: Inställningar för Commerce Multi-Store
-description: Lär dig hur du mappar olika butiksvyer från Adobe Commerce till AEM. Detta gör att projekt kan stödja multi-tenant- och multi-lingual use-fall.
+description: Lär dig hur du mappar olika butiksvyer från Adobe Commerce till AEM. Detta gör att projekt kan stödja flerspråkiga och flerspråkiga användningsområden.
 sub-product: Commerce
 doc-type: technical-video
 activity: setup
@@ -9,9 +9,9 @@ feature: Commerce Integration Framework
 kt: 3046
 thumbnail: 28952.jpg
 exl-id: 1d4e9b7b-848b-4007-b884-dd48682d62e8
-source-git-commit: a5f3e33a6abe7ac1bbd610a8528fd599d1ffd2aa
+source-git-commit: 474a726058b141985f52a0faec6161a34be1e9dc
 workflow-type: tm+mt
-source-wordcount: '385'
+source-wordcount: '384'
 ht-degree: 0%
 
 ---
@@ -32,17 +32,17 @@ Följ stegen nedan för att ansluta en AEM plats och AEM CIF Core Components så
 
 ## Konfiguration {#configuration}
 
-1. Konfigurera flera butiker och butiksvyer enligt mönstret som beskrivs i [Adobe Commerce webbplatser, butiker och vyer](https://docs.magento.com/m2/ce/user_guide/stores/websites-stores-views.html)
+1. Konfigurera flera butiker och butiksvyer enligt mönstret som beskrivs i [Adobe Commerce webbplatser, butiker och vyer](https://experienceleague.adobe.com/docs/commerce-admin/start/setup/websites-stores-views.html)
 
 2. Kontrollera att anslutningen mellan AEM &amp; Adobe Commerce fungerar.
 
 3. Skapa en underordnad konfiguration för CIF-Cloud Servicens konfiguration enligt följande:
 
-   * I AEM går du till Verktyg -> Allmänt -> [Konfigurationsläsaren](/help/sites-administering/configurations.md#using-configuration-browser)
-   * Välj den baskonfiguration du skapade
-   * Skapa en ny konfiguration med stegen som beskrivs i punkt 2 ovan
+   * AEM går till Verktyg -> Allmänt -> [Konfigurationsläsaren](/help/sites-administering/configurations.md#using-configuration-browser)
+   * Välj den baskonfiguration som du har skapat
+   * Skapa en konfiguration med stegen som beskrivs i punkt 2 ovan
 
-   Den nya konfigurationen skapas som en underordnad konfiguration till den ursprungliga konfigurationen. Du kan nu gå till Verktyg -> Allmänt -> Konfigurationsläsaren och skapa konfigurationsinställningarna.
+   Den nya konfigurationen skapas som en underordnad konfiguration till den grundläggande konfigurationen. Du kan nu gå till Verktyg -> Allmänt -> Konfigurationsläsaren och skapa konfigurationsinställningarna.
 
    >[!TIP]
    >
@@ -52,13 +52,13 @@ Följ stegen nedan för att ansluta en AEM plats och AEM CIF Core Components så
 
    * Gå till AEM Sites Console
    * Navigera till regionen eller språkroten i platsstrukturen, till exempel /content/venia/us _eller_ /content/venia/us/en för exempelsidan Venia
-   * Markera sidan och öppna sidegenskaper
+   * Markera sidan och öppna sidegenskaperna
    * Välj fliken Avancerat
    * I `Configuration` väljer du den konfiguration du skapade i steg
 
 ## Ytterligare resurser
 
-* [Adobe Commerce webbplatser, butiker och vyer](https://docs.magento.com/m2/ce/user_guide/stores/websites-stores-views.html)
-* [AEM CIF Core Components - konfiguration av flera butiker/platser](https://github.com/adobe/aem-core-cif-components/wiki/configuration#multi-store--site-configuration)
+* [Adobe Commerce webbplatser, butiker och vyer](https://experienceleague.adobe.com/docs/commerce-admin/start/setup/websites-stores-views.html)
+* [AEM CIF Core Components - konfiguration av flera butiker/platser](https://github.com/adobe/aem-core-cif-components#multi-store--site-configuration)
 * [Använda Multi-Site Manager](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/translation/multi-site-manager-feature-video-use.html)
 * [Återanvända innehåll: Multi Site Manager och Live Copy](/help/sites-administering/msm.md)

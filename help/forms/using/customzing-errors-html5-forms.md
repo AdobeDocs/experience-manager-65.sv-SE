@@ -1,30 +1,26 @@
 ---
 title: Anpassa felmeddelanden för HTML5-formulär
-seo-title: Customizing error messages for HTML5 forms
 description: Lär dig hur du anpassar visningen av felmeddelanden för HTML5-formulär, inklusive hur du ändrar deras position och utseende.
-seo-description: Learn how to customize the display of error messages for HTML5 forms including how to change their position and appearance.
-uuid: 6f48b64e-858f-4323-ad50-88e25f3c2e3d
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: customization
-discoiquuid: 44e49789-9075-41b3-bce8-03e8efce2d5a
 feature: Mobile Forms
 exl-id: c4ae53a3-8de1-4985-a73e-829749de9814
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 5af420c8e95fed88a8516cce27b8bbc7d3974e75
 workflow-type: tm+mt
-source-wordcount: '515'
+source-wordcount: '499'
 ht-degree: 0%
 
 ---
 
 # Anpassa felmeddelanden för HTML5-formulär {#customizing-error-messages-for-html-forms}
 
-I HTML5-formulär har felmeddelanden och varningar fast position och utseende (teckensnitt och färg), felen visas bara för ett markerat fält och endast ett fel visas.
+I HTML5-formulär visas felmeddelandena och varningarna med fast position och utseende (teckensnitt och färg) utanför rutan, och endast ett fel visas.
 
-I artikeln finns anvisningar för hur du anpassar felmeddelanden för HTML5-formulär till
+I artikeln finns anvisningar för hur du anpassar felmeddelanden för HTML5-formulär så att du kan göra följande:
 
-* ändra utseendet och placeringen av felmeddelanden. Du kan göra så att ett fel visas högst upp, längst ned och till höger i vilket fält som helst.
+* ändra utseendet och placeringen av felmeddelanden. Du kan göra så att ett fel visas högst upp, längst ned och till höger i ett fält.
 * visa felmeddelanden för flera fält vid en given tidpunkt.
-* visa felet oavsett om ett fält är markerat eller inte.
+* visar felet oavsett om ett fält är markerat eller inte.
 
 ## Anpassa felmeddelanden  {#customizing-error-messages-nbsp}
 
@@ -36,14 +32,14 @@ När du har extraherat paketet öppnar du mappen CustomErrorManager-1.0-SNAPSHOT
 
 ### Anpassa felmeddelandenas placering  {#customizing-the-position-of-error-messages-nbsp}
 
-Lägg till &lt;div> -taggen för varje fel- och varningsfält, placera &lt;div> till vänster eller höger och tillämpa CSS-format på &lt;div> -tagg. Detaljerade anvisningar finns i proceduren nedan:
+Om du vill anpassa felmeddelandets position lägger du till en &lt;div> -taggen för varje fel- och varningsfält, placera &lt;div> till vänster eller höger och tillämpa CSS-format på &lt;div> -tagg. Detaljerade anvisningar finns i proceduren nedan:
 
 1. Navigera till `CustomErrorManager-1.0-SNAPSHOT`och öppna `etc\clientlibs\mf-custom-error-manager\CustomErrorManager\javascript` mapp.
 1. Öppna `customErrorManager.js` fil för redigering. The `markError` -funktionen i filen accepterar följande parametrar:
 
-   |  |  |
+   |   |  |
    |---|---|
-   | jqWidget | jqWidget är handtaget för widgeten. |
+   | jqWidget | jqWidget är handtaget för en widget. |
    | msg | innehåller felmeddelandet |
    | type | anger om det är ett fel eller en varning |
 
@@ -86,11 +82,11 @@ Använd det bifogade paketet för att samtidigt visa felmeddelanden för alla f�
 
 ### Anpassa utseendet på felmeddelanden.  {#customizing-the-appearance-of-error-messages-nbsp}
 
-1. Gå till etc\clientlibs\mf-custom-error-manager\CustomErrorManager\css folder.
+1. Gå till mappen etc\clientlibs\mf-custom-error-manager\CustomErrorManager\css.
 
-1. Öppna filen sample.css för redigering.CSS-filen innehåller 2 id- #customError, #customWarning. Du kan använda dessa id:n för att ändra olika egenskaper som färg, teckensnittsstorlek osv.
+1. Öppna filen sample.css för redigering. CSS-filen innehåller 2 id:n - #customError, #customWarning. Du kan använda dessa id:n för att ändra olika egenskaper som färg och teckenstorlek.
 
-   Använd följande kod om du vill ändra teckenstorlek och färg för fel-/varningsmeddelanden.
+   Använd följande kod för att ändra teckenstorlek och färg för fel-/varningsmeddelanden.
 
    ```css
    #customError {
@@ -120,9 +116,9 @@ Använd det bifogade paketet för att samtidigt visa felmeddelanden för alla f�
 
 ## Rendera formuläret med den nya profilen.  {#render-the-form-with-the-new-profile-nbsp}
 
-HTML5-formulär har en standardprofil som standard: https://&lt;server>/content/xfaforms/profiles/default.html?contentRoot=&lt;xdp location=&quot;&quot;>&amp;template=&lt;name of=&quot;&quot; the=&quot;&quot; xdp=&quot;&quot;>
+HTML5-formulär har en standardprofil som standard: `https://&lt;server&gt;/content/xfaforms/profiles/default.html?contentRoot=&lt;xdp location&gt;&template=&lt;name of the xdp&gt;`
 
-Om du vill visa ett formulär med anpassade felmeddelanden återger du formuläret med felprofilen: https://&lt;server>/content/xfaforms/profiles/error.html?contentRoot=&lt;xdp location=&quot;&quot;>&amp;template=&lt;name of=&quot;&quot; the=&quot;&quot; xdp=&quot;&quot;>
+Om du vill visa ett formulär med anpassade felmeddelanden återger du formuläret med felprofilen: `https://&lt;server&gt;/content/xfaforms/profiles/error.html?contentRoot=&lt;xdp location&gt;&template=&lt;name of the xdp&gt;`
 
 >[!NOTE]
 >

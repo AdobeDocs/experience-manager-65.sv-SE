@@ -1,19 +1,15 @@
 ---
 title: Konfigurerar din kontomiljö
-seo-title: Configuring Your Account Environment
 description: AEM ger dig möjlighet att konfigurera ditt konto och vissa aspekter av författarmiljön
-seo-description: AEM provides you with the capability to configure your account and certain aspects of the author environment
-uuid: ef31be29-5c18-4dc9-ad51-fb001588b31e
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: introduction
 content-type: reference
-discoiquuid: b610e19c-f8d9-4ae2-b056-9fd5cf541261
 docset: aem65
 exl-id: 6079431d-7d08-4973-8bb4-a8d10626a795
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 474a726058b141985f52a0faec6161a34be1e9dc
 workflow-type: tm+mt
-source-wordcount: '519'
+source-wordcount: '514'
 ht-degree: 4%
 
 ---
@@ -24,7 +20,7 @@ AEM ger dig möjlighet att konfigurera ditt konto och vissa aspekter av författ
 
 Med alternativet [Användare](/help/sites-authoring/user-properties.md#user-settings) i [sidhuvudet](/help/sites-authoring/basic-handling.md#the-header) och den tillhörande dialogrutan [Mina inställningar](#userpreferences) kan du ändra dina användaralternativ.
 
-Börja med att öppna [Användare](/help/sites-authoring/user-properties.md#user-settings) i sidhuvudet.
+Börja med att gå till [Användare](/help/sites-authoring/user-properties.md#user-settings) i sidhuvudet.
 
 ## Användarinställningar {#user-settings}
 
@@ -40,7 +36,7 @@ The **Användare** dialogrutan ger dig tillgång till:
 
 * [Mina inställningar](/help/sites-authoring/user-properties.md#my-preferences)
 
-   * Ange olika inställningar som är unika för din användare
+   * Ange olika inställningar som är unika för användaren
 
 ![screen_shot_2018-03-20at103808](assets/screen_shot_2018-03-20at103808.png)
 
@@ -60,7 +56,7 @@ Varje användare kan ange vissa egenskaper för sig själv.
 
 * **Fönsterhantering**
 
-  Detta definierar beteendet för att öppna fönster. Välj något av följande:
+  Detta definierar beteendet för att öppna fönster. Välj antingen:
 
    * **Flera fönster** (Standard)
 
@@ -72,25 +68,25 @@ Varje användare kan ange vissa egenskaper för sig själv.
 
 * **Visa skrivbordsåtgärder för Assets**
 
-  Det här alternativet kräver AEM datorprogram.
+  Det här alternativet kräver ett AEM datorprogram för att kunna användas.
 
 * **Anteckningsfärg**
 
   Detta definierar den standardfärg som används när anteckningar görs.
 
-   * Klicka på färgblocket för att öppna väljaren för färgrutor och markera en färg.
+   * Klicka på färgblocket så att du kan öppna färgrutevälaren och välja en färg.
    * Du kan också ange hexkoden för önskad färg i fältet.
 
 * **Relativ datumpresentation**
 
-  För att förbättra läsbarheten kommer AEM att återge datum inom de senaste sju dagarna som relativa datum (till exempel för tre dagar sedan) och äldre datum som exakta datum (till exempel den 20 mars 2017).
+  För att förbättra läsbarheten återges datum inom de senaste sju dagarna som relativa datum (till exempel för tre dagar sedan) och äldre datum som exakta datum (till exempel den 20 mars 2017).
 
   Det här alternativet definierar hur datum i systemet visas. Följande alternativ är tillgängliga:
 
    * **Visa alltid exakt datum**: Det exakta datumet visas alltid (aldrig ett relativt datum).
    * **1 dag**: Det relativa datumet visas för datum inom en dag, annars visas ett exakt datum.
 
-   * **7 dagar (standard)**: Det relativa datumet visas för datum inom sju dagar, i annat fall visas ett exakt datum.
+   * **7 dagar (standard)**: Det relativa datumet visas för datum inom sju dagar, annars visas ett exakt datum.
 
    * **1 månad**: Det relativa datumet visas för datum inom en månad, annars visas ett exakt datum.
 
@@ -100,12 +96,12 @@ Varje användare kan ange vissa egenskaper för sig själv.
 
 * **Aktivera kortkommandon**
 
-  AEM stöder ett antal kortkommandon som gör redigeringen effektivare.
+  AEM har stöd för flera kortkommandon som gör redigeringen effektivare.
 
-   * [Kortkommandon för att redigera sidor](/help/sites-authoring/page-authoring-keyboard-shortcuts.md)
+   * [Kortkommandon för redigering av sidor](/help/sites-authoring/page-authoring-keyboard-shortcuts.md)
    * [Kortkommandon för konsoler](/help/sites-authoring/keyboard-shortcuts.md)
 
-  Det här alternativet aktiverar kortkommandon. Som standard är de aktiverade, men kan inaktiveras om en användare har vissa tillgänglighetskrav.
+  Det här alternativet aktiverar kortkommandon. Som standard är de aktiverade, men kan inaktiveras, till exempel om en användare har vissa tillgänglighetskrav.
 
 * **Använd klassisk redigeringsmiljö**
 
@@ -113,7 +109,7 @@ Varje användare kan ange vissa egenskaper för sig själv.
 
 * **Aktivera startsidan för resurser**
 
-  Det här alternativet är endast tillgängligt om systemadministratören har aktiverat Assets Home Page Experience för hela organisationen.
+  Det här alternativet är bara tillgängligt om systemadministratören har aktiverat Assets Home Page (Startsidan för resurser) för hela organisationen.
 
 * **Stock-konfiguration**
 

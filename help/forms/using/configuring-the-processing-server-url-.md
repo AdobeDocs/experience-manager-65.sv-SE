@@ -1,19 +1,15 @@
 ---
 title: Konfigurera AEM DS-inställningar
-seo-title: Configuring AEM DS settings
-description: Du måste ange URL:en för bearbetningsservern innan du skickar ett formulär.
-seo-description: You need to specify the processing server URL before you submit a form.
-uuid: 55a6d434-7352-48a8-8387-8a5c1a48fafc
+description: Lär dig hur du anger bearbetningsserverns URL innan du skickar ett formulär.
 contentOwner: amgoyal
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: Configuration
-discoiquuid: a7387bd3-8b31-4bd0-a861-daa8f7cb2d05
 docset: aem65
 role: Admin
 exl-id: c43cab7b-3421-4e1b-a834-b2dd6eb23c1d
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+source-git-commit: 5af420c8e95fed88a8516cce27b8bbc7d3974e75
 workflow-type: tm+mt
-source-wordcount: '215'
+source-wordcount: '218'
 ht-degree: 0%
 
 ---
@@ -25,9 +21,9 @@ I den här artikeln beskrivs hur du konfigurerar **Tjänsten AEM DS-inställning
 * I korrespondenshantering
 
    * För konfigurering av AEM Forms Workflow
-   * När du använder formulärportalen för att spara utkast/inskickning på fjärrbasis
+   * När du använder Forms Portal för att spara utkast/inskickning på fjärrbasis
 
-* I adaptiva formulär för fall när adaptiv form skickas från publiceringsinstansen
+* I adaptiva formulär, till exempel när ett adaptivt formulär skickas från en publiceringsinstans
 
 Följ de här stegen för att konfigurera **[!UICONTROL AEM DS Settings]**:
 
@@ -46,9 +42,9 @@ Följ de här stegen för att konfigurera **[!UICONTROL AEM DS Settings]**:
 
 1. Lägg till följande information i respektive fält:
 
-   **[!UICONTROL Processing Server URL]**: Bearbetningsservern är den server där Forms- eller AEM-arbetsflödet måste aktiveras. Detta kan vara samma som URL:en för den AEM författarinstansen eller den andra server-URL:en (d.v.s. https://localhost:port/).
+   **[!UICONTROL Processing Server URL]**: Bearbetningsservern är den server där Forms- eller AEM-arbetsflödet måste aktiveras. Detta kan vara samma URL som till den AEM författarinstansen eller den andra server-URL:en (d.v.s. https://localhost:port/).
 
-   **[!UICONTROL Processing Server User Name]**: Användarnamn för arbetsflödesanvändare [baserat på den server-URL som används]
+   **[!UICONTROL Processing Server User Name]**: Arbetsflödets användarnamn [baserat på den server-URL som används]
 
    **[!UICONTROL Processing Server Password]**: Lösenord för arbetsflödesanvändare
 
@@ -57,5 +53,6 @@ Följ de här stegen för att konfigurera **[!UICONTROL AEM DS Settings]**:
    >
    >    
    >    
-   >    * När du använder arbetsflödena Forms eller AEM måste du konfigurera tjänsten DS-inställningar innan du skickar något från publiceringsservern. I annat fall ska inlämningen av formuläret misslyckas.
-
+   >    * När du använder arbetsflödena Forms eller AEM måste du konfigurera tjänsten DS-inställningar innan du skickar något från publiceringsservern. I annat fall ska inlämningen av blanketten misslyckas.
+   >    
+   >

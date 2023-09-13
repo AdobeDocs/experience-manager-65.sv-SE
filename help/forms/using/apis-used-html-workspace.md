@@ -1,32 +1,28 @@
 ---
 title: API:er som används i AEM Forms arbetsyta
-seo-title: APIs used in AEM Forms workspace
-description: Offentliga Java- och JavaScript-API:er och metoder för arbetsytan i LiveCycle AEM Forms som kan anpassas och automatiseras.
-seo-description: Public Java and JavaScript APIs and methods of LiveCycle AEM Forms workspace, exposed for customization and automation.
-uuid: 9602990e-8ac7-42eb-b507-50b3594055ba
+description: Public Java&trade; och JavaScript API:er och metoder för arbetsytan i LiveCycle AEM Forms som kan anpassas och automatiseras.
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
-discoiquuid: 4a73a973-fccf-466b-b4a0-47652a14a080
 exl-id: 9034f73a-83f3-498e-b6a6-ad6577aa1a3a
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 474a726058b141985f52a0faec6161a34be1e9dc
 workflow-type: tm+mt
-source-wordcount: '998'
+source-wordcount: '1059'
 ht-degree: 0%
 
 ---
 
 # API:er som används i AEM Forms arbetsyta {#apis-used-in-aem-forms-workspace}
 
-Följande API:er används i AEM Forms arbetsyta.
+Följande API:er används på arbetsytan i AEM Forms.
 
 <table>
  <tbody>
   <tr>
    <td><strong>JavaScript-metod</strong></td>
    <td><strong>Tjänstnamn</strong></td>
-   <td><strong>API-namn</strong></td>
-   <td><strong>Kommentarer</strong></td>
+   <td><strong>API Name</strong></td>
+   <td><strong>Kommentar</strong></td>
   </tr>
   <tr>
    <td>getGroups</td>
@@ -44,7 +40,7 @@ Följande API:er används i AEM Forms arbetsyta.
    <td>prepareForSubmit</td>
    <td>ProcessManagementDocumentHandlingService</td>
    <td>prepareForSubmit</td>
-   <td>Den anropas innan formuläret skickas via DocumentSubmitServlet. Det anger uppgifts-ID:t i en sessionsvariabel (tillsammans med förfallotid) som hämtas under den faktiska överföringen.</td>
+   <td>Det anropas innan ett formulär skickas med DocumentSubmitServlet. Det anger uppgifts-ID i en sessionsvariabel (tillsammans med förfallotid) som hämtas under den faktiska överföringen.</td>
   </tr>
   <tr>
    <td>submitTask</td>
@@ -74,13 +70,13 @@ Följande API:er används i AEM Forms arbetsyta.
    <td>invokeStartPoint</td>
    <td>ProcessManagementStartPointService</td>
    <td>invokeStartPoint</td>
-   <td>Detta anropar en startpunkt och skapar en ny uppgift som motsvarar en startpunkt</td>
+   <td>Detta anropar en startpunkt och skapar en uppgift som motsvarar en startpunkt</td>
   </tr>
   <tr>
    <td>getAllTasks</td>
    <td>ProcessManagementTaskService</td>
    <td>getAllActionTasks</td>
-   <td>Den hämtar alla uppgifter som har skapats och vidarebefordrats eller konsulterats, sparats, tilldelats, tilldelats och sparats för inloggad användare.</td>
+   <td>Den hämtar alla uppgifter som har skapats och vidarebefordrats eller konsulterats, sparats, tilldelats, tilldelats och sparats för den inloggade användaren.</td>
   </tr>
   <tr>
    <td>getTask</td>
@@ -92,25 +88,25 @@ Följande API:er används i AEM Forms arbetsyta.
    <td>renderTask</td>
    <td>ProcessManagementTaskService</td>
    <td>återge</td>
-   <td>Den återger en uppgift och returnerar information som behövs för att återge formulär som t.ex. formulär-URL, formulärtyp, data-URL, om det behövs osv.</td>
+   <td>Den återger en uppgift och returnerar information som behövs för att återge formuläret, t.ex. formulär-URL, formulärtyp, data-URL, om det behövs.</td>
   </tr>
   <tr>
    <td>submitWithBeforeData</td>
    <td>ProcessManagementTaskService</td>
    <td>submitWithBeforeData</td>
-   <td>Returnerar resultatet av TaskManagers skicknings-API med hjälp av resultatnyckeln.</td>
+   <td>Returnerar resultatet av TaskManagers överförings-API med hjälp av resultatnyckeln.</td>
   </tr>
   <tr>
    <td>submitWithData</td>
    <td>ProcessManagementTaskService</td>
    <td>submitWithData</td>
-   <td>Den skickar formulärdata (skickas som sträng) som är kopplade till uppgiften med TaskManagers API. Det används för flexformulär som inte anropar TaskManagers API.</td>
+   <td>Den skickar formulärdata (skickas som sträng) som är associerade med uppgiften med TaskManagers API. Det används för Flex-formulär som inte anropar TaskManagers API för att skicka.</td>
   </tr>
   <tr>
    <td>spara</td>
    <td>ProcessManagementTaskService</td>
    <td>spara</td>
-   <td>Den sparar en aktivitet på servern.</td>
+   <td>Den sparar en åtgärd på servern.</td>
   </tr>
   <tr>
    <td>complete</td>
@@ -122,7 +118,7 @@ Följande API:er används i AEM Forms arbetsyta.
    <td>getAttachment</td>
    <td>ProcessManagementTaskService</td>
    <td>getAttachment</td>
-   <td>Den returnerar URL:en för en bifogad fil där den bifogade filen är tillgänglig.</td>
+   <td>Den returnerar en URL till en bifogad fil där den bifogade filen är tillgänglig.</td>
   </tr>
   <tr>
    <td>getAllAttachments</td>
@@ -152,7 +148,7 @@ Följande API:er används i AEM Forms arbetsyta.
    <td>krav</td>
    <td>ProcessManagementTaskService</td>
    <td>krav</td>
-   <td>En uppgift som är tillgänglig i en delad kö anropas.</td>
+   <td>Den gör anspråk på en uppgift som är tillgänglig i en delad kö.</td>
   </tr>
   <tr>
    <td>låsa upp</td>
@@ -164,13 +160,13 @@ Följande API:er används i AEM Forms arbetsyta.
    <td>lock</td>
    <td>ProcessManagementTaskService</td>
    <td>lock</td>
-   <td>Den låser en uppgift och en annan användare kan inte göra anspråk på den om den delas.</td>
+   <td>Den låser en uppgift och en annan användare kan inte göra anspråk på uppgiften om den delas.</td>
   </tr>
   <tr>
    <td>avvisa</td>
    <td>ProcessManagementTaskService</td>
    <td>avvisa</td>
-   <td>Aktiviteten returneras till uppgiftens tidigare ägare.</td>
+   <td>Den returnerar en uppgift till uppgiftens tidigare ägare.</td>
   </tr>
   <tr>
    <td>överge</td>
@@ -182,13 +178,13 @@ Följande API:er används i AEM Forms arbetsyta.
    <td>setVisibility</td>
    <td>ProcessManagementTaskService</td>
    <td>setVisibility</td>
-   <td>Det anger en uppgifts synlighet. Om synligheten är inställd på false kommer aktiviteten inte att vara synlig för användaren efteråt.</td>
+   <td>Det anger en uppgifts synlighet. Om synligheten är inställd på false är uppgiften inte synlig för användaren efteråt.</td>
   </tr>
   <tr>
    <td>getUsers</td>
    <td>ProcessManagementUserProxyService</td>
    <td>getUsers</td>
-   <td>Det används för att söka efter användare. Alla användare returneras om inget namn anges, annars returneras användare med angivet namn.</td>
+   <td>Det används för att söka efter användare. Den returnerar alla användare om inget namn anges, eller returnerar användare med ett angivet namn.</td>
   </tr>
   <tr>
    <td>getUsersInGroup</td>
@@ -200,19 +196,19 @@ Följande API:er används i AEM Forms arbetsyta.
    <td>grantQueueAccess</td>
    <td>ProcessManagementQueueService</td>
    <td>grantQueueAccess</td>
-   <td>Den ger åtkomst till den inloggade användarens kö till den angivna användaren. Det är i princip att dela en egen kö med en annan användare.</td>
+   <td>Den ger åtkomst till den inloggade användarens kö till en angiven användare. Det är i princip att dela din egen kö med en annan användare.</td>
   </tr>
   <tr>
    <td>requestQueueAccess</td>
    <td>ProcessManagementQueueService</td>
    <td>requestQueueAccess</td>
-   <td>Den gör en åtkomstbegäran för kön med angiven användare för inloggad användare. Om användaren godkänner begäran delas användarens kö med den inloggade användaren.</td>
+   <td>Den gör en åtkomstbegäran för en kö med en angiven användare för den inloggade användaren. Om användaren godkänner begäran delas användarens kö med den inloggade användaren.</td>
   </tr>
   <tr>
    <td>getGrantedUsers</td>
    <td>ProcessManagementQueueService</td>
    <td>getGrantedUsers</td>
-   <td>Den returnerar alla användare som har åtkomst till kön med inloggade användare.</td>
+   <td>Den returnerar alla användare som har åtkomst till kön för den inloggade användaren.</td>
   </tr>
   <tr>
    <td>getUsersForAccessibleQueues</td>
@@ -224,31 +220,31 @@ Följande API:er används i AEM Forms arbetsyta.
    <td>revokeQueueAccess</td>
    <td>ProcessManagementQueueService</td>
    <td>revokeQueueAccess</td>
-   <td>Den tar bort en användare från listan över användare som har åtkomst till kön med inloggade användare.</td>
+   <td>Den tar bort en användare från listan över användare som har åtkomst till kön för den inloggade användaren.</td>
   </tr>
   <tr>
    <td>removeQueueAccess</td>
    <td>ProcessManagementQueueService</td>
    <td>removeQueueAccess</td>
-   <td>Den tar bort en användare från listan över användare vars kö är tillgänglig för inloggade användare.</td>
+   <td>Den tar bort en användare från listan över användare vars kö är tillgänglig för den inloggade användaren.</td>
   </tr>
   <tr>
    <td>getAllQueues<br /> </td>
    <td>ProcessManagementQueueService<br /> </td>
    <td>getAllQueues<br /> </td>
-   <td>Den får alla köer (egna, delade och gruppköer) tillgängliga för inloggad användare.<br /> </td>
+   <td>Den får alla köer (egna, delade och gruppköer) tillgängliga för den inloggade användaren.<br /> </td>
   </tr>
   <tr>
    <td>getOutOfOfficeSettings</td>
    <td>ProcessManagementOutOfOfficeService</td>
    <td>getOutOfOfficeSettings</td>
-   <td>Det blir användarens frånvaroinställningar.</td>
+   <td>Den hämtar användarens inställningar utanför kontoret.</td>
   </tr>
   <tr>
    <td>saveOutOfOfficeSettingsJson</td>
    <td>ProcessManagementOutOfOfficeService</td>
    <td>saveOutOfOfficeSettingsJson</td>
-   <td>Det sparar en användares frånvaroinställningar.</td>
+   <td>Det sparar användarens inaktiva inställningar.</td>
   </tr>
   <tr>
    <td>getAllProcesses</td>
@@ -260,7 +256,7 @@ Följande API:er används i AEM Forms arbetsyta.
    <td>getParticipatedProcesses</td>
    <td>ProcessManagementProcessService</td>
    <td>getParticipatedProcesses</td>
-   <td>Den returnerar en lista över alla processnamn som har deltagit av den inloggade användaren.</td>
+   <td>Den returnerar en lista med alla processnamn som den inloggade användaren har deltagit i.</td>
   </tr>
   <tr>
    <td>getProcessInstance<br /> </td>
@@ -308,7 +304,7 @@ Följande API:er används i AEM Forms arbetsyta.
    <td>getAssignmentsForTask</td>
    <td>ProcessManagementTaskService</td>
    <td>getAssignmentsForTask</td>
-   <td>Den hämtar alla tilldelningar för en uppgift. Till exempel:- Om en användare vidarebefordrar eller konsulterar en uppgift till en annan användare är detta en uppgift för en uppgift.</td>
+   <td>Den hämtar alla tilldelningar för en uppgift. Om en användare t.ex. vidarebefordrar eller konsulterar en uppgift till en annan användare, är det en uppgift.</td>
   </tr>
   <tr>
    <td>deleteAttachment </td>
@@ -332,7 +328,7 @@ Följande API:er används i AEM Forms arbetsyta.
    <td>getTaskOfDirectReport<br /> </td>
    <td>ProcessManagementTeamTasksService</td>
    <td>getDirectReportTask</td>
-   <td>Den returnerar aktiviteten för angiven direkt rapport för den inloggade hanteraren.</td>
+   <td>Den returnerar en uppgift från en angiven direkt rapport för den inloggade hanteraren.</td>
   </tr>
   <tr>
    <td>forwardTaskOfDirectReport</td>
@@ -344,7 +340,7 @@ Följande API:er används i AEM Forms arbetsyta.
    <td>rejectTaskOfDirectReport</td>
    <td>ProcessManagementTeamTasksService</td>
    <td>rejectTaskOfDirectReport</td>
-   <td>Den returnerar en uppgift som är en direkt rapport till föregående användare.</td>
+   <td>Den returnerar en uppgift som är en direkt rapport till den föregående användaren.</td>
   </tr>
   <tr>
    <td>getProperty</td>
@@ -374,13 +370,13 @@ Följande API:er används i AEM Forms arbetsyta.
    <td>getCurrentUserImageUrl</td>
    <td>ProcessManagementClientSessionService</td>
    <td>getCurrentUserImageUrl</td>
-   <td>Den hämtar användarens bild-URL för inloggad användare.</td>
+   <td>Den hämtar användarens bild-URL för den inloggade användaren.</td>
   </tr>
   <tr>
    <td>getUserImageUrl</td>
    <td>ProcessManagementClientSessionService</td>
    <td>getUserImageUrl</td>
-   <td>Den hämtar användarens bild-URL för angiven användare.</td>
+   <td>Den hämtar användarens bild-URL för den angivna användaren.</td>
   </tr>
   <tr>
    <td>uploadNote</td>
@@ -395,10 +391,10 @@ Följande API:er används i AEM Forms arbetsyta.
    <td>Den överför en bifogad fil på servern för en uppgift.</td>
   </tr>
   <tr>
-   <td>getImageURL (anropas även direkt från HTML-mallen)</td>
+   <td>getImageURL (anropas även direkt från mallen HTML)</td>
    <td>ProcessManagementDocumentHandlingService</td>
    <td>getImage</td>
-   <td>Den hämtar bilder för en process.</td>
+   <td>Den hämtar bilden för en process.</td>
   </tr>
  </tbody>
 </table>

@@ -1,30 +1,26 @@
 ---
 title: SharePoint Connector-licenser, copyrightmeddelanden och friskrivningsklausuler
-seo-title: SharePoint Connector Licenses, Copyright Notices, and Disclaimers
-description: Läs mer om SharePoint Connector Licenses, Copyright Notices and Disclaimers.
-seo-description: Learn about SharePoint Connector Licenses, Copyright Notices and Disclaimers.
-uuid: 182c8f0f-dcca-461a-9d8f-f05b376ad0cb
+description: Läs mer om SharePoint Connector-licenser, copyrightmeddelanden och ansvarsfriskrivning.
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
 content-type: reference
-discoiquuid: 56849775-3ac7-44a2-ab17-a707b001470e
 docset: aem65
 exl-id: b9342330-31f6-49cb-965e-4bab61f98d4c
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 474a726058b141985f52a0faec6161a34be1e9dc
 workflow-type: tm+mt
-source-wordcount: '362'
-ht-degree: 4%
+source-wordcount: '354'
+ht-degree: 5%
 
 ---
 
 # SharePoint Connector-licenser, copyrightmeddelanden och friskrivningsklausuler{#sharepoint-connector-licenses-copyright-notices-and-disclaimers}
 
-I detta avsnitt listas alla licenser, meddelanden om upphovsrätt och friskrivningar som måste anges uttryckligen i samband med Day JCR Connector för MS SharePoint.
+I det här avsnittet listas alla licenser, meddelanden om upphovsrätt och friskrivningar som måste anges uttryckligen i Day JCR Connector för MS® SharePoint.
 
-## Översikt över anslutning av bibliotek från tredje part {#overview-of-connector-rd-party-libraries}
+## Översikt över anslutning till bibliotek från tredje part {#overview-of-connector-rd-party-libraries}
 
-I följande tabell visas tredjepartsbibliotek som används i SharePoint Connector-huvudbiblioteken tillsammans med de licenser, copyrightmeddelanden och ansvarsfriskrivningar som de omfattas av:
+I följande tabell visas tredjepartsbibliotek som används i SharePoint Connector-huvudbiblioteken tillsammans med licenser, copyrightmeddelanden och ansvarsfriskrivningar som de omfattas av:
 
 | Bibliotek | Licenstyp |
 |---|---|
@@ -63,9 +59,9 @@ I följande tabell visas tredjepartsbibliotek som används i SharePoint Connecto
 | xml-apis | [Apache](#apache) (innehåller delar som täcks av Public Domain och W3C Software licenses) |
 | XmlSchema | [Apache](#apache) |
 
-## Översikt över CRX-bibliotek från tredje part {#overview-of-crx-rd-party-libraries}
+## Översikt över CRX Third Party Libraries {#overview-of-crx-rd-party-libraries}
 
-I följande tabell visas bibliotek från tredje part som används i CRX, tillsammans med de licenser, copyrightmeddelanden eller ansvarsfriskrivningar som de omfattas av:
+I följande tabell visas tredjepartsbibliotek som används i CRX, tillsammans med de licenser, copyrightmeddelanden eller ansvarsfriskrivningar som de omfattas av:
 
 <table>
  <colgroup>
@@ -157,7 +153,7 @@ I följande tabell visas bibliotek från tredje part som används i CRX, tillsam
 
 ## Översikt över CQSE-bibliotek från tredje part {#overview-of-cqse-rd-party-libraries}
 
-I följande tabell visas bibliotek från tredje part som används i Communiqué Servlet Engine, tillsammans med de licenser, copyrightmeddelanden eller ansvarsfriskrivningar som gäller för dem:
+I följande tabell visas tredjepartsbibliotek som används i Communiqué Servlet Engine, tillsammans med licenser, copyrightmeddelanden och ansvarsfriskrivningar som de omfattas av:
 
 <table>
  <colgroup>
@@ -1100,8 +1096,8 @@ I följande tabell visas bibliotek från tredje part som används i Communiqué 
      This license came from: https://www.w3.org/Consortium/Legal/
      copyright-documents-19990405
 
-     W3C® DOCUMENT NOTICE AND LICENSE
-     Copyright © 1994-2001 World
+     W3C&reg; DOCUMENT NOTICE AND LICENSE
+     Copyright &copy; 1994-2001 World
      Wide Web Consortium, World
      Wide Web Consortium, (Massachusetts Institute of
      Technology, Institut National de
@@ -1125,7 +1121,7 @@ I följande tabell visas bibliotek från tredje part som används i Communiqué 
      A link or URL to the original W3C document.
 
      The pre-existing copyright notice of the original author, or if
-     it doesn't exist, a notice of the form: "Copyright © [$date-of-document]
+     it doesn't exist, a notice of the form: "Copyright &copy; [$date-of-document]
      World Wide Web Consortium, (Massachusetts
      Institute of Technology, Institut National de Recherche en Informatique
      et en Automatique, Keio
@@ -1186,8 +1182,8 @@ I följande tabell visas bibliotek från tredje part som används i Communiqué 
      This license came from: <a href="https://www.w3.org/Consortium/Legal/" TARGET="_blank" >https://www.w3.org/Consortium/Legal/</a>
      copyright-software-19980720
 
-     W3C® SOFTWARE NOTICE AND LICENSE
-     Copyright © 1994-2001 World
+     W3C&reg; SOFTWARE NOTICE AND LICENSE
+     Copyright &copy; 1994-2001 World
      Wide Web Consortium, World
      Wide Web Consortium, (Massachusetts Institute of
      Technology, Institut National de
@@ -1213,7 +1209,7 @@ I följande tabell visas bibliotek från tredje part som används i Communiqué 
      terms and conditions. If none exist, a short notice of the
      following form (hypertext is preferred, text is permitted) should
      be used within the body of any redistributed or derivative code:
-     "Copyright © [$date-of-software] World Wide Web Consortium,
+     "Copyright &copy; [$date-of-software] World Wide Web Consortium,
      (Massachusetts Institute of Technology, Institut National de
      Recherche en Informatique et en Automatique, Keio University).
      All Rights Reserved.

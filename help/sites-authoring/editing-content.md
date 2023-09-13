@@ -1,24 +1,22 @@
 ---
 title: Redigera sidinnehåll
 description: När sidan har skapats kan du redigera innehållet för att få de uppdateringar du behöver.
-uuid: 5b4f0a8f-5196-42ea-8413-203783a0b77b
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: page-authoring
 content-type: reference
-discoiquuid: f92ed674-5865-4a53-8c3a-369536861f14
 docset: aem65
 exl-id: d5cf4478-51e4-4ca8-b3f8-6d7caed7d515
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 474a726058b141985f52a0faec6161a34be1e9dc
 workflow-type: tm+mt
-source-wordcount: '3067'
-ht-degree: 5%
+source-wordcount: '3016'
+ht-degree: 3%
 
 ---
 
 # Redigera sidinnehåll{#editing-page-content}
 
-När sidan har skapats (antingen ny eller som en del av en lansering eller en live-kopia) kan du redigera innehållet för att få de uppdateringar du behöver.
+När sidan har skapats (antingen ny eller som en del av en programstart eller en live-kopia) kan du redigera innehållet för att få de uppdateringar du behöver.
 
 Innehåll läggs till med [komponenter](/help/sites-authoring/default-components-console.md) (anpassat till innehållstypen) som kan dras till sidan. Du kan sedan redigera dem på plats, flytta eller ta bort dem.
 
@@ -26,11 +24,11 @@ Innehåll läggs till med [komponenter](/help/sites-authoring/default-components
 >
 >Ditt konto behöver [lämpliga åtkomsträttigheter](/help/sites-administering/security.md) och [behörigheter](/help/sites-administering/security.md#permissions) för att redigera sidor.
 >
->Om du råkar ut för problem rekommenderar vi att du kontaktar systemadministratören.
+>Om du råkar ut för några problem föreslår Adobe att du kontaktar systemadministratören.
 
 >[!NOTE]
 >
->Om sidan och/eller mallen har konfigurerats korrekt kan du använda [responsiv layout](/help/sites-authoring/responsive-layout.md) vid redigering.
+>Om sidan, mallen eller båda är korrekt konfigurerade kan du använda en [responsiv layout](/help/sites-authoring/responsive-layout.md) vid redigering.
 
 >[!NOTE]
 >
@@ -52,7 +50,7 @@ Verktygsfältet har många alternativ. Beroende på ditt aktuella sammanhang och
 
 * **Sidinformation**
 
-  Ger åtkomst till [Sidinformation](/help/sites-authoring/author-environment-tools.md#page-information) meny med sidinformation och åtgärder som kan vidtas på sidan, inklusive visning och redigering av sidinformation, visning av sidegenskaper samt publicering/avpublicering av sidan.
+  Den ger åtkomst till [Sidinformation](/help/sites-authoring/author-environment-tools.md#page-information) meny med sidinformation och åtgärder som kan vidtas på sidan, inklusive visning och redigering av sidinformation, visning av sidegenskaper samt publicering/avpublicering av sidan.
 
   ![Sidinformation](do-not-localize/screen_shot_2018-03-22at111437.png)
 
@@ -76,19 +74,19 @@ Verktygsfältet har många alternativ. Beroende på ditt aktuella sammanhang och
 
 * **Lägesväljare**
 
-  Visar aktuell [läge](/help/sites-authoring/author-environment-tools.md#page-modes) och låter dig välja ett annat läge, t.ex. redigering, layout, tidsförvrängning eller målinriktning.
+  Här visas den aktuella [läge](/help/sites-authoring/author-environment-tools.md#page-modes) och låter dig välja ett annat läge, t.ex. redigering, layout, tidsförvrängning eller målinriktning.
 
   ![Lägesväljare](assets/chlimage_1-120.png)
 
 * **Förhandsgranska**
 
-  Aktiverar [förhandsgranskningsläge](/help/sites-authoring/editing-content.md#preview-mode). Då visas sidan som den kommer att se ut när den publiceras.
+  Aktiverar [förhandsgranskningsläge](/help/sites-authoring/editing-content.md#preview-mode). Då visas sidan så som den ser ut när den publiceras.
 
   ![Förhandsgranskningsläge](assets/chlimage_1-121.png)
 
 * **Anteckna**
 
-  Gör att du kan lägga till [anteckningar](/help/sites-authoring/annotations.md) till sidan när du granskar en sida. Efter den första anteckningen växlar ikonen till ett nummer som anger antalet anteckningar på sidan.
+  Du kan lägga till [anteckningar](/help/sites-authoring/annotations.md) till sidan när du granskar en sida. Efter den första anteckningen växlar ikonen till ett nummer som anger antalet anteckningar på sidan.
 
   ![Anteckna](do-not-localize/screen_shot_2018-03-22at111638.png)
 
@@ -104,9 +102,9 @@ Om en sida är en del av en [arbetsflöde](/help/sites-authoring/workflows.md) f
 
 I meddelandet visas arbetsflödet som körs mot sidan. Om användaren är involverad i det aktuella arbetsflödessteget kan du välja [påverka arbetsflödets status](/help/sites-authoring/workflows-participating.md) och det finns även mer information om arbetsflödet:
 
-* **Complete** - Öppnar **Slutför arbetsuppgift** dialog
+* **Complete** - Öppnar **Slutför arbetsuppgift** dialogruta
 
-* **Delegera** - Öppnar **Slutför arbetsuppgift** dialog
+* **Delegera** - Öppnar **Slutför arbetsuppgift** dialogruta
 
 * **Visa detaljer** - Öppnar **Information** arbetsflödets fönster
 
@@ -120,7 +118,7 @@ Om sidan har flera arbetsflöden visas antalet arbetsflöden till höger om medd
 
 Komponentplatshållaren är en indikator som visar var en komponent placeras när du släpper den - ovanför den komponent som du håller pekaren över.
 
-* När du lägger till en ny komponent på sidan (drar från komponentwebbläsaren):
+* När du lägger till en komponent på sidan (drar från komponentwebbläsaren):
 
   ![lägga till en ny komponent](assets/screen_shot_2018-03-22at111928.png)
 
@@ -132,7 +130,7 @@ Komponentplatshållaren är en indikator som visar var en komponent placeras nä
 
 ### Infoga en komponent från komponentwebbläsaren {#inserting-a-component-from-the-components-browser}
 
-Du kan lägga till en ny komponent med [komponentwebbläsare](/help/sites-authoring/author-environment-tools.md#components-browser). The [platshållare för komponent](#component-placeholder) visar var komponenten kommer att placeras:
+Du kan lägga till en komponent med [komponentwebbläsare](/help/sites-authoring/author-environment-tools.md#components-browser). The [platshållare för komponent](#component-placeholder) visar var komponenten är placerad:
 
 1. Kontrollera att sidan finns i [**Redigera** läge](/help/sites-authoring/author-environment-tools.md#page-modes).
 1. Öppna [komponentwebbläsare](/help/sites-authoring/author-environment-tools.md#components-browser).
@@ -146,10 +144,10 @@ Du kan lägga till en ny komponent med [komponentwebbläsare](/help/sites-author
 
 ### Infoga en komponent från styckesystemet {#inserting-a-component-from-the-paragraph-system}
 
-Du kan lägga till en ny komponent med **Dra komponenter hit** styckesystemets ruta:
+Du kan lägga till en komponent med **Dra komponenter hit** styckesystemets ruta:
 
 1. Kontrollera att sidan finns i [**Redigera** läge](/help/sites-authoring/author-environment-tools.md#page-modes).
-1. Det finns två sätt att markera och lägga till en ny komponent från styckesystemet:
+1. Det finns två sätt att markera och lägga till en komponent från styckesystemet:
 
    * Välj **Infoga komponent** (+) i verktygsfältet för en befintlig komponent eller **Dra komponenter hit** box.
 
@@ -157,7 +155,7 @@ Du kan lägga till en ny komponent med **Dra komponenter hit** styckesystemets r
 
    * Om du använder en stationär enhet kan du dubbelklicka på **Dra komponenter hit** box.
 
-   The **Infoga ny komponent** öppnas så att du kan välja önskad komponent:
+   The **Infoga ny komponent** öppnas en dialogruta där du kan välja önskad komponent:
 
    ![Infoga ny komponent](assets/screen_shot_2018-03-22at112650.png)
 
@@ -165,9 +163,9 @@ Du kan lägga till en ny komponent med **Dra komponenter hit** styckesystemets r
 
 ### Infoga en komponent med Resursläsaren {#inserting-a-component-using-the-assets-browser}
 
-Du kan också lägga till en ny komponent på sidan genom att dra en resurs från [resurshanterare](/help/sites-authoring/author-environment-tools.md#assets-browser). Då skapas automatiskt en ny komponent av lämplig typ (och som innehåller resursen).
+Du kan också lägga till en komponent på sidan genom att dra en resurs från [resurshanterare](/help/sites-authoring/author-environment-tools.md#assets-browser). Då skapas automatiskt en komponent av lämplig typ (och som innehåller resursen).
 
-Detta gäller för följande tillgångstyper (vissa kommer att vara beroende av sid-/styckesystem):
+Detta gäller för följande tillgångstyper (vissa är beroende av sidan/styckesystemet):
 
 <table>
  <tbody>
@@ -206,49 +204,49 @@ Så här skapar du en komponent genom att dra en av resurstyperna ovan:
 
 1. Kontrollera att sidan finns i [**Redigera** läge](/help/sites-authoring/author-environment-tools.md#page-modes).
 1. Öppna [resursläsare](/help/sites-authoring/author-environment-tools.md#assets-browser).
-1. Dra den önskade resursen till önskad position. The [platshållare för komponent](#component-placeholder) visar var komponenten kommer att placeras.
+1. Dra den önskade resursen till önskad position. The [platshållare för komponent](#component-placeholder) visar var komponenten är placerad.
 
-   En komponent som passar resurstypen skapas på den önskade platsen, den innehåller den valda resursen.
+   En komponent som passar för resurstypen skapas på den önskade platsen - den innehåller den valda resursen.
 
-1. [Redigera](#editmovecopypastedelete) komponenten om det behövs.
+1. [Redigera](#editmovecopypastedelete) komponenten, om det behövs.
 
 >[!NOTE]
 >
 >På en mobil enhet fyller resursläsaren hela skärmen. När du börjar dra en resurs stängs webbläsaren och sidan visas igen så att du kan montera resursen.
 
-Om du behöver göra en snabb ändring i en resurs när du bläddrar bland resurserna kan du starta [tillgångsredigerare](/help/assets/manage-assets.md) direkt från webbläsaren genom att klicka på redigeringsikonen bredvid resursens namn.
+När du bläddrar bland resurserna och upptäcker att du måste göra en snabb ändring i en resurs, klickar du på redigeringsikonen bredvid resursens namn för att starta [Resursredigeraren](/help/assets/manage-assets.md).
 
 ![redigeringsikon](assets/screen_shot_2018-03-22at112735.png)
 
 ## Redigera/konfigurera/kopiera/klipp/ta bort/klistra in {#edit-configure-copy-cut-delete-paste}
 
-Om du väljer en komponent öppnas verktygsfältet. Detta ger åtkomst till olika åtgärder som kan utföras på komponenten.
+När du väljer en komponent öppnas verktygsfältet. Detta ger åtkomst till olika åtgärder som kan utföras på komponenten.
 
-De faktiska åtgärder som är tillgängliga för användaren visas som lämpliga och inte alla åtgärder beskrivs här.
+De faktiska åtgärder som är tillgängliga för användaren visas som lämpliga och alla åtgärder kan inte beskrivas här.
 
 ![alternativ i verktygsfältet](assets/screen_shot_2018-03-22at112909.png)
 
 * **Redigera**
 
-  [Beroende på komponenttypen](/help/sites-authoring/default-components.md) det här låter dig [redigera innehållet i komponenten](#edit-content). Ofta finns det ett verktygsfält.
+  [Beroende på komponenttypen](/help/sites-authoring/default-components.md)så kan du [redigera innehållet i komponenten](#edit-content). Ofta finns det ett verktygsfält.
 
   ![Redigera](do-not-localize/screen_shot_2018-03-22at112936.png)
 
 * **Konfigurera**
 
-  [Beroende på komponenttypen](/help/sites-authoring/default-components.md) Då kan du redigera och konfigurera komponentens egenskaper. Ofta öppnas en dialogruta.
+  [Beroende på komponenttypen](/help/sites-authoring/default-components.md) gör att du kan redigera och konfigurera komponentens egenskaper. Ofta öppnas en dialogruta.
 
   ![Konfigurera](do-not-localize/screen_shot_2018-03-22at112955.png)
 
 * **Kopiera**
 
-  Komponenten kopieras då till Urklipp. När inklistringsåtgärden är klar finns den ursprungliga komponenten kvar.
+  Komponenten kopieras till Urklipp. Den ursprungliga komponenten behålls efter en inklistring.
 
   ![Kopiera](do-not-localize/screen_shot_2018-03-22at113000.png)
 
 * **Klipp ut**
 
-  Komponenten kopieras då till Urklipp. När inklistringsåtgärden har utförts tas den ursprungliga komponenten bort.
+  Komponenten kopieras till Urklipp. Efter inklistringsåtgärden tas den ursprungliga komponenten bort.
 
   ![Klipp ut](assets/screen_shot_2018-03-22at113007.png)
 
@@ -260,13 +258,13 @@ De faktiska åtgärder som är tillgängliga för användaren visas som lämplig
 
 * **Infoga komponent**
 
-  Dialogrutan öppnas [lägga till en ny komponent](/help/sites-authoring/editing-content.md#inserting-a-component-from-the-paragraph-system).
+  Dialogrutan öppnas för [lägga till en komponent](/help/sites-authoring/editing-content.md#inserting-a-component-from-the-paragraph-system).
 
   ![Infoga komponent](do-not-localize/screen_shot_2018-03-22at113017.png)
 
 * **Klistra in**
 
-  Komponenten klistras in från Urklipp till sidan. Om originalet finns kvar beror på om du har använt kopian eller klippet.
+  Komponenten klistras in från Urklipp till sidan. Om originalet ska behållas beror på om du har använt kopian eller klippet.
 
    * Du kan klistra in på samma sida eller på en annan sida.
    * Det inklistrade objektet klistras in ovanför objektet där du väljer åtgärden Klistra in.
@@ -286,7 +284,7 @@ De faktiska åtgärder som är tillgängliga för användaren visas som lämplig
 
 * **Överordnad**
 
-  Gör att du kan markera den överordnade komponenten för den markerade komponenten.
+  På så sätt kan du markera den överordnade komponenten för den markerade komponenten.
 
   ![Överordnad](assets/screen_shot_2018-03-22at113028.png)
 
@@ -296,15 +294,15 @@ De faktiska åtgärder som är tillgängliga för användaren visas som lämplig
 
   ![Layout](do-not-localize/screen_shot_2018-03-22at113044.png)
 
-* **Konvertera till en upplevelsefragmentvariation**
+* **Konvertera till en Experience Fragment-variation**
 
-  Detta gör att du kan skapa en ny [upplevelsefragment](/help/sites-authoring/experience-fragments.md) från den markerade komponenten eller lägg till den i ett befintligt upplevelsefragment.
+  Detta gör att du kan skapa en [Experience Fragment](/help/sites-authoring/experience-fragments.md) från den markerade komponenten eller lägg till den i ett befintligt Experience Fragment.
 
   ![Konvertera till Experience Fragment Variation](do-not-localize/screen_shot_2018-03-22at113033.png)
 
 ## Redigera (innehåll) {#edit-content}
 
-Det finns två sätt att lägga till och/eller redigera innehåll i komponenter:
+Det finns två sätt att lägga till eller redigera innehåll i komponenter:
 
 * Öppna [komponentdialogruta för redigering](#component-edit-dialog).
 * [Dra och släpp en resurs](#draganddropintocomponent) från resursläsaren för att lägga till innehåll direkt.
@@ -328,11 +326,11 @@ De exakta redigeringsalternativen beror på komponenten. För vissa komponenter 
   >Redigering fungerar inte på en tom bildkomponent.
   >
   >
-  >Du måste [dra eller överföra en bild (med Konfigurera)](/help/sites-authoring/default-components-foundation.md#image) innan du kan börja redigera den.
+  >[Dra eller överföra en bild (med Konfigurera)](/help/sites-authoring/default-components-foundation.md#image) innan du kan börja redigera den.
 
 * Bildkomponent - helskärm
 
-  [Om du aktiverar helskärmsläget](/help/sites-authoring/editing-content.md#edit-content-full-screen-mode) för bildkomponenten får du mer plats att redigera bilden och dessutom visas extra redigeringsalternativ som **Startkarta** och **Återställ zoomning**. I helskärmsläget kan du dessutom välja förinställningar för beskärning.
+  [Gå in i helskärmsläge](/help/sites-authoring/editing-content.md#edit-content-full-screen-mode) för bildkomponenten ger mer utrymme för att redigera bilden och visa extra redigeringsalternativ som **Starta karta** och **Återställ zoomning**. I helskärmsläget kan du dessutom välja förinställningar för beskärning.
 
   ![Bildkomponent, helskärm](assets/screen_shot_2018-03-22at120529.png)
 
@@ -383,13 +381,13 @@ Så här flyttar du en styckekomponent:
 
 ## Redigera komponentlayout {#edit-component-layout}
 
-I stället för att växla från redigeringsläge till [layoutläge](/help/sites-authoring/responsive-layout.md) gång på gång för att justera en komponent, kan du välja åtgärden **Layout** för en komponent när du vill ändra dess layout och spara tid eftersom du slipper lämna redigeringsläget.
+I stället för att växla från redigering till [layoutläge](/help/sites-authoring/responsive-layout.md) om du vill justera en komponent kan du markera **Layout** åtgärd för en komponent för att ändra den komponentens layout. Detta sparar tid genom att du inte behöver lämna redigeringsläget.
 
-1. När **Redigera** platskonsolens läge. Om du väljer en komponent visas komponentens verktygsfält.
+1. När i **Redigera** platskonsolens läge. Om du väljer en komponent visas komponentens verktygsfält.
 
    ![Redigeringsläge i formulär](assets/screen_shot_2018-03-22at133756.png)
 
-   Klicka eller tryck på **Layout** åtgärd för att justera komponentens layout.
+   Klicka eller tryck på **Layout** så att du kan justera komponentens layout.
 
    ![Komponentverktygsfältet](do-not-localize/chlimage_1-21.png)
 
@@ -409,9 +407,9 @@ I stället för att växla från redigeringsläge till [layoutläge](/help/sites
 
 >[!NOTE]
 >
->Layoutåtgärden är begränsad i omfång till den markerade komponenten. Om du till exempel redigerar layouten för en komponent och sedan klickar på en annan komponent, visas standardverktygsfältet för redigering (inte verktygsfältet för layout) för den nyligen markerade komponenten och handtagen för storleksändring samt emulatorns verktygsfält.
+>Layoutåtgärden är begränsad i omfång till den markerade komponenten. Om du till exempel redigerar layouten för en komponent och sedan markerar en annan komponent, visas standardverktygsfältet för redigering (inte layoutverktygsfältet) för den nyligen markerade komponenten. Storlekshandtagen och emulatorns verktygsfält försvinner.
 >
->Om du behöver redigera sidans övergripande layout, vilket påverkar flera komponenter, växlar du till [layoutläge](/help/sites-authoring/responsive-layout.md).
+>Om du måste redigera sidans övergripande layout, vilket påverkar flera komponenter, växlar du till [layoutläge](/help/sites-authoring/responsive-layout.md).
 
 ## Ärvda komponenter {#inherited-components}
 
@@ -491,11 +489,11 @@ Det finns två alternativ för att förhandsgranska en sida:
 
 ### Förhandsgranskningsläge {#preview-mode}
 
-När du redigerar innehåll kan du förhandsgranska sidan med förhandsgranskningen [läge](/help/sites-authoring/author-environment-tools.md#page-modes). Det här läget:
+När du redigerar innehåll kan du förhandsgranska sidan med förhandsgranskningen [läge](/help/sites-authoring/author-environment-tools.md#page-modes). I det här läget kan du göra följande:
 
-* Döljer olika redigeringsmekanismer så att du snabbt kan se hur sidan kommer att se ut vid publiceringen.
-* Gör att du kan använda länkar för att navigera.
-* Gör **not** uppdatera sidinnehållet.
+* Dölja olika redigeringsfunktioner så att du kan få en snabb överblick över hur sidan visas när den publiceras.
+* Navigera med hjälp av länkar.
+* Det gör det **not** uppdatera sidinnehållet.
 
 Vid redigering är förhandsgranskningsläget tillgängligt med hjälp av ikonen längst upp till höger i sidredigeraren:
 
@@ -503,11 +501,11 @@ Vid redigering är förhandsgranskningsläget tillgängligt med hjälp av ikonen
 
 ### Visa som publicerad {#view-as-published}
 
-The **Visa som publicerad** är tillgängligt från [Sidinformation](/help/sites-authoring/author-environment-tools.md#page-information) -menyn. Sidan öppnas på en ny flik, innehållet uppdateras och sidan visas exakt som den kommer att visas i publiceringsmiljön.
+The **Visa som publicerad** är tillgängligt från [Sidinformation](/help/sites-authoring/author-environment-tools.md#page-information) -menyn. Då öppnas sidan på en ny flik, innehållet uppdateras och sidan visas exakt som den ser ut när den publiceras.
 
 ## Låsa en sida {#locking-a-page}
 
-AEM kan du låsa en sida så att ingen annan kan ändra innehållet. Det här är användbart när du gör många ändringar på en viss sida eller när du behöver frysa en sida en kort stund.
+AEM kan du låsa en sida så att ingen annan kan ändra innehållet. Detta är användbart när du gör flera ändringar på en viss sida eller när du måste frysa en sida en kort stund.
 
 En sida kan låsas från:
 
@@ -520,7 +518,7 @@ En sida kan låsas från:
 
 * **Page Editor**
 
-   1. Välj **Sidinformation** -ikonen för att öppna menyn.
+   1. Om du vill öppna menyn väljer du **Sidinformation** -ikon.
    1. Välj **Lås sida** alternativ.
 
 När konsolvyn är låst uppdateras informationen och när du redigerar en låssymbol visas den i verktygsfältet.
@@ -535,7 +533,7 @@ När konsolvyn är låst uppdateras informationen och när du redigerar en låss
 
 ## Låsa upp en sida {#unlocking-a-page}
 
-Låsa upp en sida påminner mycket om [låsa sidan](#locking-a-page). När sidan är låst ersätts låsalternativen av upplåsningsåtgärder.
+Att låsa upp en sida påminner om [låsa sidan](#locking-a-page). När sidan är låst ersätts låsalternativen av upplåsningsåtgärder.
 
 På menyn Sidinformation visas **Lås upp** som ett alternativ och låsikonen på Sites-konsolen ersätts av en **Lås upp**-ikon.
 
@@ -569,11 +567,11 @@ Med följande ikoner kan du ångra eller göra om en åtgärd. Dessa visas i ver
 >
 >Systemadministratören kan [konfigurera olika aspekter av funktionerna Ångra/Gör om](/help/sites-administering/config-undo.md) enligt kraven för din instans.
 
-AEM lagrar en historik över åtgärder som du utför och i vilken ordning du utförde dem, så att du kan ångra flera åtgärder i den ordning som du utförde dem samt göra om dem för att återanvända en eller flera av åtgärderna om det behövs.
+AEM lagrar en historik över åtgärder som du utför och i vilken ordning du utförde dem. Den här funktionen innebär att du kan ångra flera åtgärder i den ordning som du utförde dem och göra om dem för att återanvända en eller flera av åtgärderna, om det behövs.
 
 Om ett element på innehållssidan är markerat (till exempel en textkomponent) gäller kommandot ångra och gör om det markerade objektet.
 
-Funktionen för kommandona Ångra och Gör om liknar den i andra program. Använd kommandona för att återställa webbsidans senaste status när du fattar beslut om innehållet. Om du till exempel flyttar ett textstycke till en annan plats på sidan kan du använda kommandot Ångra för att flytta tillbaka stycket. Om du sedan bestämmer dig för att den föregående positionen var bättre använder du kommandot gör om för att ångra.
+Funktionen för kommandona Ångra och Gör om liknar den i andra program. Använd kommandona för att återställa webbsidans senaste status när du bestämmer dig för innehåll. Om du till exempel flyttar ett textstycke till en annan plats på sidan kan du använda kommandot Ångra för att flytta tillbaka stycket. Om du sedan bestämmer dig för att den föregående positionen var bättre använder du kommandot gör om för att ångra.
 
 >[!NOTE]
 >
@@ -598,4 +596,4 @@ Formulärfält som formulärkomponenter återger ska inte ha värden som anges v
 
 >[!NOTE]
 >
->Historiken för ändringar av filer och bilder varar i minst tio timmar. Efter den här gången kan du dock inte ångra ändringarna. Administratören kan ändra standardtiden på tio timmar.
+>Historiken för ändringar av filer och bilder varar i minst tio timmar. Efter denna tid kan man dock inte garantera att ändringarna återförs. Administratören kan ändra standardtiden på tio timmar.
