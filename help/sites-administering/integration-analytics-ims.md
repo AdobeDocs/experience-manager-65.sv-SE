@@ -2,9 +2,9 @@
 title: Integrering med Adobe Analytics med IMS
 description: Läs om hur du integrerar AEM med Adobe Analytics med IMS
 exl-id: 2833a6df-ef32-48ab-8395-0f26816f8443
-source-git-commit: 06ed2329840e151083bd238ee3a4d33663463c9c
+source-git-commit: fd8bb7d3d9040e0a7a6b2f65751445f41aeab73e
 workflow-type: tm+mt
-source-wordcount: '1085'
+source-wordcount: '1068'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ Integreringen av AEM med Adobe Analytics via API:t för Analytics Standard kräv
 
 Innan du börjar med den här proceduren:
 
-* [Stöd för Adobe](https://helpx.adobe.com/se/contact/enterprise-support.ec.html) måste tillhandahålla ditt konto för:
+* [Stöd för Adobe](https://experienceleague.adobe.com/?support-solution=General&amp;support-tab=home#support) måste tillhandahålla ditt konto för:
 
    * Adobe Console
    * Adobe Developer Console
@@ -38,7 +38,7 @@ Innan du börjar med den här proceduren:
 * Din organisations systemadministratör bör använda Admin Console för att lägga till de utvecklare som behövs i organisationen till de relevanta produktprofilerna.
 
    * Detta ger specifika utvecklare behörighet att aktivera integreringar i Adobe Developer Console.
-   * Mer information finns i [Hantera utvecklare](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/manage-developers.ug.html).
+   * Se [Hantera utvecklare](https://helpx.adobe.com/enterprise/using/manage-developers.html).
 
 
 ## Konfigurera en IMS-konfiguration - Generera en offentlig nyckel {#configuring-an-ims-configuration-generating-a-public-key}
@@ -46,7 +46,7 @@ Innan du börjar med den här proceduren:
 Det första steget i konfigurationen är att skapa en IMS-konfiguration i AEM och generera den offentliga nyckeln.
 
 1. Öppna AEM **verktyg** -menyn.
-1. I **Säkerhet** avsnittsmarkera **Adobe IMS-konfigurationer**.
+1. I **Säkerhet** avsnitt, markera **Adobe IMS-konfigurationer**.
 1. Välj **Skapa** för att öppna **Adobe IMS Technical Account Configuration**.
 1. Använda listrutan under **Molnkonfiguration**, markera **Adobe Analytics**.
 1. Aktivera **Skapa nytt certifikat** och ange ett nytt alias.
@@ -58,21 +58,21 @@ Det första steget i konfigurationen är att skapa en IMS-konfiguration i AEM oc
 
    >[!CAUTION]
    >
-   >Ha den här konfigurationen öppen, den behövs igen när [Slutför IMS-konfigurationen i AEM](#completing-the-ims-configuration-in-aem).
+   >Låt konfigurationen vara öppen. Den behövs igen när [Slutför IMS-konfigurationen i AEM](#completing-the-ims-configuration-in-aem).
 
    ![Dialogrutan Info där du kan lägga till nyckeln i Adobe I/O](assets/integrate-analytics-io-02.png)
 
 ## Konfigurera IMS för Adobe Analytics-integrering med AEM {#configuring-ims-for-adobe-analytics-integration-with-aem}
 
-Med Adobe Developer Console måste du skapa ett projekt (integration) med Adobe Analytics (för AEM) och sedan tilldela de behörigheter som krävs.
+Med Adobe Developer Console skapar du ett projekt (integration) med Adobe Analytics (för AEM) och tilldelar sedan de behörigheter som krävs.
 
 ### Skapa projektet {#creating-the-project}
 
-Öppna Adobe Developer Console och skapa ett projekt med Adobe Analytics som AEM ska använda:
+Öppna Adobe Developer Console för att skapa ett projekt med Adobe Analytics som AEM kan använda:
 
 >[!CAUTION]
 >
->För närvarande stöder vi endast Adobe Developer Console **Tjänstkonto (JWT)** autentiseringsuppgiftstyp.
+>För närvarande stöder Adobe endast Adobe Developer Console **Tjänstkonto (JWT)** autentiseringsuppgiftstyp.
 >
 >Använd inte **OAuth Server-till-server** autentiseringsuppgiftstyp, som kommer att stödjas i framtiden.
 
@@ -80,11 +80,11 @@ Med Adobe Developer Console måste du skapa ett projekt (integration) med Adobe 
 
    [https://developer.adobe.com/console/projects](https://developer.adobe.com/console/projects)
 
-1. Alla projekt du har visas. Välj **Skapa nytt projekt** - platsen och användningen beror på:
+1. Alla projekt du har visas. Välj **Skapa nytt projekt** - platsen och användningen beror på följande:
 
-   * Om du inte har något projekt än, **Skapa nytt projekt** kommer att vara i mitten, nederst.
+   * Om du inte har något projekt än, **Skapa nytt projekt** är centrerad, nederst.
      ![Skapa nytt projekt - första projektet](assets/integration-analytics-io-02.png)
-   * Om du redan har befintliga projekt listas dessa och **Skapa nytt projekt** kommer att vara överst till höger.
+   * Om du redan har befintliga projekt visas dessa och **Skapa nytt projekt** finns uppe till höger.
      ![Skapa nytt projekt - flera projekt](assets/integration-analytics-io-03.png)
 
 
@@ -116,11 +116,11 @@ Med Adobe Developer Console måste du skapa ett projekt (integration) med Adobe 
 
    ![Välj önskade produktprofiler](assets/integration-analytics-io-16.png)
 
-1. Konfigurationen kommer att bekräftas.
+1. Konfigurationen har bekräftats.
 
 ### Tilldela behörigheter till integreringen {#assigning-privileges-to-the-integration}
 
-Du måste nu tilldela nödvändig behörighet till integreringen:
+Tilldela nu de nödvändiga behörigheterna till integreringen:
 
 1. Öppna Adobe **Admin Console**:
 
@@ -137,7 +137,7 @@ På Adobe Developer Projects-konsolen ser du en lista över alla dina integratio
 
 * [https://developer.adobe.com/console/projects](https://developer.adobe.com/console/projects)
 
-Välj en specifik projektpost om du vill visa mer information om konfigurationen. Bland dessa finns:
+Om du vill visa mer information om konfigurationen väljer du en specifik projektpost. Bland dessa finns:
 
 * Projektöversikt
 * Insikter
@@ -148,11 +148,11 @@ Välj en specifik projektpost om du vill visa mer information om konfigurationen
 * APIS
    * Exempel: Adobe Analytics
 
-Några av dessa behöver du för att slutföra integreringen av Adobe Analytics i AEM.
+Vissa av dessa måste integreras för Adobe Analytics i AEM.
 
 ## Slutför IMS-konfigurationen i AEM {#completing-the-ims-configuration-in-aem}
 
-Om du går tillbaka till AEM kan du slutföra IMS-konfigurationen genom att lägga till obligatoriska värden från integrationsprojektet för Analytics:
+Om du går tillbaka till AEM kan du slutföra IMS-konfigurationen genom att lägga till de värden som krävs från integreringsprojektet för Analytics:
 
 1. Återgå till [IMS-konfiguration öppnas i AEM](#configuring-an-ims-configuration-generating-a-public-key).
 1. Välj **Nästa**.
@@ -190,7 +190,7 @@ Så här bekräftar du att konfigurationen fungerar som förväntat:
 
    ![IMS-konfiguration - kontrollera hälsa](assets/integrate-analytics-io-12.png)
 
-1. Om du lyckas visas ett bekräftelsemeddelande.
+1. Om det lyckas visas ett bekräftelsemeddelande.
 
 ## Konfigurera Adobe Analytics Cloud-tjänsten {#configuring-the-adobe-analytics-cloud-service}
 
@@ -201,7 +201,7 @@ Det går nu att referera till konfigurationen för en Cloud Service som använde
 
    The **Skapa konfiguration** öppnas.
 
-1. Ange en **Titel** och, om du vill, en **Namn** (Om inget anges genereras detta från titeln).
+1. Ange en **Titel** och, om du vill, en **Namn** (om det lämnas tomt genereras det från titeln).
 
    Du kan också välja önskad mall (om fler än en är tillgänglig).
 
@@ -215,12 +215,12 @@ Det går nu att referera till konfigurationen för en Cloud Service som använde
 
    * **IMS-konfiguration**: välj namnet på IMS-konfigurationen
 
-1. Klicka **Anslut till Analytics** för att initiera anslutningen till Adobe Analytics.
+1. Om du vill initiera anslutningen till Adobe Analytics klickar du på **Anslut till Analytics**.
 
    Om anslutningen lyckas visas meddelandet **Anslutningen lyckades** visas.
 
 1. Välj **OK** i meddelandet.
 
-1. Fyll i andra parametrar efter behov, följt av **OK** i dialogrutan för att bekräfta konfigurationen.
+1. Fyll i andra parametrar efter behov, följt av **OK** i dialogrutan så att du kan bekräfta konfigurationen.
 
-1. Du kan nu fortsätta till [Lägga till ett analysramverk](/help/sites-administering/adobeanalytics-connect.md) för att konfigurera parametrar som ska skickas till Adobe Analytics.
+1. Du kan nu fortsätta till [Lägga till ett analysramverk](/help/sites-administering/adobeanalytics-connect.md) för att konfigurera parametrar som skickas till Adobe Analytics.

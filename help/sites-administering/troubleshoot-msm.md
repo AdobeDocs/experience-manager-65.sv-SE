@@ -4,9 +4,9 @@ description: Ta reda på hur du felsöker de vanligaste MSM-relaterade problemen
 feature: Multi Site Manager
 role: Admin
 exl-id: 23f3391b-5ce3-48e1-ab27-a37737778089
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: fd8bb7d3d9040e0a7a6b2f65751445f41aeab73e
 workflow-type: tm+mt
-source-wordcount: '764'
+source-wordcount: '761'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 0%
 Om du upplever något du tycker är felaktigt eller ett fel i MSM ska du se till att du före felsökningen och den detaljerade felsökningen gör så här:
 
 * Kontrollera [Vanliga frågor om MSM](#faq) eftersom dina problem eller frågor redan kan åtgärdas där.
-* Kontrollera [Artiklar om bästa praxis för MSM](msm-best-practices.md) som ett antal tips ges tillsammans med förtydliganden av ett antal missuppfattningar.
+* Kontrollera [Artiklar om bästa praxis för MSM](msm-best-practices.md) eftersom det ges flera tips tillsammans med förtydliganden av vissa missuppfattningar.
 
 ## Hitta avancerad information om din plan- och Live Copy-status {#advanced-info}
 
@@ -39,24 +39,24 @@ Dessa servrar genererar felsökningsloggmeddelanden via `com.day.cq.wcm.msm` log
 
 ## Kontrollera MSM-specifik information i databasen {#checking-repo}
 
-De tidigare servletarna returnerade beräknad information baserat på MSM-specifika noder och mixins. Informationen lagras i databasen på följande sätt.
+De tidigare servletarna returnerade beräknad information baserat på de MSM-specifika noderna och mixinerna. Informationen lagras i databasen på följande sätt.
 
 * `cq:LiveSync` blandningstyp
    * Detta är inställt på `jcr:content` noder och definiera Live Copy-rotsidor.
-   * Sidorna har en `cq:LiveSyncConfig` underordnad nod av typen `cq:LiveCopy` som kommer att innehålla grundläggande och obligatorisk information om Live Copy via följande egenskaper:
+   * Dessa sidor har en `cq:LiveSyncConfig` underordnad nod av typen `cq:LiveCopy` som innehåller grundläggande och obligatorisk information om Live Copy via följande egenskaper:
       * `cq:master` pekar på Live Copy-sidan.
-      * `cq:rolloutConfigs` visar aktiva utrullningskonfigurationer som tillämpas på Live Copy.
+      * `cq:rolloutConfigs` visar aktiva utrullningskonfigurationer som tillämpas på Live-kopian.
       * `cq:isDeep` true if the child pages of this root Live Copy page are included in the Live Copy.
 * `cq:LiveRelationship` blandningstyp
    * En Live Copy-sida har en sådan blandningstyp på sin `jcr:content` nod.
-   * Om så inte är fallet har sidan vid något tillfälle kopplats loss eller skapats manuellt via redigeringsgränssnittet utanför en Live Copy-åtgärd (skapa eller utrulla).
+   * Om så inte är fallet har sidan vid något tillfälle kopplats loss eller skapats manuellt via redigeringsgränssnittet utanför en Live Copy-åtgärd (skapa eller rulla ut).
 * `cq:LiveSyncCancelled` blandningstyp
    * Tillagd i `jcr:content` noder med Live Copy-sidor som har pausats.
    * Om uppehållet även gäller för underordnade sidor, är en `cq:isCancelledForChildren` egenskapen är inställd på true på samma nod.
 
 Informationen i dessa egenskaper bör återspeglas i användargränssnittet, men vid felsökning kan det vara bra att observera MSM-beteenden direkt i databasen när MSM-åtgärder utförs.
 
-Att känna till dessa egenskaper kan också vara användbart för att fråga databasen och ta reda på uppsättningar med sidor som är i vissa lägen. Till exempel:
+Att känna till dessa egenskaper kan också vara användbart för att fråga databasen och få reda på uppsättningar med sidor som är i vissa lägen. Till exempel:
 
 * `select * from cq:LiveSync` returnerar alla Live Copy-rotsidor.
 
@@ -81,14 +81,14 @@ Du kan också:
 
 ### Varför visas Live Copy-sidor med suffixet&quot;_msm_move&quot;? {#moved-pages}
 
-Om en ritningssida introduceras uppdaterar den antingen sin Live Copy-sida eller skapar en ny Live Copy-sida om den inte finns än (t.ex. när den introduceras för första gången eller när Live Copy-sidan tas bort manuellt).
+Om en ritningssida introduceras uppdaterar den antingen sin Live Copy-sida eller skapar en ny Live Copy-sida om den inte finns än. Till exempel när den rullas ut för första gången eller när sidan Live-kopia togs bort manuellt.
 
-I det senare fallet om en sida utan `cq:LiveRelationship` -egenskapen finns med samma namn. Sidans namn ändras därefter innan sidan Live Copy skapas.
+I det senare fallet om en sida utan `cq:LiveRelationship` egenskapen finns med samma namn. Sidans namn ändras innan sidan Live Copy skapas.
 
-Som standard förväntas en länkad Live Copy-sida, till vilken uppdateringarna av ritningarna kommer att rullas ut, eller ingen sida på, när en Live Copy-sida skapas.
+Som standard förväntar sig utrullningen en länkad Live Copy-sida, till vilken uppdateringarna av ritningarna rullas ut. Eller så förväntas ingen sida alls när en Live Copy-sida skapas.
 
 Om en fristående sida hittas väljer MSM att byta namn på sidan och skapa en separat länkad Live Copy-sida.
 
-En sådan fristående sida i ett underträd i Live Copy är vanligtvis resultatet av en **Koppla loss** eller den tidigare Live Copy-sidan togs bort manuellt av en författare och återskapades med samma namn.
+En sådan fristående sida i ett Live Copy-underträd är vanligtvis resultatet av en **Koppla loss** eller den tidigare Live Copy-sidan togs bort manuellt av en författare och återskapades med samma namn.
 
-Du undviker detta genom att använda Live Copy **Gör uppehåll** i stället för **Koppla loss**. Mer information om **Koppla loss** åtgärd i [den här artikeln.](msm-livecopy.md)
+Du undviker detta genom att använda Live Copy **Gör uppehåll** i stället för **Koppla loss**. Mer information om **Koppla loss** finns i [den här artikeln.](msm-livecopy.md)

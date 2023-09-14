@@ -1,26 +1,22 @@
 ---
 title: Proxy Server Tool (proxy.jar)
-seo-title: Proxy Server Tool (proxy.jar)
 description: Läs mer om proxyserververktyget i AEM.
-seo-description: Learn about the Proxy Server Tool in AEM.
-uuid: 2fc1df24-8d5a-4be7-83fa-238ae65591b0
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: operations
 content-type: reference
-discoiquuid: ca98dc3c-7056-4cdc-b4d3-23e471da5730
 docset: aem65
 exl-id: 3df50303-5cdd-4df0-abec-80831d2ccef7
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: fd8bb7d3d9040e0a7a6b2f65751445f41aeab73e
 workflow-type: tm+mt
-source-wordcount: '1160'
+source-wordcount: '1156'
 ht-degree: 0%
 
 ---
 
 # Proxy Server Tool (proxy.jar){#proxy-server-tool-proxy-jar}
 
-Proxyservern fungerar som en mellanliggande server som vidarebefordrar begäranden mellan en klient och en server. Proxyservern håller reda på alla klient-server-interaktioner och genererar en logg över hela TCP-kommunikationen. På så sätt kan du övervaka exakt vad som händer, utan att behöva komma åt huvudservern.
+Proxyservern fungerar som en mellanliggande server som vidarebefordrar begäranden mellan en klient och en server. Proxyservern spårar alla klient-server-interaktioner och genererar en logg över hela TCP-kommunikationen. På så sätt kan du övervaka exakt vad som händer, utan att behöva komma åt huvudservern.
 
 Proxyservern finns i lämplig installationsmapp:
 
@@ -47,7 +43,7 @@ java -jar proxy.jar <host> <remoteport> <localport> [options]
 ### Alternativ {#options}
 
 * **q (tyst läge)** Skriver inte begäranden till konsolfönstret. Använd det här alternativet om du inte vill göra anslutningen långsammare eller om du loggar utdata till en fil (se alternativet -logfile).
-* **b (binärt läge)** Om du letar efter specifika bytekombinationer i trafiken ska du aktivera binärt läge. Utdata kommer då att innehålla hexadecimala utdata och teckenutdata.
+* **b (binärt läge)** Om du letar efter specifika bytekombinationer i trafiken ska du aktivera binärt läge. Utdata innehåller hexadecimala utdata och teckenutdata.
 * **t (tidsstämpelloggposter)** Lägger till en tidsstämpel i varje loggutdata. Tidsstämpeln är i sekunder, så den kanske inte är lämplig för att kontrollera enstaka begäranden. Använd den för att hitta händelser som inträffar vid en viss tidpunkt om du använder proxyservern under en längre tidsperiod.
 * **loggfil &lt;filename> (skriv till loggfil)** Skriver klient-server-konversationen till en loggfil. Den här parametern fungerar även i tyst läge.
 * **i &lt;numindentions> (lägg till indrag)** Varje aktiv anslutning är indragen för bättre läsbarhet. Standardvärdet är 16 nivåer. (Nytt i proxy.jar version 1.16).
@@ -58,7 +54,7 @@ Följande scenarier visar några av de syften som proxyserververktyget kan anvä
 
 **Kontrollera om det finns cookies och deras värden**
 
-I följande loggpostexempel visas alla cookies och deras värden som skickats av klienten på den sjätte anslutningen som öppnats sedan proxystarten:
+I följande exempel på loggpost visas alla cookies och deras värden som klienten skickade på den sjätte anslutningen som öppnats sedan proxystart:
 
 ```xml
 C-6-#000635 -> [Cookie: cq3session=7e39bc51-ac72-3f48-88a9-ed80dbac0693; Show=ShowMode; JSESSIONID=68d78874-cabf-9444-84a4-538d43f5064d ]
@@ -86,7 +82,7 @@ Så här kontrollerar du om keep-alive-funktionen fungerar:
 
 **Söker efter förlorade begäranden**
 
-Om du förlorar begäranden i en komplex serverinställning, till exempel för en brandvägg och en dispatcher, kan du använda proxyservern för att ta reda på var begäran förlorades. Vid brandvägg:
+Om du förlorar begäranden i en komplex serverinställning, till exempel för en brandvägg och en Dispatcher, kan du använda proxyservern för att ta reda på var begäran förlorades. Om det finns en brandvägg:
 
 1. Starta en proxy före en brandvägg
 1. Starta en annan proxy efter en brandvägg
@@ -98,7 +94,7 @@ Om du ibland får väntande förfrågningar:
 
 1. Starta proxy.jar.
 1. Vänta eller skriv åtkomstloggen i en fil - där varje post har en tidsstämpel.
-1. När begäran börjar hänga kan du se hur många anslutningar som var öppna och vilken begäran som orsakar problem.
+1. När begäran börjar gälla kan du se hur många anslutningar som var öppna och vilken begäran som orsakar problem.
 
 ## Formatet på loggmeddelanden {#the-format-of-log-messages}
 
@@ -130,7 +126,7 @@ Detta visar antalet byte som passerat mellan klient och server på den sjätte a
 
 ## Ett exempel på loggutdata {#an-example-of-log-output}
 
-Vi ska granska en enkel mall som ger följande kod när vi begär det:
+Granska en enkel mall som skapar följande kod när den efterfrågas:
 
 ```xml
 <html>
@@ -181,7 +177,7 @@ Klienten begär en anslutning som håller sig vid liv så att servern kan skicka
 C-0-#000369 -> [Connection: Keep-Alive ]
 ```
 
-Proxyservern är ett bra verktyg för att kontrollera om cookies är rätt inställda eller inte. Här ser vi
+Proxyservern är ett bra verktyg för att kontrollera om cookies är rätt inställda eller inte. Här ser du följande:
 
 * cq3session cookie genererad av AEM
 * den cookie för växling av visningsläge som genererats av CFC:n
@@ -281,4 +277,4 @@ Exemplet ovan är relativt enkelt eftersom de två anslutningarna sker sekventie
 * först returnerar servern HTML-koden
 * sedan begär webbläsaren bilden och öppnar en ny anslutning
 
-I praktiken kan en sida generera många parallella förfrågningar för bilder, formatmallar, JavaScript-filer osv. Detta innebär att loggarna har överlappande poster med parallella öppna anslutningar. I så fall rekommenderar vi att du använder alternativet -i för att förbättra läsbarheten.
+I praktiken kan en sida generera många parallella förfrågningar för bilder, formatmallar, JavaScript-filer och så vidare. Detta innebär att loggarna har överlappande poster med parallella öppna anslutningar. I så fall rekommenderar Adobe att du använder alternativet -i för att förbättra läsbarheten.

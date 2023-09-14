@@ -1,18 +1,16 @@
 ---
 title: Authoring - the Environment and Tools in AEM
 description: I redigeringsmiljön i AEM finns olika sätt att ordna och redigera ditt innehåll.
-uuid: 23a8aa93-b3d2-423b-b402-9e5f3f273d9a
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: page-authoring
 content-type: reference
-discoiquuid: f488ba79-5bda-46e9-9c15-9a8c3dbfa2ce
 docset: aem65
 exl-id: 3b3c118b-ca35-484b-a62e-7bec98953123
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: fd8bb7d3d9040e0a7a6b2f65751445f41aeab73e
 workflow-type: tm+mt
-source-wordcount: '2240'
-ht-degree: 7%
+source-wordcount: '2210'
+ht-degree: 5%
 
 ---
 
@@ -46,8 +44,8 @@ Du kan redigera en sida med sidredigeraren. Till exempel:
 
 När du redigerar en sida **Hjälp** kan nås från:
 
-* den [**Sidinformation**](/help/sites-authoring/editing-page-properties.md#page-properties) väljaren. Då visas introduktionsbilderna (som visas första gången du öppnar redigeraren).
-* den [konfiguration](/help/sites-authoring/editing-content.md#edit-configure-copy-cut-delete-paste) för specifika komponenter (med ? ikonen i dialogrutans verktygsfält); då visas sammanhangsberoende hjälp.
+* den [**Sidinformation**](/help/sites-authoring/editing-page-properties.md#page-properties) väljaren. Här visas introduktionsbilderna (som visas första gången du öppnar redigeraren).
+* den [konfiguration](/help/sites-authoring/editing-content.md#edit-configure-copy-cut-delete-paste) för specifika komponenter (med frågetecknet (?) ikonen i dialogrutans verktygsfält); här visas sammanhangsberoende hjälp.
 
 Ytterligare [hjälprelaterade resurser är tillgängliga från konsoler](/help/sites-authoring/basic-handling.md#accessing-help).
 
@@ -59,7 +57,7 @@ Komponentläsaren är en flik i sidopanelen (tillsammans med [resursläsaren](/h
 
 ![ateat-03](assets/ateat-03.png)
 
-När du öppnar sidopanelen öppnas den från vänster sida (välj **Komponenter** tabb om det behövs). När du är öppen kan du bläddra igenom alla komponenter som är tillgängliga för sidan.
+När du öppnar sidopanelen, öppnas den från vänster sida (välj **Komponenter** tabb om det behövs). När du är öppen kan du bläddra igenom alla komponenter som är tillgängliga för sidan.
 
 Det faktiska utseendet och hanteringen beror på vilken enhetstyp du använder:
 
@@ -71,7 +69,7 @@ Det faktiska utseendet och hanteringen beror på vilken enhetstyp du använder:
 
   Komponentwebbläsaren täcker hela sidan som redigeras.
 
-  Om du vill lägga till en komponent på sidan trycker du på och håller ned den nödvändiga komponenten och flyttar den åt höger. Komponentwebbläsaren stängs och sidan visas igen, där du kan placera komponenten.
+  Om du vill lägga till en komponent på sidan trycker du på och håller ned den nödvändiga komponenten och flyttar den åt höger - komponentwebbläsaren stängs och sidan visas igen - där du kan placera komponenten.
 
   ![ateat-04](assets/ateat-04.png)
 
@@ -92,7 +90,7 @@ Det faktiska utseendet och hanteringen beror på vilken enhetstyp du använder:
       * Standardkomponenternas ikoner är monokroma.
       * Förkortningar är alltid de två första tecknen i komponentnamnet.
 
-  I det övre verktygsfältet i **Komponenter** webbläsare:
+  I det övre verktygsfältet i **Komponenter** webbläsare kan du göra följande:
 
    * Filtrera komponenter efter namn.
    * Begränsa visningen till en viss grupp med listrutan.
@@ -101,7 +99,7 @@ Det faktiska utseendet och hanteringen beror på vilken enhetstyp du använder:
 
   ![ateat-06](assets/ateat-06.png)
 
-  Mer information om de komponenter som finns tillgängliga finns i [Komponentkonsol](/help/sites-authoring/default-components-console.md).
+  Mer information om de komponenter du har tillgång till finns i [Komponentkonsol](/help/sites-authoring/default-components-console.md).
 
 ## Resursläsaren {#assets-browser}
 
@@ -111,7 +109,7 @@ Resursläsaren är en flik i sidopanelen tillsammans med [bläddra bland kompone
 
 ![ateat-03-1](assets/ateat-03-1.png)
 
-När du öppnar sidopanelen öppnas den från vänster sida. Välj **Resurser** tabba vid behov.
+När du öppnar sidopanelen, glider den upp från vänster sida. Välj **Resurser** tabba vid behov.
 
 ![ateat-07](assets/ateat-07.png)
 
@@ -125,7 +123,7 @@ Om du vill lägga till en resurs på sidan markerar och drar du den till önskad
 
    * Du kan till exempel dra en resurs av typen bild till en bildkomponent.
 
-* A [platshållare](/help/sites-authoring/editing-content.md#component-placeholder) i styckesystemet för att skapa en ny komponent av lämplig typ.
+* A [platshållare](/help/sites-authoring/editing-content.md#component-placeholder) i styckesystemet för att skapa en komponent av lämplig typ.
 
    * Du kan till exempel dra en resurs av typen bild till styckesystemet för att skapa en bildkomponent.
 
@@ -137,7 +135,7 @@ I det övre verktygsfältet i resursläsaren kan du filtrera resurserna efter:
 
 * Namn
 * Bana
-* Resurstyp som bilder, manuskript, dokument, videor, sidor, stycken och produkter
+* Typ av resurs som bilder, manuskript, dokument, videor, sidor, stycken och produkter
 * Resursegenskaper som Orientation (stående, liggande, fyrkantig) och Style (färg, monokrom, gråskala)
 
    * Endast tillgängligt för vissa tillgångstyper
@@ -146,13 +144,13 @@ Det faktiska utseendet och hanteringen beror på vilken enhetstyp du använder:
 
 >[!NOTE]
 >
->En mobil enhet identifieras när bredden är mindre än 1 024 px, dvs. även i ett litet skrivbordsfönster.
+>En mobil enhet identifieras när bredden är mindre än 1 024 pixlar, d.v.s. även i ett litet skrivbordsfönster.
 
 * **Mobila enheter som iPad**
 
   Resursläsaren täcker hela sidan som redigeras.
 
-  Om du vill lägga till en resurs på sidan håller du pekaren över den resurs du behöver och sedan flyttar den åt höger. Resursläsaren stängs och sidan visas igen, där du kan lägga till resursen i den nödvändiga komponenten.
+  Om du vill lägga till en resurs på sidan trycker du på och håller kvar den önskade resursen och flyttar den åt höger. Resursläsaren stängs och sidan visas igen, där du kan lägga till resursen i den önskade komponenten.
 
   ![ateat-09](assets/ateat-09.png)
 
@@ -160,11 +158,11 @@ Det faktiska utseendet och hanteringen beror på vilken enhetstyp du använder:
 
   Resursläsaren öppnas till vänster i fönstret.
 
-  Om du vill lägga till en resurs på sidan klickar du på den önskade resursen och drar den till önskad komponent eller plats.
+  Om du vill lägga till en resurs på sidan klickar du på resursen och drar den till önskad komponent eller plats.
 
   ![ateat-10](assets/ateat-10.png)
 
-Om du snabbt behöver göra en ändring i en resurs kan du starta [tillgångsredigerare](/help/assets/manage-assets.md) direkt från resursläsaren genom att klicka på redigeringsikonen som visas bredvid resursens namn.
+Om du snabbt måste ändra en resurs kan du starta [Resursredigeraren](/help/assets/manage-assets.md) direkt från resursläsaren genom att klicka på redigeringsikonen som visas bredvid resursens namn.
 
 ![Resurser Browser Desktop Device](do-not-localize/screen_shot_2018-03-22at142448.png)
 
@@ -172,11 +170,11 @@ Om du snabbt behöver göra en ändring i en resurs kan du starta [tillgångsred
 
 The **Innehållsträd** ger en översikt över alla komponenter på sidan i en hierarki så att du snabbt kan se hur sidan är uppbyggd.
 
-Innehållsträdet är en flik i sidopanelen (tillsammans med komponenterna och resursläsaren). Om du vill öppna (eller stänga) sidopanelen använder du ikonen längst upp till vänster i verktygsfältet:
+Innehållsträdet är en flik i sidopanelen (tillsammans med komponenterna och resursläsaren). Om du vill öppna eller stänga sidopanelen använder du ikonen längst upp till vänster i verktygsfältet:
 
 ![Innehållsträd](do-not-localize/screen_shot_2018-03-22at142042.png)
 
-När du öppnar sidopanelen öppnas den (från vänster sida). Välj **Innehållsträd** tabba vid behov. När den är öppen kan du se en trädvyrepresentation av sidan eller mallen, så att det blir lättare att förstå hur innehållet är hierarkiskt strukturerat. På en komplex sida är det dessutom enklare att växla mellan sidans komponenter.
+När du öppnar sidopanelen, glider den upp (från vänster sida). Välj **Innehållsträd** tabba vid behov. När den är öppen kan du se en trädvyrepresentation av sidan eller mallen, så att det blir lättare att förstå hur innehållet är hierarkiskt strukturerat. På en komplex sida är det också enklare att hoppa mellan sidans komponenter.
 
 ![ateat-11](assets/ateat-11.png)
 
@@ -184,7 +182,7 @@ En sida kan enkelt bestå av många av samma typ av komponenter, så innehållst
 
 Komponenttyper visas på användarspråket, medan komponentbeskrivningstexten kommer från sidspråket.
 
-Om du klickar på markören bredvid en komponent kommer den nivån att komprimeras eller utökas.
+Om du klickar på markeringen bredvid en komponent komprimeras eller expanderas den nivån.
 
 ![screen_shot_2018-03-22at142559](assets/screen_shot_2018-03-22at142559.png)
 
@@ -212,11 +210,11 @@ Om du klickar på komponenten markeras komponenten i sidredigeraren. Vilka åtg�
 
 ## Fragment - Associerad innehållsläsare {#fragments-associated-content-browser}
 
-Om sidan innehåller innehållsfragment får du även åtkomst till [webbläsare för associerat innehåll](/help/sites-authoring/content-fragments.md#using-associated-content).
+Om sidan innehåller innehållsfragment har du tillgång till [webbläsare för associerat innehåll](/help/sites-authoring/content-fragments.md#using-associated-content).
 
 ## Referenser {#references}
 
-**Referenser** visar anslutningar till den valda sidan:
+**Referenser** visa anslutningar till den valda sidan:
 
 * Ritningar
 * Launches
@@ -230,21 +228,21 @@ Om sidan innehåller innehållsfragment får du även åtkomst till [webbläsare
 
 ![screen_shot_2018-03-22at153653](assets/screen_shot_2018-03-22at153653.png)
 
-[Välj önskad resurs](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources) om du vill visa en lista över referenstyper som är relevanta för den resursen:
+[Välj önskad resurs](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources) visar en lista med referenstyper som är relevanta för den aktuella resursen:
 
 ![ateat-22](assets/ateat-22.png)
 
 Välj lämplig referenstyp för mer information. I vissa situationer är ytterligare åtgärder tillgängliga när du väljer en specifik referens, bland annat:
 
-* **Inkommande länkar**, innehåller en lista med sidor som refererar till sidan, tillsammans med direktåtkomst till **Redigera** en av dessa sidor när du väljer en specifik länk
+* **Inkommande länkar** innehåller en lista med sidor som refererar till sidan, tillsammans med direktåtkomst till **Redigera** en av dessa sidor när du väljer en specifik länk
 
 * Förekomster av lånat och lånat innehåll med **Referens** -komponent, härifrån kan du navigera till den refererande/refererade sidan
 
 * [Referenser till produktsidor](/help/commerce/cif-classic/administering/generic.md#showing-product-references) (tillgängligt från Commerce-Products-konsolen)
-* [Startar](/help/sites-authoring/launches.md), ger åtkomst till relaterade starter
+* [Startar](/help/sites-authoring/launches.md) ger åtkomst till relaterade starter.
 * [Live-kopior](/help/sites-administering/msm.md) visar sökvägarna för alla live-kopior som baseras på den valda resursen.
-* [Blueprint](/help/sites-administering/msm-best-practices.md), innehåller information och olika åtgärder
-* [Språk Kopior](/help/sites-administering/tc-manage.md#creating-translation-projects-using-the-references-panel), innehåller information och olika åtgärder
+* [Blueprint](/help/sites-administering/msm-best-practices.md) innehåller information och olika åtgärder.
+* [Språk Kopior](/help/sites-administering/tc-manage.md#creating-translation-projects-using-the-references-panel) innehåller information och olika åtgärder.
 
 Du kan till exempel korrigera en bruten referens i en Reference-komponent:
 
@@ -282,8 +280,8 @@ Knappen Sidinformation (utjämningsikon) öppnar en meny som även innehåller i
 
 Exempel: **Sidinformation** innehåller även alternativ:
 
-* [Promote Launch](/help/sites-authoring/launches-promoting.md) om sidan är en startsida.
-* [Öppna i Classic UI](/help/sites-authoring/select-ui.md#switching-to-classic-ui-when-editing-a-page) om detta alternativ har [aktiveras av en administratör](/help/sites-administering/enable-classic-ui-editor.md)
+* [Promote Launch](/help/sites-authoring/launches-promoting.md) om sidan är en startsida
+* [Öppna i Classic UI](/help/sites-authoring/select-ui.md#switching-to-classic-ui-when-editing-a-page) om det här alternativet [aktiveras av en administratör](/help/sites-administering/enable-classic-ui-editor.md)
 
 Dessutom **Sidinformation** kan ge tillgång till analyser och rekommendationer, när så är lämpligt.
 
@@ -291,8 +289,8 @@ Dessutom **Sidinformation** kan ge tillgång till analyser och rekommendationer,
 
 Det finns olika lägen när du redigerar en sida som tillåter olika åtgärder:
 
-* [Redigera](/help/sites-authoring/editing-content.md) - det läge som ska användas när sidinnehållet redigeras.
-* [Layout](/help/sites-authoring/responsive-layout.md) - låter dig skapa och redigera din responsiva layout beroende på enhet (om sidan är baserad på en layoutbehållare)
+* [Redigera](/help/sites-authoring/editing-content.md) - använd det här läget när du redigerar sidinnehållet.
+* [Layout](/help/sites-authoring/responsive-layout.md) - låter dig skapa och redigera din responsiva layout beroende på enheten (om sidan är baserad på en layoutbehållare)
 
 * [Ställning](/help/sites-authoring/scaffolding.md) - hjälper dig att skapa en stor uppsättning sidor som har samma struktur men olika innehåll.
 * [Utvecklare](/help/sites-developing/developer-mode.md) - gör att du kan utföra olika åtgärder (kräver behörighet). Dessa omfattar granskning av den tekniska informationen på en sida och dess komponenter.
@@ -304,11 +302,11 @@ Det finns olika lägen när du redigerar en sida som tillåter olika åtgärder:
 
 * [Timewarp](/help/sites-authoring/working-with-page-versions.md#timewarp) - gör att du kan visa ett sidläge vid en viss tidpunkt.
 * [Live Copy-status](/help/sites-authoring/editing-content.md#live-copy-status) - ger dig en snabb översikt över live-kopians status och vilka komponenter som ärvs/inte ärvs.
-* [Förhandsgranska](/help/sites-authoring/editing-content.md#previewing-pages) - används för att visa sidan så som den kommer att visas i publiceringsmiljön, eller för att navigera med hjälp av länkar i innehållet.
+* [Förhandsgranska](/help/sites-authoring/editing-content.md#previewing-pages) - används för att visa sidan så som den visas i publiceringsmiljön, eller för att navigera med hjälp av länkar i innehållet.
 
 * [Anteckna](/help/sites-authoring/annotations.md) - används för att lägga till eller visa anteckningar på sidan.
 
-Du kommer åt dessa med ikonerna i det övre högra hörnet. Den faktiska ikonen ändras för att återspegla det läge som du använder för närvarande:
+Du kommer åt dem med hjälp av ikonerna i det övre högra hörnet. Den faktiska ikonen ändras för att återspegla det läge som du använder för närvarande:
 
 ![ateat-18](assets/ateat-18.png)
 
@@ -317,7 +315,7 @@ Du kommer åt dessa med ikonerna i det övre högra hörnet. Den faktiska ikonen
 >* Beroende på sidans egenskaper kanske vissa lägen inte är tillgängliga.
 >* Åtkomst till vissa lägen kräver lämplig behörighet/behörighet.
 >* Utvecklarläget är inte tillgängligt på mobila enheter på grund av utrymmesbegränsningar.
->* Det finns en [kortkommando](/help/sites-authoring/page-authoring-keyboard-shortcuts.md) ( `Ctrl-Shift-M`) för att växla mellan **Förhandsgranska** och det valda läget (till exempel **Redigera**, **Layout**, etc).
+>* Det finns en [kortkommando](/help/sites-authoring/page-authoring-keyboard-shortcuts.md) ( `Ctrl-Shift-M`) för att växla mellan **Förhandsgranska** och det valda läget (till exempel **Redigera** och **Layout**).
 >
 
 ## Banmarkering {#path-selection}
@@ -345,7 +343,7 @@ Sökvägsläsaren är ordnad som [kolumnvy](/help/sites-authoring/basic-handling
 ![screen_shot_2018-03-22at154521](assets/screen_shot_2018-03-22at154521.png)
 
 * När en resurs har valts **Välj** knappen längst upp till höger i dialogrutan aktiveras. Klicka eller tryck för att bekräfta markeringen eller **Avbryt** för att avbryta.
-* Om det går att välja flera resurser aktiveras även knappen **Välj** när du väljer en resurs och antalet valda resurser läggs till i det övre högra hörnet fönstret. Klicka på **X** bredvid talet för att avmarkera alla.
+* Om det går att välja flera resurser aktiveras även knappen **Välj** när du väljer en resurs och antalet valda resurser läggs till i det övre högra hörnet fönstret. Klicka **X** bredvid talet för att avmarkera alla.
 * När du navigerar genom trädet visas platsen i de synliga kolumnerna högst upp i dialogrutan. Dessa vägbeskrivningar kan också användas för att snabbt hoppa in i resurshierarkin.
 * Du kan när som helst använda sökfältet högst upp i dialogrutan. Klicka på **X** i sökfältet för att rensa sökningen.
 * Om du vill begränsa sökningen kan du visa filteralternativen och filtrera resultaten baserat på en viss bana.

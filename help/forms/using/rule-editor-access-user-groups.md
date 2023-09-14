@@ -1,26 +1,22 @@
 ---
 title: Bevilja regelredigeraråtkomst för valda användargrupper
-seo-title: Grant rule editor access to select user groups
 description: Bevilja begränsad åtkomst till regelredigeraren för att välja användargrupper.
-seo-description: Grant restricted access to rule editor to select user groups.
-uuid: efa2570a-20ac-4b43-8a0e-38247f84d02f
 content-type: reference
 topic-tags: adaptive_forms, develop
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: ab694a93-00d2-44d7-8ded-68ab2ad50693
 docset: aem65
 feature: Adaptive Forms
 exl-id: a1a2b277-3133-404b-a7fc-337cedddb12c
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: fd8bb7d3d9040e0a7a6b2f65751445f41aeab73e
 workflow-type: tm+mt
-source-wordcount: '358'
+source-wordcount: '362'
 ht-degree: 0%
 
 ---
 
 # Bevilja regelredigeraråtkomst för valda användargrupper{#grant-rule-editor-access-to-select-user-groups}
 
-<span class="preview"> Adobe rekommenderar att man använder modern och utbyggbar datainhämtning [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) for [skapa ny Adaptive Forms](/help/forms/using/create-an-adaptive-form-core-components.md) eller [lägga till adaptiv Forms på AEM Sites-sidor](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-filer, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptiv Forms med baskomponenter. </span>
+<span class="preview"> Adobe rekommenderar att man använder modern och utbyggbar datainhämtning [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) for [skapa ny Adaptive Forms](/help/forms/using/create-an-adaptive-form-core-components.md) eller [lägga till adaptiv Forms på AEM Sites-sidor](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-filer, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs ett äldre sätt att skapa adaptiva Forms med baskomponenter. </span>
 
 ## Översikt {#overview}
 
@@ -44,13 +40,13 @@ Med AEM Forms kan du begränsa regelredigeringsåtkomsten till användare basera
 
    `af.ruleeditor.custom.groups=["RuleEditorsUserGroup"]`
 
-   Om du vill aktivera åtkomst för flera grupper anger du en lista med kommasepererade värden:
+   Om du vill aktivera åtkomst för flera grupper anger du en lista med kommaseparerade värden:
 
    `af.ruleeditor.custom.groups=["RuleEditorsUserGroup", "PermittedUserGroup"]`
 
    ![Skapa användare](assets/create_user_new.png)
 
-   När en användare som inte är en del av en angiven användargrupp (här trycker RuleEditorsUserGroup) på ett fält visas nu ikonen Redigera regel ( ![edit-rules1](assets/edit-rules1.png)) finns inte i komponentverktygsfältet:
+   När en användare som inte är en del av den angivna användargruppen (här trycker RuleEditorsUserGroup) på ett fält visas nu ikonen Redigera regel ( ![edit-rules1](assets/edit-rules1.png)) är inte tillgängligt för dem i komponentverktygsfältet:
 
    ![componentsstoolbarwithre](assets/componentstoolbarwithre.png)
 

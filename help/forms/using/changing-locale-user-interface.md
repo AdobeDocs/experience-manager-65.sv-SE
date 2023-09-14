@@ -1,19 +1,15 @@
 ---
 title: Ändra språkområdet för användargränssnittet i AEM Forms arbetsyta
-seo-title: Changing the locale of AEM Forms workspace user interface
 description: Så här ändrar du arbetsytan i AEM Forms för att lokalisera text, komprimerade kategorier, köer och processer samt datumväljaren i gränssnittet.
-seo-description: How to modify the AEM Forms workspace to localize text, collapsed categories, queues, and processes, and the date picker on the interface.
-uuid: c89ff150-a36e-45cc-99a6-8768dbe58eab
 contentOwner: robhagat
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
-discoiquuid: 89f9d666-28e2-4201-8467-ae90693ca5d2
 docset: aem65
 exl-id: 9a069486-02a8-4058-adfb-4e0e49d8c0cf
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: fd8bb7d3d9040e0a7a6b2f65751445f41aeab73e
 workflow-type: tm+mt
-source-wordcount: '556'
+source-wordcount: '570'
 ht-degree: 0%
 
 ---
@@ -40,19 +36,19 @@ Utför följande steg för att lägga till stöd för ett språk *Nytt* och webb
 
 1. Logga in på CRXDE Lite.
 Standardwebbadressen för CRXDE Lite är `https://'[server]:[port]'/lc/crx/de/index.jsp`.
-1. Navigera till platsen `apps/ws/locales` och skapa en ny mapp `nw.`
+1. Navigera till platsen `apps/ws/locales` och skapa en mapp `nw.`
 1. Kopiera filen `translation.json`från platsen `/apps/ws/locales/en-US` till plats `/apps/ws/locales/nw` .
-1. Navigera till `/apps/ws/locales/nw` och öppna `translation.json` för redigering. Gör språkspecifika ändringar i filen translation.json.
+1. Navigera till `/apps/ws/locales/nw` och öppna `translation.json` för redigering. Gör språkområdesspecifika ändringar i filen translation.json.
 
-   Följande exempel innehåller filen translation.json för engelska och franska i AEM Forms arbetsyta.
+   Följande exempel innehåller filen translation.json för engelska och franska i arbetsytan AEM Forms.
 
    ![translation_json_in_en](assets/translation_json_in_en.png) ![translation_json_in_fr](assets/translation_json_in_fr.png)
 
 ## Lokalisera komprimerade kategorier, köer och processer {#localizing-collapsed-categories-queues-and-processes}
 
-På arbetsytan i AEM Forms används bilder för att visa rubriker för kategorier, köer och processer. Du behöver ett utvecklingspaket för att lokalisera dessa rubriker. Mer information om hur du skapar utvecklingspaket finns i [Skapar AEM Forms-arbetsytekod.](introduction-customizing-html-workspace.md#building-html-workspace-code)
+På arbetsytan i AEM Forms används bilder för att visa rubriker för kategorier, köer och processer. Du behöver ett utvecklingspaket för att lokalisera dessa rubriker. Mer information om hur du skapar ett utvecklingspaket finns i [Skapar AEM Forms-arbetsytekod.](introduction-customizing-html-workspace.md#building-html-workspace-code)
 
-I följande steg antas de nya lokaliserade bildfilerna vara *Kategorier_nw.png*, *Queue_nw.png* och *Processes_nw.png*. Bildernas rekommenderade bredd är 19px.
+I följande steg antas de nya lokaliserade bildfilerna vara *Kategorier_nw.png*, *Queue_nw.png* och *Processes_nw.png*. Bildernas rekommenderade bredd bör vara 19 pixlar.
 
 >[!NOTE]
 >
@@ -60,7 +56,7 @@ I följande steg antas de nya lokaliserade bildfilerna vara *Kategorier_nw.png*,
 
 ![collapsing_panels_image](assets/collapsing_panels_image.png)
 
-Utför följande steg för att lokalisera bilderna:
+Så här översätter du bilderna:
 
 1. Placera bildfilerna i en WebDAV-klient */apps/ws/images* mapp.
 1. Navigera till */apps/ws/css*. Öppna *newStyle.css* för att redigera och lägga till följande poster:
@@ -81,7 +77,7 @@ Utför följande steg för att lokalisera bilderna:
 
 1. Utför alla semantiska ändringar som anges i [Anpassa arbetsytan](../../forms/using/introduction-customizing-html-workspace.md) artikel.
 1. Navigera till *js/runtime/utility* och öppna *usersession.js* fil för redigering.
-1. Leta reda på koden som anges i det ursprungliga kodblocket och lägg till villkor *lang!== &#39;nw&#39;* till programsatsen if:
+1. Leta reda på koden som visas i det ursprungliga kodblocket och lägg till villkoret *lang!== &#39;nw&#39;* till programsatsen if:
 
    ```javascript
    // Orignal code
@@ -109,7 +105,7 @@ Utför följande steg för att lokalisera bilderna:
 
 ## Lokaliserar datumväljaren {#localizing-date-picker}
 
-Du behöver utvecklingspaketet för att lokalisera *datepicker* API. Mer information om hur du skapar utvecklingspaket finns i [Skapar AEM Forms arbetsytekod](introduction-customizing-html-workspace.md#building-html-workspace-code).
+Du behöver ett utvecklingspaket för att lokalisera *datepicker* API. Mer information om hur du skapar ett utvecklingspaket finns i [Skapar AEM Forms arbetsytekod](introduction-customizing-html-workspace.md#building-html-workspace-code).
 
 1. Hämta och extrahera [jQuery UI-paket](https://jqueryui.com/download/all/), navigera till *&lt;extracted jquery=&quot;&quot; ui=&quot;&quot; package=&quot;&quot;>*\jquery-ui-1.10.2.zip\jquery-ui-1.10.2\ui\i18n.
 1. Kopiera filen jquery.ui.datepicker-nw.js för språkkod nu till apps/ws/js/libs/jqueryui och gör språkspecifika ändringar i filen.

@@ -1,18 +1,16 @@
 ---
 title: Skapa innehållssidor med Content Fragments
 description: Med AEM Content Fragments kan du utforma, skapa, strukturera och använda sidoberoende innehåll.
-uuid: 987de428-8354-4b23-a552-3ea415122184
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: page-authoring
 content-type: reference
-discoiquuid: 4049a7a5-4b33-4462-a25f-3c0daeb6a8a9
 docset: aem65
 exl-id: d5dad844-80ca-4ace-a082-38d892d9ffe2
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: fd8bb7d3d9040e0a7a6b2f65751445f41aeab73e
 workflow-type: tm+mt
-source-wordcount: '1138'
-ht-degree: 5%
+source-wordcount: '1132'
+ht-degree: 2%
 
 ---
 
@@ -28,14 +26,14 @@ Tillsammans med den uppdaterade JSON-exporteraren kan strukturerade innehållsfr
 >
 >**Innehållsfragment** och **[Upplevelsefragment](/help/sites-authoring/experience-fragments.md)** har olika funktioner i AEM:
 >
->* **Innehållsfragment** är redaktionellt innehåll, främst text och relaterade bilder. De är rent innehåll, utan design och layout.
+>* **Innehållsfragment** är redaktionellt innehåll, främst text, och relaterade bilder. De är rent innehåll, utan design och layout.
 >* **Upplevelsefragment** är helt utformat för innehåll, ett fragment av en webbsida.
 >
 >Upplevelsefragment kan innehålla innehåll i form av innehållsfragment, men inte tvärtom.
 
 >[!CAUTION]
 >
->Den här sidan måste läsas tillsammans med [Arbeta med innehållsfragment](/help/assets/content-fragments/content-fragments.md) (och relaterade sidor) eftersom det innehåller grundläggande terminologi och begrepp, tillsammans med att skapa och hantera fragment.
+>Den här sidan måste läsas med [Arbeta med innehållsfragment](/help/assets/content-fragments/content-fragments.md) (och relaterade sidor) eftersom det innehåller grundläggande terminologi och begrepp, tillsammans med att skapa och hantera fragment.
 
 Innehållsfragmenten aktiverar:
 
@@ -73,7 +71,7 @@ Innehållsfragmenten aktiverar:
 
    * Öppna **Resurser** webbläsare och filter för **Innehållsfragment** (standard är Bilder). Dra sedan det önskade fragmentet till komponentinstansen.
 
-   * Markera innehållets fragmentkomponent och sedan **Konfigurera** i verktygsfältet. I dialogrutan kan du öppna urvalsdialogrutan för att bläddra och välja önskat alternativ **Innehållsfragment**.
+   * Markera innehållets fragmentkomponent och sedan **Konfigurera** i verktygsfältet. I dialogrutan kan du öppna valdialogrutan för att bläddra och välja önskat alternativ **Innehållsfragment**.
 
    >[!NOTE]
    >
@@ -85,7 +83,7 @@ Innehållsfragmenten aktiverar:
 
    >[!NOTE]
    >
-   >Mer information om ytterligare redigeringsfunktioner finns även i:
+   >Mer information om ytterligare redigeringsfunktioner finns i:
    >
    >
    >
@@ -96,7 +94,7 @@ Innehållsfragmenten aktiverar:
 
 ### Markera elementet eller variationen {#selecting-the-element-or-variation}
 
-Öppna fragmentets **Konfiguration** för att konfigurera fragmentet för användning på den aktuella sidan. Dialogrutan kan vara beroende av vilken komponent som används.
+Öppna fragmentets **Konfiguration** så att du kan konfigurera fragmentet för den aktuella sidan. Dialogrutan kan vara beroende av vilken komponent som används.
 
 I rätt konfigurationsdialogruta kan du välja tillgängliga parametrar, bland annat:
 
@@ -112,8 +110,8 @@ I rätt konfigurationsdialogruta kan du välja tillgängliga parametrar, bland a
 
 * **Element**
 
-   * Standardvärdet **Huvud** kommer alltid att vara tillgängligt.
-   * En markering blir tillgänglig om fragmentet har skapats med en lämplig mall.
+   * Standardvärdet **Huvud** är alltid tillgängligt.
+   * En markering är tillgänglig om fragmentet skapades med en lämplig mall.
 
   >[!NOTE]
   >
@@ -121,8 +119,8 @@ I rätt konfigurationsdialogruta kan du välja tillgängliga parametrar, bland a
 
 * **Variant**
 
-   * **Standardmastern** är alltid tillgänglig.
-   * En markering blir tillgänglig om variationer har skapats för fragmentet.
+   * Standardvärdet **Master** är alltid tillgängligt.
+   * En markering är tillgänglig om variationer har skapats för fragmentet.
 
 * **Stycken**: ange det styckeintervall som ska tas med:
 
@@ -135,17 +133,17 @@ I rätt konfigurationsdialogruta kan du välja tillgängliga parametrar, bland a
 
 ### Snabb anslutning till Fragment Editor {#quick-connection-to-fragment-editor}
 
-Du kan öppna fragmentkällan för redigering (resursen) med **Redigera** -ikonen i komponentens verktygsfält. Det här låter dig [redigera och hantera innehållsfragmentet](/help/assets/content-fragments/content-fragments.md).
+Du kan öppna fragmentkällan för redigering (resursen) med **Redigera** -ikonen i komponentens verktygsfält. Detta gör att du kan [redigera och hantera innehållsfragmentet](/help/assets/content-fragments/content-fragments.md).
 
 >[!CAUTION]
 >
->Som alltid kommer redigering av fragmentkällan att påverka alla sidor som refererar till det innehållsfragmentet.
+>Som alltid kan redigering av fragmentkällan påverka alla sidor som refererar till det innehållsfragmentet.
 
 ### Lägga till mellaninnehåll {#adding-in-between-content}
 
 När ett visst innehållsfragment läggs till på sidan finns det ett **Dra komponenter hit** platshållare mellan styckena HTML (och längst upp/längst ned) i fragmentet.
 
-Detta gör att du kan lägga till extra innehåll [in-between (dvs. in-between content)](/help/assets/content-fragments/content-fragments.md#in-between-content-when-page-authoring-with-content-fragments) fragmentinnehållet (vid någon av de tillgängliga punkterna), utan att behöva ändra rotfragmentet.
+Detta gör att du kan lägga till extra innehåll [in-between (d.v.s. in-between content)](/help/assets/content-fragments/content-fragments.md#in-between-content-when-page-authoring-with-content-fragments) fragmentinnehållet (vid någon av de tillgängliga punkterna), utan att behöva ändra rotfragmentet.
 
 För mellanliggande innehåll kan du:
 
@@ -167,7 +165,7 @@ För mellanliggande innehåll kan du:
 
 >[!CAUTION]
 >
->När du har lagt till mellanliggande innehåll i ett innehållsfragment på sidan kan ändringar av strukturen för det underliggande innehållsfragmentet (dvs. i innehållsfragmentets redigerare) leda till felaktiga/oväntade resultat.
+>När du har lagt till mellanliggande innehåll i ett innehållsfragment på sidan kan en ändring av strukturen för det underliggande innehållsfragmentet (det vill säga i innehållsfragmentets redigerare) leda till felaktiga/oväntade resultat.
 >
 >När detta inträffar behålls det mellanliggande innehållet som det är:
 >
@@ -179,7 +177,7 @@ För mellanliggande innehåll kan du:
 
 ### Använda associerat innehåll {#using-associated-content}
 
-Om du har [associerat innehåll](/help/assets/content-fragments/content-fragments-assoc-content.md) med [innehållsfragmentet](/help/assets/content-fragments/content-fragments.md) är dessa resurser tillgängliga från sidopanelen (när du har placerat fragmentet på innehållssidan). Associerat innehåll är i själva verket en särskild innehållskälla för [mellanliggande innehåll](#adding-in-between-content).
+Om du har [associerat innehåll](/help/assets/content-fragments/content-fragments-assoc-content.md) med [innehållsfragment](/help/assets/content-fragments/content-fragments.md), är dessa resurser tillgängliga från sidopanelen (när du har placerat fragmentet på innehållssidan). Associerat innehåll är i själva verket en särskild innehållskälla för [mellanliggande innehåll](#adding-in-between-content).
 
 >[!NOTE]
 >
@@ -189,7 +187,7 @@ Om du har [associerat innehåll](/help/assets/content-fragments/content-fragment
 >
 >Om du har flera innehållsfragment på en sida **Associerat innehåll** -fliken visar resurser som passar alla fragment.
 
-När du har lagt till ett fragment med associerat innehåll på sidan visas en ny flik (**Associerat innehåll**) öppnas på sidopanelen.
+När du har lagt till ett fragment med associerat innehåll på sidan skapas en ny flik (**Associerat innehåll**) öppnas på sidopanelen.
 
 Här kan du dra resurserna till önskad plats (antingen till en befintlig komponent eller till önskad plats där rätt komponent skapas):
 
@@ -213,4 +211,4 @@ Andra ändringar, som att flytta, kopiera och ta bort, måste göras i fragmentr
 Fragment måste publiceras så att de kan användas på dina publicerade webbsidor:
 
 * Ett fragment kan publiceras efter [skapa fragmentet i resurskonsolen](/help/assets/content-fragments/content-fragments.md#publishingandreferencingafragment).
-* Om en *opublicerat fragment* används på en sida som publiceras, kan fragmentet också publiceras just nu.
+* Om en *opublicerat fragment* används på en sida som publiceras, kan fragmentet också publiceras nu.

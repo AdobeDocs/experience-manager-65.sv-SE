@@ -1,17 +1,13 @@
 ---
 title: Innehållsleverans
-seo-title: Content Delivery
 description: Innehållsleverans
-seo-description: null
-uuid: 1e7bea34-ca50-41ed-8295-fa182c27fa69
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
-discoiquuid: 3d65cc6b-5721-472f-a805-588d50f3571b
 exl-id: 85e73679-684e-402f-8186-8b56d8bd9372
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: fd8bb7d3d9040e0a7a6b2f65751445f41aeab73e
 workflow-type: tm+mt
-source-wordcount: '969'
+source-wordcount: '961'
 ht-degree: 0%
 
 ---
@@ -22,13 +18,13 @@ ht-degree: 0%
 >
 >Adobe rekommenderar att du använder SPA Editor för projekt som kräver ramverksbaserad klientåtergivning för en sida (till exempel React). [Läs mer](/help/sites-developing/spa-overview.md).
 
-Mobilappar bör kunna använda allt innehåll i AEM efter behov för att leverera en målinriktad appupplevelse.
+Mobilappar bör kunna använda allt innehåll i AEM efter behov för att leverera målinriktade appupplevelser.
 
 Detta inkluderar användning av resurser, webbplatsinnehåll, CAAS-innehåll (over-the-air) och anpassat innehåll som kan ha en egen struktur.
 
 >[!NOTE]
 >
->**Innehåll som är över allt** kan komma från något av ovanstående via ContentSync-hanterare. Den kan användas för att batchpaketera och leverera via zip-enheter samt för att underhålla uppdateringar för dessa paket.
+>**Innehåll som är över hela klippet** kan komma från något av ovanstående via ContentSync-hanterare. Den kan användas för att batchpaketera och leverera i form av zips och underhålla uppdateringar för dessa paket.
 
 Det finns tre huvudtyper av material som Content Services levererar:
 
@@ -40,7 +36,7 @@ Det finns tre huvudtyper av material som Content Services levererar:
 
 ## Assets {#assets}
 
-Resurssamlingar är AEM konstruktioner som innehåller referenser till andra samlingar.
+Resurssamlingar är AEM som innehåller referenser till andra samlingar.
 
 En resurssamling kan visas via innehållstjänster. När en resurssamling anropas i en begäran returneras ett objekt som är en lista över resurserna, inklusive deras URL:er. Resurser nås via en URL. URL:en anges i ett objekt. Till exempel:
 
@@ -51,17 +47,17 @@ En resurssamling kan visas via innehållstjänster. När en resurssamling anropa
 
 Ett viktigt värde för Content Services är möjligheten att returnera resurser som är optimerade för enheten. Detta minskar behovet av lagring på lokala enheter och förbättrar appprestanda.
 
-Tillgångsoptimering är en funktion på serversidan som baseras på information som anges i API-begäran. Där det är möjligt bör resursåtergivningarna cachelagras så att liknande förfrågningar inte kräver en ny generering av resursåtergivningen.
+Resursoptimering är en funktion på serversidan som baseras på information som anges i API-begäran. Där det är möjligt bör resursåtergivningarna cachelagras så att liknande förfrågningar inte kräver en omgenerering av resursåtergivningen.
 
 ### Arbetsflöde för resurser {#assets-workflow}
 
 Resursarbetsflödet är följande:
 
 1. Resursreferens finns i AEM
-1. Skapa resursreferensenhet utifrån dess modell
+1. Skapa en resursreferensenhet utifrån dess modell
 1. Redigera entitet
 
-   1. Välj tillgång eller resursinsamling
+   1. Välj en tillgång eller en tillgångssamling
    1. Anpassa JSON-återgivning
 
 I följande diagram visas **Referensarbetsflöde för resurser**:
@@ -70,13 +66,13 @@ I följande diagram visas **Referensarbetsflöde för resurser**:
 
 ### Hantera resurser {#managing-assets}
 
-Content Services ger åtkomst till AEM hanterade resurser som inte kan refereras via annat AEM.
+Content Services ger åtkomst till AEM resurser som inte kan refereras via annat AEM.
 
 #### Befintliga hanterade tillgångar {#existing-managed-assets}
 
-En befintlig AEM Sites- och Assets-användare använder AEM Assets för att hantera allt digitalt material för alla kanaler. De utvecklar en intern mobilapp och behöver använda flera resurser som hanteras av AEM Assets. Till exempel logotyper, bakgrundsbilder, knappikoner osv.
+En användare av AEM Sites och Assets använder AEM Assets för att hantera allt digitalt material för alla kanaler. De utvecklar en intern mobilapp och behöver använda flera resurser som hanteras av AEM Assets. Till exempel logotyper, bakgrundsbilder och knappikoner.
 
-För närvarande är dessa spridda runt resurskatalogen. De filer som programmet behöver referera till finns i:
+För närvarande är dessa spridda runt resurskatalogen. De filer som programmet måste referera till finns i följande:
 
 * /content/dam/geometrixx-outdoors/brand/logo_light.png
 * /content/dam/geometrixx-outdoors/brand/logo_dark.png
@@ -86,7 +82,7 @@ För närvarande är dessa spridda runt resurskatalogen. De filer som programmet
 
 #### Åtkomst till CS-resursenheter {#accessing-cs-asset-entities}
 
-Låt oss bortse från stegen i hur sidan görs tillgänglig via API:t för tillfället (den kommer att omfattas av beskrivningen av det AEM användargränssnittet) och anta att den har gjorts. Resursenheter har skapats och lagts till i utrymmet&quot;appImages&quot;. Ytterligare mappar skapades under utrymmet för organisationssyften. Resursenheterna lagras i AEM JCR som:
+Låt oss lägga undan stegen för hur sidan görs tillgänglig via API:t för tillfället (den omfattas av AEM gränssnittsbeskrivning) och anta att den har gjorts. Resursenheter har skapats och lagts till i utrymmet&quot;appImages&quot;. Ytterligare mappar skapades under utrymmet för organisationssyften. Resursenheterna lagras i AEM JCR som:
 
 * /content/entities/appImages/logos/logo_light
 * /content/entities/appImages/logos/logo_dark
@@ -112,12 +108,12 @@ Klientbiblioteket används en gång till för att hämta binärfilen för kundva
 
 HTML-innehåll behövs för kunder som behöver ha innehållets layout. Detta är användbart för inbyggda program som använder en webbbehållare, till exempel en Cordova-webbvy, för att visa innehållet.
 
-AEM Content Services kommer att kunna tillhandahålla HTML-innehåll till mobilappen via API:t. Kunder som vill visa AEM innehåll som HTML skapar en HTML-sidenhet som pekar mot AEM innehållskälla.
+AEM Content Services förser mobilappen med HTML via API:t. Kunder som vill visa AEM innehåll som HTML kan skapa en HTML-sidenhet som pekar mot AEM innehållskälla.
 
 Följande alternativ beaktas:
 
-* **Zip-fil:** För att få den bästa möjligheten att visas korrekt på enheten har du tillgång till allt material som refereras till på sidan - css, JavaScript, resurser osv. - kommer att inkluderas i en enda komprimerad fil med svaret. Referenserna på HTML-sidan justeras så att en relativ sökväg till dessa filer används.
-* **Direktuppspelning:** Hämtar ett manifest med nödvändiga filer från AEM. Använd sedan det manifestet för att begära alla filer (HTML, CSS, JS osv.) med efterföljande förfrågningar.
+* **Zip-fil:** För att få bästa möjliga visning på enheten inkluderas sidans refererade material-css, JavaScript, resurser och så vidare i en enda komprimerad fil med svaret. Referenserna på HTML-sidan kan justeras så att en relativ sökväg till dessa filer används.
+* **Direktuppspelning:** Hämtar ett manifest med nödvändiga filer från AEM. Använd sedan det manifestet för att begära alla filer (HTML, CSS, JS o.s.v.) med efterföljande begäranden.
 
 ![chlimage_1-157](assets/chlimage_1-157.png)
 
@@ -125,7 +121,7 @@ Följande alternativ beaktas:
 
 Kanaloberoende innehåll är ett sätt att exponera AEM innehållskonstruktioner - t.ex. sidor - utan att behöva bekymra sig om layout, komponenter eller annan kanalspecifik information.
 
-Dessa innehållsenheter genereras med en innehållsmodell för att översätta de AEM strukturerna till ett JSON-format. De resulterande JSON-data innehåller information om innehållets data, som är åtskild från AEM. Detta innefattar att returnera metadata och AEM referenslänkar till resurser samt relationer mellan innehållsstrukturer - inklusive entitetshierarkin.
+Dessa innehållsenheter genereras med en innehållsmodell för att översätta de AEM strukturerna till ett JSON-format. De resulterande JSON-data innehåller information om innehållets data som är frikopplade från AEM. Detta innefattar att returnera metadata och AEM referenslänkar till resurser och relationer mellan innehållsstrukturer - inklusive entitetshierarki.
 
 ### Hantera kanaloberoende innehåll {#managing-channel-independent-content}
 
@@ -135,11 +131,11 @@ Innehåll kan komma åt appen på flera sätt.
 
    * Hanterare för innehållssynkronisering kan uppdatera zip-paketet direkt eller genom att anropa befintliga innehållsrenderare
 
-      * Plattformshanterare
+      * Platshanterare
       * AEMM-hanterare
       * Anpassade hanterare
 
-1. GET material direkt via renderare
+1. GET material direkt via innehållsrenderare
 
    * Körklara standardåtergivningsprogram
    * AEM Mobile/Content Services Content Renderers

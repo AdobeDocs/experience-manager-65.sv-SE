@@ -1,26 +1,22 @@
 ---
 title: Verktygskonsoler
-seo-title: Tools Consoles
 description: Lär dig mer om de olika verktygskonsolerna i AEM.
-seo-description: Learn about the different tools consoles throughout AEM.
-uuid: 44439f8e-7c47-4ea9-afe1-a9a23489a20e
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: operations
 content-type: reference
-discoiquuid: 6732ef1f-0bfd-44e6-b24d-e22fe427d8b4
 docset: aem65
 exl-id: c9f55ec9-83ea-4115-97c2-59b5c179e90f
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: fd8bb7d3d9040e0a7a6b2f65751445f41aeab73e
 workflow-type: tm+mt
-source-wordcount: '604'
-ht-degree: 25%
+source-wordcount: '594'
+ht-degree: 21%
 
 ---
 
 # Verktygskonsoler{#tools-consoles}
 
-Med **verktygskonsolerna** får du tillgång till ett antal specialverktyg som hjälper dig att administrera webbplatser, digitala resurser och andra aspekter av ditt innehållslager. Det finns för närvarande två varianter av **verktyg** beroende på vilket gränssnitt du använder:
+The **verktyg** -konsoler ger tillgång till flera specialverktyg som hjälper dig att administrera dina webbplatser, digitala resurser och andra aspekter av innehållsdatabasen. Det finns för närvarande två varianter av **verktyg** beroende på vilket gränssnitt du använder:
 
 * [Verktyg - Touchoptimerat gränssnitt](#tools-touch-optimized-ui)
 * [Verktyg - Klassiskt användargränssnitt](#tools-classic-ui)
@@ -47,7 +43,7 @@ Med **verktygskonsolerna** får du tillgång till ett antal specialverktyg som h
   </tr>
   <tr>
    <td> </td>
-   <td>CRXDE LITE</td>
+   <td>CRXDE Lite</td>
   </tr>
   <tr>
    <td> </td>
@@ -374,11 +370,11 @@ Med **verktygskonsolerna** får du tillgång till ett antal specialverktyg som h
   </tr>
   <tr>
    <td>Konfigurationer av klientkontext<br /> </td>
-   <td>Klientkontexten representerar en dynamiskt sammansatt samling med användardata. Standardkonfigurationerna och marknadsföringskonfigurationerna för molnet finns här.<br /> </td>
+   <td>Klientkontexten representerar en dynamiskt sammansatt samling med användardata. Standardkonfigurationerna och konfigurationerna för Experience Cloud finns här.<br /> </td>
   </tr>
   <tr>
    <td>Konfigurationer av Cloud Service<br /> </td>
-   <td>Innehåller konfigurationer som rör integrering med Adobe Marketing Cloud.</td>
+   <td>Innehåller konfigurationer som rör integrering med Adobe Experience Cloud.</td>
   </tr>
   <tr>
    <td>Molninställningar<br /> </td>
@@ -390,11 +386,11 @@ Med **verktygskonsolerna** får du tillgång till ett antal specialverktyg som h
   </tr>
   <tr>
    <td>DAM </td>
-   <td>Ger åtkomst till olika alternativ.</td>
+   <td>Åtkomst till olika alternativ.</td>
   </tr>
   <tr>
    <td>Kontrollpaneler</td>
-   <td>Här kan du skapa rapportinstrumentpaneler. De här är ett anpassningsbart sätt att definiera sidor som visar konsoliderade data.</td>
+   <td>Skapa rapportinstrumentpaneler. Dessa är ett anpassningsbart sätt att definiera sidor som visar konsoliderade data.</td>
   </tr>
   <tr>
    <td>Anpassad dokumentation</td>
@@ -406,11 +402,11 @@ Med **verktygskonsolerna** får du tillgång till ett antal specialverktyg som h
   </tr>
   <tr>
    <td>Skicka formulär</td>
-   <td>Innehåller en lista över inskickade formulär.</td>
+   <td>Listan över inskickade formulär.</td>
   </tr>
   <tr>
    <td>Importörer </td>
-   <td>Ger åtkomst till olika alternativ.</td>
+   <td>Åtkomst till olika alternativ.</td>
   </tr>
   <tr>
    <td>Extern länkkontroll</td>
@@ -426,19 +422,19 @@ Med **verktygskonsolerna** får du tillgång till ett antal specialverktyg som h
   </tr>
   <tr>
    <td>Replikering - replikeringsagenter</td>
-   <td>Används för att replikera data från författare till publicering vid publicering av sidor, eller med omvänd replikering för att returnera användarkommentarer från publiceringsmiljön till författaren.</td>
+   <td>Används för att replikera data från Author-instansen till Publish vid publicering av sidor, eller med omvänd replikering för att returnera användarkommentarer från publiceringsmiljön till författaren.</td>
   </tr>
   <tr>
    <td>Rapporter</td>
-   <td>AEM innehåller en mängd anpassade rapporter, med vilka du kan skapa anpassade rapporter och/eller utveckla egna.</td>
+   <td>AEM innehåller en mängd anpassade rapporter, med vilka du kan skapa anpassade rapporter eller utveckla egna.</td>
   </tr>
   <tr>
    <td>Standardsidans placering</td>
-   <td>Med hjälp av ställningar kan du skapa ett formulär (en struktur) med fält som motsvarar den struktur du vill ha för sidorna och sedan använda det här formuläret för att enkelt skapa sidor som baseras på den strukturen.</td>
+   <td>Med hjälp av ställningar kan du skapa ett formulär (en struktur) med fält som återspeglar den struktur du vill ha för sidorna och sedan använda det här formuläret för att enkelt skapa sidor som baseras på den strukturen.</td>
   </tr>
   <tr>
    <td>Säkerhet - Självbetjäningskonfiguration </td>
-   <td>Här kan du konfigurera e-postmeddelanden som användare automatiskt får när de skapar ett konto eller återställer ett lösenord och bekräftar ett lösenord som har återställts.</td>
+   <td>Konfigurera de e-postmeddelanden som användare automatiskt får när de skapar ett konto eller återställer ett lösenord och bekräftar ett lösenord som har återställts.</td>
   </tr>
   <tr>
    <td>Segmentering</td>
@@ -454,7 +450,7 @@ Med **verktygskonsolerna** får du tillgång till ett antal specialverktyg som h
   </tr>
   <tr>
    <td>Versionshantering - rensa versioner</td>
-   <td>Gör att du kan rensa sidversioner efter behov.</td>
+   <td>Rensa sidversioner efter behov.</td>
   </tr>
   <tr>
    <td>Arbetsflöde</td>

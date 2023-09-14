@@ -1,19 +1,15 @@
 ---
 title: Huvudvy för behörighetshantering
-seo-title: Principal View for Permissions Management
 description: Lär dig mer om det nya Touch-gränssnittet som underlättar behörighetshantering.
-seo-description: Learn about the new Touch UI interface that facilitates permissions management.
-uuid: 16c5889a-60dd-4b66-bbc4-74fbdb5fc32f
 contentOwner: sarchiz
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: Security
-discoiquuid: db8665fa-353f-45c2-8e37-169d5c1df873
 docset: aem65
 exl-id: 4ce19c95-32cb-4bb8-9d6f-a5bc08a3688d
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: fd8bb7d3d9040e0a7a6b2f65751445f41aeab73e
 workflow-type: tm+mt
-source-wordcount: '773'
+source-wordcount: '764'
 ht-degree: 0%
 
 ---
@@ -55,7 +51,7 @@ Om du klickar på namnet visas de tilldelade behörigheterna till höger. I beh�
 
 ### Lägga till ny åtkomstkontrollpost för ett huvudkonto {#adding-new-access-control-entry-for-a-principal}
 
-Du kan lägga till nya behörigheter genom att lägga till en ny åtkomstkontrollpost genom att klicka på knappen Lägg till ACE.
+Du kan lägga till nya behörigheter genom att lägga till en åtkomstkontrollpost. Klicka bara på knappen Lägg till ACE.
 
 ![Lägg till ny åtkomstkontrollista för ett huvudkonto](assets/patru.png)
 
@@ -63,7 +59,7 @@ Då öppnas fönstret som visas nedan. Nästa steg är att välja en sökväg d�
 
 ![Konfigurera behörighetssökväg](assets/cinci-1.png)
 
-Här väljer vi en sökväg där vi vill konfigurera behörighet för **dam-users**:
+Här har en sökväg valts där du kan konfigurera behörighet för **dam-users**:
 
 ![Exempelkonfiguration för dammanvändare](assets/sase-1.png)
 
@@ -73,25 +69,25 @@ Du kan lägga till behörigheter genom att söka i textfältet och sedan välja 
 
 >[!NOTE]
 >
->En fullständig lista över privilegier och beskrivningar finns på [den här sidan](/help/sites-administering/user-group-ac-admin.md#access-right-management).
+>En fullständig lista över behörigheter och beskrivningar finns i [den här sidan](/help/sites-administering/user-group-ac-admin.md#access-right-management).
 
 ![Sökbehörighet för en angiven sökväg.](assets/image2019-3-21_0-5-47.png) ![Lägg till ny post för &#39;dam-users&#39; enligt en bana som är markerad i lodräta kolumner.](assets/image2019-3-21_0-6-53.png)
 
-När listan över behörigheter har valts kan användaren välja behörighetstyp: Neka eller Tillåt enligt nedan.
+När listan över behörigheter har valts kan användaren välja behörighetstyp: Neka eller Tillåt, enligt nedan.
 
 ![Välj behörighet](assets/screen_shot_2019-03-17at63938pm.png) ![Välj behörighet](assets/screen_shot_2019-03-17at63947pm.png)
 
 ### Använda begränsningar {#using-restrictions}
 
-Förutom en lista över behörigheter och behörighetstypen för en viss sökväg kan du på den här skärmen även lägga till begränsningar för den detaljerade åtkomstkontrollen enligt nedan:
+Förutom listan över behörigheter och behörighetstypen för en viss sökväg kan du på den här skärmen även lägga till begränsningar för den detaljerade åtkomstkontrollen enligt nedan:
 
 ![Lägg till begränsningar](assets/image2019-3-21_1-4-14.png)
 
 >[!NOTE]
 >
->Mer information om vad varje begränsning innebär finns i [The Jackrabbit Oak Documentation](https://jackrabbit.apache.org/oak/docs/security/authorization/restriction.html).
+>Mer information om vad varje begränsning betyder finns i [The Jackrabbit Oak Documentation](https://jackrabbit.apache.org/oak/docs/security/authorization/restriction.html).
 
-Du kan lägga till begränsningar enligt nedan genom att välja begränsningstyp, ange värdet och trycka på **+** ikon.
+Du kan lägga till begränsningar enligt nedan genom att välja begränsningstyp, ange värdet och trycka på **+** -ikon.
 
 ![Lägg till begränsningstypen](assets/sapte-1.png) ![Lägg till begränsningstypen](assets/opt-1.png)
 
@@ -109,7 +105,7 @@ Redigeringsskärmen visas med konfigurerade ACE-adresser förmarkerade. Du kan t
 
 ![Redigera post](assets/noua-1.png)
 
-Här lägger vi till `addChildNodes` privilegium för **dam-users** på den angivna sökvägen.
+Här är `addChildNodes` privilegium har lagts till för **dam-users** på den angivna sökvägen.
 
 ![Lägg till privilegium](assets/image2019-3-21_0-45-35.png)
 
@@ -125,7 +121,7 @@ Du kan spara ändringarna genom att klicka på **Spara** överst till höger så
 
 ### Klassiska kombinationer av användargränssnittsbehörigheter {#classic-ui-privilege-combinations}
 
-Observera att det nya behörighetsgränssnittet uttryckligen använder den grundläggande uppsättningen behörigheter i stället för fördefinierade kombinationer som inte helt återspeglar de exakta underliggande behörigheter som beviljats.
+Det nya behörighetsgränssnittet använder uttryckligen den grundläggande uppsättningen behörigheter i stället för fördefinierade kombinationer som inte riktigt återspeglar de exakta underliggande behörigheter som beviljats.
 
 Det orsakade förvirring om exakt vad som konfigureras. I följande tabell visas mappningen mellan privilegiakombinationerna från det klassiska användargränssnittet och de behörigheter som de består av:
 
