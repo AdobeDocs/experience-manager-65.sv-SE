@@ -1,13 +1,11 @@
 ---
 title: Distribuera webbgrupper
-seo-title: Deploying Communities
 description: Så här distribuerar du AEM Communities
-seo-description: How to deploy AEM Communities
 content-type: reference
 topic-tags: deploying
-source-git-commit: d045fc1ac408f992d594a4cb68d1c4eeae2b0de1
+source-git-commit: e33816b3b8d190e185d2b23dad3a05aca272f01c
 workflow-type: tm+mt
-source-wordcount: '1755'
+source-wordcount: '1761'
 ht-degree: 1%
 
 ---
@@ -35,7 +33,7 @@ ht-degree: 1%
 
 * Om du inte använder standardportarna (4502, 4503) [konfigurera replikeringsagenter](#replication-agents-on-author).
 * [Replikera krypteringsnyckel](#replicate-the-crypto-key)
-* Om det finns stöd för globalisering, [konfigurera automatisk översättning](/help/sites-administering/translation.md)
+* Om globaliseringen stöds [konfigurera automatisk översättning](/help/sites-administering/translation.md)
 (exempelinställningar tillhandahålls för utveckling).
 
 **För [Funktioner i Communities](/help/communities/overview.md)**:
@@ -68,17 +66,17 @@ ht-degree: 1%
 
    * Om JCR SRP [(JSRP)](/help/communities/jsrp.md)
 
-      * Inte ett delat UGC-arkiv:
+      * Inte ett delat UGC-arkiv (användargenererat innehåll):
 
          * UGC replikeras aldrig.
-         * UGC är bara synligt på AEM eller kluster där det angavs.
+         * UGC är bara synligt på en AEM eller ett kluster där det angavs.
 
-      * Standard är JSRP
+      * Standardvärdet är JSRP
 
 
 ## Senaste releaser {#latest-releases}
 
-AEM 6.5 Communities GA innehåller Communities-paketet. Mer information om uppdateringar av AEM 6.5 [Communities](/help/release-notes/release-notes.md#experiencemanagercommunities), se [Versionsinformation för AEM 6.5](/help/release-notes/release-notes.md#communities-release-notes.html).
+AEM 6.5 Communities GA innehåller Communities-paketet. Läs mer om uppdateringar av AEM 6.5 [Communities](/help/release-notes/release-notes.md#experiencemanagercommunities), se [Versionsinformation för AEM 6.5](/help/release-notes/release-notes.md#communities-release-notes.html).
 
 ### AEM 6.5 - uppdateringar {#aem-updates}
 
@@ -86,7 +84,7 @@ Från och med AEM 6.4 levereras uppdateringar av Communities som en del av AEM C
 
 De senaste uppdateringarna av AEM 6.5 finns på [Adobe Experience Manager 6.4 Cumulative Fix Packs and Service Pack](https://helpx.adobe.com/experience-manager/aem-releases-updates.html).
 
-### Versionshistorik {#version-history}
+### Tidigare versioner {#version-history}
 
 Liksom AEM 6.4 och senare är AEM Communities funktioner och snabbkorrigeringar en del av AEM Communities kumulativa korrigeringspaket och servicepaket. Det finns därför inga separata funktionspaket.
 
@@ -94,11 +92,11 @@ Liksom AEM 6.4 och senare är AEM Communities funktioner och snabbkorrigeringar 
 
 En webbgruppsfunktion använder en MySQL-databas:
 
-* För [DSRP](/help/communities/dsrp.md): lagra användargenererat innehåll (UGC)
+* För [DSRP](/help/communities/dsrp.md): lagra UGC
 
 MySQL-kopplingen måste hämtas och installeras separat.
 
-Nödvändiga steg är:
+De nödvändiga stegen är:
 
 1. Hämta ZIP-arkivet från [https://dev.mysql.com/downloads/connector/j/](https://dev.mysql.com/downloads/connector/j/)
 
@@ -143,7 +141,7 @@ Mer information och installationsinformation finns på [Solr-konfiguration](/hel
 
 **Paket synliga i Adobe AEM Cloud**
 
-Länkarna till paketen på den här sidan kräver ingen instans av AEM som körs eftersom de ska paketera delning på `adobeaemcloud.com`. Paketen kan visas, men `Install` är till för att installera paketen på en värdplats i Adobe. Om du tänker installera på en lokal AEM väljer du `Install` resulterar i ett fel.
+Länkarna till paketen på den här sidan kräver ingen instans av AEM som körs eftersom de ska paketera Dela på `adobeaemcloud.com`. Paketen kan visas, men `Install` är till för att installera paketen på en värdplats i Adobe. Om du tänker installera på en lokal AEM väljer du `Install` resulterar i ett fel.
 
 **Installera på lokal AEM**
 
@@ -152,27 +150,27 @@ Installera de paket som visas i `adobeaemcloud.com` på en lokal AEM måste pake
 * Välj **Resurser** tab
 * Välj **ladda ned till disk**
 
-Använd pakethanteraren i den lokala AEM-instansen (till exempel [https://localhost:4502/crx/packmgr/](https://localhost:4502/crx/packmgr/)) för att överföra till den lokala AEM.
+På den lokala AEM-instansen använder du en Package Manager (till exempel [https://localhost:4502/crx/packmgr/](https://localhost:4502/crx/packmgr/)) för att överföra till den lokala AEM.
 
-Du kan också komma åt paketet med hjälp av paketresursen från den lokala AEM-instansen (till exempel [https://localhost:4502/crx/packageshare/](https://localhost:4502/crx/packageshare/)), `Download` kommer att hämtas till den lokala AEM instansens paketdatabas.
+Du kan också komma åt paketet med hjälp av Package Share från den lokala AEM-instansen (till exempel [https://localhost:4502/crx/packageshare/](https://localhost:4502/crx/packageshare/)), `Download` laddar ned till den lokala AEM instansens paketdatabas.
 
-När du är i den lokala AEM-instansens paketdatabas använder du pakethanteraren för att installera paketet.
+När du är i den lokala AEM-instansens paketdatabas använder du Package Manager för att installera paketet.
 
 Mer information finns på [Så här arbetar du med paket](/help/sites-administering/package-manager.md#package-share).
 
 ## Rekommenderade distributioner {#recommended-deployments}
 
-I AEM Communities används en gemensam butik för att lagra användargenererat innehåll (UGC) och kallas ofta för [lagringsresursprovider](/help/communities/working-with-srp.md). Rekommenderade distributionscenter när de väljer ett SRP-alternativ för den gemensamma butiken.
+I AEM Communities används en gemensam butik för att lagra användargenererat innehåll och kallas ofta [lagringsresursleverantör (SRP)](/help/communities/working-with-srp.md). Rekommenderade distributionscenter när de väljer ett SRP-alternativ för den gemensamma butiken.
 
 Den gemensamma lagringsplatsen har stöd för moderering och analys av användargenererat innehåll i publiceringsmiljön samtidigt som behovet av [replikering](/help/communities/sync.md) av UGC.
 
-* [Community Content Store](/help/communities/working-with-srp.md) : diskuterar SRP-lagringsalternativ för AEM communities
+* [Community Content Store](/help/communities/working-with-srp.md) : diskuterar SRP-lagringsalternativ för AEM Communities
 
-* [Rekommenderade topologier](/help/communities/topologies.md) : diskuterar topologi som ska användas beroende på användningsfall och val av SRP
+* [Rekommenderade topologier](/help/communities/topologies.md) : diskuterar topologin som ska användas beroende på användningsfall och SRP-val
 
 ## Uppgraderar {#upgrading}
 
-När du uppgraderar till AEM 6.5-plattformen från tidigare versioner av AEM är det viktigt att du läser [Uppgradera till AEM 6.5](/help/sites-deploying/upgrade.md).
+När du uppgraderar till AEM 6.5 från tidigare versioner av AEM är det viktigt att du läser [Uppgradera till AEM 6.5](/help/sites-deploying/upgrade.md).
 
 Förutom att uppgradera plattformen kan du läsa [Uppgradera till AEM Communities 6.5](/help/communities/upgrade.md) om du vill veta mer om förändringar i communities.
 
@@ -180,9 +178,9 @@ Förutom att uppgradera plattformen kan du läsa [Uppgradera till AEM Communitie
 
 ### Primär utgivare {#primary-publisher}
 
-När den valda distributionen är en [publicera servergrupp](/help/communities/topologies.md#tarmk-publish-farm)måste en AEM publiceringsinstans identifieras som **`primary publisher`** för aktiviteter som inte ska förekomma i alla instanser, t.ex. funktioner som är beroende av **meddelanden** eller **Adobe Analytics**.
+När den valda distributionen är en [publicera servergrupp](/help/communities/topologies.md#tarmk-publish-farm)måste en AEM publiceringsinstans identifieras som **`primary publisher`** för aktiviteter som inte ska förekomma i alla instanser. Funktioner som är beroende av **meddelanden** eller **Adobe Analytics**.
 
-Som standard är `AEM Communities Publisher Configuration` OSGi-konfigurationen är konfigurerad med **`Primary Publisher`** är markerad så att alla publiceringsinstanser i en publiceringsgrupp identifierar sig själva som primär.
+Som standard är `AEM Communities Publisher Configuration` OSGi-konfigurationen är konfigurerad med **`Primary Publisher`** är markerad så att alla publiceringsinstanser i en publiceringsgrupp kan identifieras som primär.
 
 Det är därför nödvändigt att **redigera konfigurationen för alla sekundära publiceringsinstanser** för att avmarkera **`Primary Publisher`** kryssruta.
 
@@ -202,7 +200,7 @@ För alla andra (sekundära) publiceringsinstanser i en publiceringsgrupp:
 
 ### Replikeringsagenter på författare {#replication-agents-on-author}
 
-Replikering används för webbplatsinnehåll som skapas i publiceringsmiljön, t.ex. communitygrupper, samt för att hantera medlemmar och medlemsgrupper från författarmiljön med hjälp av [tunneltjänst](#tunnel-service-on-author).
+Replikering används för webbplatsinnehåll som skapas i publiceringsmiljön, t.ex. communitygrupper, och hanterar medlemmar och medlemsgrupper från författarmiljön med hjälp av [tunneltjänst](#tunnel-service-on-author).
 
 För den primära utgivaren måste du se till att [Konfiguration för replikeringsagent](/help/sites-deploying/replication.md) identifierar publiceringsservern och den behöriga användaren korrekt. Den standardauktoriserade användaren, `admin` har redan rätt behörigheter (är medlem i `Communities Administrators`).
 
@@ -222,9 +220,9 @@ Det finns två replikeringsagenter i författarmiljön som kräver att transport
       1. Välj agenten.
       1. Välj **redigera**.
       1. Välj **Transport** tab
-      1. If not port `4503`, redigera **URI** för att ange rätt port.
+      1. Om den inte är port `4503`, redigera **URI** för att ange rätt port.
 
-      1. Om ingen användare `admin`, redigera **Användare** och **Lösenord** för att ange en medlem i `administrators` användargrupp.
+      1. Om det inte är en användare `admin`, redigera **Användare** och **Lösenord** för att ange en medlem i `administrators` användargrupp.
 
 I följande bilder visas resultatet av en ändring av porten från 4503 till 6103 med :
 
@@ -266,7 +264,7 @@ Från och med AEM 6.3 lagras nyckelmaterialet i filsystemet och inte längre i d
 
 Om du vill kopiera nyckelmaterialet från författaren till alla andra instanser måste du:
 
-* Få åtkomst till AEM, vanligtvis en författarinstans som innehåller det nyckelmaterial som ska kopieras
+* Åtkomst till AEM, vanligtvis en Author-instans som innehåller det nyckelmaterial som ska kopieras
 
    * Leta reda på `com.adobe.granite.crypto.file` i det lokala filsystemet
 
@@ -288,21 +286,21 @@ Om du vill kopiera nyckelmaterialet från författaren till alla andra instanser
       * `<publish-aem-install-dir>/crx-quickstart/launchpad/felix/bundle21/data`
 
    * Klistra in de två tidigare kopierade filerna
-   * Det är nödvändigt att [uppdatera Granite Crypto-paketet](#refresh-the-granite-crypto-bundle) om AEM körs.
+   * Du måste [uppdatera Granite Crypto-paketet](#refresh-the-granite-crypto-bundle) om AEM körs.
 
 >[!CAUTION]
 >
->Om en annan säkerhetsfunktion redan har konfigurerats som baseras på krypteringsnycklarna kan konfigurationen skadas om du replikerar krypteringsnycklarna. För assistans: [kontakta kundtjänst](https://helpx.adobe.com/marketing-cloud/contact-support.html).
+>Om en annan säkerhetsfunktion redan har konfigurerats som baseras på krypteringsnycklarna kan konfigurationen skadas om du replikerar krypteringsnycklarna. För assistans: [kontakta kundtjänst](https://experienceleague.adobe.com/?support-solution=General&amp;support-tab=home#support).
 
 #### Databasreplikering {#repository-replication}
 
-Du kan behålla nyckelmaterialet som lagras i databasen, vilket var fallet i AEM 6.2 och tidigare, genom att ange följande systemegenskap vid första starten av varje AEM (som skapar den ursprungliga databasen):
+Nyckelmaterialet som lagras i databasen, som i AEM 6.2 och tidigare, kan bevaras. Ange följande systemegenskap vid den första starten av varje AEM (som skapar den inledande databasen):
 
 * `-Dcom.adobe.granite.crypto.file.disable=true`
 
 >[!NOTE]
 >
->Det är viktigt att kontrollera att [replikeringsagent vid författare](#replication-agents-on-author) är korrekt konfigurerad.
+>Det är viktigt att kontrollera att [replikeringsagent på författare](#replication-agents-on-author) är korrekt konfigurerad.
 
 Med nyckelmaterialet som lagras i databasen replikeras krypteringsnyckeln från författaren till andra instanser på följande sätt:
 
@@ -317,9 +315,9 @@ Använda [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md) :
 
 ![CRXDE Lite som visar sökvägen /etc/key på den vänstra panelen och fliken Replikering markerad på den nedre högra panelen.](../assets/replicare-repository.png)
 
-#### Uppdatera Granite Crypto Bundle {#refresh-the-granite-crypto-bundle}
+#### Uppdatera Granite-krypteringspaketet {#refresh-the-granite-crypto-bundle}
 
-* I varje publiceringsinstans kan du öppna [Webbkonsol](/help/sites-deploying/configuring-osgi.md)
+* I varje publiceringsinstans kan du få åtkomst till [Webbkonsol](/help/sites-deploying/configuring-osgi.md)
 
    * Till exempel: [https://&lt;server>:&lt;port>/system/console/bundles](https://localhost:4503/system/console/bundles)
 
@@ -328,7 +326,7 @@ Använda [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md) :
 
 ![Uppdatering av Adobe Granite Crypto Support-paketet.](../assets/refresh-granite-bundle.png)
 
-* Efter ett ögonblick **Lyckades** visas:
+* Efter ett ögonblick **Lyckades** ska visas:
   `Operation completed successfully.`
 
 ### Apache HTTP-server {#apache-http-server}
@@ -358,8 +356,8 @@ Var särskilt försiktig med att använda rätt servernamn, inte `localhost`, i 
 
 Om du använder en Dispatcher läser du:
 
-* AEM [Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html) dokumentation
-* [Installerar Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-install.html)
+* AEM [Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=en) dokumentation
+* [Installerar Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/dispatcher-install.html?lang=en)
 * [Konfigurera Dispatcher för Communities](/help/communities/dispatcher.md)
 * [Kända fel](/help/communities/troubleshooting.md#dispatcher-refetch-fails)
 
@@ -367,7 +365,7 @@ Om du använder en Dispatcher läser du:
 
 * Besök [Administrera webbgruppsplatser](/help/communities/administer-landing.md) om du vill veta mer om hur du skapar en community-webbplats, konfigurerar mallar för communitysajter, modererar communityinnehåll, hanterar medlemmar och konfigurerar meddelanden.
 
-* Besök [Utveckla webbgrupper](/help/communities/communities.md) om du vill veta mer om ramverket för sociala komponenter (SCF) och hur du anpassar komponenter och funktioner i Communities.
+* Besök [Utveckla webbgrupper](/help/communities/communities.md) där du kan lära dig mer om det sociala ramverket (SCF) och hur du anpassar communitykomponenter och -funktioner.
 
-* Besök [Komponenter i redigeringsgrupper](/help/communities/author-communities.md) om du vill lära dig hur du redigerar med och konfigurerar Communities-komponenter.
+* Besök [Komponenter i redigeringsgrupper](/help/communities/author-communities.md) där du kan lära dig hur du skapar med och konfigurerar webbgruppskomponenter.
 

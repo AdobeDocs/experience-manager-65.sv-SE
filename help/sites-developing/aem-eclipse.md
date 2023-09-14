@@ -1,14 +1,12 @@
 ---
 title: AEM Developer Tools for Eclipse
 description: AEM Developer Tools for Eclipse
-uuid: 566e49f2-6f28-4aa7-bfe0-b5f9675310bf
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: development-tools
 content-type: reference
-discoiquuid: a2ae76a8-50b0-4e43-b791-ad3be25b8582
 exl-id: 00473769-c447-4966-a71e-117c669e0151
-source-git-commit: 4fd5e9a1bc603202ee52e85a1c09125b13cec315
+source-git-commit: 8336a7257d3c5e75cd37381b0124c227c2d55dca
 workflow-type: tm+mt
 source-wordcount: '788'
 ht-degree: 1%
@@ -17,7 +15,7 @@ ht-degree: 1%
 
 # AEM Developer Tools for Eclipse{#aem-developer-tools-for-eclipse}
 
-![Cirkulärt bildmotiv för AEM utvecklingsverktyg för Eclipse.](do-not-localize/chlimage_1-9.png)
+![Cirkulärt bildmotiv för AEM för Eclipse.](do-not-localize/chlimage_1-9.png)
 
 ## Översikt {#overview}
 
@@ -48,7 +46,7 @@ Innan du använder AEM Developer Tools ska du göra följande:
 
 När du har uppfyllt [krav](#requirements) ovan kan du installera plugin-programmet på följande sätt:
 
-1. Bläddra i **AEM Developer Tools** webbplats på `https://eclipse.adobe.com/aem/dev-tools/`.
+1. Sök i **AEM Developer Tools** webbplats på `https://eclipse.adobe.com/aem/dev-tools/`.
 
 1. Kopiera **Installationslänk**.
 
@@ -60,7 +58,7 @@ När du har uppfyllt [krav](#requirements) ovan kan du installera plugin-program
 1. I **Namn** AEM Developer Tools.
 1. I **Plats** kopiera installations-URL:en.
 1. Klicka **OK**.
-1. Markera båda **AEM** och **Sling** plugin-program.
+1. Markera båda **AEM** och **Sling** plugins.
 1. Klicka på **Nästa**.
 1. Klicka på **Nästa**.
 1. Godkänn de linjära avtalen och klicka på **Slutför**.
@@ -84,7 +82,7 @@ AEM utvecklingsverktyg för Eclipse levereras med ett perspektiv som ger dig ful
 
 Så här skapar du exempelprojektet:
 
-1. I **Fil** > **Nytt** > **Projekt** -menyn, bläddra till **AEM** avsnitt och markera **Exempel på AEM projekt med flera moduler**.
+1. I **Fil** > **Nytt** > **Projekt** -menyn, bläddra till **AEM** avsnitt och markera **Exempel på AEM-projekt med flera moduler**.
 
    ![chlimage_1-69](assets/chlimage_1-69a.png)
 
@@ -100,7 +98,7 @@ Så här skapar du exempelprojektet:
 
    ![chlimage_1-71](assets/chlimage_1-71a.png)
 
-1. Fyll i en **Namn**, **Grupp-ID** och **Artefakt-ID** för exempelprojektet. Du kan också välja att ange vissa avancerade egenskaper.
+1. Fyll i en **Namn**, **Grupp-ID** och en **Artefakt-ID** för exempelprojektet. Du kan också välja att ange vissa avancerade egenskaper.
 
    ![chlimage_1-72](assets/chlimage_1-72a.png)
 
@@ -118,7 +116,7 @@ Så här skapar du exempelprojektet:
 
    >[!NOTE]
    >
-   >I en ny anläggning (närmare bestämt: när större beroenden aldrig har laddats ned) kan det uppstå fel i projektet. I så fall följer du det förfarande som beskrivs i [Löser ogiltig projektdefinition](#resolving-invalid-project-definition).
+   >I en ny installation (närmare bestämt: när större beroenden aldrig har hämtats) kan du få projektet skapat med fel. I så fall följer du det förfarande som beskrivs i [Löser ogiltig projektdefinition](#resolving-invalid-project-definition).
 
 ## Felsökning {#troubleshooting}
 
