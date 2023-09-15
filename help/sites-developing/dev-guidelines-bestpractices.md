@@ -1,18 +1,14 @@
 ---
 title: AEM - riktlinjer och bästa praxis
-seo-title: AEM Development - Guidelines and Best Practices
 description: Riktlinjer och bästa metoder för att utveckla AEM
-seo-description: Guidelines and best practices for developing on AEM
-uuid: a67de085-4441-4a1d-bec3-2f27892a67ff
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: introduction
 content-type: reference
-discoiquuid: b4cf0ffc-973a-473b-80c8-7f530d111435
 exl-id: 8eef7e4d-a6f2-4b87-a995-0761447283c6
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 4e2ee7da5424ac6677eaa2392de7803e7543d13c
 workflow-type: tm+mt
-source-wordcount: '1093'
+source-wordcount: '1085'
 ht-degree: 0%
 
 ---
@@ -21,7 +17,7 @@ ht-degree: 0%
 
 ## Riktlinjer för användning av mallar och komponenter {#guidelines-for-using-templates-and-components}
 
-AEM komponenter och mallar utgör en mycket kraftfull verktygslåda. De kan användas av utvecklare för att ge användare, redaktörer och administratörer på webbplatser den funktionalitet de behöver för att anpassa sina webbplatser till föränderliga affärsbehov (innehållsflexibilitet) samtidigt som webbplatsernas enhetliga layout (varumärkesskydd) bibehålls.
+Adobe Experience Manager (AEM) komponenter och mallar utgör en kraftfull verktygslåda. De kan användas av utvecklare för att ge användare, redaktörer och administratörer på webbplatser möjlighet att anpassa sina webbplatser efter förändrade affärsbehov (innehållsflexibilitet). Allt detta med bibehållen enhetlig layout för webbplatserna (varumärkesskydd).
 
 En typisk utmaning för en person som ansvarar för en webbplats, eller en uppsättning webbplatser (till exempel på ett globalt företags kontor) är att presentera en ny typ av innehållspresentation på deras webbplatser.
 
@@ -29,28 +25,28 @@ Låt oss anta att det finns ett behov av att lägga till en nyhetslistsida på w
 
 Det rekommenderade sättet att hantera en sådan utmaning är att
 
-* Återanvänd en befintlig mall för att skapa en ny typ av sida. Mallen definierar en sidstruktur (navigeringselement, paneler och så vidare) som finjusteras ytterligare av dess design (CSS, grafik).
+* Återanvänd en befintlig mall så att du kan skapa en ny typ av sida. Mallen definierar en sidstruktur (navigeringselement, paneler och så vidare) som finjusteras ytterligare av dess design (CSS, grafik).
 * Använd styckesystemet (parsys/iparsys) på de nya sidorna.
 * Definiera direkt åtkomst till styckesystemens designläge, så att endast behöriga personer (vanligtvis administratören) kan ändra dem.
 * Definiera de komponenter som tillåts i det angivna styckesystemet så att redigerare sedan kan placera de nödvändiga komponenterna på sidan. I det här fallet kan det vara en listkomponent som kan gå igenom ett underträd med sidor och extrahera informationen enligt fördefinierade regler.
-* Redigerare lägger till och konfigurerar de tillåtna komponenterna, på de sidor som de ansvarar för, för att leverera den begärda funktionen (information) till företaget.
+* Redigerare lägger till och konfigurerar de tillåtna komponenterna på de sidor som de ansvarar för för för att leverera den begärda funktionen (information) till företaget.
 
-Detta visar hur detta tillvägagångssätt gör det möjligt för de medverkande användarna och administratörerna på webbplatsen att snabbt reagera på affärsbehov, utan att utvecklingsteamen behöver vara engagerade. Alternativa metoder, till exempel att skapa en ny mall, är vanligtvis en kostsam övning som kräver en ändringshanteringsprocess och att utvecklingsteamet är engagerat. Detta gör hela processen mycket längre och kostsam.
+Detta visar hur detta tillvägagångssätt gör det möjligt för de medverkande användarna och administratörerna på webbplatsen att snabbt reagera på affärsbehov, utan att utvecklingsteamen behöver vara engagerade. Alternativa metoder, till exempel att skapa en mall, är vanligtvis en kostsam övning som kräver en ändringshanteringsprocess och att utvecklingsteamet är engagerat. Detta gör hela processen längre och kostsam.
 
 Utvecklarna av AEM bör därför använda
 
 * mallar och åtkomstkontroll för styckesystemdesign för enhetligt varumärke och varumärkesskydd
 * styckesystem inklusive dess konfigurationsalternativ för flexibilitet.
 
-Följande allmänna regler för utvecklare är bra för de flesta vanliga projekt:
+Följande allmänna regler för utvecklare passar bäst i de vanligaste projekten:
 
 * Behåll lågt antal mallar - lika lite som antalet helt olika sidstrukturer på webbplatserna.
-* Erbjud nödvändig flexibilitet och konfigurationsfunktioner till dina anpassade komponenter.
-* Maximera användningen av kraften och flexibiliteten i AEM styckesystem - komponenterna parsys och iparsys.
+* Ge de anpassade komponenterna den flexibilitet och de konfigurationsfunktioner som behövs.
+* Maximera användningen av kraften och flexibiliteten i det AEM styckesystemet - parsys- och iparsys-komponenterna.
 
 ### Anpassa komponenter och andra element {#customizing-components-and-other-elements}
 
-När du skapar egna komponenter eller anpassar en befintlig komponent är det oftast enklast (och säkraste) att återanvända befintliga definitioner. Samma principer gäller även andra element i AEM, till exempel felhanteraren.
+När du skapar egna komponenter eller anpassar en befintlig komponent är det oftast enklast (och säkraste) att återanvända befintliga definitioner. Samma principer gäller även för andra element i AEM, till exempel felhanteraren.
 
 Detta kan du göra genom att kopiera och ersätta den befintliga definitionen. Med andra ord, kopiera definitionen från `/libs` till `/apps/<your-project>`. Den här nya definitionen, i `/apps`, kan uppdateras efter dina behov.
 
@@ -64,7 +60,7 @@ Till exempel:
 
   Detta innebar att en komponentdefinition skulle ersättas:
 
-   * Skapa en ny komponentmapp i `/apps/<website-name>/components/<MyComponent>` genom att kopiera en befintlig komponent:
+   * Skapa en komponentmapp i `/apps/<website-name>/components/<MyComponent>` genom att kopiera en befintlig komponent:
 
       * Så här anpassar du komponentkopian Text:
 
@@ -75,16 +71,16 @@ Till exempel:
 
   Det här fallet handlar om att täcka över en serverdel:
 
-   * Kopiera standardskripten i databasen:
+   * Kopiera ett eller flera standardskript i databasen:
 
       * från `/libs/sling/servlet/errorhandler/`
       * till `/apps/sling/servlet/errorhandler/`
 
 >[!CAUTION]
 >
->Du **får inte** ändra något i `/libs` bana.
+>**Gör inte** ändra något i `/libs` bana.
 >
->Detta beror på innehållet i `/libs` skrivs över nästa gång du uppgraderar din instans (och kan mycket väl skrivas över när du använder en snabbkorrigering eller ett funktionspaket).
+>Orsaken är att innehållet i `/libs` skrivs över nästa gång du uppgraderar din instans (och kan mycket väl skrivas över när du installerar en snabbkorrigering eller ett funktionspaket).
 >
 >För konfiguration och andra ändringar:
 >
@@ -98,19 +94,19 @@ JCR-frågor är ett kraftfullt verktyg när de används på rätt sätt. De är 
 * riktiga slutanvändarfrågor, t.ex. fulltextsökningar i innehåll.
 * tillfällen då strukturerat innehåll måste hittas i hela databasen.
 
-  I sådana fall ska du se till att frågor endast körs när det är absolut nödvändigt, till exempel vid komponentaktivering eller cacheogiltigförklaring (till skillnad från till exempel Arbetsflödessteg, Händelsehanterare som utlöser vid innehållsändringar, filter etc.).
+  I så fall måste du se till att frågor bara körs när det behövs. Till exempel vid komponentaktivering eller cacheogiltigförklaring (till skillnad från till exempel arbetsflöden, händelsehanterare som aktiveras vid innehållsändringar och filter).
 
-JCR-frågor ska aldrig användas för renderingsbegäranden. JCR-frågor passar till exempel inte för
+Använd aldrig JCR-frågor för renderingsbegäranden. JCR-frågor passar till exempel inte för följande:
 
 * återgivningsnavigering
-* skapa en översikt över de 10 senaste nyhetsobjekten
+* skapa en översikt över de 10 senaste nyhetsartiklarna
 * visa antal innehållsobjekt
 
 Använd navigeringsåtkomst till innehållsträdet i stället för att utföra en JCR-fråga när du återger innehåll.
 
 >[!NOTE]
 >
->Om du använder [Query Builder](/help/sites-developing/querybuilder-api.md)använder du JCR-frågor när Query Builder genererar JCR-frågor under huven.
+>Om du använder [Frågebyggaren](/help/sites-developing/querybuilder-api.md)använder du JCR-frågor när Query Builder genererar JCR-frågor under huven.
 >
 
 ## Säkerhetsaspekter {#security-considerations}
@@ -121,7 +117,7 @@ Använd navigeringsåtkomst till innehållsträdet i stället för att utföra e
 
 ### JCR-sessioner (databas) {#jcr-repository-sessions}
 
-Du bör använda användarsessionen, inte den administrativa sessionen. Detta innebär att du bör använda:
+Använd användarsessionen, inte den administrativa sessionen. Detta innebär att du bör använda:
 
 ```java
 slingRequest.getResourceResolver().adaptTo(Session.class);
@@ -133,26 +129,26 @@ Med XSS (Cross-site scripting) kan angripare lägga in kod på webbsidor som vis
 
 AEM tillämpar principen om att filtrera allt innehåll som användaren tillhandahåller vid utskrift. Förhindrande av XSS har högsta prioritet under både utveckling och testning.
 
-Dessutom en brandvägg för webbprogram, som [mod_security för Apache](https://modsecurity.org), kan ge tillförlitlig, central kontroll över distributionsmiljöns säkerhet och skydda mot tidigare oidentifierade serveröverskridande skriptattacker (cross-site scripting).
+En brandvägg för webbprogram, som [mod_security för Apache](https://modsecurity.org), kan ge tillförlitlig och central kontroll över distributionsmiljöns säkerhet och skydda mot tidigare oidentifierade serveröverskridande skriptattacker (cross-site scripting).
 
 >[!CAUTION]
 >
 >Exempelkod som medföljer AEM kan inte skydda sig mot sådana attacker och är vanligtvis beroende av att en webbprogrambrandvägg filtrerar begäranden.
 
-XSS API-databladet innehåller information som du behöver känna till för att kunna använda XSS API:t och göra en AEM säkrare. Du kan ladda ned den här:
+XSS API-databladet innehåller information som du måste känna till för att kunna använda XSS API:t och göra en AEM säkrare. Du kan ladda ned den här:
 
-XSSAPI-kalkylbladet.
+XSSAPI-kalkylblad.
 
 [Hämta fil](assets/xss_cheat_sheet_2016.pdf)
 
-### Skydda kommunikation för konfidentiell information {#securing-communication-for-confidential-information}
+### Säkra kommunikation för konfidentiell information {#securing-communication-for-confidential-information}
 
 Liksom för alla Internetprogram ska du se till att konfidentiella uppgifter skickas
 
 * trafiken säkras via SSL
 * HTTP-POST används om tillämpligt
 
-Detta gäller information som är konfidentiell för systemet (t.ex. konfiguration eller administrativ åtkomst) samt information som är konfidentiell för användarna (t.ex. personuppgifter)
+Detta gäller information som är konfidentiell för systemet (som konfiguration eller administrativ åtkomst) och information som är konfidentiell för användarna (som deras personuppgifter)
 
 ## Distinkta utvecklingsuppgifter {#distinct-development-tasks}
 
@@ -162,8 +158,8 @@ Felsidor kan anpassas för AEM. Detta är tillrådligt så att instansen inte vi
 
 Se [Anpassa felsidor som visas av felhanteraren](/help/sites-developing/customizing-errorhandler-pages.md) för fullständig information.
 
-### Öppna filer i Java-processen {#open-files-in-the-java-process}
+### Öppna filer i Java™-processen {#open-files-in-the-java-process}
 
-Eftersom AEM kan få åtkomst till ett stort antal filer rekommenderar vi att man [öppna filer för en Java-process](/help/sites-deploying/configuring.md#open-files-in-the-java-process) vara explicit konfigurerad för AEM.
+Eftersom AEM kan få åtkomst till många filer bör du ange antalet [öppna filer för en Java™-process](/help/sites-deploying/configuring.md#open-files-in-the-java-process) vara explicit konfigurerad för AEM.
 
-För att minimera problemet bör du se till att alla öppnade filer stängs korrekt så snart som (meningsfullt) möjligt.
+För att minimera problemet bör utvecklingsverktyget se till att alla öppna filer stängs korrekt när det är möjligt (meningsfullt).

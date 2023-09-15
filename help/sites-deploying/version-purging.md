@@ -1,35 +1,31 @@
 ---
 title: Rensning av version
-seo-title: Version Purging
 description: I den här artikeln beskrivs de tillgängliga alternativen för att rensa versioner.
-seo-description: This article describes the available options for version purging.
-uuid: a9fa25c7-e60e-4665-a726-99af9aac8f70
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: configuring
 content-type: reference
-discoiquuid: fb4d7337-7b94-430b-80d2-f1754f823c2b
 docset: aem65
 feature: Configuring
 exl-id: 6f0b1951-bdda-475f-b6c0-bc18de082b7c
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 4e2ee7da5424ac6677eaa2392de7803e7543d13c
 workflow-type: tm+mt
-source-wordcount: '727'
+source-wordcount: '717'
 ht-degree: 0%
 
 ---
 
 # Rensning av version{#version-purging}
 
-I en standardinstallation AEM en ny version av en sida eller nod när du aktiverar en sida efter att innehållet har uppdaterats.
+I en standardinstallation skapar Adobe Experience Manager (AEM) en version av en sida eller nod när du aktiverar en sida efter att innehållet har uppdaterats.
 
 >[!NOTE]
 >
->Om inga innehållsändringar görs visas ett meddelande om att sidan har aktiverats, men ingen ny version skapas
+>Om inga innehållsändringar görs visas ett meddelande om att sidan har aktiverats, men ingen ny version skapas.
 
 Du kan skapa ytterligare versioner på begäran med **Versioner** sidosparkens flik. Dessa versioner lagras i databasen och kan återställas om det behövs.
 
-Dessa versioner rensas aldrig, så databasstorleken kommer att öka med tiden och måste därför hanteras.
+Dessa versioner rensas aldrig, så databasstorleken ökar med tiden och måste därför hanteras.
 
 AEM levereras med olika mekanismer som hjälper dig att hantera din databas:
 
@@ -49,7 +45,7 @@ När en versions ålder överskrider det här värdet rensas den från databasen
 
 >[!CAUTION]
 >
->För att optimera databasstorleken bör du köra versionsrensningen ofta. Uppgiften bör schemaläggas utanför kontorstid när trafiken är begränsad.
+>Optimera databasstorleken genom att köra versionsrensningen ofta. Uppgiften bör schemaläggas utanför kontorstid när trafiken är begränsad.
 
 ## Versionshanteraren {#version-manager}
 
@@ -67,19 +63,19 @@ En version skapas bara om aktiveringen sker på en sökväg som finns i `version
 
 * `versionmanager.ivPaths`(String[], standard: `{"/"}`) Anger sökvägarna som versioner skapas implicit vid aktivering om `versionmanager.createVersionOnActivation` är inställt på true.
 
-* `versionmanager.purgingEnabled` (Boolean, standard: false) Anger om rensning ska aktiveras när nya versioner skapas eller inte.
+* `versionmanager.purgingEnabled` (Boolean, standard: false) Anger om rensning ska aktiveras när nya versioner skapas.
 
 * `versionmanager.purgePaths` (String[], standard: {&quot;/content&quot;}) Anger på vilka sökvägar versioner ska rensas när nya versioner skapas.
 
-* `versionmanager.maxAgeDays` (int, default: 30) Vid versionsrensning tas alla versioner som är äldre än det konfigurerade värdet bort. Om värdet är mindre än 1 utförs inte rensning baserat på versionens ålder.
+* `versionmanager.maxAgeDays` (int, standard: 30) Vid versionsrensning tas alla versioner som är äldre än det konfigurerade värdet bort. Om värdet är mindre än 1 utförs inte rensning baserat på versionens ålder.
 
 * `versionmanager.maxNumberVersions` (int, standard 5) Vid versionsrensning tas alla versioner som är äldre än den n:te nyaste versionen bort. Om värdet är mindre än 1 utförs inte rensning baserat på antalet versioner.
 
-* `versionmanager.minNumberVersions` (int, standard 0) Det minsta antal versioner som behålls oavsett ålder. Om värdet är mindre än 1 behålls inget minsta antal versioner.
+* `versionmanager.minNumberVersions` (int, standard 0) Minsta antal versioner som behålls oavsett ålder. Om värdet är mindre än 1 behålls inget minsta antal versioner.
 
 >[!NOTE]
 >
->Vi rekommenderar inte att du behåller ett stort antal versioner i databasen. Så när du konfigurerar versionsrensningsåtgärden bör du tänka på att inte utesluta för många versioner från rensningen, eftersom databasstorleken då inte optimeras korrekt. Om du har ett stort antal versioner på grund av verksamhetskrav kontaktar du supporten för Adobe för att hitta alternativa sätt att optimera databasstorleken.
+>Vi rekommenderar inte att du behåller många versioner i databasen. När du konfigurerar versionsrensningsåtgärden bör du därför tänka på att inte utesluta för många versioner från rensningen, eftersom databasstorleken då inte är korrekt optimerad. Om du har ett stort antal versioner på grund av verksamhetskrav kontaktar du supporten för Adobe för att hitta alternativa sätt att optimera databasstorleken.
 
 ### Kombinera kvarhållningsalternativ {#combining-retention-options}
 
@@ -95,12 +91,12 @@ Om du till exempel definierar det maximala antalet versioner som ska behållas O
 
 * Med:
 
-   * 10 versioner under de senaste 60 dagarna
-   * 3 av dessa versioner har skapats under de senaste 30 dagarna
+   * Tio versioner gjordes de senaste 60 dagarna
+   * Tre av dessa versioner skapades de senaste 30 dagarna
 
-* Betyder det:
+* Det innebär att
 
-   * De senaste 3 versionerna behålls
+   * De tre senaste versionerna bevaras
 
 När du definierar t.ex. det högsta OCH lägsta antalet versioner som ska behållas OCH den äldsta versionen som ska behållas:
 
@@ -112,11 +108,11 @@ När du definierar t.ex. det högsta OCH lägsta antalet versioner som ska behå
 
 * Med:
 
-   * 5 versioner för 60 dagar sedan
+   * Fem versioner gjordes för 60 dagar sedan
 
-* Betyder det:
+* Det innebär att
 
-   * 3 versioner behålls
+   * Tre versioner behålls
 
 ## Rensa versioner {#purge-versions-tool}
 
