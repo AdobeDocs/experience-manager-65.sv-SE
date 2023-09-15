@@ -12,9 +12,9 @@ discoiquuid: de7d7209-c194-4d19-853b-468ebf3fa4b2
 docset: aem65
 exl-id: 314a6409-398c-470b-8799-0c4e6f745141
 feature: Security
-source-git-commit: 41752e40f2bceae98d4a9ff8bf130476339fe324
+source-git-commit: 465d3e956ecdd36eea5fe095e250652eedd4b3c5
 workflow-type: tm+mt
-source-wordcount: '3025'
+source-wordcount: '3005'
 ht-degree: 0%
 
 ---
@@ -57,11 +57,11 @@ Dessa konton omfattar:
 
 * AEM `admin` konto
 
-   När du har ändrat lösenordet för AEM administratörskonto använder du det nya lösenordet när du använder CRX.
+  När du har ändrat lösenordet för AEM administratörskonto använder du det nya lösenordet när du använder CRX.
 
 * The `admin` lösenord för OSGi-webbkonsolen
 
-   Den här ändringen tillämpas även på det administratörskonto som används för att komma åt webbkonsolen, så använd samma lösenord när du kommer åt det.
+  Den här ändringen tillämpas även på det administratörskonto som används för att komma åt webbkonsolen, så använd samma lösenord när du kommer åt det.
 
 De här två kontona använder separata autentiseringsuppgifter och det är viktigt att ha tydliga, starka lösenord för var och en av dem för att driftsättningen ska vara säker.
 
@@ -132,7 +132,7 @@ Av säkerhetsskäl bör båda ändras för att återspegla det aktuella användn
 
 * The **transportanvändare** får inte vara administratörsanvändare. I stället anger du en användare i publiceringssystemet som bara har behörighet till de relevanta delarna av publiceringssystemet och använder användarens inloggningsuppgifter för transporten.
 
-   Du kan starta från den paketerade replikeringsmottagaren och konfigurera den här användarens åtkomsträttigheter så att de matchar din situation
+  Du kan starta från den paketerade replikeringsmottagaren och konfigurera den här användarens åtkomsträttigheter så att de matchar din situation
 
 * The **replikanvändare** eller **Användar-ID för agent** får inte heller vara admin-användare, utan en användare som bara kan se innehåll som är replikerat. Replikeringsanvändaren används för att samla in det innehåll som ska replikeras på författarsystemet innan det skickas till utgivaren.
 
@@ -148,7 +148,7 @@ Allt exempelinnehåll och alla användare (till exempel Geometrixx och dess komp
 
 >[!NOTE]
 >
->Provet `We.Retail` program tas bort om den här instansen körs i [Produktionsklar läge](/help/sites-administering/production-ready.md). Om så inte är fallet kan du avinstallera exempelinnehållet genom att gå till Pakethanteraren, söka efter och avinstallera alla `We.Retail` paket.
+>Exemplet `We.Retail` program tas bort om den här instansen körs i [Produktionsklar läge](/help/sites-administering/production-ready.md). Om så inte är fallet kan du avinstallera exempelinnehållet genom att gå till Pakethanteraren, söka efter och avinstallera alla `We.Retail` paket.
 
 Se [Arbeta med paket](package-manager.md).
 
@@ -166,11 +166,11 @@ The [AEM Developer Tools](/help/sites-developing/aem-eclipse.md) installera Apac
 
 Detta OSGi-paket bör avinstalleras både på författaren och publicera produktionssystem innan de blir tillgängliga.
 
-### Protect mot smidning av förfrågningar mellan webbplatser {#protect-against-cross-site-request-forgery}
+### Protect mot smidning av förfrågningar på olika webbplatser {#protect-against-cross-site-request-forgery}
 
 #### CSRF Protection Framework {#the-csrf-protection-framework}
 
-AEM 6.1 levereras med en mekanism som hjälper till att skydda mot attacker med attacker med smidda förfrågningar på olika webbplatser, som kallas **Ramverk för CSRF-skydd**. Mer information om hur du använder programmet finns i [dokumentation](/help/sites-developing/csrf-protection.md).
+AEM 6.1 levereras med en mekanism som hjälper till att skydda mot attacker som leder till cross-site request-attacker, som kallas **Ramverk för CSRF-skydd**. Mer information om hur du använder programmet finns i [dokumentation](/help/sites-developing/csrf-protection.md).
 
 #### Sling Referer-filtret {#the-sling-referrer-filter}
 
@@ -182,7 +182,7 @@ Refererarfiltertjänsten är en OSGi-tjänst som gör att du kan konfigurera fö
 * om en tom referensrubrik tillåts
 * och en lista över servrar som ska tillåtas utöver servervärden.
 
-   Som standard finns alla varianter av localhost och de värdnamn som servern är bunden till i listan.
+  Som standard finns alla varianter av localhost och de värdnamn som servern är bunden till i listan.
 
 Så här konfigurerar du referenspunktsfiltertjänsten:
 
@@ -221,9 +221,9 @@ Vissa OSGI-inställningar ställs in som standard för att underlätta felsökni
 
 >[!NOTE]
 >
->Alla inställningar nedan förutom **Dagen CQ WCM-felsökningsfilter**, täcks automatiskt av [Produktionsklar läge](/help/sites-administering/production-ready.md). Därför rekommenderar Adobe att du granskar alla inställningar innan du distribuerar instansen i en produktiv miljö.
+>Alla inställningar nedan förutom **Dagen CQ WCM-felsökningsfilter**, omfattas automatiskt av [Produktionsklar läge](/help/sites-administering/production-ready.md). Därför rekommenderar Adobe att du granskar alla inställningar innan du distribuerar instansen i en produktiv miljö.
 
-För följande tjänster måste de angivna inställningarna ändras:
+För var och en av följande tjänster måste de angivna inställningarna ändras:
 
 * [Bibliotekshanteraren Adobe Granite HTML](/help/sites-deploying/osgi-configuration-settings.md#day-cq-html-library-manager):
 
@@ -238,7 +238,7 @@ För följande tjänster måste de angivna inställningarna ändras:
 
 * [Dag CQ WCM-filter](/help/sites-deploying/osgi-configuration-settings.md):
 
-   * endast vid publicering, ange **WCM-läge** till &quot;disabled&quot;
+   * endast vid publicering, ange **WCM Mode** till &quot;disabled&quot;
 
 * [Apache Sling JavaScript-hanterare](/help/sites-deploying/osgi-configuration-settings.md#apache-sling-javascript-handler):
 
@@ -251,28 +251,28 @@ För följande tjänster måste de angivna inställningarna ändras:
 
 Se [Konfigurationsinställningar för OSGi](/help/sites-deploying/osgi-configuration-settings.md).
 
-När du arbetar med AEM finns det flera metoder för att hantera konfigurationsinställningarna för sådana tjänster. se [Konfigurerar OSGi](/help/sites-deploying/configuring-osgi.md) om du vill ha mer information och rekommenderade rutiner.
+När du arbetar med AEM finns det flera metoder för att hantera konfigurationsinställningarna för sådana tjänster. Se [Konfigurerar OSGi](/help/sites-deploying/configuring-osgi.md) om du vill ha mer information och rekommenderade rutiner.
 
 ## Ytterligare läsningar {#further-readings}
 
 ### Minska DoS-attacker (Denial of Service) {#mitigate-denial-of-service-dos-attacks}
 
-En denial of service-attack (DoS) är ett försök att göra en datorresurs otillgänglig för de avsedda användarna. Den här attacken görs ofta genom att överbelasta resursen. till exempel:
+En denial of service-attack (DoS) är ett försök att göra en datorresurs otillgänglig för de avsedda användarna. Den här attacken utförs ofta genom att resursen överbelastas, till exempel:
 
 * En flod av förfrågningar från en extern källa.
 * En begäran om mer information än systemet kan leverera.
 
-   Till exempel en JSON-representation av hela databasen.
+  Till exempel en JSON-representation av hela databasen.
 
 * Genom att begära en innehållssida med ett obegränsat antal URL-adresser kan URL-adressen innehålla ett handtag, vissa väljare, ett tillägg och ett suffix, som alla kan ändras.
 
-   Till exempel: `.../en.html` kan också begäras som:
+  Till exempel: `.../en.html` kan också begäras som:
 
    * `.../en.ExtensionDosAttack`
    * `.../en.SelectorDosAttack.html`
    * `.../en.html/SuffixDosAttack`
 
-   Alla giltiga variationer (t.ex. returnera en `200` -svar och är konfigurerade att cachelagras) cachas av Dispatcher, vilket till slut leder till ett fullständigt filsystem och ingen tjänst för fler begäranden.
+  Alla giltiga variationer (t.ex. returnera en `200` -svar och är konfigurerade att cachelagras) cachas av Dispatcher, vilket till slut leder till ett fullständigt filsystem och ingen tjänst för fler begäranden.
 
 Det finns många konfigurationspunkter för att förhindra sådana attacker, men endast de punkter som rör AEM diskuteras här.
 
@@ -298,19 +298,20 @@ För att förhindra missbruk kan du göra följande:
 
 1. Kontrollera konfigurationen av standardåtergivningsprogrammen, som kan vara ett problemområde.
 
-   * JSON-renderaren konverterar trädstrukturen över flera nivåer.
+   * JSON-renderaren omformar trädstrukturen över flera nivåer.
 
-      Exempelvis begäran:
+     Exempelvis begäran:
 
-      `http://localhost:4502/.json`
+     `http://localhost:4502/.json`
 
-      kan dumpa hela databasen i en JSON-representation vilket kan orsaka betydande serverproblem. Därför anger Sling en gräns för hur många resultat som får maximalt användas. Om du vill begränsa djupet i JSON-återgivningen anger du värdet för följande:
+     kan dumpa hela databasen i en JSON-representation vilket kan orsaka betydande serverproblem. Därför anger Sling en gräns för hur många resultat som får maximalt användas. Om du vill begränsa djupet i JSON-återgivningen anger du värdet för följande:
 
-      **JSON Max-resultat** ( `json.maximumresults`)
+     **JSON Max-resultat** ( `json.maximumresults`)
 
-      i konfigurationen för [Apache Sling GET Servlet](/help/sites-deploying/osgi-configuration-settings.md#apache-sling-get-servlet). När den här gränsen överskrids komprimeras återgivningen. Standardvärdet för Sling inom AEM är `1000`.
+     i konfigurationen för [Apache Sling GET Servlet](/help/sites-deploying/osgi-configuration-settings.md#apache-sling-get-servlet). När den här gränsen överskrids komprimeras återgivningen. Standardvärdet för Sling inom AEM är `1000`.
 
    * Som en förebyggande åtgärd bör du inaktivera andra standardåtergivare (HTML, oformaterad text, XML). Återigen genom att konfigurera [Apache Sling GET Servlet](/help/sites-deploying/osgi-configuration-settings.md#apache-sling-get-servlet).
+
    >[!CAUTION]
    >
    >Inaktivera inte JSON-återgivning eftersom det krävs för att AEM ska fungera normalt.
@@ -325,7 +326,7 @@ För att förhindra missbruk kan du göra följande:
 >
 >Denna begränsning bör endast utföras i AEM som inte använder Forms.
 
-Eftersom AEM inte tillhandahåller färdiga index för `FormChooserServlet`, kan formulärväljare i frågor utlösa en kostsam databasgenomgång, vilket vanligen leder till att AEM avbryts. Formulärväljare kan identifieras med hjälp av **&amp;ast;.form.&amp;ast;** sträng i frågor.
+Eftersom AEM inte tillhandahåller färdiga index för `FormChooserServlet`, kan formulärväljare i frågor utlösa en kostsam databasgenomgång, vilket vanligen gör att AEM inte fungerar som den ska. Formulärväljare kan identifieras med hjälp av **&amp;ast;.form.&amp;ast;** sträng i frågor.
 
 Du kan åtgärda det här problemet genom att göra följande:
 
@@ -340,7 +341,7 @@ Du kan åtgärda det här problemet genom att göra följande:
 
 Med standardservern för hämtning av resurser kan autentiserade användare skicka godtyckligt stora, samtidiga hämtningsbegäranden för att skapa ZIP-filer med resurser. Om du skapar stora ZIP-arkiv kan servern och nätverket överbelastas. För att minska risken för denial of service-attacker som orsakas av detta beteende `AssetDownloadServlet` OSGi-komponenten är inaktiverad som standard på [!DNL Experience Manager] publiceringsinstans. Den är aktiverad på [!DNL Experience Manager] författarinstans som standard.
 
-Om du inte behöver nedladdningsfunktionen kan du inaktivera servern för författare och publicera distributioner. Om din installation kräver att hämtningsfunktionen är aktiverad, se [den här artikeln](/help/assets/download-assets-from-aem.md) för mer information. Du kan också ange en maximal hämtningsgräns som din distribution kan stödja.
+Om du inte behöver nedladdningsfunktionen kan du inaktivera servern för författare och publicera distributioner. Om din installation kräver att funktionen för hämtning av resurser är aktiverad, se [den här artikeln](/help/assets/download-assets-from-aem.md) för mer information. Du kan också ange en maximal hämtningsgräns som din distribution kan stödja.
 
 ### Inaktivera WebDAV {#disable-webdav}
 
@@ -352,7 +353,7 @@ Inaktivera WebDAV både i skribent- och publiceringsmiljöer genom att stoppa r�
 
    Till exempel, `http://localhost:4503/system/console/bundles`.
 
-1. I listan med paket hittar du paketet:
+1. I listan med paket hittar du paketet med namnet:
 
    `Apache Sling Simple WebDAV Access to repositories (org.apache.sling.jcr.webdav)`
 
@@ -441,7 +442,7 @@ Mer specifikt måste du göra följande:
 
    * `<author-aem-install-dir>/crx-quickstart/launchpad/felix/bundle21/data`
 
-1. Kopiera HMAC-filer och överordnad filer.
+1. Kopiera HMAC- och mallfilerna.
 1. Gå sedan till den målinstans som du vill duplicera HMAC-nyckeln till och navigera till datamappen. Till exempel:
 
    * `<publish-aem-install-dir>/crx-quickstart/launchpad/felix/bundle21/data`
@@ -449,12 +450,6 @@ Mer specifikt måste du göra följande:
 1. Klistra in de två filer som du kopierade tidigare.
 1. [Uppdatera krypteringspaketet](/help/communities/deploy-communities.md#refresh-the-granite-crypto-bundle) om målinstansen redan körs.
 1. Upprepa stegen ovan för alla förekomster som du vill replikera nyckeln till.
-
->[!NOTE]
->
->Du kan återgå till att lagra nycklar före 6.3 genom att lägga till parametern nedan när du först installerar AEM:
->
->`-Dcom.adobe.granite.crypto.file.disable=true`
 
 #### Replikeringsnycklar för AEM 6.2 och äldre versioner {#replicating-keys-for-aem-and-older-versions}
 
@@ -473,4 +468,4 @@ Adobe rekommenderar att du utför ett penetrationstest av din AEM infrastruktur 
 
 ### Bästa praxis för utveckling {#development-best-practices}
 
-Det är viktigt att ny utveckling följer [Bästa praxis för säkerhet](/help/sites-developing/security.md) för att säkerställa att AEM är säker.
+Det är viktigt att ny utveckling följer [Bästa praxis för säkerhet](/help/sites-developing/security.md) för att säkerställa att din AEM är säker.
