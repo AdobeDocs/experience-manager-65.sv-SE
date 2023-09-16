@@ -5,14 +5,14 @@ contentOwner: Guillaume Carlino
 topic-tags: e-commerce
 content-type: reference
 exl-id: ecbd0097-c407-4581-bab2-4729a71df4a3
-source-git-commit: b9c164321baa3ed82ae87a97a325fcf0ad2f6ca0
+source-git-commit: b00ed4ed146b89aece9af1d267c890a360a236e9
 workflow-type: tm+mt
 source-wordcount: '714'
 ht-degree: 0%
 
 ---
 
-# SAP Commerce Cloud{#sap-commerce-cloud}
+# SAP COMMERCE CLOUD{#sap-commerce-cloud}
 
 >[!NOTE]
 >
@@ -26,7 +26,7 @@ ht-degree: 0%
 >
 >`Geometrixx Outdoors Site English (US)`
 
-Distribuera [nödvändiga e-handelspaket](#packages-needed-for-ecommerce-with-hybris) tillhandahåller eCommerce-ramverkets alla funktioner, tillsammans med en referensimplementering av eCommerce-funktionaliteten i enlighet med en hybris-implementering (inklusive en demonstrationskatalog),
+Distribuera [nödvändiga e-handelspaket](#packages-needed-for-ecommerce-with-hybris) tillhandahåller eCommerce-ramverkets alla funktioner, tillsammans med en referensimplementering av eCommerce-funktionaliteten i enlighet med en hybris-implementering (inklusive en demonstrationskatalog)
 
 Detta finns tillgängligt under den engelska (USA) grenen ( `/content/geometrixx-outdoors/en_US`) på Geometrixx Outdoors webbplats:
 
@@ -55,7 +55,7 @@ För att installera e-handelsfunktioner behöver du:
 * Din hybris-server
 * AEM e-handelsramverk:
 
-   * detta ingår i en AEM
+   * detta är en del av en AEM
 
 * AEM Geometrixx-all-paket:
 
@@ -83,7 +83,7 @@ Så här installerar du en fullständig konfiguration (med demonstrationskatalog
    1. ` [cq-geometrixx-hybris-content-6.3.2](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/product/cq-geometrixx-hybris-content)`
 
 1. [Ladda ned och bygg upp hybris Server](#download-and-build-your-hybris-server).
-1. Skapa din katalog i din e-handelsmotor:
+1. Skapa din katalog i din eCommerce-motor:
 
    1. [Ställ in Geometrixx utomhusbutik](#setup-the-geometrixx-outdoors-store).
 
@@ -107,9 +107,9 @@ Hybriversioner tidigare än 5.5.1 stöds inte.
 
 >[!NOTE]
 >
-Du behöver [Groovy](https://groovy-lang.org/) installerade på datorn.
+För att slutföra detta behöver du [Groovy](https://groovy-lang.org/) installerade på datorn.
 
-1. Ladda ned **hybris Commerce Suite** distribution från hybris nedladdningssajt.
+1. Ladda ned **hybris Commerce Suite** distribution från hybris nedladdningsplats.
 
    >[!CAUTION]
    >
@@ -171,7 +171,7 @@ Du behöver [Groovy](https://groovy-lang.org/) installerade på datorn.
 
    [http://localhost:9002](http://localhost:9002)
 
-1. Klicka **Initiera** och bekräfta sedan initieringsåtgärden (när befintliga data tas bort).
+1. Klicka **Initiera** och bekräfta sedan initieringsåtgärden (allt eftersom befintliga data tas bort).
 
    Förloppet visas på konsolen med `FINISHED` som anger att åtgärden har slutförts.
 
@@ -207,7 +207,7 @@ Den här proceduren överför och konfigurerar demonstrationsbutiken - Geometrix
 
    `en_US - English (United States)`
 
-1. Öppna **Resurser** -fliken.
+1. Öppna **Resurs** -fliken.
 1. **Överför** följande **Media-Zip**:
 
 [Hämta fil](/help/sites-deploying/assets/geometrixx-outdoors-images.zip)

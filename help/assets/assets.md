@@ -5,24 +5,24 @@ contentOwner: AG
 feature: Asset Management
 role: Leader, Architect, User
 exl-id: 68239634-a2e8-414e-a866-cd8082641ee8
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: b00ed4ed146b89aece9af1d267c890a360a236e9
 workflow-type: tm+mt
-source-wordcount: '870'
+source-wordcount: '869'
 ht-degree: 0%
 
 ---
 
 # Om [!DNL Adobe Experience Manager Assets] som en DAM-lösning {#administering-assets}
 
-[!DNL Assets] är ett DAM-verktyg (Digital Asset Management) som är en viktig del av [!DNL Experience Manager] och gör det möjligt att hantera och distribuera digitala resurser. Användare i en hel organisation kan hantera, lagra och få tillgång till många typer av digitalt material som bilder, videor, dokument, ljudklipp, 3D-filer och multimedia för användning på webben, i tryck och för digital distribution.
+AEM [!DNL Assets] är ett DAM-verktyg (Digital Asset Management) som ingår i [!DNL Experience Manager] och gör det möjligt för ert företag att hantera och distribuera digitala resurser. Användare i en hel organisation kan hantera, lagra och få tillgång till många typer av digitalt material som bilder, videor, dokument, ljudklipp, 3D-filer och multimedia för användning på webben, i tryck och för digital distribution.
 
 ## Vad är Digital Asset Management? {#what-is-digital-asset-management}
 
 [!DNL Assets] erbjuder företagsövergripande delning och distribution av en organisations viktigaste digitala resurser. Användare i en hel organisation kan lagra, hantera och komma åt digitala resurser som bilder, grafik, ljud, video och dokument via ett webbgränssnitt (eller en CIFS- eller WebDAV-mapp).
 
-[!DNL Assets] kapacitet för [!DNL Experience Manager] gör följande:
+[!DNL Assets] kapacitet för [!DNL Experience Manager] gör så här:
 
-* Lägg in och dela bilder, dokument, ljudfiler och videofiler i en mängd olika filformat.
+* Lägg till och dela bilder, dokument, ljudfiler och videofiler i olika filformat.
 * Hantera resurser genom att gruppera dem efter taggar, ljusbord eller stjärnor (dina favoriter). Lägg till anteckningar i resurser.
 * Sök efter resurser genom att söka efter filnamn, den fullständiga texten i dokument och genom att söka efter datum, dokumenttyp och taggar.
 * Lägg till eller redigera metadatainformation för resurser. Metadata versionshanteras automatiskt tillsammans med motsvarande resurs. Du kan importera eller exportera metadata för resurser.
@@ -31,20 +31,20 @@ ht-degree: 0%
 
 ### [!DNL Experience Manager Assets] är integrerat med [!DNL Experience Manager Sites] {#aem-assets-fully-integrated-in-cq-wcm}
 
-[!DNL Assets] helt integrerat med [!DNL Sites] och fungerar smidigt i alla situationer. När du t.ex. redigerar webbsidor [!DNL Sites] författare kan hitta och använda digitala resurser via Content Finder. Användargränssnittet i [!DNL Assets] är samma som [!DNL Sites]. Se [översikt över platser](/help/sites-authoring/page-authoring.md) för fullständig information.
+[!DNL Assets] helt integrerat med [!DNL Sites] och fungerar smidigt i alla situationer. När du t.ex. redigerar webbsidor [!DNL Sites] författare kan hitta och använda digitala resurser via Content Finder. Användargränssnittet i [!DNL Assets] är samma som [!DNL Sites]. Se en [översikt över platser](/help/sites-authoring/page-authoring.md) för fullständig information.
 
 Det grundläggande användargränssnittet är detsamma som i [!DNL Sites]. Se [Översikt över platserna](/help/sites-authoring/page-authoring.md) för fullständig information.
 
 ### Digital Asset Management jämfört med bildkomponent {#digital-asset-management-versus-image-component}
 
-När du avgör om en bild ska placeras i DAM-databasen eller om bildkomponenten ska användas, bör du tänka på bildens livscykel:
+När du avgör om en bild ska placeras i DAM-databasen eller om en bildkomponent ska användas, bör du tänka på bildens livscykel:
 
 * Om bilden har samma livscykel som sidan använder du bildkomponenten.
 * Om bilden har en separat livscykel, till exempel om du använder bilden två gånger eller utanför WCM, ska du använda [!DNL Assets].
 
 ## Vad är digitala resurser? {#what-are-digital-assets}
 
-En resurs är ett digitalt dokument, en bild, en video eller ett ljud (eller en del av ett) som kan ha flera återgivningar och kan ha underresurser (t.ex. lager i en Photoshop-fil, bilder i en PowerPoint-fil, sidor i en PDF-fil, filer i en ZIP-fil).
+En resurs är ett digitalt dokument, en bild, en video eller ett ljud (eller en del av ett) som kan ha flera återgivningar. Den kan också innehålla underresurser, till exempel lager i en Photoshop-fil, bilder i en PowerPoint-fil, sidor i en PDF-fil, filer i en ZIP-fil.
 
 En resurs är i stort sett en binär resurs plus metadata plus återgivningar plus underresurser. Se [DAM Performance Guide](/help/sites-deploying/assets-performance-sizing.md) för detaljerad information.
 
@@ -54,15 +54,15 @@ En resurs är i stort sett en binär resurs plus metadata plus återgivningar pl
 
 ### [!DNL Experience Manager Assets] terminologi {#aem-assets-terminology}
 
-När du arbetar med digitala resurser i [!DNL Experience Manager]måste du förstå följande terminologi:
+När du arbetar med digitala resurser i [!DNL Experience Manager]blir det enklare om du förstår följande terminologi:
 
 * **Samling**: En samling resurser, antingen baserat på fysisk plats (mapp), gemensamma egenskaper (sparad sökmapp) eller användarval (lightbox-mappar).
 
-* **Metadata** [!DNL Assets] ha metadata, till exempel författare, förfallodatum, DRM-information (Digital Rights Management) och så vidare. Metadata är under åtkomstkontroll. [!DNL Assets] har stöd för följande vanliga metadatascheman:
+* **Metadata** [!DNL Assets] har metadata, till exempel författare, förfallodatum och DRM-information (Digital Rights Management). Metadata är under åtkomstkontroll. [!DNL Assets] har stöd för följande vanliga metadatascheman:
 
    * Dublin Core: inklusive författare, beskrivning, datum, ämne och så vidare.
    * IPTC: inklusive händelse, modell, plats och så vidare.
-   * WCM: inklusive sidegenskaper, [!UICONTROL On Time] och [!UICONTROL Off Time]och så vidare.
+   * WCM: inkludera sidegenskaper, [!UICONTROL On Time] och [!UICONTROL Off Time]och så vidare.
 
 * **Taggning**: [!DNL Assets] kan taggas och klassificeras. Se [ordna resurser](/help/assets/organize-assets.md).
 
@@ -79,11 +79,11 @@ Du utför en åtgärd på en resurs eller samling. Funktionsmakron kan skapa och
 De uppgifter du kan utföra med dessa förkonfigurerade arbetsflöden:
 
 * Spara resursen i eller ta bort resursen från databasen.
-* Extrahera och spara metadata för resursen; de enskilda metadataobjekten sparas som XMP.
-* Generera återgivningar och miniatyrbilder för resursen. inklusive automatisk storleksändring och beskärning vid behov.
+* Extrahera och spara metadata för resursen. De enskilda metadataobjekten sparas som XMP.
+* Generera återgivningar och miniatyrbilder för resursen, inklusive automatisk storleksändring och beskärning vid behov.
 * Omkoda tillgången där det behövs. Video för mobil- och webbanvändning omkodas till exempel med 24 bildrutor per sekund, och video hämtas med 30 bildrutor per sekund. Ljud för mobil- och webbanvändning omkodas med 128 kbit/s, ljud för nedladdning med 192 kbit/s.
 
-Du kan förstås även använda arbetsflöden manuellt. Se [Mediehanterare för resurser](media-handlers.md)för en lista med standardarbetsflöden.
+Du kan även använda arbetsflöden manuellt. Se [Mediehanterare för resurser](media-handlers.md)för en lista med standardarbetsflöden.
 
 ## [!DNL Experience Manager Assets] och [!DNL Media Library] {#cq-dam-vs-cq-medialibrary}
 
@@ -93,4 +93,3 @@ Se [Resurser och Media Library](medialibrary.md) för information om skillnadern
 >
 >* [Videointroduktion - Experience Manager Assets som modern DAM](https://www.youtube.com/watch?v=PBwQqZgC-yo)
 >* [Förstå metadatabegrepp](/help/assets/metadata-concepts.md)
-

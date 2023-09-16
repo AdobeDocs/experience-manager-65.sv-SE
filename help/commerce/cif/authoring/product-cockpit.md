@@ -2,9 +2,9 @@
 title: Product Cockpit
 description: Arbeta med Product Cockpit
 exl-id: 05ef2604-1d52-4397-a696-0b64717cc3cc
-source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
+source-git-commit: b00ed4ed146b89aece9af1d267c890a360a236e9
 workflow-type: tm+mt
-source-wordcount: '424'
+source-wordcount: '416'
 ht-degree: 0%
 
 ---
@@ -31,7 +31,7 @@ Aktivering av mellanlagrade katalogfunktioner kräver autentisering. Se [Komma i
 >
 >Mellanlagrade katalogfunktioner är bara tillgängliga med Adobe Commerce- och tredjepartsanslutningar som stöder tokenbaserad autentisering.
 
-## Öppna produktdockan {#opening-product-cockpit}
+## Öppnar produktdockan {#opening-product-cockpit}
 
 Det enklaste sättet att komma åt produktdockan är via menyn&quot;Handel&quot; AEM huvudmenyn. Det går också att använda Omnissearch (sök efter handel) eller att öppna `https://<yourAEMInstance>/commerce.html`.
 
@@ -43,11 +43,11 @@ Produktkatalogen ordnas hierarkiskt efter produktkatalogstrukturen. Den första 
 
 ![Konfigurerade kataloger](/help/commerce/cif/assets/catalog-overview.png)
 
-Om du klickar på en kategori läses de underordnade objekten för den valda kategorin in.
+När du klickar på en kategori läses de underordnade objekten för den valda kategorin in.
 
 ![Kategoriunderordnade](/help/commerce/cif/assets/catalog-category-children.png)
 
-Om du klickar på en produkt läses produktvariationer in om sådana finns.
+När du klickar på en produkt läses produktvariationer in om sådana finns.
 
 ![Produktvariationer](/help/commerce/cif/assets/catalog-product-variation.png)
 
@@ -63,13 +63,13 @@ En textsökning i hela produktkatalogen finns på den vänstra filterfliken för
 
 ## Bläddrar i den mellanlagrade produktkatalogen {#staged-product-catalogs}
 
-Som standard visas data i produktkatalogen i produktcockpit. Om du använder&quot;STAGED CATALOG&quot; på den vänstra filterfliken läses produktkatalogen in för ett valt datum.
+Som standard visas data i produktkatalogen i produktcockpiten. Om du använder&quot;STAGED CATALOG&quot; på den vänstra filterfliken läses produktkatalogen in för ett valt datum.
 
 ![mellanlagrad katalog](/help/commerce/cif/assets/staged-cockpit.png)
 
 ## Egenskaper för produktkatalog {#catalog-properties}
 
-Om du klickar på egenskapsikonen för en produkt eller kategori öppnas egenskapsvyn för det valda objektet. Öppna egenskaper för en produktvariant är lika med öppna de huvudsakliga produktegenskaperna.
+Om du klickar på egenskapsikonen för en produkt eller kategori öppnas egenskapsvyn för det markerade objektet. Öppna egenskaper för en produktvariant är lika med öppna de huvudsakliga produktegenskaperna.
 
 ### Flikar {#tabs}
 

@@ -1,27 +1,25 @@
 ---
 title: Administrera generisk e-handel
-seo-title: Administering generic eCommerce
 description: Den AEM generiska lösningen innehåller metoder för att hantera den handelsinformation som finns i databasen.
-seo-description: The AEM generic solution provides methods of managing the commerce information held within the repository.
 contentOwner: Guillaume Carlino
 topic-tags: e-commerce
 content-type: reference
 docset: aem65
 exl-id: c29f6213-1df6-45af-91c8-14b255276d82
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: b00ed4ed146b89aece9af1d267c890a360a236e9
 workflow-type: tm+mt
-source-wordcount: '2977'
+source-wordcount: '2929'
 ht-degree: 0%
 
 ---
 
 # Administrera generisk e-handel {#administering-generic-ecommerce}
 
-Den AEM generiska lösningen innehåller metoder för att hantera den handelsinformation som finns i databasen (till skillnad från en extern e-handelsmotor). Detta omfattar följande:
+Den generiska Adobe Experience Manager-lösningen (AEM) innehåller metoder för att hantera den handelsinformation som finns i databasen (till skillnad från en extern e-handelsmotor). Detta omfattar följande:
 
 * [Produkter](/help/commerce/cif-classic/administering/concepts.md#products)
 * [Produktvarianter](/help/commerce/cif-classic/administering/concepts.md#product-variants)
-* [Katalog(er)](/help/commerce/cif-classic/administering/concepts.md#catalogs)
+* [Kataloger](/help/commerce/cif-classic/administering/concepts.md#catalogs)
 * [Erbjudanden](/help/commerce/cif-classic/administering/concepts.md#promotions)
 * [Vouchers](/help/commerce/cif-classic/administering/concepts.md#vouchers)
 * [Beställningar](/help/commerce/cif-classic/administering/concepts.md#shopping-cart-and-orders)
@@ -31,7 +29,7 @@ Den AEM generiska lösningen innehåller metoder för att hantera den handelsinf
 >
 >Standardinstallationen AEM innehåller den allmänna AEM (JCR)-implementeringen av e-handel.
 >
->Detta är för närvarande avsett för demonstrationssyften, eller som en grundläggande grund för en anpassad implementering enligt dina krav.
+>Detta är avsett för demonstrationssyften, eller som en grundläggande grund för en anpassad implementering enligt dina krav.
 
 ## Produkter och produktvariationer {#products-and-product-variations}
 
@@ -39,7 +37,7 @@ Den AEM generiska lösningen innehåller metoder för att hantera den handelsinf
 >
 >Följande procedurer gäller för både Produkter och Produktvariationer.
 
-Innan du skapar produkter måste du definiera en [ställningar](/help/sites-authoring/scaffolding.md). Här anges vilka fält du behöver för att definiera produkterna och hur de ska redigeras.
+Definiera en [ställningar](/help/sites-authoring/scaffolding.md). Här anges fälten som du måste definiera, produkterna och hur de redigeras.
 
 Det behövs ett ställningar för varje enskild produkttyp. Den lämpliga strukturen är kopplad till produkterna antingen genom att
 
@@ -56,7 +54,7 @@ Det behövs ett ställningar för varje enskild produkttyp. Den lämpliga strukt
 >
 >`/etc/commerce/products/geometrixx-outdoors`
 >
->Du kan skapa en ny produktdefinition var som helst under den utan ytterligare inställningar.
+>Du kan skapa en produktdefinition var som helst under den utan ytterligare inställningar.
 
 ### Importerar produkter {#importing-products}
 
@@ -76,7 +74,7 @@ Det behövs ett ställningar för varje enskild produkttyp. Den lämpliga strukt
 
    * **Källa**
 
-     Den fil du vill importera. Du kan använda webbläsaren för att välja en fil.
+     Den fil som du vill importera. Du kan använda webbläsaren för att välja en fil.
 
    * **Inkrementell import**
 
@@ -88,7 +86,7 @@ Det behövs ett ställningar för varje enskild produkttyp. Den lämpliga strukt
    >
    >En anpassad importör kan definieras för att fungera som det ska.
 
-1. Välj **Nästa** Om du vill importera produkterna visas en logg över de åtgärder som vidtagits.
+1. Välj **Nästa** Om du vill importera produkterna visas en logg över de åtgärder som har vidtagits.
 
    >[!NOTE]
    >
@@ -96,7 +94,7 @@ Det behövs ett ställningar för varje enskild produkttyp. Den lämpliga strukt
 
    >[!NOTE]
    >
-   >Använda flera gånger **Nästa** och **Bakåt** kommer att importera produktdefinitionerna upprepade gånger. Eftersom de har samma SKU:er skrivs den information som finns i databasen över.
+   >Använda flera gånger **Nästa** och **Bakåt** importerar produktdefinitionerna upprepade gånger. Eftersom de har samma SKU:er skrivs den befintliga informationen i databasen över.
 
 1. Välj **Klar** för att stänga guiden.
 
@@ -167,7 +165,7 @@ Det behövs ett ställningar för varje enskild produkttyp. Den lämpliga strukt
 >
 >`/etc/commerce/products/...`
 >
->Det innebär att de som standard blockeras av [avsändare](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html)så konfigurera efter behov.
+>Det innebär att de som standard blockeras av [Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html)så konfigurera efter behov.
 
 #### Redigera produktinformation - Touchoptimerat gränssnitt {#editing-product-information-touch-optimized-ui}
 
@@ -192,12 +190,12 @@ Det behövs ett ställningar för varje enskild produkttyp. Den lämpliga strukt
 
    ![dubbelpil](/help/sites-administering/do-not-localize/chlimage_1-16.png)
 
-1. Välj önskad produkt - den sekundära rälen uppdateras för att visa tillgängliga referenstyper:
+1. Välj önskad produkt - uppdateringarna på den sekundära listen visar vilka referenstyper som är tillgängliga:
 
    ![produktkonsol med öppna referenser](/help/sites-administering/assets/chlimage_1-88.png)
 
 1. Klicka/tryck på referenstypen (till exempel Produktsidor) för att utöka listan.
-1. Välj en specifik referens för att visa alternativen:
+1. Välj en specifik referens så att du kan visa alternativen:
 
    * Navigera till produktsidan
    * Redigera produktsida
@@ -225,14 +223,14 @@ Du kan ändra en befintlig aspekt eller lägga till nya, med CRXDE Lite:
 
    `http://localhost:4502/crx/de/index.jsp#/libs/commerce/gui/content/products/aside/items/search/items/searchpanel/facets`
 
-1. Du kan till exempel ändra de storlekar som ska visas på produktsöksidan. Klicka på `sizegroup` nod.
+1. Du kan till exempel redigera de storlekar som visas på produktsöksidan. Klicka på `sizegroup` nod.
 1. Klicka `items` nod, klicka sedan på `propertypredicate` nod.
-1. Du kan ändra `propertyValues`. Du kan till exempel lägga till XS, eller XXL, eller ta bort en storlek.
+1. Du kan redigera `propertyValues`. Du kan till exempel lägga till XS eller XXL, eller ta bort en storlek.
 1. Klicka **Spara alla** och navigera till produktsöksidan. Ändringarna bör visas.
 
 ### Flera resurser {#multiple-assets}
 
-Du kan lägga till flera resurser i produktkomponenten och sedan ange vilken resurs som ska visas på produktsidan.
+Du kan lägga till flera resurser i produktkomponenten och sedan ange den resurs som du vill ska visas på produktsidan.
 
 >[!NOTE]
 >
@@ -247,32 +245,32 @@ Du kan lägga till flera resurser i produktkomponenten och sedan ange vilken res
    >
    >Du måste vara på produktnivå, inte på variantnivå.
 
-1. Tryck/klicka **Visa produktdata** ikon med markeringsläge eller snabbåtgärder.
-1. Tryck/klicka på ikonen Redigera.
+1. Välj **Visa produktdata** ikon med markeringsläge eller snabbåtgärder.
+1. Välj ikonen Redigera.
 1. Bläddra till **Lägg till**.
 
    ![Lägga till produktdata, bild](/help/sites-administering/assets/chlimage_1-91.png)
 
-1. Tryck/klicka **Lägg till**. En ny platshållare för resursen visas.
-1. Om du trycker/klickar på **Ändra **öppnas en dialogruta där du kan välja en resurs.
+1. Välj **Lägg till**. En ny platshållare för resursen visas.
+1. Markera **Ändra** öppnar en dialogruta där du kan välja en resurs.
 1. Välj den resurs som du vill lägga till.
 
    >[!NOTE]
    >
    >De resurser du kan välja är från [Resurser](/help/assets/assets.md).
 
-1. Tryck/klicka på ikonen Klar.
+1. Klicka på ikonen Klar.
 
 Två resurser lagras nu i din produktkomponent. Du kan konfigurera vilken som ska visas på produktsidan. Detta fungerar med ett kategorisystem. Först måste du lägga till en kategori till de enskilda resurserna:
 
-1. Tryck/klicka **Visa produktdata**.
+1. Välj **Visa produktdata**.
 1. Skriv en **Tillgångskategori** under tillgångarna, till exempel `cat1` och `cat2`.
 
    >[!NOTE]
    >
    >Du kan också använda taggar för kategorier.
 
-1. Tryck/klicka på ikonen Klar. Nu måste du [utrullning](#rolling-out-a-catalog) dina ändringar.
+1. Klicka på ikonen Klar. Nu måste du [utrullning](#rolling-out-a-catalog) dina ändringar.
 
 Nu har resurserna i produktkomponenten en kategori. Du kan konfigurera vilken kategori som ska visas på tre olika nivåer:
 
@@ -286,8 +284,8 @@ Nu har resurserna i produktkomponenten en kategori. Du kan konfigurera vilken ka
 
 Mekanismen för att välja den bild som ska visas är följande:
 
-1. Verifiera om en kategori har angetts för produktsidan.
-1. Annars kontrollerar du om en kategori har angetts för katalogen.
+1. Kontrollera om en kategori har angetts för produktsidan.
+1. Om inte, kontrollerar du om en kategori har angetts för katalogen.
 1. Om inte, kontrollerar du om en kategori har angetts för produktkonsolen.
 
 >[!NOTE]
@@ -298,26 +296,26 @@ Mekanismen för att välja den bild som ska visas är följande:
 
 1. Gå till din produktsida.
 1. **Redigera** produktkomponenten.
-1. Skriv **Bildkategori** du valde ( `cat1` till exempel).
-1. Tryck/klicka **Klar**. Sidan uppdateras och rätt resurs ska visas.
+1. Skriv **Bildkategori** som du valde ( `cat1` till exempel).
+1. Välj **Klar**. Sidan uppdateras och rätt resurs ska visas.
 
 #### Katalog  {#catalog}
 
 1. Navigera till katalogen.
-1. Tryck/klicka **Visa egenskaper**.
-1. Tryck/klicka **Redigera**.
-1. Tryck/klicka på **Resurser** -fliken.
+1. Välj **Visa egenskaper**.
+1. Välj **Redigera**.
+1. Välj **Resurser** -fliken.
 1. Ange den obligatoriska **Produkttillgångskategori**.
-1. Tryck/klicka **Klar**.
+1. Välj **Klar**.
 1. [Utrullning](#rolling-out-a-catalog) dina ändringar.
 
 #### Products Console {#products-console}
 
 1. Använda **Produkter** navigera till önskad produkt.
-1. Tryck/klicka **Visa produktdata**.
-1. Tryck/klicka **Redigera**.
+1. Välj **Visa produktdata**.
+1. Välj **Redigera**.
 1. Skriv a **Standardtillgångskategori**.
-1. Tryck/klicka **Klar**.
+1. Välj **Klar**.
 1. [Utrullning](#rolling-out-a-catalog) dina ändringar.
 
 ### Publicera/avpublicera produktinformation {#publishing-unpublishing-product-information}
@@ -326,7 +324,7 @@ Mekanismen för att välja den bild som ska visas är följande:
 
 >[!NOTE]
 >
->Produktinformationen publiceras ofta via de sidor som refererar till den. Om du till exempel publicerar sidan X som refererar till produkten Y, frågar AEM om du även vill publicera produkten Y.
+>Produktinformationen publiceras ofta via de sidor som refererar till den. När du publicerar sidan X som refererar till produkten Y, frågar AEM om du även vill publicera produkten Y.
 >
 >I särskilda fall kan AEM även publicera direkt från produktinformationen.
 
@@ -340,7 +338,7 @@ Mekanismen för att välja den bild som ska visas är följande:
 
    ![world icon](/help/sites-administering/do-not-localize/chlimage_1-18.png) ![världsikon med ett kryss - inget tecken](/help/sites-administering/do-not-localize/chlimage_1-19.png)
 
-   Produktinformationen kommer att publiceras eller avpubliceras efter behov.
+   Produktinformationen publiceras eller avpubliceras, beroende på vad som är lämpligt.
 
 <!-- Search&Promote is end of life as of September 1, 2022 ### Product Feed {#product-feed} -->
 
@@ -355,7 +353,7 @@ Mekanismen för att välja den bild som ska visas är följande:
 
 ### Händelsehanterare för produktuppdateringar {#event-handler-for-product-updates}
 
-Det finns en händelsehanterare som loggar en händelse när en produkt läggs till, ändras eller tas bort och när en produktsida läggs till, ändras eller tas bort. Det finns följande OSGi-händelser:
+Det finns en händelsehanterare som loggar en händelse när en produkt läggs till, redigeras eller tas bort och när en produktsida läggs till, redigeras eller tas bort. Det finns följande OSGi-händelser:
 
 * `com/adobe/cq/commerce/pim/PRODUCT_ADDED`
 * `com/adobe/cq/commerce/pim/PRODUCT_MODIFIED`
@@ -450,32 +448,32 @@ Du kan konfigurera hur dialogrutan ser ut när du klickar på hotspot-området:
 
 >[!NOTE]
 >
->Katalogen kommer att referera till dina produktdata.
+>Katalogen refererar till dina produktdata.
 
 Så här skapar du en katalog:
 
 1. Öppna Sites-konsolen (till exempel [http://localhost:4502/sites.html/content](http://localhost:4502/sites.html/content)).
-1. Navigera till den plats där du vill skapa den nya sidan.
+1. Navigera till den plats där du vill skapa sidan.
 1. Om du vill öppna alternativlistan använder du **Skapa** ikon:
 
    ![create-icon](/help/sites-administering/do-not-localize/chlimage_1-23.png)
 
-1. Välj i listan **Skapa katalog**&#x200B;öppnas guiden Skapa katalog.
+1. Välj **Skapa katalog**. Guiden Skapa katalog öppnas.
 
    ![guiden skapa katalog](/help/sites-administering/assets/chlimage_1-99.png)
 
 1. Navigera till önskad katalogutkast.
-1. Tryck/klicka **Välj** och tryck/klicka på den önskade katalogdesignen.
-1. Tryck/klicka **Nästa**.
+1. Välj **Välj** och tryck/klicka på den önskade katalogdesignen.
+1. Välj **Nästa**.
 
    ![guide för katalogegenskaper](/help/sites-administering/assets/chlimage_1-100.png)
 
 1. Skriv a **Titel** och **Namn**.
-1. Tryck/klicka på **Skapa** -knappen. Katalogen skapas och en dialogruta öppnas.
+1. Välj **Skapa** -knappen. Katalogen skapas och en dialogruta öppnas.
 
    ![katalog skapad dialogruta](/help/sites-administering/assets/chlimage_1-101.png)
 
-1. Tryck/klicka **Klar** Med knappen kommer du tillbaka till webbplatskonsolen där du kan se katalogen.
+1. Markera **Klar** Med knappen kommer du tillbaka till webbplatskonsolen där du kan se katalogen.
 
    Tryck/klicka **Öppna katalog** knappen öppnar din katalog (till exempel `http://localhost:4502/editor.html/content/test-catalog.html`).
 
@@ -483,7 +481,7 @@ Så här skapar du en katalog:
 
 >[!NOTE]
 >
->Katalogen refererar till din [Produktdata](#products-and-product-variants).
+>Katalogen refererar till [Produktdata](#products-and-product-variants).
 
 1. Använda **Webbplatser** konsol, navigera till **Katalogutkast** och sedan baskatalogen.
 
@@ -491,22 +489,22 @@ Så här skapar du en katalog:
 
    `http://localhost:4502/siteadmin#/content/catalogs/geometrixx-outdoors/base-catalog`
 
-1. Skapa en ny sida med **Avsnittsutkast** mall.
+1. Skapa en sida med **Avsnittsutkast** mall.
 
    Till exempel, `Swimwear`.
 
-1. Öppna den nya `Swimwear` sida och klicka sedan på **Redigera utkast** för att öppna **Egenskaper** där du kan ställa in **Produkter** markering.
+1. Öppna den nya `Swimwear` sida och klicka sedan på **Redigera utkast**. The **Egenskaper** öppnas så att du kan ställa in **Produkter** markering.
 
    Öppna till exempel **Taggar/nyckelord** för att välja Activity (Aktivitet) och sedan simma från sektionen Geometrixx-Outdoor.
 
-1. Klicka **OK** för att spara dina egenskaper. Exempelprodukter visas under **Kriterier för produkturval** på planeringsidan.
-1. Klicka på **Ändringar i utrullning...**, markera **Startsida och alla undersidor** och sedan klicka **Nästa** sedan **Utrullning**. När utrullningen är klar **Status** indikator visas som grön.
+1. Klicka **OK** så att dina egenskaper sparas. Exempelprodukter visas under **Kriterier för produkturval** på planeringsidan.
+1. Klicka **Ändringar i utrullning...**, markera **Startsida och alla undersidor** och sedan klicka **Nästa** sedan **Utrullning**. När utrullningen är klar **Status** indikator visas som grön.
 1. Nu kan du klicka **Stäng** och kontrollera den nya katalogsektionen, till exempel på och under:
 
    `http://localhost:4502/cf#/content/geometrixx-outdoors/en/swimwear.html`
 
-1. Återigen från sidan med utkast klickar du på **Redigera utkast** och i **Egenskaper** öppnar dialogrutan **Genererad sida** -fliken. I listrutan Banner väljer du den bild du vill visa, till exempel `summer.jpg`
-1. Klicka **OK** för att spara dina egenskaper; banderollinformation visas under **Kriterier för produkturval** på planeringsidan.
+1. Återigen från sidan med utkast klickar du på **Redigera utkast** och i **Egenskaper** öppnar dialogrutan **Genererad sida** -fliken. I listrutan Banner väljer du den bild som du vill visa, till exempel `summer.jpg`
+1. Klicka **OK** så att dina egenskaper sparas. Banderollinformationen visas under **Kriterier för produkturval** på planeringsidan.
 1. Utför de här nya ändringarna.
 
 ### Stänger ut en katalog {#rolling-out-a-catalog}
@@ -527,7 +525,7 @@ Så här distribuerar du en katalog:
    ![utrullning](/help/sites-administering/do-not-localize/chlimage_1-24.png)
 
 1. I guiden ställer du in utrullningen efter behov och trycker/klickar sedan **Ändringar av utrullning**.
-1. En dialogruta öppnas. Tryck/klicka **Klar** när processen är klar.
+1. En dialogruta öppnas. Välj **Klar** när processen är klar.
 
 #### Öppnar en katalog - Classic UI {#rolling-out-a-catalog-classic-ui}
 
@@ -547,7 +545,7 @@ Så här distribuerar du en katalog:
 
 1. Navigera till **Kataloger** konsol, via **Handel**.
 1. Navigera till den plats där du vill importera katalogdesignen.
-1. Tryck/klicka på **Importera utkast** -ikon.
+1. Välj **Importera utkast** -ikon.
 
    ![Importera ritningar, ikon](/help/sites-administering/do-not-localize/chlimage_1-13.png)
 
@@ -555,7 +553,7 @@ Så här distribuerar du en katalog:
 
    ![guide för utkast](/help/sites-administering/assets/chlimage_1-102.png)
 
-1. Tryck/klicka **Klar** när importen är klar.
+1. Välj **Klar** när importen är klar.
 
 #### Blueprint Importer - Classic UI {#blueprint-importer-classic-ui}
 
@@ -585,7 +583,7 @@ Så här distribuerar du en katalog:
 
 1. Öppna **Webbplatser** konsolen för din författarinstans.
 1. Välj önskat alternativ i den vänstra rutan **Campaign**.
-1. Klicka på **Nytt** väljer du **Kampanj** mall och ange sedan en **Titel** (och **Namn** om det behövs) för din nya voucher.
+1. Klicka **Nytt** väljer du **Kampanj** mall och ange sedan en **Titel** (och **Namn** om det behövs) för din nya voucher.
 1. Klicka **Skapa**. Den nya kampanjsidan visas i den högra rutan.
 
 1. Redigera **Egenskaper** antingen
@@ -607,10 +605,10 @@ Så här distribuerar du en katalog:
 
 1. Öppna **Webbplatser** konsolen för din författarinstans.
 1. Välj önskat alternativ i den vänstra rutan **Campaign**.
-1. Klicka på **Nytt** väljer du **Voucher** mall och ange sedan en **Titel** (och **Namn** om det behövs) för din nya voucher.
+1. Klicka **Nytt** väljer du **Voucher** mall och ange sedan en **Titel** (och **Namn** om det behövs) för din nya voucher.
 1. Klicka **Skapa**. Den nya verifikationssidan visas i den högra rutan.
 
-1. Öppna din nya kupongsida med ett dubbelklick och klicka sedan på **Redigera** för att konfigurera informationen efter behov.
+1. Öppna din nya kupongsida med ett dubbelklick och klicka sedan på **Redigera** och konfigurera informationen efter behov.
 1. Klicka **OK** att spara.
 
 1. Nu kan du aktivera din voucher så att kunderna kan använda den i sina kundvagnar i publiceringsinstansen.
@@ -619,9 +617,9 @@ Så här distribuerar du en katalog:
 
 #### Tar bort Vouchers - klassiskt användargränssnitt {#removing-vouchers-classic-ui}
 
-För att göra en voucher otillgänglig för kunderna kan du antingen:
+Om du vill att en voucher inte ska vara tillgänglig för kunderna kan du antingen:
 
-* Inaktivera vouchern - den är fortfarande tillgänglig i författarmiljön så att du kan återaktivera den vid ett senare tillfälle.
+* Inaktivera vouchern - den är fortfarande tillgänglig i författarmiljön så att du kan återaktivera den senare.
 * Ta bort den helt.
 
 Båda åtgärderna kan utföras från **Webbplatser** konsol.
@@ -630,11 +628,11 @@ Båda åtgärderna kan utföras från **Webbplatser** konsol.
 
 #### Ändra Vouchers - klassiskt användargränssnitt {#modifying-vouchers-classic-ui}
 
-Om du vill ändra egenskaperna för en voucher eller befordran kan du dubbelklicka på den på **Webbplatser** konsol och klicka **Redigera**. När du har sparat den bör du aktivera den så att ändringarna överförs till publiceringsinstansen.
+Om du vill ändra egenskaperna för en voucher eller befordran kan du dubbelklicka på den på **Webbplatser** konsol och klicka **Redigera**. När du har sparat den bör du aktivera den så att ändringarna överförs till publiceringsinstanserna.
 
 ### Lägga till verifikationer i en kundvagn {#adding-vouchers-to-a-cart}
 
-Om du vill att användare ska kunna lägga till vouchers i sina kundvagnar kan du använda den inbyggda **Vouchers** -komponent (handelskategori). Du måste lägga till det här på samma sida som kundvagnen visas på (men är inte obligatoriskt). Verifikationskomponenten är bara ett formulär där användaren kan ange en verifikationskod, det är kundvagnskomponenten som faktiskt visar listan över använda verifikationer och deras rabatt.
+Om du vill att användare ska kunna lägga till vouchers i sina kundvagnar kan du använda den inbyggda **Vouchers** -komponent (handelskategori). Lägg till detta på samma sida som där kundvagnen visas (men detta är inte obligatoriskt). Verifikationskomponenten är bara ett formulär där användaren kan ange en verifikationskod, det är kundvagnskomponenten som faktiskt visar listan över använda verifikationer och deras rabatt.
 
 På demowebbplatsen (Geometrixx Outdoors - engelska) kan du se kupongformuläret på kundvagnssidan, under den faktiska kundvagnen.
 
@@ -644,7 +642,7 @@ På demowebbplatsen (Geometrixx Outdoors - engelska) kan du se kupongformuläret
 >
 >Det bör noteras att färdiga AEM inte har åtgärder som krävs för standardfunktioner som rör order, som att returnera varor, uppdatera orderstatus, utföra leveranser och generera följesedlar. Den är främst avsedd som en förhandstitt på teknik.
 >
->Den generiska orderhanteringen i AEM har blivit grundläggande. Fälten som är tillgängliga i guiden är beroende av strukturen:
+>Den generiska orderhanteringen i AEM har hållits grundläggande. Vilka fält som är tillgängliga i guiden beror på strukturen:
 >`/etc/scaffolding/geometrixx-outdoors/order/jcr:content/cq:dialog`
 >
 >Om du skapar ett anpassat ställningar kan du lagra mer orderinformation.
