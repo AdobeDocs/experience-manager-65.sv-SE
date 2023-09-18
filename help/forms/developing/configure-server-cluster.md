@@ -1,10 +1,10 @@
 ---
-title: Hur konfigurerar och felsöker man ett AEM Forms på JEE-serverkluster?
-description: Lär dig hur du konfigurerar och felsöker ett AEM Forms på JEE-serverkluster
+title: Konfigurera och felsöka ett AEM Forms på JEE-serverkluster
+description: Lär dig hur du konfigurerar och felsöker ett Adobe Experience Manager (AEM) Forms på JEE-serverkluster.
 exl-id: 230fc2f1-e6e5-4622-9950-dae9449ed3f6
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: ab3d016c7c9c622be361596137b150d8719630bd
 workflow-type: tm+mt
-source-wordcount: '4032'
+source-wordcount: '3959'
 ht-degree: 0%
 
 ---
@@ -13,15 +13,15 @@ ht-degree: 0%
 
 ## Nödvändig kunskap {#prerequisites}
 
-Bekanta dig med AEM Forms på JEE-, JBoss-, WebSphere- och Webogic-servrar, Red Hat Linux, SUSE Linux, Microsoft Windows, IBM AIX och Sun Solaris operativsystem, Oracle, IBM DB2 eller SQL Server-databasservrar samt webbmiljöer.
+Bekanta dig med Adobe Experience Manager (AEM) Forms på JEE-, JBoss®-, WebSphere®- och WebLogic-servrar, Red Hat® Linux®, SUSE® Linux®, Microsoft® Windows, IBM® AIX® eller Sun Solaris™-operativsystem, Oracle, IBM® DB2® eller SQL Server-databasservrar samt webbmiljöer.
 
 ## Användarnivå {#user-level}
 
 Avancerat
 
-Ett AEM Forms på JEE-kluster är en topologi som är utformad för att göra AEM Forms på JEE motståndskraftigt mot fel i en klusternod och för att skala systemkapaciteten utöver funktionerna i en enskild nod. Ett kluster kombinerar flera noder i ett enda logiskt system som delar data och tillåter transaktioner att spänna över flera noder vid körningen. Ett kluster är det mest allmänna sättet att skala AEM Forms på JEE, eftersom alla kombinationer av tjänster som hanterar alla kombinationer av arbetsbelastningar kan stödjas. En AEM Forms i ett JEE-kluster passar inte nödvändigtvis alla typer av distributioner, och i synnerhet kan en icke-klustrad serverbelastningsbalanserad arkitektur vara lämplig i många fall.
+Ett AEM Forms på JEE-kluster är en topologi som är utformad för att AEM Forms på JEE ska kunna motstå ett klusterfel. Det gör det också möjligt för topologin att skala systemkapaciteten utöver funktionerna för en enskild nod. Ett kluster kombinerar flera noder i ett enda logiskt system som delar data och tillåter transaktioner att spänna över flera noder vid körningen. Ett kluster är det mest allmänna sättet att skala AEM Forms på JEE, eftersom alla kombinationer av tjänster som hanterar alla kombinationer av arbetsbelastningar kan stödjas. En AEM Forms i JEE-kluster passar inte nödvändigtvis alla typer av distributioner och en icke-klustrad serverns belastningsbalanserade arkitektur kan vara lämplig.
 
-Syftet med det här dokumentet är att diskutera de specifika konfigurationskraven och möjliga problemområden som du kan träffa på med ett AEM Forms i JEE-kluster.
+I det här dokumentet beskrivs specifika konfigurationskrav och möjliga problemområden som du kan stöta på i ett AEM Forms i JEE-kluster.
 
 ## Vad finns i ett kluster? {#what-is-in-cluster}
 
@@ -31,15 +31,15 @@ AEM Forms på JEE-klusternoderna kommunicerar sinsemellan och delar information 
 
 ### Programserverkluster {#application-server-cluster}
 
-Ett AEM Forms i JEE-kluster är beroende av den underliggande programserverns klusterfunktioner. Programserverkluster gör att klusterkonfigurationen kan hanteras som en helhet och tillhandahåller klustertjänster på låg nivå, som Java Naming and Directory Interface (JNDI), som gör att programvarukomponenter kan hitta varandra i klustret. Hur avancerade klustertjänster är och vilka tekniska beroenden programservern har beror på programservern. WebSphere och WebLogic har sofistikerade hanteringsfunktioner för kluster, medan JBoss har en mycket grundläggande strategi.
+Ett AEM Forms i JEE-kluster är beroende av den underliggande programserverns klusterfunktioner. Programserverkluster gör att klusterkonfigurationen kan hanteras som en helhet och tillhandahåller klustertjänster på låg nivå, som Java™ Naming and Directory Interface (JNDI), som gör att programvarukomponenterna kan hitta varandra i klustret. Klustertjänsternas utformning och de underliggande tekniska beroenden som programservern har beror på programservern. WebSphere® och WebLogic har sofistikerade hanteringsfunktioner för kluster, medan JBoss® har en grundläggande strategi.
 
 ### GemFire-cache {#gemfire-cache}
 
-GemFire-cachen är en distribuerad cachemekanism som implementeras i varje klusternod. Noderna hittar varandra och skapar ett enda logiskt cache-minne som är konsekvent mellan noderna. De noder som hittar varandra sammanfogas för att upprätthålla ett enda teoretiskt cacheminne som visas som ett moln i bild 1. Till skillnad från GDS och databasen är cachen en rent traditionell enhet. Det faktiska cachelagrade innehållet lagras i minnet och i `LC_TEMP` på var och en av klusternoderna.
+GemFire-cachen är en distribuerad cachemekanism som implementeras i varje klusternod. Noderna hittar varandra och skapar ett enda logiskt cache-minne som är konsekvent mellan noderna. De noder som hittar varandras hörn för att behålla en enda teoretisk cache som visas som ett moln i bild 1. Till skillnad från GDS och databasen är cachen en rent traditionell enhet. Det faktiska cachelagrade innehållet lagras i minnet och i `LC_TEMP` på var och en av klusternoderna.
 
 ### Databas {#database}
 
-AEM Forms på JEE-databasen, som nås via JDBC-datakällorna IDP_DS, EDC_DS med flera, delas av alla noder i klustret. De flesta beständiga data om AEM Forms status för JEE, t.ex. vilka transaktioner som pågår, användardata som är kopplade till pågående transaktioner, data om hur systeminställningar har ställts in och så vidare, finns i den här databasen.
+Databasen AEM Forms on JEE, som nås via JDBC-datakällorna IDP_DS, EDC_DS med flera, delas av alla noder i klustret. De mest beständiga data om AEM Forms status för JEE, t.ex. vilka transaktioner som pågår, användardata som är kopplade till pågående transaktioner och data om hur systeminställningar har ställts in i den här databasen.
 
 ### Global dokumentlagring {#global-document-storage}
 
@@ -51,11 +51,11 @@ Förutom de här delade huvudresurserna finns det andra objekt som har en särsk
 
 ## Vanliga konfigurationsproblem {#common-configuration}
 
-En av de mest frustrerande sakerna med underhåll och felsökning av AEM Forms i JEE-kluster är att det inte finns någon enda plats att titta på för att bekräfta att klustret är felfritt. För att bekräfta att alla är bra i klustret utförs en del undersökningar och analyser, och det finns flera fellägen för klusteråtgärden, beroende på vad som är fel med klusterkonfigurationen. Bilden nedan visar ett felaktigt konfigurerat kluster där flera av de delade resurserna är felaktigt delade.
+En av de mest frustrerande sakerna med att underhålla eller felsöka en AEM Forms i ett JEE-kluster är att det inte finns någon enda plats att titta på för att bekräfta att klustret är felfritt. För att bekräfta att alla är bra i klustret utförs en del undersökningar och analyser, och det finns flera fellägen för klusteråtgärden, beroende på vad som är fel med klusterkonfigurationen. Bilden nedan visar ett felaktigt konfigurerat kluster där flera av de delade resurserna är felaktigt delade.
 
 ![Felaktigt konfigurerat kluster](assets/bad-configuration-cluster.png)
 
-Ett intressant och viktigt att tänka på är att du måste känna till hur klustring fungerar och vilka typer av saker som ska sökas och verifieras i ett kluster, även om du inte tänker köra AEM Forms på JEE i ett kluster. Detta beror på att vissa delar av AEM Forms i JEE kanske inte har några referenser till att använda ett kluster korrekt och att de får ett klusterbeteende som du inte förväntar dig.
+Förstå hur klustring fungerar och vilka typer av saker du kan söka efter och verifiera i ett kluster, även om du inte tänker köra AEM Forms på JEE i ett kluster. Orsaken är att vissa delar av AEM Forms i JEE kanske inte har någon som helst benägenhet att fungera i ett kluster på rätt sätt och att de får ett klusterbeteende som du inte förväntar dig.
 
 Så vad är det för fel med delningskonfigurationen från bild ovan? I följande avsnitt beskrivs problemen:
 
@@ -65,11 +65,11 @@ Flera saker kan gå fel med Gemfire-cachen. Två typiska scenarier är:
 
 * Noder som borde kunna hitta varandra kan inte göra det.
 
-* Noder som inte ska grupperas hittar varandra och delar en cache när de inte ska grupperas.
+* Noder som är klustrade kan hitta varandra och dela ett cacheminne när de inte ska göra det.
 
-Om du har noder som du vill klustra är det viktigt att de hittar varandra i nätverket. Som standard gör de detta med hjälp av UDP-multicast-meddelanden. Varje nod skickar ut utsändningsmeddelanden som annonserar att det finns, och alla noder som tar emot ett sådant meddelande börjar prata med de andra noder som den hittar. Den här typen av metod för automatisk upptäckt är mycket vanligt, och det gör många typer av program och apparater.
+Om du har noder som du tänker klustra måste de hitta varandra i nätverket. Som standard gör de detta med multicast-UDP-meddelanden. Varje nod skickar ut utsändningsmeddelanden som annonserar att det finns, och alla noder som tar emot ett sådant meddelande börjar prata med de andra noder som den hittar. Den här typen av metod för automatisk upptäckt är vanligt, och det gör många typer av program och enheter.
 
-Ett vanligt problem med automatisk identifiering är att multicast-meddelanden kan filtreras av nätverket som en del av nätverksprincipen eller på grund av brandväggsregler för programvara, eller helt enkelt inte kan dirigeras över nätverket mellan noder. På grund av de allmänna svårigheterna med att få UDP-autoidentifiering att fungera i komplexa nätverk är det vanligt att produktionsdistributioner använder en alternativ identifieringsmetod: TCP-positionerare. En allmän diskussion om TCP-positionerare finns i referenserna.
+Ett vanligt problem med automatisk identifiering är att multicast-meddelanden kan filtreras av nätverket. Detta kan vara en del av en nätverksprincip, eller på grund av brandväggsregler för programvara, eller på grund av att de inte kan dirigeras över det nätverk som finns mellan noder. På grund av de allmänna svårigheterna med att få UDP-autosök att fungera i komplexa nätverk är det vanligt att produktionsdistributioner använder en alternativ identifieringsmetod: TCP-identifierare. En allmän diskussion om TCP-positionerare finns i referenserna.
 
 **Hur vet jag om jag använder lokaliserare eller UDP?**
 
@@ -95,11 +95,11 @@ För det första, om TCP-positionerare används, bör du ha de TCP-positionerare
 
 `-Dadobe.cache.cluster-locators=aix01.adobe.com[22345],aix02.adobe.com[22345]`
 
-Du behöver inte köra lokaliserarna på AEM Forms på JEE-klusternoder. De kan köras på andra system som är skilda från klustret om du vill. Mer än ett system kan köra positionerare, och det anses normalt att ha körningar av positionerare på två platser mot risken för att ett enda fel i positionerarna kan orsaka problem med klusteromstart. På var och en av de datorer som kör positionerare bör du kunna verifiera att de körs med följande kommandon på dessa datorer:
+Du behöver inte köra lokaliserarna på AEM Forms på JEE-klusternoder. De kan köras på andra system som är skilda från klustret om du vill. Fler än ett system kan köra positionerare. Det anses dessutom som god praxis att låta positionerare köras på två platser, mot risken att ett enda fel i positionerarna kan orsaka problem med klusteromstart. På var och en av de datorer som kör positionerare bör du kunna verifiera att de körs med följande kommandon på dessa datorer:
 
 `netstat -an | grep 22345`
 
-Det förväntade svaret bör vara:
+Det förväntade svaret bör vara följande:
 
 `tcp 0 0 *.22345 *.* LISTEN`
 
@@ -117,7 +117,7 @@ GemFire skapar loggningsinformation som kan användas för att diagnostisera vil
 
 `.../LC_TEMP/adobeZZ__123456/Caching/Gemfire.log`
 
-Den numeriska strängen efter `adobeZZ_` är unik för servernoden och därför måste du söka i det faktiska innehållet i din tillfälliga katalog. De två tecknen efter `adobe` är beroende av programservertypen: antingen `wl`, `jb`, eller `ws`.
+Strängen efter `adobeZZ_` är unik för servernoden och därför måste du söka i det faktiska innehållet i din tillfälliga katalog. De två tecknen efter `adobe` beroende på programservertypen: antingen `wl`, `jb`, eller `ws`.
 
 Följande exempelloggar visar vad som händer när ett tvånodskluster hittar sig självt.
 
@@ -149,9 +149,9 @@ På den andra noden, AP-HP7:
 
 **Vad händer om GemFire hittar noder som det inte ska göra?**
 
-Varje distinkt kluster som delar ett företagsnätverk bör använda en separat uppsättning TCP-positionerare, om TCP-positionerare används, eller ett separat UDP-portnummer om multicast-UDP-konfiguration används. Eftersom automatisk UDP-identifiering är standardkonfigurationen för AEM Forms på JEE, och samma standardport, 33456, kan användas av flera kluster, är det möjligt att kluster som inte ska kommunicera kan användas oväntat, t.ex. produktionen och QA-kluster ska vara separata, men kan ansluta till varandra via UDP-multicast.
+Varje distinkt kluster som delar ett företagsnätverk bör använda en separat uppsättning TCP-positionerare, om TCP-positionerare används, eller ett separat UDP-portnummer om multicast-UDP-konfiguration används. Eftersom automatisk UDP-identifiering är standardkonfigurationen för AEM Forms på JEE, och samma standardport 33456 används av flera kluster, är det möjligt att kluster som inte ska försöka kommunicera kan göra det oväntat. Produktions- och QA-kluster bör till exempel vara separata, men kan ansluta till varandra via UDP-multicast.
 
-Den vanligaste situationen när du kanske upptäcker dubblettportar i ett nätverk som GemFire inte kan klustra på ett felaktigt sätt är under ett klusters startfas. Det du kan hitta är att bootstrap-processen misslyckas utan någon tydlig orsak. Vanligtvis visas fel som detta:
+Den vanligaste situationen när du kanske upptäcker dubblettportar i ett nätverk som GemFire felaktigt kluderar till är Bootstrap i ett kluster. Det man kan finna är att Bootstrap-processen misslyckas utan någon tydlig orsak. Vanligtvis visas fel som detta:
 
 ```xml
 Caused by: com.ibm.ejs.container.UnknownLocalException: nested exception is: com.adobe.pof.schema.ObjectTypeNotFoundException: Object Type: dsc.sc_service_configuration not found.
@@ -163,77 +163,73 @@ Caused by: com.ibm.ejs.container.UnknownLocalException: nested exception is: com
                 at com.adobe.livecycle.bootstrap.bootstrappers.DSCBootstrapper.bootstrap(DSCBootstrapper.java:68)
 ```
 
-I det här fallet arbetar Bootstrapper med GemFire för att komma åt de tabeller som krävs, och det finns en inkonsekvens mellan tabellerna som nås via JDBC och den cachelagrade tabellinformationen som returneras av GemFire, som kommer från ett annat kluster med en annan underliggande databas.
+I det här fallet arbetar Bootstrapper med GemFire för att komma åt de tabeller som krävs. Och det finns en inkonsekvens mellan tabellerna som nås via JDBC och den cachelagrade tabellinformationen som returneras av GemFire, som kommer från ett annat kluster med en annan underliggande databas.
 
-Även om en duplicerad port ofta blir tydlig under bootstrap, är det möjligt att den här situationen visas senare, när ett kluster startas om efter att ha stängts av när starten för det andra klustret inträffade, eller när nätverkskonfigurationen ändras så att kluster som tidigare isolerats, för multicast-syften, blir synliga för varandra.
+Även om en dubblerad port ofta blir tydlig under Bootstrap kan den här situationen dyka upp senare. Detta kan inträffa när ett kluster startas om efter att ha stängts av Bootstrap i det andra klustret. Eller när nätverkskonfigurationen ändras så att kluster som tidigare isolerats, för multicast-syften, blir synliga för varandra.
 
-För att kunna diagnostisera sådana situationer är det bäst att titta på loggarna för GemFire och noga överväga om bara de förväntade noderna hittas. För att åtgärda problemet måste du ändra
-
-`adobe.cache.multicast-port`
-
--egenskapen till ett annat värde för ett eller båda klustren.
+Om du vill diagnostisera sådana situationer tittar du på GemFire-loggarna och funderar noggrant på om bara de förväntade noderna hittas. För att åtgärda problemet måste du ändra `adobe.cache.multicast-port` -egenskapen till ett annat värde för ett eller båda klustren.
 
 ### 2) GDS-delning {#gds-sharing}
 
-GDS-delning är konfigurerad utanför AEM Forms för själva JEE, på O/S-nivå, där du måste se till att samma delade katalogstruktur är tillgänglig för alla klusternoder. I Windows-typsystem uppnås detta vanligtvis genom att en filresurs skapas antingen från en nod till en annan, eller från ett fjärrfilsystem som en NAS-enhet till alla noder. På UNIX-system sker GDS-delning vanligtvis via NFS-fildelning, igen, antingen från en nod till en annan eller från en NAS-enhet.
+GDS-delning är konfigurerad utanför AEM Forms på själva JEE, på O/S-nivå, där du måste se till att samma delade katalogstruktur är tillgänglig för alla klusternoder. I Windows-system uppnås detta genom att en filresurs skapas antingen från en nod till en annan, eller från ett fjärrfilsystem som en NAS-enhet till alla noder. På UNIX®-system sker GDS-delning vanligtvis genom NFS-fildelning, igen, antingen från en nod till en annan eller från en NAS-enhet.
 
 Ett möjligt felläge för klustret är om den här fjärrfilresursen blir otillgänglig eller har små problem. En fjärrmontering kan misslyckas på grund av nätverksproblem, säkerhetsinställningar eller felaktig konfiguration. En omstart av systemet kan göra att konfigurationsändringar som gjorts dagar eller veckor i förväg träder i kraft, vilket kan skapa överraskningar.
 
 **Vad händer om en NFS-resurs inte kan monteras?**
 
-På UNIX kan det sätt på vilket NFS-monteringar mappas till katalogstrukturen göra att en synbart användbar GDS-katalog blir tillgänglig, även om monteringen misslyckas. Fundera:
+På UNIX® kan det sätt på vilket NFS-monteringar mappas till katalogstrukturen göra det möjligt för en synbart användbar GDS-katalog att vara tillgänglig, även om monteringen misslyckas. Fundera:
 
-* NAS-server: NFS delad mapp /u01/iapply/livecycle_gds
-* Nod 1: en monteringspunkt till den delade mappen (på databasservern) som finns här: /u01/apply/livecycle_gds
-* Nod 2: en monteringspunkt till den delade mappen (på databasservern) som finns här: /u01/apply/livecycle_gds
+* NAS-server: NFS-delad mapp /u01/apply/livecycle_gds
+* Nod 1: en monteringspunkt till den delade mappen (som finns på databasservern) som finns här: /u01/apply/livecycle_gds
+* Nod 2: en monteringspunkt till den delade mappen (som finns på databasservern) som finns här: /u01/apply/livecycle_gds
 
-* LCES anger sökvägen till GDS: /u01/apply/livecycle_gds
+* LCES anger sökvägen till GDS: /u01/iapply/livecycle_gds
 
-Om monteringen på nod 1 misslyckas kommer katalogstrukturen fortfarande att innehålla sökvägen /u01/apply/livecycle_gds till den tomma monteringspunkten, och noden verkar fungera korrekt. Men eftersom GDS-innehållet inte delas med den andra noden fungerar inte klustret korrekt. Detta kan och händer, och resultatet blir att klustret misslyckas på mystiska sätt.
+Om monteringen på nod 1 misslyckas innehåller katalogstrukturen fortfarande en sökväg `/u01/iapply/livecycle_gds` till den tomma monteringspunkten och noden verkar fungera korrekt. Men eftersom GDS-innehållet inte delas med den andra noden fungerar inte klustret korrekt. Detta kan och händer, och resultatet blir att klustret misslyckas på mystiska sätt.
 
-Det bästa sättet är att ordna saker så att Linux-monteringspunkten inte används som rot för GDS, utan i stället används en del katalog i den som GDS-rot:
+Det bästa sättet är att ordna saker så att Linux®-monteringspunkten inte används som roten för GDS, utan i stället används en del katalog i den som GDS-rot:
 
 * Om du har en NFS-server kan den ha en katalog: /some/storage/lc_Cluster_dev/LC_GDS
 * På klusternoden har du en monteringspunkt: /u01/iapply/shared
 * Montera nfs_server: /some/storage/lc_Cluster_dev/u01/iapply/shared
 * Peka GDS på /u01/apply/shared/LC_GDS
 
-Om monteringen av någon anledning inte lyckas innehåller den obelastade monteringspunkten ingen LC_GDS-katalog och klustret kommer att misslyckas på ett förutsägbart sätt eftersom det inte går att hitta någon GDS alls.
+Om monteringen av någon anledning inte lyckas innehåller den obelastade monteringspunkten ingen LC_GDS-katalog och klustret misslyckas på ett förutsägbart sätt eftersom det inte går att hitta någon GDS.
 
 **Hur verifierar jag att alla noder ser samma GDS och har behörigheter?**
 
-Verifiering av GDS-åtkomst och GDS-delning görs bäst genom åtkomst till var och en av noderna som en interaktiv användare, antingen via SSH eller telnet till UNIX-noder, eller via fjärrskrivbord till Windows-system. Du bör kunna navigera till den konfigurerade GDS-katalogen eller filsystemet på varje nod och skapa testfiler från alla noder som är synliga i alla andra noder.
+Verifiering av GDS-åtkomst och -delning görs bäst genom att varje nod används som en interaktiv användare. Du kan göra detta antingen via SSH eller telnet till UNIX®-noder, eller via fjärrskrivbord till Windows-system. Du bör kunna navigera till den konfigurerade GDS-katalogen eller filsystemet på varje nod och skapa testfiler från alla noder som är synliga i alla andra noder.
 
-Var uppmärksam på det användar-ID som AEM Forms på JEE används under. I Windows körklara installationer är detta som lokal administratör. I UNIX kan det vara som en specifik tjänstanvändare som konfigurerats i startskriptet eller i programserverkonfigurationen. Det är viktigt att detta användar-ID kan skapa och ändra GDS-filer på alla noder.
+Var uppmärksam på det användar-ID som AEM Forms på JEE används under. I Windows körklara installationer är detta som lokal administratör. På UNIX® kan det vara som en specifik tjänstanvändare som konfigurerats i startskriptet eller i programserverkonfigurationen. Det är viktigt att detta användar-ID kan skapa och ändra GDS-filer på alla noder.
 
-På UNIX-system är NFS-konfigurationer ofta standard att förlita sig på rotägarskap eller rotåtkomsträttigheter till filer och objekt. Om du kör programservern som rotanvändare måste du ange alternativ på NFS-servern, noden som monterar filerna eller båda för att tillåta bilateral åtkomst och kontroll över filer som skapats av en nod och som nås av en annan.
+På UNIX®-system är NFS-konfigurationer ofta standard att förlita sig på rotägande eller rotåtkomsträttigheter till filer och objekt. Om du kör programservern som rotanvändare kanske du måste ange alternativ på NFS-servern, noden som monterar filerna eller båda. På så sätt kan du få bilateral åtkomst till och kontroll över filer som skapats av en nod och som nås av en annan.
 
 ### (3) Databasdelning {#database-sharing}
 
-För att ett kluster ska fungera på rätt sätt är det viktigt att samma databas delas av alla klustermedlemmar. Omfånget att få detta fel är ungefär:
+För att ett kluster ska fungera på rätt sätt måste samma databas delas av alla klustermedlemmar. Omfånget att få detta fel är ungefär:
 
 * av misstag ställa in datakällorna IDP_DS, EDC_DS, AdobeDefaultSA_DS eller andra obligatoriska datakällor på olika klusternoder, så att noderna pekar på olika databaser.
 * av misstag ange flera separata noder för att dela en databas när de inte ska göra det.
 
-Beroende på programservern kan det vara naturligt att JDBC-anslutningen definieras i ett klusteromfång, så att olika definitioner inte är möjliga på olika noder. I Jboss är det dock helt möjligt att ställa in saker så att en datakälla, som IDP_DS, pekar på en databas på nod 1, men pekar på något annat på nod 2.
+Beroende på programservern kan det vara naturligt att JDBC-anslutningen definieras i ett klusteromfång, så att olika definitioner inte är möjliga på olika noder. I JBoss® är det dock helt möjligt att ställa in saker så att en datakälla, som IDP_DS, pekar på en databas på nod 1, men pekar på något annat på nod 2.
 
-Det motsatta problemet är faktiskt vanligare, d.v.s. en situation där flera fristående (eller kluster) AEM Forms på JEE-noder oavsiktligt pekar på samma schema när de inte är tänkta. Detta inträffar oftast när en DBA utan att veta om ger ut en enda AEM Forms på JEE-databasens anslutningsinformation till både DEV- och QA-konfigurationsteamen, och ingen av dem inser att DEV- och QA-instanserna kräver separata databaser.
+Det motsatta problemet är vanligare. Detta innebär att flera fristående (eller kluster) AEM Forms på JEE-noder oavsiktligt pekar på samma schema när de inte är avsedda att göra det. Detta inträffar oftast när en DBA utan att veta om ger ut en enda AEM Forms på JEE-databasens anslutningsinformation till både DEV- och QA-konfigurationsteamen. Ingendera teamet insåg att DEV- och QA-instanserna kräver separata databaser.
 
 ## Programserverkluster {#application-server-cluster-1}
 
-För att AEM Forms ska fungera korrekt i JEE-kluster är det viktigt att programservern är konfigurerad och fungerar som ett kluster. I WebSphere och Weblogic är detta en okomplicerad och väldokumenterad process. I Jboss är klusterkonfigurationen lite mer praktisk och det kan vara en utmaning att se till att noderna är konfigurerade att fungera som ett kluster och att de faktiskt hittar och kommunicerar med varandra. JBoss förlitar sig internt på JGroups, som använder UDP-multicast för att hitta och koordinera med peer-noder, och en del av de problem som nämns med GemFire kan uppstå, till exempel om noder inte hittar varandra när de borde, eller om de inte borde hitta varandra.
+För att AEM Forms ska fungera på JEE-kluster måste programservern vara konfigurerad och fungera som ett kluster. I WebSphere® och WebLogic är detta en okomplicerad och väldokumenterad process. I JBoss® är klusterkonfigurationen lite mer praktisk och det kan vara en utmaning att se till att noderna är konfigurerade att fungera som ett kluster och att de faktiskt hittar och kommunicerar med varandra. JBoss® är internt beroende av JGroups, som använder UDP-multicast för att hitta och koordinera med peer-noder. Vissa av de problem som nämns med GemFire kan uppstå, till exempel om noder inte hittar varandra när de borde, eller om de inte borde hitta varandra.
 
 Referenser:
 
-* [Företagstjänster med hög tillgänglighet via JBoss-kluster](https://docs.jboss.org/jbossas/jboss4guide/r4/html/cluster.chapt.html)
+* [Företagstjänster med hög tillgänglighet via JBoss®-kluster](https://docs.jboss.org/jbossas/jboss4guide/r4/html/cluster.chapt.html)
 
-* [Oracle WebLogic Server - Använda kluster](https://docs.oracle.com/cd/E12840_01/wls/docs103/pdf/cluster.pdf)
+* [Oracle WebLogic Server-Using-kluster](https://docs.oracle.com/cd/E12840_01/wls/docs103/pdf/cluster.pdf)
 
-### Hur kontrollerar jag att JBoss klustras korrekt? {#check-jboss-clustering}
+### Hur kontrollerar jag att JBoss® klustras korrekt? {#check-jboss-clustering}
 
-När JBoss startas loggas INFO-nivåmeddelanden om noden som ansluter till klustret till loggfilen/konsolen när klustermedlemmar identifieras.
+När JBoss® startas loggas INFO-nivåmeddelanden om noden som ansluter till klustret till loggfilen/konsolen när klustermedlemmar identifieras.
 
-Om ett klusternamn har angetts via kommandoradsalternativet -g vid körning visas meddelanden som liknar följande:
+Om ett klusternamn har angetts med kommandoradsalternativet -g vid körning visas meddelanden som liknar följande:
 
 ```xml
 GMS: address is 10.36.34.44:55200 (cluster=QE_cluster)
@@ -248,9 +244,9 @@ and ones like:
 
 ### Quartz-schemaläggare {#quartz-scheduler}
 
-För det mesta är det meningen att AEM Forms på JEE ska använda den interna Quartz-schemaläggaren i ett kluster automatiskt ska följa AEM Forms globala klusterkonfiguration på JEE i allmänhet. Det finns emellertid ett fel, #2794033, som gör att den automatiska klusterkonfigurationen för Quartz misslyckas om TCP-positionerare används för Gemfire i stället för automatisk multicast-identifiering. I det här fallet körs Quartz felaktigt i ett icke-grupperat läge. Detta skapar dödlägen och korrupta data i Quartz-tabellerna. Biverkningarna är värre i version 8.2.x än 9.0, eftersom Quartz inte används så mycket, utan fortfarande finns där.
+I allmänhet är det meningen att AEM Forms på JEE:s användning av den interna Quartz-schemaläggaren i ett kluster automatiskt ska följa AEM Forms globala klusterkonfiguration på JEE i allmänhet. Det finns emellertid ett fel, #2794033, som gör att den automatiska klusterkonfigurationen för Quartz misslyckas om TCP-positionerare används för Gemfire i stället för automatisk multicast-identifiering. I det här fallet körs Quartz felaktigt i ett icke-grupperat läge. Detta skapar dödlägen och korrupta data i Quartz-tabellerna. Biverkningarna är värre i version 8.2.x än 9.0, eftersom Quartz inte används så mycket, utan fortfarande finns där.
 
-Det finns korrigeringar för det här problemet enligt följande: 8.2.1.2 QF2.143 och 9.0.0.2 QF2.44.
+Följande korrigeringar finns tillgängliga för detta problem: 8.2.1.2 QF2.143 och 9.0.0.2 QF2.44.
 
 Det finns också en tillfällig lösning som anger båda dessa egenskaper:
 
@@ -258,22 +254,22 @@ Det finns också en tillfällig lösning som anger båda dessa egenskaper:
 
 * `-Dadobe.cache.cluster-locators=xxx`
 
-Observera att en inställning använder en punkt mellan &quot;kluster&quot; och &quot;lokaliserare&quot; och den andra använder ett bindestreck. Det är enkelt att implementera och är mindre riskabelt än att tillämpa en programkorrigering, men det handlar om att på ett konstlat sätt skapa en förvirrande extra, felnamnad konfigurationsinställning.
+I den ena inställningen används en punkt mellan &quot;kluster&quot; och &quot;lokaliserare&quot; och i den andra används ett bindestreck. Det är enkelt att implementera och är mindre riskabelt än att tillämpa en programkorrigering, men det handlar om att på ett konstlat sätt skapa en förvirrande extra, felnamnad konfigurationsinställning.
 
 ### Hur kontrollerar jag att Quartz körs som en enda nod eller ett kluster? {#check-quartz}
 
 Om du vill se hur Quartz har konfigurerat sig själv måste du titta på de meddelanden som genereras av AEM Forms i JEE Scheduler-tjänsten under start. Dessa meddelanden genereras med INFO-allvarlighetsgrad och det kan vara nödvändigt att justera loggnivån och starta om för att få meddelanden. I AEM Forms vid JEE-startsekvens börjar Quartz-initieringen med följande rad:
 
-INFORMATION  `[com.adobe.idp.scheduler.SchedulerServiceImpl]` IDPSchedulerService onLoad Det är viktigt att hitta den första raden i loggarna eftersom vissa programservrar även använder Quartz och deras Quartz-instanser inte ska blandas ihop med den instans som används av AEM Forms i JEE Scheduler-tjänsten. Det här är indikationen på att schemaläggningstjänsten startas och de rader som följer efter den talar om för dig om den startar i grupperat läge eller inte. Flera meddelanden visas i den här sekvensen, och det är det sista&quot;startade&quot; meddelandet som visar hur Quartz är konfigurerat:
+INFORMATION  `[com.adobe.idp.scheduler.SchedulerServiceImpl]` IDPSchedulerService onLoad Det är viktigt att hitta den första raden i loggarna. Orsaken är att vissa programservrar använder Quartz också, och deras Quartz-instanser inte bör blandas ihop med de instanser som används av AEM Forms i JEE Scheduler-tjänsten. Det här är indikationen på att tjänsten Schemaläggaren startas och de rader som följer efter den talar om för dig om den startar i grupperat läge korrekt. Flera meddelanden visas i den här sekvensen, och det är det sista&quot;startade&quot; meddelandet som visar hur Quartz är konfigurerat:
 
-Här anges namnet på Quartz-instansen: `IDPSchedulerService_$_ap-hp8.ottperflab.adobe.com1312883903975`. Namnet på schemaläggarens Quartz-instans börjar alltid med strängen `IDPSchedulerService_$_`. Strängen som läggs till i slutet av detta anger om Quartz körs i grupperat läge eller inte. Den långa unika identifieraren som genereras från nodens värdnamn och en lång sträng med siffror, här `ap-hp8.ottperflab.adobe.com1312883903975`, anger att den används i ett kluster. Om den fungerar som en enda nod blir identifieraren ett tvåsiffrigt nummer, &quot;20&quot;:
+Här anges namnet på Quartz-instansen: `IDPSchedulerService_$_ap-hp8.ottperflab.adobe.com1312883903975`. Namnet på schemaläggarens Quartz-instans börjar alltid med strängen `IDPSchedulerService_$_`. Strängen som läggs till i slutet av detta anger om Quartz körs i grupperat läge. Den långa unika identifieraren som genereras från nodens värdnamn och en lång sträng med siffror, här `ap-hp8.ottperflab.adobe.com1312883903975`, anger att den används i ett kluster. Om den fungerar som en enda nod är identifieraren ett tvåsiffrigt nummer, &quot;20&quot;:
 
 INFORMATION  `[org.quartz.core.QuartzScheduler]` Schemaläggare `IDPSchedulerService_$_20` igång.
-Den här kontrollen måste göras separat på alla klusternoder, eftersom varje nods schemaläggare avgör separat om de ska användas i klusterläge.
+Den här kontrollen måste göras separat på alla klusternoder eftersom varje nods schemaläggare avgör separat om de ska användas i klusterläge eller inte.
 
 ### Vilken typ av problem uppstår om Quartz körs i fel läge? {#quartz-running-in-wrong-mode}
 
-Om Quartz är inställt på att köras som en enda nod, men körs i ett kluster och Quartz-databastabeller delas med andra noder, resulterar detta i en otillförlitlig funktion för AEM Forms på JEE Scheduler-tjänsten och kommer vanligtvis att åtföljas av databasdeadlocks. Detta är en ganska typisk stackspårning som du kan se i den här situationen:
+Om Quartz är inställt på att köras som en enda nod, men körs i ett kluster, och Quartz-databastabeller delas med andra noder, resulterar detta i att AEM Forms inte fungerar som det ska på JEE Scheduler-tjänsten. Och den åtföljs ofta av databasdödlägen. Detta är en ganska typisk stackspårning som du kan se i den här situationen:
 
 ```xml
 [1/20/11 10:40:57:584 EST] 00000035 ErrorLogger   E org.quartz.core.ErrorLogger schedulerError An error occured while marking executed job complete. job= 'Asynchronous.TaskFormDataSaved:12955380518320.5650479324757354'
@@ -291,13 +287,13 @@ Om Quartz är inställt på att köras som en enda nod, men körs i ett kluster 
 Caused by: java.sql.SQLException: ORA-00060: deadlock detected while waiting for resource
 ```
 
-### Hur synkroniserar jag systemklockor i ett kluster? {#ynchronize-system-clocks-cluster}
+### Hur synkroniserar jag systemklockor i ett kluster? {#synchronize-system-clocks-cluster}
 
-För att ett kluster ska fungera smidigt är det viktigt att klockorna på alla klusternoder är nära synkroniserade. Detta kan inte göras för hand och måste göras med någon form av tidssynkroniseringstjänst som fungerar mycket regelbundet. Klockorna på alla noder måste vara inom en sekund från varandra. Enligt bästa praxis ska inte bara klusternoderna utan även belastningsutjämnaren, databasservern, GDS NAS-servern och andra komponenter synkroniseras.
+För att ett kluster ska fungera smidigt måste klockorna på alla klusternoder vara nära synkroniserade. Detta kan inte göras för hand och måste göras med någon form av tidssynkroniseringstjänst som körs regelbundet. Klockorna på alla noder måste vara inom en sekund från varandra. Enligt bästa praxis ska inte bara klusternoderna, utan även belastningsutjämnaren, databasservern, GDS NAS-servern och alla andra komponenter synkroniseras.
 
-Windows-tidssynkronisering brukar vara till domänkontrollanten. UNIX-system kan synkroniseras med NTP till en annan tidskälla. Det bästa är om alla system - både AEM Forms på JEE-noder och andra systemkomponenter - synkroniseras med samma källa, om det är möjligt.
+Windows-tidssynkronisering brukar vara till domänkontrollanten. UNIX®-system kan synkroniseras med NTP till en annan tidskälla. Det bästa är om det är möjligt att alla system - både AEM Forms på JEE-noder och andra systemkomponenter - synkroniserar till samma källa.
 
-Inte ens i de flesta temporära testmiljöer räcker det att manuellt sätta klockorna på noderna. Manuell inställning av klockorna ger inte tillräcklig precision och klockorna på de två noderna kommer ofrånkomligen att avvika från varandra, inte ens under en tid av bara en dag. En aktiv tidssynkroniseringsmekanism är nödvändig för tillförlitlig klusteråtgärd.
+Inte ens i de flesta temporära testmiljöer räcker det att manuellt ställa in klockorna på noderna. Manuell inställning av klockorna ger inte tillräcklig exakt synkronisering, och klockorna på de två noderna rör sig ofrånkomligen i förhållande till varandra, inte ens under en tid av bara en dag. En aktiv tidssynkroniseringsmekanism är nödvändig för tillförlitlig klusteråtgärd.
 
 ### Belastningsutjämning {#load-balancer}
 
@@ -305,13 +301,13 @@ Ett typiskt krav för ett kluster som tillhandahåller användarinteraktiva tjä
 
 * kliande
 
-* Skriv om URL-regler
+* Regler för URL-omskrivning
 
 * nodhälsokontroll
 
 ### Vad ska jag göra med funktionen för hälsokontroll av belastningsutjämnare? {#load-balancer-health-check}
 
-Vissa belastningsutjämnare kan konfigureras för att utföra en periodisk hälsokontroll av de noder som belastningsutjämnas. Vanligtvis är detta en URL till en programfunktion som belastningsutjämnaren försöker få åtkomst till. Om belastningen lyckas antas noden vara felfri och behålls i belastningsutjämningsuppsättningen. Om URL:en inte kan läsas in antas noden vara felaktig och tas bort från uppsättningen. Vanligtvis är hälsokontrollens URL helt enkelt ansluten till inloggningssidan för AEM Forms på JEE AdminUI. Detta är inte en idealisk hälsokontroll för en klustermedlem, och det skulle vara bättre att implementera en kortlivad process och använda REST API URL som hälsokontrollsfunktion.
+Vissa belastningsutjämnare kan konfigureras för att utföra en periodisk hälsokontroll av de noder som belastningsutjämnas. Vanligtvis är detta en URL till en programfunktion som belastningsutjämnaren försöker få åtkomst till. Om belastningen lyckas antas noden vara felfri och behålls i belastningsutjämningsuppsättningen. Om URL:en inte kan läsas in antas noden vara felaktig och tas bort från uppsättningen. URL:en för hälsokontrollen är vanligtvis ansluten till inloggningssidan för AEM Forms på JEE AdminUI. Detta är inte en idealisk hälsokontroll för en klustermedlem, och det skulle vara bättre att implementera en kortlivad process och använda REST API URL som hälsokontrollsfunktion.
 
 ## Tillfällig filsökväg och liknande klusterinställningar {#temporary-file-path-cluster-settings}
 
@@ -325,10 +321,10 @@ Följande inställningar bör vara markerade:
 1. Plats för katalogen System Fonts
 1. Plats för Data Services-konfigurationsfilen
 
-Klustret har bara en sökvägsinställning för var och en av dessa konfigurationsinställningar. Katalogplatsen Temp kan till exempel vara `/home/project/QA2/LC_TEMP`. I ett kluster är det nödvändigt att varje nod faktiskt har den här sökvägen tillgänglig. Om en nod har den förväntade tillfälliga filsökvägen och en annan nod inte gör det, kommer den nod som inte fungerar korrekt.
+Klustret har bara en sökvägsinställning för var och en av dessa konfigurationsinställningar. Katalogplatsen Temp kan till exempel vara `/home/project/QA2/LC_TEMP`. I ett kluster är det nödvändigt att varje nod faktiskt har den här sökvägen tillgänglig. Om en nod har den förväntade tillfälliga filsökvägen och en annan nod inte gör det, fungerar den nod som inte gör det felaktigt.
 
-Även om dessa filer och sökvägar kan delas mellan noderna eller lagras separat, eller på fjärranslutna filsystem, är det i allmänhet bäst att de är lokala kopior på den lokala nodens disklagring.
+Även om dessa filer och sökvägar kan delas mellan noderna eller lagras separat, eller på fjärranslutna filsystem, är det god praxis att de är lokala kopior på den lokala nodens disklagring.
 
-Den tillfälliga katalogsökvägen bör inte delas mellan noder. En procedur som liknar den som beskrivs för att verifiera GDS bör användas för att verifiera att den tillfälliga katalogen inte delas: gå till varje nod, skapa en temporär fil i sökvägen som anges av sökvägsinställningen och kontrollera sedan att de andra noderna inte delar filen. Den tillfälliga katalogsökvägen bör referera till lokal disklagring på varje nod, om det är möjligt, och bör kontrolleras.
+Den tillfälliga katalogsökvägen bör inte delas mellan noder. En procedur som liknar den som beskrivs för att verifiera att GDS bör användas för att verifiera att den tillfälliga katalogen inte delas. Gå till varje nod, skapa en temporär fil i sökvägen som anges av sökvägsinställningen och kontrollera sedan att de andra noderna inte delar filen. Den tillfälliga katalogsökvägen bör referera till lokal disklagring på varje nod, om det är möjligt, och bör kontrolleras.
 
 För varje sökvägsinställning kontrollerar du att sökvägen finns och att den är åtkomlig från alla noder i klustret med den användaridentitet som AEM Forms i JEE körs under. Innehållet i teckensnittskatalogen måste vara läsbart. Den tillfälliga katalogen måste tillåta läsning, skrivning och kontroll.

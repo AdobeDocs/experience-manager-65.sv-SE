@@ -1,18 +1,14 @@
 ---
 title: API:er för åtkomst till bokstavsinstanser
-seo-title: APIs to access letter instances
 description: Lär dig hur du använder API:er för att komma åt bokstavsinstanser.
-seo-description: Learn how to use APIs to access letter instances.
-uuid: e7fb7798-f49d-458f-87f5-22df5f3e7d10
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: correspondence-management
-discoiquuid: 9c27f976-972a-4250-b56d-b84a7d72f8c8
 feature: Correspondence Management
 exl-id: 9d43d9d4-5487-416c-b641-e807227ac056
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: ab3d016c7c9c622be361596137b150d8719630bd
 workflow-type: tm+mt
-source-wordcount: '578'
+source-wordcount: '594'
 ht-degree: 0%
 
 ---
@@ -23,7 +19,7 @@ ht-degree: 0%
 
 Med hjälp av användargränssnittet Skapa korrespondens för korrespondenshantering kan du spara utkast av pågående bokstavsinstanser och det finns skickade brevinstanser.
 
-Med Correspondence Management kan du skapa API:er som du kan använda för att skapa listgränssnittet och arbeta med skickade brev eller utkast. API:erna listar och öppnar instanser av en agent som skickats och utkastbrev, så att agenten kan fortsätta arbeta med utkast eller skickade brev.
+Med Correspondence Management får du API:er som du kan använda för att skapa listgränssnittet som ska fungera med skickade brev eller utkast. API:erna listar och öppnar instanser av en agent som skickats och utkastbrev, så att agenten kan fortsätta arbeta med utkast eller skickade brev.
 
 ## Hämtar bokstavsinstanser {#fetching-letter-instances}
 
@@ -37,12 +33,11 @@ Correspondence Management exponerar API:er för att hämta bokstavsinstanser via
 
 >[!NOTE]
 >
->LetterInstanceService är en OSGI-tjänst och dess instans kan hämtas med @Reference i Java
->Class eller sling.getService(LetterInstanceService). klass) i JSP.
+>LetterInstanceService är en OSGI-tjänst och instansen kan hämtas med @Reference i Java™-klassen eller sling.getService(LetterInstanceService). klass) i JSP.
 
 ### Använda getAllLetterInstances {#using-nbsp-getallletterinstances}
 
-Följande API hittar bokstavsinstanserna baserat på frågeobjektet (både Skickat och Utkast). Om frågeobjektet är null returneras alla bokstavsinstanser. Detta API returnerar en lista över [LetterInstanceVO](https://helpx.adobe.com/aem-forms/6-2/javadocs/com/adobe/icc/dbforms/obj/LetterInstanceVO.html) objekt, som kan användas för att extrahera ytterligare information från bokstavsinstans
+Följande API hittar bokstavsinstanserna baserat på frågeobjektet (både Skickat och Utkast). Om frågeobjektet är null returneras alla bokstavsinstanser. Detta API returnerar en lista med [LetterInstanceVO](https://helpx.adobe.com/aem-forms/6-2/javadocs/com/adobe/icc/dbforms/obj/LetterInstanceVO.html) -objekt, som kan användas för att extrahera ytterligare information om bokstavsinstansen.
 
 **Syntax**: `List getAllLetterInstances(Query query) throws ICCException;`
 
@@ -59,7 +54,7 @@ Följande API hittar bokstavsinstanserna baserat på frågeobjektet (både Skick
  </tbody>
 </table>
 
-#### Exempel 1: Hämta alla bokstavsinstanser av typen SKICKAD {#example-fetch-all-the-letter-instances-of-type-submitted}
+#### Exempel 1: Hämta alla bokstavsinstanser av typen INSKICKT {#example-fetch-all-the-letter-instances-of-type-submitted}
 
 Följande kod returnerar listan med skickade bokstavsinstanser. Om du bara vill hämta utkast ändrar du `LetterInstanceType.COMPLETE.name()` till `LetterInstanceType.DRAFT.name().`
 
@@ -139,8 +134,8 @@ Boolean result = letterInstanceService.letterInstanceExists(letterInstanceName )
 
 Bokstavsinstans kan vara av typen Skickat eller Utkast. Om du öppnar båda bokstavsinstansstyperna visas olika beteenden:
 
-* Om det är en instans av en skickad bokstav öppnas en PDF som representerar instansen. Instansen Letter som finns kvar på servern innehåller även dataXML och bearbetad XDP, som kan användas för att åstadkomma och ytterligare anpassad användning av exempelvis PDF/A.
-* Om det gäller en instans av ett utkast, läses gränssnittet för att skapa korrespondens in på nytt till exakt föregående läge som det var när utkastet skapades
+* Om det är en instans av en skickad bokstav öppnas en PDF som representerar instansen. Den skickade Letter-instansen som finns kvar på servern innehåller även dataXML och bearbetad XDP, som kan användas för att utföra och ytterligare anpassad användning av exempelvis PDF/A.
+* När det gäller en förekomst av ett utkast till brev, läses gränssnittet för att skapa korrespondens in på nytt till exakt föregående läge som det var när utkastet skapades
 
 ### Instans för inledande av utkast  {#opening-draft-letter-instance-nbsp}
 
@@ -150,10 +145,10 @@ CCR-gränssnittet stöder parametern cmLetterInstanceId som kan användas för a
 
 >[!NOTE]
 >
->Du behöver inte ange cmLetterId eller cmLetterName/State/Version när du läser in korrespondensen igen, eftersom skickade data redan innehåller all information om korrespondensen som läses in igen. RandomNo används för att undvika problem med webbläsarcache, du kan använda tidsstämpel som ett slumpmässigt tal.
+Du behöver inte ange cmLetterId eller cmLetterName/State/Version när du läser in korrespondensen igen, eftersom skickade data redan innehåller all information om korrespondensen som läses in igen. RandomNo används för att undvika problem med webbläsarens cache-lagring. Du kan använda en tidsstämpel som ett slumpmässigt tal.
 
 ### Öppnar skickad bokstavsinstans {#opening-submitted-letter-instance}
 
-Skickat PDF kan öppnas direkt med ID för bokstavsinstans:
+Skickat PDF kan öppnas direkt med ID:t för bokstavsinstansen:
 
 `https://[hostName]:[portNo]/[contextPath]/[letterInstanceId]`

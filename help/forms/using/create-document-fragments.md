@@ -1,35 +1,31 @@
 ---
 title: "Självstudiekurs: Skapa dokumentfragment"
-seo-title: Create document fragments for Interactive Communication
 description: Skapa dokumentfragment för interaktiv kommunikation
-seo-description: Create document fragments for Interactive Communication
-uuid: 677d717e-e92e-434e-8266-6fbbf94f3867
 contentOwner: anujkapo
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: 8ae97a21-83af-4615-9be3-61e2f8065081
 docset: aem65
 feature: Interactive Communication
 exl-id: 81429735-cd52-4621-8dc2-10dd89df3052
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: ab3d016c7c9c622be361596137b150d8719630bd
 workflow-type: tm+mt
-source-wordcount: '1658'
+source-wordcount: '1662'
 ht-degree: 0%
 
 ---
 
-# Självstudiekurs: Skapa dokumentfragment{#tutorial-create-document-fragments}
+# Självstudie: Skapa dokumentfragment{#tutorial-create-document-fragments}
 
 ![05-create-form-data-model-main_small](assets/05-create-form-data-model-main_small.png)
 
-Den här självstudiekursen är ett steg i [Skapa din första interaktiva kommunikation](/help/forms/using/create-your-first-interactive-communication.md) serie. Vi rekommenderar att du följer serien i kronologisk ordning för att förstå, utföra och demonstrera det fullständiga exemplet på självstudiekurser.
+Den här självstudiekursen är ett steg i [Skapa din första interaktiva kommunikation](/help/forms/using/create-your-first-interactive-communication.md) serie. Adobe rekommenderar att du följer serien i kronologisk ordning för att förstå, utföra och demonstrera det fullständiga självstudiekursen.
 
 Dokumentfragment är återanvändbara komponenter i en korrespondens som används för att skapa en interaktiv kommunikation. Dokumentfragmenten är av följande typer:
 
 * Text - En textresurs är en del av innehållet som består av ett eller flera textstycken. Ett stycke kan vara statiskt eller dynamiskt.
-* List - List är en grupp dokumentfragment, inklusive text, listor, villkor och bilder.
-* Villkor - Med villkor kan du definiera vilket innehåll som ska tas med i den interaktiva kommunikationen baserat på data som tas emot från formulärdatamodellen.
+* List - List är en grupp med dokumentfragment, inklusive text, listor, villkor och bilder.
+* Villkor - Med villkor kan du definiera vilket innehåll som ska inkluderas i den interaktiva kommunikationen baserat på data som tas emot från formulärdatamodellen.
 
-I den här självstudiekursen får du hjälp med att skapa flera textdokumentfragment baserat på anatomin i [Planera interaktiv kommunikation](/help/forms/using/planning-interactive-communications.md) -avsnitt. I slutet av den här självstudiekursen kan du:
+I den här självstudiekursen får du hjälp med att skapa flera textdokumentfragment baserat på anatomin i [Planera interaktiv kommunikation](/help/forms/using/planning-interactive-communications.md) -avsnitt. I slutet av den här självstudiekursen kan du göra följande:
 
 * Skapa dokumentfragment
 * Skapa variabler
@@ -48,11 +44,11 @@ Varje dokumentfragment innehåller fält med statisk text, data som tagits emot 
 
 När du skapar dokumentfragment i den här självstudiekursen skapas variabler för fält som tar emot data med hjälp av agentens användargränssnitt.
 
-Använd **FDM_Create_First_IC**, enligt beskrivningen i [Skapa formulärdatamodell](../../forms/using/create-form-data-model0.md) som formulärdatamodell för att skapa dokumentfragment i den här självstudiekursen.
+Använd **FDM_Create_First_IC**, enligt beskrivningen i [Skapa formulärdatamodell](../../forms/using/create-form-data-model0.md) som formulärdatamodell för att skapa dokumentfragment i den här självstudien.
 
-## Steg 1: Skapa textdokumentfragment för fakturainformation {#step-create-bill-details-text-document-fragment}
+## Steg 1: Skapa dokumentfragment för fakturainformation {#step-create-bill-details-text-document-fragment}
 
-Dokumentfragmentet med faktureringsinformation innehåller följande fält:
+Dokumentfragmentet för faktureringsinformation innehåller följande fält:
 
 | Fält | Datakälla |
 |---|---|
@@ -61,7 +57,7 @@ Dokumentfragmentet med faktureringsinformation innehåller följande fält:
 | Faktureringsdatum | Agentgränssnitt |
 | Din plan | Formulärdatamodell |
 
-Utför följande steg för att skapa variabler för fält med användargränssnittet för agent som datakälla, skapa statisk text och använda formulärdatamodellelement i dokumentfragmentet:
+Så här skapar du variabler för fält med agentanvändargränssnittet som datakälla, skapar statisk text och använder formulärdatamodellelement i dokumentfragmentet:
 
 1. Välj **[!UICONTROL Forms]** > **[!UICONTROL Document Fragments]**.
 
@@ -76,7 +72,7 @@ Utför följande steg för att skapa variabler för fält med användargränssni
 
    1. Tryck **Nästa**.
 
-1. Välj **Variabler** i den vänstra rutan och tryck på **Skapa**.
+1. Välj **Variabel** i den vänstra rutan och tryck på **Skapa**.
 1. I **Skapa variabel** avsnitt:
 
    1. Retur **Fakturanummer** som namnet på variabeln.
@@ -101,7 +97,7 @@ Utför följande steg för att skapa variabler för fält med användargränssni
 
    ![Statisk text](assets/variable_bill_details_static_text_new.png)
 
-1. Placera markören bredvid **Fakturanummer** och dubbelklicka på **Fakturanummer** variabel från **Variabler** i den vänstra rutan.
+1. Placera markören bredvid **Fakturanummer** och dubbelklicka på **Fakturanummer** variabel från **Variabel** i den vänstra rutan.
 1. Placera markören bredvid **Faktureringsperiod** och dubbelklicka på **Faktureringsperiod** variabel.
 1. Placera markören bredvid **Faktureringsdatum** och dubbelklicka på **Faktureringsdatum** variabel.
 1. Välj **Datamodellsobjekt** i den vänstra rutan.
@@ -109,9 +105,9 @@ Utför följande steg för att skapa variabler för fält med användargränssni
 
    ![Bill_details_customerplan_fdm](assets/bill_details_customerplan_fdm.png)
 
-1. Klicka **Spara** om du vill skapa textdokumentfragmentet med faktureringsinformation.
+1. Klicka **Spara** om du vill skapa dokumentfragment för fakturainformationstexten.
 
-## Steg 2: Skapa textdokumentfragment för kundinformation {#step-create-customer-details-text-document-fragment}
+## Steg 2: Skapa textfragment för kundinformation {#step-create-customer-details-text-document-fragment}
 
 Dokumentfragmentet Kundinformation innehåller följande fält:
 
@@ -126,7 +122,7 @@ Dokumentfragmentet Kundinformation innehåller följande fält:
 | Relationsnummer | Formulärdatamodell |
 | Antal anslutningar | Agentgränssnitt |
 
-Utför följande steg för att skapa variabler för fält med användargränssnittet för agent som datakälla, skapa statisk text och använda formulärdatamodellelement i dokumentfragmentet:
+Så här skapar du variabler för fält med agentanvändargränssnittet som datakälla, skapar statisk text och använder formulärdatamodellelement i dokumentfragmentet:
 
 1. Välj **[!UICONTROL Forms]** > **[!UICONTROL Document Fragments]**.
 1. Välj **Skapa** > **Text**.
@@ -140,7 +136,7 @@ Utför följande steg för att skapa variabler för fält med användargränssni
 
    1. Tryck **Nästa**.
 
-1. Välj **Variabler** i den vänstra rutan och tryck på **Skapa**.
+1. Välj **Variabel** i den vänstra rutan och tryck på **Skapa**.
 1. I **Skapa variabel** avsnitt:
 
    1. Retur **Placesupply** som namnet på variabeln.
@@ -149,9 +145,8 @@ Utför följande steg för att skapa variabler för fält med användargränssni
 
    Upprepa steg 4 och 5 för att skapa följande variabler:
 
-   * Statskod: Nummertyp
-   * Nummeranslutningar: Nummertyp
-
+   * Statcode: Number-typ
+   * Nummeranslutningar: Number-typ
 
 1. Välj **Datamodellsobjekt** placerar du markören i den högra rutan och dubbelklickar på **kund** > **name** -egenskap.
 1. Tryck på Retur för att flytta markören till nästa rad och dubbelklicka på **kund** > **adress** -egenskap.
@@ -169,17 +164,17 @@ Utför följande steg för att skapa variabler för fält med användargränssni
 1. Placera markören bredvid **Mobilnummer** och dubbelklicka på **kund** > **mobilenum** -egenskap.
 1. Placera markören bredvid **Alternativt kontaktnummer** och dubbelklicka på** kund** > **alternatemobilenumber** -egenskap.
 1. Placera markören bredvid **Relationsnummer** och dubbelklicka på **kund** > **relationsnummer** -egenskap.
-1. Välj **Variabler** placerar du markören bredvid **Leveransort** och dubbelklicka på **Placesupply** variabel.
+1. Välj **Variabel** placerar du markören bredvid **Leveransort** och dubbelklicka på **Placesupply** variabel.
 1. Placera markören bredvid **Statuskod** och dubbelklicka på **Statskod** variabel.
 1. Placera markören bredvid **Antal anslutningar** och dubbelklicka på **Nummeranslutningar** variabel.
 
    ![Kundinformation](assets/customer_details_df2_new.png)
 
-1. Klicka **Spara** för att skapa textdokumentfragmentet Kundinformation.
+1. Klicka **Spara** om du vill skapa textavsnittet Kundinformation.
 
-## Steg 3: Skapa textdokumentfragment för fakturasammanfattning {#step-create-bill-summary-text-document-fragment}
+## Steg 3: Skapa dokumentfragment för faktureringssammanfattning {#step-create-bill-summary-text-document-fragment}
 
-Dokumentfragmentet Faktureringssammanfattning innehåller följande fält:
+Dokumentfragmentet för faktureringssammanfattning innehåller följande fält:
 
 | Fält | Datakälla |
 |---|---|
@@ -190,7 +185,7 @@ Dokumentfragmentet Faktureringssammanfattning innehåller följande fält:
 | Belopp att betala | Agentgränssnitt |
 | Förfallodatum | Agentgränssnitt |
 
-Utför följande steg för att skapa variabler för fält med användargränssnittet för agent som datakälla, skapa statisk text och använda formulärdatamodellelement i dokumentfragmentet:
+Så här skapar du variabler för fält med agentanvändargränssnittet som datakälla, skapar statisk text och använder formulärdatamodellelement i dokumentfragmentet:
 
 1. Välj **[!UICONTROL Forms]** > **[!UICONTROL Document Fragments]**.
 1. Välj **Skapa** > **Text**.
@@ -204,20 +199,19 @@ Utför följande steg för att skapa variabler för fält med användargränssni
 
    1. Tryck **Nästa**.
 
-1. Välj **Variabler** i den vänstra rutan och tryck på **Skapa**.
+1. Välj **Variabel** i den vänstra rutan och tryck på **Skapa**.
 1. I **Skapa variabel** avsnitt:
 
-   1. Retur **Förhandsbalans** som namnet på variabeln.
+   1. Retur **Föregående balans** som namnet på variabeln.
    1. Välj **Nummer** som typ.
    1. Tryck **Skapa**.
 
    Upprepa steg 4 och 5 för att skapa följande variabler:
 
-   * Betalningar: Nummertyp
-   * Justeringar: Nummertyp
-   * Belopp: Nummertyp
-   * Duedat: Datumtyp
-
+   * Betalningar: Number-typ
+   * Justeringar: Number-typ
+   * Belopp: Number-typ
+   * Duedate: Datumtyp
 
 1. Skapa statisk text för följande fält med den högra rutan:
 
@@ -231,7 +225,7 @@ Utför följande steg för att skapa variabler för fält med användargränssni
 
    ![Statisk text i fakturasammanfattning](assets/bill_summary_static_new.png)
 
-1. Placera markören bredvid **Föregående saldo** och dubbelklicka på **Förhandsbalans** variabel.
+1. Placera markören bredvid **Föregående saldo** och dubbelklicka på **Föregående balans** variabel.
 1. Placera markören bredvid **Betalningar** och dubbelklicka på **Betalningar** variabel.
 1. Placera markören bredvid **Justeringar** och dubbelklicka på **Justeringar** variabel.
 1. Placera markören bredvid **Belopp att betala** och dubbelklicka på **Belopp som förfaller** variabel.
@@ -240,16 +234,16 @@ Utför följande steg för att skapa variabler för fält med användargränssni
 
    ![Sammanfattning av faktura](assets/bill_summary_static_variables_new.png)
 
-1. Klicka **Spara** för att skapa textdokumentfragmentet Kundinformation.
+1. Klicka **Spara** om du vill skapa textavsnittet Kundinformation.
 
-## Steg 4: Skapa sammanfattning av dokumentfragment för avgiftstext {#step-create-summary-of-charges-text-document-fragment}
+## Steg 4: Skapa sammanfattning av avgiftstext Dokumentfragment {#step-create-summary-of-charges-text-document-fragment}
 
-Dokumentfragmentet Sammanfattning av avgifter innehåller följande fält:
+Sammanfattning av avgifter Dokumentfragment innehåller följande fält:
 
 | Fält | Datakälla |
 |---|---|
 | samtalsavgifter | Formulärdatamodell |
-| Konferenssamtalsavgifter | Formulärdatamodell |
+| Konferenssamtalskostnader | Formulärdatamodell |
 | SMS-avgifter | Formulärdatamodell |
 | Mobila internetavgifter | Formulärdatamodell |
 | National Roaming Charts | Formulärdatamodell |
@@ -258,7 +252,7 @@ Dokumentfragmentet Sammanfattning av avgifter innehåller följande fält:
 | Totala avgifter | Formulärdatamodell |
 | TOTALT BETALNINGSBART | Formulärdatamodell |
 
-Utför följande steg för att skapa statisk text och använda modellelement för formulärdata i dokumentfragmentet:
+Så här skapar du statisk text och använder formulärdatamodellelement i dokumentfragmentet:
 
 1. Välj **[!UICONTROL Forms]** > **[!UICONTROL Document Fragments]**.
 1. Välj **Skapa** > **Text**.
@@ -275,7 +269,7 @@ Utför följande steg för att skapa statisk text och använda modellelement fö
 1. Skapa statisk text för följande fält med den högra rutan:
 
    * samtalsavgifter
-   * Konferenssamtalsavgifter
+   * Konferenssamtalskostnader
    * SMS-avgifter
    * Mobila internetavgifter
    * National Roaming Charts
@@ -288,7 +282,7 @@ Utför följande steg för att skapa statisk text och använda modellelement fö
 
 1. Välj **Datamodellsobjekt** -fliken.
 1. Placera markören bredvid **samtalsavgifter** och dubbelklicka på **växlar** > **callCharts** -egenskap.
-1. Placera markören bredvid **Konferenssamtalsavgifter** och dubbelklicka på **växlar** > **sammandragande** -egenskap.
+1. Placera markören bredvid **Konferenssamtalskostnader** och dubbelklicka på **växlar** > **sammandragande** -egenskap.
 1. Placera markören bredvid **SMS-avgifter** och dubbelklicka på **växlar** > **smscharges** -egenskap.
 1. Placera markören bredvid **Mobila internetavgifter** och dubbelklicka på **växlar** > **internetavgifter** -egenskap.
 1. Placera markören bredvid **National Roaming Charts** och dubbelklicka på **växlar** > **roamingnationell** -egenskap.
@@ -311,4 +305,4 @@ Utför följande steg för att skapa statisk text och använda modellelement fö
 
    ![create_rules_caption](assets/create_rules_caption.gif)
 
-1. Klicka **Spara** för att skapa dokumentfragmentet Sammanfattning av avgifter.
+1. Klicka **Spara** om du vill skapa en sammanfattning av avgifter, text, dokumentfragment.

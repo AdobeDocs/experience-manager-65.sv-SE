@@ -1,27 +1,23 @@
 ---
-title: Innehållsfunktion
-seo-title: Featured Content Feature
+title: Funktion för innehåll
 description: Funktionen Aktuellt innehåll gör att besökare på den inloggade webbplatsen kan markera innehåll
-seo-description: The Featured Content feature lets signed-in site visitors highlight content
-uuid: 7a2ff570-01bb-46fb-8d66-3b47e2efa72e
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: authoring
 content-type: reference
-discoiquuid: ee39435d-80f5-4758-ae01-1ea0d221b00b
 exl-id: 76b76e0e-531b-4f80-be70-68532ef81a7f
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: ab3d016c7c9c622be361596137b150d8719630bd
 workflow-type: tm+mt
-source-wordcount: '326'
+source-wordcount: '328'
 ht-degree: 1%
 
 ---
 
-# Innehållsfunktion {#featured-content-feature}
+# Funktion för innehåll {#featured-content-feature}
 
 ## Introduktion {#introduction}
 
-Funktionen för innehåll är ett område där besökare på den inloggade webbplatsen (community-medlemmar) i publiceringsmiljön kan markera innehåll för:
+Funktionen för innehåll är ett område där besökare (community-medlemmar) på den inloggade webbplatsen kan markera innehåll för:
 
 * [Bloggar](blog-feature.md)
 * [Kalendrar](calendar.md)
@@ -29,7 +25,7 @@ Funktionen för innehåll är ett område där besökare på den inloggade webbp
 * [Ideas](ideation-feature.md)
 * [QnA](working-with-qna.md)
 
-När innehållet har markerats som aktuellt kommer det att anges i den här komponenten, som kan placeras på specifika landningssidor eller områden som lätt fångar upp communitymedlemmens uppmärksamhet.
+När innehållet har markerats som aktuellt listas det i den här komponenten, som kan placeras på specifika landningssidor eller områden som lätt fångar samhällets uppmärksamhet.
 
 Möjligheten att använda innehåll kan vara tillåten eller otillåten per komponent.
 
@@ -44,7 +40,7 @@ Lägga till en `Featured Content` -komponent till en sida i redigeringsläge anv
 
 * `Communities / Featured Content`
 
-och dra den till rätt plats på en sida där det aktuella innehållet ska visas.
+Dra den till en plats på en sida där det aktuella innehållet ska visas.
 
 Nödvändig information finns på [Grunderna för communitykomponenter](basics.md).
 
@@ -54,7 +50,7 @@ När [nödvändiga bibliotek på klientsidan](essentials-featured.md#essentials-
 
 ## Konfigurera aktuellt innehåll {#configuring-featured-content}
 
-Markera den monterade `Featured Content` -komponenten som ska få åtkomst till och markera `Configure` som öppnar redigeringsdialogrutan.
+Markera den monterade `Featured Content` så att du kan komma åt och välja `Configure` -ikonen som öppnar redigeringsdialogrutan.
 
 ![configure-new](assets/configure-new.png)
 
@@ -66,15 +62,15 @@ Under **[!UICONTROL Settings]** identifierar du innehållet som ska visas:
 
 * **[!UICONTROL Display Name]**
 
-   Namnet på listan med aktuellt innehåll. Till exempel `Featured Questions` eller `Featured Ideas`. Standard är `Featured Content` om det lämnas tomt.
+  Namnet på listan med aktuellt innehåll. Till exempel: `Featured Questions` eller `Featured Ideas`. Standard är `Featured Content` om det lämnas tomt.
 
 * **[!UICONTROL Location of the Featured Content]**
 
-   *(Obligatoriskt)* Bläddra till sidan med innehållet som kan vara en funktion (komponenterna på sidan måste vara konfigurerade för att tillåta aktuellt innehåll). Till exempel, `/content/sites/engage/en/forum`.
+  *(Obligatoriskt)* Bläddra till sidan som innehåller det innehåll som kan vara aktuellt (komponenterna på den sidan måste vara konfigurerade för att tillåta aktuellt innehåll). Till exempel, `/content/sites/engage/en/forum`.
 
 * **[!UICONTROL Display Limit]**
 
-   Det maximala antalet innehåll som kan visas. Standardvärdet är 5.
+  Det maximala antalet innehåll som kan visas. Standardvärdet är 5.
 
 ## Site Visitor Experience {#site-visitor-experience}
 
@@ -84,13 +80,13 @@ När en moderator visar publicerat innehåll har de tillgång till modereringsfl
 
 ![webbplats-besökare-upplevelse](assets/site-visitor-experience.png)
 
-När modellflaggan har flaggats som en funktion blir den `Unfeature`.
+När den har flaggats som en funktion blir modereringsflaggan `Unfeature`.
 
-Sidan som innehåller `Featured Content` kommer nu att inkludera det här inlägget.
+Sidan som innehåller `Featured Content` ingår nu detta inlägg.
 
 ![site-visitor-experience1](assets/site-visitor-experience1.png)
 
-`Read More` är en länk till själva inlägget.
+The `Read More` länkar till själva inlägget.
 
 ## Ytterligare information {#additional-information}
 

@@ -1,16 +1,12 @@
 ---
 title: Egenskaper för konfiguration av korrespondenshantering
-seo-title: Correspondence Management Configuration Properties
 description: I det här avsnittet beskrivs hur du kan ändra Resursdisposition med lösningsspecifika konfigurationer. I det här avsnittet beskrivs de egenskaper som du kan redigera, med beskrivning, standardvärden och godkända värden.
-seo-description: This topic explains how you can modify Asset Composer with solution-specific configurations. This topic details the properties you can edit, with their description, default values, and acceptable values.
-uuid: 6b401d51-9332-459b-b751-42a9b5a1462d
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: correspondence-management
-discoiquuid: f2955419-c680-44a7-9913-c594b4577551
 feature: Correspondence Management
 exl-id: c9c007d0-c545-4738-b11b-4c50986342ee
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: ab3d016c7c9c622be361596137b150d8719630bd
 workflow-type: tm+mt
 source-wordcount: '845'
 ht-degree: 1%
@@ -39,7 +35,7 @@ Correspondence Management har följande konfigurationsegenskaper:
   </tr>
   <tr>
    <td>Minsta numerisk bredd</td>
-   <td>Minsta bredd som ska användas i fältet punkt/nummer när numrerade listor används utom latinska nummer</td>
+   <td>Minsta bredd som ska användas i punkt-/nummerfältet när numrerade listor används utom latinska nummer</td>
    <td>8.0mm</td>
    <td>Valfritt tal</td>
   </tr>
@@ -53,7 +49,7 @@ Correspondence Management har följande konfigurationsegenskaper:
    <td>Återgivningstyp</td>
    <td>Den typ av återgivning som programmet Skapa korrespondens använder för att återge förhandsgranskningen av bokstaven. </td>
    <td>HTML Rendition</td>
-   <td>HTML Rendition/PDF Rendition</td>
+   <td>HTML Rendition / PDF Rendition</td>
   </tr>
   <tr>
    <td><p>Aktivera CCR PDF-markering</p> </td>
@@ -154,7 +150,7 @@ Correspondence Management har följande konfigurationsegenskaper:
   <tr>
    <td><p>Datavisningsformat</p> </td>
    <td><p>Anger språkspecifikt visningsformat för data</p> </td>
-   <td><p>locale=en_US; dateFormat=dd-MM-yyyy; numberDecimalSeparator=.; numberGroupSeparator=,; numberUseGroupSeparator=truelocale=de_DE; dateFormat=dd-MM-yyyy; numberDecimalSeparator=,; numberGroupSeparator=.; numberUseGroupSeparator=truelocale=fr_FR; dateFormat=dd-MM-yyyy; numberDecimalSeparator=,; numberGroupSeparator= ; numberUseGroupSeparator=truelocale=ja_JP; dateFormat=dd-MM-yyyy; numberDecimalSeparator=.; numberGroupSeparator=,; numberUseGroupSeparator=true</p> </td>
+   <td><p>locale=en_US; dateFormat=dd-MM-yyyy; numberDecimalSeparator=.; numberGroupSeparator=,; numberUseGroupSeparator=truelocale=de_DE; dateFormat=dd-MM-yyyy; numberDecimalSeparator=,; numberGroupSeparator=.; numberUseGroupSeparator=truelocale=fr_FR; dateFormat=dd-MM-yyy; numberDecimalSeparator=,; numberGroupSeparator= ; numberUseGroupSeparator=truelocale=ja_JP; dateFormat=dd-MM-yyyy; numberDecimalSeparator==.; numberGroupSeparator=,; numberUseGroupSeparator=true</p> </td>
    <td><p>—</p> </td>
   </tr>
   <tr>
@@ -171,7 +167,7 @@ Correspondence Management har följande konfigurationsegenskaper:
   </tr>
   <tr>
    <td><p>Aktivera granskning</p> </td>
-   <td><p>Aktivera/inaktivera granskningsfunktioner. Om värdet är false inaktiveras granskningsloggar för alla åtgärder</p> </td>
+   <td><p>Aktivera/inaktivera granskningsfunktioner. Om false inaktiveras granskningsloggar för alla åtgärder</p> </td>
    <td><p>false</p> </td>
    <td><p>true / false</p> </td>
   </tr>
@@ -206,7 +202,7 @@ Correspondence Management har följande konfigurationsegenskaper:
    <td><p>true / false</p> </td>
   </tr>
   <tr>
-   <td><p>Aktivera SparaSomUtkastgranskning</p> </td>
+   <td><p>Aktivera SparaSomUtkast-granskning</p> </td>
    <td><p>Aktivera/inaktivera granskningsfunktioner för att spara bokstavsutkast</p> </td>
    <td><p>false</p> </td>
    <td><p>true / false</p> </td>
@@ -224,7 +220,7 @@ Correspondence Management har följande konfigurationsegenskaper:
    <td><p>true / false</p> </td>
   </tr>
   <tr>
-   <td><p>Aktivera granskning av utskrift</p> </td>
+   <td><p>Aktivera granskning</p> </td>
    <td><p>Aktivera/inaktivera granskningsfunktioner för utskrift av brev</p> </td>
    <td><p>false</p> </td>
    <td><p>true / false</p> </td>
@@ -236,7 +232,7 @@ Correspondence Management har följande konfigurationsegenskaper:
    <td><p>true / false</p> </td>
   </tr>
   <tr>
-   <td><p>Parameternamn för dokumentbilaga</p> </td>
+   <td><p>Parameternamn för dokumentbifogad fil</p> </td>
    <td><p>Parameternamn för bifogade dokument som skickats till postprocessen</p> </td>
    <td><p>inAttachmentDocs</p> </td>
    <td><p>Valfritt strängvariabelnamn</p> </td>
@@ -285,7 +281,7 @@ Correspondence Management har följande konfigurationsegenskaper:
   </tr>
   <tr>
    <td>Kompatibilitetsalternativ</td>
-   <td>Kompatibilitetsalternativ för formatet configname:configvalue avgränsat med kommatecken.</td>
+   <td>Kompatibilitetsalternativ för formatet configname:configvalue avgränsat med komma.</td>
    <td>acm.compatibilityOptions</td>
    <td> </td>
   </tr>

@@ -1,18 +1,14 @@
 ---
 title: Skapa en exempelsida
-seo-title: Create a Sample Page
 description: Skapa en exempelwebbplats
-seo-description: Create a Sample community site
-uuid: 04a8f027-b7d8-493a-a9bd-5c4a6715d754
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 content-type: reference
 topic-tags: developing
-discoiquuid: a03145f7-6697-4797-b73e-6f8d241ce469
 exl-id: d66fc1ff-a669-4a2c-b45a-093060facd97
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: ab3d016c7c9c622be361596137b150d8719630bd
 workflow-type: tm+mt
-source-wordcount: '405'
+source-wordcount: '402'
 ht-degree: 1%
 
 ---
@@ -23,19 +19,19 @@ Från och med AEM 6.1 Communities är det enklaste sättet att skapa en exempels
 
 Detta inkluderar en parsykomponent så att du kan [aktivera komponenter för utveckling](basics.md#accessing-communities-components).
 
-Ett annat alternativ för att utforska exempelkomponenter är att använda funktionerna i [Community Components Guide](components-guide.md).
+Ett annat alternativ för att utforska exempelkomponenter är att använda funktionerna i [Guide för communitykomponenter](components-guide.md).
 
 ## Skapa en communitywebbplats {#create-a-community-site}
 
-Det här liknar mycket att skapa en ny webbplats som beskrivs i [Komma igång med AEM Communities](getting-started.md).
+Det här liknar att skapa en plats som beskrivs i [Komma igång med AEM Communities](getting-started.md).
 
-Den största skillnaden är att den här självstudiekursen kommer att skapa en ny mall för en community-webbplats som bara innehåller [Sidfunktion](functions.md#page-function) för att skapa en enkel communitysajt som är fri från andra funktioner (andra än förkabelfunktioner som är grundläggande för alla communitysajter).
+Den största skillnaden är att den här självstudiekursen skapar en mall för en community-webbplats som bara innehåller [Sidfunktion](functions.md#page-function) för att skapa en enkel communitywebbplats. Den gör detta utan andra funktioner (andra än de funktioner som är grundläggande för alla communitysajter).
 
 ### Skapa ny platsmall {#create-new-site-template}
 
 Skapa en enkel [mall för communitywebbplats](sites.md).
 
-Från global navigering i en författarinstans väljer du **[!UICONTROL Tools]** > **[!UICONTROL Communities]** > **[!UICONTROL Site Templates]**.
+Från global navigering på en författarinstans väljer du **[!UICONTROL Tools]** > **[!UICONTROL Communities]** > **[!UICONTROL Site Templates]**.
 
 ![create-site-template](assets/create-site-template1.png)
 
@@ -54,7 +50,7 @@ Från global navigering i en författarinstans väljer du **[!UICONTROL Tools]**
    * Ange information om konfigurationsfunktionen
 
       * `Title`: En sida
-      * `URL`: page
+      * `URL`: sida
 
 ![site-template-editor-structure](assets/site-template-editor1.png)
 
@@ -63,7 +59,7 @@ Från global navigering i en författarinstans väljer du **[!UICONTROL Tools]**
 
 ### Skapa ny community-webbplats {#create-new-community-site}
 
-Skapa nu en ny communitywebbplats som bygger på den enkla webbplatsmallen.
+Skapa nu en communitywebbplats baserad på den enkla webbplatsmallen.
 
 När du har skapat webbplatsmallen väljer du från global navigering **[!UICONTROL Communities > Sites]**.
 
@@ -77,14 +73,13 @@ När du har skapat webbplatsmallen väljer du från global navigering **[!UICONT
    * `Description`: En communitywebbplats som består av en enda sida för experiment.
    * `Community Site Root: (leave blank)`
    * `Community Site Base Language: English`
-   * `Name`: exempel
+   * `Name`: sample
 
       * url = http://localhost:4502/content/sites/sample
 
       * `Template`: välj `Single Page Template`
 
-      ![create-community-site-template](assets/create-community-site-template.png)
-
+     ![create-community-site-template](assets/create-community-site-template.png)
 
 * Välj `Next`
 * Steg `2 - Design`
@@ -94,11 +89,11 @@ När du har skapat webbplatsmallen väljer du från global navigering **[!UICONT
 * Välj `Next`
 * Välj `Next`
 
-   (Acceptera alla standardinställningar)
+  (Acceptera alla standardinställningar)
 
 * Välj `Create`
 
-   ![create-community-site](assets/create-community-site.png)
+  ![create-community-site](assets/create-community-site.png)
 
 ## Publicera webbplatsen {#publish-the-site}
 
@@ -110,9 +105,9 @@ Från [community sites console](sites-console.md), väljer du publiceringsikonen
 
 ![öppen webbplats](assets/open-site.png)
 
-Välj ikonen Öppna plats om du vill visa webbplatsen i redigeringsläge.
+Markera ikonen Öppna plats så att du kan visa webbplatsen i redigeringsläge.
 
-URL:en blir [http://localhost:4502/editor.html/content/sites/sample/en.html](http://localhost:4502/editor.html/content/sites/sample/en.html)
+URL:en är [http://localhost:4502/editor.html/content/sites/sample/en.html](http://localhost:4502/editor.html/content/sites/sample/en.html)
 
 ![författarwebbplats](assets/author-site.png)
 
@@ -120,4 +115,4 @@ På den enkla startsidan är det möjligt att se vad som är förkopplat via com
 
 ## Visa webbplats vid publicering {#view-site-on-publish}
 
-Öppna sidan på sidan när du har publicerat sidan [publiceringsinstans](http://localhost:4503/content/sites/sample/en.html) för att experimentera med funktionerna som anonym besökare, inloggad medlem eller administratör. Administrationslänken som visas i författarmiljön visas inte i publiceringsmiljön om inte en administratör loggar in.
+Öppna sidan på sidan när du har publicerat sidan [publish instance](http://localhost:4503/content/sites/sample/en.html) för att experimentera med funktionerna som anonym besökare, inloggad medlem eller administratör. Administrationslänken som visas i redigeringsmiljön visas inte i publiceringsmiljön om inte en administratör loggar in.

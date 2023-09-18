@@ -2,9 +2,9 @@
 title: Komprimera och expandera filer med en AEM Forms på en anpassad JEE DSC
 description: Lär dig komprimera och expandera filer med en anpassad DSC för JEE i AEM Forms
 exl-id: 1b950d8f-6b54-452a-831b-f5644370691d
-source-git-commit: f0dd1ac3ab9c17a8b331f5048d84ec97dd23924f
+source-git-commit: ab3d016c7c9c622be361596137b150d8719630bd
 workflow-type: tm+mt
-source-wordcount: '483'
+source-wordcount: '484'
 ht-degree: 0%
 
 ---
@@ -23,11 +23,13 @@ Java™-redigerare som [Eclipse](https://www.eclipse.org/) eller [Netbeans IDE](
 
 Mellanliggande
 
-Med AEM Forms on JEE kan utvecklare skapa anpassade DSC (Document Service Container) för att skapa utökade funktioner. Det går att ansluta sådana komponenter till AEM Forms i JEE-miljön och det är avsett. I den här artikeln beskrivs hur du skapar en anpassad ZIP-tjänst som kan användas för att komprimera en lista med filer till en ZIP-fil och expandera en ZIP-fil till en lista med dokument.
+Med AEM Forms on JEE kan utvecklare skapa anpassade ASC-funktioner (Acrobat Services Container) för att skapa anrikade funktioner. Det går att ansluta sådana komponenter till AEM Forms i JEE-miljön och det är avsett. I den här artikeln beskrivs hur du skapar en anpassad ZIP-tjänst som kan användas för att komprimera en lista med filer till en ZIP-fil och expandera en ZIP-fil till en lista med dokument.
 
-## Skapa en anpassad DSC-komponent {#create-custom-dsc-component}
+## Skapa en anpassad ASC-komponent {#create-custom-dsc-component}
 
-Skapa en anpassad DSC-komponent med två serviceåtgärder för att komprimera och expandera listan med dokument. Komponenten använder paketet java.util.zip för komprimering och dekomprimering. Följ stegen nedan för att skapa en anpassad komponent:
+Skapa en anpassad ASC-komponent med två serviceåtgärder så att du kan komprimera och expandera en lista med dokument. Den här komponenten använder paketet java.util.zip för komprimering och dekomprimering.
+
+Så här skapar du en anpassad ASC-komponent:
 
 1. Lägg till filen adobe-livecycle-client.jar i biblioteket
 1. Lägg till nödvändiga ikoner
@@ -203,7 +205,7 @@ På samma sätt kan zipDocuments-åtgärden för den anpassade komponenten accep
 
 ![Zip-dokument](assets/zip-doc.jpg)
 
-Följande arbetsflödessamordning visar hur du expanderar den angivna ZIP-filen, komprimerar dem till en annan ZIP-fil och returnerar utdata (se figur nedan).
+Följande arbetsflödessamordning visar hur du expanderar den angivna ZIP-filen, komprimerar den tillbaka till en annan ZIP-fil och returnerar utdata (se figur nedan).
 
 ![Zip-arbetsflöde](assets/unzip-zip-process.jpg)
 
@@ -215,8 +217,8 @@ Du kan använda den här ZIP-tjänsten för följande användningsområden:
 
 * Ange en ZIP-fil som innehåller flera PDF-dokument som kan läsas upp när de har expanderats. Detta kräver AEM Forms på JEE Reader Extensions-modulen.
 
-* Ange en ZIP-fil som innehåller heterogena dokumenttyper som kan dekomprimeras och konverteras som PDF-dokument med hjälp av tjänsten Generate PDF.
+* Ange en ZIP-fil som innehåller en heterogen typ av dokument som kan dekomprimeras och konverteras som PDF-dokument med hjälp av tjänsten Generera PDF.
 
 * Skydda en lista med dokument och returnera som en ZIP-fil.
 
-* Tillåt användare att hämta alla bilagor för en processinstans som en enskild ZIP-fil.
+* Låter användarna hämta alla bilagor i en processinstans som en enskild ZIP-fil.

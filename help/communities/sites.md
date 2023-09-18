@@ -1,30 +1,26 @@
 ---
 title: Webbplatsmallar
-seo-title: Site Templates
 description: Åtkomst till konsolen Platsmallar
-seo-description: How to access the Site Templates console
-uuid: d2f7556e-7e43-424e-82f1-41790aeb2d98
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: administering
 content-type: reference
-discoiquuid: 202d7dba-2b34-431d-b10f-87775632807f
 role: Admin
 exl-id: 05a944a3-adb1-47b4-b4a5-15bac91c995e
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+source-git-commit: ab3d016c7c9c622be361596137b150d8719630bd
 workflow-type: tm+mt
-source-wordcount: '440'
+source-wordcount: '430'
 ht-degree: 0%
 
 ---
 
 # Webbplatsmallar {#site-templates}
 
-Konsolen Platsmallar liknar [Gruppmallar](tools-groups.md) konsolen, som fokuserar på funktioner av intresse för gemenskapsgrupper.
+Konsolen Platsmallar liknar konsolen [Gruppmallar](tools-groups.md) konsolen, som fokuserar på funktioner av intresse för gemenskapsgrupper.
 
 >[!NOTE]
 >
->Konsolerna för att skapa [communitysajter](sites-console.md), [mallar för communitysajter](sites.md), [communitygruppsmallar](tools-groups.md) och [communityfunktioner](functions.md) används endast i författarmiljön.
+>Konsolerna för att skapa [communitysajter](sites-console.md), [mallar för communitywebbplatser](sites.md), [community-gruppmallar](tools-groups.md)och [communityfunktioner](functions.md) används endast i författarmiljön.
 
 ## Konsol för webbplatsmallar {#site-templates-console}
 
@@ -38,7 +34,7 @@ Den här konsolen visar mallarna från vilka en [communitywebbplats](sites-conso
 
 ## Skapa platsmall {#create-site-template}
 
-Om du vill börja skapa en ny platsmall väljer du `Create`.
+Om du vill börja skapa en platsmall väljer du `Create`.
 
 Då öppnas panelen Platsredigeraren som innehåller tre underpaneler:
 
@@ -50,21 +46,21 @@ På panelen Grundläggande information konfigureras ett namn, en beskrivning och
 
 * **[!UICONTROL Community Site Template Name]**
 
-   Mallens namn-ID.
+  Mallens namn-ID.
 
 * **[!UICONTROL Community Site Template Description]**
 
-   Mallbeskrivningen.
+  Mallbeskrivningen.
 
 * **[!UICONTROL Disabled/Enabled]**
 
-   En växlingsväxling som styr om mallen kan refereras.
+  En växlingsväxling som styr om mallen kan refereras.
 
 ### Miniatyrbild {#thumbnail}
 
-![webbplatsminiatyr](assets/site-thumbnail.png)
+![webbplatsminiatyrbild](assets/site-thumbnail.png)
 
-(Valfritt) Välj ikonen Överför bild om du vill visa en miniatyrbild tillsammans med namnet och beskrivningen för de som skapar communitysajterna.
+(Valfritt) Välj ikonen Överför bild om du vill visa en miniatyrbild tillsammans med namnet och beskrivningen för användare som skapar communitywebbplatser.
 
 ### Struktur {#structure}
 
@@ -72,15 +68,15 @@ På panelen Grundläggande information konfigureras ett namn, en beskrivning och
 
 Om du vill lägga till communityfunktioner drar du från höger sida till vänster i den ordning som länkarna på webbplatsmenyn ska visas. Format används på mallen när webbplatsen skapas.
 
-Om du till exempel vill ha en hemsida drar du funktionen Sida från biblioteket och släpper under mallbyggaren. Detta resulterar i att dialogrutan för sidkonfiguration öppnas. Se [function console](functions.md) om du vill ha information om konfigurationsdialogrutorna.
+Om du till exempel vill ha en hemsida drar du funktionen Sida från biblioteket och släpper under mallbyggaren. Detta resulterar i att dialogrutan för sidkonfiguration öppnas. Se [function console](functions.md) för information om konfigurationsdialogrutorna.
 
 Fortsätt att dra och släppa andra communityfunktioner som du vill ha för en community-webbplats som baseras på den här mallen.
 
-Sidfunktionen ger en tom sida. Med gruppfunktionen kan du skapa en gruppwebbplats (subcommunity) på communitywebbplatsen.
+Sidfunktionen ger en tom sida. Med funktionen Grupper kan du skapa en gruppwebbplats (subcommunity) på communitywebbplatsen.
 
 >[!CAUTION]
 >
->Funktionen groups måste *not* vara *först eller bara* i platsstrukturen.
+>Funktionen Grupper måste *inte vara den första eller enda* i platsstrukturen.
 >
 >Alla andra funktioner, till exempel [sidfunktion](functions.md#page-function), måste inkluderas och listas först.
 
@@ -92,11 +88,11 @@ När du inkluderar en gruppfunktion i platsmallen, kräver konfigurationen att d
 
 >[!CAUTION]
 >
->Funktionen Grupper måste *not* vara *först eller bara* i platsstrukturen.
+>Funktionen Grupper måste *inte vara den första eller enda* i platsstrukturen.
 
 ![platsfunktioner](assets/site-functions.png)
 
-Genom att välja två eller flera mallar för communitygrupper får gruppadministratören välja när en ny grupp faktiskt skapas i communityn.
+Genom att välja två eller flera mallar för communitygrupper får gruppadministratören välja när en grupp faktiskt skapas i communityn.
 
 ![site-function](assets/site-functions1.png)
 

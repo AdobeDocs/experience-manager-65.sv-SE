@@ -1,32 +1,28 @@
 ---
 title: Ansluta AEM Forms till Adobe LiveCycle
-seo-title: Connecting AEM Forms with Adobe LiveCycle
-description: AEM LiveCycle Connector gör att du kan starta LiveCycle ES4 Document Services inifrån AEM program och arbetsflöden.
-seo-description: AEM LiveCycle connector lets you start LiveCycle ES4 Document Services from within AEM apps and workflows.
-uuid: 7dc9d5ec-7b19-4d93-936d-81ceb45dfffa
+description: Med Adobe Experience Manager (AEM) LiveCycle Connector kan du starta LiveCycle ES4 Acrobat Services inifrån AEM program och arbetsflöden.
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: Configuration
-discoiquuid: 7e404b45-1302-4dd1-b3c9-3f47fedb5f94
 role: Admin
 exl-id: 562f8a22-cbab-4915-bc0d-da9bea7d18fa
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: ab3d016c7c9c622be361596137b150d8719630bd
 workflow-type: tm+mt
-source-wordcount: '1004'
+source-wordcount: '1026'
 ht-degree: 0%
 
 ---
 
 # Ansluta AEM Forms till Adobe LiveCycle {#connecting-aem-forms-with-adobe-livecycle}
 
-Adobe Experience Manager (AEM) LiveCycle Connector möjliggör smidigt anrop av Adobe LiveCycle ES4 Document Services inifrån AEM webbprogram och arbetsflöden. LiveCyclet har en omfattande klient-SDK som gör att klientprogram kan starta LiveCycle-tjänster med Java API:er. AEM LiveCycle Connector förenklar användningen av dessa API:er i OSGi-miljön.
+Adobe Experience Manager (AEM) LiveCycle Connector gör det enkelt att anropa Adobe LiveCycle ES4 Acrobat Services från AEM webbprogram och arbetsflöden. LiveCyclet har en omfattande klient-SDK som gör att klientprogram kan starta LiveCycle-tjänster med Java™-API:er. AEM LiveCycle Connector förenklar användningen av dessa API:er i OSGi-miljön.
 
 ## Ansluta AEM till Adobe LiveCycle {#connecting-aem-server-to-adobe-livecycle}
 
-AEM LiveCycle Connector ingår i [AEM Forms tilläggspaket](/help/forms/using/installing-configuring-aem-forms-osgi.md). När du har installerat AEM Forms-tilläggspaketet utför du följande steg för att lägga till information om LiveCyclena server AEM webbkonsolen.
+AEM LiveCycle Connector ingår i [AEM Forms tilläggspaket](/help/forms/using/installing-configuring-aem-forms-osgi.md). När du har installerat AEM Forms-tilläggspaketet gör du följande så att du kan lägga till information om LiveCyclet på AEM webbkonsol.
 
-1. Gå AEM konfigurationshanteraren för webbkonsolen och leta reda på konfigurationskomponenten för Adobe LiveCycle Client SDK.
-1. Klicka på komponenten för att redigera konfigurationsserverns URL-adress, användarnamn och lösenord.
+1. Gå till konfigurationskomponenten Adobe LiveCycle Client SDK i AEM webbkonsolkonfigurationshanterare.
+1. Klicka på komponenten så att du kan redigera konfigurationsserverns URL-adress, användarnamn och lösenord.
 1. Granska inställningarna och klicka på **Spara**.
 
 Även om egenskaperna är självförklarande är de viktiga följande:
@@ -40,13 +36,13 @@ AEM LiveCycle Connector ingår i [AEM Forms tilläggspaket](/help/forms/using/in
 
   alternativ.
 
-* **Användarnamn**- Anger användarnamnet för kontot som används för att upprätta kommunikation mellan AEM och LiveCycle. LiveCyclet är ett användarkonto som har behörighet att starta Document Services.
+* **Användarnamn**- Anger användarnamnet för kontot som används för att upprätta kommunikation mellan AEM och LiveCycle. Kontot är ett användarkonto i LiveCyclet som har behörighet att starta Acrobat Services.
 * **Lösenord**- Anger lösenordet.
 * **Tjänstnamn** - Anger vilka tjänster som startas med de inloggningsuppgifter som anges i fälten Användarnamn och Lösenord. Som standard skickas inga autentiseringsuppgifter när LiveCyclet startas.
 
 ## Startar dokumenttjänster {#starting-document-services}
 
-Klientprogram kan starta LiveCycle-tjänster med hjälp av ett Java API, Web Services, Remoting och REST. För Java-klienter kan programmet använda LiveCycle SDK. LiveCyclets SDK innehåller ett Java-API för fjärrstart av dessa tjänster. Om du till exempel vill konvertera ett Microsoft Word-dokument till PDF startar klienten GeneratePDFService. Anropsflödet består av följande steg:
+Klientapplikationer kan starta LiveCycle-tjänster med hjälp av Java™ API, Web Services, Remoting och REST. För Java™-klienter kan programmet använda LiveCyclet SDK. LiveCyclets SDK innehåller ett Java™-API för fjärrstart av dessa tjänster. Om du till exempel vill konvertera ett Microsoft® Word-dokument till PDF startar klienten GeneratePDFService. Anropsflödet består av följande steg:
 
 1. Skapa en ServiceClientFactory-instans.
 1. Varje tjänst tillhandahåller en klientklass. Om du vill starta en tjänst skapar du en klientinstans av tjänsten.
@@ -54,7 +50,7 @@ Klientprogram kan starta LiveCycle-tjänster med hjälp av ett Java API, Web Ser
 
 AEM LiveCycle Connector förenklar flödet genom att visa de här klientinstanserna som OSGi-tjänster som kan nås med vanliga OSGi-metoder. Anslutningsenheten för LiveCyclet har följande funktioner:
 
-* Klientinstanser som OSGi-tjänst: Klienterna som paketeras som OSGI-paket listas i [Dokumenttjänstlista](/help/forms/using/aem-livecycle-connector.md#p-document-services-list-p) -avsnitt. Varje klientjar registrerar klientinstansen som OSGi-tjänst med OSGi-tjänstregistret.
+* Klientinstanser som OSGi-tjänst: Klienterna som paketeras som OSGI-paket listas i [Acrobat Services-lista](/help/forms/using/aem-livecycle-connector.md#p-document-services-list-p) -avsnitt. Varje klientjar registrerar klientinstansen som en OSGi-tjänst med OSGi-tjänstregistret.
 * Spridning av autentiseringsuppgifter för användare: Anslutningsinformationen som krävs för att ansluta till LiveCyclet hanteras på en central plats.
 * ServiceClientFactory-tjänst: För att starta processerna kan klientprogrammet få åtkomst till ServiceClientFactory-instansen.
 
@@ -62,7 +58,7 @@ AEM LiveCycle Connector förenklar flödet genom att visa de här klientinstanse
 
 Så här startar du en exponerad tjänst inifrån AEM:
 
-1. Fastställ maven-beroenden. Lägg till beroende till klientens jar i filen maven pom.xml. Lägg till minst beroende i jars för adobe-livecycle-client och adobe-usermanager-client.
+1. Fastställ maven-beroenden. Lägg till beroendet till den klientjar som behövs i filen maven pom.xml. Lägg till minst beroende i jars för adobe-livecycle-client och adobe-usermanager-client.
 
    ```xml
    <dependency>
@@ -82,7 +78,7 @@ Så här startar du en exponerad tjänst inifrån AEM:
    </dependency>
    ```
 
-   Om du vill starta en tjänst lägger du till motsvarande Maven-beroende för tjänsten. En lista över beroenden finns i [Dokumenttjänstlista](/help/forms/using/aem-livecycle-connector.md#p-document-services-list-p). Lägg till exempel till följande beroende för tjänsten Generate PDF:
+   Om du vill starta en tjänst lägger du till ett motsvarande Maven-beroende för tjänsten. En lista över beroenden finns i [Acrobat Services List](/help/forms/using/aem-livecycle-connector.md#p-document-services-list-p). Lägg till exempel till följande beroende för tjänsten Generate PDF:
 
    ```xml
    <dependency>
@@ -92,7 +88,7 @@ Så här startar du en exponerad tjänst inifrån AEM:
    </dependency>
    ```
 
-1. Hämta tjänstreferensen. Hämta en referens till tjänstinstansen. Om du skriver en Java-klass kan du använda kommentarerna för deklarativa tjänster.
+1. Hämta tjänstreferensen. Hämta en referens till tjänstinstansen. Om du skriver en Java™-klass kan du använda kommentarerna för deklarativa tjänster.
 
    ```java
    import com.adobe.livecycle.generatepdf.client.GeneratePdfServiceClient;
@@ -116,7 +112,7 @@ Så här startar du en exponerad tjänst inifrån AEM:
                );
    ```
 
-   Ovanstående kodfragment startar createPDF API för GeneratePdfServiceClient för konvertering av ett dokument till PDF. Du kan utföra liknande anrop i en JSP med följande kod. Den största skillnaden är att följande kod använder Sling ScriptHelper för att komma åt GeneratePdfServiceClient.
+   Ovanstående kodfragment startar createPDF API för GeneratePdfServiceClient för konvertering av ett dokument till PDF. Du kan utföra ett liknande anrop i en JSP med följande kod. Den största skillnaden är att följande kod använder Sling ScriptHelper för att komma åt GeneratePdfServiceClient.
 
    ```jsp
    <%@ page import="com.adobe.livecycle.generatepdf.client.GeneratePdfServiceClient" %>
@@ -138,7 +134,7 @@ Så här startar du en exponerad tjänst inifrån AEM:
 
 ### Startar via ServiceClientFactory {#starting-via-serviceclientfactory}
 
-Klassen ServiceClientFactory krävs i vissa fall. Du behöver till exempel ServiceClientFactory för att anropa processer.
+Klassen ServiceClientFactory krävs ibland. Du behöver till exempel ServiceClientFactory för att anropa processer.
 
 ```java
 import com.adobe.livecycle.dsc.clientsdk.ServiceClientFactoryProvider;
@@ -154,15 +150,15 @@ ServiceClientFactory scf = scfProvider.getDefaultServiceClientFactory();
 
 ## Stöd för RunAs {#runas-support}
 
-Nästan alla dokumenttjänster i LiveCyclet kräver autentisering. Du kan använda något av följande alternativ för att starta de här tjänsterna utan att ange specifika autentiseringsuppgifter i koden:
+Nästan alla Acrobat-tjänster i LiveCyclet kräver autentisering. Du kan använda något av följande alternativ för att starta de här tjänsterna utan att ange specifika autentiseringsuppgifter i koden:
 
 ### Tillåtelselista-konfiguration {#allowlist-configuration}
 
-SDK-konfigurationen för LiveCycle-klienten innehåller en inställning för tjänstnamn. Den här konfigurationen är en lista över tjänster som anropslogiken använder administratörsautentiseringsuppgifter för. Om du till exempel lägger till DirectoryManager-tjänster (som ingår i API:t för användarhantering) i den här listan kan all klientkod använda tjänsten direkt och anropslagret skickar automatiskt de konfigurerade autentiseringsuppgifterna som en del av den begäran som skickas till LiveCyclet
+SDK-konfigurationen för LiveCycle-klienten innehåller en inställning för tjänstnamn. Den här konfigurationen är en lista över tjänster som anropslogiken använder administratörsbehörighet för. Om du till exempel lägger till DirectoryManager-tjänster (som ingår i API:t för användarhantering) i den här listan kan vilken klientkod som helst använda tjänsten direkt. Dessutom skickar startlagret automatiskt de konfigurerade autentiseringsuppgifterna som en del av den begäran som skickas till LiveCyclet.
 
 ### RunAsManager {#runasmanager}
 
-Som en del av integreringen tillhandahålls en ny tjänst, RunAsManager. Du kan programmässigt styra de autentiseringsuppgifter som ska användas vid anrop till LiveCycle-servern.
+Som en del av integreringen tillhandahålls en ny tjänst, RunAsManager. Du kan programmässigt styra vilka autentiseringsuppgifter som ska användas när du anropar LiveCyclet.
 
 ```java
 import com.adobe.livecycle.dsc.clientsdk.security.PasswordCredential;
@@ -181,7 +177,7 @@ List<Component> components = runAsManager.doPrivileged(new PrivilegedAction<List
 assertNotNull(components);
 ```
 
-Om du vill skicka olika autentiseringsuppgifter kan du använda den överlagrade metoden som tar en PasswordCredential-instans.
+Om du vill skicka en annan referens kan du använda den överlagrade metoden som tar en PasswordCredential-instans.
 
 ```java
 PasswordCredential credential = new PasswordCredential("administrator","password");
@@ -213,7 +209,7 @@ ir.setProperty(InvocationProperties.INVOKER_TYPE,InvocationProperties.INVOKER_TY
 InvocationResponse response = serviceClientFactory.getServiceClient().invoke(ir);
 ```
 
-## Dokumenttjänstlista {#document-services-list}
+## Acrobat Services-lista {#document-services-list}
 
 ### Adobe LiveCycle Client SDK API-paket {#adobe-livecycle-client-sdk-api-bundle}
 

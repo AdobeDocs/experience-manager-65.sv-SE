@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
 exl-id: 3df90511-e43e-442b-bf73-44c22c1886b7
-source-git-commit: e161c37544c3391607cbe495644f3353b9f77fe3
+source-git-commit: ab3d016c7c9c622be361596137b150d8719630bd
 workflow-type: tm+mt
-source-wordcount: '109'
+source-wordcount: '115'
 ht-degree: 0%
 
 ---
@@ -31,7 +31,7 @@ Det finns bara en&quot;uber&quot;-artefakt som ersätter enskilda artefakter:
 >
 >Håll dig uppdaterad med den senaste versionen av Communities.
 >
->Se [Senaste releaser](deploy-communities.md#latest-releases) för att identifiera den senaste versionen.
+>Se [Senaste releaser](deploy-communities.md#latest-releases) där du kan identifiera den senaste versionen.
 
 ## Exempel på Maven Dependency {#maven-dependency-example}
 
@@ -46,7 +46,7 @@ Det finns bara en&quot;uber&quot;-artefakt som ersätter enskilda artefakter:
 
 >[!NOTE]
 >
->Se [AEM Uber jar-databas](https://mvnrepository.com/artifact/com.adobe.aem/uber-jar) för att identifiera den senaste Uber jar-artefakten.
+>Se [AEM Uber jar](https://mvnrepository.com/artifact/com.adobe.aem/uber-jar) där du kan identifiera den senaste Uber jar-artefakten.
 
 <!--
 There are now two "uber" artifacts that replace individual artifacts:

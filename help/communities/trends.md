@@ -1,19 +1,15 @@
 ---
 title: Aktivitetstrender
-seo-title: Activity Trends
 description: Lägga till en del av en lista över communityaktiviteter på en sida
-seo-description: Adding a Community Activity List component to a page
-uuid: 316aabf7-01a5-46da-be59-70c206eb6a3d
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: authoring
 content-type: reference
-discoiquuid: 4a0debdd-acb9-4646-80bb-fec66fae4088
 docset: aem65
 exl-id: 2a4297e4-2d88-4fa6-8fea-3fea06753605
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: ab3d016c7c9c622be361596137b150d8719630bd
 workflow-type: tm+mt
-source-wordcount: '345'
+source-wordcount: '344'
 ht-degree: 1%
 
 ---
@@ -22,7 +18,7 @@ ht-degree: 1%
 
 ## Introduktion {#introduction}
 
-The `Community Activity List` -komponenten gör det möjligt att lägga till trendinformation om inlägg och vyer från medlemmar samt inlägg och vyer av innehåll.
+The `Community Activity List` kan du lägga till trendinformation om inlägg och vyer från medlemmar samt inlägg och vyer av innehåll.
 
 Dokumentet beskriver:
 
@@ -38,11 +34,7 @@ Se [Analyskonfiguration för communityfunktioner](/help/communities/analytics.md
 
 ### Lägga till en lista med communityaktiviteter på en sida {#adding-a-community-activity-list-to-a-page}
 
-Lägga till en `Community Activity List` till en sida i redigeringsläge, leta reda på komponenten
-
-* `Communities / Community Activity List`
-
-och dra den till rätt plats på en sida.
+Lägga till en `Community Activity List` till en sida i redigeringsläge, leta reda på komponenten `Communities / Community Activity List` och dra den till rätt plats på en sida.
 
 Nödvändig information finns på [Grunderna för communitykomponenter](/help/communities/basics.md).
 
@@ -52,11 +44,11 @@ När komponenten placeras på en sida i en community-webbplats är det så här 
 
 ### Konfigurerar lista över communityaktiviteter  {#configuring-community-activity-list}
 
-Markera den monterade `Community Activity List` -komponenten som ska få åtkomst till och markera `Configure` som öppnar redigeringsdialogrutan.
+Markera den monterade `Community Activity List` väljer du `Configure` så att du kan öppna redigeringsdialogrutan.
 
 ![konfigurera](assets/configure-new.png)
 
-Under **Kommentarer** anger du om och hur kommentarer för överförda filer ska visas:
+Under **Kommentar** anger du om och hur kommentarer för överförda filer ska visas:
 
 ![egenskaper](assets/activity-list-properties.png)
 
@@ -107,22 +99,22 @@ Standardvärdet är 10.
 
 * **Kontextbana**
 
-  Gör det möjligt att omfång aktiviteten till en delmängd av platsen, t.ex. en viss blogg.
+  På så sätt kan du omsluta aktiviteten till en delmängd av platsen, t.ex. en viss blogg.
 Standard är hela communitywebbplatsen.
 
 * **Medlemsräkningsaggregering**
 
-  När du avmarkerar det här alternativet (inaktiverat) räknas endast inlägg på den översta nivån. Om kontexten till exempel är rotsidan (standardvärdet), kan du `Activity Type` av `Posts` kommer aldrig att visa någon aktivitet eftersom det inte går att publicera innehåll på rotsidan. När du markerar det här alternativet inkluderas antalet på alla underordnade sidor.
+  När du avmarkerar det här alternativet (inaktiverat) räknas endast inlägg på den översta nivån. Om kontexten till exempel är rotsidan (standardvärdet), kan du `Activity Type` av `Posts` visar aldrig någon aktivitet eftersom det inte går att publicera innehåll på rotsidan. När du markerar det här alternativet inkluderas antalet på alla underordnade sidor.
 Standard är markerat.
 
-### Exempelsida med 4 komponenter {#example-page-with-components}
+### Exempelsida med fyra komponenter {#example-page-with-components}
 
 **De vanligaste besökarna** config: Typ = Medlemmar, aktivitetstyp = Vyer
 
-**Främsta bidragsgivare** config: Typ = Medlemmar, aktivitetstyp = Bokföring
+**De viktigaste bidragsgivarna** config: Typ = Medlemmar, aktivitetstyp = Bokföring
 
-**Övre innehåll** config: Typ = Innehåll, aktivitetstyp = Vyer,
+**Övre innehåll** config: Type = Content, Activity type = Views,
 
-**Trendinnehåll** config: Typ = innehåll, aktivitetstyp = inlägg
+**Trendinnehåll** config: Type = Content, Activity type = Posts
 
 ![komponenter](assets/activity-list-components.png)

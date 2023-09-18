@@ -1,14 +1,14 @@
 ---
 title: Utveckla med SAP Commerce Cloud
-description: Integreringsramverket för SAP Commerce Cloud innehåller ett integreringslager med ett API
+description: Integreringsramverket för SAP Commerce Cloud innehåller ett integreringslager med ett API.
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: platform
 exl-id: b3de1a4a-f334-44bd-addc-463433204c99
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: ab3d016c7c9c622be361596137b150d8719630bd
 workflow-type: tm+mt
-source-wordcount: '2296'
+source-wordcount: '2286'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 Integreringsramverket innehåller ett integreringslager med ett API. På så sätt kan du:
 
-* koppla in ett e-handelssystem och hämta in produktdata i AEM
+* koppla in ett e-handelssystem och hämta produktdata till Adobe Experience Manager (AEM)
 
 * bygga AEM för handelsfunktioner oberoende av e-handelsmotorn
 
@@ -105,7 +105,7 @@ Standardinställningarna i koden ställs in för Hybris 5.
 
 För att utveckla för Hybris 4 krävs följande:
 
-* När du anropar maven lägger du till följande kommandoradsargument i kommandot
+* Lägg till följande kommandoradsargument till kommandot när du anropar maven
 
   `-P hybris4`
 
@@ -115,7 +115,7 @@ För att utveckla för Hybris 4 krävs följande:
 
    * Inaktivera stöd för Hybris 5 för tjänsten Default Response Parser.
 
-   * Se till att tjänsten Hybris Basic Authentication Handler har en lägre prioritetsordning än tjänsten Hybris OAuth Handler.
+   * Kontrollera att tjänsten Hybris Basic Authentication Handler har en lägre prioritetsordning än tjänsten Hybris OAuth Handler.
 
 ### Sessionshantering {#session-handling}
 
@@ -123,7 +123,7 @@ hybris använder en användarsession för att lagra information som kundens kund
 
 * På den första begäran anges ingen cookie på köparens begäran, så en begäran skickas till hybris-instansen för att skapa en session.
 
-* Sessionscookies extraheras från svaret, kodas i en ny cookie (till exempel `hybris-session-rest`) och anpassa sig till kundresponsen. Kodningen i en ny cookie krävs eftersom den ursprungliga cookien bara är giltig för en viss sökväg och annars inte skulle skickas tillbaka från webbläsaren i efterföljande begäranden. Sökvägsinformationen måste också läggas till i cookie-filens värde.
+* Sessionscookies extraheras från svaret, kodas i en ny cookie (till exempel `hybris-session-rest`) och anpassa sig till kundresponsen. Kodningen i en ny cookie krävs eftersom den ursprungliga cookien bara är giltig för en viss sökväg och annars inte skulle skickas tillbaka från webbläsaren i efterföljande begäranden. Sökvägsinformationen måste läggas till i cookie-filens värde.
 
 * På efterföljande begäranden avkodas cookies från `hybris-session-<*xxx*>` cookies och anges på HTTP-klienten som används för att begära data från hybris.
 
@@ -145,16 +145,16 @@ hybris använder en användarsession för att lagra information som kundens kund
 
   `CommerceSession.getUserContext()`
 
-* Äger även **betalning** bearbetningsanslutning
+* Äger **betalning** bearbetningsanslutning
 
-* Äger även **uppfyllelse** anslutning
+* Äger **uppfyllelse** anslutning
 
 ### Produktsynkronisering och publicering {#product-synchronization-and-publishing}
 
 Produktdata som finns i hybris måste finnas i AEM. Följande mekanism har implementerats:
 
 * En initial belastning av ID:n tillhandahålls av hybris som foder. Denna feed kan uppdateras.
-* hybris kommer att tillhandahålla uppdateringsinformation via ett foder (som AEM undersökningar).
+* hybris levererar uppdateringsinformation via ett foder (som AEM undersökningar).
 * När AEM använder produktdata skickas begäranden tillbaka till hybris för aktuella data (villkorlig begäran om hämtning med det senaste ändringsdatumet).
 * På hybris är det möjligt att ange foderinnehållet på ett deklarativt sätt.
 * Mappning av matningsstrukturen till AEM innehållsmodell sker i matningsadaptern på AEM.
@@ -197,7 +197,7 @@ Produktdata som finns i hybris måste finnas i AEM. Följande mekanism har imple
 
 * Aktiverade produktsidor måste ha åtkomst till produktdata **Online** version d.
 
-* Den AEM publiceringsinstansen kräver tillgång till hybris för hämtning av produktdata och personaliserade data (d).
+* AEM Publish-instansen kräver åtkomst till hybris för hämtning av produktdata och personaliserade data (d).
 
 ### Arkitektur {#architecture}
 
@@ -209,7 +209,7 @@ Alla egenskaper är dock inte olika axlar. Variationer kan också påverka andra
 
 Varje produkt och/eller variant representeras av en resurs och mappar därför 1:1 till en databasnod. Det är en extra konsekvens att en specifik produkt och/eller variant kan identifieras unikt genom sin sökväg.
 
-Produkt-/variantresursen innehåller inte alltid den faktiska produktinformationen. Det kan vara en representation av data som finns i ett annat system (t.ex. hybris). Produktbeskrivningar, priser o.s.v. lagras inte i AEM utan hämtas i realtid från eCommerce-motorn.
+Produkt-/variantresursen innehåller inte alltid den faktiska produktinformationen. Det kan vara en representation av data som finns i ett annat system (t.ex. hybris). Produktbeskrivningar och priser lagras till exempel inte i AEM utan hämtas i realtid från eCommerce-motorn.
 
 Alla produktresurser kan representeras av en `Product API`. De flesta anrop i produkt-API:t är variantspecifika (även om variationer kan ärva delade värden från ett överordnat objekt), men det finns också anrop som listar variantuppsättningen ( `getVariantAxes()`, `getVariants()`och så vidare).
 
@@ -507,7 +507,7 @@ The `CommerceSession` äger de tre elementen:
 
 * The `CommerceSession` äger också anslutningen för betalningshantering.
 
-* Implementerare måste lägga till specifika samtal (till den valda betalningstjänsten) i `CommerceSession` implementering.
+* Implementerare bör lägga till specifika samtal (till den valda betalningstjänsten) i `CommerceSession` implementering.
 
 **Orderuppfyllelse**
 
@@ -524,7 +524,7 @@ I enlighet med standardtjänstens API-modell innehåller e-handelsprojektet en u
 >
 >Söknings-API:t är dock allmänt och kan implementeras av varje enskild CommerceService.
 
-E-handelsprojektet innehåller en standardsökkomponent som finns i:
+E-handelsprojektet innehåller en standardsökkomponent i:
 
 `/libs/commerce/components/search`
 
@@ -538,11 +538,11 @@ Det finns flera allmänna/hjälpklasser i huvudprojektet:
 
 1. `CommerceQuery`
 
-   Används för att beskriva en sökfråga (innehåller information om frågetext, aktuell sida, sidstorlek, sortering och valda aspekter). Alla e-handelstjänster som implementerar söknings-API:t får instanser av den här klassen för att utföra sökningen. A `CommerceQuery` kan instansieras från ett begäranobjekt ( `HttpServletRequest`).
+   Beskriver en sökfråga (innehåller information om frågetext, aktuell sida, sidstorlek, sortering och valda aspekter). Alla e-handelstjänster som implementerar söknings-API:t får instanser av den här klassen för att utföra sökningen. A `CommerceQuery` kan instansieras från ett begäranobjekt ( `HttpServletRequest`).
 
 1. `FacetParamHelper`
 
-   Är en verktygsklass som innehåller en statisk metod - `toParams` - som används för att generera `GET` parametersträngar från en lista med facets och ett sammankopplat värde. Detta är användbart på användargränssnittssidan, där du behöver visa en hyperlänk för varje värde i varje aspekt, så att respektive värde växlas när användaren klickar på hyperlänken (d.v.s. om den markerats tas det bort från frågan, annars läggs det till). Detta tar hand om all logik som används för att hantera flera-/enkelvärdesfaktorer, åsidosätta värden och så vidare.
+   Är en verktygsklass som innehåller en statisk metod - `toParams` - som används för att generera `GET` parametersträngar från en lista med facets och ett sammankopplat värde. Detta är användbart på användargränssnittssidan, där du måste visa en hyperlänk för varje värde för varje aspekt, så att respektive värde växlas när användaren klickar på hyperlänken. Det vill säga, om den har markerats tas den bort från frågan, och läggs i annat fall till. Detta tar hand om all logik som används för att hantera flera-/enkelvärdesfaktorer, åsidosätta värden och så vidare.
 
 Startpunkten för sökgränssnittet är `CommerceService#search` metod som returnerar en `CommerceResult` -objekt. Se [API-dokumentation](/help/commerce/cif-classic/developing/ecommerce.md#api-documentation) om du vill ha mer information om det här avsnittet.
 
@@ -566,7 +566,7 @@ En AEM framände kan placeras framför en befintlig hybris-implementering. En hy
 
    * När du loggar in på hybris, om den AEM användaren inte finns:
 
-      * skapa en ny hybris-användare med ett kryptografiskt slumpmässigt lösenord
+      * skapa en hybris-användare med ett kryptografiskt slumpmässigt lösenord
       * lagra hybris-användarnamnet i AEM användarkatalog
 
    * Se: `com.adobe.cq.commerce.hybris.impl.HybrisSessionImpl#login()`
@@ -575,8 +575,8 @@ En AEM framände kan placeras framför en befintlig hybris-implementering. En hy
 
    * När du loggar in på AEM, om systemet känner igen användaren:
 
-      * försök att logga in på hybris med angivet användarnamn/lösenord
-      * Om det lyckas skapar du den nya användaren i AEM med samma lösenord (AEM-specifikt salt-värde ger AEM-specifik hash-kod)
+      * försök att logga in på hybris med det angivna användarnamnet/pwd
+      * om det lyckas skapar du användaren i AEM med samma lösenord (AEM-specifikt salt-värde ger AEM-specifik hash-kod)
 
    * Ovanstående algoritm implementeras i en Sling `AuthenticationInfoPostProcessor`
 

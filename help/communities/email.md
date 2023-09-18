@@ -1,20 +1,16 @@
 ---
 title: Konfigurerar e-post
-seo-title: Configuring Email
 description: E-postkonfiguration för Communities
-seo-description: Email configuration for Communities
-uuid: e8422cc2-1594-43b0-b587-82825636cec1
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: administering
 content-type: reference
-discoiquuid: b4d38e45-eaa0-4ace-a885-a2e84fdfd5a1
 pagetitle: Configuring Email
 role: Admin
 exl-id: bf97d388-f8ca-4e37-88e2-0c536834311e
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+source-git-commit: ab3d016c7c9c622be361596137b150d8719630bd
 workflow-type: tm+mt
-source-wordcount: '744'
+source-wordcount: '743'
 ht-degree: 0%
 
 ---
@@ -26,7 +22,7 @@ AEM Communities använder e-post för:
 * [Communities-meddelanden](notifications.md)
 * [Communities-prenumerationer](subscriptions.md)
 
-E-postfunktionen fungerar inte som standard eftersom den kräver en specifikation av en SMTP-server och en SMTP-användare.
+Som standard fungerar inte e-postfunktionen eftersom den kräver att en SMTP-server och SMTP-användare anges.
 
 >[!CAUTION]
 >
@@ -51,35 +47,35 @@ Till exempel (ifylld med värden endast för illustrationsändamål):
 
 * **[!UICONTROL SMTP server host name]**
 
-   *(Obligatoriskt)* SMTP-servern som ska användas.
+  *(Obligatoriskt)* SMTP-servern som ska användas.
 
 * **[!UICONTROL SMTP server port]**
 
-   *(Obligatoriskt)* SMTP-serverporten måste vara 25 eller högre.
+  *(Obligatoriskt)* SMTP-serverporten måste vara 25 eller högre.
 
 * **[!UICONTROL SMTP user]**
 
-   *(Obligatoriskt)* SMTP-användaren.
+  *(Obligatoriskt)* SMTP-användaren.
 
 * **[!UICONTROL SMTP password]**
 
-   *(Obligatoriskt)* SMTP-användarens lösenord.
+  *(Obligatoriskt)* SMTP-användarens lösenord.
 
 * **[!UICONTROL "From" address]**
 
-   Lämna tomt
+  Lämna tomt
 * **[!UICONTROL SMTP use SSL]**
 
-   Om det här alternativet är markerat skickas säker e-post. Kontrollera att porten är inställd på 465 eller som krävs för SMTP-servern.
+  Om det här alternativet är markerat skickas ett säkert e-postmeddelande. Kontrollera att porten är inställd på 465 eller så som krävs för en SMTP-server.
 * **[!UICONTROL Debug email]**
 
-   Om det här alternativet är markerat aktiveras loggning av SMTP-serverinteraktioner.
+  Om det här alternativet är markerat aktiveras loggning av SMTP-serverinteraktioner.
 
 ## AEM Communities e-postkonfiguration {#aem-communities-email-configuration}
 
 När [standardtjänst för e-post](#default-mail-service-configuration) är konfigurerad, de två befintliga instanserna av `AEM Communities Email Reply Configuration` OSGi-konfigurationen, som ingår i versionen, blir funktionell.
 
-Endast prenumerationsinstansen behöver konfigureras ytterligare när svar tillåts via e-post.
+Endast prenumerationsinstansen måste konfigureras ytterligare när svar tillåts via e-post.
 
 1. [E-post](#configuration-for-notifications) instans:
 
@@ -103,13 +99,13 @@ Så här når du instanserna för webbgruppskonfigurationen:
 
 Instansen av `AEM Communities Email Reply Configuration` OSGi-konfigurationen med e-postmeddelandet Namn är en funktion för framtida meddelanden. Den här funktionen inkluderar inte e-postsvar.
 
-Den här konfigurationen bör inte ändras.
+Ändra inte den här konfigurationen.
 
 * Leta reda på `AEM Communities Email Reply Configuration`.
 * Välj redigeringsikonen.
-* Verifiera **Namn** är `email`.
+* Verifiera att **Namn** är `email`.
 
-* Verifiera **Skapa inlägg från svarsmejl** är `unchecked`.
+* Verifiera att **Skapa inlägg från svarsmejl** är `unchecked`.
 
 ![configure-email-reply](assets/configure-email-reply.png)
 
@@ -119,50 +115,50 @@ För webbgruppsprenumerationer är det möjligt att aktivera eller inaktivera m�
 
 * Leta reda på `AEM Communities Email Reply Configuration`.
 * Välj redigeringsikonen.
-* Verifiera **Namn** är `subscriptions-email`.
+* Verifiera att **Namn** är `subscriptions-email`.
 
-   ![configure-email-subscription](assets/configure-email-subscriptions.png)
+  ![configure-email-subscription](assets/configure-email-subscriptions.png)
 
 * **[!UICONTROL Name]**
 
-   *(Obligatoriskt)* `subscriptions-email`. Redigera inte.
+  *(Obligatoriskt)* `subscriptions-email`. Redigera inte.
 
 * **[!UICONTROL Create post from reply email]**
 
-   Om det här alternativet är markerat kan den som tar emot e-postprenumerationen posta innehåll genom att skicka ett svar. Standard är markerat.
+  Om det här alternativet är markerat kan mottagaren av ett prenumerationsmeddelande posta innehåll genom att skicka ett svar. Standard är markerat.
 * **[!UICONTROL Add tracked id to header]**
 
-   Standard är `Reply-To`.
+  Standard är `Reply-To`.
 
 * **[!UICONTROL Maximum length of Subject]**
 
-   Om spårar-ID läggs till på ämnesraden är detta den maximala längden för motivet, exklusive spårade ID, efter vilken det trimmas. Observera att detta bör vara så litet som möjligt för att undvika att spårad ID-information går förlorad. Standardvärdet är 200.
+  Om spårar-ID läggs till på ämnesraden är detta den maximala längden för motivet, exklusive spårade ID, efter vilken det beskärs. Detta bör vara så litet som möjligt för att undvika att spårad ID-information går förlorad. Standardvärdet är 200.
 
 * **[!UICONTROL "Reply-To" email address]**
 
-   Adress som används som e-postadress för Svara till. Standard är `no-reply@example.com`.
+  Adress som används som e-postadress för Svara till. Standard är `no-reply@example.com`.
 
 * **[!UICONTROL Reply-to-Delimiter]**
 
-   Om spårar-ID läggs till i svarshuvudet används den här avgränsaren. Standard är `+` (plustecken).
+  Om spårar-ID läggs till i svarshuvudet används den här avgränsaren. Standard är `+` (plustecken)
 
 * **[!UICONTROL Tracker Id prefix in subject]**
 
-   Om spårar-ID läggs till på ämnesraden används det här prefixet. Standard är `post#`.
+  Om spårar-ID läggs till på ämnesraden används det här prefixet. Standard är `post#`.
 
 * **[!UICONTROL Tracker id prefix in message body]**
 
-   Om spårar-ID läggs till i meddelandetexten används det här prefixet. Standard är `Please do not remove this:`.
+  Om spårar-ID läggs till i meddelandetexten används det här prefixet. Standard är `Please do not remove this:`.
 
 * **[!UICONTROL Email as HTML]**: Om det här alternativet är markerat anges innehållstypen för e-post som `"text/html;charset=utf-8"`. Standard är markerat.
 
 * **[!UICONTROL Default user name]**
 
-   Det här namnet används för användare utan namn. Standard är `no-reply@example.com`.
+  Det här namnet används för användare utan namn. Standard är `no-reply@example.com`.
 
 * **[!UICONTROL Templates root path]**
 
-   E-postmeddelandet skapas med en mall som lagras på den här rotsökvägen. Standard är `/etc/community/templates/subscriptions-email`.
+  E-postmeddelandet skapas med en mall som lagras på den här rotsökvägen. Standard är `/etc/community/templates/subscriptions-email`.
 
 ## Konfigurera avsökningsimporteraren {#configure-polling-importer}
 
@@ -172,36 +168,36 @@ För att e-postmeddelandet ska kunna hämtas till databasen måste du konfigurer
 
 * Logga in på den primära utgivaren med administratörsbehörighet och bläddra till avsökningsimportkonsolen:
 
-   Till exempel: [http://localhost:4503/etc/importers/polling.html](http://localhost:4503/etc/importers/polling.html)
+  Till exempel: [http://localhost:4503/etc/importers/polling.html](http://localhost:4503/etc/importers/polling.html)
 
 * Välj **[!UICONTROL Add]**
 
-   ![avsökare](assets/polling-importer.png)
+  ![avsökare](assets/polling-importer.png)
 
 * **[!UICONTROL Type]**
 
-   *(Obligatoriskt)* Dra ned för att välja `POP3 (over SSL)`.
+  *(Obligatoriskt)* Dra ned för att välja `POP3 (over SSL)`.
 
 * **[!UICONTROL URL]**
 
-   *(Obligatoriskt)* Servern för utgående e-post. Till exempel, `pop.gmail.com:995/INBOX?username=community-emailgmail.com&password=****`.
+  *(Obligatoriskt)* Servern för utgående e-post. Till exempel, `pop.gmail.com:995/INBOX?username=community-emailgmail.com&password=****`.
 
 * **[!UICONTROL Import to Path]**&amp;ast;
 
-   *(Obligatoriskt)* Ange till `/content/usergenerated/mailFolder/postEmails`
+  *(Obligatoriskt)* Ange till `/content/usergenerated/mailFolder/postEmails`
 genom att gå till `postEmails`mapp och markera **OK**.
 
 * **[!UICONTROL Update Interval in Seconds]**
 
-   *(Valfritt)* E-postservern som konfigurerats för standardtjänsten för e-post kan ha krav på uppdateringsintervallvärdet. Gmail kan till exempel kräva ett intervall av `300`.
+  *(Valfritt)* E-postservern som konfigurerats för standardtjänsten för e-post kan ha krav på uppdateringsintervallvärdet. Gmail kan till exempel kräva ett intervall av `300`.
 
 * **[!UICONTROL Login]**
 
-   *(Valfritt)*
+  *(Valfritt)*
 
 * **[!UICONTROL Password]**
 
-   *(Valfritt)*
+  *(Valfritt)*
 
 * Välj **[!UICONTROL OK]**.
 

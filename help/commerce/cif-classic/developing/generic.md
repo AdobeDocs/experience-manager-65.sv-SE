@@ -1,17 +1,14 @@
 ---
 title: Utveckla (allmän)
-seo-title: Developing (generic)
 description: Integreringsramverket innehåller ett integreringslager med ett API som gör att du kan skapa AEM komponenter för e-handelsfunktioner
-seo-description: The integration framework includes an integration layer with an API, allowing you to build AEM components for eCommerce capabilities
-uuid: 393bb28a-9744-44f4-9796-09228fcd466f
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: platform
 exl-id: 1138a548-d112-4446-b0e1-b7a9ea7c7604
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: ab3d016c7c9c622be361596137b150d8719630bd
 workflow-type: tm+mt
-source-wordcount: '1860'
+source-wordcount: '1846'
 ht-degree: 0%
 
 ---
@@ -24,7 +21,7 @@ ht-degree: 0%
 
 Integreringsramverket innehåller ett integreringslager med ett API. Detta gör att du kan bygga AEM komponenter för e-handelsfunktioner (oberoende av din specifika e-handelsmotor). Du kan också använda den interna CRX-databasen eller koppla in ett e-handelssystem och hämta produktdata till AEM.
 
-Det finns ett antal färdiga AEM för att använda integreringslagret. För närvarande är följande:
+Det finns flera färdiga AEM för att använda integreringslagret. För närvarande är följande:
 
 * En produktvisningskomponent
 * En kundvagn
@@ -33,7 +30,7 @@ Det finns ett antal färdiga AEM för att använda integreringslagret. För när
 * Checka ut
 * Sökning
 
-För sökningar finns en integreringsfunktion som gör att du kan använda AEM sökning, en tredjepartssökning eller en kombination av dessa.
+Vid sökning finns en integreringsfunktion som gör att du kan använda sökningen i Adobe Experience Manager (AEM), en sökning från tredje part eller en kombination av dessa.
 
 ## Val av e-handelsmotor {#ecommerce-engine-selection}
 
@@ -54,7 +51,7 @@ eCommerce-ramverket kan användas tillsammans med alla e-handelslösningar, och 
 
 * The `cq:commerceProvider` -egenskapen används också för att referera till lämplig definition för handelsfabrik.
 
-   * Till exempel en `cq:commerceProvider` egenskapen med värdet geometrixx korrelerar till OSGi-konfigurationen för **Dagens CQ Commerce Factory för Geometrixx-utomhusbruk** (`com.adobe.cq.commerce.hybris.impl.GeoCommerceServiceFactory`) - där parametern `commerceProvider` har även värdet `geometrixx`.
+   * Till exempel en `cq:commerceProvider` -egenskapen med Geometrixx value korrelerar till OSGi-konfigurationen för **Dagens CQ Commerce Factory för Geometrixx-utomhusbruk** (`com.adobe.cq.commerce.hybris.impl.GeoCommerceServiceFactory`) - där parametern `commerceProvider` har även värdet `geometrixx`.
    * Här kan ytterligare egenskaper konfigureras (när det är lämpligt och tillgängligt).
 
 I en AEM krävs en specifik implementering, till exempel:
@@ -104,26 +101,26 @@ The **CommerceSession**:
   `CommerceSession.getUserContext()`
 
 * Kan hämta/uppdatera leveransinformation med `updateOrder(Map<String, Object> delta)`
-* Äger även **betalning** bearbetningsanslutning
-* Äger även **uppfyllelse** anslutning
+* Äger **betalning** bearbetningsanslutning
+* Äger **uppfyllelse** anslutning
 
 ### Arkitektur {#architecture}
 
 #### Arkitektur för produkt och varianter {#architecture-of-product-and-variants}
 
-En enskild produkt kan ha flera variationer, t.ex. beroende på färg och/eller storlek. En produkt måste definiera vilka egenskaper som driver variationen; vi definierar dessa *variantaxlar*.
+En enskild produkt kan ha flera variationer, t.ex. beroende på färg och/eller storlek. En produkt måste definiera vilka egenskaper som driver variationen; Adobe definierar dessa *variantaxlar*.
 
 Alla egenskaper är dock inte olika axlar. Variationer kan också påverka andra egenskaper. Priset kan till exempel vara beroende av storleken. Dessa egenskaper kan inte väljas av kunden och betraktas därför inte som olika axlar.
 
 Varje produkt och/eller variant representeras av en resurs och mappar därför 1:1 till en databasnod. Det är en extra konsekvens att en specifik produkt och/eller variant kan identifieras unikt genom sin sökväg.
 
-Alla produktresurser kan representeras av en `Product API`. De flesta anrop i produkt-API:t är variationsspecifika (även om variationer kan ärva delade värden från ett överordnat objekt), men det finns också anrop som listar variantuppsättningen ( `getVariantAxes()`, `getVariants()`, osv.).
+Alla produktresurser kan representeras av en `Product API`. De flesta anrop i produkt-API:t är variantspecifika (även om variationer kan ärva delade värden från ett överordnat objekt), men det finns också anrop som listar variantuppsättningen ( `getVariantAxes()`, `getVariants()`och så vidare).
 
 >[!NOTE]
 >
 >I själva verket bestäms en variantaxel av vad som helst `Product.getVariantAxes()` returnerar:
 >
->* för den generiska implementeringen AEM läsa den från en egenskap i produktdata ( `cq:productVariantAxes`)
+>* för den generiska implementeringen, läser AEM den från en egenskap i produktdata ( `cq:productVariantAxes`)
 >
 >Produkter (i allmänhet) kan ha många olika axlar, men produktkomponenten som finns i paketet hanterar bara två:
 >
@@ -309,7 +306,7 @@ public class AxisFilter implements VariantFilter {
 
 * Kundvagnen ägs av `CommerceSession:`
 
-   * The `CommerceSession` utför lägger till, tar bort osv.
+   * The `CommerceSession` utför lägger till, tar bort och så vidare.
    * The `CommerceSession` utför även de olika beräkningarna på kundvagnen.
    * The `CommerceSession` gäller även kuponger och kampanjer som har sparats i kundvagnen.
 
@@ -321,7 +318,7 @@ public class AxisFilter implements VariantFilter {
       * Olika valutor.
       * momspliktig och momsfri.
 
-   * Modifierarna är helt öppna med följande gränssnitt:
+   * Modifierarna är öppna med följande gränssnitt:
 
       * `int CommerceSession.getQuantityBreakpoints(Product product)`
       * `String CommerceSession.getProductPrice(Product product)`
@@ -330,11 +327,11 @@ public class AxisFilter implements VariantFilter {
 
 * Lagring
 
-   * I det AEM generiska fallet lagras varukorgar i [ClientContext](/help/sites-administering/client-context.md)
+   * I det AEM allmänna fallet lagras kundvagnar i [ClientContext](/help/sites-administering/client-context.md)
 
 **Personanpassning**
 
-* Personalisering bör alltid styras av [ClientContext](/help/sites-administering/client-context.md).
+* Driv alltid personaliseringen genom [ClientContext](/help/sites-administering/client-context.md).
 * En ClientContext `/version/` av kundvagnen skapas i samtliga fall:
 
    * Produkterna ska läggas till med `CommerceSession.addCartEntry()` -metod.
@@ -384,7 +381,7 @@ The `CommerceSession` äger de tre elementen:
 
 **Leveransberäkningar**
 
-* Beställningsblanketter måste ofta innehålla flera olika leveransalternativ (och priser).
+* Beställningsblanketterna måste ofta innehålla flera leveransalternativ (och priser).
 * Priserna kan baseras på artiklar och detaljer i beställningen, t.ex. vikt och/eller leveransadress.
 * The `CommerceSession` har tillgång till alla beroenden, så att de kan behandlas på ett liknande sätt som produktpriser:
 
@@ -403,7 +400,7 @@ I enlighet med standardtjänstens API-modell innehåller e-handelsprojektet en u
 >
 >Även om den generiska implementeringen inte implementerar det här API:t kan du utöka det och lägga till sökfunktionen.
 
-E-handelsprojektet innehåller en standardsökkomponent som finns i:
+E-handelsprojektet innehåller en standardsökkomponent i:
 
 `/libs/commerce/components/search`
 
@@ -417,11 +414,11 @@ Det finns flera allmänna/hjälpklasser i huvudprojektet:
 
 1. `CommerceQuery`
 
-   Används för att beskriva en sökfråga (innehåller information om frågetext, aktuell sida, sidstorlek, sortering och valda aspekter). Alla e-handelstjänster som implementerar söknings-API:t får instanser av den här klassen för att kunna utföra sökningen. A `CommerceQuery` kan instansieras från ett begäranobjekt ( `HttpServletRequest`).
+   Används för att beskriva en sökfråga (innehåller information om frågetext, aktuell sida, sidstorlek, sortering och valda aspekter). Alla e-handelstjänster som implementerar söknings-API:t får instanser av den här klassen för att utföra sökningen. A `CommerceQuery` kan instansieras från ett begäranobjekt ( `HttpServletRequest`).
 
 1. `FacetParamHelper`
 
-   Är en verktygsklass som innehåller en statisk metod - `toParams` - som används för att generera `GET` parametersträngar från en lista med facets och ett sammankopplat värde. Detta är användbart på användargränssnittssidan, där du behöver visa en hyperlänk för varje värde i varje aspekt, så att respektive värde växlas när användaren klickar på hyperlänken (d.v.s. om den markerats tas det bort från frågan, annars läggs det till). Detta tar hand om all logik för hantering av flera-/enkelvärdesfaktorer, åsidosättningsvärden osv.
+   Är en verktygsklass som innehåller en statisk metod - `toParams` - som används för att generera `GET` parametersträngar från en lista med facets och ett sammankopplat värde. Detta är användbart på användargränssnittets sida, där du behöver visa en hyperlänk för varje värde för varje aspekt, så att respektive värde växlas när användaren klickar på hyperlänken. Det vill säga, om den är markerad tas den bort från frågan, i annat fall läggs den till. Detta tar hand om all logik som används för att hantera flera-/enkelvärdesfaktorer, åsidosätta värden och så vidare.
 
 Startpunkten för sökgränssnittet är `CommerceService#search` metod som returnerar en `CommerceResult` -objekt. Mer information om det här avsnittet finns i API-dokumentationen.
 
@@ -448,7 +445,7 @@ Startpunkten för sökgränssnittet är `CommerceService#search` metod som retur
    * The **Voucher** komponent ( `/libs/commerce/components/voucher`) innehåller:
 
       * En renderare för verifikationsadministration. Detta visar eventuella verifikationer som finns i kundvagnen.
-      * Redigeringsdialogrutorna (formuläret) för att administrera (lägga till/ta bort) verifikationerna.
+      * Redigeringsdialogrutorna (formuläret) för att administrera (lägga till/ta bort) vouchers.
       * De åtgärder som krävs för att lägga till/ta bort verifikationer i/från kundvagnen.
 
 * Kampanjer:
@@ -464,7 +461,7 @@ Startpunkten för sökgränssnittet är `CommerceService#search` metod som retur
 
    * Du kan koppla kampanjer till en kampanj för att definiera datum/tid för på/av-kampanjer.
    * Du kan koppla kampanjer till en upplevelse för att definiera deras segment.
-   * Kampanjer som inte är kopplade till en upplevelse kommer inte att utlösas fristående, men de kan fortfarande utlösas av en Voucher.
+   * Kampanjer som inte är kopplade till en upplevelse utlöses inte separat, men de kan fortfarande utlösas av en Voucher.
    * Komponenten Promotion ( `/libs/commerce/components/promotion`) innehåller:
 
       * renderare och dialogrutor för kampanjadministration
@@ -475,7 +472,7 @@ Startpunkten för sökgränssnittet är `CommerceService#search` metod som retur
       * `DiscountPromotionHandler`, vilket ger en absolut rabatt eller en procentuell rabatt som gäller för hela varukorgen
       * `PerfectPartnerPromotionHandler`, som ger en produkt i absolut eller procentuell rabatt om partnerprodukten också finns i kundvagnen
 
-   * ClientContexten `SegmentMgr` löser segment och ClientContexten `CartMgr` löser kampanjer. Varje kampanj som gäller minst ett löst segment kommer att utlösas.
+   * ClientContexten `SegmentMgr` löser segment och ClientContexten `CartMgr` löser kampanjer. Varje kampanj som är föremål för minst ett löst segment utlöses.
 
       * Utlösta kampanjer skickas tillbaka till servern via ett AJAX samtal för att beräkna kundvagnen på nytt.
       * Utlösta kampanjer (och tillagda Vouchers) visas också på panelen ClientContext.
@@ -507,7 +504,7 @@ public void removeVoucher(String code) throws CommerceException;
 public List<Voucher> getVouchers() throws CommerceException;
 ```
 
-Den här vägen, `CommerceSession` ansvarar för att kontrollera om det finns en verifikation och om den kan användas eller inte. Detta kan vara för verifikationer som bara kan tillämpas om ett visst villkor är uppfyllt, till exempel när det totala kundvagnspriset är större än 100 USD). Om en verifikation inte kan användas av någon anledning `addVoucher` -metoden genererar ett undantag. Dessutom finns `CommerceSession` ansvarar för att uppdatera kundvagnens priser efter att en verifikation har lagts till/tagits bort.
+Den här vägen, `CommerceSession` ansvarar för att kontrollera om det finns en verifikation och om den kan användas eller inte. Detta kan vara för verifikationer som bara kan tillämpas om ett visst villkor är uppfyllt. Om till exempel det totala kundvagnspriset är större än $100. Om en verifikation inte kan användas av någon anledning `addVoucher` metoden genererar ett undantag. Dessutom finns `CommerceSession` ansvarar för att uppdatera kundvagnens priser efter att en verifikation har lagts till eller tagits bort.
 
 The `Voucher` är en böldliknande klass som innehåller fält för:
 
@@ -523,7 +520,7 @@ The `AbstractJcrCommerceSession` kan använda verifikationer. Verifikationerna s
 * `code` (String) - den kod som användaren måste ange för att kunna använda vouchern
 * `promotion` (String) - den kampanj som ska användas, till exempel `/content/campaigns/geometrixx-outdoors/article/10-bucks-off`
 
-Kampanjhanterare är OSGi-tjänster som ändrar kundvagnen. Kundvagnen har stöd för flera krokar som definieras i `PromotionHandler` gränssnitt.
+Kampanjhanterare är OSGi-tjänster som ändrar kundvagnen. Kundvagnen stöder flera krokar som definieras i `PromotionHandler` gränssnitt.
 
 ```java
 /**
