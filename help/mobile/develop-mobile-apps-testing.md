@@ -1,18 +1,14 @@
 ---
 title: Testar mobilappar
-seo-title: Testing Mobile Apps
 description: Testar mobilappar
-seo-description: null
-uuid: 3b402d34-5cab-4280-b8b9-88ad9f8fc5e4
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing
 content-type: reference
-discoiquuid: 5a98e1bd-f5c1-4f2f-ac02-dbd005dc1de7
 exl-id: e10e1904-7016-4eb0-9408-36297285f378
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 99808cb38c5d376ccb7fb550c5212138890cec11
 workflow-type: tm+mt
-source-wordcount: '1024'
+source-wordcount: '1023'
 ht-degree: 0%
 
 ---
@@ -23,7 +19,7 @@ ht-degree: 0%
 >
 >Adobe rekommenderar att du använder SPA Editor för projekt som kräver ramverksbaserad klientåtergivning för en sida (till exempel React). [Läs mer](/help/sites-developing/spa-overview.md).
 
-Med tanke på det stora utbudet av enheter på marknaden och de enheter som släpps har testningen av apparna blivit oerhört viktig. Det här är ett område där funktionalitet och användbarhet kan ge låga granskningar i en appbutik, men ett enda fel kan leda till att appen avinstalleras. Ni måste vara noga med testplanerna och kvalitetssäkring. Följande länk täcker många av de ämnen som behöver tas upp i allmänhet, t.ex. hur du identifierar din miljö, definierar testfall, testtyper, antaganden, kundengagemang osv. De verktyg som är till hjälp vid testningen beskrivs också. Interna verktyg, som [Hobbes](/help/sites-developing/hobbes.md)kan hjälpa till med webbaserad UI-testning. [Tålig dag](/help/sites-developing/tough-day.md) kan stressa instanserna med en simulerad belastning. Om din testmiljö redan har erfarenhet av tredjepartsverktyg, som Selenium, kan även dessa användas.
+Med tanke på det stora utbudet av enheter på marknaden och de enheter som släpps har testning av apparna blivit avgörande. Det här är ett område där funktionalitet och användbarhet kan ge låga granskningar i en appbutik, men ett enda fel kan leda till att appen avinstalleras. Var försiktig med testningsplaner och kvalitetssäkring. Följande länk täcker många av de ämnen som måste behandlas i allmänhet, t.ex. att identifiera din miljö, definiera testfall, testtyper, antaganden och kundens medverkan. De verktyg som är till hjälp vid testningen beskrivs också. Interna verktyg, som [Hobbes](/help/sites-developing/hobbes.md)kan hjälpa till med webbaserad UI-testning. [Tålig dag](/help/sites-developing/tough-day.md) kan stressa instanserna med en simulerad belastning. Om din testmiljö redan har erfarenhet av tredjepartsverktyg, som Selenium, kan även dessa användas.
 
 När du utvecklar en mobilapp finns det många nya problem som är specifika för enheter som måste hanteras tillsammans med traditionella testningar.
 
@@ -40,13 +36,13 @@ Dessa frågor bör besvaras under din automatiska och manuella testning.
 
 ## Automatiserad testning {#automated-testing}
 
-Viss grad av automatiserad testning bör utföras för att täcka olika skärmstorlekar, minnesbegränsningar, inmatningsmetoder och operativsystem. Det täcker inte bara en stor del av testfallen, utan det kan också snabba upp regressionstestningen när nya funktioner eller enheter införs. Helst bör automatiseringsverktygen minska eller begränsa dubbelarbete. Använd verktyg eller ramverk så att testarbetet kan användas på alla plattformar. I följande tabell visas en förenklad struktur i en testmiljö för både webbaserad UI-testning och testning av mobilappar. På vänster sida av diagrammet visas en serie Selenium-noder med webbläsare. SeleniumGrid kan utföra vanliga, webbaserade gränssnittstester på alla dessa noder. Selenium-hubben kan även ansluta till Appium för apptestning över flera plattformar. Det är bara simulatorer som visas, men du kan inkludera adb för Android- och Xcode-verktyg för iOS-enheter. Länkar ges senare i det här dokumentet där du kan hitta specifik information om de verktyg som nämns.
+Viss grad av automatiserad testning bör utföras för att täcka olika skärmstorlekar, minnesbegränsningar, inmatningsmetoder och operativsystem. Det täcker inte bara många av testfallen, utan kan också påskynda regressionstestningen när nya funktioner eller enheter införs. Helst bör automatiseringsverktygen minska eller begränsa dubbelarbete. Använd verktyg eller ramverk så att testarbetet kan användas på alla plattformar. I följande diagram visas en förenklad struktur i en testmiljö för både webbaserad UI-testning och testning av mobilappar. På vänster sida av diagrammet visas en serie Selenium-noder med webbläsare. SeleniumGrid kan utföra vanliga, webbaserade gränssnittstester på alla dessa noder. Selenium-hubben kan även ansluta till Appium för apptestning över flera plattformar. Endast simulatorer visas, men du kan inkludera adb för Android™- och Xcode-verktyg för iOS-enheter. Länkar ges senare i det här dokumentet där du kan hitta specifik information om de verktyg som nämns.
 
 ![chlimage_1](assets/chlimage_1.jpeg)
 
 ## Manuell provning {#manual-testing}
 
-Utöver automatiserad testning bör din app genomgå en serie manuella tester. Kunder som kör appen på en riktig enhet kan inte dupliceras av ett skript. Här har du också många alternativ. Du kan använda en plattform, till exempel HockeyApp, för att definiera vem som har åtkomst till och samla in feedback. Eller så kan du lägga ut hela processen på en tjänst som UTest, ElusiveStars eller Testin. Om du har en grupp interna testare, men saknar enhetsvarianter, finns det molntjänster där du kan utföra manuell testning på deras enhetspool. En sådan tjänst är SauceLabs. Du kan även fjärrbygga appar till PhoneGap Enterprise och installera dem på lokala enheter som en nivå av accepttestning eller degradering. Se PhoneGap (`https://phonegap.com/`) för deras senaste funktioner och dokumentation. Oavsett vilken metod man väljer bör manuell provning utföras.
+Utöver automatiserad testning bör din app genomgå en serie manuella tester. Kunder som kör appen på en riktig enhet kan inte dupliceras av ett skript. Här har du också många alternativ. Du kan använda en plattform, till exempel HockeyApp, för att definiera vem som har åtkomst till och samla in feedback. Eller så kan du lägga ut hela processen på en tjänst som UTest, ElusiveStars eller Testin. Om du har en grupp interna testare, men saknar enhetsvarianter, finns det molntjänster där du kan utföra manuell testning på deras enhetspool. En sådan tjänst är SauceLabs. Du kan även fjärrbygga appar till PhoneGap Enterprise och installera dem på lokala enheter som en nivå av accepttestning eller degradering. Se PhoneGap (`https://phonegap.com/`) för deras senaste funktioner och dokumentation. Oavsett vilken metod man väljer bör manuell testning göra följande:
 
 * träffade ett stort antal testare,
 * testa mot en stor pool av enheter (helst verkliga enheter, men simulatorer/emulatorer om verkliga enheter inte är tillgängliga),
@@ -57,25 +53,25 @@ Utöver automatiserad testning bör din app genomgå en serie manuella tester. K
    * användbarhet,
    * områden med uppmärksamhet,
    * prestanda,
-   * data-/effektförbrukning osv.
+   * data-/strömförbrukning och så vidare.
 
 ## verktyg {#tools}
 
-Det finns ett stort antal verktyg för testning av mobilappar. Valet av alternativ baseras på din specifika situation: funktioner, pris, support, täckning osv. Här följer en liten beskrivning av några av de verktyg och tjänster som är tillgängliga.
+Det finns ett stort antal verktyg för testning av mobilappar. Valet av alternativ bör baseras på din specifika situation: funktioner, pris, support, täckning och så vidare. Här följer en liten beskrivning av några av de verktyg och tjänster som är tillgängliga.
 
 **Selen**
 
 * Ramverk som innehåller ett API för att testa skript för att mata in WebDriver och styra olika webbläsare.
-* Du kan använda detta tillsammans med Appium för att testa på riktiga enheter.
+* Du kan använda det här tillsammans med Appium för att testa på riktiga enheter.
 * SeleniumGrid dirigerar tester över noder för parallell testning.
 * Selenium IDE hjälper till att minska skrivningen av testfall.
 
-Mer information finns i [https://www.seleniumhq.org/](https://www.seleniumhq.org/).
+Mer information finns i [https://www.selenium.dev/](https://www.selenium.dev/).
 
 **Testdroid**
 
 * En molnbaserad testningstjänst med kontinuerliga integreringskopplingar och verklig enhetstestning.
-* Innehåller en App Crawler som kontrollerar enhetskompatibilitet, analyserar loggar, går igenom vyer, tar skärmbilder och övervakar prestanda.
+* Det ingår en App Crawler som kontrollerar enhetskompatibilitet, analyserar loggar, går igenom vyer, tar skärmbilder och övervakar prestanda.
 
 Mer information finns i [https://testdroid.com/](https://testdroid.com/).
 
@@ -96,9 +92,9 @@ Mer information finns i [https://saucelabs.com/](https://saucelabs.com/).
 **AppTestNow**
 
 * En outsourcing-tjänst som testar era mobilappar.
-* Innehåller en stor pool av enheter och erbjuder en mängd olika typer av testning: prestanda, kvalitet, funktion, certifiering, lokalisering, dataförbrukning osv.
+* Det ingår en stor pool av enheter och erbjuder en mängd olika typer av testning: prestanda, kvalitet, funktion, certifiering, lokalisering, dataförbrukning osv.
 
-Mer information finns i [https://www.apptestnow.com](https://www.apptestnow.com/).
+Mer information finns i [https://apptestnow.com/](https://apptestnow.com/).
 
 **HockeyApp**
 
@@ -110,4 +106,4 @@ Mer information finns i [https://hockeyapp.net/features/](https://hockeyapp.net/
 
 * Även om det inte är ett testverktyg är Jenkins ett ramverk för kontinuerlig integrering som utgör ryggraden i automatiska tester. Det finns många plugin-program från tredje part som kan utöka funktionaliteten. Exempelvis innehåller SeleniumGrid-pluginen ett gränssnitt som hjälper dig att hantera Selenium-hubben och -noderna.
 
-Mer information finns i [https://jenkins-ci.org/](https://jenkins-ci.org/) och [https://wiki.jenkins-ci.org/display/JENKINS/Plugins](https://wiki.jenkins-ci.org/display/JENKINS/Plugins).
+Mer information finns i [https://www.jenkins.io/](https://www.jenkins.io/) och [https://plugins.jenkins.io/](https://plugins.jenkins.io/).
