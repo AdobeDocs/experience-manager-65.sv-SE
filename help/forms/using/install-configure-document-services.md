@@ -8,9 +8,9 @@ topic-tags: installing
 discoiquuid: b53eae8c-16ba-47e7-9421-7c33e141d268
 role: Admin
 exl-id: 5d48e987-16c2-434b-8039-c82181d2e028
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 923ec028679031c9ef9ea6ae2cf827e7a4cd00d8
 workflow-type: tm+mt
-source-wordcount: '5372'
+source-wordcount: '5360'
 ht-degree: 0%
 
 ---
@@ -243,7 +243,7 @@ Ange miljövariabler för 32- och 64-bitars Java Development Kit, tredjepartspro
 >[!NOTE]
 >
 >* Alla miljövariabler och respektive sökvägar är skiftlägeskänsliga.
->* JAVA_HOME, JAVA_HOME_32 och Acrobat_PATH (endast Windows) är obligatoriska miljövariabler.
+>* JAVA_HOME och Acrobat_PATH (endast Windows) är obligatoriska miljövariabler.
 >* Miljövariabeln OpenOffice_PATH ställs in på installationsmappen i stället för på sökvägen till den körbara filen.
 >* Ställ inte in miljövariabler för Microsoft® Office-program som Word, PowerPoint, Excel och Project, eller för AutoCAD. Om dessa program är installerade på servern startar tjänsten Generate PDF automatiskt dessa program.
 >* Installera OpenOffice som /root på UNIX-baserade plattformar. Om OpenOffice inte är installerat som rot kan tjänsten PDF Generator inte konvertera OpenOffice-dokument till PDF-dokument. Om du måste installera och köra OpenOffice som en icke-rotanvändare anger du sudo-rättigheter till användaren som inte är rotanvändare.
@@ -686,8 +686,6 @@ Innan du utför följande kontroller bör du kontrollera att [Systemberedskap](#
   ```
   ldd phantomjs | grep not
   ```
-
-* Kontrollera att miljövariabeln JAVA_HOME_32 pekar på rätt plats.
 
 **Linux® och Solaris™ (WebKit-konverteringsväg)**
 
