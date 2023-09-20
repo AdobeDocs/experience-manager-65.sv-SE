@@ -2,9 +2,9 @@
 title: Versionsinformation för [!DNL Adobe Experience Manager] 6.5
 description: Hitta versionsinformation, nyheter, installationsanvisningar och en detaljerad ändringslista för [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 4
-source-git-commit: aec2eb3303ad9747f6f56ae2eb31c3c7ed7b0c24
+source-git-commit: a15b9dae5cc4405122ee95e036a83fdfbf34f9bd
 workflow-type: tm+mt
-source-wordcount: '4397'
+source-wordcount: '4470'
 ht-degree: 0%
 
 ---
@@ -57,7 +57,7 @@ Några av de viktigaste funktionerna och förbättringarna i den här versionen 
 
 **Inaktuell funktion**
 
-* ActiveMQ i AEM är föråldrat. ActiveMQ användes för kommunikation mellan två AEM publiceringsinstanser. Adobe rekommenderar att man nu använder belastningsutjämnare.
+* ActiveMQ i AEM är föråldrat. ActiveMQ användes för kommunikation mellan två AEM publiceringsinstanser. Adobe rekommenderar att man nu använder en belastningsutjämnare.
 
 **Forms**
 
@@ -65,7 +65,7 @@ Några av de viktigaste funktionerna och förbättringarna i den här versionen 
 
 * **[Förbättrat arbetsflöde i Adobe Sign](https://experienceleague.adobe.com/docs/experience-manager-65/forms/workflows/aem-forms-workflow-step-reference.html#sign-document-step):** Adobe Sign arbetsflödessteg i AEM arbetsflöden är tillgängligt med följande förbättringar.
 
-   * **Förbättrad säkerhet med ID-baserad autentisering för Adobe Sign för myndigheter:** Adobe Acrobat Sign Government ID Based Authentication erbjuder ytterligare ett verifieringslager genom att användarna kan autentisera sin identitet med hjälp av foto-ID:n (körkort, nationellt ID, pass). Genom att utnyttja pålitliga identifieringsdokument ger den här förbättringen ett extra förtroende för signeringsprocessen, vilket gör den idealisk för scenarier som kräver högre säkerhet, regelefterlevnad och användarvalidering.
+   * **Förbättrad säkerhet med ID-baserad autentisering för Adobe Sign för myndigheter:** Adobe Acrobat Sign Government ID-Based Authentication erbjuder ytterligare ett verifieringslager genom att användarna kan autentisera sin identitet med hjälp av foto-ID:n (körkort, nationellt ID, pass). Genom att använda pålitliga identifieringsdokument ger den här förbättringen ytterligare tillförlitlighet i signeringsprocessen, vilket gör den idealisk för scenarier som kräver högre säkerhet, regelefterlevnad och användarvalidering.
 
    * **Förbättrad transparens med granskningsspår för Adobe Sign-dokument:** Använd funktionen Granskningsspår för att få detaljerade insikter om livscykeln för dina Adobe Sign-dokument. Med granskningsspåret kan du nu föra ett omfattande register över alla åtgärder och interaktioner som rör dina dokument. Detta inkluderar information som vem som visade, redigerade eller signerade dokumentet, tillsammans med tidsstämplar för varje händelse. Den här förbättringen är avgörande för att upprätthålla regelefterlevnaden, lösa tvister och säkerställa integriteten för dina digitala avtal.
 
@@ -74,10 +74,10 @@ Några av de viktigaste funktionerna och förbättringarna i den här versionen 
 
 
 * **[AEM Forms på JEE, komplett installationsprogram](https://experienceleague.adobe.com/docs/experience-manager-65/forms/install-aem-forms/jee-installation/aem-forms-jee-supported-platforms.html)**: Service Pack innehåller ett komplett installationsprogram för AEM Forms i JEE som har stöd för flera nya programkombinationer, bland annat:
-   * Microsoft Windows Server 2022
-   * Microsoft Active Directory 2022
+   * Microsoft® Windows Server 2022
+   * Microsoft® Active Directory 2022
    * Oracle WebLogic 14C på Windows Server 2022
-   * RedHat JBoss 7.4.10
+   * Red Hat® JBoss® 7.4.10
    * MongoDB 4.4
    * MySQL JDBC Connector 8
 
@@ -109,7 +109,7 @@ Om du håller på med en ny installation eller planerar att använda den senaste
 
 #### Kärnkomponenter{#sites-core-components-6518}
 
-* Resursväljaren hämtar inte uppdaterad lista över resurser när den stängs och öppnas igen. Om nya resurser överförs i databasen visas de inte i resursväljaren förrän sidan med resursväljaren uppdateras. (SITES-14828)
+* Resursväljaren hämtar inte en uppdaterad lista över resurser när den stängs och öppnas igen. Om nya resurser överförs i databasen visas de inte i resursväljaren förrän sidan med resursväljaren uppdateras. (SITES-14828)
 * Användargränssnittet för resursväljaren, som är integrerat i Sites Editor (CS), svarar inte när fönstret minskas. (SITES-14127)
 * Integreringen av Adobe IMS (Identity Management System) Configuration för resursväljaren accepterade felaktiga värden. (SITES-13962)
 * När resursväljaren är integrerad i Sites Image-komponenten bör det inte vara möjligt att välja resurser som inte är bilder. (SITES-13879)
@@ -137,7 +137,7 @@ Om du håller på med en ny installation eller planerar att använda den senaste
 * Skärmläsare meddelar inte syftet med fältet Lägg till användare när en samling skapas. (ASSETS-21736)
 * The **Samlingar** etiketten är inte lokaliserad på egenskapssidan för samlingar. (ASSETS-21102)
 * När du lägger till en regel eller redigerar en befintlig regel med standardformuläret för metadatamodell, översätts inte språken i listrutan. (ASSETS-21026)
-* Experience Manager visar ett olokaliserat felmeddelande när JSON-sökvägen läggs till i metadataschemat. (ASSETS-21025)
+* Experience Manager visar ett olokaliserat felmeddelande när en JSON-sökväg läggs till i metadataschemat. (ASSETS-21025)
 * Alternativet för tidslinje till vänster i navigeringen visar inte rätt kontrastförhållande. (ASSETS-17348)
 * Kalenderelementen använder inte de ARIA-attribut som krävs. (ASSETS-17282)
 * Den vänstra navigeringstexten visar inte rätt kontrastförhållande. (ASSETS-17268)
@@ -167,11 +167,11 @@ Om du håller på med en ny installation eller planerar att använda den senaste
    * Om servern stängs av under dokumentgenereringen i PDF genereras fel vid bearbetning av jobb efter serverstart. Argumentet -Dcom.adobe.livecycle.dsc.deferServiceStart=true måste läggas till när servern startas. (FORMS-9836)
    * Om en användare försöker sammanfoga PDF med metoden AssemblerService.Invoke, kan inte sammansättaren utföra åtgärden. (FORMS-9550)
    * När du uppgraderar till AEM 6.5.15.0 Service Pack i OSGI- och JEE-miljöer slutar Assembler-tjänsten som använder en viss mall att fungera. (FORMS-9355, FORMS-9445, FORMS-9408)
-   * Java-skräpinsamlingen kan inte rensa gammal heap på en AEM Forms OSGi-server eftersom Global Timeout för XMLFormService inte är konfigurerad till ett korrekt värde. (FORMS-9384, FORMS-9035)
-   * När du återger förhandsgranskningen av ett adaptivt formulär i PDF visas de oönskade Java-stackarna i felloggarna. (FORMS-8865)
+   * Java™-skräpinsamlingen kan inte rensa gammal heap på en AEM Forms OSGi-server eftersom Global Timeout för XMLFormService inte har konfigurerats till ett korrekt värde. (FORMS-9384, FORMS-9035)
+   * När du återger förhandsgranskningen av ett adaptivt formulär i PDF visas de oönskade Java™-stackdumparna i felloggarna. (FORMS-8865)
    * När en användare granskar dokumentstatus för dokument i dokumentinformationsavsnittet visas det inte korrekt. (FORMS-8946, FORMS-10424)
    * När en användare uppgraderar till AEM Forms och använder tjänsten sendToPrinter ökar heap-användningen kontinuerligt. (FORMS-10148)
-   * På JBoss 7.4 EAP-servern misslyckas e-postfunktionen med `java.io.IOException`. (FORMS-10138)
+   * På JBoss® 7.4 EAP-servern misslyckas e-postfunktionen med `java.io.IOException`. (FORMS-10138)
    * När en användare använder tjänsten transformPDF misslyckas den med ett fel: `java.lang.ClassNotFoundException: default task-158Class name com.adobe.internal.afml.AFMLExceptionInvalidParameter from package com.adobe.internal.afml`(FORMS-9957)
    * Efter uppgradering till AEM Service Pack 6.5.14.0 uppstår problemet i monteringsverktyget när en viss mall används. (FORMS-9445, FORMS-9408)
   <!-- *  When a user configures the watched folder endpoint for PDF Generator, it fails to pick documents on JDK 11. (FORMS-10152) -->
@@ -181,20 +181,22 @@ Om du håller på med en ny installation eller planerar att använda den senaste
       * När en användare försöker använda @param{boolean} med en funktion tillåter inte regelredigeraren att booleska värden skickas till en funktion.
       * När en användare försöker använda @param{string} om en funktion används misslyckas regelredigeraren att skicka de valfria värdena och en varning om ofullständiga regler visas. (FORMS-9816, FORMS-9815)
    * Formuläranvändargruppen kan inte anropa regelredigeraren två gånger i ett anpassat formulär. (FORMS-9051)
-   * När en användare väljer ett formulärobjekt i den visuella redigeraren skickas hela fältinstansobjekt till den anpassade funktionen i stället för bara fältets värde. (FORMS-10015)
+   * När en användare väljer ett formulärobjekt i en visuell redigerare skickas hela fältinstansobjekt till den anpassade funktionen i stället för bara fältets värde. (FORMS-10015)
    * När en användare skapar ett huvudkomponentbaserat adaptivt formulär och lägger till en textindatakomponent, `Is Empty` och `Is Not Empty` fungerar inte i regelredigeraren. (FORMS-10098)
    * Om ett fält har markerats som ogiltigt i en huvudkomponentbaserad Adaptiv form, startar det en change-händelse i fältet. (FORMS-10087)
    * När en användare försöker skapa ett adaptivt formulär med ett komplext JSON-schema misslyckas det. Felet inträffar som:
      `GET /content/forms/af/katezeroone/testaf1.html HTTP/1.1] com.adobe.aemds.guide.service.impl.JsonObjectCreatorImpl Could not emit JSON with context java.lang.ArrayIndexOutOfBoundsException:0`. (FORMS-9639)
-   * När en användare avmarkerar kryssrutan Jag godkänner villkoren i ett anpassat formulär aktiveras det igen så fort användaren rullar nedåt. (FORMS-9458)
-   * När en användare öppnar ett adaptivt formulär på en Android-enhet med Google Chrome/Firefox och anger det högsta tillåtna antalet tecken i en textruta, raderas inte värdet i textrutan. (FORMS-9354)
+   * När en användare avmarkerar kryssrutan Jag accepterar villkoren i ett anpassat formulär aktiveras det igen när användaren rullar nedåt. (FORMS-9458)
+   * När en användare öppnar ett adaptivt formulär på en Android™-enhet med Google Chrome/Firefox och anger maximalt antal tecken i en textruta, raderas inte värdet i textrutan. (FORMS-9354)
    * När kryssrutans etikett innehåller specialtecken som &#39;,&#39;, &#39;/&#39; eller &#39;.&#39;, markerar inte kryssrutan när du klickar på texten/etiketten. (FORMS-9313)
    * När en användare försöker att validera villkorskomponenten misslyckas det att validera om komponenten inte är i fokus medan den andra komponenten valideras. (FORMS-8725, FORMS-8913)
    * Om ett anpassat formulär laddas om efter uppgradering till AEM 6.5.16.0 Service Pack, misslyckas hämtningen av den bifogade filen. (FORMS-8906)
    * Om en kryssrutekomponent i ett adaptivt formulär som är baserat på en XDP-fil innehåller en titel som tilldelats ett numeriskt värde, kortas texten av och matchar inte det tilldelade värdet. (FORMS-8743)
    * Om en användare försöker implementera lat inläsning på ett fragment som är inbäddat i ett adaptivt formulär för författarmiljön, återspeglas inte reglerna/logiken som är definierad för fragmentet i formuläret. (FORMS-8554, FORMS-9182)
    * När du försöker öppna en koralldialogruta i AEM 6.5.16.0 Service Pack genereras `error.log: cannot render resource` undantag. (FORMS-8942)
-   * När en användare försöker att översätta en kryssruta med ett alternativ i ett adaptivt formulär, misslyckas den. (FORMS-10181)
+   * När en användare försöker att översätta en kryssruta med ett enda alternativ i ett adaptivt formulär, misslyckas den. (FORMS-10181)
+   * Alla DoR-mallar (Document of Record) kan inte publiceras. Endast engelska språkbaserade DoR-mallar och tillhörande Forms-baserade DoR-mallar publiceras. (FORMS-10535)
+
 * **Tillgänglighet**
    * När du använder komponenten Klottsignatur i ett adaptivt formulär inträffar följande fel:
       * När det finns fler komponenter efter komponenten Skriptsignatur går inte tabbtangenten till signaturdialogrutan när det finns fler komponenter. I stället flyttas den till nästa komponent. Först efter att ha gått igenom alla komponenter, flyttas det till signaturdialogrutan.
@@ -249,12 +251,12 @@ Om du håller på med en ny installation eller planerar att använda den senaste
 
 * Översättning `rules.xml` sorteras på ett dåligt sätt när regler läggs till från användargränssnittet för översättningskonfigurationen. (NPR-40431)
 * Stöd länkar med frågeparametrar under översättning. (NPR-40339)
-* Ordlistans användargränssnitt läses inte in för kunden efter att den extra kontextroten har uppdaterats. (NPR-40650)
+* Användargränssnittet för ordlistan läses inte in för kunden efter att den extra kontextroten har uppdaterats. (NPR-40650)
 * Det gick inte att skapa språkkopior när en av resurserna är ett innehållsfragment som innehåller ett flerfält med typerna ReferenceFragment eller ContentFragment. (NPR-40892)
 
 #### Användargränssnitt{#foundation-ui-6518}
 
-* Enligt beskrivningen i [Configuration Browser-dokumentation](https://experienceleague.adobe.com/docs/experience-manager-65/administering/introduction/configurations.html?lang=en#using-configuration-browser), _Namnet blir nodnamnet i databasen_. I Configuration Browser används dock Configuration Title för sökväg i CRXDE Lite, och Configuration Title ignoreras. (NPR-40607)
+* Enligt beskrivningen i [Configuration Browser-dokumentation](https://experienceleague.adobe.com/docs/experience-manager-65/administering/introduction/configurations.html?lang=en#using-configuration-browser), _Namnet blir nodnamnet i databasen_. I Configuration Browser används dock Configuration Title för sökväg i CRXDE Lite, och namnet på Configuration ignoreras. (NPR-40607)
 
 <!-- #### WCM{#wcm-6518}
 
@@ -297,7 +299,7 @@ Om du håller på med en ny installation eller planerar att använda den senaste
 
 >[!NOTE]
 >
->Dialogrutan för pakethanterarens gränssnitt avslutas ibland när Service Pack installeras. Adobe rekommenderar att du väntar på att felloggarna ska stabiliseras innan du får åtkomst till distributionen. Vänta på de specifika loggarna för avinstallationen av uppdateringspaketet innan du försäkrar dig om att installationen lyckas. Vanligtvis inträffar detta problem i [!DNL Safari] webbläsare, men kan ibland inträffa i vilken webbläsare som helst.
+>Dialogrutan för pakethanterarens gränssnitt avslutas ibland när Service Pack installeras. Adobe rekommenderar att du väntar på att felloggarna ska stabiliseras innan du får åtkomst till distributionen. Vänta på de specifika loggarna för avinstallationen av uppdateringspaketet innan du försäkrar dig om att installationen lyckas. Vanligtvis inträffar det här problemet i [!DNL Safari] webbläsare, men kan ibland inträffa i vilken webbläsare som helst.
 
 **Automatisk installation**
 
@@ -395,7 +397,7 @@ To retrieve your runtime copy, Adobe recommends to synchronize the design-time c
    1. Installera Service Pack eller starta om Experience Manager as a Cloud Service.
 Nya mappar med `cache` och `diff-cache` skapas automatiskt och du får inte längre något undantag relaterat till `mvstore` i `error.log`.
 
-* Uppdatera dina GraphQL-frågor som kan ha använt ett anpassat API-namn för innehållsmodellen till att i stället använda standardnamnet för innehållsmodellen.
+* Uppdatera dina GraphQL-frågor som kan ha använt ett anpassat API-namn för innehållsmodellen så att standardnamnet för innehållsmodellen används i stället.
 
 * En GraphQL-fråga kan använda `damAssetLucene` index i stället för `fragments` index. Den här åtgärden kan leda till att GraphQL-frågor misslyckas eller tar lång tid att köra.
 
@@ -427,7 +429,7 @@ Du måste lägga till följande egenskaper i indexdefinitionsnoden för att få 
    * `com.adobe.granite.maintenance.impl.TaskScheduler`: Inga underhållsfönster hittades vid granit/drift/underhåll.
    * Validering på serversidan av adaptiva formulär misslyckas när sammanställningsfunktioner som SUM, MAX och MIN används (CQ-4274424).
    * `com.adobe.granite.maintenance.impl.TaskScheduler` - Inga underhållsfönster hittades vid granit/drift/underhåll.
-   * Aktiveringspunkten i en interaktiv Dynamic Media-bild syns inte när du förhandsvisar mediefilen via Shoppable Banner Viewer.
+   * Den aktiva punkten i en interaktiv Dynamic Media-bild syns inte när du förhandsgranskar mediefilen via visningsprogrammet för den köpbara kanalen.
    * `com.adobe.cq.social.cq-social-jcr-provider bundle com.adobe.cq.social.cq-social-jcr-provider:1.3.5 (395)[com.adobe.cq.social.provider.jcr.impl.SpiSocialJcrResourceProviderImpl(2302)]` : Timeout väntar på att registerändringen ska slutföras utan registrering.
 
 * Från och med AEM 6.5.15, JavaScript-motorn i Rhino från ```org.apache.servicemix.bundles.rhino``` paket har ett nytt värdbeteende. Skript som använder strikt läge (```use strict;```) måste deklarera variablerna korrekt, annars körs de inte, utan genererar i stället ett körningsfel.
@@ -436,14 +438,14 @@ Du måste lägga till följande egenskaper i indexdefinitionsnoden för att få 
 
 #### Plattformar som stöds
 
-* JDK-version senare än 1.8.0_281 stöds inte för WebLogic JEE-server. (FORMS-8498, CQDOC-20383)
-* Som [!DNL Microsoft® Windows Server 2019] stöder inte [!DNL MySQL 5.7] och [!DNL JBoss® EAP 7.1], [!DNL Microsoft® Windows Server 2019] stöder inte körklara installationer för [!DNL Experience Manager Forms 6.5.10.0]. (CQDOC-18312)
+* JDK-versioner som är högre än 1.8.0_281 stöds inte för WebLogic JEE-server. (FORMS-8498, CQDOC-20383)
+* Som [!DNL Microsoft®® Windows Server 2019] stöder inte [!DNL MySQL 5.7] och [!DNL JBoss®® EAP 7.1], [!DNL Microsoft®® Windows Server 2019] stöder inte körklara installationer för [!DNL Experience Manager Forms 6.5.10.0]. (CQDOC-18312)
 * JDK 11.0.20 stöds inte för installation av AEM Forms i JEE Installer. Endast JDK 11.0.19 och tidigare versioner stöds för installation av AEM Forms i JEE Installer. (FORMS-10659)
 
 #### Installation
 
 * På JBoss® 7.1.4-plattformen när användaren installerar Experience Manager 6.5.16.0 eller senare Service Pack, `adobe-livecycle-jboss.ear` distributionen misslyckas. (CQ-4351522, CQDOC-20159)
-* När du har installerat AEM Service Pack 6.5.18.0, fullständigt installationsprogram, misslyckas EAR-distributionen på JEE med JBoss Turnkey (CQDOC-20803).
+* När du har installerat AEM Service Pack 6.5.18.0, kan EAR-distributionen inte köras på JEE med JBoss® Turnkey (CQDOC-20803).
 Du löser problemet genom att leta reda på `<AEM_Forms_Installation_dir>\jboss\bin\standalone.bat` fil och uppdatera `Adobe_Adobe_JAVA_HOME` till `Adobe_JAVA_HOME` för alla förekomster innan konfigurationshanteraren körs.
 
 #### Adaptiv Forms
@@ -451,6 +453,7 @@ Du löser problemet genom att leta reda på `<AEM_Forms_Installation_dir>\jboss\
 * När ett adaptivt formulär publiceras kommer alla dess beroenden, inklusive profiler, att publiceras på nytt, även om inga ändringar har gjorts i dem. (FORMS-10454)
 * När en användare väljer att konfigurera ett fält för första gången i ett adaptivt formulär visas inte alternativet att spara en konfiguration i egenskapsläsaren. Problemet åtgärdas genom att ett annat fält i det adaptiva formuläret konfigureras i samma redigerare.
 * När en omdirigerings-URL anges i stödlinjebehållaren för ett adaptivt formulär slutar den infogade signeringen att fungera. (FORMS-10493)
+* Alla DoR-mallar (Document of Record) kan inte publiceras. Endast engelska språkbaserade DoR-mallar och tillhörande Forms-baserade DoR-mallar publiceras. (FORMS-10535)
 
 #### Interaktiv kommunikation
 
