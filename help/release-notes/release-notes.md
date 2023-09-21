@@ -2,9 +2,9 @@
 title: Versionsinformation för [!DNL Adobe Experience Manager] 6.5
 description: Hitta versionsinformation, nyheter, installationsanvisningar och en detaljerad ändringslista för [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 4
-source-git-commit: a15b9dae5cc4405122ee95e036a83fdfbf34f9bd
+source-git-commit: 4f6ef1a6cddec307af64ca888307f19c0450467d
 workflow-type: tm+mt
-source-wordcount: '4470'
+source-wordcount: '4526'
 ht-degree: 0%
 
 ---
@@ -43,7 +43,7 @@ Några av de viktigaste funktionerna och förbättringarna i den här versionen 
 
 * Assets, Dynamic Media - [Stöd för flera undertexter och flerljudspår för videor i Dynamic Media](/help/assets/video.md#about-msma)—Nu kan du enkelt lägga till flera undertexter och flera ljudspår i en primär video. Detta innebär att videoklippen är tillgängliga för alla mottagare världen över. Du kan anpassa en enda publicerad primär video till en global publik på flera språk och följa riktlinjer för tillgänglighet för olika geografiska regioner. Författare kan också hantera undertexter och ljudspår från en enda flik i användargränssnittet.
 
-* Resurser - Från sökresultat kan du nu navigera till den mapplats som innehåller en resurs, vilket gör att du kan utföra olika resurshanteringsåtgärder. (ASSETS-23182)
+* Resurser - Från sökresultaten kan du nu navigera till den mapplats som innehåller en resurs så att du kan utföra olika resurshanteringsåtgärder. (ASSETS-23182)
 
 **Viktiga förbättringar**
 
@@ -51,7 +51,7 @@ Några av de viktigaste funktionerna och förbättringarna i den här versionen 
 
 * Användare av sidredigeraren/bildkomponenten har aktiverat platser för att referera till resurser från Cloud Servicen Fjärrresurser. (SITES-13448, SITES-13433)
 
-* För att snabbt hitta ett projekt i listvyn där du kan ha många projekt i systemet har Adobe nu stöd för sortering på serversidan. Projektnoder sorteras på serverdelen baserat på den kolumn som valts av användaren innan de återges i användargränssnittet. (NPR-41027)
+* För att snabbt hitta ett projekt i listvyn, där du kan ha många projekt i systemet, har Adobe nu stöd för sortering på serversidan. Projektnoder sorteras på serverdelen baserat på den kolumn som valts av användaren innan de återges i användargränssnittet. (NPR-41027)
 
 * AEM 6.5.18.0 stöder MongoDB 5.0 till 6.0.
 
@@ -61,19 +61,19 @@ Några av de viktigaste funktionerna och förbättringarna i den här versionen 
 
 **Forms**
 
-* **[Förbättrad felhantering med anpassade felhanterare i regelredigeraren](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/standard-validation-error-messages-adaptive-forms.html):** Du kan nu anropa en anpassad funktion (med Klientbibliotek) som svar på ett fel som returnerats av en extern tjänst och ge ett skräddarsytt svar till slutanvändarna. Du kan också vidta specifika åtgärder för fel som returneras av en tjänst. Du kan till exempel anropa ett anpassat arbetsflöde i serverdelen för specifika felkoder eller informera kunden om att tjänsten är nere
+* **[Förbättrad felhantering med anpassade felhanterare i regelredigeraren](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/standard-validation-error-messages-adaptive-forms.html)** - Du kan nu anropa en anpassad funktion (med Klientbibliotek) som svar på ett fel som returnerats av en extern tjänst. Och ni kan ge slutanvändarna ett skräddarsytt svar. Du kan också vidta specifika åtgärder för fel som returneras av en tjänst. Du kan till exempel anropa ett anpassat arbetsflöde i serverdelen för specifika felkoder eller informera kunden om att tjänsten är nere
 
-* **[Förbättrat arbetsflöde i Adobe Sign](https://experienceleague.adobe.com/docs/experience-manager-65/forms/workflows/aem-forms-workflow-step-reference.html#sign-document-step):** Adobe Sign arbetsflödessteg i AEM arbetsflöden är tillgängligt med följande förbättringar.
+* **[Förbättrat arbetsflöde i Adobe Sign](https://experienceleague.adobe.com/docs/experience-manager-65/forms/workflows/aem-forms-workflow-step-reference.html#sign-document-step)** - Adobe Sign arbetsflödessteg i AEM arbetsflöden är tillgängligt med följande förbättringar.
 
-   * **Förbättrad säkerhet med ID-baserad autentisering för Adobe Sign för myndigheter:** Adobe Acrobat Sign Government ID-Based Authentication erbjuder ytterligare ett verifieringslager genom att användarna kan autentisera sin identitet med hjälp av foto-ID:n (körkort, nationellt ID, pass). Genom att använda pålitliga identifieringsdokument ger den här förbättringen ytterligare tillförlitlighet i signeringsprocessen, vilket gör den idealisk för scenarier som kräver högre säkerhet, regelefterlevnad och användarvalidering.
+   * **Förbättrad säkerhet med ID-baserad autentisering för Adobe Sign för myndigheter** - Adobe Acrobat Sign Government ID-Based Authentication erbjuder ytterligare ett verifieringslager. Det gör det möjligt för användare att autentisera sin identitet med hjälp av ett foto-ID (körkort, nationellt ID, pass). Genom att använda pålitliga identifieringsdokument ger den här förbättringen ytterligare tillförlitlighet i signeringsprocessen, vilket gör den idealisk för scenarier som kräver högre säkerhet, regelefterlevnad och användarvalidering.
 
-   * **Förbättrad transparens med granskningsspår för Adobe Sign-dokument:** Använd funktionen Granskningsspår för att få detaljerade insikter om livscykeln för dina Adobe Sign-dokument. Med granskningsspåret kan du nu föra ett omfattande register över alla åtgärder och interaktioner som rör dina dokument. Detta inkluderar information som vem som visade, redigerade eller signerade dokumentet, tillsammans med tidsstämplar för varje händelse. Den här förbättringen är avgörande för att upprätthålla regelefterlevnaden, lösa tvister och säkerställa integriteten för dina digitala avtal.
-
-
-   * **Utökade roller för avtalsmottagare utöver bara signeraren:** Adobe Acrobat Sign har möjlighet att utöka rollerna för avtalsmottagare utöver bara signeraren för att bättre matcha deras arbetsflödeskrav. När det här alternativet är aktiverat kan varje mottagare i ett avtal konfigureras individuellt, med signerare som standard.
+   * **Förbättrad transparens med granskningsspår för Adobe Sign-dokument** - Använd funktionen Granskningsspårning för att få detaljerade insikter om hur era Adobe Sign-dokument fungerar. Med granskningsspåret kan du nu föra ett omfattande register över alla åtgärder och interaktioner som rör dina dokument. Detta inkluderar information som vem som visade, redigerade eller signerade dokumentet, tillsammans med tidsstämplar för varje händelse. Den här förbättringen är avgörande för att upprätthålla regelefterlevnaden, lösa tvister och säkerställa integriteten för dina digitala avtal.
 
 
-* **[AEM Forms på JEE, komplett installationsprogram](https://experienceleague.adobe.com/docs/experience-manager-65/forms/install-aem-forms/jee-installation/aem-forms-jee-supported-platforms.html)**: Service Pack innehåller ett komplett installationsprogram för AEM Forms i JEE som har stöd för flera nya programkombinationer, bland annat:
+   * **Utökade roller för avtalsmottagare utöver bara signeraren** - Med Adobe Acrobat Sign kan du utöka rollerna för avtalsmottagare utöver bara signeraren för att bättre matcha deras arbetsflödesbehov. När det här alternativet är aktiverat kan varje mottagare i ett avtal konfigureras individuellt, med signerare som standard.
+
+
+* **[AEM Forms på JEE, komplett installationsprogram](https://experienceleague.adobe.com/docs/experience-manager-65/forms/install-aem-forms/jee-installation/aem-forms-jee-supported-platforms.html)** - Service Pack innehåller ett komplett installationsprogram för AEM Forms i JEE med stöd för flera nya programkombinationer, bland annat:
    * Microsoft® Windows Server 2022
    * Microsoft® Active Directory 2022
    * Oracle WebLogic 14C på Windows Server 2022
@@ -81,7 +81,7 @@ Några av de viktigaste funktionerna och förbättringarna i den här versionen 
    * MongoDB 4.4
    * MySQL JDBC Connector 8
 
-Om du håller på med en ny installation eller planerar att använda den senaste programvaran för din AEM 6.5 Forms i JEE-miljö rekommenderar Adobe att du använder AEM 6.5.18.0 Forms i JEE-fullversionen. En fullständig lista över nyligen tillagda och ersatta program finns i dokumentationen för AEM Forms on JEE eller AEM Forms on OSGi.
+Om du installerar eller planerar att använda den senaste programvaran för din AEM 6.5 Forms i JEE-miljö rekommenderar Adobe att du använder AEM 6.5.18.0 Forms i JEE-fullversionen. En fullständig lista över nyligen tillagda och ersatta program finns i dokumentationen för AEM Forms on JEE eller AEM Forms on OSGi.
 
 <!-- UPDATE BELOW FOR EACH NEW RELEASE -->
 
@@ -179,7 +179,7 @@ Om du håller på med en ny installation eller planerar att använda den senaste
    * När en användare försöker anropa en anpassad funktion utan att ändra ett fält, t.ex. ange värdet för ett annat fält, misslyckas det. (FORMS-9921)
    * När du arbetar med den anpassade felfunktionen för regelredigeraren i ett adaptivt format inträffar följande fel:
       * När en användare försöker använda @param{boolean} med en funktion tillåter inte regelredigeraren att booleska värden skickas till en funktion.
-      * När en användare försöker använda @param{string} om en funktion används misslyckas regelredigeraren att skicka de valfria värdena och en varning om ofullständiga regler visas. (FORMS-9816, FORMS-9815)
+      * När en användare försöker använda @param{string} med en funktion kan regelredigeraren inte skicka de valfria värdena och varningarna för ofullständiga regler. (FORMS-9816, FORMS-9815)
    * Formuläranvändargruppen kan inte anropa regelredigeraren två gånger i ett anpassat formulär. (FORMS-9051)
    * När en användare väljer ett formulärobjekt i en visuell redigerare skickas hela fältinstansobjekt till den anpassade funktionen i stället för bara fältets värde. (FORMS-10015)
    * När en användare skapar ett huvudkomponentbaserat adaptivt formulär och lägger till en textindatakomponent, `Is Empty` och `Is Not Empty` fungerar inte i regelredigeraren. (FORMS-10098)
@@ -187,7 +187,7 @@ Om du håller på med en ny installation eller planerar att använda den senaste
    * När en användare försöker skapa ett adaptivt formulär med ett komplext JSON-schema misslyckas det. Felet inträffar som:
      `GET /content/forms/af/katezeroone/testaf1.html HTTP/1.1] com.adobe.aemds.guide.service.impl.JsonObjectCreatorImpl Could not emit JSON with context java.lang.ArrayIndexOutOfBoundsException:0`. (FORMS-9639)
    * När en användare avmarkerar kryssrutan Jag accepterar villkoren i ett anpassat formulär aktiveras det igen när användaren rullar nedåt. (FORMS-9458)
-   * När en användare öppnar ett adaptivt formulär på en Android™-enhet med Google Chrome/Firefox och anger maximalt antal tecken i en textruta, raderas inte värdet i textrutan. (FORMS-9354)
+   * När en användare öppnar ett adaptivt formulär på en Android™-enhet med Google Chrome/Firefox och anger det högsta tillåtna antalet tecken i en textruta, raderas inte värdet i textrutan. (FORMS-9354)
    * När kryssrutans etikett innehåller specialtecken som &#39;,&#39;, &#39;/&#39; eller &#39;.&#39;, markerar inte kryssrutan när du klickar på texten/etiketten. (FORMS-9313)
    * När en användare försöker att validera villkorskomponenten misslyckas det att validera om komponenten inte är i fokus medan den andra komponenten valideras. (FORMS-8725, FORMS-8913)
    * Om ett anpassat formulär laddas om efter uppgradering till AEM 6.5.16.0 Service Pack, misslyckas hämtningen av den bifogade filen. (FORMS-8906)
@@ -203,7 +203,7 @@ Om du håller på med en ny installation eller planerar att använda den senaste
       * När en användare signerar i signaturdialogrutan med en pensel eller ett tangentbord stängs inte dialogrutan om du trycker på Retur.
       * Det går inte att komma åt bekräftelsedialogrutan för rensad signatur via ett tangentbord.
       * Skärmläsaren kan inte läsa information som angetts i en dialogruta.
-      * Det går inte att rensa signaturen utan att använda en mus.  (FORMS-9317)
+      * Det går inte att rensa signaturen utan att använda en mus. (FORMS-9317)
    * När en användare skickar ett adaptivt formulär kan skärmläsaren inte läsa felmeddelanden för de obligatoriska fälten. (FORMS-9316)
    * När en skärmläsare läser upp ett HTML-formulär uppstår problemet när texten läses med kerning (mellanrum). (FORMS-9258)
    * I ett adaptivt formulär anropas inte de referenser/fotnoter som är länkade till texten med skärmläsaren. (FORMS-8920)
@@ -369,7 +369,24 @@ Se [Föråldrade och borttagna funktioner](/help/release-notes/deprecated-remove
 To retrieve your runtime copy, Adobe recommends to synchronize the design-time copy of the custom workflow model with its runtime copy using the HTTP API:
 `<designModelPath>/jcr:content.generate.json`. -->
 
-* I förhållande till eko från Service Pack 13 och senare har följande fellogg börjat visas som påverkar persistence-cachen:
+* **Sidpublicering fungerar inte i Page Editor efter uppgradering till Service Pack 18 (6.5.18.0)**
+
+  <!-- https://jira.corp.adobe.com/browse/SITES-15856 REMOVE FOR 6.5.19.0--> När du har uppgraderat en instans av AEM 6.5.0.0-6.5.17.0 till AEM 6.5.18.0 klickar du **[!UICONTROL Publish Page]** i sidredigeraren omdirigeras du till en URL som inte finns.
+
+  Gör något av följande om du vill undvika problemet:
+
+   * Ta bort följande sökvägsegenskap.
+
+     `/libs/wcm/core/content/editor/jcr:content/content/items/content/header/items/headerbar/items/pageinfopopover/items/list/items/publish/granite:data`
+
+   * Klistra in rätt URL direkt i webbläsaren.
+
+     `http://localhost:4504/editor.html/libs/wcm/core/content/sites/publishpagewizard.html?item=/content/we-retail/language-masters/en/about-us.html`
+
+
+
+* **Relaterad till eken**
+Från Service Pack 13 och senare har följande fellogg börjat visas som påverkar persistence-cachen:
 
   ```shell
   org.h2.mvstore.MVStoreException: The write format 1 is smaller than the supported format 2 [2.0.202/5]
@@ -439,7 +456,7 @@ Du måste lägga till följande egenskaper i indexdefinitionsnoden för att få 
 #### Plattformar som stöds
 
 * JDK-versioner som är högre än 1.8.0_281 stöds inte för WebLogic JEE-server. (FORMS-8498, CQDOC-20383)
-* Som [!DNL Microsoft®® Windows Server 2019] stöder inte [!DNL MySQL 5.7] och [!DNL JBoss®® EAP 7.1], [!DNL Microsoft®® Windows Server 2019] stöder inte körklara installationer för [!DNL Experience Manager Forms 6.5.10.0]. (CQDOC-18312)
+* Som [!DNL Microsoft® Windows Server 2019] stöder inte [!DNL MySQL 5.7] och [!DNL JBoss® EAP 7.1], [!DNL Microsoft® Windows Server 2019] stöder inte körklara installationer för [!DNL Experience Manager Forms 6.5.10.0]. (CQDOC-18312)
 * JDK 11.0.20 stöds inte för installation av AEM Forms i JEE Installer. Endast JDK 11.0.19 och tidigare versioner stöds för installation av AEM Forms i JEE Installer. (FORMS-10659)
 
 #### Installation
@@ -460,7 +477,7 @@ Du löser problemet genom att leta reda på `<AEM_Forms_Installation_dir>\jboss\
 * När du har uppgraderat till AEM Service Pack 18 går det inte att redigera interaktiva kommunikationsbrev. (FORMS-10578) Åtgärda problemet genom att utföra följande steg:
 
    1. Ladda ned [Programfix-FORMS-10578](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html) från SD-länk.
-   1. Extrahera Hotfix-arkivfilen för att få ett Experience Manager-paket (.zip) och en paketfil (.jar).
+   1. Extrahera Hotfix-arkivfilen så att du kan hämta Experience Manager-paketfiler (.zip) och paketfiler (.jar).
    1. Överför och installera paketet (.zip) via Package Manager.
    1. Öppna konfigurationshanterarpaketen `https://server:host/system/console/bundles`, ladda upp och installera paketet (.jar).
 
