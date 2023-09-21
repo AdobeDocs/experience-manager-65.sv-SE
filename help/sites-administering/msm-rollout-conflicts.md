@@ -1,19 +1,15 @@
 ---
 title: MSM-utrullningskonflikter
-seo-title: MSM Rollout Conflicts
 description: Lär dig hur du hanterar driftsättningskonflikter i Multi Site Manager.
-seo-description: Learn how to deal with Multi Site Manager rollout conflicts.
-uuid: 7a640905-aae2-498e-b95c-2c73008fa1cd
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: site-features
 content-type: reference
-discoiquuid: 16db5334-604f-44e2-9993-10d683dee5bb
 feature: Multi Site Manager
 exl-id: e145e79a-c363-4a33-b9f9-99502ed20563
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 6799f1d371734b69c547f3c0c68e1e633aa63229
 workflow-type: tm+mt
-source-wordcount: '906'
+source-wordcount: '905'
 ht-degree: 0%
 
 ---
@@ -30,21 +26,21 @@ När det finns sidor som är i konflikt (i grenarna utkast och live copy) kan du
 
 För att säkerställa att utrullningen inte blockeras kan möjliga definitioner omfatta:
 
-* vilken sida (utkast eller live-kopia) som ska ha prioritet under utrullningen,
-* vilka sidor som ska namnändras (och hur),
+* vilken sida (utkast eller live-kopia) som har prioritet under utrullningen,
+* vilka sidor som har bytt namn (och hur),
 * hur detta påverkar publicerat innehåll.
 
-  Standardbeteendet för AEM (färdiga) är att publicerat innehåll inte påverkas. Om en sida som skapades manuellt i en livekopiegren har publicerats kommer det innehållet fortfarande att publiceras efter konflikthanteringen och utrullningen.
+  Standardbeteendet för Adobe Experience Manager (AEM) (färdigt) är att publicerat innehåll inte påverkas. Om en sida som skapades manuellt i en livekopiegren har publicerats, kommer innehållet fortfarande att publiceras efter konflikthanteringen och utrullningen.
 
 Förutom standardfunktionerna kan anpassade konflikthanterare läggas till för att implementera olika regler. Detta kan även möjliggöra publiceringsåtgärder som en enskild process.
 
 ### Exempelscenario {#example-scenario}
 
-I följande avsnitt använder vi exemplet på en ny sida `b`, som har skapats både i utkast och live copy-förgreningen (skapas manuellt), för att illustrera olika metoder för konfliktlösning:
+I följande avsnitt måste du använda exemplet på en ny sida `b`, som har skapats både i utkast och live copy-förgreningen (skapas manuellt), för att illustrera olika metoder för konfliktlösning:
 
 * skiss: `/b`
 
-  En mallsida, med 1 underordnad sida, bp-level-1.
+  En mallsida, med en underordnad sida, bp-level-1.
 
 * live copy: `/b`
 
@@ -80,7 +76,7 @@ Med utrullningshanteraren kan du aktivera eller inaktivera konflikthantering.
 
 Detta görs med [OSGi-konfiguration](/help/sites-deploying/configuring-osgi.md) av **Day CQ WCM Rollout Manager**:
 
-* **Hantera konflikt med manuellt skapade sidor**:
+* **Hantera konflikter med manuellt skapade sidor**:
 
   ( `rolloutmgr.conflicthandling.enabled`)
 
@@ -108,7 +104,7 @@ Standardkonflikthanteraren:
 * Anropas `ResourceNameRolloutConflictHandler`
 
 * Med den här hanteraren får plantryckssidan företräde.
-* Tjänstrankningen för hanteraren är låg (&quot;dvs. under standardvärdet för `service.ranking` egenskapen) eftersom antagandet är att anpassade hanterare behöver en högre rankning. Rankningen är dock inte den absolut minsta nivån för att garantera flexibilitet vid behov.
+* Tjänstrankningen för hanteraren är låg (d.v.s. under standardvärdet för `service.ranking` -egenskapen) eftersom antagandet är att anpassade hanterare behöver en högre rankning. Rankningen är dock inte den absolut minsta nivån för att garantera flexibilitet vid behov.
 
 Den här konflikthanteraren ger prioritet åt ritningen. Live copy-sidan `/b` flyttas (inom den aktiva kopiegrenen) till `/b_msm_moved`.
 
@@ -122,7 +118,7 @@ Den här konflikthanteraren ger prioritet åt ritningen. Live copy-sidan `/b` fl
 
   Är utrullad till live-kopieringssidan `/b`.
 
-   * `bp-level-1` har rullats ut i livecopy.
+   * `bp-level-1` kommer ut i den publicerade kopian.
 
 **Efter utrullning**
 
@@ -156,11 +152,11 @@ Den här konflikthanteraren ger prioritet åt ritningen. Live copy-sidan `/b` fl
 
 Med anpassade konflikthanterare kan du implementera egna regler. Med servicerangordningsmekanismen kan du även definiera hur de interagerar med andra hanterare.
 
-Anpassade konflikthanterare kan:
+Anpassade konflikthanterare kan ha följande:
 
-* Namnge efter behov.
-* Utvecklas/konfigureras enligt dina krav. Du kan t.ex. utveckla en hanterare så att sidan med live-kopia har prioritet.
-* Kan konfigureras med [OSGi-konfiguration](/help/sites-deploying/configuring-osgi.md), särskilt
+* Namngivna enligt dina önskemål.
+* Utvecklas/konfigureras enligt dina krav. Du kan t.ex. utveckla en hanterare så att den aktiva kopieringssidan ges företräde.
+* Utformad för att konfigureras med [OSGi-konfiguration](/help/sites-deploying/configuring-osgi.md), särskilt
 
    * **Servicerangordning**:
 
@@ -170,7 +166,7 @@ Anpassade konflikthanterare kan:
 
 ### Beteende vid inaktiverad konflikthantering {#behavior-when-conflict-handling-deactivated}
 
-Om du manuellt [inaktivera konflikthantering](#rollout-manager-and-conflict-handling) AEM utför ingen åtgärd på sidor som är i konflikt (sidor som inte är i konflikt rullas ut som förväntat).
+Om du manuellt [inaktivera konflikthantering](#rollout-manager-and-conflict-handling)AEM utför sedan ingen åtgärd på sidor som är i konflikt (sidor som inte är i konflikt rullas ut som förväntat).
 
 >[!CAUTION]
 >
@@ -180,11 +176,11 @@ I det här fallet har live-kopian företräde. Planeringssidan `/b` kopieras int
 
 * skiss: `/b`
 
-  Kopieras inte alls, men ignoreras.
+  Inte kopierat alls, men ignoreras.
 
 * live copy: `/b`
 
-  Står detsamma.
+  Samma.
 
 <table>
  <caption>

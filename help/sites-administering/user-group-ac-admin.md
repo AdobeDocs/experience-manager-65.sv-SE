@@ -1,24 +1,20 @@
 ---
 title: Behörighetsadministration för användare, grupp och åtkomst
-seo-title: User, Group and Access Rights Administration
-description: Läs mer om administration av användare, grupper och åtkomsträttigheter i AEM.
-seo-description: Learn about user, group and access rights administration in AEM.
-uuid: 26d7bb25-5a38-43c6-bd6a-9ddba582c60f
+description: Läs mer om administration av användare, grupper och behörigheter i Adobe Experience Manager.
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: Security
 content-type: reference
-discoiquuid: 66674e47-d19f-418f-857f-d91cf8660b6d
 docset: aem65
 exl-id: 5808b8f9-9b37-4970-b5c1-4d33404d3a8b
 feature: Security
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 6799f1d371734b69c547f3c0c68e1e633aa63229
 workflow-type: tm+mt
-source-wordcount: '3118'
+source-wordcount: '3101'
 ht-degree: 0%
 
 ---
 
-# Behörighetsadministration för användare, grupp och åtkomst{#user-group-and-access-rights-administration}
+# Behörighetsadministration för användare, grupper och åtkomst{#user-group-and-access-rights-administration}
 
 Att ge åtkomst till en CRX-databas omfattar flera ämnen:
 
@@ -29,30 +25,30 @@ Att ge åtkomst till en CRX-databas omfattar flera ämnen:
 
 De grundläggande elementen är:
 
-**Användarkonton** CRX autentiserar åtkomsten genom att identifiera och verifiera en användare (av en person eller ett annat program) enligt uppgifterna på användarkontot.
+**Användarkonton** - CRX autentiserar åtkomsten genom att identifiera och verifiera en användare (av en person eller ett annat program) enligt de uppgifter som finns på användarkontot.
 
 I CRX är varje användarkonto en nod på arbetsytan. Ett CRX-användarkonto har följande egenskaper:
 
 * Den representerar en användare av CRX.
 * Den innehåller ett användarnamn och ett lösenord.
-* Gäller den arbetsytan.
+* Gäller för den arbetsytan.
 * Den kan inte ha underanvändare. För hierarkiska åtkomsträttigheter bör du använda grupper.
 
 * Du kan ange åtkomsträttigheter för användarkontot.
 
-  För att förenkla hanteringen rekommenderar Adobe dock (i de flesta fall) att du tilldelar åtkomsträttigheter till gruppkonton. Att tilldela åtkomsträttigheter för varje enskild användare blir snabbt mycket svårt att hantera (undantagen är vissa systemanvändare när det bara finns en eller två instanser).
+  För att förenkla hanteringen rekommenderar Adobe att du (i de flesta fall) tilldelar åtkomsträttigheter till gruppkonton. Att tilldela åtkomsträttigheter för varje enskild användare blir snabbt svårt att hantera (undantagen är vissa systemanvändare när det bara finns en eller två instanser).
 
-**Gruppkonton** Gruppkonton är samlingar av användare och/eller andra grupper. De används för att förenkla hanteringen eftersom en ändring av de åtkomsträttigheter som tilldelats en grupp automatiskt tillämpas på alla användare i gruppen. En användare behöver inte tillhöra någon grupp, men tillhör ofta flera.
+**Gruppkonton** - Gruppkonton är samlingar av användare och/eller andra grupper. De används för att förenkla hanteringen eftersom en ändring av de åtkomsträttigheter som tilldelats en grupp automatiskt tillämpas på alla användare i gruppen. En användare behöver inte tillhöra någon grupp, men tillhör ofta flera.
 
 I CRX har en grupp följande egenskaper:
 
 * Den representerar en grupp användare med gemensamma åtkomsträttigheter. Till exempel författare eller utvecklare.
-* Gäller den arbetsytan.
+* Gäller för den arbetsytan.
 * Det kan ha medlemmar. Dessa kan vara enskilda användare eller andra grupper.
 * Hierarkisk gruppering kan uppnås med medlemsrelationer. Du kan inte placera en grupp direkt under en annan grupp i databasen.
 * Du kan definiera åtkomsträttigheter för alla gruppmedlemmar.
 
-**Åtkomsträttigheter** CRX använder åtkomsträttigheter för att styra åtkomsten till specifika delar av databasen.
+**Åtkomsträttigheter** - CRX använder åtkomsträttigheter för att styra åtkomsten till specifika delar av databasen.
 
 Detta görs genom att tilldela behörigheter för att antingen tillåta eller neka åtkomst till en resurs (nod eller sökväg) i databasen. Eftersom olika behörigheter kan tilldelas, måste de utvärderas för att avgöra vilken kombination som är tillämplig för den aktuella begäran.
 
@@ -62,7 +58,7 @@ Med CRX kan du konfigurera åtkomsträttigheter för både användar- och gruppk
 
 >[!NOTE]
 >
->CRX-implementeringar [åtkomstkontroll enligt definition i JSR-283](https://www.adobe.io/experience-manager/reference-materials/spec/jcr/2.0/16_Access_Control_Management.html).
+>CRX-implementeringar [åtkomstkontroll enligt definition i JSR-283](https://developer.adobe.com/experience-manager/reference-materials/spec/jcr/2.0/16_Access_Control_Management.html).
 >
 >En standardinstallation av en CRX-databas är konfigurerad att använda resursbaserade åtkomstkontrollistor. Detta är en möjlig implementering av åtkomstkontrollen JSR-283 och en av implementeringarna i Jackrabbit.
 
@@ -87,13 +83,13 @@ CRX använder två viktiga begrepp vid utvärdering av åtkomsträttigheter:
 
    * Alla gruppobjekt som är associerade med den användaren
 
-     Alla rättigheter som tilldelats någon av grupperna som användaren tillhör.
+     Alla rättigheter tilldelas till någon av grupperna som användaren tillhör.
 
   Resultatet används sedan för att tillåta eller neka åtkomst till den begärda resursen.
 
 #### Kompilera listan över åtkomsträttigheter för ett ämne {#compiling-the-list-of-access-rights-for-a-subject}
 
-I CRX är motivet beroende av:
+I CRX beror motivet på:
 
 * användarens huvudnamn
 * alla gruppobjekt som är associerade med den användaren
@@ -129,7 +125,7 @@ Så om Linda begär att få uppdatera `/features` nod i följande databasstruktu
    * i åtkomstkontrollistan
    * sin position i nodhierarkin
 
-* För ett givet huvudobjekt finns (högst) 1 neka och 1 tillåt post på en viss nod. Implementeringen rensar alltid bort redundanta poster och ser till att samma privilegium inte finns med i både Tillåt- och Neka-posterna.
+* För ett givet huvudobjekt finns (som mest) ett neka och 1 tillåt post på en viss nod. Implementeringen rensar alltid bort redundanta poster och ser till att samma privilegium inte finns med i både Tillåt- och Neka-posterna.
 
 >[!NOTE]
 >
@@ -195,7 +191,7 @@ I följande tabell visas några rekommendationer och metodtips:
   </tr>
   <tr>
    <td><i>Behåll det enkelt</i></td>
-   <td><p>Att investera lite tid och fundera på när du konfigurerar en ny installation kommer att återbetalas väl.</p> <p>Att använda en tydlig struktur förenklar det pågående underhållet och administrationen, vilket säkerställer att både dina nuvarande kollegor och/eller framtida efterföljare enkelt kan förstå vad som håller på att implementeras.</p> </td>
+   <td><p>Att investera lite tid och fundera när du konfigurerar en ny installation är väl återbetalt.</p> <p>Genom att använda en tydlig struktur förenklas det pågående underhållet och administrationen, vilket säkerställer att både dina nuvarande kollegor och/eller framtida efterföljare enkelt kan förstå vad som implementeras.</p> </td>
   </tr>
   <tr>
    <td><i>Testa</i></td>
@@ -223,7 +219,7 @@ Du måste vara inloggad på rätt arbetsyta och sedan kan du öppna dialogrutan 
 
 * **Användar-ID**
 
-  Kortnamn för kontot som används vid åtkomst till CRX.
+  Kortnamn för kontot används vid åtkomst till CRX.
 
 * **Huvudnamn**
 
@@ -249,11 +245,11 @@ Om du klickar på ett GroupID (om tillgängligt) öppnas [Gruppadministration](#
 
 Med personifieringsfunktionen kan en användare arbeta för en annan användares räkning.
 
-Det innebär att ett användarkonto kan ange andra konton (användare eller grupp) som kan användas med deras konto. Med andra ord, om användare-B tillåts personifiera användare-A, kan användare-B vidta åtgärder med hjälp av den fullständiga kontoinformationen för användare-A (inklusive ID, namn och åtkomsträttigheter).
+Det innebär att ett användarkonto kan ange andra konton (användare eller grupp) som kan användas med deras konto. Med andra ord, om användare-B tillåts personifiera användare-A kan användare-B agera med hjälp av den fullständiga kontoinformationen för användare-A (inklusive ID, namn och åtkomsträttigheter).
 
-Detta gör att persondatorkonton kan slutföra uppgifter som om de använde det konto de personifierar, till exempel under frånvaro eller för att dela en överbelastad belastning på kort sikt.
+Detta gör att persondatorkonton kan slutföra uppgifter som om de använde det konto de personifierar, till exempel under en frånvaro, eller dela en överbelastad belastning på kort sikt.
 
-Om ett konto personifierar ett annat är det väldigt svårt att se. Loggfilerna innehåller ingen information om att personifiering har skett för händelserna. Så om användare-B personifierar användare-A ser alla händelser ut som om de utförts av användare-A personligen.
+Om ett konto personifierar ett annat är det svårt att se. Loggfilerna innehåller ingen information om att personifiering har skett för händelserna. Så om användare-B personifierar användare-A kan alla händelser se ut som om de har utförts av användare-A personligen.
 
 ### Skapa ett användarkonto {#creating-a-user-account}
 
@@ -267,7 +263,7 @@ Om ett konto personifierar ett annat är det väldigt svårt att se. Loggfilerna
    * **Mellanliggande sökväg** som kan användas för att skapa en trädstruktur.
 
 1. Klicka på Spara (grön bocksymbol).
-1. Dialogrutan utökas så att du kan:
+1. Dialogrutan är utökad så att du kan göra följande:
 
    1. Konfigurera **Egenskaper**.
    1. Se **Gruppmedlemskap**.
@@ -283,15 +279,15 @@ Om ett konto personifierar ett annat är det väldigt svårt att se. Loggfilerna
 
 ### Uppdatera ett användarkonto {#updating-a-user-account}
 
-1. Med **Användaradministration** öppnas listvyn för alla konton.
+1. Med **Användaradministration** öppnar du listvyn för alla konton.
 1. Navigera genom trädstrukturen.
-1. Klicka på det konto du vill öppna för redigering.
+1. Klicka på önskat konto så att du kan öppna det för redigering.
 1. Gör en ändring och klicka sedan på Spara (grön bocksymbol) för den posten.
 1. Klicka **Stäng** för att slutföra, eller **Lista...** för att återgå till listan över alla användarkonton.
 
 ### Ta bort ett användarkonto {#removing-a-user-account}
 
-1. Med **Användaradministration** öppnas listvyn för alla konton.
+1. Med **Användaradministration** öppnar du listvyn för alla konton.
 1. Navigera genom trädstrukturen.
 1. Välj önskat konto och klicka på **Ta bort användare**; kontot raderas omedelbart.
 
@@ -313,7 +309,7 @@ Du kan definiera **Egenskaper** för nya eller befintliga konton:
 
 Befintliga egenskaper kan tas bort med papperskorgen.
 
-Med undantag för Lösenordet går det inte att redigera egenskaper, de måste tas bort och återskapas.
+Förutom lösenordet går det inte att redigera egenskaper, de måste tas bort och återskapas.
 
 #### Ändra lösenordet {#changing-the-password}
 
@@ -363,7 +359,7 @@ Du måste vara inloggad på rätt arbetsyta och sedan kan du öppna dialogrutan 
 
 Detta visar alla grupper som det aktuella gruppkontot tillhör. Den ärvda kolumnen anger medlemskap som har ärvts som ett resultat av medlemskap i en annan grupp.
 
-Om du klickar på ett GroupID öppnas dialogrutan för den gruppen.
+När du klickar på ett GroupID öppnas dialogrutan för den gruppen.
 
 **Medlemmar**
 
@@ -385,7 +381,7 @@ The **Ärvd** kolumn anger medlemskap som har ärvts som ett resultat av medlems
    * **Mellanliggande sökväg** som kan användas för att skapa en trädstruktur.
 
 1. Klicka på Spara (grön bocksymbol).
-1. Dialogrutan utökas så att du kan:
+1. Dialogrutan är utökad så att du kan:
 
    1. Konfigurera **Egenskaper**.
    1. Se **Gruppmedlemskap**.
@@ -393,15 +389,15 @@ The **Ärvd** kolumn anger medlemskap som har ärvts som ett resultat av medlems
 
 ### Uppdatera ett gruppkonto {#updating-a-group-account}
 
-1. Med **Gruppadministration** öppnas listvyn för alla konton.
+1. Med **Gruppadministration** öppnar du listvyn för alla konton.
 1. Navigera genom trädstrukturen.
-1. Klicka på det konto du vill öppna för redigering.
+1. Klicka på önskat konto så att du kan öppna det för redigering.
 1. Gör en ändring och klicka sedan på Spara (grön bocksymbol) för den posten.
 1. Klicka **Stäng** för att slutföra, eller **Lista...** för att återgå till listan över alla gruppkonton.
 
 ### Ta bort ett gruppkonto {#removing-a-group-account}
 
-1. Med **Gruppadministration** öppnas listvyn för alla konton.
+1. Med **Gruppadministration** öppnar du listvyn för alla konton.
 1. Navigera genom trädstrukturen.
 1. Välj önskat konto och klicka på **Ta bort grupp**; kontot raderas omedelbart.
 
@@ -439,7 +435,7 @@ Eller ta bort en befintlig medlem med papperskorgen.
 
 ## Behörighetshantering {#access-right-management}
 
-Med **Åtkomstkontroll** -fliken i CRXDE Lite kan du definiera åtkomstkontrollprinciper och tilldela de relaterade behörigheterna.
+Med **Åtkomstkontroll** på fliken CRXDE Lite kan du definiera åtkomstkontrollprinciper och tilldela de relaterade behörigheterna.
 
 Till exempel **Aktuell bana** Välj önskad resurs i den vänstra rutan på fliken Åtkomstkontroll i den nedre högra rutan:
 
@@ -451,7 +447,7 @@ Policyerna kategoriseras enligt:
 
   Dessa profiler kan tillämpas.
 
-  Det här är profiler som är tillgängliga för att skapa en lokal profil. När du har valt och lagt till en tillämplig princip blir den en lokal princip.
+  Det här är profiler som är tillgängliga för att skapa en lokal profil. När du väljer och lägger till en tillämplig profil blir den en lokal profil.
 
 * **Principer för lokal åtkomstkontroll**
 
@@ -507,7 +503,7 @@ Följande behörigheter är tillgängliga när du lägger till en åtkomstkontro
   </tr>
   <tr>
    <td><code>rep:write</code></td>
-   <td>Detta är ett helkanin-specifikt aggregeringsprivilegium för jcr:write och jcr:nodeTypeManagement.<br /> </td>
+   <td>Detta är ett Jackrabbit-specifikt aggregeringsprivilegium för jcr:write och jcr:nodeTypeManagement.<br /> </td>
   </tr>
   <tr>
    <td><code>jcr:all</code></td>
@@ -583,7 +579,7 @@ Följande behörigheter är tillgängliga när du lägger till en åtkomstkontro
   </tr>
   <tr>
    <td><code>rep:privilegeManagement</code></td>
-   <td>Registrera nya privilegier.</td>
+   <td>Registrera ett nytt privilegium.</td>
   </tr>
  </tbody>
 </table>
@@ -596,7 +592,7 @@ Du kan även registrera nya behörigheter:
 
    ![ac_privilegier](assets/ac_privileges.png)
 
-1. Använd **Registreringsprivilegium** ikon (**+**) för att öppna dialogrutan och definiera ett nytt privilegium:
+1. Använd **Registreringsprivilegium** ikon (**+**) så att du kan definiera ett privilegium:
 
    ![ac_privilegieregister](assets/ac_privilegeregister.png)
 
@@ -614,7 +610,7 @@ Du kan även registrera nya behörigheter:
 
    ![crx_accescontrol_newlocal](assets/crx_accesscontrol_newlocal.png)
 
-1. Klicka på **+** om du vill lägga till en ny post:
+1. Klicka på **+** så att du kan lägga till en post:
 
    ![crx_accescontrol_addentry](assets/crx_accesscontrol_addentry.png)
 
@@ -622,20 +618,20 @@ Du kan även registrera nya behörigheter:
    >
    >För närvarande krävs en tillfällig lösning för att ange en tom sträng.
    >
-   >Därför måste du använda &quot;&quot;.
+   >För detta måste du använda `""`.
 
-1. Definiera din åtkomstkontrollprincip och klicka **OK** att spara. Din nya policy kommer att:
+1. Definiera din åtkomstkontrollprincip och klicka **OK** att spara. Din nya policy är:
 
-   * anges under **Princip för lokal åtkomstkontroll**
-   * ändringarna kommer att återspeglas i **Effektiva åtkomstkontrollprinciper**.
+   * listas under **Princip för lokal åtkomstkontroll**
+   * ändringarna återspeglas i **Effektiva åtkomstkontrollprinciper**.
 
-CRX validerar ditt val. För ett givet huvudkonto finns (högst) 1 neka och 1 tillåt att du anger en nod. Implementeringen rensar alltid bort redundanta poster och ser till att samma privilegium inte finns med i både Tillåt- och Neka-posterna.
+CRX validerar ditt val. För ett givet huvudobjekt finns (som mest) en neka och en tillåt-post på en viss nod. Implementeringen rensar alltid bort redundanta poster och ser till att samma privilegium inte finns med i både Tillåt- och Neka-posterna.
 
 ### Principer för lokal åtkomstkontroll vid beställning {#ordering-local-access-control-policies}
 
 Ordningen i listan anger i vilken ordning profilerna tillämpas.
 
-1. I tabellen **Principer för lokal åtkomstkontroll** markera den önskade posten och dra den till den nya positionen i tabellen.
+1. I tabellen **Principer för lokal åtkomstkontroll** markerar du den önskade posten och drar den till den nya positionen i tabellen.
 
    ![crx_accescontrol_reorder](assets/crx_accesscontrol_reorder.png)
 
@@ -643,7 +639,7 @@ Ordningen i listan anger i vilken ordning profilerna tillämpas.
 
 ### Ta bort en åtkomstkontrollprincip {#removing-an-access-control-policy}
 
-1. I tabellen **Principer för lokal åtkomstkontroll** klicka på den röda ikonen (-) till höger om inmatningen.
+1. I tabellen **Principer för lokal åtkomstkontroll** klickar du på den röda ikonen (-) till höger om inmatningen.
 1. Posten tas bort från båda tabellerna för **Lokal** och **Effektiva åtkomstkontrollprinciper**.
 
 ### Testa en åtkomstkontrollprincip {#testing-an-access-control-policy}
