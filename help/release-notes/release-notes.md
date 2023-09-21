@@ -2,9 +2,9 @@
 title: Versionsinformation för [!DNL Adobe Experience Manager] 6.5
 description: Hitta versionsinformation, nyheter, installationsanvisningar och en detaljerad ändringslista för [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 4
-source-git-commit: 4f6ef1a6cddec307af64ca888307f19c0450467d
+source-git-commit: ffda4927ddc8555564f33697fa81d1f8a0cd2cdc
 workflow-type: tm+mt
-source-wordcount: '4526'
+source-wordcount: '4528'
 ht-degree: 0%
 
 ---
@@ -371,7 +371,7 @@ To retrieve your runtime copy, Adobe recommends to synchronize the design-time c
 
 * **Sidpublicering fungerar inte i Page Editor efter uppgradering till Service Pack 18 (6.5.18.0)**
 
-  <!-- https://jira.corp.adobe.com/browse/SITES-15856 REMOVE FOR 6.5.19.0--> När du har uppgraderat en instans av AEM 6.5.0.0-6.5.17.0 till AEM 6.5.18.0 klickar du **[!UICONTROL Publish Page]** i sidredigeraren omdirigeras du till en URL som inte finns.
+  <!-- https://jira.corp.adobe.com/browse/SITES-15856 REMOVE FOR 6.5.19.0--> När du har uppgraderat en instans av AEM 6.5.0.0-6.5.17.0 till AEM 6.5.18.0 klickar du **Publicera sida** i sidredigeraren omdirigeras du till en URL som inte finns.
 
   Gör något av följande om du vill undvika problemet:
 
