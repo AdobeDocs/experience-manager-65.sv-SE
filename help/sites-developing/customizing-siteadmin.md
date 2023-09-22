@@ -1,19 +1,15 @@
 ---
 title: Anpassa webbplatskonsolen (Classic UI)
-seo-title: Customizing the Websites Console (Classic UI)
 description: Konsolen Administrera webbplatser kan utökas till att visa anpassade kolumner
-seo-description: The Websites Administration console can be extended to display custom columns
-uuid: 9163fdff-5351-477d-b91c-8a74f8b41d34
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: extending-aem
 content-type: reference
-discoiquuid: aeb37103-541d-4235-8a78-980b78c8de66
 docset: aem65
 exl-id: 2b9b4857-821c-4f2f-9ed9-78a1c9f5ac67
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: b66ec42c35b5b60804015d340b8194bbd6ef3e28
 workflow-type: tm+mt
-source-wordcount: '781'
+source-wordcount: '779'
 ht-degree: 0%
 
 ---
@@ -32,12 +28,11 @@ I den här stegvisa självstudiekursen beskrivs hur du visar en ny kolumn i admi
 
 >[!NOTE]
 >
->Den här självstudiekursen kan även användas för att utöka följande administrationskonsoler:
+>Den här självstudien kan även användas för att utöka följande administrationskonsoler:
 >
 >* Digital Assets-konsolen
 >* Community-konsolen
 >
-
 
 ### Skapa OSGI-tjänsten {#creating-the-osgi-service}
 
@@ -52,15 +47,15 @@ Argumenten för båda metoderna är:
 * `info`, det JSON-objekt som ska uppdateras, som är den globala listan eller det aktuella listobjektet.
 * `resource`, en Sling-resurs.
 
-Exempelimplementeringen nedan:
+Exempelimplementeringen är nedan:
 
-* Lägger till en *stjärnad* egenskapen för varje objekt, som `true` om sidnamnet börjar med *e* och `false` i annat fall.
+* Lägger till en *stjärnad* egenskapen för varje objekt, som `true` om sidnamnet börjar med *e* och `false` annars.
 
 * Lägger till en *starredCount* som är global för listan och innehåller antalet stjärnlistobjekt.
 
 Så här skapar du OSGI-tjänsten:
 
-1. I CRXDE Lite [skapa ett paket](/help/sites-developing/developing-with-crxde-lite.md#managing-a-bundle).
+1. I CRXDE LITE [skapa ett paket](/help/sites-developing/developing-with-crxde-lite.md#managing-a-bundle).
 1. Lägg till exempelkoden nedan.
 1. Bygg paketet.
 
@@ -109,13 +104,13 @@ public class StarredListInfoProvider implements ListInfoProvider {
 >[!CAUTION]
 >
 >* Implementeringen bör, baserat på den angivna begäran och/eller resursen, avgöra om den ska lägga till informationen till JSON-objektet eller inte.
->* Om `ListInfoProvider` implementeringen definierar en egenskap som redan finns i svarsobjektet. Dess värde skrivs över av den som du anger.
+>* Om `ListInfoProvider` implementeringen definierar en egenskap som finns i svarsobjektet, dess värde skrivs över av den som du anger.
 >
->  Du kan använda [rangordning av tjänster](https://www.osgi.org/javadoc/r2/org/osgi/framework/Constants.html#SERVICE_RANKING) för att hantera körningsordningen för flera `ListInfoProvider` implementeringar.
+>  Du kan använda [rangordning av tjänster](https://docs.osgi.org/javadoc/r2/org/osgi/framework/Constants.html#SERVICE_RANKING) för att hantera körningsordningen för flera `ListInfoProvider` implementeringar.
 
 ### Testa den nya tjänsten {#testing-the-new-service}
 
-När du öppnar administrationskonsolen för webbplatser och bläddrar igenom webbplatsen skickar webbläsaren ett ajax-anrop för att hämta JSON-objektet som används för att skapa konsolen. Om du till exempel bläddrar till `/content/geometrixx` mapp skickas följande begäran till AEM server för att bygga konsolen:
+När du öppnar administrationskonsolen för webbplatser och bläddrar igenom webbplatsen skickar webbläsaren ett Ajax-anrop för att hämta JSON-objektet som används för att skapa konsolen. Om du till exempel bläddrar till `/content/geometrixx` mapp skickas följande begäran till AEM server för att bygga konsolen:
 
 [https://localhost:4502/content/geometrixx.pages.json?start=0&amp;limit=30&amp;predicate=siteadmin](https://localhost:4502/content/geometrixx.pages.json?start=0&amp;limit=30&amp;predicate=siteadmin)
 
@@ -132,7 +127,7 @@ Så här kontrollerar du att den nya tjänsten körs efter att du har distribuer
 
 Det sista steget består i att anpassa nodstrukturen i administrationskonsolen för webbplatser så att den nya egenskapen för alla Geometrixx visas genom att täcka över `/libs/wcm/core/content/siteadmin`. Gör så här:
 
-1. Skapa nodstrukturen i CRXDE Lite `/apps/wcm/core/content` med noder av typen `sling:Folder` återspegla strukturen `/libs/wcm/core/content`.
+1. Skapa nodstrukturen i CRXDE Lite `/apps/wcm/core/content` med noder av typen `sling:Folder` för att återspegla strukturen `/libs/wcm/core/content`.
 
 1. Kopiera noden `/libs/wcm/core/content/siteadmin` och klistra in den nedan `/apps/wcm/core/content`.
 
@@ -141,7 +136,7 @@ Det sista steget består i att anpassa nodstrukturen i administrationskonsolen f
    * Ta bort **pageText**
 
    * Ange **pathRegex** till `/content/geometrixx(/.*)?`
-Detta gör att stödrasterkonfigurationen blir aktiv för alla geometrixx-webbplatser.
+Detta gör att stödrasterkonfigurationen är aktiv för alla Geometrixx.
 
    * Ange **storeProxySuffix** till `.pages.json`
 
@@ -164,7 +159,7 @@ Detta gör att stödrasterkonfigurationen blir aktiv för alla geometrixx-webbpl
 1. (valfritt) Släpp de kolumner som du inte vill visa vid `/apps/wcm/core/content/siteadmin/grid/geometrixx/columns`
 
 1. `/siteadmin` är en mållös bana som som standard pekar på `/libs/wcm/core/content/siteadmin`.
-Om du vill dirigera om den här till din version av siteadmin på `/apps/wcm/core/content/siteadmin` definiera egenskapen `sling:vanityOrder` att ha ett värde som är högre än det som definierats på `/libs/wcm/core/content/siteadmin`. Standardvärdet är 300, så allt högre är lämpligt.
+Om du vill dirigera om den här till din version av siteadmin på `/apps/wcm/core/content/siteadmin`, definiera egenskapen `sling:vanityOrder` att ha ett värde som är högre än det som definierats på `/libs/wcm/core/content/siteadmin`. Standardvärdet är 300, så allt högre är lämpligt.
 
 1. Gå till administrationskonsolen för webbplatser och navigera till Geometrixx:
    [https://localhost:4502/siteadmin#/content/geometrixx](https://localhost:4502/siteadmin#/content/geometrixx).
@@ -175,8 +170,8 @@ Om du vill dirigera om den här till din version av siteadmin på `/apps/wcm/cor
 
 >[!CAUTION]
 >
->Om flera rutnätskonfigurationer matchar den begärda sökvägen som definieras av **pathRegex** egenskapen kommer den första att användas, och inte den mest specifika, vilket betyder att ordningen för konfigurationerna är viktig.
+>Om flera rutnätskonfigurationer matchar den begärda sökvägen som definieras av **pathRegex** egenskapen används den första, inte den mest specifika, vilket betyder att ordningen på konfigurationerna är viktig.
 
 ### Exempelpaket {#sample-package}
 
-Resultatet av den här självstudiekursen finns i [Anpassa administrationskonsolen för webbplatser](https://localhost:4502/crx/packageshare/index.html/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/helper/customizing-siteadmin) paket på paketresurs.
+Resultatet av kursen finns i [Anpassa administrationskonsolen för webbplatser](https://localhost:4502/crx/packageshare/index.html/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/helper/customizing-siteadmin) paket på paketresurs.

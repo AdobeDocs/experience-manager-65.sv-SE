@@ -1,18 +1,16 @@
 ---
 title: Grundläggande hantering när du använder AEM redigeringsmiljö
-description: Bekanta dig med navigering i AEM och dess grundläggande användning
-uuid: c78ef9da-e0bd-47be-a410-9cf2ae71749a
+description: Bekväm navigering i Adobe Experience Manager och grundläggande användning.
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: introduction
 content-type: reference
-discoiquuid: 21181a6f-b434-40ed-8eb1-ebdfc98964dd
 docset: aem65
 exl-id: ef1a3997-feb4-4cb0-9396-c8335b69bb10
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: b66ec42c35b5b60804015d340b8194bbd6ef3e28
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '2987'
+ht-degree: 2%
 
 ---
 
@@ -20,9 +18,9 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->* Den här sidan är avsedd att ge en översikt över grundläggande hantering när du använder AEM redigeringsmiljö. Den använder **Webbplatser** som bas.
+>* Den här sidan är avsedd att ge en översikt över grundläggande hantering när du använder Adobe Experience Manager (AEM) redigeringsmiljö. Den använder **Webbplatser** som bas.
 >
->* Vissa funktioner är inte tillgängliga i alla konsoler, och i vissa konsoler kan ytterligare funktioner vara tillgängliga. Specifik information om de enskilda konsolerna och deras tillhörande funktioner beskrivs mer ingående på andra sidor.
+>* Vissa funktioner är inte tillgängliga i alla konsoler, och i vissa konsoler kan ytterligare funktioner vara tillgängliga. Specifik information om de enskilda konsolerna och deras relaterade funktioner beskrivs mer ingående på andra sidor.
 >* Kortkommandon är tillgängliga i hela AEM. I synnerhet när [använda konsoler](/help/sites-authoring/keyboard-shortcuts.md) och [redigera sidor](/help/sites-authoring/page-authoring-keyboard-shortcuts.md).
 >
 
@@ -44,11 +42,11 @@ Omedelbart efter att du loggat in kommer du till [Navigeringspanelen](#navigatio
 >
 >För att få en bättre förståelse för AEM basanvändning är det här dokumentet baserat på **Webbplatser** konsol.
 >
->Klicka eller tryck på **Webbplatser** för att komma igång.
+>Kom igång genom att klicka eller trycka på **Webbplatser**.
 
 ### Produktnavigering {#product-navigation}
 
-När en användare först kommer åt en konsol startas en produktnavigeringssjälvstudie. Klicka eller tryck en minut för att få en bra överblick över den grundläggande hanteringen av AEM.
+När en användare först kommer åt en konsol startas en produktnavigeringssjälvstudie. Klicka eller tryck igenom för att få en bra översikt över den grundläggande AEM.
 
 ![Produktnavigering](assets/bh-02.png)
 
@@ -58,7 +56,7 @@ Klicka eller tryck **Nästa** för att gå vidare till nästa sida i översikten
 
 ## Global navigering {#global-navigation}
 
-Du kan navigera mellan konsolerna med den globala navigeringspanelen. Detta aktiveras som en listruta i helskärmsläge när du klickar eller trycker på länken Adobe Experience Manager längst upp till vänster på skärmen.
+Du kan navigera mellan konsolerna med den globala navigeringspanelen. Detta aktiveras som en listruta i helskärmsläge när du klickar på eller trycker på länken Adobe Experience Manager längst upp till vänster på skärmen.
 
 Du kan stänga den globala navigeringspanelen genom att klicka eller trycka på **Stäng** för att återgå till din tidigare plats.
 
@@ -66,7 +64,7 @@ Du kan stänga den globala navigeringspanelen genom att klicka eller trycka på 
 
 >[!NOTE]
 >
->När du loggade in för första gången visas **Navigering** -panelen.
+>När du loggar in första gången visas **Navigering** panel
 
 Global navigering har två paneler, som representeras av ikoner i skärmens vänstra marginal:
 
@@ -81,7 +79,7 @@ Navigeringspanelen ger åtkomst till AEM:
 
 ![Navigering](assets/bh-01.png)
 
-Titeln på webbläsarfliken uppdateras för att återspegla din position när du navigerar genom konsolerna och innehållet.
+Titeln på fliken Webbläsare uppdateras för att återspegla din position när du navigerar mellan konsolerna och innehållet.
 
 Följande konsoler finns i Navigation:
 
@@ -105,7 +103,7 @@ Följande konsoler finns i Navigation:
   </tr>
   <tr>
    <td>Experience Fragments</td>
-   <td>An <a href="/help/sites-authoring/experience-fragments.md">upplevelsefragment</a> är en fristående upplevelse som kan återanvändas i olika kanaler och som har variationer, vilket besparar dig problem med att kopiera och klistra in upplevelser eller delar av upplevelser.</td>
+   <td>An <a href="/help/sites-authoring/experience-fragments.md">Experience Fragment</a> är en fristående upplevelse som kan återanvändas i olika kanaler och som har variationer, vilket besparar problem med att kopiera och klistra in upplevelser eller delar av upplevelser upprepade gånger.</td>
   </tr>
   <tr>
    <td>Forms</td>
@@ -121,7 +119,7 @@ Följande konsoler finns i Navigation:
   </tr>
   <tr>
    <td>Skärmar</td>
-   <td><a href="https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/authoring/setting-up-projects/creating-a-screens-project.html">Skärmar</a> gör att ni kan hantera alla kundorienterade skärmar, oavsett storlek och plats.</td>
+   <td><a href="https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/authoring/setting-up-projects/creating-a-screens-project.html">Skärmar</a> kan ni hantera alla kundorienterade skärmar, oavsett storlek och var de befinner sig.</td>
   </tr>
   <tr>
    <td>Sites</td>
@@ -132,7 +130,7 @@ Följande konsoler finns i Navigation:
 
 ### Panelen Verktyg {#tools-panel}
 
-På verktygspanelen innehåller varje alternativ på sidopanelen ett intervall med undermenyer. The [Verktygskonsoler](/help/sites-administering/tools-consoles.md) finns här för att ge tillgång till ett antal specialiserade verktyg och konsoler som hjälper dig att administrera dina webbplatser, digitala resurser och andra aspekter av din innehållsdatabas.
+På verktygspanelen innehåller varje alternativ på sidopanelen ett intervall med undermenyer. The [Verktygskonsoler](/help/sites-administering/tools-consoles.md) finns här för att ge tillgång till flera specialiserade verktyg och konsoler som hjälper dig att administrera dina webbplatser, digitala resurser och andra aspekter av din innehållsdatabas.
 
 ![Verktygspanelen](assets/bh-04.png)
 
@@ -144,7 +142,7 @@ Rubriken visas alltid längst upp på skärmen. De flesta alternativen i huvudet
 
 * [Global navigering](#navigatingconsolesandtools)
 
-  Välj **Adobe Experience Manager** för att navigera mellan konsoler.
+  Välj **Adobe Experience Manager** länk där du kan navigera mellan konsoler.
 
   ![länken Adobe Experience Manager](assets/screen_shot_2018-03-23at103615.png)
 
@@ -154,7 +152,7 @@ Rubriken visas alltid längst upp på skärmen. De flesta alternativen i huvudet
 
   Du kan också använda [kortkommando](/help/sites-authoring/keyboard-shortcuts.md) `/` (snedstreck) för att starta sökning från en konsol.
 
-* [Lösningar](https://www.adobe.com/experience-cloud.html)
+* [Lösningar](https://business.adobe.com/)
 
   ![Lösningar](do-not-localize/screen_shot_2018-03-23at103552.png)
 
@@ -166,7 +164,7 @@ Rubriken visas alltid längst upp på skärmen. De flesta alternativen i huvudet
 
   ![Meddelanden](do-not-localize/screen_shot_2018-03-23at103558.png)
 
-  Den här ikonen kommer att märkas med antalet för närvarande tilldelade ofullständiga meddelanden.
+  Den här ikonen är märkt med antalet för närvarande tilldelade ofullständiga meddelanden.
 
   >[!NOTE]
   >
@@ -180,7 +178,7 @@ Rubriken visas alltid längst upp på skärmen. De flesta alternativen i huvudet
 
   ![Rälsväljarlistan visas till vänster på Adobe Experience Manager-skärmen.](do-not-localize/screen_shot_2018-03-23at103943.png)
 
-  Vilka alternativ som visas beror på den aktuella konsolen. Till exempel i **Webbplatser** Du kan bara markera innehåll (standardvärdet), tidslinjen, referenser eller sidopanelen för filter.
+  Vilka alternativ som visas beror på den aktuella konsolen. Till exempel i **Webbplatser** Du kan bara markera innehåll (standardvärdet), tidslinjen, referenser eller panelen på filtersidan.
 
   ![Järnvägsväljare](assets/screen_shot_2018-03-23at104029.png)
 
@@ -188,9 +186,9 @@ Rubriken visas alltid längst upp på skärmen. De flesta alternativen i huvudet
 
   ![Breadcrumbs](assets/bh-05.png)
 
-  I mitten av spåret, och alltid med beskrivningen av det markerade objektet, kan du navigera i en viss konsol med hjälp av de synliga kolumnerna. På webbplatskonsolen kan du navigera på webbplatsnivå.
+  Visas mitt i rälsen, och alltid med beskrivningen av det markerade objektet kan du navigera i en viss konsol med hjälp av vägbeskrivningar. På webbplatskonsolen kan du navigera på webbplatsnivå.
 
-  Klicka bara på den breda texten för att visa en listruta med hierarkinivåerna för det markerade objektet. Klicka på en post för att hoppa till den platsen.
+  När du klickar på den synliga texten öppnas en listruta som visar hierarkinivåerna för det markerade objektet. Klicka på en post om du vill gå till den platsen.
 
   ![Hierarkinivåer](assets/bh-06.png)
 
@@ -198,7 +196,7 @@ Rubriken visas alltid längst upp på skärmen. De flesta alternativen i huvudet
 
   ![Tidsperiod för analyser](assets/screen_shot_2018-03-23at104126.png)
 
-  Detta är endast tillgängligt i listvyn. Se [listvy](#list-view) för mer information.
+  Detta är endast tillgängligt i listvyn. Mer information finns i [listvy](#list-view).
 
 * **Skapa** knapp
 
@@ -212,7 +210,7 @@ Rubriken visas alltid längst upp på skärmen. De flesta alternativen i huvudet
 
   ![Kolumnvy](assets/bh-07.png)
 
-  Du kan växla mellan kolumnvy, kortvy och listvy. I listvyn visas även visningsinställningarna.
+  Du kan växla mellan kolumnvy, kortvy och listvy. I listvyn visas visningsinställningarna.
 
   ![Växla vy](assets/bh-09.png)
 
@@ -220,7 +218,7 @@ Rubriken visas alltid längst upp på skärmen. De flesta alternativen i huvudet
 
   Du kan bara navigera på en webbplats med hjälp av tangentbordet. Detta använder webbläsarens standardfunktioner i **TABB** tangent (eller **OPT+TAB**) för att flytta dig mellan element på sidan som *fokuserbar*.
 
-  I **Webbplatser** konsolen där det finns ett tillagt alternativ  **Hoppa till huvudinnehåll**. Detta syns när du *tab* genom rubrikalternativen och snabbar upp navigeringen genom att du kan hoppa över standardelementen i verktygsfältet (produkten) och ta dig direkt till huvudinnehållet.
+  I **Webbplatser** konsol, finns det ett alternativ till  **Hoppa till huvudinnehåll**. Detta syns när du *tab* genom rubrikalternativen och snabbar upp navigeringen genom att du kan hoppa över standardelementen i verktygsfältet (produkten) och ta dig direkt till huvudinnehållet.
 
   ![Hoppa till huvudinnehåll](assets/bh-30.png)
 
@@ -230,13 +228,13 @@ Det finns olika hjälpresurser:
 
 * **Verktygsfältet Konsol**
 
-  Beroende på var du befinner dig **Hjälp** öppnas lämpliga resurser:
+  Beroende på var du befinner dig **Hjälp** ikon öppnar lämpliga resurser:
 
   ![Verktygsfältet Konsol](assets/bh-10.png)
 
 * **Navigering**
 
-  Första gången du navigerar i systemet [en serie bilder AEM navigering](/help/sites-authoring/basic-handling.md#product-navigation).
+  Första gången du navigerar i systemet [en serie bilder innehåller AEM navigering](/help/sites-authoring/basic-handling.md#product-navigation).
 
 * **Page Editor**
 
@@ -246,11 +244,11 @@ Det finns olika hjälpresurser:
 
   Navigera i den här översikten precis som i [produktnavigering - översikt](/help/sites-authoring/basic-handling.md#product-navigation) vid första åtkomst till en konsol.
 
-  Från [**Sidinformation** meny som du kan välja **Hjälp**](/help/sites-authoring/author-environment-tools.md#accessing-help) för att visa detta igen när som helst.
+  Från **Sidinformation** kan du välja [**Hjälp**](/help/sites-authoring/author-environment-tools.md#accessing-help) för att visa detta igen när som helst.
 
 * **Verktygskonsol**
 
-  Från **verktyg** konsolen som du också kan komma åt externt **Resurs**:
+  Från **verktyg** konsolen kan du även komma åt den externa **Resurs**:
 
    * **Dokumentation**
 Visa dokumentationen för Web Experience Management
@@ -262,7 +260,7 @@ Resurser och nedladdningar för utvecklare
   >
   >Du kan när som helst få tillgång till en översikt över kortkommandon via snabbtangenten `?` (frågetecken) i en konsol.
   >
-  >En översikt över alla kortkommandon finns i följande dokumentation:
+  >En översikt över alla kortkommandon finns i följande avsnitt:
   >
   >* [Kortkommandon för redigering av sidor](/help/sites-authoring/page-authoring-keyboard-shortcuts.md)
   >* [Kortkommandon för konsoler](/help/sites-authoring/keyboard-shortcuts.md)
@@ -271,15 +269,15 @@ Resurser och nedladdningar för utvecklare
 
 När en resurs är markerad (till exempel en sida eller en resurs) visas olika åtgärder med ikoner med förklarande text i verktygsfältet. Dessa åtgärder är beroende av:
 
-* Den aktuella konsolen.
-* Den aktuella kontexten.
-* Om du är [markeringsläge](#navigatingandselectionmode).
+* Aktuell konsol
+* Aktuellt sammanhang
+* Om du är [markeringsläge](#navigatingandselectionmode) eller inte
 
-Den åtgärd som är tillgänglig i verktygsfältet ändras så att den återspeglar de åtgärder du kan vidta för de valda objekten.
+De åtgärder som är tillgängliga i verktygsfältet ändras för att återspegla de åtgärder du kan vidta för de specifika objekten.
 
 Hur du [välj en resurs](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources) beror på vyn.
 
-På grund av utrymmesbegränsningar i vissa fönster kan verktygsfältet snabbt bli längre än det tillgängliga utrymmet. När detta inträffar visas ytterligare alternativ. Om du klickar eller trycker på ellipsen (de tre punkterna eller **...**) öppnas en listruta med alla återstående åtgärder. När du till exempel har valt en sida i **Sites**-konsolen:
+På grund av utrymmesbegränsningar i vissa fönster kan verktygsfältet snabbt bli längre än det tillgängliga utrymmet. När detta inträffar visas ytterligare alternativ. Klicka eller peka på ellipsen (de tre punkterna eller **...**) öppnar en nedrullningsbar väljare med alla återstående åtgärder. När du till exempel har valt en sida i **Sites**-konsolen:
 
 ![Verktygsfältet Åtgärder](assets/bh-12.png)
 
@@ -289,7 +287,7 @@ På grund av utrymmesbegränsningar i vissa fönster kan verktygsfältet snabbt 
 
 ## Snabbåtgärder {#quick-actions}
 
-I [Kortvy](#cardviewquickactions) vissa åtgärder är tillgängliga både som snabbikoner och i verktygsfältet. Snabbåtgärdsikoner är tillgängliga för ett enskilt objekt i taget och eliminerar behovet av att välja i förväg.
+I [Kortvy](#cardviewquickactions), finns vissa åtgärder som snabbikoner och i verktygsfältet. Snabbåtgärdsikoner är tillgängliga för ett enskilt objekt i taget och eliminerar behovet av att välja i förväg.
 
 Snabbåtgärderna visas när du för musen över ett resurskort (en stationär enhet). Vilka snabbåtgärder som är tillgängliga beror på konsolen och sammanhanget. Här följer t.ex. snabbåtgärderna för en sida i **Webbplatser** konsol:
 
@@ -326,12 +324,12 @@ Välja en specifik resurs beror på en kombination av vyn och enheten:
    <td>
     <ul>
      <li>Skrivbord:<br /> Klicka på miniatyrbilden</li>
-     <li>Mobil enhet:<br /> Tryck på miniatyrbilden</li>
+     <li>Mobila enheter:<br /> Tryck på miniatyrbilden</li>
     </ul> </td>
    <td>
     <ul>
      <li>Skrivbord:<br /> Klicka på miniatyrbilden</li>
-     <li>Mobil enhet:<br /> Tryck på miniatyrbilden</li>
+     <li>Mobila enheter:<br /> Tryck på miniatyrbilden</li>
     </ul> </td>
   </tr>
   <tr>
@@ -339,12 +337,12 @@ Välja en specifik resurs beror på en kombination av vyn och enheten:
    <td>
     <ul>
      <li>Skrivbord:<br /> För musen över och använd sedan snabbåtgärden bock</li>
-     <li>Mobil enhet:<br /> Tryck och håll på kortet</li>
+     <li>Mobila enheter:<br /> Tryck och håll på kortet</li>
     </ul> </td>
    <td>
     <ul>
      <li>Skrivbord:<br /> Klicka på kortet</li>
-     <li>Mobil enhet:<br /> Tryck på kortet</li>
+     <li>Mobila enheter:<br /> Tryck på kortet</li>
     </ul> </td>
   </tr>
   <tr>
@@ -352,12 +350,12 @@ Välja en specifik resurs beror på en kombination av vyn och enheten:
    <td>
     <ul>
      <li>Skrivbord:<br /> Klicka på miniatyrbilden</li>
-     <li>Mobil enhet:<br /> Tryck på miniatyrbilden</li>
+     <li>Mobila enheter:<br /> Tryck på miniatyrbilden</li>
     </ul> </td>
    <td>
     <ul>
      <li>Skrivbord:<br /> Klicka på miniatyrbilden</li>
-     <li>Mobil enhet:<br /> Tryck på miniatyrbilden</li>
+     <li>Mobila enheter:<br /> Tryck på miniatyrbilden</li>
     </ul> </td>
   </tr>
  </tbody>
@@ -367,9 +365,9 @@ Välja en specifik resurs beror på en kombination av vyn och enheten:
 
 Du kan markera alla objekt i valfri vy genom att klicka på **Markera alla** i konsolens övre högra hörn.
 
-* I **Kortvy** alla kort är markerade.
-* I **Listvy** alla objekt i listan markeras.
-* I **Kolumnvy** alla objekt i kolumnen längst till vänster är markerade.
+* I **Kortvy**, markeras alla kort.
+* I **Listvy**, markeras alla objekt i listan.
+* I **Kolumnvy**, markeras alla objekt i kolumnen längst till vänster.
 
 ![Markera alla](assets/screen-shot_2019-03-05at094659.png)
 
@@ -416,9 +414,9 @@ Om du väljer en resurs i kolumnen längst till vänster visas de underordnade r
 
 * Om du trycker eller klickar på miniatyrbilden markeras resursen.
 
-   * När du väljer det här alternativet åsidosätts en bock på miniatyrbilden och resursnamnet markeras också.
+   * När du väljer det här alternativet läggs en bock över miniatyrbilden och resursnamnet markeras också.
    * Information om den valda resursen visas i den sista kolumnen.
-   * Verktygsfältet för funktionsmakron blir tillgängligt.
+   * Verktygsfältet för åtgärder blir tillgängligt.
 
      ![Kolumnvy](assets/bh-18.png)
 
@@ -440,7 +438,7 @@ Om du väljer en resurs i kolumnen längst till vänster visas de underordnade r
    * En visuell representation av sidinnehållet.
    * Sidans titel.
    * Viktiga datum (t.ex. senast redigerade och publicerade).
-   * Om sidan är låst, dold eller ingår i en livecopy.
+   * Sidan är låst, dold eller en del av en live-kopia.
    * Om det är lämpligt, när du måste vidta åtgärder som en del av ett arbetsflöde.
 
       * Markörer som anger obligatoriska åtgärder kan vara relaterade till poster i [Inkorg](/help/sites-authoring/inbox.md).
@@ -456,7 +454,7 @@ Om du väljer en resurs i kolumnen längst till vänster visas de underordnade r
 ![Listvy](assets/bh-19.png)
 
 * I listvyn visas information om varje resurs på den aktuella nivån.
-* Du kan navigera nedåt i trädet genom att trycka på/klicka på resursnamnet och sedan säkerhetskopiera genom att använda [vägbeskrivningar i sidhuvudet](/help/sites-authoring/basic-handling.md#the-header).
+* Du kan navigera nedåt i trädet genom att trycka på/klicka på resursnamnet och säkerhetskopiera med hjälp av [vägbeskrivningar i sidhuvudet](/help/sites-authoring/basic-handling.md#the-header).
 
 * Om du enkelt vill markera alla objekt i listan använder du kryssrutan längst upp till vänster i listan.
 
@@ -464,12 +462,12 @@ Om du väljer en resurs i kolumnen längst till vänster visas de underordnade r
 
    * När alla objekt i listan är markerade visas den här kryssrutan markerad.
 
-      * Avmarkera alla genom att klicka eller trycka på kryssrutan.
+      * Om du vill avmarkera alla klickar eller trycker du på kryssrutan.
 
    * När bara vissa objekt är markerade visas det med ett minustecken.
 
       * Markera alla genom att klicka eller trycka på kryssrutan.
-      * Klicka eller tryck på kryssrutan igen för att avmarkera alla.
+      * Om du vill avmarkera alla klickar eller trycker du på kryssrutan igen.
 
 * Markera de kolumner som ska visas med **Visa inställningar** som finns under knappen Vyer. Följande kolumner är tillgängliga för visning:
 
@@ -485,7 +483,7 @@ Om du väljer en resurs i kolumnen längst till vänster visas de underordnade r
 
   ![Visa inställningar - Konfigurera kolumner](assets/bh-21.png)
 
-  Som standard är **Namn** -kolumnen visas, vilket utgör en del av sidans URL. I vissa fall kan författaren behöva komma åt sidor på ett annat språk och det kan vara bra att se sidans namn (som vanligtvis är oföränderligt) om författaren inte känner till sidans språk.
+  Som standard är **Namn** -kolumnen visas, vilket utgör en del av sidans URL. Ibland måste författaren komma åt sidor som är på ett annat språk. Att se namnet på sidan (som vanligtvis inte ändras) kan vara till stor hjälp om författaren inte känner till sidans språk.
 
 * Ändra objektens ordning med hjälp av den prickade lodräta listen längst till höger om varje objekt i listan.
 
@@ -523,7 +521,7 @@ Om du bara väljer innehåll visas bara ikonen för skenor. När något annat al
 
 Innehållsträdet kan användas för att snabbt navigera i platshierarkin på sidopanelen och visa mycket information om sidorna i den aktuella mappen.
 
-Med innehållsträdets sidopanel i kombination med en listvy eller kortvy kan användarna enkelt se projektets hierarkiska struktur och enkelt navigera i innehållsstrukturen med innehållsträdets sidopanel, samt visa detaljerad sidinformation i listvyn.
+Med hjälp av innehållsträdets sidopanel med en listvy eller kortvy kan användarna enkelt se projektets hierarkiska struktur. De kan enkelt navigera i innehållsstrukturen med innehållsträdets sidopanel och visa detaljerad sidinformation i listvyn.
 
 ![Innehållsträd](assets/bh-26.png)
 
@@ -535,7 +533,7 @@ Med innehållsträdets sidopanel i kombination med en listvy eller kortvy kan an
 
 ### Tidslinje {#timeline}
 
-Tidslinjen kan användas för att visa och/eller initiera händelser som har inträffat på den valda resursen. Om du vill öppna tidslinjekolumnen använder du järnvägsväljaren:
+Tidslinjen kan användas för att visa och/eller initiera händelser som har inträffat i den valda resursen. Om du vill öppna tidslinjekolumnen använder du järnvägsväljaren:
 
 Med tidslinjekolumnen kan du:
 
@@ -550,13 +548,13 @@ Med tidslinjekolumnen kan du:
       * [Versioner](/help/sites-authoring/working-with-page-versions.md)
       * [Arbetsflöden](/help/sites-authoring/workflows-applying.md)
 
-         * med undantag för [tillfälliga arbetsflöden](/help/sites-developing/workflows.md#transient-workflows) eftersom ingen historikinformation har sparats för dessa
+         * förutom [tillfälliga arbetsflöden](/help/sites-developing/workflows.md#transient-workflows) därför att ingen historikinformation har sparats för dessa
 
       * och Visa alla
 
 * [Lägg till/visa kommentarer om det markerade objektet. ](#timelineaddingandviewingcomments) Rutan **Kommentar** visas längst ned i händelselistan. Om du skriver en kommentar följt av Retur registreras kommentaren. Den visas när **Kommentarer** eller **Visa alla** markeras.
 
-* Specifika konsoler har ytterligare funktioner. I Platskonsolen kan du till exempel:
+* Specifika konsoler har ytterligare funktioner. I Sites-konsolen kan du till exempel göra följande:
 
    * [Spara en version](/help/sites-authoring/working-with-page-versions.md#creatinganewversiontouchoptimizedui).
    * [Starta ett arbetsflöde](/help/sites-authoring/workflows-applying.md#startingaworkflowfromtherail).
@@ -567,7 +565,7 @@ De här alternativen är tillgängliga via markören bredvid **Kommentar** fält
 
 ### Referenser {#references}
 
-**Referenser** visar alla anslutningar till den valda resursen. I **Webbplatser** konsol [referenser](/help/sites-authoring/author-environment-tools.md#showingpagereferences) för sidor:
+**Referenser** visa alla anslutningar till den valda resursen. I **Webbplatser** konsol [referenser](/help/sites-authoring/author-environment-tools.md#showingpagereferences) för sidor:
 
 * [Launches](/help/sites-authoring/launches.md#launches-in-references-sites-console)
 * [Live-kopior](/help/sites-administering/msm-livecopy-overview.md#openingthelivecopyoverviewfromreferences)
@@ -575,12 +573,12 @@ De här alternativen är tillgängliga via markören bredvid **Kommentar** fält
 * Innehållsreferenser:
 
    * länkar från andra sidor till den markerade sidan
-   * innehåll som lånats från och/eller lånats ut till den valda sidan av referenskomponenten
+   * innehåll som lånats från, eller lånats ut, eller både och, till den valda sidan av referenskomponenten
 
 ![bh-28](assets/bh-28.png)
 
 ### Filter {#filter}
 
-Då öppnas en panel som liknar [sök](/help/sites-authoring/search.md) med rätt platsfilter redan inställda så att du kan filtrera innehållet ytterligare.
+Då öppnas en panel som liknar [sök](/help/sites-authoring/search.md), med rätt platsfilter inställda så att du kan filtrera innehållet ytterligare.
 
 ![Filter](assets/bh-29.png)

@@ -1,27 +1,27 @@
 ---
 title: Skapa innehållsfragmentmodeller Headless Quick Start Guide
-description: Definiera strukturen för det innehåll du skapar och använd AEM headless-funktioner med hjälp av Content Fragment-modeller.
+description: Definiera strukturen för det innehåll du skapar och betjänar med hjälp av Adobe Experience Manager (AEM) headless-funktioner med hjälp av Content Fragment-modeller.
 exl-id: 653e35c9-7b6a-49ae-b55d-af2ec40e257d
-source-git-commit: 7355c149500f9e5044c9ff78af208d36ee681f56
+source-git-commit: b66ec42c35b5b60804015d340b8194bbd6ef3e28
 workflow-type: tm+mt
-source-wordcount: '492'
+source-wordcount: '488'
 ht-degree: 0%
 
 ---
 
 # Skapa innehållsfragmentmodeller Headless Quick Start Guide {#creating-content-fragment-models}
 
-Definiera strukturen för det innehåll du skapar och använd AEM headless-funktioner med hjälp av Content Fragment-modeller.
+Definiera strukturen för det innehåll du skapar och betjänar med hjälp av Adobe Experience Manager (AEM) headless-funktioner med hjälp av Content Fragment-modeller.
 
 ## Vad är Content Fragment Models? {#what-are-content-fragment-models}
 
 [Nu när du har skapat en konfiguration](create-configuration.md) du kan använda den för att skapa modeller för innehållsfragment.
 
-Modeller för innehållsfragment definierar strukturen för data och innehåll som du skapar och hanterar i AEM. De fungerar som en sorts ställningar för ert innehåll. När du väljer att skapa innehåll väljer författarna bland de modeller för innehållsfragment som du definierar, som vägleder dem när de skapar innehåll.
+Modeller för innehållsfragment definierar strukturen för data och innehåll som du skapar och hanterar i AEM. De fungerar som en sorts ställningar för ert innehåll. När du väljer att skapa innehåll väljer författarna bland de innehållsfragmentsmodeller du definierar, som vägleder dem när de skapar innehåll.
 
 ## Så här skapar du en innehållsfragmentmodell {#how-to-create-a-content-fragment-model}
 
-En informationsarkitekt skulle utföra dessa uppgifter endast sporadiskt när nya modeller behövs. I den här guiden behöver vi bara skapa en modell.
+En informationsarkitekt skulle utföra dessa uppgifter endast sporadiskt när nya modeller behövs. I den här guiden för att komma igång skapar du bara en modell.
 
 1. Logga in AEM och välj **Verktyg -> Resurser -> Modeller för innehållsfragment**.
 1. Tryck eller klicka på mappen som skapades när du skapade konfigurationen.
@@ -38,17 +38,17 @@ En informationsarkitekt skulle utföra dessa uppgifter endast sporadiskt när ny
 
    ![Dra och släppa fält](assets/models-drag-and-drop.png)
 
-1. När du har placerat ett fält måste du konfigurera dess egenskaper. Redigeraren växlar automatiskt till **Egenskaper** -fliken för det tillagda fältet där du kan ange de obligatoriska fälten.
+1. När du har placerat ett fält måste du konfigurera dess egenskaper. Redigeraren växlar automatiskt till **Egenskaper** för det tillagda fältet där du kan ange de obligatoriska fälten.
 
    ![Konfigurera egenskaper](assets/models-configure-properties.png)
 1. När du är klar med att skapa modellen trycker du eller klickar **Spara**.
 
 1. Läget för den nyskapade modellen beror på om du har valt **Aktivera modell** när du skapar modellen:
-   * vald - den nya modellen kommer redan att **Aktiverad**
+   * vald - den nya modellen är redan **Aktiverad**
    * inte valt - den nya modellen skapas i **Utkast** läge
 
 1. Om modellen inte redan är aktiverad måste den **Aktiverad** för att använda den.
-   1. Välj den modell du just skapade och tryck eller klicka sedan på **Aktivera**.
+   1. Välj den modell du skapade och tryck eller klicka sedan på **Aktivera**.
 
       ![Aktivera modellen](assets/models-enable.png)
    1. Bekräfta aktivering av modellen genom att trycka eller klicka **Aktivera** i bekräftelsedialogrutan.
@@ -56,7 +56,7 @@ En informationsarkitekt skulle utföra dessa uppgifter endast sporadiskt när ny
       ![Aktivera bekräftelsedialogrutan](assets/models-enabling.png)
 1. Modellen är nu aktiverad och klar att användas.
 
-   ![Modellen är aktiverad](assets/models-enabled.png)
+   ![Modell aktiverad](assets/models-enabled.png)
 
 The **Modellredigerare för innehållsfragment** har stöd för många olika datatyper, till exempel enkla textfält, resursreferenser, referenser till andra modeller och JSON-data.
 
@@ -64,7 +64,7 @@ Du kan skapa flera modeller. Modeller kan referera till andra innehållsfragment
 
 ## Nästa steg {#next-steps}
 
-Nu när du har definierat strukturen för dina innehållsfragment genom att skapa modeller kan du gå vidare till den tredje delen av guiden Komma igång och [skapa mappar där du lagrar fragmenten själva.](create-assets-folder.md)
+Nu när du har definierat strukturen för dina innehållsfragment genom att skapa modeller kan du gå vidare till den tredje delen av guiden Komma igång och [skapa mappar där du lagrar fragmenten.](create-assets-folder.md)
 
 >[!TIP]
 >

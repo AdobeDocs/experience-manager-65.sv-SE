@@ -1,30 +1,26 @@
 ---
 title: Webbkonsol i Adobe Experience Manager
-seo-title: Web Console
-description: Lär dig hur du använder AEM webbkonsol.
-seo-description: Learn how to use the AEM web console.
-uuid: 7856b2b3-4216-421d-a315-cd9a55936362
+description: Lär dig hur du använder Adobe Experience Manager webbkonsol.
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: configuring
-discoiquuid: 4a33fddd-0399-40e4-8687-564fb6765b76
 feature: Configuring
 exl-id: 9acbf61f-73a8-4998-9421-dd933f30ac8a
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: b66ec42c35b5b60804015d340b8194bbd6ef3e28
 workflow-type: tm+mt
-source-wordcount: '719'
+source-wordcount: '710'
 ht-degree: 0%
 
 ---
 
 # Webbkonsol{#web-console}
 
-Webbkonsolen i AEM baseras på [Apache Felix Web Management Console](https://felix.apache.org/documentation/subprojects/apache-felix-web-console.html). Apache Felix är en community-satsning för att implementera OSGi R4 Service Platform, som innehåller OSGi-ramverket och standardtjänster.
+Webbkonsolen i Adobe Experience Manager (AEM) är baserad på [Apache Felix Web Management Console](https://felix.apache.org/documentation/subprojects/apache-felix-web-console.html). Apache Felix är en community-satsning för att implementera OSGi R4 Service Platform, som innehåller OSGi-ramverket och standardtjänster.
 
 >[!NOTE]
 >
->På webbkonsolen finns beskrivningar som anger standardinställningar för Sling.
+>På webbkonsolen gäller alla beskrivningar som anger standardinställningar för Sling.
 >
 >AEM har sina egna standardinställningar, så standarduppsättningen kan skilja sig från dem som finns dokumenterade på konsolen.
 
@@ -75,7 +71,7 @@ Gör att du kan skapa en instans av det nödvändiga funktionsobjektet.
 
   Detta tilldelas en beständig identitet och visas sedan i listrutan Konfigurationer.
 
-Om du väljer en post i listorna visas de parametrar som är kopplade till den konfigurationen:
+Om du väljer en post i listan visas de parametrar som är relaterade till den konfigurationen:
 
 ![chlimage_1-21](assets/chlimage_1-21a.png)
 
@@ -85,7 +81,7 @@ Du kan sedan uppdatera parametrarna efter behov och:
 
   Spara ändringarna.
 
-  För en fabrikskonfiguration skapas en ny instans med en beständig identitet. Den nya instansen visas sedan under Konfigurationer.
+  För en fabrikskonfiguration skapas en instans med en beständig identitet. Den nya instansen visas sedan under Konfigurationer.
 
 * **Återställ**
 
@@ -133,7 +129,7 @@ På den här fliken kan du:
 
   Detta kontrollerar referenserna för alla paket och uppdaterar vid behov.
 
-  Efter en uppdatering kan till exempel både den gamla och den nya versionen fortfarande köras på grund av tidigare referenser. Med det här alternativet kontrolleras och flyttas alla referenser till den nya versionen så att den gamla versionen kan stoppas.
+  Efter en uppdatering kan till exempel både den gamla och den nya versionen fortfarande köras på grund av tidigare referenser. Det här alternativet kontrollerar och flyttar alla referenser till den nya versionen, så att den gamla versionen kan stoppas.
 
 * **Starta**
 
@@ -149,11 +145,11 @@ På den här fliken kan du:
 
 * **visa status**
 
-  Listan anger paketets aktuella status. Klicka på namnet på ett specifikt paket och visa mer information.
+  Listan anger paketets status. Klicka på namnet på ett specifikt paket och visa mer information.
 
 >[!NOTE]
 >
->Efter **Uppdatera** vi rekommenderar att du utför en **Uppdatera paket**.
+>Efter **Uppdatera** rekommenderar Adobe att du utför en **Uppdatera paket**.
 
 ## Komponenter {#components}
 

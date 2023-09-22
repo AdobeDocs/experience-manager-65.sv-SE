@@ -1,21 +1,17 @@
 ---
 title: Komponenter för innehållsfragment
-seo-title: Components for Content Fragments
-description: AEM innehållsfragment skapas och hanteras som sidoberoende resurser
-seo-description: AEM content fragments are created and managed as page-independent assets
-uuid: 81a9e0fe-ed45-4880-b36c-4f49e2598389
+description: Innehållsfragment i Adobe Experience Manager (AEM) skapas och hanteras som sidoberoende resurser
 contentOwner: AEM Docs
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: components
 content-type: reference
-discoiquuid: b7777dc5-a867-4799-9e2c-a1f4bb5dd96a
 docset: aem65
 pagetitle: Components for Content Fragments
 exl-id: f2edd9b2-f231-42f3-a25e-428cd1d96c2a
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: b66ec42c35b5b60804015d340b8194bbd6ef3e28
 workflow-type: tm+mt
-source-wordcount: '960'
-ht-degree: 1%
+source-wordcount: '961'
+ht-degree: 2%
 
 ---
 
@@ -33,7 +29,7 @@ Se [API för hantering av innehållsfragment - klientsida](/help/sites-developin
 
 >[!CAUTION]
 >
->The [Kärnkomponent för innehållsfragment](https://helpx.adobe.com/experience-manager/core-components/using/content-fragment-component.html) rekommenderas nu. Se [Utveckla kärnkomponenter](https://helpx.adobe.com/experience-manager/core-components/using/developing.html) för mer information.
+>The [Kärnkomponent för innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/content-fragment-component.html?lang=en) rekommenderas nu. Se [Utveckla kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/overview.html?lang=en) för mer information.
 >
 >I det här avsnittet beskrivs den ursprungliga komponenten som levererats för användning med innehållsfragment (**Innehållsfragment** i **Allmänt** grupp).
 
@@ -71,13 +67,13 @@ Det här biblioteket lägger till funktioner som är specifika för innehållsfr
 
 The **Content Fragmen** Med den här komponenten kan du släppa ytterligare komponenter mellan de olika styckena i den visade [element](/help/assets/content-fragments/content-fragments.md#constituent-parts-of-a-content-fragment). Elementet som visas består i själva verket av olika stycken (varje stycke markeras med en radmatning). Du kan infoga innehåll med andra komponenter mellan styckena.
 
-Ur teknisk synvinkel finns varje stycke i det visade elementet* *i en egen parsys, och varje komponent som du lägger till mellan styckena infogas (under huven) i parsytan.
+Ur teknisk synvinkel finns varje stycke i det visade elementet i en egen parsys, och varje komponent som du lägger till mellan styckena infogas (under huven) i parsytan.
 
-Det innebär att om instansen av innehållsavsnittskomponenten består av tre stycken, kommer komponenten att ha tre olika parsyser i databasen. Allt mellanliggande innehåll som läggs till i innehållsfragmentet finns i dessa parsyser.
+Om instansen av innehållsavsnittskomponenten består av tre stycken, har komponenten alltså tre olika parsyser i databasen. Allt mellanliggande innehåll som läggs till i innehållsfragmentet finns i dessa parsys.
 
-I databasen lagras det mellanliggande innehållet i förhållande till dess placering inuti den övergripande styckestrukturen, dvs. det är inte kopplat till det faktiska styckeinnehållet.
+I databasen lagras det mellanliggande innehållet i förhållande till dess position inuti den övergripande styckestrukturen, d.v.s. det är inte kopplat till det faktiska styckeinnehållet.
 
-För att illustrera detta anser vi att vi har:
+Tänk på följande för att illustrera detta:
 
 * En instans av ett innehållsfragment bestående av tre stycken
 * Och att en del innehåll redan har infogats efter det andra stycket
@@ -88,21 +84,21 @@ Om styckestrukturen i den här instansen ändras (genom att ändra variationen, 
 
 * Redigeras och ett annat stycke läggs till före det andra stycket:
 
-   * Det mellanliggande innehållet visas efter det nya stycket (det nya stycket finns nu i det andra stycket).
+   * Det mellanliggande innehållet visas efter det nya stycket (den andra parsysen innehåller nu det nya stycket).
 
 * Redigeras och det andra stycket tas bort:
 
-   * Det mellanliggande innehållet visas efter det stycke som tidigare var det tredje (det andra stycket gäller nu det föregående tredje stycket).
+   * Det mellanliggande innehållet visas efter det stycke som tidigare var det tredje (det andra stycket innehåller nu det föregående tredje stycket).
 
 * Har konfigurerats så att endast det första stycket visas:
 
-   * Det mellanliggande innehållet visas inte (den andra parsysen återges inte längre på grund av den nya konfigurationen).
+   * Det mellanliggande innehållet visas inte (den andra parametern återges inte längre på grund av den nya konfigurationen).
 
 ### Anpassa komponenten Innehållsfragment {#customizing-the-content-fragment-component}
 
 Om du vill använda fragmentkomponenten som finns i kartongen som en plan för tillägg måste du följa följande kontrakt:
 
-* Återanvänd HTML-återgivningsskriptet och tillhörande POJO för att se hur funktionen för mellanliggande innehåll implementeras.
+* Återanvänd HTML-återgivningsskriptet och tillhörande POJO så att du kan se hur funktionen för mellanliggande innehåll implementeras.
 * Återanvänd noden för innehållsfragment: `cq:editConfig`
 
    * The `afterinsert`/ `afteredit`/ `afterdelete` avlyssnare används för att utlösa JS-händelser. Dessa händelser hanteras i `cq.authoring.editor.plugin.cfm` klientbibliotek för att visa det associerade innehållet på sidopanelen.
@@ -113,7 +109,7 @@ Om du vill använda fragmentkomponenten som finns i kartongen som en plan för t
 
 I Content Fragment Management används en intern återgivningsprocess för att generera det slutliga HTML-resultatet för en sida. Detta används internt av komponenten Content Fragment, men också av bakgrundsprocessen som uppdaterar refererade fragment på refererande sidor.
 
-Internt används Sling Rewriter för den återgivningen. Motsvarande konfiguration finns på `/libs/dam/config/rewriter/cfm` och kan justeras vid behov. Se [Apache Sling Rewriter](https://sling.apache.org/documentation/bundles/output-rewriting-pipelines-org-apache-sling-rewriter.html) för mer information.
+Internt används Sling Rewriter för den återgivningen. Motsvarande konfiguration finns på `/libs/dam/config/rewriter/cfm` och kan vid behov justeras. Se [Apache Sling Rewriter](https://sling.apache.org/documentation/bundles/output-rewriting-pipelines-org-apache-sling-rewriter.html) för mer information.
 
 >[!CAUTION]
 >
@@ -121,7 +117,7 @@ Internt används Sling Rewriter för den återgivningen. Motsvarande konfigurati
 >
 >* `/libs/dam/config/rewriter/cfm`
 >
->sedan `serializerType` **måste** uppdateras till:
+>Sedan `serializerType` **måste** uppdateras till:
 >
 >* `serializerType="html5-serializer"`
 
@@ -132,4 +128,4 @@ I konfigurationen som är klar att användas används följande transformatorer:
 * `transformer-cfm-parfilter` - filtrerar bort oönskade stycken om ett styckeintervall anges (som kan göras med komponenten Innehållsfragment)
 * `transformer-cfm-assetprocessor` - används internt för att hämta en lista över resurser som är inbäddade i fragmentet
 
-Återgivningsprocessen visas genom [`com.adobe.cq.dam.cfm.content.FragmentRenderService`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/dam/cfm/ContentFragment.html) och kan utnyttjas (till exempel) av anpassade komponenter om det behövs.
+Återgivningsprocessen visas genom [`com.adobe.cq.dam.cfm.content.FragmentRenderService`](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/dam/cfm/ContentFragment.html) och kan användas (till exempel) av anpassade komponenter, om det behövs.

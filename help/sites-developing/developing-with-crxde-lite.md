@@ -1,31 +1,27 @@
 ---
 title: Utveckla med CRXDE Lite
-seo-title: Developing with CRXDE Lite
-description: CRXDE Lite är inbäddat i AEM och gör att du kan utföra standardutvecklingsuppgifter i webbläsaren
-seo-description: CRXDE Lite is embedded into AEM and enables you to perform standard development tasks in the browser
-uuid: f4890354-d8b8-4fb9-af2f-3359f931f883
+description: CRXDE Lite är inbäddat i Adobe Experience Manager (AEM) och gör att du kan utföra standardutvecklingsuppgifter i webbläsaren
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: development-tools
 content-type: reference
-discoiquuid: 4537c1fb-f99c-42e2-a222-b037794bdb52
 docset: aem65
 exl-id: 9e88ca55-ac3d-4857-b6b2-aeb732562664
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: b66ec42c35b5b60804015d340b8194bbd6ef3e28
 workflow-type: tm+mt
-source-wordcount: '2137'
+source-wordcount: '2120'
 ht-degree: 0%
 
 ---
 
 # Utveckla med CRXDE Lite{#developing-with-crxde-lite}
 
-I det här avsnittet beskrivs hur du utvecklar AEM med CRXDE Lite.
+I det här avsnittet beskrivs hur du utvecklar ditt Adobe Experience Manager-program (AEM) med CRXDE Lite.
 
 Mer information om olika utvecklingsmiljöer finns i översiktsdokumentationen.
 
 CRXDE Lite är inbäddat i AEM och gör att du kan utföra standardutvecklingsuppgifter i webbläsaren. Med CRXDE Lite kan du skapa ett projekt, skapa och redigera filer (som .jsp och .java), mappar, mallar, komponenter, dialogrutor, noder, egenskaper och paket när du loggar.
-CRXDE Lite rekommenderas när du inte har direktåtkomst till AEM, när du utvecklar ett program genom att utöka eller ändra körklara komponenter och Java-paket eller när du inte behöver en dedikerad felsökare, kodkomplettering och syntaxmarkering.
+CRXDE Lite rekommenderas när du inte har direktåtkomst till AEM. Eller när du utvecklar ett program genom att utöka eller ändra körklara komponenter och Java™-paket, eller när du inte behöver en dedikerad felsökare, kodkomplettering och syntaxmarkering.
 
 >[!NOTE]
 >
@@ -35,7 +31,7 @@ CRXDE Lite rekommenderas när du inte har direktåtkomst till AEM, när du utvec
 
 >[!NOTE]
 >
->Det rekommenderas att du använder [AEM Developer Tools for Eclipse](/help/sites-developing/aem-eclipse.md) och [Tillägget AEM HTML-parenteser](/help/sites-developing/aem-brackets.md) under projektutvecklingen.
+>Adobe rekommenderar att du använder [AEM Developer Tools for Eclipse](/help/sites-developing/aem-eclipse.md) och [Tillägget AEM HTML-parenteser](/help/sites-developing/aem-brackets.md) under projektutvecklingen.
 
 ## Komma igång med CRXDE Lite {#getting-started-with-crxde-lite}
 
@@ -61,19 +57,19 @@ CRXDE Lite har följande funktioner:
  <tbody>
   <tr>
    <td>Övre växlingsfält</td>
-   <td>Växla snabbt mellan CRXDE Lite, Pakethanteraren och Paketresurs.</td>
+   <td>Växla snabbt mellan CRXDE Lite, Package Manager och Package Share.</td>
   </tr>
   <tr>
    <td>Widgeten Nodbana</td>
-   <td><p>Visar sökvägen till den markerade noden.</p> <p>Du kan också använda den för att hoppa till en nod, ange sökvägen manuellt eller klistra in den någon annanstans och trycka på Retur.</p> <p>Det finns även stöd för att söka efter noder med ett specifikt nodnamn. Ange namnet på noden som du vill söka efter och vänta (eller tryck på söksymbolen till höger). Du kan till exempel försöka att ange strängen <em>oak</em> i widgeten för att se hur den fungerar. Om en viss nod eller noder läses in i utforskarrutan visas listan och du kan välja sökvägen och klicka på Retur för att navigera till den. Observera att det bara fungerar för de noder som för närvarande är inlästa i CRXDE-klientprogrammet i webbläsaren. Om du vill söka i hela databasen använder du Verktyg och sedan Fråga.</p> </td>
+   <td><p>Visar sökvägen till den markerade noden.</p> <p>Du kan också använda den för att hoppa till en nod, ange sökvägen manuellt eller klistra in den någon annanstans och trycka på Retur.</p> <p>Den har även stöd för att söka efter noder med ett specifikt nodnamn. Ange namnet på noden som du vill söka efter och vänta (eller tryck på söksymbolen till höger). Du kan försöka att ange strängen, till exempel <em>oak</em> i widgeten för att se hur den fungerar. Om en viss nod eller noder läses in i utforskarrutan visas listan och du kan välja sökvägen och trycka på Retur för att navigera till den. Det fungerar bara för noder som läses in i CRXDE-klientprogrammet i webbläsaren. Om du vill söka i hela databasen använder du Verktyg och sedan Fråga.</p> </td>
   </tr>
   <tr>
    <td>Utforskarfönster</td>
-   <td><p>Visar ett träd med alla noder i databasen.</p> <p>Klicka på en nod för att visa dess egenskaper i <strong>Egenskaper</strong> -fliken. När du har klickat på en nod kan du välja en åtgärd i verktygsfältet. Klicka på noden igen för att byta namn på den.</p> <p>Trädnavigeringsfilter (binokulär ikon): gör att du kan filtrera noderna i databasen som namnet innehåller indatatexten för. Det gäller endast noder som har lästs in lokalt.<br /> </p> </td>
+   <td><p>Visar ett träd med alla noder i databasen.</p> <p>Klicka på en nod så att du kan visa dess egenskaper i <strong>Egenskaper</strong> -fliken. När du har klickat på en nod kan du välja en åtgärd i verktygsfältet. Klicka på noden igen för att byta namn på den.</p> <p>Trädnavigeringsfilter (binokulär ikon): gör att du kan filtrera noderna i databasen som namnet innehåller indatatexten för. Det gäller endast noder som har lästs in lokalt.<br /> </p> </td>
   </tr>
   <tr>
    <td>Redigeringsruta</td>
-   <td><p><strong>Startsida</strong> -fliken: gör att du kan söka efter innehåll och/eller dokumentation och komma åt utvecklarresurser (dokumentation, utvecklarblogg, kunskapsbas) och support (Adobe hemsida och supportcenter).<br /> </p> <p>Dubbelklicka på en fil i <strong>Explorer</strong> för att visa innehållet, t.ex. en .jsp- eller .java-fil. Du kan sedan ändra den och spara ändringarna.</p> <p>När en fil har redigerats i <strong>Redigera</strong> finns följande verktyg i verktygsfältet:<br /> </p> - <strong>Visa i träd: </strong>visar filen i databasträdet.<br /> - <strong>Sök/ersätt ...</strong>: gör sök eller ersätt.<br /> <br /> Dubbelklicka på statusraden i <strong>Redigera</strong> öppnar fönstret <strong>Gå till rad</strong> så att du kan ange ett visst radnummer att gå till.<br /> </td>
+   <td><p><strong>Startsida</strong> -fliken: gör att du kan söka efter innehåll och/eller dokumentation och komma åt utvecklarresurser (dokumentation, utvecklarblogg, kunskapsbas) och support (Adobe hemsida och supportcenter).<br /> </p> <p>Dubbelklicka på en fil i <strong>Explorer</strong> så att du kan visa dess innehåll. Exempel: en .jsp- eller .java-fil. Du kan sedan ändra den och spara ändringarna.</p> <p>När en fil har redigerats i <strong>Redigera</strong> finns följande verktyg i verktygsfältet:<br /> </p> - <strong>Visa i träd: </strong>visar filen i databasträdet.<br /> - <strong>Sök/ersätt ...</strong>: gör sök eller ersätt.<br /> <br /> Dubbelklicka på statusraden i <strong>Redigera</strong> öppnar fönstret <strong>Gå till rad</strong> så att du kan ange ett visst radnummer att gå till.<br /> </td>
   </tr>
   <tr>
    <td>Fliken Egenskaper<br /> </td>
@@ -81,15 +77,15 @@ CRXDE Lite har följande funktioner:
   </tr>
   <tr>
    <td>Fliken Åtkomstkontroll</td>
-   <td><p>Visa behörigheter baserat på aktuell sökväg, databasnivå eller säkerhetsobjekt.</p> <p>Behörigheterna delas upp i</p> <p>- <strong>Tillämplig åtkomstkontrollprincip</strong>: De profiler som kan tillämpas på den aktuella markeringen.</p> <p>- <strong>Principer för lokal åtkomstkontroll</strong>: Aktuella principer som används lokalt för den aktuella markeringen.</p> <p>- <strong>Effektiva åtkomstkontrollprinciper</strong>: De aktuella principer som används för den aktuella markeringen kan anges lokalt eller ärvs från överordnade noder.</p> <p>Obs! För att kunna se åtkomstkontrollsinformationen alls måste användaren som är inloggad på CRXDE Lite ha behörighet att läsa åtkomstkontrollposter. Den anonyma användaren kan inte se den här informationen som standard - logga in som administratör för att se informationen.</p> </td>
+   <td><p>Visa behörigheter baserat på sökväg, databasnivå eller huvudnamn.</p> <p>Behörigheterna delas upp i</p> <p>- <strong>Tillämplig åtkomstkontrollprincip</strong>: De profiler som kan användas i markeringen.</p> <p>- <strong>Principer för lokal åtkomstkontroll</strong>: De profiler som används lokalt i markeringen.</p> <p>- <strong>Effektiva åtkomstkontrollprinciper</strong>: De principer som används för markeringen kan anges lokalt eller ärvas från överordnade noder.</p> <p>Obs! För att kunna se åtkomstkontrollsinformationen alls måste användaren som är inloggad på CRXDE Lite ha läsbehörighet till ACL-poster. Den anonyma användaren kan inte se den här informationen som standard - logga in som administratör för att se informationen, till exempel.</p> </td>
   </tr>
   <tr>
    <td>Fliken Replikering</td>
-   <td><p>Visa den aktuella nodens replikeringsstatus. Du kan replikera och replikera borttagningen av den aktuella noden.</p> </td>
+   <td><p>Visa nodens replikeringsstatus. Du kan replikera och replikera borttagningen av noden.</p> </td>
   </tr>
   <tr>
    <td>Fliken Konsol<br /> </td>
-   <td><p><strong>Serverloggar</strong>:</p> <p>Visar loggmeddelanden. Du kan konfigurera loggnivån, rensa konsolen, fästa vid den valda rullningspositionen och aktivera/inaktivera visning av meddelanden.<br /> </p> <p><strong>Versionskontroll</strong>:</p> <p>Visar versionskontrollmeddelanden.<br /> </p> </td>
+   <td><p><strong>Serverloggar</strong>:</p> <p>Visar loggmeddelanden. Du kan konfigurera loggnivån, rensa konsolen, fästa vid den valda rullningspositionen och aktivera eller inaktivera visningen av meddelanden.<br /> </p> <p><strong>Versionskontroll</strong>:</p> <p>Visar versionskontrollmeddelanden.<br /> </p> </td>
   </tr>
   <tr>
    <td>Fliken Bygginformation<br /> </td>
@@ -97,11 +93,11 @@ CRXDE Lite har följande funktioner:
   </tr>
   <tr>
    <td>Uppdatera<br /> </td>
-   <td>Uppdaterar den aktuella markeringen. Ändringar från andra användare uppdateras i din vy av databasen. De ändringar du har gjort påverkas inte.<br /> </td>
+   <td>Uppdaterar markeringen. Ändringar från andra användare uppdateras i din vy av databasen. De ändringar du har gjort påverkas inte.<br /> </td>
   </tr>
   <tr>
    <td>Spara alla</td>
-   <td><p><strong>Spara alla</strong>:<br /> </p> <p>Sparar alla ändringar du har gjort. Tills du klickar på Spara är ändringarna temporära och försvinner när du avslutar konsolen.</p> <p><strong>Återställ</strong>:</p> <p>Ignorerar alla ändringar som du har gjort på den valda noden sedan den senaste sparaåtgärden och läser sedan in databasens aktuella status för den valda noden igen.</p> <p><strong>Återställ alla</strong>:</p> <p>Ignorerar alla ändringar som du har gjort i hela databasen sedan den senaste sparåtgärden och läser sedan in databasens aktuella läge igen.</p> </td>
+   <td><p><strong>Spara alla</strong>:<br /> </p> <p>Sparar alla ändringar du har gjort. Tills du klickar på Spara är ändringarna temporära och försvinner när du avslutar konsolen.</p> <p><strong>Återställ</strong>:</p> <p>Ignorerar alla ändringar som du har gjort på den valda noden sedan den senaste sparaåtgärden och läser sedan in databasens status för den valda noden igen.</p> <p><strong>Återställ alla</strong>:</p> <p>Ignorerar alla ändringar som du har gjort i hela databasen sedan den senaste sparåtgärden och läser sedan in databasens status igen.</p> </td>
   </tr>
   <tr>
    <td>Skapa ...<br /> </td>
@@ -137,7 +133,7 @@ CRXDE Lite har följande funktioner:
   </tr>
   <tr>
    <td>Inloggningswidget<br /> </td>
-   <td><p>Visar de inloggade användarna och arbetsytan de är inloggade på, till exempel admin@crx.default.</p> <p>Klicka på den för att logga in eller logga in igen som en specifik användare. Om du inte anger en arbetsyta att logga in på loggas du in på standardarbetsytan, crx.default.</p> <p>Om du vill bläddra i databasen som anonym användare använder du <strong>anonym</strong> som inloggningsnamn och lösenord (till exempel ett mellanslag eller en punkt).<br /> </p> <p>Om din auktorisering inte längre är giltig (till exempel att den har gått ut) visas "<strong>Obehörig - Logga in..</strong>". Klicka på den för att logga in igen.</p> </td>
+   <td><p>Visar de inloggade användarna och arbetsytan som de är inloggade på, till exempel admin@crx.default.</p> <p>Klicka på den för att logga in eller logga in igen som en specifik användare. Om du inte anger en arbetsyta att logga in på loggas du in på standardarbetsytan, crx.default.</p> <p>Om du vill bläddra i databasen som anonym användare använder du <strong>anonym</strong> som inloggningsnamn och lösenord (till exempel ett mellanslag eller en punkt).<br /> </p> <p>Om din auktorisering inte längre är giltig (t.ex. har upphört att gälla) visas "<strong>Obehörig - Logga in..</strong>". Klicka på den för att logga in igen.</p> </td>
   </tr>
  </tbody>
 </table>
@@ -147,7 +143,7 @@ CRXDE Lite har följande funktioner:
 Så här skapar du en mapp med CRXDE Lite:
 
 1. Öppna CRXDE Lite i webbläsaren.
-1. I navigeringsrutan högerklickar du på den mapp under vilken du vill skapa den nya mappen, och väljer **Skapa ...** sedan **Skapa mapp...**.
+1. I navigeringsrutan högerklickar du på den mapp som du vill skapa mappen under och väljer **Skapa ...** sedan **Skapa mapp...**.
 
 1. Ange mappen **Namn** och klicka **OK**.
 
@@ -218,7 +214,7 @@ En dialogruta med följande struktur skapas:
 
 `dialog[cq:Dialog]/items[cq:Widget]/items[cq:WidgetCollection]/tab1[cq:Panel]`
 
-Nu kan du anpassa dialogrutan efter dina behov genom att ändra egenskaper eller skapa nya noder.
+Nu kan du anpassa dialogrutan efter dina behov genom att ändra egenskaper eller skapa noder.
 
 Du kan också använda Dialogruteredigeraren för att redigera en dialogruta. Om du dubbelklickar på dialognoden i CRXDE Lite öppnas redigeraren. Mer information om Dialog Editor finns [här](/help/sites-developing/dialog-editor.md).
 
@@ -227,17 +223,17 @@ Du kan också använda Dialogruteredigeraren för att redigera en dialogruta. Om
 Så här skapar du en nod med CRXDE Lite:
 
 1. Öppna CRXDE Lite i webbläsaren.
-1. Högerklicka på noden där du vill skapa den nya noden i navigeringsrutan och välj **Skapa ...** sedan **Skapa nod...**.
+1. Högerklicka på noden där du vill skapa noden i navigeringsrutan och välj **Skapa ...** sedan **Skapa nod...**.
 1. Ange **Namn** och **Typ**. Klicka **OK**.
 1. Klicka **Spara alla** för att spara ändringarna på servern.
 
-Nu kan du anpassa noden efter dina behov genom att ändra egenskaper eller skapa nya noder.
+Nu kan du anpassa noden efter dina behov genom att ändra egenskaper eller skapa noder.
 
 >[!NOTE]
 >
 >De flesta redigeringsåtgärderna, inklusive Skapa nod, sparar alla ändringar i minnet och lagrar dem bara i databasen när de sparas (med knappen &quot;Spara alla&quot;). Vissa åtgärder, till exempel move, sparas dock automatiskt.
 >
->Valideringen av om den nyskapade noden tillåts av den överordnade nodens nodtyp utförs också av JCR-databasen först när ändringarna sparas. Om du får ett felmeddelande när du sparar en nod kontrollerar du om innehållsstrukturen är giltig (du kan till exempel inte skapa ett `nt:unstructured` nod som underordnad `nt:folder` nod).
+>Valideringen av om den nyskapade noden tillåts av den överordnade nodens nodtyp utförs också av JCR-databasen först när ändringarna sparas. Om du får ett felmeddelande när du sparar en nod kontrollerar du om innehållsstrukturen är giltig (du kan till exempel inte skapa en `nt:unstructured` nod som underordnad `nt:folder` nod).
 
 ## Skapa en egenskap {#creating-a-property}
 
@@ -251,7 +247,7 @@ Så här skapar du en egenskap med CRXDE Lite:
 
 ## Skapa ett skript {#creating-a-script}
 
-Skapa ett nytt skript:
+Skapa ett skript:
 
 1. Öppna CRXDE Lite i webbläsaren.
 1. Högerklicka på den komponent där du vill skapa skriptet i navigeringsrutan och välj **Skapa ...** sedan **Skapa fil...**.
@@ -272,7 +268,7 @@ Så här exporterar du en nodtypsdefinition:
 1. Välj önskad nod.
 1. Välj **verktyg** sedan **Exportera nodtyp**.
 
-1. Definitionen visas i syntaxen i webbläsaren. Spara informationen om det behövs.
+1. Definitionen visas i slutet av webbläsaren. Spara informationen, om det behövs.
 
 Så här importerar du en nodtypsdefinition:
 
@@ -296,7 +292,7 @@ Du kan:
 
 * Justera loggparametrarna i Felix Console genom att klicka på **Loggningskonfigurationer** -ikon.
 * Rensa meddelandena genom att klicka på knappen **Pensel** -ikon.
-* Fäst meddelandet vid den aktuella markeringen genom att klicka på knappen **Fäst** -ikon.
+* Fäst meddelandet vid markeringen genom att klicka på knappen **Fäst** -ikon.
 * Aktivera eller inaktivera visning av meddelanden genom att klicka på **Stoppa** -ikon.
 
 ## Åtkomstkontroll {#access-control}

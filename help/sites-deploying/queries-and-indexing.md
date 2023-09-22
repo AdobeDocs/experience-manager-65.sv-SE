@@ -1,6 +1,6 @@
 ---
 title: Fråga och indexering
-description: Lär dig konfigurera index i AEM.
+description: Lär dig konfigurera index i Adobe Experience Manager.
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
@@ -8,7 +8,7 @@ topic-tags: deploying
 legacypath: /content/docs/en/aem/6-0/deploy/upgrade/queries-and-indexing
 feature: Configuring
 exl-id: d9ec7728-84f7-42c8-9c80-e59e029840da
-source-git-commit: 2adc33b5f3ecb2a88f7ed2c5ac5cc31f98506989
+source-git-commit: b66ec42c35b5b60804015d340b8194bbd6ef3e28
 workflow-type: tm+mt
 source-wordcount: '3033'
 ht-degree: 0%
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 ## Introduktion {#introduction}
 
-Till skillnad från Jackrabbit 2 indexerar inte Oak innehållet som standard. Anpassade index måste skapas när det behövs, ungefär som med traditionella relationsdatabaser. Om det inte finns något index för en viss fråga, kommer kanske många noder att gå igenom. Frågan kanske fortfarande fungerar, men den är antagligen ganska långsam.
+Till skillnad från Jackrabbit 2 indexerar inte Oak innehållet som standard. Anpassade index måste skapas när det behövs, ungefär som med traditionella relationsdatabaser. Om det inte finns något index för en viss fråga kan många noder gå igenom. Frågan kanske fortfarande fungerar, men den är förmodligen långsam.
 
 Om Oak stöter på en fråga utan index skrivs ett loggmeddelande på WARN-nivå ut:
 
@@ -42,7 +42,7 @@ Oak-frågemotorn stöder följande språk:
 
 ## Indexerartyper och kostnadsberäkning {#indexer-types-and-cost-calculation}
 
-Med den Apache Oak-baserade serverdelen kan olika indexerare kopplas in i databasen.
+Med Apache Oak-baserad backend kan olika indexerare kopplas in i databasen.
 
 En indexerare är **Egenskapsindex** som indexdefinitionen lagras i själva databasen.
 
@@ -64,7 +64,7 @@ Därefter används varje index för att beräkna kostnaden för frågan. När de
 
 >[!NOTE]
 >
->För stora databaser är det tidskrävande att skapa ett index. Detta gäller både när ett index skapas första gången och när ett index indexeras om (när definitionen ändrats). Se även [Felsökning av aktivitetsindex](/help/sites-deploying/troubleshooting-oak-indexes.md) och [Förhindra långsam omindexering](/help/sites-deploying/troubleshooting-oak-indexes.md#preventing-slow-re-indexing).
+>För en stor databas är det tidskrävande att skapa ett index. Detta gäller både när ett index skapas första gången och när ett index indexeras om (när definitionen ändrats). Se även [Felsökning av aktivitetsindex](/help/sites-deploying/troubleshooting-oak-indexes.md) och [Förhindra långsam omindexering](/help/sites-deploying/troubleshooting-oak-indexes.md#preventing-slow-re-indexing).
 
 Om omindexering behövs i stora databaser, särskilt när du använder MongoDB och fulltextindex, bör du överväga att extrahera text och använda eko-run för att skapa det ursprungliga indexet och indexera om.
 
@@ -92,11 +92,11 @@ Egenskapsindexet har följande konfigurationsalternativ:
 
 * The **type** egenskapen anger typen av index, och i det här fallet måste den anges till **property**
 
-* The **propertyNames** anger listan med egenskaper som ska lagras i indexet. Om det saknas används nodnamnet som referensvärde för egenskapsnamnet. I det här exemplet **jcr:uuid** egenskapen vars jobb är att visa den unika identifieraren (UUID) för noden läggs till i indexet.
+* The **propertyNames** anger listan med egenskaper som lagras i indexet. Om det saknas används nodnamnet som referensvärde för egenskapsnamnet. I det här exemplet **jcr:uuid** egenskapen vars jobb är att visa den unika identifieraren (UUID) för noden läggs till i indexet.
 
 * The **unik** flagga som, om den är inställd på **true** lägger till en unikhetsbegränsning i egenskapsindexet.
 
-* The **declareNodeTypes** kan du ange en viss nodtyp som indexet bara ska gälla för.
+* The **declareNodeTypes** kan du ange en viss nodtyp som indexet bara gäller för.
 * The **reindex** flagga som **true**, utlöser en omindexering av fullständigt innehåll.
 
 ### Orderat index {#the-ordered-index}
@@ -107,11 +107,11 @@ Det sorterade indexet är ett tillägg till egenskapsindexet. Den har dock tagit
 
 En fulltextindexerare baserad på Apache Lucene finns i AEM 6.
 
-Om ett fulltextindex är konfigurerat används heltextindexet för alla frågor som har ett fulltextvillkor, oavsett om det finns andra villkor som är indexerade eller oavsett om det finns en sökvägsbegränsning.
+Om ett fulltextindex är konfigurerat kommer alla frågor som har ett fulltextvillkor att använda fulltextindexet, oavsett om det finns andra villkor som är indexerade eller oavsett om det finns en sökvägsbegränsning.
 
-Om inget fulltextindex är konfigurerat kommer frågor med fulltextvillkor inte att fungera som förväntat.
+Om inget fulltextindex är konfigurerat fungerar inte frågor med fulltextvillkor som förväntat.
 
-Eftersom indexet uppdateras via en asynkron bakgrundstråd är vissa textsökningar inte tillgängliga för ett litet tidsfönster förrän bakgrundsprocesserna är klara.
+Eftersom indexet uppdateras med hjälp av en asynkron bakgrundstråd är vissa textsökningar inte tillgängliga för ett litet tidsfönster förrän bakgrundsprocesserna har slutförts.
 
 Du kan konfigurera ett fulltextindex för Lucene enligt följande procedur:
 
@@ -134,11 +134,11 @@ Lucene-indexet har följande konfigurationsalternativ:
 
 ### Förstå fulltextsökning {#understanding-fulltext-search}
 
-Dokumentationen i det här avsnittet gäller Apache Lucene, Elasticsearch och fulltextindex för exempelvis PostgreSQL, SQLite och MySQL. Följande exempel är för AEM / Oak / Lucene.
+Dokumentationen i det här avsnittet gäller till exempel Apache Lucene, Elasticsearch och fulltextindex för PostgreSQL, SQLite och MySQL. Följande exempel är för AEM / Oak / Lucene.
 
 <b>Data som ska indexeras</b>
 
-Startpunkten är de data som behöver indexeras. Ta följande dokument som exempel:
+Startpunkten är de data som måste indexeras. Ta följande dokument som exempel:
 
 | <b>Dokument-ID</b> | <b>Bana</b> | <b>Fulltext</b> |
 | --- | --- | --- |
@@ -149,11 +149,11 @@ Startpunkten är de data som behöver indexeras. Ta följande dokument som exemp
 
 <b>Inverterat index</b>
 
-Indexeringsfunktionen delar upp fulltexten i ord som kallas &quot;tokens&quot; och skapar ett index som kallas &quot;inverterat index&quot;. Indexet innehåller en lista med dokument där det visas för varje ord.
+Indexeringsfunktionen delar upp fulltexten i ord som kallas &quot;tokens&quot; och skapar ett index som kallas &quot;inverterat index&quot;. Indexet innehåller en lista med dokument där det finns för varje ord.
 
-Mycket kort, vanliga ord (kallas även&quot;stopwords&quot;) indexeras inte. Alla variabler konverteras till gemener och ordstam används.
+Korta, vanliga ord (kallas även&quot;stopwords&quot;) indexeras inte. Alla variabler konverteras till gemener och ordstam används.
 
-Lägg märke till specialtecken som *&quot;-&quot;* är inte indexerade.
+Specialtecken som *&quot;-&quot;* är inte indexerade.
 
 | <b>Token</b> | <b>Dokument-ID</b> |
 | --- | --- |
@@ -164,9 +164,9 @@ Lägg märke till specialtecken som *&quot;-&quot;* är inte indexerade.
 | avsluta | ..., 100,... |
 | uppfinna | 200 |
 | object | ..., 300,... |
-| rubik | .., 100, 200,... |
+| rubik | ..., 100, 200,... |
 
-Listan med dokument sorteras. Detta blir praktiskt när man frågar.
+Listan med dokument sorteras. Det här är praktiskt när du frågar.
 
 <b>Söker</b>
 
@@ -182,7 +182,7 @@ Orden tokeniseras och filtreras på samma sätt som vid indexering (enstaka teck
 +:fulltext:rubik +:fulltext:cube
 ```
 
-Indexet läser sedan igenom listan med dokument för dessa ord. Om det finns många dokument kan listorna vara mycket stora. Låt oss anta att de innehåller följande:
+Indexet läser listan med dokument för dessa ord. Om det finns många dokument kan listan vara stor. Anta att de innehåller följande:
 
 
 | <b>Token</b> | <b>Dokument-ID</b> |
@@ -191,7 +191,7 @@ Indexet läser sedan igenom listan med dokument för dessa ord. Om det finns må
 | kub | 30, 200, 300, 2000 |
 
 
-Lucene kommer att bläddra fram och tillbaka mellan de två listorna (eller rund-robin) `n` listor, vid sökning efter `n` ord):
+Lucene vänds fram och tillbaka mellan de två listorna (eller rund-robin) `n` listor, vid sökning efter `n` ord):
 
 * Läs in&quot;rubik&quot; hämtar den första posten: hittar 10
 * Läs i &quot;cube&quot; hämtar den första posten `>` = 10. 10 hittas inte och nästa är 30.
@@ -201,7 +201,7 @@ Lucene kommer att bläddra fram och tillbaka mellan de två listorna (eller rund
 * Läs in &quot;rubik&quot; hämtar nästa post: 1000.
 * Läs i &quot;cube&quot; hämtar den första posten `>` = 1000: 2000 hittas.
 * Läs in &quot;rubik&quot; som hämtar den första posten `>` = 2000: slut på listan.
-* Slutligen kan vi sluta söka.
+* Slutligen kan du sluta söka.
 
 Det enda dokument som innehåller båda villkoren är 200, som i exemplet nedan:
 
@@ -251,7 +251,7 @@ När noden har skapats lägger du till följande egenskaper:
 
 >[!NOTE]
 >
->Jämfört med det vanliga egenskapsindexet är Lucene-egenskapsindexet alltid konfigurerat i asynkront läge. Resultatet som returneras av index kanske inte alltid återspeglar databasens senaste status.
+>Jämfört med det vanliga egenskapsindexet är Lucene-egenskapsindexet alltid konfigurerat i asynkront läge. Resultatet som returneras av indexet kanske därför inte alltid återspeglar databasens senaste status.
 
 >[!NOTE]
 >
@@ -263,7 +263,7 @@ Sedan version 1.2.0 stöder Oak Lucene-analysatorer.
 
 Analysatorer används både när ett dokument indexeras och vid frågetillfället. En analyserare undersöker texten i fälten och genererar en tokenström. Lucene-analysatorerna består av en serie tokeniserings- och filterklasser.
 
-Analysatorerna kan konfigureras via `analyzers` nod (av typ `nt:unstructured`) i `oak:index` definition.
+Analysatorerna kan konfigureras med `analyzers` nod (av typ `nt:unstructured`) i `oak:index` definition.
 
 Standardanalysatorn för ett index är konfigurerad i `default` underordnad till analysatornoden.
 
@@ -302,9 +302,9 @@ Om du vill använda någon av de färdiga analysverktygen kan du konfigurera den
    * **Namn:** `stopwords`
    * **Typ:** `nt:file`
 
-#### Skapa analytiker via Composition {#creating-analyzers-via-composition}
+#### Skapa analysatorer med hjälp av komposition {#creating-analyzers-via-composition}
 
-Analysprogram kan också sammanställas baserat på `Tokenizers`, `TokenFilters` och `CharFilters`. Du kan göra detta genom att ange en analysator och skapa underordnade noder till dess tillvalstokensorer och filter som ska användas i listordning. Se även [https://wiki.apache.org/solr/AnalyzersTokenizersTokenFilters#Specifying_an_Analyzer_in_the_schema](https://wiki.apache.org/solr/AnalyzersTokenizersTokenFilters#Specifying_an_Analyzer_in_the_schema)
+Analysprogram kan också sammanställas baserat på `Tokenizers`, `TokenFilters`och `CharFilters`. Du kan göra detta genom att ange en analysator och skapa underordnade noder till dess tillvalstokeniserare och filter som tillämpas i listordning. Se även [https://cwiki.apache.org/confluence/display/solr/AnalyzersTokenizersTokenFilters#Specifying_an_Analyzer_in_the_schema](https://cwiki.apache.org/confluence/display/solr/AnalyzersTokenizersTokenFilters#Specifying_an_Analyzer_in_the_schema)
 
 Se den här nodstrukturen som ett exempel:
 
@@ -352,9 +352,9 @@ Namnet på filtren, charFilters och tokenizers formas genom att fabrikssuffixen 
 
 * `org.apache.lucene.analysis.core.StopFilterFactory` blir `Stop`
 
-Alla konfigurationsparametrar som krävs för fabriken anges som egenskaper för den aktuella koden.
+Alla konfigurationsparametrar som krävs för fabriken anges som egenskapen för noden i fråga.
 
-I fall där t.ex. inläsning av stoppord där innehåll från externa filer behöver läsas in, kan innehållet tillhandahållas genom att skapa en underordnad nod till `nt:file` filtyp.
+I fall där t.ex. inläsning av stoppord där innehåll från externa filer måste läsas in, kan innehållet tillhandahållas genom att skapa en underordnad nod till `nt:file` filtyp.
 
 ### Solr-index {#the-solr-index}
 
@@ -368,7 +368,7 @@ Den kan konfigureras för att fungera som en fjärrserver med AEM.
 
 AEM kan även konfigureras för att fungera med en fjärrserver för Solr:
 
-1. Hämta och extrahera den senaste versionen av Solr. Mer information om hur du gör detta finns i [Installationsdokumentation för Apache Solr](https://cwiki.apache.org/confluence/display/solr/Installing+Solr).
+1. Hämta och extrahera den senaste versionen av Solr. Mer information om hur du gör detta finns i [Installationsdokumentation för Apache Solr](https://solr.apache.org/guide/6_6/installing-solr.html).
 1. Skapa nu två Solr-kort. Du kan göra detta genom att skapa mappar för varje delning i mappen där Solr har packats upp:
 
    * Skapa mappen för det första delfönstret:
@@ -396,7 +396,7 @@ AEM kan även konfigureras för att fungera med en fjärrserver för Solr:
 
    >[!NOTE]
    >
-   >Mer information om Solr- och ZooKeeper-konfigurationen finns i [Dokumentation för SolrConfiguration](https://wiki.apache.org/solr/ConfiguringSolr) och [Starthandbok för ZooKeeper](https://zookeeper.apache.org/doc/r3.1.2/zookeeperStarted.html).
+   >Mer information om Solr- och ZooKeeper-konfigurationen finns i [Dokumentation för SolrConfiguration](https://cwiki.apache.org/confluence/display/solr/ConfiguringSolr) och [Starthandbok för ZooKeeper](https://zookeeper.apache.org/doc/r3.1.2/zookeeperStarted.html).
 
 1. Starta den första delningen med stöd för ZooKeeper genom att gå till `aemsolr1\node1` och köra följande kommando:
 
@@ -431,7 +431,7 @@ AEM kan även konfigureras för att fungera med en fjärrserver för Solr:
 
 Nedan visas ett exempel på en baskonfiguration som kan användas med alla tre Solr-distributioner som beskrivs i den här artikeln. Den rymmer de dedikerade egenskapsindex som redan finns i AEM och bör inte användas med andra program.
 
-Om du vill använda det på rätt sätt måste du placera innehållet i arkivet direkt i Solr Home Directory. Vid distributioner med flera noder bör den placeras direkt under rotmappen för varje nod.
+Om du vill använda det på rätt sätt måste du placera innehållet i arkivet direkt i Solr Home Directory. Om det finns distributioner med flera noder bör den placeras direkt under rotmappen för varje nod.
 
 Rekommenderade Solr-konfigurationsfiler
 
@@ -448,7 +448,7 @@ Nu kan du nå dem genom att **Verktyg - Åtgärder - Kontrollpanel - Diagnostik*
 
 Mer information om hur du använder dem finns i [Dokumentation för instrumentpanelen för åtgärder](/help/sites-administering/operations-dashboard.md).
 
-#### Skapa egenskapsindex via OSGi {#creating-property-indexes-via-osgi}
+#### Skapa egenskapsindex med OSGi {#creating-property-indexes-via-osgi}
 
 ACS Commons-paketet visar även OSGi-konfigurationer som kan användas för att skapa egenskapsindex.
 
@@ -480,7 +480,7 @@ The **com.day.cq.search** -kategorin kan bara användas om du använder det AEM 
 
 >[!NOTE]
 >
->Det är viktigt att loggarna bara är inställda på DEBUG så länge frågan som du vill felsöka körs. Annars genereras ett stort antal händelser i loggarna över tiden. På grund av detta växlar du tillbaka till INFO-nivåloggning för de kategorier som nämns ovan när de obligatoriska loggarna har samlats in.
+>Det är viktigt att loggarna bara är inställda på DEBUG så länge frågan som du vill felsöka körs. I annat fall genereras många händelser i loggarna över tid. På grund av detta växlar du tillbaka till INFO-nivåloggning för de kategorier som nämns ovan när de obligatoriska loggarna har samlats in.
 
 Du kan aktivera loggning genom att följa den här proceduren:
 
@@ -516,7 +516,7 @@ Ibland kan det vara praktiskt att ange utdata för indexrelaterade MBeans för f
    * Oak Query-statistik
    * IndexStats
 
-1. Klicka på var och en av MBeans för att få prestandastatistik. Skapa en skärmbild eller anteckna dem om du behöver ge support.
+1. Klicka på varje MBeans så att du kan få statistik över prestanda. Skapa en skärmbild eller anteckna dem om en supportanmälan behövs.
 
 Du kan också hämta JSON-varianten av statistiken på följande URL:er:
 
