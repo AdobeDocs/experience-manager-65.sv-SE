@@ -1,15 +1,15 @@
 ---
 title: Admin Console
-description: Lär dig hur du använder Admin Console som finns i AEM.
+description: Lär dig hur du använder Admin Console som finns i Adobe Experience Manager.
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: operations
 content-type: reference
 docset: aem65
 exl-id: d4de517e-50bc-4ca5-89b1-295d259fd5bb
-source-git-commit: 260f71acd330167572d817fdf145a018b09cbc65
+source-git-commit: f7b24617dec77c6907798b1615debdc2329c9d80
 workflow-type: tm+mt
-source-wordcount: '226'
+source-wordcount: '230'
 ht-degree: 0%
 
 ---
@@ -17,11 +17,11 @@ ht-degree: 0%
 
 # Admin Console{#admin-consoles}
 
-Som standard har möjligheten att växla till det klassiska användargränssnittet via administratörskonsolerna inaktiverats. Därför visas inte längre de popup-ikoner som visades när användaren placerade musen över vissa konsolikoner, vilket ger åtkomst till det klassiska gränssnittet.
+Som standard är möjligheten att växla till det klassiska användargränssnittet via Admin Consoles inaktiverad. Därför visas inte längre de popup-ikoner som visades när användaren placerade musen över vissa konsolikoner, vilket ger åtkomst till det klassiska gränssnittet.
 
 Alla konsoler som har en klassisk användargränssnittsversion i `/libs/cq/core/content/nav` kan återaktiveras individuellt så att **Klassiskt användargränssnitt** igen visas konsolikonen igen när användaren för musen över den.
 
-I det här exemplet återaktiverar vi det klassiska gränssnittet för webbplatskonsolen.
+I det här exemplet återaktiverar du det klassiska gränssnittet för webbplatskonsolen.
 
 1. Använd CRXDE Lite för att hitta noden som motsvarar Admin Console som du vill aktivera Classic-gränssnittet för igen. De finns under:
 
@@ -31,7 +31,7 @@ I det här exemplet återaktiverar vi det klassiska gränssnittet för webbplats
 
    [`https://localhost:4502/crx/de/index.jsp#/libs/cq/core/content/nav`](https://localhost:4502/crx/de/index.jsp#/libs/cq/core/content/nav)
 
-1. Markera noden som motsvarar konsolen som du vill återaktivera det klassiska användargränssnittet för. Vi kommer till exempel att återaktivera det klassiska användargränssnittet för webbplatskonsolen.
+1. Markera noden som motsvarar konsolen som du vill återaktivera det klassiska användargränssnittet för. I det här exemplet återaktiverar du det klassiska användargränssnittet för webbplatskonsolen.
 
    `/libs/cq/core/content/nav/sites`
 
@@ -39,7 +39,7 @@ I det här exemplet återaktiverar vi det klassiska gränssnittet för webbplats
 
    * **Bana**: `/apps/cq/core/content/nav/sites`
    * **Överläggsplats**: `/apps/`
-   * **Matcha nodtyper**: aktiv (markera kryssrutan)
+   * **Matcha nodtyper**: active (markera kryssrutan)
 
 1. Lägg till följande boolesk egenskap till den överlagrade noden:
 

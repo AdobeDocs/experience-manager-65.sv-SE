@@ -1,20 +1,16 @@
 ---
 title: AEM Forms on OSGi Groups and Privileges
-seo-title: AEM Forms on OSGi Groups and Privileges
-description: Tilldela användare till grupperna för att hantera AEM Forms på OSGi
-seo-description: Assign users to the groups to manage AEM Forms on OSGi
-uuid: f269a206-356d-4cee-b449-05c5da87121a
+description: Tilldela användare till grupper för att hantera Adobe Experience Manager (AEM) Forms på OSGi
 contentOwner: anujkapo
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 content-type: reference
 topic-tags: Configuration
-discoiquuid: 1717b1b4-1c2a-450e-8e79-4156a974d5fa
 docset: aem65
 role: Admin
 exl-id: d802ac53-e3db-45ca-afcb-7e99d0bb7877
-source-git-commit: 3bc61e56d2fcd9f32c37a7ea04b0ffc6728bfc56
+source-git-commit: f7b24617dec77c6907798b1615debdc2329c9d80
 workflow-type: tm+mt
-source-wordcount: '282'
+source-wordcount: '293'
 ht-degree: 2%
 
 ---
@@ -26,7 +22,7 @@ ht-degree: 2%
 | AEM as a Cloud Service | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/setup-configure-migrate/forms-groups-privileges-tasks.html) |
 | AEM 6.5 | Den här artikeln |
 
-Du kan [skapa grupper](/help/sites-administering/user-group-ac-admin.md#group-administration) och tilldela profiler och [användare](/help/sites-administering/user-group-ac-admin.md#user-administration) till grupperna i AEM. Dessa profiler styr behörigheter för de användare som är en del av gruppen.
+Du kan [skapa grupper](/help/sites-administering/user-group-ac-admin.md#group-administration) och tilldela profiler och [användare](/help/sites-administering/user-group-ac-admin.md#user-administration) i Adobe Experience Manager (AEM). Dessa profiler styr behörigheterna för de användare som är en del av gruppen.
 
 När du har installerat [AEM Forms tilläggspaket](../../forms/using/installing-configuring-aem-forms-osgi.md), är de grupper som nämns i den här artikeln, t.ex. användare av blanketter och användare med avancerade blanketter, automatiskt tillgängliga för tilldelning. I följande tabell visas de uppgifter som en användare kan utföra för AEM Forms på OSGi baserat på grupptilldelningarna:
 
@@ -52,7 +48,7 @@ När du har installerat [AEM Forms tilläggspaket](../../forms/using/installing-
     <ul> 
      <li>Skapa, förhandsgranska, publicera och skicka adaptiva formulär</li> 
      <li>Skapa, förhandsgranska och publicera interaktiv kommunikation och dokumentfragment</li> 
-     <li>Skapa skript för adaptiva formulär med kodredigeraren</li> 
+     <li>Skapa skript för adaptiva formulär med en kodredigerare</li> 
      <li>Överför resurser inklusive skript</li> 
      <li>Skapa teman</li> 
      <li>Importera paket som innehåller XDP</li> 
@@ -99,7 +95,7 @@ När du har installerat [AEM Forms tilläggspaket](../../forms/using/installing-
    <td>arbetsflöde-användare</td> 
    <td>
     <ul> 
-     <li>Använda AEM<br /> <strong>Obs! </strong>Du måste ha grupptilldelningar för cm-agent-users och arbetsflödesanvändare för att få åtkomst till gränssnittet för Interactive Communications Agent i AEM.</li> 
+     <li>Använda AEM Inkorgsprogram<br /> <strong>Obs! </strong>Du måste ha grupptilldelningar för cm-agent-users och arbetsflödesanvändare för att få tillgång till gränssnittet för Interactive Communications Agent i AEM Inbox.</li> 
      <li>Hantera arbetsflödesinstanser</li> 
     </ul> </td> 
   </tr>
@@ -108,7 +104,7 @@ När du har installerat [AEM Forms tilläggspaket](../../forms/using/installing-
    <td>
     <ul> 
      <li>Konfigurera PDF Generator</li> 
-     <li>Konfigurera bevakad mapp</li> 
+     <li>Konfigurera den bevakade mappen</li> 
      <li>Hantera arbetsflödesprogram</li> 
     </ul> </td> 
   </tr>
