@@ -7,9 +7,9 @@ geptopics: SG_AEMFORMS/categories/jee
 docset: aem65
 role: Admin
 exl-id: 74d22cf4-56b2-48f5-92d9-928eaa134866
-source-git-commit: 54bed871375ddc9d18af564318ceac95dd1dd2f9
+source-git-commit: d76fce58973bd011b53a5da41578b57a8e10912e
 workflow-type: tm+mt
-source-wordcount: '3667'
+source-wordcount: '3694'
 ht-degree: 0%
 
 ---
@@ -707,7 +707,7 @@ Följande plattformar är markerade som borttagna i AEM Forms 6.5.18.0 den 31 au
 - Microsoft® Windows Server 2019 (64-bitars)
 - Microsoft® Active Directory 2016
 
-Följande plattformar är markerade som borttagna i AEM Forms 6.5.18.0 den 2 juni 2022:
+Följande plattformar är markerade som borttagna i AEM Forms 6.5.17.0 den 2 juni 2022:
 
 - Microsoft® SharePoint 2016
 
@@ -731,15 +731,14 @@ Följande plattformar är markerade som borttagna i AEM Forms 6.5.10.0 den 7 sep
 - Microsoft® Office 2016
 - OpenOffice 4.1.2
 
-<!--
+
 >[!NOTE]
 >
->The platforms marked as [deprecated on with AEM Forms 6.5.12.0 and 6.5.10.0 remain in support until AEM Forms 6.5 Service Pack 18 (6.5.18.0) release](https://helpx.adobe.com/support/programs/eol-matrix.html).
--->
+En föråldrad plattform får support tills plattformen antingen markeras som borttagen eller tredjepartssupport för plattformen når sitt förfallodatum, beroende på vilket som inträffar först.
 
 ## Revisionshistorik {#revision-history}
 
-- 31 aug 2023
+- 6.5.18.0 (31 aug 2023)
    - **Plattformsuppdateringar**: [!DNL Adobe Experience Manager Forms] på JEE har lagt till stöd för följande plattformar:
       - MongoDB Enterprise 4.4
       - Oracle WebLogic Server 14c
@@ -768,7 +767,7 @@ Följande plattformar är markerade som borttagna i AEM Forms 6.5.10.0 den 7 sep
       - OpenOffice 4.1.2
       - Acrobat 2017 (Classic track) version 17.011.30078 eller senare
 
-- 1 september 2022
+- 6.5.10.0 (1 september 2022)
 
    - Stöd för Java™ SE 11 (64 bitar) SDK för programserver JBoss® EAP 7.4 har lagts till.
 
