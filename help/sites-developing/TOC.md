@@ -21,7 +21,7 @@ ht-degree: 6%
 + [Utveckla användarhandboken - översikt](home.md)
 + Introduktion för utvecklare{#introduction}
    + [Komma igång med utveckling i AEM Sites – WKND-självstudiekurs](getting-started.md)
-   + [AEM kärnbegrepp](the-basics.md)
+   + [AEM Core Concepts](the-basics.md)
    + [Struktur för det AEM användargränssnittet med pekskärm](touch-ui-structure.md)
    + [Koncepten i det AEM användargränssnittet med pekskärm](touch-ui-concepts.md)
    + [AEM - riktlinjer och bästa praxis](dev-guidelines-bestpractices.md)
@@ -29,7 +29,7 @@ ht-degree: 6%
    + [Developing and Page Diff](pagediff.md)
    + [Begränsningar för redigerare](editor-limitations.md)
    + [CSRF Protection Framework](csrf-protection.md)
-   + [Datamodellering - David Nueschelers modell](model-data.md)
+   + [Datamodellering - David Nuescheler&#39;s Model](model-data.md)
    + [Bidrar till AEM](contributing-to-cq.md)
    + [Dokumentskydd](security.md)
    + [Referensmaterial](reference-materials.md)
@@ -42,7 +42,7 @@ ht-degree: 6%
    + [Taggbibliotek](taglib.md)
    + Mallar{#templates}
       + [Mallar](templates.md)
-      + [Sidmallar - redigerbara ](page-templates-editable.md)
+      + [Sidmallar - redigerbara](page-templates-editable.md)
       + [Sidmallar - statiska](page-templates-static.md)
       + [Mallar för innehållsfragment](content-fragment-templates.md)
       + [Adaptiv mallåtergivning](templates-adaptive-rendering.md)
@@ -50,7 +50,7 @@ ht-degree: 6%
    + [Övertäckningar](overlays.md)
    + [Namnkonventioner](naming-conventions.md)
    + [Skapa en ny GRE-fältkomponent](granite-ui-component.md)
-   + Query Builder{#query-builder}
+   + Frågebyggaren{#query-builder}
       + [Implementera en anpassad predikatutvärderare för Query Builder](implementing-custom-predicate-evaluator.md)
       + [Predikatreferens för Query Builder](querybuilder-predicate-reference.md)
       + [Query Builder API](querybuilder-api.md)
@@ -156,8 +156,8 @@ ht-degree: 6%
    + [SPA djupdykning](spa-deep-dives.md)
    + [Utveckla SPA för AEM](spa-architecture.md)
    + [SPA](spa-overview.md)
-   + [SPA Blueprint](spa-blueprint.md)
-   + [SPA](spa-page-component.md)
+   + [SPA](spa-blueprint.md)
+   + [SPA sidkomponent](spa-page-component.md)
    + [Dynamisk mappning av modell till komponent för SPA](spa-dynamic-model-to-component-mapping.md)
    + [SPA](spa-routing.md)
    + [RemotePage-komponenten](spa-remote-page.md)

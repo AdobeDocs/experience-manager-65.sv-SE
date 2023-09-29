@@ -18,7 +18,7 @@ ht-degree: 45%
 
 # Användarhandbok om AEM 6.5-redigering {#authoring}
 
-+ [Översikt över användarhandboken för redigering](home.md)
++ [Användarhandbok för redigering - översikt](home.md)
 + Viktiga uppgifter, verktyg och begrepp för AEM {#essentials}
    + [Steg 1 för författare](first-steps.md)
    + [Sidredigering](page-authoring.md)
@@ -93,6 +93,6 @@ ht-degree: 45%
 + AEM och Adobe Campaign {#aem-adobe-campaign}
    + [Arbeta med Adobe Campaign](adobe-campaign.md)
    + [Arbeta med Adobe Campaign Classic och Adobe Campaign Standard](campaign.md)
-   + [Inrikta er på Adobe Campaign](target-adobe-campaign.md)
+   + [Rikta in er på Adobe Campaign](target-adobe-campaign.md)
    + [Skapa Adobe Campaign Forms i AEM](adobe-campaign-forms.md)
    + [Adobe Campaign Components](adobe-campaign-components.md)

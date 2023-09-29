@@ -32,13 +32,13 @@ ht-degree: 18%
    + [Innehållsmodellering för Headless med AEM - en introduktion](architect/introduction.md)
    + [Lär dig grunderna i innehållsmodellering för Headless med AEM](architect/basics.md)
    + [Läs om hur du skapar modeller för innehållsfragment i AEM](architect/model-structure.md)
-+ AEM Headless Content Author Journey {#author}
++ AEM Headless Content Author Trney {#author}
    + [AEM Headless Content Author Journey - översikt](author/overview.md)
-   + [Om du skriver för Headless med AEM - en introduktion](author/introduction.md)
+   + [Om du skriver för Headless med AEM - introduktion](author/introduction.md)
    + [Grundläggande om redigering för Headless med AEM](author/basics.md)
    + [Läs om hur du använder referenser i innehållsfragment](author/references.md)
    + [Läs om hur du definierar metadata och taggar för innehållsfragment](author/metadata-tagging.md)
-+ AEM Headless Translation Journey {#translation}
++ AEM översättningsresa utan rubrik {#translation}
    + [Förstå headlessöversättning i AEM](translation/overview.md)
    + [Kom igång med AEM headless translation](translation/getting-started.md)
    + [Lär dig mer om headless-innehåll och hur du översätter i AEM](translation/learn-about.md)

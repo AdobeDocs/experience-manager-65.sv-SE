@@ -30,17 +30,17 @@ AEM-versionsinformationen innehåller viktig information om den senaste versione
 | [Användarhandbok för Communities](/help/communities/home.md) | Skapa onlineupplevelser som forum, användargrupper, utbildningsresurser och andra sociala funktioner. |
 | [Användarhandbok om administration](/help/sites-administering/home.md) | Förstå hur du administrerar AEM |
 | [Användarhandbok om redigering](/help/sites-authoring/home.md) | I den här handboken förklaras begreppen för redigering i AEM. |
-| [Användargränssnittets skrivguide](/help/sites-classic-ui-authoring/home.md) | I den här handboken förklaras begreppen för redigering i AEM i det klassiska användargränssnittet. |
+| [Användargränssnittets redigeringshandbok](/help/sites-classic-ui-authoring/home.md) | I den här handboken förklaras begreppen för redigering i AEM i det klassiska användargränssnittet. |
 | [Användarhandbok för skärmar](https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/aem-screens-introduction.html?lang=en) | Lär dig mer om den digitala signeringslösningen för att publicera dynamiska och interaktiva digitala upplevelser. |
 | [Distribuera användarhandbok](/help/sites-deploying/home.md) | Den här guiden visar grunderna i AEM. |
 | [Utveckla användarhandbok](/help/sites-developing/home.md) | Lär dig hur du bygger ut AEM. |
 | [Hantera användarhandbok](/help/managing/home.md) | I den här guiden beskrivs hur du hanterar ett AEM projekt. |
-| [Handbok för Commerce](/help/commerce/home.md) | Läs mer om Commerce Integration Framework på AEM. |
-| [Användarhandbok för mobiler](/help/mobile/home.md) | I den här guiden beskrivs hur du skapar och hanterar innehåll för mobilprogram. |
+| [Handbok för Commerce](/help/commerce/home.md) | Läs mer om Commerce integration framework om AEM. |
+| [Mobile User Guide](/help/mobile/home.md) | I den här guiden beskrivs hur du skapar och hanterar innehåll för mobilprogram. |
 
-## Viktiga AEM
+## AEM
 
-* [AEM självstudiekurser](https://experienceleague.adobe.com/docs/experience-manager-tutorials.html)
+* [AEM självstudier](https://experienceleague.adobe.com/docs/experience-manager-tutorials.html)
 * [Användarhandbok för Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html)
 * [Användarhandbok för HTML](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html)
 * [Användarhandbok för kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)

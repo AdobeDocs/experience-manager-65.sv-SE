@@ -37,7 +37,7 @@ ht-degree: 9%
    + [Stöd för RDBMS i AEM 6.5](rdbms-support-in-aem.md)
    + [Indexering via Oak-run Jar](indexing-via-the-oak-run-jar.md)
    + [Exempel på indexeringsanvändning för Oak-run.jar](oak-run-indexing-usecases.md)
-   + [Felsöka ekindex](troubleshooting-oak-indexes.md)
+   + [Felsökning av aktivitetsindex](troubleshooting-oak-indexes.md)
    + [Insamling av aggregerad användningsstatistik](opt-in-aggregated-usage-statistics.md)
    + [Felsökning](troubleshooting.md)
 + Konfigurera AEM {#configuring}
@@ -68,7 +68,7 @@ ht-degree: 9%
    + [Planera din uppgradering](upgrade-planning.md)
    + [Utvärdera uppgraderingskomplexiteten med mönsteravkännaren](pattern-detector.md)
    + [Bakåtkompatibilitet i AEM 6.5](backward-compatibility.md)
-   + [Uppgraderingsprocedur](upgrade-procedure.md)
+   + [Uppgraderingsförfarande](upgrade-procedure.md)
    + [Utföra en uppgradering på plats](in-place-upgrade.md)
    + [Använda omindexering offline för att minska driftstoppen under en uppgradering](upgrade-offline-reindexing.md)
    + [Lazy Content Migration](lazy-content-migration.md)

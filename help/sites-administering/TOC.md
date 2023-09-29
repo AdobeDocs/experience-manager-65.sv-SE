@@ -125,7 +125,7 @@ ht-degree: 8%
    + [SharePoint Connector](sharepoint-connector.md)
    + [Vanliga frågor om att DHTML Viewer upphör](dhtml-viewer-endoflifefaqs.md)
    + [Integrera med Adobe Campaign Classic](campaignonpremise.md)
-   + [Relaterade artiklar i communityn](related-community-articles.md)
+   + [Samhörande artiklar i gemenskapen](related-community-articles.md)
    + [Integrera med Adobe Campaign Standard](campaignstandard.md)
    + [Meddelande om att Flash Viewer har upphört](flash-viewers-eol.md)
    + [Integrera med Adobe Dynamic Tag Management](dtm.md)
