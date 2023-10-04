@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: dd0cbc05-a361-46bc-b9f1-d045f8f23890
 docset: aem65
 exl-id: ebc4e1e7-34f0-4f4e-9f00-178dfda23ce4
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
 workflow-type: tm+mt
-source-wordcount: '1194'
+source-wordcount: '1193'
 ht-degree: 0%
 
 ---
@@ -45,7 +45,7 @@ En anonym besökare ser följande i användargränssnittet:
 * Ingen meddelandelänk
 * Sökfält
 * Inloggningslänk
-* Varumärkesbanderollen
+* Varumärkesbanderoll
 * Menylänkar för de komponenter som ingår i referenswebbplatsmallen.
 
 Om du markerar olika länkar är de skrivskyddade.
@@ -56,7 +56,7 @@ En känd begränsning exponerar communityinnehållet för anonyma besökare via 
 
 Följ de här stegen för att skydda communityplatsens innehåll från anonyma användare genom jcr-innehåll och json:
 
-1. På AEM Author-instansen går du till https://: port/editor.html/content/site/sitename.html.
+1. I AEM Author, gå till https://: port/editor.html/content/site/sitename.html.
 
    >[!NOTE]
    >
@@ -72,14 +72,14 @@ Följ de här stegen för att skydda communityplatsens innehåll från anonyma a
 
    ![webbplatsautentisering](assets/site-authentication.png)
 
-1. Lägg till inloggningssidans sökväg. Till exempel: **/content/......./GetStarted**.
+1. Lägg till inloggningssidans sökväg. Till exempel: **/content/....../GetStarted**.
 1. Publicera sidan.
 
 ## Betrodd medlem i användargruppen {#trusted-community-member}
 
 Den här upplevelsen förutsätter [Aaron McDonald](/help/communities/tutorials.md#demo-users) tilldelades rollerna för [community manager och moderator](/help/communities/create-site.md#roles). Om inte, gå tillbaka till författarmiljön till [ändra platsinställningarna](/help/communities/sites-console.md#modifying-site-properties) och väljer Aaron McDonald som både community manager och moderator.
 
-I det övre högra hörnet väljer du `Log in`och signera med användarnamn (aaron.mcdonald@mailinator.com) och lösenord (lösenord). Lägg märke till möjligheten att logga in med Twitter eller Facebook.
+I det övre högra hörnet väljer du `Log in`och signera med användarnamn (aaron.mcdonald@mailinator.com) och lösenord (lösenord). Observera möjligheten att logga in med Twitter- eller Facebook-autentiseringsuppgifter.
 
 ![inloggning](assets/login.png)
 
@@ -123,7 +123,7 @@ Eftersom Aaron är gruppadministratör kan Aron skapa en ny community-grupp geno
 
 Detta är ett exempel där en grupp skapas i publiceringsmiljön.
 
-Grupper kan också skapas i författarmiljön och hanteras i communitywebbplatsen i författarmiljön ([Konsol för communitygrupper](/help/communities/groups.md)). Erfarenheten av [skapa grupper vid författare](/help/communities/nested-groups.md) är nästa i den här självstudiekursen.
+Grupper kan också skapas i författarmiljön och hanteras i communitywebbplatsen i författarmiljön ([Community Groups console](/help/communities/groups.md)). Erfarenheten av [skapa grupper vid författare](/help/communities/nested-groups.md) är nästa i den här självstudien.
 
 ![grouplink](assets/grouplink.png)
 
@@ -145,7 +145,7 @@ Skapa en referensgrupp:
 
    ![creategroup](assets/creategroup.png)
 
-När en ny grupp har skapats **välj den nya Sports-gruppen** för att skapa två grupper (kapslade) inuti. Eftersom en platsstruktur inte kan börja med gruppfunktionen måste du välja länken Grupper när du har öppnat gruppen Sport:
+När en ny grupp har skapats **välj den nya sportgruppen** för att skapa två grupper (kapslade) inuti. Eftersom en platsstruktur inte kan börja med gruppfunktionen måste du välja länken Grupper när du har öppnat gruppen Sport:
 
 ![grouplink1](assets/grouplink1.png)
 
@@ -156,12 +156,12 @@ Lägg till två `new groups`.
 * En namngiven `Baseball`
 
    * Låt det vara som `Open Group` (obligatoriskt medlemskap).
-   * På fliken Mallar väljer du `Conversational Group`.
+   * Välj på fliken Mallar `Conversational Group`.
 
 * En namngiven `Gymnastics`
 
    * Ändra inställningen till `Member Only Group` (begränsat medlemskap).
-   * På fliken Mallar väljer du `Conversational Group`.
+   * Välj på fliken Mallar `Conversational Group`.
 
 **Meddelande**:
 

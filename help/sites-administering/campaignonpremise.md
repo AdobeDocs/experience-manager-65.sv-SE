@@ -1,14 +1,12 @@
 ---
 title: Integrera AEM 6.5 med Adobe Campaign Classic
 description: Lär dig integrera AEM 6.5 med Adobe Campaign Classic
-uuid: 3c998b0e-a885-4aa9-b2a4-81b86f9327d3
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
 content-type: reference
-discoiquuid: df94dd1b-1b65-478b-a28d-81807a8084b1
 exl-id: a7281ca0-461f-4762-a631-6bb539596200
-source-git-commit: 8db2cadc83b26e04f9931e18c53db3bf0be03796
+source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
 workflow-type: tm+mt
 source-wordcount: '1583'
 ht-degree: 0%
@@ -76,7 +74,7 @@ Integrationspaketet skapar automatiskt `aemserver` som AEM använder för att an
 
 1. Logga in på Adobe Campaign som administratör med klientkonsolen.
 
-1. Välj **verktyg** -> **Utforskaren** på menyraden.
+1. Välj **verktyg** -> **Explorer** på menyraden.
 
 1. I Utforskaren går du till **Administration** > **Åtkomsthantering** > **Operatorer** nod.
 
@@ -90,7 +88,7 @@ Integrationspaketet skapar automatiskt `aemserver` som AEM använder för att an
 
 1. Klicka **Spara**.
 
-1. Logga ut från Adobe Campaign-klienten.
+1. Logga ut från Adobe Campaign klient.
 
 1. På Adobe Campaign-serverns filsystem går du till installationsplatsen för Campaign och redigerar `serverConf.xml` som administratör. Den här filen finns vanligtvis under:
    * `C:\Program Files\Adobe\Adobe Campaign Classic v7\conf` i Windows.
@@ -108,7 +106,7 @@ Integrationspaketet skapar automatiskt `aemserver` som AEM använder för att an
 
    * Om konfigurationsfilen innehåller en separat inställning för säkerhetszon ändrar du `allowUserPassword` attribut till `true`.
 
-1. Om du vill ändra serverporten för Adobe Campaign Classic ersätter du `8080` med önskad port.
+1. Om du vill ändra Adobe Campaign Classic-serverporten ersätter du `8080` med önskad port.
 
    >[!CAUTION]
    >
@@ -116,7 +114,7 @@ Integrationspaketet skapar automatiskt `aemserver` som AEM använder för att an
    >
    >Adobe rekommenderar starkt att du skapar en säkerhetszon som ska AEM för att undvika säkerhetsproblem. Mer information om detta finns i [Adobe Campaign Classic dokumentation.](https://experienceleague.adobe.com/docs/campaign-classic/using/installing-campaign-classic/additional-configurations/security-zones.html)
 
-1. Gå tillbaka till Campaign-klienten `aemserver` och väljer **Allmänt** -fliken.
+1. Gå tillbaka till Campaign-klienten `aemserver` -operatorn och väljer **Allmänt** -fliken.
 
 1. Klicka på **Återställ lösenord...** länk.
 
@@ -128,13 +126,13 @@ Integrationspaketet skapar automatiskt `aemserver` som AEM använder för att an
 
 AEM [operatorn som du redan har ställt in i Campaign](#create-operator) för att kommunicera med Campaign
 
-1. Logga in som administratör i din AEM.
+1. Logga in som administratör i AEM redigeringsinstans.
 
-1. Välj **verktyg** > **Cloud Services** > **Äldre Cloud Services** > **Adobe Campaign** och sedan klicka **Konfigurera nu**.
+1. Välj **verktyg** > **Cloud Service** > **Äldre Cloud Service** > **Adobe Campaign** och sedan klicka **Konfigurera nu**.
 
    ![Konfigurera Adobe Campaign](assets/configure-campaign-service.png)
 
-1. I dialogrutan skapar du en konfiguration för Campaign-tjänsten genom att ange en **Titel** och klicka **Skapa**.
+1. Skapa en konfiguration för Campaign-tjänsten genom att ange en **Titel** och klicka **Skapa**.
 
    ![Konfigurera Campaign-dialogrutan](assets/configure-campaign-dialog.png)
 
@@ -146,7 +144,7 @@ AEM [operatorn som du redan har ställt in i Campaign](#create-operator) för at
 
    ![Konfigurera Adobe Campaign i AEM](assets/configure-campaign.png)
 
-1. Välj **Anslut till Adobe Campaign** för att bekräfta anslutningen och sedan klicka på **OK**.
+1. Välj **Anslut till Adobe Campaign** för att bekräfta anslutningen och klicka sedan på **OK**.
 
 AEM kan nu kommunicera med Adobe Campaign.
 
@@ -154,7 +152,7 @@ AEM kan nu kommunicera med Adobe Campaign.
 >
 >Se till att din Adobe Campaign-server är tillgänglig via Internet. AEM har inte åtkomst till privata nätverk.
 
-## Konfigurera replikering till AEM Publish Instance {#replication}
+## Konfigurera replikering till AEM publiceringsinstans {#replication}
 
 Kampanjinnehåll skapas av innehållsförfattare i AEM. Den här instansen är vanligtvis endast tillgänglig internt i din organisation. För att innehåll som bilder och resurser ska vara tillgängliga för mottagarna av kampanjen måste ni publicera det innehållet.
 
@@ -162,7 +160,7 @@ Replikeringsagenten ansvarar för att publicera ditt innehåll från AEM förfat
 
 Så här konfigurerar du replikering från AEM författarinstans till publiceringsinstansen:
 
-1. Logga in som administratör i din AEM.
+1. Logga in som administratör i AEM redigeringsinstans.
 
 1. Välj **verktyg** > **Distribution** > **Replikering** > **Agenter på författare** och sedan trycka eller klicka **Standardagent (publicera)**.
 
@@ -202,9 +200,9 @@ Du har konfigurerat Externalizer och Adobe Campaign kan nu komma åt ditt inneh�
 >
 Publiceringsinstansen måste kunna nås från Adobe Campaign-servern. Om den pekar på `localhost:4503` eller en annan server som Adobe Campaign inte kan nå visas inte bilder från AEM i Adobe Campaign-konsolen.
 
-## Konfigurera användaren som är fjärransluten till kampanjen i AEM {#configure-user}
+## Konfigurera användaren på AEM {#configure-user}
 
-För att Campaign ska kunna kommunicera med AEM måste du ange ett lösenord för `campaign-remote` användare i AEM.
+För att Campaign ska kunna kommunicera med AEM måste du ange ett lösenord för `campaign-remote` AEM.
 
 1. Logga in AEM som administratör.
 1. På huvudnavigeringskonsolen klickar du på **verktyg** till vänster.
@@ -216,25 +214,25 @@ För att Campaign ska kunna kommunicera med AEM måste du ange ett lösenord fö
 1. Klicka **Spara** för att spara lösenordsändringen.
 1. Klicka **Spara och stäng** för att spara ändringarna i `campaign-remote` användare.
 
-## Konfigurera det AEM externa kontot i Campaign {#acc-setup}
+## Konfigurera det AEM externa kontot i kampanj {#acc-setup}
 
 När [installera **AEM** paket i Campaign,](#install-package) ett externt konto skapas för AEM. Genom att konfigurera det här externa kontot kan Adobe Campaign ansluta till AEM, vilket möjliggör tvåvägskommunikation mellan lösningarna.
 
 1. Logga in på Adobe Campaign som administratör med klientkonsolen.
 
-1. Välj **verktyg** -> **Utforskaren** på menyraden.
+1. Välj **verktyg** -> **Explorer** på menyraden.
 
 1. I Utforskaren går du till **Administration** > **Plattform** > **Externa konton** nod.
 
    ![Externa konton](assets/external-accounts.png)
 
-1. Leta reda på det externa AEM. Som standard har den värdena:
+1. Leta reda på det externa AEM-kontot. Som standard har den värdena:
 
    * **Typ** - `AEM`
    * **Etikett** - `AEM Instance`
    * **Internt namn** - `aemInstance`
 
-1. På **Allmänt** fliken för det här kontot anger du användarinformationen som du har definierat i [Ange användarlösenord för fjärrkampanj](#set-campaign-remote-password) steg.
+1. På **Allmänt** fliken för det här kontot anger du användarinformationen som du har definierat på fliken [Ange användarlösenord för fjärrkampanj](#set-campaign-remote-password) steg.
 
    * **Server** - AEM författarserveradress
       * AEM författarserver måste kunna nås från Adobe Campaign Classic serverinstans.
@@ -250,6 +248,6 @@ Adobe Campaign kan nu kommunicera med AEM.
 
 ## Nästa steg {#next-steps}
 
-När både Adobe Campaign Classic och AEM är konfigurerade är integreringen klar.
+När både Adobe Campaign Classic och AEM är konfigurerade är integreringen nu klar.
 
-Nu kan du lära dig skapa nyhetsbrev i Adobe Experience Manager genom att fortsätta med [det här dokumentet.](/help/sites-authoring/campaign.md)
+Nu kan du lära dig hur du skapar ett nyhetsbrev i Adobe Experience Manager genom att fortsätta med [det här dokumentet.](/help/sites-authoring/campaign.md)

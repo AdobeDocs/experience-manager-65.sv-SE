@@ -1,19 +1,15 @@
 ---
 title: Digitalt signera och certifiera dokument
-seo-title: Digitally Signing and Certifying Documents
 description: Använd signaturtjänsten för att lägga till och ta bort fält för elektroniska underskrifter i ett PDF-dokument, hämta namn på signaturfält i ett PDF-dokument, ändra signaturfält, digitalt signera PDF-dokument, certifiera PDF-dokument, validera digitala signaturer i ett PDF-dokument, validera alla digitala signaturer i ett PDF-dokument och ta bort en digital signatur från ett signaturfält.
-seo-description: Use the Signature service to add and delete digital signature fields to a PDF document, retrieve the names of signature fields located in a PDF document, modify signature fields, digitally sign PDF documents, certify PDF documents, validate digital signatures located in a PDF document, validate all digital signatures located in a PDF document, and remove a digital signature from a signature field.
-uuid: 6331de8a-2a9c-45bf-89d2-29f1ad5cc856
 contentOwner: admin
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
-discoiquuid: 42de04bf-25e4-4478-a411-38671ed871ae
 role: Developer
 exl-id: c200f345-40ab-46fd-b6ed-f3af0a23796b
-source-git-commit: 135f50cc80f8bb449b2f1621db5e2564f5075968
+source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
 workflow-type: tm+mt
-source-wordcount: '17046'
+source-wordcount: '17047'
 ht-degree: 0%
 
 ---
@@ -57,11 +53,11 @@ Du kan utföra följande uppgifter med hjälp av signaturtjänsten:
 
 Digitala signaturer visas i signaturfält, som är formulärfält som innehåller en grafisk representation av signaturen. Signaturfält kan vara synliga eller osynliga. Signerare kan använda ett befintligt signaturfält eller ett signaturfält kan läggas till programmatiskt. I båda fallen måste signaturfältet finnas innan ett PDF-dokument kan signeras.
 
-Du kan programmässigt lägga till ett signaturfält med hjälp av Java API:t för signaturtjänsten eller API:t för signaturwebbtjänsten. Du kan lägga till mer än ett signaturfält i ett PDF-dokument; Varje signaturfältsnamn måste dock vara unikt.
+Du kan programmässigt lägga till ett signaturfält med hjälp av Java API:t för signaturtjänsten eller API:t för signaturwebbtjänsten. Du kan lägga till mer än ett signaturfält i ett PDF-dokument, men varje signaturfältsnamn måste vara unikt.
 
 >[!NOTE]
 >
->I vissa dokumenttyper i PDF kan du inte lägga till ett signaturfält programmatiskt. Mer information om signaturtjänsten och hur du lägger till signaturfält finns i [Tjänstreferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
+>I vissa dokumenttyper i PDF kan du inte lägga till ett signaturfält med programkod. Mer information om signaturtjänsten och hur du lägger till signaturfält finns i [Tjänstreferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
 
 ### Sammanfattning av steg {#summary-of-steps}
 
@@ -137,10 +133,12 @@ Lägg till ett signaturfält med signatur-API (Java):
       * Ett strängvärde som anger signaturfältets namn.
       * A `java.lang.Integer` värde som representerar det sidnummer till vilket ett signaturfält läggs till.
       * A `PositionRectangle` objekt som anger signaturfältets plats.
-      * A `FieldMDPOptions` objekt som anger fält i dokumentet PDF som är låsta efter att en digital signatur har tillämpats på signaturfältet. Det här parametervärdet är valfritt och du kan skicka det `null`.
-   * A `PDFSeedValueOptions` -objekt som anger olika körningsvärden. Det här parametervärdet är valfritt och du kan skicka det `null`.
+      * A `FieldMDPOptions` objekt som anger fält i dokumentet PDF som är låsta efter att en digital signatur har tillämpats på signaturfältet. Det här parametervärdet är valfritt och du kan skicka `null`.
 
-      The `addSignatureField` returnerar en `com.adobe.idp`. `Document` -objekt som representerar ett PDF-dokument som innehåller ett signaturfält.
+   * A `PDFSeedValueOptions` -objekt som anger olika körningsvärden. Det här parametervärdet är valfritt och du kan skicka `null`.
+
+     The `addSignatureField` returnerar en `com.adobe.idp`. `Document` -objekt som representerar ett PDF-dokument som innehåller ett signaturfält.
+
    >[!NOTE]
    >
    >Du kan anropa `SignatureServiceClient` objektets `addInvisibleSignatureField` metod för att lägga till ett osynligt signaturfält.
@@ -164,13 +162,13 @@ Så här lägger du till ett signaturfält med signatur-API:t (webbtjänsten):
 
    >[!NOTE]
    >
-   >Ersätt `localhost` med IP-adressen till den server som är värd för AEM Forms.
+   >Ersätt `localhost` med IP-adressen till den server där AEM Forms finns.
 
 1. Skapa en signaturklient
 
    * Skapa en `SignatureServiceClient` genom att använda dess standardkonstruktor.
-   * Skapa en `SignatureServiceClient.Endpoint.Address` genom att använda `System.ServiceModel.EndpointAddress` konstruktor. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/SignatureService?WSDL`). Du behöver inte använda `lc_version` -attribut. Det här attributet används när du skapar en tjänstreferens.)
-   * Skapa en `System.ServiceModel.BasicHttpBinding` genom att hämta värdet för `SignatureServiceClient.Endpoint.Binding` fält. Sänd returvärdet till `BasicHttpBinding`.
+   * Skapa en `SignatureServiceClient.Endpoint.Address` genom att använda `System.ServiceModel.EndpointAddress` konstruktor. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/SignatureService?WSDL`). Du behöver inte använda `lc_version` -attribut. Detta attribut används när du skapar en tjänstreferens.)
+   * Skapa en `System.ServiceModel.BasicHttpBinding` genom att hämta värdet för `SignatureServiceClient.Endpoint.Binding` fält. Skicka returvärdet till `BasicHttpBinding`.
    * Ange `System.ServiceModel.BasicHttpBinding` objektets `MessageEncoding` fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
    * Aktivera grundläggande HTTP-autentisering genom att utföra följande åtgärder:
 
@@ -195,8 +193,8 @@ Så här lägger du till ett signaturfält med signatur-API:t (webbtjänsten):
    * Ett strängvärde som anger signaturfältets namn.
    * Ett heltalsvärde som representerar sidnumret som ett signaturfält läggs till på.
    * A `PositionRect` objekt som anger signaturfältets plats.
-   * A `FieldMDPOptions` objekt som anger fält i dokumentet PDF som är låsta efter att en digital signatur har tillämpats på signaturfältet. Det här parametervärdet är valfritt och du kan skicka det `null`.
-   * A `PDFSeedValueOptions` -objekt som anger olika körningsvärden. Det här parametervärdet är valfritt och du kan skicka det `null`.
+   * A `FieldMDPOptions` objekt som anger fält i dokumentet PDF som är låsta efter att en digital signatur har tillämpats på signaturfältet. Det här parametervärdet är valfritt och du kan skicka `null`.
+   * A `PDFSeedValueOptions` -objekt som anger olika körningsvärden. Det här parametervärdet är valfritt och du kan skicka `null`.
 
    The `addSignatureField` returnerar en `BLOB` -objekt som representerar ett PDF-dokument som innehåller ett signaturfält.
 
@@ -283,7 +281,7 @@ Hämta namn på signaturfält med signatur-API (Java):
 
 1. Hämta PDF-dokumentet som innehåller signaturfält
 
-   * Skapa en `java.io.FileInputStream` -objekt som representerar det PDF-dokument som innehåller signaturfält genom att använda dess konstruktor och skicka ett strängvärde som anger platsen för PDF-dokumentet.
+   * Skapa en `java.io.FileInputStream` objekt som representerar dokumentet som innehåller signaturfält i PDF genom att använda dess konstruktor och skicka ett strängvärde som anger platsen för dokumentet i PDF.
    * Skapa en `com.adobe.idp.Document` genom att använda konstruktorn och skicka `java.io.FileInputStream` -objekt.
 
 1. Hämta namn på signaturfält
@@ -303,7 +301,7 @@ Hämta namn på signaturfält med signatur-API (Java):
 
 ### Hämta signaturfält med webbtjänstens API {#retrieve-signature-field-using-the-web-service-api}
 
-Hämta namn på signaturfält med Signature API (webbtjänst):
+Hämta namn på signaturfält med signatur-API:t (webbtjänst):
 
 1. Inkludera projektfiler
 
@@ -311,13 +309,13 @@ Hämta namn på signaturfält med Signature API (webbtjänst):
 
    >[!NOTE]
    >
-   >Ersätt `localhost` med IP-adressen till den server som är värd för AEM Forms.
+   >Ersätt `localhost` med IP-adressen till den server där AEM Forms finns.
 
 1. Skapa en signaturklient
 
    * Skapa en `SignatureServiceClient` genom att använda dess standardkonstruktor.
-   * Skapa en `SignatureServiceClient.Endpoint.Address` genom att använda `System.ServiceModel.EndpointAddress` konstruktor. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/SignatureService?WSDL`). Du behöver inte använda `lc_version` -attribut. Det här attributet används när du skapar en tjänstreferens.)
-   * Skapa en `System.ServiceModel.BasicHttpBinding` genom att hämta värdet för `SignatureServiceClient.Endpoint.Binding` fält. Sänd returvärdet till `BasicHttpBinding`.
+   * Skapa en `SignatureServiceClient.Endpoint.Address` genom att använda `System.ServiceModel.EndpointAddress` konstruktor. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/SignatureService?WSDL`). Du behöver inte använda `lc_version` -attribut. Detta attribut används när du skapar en tjänstreferens.)
+   * Skapa en `System.ServiceModel.BasicHttpBinding` genom att hämta värdet för `SignatureServiceClient.Endpoint.Binding` fält. Skicka returvärdet till `BasicHttpBinding`.
    * Ange `System.ServiceModel.BasicHttpBinding` objektets `MessageEncoding` fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
    * Aktivera grundläggande HTTP-autentisering genom att utföra följande åtgärder:
 
@@ -363,7 +361,7 @@ I det här avsnittet beskrivs hur du ändrar ett signaturfält genom att ändra 
 
 ### Sammanfattning av steg {#summary_of_steps-2}
 
-Gör så här om du vill ändra signaturfält i ett PDF-dokument:
+Gör så här om du vill ändra signaturfält som finns i ett PDF-dokument:
 
 1. Inkludera projektfiler.
 1. Skapa en signaturklient.
@@ -384,7 +382,7 @@ Följande JAR-filer måste läggas till i projektets klassökväg:
 * adobe-utilities.jar (krävs om AEM Forms används i JBoss)
 * jbossall-client.jar (krävs om AEM Forms används i JBoss)
 
-Mer information om var dessa JAR-filer finns i [Inkludera LiveCycle Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files).
+Mer information om var dessa JAR-filer finns i [Inkludera Java-biblioteksfiler för LiveCyclen](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files).
 
 **Skapa en signaturklient**
 
@@ -400,21 +398,21 @@ Om du vill ändra ett signaturfält tilldelar du värden till dess låsordlista 
 
 Följande ordlistevärden för dirigerade värden kan anges:
 
-* **Versionskontroll**: Anger om spärrkontroll utförs när en signatur tillämpas på signaturfältet.
+* **Versionskontroll**: Anger om spärrkontroll utförs när en signatur används i signaturfältet.
 * **Certifikatalternativ**: Tilldelar värden till certifikatets startvärdesordlista. Innan du anger certifikatalternativ bör du bekanta dig med en ordlista för certifikatstartvärden. (Se [PDF Reference](https://www.adobe.com/devnet/acrobat/pdfs/pdf_reference_1-7.pdf).)
-* **Sammanfattningsalternativ**: Tilldelar sammanfattningsalgoritmer som används för signering. Giltiga värden är SHA1, SHA256, SHA384, SHA512 och RIPEMD160.
+* **Sammanfattningsalternativ**: Tilldelar sammandragsalgoritmer som används för signering. Giltiga värden är SHA1, SHA256, SHA384, SHA512 och RIPEMD160.
 * **Filter**: Anger det filter som används med signaturfältet. Du kan till exempel använda filtret Adobe.PPKLite. (Se [PDF Reference](https://www.adobe.com/devnet/acrobat/pdfs/pdf_reference_1-7.pdf).)
 * **Flaggalternativ**: Anger de flaggvärden som är associerade med det här signaturfältet. Värdet 1 innebär att en signerare endast får använda de angivna värdena för posten. Värdet 0 innebär att andra värden är tillåtna. Här är bitpositionerna:
 
    * **1 (filter):** Den underskriftshanterare som ska användas för att signera signaturfältet
    * **2 (SubFilter):** En array med namn som anger godkända kodningar att använda vid signering
-   * **3 (V)**: Det lägsta versionsnummer som krävs för underskriftshanteraren som ska användas för att signera signaturfältet
+   * **3 (V)**: Det lägsta versionsnummer som krävs av underskriftshanteraren för att signera signaturfältet
    * **4 (skäl):** En array med strängar som anger möjliga orsaker till signering av ett dokument
    * **5 (PDFLegalWarnings):** En array med strängar som anger möjliga juridiska attesteringar
 
 * **Juridiska attesteringar**: När ett dokument är certifierat skannas det automatiskt efter specifika typer av innehåll som kan göra det synliga innehållet i ett dokument tvetydigt eller vilseledande. En anteckning kan till exempel skymma text som är viktig för att förstå vad som certifieras. Skanningsprocessen genererar varningar som anger att den här typen av innehåll finns. Det innehåller även en ytterligare förklaring av innehållet som kan ha genererat varningar.
-* **Behörigheter**: Anger behörigheter som kan användas på ett PDF-dokument utan att signaturen blir ogiltig.
-* **Orsaker**: Anger orsaker till varför det här dokumentet måste signeras.
+* **Behörigheter**: Anger behörigheter som kan användas i ett PDF-dokument utan att signaturen blir ogiltig.
+* **Orsaker**: Anger varför det här dokumentet måste signeras.
 * **Tidsstämpel**: Anger tidsstämplingsalternativ. Du kan till exempel ange URL:en för den tidsstämpelserver som används.
 * **Version**: Anger det lägsta versionsnumret för den underskriftshanterare som ska användas för att signera signaturfältet.
 
@@ -456,7 +454,7 @@ Spara det PDF-dokument som innehåller det ändrade signaturfältet som en PDF-f
 
 1. Ange lexikonvärden
 
-   * Skapa en `PDFSignatureFieldProperties` genom att använda dess konstruktor. A `PDFSignatureFieldProperties` I lagras signaturfältets låsordlista och information om startvärdesordlista.
+   * Skapa en `PDFSignatureFieldProperties` genom att använda dess konstruktor. A `PDFSignatureFieldProperties` objekt lagrar information om låsordlista för signaturfält och ordlista för startvärde.
    * Skapa en `PDFSeedValueOptionSpec` genom att använda dess konstruktor. Med det här objektet kan du ange ordlistevärden för startvärde.
    * Tillåt inte ändringar i PDF-dokumentet genom att anropa `PDFSeedValueOptionSpec` objektets `setMdpValue` metoden och skicka `MDPPermissions.NoChanges` uppräkningsvärde.
    * Skapa en `FieldMDPOptionSpec` genom att använda dess konstruktor. Med det här objektet kan du ange värden för låsning av signaturfält.
@@ -493,13 +491,13 @@ Spara det PDF-dokument som innehåller det ändrade signaturfältet som en PDF-f
 
    >[!NOTE]
    >
-   >Ersätt `localhost` med IP-adressen till den server som är värd för AEM Forms.
+   >Ersätt `localhost` med IP-adressen till den server där AEM Forms finns.
 
 1. Skapa en signaturklient
 
    * Skapa en `SignatureServiceClient` genom att använda dess standardkonstruktor.
-   * Skapa en `SignatureServiceClient.Endpoint.Address` genom att använda `System.ServiceModel.EndpointAddress` konstruktor. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/SignatureService?WSDL`). Du behöver inte använda `lc_version` -attribut. Det här attributet används när du skapar en tjänstreferens.)
-   * Skapa en `System.ServiceModel.BasicHttpBinding` genom att hämta värdet för `SignatureServiceClient.Endpoint.Binding` fält. Sänd returvärdet till `BasicHttpBinding`.
+   * Skapa en `SignatureServiceClient.Endpoint.Address` genom att använda `System.ServiceModel.EndpointAddress` konstruktor. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/SignatureService?WSDL`). Du behöver inte använda `lc_version` -attribut. Detta attribut används när du skapar en tjänstreferens.)
+   * Skapa en `System.ServiceModel.BasicHttpBinding` genom att hämta värdet för `SignatureServiceClient.Endpoint.Binding` fält. Skicka returvärdet till `BasicHttpBinding`.
    * Ange `System.ServiceModel.BasicHttpBinding` objektets `MessageEncoding` fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
    * Aktivera grundläggande HTTP-autentisering genom att utföra följande åtgärder:
 
@@ -585,7 +583,7 @@ Mer information om hur du hanterar säkerhetsuppgifter finns i *Installera och d
 >
 >Signaturtjänsten stöder inte XDP-filer med inbäddade PDF-data som indata till en åtgärd, till exempel certifiering av ett dokument. Den här åtgärden resulterar i att signaturtjänsten genererar en `PDFOperationException`. Du löser det här problemet genom att konvertera XDP-filen till en PDF-fil med tjänsten PDF Utilities och sedan skicka den konverterade PDF-filen till en Signature-tjänståtgärd. (Se [Arbeta med verktygen i PDF](/help/forms/developing/pdf-utilities.md#working-with-pdf-utilities).)
 
-**Autentiseringsuppgifter för Cipher nShield HSM**
+**Krypterings-HSM-autentiseringsuppgifter**
 
 När du använder en Cipher Shield HSM-autentiseringsuppgift för att signera eller certifiera ett PDF-dokument, kan den nya autentiseringsuppgiften inte användas förrän J2EE-programservern som AEM Forms är distribuerad på har startats om. Du kan dock ange ett konfigurationsvärde, vilket gör att signerings- eller certifieringsåtgärden fungerar utan att J2EE-programservern startas om.
 
@@ -599,7 +597,7 @@ När du har lagt till det här konfigurationsvärdet i cknfastrc-filen kan de ny
 
 **Underskriften är inte betrodd**
 
-När du certifierar och signerar samma dokument i PDF visas en gul triangel mot den första signaturen när du öppnar dokumentet i PDF i Acrobat eller Adobe Reader, om certifieringssignaturen inte är tillförlitlig. Certifikatsignaturen måste vara betrodd för att detta ska undvikas.
+När du certifierar och signerar samma dokument i PDF visas en gul triangel mot den första signaturen när du öppnar dokumentet i PDF i Acrobat eller Adobe Reader, om den certifierande signaturen inte är tillförlitlig. Certifikatsignaturen måste vara betrodd för att detta ska undvikas.
 
 **Signera dokument som är XFA-baserade formulär**
 
@@ -615,7 +613,7 @@ Så här signerar du ett PDF-dokument digitalt:
 1. Inkludera projektfiler.
 1. Skapa en signaturtjänstklient.
 1. Få PDF-dokumentet att signera.
-1. Signera PDF-dokumentet.
+1. Underteckna PDF-dokumentet.
 1. Spara det signerade PDF-dokumentet som en PDF-fil.
 
 **Inkludera projektfiler**
@@ -651,7 +649,7 @@ Du anger utseendealternativ med en `PDFSignatureAppearanceOptionSpec` -objekt. D
 Du kan också ange om en spärrkontroll ska utföras eller inte som avgör om det certifikat som används för att digitalt signera ett PDF-dokument har återkallats eller inte. Om du vill utföra spärrkontroll kan du ange ett av följande värden:
 
 * **NoCheck**: Utför inte spärrkontroll.
-* **BestEffort**: Försök alltid att kontrollera om alla certifikat i kedjan har återkallats. Om det uppstår något problem vid kontrollen antas återkallningen vara giltig. Om något fel inträffar antar du att certifikatet inte har återkallats.
+* **BestEffort**: Försök alltid att kontrollera om alla certifikat i kedjan har återkallats. Om det uppstår något problem vid kontrollen antas återkallningen vara giltig. Om något fel inträffar antar du att certifikatet inte återkallas.
 * **CheckIfAvailable:** Kontrollera om alla certifikat i kedjan har återkallats om det finns någon återkallningsinformation. Om något problem uppstår vid kontrollen antas återkallningen vara ogiltig. Om något fel inträffar antar du att certifikatet har återkallats och är ogiltigt. (Detta är standardvärdet.)
 * **AlltidKontrollera**: Kontrollera om alla certifikat i kedjan har återkallats. Om det inte finns någon återkallningsinformation i något certifikat antas återkallningen vara ogiltig.
 
@@ -659,7 +657,7 @@ Om du vill göra en återkallningskontroll på ett certifikat kan du ange en URL
 
 I stället för att använda en CRL-server kan du använda en OCSP-server (Online Certificate Status Protocol) när du utför spärrkontroll. När du använder en OCSP-server i stället för en CRL-server utförs spärrkontrollen oftast snabbare. (Se &quot;Online Certificate Status Protocol&quot; på [https://tools.ietf.org/html/rfc2560](https://tools.ietf.org/html/rfc2560).)
 
-Du kan ställa in CRL- och OCSP-serverordningen som används av signaturtjänsten med Adobe-program och -tjänster. Om till exempel OCSP-servern är inställd först i Adobe-program och -tjänster kontrolleras OCSP-servern och sedan CRL-servern. (Se Hantera certifikat och autentiseringsuppgifter med Trust Store i AAC-hjälpen.)
+Du kan ställa in CRL- och OCSP-serverordningen som används av signaturtjänsten med Adobe-program och -tjänster. Om till exempel OCSP-servern är inställd först i Adobe-program och -tjänster kontrolleras OCSP-servern, som följs av CRL-servern. (Se Hantera certifikat och autentiseringsuppgifter med Trust Store i AAC-hjälpen.)
 
 Om du anger att du inte ska utföra spärrkontroll kontrollerar inte signaturtjänsten om certifikatet som användes för att signera eller certifiera ett dokument har spärrats. CRL- och OCSP-serverinformation ignoreras alltså.
 
@@ -756,13 +754,13 @@ Så här signerar du ett PDF-dokument digitalt med signatur-API:t (webbtjänst):
 
    >[!NOTE]
    >
-   >Ersätt `localhost` med IP-adressen till den server som är värd för AEM Forms.
+   >Ersätt `localhost` med IP-adressen till den server där AEM Forms finns.
 
 1. Skapa en signaturklient
 
    * Skapa en `SignatureServiceClient` genom att använda dess standardkonstruktor.
-   * Skapa en `SignatureServiceClient.Endpoint.Address` genom att använda `System.ServiceModel.EndpointAddress` konstruktor. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/SignatureService?WSDL`). Du behöver inte använda `lc_version` -attribut. Det här attributet används när du skapar en tjänstreferens.)
-   * Skapa en `System.ServiceModel.BasicHttpBinding` genom att hämta värdet för `SignatureServiceClient.Endpoint.Binding` fält. Sänd returvärdet till `BasicHttpBinding`.
+   * Skapa en `SignatureServiceClient.Endpoint.Address` genom att använda `System.ServiceModel.EndpointAddress` konstruktor. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/SignatureService?WSDL`). Du behöver inte använda `lc_version` -attribut. Detta attribut används när du skapar en tjänstreferens.)
+   * Skapa en `System.ServiceModel.BasicHttpBinding` genom att hämta värdet för `SignatureServiceClient.Endpoint.Binding` fält. Skicka returvärdet till `BasicHttpBinding`.
    * Ange `System.ServiceModel.BasicHttpBinding` objektets `MessageEncoding` fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
    * Aktivera grundläggande HTTP-autentisering genom att utföra följande åtgärder:
 
@@ -785,7 +783,7 @@ Så här signerar du ett PDF-dokument digitalt med signatur-API:t (webbtjänst):
 
    * A `BLOB` objekt som representerar det PDF-dokument som ska signeras.
    * Ett strängvärde som representerar namnet på signaturfältet som ska innehålla den digitala signaturen.
-   * A `Credential` objekt som representerar de autentiseringsuppgifter som används för att digitalt signera PDF-dokumentet. Skapa en `Credential` objektet med hjälp av dess konstruktor och ange aliaset genom att tilldela ett värde till `Credential` objektets `alias` -egenskap.
+   * A `Credential` objekt som representerar de autentiseringsuppgifter som används för att digitalt signera PDF-dokumentet. Skapa en `Credential` genom att använda konstruktorn och ange aliaset genom att tilldela ett värde till `Credential` objektets `alias` -egenskap.
    * A `HashAlgorithm` objekt som anger en statisk datamedlem som representerar hash-algoritmen som ska användas för att sammanfatta PDF-dokumentet. Du kan till exempel ange `HashAlgorithm.SHA1` om du vill använda SHA1-algoritmen.
    * Ett booleskt värde som anger om hash-algoritmen används.
    * Ett strängvärde som representerar orsaken till varför PDF-dokumentet signerades digitalt.
@@ -819,7 +817,7 @@ Så här signerar du ett PDF-dokument digitalt med signatur-API:t (webbtjänst):
 Du kan signera ett interaktivt formulär som skapas av Forms-tjänsten. Ta till exempel följande arbetsflöde:
 
 * Du sammanfogar ett XFA-baserat PDF-formulär som skapats med Designer och formulärdata som finns i ett XML-dokument med hjälp av Forms-tjänsten. Forms-servern återger ett interaktivt formulär.
-* Du signerar det interaktiva formuläret med hjälp av Signature service API.
+* Du signerar det interaktiva formuläret med hjälp av API:t för signaturtjänsten.
 
 Resultatet är ett digitalt signerat interaktivt PDF-formulär. När du signerar ett PDF-formulär som är baserat på ett XFA-formulär ska du se till att du sparar PDF-filen som ett Adobe Static PDF. Om du försöker signera ett PDF-formulär som har sparats som ett Adobe dynamiskt PDF-formulär inträffar ett undantag. Eftersom du signerar formuläret som returneras från Forms-tjänsten måste du se till att formuläret innehåller ett signaturfält.
 
@@ -864,7 +862,7 @@ Eftersom det här arbetsflödet anropar både Forms- och Signature-tjänsterna s
 
 **Hämta det interaktiva formuläret med hjälp av tjänsten Forms**
 
-Du kan använda Forms-tjänsten för att hämta det interaktiva formuläret PDF för signering. Från och med AEM Forms kan du skicka `com.adobe.idp.Document` till den Forms-tjänst som innehåller det formulär som ska återges. Den här metodens namn är `renderPDFForm2`. Den här metoden returnerar en `com.adobe.idp.Document` objekt som innehåller formuläret som ska signeras. Du kan skicka det här `com.adobe.idp.Document` till signaturtjänsten.
+Du kan använda Forms-tjänsten för att hämta det interaktiva formuläret PDF för signering. Från och med AEM Forms kan du skicka `com.adobe.idp.Document` till den Forms-tjänst som innehåller det formulär som ska återges. Den här metodens namn är `renderPDFForm2`. Den här metoden returnerar en `com.adobe.idp.Document` objekt som innehåller formuläret som ska signeras. Du kan skicka det här `com.adobe.idp.Document` -instans till signaturtjänsten.
 
 På samma sätt kan du skicka `BLOB` instans när Forms-tjänsten returnerar till signeringstjänsten.
 
@@ -918,7 +916,7 @@ Signera ett interaktivt formulär digitalt med Forms och Signature API (Java):
 
    * Skapa en `java.io.FileInputStream` objekt som representerar PDF-dokumentet som ska skickas till Forms-tjänsten med hjälp av dess konstruktor. Skicka ett strängvärde som anger platsen för PDF-dokumentet.
    * Skapa en `com.adobe.idp.Document` genom att använda konstruktorn och skicka `java.io.FileInputStream` -objekt.
-   * Skapa en `java.io.FileInputStream` som representerar XML-dokumentet som innehåller formulärdata som ska skickas till Forms-tjänsten med hjälp av dess konstruktor. Skicka ett strängvärde som anger platsen för XML-filen.
+   * Skapa en `java.io.FileInputStream` -objekt som representerar XML-dokumentet som innehåller formulärdata som ska skickas till Forms-tjänsten med hjälp av dess konstruktor. Skicka ett strängvärde som anger platsen för XML-filen.
    * Skapa en `com.adobe.idp.Document` genom att använda konstruktorn och skicka `java.io.FileInputStream` -objekt.
    * Skapa en `PDFFormRenderSpec` objekt som används för att ange körningsalternativ. Anropa `PDFFormRenderSpec` objektets `setGenerateServerAppearance` metod och skicka `true`.
    * Anropa `FormsServiceClient` objektets `renderPDFForm2` och skicka följande värden:
@@ -929,10 +927,9 @@ Signera ett interaktivt formulär digitalt med Forms och Signature API (Java):
       * A `URLSpec` objekt som innehåller URI-värden som krävs av Forms-tjänsten. Du kan ange `null` för det här parametervärdet.
       * A `java.util.HashMap` objekt som lagrar bifogade filer. Det här är en valfri parameter och du kan ange `null` om du inte vill bifoga filer till formuläret.
 
-      The `renderPDFForm2` returnerar en `FormsResult` objekt som innehåller en formulärdataström
+     The `renderPDFForm2` returnerar en `FormsResult` objekt som innehåller en formulärdataström
 
    * Hämta formuläret PDF genom att anropa `FormsResult` objektets `getOutputContent` -metod. Den här metoden returnerar en `com.adobe.idp.Document` objekt som representerar det interaktiva formuläret.
-
 
 1. Signera det interaktiva formuläret
 
@@ -981,19 +978,20 @@ Signera ett interaktivt formulär digitalt med Forms och Signature API (webbtjä
 
    >[!NOTE]
    >
-   >Ersätt `localhost` med IP-adressen till den server som är värd för AEM Forms.
+   >Ersätt `localhost` med IP-adressen till den server där AEM Forms finns.
 
 1. Skapa en Forms- och Signatures-klient
 
    * Skapa en `SignatureServiceClient` genom att använda dess standardkonstruktor.
-   * Skapa en `SignatureServiceClient.Endpoint.Address` genom att använda `System.ServiceModel.EndpointAddress` konstruktor. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/SignatureService?WSDL`). Du behöver inte använda `lc_version` -attribut. Det här attributet används när du skapar en tjänstreferens.)
-   * Skapa en `System.ServiceModel.BasicHttpBinding` genom att hämta värdet för `SignatureServiceClient.Endpoint.Binding` fält. Sänd returvärdet till `BasicHttpBinding`.
+   * Skapa en `SignatureServiceClient.Endpoint.Address` genom att använda `System.ServiceModel.EndpointAddress` konstruktor. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/SignatureService?WSDL`). Du behöver inte använda `lc_version` -attribut. Detta attribut används när du skapar en tjänstreferens.)
+   * Skapa en `System.ServiceModel.BasicHttpBinding` genom att hämta värdet för `SignatureServiceClient.Endpoint.Binding` fält. Skicka returvärdet till `BasicHttpBinding`.
    * Ange `System.ServiceModel.BasicHttpBinding` objektets `MessageEncoding` fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
    * Aktivera grundläggande HTTP-autentisering genom att utföra följande åtgärder:
 
       * Tilldela AEM formuläranvändarnamn till fältet `SignatureServiceClient.ClientCredentials.UserName.UserName`.
       * Tilldela motsvarande lösenordsvärde till fältet `SignatureServiceClient.ClientCredentials.UserName.Password`.
       * Tilldela konstantvärdet `HttpClientCredentialType.Basic` till fältet `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
+
    * Tilldela konstantvärdet `BasicHttpSecurityMode.TransportCredentialOnly` till fältet `BasicHttpBindingSecurity.Security.Mode`.
 
    >[!NOTE]
@@ -1023,8 +1021,8 @@ Signera ett interaktivt formulär digitalt med Forms och Signature API (webbtjä
       * En lång utdataparameter som används för att lagra antalet sidor i formuläret.
       * En strängutdataparameter som används för språkvärdet.
       * A `FormResult` värde som är en utdataparameter som används för att lagra det interaktiva formuläret.
-   * Hämta formuläret PDF genom att anropa `FormsResult` objektets `outputContent` fält. Det här fältet lagrar en `BLOB` objekt som representerar det interaktiva formuläret.
 
+   * Hämta formuläret PDF genom att anropa `FormsResult` objektets `outputContent` fält. Det här fältet lagrar en `BLOB` objekt som representerar det interaktiva formuläret.
 
 1. Signera det interaktiva formuläret
 
@@ -1032,7 +1030,7 @@ Signera ett interaktivt formulär digitalt med Forms och Signature API (webbtjä
 
    * A `BLOB` objekt som representerar det PDF-dokument som ska signeras. Använd `BLOB` -instans som returneras av Forms-tjänsten.
    * Ett strängvärde som representerar namnet på signaturfältet som är signerat.
-   * A `Credential` objekt som representerar de autentiseringsuppgifter som används för att digitalt signera PDF-dokumentet. Skapa en `Credential` objektet med hjälp av dess konstruktor och ange aliaset genom att tilldela ett värde till `Credential` objektets `alias` -egenskap.
+   * A `Credential` objekt som representerar de autentiseringsuppgifter som används för att digitalt signera PDF-dokumentet. Skapa en `Credential` genom att använda konstruktorn och ange aliaset genom att tilldela ett värde till `Credential` objektets `alias` -egenskap.
    * A `HashAlgorithm` objekt som anger en statisk datamedlem som representerar hash-algoritmen som ska användas för att sammanfatta PDF-dokumentet. Du kan till exempel ange `HashAlgorithm.SHA1` om du vill använda SHA1-algoritmen.
    * Ett booleskt värde som anger om hash-algoritmen används.
    * Ett strängvärde som representerar orsaken till varför PDF-dokumentet signerades digitalt.
@@ -1063,7 +1061,7 @@ Signera ett interaktivt formulär digitalt med Forms och Signature API (webbtjä
 
 Du kan skydda ett PDF-dokument genom att certifiera det med en viss typ av signatur som kallas för en certifierad signatur. En certifierad signatur skiljer sig från en digital signatur på följande sätt:
 
-* Det måste vara den första signaturen som gäller för PDF-dokumentet. dvs. när den certifierade signaturen tillämpas måste alla andra signaturfält i dokumentet vara osignerade. Endast en certifierad signatur tillåts i ett PDF-dokument. Om du vill signera och certifiera ett PDF-dokument måste du certifiera det innan du signerar det. När du har certifierat ett PDF-dokument kan du signera ytterligare signaturfält digitalt.
+* Det måste vara den första signaturen som tillämpas på dokumentet i PDF. Det vill säga, när den certifierade signaturen tillämpas, måste alla andra signaturfält i dokumentet vara osignerade. Endast en certifierad signatur tillåts i ett PDF-dokument. Om du vill signera och certifiera ett PDF-dokument måste du certifiera det innan du signerar det. När du har certifierat ett PDF-dokument kan du signera ytterligare signaturfält digitalt.
 * Författaren eller författaren till dokumentet kan ange att dokumentet kan ändras på vissa sätt utan att den certifierade signaturen blir ogiltig. Dokumentet kan t.ex. tillåta ifyllnad av formulär eller kommentarer. Om författaren anger att en viss ändring inte är tillåten, begränsar Acrobat användare från att ändra dokumentet på det sättet. Om sådana ändringar görs, t.ex. om ett annat program används, är den certifierade signaturen ogiltig och Acrobat skickar en varning när en användare öppnar dokumentet. (Med icke-certifierade signaturer förhindras inte ändringar och normala redigeringsåtgärder gör inte den ursprungliga signaturen ogiltig.)
 * Vid tidpunkten för signering genomsöks dokumentet efter specifika typer av innehåll som kan göra innehållet i ett dokument tvetydigt eller vilseledande. En anteckning kan t.ex. dölja text på en sida som är viktig för att förstå vad som certifieras. En förklaring (juridisk attestering) kan ges om sådant innehåll.
 
@@ -1117,7 +1115,7 @@ Mer information om var dessa JAR-filer finns i [Inkludera AEM Forms Java-bibliot
 
 Innan du programmässigt kan utföra en signeringsåtgärd måste du skapa en signaturklient.
 
-**Hämta PDF-dokumentet som ska certifieras**
+**Hämta PDF-dokumentet för certifiering**
 
 Om du vill certifiera ett PDF-dokument måste du skaffa ett PDF-dokument som innehåller ett signaturfält. Om ett PDF-dokument inte innehåller något signaturfält kan det inte certifieras. Ett signaturfält kan läggas till med Designer eller via programmering. Mer information om att lägga till ett signaturfält programmatiskt finns i [Lägga till signaturfält](digitally-signing-certifying-documents.md#adding-signature-fields).
 
@@ -1125,18 +1123,18 @@ Om du vill certifiera ett PDF-dokument måste du skaffa ett PDF-dokument som inn
 
 Om du vill certifiera ett PDF-dokument måste du ange följande indatavärden som används av signaturtjänsten för att certifiera ett PDF-dokument:
 
-* **PDF**: Ett PDF-dokument som innehåller ett signaturfält, som är ett formulärfält som innehåller en grafisk representation av den certifierade signaturen. Ett PDF-dokument måste innehålla ett signaturfält innan det kan certifieras. Ett signaturfält kan läggas till med Designer eller via programmering. (Se [Lägga till signaturfält](digitally-signing-certifying-documents.md#adding-signature-fields).)
-* **Namn på signaturfält**: Det fullständigt kvalificerade namnet på signaturfältet som är certifierat. Följande värde är ett exempel: `form1[0].#subform[1].SignatureField3[3]`. När du använder ett XFA-formulärfält kan du även använda det partiella namnet på signaturfältet: `SignatureField3[3]`. Om ett null-värde skickas för fältnamnet skapas och certifieras ett osynligt signaturfält dynamiskt.
-* **Säkerhetsuppgifter**: En autentiseringsuppgift som används för att certifiera PDF-dokumentet. Den här säkerhetsreferensen innehåller ett lösenord och ett alias, som måste matcha ett alias som visas i den autentiseringsuppgift som finns i autentiseringsuppgiften. Aliaset är en referens till en faktisk autentiseringsuppgift som kan finnas i en PKCS#12-fil (med tillägget .pfx) eller en maskinvarusäkerhetsmodul (HSM).
+* **PDF dokument**: Ett dokument i PDF som innehåller ett signaturfält, som är ett formulärfält som innehåller en grafisk representation av den certifierade signaturen. Ett PDF-dokument måste innehålla ett signaturfält innan det kan certifieras. Ett signaturfält kan läggas till med Designer eller via programmering. (Se [Lägga till signaturfält](digitally-signing-certifying-documents.md#adding-signature-fields).)
+* **Namn på signaturfält**: Det fullständiga, kvalificerade namnet på signaturfältet som är certifierat. Följande värde är ett exempel: `form1[0].#subform[1].SignatureField3[3]`. När du använder ett XFA-formulärfält kan du även använda det partiella namnet på signaturfältet: `SignatureField3[3]`. Om ett null-värde skickas för fältnamnet skapas och certifieras ett osynligt signaturfält dynamiskt.
+* **Säkerhetsuppgifter**: En autentiseringsuppgift som används för att certifiera PDF-dokumentet. Den här säkerhetsreferensen innehåller ett lösenord och ett alias, som måste matcha ett alias som visas i den autentiseringsuppgift som finns i autentiseringsuppgiften. Aliaset är en referens till en faktisk autentiseringsuppgift som kan finnas i en PKCS#12-fil (med filnamnstillägget .pfx) eller en maskinvarusäkerhetsmodul (HSM).
 * **Hash-algoritm**: En hash-algoritm som används för att sammanställa PDF-dokumentet.
 * **Anledning till signering**: Ett värde som visas i Acrobat eller Adobe Reader så att andra användare vet varför PDF-dokumentet certifierades.
 * **Undertecknarens plats**: Platsen för signeraren som anges av autentiseringsuppgifterna.
-* **Kontaktinformation**: Undertecknarens kontaktinformation, t.ex. adress och telefonnummer.
-* **Behörighetsinformation**: Behörigheter som styr vilka åtgärder en slutanvändare kan utföra på ett dokument utan att den certifierade signaturen blir ogiltig. Du kan till exempel ställa in behörigheten så att den certifierade signaturen blir ogiltig om du ändrar PDF-dokumentet.
+* **Kontaktinformation**: Undertecknarens kontaktinformation, till exempel adress och telefonnummer.
+* **Behörighetsinformation**: Behörigheter som styr de åtgärder som en slutanvändare kan utföra på ett dokument utan att den certifierade signaturen blir ogiltig. Du kan till exempel ställa in behörigheten så att den certifierade signaturen blir ogiltig om du ändrar PDF-dokumentet.
 * **Juridisk förklaring**: När ett dokument är certifierat skannas det automatiskt efter specifika typer av innehåll som kan göra innehållet i ett dokument tvetydigt eller vilseledande. En anteckning kan t.ex. dölja text på en sida som är viktig för att förstå vad som certifieras. Skanningsprocessen genererar varningar om dessa typer av innehåll. Det här värdet ger ytterligare en förklaring av innehållet som kan ha genererat varningar.
 * **Utseendealternativ**: Alternativ som styr utseendet på den certifierade signaturen. Den certifierade signaturen kan t.ex. visa datuminformation.
-* **Spärrkontroll**: Det här värdet anger om spärrkontroll görs för signerarens certifikat. Standardinställningen för `false` innebär att spärrkontroll inte utförs.
-* **OCSP-inställningar**: Inställningar för OCSP-stöd (Online Certificate Status Protocol), som ger information om statusen för den inloggningsinformation som används för att certifiera PDF-dokumentet. Du kan till exempel ange webbadressen till servern som innehåller information om de autentiseringsuppgifter som du använder för att logga in på PDF-dokumentet.
+* **Spärrkontroll**: Det här värdet anger om spärrkontroll utförs för signerarens certifikat. Standardinställningen för `false` innebär att spärrkontroll inte utförs.
+* **OCSP-inställningar**: Inställningar för stöd för OCSP (Online Certificate Status Protocol), som ger information om statusen för den autentiseringsuppgift som används för att certifiera PDF-dokumentet. Du kan till exempel ange webbadressen till servern som innehåller information om de autentiseringsuppgifter som du använder för att logga in på PDF-dokumentet.
 * **CRL-inställningar**: Inställningar för inställningar för listan över återkallade certifikat (CRL) om spärrkontroll utförs. Du kan till exempel ange att alltid ska kontrollera om en autentiseringsuppgift har återkallats.
 * **Tidsstämpling**: Inställningar som definierar tidsstämpelinformation som används för den certifierade signaturen. En tidsstämpel anger att specifika data har upprättats före en viss tid. Denna kunskap hjälper till att bygga upp en förtroenderelation mellan signeraren och verifieraren.
 
@@ -1169,7 +1167,7 @@ Certifiera ett PDF-dokument med signatur-API (Java):
    * Skapa en `ServiceClientFactory` objekt som innehåller anslutningsegenskaper.
    * Skapa en `SignatureServiceClient` genom att använda konstruktorn och skicka `ServiceClientFactory` -objekt.
 
-1. Hämta PDF-dokumentet som ska certifieras
+1. Hämta PDF-dokumentet för certifiering
 
    * Skapa en `java.io.FileInputStream` objekt som representerar det PDF-dokument som ska certifieras med hjälp av dess konstruktor och som skickar ett strängvärde som anger platsen för PDF-dokumentet.
    * Skapa en `com.adobe.idp.Document` genom att använda konstruktorn och skicka `java.io.FileInputStream` -objekt.
@@ -1185,15 +1183,15 @@ Certifiera ett PDF-dokument med signatur-API (Java):
    * Ett strängvärde som representerar orsaken till varför PDF-dokumentet certifierades.
    * Ett strängvärde som representerar signerarens kontaktinformation.
    * A `MDPPermissions` objekt som anger åtgärder som kan utföras på dokumentet PDF som gör underskriften ogiltig.
-   * A `PDFSignatureAppearanceOptions` som styr utseendet på den certifierade signaturen. Om du vill kan du ändra signaturens utseende genom att anropa en metod, till exempel `setShowDate`.
+   * A `PDFSignatureAppearanceOptions` som styr utseendet på den certifierade signaturen. Ändra signaturens utseende genom att anropa en metod, till exempel `setShowDate`.
    * Ett strängvärde som ger en förklaring till vilka åtgärder som gör underskriften ogiltig.
    * A `java.lang.Boolean` objekt som anger om spärrkontroll ska utföras på signerarens certifikat. Om spärrkontrollen är klar bäddas den in i signaturen. Standardvärdet är `false`.
    * A `java.lang.Boolean` objekt som anger om signaturfältet som certifieras är låst. Om fältet är låst markeras signaturfältet som skrivskyddat, dess egenskaper kan inte ändras och det kan inte rensas av någon som inte har de behörigheter som krävs. Standardvärdet är `false`.
    * An `OCSPPreferences` objekt som lagrar inställningar för stöd för OCSP (Online Certificate Status Protocol). Om spärrkontroll inte utförs används inte den här parametern och du kan ange `null`. Mer information om det här objektet finns i [AEM Forms API-referens](https://www.adobe.com/go/learn_aemforms_javadocs_63_en).
    * A `CRLPreferences` objekt som lagrar inställningar för listan över återkallade certifikat. Om spärrkontroll inte utförs används inte den här parametern och du kan ange `null`.
-   * A `TSPPreferences` objekt som lagrar inställningar för stöd för tidsstämpelleverantör (TSP). När du t.ex. har skapat en `TSPPreferences` -objektet kan du ange TSP-serverns URL genom att anropa `TSPPreferences` objektets `setTspServerURL` -metod. Den här parametern är valfri och kan `null`. Mer information finns i [Tjänstreferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
+   * A `TSPPreferences` objekt som lagrar inställningar för stöd för tidsstämpelleverantör (TSP). När du t.ex. har skapat en `TSPPreferences` kan du ange TSP-serverns URL genom att anropa `TSPPreferences` objektets `setTspServerURL` -metod. Den här parametern är valfri och kan `null`. Mer information finns i [Tjänstreferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
 
-   The `certify` returnerar en `com.adobe.idp.Document` objekt som representerar det certifierade PDF-dokumentet.
+   The `certify` returnerar en `com.adobe.idp.Document` -objekt som representerar det certifierade PDF-dokumentet.
 
 1. Spara det certifierade PDF-dokumentet som en PDF-fil
 
@@ -1204,7 +1202,7 @@ Certifiera ett PDF-dokument med signatur-API (Java):
 
 [Certifiera PDF-dokument](digitally-signing-certifying-documents.md#certifying-pdf-documents)
 
-[Snabbstart (SOAP-läge): Certifiera ett PDF-dokument med Java API](/help/forms/developing/signature-service-java-api-quick.md#quick-start-soap-mode-certifying-a-pdf-document-using-the-java-api)
+[Snabbstart (SOAP-läge): certifiera ett PDF-dokument med Java API](/help/forms/developing/signature-service-java-api-quick.md#quick-start-soap-mode-certifying-a-pdf-document-using-the-java-api)
 
 [Inkludera AEM Forms Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -1220,13 +1218,13 @@ Certifiera ett PDF-dokument med hjälp av signatur-API:t (webbtjänst):
 
    >[!NOTE]
    >
-   >Ersätt `localhost` med IP-adressen till den server som är värd för AEM Forms.
+   >Ersätt `localhost` med IP-adressen till den server där AEM Forms finns.
 
 1. Skapa en signaturklient
 
    * Skapa en `SignatureServiceClient` genom att använda dess standardkonstruktor.
-   * Skapa en `SignatureServiceClient.Endpoint.Address` genom att använda `System.ServiceModel.EndpointAddress` konstruktor. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/SignatureService?WSDL`). Du behöver inte använda `lc_version` -attribut. Det här attributet används när du skapar en tjänstreferens.)
-   * Skapa en `System.ServiceModel.BasicHttpBinding` genom att hämta värdet för `SignatureServiceClient.Endpoint.Binding` fält. Sänd returvärdet till `BasicHttpBinding`.
+   * Skapa en `SignatureServiceClient.Endpoint.Address` genom att använda `System.ServiceModel.EndpointAddress` konstruktor. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/SignatureService?WSDL`). Du behöver inte använda `lc_version` -attribut. Detta attribut används när du skapar en tjänstreferens.)
+   * Skapa en `System.ServiceModel.BasicHttpBinding` genom att hämta värdet för `SignatureServiceClient.Endpoint.Binding` fält. Skicka returvärdet till `BasicHttpBinding`.
    * Ange `System.ServiceModel.BasicHttpBinding` objektets `MessageEncoding` fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
    * Aktivera grundläggande HTTP-autentisering genom att utföra följande åtgärder:
 
@@ -1235,7 +1233,7 @@ Certifiera ett PDF-dokument med hjälp av signatur-API:t (webbtjänst):
       * Tilldela konstantvärdet `HttpClientCredentialType.Basic` till fältet `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
       * Tilldela konstantvärdet `BasicHttpSecurityMode.TransportCredentialOnly` till fältet `BasicHttpBindingSecurity.Security.Mode`.
 
-1. Hämta PDF-dokumentet som ska certifieras
+1. Hämta PDF-dokumentet för certifiering
 
    * Skapa en `BLOB` genom att använda dess konstruktor. The `BLOB` -objektet används för att lagra ett certifierat PDF-dokument.
    * Skapa en `System.IO.FileStream` genom att anropa dess konstruktor och skicka ett strängvärde som representerar filplatsen för det PDF-dokument som ska certifieras och läget i vilket filen ska öppnas.
@@ -1258,15 +1256,15 @@ Certifiera ett PDF-dokument med hjälp av signatur-API:t (webbtjänst):
    * An `MDPPermissions` objektets statiska datamedlem som anger åtgärder som kan utföras på det PDF-dokument som gör underskriften ogiltig.
    * Ett booleskt värde som anger om `MDPPermissions` objekt som skickades som föregående parametervärde.
    * Ett strängvärde som förklarar vilka åtgärder som gör underskriften ogiltig.
-   * A `PDFSignatureAppearanceOptions` som styr utseendet på den certifierade signaturen. Skapa en `PDFSignatureAppearanceOptions` genom att använda dess konstruktor. Du kan ändra utseendet på signaturen genom att ange en av dess datamedlemmar.
+   * A `PDFSignatureAppearanceOptions` som styr utseendet på den certifierade signaturen. Skapa en `PDFSignatureAppearanceOptions` genom att använda dess konstruktor. Du kan ändra signaturens utseende genom att ange en av dess datamedlemmar.
    * A `System.Boolean` objekt som anger om spärrkontroll ska utföras på signerarens certifikat. Om spärrkontrollen är klar bäddas den in i signaturen. Standardvärdet är `false`.
    * A `System.Boolean` objekt som anger om signaturfältet som certifieras är låst. Om fältet är låst markeras signaturfältet som skrivskyddat, dess egenskaper kan inte ändras och det kan inte rensas av någon som inte har de behörigheter som krävs. Standardvärdet är `false`.
    * A `System.Boolean` -objekt som anger om signaturfältet är låst. Det vill säga, om du passerar `true` till föregående parameter och skicka sedan `true` till den här parametern.
    * An `OCSPPreferences` objekt som lagrar inställningar för OCSP-stöd (Online Certificate Status Protocol), som ger information om statusen för de autentiseringsuppgifter som används för att certifiera PDF-dokumentet. Om spärrkontroll inte utförs används inte den här parametern och du kan ange `null`.
    * A `CRLPreferences` objekt som lagrar inställningar för listan över återkallade certifikat. Om spärrkontroll inte utförs används inte den här parametern och du kan ange `null`.
-   * A `TSPPreferences` objekt som lagrar inställningar för stöd för tidsstämpelleverantör (TSP). När du t.ex. har skapat en `TSPPreferences` -objektet kan du ange TSP:ens URL genom att ange `TSPPreferences` objektets `tspServerURL` datamedlem. Den här parametern är valfri och kan `null`.
+   * A `TSPPreferences` objekt som lagrar inställningar för stöd för tidsstämpelleverantör (TSP). När du t.ex. har skapat en `TSPPreferences` -objektet kan du ange TSP:ens URL genom att ställa in `TSPPreferences` objektets `tspServerURL` datamedlem. Den här parametern är valfri och kan `null`.
 
-   The `certify` returnerar en `BLOB` objekt som representerar det certifierade PDF-dokumentet.
+   The `certify` returnerar en `BLOB` -objekt som representerar det certifierade PDF-dokumentet.
 
 1. Spara det certifierade PDF-dokumentet som en PDF-fil
 
@@ -1291,7 +1289,7 @@ Anta att undertecknarens identitet är okänd. När du öppnar PDF-dokumentet i 
 
 ![vd_vd_verifysig](assets/vd_vd_verifysig.png)
 
-På samma sätt kan du, när du programmässigt verifierar en digital signatur, fastställa status för signerarens identitet. Om du till exempel verifierar den digitala signaturen i dokumentet som visades i föregående bild, blir resultatet att signerarens identitet är okänd.
+På samma sätt kan du, när du programmässigt verifierar en digital signatur, fastställa status för signerarens identitet. Om du till exempel verifierar den digitala signaturen i dokumentet som visas i föregående bild, blir resultatet att signerarens identitet är okänd.
 
 >[!NOTE]
 >
@@ -1341,13 +1339,13 @@ Ange följande PKI-körningsalternativ som används av signaturtjänsten när si
 
 Som en del av inställningen av dessa alternativ kan du ange verifieringstid. Du kan till exempel välja aktuell tid (tiden på validerarens dator), vilket anger att den aktuella tiden ska användas. Information om de olika tidsvärdena finns i `VerificationTime` uppräkningsvärde i [AEM Forms API-referens](https://www.adobe.com/go/learn_aemforms_javadocs_63_en).
 
-Du kan också ange om spärrkontroll ska utföras som en del av verifieringsprocessen. Du kan till exempel utföra en spärrkontroll för att avgöra om certifikatet har återkallats. Information om alternativen för spärrkontroll finns i `RevocationCheckStyle` uppräkningsvärde i [AEM Forms API-referens](https://www.adobe.com/go/learn_aemforms_javadocs_63_en).
+Du kan också ange om spärrkontroll ska utföras som en del av verifieringsprocessen. Du kan till exempel utföra en spärrkontroll för att avgöra om certifikatet har återkallats. Mer information om alternativen för spärrkontroll finns i `RevocationCheckStyle` uppräkningsvärde i [AEM Forms API-referens](https://www.adobe.com/go/learn_aemforms_javadocs_63_en).
 
 Om du vill göra en återkallningskontroll på ett certifikat anger du en URL till en CRL-server (Certificate revocation List) med hjälp av en `CRLOptionSpec` -objekt. Om du inte anger en URL till en CRL-server hämtar signaturtjänsten URL:en från certifikatet.
 
 I stället för att använda en CRL-server kan du använda en OCSP-server (Online Certificate Status Protocol) när du utför spärrkontroll. När du använder en OCSP-server i stället för en CRL-server utförs spärrkontrollen oftast snabbare. (Se [Statusprotokoll för onlinecertifikat](https://tools.ietf.org/html/rfc2560).)
 
-Du kan ställa in CRL- och OCSP-serverordningen som används av signaturtjänsten med Adobe-program och -tjänster. Om till exempel OCSP-servern är inställd först i Adobe-program och -tjänster kontrolleras OCSP-servern och sedan CRL-servern.
+Du kan ställa in CRL- och OCSP-serverordningen som används av signaturtjänsten med Adobe-program och -tjänster. Om till exempel OCSP-servern är inställd först i Adobe-program och -tjänster kontrolleras OCSP-servern, som följs av CRL-servern.
 
 Om du inte utför spärrkontroll kontrollerar inte signaturtjänsten om certifikatet har spärrats. CRL- och OCSP-serverinformation ignoreras alltså.
 
@@ -1424,13 +1422,13 @@ Verifiera en digital signatur med hjälp av Signature Service API (Java):
    * A `com.adobe.idp.Document` objekt som innehåller ett digitalt signerat eller certifierat PDF-dokument.
    * Ett strängvärde som representerar signaturfältets namn som innehåller signaturen som ska verifieras.
    * A `PKIOptions` objekt som innehåller alternativ för PKI-körning.
-   * A `VerifySPIOptions` -instans som innehåller SPI-information. Du kan ange `null` för den här parametern.
+   * A `VerifySPIOptions` -instans som innehåller SPI-information. Du kan ange `null` för parametern.
 
    The `verify2` returnerar en `PDFSignatureVerificationInfo` objekt som innehåller information som kan användas för att verifiera den digitala signaturen.
 
 1. Bestäm signaturens status
 
-   * Bestäm signaturens status genom att anropa `PDFSignatureVerificationInfo` objektets `getStatus` -metod. Den här metoden returnerar en `SignatureStatus` objekt som anger signaturens status. Om t.ex. ett signerat PDF-dokument inte ändras returnerar den här metoden `SignatureStatus.DocumentSigNoChanges`.
+   * Kontrollera signaturens status genom att anropa `PDFSignatureVerificationInfo` objektets `getStatus` -metod. Den här metoden returnerar en `SignatureStatus` objekt som anger signaturens status. Om t.ex. ett signerat PDF-dokument inte ändras returnerar den här metoden `SignatureStatus.DocumentSigNoChanges`.
 
 1. Bestämma signerarens identitet
 
@@ -1457,13 +1455,13 @@ Verifiera en digital signatur med hjälp av Signature Service API (webbtjänst):
 
    >[!NOTE]
    >
-   >Ersätt `localhost` med IP-adressen till den server som är värd för AEM Forms.
+   >Ersätt `localhost` med IP-adressen till den server där AEM Forms finns.
 
 1. Skapa en signaturklient
 
    * Skapa en `SignatureServiceClient` genom att använda dess standardkonstruktor.
-   * Skapa en `SignatureServiceClient.Endpoint.Address` genom att använda `System.ServiceModel.EndpointAddress` konstruktor. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/SignatureService?WSDL`). Du behöver inte använda `lc_version` -attribut. Det här attributet används när du skapar en tjänstreferens.)
-   * Skapa en `System.ServiceModel.BasicHttpBinding` genom att hämta värdet för `SignatureServiceClient.Endpoint.Binding` fält. Sänd returvärdet till `BasicHttpBinding`.
+   * Skapa en `SignatureServiceClient.Endpoint.Address` genom att använda `System.ServiceModel.EndpointAddress` konstruktor. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/SignatureService?WSDL`). Du behöver inte använda `lc_version` -attribut. Detta attribut används när du skapar en tjänstreferens.)
+   * Skapa en `System.ServiceModel.BasicHttpBinding` genom att hämta värdet för `SignatureServiceClient.Endpoint.Binding` fält. Skicka returvärdet till `BasicHttpBinding`.
    * Ange `System.ServiceModel.BasicHttpBinding` objektets `MessageEncoding` fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
    * Aktivera grundläggande HTTP-autentisering genom att utföra följande åtgärder:
 
@@ -1493,13 +1491,13 @@ Verifiera en digital signatur med hjälp av Signature Service API (webbtjänst):
    * The `BLOB` objekt som innehåller ett digitalt signerat eller certifierat PDF-dokument.
    * Ett strängvärde som representerar signaturfältets namn som innehåller signaturen som ska verifieras.
    * A `PKIOptions` objekt som innehåller alternativ för PKI-körning.
-   * A `VerifySPIOptions` -instans som innehåller SPI-information. Du kan ange `null` för den här parametern.
+   * A `VerifySPIOptions` -instans som innehåller SPI-information. Du kan ange `null` för parametern.
 
    The `verify2` returnerar en `PDFSignatureVerificationInfo` objekt som innehåller information som kan användas för att verifiera den digitala signaturen.
 
 1. Bestäm signaturens status
 
-   Bestäm signaturens status genom att hämta värdet för `PDFSignatureVerificationInfo` objektets `status` datamedlem. Den här datamedlemmen lagrar en `SignatureStatus` objekt som anger signaturens status. Om till exempel ett signerat PDF-dokument ändras visas `status` datamedlemmen lagrar värdet `SignatureStatus.DocumentSigNoChanges`.
+   Bestäm signaturens status genom att hämta värdet för `PDFSignatureVerificationInfo` objektets `status` datamedlem. Denna datamedlem lagrar en `SignatureStatus` objekt som anger signaturens status. Om till exempel ett signerat PDF-dokument ändras visas `status` datamedlemmen lagrar värdet `SignatureStatus.DocumentSigNoChanges`.
 
 1. Bestämma signerarens identitet
 
@@ -1516,7 +1514,7 @@ Verifiera en digital signatur med hjälp av Signature Service API (webbtjänst):
 
 ## Verifierar flera digitala signaturer {#verifying-multiple-digital-signatures}
 
-AEM Forms ger möjlighet att verifiera alla digitala signaturer som finns i ett PDF-dokument. Anta att ett PDF-dokument innehåller flera digitala signaturer som ett resultat av en affärsprocess som kräver signaturer från flera signerare. Ta till exempel en finansiell transaktion som kräver både en låne- och en chefs underskrift. Du kan använda Java API:t för signaturtjänsten eller webbtjänstens API för att verifiera alla signaturer i PDF-dokumentet. När du verifierar flera digitala signaturer kan du kontrollera status och egenskaper för varje signatur. Innan du litar på en elektronisk underskrift bör du verifiera den. Vi rekommenderar att du är bekant med att verifiera en enda digital signatur.
+AEM Forms ger möjlighet att verifiera alla digitala signaturer som finns i ett PDF-dokument. Anta att ett PDF-dokument innehåller flera digitala signaturer som ett resultat av en affärsprocess som kräver signaturer från flera signerare. Ta till exempel en finansiell transaktion som kräver både en lånesammans och en chefs underskrift. Du kan använda Java API:t för signaturtjänsten eller webbtjänstens API för att verifiera alla signaturer i PDF-dokumentet. När du verifierar flera digitala signaturer kan du kontrollera status och egenskaper för varje signatur. Innan du litar på en elektronisk underskrift bör du verifiera den. Vi rekommenderar att du är bekant med att verifiera en enda digital signatur.
 
 >[!NOTE]
 >
@@ -1565,7 +1563,7 @@ Ange följande PKI-körningsalternativ som används av signaturtjänsten när al
 
 Som en del av inställningen av dessa alternativ kan du ange verifieringstid. Du kan till exempel välja aktuell tid (tiden på validerarens dator), vilket anger att den aktuella tiden ska användas. Information om de olika tidsvärdena finns i `VerificationTime` uppräkningsvärde i [AEM Forms API-referens](https://www.adobe.com/go/learn_aemforms_javadocs_63_en).
 
-Du kan också ange om spärrkontroll ska utföras som en del av verifieringsprocessen. Du kan till exempel utföra en spärrkontroll för att avgöra om certifikatet har återkallats. Information om alternativen för spärrkontroll finns i `RevocationCheckStyle` uppräkningsvärde i [AEM Forms API-referens](https://www.adobe.com/go/learn_aemforms_javadocs_63_en).
+Du kan också ange om spärrkontroll ska utföras som en del av verifieringsprocessen. Du kan till exempel utföra en spärrkontroll för att avgöra om certifikatet har återkallats. Mer information om alternativen för spärrkontroll finns i `RevocationCheckStyle` uppräkningsvärde i [AEM Forms API-referens](https://www.adobe.com/go/learn_aemforms_javadocs_63_en).
 
 Om du vill göra en återkallningskontroll på ett certifikat anger du en URL till en CRL-server (Certificate revocation List) med hjälp av en `CRLOptionSpec` -objekt. Om du inte anger en URL till en CRL-server hämtar signaturtjänsten URL:en från certifikatet.
 
@@ -1587,7 +1585,7 @@ Tidsstämpling är processen att spåra den tid då ett signerat eller certifier
 
 **Hämta alla digitala signaturer**
 
-Om du vill verifiera alla digitala signaturer i ett PDF-dokument hämtar du de digitala signaturerna från PDF-dokumentet. Alla signaturer returneras i en lista. Som en del av verifieringen av en digital signatur kontrollerar du signaturens status.
+Om du vill verifiera alla digitala signaturer som finns i ett PDF-dokument hämtar du de digitala signaturerna från PDF-dokumentet. Alla signaturer returneras i en lista. Som en del av verifieringen av en digital signatur kontrollerar du signaturens status.
 
 >[!NOTE]
 >
@@ -1641,7 +1639,7 @@ Verifiera flera digitala signaturer med Signature Service API (Java):
 
    * A `com.adobe.idp.Document` objekt som innehåller ett PDF-dokument som innehåller flera digitala signaturer.
    * A `PKIOptions` objekt som innehåller alternativ för PKI-körning.
-   * A `VerifySPIOptions` -instans som innehåller SPI-information. Du kan ange `null` för den här parametern.
+   * A `VerifySPIOptions` -instans som innehåller SPI-information. Du kan ange `null` för parametern.
 
    The `verifyPDFDocument` returnerar en `PDFDocumentVerificationInfo` objekt som innehåller information om alla elektroniska underskrifter som finns i dokumentet PDF.
 
@@ -1672,13 +1670,13 @@ Verifiera flera digitala signaturer med Signature Service API (webbtjänst):
 
    >[!NOTE]
    >
-   >Ersätt `localhost` med IP-adressen till den server som är värd för AEM Forms.
+   >Ersätt `localhost` med IP-adressen till den server där AEM Forms finns.
 
 1. Skapa en signaturklient
 
    * Skapa en `SignatureServiceClient` genom att använda dess standardkonstruktor.
-   * Skapa en `SignatureServiceClient.Endpoint.Address` genom att använda `System.ServiceModel.EndpointAddress` konstruktor. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/SignatureService?WSDL`). Du behöver inte använda `lc_version` -attribut. Det här attributet används när du skapar en tjänstreferens.)
-   * Skapa en `System.ServiceModel.BasicHttpBinding` genom att hämta värdet för `SignatureServiceClient.Endpoint.Binding` fält. Sänd returvärdet till `BasicHttpBinding`.
+   * Skapa en `SignatureServiceClient.Endpoint.Address` genom att använda `System.ServiceModel.EndpointAddress` konstruktor. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/SignatureService?WSDL`). Du behöver inte använda `lc_version` -attribut. Detta attribut används när du skapar en tjänstreferens.)
+   * Skapa en `System.ServiceModel.BasicHttpBinding` genom att hämta värdet för `SignatureServiceClient.Endpoint.Binding` fält. Skicka returvärdet till `BasicHttpBinding`.
    * Ange `System.ServiceModel.BasicHttpBinding` objektets `MessageEncoding` fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
    * Aktivera grundläggande HTTP-autentisering genom att utföra följande åtgärder:
 
@@ -1766,7 +1764,7 @@ Om du vill ta bort en signatur från ett PDF-dokument måste du skaffa ett PDF-d
 
 **Ta bort den digitala signaturen från signaturfältet**
 
-Om du vill ta bort en digital signatur från ett PDF-dokument måste du ange namnet på signaturfältet som innehåller den digitala signaturen. Du måste också ha behörighet att ta bort den digitala signaturen; i annat fall inträffar ett undantag.
+Om du vill ta bort en digital signatur från ett PDF-dokument måste du ange namnet på signaturfältet som innehåller den digitala signaturen. Du måste också ha behörighet att ta bort den digitala signaturen, annars inträffar ett undantag.
 
 **Spara PDF-dokumentet som en PDF-fil**
 
@@ -1807,7 +1805,7 @@ Ta bort en digital signatur med signatur-API (Java):
    Ta bort en digital signatur från ett signaturfält genom att anropa `SignatureServiceClient` objektets `clearSignatureField` och skicka följande värden:
 
    * A `com.adobe.idp.Document` -objekt som representerar det PDF-dokument som innehåller den signatur som ska tas bort.
-   * Ett strängvärde som anger namnet på signaturfältet som innehåller den digitala signaturen.
+   * Ett strängvärde som anger namnet på det signaturfält som innehåller den digitala signaturen.
 
    The `clearSignatureField` returnerar en `com.adobe.idp.Document` det objekt som representerar det PDF-dokument som den digitala signaturen har tagits bort från.
 
@@ -1836,13 +1834,13 @@ Ta bort en elektronisk underskrift med hjälp av Signature API (webbtjänsten):
 
    >[!NOTE]
    >
-   >Ersätt `localhost` med IP-adressen till den server som är värd för AEM Forms.
+   >Ersätt `localhost` med IP-adressen till den server där AEM Forms finns.
 
 1. Skapa en signaturklient
 
    * Skapa en `SignatureServiceClient` genom att använda dess standardkonstruktor.
-   * Skapa en `SignatureServiceClient.Endpoint.Address` genom att använda `System.ServiceModel.EndpointAddress` konstruktor. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/SignatureService?WSDL`). Du behöver inte använda `lc_version` -attribut. Det här attributet används när du skapar en tjänstreferens.)
-   * Skapa en `System.ServiceModel.BasicHttpBinding` genom att hämta värdet för `SignatureServiceClient.Endpoint.Binding` fält. Sänd returvärdet till `BasicHttpBinding`.
+   * Skapa en `SignatureServiceClient.Endpoint.Address` genom att använda `System.ServiceModel.EndpointAddress` konstruktor. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/SignatureService?WSDL`). Du behöver inte använda `lc_version` -attribut. Detta attribut används när du skapar en tjänstreferens.)
+   * Skapa en `System.ServiceModel.BasicHttpBinding` genom att hämta värdet för `SignatureServiceClient.Endpoint.Binding` fält. Skicka returvärdet till `BasicHttpBinding`.
    * Ange `System.ServiceModel.BasicHttpBinding` objektets `MessageEncoding` fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
    * Aktivera grundläggande HTTP-autentisering genom att utföra följande åtgärder:
 

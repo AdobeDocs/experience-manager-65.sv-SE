@@ -10,7 +10,7 @@ discoiquuid: 1e95c66b-d132-4c44-a1dc-31fd09af8113
 docset: aem65
 feature: Adaptive Forms
 exl-id: e755159f-374f-42b8-b28b-e8864df44f9d
-source-git-commit: e7a3558ae04cd6816ed73589c67b0297f05adce2
+source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
 workflow-type: tm+mt
 source-wordcount: '2090'
 ht-degree: 0%
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 # Skapa hjälpmedelsförberedda adaptiva formulär{#creating-accessible-adaptive-forms}
 
-<span class="preview"> Adobe rekommenderar att man använder modern och utbyggbar datainhämtning [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) for [skapa ny Adaptive Forms](/help/forms/using/create-an-adaptive-form-core-components.md) eller [lägga till adaptiv Forms på AEM Sites-sidor](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-program, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptive Forms med grundläggande komponenter. </span>
+<span class="preview"> Adobe rekommenderar att man använder modern och utbyggbar datainhämtning [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) for [skapa ny Adaptive Forms](/help/forms/using/create-an-adaptive-form-core-components.md) eller [lägga till adaptiv Forms på AEM Sites-sidor](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-filer, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptiv Forms med baskomponenter. </span>
 
 ## Introduktion {#introduction}
 
@@ -46,34 +46,34 @@ Med verktyget för hjälpmedelsförberedda namn- och beskrivningsgranskare (ANDI
 * Identifierar problem med tangentbordstillgänglighet och färgkontrast
 * Identifierar tydligt skärmläsarinnehållet enligt standarderna
 
-ANDI fungerar med alla större webbläsare. Se, [ANDI:s dokumentation](https://www.ssa.gov/accessibility/andi/help/install.html) för detaljerade anvisningar om hur du konfigurerar och använder verktyget.
+ANDI fungerar med alla större webbläsare. Se, [ANDI:s dokumentation](https://www.ssa.gov/accessibility/andi/help/install.html) om du vill ha detaljerade anvisningar om hur du konfigurerar och använder verktyget.
 
-### Ladda ned och installera temat Ultramarine-Accessible
+### Hämta och installera temat Ultramarine-Accessible
 
-Temat Ultramarine-Accessible är ett referenstema. Det visar hur du åtgärdar färgkontrast och andra tillgänglighetsrelaterade problem i en adaptiv form. Adobe rekommenderar att du skapar ett anpassat tema för produktionsmiljön baserat på de format som din organisation har godkänt. Så här överför du temat till din AEM:
+Temat Ultramarine-Accessible är ett referenstema. Det visar hur du åtgärdar färgkontrast och andra tillgänglighetsrelaterade problem i en adaptiv form. Adobe rekommenderar att du skapar ett anpassat tema för produktionsmiljön baserat på de format som din organisation har godkänt. Utför följande steg för att överföra temat till din AEM:
 
 1. Hämta temapaketet.
-1. Navigera till **[!UICONTROL Experience Manager]** > **[!UICONTROL Navigation]** ![Navigering](assets/Smock_Compass_18_N.svg) > **[!UICONTROL Forms]** på AEM.
+1. Navigera till **[!UICONTROL Experience Manager]** > **[!UICONTROL Navigation]** ![Navigering](assets/Smock_Compass_18_N.svg) > **[!UICONTROL Forms]** på din AEM.
 1. Tryck på **[!UICONTROL Create]** > **[!UICONTROL File Upload]**. Markera och överför filen x Ultramarine-Accessible-Theme.zip. Temat överförs till din AEM.
 
 ## Göra ett anpassat formulär tillgängligt
 
-Du bör fokusera på fyra viktiga aspekter: tangentbordsnavigering, färgkontrast, meningsfull alternativ text för bilder och lämpliga etiketter för formulärkontroller för att göra ett adaptivt formulär tillgängligt. Gör så här för att göra dina befintliga anpassningsbara formulär tillgängliga:
+Du bör fokusera på fyra nyckelaspekter: tangentbordsnavigering, färgkontrast, meningsfull alternativ text för bilder och lämpliga etiketter för formulärkontroller för att göra ett adaptivt formulär tillgängligt. Gör så här för att göra dina befintliga anpassningsbara formulär tillgängliga:
 
-### 1. Använda ett tillgängligt tema och utföra ytterligare korrigeringar
+### 1. Använd ett tillgängligt tema och utför ytterligare korrigeringar
 
 Använd temat Ultramarine-Accessible i din befintliga adaptiva form. Så här använder du temat:
 
 1. Öppna det adaptiva formuläret för redigering.
 1. Markera en komponent och tryck på den överordnade ikonen. Tryck på **[!UICONTROL Adaptive Form Container]** och tryck sedan på konfigurationsikonen.
-1. Välj temat Ultramarine-Accessible i egenskapswebbläsaren och tryck **[!UICONTROL Save]** ikon.
-1. Uppdatera webbläsarfönstret. Temat används på det anpassade formuläret.
+1. Välj temat Ultramarine-Accessible i egenskapswebbläsaren och tryck **[!UICONTROL Save]** -ikon.
+1. Uppdatera webbläsarfönstret. Temat används på det anpassningsbara formuläret.
 
 När du har tillämpat ett tillgängligt tema utför du följande korrigeringar. Förutom tillgänglighetskorrigeringar som ingår i det tillgängliga temat finns det korrigeringar:
 
 1. Lägg till en meningsfull alternativ text för logotypbilden i det adaptiva formuläret.
 
-   Ange en meningsfull alternativ text för bilder i sidhuvud- och sidfotskomponenter i den adaptiva formulärmallen. När du korrigerar mallen och använder den för att skapa ett anpassningsbart formulär ärver de adaptiva formulären alla tillgänglighetsrelaterade korrigeringar som tillämpas på mallens sidhuvud och sidfot.  Gör ändringar på adaptiv formulärnivå för ett befintligt anpassat formulär. Ändringar som görs i en adaptiv formulärmall flödar inte automatiskt till ett befintligt adaptivt formulär.
+   Ange en meningsfull alternativ text för bilder i sidhuvud- och sidfotskomponenter i den adaptiva formulärmallen. När du korrigerar mallen och använder den för att skapa ett anpassningsbart formulär ärver de adaptiva formulären alla tillgänglighetsrelaterade korrigeringar som tillämpas på mallens sidhuvud och sidfot.  Gör ändringar på adaptiv formulärnivå för ett befintligt adaptivt formulär. Ändringar som görs i en adaptiv formulärmall flödar inte automatiskt till ett befintligt adaptivt formulär.
 
 1. Lägg till en rubrikkomponent som innehåller formulärnamn i det adaptiva formuläret. Om formulärdesignen anger ett företagsnamn lägger du även till en separat rubrikkomponent för företagsnamnet.
 
@@ -89,13 +89,13 @@ När du har tillämpat ett tillgängligt tema utför du följande korrigeringar.
 
 1. Ersätt datuminmatningsfält med datumväljarfält.
 
-1. Ange visnings-, validerings- och redigeringsmönster för datumväljarkomponenten. Ange även ett eget valideringsfelmeddelande. Du har t.ex. angett ett ogiltigt datum. Datumets korrekta format är YYY-MM-DD.
+1. Ange visnings-, validerings- och redigeringsmönster för datumväljarkomponenten. Ange även ett eget valideringsfelmeddelande. Du har till exempel angett ett ogiltigt datum. Datumets korrekta format är YYY-MM-DD.
 
-1. Ange anpassad hjälpmedelstext för datumväljarkomponenten. Ange t.ex. födelsedatum. Skärmläsare läser dessa anpassade hjälpmedelstexter.
+1. Ange anpassad hjälpmedelstext för datumväljarkomponenten. Ange t.ex. ditt födelsedatum. Skärmläsare läser dessa anpassade hjälpmedelstexter.
 
-1. Använd kort beskrivning i stället för lång beskrivning för adaptiva formulärkomponenter. En lång beskrivning lägger till en hjälpknapp. Kontrollera att det adaptiva formuläret inte har någon hjälpknapp.
+1. Använd kort beskrivning i stället för lång beskrivning för adaptiva formulärkomponenter. En lång beskrivning lägger till en hjälpknapp. Kontrollera att adaptiven inte har någon hjälpknapp.
 
-1. Lägg till anpassad hjälpmedelstext i alla skrivskyddade celler i tabeller. Inaktivera även alla skrivskyddade celler i tabeller.
+1. Lägg till anpassad hjälpmedelstext i alla skrivskyddade celler i tabeller. Du kan även inaktivera alla skrivskyddade celler i tabeller.
 
 1. Ta bort signaturfält för skript, om sådana finns i det adaptiva formuläret. Konfigurera det adaptiva formuläret för att använda Adobe Sign för en smidig digital signeringsupplevelse.
 
@@ -151,7 +151,7 @@ Se [Skapa anpassade teman för anpassade formulär](/help/forms/using/creating-c
 
 ### 5. Kontrollera att formulärkontrollerna är tangentbordstillgängliga {#ensure-that-form-controls-are-keyboard-accessible}
 
-Ett hjälpmedelsanpassat formulär kan fyllas i helt med bara tangentbordet eller en motsvarande indataenhet. Användare med nedsatt rörelseförmåga eller nedsatt syn har kanske inget annat val än att använda tangentbordet och många användare som kan använda en mus föredrar tangentbordsinmatning. Genom att använda de olika indatametoderna kan du inte bara skapa hjälpmedelsförberedda formulär, du kan också skapa formulär som bättre passar alla användares önskemål.
+Ett hjälpmedelsanpassat formulär kan fyllas i helt och hållet med bara tangentbordet eller en motsvarande indataenhet. Användare med nedsatt rörelseförmåga eller nedsatt syn har kanske inget annat val än att använda tangentbordet och många användare som kan använda en mus föredrar tangentbordsinmatning. Genom att använda de olika indatametoderna kan du inte bara skapa hjälpmedelsförberedda formulär, du kan också skapa formulär som bättre passar alla användares önskemål.
 
 Följande kortkommandon finns i AEM Forms.
 

@@ -1,16 +1,12 @@
 ---
 title: Konfigurera SSL för WebSphere Application Server
-seo-title: Configuring SSL for WebSphere Application Server
 description: Lär dig hur du konfigurerar SSL för WebSphere Application Server.
-seo-description: Learn how to configure SSL for WebSphere Application Server.
-uuid: f939a806-346e-41e0-b2c0-6d0ba83f8f6f
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/configuring_ssl
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: 7c0efcb3-5b07-4090-9119-b7318c8b7980
 exl-id: b0786b52-879e-4a24-9cc9-bd9dcb2473cc
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
 workflow-type: tm+mt
 source-wordcount: '1225'
 ht-degree: 0%
@@ -30,33 +26,33 @@ För att aktivera SSL behöver WebSphere åtkomst till ett användarkonto i det 
 
 ### Skapa en Linux- eller UNIX-användare för WebSphere {#create-a-linux-or-unix-user-for-websphere}
 
-1. Logga in som rotanvändare.
+1. Logga in som root-användare.
 1. Skapa en användare genom att ange följande kommando i en kommandotolk:
 
    * (Linux och Sun Solaris) `useradd`
    * (IBM AIX) `mkuser`
 
-1. Ange den nya användarens lösenord genom att ange `passwd` i kommandotolken.
+1. Ställ in lösenordet för den nya användaren genom att ange `passwd` kommandotolken.
 1. (Linux och Solaris) Skapa en skugglösenordsfil genom att ange `pwconv` (utan parametrar) i kommandotolken.
 
    >[!NOTE]
    >
-   >(Linux och Solaris) För att säkerhetsregistret Local OS i WebSphere Application Server ska fungera måste det finnas en skugglösenordsfil. Skugglösenordsfilen har vanligtvis namnet **/etc/shadow** och baseras på filen /etc/passwd. Om skugglösenordsfilen inte finns inträffar ett fel när global säkerhet har aktiverats och användarregistret har konfigurerats som lokalt operativsystem.
+   >(Linux och Solaris) För att WebSphere Application Server Local OS-säkerhetsregistret ska fungera måste det finnas en skugglösenordsfil. Skugglösenordsfilen heter **vanligtvis /etc/shadow** och baseras på filen /etc/passwd. Om skugglösenordsfilen inte finns uppstår ett fel efter aktivering av global säkerhet och konfiguration av användarregistret som lokalt operativsystem.
 
 1. Öppna gruppfilen från katalogen /etc i en textredigerare.
-1. Lägg till användaren som du skapade i steg 2 i dialogrutan `root` grupp.
+1. Lägg till användaren som du skapade i steg 2 i `root` gruppen.
 1. Spara och stäng filen.
 1. (UNIX med SSL aktiverat) Starta och stoppa WebSphere som rotanvändare.
 
 ### Skapa en Windows-användare för WebSphere {#create-a-windows-user-for-websphere}
 
 1. Logga in i Windows med ett administratörsanvändarkonto.
-1. Välj **Start > Kontrollpanelen > Administrationsverktyg > Datorhantering > Lokala användare och grupper**.
+1. Välj **Start > Control Panel > Administrative Tools > Computer Management > Local Users and Groups**.
 1. Högerklicka på Användare och välj **Ny användare**.
-1. Skriv ett användarnamn och lösenord i rutorna och ange eventuell annan information som du behöver i de övriga rutorna.
+1. Skriv ett användarnamn och lösenord i rutorna och ange eventuell annan information som du vill ha i de övriga rutorna.
 1. Avmarkera **Användaren måste ändra lösenordet vid nästa inloggning**, klicka **Skapa** och klicka sedan på **Stäng**.
 1. Klicka **Användare**, högerklicka på den användare du just skapade och välj **Egenskaper**.
-1. Klicka på **medlem i** och sedan klicka **Lägg till**.
+1. Klicka på **medlem i** och sedan klicka på **Lägg till**.
 1. Skriv i rutan Ange de objektnamn du vill markera `Administrators`klickar du på Kontrollera namn för att se till att gruppnamnet är korrekt.
 1. Klicka **OK** och sedan klicka **OK** igen.
 1. Välj **Start > Kontrollpanelen > Administrationsverktyg > Lokal säkerhetsprincip > Lokala profiler**.
@@ -89,7 +85,7 @@ För att aktivera SSL behöver WebSphere åtkomst till ett användarkonto i det 
 1. Klicka **Slutför**.
 1. Starta om WebSphere-profilen.
 
-   WebSphere börjar använda standardnyckelbehållaren och förtroendebutiken.
+   WebSphere börjar använda standardnyckelbehållaren och förtrostore.
 
 ## Aktivera SSL (anpassad nyckel och förvaltararkiv) {#enable-ssl-custom-key-and-truststore}
 
@@ -99,29 +95,29 @@ Du kan skapa förtroendelager och nyckelbehållare med hjälp av nyckelverktyget
 1. Klicka **Nyckelbehållare och certifikat** under Relaterade artiklar.
 1. I **Användning av nyckelbehållare** listruta, kontrollera att **SSL-nyckelbehållare** är markerat. Klicka **Nytt**.
 1. Ange ett logiskt namn och en beskrivning.
-1. Ange sökvägen där du vill att nyckelbehållaren ska skapas. Om du redan har skapat en nyckelbehållare via nyckelbehållaren anger du sökvägen till nyckelbehållarfilen.
+1. Ange sökvägen där du vill att nyckelbehållaren ska skapas. Om du redan har skapat en nyckelbehållare via ikeyman anger du sökvägen till nyckellagerfilen.
 1. Ange och bekräfta lösenordet.
 1. Välj typ av nyckelbehållare och klicka på **Använd**.
-1. Spara den överordnad konfigurationen.
+1. Spara huvudkonfigurationen.
 1. Klicka **Personligt certifikat**.
 1. Om du redan har skapat en nyckelbehållare med nyckelhanteraren visas ditt certifikat. Annars måste du lägga till ett nytt självsignerat certifikat genom att utföra följande steg:
 
-   1. Välj **Skapa > Självsignerat certifikat**.
-   1. Ange lämpliga värden i certifikatformuläret. Se till att du behåller Alias och vanligt namn som fullständigt kvalificerade domännamn för datorn.
-   1. Klicka **Använd**.
+   1. Välj **Skapa > själv signerat certifikat**.
+   1. Ange lämpliga värden i certifikatformuläret. Se till att du behåller Alias och eget namn som fullständigt kvalificerat domännamn för datorn.
+   1. Klicka på **Använd.**
 
-1. Upprepa steg 2 till 10 för att skapa ett förtroendearkiv.
+1. Upprepa steg 2 till 10 för att skapa en truststore.
 
-## Använd anpassad nyckelbehållare och förtrostore på servern {#apply-custom-keystore-and-truststore-to-the-server}
+## Tillämpa anpassad nyckellagring och truststore på servern {#apply-custom-keystore-and-truststore-to-the-server}
 
-1. I administrationskonsolen för WebSphere väljer du **Säkerhet > SSL-certifikat och nyckelhantering**.
-1. Klicka **Hantera säkerhetskonfiguration för slutpunkt**. Den lokala topologikartan öppnas.
-1. Under Inkommande väljer du direkt underordnad nod.
+1. I WebSphere Administrative Console väljer du **Säkerhets- > SSL-certifikat och nyckelhantering**.
+1. Klicka på **Hantera konfiguration** av slutpunktssäkerhet. Den lokala topologikartan öppnas.
+1. Under Inkommande väljer du direkt underordnad noder.
 1. Under Relaterade objekt väljer du **SSL-konfigurationer**.
-1. Välj **NodeDefaultSSLSetting**.
+1. Välj **NodeDeafultSSLSetting**.
 1. I listrutorna för förvaltararkivnamn och nyckelbehållarnamn väljer du det anpassade förvaltararkivet och nyckelbehållaren som du skapade.
 1. Klicka **Använd**.
-1. Spara den överordnad konfigurationen.
+1. Spara huvudkonfigurationen.
 1. Starta om WebSphere-profilen.
 
    Din profil kan nu köras med anpassade SSL-inställningar och ditt certifikat.
@@ -140,7 +136,7 @@ Om du vill konvertera en URL som börjar med https lägger du till ett signerarc
 **Skapa ett signerarcertifikat för en https-aktiverad webbplats**
 
 1. Kontrollera att WebSphere körs.
-1. Navigera till Signerarcertifikat i administrationskonsolen för WebSphere och klicka sedan på Säkerhet > SSL-certifikat och nyckelhantering > Nyckelarkiv och certifikat > NodeDefaultTrustStore > Signerarcertifikat.
+1. I administrationskonsolen för WebSphere navigerar du till signerarcertifikat och klickar sedan på Säkerhet > SSL-certifikat och nyckelhantering > Nyckelarkiv och certifikat > NodeDefaultTrustStore > Signerarcertifikat.
 1. Klicka på Hämta från port och utför följande åtgärder:
 
    * Skriv URL-adressen i rutan Värd. Skriv till exempel `www.paypal.com`.
@@ -158,13 +154,13 @@ Konvertering från HTML till PDF från den webbplats vars certifikat läggs till
 
 ## Konfigurera dynamiska portar {#configuring-dynamic-ports}
 
-IBM WebSphere tillåter inte flera anrop till ORB.init() när Global Security är aktiverat. Du kan läsa om den permanenta begränsningen på https://www-01.ibm.com/support/docview.wss?uid=swg1PK58704.
+IBM WebSphere tillåter inte flera anrop till ORB.init() när Global Security är aktiverat. Du kan läsa om permanent begränsning på https://www-01.ibm.com/support/docview.wss?uid=swg1PK58704.
 
 Utför följande steg för att ange att porten ska vara dynamisk och för att lösa problemet:
 
 1. I administrationskonsolen för WebSphere väljer du **Servrar** > **Servertyper** > **WebSphere-programserver**.
 1. Välj servern i avsnittet Inställningar.
-1. I **Konfiguration** flik, under **Kommunikation** sektion, expandera **Portar** och klicka **Detaljer**.
+1. I **Konfiguration** flik, under **Kommunikation** sektion, expandera **Portar** och klicka **Information**.
 1. Klicka på följande portnamn och ändra **portnummer** till 0 och klicka på **OK**.
 
    * `ORB_LISTENER_ADDRESS`

@@ -1,16 +1,12 @@
 ---
 title: Hantera artiklar
-seo-title: Managing Articles
 description: Följ den här sidan om du vill veta mer om hur du skapar och hanterar artiklar.
-seo-description: Follow this page to learn about creating and managing Articles.
-uuid: 72b86cd7-3016-41b6-a001-9dce4084e9db
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: authoring-on-demand-services-app
-discoiquuid: b46058f9-4691-4fba-a656-0f8507875a79
 exl-id: ea6c8aa3-f86e-4878-8550-fe1662f10696
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
 workflow-type: tm+mt
 source-wordcount: '679'
 ht-degree: 0%
@@ -47,12 +43,12 @@ Det allmänna arbetsflödet för att skapa en artikel är följande:
 1. Klicka på nedpilen i det övre högra hörnet av **Hantera artiklar** platta.
 1. Välj en artikelmall och klicka på **Nästa**.
 1. Gå igenom varje steg i guiden för att fortsätta skapa din nya artikel.
-1. När du är klar klickar du på **Skapa**.
+1. När du är klar klickar du **Skapa**.
 1. Den nya artikeln visas i **Hantera artiklar** platta.
 
 ## Importera en ny artikel {#importing-a-new-article}
 
-Befintligt mobilt On-Demand-innehåll kan hämtas (importeras) från Mobile On-Demand till AEM. På så sätt kan du redigera och visa lokalt innehåll.
+Befintligt mobilt on demand-innehåll kan hämtas (importeras) från Mobile On-Demand till AEM. På så sätt kan du redigera och visa lokalt innehåll.
 
 >[!NOTE]
 >
@@ -121,7 +117,7 @@ Den här åtgärden tar bort det markerade innehållet från Mobile On-Demand oc
 Det allmänna arbetsflödet för att ta bort en artikel:
 
 1. Välj mobilappen i katalogen i Mobile On-Demand.
-1. Markera artikeln som ska tas bort i **Hantera artiklar** platta.
+1. Markera artikeln som ska tas bort i dialogrutan **Hantera artiklar** platta.
 1. Se till att det är markerat i listan (markera andra att ta bort efter behov).
 1. Klicka **Ta bort** i åtgärdsfältet.
 1. Kontrollera om du vill ta bort från AEM och Mobile On-Demand.

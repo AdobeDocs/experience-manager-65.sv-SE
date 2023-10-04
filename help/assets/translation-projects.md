@@ -5,9 +5,9 @@ contentOwner: AG
 role: Architect, Admin
 feature: Translation
 exl-id: 8990feca-cfda-4974-915e-27aa9d8f2ee1
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
 workflow-type: tm+mt
-source-wordcount: '1733'
+source-wordcount: '1736'
 ht-degree: 10%
 
 ---
@@ -18,7 +18,7 @@ Om du vill skapa en språkkopia aktiverar du ett av följande språkkopieringsar
 
 * **Skapa och översätta**: I det här arbetsflödet kopieras resurser som ska översättas till språkroten för det språk som du vill översätta till. Beroende på vilka alternativ du väljer skapas dessutom ett översättningsprojekt för resurserna i projektkonsolen. Beroende på inställningarna kan översättningsprojektet startas manuellt eller köras automatiskt så fort översättningsprojektet skapas.
 
-* **Uppdatera språkkopior**: Kör det här arbetsflödet för att översätta ytterligare en grupp resurser och inkludera den i en språkkopia för en viss språkinställning. I det här fallet läggs de översatta resurserna till i målmappen som redan innehåller tidigare översatta resurser.
+* **Uppdatera språkkopior**: Kör det här arbetsflödet för att översätta ytterligare en grupp resurser och inkludera den i en språkkopia för en viss språkinställning. I det här fallet läggs de översatta resurserna till i målmappen som redan innehåller översatta resurser.
 
 >[!PREREQUISITES]
 >
@@ -102,7 +102,7 @@ Om du använder det här alternativet kopieras resurser som ska översättas til
 
    ![visa översatta metadata på sidan Egenskaper för resurs](assets/translated-metadata-asset-properties.png)
 
-   *Bild: Översatta metadata på egenskapssidan för resursen.*
+   *Bild: Översatta metadata på sidan för resursegenskaper.*
 
    >[!NOTE]
    >
@@ -146,7 +146,7 @@ Om du använder det här alternativet körs översättningsarbetsflödet för re
    >
    >Om den resurs som du lägger till i översättningsjobbet innehåller delresurser, markerar du delresurserna och tar bort dem för översättningen för att fortsätta utan några fel.
 
-1. Klicka på pilen på knappen **[!UICONTROL Translation Job]** platta och markera **[!UICONTROL Start]** från listan.
+1. Klicka på pilen på knappen **[!UICONTROL Translation Job]** sida vid sida och markera **[!UICONTROL Start]** från listan.
 
    ![chlimage_1-81](assets/chlimage_1-81.png)
 
@@ -162,7 +162,7 @@ Om du använder det här alternativet körs översättningsarbetsflödet för re
 
 ## Uppdatera språkkopior {#update-language-copies}
 
-Kör det här arbetsflödet för att översätta alla ytterligare resurser och inkludera dem i en språkkopia för en viss språkinställning. I det här fallet läggs de översatta resurserna till i målmappen som redan innehåller tidigare översatta resurser. Beroende på vilka alternativ du väljer skapas ett översättningsprojekt eller så uppdateras ett befintligt översättningsprojekt för de nya resurserna. Arbetsflödet för att uppdatera språkkopior innehåller följande alternativ:
+Kör det här arbetsflödet för att översätta alla ytterligare resurser och inkludera dem i en språkkopia för en viss språkinställning. I det här fallet läggs de översatta resurserna till i målmappen som redan innehåller översatta resurser. Beroende på vilka alternativ du väljer skapas ett översättningsprojekt eller så uppdateras ett befintligt översättningsprojekt för de nya resurserna. Arbetsflödet för att uppdatera språkkopior innehåller följande alternativ:
 
 * Skapa ett nytt översättningsprojekt
 * Lägg till i befintligt översättningsprojekt
@@ -196,7 +196,7 @@ Om du använder det här alternativet skapas ett översättningsprojekt för den
 
    ![chlimage_1-90](assets/chlimage_1-90.png)
 
-1. Klicka på pilen på knappen **[!UICONTROL Translation Job]** platta och markera **[!UICONTROL Start]** från listan.
+1. Klicka på pilen på knappen **[!UICONTROL Translation Job]** sida vid sida och markera **[!UICONTROL Start]** från listan.
 
    ![chlimage_1-91](assets/chlimage_1-91.png)
 
@@ -242,12 +242,12 @@ När du kör ett översättningsarbetsflöde för att uppdatera en språkkopia m
 
 1. Från [!DNL Assets] väljer du en resurs som du redan har översatt och klickar på **[!UICONTROL Edit]** i verktygsfältet för att öppna resursen i redigeringsläge.
 1. Redigera resursen och spara sedan ändringarna.
-1. Utför steg 2-14 i [Lägg till i befintligt översättningsprojekt](#add-to-existing-translation-project) för att uppdatera språkkopian.
+1. Utför steg 2-14 i [Lägg till i befintligt översättningsprojekt](#add-to-existing-translation-project) procedur för att uppdatera språkkopian.
 1. Klicka på ellipsen längst ned i **[!UICONTROL Translation Job]** platta. Från listan över resurser i **[!UICONTROL Translation Job]** På sidan kan du tydligt visa den tillfälliga plats där den översatta versionen av resursen lagras.
 
    ![chlimage_1-101](assets/chlimage_1-101.png)
 
-1. Markera kryssrutan bredvid **[!UICONTROL Title]**.
+1. Markera kryssrutan intill **[!UICONTROL Title]**.
 1. I verktygsfältet klickar du på **[!UICONTROL Accept Translation]** ![acceptera översättning](assets/do-not-localize/thumb-up.png) och sedan klicka **[!UICONTROL Accept]** i dialogrutan om du vill skriva över den översatta resursen i målmappen med den översatta versionen av den redigerade resursen.
 
    >[!NOTE]

@@ -1,16 +1,12 @@
 ---
 title: Typer av slutpunkter
-seo-title: Types of endpoints
 description: Lär dig mer om de olika typerna av slutpunkter.
-seo-description: Learn about the different types of endpoints.
-uuid: c899245c-14cc-4035-9440-95a5b6c1e47f
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/managing_endpoints
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: 8fe572e0-8a53-4129-940f-3fdb990073fe
 exl-id: 380cab7f-e7f7-4cb7-bd20-ea530a349fac
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
 workflow-type: tm+mt
 source-wordcount: '438'
 ht-degree: 0%
@@ -41,7 +37,7 @@ Följande typer av slutpunkter kan läggas till i tjänster. Alla tjänster har 
 
 **EJB:** Gör att ett klientprogram som utvecklats med AEM API:er för formulärprogrammering kan anropa tjänsten i Enterprise JavaBeans-läge (EJB). En EJB-slutpunkt skapas automatiskt för varje aktiverad tjänst.
 
-**WSDL:** Gör att ett klientprogram som utvecklats med AEM API:er för formulärprogrammering kan anropa tjänsten med hjälp av WSDL (Web Service Definition Language). Sidan Core Configurations innehåller ett alternativ för att aktivera WSDL-generering för alla tjänster som är en del av AEM formulär. (Se Konfigurera allmänna AEM formulärinställningar.)
+**WSDL:** Gör att ett klientprogram som utvecklats med AEM API:er för formulärprogrammering kan anropa tjänsten med hjälp av WSDL (Web Service Definition Language). Sidan Core Configurations innehåller ett alternativ för att aktivera WSDL-generering för alla tjänster som ingår i AEM formulär. (Se Konfigurera allmänna AEM formulärinställningar.)
 
 **REST:** Processer som skapas i Workbench kan konfigureras så att du kan anropa dem via REST-begäranden (Representational State Transfer). REST-begäranden skickas från HTML-sidor. Det innebär att du kan anropa en AEM formulärprocess direkt från en webbsida med hjälp av en REST-begäran.
 

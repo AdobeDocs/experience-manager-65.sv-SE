@@ -1,17 +1,13 @@
 ---
 title: Utforma formulärmallar för HTML5-formulär
-seo-title: Designing form templates for HTML5 forms
-description: AEM Forms erbjuder återgivning av XFA-formulärmall till HTML5-format. Formulärdesigners kan utforma formulärmallar med Designer och använda HTML5-renderingsfunktionen.
-seo-description: AEM Forms offers rendering XFA form template to HTML5 format. Form designers can design form templates using Designer and use the HTML5 rendition capability.
-uuid: 4f6b7231-4479-400a-adcd-c68064f06b4e
+description: AEM Forms kan återge XFA-formulärmallen till HTML5-format. Formulärdesigners kan utforma formulärmallar med Designer och använda HTML5-renderingsfunktionen.
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
-discoiquuid: f2e9dbe4-e210-41f3-8878-2fc4d166e63c
 docset: aem65
 feature: Mobile Forms
 exl-id: 7c8d501f-c953-495e-8bac-1f66fd99c783
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
 workflow-type: tm+mt
 source-wordcount: '478'
 ht-degree: 0%
@@ -20,7 +16,7 @@ ht-degree: 0%
 
 # Utforma formulärmallar för HTML5-formulär{#designing-form-templates-for-html-forms}
 
-HTML5-formulärkomponenten i AEM erbjuder återgivning av XFA-formulärmallen till HTML5-formatet. Blankettmallarna kan utformas med [Forms Designer](https://www.adobe.com/go/learn_aemforms_designer_63) och använda HTML5-renderingsfunktionen. Dessa formulärmallar, tillsammans med deras resurser, kan ligga i AEM, filsystem eller visas via http. Men om du tänker hantera dina formulär med Forms Manager bör mallarna och resurserna finnas i AEM.
+Formulärkomponenten HTML5 i AEM kan återge XFA-formulärmallen till HTML5-format. Blankettmallarna kan utformas med [Forms Designer](https://www.adobe.com/go/learn_aemforms_designer_63) och använda HTML5-renderingsfunktionen. Dessa formulärmallar, tillsammans med deras resurser, kan ligga i AEM, filsystem eller visas via http. Men om du tänker hantera dina formulär med Forms Manager bör mallarna och resurserna finnas i AEM.
 
 Även om HTML5-formulär i stor utsträckning överensstämmer med PDF forms beteende finns det vissa funktioner i båda formaten som inte kan användas i det andra formatet. Hur streckkoder tillämpas på ett PDF-formulär i Adobe Reader varierar till exempel från ett mobilformulär eller hur ett formulär signeras digitalt varierar också mellan formaten. Mer information om sådana variationer finns i [Skillnaden mellan HTML5-formulär och PDF forms](../../forms/using/feature-differentiation-html5-forms-pdf-forms.md).
 
@@ -30,7 +26,7 @@ Vanliga XFA-funktioner finns i följande metodtips och riktlinjer för att utfor
 
 De flesta stegen för att utforma en formulärmall, som schemabindningar eller skrivning av formulärlogik, är desamma. På grund av skillnader mellan återgivning och skriptmotor i en tjock klient som Adobe Reader och webbläsarbaserade formulär finns det dock vissa rekommendationer som beskrivs i [bästa praxis](/help/forms/using/design-accessible-html5-forms.md) artikel. De bästa sätten att utforma formulärmallar så att de fungerar som förväntat i båda formaten.
 
-### Funktioner i AEM Forms Designer för HTML5 Forms {#capabilities-in-aem-forms-designer-for-html-forms}
+### AEM Forms Designer för HTML5 Forms {#capabilities-in-aem-forms-designer-for-html-forms}
 
 #### Förhandsgranska HTML {#preview-html}
 
@@ -44,4 +40,4 @@ Det främsta målet för HTML5-formulär är pekenheter. Därför har en ny kont
 
 #### RTF-format {#rich-text-format}
 
-Du kan konvertera ett textfält till ett RTF-fält. En lista med formateringsalternativ läggs till i textfältet. Om du vill konvertera öppnar du Forms Designer och trycker på textfältet i **[!UICONTROL Design View]**. I **[!UICONTROL Field]** flik, välja **[!UICONTROL Rich Text]** från **[!UICONTROL Field Format]** nedrullningsbar lista. När XFA-formuläret återges som ett HTML5-formulär återges nu fältet som ett RTF-fält. Tryck ![Maximera](assets/maximize_icon.svg) om du vill visa ytterligare formateringsalternativ.
+Du kan konvertera ett textfält till ett RTF-fält. En lista med formateringsalternativ läggs till i textfältet. Om du vill konvertera öppnar du Forms Designer och trycker på textfältet i **[!UICONTROL Design View]**. I **[!UICONTROL Field]** flik, välja **[!UICONTROL Rich Text]** från **[!UICONTROL Field Format]** listruta. När XFA-formuläret återges som ett HTML5-formulär återges nu fältet som ett RTF-fält. Tryck ![Maximera](assets/maximize_icon.svg) om du vill visa ytterligare formateringsalternativ.

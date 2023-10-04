@@ -1,17 +1,13 @@
 ---
 title: Anropa AEM Forms med Remoting
-seo-title: Invoking AEM Forms using Remoting
 description: Använd Remoting för att anropa en AEM Forms-process för att anropa processer som skapats i Workbench. Du kan anropa en AEM Forms-process från ett klientprogram som skapats med Flex.
-seo-description: Use Remoting to invoke an AEM Forms process to invoke processes created in Workbench. You can invoke a AEM Forms process from a client application built with Flex.
-uuid: 592d1519-c38b-4b33-8cf3-61e2bff81501
 contentOwner: admin
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: coding
-discoiquuid: 3d8bb2d3-b1f8-49e1-a529-b3e7a28da4bb
 role: Developer
 exl-id: 94a48776-f537-4b4e-8d71-51b08e463cba
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
 workflow-type: tm+mt
 source-wordcount: '4597'
 ht-degree: 0%
@@ -40,10 +36,10 @@ Följande korta AEM Forms-process med namnet `MyApplication/EncryptDocument`, ka
 >
 >Om du vill anropa en AEM Forms-process med ett Flex-program kontrollerar du att en fjärrslutpunkt är aktiverad. Som standard är en fjärrslutpunkt aktiverad när du distribuerar en process.
 
-När den här processen anropas utför den följande åtgärder:
+När processen anropas utför den följande åtgärder:
 
 1. Hämtar det oskyddade PDF-dokumentet som skickas som ett indatavärde. Den här åtgärden baseras på `SetValue` operation. Namnet på indataparametern är `inDoc` och dess datatyp är `document`. (Med `document` datatypen är en tillgänglig datatyp inifrån Workbench.)
-1. Krypterar PDF-dokumentet med ett lösenord. Den här åtgärden baseras på `PasswordEncryptPDF` operation. Namnet på utdatavärdet för den här processen är `outDoc` och representerar det lösenordskrypterade PDF-dokumentet. Datatypen för outDoc är `document`.
+1. Krypterar PDF-dokumentet med ett lösenord. Den här åtgärden baseras på `PasswordEncryptPDF` operation. Namnet på utdatavärdet för processen är `outDoc` och representerar det lösenordskrypterade PDF-dokumentet. Datatypen för outDoc är `document`.
 1. Sparar det lösenordskrypterade PDF-dokumentet som en PDF-fil i det lokala filsystemet. Den här åtgärden baseras på `WriteDocument` operation.
 
 >[!NOTE]
@@ -62,7 +58,7 @@ När den här processen anropas utför den följande åtgärder:
 
 [Anropa en kort process genom att skicka ett osäkert dokument med AEM Forms Remoting (borttaget för AEM)](invoking-aem-forms-using-remoting.md#invoking-a-short-lived-process-by-passing-an-unsecure-document-using-remoting)
 
-[Autentisera klientapplikationer som skapats med Flex](invoking-aem-forms-using-remoting.md#authenticating-client-applications-built-with-flex)
+[Autentisera klientapplikationer som byggts med Flex](invoking-aem-forms-using-remoting.md#authenticating-client-applications-built-with-flex)
 
 [Skicka säkra dokument för att starta processer med Remoting](invoking-aem-forms-using-remoting.md#passing-secure-documents-to-invoke-processes-using-remoting)
 
@@ -94,17 +90,17 @@ Om du vill starta AEM Forms-processer programmatiskt med Remoting lägger du til
 
 [Anropa en kort process genom att skicka ett osäkert dokument med AEM Forms Remoting (borttaget för AEM)](invoking-aem-forms-using-remoting.md#invoking-a-short-lived-process-by-passing-an-unsecure-document-using-remoting)
 
-[Autentisera klientapplikationer som skapats med Flex](invoking-aem-forms-using-remoting.md#authenticating-client-applications-built-with-flex)
+[Autentisera klientapplikationer som byggts med Flex](invoking-aem-forms-using-remoting.md#authenticating-client-applications-built-with-flex)
 
 ## Hantera dokument med fjärrstyrning {#handling-documents-with-remoting}
 
-En av de viktigaste icke-primitiva Java™-typerna som används i AEM Forms är `com.adobe.idp.Document` klassen. Ett dokument krävs vanligtvis för att anropa en AEM Forms-åtgärd. Det är i första hand ett PDF-dokument, men kan innehålla andra dokumenttyper som SWF, HTML, XML eller en DOC-fil. (Se [Skicka data till AEM Forms-tjänster med Java API](/help/forms/developing/invoking-aem-forms-using-java.md#passing-data-to-aem-forms-services-using-the-java-api).)
+En av de viktigaste icke-primitiva Java™-typerna i AEM Forms är `com.adobe.idp.Document` klassen. Ett dokument krävs vanligtvis för att anropa en AEM Forms-åtgärd. Det är i första hand ett PDF-dokument, men kan innehålla andra dokumenttyper som SWF, HTML, XML eller en DOC-fil. (Se [Skicka data till AEM Forms-tjänster med Java API](/help/forms/developing/invoking-aem-forms-using-java.md#passing-data-to-aem-forms-services-using-the-java-api).)
 
 Ett klientprogram som skapats med Flex kan inte begära ett dokument direkt. Du kan till exempel inte starta Adobe Reader för att begära en URL som skapar en PDF-fil. Begäranden för dokumenttyper som PDF och Microsoft® Word-dokument returnerar ett resultat som är en URL. Det är kundens ansvar att visa innehållet i URL:en. Tjänsten Document Management hjälper till att generera information om URL och innehållstyp. Begäran om XML-dokument returnerar det fullständiga XML-dokumentet i resultatet.
 
 ### Skicka ett dokument som en indataparameter {#passing-a-document-as-an-input-parameter}
 
-Ett klientprogram som skapats med Flex kan inte skicka ett dokument direkt till en AEM Forms-process. I stället använder klientprogrammet en instans av `mx.rpc.livecycle.DocumentReference` ActionScript-klass för att skicka indataparametrar till en åtgärd som förväntar en `com.adobe.idp.Document` -instans. Ett Flex-klientprogram har flera alternativ för att konfigurera en `DocumentReference` objekt:
+Ett klientprogram som skapats med Flex kan inte skicka ett dokument direkt till en AEM Forms-process. I stället använder klientprogrammet en instans av `mx.rpc.livecycle.DocumentReference` ActionScripten klass som skickar indataparametrar till en åtgärd som förväntar en `com.adobe.idp.Document` -instans. Ett Flex-klientprogram har flera alternativ för att konfigurera en `DocumentReference` objekt:
 
 * När dokumentet finns på servern och dess filplats är känd anger du egenskapen referenceType för DocumentReference-objektet till REF_TYPE_FILE. Ställ in egenskapen fileRef på filens plats, vilket visas i följande exempel:
 
@@ -136,7 +132,7 @@ docRef.text = "Text for my document";  // Optionally, you can override the ser
 >
 Om AEM Forms är konfigurerat att tillåta osäkra dokument att överföras kan du använda en användare som inte har användarrollen Dokumentöverföring för att överföra ett dokument. En användare kan också ha behörigheten Dokumentöverföring. Om AEM Forms är konfigurerat för att endast tillåta säkra dokument måste du se till att användaren har användarrollen Dokumentöverföring eller behörigheten Dokumentöverföring. (Se [Konfigurera AEM Forms för att ta emot säkra och osäkra dokument](invoking-aem-forms-using-remoting.md#configuring-aem-forms-to-accept-secure-and-unsecure-documents).
 
-Du använder standardfunktionerna för överföring i Flash för den angivna överförings-URL:en: `https://SERVER:PORT/remoting/lcfileupload`. Du kan sedan använda `DocumentReference` objekt där en indataparameter av typen `Document` förväntades
+Du använder standardfunktioner för överföring av Flashar för den angivna URL-adressen för överföring: `https://SERVER:PORT/remoting/lcfileupload`. Du kan sedan använda `DocumentReference` objekt där en indataparameter av typen `Document` förväntas
 ` private function startUpload():void  {  fileRef.addEventListener(Event.SELECT, selectHandler);  fileRef.addEventListener("uploadCompleteData", completeHandler);  try  {   var success:Boolean = fileRef.browse();  }    catch (error:Error)  {   trace("Unable to browse for files.");  }  }      private function selectHandler(event:Event):void {  var request:URLRequest = new  URLRequest("https://SERVER:PORT/remoting/lcfileupload")  try   {   fileRef.upload(request);   }    catch (error:Error)   {   trace("Unable to upload file.");   }  }    private function completeHandler(event:DataEvent):void  {   var params:Object = new Object();   var docRef:DocumentReference = new DocumentReference();   docRef.url = event.data as String;   docRef.referenceType = DocumentReference.REF_TYPE_URL;  }`Snabbstart för fjärrkommunikation använder serverkommandot för fjärröverföring för att skicka en PDF-fil till `MyApplication/EncryptDocument`-processen. (Se [Anropa en kort process genom att skicka ett osäkert dokument med AEM Forms Remoting (borttaget för AEM)](invoking-aem-forms-using-remoting.md#invoking-a-short-lived-process-by-passing-an-unsecure-document-using-remoting).)
 
 ```java
@@ -174,7 +170,7 @@ Snabbstart för fjärrkommunikation använder serverkommandot för fjärröverf�
 
 ### Skicka tillbaka ett dokument till ett klientprogram {#passing-a-document-back-to-a-client-application}
 
-Ett klientprogram tar emot ett objekt av typen `mx.rpc.livecycle.DocumentReference` för en serviceåtgärd som returnerar en `com.adobe.idp.Document` -instans som en utdataparameter. Eftersom ett klientprogram hanterar ActionScript-objekt och inte Java, kan du inte skicka tillbaka ett Java-baserat Document-objekt till en Flex-klient. I stället skapar servern en URL för dokumentet och skickar tillbaka URL:en till klienten. The `DocumentReference` objektets `referenceType` egenskapen anger om innehållet finns i `DocumentReference` eller måste hämtas från en URL i `DocumentReference.url` -egenskap. The `DocumentReference.contentType` -egenskapen anger dokumenttypen.
+Ett klientprogram tar emot ett objekt av typen `mx.rpc.livecycle.DocumentReference` för en serviceåtgärd som returnerar en `com.adobe.idp.Document` -instans som en utdataparameter. Eftersom ett klientprogram hanterar ActionScript och inte Java, kan du inte skicka tillbaka ett Java-baserat Document-objekt till en Flex-klient. I stället skapar servern en URL för dokumentet och skickar tillbaka URL:en till klienten. The `DocumentReference` objektets `referenceType` egenskapen anger om innehållet finns i `DocumentReference` eller måste hämtas från en URL i `DocumentReference.url` -egenskap. The `DocumentReference.contentType` -egenskapen anger dokumenttypen.
 
 **Se även**
 
@@ -184,7 +180,7 @@ Ett klientprogram tar emot ett objekt av typen `mx.rpc.livecycle.DocumentReferen
 
 [Anropa en kort process genom att skicka ett osäkert dokument med AEM Forms Remoting (borttaget för AEM)](invoking-aem-forms-using-remoting.md#invoking-a-short-lived-process-by-passing-an-unsecure-document-using-remoting)
 
-[Autentisera klientapplikationer som skapats med Flex](invoking-aem-forms-using-remoting.md#authenticating-client-applications-built-with-flex)
+[Autentisera klientapplikationer som byggts med Flex](invoking-aem-forms-using-remoting.md#authenticating-client-applications-built-with-flex)
 
 [Skicka säkra dokument för att starta processer med Remoting](invoking-aem-forms-using-remoting.md#passing-secure-documents-to-invoke-processes-using-remoting)
 
@@ -221,7 +217,7 @@ I följande kodexempel skapas en `mx:RemoteObject` instans som anropar `MyApplic
 
 **Skapa en kanal till AEM Forms**
 
-Ett klientprogram kan anropa AEM Forms genom att ange en kanal i MXML eller ActionScript, vilket visas i följande ActionScript-exempel. Kanalen måste vara en `AMFChannel`, `SecureAMFChannel`, `HTTPChannel`, eller `SecureHTTPChannel`.
+Ett klientprogram kan anropa AEM Forms genom att ange en kanal i MXML eller ActionScript, vilket visas i följande ActionScript. Kanalen måste vara en `AMFChannel`, `SecureAMFChannel`, `HTTPChannel`, eller `SecureHTTPChannel`.
 
 ```java
      ...
@@ -235,7 +231,7 @@ Ett klientprogram kan anropa AEM Forms genom att ange en kanal i MXML eller Acti
      ...
 ```
 
-Tilldela `ChannelSet` till `mx:RemoteObject` instans `channelSet` (som i föregående kodexempel). Vanligtvis importerar du kanalklassen i en import-sats i stället för att ange det fullständiga, kvalificerade namnet när du anropar `ChannelSet.addChannel` -metod.
+Tilldela `ChannelSet` -instans till `mx:RemoteObject` instansens `channelSet` (som i föregående kodexempel). Vanligtvis importerar du kanalklassen i en import-sats i stället för att ange det fullständiga, kvalificerade namnet när du anropar `ChannelSet.addChannel` -metod.
 
 **Skicka indatavärden**
 
@@ -290,12 +286,12 @@ Du kan anropa `MyApplication/EncryptDocument` utför följande steg:
 1. Konfigurera en `ChannelSet` -instans för att kommunicera med AEM Forms och koppla den till `mx:RemoteObject` -instans. Se Skapa en kanal för AEM Forms.
 1. Anropa ChannelSet `login` eller tjänstens `setCredentials` metod för att ange användaridentifierarvärde och lösenord. (Se [Använda enkel inloggning](invoking-aem-forms-using-remoting.md#using-single-sign-on).)
 1. Fyll i en `mx.rpc.livecycle.DocumentReference` -instans med ett oskyddat PDF-dokument att skicka till `MyApplication/EncryptDocument` -processen. (Se [Skicka ett dokument som en indataparameter](invoking-aem-forms-using-remoting.md#passing-a-document-as-an-input-parameter).)
-1. Kryptera PDF-dokumentet genom att anropa `mx:RemoteObject` instans `invoke` -metod. Skicka `Object` som innehåller indataparametern (som är det oskyddade PDF-dokumentet). Se Skicka indatavärden.
+1. Kryptera PDF genom att anropa `mx:RemoteObject` instansens `invoke` -metod. Skicka `Object` som innehåller indataparametern (som är det oskyddade PDF-dokumentet). Se Skicka indatavärden.
 1. Hämta det lösenordskrypterade PDF-dokumentet som returneras från processen. Se Hantera returvärden.
 
-[Snabbstart: Anropa en kort process genom att skicka ett osäkert dokument med AEM Forms Remoting (borttaget för AEM)](/help/forms/developing/invocation-api-quick-starts.md#quick-start-invoking-a-short-lived-process-by-passing-an-unsecure-document-using-deprecated-for-aem-forms-aem-forms-remoting)
+[Snabbstart: Anropa en kort process genom att skicka ett osäkert dokument med hjälp av (borttaget för AEM formulär) AEM Forms Remoting](/help/forms/developing/invocation-api-quick-starts.md#quick-start-invoking-a-short-lived-process-by-passing-an-unsecure-document-using-deprecated-for-aem-forms-aem-forms-remoting)
 
-## Autentisera klientapplikationer som skapats med Flex {#authenticating-client-applications-built-with-flex}
+## Autentisera klientapplikationer som byggts med Flex {#authenticating-client-applications-built-with-flex}
 
 Det finns flera sätt att AEM formuläranvändarhanteraren kan autentisera en fjärrbegäran från ett Flex-program, bland annat AEM Forms samlad inloggning via den centrala inloggningstjänsten, grundläggande autentisering och anpassad autentisering. När varken enkel inloggning eller anonym åtkomst är aktiverat resulterar en fjärrbegäran i antingen grundläggande autentisering (standard) eller anpassad autentisering.
 
@@ -319,7 +315,7 @@ Eftersom flera destinationer kan använda samma kanaler och motsvarande ChannelS
 
 I följande exempel används `ChannelSet.login` och `ChannelSet.logout` metoder med en RemoteObject-kontroll. Programmet utför följande åtgärder:
 
-* Skapar en `ChannelSet` objekt i `creationComplete` som representerar kanalerna som används av `RemoteObject` komponent
+* Skapar en `ChannelSet` -objektet i `creationComplete` som representerar kanalerna som används av `RemoteObject` komponent
 * Skickar autentiseringsuppgifter till servern genom att anropa `ROLogin` funktion som svar på en Button click-händelse
 * Använder RemoteObject-komponenten för att skicka en sträng till servern som svar på en Button-klickningshändelse. Servern returnerar samma sträng till RemoteObject-komponenten
 * Använder result-händelsen för RemoteObject-komponenten för att visa strängen i en TextArea-kontroll
@@ -463,7 +459,7 @@ Om en cookie är ogiltig eller saknas finns ingen implicit omdirigering till en 
 
 Du kan kringgå AEM Forms mekanism för enkel inloggning genom att skriva ett klientprogram som loggar in och loggar ut på egen hand. Om du kringgår inloggningsfunktionen kan du använda grundläggande eller anpassad autentisering med programmet.
 
-Eftersom den här funktionen inte använder AEM Forms mekanism för enkel inloggning, skrivs ingen cookie för autentisering till klienten. Inloggningsuppgifterna lagras i `ChannelSet` -objekt för fjärrkanalen. Därför är `RemoteObject` ringer du för samma `ChannelSet` görs i samband med dessa autentiseringsuppgifter.
+Eftersom den här funktionen inte använder AEM Forms mekanism för enkel inloggning, skrivs ingen cookie för autentisering till klienten. Inloggningsuppgifterna lagras i `ChannelSet` -objekt för fjärrkanalen. Därför bör alla `RemoteObject` samtal du gör över samma `ChannelSet` görs i samband med dessa autentiseringsuppgifter.
 
 ### Konfigurera enkel inloggning i AEM Forms {#setting-up-single-sign-on-in-aem-forms}
 
@@ -526,13 +522,13 @@ På nästa begäran från klientprogrammet upptäcker AEM Forms att cookien har 
 
 **Loggar ut**
 
-Om du vill logga ut från AEM Forms och ogiltigförklara en session måste autentiseringscookien tas bort från klientens dator. Eftersom syftet med enkel inloggning är att tillåta en användare att logga in en gång, vill du inte att något klientprogram ska ta bort cookien. Den här åtgärden loggar ut användaren på ett effektivt sätt.
+Om du vill logga ut från AEM Forms och ogiltigförklara en session måste autentiseringscookien tas bort från klientens dator. Eftersom syftet med enkel inloggning är att tillåta en användare att logga in en gång, vill du inte att något klientprogram ska ta bort cookien. Den här åtgärden loggar ut användaren.
 
 Därför anropar du `RemoteObject.logout` metoden i ett klientprogram genererar ett felmeddelande på klienten som anger att sessionen inte är utloggad. I stället kan användaren använda den centraliserade inloggningstjänsten för att logga ut och ta bort autentiseringscookien.
 
 **Logga ut medan Flex fortfarande körs**
 
-Du kan starta ett klientprogram som har skapats med Flex och använda den centraliserade inloggningstjänsten för att logga ut. Som en del av utloggningsprocessen tas autentiserings-cookien bort. Om en fjärrbegäran görs utan en cookie, eller med en ogiltig cookie, blir användarsessionen ogiltig. Den här åtgärden är i själva verket en utloggning. Nästa gång klientprogrammet försöker ansluta till en AEM Forms-tjänst blir användaren ombedd att logga in.
+Du kan starta ett klientprogram som har skapats med Flex och använda den centraliserade inloggningstjänsten för att logga ut. Som en del av utloggningsprocessen tas autentiseringscookien bort. Om en fjärrbegäran görs utan en cookie, eller med en ogiltig cookie, blir användarsessionen ogiltig. Den här åtgärden är i själva verket en utloggning. Nästa gång klientprogrammet försöker ansluta till en AEM Forms-tjänst blir användaren ombedd att logga in.
 
 **Se även**
 
@@ -548,7 +544,7 @@ Du kan starta ett klientprogram som har skapats med Flex och använda den centra
 
 ## Skicka säkra dokument för att starta processer med Remoting {#passing-secure-documents-to-invoke-processes-using-remoting}
 
-Du kan skicka säkra dokument till AEM Forms när du anropar en process som kräver ett eller flera dokument. Genom att skicka ett säkert dokument skyddar du affärsinformation och konfidentiella dokument. I så fall kan ett dokument referera till ett PDF-dokument, ett XML-dokument, ett Word-dokument och så vidare. Du måste skicka ett säkert dokument till AEM Forms från ett klientprogram som är skrivet i Flex när AEM Forms är konfigurerat för att tillåta säkra dokument. (Se [Konfigurera AEM Forms för att ta emot säkra och osäkra dokument](invoking-aem-forms-using-remoting.md#configuring-aem-forms-to-accept-secure-and-unsecure-documents).)
+Du kan skicka säkra dokument till AEM Forms när du anropar en process som kräver ett eller flera dokument. Genom att skicka ett säkert dokument skyddar du affärsinformation och konfidentiella dokument. I så fall kan ett dokument referera till ett PDF-dokument, ett XML-dokument, ett Word-dokument och så vidare. Det krävs att ett säkert dokument skickas till AEM Forms från ett klientprogram som är skrivet i Flex när AEM Forms är konfigurerat för att tillåta säkra dokument. (Se [Konfigurera AEM Forms för att ta emot säkra och osäkra dokument](invoking-aem-forms-using-remoting.md#configuring-aem-forms-to-accept-secure-and-unsecure-documents).)
 
 När du skickar ett säkert dokument ska du använda enkel inloggning och ange en AEM som har *Användare av program för dokumentöverföring* roll. Utan den här rollen kan användaren inte överföra ett säkert dokument. Du kan tilldela en roll programmatiskt till en användare. (Se [Hantera roller och behörigheter](/help/forms/developing/users.md#managing-roles-and-permissions).)
 
@@ -556,7 +552,7 @@ När du skickar ett säkert dokument ska du använda enkel inloggning och ange e
 >
 När du skapar en ny roll och vill att medlemmar med den rollen ska överföra säkra dokument måste du ange behörigheten Dokumentöverföring.
 
-AEM Forms stöder en åtgärd med namnet `getFileUploadToken` som returnerar en token som skickas till överföringsservern. The `DocumentReference.constructRequestForUpload` -metoden kräver en URL till AEM Forms tillsammans med den token som returneras av `LC.FileUploadAuthenticator.getFileUploadToken` -metod. Den här metoden returnerar en `URLRequest` objekt som används i anropet till överföringsservern. I följande kod visas programlogiken.
+AEM Forms stöder en åtgärd med namnet `getFileUploadToken` som returnerar en token som skickas till överföringsservern. The `DocumentReference.constructRequestForUpload` -metoden kräver en URL till AEM Forms tillsammans med den token som returneras av `LC.FileUploadAuthenticator.getFileUploadToken` -metod. Den här metoden returnerar en `URLRequest` objekt som används i anropet till överföringsservern. I följande kod visas den här programlogiken.
 
 ```java
      ...
@@ -625,7 +621,7 @@ Du kan använda administrationskonsolen för att ange om dokument är säkra nä
 >
 Om du vill konfigurera AEM Forms att acceptera osäkra dokument väljer du alternativet Tillåt osäker dokumentöverföring från Flex-program. Starta sedan om ett program eller en tjänst för att se till att inställningen börjar gälla.
 
-### Snabbstart: Anropa en kortvarig process genom att skicka ett säkert dokument med Remoting {#quick-start-invoking-a-short-lived-process-by-passing-a-secure-document-using-remoting}
+### Snabbstart: Anropa en kort process genom att skicka ett säkert dokument med Remoting {#quick-start-invoking-a-short-lived-process-by-passing-a-secure-document-using-remoting}
 
 Följande kodexempel anropar `MyApplication/EncryptDocument.`Användaren måste logga in för att klicka på knappen Välj fil som används för att överföra en PDF-fil och starta processen. Det vill säga, när användaren har autentiserats aktiveras knappen Välj fil. Följande bild visar Flex klientprogram när en användare har autentiserats. Observera att den autentiserade CheckBox är aktiverad.
 
@@ -889,7 +885,7 @@ om AEM Forms är konfigurerat att endast tillåta att säkra dokument överförs
 
 [Anropa en kort process genom att skicka ett osäkert dokument med AEM Forms Remoting (borttaget för AEM)](invoking-aem-forms-using-remoting.md#invoking-a-short-lived-process-by-passing-an-unsecure-document-using-remoting)
 
-[Autentisera klientapplikationer som skapats med Flex](invoking-aem-forms-using-remoting.md#authenticating-client-applications-built-with-flex)
+[Autentisera klientapplikationer som byggts med Flex](invoking-aem-forms-using-remoting.md#authenticating-client-applications-built-with-flex)
 
 ## Anropa anpassade komponenttjänster med Remoting {#invoking-custom-component-services-using-remoting}
 
@@ -946,13 +942,13 @@ I följande tabell visas de kontroller som är en del av det här klientprogramm
 
 ### Mappa AEM Forms komplexa datatyper {#mapping-aem-forms-complex-data-types}
 
-Vissa AEM Forms-åtgärder kräver komplexa datatyper som indatavärden. Dessa komplexa datatyper definierar körtidsvärden som används av åtgärden. Exempel: Kundtjänst `createCustomer` åtgärden kräver `Customer` -instans som innehåller körningsvärden som krävs av tjänsten. Utan den komplexa typen genererar kundtjänsten ett undantag och utför inte åtgärden.
+Vissa AEM Forms-åtgärder kräver komplexa datatyper som indatavärden. Dessa komplexa datatyper definierar körtidsvärden som används av åtgärden. Exempel: Kundtjänst `createCustomer` åtgärden kräver en `Customer` -instans som innehåller körningsvärden som krävs av tjänsten. Utan den komplexa typen genererar kundtjänsten ett undantag och utför inte åtgärden.
 
-När du anropar en AEM Forms-tjänst skapar du ActionScript-objekt som mappar till AEM Forms komplexa typer. Skapa ett separat ActionScript-objekt för varje komplex datatyp som en åtgärd kräver.
+När du anropar en AEM Forms-tjänst skapar du ActionScript som är mappade till AEM Forms komplexa typer. För varje komplex datatyp som en åtgärd kräver skapar du ett separat ActionScript-objekt.
 
-I klassen ActionScript använder du `RemoteClass` metadatatagg för att mappa till AEM Forms komplexa typ. Exempel: när kundtjänst anropas `createCustomer` åtgärd, skapa en ActionScript-klass som mappar till `com.adobe.livecycle.sample.customer.Customer` datatyp.
+I klassen ActionScript använder du `RemoteClass` metadatatagg för att mappa till AEM Forms komplexa typ. Exempel: när kundtjänst anropas `createCustomer` åtgärd, skapa en ActionScripten klass som mappar till `com.adobe.livecycle.sample.customer.Customer` datatyp.
 
-Följande ActionScript-klass med namnet Customer visar hur du mappar till AEM Forms datatyp `com.adobe.livecycle.sample.customer.Customer`.
+Följande ActionScript-klass med namnet Customer visar hur du mappar till datatypen AEM Forms `com.adobe.livecycle.sample.customer.Customer`.
 
 ```java
  package customer
@@ -973,13 +969,13 @@ Följande ActionScript-klass med namnet Customer visar hur du mappar till AEM Fo
 
 Den fullständiga datatypen för den komplexa AEM Forms-typen tilldelas till aliastaggen.
 
-ActionScript-klassens fält matchar fälten som tillhör den komplexa AEM Forms-typen. De sex fälten i klassen Customer ActionScript matchar fälten som tillhör `com.adobe.livecycle.sample.customer.Customer`.
+Fälten i klassen ActionScript matchar fälten som tillhör den komplexa typen AEM Forms. De sex fälten i klassen Customer ActionScript matchar fälten som tillhör `com.adobe.livecycle.sample.customer.Customer`.
 
 >[!NOTE]
 >
 Ett bra sätt att avgöra vilka fältnamn som tillhör en komplex Forms-typ är att visa tjänstens WSDL i en webbläsare. En WSDL anger en tjänsts komplexa typer och motsvarande datamedlemmar. Följande WSDL används för kundtjänsten: `https://[yourServer]:[yourPort]/soap/services/CustomerService?wsdl.`
 
-Klassen Customer ActionScript tillhör ett paket som heter customer. Vi rekommenderar att du placerar alla ActionScript-klasser som mappar till komplexa AEM Forms-datatyper i sina egna paket. Skapa en mapp i Flex-projektets src-mapp och placera ActionScript-filen i mappen, som på följande bild.
+Klassen Customer ActionScript tillhör ett paket som heter customer. Vi rekommenderar att du placerar alla klasser för ActionScript som mappar till komplexa AEM Forms-datatyper i sina egna paket. Skapa en mapp i Flex-projektets src-mapp och placera ActionScriptet i  enligt följande bild.
 
 ![iu_iu_customeras](assets/iu_iu_customeras.png)
 
@@ -1276,6 +1272,6 @@ Den här snabbstarten innehåller en formatmall med namnet *bank.css*. Följande
 
 [Anropa en kort process genom att skicka ett osäkert dokument med AEM Forms Remoting (borttaget för AEM)](invoking-aem-forms-using-remoting.md#invoking-a-short-lived-process-by-passing-an-unsecure-document-using-remoting)
 
-[Autentisera klientapplikationer som skapats med Flex](invoking-aem-forms-using-remoting.md#authenticating-client-applications-built-with-flex)
+[Autentisera klientapplikationer som byggts med Flex](invoking-aem-forms-using-remoting.md#authenticating-client-applications-built-with-flex)
 
 [Skicka säkra dokument för att starta processer med Remoting](invoking-aem-forms-using-remoting.md#passing-secure-documents-to-invoke-processes-using-remoting)

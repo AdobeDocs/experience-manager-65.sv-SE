@@ -1,16 +1,14 @@
 ---
 title: Mallar för innehållssidor för mobilappar
 description: Följ den här sidan om du vill veta mer om sidmallar för mobilappar.
-uuid: ef469796-10f5-44f4-a5c7-25025ca192b0
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-adobe-phonegap-enterprise
-discoiquuid: f45d8a9b-14d6-468f-a44c-3933e962922c
 exl-id: 7f00d426-4d28-41ee-8c54-636349e48669
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
 workflow-type: tm+mt
-source-wordcount: '2654'
+source-wordcount: '2652'
 ht-degree: 0%
 
 ---
@@ -61,7 +59,7 @@ Innehållet på en Angular återges på olika sätt beroende på om wcmMode iden
 
 I redigeringsläge återges varje enskild sida separat. Angular hanterar inte dirigering mellan sidor och inte heller en ng-view som används för att läsa in en del av en mall som innehåller sidans komponenter. I stället inkluderas sidmallens innehåll (template.jsp) på serversidan via `cq:include` -tagg.
 
-Den här strategin aktiverar författarfunktioner (som att lägga till och redigera komponenter i styckesystemet, Sidekick, designläge osv.) att fungera utan ändringar. Sidor som förlitar sig på klientsidans återgivning, t.ex. de för appar, fungerar inte så bra i AEM.
+Den här strategin aktiverar författarfunktionerna (som att lägga till och redigera komponenter i styckesystemet, Sidekick, designläget osv.) att fungera utan ändringar. Sidor som förlitar sig på klientsidans återgivning, t.ex. de för appar, fungerar inte så bra AEM redigeringsläget.
 
 Observera att include i template.jsp finns i en `div` elementet som innehåller `ng-controller` -direktivet. Den här strukturen gör att DOM-innehållet kan länkas till kontrollenheten. Även om sidor som återges på klientsidan misslyckas, fungerar därför enskilda komponenter som gör det bra (se avsnittet Komponenter nedan).
 
@@ -75,7 +73,7 @@ Observera att include i template.jsp finns i en `div` elementet som innehåller 
 
 I publiceringsläge (t.ex. när appen exporteras med Innehållssynkronisering) blir alla sidor en app för en sida (SPA). (Mer information om SPA finns i självstudiekursen om Angular. [https://docs.angularjs.org/tutorial/step_07](https://docs.angularjs.org/tutorial/step_07).)
 
-Det finns bara en HTML-sida i en SPA (en sida som innehåller `<html>` element). Den här sidan kallas för&quot;layoutmall&quot;. I Angularnas terminologi är det..en mall som är gemensam för alla vyer i programmet.&quot; Se den här sidan som den översta appsidan. Appsidan på den översta nivån är `cq:Page` noden i programmet som är närmast roten (och inte är en omdirigering).
+Det finns bara en HTML-sida i en SPA (en sida som innehåller `<html>` element). Den här sidan kallas för&quot;layoutmall&quot;. I Angularnas terminologi är det &quot;...en mall som är gemensam för alla vyer i programmet&quot;. Se den här sidan som den översta appsidan. Appsidan på den översta nivån är `cq:Page` noden i programmet som är närmast roten (och inte är en omdirigering).
 
 Eftersom den faktiska URI:n för din app inte ändras i publiceringsläget måste referenser till externa resurser från den här sidan använda relativa sökvägar. Därför finns det en särskild bildkomponent som tar hänsyn till den här sidan på den översta nivån när bilder återges för export.
 
@@ -85,15 +83,15 @@ Som SPA genererar den här layoutmallsidan helt enkelt ett div-element med ett n
  <div ng-view ng-class="transition"></div>
 ```
 
-I flödestjänsten för Angular används det här elementet för att visa innehållet på alla sidor i appen, inklusive det redigerbara innehållet på den aktuella sidan (som finns i template.jsp).
+I flödestjänsten används det här elementet för att visa innehållet på alla Angular i appen, inklusive det redigerbara innehållet på den aktuella sidan (som finns i template.jsp).
 
 Filen body.jsp innehåller header.jsp och footer.jsp som är tomma. Om du vill ange statiskt innehåll på varje sida kan du åsidosätta dessa skript i appen.
 
-Slutligen finns javascript-klienter längst ned i &lt;body> -element inklusive två speciella JS-filer som genereras på servern: *&lt;page name=&quot;&quot;>*.angular-app-module.js och *&lt;page name=&quot;&quot;>*.angular-app-controller.js.
+Slutligen finns javascript-klienter längst ned i &lt;body> -element som innehåller två speciella JS-filer som genereras på servern: *&lt;page name=&quot;&quot;>*.angular-app-module.js och *&lt;page name=&quot;&quot;>*.angular-app-controller.js.
 
 ### angular-app-module.js.jsp {#angular-app-module-js-jsp}
 
-Skriptet definierar programmodulen Angular. Skriptets utdata är länkade till koden som resten av mallkomponenten genererar via `html` element i ng-page.jsp, som innehåller följande attribut:
+Det här skriptet definierar programmodulen Angular. Skriptets utdata är länkade till koden som resten av mallkomponenten genererar via `html` element i ng-page.jsp, som innehåller följande attribut:
 
 ```xml
 ng-app="<c:out value='${applicationName}'/>"
@@ -101,7 +99,7 @@ ng-app="<c:out value='${applicationName}'/>"
 
 Det här attributet anger för Angularna att innehållet i det här DOM-elementet ska länkas till följande modul. Den här modulen länkar vyerna (i AEM är de cq:Page-resurser) till motsvarande kontrollenheter.
 
-Den här modulen definierar även en kontrollenhet på den översta nivån med namnet `AppController` som visar `wcmMode` variabel till omfånget och konfigurerar den URI som innehållssynkroniseringens uppdateringsnyttolaster ska hämtas från.
+Den här modulen definierar även en kontrollenhet på den översta nivån med namnet `AppController` som exponerar `wcmMode` variabel till omfånget och konfigurerar den URI som innehållssynkroniseringens uppdateringsnyttolaster ska hämtas från.
 
 Slutligen itererar den här modulen igenom varje underordnad sida (inklusive sig själv) och återger innehållet i flödesfragmentet för varje sida (via väljaren angular-route-fragment.js och tillägget), inklusive det som en config-post till Angularnas $routeProvider. Med andra ord anger $routeProvider vilket innehåll som ska återges när en viss sökväg begärs.
 
@@ -130,7 +128,7 @@ Om det behövs kan du åsidosätta det här skriptet för att hantera mer komple
 
 ### angular-app-controllers.js.jsp {#angular-app-controllers-js-jsp}
 
-I Angular sammanställer styrenheter variabler i $scope och visar dem för vyn. Skriptet angular-app-controllers.js.jsp följer det mönster som illustreras av angular-app-module.js.jsp på så sätt att det itererar genom varje underordnad sida (inklusive sig själv) och matar ut det kontrollenhetsfragment som varje sida definierar (via controller.js.jsp). Modulen som definieras anropas `cqAppControllers` och måste listas som ett beroende för den översta programmodulen så att sidstyrenheterna blir tillgängliga.
+I Angular sammanfogar styrenheter variabler i $scope och visar dem för vyn. Skriptet angular-app-controllers.js.jsp följer det mönster som illustreras av angular-app-module.js.jsp på så sätt att det itererar genom varje underordnad sida (inklusive sig själv) och skapar det kontrollenhetsfragment som varje sida definierar (via controller.js.jsp). Modulen som definieras anropas `cqAppControllers` och måste listas som ett beroende för den översta programmodulen så att sidstyrenheterna blir tillgängliga.
 
 ### controller.js.jsp {#controller-js-jsp}
 
@@ -154,7 +152,7 @@ För att en komponent ska kunna vara en del av kontrollenheten på det här sät
 
 Först introducerades i body.jsp-avsnittet, innehåller template.jsp helt enkelt sidans parsys. I publiceringsläge refereras det här innehållet direkt (på &lt;page-path>.template.html) och läses in i SPA via templateUrl som är konfigurerad på $routeProvider.
 
-Parsyserna i det här skriptet kan konfigureras så att alla typer av komponenter accepteras. Försiktighet måste dock iakttas vid hantering av komponenter som är byggda för en traditionell webbplats (till skillnad från SPA). Till exempel fungerar bildkomponenten som grund bara korrekt på appsidan på den översta nivån eftersom den inte är utformad för att referera till resurser som finns inuti en app.
+Parsytorna i det här skriptet kan konfigureras så att alla typer av komponenter accepteras. Försiktighet måste dock iakttas vid hantering av komponenter som är byggda för en traditionell webbplats (till skillnad från SPA). Till exempel fungerar bildkomponenten som grund bara korrekt på appsidan på den översta nivån eftersom den inte är utformad för att referera till resurser som finns inuti en app.
 
 ### angular-module-list.js.jsp {#angular-module-list-js-jsp}
 
@@ -231,13 +229,13 @@ Skriptet visar antingen komponentinnehållet eller en lämplig platshållare nä
 
 ### template.jsp {#template-jsp-1}
 
-Skriptet template.jsp återger komponentens kod. Om komponenten i fråga drivs av JSON-data som har extraherats från AEM (till exempel &#39;ng-text&#39;): /libs/mobileapps/components/angular/ng-text/template.jsp) kommer det här skriptet att vara ansvarigt för att dra markeringen med data som exponeras av sidans kontrollomfång.
+Skriptet template.jsp återger komponentens kod. Om den aktuella komponenten drivs av JSON-data som har extraherats från AEM (till exempel &#39;ng-text&#39;: /libs/mobileapps/components/angular/ng-text/template.jsp), ansvarar det här skriptet för att dra markeringen med data som visas av sidans kontrollomfång.
 
-Prestandakraven kan dock ibland innebära att ingen klientsidans mall (dvs databindning) utförs. I det här fallet återger du bara komponentens kod på serversidan, så inkluderas den i sidmallsinnehållet.
+Prestandakraven kan dock ibland innebära att ingen klientsidans mallning (dvs databindning) utförs. I det här fallet återger du bara komponentens kod på serversidan, så inkluderas den i sidmallsinnehållet.
 
 ### overhead.jsp {#overhead-jsp}
 
-I komponenter som drivs av JSON-data (till exempel &#39;ng-text&#39;): /libs/mobileapps/components/angular/ng-text), overhead.jsp kan användas för att ta bort all Java-kod från template.jsp. Den refereras sedan från template.jsp och alla variabler som den visar på begäran är tillgängliga för användning. Den här strategin uppmuntrar till separation av logik från presentation och begränsar mängden kod som måste kopieras och klistras in när en ny komponent härleds från en befintlig.
+I komponenter som drivs av JSON-data (till exempel &#39;ng-text&#39;: /libs/mobileapps/components/angular/ng-text) kan overhead.jsp användas för att ta bort all Java-kod från template.jsp. Den refereras sedan från template.jsp och alla variabler som den visar på begäran är tillgängliga för användning. Den här strategin uppmuntrar till separation av logik från presentation och begränsar mängden kod som måste kopieras och klistras in när en ny komponent härleds från en befintlig.
 
 ### controller.js.jsp {#controller-js-jsp-1}
 
@@ -316,11 +314,11 @@ Katalogen after-platform_add innehåller `copy_AMS_Conifg.js` -fil. Det här skr
 
 ### .cordova/hooks/after-prepare/ {#cordova-hooks-after-prepare}
 
-Katalogen after-prepare innehåller `copy_resource_files.js` -fil. Skriptet kopierar ett antal ikoner och välkomstskärmsbilder till plattformsspecifika platser.
+Katalogen after-prepare innehåller `copy_resource_files.js` -fil. Skriptet kopierar flera ikoner och välkomstskärmsbilder till plattformsspecifika platser.
 
 ### .cordova/hooks/before_platform_add/ {#cordova-hooks-before-platform-add}
 
-Före_platform_add-katalogen innehåller `install_plugins.js` -fil. Skriptet itererar genom en lista med identifierare för Cordova-plugin-program, och installerar de som identifieras inte redan är tillgängliga.
+Före_platform_add-katalogen innehåller `install_plugins.js` -fil. Det här skriptet itererar genom en lista med identifierare för Cordova-plugin-program, och installerar de som identifieras inte redan är tillgängliga.
 
 Den här strategin kräver inte att du paketerar och installerar plugin-program för att AEM varje gång Maven `content-package:install` kommandot körs. Den alternativa strategin för att checka in filerna i SCM-systemet kräver repetitiva paketerings- och installationsaktiviteter.
 
@@ -359,13 +357,13 @@ Den här katalogen är tom tills du kör `phonegap run *<platform>*` -kommando i
 
 När du har skapat programmet för en viss plattform skapas motsvarande katalog och den innehåller den plattformsspecifika programkoden.
 
-### plugin-program/ {#plugins}
+### plugins/ {#plugins}
 
 Katalogen för plugin-program fylls i av varje plugin-program som visas i `.cordova/hooks/before_platform_add/install_plugins.js` efter att du har kört `phonegap run *<platform>*` -kommando. Katalogen är från början tom.
 
 ### www/ {#www}
 
-Katalogen www innehåller allt webbinnehåll (HTML, JS och CSS-filer) som implementerar programmets utseende och beteende. Med undantag för de undantag som beskrivs nedan kommer det här innehållet från AEM och exporteras till dess statiska form via Innehållssynkronisering.
+Katalogen www innehåller allt webbinnehåll (HTML, JS och CSS-filer) som implementerar utseendet och beteendet för programmet. Med undantag för de undantag som beskrivs nedan kommer det här innehållet från AEM och exporteras till dess statiska form via Innehållssynkronisering.
 
 ### www/config.xml {#www-config-xml}
 
@@ -395,7 +393,7 @@ AEM noden /etc innehåller som standard statiskt clientlib-innehåll. Katalogen 
 
 ### www/apps {#www-apps}
 
-Programkatalogen innehåller kod som är relaterad till välkomstsidan. Den unika egenskapen hos startsidan för en AEM är att den initierar programmet utan någon användarinteraktion. Klientlibbinnehållet (både CSS och JS) i appen är därför minimalt för att maximera prestanda.
+Programkatalogen innehåller kod som är relaterad till välkomstsidan. Den unika egenskapen hos välkomstsidan för en AEM är att den initierar programmet utan någon användarinteraktion. Klientlibbinnehållet (både CSS och JS) i appen är därför minimalt för att maximera prestanda.
 
 ### www/content {#www-content}
 
@@ -408,7 +406,7 @@ Innehållskatalogen innehåller resten av programmets webbinnehåll. Innehållet
 
 ### www/package.json {#www-package-json}
 
-Filen package.json är en manifestfil som listar filerna som en **full** Innehållssynkronisering innehåller. Den här filen innehåller även den tidsstämpel som användes när nyttolasten för Innehållssynkronisering skapades ( `lastModified`). Den här egenskapen används vid begäran om partiella uppdateringar av appen från AEM.
+Filen package.json är en manifestfil som listar de filer som en **full** Innehållssynkronisering innehåller. Den här filen innehåller även den tidsstämpel som användes när nyttolasten för Innehållssynkronisering skapades ( `lastModified`). Den här egenskapen används vid begäran om partiella uppdateringar av appen från AEM.
 
 ### www/package-update.json {#www-package-update-json}
 

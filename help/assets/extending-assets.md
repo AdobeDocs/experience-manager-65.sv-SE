@@ -5,16 +5,16 @@ contentOwner: AG
 role: Developer
 feature: Developer Tools
 exl-id: 0271c528-23b0-4a3a-b5e8-5baf6cdeecc7
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
 workflow-type: tm+mt
-source-wordcount: '253'
+source-wordcount: '252'
 ht-degree: 0%
 
 ---
 
 # Anpassa och utöka [!DNL Assets] {#customizing-and-extending-assets}
 
-Resursredigeraren är den primära åtkomstpunkten som användare på en Adobe Enterprise Manager-webbplats kommer att använda för att hitta, visa och ändra digitala resurser i din databas.
+Resursredigeraren är den primära åtkomstpunkten som användare på en Adobe Enterprise Manager-webbplats använder för att hitta, visa och ändra digitala resurser i din databas.
 
 Som en [!DNL Experience Manager] kan du anpassa och utöka Resursredigeraren på flera olika sätt och ge användarna ett särskilt skräddarsytt gränssnitt och en uppsättning funktioner.
 
@@ -31,7 +31,7 @@ Följande funktionalitetsaspekter kan anpassas eller förbättras:
 
 Följande aspekter av utseendet och känslan i resursredigeraren kan anpassas:
 
-* Logotyp: Du kan lägga till din egen organisations logotyp i gränssnittet.
+* Logo: Du kan lägga till din egen organisations logotyp i gränssnittet.
 * Färger och teckensnitt: Du kan ändra de färger och teckensnitt som används i gränssnittet.
 * HTML-kod: Om du vill göra en mer detaljerad anpassning kan du ändra den underliggande HTML-koden som definierar gränssnitten.
 

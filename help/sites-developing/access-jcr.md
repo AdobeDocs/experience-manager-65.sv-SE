@@ -1,41 +1,37 @@
 ---
 title: Så här programmässigt kommer du åt AEM JCR
-seo-title: How to programmatically access the AEM JCR
-description: Du kan ändra noder och egenskaper som finns i AEM, som ingår i Adobe Marketing Cloud
-seo-description: You can programmatically modify nodes and properties located within the AEM repository, which is part of the Adobe Marketing Cloud
-uuid: 2051d03f-430a-4cae-8f6d-e5bc727d733f
+description: Du kan ändra noder och egenskaper som finns i AEM, som ingår i Adobe Experience Cloud
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: platform
 content-type: reference
-discoiquuid: 69f62a38-7991-4009-8db7-ee8fd35dc535
 exl-id: fe946b9a-b29e-4aa5-b973-e2a652417a55
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
 workflow-type: tm+mt
-source-wordcount: '589'
+source-wordcount: '586'
 ht-degree: 0%
 
 ---
 
 # Så här programmässigt kommer du åt AEM JCR{#how-to-programmatically-access-the-aem-jcr}
 
-Du kan programmässigt ändra noder och egenskaper som finns i Adobe CQ-databasen, som är en del av Adobe Marketing Cloud. Om du vill komma åt CQ-databasen använder du JCR-API:t (Java Content Repository). Du kan använda Java JCR API för att skapa, ersätta, uppdatera och ta bort (CRUD) åtgärder för innehåll som finns i Adobe CQ-databasen. Mer information om Java JCR API finns i [https://jackrabbit.apache.org/jcr/jcr-api.html](https://jackrabbit.apache.org/jcr/jcr-api.html).
+Du kan programmässigt ändra noder och egenskaper som finns i Adobe CQ-databasen, som är en del av Adobe Experience Cloud. Om du vill komma åt CQ-databasen använder du Java™ Content Repository-API:t (JCR). Du kan använda Java™ JCR API för att skapa, ersätta, uppdatera och ta bort (CRUD) innehåll som finns i Adobe CQ-databasen. Mer information om Java™ JCR API finns i [https://jackrabbit.apache.org/jcr/jcr-api.html](https://jackrabbit.apache.org/jcr/jcr-api.html).
 
 >[!NOTE]
 >
->Den här utvecklingsartikeln ändrar Adobe CQ JCR från ett externt Java-program. Du kan däremot ändra JCR-inställningen inifrån ett OSGi-paket med JCR API. Mer information finns i [Bevara CQ-data i Java Content Repository](https://helpx.adobe.com/experience-manager/using/persisting-cq-data-java-content1.html).
+>Den här utvecklingsartikeln ändrar Adobe CQ JCR från ett externt Java™-program. Du kan däremot ändra JCR-inställningen inifrån ett OSGi-paket med JCR API. Mer information finns i [Bevara CQ-data i Java™ Content Repository](https://helpx.adobe.com/experience-manager/using/persisting-cq-data-java-content1.html).
 
 >[!NOTE]
 >
->Om du vill använda JCR-API:t lägger du till `jackrabbit-standalone-2.4.0.jar` till Java-programmets klassökväg. Du kan hämta JAR-filen från Java JCR API-webbsidan på [https://jackrabbit.apache.org/jcr/jcr-api.html](https://jackrabbit.apache.org/jcr/jcr-api.html).
+Om du vill använda JCR API:t lägger du till `jackrabbit-standalone-2.4.0.jar` till klassökvägen för ditt Java™-program. Du kan hämta JAR-filen från Java™ JCR API-webbsidan på [https://jackrabbit.apache.org/jcr/jcr-api.html](https://jackrabbit.apache.org/jcr/jcr-api.html).
 
 >[!NOTE]
 >
->Mer information om hur du skickar frågor till Adobe CQ JCR med JCR-fråge-API:t finns i [Fråga Adobe Experience Manager-data med JCR API](https://helpx.adobe.com/experience-manager/using/querying-experience-manager-data-using1.html).
+Mer information om hur du skickar frågor till Adobe CQ JCR med JCR-fråge-API:t finns i [Fråga Adobe Experience Manager-data med JCR API](https://helpx.adobe.com/experience-manager/using/querying-experience-manager-data-using1.html).
 
 ## Skapa en databasinstans {#create-a-repository-instance}
 
-Även om det finns olika sätt att ansluta till en databas och upprätta en anslutning använder den här utvecklingsartikeln en statisk metod som tillhör `org.apache.jackrabbit.commons.JcrUtils` klassen. Namnet på metoden är `getRepository`. Den här metoden tar en strängparameter som representerar URL:en för Adobe CQ-servern. Till exempel `http://localhost:4503/crx/server`.
+Även om det finns olika sätt att ansluta till en databas och upprätta en anslutning använder den här utvecklingsartikeln en statisk metod som tillhör `org.apache.jackrabbit.commons.JcrUtils` klassen. Namnet på metoden är `getRepository`. Den här metoden tar en strängparameter som representerar URL:en för Adobe CQ-servern. Till exempel, `http://localhost:4503/crx/server`.
 
 The `getRepository`returnerar en `Repository`-instans, vilket visas i följande kodexempel.
 
@@ -62,7 +58,7 @@ javax.jcr.Session session = repository.login( new SimpleCredentials("admin", "ad
 
 ## Skapa en nodinstans {#create-a-node-instance}
 
-Använd en `Session`instans för att skapa en `javax.jcr.Node` -instans. A `Node`-instans gör att du kan utföra nodåtgärder. Du kan till exempel skapa en ny nod. Om du vill skapa en nod som representerar rotnoden anropar du `Session`instans `getRootNode` -metoden, vilket visas på följande kodrad.
+Använd en `Session`instans för att skapa en `javax.jcr.Node` -instans. A `Node`-instans gör att du kan utföra nodåtgärder. Du kan till exempel skapa en nod. Om du vill skapa en nod som representerar rotnoden anropar du `Session`instansens `getRootNode` -metoden, vilket visas på följande kodrad.
 
 ```java
 //Create a Node
@@ -90,7 +86,7 @@ System.out.println(node.getProperty("message").getString());
 
 ## Skapa noder i Adobe CQ Repository {#create-nodes-in-the-adobe-cq-repository}
 
-Följande Java-kodexempel representerar en Java-klass som ansluter till Adobe CQ, skapar en `Session`och lägger till nya noder. En nod tilldelas ett datavärde och sedan skrivs nodens värde och sökväg ut till konsolen. När du är klar med sessionen måste du logga ut.
+Följande Java™-kodexempel representerar en Java™-klass som ansluter till Adobe CQ, skapar en `Session`och lägger till nya noder. En nod tilldelas ett datavärde och sedan skrivs nodens värde och sökväg ut till konsolen. När du är klar med sessionen måste du logga ut.
 
 ```java
 /*

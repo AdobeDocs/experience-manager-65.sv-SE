@@ -2,7 +2,7 @@
 title: Redigera en extern SPA i Adobe Experience Manager
 description: I det här dokumentet beskrivs de rekommenderade stegen för att överföra en fristående SPA till en Adobe Experience Manager-instans, lägga till redigerbara innehållsavsnitt och aktivera redigering.
 exl-id: 25236af4-405a-4152-8308-34d983977e9a
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
 workflow-type: tm+mt
 source-wordcount: '2440'
 ht-degree: 0%
@@ -22,9 +22,9 @@ I det här dokumentet beskrivs de rekommenderade stegen för att överföra en f
 Förutsättningarna är enkla.
 
 * Kontrollera att en instans av AEM körs lokalt.
-* Skapa ett AEM SPA med [AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?#available-properties).
+* Skapa ett AEM SPA projekt med [AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?#available-properties).
    * Detta utgör grunden för det AEM projektet som kommer att uppdateras för att inkludera det externa SPA.
-   * Exemplen i det här dokumentet använder startpunkten för [WKND-SPA](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/spa-editor/spa-editor-framework-feature-video-use.html#spa-editor).
+   * Exemplen i det här dokumentet använder startpunkten för [WKND SPA](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/spa-editor/spa-editor-framework-feature-video-use.html#spa-editor).
 * Ha den fungerande, externa SPA som ni vill integrera till hands.
 
 ## Överför SPA till AEM {#upload-spa-to-aem-project}
@@ -79,7 +79,7 @@ The `initializationAsync` kan acceptera `options` objekt som parameter:
 * `modelClient` - Tillåter att du anger en anpassad klient som ansvarar för att hämta modellen.
 * `model` - A `model` objekt som skickas som en parameter som vanligtvis fylls i när [med SSR.](spa-ssr.md)
 
-### AEM Authorable Leaf Components {#authorable-leaf-components}
+### AEM Authorable Components {#authorable-leaf-components}
 
 1. Skapa/identifiera en AEM som en redigerbar React-komponent ska skapas för. I det här exemplet använder WKND-projektet textkomponenten.
 
@@ -89,7 +89,7 @@ The `initializationAsync` kan acceptera `options` objekt som parameter:
 
    ![Text.js](assets/external-spa-textjs.png)
 
-1. Skapa ett konfigurationsobjekt för att ange de attribut som krävs för att aktivera AEM redigering.
+1. Skapa ett konfigurationsobjekt för att ange de attribut som krävs för att aktivera AEM.
 
    ![Skapa config-objekt](assets/external-spa-config-object.png)
 
@@ -103,7 +103,7 @@ The `initializationAsync` kan acceptera `options` objekt som parameter:
 
    >[!NOTE]
    >
-   >I det här exemplet finns det separata versioner av komponenten: AEM inkapslade och oförpackade React-komponenter. Den omslutna versionen måste användas när komponenten används explicit. När komponenten är en del av en sida kan du fortsätta använda standardkomponenten på samma sätt som i SPA.
+   >I det här exemplet finns det separata versioner av komponenten: AEM inkapslade och oomslutna React-komponenter. Den omslutna versionen måste användas när komponenten används explicit. När komponenten är en del av en sida kan du fortsätta använda standardkomponenten på samma sätt som i SPA.
 
 1. Återge innehåll i komponenten.
 
@@ -157,7 +157,7 @@ Låt oss ta en exempelsida där text från WKND-SPA måste läggas till. I det h
 
 1. Ange sökvägen till noden som ska visas.
 
-   * `pagePath`: Sidan som innehåller noden, i exemplet `/content/wknd-spa-react/us/en/home`
+   * `pagePath`: Den sida som innehåller noden, i exemplet `/content/wknd-spa-react/us/en/home`
    * `itemPath`: Sökväg till noden på sidan, i exemplet `root/responsivegrid/text`
       * Detta består av namnen på de objekt som finns på sidan.
 
@@ -165,9 +165,9 @@ Låt oss ta en exempelsida där text från WKND-SPA måste läggas till. I det h
 
 1. Lägg till en komponent på önskad plats på sidan.
 
-   ![Lägg till komponent på sidan](assets/external-spa-add-component.png)
+   ![Lägga till komponent på sidan](assets/external-spa-add-component.png)
 
-   The `AEMText` -komponenten kan läggas till vid den önskade positionen på sidan med `pagePath` och `itemPath` värden anges som egenskaper. `pagePath` är en obligatorisk egenskap.
+   The `AEMText` -komponenten kan läggas till vid den önskade positionen på sidan med `pagePath` och `itemPath` värden som angetts som egenskaper. `pagePath` är en obligatorisk egenskap.
 
 #### Verifiera redigering av textinnehåll på AEM {#verify-text-edit}
 
@@ -179,7 +179,7 @@ Testa nu komponenten på den AEM som körs.
 mvn clean install -PautoInstallSinglePackage
 ```
 
-1. I AEM navigerar du till `http://<host>:<port>/editor.html/content/wknd-spa-react/us/en/home.html`.
+1. Navigera AEM till `http://<host>:<port>/editor.html/content/wknd-spa-react/us/en/home.html`.
 
 ![Redigera SPA i AEM](assets/external-spa-edit-aem.png)
 
@@ -189,7 +189,7 @@ The `AEMText` -komponenten är nu AEM.
 
 1. Identifiera en sida som ska läggas till för redigering i SPA. Det här exemplet använder `/content/wknd-spa-react/us/en/home.html`.
 1. Skapa en fil (till exempel `Page.js`) för den redigerbara sidkomponenten. Här kan sidkomponenten återanvändas som anges i `@adobe/cq-react-editable-components`.
-1. Upprepa steg fyra i avsnittet [AEM](#authorable-leaf-components). Använda funktionen wrapper `withMappable` på komponenten.
+1. Upprepa steg fyra i avsnittet [AEM skrivbara komponenter](#authorable-leaf-components). Använda funktionen wrapper `withMappable` på komponenten.
 1. Använd `MapTo` till AEM för alla underordnade komponenter på sidan.
 
    ```javascript
@@ -203,13 +203,13 @@ The `AEMText` -komponenten är nu AEM.
 
    >[!NOTE]
    >
-   >I det här exemplet används den obrutna React-textkomponenten i stället för den omslutna texten `AEMText` tidigare. Detta beror på att när komponenten är en del av en sida/behållare och inte fristående, kommer behållaren att hantera rekursiv mappning av komponenten och aktivera redigeringsfunktioner och den extra adaptern behövs inte för varje underordnad.
+   >I det här exemplet används den obrutna React-textkomponenten i stället för den figursatta `AEMText` tidigare. Detta beror på att när komponenten är en del av en sida/behållare och inte fristående, kommer behållaren att hantera rekursiv mappning av komponenten och aktivera redigeringsfunktioner och den extra adaptern behövs inte för varje underordnad.
 
 1. Om du vill lägga till en skrivbar sida i SPA följer du samma steg i avsnittet [Lägg till redigerbara komponenter på sidan](#add-authorable-component-to-page). Här kan vi hoppa över `itemPath` -egenskapen.
 
 #### Verifiera sidinnehåll på AEM {#verify-page-content}
 
-Följ samma steg i avsnittet för att kontrollera att sidan kan redigeras [Verifiera redigering av textinnehåll på AEM](#verify-text-edit).
+Följ stegen nedan för att verifiera att sidan kan redigeras [Verifiera redigering av textinnehåll på AEM](#verify-text-edit).
 
 ![Redigera en sida i AEM](assets/external-spa-edit-page.png)
 
@@ -217,7 +217,7 @@ Sidan kan nu redigeras på AEM med en layoutbehållare och en underordnad textko
 
 ### Virtuella lövkomponenter {#virtual-leaf-components}
 
-I de föregående exemplen lade vi till komponenter i SPA med befintligt AEM. Det finns emellertid fall där innehåll ännu inte har skapats i AEM, men måste läggas till senare av innehållsförfattaren. För att tillgodose detta kan frontendutvecklaren lägga till komponenter på lämpliga platser i SPA. Komponenterna visar platshållare när de öppnas i redigeraren i AEM. När innehållet har lagts till i platshållarna av innehållsförfattaren skapas noderna i JCR-strukturen och innehållet bevaras. Komponenten som skapas tillåter samma uppsättning åtgärder som de fristående bladkomponenterna.
+I de föregående exemplen lade vi till komponenter i SPA med befintligt AEM. Det finns emellertid fall där innehåll ännu inte har skapats i AEM, men måste läggas till senare av innehållsförfattaren. För att tillgodose detta kan frontendutvecklaren lägga till komponenter på lämpliga platser i SPA. Komponenterna visar platshållare när de öppnas i redigeraren i AEM. När innehållet har lagts till i platshållarna av innehållsförfattaren skapas noderna i JCR-strukturen och innehållet bevaras. Den skapade komponenten tillåter samma uppsättning åtgärder som de fristående bladkomponenterna.
 
 I det här exemplet återanvänder vi `AEMText` som har skapats tidigare. Vi vill att ny text ska läggas till under den befintliga textkomponenten på WKND-startsidan. Tillägget av komponenter är detsamma som för normala bladkomponenter. Men `itemPath` kan uppdateras till den bana där den nya komponenten måste läggas till.
 
@@ -235,7 +235,7 @@ The `TestPage` -komponenten ser ut så här när den virtuella komponenten har l
 
 >[!NOTE]
 >
->Se till att `AEMText` komponenten har `resourceType` anges i konfigurationen för att aktivera den här funktionen.
+>Kontrollera `AEMText` komponenten har `resourceType` anges i konfigurationen för att aktivera funktionen.
 
 Du kan nu distribuera ändringarna till AEM genom att följa stegen i avsnittet [Verifiera redigering av textinnehåll på AEM](#verify-text-edit). En platshållare visas för de befintliga `text_20` nod.
 
@@ -250,12 +250,12 @@ När innehållsförfattaren uppdaterar den här komponenten visas en ny `text_20
 Det finns flera krav för att lägga till virtuella bladkomponenter samt vissa begränsningar.
 
 * The `pagePath` -egenskapen är obligatorisk för att skapa en virtuell komponent.
-* Den sidnod som finns på sökvägen i `pagePath` måste finnas i det AEM projektet.
+* Den sidnod som finns på sökvägen i `pagePath` måste finnas i AEM.
 * Namnet på noden som ska skapas måste anges i `itemPath`.
 * Komponenten kan skapas på alla nivåer.
    * Om vi erbjuder `itemPath='text_20'` i föregående exempel skapas den nya noden direkt under sidan som är `/content/wknd-spa-react/us/en/home/jcr:content/text_20`
 * Sökvägen till noden där en ny nod skapas måste vara giltig när den anges via `itemPath`.
-   * I det här exemplet `root/responsivegrid` måste finnas så att den nya noden `text_20` kan skapas där.
+   * I detta exempel `root/responsivegrid` måste finnas så att den nya noden `text_20` kan skapas där.
 * Det går bara att skapa lövkomponenter. Virtuell behållare och sida stöds i framtida versioner.
 
 ### Virtuella behållare {#virtual-containers}
@@ -264,7 +264,7 @@ Möjligheten att lägga till behållare stöds, även om motsvarande behållare 
 
 Utvecklaren kan lägga till behållarkomponenterna på lämpliga platser i SPA och dessa komponenter visar platshållare när de öppnas i redigeraren i AEM. Författaren kan sedan lägga till komponenter och deras innehåll i behållaren, vilket skapar de nödvändiga noderna i JCR-strukturen.
 
-Om en behållare redan finns på `/root/responsivegrid` och utvecklaren vill lägga till en ny underordnad behållare:
+Om en behållare till exempel redan finns på `/root/responsivegrid` och utvecklaren vill lägga till en ny underordnad behållare:
 
 ![Behållarplats](assets/container-location.png)
 
@@ -326,7 +326,7 @@ Anta till exempel att vi har en SPA där programmet återges inuti en `div` för
 
 Om det finns flera sidor i det externa SPA React-programmet [kan använda routning för att bestämma vilken sida/komponent som ska renderas](spa-routing.md). Det grundläggande användningsexemplet är att matcha den aktiva URL:en mot sökvägen som anges för ett flöde. Om du vill aktivera redigering för sådana routningsaktiverade program måste sökvägen som ska matchas mot omformas för att rymma AEM information.
 
-I följande exempel har vi ett enkelt React-program med två sidor. Den sida som ska återges bestäms genom att matcha sökvägen som har angetts till routern mot den aktiva URL:en. Om vi till exempel är på `mydomain.com/test`, `TestPage` återges.
+I följande exempel har vi ett enkelt React-program med två sidor. Den sida som ska återges bestäms genom att matcha sökvägen som har angetts till routern mot den aktiva URL:en. Om vi är på `mydomain.com/test`, `TestPage` återges.
 
 ![Routning i en extern SPA](assets/external-spa-routing.png)
 
@@ -339,11 +339,11 @@ Följande steg krävs för att aktivera redigering i AEM för det här SPA.
 1. Skapa en ny sida på önskad nivå.
 
    * I det här exemplet redigeras sidan `mydomain.com/test`. `test` finns i programmets rotsökväg. Detta måste också bevaras när du skapar sidan i AEM. Därför kan vi skapa en ny sida på den rotnivå som definierades i föregående steg.
-   * Den nya sidan som skapas måste ha samma namn som sidan som ska redigeras. I det här exemplet `mydomain.com/test`måste den nya sidan skapas `/path/to/aem/root/test`.
+   * Den nya sidan måste ha samma namn som sidan som ska redigeras. I detta exempel `mydomain.com/test`måste den nya sidan skapas `/path/to/aem/root/test`.
 
 1. Lägg till hjälpredor i SPA.
 
-   * Den nya sidan kommer ännu inte att återge det förväntade innehållet i AEM. Detta beror på att routern förväntar sig en sökväg till `/test` Den AEM aktiva banan är `/wknd-spa-react/us/en/test`. För att få plats med den AEM delen av URL:en måste vi lägga till några hjälpredor på SPA.
+   * Den nyskapade sidan återger inte det förväntade innehållet i AEM ännu. Detta beror på att routern förväntar sig en sökväg till `/test` Den AEM aktiva banan är `/wknd-spa-react/us/en/test`. För att få plats med den AEM delen av URL:en måste vi lägga till några hjälpredor på SPA.
 
    ![Hjälpprogram för routning](assets/external-spa-router-helper.png)
 

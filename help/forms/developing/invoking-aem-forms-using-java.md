@@ -1,17 +1,13 @@
 ---
 title: Anropa AEM Forms med JavaAPI
-seo-title: Invoking AEM Forms using the JavaAPI
 description: Använd AEM Forms Java API för RMI-transportprotokoll för fjärranrop, VM-transport för lokalt anrop, SOAP för fjärranrop, annan autentisering, till exempel användarnamn och lösenord, samt synkrona och asynkrona anropsbegäranden.
-seo-description: Use the AEM Forms Java API for RMI transport protocol for remote invocation, VM transport for local invocation, SOAP for remote invocation, different authentication, such as user name and password, and synchronous and asynchronous invocation requests.
-uuid: 5e2fef2a-05f3-4283-8fd3-2d7dca411000
 contentOwner: admin
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: coding
-discoiquuid: 0e6e7850-6137-42c5-b8e2-d4e352fddae2
 role: Developer
 exl-id: 036c35c1-1be7-4825-bbb6-ea025e49c6f6
-source-git-commit: 0c7dba43dad8608b4a5de271e1e44942c950fb16
+source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
 workflow-type: tm+mt
 source-wordcount: '5398'
 ht-degree: 0%
@@ -57,7 +53,7 @@ Java API har stöd för följande funktioner:
 Om du vill anropa en AEM Forms-tjänst med hjälp av Java API:t inkluderar du nödvändiga biblioteksfiler (JAR-filer) i Java-projektets klassökväg. JAR-filerna som du inkluderar i klientprogrammets klassökväg beror på flera faktorer:
 
 * Den AEM Forms-tjänst som ska anropas. Ett klientprogram kan anropa en eller flera tjänster.
-* Det läge i vilket du vill anropa en AEM Forms-tjänst. Du kan använda läget EJB eller SOAP. (Se [Ange anslutningsegenskaper](invoking-aem-forms-using-java.md#setting-connection-properties).)
+* Det läge i vilket du vill anropa en AEM Forms-tjänst. Du kan använda EJB- eller SOAP-läget. (Se [Ange anslutningsegenskaper](invoking-aem-forms-using-java.md#setting-connection-properties).)
 
 >[!NOTE]
 >
@@ -105,7 +101,7 @@ I följande tabell visas de JAR-filer som krävs för att anropa AEM Forms-tjän
   </tr>
   <tr>
    <td><p>adobe-backup-restore-client-sdk.jar</p></td>
-   <td><p>Krävs för att anropa tjänste-API:t för säkerhetskopiering och återställning.</p></td>
+   <td><p>Krävs för att anropa tjänstens API för säkerhetskopiering och återställning.</p></td>
    <td><p>&lt;<i>installationskatalog</i>&gt;/sdk/client-libs/common</p></td>
   </tr>
   <tr>
@@ -262,7 +258,7 @@ I följande tabell visas de JAR-filer som är beroende av anslutningsläget och 
   </tr>
   <tr>
    <td><p>wlclient.jar</p> </td>
-   <td><p>om AEM Forms körs på BEA WebLogic Server® ska du ta med denna JAR-fil.</p> </td>
+   <td><p>om AEM Forms körs på BEA WebLogic Server® ska du ta med den här JAR-filen.</p> </td>
    <td><p>WebLogic-specifik bibliotekskatalog</p> <p>Om du distribuerar klientprogrammet på samma J2EE-programserver behöver du inte inkludera den här filen.</p> </td>
   </tr>
   <tr>
@@ -296,7 +292,7 @@ I följande tabell anges vilka scenarier som anropas och vilka JAR-filer som kr�
  &lt;/thead align="left"&gt;
  <tbody>
   <tr>
-   <td><p>Forms-tjänst</p> </td>
+   <td><p>Forms</p> </td>
    <td><p>EJB</p> </td>
    <td><p>JBoss</p> </td>
    <td>
@@ -313,7 +309,7 @@ I följande tabell anges vilka scenarier som anropas och vilka JAR-filer som kr�
     </ul> </td>
   </tr>
   <tr>
-   <td><p>Forms-tjänst</p> <p>Acrobat Reader DC-tilläggstjänst</p> <p>Signaturtjänst</p> </td>
+   <td><p>Forms</p> <p>Acrobat Reader DC-tilläggstjänst</p> <p>Signaturtjänst</p> </td>
    <td><p>EJB</p> </td>
    <td><p>JBoss</p> </td>
    <td>
@@ -332,7 +328,7 @@ I följande tabell anges vilka scenarier som anropas och vilka JAR-filer som kr�
     </ul> </td>
   </tr>
   <tr>
-   <td><p>Forms-tjänst</p> </td>
+   <td><p>Forms</p> </td>
    <td><p>SOAP</p> </td>
    <td><p>WebLogic</p> </td>
    <td>
@@ -361,7 +357,7 @@ I följande tabell anges vilka scenarier som anropas och vilka JAR-filer som kr�
     </ul> </td>
   </tr>
   <tr>
-   <td><p>Forms-tjänst</p> <p>Acrobat Reader DC-tilläggstjänst</p> <p>Signaturtjänst</p> </td>
+   <td><p>Forms</p> <p>Acrobat Reader DC-tilläggstjänst</p> <p>Signaturtjänst</p> </td>
    <td><p>SOAP</p> </td>
    <td><p>WebLogic</p> </td>
    <td>
@@ -428,7 +424,7 @@ Om du vill anropa en AEM Forms-tjänst anger du följande anslutningsegenskaper:
    * WebSphere: `iiop://<ServerName>:2809 (default port)`
    * WebLogic: `t3://<ServerName>:7001 (default port)`
 
-* **DSC_DEFAULT_SOAP_ENDPOINT**: Om du använder SOAP-anslutningsläget representerar det här värdet slutpunkten dit en anropsbegäran skickas. Om du vill fjärranropa AEM Forms anger du namnet på J2EE-programservern som AEM Forms distribueras på. Om klientprogrammet finns på samma J2EE-programserver kan du ange `localhost` (t.ex. `http://localhost:8080`.)
+* **DSC_DEFAULT_SOAP_ENDPOINT**: Om du använder SOAP-anslutningsläget representerar det här värdet slutpunkten dit en anropsbegäran skickas. Om du vill fjärranropa AEM Forms anger du namnet på J2EE-programservern som AEM Forms distribueras på. Om klientprogrammet finns på samma J2EE-programserver kan du ange `localhost` (till exempel `http://localhost:8080`.)
 
    * Portvärdet `8080` är tillämpligt om J2EE-programmet är JBoss. Om J2EE-programservern är IBM® WebSphere® ska du använda port `9080`. Om J2EE-programservern är WebLogic använder du port på samma sätt `7001`. (Dessa värden är standardportvärden. Om du ändrar portvärdet använder du det tillämpliga portnumret.)
 
@@ -440,15 +436,15 @@ Om du vill anropa en AEM Forms-tjänst anger du följande anslutningsegenskaper:
    * Om du anger den här anslutningsegenskapen som `JBoss`, `java.naming.factory.initial` värdet är inställt på `org.jnp.interfaces.NamingContextFactory`.
    * Du kan ange `java.naming.factory.initial` till ett värde som uppfyller dina krav om du inte vill använda standardvärdena.
 
-   >[!NOTE]
-   >
-   >I stället för att använda en sträng för att ange `DSC_SERVER_TYPE` anslutningsegenskapen kan du använda en statisk medlem i `ServiceClientFactoryProperties` klassen. Följande värden kan användas: `ServiceClientFactoryProperties.DSC_WEBSPHERE_SERVER_TYPE`, `ServiceClientFactoryProperties.DSC_WEBLOGIC_SERVER_TYPE`, eller `ServiceClientFactoryProperties.DSC_JBOSS_SERVER_TYPE`.
+  >[!NOTE]
+  >
+  >I stället för att använda en sträng för att ange `DSC_SERVER_TYPE` anslutningsegenskapen kan du använda en statisk medlem i `ServiceClientFactoryProperties` klassen. Följande värden kan användas: `ServiceClientFactoryProperties.DSC_WEBSPHERE_SERVER_TYPE`, `ServiceClientFactoryProperties.DSC_WEBLOGIC_SERVER_TYPE`, eller `ServiceClientFactoryProperties.DSC_JBOSS_SERVER_TYPE`.
 
 * **DSC_CREDENTIAL_USERNAME:** Anger AEM användarnamn. För att en användare ska kunna anropa en AEM Forms-tjänst måste användaren ha användarrollen Tjänster. En användare kan även ha en annan roll som inkluderar behörigheten Tjänstanrop. Annars genereras ett undantag när de försöker anropa en tjänst. Om tjänstsäkerhet är inaktiverad behöver du inte ange den här anslutningsegenskapen.
 * **DSC_CREDENTIAL_PASSWORD:** Anger motsvarande lösenordsvärde. Om tjänstsäkerhet är inaktiverad behöver du inte ange den här anslutningsegenskapen.
-* **DSC_REQUEST_TIMEOUT:** Standardtidsgränsen för begäran för SOAP-begäran är 1200000 millisekunder (20 minuter). Ibland kan en begäran ta längre tid att slutföra åtgärden. En SOAP-begäran som hämtar en stor uppsättning poster kan till exempel kräva en längre tidsgräns. Du kan använda `ServiceClientFactoryProperties.DSC_REQUEST_TIMEOUT` för att öka tidsgränsen för begärandeanrop för SOAP-begäranden.
+* **DSC_REQUEST_TIMEOUT:** Standardtidsgränsen för SOAP-begäran är 1200000 millisekunder (20 minuter). Ibland kan en begäran ta längre tid att slutföra åtgärden. En SOAP-begäran som hämtar en stor uppsättning poster kan till exempel kräva en längre tidsgräns. Du kan använda `ServiceClientFactoryProperties.DSC_REQUEST_TIMEOUT` för att öka tidsgränsen för begärandeanrop för SOAP-begäranden.
 
-   **anteckning**: Endast SOAP-baserade anrop stöder egenskapen DSC_REQUEST_TIMEOUT.
+  **anteckning**: Endast SOAP-baserade anrop stöder egenskapen DSC_REQUEST_TIMEOUT.
 
 Utför följande åtgärder för att ange anslutningsegenskaper:
 
@@ -477,14 +473,14 @@ Utför följande åtgärder för att ange anslutningsegenskaper:
    * Ett strängvärde som anger den J2EE-programserver som är värd för AEM Forms (om AEM Forms till exempel distribueras på JBoss, anger du `JBoss`).
 
       1. Så här anger du `DSC_CREDENTIAL_USERNAME` connection, anropa `java.util.Properties` objektets `setProperty` och skicka följande värden:
+
    * The `ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME` uppräkningsvärde
    * Ett strängvärde som anger vilket användarnamn som krävs för att anropa AEM Forms
 
       1. Så här anger du `DSC_CREDENTIAL_PASSWORD` connection, anropa `java.util.Properties` objektets `setProperty` och skicka följande värden:
+
    * The `ServiceClientFactoryProperties.DSC_CREDENTIAL_PASSWORD` uppräkningsvärde
    * Ett strängvärde som anger motsvarande lösenordsvärde
-
-
 
 **Ställa in EJB-anslutningsläget för JBoss**
 
@@ -570,11 +566,11 @@ I följande Java-kodexempel ställs anslutningsegenskaper in som krävs för att
 ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_REQUEST_TIMEOUT, "1800000"); // Request timeout limit 30 Minutes
 ```
 
-**Använda ett Context-objekt för att anropa AEM Forms**
+**Anropa AEM Forms med ett Context-objekt**
 
 Du kan använda en `com.adobe.idp.Context` objekt för att anropa en AEM Forms-tjänst med en autentiserad användare ( `com.adobe.idp.Context` -objektet representerar en autentiserad användare). När en `com.adobe.idp.Context` -objekt, du behöver inte ange `DSC_CREDENTIAL_USERNAME` eller `DSC_CREDENTIAL_PASSWORD` egenskaper. Du kan få en `com.adobe.idp.Context` när du autentiserar användare med `AuthenticationManagerServiceClient` objektets `authenticate` -metod.
 
-The `authenticate` returnerar en `AuthResult` objekt som innehåller autentiseringsresultatet. Du kan skapa en `com.adobe.idp.Context` genom att anropa dess konstruktor. Anropa sedan `com.adobe.idp.Context` objektets `initPrincipal` och skicka `AuthResult` -objekt, vilket visas i följande kod:
+The `authenticate` returnerar en `AuthResult` objekt som innehåller autentiseringsresultatet. Du kan skapa `com.adobe.idp.Context` genom att anropa dess konstruktor. Anropa sedan `com.adobe.idp.Context` objektets `initPrincipal` och skicka `AuthResult` -objekt, vilket visas i följande kod:
 
 ```java
  Context myCtx = new Context();
@@ -636,9 +632,9 @@ I det här scenariot körs ett klientprogram i sin egen JVM och anropar AEM Form
 
 ### Klientprogrammet anropar klustrade AEM Forms-instanser {#client-application-invoking-clustered-aem-forms-instances}
 
-I följande diagram visas ett klientprogram som körs i en egen JVM och som anropar AEM Forms-instanser i ett kluster.
+I följande diagram visas ett klientprogram som körs i en egen JVM och som anropar AEM Forms-instanser som finns i ett kluster.
 
-Detta scenario liknar ett klientprogram som anropar en fristående AEM Forms-instans. Leverantörens URL är dock annorlunda. Om ett klientprogram vill ansluta till en specifik J2EE-programserver måste programmet ändra URL:en så att den refererar till den specifika J2EE-programservern.
+Detta scenario liknar ett klientprogram som anropar en fristående AEM Forms-instans. Providerns URL är dock annorlunda. Om ett klientprogram vill ansluta till en specifik J2EE-programserver måste programmet ändra URL:en så att den refererar till den specifika J2EE-programservern.
 
 Du bör inte referera till en specifik J2EE-programserver eftersom anslutningen mellan klientprogrammet och AEM Forms avbryts om programservern avbryts. Vi rekommenderar att provider-URL refererar till en JNDI-hanterare på cellnivå i stället för en specifik J2EE-programserver.
 
@@ -683,7 +679,7 @@ I följande exempel visas innehållet i en jndi.properties-fil som används för
 
 [Skicka data till AEM Forms-tjänster med Java API](invoking-aem-forms-using-java.md#passing-data-to-aem-forms-services-using-the-java-api)
 
-[Anropa en tjänst med ett Java-klientbibliotek](invoking-aem-forms-using-java.md#invoking-a-service-using-a-java-client-library)
+[Anropa en tjänst med hjälp av ett Java-klientbibliotek](invoking-aem-forms-using-java.md#invoking-a-service-using-a-java-client-library)
 
 ## Skicka data till AEM Forms-tjänster med Java API {#passing-data-to-aem-forms-services-using-the-java-api}
 
@@ -697,11 +693,11 @@ Beroende på `com.adobe.idp.Document` objektstorlek, data finns i `com.adobe.idp
 
 Ibland är det nödvändigt att känna till innehållstypen för en `com.adobe.idp.Document` innan du skickar det till en tjänst. Om en åtgärd till exempel kräver en viss innehållstyp, som `application/pdf`rekommenderar vi att du bestämmer innehållstypen. (Se [Bestämma innehållstypen för ett dokument](invoking-aem-forms-using-java.md#determining-the-content-type-of-a-document).)
 
-The `com.adobe.idp.Document` -objektet försöker att bestämma innehållstypen med hjälp av angivna data. Om innehållstypen inte kan hämtas från de data som anges (till exempel när data har angetts som en bytearray), anger du innehållstypen. Om du vill ange innehållstypen anropar du `com.adobe.idp.Document` objektets `setContentType` -metod. (Se [Bestämma innehållstypen för ett dokument](invoking-aem-forms-using-java.md#determining-the-content-type-of-a-document))
+The `com.adobe.idp.Document` -objektet försöker att bestämma innehållstypen med hjälp av angivna data. Om innehållstypen inte kan hämtas från de data som anges (till exempel när data har angetts som en bytearray), anger du innehållstypen. Ange innehållstypen genom att anropa `com.adobe.idp.Document` objektets `setContentType` -metod. (Se [Bestämma innehållstypen för ett dokument](invoking-aem-forms-using-java.md#determining-the-content-type-of-a-document))
 
 Om det finns flera filer i samma filsystem skapar du en `com.adobe.idp.Document` objektet är snabbare. Om det finns filer som kan användas i fjärranslutna filsystem måste en kopieringsåtgärd utföras, vilket påverkar prestandan.
 
-Ett program kan innehålla båda `com.adobe.idp.Document` och `org.w3c.dom.Document` datatyper. Se dock till att du är fullständigt berättigad till `org.w3c.dom.Document` datatyp. Mer information om hur du konverterar en `org.w3c.dom.Document` objekt till `com.adobe.idp.Document` objekt, se [Snabbstart (EJB-läge): Förifyll Forms med flödeslayouter med Java API](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-prepopulating-forms-with-flowable-layouts-using-the-java-api).
+Ett program kan innehålla båda `com.adobe.idp.Document` och `org.w3c.dom.Document` datatyper. Se dock till att du är fullständigt berättigad till `org.w3c.dom.Document` datatyp. Mer information om hur du konverterar en `org.w3c.dom.Document` objekt till `com.adobe.idp.Document` objekt, se [Snabbstart (EJB-läge): Fylla i Forms i förväg med flödeslayouter med Java API](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-prepopulating-forms-with-flowable-layouts-using-the-java-api).
 
 >[!NOTE]
 >
@@ -752,7 +748,7 @@ Ett program kan innehålla båda `com.adobe.idp.Document` och `org.w3c.dom.Docum
 
 ### Skapa dokument {#creating-documents}
 
-Skapa en `com.adobe.idp.Document` innan du anropar en tjänståtgärd som kräver ett PDF-dokument (eller andra dokumenttyper) som indatavärde. The `com.adobe.idp.Document` klassen innehåller konstruktorer som gör att du kan skapa ett dokument av följande innehållstyper:
+Skapa en `com.adobe.idp.Document` innan du anropar en tjänståtgärd som kräver ett PDF-dokument (eller andra dokumenttyper) som indatavärde. The `com.adobe.idp.Document` -klassen innehåller konstruktorer som gör att du kan skapa ett dokument av följande innehållstyper:
 
 * En bytearray
 * En befintlig `com.adobe.idp.Document` object
@@ -795,7 +791,7 @@ I följande kodexempel skapas en `com.adobe.idp.Document` objekt som baseras på
 
 I följande kodexempel skapas en `com.adobe.idp.Document` objekt som baseras på en PDF-fil med namnet *map.pdf*. Den här filen finns i roten på hårddisken C. Den här konstruktorn försöker ange MIME-innehållstypen för `com.adobe.idp.Document` objekt med filnamnstillägget.
 
-The `com.adobe.idp.Document` konstruktor som accepterar `java.io.File` -objektet accepterar också en boolesk parameter. Genom att ställa in den här parametern på `true`, `com.adobe.idp.Document` -objektet tar bort filen. Den här åtgärden innebär att du inte behöver ta bort filen när du har skickat den till `com.adobe.idp.Document` konstruktor.
+The `com.adobe.idp.Document` konstruktor som accepterar `java.io.File` -objektet accepterar också en Boolean-parameter. Genom att ställa in den här parametern på `true`, `com.adobe.idp.Document` -objektet tar bort filen. Den här åtgärden innebär att du inte behöver ta bort filen efter att du har skickat den till `com.adobe.idp.Document` konstruktor.
 
 Anger den här parametern till `false` innebär att du behåller äganderätten till den här filen. Anger den här parametern till `true` är mer effektivt. Orsaken är att `com.adobe.idp.Document` kan flytta filen direkt till det lokala hanterade området i stället för att kopiera den (vilket är långsammare).
 
@@ -829,7 +825,7 @@ Den URL som anges för `com.adobe.idp.Document` objektet läses alltid på den s
      Document doc = new Document(new java.net.URL("file:c:/temp/input.pdf"));
 ```
 
-Filen c:/temp/input.pdf måste finnas på klientdatorn (inte på serverdatorn). Klientdatorn är där URL:en läses och var `com.adobe.idp.Document` objektet skapades.
+Filen c:/temp/input.pdf måste finnas på klientdatorn (inte på serverdatorn). Klientdatorn är där URL:en läses och där `com.adobe.idp.Document` objektet skapades.
 
 **Skapa ett dokument baserat på innehåll som är tillgängligt från en URL**
 
@@ -849,10 +845,10 @@ Filen c:/temp/input.pdf måste finnas på klientdatorn (inte på serverdatorn). 
 
 ### Hantera returnerade dokument {#handling-returned-documents}
 
-Tjänståtgärder som returnerar ett PDF-dokument (eller andra datatyper som XML-data) som ett utdatavärde returnerar ett `com.adobe.idp.Document` -objekt. När du fått en `com.adobe.idp.Document` kan du konvertera det till följande format:
+Tjänståtgärder som returnerar ett PDF-dokument (eller andra datatyper, till exempel XML-data) som ett utdatavärde, returnerar ett `com.adobe.idp.Document` objekt. När du har tagit emot ett `com.adobe.idp.Document` objekt kan du konvertera det till följande format:
 
-* A `java.io.File` object
-* A `java.io.InputStream` object
+* Ett `java.io.File` objekt
+* Ett `java.io.InputStream` objekt
 * En bytearray
 
 Följande kodrad konverterar en `com.adobe.idp.Document` objekt till `java.io.InputStream` -objekt. Anta att `myPDFDocument` representerar en `com.adobe.idp.Document` objekt:
@@ -895,7 +891,7 @@ Bestämma MIME-typen för en `com.adobe.idp.Document` genom att anropa `com.adob
  <tbody>
   <tr>
    <td><p><code>application/pdf</code></p></td>
-   <td><p>PDF</p></td>
+   <td><p>PDF dokument</p></td>
   </tr>
   <tr>
    <td><p><code>application/vnd.adobe.xdp+xml</code></p></td>
@@ -946,7 +942,7 @@ I följande kodexempel avgörs innehållstypen för en `com.adobe.idp.Document` 
 
 ### Disponera dokumentobjekt {#disposing-document-objects}
 
-När du inte längre behöver en `Document` , bör du ta bort det genom att anropa `dispose` -metod. Varje `Document` -objektet använder en filbeskrivning och så mycket som 75 MB RAM-utrymme på programmets värdplattform. Om en `Document` objektet inte tas bort, tas det bort av Java Garage-samlingsprocessen. Genom att kassera den tidigare genom att använda `dispose` kan du frigöra minne som upptas av `Document` -objekt.
+När du inte längre behöver en `Document` , bör du ta bort det genom att anropa dess `dispose` -metod. Varje `Document` -objektet använder en filbeskrivning och så mycket som 75 MB RAM-utrymme på programmets värdplattform. Om en `Document` objektet inte tas bort, tas det bort av Java Garage-samlingsprocessen. Genom att kassera den tidigare genom att använda `dispose` kan du frigöra minne som upptas av `Document` -objekt.
 
 **Se även**
 
@@ -958,13 +954,13 @@ När du inte längre behöver en `Document` , bör du ta bort det genom att anro
 
 ## Anropa en tjänst med ett Java-klientbibliotek {#invoking-a-service-using-a-java-client-library}
 
-AEM Forms tjänståtgärder kan anropas med hjälp av en tjänsts starkt typbestämda API, som kallas Java-klientbibliotek. A *Java-klientbibliotek* är en uppsättning konkreta klasser som ger tillgång till tjänster som distribueras i tjänstbehållaren. Du instansierar ett Java-objekt som representerar tjänsten som ska anropas i stället för att skapa ett `InvocationRequest` genom att använda anrops-API. Anrops-API:t används för att anropa processer, till exempel långvariga processer, som skapats i Workbench. (Se [Anropa personalcentrerade, långlivade processer](/help/forms/developing/invoking-human-centric-long-lived.md#invoking-human-centric-long-lived-processes).)
+AEM Forms tjänståtgärder kan anropas med hjälp av en tjänsts starkt typbestämda API, som kallas Java-klientbibliotek. A *Java-klientbibliotek* är en uppsättning konkreta klasser som ger tillgång till tjänster som distribueras i tjänstbehållaren. Du instansierar ett Java-objekt som representerar tjänsten som ska anropas i stället för att skapa ett `InvocationRequest` genom att använda anrops-API:t. Anrops-API:t används för att anropa processer, till exempel långvariga processer, som skapats i Workbench. (Se [Anropa personalcentrerade, långlivade processer](/help/forms/developing/invoking-human-centric-long-lived.md#invoking-human-centric-long-lived-processes).)
 
 Om du vill utföra en tjänståtgärd anropar du en metod som tillhör Java-objektet. Ett Java-klientbibliotek innehåller metoder som vanligtvis mappar en-till-en med serviceåtgärder. Ange nödvändiga anslutningsegenskaper när du använder ett Java-klientbibliotek. (Se [Ange anslutningsegenskaper](invoking-aem-forms-using-java.md#setting-connection-properties).)
 
-Skapa en `ServiceClientFactory` -objekt som används för att instansiera ett Java-objekt som gör att du kan anropa en tjänst. Varje tjänst som har ett Java-klientbibliotek har ett motsvarande klientobjekt. Om du till exempel vill anropa tjänsten Databas skapar du en `ResourceRepositoryClient` genom att använda konstruktorn och skicka `ServiceClientFactory` -objekt. The `ServiceClientFactory` -objektet ansvarar för att upprätthålla de anslutningsinställningar som krävs för att anropa AEM Forms-tjänster.
+Skapa en `ServiceClientFactory` -objekt som används för att instansiera ett Java-objekt som gör att du kan anropa en tjänst. Varje tjänst som har ett Java-klientbibliotek har ett motsvarande klientobjekt. Om du till exempel vill anropa tjänsten Databas skapar du en `ResourceRepositoryClient` genom att använda konstruktorn och skicka `ServiceClientFactory` -objekt. Objektet `ServiceClientFactory` ansvarar för att upprätthålla anslutningsinställningar som krävs för att anropa AEM Forms-tjänster.
 
-Trots att du får en `ServiceClientFactory` är vanligtvis snabb, en del overheadkostnader uppstår när fabriken används för första gången. Objektet är optimerat för återanvändning och därför, när det är möjligt, ska du använda samma `ServiceClientFactory` när du skapar flera Java-klientobjekt. Skapa alltså inte en separat `ServiceClientFactory` -objekt för varje klientbiblioteksobjekt som du skapar.
+Trots att du får en `ServiceClientFactory` är vanligtvis snabb, en del overheadkostnader uppstår när fabriken används för första gången. Det här objektet är optimerat för återanvändning och därför, när det är möjligt, ska du använda samma `ServiceClientFactory` när du skapar flera Java-klientobjekt. Det vill säga, skapa inte en separat `ServiceClientFactory` -objekt för varje klientbiblioteksobjekt som du skapar.
 
 Det finns en inställning för användarhantering som styr livslängden för SAML-försäkran som finns i `com.adobe.idp.Context` objekt som påverkar `ServiceClientFactory` -objekt. Den här inställningen styr alla livstider för autentiseringskontext i hela AEM Forms, inklusive alla anrop som utförs med Java API. Som standard den tidsperiod under vilken `ServiceCleintFactory` -objektet kan användas i två timmar.
 
@@ -974,25 +970,25 @@ Det finns en inställning för användarhantering som styr livslängden för SAM
 
 Du kan anropa databastjänsten med hjälp av ett Java-klientbibliotek och genom att utföra följande steg:
 
-1. Inkludera JAR-klientfiler, till exempel adobe-database-client.jar, i Java-projektets klassökväg. Information om platsen för dessa filer finns i [Inkludera AEM Forms Java-biblioteksfiler](invoking-aem-forms-using-java.md#including-aem-forms-java-library-files).
+1. Inkludera JAR-klientfiler, till exempel adobe-repository-client.jar, i Java-projektets klassökväg. Information om platsen för dessa filer finns i [Inkludera AEM Forms Java-biblioteksfiler](invoking-aem-forms-using-java.md#including-aem-forms-java-library-files).
 1. Ange anslutningsegenskaper som krävs för att anropa en tjänst.
 1. Skapa en `ServiceClientFactory` genom att anropa `ServiceClientFactory` objektets statiska `createInstance` metoden och skicka `java.util.Properties` objekt som innehåller anslutningsegenskaper.
-1. Skapa en `ResourceRepositoryClient` genom att använda konstruktorn och skicka `ServiceClientFactory` -objekt. Använd `ResourceRepositoryClient` objekt som anropar databastjänståtgärder.
-1. Skapa en `RepositoryInfomodelFactoryBean` objekt med hjälp av konstruktorn och skicka `null`. Med det här objektet kan du skapa en `Resource` -objekt som representerar innehållet som läggs till i databasen.
-1. Skapa en `Resource` genom att anropa `RepositoryInfomodelFactoryBean` objektets `newImage` och skicka följande värden:
+1. Skapa ett `ResourceRepositoryClient` objekt genom att använda dess konstruktor och skicka `ServiceClientFactory` objektet. Använd objektet `ResourceRepositoryClient` för att anropa databastjänståtgärder.
+1. Skapa ett `RepositoryInfomodelFactoryBean` objekt med hjälp av dess konstruktor och skicka `null`. Med det här objektet kan du skapa ett `Resource` objekt som representerar innehållet som läggs till i databasen.
+1. Skapa ett `Resource` objekt genom att anropa `RepositoryInfomodelFactoryBean` objektets `newImage` metod och skicka följande värden:
 
    * Ett unikt ID-värde genom att ange `new Id()`.
    * Ett unikt UUID-värde genom att ange `new Lid()`.
    * Resursens namn. Du kan ange filnamnet för XDP-filen.
 
-   Sänd returvärdet till `Resource`.
+   Skicka returvärdet till `Resource`.
 
-1. Skapa en `ResourceContent` genom att anropa `RepositoryInfomodelFactoryBean` objektets `newImage` metoden och datera returvärdet till `ResourceContent`. Det här objektet representerar innehållet som läggs till i databasen.
+1. Skapa en `ResourceContent` genom att anropa `RepositoryInfomodelFactoryBean` objektets `newImage` metod och datatypsbyte av returvärdet till `ResourceContent`. Det här objektet representerar innehållet som läggs till i databasen.
 1. Skapa en `com.adobe.idp.Document` objekt genom att skicka ett `java.io.FileInputStream` objekt som lagrar XDP-filen som ska läggas till i databasen. (Se [Skapa ett dokument baserat på ett InputStream-objekt](invoking-aem-forms-using-java.md#creating-a-document-based-on-an-inputstream-object).)
 1. Lägg till innehållet i `com.adobe.idp.Document` objekt till `ResourceContent` genom att anropa `ResourceContent` objektets `setDataDocument` -metod. Skicka `com.adobe.idp.Document` -objekt.
 1. Ange MIME-typen för XDP-filen som ska läggas till i databasen genom att anropa `ResourceContent` objektets `setMimeType` metod och att skicka `application/vnd.adobe.xdp+xml`.
-1. Lägg till innehållet i `ResourceContent` objekt till `Resource` genom att anropa `Resource` objekt&quot;s `setContent` metoden och skicka `ResourceContent` -objekt.
-1. Lägg till en beskrivning av resursen genom att anropa `Resource` objekt&quot;s `setDescription` och skickar ett strängvärde som representerar en beskrivning av resursen.
+1. Lägg till innehållet i `ResourceContent` objekt till `Resource` genom att anropa `Resource` objekt `setContent` metoden och skicka `ResourceContent` -objekt.
+1. Lägg till en beskrivning av resursen genom att anropa `Resource` objekt `setDescription` och skickar ett strängvärde som representerar en beskrivning av resursen.
 1. Lägg till formulärdesignen i databasen genom att anropa `ResourceRepositoryClient` objektets `writeResource` och skicka följande värden:
 
    * Ett strängvärde som anger sökvägen till resurssamlingen som innehåller den nya resursen
@@ -1020,9 +1016,9 @@ Här handlar det om hur du använder anrops-API för att anropa följande kortli
 >
 >Processen bygger inte på någon befintlig AEM Forms-process. Följ med i kodexemplet genom att skapa en process med namnet `MyApplication/EncryptDocument` med Workbench. (Se [Använda Workbench](https://www.adobe.com/go/learn_aemforms_workbench_63).)
 
-När den här processen anropas utför den följande åtgärder:
+När processen anropas utför den följande åtgärder:
 
-1. Hämtar det oskyddade PDF-dokumentet som skickas till processen. Den här åtgärden baseras på `SetValue` operation. Indataparametern för den här processen är en `document` processvariabel namngiven `inDoc`.
+1. Hämtar det oskyddade PDF-dokumentet som skickas till processen. Den här åtgärden baseras på `SetValue` operation. Indataparametern för den här processen är `document` processvariabel namngiven `inDoc`.
 1. Krypterar PDF-dokumentet med ett lösenord. Den här åtgärden baseras på `PasswordEncryptPDF` operation. Lösenordskrypterade PDF-dokument returneras i en processvariabel med namnet `outDoc`.
 
 ### Anropa den kortvariga processen MyApplication/EncryptDocument med hjälp av Java-anrops-API {#invoke-the-myapplication-encryptdocument-short-lived-process-using-the-java-invocation-api}
@@ -1045,7 +1041,7 @@ Anropa `MyApplication/EncryptDocument` en kort process med Java-anrops-API:
 
 1. Skapa en `InvocationRequest` genom att anropa `ServiceClientFactory` objektets `createInvocationRequest` och skicka följande värden:
 
-   * Ett strängvärde som anger namnet på den långvariga process som ska anropas. Så här anropar du `MyApplication/EncryptDocument` process, ange `MyApplication/EncryptDocument`.
+   * Ett strängvärde som anger namnet på den långvariga process som ska anropas. Anropa `MyApplication/EncryptDocument` process, ange `MyApplication/EncryptDocument`.
    * Ett strängvärde som representerar processåtgärdens namn. Vanligtvis är namnet på en kortvarig processåtgärd `invoke`.
    * The `java.util.HashMap` objekt som innehåller de parametervärden som tjänståtgärden kräver.
    * Ett booleskt värde som anger `true`, som skapar en synkron begäran (det här värdet kan användas för att anropa en kortlivad process).
@@ -1056,7 +1052,7 @@ Anropa `MyApplication/EncryptDocument` en kort process med Java-anrops-API:
    >
    >En långvarig process kan anropas genom att värdet skickas `false`som den fjärde parametern i `createInvocationRequest` -metod. Skickar värdet `false`*skapar en asynkron begäran.*
 
-1. Hämta processens returvärde genom att anropa `InvocationReponse` objektets `getOutputParameter` och skickar ett strängvärde som anger utdataparameterns namn. I den här situationen bör du specificera `outDoc` ( `outDoc` är namnet på utdataparametern för `MyApplication/EncryptDocument` process). Sänd returvärdet till `Document`, vilket visas i följande exempel.
+1. Hämta processens returvärde genom att anropa `InvocationReponse` objektets `getOutputParameter` och skickar ett strängvärde som anger utdataparameterns namn. I den här situationen bör du specificera `outDoc` ( `outDoc` är namnet på utdataparametern för `MyApplication/EncryptDocument` -processen). Skicka returvärdet till `Document`, vilket visas i följande exempel.
 
    ```java
     InvocationResponse response = myServiceClient.invoke(request);

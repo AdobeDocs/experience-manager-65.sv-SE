@@ -1,15 +1,13 @@
 ---
 title: Hanteringskonsoler för medlemmar och grupper
 description: Åtkomst till konsoler för hantering av medlemmar och grupper
-uuid: 2e93e861-a066-4189-91db-f8b784bc5aea
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: administering
 content-type: reference
-discoiquuid: ccabf301-b417-48aa-8501-8360fd9f3e36
 role: Admin
 exl-id: b64e24d2-8407-484c-8216-8d328ef5fa4f
-source-git-commit: 201c87da1316944e594ade6d95800326b1e6667c
+source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
 workflow-type: tm+mt
 source-wordcount: '915'
 ht-degree: 0%
@@ -21,7 +19,7 @@ ht-degree: 0%
 
 ## Översikt {#overview}
 
-AEM Communities funktioner kräver ofta att besökarna är registrerade och inloggade innan de deltar i en community i publiceringsmiljön. Användarregistreringen behöver bara finnas i publiceringsmiljön och kallas ofta för *medlemmar* att skilja dem från *användare* som registrerats i författarmiljön.
+AEM Communities funktioner kräver ofta att besökarna är registrerade och inloggade innan de deltar i en community i publiceringsmiljön. Användarregistreringen behöver bara finnas i publiceringsmiljön och kallas ofta för *medlemmar* för att skilja dem från *användare* som registrerats i författarmiljön.
 
 ### Medlemmar (användare) vid publicering {#members-users-on-publish}
 
@@ -29,20 +27,20 @@ Använda konsolerna Communities Members and Groups, medlemmar och medlemsgrupper
 
 ### Användare på författare {#users-on-author}
 
-För hantering av användare och grupper som är registrerade i *författare* -miljön är nödvändig för att använda plattformens säkerhetskonsol:
+För hantering av användare och grupper som är registrerade i *författare* -miljön måste du använda plattformens säkerhetskonsol:
 
-* Från global navigering väljer du **[!UICONTROL Tools]** > **[!UICONTROL Security]** > **[!UICONTROL Users]**.
-* Från global navigering väljer du **[!UICONTROL Tools]** > **[!UICONTROL Security]** > **[!UICONTROL Groups]**.
+* Välj **[!UICONTROL Tools]** > **[!UICONTROL Security]** > **[!UICONTROL Users]**.
+* Välj **[!UICONTROL Tools]** > **[!UICONTROL Security]** > **[!UICONTROL Groups]**.
 
 >[!NOTE]
 >
->När exempelinnehåll är distribuerat och aktiverat finns det många exempelanvändare i både författar- och publiceringsmiljöer. De här användarna kommer inte att vara närvarande när de körs med [nosamplingInnehåll, körningsläge](../../help/sites-administering/production-ready.md).
+>När exempelinnehåll är distribuerat och aktiverat finns det många exempelanvändare i både författar- och publiceringsmiljöer. De här användarna kommer inte att vara närvarande när de körs med [nosampling, innehållskörningsläge](../../help/sites-administering/production-ready.md).
 
 ## Medlemskonsolen {#members-console}
 
 I författarmiljön kan du nå Medlemskonsolen för att hantera medlemmar som är registrerade i publiceringsmiljön:
 
-* Från global navigering väljer du **[!UICONTROL Navigation]** > **[!UICONTROL Communities]** > **[!UICONTROL Members]**
+* Välj **[!UICONTROL Navigation]** > **[!UICONTROL Communities]** > **[!UICONTROL Members]**
 
 >[!CAUTION]
 >
@@ -135,11 +133,11 @@ Se [Gränser för medlemsbidrag](limits.md).
 
 ### ALLMÄNT - Foto {#general-photo}
 
-Börja med att välja en avatar för medlemmen **[!UICONTROL Upload Image]** och väljer en bild av typen .jpg, .png, .tif eller .gif. Den rekommenderade storleken för en bild är 240 x 240 pixlar vid 72 dpi.
+Börja med att välja en avatar för medlemmen **[!UICONTROL Upload Image]** och väljer en bild av typen .jpg, .png, .tif eller .gif. Bildens önskade storlek är 240 x 240 pixlar vid 72 dpi.
 
 ### ALLMÄNT - Lägg till medlem på webbplatser {#general-add-member-to-sites}
 
-Medlemmen kan läggas till i en eller flera medlemsgrupper för en eller flera communityplatser. Börja med att ange text i textrutan.
+Medlemmen kan läggas till i en eller flera medlemsgrupper för en eller flera communityn. Börja med att ange text i textrutan.
 
 ### ALLMÄNT - Lägg till medlem i grupper {#general-add-member-to-groups}
 
@@ -154,7 +152,7 @@ Se även [Betygsättning och emblem](implementing-scoring.md).
 ![Fönstret Redigera medlemskapsinställningar](assets/create-member2.png)
 
 * **[!UICONTROL Add badges]**
-   * Börja skriva för att välja bland [tillgängliga märken](badges.md). När du har valt ett märke väljer du varje webbplats, eller alla webbplatser, där märket ska visas tillsammans med medlemmens avatar.
+   * Börja skriva för att välja bland [tillgängliga emblem](badges.md). När du har valt ett märke väljer du varje webbplats, eller alla webbplatser, där märket ska visas tillsammans med medlemmens avatar.
    * Flera märken och sajter kan väljas.
 * **[!UICONTROL Remove badges]**
    * Markera papperskorgsikonen bredvid ett märke för att ta bort det.
@@ -164,7 +162,7 @@ Se även [Betygsättning och emblem](implementing-scoring.md).
 Gruppkonsolen, som är tillgänglig från författarmiljön, gör det möjligt att skapa och hantera medlemsgrupper som är registrerade i publiceringsmiljön. Det är särskilt användbart för [Behöriga medlemsgrupper](users.md#privilegedmembersgroups).
 
 Så här kommer du åt gruppkonsolen:
-* Från global navigering väljer du **[!UICONTROL Navigation]** > **[!UICONTROL Communities]** > **[!UICONTROL Groups]**.
+* Välj **[!UICONTROL Navigation]** > **[!UICONTROL Communities]** > **[!UICONTROL Groups]**.
 
 >[!CAUTION]
 >
@@ -202,7 +200,7 @@ Följande fält krävs för att skapa en ny medlemsgrupp på publiceringssidan:
 
 ## Auktoriserade administratörer {#authorized-administrators}
 
-När du arbetar med medlemmar i Communities-medlemskonsolen måste du logga in som en användare med lämplig behörighet och för den replikeringsagent som används av [tunneltjänst](deploy-communities.md#tunnel-service-on-author) att konfigureras korrekt.
+När du arbetar med medlemmar i communitymedlemskonsolen måste du logga in som en användare med lämplig behörighet och för den replikeringsagent som används av [tunneltjänst](deploy-communities.md#tunnel-service-on-author) att vara korrekt konfigurerade.
 
 Om inte inloggad som `admin`måste den inloggade användaren vara medlem i `administrators` användargrupp.
 

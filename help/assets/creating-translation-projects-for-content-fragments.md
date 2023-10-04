@@ -1,20 +1,16 @@
 ---
 title: Skapa översättningsprojekt för innehållsfragment
-seo-title: Creating Translation Projects for Content Fragments
 description: Lär dig hur du översätter innehållsfragment.
-seo-description: Learn how to translate content fragments.
-uuid: 23176e70-4003-453c-af25-6499a5ed3f6d
 contentOwner: AEM Docs
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: managing-assets
 content-type: reference
-discoiquuid: d2decc31-a04b-4a8e-bb19-65f21cf7107e
 feature: Content Fragments
 role: User, Admin
 exl-id: 19bb58da-8220-404e-bddb-34be94a3a7d7
-source-git-commit: 53c39e4aa250b18d4fae0327b313b18901677f2c
+source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
 workflow-type: tm+mt
-source-wordcount: '917'
+source-wordcount: '918'
 ht-degree: 3%
 
 ---
@@ -40,15 +36,15 @@ När källinnehållets fragment uppdateras eller ändras kräver motsvarande spr
 Arbetsflödet Skapa och översätt innehåller följande alternativ. Procedurstegen som är kopplade till varje alternativ liknar dem som är kopplade till motsvarande alternativ för tillgångar.
 
 * Skapa endast struktur: Information om steg för procedurer finns i [Skapa struktur endast för resurser](translation-projects.md#create-structure-only).
-* Skapa ett nytt översättningsprojekt: Information om steg för procedurer finns i [Skapa ett nytt översättningsprojekt för resurser](translation-projects.md#create-a-new-translation-project).
-* Lägg till i befintligt översättningsprojekt: Information om steg för procedurer finns i [Lägg till i befintligt översättningsprojekt för resurser](translation-projects.md#add-to-existing-translation-project).
+* Skapa ett nytt översättningsprojekt: Information om procedurer finns i [Skapa ett nytt översättningsprojekt för resurser](translation-projects.md#create-a-new-translation-project).
+* Lägg till i befintligt översättningsprojekt: Information om procedurer finns i [Lägg till i befintligt översättningsprojekt för resurser](translation-projects.md#add-to-existing-translation-project).
 
 ## Uppdatera arbetsflödet för språkkopior {#update-language-copies-workflow}
 
 Arbetsflödet för att uppdatera språkkopior innehåller följande alternativ. Procedurstegen som är kopplade till varje alternativ liknar dem som är kopplade till motsvarande alternativ för tillgångar.
 
-* Skapa ett nytt översättningsprojekt: Information om steg för procedurer finns i [Skapa ett nytt översättningsprojekt för resurser](translation-projects.md#create-a-new-translation-project) (uppdateringsarbetsflöde).
-* Lägg till i befintligt översättningsprojekt: Information om steg för procedurer finns i [Lägg till i befintligt översättningsprojekt för resurser](translation-projects.md#add-to-existing-translation-project) (uppdateringsarbetsflöde).
+* Skapa ett nytt översättningsprojekt: Information om procedurer finns i [Skapa ett nytt översättningsprojekt för resurser](translation-projects.md#create-a-new-translation-project) (uppdateringsarbetsflöde).
+* Lägg till i befintligt översättningsprojekt: Information om procedurer finns i [Lägg till i befintligt översättningsprojekt för resurser](translation-projects.md#add-to-existing-translation-project) (uppdateringsarbetsflöde).
 
 Du kan också skapa tillfälliga språkkopior för fragment som liknar det sätt som du skapar tillfälliga kopior för resurser. Mer information finns i [Skapa tillfälliga språkkopior för resurser](translation-projects.md#creating-temporary-language-copies).
 
@@ -81,7 +77,7 @@ Om du vill kunna översätta innehållsfragment som innehåller blandade media m
 
    ![chlimage_1-448](assets/chlimage_1-448.png)
 
-1. Klicka/tryck på **[!UICONTROL Insert Asset]** ikon.
+1. Klicka/tryck på **[!UICONTROL Insert Asset]** -ikon.
 
    ![chlimage_1-449](assets/chlimage_1-449.png)
 
@@ -89,7 +85,7 @@ Om du vill kunna översätta innehållsfragment som innehåller blandade media m
 
    ![infoga resurs i innehållsfragment](assets/column-view.png)
 
-1. Klicka/tryck på **[!UICONTROL Associate Content]** ikon.
+1. Klicka/tryck på **[!UICONTROL Associate Content]** -ikon.
 
    ![chlimage_1-451](assets/chlimage_1-451.png)
 
@@ -101,7 +97,7 @@ Om du vill kunna översätta innehållsfragment som innehåller blandade media m
 
    ![chlimage_1-453](assets/chlimage_1-453.png)
 
-1. Markera innehållsfragmentet och klicka/tryck på **[!UICONTROL GlobalNav]** ikon.
+1. Markera innehållsfragmentet och klicka/tryck på **[!UICONTROL GlobalNav]** -ikon.
 1. Välj **[!UICONTROL References]** från menyn för att visa **[!UICONTROL References]** fönster.
 
    ![chlimage_1-454](assets/chlimage_1-454.png)
@@ -130,7 +126,7 @@ Om du vill kunna översätta innehållsfragment som innehåller blandade media m
 
    ![chlimage_1-460](assets/chlimage_1-460.png)
 
-1. Klicka/tryck på projektpanelen för att öppna sidan med projektinformation.
+1. Klicka på/tryck på projektpanelen för att öppna sidan med projektinformation.
 
    ![chlimage_1-461](assets/chlimage_1-461.png)
 
@@ -157,7 +153,7 @@ Om du vill kunna översätta innehållsfragment som innehåller blandade media m
 
    ![chlimage_1-466](assets/chlimage_1-466.png)
 
-1. Navigera till resurserna i samlingen som är översatta med innehållsfragmentet. Observera att de översatta kopiorna av resurserna lagras i rätt målspråksrot.
+1. Navigera till de resurser i samlingen som har översatts tillsammans med innehållsfragmentet. Observera att de översatta kopiorna av resurserna lagras i rätt målspråksrot.
 
    ![chlimage_1-467](assets/chlimage_1-467.png)
 

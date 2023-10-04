@@ -1,16 +1,12 @@
 ---
 title: Importera och hantera program
-seo-title: Import and manage applications
 description: Lär dig hur du importerar och hanterar program.
-seo-description: Learn how to import and manage applications.
-uuid: 7fba6c4e-1a3e-4a4b-9201-acf2ff66a9df
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/importing_and_managing_applications_and_archives
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: dc53a6d0-317a-4abd-990c-455e13f8b824
 exl-id: f17726c0-3591-4d25-a8b5-3a7024249a56
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
 workflow-type: tm+mt
 source-wordcount: '820'
 ht-degree: 0%
@@ -19,9 +15,9 @@ ht-degree: 0%
 
 # Importera och hantera program{#import-and-manage-applications}
 
-AEM formulär *program* är en behållare för lagring av resurser som krävs för att implementera en lösning för AEM formulär. Exempel på resurser är formulärdesigner, formulärfragment, bilder, processer, DDX-filer, formulärguider, HTML-sidor och SWF-filer. Under ett projekts utvecklingsfas kan Workbench-användare distribuera program direkt från programvyn i Workbench. När programmen har distribuerats visas de i administrationskonsolen på fliken Program på sidan Programhantering.
+I AEM formulär *program* är en behållare för lagring av resurser som krävs för att implementera en lösning för AEM formulär. Exempel på resurser är formulärdesigner, formulärfragment, bilder, processer, DDX-filer, formulärguider, HTML-sidor och SWF-filer. Under ett projekts utvecklingsfas kan Workbench-användare distribuera program direkt från programvyn i Workbench. När programmen har distribuerats visas de i administrationskonsolen på fliken Program på sidan Programhantering.
 
-När ett program är klart för distribution till en produktionsserver paketerar Workbench-användaren programmet i en *AEM* (.lca). Därefter använder en administratör administrationskonsolen för att importera och distribuera programfilen på fliken Program på sidan Programhantering.
+När ett program är klart för distribution till en produktionsserver paketerar Workbench-användaren programmet i en *AEM formulärprogramfil* (.lca). Därefter använder en administratör administrationskonsolen för att importera och distribuera programfilen på fliken Program på sidan Programhantering.
 
 Du kan också använda fliken Kurvor på sidan Programhantering för att importera LCA-konton som har skapats med workbench 8.x.
 
@@ -113,4 +109,4 @@ Med skriptbaserad driftsättning slipper du manuellt konfigurera om inställning
 1. Navigera från en kommandotolk till *[aem-forms root]*/sdk/misc/Foundation/ArchiveManagement.
 1. Läs filen ReadMe.txt om du vill ha mer detaljerade anvisningar.
 1. Ändra filen scriptedDeploy.bat och sample-files/sample.xml manuellt enligt beskrivningen i filen readme.txt.
-1. Kör filen scriptedDeploy.bat. Den här åtgärden distribuerar AEM formulärarkivfil med åsidosättningsinställningarna.
+1. Kör filen scriptedDeploy.bat. Den här åtgärden distribuerar den AEM formulärarkivfilen med åsidosättningsinställningarna.

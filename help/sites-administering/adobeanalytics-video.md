@@ -1,17 +1,13 @@
 ---
 title: Konfigurera videospårning för Adobe Analytics
-seo-title: Configuring Video Tracking for Adobe Analytics
 description: Läs om hur du konfigurerar videospårning för SiteCatalyst.
-seo-description: Learn about configuring video tracking for SiteCatalyst.
-uuid: 5a862f05-abfa-42a2-ad40-4c1c32f1bd75
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
 content-type: reference
-discoiquuid: a18ddac1-9e4c-4857-9cb3-4d5eeb8dd9ec
 docset: aem65
 exl-id: 5d51f898-b6d1-40ac-bdbf-127cda1dc777
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
 workflow-type: tm+mt
 source-wordcount: '1747'
 ht-degree: 1%
@@ -20,13 +16,13 @@ ht-degree: 1%
 
 # Konfigurera videospårning för Adobe Analytics{#configuring-video-tracking-for-adobe-analytics}
 
-Det finns flera metoder för att spåra videohändelser, varav två är äldre alternativ för äldre versioner av Adobe Analytics. Dessa äldre alternativ är: Äldre milstolpar och äldre sekunder.
+Det finns flera metoder för att spåra videohändelser, varav två är äldre alternativ för äldre versioner av Adobe Analytics. De här äldre alternativen är: Äldre milstolpar och Äldre sekunder.
 
 >[!NOTE]
 >
 >Innan du fortsätter bör du kontrollera att du har en **spelbar video** överförd inom AEM.
 >
->Om du vill vara säker på att dina videor spelas upp på sidan läser du **[den här självstudiekursen](/help/sites-authoring/default-components-foundation.md#video)** om du vill ha information om hur du kodar om videofiler i AEM.
+>Om du vill vara säker på att dina videor spelas upp på sidan läser du **[denna självstudiekurs](/help/sites-authoring/default-components-foundation.md#video)** för information om hur du kodar om videofiler i AEM.
 
 Använd följande procedur för att konfigurera ett ramverk för videospårning med hjälp av varje metod.
 
@@ -81,11 +77,11 @@ I följande tabell beskrivs CQ-standardvariablerna som anges för metoden Milest
   </tr>
   <tr>
    <td>eventdata.videoName </td>
-   <td>Variabler som mappas till detta kommer att innehålla <strong>användarvänlig</strong> namn (<strong>Titel</strong>) av videon om den är inställd i DAM, om detta inte är inställt visas videons <strong>filnamn</strong> skickas istället. Skickas endast en gång, i början av uppspelningen av en video.</td>
+   <td>Variabler som mappas till detta innehåller <strong>användarvänlig</strong> namn (<strong>Titel</strong>) av videon om den är inställd i DAM. Om den inte är inställd visas videons <strong>filnamn</strong> skickas istället. Skickas endast en gång, i början av uppspelningen av en video.</td>
   </tr>
   <tr>
    <td>eventdata.videoFileName </td>
-   <td>Variabler som mappas till detta kommer att innehålla filens namn. Endast skickat tillsammans med eventdata.events.a.media.view </td>
+   <td>Variabler som mappas till detta innehåller filens namn. Endast skickat tillsammans med eventdata.events.a.media.view </td>
   </tr>
   <tr>
    <td>eventdata.videoFilePath </td>
@@ -113,7 +109,7 @@ I följande tabell beskrivs CQ-standardvariablerna som anges för metoden Milest
   </tr>
   <tr>
    <td>eventdata.a.contentType </td>
-   <td>Sänds på varje milstolpe. visas som föregående3 i Adobe Analytics-samtalet, vanligen som "video"<br /> </td>
+   <td>Skickat vid varje milstolpe; visas som föregående3 i Adobe Analytics-samtalet, vanligen som "video"<br /> </td>
   </tr>
   <tr>
    <td>eventdata.a.media.name </td>
@@ -228,7 +224,7 @@ Anrop till Adobe Analytics som använder exemplet ska se ut så här när de vis
 
 ![chlimage_1-128](assets/chlimage_1-128.png)
 
-*Det här är **första samtal**som gjorts i Adobe Analytics och som innehåller följande värden:*
+*Det här är **första samtalet**till Adobe Analytics som innehåller följande värden:*
 
 * *prop1 och eVar1 för eventdata.a.media.name,*
 * *props2-4, tillsammans med eVar2 och eVar3 som innehåller contentType (video) och segment (1):O:1-4)*
@@ -292,17 +288,17 @@ Den här metoden liknar metoden milstolpar med skillnaden att de milstolpar som 
 
    * till exempel 10,50,75,100
 
-   Dessutom är informationen som skickas till Adobe Analytics mindre anpassningsbar. det finns bara tre variabler för mappning:
+   Dessutom är informationen som skickas till Adobe Analytics mindre anpassningsbar. Det finns bara tre variabler för mappning:
 
 <table>
  <tbody>
   <tr>
    <td>eventdata.videoName <br /> </td>
-   <td>Variabler som mappas till detta kommer att innehålla <strong>användarvänlig</strong> namn (<strong>Titel</strong>) av videon om den är inställd i DAM, om titeln inte är inställd visas videons <strong>filnamn</strong> skickas istället. Skickas endast en gång, i början av uppspelningen av en video.<br /> </td>
+   <td>Variabler som mappas till detta innehåller <strong>användarvänlig</strong> namn (<strong>Titel</strong>) av videon om den är inställd i DAM. Om titeln inte är inställd visas videons <strong>filnamn</strong> skickas istället. Skickas endast en gång, i början av uppspelningen av en video.<br /> </td>
   </tr>
   <tr>
    <td>eventdata.videoFileName </td>
-   <td>Variabler som mappas till detta kommer att innehålla filens namn. Skickas endast en gång, i början av uppspelningen av en video.</td>
+   <td>Variabler som mappas till detta innehåller filens namn. Skickas endast en gång, i början av uppspelningen av en video.</td>
   </tr>
   <tr>
    <td>eventdata.videoFilePath </td>
@@ -355,7 +351,7 @@ När du använder metoden** för tidigare sekunder* aktiveras Adobe Analytics-an
  <tbody>
   <tr>
    <td>eventdata.videoName <br /> </td>
-   <td>Variabler som mappas till detta kommer att innehålla <strong>användarvänlig</strong> namn (<strong>Titel</strong>) av videon om den är inställd i DAM, om titeln inte är inställd visas videons <strong>filnamn</strong> skickas istället. Skickas endast en gång, i början av uppspelningen av en video.<br /> </td>
+   <td>Variabler som mappas till detta innehåller <strong>användarvänlig</strong> namn (<strong>Titel</strong>) av videon om den är inställd i DAM. Om titeln inte är inställd visas videons <strong>filnamn</strong> skickas istället. Skickas endast en gång, i början av uppspelningen av en video.<br /> </td>
   </tr>
   <tr>
    <td>eventdata.videoFileName </td>

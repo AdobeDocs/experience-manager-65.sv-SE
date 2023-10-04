@@ -7,9 +7,9 @@ content-type: reference
 topic-tags: site-features
 docset: aem65
 exl-id: 58e61302-cfb4-4a3d-98d4-3c92baa2ad42
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
 workflow-type: tm+mt
-source-wordcount: '1431'
+source-wordcount: '1429'
 ht-degree: 0%
 
 ---
@@ -62,7 +62,7 @@ Om du vill skapa ett nytt ställningar går du till **verktyg** konsol, sedan **
 
 Gå till **Sidegenskaper** på den nya sidan och ange *Titeltext*, *Beskrivning*, *Målmall* och *Målsökväg*, enligt beskrivningen ovan.
 
-Därefter måste du definiera strukturen för sidan som det här skalet ska skapa. För att göra detta, gå till **[designläge](/help/sites-authoring/page-authoring.md#sidekick)** på scensidan. En länk visas som gör att du kan redigera skalet i **dialogruteredigerare**.
+Därefter måste du definiera strukturen för sidan som det här skalet ska skapa. För att göra detta, gå till **[designläge](/help/sites-authoring/page-authoring.md#sidekick)** på scensidan. En länk visas där du kan redigera skalet i **dialogruteredigerare**.
 
 ![cq5_dialog_editor](assets/cq5_dialog_editor.png)
 

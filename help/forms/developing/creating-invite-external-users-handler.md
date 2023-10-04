@@ -3,9 +3,9 @@ title: Skapa en hanterare för att bjuda in externa användare
 description: Skapa en hanterare för att bjuda in externa användare
 role: Developer
 exl-id: b0416716-dcc9-4f80-986a-b9660a7c8f6b
-source-git-commit: 37d2c70bff770d13b8094c5959e488f5531aef55
+source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
 workflow-type: tm+mt
-source-wordcount: '1074'
+source-wordcount: '1075'
 ht-degree: 0%
 
 ---
@@ -48,9 +48,9 @@ The `invitedUser` metoden accepterar `java.util.List` -instans, som innehåller 
 >
 >Förutom att visa hur du skapar en extern användarhanterare för inbjudningar använder det här avsnittet även AEM Forms API.
 
-Implementeringen av hanteraren för inbjudan av externa användare innehåller en användardefinierad metod med namnet `createLocalPrincipalAccount`. Den här metoden accepterar ett strängvärde som anger en e-postadress som ett parametervärde. The `createLocalPrincipalAccount` metoden förutsätter att det finns en lokal domän med namnet `EDC_EXTERNAL_REGISTERED`. Du kan konfigurera det här domännamnet så att det blir vad du vill; Men för ett produktionsprogram kanske du vill integrera med en företagsdomän.
+Implementeringen av hanteraren för inbjudan av externa användare innehåller en användardefinierad metod med namnet `createLocalPrincipalAccount`. Den här metoden accepterar ett strängvärde som anger en e-postadress som ett parametervärde. The `createLocalPrincipalAccount` metoden förutsätter att det finns en lokal domän med namnet `EDC_EXTERNAL_REGISTERED`. Du kan konfigurera det här domännamnet så att det blir vad du vill, men för ett produktionsprogram kanske du vill integrera med en företagsdomän.
 
-The `createUsers` itererar metoden över varje e-postadress och skapar ett motsvarande User-objekt (en lokal användare i `EDC_EXTERNAL_REGISTERED` domän). Slutligen `doEmails` -metoden anropas. Den här metoden finns avsiktligt kvar som en stub i exemplet. I en produktionsimplementering skulle den innehålla programlogik för att skicka e-postmeddelanden med inbjudningar till nyskapade användare. Det lämnas i exemplet för att visa programmets logikflöde i ett verkligt program.
+The `createUsers` itererar metoden över varje e-postadress och skapar ett motsvarande User-objekt (en lokal användare i `EDC_EXTERNAL_REGISTERED` domän). Slutligen `doEmails` -metoden anropas. Den här metoden finns avsiktligt kvar som en stub i exemplet. I en produktionsimplementering skulle den innehålla programlogik för att skicka e-postmeddelanden med inbjudningar till de nyskapade användarna. Det lämnas i exemplet för att visa programmets logikflöde i ett verkligt program.
 
 ### Definiera implementering av inbjuden extern användarhanterare {#user-handler-implementation}
 
@@ -213,7 +213,7 @@ Följande bild visar Java-projektets innehåll som paketeras i JAR-filen för de
 
 ![Bjud in användare](assets/ci_ci_InviteUsers.png)
 
-S. Externa JAR-filer som krävs av komponent B. JAVA-fil
+A. Externa JAR-filer som krävs för komponenten B. JAVA-fil
 
 Du måste paketera hanteraren för att bjuda in externa användare i en JAR-fil. Observera att .JAVA-filer visas i listan i föregående diagram. När de paketerats i en JAR-fil måste även motsvarande CLASS-filer anges. Utan CLASS-filerna fungerar inte behörighetshanteraren.
 
@@ -236,11 +236,11 @@ Så här lägger du till externa användare att bjuda in med administrationskons
 1. Logga in på administrationskonsolen.
 1. Klicka **[!UICONTROL Services]** > **[!UICONTROL Rights Management]** > **[!UICONTROL Configuration]** > Inbjuden **[!UICONTROL User Registration]**.
 1. Aktivera registrering av inbjudna användare genom att kontrollera **[!UICONTROL Enable invited user registration]** box. Under **[!UICONTROL Use Built-in registration system]**, klicka **[!UICONTROL No]**. Spara inställningarna.
-1. På startsidan för administrationskonsolen klickar du på **[!UICONTROL Settings]** > **[!UICONTROL User Management]** > **[!UICONTROL Domain Management]**.
+1. Klicka på på startsidan för administrationskonsolen **[!UICONTROL Settings]** > **[!UICONTROL User Management]** > **[!UICONTROL Domain Management]**.
 1. Klicka på **[!UICONTROL New Local Domain]**. På följande sida skapar du en domän med namnet och identifierarvärdet för `EDC_EXTERNAL_REGISTERED`. Spara ändringarna.
-1. På startsidan för administrationskonsolen klickar du på **[!UICONTROL Services]** > **[!UICONTROL Rights Management]** > **[!UICONTROL Invited and Local Users]**. The **[!UICONTROL Add Invited User]** visas.
+1. Klicka på på startsidan för administrationskonsolen **[!UICONTROL Services]** > **[!UICONTROL Rights Management]** > **[!UICONTROL Invited and Local Users]**. The **[!UICONTROL Add Invited User]** visas.
 1. Ange e-postadresser (eftersom den aktuella hanteraren för inbjudan till externa användare inte skickar e-postmeddelanden, behöver e-postadressen inte vara giltig). Klicka på **[!UICONTROL OK]**. Användarna bjuds in till systemet.
-1. På startsidan för administrationskonsolen klickar du på **[!UICONTROL Settings]** > **[!UICONTROL User Management]** > **[!UICONTROL Users and Groups]**.
+1. Klicka på på startsidan för administrationskonsolen **[!UICONTROL Settings]** > **[!UICONTROL User Management]** > **[!UICONTROL Users and Groups]**.
 1. I **[!UICONTROL Find]** anger du en e-postadress som du har angett. Klicka på **[!UICONTROL Find]**. Den inbjudna användaren visas som en användare på den lokala `EDC_EXTERNAL_REGISTERED` domän.
 
 >[!NOTE]

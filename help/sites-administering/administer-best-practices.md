@@ -8,9 +8,9 @@ content-type: reference
 topic-tags: best-practices
 discoiquuid: 8f6468a0-7721-454f-9334-c449968b8fe7
 exl-id: 576d87c8-cc96-45a0-b3cf-defb440babbb
-source-git-commit: a2fd3c0c1892ac648c87ca0dec440e22144c37a2
+source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
 workflow-type: tm+mt
-source-wordcount: '531'
+source-wordcount: '529'
 ht-degree: 2%
 
 ---
@@ -28,7 +28,7 @@ De bästa sätten att skapa, distribuera och underhålla, eller utveckla finns i
 
 * [Bästa tillvägagångssätt](/help/sites-authoring/best-practices.md)
 * [Utveckla bästa praxis](/help/sites-developing/best-practices.md)
-* [Effektiva rutiner](/help/sites-deploying/best-practices.md)
+* [Använda vedertagna rutiner](/help/sites-deploying/best-practices.md)
 
 Specifika dokument beskrivs och länkas till i de tabeller som följer.
 
@@ -46,7 +46,7 @@ De effektivaste strategierna kring Assets, inklusive Dynamic Media och Dynamic M
   <tr>
    <td>Organisera ditt innehåll (mapphierarki)</td>
    <td><a href="/help/assets/organize-assets.md">Bästa tillvägagångssätt för filhantering</a></td>
-   <td>En stor del av bearbetningsprofilerna är mappbaserade, till exempel video, metadata och bildbehandling används alltid i mappar. I det här dokumentet beskrivs hur du definierar och konfigurerar mapphierarkin eftersom hierarkin har en betydande inverkan på hur innehållet bearbetas. </td>
+   <td>De flesta bearbetningsprofiler är mappbaserade, t.ex. video, metadata och bildbehandling används alltid i mappar. I det här dokumentet beskrivs hur du definierar och konfigurerar mapphierarkin eftersom hierarkin har en betydande inverkan på hur innehållet bearbetas. </td>
   </tr>
   <tr>
    <td>Integrera Scene7 och AEM</td>
@@ -80,7 +80,7 @@ Hantering och redigering av webbplatsinnehåll har några beprövade metoder:
   <tr>
    <td>Definiera standardgränssnittet för instansen.</td>
    <td><p><a href="/help/sites-authoring/select-ui.md#configuring-the-default-ui-for-your-instance">Konfigurera standardgränssnittet för instansen</a></p> </td>
-   <td>AEM har två gränssnitt: pekoptimerad och klassisk. I det här avsnittet beskrivs hur du definierar standardgränssnittet för instansen.</td>
+   <td>AEM har två användargränssnitt: pekoptimerade och klassiska. I det här avsnittet beskrivs hur du definierar standardgränssnittet för instansen.</td>
   </tr>
   <tr>
    <td>Hantering av flera webbplatser</td>

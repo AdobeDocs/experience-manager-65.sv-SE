@@ -11,9 +11,9 @@ topic-tags: best-practices
 discoiquuid: 8f06d4b6-7d30-4ebc-9c6a-3bb8607a9be8
 docset: aem65
 exl-id: 7b71119a-ff58-47c0-aeef-a705ed8c40e0
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
 workflow-type: tm+mt
-source-wordcount: '785'
+source-wordcount: '783'
 ht-degree: 0%
 
 ---
@@ -77,11 +77,11 @@ Nedan följer en lista över rekommendationer från Product Management för Adob
      <li>Konfigurera åtgärden Redigera sida för att öppna den klassiska sidredigeraren i användargränssnittet. Se <a href="#selecting-your-ui">Välja användargränssnitt</a>.</li>
     </ol> <p>I en andra fas:</p>
     <ol>
-     <li>Uppdatera komponentdialogrutorna så att de använder Dialogrutan Coral 3. Adobe rekommenderar att du använder <a href="/help/sites-developing/modernization-tools.md">AEM</a> för att uppdatera komponenterna.</li>
+     <li>Uppdatera komponentdialogrutorna så att de använder Dialogrutan Coral 3. Adobe rekommenderar att du använder <a href="/help/sites-developing/modernization-tools.md">Verktyg för AEM</a> för att uppdatera komponenterna.</li>
     </ol> </td>
   </tr>
   <tr>
-   <td>Har skapat en webbplats som använder ClientContext med integreringar.<br /> </td>
+   <td>Har skapat en webbplats som använder ClientContexten med integreringar.<br /> </td>
    <td>
     <ol>
      <li>Uppdatera till 6.5</li>
@@ -89,8 +89,8 @@ Nedan följer en lista över rekommendationer från Product Management för Adob
      <li>Konfigurera åtgärden Redigera sida för att öppna den klassiska sidredigeraren i användargränssnittet. Se <a href="#selecting-your-ui">Välja användargränssnitt</a>.</li>
     </ol> <p>I en andra fas:</p>
     <ol>
-     <li>Uppdatera komponentdialogrutorna så att de använder Dialogrutan Coral 3. Adobe rekommenderar att du använder <a href="/help/sites-developing/modernization-tools.md">AEM</a> för att uppdatera komponenterna.</li>
-     <li>Konfigurera ContextHub (ersättning för ClientContext) och uppdatera sidmallarna så att ContextHub används. Observera att ContextHub har ett kompatibilitetsläge som tillåter inläsning av anpassade ClientContext-arkiv.</li>
+     <li>Uppdatera komponentdialogrutorna så att de använder Dialogrutan Coral 3. Adobe rekommenderar att du använder <a href="/help/sites-developing/modernization-tools.md">Verktyg för AEM</a> för att uppdatera komponenterna.</li>
+     <li>Konfigurera ContextHub (ersättning för ClientContexten) och uppdatera sidmallarna så att ContextHub används. Observera att ContextHub har ett kompatibilitetsläge som tillåter inläsning av anpassade ClientContexter.</li>
     </ol> </td>
   </tr>
   <tr>
@@ -102,7 +102,7 @@ Nedan följer en lista över rekommendationer från Product Management för Adob
 
 ### Vanliga frågor {#faq}
 
-Läs artikeln i kunskapsbasen [Vanliga frågor om redigering av Touch UI](https://helpx.adobe.com/experience-manager/kb/index/touchui_faq.html), för närmare uppgifter, inklusive information om det klassiska användargränssnittets borttagningsschema.
+Läs artikeln i kunskapsbasen [Vanliga frågor om redigering av Touch UI](https://helpx.adobe.com/experience-manager/kb/index/touchui_faq.html), om du vill ha mer information, inklusive information om tidsplanen för borttagning av dubbletter för det klassiska användargränssnittet.
 
 ### Välja användargränssnitt {#selecting-your-ui}
 
@@ -123,9 +123,9 @@ För bakgrundsinformation om grundläggande hantering:
 Detaljerad utvecklingsinformation:
 
 * [UI-arkitektur med pekskärmsfunktioner](/help/sites-developing/touch-ui-concepts.md).
-* Använd [AEM](/help/sites-developing/modernization-tools.md) om du vill konvertera komponentredigeringsdialogrutor från det klassiska användargränssnittet till det beröringsaktiverade användargränssnittet.
+* Använd [Verktyg för AEM](/help/sites-developing/modernization-tools.md) om du vill konvertera komponentredigeringsdialogrutor från det klassiska användargränssnittet till det beröringsaktiverade användargränssnittet.
 
-* [Struktur för det beröringskänsliga användargränssnittet](/help/sites-developing/touch-ui-structure.md).
+* [Struktur för användargränssnittet med pekskärm](/help/sites-developing/touch-ui-structure.md).
 
 * [Anpassa konsolerna i det pekaktiverade användargränssnittet](/help/sites-developing/customizing-consoles-touch.md) (innehåller exempelkod).
 

@@ -1,19 +1,15 @@
 ---
 title: Skydda dokument med regler
-seo-title: Protecting Documents with Policies
 description: Använd dokumentsäkerhetstjänsten för att dynamiskt tillämpa sekretessinställningar på Adobe PDF-dokument och behålla kontrollen över dokumenten. Med dokumentsäkerhetstjänsten kan man också styra hur mottagarna använder det profilskyddade PDF-dokumentet.
-seo-description: Use the Document Security service to dynamically apply confidentiality settings to Adobe PDF documents and to maintain control over the documents. The Document Security service also enables the users to maintain control over how recipients use the policy-protected PDF document.
-uuid: 6feb69ef-7b61-4d0b-8c87-d65d98bae9b5
 contentOwner: admin
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
-discoiquuid: 9b1d2bf3-f28c-41b2-9026-1f3311556422
 role: Developer
 exl-id: ff42579e-6aaf-433d-8b5d-9e9dd0957250
-source-git-commit: 135f50cc80f8bb449b2f1621db5e2564f5075968
+source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
 workflow-type: tm+mt
-source-wordcount: '15514'
+source-wordcount: '15513'
 ht-degree: 0%
 
 ---
@@ -28,7 +24,7 @@ Med Document Security kan man dynamiskt lägga in sekretessinställningar i Adob
 
 Dokumentsäkerhetstjänsten förhindrar att information sprids utanför användarens räckhåll genom att användarna kan behålla kontrollen över hur mottagarna använder det profilskyddade PDF-dokumentet. Användaren kan ange vem som får öppna ett dokument, begränsa hur det får användas och övervaka dokumentet när det har distribuerats. En användare kan också dynamiskt styra åtkomsten till ett policyskyddat dokument och kan till och med dynamiskt återkalla åtkomsten till dokumentet.
 
-Dokumentsäkerhetstjänsten skyddar även andra filtyper, till exempel Microsoft Word-filer (DOC-filer). Du kan använda API:t för Document Security Client för att arbeta med dessa filtyper. Följande versioner stöds:
+Dokumentsäkerhetstjänsten skyddar även andra filtyper, till exempel Microsoft Word-filer (DOC-filer). Du kan använda API:t för dokumentsäkerhetsklienten för att arbeta med dessa filtyper. Följande versioner stöds:
 
 * Microsoft Office 2003-filer (DOC-, XLS-, PPT-filer)
 * Microsoft Office 2007-filer (DOCX-, XLSX-, PPTX-filer)
@@ -67,9 +63,9 @@ Med hjälp av profiler kan du utföra följande uppgifter:
 * Ändra inställningar för åtkomst och säkerhet när som helst, även efter att du distribuerat det profilskyddade dokumentet.
 * Övervaka hur dokumentet används när du har distribuerat det. Du kan se hur dokumentet används och vem som använder det. Du kan till exempel ta reda på när någon har öppnat dokumentet.
 
-### Skapa en profil med webbtjänster {#creating-a-policy-using-web-services}
+### Skapa en profil med hjälp av webbtjänster {#creating-a-policy-using-web-services}
 
-När du skapar en profil med webbtjänstens API ska du referera till en befintlig PDF-fil (Portable Document Rights Language) som beskriver principen. Principbehörigheter och huvudnamn definieras i PDRL-dokumentet. Följande XML-dokument är ett exempel på ett PDRL-dokument.
+När du skapar en profil med webbtjänstens API ska du referera till en befintlig PDF-fil (Portable Document Rights Language) som beskriver principen. Principbehörigheter och huvudobjekt definieras i PDRL-dokumentet. Följande XML-dokument är ett exempel på ett PDRL-dokument.
 
 ```xml
  <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -143,7 +139,7 @@ Så här skapar du en profil:
 
 1. Inkludera projektfiler.
 1. Skapa ett API-objekt för Document Security Client.
-1. Ange profilens attribut.
+1. Ange principens attribut.
 1. Skapa en princippost.
 1. Registrera policyn.
 
@@ -191,7 +187,7 @@ När du anger attribut som tillhör en profil kan du även ange krypteringsinst�
 
 * **AES256**: Representerar AES-krypteringsalgoritmen med en 256-bitars nyckel.
 * **AES128**: Representerar AES-krypteringsalgoritmen med en 128-bitars nyckel.
-* **NoEncryption:** Representerar ingen kryptering.
+* **Ingen kryptering:** Representerar ingen kryptering.
 
 När du anger `NoEncryption` kan du inte ange `PlaintextMetadata` alternativ till `false`. Om du försöker göra det genereras ett undantag.
 
@@ -207,7 +203,7 @@ En princippost kopplar principer, som är grupper och användare, och behörighe
 * Koppla principposten till profilen.
 * Skydda ett dokument med profilen med Acrobat.
 
-Dessa åtgärder gör att mottagarna bara kan visa dokumentet online och inte kan kopiera det. Dokumentet förblir säkert tills du har tagit bort skyddet.
+Dessa åtgärder gör att mottagarna bara kan visa dokumentet online och inte kan kopiera det. Dokumentet förblir säkert tills du har tagit bort skyddet från det.
 
 **Registrera policyn**
 
@@ -226,7 +222,7 @@ Skapa en profil med hjälp av API:t för dokumentsäkerhet (Java):
    * Skapa en `ServiceClientFactory` objekt som innehåller anslutningsegenskaper.
    * Skapa en `DocumentSecurityClient` genom att använda konstruktorn och skicka `ServiceClientFactory` -objekt.
 
-1. Ange profilens attribut.
+1. Ange principens attribut.
 
    * Skapa en `Policy` genom att anropa `InfomodelObjectFactory` objektets statiska `createPolicy` -metod. Den här metoden returnerar en `Policy` -objekt.
    * Ange principens namnattribut genom att anropa `Policy` objektets `setName` och skickar ett strängvärde som anger principnamnet.
@@ -251,11 +247,12 @@ Skapa en profil med hjälp av API:t för dokumentsäkerhet (Java):
    * Registrera policyn genom att anropa `PolicyManager` objektets `registerPolicy` och skicka följande värden:
 
       * The `Policy` objekt som representerar principen som ska registreras.
+
    * Ett strängvärde som representerar den principuppsättning som principen tillhör.
 
    Om du använder ett AEM administratörskonto i anslutningsinställningarna för att skapa `DocumentSecurityClient` anger du sedan namnet på principuppsättningen när du anropar `registerPolicy` -metod. Om du får en `null` värdet för principuppsättningen. Principen skapas i administratörerna *Mina policyer* principuppsättning.
 
-   Om du använder en dokumentsäkerhetsanvändare i anslutningsinställningarna kan du anropa den överlagrade `registerPolicy` metod som bara accepterar principen. Du behöver alltså inte ange namnet på principuppsättningen. Principen läggs dock till i principuppsättningen med namnet *Mina policyer*. Om du inte vill lägga till den nya principen i den här principinställningen anger du ett principuppsättningsnamn när du anropar `registerPolicy` -metod.
+   Om du använder en dokumentsäkerhetsanvändare i anslutningsinställningarna kan du anropa den överlagrade `registerPolicy` metod som bara accepterar principen. Du behöver alltså inte ange namnet på principuppsättningen. Principen läggs dock till i principuppsättningen med namnet *Mina policyer*. Om du inte vill lägga till den nya principen i den här principinställningen anger du ett principuppsättningsnamn när du anropar den `registerPolicy` -metod.
 
    >[!NOTE]
    >
@@ -275,30 +272,30 @@ Skapa en profil med hjälp av API:t för dokumentsäkerhet (webbtjänsten):
 
    >[!NOTE]
    >
-   >Ersätt `localhost` med IP-adressen till den server som är värd för AEM Forms.
+   >Ersätt `localhost` med IP-adressen till den server där AEM Forms finns.
 
 1. Skapa ett API-objekt för Document Security Client.
 
    * Skapa en `DocumentSecurityServiceClient` genom att använda dess standardkonstruktor.
-   * Skapa en `DocumentSecurityServiceClient.Endpoint.Address` genom att använda `System.ServiceModel.EndpointAddress` konstruktor. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/RightsManagementService?WSDL`.) Du behöver inte använda `lc_version` -attribut. Det här attributet används när du skapar en tjänstreferens.)
-   * Skapa en `System.ServiceModel.BasicHttpBinding` genom att hämta värdet för `RightsManagementServiceClient.Endpoint.Binding` fält. Sänd returvärdet till `BasicHttpBinding`.
+   * Skapa en `DocumentSecurityServiceClient.Endpoint.Address` genom att använda `System.ServiceModel.EndpointAddress` konstruktor. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/RightsManagementService?WSDL`.) Du behöver inte använda `lc_version` -attribut. Detta attribut används när du skapar en tjänstreferens.)
+   * Skapa en `System.ServiceModel.BasicHttpBinding` genom att hämta värdet för `RightsManagementServiceClient.Endpoint.Binding` fält. Skicka returvärdet till `BasicHttpBinding`.
    * Ange `System.ServiceModel.BasicHttpBinding` objektets `MessageEncoding` fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
    * Aktivera grundläggande HTTP-autentisering genom att utföra följande åtgärder:
 
       * Tilldela AEM formuläranvändarnamn till fältet `RightsManagementServiceClient.ClientCredentials.UserName.UserName`.
       * Tilldela motsvarande lösenordsvärde till fältet `RightsManagementServiceClient.ClientCredentials.UserName.Password`.
       * Tilldela konstantvärdet `HttpClientCredentialType.Basic` till fältet `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
+
    * Tilldela konstantvärdet `BasicHttpSecurityMode.TransportCredentialOnly` till fältet `BasicHttpBindingSecurity.Security.Mode`.
 
-
-1. Ange profilens attribut.
+1. Ange principens attribut.
 
    * Skapa en `PolicySpec` genom att använda dess konstruktor.
    * Ange principens namn genom att tilldela ett strängvärde till `PolicySpec` objektets `name` datamedlem.
    * Ange principens beskrivning genom att tilldela ett strängvärde till `PolicySpec` objektets `description` datamedlem.
-   * Ange den principuppsättning som principen ska tillhöra genom att tilldela ett strängvärde till `PolicySpec` objektets `policySetName` datamedlem. Du måste ange ett befintligt principuppsättningsnamn. (Du kan ange `null` för det här parametervärdet som resulterar i att principen läggs till i *Mina policyer*.)
+   * Ange den principuppsättning som principen tillhör genom att tilldela ett strängvärde till `PolicySpec` objektets `policySetName` datamedlem. Du måste ange ett befintligt principuppsättningsnamn. (Du kan ange `null` för det här parametervärdet som resulterar i att principen läggs till i *Mina policyer*.)
    * Ange principens låneperiod offline genom att tilldela ett heltalsvärde till `PolicySpec` objektets `offlineLeasePeriod` datamedlem.
-   * Ange `PolicySpec` objektets `policyXml` datamedlem med ett strängvärde som representerar PDRL XML-data. Skapa en .NET-fil om du vill utföra den här åtgärden `StreamReader` genom att använda dess konstruktor. Skicka platsen för en PDRL XML-fil som representerar principen till `StreamReader` konstruktor. Anropa sedan `StreamReader` objektets `ReadLine` och tilldela returvärdet till en strängvariabel. Iterera genom `StreamReader` objektet tills `ReadLine` returnerar null. Tilldela strängvariabeln till `PolicySpec` objektets `policyXml` datamedlem.
+   * Ange `PolicySpec` objektets `policyXml` datamedlem med ett strängvärde som representerar PDRL XML-data. Skapa en .NET-fil om du vill utföra den här åtgärden `StreamReader` genom att använda dess konstruktor. Skicka platsen för en PDRL XML-fil som representerar principen till `StreamReader` konstruktor. Anropa `StreamReader` objektets `ReadLine` och tilldela returvärdet till en strängvariabel. Iterera genom `StreamReader` objektet tills `ReadLine` returnerar null. Tilldela strängvariabeln till `PolicySpec` objektets `policyXml` datamedlem.
 
 1. Skapa en princippost.
 
@@ -313,7 +310,7 @@ Skapa en profil med hjälp av API:t för dokumentsäkerhet (webbtjänsten):
 
    Om du använder ett AEM administratörskonto i anslutningsinställningarna för att skapa `DocumentSecurityClient` anger du namnet på principuppsättningen när du anropar `registerPolicy` -metod.
 
-   Om du använder en Document SecurityDocument Security-användare i anslutningsinställningarna kan du anropa den överlagrade `registerPolicy` metod som bara accepterar principen. Du behöver alltså inte ange namnet på principuppsättningen. Principen läggs dock till i principuppsättningen med namnet *Mina policyer*. Om du inte vill lägga till den nya principen i den här principinställningen anger du ett principuppsättningsnamn när du anropar `registerPolicy` -metod.
+   Om du använder en Document SecurityDocument Security-användare i anslutningsinställningarna kan du anropa den överlagrade `registerPolicy` metod som bara accepterar principen. Du behöver alltså inte ange namnet på principuppsättningen. Principen läggs dock till i principuppsättningen med namnet *Mina policyer*. Om du inte vill lägga till den nya principen i den här principinställningen anger du ett principuppsättningsnamn när du anropar den `registerPolicy` -metod.
 
    >[!NOTE]
    >
@@ -321,8 +318,8 @@ Skapa en profil med hjälp av API:t för dokumentsäkerhet (webbtjänsten):
 
 Följande snabbstarter innehåller kodexempel på hur du använder dokumentsäkerhetstjänsten:
 
-* &quot;Snabbstart (MTOM): Skapa en profil med hjälp av webbtjänstens API&quot;
-* &quot;Snabbstart (SwaRef): Skapa en profil med hjälp av webbtjänstens API&quot;
+* &quot;Snabbstart (MTOM): Skapa en princip med hjälp av webbtjänstens API&quot;
+* &quot;Snabbstart (SwaRef): Skapa en princip med hjälp av webbtjänstens API&quot;
 
 ## Ändra principer {#modifying-policies}
 
@@ -362,7 +359,7 @@ Du måste hämta en befintlig princip för att kunna ändra den. Om du vill häm
 
 Om du vill ändra en profil ändrar du värdet för principattributen. Det enda principattribut som du inte kan ändra är namnattributet. Om du till exempel vill ändra principens låneperiod offline kan du ändra värdet på principens attribut för låneperiod offline.
 
-När du ändrar en princips låneperiod offline med hjälp av en webbtjänst är `offlineLeasePeriod` på `PolicySpec` -gränssnittet ignoreras. Om du vill uppdatera offlinelåneperioden ändrar du `OfflineLeasePeriod` i PDRL XML-dokumentet. Referera sedan till det uppdaterade PDRL XML-dokumentet med hjälp av `PolicySpec` gränssnitt `policyXML` datamedlem.
+När du ändrar en princips låneperiod offline med hjälp av en webbtjänst är `offlineLeasePeriod` fält på `PolicySpec` -gränssnittet ignoreras. Om du vill uppdatera offlinelåneperioden ändrar du `OfflineLeasePeriod` i PDRL XML-dokumentet. Referera sedan till det uppdaterade PDRL XML-dokumentet med hjälp av `PolicySpec` gränssnitt `policyXML` datamedlem.
 
 >[!NOTE]
 >
@@ -393,9 +390,9 @@ Innan de ändringar du gör i en profil börjar gälla måste du uppdatera den m
       * Ett strängvärde som representerar namnet på den principuppsättning som principen tillhör. Du kan ange `null` som resulterar i `MyPolicies` principuppsättning används.
       * Ett strängvärde som representerar principnamnet.
 
-1. Ange profilens attribut.
+1. Ange principens attribut.
 
-   Ändra regelns attribut så att de uppfyller era affärskrav. Om du till exempel vill ändra principens låneperiod offline anropar du `Policy` objektets `setOfflineLeasePeriod` -metod.
+   Ändra regelns attribut så att de uppfyller företagets krav. Om du till exempel vill ändra principens låneperiod offline anropar du `Policy` objektets `setOfflineLeasePeriod` -metod.
 
 1. Uppdatera profilen.
 
@@ -403,7 +400,7 @@ Innan de ändringar du gör i en profil börjar gälla måste du uppdatera den m
 
 **Exempel på koder**
 
-Exempel på kod som använder tjänsten Dokumentsäkerhet finns i Snabbstart (SOAP-läge): Ändra en profil med hjälp av Java API-avsnittet.
+Exempel på kod som använder dokumentsäkerhetstjänsten finns i Snabbstart (SOAP-läge): Ändra en profil med hjälp av Java API-avsnittet.
 
 ### Ändra befintliga profiler med webbtjänstens API {#modify-existing-policies-using-the-web-service-api}
 
@@ -415,21 +412,21 @@ Exempel på kod som använder tjänsten Dokumentsäkerhet finns i Snabbstart (SO
 
    >[!NOTE]
    >
-   >Ersätt `localhost` med IP-adressen till den server som är värd för AEM Forms.
+   >Ersätt `localhost` med IP-adressen till den server där AEM Forms finns.
 
 1. Skapa ett API-objekt för Document Security Client.
 
    * Skapa en `RightsManagementServiceClient` genom att använda dess standardkonstruktor.
-   * Skapa en `RightsManagementServiceClient.Endpoint.Address` genom att använda `System.ServiceModel.EndpointAddress` konstruktor. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/RightsManagementService?WSDL`.) Du behöver inte använda `lc_version` -attribut. Det här attributet används när du skapar en tjänstreferens.)
-   * Skapa en `System.ServiceModel.BasicHttpBinding` genom att hämta värdet för `RightsManagementServiceClient.Endpoint.Binding` fält. Sänd returvärdet till `BasicHttpBinding`.
+   * Skapa en `RightsManagementServiceClient.Endpoint.Address` genom att använda `System.ServiceModel.EndpointAddress` konstruktor. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/RightsManagementService?WSDL`.) Du behöver inte använda `lc_version` -attribut. Detta attribut används när du skapar en tjänstreferens.)
+   * Skapa en `System.ServiceModel.BasicHttpBinding` genom att hämta värdet för `RightsManagementServiceClient.Endpoint.Binding` fält. Skicka returvärdet till `BasicHttpBinding`.
    * Ange `System.ServiceModel.BasicHttpBinding` objektets `MessageEncoding` fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
    * Aktivera grundläggande HTTP-autentisering genom att utföra följande åtgärder:
 
       * Tilldela AEM formuläranvändarnamn till fältet `RightsManagementServiceClient.ClientCredentials.UserName.UserName`.
       * Tilldela motsvarande lösenordsvärde till fältet `RightsManagementServiceClient.ClientCredentials.UserName.Password`.
       * Tilldela konstantvärdet `HttpClientCredentialType.Basic` till fältet `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
-   * Tilldela konstantvärdet `BasicHttpSecurityMode.TransportCredentialOnly` till fältet `BasicHttpBindingSecurity.Security.Mode`.
 
+   * Tilldela konstantvärdet `BasicHttpSecurityMode.TransportCredentialOnly` till fältet `BasicHttpBindingSecurity.Security.Mode`.
 
 1. Hämta en befintlig princip.
 
@@ -438,9 +435,9 @@ Exempel på kod som använder tjänsten Dokumentsäkerhet finns i Snabbstart (SO
    * Ett strängvärde som anger namnet på den principuppsättning som principen tillhör. Du kan ange `null` som resulterar i `MyPolicies` principuppsättning används.
    * Ett strängvärde som anger principens namn.
 
-1. Ange profilens attribut.
+1. Ange principens attribut.
 
-   Ändra regelns attribut så att de uppfyller era affärskrav.
+   Ändra regelns attribut så att de uppfyller företagets krav.
 
 1. Uppdatera profilen.
 
@@ -450,8 +447,8 @@ Exempel på kod som använder tjänsten Dokumentsäkerhet finns i Snabbstart (SO
 
 Följande snabbstarter innehåller kodexempel på hur du använder dokumentsäkerhetstjänsten:
 
-* &quot;Snabbstart (MTOM): Ändra en profil med hjälp av webbtjänstens API&quot;
-* &quot;Snabbstart (SwaRef): Ändra en profil med hjälp av webbtjänstens API&quot;
+* &quot;Snabbstart (MTOM): Ändra en princip med hjälp av webbtjänstens API&quot;
+* &quot;Snabbstart (SwaRef): Ändra en princip med hjälp av webbtjänstens API&quot;
 
 ## Ta bort profiler {#deleting-policies}
 
@@ -479,7 +476,7 @@ Innan du programmässigt kan utföra en dokumentsäkerhetstjänståtgärd måste
 
 **Ta bort profilen**
 
-Om du vill ta bort en profil anger du vilken princip som ska tas bort och vilken principuppsättning som principen tillhör. Den användare vars inställningar används för att anropa AEM Forms måste ha behörighet att ta bort profilen; i annat fall inträffar ett undantag. Om du försöker ta bort en princip som inte finns inträffar ett undantag.
+Om du vill ta bort en profil anger du vilken princip som ska tas bort och vilken principuppsättning som principen tillhör. Den användare vars inställningar används för att anropa AEM Forms måste ha behörighet att ta bort profilen, annars inträffar ett undantag. Om du försöker ta bort en princip som inte finns inträffar ett undantag.
 
 ### Ta bort profiler med Java API {#delete-policies-using-the-java-api}
 
@@ -518,21 +515,21 @@ Ta bort en profil med hjälp av API:t för dokumentsäkerhet (webbtjänsten):
 
    >[!NOTE]
    >
-   >Ersätt `localhost` med IP-adressen till den server som är värd för AEM Forms.
+   >Ersätt `localhost` med IP-adressen till den server där AEM Forms finns.
 
 1. Skapa ett API-objekt för Document Security Client.
 
    * Skapa en `RightsManagementServiceClient` genom att använda dess standardkonstruktor.
-   * Skapa en `RightsManagementServiceClient.Endpoint.Address` genom att använda `System.ServiceModel.EndpointAddress` konstruktor. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/RightsManagementService?WSDL`.) Du behöver inte använda `lc_version` -attribut. Det här attributet används när du skapar en tjänstreferens.)
-   * Skapa en `System.ServiceModel.BasicHttpBinding` genom att hämta värdet för `RightsManagementServiceClient.Endpoint.Binding` fält. Sänd returvärdet till `BasicHttpBinding`.
+   * Skapa en `RightsManagementServiceClient.Endpoint.Address` genom att använda `System.ServiceModel.EndpointAddress` konstruktor. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/RightsManagementService?WSDL`.) Du behöver inte använda `lc_version` -attribut. Detta attribut används när du skapar en tjänstreferens.)
+   * Skapa en `System.ServiceModel.BasicHttpBinding` genom att hämta värdet för `RightsManagementServiceClient.Endpoint.Binding` fält. Skicka returvärdet till `BasicHttpBinding`.
    * Ange `System.ServiceModel.BasicHttpBinding` objektets `MessageEncoding` fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
    * Aktivera grundläggande HTTP-autentisering genom att utföra följande åtgärder:
 
       * Tilldela AEM formuläranvändarnamn till fältet `RightsManagementServiceClient.ClientCredentials.UserName.UserName`.
       * Tilldela motsvarande lösenordsvärde till fältet `RightsManagementServiceClient.ClientCredentials.UserName.Password`.
       * Tilldela konstantvärdet `HttpClientCredentialType.Basic` till fältet `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
-   * Tilldela konstantvärdet `BasicHttpSecurityMode.TransportCredentialOnly` till fältet `BasicHttpBindingSecurity.Security.Mode`.
 
+   * Tilldela konstantvärdet `BasicHttpSecurityMode.TransportCredentialOnly` till fältet `BasicHttpBindingSecurity.Security.Mode`.
 
 1. Ta bort profilen.
 
@@ -545,7 +542,7 @@ Ta bort en profil med hjälp av API:t för dokumentsäkerhet (webbtjänsten):
 
 Följande snabbstarter innehåller kodexempel på hur du använder dokumentsäkerhetstjänsten:
 
-* &quot;Snabbstart (MTOM): Ta bort en princip med webbtjänstens API&quot;
+* &quot;Snabbstart (MTOM): Ta bort en princip med hjälp av webbtjänstens API&quot;
 * &quot;Snabbstart (SwaRef): Ta bort en princip med webbtjänstens API&quot;
 
 ## Tillämpa principer på PDF-dokument {#applying-policies-to-pdf-documents}
@@ -567,7 +564,7 @@ Så här använder du en profil för ett PDF-dokument:
 1. Inkludera projektfiler.
 1. Skapa ett API-objekt för Document Security Client.
 1. Hämta ett PDF-dokument som en profil tillämpas på.
-1. Använd en befintlig profil på dokumentet PDF.
+1. Använd en befintlig profil för dokumentet i PDF.
 1. Spara det principskyddade PDF-dokumentet.
 
 **Inkludera projektfiler**
@@ -616,21 +613,20 @@ Tillämpa en profil på ett PDF-dokument med hjälp av dokumentets säkerhets-AP
    * Skapa en `java.io.FileInputStream` objekt som representerar PDF-dokumentet med hjälp av dess konstruktor. Skicka ett strängvärde som anger platsen för PDF-dokumentet.
    * Skapa en `com.adobe.idp.Document` genom att använda konstruktorn och skicka `java.io.FileInputStream` -objekt.
 
-1. Använd en befintlig profil på dokumentet PDF.
+1. Använd en befintlig profil för dokumentet i PDF.
 
    * Skapa en `DocumentManager` genom att anropa `RightsManagementClient` objektets `getDocumentManager` -metod.
    * Tillämpa en profil på PDF-dokumentet genom att anropa `DocumentManager` objektets `protectDocument` och skicka följande värden:
 
       * The `com.adobe.idp.Document` -objekt som innehåller det PDF-dokument som profilen tillämpas på.
       * Ett strängvärde som anger dokumentets namn.
-      * Ett strängvärde som anger namnet på den principuppsättning som principen tillhör. Du kan ange en `null` värde som resulterar i `MyPolicies` principuppsättning används.
+      * Ett strängvärde som anger namnet på den principuppsättning som principen tillhör. Du kan ange en `null` det värde som resulterar i `MyPolicies` principuppsättning används.
       * Ett strängvärde som anger principnamnet.
       * Ett strängvärde som representerar namnet på användarhanterardomänen för den användare som är dokumentets utgivare. Det här parametervärdet är valfritt och kan vara null (om parametern är null måste nästa parametervärde vara null).
-      * Ett strängvärde som representerar namnet på den kanoniska användaren av användarhanteraren som är dokumentets utgivare. Det här parametervärdet är valfritt och kan `null` (om den här parametern är null måste det föregående parametervärdet vara `null`).
+      * Ett strängvärde som representerar namnet på den kanoniska användaren av användarhanteraren som är dokumentets utgivare. Parametervärdet är valfritt och kan `null` (om parametern är null måste det föregående parametervärdet vara `null`).
       * A `com.adobe.livecycle.rightsmanagement.Locale` som representerar det språkområde som används för att välja MS Office-mallen. Det här parametervärdet är valfritt och används inte för PDF-dokument. Om du vill skydda ett PDF-dokument anger du `null`.
 
-      The `protectDocument` returnerar en `RMSecureDocumentResult` objekt som innehåller det principskyddade PDF-dokumentet.
-
+     The `protectDocument` returnerar en `RMSecureDocumentResult` objekt som innehåller det principskyddade PDF-dokumentet.
 
 1. Spara dokumentet PDF.
 
@@ -642,8 +638,8 @@ Tillämpa en profil på ett PDF-dokument med hjälp av dokumentets säkerhets-AP
 
 Följande snabbstarter innehåller kodexempel på hur du använder dokumentsäkerhetstjänsten:
 
-* &quot;Snabbstart (EJB-läge): Tillämpa en profil på ett PDF-dokument med Java API&quot;
-* &quot;Snabbstart (SOAP-läge): Tillämpa en profil på ett PDF-dokument med Java API&quot;
+* &quot;Snabbstart (EJB-läge): Tillämpa en princip på ett PDF-dokument med Java API&quot;
+* &quot;Snabbstart (SOAP-läge): Tillämpa en princip på ett PDF-dokument med Java API&quot;
 
 **Se även**
 
@@ -661,21 +657,21 @@ Tillämpa en profil på ett PDF-dokument med hjälp av API:t för dokumentsäker
 
    >[!NOTE]
    >
-   >Ersätt `localhost` med IP-adressen till den server som är värd för AEM Forms.
+   >Ersätt `localhost` med IP-adressen till den server där AEM Forms finns.
 
 1. Skapa ett API-objekt för Document Security Client.
 
    * Skapa en `RightsManagementServiceClient` genom att använda dess standardkonstruktor.
-   * Skapa en `RightsManagementServiceClient.Endpoint.Address` genom att använda `System.ServiceModel.EndpointAddress` konstruktor. Skicka ett strängvärde som anger WSDL till Forms-tjänsten (till exempel `http://localhost:8080/soap/services/RightsManagementService?WSDL`.) Du behöver inte använda `lc_version` -attribut. Det här attributet används när du skapar en tjänstreferens.)
-   * Skapa en `System.ServiceModel.BasicHttpBinding` genom att hämta värdet för `RightsManagementServiceClient.Endpoint.Binding` fält. Sänd returvärdet till `BasicHttpBinding`.
+   * Skapa en `RightsManagementServiceClient.Endpoint.Address` genom att använda `System.ServiceModel.EndpointAddress` konstruktor. Skicka ett strängvärde som anger WSDL till Forms-tjänsten (till exempel `http://localhost:8080/soap/services/RightsManagementService?WSDL`.) Du behöver inte använda `lc_version` -attribut. Detta attribut används när du skapar en tjänstreferens.)
+   * Skapa en `System.ServiceModel.BasicHttpBinding` genom att hämta värdet för `RightsManagementServiceClient.Endpoint.Binding` fält. Skicka returvärdet till `BasicHttpBinding`.
    * Ange `System.ServiceModel.BasicHttpBinding` objektets `MessageEncoding` fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
    * Aktivera grundläggande HTTP-autentisering genom att utföra följande åtgärder:
 
       * Tilldela AEM formuläranvändarnamn till fältet `RightsManagementServiceClient.ClientCredentials.UserName.UserName`.
       * Tilldela motsvarande lösenordsvärde till fältet `RightsManagementServiceClient.ClientCredentials.UserName.Password`.
       * Tilldela konstantvärdet `HttpClientCredentialType.Basic` till fältet `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
-   * Tilldela konstantvärdet `BasicHttpSecurityMode.TransportCredentialOnly` till fältet `BasicHttpBindingSecurity.Security.Mode`.
 
+   * Tilldela konstantvärdet `BasicHttpSecurityMode.TransportCredentialOnly` till fältet `BasicHttpBindingSecurity.Security.Mode`.
 
 1. Hämta ett PDF-dokument.
 
@@ -685,16 +681,16 @@ Tillämpa en profil på ett PDF-dokument med hjälp av API:t för dokumentsäker
    * Fylla i bytearrayen med strömdata genom att anropa `System.IO.FileStream` objektets `Read` -metod. Skicka bytearrayen, startpositionen och strömlängden som ska läsas.
    * Fyll i `BLOB` genom att tilldela `MTOM` fält med bytearrayens innehåll.
 
-1. Använd en befintlig profil på dokumentet PDF.
+1. Använd en befintlig profil för dokumentet i PDF.
 
    Tillämpa en profil på PDF-dokumentet genom att anropa `RightsManagementServiceClient` objektets `protectDocument` och skicka följande värden:
 
    * The `BLOB` -objekt som innehåller det PDF-dokument som profilen tillämpas på.
    * Ett strängvärde som anger dokumentets namn.
-   * Ett strängvärde som anger namnet på den principuppsättning som principen tillhör. Du kan ange en `null` värde som resulterar i `MyPolicies` principuppsättning används.
+   * Ett strängvärde som anger namnet på den principuppsättning som principen tillhör. Du kan ange en `null` det värde som resulterar i `MyPolicies` principuppsättning används.
    * Ett strängvärde som anger principnamnet.
    * Ett strängvärde som representerar namnet på användarhanterardomänen för den användare som är dokumentets utgivare. Parametervärdet är valfritt och kan vara null (om parametern är null måste nästa parametervärde vara `null`).
-   * Ett strängvärde som representerar namnet på den kanoniska användaren av användarhanteraren som är dokumentets utgivare. Parametervärdet är valfritt och kan vara null (om parametern är null måste det föregående parametervärdet vara `null`).
+   * Ett strängvärde som representerar namnet på den kanoniska användaren av användarhanteraren som är dokumentets utgivare. Det här parametervärdet är valfritt och kan vara null (om parametern är null måste det föregående parametervärdet vara `null`).
    * A `RMLocale` värde som anger språkvärdet (till exempel `RMLocale.en`).
    * En strängutdataparameter som används för att lagra principens identifierarvärde.
    * En strängutdataparameter som används för att lagra det principskyddade identifierarvärdet.
@@ -713,8 +709,8 @@ Tillämpa en profil på ett PDF-dokument med hjälp av API:t för dokumentsäker
 
 Följande snabbstarter innehåller kodexempel på hur du använder dokumentsäkerhetstjänsten:
 
-* &quot;Snabbstart (MTOM): Tillämpa en profil på ett PDF-dokument med hjälp av webbtjänstens API&quot;
-* &quot;Snabbstart (SwaRef): Tillämpa en profil på ett PDF-dokument med hjälp av webbtjänstens API
+* &quot;Snabbstart (MTOM): Tillämpa en princip på ett PDF-dokument med hjälp av webbtjänstens API&quot;
+* &quot;Snabbstart (SwaRef): Tillämpa en princip på ett PDF-dokument med hjälp av webbtjänstens API &quot;
 
 ## Ta bort profiler från PDF-dokument {#removing-policies-from-pdf-documents}
 
@@ -794,7 +790,7 @@ Ta bort en profil från ett principskyddat PDF-dokument med hjälp av dokuments�
 
 Följande snabbstarter innehåller kodexempel på hur du använder dokumentsäkerhetstjänsten:
 
-* &quot;Snabbstart (SOAP-läge): Ta bort en profil från ett PDF-dokument med Java API&quot;
+* &quot;Snabbstart (SOAP-läge): Ta bort en princip från ett PDF-dokument med Java API&quot;
 
 ### Ta bort en princip med webbtjänstens API {#remove-a-policy-using-the-web-service-api}
 
@@ -806,21 +802,21 @@ Ta bort en profil från ett principskyddat PDF-dokument med hjälp av dokuments�
 
    >[!NOTE]
    >
-   >Ersätt `localhost` med IP-adressen till den server som är värd för AEM Forms.
+   >Ersätt `localhost` med IP-adressen till den server där AEM Forms finns.
 
 1. Skapa ett API-objekt för Document Security Client.
 
    * Skapa en `DocumentSecurityServiceClient` genom att använda dess standardkonstruktor.
-   * Skapa en `DocumentSecurityServiceClient.Endpoint.Address` genom att använda `System.ServiceModel.EndpointAddress` konstruktor. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/RightsManagementService?WSDL`.) Du behöver inte använda `lc_version` -attribut. Det här attributet används när du skapar en tjänstreferens.)
-   * Skapa en `System.ServiceModel.BasicHttpBinding` genom att hämta värdet för `DocumentSecurityServiceClient.Endpoint.Binding` fält. Sänd returvärdet till `BasicHttpBinding`.
+   * Skapa en `DocumentSecurityServiceClient.Endpoint.Address` genom att använda `System.ServiceModel.EndpointAddress` konstruktor. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/RightsManagementService?WSDL`.) Du behöver inte använda `lc_version` -attribut. Detta attribut används när du skapar en tjänstreferens.)
+   * Skapa en `System.ServiceModel.BasicHttpBinding` genom att hämta värdet för `DocumentSecurityServiceClient.Endpoint.Binding` fält. Skicka returvärdet till `BasicHttpBinding`.
    * Ange `System.ServiceModel.BasicHttpBinding` objektets `MessageEncoding` fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
    * Aktivera grundläggande HTTP-autentisering genom att utföra följande åtgärder:
 
       * Tilldela AEM formuläranvändarnamn till fältet `DocumentSecurityServiceClient.ClientCredentials.UserName.UserName`.
       * Tilldela motsvarande lösenordsvärde till fältet `DocumentSecurityServiceClient.ClientCredentials.UserName.Password`.
       * Tilldela konstantvärdet `HttpClientCredentialType.Basic` till fältet `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
-   * Tilldela konstantvärdet `BasicHttpSecurityMode.TransportCredentialOnly` till fältet `BasicHttpBindingSecurity.Security.Mode`.
 
+   * Tilldela konstantvärdet `BasicHttpSecurityMode.TransportCredentialOnly` till fältet `BasicHttpBindingSecurity.Security.Mode`.
 
 1. Hämta ett policyskyddat PDF-dokument.
 
@@ -844,8 +840,8 @@ Ta bort en profil från ett principskyddat PDF-dokument med hjälp av dokuments�
 
 Följande snabbstarter innehåller kodexempel på hur du använder dokumentsäkerhetstjänsten:
 
-* &quot;Snabbstart (MTOM): Ta bort en princip från ett PDF-dokument med webbtjänstens API
-* &quot;Snabbstart (SwaRef): Ta bort en princip från ett PDF-dokument med webbtjänstens API&quot;
+* &quot;Snabbstart (MTOM): Ta bort en princip från ett PDF-dokument med hjälp av webbtjänstens API &quot;
+* &quot;Snabbstart (SwaRef): Ta bort en princip från ett PDF-dokument med hjälp av webbtjänstens API&quot;
 
 **Se även**
 
@@ -884,7 +880,7 @@ Innan du programmässigt kan utföra en dokumentsäkerhetstjänståtgärd måste
 
 Du måste hämta ett principskyddat PDF-dokument för att kunna återkalla det. Du kan inte återkalla ett dokument som redan har återkallats eller som inte är ett principskyddat dokument.
 
-Om du känner till licensvärdet för det profilskyddade dokumentet behöver du inte hämta det profilskyddade PDF-dokumentet. I de flesta fall måste du dock hämta PDF-dokumentet för att få fram värdet för licensidentifieraren.
+Om du känner till licensvärdet för det profilskyddade dokumentet behöver du inte hämta det profilskyddade PDF-dokumentet. I de flesta fall måste du dock hämta PDF-dokumentet för att få fram licensens identifieringsvärde.
 
 **Återkalla det profilskyddade dokumentet**
 
@@ -939,7 +935,7 @@ Följande snabbstarter innehåller kodexempel på hur du använder dokumentsäke
 
 * &quot;Snabbstart (SOAP-läge): Återkalla ett dokument med Java API&quot;
 
-### Återkalla åtkomst till dokument med webbtjänstens API {#revoke-access-to-documents-using-the-web-service-api}
+### Återkalla åtkomst till dokument med hjälp av webbtjänstens API {#revoke-access-to-documents-using-the-web-service-api}
 
 Återkalla åtkomst till ett principskyddat PDF-dokument med hjälp av API:t för dokumentsäkerhet (webbtjänsten):
 
@@ -949,21 +945,21 @@ Följande snabbstarter innehåller kodexempel på hur du använder dokumentsäke
 
    >[!NOTE]
    >
-   >Ersätt `localhost` med IP-adressen till den server som är värd för AEM Forms.
+   >Ersätt `localhost` med IP-adressen till den server där AEM Forms finns.
 
 1. Skapa ett API-objekt för Document Security Client
 
    * Skapa en `DocumentSecurityServiceClient` genom att använda dess standardkonstruktor.
-   * Skapa en `DocumentSecurityServiceClient.Endpoint.Address` genom att använda `System.ServiceModel.EndpointAddress` konstruktor. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/RightsManagementService?WSDL`.) Du behöver inte använda `lc_version` -attribut. Det här attributet används när du skapar en tjänstreferens.)
-   * Skapa en `System.ServiceModel.BasicHttpBinding` genom att hämta värdet för `DocumentSecurityServiceClient.Endpoint.Binding` fält. Sänd returvärdet till `BasicHttpBinding`.
+   * Skapa en `DocumentSecurityServiceClient.Endpoint.Address` genom att använda `System.ServiceModel.EndpointAddress` konstruktor. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/RightsManagementService?WSDL`.) Du behöver inte använda `lc_version` -attribut. Detta attribut används när du skapar en tjänstreferens.)
+   * Skapa en `System.ServiceModel.BasicHttpBinding` genom att hämta värdet för `DocumentSecurityServiceClient.Endpoint.Binding` fält. Skicka returvärdet till `BasicHttpBinding`.
    * Ange `System.ServiceModel.BasicHttpBinding` objektets `MessageEncoding` fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
    * Aktivera grundläggande HTTP-autentisering genom att utföra följande åtgärder:
 
       * Tilldela AEM formuläranvändarnamn till fältet `DocumentSecurityServiceClient.ClientCredentials.UserName.UserName`.
       * Tilldela motsvarande lösenordsvärde till fältet `DocumentSecurityServiceClient.ClientCredentials.UserName.Password`.
       * Tilldela konstantvärdet `HttpClientCredentialType.Basic` till fältet `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
-   * Tilldela konstantvärdet `BasicHttpSecurityMode.TransportCredentialOnly` till fältet `BasicHttpBindingSecurity.Security.Mode`.
 
+   * Tilldela konstantvärdet `BasicHttpSecurityMode.TransportCredentialOnly` till fältet `BasicHttpBindingSecurity.Security.Mode`.
 
 1. Hämta ett profilskyddat PDF-dokument
 
@@ -1028,7 +1024,7 @@ Du måste hämta licensidentifieraren för det återkallade PDF-dokumentet för 
 
 **Återställa åtkomst till det återkallade PDF-dokumentet**
 
-Om du vill återupprätta åtkomsten till ett återkallat PDF-dokument måste du ange det återkallade dokumentets licens-ID. Om du försöker återupprätta åtkomsten till ett PDF-dokument som inte har återkallats genereras ett undantagsfel.
+Om du vill återupprätta åtkomsten till ett återkallat PDF-dokument måste du ange det återkallade dokumentets Licensidentifierare. Om du försöker återupprätta åtkomsten till ett PDF-dokument som inte har återkallats genereras ett undantagsfel.
 
 **Se även**
 
@@ -1081,21 +1077,21 @@ Följande snabbstarter innehåller kodexempel på hur du använder dokumentsäke
 
    >[!NOTE]
    >
-   >Ersätt `localhost` med IP-adressen till den server som är värd för AEM Forms.
+   >Ersätt `localhost` med IP-adressen till den server där AEM Forms finns.
 
 1. Skapa ett API-objekt för Document Security Client.
 
    * Skapa en `DocumentSecurityServiceClient` genom att använda dess standardkonstruktor.
-   * Skapa en `DocumentSecurityServiceClient.Endpoint.Address` genom att använda `System.ServiceModel.EndpointAddress` konstruktor. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/RightsManagementService?WSDL`.) Du behöver inte använda `lc_version` -attribut. Det här attributet används när du skapar en tjänstreferens.)
-   * Skapa en `System.ServiceModel.BasicHttpBinding` genom att hämta värdet för `DocumentSecurityServiceClient.Endpoint.Binding` fält. Sänd returvärdet till `BasicHttpBinding`.
+   * Skapa en `DocumentSecurityServiceClient.Endpoint.Address` genom att använda `System.ServiceModel.EndpointAddress` konstruktor. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/RightsManagementService?WSDL`.) Du behöver inte använda `lc_version` -attribut. Detta attribut används när du skapar en tjänstreferens.)
+   * Skapa en `System.ServiceModel.BasicHttpBinding` genom att hämta värdet för `DocumentSecurityServiceClient.Endpoint.Binding` fält. Skicka returvärdet till `BasicHttpBinding`.
    * Ange `System.ServiceModel.BasicHttpBinding` objektets `MessageEncoding` fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
    * Aktivera grundläggande HTTP-autentisering genom att utföra följande åtgärder:
 
       * Tilldela AEM formuläranvändarnamn till fältet `DocumentSecurityServiceClient.ClientCredentials.UserName.UserName`.
       * Tilldela motsvarande lösenordsvärde till fältet `DocumentSecurityServiceClient.ClientCredentials.UserName.Password`.
       * Tilldela konstantvärdet `HttpClientCredentialType.Basic` till fältet `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
-   * Tilldela konstantvärdet `BasicHttpSecurityMode.TransportCredentialOnly` till fältet `BasicHttpBindingSecurity.Security.Mode`.
 
+   * Tilldela konstantvärdet `BasicHttpSecurityMode.TransportCredentialOnly` till fältet `BasicHttpBindingSecurity.Security.Mode`.
 
 1. Hämta licensidentifieraren för det återkallade PDF-dokumentet.
 
@@ -1127,7 +1123,7 @@ Följande snabbstarter innehåller kodexempel på hur du använder dokumentsäke
 
 Du kan använda API:t för dokumentsäkerhetstjänsten (Java och webbtjänsten) för att inspektera policyskyddade PDF-dokument. När du inspekterar principskyddade PDF-dokument returneras information om det principskyddade PDF-dokumentet. Du kan till exempel bestämma vilken profil som användes för att skydda dokumentet och datumet då dokumentet var skyddat.
 
-Du kan inte utföra den här åtgärden om din version av LiveCycle är 8.x eller en tidigare version. I AEM Forms finns stöd för att inspektera policyskyddade dokument. Om du försöker inspektera ett principskyddat dokument med LiveCycle 8.x (eller tidigare) genereras ett undantag.
+Du kan inte utföra den här åtgärden om LiveCyclet är version 8.x eller tidigare. I AEM Forms finns stöd för att inspektera policyskyddade dokument. Om du försöker inspektera ett principskyddat dokument med LiveCycle 8.x (eller tidigare) genereras ett undantag.
 
 >[!NOTE]
 >
@@ -1215,21 +1211,21 @@ Inspect är ett policyskyddat PDF-dokument med hjälp av API:t för dokumentsäk
 
    >[!NOTE]
    >
-   >Ersätt `localhost` med IP-adressen till den server som är värd för AEM Forms.
+   >Ersätt `localhost` med IP-adressen till den server där AEM Forms finns.
 
 1. Skapa ett API-objekt för Document Security Client.
 
    * Skapa en `RightsManagementServiceClient` genom att använda dess standardkonstruktor.
-   * Skapa en `RightsManagementServiceClient.Endpoint.Address` genom att använda `System.ServiceModel.EndpointAddress` konstruktor. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/RightsManagementService?WSDL`.) Du behöver inte använda `lc_version` -attribut. Det här attributet används när du skapar en tjänstreferens.)
-   * Skapa en `System.ServiceModel.BasicHttpBinding` genom att hämta värdet för `RightsManagementServiceClient.Endpoint.Binding` fält. Sänd returvärdet till `BasicHttpBinding`.
+   * Skapa en `RightsManagementServiceClient.Endpoint.Address` genom att använda `System.ServiceModel.EndpointAddress` konstruktor. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/RightsManagementService?WSDL`.) Du behöver inte använda `lc_version` -attribut. Detta attribut används när du skapar en tjänstreferens.)
+   * Skapa en `System.ServiceModel.BasicHttpBinding` genom att hämta värdet för `RightsManagementServiceClient.Endpoint.Binding` fält. Skicka returvärdet till `BasicHttpBinding`.
    * Ange `System.ServiceModel.BasicHttpBinding` objektets `MessageEncoding` fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
    * Aktivera grundläggande HTTP-autentisering genom att utföra följande åtgärder:
 
       * Tilldela AEM formuläranvändarnamn till fältet `RightsManagementServiceClient.ClientCredentials.UserName.UserName`.
       * Tilldela motsvarande lösenordsvärde till fältet `RightsManagementServiceClient.ClientCredentials.UserName.Password`.
       * Tilldela konstantvärdet `HttpClientCredentialType.Basic` till fältet `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
-   * Tilldela konstantvärdet `BasicHttpSecurityMode.TransportCredentialOnly` till fältet `BasicHttpBindingSecurity.Security.Mode`.
 
+   * Tilldela konstantvärdet `BasicHttpSecurityMode.TransportCredentialOnly` till fältet `BasicHttpBindingSecurity.Security.Mode`.
 
 1. Hämta ett profilskyddat dokument som ska inspekteras.
 
@@ -1262,7 +1258,7 @@ Följande snabbstarter innehåller kodexempel på hur du använder dokumentsäke
 
 ## Skapa vattenstämplar {#creating-watermarks}
 
-Vattenstämplar säkerställer dokumentets säkerhet genom att unikt identifiera dokumentet och kontrollera upphovsrättsintrång. Du kan t.ex. skapa och placera en vattenstämpel med statusen Konfidentiellt på alla sidor i ett dokument. När du har skapat en vattenstämpel kan du inkludera den som en del av en profil. Det innebär att du kan ange principens vattenstämpelattribut med den nya vattenstämpeln. När en profil som innehåller en vattenstämpel har tillämpats på ett dokument, visas vattenstämpeln i det profilskyddade dokumentet.
+Vattenstämplar säkerställer dokumentets säkerhet genom att unikt identifiera dokumentet och kontrollera upphovsrättsintrång. Du kan t.ex. skapa och placera en vattenstämpel med statusen Konfidentiellt på alla sidor i ett dokument. När du har skapat en vattenstämpel kan du inkludera den som en del av en profil. Det innebär att du kan ställa in principens vattenstämpelattribut med den nya vattenstämpeln. När en profil som innehåller en vattenstämpel har tillämpats på ett dokument, visas vattenstämpeln i det profilskyddade dokumentet.
 
 >[!NOTE]
 >
@@ -1399,7 +1395,7 @@ Skapa en vattenstämpel med API:t för dokumentsäkerhet (Java):
 
 1. Inkludera projektfiler.
 
-   Inkludera klient-JAR-filer, t.ex. `adobe-rightsmanagement-client.jar`, i Java-projektets klassökväg.
+   Inkludera klient-JAR-filer, som `adobe-rightsmanagement-client.jar`, i Java-projektets klassökväg.
 
 1. Skapa ett API-objekt för Document Security Client.
 
@@ -1435,21 +1431,21 @@ Skapa en vattenstämpel med API:t för dokumentsäkerhet (webbtjänst):
 
    >[!NOTE]
    >
-   >Ersätt `localhost` med IP-adressen till den server som är värd för AEM Forms.
+   >Ersätt `localhost` med IP-adressen till den server där AEM Forms finns.
 
 1. Skapa ett API-objekt för Document Security Client.
 
    * Skapa en `RightsManagementServiceClient` genom att använda dess standardkonstruktor.
-   * Skapa en `RightsManagementServiceClient.Endpoint.Address` genom att använda `System.ServiceModel.EndpointAddress` konstruktor. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/RightsManagementService?WSDL`.) Du behöver inte använda `lc_version` -attribut. Det här attributet används när du skapar en tjänstreferens.)
-   * Skapa en `System.ServiceModel.BasicHttpBinding` genom att hämta värdet för `RightsManagementServiceClient.Endpoint.Binding` fält. Sänd returvärdet till `BasicHttpBinding`.
+   * Skapa en `RightsManagementServiceClient.Endpoint.Address` genom att använda `System.ServiceModel.EndpointAddress` konstruktor. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/RightsManagementService?WSDL`.) Du behöver inte använda `lc_version` -attribut. Detta attribut används när du skapar en tjänstreferens.)
+   * Skapa en `System.ServiceModel.BasicHttpBinding` genom att hämta värdet för `RightsManagementServiceClient.Endpoint.Binding` fält. Skicka returvärdet till `BasicHttpBinding`.
    * Ange `System.ServiceModel.BasicHttpBinding` objektets `MessageEncoding` fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
    * Aktivera grundläggande HTTP-autentisering genom att utföra följande åtgärder:
 
       * Tilldela AEM formuläranvändarnamn till fältet `RightsManagementServiceClient.ClientCredentials.UserName.UserName`.
       * Tilldela motsvarande lösenordsvärde till fältet `RightsManagementServiceClient.ClientCredentials.UserName.Password`.
       * Tilldela konstantvärdet `HttpClientCredentialType.Basic` till fältet `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
-   * Tilldela konstantvärdet `BasicHttpSecurityMode.TransportCredentialOnly` till fältet `BasicHttpBindingSecurity.Security.Mode`.
 
+   * Tilldela konstantvärdet `BasicHttpSecurityMode.TransportCredentialOnly` till fältet `BasicHttpBindingSecurity.Security.Mode`.
 
 1. Ange vattenstämpelattribut.
 
@@ -1457,7 +1453,7 @@ Skapa en vattenstämpel med API:t för dokumentsäkerhet (webbtjänst):
    * Ange vattenstämpelns namn genom att tilldela ett strängvärde till `WatermarkSpec` objektets `name` datamedlem.
    * Ange vattenstämpeln `id` genom att tilldela ett strängvärde till `WatermarkSpec` objektets `id` datamedlem.
    * För varje vattenstämpelegenskap som ska anges skapar du en separat `MyMapOf_xsd_string_To_xsd_anyType_Item` -objekt.
-   * Ange nyckelvärdet genom att tilldela ett värde till `MyMapOf_xsd_string_To_xsd_anyType_Item` objektets `key` datamedlem (till exempel `WaterBackCmd:OPACITY)`.
+   * Ange nyckelvärdet genom att tilldela värdet `MyMapOf_xsd_string_To_xsd_anyType_Item` objektets `key` datamedlem (till exempel `WaterBackCmd:OPACITY)`.
    * Ange värdet genom att tilldela ett värde till `MyMapOf_xsd_string_To_xsd_anyType_Item` objektets `value` datamedlem (till exempel `.25`).
    * Skapa en `MyArrayOf_xsd_anyType` -objekt. För varje `MyMapOf_xsd_string_To_xsd_anyType_Item` objekt, anropa `MyArrayOf_xsd_anyType` objektets `Add` -metod. Skicka `MyMapOf_xsd_string_To_xsd_anyType_Item` -objekt.
    * Tilldela `MyArrayOf_xsd_anyType` objekt till `WatermarkSpec` objektets `values` datamedlem.
@@ -1470,8 +1466,8 @@ Skapa en vattenstämpel med API:t för dokumentsäkerhet (webbtjänst):
 
 Följande snabbstarter innehåller kodexempel på hur du använder dokumentsäkerhetstjänsten:
 
-* &quot;Snabbstart (MTOM): Skapa en vattenstämpel med webbtjänstens API&quot;
-* &quot;Snabbstart (SwaRef): Skapa en vattenstämpel med webbtjänstens API&quot;
+* &quot;Snabbstart (MTOM): Skapa en vattenstämpel med hjälp av webbtjänstens API&quot;
+* &quot;Snabbstart (SwaRef): Skapa en vattenstämpel med hjälp av webbtjänstens API&quot;
 
 **Se även**
 
@@ -1554,7 +1550,7 @@ När du har ändrat en vattenstämpels attribut måste du uppdatera vattenstämp
 
 1. Hämta vattenstämpeln som du vill ändra.
 
-   Skapa en `WatermarkManager` genom att anropa `DocumentSecurityClient` objektets `getWatermarkManager` och skicka ett strängvärde som anger vattenstämpelnamnet. Den här metoden returnerar en `Watermark` objekt som representerar den vattenstämpel som ska ändras.
+   Skapa en `WatermarkManager` genom att anropa `DocumentSecurityClient` objektets `getWatermarkManager` och skicka ett strängvärde som anger vattenstämpelns namn. Den här metoden returnerar en `Watermark` objekt som representerar den vattenstämpel som ska ändras.
 
 1. Ange vattenstämpelattribut.
 
@@ -1566,11 +1562,11 @@ När du har ändrat en vattenstämpels attribut måste du uppdatera vattenstämp
 
 1. Uppdatera vattenstämpeln.
 
-   * Uppdatera vattenstämpeln genom att anropa `WatermarkManager` objektets `updateWatermark` och skicka `Watermark` objekt vars attribut ändrades.
+   * Uppdatera vattenstämpeln genom att aktivera `WatermarkManager` objektets `updateWatermark` och skicka `Watermark` objekt vars attribut har ändrats.
 
 **Exempel på koder**
 
-Exempel på kod som använder tjänsten Dokumentsäkerhet finns i Snabbstart (SOAP-läge): Ändra en vattenstämpel med Java API-avsnittet.
+Exempel på kod som använder dokumentsäkerhetstjänsten finns i Snabbstart (SOAP-läge): Ändra en vattenstämpel med hjälp av Java API-avsnittet.
 
 ### Ändra vattenstämplar med webbtjänstens API {#modify-watermarks-using-the-web-service-api}
 
@@ -1582,21 +1578,21 @@ Exempel på kod som använder tjänsten Dokumentsäkerhet finns i Snabbstart (SO
 
    >[!NOTE]
    >
-   >Ersätt `localhost` med IP-adressen till den server som är värd för AEM Forms.
+   >Ersätt `localhost` med IP-adressen till den server där AEM Forms finns.
 
 1. Skapa ett API-objekt för Document Security Client.
 
    * Skapa en `DocumentSecurityServiceClient` genom att använda dess standardkonstruktor.
-   * Skapa en `RightsManagementServiceClient.Endpoint.Address` genom att använda `System.ServiceModel.EndpointAddress` konstruktor. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/DocumentSecurityService?WSDL`.) Du behöver inte använda `lc_version` -attribut. Det här attributet används när du skapar en tjänstreferens.)
-   * Skapa en `System.ServiceModel.BasicHttpBinding` genom att hämta värdet för `DocumentSecurityServiceClient.Endpoint.Binding` fält. Sänd returvärdet till `BasicHttpBinding`.
+   * Skapa en `RightsManagementServiceClient.Endpoint.Address` genom att använda `System.ServiceModel.EndpointAddress` konstruktor. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/DocumentSecurityService?WSDL`.) Du behöver inte använda `lc_version` -attribut. Detta attribut används när du skapar en tjänstreferens.)
+   * Skapa en `System.ServiceModel.BasicHttpBinding` genom att hämta värdet för `DocumentSecurityServiceClient.Endpoint.Binding` fält. Skicka returvärdet till `BasicHttpBinding`.
    * Ange `System.ServiceModel.BasicHttpBinding` objektets `MessageEncoding` fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
    * Aktivera grundläggande HTTP-autentisering genom att utföra följande åtgärder:
 
       * Tilldela AEM formuläranvändarnamn till fältet `DocumentSecurityServiceClient.ClientCredentials.UserName.UserName`.
       * Tilldela motsvarande lösenordsvärde till fältet `DocumentSecurityServiceClient.ClientCredentials.UserName.Password`.
       * Tilldela konstantvärdet `HttpClientCredentialType.Basic` till fältet `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
-   * Tilldela konstantvärdet `BasicHttpSecurityMode.TransportCredentialOnly` till fältet `BasicHttpBindingSecurity.Security.Mode`.
 
+   * Tilldela konstantvärdet `BasicHttpSecurityMode.TransportCredentialOnly` till fältet `BasicHttpBindingSecurity.Security.Mode`.
 
 1. Hämta vattenstämpeln som du vill ändra.
 
@@ -1605,14 +1601,14 @@ Exempel på kod som använder tjänsten Dokumentsäkerhet finns i Snabbstart (SO
 1. Ange vattenstämpelattribut.
 
    * För varje vattenstämpelegenskap som ska uppdateras skapar du en separat `MyMapOf_xsd_string_To_xsd_anyType_Item` -objekt.
-   * Ange nyckelvärdet genom att tilldela ett värde till `MyMapOf_xsd_string_To_xsd_anyType_Item` objektets `key` datamedlem (till exempel `WaterBackCmd:OPACITY)`.
+   * Ange nyckelvärdet genom att tilldela värdet `MyMapOf_xsd_string_To_xsd_anyType_Item` objektets `key` datamedlem (till exempel `WaterBackCmd:OPACITY)`.
    * Ange värdet genom att tilldela ett värde till `MyMapOf_xsd_string_To_xsd_anyType_Item` objektets `value` datamedlem (till exempel `.50`).
    * Skapa en `MyArrayOf_xsd_anyType` -objekt. För varje `MyMapOf_xsd_string_To_xsd_anyType_Item` objekt, anropa `MyArrayOf_xsd_anyType` objektets `Add` -metod. Skicka `MyMapOf_xsd_string_To_xsd_anyType_Item` -objekt.
    * Tilldela `MyArrayOf_xsd_anyType` objekt till `WatermarkSpec` objektets `values` datamedlem.
 
 1. Uppdatera vattenstämpeln.
 
-   Uppdatera vattenstämpeln genom att anropa `DocumentSecurityServiceClient` objektets `updateWatermark` metoden och skicka `WatermarkSpec` objekt som representerar den vattenstämpel som ska ändras.
+   Uppdatera vattenstämpeln genom att aktivera `DocumentSecurityServiceClient` objektets `updateWatermark` metoden och skicka `WatermarkSpec` objekt som representerar den vattenstämpel som ska ändras.
 
 **Exempel på koder**
 
@@ -1622,13 +1618,13 @@ Följande snabbstart innehåller kodexempel på hur du använder dokumentsäkerh
 
 ## Söka efter händelser {#searching-for-events}
 
-Tjänsten Rights Management spårar specifika åtgärder när de inträffar, t.ex. att tillämpa en profil på ett dokument, öppna ett policyskyddat dokument och återkalla åtkomst till dokument. Händelsegranskning måste aktiveras för tjänsten Rights Management, annars spåras inte händelser.
+Tjänsten Rights Management spårar specifika åtgärder när de utförs, t.ex. att tillämpa en profil på ett dokument, öppna ett policyskyddat dokument och återkalla åtkomst till dokument. Händelsegranskning måste aktiveras för tjänsten Rights Management, annars spåras inte händelser.
 
 Händelser faller inom en av följande kategorier:
 
 * Administratörshändelser är åtgärder som är relaterade till en administratör, till exempel att skapa ett nytt administratörskonto.
 * Dokumenthändelser är åtgärder som är relaterade till ett dokument, t.ex. stängning av ett policyskyddat dokument.
-* Policyhändelser är åtgärder som är relaterade till en profil, till exempel att skapa en ny policy.
+* Policyhändelser är åtgärder som är relaterade till en profil, t.ex. att skapa en ny policy.
 * Tjänstehändelser är åtgärder som är relaterade till tjänsten Rights Management, t.ex. synkronisering med användarkatalogen.
 
 Du kan söka efter specifika händelser genom att använda Java API:t för Rights Management eller webbtjänstens API. Genom att söka efter händelser kan du utföra åtgärder, till exempel skapa en loggfil med vissa händelser.
@@ -1643,7 +1639,7 @@ Så här söker du efter en Rights Management-händelse:
 
 1. Inkludera projektfiler.
 1. Skapa ett Rights Management Client API-objekt.
-1. Ange händelsen som du vill söka efter.
+1. Ange den händelse som du vill söka efter.
 1. Sök efter händelsen.
 
 **Inkludera projektfiler**
@@ -1684,7 +1680,7 @@ Sök efter händelser med hjälp av Rights Management API (Java):
 
    * Skapa en `EventManager` genom att anropa `DocumentSecurityClient` objektets `getEventManager` -metod. Den här metoden returnerar en `EventManager` -objekt.
    * Skapa en `EventSearchFilter` genom att anropa dess konstruktor.
-   * Ange händelsen som ska sökas igenom genom att anropa `EventSearchFilter` objektets `setEventCode` och skicka en statisk datamedlem som tillhör `EventManager` klassen som representerar händelsen som ska sökas efter. Om du till exempel vill söka efter principskapningshändelsen skickar du `EventManager.POLICY_CREATE_EVENT`.
+   * Ange händelsen som ska sökas igenom genom att anropa `EventSearchFilter` objektets `setEventCode` och skicka en statisk datamedlem som tillhör `EventManager` -klass som representerar händelsen som ska sökas efter. Om du till exempel vill söka efter principskapningshändelsen skickar du `EventManager.POLICY_CREATE_EVENT`.
 
    >[!NOTE]
    >
@@ -1710,21 +1706,21 @@ Sök efter händelser med hjälp av Rights Management API (webbtjänst):
 
    >[!NOTE]
    >
-   >Ersätt `localhost` med IP-adressen till den server som är värd för AEM Forms.
+   >Ersätt `localhost` med IP-adressen till den server där AEM Forms finns.
 
 1. Skapa ett Rights Management Client API-objekt
 
    * Skapa en `DocumentSecurityServiceClient` genom att använda dess standardkonstruktor.
-   * Skapa en `DocumentSecurityServiceClient.Endpoint.Address` genom att använda `System.ServiceModel.EndpointAddress` konstruktor. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/RightsManagementService?WSDL`.) Du behöver inte använda `lc_version` -attribut. Det här attributet används när du skapar en tjänstreferens.)
-   * Skapa en `System.ServiceModel.BasicHttpBinding` genom att hämta värdet för `DocumentSecurityServiceClient.Endpoint.Binding` fält. Sänd returvärdet till `BasicHttpBinding`.
+   * Skapa en `DocumentSecurityServiceClient.Endpoint.Address` genom att använda `System.ServiceModel.EndpointAddress` konstruktor. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/RightsManagementService?WSDL`.) Du behöver inte använda `lc_version` -attribut. Detta attribut används när du skapar en tjänstreferens.)
+   * Skapa en `System.ServiceModel.BasicHttpBinding` genom att hämta värdet för `DocumentSecurityServiceClient.Endpoint.Binding` fält. Skicka returvärdet till `BasicHttpBinding`.
    * Ange `System.ServiceModel.BasicHttpBinding` objektets `MessageEncoding` fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
    * Aktivera grundläggande HTTP-autentisering genom att utföra följande åtgärder:
 
       * Tilldela AEM formuläranvändarnamn till fältet `DocumentSecurityServiceClient.ClientCredentials.UserName.UserName`.
       * Tilldela motsvarande lösenordsvärde till fältet `DocumentSecurityServiceClient.ClientCredentials.UserName.Password`.
       * Tilldela konstantvärdet `HttpClientCredentialType.Basic` till fältet `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
-   * Tilldela konstantvärdet `BasicHttpSecurityMode.TransportCredentialOnly` till fältet `BasicHttpBindingSecurity.Security.Mode`.
 
+   * Tilldela konstantvärdet `BasicHttpSecurityMode.TransportCredentialOnly` till fältet `BasicHttpBindingSecurity.Security.Mode`.
 
 1. Ange vilka händelser som ska sökas efter
 
@@ -1936,7 +1932,7 @@ Sök efter händelser med hjälp av Rights Management API (webbtjänst):
 
 1. Sök efter händelsen
 
-   Sök efter händelsen genom att anropa `DocumentSecurityServiceClient` objektets `searchForEvents` metoden och skicka `EventSpec` -objekt som representerar händelsen som ska sökas efter och det maximala antalet resultat. Den här metoden returnerar en `MyArrayOf_xsd_anyType` samling där varje element är en `AuditSpec` -instans. Använda en `AuditSpec` Du kan till exempel få information om händelsen, som när den inträffade. The `AuditSpec` -instansen innehåller en `timestamp` datamedlem som anger den här informationen.
+   Sök efter händelsen genom att anropa `DocumentSecurityServiceClient` objektets `searchForEvents` metoden och skicka `EventSpec` -objekt som representerar händelsen som ska sökas efter och det maximala antalet resultat. Den här metoden returnerar en `MyArrayOf_xsd_anyType` samling där varje element är en `AuditSpec` -instans. Använda `AuditSpec` Du kan till exempel få information om händelsen, som när den inträffade. The `AuditSpec` -instansen innehåller en `timestamp` datamedlem som anger den här informationen.
 
 **Exempel på koder**
 
@@ -2024,14 +2020,13 @@ Tillämpa en profil på ett Word-dokument med hjälp av dokumentets säkerhets-A
 
       * The `com.adobe.idp.Document` som innehåller det Word-dokument som profilen tillämpas på.
       * Ett strängvärde som anger dokumentets namn.
-      * Ett strängvärde som anger namnet på den principuppsättning som principen tillhör. Du kan ange en `null` värde som resulterar i `MyPolicies` principuppsättning används.
+      * Ett strängvärde som anger namnet på den principuppsättning som principen tillhör. Du kan ange en `null` det värde som resulterar i `MyPolicies` principuppsättning används.
       * Ett strängvärde som anger principnamnet.
       * Ett strängvärde som representerar namnet på användarhanterardomänen för den användare som är dokumentets utgivare. Det här parametervärdet är valfritt och kan vara null (om parametern är null måste nästa parametervärde vara null).
-      * Ett strängvärde som representerar namnet på den kanoniska användaren av användarhanteraren som är dokumentets utgivare. Det här parametervärdet är valfritt och kan `null` (om den här parametern är `null`måste det föregående parametervärdet vara `null`).
-      * A `com.adobe.livecycle.rightsmanagement.Locale` som representerar det språkområde som används för att välja MS Office-mallen. Det här parametervärdet är valfritt och du kan ange `null`.
+      * Ett strängvärde som representerar namnet på den kanoniska användaren av användarhanteraren som är dokumentets utgivare. Parametervärdet är valfritt och kan `null` (om den här parametern `null`måste det föregående parametervärdet vara `null`).
+      * A `com.adobe.livecycle.rightsmanagement.Locale` som representerar det språkområde som används för att välja MS Office-mallen. Parametervärdet är valfritt och du kan ange `null`.
 
-      The `protectDocument` returnerar en `RMSecureDocumentResult` som innehåller det principskyddade Word-dokumentet.
-
+     The `protectDocument` returnerar en `RMSecureDocumentResult` som innehåller det principskyddade Word-dokumentet.
 
 1. Spara Word-dokumentet.
 
@@ -2043,7 +2038,7 @@ Tillämpa en profil på ett Word-dokument med hjälp av dokumentets säkerhets-A
 
 Följande snabbstart innehåller kodexempel på hur du använder dokumentsäkerhetstjänsten:
 
-* &quot;Snabbstart (SOAP-läge): Tillämpa en profil på ett Word-dokument med Java API&quot;
+* &quot;Snabbstart (SOAP-läge): Tillämpa en princip på ett Word-dokument med Java API&quot;
 
 ### Tillämpa en profil på ett Word-dokument med hjälp av webbtjänstens API {#apply-a-policy-to-a-word-document-using-the-web-service-api}
 
@@ -2055,21 +2050,21 @@ Tillämpa en profil på ett Word-dokument med hjälp av API:t för dokumentsäke
 
    >[!NOTE]
    >
-   >Ersätt `localhost` med IP-adressen till den server som är värd för AEM Forms.
+   >Ersätt `localhost` med IP-adressen till den server där AEM Forms finns.
 
 1. Skapa ett API-objekt för Document Security Client.
 
    * Skapa en `DocumentSecurityServiceClient` genom att använda dess standardkonstruktor.
-   * Skapa en `DocumentSecurityServiceClient.Endpoint.Address` genom att använda `System.ServiceModel.EndpointAddress` konstruktor. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/DocumentSecurityService?WSDL`.) Du behöver inte använda `lc_version` -attribut. Det här attributet används när du skapar en tjänstreferens.)
-   * Skapa en `System.ServiceModel.BasicHttpBinding` genom att hämta värdet för `DocumentSecurityServiceClient.Endpoint.Binding` fält. Sänd returvärdet till `BasicHttpBinding`.
+   * Skapa en `DocumentSecurityServiceClient.Endpoint.Address` genom att använda `System.ServiceModel.EndpointAddress` konstruktor. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/DocumentSecurityService?WSDL`.) Du behöver inte använda `lc_version` -attribut. Detta attribut används när du skapar en tjänstreferens.)
+   * Skapa en `System.ServiceModel.BasicHttpBinding` genom att hämta värdet för `DocumentSecurityServiceClient.Endpoint.Binding` fält. Skicka returvärdet till `BasicHttpBinding`.
    * Ange `System.ServiceModel.BasicHttpBinding` objektets `MessageEncoding` fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
    * Aktivera grundläggande HTTP-autentisering genom att utföra följande åtgärder:
 
       * Tilldela AEM formuläranvändarnamn till fältet `DocumentSecurityServiceClient.ClientCredentials.UserName.UserName`.
       * Tilldela motsvarande lösenordsvärde till fältet `DocumentSecurityServiceClient.ClientCredentials.UserName.Password`.
       * Tilldela konstantvärdet `HttpClientCredentialType.Basic` till fältet `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
-   * Tilldela konstantvärdet `BasicHttpSecurityMode.TransportCredentialOnly` till fältet `BasicHttpBindingSecurity.Security.Mode`.
 
+   * Tilldela konstantvärdet `BasicHttpSecurityMode.TransportCredentialOnly` till fältet `BasicHttpBindingSecurity.Security.Mode`.
 
 1. Hämta ett Word-dokument.
 
@@ -2085,10 +2080,10 @@ Tillämpa en profil på ett Word-dokument med hjälp av API:t för dokumentsäke
 
    * The `BLOB` som innehåller det Word-dokument som profilen tillämpas på.
    * Ett strängvärde som anger dokumentets namn.
-   * Ett strängvärde som anger namnet på den principuppsättning som principen tillhör. Du kan ange en `null` värde som resulterar i `MyPolicies` principuppsättning används.
+   * Ett strängvärde som anger namnet på den principuppsättning som principen tillhör. Du kan ange en `null` det värde som resulterar i `MyPolicies` principuppsättning används.
    * Ett strängvärde som anger principnamnet.
    * Ett strängvärde som representerar namnet på användarhanterardomänen för den användare som är dokumentets utgivare. Parametervärdet är valfritt och kan vara null (om parametern är null måste nästa parametervärde vara `null`).
-   * Ett strängvärde som representerar namnet på den kanoniska användaren av användarhanteraren som är dokumentets utgivare. Parametervärdet är valfritt och kan vara null (om parametern är null måste det föregående parametervärdet vara `null`).
+   * Ett strängvärde som representerar namnet på den kanoniska användaren av användarhanteraren som är dokumentets utgivare. Det här parametervärdet är valfritt och kan vara null (om parametern är null måste det föregående parametervärdet vara `null`).
    * A `RMLocale` värde som anger språkvärdet (till exempel `RMLocale.en`).
    * En strängutdataparameter som används för att lagra principens identifierarvärde.
    * En strängutdataparameter som används för att lagra det principskyddade identifierarvärdet.
@@ -2107,7 +2102,7 @@ Tillämpa en profil på ett Word-dokument med hjälp av API:t för dokumentsäke
 
 Följande snabbstart innehåller kodexempel på hur du använder dokumentsäkerhetstjänsten:
 
-* &quot;Snabbstart (MTOM): Tillämpa en profil på ett Word-dokument med hjälp av webbtjänstens API &quot;
+* &quot;Snabbstart (MTOM): Tillämpa en princip på ett Word-dokument med hjälp av webbtjänstens API &quot;
 
 ## Ta bort profiler från Word-dokument {#removing-policies-from-word-documents}
 
@@ -2187,7 +2182,7 @@ Ta bort en profil från ett principskyddat Word-dokument med hjälp av dokumente
 
 Följande snabbstart innehåller kodexempel på hur du använder dokumentsäkerhetstjänsten:
 
-* &quot;Snabbstart (SOAP-läge): Ta bort en profil från ett Word-dokument med Java API &quot;
+* &quot;Snabbstart (SOAP-läge): Ta bort en princip från ett Word-dokument med Java API &quot;
 
 ### Ta bort en profil från ett Word-dokument med hjälp av webbtjänstens API {#remove-a-policy-from-a-word-document-using-the-web-service-api}
 
@@ -2199,21 +2194,21 @@ Ta bort en profil från ett principskyddat Word-dokument med hjälp av API:t fö
 
    >[!NOTE]
    >
-   >Ersätt `localhost` med IP-adressen till den server som är värd för AEM Forms.
+   >Ersätt `localhost` med IP-adressen till den server där AEM Forms finns.
 
 1. Skapa ett API-objekt för Document Security Client
 
    * Skapa en `RightsManagementServiceClient` genom att använda dess standardkonstruktor.
-   * Skapa en `RightsManagementServiceClient.Endpoint.Address` genom att använda `System.ServiceModel.EndpointAddress` konstruktor. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/RightsManagementService?WSDL`.) Du behöver inte använda `lc_version` -attribut. Det här attributet används när du skapar en tjänstreferens.)
-   * Skapa en `System.ServiceModel.BasicHttpBinding` genom att hämta värdet för `RightsManagementServiceClient.Endpoint.Binding` fält. Sänd returvärdet till `BasicHttpBinding`.
+   * Skapa en `RightsManagementServiceClient.Endpoint.Address` genom att använda `System.ServiceModel.EndpointAddress` konstruktor. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/RightsManagementService?WSDL`.) Du behöver inte använda `lc_version` -attribut. Detta attribut används när du skapar en tjänstreferens.)
+   * Skapa en `System.ServiceModel.BasicHttpBinding` genom att hämta värdet för `RightsManagementServiceClient.Endpoint.Binding` fält. Skicka returvärdet till `BasicHttpBinding`.
    * Ange `System.ServiceModel.BasicHttpBinding` objektets `MessageEncoding` fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
    * Aktivera grundläggande HTTP-autentisering genom att utföra följande åtgärder:
 
       * Tilldela AEM formuläranvändarnamn till fältet `RightsManagementServiceClient.ClientCredentials.UserName.UserName`.
       * Tilldela motsvarande lösenordsvärde till fältet `RightsManagementServiceClient.ClientCredentials.UserName.Password`.
       * Tilldela konstantvärdet `HttpClientCredentialType.Basic` till fältet `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
-   * Tilldela konstantvärdet `BasicHttpSecurityMode.TransportCredentialOnly` till fältet `BasicHttpBindingSecurity.Security.Mode`.
 
+   * Tilldela konstantvärdet `BasicHttpSecurityMode.TransportCredentialOnly` till fältet `BasicHttpBindingSecurity.Security.Mode`.
 
 1. Hämta ett policyskyddat Word-dokument
 
@@ -2237,7 +2232,7 @@ Ta bort en profil från ett principskyddat Word-dokument med hjälp av API:t fö
 
 Följande snabbstart innehåller kodexempel på hur du använder dokumentsäkerhetstjänsten:
 
-* &quot;Snabbstart (MTOM): Ta bort en profil från ett Word-dokument med hjälp av webbtjänstens API&quot;
+* &quot;Snabbstart (MTOM): Ta bort en princip från ett Word-dokument med hjälp av webbtjänstens API&quot;
 
 **Se även**
 

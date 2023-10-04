@@ -1,16 +1,13 @@
 ---
 title: Java API QuickStart(SOAP) för Assembler Service
-seo-title: Assembler Service Java API QuickStart(SOAP)
 description: Java API QuickStart(SOAP) för Assembler Service
-uuid: 33ad5f7a-4f4c-4e72-937d-85891498a80e
 contentOwner: admin
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
-discoiquuid: b7b17cf8-def5-4a77-a872-c1f286814881
 role: Developer
 exl-id: 306cd40b-1831-45aa-9f58-3ab1983a68c5
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
 workflow-type: tm+mt
 source-wordcount: '1001'
 ht-degree: 0%
@@ -35,11 +32,11 @@ Java API Quick Start (SOAP) är tillgängligt för Assembler-tjänsten
 
 [Snabbstart (SOAP-läge): Validera DDX-dokument med Java API](assembler-service-java-api-quick.md#quick-start-soap-mode-validating-ddx-documents-using-the-java-api)
 
-[Snabbstart (SOAP-läge): Sammanställa PDF-dokument med bokmärken med Java API](assembler-service-java-api-quick.md#quick-start-soap-mode-assembling-pdf-documents-with-bookmarks-using-the-java-api)
+[Snabbstart (SOAP-läge): Samla ihop PDF-dokument med bokmärken med Java API](assembler-service-java-api-quick.md#quick-start-soap-mode-assembling-pdf-documents-with-bookmarks-using-the-java-api)
 
 [Snabbstart (SOAP-läge): Skapa ett DDX-dokument dynamiskt med Java API](assembler-service-java-api-quick.md#quick-start-soap-mode-dynamically-creating-a-ddx-document-using-the-java-api)
 
-[Snabbstart (SOAP-läge): Samla ihop PDF Portfolio med Java API](assembler-service-java-api-quick.md#quick-start-soap-mode-assembling-pdf-portfolios-using-the-java-api)
+[Snabbstart (SOAP-läge): Samla in PDF Portfolio med Java API](assembler-service-java-api-quick.md#quick-start-soap-mode-assembling-pdf-portfolios-using-the-java-api)
 
 [Snabbstart (SOAP-läge): Sammanställa flera XDP-fragment med Java API](assembler-service-java-api-quick.md#quick-start-soap-mode-assembling-multiple-xdp-fragments-using-the-java-api)
 
@@ -51,7 +48,7 @@ AEM Forms-åtgärder kan utföras med AEM Forms starkt typade API och anslutning
 
 ## Snabbstart (SOAP-läge): Sammanställa ett PDF-dokument med Java API {#quick-start-soap-mode-assembling-a-pdf-document-using-the-java-api}
 
-I följande Java-kodexempel sammanfogas två källdokument i PDF med namnet *map.pdf* och *vägbeskrivning.pdf* till ett enda dokument i PDF. Det enda PDF-dokumentet heter *AssemblerResultPDF.pdf*. DDX-dokumentets namn är *shell.xml*. (Se [Programmisk sammanställning av PDF-dokument](/help/forms/developing/assembling-pdf-documents.md#programmatically-assembling-pdf-documents).)
+I följande Java-kodexempel sammanfogas två källdokument i PDF med namnet *map.pdf* och *vägbeskrivning.pdf* till ett enda dokument i PDF. Namnet på dokumentet för enstaka PDF är *AssemblerResultPDF.pdf*. DDX-dokumentets namn är *shell.xml*. (Se [Programmisk sammanställning av PDF-dokument](/help/forms/developing/assembling-pdf-documents.md#programmatically-assembling-pdf-documents).)
 
 ```java
  /*
@@ -170,7 +167,7 @@ I följande Java-kodexempel sammanfogas två källdokument i PDF med namnet *map
  
              //Iterate through the map object to retrieve the result PDF document
              for (Iterator i = allDocs.entrySet().iterator(); i.hasNext();) {
-                 // Retrieve the Map object’s value
+                 // Retrieve the Map object's value
                  Map.Entry e = (Map.Entry)i.next();
  
                  //Get the key name as specified in the
@@ -309,7 +306,7 @@ I följande Java-kodexempel demonteras ett PDF-dokument med namnet *AssemblerRes
  
              //Iterate through the map object to retrieve the result PDF document
              for (Iterator i = allDocs.entrySet().iterator(); i.hasNext();) {
-                 // Retrieve the Map object’s value
+                 // Retrieve the Map object's value
                  Map.Entry e = (Map.Entry)i.next();
                  Object o = e.getValue();
  
@@ -457,7 +454,7 @@ I följande Java-kodexempel sätts ett lösenordskrypterat PDF-dokument samman. 
 
 ## Snabbstart (SOAP-läge): Sammanställa ett PDF-dokument med Bates-numrering med Java API {#quick-start-soap-mode-assembling-a-pdf-document-with-bates-numbering-using-the-java-api}
 
-Följande Java-kodexempel sätter ihop ett PDF-dokument med unika sididentifierare (bates-numrering). Observera att namnet på DDX-dokumentet är *shell_Bates.xml*. PDF-dokumentet som returneras från Assembler-tjänsten sparas som en PDF-fil med namnet *AssemblerResultBatesPDF.pdf*. (Se [Sammanställa dokument med hjälp av Bates-numrering](/help/forms/developing/assembling-pdf-documents.md#assembling-documents-using-bates-numbering).)
+Följande Java-kodexempel sätter ihop ett PDF-dokument med unika sididentifierare (bates-numrering). Observera att namnet på DDX-dokumentet är *shell_Bates.xml*. PDF-dokumentet som returneras från Assembler-tjänsten sparas som en PDF-fil med namnet *AssemblerResultBatesPDF.pdf*. (Se [Sammanställa dokument med Bates-numrering](/help/forms/developing/assembling-pdf-documents.md#assembling-documents-using-bates-numbering).)
 
 ```java
  /*
@@ -588,7 +585,7 @@ Följande Java-kodexempel sätter ihop ett PDF-dokument med unika sididentifiera
  
              //Iterate through the map object to retrieve the result PDF document
              for (Iterator i = allDocs.entrySet().iterator(); i.hasNext();) {
-                 // Retrieve the Map object’s value
+                 // Retrieve the Map object's value
                  Map.Entry e = (Map.Entry)i.next();
  
                  //Get the key name as specified in the
@@ -855,7 +852,7 @@ I följande Java-kodexempel avgörs om indatadokumentet PDF är PDF/A-kompatibel
              //document that specifies if the input document is
              //PDF/A compliant
              for (Iterator i = allDocs.entrySet().iterator(); i.hasNext();) {
-                 // Retrieve the Map object’s value
+                 // Retrieve the Map object's value
                  Map.Entry e = (Map.Entry)i.next();
  
                  //Get the key name as specified in the
@@ -1014,9 +1011,9 @@ I följande Java-kodexempel valideras ett DX-dokument baserat på en fil med nam
  }
 ```
 
-## Snabbstart (SOAP-läge): Sammanställa PDF-dokument med bokmärken med Java API {#quick-start-soap-mode-assembling-pdf-documents-with-bookmarks-using-the-java-api}
+## Snabbstart (SOAP-läge): Samla ihop PDF-dokument med bokmärken med Java API {#quick-start-soap-mode-assembling-pdf-documents-with-bookmarks-using-the-java-api}
 
-I följande Java-kodexempel sätts ett PDF-dokument som innehåller bokmärken samman. DDX-dokumentets namn är *bookmarkDDX.xml*. Namnet på det XML-dokument för bokmärken som beskriver de bokmärken som ska läggas till i PDF-dokumentet är bookmarks.xml. Det resulterande PDF-dokumentet sparas som en PDF-fil med namnet AssemblerResultBookmarks.pdf. (Se [Sammanställa PDF-dokument med bokmärken](/help/forms/developing/assembling-pdf-documents.md#assembling-pdf-documents-with-bookmarks).)
+I följande Java-kodexempel sätts ett PDF-dokument som innehåller bokmärken samman. DDX-dokumentets namn är *bookmarkDDX.xml*. Namnet på det XML-dokument för bokmärken som beskriver de bokmärken som ska läggas till i PDF-dokumentet är bookmarks.xml. PDF-resultatdokumentet sparas som en PDF-fil med namnet AssemblerResultBookmarks.pdf. (Se [Sammanställa PDF-dokument med bokmärken](/help/forms/developing/assembling-pdf-documents.md#assembling-pdf-documents-with-bookmarks).)
 
 ```java
  /*
@@ -1160,7 +1157,7 @@ I följande Java-kodexempel sätts ett PDF-dokument som innehåller bokmärken s
  
              //Iterate through the map object to retrieve the result PDF document
              for (Iterator i = allDocs.entrySet().iterator(); i.hasNext();) {
-                 // Retrieve the Map object’s value
+                 // Retrieve the Map object's value
                  Map.Entry e = (Map.Entry)i.next();
  
                  //Get the key name as specified in the
@@ -1191,7 +1188,7 @@ I följande Java-kodexempel skapas ett DDX-dokument dynamiskt som demonterar ett
 * `createDDX`: Skapar en `org.w3c.dom.Document` som representerar det DX-dokument som skickas till Assembler-tjänsten. Den här användardefinierade metoden returnerar `org.w3c.dom.Document` -objekt.
 * `convertDDX`: Konverterar en `org.w3c.dom.Document` objekt till `com.adobe.idp.Document` -objekt. Den här metoden accepterar `org.w3c.dom.Document` objekt som indataparameter och returnerar ett `com.adobe.idp.Document` -objekt.
 
-   Båda dessa metoder anropas i den här snabbstarten. (Se [Skapa DDX-dokument dynamiskt](/help/forms/developing/assembling-pdf-documents.md#dynamically-creating-ddx-documents).) &quot;
+  Båda dessa metoder anropas i den här snabbstarten. (Se [Skapa DDX-dokument dynamiskt](/help/forms/developing/assembling-pdf-documents.md#dynamically-creating-ddx-documents).) &quot;
 
 ```java
 /*
@@ -1380,7 +1377,7 @@ public class AssemblePDFWithDynamicDDXSOAP {
 }
 ```
 
-## Snabbstart (SOAP-läge): Samla ihop PDF Portfolio med Java API {#quick-start-soap-mode-assembling-pdf-portfolios-using-the-java-api}
+## Snabbstart (SOAP-läge): Samla in PDF Portfolio med Java API {#quick-start-soap-mode-assembling-pdf-portfolios-using-the-java-api}
 
 I följande Java-kodexempel skapas en PDF-portfölj. PDF-portföljen sparas som en PDF-fil med namnet *AssemblerResultPortfolio.pdf*. (Se [Samla PDF Portfolio](/help/forms/developing/assembling-pdf-documents.md#assembling-pdf-portfolios).)
 
@@ -1661,7 +1658,7 @@ I följande Java-kodexempel sätts XDP-fragment samman som är baserade på föl
  
              //Iterate through the map object to retrieve the result XDP document
              for (Iterator i = allDocs.entrySet().iterator(); i.hasNext();) {
-                 // Retrieve the Map object’s value
+                 // Retrieve the Map object's value
                  Map.Entry e = (Map.Entry)i.next();
  
                  //Get the key name as specified in the

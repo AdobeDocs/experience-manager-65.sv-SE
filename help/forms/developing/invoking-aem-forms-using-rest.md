@@ -1,17 +1,13 @@
 ---
 title: Anropa AEM Forms med REST-begäran
-seo-title: Invoking AEM Forms using REST Requests
 description: Anropa processer som skapats i Workbench med REST-begäranden.
-seo-description: Invoke processes created in Workbench using REST requests.
-uuid: 3a19a296-f3fe-4e50-9143-b68aed37f9ef
 contentOwner: admin
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: coding
-discoiquuid: df7b60bb-4897-479e-a05e-1b1e9429ed87
 role: Developer
 exl-id: 991fbc56-f144-4ae6-b010-8d02f780d347
-source-git-commit: 135f50cc80f8bb449b2f1621db5e2564f5075968
+source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
 workflow-type: tm+mt
 source-wordcount: '2506'
 ht-degree: 0%
@@ -32,7 +28,7 @@ När du anropar en tjänst med REST uppmanas du att ange ett användarnamn och l
 
 Konfigurera en REST-slutpunkt om du vill anropa en Forms-tjänst (en process blir en tjänst när processen aktiveras) med REST. (Se Hantera slutpunkter i [administrationshjälp](https://www.adobe.com/go/learn_aemforms_admin_63).)
 
-När en REST-slutpunkt har konfigurerats kan du anropa en Forms-tjänst med hjälp av en HTTP GET-metod eller en POST-metod.
+När en REST-slutpunkt har konfigurerats kan du anropa en Forms-tjänst genom att använda en HTTP GET-metod eller en POST-metod.
 
 ```java
  action="https://hiro-xp:8080/rest/services/[ServiceName]/[OperationName]:[ServiceVersion]" method="post" enctype="multipart/form-data"
@@ -49,45 +45,45 @@ Följande datatyper stöds vid anrop av AEM Forms-tjänster med REST-begäran:
 * XML-datatyper som `org.w3c.Document` och `org.w3c.Element`
 * Samlingsobjekt som `java.util.List` och `java.util.Map`
 
-   Dessa datatyper accepteras vanligen som indatavärden till processer som skapats i Workbench.
+  Dessa datatyper accepteras vanligen som indatavärden till processer som skapats i Workbench.
 
-   Om en Forms-tjänst anropas med metoden HTTP-POST, skickas argumenten inuti HTTP-begärandetexten. Om AEM Forms-tjänstens signatur har en strängindataparameter kan begärandetexten innehålla indataparameterns textvärde. Om tjänstens signatur definierar flera strängparametrar, kan begäran följa HTTP:ns `application/x-www-form-urlencoded` notation med parameterns namn som används som formulärets fältnamn.
+  Om en Forms-tjänst anropas med metoden HTTP-POST, skickas argumenten inuti HTTP-begärandetexten. Om AEM Forms-tjänstens signatur har en strängindataparameter kan begärandetexten innehålla indataparameterns textvärde. Om tjänstens signatur definierar flera strängparametrar, kan begäran följa HTTP:ns `application/x-www-form-urlencoded` notation med parameterns namn som används som formulärets fältnamn.
 
-   Om en Forms-tjänst returnerar en strängparameter blir resultatet en textrepresentation av utdataparametern. Om en tjänst returnerar flera strängparametrar blir resultatet ett XML-dokument som kodar utdataparametrarna i följande format:
-   ` <result> <output-paramater1>output-parameter-value-as-string</output-paramater1> . . . <output-paramaterN>output-parameter-value-as-string</output-paramaterN> </result>`
+  Om en Forms-tjänst returnerar en strängparameter blir resultatet en textrepresentation av utdataparametern. Om en tjänst returnerar flera strängparametrar blir resultatet ett XML-dokument som kodar utdataparametrarna i följande format:
+  ` <result> <output-paramater1>output-parameter-value-as-string</output-paramater1> . . . <output-paramaterN>output-parameter-value-as-string</output-paramaterN> </result>`
 
-   >[!NOTE]
-   >
-   >The `output-paramater1` värdet representerar utdataparameterns namn.
+  >[!NOTE]
+  >
+  >The `output-paramater1` värdet representerar utdataparameterns namn.
 
-   Om en Forms-tjänst kräver `com.adobe.idp.Document` -parametern kan tjänsten bara anropas med HTTP-POST-metoden. Om tjänsten kräver en `com.adobe.idp.Document` parametern, blir HTTP-begärandetexten innehållet i indatadokumentobjektet.
+  Om en Forms-tjänst kräver `com.adobe.idp.Document` -parametern kan tjänsten bara anropas med HTTP-POST-metoden. Om tjänsten kräver en `com.adobe.idp.Document` parametern, blir HTTP-begärandetexten innehållet i indatadokumentobjektet.
 
-   Om en AEM Forms-tjänst kräver flera indataparametrar måste HTTP-begärandetexten vara ett MIME-meddelande i flera delar enligt RFC 1867. (RFC 1867 är en standard som används av webbläsare för att överföra filer till webbplatser.) Varje indataparameter måste skickas som en separat del av multipart-meddelandet och kodas i `multipart/form-data` format. Namnet på varje del måste matcha parameterns namn.
+  Om en AEM Forms-tjänst kräver flera indataparametrar måste HTTP-begärandetexten vara ett MIME-meddelande i flera delar enligt RFC 1867. (RFC 1867 är en standard som används av webbläsare för att överföra filer till webbplatser.) Varje indataparameter måste skickas som en separat del av multipart-meddelandet och kodas i `multipart/form-data` format. Namnet på varje del måste matcha parameterns namn.
 
-   Listor och kartor används också som indatavärden till AEM Forms-processer som skapats i Workbench. Du kan därför använda dessa datatyper när du använder en REST-begäran. Java-matriser stöds inte eftersom de inte används som indatavärde i en AEM Forms-process.
+  Listor och kartor används också som indatavärden till AEM Forms-processer som skapats i Workbench. Du kan därför använda dessa datatyper när du använder en REST-begäran. Java-matriser stöds inte eftersom de inte används som indatavärde i en AEM Forms-process.
 
-   Om en indataparameter är en lista kan en REST-klient skicka den genom att ange parametern flera gånger (en gång för varje objekt i listan). Om A till exempel är en lista med dokument måste indata vara ett multipart-meddelande som består av flera delar med namnet A. I det här fallet blir varje del med namnet A ett objekt i indatalistan. Om B är en lista med strängar kan indata vara ett `application/x-www-form-urlencoded` meddelande som består av flera fält med namnet B. I det här fallet blir varje formulärfält med namnet B ett objekt i indatalistan.
+  Om en indataparameter är en lista kan en REST-klient skicka den genom att ange parametern flera gånger (en gång för varje objekt i listan). Om A till exempel är en lista med dokument måste indata vara ett multipart-meddelande som består av flera delar med namnet A. I det här fallet blir varje del med namnet A ett objekt i indatalistan. Om B är en lista med strängar kan indata vara ett `application/x-www-form-urlencoded` meddelande som består av flera fält med namnet B. I det här fallet blir varje formulärfält med namnet B ett objekt i indatalistan.
 
-   Om en indataparameter är en karta och det är den enda tjänstindataparametern, blir alla delar/fält i indatameddelandet en nyckel/värdepost i kartan. Namnet på varje del/fält blir postens nyckel. Innehållet i varje del/fält blir postens värde.
+  Om en indataparameter är en karta och det är den enda tjänstindataparametern, blir alla delar/fält i indatameddelandet en nyckel/värdepost i kartan. Namnet på varje del/fält blir postens nyckel. Innehållet i varje del/fält blir postens värde.
 
-   Om en indatamappning inte är den enda tjänstindataparametern kan varje nyckel/värdepost som tillhör kartan skickas med en parameter som heter som en sammanfogning av parameternamnet och postens nyckel. Ett indatamappning som till exempel kallas `attributes` kan skickas med en lista med följande nyckel/värdepar:
+  Om en indatamappning inte är den enda tjänstindataparametern kan varje nyckel/värdepost som tillhör kartan skickas med en parameter som heter som en sammanfogning av parameternamnet och postens nyckel. Ett indatamappning som till exempel kallas `attributes` kan skickas med en lista med följande nyckel/värdepar:
 
-   `attributesColor=red`
+  `attributesColor=red`
 
-   `attributesShape=box`
+  `attributesShape=box`
 
-   `attributesWidth=5`
+  `attributesWidth=5`
 
-   Detta innebär en karta över tre poster: `Color=red`, `Shape=box`och `Width=5`.
+  Detta innebär en karta över tre poster: `Color=red`, `Shape=box`och `Width=5`.
 
-   Utdataparametrarna för list- och mappningstyperna blir en del av det resulterande XML-meddelandet. Utdatalistan representeras i XML som en serie XML-element med ett element för varje objekt i listan. Alla element får samma namn som parametern för utdatalista. Värdet för varje XML-element är en av två saker:
+  Utdataparametrarna för list- och mappningstyperna blir en del av det resulterande XML-meddelandet. Utdatalistan representeras i XML som en serie XML-element med ett element för varje objekt i listan. Alla element får samma namn som parametern för utdatalista. Värdet för varje XML-element är en av två saker:
 
 * En textbeteckning för objektet i listan (om listan består av strängtyper)
 * En URL som pekar på dokumentets innehåll (om listan består av `com.adobe.idp.Document` objekt)
 
-   Följande exempel är ett XML-meddelande som returneras av en tjänst som har en enda utdataparameter med namnet *list*, som är en lista med heltal.
-   ` <result>   <list>12345</list>   . . .   <list>67890</list>  </result>`En parameter för utdatamappning representeras i det resulterande XML-meddelandet som en serie XML-element med ett element för varje post i kartan. Alla element får samma namn som kartpostens nyckel. Värdet för varje element är antingen en textrepresentation av kartpostens värde (om kartan består av poster med ett strängvärde) eller en URL som pekar på dokumentets innehåll (om kartan består av poster med `com.adobe.idp.Document` värde). Nedan visas ett exempel på ett XML-meddelande som returneras av en tjänst som har en enda utdataparameter med namnet `map`. Det här parametervärdet är en karta som består av poster som associerar bokstäver med `com.adobe.idp.Document` objekt.
-   ` <result>   http://localhost:8080/DocumentManager/docm123/4567   . . .   <Z>http://localhost:8080/DocumentManager/docm987/6543</Z>  </result>  `
+  Följande exempel är ett XML-meddelande som returneras av en tjänst som har en enda utdataparameter med namnet *list*, som är en lista med heltal.
+  ` <result>   <list>12345</list>   . . .   <list>67890</list>  </result>`En parameter för utdatamappning representeras i det resulterande XML-meddelandet som en serie XML-element med ett element för varje post i kartan. Alla element får samma namn som kartpostens nyckel. Värdet för varje element är antingen en textrepresentation av kartpostens värde (om kartan består av poster med ett strängvärde) eller en URL som pekar på dokumentets innehåll (om kartan består av poster med `com.adobe.idp.Document` värde). Nedan visas ett exempel på ett XML-meddelande som returneras av en tjänst som har en enda utdataparameter med namnet `map`. Det här parametervärdet är en karta som består av poster som associerar bokstäver med `com.adobe.idp.Document` objekt.
+  ` <result>   http://localhost:8080/DocumentManager/docm123/4567   . . .   <Z>http://localhost:8080/DocumentManager/docm987/6543</Z>  </result>  `
 
 ## Asynkrona anrop {#asynchronous-invocations}
 
@@ -107,7 +103,7 @@ Status för asynkront anrop kan hämtas med en anrops-URL med `services` ersatt 
  http://localhost:8080/rest/async_status/SomeService.SomeOperation?job_id=2345353443366564
 ```
 
-Den här URL:en returnerar ett heltalsvärde (i formatet &quot;text/plain&quot;) som kodar jobbstatusen enligt jobbuthanterarens specifikation (t.ex. 2 betyder att det körs, 3 betyder slutförd, 4 betyder misslyckad och så vidare).
+Den här URL:en returnerar ett heltalsvärde (i formatet &quot;text/plain&quot;) som kodar jobbstatusen enligt Job Managers specifikation (t.ex. 2 betyder att det körs, 3 betyder slutförd, 4 betyder misslyckad och så vidare).
 
 Om jobbet är klart returnerar URL-adressen samma resultat som om tjänsten anropades synkront.
 
@@ -117,7 +113,7 @@ När jobbet är klart och resultatet har hämtats kan jobbet tas bort med en anr
  http://localhost:8080/rest/async_dispose/SomeService.SomeOperation?job_id=2345353443366564
 ```
 
-Om jobbet har tagits bort returnerar den här URL:en ett tomt meddelande.
+Om jobbet har tagits bort returneras ett tomt meddelande.
 
 ## Felrapportering {#error-reporting}
 
@@ -147,7 +143,7 @@ The `DSCError` -elementet är valfritt och finns bara om undantaget är en insta
 
 ## Säkerhet och autentisering {#security-and-authentication}
 
-För att tillhandahålla REST-anrop med en säker transport kan en AEM formuläradministratör aktivera HTTPS-protokollet på J2EE-programservern som är värd för AEM Forms. Den här konfigurationen är specifik för J2EE-programservern. den ingår inte i formulärserverkonfigurationen.
+För att tillhandahålla REST-anrop med en säker transport kan en AEM formuläradministratör aktivera HTTPS-protokollet på J2EE-programservern som är värd för AEM Forms. Den här konfigurationen är specifik för J2EE-programservern. Den ingår inte i formulärserverkonfigurationen.
 
 >[!NOTE]
 >
@@ -157,7 +153,7 @@ För att tillhandahålla REST-anrop med en säker transport kan en AEM formulär
 
 Även om vi rekommenderar att du anropar processer som skapats med Workbench i motsats till tjänster direkt, finns det vissa AEM Forms-tjänster som stöder REST-anrop. Orsaken till att du bör anropa en process i stället för en tjänst direkt är att det är mer effektivt att anropa en process. Tänk på följande scenario. Anta att du vill skapa en princip från en REST-klient. Det innebär att du vill att REST-klienten ska definiera värden som principnamn och offlinelåneperiod.
 
-Om du vill skapa en profil måste du definiera komplexa datatyper, till exempel en `PolicyEntry` -objekt. A `PolicyEntry` -objektet definierar attribut som behörigheter som är kopplade till profilen. (Se [Skapa profiler](/help/forms/developing/protecting-documents-policies.md#creating-policies).)
+Om du vill skapa en profil måste du definiera komplexa datatyper, som `PolicyEntry` -objekt. A `PolicyEntry` -objektet definierar attribut som behörigheter som är kopplade till profilen. (Se [Skapa profiler](/help/forms/developing/protecting-documents-policies.md#creating-policies).)
 
 Istället för att skicka en REST-begäran för att skapa en princip (som skulle inkludera att definiera komplexa datatyper som en `PolicyEntry` -objekt) skapar du en process som skapar en profil med Workbench. Definiera processen för att acceptera primitiva indatavariabler, till exempel ett strängvärde som definierar processnamnet eller ett heltal som definierar offlinelåneperioden.
 
@@ -165,7 +161,7 @@ På så sätt behöver du inte skapa en REST-anropsbegäran som innehåller komp
 
 Följande listor anger vilka AEM Forms-tjänster som har stöd för direktanrop av REST.
 
-* Distiller-tjänst
+* Distiller
 * Tjänsten Rights Management
 * GeneratePDF-tjänst
 * Generate3dPDF-tjänst
@@ -183,7 +179,7 @@ Följande exempel på REST-anrop finns:
 * Anropa processen MyApplication/EncryptDocument med REST
 * Anropa processen MyApplication/EncryptDocument från Acrobat
 
-   Varje exempel visar hur olika datatyper skickas till en AEM Forms-process
+  Varje exempel visar hur olika datatyper skickas till en AEM Forms-process
 
 **Överföra booleska värden till en process**
 
@@ -226,7 +222,7 @@ I följande HTML-exempel skickas ett datumvärde till en AEM Forms-process med n
 
 **Skicka dokument till en process**
 
-I följande HTML-exempel anropas en AEM Forms-process med namnet `MyApplication/EncryptDocument` som kräver ett PDF-dokument. Mer information om processen finns i [Anropa AEM Forms med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom).
+I följande HTML-exempel anropas en AEM Forms-process med namnet `MyApplication/EncryptDocument` som kräver ett PDF-dokument. Mer information om den här processen finns i [Anropa AEM Forms med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom).
 
 ```html
  <html>
@@ -287,15 +283,15 @@ I följande HTML-exempel anropas en AEM Forms-process med namnet `SOAPEchoServic
 
 **Anropa processen MyApplication/EncryptDocument med REST**
 
-Du kan anropa en kortlivad AEM Forms-process med namnet *MyApplication/EncryptDocument* genom att använda REST.
+Du kan anropa en kortlivad AEM Forms-process med namnet *MyApplication/EncryptDocument* med REST.
 
 >[!NOTE]
 >
 >Processen bygger inte på någon befintlig AEM Forms-process. Följ med i kodexemplet genom att skapa en process med namnet `MyApplication/EncryptDocument` med Workbench. (Se [Använda Workbench](https://www.adobe.com/go/learn_aemforms_workbench_63).)
 
-När den här processen anropas utför den följande åtgärder:
+När processen anropas utför den följande åtgärder:
 
-1. Hämtar det oskyddade PDF-dokumentet som skickas till processen. Den här åtgärden baseras på `SetValue` operation. Indataparametern för den här processen är en `document` processvariabel namngiven `inDoc`.
+1. Hämtar det oskyddade PDF-dokumentet som skickas till processen. Den här åtgärden baseras på `SetValue` operation. Indataparametern för den här processen är `document` processvariabel namngiven `inDoc`.
 1. Krypterar PDF-dokumentet med ett lösenord. Den här åtgärden baseras på `PasswordEncryptPDF` operation. Lösenordskrypterade PDF-dokument returneras i en processvariabel med namnet `outDoc`.
 
    När den här processen anropas med en REST-begäran visas det krypterade PDF-dokumentet i webbläsaren. Innan du visar PDF-dokumentet anger du lösenordet (om inte skyddet är inaktiverat). Följande HTML-kod representerar en REST-anropsbegäran till `MyApplication/EncryptDocument` -processen.
@@ -325,4 +321,4 @@ Den fullständiga URL:en för att anropa processen är https://hiro-xp:8080/rest
 
 Om processen kräver ett PDF-dokument som indatavärde måste du skicka formuläret som PDF, vilket visades i föregående bild. För att en process ska kunna anropas måste processen dessutom returnera ett PDF-dokument. Annars kan Acrobat inte hantera returvärdet och ett fel inträffar. Du behöver inte ange namnet på indataprocessvariabeln. Till exempel *MyApplication/EncryptDocument* processen har en indatavariabel med namnet `inDoc`. Du behöver inte ange inDoc så länge formuläret skickas som PDF.
 
-Du kan också skicka formulärdata som XML till en Forms-process. Om du vill skicka XML-data måste du se till att `Submit As` anger XML. Eftersom processens returvärde måste vara ett PDF-dokument, visas PDF-dokumentet i Acrobat.
+Du kan också skicka formulärdata som XML till en Forms-process. Om du vill skicka XML-data måste du se till att `Submit As` listrutan anger XML. Eftersom processens returvärde måste vara ett PDF-dokument, visas PDF-dokumentet i Acrobat.

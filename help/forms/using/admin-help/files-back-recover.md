@@ -1,16 +1,12 @@
 ---
 title: Filer som ska säkerhetskopieras och återställas
-seo-title: Files to back up and recover
 description: Det här dokumentet beskriver programmet och de datafiler som måste säkerhetskopieras.
-seo-description: This document describes the application and data files that must be backed up.
-uuid: ba04adb9-675a-48f2-ad52-39c1266e423b
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/aem_forms_backup_and_recovery
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: 6f9a294d-24bd-4e4b-b929-2809f5e6cef9
 exl-id: d2dd381d-a7d2-4fec-a8ba-7ca037fd9dc1
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
 workflow-type: tm+mt
 source-wordcount: '2072'
 ht-degree: 0%
@@ -54,9 +50,9 @@ GDS-platserna kan ändras under en återställning om den ursprungliga platsen i
 
 ### Alternativ för säkerhetskopiering när databasen används för dokumentlagring {#backup-options-when-database-is-used-for-document-storage}
 
-Du kan aktivera AEM dokumentlagring för formulär i AEM formulärdatabas med administrationskonsolen. Även om det här alternativet behåller alla beständiga dokument i databasen, kräver AEM fortfarande den filsystembaserade GDS-katalogen eftersom den används för att lagra permanenta och tillfälliga filer och resurser som är relaterade till sessioner och anrop av AEM formulär.
+Du kan aktivera AEM dokumentlagring för formulär i AEM formulärdatabas med administrationskonsolen. Även om det här alternativet behåller alla beständiga dokument i databasen, kräver AEM fortfarande den filsystembaserade GDS-katalogen eftersom den används för att lagra permanenta och tillfälliga filer och resurser som är relaterade till sessioner och AEM formulär.
 
-När du väljer alternativet &quot;Aktivera dokumentlagring i databasen&quot; i Core System Settings i administrationskonsolen eller med Configuration Manager, tillåter AEM inte läge för säkerhetskopiering av ögonblicksbilder och rullande säkerhetskopiering. Därför behöver du inte hantera säkerhetskopieringslägen med AEM formulär. Om du använder det här alternativet bör du endast säkerhetskopiera GDS en gång efter att du har aktiverat alternativet. När du återställer AEM från en säkerhetskopia behöver du inte byta namn på säkerhetskopieringskatalogen för GDS eller återställa GDS.
+När du väljer alternativet &quot;Aktivera dokumentlagring i databasen&quot; i Core System Settings i administrationskonsolen eller med Configuration Manager, tillåter AEM inte läge för säkerhetskopiering av ögonblicksbilder och rullande säkerhetskopieringsläge. Därför behöver du inte hantera säkerhetskopieringslägen med AEM formulär. Om du använder det här alternativet bör du endast säkerhetskopiera GDS en gång efter att du har aktiverat alternativet. När du återställer AEM från en säkerhetskopia behöver du inte byta namn på säkerhetskopieringskatalogen för GDS eller återställa GDS.
 
 ## AEM {#aem-repository}
 
@@ -64,7 +60,7 @@ AEM (crx-database) skapas om crx-databasen konfigureras när AEM installeras. Pl
 
 ### Correspondence Management Solution {#correspondence-management-solution}
 
-Correspondence Management Solution centraliserar och hanterar framtagning, sammanställning och leverans av säkra, personaliserade och interaktiva korrespondenser. Det gör att ni snabbt kan sammanställa korrespondens från både förgodkänt och skräddarsytt material i en smidig process från det att det skapas till arkivering. Resultatet blir att era kunder får snabb, korrekt, bekväm, säker och relevant kommunikation. Företaget maximerar värdet av kundinteraktioner och minimerar kostnader och risker med en smidig process som ger smidighet, snabbhet och produktivitet.
+Correspondence Management Solution centraliserar och hanterar framtagning, sammanställning och leverans av säkra, personaliserade och interaktiva korrespondenser. Det gör att ni snabbt kan sammanställa korrespondens från både förgodkänt och skräddarsytt material i en smidig process från det att det skapas till arkivering. Resultatet blir att era kunder får snabb, korrekt, bekväm, säker och relevant kommunikation. Företaget maximerar värdet av kundinteraktioner och minimerar kostnader och risker med en smidig process som är enkel, snabb och effektiv.
 
 En enkel konfiguration av Correspondence Management Solution innehåller en författarinstans och en publiceringsinstans på samma dator eller på olika datorer
 
@@ -80,9 +76,9 @@ AEM Forms Workspace matchar funktionerna i (Borttaget för AEM på JEE) Flex Wor
 >
 >Flex Workspace är föråldrat för AEM formulärreleaser.
 
-Det möjliggör uppgiftshantering på klienter utan Flash Player och Adobe Reader. Det underlättar återgivning av HTML Forms, förutom PDF forms och Flex-formulär.
+Det möjliggör uppgiftshantering för klienter utan Flash Player och Adobe Reader. Det underlättar återgivning av HTML Forms, förutom PDF forms och Flex-formulär.
 
-## AEM {#aem-forms-database}
+## AEM formulärdatabas {#aem-forms-database}
 
 AEM formulärdatabas lagrar innehåll som formulärartefakter, tjänstkonfigurationer, processtillstånd och databasreferenser till filer i GDS och Content Storage Root-katalogen (för Content Services). Säkerhetskopiering av databaser kan utföras i realtid utan avbrott i tjänsten, och återställning kan ske till en viss tidpunkt eller till en viss ändring. I det här avsnittet beskrivs hur du konfigurerar databasen så att den kan säkerhetskopieras i realtid.
 
@@ -92,7 +88,7 @@ Om du vill säkerhetskopiera databasen i realtid måste du antingen använda lä
 
 >[!NOTE]
 >
->Adobe® LiveCycle® Content Services ES (utgått) är ett innehållshanteringssystem som installeras med LiveCycle. Det gör det möjligt för användarna att utforma, hantera, övervaka och optimera humancentrerade processer. Supporten för innehållstjänster (borttaget) upphör 2014-12-31. Se [Adobe produktlivscykeldokument](https://www.adobe.com/support/products/enterprise/eol/eol_matrix.html).
+>Adobe® LiveCycle® Content Services ES (Borttagen) är ett innehållshanteringssystem som installeras med LiveCycle. Det gör det möjligt för användarna att utforma, hantera, övervaka och optimera humancentrerade processer. Supporten för innehållstjänster (borttaget) upphör 2014-12-31. Se [Adobe product lifecycle document](https://www.adobe.com/support/products/enterprise/eol/eol_matrix.html).
 
 ### DB2 {#db2}
 
@@ -100,7 +96,7 @@ Konfigurera din DB2-databas så att den körs i arkivloggningsläge.
 
 >[!NOTE]
 >
->Om din AEM formulärmiljö har uppgraderats från en tidigare version av AEM formulär och använder DB2 stöds inte säkerhetskopiering online. I så fall måste du stänga AEM formulär och göra en offlinesäkerhetskopiering. Framtida versioner av AEM kommer att ha stöd för onlinesäkerhetskopiering för uppgraderingskunder.
+Om din AEM formulärmiljö har uppgraderats från en tidigare version av AEM formulär och använder DB2 stöds inte säkerhetskopiering online. I så fall måste du stänga AEM formulär och göra en offlinesäkerhetskopiering. Framtida versioner av AEM kommer att ha stöd för onlinesäkerhetskopiering för uppgraderingskunder.
 
 IBM har en uppsättning verktyg och hjälpsystem som hjälper databasadministratörer att hantera säkerhetskopierings- och återställningsuppgifter:
 
@@ -136,9 +132,9 @@ Använd MySQLAdmin eller ändra INI-filerna i Windows för att konfigurera MySQL
 
 >[!NOTE]
 >
->Standardläget för binär loggning för MySQL är &quot;Statement&quot;, vilket är inkompatibelt med tabeller som används av Content Services (utgått). Om du använder binär loggning i det här standardläget misslyckas Content Services (Borttagen). Om ditt system innehåller innehållstjänster (borttaget) använder du loggningsläget Blandat. Om du vill aktivera&quot;blandad&quot; loggning lägger du till följande argument i filen my.ini: `binlog_format=mixed log-bin=logname`
+Standardläget för binär loggning för MySQL är &quot;Statement&quot;, vilket är inkompatibelt med tabeller som används av Content Services (utgått). Om du använder binär loggning i det här standardläget misslyckas Content Services (Borttagen). Om ditt system innehåller innehållstjänster (borttaget) använder du loggningsläget Blandat. Om du vill aktivera&quot;blandad&quot; loggning lägger du till följande argument i filen my.ini: `binlog_format=mixed log-bin=logname`
 
-Du kan använda verktyget mysqldump för att få en fullständig säkerhetskopiering av databasen. Fullständig säkerhetskopiering krävs, men är inte alltid lämplig. De producerar stora säkerhetskopior och tar tid att generera. Om du vill göra en stegvis säkerhetskopiering måste du starta servern med kommandot - `log-bin` enligt beskrivningen i föregående avsnitt. Varje gång MySQL-servern startas om slutar den skriva till den aktuella binära loggen, skapar en ny och från och med då blir den nya den aktuella. Du kan tvinga en brytare manuellt med `FLUSH LOGS SQL` -kommando. Efter den första fullständiga säkerhetskopieringen utförs efterföljande stegvisa säkerhetskopieringar med verktyget mysqladmin med `flush-logs` som skapar nästa loggfil.
+Du kan använda verktyget mysqldump för att få en fullständig säkerhetskopiering av databasen. Fullständig säkerhetskopiering krävs, men är inte alltid lämplig. De producerar stora säkerhetskopior och tar tid att generera. Om du vill göra en stegvis säkerhetskopiering måste du starta servern med `log-bin` enligt beskrivningen i föregående avsnitt. Varje gång MySQL-servern startas om slutar den skriva till den aktuella binära loggen, skapar en ny och från och med då blir den nya den aktuella. Du kan tvinga en brytare manuellt med `FLUSH LOGS SQL` -kommando. Efter den första fullständiga säkerhetskopieringen utförs efterföljande stegvisa säkerhetskopieringar med verktyget mysqladmin med `flush-logs` som skapar nästa loggfil.
 
 Se [Sammanfattning av säkerhetsstrategi](https://dev.mysql.com/doc/refman/5.5/en/backup-strategy-summary.html).
 
@@ -197,6 +193,6 @@ Om du har installerat ytterligare teckensnitt i din AEM formulärmiljö måste d
 
 >[!NOTE]
 >
->Som standard finns de Adobe-teckensnitt som installeras med AEM i `[aem-forms root]/fonts` katalog.
+Som standard finns de Adobe-teckensnitt som installeras med AEM i `[aem-forms root]/fonts` katalog.
 
 Om du initierar om operativsystemet på värddatorn och vill använda teckensnitt från det tidigare operativsystemet, bör innehållet i systemteckensnittskatalogen också säkerhetskopieras. (Mer information finns i dokumentationen för ditt operativsystem).

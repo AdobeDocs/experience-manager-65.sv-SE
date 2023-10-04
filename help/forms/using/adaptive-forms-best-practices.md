@@ -1,15 +1,11 @@
 ---
 title: Bästa tillvägagångssätt för arbete med anpassningsbara formulär
-seo-title: Best practices for working with adaptive forms
 description: Beskriver de bästa sätten att skapa ett AEM Forms-projekt, utveckla adaptiva formulär och optimera prestanda för AEM Forms-system.
-seo-description: Explains best practices for setting up an AEM Forms project, developing adaptive forms, and optimizing the performance for AEM Forms system.
-uuid: ed95fc64-56b3-4ea1-a5ba-2e96953fca56
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
-discoiquuid: 43c431e4-5286-4f4e-b94f-5a7451c4a22c
 feature: Adaptive Forms
 exl-id: 5c75ce70-983e-4431-a13f-2c4c219e8dde
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
 workflow-type: tm+mt
 source-wordcount: '4734'
 ht-degree: 0%
@@ -293,7 +289,7 @@ Nedan beskrivs några tips om hur du översätter anpassningsbara formulär:
 
 * Använd adaptiva formulärfragment för gemensamma element i olika formulär och lokalisera fragment. Det gör att du kan lokalisera ett fragment en gång och det återspeglas i alla former där det lokaliserade fragmentet används.
 * Ändringar som att lägga till en ny komponent eller använda ett skript i ett lokaliserat formulär lokaliseras inte automatiskt. Därför måste du slutföra ett formulär innan du lokaliserar det för att undvika flera lokaliseringscykler.
-* Använd `afAcceptLang` begär-parameter för att åsidosätta webbläsarens språkområde och återge formuläret i det angivna språkområdet. Följande URL kommer till exempel att tvinga formuläret att återges på japanska, oavsett vilket språk som anges i webbläsarinställningen:
+* Använd `afAcceptLang` begär-parameter för att åsidosätta webbläsarens språkområde och återge formuläret i det angivna språkområdet. Följande URL måste till exempel återge formuläret på japanska, oavsett vilket språk som har angetts i webbläsarinställningen:
 
   `https://'[server]:[port]'/<contextPath>/<formFolder>/<formName>.html?wcmmode=disabled&afAcceptLang=ja`
 

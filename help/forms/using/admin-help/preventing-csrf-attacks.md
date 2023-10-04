@@ -6,7 +6,7 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/configuring_user_management
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 exl-id: e17fc114-eba5-4e1b-8e70-ad6af7008018
-source-git-commit: 3d80ea6a6fbad05afcdd1f41f4b9de70921ab765
+source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
 workflow-type: tm+mt
 source-wordcount: '972'
 ht-degree: 0%
@@ -23,7 +23,7 @@ Tänk dig till exempel ett scenario där du är inloggad på administrationskons
 
 ## CSRF-relaterade termer {#csrf-related-terms}
 
-**Referens:** Adressen till källsidan som en begäran kommer från. En webbsida på webbplats1.com innehåller till exempel en länk till webbplats2.com. När du klickar på länken skickas en begäran till site2.com. Referenten till denna begäran är site1.com eftersom begäran görs från en sida vars källa är site1.com.
+**Referens:** Adressen till källsidan som en begäran kommer från. En webbsida på site1.com innehåller till exempel en länk till site2.com. När du klickar på länken skickas en begäran till site2.com. Referenten för denna begäran är site1.com eftersom begäran görs från en sida vars källa är site1.com.
 
 **Tillåtslista URI:er:** URI:er identifierar resurser på Forms Server som begärs, till exempel /adminui eller /contentspace. Vissa resurser kan tillåta att en begäran skickas till programmet från externa platser. Dessa resurser betraktas som tillåtslista URI:er. Forms Server utför aldrig någon referenskontroll från tillåtslista URI:er.
 
@@ -33,7 +33,7 @@ Tänk dig till exempel ett scenario där du är inloggad på administrationskons
 * alla skrivbordsklienter som gör en HTTP-begäran på en AEM formulerar SOAP- eller REST-slutpunkt
 * när ett nytt webbläsarfönster öppnas och URL:en för AEM formulär, inloggningssida för webbprogram anges
 
-Tillåt en null-referens för SOAP- och REST-slutpunkter. Tillåt även en null-referens på alla URI-inloggningssidor som /adminui och /contentspace och deras motsvarande mappade resurser. Den mappade servern för /contentspace är till exempel /contentspace/faces/jsp/login.jsp, som bör vara ett null-referensundantag. Det här undantaget är bara nödvändigt om du aktiverar GET-filtrering för webbprogrammet. Programmen kan ange om null-referenser ska tillåtas. Se&quot;Skydda mot attacker med förfalskade förfrågningar på webbplatser&quot; i [Förbättring och säkerhet för AEM formulär](https://help.adobe.com/en_US/livecycle/11.0/HardeningSecurity/index.html).
+Tillåt en null-referens för SOAP- och REST-slutpunkter. Tillåt även en null-referens på alla URI-inloggningssidor som /adminui och /contentspace och deras motsvarande mappade resurser. Den mappade servern för /contentspace är till exempel /contentspace/faces/jsp/login.jsp, som bör vara ett null-referensundantag. Det här undantaget är bara nödvändigt om du aktiverar GET-filtrering för webbprogrammet. Programmen kan ange om null-referenser ska tillåtas. Se&quot;Skydda mot attacker med förfalskade förfrågningar på olika webbplatser&quot; i [Förbättring och säkerhet för AEM formulär](https://help.adobe.com/en_US/livecycle/11.0/HardeningSecurity/index.html).
 
 **Tillåtet referensundantag:** Tillåtet referensundantag är en underlista till listan över tillåtna referenter, från vilka begäranden blockeras. Tillåtna referensundantag gäller endast för webbprogram. Om en delmängd av Tillåtna referenter inte ska kunna anropa ett visst webbprogram kan du blocklist referenterna med hjälp av Tillåtna refererundantag. Tillåtna referensundantag anges i filen web.xml för ditt program. (Se&quot;Skydda mot attacker från attacker med smidning av förfrågningar på olika webbplatser&quot; i Förbättring och säkerhet för AEM formulär på hjälpsidan och Tutorials-sidan.)
 

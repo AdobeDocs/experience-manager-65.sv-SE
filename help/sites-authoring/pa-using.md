@@ -1,29 +1,27 @@
 ---
 title: Söka efter sidanalysdata för att mäta hur effektivt sidinnehållet är
 description: Använd data från sidanalys för att mäta hur effektivt deras sidinnehåll är
-uuid: 8dda89be-13e3-4a13-9a44-0213ca66ed9c
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: site-features
-discoiquuid: 42d2195a-1327-45c0-a14c-1cf5ca196cfc
 exl-id: 554b10c2-6157-4821-a6a7-f2fb6666cdff
-source-git-commit: 75c6bb87bb06c5ac9378ccebf193b5416c080bb1
+source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
 workflow-type: tm+mt
-source-wordcount: '638'
+source-wordcount: '636'
 ht-degree: 0%
 
 ---
 
 # Visa sidanalysdata{#seeing-page-analytics-data}
 
-Använd sidanalysdata för att mäta hur effektivt sidinnehållet är.
+Använd data från sidanalys för att mäta hur effektivt sidinnehållet är.
 
-## Analyser visas från konsolen {#analytics-visible-from-the-console}
+## Analyser som visas från konsolen {#analytics-visible-from-the-console}
 
 ![aa-10](assets/aa-10.png)
 
-Sidanalysdata visas i [Listvy](/help/sites-authoring/basic-handling.md#list-view) i Sites-konsolen. När sidorna visas i listformat är följande kolumner tillgängliga som standard:
+Sidanalysdata visas i [Listvy](/help/sites-authoring/basic-handling.md#list-view) i webbplatskonsolen. När sidorna visas i listformat är följande kolumner tillgängliga som standard:
 
 * Sidvyer
 * Unika besökare
@@ -59,7 +57,7 @@ Medlemmar i användargruppen analytics-administrators kan konfigurera konsolen S
 
 >[!NOTE]
 >
->När ett sidträd innehåller underordnade objekt som är kopplade till olika Adobe Analytics molnkonfigurationer, kan du inte konfigurera tillgängliga datakolumner för sidorna.
+>När ett sidträd innehåller underordnade sidor som är kopplade till olika Adobe Analytics molnkonfigurationer, kan du inte konfigurera tillgängliga datakolumner för sidorna.
 
 1. I listvyn använder du vyväljarna (höger i verktygsfältet) och väljer **Visa inställningar** och sedan **Lägg till anpassade analysdata**.
 
@@ -67,7 +65,7 @@ Medlemmar i användargruppen analytics-administrators kan konfigurera konsolen S
 
 1. Markera de mätvärden som du vill visa för författare i webbplatskonsolen och klicka sedan på **Lägg till**.
 
-   Kolumnerna som visas hämtas från Adobe Analytics.
+   De kolumner som visas hämtas från Adobe Analytics.
 
    ![aa-16](assets/aa-16.png)
 
@@ -100,7 +98,7 @@ När du har valt [Activity Map](/help/sites-authoring/author-environment-tools.m
 
 ![aa-03](assets/aa-03.png)
 
-The **Analyser** flytande verktygsfält visas, här kan du:
+The **Analyser** flytande verktygsfält visas. Här kan du:
 
 * ändra verktygsfältets format med hjälp av dubbelpilarna (**>>**)
 * Växla sidinformation (ögonikon)

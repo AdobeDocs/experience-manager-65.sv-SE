@@ -10,7 +10,7 @@ content-type: reference
 topic-tags: components
 discoiquuid: adf3364c-11f1-45c6-b41d-2c7d48b626f9
 exl-id: a8d50c09-72d0-406e-874e-50a985227a56
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
 workflow-type: tm+mt
 source-wordcount: '2327'
 ht-degree: 0%
@@ -53,13 +53,13 @@ Det går också att lägga till i18n-ordlistorna i ett översättningsprojekt fr
 
    ![chlimage_1-207](assets/chlimage_1-207.png)
 
-1. Fyll i fälten efter behov och klicka på OK. ![chlimage_1-208](assets/chlimage_1-208.png)
+1. Fyll i fälten och klicka på OK. ![chlimage_1-208](assets/chlimage_1-208.png)
 
 1. Nu kan du klicka **OK** eller se Målordlista.
 
    >[!NOTE]
    >
-   >Mer information om översättningsprojekt finns i [Hantera översättningsprojekt](/help/sites-administering/tc-manage.md).
+   >Läs mer om översättningsprojekt [Hantera översättningsprojekt](/help/sites-administering/tc-manage.md).
 
 ## Skapa en ordlista {#creating-a-dictionary}
 
@@ -177,9 +177,9 @@ Använd följande procedur för att ta bort en sträng från ett lexikon.
 Sökfältet längst ned i översättningsverktyget innehåller alternativ för strängval:
 
 * **Filtrera efter text:** Ett mönster som matchar den engelska strängen, kommentaren eller översättningen. Endast objekt som matchar hela eller delar av mönstret visas i tabellen.
-* **Ändringar: Valfri, ändrad, ny, borttagen:** Visa objekt som har ändrats och inte sparats.
+* **Ändringar: Alla, Ändrade, Nya, Borttagna:** Visa objekt som har ändrats och inte sparats.
 
-   * Alla: Visa objekt som har ändrats, lagts till eller tagits bort.
+   * Valfri: Visa objekt som har ändrats, lagts till eller tagits bort.
    * Ändrad: Visa objekt som har ändrats.
    * Nytt: Visa objekt som har lagts till.
    * Borttagen: Visa objekt som ska tas bort.
@@ -214,7 +214,7 @@ När du har lagt till den engelska strängen i ett lexikon kan du lägga till ö
 
    ![chlimage_1-216](assets/chlimage_1-216.png)
 
-   * Dubbelklicka på **Sträng** eller **Kommentar** fält för den obligatoriska strängen för att öppna **Redigera sträng** dialogruta, redigera översättningen/översättningarna efter behov och klicka sedan på **OK** för att stänga dialogrutan:
+   * Dubbelklicka på **Sträng** eller **Kommentar** fält för den obligatoriska strängen för att öppna **Redigera sträng** dialogruta, redigera översättningarna efter behov och klicka sedan på **OK** för att stänga dialogrutan:
 
    ![chlimage_1-217](assets/chlimage_1-217.png)
 
@@ -291,7 +291,7 @@ Använd följande procedur för att lägga till eller ta bort språk.
 
    * **Namn**: `languages`
    * **Typ**: `Multi-String`
-   * **Värde**: listan med språk som du vill visa. Till exempel:
+   * **Värde**: den lista med språk som du vill visa. Till exempel:
 
       * fr
       * es
@@ -353,7 +353,7 @@ Så här ändrar du standarddefinitionerna:
 
    `/apps/wcm/core/resources/languages`
 
-   Ändra eller utöka listan där. Egenskapen `defaultCountry` på en språknod (till exempel `ja`) måste innehålla den fullständiga koden, till exempel `ja_jp`som skulle definiera `jp` som standardland för språket `ja`.
+   Ändra eller utöka listan där. Egenskapen `defaultCountry` på en språknod (till exempel `ja`) måste innehålla den fullständiga koden, till exempel `ja_jp`, som skulle definiera `jp` som standardland för språket `ja`.
 
 1. Uppdatera **CQ WCM Language Manager**.
 

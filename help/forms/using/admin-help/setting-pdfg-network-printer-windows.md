@@ -1,17 +1,13 @@
 ---
 title: Konfigurera en PDFG-nätverksskrivare (endast Windows)
-seo-title: Setting up a PDFG Network Printer (Windows only)
 description: Lär dig hur du konfigurerar en PDFG-nätverksskrivare (endast Windows)
-seo-description: Learn how to set up a PDFG Network Printer ( Windows only )
-uuid: 13b8481e-5ef0-4a07-9602-7bc4d9e05dd4
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/working_with_pdf_generator
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: 7620e5e4-022e-49b2-8cfe-d5eec8ab99d7
 feature: PDF Generator
 exl-id: c3fc159e-2677-4b71-b0b2-2feaf69e1a32
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
 workflow-type: tm+mt
 source-wordcount: '608'
 ht-degree: 0%
@@ -30,7 +26,7 @@ Följande steg krävs för att konfigurera en PDFG-nätverksskrivare:
 1. Konfigurera inställningarna för PDFG Network Printer i administrationskonsolen. (Se [Konfigurera inställningar för PDFG-nätverksskrivare](setting-pdfg-network-printer-windows.md#configure-the-pdfg-network-printer-settings).)
 1. Se till att dina användare är konfigurerade med en giltig e-postadress i AEM formulärdatabas och tilldela PDFGUserPermission till varje användare. <!-- Fix broken link See Setting up and organizing users -->
 1. Kontrollera att 32-bitars JRE6 är installerat på användarnas datorer.
-1. Installera skrivaren på användarnas datorer. (Se [Installera PDFG Network Printer på användarens dator](setting-pdfg-network-printer-windows.md#install-pdfg-network-printer-on-a-user-s-computer).)
+1. Installera skrivaren på användarnas datorer. (Se [Installera PDFG-nätverksskrivare på en användares dator](setting-pdfg-network-printer-windows.md#install-pdfg-network-printer-on-a-user-s-computer).)
 
 ## Konfigurera e-postinställningar för PDFG-nätverksskrivare {#configure-email-settings-for-pdfg-network-printer}
 
@@ -39,13 +35,13 @@ Följande steg krävs för att konfigurera en PDFG-nätverksskrivare:
 
 ## Konfigurera inställningar för PDFG-nätverksskrivare {#configure-the-pdfg-network-printer-settings}
 
-1. I administrationskonsolen klickar du på Tjänster > PDF Generator > PDFG Network Printer
+1. I administrationskonsolen klickar du på Tjänster > PDF Generator > PDFG-nätverksskrivare
 1. I listorna Adobe PDF-inställningar och Skyddsinställningar väljer du de alternativ som ska användas för det genererade PDF. Mer information om de här inställningarna finns i [Konfigurera Adobe PDF-inställningar](/help/forms/using/admin-help/configuring-pdf-settings.md#configuring-adobe-pdf-settings) och [Konfigurera säkerhetsinställningar](/help/forms/using/admin-help/configuring-security-settings.md#configuring-security-settings).
 1. Om du vill skicka tillbaka den konverterade PDF till användarna markerar du alternativet E-posta den konverterade PDF-filen tillbaka till användaren och anger följande information:
 
    * E-postadressen som ska användas för att skicka PDF till användarna
    * Ämnet för e-postmeddelandet
-   * E-postmeddelandets sidhuvud, brödtext och sidfot. I e-postmeddelandet &lt;receivername> ersätts med det fullständiga namnet på den användare som skrev ut dokumentet.
+   * E-postmeddelandets sidhuvud, brödtext och sidfot. I mejlet &lt;receivername> ersätts med det fullständiga namnet på den användare som skrev ut dokumentet.
 
 1. Om du vill skicka det konverterade PDF till en AEM formulärtjänst eller -process markerar du alternativet Vidarebefordra det konverterade PDF till den angivna AEM formulärtjänsten eller -processen och anger följande information:
 
@@ -57,11 +53,11 @@ Följande steg krävs för att konfigurera en PDFG-nätverksskrivare:
 
 Om du vill återgå till den ursprungliga standardtexten för e-post klickar du på Återställ e-postinnehåll.
 
-## Installera PDFG Network Printer på användarens dator {#install-pdfg-network-printer-on-a-user-s-computer}
+## Installera PDFG-nätverksskrivare på en användares dator {#install-pdfg-network-printer-on-a-user-s-computer}
 
 Användare som har rollen PDFG-administratör eller PDFG-användare kan installera en PDFG-nätverksskrivare. Du måste ha en 32-bitars JDK installerad på datorn.
 
-1. (PDFG-administratörer) I administrationskonsolen klickar du på Tjänster > PDF Generator > PDFG Network Printer.
+1. (PDFG-administratörer) I administrationskonsolen klickar du på Tjänster > PDF Generator > PDFG-nätverksskrivare.
 
    (PDFG-användare) Gå till `http(s)://[host]:'port'/pdfgui` och klicka på länken under PDFG Network Printer Installation.
 

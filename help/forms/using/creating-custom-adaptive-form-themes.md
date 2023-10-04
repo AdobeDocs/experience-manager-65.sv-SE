@@ -5,9 +5,9 @@ content-type: reference
 topic-tags: customization
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 exl-id: 73b0057f-082d-4502-90e2-5e41b52c1185
-source-git-commit: ab3d016c7c9c622be361596137b150d8719630bd
+source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
 workflow-type: tm+mt
-source-wordcount: '795'
+source-wordcount: '789'
 ht-degree: 0%
 
 ---
@@ -59,13 +59,13 @@ Du skapar en **adaptiv mall** och tillämpa temat på mallen. Du kan sedan anvä
 
    * `less` mapp: Innehåller `less` variabelfiler där du definierar `less` variabler och `less mixins` som används för att hantera css-format.
 
-     Mappen består av `less` variabelfiler, `less` mixin filer, `less` filer som definierar format med hjälp av blandningar och variabler. Alla dessa mindre filer importeras sedan i styles.less.
+     Mappen består av `less` variabelfiler, `less` mixin filer, `less` filer som definierar format med hjälp av blandningar och variabler. Och alla dessa `less` -filer importeras sedan i styles.less.
 
    * `css`mapp: Innehåller de css-filer i vilka du definierar statiska format som ska användas i temat.
 
    **Mindre variabelfiler**: Detta är de filer där du definierar eller åsidosätter variabler som används för att definiera CSS-format.
 
-   Adaptiva formulär innehåller OTB-variabler som definieras i följande .less-filer:
+   Adaptiva formulär innehåller OTB-variabler som definieras i följande `.less` filer:
 
    * `/apps/clientlibs/fd/af/guidetheme/common/less/globalvariables.less`
    * `/apps/clientlibs/fd/af/guidetheme/common/less/layoutvariables.less`
@@ -74,7 +74,7 @@ Du skapar en **adaptiv mall** och tillämpa temat på mallen. Du kan sedan anvä
 
    `/apps/clientlibs/fd/af/third-party/less/variables.less`
 
-   Du kan använda de mindre variablerna som finns i adaptiva formulär, åsidosätta dessa variabler eller skapa nya mindre variabler.
+   Du kan använda `less` variabler med adaptiva formulär kan du åsidosätta dessa variabler eller skapa nya `less` variabler.
 
    >[!NOTE]
    >
@@ -131,11 +131,11 @@ Du skapar en **adaptiv mall** och tillämpa temat på mallen. Du kan sedan anvä
    }
    ```
 
-   **Styles.less File:** Använd den här filen för att inkludera alla färre filer (variabler, mixins, styles) som du måste använda i klientbiblioteket.
+   **Styles.less File:** Använd den här filen för att inkludera alla `less` filer (variabler, blandningar, format) som du måste använda i klientbiblioteket.
 
    I följande exempel `styles.less` -filen kan importprogramsatsen placeras i vilken ordning som helst.
 
-   Programsatserna för att importera följande .less-filer är obligatoriska:
+   Programsatserna som ska importera följande `.less` filer är obligatoriska:
 
    * `globalvariables.less`
    * `layoutvariables.less`

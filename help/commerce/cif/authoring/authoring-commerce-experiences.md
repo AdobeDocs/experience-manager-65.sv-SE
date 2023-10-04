@@ -1,10 +1,10 @@
 ---
 title: Redigering av handelsupplevelser
-description: Arbeta med e-handelsupplevelser
+description: Arbeta med handelsupplevelser
 exl-id: 2db51bd7-8fc7-4ae8-8d6f-e5035fbe954d
-source-git-commit: a5f3e33a6abe7ac1bbd610a8528fd599d1ffd2aa
+source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
 workflow-type: tm+mt
-source-wordcount: '703'
+source-wordcount: '705'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 ## Översikt {#overview}
 
-Tillägget CIF utökar AEM med e-handelsspecifika funktioner. På så sätt kan författare skapa och hantera e-handelsrelaterade upplevelser effektivt genom att få tillgång till produktdata och innehåll utan att lämna sammanhanget.
+CIF utökar AEM med e-handelsspecifika funktioner. På så sätt kan författare skapa och hantera e-handelsrelaterade upplevelser effektivt genom att få tillgång till produktdata och innehåll utan att lämna sammanhanget.
 
 ## Väljare {#pickers}
 
@@ -21,7 +21,7 @@ Produkt- och kategoriväljare är modala användargränssnittsdialogrutor som ge
 
 ### Produktväljare {#product-picker}
 
-Den här väljaren gör att du kan bläddra genom katalogstrukturen eller söka i fulltext efter produkten. Produkter med variationer erbjuder en mappikon i kolumnen&quot;Typ&quot;. När du klickar på mappikonen öppnas variationerna för den valda produkten.
+Den här väljaren kan användas för att bläddra i katalogstrukturen eller för fulltextsökning för att hitta produkten. Produkter med variationer erbjuder en mappikon i kolumnen&quot;Typ&quot;. När du klickar på mappikonen öppnas variationerna för den valda produkten.
 
 ![Produktväljare](/help/commerce/cif/assets/authoring/product-picker.png)
 
@@ -39,11 +39,11 @@ Konfigurationsdialogrutan för den här komponenten kräver en produkt. CIF anv�
 
 ### Kategoriväljaren {#category-picker}
 
-Den här väljaren gör att du kan bläddra i katalogstrukturen för att hitta kategorin.
+Den här väljaren kan erbjuda bläddring i katalogstrukturen för att hitta kategorin.
 
 ![Kategoriväljaren](/help/commerce/cif/assets/authoring/category-picker.png)
 
-**Exempel: karusell**
+**Exempel på karusell**
 
 ![Carousel-komponent utan markering](/help/commerce/cif/assets/authoring/carousel_component_without_selection.png)
 
@@ -65,7 +65,7 @@ I motsats till resurser kan produkter läggas till på en sida (vilket skapar en
 
 ### Lägga till länkar i textfält med RTE {#rte}
 
-CIF-produktkatalogsidor är virtuella sidor som återges direkt. Därför går det inte att bädda in hyperlänkar som för vanliga AEM. CIF lägger till en ny åtgärd,&quot;Commerce Links&quot;, i textredigeraren. Den här åtgärden fungerar precis som den vanliga hyperlänksåtgärden, men tillåter författare att välja en produkt eller kategori med hjälp av väljarna.
+CIF produktkatalogsidor är virtuella sidor som återges direkt. Därför går det inte att bädda in hyperlänkar som för vanliga AEM. CIF lägger till en ny åtgärd,&quot;Commerce Links&quot;, i textredigeraren. Den här åtgärden fungerar precis som den vanliga hyperlänksåtgärden, men tillåter författare att välja en produkt eller kategori med hjälp av väljarna.
 
 ![RTE](/help/commerce/cif/assets/authoring/RTE.png)
 
@@ -77,7 +77,7 @@ Då skapas en platshållarlänk som ersätts med en riktig länk när sidan åte
 
 ### Åtkomst till associerat produktinnehåll {#associated-content}
 
-Om 1:n-produkterna identifieras på en sida visas fliken &quot;Associerat Commerce Content&quot; automatiskt på sidopanelen. På den här fliken kan författare snabbt komma åt AEM som taggats med produkten (se [berika produktdata med tillhörande AEM](./enrich-product-associated-content.md) för mer information). På den här fliken finns listrutor som du kan använda för att filtrera efter innehållstyp och specifika produkter om det finns flera produkter på sidan. Det fungerar precis som att använda innehåll från fliken Resurser.
+Om 1:n-produkterna identifieras på en sida visas fliken &quot;Associerat Commerce Content&quot; automatiskt på sidopanelen. På den här fliken kan författare snabbt komma åt AEM som taggats med produkten (se [förbättra produktdata med tillhörande AEM](./enrich-product-associated-content.md) för mer information). På den här fliken finns listrutor som du kan använda för att filtrera efter innehållstyp och specifika produkter om det finns flera produkter på sidan. Att använda innehållet fungerar på samma sätt som att använda innehåll från fliken Resurser.
 
 ![Sidopanel för produktdata](/help/commerce/cif/assets/authoring/associated-commerce-content-tab.png)
 

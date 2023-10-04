@@ -1,18 +1,14 @@
 ---
 title: Återger interaktiv PDF forms
-seo-title: Rendering Interactive PDF Forms
 description: Använd tjänsten Forms för att återge interaktiv PDF forms till klientenheter, vanligtvis webbläsare, för att samla in information från användare. Du kan använda Forms tjänst för att återge interaktiva formulär med Java API och Web Service API.
-seo-description: Use the Forms service to render interactive PDF forms to client devices, typically web browsers, to collect information from users. You can use Forms service to render interactive forms using the Java API and Web Service API.
-uuid: df2a4dc8-f19e-49de-850f-85a204102631
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/rendering_forms
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
-discoiquuid: 3cb307ec-9b7b-4f03-b860-48553ccee746
 role: Developer
 exl-id: d9f32939-c2c0-4531-b15e-f63941c289e3
-source-git-commit: 135f50cc80f8bb449b2f1621db5e2564f5075968
+source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
 workflow-type: tm+mt
 source-wordcount: '2487'
 ht-degree: 0%
@@ -47,11 +43,11 @@ I följande tabell beskrivs stegen i det här diagrammet.
  <tbody>
   <tr>
    <td><p>1</p></td>
-   <td><p>The <code>GetLoanForm</code> Java Servlet anropas från en HTML-sida. </p></td>
+   <td><p>The <code>GetLoanForm</code> Java Servlet anropas från HTML. </p></td>
   </tr>
   <tr>
    <td><p>2</p></td>
-   <td><p>The <code>GetLoanForm</code> Java Servlet använder Forms klient-API för att återge låneformuläret till klientens webbläsare. (Se <a href="#render-an-interactive-pdf-form-using-the-java-api">Återge ett interaktivt PDF-formulär med Java API</a>.)</p></td>
+   <td><p>The <code>GetLoanForm</code> Java Servlet använder Forms klient-API:t för att återge låneformuläret till klientens webbläsare. (Se <a href="#render-an-interactive-pdf-form-using-the-java-api">Återge ett interaktivt PDF-formulär med Java API</a>.)</p></td>
   </tr>
   <tr>
    <td><p>3</p></td>
@@ -59,7 +55,7 @@ I följande tabell beskrivs stegen i det här diagrammet.
   </tr>
   <tr>
    <td><p>4</p></td>
-   <td><p>The <code>HandleData</code> Java Servlet använder Forms klient-API för att bearbeta formuläröverföringen och hämta formulärdata. Data lagras sedan i en företagsdatabas. (Se <a href="/help/forms/developing/handling-submitted-forms.md#handling-submitted-forms">Hantera skickade Forms</a>.)</p></td>
+   <td><p>The <code>HandleData</code> Java Servlet använder Forms klient-API:t för att bearbeta formuläröverföringen och hämta formulärdata. Data lagras sedan i en företagsdatabas. (Se <a href="/help/forms/developing/handling-submitted-forms.md#handling-submitted-forms">Hantera skickade Forms</a>.)</p></td>
   </tr>
   <tr>
    <td><p>5</p></td>
@@ -70,13 +66,13 @@ I följande tabell beskrivs stegen i det här diagrammet.
 
 **Låneblankett**
 
-Denna interaktiva låneblankett återges av exempellåneansökans `GetLoanForm` Java Servlet.
+Det här interaktiva låneformuläret återges av exempellåneansökans `GetLoanForm` Java Servlet.
 
 ![ri_ri_loanform](assets/ri_ri_loanform.png)
 
 **Bekräftelseformulär**
 
-Formuläret återges av exempellåneprogrammets `HandleData` Java Servlet.
+Det här formuläret återges av exempelprogrammets `HandleData` Java Servlet.
 
 ![ri_ri_confirm](assets/ri_ri_confirm.png)
 
@@ -131,7 +127,7 @@ Du kan ange URI-värden som krävs av Forms-tjänsten för att återge ett formu
 
 ![ri_ri_formdatabase](assets/ri_ri_formrepository.png)
 
-Om du vill komma åt den här formulärdesignen anger du `Applications/FormsApplication/1.0/FormsFolder/Loan.xdp` som formulärnamn (den första parametern som skickas till `renderPDFForm` metod) och `repository:///` som innehållsrots-URI-värde.
+Om du vill komma åt den här formulärdesignen anger du `Applications/FormsApplication/1.0/FormsFolder/Loan.xdp` som formulärnamnet (den första parametern som skickas till `renderPDFForm` metod) och `repository:///` som innehållsrots-URI-värde.
 
 >[!NOTE]
 >
@@ -147,10 +143,10 @@ Följande värden visar några exempel på URI-värden:
 * Applications/AnotherApp/1.1/Assets/picture.jpg
 * Applications/SomeApp/2.0/Resources/Data/XSDs/MyData.xsd
 
-När du återger ett interaktivt formulär kan du definiera URI-värden, till exempel mål-URL:en som formulärdata ska skickas till. Mål-URL:en kan definieras på något av följande sätt:
+När du återger ett interaktivt formulär kan du definiera URI-värden, t.ex. mål-URL:en som formulärdata ska skickas till. Mål-URL:en kan definieras på något av följande sätt:
 
 * Klicka på knappen Skicka när du designar formulärdesignen i Designer
-* Genom att använda API:t för Forms-tjänstklienten
+* Genom att använda Forms klient-API för tjänster
 
 Om mål-URL:en definieras i formulärdesignen, ska du inte åsidosätta den med Forms klient-API. Det innebär att om du anger mål-URL:en med Forms API återställs den angivna URL:en i formulärdesignen till den som anges med API:t. Om du vill skicka formuläret PDF till den mål-URL som anges i formulärdesignen, anger du mål-URL:en automatiskt till en tom sträng.
 
@@ -158,7 +154,7 @@ Om du har ett formulär som innehåller en skicka-knapp och en beräkningsknapp 
 
 >[!NOTE]
 >
->I stället för att ange ett URL-värde för att referera till en XDP-fil kan du även skicka en `com.adobe.idp.Document` till tjänsten Forms. The `com.adobe.idp.Document` -instansen innehåller en formulärdesign. (Se [Skicka dokument till Forms-tjänsten](/help/forms/developing/passing-documents-forms-service.md).)
+>I stället för att ange ett URL-värde för att referera till en XDP-fil kan du även skicka en `com.adobe.idp.Document` till tjänsten Forms. The `com.adobe.idp.Document` -instansen innehåller en formulärdesign. (Se [Skicka dokument till Forms](/help/forms/developing/passing-documents-forms-service.md).)
 
 **Bifoga filer i formuläret**
 
@@ -206,6 +202,7 @@ The `renderPDFForm2` metoden accepterar `com.adobe.idp.Document` -instans som in
    * Anropa `java.util.HashMap` objektets `put` metod för varje fil som ska bifogas det återgivna formuläret. Skicka följande värden till den här metoden:
 
       * Ett strängvärde som anger namnet på den bifogade filen, inklusive filnamnstillägget.
+
    * A `com.adobe.idp.Document` objekt som innehåller den bifogade filen.
 
    >[!NOTE]
@@ -226,7 +223,7 @@ The `renderPDFForm2` metoden accepterar `com.adobe.idp.Document` -instans som in
 
 1. Skriv formulärdataströmmen till klientens webbläsare
 
-   * Skapa en `com.adobe.idp.Document` genom att anropa `FormsResult` objekt&quot;s `getOutputContent` -metod.
+   * Skapa en `com.adobe.idp.Document` genom att anropa `FormsResult` objekt `getOutputContent` -metod.
    * Hämta innehållstypen för `com.adobe.idp.Document` genom att anropa dess `getContentType` -metod.
    * Ange `javax.servlet.http.HttpServletResponse` objektets innehållstyp genom att anropa dess `setContentType` metoden och skicka innehållstypen för `com.adobe.idp.Document` -objekt.
    * Skapa en `javax.servlet.ServletOutputStream` som används för att skriva formulärdataströmmen till klientens webbläsare genom att anropa `javax.servlet.http.HttpServletResponse` objektets `getOutputStream` -metod.
@@ -260,6 +257,7 @@ The `renderPDFForm2` metoden accepterar `com.adobe.idp.Document` -instans som in
    * Anropa `java.util.HashMap` objektets `put` metod för varje fil som ska bifogas det återgivna formuläret. Skicka följande värden till den här metoden:
 
       * Ett strängvärde som anger namnet på den bifogade filen, inklusive filnamnstillägget
+
    * A `BLOB` objekt som innehåller den bifogade filen
 
    >[!NOTE]
@@ -275,8 +273,8 @@ The `renderPDFForm2` metoden accepterar `com.adobe.idp.Document` -instans som in
    * A `PDFFormRenderSpec` objekt som lagrar körningsalternativ. Det här är en valfri parameter och du kan ange `null` om du inte vill ange körningsalternativ.
    * A `URLSpec` objekt som innehåller URI-värden som krävs av Forms-tjänsten.
    * A `java.util.HashMap` objekt som lagrar bifogade filer. Det här är en valfri parameter och du kan ange `null` om du inte vill bifoga filer till formuläret.
-   * En tom `com.adobe.idp.services.holders.BLOBHolder` objekt som fylls i av metoden. Detta används för att lagra det återgivna PDF-formuläret.
-   * En tom `javax.xml.rpc.holders.LongHolder` objekt som fylls i av metoden. (Det här argumentet lagrar antalet sidor i formuläret.)
+   * En tom `com.adobe.idp.services.holders.BLOBHolder` objekt som fylls i av metoden. Det här används för att lagra det återgivna PDF-formuläret.
+   * En tom `javax.xml.rpc.holders.LongHolder` objekt som fylls i av metoden. (Detta argument lagrar antalet sidor i formuläret.)
    * En tom `javax.xml.rpc.holders.StringHolder` objekt som fylls i av metoden. (Det här argumentet lagrar språkets värde.)
    * En tom `com.adobe.idp.services.holders.FormsResultHolder` objekt som innehåller resultatet av den här åtgärden.
 

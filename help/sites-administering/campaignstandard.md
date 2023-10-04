@@ -1,16 +1,14 @@
 ---
 title: Integrera AEM 6.5 med Adobe Campaign Standard
 description: Lär dig integrera AEM 6.5 med Adobe Campaign Standard.
-uuid: ef31339e-d925-499c-b8fb-c00ad01e38ad
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
 content-type: reference
-discoiquuid: 5c0fec99-7b1e-45d6-a115-e498d288e9e1
 exl-id: caa43d80-1f38-46fc-a8b9-9485c235c0ca
-source-git-commit: 8db2cadc83b26e04f9931e18c53db3bf0be03796
+source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
 workflow-type: tm+mt
-source-wordcount: '1834'
+source-wordcount: '1833'
 ht-degree: 0%
 
 ---
@@ -34,10 +32,10 @@ Konfigurationen av integrationen mellan AEM och Adobe Campaign Standard kräver 
 1. [Verifiera ](#resource-type-filter)
 1. [Skapa en AEM-specifik e-postleveransmall i Campaign](#aem-email-delivery-template)
 1. [Konfigurera Campaign-integrering i AEM](#campaign-integration)
-1. [Konfigurera replikering till AEM Publish Instance](#replication)
+1. [Konfigurera replikering till AEM publiceringsinstans](#replication)
 1. [Konfigurera AEM](#externalizer)
 1. [Konfigurera ](#campaign-remote-user)
-1. [Konfigurera det AEM externa kontot i Campaign](#acc-external-user)
+1. [Konfigurera det AEM externa kontot i kampanj](#acc-external-user)
 
 Det här dokumentet leder dig igenom dessa steg i detalj.
 
@@ -71,7 +69,7 @@ Innan AEM kan använda `aemserver` -användare måste dess lösenord anges. Dett
 
 The `AEMResourceTypeFilter` är ett alternativ i Adobe Campaign som används för att filtrera AEM resurser som kan användas i Adobe Campaign. Eftersom AEM innehåller mycket innehåll fungerar det här alternativet som ett filter som gör att Adobe Campaign bara kan hämta AEM innehåll av typer som är särskilt utformade för att användas i Adobe Campaign.
 
-Det här alternativet levereras förkonfigurerat. Du kan dock behöva uppdatera den om du har anpassat Campaign-komponenterna i AEM. Verifiera att `AEMResourceTypeFilter` om du har konfigurerat det här alternativet gör du så här.
+Det här alternativet levereras förkonfigurerat. Du kan dock behöva uppdatera den om du har anpassat Campaign-komponenterna i AEM. Verifiera att `AEMResourceTypeFilter` om du har konfigurerat det här alternativet följer du de här stegen.
 
 1. Logga in i Adobe Campaign som administratör.
 
@@ -97,7 +95,7 @@ Som standard är AEM inte aktiverat i Adobe Campaign e-postmallar. Du måste kon
 
 1. Logga in i Adobe Campaign som administratör.
 
-1. Tryck eller klicka på Adobe Campaign-logotypen längst upp till vänster på menyraden för att öppna den globala navigeringen och välj sedan **Resurser** > **Mallar** > **Leveransmallar** på navigeringsmenyn.
+1. Tryck eller klicka på Adobe Campaign-logotypen längst upp till vänster på menyraden för att öppna den globala navigeringen och välj sedan **Resurs** > **Mallar** > **Leveransmallar** på navigeringsmenyn.
 
 1. Leta reda på standardmallen för e-post i leveransmallkonsolen **Skicka via e-post (e-post)** och för musen över kortet (eller linjen) som representerar det för att visa alternativen. Klicka **Duplicera element**.
 
@@ -111,7 +109,7 @@ Som standard är AEM inte aktiverat i Adobe Campaign e-postmallar. Du måste kon
 
    ![Mallredigerare](assets/acs-template-editor.png)
 
-1. I egenskapsfönstret ändrar du **Etikett** fält som ska vara beskrivande för den nya AEM.
+1. Ändra i egenskapsfönstret **Etikett** fält som ska vara beskrivande för den nya AEM.
 
 1. Klicka på **Innehåll** för att expandera den och markera **Adobe Experience Manager** i **Innehållskälla** nedrullningsbar meny.
 
@@ -119,23 +117,23 @@ Som standard är AEM inte aktiverat i Adobe Campaign e-postmallar. Du måste kon
 
 ![Konfigurera mallegenskaper](assets/acs-template-properties.png)
 
-1. Klicka **Bekräfta** för att spara ändringarna i egenskaperna.
+1. Klicka **Bekräfta** om du vill spara ändringarna i egenskaperna.
 
-1. Klicka på **Spara** om du vill spara den ändrade kopian av e-postmallen för användning med AEM.
+1. Klicka på i mallredigeraren **Spara** om du vill spara den ändrade kopian av e-postmallen för användning med AEM.
 
 Nu har du en e-postmall som kan använda AEM innehåll.
 
 ## Konfigurera Campaign-integrering i AEM {#campaign-integration}
 
-AEM kommunicerar med Adobe Campaign via en inbyggd integrering och `aemserver` användare som du konfigurerat i Adobe Campaign. Följ de här stegen för att konfigurera integreringen.
+AEM kommunicerar med Adobe Campaign med hjälp av en inbyggd integrering och `aemserver` användare som du konfigurerat i Adobe Campaign. Följ de här stegen för att konfigurera integreringen.
 
-1. Logga in som administratör i din AEM.
+1. Logga in som administratör i AEM redigeringsinstans.
 
-1. Välj **verktyg** > **Cloud Services** > **Äldre Cloud Services** > **Adobe Campaign** och sedan klicka **Konfigurera nu**.
+1. Välj **verktyg** > **Cloud Service** > **Äldre Cloud Service** > **Adobe Campaign** och sedan klicka **Konfigurera nu**.
 
    ![Konfigurera Adobe Campaign](assets/configure-campaign-service.png)
 
-1. I dialogrutan skapar du en konfiguration för Campaign-tjänsten genom att ange en **Titel** och klicka **Skapa**.
+1. Skapa en konfiguration för Campaign-tjänsten genom att ange en **Titel** och klicka **Skapa**.
 
    ![Konfigurera Campaign-dialogrutan](assets/configure-campaign-dialog.png)
 
@@ -147,7 +145,7 @@ AEM kommunicerar med Adobe Campaign via en inbyggd integrering och `aemserver` a
 
    ![Konfigurera Adobe Campaign i AEM](assets/configure-campaign.png)
 
-1. Välj **Anslut till Adobe Campaign** för att bekräfta anslutningen och sedan klicka på **OK**.
+1. Välj **Anslut till Adobe Campaign** för att bekräfta anslutningen och klicka sedan på **OK**.
 
 AEM kan nu kommunicera med Adobe Campaign.
 
@@ -155,7 +153,7 @@ AEM kan nu kommunicera med Adobe Campaign.
 >
 >Se till att din Adobe Campaign-server är tillgänglig via Internet. AEM har inte åtkomst till privata nätverk.
 
-## Konfigurera replikering till AEM Publish Instance {#replication}
+## Konfigurera replikering till AEM publiceringsinstans {#replication}
 
 Kampanjinnehåll skapas av innehållsförfattare i AEM. Den här instansen är vanligtvis endast tillgänglig internt i din organisation. För att innehåll som bilder och resurser ska vara tillgängliga för mottagarna av kampanjen måste ni publicera det innehållet.
 
@@ -163,7 +161,7 @@ Replikeringsagenten ansvarar för att publicera ditt innehåll från AEM förfat
 
 Så här konfigurerar du replikering från AEM författarinstans till publiceringsinstansen:
 
-1. Logga in som administratör i din AEM.
+1. Logga in som administratör i AEM redigeringsinstans.
 
 1. Välj **verktyg** > **Distribution** > **Replikering** > **Agenter på författare** och sedan trycka eller klicka **Standardagent (publicera)**.
 
@@ -203,9 +201,9 @@ Du har konfigurerat Externalizer och Adobe Campaign kan nu komma åt ditt inneh�
 >
 Publiceringsinstansen måste kunna nås från Adobe Campaign-servern. Om den pekar på `localhost:4503` eller en annan server som Adobe Campaign inte kan nå visas inte bilder från AEM i Adobe Campaign-konsolen.
 
-## Konfigurera användaren som är fjärransluten till kampanjen i AEM {#campaign-remote-user}
+## Konfigurera användaren på AEM {#campaign-remote-user}
 
-Precis som du behöver en användare i Adobe Campaign som AEM kan använda för att kommunicera med Adobe Campaign behöver Adobe Campaign också en användare i AEM för att kommunicera med AEM. Som standard skapar Campaign-integreringen `campaign-remote` användare i AEM. Följ de här stegen för att konfigurera den här användaren.
+Precis som du behöver en användare i Adobe Campaign som AEM kan använda för att kommunicera med Adobe Campaign behöver Adobe Campaign också en användare i AEM för att kommunicera med AEM. Som standard skapas `campaign-remote` AEM. Följ de här stegen för att konfigurera den här användaren.
 
 1. Logga in AEM som administratör.
 1. På huvudnavigeringskonsolen klickar du på **verktyg** till vänster.
@@ -217,9 +215,9 @@ Precis som du behöver en användare i Adobe Campaign som AEM kan använda för 
 1. Klicka **Spara** för att spara lösenordsändringen.
 1. Klicka **Spara och stäng** för att spara ändringarna i `campaign-remote` användare.
 
-## Konfigurera det AEM externa kontot i Campaign {#acc-external-user}
+## Konfigurera det AEM externa kontot i kampanj {#acc-external-user}
 
-När du [skapade en AEM-specifik mall för e-postleverans,](#aem-email-delivery-template) du angav att mallen skulle använda `aemInstance` externt konto att kommunicera med AEM. För att möjliggöra tvåvägskommunikation mellan båda lösningarna måste du konfigurera det här kontot i Adobe Campaign.
+När du [har skapat en AEM-specifik mall för e-postleverans,](#aem-email-delivery-template) du angav att mallen skulle använda `aemInstance` externt konto att kommunicera med AEM. För att möjliggöra tvåvägskommunikation mellan båda lösningarna måste du konfigurera det här kontot i Adobe Campaign.
 
 1. Logga in i Adobe Campaign som administratör.
 
@@ -232,17 +230,17 @@ När du [skapade en AEM-specifik mall för e-postleverans,](#aem-email-delivery-
 1. I **Anslutning** definierar du följande fält:
 
    1. Server: Det här är URL:en till AEM. Detta får inte sluta med ett snedstreck.
-   1. Konto: Det här är `campaign-remote` användare du [tidigare konfigurerad i AEM.](#campaign-remote-user)
+   1. Konto: Detta är `campaign-remote` användare du [tidigare konfigurerad i AEM.](#campaign-remote-user)
    1. Lösenord: Det här är lösenordet för `campaign-remote`användare du [tidigare konfigurerad i AEM.](#campaign-remote-user)
 
    ![Redigera användaren aemInstance](assets/acs-external-acount-editor.png)
 
-1. Se till att **Aktiverad** kryssrutan är markerad och klicka sedan **Spara** för att spara ändringarna.
+1. Se till att **Aktiverad** kryssrutan är markerad och klicka sedan på **Spara** för att spara ändringarna.
 
 Grattis! Du är klar med integreringen mellan AEM och Adobe Campaign Standard!
 
 ## Nästa steg {#next-steps}
 
-När både Adobe Campaign Classic och AEM är konfigurerade är integreringen klar.
+När både Adobe Campaign Classic och AEM är konfigurerade är integreringen nu klar.
 
-Nu kan du lära dig skapa nyhetsbrev i Adobe Experience Manager genom att fortsätta med [det här dokumentet.](/help/sites-authoring/campaign.md)
+Nu kan du lära dig hur du skapar ett nyhetsbrev i Adobe Experience Manager genom att fortsätta med [det här dokumentet.](/help/sites-authoring/campaign.md)

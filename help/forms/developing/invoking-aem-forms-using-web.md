@@ -1,17 +1,13 @@
 ---
 title: Anropa AEM Forms med Web Services
-seo-title: Invoking AEM Forms using Web Services
 description: Anropa AEM Forms-processer med web services med fullt stöd för WSDL-generering.
-seo-description: Invoke AEM Forms processes using web services with full support for WSDL generation.
-uuid: 66bcd010-c476-4b66-831d-a48307d8d67a
 contentOwner: admin
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: coding
-discoiquuid: d5722281-bea9-4fc7-abdc-e678899e0a15
 role: Developer
 exl-id: 3139564f-9346-4933-8e39-2e1642bff097
-source-git-commit: 10227bcfcfd5a9b0f126fee74dce6ec7842f5e95
+source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
 workflow-type: tm+mt
 source-wordcount: '9901'
 ht-degree: 0%
@@ -648,7 +644,7 @@ Du kan anropa `MyApplication/EncryptDocument` tjänst (som skapades i Workbench)
 1. Skapa en Microsoft .NET-klientsammansättning som använder `MyApplication/EncryptDocument` tjänst-WSDL.
 1. Skapa ett Microsoft .NET-klientprojekt. Referera till Microsoft .NET-klientsammansättningen i klientprojektet. Även referens `System.Web.Services`.
 1. Skapa en `MyApplication_EncryptDocumentService` genom att anropa dess standardkonstruktor.
-1. Ange `MyApplication_EncryptDocumentService` objektets `Credentials` egenskap med en `System.Net.NetworkCredential` -objekt. I `System.Net.NetworkCredential` -konstruktorn anger du ett AEM användarnamn och motsvarande lösenord. Ange autentiseringsvärden för att .NET-klientprogrammet ska kunna utbyta SOAP-meddelanden med AEM Forms.
+1. Ange `MyApplication_EncryptDocumentService` objektets `Credentials` egenskap med en `System.Net.NetworkCredential` -objekt. I `System.Net.NetworkCredential` -konstruktor anger du ett AEM användarnamn och motsvarande lösenord. Ange autentiseringsvärden för att .NET-klientprogrammet ska kunna utbyta SOAP-meddelanden med AEM Forms.
 1. Skapa en `BLOB` genom att använda dess konstruktor. The `BLOB` -objektet används för att lagra ett PDF-dokument som skickas till `MyApplication/EncryptDocument` -processen.
 1. Skapa en `System.IO.FileStream` genom att anropa dess konstruktor. Skicka ett strängvärde som representerar filplatsen för PDF-dokumentet och läget som filen ska öppnas i.
 1. Skapa en bytearray som lagrar innehållet i `System.IO.FileStream` -objekt. Du kan bestämma storleken på bytearrayen genom att hämta `System.IO.FileStream` objektets `Length` -egenskap.
@@ -964,7 +960,7 @@ Du kan anropa `MyApplication/EncryptDocument` -tjänst (som skapades i Workbench
 1. Skapa .NET-klientsammansättningen.
 1. Referera till Microsoft .NET-klientsammansättningen. Skapa ett Microsoft .NET-klientprojekt. Referera till Microsoft .NET-klientsammansättningen i klientprojektet. Även referens `System.Web.Services`.
 1. Skapa en `MyApplication_EncryptDocumentService` genom att anropa dess standardkonstruktor.
-1. Ange `MyApplication_EncryptDocumentService` objektets `Credentials` egenskap med en `System.Net.NetworkCredential` -objekt. I `System.Net.NetworkCredential` -konstruktorn anger du ett AEM användarnamn och motsvarande lösenord. Ange autentiseringsvärden för att .NET-klientprogrammet ska kunna utbyta SOAP-meddelanden med AEM Forms.
+1. Ange `MyApplication_EncryptDocumentService` objektets `Credentials` egenskap med en `System.Net.NetworkCredential` -objekt. I `System.Net.NetworkCredential` -konstruktor anger du ett AEM användarnamn och motsvarande lösenord. Ange autentiseringsvärden för att .NET-klientprogrammet ska kunna utbyta SOAP-meddelanden med AEM Forms.
 1. Skapa en `BLOB` genom att använda dess konstruktor. The `BLOB` -objektet används för att skicka data till `MyApplication/EncryptDocument` -processen.
 1. Tilldela ett strängvärde till `BLOB` objektets `remoteURL` datamedlem som anger URI-platsen för ett PDF-dokument som ska skickas till `MyApplication/EncryptDocument`service.
 1. Anropa `MyApplication/EncryptDocument` genom att anropa `MyApplication_EncryptDocumentService` objektets `invoke` metoden och skicka `BLOB` -objekt. Den här processen returnerar ett krypterat PDF-dokument i en `BLOB` -objekt.
@@ -1231,7 +1227,7 @@ Ett klientprogram kan hämta försäkran från valfritt AEM Forms Authentication
 * Autentisera användaren med någon av de autentiseringsmetoder som används av AuthenticationManager API. Normalt används användarnamnet och lösenordet, men du kan också använda certifikatautentiseringen.
 * Använda `AuthenticationManager.getAuthResultOnBehalfOfUser` -metod. Med den här metoden kan ett klientprogram få en `AuthResult` -objekt för användare av AEM formulär.
 
-en användare av AEM formulär kan autentiseras med en SAML-token som erhålls. Denna SAML-försäkran (xml-fragment) kan skickas som en del av WS-Security-huvudet med webbtjänstanropet för användarautentisering. Vanligtvis har ett klientprogram autentiserat en användare men inte lagrat inloggningsuppgifterna. (Eller så har användaren loggat in på klienten via en annan mekanism än att använda ett användarnamn och lösenord.) I den här situationen måste klientprogrammet anropa AEM Forms och personifiera en specifik användare som kan anropa AEM Forms.
+En AEM kan autentiseras med en SAML-token som erhålls. Denna SAML-försäkran (xml-fragment) kan skickas som en del av WS-Security-huvudet med webbtjänstanropet för användarautentisering. Vanligtvis har ett klientprogram autentiserat en användare men inte lagrat inloggningsuppgifterna. (Eller så har användaren loggat in på klienten via en annan mekanism än att använda ett användarnamn och lösenord.) I den här situationen måste klientprogrammet anropa AEM Forms och personifiera en specifik användare som kan anropa AEM Forms.
 
 Om du vill personifiera en viss användare anropar du `AuthenticationManager.getAuthResultOnBehalfOfUser` med en webbtjänst. Den här metoden returnerar en `AuthResult` -instans som innehåller SAML-försäkran för den användaren.
 

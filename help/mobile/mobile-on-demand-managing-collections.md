@@ -1,16 +1,12 @@
 ---
 title: Hantera samlingar
-seo-title: Managing Collections
 description: Samlingar är en väldefinierad bucket som fylls med innehåll som artiklar eller banderoller som passar omslagets tema. Följ den här sidan om du vill veta mer.
-seo-description: Collections represent a well defined bucket filled with content such as articles or banners that suits the cover's theme. Follow this page to learn more.
-uuid: 1d2e9769-d2cc-4d43-a428-e962a51eb5d0
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: authoring-on-demand-services-app
-discoiquuid: 64c6d198-983f-4a52-9c83-560206363868
 exl-id: 0b4aa1a4-449a-4882-8f7c-3ceea6ac7f83
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
 workflow-type: tm+mt
 source-wordcount: '798'
 ht-degree: 0%
@@ -27,7 +23,7 @@ Innehållshanteringsåtgärder är byggstenar som används för att skapa och ha
 
 ## Samlingar - översikt {#collections-overview}
 
-Samlingar representerar en väldefinierad *bucket* fyllda med innehåll som artiklar eller banderoller som passar omslagets tema.
+Samlingar är väldefinierade *bucket* fyllda med innehåll som artiklar eller banderoller som passar omslagets tema.
 
 >[!NOTE]
 >
@@ -46,14 +42,14 @@ Det allmänna arbetsflödet för att skapa en samling är följande:
 1. Välj mobilappen i katalogen i Mobile On-Demand.
 1. Klicka på nedpilen i det övre högra hörnet av **Hantera samlingar** platta.
 1. Gå igenom varje steg i guiden för att fortsätta skapa din nya artikel.
-1. När du är klar klickar du på **Skapa**.
+1. När du är klar klickar du **Skapa**.
 1. Den nya artikeln visas i **Hantera samlingar** platta.
 
 ![chlimage_1-1](assets/chlimage_1-1.gif)
 
 ## Importera en ny samling {#importing-a-new-collection}
 
-Befintligt mobilt On-Demand-innehåll kan hämtas (importeras) från Mobile On-Demand till AEM. På så sätt kan du redigera och visa lokalt innehåll.
+Befintligt mobilt on demand-innehåll kan hämtas (importeras) från Mobile On-Demand till AEM. På så sätt kan du redigera och visa lokalt innehåll.
 
 >[!NOTE]
 >
@@ -114,7 +110,7 @@ Den här åtgärden tar bort den valda samlingen från Mobile On-Demand och even
 Det allmänna arbetsflödet för att ta bort en samling:
 
 1. Välj mobilappen i katalogen i Mobile On-Demand.
-1. Markera artikeln som ska tas bort i **Hantera samlingar** platta.
+1. Markera artikeln som ska tas bort i dialogrutan **Hantera samlingar** platta.
 1. Se till att det är markerat i listan (markera andra att ta bort efter behov).
 1. Klicka **Ta bort** i åtgärdsfältet.
 1. Kontrollera om du vill ta bort från AEM och Mobile On-Demand.
@@ -129,7 +125,7 @@ Samlingar är i princip en kategori med relaterat innehåll. De samlar ihop inne
 >
 >Innehållet måste överföras till Mobile On-Demand innan det kan läggas till i en samling.
 
-Samlingar är i princip en kategori med relaterat innehåll: De samlar ihop innehåll som artiklar, banners i paket som definierar navigeringsstrukturen i ditt program. Samlingar kan kapslas.
+Samlingar är huvudsakligen en kategori med relaterat innehåll: de samlar ihop innehåll som artiklar, banners i paket som definierar programmets navigeringsstruktur. Samlingar kan kapslas.
 
 1. Välj mobilappen i katalogen i Mobile On-Demand.
 1. Välj en tidigare överförd artikel (eller banner/samling)

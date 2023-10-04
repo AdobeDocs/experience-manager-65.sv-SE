@@ -1,23 +1,19 @@
 ---
-title: Säkerhetskopierings- och återställningsstrategi för AEM formulär
-seo-title: Backup and recovery strategy for AEM forms
+title: Strategier för säkerhetskopiering och återställning av AEM formulär
 description: Lär dig hur du implementerar en strategi för att säkerhetskopiera data och se till att de är synkroniserade med AEM formulärdata.
-seo-description: Learn how to implement a strategy to back up data and ensuring that it remains in sync with the AEM forms data.
-uuid: 98fc3115-76e5-4e58-aa30-3601866a441f
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/aem_forms_backup_and_recovery
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: f192a8a3-1116-4d32-9b57-b53d532c0dbf
 exl-id: 01ec6ebc-6d80-4417-9604-c8571aebb57e
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
 workflow-type: tm+mt
 source-wordcount: '1491'
 ht-degree: 0%
 
 ---
 
-# Säkerhetskopierings- och återställningsstrategi för AEM formulär{#backup-and-recovery-strategy-for-aem-forms}
+# Strategier för säkerhetskopiering och återställning av AEM formulär{#backup-and-recovery-strategy-for-aem-forms}
 
 Om implementeringen av AEM sparar ytterligare anpassade data i en annan databas ansvarar du för att implementera en strategi för att säkerhetskopiera dessa data och se till att de är synkroniserade med de AEM formulärdata. Dessutom måste programmet vara utformat så att det är tillräckligt robust för att hantera ett scenario där ytterligare databaser inte är synkroniserade. Vi rekommenderar starkt att alla databasåtgärder som utförs utförs i samband med en transaktion för att upprätthålla ett konsekvent tillstånd.
 
@@ -35,7 +31,7 @@ AEM strategi för säkerhetskopiering av formulär omfattar två typer av säker
 
 **Systemavbildning:** En fullständig säkerhetskopia av systemet som du kan använda för att återställa datorns innehåll om hårddisken eller hela datorn slutar att fungera. Säkerhetskopiering av systemavbildning krävs endast innan AEM distribueras. Interna regler styr sedan hur ofta säkerhetskopiering av systemavbildningar krävs.
 
-**AEM blanketterar specifika data:** Programdata finns i databasen, GDS (Global Document Storage) och AEM och måste säkerhetskopieras i realtid. GDS är en katalog som används för att lagra långlivade filer som används i en process. Dessa filer kan innehålla PDF, profiler eller formulärmallar.
+**AEM blanketter:** Programdata finns i databasen, GDS (Global Document Storage) och AEM och måste säkerhetskopieras i realtid. GDS är en katalog som används för att lagra långlivade filer som används i en process. Dessa filer kan innehålla PDF, profiler eller formulärmallar.
 
 >[!NOTE]
 >
@@ -82,8 +78,8 @@ Innan du startar om formulärservern efter en återställning gör du följande:
 1. Starta systemet i underhållsläge.
 1. Gör följande för att se till att Form Manager synkroniseras med AEM formulär i underhållsläge:
 
-   1. Gå till https://&lt;*server*>:&lt;*port*>/lc/fm och logga in med autentiseringsuppgifter för adminstrator/password.
-   1. Klicka på namnet på användaren (superadministratör i det här fallet) i det övre högra hörnet.
+   1. Gå till https://*server*>:&lt;*port*>/lc/fm och logga in med autentiseringsuppgifter för adminstrator/password.
+   1. Klicka på namnet på användaren (superadministratör i det här fallet) längst upp till höger.
    1. Klicka **Administratörsalternativ**.
    1. Klicka **Starta** för att synkronisera resurser från databasen.
 
@@ -98,7 +94,7 @@ Om du använder TCP-cachelagring i stället för UDP i ett kluster måste du upp
 
 ### Ändra sökvägar för AEM formulärnodfil {#changing-the-aem-forms-node-file-system-paths}
 
-Om du ändrar filsystemsökvägarna för en fristående nod måste du uppdatera lämpliga referenser i inställningar, andra systemkonfigurationer, anpassade program och distribuerade AEM formulärprogram. Å andra sidan måste alla noder använda samma sökvägskonfiguration för filsystemet för ett kluster. Du måste ange rotkatalogen för GDS (Global Document Storage) och se till att den pekar på en kopia av den återställda GDS-servern som är synkroniserad med den återställda databasen. Det är viktigt att ange GDS-sökvägen eftersom GDS kan innehålla data som ska finnas kvar mellan omstarter av programservern.
+Om du ändrar filsystemsökvägarna för en fristående nod måste du uppdatera lämpliga referenser i inställningar, andra systemkonfigurationer, anpassade program och distribuerade AEM formulärprogram. För ett kluster måste alla noder däremot använda samma sökvägskonfiguration i filsystemet. Du måste ange rotkatalogen för GDS (Global Document Storage) och se till att den pekar på en kopia av den återställda GDS-servern som är synkroniserad med den återställda databasen. Det är viktigt att ange GDS-sökvägen eftersom GDS kan innehålla data som ska finnas kvar mellan omstarter av programservern.
 
 I en klustrad miljö bör databasens filsystemskonfiguration vara densamma för alla klusternoder före och efter säkerhetskopieringen.
 

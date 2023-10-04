@@ -1,29 +1,26 @@
 ---
 title: Introduktion till HTML5-formulär
 seo-title: Introduction to HTML5 forms
-description: HTML5-formulär är en ny funktion i Adobe Experience Manager 6.0 (AEM 6.0) som erbjuder återgivning av XFA-formulärmallar i HTML5-format.
-seo-description: HTML5 forms is a new capability in Adobe Experience Manager 6.0 (AEM 6.0) software that offers rendering of XFA form templates in HTML5 format.
-uuid: 63a2f000-c4c5-40e8-ab3f-c7c44c79ec09
+description: HTML5-formulär är en ny funktion i Adobe Experience Manager 6.0 (AEM 6.0) som kan återge XFA-formulärmallar i HTML5-format.
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
-discoiquuid: 672ee050-63d1-46ed-bef2-f55800208d78
 docset: aem65
 feature: Mobile Forms
 exl-id: 0facca18-ffa1-420c-859a-6f1f2c449d71
-source-git-commit: e9f64722ba7df0a7f43aaf1005161483e04142f5
+source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
 workflow-type: tm+mt
-source-wordcount: '417'
+source-wordcount: '415'
 ht-degree: 0%
 
 ---
 
 # Introduktion till HTML5-formulär{#introduction-to-html-forms}
 
-HTML5-formulär är en ny funktion i Adobe Experience Manager 6.0 (AEM 6.0) som erbjuder återgivning av XFA-formulärmallar i HTML5-format. Denna funktion gör det möjligt att återge formulär på mobila enheter och webbläsare på datorer där XFA-baserad PDF inte stöds. HTML5-formulär har inte bara stöd för XFA-formulärmallarnas befintliga funktioner, utan även nya funktioner, som klottersignaturer, för mobila enheter.
+HTML5-formulär är en ny funktion i Adobe Experience Manager 6.0 (AEM 6.0) som kan återge XFA-formulärmallar i HTML5-format. Denna funktion gör det möjligt att återge formulär på mobila enheter och webbläsare på datorer där XFA-baserad PDF inte stöds. HTML5-formulär har inte bara stöd för XFA-formulärmallarnas befintliga funktioner, utan även nya funktioner, som klottersignaturer, för mobila enheter.
 
 HTML5-formulär genererar dokument som baseras på HTML 5-standardkonstruktioner. Du kan visa HTML5-formulär i alla moderna webbläsare som stöder HTML5. Inga ytterligare webbläsarplugin-program behöver installeras för webbläsarna. Mer information om vilka webbläsare som stöds finns i [Klientplattformar som stöds](https://adobe.com/go/learn_aemforms_supportedplatforms_63).
 
-![HTML5-formulärförhandsgranskning](do-not-localize/mobile_form_on_an_ipad_date_14.png)
+![HTML5 - förhandsgranskning av formulär](do-not-localize/mobile_form_on_an_ipad_date_14.png)
 
 ## Viktiga funktioner i HTML5-formulär {#key-capabilities-of-html-forms-br}
 
@@ -43,7 +40,7 @@ Formulärutvecklare kan använda en XFA-mall för att återge formulär i PDF oc
 
 ## Hantera HTML5-formulär {#manage-html-forms}
 
-AEM har också en enhetlig vy för att lista och hantera alla formulärmallar med AEM Forms användargränssnitt. Du kan aktivera, inaktivera, publicera och förhandsgranska formulär. Mer information finns i [Introduktion till hantering av formulär](../../forms/using/introduction-managing-forms.md).
+AEM har också en enhetlig vy för att lista och hantera alla formulärmallar med hjälp av AEM Forms användargränssnitt. Du kan aktivera, inaktivera, publicera och förhandsgranska formulär. Mer information finns i [Introduktion till hantering av formulär](../../forms/using/introduction-managing-forms.md).
 
 ### Forms-anpassning {#forms-customization}
 

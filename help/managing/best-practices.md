@@ -1,22 +1,22 @@
 ---
 title: Hantera projekt - checklista för bästa praxis
-description: Planering och förståelse krävs för att hantera ett projekt som ska implementera Adobe Experience Manager (AEM). Projektchecklistor är avsedda som en uppsättning bästa metoder för projektleverans. De vägleder dig genom alla faser i projektets livscykel och ger dig möjlighet att övervaka din nuvarande status på hög nivå.
+description: Planering och förståelse krävs för att hantera ett projekt som ska implementera Adobe Experience Manager (AEM). Projektchecklistor är avsedda som en uppsättning bästa metoder för projektleverans. De vägleder dig genom alla faser i projektets livscykel och ger dig en högnivåövervakning av din status.
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/MANAGING
 topic-tags: managing-checklist, introduction
 content-type: reference
 docset: aem65
 exl-id: 94b91996-d2b2-4d4a-b770-334cfa2dc0b7
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
 workflow-type: tm+mt
-source-wordcount: '3251'
+source-wordcount: '3240'
 ht-degree: 0%
 
 ---
 
 # Hantera projekt - checklista för bästa praxis{#managing-projects-best-practices-checklist}
 
-För att hantera ett projekt som ska implementera Adobe Experience Manager (AEM) måste du planera och förstå för att vara säker på att du är medveten om problemen och (relaterade) beslut som du måste fatta, innan och medan du implementerar projektet.
+Att hantera ett projekt som ska implementera Adobe Experience Manager (AEM) kräver planering och förståelse så att du är medveten om problemen och (de relaterade) besluten som du måste fatta, innan och medan du implementerar projektet.
 
 De bästa sätten är att
 
@@ -25,7 +25,7 @@ De bästa sätten är att
    * Definierar indata och slutprodukter utifrån fas, milstolpe och persona.
    * Ger automatiska översikter (kvalitet, hälsa och fullständighet) som visar på framsteg och projekthälsa.
 
-* Dokumentation som bygger på [checklista](/help/managing/best-practices-checklist.md), som innehåller information om:
+* Dokumentation som bygger på [checklista](/help/managing/best-practices-checklist.md) som innehåller information om
 
    * [Projektpulsslag](#projectheartbeat) analys.
    * [Status efter roll](#status-by-role) översikt.
@@ -117,7 +117,7 @@ Fyra faktorer:
 
 ### Planering {#planning}
 
-När du planerar projektet konsolideras förberedelsen. Här måste ni börja konvertera målen och förväntningarna till en väldefinierad färdplan som består av konkreta uppgifter, som är bundna av tydlig kommunikation, med strikta granskningar för att mäta framstegen.
+När du planerar projektet konsolideras förberedelsen. Här bör ni börja konvertera målen och förväntningarna till en väldefinierad färdplan som består av konkreta uppgifter, som är bundna av tydlig kommunikation, med strikta granskningar för att mäta framstegen.
 
 #### Milstolpar {#milestones-1}
 
@@ -135,7 +135,7 @@ När du planerar projektet konsolideras förberedelsen. Här måste ni börja ko
 
 * **Kommunikation**
 
-  Kommunikation är alltid avgörande för att ett projekt ska lyckas. Ni måste kommunicera tydligt och effektivt för att säkerställa att alla är
+  Kommunikation är alltid avgörande för att ett projekt ska lyckas. Kommunicera tydligt och effektivt för att säkerställa att alla är
 
    * Att arbeta mot samma grundläggande mål
    * Från samma informationsbas
@@ -203,7 +203,7 @@ Att planera utvecklingsarbetet är avgörande för att säkerställa att projekt
    * Grundläggande kodstruktur för projektet
    * Kodartefakter (paket, paket och så vidare)
    * Uppdelning av mallar/komponenter och deras relationer
-   * Detaljerad information om nödvändiga anpassningar (specifika överlägg kommer senare)
+   * Detaljerad information om nödvändiga anpassningar (specifika överlägg följer senare)
    * Utformning av de arbetsflöden som lösningen kräver (t.ex. skapande av innehåll, godkännande, publicering, omvandlingar, import och export)
    * Särskild hänsyn till komplexa moduler som MSM, Commerce och tredjepartsintegrering
 
@@ -211,8 +211,8 @@ Att planera utvecklingsarbetet är avgörande för att säkerställa att projekt
 
   Systemintegrering kräver att du planerar (och sedan implementerar):
 
-   * Hur alla delsystem och [lösningar](/help/sites-administering/integration.md) kommer att samlas för att fungera som ett enda sammanhängande system
-   * Hur eventuella tredjepartssystem kommer att integreras, tillsammans med eventuella specialöverväganden som offline/online, klientsidan/webbläsaren eller reservhantering när ett tredjepartssystem är nere
+   * Hur alla delsystem och [lösningar](/help/sites-administering/integration.md) sammanförs för att fungera som ett sammanhängande system
+   * Hur tredjepartssystem är integrerade, tillsammans med eventuella specialöverväganden som offline/online, klientsidan/webbläsaren eller reservhantering när ett tredjepartssystem är nere
 
 * **Testkoncept**
 
@@ -570,7 +570,7 @@ Säkerhetsledaren:
 
 * Författare och slutanvändare
 
-   * De personer som ska använda systemet för att skapa och underhålla webbplatsinnehållet.
+   * De personer som använder systemet för att skapa och underhålla webbplatsinnehåll.
 
 ## Begärda dokument och slutprodukter {#required-documents-and-deliverables}
 

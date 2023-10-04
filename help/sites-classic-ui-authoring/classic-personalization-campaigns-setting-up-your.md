@@ -1,17 +1,13 @@
 ---
 title: Konfigurera kampanjen
-seo-title: Setting up your campaign
 description: För att skapa en ny kampanj måste ni skapa ett varumärke för era kampanjer, skapa en kampanj för upplevelser och slutligen definiera egenskaperna för den nya kampanjen.
-seo-description: Setting up a new campaign requires creating a brand to hold your campaigns, creating a campaign to hold experiences, and finally defining the properties for your new campaign.
-uuid: 244a150e-7b5e-4eff-bd15-e3b04be6a3e9
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: personalization
 content-type: reference
-discoiquuid: 19ad4751-1d5d-49de-b76b-3501b3e98e62
 docset: aem65
 exl-id: 1b607a52-f065-4e35-8215-d54df7c8403d
-source-git-commit: a2623df38bcd683a6a43bdaf3483e11e40ac4a68
+source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
 workflow-type: tm+mt
 source-wordcount: '2257'
 ht-degree: 0%
@@ -24,7 +20,7 @@ I konfigurationen av en ny kampanj ingår följande (allmänna) steg:
 
 1. [Skapa ett varumärke](#creating-a-new-brand) för era kampanjer.
 1. Om det behövs kan du [definiera egenskaperna för ert nya varumärke](#defining-the-properties-for-your-new-brand).
-1. [Skapa en kampanj](#creating-a-new-campaign) för upplevelser, till exempel teaser-sidor eller nyhetsbrev.
+1. [Skapa en kampanj](#creating-a-new-campaign) för upplevelser, till exempel teasersidor eller nyhetsbrev.
 1. Om det behövs kan du [definiera egenskaperna för den nya kampanjen](#defining-the-properties-for-your-new-campaign).
 
 Beroende på vilken typ av upplevelser du skapar måste du [skapa en upplevelse](#creating-a-new-experience). Hur upplevelsen ser ut och vilka åtgärder som följer efter att den har skapats beror på vilken typ av upplevelse du vill skapa:
@@ -45,7 +41,7 @@ Beroende på vilken typ av upplevelser du skapar måste du [skapa en upplevelse]
 
 * Om du skapar ett Adobe Target-erbjudande (tidigare Test&amp;Target):
 
-   1. [Skapa en upplevelse av Adobe Target-erbjudanden](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#creatingatesttargetofferexperience).
+   1. [Skapa en Adobe Target-upplevelse](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#creatingatesttargetofferexperience).
    1. [Integrera med Adobe Target](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#integratewithadobetesttarget)
 
 >[!NOTE]
@@ -54,7 +50,7 @@ Beroende på vilken typ av upplevelser du skapar måste du [skapa en upplevelse]
 
 ## Skapa ett nytt varumärke {#creating-a-new-brand}
 
-Så här skapar du ett nytt varumärke:
+Skapa ett nytt varumärke:
 
 1. Öppna **MCM** och markera **Kampanjer** i den vänstra rutan.
 
@@ -76,7 +72,7 @@ Så här skapar du ett nytt varumärke:
 
 ### Skapa en ny kampanj {#creating-a-new-campaign}
 
-Så här skapar du en ny kampanj:
+Skapa en ny kampanj:
 
 1. Från **Kampanjer** markerar du ditt nya varumärke i den vänstra rutan eller dubbelklickar på ikonen i den högra rutan.
 
@@ -95,13 +91,13 @@ Konfigurera kampanjegenskaper som styr beteendet:
 * **Prioritet:** Den här kampanjens prioritet i förhållande till andra kampanjer. När flera kampanjer är aktiverade samtidigt styr kampanjen som har högst prioritet besökarupplevelsen.
 * **På- och fråntid:** Dessa egenskaper styr tidsperioden när kampanjen styr besökarupplevelsen. Egenskapen On Time styr den tid då kampanjen börjar styra upplevelsen. Egenskapen Av-tid styr när kampanjerna slutar styra upplevelsen.
 * **Bild:** Bilden som representerar kampanjen i AEM.
-* **Cloud Services:** De Cloud Service som kampanjen är integrerad med. (Se [Integrera med Adobe Marketing Cloud](/help/sites-administering/marketing-cloud.md).)
+* **Cloud Service:** De Cloud Service som kampanjen är integrerad med. (Se [Integrera med Adobe Marketing Cloud](/help/sites-administering/marketing-cloud.md).)
 
 * **Adobe Target:** Egenskaper som konfigurerar kampanjer som är integrerade med Adobe Target. (Se [Integrera med Adobe Target](/help/sites-administering/target.md).)
 
-1. Från **Kampanjer**, välj ert varumärke. Välj kampanj i den högra rutan och klicka på **Egenskaper**.
+1. Från **Kampanjer**, välj ert varumärke. Välj kampanjen i den högra rutan och klicka på **Egenskaper**.
 
-   Du kan ange olika egenskaper, bland annat en **Titel**, **Beskrivning** och **Cloud Services** du vill ha.
+   Du kan ange olika egenskaper, bland annat en **Titel**, **Beskrivning** och **Cloud Service** du vill ha.
 
    ![chlimage_1-20](assets/chlimage_1-20.png)
 
@@ -141,7 +137,7 @@ Nu när du har skapat det grundläggande skelettet för din upplevelse måste du
 
    * [Integrera med Adobe Target](/help/sites-administering/target.md)
 
-### Lägga till en ny slutpunkt {#adding-a-new-touchpoint}
+### Lägga till en ny kontaktyta {#adding-a-new-touchpoint}
 
 Om du har befintliga upplevelser kan du lägga till en kontaktyta direkt från kalendervyn i MCM:
 
@@ -158,13 +154,13 @@ Om du har befintliga upplevelser kan du lägga till en kontaktyta direkt från k
 >[!NOTE]
 >
 >Adobe planerar inte att ytterligare förbättra denna funktion (Hantera leads).
->Rekommendationen är att [utnyttja Adobe Campaign och integrationen för att AEM](/help/sites-administering/campaign.md).
+>Rekommendationen är [utnyttja Adobe Campaign och integrationen för att AEM](/help/sites-administering/campaign.md).
 
-I AEM MCM kan du ordna och lägga till leads antingen genom att ange dem manuellt eller genom att importera en kommaseparerad lista, till exempel en utskickslista. Ytterligare sätt att generera leads är från nyhetsbrev eller communityregistreringar (om de är konfigurerade kan de utlösa ett arbetsflöde som fyller i leads).
+I AEM MCM kan du ordna och lägga till leads antingen genom att ange dem manuellt eller importera en kommaseparerad lista, till exempel en utskickslista. Ytterligare sätt att generera leads är från nyhetsbrev eller communityregistreringar (om de är konfigurerade kan de utlösa ett arbetsflöde som fyller i leads).
 
 Leads kategoriseras vanligtvis och placeras i en lista så att du senare kan utföra åtgärder i hela listan, till exempel skicka ut ett anpassat e-postmeddelande till en viss lista.
 
-I Kontrollpanelen får du tillgång till alla leads genom att klicka på **Leads** från den vänstra rutan. Du kan även komma åt leads från **Listor** fönster.
+I Kontrollpanelen får du tillgång till alla leads genom att klicka på **Leads** från den vänstra rutan. Du kan även få åtkomst till leads från **Listor** fönster.
 
 ![screen_shot_2012-02-21at114748am](assets/screen_shot_2012-02-21at114748am.png)
 
@@ -224,7 +220,6 @@ Så här importerar du leads från en kommaavgränsad lista:
    >* Klicka på **Importera leads** i **Listor** fönster
    >* Klicka **Listor** och i **verktyg** meny, välja **Importera leads**.
 
-
 1. I **verktyg** meny, välja **Importera** **Leads**.
 
 1. Ange informationen enligt beskrivningen i Exempeldata. Följande fält kan importeras: e-post,familjenamn,givetNamn,kön,omMe,stad,land,telefonnummer,postnummer,region,gatuadress
@@ -235,10 +230,12 @@ Så här importerar du leads från en kommaavgränsad lista:
    >
    >
    >`email,givenName,familyName` - om det skrivs som `givenname`systemet känner till exempel inte igen det.
+   >
+   >
 
    ![screen_shot_2012-02-21at123055pm](assets/screen_shot_2012-02-21at123055pm.png)
 
-1. Klicka på **Nästa**. Här förhandsgranskar du leads för att säkerställa att de är korrekta.
+1. Klicka på **Nästa**. Här förhandsgranskar du leads för att försäkra dig om att de är korrekta.
 
    ![screen_shot_2012-02-21at123104pm](assets/screen_shot_2012-02-21at123104pm.png)
 
@@ -258,7 +255,7 @@ Så här lägger du till leads till befintliga listor:
 
    ![screen_shot_2012-02-21at123835pm](assets/screen_shot_2012-02-21at123835pm.png)
 
-1. I **verktyg** meny, välja **Lägg till i lista....** The **Lägg till i listan** öppnas.
+1. I **verktyg** meny, välja **Lägg till i lista...** The **Lägg till i listan** öppnas.
 
    ![screen_shot_2012-02-21at124019pm](assets/screen_shot_2012-02-21at124019pm.png)
 
@@ -305,13 +302,13 @@ Om du vill ta bort befintliga leads i MCM markerar du kryssrutan bredvid leadet 
 >[!NOTE]
 >
 >Adobe planerar inte att ytterligare förbättra denna funktion (hantera listor).
->Rekommendationen är att [utnyttja Adobe Campaign och integrationen för att AEM](/help/sites-administering/campaign.md).
+>Rekommendationen är [utnyttja Adobe Campaign och integrationen för att AEM](/help/sites-administering/campaign.md).
 
 Med listor kan du ordna dina leads i grupper. Med listor kan ni inrikta era marknadsföringskampanjer på en viss grupp personer, till exempel kan ni skicka ett målinriktat nyhetsbrev till en lista. Listor visas i MCM-modulen, antingen på kontrollpanelen eller genom att klicka på **Listor**. Båda ger dig namnet på listan och antalet medlemmar.
 
 ![screen_shot_2012-02-21at125021pm](assets/screen_shot_2012-02-21at125021pm.png)
 
-Om du klickar **Listor** kan du även visa om listan är medlem i en annan lista och se en beskrivning.
+Klicka **Listor** kan du även visa om listan är medlem i en annan lista och se en beskrivning.
 
 ![screen_shot_2012-02-21at124828pm](assets/screen_shot_2012-02-21at124828pm.png)
 
@@ -319,7 +316,7 @@ Om du klickar **Listor** kan du även visa om listan är medlem i en annan lista
 
 Så här skapar du en ny lista (grupp):
 
-1. Klicka på **Ny lista ...** eller in **Listor**, klicka **Nytt** ... Fönstret Skapa lista öppnas.
+1. Klicka på på MCM-kontrollpanelen **Ny lista ...** eller in **Listor**, klicka **Nytt** ... Fönstret Skapa lista öppnas.
 
    ![screen_shot_2012-02-21at125147pm](assets/screen_shot_2012-02-21at125147pm.png)
 
@@ -329,7 +326,7 @@ Så här skapar du en ny lista (grupp):
 
 ### Ändra befintliga listor {#modifying-existing-lists}
 
-Så här ändrar du en befintlig lista:
+Ändra en befintlig lista:
 
 1. Klicka på **Listor**.
 
@@ -353,7 +350,7 @@ Om du vill ta bort befintliga listor markerar du kryssrutan intill listan i MCM 
 
 ### Sammanfoga listor {#merging-lists}
 
-Du kan sammanfoga en befintlig lista med en annan lista. När du gör detta blir den lista du sammanfogar medlem i den andra listan. Den finns fortfarande som en separat enhet och bör inte tas bort.
+Du kan sammanfoga en befintlig lista med en annan lista. När du gör detta blir listan som du sammanfogar medlem i den andra listan. Den finns fortfarande som en separat enhet och bör inte tas bort.
 
 Du kan sammanfoga listor om du har samma konferens på två olika platser och vill sammanfoga dem i en deltagarlista över alla konferenser.
 

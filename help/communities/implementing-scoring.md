@@ -9,9 +9,9 @@ docset: aem65
 tagskeywords: scoring, badging, badges, gamification
 role: Admin
 exl-id: 4aa857f7-d111-4548-8f03-f6d6c27acf51
-source-git-commit: d3c40d1452217983b01245ec1c81111a3c4e7295
+source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
 workflow-type: tm+mt
-source-wordcount: '2853'
+source-wordcount: '2852'
 ht-degree: 0%
 
 ---
@@ -50,7 +50,7 @@ UGC har olika märken oavsett om de har tilldelats eller förvärvats enligt reg
 
 ### Användargränssnitt för hantering av emblem {#badge-management-ui}
 
-Communities [Badges Console](/help/communities/badges.md) Med kan du lägga till egna emblem som kan visas för en medlem när den har förtjänats (tilldelats) eller när de får en viss roll i communityn (tilldelade).
+Communities [Badges Console](/help/communities/badges.md) Med kan du lägga till egna emblem som kan visas för en medlem när den har tjänats in (tilldelats) eller när de får en viss roll i communityn (tilldelats).
 
 ### Tilldelade märken {#assigned-badges}
 
@@ -123,7 +123,7 @@ Om du vill aktivera poängsättning och märken lägger du till egenskaperna `sc
 
 Om webbplatsen redan är publicerad, efter att du har tillämpat alla regler och aktiverat komponenter, publicerar du om den.
 
-Reglerna som gäller för en komponent som har aktiverats för badging är reglerna för den aktuella noden eller dess överordnade nod.
+Reglerna som gäller för en komponent som har aktiverats för badging är de som gäller för den aktuella noden eller dess överordnade nod.
 
 Om noden är av typen `cq:Page` (rekommenderas) och sedan använda CRXDE|Lite för att lägga till egenskaperna i `jcr:content` nod.
 
@@ -134,7 +134,7 @@ Om noden är av typen `cq:Page` (rekommenderas) och sedan använda CRXDE|Lite f�
 
 >[!NOTE]
 >
->Om en bedömningsregel inte verkar ha någon effekt på att dela ut taggar kontrollerar du att resultatregeln inte har blockerats av spårningsregelns egenskap scoringRules. Se avsnittet [Märkningsregler](#badging-rules).
+>Om en bedömningsregel inte verkar ha någon effekt på att dela ut taggar kontrollerar du att resultatregeln inte har blockerats av spårningsregelns egenskap scoringRules. Se avsnittet som heter [Märkningsregler](#badging-rules).
 
 ### Aktivera emblem för komponent {#enable-badges-for-component}
 
@@ -154,7 +154,7 @@ En boolesk egenskap, `allowBadges`, aktiverar/inaktiverar visning av emblem för
 
 Poängregler är grunden för poängsättning för att dela ut märken.
 
-Varje resultatregel är en lista med en eller flera underlinjer. Poängregler tillämpas på communitywebbplatsinnehållet för att identifiera de regler som ska gälla när emblem är aktiverade.
+Varje resultatregel är en lista med en eller flera underlinjer. Poängregler tillämpas på communitywebbplatsinnehållet för att identifiera reglerna som ska gälla när emblem är aktiverade.
 
 Poängregler ärvs men är inte additiva. Till exempel:
 
@@ -173,9 +173,9 @@ Bakgrundsmusik lagras i SRP.
 
 >[!NOTE]
 >
->God praxis: unikt namn för varje poängregel.
+>God praxis: ge varje resultatregel ett unikt namn.
 >
->Poängregelnamnen ska vara globalt unika. de ska inte sluta med samma namn.
+>Poängregelnamn ska vara globalt unika. De får inte sluta med samma namn.
 >
 >Ett exempel på vad *not* att göra:
 >
@@ -192,7 +192,7 @@ Varje bedömningsdelpensel identifierar:
 * Vilken specifik communityfunktion är inblandad?
 * Hur många poäng tilldelas?
 
-Som standard tilldelas poäng till den medlem som utför åtgärden, såvida inte underrubriken anger att ägaren av innehållet tar emot poängen ( `forOwner`).
+Som standard tilldelas poäng till den medlem som utför åtgärden, såvida inte delpennan anger att ägaren av innehållet tar emot poängen ( `forOwner`).
 
 Varje subrul kan ingå i en eller flera poängregler.
 
@@ -215,9 +215,9 @@ Underlinjer är noder av typen `cq:Page` med egenskaper på `jcr:content`nod som
    <td>Lång</td>
    <td>
     <ul>
-     <li>krävs, verbet motsvarar en händelseåtgärd</li>
+     <li>krävs; verbet motsvarar en händelseåtgärd</li>
      <li>det måste finnas minst en verb-egenskap</li>
-     <li>verbet måste anges i VERb</li>
+     <li>verbet måste anges i VERSALER</li>
      <li>det kan finnas flera verb-egenskaper, men inga dubbletter</li>
      <li>värdet är poängvärdet som ska användas för den här händelsen</li>
      <li>värdet kan vara positivt eller negativt</li>
@@ -229,10 +229,10 @@ Underlinjer är noder av typen `cq:Page` med egenskaper på `jcr:content`nod som
    <td>Sträng</td>
    <td>
     <ul>
-     <li>frivilligt, begränsar delpensel till communitykomponenter som identifieras av händelseämnen</li>
-     <li>om angivet: värdet är en sträng med flera värden för händelseämnen</li>
+     <li>frivilligt; begränsar delpensel till communitykomponenter som identifieras av händelseämnen</li>
+     <li>if specified : value is multi-value string of event topics</li>
      <li>en lista med ämnen i releasen finns i <a href="#topics-and-verbs">Ämnen och verb</a> section</li>
-     <li>standard ska gälla för alla ämnen som är kopplade till verbet</li>
+     <li>standard ska gälla för alla ämnen som är kopplade till verberna</li>
     </ul> </td>
   </tr>
   <tr>
@@ -240,7 +240,7 @@ Underlinjer är noder av typen `cq:Page` med egenskaper på `jcr:content`nod som
    <td>Boolean</td>
    <td>
     <ul>
-     <li>frivilligt, inte är relevant när en medlem agerar på innehåll som han/hon äger</li>
+     <li>valfritt, inte relevant när en medlem agerar på innehåll som han/hon äger</li>
      <li>om true, använd poäng på ägaren av det innehåll som ska hanteras</li>
      <li>om falskt, lägg till poäng för en medlem som utför åtgärden</li>
      <li>default is false</li>
@@ -251,7 +251,7 @@ Underlinjer är noder av typen `cq:Page` med egenskaper på `jcr:content`nod som
    <td>Sträng</td>
    <td>
     <ul>
-     <li>frivilligt, identifierar bedömningsmotorn</li>
+     <li>valfritt, identifierar poängmotorn</li>
      <li>om "grundläggande", anger poängsättningsmotorn baserat på kvantitet
       <ul>
        <li>ingår i releasen</li>
@@ -300,7 +300,7 @@ Regler för märkning länkar till poängregler genom att ange:
 * Poängregel
 * Poäng som krävs för att tilldelas ett specifikt märke
 
-Märkningsregler är noder av typen `cq:Page` med egenskaper på `jcr:content` nod som korrelerar poängregler till poäng och emblem.
+Badging-regler är noder av typen `cq:Page` med egenskaper på `jcr:content` nod som korrelerar poängregler till poäng och emblem.
 
 Reglerna för märkning består av ett obligatoriskt `thresholds` egenskap som är en ordnad lista över bakgrundsmusik mappad till emblem. Poängen måste ordnas i högre värde. Till exempel:
 
@@ -316,13 +316,13 @@ Reglerna för märkning består av ett obligatoriskt `thresholds` egenskap som �
 
    * En guldbricka utdelas när 80 poäng har samlats.
 
-Betygsregler kombineras med poängregler, som bestämmer hur poäng ackumuleras. Se avsnittet [Använd regler för innehåll](#apply-rules-to-content).
+Betygsregler kombineras med poängregler, som bestämmer hur poäng ackumuleras. Se avsnittet som heter [Använd regler för innehåll](#apply-rules-to-content).
 
 The `scoringRules` egenskapen för en badging-regel begränsar helt enkelt vilka poängregler som kan kombineras med den speciella badging-regeln.
 
 >[!NOTE]
 >
->God praxis: skapa unika emblem-bilder för varje AEM.
+>Bästa tillvägagångssätt: skapa unika emblem-bilder för varje AEM.
 
 ![badging-rule-configuration](assets/badging-rule-configuration.png)
 
@@ -434,7 +434,7 @@ För de communitykomponenter som levereras beskrivs följande tabeller `verbs` d
 
 >[!NOTE]
 >
->En ny boolesk egenskap, `allowBadges`, aktiverar/inaktiverar visning av emblem för en komponentinstans. Den kan konfigureras i uppdaterad [dialogrutor för komponentredigering](/help/communities/author-communities.md) genom en kryssruta med etiketten **Visa emblem**.
+>En ny boolesk egenskap, `allowBadges`, aktiverar/inaktiverar visning av emblem för en komponentinstans. Den kan konfigureras i uppdaterad [dialogrutor för redigering av komponenter](/help/communities/author-communities.md) genom en kryssruta med etiketten **Visa emblem**.
 
 **[Kalenderkomponent](/help/communities/calendar.md)**
 SocialEvent `topic`= com/adobe/cq/social/calendar
@@ -446,7 +446,7 @@ SocialEvent `topic`= com/adobe/cq/social/calendar
 | UPPDATERA | medlemmens kalenderhändelse eller -kommentar har redigerats |
 | DELETE | medlemmens kalenderhändelse eller -kommentar tas bort |
 
-**[Komponenten Kommentarer](/help/communities/comments.md)**
+**[Kommentarskomponent](/help/communities/comments.md)**
 SocialEvent `topic`= com/adobe/cq/social/comment
 
 | **Verb** | **Beskrivning** |
@@ -473,7 +473,7 @@ SocialEvent `topic`= com/adobe/cq/social/forum
 |---|---|
 | POST | medlem skapar forumämne |
 | LÄGG TILL | medlemssvar på forumämnet |
-| UPPDATERA | Medlemmens forumämne eller svar har redigerats |
+| UPPDATERA | Medlemmens forum eller svar har redigerats |
 | DELETE | forumämnet eller svaret för en medlem tas bort |
 
 **[Journalkomponent](/help/communities/blog-feature.md)**
@@ -494,7 +494,7 @@ SocialEvent `topic` = com/adobe/cq/social/qna
 | POST | medlem skapar en QnA-fråga |
 | LÄGG TILL | medlem skapar ett QnA-svar |
 | UPPDATERA | -medlemmens fråga eller svar har redigerats |
-| MARKERA | Medlemmens svar har valts |
+| MARKERA | Medlemmens svar är markerat |
 | AVMARKERA | Medlemmens svar är avmarkerat |
 | DELETE | en medlems fråga eller svar tas bort |
 
@@ -507,7 +507,7 @@ SocialEvent `topic`= com/adobe/cq/social/review
 | UPPDATERA | Medlemmens granskning har redigerats |
 | DELETE | Medlemmens granskning har tagits bort |
 
-**[Klassificeringskomponent](/help/communities/rating.md)**
+**[Värderingskomponent](/help/communities/rating.md)**
 SocialEvent `topic`= com/adobe/cq/social/tally/rating
 
 | **Verb** | **Beskrivning** |
@@ -531,7 +531,7 @@ SocialEvent `topic`= com/adobe/cq/social/moderation
 | NEKA | Medlemmens innehåll nekas |
 | FLAGGA-SOM-OLÄMPLIGT | medlemmens innehåll är flaggat |
 | OLÄMPLIG FLAGNING SOM | medlemmens innehåll är oflaggat |
-| ACCEPTERA | Medlemmens innehåll godkänns av moderatorn |
+| GODKÄNN | Medlemmens innehåll godkänns av moderatorn |
 | STÄNG | medlem stänger kommentarer till redigeringar och svar |
 | ÖPPNA | medlem återöppnar kommentar |
 
@@ -559,7 +559,7 @@ Se `scoringRules` egenskap för [Märkningsregler](#badging-rules).
 
 De flesta egenskaper och värden, särskilt verbet, är skiftlägeskänsliga. Verb måste vara VERSALER när de används i en subpensel.
 
-Om funktionen inte fungerar som väntat kontrollerar du att data har angetts korrekt.
+Om funktionen inte fungerar som förväntat kontrollerar du att data har angetts korrekt.
 
 ## Snabbtest {#quick-test}
 
@@ -617,10 +617,10 @@ Nästa, [publicera igen](/help/communities/sites-console.md#publishing-the-site)
 
 * Bläddra till komponenten i publiceringsinstansen.
 * Logga in som community-medlem (till exempel: weston.mccall@dodgit.com / lösenord).
-* Lägg upp ett nytt forumämne.
-* Sidan måste uppdateras för att märket ska kunna visas.
+* Lägg upp ett nytt forumtema.
+* Sidan måste uppdateras för att emblemet ska kunna visas.
 
-   * Logga ut och logga in som en annan community-medlem (till exempel: aaron.mcdonald@mailinator.com/lösenord).
+   * Logga ut och logga in som en annan community-medlem (till exempel: aaron.mcdonald@mailinator.com/password).
 
 * Välj forum.
 

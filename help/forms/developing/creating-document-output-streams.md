@@ -1,17 +1,13 @@
 ---
 title: Skapa dokumentutdataströmmar
-seo-title: Creating Document Output Streams
 description: Använd utdatatjänsten för att konvertera dokument till PDF (inklusive PDF/A-dokument), PostScript, Printer Control Language (PCL) och Zebra - ZPL, Intermec - IPL, Datamax - DPL och TecToshiba - TPCL-etikettformat.
-seo-description: Use the Output service to convert documents as PDF (including PDF/A documents), PostScript, Printer Control Language (PCL), and Zebra - ZPL, Intermec - IPL, Datamax - DPL, and TecToshiba - TPCL label formats.
-uuid: 80c28efa-35ce-4073-9ca6-2d93bcd67fdd
 contentOwner: admin
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
-discoiquuid: de527d50-991b-4ca3-a8ac-44d5cab988e9
 role: Developer
 exl-id: a521bfac-f417-4002-9c5c-8d7794d3eec7
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
 workflow-type: tm+mt
 source-wordcount: '19016'
 ht-degree: 0%
@@ -33,7 +29,7 @@ Med Output-tjänsten kan du skriva ut dokument som PDF (inklusive PDF/A-dokument
 
 Med hjälp av utdatatjänsten kan du sammanfoga XML-formulärdata med en formulärdesign och skicka dokumentet till en nätverksskrivare eller fil.
 
-Det finns två sätt att skicka en formulärdesign (en XDP-fil) till utdatatjänsten. Du kan skicka `com.adobe.idp.Document` -instans som innehåller en formulärdesign för Output-tjänsten. Du kan också skicka ett URI-värde som anger platsen för formulärdesignen. Båda dessa sätt diskuteras i *Programmera med AEM*.
+Det finns två sätt att skicka en formulärdesign (en XDP-fil) till utdatatjänsten. Du kan skicka en `com.adobe.idp.Document` -instans som innehåller en formulärdesign för Output-tjänsten. Du kan också skicka ett URI-värde som anger platsen för formulärdesignen. Båda dessa sätt diskuteras i *Programmera med AEM*.
 
 >[!NOTE]
 >
@@ -49,7 +45,7 @@ I följande avsnitt visas hur du skickar en formulärdesign i en `com.adobe.idp.
 * [Skicka dokument som finns i innehållstjänster (borttagna) till utdatatjänsten](creating-document-output-streams.md#passing-documents-located-in-content-services-deprecated-to-the-output-service)
 * [Skapa PDF-dokument med fragment](creating-document-output-streams.md#creating-pdf-documents-using-fragments)
 
-När du bestämmer vilken teknik du ska använda är det viktigt att du hämtar formulärdesignen från en annan AEM Forms-tjänst och sedan skickar den i en `com.adobe.idp.Document` -instans. Båda *Skicka dokument till utdatatjänsten* och *Skapa PDF-dokument med fragment* visas hur du hämtar en formulärdesign från en annan AEM Forms-tjänst. Det första avsnittet hämtar formulärdesignen från innehållstjänster (borttagen). Det andra avsnittet hämtar formulärdesignen från Assembler-tjänsten.
+När du bestämmer vilken teknik du ska använda är det viktigt att du hämtar formulärdesignen från en annan AEM Forms-tjänst och sedan skickar den i en `com.adobe.idp.Document` -instans. Båda *Skicka dokument till Output Service* och *Skapa PDF-dokument med fragment* visas hur du hämtar en formulärdesign från en annan AEM Forms-tjänst. Det första avsnittet hämtar formulärdesignen från innehållstjänster (borttagen). Det andra avsnittet hämtar formulärdesignen från Assembler-tjänsten.
 
 Om du hämtar formulärdesignen från en fast plats, t.ex. i filsystemet, kan du använda vilken teknik som helst. Du kan alltså ange URI-värdet till en XDP-fil eller använda en `com.adobe.idp.Document` -instans.
 
@@ -75,7 +71,7 @@ Du kan utföra följande uppgifter med hjälp av utdatatjänsten:
 
 ## Skapa PDF-dokument {#creating-pdf-documents}
 
-Du kan använda utdatatjänsten för att skapa ett PDF-dokument som är baserat på en formulärdesign och XML-formulärdata som du anger. Det PDF-dokument som skapas av Output-tjänsten är inte ett interaktivt PDF-dokument. en användare inte kan ange eller ändra formulärdata.
+Du kan använda utdatatjänsten för att skapa ett PDF-dokument som är baserat på en formulärdesign och XML-formulärdata som du anger. PDF-dokumentet som skapas av utdatatjänsten är inte ett interaktivt PDF-dokument. Användaren kan inte ange eller ändra formulärdata.
 
 Om du vill skapa ett PDF-dokument som är avsett för långsiktig lagring rekommenderar vi att du skapar ett PDF/A-dokument. (Se [Skapa PDF/A-dokument](creating-document-output-streams.md#creating-pdf-a-documents).)
 
@@ -113,7 +109,7 @@ Om AEM Forms körs på en J2EE-programserver som stöds och som inte är JBoss, 
 
 **Skapa ett Output Client-objekt**
 
-Innan du programmässigt kan utföra en utdatatjänståtgärd måste du skapa ett klientobjekt för utdatatjänsten. Om du använder Java API skapar du en `OutputClient` -objekt. Skapa en `OutputServiceService` -objekt.
+Innan du programmässigt kan utföra en utdatatjänståtgärd måste du skapa ett klientobjekt för utdatatjänsten. Om du använder Java API skapar du en `OutputClient` -objekt. Om du använder webbtjänstens API för utdata skapar du en `OutputServiceService` -objekt.
 
 **Referera en XML-datakälla**
 
@@ -261,7 +257,7 @@ Skapa ett PDF-dokument med hjälp av utdata-API (Java):
 
    >[!NOTE]
    >
-   >När du genererar ett PDF-dokument genom att anropa `generatePDFOutput` ska du vara medveten om att du inte kan sammanfoga data med ett XFA PDF-formulär som är signerat eller certifierat. (Se [Digitalt signera och certifiera dokument ](/help/forms/developing/digitally-signing-certifying-documents.md#digitally-signing-and-certifying-documents)*.)*
+   >När ett PDF-dokument skapas genom att `generatePDFOutput` ska du vara medveten om att du inte kan sammanfoga data med ett XFA PDF-formulär som är signerat eller certifierat. (Se [Digitalt signera och certifiera dokument ](/help/forms/developing/digitally-signing-certifying-documents.md#digitally-signing-and-certifying-documents)*.)*
 
    >[!NOTE]
    >
@@ -301,13 +297,13 @@ Skapa ett PDF-dokument med hjälp av Output API (webbtjänsten):
 
    >[!NOTE]
    >
-   >Ersätt `localhost` med IP-adressen till den server som är värd för AEM Forms.
+   >Ersätt `localhost` med IP-adressen till den server där AEM Forms finns.
 
 1. Skapa ett Output Client-objekt.
 
    * Skapa en `OutputServiceClient` genom att använda dess standardkonstruktor.
    * Skapa en `OutputServiceClient.Endpoint.Address` genom att använda `System.ServiceModel.EndpointAddress` konstruktor. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/OutputService?blob=mtom`.) Du behöver inte använda `lc_version` -attribut. Det här attributet används när du skapar en tjänstreferens. Ange dock `?blob=mtom` för att använda MTOM.
-   * Skapa en `System.ServiceModel.BasicHttpBinding` genom att hämta värdet för `OutputServiceClient.Endpoint.Binding` fält. Sänd returvärdet till `BasicHttpBinding`.
+   * Skapa en `System.ServiceModel.BasicHttpBinding` genom att hämta värdet för `OutputServiceClient.Endpoint.Binding` fält. Skicka returvärdet till `BasicHttpBinding`.
    * Ange `System.ServiceModel.BasicHttpBinding` objektets `MessageEncoding` fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
    * Aktivera grundläggande HTTP-autentisering genom att utföra följande åtgärder:
 
@@ -358,7 +354,7 @@ Skapa ett PDF-dokument med hjälp av Output API (webbtjänsten):
 
    >[!NOTE]
    >
-   >När du genererar ett PDF-dokument genom att anropa `generatePDFOutput` ska du vara medveten om att du inte kan sammanfoga data med ett XFA PDF-formulär som är signerat eller certifierat. (Se [Digitalt signera och certifiera dokument ](/help/forms/developing/digitally-signing-certifying-documents.md#digitally-signing-and-certifying-documents)*.)*
+   >När ett PDF-dokument skapas genom att `generatePDFOutput` ska du vara medveten om att du inte kan sammanfoga data med ett XFA PDF-formulär som är signerat eller certifierat. (Se [Digitalt signera och certifiera dokument ](/help/forms/developing/digitally-signing-certifying-documents.md#digitally-signing-and-certifying-documents)*.)*
 
    >[!NOTE]
    >
@@ -435,7 +431,7 @@ Om AEM Forms körs på en J2EE-programserver som stöds och som inte är JBoss, 
 
 **Skapa ett Output Client-objekt**
 
-Innan du programmässigt kan utföra en utdatatjänståtgärd måste du skapa ett klientobjekt för utdatatjänsten. Om du använder Java API skapar du en `OutputClient` -objekt. Skapa en `OutputServiceService` -objekt.
+Innan du programmässigt kan utföra en utdatatjänståtgärd måste du skapa ett klientobjekt för utdatatjänsten. Om du använder Java API skapar du en `OutputClient` -objekt. Om du använder webbtjänstens API för utdata skapar du en `OutputServiceService` -objekt.
 
 **Referera en XML-datakälla**
 
@@ -443,7 +439,7 @@ Om du vill sammanfoga data med formulärdesignen måste du referera till en XML-
 
 **Ange körningsalternativ för PDF/A**
 
-Du kan ange alternativet Fil-URI när du skapar ett PDF/A-dokument. URI:n är relativ till J2EE-programservern som är värd för AEM Forms. Det innebär att om du anger C:\Adobe skrivs filen till mappen på servern, inte till klientdatorn. URI:n anger namn och plats för den PDF/A-fil som utdatatjänsten genererar.
+Du kan ange alternativet Fil-URI när du skapar ett PDF/A-dokument. URI:n är relativ till J2EE-programservern där AEM Forms finns. Det innebär att om du anger C:\Adobe skrivs filen till mappen på servern, inte till klientdatorn. URI:n anger namn och plats för den PDF/A-fil som utdatatjänsten genererar.
 
 **Ange alternativ för återgivning vid körning**
 
@@ -453,9 +449,9 @@ The `PDFARevisionNumber` värde är revisionsnumret för ett PDF/A-dokument. Mer
 
 >[!NOTE]
 >
->Du kan inte ange att taggade Adobe PDF-alternativ ska vara `false` när du skapar ett PDF/A 1A-dokument. PDF/A 1A är alltid ett taggat PDF-dokument. Du kan inte heller ange att taggade Adobe PDF-alternativ ska vara `true` när du skapar ett PDF/A 1B-dokument. PDF/A 1B kommer alltid att vara ett otaggat PDF-dokument.
+>Du kan inte ange att taggade Adobe PDF-alternativ ska `false` när du skapar ett PDF/A 1A-dokument. PDF/A 1A är alltid ett taggat PDF-dokument. Du kan inte heller ställa in alternativet tagged Adobe PDF på `true` när du skapar ett PDF/A 1B-dokument. PDF/A 1B kommer alltid att vara ett otaggat PDF-dokument.
 
-**Skapa ett PDF/A-dokument**
+**Generera ett PDF/A-dokument**
 
 När du har refererat till en giltig XML-datakälla som innehåller formulärdata och angett körningsalternativ, kan du anropa utdatatjänsten, vilket gör att den genererar ett PDF/A-dokument.
 
@@ -559,13 +555,13 @@ Skapa ett PDF/A-dokument med hjälp av Output API (webbtjänsten):
 
    >[!NOTE]
    >
-   >Ersätt `localhost` med IP-adressen till den server som är värd för AEM Forms.
+   >Ersätt `localhost` med IP-adressen till den server där AEM Forms finns.
 
 1. Skapa ett Output Client-objekt.
 
    * Skapa en `OutputServiceClient` genom att använda dess standardkonstruktor.
    * Skapa en `OutputServiceClient.Endpoint.Address` genom att använda `System.ServiceModel.EndpointAddress` konstruktor. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/OutputService?blob=mtom`.) Du behöver inte använda `lc_version` -attribut. Det här attributet används när du skapar en tjänstreferens. Ange dock `?blob=mtom` för att använda MTOM.
-   * Skapa en `System.ServiceModel.BasicHttpBinding` genom att hämta värdet för `OutputServiceClient.Endpoint.Binding` fält. Sänd returvärdet till `BasicHttpBinding`.
+   * Skapa en `System.ServiceModel.BasicHttpBinding` genom att hämta värdet för `OutputServiceClient.Endpoint.Binding` fält. Skicka returvärdet till `BasicHttpBinding`.
    * Ange `System.ServiceModel.BasicHttpBinding` objektets `MessageEncoding` fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
    * Aktivera grundläggande HTTP-autentisering genom att utföra följande åtgärder:
 
@@ -590,8 +586,8 @@ Skapa ett PDF/A-dokument med hjälp av Output API (webbtjänsten):
 1. Ange alternativ för återgivning vid körning.
 
    * Skapa en `RenderOptionsSpec` genom att använda dess konstruktor.
-   * Ange `PDFAConformance` genom att tilldela en `PDFAConformance` enum-värde till `RenderOptionsSpec` objektets `PDFAConformance` datamedlem. Om du till exempel vill ange överensstämmelsenivå A tilldelar du `PDFAConformance.A` till den här datamedlemmen.
-   * Ange `PDFARevisionNumber` genom att tilldela en `PDFARevisionNumber` enum-värde till `RenderOptionsSpec` objektets `PDFARevisionNumber` datamedlem. Tilldela `PDFARevisionNumber.Revision_1` till den här datamedlemmen.
+   * Ange `PDFAConformance` genom att tilldela en `PDFAConformance` enum-värde till `RenderOptionsSpec` objektets `PDFAConformance` datamedlem. Om du till exempel vill ange överensstämmelsenivå A tilldelar du `PDFAConformance.A` till denna datamedlem.
+   * Ange `PDFARevisionNumber` genom att tilldela en `PDFARevisionNumber` enum-värde till `RenderOptionsSpec` objektets `PDFARevisionNumber` datamedlem. Tilldela `PDFARevisionNumber.Revision_1` till denna datamedlem.
 
    >[!NOTE]
    >
@@ -634,7 +630,7 @@ Skapa ett PDF/A-dokument med hjälp av Output API (webbtjänsten):
 
 Output-tjänsten återger ett icke-interaktivt PDF-formulär som är baserat på en formulärdesign som vanligtvis sparas som en XDP-fil och skapas i Designer. Du kan skicka en `com.adobe.idp.Document` objekt som innehåller formulärdesignen för Output-tjänsten. Utdatatjänsten återger sedan formulärdesignen som finns i `com.adobe.idp.Document` -objekt.
 
-En fördel med att skicka en `com.adobe.idp.Document` -objektet till Output-tjänsten är att andra AEM Forms-serviceåtgärder returnerar ett `com.adobe.idp.Document` -instans. Det innebär att du kan få en `com.adobe.idp.Document` -instans från en annan tjänståtgärd och återge den. Anta till exempel att en XDP-fil lagras i en Content Services-nod (utgått) med namnet `/Company Home/Form Designs`, vilket visas på följande bild.
+En fördel med att skicka en `com.adobe.idp.Document` -objektet till Output-tjänsten är att andra AEM Forms-serviceåtgärder returnerar ett `com.adobe.idp.Document` -instans. Du kan alltså få en `com.adobe.idp.Document` -instans från en annan tjänståtgärd och återge den. Anta till exempel att en XDP-fil lagras i en Content Services-nod (utgått) med namnet `/Company Home/Form Designs`, vilket visas på följande bild.
 
 Du kan hämta Loan.xdp programmatiskt från Content Services (utgått) och skicka XDP-filen till Output-tjänsten i en `com.adobe.idp.Document` -objekt.
 
@@ -658,7 +654,7 @@ Inkludera de filer som behövs i utvecklingsprojektet. Om du skapar ett klientpr
 
 **Skapa ett utdata och ett API-objekt för dokumenthanteringsklienten**
 
-Innan du programmässigt kan utföra en API-åtgärd för en utdatatjänst skapar du ett Output Client API-objekt. Eftersom det här arbetsflödet hämtar en XDP-fil från Content Services (utgått) skapar du också ett API-objekt för dokumenthantering.
+Innan du programmässigt kan utföra en API-åtgärd för en utdatatjänst skapar du ett API-objekt för utdataklienten. Eftersom det här arbetsflödet hämtar en XDP-fil från Content Services (utgått) skapar du också ett API-objekt för dokumenthantering.
 
 **Hämta formulärdesignen från innehållstjänster (borttagen)**
 
@@ -709,7 +705,7 @@ Skicka ett dokument som hämtats från Content Services (utgått) med hjälp av 
    Anropa `DocumentManagementServiceClientImpl` objektets `retrieveContent` och skicka följande värden:
 
    * Ett strängvärde som anger den lagringsplats där innehållet läggs till. Standardarkivet är `SpacesStore`. Detta värde är en obligatorisk parameter.
-   * Ett strängvärde som anger den fullständigt kvalificerade sökvägen för innehållet som ska hämtas (till exempel `/Company Home/Form Designs/Loan.xdp`). Detta värde är en obligatorisk parameter.
+   * Ett strängvärde som anger den fullständiga, kvalificerade sökvägen för innehållet som ska hämtas (till exempel `/Company Home/Form Designs/Loan.xdp`). Detta värde är en obligatorisk parameter.
    * Ett strängvärde som anger versionen. Det här värdet är en valfri parameter och du kan skicka en tom sträng. I det här fallet hämtas den senaste versionen.
 
    The `retrieveContent` returnerar en `CRCResult` -objekt som innehåller XDP-filen. Hämta en `com.adobe.idp.Document` instans genom att anropa `CRCResult` objektets `getDocument` -metod.
@@ -737,9 +733,9 @@ Skicka ett dokument som hämtats från Content Services (utgått) med hjälp av 
 
 [Sammanfattning av steg](creating-document-output-streams.md#summary-of-steps)
 
-[Snabbstart (EJB-läge): Skicka dokument till utdatatjänsten med Java API](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-passing-documents-to-the-output-service-using-the-java-api)
+[Snabbstart (EJB-läge): skicka dokument till utdatatjänsten med Java API](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-passing-documents-to-the-output-service-using-the-java-api)
 
-[Snabbstart (SOAP-läge): Skicka dokument till utdatatjänsten med Java API](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-passing-documents-to-the-output-service-using-the-java-api)
+[Snabbstart (SOAP-läge): skicka dokument till utdatatjänsten med Java API](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-passing-documents-to-the-output-service-using-the-java-api)
 
 [Inkludera AEM Forms Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -759,19 +755,20 @@ Skicka ett dokument som hämtats från innehållstjänster (borttaget) med hjäl
 
    >[!NOTE]
    >
-   >Ersätt `localhost` med IP-adressen till den server som är värd för AEM Forms.
+   >Ersätt `localhost` med IP-adressen till den server där AEM Forms finns.
 
 1. Skapa ett utdata och ett API-objekt för dokumenthanteringsklienten.
 
    * Skapa en `OutputServiceClient` genom att använda dess standardkonstruktor.
-   * Skapa en `OutputServiceClient.Endpoint.Address` genom att använda `System.ServiceModel.EndpointAddress` konstruktor. Skicka ett strängvärde som anger WSDL till Forms-tjänsten (till exempel `http://localhost:8080/soap/services/OutputService?blob=mtom`). Du behöver inte använda `lc_version` -attribut. Det här attributet används när du skapar en tjänstreferens.)
-   * Skapa en `System.ServiceModel.BasicHttpBinding` genom att hämta värdet för `OutputServiceClient.Endpoint.Binding` fält. Sänd returvärdet till `BasicHttpBinding`.
+   * Skapa en `OutputServiceClient.Endpoint.Address` genom att använda `System.ServiceModel.EndpointAddress` konstruktor. Skicka ett strängvärde som anger WSDL till Forms-tjänsten (till exempel `http://localhost:8080/soap/services/OutputService?blob=mtom`). Du behöver inte använda `lc_version` -attribut. Detta attribut används när du skapar en tjänstreferens.)
+   * Skapa en `System.ServiceModel.BasicHttpBinding` genom att hämta värdet för `OutputServiceClient.Endpoint.Binding` fält. Skicka returvärdet till `BasicHttpBinding`.
    * Ange `System.ServiceModel.BasicHttpBinding` objektets `MessageEncoding` fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
    * Aktivera grundläggande HTTP-autentisering genom att utföra följande åtgärder:
 
       * Tilldela AEM formuläranvändarnamn till fältet `OutputServiceClient.ClientCredentials.UserName.UserName`.
       * Tilldela motsvarande lösenordsvärde till fältet `OutputServiceClient.ClientCredentials.UserName.Password`.
       * Tilldela konstantvärdet `HttpClientCredentialType.Basic` till fältet `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
+
    * Tilldela konstantvärdet `BasicHttpSecurityMode.TransportCredentialOnly` till fältet `BasicHttpBindingSecurity.Security.Mode`.
 
    >[!NOTE]
@@ -783,12 +780,12 @@ Skicka ett dokument som hämtats från innehållstjänster (borttaget) med hjäl
    Hämta innehåll genom att anropa `DocumentManagementServiceClient` objektets `retrieveContent` och skicka följande värden:
 
    * Ett strängvärde som anger den lagringsplats där innehållet läggs till. Standardarkivet är `SpacesStore`. Detta värde är en obligatorisk parameter.
-   * Ett strängvärde som anger den fullständigt kvalificerade sökvägen för innehållet som ska hämtas (till exempel `/Company Home/Form Designs/Loan.xdp`). Detta värde är en obligatorisk parameter.
+   * Ett strängvärde som anger den fullständiga, kvalificerade sökvägen för innehållet som ska hämtas (till exempel `/Company Home/Form Designs/Loan.xdp`). Detta värde är en obligatorisk parameter.
    * Ett strängvärde som anger versionen. Det här värdet är en valfri parameter och du kan skicka en tom sträng. I det här fallet hämtas den senaste versionen.
    * En strängutdataparameter som lagrar värdet för bläddringslänken.
    * A `BLOB` utdataparameter som lagrar innehållet. Du kan använda den här utdataparametern för att hämta innehållet.
-   * A `ServiceReference1.MyMapOf_xsd_string_To_xsd_anyType` output-parameter som lagrar innehållsattribut.
-   * A `CRCResult` output-parameter. I stället för att använda det här objektet kan du använda `BLOB` output-parameter för att hämta innehållet.
+   * A `ServiceReference1.MyMapOf_xsd_string_To_xsd_anyType` utdataparameter som lagrar innehållsattribut.
+   * A `CRCResult` output-parameter. Du kan använda kommandot `BLOB` output-parameter för att hämta innehållet.
 
 1. Rendera det icke-interaktiva PDF-formuläret.
 
@@ -822,7 +819,7 @@ Skicka ett dokument som hämtats från innehållstjänster (borttaget) med hjäl
 
 Output-tjänsten återger ett icke-interaktivt PDF-formulär som är baserat på en formulärdesign som vanligtvis sparas som en XDP-fil och skapas i Designer. Du kan skicka en `com.adobe.idp.Document` objekt som innehåller formulärdesignen för Output-tjänsten. Utdatatjänsten återger sedan formulärdesignen som finns i `com.adobe.idp.Document` -objekt.
 
-En fördel med att skicka en `com.adobe.idp.Document` -objektet till Output-tjänsten är att andra AEM Forms-serviceåtgärder returnerar ett `com.adobe.idp.Document` -instans. Det innebär att du kan få en `com.adobe.idp.Document` -instans från en annan tjänståtgärd och återge den. Anta till exempel att en XDP-fil lagras i AEM Forms-databasen, vilket visas i följande bild.
+En fördel med att skicka en `com.adobe.idp.Document` -objektet till Output-tjänsten är att andra AEM Forms-serviceåtgärder returnerar ett `com.adobe.idp.Document` -instans. Du kan alltså få en `com.adobe.idp.Document` -instans från en annan tjänståtgärd och återge den. Anta till exempel att en XDP-fil lagras i AEM Forms-databasen, vilket visas i följande bild.
 
 ![pd_pd_formdatabas](assets/pd_pd_formrepository.png)
 
@@ -836,7 +833,7 @@ Du kan skapa en PDF baserad på en XDP-fil som finns i databasen på något av t
 
 [Snabbstart (EJB-läge): Skapa ett PDF-dokument baserat på en program-XDP-fil med Java API](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-creating-a-pdf-document-based-on-an-application-xdp-file-using-the-java-api) (visar hur du skickar platsen för XDP-filen med referens).
 
-[Snabbstart (EJB-läge): Skicka ett dokument som finns i AEM Forms-databasen till utdatatjänsten med Java API](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-passing-a-document-located-in-the-repository-to-the-output-service-using-the-java-api) (visar hur du programmässigt hämtar XDP-filen från AEM Forms-databasen och skickar den till Output-tjänsten i en `com.adobe.idp.Document` -instans). (I det här avsnittet beskrivs hur du utför den här uppgiften)
+[Snabbstart (EJB-läge): skicka ett dokument som finns i AEM Forms-databasen till utdatatjänsten med Java API](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-passing-a-document-located-in-the-repository-to-the-output-service-using-the-java-api) (visar hur du programmässigt hämtar XDP-filen från AEM Forms-databasen och skickar den till Output-tjänsten i en `com.adobe.idp.Document` -instans). (I det här avsnittet beskrivs hur du utför den här uppgiften)
 
 >[!NOTE]
 >
@@ -858,7 +855,7 @@ Inkludera de filer som behövs i utvecklingsprojektet. Om du skapar ett klientpr
 
 **Skapa ett utdata och ett API-objekt för dokumenthanteringsklienten**
 
-Innan du programmässigt kan utföra en API-åtgärd för en utdatatjänst skapar du ett Output Client API-objekt. Eftersom det här arbetsflödet hämtar en XDP-fil från Content Services (utgått) skapar du också ett API-objekt för dokumenthantering.
+Innan du programmässigt kan utföra en API-åtgärd för en utdatatjänst skapar du ett API-objekt för utdataklienten. Eftersom det här arbetsflödet hämtar en XDP-fil från Content Services (utgått) skapar du också ett API-objekt för dokumenthantering.
 
 **Hämta formulärdesignen från AEM Forms Repository**
 
@@ -931,7 +928,7 @@ Skicka ett dokument som hämtats från databasen med hjälp av utdatatjänsten o
 
 [Sammanfattning av steg](creating-document-output-streams.md#summary-of-steps)
 
-[Snabbstart (EJB-läge): Skicka ett dokument som finns i AEM Forms-databasen till utdatatjänsten med Java API](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-passing-a-document-located-in-the-repository-to-the-output-service-using-the-java-api)
+[Snabbstart (EJB-läge): skicka ett dokument som finns i AEM Forms-databasen till utdatatjänsten med Java API](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-passing-a-document-located-in-the-repository-to-the-output-service-using-the-java-api)
 
 [Inkludera AEM Forms Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -975,7 +972,7 @@ Innan du programmässigt kan utföra en API-åtgärd för en utdatatjänst skapa
 
 **Använd Assembler-tjänsten för att generera formulärdesignen**
 
-Använd Assembler-tjänsten för att generera formulärdesignen med fragment. Assembler-tjänsten returnerar en `com.adobe.idp.Document` -instans som innehåller formulärdesignen.
+Använd Assembler-tjänsten för att generera formulärdesignen med fragment. Assembler-tjänsten returnerar `com.adobe.idp.Document` -instans som innehåller formulärdesignen.
 
 **Använd utdatatjänsten för att generera PDF-dokumentet**
 
@@ -1029,13 +1026,12 @@ Skapa ett PDF-dokument baserat på fragment med hjälp av API:t för utdatatjän
    * Iterera genom `java.util.Map` tills du hittar resultatet `com.adobe.idp.Document` -objekt.
    * Anropa `com.adobe.idp.Document` objektets `copyToFile` metod för att extrahera det monterade XDP-dokumentet.
 
-
 1. Använd utdatatjänsten för att generera PDF-dokumentet.
 
    Anropa `OutputClient` objektets `generatePDFOutput2` och skicka följande värden:
 
    * A `TransformationFormat` uppräkningsvärde. Om du vill generera ett dokument i PDF anger du `TransformationFormat.PDF`
-   * Ett strängvärde som anger innehållsroten där de ytterligare resurserna, t.ex. bilder, finns
+   * Ett strängvärde som anger innehållsroten där de ytterligare resurserna, till exempel bilder, finns
    * A `com.adobe.idp.Document` objekt som representerar formulärdesignen (använd instansen som returneras av tjänsten Assembler)
    * A `PDFOutputOptionsSpec` objekt som innehåller körningsalternativ för PDF
    * A `RenderOptionsSpec` objekt som innehåller alternativ för återgivning vid körning
@@ -1083,19 +1079,20 @@ Skapa ett PDF-dokument baserat på fragment med hjälp av API:t för utdatatjän
 
    >[!NOTE]
    >
-   >Ersätt `localhost` med IP-adressen till den server som är värd för AEM Forms.
+   >Ersätt `localhost` med IP-adressen till den server där AEM Forms finns.
 
 1. Skapa ett Output and Assembler Client-objekt.
 
    * Skapa en `OutputServiceClient` genom att använda dess standardkonstruktor.
    * Skapa en `OutputServiceClient.Endpoint.Address` genom att använda `System.ServiceModel.EndpointAddress` konstruktor. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/OutputService?blob=mtom`.) Du behöver inte använda `lc_version` -attribut. Det här attributet används när du skapar en tjänstreferens. Ange dock `?blob=mtom` för att använda MTOM.
-   * Skapa en `System.ServiceModel.BasicHttpBinding` genom att hämta värdet för `OutputServiceClient.Endpoint.Binding` fält. Sänd returvärdet till `BasicHttpBinding`.
+   * Skapa en `System.ServiceModel.BasicHttpBinding` genom att hämta värdet för `OutputServiceClient.Endpoint.Binding` fält. Skicka returvärdet till `BasicHttpBinding`.
    * Ange `System.ServiceModel.BasicHttpBinding` objektets `MessageEncoding` fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
    * Aktivera grundläggande HTTP-autentisering genom att utföra följande åtgärder:
 
       * Tilldela användarnamnet för AEM formulär till `OutputServiceClient.ClientCredentials.UserName.UserName`fält.
       * Tilldela motsvarande lösenordsvärde till `OutputServiceClient.ClientCredentials.UserName.Password`fält.
       * Tilldela konstantvärdet `HttpClientCredentialType.Basic` till `BasicHttpBindingSecurity.Transport.ClientCredentialType`fält.
+
    * Tilldela `BasicHttpSecurityMode.TransportCredentialOnly` konstantvärdet till `BasicHttpBindingSecurity.Security.Mode`fält.
 
    >[!NOTE]
@@ -1113,8 +1110,7 @@ Skapa ett PDF-dokument baserat på fragment med hjälp av API:t för utdatatjän
    The `invokeDDX` returnerar en `AssemblerResult` som innehåller resultatet av jobbet och eventuella undantag som inträffade. Utför följande åtgärder för att hämta det nya XDP-dokumentet:
 
    * Öppna `AssemblerResult` objektets `documents` fält, vilket är ett `Map` objekt som innehåller de resulterande PDF-dokumenten.
-   * Iterera genom `Map` objekt för att hämta den sammansatta formulärdesignen. Sänd den arraymedlemmens `value` till `BLOB`. Godkänn `BLOB` -instans till Output-tjänsten.
-
+   * Iterera genom `Map` objekt för att hämta den sammansatta formulärdesignen. Kasta den arraymedlemmens `value` till `BLOB`. Godkänn `BLOB` -instans till Output-tjänsten.
 
 1. Använd utdatatjänsten för att generera PDF-dokumentet.
 
@@ -1190,7 +1186,7 @@ Om AEM Forms körs på en J2EE-programserver som stöds och som inte är JBoss, 
 
 **Skapa ett Output Client-objekt**
 
-Innan du programmässigt kan utföra en utdatatjänståtgärd måste du skapa ett klientobjekt för utdatatjänsten. Om du använder Java API skapar du en `OutputClient` -objekt. Skapa en `OutputServiceService` -objekt.
+Innan du programmässigt kan utföra en utdatatjänståtgärd måste du skapa ett klientobjekt för utdatatjänsten. Om du använder Java API skapar du en `OutputClient` -objekt. Om du använder webbtjänstens API för utdata skapar du en `OutputServiceService` -objekt.
 
 **Referera en XML-datakälla**
 
@@ -1216,7 +1212,7 @@ När utdatatjänsten har utfört en åtgärd returneras olika dataobjekt, till e
 
 [Skriva ut till filer med Java API](creating-document-output-streams.md#print-to-files-using-the-java-api)
 
-[Skriva ut till filer med webbtjänstens API](creating-document-output-streams.md#print-to-files-using-the-web-service-api)
+[Skriva ut till filer med hjälp av webbtjänstens API](creating-document-output-streams.md#print-to-files-using-the-web-service-api)
 
 [Inkludera AEM Forms Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -1230,7 +1226,7 @@ Skriva ut till en fil med hjälp av utdata-API (Java):
 
 1. Inkludera projektfiler.
 
-   Inkludera JAR-klientfiler, till exempel adobe-output-client.jar, i Java-projektets klassökväg.
+   Inkludera JAR-klientfiler, t.ex. adobe-output-client.jar, i Java-projektets klassökväg.
 
 1. Skapa ett Output Client-objekt.
 
@@ -1281,7 +1277,7 @@ Skriva ut till en fil med hjälp av utdata-API (Java):
 
 [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
-### Skriva ut till filer med webbtjänstens API {#print-to-files-using-the-web-service-api}
+### Skriva ut till filer med hjälp av webbtjänstens API {#print-to-files-using-the-web-service-api}
 
 Skriva ut till en fil med hjälp av Output API (webbtjänsten):
 
@@ -1291,13 +1287,13 @@ Skriva ut till en fil med hjälp av Output API (webbtjänsten):
 
    >[!NOTE]
    >
-   >Ersätt `localhost` med IP-adressen till den server som är värd för AEM Forms.
+   >Ersätt `localhost` med IP-adressen till den server där AEM Forms finns.
 
 1. Skapa ett Output Client-objekt.
 
    * Skapa en `OutputServiceClient` genom att använda dess standardkonstruktor.
    * Skapa en `OutputServiceClient.Endpoint.Address` genom att använda `System.ServiceModel.EndpointAddress` konstruktor. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/OutputService?blob=mtom`.) Du behöver inte använda `lc_version` -attribut. Det här attributet används när du skapar en tjänstreferens. Ange dock `?blob=mtom` för att använda MTOM.
-   * Skapa en `System.ServiceModel.BasicHttpBinding` genom att hämta värdet för `OutputServiceClient.Endpoint.Binding` fält. Sänd returvärdet till `BasicHttpBinding`.
+   * Skapa en `System.ServiceModel.BasicHttpBinding` genom att hämta värdet för `OutputServiceClient.Endpoint.Binding` fält. Skicka returvärdet till `BasicHttpBinding`.
    * Ange `System.ServiceModel.BasicHttpBinding` objektets `MessageEncoding` fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
    * Aktivera grundläggande HTTP-autentisering genom att utföra följande åtgärder:
 
@@ -1395,7 +1391,7 @@ Om AEM Forms körs på en J2EE-programserver som stöds och som inte är JBoss, 
 
 **Skapa ett Output Client-objekt**
 
-Skapa ett klientobjekt för utdatatjänsten innan du programmässigt utför en åtgärd. Om du använder Java API skapar du en `OutputClient` -objekt. Skapa en `OutputServiceClient` -objekt.
+Skapa ett klientobjekt för utdatatjänsten innan du programmässigt utför en åtgärd. Om du använder Java API skapar du en `OutputClient` -objekt. Om du använder webbtjänstens API för utdata skapar du en `OutputServiceClient` -objekt.
 
 **Referera en XML-datakälla**
 
@@ -1420,7 +1416,7 @@ Hämta en utskriftsström som ska skickas till en skrivare. Du kan till exempel 
 
 Du kan välja att skicka en PDF-fil om skrivaren stöder PDF. Ett problem med att skicka ett PDF-dokument till en skrivare är dock att varje skrivartillverkare har olika implementeringar av PDF tolken. Det innebär att vissa tillverkare använder Adobe PDF tolkning, men det beror på skrivaren. Andra skrivare har sin egen PDF-tolk. Resultatet av utskriften kan därför variera.
 
-En annan begränsning för att skicka ett PDF-dokument till en skrivare är att det bara skrivs ut. kan inte komma åt duplex, pappersfacksval och häftning, förutom genom skrivarens inställningar.
+En annan begränsning för att skicka ett PDF-dokument till en skrivare är att det bara skrivs ut. Det går inte att komma åt dubbelsidig utskrift, val av pappersfack och häftning, förutom via skrivarinställningarna.
 
 Om du vill hämta ett dokument att skriva ut använder du `generatePrintedOutput` -metod. I följande tabell anges innehållstyper som ställs in för en viss utskriftsström när du använder `generatePrintedOutput` -metod.
 
@@ -1519,7 +1515,7 @@ Skicka en utskriftsström till en nätverksskrivare med hjälp av utdata-API (Ja
 
 1. Inkludera projektfiler.
 
-   Inkludera JAR-klientfiler, till exempel adobe-output-client.jar, i Java-projektets klassökväg.
+   Inkludera JAR-klientfiler, t.ex. adobe-output-client.jar, i Java-projektets klassökväg.
 
 1. Skapa ett Output Client-objekt
 
@@ -1550,10 +1546,9 @@ Skicka en utskriftsström till en nätverksskrivare med hjälp av utdata-API (Ja
       * The `PrintedOutputOptionsSpec` objekt som innehåller körningsalternativ som krävs för att skriva ut till en fil.
       * The `com.adobe.idp.Document` objekt som representerar XML-datakällan som innehåller formulärdata som ska sammanfogas med formulärdesignen.
 
-      Den här metoden returnerar en `OutputResult` objekt som innehåller resultatet av åtgärden.
+     Den här metoden returnerar en `OutputResult` objekt som innehåller resultatet av åtgärden.
 
-   * Skapa en `com.adobe.idp.Document` objekt som ska skickas till skrivaren genom att anropa `OutputResult` objekt&quot;s `getGeneratedDoc` -metod. Den här metoden returnerar en `com.adobe.idp.Document` -objekt.
-
+   * Skapa en `com.adobe.idp.Document` objekt som ska skickas till skrivaren genom att anropa `OutputResult` objekt `getGeneratedDoc` -metod. Den här metoden returnerar en `com.adobe.idp.Document` -objekt.
 
 1. Skicka utskriftsströmmen till en nätverksskrivare
 
@@ -1566,7 +1561,7 @@ Skicka en utskriftsström till en nätverksskrivare med hjälp av utdata-API (Ja
 
    >[!NOTE]
    >
-   >The `sendToPrinter` metoden lades till i AEM Forms API i version 8.2.1.
+   >The `sendToPrinter` i AEM Forms API i version 8.2.1.
 
 ### Skicka en utskriftsström till en skrivare med hjälp av webbtjänstens API {#send-a-print-stream-to-a-printer-using-the-web-service-api}
 
@@ -1578,13 +1573,13 @@ Skicka en utskriftsström till en nätverksskrivare med hjälp av Output API (we
 
    >[!NOTE]
    >
-   >Ersätt `localhost` med IP-adressen till den server som är värd för AEM Forms.
+   >Ersätt `localhost` med IP-adressen till den server där AEM Forms finns.
 
 1. Skapa ett Output Client-objekt.
 
    * Skapa en `OutputServiceClient` genom att använda dess standardkonstruktor.
    * Skapa en `OutputServiceClient.Endpoint.Address` genom att använda `System.ServiceModel.EndpointAddress` konstruktor. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/OutputService?blob=mtom`.) Du behöver inte använda `lc_version` -attribut. Det här attributet används när du skapar en tjänstreferens. Ange dock `?blob=mtom` för att använda MTOM.
-   * Skapa en `System.ServiceModel.BasicHttpBinding` genom att hämta värdet för `OutputServiceClient.Endpoint.Binding` fält. Sänd returvärdet till `BasicHttpBinding`.
+   * Skapa en `System.ServiceModel.BasicHttpBinding` genom att hämta värdet för `OutputServiceClient.Endpoint.Binding` fält. Skicka returvärdet till `BasicHttpBinding`.
    * Ange `System.ServiceModel.BasicHttpBinding` objektets `MessageEncoding` fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
    * Aktivera grundläggande HTTP-autentisering genom att utföra följande åtgärder:
 
@@ -1622,8 +1617,8 @@ Skicka en utskriftsström till en nätverksskrivare med hjälp av Output API (we
       * A `BLOB` objekt som fylls i av `generatePrintedOutput` -metod. The `generatePrintedOutput` fyller i det här objektet med genererade metadata som beskriver dokumentet. (Det här parametervärdet krävs endast för webbtjänstanrop.)
       * A `BLOB` objekt som fylls i av `generatePrintedOutput` -metod. The `generatePrintedOutput` -metoden fyller i det här objektet med resultatdata. (Det här parametervärdet krävs endast för webbtjänstanrop.)
       * An `OutputResult` objekt som innehåller resultatet av åtgärden. (Det här parametervärdet krävs endast för webbtjänstanrop.)
-   * Skapa en `BLOB` objekt som ska skickas till skrivaren genom att hämta värdet för `OutputResult` objekt&quot;s `generatedDoc` -metod. Den här metoden returnerar en `BLOB` som innehåller PostScript-data som returneras av `generatePrintedOutput` -metod.
 
+   * Skapa en `BLOB` objekt som ska skickas till skrivaren genom att hämta värdet för `OutputResult` objekt `generatedDoc` -metod. Den här metoden returnerar en `BLOB` som innehåller PostScript-data som returneras av `generatePrintedOutput` -metod.
 
 1. Skicka utskriftsströmmen till en nätverksskrivare.
 
@@ -1637,7 +1632,7 @@ Skicka en utskriftsström till en nätverksskrivare med hjälp av Output API (we
 
    >[!NOTE]
    >
-   >The `sendToPrinter` metoden lades till i AEM Forms API i version 8.2.1.
+   >The `sendToPrinter` i AEM Forms API i version 8.2.1.
 
 ## Skapa flera utdatafiler {#creating-multiple-output-files}
 
@@ -1736,7 +1731,7 @@ Om AEM Forms körs på en J2EE-programserver som stöds och som inte är JBoss, 
 
 **Skapa ett Output Client-objekt**
 
-Innan du programmässigt kan utföra en utdatatjänståtgärd måste du skapa ett klientobjekt för utdatatjänsten. Om du använder Java API skapar du en `OutputClient` -objekt. Skapa en `OutputServiceService` -objekt.
+Innan du programmässigt kan utföra en utdatatjänståtgärd måste du skapa ett klientobjekt för utdatatjänsten. Om du använder Java API skapar du en `OutputClient` -objekt. Om du använder webbtjänstens API för utdata skapar du en `OutputServiceService` -objekt.
 
 **Referera en XML-datakälla**
 
@@ -1749,7 +1744,7 @@ Det måste finnas ett XML-element för varje formulärfält som du vill fylla i 
 Du måste ange följande körningsalternativ för Output-tjänsten för att kunna skapa flera filer baserade på en XML-datakälla:
 
 * **Många filer**: Anger om utdatatjänsten skapar ett eller flera dokument. Du kan ange true eller false. Om du vill skapa ett separat dokument för varje datapost i XML-datakällan anger du true.
-* **Fil-URI**: Anger platsen för de filer som genereras av utdatatjänsten. Anta till exempel att du anger C:\\Adobe\forms\Loan.pdf. I så fall skapar Output-tjänsten en fil med namnet Loan.pdf och placerar filen i mappen C:\\Adobe\forms folder. När det finns flera filer är filnamnen Loan0001.pdf, Loan0002.pdf, Loan003.pdf och så vidare. Om du anger en filplats placeras filerna på servern, inte på klientdatorn.
+* **Fil-URI**: Anger platsen för de filer som genereras av utdatatjänsten. Anta till exempel att du anger C:\\Adobe\forms\Loan.pdf. I sådana fall skapar Output-tjänsten en fil med namnet Loan.pdf och placerar filen i mappen C:\\Adobe\forms. När det finns flera filer är filnamnen Loan0001.pdf, Loan0002.pdf, Loan003.pdf och så vidare. Om du anger en filplats placeras filerna på servern, inte på klientdatorn.
 * **Postnamn**: Anger XML-elementnamnet i datakällan som avgränsar dataposterna. I XML-datakällan som visas tidigare i det här avsnittet anropas till exempel XML-elementet som avgränsar dataposter `LoanRecord`. (I stället för att ange alternativet Postnamn vid körning kan du ange postnivån genom att tilldela den ett numeriskt värde som anger elementnivån som innehåller dataposter. Du kan dock bara ange postnamn eller postnivå. Du kan inte ange båda värdena.)
 
 **Ange alternativ för återgivning vid körning**
@@ -1873,13 +1868,13 @@ Skapa flera PDF-filer med hjälp av Output API (webbtjänsten):
 
    >[!NOTE]
    >
-   >Ersätt `localhost` med IP-adressen till den server som är värd för AEM Forms.
+   >Ersätt `localhost` med IP-adressen till den server där AEM Forms finns.
 
 1. Skapa ett Output Client-objekt.
 
    * Skapa en `OutputServiceClient` genom att använda dess standardkonstruktor.
    * Skapa en `OutputServiceClient.Endpoint.Address` genom att använda `System.ServiceModel.EndpointAddress` konstruktor. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/OutputService?blob=mtom`.) Du behöver inte använda `lc_version` -attribut. Det här attributet används när du skapar en tjänstreferens. Ange dock `?blob=mtom` för att använda MTOM.
-   * Skapa en `System.ServiceModel.BasicHttpBinding` genom att hämta värdet för `OutputServiceClient.Endpoint.Binding` fält. Sänd returvärdet till `BasicHttpBinding`.
+   * Skapa en `System.ServiceModel.BasicHttpBinding` genom att hämta värdet för `OutputServiceClient.Endpoint.Binding` fält. Skicka returvärdet till `BasicHttpBinding`.
    * Ange `System.ServiceModel.BasicHttpBinding` objektets `MessageEncoding` fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
    * Aktivera grundläggande HTTP-autentisering genom att utföra följande åtgärder:
 
@@ -2050,8 +2045,7 @@ Skapa sökregler med hjälp av utdata-API (Java):
    >För varje textmönster som du vill definiera upprepar du de tre föregående delstegen.
 
    * Skapa en `java.util.List` objekt genom att använda `java.util.ArrayList` konstruktor.
-   * För varje `Rule` objekt som du har skapat, anropar `java.util.List` objektets `add` och skicka `Rule` -objekt.
-
+   * För varje `Rule` som du skapade, anropar `java.util.List` objektets `add` och skicka `Rule` -objekt.
 
 1. Ange körningsalternativ för PDF.
 
@@ -2106,13 +2100,13 @@ Skapa sökregler med hjälp av Output API (webbtjänsten):
 
    >[!NOTE]
    >
-   >Ersätt `localhost` med IP-adressen till den server som är värd för AEM Forms.
+   >Ersätt `localhost` med IP-adressen till den server där AEM Forms finns.
 
 1. Skapa ett Output Client-objekt.
 
    * Skapa en `OutputServiceClient` genom att använda dess standardkonstruktor.
    * Skapa en `OutputServiceClient.Endpoint.Address` genom att använda `System.ServiceModel.EndpointAddress` konstruktor. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/OutputService?blob=mtom`.) Du behöver inte använda `lc_version` -attribut. Det här attributet används när du skapar en tjänstreferens. Ange dock `?blob=mtom` för att använda MTOM.
-   * Skapa en `System.ServiceModel.BasicHttpBinding` genom att hämta värdet för `OutputServiceClient.Endpoint.Binding` fält. Sänd returvärdet till `BasicHttpBinding`.
+   * Skapa en `System.ServiceModel.BasicHttpBinding` genom att hämta värdet för `OutputServiceClient.Endpoint.Binding` fält. Skicka returvärdet till `BasicHttpBinding`.
    * Ange `System.ServiceModel.BasicHttpBinding` objektets `MessageEncoding` fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
    * Aktivera grundläggande HTTP-autentisering genom att utföra följande åtgärder:
 
@@ -2142,13 +2136,12 @@ Skapa sökregler med hjälp av Output API (webbtjänsten):
    * Skapa en `MyArrayOf_xsd_anyType` objekt som lagrar reglerna.
    * Tilldela varje `Rule` objekt till ett element i `MyArrayOf_xsd_anyType` array. Anropa `MyArrayOf_xsd_anyType` objektets `Add` metod för varje `Rule` -objekt.
 
-
 1. Ange körningsalternativ för PDF
 
    * Skapa en `PDFOutputOptionsSpec` genom att använda dess konstruktor.
    * Ange filens URI-alternativ genom att tilldela ett strängvärde som anger platsen för den PDF-fil som utdatatjänsten genererar till `PDFOutputOptionsSpec` objektets `fileURI` datamedlem. Alternativet Fil-URI är relativt till J2EE-programservern som är värd för AEM Forms, inte klientdatorn.
    * Ange alternativet för kopior genom att tilldela ett heltalsvärde som anger antalet kopior som utdatatjänsten genererar till `PDFOutputOptionsSpec` objektets `copies` datamedlem.
-   * Ange reglerna som du definierade genom att tilldela `MyArrayOf_xsd_anyType` objekt som lagrar reglerna för `PDFOutputOptionsSpec` objektets `rules` datamedlem.
+   * Ange reglerna som du definierade genom att tilldela `MyArrayOf_xsd_anyType` det objekt som lagrar reglerna till `PDFOutputOptionsSpec` objektets `rules` datamedlem.
    * Ange antalet byte som ska genomsökas efter definierade textmönster genom att tilldela ett heltalsvärde som representerar antalet byte som ska genomsökas till `PDFOutputOptionsSpec` objektets `lookAhead` datametod.
 
 1. Ange alternativ för återgivning vid körning
@@ -2180,7 +2173,7 @@ Skapa sökregler med hjälp av Output API (webbtjänsten):
 
    >[!NOTE]
    >
-   >När du genererar ett PDF-dokument genom att anropa `generatePDFOutput` ska du vara medveten om att du inte kan sammanfoga data med ett XFA PDF-formulär som är signerat, certifierat eller innehåller användningsbehörighet. Mer information om användningsrättigheter finns i [Använda användningsbehörighet för PDF-dokument](/help/forms/developing/assigning-usage-rights.md#applying-usage-rights-to-pdf-documents).
+   >När ett PDF-dokument skapas genom att `generatePDFOutput` ska du vara medveten om att du inte kan sammanfoga data med ett XFA PDF-formulär som är signerat, certifierat eller innehåller användningsbehörighet. Mer information om användningsrättigheter finns i [Använda användningsbehörighet för PDF-dokument](/help/forms/developing/assigning-usage-rights.md#applying-usage-rights-to-pdf-documents).
 
 1. Hämta resultatet av åtgärden
 
@@ -2238,7 +2231,7 @@ Om AEM Forms körs på en J2EE-programserver som stöds och som inte är JBoss, 
 
 **Skapa ett Output Client-objekt**
 
-Innan du programmässigt kan utföra en utdatatjänståtgärd måste du skapa ett klientobjekt för utdatatjänsten. Om du använder Java API skapar du en `OutputClient` -objekt. Skapa en `OutputServiceService` -objekt.
+Innan du programmässigt kan utföra en utdatatjänståtgärd måste du skapa ett klientobjekt för utdatatjänsten. Om du använder Java API skapar du en `OutputClient` -objekt. Om du använder webbtjänstens API för utdata skapar du en `OutputServiceService` -objekt.
 
 **Hämta ett interaktivt PDF-dokument**
 
@@ -2321,13 +2314,13 @@ Förenkla ett interaktivt PDF-dokument till ett icke-interaktivt PDF-dokument me
 
    >[!NOTE]
    >
-   >Ersätt `localhost` med IP-adressen till den server som är värd för AEM Forms.
+   >Ersätt `localhost` med IP-adressen till den server där AEM Forms finns.
 
 1. Skapa ett Output Client-objekt.
 
    * Skapa en `OutputServiceClient` genom att använda dess standardkonstruktor.
    * Skapa en `OutputServiceClient.Endpoint.Address` genom att använda `System.ServiceModel.EndpointAddress` konstruktor. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/OutputService?blob=mtom`.) Du behöver inte använda `lc_version` -attribut. Det här attributet används när du skapar en tjänstreferens. Ange dock `?blob=mtom` för att använda MTOM.
-   * Skapa en `System.ServiceModel.BasicHttpBinding` genom att hämta värdet för `OutputServiceClient.Endpoint.Binding` fält. Sänd returvärdet till `BasicHttpBinding`.
+   * Skapa en `System.ServiceModel.BasicHttpBinding` genom att hämta värdet för `OutputServiceClient.Endpoint.Binding` fält. Skicka returvärdet till `BasicHttpBinding`.
    * Ange `System.ServiceModel.BasicHttpBinding` objektets `MessageEncoding` fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
    * Aktivera grundläggande HTTP-autentisering genom att utföra följande åtgärder:
 

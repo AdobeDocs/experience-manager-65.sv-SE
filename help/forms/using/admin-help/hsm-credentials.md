@@ -1,16 +1,12 @@
 ---
 title: Hantera HSM-autentiseringsuppgifter
-seo-title: Managing HSM credentials
 description: Lär dig hur du hanterar HSM-autentiseringsuppgifter.
-seo-description: Learn how to manage HSM credentials.
-uuid: 30ddcd4a-f771-44d5-bdef-4826adcd0c44
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/managing_certificates_and_credentials
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: e5f17ba8-8aab-4449-811a-20ad33de1c6f
 exl-id: facbeab2-de95-4778-894c-faa771d3391e
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
 workflow-type: tm+mt
 source-wordcount: '1304'
 ht-degree: 0%
@@ -21,7 +17,7 @@ ht-degree: 0%
 
 På sidan Hantering av betrodda lagringsplatser kan du hantera HSM-autentiseringsuppgifter (Hardware Security Module). En HSM är en PKCS#11-enhet från en annan leverantör som du kan använda för att på ett säkert sätt generera och lagra privata nycklar. HSM skyddar åtkomst till och användning av privata nycklar fysiskt.
 
-Klientprogramvaran krävs för att kommunicera med HSM. HSM-klientprogramvaran måste vara installerad och konfigurerad på samma dator som AEM formulär.
+Klientprogramvaran krävs för att kommunicera med HSM. HSM-klientprogramvaran måste installeras och konfigureras på samma dator som AEM formulär.
 
 AEM formulär Med digitala signaturer kan du använda autentiseringsuppgifter som lagras på en HSM för att använda digitala signaturer på serversidan. Följ instruktionerna i det här avsnittet för att skapa ett alias för varje HSM-autentiseringsuppgift som digitala signaturer ska använda. Aliaset innehåller alla parametrar som krävs för HSM.
 
@@ -29,7 +25,7 @@ AEM formulär Med digitala signaturer kan du använda autentiseringsuppgifter so
 >
 >När du har ändrat HSM-konfigurationen startar du om AEM.
 
-## Skapa ett alias för en HSM-autentiseringsuppgift när HSM-enheten är online {#create-an-alias-for-an-hsm-credential-when-the-hsm-device-is-online}
+## Skapa ett alias för en HSM-referens när HSM-enheten är online {#create-an-alias-for-an-hsm-credential-when-the-hsm-device-is-online}
 
 1. I administrationskonsolen klickar du på Inställningar > Pålitlig lagringshantering > HSM-autentiseringsuppgifter och sedan på Lägg till.
 1. I rutan Profilnamn skriver du en sträng som används för att identifiera aliaset. Det här värdet används som en egenskap för vissa åtgärder för digitala signaturer, till exempel åtgärden Signera signaturfält.
@@ -44,7 +40,7 @@ AEM formulär Med digitala signaturer kan du använda autentiseringsuppgifter so
 1. I rutan Token Pin skriver du det lösenord som krävs för att få åtkomst till HSM-nyckeln och klickar på Nästa.
 1. Välj en autentiseringsuppgift i rutan Autentiseringsuppgifter. Klicka på Spara.
 
-## Skapa ett alias för en HSM-autentiseringsuppgift när HSM-enheten är offline {#create-an-alias-for-an-hsm-credential-when-the-hsm-device-is-offline}
+## Skapa ett alias för en HSM-referens när HSM-enheten är offline {#create-an-alias-for-an-hsm-credential-when-the-hsm-device-is-offline}
 
 1. I administrationskonsolen klickar du på Inställningar > Pålitlig lagringshantering > HSM-autentiseringsuppgifter och sedan på Lägg till.
 1. I rutan Profilnamn skriver du en sträng som används för att identifiera aliaset. Det här värdet används som en egenskap för vissa åtgärder för digitala signaturer, till exempel åtgärden Signera signaturfält.
@@ -54,11 +50,11 @@ AEM formulär Med digitala signaturer kan du använda autentiseringsuppgifter so
 1. I listan Facktyp väljer du Fack-ID, Fackindex eller Tokennamn och anger ett värde i rutan Fackinformation. AEM använder dessa inställningar för att avgöra var inloggningsuppgifterna lagras på HSM.
 
    * **Tokennamn:** Motsvarar ett partitionsnamn (till exempel HSMPART1).
-   * **Plats-ID:** Kortplats-ID är ett heltal som motsvarar kortplatsen, vilket i sin tur motsvarar en partition. Klienten (formulärservern) är till exempel registrerad med HSMPART1-partitionen först. Detta mappar plats 1 till HSMPART1-partitionen för den här klienten. Eftersom HSMPART1 är den första registrerade partitionen är plats-ID 1 och du ställer in fackinformation till 1.
+   * **Plats-ID:** Kortplats-ID är ett heltal som motsvarar kortplatsen, vilket i sin tur motsvarar en partition. Klienten (formulärservern) som till exempel har registrerats med HSMPART1-partitionen först. Detta mappar plats 1 till HSMPART1-partitionen för den här klienten. Eftersom HSMPART1 är den första registrerade partitionen är plats-ID 1 och du ställer in fackinformation till 1.
 
-      Kortplats-ID anges klient för klient. Om du registrerade en andra dator till en annan partition (till exempel HSMPART2 på samma HSM-enhet) kopplas fack 1 till HSMPART2-partitionen för den klienten.
+     Kortplats-ID anges klient för klient. Om du registrerade en andra dator till en annan partition (till exempel HSMPART2 på samma HSM-enhet) kopplas fack 1 till HSMPART2-partitionen för den klienten.
 
-   * **Kortplatsindex:** Om du väljer Fackindex anger du ett heltal som motsvarar kortplatsen som platsinfo. Detta är ett nollbaserat index, vilket innebär att om klienten registreras med HSMPART1-partitionen först mappas fack 1 till HSMPART1 för den här klienten. Eftersom HSMPART1 är den första registrerade partitionen är platsindexet 0.
+   * **Fackindex:** Om du väljer Fackindex anger du ett heltal som motsvarar kortplatsen som platsinfo. Detta är ett nollbaserat index, vilket innebär att om klienten registreras med HSMPART1-partitionen först mappas fack 1 till HSMPART1 för den här klienten. Eftersom HSMPART1 är den första registrerade partitionen är platsindexet 0.
 
 1. Välj något av följande alternativ och ange sökvägen:
 
@@ -70,7 +66,7 @@ AEM formulär Med digitala signaturer kan du använda autentiseringsuppgifter so
 ## Visa egenskaper för HSM-autentiseringsalias {#view-hsm-credential-alias-properties}
 
 1. I administrationskonsolen klickar du på Inställningar > Lita på arkivhantering > HSM-autentiseringsuppgifter.
-1. Klicka på aliasnamnet för autentiseringsaliaset för att visa egenskaperna och klicka sedan på OK.
+1. Klicka på aliasnamnet för autentiseringsalias för att visa egenskaperna och klicka sedan på OK.
 
 ## Kontrollera status för en HSM-autentiseringsuppgift {#check-the-status-of-an-hsm-credential}
 
@@ -103,5 +99,5 @@ AEM använder en webbtjänstbaserad IPC/RPC-mekanism. Med den här funktionen ka
 
 Den här mekanismen stöder inte onlineskapande av HSM-profiler eller statuskontroller. Det finns dock två sätt att skapa HSM-profiler och utföra statuskontroller:
 
-* Skapa en AEM formulärklientautentiseringsuppgift genom att skicka den till signerarens certifikat. Följ stegen i [Konfigurera HSM-stöd för AEM formulär ES med Sun JDK på 64-bitarsplattformen i Windows](https://kb2.adobe.com/cps/808/cpsid_80835.html). Webbtjänstplatsen skickas som en autentiseringsuppgiftsegenskap. Det finns även stöd för HSM-profiler som skapats offline med antingen certifikatutfärdare eller SHA-1-hex. Om du har uppgraderat till AEM formulär från en tidigare version av AEM formulär gör du klientändringar eftersom inloggningsuppgifterna medförde certifikat och webbtjänstinformation.
-* Webbtjänstens plats anges i administrationskonsolen för signeringstjänsten. (Se [Inställningar för signaturtjänst](/help/forms/using/admin-help/configure-service-settings.md#signature-service-settings).) Här innehöll klienten bara aliaset för HSM-profilen i förtroendearkivet. Du kan använda det här alternativet utan ändringar från en kund, även om du har uppgraderat till AEM formulär från en tidigare version av AEM formulär. Det här alternativet stöder inte HSM-profiler som använder certifikat SHA-1.
+* Skapa en AEM formulär klientautentiseringsuppgifter genom att skicka den till signerarens certifikat. Följ stegen i [Konfigurera HSM-stöd för AEM formulär ES med Sun JDK på 64-bitarsplattformen i Windows](https://kb2.adobe.com/cps/808/cpsid_80835.html). Webbtjänstplatsen skickas som en autentiseringsuppgiftsegenskap. Det finns även stöd för HSM-profiler som skapats offline med antingen certifikatutfärdare eller SHA-1-hex. Om du har uppgraderat till AEM formulär från en tidigare version av AEM formulär gör du klientändringar eftersom inloggningsuppgifterna medförde certifikat och webbtjänstinformation.
+* Webbtjänstens plats anges i administrationskonsolen för signeringstjänsten. (Se [Inställningar för signaturtjänst](/help/forms/using/admin-help/configure-service-settings.md#signature-service-settings).) Här innehöll klienten bara alias för HSM-profilen i förtroendearkivet. Du kan använda det här alternativet utan ändringar från en kund, även om du har uppgraderat till AEM formulär från en tidigare version av AEM formulär. Det här alternativet stöder inte HSM-profiler som använder certifikat SHA-1.
