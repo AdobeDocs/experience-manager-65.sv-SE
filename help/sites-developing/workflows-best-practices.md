@@ -10,7 +10,7 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: 0be8b88c-6f57-4dcc-ae11-77b378a2decd
 exl-id: 14775476-6fe5-4583-8ab5-b55fef892174
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 71b3f7c6ad2c7712762a29518de6cf0639081cb7
 workflow-type: tm+mt
 source-wordcount: '1920'
 ht-degree: 0%
@@ -37,7 +37,7 @@ När ett arbetsflöde är övergående bevaras inte körningsdata som relaterar 
 
 Fördelarna kan vara:
 
-* En minskning av arbetsflödets bearbetningstid. upp till 10 %.
+* En minskning av arbetsflödets bearbetningstid, med upp till 10 %.
 * Minska databastillväxten avsevärt.
 * Inga fler CRUD-arbetsflöden behövs för att rensa bort.
 * Dessutom minskar det antalet TAR-filer som ska komprimeras.
@@ -54,27 +54,27 @@ Riktlinjer för prestandajustering för DAM-arbetsflöden finns i [AEM Assets Pe
 
 AEM kan tillåta att flera arbetsflödestrådar körs samtidigt. Som standard är antalet trådar konfigurerat till halva antalet processorkärnor i systemet.
 
-I de fall där arbetsflödena som körs kräver systemresurser, kan detta innebära att det inte finns mycket kvar AEM att använda för andra åtgärder, som att återge redigeringsgränssnittet. Det kan leda till att systemet blir trögt under aktiviteter som massöverföring av bilder.
+I de fall där arbetsflödena som körs kräver systemresurser, kan detta innebära att det inte finns mycket kvar AEM att använda för andra åtgärder, som att återge redigeringsgränssnittet. Det kan leda till att systemet blir långsammare vid till exempel massöverföring av bilder.
 
 Adobe rekommenderar att man konfigurerar antalet **Maximalt antal parallella jobb** ska vara mellan hälften och tre fjärdedelar av antalet processorkärnor i systemet. Detta bör ge tillräcklig kapacitet för att systemet ska kunna vara responsivt när dessa arbetsflöden bearbetas.
 
 Konfigurera **Maximalt antal parallella jobb** kan du antingen:
 
-* Konfigurera **[OSGi-konfiguration](/help/sites-deploying/configuring-osgi.md)** från AEM webbkonsol, for **Kö: Begränsa arbetsflödeskö** (an **Konfiguration av Apache Sling-jobbkö**).
+* Konfigurera **[OSGi-konfiguration](/help/sites-deploying/configuring-osgi.md)** från AEM webbkonsol; för **Kö: Begränsa arbetsflödeskö** (an **Konfiguration av Apache Sling-jobbkö**).
 
-* Konfigurera kön från **Försäljningsjobb** alternativ för AEM webbkonsol, for **Konfiguration av jobbkö: Begränsa arbetsflödeskö**, på `http://localhost:4502/system/console/slingevent`.
+* Konfigurera kön från **Försäljningsjobb** alternativ för AEM webbkonsol, för **Konfiguration av jobbkö: Begränsa arbetsflödeskö**, på `http://localhost:4502/system/console/slingevent`.
 
 Dessutom finns det en separat konfiguration för **Begränsa arbetsflöde för extern processjobbkö**. Detta används för arbetsflödesprocesser som startar externa binärfiler, som **InDesign Server** eller **Bildmagasin**.
 
 ### Konfigurera enskilda jobbköer {#configure-individual-job-queues}
 
-I vissa fall kan det vara användbart att konfigurera enskilda jobbköer för att styra samtidiga trådar eller andra köalternativ, på individuell jobbbasis. Du kan lägga till och konfigurera en enskild kö från webbkonsolen via **Konfiguration av Apache Sling-jobbkö** fabrik. Om du vill hitta rätt ämne att lista kör du arbetsflödets modell och letar efter det i **Försäljningsjobb** konsol, till exempel `http://localhost:4502/system/console/slingevent`.
+I vissa fall kan det vara användbart att konfigurera enskilda jobbköer för att styra samtidiga trådar eller andra köalternativ, på individuell jobbbasis. Du kan lägga till och konfigurera en enskild kö från webbkonsolen via **Konfiguration av Apache Sling-jobbkö** fabrik. Om du vill hitta rätt ämne att lista kör du arbetsflödets modell och letar efter det i **Försäljningsjobb** konsol, till exempel vid `http://localhost:4502/system/console/slingevent`.
 
 Enskilda jobbköer kan även läggas till för tillfälliga arbetsflöden.
 
 ### Konfigurera rensning av arbetsflöde {#configure-workflow-purging}
 
-I en standardinstallation AEM en underhållskonsol där underhållsaktiviteter per dag och vecka kan schemaläggas och konfigureras. till exempel:
+I en standardinstallation AEM en underhållskonsol där underhållsaktiviteter per dag och vecka kan schemaläggas och konfigureras, till exempel:
 
 `http://localhost:4502/libs/granite/operations/content/maintenance.html`
 
@@ -88,7 +88,7 @@ När du skriver anpassade arbetsflödesprocesser finns det vissa saker som du b�
 
 ### Platser {#locations}
 
-Definitioner av arbetsflödesmodeller, startverktyg, skript och meddelanden lagras i databasen efter typ. dvs. färdiga, anpassade, bland annat.
+Definitioner av arbetsflödesmodeller, startprogram, skript och meddelanden lagras i databasen efter typ, t.ex. färdig, anpassad, bland annat.
 
 >[!NOTE]
 >
@@ -100,35 +100,34 @@ Arbetsflödesmodeller lagras i databasen enligt typ:
 
 * Färdiga arbetsflöden finns under följande sökväg:
 
-   `/libs/settings/workflow/models/`
+  `/libs/settings/workflow/models/`
 
-   >[!CAUTION]
-   >
-   >Gör inte:
-   >
-   >* placera någon av dina anpassade arbetsflödesmodeller i den här mappen
-   >* redigera vad som helst i `/libs`
-
-   >
-   >Alla ändringar kan skrivas över vid uppgradering eller vid installation av snabbkorrigeringar, kumulativa korrigeringspaket eller servicepaket.
+  >[!CAUTION]
+  >
+  >Gör inte:
+  >
+  >* placera någon av dina anpassade arbetsflödesmodeller i den här mappen
+  >* redigera vad som helst `/libs`
+  >
+  >Alla ändringar kan skrivas över vid uppgradering eller vid installation av snabbkorrigeringar, kumulativa korrigeringspaket eller servicepaket.
 
 * Anpassade arbetsflödesdesigner finns under:
 
-   ```
-   /conf/global/settings/workflow/models/...
-   ```
+  ```
+  /conf/global/settings/workflow/models/...
+  ```
 
 * Arbetsflödesdesign vid körning (både färdiga och anpassade) finns på följande sökväg:
 
-   `/var/workflow/models/`
+  `/var/workflow/models/`
 
 * Äldre arbetsflödesdesign (både designtid och körningsmiljö) finns under följande sökväg:
 
-   `/etc/workflow/models/`
+  `/etc/workflow/models/`
 
-   >[!NOTE]
-   >
-   >Om dessa designer redigeras *med AEM användargränssnitt*, kopieras informationen till de nya platserna.
+  >[!NOTE]
+  >
+  >Om dessa designer redigeras *med AEM användargränssnitt*, kopieras informationen till de nya platserna.
 
 #### Platser - Starta arbetsflöden {#locations-workflow-launchers}
 
@@ -136,31 +135,30 @@ Definitioner av arbetsflödets startprogram lagras också i databasen enligt typ
 
 * Körklara startprogram för arbetsflöden finns under följande sökväg:
 
-   `/libs/settings/workflow/launcher/`
+  `/libs/settings/workflow/launcher/`
 
-   >[!CAUTION]
-   >
-   >Gör inte:
-   >
-   >* placera någon av dina anpassade startsidor för arbetsflöden i den här mappen
-   >* redigera vad som helst i `/libs`
-
-   >
-   >Alla ändringar kan skrivas över vid uppgradering eller vid installation av snabbkorrigeringar, kumulativa korrigeringspaket eller servicepaket.
+  >[!CAUTION]
+  >
+  >Gör inte:
+  >
+  >* placera någon av dina anpassade startsidor för arbetsflöden i den här mappen
+  >* redigera vad som helst `/libs`
+  >
+  >Alla ändringar kan skrivas över vid uppgradering eller vid installation av snabbkorrigeringar, kumulativa korrigeringspaket eller servicepaket.
 
 * Skräddarsydda arbetsflödesstarter finns under:
 
-   ```
-   /conf/global/settings/workflow/launcher/...
-   ```
+  ```
+  /conf/global/settings/workflow/launcher/...
+  ```
 
 * Inledande arbetsflöden finns på följande sökväg:
 
-   `/etc/workflow/launcher/`
+  `/etc/workflow/launcher/`
 
-   >[!NOTE]
-   >
-   >Om dessa definitioner redigeras *med AEM användargränssnitt*, kopieras informationen till de nya platserna.
+  >[!NOTE]
+  >
+  >Om dessa definitioner redigeras *med AEM användargränssnitt*, kopieras informationen till de nya platserna.
 
 #### Platser - arbetsflödesskript {#locations-workflow-scripts}
 
@@ -168,27 +166,26 @@ Arbetsflödesskript lagras också i databasen enligt typ:
 
 * Skript för färdiga arbetsflöden finns under följande sökväg:
 
-   `/libs/workflow/scripts/`
+  `/libs/workflow/scripts/`
 
-   >[!CAUTION]
-   >
-   >Gör inte:
-   >
-   >* placera något av dina anpassade arbetsflödesskript i den här mappen
-   >* redigera vad som helst i `/libs`
-
-   >
-   >Alla ändringar kan skrivas över vid uppgradering eller vid installation av snabbkorrigeringar, kumulativa korrigeringspaket eller servicepaket.
+  >[!CAUTION]
+  >
+  >Gör inte:
+  >
+  >* placera dina anpassade arbetsflödesskript i den här mappen
+  >* redigera vad som helst `/libs`
+  >
+  >Alla ändringar kan skrivas över vid uppgradering eller vid installation av snabbkorrigeringar, kumulativa korrigeringspaket eller servicepaket.
 
 * Skript för anpassade arbetsflöden finns under:
 
-   ```
-   /apps/workflow/scripts/...
-   ```
+  ```
+  /apps/workflow/scripts/...
+  ```
 
 * Äldre arbetsflödesskript sparas under följande sökväg:
 
-   `/etc/workflow/scripts/`
+  `/etc/workflow/scripts/`
 
 #### Platser - arbetsflödesmeddelanden {#locations-workflow-notifications}
 
@@ -196,34 +193,33 @@ Arbetsflödesmeddelanden lagras också i databasen enligt typ:
 
 * Meddelandedefinitioner för färdiga arbetsflöden finns under följande sökväg:
 
-   `/libs/settings/workflow/notification/`
+  `/libs/settings/workflow/notification/`
 
-   >[!CAUTION]
-   >
-   >Gör inte:
-   >
-   >* placera någon av de anpassade definitionerna för arbetsflödesmeddelanden i den här mappen
-   >* redigera vad som helst i `/libs`
-
-   >
-   >Alla ändringar kan skrivas över vid uppgradering eller vid installation av snabbkorrigeringar, kumulativa korrigeringspaket eller servicepaket.
+  >[!CAUTION]
+  >
+  >Gör inte:
+  >
+  >* placera någon av de anpassade definitionerna för arbetsflödesmeddelanden i den här mappen
+  >* redigera vad som helst `/libs`
+  >
+  >Alla ändringar kan skrivas över vid uppgradering eller vid installation av snabbkorrigeringar, kumulativa korrigeringspaket eller servicepaket.
 
 * Definitioner för anpassade arbetsflödesmeddelanden finns under:
 
-   ```
-   /conf/global/settings/workflow/notification/...
-   ```
+  ```
+  /conf/global/settings/workflow/notification/...
+  ```
 
-   >[!NOTE]
-   >
-   >Om du vill åsidosätta en meddelandetext i arbetsflödet skapar du en åsidosatt sökväg under:
-   >
-   >
-   >`/conf/global/settings/workflow/notification/<path-under-libs>`
+  >[!NOTE]
+  >
+  >Om du vill åsidosätta en meddelandetext i arbetsflödet skapar du en åsidosatt sökväg under:
+  >
+  >
+  >`/conf/global/settings/workflow/notification/<path-under-libs>`
 
 * De äldre definitionerna för arbetsflödesmeddelanden finns under följande sökväg:
 
-   `/etc/workflow/notification/`
+  `/etc/workflow/notification/`
 
 ### Bearbeta sessioner {#process-sessions}
 
@@ -236,7 +232,7 @@ När en arbetsflödesprocess implementeras:
 
 * En arbetsflödessession tillhandahålls och bör användas om det inte finns någon tvingande anledning att inte göra det.
 * Nya sessioner ska inte skapas från arbetsflödessteg eftersom detta orsakar inkonsekvenser i tillståndet/tillstånden tillsammans med eventuella samtidiga problem i arbetsflödesmotorn.
-* Du bör inte hämta en ny JCR-session från ett processsteg i ett arbetsflöde. du bör anpassa arbetsflödessessionen som tillhandahålls av API:t för processsteg till en jcr-session. Till exempel:
+* Du bör inte hämta en ny JCR-session från ett processsteg i ett arbetsflöde. Du bör anpassa arbetsflödessessionen som tillhandahålls av API:t för processsteg till en jcr-session. Till exempel:
 
 ```
 public void execute(WorkItem item, WorkflowSession workflowSession, MetaDataMap args) throws WorkflowException {
@@ -249,10 +245,10 @@ public void execute(WorkItem item, WorkflowSession workflowSession, MetaDataMap 
 
 Spara en session:
 
-* I en arbetsflödesprocess, om `WorkflowSession` används för att ändra databasen och sedan inte explicit spara sessionen. Arbetsflödet sparar sessionen när den är klar.
+* Inuti en arbetsflödesprocess, om `WorkflowSession` används för att ändra databasen och sedan inte explicit spara sessionen. Arbetsflödet sparar sessionen när den är klar.
 * `Session.Save` ska inte anropas inifrån ett arbetsflödessteg:
 
-   * Vi rekommenderar att man anpassar arbetsflödets jcr-session. sedan `save` är inte nödvändigt eftersom arbetsflödesmotorn sparar sessionen automatiskt när arbetsflödet har slutförts.
+   * vi rekommenderar att du anpassar arbetsflödets jcr-session. `save` är inte nödvändigt eftersom arbetsflödesmotorn sparar sessionen automatiskt när arbetsflödet har slutförts.
    * rekommenderas inte för ett processsteg för att skapa en egen jcr-session.
 
 * Genom att eliminera onödiga besparingar kan du minska omkostnaderna och på så sätt effektivisera arbetsflödena.
@@ -272,7 +268,7 @@ Om du skapar för många startprogram kommer utvärderingsprocessen att gå lån
 
 Om du skapar en globbningssökväg i roten av databasen för en enskild startfunktion kan arbetsflödesmotorn avlyssna och utvärdera händelserna create/modify för alla noder i databasen. Därför rekommenderar vi att du bara skapar startprogram som behövs och att du gör ordlistan så specifik som möjligt.
 
-På grund av hur de här startverktygen påverkar arbetsflödets beteende kan det även vara bra att inaktivera användningsklara startprogram som inte används.
+På grund av hur de här startverktygen påverkar arbetsflödets beteende kan det även vara praktiskt att inaktivera användningsklara startprogram som inte används.
 
 ### Konfigurationsförbättringar för startare {#configuration-enhancements-for-launchers}
 
@@ -287,7 +283,7 @@ Den anpassade [startkonfiguration](/help/sites-administering/workflows-starting.
 
 Arbetsflöden kan medföra en avsevärd mängd overheadkostnader, både när det gäller objekt som skapas i minnet och noder som spåras i databasen. Därför är det bättre att ha ett arbetsflöde som hanterar själva arbetsflödet i stället för att starta ytterligare arbetsflöden.
 
-Ett exempel på detta är ett arbetsflöde som implementerar en affärsprocess för en uppsättning innehåll och sedan aktiverar innehållet. Det är bättre att skapa en anpassad arbetsflödesprocess som aktiverar var och en av dessa noder, i stället för att starta en **Aktivera innehåll** modell för var och en av innehållsnoderna som behöver publiceras. Det här arbetssättet kräver ytterligare utvecklingsarbete, men är mer effektivt när det körs än att starta en separat arbetsflödesinstans för varje aktivering.
+Ett exempel på detta är ett arbetsflöde som implementerar en affärsprocess för en uppsättning innehåll och sedan aktiverar innehållet. Det är bättre att skapa en anpassad arbetsflödesprocess som aktiverar var och en av dessa noder, i stället för att starta en **Aktivera innehåll** modell för varje innehållsnod som behöver publiceras. Det här arbetssättet kräver ytterligare utvecklingsarbete, men är mer effektivt när det körs än att starta en separat arbetsflödesinstans för varje aktivering.
 
 Ett annat exempel är ett arbetsflöde som bearbetar ett antal noder, skapar ett arbetsflödespaket och sedan aktiverar det paketet. I stället för att skapa paketet och sedan starta ett separat arbetsflöde med paketet som nyttolast, kan du ändra arbetsflödets nyttolast i det steg som skapar paketet och sedan anropa steget för att aktivera paketet i samma arbetsflödesmodell.
 

@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 6128c91a-4173-42b4-926f-bbbb2b54ba5b
 docset: aem65
 exl-id: bba64ce6-8b74-4be1-bf14-cfdf3b9b60e1
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 71b3f7c6ad2c7712762a29518de6cf0639081cb7
 workflow-type: tm+mt
 source-wordcount: '2585'
 ht-degree: 0%
@@ -47,7 +47,7 @@ Hantering av flera platser består av följande paket:
 * [com.day.cq.wcm.msm.api](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/msm/api/package-frame.html)
 * [com.day.cq.wcm.msm.Commons](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/msm/commons/package-frame.html)
 
-De huvudsakliga MSM API-objekten interagerar på följande sätt (se även [Villkor](/help/sites-administering/msm.md#terms-used)):
+De huvudsakliga MSM API-objekten interagerar på följande sätt (se även [Använda termer](/help/sites-administering/msm.md#terms-used)):
 
 ![Huvudobjekt för MSM API](assets/chlimage_1-73.png)
 
@@ -60,7 +60,7 @@ De huvudsakliga MSM API-objekten interagerar på följande sätt (se även [Vill
    * Användning av en ritningskonfiguration ( `Blueprint`) är valfritt, men:
 
       * Tillåter författaren att använda **Utrullning** på källan (för att (explicit) överföra ändringar till live-kopior som ärver från den här källan).
-      * Tillåter författaren att använda **Skapa webbplats**; på så sätt kan användaren enkelt välja språk och konfigurera strukturen för live-kopian.
+      * Tillåter författaren att använda **Skapa webbplats**; det gör att användaren enkelt kan välja språk och konfigurera strukturen för live-kopian.
       * Definierar standardkonfigurationen för utrullning för alla resulterande live-kopior.
 
 * **`LiveRelationship`**
@@ -92,7 +92,7 @@ De huvudsakliga MSM API-objekten interagerar på följande sätt (se även [Vill
 
 * **`LiveActionFactory`**
 
-  Skapar `LiveAction` objekt som `LiveAction` konfiguration. Konfigurationer lagras som resurser i databasen.
+  Skapar `LiveAction` objekt som har `LiveAction` konfiguration. Konfigurationer lagras som resurser i databasen.
 
 * **`RolloutConfig`**
 
@@ -111,24 +111,24 @@ The `LiveActionFactory` skapar instanser av `LiveAction` klass för en viss konf
 
 * `LiveAction` -klasser innehåller följande metoder:
 
-   * `getName`: Returnerar namnet på åtgärden Namnet används för att referera till åtgärden, till exempel i utrullningskonfigurationer.
+   * `getName`: Returnerar åtgärdens namn Namnet används för att referera till åtgärden, till exempel i utrullningskonfigurationer.
    * `execute`: Utför åtgärderna.
 
 * `LiveActionFactory` -klasserna innehåller följande medlemmar:
 
-   * `LIVE_ACTION_NAME`: Ett fält som innehåller namnet på det associerade `LiveAction`. Namnet måste sammanfalla med värdet som returneras av `getName` metoden `LiveAction` klassen.
+   * `LIVE_ACTION_NAME`: Ett fält som innehåller namnet på det associerade `LiveAction`. Namnet måste sammanfalla med värdet som returneras av `getName` metod för `LiveAction` klassen.
 
    * `createAction`: Skapar en instans av `LiveAction`. Valfritt `Resource` -parametern kan användas för att tillhandahålla konfigurationsinformation.
 
-   * `createsAction`: Returnerar namnet på associerad `LiveAction`.
+   * `createsAction`: Returnerar namnet på associerat `LiveAction`.
 
 ### Åtkomst till konfigurationsnoden för LiveAction {#accessing-the-liveaction-configuration-node}
 
-Använd `LiveAction` konfigurationsnoden i databasen för att lagra information som påverkar körningsbeteendet för `LiveAction` -instans. Noden i databasen som lagrar `LiveAction` konfigurationen är tillgänglig för `LiveActionFactory` objekt vid körning. Därför kan du lägga till egenskaper i konfigurationsnoden och använda dem i `LiveActionFactory` implementering efter behov.
+Använd `LiveAction` konfigurationsnoden i databasen för att lagra information som påverkar körningsbeteendet för `LiveAction` -instans. Den nod i databasen som lagrar `LiveAction` konfigurationen är tillgänglig för `LiveActionFactory` objekt vid körning. Därför kan du lägga till egenskaper i konfigurationsnoden och använda dem i `LiveActionFactory` vid behov.
 
 Till exempel en `LiveAction` måste lagra namnet på den som skapat ritningen. En egenskap för konfigurationsnoden innehåller egenskapsnamnet för den planeringssida som lagrar informationen. Vid körning visas `LiveAction` hämtar egenskapsnamnet från konfigurationen och hämtar sedan egenskapsvärdet.
 
-Parametern för [`LiveActionFactory.createAction`](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/msm/api/LiveActionFactory.html) metoden är en `Resource` -objekt. Detta `Resource` objektet representerar `cq:LiveSyncAction` nod för denna live-åtgärd i utrullningskonfigurationen, se [Skapa en utrullningskonfiguration](/help/sites-administering/msm-sync.md#creating-a-rollout-configuration). Som vanligt när du använder en konfigurationsnod bör du anpassa den till en `ValueMap` objekt:
+Parametern för [`LiveActionFactory.createAction`](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/msm/api/LiveActionFactory.html) metoden är en `Resource` -objekt. Detta `Resource` objektet representerar `cq:LiveSyncAction` nod för den här live-åtgärden i rollout-konfigurationen, se [Skapa en utrullningskonfiguration](/help/sites-administering/msm-sync.md#creating-a-rollout-configuration). Som vanligt när du använder en konfigurationsnod bör du anpassa den till en `ValueMap` objekt:
 
 ```java
 public LiveAction createAction(Resource resource) throws WCMException {
@@ -144,7 +144,7 @@ public LiveAction createAction(Resource resource) throws WCMException {
 
 ### Åtkomst till målnoder, källnoder och LiveRelationship {#accessing-target-nodes-source-nodes-and-the-liverelationship}
 
-Följande objekt anges som parametrar för `execute` metoden `LiveAction` objekt:
+Följande objekt anges som parametrar för `execute` metod för `LiveAction` objekt:
 
 * A [`Resource`](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/org/apache/sling/api/resource/Resource.html) som representerar källan till Live Copy.
 * A `Resource` som representerar målet för Live Copy.
@@ -198,13 +198,13 @@ Så här skapar du en ny utrullningskonfiguration:
    >[!NOTE]
    >
    >Du får inte ändra något i `/libs` bana.
-   >Detta beror på innehållet i `/libs` skrivs över nästa gång du uppgraderar din instans (och kan mycket väl skrivas över när du använder en snabbkorrigering eller ett funktionspaket).
+   >Detta beror på innehållet i `/libs` skrivs över nästa gång du uppgraderar din instans (och kan mycket väl skrivas över när du installerar en snabbkorrigering eller ett funktionspaket).
    >Den rekommenderade metoden för konfiguration och andra ändringar är:
    >
    >* Återskapa önskat objekt (d.v.s. som det finns i `/libs`) under `/apps`
    >* Gör ändringar i `/apps`
 
-1. Under **Skapa** en nod med följande egenskaper:
+1. Under denna **Skapa** en nod med följande egenskaper:
 
    * **Namn**: Nodnamnet för utrullningskonfigurationen. md#installed-synchronization-actions), till exempel `contentCopy` eller `workflow`.
    * **Typ**: `cq:RolloutConfig`
@@ -218,7 +218,7 @@ Så här skapar du en ny utrullningskonfiguration:
      **Värde**: En valfri beskrivning.
    * **Namn**: `cq:trigger`
      **Typ**: `String`
-     **Värde**: The [Utlösare för utrullning](/help/sites-administering/msm-sync.md#rollout-triggers) som ska användas. Välj  från:
+     **Värde**: [Utlösare för utrullning](/help/sites-administering/msm-sync.md#rollout-triggers) som ska användas. Välj  från:
       * `rollout`
       * `modification`
       * `publish`
@@ -228,7 +228,7 @@ Så här skapar du en ny utrullningskonfiguration:
 
 ### Lägg till synkroniseringsåtgärder i utrullningskonfigurationen {#add-synchronization-actions-to-the-rollout-configuration}
 
-Utrullningskonfigurationer lagras under [konfigurationsnod för utrullning](#create-the-rollout-configuration) som du har skapat under `/apps/msm/<your-project>/rolloutconfigs` nod.
+Utrullningskonfigurationer lagras under [rollout configuration node](#create-the-rollout-configuration) som du har skapat under `/apps/msm/<your-project>/rolloutconfigs` nod.
 
 Lägg till underordnade noder av typen `cq:LiveSyncAction` för att lägga till synkroniseringsåtgärder i utrullningskonfigurationen. Ordningen på synkroniseringsåtgärdsnoderna avgör i vilken ordning åtgärderna utförs.
 
@@ -269,7 +269,7 @@ Koden för den här sidan finns på GitHub
 Följande procedur kräver att du har lagt till adobe-public-profilen i Maven-inställningsfilen.
 
 * Mer information om profilen adobe-public finns i [Hämta innehållspaketet Maven Plugin](/help/sites-developing/vlt-mavenplugin.md#obtaining-the-content-package-maven-plugin)
-* Mer information om inställningsfilen för Maven finns i Maven [Inställningsreferens](https://maven.apache.org/settings.html).
+* Mer information om inställningarna för Maven finns i Maven [Inställningsreferens](https://maven.apache.org/settings.html).
 
 1. Öppna en terminal- eller kommandoradssession och ändra katalogen så att den pekar på den plats där projektet ska skapas.
 1. Ange följande kommando:
@@ -298,7 +298,7 @@ Lägg till beroenden så att Eclipse-kompilatorn kan referera till klasserna som
 
    `MyLiveActionFactory/pom.xml`
 
-1. Klicka på `pom.xml` och leta upp `project/dependencyManagement/dependencies` -avsnitt.
+1. Klicka på knappen `pom.xml` -fliken och leta upp `project/dependencyManagement/dependencies` -avsnitt.
 1. Lägg till följande XML i `dependencyManagement` och spara sedan filen.
 
    ```xml
@@ -346,8 +346,8 @@ Lägg till beroenden så att Eclipse-kompilatorn kan referera till klasserna som
     </dependency>
    ```
 
-1. Öppna POM-filen för paketet från **Projektutforskaren** på `MyLiveActionFactory-bundle/pom.xml`.
-1. Klicka på `pom.xml` och leta upp avsnittet Projekt/beroenden. Lägg till följande XML i beroendeelementet och spara sedan filen:
+1. Öppna POM-filen för paketet från **Project Explorer** på `MyLiveActionFactory-bundle/pom.xml`.
+1. Klicka på knappen `pom.xml` och leta upp avsnittet Projekt/beroenden. Lägg till följande XML i beroendeelementet och spara sedan filen:
 
    ```xml
     <dependency>
@@ -384,7 +384,7 @@ Lägg till beroenden så att Eclipse-kompilatorn kan referera till klasserna som
 
 Följande `LiveActionFactory` class implements a `LiveAction` som loggar meddelanden om käll- och målsidor och kopierar `cq:lastModifiedBy` från källnoden till målnoden. Den aktiva åtgärdens namn är `exampleLiveAction`.
 
-1. Högerklicka på knappen `MyLiveActionFactory-bundle/src/main/java/com.adobe.example.msm` paketera och klicka på **Nytt** > **Klass**. För **Namn**, ange `ExampleLiveActionFactory` och sedan klicka **Slutför**.
+1. I Eclipse Project Explorer högerklickar du på `MyLiveActionFactory-bundle/src/main/java/com.adobe.example.msm` paketera och klicka **Nytt** > **Klass**. För **Namn**, ange `ExampleLiveActionFactory` och sedan klicka **Slutför**.
 1. Öppna `ExampleLiveActionFactory.java` , ersätter innehållet med följande kod och sparar filen.
 
    ```java
@@ -552,8 +552,8 @@ Skapa den MSM-utrullningskonfiguration som använder `LiveActionFactory` som du 
 
 1. Skapa och konfigurera en [Konfiguration av utrullning med standardproceduren](/help/sites-administering/msm-sync.md#creating-a-rollout-configuration) - och använda egenskaperna:
 
-   * **Titel**: Exempelkonfiguration
-   * **Namn**: examplerolloutconfig
+   * **Titel**: Exempel på utrullningskonfiguration
+   * **Namn**: exampleLoutconfig
    * **cq:trigger**: `publish`
 
 ### Lägg till Live-åtgärden i exempelkonfigurationen för utrullning {#add-the-live-action-to-the-example-rollout-configuration}
@@ -583,7 +583,7 @@ Konfigurera den utrullningskonfiguration som du skapade i föregående procedur 
 
 * **Källa**: `/content/we-retail/language-masters/en/products`
 
-* **Konfiguration av utrullning**: Exempelkonfiguration
+* **Konfiguration av utrullning**: Exempel på utrullningskonfiguration
 
 Aktivera **Produkter** (på engelska) sidan av källgrenen och observera loggmeddelandena som `LiveAction` klassen genererar:
 
@@ -617,14 +617,14 @@ In some cases, the **Chapters** selection is not required in the create site wiz
 
 AEM använder en standarduppsättning med språk- och landskoder.
 
-* Standardspråkkoden är den gemena, tvåbokstavskod som definieras av ISO-639-1.
+* Standardspråkkoden är den gemena tvåbokstavskoden enligt ISO-639-1.
 * Standardlandskoden är den gemena eller versala tvåbokstavskoden enligt ISO 3166.
 
 MSM använder en lagrad lista med språk- och landskoder för att fastställa namnet på landet som är associerat med namnet på språkversionen av sidan. Du kan ändra följande aspekter av listan om det behövs:
 
 * Språktitlar
 * Landsnamn
-* Standardländer för språk (för koder som `en`, `de`, bland annat)
+* Standardländer för språk (för koder som `en`, `de`, bland andra)
 
 Språklistan sparas under `/libs/wcm/core/resources/languages` nod. Varje underordnad nod representerar ett språk eller ett språkområde:
 
@@ -632,28 +632,28 @@ Språklistan sparas under `/libs/wcm/core/resources/languages` nod. Varje undero
 
 * The `language` -egenskapen för noden lagrar det fullständiga namnet på kodspråket.
 * The `country` -egenskapen för noden lagrar det fullständiga namnet på landet för koden.
-* När nodnamnet bara består av en språkkod (till exempel `en`), egenskapen country är `*`och ytterligare `defaultCountry` -egenskapen lagrar koden för det land som ska anges.
+* När nodnamnet bara består av en språkkod (till exempel `en`), egenskapen country är `*`och ytterligare `defaultCountry` -egenskapen lagrar koden för det språkområde som ska användas för att ange landet.
 
 ![Språkdefinition](assets/chlimage_1-76.png)
 
 Så här ändrar du språk:
 
-1. Öppna CRXDE Lite i webbläsaren; till exempel [https://localhost:4502/crx/de](https://localhost:4502/crx/de)
+1. Öppna CRXDE Lite i webbläsaren, till exempel [https://localhost:4502/crx/de](https://localhost:4502/crx/de)
 1. Välj `/apps` mapp och klicka på **Skapa** sedan **Skapa mapp.**
 
    Namnge den nya mappen `wcm`.
 
 1. Upprepa föregående steg för att skapa `/apps/wcm/core` mappträd. Skapa en nod av typen `sling:Folder` in `core` anropad `resources`. <!-- ![Resources](assets/chlimage_1-77.png) -->
 
-1. Högerklicka på `/libs/wcm/core/resources/languages` nod och klicka **Kopiera**.
+1. Högerklicka på `/libs/wcm/core/resources/languages` och klicka på **Kopiera**.
 1. Högerklicka på `/apps/wcm/core/resources` mapp och klicka på **Klistra in**. Ändra de underordnade noderna efter behov.
 1. Klicka **Spara alla**.
-1. Klicka **verktyg**, **Operationer** sedan **Webbkonsol**. Klicka på **OSGi** sedan **Konfiguration**.
+1. Klicka **verktyg**, **Operationer** sedan **Webbkonsol**. Klicka från den här konsolen **OSGi** sedan **Konfiguration**.
 1. Leta reda på och klicka **Day CQ WCM Language Manager** och ändra värdet för **Språklista** till `/apps/wcm/core/resources/languages`och sedan klicka **Spara**.
 
    ![Day CQ WCM Language Manager](assets/chlimage_1-78.png)
 
-## Konfigurera MSM-lås på sidegenskaper (pekaktiverat gränssnitt) {#configuring-msm-locks-on-page-properties-touch-enabled-ui}
+## Konfigurera MSM-lås på sidegenskaper (Touch-aktiverat gränssnitt) {#configuring-msm-locks-on-page-properties-touch-enabled-ui}
 
 När du skapar en anpassad sidegenskap kan du behöva fundera på om den nya egenskapen ska kunna rullas ut till alla live-kopior.
 
@@ -671,11 +671,11 @@ Då måste du se till att:
 
 * E-postadress:
 
-* är utesluten från de utrullade egenskaperna, se [Exkludera egenskaper och nodtyper från synkronisering](/help/sites-administering/msm-sync.md#excluding-properties-and-node-types-from-synchronization).
+* Utesluts från de utrullade egenskaperna. Se [Exkludera egenskaper och nodtyper från synkronisering](/help/sites-administering/msm-sync.md#excluding-properties-and-node-types-from-synchronization).
 
 * Visuell huvudstil:
 
-* Se till att du inte får redigera den här egenskapen i det beröringsaktiverade användargränssnittet om inte arvet avbryts, och att du sedan kan återinstallera arvet; Detta styrs genom att klicka på kedjelänkarna/brutna kedjor som växlar för att ange anslutningsstatus.
+* Se till att du inte tillåts redigera den här egenskapen i det beröringsaktiverade användargränssnittet om inte arvet avbryts, även att du sedan kan återställa arvet. Detta styrs genom att klicka på kedjelänkarna/brutna kedjelänkarna som växlar för att ange anslutningsstatus.
 
 Anger om en sidegenskap ska rullas ut och därför styrs arvet av egenskapen dialog, under förutsättning att arvet avbryts/återställs vid redigering:
 
@@ -687,18 +687,18 @@ Anger om en sidegenskap ska rullas ut och därför styrs arvet av egenskapen dia
    * gäller endast den första underordnade nivån för resursen
       * **Typ**: `String`
 
-      * **Värde**: innehåller namnet på den aktuella egendomen (och är jämförbart med värdet på egendomen) `name`; se
+      * **Värde**: innehåller namnet på den aktuella egendomen (och är jämförbart med värdet på egendomen) `name`; till exempel, se
         `/libs/foundation/components/page/cq:dialog/content/items/tabs/items/basic/items/column/items/title/items/title`
 
 När `cq-msm-lockable` har definierats, om kedjan bryts/stängs kommer den att interagera med MSM på följande sätt:
 
 * om värdet för `cq-msm-lockable` är:
 
-   * **Relativ** (t.ex. `myProperty` eller `./myProperty`)
+   * **Relativ** (till exempel `myProperty` eller `./myProperty`)
 
       * den lägger till och tar bort egenskapen från `cq:propertyInheritanceCancelled`.
 
-   * **Absolut** (t.ex. `/image`)
+   * **Absolut** (till exempel `/image`)
 
       * om du bryter kedjan avbryts arvet genom att lägga till `cq:LiveSyncCancelled` blanda till `./image` och inställning `cq:isCancelledForChildren` till `true`.
 

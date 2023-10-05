@@ -1,7 +1,7 @@
 ---
 title: Starta arbetsflöden
 seo-title: Starting Workflows
-description: Lär dig hur du startar arbetsflöden i AEM.
+description: Lär dig starta arbetsflöden i AEM.
 seo-description: Learn how to start Workflows in AEM.
 uuid: 0648d335-ecce-459d-95fd-3d4d76181b32
 contentOwner: User
@@ -10,7 +10,7 @@ topic-tags: operations
 content-type: reference
 discoiquuid: e9ab4796-a050-40de-b073-af7d33cff009
 exl-id: 84a1964c-4121-4763-b946-9eee6093747d
-source-git-commit: 2bae11eafb875f01602c39c0dba00a888e11391a
+source-git-commit: 71b3f7c6ad2c7712762a29518de6cf0639081cb7
 workflow-type: tm+mt
 source-wordcount: '794'
 ht-degree: 0%
@@ -40,12 +40,11 @@ När du administrerar arbetsflöden kan du starta dem på flera olika sätt:
 >* [Översättningsprojekt](/help/sites-administering/tc-manage.md)
 >
 
-
 ## Arbetsflödesmodeller {#workflow-models}
 
 Du kan starta ett arbetsflöde [baserat på en av modellerna](/help/sites-administering/workflows.md#workflow-models-and-instances) visas på konsolen Arbetsflödesmodeller. Den enda obligatoriska informationen är nyttolasten, men du kan även lägga till en titel och/eller kommentar.
 
-## Starta arbetsflöden {#workflows-launchers}
+## Arbetsflöden - startare {#workflows-launchers}
 
 Workflow Launcher övervakar ändringar i innehållsdatabasen för att starta arbetsflöden beroende på platsen och resurstypen för den ändrade noden.
 
@@ -81,14 +80,14 @@ Ett arbetsflödespaket:
 
 * innehåller länkar till en uppsättning resurser (till exempel sidor, resurser).
 * innehåller paketinformation, t.ex. datum då paketet skapades, den användare som skapade paketet och en kort beskrivning.
-* definieras med hjälp av en särskild sidmall, På sådana sidor kan användaren ange resurser i paketet.
+* definieras med en särskild sidmall. På sådana sidor kan användaren ange resurserna i paketet.
 * kan användas flera gånger.
 * kan ändras av användaren (lägg till eller ta bort resurser) medan arbetsflödesinstansen körs.
 
 ## Starta ett arbetsflöde från Models Console {#starting-a-workflow-from-the-models-console}
 
-1. Navigera till **Modeller** konsol med **verktyg**, **Arbetsflöde** sedan **Modeller**.
-1. Välj arbetsflöde (enligt konsolvyn); Du kan också använda Sök (längst upp till vänster) om det behövs:
+1. Navigera till **Models** konsol med **verktyg**, **Arbetsflöde** sedan **Models**.
+1. Välj arbetsflödet (enligt konsolvyn). Du kan även använda Sök (längst upp till vänster) om det behövs:
 
    ![wf-103](assets/wf-103.png)
 
@@ -101,52 +100,54 @@ Ett arbetsflödespaket:
 
    * **Nyttolast**
 
-      Detta kan vara en sida, nod, resurs, paket, bland annat.
+     Detta kan vara en sida, nod, resurs, paket med flera resurser.
 
    * **Titel**
 
-      En valfri titel som hjälper dig att identifiera den här instansen.
+     En valfri titel som hjälper dig att identifiera den här instansen.
 
    * **Kommentar**
 
-      En valfri kommentar som hjälper till att ange detaljer för den här instansen.
+     En valfri kommentar som hjälper till att ange detaljer för den här instansen.
+
    ![wf-104](assets/wf-104.png)
 
 ## Skapa en startkonfiguration {#creating-a-launcher-configuration}
 
-1. Navigera till **Starta arbetsflöden** konsol med **verktyg**, **Arbetsflöde** sedan **Startare**.
+1. Navigera till **Arbetsflödeskörare** konsol med **verktyg**, **Arbetsflöde** sedan **Startare**.
 1. Välj **Skapa** sedan **Lägg till startprogram** för att öppna dialogrutan:
 
    ![wf-105](assets/wf-105.png)
 
    * **Händelsetyp**
 
-      Händelsetypen som startar arbetsflödet:
+     Händelsetypen som startar arbetsflödet:
 
       * Skapad
       * Ändrad
       * Borttagen
+
    * **Nodetype**
 
-      Den typ av nod som arbetsflödets startprogram gäller för.
+     Den typ av nod som arbetsflödets startprogram gäller för.
 
    * **Bana**
 
-      Sökvägen som arbetsflödets startprogram gäller för.
+     Sökvägen som arbetsflödets startprogram gäller för.
 
-   * **Körningsläge(n)**
+   * **Körningsläge**
 
-      Den typ av server som arbetsflödets startprogram gäller för. Välj **Upphovsman**, **Publicera**, eller **Skapa och publicera**.
+     Den typ av server som arbetsflödets startprogram gäller för. Välj **Upphovsman**, **Publicera**, eller **Skapa och publicera**.
 
    * **Villkor**
 
-      En lista med villkor för nodvärden som, när de utvärderas, avgör om arbetsflödet startas. Följande villkor gör att arbetsflödet startar när noden har ett egenskapsnamn med värdet User:
+     En lista med villkor för nodvärden som, när de utvärderas, avgör om arbetsflödet startas. Följande villkor gör att arbetsflödet startar när noden har ett egenskapsnamn med värdet User:
 
-      name==User
+     name==User
 
    * **Funktioner**
 
-      En lista över funktioner som ska aktiveras. Välj önskad(a) funktion(er) i listrutan.
+     En lista över funktioner som ska aktiveras. Välj önskad(a) funktion(er) i listrutan.
 
    * **Inaktiverade funktioner**
 
@@ -154,38 +155,35 @@ Ett arbetsflödespaket:
 
    * **Arbetsflödesmodell**
 
-      Det arbetsflöde som ska startas när händelsetypen inträffar på noden och/eller sökvägen under det definierade villkoret.
+     Det arbetsflöde som ska startas när händelsetypen inträffar på noden och/eller sökvägen under det definierade villkoret.
 
    * **Beskrivning**
 
-      Din egen text som beskriver och identifierar startkonfigurationen.
+     Din egen text som beskriver och identifierar startkonfigurationen.
 
    * **Aktivera**
 
-      Anger om arbetsflödets startprogram är aktiverat:
+     Anger om arbetsflödets startprogram är aktiverat:
 
       * Välj **Aktivera** för att starta arbetsflöden när konfigurationsegenskaperna är uppfyllda.
       * Välj **Inaktivera** när arbetsflödet inte ska köras (inte ens när konfigurationsegenskaperna är uppfyllda).
+
    * **Uteslut lista**
 
-      Detta anger alla JCR-händelser som ska exkluderas (d.v.s. ignoreras) när du avgör om ett arbetsflöde ska utlösas.
+     Detta anger alla JCR-händelser som ska exkluderas (d.v.s. ignoreras) när du avgör om ett arbetsflöde ska utlösas.
 
-      Den här startegenskapen är en kommaavgränsad lista med objekt: &quot;
+     Den här startegenskapen är en kommaavgränsad lista med objekt: &quot;
 
       * `property-name` ignorera `jcr` -händelse som utlöstes för det angivna egenskapsnamnet. &quot;
-      * `event-user-data:<*someValue*>` ignorerar alla händelser som innehåller `*<someValue*`> `user-data` genom [ `ObservationManager` API](https://www.adobe.io/experience-manager/reference-materials/spec/jsr170/javadocs/jcr-2.0/javax/jcr/observation/ObservationManager.html#setUserData(java.lang.String.
+      * `event-user-data:<*someValue*>` ignorerar alla händelser som innehåller `*<someValue*`> `user-data` genom [`ObservationManager` API](https://www.adobe.io/experience-manager/reference-materials/spec/jsr170/javadocs/jcr-2.0/javax/jcr/observation/ObservationManager.html#setUserData(java.lang.String.
 
-      Till exempel:
+     Till exempel:
 
-      `jcr:lastModified,dc:modified,dc:format,jcr:lastModifiedBy,imageMap,event-user-data:changedByWorkflowProcess`
+     `jcr:lastModified,dc:modified,dc:format,jcr:lastModifiedBy,imageMap,event-user-data:changedByWorkflowProcess`
 
-      Den här funktionen kan användas för att ignorera ändringar som utlöses av en annan arbetsflödesprocess genom att lägga till exkluderingsobjektet:
+     Den här funktionen kan användas för att ignorera ändringar som utlöses av en annan arbetsflödesprocess genom att lägga till exkluderingsobjektet:
 
-      `event-user-data:changedByWorkflowProcess`
-
-
-
-
+     `event-user-data:changedByWorkflowProcess`
 
 1. Välj **Skapa**, för att skapa startprogrammet och återgå till konsolen.
 
@@ -193,4 +191,4 @@ Ett arbetsflödespaket:
 
 ## Hantera en startkonfiguration {#managing-a-launcher-configuration}
 
-När du har skapat startkonfigurationen kan du använda samma konsol för att välja instansen och sedan **Visa egenskaper** (och redigera dem) eller **Ta bort**.
+När du har skapat startkonfigurationen kan du använda samma konsol för att välja instansen och sedan **Visa egenskaper** (och redigera) eller **Ta bort**.

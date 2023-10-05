@@ -8,7 +8,7 @@ content-type: reference
 docset: aem65
 exl-id: 39e35a07-140f-4853-8f0d-8275bce27a65
 feature: Security
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 71b3f7c6ad2c7712762a29518de6cf0639081cb7
 workflow-type: tm+mt
 source-wordcount: '6845'
 ht-degree: 0%
@@ -27,11 +27,11 @@ Sedan AEM 6.3 finns det en ny implementering av en stängd användargrupp som ä
 
 Målet med den nya implementeringen är att vid behov ta med befintliga funktioner samtidigt som man åtgärdar problem och designbegränsningar från äldre versioner. Resultatet blir en ny CUG-design med följande egenskaper:
 
-* Tydlig separation av autentiserings- och auktoriseringselement, som kan användas individuellt eller i kombination.
+* Tydlig separation av autentiserings- och auktoriseringselement, som kan användas var för sig eller i kombination.
 * Dedikerad tillståndsmodell som återspeglar den begränsade läsåtkomsten vid de konfigurerade CUG-träden utan att påverka andra åtkomstkontrollinställningar och behörighetskrav.
-* Åtkomstkontrollinställningarna för den begränsade läsåtkomsten, som vanligtvis behövs för redigering, skiljer sig åt och behörighetsutvärderingen som vanligtvis bara önskas vid publicering.
+* Åtkomstkontrollinställningarna för den begränsade läsåtkomsten, som vanligtvis behövs för redigeringsförekomster, skiljer sig åt och behörighetsutvärderingen som vanligtvis bara önskas vid publicering.
 * Redigering av begränsad läsbehörighet utan eskalering av behörigheter.
-* Dedikerat nodtypstillägg som markerar autentiseringskravet.
+* Dedikerat nodtypstillägg för att markera autentiseringskravet.
 * Valfri inloggningssökväg som är associerad med autentiseringskravet.
 
 ### Implementering av ny anpassad användargrupp {#the-new-custom-user-group-implementation}
@@ -76,12 +76,12 @@ Till skillnad från den tidigare implementeringen identifieras och behandlas de 
 
 Förutom en dedikerad åtkomstkontrollshantering för CUG:er kan du med den nya auktoriseringsmodellen villkorligt aktivera behörighetsutvärdering för dess principer. Detta gör att du kan konfigurera CUG-principer i en staging-miljö och endast aktivera utvärdering av de gällande behörigheterna när de har replikerats till produktionsmiljön.
 
-Behörighetsutvärderingen för CUG-regler och interaktionen med standardauktoriseringsmodellen eller någon ytterligare auktoriseringsmodell följer mönstret som utformats för flera auktoriseringsmekanismer i Apache Jackrabbit Oak: en given uppsättning behörigheter beviljas endast om alla modeller beviljar åtkomst. Se [den här sidan](https://jackrabbit.apache.org/oak/docs/security/authorization/composite.html) för mer information.
+Behörighetsutvärderingen för CUG-profiler och interaktionen med standardauktoriseringen eller eventuella ytterligare auktoriseringsmodeller följer det mönster som utformats för flera auktoriseringsmekanismer i Apache Jackrabbit Oak: en given uppsättning behörigheter beviljas om och endast om alla modeller tillåter åtkomst. Se [den här sidan](https://jackrabbit.apache.org/oak/docs/security/authorization/composite.html) för mer information.
 
 Följande egenskaper gäller för behörighetsutvärderingen som är kopplad till behörighetsmodellen som är utformad för att hantera och utvärdera CUG-principer:
 
 * Det hanterar bara läsbehörigheter för vanliga noder och egenskaper, men inte läsåtkomstkontrollinnehåll
-* Det hanterar inte skrivbehörigheter eller andra typer av tillstånd som krävs för ändring av skyddat JCR-innehåll (åtkomstkontroll, information om nodtyp, versionshantering, låsning eller användarhantering bland annat). Dessa behörigheter påverkas inte av en CUG-princip och utvärderas inte av den associerade auktoriseringsmodellen. Huruvida dessa behörigheter beviljas eller inte beror på de andra modellerna som har konfigurerats i säkerhetsinställningarna.
+* Det hanterar inte skrivbehörigheter eller andra typer av behörigheter som krävs för att ändra skyddat JCR-innehåll (åtkomstkontroll, nodtypsinformation, versionshantering, låsning eller användarhantering bland annat). Dessa behörigheter påverkas inte av en CUG-princip och utvärderas inte av den associerade auktoriseringsmodellen. Huruvida dessa behörigheter beviljas eller inte beror på de andra modellerna som har konfigurerats i säkerhetsinställningarna.
 
 Effekten av en enda CUG-princip vid utvärdering av tillstånd kan sammanfattas enligt följande:
 
@@ -105,7 +105,7 @@ Följande bästa metoder bör beaktas vid definition av begränsad läsåtkomst 
    * Mycket stort behov av kundengagemang (t.ex. på varje sida) kan tyda på att det behövs en anpassad behörighetsmodell som eventuellt är bättre anpassad för att passa de specifika säkerhetsbehoven i den aktuella tillämpningen och det aktuella innehållet.
 
 * Begränsa sökvägarna som stöds för CUG-principer till några få träd i databasen för optimerade prestanda. Tillåt t.ex. bara CUG:er under noden /content som levererats som standardvärde sedan AEM 6.3.
-* CUG-profiler är utformade för att ge läsåtkomst till en liten uppsättning huvuden. Behovet av ett stort antal huvudansvariga kan lyfta fram frågor i innehållet eller programdesignen och bör omprövas.
+* CUG-profiler är utformade för att ge läsåtkomst till en liten uppsättning huvudobjekt. Behovet av ett stort antal huvudansvariga kan lyfta fram frågor i innehållet eller programdesignen och bör omprövas.
 
 ### Autentisering: Definiera autentiseringskrav {#authentication-defining-the-auth-requirement}
 
@@ -173,7 +173,7 @@ The `LoginPathProvider` som implementerats av det nya stödet för krav på aute
 
 Följande bästa metoder bör beaktas när autentiseringskrav definieras:
 
-* Undvik att kapsla autentiseringskrav: Att placera en enskild auth-required-markör i början av ett träd bör vara tillräckligt och ärvs till hela det underträd som definieras av målnoden. Ytterligare autentiseringskrav inom det trädet ska betraktas som redundanta och kan leda till prestandaproblem när autentiseringskraven utvärderas i Apache Sling. I och med separationen av behörighets- och autentiseringsrelaterade CUG-områden är det möjligt att begränsa läsåtkomst med hjälp av CUG eller andra typer av policyer samtidigt som autentisering för hela trädet upprätthålls.
+* Undvik inkapslade autentiseringskrav: det bör räcka att placera en enda auth-required-markör i början av ett träd och den ärvs till hela det underträd som definieras av målnoden. Ytterligare autentiseringskrav inom det trädet ska betraktas som redundanta och kan leda till prestandaproblem när autentiseringskraven utvärderas i Apache Sling. I och med separationen av behörighets- och autentiseringsrelaterade CUG-områden är det möjligt att begränsa läsåtkomst med hjälp av CUG eller andra typer av policyer samtidigt som autentisering för hela trädet upprätthålls.
 * Modelldatabasinnehåll så att autentiseringskraven gäller för hela trädet utan att kapslade underträd behöver uteslutas från kravet igen.
 * Så här undviker du att ange och därefter registrera redundanta inloggningssökvägar:
 
@@ -484,13 +484,13 @@ I det här avsnittet finns en översikt över OSGi-komponenterna och de enskilda
 
 Se även dokumentationen för CUG-mappning för en omfattande mappning av konfigurationsalternativen mellan den gamla och den nya implementeringen.
 
-### Behörighet: Installation och konfiguration {#authorization-setup-and-configuration}
+### Auktorisering: Installation och konfiguration {#authorization-setup-and-configuration}
 
 De nya, auktoriseringsrelaterade delarna finns i **Oak CUG Authorization** bundle ( `org.apache.jackrabbit.oak-authorization-cug`), som ingår i AEM standardinstallation. Paketet definierar en separat auktoriseringsmodell som ska användas som ett ytterligare sätt att hantera läsåtkomst.
 
 #### Konfigurera CUG-auktorisering {#setting-up-cug-authorization}
 
-Hur du konfigurerar CUG-auktorisering beskrivs i detalj i [relevant Apache-dokumentation](https://jackrabbit.apache.org/oak/docs/security/authorization/cug.html#pluggability). Som standard har AEM CUG-auktorisering distribuerats i alla körningslägen. Stegvisa instruktioner kan också användas för att inaktivera CUG-auktorisering i de installationer som kräver en annan auktoriseringsinställning.
+Hur du konfigurerar CUG-auktorisering beskrivs i detalj i [relevant Apache-dokumentation](https://jackrabbit.apache.org/oak/docs/security/authorization/cug.html#pluggability). AEM har som standard CUG-auktorisering i alla körningslägen. Stegvisa instruktioner kan också användas för att inaktivera CUG-auktorisering i de installationer som kräver en annan auktoriseringsinställning.
 
 #### Konfigurera referensfiltret {#configuring-the-referrer-filter}
 
@@ -573,7 +573,7 @@ Följande två OSGi-komponenter har introducerats för att definiera autentiseri
 
 #### Konfigurationsalternativ {#configuration-options}
 
-Nyckelkonfigurationsalternativen är:
+Konfigurationsalternativen är:
 
 * `cugSupportedPaths`: Ange de underträd som kan innehålla CUG. Inget standardvärde har angetts
 * `cugEnabled`: konfigurationsalternativ för att aktivera behörighetsutvärdering för aktuella CUG-principer.
@@ -588,7 +588,7 @@ Standardvärdet eftersom AEM 6.3 förhindrar att följande objekt påverkas av C
 
 * administratörsobjekt (admin-användare, administratörsgrupp)
 * användarkonton för tjänst
-* internt systemkonto
+* intern systemsäkerhetsobjekt
 
 Mer information finns i tabellen i [Standardkonfiguration sedan AEM 6.3](#default-configuration-since-aem) nedan.
 
@@ -671,7 +671,7 @@ De autentiseringsrelaterade delarna av CUG-omskrivningen levereras endast med et
    <td><p>Etikett = Sökvägar som stöds</p> <p>Namn = 'supportedPaths'</p> </td>
    <td>Ange&lt;string&gt;</td>
    <td>-</td>
-   <td>Sökvägar som autentiseringskraven gäller för den här hanteraren. Lämna den här konfigurationen inaktiverad om du vill lägga till <code>granite:AuthenticationRequirement</code> blanda text till noder utan att tvinga dem (t.ex. på författarinstanser). Funktionen är inaktiverad om den saknas. </td>
+   <td>Sökvägar som autentiseringskraven gäller för den här hanteraren. Lämna konfigurationen inaktiverad om du vill lägga till <code>granite:AuthenticationRequirement</code> blanda text till noder utan att tvinga dem (till exempel på författarinstanser). Funktionen är inaktiverad om den saknas. </td>
   </tr>
  </tbody>
 </table>
@@ -718,7 +718,7 @@ Läs [CUG-plug](https://jackrabbit.apache.org/oak/docs/security/authorization/cu
 
 ### Inaktivera autentiseringskravet {#disable-the-authentication-requirement}
 
-För att inaktivera stödet för autentiseringskraven enligt `granite.auth.authhandler` modul som är associerad med **Autentiseringskrav och hanterare för inloggningssökväg för Adobe Granite**.
+För att inaktivera stödet för autentiseringskraven enligt `granite.auth.authhandler` modul som det räcker att ta bort konfigurationen som är kopplad till **Autentiseringskrav och hanterare för inloggningssökväg för Adobe Granite**.
 
 >[!NOTE]
 >
@@ -742,7 +742,7 @@ Se ovanstående [Apache Jackrabbit FileVault](/help/sites-administering/closed-u
 
 Replikeringsmodulen har justerats något för att kunna replikera CUG-principer mellan olika AEM instanser:
 
-* `DurboImportConfiguration.isImportAcl()` tolkas ordagrant och påverkar endast regler för åtkomstkontroll `javax.jcr.security.AccessControlList`
+* `DurboImportConfiguration.isImportAcl()` tolkas ordagrant och påverkar endast regler för åtkomstkontroll som implementerar `javax.jcr.security.AccessControlList`
 
 * `DurboImportTransformer` respekterar endast den här konfigurationen för äkta ACL:er
 * Andra policyer som `org.apache.jackrabbit.api.security.authorization.PrincipalSetPolicy` instanser som skapas av CUG-auktoriseringsmodellen replikeras alltid och konfigurationsalternativet `DurboImportConfiguration.isImportAcl`() ignoreras.
@@ -753,11 +753,11 @@ Det finns en begränsning för replikering av CUG-principer. Om en viss CUG-prin
 
 Autentiseringshanteraren **Autentiseringshanterare för Adobe Granite HTTP Header** levererade med `com.adobe.granite.auth.authhandler` paket innehåller en referens till `CugSupport` gränssnitt som definieras av samma modul. Den används för att beräkna &quot;sfären&quot; under vissa omständigheter och återgår till sfären som konfigurerats med hanteraren.
 
-Detta har justerats för att referera till `CugSupport` valfritt för att säkerställa maximal bakåtkompatibilitet om en viss konfiguration beslutar att återaktivera den borttagna implementeringen. Installationer som använder implementeringen kommer inte längre att få den sfär som extraheras från CUG-implementeringen, men den kommer alltid att visa sfären som den definierats med **Autentiseringshanterare för Adobe Granite HTTP Header**.
+Detta har justerats för att referera till `CugSupport` valfritt för att säkerställa maximal bakåtkompatibilitet om en viss konfiguration bestämmer sig för att återaktivera den borttagna implementeringen. Installationer som använder implementeringen kommer inte längre att få den sfär som extraheras från CUG-implementeringen, men den kommer alltid att visa sfären som den definierats med **Autentiseringshanterare för Adobe Granite HTTP Header**.
 
 >[!NOTE]
 >
->Som standard är **Autentiseringshanterare för Adobe Granite HTTP Header** konfigureras endast i publiceringskörningsläge med &quot;Inaktivera inloggningssida&quot; ( `auth.http.nologin`) aktiverat.
+>Som standard är **Autentiseringshanterare för Adobe Granite HTTP Header** är endast konfigurerad i publiceringskörningsläge med &quot;Inaktivera inloggningssida&quot; ( `auth.http.nologin`) aktiverat.
 
 ### AEM LiveCopy {#aem-livecopy}
 
@@ -766,7 +766,7 @@ Om du konfigurerar CUG:er i kombination med LiveCopy representeras de i database
 * `/content/we-retail/us/en/blueprint/rep:cugPolicy`
 * `/content/we-retail/us/en/LiveCopy@granite:loginPath`
 
-Båda dessa element skapas under `cq:Page`. I den aktuella designen hanterar MSM bara noder och egenskaper som finns under `cq:PageContent` (`jcr:content`).
+Båda dessa element skapas under `cq:Page`. I den aktuella designen hanterar MSM bara noder och egenskaper som finns under `cq:PageContent` (`jcr:content`)-nod.
 
 Därför kan CUG-grupper inte rullas ut till Live-kopior från utkast. Se till att du undviker detta när du konfigurerar Live Copy.
 
@@ -792,7 +792,7 @@ I den gamla implementeringen användes standardauktoriseringsmodellen för att �
 
 I och med den nya implementeringen påverkas inte åtkomstkontrollinställningen för standardauktoriseringsmodellen av någon CUG som skapas, ändras eller tas bort. Istället anropas en ny typ av princip `PrincipalSetPolicy` används som extra åtkomstkontrollinnehåll för målnoden. Den här extra principen kommer att placeras som underordnad till målnoden och kommer att vara jämställd med standardprincipnoden om en sådan finns.
 
-**Redigera CUG-principer i åtkomstkontrollhantering**
+**Redigera CUG-principer i åtkomststyrningshantering**
 
 Den här förändringen från kvarvarande JCR-egenskaper till en dedikerad åtkomstkontrollprincip påverkar behörigheten som behövs för att skapa eller ändra auktoriseringsdelen av CUG-funktionen. Eftersom detta anses vara en ändring av innehållet i kontrollpanelen krävs det `jcr:readAccessControl` och `jcr:modifyAccessControl` behörighet för att kunna skrivas till databasen. Därför kan bara innehållsförfattare som har behörighet att ändra innehållet i åtkomstkontrollen på en sida konfigurera eller ändra det här innehållet. Detta står i kontrast till den gamla implementeringen där möjligheten att skriva vanliga JCR-egenskaper var tillräcklig, vilket resulterar i eskalering av behörigheter.
 
@@ -800,11 +800,11 @@ Den här förändringen från kvarvarande JCR-egenskaper till en dedikerad åtko
 
 CUG-principer förväntas skapas vid JCR-noden som definierar det underträd som ska ha begränsad läsåtkomst. Detta är sannolikt en AEM sida om CUG förväntas påverka hela trädet.
 
-Observera att om du bara placerar CUG-principen på jcr:content-noden under en viss sida begränsas åtkomsten till innehållet s.str för en viss sida, men det kommer inte att gälla för några jämställda eller underordnade sidor. Detta kan vara ett giltigt användningsexempel och det är möjligt att göra detta med en databasredigerare som kan använda detaljerat åtkomstinnehåll. Den kontrasterar emellertid den tidigare implementeringen där placeringen av en cq:cugEnabled-egenskap på jcr:content-noden mappades om internt till sidnoden. Den här mappningen utförs inte längre.
+Observera att om du bara placerar CUG-principen på jcr:content-noden under en viss sida begränsas åtkomsten till innehållet s.str för en viss sida, men det kommer inte att gälla för några jämställda eller underordnade sidor. Detta kan vara ett giltigt användningsexempel och det är möjligt att göra detta med en databasredigerare som kan använda detaljerat åtkomstinnehåll. Den kontrasterar emellertid den tidigare implementeringen där placeringen av en cq:cugEnabled-egenskap på jcr:content-noden mappades om internt till sidnoden. Mappningen utförs inte längre.
 
 **Behörighetsutvärdering med CUG-principer**
 
-Genom att gå från det gamla CUG-stödet till en ytterligare behörighetsmodell ändras det sätt på vilket effektiva läsbehörigheter utvärderas. Enligt beskrivningen i [Jackrabbits dokumentation](https://jackrabbit.apache.org/oak/docs/security/authorization/composite.html), en angiven användare som kan visa `CUGcontent` beviljas läsåtkomst endast om behörighetsutvärderingen för alla modeller som konfigurerats i Oak-databasen ger läsåtkomst.
+Genom att gå från det gamla CUG-stödet till en ytterligare behörighetsmodell ändras det sätt på vilket effektiva läsbehörigheter utvärderas. Enligt beskrivningen i [Jackrabbits dokumentation](https://jackrabbit.apache.org/oak/docs/security/authorization/composite.html), en angiven användare som kan visa `CUGcontent` beviljas läsåtkomst endast om behörighetsutvärderingen för alla modeller som är konfigurerade i Oak-databasen ger läsåtkomst.
 
 Med andra ord, för utvärderingen av de gällande behörigheterna, `CUGPolicy` och standardposterna för åtkomstkontroll kommer att beaktas och läsåtkomst för CUG-innehållet kommer endast att beviljas om det beviljas av båda typerna av profiler. I en AEM publiceringsinstallation där läsåtkomst till den fullständiga `/content` Trädet beviljas för alla, effekten av CUG-policyer blir densamma som med den gamla implementeringen.
 
@@ -843,7 +843,7 @@ Autentiseringskrav förväntas skapas på JCR-noden som definierar det underträ
 
 Om du bara placerar CUG-principen vid jcr:content-noden som finns under en viss sida begränsas bara åtkomsten till innehållet, men det påverkar inte själva sidnoden eller underordnade sidor.
 
-Detta kan vara ett giltigt scenario och är möjligt med en databasredigerare som tillåter att mixin placeras på valfri nod. Beteendet står dock i kontrast till den tidigare implementeringen, där en cq:cugEnabled- eller cq:cugLoginPage-egenskap placerades internt på jcr:content-noden. Den här mappningen utförs inte längre.
+Detta kan vara ett giltigt scenario och är möjligt med en databasredigerare som tillåter att mixin placeras på valfri nod. Beteendet står dock i kontrast till den tidigare implementeringen, där en cq:cugEnabled- eller cq:cugLoginPage-egenskap placerades internt på jcr:content-noden. Mappningen utförs inte längre.
 
 #### Konfigurerade sökvägar som stöds {#configured-supported-paths}
 
@@ -861,12 +861,12 @@ CUG-mappning sedan AEM 6.3
 
 ### Befintliga installationer som använder den inaktuella CUG-filen {#existing-installations-using-the-deprecated-cug}
 
-Den gamla CUG-supportimplementeringen har tagits bort och kommer att tas bort i framtida versioner. Vi rekommenderar att du går över till de nya implementeringarna när du uppgraderar från versioner som är äldre än AEM 6.3.
+Den gamla CUG-supportimplementeringen har tagits bort och kommer att tas bort i framtida versioner. Vi rekommenderar att du går över till de nya implementeringarna när du uppgraderar från versioner äldre än AEM 6.3.
 
 Vid uppgradering AEM installation är det viktigt att se till att endast en CUG-implementering är aktiverad. Kombinationen av det nya och det gamla, föråldrade CUG-stödet testas inte och kommer troligen att orsaka oönskat beteende:
 
 * kollisioner i Sling Authenticator med avseende på autentiseringskrav
-* nekad läsåtkomst när ACL-inställningen som är kopplad till gammal CUG krockar med en ny CUG-princip.
+* nekad läsåtkomst när ACL-inställningen som är kopplad till en gammal CUG kolliderar med en ny CUG-princip.
 
 ### Migrerar befintligt CUG-innehåll {#migrating-existing-cug-content}
 

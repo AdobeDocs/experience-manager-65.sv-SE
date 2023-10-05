@@ -6,7 +6,7 @@ role: Developer
 feature: APIs,Assets HTTP API,Developer Tools
 exl-id: 6bc10f4e-a951-49ba-9c71-f568a7f2e40d
 hide: true
-source-git-commit: 3d5e9ad8ee19756b05e5a77a3f748bc647fcf734
+source-git-commit: 71b3f7c6ad2c7712762a29518de6cf0639081cb7
 workflow-type: tm+mt
 source-wordcount: '1734'
 ht-degree: 0%
@@ -62,13 +62,13 @@ Mappar är som kataloger i traditionella filsystem. De är behållare för andra
 
 >[!NOTE]
 >
->Vissa egenskaper för mapp eller resurs är mappade till ett annat prefix. The `jcr` prefix för `jcr:title`, `jcr:description`och `jcr:language` ersätts med `dc` prefix. I den returnerade JSON-koden `dc:title` och `dc:description` innehåller värdena för `jcr:title` och `jcr:description`, respektive.
+>Vissa egenskaper för mapp eller resurs är mappade till ett annat prefix. The `jcr` prefix för `jcr:title`, `jcr:description`och `jcr:language` ersätts med `dc` prefix. I den returnerade JSON-koden `dc:title` och `dc:description` innehåller värdena för `jcr:title` och `jcr:description`, respektive
 
 **Länkar** I mapparna visas tre länkar:
 
 * `self`: Länka till sig själv.
-* `parent`: Länka till den överordnade mappen.
-* `thumbnail`: (Valfritt) länka till en mappminiatyrbild.
+* `parent`: Länk till den överordnade mappen.
+* `thumbnail`: (Valfritt) länk till en mappminiatyrbild.
 
 ### Assets {#assets}
 
@@ -82,7 +82,7 @@ Mer information om element i innehållsfragment finns i [Stöd för innehållsfr
 
 I [!DNL Experience Manager] en mapp har följande komponenter:
 
-* Enheter: Resursernas underordnade är dess återgivningar.
+* Enheter: De underordnade resurserna är dess återgivningar.
 * Egenskaper.
 * Länkar.
 
@@ -257,7 +257,7 @@ Skapar en ny resurskommentar.
 
 ## Kopiera en mapp eller en resurs {#copy-a-folder-or-asset}
 
-Kopierar en mapp eller resurs som är tillgänglig på den angivna sökvägen till ett nytt mål.
+Kopierar en mapp eller en resurs som är tillgänglig på den angivna sökvägen till ett nytt mål.
 
 **Begäranrubriker**: Parametrarna är:
 

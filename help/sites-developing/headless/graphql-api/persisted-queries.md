@@ -1,8 +1,8 @@
 ---
 title: Beständiga GraphQL-frågor
-description: Lär dig hur du bibehåller GraphQL-frågor i Adobe Experience Manager för att optimera prestanda. Beständiga frågor kan begäras av klientprogram med HTTP GET-metoden och svaret kan cachas i Dispatcher- och CDN-lagren, vilket i slutänden förbättrar klientprogrammens prestanda.
+description: Lär dig hur du bibehåller GraphQL-frågor i Adobe Experience Manager för att optimera prestandan. Beständiga frågor kan begäras av klientprogram med HTTP GET-metoden och svaret kan cachas i Dispatcher- och CDN-lagren, vilket i slutänden förbättrar klientprogrammens prestanda.
 exl-id: d7a1955d-b754-4700-b863-e9f66396cbe1
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 71b3f7c6ad2c7712762a29518de6cf0639081cb7
 workflow-type: tm+mt
 source-wordcount: '1423'
 ht-degree: 1%
@@ -11,7 +11,7 @@ ht-degree: 1%
 
 # Beständiga GraphQL-frågor {#persisted-queries-caching}
 
-Beständiga frågor är GraphQL-frågor som skapas och lagras på Adobe Experience Manager (AEM) server. De kan begäras med en GET-begäran från klientprogram. Svaret på en begäran om GET kan cachas i skikten Dispatcher och Content Delivery Network (CDN), vilket i slutänden förbättrar prestanda för det begärande klientprogrammet. Detta skiljer sig från vanliga GraphQL-frågor, som körs med förfrågningar från POSTER där svaret inte enkelt kan cachas.
+Beständiga frågor är GraphQL-frågor som skapas och lagras på Adobe Experience Manager (AEM)-servern. De kan begäras med en GET-begäran från klientprogram. Svaret på en begäran om GET kan cachas i skikten Dispatcher och Content Delivery Network (CDN), vilket i slutänden förbättrar prestanda för det begärande klientprogrammet. Detta skiljer sig från vanliga GraphQL-frågor, som körs med förfrågningar från POSTER där svaret inte enkelt kan cachas.
 
 <!--
 >[!NOTE]
@@ -19,11 +19,11 @@ Beständiga frågor är GraphQL-frågor som skapas och lagras på Adobe Experien
 >Persisted Queries are recommended. See [GraphQL Query Best Practices (Dispatcher)](/help/headless/graphql-api/content-fragments.md#graphql-query-best-practices) for details, and the related Dispatcher configuration.
 -->
 
-The [GraphiQL IDE](/help/sites-developing/headless/graphql-api/graphiql-ide.md) finns i AEM för att du ska kunna utveckla, testa och behålla dina GraphQL-frågor innan [överföra till produktionsmiljön](#transfer-persisted-query-production). För ärenden som behöver anpassas (till exempel när [anpassa cachen](/help/sites-developing/headless/graphql-api/graphiql-ide.md#caching-persisted-queries)) kan du använda API:t, se exemplet med cURL i [Så här behåller du en GraphQL-fråga](#how-to-persist-query).
+The [GraphiQL IDE](/help/sites-developing/headless/graphql-api/graphiql-ide.md) finns i AEM för att du ska kunna utveckla, testa och behålla dina GraphQL-frågor innan [överföra till produktionsmiljön](#transfer-persisted-query-production). För ärenden som behöver anpassas (till exempel när [anpassa cachen](/help/sites-developing/headless/graphql-api/graphiql-ide.md#caching-persisted-queries)) kan du använda API:t; se exemplet på cURL i [Så här behåller du en GraphQL-fråga](#how-to-persist-query).
 
 ## Beständiga frågor och slutpunkter {#persisted-queries-and-endpoints}
 
-Beständiga frågor måste alltid använda den slutpunkt som är relaterad till [lämplig platskonfiguration](/help/sites-developing/headless/graphql-api/graphql-endpoint.md); så att de kan använda antingen eller båda:
+Beständiga frågor måste alltid använda den slutpunkt som är relaterad till [lämplig platskonfiguration](/help/sites-developing/headless/graphql-api/graphql-endpoint.md)så att de kan använda antingen eller båda:
 
 * Den globala konfigurationen och slutpunkten Frågan har åtkomst till alla modeller för innehållsfragment.
 * Specifika platskonfigurationer och slutpunkter Om du vill skapa en beständig fråga för en specifik platskonfiguration måste du ha en motsvarande platskonfigurationsspecifik slutpunkt (för att ge åtkomst till relaterade modeller för innehållsfragment).
@@ -187,7 +187,7 @@ GraphiQL IDE är **standard** metod för beständiga frågor. Bevara en given fr
 
 ## Så här kör du en fråga som är sparad {#execute-persisted-query}
 
-Om du vill köra en fråga som är permanent skapar ett klientprogram en GET-begäran med följande syntax:
+För att köra en Persistent-fråga gör ett klientprogram en GET-begäran med följande syntax:
 
 ```
 GET <AEM_HOST>/graphql/execute.json/<PERSISTENT_PATH>
@@ -250,7 +250,7 @@ query getAdventuresByActivity($activity: String!) {
   }
 ```
 
-Den här frågan kan sparas under en sökväg `wknd/adventures-by-activity`. Så här anropar du den beständiga frågan där `activity=Camping` begäran skulle se ut så här:
+Frågan kan sparas under en sökväg `wknd/adventures-by-activity`. Anropa den beständiga frågan där `activity=Camping` begäran skulle se ut så här:
 
 ```
 <AEM_HOST>/graphql/execute.json/wknd/adventures-by-activity%3Bactivity%3DCamping
@@ -264,7 +264,7 @@ Beständiga frågor rekommenderas eftersom de kan cachelagras på [Dispatcher](h
 
 Som standard blir cachen ogiltig AEM baserat på en TTL-definition (Time To Live). Dessa TTL:er kan definieras med följande parametrar. Dessa parametrar kan nås på olika sätt, med variationer i namnen beroende på vilken mekanism som används:
 
-| Cachetyp | [HTTP-huvud](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control)  | cURL  | OSGi-konfiguration  |
+| Cache-typ | [HTTP-huvud](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control)  | cURL  | OSGi-konfiguration  |
 |--- |--- |--- |--- |
 | Webbläsare | `max-age` | `cache-control : max-age` | `cacheControlMaxAge` |
 | CDN | `s-maxage` | `surrogate-control : max-age` | `surrogateControlMaxAge` |
@@ -285,7 +285,7 @@ För författarinstanser är standardvärdena:
 De var:
 
 * kan inte skrivas över med en OSGi-konfiguration
-* kan skrivas över av en begäran som definierar inställningar för HTTP-huvudet med cURL; bör innehålla lämpliga inställningar för `cache-control` och/eller `surrogate-control`; finns i [Hantera cache på nivån för beständig fråga](#cache-persisted-query-level)
+* kan skrivas över av en begäran som definierar inställningar för HTTP-huvudet med cURL; den bör innehålla lämpliga inställningar för `cache-control` och/eller `surrogate-control`; för exempel, se [Hantera cache på nivån för beständig fråga](#cache-persisted-query-level)
 
 <!-- CQDOC-20186 -->
 <!-- following entry is only when the GraphiQL IDE is ready; add cross-reference too -->
@@ -293,7 +293,7 @@ De var:
 * can be overwritten if you specify values in the **Headers** dialog of the [GraphiQL IDE](#http-cache-headers-graphiql-ide)
 -->
 
-### Publicera instanser {#publish-instances}
+### Publicera förekomster {#publish-instances}
 
 Standardvärdena för publiceringsinstanser är:
 
@@ -370,10 +370,10 @@ URL:en kan delas upp i följande delar:
 |----------| -------------|
 | `/graphql/execute.json` | Beständig frågeslutpunkt |
 | `/wknd/adventure-by-path` | Sökväg för beständig fråga |
-| `%3B` | Kodning av `;` |
+| `%3B` | Kodning `;` |
 | `adventurePath` | Frågevariabel |
-| `%3D` | Kodning av `=` |
-| `%2F` | Kodning av `/` |
+| `%3D` | Kodning `=` |
+| `%2F` | Kodning `/` |
 | `%2Fcontent%2Fdam...` | Kodad sökväg till innehållsfragmentet |
 
 I vanlig text ser URI:n för begäran ut så här:
@@ -386,26 +386,26 @@ Om du vill använda en beständig fråga i en klientapp bör AEM headless Client
 
 ## Överför en beständig fråga till produktionsmiljön  {#transfer-persisted-query-production}
 
-Beständiga frågor bör alltid skapas i en AEM Author-tjänst och sedan publiceras (replikeras) till en AEM Publish-tjänst. Vanligtvis skapas och testas beständiga frågor i miljöer som lokala miljöer och utvecklingsmiljöer. Det är sedan nödvändigt att befordra beständiga frågor till miljöer på högre nivå och i slutänden göra dem tillgängliga i en AEM Publish-produktionsmiljö så att klientapplikationerna kan använda dem.
+Beständiga frågor ska alltid skapas på en AEM författartjänst och sedan publiceras (replikeras) till en AEM publiceringstjänst. Vanligtvis skapas och testas beständiga frågor i miljöer som lokala miljöer och utvecklingsmiljöer. Det är sedan nödvändigt att befordra beständiga frågor till miljöer på högre nivå, vilket i slutänden gör dem tillgängliga i en AEM publiceringsmiljö för att klientprogram ska kunna använda dem.
 
 ### Paketera beständiga frågor
 
-Beständiga frågor kan byggas in i [AEM](/help/sites-administering/package-manager.md). AEM paket kan sedan laddas ned och installeras i olika miljöer. AEM kan också replikeras från en AEM Author-miljö till AEM Publish-miljöer.
+Beständiga frågor kan byggas in i [AEM](/help/sites-administering/package-manager.md). AEM paket kan sedan laddas ned och installeras i olika miljöer. AEM paket kan också replikeras från en AEM redigeringsmiljö till AEM publiceringsmiljöer.
 
-Så här skapar du ett paket:
+Skapa ett paket:
 
 1. Navigera till **verktyg** > **Distribution** > **Paket**.
 1. Skapa ett nytt paket genom att trycka **Skapa paket**. Då öppnas en dialogruta där du kan definiera paketet.
-1. I dialogrutan Paketdefinition, under **Allmänt** ange **Namn** som &quot;wknd-persistent-queries&quot;.
+1. I dialogrutan Paketdefinition, under **Allmänt** ange en **Namn** som &quot;wknd-persistent-queries&quot;.
 1. Ange ett versionsnummer som &quot;1.0&quot;.
-1. Under **Filter** lägg till en ny **Filter**. Använd Sökväg för att välja `persistentQueries` under konfigurationen. Till exempel `wknd` konfiguration den fullständiga sökvägen kommer att `/conf/wknd/settings/graphql/persistentQueries`.
+1. Under **Filter** lägg till en ny **Filter**. Använd Sökväg för att välja `persistentQueries` under konfigurationen. Till exempel `wknd` konfiguration som den fullständiga sökvägen kommer att `/conf/wknd/settings/graphql/persistentQueries`.
 1. Tryck **Spara** för att spara den nya paketdefinitionen och stänga dialogrutan.
 1. Tryck på **Bygge** i den nyligen skapade paketdefinitionen.
 
 När paketet har byggts kan du:
 
-* **Hämta** paketet och ladda upp det igen i en annan miljö.
-* **Replikera** paketet genom att trycka **Mer** > **Replikera**. Paketet kommer att replikeras till den anslutna AEM-publiceringsmiljön.
+* **Ladda ned** paketet och ladda upp det på nytt i en annan miljö.
+* **Replikera** paketet genom att trycka **Mer** > **Replikera**. Paketet kommer att replikeras till den anslutna AEM publiceringsmiljön.
 
 <!--
 1. Using replication/distribution tool:
@@ -413,5 +413,5 @@ När paketet har byggts kan du:
    1. Select tree activation for the configuration (for example, `/conf/wknd/settings/graphql/persistentQueries`).
 
 * Using a workflow (via workflow launcher configuration):
-  1. Define a workflow launcher rule for executing a workflow model that would replicate the configuration on different events (for example, create, modify, amongst others).
+  1. Define a workflow launcher rule for executing a workflow model that would replicate the configuration on different events (for example, create, modify, among others).
 -->
