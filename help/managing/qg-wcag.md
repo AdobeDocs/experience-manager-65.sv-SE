@@ -2,10 +2,10 @@
 title: En snabbguide till WCAG 2.1
 description: En snabbguide till WCAG 2.1
 exl-id: 9cd37f5a-ff59-4617-a0f3-cd8994fbf4ab
-source-git-commit: 10227bcfcfd5a9b0f126fee74dce6ec7842f5e95
+source-git-commit: 71b3f7c6ad2c7712762a29518de6cf0639081cb7
 workflow-type: tm+mt
 source-wordcount: '1774'
-ht-degree: 96%
+ht-degree: 93%
 
 ---
 
@@ -23,7 +23,7 @@ Adobe Experience Manager (AEM) har utvecklats för att maximera kompatibiliteten
 >
 >En [uppdaterad version av riktlinjerna, WCAG 2.2,](https://www.w3.org/TR/WCAG22/) håller på att utvecklas, men kommer inte att behandlas just nu.
 
-WCAG 2.1 består av en uppsättning teknikoberoende riktlinjer och framgångskriterier för att göra webbinnehåll tillgängligt för och användbart för personer med funktionshinder. De ger råd till webbinnehållsförfattare, designers och utvecklare som ser till att de resurser de producerar är så tillgängliga som möjligt för så många människor som möjligt, oavsett vilka funktionshinder de har, t.ex. synnedsättning, hörselnedsättning, inlärningssvårigheter, åldersrelaterade begränsningar med mera.
+WCAG 2.1 består av en uppsättning teknikoberoende riktlinjer och framgångskriterier för att göra webbinnehåll tillgängligt för och användbart för personer med funktionshinder. De ger råd till webbinnehållsförfattare, designers och utvecklare om att se till att de resurser de producerar är så tillgängliga som möjligt för så många människor som möjligt, oavsett vilka funktionshinder de har, t.ex. synnedsättning, hörselnedsättning, inlärningssvårigheter, åldersrelaterade begränsningar.
 
 Om du till exempel beskriver en bild (eller annat innehåll som inte är text) genom att använda attributet `alt` i HTML blir det till stor fördel för personer som är blinda eller har nedsatt syn. Textbeskrivningen i attributet `alt` kan antingen konverteras till tal eller överföras till elektroniska, uppdateringsbara blindskriftsskärmar. 
 
