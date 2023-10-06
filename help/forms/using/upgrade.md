@@ -11,9 +11,9 @@ discoiquuid: f89921ef-c638-4a07-88d5-3dd8614c5166
 docset: aem65
 role: Admin
 exl-id: 2fc8abec-8ba6-40b7-bbb1-4288eeea7c86
-source-git-commit: fbc371e59c4f80195fe90da5f635267141c8849e
+source-git-commit: a67c2347eb6ddbb4e77f77985033d882f34ccb00
 workflow-type: tm+mt
-source-wordcount: '341'
+source-wordcount: '366'
 ht-degree: 1%
 
 ---
@@ -73,6 +73,8 @@ I följande bild visas avsändare som använder det fullständiga installationsp
 
 ![Installationsprogram för fullständig installation och korrigering](/help/forms/using/assets/full-and-patch-installer.png)
 
+Se [Installationsanvisningar för AEM 6.5 Forms Service Pack](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/aem-forms-current-service-pack-installation-instructions.html) artikel för att installera den senaste Service Pack-versionen för JEE-miljön.
+
 <!--
 [Work in Progress]
 
@@ -104,3 +106,5 @@ Migration involves moving only assets (PDF, XDP, images, adaptive forms, corresp
       Methods to calculate average fill time for forms and average read time for have changed. So, when you upgrade to AEM 6.3 forms, older data (data from previous AEM Forms release) for these metrics is available only in Adobe Analytics. It is not visible in AEM Forms analytics reports. For these metrics, AEM Forms analytics reports display data which is captured after performing the upgrade.
       
       -->
+
+
