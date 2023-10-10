@@ -2,9 +2,9 @@
 title: Optimera GraphQL-frågor
 description: Lär dig hur du optimerar dina GraphQL-frågor när du filtrerar, sidlägger och sorterar innehållsfragment i Adobe Experience Manager as a Cloud Service för leverans av headless-innehåll.
 exl-id: 47d0570b-224e-4109-b94e-ccc369d7ac5f
-source-git-commit: 2ba17c43e84ad449ec858de57812f3ef82fca3e1
+source-git-commit: c0570d6c0d624d950ddbb5c0d2ce38ff7c3756a4
 workflow-type: tm+mt
-source-wordcount: '1940'
+source-wordcount: '1935'
 ht-degree: 0%
 
 ---
@@ -89,7 +89,10 @@ Se:
 
 När du använder beständiga GraphQL-frågor med ett CDN bör du ange lämpliga rubriker för HTTP-cachekontroll.
 
-Varje beständig fråga kan ha sin egen uppsättning specifika cachekontrollrubriker. Rubrikerna kan ställas in över [GRAPHQL API](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md) eller [AEM GraphiQL IDE](/help/sites-developing/headless/graphql-api/graphiql-ide.md).
+Varje beständig fråga kan ha sin egen uppsättning specifika cachekontrollrubriker. Rubrikerna kan ställas in över [GRAPHQL API](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md).
+
+<!-- or the [AEM GraphiQL IDE](/help/sites-developing/headless/graphql-api/graphiql-ide.md#managing-cache). 
+-->
 
 **Ytterligare referens**
 
