@@ -2,9 +2,10 @@
 title: Versionsinformation för [!DNL Adobe Experience Manager] 6.5
 description: Hitta versionsinformation, nyheter, installationsanvisningar och en detaljerad ändringslista för [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 4
-source-git-commit: ffda4927ddc8555564f33697fa81d1f8a0cd2cdc
+exl-id: d0dc5dfb-25a3-4388-a1d4-abba70081cc3
+source-git-commit: 59d5c2574bf4298469152a3d55e7c1508eb2f1be
 workflow-type: tm+mt
-source-wordcount: '4528'
+source-wordcount: '4613'
 ht-degree: 0%
 
 ---
@@ -462,8 +463,25 @@ Du måste lägga till följande egenskaper i indexdefinitionsnoden för att få 
 #### Installation
 
 * På JBoss® 7.1.4-plattformen när användaren installerar Experience Manager 6.5.16.0 eller senare Service Pack, `adobe-livecycle-jboss.ear` distributionen misslyckas. (CQ-4351522, CQDOC-20159)
-* När du har installerat AEM Service Pack 6.5.18.0, kan EAR-distributionen inte köras på JEE med JBoss® Turnkey (CQDOC-20803).
-Du löser problemet genom att leta reda på `<AEM_Forms_Installation_dir>\jboss\bin\standalone.bat` fil och uppdatera `Adobe_Adobe_JAVA_HOME` till `Adobe_JAVA_HOME` för alla förekomster innan konfigurationshanteraren körs.
+* När du har uppgraderat till AEM Forms 6.5.18.0 JBoss Turnkey, komplett installationsmiljö för Windows Server 2022, vid kompilering av programkod för Output-klienten med Java 11, kan följande kompileringsfel uppstå:
+
+  ```
+  error: error reading [AEM_Forms_Installation_dir]\sdk\client-libs\common\adobe-output-client.jar; java.net.URISyntaxException: 
+  Illegal character in path at index 70: file:/[AEM_Forms_Installation_dir]/sdk/client-libs/common/${clover.jar.name} 1 error
+  ```
+
+  Så här löser du problemet:
+   1. Navigera till `[AEM_Forms_Installation_dir]\sdk\client-libs\common\` och zippa upp `adobe-output-client.jar` extrahera `Manifest.mf` -fil.
+   1. Uppdatera `Manifest.mf` genom att ta bort posten `${clover.jar.name}` från attributet class-path.
+
+      >[!NOTE]
+      >
+      > Du kan också använda ett redigeringsverktyg på plats, till exempel 7-zip, för att uppdatera `Manifest.mf` -fil.
+
+   1. Spara den uppdaterade `Manifest.mf` i `adobe-output-client.jar` arkiv.
+   1. Spara ändrade `adobe-output-client.jar` och kör installationsprogrammet igen.  (CQDOC-20878)
+* När du har installerat AEM Service Pack 6.5.18.0, fullständigt installationsprogram, misslyckas EAR-distributionen på JEE med JBoss® Turnkey.
+Du löser problemet genom att leta reda på `<AEM_Forms_Installation_dir>\jboss\bin\standalone.bat` fil och uppdatera `Adobe_Adobe_JAVA_HOME` till `Adobe_JAVA_HOME` för alla förekomster innan konfigurationshanteraren körs. (CQDOC-20803)
 
 #### Adaptiv Forms
 
