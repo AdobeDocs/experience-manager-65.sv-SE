@@ -2,9 +2,9 @@
 title: Optimera GraphQL-frågor
 description: Lär dig hur du optimerar dina GraphQL-frågor när du filtrerar, sidlägger och sorterar innehållsfragment i Adobe Experience Manager as a Cloud Service för leverans av headless-innehåll.
 exl-id: 47d0570b-224e-4109-b94e-ccc369d7ac5f
-source-git-commit: c0570d6c0d624d950ddbb5c0d2ce38ff7c3756a4
+source-git-commit: 3ec34efc14cc49d0f45cb4b175573c33c1cc232e
 workflow-type: tm+mt
-source-wordcount: '1935'
+source-wordcount: '1966'
 ht-degree: 0%
 
 ---
@@ -91,6 +91,17 @@ När du använder beständiga GraphQL-frågor med ett CDN bör du ange lämpliga
 
 Varje beständig fråga kan ha sin egen uppsättning specifika cachekontrollrubriker. Rubrikerna kan ställas in över [GRAPHQL API](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md).
 
+De kan också anges med **cURL** kommandoradsverktyg. Med en `PUT` begäran om att skapa en omsluten oformaterad fråga med cachekontroll.
+
+```shell
+$ curl -X PUT \
+    -H 'authorization: Basic YWRtaW46YWRtaW4=' \
+    -H "Content-Type: application/json" \
+    "http://localhost:4502/graphql/persist.json/wknd/plain-article-query-max-age" \
+    -d \
+'{ "query": "{articleList { items { _path author main { json } referencearticle { _path } } } }", "cache-control": { "max-age": 300 }}'
+```
+
 <!-- or the [AEM GraphiQL IDE](/help/sites-developing/headless/graphql-api/graphiql-ide.md#managing-cache). 
 -->
 
@@ -99,6 +110,7 @@ Varje beständig fråga kan ha sin egen uppsättning specifika cachekontrollrubr
 Se:
 
 * [Cachelagra beständiga frågor](/help/sites-developing/headless/graphql-api/persisted-queries.md#caching-persisted-queries)
+* [Så här behåller du en GraphQL-fråga](/help/sites-developing/headless/graphql-api/persisted-queries.md#how-to-persist-query)
 <!--
 * [Managing cache for your persisted queries](/help/sites-developing/headless/graphql-api/graphiql-ide.md#managing-cache)
 -->
