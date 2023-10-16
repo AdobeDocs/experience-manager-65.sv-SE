@@ -1,18 +1,18 @@
 ---
 title: Använd AEM med SAP Commerce Cloud
-description: Lär dig använda AEM med SAP Commerce Cloud.
+description: Lär dig hur du använder Adobe Experience Manager med SAP Commerce Cloud.
 contentOwner: Guillaume Carlino
 topic-tags: e-commerce
 content-type: reference
 exl-id: c342f789-2ff7-4802-99c7-c3699218fe47
-source-git-commit: 1ef5593495b4bf22d2635492a360168bccc1725d
+source-git-commit: 3400df1ecd545aa0fb0e3fcdcc24f629ce4c99ba
 workflow-type: tm+mt
-source-wordcount: '1702'
+source-wordcount: '1704'
 ht-degree: 1%
 
 ---
 
-# SAP Commerce Cloud{#sap-commerce-cloud}
+# SAP COMMERCE CLOUD{#sap-commerce-cloud}
 
 Efter installationen kan du konfigurera instansen:
 
@@ -37,9 +37,9 @@ Efter installationen kan du konfigurera instansen:
 1. Välj **System** sedan **Fasettsökning** sedan **Konfiguration för sökning efter ansikten**.
 1. **Öppna redigeraren** för **Exempel på Solr-konfiguration för katalog**.
 
-1. Under **Katalogversioner** use **Lägg till katalogversion** lägga till `outdoors-Staged` och `outdoors-Online` till listan.
+1. Under **Katalogversioner** use **Lägg till katalogversion** att lägga till `outdoors-Staged` och `outdoors-Online` till listan.
 1. **Spara konfigurationen.**
-1. Öppna **SOLR-objekttyper** lägga till **SOLR Sorts** till `ClothesVariantProduct`:
+1. Öppna **SOLR-objekttyper** att lägga till **SOLR Sorts** till `ClothesVariantProduct`:
 
    * relevans (&quot;Relevans&quot;, poäng)
    * name-asc (&quot;Name (stigande)&quot;, name)
@@ -55,7 +55,7 @@ Efter installationen kan du konfigurera instansen:
 
    ![chlimage_1-36](/help/sites-administering/assets/chlimage_1-36a.png)
 
-1. I **Indexerade typer** -fliken, ange **Sammansatt typ** till:
+1. I **Indexerade typer** -flik, ange **Sammansatt typ** till:
 
    `Product - Product`
 
@@ -95,7 +95,7 @@ Efter installationen kan du konfigurera instansen:
 1. **Spara ändringarna.**
 1. Öppna **System**, **Fasettsökning** sedan **Åtgärdsguiden för indexering**. Starta ett cronjob:
 
-   * **Indexeringsåtgärd**: `full`
+   * **Indexeraråtgärd**: `full`
    * **Solr-konfiguration**: `Sample Solr Config for Clothes`
 
 ## Konfigurera katalogversionen {#configure-the-catalog-version}
@@ -109,7 +109,7 @@ The **Katalogversion** ( `hybris.catalog.version`) som importeras kan konfigurer
 
 >[!NOTE]
 >
->När du arbetar med AEM finns det flera metoder för att hantera konfigurationsinställningarna för sådana tjänster. se [Konfigurerar OSGi](/help/sites-deploying/configuring-osgi.md) för fullständig information. Se även konsolen för en fullständig lista över konfigurerbara parametrar och deras standardvärden.
+>När du arbetar med AEM finns det flera metoder för att hantera konfigurationsinställningarna för sådana tjänster. Se [Konfigurerar OSGi](/help/sites-deploying/configuring-osgi.md) för fullständig information. Se även konsolen för en fullständig lista över konfigurerbara parametrar och deras standardvärden.
 
 Loggutdata ger återkoppling om skapade sidor och komponenter och rapporterar potentiella fel.
 
@@ -154,14 +154,14 @@ En sådan struktur skapas av OSGi-tjänsten `DefaultImportHandler` som implement
 
 >[!NOTE]
 >
->Du kan [anpassa den här processen genom att implementera en egen importhanterare](#configure-the-import-structure).
+>Du kan [anpassa processen genom att implementera en egen importhanterare](#configure-the-import-structure).
 
 Strukturen som ska skapas vid import kan konfigureras för:
 
 &quot;**Standardimporthanterare för handelshybris för dagskvot**
 `(com.adobe.cq.commerce.hybris.importer.DefaultImportHandler`)
 
-När du arbetar med AEM finns det flera metoder för att hantera konfigurationsinställningarna för sådana tjänster. se [Konfigurerar OSGi](/help/sites-deploying/configuring-osgi.md) för fullständig information. Se även konsolen för en fullständig lista över konfigurerbara parametrar och deras standardvärden.
+När du arbetar med AEM finns det flera metoder för att hantera konfigurationsinställningarna för sådana tjänster. Se [Konfigurerar OSGi](/help/sites-deploying/configuring-osgi.md) för fullständig information. Se även konsolen för en fullständig lista över konfigurerbara parametrar och deras standardvärden.
 
 ## Konfigurera de produktattribut som ska läsas in {#configure-the-product-attributes-to-load}
 
@@ -176,7 +176,7 @@ Svarsparsern kan konfigureras för att definiera egenskaper och attribut som ska
 
    >[!NOTE]
    >
-   >När du arbetar med AEM finns det flera metoder för att hantera konfigurationsinställningarna för sådana tjänster. se [Konfigurerar OSGi](/help/sites-deploying/configuring-osgi.md) för fullständig information. Se även konsolen för en fullständig lista över konfigurerbara parametrar och deras standardvärden.
+   >När du arbetar med AEM finns det flera metoder för att hantera konfigurationsinställningarna för sådana tjänster. Se [Konfigurerar OSGi](/help/sites-deploying/configuring-osgi.md) för fullständig information. Se även konsolen för en fullständig lista över konfigurerbara parametrar och deras standardvärden.
 
 ## Importera produktdata {#importing-the-product-data}
 
@@ -186,7 +186,7 @@ Det finns olika sätt att importera produktdata. Produktdata kan importeras när
 * [Inkrementell import](#incremental-import)
 * [Express Update](#express-update)
 
-Faktisk produktinformation som importerats från hybris lagras i databasen enligt följande:
+Faktisk produktinformation som importerats från hybris lagras i databasen under
 
 `/etc/commerce/products`
 
@@ -204,7 +204,7 @@ Följande egenskaper anger länken till hybris:
 
 ### Fullständig import {#full-import}
 
-1. Om det behövs tar du bort alla befintliga produktdata med CRXDE Lite.
+1. Om det behövs kan du ta bort alla befintliga produktdata med CRXDE Lite.
 
    1. Navigera till det underträd som innehåller produktdata:
 
@@ -225,7 +225,7 @@ Följande egenskaper anger länken till hybris:
 
    [http://localhost:4502/etc/importers/hybris.html](http://localhost:4502/etc/importers/hybris.html)
 
-1. Konfigurera de parametrar som krävs, till exempel:
+1. Konfigurera de obligatoriska parametrarna, till exempel:
 
    ![chlimage_1-42](/help/sites-administering/assets/chlimage_1-42a.png)
 
@@ -237,7 +237,7 @@ Följande egenskaper anger länken till hybris:
        /etc/commerce/products/outdoors
    ```
 
-   Du kan öppna den här i CRXDE Lite; till exempel:
+   Du kan öppna den här i CRXDE Lite, till exempel:
 
    `[http://localhost:4502/crx/de/index.jsp#/etc/commerce/products](http://localhost:4502/crx/de/index.jsp#/etc/commerce/products)`
 
@@ -247,7 +247,7 @@ Följande egenskaper anger länken till hybris:
 
    `/etc/commerce/products`
 
-   Du kan öppna den här i CRXDE Lite; till exempel:
+   Du kan öppna den här i CRXDE Lite, till exempel:
 
    [http://localhost:4502/crx/de/index.jsp#/etc/commerce/products](http://localhost:4502/crx/de/index.jsp#/etc/commerce/products)
 
@@ -279,13 +279,13 @@ Importprocessen kan ta lång tid, så som ett tillägg till produktsynkroniserin
 
    `/etc/commerce/products`
 
-   Du kan öppna den här i CRXDE Lite; till exempel:
+   Du kan öppna den här i CRXDE Lite, till exempel:
 
    [http://localhost:4502/crx/de/index.jsp#/etc/commerce/products](http://localhost:4502/crx/de/index.jsp#/etc/commerce/products)
 
 1. I hybris ska informationen om de relevanta produkterna uppdateras.
 
-1. Lägg till en eller flera produkter i Express Queue i hybris, till exempel:
+1. I hybris lägger du till en eller flera produkter i Express-kön, till exempel:
 
    ![chlimage_1-43](/help/sites-administering/assets/chlimage_1-43a.png)
 
@@ -315,7 +315,7 @@ De parametrar som används av importeraren kan konfigureras för:
 **Dag CQ Commerce Hybris Catalog Import**
 ( `com.adobe.cq.commerce.hybris.impl.importer.DefaultHybrisImporter`)
 
-När du arbetar med AEM finns det flera metoder för att hantera konfigurationsinställningarna för sådana tjänster. se [Konfigurerar OSGi](/help/sites-deploying/configuring-osgi.md) för fullständig information. Se även konsolen för en fullständig lista över konfigurerbara parametrar och deras standardvärden.
+När du arbetar med AEM finns det flera metoder för att hantera konfigurationsinställningarna för sådana tjänster. Se [Konfigurerar OSGi](/help/sites-deploying/configuring-osgi.md) för fullständig information. Se även konsolen för en fullständig lista över konfigurerbara parametrar och deras standardvärden.
 
 ## Katalogimport {#catalog-import}
 
@@ -329,7 +329,7 @@ Det här är tillgängligt från:
 
 Följande uppgifter måste lämnas:
 
-* **Bas**
+* **Bassaarkiv**
 Identifieraren för basbutiken som konfigurerats i hybris.
 
 * **Katalog**
@@ -351,7 +351,7 @@ Så här tar du bort en eller flera produkter från katalogen:
 
    >[!NOTE]
    >
-   >När du arbetar med AEM finns det flera metoder för att hantera konfigurationsinställningarna för sådana tjänster. se [Konfigurerar OSGi](/help/sites-deploying/configuring-osgi.md) för fullständig information. Se även konsolen för en fullständig lista över konfigurerbara parametrar och deras standardvärden.
+   >När du arbetar med AEM finns det flera metoder för att hantera konfigurationsinställningarna för sådana tjänster. Se [Konfigurerar OSGi](/help/sites-deploying/configuring-osgi.md) för fullständig information. Se även konsolen för en fullständig lista över konfigurerbara parametrar och deras standardvärden.
 
 1. Initiera importören genom att utföra två stegvisa uppdateringar (se [Katalogimport](#catalog-import)):
 
@@ -362,7 +362,7 @@ Så här tar du bort en eller flera produkter från katalogen:
    >
    >Den första importen är att initiera produktinformationen. Den andra importen verifierar att allt fungerade och att dess produktuppsättning är klar.
 
-1. Kontrollera kategorisidan som innehåller den produkt du vill ta bort. Produktinformationen ska vara synlig.
+1. Kontrollera kategorisidan som innehåller den produkt du vill ta bort. Produktinformationen ska visas.
 
    I följande kategori visas information om Cajamara-produkten:
 
@@ -408,7 +408,7 @@ Lägga till orderhistorik i [klientkontext](/help/sites-developing/client-contex
 
 1. Öppna [designsida för klientkontext](/help/sites-administering/client-context.md), antingen
 
-   * Öppna en sida för redigering och öppna sedan klientkontexten med **Ctrl-Alt-c** (fönster) eller **control-option-c** (Mac). Använd pennikonen i klientkontextens övre vänstra hörn för att **Öppna designsidan för ClientContext**.
+   * Öppna en sida för redigering och öppna sedan klientkontexten med **Ctrl-Alt-c** (fönster) eller **control-option-c** (Mac) Använd pennikonen i klientkontextens övre vänstra hörn för att **Öppna ClientContextens designsida**.
    * Navigera direkt till [http://localhost:4502/etc/clientcontext/default/content.html](http://localhost:4502/etc/clientcontext/default/content.html)
 
 1. [Lägg till **Orderhistorik** komponent](/help/sites-administering/client-context.md#adding-a-property-component) till **Kundvagn** t-komponenten i klientkontexten.
@@ -422,7 +422,7 @@ Lägga till orderhistorik i [klientkontext](/help/sites-developing/client-contex
    1. Navigera till utcheckningssidan:
 
       * Klientkontexten visar en sammanfattning av orderhistoriken.
-      * Meddelandet&quot;Du är en återkommande kund&quot; visas.
+      * Meddelandet&quot;Du är en kund som återvänder&quot; visas.
 
    >[!NOTE]
    >

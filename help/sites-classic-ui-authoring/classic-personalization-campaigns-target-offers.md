@@ -1,7 +1,7 @@
 ---
 title: Målerbjudanden
 seo-title: Target offers
-description: Skapa målerbjudanden
+description: Skapa målerbjudanden i Adobe Experience Manager för användning i Adobe Target.
 seo-description: Create target offers
 uuid: 88206181-9708-454a-a22a-05e3fc0247c2
 contentOwner: User
@@ -10,10 +10,10 @@ topic-tags: personalization
 content-type: reference
 discoiquuid: e26bf608-c57c-4346-88fb-32a82cfa82d2
 exl-id: 46c2fbd0-7eff-4a6c-a088-57560ad2c5e4
-source-git-commit: 75c6bb87bb06c5ac9378ccebf193b5416c080bb1
+source-git-commit: 3400df1ecd545aa0fb0e3fcdcc24f629ce4c99ba
 workflow-type: tm+mt
-source-wordcount: '93'
-ht-degree: 5%
+source-wordcount: '102'
+ht-degree: 4%
 
 ---
 
@@ -27,7 +27,7 @@ ht-degree: 5%
    ![Listvy](do-not-localize/chlimage_1-11.png)
 
 1. Klicka **Nytt ...**
-1. Du kan ange **Titel**, **Namn** och den typ av erfarenhet som ska skapas, i det här fallet Test&amp;Target-erbjudande.
+1. Du kan ange **Titel**, **Namn** och vilken typ av upplevelse som ska skapas, i det här fallet Test&amp;Target-erbjudandet.
 
    ![chlimage_1-139](assets/chlimage_1-139.png)
 

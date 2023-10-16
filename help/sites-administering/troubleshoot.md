@@ -1,6 +1,6 @@
 ---
 title: Felsökning av Adobe Experience Manager
-description: Läs mer om felsökning av problem med AEM.
+description: Läs om hur du felsöker problem som kan uppstå med Adobe Experience Manager.
 uuid: 72379531-915c-45d0-ba70-42b212665272
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: 6346cd93-1ca3-4510-9c31-a74c41017ddb
 docset: aem65
 exl-id: d2d351e7-87a5-4895-b4ec-391fb0b66798
-source-git-commit: a2fd3c0c1892ac648c87ca0dec440e22144c37a2
+source-git-commit: 3400df1ecd545aa0fb0e3fcdcc24f629ce4c99ba
 workflow-type: tm+mt
-source-wordcount: '545'
+source-wordcount: '551'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ I följande avsnitt beskrivs några problem som du kan stöta på när du använ
 
 >[!NOTE]
 >
->Om du felsöker redigeringsproblem i AEM finns mer information i [Felsökning för författare.](/help/sites-authoring/troubleshooting.md)
+>Om du felsöker redigeringsproblem i AEM, se [Felsökning för författare.](/help/sites-authoring/troubleshooting.md)
 
 >[!NOTE]
 >
@@ -77,8 +77,8 @@ Tråddumpen är en lista över alla Java™-trådar som är aktiva. Om AEM inte 
 
 ### Använda Sling Thread Dumper {#using-sling-thread-dumper}
 
-1. Öppna **AEM Web Console**; till exempel `https://localhost:4502/system/console/`.
-1. Välj **Trådar** under **Status** -fliken.
+1. Öppna **AEM Web Console**; till exempel vid `https://localhost:4502/system/console/`.
+1. Välj **Threads** under **Status** -fliken.
 
 ![screen_shot_2012-02-13at43925pm](assets/screen_shot_2012-02-13at43925pm.png)
 
@@ -107,7 +107,7 @@ Se [Så här tar du trådmodeller från en JVM](https://experienceleague.adobe.c
 När funktionalitet utvecklas för AEM WCM kan JCR-sessioner öppnas (vilket kan jämföras med att öppna en databasanslutning). Om de öppnade sessionerna aldrig stängs kan systemet få följande symtom:
 
 * Systemet blir långsammare.
-* Du kan se mycket av CacheManager: resizeAlla poster i loggfilen. följande tal (size=&lt;x>) visar antalet cacheminnen. Varje session öppnar flera cacheminnen.
+* Du kan se mycket av CacheManager: resizeAll-poster i loggfilen; följande nummer (size=&lt;x>) visar antalet cacheminnen. Varje session öppnar flera cacheminnen.
 * Från tid till annan har systemet slut på minne (efter några timmar, dagar eller veckor - beroende på allvarlighetsgraden).
 
 Om du vill analysera oavslutade sessioner och ta reda på vilken kod som inte stänger en session kan du läsa artikeln i kunskapsbasen [Analysera oavslutade sessioner](https://helpx.adobe.com/experience-manager/kb/AnalyzeUnclosedSessions.html).
@@ -116,7 +116,7 @@ Om du vill analysera oavslutade sessioner och ta reda på vilken kod som inte st
 
 OSGi-paketens status kan också ge en tidig indikation på eventuella problem.
 
-1. Öppna **AEM Web Console**; till exempel `https://localhost:4502/system/console/`.
+1. Öppna **AEM Web Console**; till exempel vid `https://localhost:4502/system/console/`.
 1. Välj **Paket** under **OSGI** -fliken.
 1. Kontrollera:
 
