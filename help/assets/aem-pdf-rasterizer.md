@@ -5,30 +5,30 @@ contentOwner: AG
 role: Developer, Admin
 feature: Developer Tools,Renditions
 exl-id: 6f365d6b-3972-4885-8766-5889e24289f1
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: e6e0ad29bc5b3a644f74427d8d60233c9e26aa03
 workflow-type: tm+mt
-source-wordcount: '662'
+source-wordcount: '660'
 ht-degree: 0%
 
 ---
 
 # Använd PDF rastrerare {#using-pdf-rasterizer}
 
-När du överför stora, innehållsintensiva PDF- eller AI-filer till [!DNL Adobe Experience Manager Assets], kanske standardbiblioteket inte genererar korrekta utdata. Adobe Rasterizer-biblioteket kan generera tillförlitligare och exaktare utdata jämfört med utdata från ett standardbibliotek. Adobe rekommenderar att du använder PDF rastrerarbiblioteket för följande scenarier:
+När du överför stora, innehållsintensiva PDF- eller AI-filer till [!DNL Adobe Experience Manager Assets], kanske standardbiblioteket inte genererar korrekta utdata. Adobe Rasterizer-biblioteket kan generera tillförlitliga och korrekta utdata jämfört med utdata från ett standardbibliotek. Adobe rekommenderar att du använder PDF rastrerarbiblioteket för följande scenarier:
 
 Adobe rekommenderar att du använder PDF rastrerarbiblioteket för följande:
 
-* Tunga, innehållsintensiva AI-filer eller PDF-filer.
+* Tunga, innehållsintensiva AI-filer eller PDF.
 * AI-filer och PDF-filer med miniatyrer som inte genereras som standard.
 * AI-filer med Pantone Matching System-färger (PMS).
 
 Miniatyrbilder och förhandsgranskningar som genererats med PDF Rasterizer har bättre kvalitet jämfört med färdiga utdata och ger därför en konsekvent visningsupplevelse på alla enheter. Adobe PDF Rasterizer-biblioteket har inte stöd för någon färgmodellskonvertering. Det skrivs alltid ut på RGB, oavsett källfilens färgrymd.
 
-1. Installera PDF Rasterizer-paketet på din [!DNL Adobe Experience Manager] distribution från [Programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/product/assets/aem-assets-pdf-rasterizer-pkg-4.4.zip).
+1. Installera PDF Rasterizer-paketet på din [!DNL Adobe Experience Manager] distribution från [Programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/product/assets/aem-assets-pdf-rasterizer-pkg-4.6.zip).
 
    >[!NOTE]
    >
-   >Biblioteket PDF Rasterizer är endast tillgängligt för Windows och Linux.
+   >Biblioteket PDF Rasterizer finns endast för Windows och Linux®.
 
 1. Öppna [!DNL Assets] arbetsflödeskonsol på `https://[aem_server]:[port]/workflow`. Öppna [!UICONTROL DAM Update Asset] arbetsflöde.
 
@@ -55,9 +55,9 @@ Miniatyrbilder och förhandsgranskningar som genererats med PDF Rasterizer har b
 
    Kommandoradsargumenten för `PDFRasterizer` -kommandot kan innehålla följande:
 
-   * `-d`: Flagga för smidig återgivning av text, vektorgrafik och bilder. Skapar bilder med bättre kvalitet. Om du tar med den här parametern körs kommandot långsamt och bildstorleken ökar.
+   * `-d`: Flagga för mjuk återgivning av text, vektorgrafik och bilder. Skapar bilder med bättre kvalitet. Om du tar med den här parametern körs kommandot långsamt och bildstorleken ökar.
 
-   * `-s`: Största bilddimension (höjd eller bredd). Detta konverteras till DPI för varje sida. Om sidorna har olika storlek kan varje sida eventuellt skalas med olika mängd. Standardvärdet är faktisk sidstorlek.
+   * `-s`: Maximal bilddimension (höjd eller bredd). Detta konverteras till DPI för varje sida. Om sidorna har olika storlek kan varje sida eventuellt skalas med olika mängd. Standardvärdet är faktisk sidstorlek.
 
    * `-t`: Typ av utdatabild. Giltiga typer är JPEG, PNG, GIF och BMP. Standardvärdet är JPEG.
 
@@ -65,13 +65,12 @@ Miniatyrbilder och förhandsgranskningar som genererats med PDF Rasterizer har b
 
    * `-h`: Hjälp
 
-
 1. Om du vill ta bort mellanliggande återgivningar väljer du **[!UICONTROL Delete Generated Rendition]**.
 1. Om du vill att PDF Rasterizer ska kunna generera webbåtergivningar väljer du **[!UICONTROL Generate Web Rendition]**.
 
    ![generate_web_renditions1](assets/generate_web_renditions1.png)
 
-1. Ange inställningarna i **[!UICONTROL Web Enabled Image]** -fliken.
+1. Ange inställningarna i dialogrutan **[!UICONTROL Web Enabled Image]** -fliken.
 
    ![web_enabled_image1](assets/web_enabled_image1.png)
 
@@ -86,9 +85,9 @@ Miniatyrbilder och förhandsgranskningar som genererats med PDF Rasterizer har b
 
    Kommandoradsargumenten för `PDFRasterizer` -kommandot kan innehålla följande:
 
-   * `-d`: Flagga för smidig återgivning av text, vektorgrafik och bilder. Skapar bilder med bättre kvalitet. Om du tar med den här parametern körs kommandot långsamt och bildstorleken ökar.
+   * `-d`: Flagga för mjuk återgivning av text, vektorgrafik och bilder. Skapar bilder med bättre kvalitet. Om du tar med den här parametern körs kommandot långsamt och bildstorleken ökar.
 
-   * `-s`: Största bilddimension (höjd eller bredd). Detta konverteras till DPI för varje sida. Om sidorna har olika storlek kan varje sida eventuellt skalas med olika mängd. Standardvärdet är faktisk sidstorlek.
+   * `-s`: Maximal bilddimension (höjd eller bredd). Detta konverteras till DPI för varje sida. Om sidorna har olika storlek kan varje sida eventuellt skalas med olika mängd. Standardvärdet är faktisk sidstorlek.
 
    * `-t`: Typ av utdatabild. Giltiga typer är JPEG, PNG, GIF och BMP. Standardvärdet är JPEG.
 
@@ -96,13 +95,12 @@ Miniatyrbilder och förhandsgranskningar som genererats med PDF Rasterizer har b
 
    * `-h`: Hjälp
 
-
 1. Om du vill ta bort mellanliggande återgivningar väljer du **[!UICONTROL Delete Generated Rendition]**.
 1. Om du vill att PDF Rasterizer ska kunna generera webbåtergivningar väljer du **[!UICONTROL Generate Web Rendition]**.
 
    ![generate_web_renditions](assets/generate_web_renditions.png)
 
-1. Ange inställningarna i **[!UICONTROL Web Enabled Image]** -fliken.
+1. Ange inställningarna i dialogrutan **[!UICONTROL Web Enabled Image]** -fliken.
 
    ![web_enabled_image-1](assets/web_enabled_image-1.png)
 
