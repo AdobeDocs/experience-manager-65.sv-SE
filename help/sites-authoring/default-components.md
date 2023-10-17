@@ -1,12 +1,8 @@
 ---
 title: Standardkomponenter
-description: Adobe Experience Manager innehåller ett antal färdiga komponenter med omfattande funktionalitet för skribenter.
-contentOwner: Chris Bohnert
-products: SG_EXPERIENCEMANAGER/6.5/SITES
-topic-tags: page-authoring
-content-type: reference
+description: Adobe Experience Manager innehåller ett antal färdiga komponenter som ger omfattande funktionalitet för webbplatsförfattare.
 exl-id: 85463610-8461-4c1f-bfe7-72229a31ea40
-source-git-commit: 260f71acd330167572d817fdf145a018b09cbc65
+source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
 workflow-type: tm+mt
 source-wordcount: '425'
 ht-degree: 0%
@@ -41,7 +37,7 @@ Komponenterna sorteras efter olika kategorier som kallas komponentgrupper. Exemp
 
 * **Vi.butik**: Innehåller kärnkomponenterna som är proxyvarierade för användning med [Referensimplementering för Vi.butik](/help/sites-developing/we-retail.md).
 
-* **Vi.detaljhandel**: Omfattar handelskomponenter som varukorgar och produktrutnät
+* **Vi.detaljhandel**: Innehåller handelskomponenter som varukorgar och produktrutnät
 
 * **Allmänt**: Innehåller layoutbehållaren och Experience Fragment
 

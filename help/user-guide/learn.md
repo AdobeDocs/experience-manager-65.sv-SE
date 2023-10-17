@@ -1,10 +1,8 @@
 ---
 title: Läs om Adobe Experience Manager 6.5 Capabilities
-seo-title: Learn about Adobe Experience Manager 6.5 Capabilities
-description: Läs om de viktigaste funktionerna i Adobe Experience Manager 6.5
-seo-description: An description of the essential capabilities of Adobe Experience Manager 6.5
+description: Läs om de viktigaste funktionerna i Adobe Experience Manager 6.5.
 exl-id: dc3b8690-f664-4ffa-993b-7a8634e6fe6b
-source-git-commit: a51a863a4edf7e8b951a8361c5c7f0517b09f12a
+source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
 workflow-type: tm+mt
 source-wordcount: '362'
 ht-degree: 1%
@@ -46,4 +44,4 @@ Experience Manager Communities är en Adobe Experience Manager-funktion som hjä
 
 ## Experience Manager Foundation {#aem-foundation}
 
-Läs mer om [Adobe Experience Manager 6.5 Foundation](/help/sites-deploying/home.md) och Adobe Managed Services driftsättningsmodell eller fördomsfull [nya videopresentationer av funktionerna i den här versionen.](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/overview.html?lang=en)
+Läs mer om [Adobe Experience Manager 6.5 Foundation](/help/sites-deploying/home.md) och Adobe Managed Services driftsättningsmodell eller fördomsfull del av [nya videopresentationer av funktionerna i den här versionen.](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/overview.html?lang=en)

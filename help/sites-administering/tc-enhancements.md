@@ -1,25 +1,20 @@
 ---
 title: Översättningsförbättringar
-seo-title: Translation Enhancements
-description: Översättningsförbättringar i AEM.
-seo-description: Translation enhancements in AEM.
-uuid: 0563603f-327b-48f1-ac14-6777c06734b9
-products: SG_EXPERIENCEMANAGER/6.5/SITES
+description: Förbättringar och förbättringar av AEM översättningshantering.
 topic-tags: site-features
 content-type: reference
-discoiquuid: 42df2db3-4d3c-4954-a03e-221e2f548305
 feature: Language Copy
 exl-id: 2011a976-d506-4c0b-9980-b8837bdcf5ad
-source-git-commit: 1be3d394283493f7c282ea4c3d794458d88e1ac3
+source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
 workflow-type: tm+mt
-source-wordcount: '681'
+source-wordcount: '686'
 ht-degree: 0%
 
 ---
 
 # Översättningsförbättringar{#translation-enhancements}
 
-Den här sidan innehåller stegvisa förbättringar och förbättringar av AEM översättningshantering.
+Den här sidan innehåller stegvisa förbättringar och förbättringar av AEM översättningshanteringsfunktioner.
 
 ## Automatisering av översättningsprojekt {#translation-project-automation}
 
@@ -79,7 +74,7 @@ AEM uppdaterar översättningen av de befintliga strängarna i översättningsmi
 * Det skapar inte nya översättningsjobb.
 * Det skickar översättningarna tillbaka till TMS via AEM översättnings-API (se nedan).
 
-Så här använder du den här funktionen:
+Så här använder du funktionen:
 
 * En TMS måste konfigureras för användning med AEM.
 * Kopplingen måste implementera metoden [`storeTranslation`](https://developer.adobe.com/experience-manager/reference-materials/cloud-service/javadoc/com/adobe/granite/translation/api/TranslationService.html).
@@ -109,7 +104,7 @@ Språkrötter kan nu grupperas under noder, till exempel efter region, samtidigt
 
 ## Översättningsstatusrapportering {#translation-status-reporting}
 
-En egenskap kan nu väljas i platslistevyn som visar om en sida har översatts, är i översättning eller ännu inte har översatts. Så här visar du den:
+En egenskap kan nu markeras i platslistevyn som visar om en sida har översatts, är i översättning eller ännu inte har översatts. Så här visar du den:
 
 1. Växla till **Listvy.**
 

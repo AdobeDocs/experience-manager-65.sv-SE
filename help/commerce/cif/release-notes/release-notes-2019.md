@@ -1,10 +1,10 @@
 ---
 title: AEM om innehåll och handel 2019
-description: AEM om innehåll och handel 2019
+description: Adobe Experience Manager Content and Commerce Release Notes 2019.
 exl-id: 7e61a75d-6b35-46ee-b88a-444c10b2708f
-source-git-commit: ab3d016c7c9c622be361596137b150d8719630bd
+source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
 workflow-type: tm+mt
-source-wordcount: '990'
+source-wordcount: '992'
 ht-degree: 6%
 
 ---
@@ -15,9 +15,9 @@ ht-degree: 6%
 
 | GitHub | Version | Detaljerade versionsinformation |
 |:-------|:-----:|---------------------:|
-| CIF Connector | 0.7.1 | [Versionsinformation](https://github.com/adobe/commerce-cif-connector/releases) |
+| CIF | 0.7.1 | [Versionsinformation](https://github.com/adobe/commerce-cif-connector/releases) |
 | CIF-kärnkomponenter | 0.6.0 | [Versionsinformation](https://github.com/adobe/aem-core-cif-components/releases) |
-| CIF-arkityp | 0.6.2 | [Versionsinformation](https://github.com/adobe/aem-cif-project-archetype/releases) |
+| CIF | 0.6.2 | [Versionsinformation](https://github.com/adobe/aem-cif-project-archetype/releases) |
 
 ### Nyheter {#what-is-new-november}
 
@@ -35,15 +35,15 @@ ht-degree: 6%
 
 * Reaktionsbaserade komponenter finns tillgängliga som ett nPM-paket. Detta gör att utvecklare kan använda React Components-paketet som ett beroende för ett nytt React-projekt för att anpassa befintliga komponenter eller utveckla nya React-baserade komponenter.
 
-* Anpassningen av GraphQL-frågor förenklas. Detta gör att utvecklare kan anpassa CIF-kärnkomponenter med mindre kod.
+* Anpassningen av GraphQL-frågor förenklas. Detta gör att utvecklare kan anpassa CIF kärnkomponenter med mindre kod.
 
 ## Releasedatum: oktober 2019
 
 | GitHub | Version | Detaljerade versionsinformation |
 |:-------|:-----:|---------------------:|
-| CIF Connector | 0.6.0 | [Versionsinformation](https://github.com/adobe/commerce-cif-connector/releases) |
+| CIF | 0.6.0 | [Versionsinformation](https://github.com/adobe/commerce-cif-connector/releases) |
 | CIF-kärnkomponenter | 0.5.0 | [Versionsinformation](https://github.com/adobe/aem-core-cif-components/releases) |
-| CIF-arkityp | 0.5.0 | [Versionsinformation](https://github.com/adobe/aem-cif-project-archetype/releases) |
+| CIF | 0.5.0 | [Versionsinformation](https://github.com/adobe/aem-cif-project-archetype/releases) |
 
 ### Nyheter {#what-is-new-october}
 
@@ -63,9 +63,9 @@ ht-degree: 6%
 
 | GitHub | Version | Detaljerade versionsinformation |
 |:-------|:-----:|---------------------:|
-| CIF Connector | 0.5.0 | [Versionsinformation](https://github.com/adobe/commerce-cif-connector/releases) |
+| CIF | 0.5.0 | [Versionsinformation](https://github.com/adobe/commerce-cif-connector/releases) |
 | CIF-kärnkomponenter | 0.4.0 | [Versionsinformation](https://github.com/adobe/aem-core-cif-components/releases) |
-| CIF-arkityp | 0.4.0 | [Versionsinformation](https://github.com/adobe/aem-cif-project-archetype/releases) |
+| CIF | 0.4.0 | [Versionsinformation](https://github.com/adobe/aem-cif-project-archetype/releases) |
 
 ### Nyheter {#what-is-new-september}
 
@@ -85,17 +85,17 @@ ht-degree: 6%
 
 | GitHub | Version | Detaljerade versionsinformation |
 |:-------|:-----:|---------------------:|
-| CIF Connector | 0.4.0 | [Versionsinformation](https://github.com/adobe/commerce-cif-connector/releases) |
+| CIF | 0.4.0 | [Versionsinformation](https://github.com/adobe/commerce-cif-connector/releases) |
 | CIF-kärnkomponenter | 0.3.0 | [Versionsinformation](https://github.com/adobe/aem-core-cif-components/releases) |
-| CIF-arkityp | 0.3.0 | [Versionsinformation](https://github.com/adobe/aem-cif-project-archetype/releases) |
+| CIF | 0.3.0 | [Versionsinformation](https://github.com/adobe/aem-cif-project-archetype/releases) |
 
 ### Nyheter {#what-is-new-august}
 
-* Det är valfritt att bädda in CIF Connector i CIF-arkitekturen för att ge utvecklarna större flexibilitet.
+* Inbäddning CIF Connector i CIF Archetype är valfritt för att ge utvecklare större flexibilitet.
 
-* CIF-komponenter som inte är kopplade till den lokala CSS-formateringen så att utvecklare kan använda valfri CSS-formatering.
+* CIF komponenter som inte är kopplade till den lokala CSS-formateringen så att utvecklare kan använda valfri CSS-formatering.
 
-* Funktion för flera butiker/sajter som tillåter användning av CIF Core-komponenter på flera AEM webbplatsstrukturer och gör det möjligt för den underliggande GraphQL-klientimplementeringen att ansluta till olika Adobe Commerce butiks-/butiksvyer.
+* Funktion för flera butiker/sajter som tillåter användning av CIF kärnkomponenter i flera AEM webbplatsstrukturer och gör det möjligt för den underliggande GraphQL-klientimplementeringen att ansluta till olika Adobe Commerce-butiksvyer.
 
 * GraphQL-cachning är aktiverat för vissa GraphQL-frågor via HTTP-GET för att minska svarstiden.
 
@@ -113,13 +113,13 @@ ht-degree: 6%
 
 | GitHub | Version | Detaljerade versionsinformation |
 |:-------|:-----:|---------------------:|
-| CIF Connector | 0.3.0 | [Versionsinformation](https://github.com/adobe/commerce-cif-connector/releases) |
+| CIF | 0.3.0 | [Versionsinformation](https://github.com/adobe/commerce-cif-connector/releases) |
 | CIF-kärnkomponenter | 0.2.0 | [Versionsinformation](https://github.com/adobe/aem-core-cif-components/releases) |
-| CIF-arkityp | 0.2.0 | [Versionsinformation](https://github.com/adobe/aem-cif-project-archetype/releases) |
+| CIF | 0.2.0 | [Versionsinformation](https://github.com/adobe/aem-cif-project-archetype/releases) |
 
 ### Nyheter {#what-is-new-july}
 
-* Den första CIF-arkitekturen som ger utvecklare flera distributionsalternativ: 1. Distribuera AEM Venia storefront 2. Driftsätt ställningar för ett nytt projekt 3. Använd CIF-element i ett befintligt projekt
+* Första CIF-arkitekturen som ger utvecklare flera distributionsalternativ: 1. Distribuera AEM Venia storefront 2. Driftsätt ställningar för ett nytt projekt 3. Använd CIF-element i ett befintligt projekt
 
 * Katalognavigering på flera nivåer som stöder navigering genom kategorier och underkategorier.
 
@@ -139,7 +139,7 @@ ht-degree: 6%
 
 | GitHub | Version | Detaljerade versionsinformation |
 |:-------|:-----:|---------------------:|
-| CIF Connector | 0.2.0 | [Versionsinformation](https://github.com/adobe/commerce-cif-connector/releases) |
+| CIF | 0.2.0 | [Versionsinformation](https://github.com/adobe/commerce-cif-connector/releases) |
 | CIF-kärnkomponenter | 0.1.0 | [Versionsinformation](https://github.com/adobe/aem-core-cif-components/releases) |
 
 ### Nyheter {#what-is-new-june}
@@ -148,7 +148,7 @@ ht-degree: 6%
 
 * CIF Connector och redigeringsverktyg (produktkonsol, produktväljare och kategoriväljare) som gör det möjligt för författare att skapa upplevelser i AEM med e-handelsinnehåll.
 
-* Första versionen av CIF Core Components kompatibel med Adobe Commerce 2.3.1:
+* Första versionen av CIF Core Components som är kompatibla med Adobe Commerce 2.3.1:
    * Produktinformation
    * Produktlista
    * Product Teaser

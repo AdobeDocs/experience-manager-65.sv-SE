@@ -1,20 +1,12 @@
 ---
 title: Skapa en språkrot med det klassiska användargränssnittet
-seo-title: Creating a Language Root Using the Classic UI
-description: Lär dig hur du skapar en språkrot med det klassiska användargränssnittet.
-seo-description: Learn how to create a language root using the Classic UI.
-uuid: 62e40d39-2868-4d3d-9af7-c60a1a658be0
+description: Lär dig hur du skapar en språkrot i Adobe Experience Manager med det klassiska användargränssnittet.
 contentOwner: Guillaume Carlino
-products: SG_EXPERIENCEMANAGER/6.5/SITES
-topic-tags: site-features
-content-type: reference
-discoiquuid: b88edad4-2a2e-429b-86a2-cc68ba69697e
-docset: aem65
 feature: Language Copy
 exl-id: 1ae21d80-0683-4ab9-afaa-4d733ff47720
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
 workflow-type: tm+mt
-source-wordcount: '318'
+source-wordcount: '322'
 ht-degree: 0%
 
 ---
@@ -29,7 +21,7 @@ I följande procedur används det klassiska användargränssnittet för att skap
    1. Klicka på Ny > Ny sida.
    1. Ange titel och namn i dialogrutan. Namnet måste ha formatet `<language-code>` eller `<language-code>_<country-code>`, till exempel en, en_US, en_us, en_GB, en_gb.
 
-      * Den språkkod som stöds är en kod med två bokstäver och gemener som definieras av ISO-639-1
+      * Den språkkod som stöds är en kod med två bokstäver och gemener enligt ISO-639-1
       * Den landskod som stöds är gemen eller versal, tvåbokstavskod enligt ISO 3166
 
    1. Markera mallen och klicka på Skapa.

@@ -1,10 +1,10 @@
 ---
 title: AEM Content and Commerce Release Notes 2020
-description: AEM Content and Commerce Release Notes 2020
+description: Adobe Experience Manager Content and Commerce Release Notes 2020.
 exl-id: 440ecd8e-55dc-4606-8678-c65cda1d2b3a
-source-git-commit: 474a726058b141985f52a0faec6161a34be1e9dc
+source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
 workflow-type: tm+mt
-source-wordcount: '1352'
+source-wordcount: '1354'
 ht-degree: 8%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 8%
 
 | GitHub | Version | Detaljerade versionsinformation |
 |:-------|:-----:|---------------------:|
-| CIF Connector | 1.6.0 | [Versionsinformation](https://github.com/adobe/commerce-cif-connector/releases) |
+| CIF | 1.6.0 | [Versionsinformation](https://github.com/adobe/commerce-cif-connector/releases) |
 | CIF-kärnkomponenter | 1.6.0 | [Versionsinformation](https://github.com/adobe/aem-core-cif-components/releases) |
 | CIF Venias referenswebbplats | 2020.12.01 | [Versionsinformation](https://github.com/adobe/aem-cif-guides-venia/releases) |
 
@@ -37,7 +37,7 @@ ht-degree: 8%
 
 | GitHub | Version | Detaljerade versionsinformation |
 |:-------|:-----:|---------------------:|
-| CIF Connector | 1.5.0 | [Versionsinformation](https://github.com/adobe/commerce-cif-connector/releases) |
+| CIF | 1.5.0 | [Versionsinformation](https://github.com/adobe/commerce-cif-connector/releases) |
 | CIF-kärnkomponenter | 1.5.0 | [Versionsinformation](https://github.com/adobe/aem-core-cif-components/releases) |
 | CIF Venias referenswebbplats | 2020.10.27 | [Versionsinformation](https://github.com/adobe/aem-cif-guides-venia/releases) |
 
@@ -45,7 +45,7 @@ ht-degree: 8%
 
 * En ny kategoriCarousel-komponent lades till för att göra det möjligt för företagsanvändare att dra och släppa den här komponenten på AEM innehållssidor för att berika innehållssidor med handelsdata.
 
-* CIF-kärnkomponenter har utökats för att hydratisera Adobe klientdatalagret genom att skicka e-handelsdata. Adobe Client Data Layer är en standardiserad metod för att samla in data och kommunicera data till digitala analyser och rapportservrar. Mer information finns i [Adobe-klientdatalager](https://github.com/adobe/adobe-client-data-layer/wiki).
+* CIF kärnkomponenter har utökats för att utrusta Adobe Client Data Layer genom att skicka e-handelsdata. Adobe Client Data Layer är en standardiserad metod för att samla in data och kommunicera data till digitala analyser och rapportservrar. Mer information finns i [Adobe-klientdatalager](https://github.com/adobe/adobe-client-data-layer/wiki).
 
 * Sidorna Produktinformation och Produktlista utökas för att automatiskt fylla i SEO-metadata (som titel, metabeskrivning, meta-nyckelord) som konfigurerats inifrån Adobe Commerce administratörsgränssnitt
 
@@ -55,7 +55,7 @@ ht-degree: 8%
 
 | GitHub | Version | Detaljerade versionsinformation |
 |:-------|:-----:|---------------------:|
-| CIF Connector | 1.4.0 | [Versionsinformation](https://github.com/adobe/commerce-cif-connector/releases) |
+| CIF | 1.4.0 | [Versionsinformation](https://github.com/adobe/commerce-cif-connector/releases) |
 | CIF-kärnkomponenter | 1.4.0 | [Versionsinformation](https://github.com/adobe/aem-core-cif-components/releases) |
 | CIF Venias referenswebbplats | 2020.10.2 | [Versionsinformation](https://github.com/adobe/aem-cif-guides-venia/releases) |
 
@@ -81,7 +81,7 @@ ht-degree: 8%
 
 | GitHub | Version | Detaljerade versionsinformation |
 |:-------|:-----:|---------------------:|
-| CIF Connector | 1.3.0 | [Versionsinformation](https://github.com/adobe/commerce-cif-connector/releases) |
+| CIF | 1.3.0 | [Versionsinformation](https://github.com/adobe/commerce-cif-connector/releases) |
 | CIF-kärnkomponenter | 1.3.0 | [Versionsinformation](https://github.com/adobe/aem-core-cif-components/releases) |
 | CIF Venias referenswebbplats | 2020.9.2 | [Versionsinformation](https://github.com/adobe/aem-cif-guides-venia/releases) |
 
@@ -89,7 +89,7 @@ ht-degree: 8%
 
 * Breadcrumb-komponenten har lagts till för att stödja innehålls- och e-handelssidor.
 
-* Fliken Commerce har lagts till i sidegenskaper för att visa CIF-egenskaper för landningssidor och upplevelsefragment.
+* Fliken Commerce har lagts till i sidegenskaper för att visa CIF egenskaper för landningssida och upplevelsefragment.
 
 * Sökfältskomponenten har förbättrats med stöd för alternativet att visa platshållartext
 
@@ -105,19 +105,19 @@ ht-degree: 8%
 
 | GitHub | Version | Detaljerade versionsinformation |
 |:-------|:-----:|---------------------:|
-| CIF Connector | 1.2.0 | [Versionsinformation](https://github.com/adobe/commerce-cif-connector/releases) |
+| CIF | 1.2.0 | [Versionsinformation](https://github.com/adobe/commerce-cif-connector/releases) |
 | CIF-kärnkomponenter | 1.2.0 | [Versionsinformation](https://github.com/adobe/aem-core-cif-components/releases) |
 | CIF Venias referenswebbplats | 2020.8.14 | [Versionsinformation](https://github.com/adobe/aem-cif-guides-venia/releases) |
 
 ### Nyheter {#what-is-new-july}
 
-* CIF Venia Reference Site extraherades från CIF Archetype-repo och är nu en fristående GitHub-databas.
+* CIF Venia Reference Site extraherades från CIF Archetype och är nu en fristående GitHub-databas.
 
-* CIF-arkityp som sammanfogats med AEM Project Archetype. Använd för nya projekt [AEM Project Archettype](https://github.com/adobe/aem-project-archetype) som startpunkt.
+* CIF Archetype har sammanfogats med AEM Project Archetype. Använd för nya projekt [AEM Project Archettype](https://github.com/adobe/aem-project-archetype) som startpunkt.
 
 * Adressbokshantering har lagts till för att tillåta inloggade användare att hantera sina adresser.
 
-* CIF Cloud Configuration UI har stöd för publicerings-/avpubliceringsåtgärder.
+* Gränssnittet för konfiguration av CIF Cloud har stöd för publicerings-/avpubliceringsåtgärder.
 
 ### Vad har förbättrats {#what-is-improved-july}
 
@@ -131,9 +131,9 @@ ht-degree: 8%
 
 | GitHub | Version | Detaljerade versionsinformation |
 |:-------|:-----:|---------------------:|
-| CIF Connector | 1.1.0 | [Versionsinformation](https://github.com/adobe/commerce-cif-connector/releases) |
+| CIF | 1.1.0 | [Versionsinformation](https://github.com/adobe/commerce-cif-connector/releases) |
 | CIF-kärnkomponenter | 1.1.1 | [Versionsinformation](https://github.com/adobe/aem-core-cif-components/releases) |
-| CIF-arkityp | 0.11.0 | [Versionsinformation](https://github.com/adobe/aem-cif-project-archetype/releases) |
+| CIF | 0.11.0 | [Versionsinformation](https://github.com/adobe/aem-cif-project-archetype/releases) |
 
 ### Nyheter {#what-is-new-june}
 
@@ -159,9 +159,9 @@ Detta är den första versionen av CIF Core Components som stöds i Adobe Experi
 
 | GitHub | Version | Detaljerade versionsinformation |
 |:-------|:-----:|---------------------:|
-| CIF Connector | 1.0.0 | [Versionsinformation](https://github.com/adobe/commerce-cif-connector/releases) |
+| CIF | 1.0.0 | [Versionsinformation](https://github.com/adobe/commerce-cif-connector/releases) |
 | CIF-kärnkomponenter | 1.0.0 | [Versionsinformation](https://github.com/adobe/aem-core-cif-components/releases) |
-| CIF-arkityp | 0.11.0 | [Versionsinformation](https://github.com/adobe/aem-cif-project-archetype/releases) |
+| CIF | 0.11.0 | [Versionsinformation](https://github.com/adobe/aem-cif-project-archetype/releases) |
 
 ### Nyheter {#what-is-new-may}
 
@@ -183,13 +183,13 @@ Detta är den första versionen av CIF Core Components som stöds i Adobe Experi
 
 | GitHub | Version | Detaljerade versionsinformation |
 |:-------|:-----:|---------------------:|
-| CIF Connector | 0.10.0 | [Versionsinformation](https://github.com/adobe/commerce-cif-connector/releases) |
+| CIF | 0.10.0 | [Versionsinformation](https://github.com/adobe/commerce-cif-connector/releases) |
 | CIF-kärnkomponenter | 0.10.0 | [Versionsinformation](https://github.com/adobe/aem-core-cif-components/releases) |
-| CIF-arkityp | 0.10.0 | [Versionsinformation](https://github.com/adobe/aem-cif-project-archetype/releases) |
+| CIF | 0.10.0 | [Versionsinformation](https://github.com/adobe/aem-cif-project-archetype/releases) |
 
 ### Nyheter {#what-is-new-april}
 
-* Konfigurationsinställningarna för CIF Connector är enhetliga och förenklade. Mer info: utcheckning [Komma igång](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/content-and-commerce/home.html) eller [Ny inställning AEM CIF-projekt](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/content-and-commerce/home.html)
+* Konfigurationsinställningarna för CIF Connector är enhetliga och förenklade. Mer info: utcheckning [Komma igång](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/content-and-commerce/home.html) eller [Ny AEM CIF projektinställningar](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/content-and-commerce/home.html)
 
 ### Vad har förbättrats {#what-is-improved-april}
 
@@ -207,9 +207,9 @@ Detta är den första versionen av CIF Core Components som stöds i Adobe Experi
 
 | GitHub | Version | Detaljerade versionsinformation |
 |:-------|:-----:|---------------------:|
-| CIF Connector | 0.9.0 | [Versionsinformation](https://github.com/adobe/commerce-cif-connector/releases) |
+| CIF | 0.9.0 | [Versionsinformation](https://github.com/adobe/commerce-cif-connector/releases) |
 | CIF-kärnkomponenter | 0.9.0 | [Versionsinformation](https://github.com/adobe/aem-core-cif-components/releases) |
-| CIF-arkityp | 0.9.0 | [Versionsinformation](https://github.com/adobe/aem-cif-project-archetype/releases) |
+| CIF | 0.9.0 | [Versionsinformation](https://github.com/adobe/aem-cif-project-archetype/releases) |
 
 ### Nyheter {#what-is-new-february}
 
@@ -233,9 +233,9 @@ Detta är den första versionen av CIF Core Components som stöds i Adobe Experi
 
 | GitHub | Version | Detaljerade versionsinformation |
 |:-------|:-----:|---------------------:|
-| CIF Connector | 0.8.0 | [Versionsinformation](https://github.com/adobe/commerce-cif-connector/releases) |
+| CIF | 0.8.0 | [Versionsinformation](https://github.com/adobe/commerce-cif-connector/releases) |
 | CIF-kärnkomponenter | 0.8.0 | [Versionsinformation](https://github.com/adobe/aem-core-cif-components/releases) |
-| CIF-arkityp | 0.7.0 | [Versionsinformation](https://github.com/adobe/aem-cif-project-archetype/releases) |
+| CIF | 0.7.0 | [Versionsinformation](https://github.com/adobe/aem-cif-project-archetype/releases) |
 
 ### Nyheter {#what-is-new-january}
 
@@ -243,7 +243,7 @@ Detta är den första versionen av CIF Core Components som stöds i Adobe Experi
 
 * Ändra de lösenordsfunktioner som är tillgängliga på mitt konto.
 
-* i18n-stöd för AEM CIF-kärnkomponenter på serversidan.
+* i18n-stöd för AEM kärnkomponenter på serversidan.
 
 * Allmän relaterad produktkomponent finns tillgänglig.
 

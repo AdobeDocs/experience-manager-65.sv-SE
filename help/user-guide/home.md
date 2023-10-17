@@ -1,8 +1,8 @@
 ---
 title: AEM 6.5 User Guide Hub
-description: En översikt över de viktigaste resurserna för att förstå, installera, hantera och använda AEM 6.5
+description: En översikt över de viktigaste resurserna för att förstå, installera, hantera och använda AEM 6.5.
 exl-id: 51788662-6214-408e-98d9-692950c366be
-source-git-commit: 78c584db8c35ea809048580fe5b440a0b73c8eea
+source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
 workflow-type: tm+mt
 source-wordcount: '212'
 ht-degree: 1%
@@ -40,7 +40,7 @@ Supportrepresentant kan få assisterad support via:
 
 >[!NOTE]
 >
->Vet inte om du är en **supportrepresentant**? Ta reda på om detta [användartypen gäller dig](https://helpx.adobe.com/experience-cloud/supported-users.html) och få veta mer om Adobe [Enterprise Support-villkor](https://helpx.adobe.com/support/programs/enterprise-support-terms.html).
+>Vet inte om du är en **supportrepresentant**? Ta reda på om det här [användartypen gäller dig](https://helpx.adobe.com/experience-cloud/supported-users.html) och få veta mer om Adobe [Enterprise Support-villkor](https://helpx.adobe.com/support/programs/enterprise-support-terms.html).
 
 ## Community {#community}
 

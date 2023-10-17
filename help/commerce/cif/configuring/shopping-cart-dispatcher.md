@@ -1,9 +1,9 @@
 ---
 title: Inställning av kundvagn och utskicksare
-description: Inställning av kundvagn och utskicksare
-source-git-commit: a467009851937c4a10b165a3d253c47bf990bbc5
+description: Läs mer om kundvagnen och installationsprogrammet för Adobe Experience Manager Dispatcher.
+source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
 workflow-type: tm+mt
-source-wordcount: '141'
+source-wordcount: '148'
 ht-degree: 0%
 
 ---

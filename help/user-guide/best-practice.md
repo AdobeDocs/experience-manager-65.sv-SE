@@ -1,35 +1,33 @@
 ---
-title: AEM 6.5 God praxis
-seo-title: AEM 6.5 Best Practices
-description: Resurser för bästa praxis, felsökning och utbildning för AEM 6.5
-seo-description: Resources for best practices, troubleshooting and training for AEM 6.5
+title: AEM 6.5 Bästa praxis
+description: Resurser för bästa praxis, felsökning och utbildning för AEM 6.5.
 exl-id: 077c00b9-f2ec-49a3-8d85-a3d3ecf287bb
-source-git-commit: a51a863a4edf7e8b951a8361c5c7f0517b09f12a
+source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
 workflow-type: tm+mt
 source-wordcount: '387'
 ht-degree: 0%
 
 ---
 
-# AEM 6.5 God praxis {#aem-65-best-practices}
+# AEM 6.5 Bästa praxis {#aem-65-best-practices}
 
 ## Var kan jag lära mig mer om utbildning och AEM? {#training}
 
 Adobe har olika resurser som hjälper dig att få ut det mesta av AEM.
 
-* [AEM](https://training.adobe.com/training/current-courses.html#solution=adobeExperienceManager&amp;p=1).
+* [AEM katalog](https://training.adobe.com/training/current-courses.html#solution=adobeExperienceManager&amp;p=1).
 * Om du vill bli certifierad AEM [fullständig guide till officiella AEM finns här](https://training.adobe.com/certification/exams.html#p=1&amp;solution=adobeExperienceManager).
 
 Den AEM communityn producerar ständigt exempelarbetsflöden, självstudiekurser och exempel på innehållskoder från förslag och samarbete.
 
 * [En fullständig lista med självstudiekurser och videoklipp AEM 6.5 finns här](https://experienceleague.adobe.com/docs/experience-manager-tutorials.html).
-* [En komplett lista AEM artiklar om hur man gör i communityn finns här](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/ct-p/adobe-experience-manager-community).
+* [En komplett lista AEM artiklar om användarvänlighet finns här](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/ct-p/adobe-experience-manager-community).
 
 ## Bästa tillvägagångssätt för AEM {#best-practices}
 
 * [Bästa tillvägagångssätt för att hantera ett projekt att implementera AEM](/help/managing/best-practices.md)
 * [Bästa tillvägagångssätt för redigering i AEM](/help/sites-authoring/best-practices.md)
-* [Bästa tillvägagångssätt för att administrera AEM](/help/sites-administering/administer-best-practices.md)
+* [God praxis för administration av AEM](/help/sites-administering/administer-best-practices.md)
 * [Bästa tillvägagångssätt för utveckling i AEM](/help/sites-developing/best-practices.md)
 * [Bästa tillvägagångssätt för SEO och URL-hantering](/help/managing/seo-and-url-management.md)
 * [AEM och riktlinjerna för webbtillgänglighet](/help/managing/web-accessibility.md)
@@ -50,7 +48,7 @@ Adobe har en ny [WKND-självstudiekurs, som är en steg-för-steg-guide till hur
 
 MicroKernels fungerar som uthålliga chefer och att förstå dem är avgörande för en framgångsrik AEM. Vilken som passar bäst beror på instansens syfte och vilken distributionstyp du överväger. [Läs mer om deras rekommenderade användningsområden i de vanligaste AEM.](/help/sites-deploying/recommended-deploys.md)
 
-## AEM {#security-checklist}
+## AEM checklista {#security-checklist}
 
 Säkerhet är en viktig faktor när du installerar AEM. [Lär dig mer om de olika steg och åtgärder som krävs för att säkerställa att AEM är säker vid driftsättning.](/help/sites-administering/security-checklist.md) Använd checklistan uppifrån och ned.
 

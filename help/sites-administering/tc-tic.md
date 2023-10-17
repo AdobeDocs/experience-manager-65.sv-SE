@@ -1,19 +1,12 @@
 ---
 title: Konfigurera översättningsintegreringsramverket
-seo-title: Configuring the Translation Integration Framework
-description: Lär dig hur du konfigurerar TLF (Translation Integration Framework).
-seo-description: Learn how to configure the Translation Integration Framework.
-uuid: 5ecfe154-732f-4a13-96f8-92f55023c54d
+description: Lär dig hur du konfigurerar översättningsintegreringsramverket i Adobe Experience Manager.
 contentOwner: Guillaume Carlino
-products: SG_EXPERIENCEMANAGER/6.5/SITES
-topic-tags: site-features
-content-type: reference
-discoiquuid: 200f51ab-f9bf-4989-91af-c3904fc673e5
 feature: Language Copy
 exl-id: 7562754b-d9fd-441b-8ae5-c7eebe458cef
-source-git-commit: 3d1959a1a81293b51257d99d32c9576866c8a308
+source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
 workflow-type: tm+mt
-source-wordcount: '1569'
+source-wordcount: '1573'
 ht-degree: 0%
 
 ---
@@ -34,7 +27,7 @@ Skapa en molnkonfiguration som ansluter AEM till översättningstjänstleverant�
 Följande översättningsleverantörer tillhandahåller en implementering av det nya API:t för översättningsprojekten. Länkar för mer information om integrationen:
 
 * [Translations.com](https://exchange.adobe.com/experiencecloud.details.90104.globallink-connect-plus-for-aem.html) (Adobe Exchange Premier Partner)
-* [Clay Tablet Technologies](https://exchange.adobe.com/experiencecloud.details.90064.clay-tablet-translation-for-experience-manager.html)
+* [Lera Tablet Technologies](https://exchange.adobe.com/experiencecloud.details.90064.clay-tablet-translation-for-experience-manager.html)
 * [Lionbridge](https://exchange.adobe.com/experiencecloud.details.100064.lionbridge-connector-for-experience-manager-63.html)
 * [Memsource](https://exchange.adobe.com/experiencecloud.details.103166.memsource-connector-for-adobe-experience-manager.html)
 * [Molnord](https://exchange.adobe.com/experiencecloud.details.90019.html)
@@ -55,8 +48,7 @@ Följande översättningsleverantörer tillhandahåller en implementering av det
 >* [AEM maskinöversättning](https://www.adobe.com/go/aem-machine-translation-connectors)
 >
 
-
-När du har installerat ett anslutningspaket kan du skapa en molnkonfiguration för anslutaren. Vanligtvis måste du ange dina autentiseringsuppgifter för autentisering med översättningstjänsten. Mer information om hur du lägger till en molnkonfiguration för Microsoft Translator-anslutningen finns i [Integrera med Microsoft Translator](/help/sites-administering/tc-msconf.md).
+När du har installerat ett kopplingspaket kan du skapa en molnkonfiguration för anslutningen. Vanligtvis måste du ange dina autentiseringsuppgifter för autentisering med översättningstjänsten. Mer information om hur du lägger till en molnkonfiguration för Microsoft Translator-anslutningen finns i [Integrera med Microsoft Translator](/help/sites-administering/tc-msconf.md).
 
 Du kan skapa flera molnkonfigurationer för samma anslutning om det behövs. Skapa till exempel en konfiguration för varje konto eller projekt som du har med samma leverantör.
 
@@ -96,8 +88,8 @@ Webbplatsegenskaperna styr hur översättning av sidinnehåll utförs.
    <td><p>Välj den översättningsmetod som ramverket utför för webbplatsinnehåll:</p>
     <ul>
      <li>Maskinöversättning: Översättningsprovidern utför översättningen med maskinöversättning i realtid.</li>
-     <li>Translation of Human: Innehållet skickas till översättningsleverantören för översättning av översättare. </li>
-     <li>Översätt inte: Innehåll skickas inte för översättning. Detta är för att hoppa över vissa innehållsgrenar som inte skulle översättas, men som skulle kunna uppdateras med det senaste innehållet.</li>
+     <li>Human Translation: Content is sent to the translation provider to be translators. </li>
+     <li>Översätt inte: Innehållet skickas inte för översättning. Detta är för att hoppa över vissa innehållsgrenar som inte skulle översättas, men som skulle kunna uppdateras med det senaste innehållet.</li>
     </ul> </td>
   </tr>
   <tr>
@@ -122,7 +114,7 @@ Webbplatsegenskaperna styr hur översättning av sidinnehåll utförs.
     <ul>
      <li>Översätt inte: Sidresurser översätts inte.</li>
      <li>Använda arbetsflöde för översättning av platser: Resurser hanteras enligt konfigurationsegenskaperna på fliken Platser.</li>
-     <li>Använda arbetsflöde för resursöversättning: Resurser hanteras enligt egenskapskonfigurationen på fliken Resurser.</li>
+     <li>Använda arbetsflöde för översättning av resurser: Resurser hanteras enligt egenskapskonfigurationen på fliken Resurser.</li>
     </ul> </td>
   </tr>
   <tr>
@@ -140,7 +132,7 @@ Communities-egenskaper styr hur översättning av användargenererat innehåll u
 |---|---|
 | Översättningsprovider | Välj översättningsprovidern som ska utföra översättningen. Providern som molnkonfigurationer skapas för visas i listan. |
 | Innehållskategori | En kategori som beskriver innehållet som du översätter. Kategorin kan påverka valet av terminologi och fraser när innehåll översätts. |
-| Välj en språkinställning som ska användas som globalt resurslager | (Valfritt) Genom att välja en språkinställning för lagring av UGC, visas inlägg från alla språkkopior i en global konversation. Välj språkområde för [basspråk](/help/communities/sites-console.md#translation) för webbplatsen. Om du väljer Ingen gemensam lagringsplats inaktiveras global översättning. Som standard är global översättning inaktiverat. |
+| Välj ett språk som ska användas som globalt resurslager | (Valfritt) Genom att välja en språkinställning för lagring av UGC, visas inlägg från alla språkkopior i en global konversation. Välj språkområde för [basspråk](/help/communities/sites-console.md#translation) för webbplatsen. Om du väljer Ingen gemensam lagringsplats inaktiveras global översättning. Som standard är global översättning inaktiverat. |
 
 ### Egenskaper för resurskonfiguration {#assets-configuration-properties}
 
@@ -157,7 +149,7 @@ Resursegenskaperna styr hur resurser konfigureras. Mer information om översätt
    <td><p>Välj den typ av översättning som ramverket utför för resurser:</p>
     <ul>
      <li>Maskinöversättning: Översättningsprovidern utför översättningen omedelbart med maskinöversättning.</li>
-     <li>Translation of Human: Innehållet skickas automatiskt till översättningsleverantören för manuell översättning. </li>
+     <li>Översättning av människor: Innehållet skickas automatiskt till översättningsleverantören för manuell översättning. </li>
      <li>Översätt inte: Resurser skickas inte för översättning.</li>
     </ul> </td>
   </tr>
@@ -188,7 +180,7 @@ Resursegenskaperna styr hur resurser konfigureras. Mer information om översätt
  </tbody>
 </table>
 
-1. Klicka på eller tryck på Verktyg > Åtgärder > Moln > Cloud Services i sidofältet.
+1. Klicka på eller tryck på Verktyg > Åtgärder > Moln > Cloud Service i sidofältet.
 1. I området Översättningsintegrering avgör om några konfigurationer har skapats vilken länk som visas:
 
    * Om inga konfigurationer har skapats klickar du på eller trycker på Konfigurera nu.
@@ -217,7 +209,7 @@ Dessutom, för alla communities [SCF-komponenter](/help/communities/scf.md) på 
 Koppla en sida till översättningsleverantören som du använder för att översätta sidan och underordnade sidor.
 
 1. På webbplatskonsolen markerar du sidan som du vill konfigurera och klickar eller trycker på Visa egenskaper.
-1. Klicka eller tryck på Redigera och sedan på fliken Cloud Services.
+1. Klicka eller tryck på Redigera och sedan på fliken Cloud Service.
 1. Klicka eller tryck på Add Configuration (Lägg till konfiguration) > Translation Integration (Översättningsintegrering).
 1. Välj den översättningsleverantör som ska användas och klicka eller tryck sedan på Klar.
 
@@ -226,6 +218,6 @@ Koppla en sida till översättningsleverantören som du använder för att över
 Koppla en sida till översättningsintegreringsramverket som definierar hur du vill översätta sidan och underordnade sidor.
 
 1. På webbplatskonsolen markerar du sidan som du vill konfigurera och klickar eller trycker på Visa egenskaper.
-1. Klicka eller tryck på Redigera och sedan på fliken Cloud Services.
+1. Klicka eller tryck på Redigera och sedan på fliken Cloud Service.
 1. Klicka eller tryck på Add Configuration (Lägg till konfiguration) > Translation Integration (Översättningsintegrering).
 1. Markera det översättningsintegreringsramverk som ska användas och klicka eller tryck sedan på Klar.

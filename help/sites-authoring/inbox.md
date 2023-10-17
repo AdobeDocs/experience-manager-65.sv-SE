@@ -1,23 +1,17 @@
 ---
 title: Inkorgen för att hantera uppgifter
-description: Hantera dina uppgifter med inkorgen.
-uuid: ddd48019-ce69-4a47-be2b-5b66ae2fe3c8
-contentOwner: Chris Bohnert
-products: SG_EXPERIENCEMANAGER/6.5/SITES
-topic-tags: introduction
-content-type: reference
-discoiquuid: 8b607b55-2412-469f-856b-0a3dea4b0efb
+description: Hantera dina uppgifter med inkorgen i Adobe Experience Manager 6.5.
 exl-id: 80b7f179-b011-4f90-b5ab-9ef8a669d271
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
 workflow-type: tm+mt
-source-wordcount: '1144'
+source-wordcount: '1148'
 ht-degree: 7%
 
 ---
 
 # Din inkorg{#your-inbox}
 
-Du kan få meddelanden från olika AEM, inklusive arbetsflöden och projekt. om:
+Du kan få meddelanden från olika AEM, inklusive arbetsflöden och projekt, t.ex. om:
 
 * Uppgifter:
 
@@ -62,7 +56,7 @@ Från någon av konsolerna visas det aktuella antalet objekt i din inkorg i sidh
 
 Färdiga AEM levereras förinläst med fyra uppgifter tilldelade till administratörsanvändargruppen.
 
-* [Konfigurera analys och målgruppsanpassning](/help/sites-administering/opt-in.md)
+* [Konfigurera analys och målanpassning](/help/sites-administering/opt-in.md)
 * [Använd AEM checklista](/help/sites-administering/security-checklist.md)
 * Aktivera insamling av aggregerad användningsstatistik
 * [Konfigurera HTTPS](/help/sites-administering/ssl-by-default.md)
@@ -76,7 +70,7 @@ Så här öppnar du AEM inkorg:
 1. Välj **Visa alla**. **AEM -inkorgen** öppnas. I inkorgen visas objekt från arbetsflöden, projekt och uppgifter.
 1. Standardvyn är [Listvy](#inbox-list-view), men du kan även växla till [Kalendervy](#inbox-calendar-view). Detta görs med vyväljaren (verktygsfält, överst till höger).
 
-   För båda vyerna kan du även definiera [Visa inställningar](#inbox-view-settings); vilka alternativ som är tillgängliga beror på den aktuella vyn.
+   För båda vyerna kan du även definiera [Visa inställningar](#inbox-view-settings); de tillgängliga alternativen beror på den aktuella vyn.
 
    ![wf-79](assets/inbox-list-view.png)
 
@@ -143,10 +137,10 @@ Med alternativet Admin Control kan administratörer:
 Alternativet Admin Control är bara synligt för medlemmarna i `administrators` eller `workflow-administrators` grupp.
 
 * **Kolumnanpassning**: Anpassa en AEM Inkorg om du vill ändra standardrubriken för en kolumn, ändra ordning på positionen för en kolumn och visa ytterligare kolumner baserat på data i ett arbetsflöde.
-   * **Lägg till kolumn**: Markera en kolumn som ska läggas till AEM Inkorgen.
+   * **Lägg till kolumn**: Välj en kolumn som ska läggas till AEM Inkorgen.
    * **Redigera kolumn**: Håll muspekaren över kolumnrubriken och tryck på ![redigera](assets/edit.svg) om du vill ange ett kolumnvisningsnamn.
-   * **Ta bort kolumn**: Tryck på ![delete](assets/delete_updated.svg) om du vill ta bort kolumnen AEM Inkorgen.
-   * **Flytta kolumn**: Dra ![move](assets/move_updated.svg) om du vill flytta en kolumn till en ny plats i AEM.
+   * **Ta bort kolumn**: Tryck på ![delete](assets/delete_updated.svg) om du vill ta bort kolumnen från AEM.
+   * **Flytta kolumn**: Dra ![move](assets/move_updated.svg) om du vill flytta en kolumn till en ny plats i AEM Inkorg.
 
   ![admin-control](assets/admin-control-column-customize.png)
 
@@ -173,15 +167,15 @@ Alternativet Admin Control är bara synligt för medlemmarna i `administrators` 
 
    Åtgärderna är lämpliga för objektet och omfattar:
 
-   * **Slutförd** Åtgärd. till exempel en uppgift eller ett arbetsflödesobjekt.
+   * **Complete** åtgärd, till exempel en uppgift eller ett arbetsflödesobjekt.
    * **Tilldela igen**/**Delegera** ett objekt.
-   * **Öppna** en post, Beroende på objekttypen kan den här åtgärden:
+   * **Öppna** ett objekt. Beroende på objekttypen kan den här åtgärden:
 
       * visa objektegenskaperna
       * öppna en lämplig kontrollpanel eller guide för ytterligare åtgärder
       * öppna relaterad dokumentation
 
-   * **Stega bakåt** till ett föregående steg.
+   * **Gå bakåt** till ett föregående steg.
    * Visa nyttolasten för ett arbetsflöde.
    * Skapa ett projekt från objektet.
 
@@ -189,9 +183,9 @@ Alternativet Admin Control är bara synligt för medlemmarna i `administrators` 
    >
    >Mer information finns i:
    >
-   >* Arbetsflödesobjekt - [Delta i arbetsflöden](/help/sites-authoring/workflows-participating.md)
+   >* Arbetsflödesartiklar - [Delta i arbetsflöden](/help/sites-authoring/workflows-participating.md)
 
-1. Beroende på vilket objekt som valts kommer en åtgärd att startas; till exempel:
+1. Beroende på vilket objekt som är markerat startas en åtgärd, till exempel:
 
    * en dialogruta som är lämplig för åtgärden öppnas.
    * en åtgärdsguide startas.
@@ -203,9 +197,9 @@ Alternativet Admin Control är bara synligt för medlemmarna i `administrators` 
 
    Beroende på om en dialogruta, guide, dokumentationssida har öppnats kan du:
 
-   * Bekräfta lämpliga åtgärder. till exempel Tilldela igen.
+   * Bekräfta lämplig åtgärd, till exempel Tilldela igen.
    * Avbryt åtgärden.
-   * Bakpil: Om en åtgärdsguide eller dokumentationssida till exempel har öppnats kan du gå tillbaka till Inkorgen.
+   * Bakåtpilen. Om en åtgärdsguide eller dokumentationssida har öppnats kan du gå tillbaka till Inkorgen.
 
 ## Skapa en uppgift {#creating-a-task}
 
@@ -229,7 +223,7 @@ I inkorgen kan du skapa uppgifter:
 
    * **Avancerat**
 
-      * **Namn**: detta kommer att användas för att skapa URL:en, om det är tomt kommer det att baseras på **Titel**.
+      * **Namn**: this will used to form the URL; if blank it will be based on the **Titel**.
 
    ![wf-87](assets/wf-87.png)
 
@@ -269,7 +263,7 @@ För vissa uppgifter kan du skapa en [Projekt](/help/sites-authoring/projects.md
 
 1. Välj **Skapa** för att bekräfta åtgärden.
 
-## Filtrera objekt i AEM {#filtering-items-in-the-aem-inbox}
+## Filtrera objekt i AEM Inkorg {#filtering-items-in-the-aem-inbox}
 
 Du kan filtrera objekten i listan:
 
@@ -279,7 +273,7 @@ Du kan filtrera objekten i listan:
 
    ![wf-88](assets/wf-88.png)
 
-1. Du kan filtrera de listade objekten enligt ett antal kriterier, varav många kan förfinas; till exempel:
+1. Du kan filtrera de listade objekten enligt ett intervall av villkor, som många kan förfinas. Exempel:
 
    ![wf-89](assets/wf-89.png)
 

@@ -1,19 +1,12 @@
 ---
 title: Förbereder innehåll för översättning
-seo-title: Preparing Content for Translation
-description: Lär dig hur du förbereder innehåll för översättning.
-seo-description: Learn how to prepare content for translation.
-uuid: 369630a8-2ed7-48db-973e-bd8213231d49
+description: Lär dig förbereda innehåll för översättning i Adobe Experience Manager.
 contentOwner: Guillaume Carlino
-products: SG_EXPERIENCEMANAGER/6.5/SITES
-topic-tags: site-features
-content-type: reference
-discoiquuid: 8bd67d71-bcb7-4ca0-9751-3ff3ee054011
 feature: Language Copy
 exl-id: 81978733-89a6-4436-bcf1-4bde962ed54f
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
 workflow-type: tm+mt
-source-wordcount: '681'
+source-wordcount: '685'
 ht-degree: 0%
 
 ---
@@ -36,15 +29,15 @@ Exempelversionen av Geometrixx Demo Site innehåller flera språkgrenar och har 
              |- zh
 ```
 
-Varje språkgren på en webbplats kallas för en språkkopia. Rotsidan för en språkkopia, som kallas språkroten, identifierar språket för innehållet i språkkopian. Till exempel: `/content/geometrixx/fr` är språkroten för den franska språkkopian. Språkkopior måste använda [korrekt konfigurerad språkrot](/help/sites-administering/tc-prep.md#creating-a-language-root) så att rätt språk används när översättningar av en källplats utförs.
+Varje språkgren på en webbplats kallas för en språkkopia. Rotsidan för en språkkopia, som kallas språkroten, identifierar språket för innehållet i språkkopian. Till exempel: `/content/geometrixx/fr` är språkroten för den franska språkkopian. Språkkopior måste använda en [korrekt konfigurerad språkrot](/help/sites-administering/tc-prep.md#creating-a-language-root) så att rätt språk används när översättningar av en källplats utförs.
 
-Den språkkopia som du ursprungligen skapade webbplatsinnehållet för är överordnad. Överordnad språk är källan som översätts till andra språk.
+Den språkkopia som du ursprungligen skapade webbplatsinnehållet för är språkinställningen. Språkmallsidan är källan som översätts till andra språk.
 
 Gör så här för att förbereda webbplatsen för översättning:
 
-1. Skapa språkroten för din överordnad. Exempelvis är språkroten för demowebbplatsen för engelska Geometrixx /content/geometrixx/en. Kontrollera att språkroten är korrekt konfigurerad enligt informationen i [Skapa en språkrot](/help/sites-administering/tc-prep.md#creating-a-language-root).
-1. Skriv innehåll på ditt språk överordnad.
-1. Skapa språkroten för varje språkkopia för webbplatsen. Den franska språkkopian av exempelwebbplatsen för Geometrixx är till exempel /content/geometrixx/fr.
+1. Skapa språkroten för din språkinställning. Exempelvis är språkroten för demowebbplatsen för engelska Geometrixx /content/geometrixx/en. Kontrollera att språkroten är korrekt konfigurerad enligt informationen i [Skapa en språkrot](/help/sites-administering/tc-prep.md#creating-a-language-root).
+1. Skriv innehållet i din språkmaster.
+1. Skapa språkroten för varje språkkopia för webbplatsen. Den franska språkkopian av exempelwebbplatsen är till exempel /content/geometrixx/fr.
 
 När du har förberett innehållet för översättning kan du automatiskt skapa saknade sidor i dina språkkopior och tillhörande översättningsprojekt. (Se [Skapa ett översättningsprojekt](/help/sites-administering/tc-manage.md).) En översikt över innehållsöversättningsprocessen i AEM finns i [Översätta innehåll för flerspråkiga webbplatser](/help/sites-administering/translation.md).
 
@@ -58,12 +51,12 @@ Om du vill skapa språkroten skapar du en sida och använder en ISO-språkkod so
 
 * `<language-code>_<country-code>` eller `<language-code>-<country-code>`Den landskod som stöds är en tvåbokstavskod med gemener eller versaler enligt ISO 3166, till exempel `en_US`, `en_us`, `en_GB`, `en-gb`.
 
-Du kan använda båda formaten enligt den struktur som du har valt för den globala platsen.  Rotsidan för den franska språkkopian av Geometrixx har `fr` som egenskapen Name. Observera att egenskapen Namn används som namn på sidnoden i databasen och därför bestämmer sökvägen till sidan. (http://localhost:4502/content/geometrixx/fr.html)
+Du kan använda båda formaten enligt den struktur som du har valt för den globala platsen.  Rotsidan för den franska språkkopian av Geometrixx har till exempel `fr` som egenskapen Name. Observera att egenskapen Namn används som namn på sidnoden i databasen och därför bestämmer sökvägen till sidan. (http://localhost:4502/content/geometrixx/fr.html)
 
 I följande procedur används det pekoptimerade användargränssnittet för att skapa en språkkopia av en webbplats. Instruktioner om hur du använder det klassiska användargränssnittet finns i [Skapa en språkrot med det klassiska användargränssnittet](/help/sites-administering/tc-lroot-classic.md).
 
 1. Navigera till Webbplatser.
-1. Klicka på eller tryck på den webbplats där du vill skapa en språkkopia.
+1. Klicka på eller tryck på den webbplats som du vill skapa en språkkopia för.
 
    Om du till exempel vill skapa en språkkopia av Geometrixx Outdoors-webbplatsen klickar du på eller trycker på Geometrixx Outdoors webbplats.
 

@@ -1,8 +1,8 @@
 ---
 title: Adobe Experience Manager Content and Commerce Release Notes 2021
-description: Adobe Experience Manager Content and Commerce Release Notes 2021
+description: Adobe Experience Manager Content and Commerce Release Notes 2021.
 exl-id: ec47c5f8-d4dd-469f-94df-5ee28f25d696
-source-git-commit: 2810e34f642f4643fa4dc24b31a57a68e9194e39
+source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
 workflow-type: tm+mt
 source-wordcount: '1318'
 ht-degree: 5%
@@ -13,19 +13,19 @@ ht-degree: 5%
 
 ## Översikt över systemkrav
 
-Granska de lägsta systemkraven i tabellen nedan för den CIF-version som du använder eller planerar att använda i framtiden.
+Granska de lägsta systemkraven i tabellen nedan för den CIF versionen som du använder eller planerar att använda i framtiden.
 
 | Komponent | Systemkrav |
 |:-------|:-----:|
-| CIF-tillägg | Minimum: Adobe Experience Manager (AEM) 6.5.7, Adobe Commerce 2.3.5 GraphQL-scheman |
+| CIF | Minimum: Adobe Experience Manager (AEM) 6.5.7, Adobe Commerce 2.3.5 GraphQL scheman |
 | CIF-kärnkomponenter | [Systemkrav](https://github.com/adobe/aem-core-cif-components/blob/master/VERSIONS.md) |
-| AEM Project Archetype | [Systemkrav](https://github.com/adobe/aem-project-archetype/blob/master/VERSIONS.md) |
+| AEM Project Archettype | [Systemkrav](https://github.com/adobe/aem-project-archetype/blob/master/VERSIONS.md) |
 
-## Releasedatum: November 2021
+## Releasedatum: november 2021
 
-| Komponent | Version | Detaljer |
+| Komponent | Version | Information |
 |:-------|:-----:|---------------------:|
-| CIF-tillägg | 2021.11.18.00 | [Programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2021.11.18.00.zip) |
+| CIF | 2021.11.18.00 | [Programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2021.11.18.00.zip) |
 | CIF-kärnkomponenter | 2.4.2 | [GitHub](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-2.4.2) |
 | CIF Venias referenswebbplats | 2021.12.01 | [GitHub](https://github.com/adobe/aem-cif-guides-venia/releases/tag/venia-2021.12.01) |
 
@@ -39,31 +39,31 @@ Granska de lägsta systemkraven i tabellen nedan för den CIF-version som du anv
 
 * Stöd för presentkort i AEM Storefront
 
-## Releasedatum: Oktober 2021
+## Releasedatum: oktober 2021
 
-| Komponent | Version | Detaljer |
+| Komponent | Version | Information |
 |:-------|:-----:|---------------------:|
-| CIF-tillägg | 2021.10.20.02 | [Programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2021.10.20.02.zip) |
+| CIF | 2021.10.20.02 | [Programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2021.10.20.02.zip) |
 | CIF-kärnkomponenter | 2.4.0 | [GitHub](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-2.4.0) |
 | CIF Venias referenswebbplats | 2021.11.01 | [GitHub](https://github.com/adobe/aem-cif-guides-venia/releases/tag/venia-2021.11.01) |
 
 ### Nyheter {#what-is-new-october}
 
-* CIF-tillägget stöder den senaste versionen av Commerce v2.4.3 med nya GraphQL API:er och scheman
+* Tillägget CIF stöder den senaste versionen av Commerce v2.4.3 med nya GraphQL API:er och scheman
 
-* Författare kan lägga till länkar till produkt- och katalogsidor i textfält med textredigeraren. En CIF-ikon har lagts till i verktygsfältet för textredigering som öppnar väljarna för att snabbt söka efter och välja produkten eller kategorin utan att lämna sammanhanget.
+* Författare kan lägga till länkar till produkt- och katalogsidor i textfält med textredigeraren. En CIF ikon har lagts till i verktygsfältet som öppnar väljarna för att snabbt söka efter och välja produkten eller kategorin utan att lämna sammanhanget.
 
 * Befintlig snabbkundvagn och utcheckning har ersatts med dedikerade AEM- och utcheckningssidor. Komponenterna på dessa sidor byggs med Adobe Commerce utökningsbara Premiere-komponenter
 
-* Handlare kan dölja vissa produktkatalogkategorier i navigeringen med Commerce-serverdelen. CIF Navigation Core Component (kärnkomponent för CIF-navigering) respekterar e-handelsserverdelens konfiguration &quot;include in menu&quot; för att visa/dölja kategorier i navigering
+* Handlare kan dölja vissa produktkatalogkategorier i navigeringen med Commerce-serverdelen. Den CIF kärnkomponenten för navigering respekterar e-handelsserverdelens konfiguration &quot;include in menu&quot; för att visa/dölja kategorier i navigering
 
 * AEM Storefront Venia returnerar HTTP 404-fel om kategori eller produktsida inte hittas
 
-## Releasedatum: September 2021
+## Releasedatum: september 2021
 
-| Komponent | Version | Detaljer |
+| Komponent | Version | Information |
 |:-------|:-----:|---------------------:|
-| CIF-tillägg | 2021.09.27 | [Programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2021.09.27.zip) |
+| CIF | 2021.09.27 | [Programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2021.09.27.zip) |
 | CIF-kärnkomponenter | 2.2.0 | [GitHub](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-2.2.0) |
 | CIF Venias referenswebbplats | 2021.09.23 | [GitHub](https://github.com/adobe/aem-cif-guides-venia/releases/tag/venia-2021.09.23) |
 
@@ -85,13 +85,13 @@ Granska de lägsta systemkraven i tabellen nedan för den CIF-version som du anv
 
 * JS-fel AEM CS-driftsättningssteget och när komponenter på klientsidan inte används
 
-* Det går inte att skapa CIF-molnkonfigurationen i mappar som har en sling:configs-nod
+* Det går inte att skapa CIF molnkonfiguration i mappar som har en sling:configs-nod
 
-## Releasedatum: Augusti 2021
+## Releasedatum: augusti 2021
 
-| Komponent | Version | Detaljer |
+| Komponent | Version | Information |
 |:-------|:-----:|---------------------:|
-| CIF-tillägg | 2021.09.02 | [Programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2021.09.02.zip) |
+| CIF | 2021.09.02 | [Programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2021.09.02.zip) |
 | CIF-kärnkomponenter | 2.1.0 | [GitHub](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-2.1.0) |
 | CIF Venias referenswebbplats | 2021.08.27 | [GitHub](https://github.com/adobe/aem-cif-guides-venia/releases/tag/venia-2021.08.27) |
 
@@ -101,7 +101,7 @@ Granska de lägsta systemkraven i tabellen nedan för den CIF-version som du anv
 
   ![Ny kategoriväljare](/help/assets/CIF/category-picker.png)
 
-* Bättre stöd för A11Y för CIF Core-komponenter
+* Bättre stöd för A11Y för CIF kärnkomponenter
 
 ### Felkorrigeringar {#bug-fixes-august}
 
@@ -109,15 +109,15 @@ Granska de lägsta systemkraven i tabellen nedan för den CIF-version som du anv
 
 * Egenskapen Call to action text bruten i produktsuddgummi
 
-* CIF JS-fel under AEM CS-driftsättning
+* CIF JS-fel AEM CS-driftsättningssteget
 
 * Korrigera åtkomst till råprodukt för mappade produktlisteobjekt
 
-## Releasedatum: Juli 2021
+## Releasedatum: juli 2021
 
-| Komponent | Version | Detaljer |
+| Komponent | Version | Information |
 |:-------|:-----:|---------------------:|
-| CIF-tillägg | 2021.07.21 | [Programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2021.07.21.zip) |
+| CIF | 2021.07.21 | [Programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2021.07.21.zip) |
 | CIF-kärnkomponenter | 2.0.0 | [GitHub](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-2.0.0) |
 | CIF Venias referenswebbplats | 2021.07.22 | [GitHub](https://github.com/adobe/aem-cif-guides-venia/releases/tag/venia-2021.07.22) |
 
@@ -130,28 +130,28 @@ Granska de lägsta systemkraven i tabellen nedan för den CIF-version som du anv
 
 * Stöd för [Adobe Commerce Sensei produktrekommendation från Adobe Sensei](https://business.adobe.com/products/magento/product-recommendations.html) i AEM Storefront med fördefinierade eller direkt skapade rekommendationer
 
-## Releasedatum: Juni 2021
+## Releasedatum: juni 2021
 
-| Komponent | Version | Detaljer |
+| Komponent | Version | Information |
 |:-------|:-----:|---------------------:|
-| CIF-tillägg | 2021.06.18 | [Programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2021.06.18.zip) |
+| CIF | 2021.06.18 | [Programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2021.06.18.zip) |
 | CIF-kärnkomponenter | 1.12.0 | [GitHub](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-1.12.0) |
 | CIF Venias referenswebbplats | 2021.06.12 | [GitHub](https://github.com/adobe/aem-cif-guides-venia/releases/tag/venia-2021.06.17) |
 
 ### Nyheter {#what-is-new-june}
 
-* Nya referensdatatyper för CIF-produkt och kategori för innehållsfragment (Inkl. användargränssnittsstöd för produkt-/kategoriväljare)
+* Nya CIF för produkt- och kategorireferensdatatyper för innehållsfragment (Inkl. användargränssnitt för produkt-/kategoriväljare)
 * Ny kärnkomponent för Commerce Content Fragment
 * Heltextbaserad e-handelssökning stöds i AEM
 * Commerce Core Components stöder datainsamling i Adobe Commerce Sensei Recs
 * Förbättrade SEO-vänliga URL:er för kategorisidor
 * Stöd för anpassade HTTP-huvuden per plats/konfiguration
 
-## Releasedatum: Maj 2021
+## Releasedatum: maj 2021
 
-| Komponent | Version | Detaljer |
+| Komponent | Version | Information |
 |:-------|:-----:|---------------------:|
-| CIF-tillägg | 2021.05.26 | [Programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2021.05.26.zip) |
+| CIF | 2021.05.26 | [Programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2021.05.26.zip) |
 | CIF-kärnkomponenter | 1.11.0 | [GitHub](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-1.11.0) |
 | CIF Venias referenswebbplats | 2021.05.24 | [GitHub](https://github.com/adobe/aem-cif-guides-venia/releases/tag/venia-2021.05.24) |
 
@@ -165,11 +165,11 @@ Granska de lägsta systemkraven i tabellen nedan för den CIF-version som du anv
 
 * Breadcrumb återställer förhandsvisningsdata i produktkonsolen
 
-## Releasedatum: April 2021
+## Releasedatum: april 2021
 
-| Komponent | Version | Detaljer |
+| Komponent | Version | Information |
 |:-------|:-----:|---------------------:|
-| CIF-tillägg | 2021.04.22 | [Programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2021.04.22.zip) |
+| CIF | 2021.04.22 | [Programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2021.04.22.zip) |
 | CIF-kärnkomponenter | 1.10.0 | [GitHub](https://github.com/adobe/aem-core-cif-components/releases) |
 | CIF Venias referenswebbplats | 2021.04.22 | [GitHub](https://github.com/adobe/aem-cif-guides-venia/releases) |
 
@@ -179,17 +179,17 @@ Granska de lägsta systemkraven i tabellen nedan för den CIF-version som du anv
 
 * AEM för PWA Studio inkl. exempelintegrering
 
-* Ny kärnkomponent för CIF-navigering som utökar kärnkomponenten för WCM-navigering
+* Ny CIF navigeringskärnkomponent som utökar WCM-navigeringskärnkomponenten
 
 ### Felkorrigeringar {#bug-fixes-april}
 
 * Rotkategorifältet visades inte under fliken E-handel i sidegenskaperna för kategorisidor
 
-## Releasedatum: Mars 2021 {#what-is-new-march}
+## Releasedatum: mars 2021 {#what-is-new-march}
 
 | GitHub | Version | Detaljerade versionsinformation |
 |:-------|:-----:|---------------------:|
-| CIF Connector | 1.9.0 | [Versionsinformation](https://github.com/adobe/commerce-cif-connector/releases) |
+| CIF | 1.9.0 | [Versionsinformation](https://github.com/adobe/commerce-cif-connector/releases) |
 | CIF-kärnkomponenter | 1.9.0 | [Versionsinformation](https://github.com/adobe/aem-core-cif-components/releases) |
 | CIF Venias referenswebbplats | 2021.03.25 | [Versionsinformation](https://github.com/adobe/aem-cif-guides-venia/releases) |
 
@@ -205,11 +205,11 @@ Granska de lägsta systemkraven i tabellen nedan för den CIF-version som du anv
 
 * Flera felkorrigeringar.
 
-## Releasedatum: Februari 2021
+## Releasedatum: februari 2021
 
 | GitHub | Version | Detaljerade versionsinformation |
 |:-------|:-----:|---------------------:|
-| CIF Connector | 1.8.0 | [Versionsinformation](https://github.com/adobe/commerce-cif-connector/releases) |
+| CIF | 1.8.0 | [Versionsinformation](https://github.com/adobe/commerce-cif-connector/releases) |
 | CIF-kärnkomponenter | 1.8.0 | [Versionsinformation](https://github.com/adobe/aem-core-cif-components/releases) |
 | CIF Venias referenswebbplats | 2021.02.24 | [Versionsinformation](https://github.com/adobe/aem-cif-guides-venia/releases) |
 
@@ -225,17 +225,17 @@ Granska de lägsta systemkraven i tabellen nedan för den CIF-version som du anv
 
 * Flera felkorrigeringar.
 
-## Releasedatum: Januari 2021
+## Releasedatum: januari 2021
 
 | GitHub | Version | Detaljerade versionsinformation |
 |:-------|:-----:|---------------------:|
-| CIF Connector | 1.7.0 | [Versionsinformation](https://github.com/adobe/commerce-cif-connector/releases) |
+| CIF | 1.7.0 | [Versionsinformation](https://github.com/adobe/commerce-cif-connector/releases) |
 | CIF-kärnkomponenter | 1.7.0 | [Versionsinformation](https://github.com/adobe/aem-core-cif-components/releases) |
 | CIF Venias referenswebbplats | 2021.02.02 | [Versionsinformation](https://github.com/adobe/aem-cif-guides-venia/releases) |
 
 ### Nyheter {#what-is-new-january}
 
-* Product Experience Management: Ny egenskapsflik för Commerce för Assets och Experience Fragments. På den här fliken kan du länka resurser och Experience Fragments till produkter och kategorier. På fliken visas även realtidsdata för länkade e-handelsobjekt och en länk som visar information i produktkonsolen.
+* Produktupplevelsehantering: Ny egenskapsflik för Commerce för Assets och Experience Fragments. På den här fliken kan du länka resurser och Experience Fragments till produkter och kategorier. På fliken visas även realtidsdata för länkade e-handelsobjekt och en länk som visar information i produktkonsolen.
 
 ### Vad har förbättrats  {#what-is-improved-january}
 

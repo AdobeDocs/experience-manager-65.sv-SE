@@ -1,10 +1,10 @@
 ---
 title: AEM
-description: AEM
+description: Upptäck och skapa kontakter med Adobe Experience Manager Community.
 exl-id: 2e73572c-78de-4c20-ada8-d95f7fd16dc9
-source-git-commit: 768576e300b655962adc3e1db20fc5ec06a5ba6c
+source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
 workflow-type: tm+mt
-source-wordcount: '316'
+source-wordcount: '323'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 ## Vad är AEM community? {#what-is}
 
-AEM har tusentals medlemmar världen över. De kan vara allt från människor som är nya i Experience Manager till erfarna expertutvecklare och administratörer. Community-communityn är till för att hjälpa dig med allt från frågor om AEM funktioner till hjälp med utvecklingsfrågor. AEM Community håller regelbundna expertsessioner med interna och externa expertanvändare. Det hjälper dig också att producera exempel, artiklar och självstudiekurser åt dig.
+AEM har tusentals medlemmar världen över. De kan vara allt från människor som är nya i Experience Manager till erfarna expertutvecklare och administratörer. Community-communityn är till för att hjälpa dig med allt från frågor om AEM funktioner till att hjälpa till med utvecklingsfrågor. AEM Community håller regelbundna expertsessioner med interna och externa expertanvändare. Det hjälper dig också att producera exempel, artiklar och självstudiekurser åt dig.
 
 [Gå med i communityn idag och få tillgång till det bästa innehållet, människorna och kunskaperna.](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/ct-p/adobe-experience-manager-community) Den är öppen för alla. Om du är intresserad av AEM, så är du välkommen. Släpp senast idag!
 

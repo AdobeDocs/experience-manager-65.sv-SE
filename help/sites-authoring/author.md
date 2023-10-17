@@ -1,15 +1,10 @@
 ---
 title: Redigering
-description: Designbegrepp i Adobe Experience Manager
-contentOwner: Janice Kendall
-products: SG_EXPERIENCEMANAGER/6.5/SITES
-topic-tags: introduction
-content-type: reference
-docset: aem65
+description: Begrepp som redigering och publicering i Adobe Experience Manager 6.5.
 exl-id: dcda537a-1bb2-4ce3-9904-40d158b47556
-source-git-commit: b9c164321baa3ed82ae87a97a325fcf0ad2f6ca0
+source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
 workflow-type: tm+mt
-source-wordcount: '551'
+source-wordcount: '553'
 ht-degree: 0%
 
 ---
@@ -27,7 +22,7 @@ Dessa interagerar så att ni kan göra innehåll tillgängligt på er webbplats 
 
 I redigeringsmiljön finns mekanismer för att skapa, uppdatera och granska innehållet innan det publiceras:
 
-* En författare skapar och granskar innehållet (detta kan vara av flera typer); till exempel sidor, resurser, publikationer osv.)
+* En författare skapar och granskar innehållet (detta kan vara av flera typer, t.ex. sidor, resurser, publikationer osv.)
 * som någon gång kommer att publiceras på er webbplats.
 
 ![Översikt över miljöer](assets/chlimage_1-132.png)
@@ -44,29 +39,29 @@ Författaren arbetar i det som kallas **författarmiljö**. Detta ger ett använ
 
 Beroende på hur din instans och dina personliga åtkomsträttigheter är konfigurerade kan du utföra många åtgärder på ditt innehåll, bland annat:
 
-* generera nytt innehåll, eller redigera befintligt innehåll, på en sida
+* generera nytt innehåll eller redigera befintligt innehåll på en sida
 * använda fördefinierade mallar för att skapa nya innehållssidor
 * skapa, redigera och hantera dina resurser och samlingar
 * skapa, redigera och hantera publikationer
 * utveckla era kampanjer och relaterade resurser
-* utveckla och hantera communitysajter
+* utveckla och hantera communitywebbplatser
 * flytta, kopiera eller ta bort innehållssidor, resurser och så vidare
 * publicera (eller avpublicera) sidor, resurser osv.
 
 Det finns även administrativa uppgifter som hjälper dig att hantera ditt innehåll:
 
-* arbetsflöden som styr hur ändringar hanteras, till exempel genomdriva en granskning före publicering
+* arbetsflöden som styr hur ändringar hanteras, t.ex. genomdriva en granskning före publicering
 * projekt som koordinerar enskilda uppgifter
 
 >[!NOTE]
 >
->AEM är också [administrerad](/help/sites-administering/home.md) (för de flesta uppgifter) från författarmiljön.
+>AEM [administrerad](/help/sites-administering/home.md) (för de flesta uppgifter) från författarmiljön.
 
 #### Publiceringsmiljö {#publish-environment}
 
-När AEM är klar publiceras webbplatsens innehåll på **publiceringsmiljö**. Här görs webbplatsens sidor tillgängliga för den avsedda publiken i enlighet med det gränssnitt som har utformats.
+När AEM är klar publiceras webbplatsens innehåll på **publiceringsmiljö**. Här blir webbplatsens sidor tillgängliga för den avsedda publiken i enlighet med det gränssnitt som har utformats.
 
-Normalt ligger publiceringsmiljön innanför den demilitariserade zonen. med andra ord, tillgängliga för Internet, men inte längre till fullständigt skydd för det interna nätverket.
+Normalt ligger publiceringsmiljön innanför den demilitariserade zonen, dvs. är tillgänglig via Internet, men inte längre under det interna nätverkets fulla skydd.
 
 När AEM är en [communitywebbplats](/help/communities/overview.md), eller innehåller [Communities-komponenter](/help/communities/author-communities.md), inloggade webbplatsbesökare (medlemmar) kan interagera med communityfunktioner. De kan till exempel publicera på ett forum, publicera en kommentar eller följa andra medlemmar. Medlemmar kan beviljas tillstånd att utföra aktiviteter som normalt bara är begränsade till författarmiljön, t.ex. skapa nya sidor (communitygrupper), bloggartiklar och moderata inlägg från andra medlemmar.
 
@@ -81,7 +76,7 @@ När AEM är en [communitywebbplats](/help/communities/overview.md), eller inneh
 >  Dessa termer är synonyma med publicera/avpublicera.
 >
 >* **Replikering/replikering**
->  Detta är de tekniska termer som används för att ange dataförflyttning (t.ex. sidinnehåll, filer, kod, användarkommentarer) från en miljö till en annan. d.v.s. när användarkommentarer publiceras eller replikeras om.
+>  Detta är de tekniska termer som används för att ange dataförflyttning (till exempel sidinnehåll, filer, kod, användarkommentarer) från en miljö till en annan, det vill säga vid publicering eller omvänd replikering av användarkommentarer.
 >
 
 #### Dispatcher {#dispatcher}

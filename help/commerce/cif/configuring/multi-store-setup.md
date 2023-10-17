@@ -6,10 +6,8 @@ doc-type: technical-video
 activity: setup
 audience: administrator
 feature: Commerce Integration Framework
-kt: 3046
-thumbnail: 28952.jpg
 exl-id: 1d4e9b7b-848b-4007-b884-dd48682d62e8
-source-git-commit: 474a726058b141985f52a0faec6161a34be1e9dc
+source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
 workflow-type: tm+mt
 source-wordcount: '384'
 ht-degree: 0%
@@ -24,11 +22,11 @@ En videogenomgång av olika alternativ för integrering av flera Adobe Commerce 
 
 >[!VIDEO](https://video.tv.adobe.com/v/28952/?quality=12)
 
-Funktionerna för hantering av flera webbplatser i Live Copy och Language Copy används tillsammans med Commerce Integration Framework för att globalt hantera webbplatser i olika regioner och på olika språk.
+AEM funktioner för hantering av flera webbplatser i Live Copy och Language Copy används tillsammans med Commerce integrationa frameworken för att globalt hantera webbplatser i olika regioner och språkområden.
 
 Den rekommenderade konfigurationen är att använda en 1:1-relation mellan AEM och Adobe Commerce Store-vyn.
 
-Följ stegen nedan för att ansluta en AEM plats och AEM CIF Core Components så att även en dedikerad butiksvy kan visas:
+Följ stegen nedan för att ansluta en AEM plats och AEM CIF kärnkomponenter så att även en dedikerad butiksvy kan visas:
 
 ## Konfiguration {#configuration}
 

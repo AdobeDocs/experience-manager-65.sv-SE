@@ -1,15 +1,10 @@
 ---
 title: Arbeta med innehållssidversioner
-description: Skapa, jämföra och återställa versioner av en sida
-contentOwner: Chris Bohnert
-products: SG_EXPERIENCEMANAGER/6.5/SITES
-topic-tags: page-authoring
-content-type: reference
-docset: aem65
+description: Skapa, jämföra och återställa versioner av en sida i Adobe Experience Manager.
 exl-id: cb7a9da2-7112-4ef0-b1cf-211a7df93625
-source-git-commit: 260f71acd330167572d817fdf145a018b09cbc65
+source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
 workflow-type: tm+mt
-source-wordcount: '1497'
+source-wordcount: '1501'
 ht-degree: 2%
 
 ---
@@ -18,11 +13,11 @@ ht-degree: 2%
 
 Versionshantering skapar en ögonblicksbild av en sida vid en viss tidpunkt. Med versionshantering kan du utföra följande åtgärder:
 
-* Skapa en version av en sida.
-* Återställa en sida till en tidigare version; till exempel:
-   * för att ångra en ändring som du har gjort på sidan.
+* Skapa en sidversion.
+* Återställa en sida till en tidigare version, till exempel:
+   * om du vill ångra en ändring som du har gjort på sidan.
 * Jämför den aktuella versionen av en sida med en tidigare version:
-   * för att markera skillnader i text och bilder.
+   * om du vill framhäva skillnader i text och bilder.
 
 ## Skapa en ny version {#creating-a-new-version}
 
@@ -41,7 +36,7 @@ Du kan skapa en version av resursen från:
    ![Tidslinje - Spara som version](assets/screen-shot_2019-03-05at112335.png)
 
 1. Välj **Spara som version**.
-1. Ange **Etikett** och **Kommentar** vid behov.
+1. Ange en **Etikett** och **Kommentar** vid behov.
 
    ![Skapa version - lägg till etikett och kommentar](assets/chlimage_1-42.png)
 
@@ -54,7 +49,7 @@ Du kan skapa en version av resursen från:
 1. Navigera till sidan som du vill skapa en version för.
 1. Markera sidan i [markeringsläge](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources).
 1. Välj **Skapa** i verktygsfältet för att öppna dialogrutan.
-1. I dialogrutan kan du ange **Etikett** och **Kommentar**, om det behövs:
+1. I dialogrutan kan du ange en **Etikett** och **Kommentar**, om det behövs:
 
    ![Ange en etikett och en kommentar](assets/screen_shot_2012-02-15at105050am.png)
 
@@ -70,15 +65,15 @@ När du har skapat en version av sidan finns det olika metoder för att återst�
 
   Återskapa en tidigare version av en markerad sida.
 
-* den **Återställ** från början [åtgärdsverktygsfält](/help/sites-authoring/basic-handling.md#actions-toolbar)
+* den **Återställ** från början [funktionsmakron, verktygsfält](/help/sites-authoring/basic-handling.md#actions-toolbar)
 
    * **Återställ version**
 
-     Återställa versioner av angivna sidor i den markerade mappen; detta kan även omfatta återställning av sidor som tidigare har tagits bort.
+     Återskapa versioner av angivna sidor i den markerade mappen. Detta kan även omfatta återställning av tidigare borttagna sidor.
 
    * **Återställ träd**
 
-     återinför en version av ett helt träd vid ett angivet datum och en viss tidpunkt, kan innehålla sidor som tidigare har tagits bort.
+     Återskapa en version av ett helt träd vid ett angivet datum och en viss tid. Detta kan inkludera sidor som tidigare har tagits bort.
 
 >[!NOTE]
 >
@@ -88,7 +83,7 @@ När du har skapat en version av sidan finns det olika metoder för att återst�
 >
 >1. Skapa versioner av valfri sida.
 >1. De inledande etiketterna och versionsnodnamnen blir 1.0, 1.1, 1.2 o.s.v.
->1. återställ den första versionen, i detta fall, 1.0.
+>1. Återställ den första versionen, i det här fallet 1.0.
 >1. Skapa versioner igen.
 >1. De genererade etiketterna och nodnamnen blir nu 1.0.0, 1.0.1, 1.0.2 och så vidare.
 
@@ -107,11 +102,11 @@ Till **Återställ** den markerade sidan till en tidigare version:
 
 ### Återställ version {#restore-version}
 
-Denna metod kan användas för att återställa versioner av angivna sidor i den aktuella mappen; Detta kan även omfatta återställning av sidor som tidigare har tagits bort:
+Den här metoden kan användas för att återställa versioner av angivna sidor i den aktuella mappen. Detta kan även omfatta återställning av sidor som tidigare har tagits bort:
 
 1. Navigera till och [välj](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources), den obligatoriska mappen.
 
-1. Välj **Återställ** sedan **Återställ version** uppifrån [åtgärdsverktygsfält](/help/sites-authoring/basic-handling.md#actions-toolbar).
+1. Välj **Återställ** sedan **Återställ version** uppifrån [funktionsmakron, verktygsfält](/help/sites-authoring/basic-handling.md#actions-toolbar).
 
    >[!NOTE]
    >
@@ -142,11 +137,11 @@ Denna metod kan användas för att återställa versioner av angivna sidor i den
 
 ### Återställ träd {#restore-tree}
 
-Den här metoden kan användas för att återställa en version av ett träd vid ett angivet datum och en viss tidpunkt. detta kan omfatta sidor som tidigare har tagits bort:
+Den här metoden kan användas för att återställa en version av ett träd vid ett angivet datum och en viss tid. Den kan innehålla sidor som tidigare har tagits bort:
 
 1. Navigera till och [välj](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources), den obligatoriska mappen.
 
-1. Välj **Återställ** sedan **Återställ träd** uppifrån [åtgärdsverktygsfält](/help/sites-authoring/basic-handling.md#actions-toolbar). Trädets senaste version visas:
+1. Välj **Återställ** sedan **Återställ träd** uppifrån [funktionsmakron, verktygsfält](/help/sites-authoring/basic-handling.md#actions-toolbar). Trädets senaste version visas:
 
    ![Återställ träd](/help/sites-authoring/assets/versions-restore-tree-02.png)
 
@@ -223,7 +218,7 @@ Timewarp är en [läge](/help/sites-authoring/author-environment-tools.md#page-m
 
    ![Indikator för Timewarp](assets/wwpv-03.png)
 
-### Begränsningar för tidsförvrängning {#timewarp-limitations}
+### Begränsningar för Timewarp {#timewarp-limitations}
 
 Med Timewarp kan du göra ett bra försök att återskapa en sida vid en viss tidpunkt. På grund av komplexiteten i den kontinuerliga redigeringen av innehåll i AEM är detta dock inte alltid möjligt. Dessa begränsningar bör beaktas när du använder Timewarp.
 

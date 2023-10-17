@@ -1,18 +1,10 @@
 ---
 title: Personalisering och målgruppsanpassning av innehåll
-seo-title: Personalization and Content Targeting
-description: Lär dig hur AEM kan skapa personaliserat innehåll
-seo-description: Learn how AEM can create personalized content
-uuid: 3a1aaa3d-5f57-4fb7-a4be-523f0d274b79
-contentOwner: Chris Bohnert
-products: SG_EXPERIENCEMANAGER/6.5/SITES
-content-type: reference
-topic-tags: personalization
-discoiquuid: 850da0da-f7c3-4dd7-bb06-404c14a2a791
+description: Läs om hur Adobe Experience Manager 6.5 kan skapa personaliserat innehåll.
 exl-id: be34760a-875b-419d-9fa4-2359b314a3b7
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
 workflow-type: tm+mt
-source-wordcount: '519'
+source-wordcount: '521'
 ht-degree: 0%
 
 ---
@@ -25,7 +17,7 @@ AEM tillhandahåller ett ramverk med verktyg för att skapa riktat innehåll och
 
 ## Målläge {#targeting-mode}
 
-[Skapa riktat innehåll](/help/sites-authoring/content-targeting-touch.md) med målinriktningsläget AEM. Målinriktningsläget och Target-komponenten tillhandahåller verktyg för att skapa innehåll för upplevelserna av era marknadsföringsaktiviteter.
+[Skapa riktat innehåll](/help/sites-authoring/content-targeting-touch.md) med målinriktningsläget för AEM. Målinriktningsläget och Target-komponenten tillhandahåller verktyg för att skapa innehåll för upplevelserna av era marknadsföringsaktiviteter.
 
 ## Verksamhet {#activities}
 

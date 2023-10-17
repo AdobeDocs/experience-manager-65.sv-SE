@@ -1,17 +1,9 @@
 ---
 title: Bästa praxis för översättning
-seo-title: Translation Best Practices
 description: Här hittar du de bästa arbetssätten som skapats av Adobe tekniker och konsultteam så att du kan komma igång med översättningsprojekt.
-seo-description: Find best practices compiled by Adobe engineering and consulting teams to help you get up and running with translation projects.
-uuid: 3bac1d73-9696-4c9b-8bdd-6f00fac40cf7
-contentOwner: msm-service
-products: SG_EXPERIENCEMANAGER/6.5/SITES
-topic-tags: site-features, best-practices
-content-type: reference
-discoiquuid: 1554010e-a1d1-4edf-b28f-9eead8f83b4a
 feature: Language Copy
 exl-id: 01a81c4b-cb30-4f7e-b281-7194ebb5fc70
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
 workflow-type: tm+mt
 source-wordcount: '837'
 ht-degree: 0%
@@ -41,11 +33,11 @@ Att skapa eller utöka en global webbnärvaro kan vara en komplex process, men m
 * Bestäm hur innehållet ska distribueras mellan regioner och länder. Tänk på vilka länder som delar språk. Vi rekommenderar att du skapar språkmallsidor, ett lager med oaktiverade sidor, där översatt innehåll kan granskas och ändras och sedan pushas eller dras till en landsplats där det språket delas.
 * Det finns två sätt att skapa språkmallar: använda språkkopior och använda MSM/live-kopior.
 
-   * Språkkopieringsmetoden är den som används i AEM körklara ramverk för översättningsintegrering, och därför är det enklaste sättet att komma igång. Ramverket har ett användargränssnitt som gör det till att börja med enkelt att sprida och översätta innehållsändringar från huvudspråket (t.ex. engelska) till mallsidor på överordnad språk. I takt med att projektet växer blir det dock allt viktigare att automatisera arbetsflödet för att hantera översättningen av det ökade antalet sidor och/eller språk.
+   * Språkkopieringsmetoden är den som används i AEM körklara ramverk för översättningsintegrering, och därför är det enklaste sättet att komma igång. Ramverket har ett användargränssnitt som gör det till att börja med enkelt att sprida och översätta innehållsändringar från huvudspråket (till exempel engelska) till språkmallsidor. I takt med att projektet växer blir det dock allt viktigare att automatisera arbetsflödet för att hantera översättningen av det ökade antalet sidor och/eller språk.
    * Metoden med MSM/live-kopia kan vara ett alternativ för avancerade användningsområden, där webbplatser är större och mer komplexa. Stabil styrning och automatisering av arbetsflöden krävs från början för att hantera komplexa arvsrelationer mellan engelska och språkmallsidor och för att minska risken för att skriva över befintliga översättningar. Den här hanteringen kan utföras med hjälp av vissa översättningskontakter. Se [MSM och flerspråkiga webbplatser](/help/sites-administering/msm-best-practices.md#msm-and-multilingual-websites) för mer information.
 
-* Om ditt överordnad språk har globala variationer är det möjligt att använda MSM för att skapa en live-kopia från den globala överordnad som ska användas för översättning. Om global redigering till exempel utförs på en amerikansk engelska-överordnad skapar du en internationell engelska-överordnad som en live-kopia och bas för översättning till andra språk.
-* Använd MSM för att skapa landsplatser från översatta språkmallar och för att lansera innehåll på webbplatser som delar samma språk. Till exempel kan den franska överordnad användas på webbplatser i Frankrike, Belgien och Schweiz.
+* Om huvudspråket har globala variationer är ett alternativ att använda MSM för att skapa en live-kopia från den globala mallsidan för översättning. Om global redigering till exempel utförs i en amerikansk engelsk master skapar du en internationell engelsk master som en live-kopia och bas för översättning till andra språk.
+* Använd MSM för att skapa landsplatser från översatta språkmallar och för att lansera innehåll på webbplatser som delar samma språk. Den franska huvudpersonen kan till exempel läggas ut på webbplatser i Frankrike, Belgien och Schweiz.
 * Planera, skapa prototyper och testa först, innan implementeringen startas.
 
 ## Översättningsprocesser och metoder {#translation-processes-and-methods}
@@ -54,7 +46,7 @@ Att skapa eller utöka en global webbnärvaro kan vara en komplex process, men m
 
    * Vissa leverantörer av lågprisleverantörer är både tjänste- och teknikleverantörer. Det finns också fristående teknikleverantörer som tillåter många lågprisleverantörer att delta i deras översättningsplattformar.
    * The **AEM Translation Framework** har stöd för integrering med en mängd olika leverantörer av översättningsteknik för både maskinöversättning och mänsklig översättning.
-   * Lär dig hur [integrera LSP-anslutningar i ditt AEM system](/help/sites-administering/translation.md) för att automatisera översättning av innehåll, eller hur du manuellt skapar, exporterar och importerar översättningsprojekt för testning och i de fall där det inte finns någon leverantör av LSP- eller översättningsteknik.
+   * Lär dig hur [integrera LSP-anslutningar i ditt AEM](/help/sites-administering/translation.md) för att automatisera översättning av innehåll, eller hur du manuellt skapar, exporterar och importerar översättningsprojekt för testning och i de fall där det inte finns någon leverantör av LSP- eller översättningsteknik.
 
 * Välj en **översättningsmetod** som bäst passar innehållet.
 

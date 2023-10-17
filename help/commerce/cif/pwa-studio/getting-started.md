@@ -3,9 +3,8 @@ title: Komma igång med AEM för PWA Studio
 description: Lär dig hur du driftsätter ett AEM headless Content and Commerce-projekt med PWA Studio.
 topics: Commerce
 feature: Commerce Integration Framework
-thumbnail: 37843.jpg
 exl-id: de7b8f05-b6b7-4105-84a5-940c16ebf2b4
-source-git-commit: e05f6cd7cf17f4420176cf76f28cb469bcee4a0a
+source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
 workflow-type: tm+mt
 source-wordcount: '769'
 ht-degree: 0%
@@ -28,7 +27,7 @@ Det är enkelt att utforma den struktur du behöver med Modellredigeraren för i
 
 Följ Adobe Commerce för att konfigurera appen PWA Studio [PWA Studio dokumentation](https://developer.adobe.com/commerce/pwa-studio/tutorials/).
 
-Om du vill ansluta PWA Studio till GraphQL AEM kan du använda [AEM för PWA Studio](https://github.com/adobe/aem-pwa-studio-extensions).
+Om du vill ansluta PWA Studio till GraphQL AEM kan du använda kommandot [AEM för PWA Studio](https://github.com/adobe/aem-pwa-studio-extensions).
 
 1. Checka ut databasen
 
@@ -38,7 +37,7 @@ Om du vill ansluta PWA Studio till GraphQL AEM kan du använda [AEM för PWA Stu
    yarn add --dev file:{path-to-extension}/extension
    ```
 
-1. Lägg till Apollo Link-omslutningen i ditt PWA Studio-program. Gör följande ändringar i pwa-root/src/index.js:
+1. Lägg till Apollo Link-omslutningen i PWA Studio. Gör följande ändringar i pwa-root/src/index.js:
 
    ```javascript
      import { linkWrapper } from '@adobe/pwa-studio-aem-cfm-blog-extension';
@@ -62,7 +61,7 @@ Om du vill ansluta PWA Studio till GraphQL AEM kan du använda [AEM för PWA Stu
 
    Mer information om anpassning av navigeringskomponenten finns i [addBlogToNavigation.js](https://github.com/adobe/aem-pwa-studio-extensions/blob/master/aem-cfm-blog-extension/extension/src/addBlogToNavigation.js) och i [Extensibility Framework](https://developer.adobe.com/commerce/pwa-studio/guides/general-concepts/extensibility/) Dokumentation för PWA Studio.
 
-1. Apollo-klienten förväntar sig den AEM GraphQL-slutpunkten vid `<https://pwa-studio/endpoint.js>`. Anpassa UPWARD-konfigurationen för PWA Studio-programmet om du vill mappa slutpunkten till den här platsen: a. Till `pwa-root/.env`lägger du till variabeln AEM_CFM_GRAPHQL och anpassar den så att den pekar på AEM Content Fragments GraphQL slutpunkt.
+1. Apollo-klienten förväntar sig den AEM GraphQL-slutpunkten vid `<https://pwa-studio/endpoint.js>`. Om du vill mappa slutpunkten till den här platsen anpassar du UPWARD-konfigurationen för ditt PWA Studio-program: a. Till `pwa-root/.env`lägger du till variabeln AEM_CFM_GRAPHQL och anpassar den så att den pekar på AEM Content Fragments GraphQL slutpunkt.
 
    Exempel: AEM_CFM_GRAPHQL=<http://localhost:4503/content/graphql/global>
 
@@ -93,15 +92,15 @@ Följ dokumentationen för AEM innehållsfragment för att konfigurera en GraphQ
 
 * Resursdelningspolicy för korsursprung för Adobe (com.adobe.granite.cors.impl.CORSPolicyImpl)
 
-   Ange `allowedorigin` till det fullständiga värdnamnet för ditt PWA-program.
+  Ange `allowedorigin` till det fullständiga värdnamnet för ditt PWA-program.
 
-   Exempel:  `<https://pwa-studio-test-vflyn.local.pwadev:9366>`
+  Exempel:  `<https://pwa-studio-test-vflyn.local.pwadev:9366>`
 
 * Apache Sling Referrer-filter (org.apache.sling.security.impl.ReferrerFilter.cfg.json)
 
-   Ställ in egenskapen allow.hosts på värdnamnet för ditt PWA-program.
+  Ställ in egenskapen allow.hosts på värdnamnet för ditt PWA-program.
 
-   Exempel: pwa-studio-test-vflyn.local.pwadev
+  Exempel: pwa-studio-test-vflyn.local.pwadev
 
 Du hittar fullständiga exempel på båda konfigurationerna här: <https://github.com/adobe/aem-pwa-studio-extensions/tree/master/aem-cfm-blog-extension/aem/config/src/main/content/jcr_root/apps/blog-demo/config>.
 
@@ -117,13 +116,13 @@ Produktionsinställningarna kan variera i olika aspekter.
 
 * Du kan ha en enda federerad GraphQL-slutpunkt som kombinerar AEM- och Adobe Commerce GraphQL-data i stället för att anpassa Apollo-klienten.
 * Ditt PWA Studio-program kan använda AEM GraphQL-slutpunkts-URL direkt, utan någon proxy med UPWARD. Proxyservern kan också flyttas till ett annat lager (till exempel CDN).
-* Metoden passar bäst för dig och beror till stor del på hur du levererar PWA Studio till slutanvändaren.
+* Metoden passar bäst för dig och beror till stor del på hur du levererar PWA Studio-programmet till slutanvändaren.
 
 Det här tillägget innehåller två exempel.
 
 ### Blogg {#blog}
 
-Visa blogginlägg baserat på vissa Content Fragment-modeller. Dessutom innehåller det exempel på hur du konfigurerar Apollo-klienten så att den fungerar med AEM GraphQL-slutpunkt och hur du utökar navigeringskomponenten i PWA Studio. Se [GitHub](https://github.com/adobe/aem-pwa-studio-extensions/tree/master/aem-cfm-blog-extension) för mer information.
+Visa blogginlägg baserat på vissa innehållsfragmentmodeller. Dessutom innehåller det exempel på hur du konfigurerar Apollo-klienten så att den fungerar med AEM GraphQL-slutpunkt och hur du utökar navigeringskomponenten i PWA Studio. Se [GitHub](https://github.com/adobe/aem-pwa-studio-extensions/tree/master/aem-cfm-blog-extension) för mer information.
 
 ### PDP-berikning {#pdp-enrichment}
 

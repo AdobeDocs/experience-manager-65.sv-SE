@@ -1,13 +1,11 @@
 ---
 title: Användarhandbok för AEM 6.5 Capabilities
-seo-title: AEM 6.5 Capabilities User Guide
-description: En översikt över de viktigaste funktionerna i AEM 6.5
-seo-description: An overview of the essential capabilities of AEM 6.5
+description: Översikt över de viktigaste funktionerna i Adobe Experience Manager 6.5.
 exl-id: d9941242-a01d-48fa-bad0-4c5b9dd16f4c
-source-git-commit: a51a863a4edf7e8b951a8361c5c7f0517b09f12a
+source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
 workflow-type: tm+mt
-source-wordcount: '129'
-ht-degree: 46%
+source-wordcount: '131'
+ht-degree: 45%
 
 ---
 
@@ -15,7 +13,7 @@ ht-degree: 46%
 
 ## AEM {#aem-foundation}
 
-[Läs mer om installation, driftsättning och arkitekturen i Adobe Experience Manager 6.5](/help/sites-deploying/home.md), inklusive vår molndistribution av Adobe Managed Services.
+[Läs mer om installation, driftsättning och arkitekturen i Adobe Experience Manager 6.5](/help/sites-deploying/home.md), inklusive Adobe Managed Services molndistribution.
 
 [Lär dig att hantera ett AEM-projekt](/help/managing/home.md).
 
