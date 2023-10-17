@@ -1,19 +1,15 @@
 ---
 title: Sammanhangsbaserad moderering
-seo-title: In-Context Moderation
-description: Så här utför du moderatoråtgärder
-seo-description: How to perform moderator actions
-uuid: 282a8bea-2822-4e5c-b9f4-4d9a5380d895
+description: Läs om hur administratörer och betrodda communitymedlemmar kan utföra moderatoråtgärder i Adobe Experience Manager Communities.
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: administering
 content-type: reference
-discoiquuid: ee104f6f-123b-4a6e-9031-849fc1318cc5
 role: Admin
 exl-id: 47b3c19c-5228-4b72-b78c-7ed71b308921
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: 0a4aca939c564720f63f055e9522e56942eaa128
 workflow-type: tm+mt
-source-wordcount: '786'
+source-wordcount: '795'
 ht-degree: 0%
 
 ---
@@ -40,11 +36,11 @@ Användargränssnittet som visas för moderatorn i publiceringsinstansen finns i
 
 ## Exempel {#example}
 
-Använda [Geometrixx Engage](http://localhost:4503/content/sites/engage/en.html) webbplats skapad när [Komma igång med AEM Communities](getting-started.md)kan du snabbt skapa en tråd i ett forum där du kan uppleva olika modereringsaktiviteter i publiceringsmiljön, vilket visas nedan.
+Använda [Geometrixx Engage](http://localhost:4503/content/sites/engage/en.html) webbplats skapad när [Komma igång med AEM Communities](getting-started.md), kan du skapa en tråd i ett forum där du kan använda olika modereringsaktiviteter i publiceringsmiljön. Se nedan.
 
-Aaron McDonald (aaron.mcdonald@mailinator.com) identifierades som en betrodd community-medlem genom att han lades till i gruppen community-engage-moderators när webbplatsen skapades.
+Aaron McDonald (`aaron.mcdonald@mailinator.com`) identifierades som en betrodd communitymedlem genom att han lades till i gruppen community-engage-moderators när webbplatsen skapades.
 
-Rebekah Larsen (rebekah.larsen@trashymail.com) kan läggas till som medlem i en community-engage-members-grupp med hjälp av [Medlemskonsol](members.md).
+Rebekah Larsen (`rebekah.larsen@trashymail.com`) kan läggas till som medlem i en community-engage-members-grupp med [Medlemskonsol](members.md).
 
 Mer information om användargrupper finns på [Hantera användare och användargrupper](users.md).
 
@@ -124,7 +120,7 @@ Obs!
 
 ![community-admin-forum](assets/community-admin-forum.png)
 
-Välj menyalternativet Administration för att komma åt [modereringskonsol](moderation.md) från publiceringsmiljön.
+Välj menyalternativet Administration så att du kan komma åt [modereringskonsol](moderation.md) från publiceringsmiljön.
 
 Observera att för en administratör är allt modereringsbart innehåll synligt, inte bara innehåll från Geometrixx Engage Community-webbplatsen.
 
@@ -136,7 +132,7 @@ Logga ut.
 
 ### Community Moderator (#2) {#community-moderator}
 
-Logga in som Aaron McDonald (aaron.mcdonal@mailinator.com), som är moderator i communityn, och gå till tråden genom att välja Forum och sedan Läs mer för den hummingbird-posten.
+Logga in som Aaron McDonald (`aaron.mcdonal@mailinator.com`), som är en community-moderator, och få tillgång till tråden genom att välja Forum och sedan Läs mer om den hummerande fågelposten.
 
 Obs!
 
@@ -147,7 +143,7 @@ Obs!
 
 ![community-forum-moderator](assets/community-forum-moderator.png)
 
-Välj menyalternativet Administration för att komma åt [modereringskonsol](moderation.md) från publiceringsmiljön.
+Välj menyalternativet Administration så att du kan komma åt [modereringskonsol](moderation.md) från publiceringsmiljön.
 
 Observera att för en community-moderator är det bara moderatorbart innehåll från Geometrixx Engage community-webbplatsen som visas.
 
@@ -159,7 +155,7 @@ Logga ut.
 
 ### Innehållsförfattare (#1) {#content-author}
 
-Logga in som Rebekah Larsen (rebekah.larsen@mailinator.com), en community-medlem som startade tråden, och gå till tråden genom att välja Forum och sedan Läs mer för den hummingbird-posten.
+Logga in som Rebekah Larsen (`rebekah.larsen@mailinator.com`), som är en community-medlem som startade tråden, och som kommer åt tråden genom att välja Forum och sedan Läs mer för den hummerande fågelposten.
 
 Obs!
 
