@@ -1,13 +1,13 @@
 ---
 title: Om du skriver för Adobe PhoneGap Enterprise i Adobe Experience Manager
-description: PhoneGap
+description: Lär dig hur du skapar för Adobe PhoneGap Enterprise med hjälp av mallar och komponenter för att lägga till och redigera sidor, dra och släppa komponenter och lägga till media.
 contentOwner: msm-service
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 exl-id: 930a6950-150a-4670-ab48-250b655132fb
-source-git-commit: 96e2e945012046e6eac878389b7332985221204e
+source-git-commit: 06a6d4e0ba2aeaefcfb238233dd98e8bbd6731da
 workflow-type: tm+mt
-source-wordcount: '207'
+source-wordcount: '228'
 ht-degree: 1%
 
 ---
@@ -28,9 +28,9 @@ För att starta en ny AEM Mobile-appupplevelse krävs det att rollerna är enhet
 
 ## Om du redigerar PhoneGap-program {#authoring-phonegap-applications}
 
-An ***AEM Author* (eller *Marknadsförare*)**kan använda färdiga mallar och komponenter för att lägga till och redigera sidor, dra och släppa komponenter och lägga till media av alla typer från DAM, inklusive bilder, videor och textfragment (innehållsfragment).
+An ***AEM* (eller *Marknadsförare*)**kan använda färdiga mallar och komponenter för att lägga till och redigera sidor. Du kan dra och släppa komponenter och lägga till media av alla typer från DAM, inklusive bilder, videor och textfragment (innehållsfragment).
 
-Se följande resurser för att komma igång:
+Se följande resurser:
 
 * [Skapa mobilprogram](/help/mobile/phonegap-authoring-apps.md)
 * [Skapa och hantera appinnehåll](/help/mobile/phonegap-manage-app-content.md)
@@ -40,7 +40,7 @@ Se följande resurser för att komma igång:
 * [Skapa en AEM Mobile-app med guiden Skapa](/help/mobile/phonegap-create-new-app.md)
 * [Importera en befintlig hybridapp](/help/mobile/phonegap-adding-content-to-imported-app.md)
 
-Mer information om **Innehållstjänster**, se [Content Services - översikt](/help/mobile/develop-content-as-a-service.md) för att komma igång.
+Om du vill veta mer om **Innehållstjänster**, se [Content Services - översikt](/help/mobile/develop-content-as-a-service.md) för att komma igång.
 
 ## Ytterligare resurser {#additional-resources}
 

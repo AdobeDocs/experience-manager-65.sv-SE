@@ -1,18 +1,14 @@
 ---
 title: Administrera arbetsflödesinstanser
-seo-title: Administering Workflow Instances
-description: Lär dig hur du administrerar arbetsflödesinstanser.
-seo-description: Lear how to administer Workflow Instances.
-uuid: 81e53ef5-fe62-4ed4-b2d4-132aa986d5aa
+description: Lär dig hur arbetsflödeskonsolen innehåller flera verktyg för att administrera arbetsflödesinstanser för att se till att de körs som förväntat.
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: operations
 content-type: reference
-discoiquuid: d9c96e7f-9416-48e1-a6af-47384f7bee92
 exl-id: 90923d39-3ac5-4028-976c-d011f0404476
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 06a6d4e0ba2aeaefcfb238233dd98e8bbd6731da
 workflow-type: tm+mt
-source-wordcount: '993'
+source-wordcount: '1003'
 ht-degree: 0%
 
 ---
@@ -37,7 +33,7 @@ Det finns en rad konsoler som du kan använda för att administrera dina arbetsf
 ## Övervaka status för arbetsflödesinstanser {#monitoring-the-status-of-workflow-instances}
 
 1. Använda navigeringsval **verktyg** sedan **Arbetsflöde**.
-1. Välj **Instanser** om du vill visa en lista över pågående arbetsflödesinstanser.
+1. Välj **Instanser** så att du kan visa en lista över pågående arbetsflödesinstanser.
 
    ![wf-96](assets/wf-96.png)
 
@@ -66,7 +62,7 @@ Det finns en rad konsoler som du kan använda för att administrera dina arbetsf
 ## Göra uppehåll, återuppta och avsluta en arbetsflödesinstans {#suspending-resuming-and-terminating-a-workflow-instance}
 
 1. Använda navigeringsval **verktyg** sedan **Arbetsflöde**.
-1. Välj **Instanser** om du vill visa en lista över pågående arbetsflödesinstanser.
+1. Välj **Instanser** så att du kan visa en lista över pågående arbetsflödesinstanser.
 
    ![wf-96-1](assets/wf-96-1.png)
 
@@ -77,7 +73,7 @@ Det finns en rad konsoler som du kan använda för att administrera dina arbetsf
 ## Visa arkiverade arbetsflöden {#viewing-archived-workflows}
 
 1. Använda navigeringsval **verktyg** sedan **Arbetsflöde**.
-1. Välj **Arkiv** om du vill visa en lista över arbetsflödesinstanser som har slutförts.
+1. Välj **Arkiv** så att du kan visa en lista över arbetsflödesinstanser som har slutförts.
 
    ![wf-98](assets/wf-98.png)
 
@@ -86,7 +82,7 @@ Det finns en rad konsoler som du kan använda för att administrera dina arbetsf
    >Avbrottsstatusen betraktas som ett slutfört avbrott eftersom det inträffar som ett resultat av en användaråtgärd, till exempel:
    >
    >* användning av **Avsluta** åtgärd
-   >* när en sida, som är underställd ett arbetsflöde, tas bort (framtvingar), kommer arbetsflödet att avslutas
+   >* när en sida som är underställd ett arbetsflöde tas bort (framtvingad) avslutas arbetsflödet
 
 1. Markera ett specifikt objekt och sedan **Öppna historik** om du vill ha mer information:
 
@@ -102,14 +98,14 @@ När ett arbetsflöde misslyckas, innehåller AEM **Fel** konsol där du kan und
 * **Öppna historik**
 Visar information om arbetsflödeshistoriken.
 
-* **Försök igen** Kör komponentinstansen Script Step igen. Använd kommandot Försök igen när du har åtgärdat orsaken till det ursprungliga felet. Du kan till exempel försöka utföra steget igen när du har åtgärdat ett fel i skriptet som utförs av processteget.
-* **Avsluta** Avsluta arbetsflödet om felet har orsakat en oförenlig situation för arbetsflödet. Arbetsflödet kan t.ex. förlita sig på miljöförhållanden som information i databasen som inte längre är giltig för arbetsflödesinstansen.
-* **Avsluta och försök igen** Liknar **Avsluta** förutom att en ny arbetsflödesinstans startas med den ursprungliga nyttolasten, titeln och beskrivningen.
+* **Försök igen** - Kör komponentinstansen Script Step igen. Använd kommandot Försök igen när du har åtgärdat orsaken till det ursprungliga felet. Du kan till exempel försöka utföra steget igen när du har åtgärdat ett fel i skriptet som utförs av processteget.
+* **Avsluta** - Avsluta arbetsflödet om felet har orsakat en oförenlig situation för arbetsflödet. Arbetsflödet kan t.ex. förlita sig på miljöförhållanden som information i databasen som inte längre är giltig för arbetsflödesinstansen.
+* **Avsluta och försök igen** - Liknar **Avsluta** förutom att en ny arbetsflödesinstans startas med den ursprungliga nyttolasten, titeln och beskrivningen.
 
 Så här undersöker du fel och sedan återupptar eller avslutar du arbetsflödet:
 
 1. Använda navigeringsval **verktyg** sedan **Arbetsflöde**.
-1. Välj **Fel** för att visa en lista över arbetsflödesinstanser som inte har slutförts korrekt.
+1. Välj **Fel** så att du kan visa en lista över arbetsflödesinstanser som inte har slutförts korrekt.
 1. Välj ett specifikt objekt och sedan lämplig åtgärd:
 
    ![wf-47](assets/wf-47.png)
@@ -120,9 +116,9 @@ Om du minimerar antalet arbetsflödesinstanser ökas arbetsflödesmotorns presta
 
 Konfigurera **Rensa arbetsflöde för Adobe Granite** för att rensa arbetsflödesinstanser utifrån deras ålder och status. Du kan också rensa arbetsflödesinstanser av alla modeller eller av en viss modell.
 
-Du kan också skapa flera konfigurationer av tjänsten för att rensa arbetsflödesinstanser som uppfyller olika villkor. Skapa till exempel en konfiguration som tömmer instanser av en viss arbetsflödesmodell när de körs mycket längre än förväntat. Skapa en annan konfiguration som tömmer alla slutförda arbetsflöden efter ett visst antal dagar för att minimera databasens storlek.
+Du kan också skapa flera konfigurationer av tjänsten för att rensa arbetsflödesinstanser som uppfyller olika villkor. Skapa till exempel en konfiguration som tömmer instanser av en viss arbetsflödesmodell när de körs längre än förväntat. Skapa en annan konfiguration som tömmer alla slutförda arbetsflöden efter ett visst antal dagar för att minimera databasens storlek.
 
-Om du vill konfigurera tjänsten kan du använda [Webbkonsol](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console) eller [lägga till en OSGi-konfiguration i databasen](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository). I följande tabell beskrivs de egenskaper som du behöver för någon av metoderna.
+Om du vill konfigurera tjänsten kan du använda [Webbkonsol](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console) eller [lägga till en OSGi-konfiguration i databasen](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository). I följande tabell beskrivs de egenskaper som du behöver för båda metoderna.
 
 >[!NOTE]
 >
@@ -163,7 +159,7 @@ Om du vill konfigurera tjänsten kan du använda [Webbkonsol](/help/sites-deploy
   <tr>
    <td>Arbetsflödesålder</td>
    <td>scheduledpurge.daysold</td>
-   <td>Åldern på arbetsflödesinstanserna som ska rensas, i dagar.</td>
+   <td>Åldern på arbetsflödesinstanserna som ska rensas i dagar.</td>
   </tr>
  </tbody>
 </table>
@@ -184,7 +180,7 @@ Du kan ange den maximala storleken för inkorgen genom att konfigurera **Adobe G
 
 ## Använda arbetsflödesvariabler för kundägda datalager {#using-workflow-variables-customer-datastore}
 
-Data som bearbetas av arbetsflöden lagras i den Adobe-tillhandahållna lagringen (JCR). Dessa data kan vara känsliga till sin natur. Du kanske vill spara alla användardefinierade metadata/data i ditt egna hanterade lagringsutrymme i stället för det lagringsutrymme som tillhandahålls av Adobe. I dessa avsnitt beskrivs hur du ställer in dessa variabler för extern lagring.
+Data som bearbetas av arbetsflöden lagras i den Adobe-tillhandahållna lagringen (JCR). Dessa data kan vara känsliga till sin natur. Du kanske vill spara alla användardefinierade metadata/data i ditt egna hanterade lagringsutrymme i stället för det lagringsutrymme som Adobe tillhandahåller. I dessa avsnitt beskrivs hur du ställer in dessa variabler för extern lagring.
 
 ### Ange modellen för extern lagring av metadata {#set-model-for-external-storage}
 
@@ -198,7 +194,7 @@ Bilden nedan visar hur du anger flaggan i ett arbetsflöde.
 
 ### API:er för metadata i extern lagring {#apis-for-metadata-external-storage}
 
-För att kunna lagra variablerna externt måste du implementera de API:er som arbetsflödet visar.
+Om du vill lagra variablerna externt implementerar du de API:er som arbetsflödet visar.
 
 UserMetaDataPersistenceContext
 

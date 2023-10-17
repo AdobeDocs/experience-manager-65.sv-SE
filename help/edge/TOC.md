@@ -8,7 +8,7 @@ breadcrumb-title: Edge Delivery Services
 user-guide-description: Läs mer om Edge Delivery Services, en sammansatt uppsättning tjänster som möjliggör en snabb utvecklingsmiljö där upphovsmän snabbt kan uppdatera och publicera och nya webbplatser snabbt lanseras.
 feature: Edge Delivery Services
 role: User
-source-git-commit: f824c2b8028999aec1d5ebaf0ad4951b5121eb79
+source-git-commit: 06a6d4e0ba2aeaefcfb238233dd98e8bbd6731da
 workflow-type: tm+mt
 source-wordcount: '47'
 ht-degree: 93%

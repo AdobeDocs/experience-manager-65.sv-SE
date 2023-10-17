@@ -1,13 +1,13 @@
 ---
 title: Innehållstjänster
-description: Innehållstjänster
+description: Lär dig hur du använder AEM Mobile Content Services för att begära innehåll som hanteras av AEM.
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 exl-id: 955ffb1c-4fa9-43bb-8e5b-2df7f2d17951
-source-git-commit: 474a726058b141985f52a0faec6161a34be1e9dc
+source-git-commit: 06a6d4e0ba2aeaefcfb238233dd98e8bbd6731da
 workflow-type: tm+mt
-source-wordcount: '297'
+source-wordcount: '310'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 0%
 >
 >Funktionen Innehållstjänster är endast dokumenterad för förhandsgranskning.
 >
->Reservation för ändringar i och med lanseringen av 6,3 GA Service Pack 1.
+>Reservation för ändringar i version 6.3 av Service Pack 1.
 
 AEM Mobile Content Services är en lättviktig funktion för att begära innehåll som hanteras av AEM. Detta ger alla apputvecklare ett högpresterande sätt att hämta innehåll utan att behöva ha djupa kunskaper om AEM innehållsdatabas (JCR) och webbramverk (Sling). Det gör att de begärande programmen kan frikopplas från innehållsdatabasen.
 

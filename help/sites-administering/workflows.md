@@ -1,16 +1,12 @@
 ---
 title: Administrera arbetsflöden
-seo-title: Administering Workflows
-description: Lär dig hur du administrerar arbetsflöden i AEM.
-seo-description: Learn how to administer workflows in AEM.
-uuid: d000a13c-97cb-4b1b-809e-6c3eb0d675e8
+description: Lär dig automatisera Adobe Experience Manager-aktiviteter med arbetsflöden.
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: operations
 content-type: reference
-discoiquuid: 4b09cd44-434e-4834-bc0d-c9c082a4ba5a
 exl-id: 10eecfb8-d43d-4f01-9778-87c752dee64c
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 06a6d4e0ba2aeaefcfb238233dd98e8bbd6731da
 workflow-type: tm+mt
 source-wordcount: '779'
 ht-degree: 0%
@@ -23,7 +19,7 @@ Med arbetsflöden kan du automatisera Adobe Experience Manager-aktiviteter (AEM)
 
 * Består av en serie steg som körs i en viss ordning.
 
-   * Varje steg har en egen verksamhet. som att vänta på användarindata, aktivera en sida eller skicka ett e-postmeddelande.
+   * Varje steg utför en distinkt aktivitet, till exempel väntar på användarindata, aktiverar en sida eller skickar ett e-postmeddelande.
 
 * Kan samverka med resurser i databasen, användarkonton och AEM.
 * Kan samordna komplicerade aktiviteter som omfattar alla aspekter av AEM.
@@ -42,7 +38,6 @@ De affärsprocesser som din organisation har etablerat kan representeras som arb
 >* Skapa arbetsflödesmodeller och utöka arbetsflödesfunktioner: [Utveckla och utöka arbetsflöden](/help/sites-developing/workflows.md).
 >* Förbättra prestanda för arbetsflöden som använder betydande serverresurser: [Samtidig bearbetning av arbetsflöden](/help/sites-deploying/configuring-performance.md#concurrent-workflow-processing).
 >
-
 
 ## Arbetsflödesmodeller och instanser {#workflow-models-and-instances}
 
@@ -85,30 +80,30 @@ Antingen utför en användare eller tjänst arbetsflödessteg beroende på typ a
 
 >[!NOTE]
 >
->Om ett fel inträffar bör tjänste-/stegimplementeringen hantera beteendet för ett felscenario. Arbetsflödesmotorn kommer själv att försöka utföra jobbet igen, logga ett fel och stoppa instansen.
+>Om ett fel inträffar bör tjänste-/stegimplementeringen hantera beteendet för ett felscenario. Arbetsflödesmotorn själv försöker utföra jobbet igen, loggar sedan ett fel och stoppar instansen.
 
 ## Arbetsflödets status och åtgärder {#workflow-status-and-actions}
 
-Ett arbetsflöde kan ha någon av följande status:
+Ett arbetsflöde kan ha någon av följande statusar:
 
 * **KÖRS**: Arbetsflödesinstansen körs.
 * **SLUTFÖRD**: Arbetsflödesinstansen har avslutats.
 
-* **UPPHÄVD**: Markerar arbetsflödet som pausat. Se dock varningsmeddelandet nedan om du har några problem med det här läget.
-* **AVBRUTEN**: Arbetsflödesinstansen har avslutats.
-* **STAL**: Progression av arbetsflödesinstansen kräver att ett bakgrundsjobb körs, men jobbet kan inte hittas i systemet. Detta kan inträffa när ett fel inträffar när arbetsflödet körs.
+* **UPPHÄVD**: Märker upp arbetsflödet som pausat. Se dock varningsmeddelandet nedan om ett känt problem med det här läget.
+* **ABORTERAD**: Arbetsflödesinstansen har avslutats.
+* **STAL**: Progression för arbetsflödesinstansen kräver att ett bakgrundsjobb körs, men jobbet kan inte hittas i systemet. Detta kan inträffa när ett fel inträffar när arbetsflödet körs.
 
 >[!NOTE]
 >
 >När körningen av ett processteg resulterar i fel visas steget i administratörens inkorg och arbetsflödets status är **KÖRS**.
 
-Beroende på aktuell status kan du utföra åtgärder för att köra arbetsflödesinstanser när du behöver ingripa i den normala förloppet för en arbetsflödesinstans:
+Beroende på status kan du utföra åtgärder för att köra arbetsflödesinstanser när du måste ingripa i den normala förloppet för en arbetsflödesinstans:
 
 * **Gör uppehåll**: När du gör uppehåll ändras arbetsflödets status till Pausat. Se Varning nedan:
 
 >[!CAUTION]
 >
->Det finns ett känt fel när ett arbetsflödesläge markeras som Pausa. I det här läget är det möjligt att vidta åtgärder för pausade arbetsflödesobjekt i en Inkorg.
+>Det finns ett känt fel när ett arbetsflödesläge markeras som Pausa. I det här läget är det möjligt att agera på pausade arbetsflödesobjekt i en Inkorg.
 
 * **Återuppta**: Startar om ett pausat arbetsflöde på samma plats där det pausades, med samma konfiguration.
-* **Avsluta**: Slutar arbetsflödets körning och ändrar tillståndet till **AVBRUTEN**. En avbruten arbetsflödesinstans kan inte startas om.
+* **Avsluta**: Avslutar arbetsflödets körning och ändrar tillståndet till **ABORTERAD**. En avbruten arbetsflödesinstans kan inte startas om.

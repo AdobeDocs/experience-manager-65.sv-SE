@@ -1,16 +1,14 @@
 ---
 title: Utveckla appar med PhoneGap CLI
-description: Läs om hur du utvecklar appar med PhoneGap CLI.
-uuid: 9a66171d-19af-40db-9c07-f5dd9561e1b5
+description: Lär dig hur du utvecklar appar för mobiler med PhoneGap CLI i en startad utvecklingsmiljö.
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-adobe-phonegap-enterprise
-discoiquuid: 4a034e15-3394-4be3-9e8e-bc894668946a
 exl-id: fbeceb70-b199-478b-907b-253ed212ff99
-source-git-commit: 4fd5e9a1bc603202ee52e85a1c09125b13cec315
+source-git-commit: 06a6d4e0ba2aeaefcfb238233dd98e8bbd6731da
 workflow-type: tm+mt
-source-wordcount: '666'
+source-wordcount: '673'
 ht-degree: 0%
 
 ---
@@ -23,18 +21,18 @@ ht-degree: 0%
 
 Som utvecklare kan du när som helst köra programmet på en enhet eller i en emulator, förutsatt att du har konfigurerat utvecklingsmiljön.
 
-För att köra följande exempel behöver du ett system som kör OS X (Mac) med Xcode, eller ett Mac/Win/Linux-system med Android™ SDK installerat.
+För att köra följande exempel behöver du ett system som kör macOS X med Xcode, eller ett Mac/Win/Linux-system med Android™ SDK installerat.
 
 ## Bootstrap din utvecklingsmiljö {#bootstrap-your-development-environment}
 
 Konfigurera PhoneGap CLI (`https://docs.phonegap.com/en/4.0.0/guide_cli_index.md.html#The%20Command-Line%20Interface`)
 
-För iOS: Om du vill utveckla för iPhone och iPad behöver du Apple Xcode IDE.
+För iOS: För att utveckla för iPhone och iPad behöver du Apple Xcode IDE.
 
 * Ladda ned kostnadsfritt [här](https://idmsa.apple.com/IDMSWebAuth/signin?appIdKey=891bd3417a7776362562d2197f89480a8547b108fd934911bcbea0110d07f757&amp;path=%2Fdownload%2F&amp;rv=1).
 * Plattformshandbok för PhoneGap iOS (`https://docs.phonegap.com/en/4.0.0/guide_platforms_ios_index.md.html#iOS%20Platform%20Guide`)
 
-För Android™: För att kunna utveckla för iPhone och iPad behöver du Google Android™ Studio IDE.
+För Android™: För att utveckla för iPhone och iPad behöver du Google Android™ Studio IDE.
 
 * Ladda ned kostnadsfritt [här](https://developer.android.com/studio).
 * Plattformshandbok för PhoneGap Android™ (`https://docs.phonegap.com/en/4.0.0/guide_platforms_android_index.md.html#Android%20Platform%20Guide`)
@@ -56,7 +54,7 @@ När du har startat utvecklingsmiljön hämtar du källan från AEM App Build Ti
 >
 >Utvecklingskällan innehåller det senaste läget för din app, med ändringar som inte har mellanlagrats. Använd mellanlagringskällan för att skapa releaseförslag för att skicka till appbutiksleverantörer.
 >
->Om du aldrig mellanlagring av programmet aktiveras mellanlagringsarbetsflödet när du väljer Förproduktion (tips: visas som en mellanlagrad app i PhoneGap Enterprise Viewer App som finns i AppStore och Google PlayStore).
+>Om du aldrig testar din app aktiveras mellanlagringsarbetsflödet när du väljer Förproduktion (tips: visas som en mellanlagrad app i PhoneGap Enterprise Viewer App som finns i AppStore och Google PlayStore).
 
 * Klicka på Hämta och spara ZIP-filen på datorn.
 * Extrahera den hämtade ZIP-filen till arbetsytan.
@@ -149,7 +147,7 @@ Du kan ange brytpunkter var som helst i källan. När du interagerar med emulato
 
 * Använd kontrollknapparna för att fortsätta köra, stega över, stega in i och ta bort metoder:
 
-![Fem olika funktionskontrollknappar justerade i en vågrät rad.](do-not-localize/chlimage_1-4.png)
+![Fem olika funktionskontrollknappar i vågrät rad.](do-not-localize/chlimage_1-4.png)
 
 >[!NOTE]
 >

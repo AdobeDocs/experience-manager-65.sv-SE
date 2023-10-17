@@ -1,6 +1,6 @@
 ---
 title: Använd Dynamic Media-bildförinställningar
-description: Lär dig hur du använder bildförinställningar i Dynamic Media
+description: Lär dig hur du kan aktivera resurser för att dynamiskt kunna leverera bilder i olika storlekar, i olika format eller med andra bildegenskaper som genereras dynamiskt.
 uuid: 8bafcbd0-6df0-4d5b-b2f7-116ddb4ec060
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
@@ -10,9 +10,9 @@ discoiquuid: 5c1f60ac-3741-4002-9c5d-c128f118342b
 feature: Image Presets
 role: User,Admin
 exl-id: 98d88b59-eb8f-42db-abb8-04506a5b8c30
-source-git-commit: 4b8369de9e6a10b73115d53358ce98729d92ed44
+source-git-commit: 06a6d4e0ba2aeaefcfb238233dd98e8bbd6731da
 workflow-type: tm+mt
-source-wordcount: '316'
+source-wordcount: '332'
 ht-degree: 2%
 
 ---
@@ -37,14 +37,13 @@ Du kan använda en bildförinställning på en bild när du vill förhandsvisa d
 
 **Så här använder du Dynamic Media-bildförinställningar:**
 
-1. Öppna resursen och välj den nedrullningsbara menyn i den vänstra listen och välj sedan **[!UICONTROL Renditions]**.
+1. Öppna resursen och välj den nedrullningsbara menyn i den vänstra listen och välj **[!UICONTROL Renditions]**.
 
    >[!NOTE]
    >
    >* Statiska återgivningar visas i den övre halvan av rutan. Dynamiska återgivningar visas i den nedre halvan. Om du bara använder dynamiska återgivningar kan du använda URL-adressen för att visa bilden. The **[!UICONTROL URL]** visas bara om du väljer en dynamisk återgivning. The **[!UICONTROL RESS]** visas bara om du väljer en förinställning för responsiv bild.
    >
    >* Systemet visar flera renderingar när du väljer **[!UICONTROL Renditions]** i en tillgångs detaljvy. Du kan öka antalet förinställningar som visas. Se [Öka antalet bildförinställningar som visas](managing-image-presets.md#increasing-or-decreasing-the-number-of-image-presets-that-display).
-
 
    ![chlimage_1-208](assets/chlimage_1-208.png)
 

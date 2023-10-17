@@ -1,18 +1,14 @@
 ---
 title: Hantera åtkomst till arbetsflöden
-seo-title: Managing Access to Workflows
-description: Lär dig hur du hanterar åtkomst till arbetsflöden.
-seo-description: Learn how to manage access to Workflows.
-uuid: 58f79b89-fe56-4565-a869-8179c1ac68de
+description: Lär dig hur du konfigurerar åtkomstkontrollistor utifrån användarkonton så att du kan starta (eller inaktivera) och delta i arbetsflöden.
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: operations
 content-type: reference
-discoiquuid: 5150867a-02a9-45c9-b2fd-e536b60ffa8c
 exl-id: cc54d637-d66c-49d2-99ee-00d96f1a74e0
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 06a6d4e0ba2aeaefcfb238233dd98e8bbd6731da
 workflow-type: tm+mt
-source-wordcount: '562'
+source-wordcount: '575'
 ht-degree: 0%
 
 ---
@@ -53,7 +49,7 @@ Arbetsflödesmodeller ärver en standardåtkomstkontrollista (ACL) som styr hur 
 
 ### Använd en ACL för den specifika arbetsflödesmodellen på /var/workflow/models {#apply-an-acl-for-the-specific-workflow-model-to-var-workflow-models}
 
-Om arbetsflödesmodellen lagras i `/var/workflow/models` kan du tilldela en specifik åtkomstkontrollista som är relevant endast för det arbetsflödet till mappen:
+Om arbetsflödesmodellen lagras i `/var/workflow/models`kan du tilldela en specifik åtkomstkontrollista som är relevant endast för det arbetsflödet till mappen:
 
 1. Öppna CRXDE Lite i webbläsaren (till exempel [http://localhost:4502/crx/de](http://localhost:4502/crx/de)).
 1. I nodträdet väljer du noden för mappen för arbetsflödesmodeller:
@@ -62,12 +58,12 @@ Om arbetsflödesmodellen lagras i `/var/workflow/models` kan du tilldela en spec
 
 1. Klicka på **Åtkomstkontroll** -fliken.
 1. I **Principer för lokal åtkomstkontroll** (**Åtkomstkontrollista**) klickar du på plusikonen för att **Lägg till post**.
-1. I **Lägg till nytt inlägg** lägger du till en ny ACE med följande egenskaper:
+1. I **Lägg till nytt inlägg** lägger du till en ACE med följande egenskaper:
 
    * **kapitalbelopp**: `content-authors`
    * **Typ**: `Deny`
    * **Behörighet**: `jcr:read`
-   * **rep:glob**: referens till det specifika arbetsflödet
+   * **rep:glob**: referens till arbetsflödet
 
    ![wf-108](assets/wf-108.png)
 
@@ -81,7 +77,7 @@ Om arbetsflödesmodellen lagras i `/var/workflow/models` kan du tilldela en spec
 
 ### Skapa en undermapp i /var/workflow/models och tillämpa ACL på den {#create-a-subfolder-in-var-workflow-models-and-apply-the-acl-to-that}
 
-Dina [utvecklarteamet kan skapa arbetsflödena i en undermapp](/help/sites-developing/workflows-models.md#creating-a-new-workflow) av
+Dina [utvecklarteamet kan skapa arbetsflöden i en undermapp](/help/sites-developing/workflows-models.md#creating-a-new-workflow) av
 
 `/var/workflow/models`
 
@@ -92,14 +88,14 @@ Jämfört med arbetsflödena för DAM som lagras under
 Du kan sedan lägga till en ACL i själva mappen.
 
 1. Öppna CRXDE Lite i webbläsaren (till exempel [http://localhost:4502/crx/de](http://localhost:4502/crx/de)).
-1. I nodträdet väljer du noden för den enskilda mappen i mappen för arbetsflödesmodeller. till exempel:
+1. I nodträdet väljer du noden för den enskilda mappen i mappen för arbetsflödesmodeller, till exempel:
 
    `/var/workflow/models/prototypes`
 
 1. Klicka på **Åtkomstkontroll** -fliken.
-1. I **Tillämplig åtkomstkontrollprincip** tabell klickar du på plusikonen för att **Lägg till** ett tävlingsbidrag.
+1. I **Tillämplig åtkomstkontrollprincip** tabell klickar du på plusikonen för att **Lägg till** ett bidrag.
 1. I **Principer för lokal åtkomstkontroll** (**Åtkomstkontrollista**) klickar du på plusikonen för att **Lägg till post**.
-1. I **Lägg till nytt inlägg** lägger du till en ny ACE med följande egenskaper:
+1. I **Lägg till nytt inlägg** lägger du till en ACE med följande egenskaper:
 
    * **kapitalbelopp**: `content-authors`
    * **Typ**: `Deny`

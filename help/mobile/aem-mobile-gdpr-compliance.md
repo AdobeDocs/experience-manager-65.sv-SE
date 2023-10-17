@@ -1,12 +1,12 @@
 ---
 title: Adobe Experience Manager Mobile - GDPR-beredskap
-description: Adobe Experience Manager Mobile - GDPR-beredskap
+description: Läs om hur Adobe Experience Manager kan hjälpa er med er GDPR-efterlevnadsskyldigheter.
 uuid: 817c434f-4b78-40f7-99d6-6efafdedb77e
 contentOwner: trushton
 exl-id: d06e675f-fb61-47da-85de-e0b50dd44153
-source-git-commit: 260f71acd330167572d817fdf145a018b09cbc65
+source-git-commit: 06a6d4e0ba2aeaefcfb238233dd98e8bbd6731da
 workflow-type: tm+mt
-source-wordcount: '688'
+source-wordcount: '694'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->GDPR används som exempel i avsnitten nedan, men de ingående detaljerna är tillämpliga på alla dataskydds- och sekretessbestämmelser. såsom GDPR och CCPA.
+>GDPR används som exempel i avsnitten nedan, men de ingående detaljerna gäller alla dataskydds- och sekretessbestämmelser, såsom GDPR och CCPA.
 
 ## Stöd för AEM Mobile GDPR {#aem-mobile-gdpr-support}
 
@@ -35,7 +35,7 @@ För att vara säker på att du inte blandar ihop AEM Mobile med den äldre Digi
 
 Kontakta Adobe kundtjänst så att du kan initiera en GDPR-förfrågan för Digital Publishing Suite.
 
-Följande ID krävs för att hitta kunddata. Alla delmängder som tas emot innebär att andra ID:n inte är tillämpliga för den här användaren.
+Följande ID krävs för att hitta kunddata. Alla delmängder som tas emot innebär att de andra ID:n inte var tillämpliga för den här användaren.
 
 Obligatoriskt:
 
@@ -47,19 +47,19 @@ Ange minst 1 av följande:
 * För Windows-appanvändare gäller slutanvändarens App Store-ID: *dpsc-windowsAppStoreId*
 * E-postadressen som slutanvändaren använde för att interagera med DPS-appen: *e-post*
 
-### Vanliga frågor och svar (FAQ) {#frequently-asked-questions-faq}
+### Vanliga frågor och svar {#frequently-asked-questions-faq}
 
-**Kommer Adobe att ta bort mina App Store-köp när jag initierar en begäran från DELETE?**
+**Tar Adobe bort mina App Store-köp när jag initierar en begäran från DELETE?**
 
-Adobe tar bort information om App Store-köp (prenumerationer och så vidare), men inköp finns fortfarande kvar i App Store. Om appen (slutanvändaren) är inloggad i App Store hämtas dessa kvitton igen och skickas till Adobe och senare, betraktas de som nya inköp och återställs av appen för att få åtkomst igen.
+Adobe tar bort information om App Store-köp (prenumerationer och så vidare), men inköp finns fortfarande kvar i App Store. Om appen (slutanvändaren) är inloggad i App Store hämtas dessa kvitton igen och skickas till Adobe. Senare betraktas de som nya inköp och återställs av appen, med tillgång igen.
 
-**Kommer Adobe att ta bort kundens angivna rättigheter när en begäran från DELETE initieras?**
+**Tar Adobe bort kundtillhandahållna berättiganden när en begäran från DELETE görs?**
 
 Adobe tar bort information om kundens ytterligare direktbehörigheter. Om appen (slutanvändaren) loggar in på OAuth-mekanismen som kunden har använt skickas information till Adobe och tjänsterna hämtar de extra berättigandena igen.
 
 **Vad förväntas av slutanvändaren?**
 
-Eftersom nyckeln för att tilldela behörigheter till appen finns på enheten som en del av visningsprogramprogramvaran bör slutanvändaren avinstallera appen. Slutanvändaren bör inse att om de installerar om appen kommer befintliga inköp (som är kopplade till App Store-användaren) och direkta berättigandetillägg (som är kopplade till OAuth-användaren av kunden) fortfarande att återställas.
+Eftersom nyckeln för att tilldela behörigheter till appen finns på enheten som en del av visningsprogramprogramvaran bör slutanvändaren avinstallera appen. Slutanvändaren bör inse att om de installerar om appen återställs fortfarande befintliga inköp (som är kopplade till App Store-användaren) och direkta berättigandetillägg (som är kopplade till OAuth-användaren av kunden).
 
 **Vad händer när en app delas mellan personer på en enhet?**
 

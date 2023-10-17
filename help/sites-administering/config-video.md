@@ -1,18 +1,14 @@
 ---
 title: Konfigurera komponenten Video
-seo-title: Configure the Video component
-description: Lär dig hur du konfigurerar videokomponenten.
-seo-description: Learn how to configure the Video Component.
-uuid: f4755a13-08ea-4096-a951-46a590f8d766
+description: Lär dig hur du använder videokomponenten i Adobe Experience Manager för att placera en fördefinierad, färdig videoresurs på sidan.
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: operations
 content-type: reference
-discoiquuid: a1efef3c-0e4b-4a17-bcad-e3cc17adbbf7
 exl-id: 9c97f99e-d6ef-4817-8b2a-201ab22f2b38
-source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
+source-git-commit: 06a6d4e0ba2aeaefcfb238233dd98e8bbd6731da
 workflow-type: tm+mt
-source-wordcount: '475'
+source-wordcount: '485'
 ht-degree: 0%
 
 ---
@@ -25,7 +21,7 @@ För att korrekt omkodning ska ske installerar administratören FFmpeg separat. 
 
 >[!CAUTION]
 >
->Den här Foundation-komponenten har tagits bort. Adobe rekommenderar att du använder [Bädda in komponent för kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/embed.html) i stället.
+>Den här Foundation-komponenten har tagits bort. Adobe rekommenderar att du använder [Bädda in komponent för kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/embed.html) i stället.
 
 >[!CAUTION]
 >
@@ -43,25 +39,25 @@ I den här dialogrutan kan du även konfigurera designen för videokomponenten o
 
 Videokomponenten använder öppen källkod-produkten från tredje part för omkodning av videoklipp. Hämtat från [https://ffmpeg.org/](https://ffmpeg.org/). När du har installerat mpeg konfigurerar du AEM att använda en viss ljudkodek och specifika körningsalternativ.
 
-Så här installerar du FFmpeg på **Windows** gör du så här:
+Så här installerar du FlashPeg på **Windows** gör du så här:
 
 1. Hämta den kompilerade binärfilen som `ffmpeg.zip`.
 1. Avarkivera till en mapp.
 1. Ange systemmiljövariabeln `PATH` till &lt;*your-ffmpeg-location*>`\bin`.
 1. Starta om AEM.
 
-Så här installerar du FFmpeg på **Mac OS X** gör du så här:
+Så här installerar du FlashPeg på **MACOS X** gör du så här:
 
 1. Install Xcode available at [developer.apple.com/xcode](https://developer.apple.com/xcode/).
-1. Installationen finns på [XQuartz](https://www.xquartz.org) för att [X11](https://support.apple.com/en-us/HT201341).
+1. Installationen finns på [XQuartz](https://www.xquartz.org) för att [X11](https://support.apple.com/en-us/100724).
 1. Installera MacPorts som finns på [www.macports.org](https://www.macports.org/).
 1. Kör i konsolen `sudo port install ffmpeg` och följ instruktionerna på skärmen. Se till att sökvägen till `FFmpeg` körbar fil läggs till i `PATH` systemvariabel.
 
-Så här installerar du FFmpeg på **Mac OS X 10.6** gör du så här i den förkompilerade versionen:
+Så här installerar du FlashPeg på **macOS X 10.6** gör du så här i den förkompilerade versionen:
 
-1. Ladda ned den förkompilerade versionen.
-1. Arkivera det på `/usr/local` katalog.
-1. Kör i konsolen `sudo ln -s /usr/local/Cellar/ffmpeg/0.6/bin/ffmpeg /usr/bin/ffmpeg`. Ändra banorna efter behov.
+1. Hämta den förkompilerade versionen.
+1. Avarkivera det på `/usr/local` katalog.
+1. Kör i konsolen `sudo ln -s /usr/local/Cellar/ffmpeg/0.6/bin/ffmpeg /usr/bin/ffmpeg`. Ändra sökvägen efter behov.
 
 Till **konfigurera AEM** gör du så här:
 
@@ -79,10 +75,10 @@ Till **konfigurera AEM** gör du så här:
 
    >[!NOTE]
    >
-   >Lägg över och redigera hela profilnoden och inte bara den egenskap som behöver ändras. Sådana resurser löses inte via SlingResourceMerger.
+   >Täck över och redigera hela profilnoden och inte bara den egenskap som behöver ändras. Sådana resurser löses inte via SlingResourceMerger.
 
 4. Om du har ändrat någon av egenskaperna klickar du på **[!UICONTROL Save All]**.
 
 >[!NOTE]
 >
->Ändringar i standardarbetsflödesmodellerna som är färdiga att användas (OTB) bevaras inte när du uppgraderar AEM. Adobe rekommenderar att du kopierar de ändrade arbetsflödesmodellerna innan du redigerar dem. Kopiera till exempel OTB [!UICONTROL DAM Update Asset] modellen innan du redigerar steget för FFmpeg-omkodning i [!UICONTROL DAM Update Asset] modell för att välja videoprofilnamn som fanns före uppgraderingen. Sedan kan du täcka över `/apps` nod som AEM kan hämta anpassade ändringar i OTB-modellen.
+>Ändringar i standardarbetsflödesmodellerna som är färdiga att användas (OTB) bevaras inte när du uppgraderar AEM. Adobe rekommenderar att du kopierar de ändrade arbetsflödesmodellerna innan du redigerar dem. Kopiera till exempel OOTB [!UICONTROL DAM Update Asset] modellen innan du redigerar steget för FFmpeg-omkodning i [!UICONTROL DAM Update Asset] modell för att välja videoprofilnamn som fanns före uppgraderingen. Sedan kan du täcka över `/apps` nod som AEM kan hämta anpassade ändringar i OTB-modellen.

@@ -1,15 +1,15 @@
 ---
 title: Massredigeraren
-description: Lär dig använda gruppredigeraren.
+description: Lär dig hur du använder gruppredigeraren för effektiv redigering när den visuella sidkontexten inte behövs.
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: operations
 content-type: reference
 docset: aem65
 exl-id: c63e044c-4d2a-44d3-853b-8e7337e1ee03
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 06a6d4e0ba2aeaefcfb238233dd98e8bbd6731da
 workflow-type: tm+mt
-source-wordcount: '1158'
+source-wordcount: '1159'
 ht-degree: 0%
 
 ---
@@ -63,7 +63,7 @@ Med gruppredigeraren kan du
 Så här använder du gruppredigeraren för att redigera flera objekt samtidigt:
 
 1. I **verktyg** klickar du på **Importörer** för att expandera den.
-1. Dubbelklicka på **Massredigerare** för att öppna den.
+1. Dubbelklicka på **Massredigerare**.
 1. Ange dina urvalskrav:
 
 <table>
@@ -78,11 +78,11 @@ Så här använder du gruppredigeraren för att redigera flera objekt samtidigt:
   </tr>
   <tr>
    <td>Frågeparametrar</td>
-   <td>Använd GQL-parametrar för att ange den söksträng som du vill att den gruppredigerare ska leta efter i databasen, till exempel <code>type:Page</code> söker efter alla sidor i rotsökvägen, <code>text:professional</code> söker efter alla sidor som innehåller ordet "professionell", och <code>"jcr:title":English</code> söker efter alla sidor som har "engelska" som titel. Du kan bara söka efter strängar.</td>
+   <td>Använd GQL-parametrar för att ange söksträngen som du vill att den gruppredigerade ska söka efter i databasen. Till exempel: <code>type:Page</code> söker efter alla sidor i rotsökvägen, <code>text:professional</code> söker efter alla sidor som innehåller ordet "professionell", och <code>"jcr:title":English</code> söker efter alla sidor som har "engelska" som titel. Du kan bara söka efter strängar.</td>
   </tr>
   <tr>
    <td>Kryssrutan Innehållsläge</td>
-   <td>Markera den här kryssrutan om du vill läsa egenskaper i <code>jcr:content</code> undernod till sökresultatet om sådan finns. Använd endast för sidor. Egenskapsnamn har prefixet <code>"jcr:content/"</code></td>
+   <td>Markera den här kryssrutan så att du kan läsa egenskaperna i <code>jcr:content</code> undernod till sökresultatet om sådan finns. Använd endast för sidor. Egenskapsnamn har prefixet <code>"jcr:content/"</code></td>
   </tr>
   <tr>
    <td>Egenskaper/kolumner</td>
@@ -104,7 +104,7 @@ I exemplet ovan returneras alla sidor som uppfyller dina sökvillkor och visas m
 
    ![Resultat av gruppredigering](assets/chlimage_1-39.png)
 
-1. Gör de ändringar du behöver genom att dubbelklicka i en cell.
+1. Dubbelklicka på en cell så att du kan göra eventuella ändringar.
 
    ![Gruppredigering](assets/srchresultedit.png)
 
@@ -117,18 +117,18 @@ I exemplet ovan returneras alla sidor som uppfyller dina sökvillkor och visas m
 #### Ytterligare GQL-frågeparametrar {#additional-gql-query-parameters}
 
 * **sökväg:** bara söknoder under den här sökvägen. Om du anger mer än en term med ett sökvägsprefix beaktas endast den sista termen.
-* **typ:** bara returnera noder av de angivna nodtyperna. Detta inkluderar primära och blandade typer. Du kan ange flera kommaavgränsade nodtyper. GQL returnerar noder som är av någon av de angivna typerna.
+* **typ:** bara returnera noder av den angivna nodtypen. Detta inkluderar primära och blandade typer. Du kan ange flera kommaavgränsade nodtyper. GQL returnerar noder som är av någon av de angivna typerna.
 * **beställning:** sortera resultatet efter de angivna egenskaperna. Du kan ange flera kommaavgränsade egenskapsnamn. Om du vill ordna resultatet i fallande ordning lägger du bara till ett minustecken som prefix för egenskapsnamnet. Till exempel order:-name. Om du använder ett plustecken returneras resultatet i stigande ordning, vilket också är standard.
-* **gräns:** begränsar antalet resultat med ett intervall. Till exempel limit:10..20 Intervallet är nollbaserat, start är inkluderat och slut är exklusivt. Du kan även ange ett öppet intervall:limit:10.. eller limit:..20 Om punkterna utelämnas och endast ett värde anges kommer GQL att returnera maximalt detta antal resultat. Till exempel limit:10 (returnerar de första tio resultaten).
+* **gräns:** begränsar antalet resultat med ett intervall. Till exempel limit:10..20 Intervallet är nollbaserat, start är inkluderat och slut är exklusivt. Du kan även ange ett öppet intervall:limit:10.. eller limit:..20 Om punkterna utelämnas och endast ett värde anges, returnerar GQL högst detta antal resultat. Till exempel limit:10 (returnerar de första tio resultaten).
 
 ### Exporterar innehåll {#exporting-content}
 
-Du kan behöva exportera innehåll och göra ändringar i det i ett Excel-kalkylblad. Du kan till exempel vilja exportera en utskickslista och ändra riktnummer för alla telefonnummer som visas direkt i Excel, eller lägga till ytterligare rader och så vidare.
+Exportera vid behov innehållet till ett Excel-kalkylblad för att göra eventuella ändringar. Du kan till exempel vilja exportera en utskickslista och ändra riktnummer för alla telefonnummer som visas direkt i Excel, eller lägga till ytterligare rader.
 
 Så här exporterar du innehåll:
 
 1. Sök efter innehåll enligt beskrivningen i [Söka och redigera innehåll](#searching-and-editing-content).
-1. Klicka **Exportera** om du vill exportera ändringarna till ett tabbseparerat Excel-kalkylblad. AEM frågar var du vill hämta filen.
+1. Klicka **Exportera** så att du kan exportera ändringarna till ett tabbseparerat Excel-kalkylblad. AEM frågar var du vill hämta filen.
 
    >[!NOTE]
    >

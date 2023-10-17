@@ -1,13 +1,13 @@
 ---
 title: Återgivning och leverans
-description: Återgivning och leverans
+description: Lär dig hur du återger Adobe Experience Manager-innehåll med Sling Default Servlets som återger JSON och andra format.
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 exl-id: f0c543ae-33ed-40bb-9eb7-0dc3bdea69e0
-source-git-commit: 96e2e945012046e6eac878389b7332985221204e
+source-git-commit: 06a6d4e0ba2aeaefcfb238233dd98e8bbd6731da
 workflow-type: tm+mt
-source-wordcount: '580'
+source-wordcount: '596'
 ht-degree: 1%
 
 ---
@@ -160,7 +160,7 @@ I följande tabell visas egenskaperna:
  </tbody>
 </table>
 
-### Befintliga konfigurationer för innehållsexport {#existing-content-services-export-configs}
+### Befintliga konfigurationer för export av innehållstjänster {#existing-content-services-export-configs}
 
 Content Services innehåller två exportkonfigurationer:
 
@@ -189,7 +189,7 @@ Standardexportkonfigurationen för Content Services används om en konfiguration
   </tr>
   <tr>
    <td>includeProperties</td>
-   <td>jcr:text,text<br /> jcr:titel,titel<br /> jcr:beskrivning,beskrivning<br /> jcr:lastModified,lastModified<br /> cq:tags,taggar<br /> cq:lastModified,lastModified</td>
+   <td>jcr:text,text<br /> jcr:title,title<br /> jcr:beskrivning,beskrivning<br /> jcr:lastModified,lastModified<br /> cq:tags,taggar<br /> cq:lastModified,lastModified</td>
   </tr>
   <tr>
    <td>includeComponents</td>

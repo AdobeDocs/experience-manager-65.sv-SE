@@ -1,13 +1,13 @@
 ---
 title: Innehållsleverans
-description: Innehållsleverans
+description: Lär dig hur du använder allt innehåll i Adobe Experience Manager för att leverera en målinriktad appupplevelse.
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 exl-id: 85e73679-684e-402f-8186-8b56d8bd9372
-source-git-commit: fd8bb7d3d9040e0a7a6b2f65751445f41aeab73e
+source-git-commit: 06a6d4e0ba2aeaefcfb238233dd98e8bbd6731da
 workflow-type: tm+mt
-source-wordcount: '961'
+source-wordcount: '978'
 ht-degree: 0%
 
 ---
@@ -47,7 +47,7 @@ En resurssamling kan visas via innehållstjänster. När en resurssamling anropa
 
 Ett viktigt värde för Content Services är möjligheten att returnera resurser som är optimerade för enheten. Detta minskar behovet av lagring på lokala enheter och förbättrar appprestanda.
 
-Resursoptimering är en funktion på serversidan som baseras på information som anges i API-begäran. Där det är möjligt bör resursåtergivningarna cachelagras så att liknande förfrågningar inte kräver en omgenerering av resursåtergivningen.
+Resursoptimering är en funktion på serversidan som baseras på information som anges i API-begäran. Där det är möjligt bör resursåtergivningarna cachelagras så att liknande förfrågningar inte kräver omgenerering av resursåtergivningen.
 
 ### Arbetsflöde för resurser {#assets-workflow}
 
@@ -70,7 +70,7 @@ Content Services ger åtkomst till AEM resurser som inte kan refereras via annat
 
 #### Befintliga hanterade tillgångar {#existing-managed-assets}
 
-En användare av AEM Sites och Assets använder AEM Assets för att hantera allt digitalt material för alla kanaler. De utvecklar en intern mobilapp och behöver använda flera resurser som hanteras av AEM Assets. Till exempel logotyper, bakgrundsbilder och knappikoner.
+En användare av AEM Sites och Assets använder AEM Assets för att hantera allt digitalt material för alla kanaler. De utvecklar en intern mobilapp och måste använda flera resurser som hanteras av AEM Assets. Till exempel logotyper, bakgrundsbilder och knappikoner.
 
 För närvarande är dessa spridda runt resurskatalogen. De filer som programmet måste referera till finns i följande:
 
@@ -106,7 +106,7 @@ Klientbiblioteket används en gång till för att hämta binärfilen för kundva
 
 ## Paketerat HTML-innehåll {#packaged-html-content}
 
-HTML-innehåll behövs för kunder som behöver ha innehållets layout. Detta är användbart för inbyggda program som använder en webbbehållare, till exempel en Cordova-webbvy, för att visa innehållet.
+HTML-innehåll behövs för kunder som måste behålla innehållets layout. Detta är användbart för inbyggda program som använder en webbbehållare, till exempel en Cordova-webbvy, för att visa innehållet.
 
 AEM Content Services förser mobilappen med HTML via API:t. Kunder som vill visa AEM innehåll som HTML kan skapa en HTML-sidenhet som pekar mot AEM innehållskälla.
 
@@ -121,18 +121,18 @@ Följande alternativ beaktas:
 
 Kanaloberoende innehåll är ett sätt att exponera AEM innehållskonstruktioner - t.ex. sidor - utan att behöva bekymra sig om layout, komponenter eller annan kanalspecifik information.
 
-Dessa innehållsenheter genereras med en innehållsmodell för att översätta de AEM strukturerna till ett JSON-format. De resulterande JSON-data innehåller information om innehållets data som är frikopplade från AEM. Detta innefattar att returnera metadata och AEM referenslänkar till resurser och relationer mellan innehållsstrukturer - inklusive entitetshierarki.
+Dessa innehållsenheter genereras med en innehållsmodell för att översätta de AEM strukturerna till ett JSON-format. Resulterande JSON-data innehåller information om innehållets data som är frikopplade från AEM. Detta innefattar att returnera metadata och AEM referenslänkar till resurser och relationer mellan innehållsstrukturer - inklusive entitetshierarki.
 
 ### Hantera kanaloberoende innehåll {#managing-channel-independent-content}
 
 Innehåll kan komma åt appen på flera sätt.
 
-1. GET content ZIPS via AEM Over-the-Air
+1. GET-innehåll ZIPS genom AEM:s luftburet
 
    * Hanterare för innehållssynkronisering kan uppdatera zip-paketet direkt eller genom att anropa befintliga innehållsrenderare
 
       * Platshanterare
-      * AEMM-hanterare
+      * AEM
       * Anpassade hanterare
 
 1. GET material direkt via innehållsrenderare

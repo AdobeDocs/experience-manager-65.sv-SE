@@ -1,25 +1,21 @@
 ---
 title: Starta arbetsflöden
-seo-title: Starting Workflows
-description: Lär dig starta arbetsflöden i AEM.
-seo-description: Learn how to start Workflows in AEM.
-uuid: 0648d335-ecce-459d-95fd-3d4d76181b32
+description: Lär dig hur du administrerar arbetsflöden i Adobe Experience Manager så att du kan starta dem med olika metoder, antingen manuellt eller automatiskt.
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: operations
 content-type: reference
-discoiquuid: e9ab4796-a050-40de-b073-af7d33cff009
 exl-id: 84a1964c-4121-4763-b946-9eee6093747d
-source-git-commit: 71b3f7c6ad2c7712762a29518de6cf0639081cb7
+source-git-commit: 06a6d4e0ba2aeaefcfb238233dd98e8bbd6731da
 workflow-type: tm+mt
-source-wordcount: '794'
+source-wordcount: '799'
 ht-degree: 0%
 
 ---
 
 # Starta arbetsflöden{#starting-workflows}
 
-När du administrerar arbetsflöden kan du starta dem på flera olika sätt:
+När du administrerar arbetsflöden kan du starta dem på olika sätt:
 
 * Manuellt:
 
@@ -87,13 +83,13 @@ Ett arbetsflödespaket:
 ## Starta ett arbetsflöde från Models Console {#starting-a-workflow-from-the-models-console}
 
 1. Navigera till **Models** konsol med **verktyg**, **Arbetsflöde** sedan **Models**.
-1. Välj arbetsflödet (enligt konsolvyn). Du kan även använda Sök (längst upp till vänster) om det behövs:
+1. Markera arbetsflödet (enligt konsolvyn). Du kan även använda Sök (längst upp till vänster) om det behövs:
 
    ![wf-103](assets/wf-103.png)
 
    >[!NOTE]
    >
-   >The **[Övergående](/help/sites-developing/workflows.md#transient-workflows)** indikator visar arbetsflöden som arbetsflödeshistoriken inte kommer att sparas för.
+   >The **[Övergående](/help/sites-developing/workflows.md#transient-workflows)** indikator visar arbetsflöden där arbetsflödeshistoriken inte bevaras.
 
 1. Välj **Starta arbetsflöde** i verktygsfältet.
 1. Dialogrutan Kör arbetsflöde öppnas och du kan ange:
@@ -147,11 +143,11 @@ Ett arbetsflödespaket:
 
    * **Funktioner**
 
-     En lista över funktioner som ska aktiveras. Välj önskad(a) funktion(er) i listrutan.
+     En lista över funktioner som ska aktiveras. Välj önskade funktioner med hjälp av den nedrullningsbara väljaren.
 
    * **Inaktiverade funktioner**
 
-   En lista över funktioner som ska inaktiveras. Välj önskad(a) funktion(er) i listrutan.
+   En lista över funktioner som ska inaktiveras. Välj önskade funktioner med hjälp av den nedrullningsbara väljaren.
 
    * **Arbetsflödesmodell**
 
@@ -170,12 +166,12 @@ Ett arbetsflödespaket:
 
    * **Uteslut lista**
 
-     Detta anger alla JCR-händelser som ska exkluderas (d.v.s. ignoreras) när du avgör om ett arbetsflöde ska utlösas.
+     Detta anger alla JCR-händelser som ska uteslutas (d.v.s. ignoreras) när du avgör om ett arbetsflöde ska utlösas.
 
      Den här startegenskapen är en kommaavgränsad lista med objekt: &quot;
 
       * `property-name` ignorera `jcr` -händelse som utlöstes för det angivna egenskapsnamnet. &quot;
-      * `event-user-data:<*someValue*>` ignorerar alla händelser som innehåller `*<someValue*`> `user-data` genom [`ObservationManager` API](https://www.adobe.io/experience-manager/reference-materials/spec/jsr170/javadocs/jcr-2.0/javax/jcr/observation/ObservationManager.html#setUserData(java.lang.String.
+      * `event-user-data:<*someValue*>` ignorerar alla händelser som innehåller `*<someValue*`> `user-data` genom [`ObservationManager` API](https://developer.adobe.com/experience-manager/reference-materials/spec/jsr170/javadocs/jcr-2.0/javax/jcr/observation/ObservationManager.html#setUserData(java.lang.String).
 
      Till exempel:
 
@@ -187,7 +183,7 @@ Ett arbetsflödespaket:
 
 1. Välj **Skapa**, för att skapa startprogrammet och återgå till konsolen.
 
-   När en lämplig händelse inträffar aktiveras startprogrammet och arbetsflödet startas.
+   När den lämpliga händelsen inträffar aktiveras startprogrammet och arbetsflödet startas.
 
 ## Hantera en startkonfiguration {#managing-a-launcher-configuration}
 

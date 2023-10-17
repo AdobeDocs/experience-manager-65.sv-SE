@@ -1,14 +1,14 @@
 ---
 title: Konfigurera sökformulär
-description: Lär dig hur du konfigurerar Search Forms.
+description: Lär dig hur du använder Search Forms för att anpassa urvalet av sökpredikt som används i de sökpaneler som finns i AEM konsoler och paneler i författarmiljön.
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: operations
 content-type: reference
 exl-id: f82391d7-e30d-48d2-8f66-88fcae3dfb5f
-source-git-commit: 71b3f7c6ad2c7712762a29518de6cf0639081cb7
+source-git-commit: 06a6d4e0ba2aeaefcfb238233dd98e8bbd6731da
 workflow-type: tm+mt
-source-wordcount: '2067'
+source-wordcount: '2073'
 ht-degree: 1%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 1%
 
 Använd **Sök i Forms** om du vill anpassa urvalet av sökpredikat som används i de sökpaneler som finns i olika AEM och/eller paneler i redigeringsmiljön. När du anpassar panelerna blir sökfunktionen mångsidig efter dina specifika behov.
 
-A [predikatintervall](#predicates-and-their-settings)finns färdiga. Du kan lägga till flera predikat, bland annat egenskapspredikatet, om du vill söka efter resurser som matchar en enskild egenskap som du har angett, eller predikatet Alternativ om du vill söka efter resurser som matchar ett eller flera värden som du anger för en viss egenskap.
+A [predikatintervall](#predicates-and-their-settings)finns färdiga. Du kan lägga till flera predikat, bland annat egenskapspredikatet, för att söka efter resurser som matchar en enskild egenskap som du har angett. Alternativt kan du med Alternativ förutsäga att söka efter resurser som matchar ett eller flera värden som du anger för en viss egenskap.
 
 Du kan [konfigurera sökformulären](#configuring-your-search-forms) används i olika konsoler och i resursläsaren (när du redigerar sidor). The [dialogrutor för att konfigurera dessa formulär](#configuring-your-search-forms) kan nås via:
 
@@ -28,7 +28,7 @@ Du kan [konfigurera sökformulären](#configuring-your-search-forms) används i 
 
       * **Sökformulär**
 
-När du först öppnar den här konsolen ser du att alla konfigurationer har en hänglåssymbol. Det här anger att rätt konfiguration är standardkonfigurationen (färdig) och kan inte tas bort. När du har anpassat konfigurationen försvinner låset - såvida du inte [ta bort din anpassade konfiguration](#deleting-a-configuration-to-reinstate-the-default), i vilket fall standardinställningen (och hänglåsindikatorn) återställs.
+När du först öppnar den här konsolen ser du att alla konfigurationer har en hänglåssymbol. Det här anger att rätt konfiguration är standardkonfigurationen (färdig) och kan inte tas bort. När du har anpassat konfigurationen försvinner låset såvida du inte [ta bort din anpassade konfiguration](#deleting-a-configuration-to-reinstate-the-default). I så fall återställs standardinställningen (och hänglåsindikatorn).
 
 ![Fönstret Sök i formulär](assets/chlimage_1-374.png)
 
@@ -125,7 +125,7 @@ Följande predikat är tillgängliga, beroende på konfigurationen:
   </tr>
   <tr>
    <td>Komponenter </td>
-   <td>Gör att en författare kan söka efter/filtrera sidor som har en viss komponent på sig. Till exempel ett bildgalleri.<br /> </td>
+   <td>Gör att en författare kan söka efter/filtrera sidor som har en viss komponent på sig. Exempel: ett bildgalleri.<br /> </td>
    <td>
     <ul>
      <li>Fältetikett</li>
@@ -262,7 +262,7 @@ Följande predikat är tillgängliga, beroende på konfigurationen:
   </tr>
   <tr>
    <td>Intervallalternativ </td>
-   <td>Ett specifikt sökpredikat för Assets och samma som för vanliga Slider Predicate. Är fortfarande tillgängligt på grund av problem med bakåtkompatibilitet.</td>
+   <td>Ett specifikt sökpredikat för Assets och samma som för vanliga Slider Predicate. Är fortfarande tillgängligt på grund av bakåtkompatibilitetsproblem.</td>
    <td>
     <ul>
      <li>Fältetikett</li>
@@ -336,7 +336,7 @@ Följande predikat är tillgängliga, beroende på konfigurationen:
 >  `/libs/cq/gui/components/siteadmin/admin/searchpanel/searchpredicates`
 >   * Dessa är inaktuella och endast tillgängliga för bakåtkompatibilitet.
 >
->Den här informationen är endast avsedd som referens. Du får inte göra ändringar i `/libs`.
+>Informationen är endast avsedd som referens. Ändra inte `/libs`.
 
 ### Predikatinställningar {#predicate-settings}
 
@@ -376,7 +376,7 @@ Beroende på predikatet finns ett urval av inställningar tillgängliga för kon
 
 * **Alternativbana**
 
-  Användaren kan markera sökvägen med hjälp av Bandläsaren på fliken för predikatinställningar. När du har valt **+** -ikonen används för att lägga till markeringen i listan över giltiga alternativ (sedan **-** -ikonen som ska tas bort om det behövs).
+  Användaren kan markera sökvägen med hjälp av Bandläsaren på fliken för predikatinställningar. Efter markering **+**, används ikonen för att lägga till markeringen i listan över giltiga alternativ (och sedan **-** -ikonen som ska tas bort (om det behövs).
 
   Alternativen är innehållsnoder som skapas av användaren och som har följande struktur:
 
@@ -388,10 +388,10 @@ I praktiken samma som **Sökväg till alternativ**, det är bara det här som fi
 * **Enkel markering**
 Om det här alternativet är markerat återges alternativen som kryssrutor som bara tillåter ett urval. Om du av misstag markerar kryssrutan kan den avmarkeras.
 
-* **Egenskapsnamn för Publicera och Live-kopia**
+* **Egenskapsnamn för Publicera och Live Copy**
 Etiketterna för publicerings- och Live copy-kryssrutorna för platsspecifika predikat.
 
-* Det &amp;sista; på fältetiketterna i **Inställningar** -fliken betyder att fälten är obligatoriska och om de lämnas tomma visas ett felmeddelande
+* Det &amp;sista; på fältetiketterna i **Inställningar** -fliken innebär att fälten är obligatoriska och om de lämnas tomma visas ett felmeddelande.
 
 ## Konfigurera din sökning i Forms {#configuring-your-search-forms}
 
@@ -401,7 +401,7 @@ Etiketterna för publicerings- och Live copy-kryssrutorna för platsspecifika pr
 
 1. Välj den konfiguration som du vill anpassa.
 1. Använd **Redigera** -ikonen för att öppna konfigurationen för uppdatering.
-1. Om du gör en ny anpassning vill du antagligen [lägga till nya predikatfält och definiera inställningarna](#add-edit-a-predicate-field-and-define-field-settings) efter behov. Om en befintlig anpassning finns kan du välja ett befintligt fält och [uppdatera inställningarna](#add-edit-a-predicate-field-and-define-field-settings).
+1. Om du gör en ny anpassning vill du förmodligen [lägga till nya predikatfält och definiera inställningarna](#add-edit-a-predicate-field-and-define-field-settings) efter behov. Om du har en befintlig anpassning kan du välja ett befintligt fält och [uppdatera inställningarna](#add-edit-a-predicate-field-and-define-field-settings).
 1. Välj **Klar** för att spara konfigurationen.
 
    >[!NOTE]
@@ -416,15 +416,15 @@ Etiketterna för publicerings- och Live copy-kryssrutorna för platsspecifika pr
 Du kan lägga till eller redigera fält och definiera/uppdatera deras inställningar:
 
 1. [Öppna den anpassade konfigurationen](#creating-opening-a-customized-configuration) för uppdatering.
-1. Om du vill lägga till ett nytt fält öppnar du **Välj predikat** och dra predikatet till önskad plats. Till exempel **Prediktion för datumintervall**:
+1. Öppna dialogrutan **Välj predikat** och dra predikatet till önskad plats. Till exempel **Prediktion för datumintervall**:
 
    ![Redigera ett sökformulär](assets/chlimage_1-375.png)
 
 1. Beroende på om:
 
-   * Du lägger till ett nytt fält:
+   * Du lägger till ett fält:
 
-     När du har lagt till predikatet **Inställningar** öppnar och visar de egenskaper som kan definieras.
+     När du har lagt till predikatet **Inställningar** öppnas och visar de egenskaper som kan definieras.
 
    * Du vill uppdatera ett befintligt predikat:
 
@@ -446,7 +446,7 @@ Du kan lägga till eller redigera fält och definiera/uppdatera deras inställni
 
    ![Förhandsgranska sökformuläret](assets/chlimage_1-377.png)
 
-1. **Stäng** förhandsgranskningen för att returnera och slutföra konfigurationen.
+1. **Stäng** förhandsgranskningen så att du kan returnera och slutföra konfigurationen.
 
 ### Ta bort ett predikatfält {#deleting-a-predicate-field}
 
@@ -455,7 +455,7 @@ Du kan lägga till eller redigera fält och definiera/uppdatera deras inställni
 
    ![Ikonen Ta bort](do-not-localize/chlimage_1-32.png)
 
-1. En dialogruta begär att du bekräftar borttagningsåtgärden.
+1. En dialogruta begär en bekräftelse av borttagningsåtgärden.
 
 1. Bekräfta detta och andra ändringar med **Klar**.
 
@@ -477,13 +477,13 @@ En anpassad konfiguration tas bort från konsolen:
 
 ### Förutsägelser för tillägg av alternativ {#adding-options-predicates}
 
-Alternativpredikat (Alternativ, Alternativ-egenskap) gör att du kan konfigurera ett objekt som du vill söka efter. De används vanligtvis för att söka efter något direkt under sidan, till exempel en egenskap på sidnoden.
+Alternativpredikat (Alternativ, Alternativ-egenskap) gör att du kan konfigurera ett objekt som du vill söka efter. De används för att söka efter något direkt under sidan, till exempel en egenskap på sidnoden.
 
 I följande exempel (som används för att söka efter mallen som används för att skapa en sida) visas stegen som ingår:
 
 1. Skapa noden som definierar den egenskap som du vill söka efter.
 
-   Du måste ha en rotnod som innehåller definitioner av de enskilda alternativen för att vara tillgängliga för användaren.
+   Du behöver en rotnod som innehåller definitioner av de enskilda alternativen för att vara tillgängliga för användaren.
 
    Noderna för de enskilda alternativen behöver egenskaperna:
 
@@ -494,7 +494,7 @@ I följande exempel (som används för att söka efter mallen som används för 
 
    >[!NOTE]
    >
-   >Du ***måste*** ändrar ingenting i dialogrutan `/libs` bana.
+   >Gör ***not*** ändra något i `/libs` bana.
    >
    >Detta beror på innehållet i `/libs` skrivs över nästa gång du uppgraderar din instans (och kan mycket väl skrivas över när du installerar en snabbkorrigering eller ett funktionspaket).
    >
@@ -526,7 +526,7 @@ I följande exempel (som används för att söka efter mallen som används för 
    ![Lägga till egenskapssökväg](assets/chlimage_1-380.png)
 
 1. Välj **Klar** för att spara konfigurationen.
-1. Navigera till rätt konsol (i det här exemplet **Webbplatser**) och öppna **Sök** järnväg. De nya sökformulären, tillsammans med de olika alternativen, visas. Välj önskat alternativ för att visa sökresultaten:
+1. Navigera till rätt konsol (i det här exemplet **Webbplatser**) och öppna **Sök** järnväg. De nya sökformulären, tillsammans med de olika alternativen, visas. Välj önskat alternativ så att du kan se sökresultaten:
 
    ![Slutresultaten](assets/chlimage_1-381.png)
 

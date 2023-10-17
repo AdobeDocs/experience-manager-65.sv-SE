@@ -1,14 +1,14 @@
 ---
 title: Startar AEM PhoneGap
-description: Läs mer om starterkit för utvecklare.
+description: Lär dig hur du använder startsatsen för att komma igång med grunderna i Adobe Experience Manager Mobile utveckling.
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-adobe-phonegap-enterprise
 exl-id: 7d56b9f0-5aa5-4b68-a85e-7e80415cbc76
-source-git-commit: 260f71acd330167572d817fdf145a018b09cbc65
+source-git-commit: 06a6d4e0ba2aeaefcfb238233dd98e8bbd6731da
 workflow-type: tm+mt
-source-wordcount: '396'
+source-wordcount: '413'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ För utvecklare är det bästa att börja med att titta på Adobe Experience Man
 
 https://github.com/Adobe-Marketing-Cloud-Apps/aem-phonegap-starter-kit
 
-Starterkit hjälper dig att komma igång snabbt genom grunderna i AEM Mobile utveckling, med början när du skapar och styr projekt, installerar nödvändiga verktyg, definierar en Maven-arkityp, bygger, driftsätter och sedan skapar du en egen upplevelse.
+Starterkit hjälper dig att snabbt komma igång genom grunderna i AEM Mobile utveckling. Det börjar med att skapa och styra projekt, installera nödvändiga verktyg, definiera en Maven-arkityp, bygga, driftsätta och sedan skapa en egen upplevelse.
 
 Utvecklarna kan använda det här exemplet som utgångspunkt för att testa ett AEM Mobile-program med PhoneGap. Genom att gå igenom startpaketet och referensprogrammet får du en god förståelse för grunderna för att skapa avancerade mobilprogram.
 
@@ -34,11 +34,11 @@ Utvecklarna kan använda det här exemplet som utgångspunkt för att testa ett 
 
 >[!NOTE]
 >
->När du har haft en chans att bekanta dig med startpaketet är det viktigt att du lär dig mer om Adobe Experience Manager *-komponenter och -mallar.*
+>När du har haft en chans att bekanta dig med startpaketet är det viktigt att du lär dig mer om Adobe Experience Manager *komponenter och mallar.*
 
 ## Mallar och komponenter {#templates-and-components}
 
-AEM *Mallar* och *Komponenter* gör det möjligt för affärsområdeschefer att skapa anpassade upplevelser. Båda *mallarna *och *Komponenter* finns att få direkt eller kan utvecklas av dig, antingen genom att utöka befintliga komponenter eller genom att skapa grönfält (avancerat). *Mallar* och *Komponenter* gör att AEM Author kan dra och släppa för att skapa engagerande och relevanta upplevelser.
+AEM *Mallar* och *Komponenter* gör det möjligt för företagsägare att skapa anpassade upplevelser. Båda *mallarna *och *Komponenter* finns att få direkt eller kan utvecklas av dig, antingen genom att utöka befintliga komponenter eller genom att skapa grönfält (avancerat). *Mallar* och *Komponenter* gör det möjligt för AEM författare att dra och släppa för att skapa engagerande och relevanta upplevelser.
 
 1. [Skapa komponenter](/help/sites-developing/components.md)
 1. [Skapa mallar](/help/sites-developing/templates.md)

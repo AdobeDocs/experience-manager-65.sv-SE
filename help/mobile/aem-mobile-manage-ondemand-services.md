@@ -1,18 +1,14 @@
 ---
 title: Förhandsgranska med Preflight
-seo-title: Previewing with Preflight
-description: Den här sidan förklarar Förhandsvisa med Preflight-appen.
-seo-description: With the Mobile On Demand Preflight app, you can view all projects to which you have access. Follow this page to learn more about this.
-uuid: bea83055-8172-4634-88ec-5d3f163ad8e0
+description: Lär dig använda preflight-appen Mobile On-Demand så att du kan visa alla projekt som du har tillgång till.
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: administering-on-demand-services-app
-discoiquuid: c08729f6-1512-4aee-82bb-7cc05749a72f
 exl-id: 5d2b9743-9601-46e6-9d73-3bf734e04a30
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 06a6d4e0ba2aeaefcfb238233dd98e8bbd6731da
 workflow-type: tm+mt
-source-wordcount: '260'
+source-wordcount: '271'
 ht-degree: 1%
 
 ---
@@ -27,7 +23,7 @@ Den här sidan förklarar Förhandsvisa med Preflight-appen.
 
 Följande åtgärder utförs i programmet som helhet.
 
-Med preflight-appen Mobile On Demand kan du visa alla projekt som du har tillgång till. När du har valt ett projekt kan du sedan förhandsgranska programinnehållet, inklusive bläddra bland sidor och artiklar för att få en uppfattning om hur programmet ser ut och fungerar på olika enheter.
+Med preflight-appen Mobile On-Demand kan du visa alla projekt som du har tillgång till. När du har valt ett projekt kan du sedan förhandsgranska programinnehållet, inklusive bläddra bland sidor och artiklar, för att få en uppfattning om hur programmet ser ut och fungerar på olika enheter.
 
 >[!NOTE]
 >
@@ -39,7 +35,7 @@ Med preflight-appen Mobile On Demand kan du visa alla projekt som du har tillgå
 1. Klicka på ellipsen (..) på menyn **Hantera artiklar** (eller Banners/Collections).
 1. Välj **Preflight** i åtgärdsfältet.
 1. Klicka **Aktivera preflight** i dialogrutan.
-1. Du kan nu förhandsgranska ditt program i preflight-appen Mobile On-Demand.
+1. Din app är nu klar för förhandsgranskning i preflight-appen Mobile On-Demand.
 
 ![chlimage_1-8](assets/chlimage_1-8.gif)
 
@@ -48,7 +44,7 @@ Med preflight-appen Mobile On Demand kan du visa alla projekt som du har tillgå
 >AEM Preflight-appen används för att förhandsgranska innehåll och bläddra bland sidor. Om du vill veta mer om Preflight-appen klickar du [här](https://helpx.adobe.com/digital-publishing-solution/help/aem-mobile-end-of-life-faq.html).
 >
 
-### Komma framåt {#getting-ahead}
+### Komma i förväg {#getting-ahead}
 
 Om du fortfarande behöver mer information om hur du skapar innehåll kan du läsa följande resurser för att skapa och hantera innehåll i ett AEM Mobile-program:
 
