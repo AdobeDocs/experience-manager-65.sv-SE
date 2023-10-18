@@ -1,20 +1,16 @@
 ---
 title: Användarsynkronisering för Communities
-seo-title: Communities User Synchronization
-description: Så här fungerar användarsynkronisering
-seo-description: How user synchronization works
-uuid: 772b82bd-a66c-4c1d-b80b-dcff77c873a3
+description: Läs om hur användarsynkronisering fungerar i Adobe Experience Manager Communities.
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
 topic-tags: administering
 content-type: reference
-discoiquuid: 97286c2c-f6e3-43ec-b1a9-2abb58616778
 docset: aem65
 role: Admin
 exl-id: ecd30f5d-ad31-4482-96d3-c92f1cf91336
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 00b6f2f03470aca7f87717818d0dfcd17ac16bed
 workflow-type: tm+mt
-source-wordcount: '2481'
+source-wordcount: '2471'
 ht-degree: 1%
 
 ---
@@ -23,65 +19,63 @@ ht-degree: 1%
 
 ## Introduktion {#introduction}
 
-I AEM Communities, från publiceringsmiljön (beroende på konfigurerade behörigheter), *webbplatsbesökare* kan bli *medlemmar*, skapa *användargrupper* och redigera *medlemsprofil* .
+I Adobe Experience Manager (AEM) Communities, från publiceringsmiljön (beroende på vilka behörigheter som har konfigurerats), *webbplatsbesökare* kan bli *medlemmar*, skapa *användargrupper* och redigera *medlemsprofil* .
 
-*Användardata* är en term som används för att referera till *användare*, *användarprofiler* och *användargrupper*.
+*Användardata* refererar till *användare*, *användarprofiler* och *användargrupper*.
 
-*Medlemmar* är en term som används för att referera till *användare* som är registrerade i publiceringsmiljön, till skillnad från användare som är registrerade i författarmiljön.
+*Medlemmar* referera till *användare* som är registrerade i publiceringsmiljön, till skillnad från användare som är registrerade i författarmiljön.
 
 Mer information om användardata finns på [Hantera användare och användargrupper](/help/communities/users.md).
 
 ## Synkronisera användare i en publiceringsgrupp {#synchronizing-users-across-a-publish-farm}
 
-Användardata som skapats i publiceringsmiljön visas inte i författarmiljön.
+Användardata som har skapats i publiceringsmiljön visas inte i redigeringsmiljön.
 
 De flesta användardata som skapas i redigeringsmiljön är avsedda att finnas kvar i redigeringsmiljön och är inte synkroniserade eller replikerade till publiceringsinstanser.
 
-När [topologi](/help/communities/topologies.md) är en [publicera servergrupp](/help/sites-deploying/recommended-deploys.md#tarmk-farm)måste registrering och ändringar som görs i en publiceringsinstans synkroniseras med andra publiceringsinstanser. Medlemmar måste kunna logga in och se sina data på valfri publiceringsnod.
+När [topologi](/help/communities/topologies.md) är en [publicera servergrupp](/help/sites-deploying/recommended-deploys.md#tarmk-farm), registrering och ändringar som görs i en publiceringsinstans måste synkroniseras med andra publiceringsinstanser. Medlemmar måste kunna logga in och se sina data på valfri publiceringsnod.
 
 När användarsynkronisering är aktiverat synkroniseras användardata automatiskt mellan publiceringsinstanserna i servergruppen.
 
 ### Instruktioner för användarsynkronisering {#user-sync-setup-instructions}
 
-Detaljerade stegvisa instruktioner om hur du aktiverar synkronisering i en publiceringsgrupp finns i:
+Detaljerade stegvisa instruktioner om hur du aktiverar synkronisering i en publiceringsgrupp finns i [Användarsynkronisering](/help/sites-administering/sync.md).
 
-* [Användarsynkronisering](/help/sites-administering/sync.md)
-
-## Användarsynkronisering i bakgrunden  {#user-sync-in-the-background}
+## Användarsynkronisering i bakgrunden {#user-sync-in-the-background}
 
 ![sling-dist-workflow](assets/sling-dist-workflow.png)
 
 * **vlt-paket**
 
-  Det är en zip-fil över alla ändringar som gjorts i en utgivare, som måste distribueras mellan olika utgivare. Ändringar på en utgivare genererar händelser som plockas av händelseavlyssnaren för ändring. Detta skapar ett virtuellt paket som innehåller alla ändringar.
+  Det är en zip-fil med alla ändringar som görs i en utgivare, som måste distribueras mellan olika utgivare. Ändringar på en utgivare genererar händelser som plockas av händelseavlyssnaren för ändring. Detta skapar ett virtuellt paket som innehåller alla ändringar.
 
 * **distributionspaket**
 
-  Det innehåller distributionsinformation för Sling. Det är information om var innehållet behöver distribueras och när distribuerades det senast.
+  Det innehåller distributionsinformation för Sling. Det är information om var innehållet ska distribueras och när det senast distribuerades.
 
 ## Vad händer när ... {#what-happens-when}
 
 ### Publicera webbplats från webbgruppskonsolen {#publish-site-from-communities-sites-console}
 
-Om en författare, när en communitywebbplats publiceras från [Konsolen Webbplatser i Communities](/help/communities/sites-console.md), är effekten [replikera](/help/sites-deploying/configuring.md#replication-reverse-replication-and-replication-agents) tillhörande sidor och Sling distribuerar dynamiskt skapade användargrupper, inklusive deras medlemskap.
+On Author, when a community site is published from the [Konsolen Webbplatser i Communities](/help/communities/sites-console.md), är effekten [replikera](/help/sites-deploying/configuring.md#replication-reverse-replication-and-replication-agents) tillhörande sidor och Sling distribuerar dynamiskt skapade användargrupper, inklusive deras medlemskap.
 
 ### Användaren har skapats eller redigerar profilen vid publicering {#user-is-created-or-edits-profile-on-publish}
 
-Användare och profiler som skapas i publiceringsmiljön (t.ex. genom självregistrering, social inloggning, LDAP-autentisering) visas inte i författarmiljön.
+Användare och profiler som skapats i publiceringsmiljön (t.ex. genom självregistrering, social inloggning, LDAP-autentisering) visas inte i redigeringsmiljön.
 
 När topologin är [publicera servergrupp](/help/communities/topologies.md) och användarsynkroniseringen har konfigurerats korrekt, *användare* och *användarprofil* synkroniseras över hela publiceringsgruppen med Sling-distribution.
 
 ### Ny community-grupp skapas vid publicering {#new-community-group-is-created-on-publish}
 
-Även om det initieras från en publiceringsinstans skapas communitygrupper, vilket resulterar i nya webbplatssidor och en ny användargrupp, i själva verket på författarinstansen.
+Även om det initieras från en Publish-instans skapas communitygrupper, vilket resulterar i nya webbplatssidor och en ny användargrupp, i själva verket på Author-instansen.
 
 Som en del av processen replikeras de nya webbplatssidorna till alla publiceringsinstanser. Den dynamiskt skapade användargruppen och dess medlemskap distribueras till alla publiceringsinstanser.
 
 ### Användare eller användargrupper skapas med säkerhetskonsolen {#users-or-user-groups-are-created-using-security-console}
 
-Användardata som skapas i publiceringsmiljön visas inte som avsett i redigeringsmiljön och omvänt.
+Användardata som skapats i publiceringsmiljön visas inte i redigeringsmiljön och omvänt.
 
-När [Användaradministration och -säkerhet](/help/sites-administering/security.md) konsolen används för att lägga till nya användare i publiceringsmiljön. Om det behövs synkroniseras de nya användarna och deras gruppmedlemskap med andra publiceringsinstanser. Användarsynkronisering synkroniserar även användargrupper som skapats via säkerhetskonsolen.
+När [Användaradministration och -säkerhet](/help/sites-administering/security.md) konsolen används för att lägga till nya användare i publiceringsmiljön, användarsynkronisering synkroniserar nya användare och deras gruppmedlemskap med andra publiceringsinstanser om det behövs. Användarsynkronisering synkroniserar även användargrupper som skapats via säkerhetskonsolen.
 
 ### Användaren publicerar innehåll vid publicering {#user-posts-content-on-publish}
 
@@ -91,13 +85,13 @@ För användargenererat innehåll (UGC) nås data som anges i en publiceringsins
 
 Som standard är användarsynkronisering **inaktiverad**. Att aktivera användarsynkronisering innebär att ändra *befintlig* OSGi-konfigurationer. Inga nya konfigurationer ska läggas till som ett resultat av aktivering av användarsynkronisering.
 
-Användarsynkronisering förlitar sig på redigeringsmiljön för att hantera distributionen av användardata, även om användardata inte har skapats för författaren.
+Användarsynkronisering förlitar sig på redigeringsmiljön för att hantera distributionen av användardata, även om användardata inte skapas på författaren.
 
 **Förutsättningar**
 
 1. Om användare och användargrupper redan har skapats på en utgivare bör du [synka manuellt](/help/sites-administering/sync.md#manually-syncing-users-and-user-groups) användardata till alla utgivare innan de konfigurerar och aktiverar användarsynkronisering.
 
-   När användarsynkroniseringen är aktiverad synkroniseras endast nyskapade användare och grupper.
+   När användarsynkronisering har aktiverats synkroniseras endast nyskapade användare och grupper.
 
 1. Kontrollera att den senaste koden har installerats:
 
@@ -207,7 +201,7 @@ Så här ser du till att medlemskapet synkroniseras:
 
 Med den här konfigurationen kan du konfigurera avsökningsintervallet (efter vilket utgivare pingas och ändringar hämtas av författaren) så att ändringarna synkroniseras mellan utgivare.
 
-Författaren avfrågar utgivare var 30:e sekund (standard). Om det finns några paket i mappen `/var/sling/distribution/packages/  socialpubsync -  vlt /shared`, hämtar det paketen och installerar dem på andra utgivare.
+Författaren avfrågar utgivare var 30:e sekund (standard). Om det finns några paket i mappen `/var/sling/distribution/packages/  socialpubsync -  vlt /shared`hämtar och installerar det paketen på andra utgivare.
 
 Så här ändrar du avsökningsintervallet:
 
@@ -283,14 +277,14 @@ AEM författarinstans använder Sling ID för att identifiera varifrån data kom
 
 Se till att alla utgivare i en publiceringsgrupp har ett unikt Sling ID. Om Sling ID är samma för flera publiceringsinstanser i en publiceringsgrupp misslyckas användarsynkroniseringen. Eftersom författaren inte vet var paketet ska hämtas och var paketet ska installeras.
 
-För att säkerställa ett unikt Sling-ID för utgivaren i publiceringsgruppen, på varje publiceringsinstans:
+För att säkerställa ett unikt Sling ID för utgivaren i publiceringsgruppen ska du göra följande i varje publiceringsinstans:
 
 1. Bläddra till [https://_värd:port_/system/console/status-slingssettings](https://localhost:4503/system/console/status-slingsettings).
 1. Kontrollera värdet för **Sling-ID**.
 
    ![slingid](assets/slingid.png)
 
-   Om Sling ID för en publiceringsinstans matchar Sling ID för någon annan publiceringsinstans:
+   Om Sling ID för en Publish-instans matchar Sling ID för någon annan Publish-instans:
 
 1. Stoppa en av publiceringsinstanserna som har ett matchande Sling-ID.
 1. I `crx-quickstart/launchpad/felix` katalog, söka efter och ta bort filen med namnet *sling.id.file*
@@ -303,7 +297,7 @@ För att säkerställa ett unikt Sling-ID för utgivaren i publiceringsgruppen, 
 
    Använd Utforskaren och sök efter `sling.id.file`
 
-1. Starta publiceringsinstansen. Vid start tilldelas den ett nytt Sling ID.
+1. Starta Publish-instansen. Vid start tilldelas den ett nytt Sling ID.
 1. Verifiera att **Sling-ID** är nu unikt.
 
 Upprepa dessa steg tills alla publiceringsinstanser har ett unikt Sling ID.
@@ -315,7 +309,7 @@ I `/home/users`, a `*/rep:cache` noden skapas. Det är ett cacheminne som använ
 
 Användarsynkroniseringen kan avbrytas om `rep :cache` noder synkroniseras mellan olika utgivare.
 
-Så här ser du till att uppdateringarna synkroniseras korrekt mellan olika utgivare för varje AEM publiceringsinstans:
+För att se till att uppdateringarna synkroniseras korrekt mellan olika utgivare, i varje AEM publiceringsinstans:
 
 1. Öppna [Webbkonsol](/help/sites-deploying/configuring-osgi.md)
 
@@ -357,7 +351,7 @@ Om Sling-distributionen misslyckas provar du följande felsökningssteg:
 
 1. **Kontrollera konfigurationen för AEM Communities användarsynkroniseringsavlyssnare.** Om de användare som skapas synkroniseras men prenumerationer och följande inte fungerar kontrollerar du att konfigurationen för AEM Communities användarsynkroniseringsavlyssnaren har:
 
-   * Nodtyper - inställda på **rep:User, nt:undefined**, **nt:resource**, **rep:ACL**, **sling:mapp** och **sling:OrderedFolder**.
+   * Nodtyper - inställda på **rep:User, nt:undefined**, **nt:resurs**, **rep:ACL**, **sling:mapp** och **sling:OrderedFolder**.
    * Ignorerbara noder - inställd på **.tokens**, **system** och **rep:cache**.
    * Distribuerade mappar - Ange de mappar som du vill distribuera.
 
@@ -388,13 +382,13 @@ Felsök:
    1. Leta reda på konfigurationen **Apache Sling Distribution Agent - Sync Agents Factory**.
    1. Avmarkera **Aktiverad** kryssruta.
 
-      När användarsynkroniseringen inaktiveras på författarinstansen inaktiveras slutpunkterna (exporteraren och importören) och författarinstansen är statisk. The **vlt** paket varken pingas eller hämtas av författaren.
+      När användarsynkroniseringen inaktiveras för Author-instansen (exporteraren och importören) inaktiveras slutpunkterna och Author-instansen är statisk. The **vlt** paket varken pingas eller hämtas av författaren.
 
       Om en användare skapas på en publiceringsinstans **vlt** paketet skapas i */var/sling/distribution/packages/social pubsync - vlt /data* nod. Och om de här paketen skickas av författaren till en annan tjänst. Du kan hämta och extrahera dessa data för att kontrollera vilka egenskaper som skickas till andra tjänster.
 
 1. Gå till en utgivare och skapa en användare på utgivaren. Därför skapas händelser.
-1. Kontrollera [loggordning](/help/communities/sync.md#troubleshoot-sling-distribution-in-aem-communities), som skapades när användaren skapades.
+1. Kontrollera [loggordning](/help/communities/sync.md#troubleshoot-sling-distribution-in-aem-communities) som skapades när användaren skapades.
 1. Kontrollera om en **vlt** paketet skapas på **/var/sling/distribution/packages/socialpubsync-vlt/data**.
-1. Aktivera nu användarsynkronisering för AEM författarinstans.
+1. Aktivera nu användarsynkronisering på AEM Author-instansen.
 1. I utgivaren ändrar du export- eller importslutpunkterna i **Apache Sling Distribution Agent - Sync Agents Factory**.
 Vi kan hämta och extrahera paketdata för att kontrollera vilka egenskaper som skickas till andra utgivare och vilka data som går förlorade.

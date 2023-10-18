@@ -1,19 +1,15 @@
 ---
 title: Lagringskonfiguration
-seo-title: Storage Configuration
-description: Åtkomst till lagringskonsolen
-seo-description: How to access the Storage Configuration Console
-uuid: 6a5a71d5-6aaa-4635-8852-4dae33c497a9
+description: Lär dig mer om lagringskonsolen som ett sätt att identifiera det lagringsutrymme som valts för communityinnehåll, vilket också kallas användargenererat innehåll.
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: administering
 content-type: reference
-discoiquuid: 71fac7e9-814a-48b5-b816-9bdcb2a05190
 role: Admin
 exl-id: 67de7e26-3f93-4034-9e3a-5c127f7447bc
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+source-git-commit: 00b6f2f03470aca7f87717818d0dfcd17ac16bed
 workflow-type: tm+mt
-source-wordcount: '194'
+source-wordcount: '205'
 ht-degree: 0%
 
 ---
@@ -22,7 +18,7 @@ ht-degree: 0%
 
 Lagringskonfiguration är ett sätt att identifiera det lagringsutrymme som valts för communityinnehåll, som också kallas användargenererat innehåll (UGC).
 
-Den här inställningen informerar AEM Communities-koden om vilken implementering av lagringsresursprovidern som ska användas vid åtkomst till UGC och måste återspegla den topologi som fastställdes när AEM distribuerades.
+Den här inställningen informerar AEM Communities-koden om vilken implementering av lagringsresursprovidern (SRP) som används vid åtkomst till UGC. Den måste återspegla den topologi som fastställdes när Adobe Experience Manager (AEM) distribuerades.
 
 En diskussion om lagringsalternativ och driftsättningstopologier finns på:
 
@@ -33,28 +29,28 @@ En diskussion om lagringsalternativ och driftsättningstopologier finns på:
 
 ![jsrp-configuration](assets/jsrp-configuration.png)
 
-För att nå lagringskonsolen i redigeringsmiljön.
+I redigeringsmiljön kommer du till lagringskonsolen.
 
-* Från global navigering väljer du **[!UICONTROL Tools]** > **[!UICONTROL Communities]** > **[!UICONTROL Storage Configuration]**
+* Välj **[!UICONTROL Tools]** > **[!UICONTROL Communities]** > **[!UICONTROL Storage Configuration]**
 
 Så här väljer du ett annat lagringsalternativ än standard-JCR:
 
 * Välj ett alternativ
 * Konfigurera korrekt
 
-   * Mer information finns i [välja MSRP](msrp.md#select-msrp)
-   * Mer information finns i [välja DSRP](dsrp.md#select-dsrp)
-   * Mer information finns i [markera ASRP](asrp.md#select-asrp)
+   * Mer information finns [välja MSRP](msrp.md#select-msrp)
+   * Mer information finns [välja DSRP](dsrp.md#select-dsrp)
+   * Mer information finns [markera ASRP](asrp.md#select-asrp)
 
 * Välj **[!UICONTROL Submit]**.
 
 ### Om JCR-lagring {#about-jcr-storage}
 
-Observera att om inget val görs är standarddatabasen AEM JCR.
+Om du inte gör något är standarddatabasen AEM JCR.
 
-JCR är *not* en gemensam lagringsplats som delas av författaren och publiceringsmiljöer. Community-innehåll visas bara i den författar- eller publiceringsmiljö där det skapades.
+JCR är *not* en gemensam butik som delas av redigerings- och publiceringsmiljöerna. Community-innehåll visas bara i författar- eller publiceringsmiljön som det skapades i.
 
-Besök [JCR Store](jsrp.md) för ytterligare information.
+Besök [JCR Store](jsrp.md) om du vill ha mer information.
 
 >[!NOTE]
 >

@@ -1,6 +1,6 @@
 ---
 title: Konsolen Webbplatser
-description: Åtkomst till konsolen Communities Sites
+description: Lär dig hur du använder konsolen Webbplatser för att skapa, redigera och hantera webbplatser.
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: administering
@@ -8,9 +8,9 @@ content-type: reference
 docset: aem65
 role: Admin
 exl-id: 426e3adf-3723-4d17-a988-6eb050939e68
-source-git-commit: ab3d016c7c9c622be361596137b150d8719630bd
+source-git-commit: 00b6f2f03470aca7f87717818d0dfcd17ac16bed
 workflow-type: tm+mt
-source-wordcount: '3080'
+source-wordcount: '3087'
 ht-degree: 0%
 
 ---
@@ -49,7 +49,7 @@ Det bästa sättet att se till att webbplatsen är förberedd för många funkti
 
 ## Åtkomst till webbgruppskonsolen {#accessing-communities-sites-console}
 
-För att nå konsolen Webbplatser i författarmiljön:
+Om du vill nå konsolen Webbplatser i redigeringsmiljön:
 
 * Från global navigering: **[!UICONTROL Communities]** > **[!UICONTROL Sites]**
 
@@ -475,7 +475,7 @@ Det finns en indikation när webbplatsen har publicerats.
 
 ### Publicera med kapslade grupper {#publishing-with-nested-groups}
 
-Efter publicering av en communitywebbplats är det nödvändigt att publicera varje undergrupp (kapslad grupp) som skapats med [Gruppkonsol](/help/communities/groups.md).
+Efter publicering av en community-webbplats är det nödvändigt att publicera varje undergrupp (kapslad grupp) som skapats med [Gruppkonsol](/help/communities/groups.md).
 
 ## Exportera platsen {#exporting-the-site}
 

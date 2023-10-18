@@ -1,20 +1,16 @@
 ---
 title: Moderating Community Content
-seo-title: Moderating Community Content
-description: Moderniseringskoncept och åtgärder
-seo-description: Moderation concepts and actions
-uuid: 5c991d3a-0037-4d78-8f91-bb62e44441fa
+description: Lär dig att moderera användargenererat innehåll så att du kan identifiera positiva bidrag och begränsa negativa, som skräppost och stötande språk.
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: administering
 content-type: reference
-discoiquuid: 6866d209-5789-4ef9-bc3c-d644d4fb4b1c
 docset: aem65
 role: Admin
 exl-id: 22276580-e6bc-41c5-9ac3-e8f291f676b7
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: 00b6f2f03470aca7f87717818d0dfcd17ac16bed
 workflow-type: tm+mt
-source-wordcount: '1509'
+source-wordcount: '1510'
 ht-degree: 0%
 
 ---
@@ -23,7 +19,7 @@ ht-degree: 0%
 
 ## Översikt {#overview}
 
-Community-innehåll, som också kallas användargenererat innehåll (UGC), skapas när en medlem (inloggad besökare) publicerar innehåll från en publicerad community-webbplats genom interaktion med någon av följande communitykomponenter:
+Community-innehåll, som också kallas användargenererat innehåll (UGC), skapas när en medlem (inloggad besökare) publicerar innehåll från en publicerad communitywebbplats genom interaktion med någon av följande communitykomponenter:
 
 * [Blogg](/help/communities/blog-feature.md): medlemmar skickar en bloggartikel eller kommentar.
 * [Kalender](/help/communities/calendar.md): medlemmar publicerar en kalenderhändelse eller kommentar.
@@ -34,13 +30,13 @@ Community-innehåll, som också kallas användargenererat innehåll (UGC), skapa
 * [QnA](/help/communities/working-with-qna.md): -medlemmar skapar en fråga eller besvarar en fråga.
 * [Recensioner](/help/communities/reviews.md): medlemmar publicerar en kommentar när de klassificerar ett objekt.
 
-Moderering av användargenererat innehåll är användbart för att redovisa positiva bidrag och begränsa negativa bidrag (t.ex. skräppost och missbruk). UGC kan modereras från flera miljöer:
+Moderering av användargenererat innehåll är användbart för erkännande av positiva bidrag och begränsning av negativa bidrag (t.ex. skräppost och missbruk). UGC kan modereras från flera miljöer:
 
 * [Community-innehållslagring](working-with-srp.md)
 
 * [Konsol för massmoderering](moderation.md)
 
-  Moderationskonsolen är tillgänglig för administratörer och [community-moderatorer](/help/communities/users.md) i den offentliga miljön samt av administratörer i författarmiljön. Detta är möjligt när communityinnehåll lagras i en [gemensam lagringsplats](/help/communities/working-with-srp.md).
+  Moderationskonsolen är tillgänglig för administratörer och [community-moderatorer](/help/communities/users.md) i den offentliga miljön och av administratörer i författarmiljön. Detta är möjligt när communityinnehåll lagras i en [gemensam lagringsplats](/help/communities/working-with-srp.md).
 
 * [Kontextanpassad moderering](in-context.md)
 
@@ -185,9 +181,9 @@ När det är stängt är det inte bara möjligt att svara vidare, inga modererin
 
 Flaggning är ett sätt för alla inloggade medlemmar, förutom den som skapat innehållet, att ange att det finns ett problem med innehållet i ett inlägg. När innehållet har flaggats visas en avflaggikon som gör att samma medlem kan avflagga innehållet.
 
-Kontextmoderering kan konfigureras så att medlemmar kan välja en orsak när de flaggar ett inlägg. Listan med valbara flaggorsaker kan konfigureras, inklusive om en anpassad orsak kan anges eller inte. Flaggorsaken sparas med användargenererat innehåll, men orsaken utlöser inte någon särskild åtgärd. Endast antalet flaggor utlöser ett meddelande. Flaggat innehåll kommenteras som sådant, så att moderatorerna kan agera på det.
+Kontextmoderering kan konfigureras så att medlemmar kan välja en orsak när de flaggar ett inlägg. Listan med valbara flaggorsaker kan konfigureras, inklusive om en anpassad orsak kan anges. Flaggorsaken sparas med användargenererat innehåll, men orsaken utlöser inte någon särskild åtgärd. Endast antalet flaggor utlöser ett meddelande. Flaggat innehåll kommenteras som sådant, så att moderatorerna kan agera på det.
 
-Systemet håller reda på alla flaggor, vem som har flaggats, och flaggorsaken och skickar en händelse när tröskelvärdet har uppnåtts. Om användargenererat innehåll tillåts av en community-moderator arkiveras dessa flaggor. Om det finns efterföljande flaggningar efter att de har godkänts och arkiverats, arkiveras de som om det inte hade funnits några tidigare flaggningar.
+Systemet spårar alla flaggor, vem som har flaggats, och flaggorsaken och skickar en händelse när tröskelvärdet har uppnåtts. Om användargenererat innehåll tillåts av en community-moderator arkiveras dessa flaggor. Om det finns efterföljande flaggningar efter att de har godkänts och arkiverats, arkiveras de som om det inte hade funnits några tidigare flaggningar.
 
 ### Tillåt {#allow}
 
@@ -197,7 +193,7 @@ Systemet håller reda på alla flaggor, vem som har flaggats, och flaggorsaken o
 
 ### Förmoderering {#premoderation}
 
-När UGC är förmodererat visas inte inlägget på den publicerade webbplatsen förrän det har godkänts av en modereringsåtgärd. När en [communitywebbplats](/help/communities/sites-console.md), markerar kryssrutan [Innehållet är förmodererat](sites-console.md#moderation) aktiverar förmoderering för hela webbplatsen. När komponenter har placerats på en sida kan komponenter som stöder moderering konfigureras för förmoderering med en inställning i redigeringsdialogrutan:
+När UGC är förmodererat visas inte inlägget på den publicerade webbplatsen förrän det har godkänts av en modereringsåtgärd. När en [communitywebbplats](/help/communities/sites-console.md), markerar kryssrutan [Innehållet är förmodererat](sites-console.md#moderation) aktiverar förmoderering för hela webbplatsen. När komponenter placeras på en sida kan komponenter som stöder moderering konfigureras för förmoderering med en inställning i redigeringsdialogrutan:
 
 * [Kommentar](comments.md) och [recensioner](reviews.md)
 in **[!UICONTROL User Moderation]** > **[!UICONTROL Pre-Moderation]**.
@@ -207,11 +203,11 @@ in **[!UICONTROL Settings]** > **[!UICONTROL Moderated]**.
 
 ### Skräppostidentifiering {#spam-detection}
 
-Skräppostavkänning är en automatisk modereringsfunktion som filtrerar bort oönskade delar av skickat användargenererat innehåll genom att markera dem som skräppost. När det är aktiverat identifieras om ett användargenererat innehåll är skräppost eller inte baserat på en förkonfigurerad samling skräppost. Standardord för skräppost finns på
+Skräppostavkänning är en automatisk modereringsfunktion som filtrerar bort oönskade delar av skickat användargenererat innehåll genom att markera dem som skräppost. När det är aktiverat identifieras om ett användargenererat innehåll är skräppost eller inte baserat på en förkonfigurerad samling skräppostord. Standardord för skräppost finns på
 
 `/libs/settings/community/sites/moderation/spamdetector-conf/profiles/spam_words.txt`.
 
-Men om du vill anpassa eller utöka standardskräppost skapar du en uppsättning ord i katalogen /apps efter strukturen för standardskräppostorden med hjälp av [övertäckning](/help/communities/overlay-comments.md).
+Om du vill anpassa eller utöka standardskräppost skapar du en uppsättning ord i katalogen /apps efter strukturen för standardskräppostorden med [övertäckning](/help/communities/overlay-comments.md).
 
 Ett användargenererat inlägg (i alla innehållstyper, t.ex. bloggar, forum och kommentarer) som innehåller skräppostord markeras med texten&quot;Det här inlägget klassificerades som skräppost&quot; ovanför inlägget.
 
@@ -230,13 +226,13 @@ Följ de här stegen för att aktivera skräppostavkänningsmotorn:
 
 >[!NOTE]
 >
->Spam detection is only implementation for English locale.
+>Spamidentifiering implementeras endast för engelska språk.
 
 ### Sentiment {#sentiment}
 
 Sentiment beräknas baserat på antalet positiva och negativa nyckelord ([watchwords](#configuringwatchwords)) finns i en tjänst.
 
-I ekvationsanalysen används en uppsättning förkonfigurerade regler och UGC-känslan beräknas. Standardreglerna finns på: `/libs/cq/workflow/components/workflow/social/sentiments/rules.`
+I ekvationsanalysen används en uppsättning förkonfigurerade regler och UGC-känslan beräknas. Standardreglerna är `/libs/cq/workflow/components/workflow/social/sentiments/rules`.
 
 Värdet som reglerna genererar är från 1 (alla negativa, inga positiva ord) till 10 (alla positiva, inga negativa ord). Ett värde på 5 är en neutral uppfattning och är standardvärdet.
 
@@ -247,7 +243,7 @@ Reglerna som definieras i komponenten /libs är:
 * Regel 3: ange värdet 3 om det finns fler negativa ord än positiva ord.
 * Regel 4: ange värdet 8 om det finns fler positiva ord än negativa ord.
 
-Om du vill skriva över eller lägga till regler skapar du en uppsättning regler i katalogen /apps efter strukturen för standardreglerna. Redigera känslningskonfigurationen för att identifiera var reglerna finns.
+Om du vill skriva över eller lägga till regler skapar du en uppsättning regler i katalogen /apps efter strukturen för standardreglerna. Redigera känslningskonfigurationen så att du kan identifiera var reglerna finns.
 
 Efter analys lagras känslan med användargenererat innehåll.
 
@@ -255,7 +251,7 @@ Från [masmodereringskonsol](/help/communities/moderation.md)är det möjligt at
 
 #### Watchwords {#watchwords}
 
-AEM *watchword analyzer* som ett steg i processen att utvärdera [känslouttryck](#sentiment). Bidraget till det känslomässiga värde som tillhandahålls av bevakningsord beror på en jämförelse av negativa och positiva bevakningsord som används i det publicerade innehållet samt förbjudna ord.
+AEM Communities erbjuder *watchword analyzer* som ett steg i processen att utvärdera [känslouttryck](#sentiment). Bidraget till det känslomässiga värde som tillhandahålls av bevakningsord beror på en jämförelse av negativa och positiva bevakningsord som används i det publicerade innehållet och förbjudna ord.
 
 #### Konfigurera känslolägesikoner och bevakningsord {#configure-sentiment-and-watchwords}
 
@@ -270,7 +266,7 @@ Så här konfigurerar du uttryck och bevakningsord:
 * Logga in på författarinstansen som administratör.
 * Öppna [Webbkonsol](https://localhost:4502/system/console/configMgr).
 * Sök `sentimentprocess.name`.
-* Välj den konfiguration som ska öppnas i redigeringsläge.
+* Markera konfigurationen så att du kan öppna den i redigeringsläge.
 
 ![sentimentprocess](assets/sentimentprocess.png)
 
