@@ -1,19 +1,15 @@
 ---
 title: Blog Essentials
-seo-title: Blog Essentials
-description: Översikt över bloggar
-seo-description: Blog overview
-uuid: 714cf70c-76a0-4be6-9163-a31ac6bd1643
+description: Lär dig hur du lägger till bloggfunktionen på en sida så att medlemmar i den inloggade communityn kan publicera bloggartiklar.
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
-discoiquuid: eece7b8f-6ccd-4037-8713-0cd36cfd9e73
 docset: aem65
 exl-id: 51f616e8-4aba-47f6-b948-d5147d84bbb6
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 62d4a8b3af5031ccc539d78f7d06a8cd1fec7af1
 workflow-type: tm+mt
-source-wordcount: '442'
+source-wordcount: '451'
 ht-degree: 0%
 
 ---
@@ -79,15 +75,15 @@ Bloggfunktionen består av två huvudkomponenter som är tillgängliga genom att
 
 ## Grundläggande för serversidan {#essentials-for-server-side}
 
-* [Blogg-API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/journal/client/api/package-summary.html)
+* [Blogg-API](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/journal/client/api/package-summary.html)
 
-* [Bloggslutpunkter](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/journal/client/endpoints/package-summary.html)
+* [Bloggslutpunkter](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/journal/client/endpoints/package-summary.html)
 
 * [Anpassningar på serversidan](/help/communities/server-customize.md)
 
 ### Bloggfunktion {#blog-function}
 
-En community-webbplatsstruktur som innehåller [Bloggfunktion](/help/communities/functions.md#blog-function) har konfigurerats `Blog` och `Blog Sidebar` -komponenter. Funktionen Blog har stöd för att identifiera en [privilegierad medlemsanvändargrupp](/help/communities/users.md#privileged-members-group).
+En community-webbplatsstruktur som innehåller [Bloggfunktion](/help/communities/functions.md#blog-function) har `Blog` och `Blog Sidebar` konfigurerade komponenter. Funktionen Blog har stöd för att identifiera en [privilegierad medlemsanvändargrupp](/help/communities/users.md#privileged-members-group).
 
 ### Åtkomst till blogginlägg (UGC) {#accessing-blog-entries-ugc}
 
@@ -107,7 +103,7 @@ Se :
 
 ## Primär utgivare {#primary-publisher}
 
-När distributionen är en publiceringsgrupp är det nödvändigt att identifiera en primär utgivare som söker efter artiklar som är schemalagda att publiceras.
+När distributionen är en publiceringsgrupp måste du identifiera en primär utgivare som avfrågar artiklar som ska publiceras.
 
 Se [Primär utgivare](/help/communities/deploy-communities.md#primary-publisher) för mer information.
 

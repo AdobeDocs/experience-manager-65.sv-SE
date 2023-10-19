@@ -1,15 +1,15 @@
 ---
 title: Lägg till klienter
-description: Lägg till en ClientLibraryFolder
+description: Lär dig hur du lägger till en ClientLibraryFolder (clientlibs) som används för att innehålla de JavaScript- och Cascading Style Sheets som används för att återge platsens sidor.
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
 docset: aem65
 exl-id: 569f2052-b4fe-4f7f-aec9-657217cba091
-source-git-commit: fd937341e26edd0c3edfced8e862066ebc30f9a3
+source-git-commit: 62d4a8b3af5031ccc539d78f7d06a8cd1fec7af1
 workflow-type: tm+mt
-source-wordcount: '672'
+source-wordcount: '701'
 ht-degree: 0%
 
 ---
@@ -18,9 +18,9 @@ ht-degree: 0%
 
 ## Lägg till en ClientLibraryFolder (clientlibs) {#add-a-clientlibraryfolder-clientlibs}
 
-Skapa en ClientLibraryFolder med namnet `clientlibs` som kommer att innehålla den JS och CSS som används för att återge platsens sidor.
+Skapa en ClientLibraryFolder med namnet `clientlibs` som innehåller JavaScript (JS) och CSS (Cascading Styles Sheets) som används för att återge sidorna på platsen.
 
-The `categories` det egenskapsvärde som anges för det här klientbiblioteket är den identifierare som används för att direkt ta med klienten från en innehållssida eller för att bädda in den i andra klienter.
+The `categories` egenskapsvärdet som anges för det här klientbiblioteket är den identifierare som används för att direkt ta med klienten från en innehållssida eller för att bädda in den i andra klienter.
 
 1. Använda **CRXDE Lite**, expandera `/etc/designs`
 
@@ -41,7 +41,7 @@ I **Egenskaper** för den nya `clientlibs` nod, ange **kategorier** egenskap:
 * Klicka **Lägg till**
 * Klicka **Spara alla**
 
-Obs! för att visa kategorivärdet med appar. är en konvention som identifierar att det ägande programmet finns i /apps-mappen, inte /libs. VIKTIGT! Lägg till platshållare `js.tx`t och **`css.txt`** filer. (Det är inte officiellt en cq:ClientLibraryFolder utan dem.)
+Obs! Kategorivärdet förskjuts med &#39;appar&#39;. är en konvention som identifierar att &quot;ägande program&quot; finns i /apps-mappen, inte /libs. VIKTIGT: Lägg till platshållare `js.tx`t och **`css.txt`** filer. (Det är inte officiellt en cq:ClientLibraryFolder utan dem.)
 
 1. Högerklicka **`/etc/designs/an-scf-sandbox/clientlibs`**
 1. Välj **Skapa fil...**
@@ -104,9 +104,9 @@ Så här är det `/etc/designs/an-scf-sandbox/clientlibs` ska nu visas i databas
 
 ![scf-clientlibs-view](assets/scf-clientlibs1.png)
 
-### Inkludera klienter i PlayPage-mallen {#include-clientlibs-in-playpage-template}
+### Inkludera klientlibs i PlayPage-mallen {#include-clientlibs-in-playpage-template}
 
-Utan att inkludera `apps.an-scf-sandbox` Kategorin ClientLibraryFolder på sidan. SCF-komponenterna fungerar inte och är inte formaterade eftersom nödvändiga JavaScript och format inte är tillgängliga.
+Utan att inkludera `apps.an-scf-sandbox` Kategorin ClientLibraryFolder på sidan. SCF-komponenterna fungerar inte och är inte formaterade eftersom nödvändiga JavaScript- och CSS-format inte är tillgängliga.
 
 Utan att ta med clientlibs visas SCF-kommentarkomponenten som stylfri:
 
@@ -125,7 +125,7 @@ Programsatsen include tillhör `head` i `html` skript. Standardvärdet **`founda
 1. Högerklicka och välj **Kopiera** (eller välj Kopiera från verktygsfältet)
 1. Välj **`/apps/an-scf-sandbox/components/playpage`**
 1. Högerklicka och välj **Klistra in** (eller välj Klistra in i verktygsfältet)
-1. Dubbelklicka **`headlibs.jsp`** för att öppna den
+1. Dubbelklicka **`headlibs.jsp`** så att du kan öppna den
 1. Lägg till följande rad i slutet av filen
    **`<ui:includeClientLib categories="apps.an-scf-sandbox"/>`**
 
@@ -149,13 +149,13 @@ Läs in webbplatsen i webbläsaren och se om bakgrunden inte är en blå nyans.
 
 ### Spara ditt arbete hittills {#saving-your-work-so-far}
 
-Nu finns det en minimalistisk sandlåda, och det kan vara värt att spara som ett paket så att du, när du spelar upp, kan stänga av servern, byta namn på eller ta bort mappen crx-quickstart/, aktivera servern, ladda upp och installera det här sparade paketet och inte behöver upprepa dessa mest grundläggande steg.
+För närvarande finns det en minimalistisk sandlåda. Det kan vara värt att spara som ett paket så att du kan inaktivera servern när du spelar upp, om databasen blir skadad och du vill börja om. Byt namn på eller ta bort mappen crx-quickstart/, aktivera servern, ladda upp och installera det här sparade paketet och behöver inte upprepa dessa grundläggande steg.
 
 Det här paketet finns på [Skapa en exempelsida](/help/communities/create-sample-page.md) självstudiekurs för dem som inte vill vänta och börja spela!..
 
 Så här skapar du ett paket:
 
-* Från CRXDE Lite klickar du på [Paketikon](https://localhost:4502/crx/packmgr/)
+* Klicka på CRXDE Lite [Paketikon](https://localhost:4502/crx/packmgr/)
 * Klicka **Skapa paket**
 
    * Paketnamn: an-scf-sandbox-minimum-pkg
@@ -181,4 +181,4 @@ Så här skapar du ett paket:
 
 * Klicka **Bygge**
 
-Nu kan du välja **Hämta** för att spara den på disk och **Överför paket** någon annanstans, och markera **Mer > Replikera** om du vill överföra sandlådan till en lokal publiceringsinstans för att expandera sfären i sandlådan.
+Nu kan du välja **Ladda ned** för att spara den på disk och **Överför paket** någon annanstans, och markera **Mer > Replikera** om du vill överföra sandlådan till en lokal publiceringsinstans för att utöka sandlådans sfär.

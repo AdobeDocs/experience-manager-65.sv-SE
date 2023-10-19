@@ -1,29 +1,25 @@
 ---
 title: Grundläggande röstning
-seo-title: Voting Essentials
-description: Översikt över röstkomponenten
-seo-description: Voting component overview
-uuid: ed0a771d-1c14-4fbf-ab6a-a028e5ee2e2a
+description: Lär dig hur du använder röstkomponenten som gör att medlemmar kan betygsätta en viss del av innehållet genom att markera upp- eller nedpilarna för att ange sin åsikt.
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
-discoiquuid: 1a947a06-6a5c-4be9-b2fa-e5fa809ff3b8
 exl-id: e8ff751f-404a-498d-8e90-62a13ab593ff
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 62d4a8b3af5031ccc539d78f7d06a8cd1fec7af1
 workflow-type: tm+mt
-source-wordcount: '284'
+source-wordcount: '301'
 ht-degree: 0%
 
 ---
 
 # Grundläggande röstning {#voting-essentials}
 
-Röstkomponenten, en [tally](tally.md) underklass, är ett användbart verktyg som gör att medlemmar kan betygsätta en viss del av innehållet genom att bara markera upp- eller nedpilarna för att ange sin åsikt.
+Röstningskomponenten, [tally](tally.md) underklass, är ett användbart verktyg som gör att medlemmar kan betygsätta en viss del av innehållet genom att bara markera upp- eller nedpilarna för att ange sin åsikt.
 
-Det är tillåtet att placera flera instanser av en röstkomponent på samma sida. varje instans måste konfigureras med en unik `tally name` -egenskap.
+Det är tillåtet att placera flera instanser av en röstkomponent på samma sida. Varje instans måste konfigureras med en unik `tally name` -egenskap.
 
-Anonym publicering av en röst stöds inte. Besökare på platsen måste registrera sig och logga in för att endast delta i omröstningen en gång. Den inloggade besökaren (medlemmen) kan när som helst ändra sin röst.
+Anonym publicering av en röst stöds inte. Besökare på webbplatsen måste registrera sig och logga in för att kunna rösta endast en gång. Den inloggade besökaren (medlemmen) kan när som helst ändra sin röst.
 
 ## Grundläggande för klientsidan {#essentials-for-client-side}
 
@@ -60,9 +56,9 @@ Anonym publicering av en röst stöds inte. Besökare på platsen måste registr
 
 ## Grundläggande för serversidan {#essentials-for-server-side}
 
-* [Tally API:er](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/tally/client/api/package-summary.html)
+* [Tally API:er](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/tally/client/api/package-summary.html)
 
-* [Slutpunkter](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/tally/client/endpoints/package-summary.html)
+* [Slutpunkter](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/tally/client/endpoints/package-summary.html)
 
 * [Anpassningar på serversidan](server-customize.md)
 

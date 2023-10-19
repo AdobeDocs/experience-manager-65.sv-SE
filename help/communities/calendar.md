@@ -1,19 +1,15 @@
 ---
 title: Kalenderfunktion
-seo-title: Calendar Feature
-description: Tillhandahåller information om communityevent i ett kalenderformat
-seo-description: Provides community event information in a calendar format
-uuid: 262f6afa-d8aa-4815-8440-a8ed5668c76d
+description: Lär dig hur kalenderfunktionen tillhandahåller information om communityevent i ett kalenderformat.
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: authoring
 content-type: reference
-discoiquuid: 70fa0b9c-cb98-45c4-9c94-bef4a9f3741e
 docset: aem65
 exl-id: c9b34b00-525d-4ca3-bd18-11bb7ce66787
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 62d4a8b3af5031ccc539d78f7d06a8cd1fec7af1
 workflow-type: tm+mt
-source-wordcount: '1160'
+source-wordcount: '1148'
 ht-degree: 0%
 
 ---
@@ -27,7 +23,7 @@ Kalenderfunktionen har stöd för att tillhandahålla information om communityev
 Detta avsnitt i dokumentationen beskriver
 
 * Lägga till kalenderfunktionen på en AEM webbplats
-* Konfigurationsinställningar för `Calendar` komponenter
+* Konfiguration för `Calendar` komponenter
 
 ## Lägga till en kalender på en sida {#adding-a-calendar-to-a-page}
 
@@ -35,7 +31,7 @@ Lägga till en `Calendar` -komponent till en sida i redigeringsläge använder d
 
 * `Communities / Calendar`
 
-och dra den till rätt plats på en sida, t.ex. i förhållande till funktionen som användarna kan granska.
+Och dra den till rätt plats på en sida, till exempel i förhållande till funktionen som användarna kan granska.
 
 Nödvändig information finns på [Grunderna för communitykomponenter](/help/communities/basics.md).
 
@@ -45,7 +41,7 @@ När [nödvändiga bibliotek på klientsidan](/help/communities/calendar-basics-
 
 ### Konfigurerar kalender {#configuring-calendar}
 
-Markera den monterade `Calendar` -komponenten som ska få åtkomst till och markera `Configure` som öppnar redigeringsdialogrutan.
+Markera den monterade `Calendar` så att du kan komma åt och välja `Configure` -ikonen som öppnar redigeringsdialogrutan.
 
 ![konfigurera](assets/configure-new.png)
 
@@ -57,71 +53,71 @@ Under **Inställningar** anger du om du vill tillåta att taggar används på ka
 
 * **Händelser per sida**
 
-   Definierar antalet händelser som visas per sida. Standardvärdet är 10.
+  Definierar antalet händelser som visas per sida. Standardvärdet är 10.
 
 * **Kontrollerad**
 
-   Om det här alternativet är markerat måste publicering av kalenderhändelser och kommentarer godkännas innan de visas på en publiceringsplats. Standard är avmarkerat.
+  Om det här alternativet är markerat måste publicering av kalenderhändelser och kommentarer godkännas innan de visas på en publiceringsplats. Standard är avmarkerat.
 
 * **Stängd**
 
-   Om du markerar det här alternativet stängs kalendern för nya händelseposter och kommentarer. Standard är avmarkerat.
+  Om du markerar det här alternativet stängs kalendern för nya händelseposter och kommentarer. Standard är avmarkerat.
 
 * **RTF-redigerare**
 
-   Om det här alternativet är markerat kan kalenderhändelser och kommentarer infogas med markeringar. Standard är markerat.
+  Om det här alternativet är markerat kan kalenderhändelser och kommentarer infogas med markeringar. Standard är markerat.
 
 * **Tillåt taggning**
 
-   Om det här alternativet är markerat, tillåt medlemmar att lägga till taggetiketter till de händelser de publicerar (se **Taggfält** -fliken). Standard är markerat.
+  Om det här alternativet är markerat, tillåt medlemmar att lägga till taggetiketter till de händelser de publicerar (se **Taggfält** -fliken). Standard är markerat.
 
 * **Tillåt filöverföringar**
 
-   Om du markerar det här alternativet kan du tillåta att bifogade filer läggs till i en kalenderhändelse eller kommentar. Standard är markerat.
+  Om du markerar det här alternativet kan du tillåta att bifogade filer läggs till i en kalenderhändelse eller kommentar. Standard är markerat.
 
 * **Tillåt följande**
 
-   Om det här alternativet är markerat tillåter du medlemmar att följa händelser som har bokförts i kalendern. Standard är markerat.
+  Om det här alternativet är markerat tillåter du medlemmar att följa händelser som har bokförts i kalendern. Standard är markerat.
 
 * **Maximal filstorlek**
 
-   Endast relevant om `Allow File Uploads` är markerad. Det här fältet begränsar storleken (i byte) på en överförd fil. Standardvärdet är 104857600 (10 MB).
+  Endast relevant om `Allow File Uploads` är markerad. Det här fältet begränsar storleken (i byte) på en överförd fil. Standardvärdet är 104857600 (10 MB).
 
 * **Tillåtna filtyper**
 
-   Endast relevant om `Allow File Uploads` är markerad. En kommaavgränsad lista med filtillägg med&quot;punktavgränsaren&quot;. Till exempel: .jpg, .jpeg, .png, .doc, .docx, .pdf. Om någon filtyp har angetts kan de som inte har angetts inte överföras. Ingen standard har angetts så att alla filtyper tillåts.
+  Endast relevant om `Allow File Uploads` är markerad. En kommaavgränsad lista med filtillägg med punktavgränsaren. Exempel: .jpg, .jpeg, .png, .doc, .docx, .pdf. Om någon filtyp har angetts kan de inte överföras. Ingen standard har angetts så att alla filtyper tillåts.
 
 * **Maximal filstorlek för bifogad bild**
 
-   Endast relevant om Tillåt filöverföringar är markerat. Maximalt antal byte som en överförd bildfil kan ha. Standardvärdet är 2097152** **(2 MB).
+  Endast relevant om Tillåt filöverföringar är markerat. Maximalt antal byte som en överförd bildfil kan ha. Standardvärdet är 2097152** **(2 MB).
 
 * **Tillåtna omslagsbildtyper**
 
-   En kommaavgränsad lista med bildfilstillägg med&quot;punktavgränsaren&quot;. Standard är `.jpg,.jpeg,.png,.gif,.bmp`.
+  En kommaavgränsad lista över bildfilstillägg med punktavgränsaren. Standard är `.jpg,.jpeg,.png,.gif,.bmp`.
 
 * **Tillåt kopplade svar**
 
-   Om det här alternativet är markerat tillåts svar på kommentarer som har bokförts i kalenderhändelsen. Standard är markerat.
+  Om det här alternativet är markerat tillåts svar på kommentarer som har bokförts i kalenderhändelsen. Standard är markerat.
 
 * **Tillåt användare att ta bort kommentarer och händelser**
 
-   Om det här alternativet är markerat kan medlemmar ta bort kommentarer och kalenderhändelser som de har bokfört. Standardvärdet är ** **checked.
+  Om det här alternativet är markerat kan medlemmar ta bort kommentarer och kalenderhändelser som de har bokfört. Standard är markerat.
 
 * **Tillåt röstning**
 
-   Om du markerar det här alternativet inkluderas röstningsfunktionen med en kalenderhändelse. Standard är markerat.
+  Om du markerar det här alternativet inkluderas röstningsfunktionen med en kalenderhändelse. Standard är markerat.
 
 * **Visa vägbeskrivningar**
 
-   Visa vägbeskrivningar på händelsesidan. Standard är markerat.
+  Visa vägbeskrivningar på händelsesidan. Standard är markerat.
 
 * **Datumintervallfilter**
 
-   Definierar antalet dagar som läggs till i det aktuella datumet för att beräkna Till-värdet för kalenderns sidfiltret för listsidan. Standardvärdet är 30.
+  Definierar antalet dagar som läggs till i det aktuella datumet för att beräkna Till-värdet för sidfiltret för kalenderhändelselistan. Standardvärdet är 30.
 
 * **Tillåt innehåll**
 
-   Om det här alternativet är markerat kan idén identifieras som [innehåll](/help/communities/featured.md). Standard är avmarkerat.
+  Idén kan identifieras som om den är markerad [presenterat innehåll](/help/communities/featured.md). Standard är avmarkerat.
 
 Under **Användarmoderering** anger du hur publicerade ämnen och svar (användargenererat innehåll) ska hanteras. Mer information finns i [Modererar användargenererat innehåll](/help/communities/moderate-ugc.md).
 
@@ -129,31 +125,31 @@ Under **Användarmoderering** anger du hur publicerade ämnen och svar (använda
 
 * **Neka inlägg**
 
-   Om det här alternativet är markerat kan pålitliga medlemsmoderatorer neka inlägg och förhindra att posten visas på det offentliga forumet. Standard är markerat.
+  Om det här alternativet är markerat kan pålitliga medlemsmoderatorer neka inlägg och förhindra att posten visas på det offentliga forumet. Standard är markerat.
 
 * **Stäng/öppna händelser igen**
 
-   Om det här alternativet är markerat kan pålitliga medlemsmoderatorer stänga en händelse för ytterligare redigeringar och kommentarer och även öppna en händelse igen. Standard är markerat.
+  Om det här alternativet är markerat kan pålitliga medlemsmoderatorer stänga en händelse för ytterligare redigeringar och kommentarer och även öppna en händelse igen. Standard är markerat.
 
 * **Flagga inlägg**
 
-   Om det här alternativet är markerat kan medlemmar flagga andras händelser eller kommentarer som olämpliga. Standard är markerat.
+  Om det här alternativet är markerat kan medlemmar flagga andras händelser eller kommentarer som olämpliga. Standard är markerat.
 
 * **Flaggorsakslista**
 
-   Om det här alternativet är markerat kan medlemmarna i en nedrullningsbar lista välja orsaken till att en händelse eller kommentar flaggas som olämplig. Standard är avmarkerat.
+  Om det här alternativet är markerat kan medlemmarna i en nedrullningsbar lista välja orsaken till att en händelse eller kommentar flaggas som olämplig. Standard är avmarkerat.
 
 * **Anledning till anpassad flagga**
 
-   Om det här alternativet är markerat kan medlemmarna ange en egen orsak till att en händelse eller kommentar flaggas som olämplig. Standard är avmarkerat.
+  Om det här alternativet är markerat kan medlemmarna ange en egen orsak till att en händelse eller kommentar flaggas som olämplig. Standard är avmarkerat.
 
 * **Modereringströskel**
 
-   Ange hur många gånger en händelse eller kommentar måste flaggas av medlemmar innan moderatorerna meddelas. Standardvärdet är 1 (en gång).
+  Ange hur många gånger en händelse eller kommentar måste flaggas av medlemmar innan moderatorerna meddelas. Standardvärdet är 1 (en gång).
 
 * **Flaggningsgräns**
 
-   Ange hur många gånger en händelse eller kommentar måste flaggas innan den döljs för den offentliga vyn. Om värdet är -1 döljs aldrig det flaggade ämnet eller kommentaren från den offentliga vyn. Annars måste talet vara större än eller lika med modereringströskeln. Standardvärdet är 5.
+  Ange hur många gånger en händelse eller kommentar måste flaggas innan den döljs för den offentliga vyn. Om värdet är -1 döljs aldrig det flaggade ämnet eller kommentaren från den offentliga vyn. Annars måste talet vara större än eller lika med modereringströskeln. Standardvärdet är 5.
 
 #### Fliken Taggfält {#tag-field-tab}
 
@@ -161,15 +157,15 @@ Under **Taggfält** -fliken, de taggar som kan användas, om de tillåts under *
 
 * **Tillåtna namnutrymmen**
 
-   Relevant om `Allow Tagging` kontrolleras under **Inställningar** -fliken. De taggar som kan användas är begränsade till de inom de namnutrymmeskategorier som kontrolleras. Listan med namnutrymmen innehåller &quot;Standardtaggar&quot; (standardnamnutrymmet) och &quot;Inkludera alla taggar&quot;. Standardvärdet är inget markerat, vilket betyder att alla namnutrymmen är tillåtna.
+  Relevant om `Allow Tagging` kontrolleras under **Inställningar** -fliken. De taggar som kan användas är begränsade till de inom de namnutrymmeskategorier som kontrolleras. Listan med namnutrymmen innehåller&quot;Standardtaggar&quot; (standardnamnutrymmet) och&quot;Inkludera alla taggar&quot;. Standardvärdet är inget markerat, vilket betyder att alla namnutrymmen är tillåtna.
 
 * **Förslagsgräns**
 
-   Ange antalet taggar som ska visas som ett förslag till medlemmens inlägg i forumet. Standardvärdet är **-**1 (inga gränser).
+  Ange antalet taggar som ska visas som ett förslag till medlemmens inlägg i forumet. Standardvärdet är **-**1 (inga gränser).
 
 >[!NOTE]
 >
->Besök [Administrera taggar](/help/sites-administering/tags.md) om du vill lära dig hur du lägger till ett nytt taggnamnutrymme (taxonomi).
+>Besök [Administrera taggar](/help/sites-administering/tags.md) där du kan lära dig hur du lägger till ett taggnamnutrymme (taxonomi).
 
 #### Fliken Översättning {#translation-tab}
 
@@ -177,19 +173,19 @@ Under **Översättning** om översättning är aktiverat för communitywebbplats
 
 * **Översätt alla**
 
-   Om det här alternativet är markerat översätts händelsen och kommentarerna till användarens språk. Standard är markerat.
+  Om det här alternativet är markerat översätts händelsen och kommentarerna till användarens språk. Standard är markerat.
 
 ## Site Visitor Experience {#site-visitor-experience}
 
 I publiceringsmiljön visar kalenderfunktionen ett sökfält med ett standarddatumintervall och alla kalenderhändelser som ligger inom det intervallet.
 
-När en kalenderhändelse är markerad visas kalenderhändelseinformation, beskrivning och kommentarer.
+När en kalenderhändelse är markerad visas information om kalenderhändelsen, beskrivning och kommentarer.
 
 Andra funktioner beror på om besökaren är en moderator, administratör, community-medlem, privilegierad medlem eller anonym.
 
 ### Styrelsemedlemmar och administratörer {#moderators-and-administrators}
 
-När den inloggade användaren har behörighet som moderator eller administratör kan de utföra [modereringsuppgifter](/help/communities/moderate-ugc.md) (som tillåts av komponentens konfiguration) för alla kalenderhändelser och kommentarer som publiceras till en händelse.
+När den inloggade användaren har moderator- eller administratörsbehörighet kan de utföra [modereringsuppgifter](/help/communities/moderate-ugc.md) (som tillåts av komponentens konfiguration) för alla kalenderhändelser och kommentarer som publiceras till en händelse.
 
 ![moderators-view](assets/moderators-view.png)
 
@@ -199,7 +195,7 @@ När den inloggade användaren är en community-medlem eller [behörig medlem](/
 
 De får särskilt
 
-* Skapa en ny kalenderhändelse
+* Skapa en kalenderhändelse
 * Publicera en kommentar i en kalenderhändelse
 * Redigera en egen kalenderhändelse eller kommentar
 * Ta bort en egen kalenderhändelse eller kommentar

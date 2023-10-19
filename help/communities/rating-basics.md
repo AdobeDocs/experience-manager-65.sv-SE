@@ -1,27 +1,23 @@
 ---
 title: Grundläggande omdömen
-seo-title: Rating Essentials
-description: Översikt över klassificeringskomponenten
-seo-description: Rating component overview
-uuid: 48ef61ad-be7a-4a6b-a284-23e5bb4f1671
+description: Lär dig hur medlemmar i den inloggade communityn kan betygsätta en funktion på webbplatsen med hjälp av klassificeringskomponenten, en Tally-underklass.
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
-discoiquuid: 7dc3ef57-05c3-45d4-ace3-bb3ba6ea768b
 exl-id: 49456944-ff0d-4507-b3b8-143c90067573
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 62d4a8b3af5031ccc539d78f7d06a8cd1fec7af1
 workflow-type: tm+mt
-source-wordcount: '279'
+source-wordcount: '287'
 ht-degree: 0%
 
 ---
 
 # Grundläggande omdömen {#rating-essentials}
 
-Klassificeringskomponenten, en [tally](tally.md) underklass, gör att inloggade communitymedlemmar kan betygsätta en funktion på webbplatsen.
+Klassificeringskomponenten, en [tally](tally.md) underklass, gör att medlemmar i den inloggade communityn kan betygsätta en funktion på webbplatsen.
 
-Det är tillåtet att placera flera instanser av en röstkomponent på samma sida. varje instans måste konfigureras med en unik `tally name` -egenskap.
+Det är tillåtet att placera flera instanser av en röstkomponent på samma sida. Varje instans måste konfigureras med en unik `tally name` -egenskap.
 
 Anonym publicering av en klassificering stöds inte. Besökare på webbplatsen måste registrera sig och logga in för att kunna delta i en klassificering endast en gång. Den inloggade besökaren (medlemmen) kan när som helst ändra sin klassificering.
 
@@ -60,9 +56,9 @@ Anonym publicering av en klassificering stöds inte. Besökare på webbplatsen m
 
 ## Grundläggande för serversidan {#essentials-for-server-side}
 
-* [Tally API:er](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/tally/client/api/package-summary.html)
+* [Tally API:er](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/tally/client/api/package-summary.html)
 
-* [Slutpunkter](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/tally/client/endpoints/package-summary.html)
+* [Slutpunkter](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/tally/client/endpoints/package-summary.html)
 
 * [Anpassningar på serversidan](server-customize.md)
 

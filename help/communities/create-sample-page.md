@@ -1,14 +1,14 @@
 ---
 title: Skapa en exempelsida
-description: Skapa en exempelwebbplats
+description: Lär dig hur du skapar en mall för en community-webbplats som bara innehåller funktionen Sida som kan hjälpa dig att skapa en enkel community-webbplats.
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 content-type: reference
 topic-tags: developing
 exl-id: d66fc1ff-a669-4a2c-b45a-093060facd97
-source-git-commit: ab3d016c7c9c622be361596137b150d8719630bd
+source-git-commit: 62d4a8b3af5031ccc539d78f7d06a8cd1fec7af1
 workflow-type: tm+mt
-source-wordcount: '402'
+source-wordcount: '420'
 ht-degree: 1%
 
 ---

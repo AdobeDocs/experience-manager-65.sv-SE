@@ -1,16 +1,14 @@
 ---
 title: QnA Essentials
-description: Forumfunktionen Frågor och svar
-uuid: c718a8e3-b3bd-4db9-8c0f-6dd973d40583
+description: Lär dig grunderna i hur du arbetar med frågor och svar (QnA) Forum i Adobe Experience Manager Communities.
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
-discoiquuid: ceace3aa-78a5-485e-b519-630479e087d8
 exl-id: a7b295c1-cc9d-4881-8016-804b21fc1098
-source-git-commit: 78c584db8c35ea809048580fe5b440a0b73c8eea
+source-git-commit: 62d4a8b3af5031ccc539d78f7d06a8cd1fec7af1
 workflow-type: tm+mt
-source-wordcount: '239'
+source-wordcount: '252'
 ht-degree: 0%
 
 ---
@@ -62,7 +60,7 @@ Den här sidan innehåller viktig information om hur du arbetar med forumfunktio
 
 ### QnA-funktion {#qna-function}
 
-En community-webbplatsstruktur som innehåller [QnA-funktion](functions.md#qna-function) har en konfigurerad `QnA` och inställningar som påverkar moderering och taggning. QnA-funktionen stöder identifiering av en [privilegierad medlemsanvändargrupp](users.md#privileged-members-group).
+En community-webbplatsstruktur som innehåller [QnA-funktion](functions.md#qna-function) har konfigurerats `QnA` och inställningar som påverkar moderering och taggning. QnA-funktionen stöder identifiering av en [privilegierad medlemsanvändargrupp](users.md#privileged-members-group).
 
 ### Åtkomst till QnA-foruminlägg (UGC) {#accessing-qna-forum-posts-ugc}
 

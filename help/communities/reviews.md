@@ -1,18 +1,14 @@
 ---
 title: Använda granskningar och granskningar - sammanfattning (visning)
-seo-title: Using Reviews and Reviews Summary (Display)
-description: Lägga till komponenterna Granska och Granska sammanfattning på en sida
-seo-description: Adding the Reviews and Reviews Summary components to a page
-uuid: bd1ccee7-b26b-4a27-b1ea-89609f5080af
+description: Lär dig hur du lägger till komponenterna Granska och Granska sammanfattning på en sida.
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: authoring
 content-type: reference
-discoiquuid: bf4e7809-8def-4647-aaa6-3ac36865511f
 exl-id: 170414a6-c40b-4ad2-9294-7c2266850c3d
-source-git-commit: c667a1658e43bb5b61daede5f94256dae582a4fc
+source-git-commit: 62d4a8b3af5031ccc539d78f7d06a8cd1fec7af1
 workflow-type: tm+mt
-source-wordcount: '1213'
+source-wordcount: '1205'
 ht-degree: 0%
 
 ---
@@ -33,13 +29,13 @@ Lägga till en `Reviews` -komponent till en sida i redigeringsläge använder du
 
 Nödvändig information finns på [Grunderna för communitykomponenter](basics.md).
 
-När [nödvändiga bibliotek på klientsidan](reviews-basics.md#essentials-for-client-side) ingår så här `Reviews` -komponenten visas.
+När [nödvändiga bibliotek på klientsidan](reviews-basics.md#essentials-for-client-side) ingår så här `Reviews` visas.
 
 ![skapa-granskning](assets/create-review.png)
 
 ## Konfigurera granskningar {#configuring-reviews}
 
-Markera den monterade `Reviews` -komponenten som ska få åtkomst till och markera `Configure` -ikonen som öppnar redigeringsdialogrutan.
+Markera den monterade `Reviews` så att du kan komma åt och välja `Configure` -ikonen som öppnar redigeringsdialogrutan.
 
 ![configure-new](assets/configure-new.png)
 
@@ -55,7 +51,7 @@ Under **[!UICONTROL Allowed Ratings]** Ange den fullständiga listan över klass
 
   Klicka **[!UICONTROL Add Item]** om du vill lägga till ett annat klassificeringsval.
 
-Under **[!UICONTROL Required Ratings]** -flik, ange objekt igen från listan med **[!UICONTROL Allowed Ratings]** som måste klassificeras. Om ett objekt bara anges på fliken Tillåtna klassificeringar kan det lämnas omarkerat när medlemmen skickar in det.
+Under **[!UICONTROL Required Ratings]** -flik, ange objekt igen från listan med **[!UICONTROL Allowed Ratings]** som krävs för kreditbetyg. Om ett objekt bara anges på fliken Tillåtna klassificeringar kan det lämnas omarkerat när medlemmen skickar in det.
 
 På webbplatsen markeras nödvändiga klassificeringar med en asterisk. Om ett objekt är obligatoriskt och inte markerat visas ett meddelande för medlemmen och överföringen nekas tills alla nödvändiga klassificeringar har markerats.
 
@@ -99,7 +95,7 @@ Under **[!UICONTROL Reviews]** anger du hur granskningar ska hanteras.
 
 * **[!UICONTROL Allowed File Types]**
 
-  Endast relevant om **[!UICONTROL Allow File Uploads]** är markerad. En kommaavgränsad lista med filtillägg med&quot;punktavgränsaren&quot;. Exempel: .jpg, .jpeg, .png, .doc, .docx, .pdf. Om någon filtyp anges tillåts inte den som inte anges. Ingen standard har angetts så att alla filtyper tillåts.
+  Endast relevant om **[!UICONTROL Allow File Uploads]** är markerad. En kommaavgränsad lista med filtillägg med punktavgränsaren. Exempel: .jpg, .jpeg, .png, .doc, .docx, .pdf. Om någon filtyp anges tillåts inte de som inte anges. Ingen standard har angetts så att alla filtyper tillåts.
 
 * **[!UICONTROL Rich Text Editor]**
 
@@ -155,11 +151,11 @@ Lägga till en `Reviews Summary (Display)` till en sida i redigeringsläge, leta
 
 * `Communities / Reviews Summary (Display)`
 
-och dra den till rätt plats på en sida där en sammanfattning av en aktiv eller stängd granskning ska visas.
+Dra den till en plats på en sida där en sammanfattning av en aktiv eller stängd granskning ska visas.
 
 Nödvändig information finns på [Grunderna för communitykomponenter](basics.md).
 
-När [nödvändiga bibliotek på klientsidan](reviews-basics.md#essentials-for-client-side) ingår så här `Reviews Summary (Display)`-komponenten visas.
+När [nödvändiga bibliotek på klientsidan](reviews-basics.md#essentials-for-client-side) ingår så här `Reviews Summary (Display)`visas.
 
 ![review-summary](assets/configure-review5.png)
 
@@ -169,7 +165,7 @@ När [nödvändiga bibliotek på klientsidan](reviews-basics.md#essentials-for-c
 
 ### Konfigurera sammanfattning av granskningar (visning) {#configuring-reviews-summary-display}
 
-Markera den monterade `Reviews Summary (Display)` -komponenten som ska få åtkomst till och markera `Configure` -ikonen som öppnar redigeringsdialogrutan.
+Markera den monterade `Reviews Summary (Display)` så att du kan komma åt och välja `Configure` -ikonen som öppnar redigeringsdialogrutan.
 
 ![konfigurera](assets/configure-new.png)
 
@@ -179,7 +175,7 @@ Under **[!UICONTROL Review Summary]** tab
 
 * `Review Path`
 
-  ange eller bläddra till den monterade instansen av `reviews`som ska sammanfattas, t.ex. om den har lagts till på webbsidan för [Geometrixx Engage site,](getting-started.md) banan skulle vara:
+  Ange eller bläddra till den monterade instansen av `reviews` så att du kan sammanfatta, t.ex. om den har lagts till på webbsidan för [Geometrixx Engage site,](getting-started.md) banan skulle vara:
 
   `/content/sites/engage/en/page/jcr:content/content/primary/reviews`
 
@@ -191,7 +187,7 @@ Under **[!UICONTROL Review Summary]** tab
 
 Komponenten Reviews använder kommentarsystemet.
 
-Genom att ändra kommentarsresurstypen kommer kommentarsystemet inte längre att generera en instans av en kommentar med standardinställningen, utan en som har anpassats (utökats) av utvecklarna.
+Genom att ändra kommentarsresurstypen genererar inte längre kommentarsystemet en instans av en kommentar med standardinställningen, utan en som har anpassats (utökats) av utvecklarna.
 
 När de anpassade resurstyperna är kända anger du [Designläge](../../help/sites-authoring/default-components-designmode.md) och dubbelklicka på den monterade `Comments` om du vill öppna en dialogruta med en extra flik.
 

@@ -1,26 +1,22 @@
 ---
 title: Grundläggande om poäng och emblem
-seo-title: Scoring and Badges Essentials
-description: Betygsättning och märkning - funktionsöversikt
-seo-description: Scoring and Badges feature overview
-uuid: 6e3af071-04e8-4dc1-977a-0da711b72961
+description: Läs om hur Adobe Experience Manager Communities-funktionen poäng och badges identifierar och belönar communitymedlemmar.
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
-discoiquuid: 628b6dcd-8b1c-4166-8fc2-843baa86ac1c
 docset: aem65
 exl-id: 470a382a-2aa7-449e-bf48-b5a804c5b114
-source-git-commit: 4fa868f3ae4778d3a637e90b91f7c5909fe5f8aa
+source-git-commit: 62d4a8b3af5031ccc539d78f7d06a8cd1fec7af1
 workflow-type: tm+mt
-source-wordcount: '934'
+source-wordcount: '946'
 ht-degree: 0%
 
 ---
 
 # Grundläggande om poäng och emblem {#scoring-and-badges-essentials}
 
-AEM Communities poäng och emblem identifierar och belönar communitymedlemmar.
+AEM Communities poäng och brickor identifierar och belönar communitymedlemmar.
 
 Information om hur du konfigurerar funktionen finns i
 
@@ -40,7 +36,7 @@ Den här sidan innehåller ytterligare teknisk information:
 
 Om ett märke visas som text eller bild styrs på klientsidan i HBS-mallen.
 
-Sök till exempel efter `this.isAssigned` in `/libs/social/forum/components/hbs/topic/list-item.hbs`:
+Sök efter `this.isAssigned` in `/libs/social/forum/components/hbs/topic/list-item.hbs`:
 
 ```
 {{#each author.badges}}
@@ -68,9 +64,9 @@ Sök till exempel efter `this.isAssigned` in `/libs/social/forum/components/hbs/
 {{/each}}
 ```
 
-Om värdet är true anger isAssigned att märket har tilldelats en roll och att märket ska visas som text.
+Om true, `isAssigned` anger att märket har tilldelats en roll och att det ska visas som text.
 
-Om värdet är false anger isAssigned att märket har tilldelats för ett poängvärde och att märket ska visas som en bild.
+Om false `isAssigned` visar att märket tilldelats för en poäng som har erhållits och att märket ska visas som en bild.
 
 Alla ändringar av detta beteende bör göras i ett anpassat skript (antingen åsidosätt eller övertäckning). Se [Anpassning på klientsidan](/help/communities/client-customize.md).
 
@@ -93,13 +89,13 @@ Så här konfigurerar du snabbt en slinglog-fil:
    1. Ange ett namn för **Loggfil**, till exempel
 
       * logs/scoring-debug.log
+
    1. Ange två **Logger** (class)-poster (använda `+` ikon)
 
       * `com.adobe.cq.social.scoring`
       * `com.adobe.cq.social.badging`
+
    1. Välj **Spara**
-
-
 
 ![debug-scoring-log](assets/debug-scoring-log.png)
 
@@ -125,9 +121,9 @@ Det går att visa användargenererat innehåll som är relaterat till poängsät
 
 Beskrivningarna för att komma åt betygs- och badging-data använder JSRP, eftersom användargenererat innehåll är lätt att komma åt med [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md).
 
-**JSRP on author**: när du experimenterar i redigeringsmiljön resulterar det i användargenererat innehåll som bara är synligt från författarmiljön.
+**JSRP on author**: Om du experimenterar i redigeringsmiljön resulterar det i användargenererat innehåll som bara är synligt från författarmiljön.
 
-**JSRP vid publicering**: På samma sätt måste du, om du testar i publiceringsmiljön, få åtkomst till CRXDE Lite med administratörsbehörighet för en publiceringsinstans. Om publiceringsinstansen körs i [produktionsläge](/help/sites-administering/production-ready.md) (nosampling content runmode), måste du [enable CRXDE Lite](/help/sites-administering/enabling-crxde-lite.md).
+**JSRP vid publicering**: På samma sätt måste du, om du testar i publiceringsmiljön, få åtkomst till CRXDE Lite med administratörsbehörighet för en publiceringsinstans. Om publiceringsinstansen körs i [produktionsläge](/help/sites-administering/production-ready.md) (ingen innehållets körningsläge) måste du [enable CRXDE Lite](/help/sites-administering/enabling-crxde-lite.md).
 
 Basplatsen för UGC på JSRP är `/content/usergenerated/asi/jcr/`.
 
@@ -138,20 +134,20 @@ Följande API:er kan användas:
 * [com.adobe.cq.social.scoring.api in 6.3](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html)
 * [com.adobe.cq.social.badging.api in 6.3](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html)
 
-De senaste Javadocs-filerna för det installerade funktionspaketet är tillgängliga för utvecklare från Adobe-databasen. Se [Med Maven for Communities: Javadocs](/help/communities/maven.md#javadocs).
+De senaste Javadocs-filerna för det installerade funktionspaketet är tillgängliga för utvecklare från Adobe-databasen. Se [Using Maven for Communities : Javadocs](/help/communities/maven.md#javadocs).
 
 **Platsen och formatet för användargenererat innehåll i databasen kan ändras utan förvarning**.
 
 ### Exempelinställningar {#example-setup}
 
-Skärmbilderna av databasdata kommer från hur du ställer in poängsättning och märkning för ett forum på två olika AEM:
+Skärmbilder av databasdata kommer från konfiguration av poängsättning och märkning för ett forum på två olika AEM:
 
 1. En AEM *med* ett unikt ID (communitywebbplats skapad med guide):
 
    * Använda självstudiekursen Komma igång (engagera) som skapats under [komma igång, självstudiekurs](/help/communities/getting-started.md)
    * Hitta forumsidnoden
 
-      `/content/sites/engage/en/forum/jcr:content`
+     `/content/sites/engage/en/forum/jcr:content`
 
    * Lägga till egenskaper för poängsättning och märkning
 
@@ -165,24 +161,23 @@ Skärmbilderna av databasdata kommer från hur du ställer in poängsättning oc
    /libs/settings/community/badging/rules/forums-scoring]
    ```
 
-   * Hitta forumkomponentnoden
+   * Leta reda på forumkomponentnoden
 
-      `/content/sites/engage/en/forum/jcr:content/content/primary/forum`
+     `/content/sites/engage/en/forum/jcr:content/content/primary/forum`
 ( `sling:resourceType = social/forum/components/hbs/forum`)
 
    * Lägg till egenskap för att visa emblem
 
-      `allowBadges = true`
+     `allowBadges = true`
 
    * En användare loggar in, skapar ett forumämne och tilldelas ett bronze-märke
-
 
 1. En AEM *utan* ett unikt ID:
 
    * Använda [Community Components Guide](/help/communities/components-guide.md)
    * Hitta forumsidnoden
 
-      `/content/community-components/en/forum/jcr:content`
+     `/content/community-components/en/forum/jcr:content`
 
    * Lägga till egenskaper för poängsättning och märkning
 
@@ -196,17 +191,16 @@ Skärmbilderna av databasdata kommer från hur du ställer in poängsättning oc
    /libs/settings/community/badging/rules/forums-badging]
    ```
 
-   * Hitta forumkomponentnoden
+   * Leta reda på forumkomponentnoden
 
-      `/content/community-components/en/forum/jcr:content/content/forum`
+     `/content/community-components/en/forum/jcr:content/content/forum`
 ( `sling:resourceType = social/forum/components/hbs/forum`)
 
    * Lägg till egenskap för att visa emblem
 
-      `allowBadges = true`
+     `allowBadges = true`
 
    * En användare loggar in, skapar ett forumämne och tilldelas ett bronze-märke
-
 
 1. En användare tilldelas ett moderatormärke med cURL:
 
@@ -222,7 +216,7 @@ Skärmbilderna av databasdata kommer från hur du ställer in poängsättning oc
 >
 >Det här exemplet följer inte följande metodtips:
 >
->* Poängregelnamnen ska vara globalt unika. de ska inte sluta med samma namn.
+>* Poängregelnamn ska vara globalt unika. De får inte sluta med samma namn.
 >
 >  Ett exempel på vad *not* att göra:
 >
@@ -231,10 +225,9 @@ Skärmbilderna av databasdata kommer från hur du ställer in poängsättning oc
 >
 >* Skapa unika märkesbilder för olika AEM
 
-
 ### UGC för åtkomstbedömning {#access-scoring-ugc}
 
-Användning av [API:er](#scoring-and-badging-apis) är att föredra.
+Användning av [API:er](#scoring-and-badging-apis) är bäst.
 
 I undersökningssyfte, till exempel med JSRP, är baskamappen som innehåller poäng
 
@@ -256,7 +249,7 @@ Ljudspåret lagras i egenskapen `scoreValue_tl` som bara kan innehålla ett vär
 
 ### Access Badging UGC {#access-badging-ugc}
 
-Användning av [API:er](#scoring-and-badging-apis) är att föredra.
+Användning av [API:er](#scoring-and-badging-apis) är bäst.
 
 I undersökningssyfte, till exempel med JSRP, är baskappen som innehåller information om tilldelade eller tilldelade märken
 

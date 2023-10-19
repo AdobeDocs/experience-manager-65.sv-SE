@@ -1,19 +1,15 @@
 ---
 title: Viktiga meddelanden
-seo-title: Messaging Essentials
-description: Översikt över meddelandekomponenten
-seo-description: Messaging component overview
-uuid: e0dad45e-d84d-4b28-b357-aded1c5d2605
+description: Lär dig mer om hur du arbetar med och använder meddelandekomponenten för att inkludera en meddelandefunktion på en webbplats.
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
-discoiquuid: 98f70093-e786-4555-8aaa-d0df4c977dc0
 docset: aem65
 exl-id: b941b5e0-f768-4393-9a9d-ded2cd7d10c4
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 62d4a8b3af5031ccc539d78f7d06a8cd1fec7af1
 workflow-type: tm+mt
-source-wordcount: '389'
+source-wordcount: '397'
 ht-degree: 0%
 
 ---
@@ -24,7 +20,7 @@ På den här sidan visas information om hur du arbetar med att använda meddelan
 
 ## Grundläggande för klientsidan {#essentials-for-client-side}
 
-**Skriv meddelande**
+**Disponera meddelande**
 
 <table>
  <tbody>
@@ -57,7 +53,7 @@ På den här sidan visas information om hur du arbetar med att använda meddelan
 
 **Meddelandelista**
 
-(för Inkorgen, Skickat och Papperskorgen)
+(För Inkorg, Skickat och Papperskorgen)
 
 <table>
  <tbody>
@@ -93,9 +89,9 @@ Se även [Anpassningar på klientsidan](/help/communities/client-customize.md)
 ## Grundläggande för serversidan {#essentials-for-server-side}
 
 * [Konfigurerar meddelanden](/help/communities/configure-messaging.md)
-* [Meddelandeklient-API:er](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/messaging/client/api/package-summary.html) för SCF-komponenter
-* [MeddelandeAPI:er](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/messaging/api/package-summary.html) för tjänsten
-* [Meddelandeslutpunkter](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/messaging/client/endpoints/package-summary.html)
+* [Meddelandeklient-API:er](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/messaging/client/api/package-summary.html) för SCF-komponenter
+* [MeddelandeAPI:er](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/messaging/api/package-summary.html) för tjänsten
+* [Meddelandeslutpunkter](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/messaging/client/endpoints/package-summary.html)
 * [Anpassningar på serversidan](/help/communities/server-customize.md)
 
 >[!CAUTION]
@@ -107,19 +103,18 @@ Se även [Anpassningar på klientsidan](/help/communities/client-customize.md)
 >
 >Till exempel:
 >
->
-```
+>```
 >valid: mb.setInboxPath( "/mail/inbox" );
 > not valid: mb.setInboxPath( "/mail/inbox/" );
 >```
 
 ### Community-webbplats {#community-site}
 
-En community-platsstruktur som skapats med guiden innehåller meddelandefunktionen när den väljs. Se `User Management` inställningar för [Konsolen Community Sites](/help/communities/sites-console.md#user-management).
+En community-platsstruktur som skapats med guiden innehåller meddelandefunktionen när den väljs. Se `User Management` inställningar för [Konsol för communityplatser](/help/communities/sites-console.md#user-management).
 
-### Exempelkod: Meddelande mottaget {#sample-code-message-received-notification}
+### Exempelkod: Meddelande mottaget meddelande {#sample-code-message-received-notification}
 
-Funktionen för sociala meddelanden genererar händelser för åtgärder, till exempel `send`, `marking read`, `marking delete`. Dessa händelser kan fångas upp och åtgärder vidtas utifrån data i händelsen.
+Funktionen för sociala meddelanden genererar händelser för åtgärder, till exempel `send`, `marking read`, `marking delete`. Dessa händelser kan fångas upp och åtgärder vidtas på data som finns i händelsen.
 
 Följande exempel är en händelsehanterare som lyssnar efter `message sent` -händelsen och skickar ett e-postmeddelande till alla meddelandemottagare som använder `Day CQ Mail Service`.
 

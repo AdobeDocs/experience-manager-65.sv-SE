@@ -1,25 +1,21 @@
 ---
 title: Utveckla sandlådeprogram
-seo-title: Develop Sandbox Application
-description: Utveckla program med hjälp av grundskript
-seo-description: Develop application using foundation scripts
-uuid: 572f68cd-9ecb-4b43-a7f8-4aa8feb6c64e
+description: Lär dig hur du utvecklar ett sandlådeprogram som använder grundskript och som har funktioner för att skapa med komponenter i Communities.
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
-discoiquuid: 910229a3-38b1-44f1-9c09-55f8fd6cbb1d
 exl-id: 7ac0056c-a742-49f4-8312-2cf90ab9f23a
-source-git-commit: 10227bcfcfd5a9b0f126fee74dce6ec7842f5e95
+source-git-commit: 62d4a8b3af5031ccc539d78f7d06a8cd1fec7af1
 workflow-type: tm+mt
-source-wordcount: '554'
+source-wordcount: '575'
 ht-degree: 1%
 
 ---
 
 # Utveckla sandlådeprogram  {#develop-sandbox-application}
 
-I det här avsnittet har mallen nu konfigurerats i [ursprungligt program](initial-app.md) och startsidorna i [ursprungligt innehåll](initial-content.md) kan programmet utvecklas med grundläggande skript, inklusive möjligheten att aktivera redigering med Communities-komponenter. I slutet av det här avsnittet kommer webbplatsen att fungera.
+I det här avsnittet, nu när mallen är konfigurerad i [ursprungligt program](initial-app.md) och startsidorna i [ursprungligt innehåll](initial-content.md) kan du utveckla programmet. Det gör du genom att använda grundläggande skript som inkluderar möjligheten att aktivera redigering med komponenter i Communities. I slutet av det här avsnittet har du en webbplats som är helt funktionell.
 
 ## Använda skript för Foundation Page {#using-foundation-page-scripts}
 
@@ -66,9 +62,9 @@ Använda CRXDE Lite:
    %>
    ```
 
-1. Ersätt &quot; // TODO ...&quot; med skript för huvud- och kroppsdelar i , eftersom du är medveten om att det finns öppna/stängda script-taggar &lt;html>.
+1. Ersätt &quot; // TODO ...&quot; med `includes` skript för huvud- och kroppsdelar i &lt;html>.
 
-   Med en överordnad typ av `foundation/components/page`kommer alla skript som inte är definierade i samma mapp att tolkas som skript i `/apps/foundation/components/page` mapp (om den finns), else to a script in `/libs/foundation/components/page` mapp.
+   Med en överordnad typ av `foundation/components/page`, tolkas alla skript som inte är definierade i samma mapp som ett skript i `/apps/foundation/components/page` mapp (om den finns), eller till ett skript i `/libs/foundation/components/page` mapp.
 
    `/apps/an-scf-sandbox/components/playpage/playpage.jsp`
 
@@ -88,7 +84,7 @@ Använda CRXDE Lite:
    </html>
    ```
 
-1. Grundskriptet `head.jsp` behöver inte överlappas, men det grundläggande skriptet `body.jsp` är tom.
+1. Täcka över basskriptet `head.jsp` är inte nödvändigt, men det grundläggande skriptet `body.jsp` är tom.
 
    Om du vill konfigurera för redigering, övertäckning `body.jsp` med ett lokalt skript och innehåller ett styckesystem (parsys) i brödtexten:
 
@@ -162,13 +158,13 @@ Välj dessutom **[!UICONTROL General]** komponenter, som
 >
 >Komponenterna som är aktiverade för sidans del lagras i databasen som värdet för `components` egenskapen för
 >
->`/etc/designs/an-scf-sandbox/jcr:content/playpage/par` nod.
+>Nod `/etc/designs/an-scf-sandbox/jcr:content/playpage/par`.
 
 ## Landningssida {#landing-page}
 
-I en flerspråkig miljö innehåller rotsidan ett skript som tolkar klientens begäran för att avgöra vilket språk som ska användas.
+I en flerspråkig miljö innehåller rotsidan ett skript som tolkar klientens begäran för att fastställa vilket språk som ska användas.
 
-I det här enkla exemplet ställs rotsidan in statiskt för att dirigera om till den engelska sidan, som i framtiden kan komma att bli huvudlandningssida med en länk till uppspelningssidan.
+I det här exemplet ställs rotsidan in statiskt för att dirigera om till den engelska sidan, som kan komma att utvecklas i framtiden som huvudlandningssida med en länk till uppspelningssidan.
 
 Ändra webbläsarens URL till rotsidan: `http://localhost:4502/editor.html/content/an-scf-sandbox.html`
 
@@ -181,6 +177,6 @@ I det här enkla exemplet ställs rotsidan in statiskt för att dirigera om till
 
 * Klicka på **[!UICONTROL OK]**
 
-När webbplatsen har publicerats dirigeras en gång till den engelska sidan om du bläddrar till rotsidan på en publiceringsinstans.
+När webbplatsen har publicerats dirigeras surfning till den engelska sidan om när du bläddrar till rotsidan för en publiceringsinstans.
 
-Det sista steget innan du spelar med communitykomponenterna i SCF är att lägga till en klientbiblioteksmapp (clientlibs) ... [Lägg till bibliotek](add-clientlibs.md)
+Det sista steget innan du börjar spela upp med komponenterna i Community SCF är att lägga till en klientbiblioteksmapp (clientlibs) ... [Lägg till klienter](add-clientlibs.md)

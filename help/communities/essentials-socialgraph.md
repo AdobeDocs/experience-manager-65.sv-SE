@@ -1,14 +1,14 @@
 ---
 title: Grundläggande om sociala diagram
-description: Lär dig mer om komponenten Följande och komponenten Följ.
+description: Lär dig mer om grunderna i Social Graph genom att använda komponenterna nedan och Följ på en communitywebbplats.
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
 exl-id: c037a788-c943-4f95-a028-1fcb0ef48f86
-source-git-commit: f7b24617dec77c6907798b1615debdc2329c9d80
+source-git-commit: 62d4a8b3af5031ccc539d78f7d06a8cd1fec7af1
 workflow-type: tm+mt
-source-wordcount: '239'
+source-wordcount: '249'
 ht-degree: 0%
 
 ---
@@ -62,7 +62,7 @@ The `following` -komponenten visar de medlemmar som antingen följer den aktuell
        <li><i>True </i>- <code>following</code> -komponenten visar de medlemmar som den inloggade medlemmen <code>follows</code></li>
        <li><i>Falskt </i>- <code>following</code> -komponenten visar de medlemmar som <code>follow </code>den inloggade medlemmen</li>
       </ul> </li>
-    </ul> <p>Standardvärdet är <i>true</i> om egenskapen saknas. Det går inte att ange den här egenskapen i redigeringsdialogrutan i redigeringsläget. Egenskapen måste läggas till i en instans av <code>following</code> nod som använder <a href="../../help/sites-developing/developing-with-crxde-lite.md">CRXDE|Lite</a>.</p> </td>
+    </ul> <p>Standardvärdet är <i>true</i> om egenskapen saknas. Det går inte att ange den här egenskapen i redigeringsdialogrutan i redigeringsläget. Egenskapen måste läggas till i en instans av <code>following</code> nod genom att använda <a href="../../help/sites-developing/developing-with-crxde-lite.md">CRXDE|Lite</a>.</p> </td>
   </tr>
  </tbody>
 </table>

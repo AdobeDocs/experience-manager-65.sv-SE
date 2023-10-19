@@ -1,14 +1,14 @@
 ---
 title: Konfigurera Dispatcher för Communities
-description: Konfigurera Dispatcher för AEM Communities
+description: Lär dig hur du konfigurerar Dispatcher för AEM Communities så att communitysajterna fungerar som de ska.
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 content-type: reference
 topic-tags: deploying
 exl-id: fb4e3973-2193-4bb5-8120-bf2f3ec80112
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 62d4a8b3af5031ccc539d78f7d06a8cd1fec7af1
 workflow-type: tm+mt
-source-wordcount: '644'
+source-wordcount: '653'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 För AEM Communities måste Dispatcher konfigureras för att säkerställa att programmet fungerar korrekt [communitysajter](overview.md#community-sites). Ytterligare konfigurationer krävs när funktioner som social inloggning inkluderas.
 
-För att ta reda på vad som är nödvändigt för just din driftsättning och webbplatsdesign
+För att ta reda på vad som är nödvändigt för din installation och webbplatsdesign
 
 * Kontakt [Kundtjänst](https://experienceleague.adobe.com/?support-solution=General&amp;support-tab=home#support)
 
@@ -62,7 +62,7 @@ OSGi-konfigurationen **ACS AEM Commands - Dispatcher Cache Control Header - Max 
   *(obligatoriskt)* En eller flera sökvägar till communitysidor. Till exempel, `/content/sites/engage/(.*)`.
 
 * **Maximal ålder för cachekontroll**
-  *(obligatoriskt)* Högsta ålder (i sekunder) som ska läggas till i rubriken Cachekontroll. Värdet måste vara större än noll (0).
+  *(obligatoriskt)* Högsta ålder (i sekunder) som ska läggas till i rubriken Cachekontroll. Värdet måste vara större än noll.
 
 ## Dispatcher-filter {#dispatcher-filters}
 
@@ -70,9 +70,9 @@ Avsnittet /filter i `dispatcher.any` filen finns dokumenterad i [Konfigurera åt
 
 I det här avsnittet beskrivs poster som troligtvis är nödvändiga för att funktionen i Communities ska fungera korrekt.
 
-Filteregenskapsnamnen följer reglerna för användning av ett fyrsiffrigt nummer för att ange i vilken ordning filtermönster ska användas. När flera filtermönster används på en begäran är det sista filtermönstret som används effektivt. Därför används ofta det första filtermönstret för att neka allt, så att följande mönster kan återskapa åtkomsten på ett kontrollerat sätt.
+Filteregenskapsnamnen följer reglerna för användning av ett fyrsiffrigt nummer för att ange i vilken ordning filtermönster ska användas. När flera filtermönster används på en begäran gäller det sista filtermönstret som används. Därför används ofta det första filtermönstret för att neka allt, så att följande mönster kan återskapa åtkomsten på ett kontrollerat sätt.
 
-I följande exempel används egenskapsnamn som sannolikt måste ändras för att passa in i en viss egenskap `dispatcher.any` -fil.
+I följande exempel används egenskapsnamn som sannolikt måste ändras för att passa in i vissa `dispatcher.any` -fil.
 
 Se även:
 
@@ -86,10 +86,10 @@ Se även:
 
 >[!CAUTION]
 >
->Se [Dispatcher Security Checklist](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/security-checklist.html) om du vill ha mer information när du begränsar åtkomsten med Dispatcher. Läs även [AEM](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html) om du vill ha mer säkerhetsinformation om din AEM installation.
+>Se [Dispatcher Security Checklist](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/security-checklist.html) om du vill ha mer information när du begränsar åtkomsten med Dispatcher. Läs även [AEM](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html) om du vill ha mer säkerhetsinformation om AEM.
 >
 
-Följande poster ska läggas till i slutet av /filter-avsnittet, särskilt efter alla neka-poster.
+Följande poster ska läggas till i slutet av /filter-avsnittet, särskilt efter alla nekade poster.
 
 <!-- New code wrt CQDOC-16081, changed by Vishabh on 10 Dec 2020.
 -->

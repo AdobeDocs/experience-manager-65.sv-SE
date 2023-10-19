@@ -1,15 +1,15 @@
 ---
 title: Clientlibs for Communities Components
-description: Klientbibliotek för Communities
+description: Lär dig hur du lägger till klientbibliotek (klientbibliotek) på en sida så att du kan samla in användningsinformation och använda felsökningsverktyg för communitykomponenter.
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
 docset: aem65
 exl-id: 94415926-a273-4f03-b7b6-57fdac12c741
-source-git-commit: b9c164321baa3ed82ae87a97a325fcf0ad2f6ca0
+source-git-commit: 62d4a8b3af5031ccc539d78f7d06a8cd1fec7af1
 workflow-type: tm+mt
-source-wordcount: '373'
+source-wordcount: '396'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 I det här avsnittet av dokumentationen beskrivs hur du lägger till klientbibliotek (klientbibliotek) på en sida för webbgruppskomponenter.
 
-Grundläggande information finns på
+Grundläggande information finns i följande:
 
 * [Använda bibliotek på klientsidan](/help/sites-developing/clientlibs.md) som innehåller användningsinformation och felsökningsverktyg
 * [Clientlibs for SCF](/help/communities/client-customize.md#clientlibs) som ger användbar information när du anpassar SCF-komponenter
@@ -30,7 +30,7 @@ Grundläggande information finns på
 
 Clientlibs krävs för att en komponent ska fungera korrekt (JavaScript) och formatera (CSS).
 
-När det finns en [communityfunktion](/help/communities/functions.md) för en funktion finns alla nödvändiga komponenter och konfigurationer, inklusive nödvändiga klienter, på communitywebbplatsen. Det är bara om ytterligare komponenter ska vara tillgängliga för författare som ytterligare klientlib behöver läggas till.
+När det finns en [communityfunktion](/help/communities/functions.md) för en funktion finns alla nödvändiga komponenter och konfigurationer, inklusive de nödvändiga klientlibs, på communitywebbplatsen. Bara om ytterligare komponenter ska vara tillgängliga för författare måste ytterligare klientlib läggas till.
 
 När de nödvändiga klientlibs saknas, [lägga till en webbgruppskomponent på en sida](/help/communities/author-communities.md) kan resultera i JavaScript-fel och ett oväntat utseende.
 
@@ -46,7 +46,7 @@ När de nödvändiga klientlibs saknas, [lägga till en webbgruppskomponent på 
 
 Den viktigaste funktionsinformationen för utvecklare identifierar de nödvändiga klientlibs.
 
-Från en AEM förekomst bläddrar du dessutom till [Community Components Guide](/help/communities/components-guide.md) ger åtkomst till en lista över de klientlibkategorier som krävs för en komponent.
+Från en AEM förekomst bläddrar du dessutom till [Guide för communitykomponenter](/help/communities/components-guide.md) ger åtkomst till en lista över de klientlibkategorier som krävs för en komponent.
 
 Till exempel längst upp på [Granskningssida](https://localhost:4502/content/community-components/en/reviews.html) de nödvändiga listorna är
 
@@ -71,7 +71,7 @@ Så här lägger du till en klientlib för en community-webbplats med [CRXDE Lit
 * Med `clientlibslist` markerad nod:
 
    * Leta reda på strängen[] property `scg:requiredClientLibs`.
-   * Välj `Value` för att komma åt dialogrutan String-array.
+   * Välj `Value` så att du kan komma åt dialogrutan String-array.
 
       * Bläddra nedåt om det behövs.
       * Välj + för att ange ett nytt klientbibliotek.

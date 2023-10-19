@@ -1,25 +1,21 @@
 ---
 title: Grundläggande om filbibliotek
-seo-title: File Library Essentials
-description: Arbeta med filbiblioteksfunktionen
-seo-description: Working with the file library feature
-uuid: 0630f13e-97b4-4f93-9dce-07f559287c29
+description: Läs om grunderna i hur du arbetar med filbiblioteksfunktionen i Adobe Experience Manager Communities.
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
-discoiquuid: 9019b967-fff8-4dda-bc5a-fd4a3e14a4ef
 exl-id: 6d653331-c1ce-4ccb-bb45-656b6413ac3e
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 62d4a8b3af5031ccc539d78f7d06a8cd1fec7af1
 workflow-type: tm+mt
-source-wordcount: '256'
+source-wordcount: '260'
 ht-degree: 0%
 
 ---
 
 # Grundläggande om filbibliotek {#file-library-essentials}
 
-Den här sidan innehåller viktig information om hur du arbetar med filbiblioteksfunktionen.
+Den här sidan innehåller grundläggande information om hur du arbetar med filbiblioteksfunktionen.
 
 ## Grundläggande för klientsidan {#essentials-for-client-side}
 
@@ -56,9 +52,9 @@ Den här sidan innehåller viktig information om hur du arbetar med filbibliotek
 
 ## Grundläggande för serversidan {#essentials-for-server-side}
 
-* [API för filbibliotek](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/filelibrary/client/api/package-summary.html)
+* [API för filbibliotek](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/filelibrary/client/api/package-summary.html)
 
-* [Slutpunkter för filbibliotek](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/filelibrary/client/endpoints/package-summary.html)
+* [Slutpunkter för filbibliotek](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/filelibrary/client/endpoints/package-summary.html)
 
 * [Anpassningar på serversidan](server-customize.md)
 

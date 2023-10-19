@@ -1,18 +1,14 @@
 ---
 title: Skapa noder
-seo-title: Create Nodes
-description: Täck över kommentarsystemet
-seo-description: Overlay the comments system
-uuid: 802ae28b-9989-4c2c-b466-ab76a724efd3
+description: Lär dig hur du övertäcker kommentarsystemet med en anpassad version genom att kopiera det minsta antalet filer som behövs från /libs och redigera dem i /apps.
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
-discoiquuid: cd4f53ee-537b-4f10-a64f-474ba2c44576
 exl-id: 3d72cbdf-5eb4-477d-aa61-035a846f7dcb
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 62d4a8b3af5031ccc539d78f7d06a8cd1fec7af1
 workflow-type: tm+mt
-source-wordcount: '251'
+source-wordcount: '271'
 ht-degree: 1%
 
 ---
@@ -36,19 +32,19 @@ Vissa noder i sökvägen är mappar och andra är komponenter.
 1. Bläddra till [http://localhost:4502/crx/de/index.jsp](http://localhost:4502/crx/de/index.jsp)
 1. Skapa `/apps/social` (om den inte redan finns)
    * Välj `/apps` nod
-   * **[!UICONTROL Create > Folder ...]**
+   * **[!UICONTROL Create > Folder]**
       * Ange namn: `social`
 1. Välj `social` nod
-   * **[!UICONTROL Create]** > **[!UICONTROL Folder...]**
+   * **[!UICONTROL Create]** > **[!UICONTROL Folder]**
       * Ange namn: `commons`
 1. Välj `commons` nod
-   * **[!UICONTROL Create > Folder...]**
+   * **[!UICONTROL Create > Folder]**
       * Ange namn: `components`
 1. Välj `components` nod
-   * **[!UICONTROL Create > Folder..]**.
+   * **[!UICONTROL Create > Folder]**.
       * Ange namn: `hbs`
 1. Välj `hbs` nod
-   * **[!UICONTROL Create]** > **[!UICONTROL Create Component...]**
+   * **[!UICONTROL Create]** > **[!UICONTROL Create Component]**
       * Ange etikett: `comments`
       * Ange titel: `Comments`
       * Ange beskrivning: `List of comments without showing avatars`
@@ -57,7 +53,7 @@ Vissa noder i sökvägen är mappar och andra är komponenter.
       * Klicka **[!UICONTROL Next]** tills **[!UICONTROL OK]**
 1. Välj `comments` nod
 
-   * **[!UICONTROL Create]** > **[!UICONTROL Create Component...]**
+   * **[!UICONTROL Create]** > **[!UICONTROL Create Component]**
 
       * Ange etikett: `comment`
       * Ange titel: `Comment`
@@ -76,11 +72,10 @@ Vissa noder i sökvägen är mappar och andra är komponenter.
 
 >[!NOTE]
 >
->Om du vill bevara arvskedjan måste du `Super Type` (egenskap `sling:resourceSuperType`) för övertäckningskomponenterna anges med samma värde som `Super Type` av de komponenter som skall täckas, i detta fall
+>Om du vill bevara arvskedjan väljer du `Super Type` (egenskap `sling:resourceSuperType`) för övertäckningskomponenterna anges med samma värde som `Super Type` av de komponenter som skall täckas, i detta fall
 >
 >* `social/commons/components/comments`
 >* `social/commons/components/comments/comment`
-
 
 Övertäckningen är egen `Type`(egenskap `sling:resourceType`) måste vara en relativ självreferens så att innehåll som inte hittas i /apps sedan söks efter i /libs.
 * Namn: `sling:resourceType`

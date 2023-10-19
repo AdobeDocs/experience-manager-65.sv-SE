@@ -1,17 +1,15 @@
 ---
 title: Ändra utseendet
-description: Ändra skriptet
-uuid: 30555b9f-da29-4115-9ed5-25f80a247bd6
+description: Lär dig hur du redigerar skriptet comment.hbs som ansvarar för att skapa det övergripande HTML för varje kommentar i Adobe Experience Manager Communities.
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
-discoiquuid: c9d31ed8-c105-453b-bd3c-4660dfd81272
 docset: aem65
 exl-id: cb8f6967-216c-46d3-a7ba-068b0f5e3b94
-source-git-commit: 78c584db8c35ea809048580fe5b440a0b73c8eea
+source-git-commit: 62d4a8b3af5031ccc539d78f7d06a8cd1fec7af1
 workflow-type: tm+mt
-source-wordcount: '210'
+source-wordcount: '228'
 ht-degree: 1%
 
 ---
@@ -20,7 +18,7 @@ ht-degree: 1%
 
 ## Ändra skriptet {#modify-the-script}
 
-Skriptet comment.hbs ansvarar för att skapa det övergripande HTML för varje kommentar.
+The `comment.hbs` -skript som skapar det övergripande HTML för varje kommentar.
 
 Så här visar du inte avataren bredvid varje publicerad kommentar:
 

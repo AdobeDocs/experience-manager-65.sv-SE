@@ -1,14 +1,14 @@
 ---
 title: Grundläggande om communitygrupper
-description: Skapa communitysajter dynamiskt
+description: Lär dig hur behöriga användare kan använda funktionen Community Groups för att dynamiskt skapa en undercommunity på en community-webbplats.
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
 exl-id: f45ae7be-a500-463a-ab3e-81f281651a9d
-source-git-commit: 681d1e6bd885b801b930e580d95645f160f17cea
+source-git-commit: 62d4a8b3af5031ccc539d78f7d06a8cd1fec7af1
 workflow-type: tm+mt
-source-wordcount: '407'
+source-wordcount: '427'
 ht-degree: 0%
 
 ---
@@ -17,11 +17,11 @@ ht-degree: 0%
 
 Funktionen för communitygrupper är möjligheten för en undercommunity att skapas dynamiskt på en community-webbplats av behöriga användare från publicerings- och författarmiljöerna.
 
-Från och med Communities [funktionspaket 1](deploy-communities.md#latestfeaturepack)kan grupper kapslas i andra grupper
+Från och med Communities [funktionspaket 1](deploy-communities.md#latestfeaturepack)kan grupper kapslas i andra grupper.
 
 ## Grundläggande för klientsidan {#essentials-for-client-side}
 
-### Medlemslista för communitygrupper {#community-groups-member-list}
+### Medlemslista för grupper {#community-groups-member-list}
 
 <table>
  <tbody>
@@ -85,13 +85,13 @@ Från och med Communities [funktionspaket 1](deploy-communities.md#latestfeature
 
 En community-webbplatsstruktur som innehåller [Funktionen Grupper](functions.md#groups-function) stöder skapandet av nya `community groups` från publicerings- och författarmiljöerna. Den skapade communitygruppen innehåller en `community groups member list` -komponent som listar medlemmarna i gruppen.
 
-En eller flera [communitygruppsmallar](tools-groups.md), som tillhandahåller designen för communitygruppssidorna, kan konfigureras för funktionen Grupper när funktionen läggs till i en [mall för communitywebbplats](sites.md) eller kapslad i en community-gruppmall.
+En eller flera [community-gruppmallar](tools-groups.md), som tillhandahåller designen för communitygruppssidorna, kan konfigureras för funktionen Grupper. Detta gäller när funktionen läggs till i en [mall för communitywebbplats](sites.md) eller kapslad i en community-gruppmall.
 
-Om flera communitygruppsmallar ingår visas ett val av design för den behöriga användaren när en ny community-grupp skapas för communitywebbplatsen, vilket visas i avsnittet om [communitygrupper](creating-groups.md) för författare.
+Om du använder flera mallar för communitygrupper blir det ett val. Det innebär att designvalet presenteras för den behöriga användaren när en community-grupp skapas för communitywebbplatsen. Se avsnittet om [communitygrupper](creating-groups.md) för författare.
 
 ### Kapslade grupper {#nested-groups}
 
-Från och med Communities [FP1](deploy-communities.md#latestfeaturepack)kan en gruppfunktion inkluderas i en gruppmall, vilket gör att det går att använda kapslade grupper (undergrupper).
+Från och med Communities [FP1](deploy-communities.md#latestfeaturepack)kan en gruppfunktion inkluderas i en gruppmall, vilket gör att kapslade grupper (undergrupper) kan användas.
 
 När en communitywebbplats eller gruppmall innehåller funktionen Grupper kan du:
 
@@ -104,6 +104,6 @@ När du skapar en grupp i författarmiljön måste du först publicera community
 ## Länkar och tillhörande information {#links-and-related-information}
 
 * [Hantera användare och användargrupper](users.md)
-* [Konsolen Communities Groups](groups.md)
+* [Konsolen Communities-grupper](groups.md)
 * [Funktionen Grupper](functions.md#groups-function)
 * [Gruppmallar](tools-groups.md)

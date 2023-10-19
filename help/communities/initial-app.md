@@ -1,18 +1,14 @@
 ---
 title: Ursprungligt sandlådeprogram
-seo-title: Initial Sandbox Application
-description: Skapa mall, komponent och skript
-seo-description: Create template, component, and script
-uuid: b0d03376-d8bc-4e98-aea2-a01744c64ccd
+description: Lär dig hur du använder innehållsmallen som används för att skapa innehållssidor och en komponent och ett skript som används för att återge webbsidor.
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
-discoiquuid: f74d225e-0245-4d5a-bb93-0ee3f31557aa
 exl-id: cbf9ce36-53a2-4f4b-a96f-3b05743f6217
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 62d4a8b3af5031ccc539d78f7d06a8cd1fec7af1
 workflow-type: tm+mt
-source-wordcount: '583'
+source-wordcount: '599'
 ht-degree: 1%
 
 ---
@@ -21,8 +17,8 @@ ht-degree: 1%
 
 I det här avsnittet skapar du följande:
 
-* The **[mall](#createthepagetemplate)** som ska användas för att skapa innehållssidor på exempelwebbplatsen.
-* The **[komponent och skript](#create-the-template-s-rendering-component)** som kommer att användas för att återge webbplatsens sidor.
+* The **[mall](#createthepagetemplate)** som används för att skapa innehållssidor på exempelwebbplatsen.
+* The **[komponent och skript](#create-the-template-s-rendering-component)** som används för att återge webbplatsens sidor.
 
 ## Skapa innehållsmallen {#create-the-content-template}
 
@@ -45,13 +41,13 @@ I den här övningen är alla sidor baserade på en enkel mall.
 
    Etiketten används som nodnamn.
 
-   Resurstypen visas på `playpage`&#39;s jcr:content node as the property `sling:resourceType`. Den identifierar komponenten (resursen) som återger innehållet när det begärs av en webbläsare.
+   Resurstypen visas på `playpage`&#39;s `jcr:content` nod som egenskap `sling:resourceType`. Den identifierar komponenten (resursen) som återger innehållet när det begärs av en webbläsare.
 
-   I det här fallet skapas alla sidor med `playpage` mallen återges av `an-scf-sandbox/components/playpage` -komponenten. Sökvägen till komponenten är relativ, vilket gör att Sling kan söka efter resursen först i `/apps` och, om den inte hittas, i `/libs` mapp.
+   I det här fallet skapas alla sidor med `playpage` -mallen återges av `an-scf-sandbox/components/playpage` -komponenten. Sökvägen till komponenten är relativ, vilket gör att Sling kan söka efter resursen först i `/apps` och, om den inte hittas, i `/libs` mapp.
 
    ![create-content-template](assets/create-content-template-1.png)
 
-1. Om du använder kopiera/klistra in ska du kontrollera att värdet för Resurstyp inte har några inledande eller avslutande blanksteg.
+1. Om du använder kopiera/klistra in ska du se till att resurstypvärdet inte har några inledande eller avslutande blanksteg.
 
    Klicka på **[!UICONTROL Next]**.
 
@@ -63,7 +59,7 @@ I den här övningen är alla sidor baserade på en enkel mall.
 
    När en författare skapar en sida nedan `/content`, `playpage` Mallen &quot;En SCF Sandbox-sidmall&quot; visas i en lista med tillgängliga mallar som ska användas.
 
-   När rotsidan har skapats från mallen kan åtkomsten till mallen begränsas till den här webbplatsen genom att ändra egenskapen så att den inkluderar rotsökvägen i det reguljära uttrycket, dvs.
+   När rotsidan har skapats från mallen kan åtkomsten till mallen begränsas till den här webbplatsen genom att redigera egenskapen så att den inkluderar rotsökvägen i det reguljära uttrycket.
 
    `/content/an-scf-sandbox(/.&ast;)?`
 
@@ -73,11 +69,11 @@ I den här övningen är alla sidor baserade på en enkel mall.
 
    Klicka **[!UICONTROL Next]** i **[!UICONTROL Allowed Parents]** -panelen.
 
-   Klicka **[!UICONTROL Next]** i **[!UICONTROL Allowed Children]** paneler.
+   Klicka **[!UICONTROL Next]** i **[!UICONTROL Allowed Children]** -panelen.
 
    Klicka på **[!UICONTROL OK]**.
 
-1. När du har klickat på OK och skapat mallen visas röda trianglar i hörnen på fliken Egenskaper för den nya `playpage` mall. Dessa röda trianglar anger redigeringar som inte har sparats.
+1. När du har klickat på OK och skapat mallen kan du se de röda trianglarna som visas i hörnen på egenskapsfliken för de nya `playpage` mall. Dessa röda trianglar anger redigeringar som inte har sparats.
 
    Klicka **[!UICONTROL Save All]** för att spara den nya mallen i databasen.
 
@@ -113,6 +109,6 @@ Skapa *komponent* som definierar innehållet och återger sidor som skapats base
 
    >[!CAUTION]
    >
-   >Överensstämmelsen mellan sökvägen till uppspelningskomponenten och egenskapen sling:resourceType för uppspelningssidmallen är avgörande för att webbplatsen ska fungera korrekt.
+   >Korrespondensen mellan sökvägen till uppspelningskomponenten och `sling:resourceType` spelningssidmallens egenskap är avgörande för att webbplatsen ska fungera korrekt.
 
    ![verify-template-component](assets/verify-template-component.png)

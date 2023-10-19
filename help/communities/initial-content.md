@@ -1,15 +1,15 @@
 ---
 title: Ursprungligt sandlådeinnehåll
-description: Skapa innehåll
+description: Lär dig hur du använder sidmallen i sandlådan för att skapa en huvudsida för en engelsk version av en webbplats och en underordnad sida utanför huvudsidan.
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
 exl-id: 068a0fff-ca48-4847-ba3f-d78416c97f6d
-source-git-commit: 260f71acd330167572d817fdf145a018b09cbc65
+source-git-commit: 62d4a8b3af5031ccc539d78f7d06a8cd1fec7af1
 workflow-type: tm+mt
-source-wordcount: '429'
-ht-degree: 2%
+source-wordcount: '457'
+ht-degree: 1%
 
 ---
 
@@ -23,11 +23,11 @@ I det här avsnittet skapar du följande sidor som alla använder [sidmall](init
 
    * SCF Play - Underordnad till den huvudsida som ska spelas upp.
 
-Även om den här självstudiekursen inte går in på [språkversioner](../../help/sites-administering/tc-prep.md)är den utformad så att rotsidan kan implementera identifiering av det språk som användaren föredrar via sidhuvudet i HTML och dirigera om till rätt huvudsida för språket. Konventionen är att använda landskoden med två bokstäver för sidans nodnamn, till exempel &quot;en&quot; för engelska och &quot;fr&quot; för franska.
+Den här självstudiekursen slutar inte med [språkversioner](../../help/sites-administering/tc-prep.md). Istället är den utformad så att rotsidan kan implementera identifiering av det språk som användaren föredrar via sidhuvudet i HTML och dirigera om till rätt huvudsida för språket. Konventionen är att använda landskoden med två bokstäver för sidans nodnamn, till exempel &quot;en&quot; för engelska och &quot;fr&quot; för franska.
 
 ## Skapa första sidor {#create-first-pages}
 
-Nu finns det en [sidmall](initial-app.md#createthepagetemplate)kan du skapa webbplatsens rotsida i katalogen /content.
+Nu när det finns en [sidmall](initial-app.md#createthepagetemplate)kan du skapa webbplatsens rotsida i katalogen /content.
 
 1. Standardgränssnittet innehåller för närvarande utkast för att skapa webbplatser. Det klassiska användargränssnittet är användbart eftersom den här självstudiekursen skapar en enkel webbplats.
 
@@ -43,7 +43,7 @@ Nu finns det en [sidmall](initial-app.md#createthepagetemplate)kan du skapa webb
 
    Du kan även få tillgång till det klassiska användargränssnittet för webbplatser direkt genom att gå till [/siteadmin.](http://localhost:4502/siteadmin)
 
-1. Välj **[!UICONTROL Websites]** och sedan i verktygsfältet **[!UICONTROL New]** > **[!UICONTROL New Page]**.
+1. I Utforskarrutan väljer du **[!UICONTROL Websites]** och sedan väljer du **[!UICONTROL New]** > **[!UICONTROL New Page]**.
 
    I **[!UICONTROL Create Page]** anger du följande:
 

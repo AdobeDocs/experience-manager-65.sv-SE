@@ -1,18 +1,14 @@
 ---
 title: Använda socialt diagram
-seo-title: Using Social Graph
-description: Lägga till en följande komponent på en sida
-seo-description: Adding a Following component to a page
-uuid: 8be6334b-e6c9-40bc-90a8-750b98419470
+description: Lär dig hur du lägger till följande komponent på en sida där inloggade communitymedlemmar kan följa aktiviteter eller följa aktiviteter.
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: authoring
 content-type: reference
-discoiquuid: 0ce57ab1-e4c6-4c38-963d-556eef8757f2
 exl-id: 2cd1436b-3727-4757-b28e-70756be78a4e
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 62d4a8b3af5031ccc539d78f7d06a8cd1fec7af1
 workflow-type: tm+mt
-source-wordcount: '187'
+source-wordcount: '197'
 ht-degree: 0%
 
 ---
@@ -21,7 +17,7 @@ ht-degree: 0%
 
 ## Introduktion {#introduction}
 
-Möjlighet för en community-medlem att följa [verksamhet](activities.md) och som ska följas fastställs genom två komponenter: `Follow` och `Following`.
+Möjlighet för en community-medlem att följa [verksamhet](activities.md) och ska följas genom två komponenter: `Follow` och `Following`.
 
 The `Follow` måste vara associerad med en annan resurs, och den här associationen har redan upprättats för communitymedlemmar och funktioner.
 
@@ -39,7 +35,7 @@ När [nödvändiga bibliotek på klientsidan](essentials-socialgraph.md#essentia
 
 ## Konfigurera följande {#configuring-following}
 
-För närvarande är det nödvändigt att ställa in egenskapen för att avgöra om komponenten visar `follows` relation, eller `following` relation.
+För närvarande är det nödvändigt att ställa in egenskapen för att avgöra om komponenten visar `follows` eller `following` relation.
 
 ## Ytterligare information {#additional-information}
 

@@ -1,21 +1,21 @@
 ---
 title: Grundläggande kommentarer
-description: Översikt över komponenten Kommentarer
+description: Lär dig hur du arbetar med kommentarsystemet (komponenten Comments) och hanterar det användargenererade innehållet (UGC) i inlägg från communitymedlemmar.
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
 exl-id: 8b4034f7-2f97-45ad-96d4-51cfbeae5991
-source-git-commit: e068cee192c0837f1473802143e0793674d400e8
+source-git-commit: 62d4a8b3af5031ccc539d78f7d06a8cd1fec7af1
 workflow-type: tm+mt
-source-wordcount: '335'
+source-wordcount: '351'
 ht-degree: 0%
 
 ---
 
 # Grundläggande kommentarer {#comments-essentials}
 
-På den här sidan finns information om hur du arbetar med kommentarsystemet (kommentarkomponenten) och alternativ för att hantera användargenererat innehåll (UGC) som genereras när medlemmar skickar kommentarer eller svar.
+Den här sidan innehåller grunderna för hur du arbetar med kommentarsystemet (kommentarkomponenten) och alternativ för att hantera användargenererat innehåll (UGC) som genereras när medlemmar skickar kommentarer eller svar.
 
 Kommentarskomponenten skapar ett kommentarsystem så att varje inlägg representeras av en kommentarkomponent (en). Det är kommentarsystemet som finns på sidan. Kommentarsystemet skapar de enskilda kommentarerna när de anropas.
 

@@ -1,15 +1,15 @@
 ---
 title: Distribuera webbgrupper
-description: Så här distribuerar du AEM Communities
+description: Lär dig hur du distribuerar communityn och communityfunktioner i Adobe Experience Manager.
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 content-type: reference
 topic-tags: deploying
 docset: aem65
 exl-id: 5b3d572d-e73d-4626-b664-c985949469c9
-source-git-commit: e33816b3b8d190e185d2b23dad3a05aca272f01c
+source-git-commit: 62d4a8b3af5031ccc539d78f7d06a8cd1fec7af1
 workflow-type: tm+mt
-source-wordcount: '1701'
+source-wordcount: '1706'
 ht-degree: 0%
 
 ---
@@ -84,7 +84,7 @@ AEM 6.5 Communities GA innehåller Communities-paketet. Läs mer om uppdateringa
 
 Från och med AEM 6.4 levereras uppdateringar av Communities som en del av AEM Cumulative Fix Packs och Service Packs.
 
-De senaste uppdateringarna av AEM 6.5 finns på [Adobe Experience Manager 6.4 Cumulative Fix Packs and Service Pack](https://helpx.adobe.com/experience-manager/aem-releases-updates.html).
+De senaste uppdateringarna av AEM 6.5 finns på [Adobe Experience Manager 6.4 Cumulative Fix Packs and Service Pack](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/aem-releases-updates.html?lang=en).
 
 ### Tidigare versioner {#version-history}
 
@@ -132,7 +132,7 @@ Mer information om hur du installerar paket finns på [Webbkonsol](/help/sites-d
 
 För att SRP-samlingen (MSRP eller DSRP) ska ha stöd för avancerad flerspråkig sökning (MLS) krävs nya Solr-plugin-program förutom ett anpassat schema och en Solr-konfiguration. Alla nödvändiga objekt paketeras i en nedladdningsbar zip-fil.
 
-Den avancerade MLS-nedladdningen (kallas även &quot;phasetwo&quot;) är tillgänglig från Adobe-databasen:
+Avancerad MLS-nedladdning (kallas även `phasetwo`) finns i Adobe-databasen:
 
 * AEM-SOLR-MLS-phasetwo
 
@@ -298,13 +298,11 @@ Om du vill kopiera nyckelmaterialet från författaren till alla andra instanser
 
 #### Databasreplikering {#repository-replication}
 
-Nyckelmaterialet som lagras i databasen, som i AEM 6.2 och tidigare, kan bevaras. Ange följande systemegenskap vid den första starten av varje AEM (som skapar den inledande databasen):
-
-* `-Dcom.adobe.granite.crypto.file.disable=true`
+Nyckelmaterialet som lagras i databasen, som i AEM 6.2 och tidigare, kan bevaras. Ange systemegenskapen `-Dcom.adobe.granite.crypto.file.disable=true` vid första starten av varje AEM (vilket skapar den inledande databasen).
 
 >[!NOTE]
 >
->Det är viktigt att kontrollera att [replikeringsagent på författare](#replication-agents-on-author) är korrekt konfigurerad.
+>Verifiera att [replikeringsagent på författare](#replication-agents-on-author) är korrekt konfigurerad.
 
 Med nyckelmaterialet som lagras i databasen replikeras krypteringsnyckeln från författaren till andra instanser på följande sätt:
 

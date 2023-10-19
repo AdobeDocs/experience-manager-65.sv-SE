@@ -1,14 +1,14 @@
 ---
 title: Grundläggande om forum
-description: Översikt över forum
+description: Läs om grunderna i hur du arbetar med forumfunktionen i Adobe Experience Manager Communities.
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
 exl-id: 622cf6ca-f119-4310-ad14-537576bd6f6d
-source-git-commit: 681d1e6bd885b801b930e580d95645f160f17cea
+source-git-commit: 62d4a8b3af5031ccc539d78f7d06a8cd1fec7af1
 workflow-type: tm+mt
-source-wordcount: '246'
+source-wordcount: '259'
 ht-degree: 0%
 
 ---
@@ -60,7 +60,7 @@ Den här sidan innehåller viktig information om hur du arbetar med forumfunktio
 
 ### Forum {#forum-function}
 
-En community-webbplatsstruktur som innehåller [Forum](functions.md#forum-function), innehåller en konfigurerad `forum` och inställningar som påverkar moderering, taggning och översättning.
+En community-webbplatsstruktur som innehåller [Forumfunktion](functions.md#forum-function), innehåller en konfigurerad `forum` och inställningar som påverkar moderering, taggning och översättning.
 
 ### Åtkomst till foruminlägg (UGC) {#accessing-forum-posts-ugc}
 

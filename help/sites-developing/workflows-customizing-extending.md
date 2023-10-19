@@ -10,7 +10,7 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: f23408c3-6b37-4047-9cce-0cab97bb6c5c
 exl-id: 9e205912-50a6-414a-b8d4-a0865269d0e0
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 62d4a8b3af5031ccc539d78f7d06a8cd1fec7af1
 workflow-type: tm+mt
 source-wordcount: '3582'
 ht-degree: 0%
@@ -37,7 +37,7 @@ En arbetsflödesstegkomponent definierar utseendet och beteendet för steget nä
 * Redigeringsdialogrutan för konfiguration av komponentegenskaper.
 * Tjänsten eller skriptet som körs vid körning.
 
-Som med [alla komponenter](/help/sites-developing/components.md), ärver komponenter för arbetsflödessteg från komponenten som anges för `sling:resourceSuperType` -egenskap. I följande diagram visas hierarkin för `cq:component` noder som utgör grunden för alla stegkomponenter i arbetsflödet. Diagrammet innehåller även **Processsteg**, **Deltagarsteg** och **Dynamiskt deltagarsteg** eftersom dessa är de vanligaste (och mest grundläggande) startpunkterna för utveckling av anpassade stegkomponenter.
+Som med [alla komponenter](/help/sites-developing/components.md), ärver komponenter i arbetsflödessteg från komponenten som har angetts för `sling:resourceSuperType` -egenskap. I följande diagram visas hierarkin för `cq:component` noder som utgör grunden för alla stegkomponenter i arbetsflödet. Diagrammet innehåller även **Processsteg**, **Deltagarsteg** och **Dynamiskt deltagarsteg** eftersom dessa är de vanligaste (och mest grundläggande) startpunkterna för utveckling av anpassade stegkomponenter.
 
 ![aem_wf_component_inherit](assets/aem_wf_componentinherit.png)
 
