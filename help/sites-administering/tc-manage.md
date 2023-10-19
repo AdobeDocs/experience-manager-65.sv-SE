@@ -2,7 +2,7 @@
 title: Hantera översättningsprojekt
 description: Lär dig hantera översättningsprojekt i Adobe Experience Manager.
 exl-id: 968bba02-98fe-4eaf-9937-ce5cfdf5b413
-source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
+source-git-commit: 9438868191961404e9e18cb0dd2e844985ac9db0
 workflow-type: tm+mt
 source-wordcount: '3588'
 ht-degree: 1%
@@ -433,7 +433,7 @@ Du kan skapa ett översättningsprojekt manuellt om du föredrar att använda pr
 
 >[!NOTE]
 >
->Om du vill skapa ett projekt måste ditt konto vara medlem i `project-administrators` grupp.
+>Om du vill skapa ett projekt måste ditt konto vara medlem i `projects-administrators` grupp.
 
 När du skapar ett översättningsprojekt manuellt måste du ange värden för följande översättningsrelaterade egenskaper utöver de [grundläggande egenskaper](/help/sites-authoring/touch-ui-managing-projects.md#creating-a-project):
 

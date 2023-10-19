@@ -2,7 +2,7 @@
 title: Kom igång med AEM headless translation
 description: Lär dig hur du ordnar ditt headless-innehåll och hur AEM översättningsverktyg fungerar.
 exl-id: 764f78a7-1d3d-4406-85b1-b80dffae2350
-source-git-commit: 9c517590c2b78eed7c52e33e0a106237a2af3bb7
+source-git-commit: 947b17a82f704a244e7fdc710cfa9df50c64f46b
 workflow-type: tm+mt
 source-wordcount: '1495'
 ht-degree: 0%
@@ -50,7 +50,7 @@ Det finns ett antal krav innan du börjar översätta ditt AEM innehåll.
 
 * Tillgång till sandlådor för att testa översättning av ditt innehåll
 * Autentiseringsuppgifter för att ansluta till den översättningstjänst du föredrar
-* Bli medlem i `project-administrators` grupp i AEM
+* Bli medlem i `projects-administrators` grupp i AEM
 
 ## Strukturen är nyckeln {#content-structure}
 

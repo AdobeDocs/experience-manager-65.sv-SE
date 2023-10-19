@@ -1,14 +1,8 @@
 ---
 title: AEM frågor och svar
-seo-title: AEM 6.4 frequently asked questions
 description: Använd de här vanliga frågorna för att förstå, konfigurera och felsöka vanliga arbetsflöden och problem i AEM.
-seo-description: Use these FAQs to understand, configure, and troubleshoot common workflows or issues in AEM.
-uuid: 17d34923-f1ce-463b-8e9d-a713edcce51b
-contentOwner: jsyal
-discoiquuid: a3bb5695-6593-413d-9c2f-4c164e663b15
-docset: aem65
 exl-id: 182c464a-ff7a-467b-9eb5-8ffac335a87a
-source-git-commit: 68c36d4e3a14567a4d115ee64a4474bcaf9aa386
+source-git-commit: f7bfbfab9fb9ec00304f2889735c70be924cc217
 workflow-type: tm+mt
 source-wordcount: '1096'
 ht-degree: 0%
@@ -17,7 +11,7 @@ ht-degree: 0%
 
 # AEM frågor och svar {#aem-faqs}
 
-Lär känna svaren på AEM felsökning och konfigurationsproblem.
+Lär känna svaren på några AEM problem med felsökning och konfiguration.
 
 ## Sites {#sites}
 
@@ -42,7 +36,7 @@ Visa `Initiator` för att avgöra vilken initierare som en begäran initierades 
 
 Innehållsförfattare måste ha behörighet att skapa funktionen för språkkopiering på `/content/projects` plats.
 
-Om du även behöver hantera projekt av författare kan du lösa problemet genom att lägga till författaren i `project-administrators` grupp.
+Om du även behöver hantera projekt av författare kan du lösa problemet genom att lägga till författaren i `projects-administrators` grupp.
 
 #### Hur ändrar du format när du skapar en språkkopia för ett projekt? {#how-to-change-the-format-while-creating-language-copy-for-a-project}
 
@@ -70,7 +64,7 @@ Information om hur du aktiverar SSL som standard finns i [SSL som standard](/hel
 
 Content Services baseras på Sling Models och AEM utvecklare måste tillhandahålla en Sling Model pojo för varje komponent som exporteras.
 
-Mer information om hur du använder AEM innehållstjänster från ett React-program finns i [Kom igång med AEM Content Services](https://helpx.adobe.com/experience-manager/kt/sites/using/content-services-tutorial-use.html) självstudiekurs.
+Mer information om hur du använder AEM innehållstjänster från ett React-program finns i [Kom igång med AEM Content Services](https://helpx.adobe.com/experience-manager/kt/sites/using/content-services-tutorial-use.html) självstudie.
 
 Om utvecklarna vill exportera ett träd med komponenter kan de också implementera `ComponentExporter` och `ContainerExporter` och använder `ModelFactory` för att iterera över de underordnade komponenterna och returnera deras modellbeteckning. Se resurserna nedan:
 
@@ -97,7 +91,7 @@ Om användaren inte har borttagningsbehörighet under objektnoden när de överf
 När du skapar en språkkopia via Touch-gränssnittet (**Referenser** -> **Uppdatera språkkopia**) skapas en ny DAM-mapp under det nya språket och resurserna refereras därifrån.
 
 Det här är standardinställningen för OTB-konfigurationer. Du kan ange **Översätt sidresurser** = **Översätt inte** i översättningskonfigurationer.
-AEM 6.4 **verktyg** > **Cloud Services** > **Översättningsmolntjänster**.
+AEM 6.4 **verktyg** > **Cloud Service** > **Översättningsmolntjänster**.
 
 #### Hur inaktiverar man en AEM som orsakar exponentiell tillväxt för AEM SegmentStore (AEM 6.3.1.1)? {#how-to-disable-an-aem-component-causing-exponential-growth-for-the-aem-segmentstore-aem}
 
@@ -113,7 +107,7 @@ AEM innehåller olika mekanismer som gör att du kan anpassa konsolerna och sidr
 
 #### Vad är skillnaden mellan CoralUI 2- och CoralUI 3-baserade komponenter? {#what-is-the-difference-between-coralui-and-coralui-based-components}
 
-En ny uppsättning Sling-komponenter för Granite UI Foundation har skapats för Coral3 och finns under [/libs/granite/ui/components/coral/Foundation.](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/jcr_root/libs/granite/ui/components/coral/foundation/server.html) Det finns en uppsättning för CoralUI 2-baserade komponenter och en uppsättning för CoralUI 3-baserade komponenter. Den nya uppsättningen kommer inte bara att vara en kopiera-klistra in av den gamla uppsättningen, utan kommer att rensas (till exempel strömlinjeformning, borttagning av borttagen funktion). Därför rekommenderar vi att en sida endast använder CoralUI 3-baserad eller CoralUI 2-baserad uppsättning.
+En ny uppsättning Sling-komponenter för Granite UI Foundation har skapats för Coral3 och finns under [/libs/granite/ui/components/coral/Foundation.](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/jcr_root/libs/granite/ui/components/coral/foundation/server.html) Det finns en uppsättning för CoralUI 2-baserade komponenter och en uppsättning för CoralUI 3-baserade komponenter. Den nya uppsättningen kommer inte bara att vara en kopiera-klistra in av den gamla uppsättningen, utan kommer att rensas (till exempel strömlinjeformning, borttagning av borttagen funktion). Därför rekommenderar vi att en sida bara använder CoralUI 3-baserad eller CoralUI 2-baserad uppsättning.
 
 Mer information finns i [Migreringshandbok till CoralUI 3-baserad](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/jcr_root/libs/granite/ui/components/legacy/coral2/migration.html).
 

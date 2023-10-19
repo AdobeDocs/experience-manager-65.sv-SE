@@ -1,16 +1,8 @@
 ---
 title: Projekt
-seo-title: Projects
 description: Med projekt kan du gruppera resurser i en enhet vars gemensamma, delade miljö gör det enkelt att hantera dina projekt.
-seo-description: Projects let you group resources into one entity whose common, shared environment makes it easy to manage your projects
-uuid: 4b5b9d78-d515-46af-abe2-882da0a1c8ae
-products: SG_EXPERIENCEMANAGER/6.5/SITES
-topic-tags: projects
-content-type: reference
-discoiquuid: dee7ac7c-ca86-48e9-8d95-7826fa926c68
-docset: aem65
 exl-id: 632c0608-2ab8-4a5b-8251-cd747535449b
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 1d64a9a6d6dfbc7606d7c222ef50a21bf9b902d6
 workflow-type: tm+mt
 source-wordcount: '1365'
 ht-degree: 5%
@@ -223,7 +215,7 @@ Alla projekt har stöd för följande standardroller så att du kan administrera
 |---|---|---|---|
 | Observer | En användare i den här rollen kan visa projektinformation, inklusive projektstatus. | Skrivskyddade behörigheter i ett projekt | `workflow-users` grupp |
 | Redigerare | En användare med den här rollen kan överföra och redigera innehållet i ett projekt. | Läs- och skrivåtkomst för ett projekt, tillhörande metadata och relaterade resurser<br>Behörigheter att ladda upp en tagningslista, fotografera samt granska och godkänna material<br>Skrivbehörighet för `/etc/commerce`<br>Ändra behörighet för ett visst projekt | `workflow-users` grupp |
-| Ägare | En användare med den här rollen kan skapa ett projekt, initiera arbete i ett projekt och flytta godkända resurser till produktionsmappen. Alla andra uppgifter i projektet kan också visas och utföras av ägaren. | Skrivbehörighet för `/etc/commerce` | `dam-users` grupp för att kunna skapa ett projekt<br>`project-administrators` grupp för att kunna skapa ett projekt och flytta resurser |
+| Ägare | En användare med den här rollen kan skapa ett projekt, initiera arbete i ett projekt och flytta godkända resurser till produktionsmappen. Alla andra uppgifter i projektet kan också visas och utföras av ägaren. | Skrivbehörighet för `/etc/commerce` | `dam-users` grupp för att kunna skapa ett projekt<br>`projects-administrators` grupp för att kunna skapa ett projekt och flytta resurser |
 
 För kreativa projekt finns även andra roller, som fotografer. Du kan använda de här rollerna för att skapa anpassade roller för ett visst projekt.
 
