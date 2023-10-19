@@ -1,17 +1,15 @@
 ---
 title: Bloggfunktion
-description: Community-information i ett journalformat
-uuid: 7323063f-81e8-45c3-9035-bf7df6124830
+description: Lär dig hur bloggfunktionen kan ge communityinformation i journalformat. Posterna görs i publiceringsmiljön av behöriga användare.
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: authoring
 content-type: reference
-discoiquuid: cf8b3d72-30ba-40ca-ae48-b61abbb28802
 docset: aem65
 exl-id: 4650ac36-5506-4efc-be35-fac9e5a58f3d
-source-git-commit: d673a447e9ce2377c8645c87f12be81cbad06238
+source-git-commit: b8887b4a6f757352e9dbfdf074c10e9ccd6dbd4f
 workflow-type: tm+mt
-source-wordcount: '1652'
+source-wordcount: '1670'
 ht-degree: 0%
 
 ---
@@ -27,10 +25,10 @@ Bloggfunktionen har stöd för att tillhandahålla communityinformation i journa
 Bloggfunktionen innehåller:
 
 * Publicera och skapa bloggartiklar och kommentarer
-* RTF-redigering
+* Redigera avancerad text
 * Textbundna bilder (med stöd för dra och släpp)
 * Inbäddat innehåll i sociala nätverk ([Stöd för inbäddning](/help/communities/blog-developer-basics.md#allowing-rich-media))
-* Snabbläge
+* Utkastläge
 * Schemalagd publicering
 * Skapa för räkning (en [behörig medlem](/help/communities/users.md#privileged-members-group) kan skapa innehåll för en annan community-medlem)
 * [Kontext- och gruppmoderering](/help/communities/moderate-ugc.md) bloggartiklar och kommentarer
@@ -133,7 +131,7 @@ Under **Inställningar** anger du bloggens grundläggande funktioner:
 
 * **Tillåt taggning**
 
-  Om det här alternativet är markerat kan medlemmar lägga till taggetiketter i sina inlägg (se **Taggfält** -fliken). Standard är avmarkerat.
+  Tillåt medlemmar att lägga till taggetiketter i sina inlägg (se **Taggfält** -fliken). Standard är avmarkerat.
 
 * **Tillåt filöverföringar**
 
@@ -145,7 +143,7 @@ Under **Inställningar** anger du bloggens grundläggande funktioner:
 
 * **Tillåtna filtyper**
 
-  Endast relevant om `Allow File Uploads` är markerad. En kommaavgränsad lista med filtillägg med punktavgränsaren. Till exempel: .jpg, .jpeg, .png, .doc, .docx, .pdf. Om någon filtyp anges går det inte att överföra de filtyper som inte har angetts. Ingen standard har angetts så att alla filtyper tillåts.
+  Endast relevant om `Allow File Uploads` är markerad. En kommaavgränsad lista med filtillägg med punktavgränsaren. Exempel: .jpg, .jpeg, .png, .doc, .docx, .pdf. Om någon filtyp anges går det inte att överföra de filtyper som inte har angetts. Ingen standard har angetts så att alla filtyper tillåts.
 
 * **Maximal filstorlek för bifogad bild**
 
@@ -161,7 +159,7 @@ Under **Inställningar** anger du bloggens grundläggande funktioner:
 
 * **Tillåt användare att ta bort kommentarer och ämnen**
 
-  Om det här alternativet är markerat kan medlemmar ta bort kommentarer och blogginlägg som de har skickat in. Standard är avmarkerat.
+  Om det här alternativet är markerat kan medlemmarna ta bort de kommentarer och blogginlägg som de har skickat. Standard är avmarkerat.
 
 * **Tillåt följande**
 
@@ -179,9 +177,9 @@ Under **Inställningar** anger du bloggens grundläggande funktioner:
 
 * **Tillåt innehåll**
 
-  Om det här alternativet är markerat identifieras idén som [innehåll](/help/communities/featured.md). Standard är avmarkerat.
+  Om det här alternativet är markerat identifieras idén som [presenterat innehåll](/help/communities/featured.md). Standard är avmarkerat.
 
-* **Aktivera omnämnande**
+* **Aktivera omnämns**
 
   Om det här alternativet är aktiverat kan registrerade communityanvändare identifiera andra registrerade medlemmar (med förnamn, efternamn, användarnamn) och tagga dem med den vanliga @användarnamnssyntaxen. De taggade användarna får meddelanden om sina egna omnämnanden.
 
@@ -227,7 +225,7 @@ Under **Användarmoderering** anger du modereringsinställningar:
 
 #### Fliken Taggfält {#tag-field-tab}
 
-Under **Taggfält** anger du vilka taggar som kan användas om **Tillåt taggning** kontrolleras på **Inställningar** tab :
+Under **Taggfält** anger du vilka taggar som kan användas om **Tillåt taggning** är markerad på **Inställningar** tab :
 
 * **Tillåtna namnutrymmen**
 
@@ -249,11 +247,11 @@ Under **Inställningar för journalmarginallist** anger du datumformatet för ar
 
   Det format som används för att visa arkiv för blogginlägg. Formatet använder platshållare enligt Java™-konventionen.
 
-   * yyyy: hela året, till exempel 2015
-   * yy: kort år, som &quot;15&quot;
-   * MMMM : hel månad, som juni
+   * yyyy : hela året, till exempel 2015
+   * yy: kort år, som &#39;15&#39;
+   * MMMMM : hel månad, till exempel juni
    * MMM: kort månad, som Jun
-   * MM: månadsnummer, som 06
+   * MM : månadsnummer, t.ex. 06
 
   Standardvärdet är&quot;yyyy MMMM&quot;, som skulle visas t.ex.&quot;2015 Juni&quot;
 
@@ -297,7 +295,7 @@ Bloggartiklarna visas under lämplig flik (Publicerad, Utkast eller Schemalagd) 
 
 #### Styrelsemedlemmar och administratörer {#moderators-and-administrators}
 
-När den inloggade användaren har behörighet som moderator eller administratör kan de utföra [modereringsuppgifter](/help/communities/moderate-ugc.md) (enligt komponentens konfiguration) på alla bloggartiklar och kommentarer som har skickats till en blogg.
+När den inloggade användaren har moderator- eller administratörsbehörighet kan de utföra [modereringsuppgifter](/help/communities/moderate-ugc.md) (enligt komponentens konfiguration) på alla bloggartiklar och kommentarer som har skickats till en blogg.
 
 ![moderator-hemsida](assets/moderator-homepage.png)
 

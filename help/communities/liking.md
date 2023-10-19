@@ -1,18 +1,14 @@
 ---
 title: Använda Länk
-seo-title: Using Liking
-description: Lägga till och konfigurera komponenten Länka
-seo-description: Adding and configuring the Liking component
-uuid: 12103ab7-1a1c-49cd-8dad-6c7508b4550e
+description: Lär dig hur du lägger till och konfigurerar komponenten Länka så att användare kan uttrycka en åsikt om ett visst innehåll, till exempel en kommentar.
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: authoring
 content-type: reference
-discoiquuid: dcde4e03-78ab-4779-96a1-05ac41f14701
 exl-id: 226fa91c-4a12-4586-b694-1a52fa2ba358
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: b8887b4a6f757352e9dbfdf074c10e9ccd6dbd4f
 workflow-type: tm+mt
-source-wordcount: '216'
+source-wordcount: '237'
 ht-degree: 0%
 
 ---
@@ -27,7 +23,7 @@ Lägga till en `Liking` -komponent till en sida i redigeringsläge använder du 
 
 * `Communities / Liking`
 
-och dra den till rätt plats på en sida, t.ex. i förhållande till funktionen som användarna kan gilla.
+Och dra den till rätt plats på en sida, till exempel i förhållande till funktionen som användarna kan gilla.
 
 Nödvändig information finns på [Grunderna för communitykomponenter](basics.md).
 
@@ -37,7 +33,7 @@ När [nödvändiga bibliotek på klientsidan](essentials-liking.md#essentials-fo
 
 ## Konfigurerar länk {#configuring-liking}
 
-Markera den monterade `Liking` -komponenten som ska få åtkomst till och markera `Configure` som öppnar redigeringsdialogrutan.
+Markera den monterade `Liking` så att du kan komma åt och välja `Configure` -ikonen som öppnar redigeringsdialogrutan.
 
 ![configure-new](assets/configure-new.png)
 
@@ -47,21 +43,21 @@ Under **[!UICONTROL Texts & Labels]** anger du de egenskaper som används för a
 
 * **[!UICONTROL Positive Response Label]**
 
-   (*Obligatoriskt*) Egenskapsnamnet för ett positivt svar.
+  (*Obligatoriskt*) Egenskapsnamnet för ett positivt svar.
 
 * **[!UICONTROL Negative Response Label]**
 
-   (*Obligatoriskt*) Egenskapsnamnet för ett negativt svar.
+  (*Obligatoriskt*) Egenskapsnamnet för ett negativt svar.
 
 * **[!UICONTROL Tally Name]**
 
-   (*Obligatoriskt*) Det interna, identifierbara egenskapsnamnet för den här instansen av en röstningskomponent.
+  (*Obligatoriskt*) Det interna, identifierbara egenskapsnamnet för den här instansen av en röstkomponent.
 
 ## Site Visitor Experience {#site-visitor-experience}
 
 ### Medlemmar {#members}
 
-Medlemmarna kan när som helst ändra sig.
+Medlemmar kan när som helst ändra sina gilla-markeringar.
 
 ### Anonym {#anonymous}
 

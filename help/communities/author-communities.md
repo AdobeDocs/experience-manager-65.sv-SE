@@ -1,19 +1,15 @@
 ---
 title: Communities-komponenter
-seo-title: Communities Components
-description: Lägga till communityfunktioner på alla AEM webbplatser
-seo-description: Adding community features to any AEM site
-uuid: 76824820-81e9-4192-8df3-dff55eaf144e
+description: Läs mer om när AEM Communities har licens, så det går att lägga till webbgruppsfunktioner på alla AEM webbplatser med standardverktyg för AEM.
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: authoring
 content-type: reference
-discoiquuid: df1ac689-33db-4e30-9f75-3bda2a485652
 docset: aem65
 exl-id: 4a49d14c-e6f0-4791-904e-8f30e47f7cde
-source-git-commit: 4dbbcc41757843d3b2d5a3bbb2656ef587e83d2c
+source-git-commit: b8887b4a6f757352e9dbfdf074c10e9ccd6dbd4f
 workflow-type: tm+mt
-source-wordcount: '273'
+source-wordcount: '293'
 ht-degree: 1%
 
 ---
@@ -49,10 +45,10 @@ Se även de interaktiva [Community Components Guide](/help/communities/component
 | Blogg | [Blogg](/help/communities/blog-feature.md) |
 | Blogg, marginallist | [Blogg](/help/communities/blog-feature.md) |
 | Kalender | [Kalender](/help/communities/calendar.md) |
-| Kommentarer | [Kommentarer](/help/communities/comments.md) |
-| Community Activity List | [Aktivitetstrender](/help/communities/trends.md) |
-| Medlemslista för communitygrupp | [Community-grupper](/help/communities/creating-groups.md) |
-| Skriv meddelande | [Meddelanden](/help/communities/configure-messaging.md) |
+| Kommentar | [Kommentar](/help/communities/comments.md) |
+| Lista över gemenskapsaktiviteter | [Aktivitetstrender](/help/communities/trends.md) |
+| Medlemslista för community | [Community-grupper](/help/communities/creating-groups.md) |
+| Disponera meddelande | [Meddelanden](/help/communities/configure-messaging.md) |
 | Innehåll | [Innehåll](/help/communities/featured.md) |
 | Filbibliotek | [Filbibliotek](/help/communities/file-library.md) |
 | Följ | [Social Graph](/help/communities/socialgraph.md) |
@@ -80,8 +76,8 @@ Se även de interaktiva [Community Components Guide](/help/communities/component
 
 ## Dokumentation för relaterade communities {#related-communities-documentation}
 
-* Besök [Distribuera webbgrupper](/help/communities/deploy-communities.md) om du vill veta mer om rekommenderade distributioner.
+* Besök [Distribuera webbgrupper](/help/communities/deploy-communities.md) där du kan lära dig mer om rekommenderade distributioner.
 
 * Besök [Administrera webbgruppsplatser](/help/communities/administer-landing.md) om du vill veta mer om hur du skapar en community-webbplats, konfigurerar mallar för communitysajter, modererar communityinnehåll, hanterar medlemmar och konfigurerar meddelanden.
 
-* Besök [Utveckla webbgrupper](/help/communities/communities.md) om du vill veta mer om ramverket för sociala komponenter (SCF) och hur du anpassar komponenter och funktioner i Communities.
+* Besök [Utveckla webbgrupper](/help/communities/communities.md) där du kan lära dig mer om det sociala ramverket (SCF) och hur du anpassar communitykomponenter och -funktioner.
