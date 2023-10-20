@@ -1,41 +1,37 @@
 ---
-title: Skapa en ny communitywebbplats
-seo-title: Author a New Community Site
-description: Så här skapar du en ny AEM Communities-webbplats
-seo-description: How to author a new AEM Communities site
-uuid: 4f609f5f-ef07-44fc-aeb3-1c616e120d46
+title: Skapa en communitywebbplats
+description: Lär dig hur du skapar en Adobe Experience Manager Communities-webbplats.
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: introduction
 content-type: reference
-discoiquuid: 8ae324ea-8b84-47a3-aabf-1fee2a3bd46d
 docset: aem65
 exl-id: d4c1895f-421c-4146-b94a-8d11065ef9e3
-source-git-commit: 4dbbcc41757843d3b2d5a3bbb2656ef587e83d2c
+source-git-commit: f03d0ab9d0f491441378e16e1590d33651f064b5
 workflow-type: tm+mt
-source-wordcount: '1580'
+source-wordcount: '1557'
 ht-degree: 0%
 
 ---
 
-# Skapa en ny communitywebbplats{#author-a-new-community-site}
+# Skapa en communitywebbplats{#author-a-new-community-site}
 
 ## Skapa en communitywebbplats {#create-a-community-site}
 
-Använd författarinstansen för att skapa en community-webbplats. I AEM Author-instans:
+Använd författarinstansen för att skapa en community-webbplats. AEM författarinstans:
 
 1. Logga in med administratörsbehörighet.
 1. Från global navigering, gå till **[!UICONTROL Communities]** > **[!UICONTROL Sites]**.
 
 Konsolen Communities Sites innehåller en guide som hjälper dig att skapa en communityplats. Det går att gå vidare till `Next` steg eller `Back` till föregående steg innan webbplatsen implementeras i det sista steget.
 
-Så här börjar du skapa en ny community-webbplats:
+Så här börjar du skapa en community-webbplats:
 
 * Välj `Create` -knappen.
 
 ![createcommunitysite](assets/createcommunitysite.png)
 
-### Steg 1: Webbplatsmall {#step-site-template}
+### Steg 1: Platsmall {#step-site-template}
 
 ![mall för att skapa webbplats](assets/create-site.png)
 
@@ -45,16 +41,16 @@ På [Steg för webbplatsmall](/help/communities/sites-console.md#step2013asitete
 * **Beskrivning av communityplats**: `A site for engaging with the community.`
 * **Community-platsrot**: (lämna tomt för standardroten `/content/sites`)
 * **Molnkonfigurationer**: (lämna tomt om ingen molnkonfiguration har angetts) ange sökvägen till de angivna molnkonfigurationerna.
-* **Bas-språk för communitywebbplats**: (lämnas orört för ett enda språk: Engelska) använd listrutan för att välja en *eller mer* basspråk från tillgängliga språk - tyska, italienska, franska, japanska, spanska, portugisiska (Brasilien), kinesiska (traditionell) och kinesiska (förenklad). En community-webbplats skapas för varje språk som läggs till och finns i samma webbplatsmapp enligt de rutiner som beskrivs i [Översätta innehåll för flerspråkiga webbplatser](/help/sites-administering/translation.md). Rotsidan för varje webbplats kommer att innehålla en underordnad sida med språkkoden för ett av de valda språken, till exempel &quot;en&quot; för engelska eller &quot;fr&quot; för franska.
+* **Bas-språk för communitywebbplats**: (lämna orört för engelska) använd listrutan för att välja ett språk *eller mer* basspråk från tillgängliga språk - tyska, italienska, franska, japanska, spanska, portugisiska (Brasilien), kinesiska (traditionell) och kinesiska (förenklad). En communitywebbplats skapas för varje språk som läggs till och finns i samma webbplatsmapp enligt de rutiner som beskrivs i [Översätta innehåll för flerspråkiga webbplatser](/help/sites-administering/translation.md). Rotsidan för varje webbplats innehåller en underordnad sida som namnges med språkkoden för ett av de valda språken, till exempel &quot;en&quot; för engelska eller &quot;fr&quot; för franska.
 
-* **Namn på communitywebbplats**: engagera
+* **Namn på communitywebbplats**: engage
 
    * Dubbelkontrollera namnet eftersom det inte är lätt att ändra efter att webbplatsen har skapats
    * Den inledande URL:en visas under namnet på communitywebbplatsen
    * Ange en giltig URL genom att lägga till en baskod + &quot;.html&quot;
    * *Till exempel*, https://localhost:4502/content/sites/ `engage/en.html`
 
-* **Mall**: dra nedåt för att välja `Reference Site`
+* **Mall**: nedrullningsbar meny för att välja `Reference Site`
 
 * Välj **Nästa**.
 
@@ -64,7 +60,7 @@ Designsteget presenteras i två avsnitt där du kan välja tema och varumärkesb
 
 #### TEMA PÅ GEMENSKAPENS WEBBPLATS {#community-site-theme}
 
-Välj det format som du vill använda på mallen. När du väljer det här alternativet kommer temat att överlappas av en bock.
+Välj det format du vill använda på mallen. När du väljer det här alternativet ersätts temat med en bock.
 
 #### GEMENSKAPENS WEBBPLATSHANTERING {#community-site-branding}
 
@@ -78,7 +74,7 @@ Välj **Nästa**.
 
 ### Steg 3: Inställningar {#step-settings}
 
-I steget Inställningar, innan du väljer `Next`, observera att det finns sju avsnitt som ger åtkomst till konfigurationer som användarhantering, taggning, moderering, grupphantering, analys och översättning.
+I steget Inställningar, innan du väljer `Next`, finns det sju avsnitt som ger åtkomst till konfigurationer som användarhantering, taggning, moderering, grupphantering, analys och översättning.
 
 #### Användarhantering {#user-management}
 
@@ -87,8 +83,8 @@ Markera alla kryssrutor för [Användarhantering](/help/communities/sites-consol
 * Tillåta besökare att registrera sig själva
 * Så här kan besökare på webbplatsen visa den utan att logga in
 * Så här tillåter du medlemmar att skicka och ta emot meddelanden från andra communitymedlemmar
-* Så här tillåter du inloggning med Facebook i stället för att registrera och skapa en profil
-* Så här tillåter du inloggning med Twitter i stället för att registrera och skapa en profil
+* Tillåt inloggning med Facebook i stället för att registrera och skapa en profil
+* Tillåt inloggning med Twitter i stället för att registrera och skapa en profil
 
 >[!NOTE]
 >
@@ -98,7 +94,7 @@ Markera alla kryssrutor för [Användarhantering](/help/communities/sites-consol
 
 #### TAGGNING {#tagging}
 
-De taggar som kan användas för communityinnehåll kontrolleras genom att AEM namnutrymmen som tidigare definierats i [Taggningskonsolen](/help/sites-administering/tags.md#tagging-console) (t.ex. [Namnutrymme för självstudiekurs](/help/communities/setup.md#create-tutorial-tags)).
+De taggar som används i communityinnehåll kontrolleras genom att AEM namnutrymmen som tidigare definierats i [Taggningskonsolen](/help/sites-administering/tags.md#tagging-console) (till exempel [Namnutrymme för självstudiekurs](/help/communities/setup.md#create-tutorial-tags)).
 
 Det är enkelt att hitta namnutrymmen med typsnittssökning. Till exempel,
 
@@ -126,13 +122,13 @@ Till exempel,
 
 #### MODERATION {#moderation}
 
-Acceptera de globala standardinställningarna för [moderera](/help/communities/sites-console.md#moderation) användargenererat innehåll (UGC).
+Acceptera de globala standardinställningarna för [moderera](/help/communities/sites-console.md#moderation) användargenererat innehåll.
 
 ![moderering](assets/moderation1.png)
 
 #### ANALYS {#analytics}
 
-Om Adobe Analytics är licensierat och en molntjänst och ett ramverk för Analytics har konfigurerats går det att aktivera Analytics och välja ramverket.
+Om Adobe Analytics är licensierat och en Analytics Cloud-tjänst och ett-ramverk har konfigurerats går det att aktivera Analytics och välja ramverket.
 
 Se [Analyskonfiguration för communityfunktioner](/help/communities/analytics.md).
 
@@ -140,7 +136,7 @@ Se [Analyskonfiguration för communityfunktioner](/help/communities/analytics.md
 
 #### ÖVERSÄTTNING {#translation}
 
-The [Översättningsinställningar](/help/communities/sites-console.md#translation) Ange basspråket för webbplatsen samt om användargenererat innehåll kan översättas och till vilket språk, om så är fallet.
+The [Översättningsinställningar](/help/communities/sites-console.md#translation) Ange basspråket för webbplatsen och om användargenererat innehåll kan översättas och till vilket språk, om så är fallet.
 
 * Kontrollera **Tillåt maskinöversättning**
 * Låt standardspråken vara markerade för översättning av standardmaskinöversättningstjänsten
@@ -177,24 +173,23 @@ Från vänster till höger är de:
 
 * **Öppna webbplats**
 
-   Välj pennikonen för att öppna communitywebbplatsen i redigeringsläge för författare, för att lägga till och/eller konfigurera sidkomponenter
+  När du väljer pennikonen öppnas communitywebbplatsen i redigeringsläget Författare, där du kan lägga till eller konfigurera sidkomponenter.
 
 * **Redigera webbplats**
 
-   Välj egenskapsikonen för att öppna communitywebbplatsen för ändring av egenskaper, som titeln eller för att ändra temat
+  Om du väljer egenskapsikonen öppnas communitywebbplatsen för ändring av egenskaper, till exempel titeln, eller för att ändra temat.
 
 * **Publicera webbplats**
 
-   Välj världsikonen om du vill publicera communitywebbplatsen (till exempel om publiceringsservern körs på den lokala datorn, och sedan till localhost:4503 som standard)
+  Om du väljer en världsikon publiceras communityplatsen (om publiceringsservern till exempel körs på den lokala datorn, så skickas den till localhost:4503 som standard).
 
 * **Exportera webbplats**
 
-   Välj exportikonen för att skapa ett paket för communitywebbplatsen som båda lagras i [pakethanterare](/help/sites-administering/package-manager.md) och laddas ned.
-Observera att UGC inte ingår i platspaketet.
+  Om du väljer exportikonen skapas ett paket med communitywebbplatsen som båda lagras i [Pakethanteraren](/help/sites-administering/package-manager.md) och laddas ned. UGC ingår inte i webbplatspaketet.
 
 * **Ta bort plats**
 
-   Markera borttagningsikonen om du vill ta bort communitywebbplatsen från **[!UICONTROL Communities > Sites console]**. Den här åtgärden tar bort alla objekt som är associerade med platsen, till exempel UGC, användargrupper, resurser och databasposter.
+  Om du väljer ikonen Ta bort tas communitywebbplatsen bort från **[!UICONTROL Communities > Sites console]**. Den här åtgärden tar bort alla objekt som är associerade med platsen, till exempel UGC, användargrupper, resurser och databasposter.
 
 ![webbplatseråtgärder](assets/siteactions.png)
 
@@ -213,7 +208,6 @@ Observera att UGC inte ingår i platspaketet.
 >1. Välj **[!UICONTROL OK]**.
 >1. (Valfritt) Välj **[!UICONTROL Clear]** eller **[!UICONTROL Force Retry]** för att återställa replikeringskön.
 
-
 ### Välj Publicera {#select-publish}
 
 När du har kontrollerat att publiceringsservern körs väljer du världsikonen för att publicera communitywebbplatsen.
@@ -228,16 +222,16 @@ Tillsammans med den nya communitywebbplatsen skapas nya användargrupper som har
 
 Med tanke på webbplatsens namn&quot;engagera&quot; i steg 1 kan de fyra nya användargrupperna ses från [Gruppkonsol](/help/communities/members.md) (global navigering: Communities, Groups):
 
-* Community Engage Community managers
-* Administratörer för communityinteraktionsgrupper
+* Community Engagement Community Managers
+* Administratörer för communitygrupper
 * Medlemmar i communityengagemang
 * Moderatorer för communityengagemang
 * Privilegierade medlemmar för communityengagemang
 * Content Manager för communitywebbplats
 
-Observera att [Aaron McDonald](/help/communities/tutorials.md#demo-users) är medlem i
+[Aaron McDonald](/help/communities/tutorials.md#demo-users) är medlem i
 
-* Community Engage Community managers
+* Community Engagement Community Managers
 * Moderatorer för communityengagemang
 * Medlemmar i communityn (indirekt som medlem i gruppen Moderatorer)
 
@@ -249,7 +243,7 @@ Observera att [Aaron McDonald](/help/communities/tutorials.md#demo-users) är me
 
 ## Konfigurera för autentiseringsfel {#configure-for-authentication-error}
 
-När en webbplats har konfigurerats och publicerats, [konfigurera inloggningsmappning](/help/communities/sites-console.md#configure-for-authentication-error) ( `Adobe Granite Login Selector Authentication Handler`) på publiceringsinstansen. Fördelen är att när inloggningsuppgifterna inte anges korrekt kommer autentiseringsfelet att visa inloggningssidan för communitywebbplatsen igen med ett felmeddelande.
+När en webbplats har konfigurerats och publicerats, [konfigurera inloggningsmappning](/help/communities/sites-console.md#configure-for-authentication-error) ( `Adobe Granite Login Selector Authentication Handler`) på publiceringsinstansen. Fördelen är att när inloggningsuppgifterna inte anges korrekt visas inloggningssidan för communitywebbplatsen igen med ett felmeddelande.
 
 Lägg till en `Login Page Mapping` as
 
@@ -283,12 +277,12 @@ Så här kommer du igång:
    * **Namn** sling:match
       * **Typ** Sträng
       * **Värde** localhost.4503/$ (måste sluta med &#39;$&#39;-tecken)
+
    * Lägg till egenskap:
 
       * **Namn** sling:internalRedirect
       * **Typ** Sträng
       * **Värde** /content/sites/engage/en.html
-
 
 1. Välj **Spara alla.**
 1. (Valfritt) Ta bort webbläsarhistoriken.
@@ -310,7 +304,7 @@ Om det inte går att spara ändringarna bör du kontrollera att nodnamnet är `l
 
 #### Felsökning: Det gick inte att omdirigera {#troubleshooting-fail-to-redirect}
 
-The **$**&#39; i slutet av det reguljära uttrycket `sling:match`sträng är avgörande, så att bara exakt `https://localhost:4503/` är mappad, annars läggs omdirigeringsvärdet till en sökväg som kan finnas efter server:port i URL:en. När AEM försöker dirigera om till inloggningssidan misslyckas den alltså.
+The **$**&#39; i slutet av det reguljära uttrycket `sling:match`sträng är avgörande, så att endast `https://localhost:4503/` är mappad, annars läggs omdirigeringsvärdet till en sökväg som kan finnas efter server:port i URL:en. När AEM försöker dirigera om till inloggningssidan misslyckas den därför.
 
 ### Ändra platsen {#modify-the-site}
 
@@ -318,7 +312,7 @@ När webbplatsen har skapats kan författare använda [Ikonen Öppna webbplats](
 
 Dessutom kan administratörer använda [Ikonen Redigera webbplats](/help/communities/sites-console.md#modifying-site-properties) om du vill ändra egenskaper för platsen, t.ex. titeln.
 
-Kom ihåg att efter varje ändring **Spara** och **Publicera** sajten.
+Kom ihåg att efter varje ändring **Spara** och **Publicera** webbplatsen.
 
 >[!NOTE]
 >

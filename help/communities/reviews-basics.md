@@ -1,27 +1,23 @@
 ---
 title: Grundläggande granskningar
-seo-title: Reviews Essentials
-description: Granska och Granska sammanfattningskomponenter
-seo-description: Reviews and Review Summary components
-uuid: 540c106e-ee3b-4261-82b2-a909d254dbf7
+description: Lär dig mer om hur granskningar i AEM Communities är en sammansatt komponent som baseras på ett kommentarsystem som innehåller en eller flera klassificerings(tally) komponenter.
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
-discoiquuid: 62669a9d-2107-4644-a4bf-143d0ac148b3
 exl-id: 91e0e245-a2f1-4bd7-b38f-7641fd94a547
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: f03d0ab9d0f491441378e16e1590d33651f064b5
 workflow-type: tm+mt
-source-wordcount: '319'
+source-wordcount: '332'
 ht-degree: 0%
 
 ---
 
 # Grundläggande granskningar {#reviews-essentials}
 
-Den här funktionen består av två komponenter som fungerar tillsammans: recensioner och sammanfattning.
+Den här funktionen består av två komponenter som fungerar ihop: recensioner och sammanfattningar.
 
-Recensioner är en sammansatt komponent som baseras på en [kommentarsystem](essentials-comments.md) som innehåller en eller flera [värdering](rating-basics.md) (tally).
+Recensioner är en sammansatt komponent som baseras på en [kommentarsystem](essentials-comments.md) som innehåller en eller flera [värdering](rating-basics.md) (tally)-komponenter.
 
 Anonym publicering av en granskning stöds inte. Besökare på webbplatsen måste registrera sig och logga in för att kunna lägga till en granskning. Den inloggade besökaren (medlemmen) kan uppdatera sin granskning när som helst.
 
@@ -72,9 +68,9 @@ Anonym publicering av en granskning stöds inte. Besökare på webbplatsen måst
 
 ## Grundläggande för serversidan {#essentials-for-server-side}
 
-* [Granska API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/review/client/api/package-summary.html)
+* [Granska API](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/review/client/api/package-summary.html)
 
-* [Granska slutpunkter](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/review/client/endpoints/package-summary.html)
+* [Granska slutpunkter](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/review/client/endpoints/package-summary.html)
 
 * [Anpassningar på serversidan](server-customize.md)
 

@@ -1,18 +1,14 @@
 ---
 title: Anpassning på serversidan
-seo-title: Server-side Customization
-description: Anpassa serversidan i AEM Communities
-seo-description: Customizing server-side in AEM Communities
-uuid: 5e9bc6bf-69dc-414c-a4bd-74a104d7bd8f
+description: Läs om hur anpassning på serversidan i Adobe Experience Manager Communities.
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
-discoiquuid: df5416ec-5c63-481b-99ed-9e5a91df2432
 exl-id: 190735bc-1909-4b92-ba4f-a221c0cd5be7
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: f03d0ab9d0f491441378e16e1590d33651f064b5
 workflow-type: tm+mt
-source-wordcount: '889'
+source-wordcount: '886'
 ht-degree: 0%
 
 ---
@@ -21,9 +17,9 @@ ht-degree: 0%
 
 | **[⇐ - funktioner](essentials.md)** | **[Anpassning på klientsidan](client-customize.md)** |
 |---|---|
-|  | **[SCF Handlebars Helpers](handlebars-helpers.md)** |
+|   | **[SCF Handlebars Helpers](handlebars-helpers.md)** |
 
-## Java API:er {#java-apis}
+## Java™-API:er {#java-apis}
 
 >[!NOTE]
 >
@@ -31,7 +27,7 @@ ht-degree: 0%
 
 ### SocialComponent-gränssnitt {#socialcomponent-interface}
 
-SocialComponents är POJO som representerar en resurs för en AEM Communities-funktion. Helst representerar varje SocialComponent en specifik resourceType med exponerade GETters som tillhandahåller data till klienten så att resursen representeras korrekt. All affärslogik och visningslogik är inkapslade i SocialComponent, inklusive webbplatsbesökarens sessionsinformation, om det behövs.
+SocialComponents är POJO som representerar en resurs för en AEM Communities-funktion. Helst representerar varje SocialComponent en specifik resourceType med exponerade GETters som tillhandahåller data till klienten så att resursen representeras korrekt. All affärslogik och vylogik är inkapslad i SocialComponent, inklusive webbplatsbesökarens sessionsinformation, om det behövs.
 
 Gränssnittet definierar en grundläggande uppsättning GETters som krävs för att representera en resurs. Viktigt är att gränssnittet anger kartan&lt;string object=&quot;&quot;> metoderna getAsMap() och String toJSONString() som behövs för att återge Handlebars-mallar och visa GET JSON-slutpunkter för resurser.
 
@@ -53,7 +49,7 @@ En SocialComponentFactory är en OSGi-tjänst och har tillgång till andra OSGi-
 
 Alla SocialComponentFactory-klasser måste implementera gränssnittet `com.adobe.cq.social.scf.SocialComponentFactory`
 
-En implementering av metoden SocialComponentFactory.getPriority() ska returnera det högsta värdet för att fabriken ska användas för den angivna resourceType som returneras av getResourceType().
+En implementering av metoden SocialComponentFactory.getPriority() ska returnera det högsta värdet för fabriken som ska användas för den angivna resourceType som returneras av getResourceType().
 
 ### SocialComponentFactoryManager-gränssnitt {#socialcomponentfactorymanager-interface}
 
@@ -63,13 +59,13 @@ En SocialComponentFactoryManager är en OSGi-tjänst och har tillgång till andr
 
 En referens till OSGi-tjänsten erhålls genom att anropa `com.adobe.cq.social.scf.SocialComponentFactoryManager`
 
-### HTTP API - POSTER {#http-api-post-requests}
+### HTTP API - POST-begäranden {#http-api-post-requests}
 
 #### Klassen PostOperation {#postoperation-class}
 
 Slutpunkterna för HTTP API-POSTEN är PostOperation-klasser som definieras genom implementering av `SlingPostOperation` interface (package `org.apache.sling.servlets.post`).
 
-The `PostOperation` slutpunktsimplementeringsuppsättningar `sling.post.operation` till ett värde som åtgärden ska svara på. Alla POST-begäranden med en:operation-parameter inställd på det värdet delegeras till den här implementeringsklassen.
+The `PostOperation` implementeringsuppsättningar för slutpunkter `sling.post.operation` till ett värde som åtgärden svarar på. Alla POST-begäranden med en:operation-parameter inställd på det värdet delegeras till den här implementeringsklassen.
 
 The `PostOperation` anropar `SocialOperation` som utför de åtgärder som krävs för åtgärden.
 
@@ -77,9 +73,9 @@ The `PostOperation` tar emot resultatet från `SocialOperation` och returnerar r
 
 #### Klassen SocialOperation {#socialoperation-class}
 
-Varje `SocialOperation` slutpunkten utökar klassen AbstractSocialOperation och åsidosätter metoden `performOperation()`. Den här metoden utför alla åtgärder som behövs för att slutföra åtgärden och returnera en `SocialOperationResult` eller i annat fall kasta en `OperationException`, i så fall returneras en HTTP-felstatus med ett meddelande, om ett sådant finns, i stället för den vanliga JSON-svarskoden eller HTTP-statuskoden för lyckade åtgärder.
+Varje `SocialOperation` slutpunkten utökar klassen AbstractSocialOperation och åsidosätter metoden `performOperation()`. Den här metoden utför alla åtgärder som behövs för att slutföra åtgärden och returnera en `SocialOperationResult` eller i annat fall kasta `OperationException`. I så fall returneras en HTTP-felstatus med ett meddelande, om ett sådant finns, i stället för den vanliga JSON-svarskoden eller HTTP-statuskoden för lyckade åtgärder.
 
-Utöka `AbstractSocialOperation` gör det möjligt att återanvända `SocialComponents` för att skicka JSON-svar.
+Utöka `AbstractSocialOperation` möjliggör återanvändning av `SocialComponents` för att skicka JSON-svar.
 
 #### Klassen SocialOperationResult {#socialoperationresult-class}
 
@@ -87,7 +83,7 @@ The `SocialOperationResult` klassen returneras som resultatet av `SocialOperatio
 
 The `SocialComponent` representerar den resurs som påverkades av åtgärden.
 
-För en Skapa-åtgärd finns följande i `SocialComponent` ingår i `SocialOperationResult` representerar den resurs som just har skapats och för en Update-åtgärd representerar den resursen som ändrades av åtgärden. Nej `SocialComponent` returneras för en Delete-åtgärd.
+För en Skapa-åtgärd finns följande i `SocialComponent` som ingår i `SocialOperationResult` representerar den skapade resursen och för en Update-åtgärd representerar den resursen som ändrades av åtgärden. Nej `SocialComponent` returneras för en Delete-åtgärd.
 
 De HTTP-statuskoder som används är:
 
@@ -97,7 +93,7 @@ De HTTP-statuskoder som används är:
 
 #### Klassen OperationException {#operationexception-class}
 
-An `OperationExcepton` kan genereras när en åtgärd utförs om begäran inte är giltig eller om något annat fel inträffar, t.ex. interna fel, felaktiga parametervärden, felaktiga behörigheter osv. An `OperationException` består av en HTTP-statuskod och ett felmeddelande som returneras till klienten som svar på `PostOperatoin`.
+An `OperationExcepton` genereras när en åtgärd utförs om begäran inte är giltig eller om något annat fel inträffar. Exempel: interna fel, felaktiga parametervärden eller felaktiga behörigheter. An `OperationException` består av en HTTP-statuskod och ett felmeddelande, som returneras till klienten som svar på `PostOperatoin`.
 
 #### Klassen OperationService {#operationservice-class}
 
@@ -107,18 +103,18 @@ Alla `OperationService` klasser utöka `AbstractOperationService`, vilket tillå
 
 * `performBeforeActions()`
 
-   Tillåter förkontroller/förbehandling och validering
+  Tillåter förkontroller/förbehandling och validering
 * `performAfterActions()`
 
-   Möjliggör ytterligare ändringar av resurser eller anrop av anpassade händelser, arbetsflöden osv.
+  Gör det möjligt att redigera resurser ytterligare eller anropa anpassade händelser, arbetsflöden och så vidare.
 
 #### Klassen OperationExtension {#operationextension-class}
 
-`OperationExtension` klasser är anpassade koddelar som kan injiceras i en åtgärd som gör det möjligt att anpassa operationer efter affärsbehov. Konsumenterna av komponenten kan dynamiskt och stegvis lägga till funktioner i komponenten. Med hjälp av tilläggs-/krokmönstret kan utvecklare fokusera enbart på själva tilläggen och ta bort behovet av att kopiera och åsidosätta hela åtgärder och komponenter.
+The `OperationExtension` klasser är anpassade koddelar som kan injiceras i en åtgärd som gör det möjligt att anpassa operationer efter affärsbehov. Konsumenterna av komponenten kan dynamiskt och stegvis lägga till funktioner i komponenten. Med hjälp av tilläggs-/krokmönstret kan utvecklare fokusera enbart på själva tilläggen och ta bort behovet av att kopiera och åsidosätta hela åtgärder och komponenter.
 
 ## Exempelkod {#sample-code}
 
-Exempelkod finns i [Adobe Marketing Cloud GitHub](https://github.com/Adobe-Marketing-Cloud) databas. Sök efter projekt med antingen `aem-communities` eller `aem-scf`.
+Exempelkod finns i [Adobe Experience Cloud GitHub](https://github.com/Adobe-Marketing-Cloud) databas. Sök efter projekt med antingen `aem-communities` eller `aem-scf`.
 
 ## Bästa praxis {#best-practices}
 
@@ -128,4 +124,4 @@ Se även [Lagringsresursleverantör (SRP) för UGC](srp.md) om du vill veta mer 
 
 | **[⇐ - funktioner](essentials.md)** | **[Anpassning på klientsidan](client-customize.md)** |
 |---|---|
-|  | **[SCF Handlebars Helpers](handlebars-helpers.md)** |
+|   | **[SCF Handlebars Helpers](handlebars-helpers.md)** |

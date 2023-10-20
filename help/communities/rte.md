@@ -1,18 +1,14 @@
 ---
 title: Grundläggande om Rich Text Editor
-seo-title: Rich Text Editor Essentials
-description: Översikt över textredigeringsfunktionen
-seo-description: Rich text Editor feature overview
-uuid: f96015cc-114b-431a-a5ba-dc195c2a0b83
+description: Läs om grunderna och funktionerna i en textredigerare där du kan skriva text med markeringar.
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
-discoiquuid: 0225a543-0fad-488b-8b0b-8b3512d44fbe
 exl-id: 821e32f4-da8d-4bbb-936a-0844b8a24cdd
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: f03d0ab9d0f491441378e16e1590d33651f064b5
 workflow-type: tm+mt
-source-wordcount: '228'
+source-wordcount: '236'
 ht-degree: 0%
 
 ---
@@ -27,17 +23,17 @@ För webbgruppskomponenter, men liknande [textredigerare i redigeringsmiljön](.
 
 ![textredigerare](assets/rich-text-editor.png)
 
-## Aktivera RTF-redigerare {#enabling-rich-text-editor}
+## Aktivera RTF-redigeraren {#enabling-rich-text-editor}
 
-Communities-komponenter som tillåter användargenererat innehåll (UGC) kan aktiveras för att tillåta RTE. Beroende på om komponenten har lagts till på en sida eller inkluderats i en [function](functions.md), RTE kanske är aktiverat som standard.
+Communities-komponenter som tillåter användargenererat innehåll (UGC) kan aktiveras för att tillåta RTE. Om komponenten har lagts till på en sida eller inkluderats i en [function](functions.md), RTE kanske är aktiverat som standard.
 
-Om den inte är aktiverad skriver du [redigeringsläge för författare](sites-console.md#authoring-site-content), markerar komponenten för redigering och markerar `Rich Text Editor` kryssrutan.
+Om den inte är aktiverad skriver du [redigeringsläge](sites-console.md#authoring-site-content), markerar komponenten för redigering och markerar `Rich Text Editor` kryssrutan.
 
 RTE är tillgängligt för följande Communities-komponenter:
 
 * [Blogg](blog-feature.md)
 * [Kalender](calendar.md)
-* [Kommentarer](comments.md)
+* [Kommentar](comments.md)
 * [Filbibliotek](file-library.md)
 * [Forum](forum.md)
 * [Meddelanden](configure-messaging.md)
@@ -46,9 +42,9 @@ RTE är tillgängligt för följande Communities-komponenter:
 
 ## Anpassning {#customization}
 
-Det går att anpassa RTF-redigeraren eftersom implementeringen baseras på [CKEditor](https://www.ckeditor.com/).
+Det går att anpassa RTF-redigeraren eftersom implementeringen baseras på [CKEditor](https://ckeditor.com/).
 
-Den aktuella konfigurationen för Communities-komponenter finns i `cq.social.  scf   clientlib`, som finns i databasen på
+Den aktuella konfigurationen för Communities-komponenter finns i `cq.social.  scf   clientlib`, i databasen på
 
 `/libs/clientlibs/social/commons/scf/ckrte.js`
 

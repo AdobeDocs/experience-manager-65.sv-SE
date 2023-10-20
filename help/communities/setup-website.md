@@ -1,18 +1,14 @@
 ---
 title: Konfigurera webbplatsstruktur
-seo-title: Setup Website Structure
-description: Konfigurera kataloger
-seo-description: Set up directories
-uuid: a31edcd5-dab8-4a42-953b-1d076c2182b2
+description: Lär dig hur du konfigurerar webbplatsstrukturen, inklusive de mappar som ska skapas.
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
-discoiquuid: d18c0ece-4c4f-499c-ac94-a9aaa7f883c4
 exl-id: 1f60a0d4-a272-45e8-9742-4b706be8502e
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: f03d0ab9d0f491441378e16e1590d33651f064b5
 workflow-type: tm+mt
-source-wordcount: '504'
+source-wordcount: '516'
 ht-degree: 1%
 
 ---
@@ -23,17 +19,17 @@ Instruktionerna nedan beskriver mapparna som ska skapas på följande platser n�
 
 * `/apps/an-scf-sandbox`
 
-   Här finns anpassade program och mallar.
+  Här finns anpassade program och mallar.
 
 * `/etc/designs/an-scf-sandbox`
 
-   Här finns hämtningsbara designelement.
+  Här finns hämtningsbara designelement.
 
 * `/content/an-scf-sandbox`
 
-   Det är här som de hämtningsbara webbsidorna finns.
+  Det är här som de hämtningsbara webbsidorna finns.
 
-Koden i den här självstudien är beroende av att huvudmappnamnet är samma för programmet, designen och innehållet. Om du väljer något annat namn för webbplatsen ska du alltid ersätta `an-scf-sandbox` med det namn du har valt.
+Koden i den här självstudiekursen beror på att huvudmappens namn är detsamma för programmet, designen och innehållet. Om du väljer något annat namn för webbplatsen ska du alltid ersätta `an-scf-sandbox` med det namn du har valt.
 
 >[!NOTE]
 >
@@ -41,11 +37,10 @@ Koden i den här självstudien är beroende av att huvudmappnamnet är samma fö
 >
 >* Namnen i CRXDE är nodnamn som utgör sökvägen till adresserbart innehåll.
 >* Nodnamn kan innehålla mellanslag, men när de används i en URI måste utrymmet kodas antingen som %20 eller +.
->* Nodnamn kan innehålla bindestreck och understreck, men de måste kodas när de refereras som ett paketnamn i en Java-fil. Både bindestreck och understreck escape-konverteras med understreck följt av deras unicode-värde:
-   >
-   >   * bindestreck blir &#39;_002d&#39;
-   >   * understreck blir &#39;_005f&#39;
-
+>* Nodnamn kan innehålla bindestreck och understreck, men de måste kodas när de refereras som ett paketnamn i en Java™-fil. Både bindestreck och understreck escape-konverteras med understreck följt av deras Unicode-värde:
+>
+* bindestreck blir &#39;_002d&#39;
+* understreck blir &#39;_005f&#39;
 
 ## Konfigurera programkatalogen (/apps) {#setup-the-application-directory-apps}
 
@@ -58,7 +53,7 @@ Katalogen /apps är skyddad och inte allmänt tillgänglig, vilket är kataloger
    Använda **[!UICONTROL CRXDE Lite]**, i utforskarfönstret
 
    1. Välj `/apps` mapp.
-   1. Högerklicka **[!UICONTROL Create]**... eller dra nedåt **[!UICONTROL Create...]** -menyn.
+   1. Högerklicka **[!UICONTROL Create]**... eller dra ner **[!UICONTROL Create...]** -menyn.
    1. Välj **[!UICONTROL Create Folder...]**.
    1. I **[!UICONTROL Create Folder]** dialogruta, ange `an-scf-sandbox`.
    1. Klicka på **[!UICONTROL OK]**.
@@ -79,7 +74,7 @@ Katalogen /apps är skyddad och inte allmänt tillgänglig, vilket är kataloger
    1. Markera igen `/apps/an-scf-sandbox`.
    1. Välj **[!UICONTROL Save All]**.
 
-   Spara ofta, precis som med andra redigeringsprocesser. Om du får problem med att ange data kan det bero på att tidsgränsen för inloggningen har överskridits eller på att du måste spara tidigare redigeringar.
+   Precis som vid alla redigeringsprocesser bör du spara ofta. Om du får problem med att ange data kan det bero på att tidsgränsen för inloggningen har överskridits, eller på att du måste spara tidigare redigeringar.
 
 1. Strukturen i utforskarpanelen i CRXDE Lite bör nu se ut ungefär så här:
 
@@ -91,7 +86,7 @@ Katalogen /etc/designs innehåller de bilder, skript och formatmallar som ska h�
 
 1. Om du vill använda verktyget Designer i det klassiska användargränssnittet går du till [https://&lt;server>:&lt;port>/miscadmin](http://localhost:4502/miscadmin).
 
-   Obs! Om du använder CRXDE Lite för att skapa en nod av typen `cq:Page`, ställs inte åtkomstkontroll och replikering in på standardinställningar för en sida.
+   Obs! Om du använder CRXDE Lite för att skapa en nod av typen Node `cq:Page`, ställs inte åtkomstkontroll och replikering in på standardinställningar för en sida.
 
 1. I rutan Utforskaren väljer du **[!UICONTROL Designs]** mapp och klicka sedan på **[!UICONTROL New]** > **[!UICONTROL New Page]**.
 
@@ -117,4 +112,4 @@ Katalogen /etc/designs innehåller de bilder, skript och formatmallar som ska h�
 
 Katalogen /content i databasen är den plats där webbplatsinnehållet finns. Sökvägarna under /content utgör sökvägarna till webbadressen för webbläsarbegäranden.
 
-*Efter* den [sidmall](initial-app.md#createthepagetemplate) skapas som en del av det inledande programmet, kan det inledande sidinnehållet skapas baserat på mallen.... [**Mama**](initial-app.md)
+*Efter* den [sidmall](initial-app.md#createthepagetemplate) skapas som en del av det inledande programmet, kan det inledande sidinnehållet skapas baserat på mallen..... [**Mama**](initial-app.md)

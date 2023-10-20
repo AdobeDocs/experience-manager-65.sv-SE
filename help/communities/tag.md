@@ -1,18 +1,14 @@
 ---
 title: Tagg Essentials
-seo-title: Tag Essentials
-description: Översikt över taggar
-seo-description: Tag overview
-uuid: a5d52319-f821-4608-b0ab-abc8a1374343
+description: Lär dig mer om när webbgruppskomponenter har konfigurerats med taggning aktiverat, så kan communitymedlemmar tagga innehåll som de publicerar i publiceringsmiljön.
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
-discoiquuid: d355a3ee-c8a8-4a07-8d28-d1a99bda315c
 exl-id: 6e8af8cf-1239-46f9-b2fe-4aa80abc86ea
-source-git-commit: 4dbbcc41757843d3b2d5a3bbb2656ef587e83d2c
+source-git-commit: f03d0ab9d0f491441378e16e1590d33651f064b5
 workflow-type: tm+mt
-source-wordcount: '252'
+source-wordcount: '262'
 ht-degree: 0%
 
 ---
@@ -25,7 +21,7 @@ Den underliggande infrastrukturen för taggar som används i publiceringsmiljön
 
 * Se [Administrera taggar](../../help/sites-administering/tags.md) och [Tagga användargenererat innehåll](tag-ugc.md) (UGC) om du vill ha information om hur du skapar och hanterar taggar.
 
-* Se [Tagga för utvecklare](../../help/sites-developing/tags.md) om du vill ha information om [taggningsramverk](../../help/sites-developing/framework.md) samt inkludera och utöka taggar i [anpassade program](../../help/sites-developing/building.md).
+* Se [Tagga för utvecklare](../../help/sites-developing/tags.md) om du vill ha information om [taggningsramverk](../../help/sites-developing/framework.md) och inkludera och utöka taggar i [anpassade program](../../help/sites-developing/building.md).
 
 * Se [Använda molnet för sociala taggar](tagcloud.md) för information till författare om hur du lägger till en `social tag cloud` -komponent på en sida för att markera de taggar som används i UGC i publiceringsmiljön.
 
@@ -74,14 +70,14 @@ Taggning av UGC kan vara aktiverat när en [communitywebbplats](sites-console.md
 
 ## Grundläggande för serversidan {#essentials-for-server-side}
 
-* [API för socialt taggmoln](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/commons/tagcloud/api/package-summary.html)
+* [API för socialt taggmoln](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/commons/tagcloud/api/package-summary.html)
 
-* [Social Tag Manager](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/commons/tagging/package-summary.html)
+* [Social Tag Manager](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/commons/tagging/package-summary.html)
 
 * [Anpassningar på serversidan](server-customize.md)
 
 ## Taggsökning {#tag-searching}
 
-Från och med [funktionspaket 1](deploy-communities.md#latestfeaturepack) (FP1) utförs taggsökning med [taggtitlar](../../help/sites-developing/framework.md#tag-characteristics).
+Från [funktionspaket 1](deploy-communities.md#latestfeaturepack) (FP1) utförs taggsökning med [taggtitlar](../../help/sites-developing/framework.md#tag-characteristics).
 
 Före FP1 utfördes sökningen med [tagg-ID](../../help/sites-developing/framework.md#tagid).

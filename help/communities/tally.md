@@ -1,25 +1,21 @@
 ---
-title: Helt grundläggande
-seo-title: Tally Essentials
-description: Översikt över klassen Tally
-seo-description: Tally class overview
-uuid: c369c6a1-9ced-4b5c-af43-8c03236eaa52
+title: Grundläggande om helheten
+description: Lär dig hur Tally är en abstrakt klass med en standardmetod för att samla in feedback från medlemmar om hur de värdesätter specifika produkter och tjänster.
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
-discoiquuid: 9941ba90-3d40-4c90-bca8-5db49603cbfa
 exl-id: 0b508df9-1a24-4728-a254-f913eeb9b391
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: f03d0ab9d0f491441378e16e1590d33651f064b5
 workflow-type: tm+mt
-source-wordcount: '305'
+source-wordcount: '319'
 ht-degree: 0%
 
 ---
 
-# Helt grundläggande {#tally-essentials}
+# Grundläggande om helheten {#tally-essentials}
 
-Tally är en abstrakt klass som tillhandahåller en standardmetod för att samla in feedback från medlemmar om hur de värdesätter specifika produkter och tjänster. Anonym feedback stöds inte. Besökaren måste registrera sig och logga in för att kunna delta och logga in för att kunna ändra sin feedback. Kravet på inloggning underlättar moderering och ökar värdet på feedback genom att förhindra flera inlägg.
+Tally är en abstrakt klass som tillhandahåller en standardmetod för att samla in feedback från medlemmar om hur de värdesätter specifika produkter och tjänster. Anonym feedback stöds inte. Besökare på webbplatsen måste registrera sig och logga in för att kunna delta och logga in för att kunna ändra sin feedback. Kravet på inloggning underlättar moderering och ökar värdet på feedback genom att förhindra flera inlägg.
 
 Du kan skapa en anpassad tally-komponent genom att utöka den abstrakta tally-klassen.
 
@@ -39,9 +35,9 @@ Från och med AEM 6.1 är avsökningskomponenten inte längre tillgänglig.
 
 ## Grundläggande för serversidan {#essentials-for-server-side}
 
-* [Tally API:er](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/tally/client/api/package-summary.html)
+* [Tally API:er](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/tally/client/api/package-summary.html)
 
-* [Slutpunkter](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/tally/client/endpoints/package-summary.html)
+* [Slutpunkter](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/tally/client/endpoints/package-summary.html)
 
 * [Anpassningar på serversidan](server-customize.md)
 

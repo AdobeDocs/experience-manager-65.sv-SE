@@ -1,15 +1,15 @@
 ---
 title: Skapar kapslade grupper
-description: Skapa kapslade grupper
+description: Lär dig hur du skapar kapslade grupper för en Adobe Experience Manager Communities-webbplats.
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: introduction
 content-type: reference
 docset: aem65
 exl-id: 55803b7a-9064-4392-9cc2-9f113fa8dc29
-source-git-commit: ab3d016c7c9c622be361596137b150d8719630bd
+source-git-commit: f03d0ab9d0f491441378e16e1590d33651f064b5
 workflow-type: tm+mt
-source-wordcount: '539'
+source-wordcount: '549'
 ht-degree: 1%
 
 ---
@@ -37,7 +37,7 @@ Gruppfunktionen visas som en mapp där instanser av grupper skapas. Om du vill �
 
 ## Skapa huvudkonst {#create-main-arts-group}
 
-Den här gruppen kan skapas eftersom webbplatsstrukturen för att engagera innehåller en gruppfunktion. Konfigurationen av funktionen i platsens `Reference Template` Som standard tillåts val av aktiverade gruppmallar. Därför är den mall som väljs för den nya gruppen `Reference Group`.
+Den här gruppen kan skapas eftersom webbplatsstrukturen för att engagera innehåller en grupps funktion. Konfigurationen av funktionen i platsens `Reference Template` Som standard tillåts val av aktiverade gruppmallar. Därför är den mall som väljs för den nya gruppen `Reference Group`.
 
 De här konsolerna liknar konsolen Communities Sites.
 

@@ -1,14 +1,14 @@
 ---
 title: Sök i Grundläggande
-description: Sök i communities
+description: Läs om sökfunktionen som är en viktig funktion i AEM Communities. Communities innehåller också söknings-API:t för användargenererat innehåll.
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
 exl-id: 8af5ee58-19d7-47b6-b45d-e88006703a5d
-source-git-commit: ab3d016c7c9c622be361596137b150d8719630bd
+source-git-commit: f03d0ab9d0f491441378e16e1590d33651f064b5
 workflow-type: tm+mt
-source-wordcount: '1170'
+source-wordcount: '1189'
 ht-degree: 0%
 
 ---
@@ -45,7 +45,7 @@ The [UGC-gemensam butik](working-with-srp.md) tillhandahålls av en av olika lag
 
 ### ASRP-sökningar {#asrp-searches}
 
-För [ASRP](asrp.md), lagras UGC i molnet Adobe. UGC är inte synligt i CRX, [moderering](moderate-ugc.md) är tillgängligt både från författare och publiceringsmiljöer. Användning av [API för UGC-sökning](#ugc-search-api) fungerar för ASRP på samma sätt som för andra SRP.
+För [ASRP](asrp.md), lagras UGC i molnet Adobe. UGC är inte synligt i CRX, [moderering](moderate-ugc.md) är tillgängligt både från författaren och från publiceringsmiljön. Användning av [API för UGC-sökning](#ugc-search-api) fungerar för ASRP på samma sätt som för andra SRP.
 
 Det finns inga verktyg för att hantera ASRP-sökningar.
 
@@ -53,7 +53,7 @@ När du skapar anpassade egenskaper som är sökbara måste du följa [namngivni
 
 ### MSRP-sökningar {#msrp-searches}
 
-För [MSRP](msrp.md), lagras UGC i MongoDB som är konfigurerad att använda Solr för sökning. UGC visas inte i CRX, men [moderering](moderate-ugc.md) är tillgängligt både från författare och publiceringsmiljöer.
+För [MSRP](msrp.md), lagras UGC i MongoDB som är konfigurerad att använda Solr för sökning. UGC visas inte i CRX, men [moderering](moderate-ugc.md) är tillgängligt både från författaren och från publiceringsmiljön.
 
 Om MSRP och Solr:
 
@@ -68,11 +68,11 @@ När du skapar anpassade egenskaper som är sökbara måste du följa [namngivni
 
 ### JSRP-sökningar {#jsrp-searches}
 
-För [JSRP](jsrp.md), lagras UGC i [Oak](../../help/sites-deploying/platform.md) och är bara synligt i databasen för den AEM författaren eller publiceringsinstans som den angavs för.
+För [JSRP](jsrp.md), lagras UGC i [Oak](../../help/sites-deploying/platform.md) och visas bara i databasen för den AEM författaren eller publiceringsinstans som den angavs för.
 
 Eftersom UGC vanligtvis används i publiceringsmiljön måste du konfigurera en [publiceringskluster](topologies.md), inte en publiceringsgrupp, så att det angivna innehållet visas för alla utgivare.
 
-För JSRP visas aldrig UGC som anges i publiceringsmiljön i författarmiljön. Därför är alla [moderering](moderate-ugc.md) uppgifter utförs i publiceringsmiljön.
+För JSRP visas aldrig UGC som angetts i publiceringsmiljön i författarmiljön. Därför är alla [moderering](moderate-ugc.md) uppgifter utförs i publiceringsmiljön.
 
 Anpassade sökfunktioner bör använda [API för UGC-sökning](#ugc-search-api).
 

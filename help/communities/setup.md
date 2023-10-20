@@ -1,18 +1,14 @@
 ---
 title: Inledande konfiguration
-seo-title: Initial Setup
-description: Konfigurera communities
-seo-description: Setting up Communities
-uuid: c53d280c-c5ae-47cf-8038-f0dea68e15ff
+description: Lär dig hur du först skapar Adobe Experience Manager Communities.
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: introduction
 content-type: reference
-discoiquuid: 0d462ad1-5619-4bb6-9609-bc8987c40a0c
 exl-id: 6bda0f09-7ae5-4540-b035-9dd249ac3186
-source-git-commit: 942db8fe3dad16be53dc6abe0e519d97a659e480
+source-git-commit: f03d0ab9d0f491441378e16e1590d33651f064b5
 workflow-type: tm+mt
-source-wordcount: '654'
+source-wordcount: '665'
 ht-degree: 0%
 
 ---
@@ -21,16 +17,16 @@ ht-degree: 0%
 
 ## Starta författare- och publiceringsinstanser {#start-author-and-publish-instances}
 
-I utvecklings- och demonstrationssyfte måste du köra en författare och en publiceringsinstans.
+För utvecklings- och demonstrationssyften är det nödvändigt att köra en författare och en publiceringsinstans.
 
-Följ de grundläggande AEM [Komma igång](../../help/sites-deploying/deploy.md#getting-started) instruktioner, som ger
+Gör det genom att följa grundläggande Adobe Experience Manager (AEM) [Komma igång](../../help/sites-deploying/deploy.md#getting-started) instruktioner som ger följande resultat:
 
 * Redigeringsmiljö på [localhost:4502](http://localhost:4502/)
 * Publiceringsmiljö på [localhost:4503](http://localhost:4503/)
 
 För AEM Communities
 
-* Författarmiljön är till för:
+* Författarmiljön är avsedd för:
 
    * Utveckling av webbplatser, mallar och komponenter.
    * Administrations- och konfigureringsuppgifter.
@@ -68,11 +64,11 @@ Se [Konfigurerar e-post](email.md).
 
 ## Aktivera tunneltjänsten {#enable-the-tunnel-service}
 
-När du skapar en community-webbplats i författarmiljön gör tunneltjänsten det möjligt att tilldela roller till betrodda communitymedlemmar som är registrerade i publiceringsmiljön. Tunneltjänsten ger även åtkomst till communitymedlemmar från [Konsoler för medlemmar och grupper](members.md) i redigeringsmiljön.
+När du skapar en communitywebbplats i redigeringsmiljön gör tunneltjänsten det möjligt att tilldela roller till betrodda communitymedlemmar som är registrerade i publiceringsmiljön. Tunneltjänsten ger även åtkomst till communitymedlemmar från [Konsoler för medlemmar och grupper](members.md) i redigeringsmiljön.
 
 Konventionen riktar sig till medlemmar och medlemsgrupper som skapats i publiceringsmiljön för att *not* återskapas i redigeringsmiljön. Mer information finns i [Hantera användare och användargrupper](users.md).
 
-För enkla instruktioner om hur du aktiverar tunneltjänsten på en **författare** -instans, se [Tunneltjänst](deploy-communities.md#tunnel-service-on-author).
+För enkla instruktioner om hur du aktiverar tunneltjänsten på en **Upphovsman** -instans, se [Tunneltjänst](deploy-communities.md#tunnel-service-on-author).
 
 ## Rollen Community Administrator {#community-administrator-role}
 
@@ -90,13 +86,13 @@ Skapa en användare på *författare*, som har tilldelats rollen som gemenskapsa
 
    * Till exempel användarnamn &#39;admin&#39; / lösenord &#39;admin&#39;
 
-* Navigera från huvudkonsolen till **[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Security]** > **[!UICONTROL Users]**.
+* Gå till huvudkonsolen **[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Security]** > **[!UICONTROL Users]**.
 * Från **Redigera** meny, välja **[!UICONTROL Add User]**
 
 * I `Create New User` dialogruta:
 
    * **[!UICONTROL ID]**: sirius
-   * **[!UICONTROL Emai Address]**: sirius.nilson@mailinator.com
+   * **[!UICONTROL Email Address]**: sirius.nilson@mailinator.com
    * **[!UICONTROL Password]**: lösenord
    * **[!UICONTROL Confirm Password&ast;]**: lösenord
    * **[!UICONTROL First Name]**: Sirius
@@ -117,7 +113,7 @@ Bläddra nedåt till `Add User to Groups`:
 
 ## Aktivera social inloggning {#enable-social-login}
 
-Innan demonstrationsversionerna av inloggningen på sociala medier med Facebook och Twitter kan användas är det nödvändigt att
+Innan demonstrationsversionerna av inloggningen via Facebook och Twitter kan användas måste
 
 1. Installera ett korrigeringspaket eller [senaste funktionspaketet](deploy-communities.md#latestfeaturepack) (för ändringar av Facebook API i mars 2017).
 1. [Aktivera OAuth-providern](social-login.md#adobe-granite-oauth-authentication-handler) i publiceringsmiljön.
@@ -128,9 +124,9 @@ Se [Social inloggning med Facebook och Twitter](social-login.md).
 
 ## Skapa självstudietaggar {#create-tutorial-tags}
 
-Skapa taggar som ska användas för interaktionskurserna med hjälp av taggnamnutrymmet för `Tutorial`.
+Skapa taggar så att du kan använda dem för interaktionskurserna med hjälp av taggnamnutrymmet för `Tutorial`.
 
-Använd [Taggningskonsol](../../help/sites-administering/tags.md#tagging-console) för att skapa följande taggar:
+Använd [Taggningskonsol](../../help/sites-administering/tags.md#tagging-console) om du vill skapa följande taggar:
 
 * `Tutorial: Sports / Baseball`
 * `Tutorial: Sports / Gymnastics`
@@ -156,4 +152,4 @@ Vi rekommenderar att du ställer in [MSRP](msrp.md) (MongoDB) som [gemensam lagr
 
 Instruktioner finns på [Så här konfigurerar du MongoDB för demo](demo-mongo.md).
 
-Som standard lagras användargenererat innehåll (UGC) när författaren installeras och AEM publiceras [JCR-tjärlagring](../../help/sites-deploying/platform.md) som används [JSRP](jsrp.md). JSRP är inte en vanlig lagringsplats, vilket innebär att UGC bara visas på den instans där den angavs. Vanligtvis anges UGC i en publiceringsinstans och skulle inte vara synligt i redigeringsmiljön, vilket resulterar i att alla modereringsåtgärder måste använda publiceringsinstansen.
+Som standard lagras användargenererat innehåll (UGC) när författaren installeras och AEM publiceras i [JCR-tjärlagring](../../help/sites-deploying/platform.md) som används med [JSRP](jsrp.md). JSRP är inte en vanlig lagringsplats, vilket innebär att UGC bara visas på den instans där den angavs. Vanligtvis anges UGC i en publiceringsinstans och skulle inte vara synligt i redigeringsmiljön, vilket resulterar i att alla modereringsåtgärder måste använda publiceringsinstansen.

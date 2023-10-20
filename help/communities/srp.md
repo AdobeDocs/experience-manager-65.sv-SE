@@ -1,14 +1,14 @@
 ---
 title: Översikt över lagringsresursprovider
-description: Gemensamt lagringsutrymme för Communities
+description: Lär dig hur användargenererat innehåll (UGC) lagras i en enkel, gemensam lagringsplats från en leverantör av lagringsresurser.
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
 exl-id: 5f313274-1a2a-4e83-9289-60a4729b99b4
-source-git-commit: e161c37544c3391607cbe495644f3353b9f77fe3
+source-git-commit: f03d0ab9d0f491441378e16e1590d33651f064b5
 workflow-type: tm+mt
-source-wordcount: '1125'
+source-wordcount: '1140'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ Alla SCF-komponenter implementeras med SRP API, vilket gör att kod kan utveckla
 
 >[!NOTE]
 >
->**Anpassade komponenter**: För licensierade AEM Communities-kunder är SRP API tillgängligt för utvecklare av anpassade komponenter för åtkomst till UGC, utan hänsyn till den underliggande topologin. Se [SRP och UGC Essentials](srp-and-ugc.md).
+>**Anpassade komponenter**: För licensierade AEM Communities-kunder är SRP API tillgängligt för utvecklare av anpassade komponenter för att få tillgång till UGC utan hänsyn till den underliggande topologin. Se [SRP och UGC Essentials](srp-and-ugc.md).
 
 Se även:
 
@@ -49,11 +49,11 @@ En implementering av JCR är AEM, Oak.
 
 Både JCR och Oak används vanligtvis för att referera till AEM.
 
-När webbplatsinnehållet har utvecklats i den privata författarmiljön måste det kopieras till den offentliga publiceringsmiljön. Detta görs ofta genom en åtgärd som kallas *[replikering](deploy-communities.md#replication-agents-on-author)*. Detta sker under kontroll av författaren/utvecklaren/administratören.
+När du har utvecklat webbplatsinnehåll i den privata redigeringsmiljön måste det kopieras till den offentliga publiceringsmiljön. Detta görs ofta genom en åtgärd som kallas *[replikering](deploy-communities.md#replication-agents-on-author)*. Detta sker under kontroll av författaren/utvecklaren/administratören.
 
 För UGC anges innehållet av registrerade webbplatsbesökare (community-medlemmar) i den offentliga publiceringsmiljön. Detta sker slumpmässigt.
 
-För hantering och rapportering är det användbart att ha tillgång till UGC från den privata författarmiljön. Med SRP är åtkomst till UGC från författaren mer konsekvent och fungerar eftersom omvänd replikering från publicera till författare inte behövs.
+För hantering och rapportering är det praktiskt att ha tillgång till användargenererat innehåll från den privata redigeringsmiljön. Med SRP är åtkomst till UGC från författare mer konsekvent och prestandaförbättrande eftersom omvänd replikering från Publicera till Författare inte behövs.
 
 ## Om SRP {#about-srp}
 
@@ -71,7 +71,7 @@ Om det finns ASRP lagras UGC inte i JCR, utan lagras i en molntjänst som hanter
 
 Se [ASRP - Adobe lagringsresursleverantör](asrp.md).
 
-Det är inte möjligt för utvecklare att komma åt användargenererat innehåll direkt.
+Det är inte möjligt för utvecklare att få tillgång till användargenererat innehåll direkt.
 
 ASRP använder Adobe cloud för frågor.
 
@@ -91,9 +91,9 @@ JSRP är standardprovider för åtkomst till all UGC i en enda AEM. Med den kan 
 
 Se [JSRP - JCR-lagringsresursprovider](jsrp.md).
 
-Om det finns JSRP, medan UGC lagras i JCR och är tillgängligt via både CRXDE Lite och JCR API, rekommenderar vi att du aldrig använder JCR API för att göra det, annars kan framtida ändringar påverka anpassad kod.
+Om det finns JSRP när UGC lagras i JCR, och den är tillgänglig i API:t för CRXDE Lite och JCR, rekommenderar Adobe att du aldrig använder JCR API för att göra det. Om du gör det kan framtida ändringar påverka den anpassade koden.
 
-Dessutom delas inte databasen för författar- och publiceringsmiljöer. Även om ett kluster med publiceringsinstanser resulterar i en delad publiceringsdatabas, kommer den UGC som anges vid publicering inte att vara synlig för författaren, vilket innebär att det inte går att hantera UGC från författaren. UGC sparas bara i den AEM databasen (JCR) för instansen som den angavs för.
+Dessutom delas inte databasen för redigerings- och publiceringsmiljöerna. Även om ett kluster med publiceringsinstanser resulterar i en delad publiceringsdatabas är den UGC som anges vid publicering inte synlig för författaren, vilket innebär att det inte går att hantera UGC från författaren. UGC sparas bara i den AEM databasen (JCR) för instansen som den angavs för.
 
 JSRP använder Oak-index för frågor.
 
@@ -104,7 +104,7 @@ Skuggnoder, som påminner om sökvägen till UGC, finns i den lokala databasen f
 1. [Åtkomstkontroll (ACL)](#for-access-control-acls)
 1. [Icke-befintliga resurser](#for-non-existing-resources-ners)
 
-Oavsett SRP-implementering kommer den faktiska UGC:n att *inte vara synlig på samma plats som skuggnoden.
+Oavsett implementering av SRP är den faktiska användargenerationen *not* visas på samma plats som skuggnoden.
 
 ### För åtkomstkontroll (ACL) {#for-access-control-acls}
 
@@ -128,7 +128,7 @@ Skuggnoder är en adresserbar plats för Sling i databasen.
 
 ### Lagringsplats {#storage-location}
 
-Följande är ett exempel på en skuggnod med [Komponenten Kommentarer](http://localhost:4502/content/community-components/en/comments.html) i [Community Components Guide](components-guide.md):
+Följande är ett exempel på en skuggnod med [Kommentarskomponent](http://localhost:4502/content/community-components/en/comments.html) i [Guide för communitykomponenter](components-guide.md):
 
 * Komponenten finns i den lokala databasen på:
 
@@ -142,7 +142,7 @@ Ingen UGC hittades under skuggnoden.
 
 Standardbeteendet är att ställa in skuggnoder i en publiceringsinstans när det refereras till det relevanta underträdet för läsning eller skrivning.
 
-Anta till exempel att distributionen är [MSRP](msrp.md) med en TjärMK-publiceringsgrupp.
+Anta att distributionen är [MSRP](msrp.md) med en TjärMK-publiceringsgrupp.
 
 När en [medlem](users.md) publicerar UGC på pub1 (lagras i MongoDB). Skuggnoder skapas i JCR på pub1.
 

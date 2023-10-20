@@ -1,19 +1,15 @@
 ---
 title: Upplev den publicerade webbplatsen
-seo-title: Experience the Published Site
-description: Bläddra till en publicerad webbplats
-seo-description: Browse to a published site
-uuid: 44594e9e-27ad-475d-953d-3611b04f0df8
+description: Lär dig hur du bläddrar till den URL som visas när du skapar en plats, men på publiceringsservern.
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: introduction
 content-type: reference
-discoiquuid: dd0cbc05-a361-46bc-b9f1-d045f8f23890
 docset: aem65
 exl-id: ebc4e1e7-34f0-4f4e-9f00-178dfda23ce4
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: f03d0ab9d0f491441378e16e1590d33651f064b5
 workflow-type: tm+mt
-source-wordcount: '1193'
+source-wordcount: '1205'
 ht-degree: 0%
 
 ---
@@ -29,7 +25,7 @@ Nu när den nyligen skapade communitywebbplatsen har publicerats bläddrar du ti
 
 För att minimera förvirring om vilken medlem som är inloggad på författare och publicera bör du använda olika webbläsare för varje instans.
 
-Vid första ankomsten till den publicerade webbplatsen är besökaren vanligtvis inte redan inloggad och anonym.
+Vid första ankomsten till den publicerade webbplatsen är besökaren vanligtvis inte inloggad och anonym.
 
 `https://localhost:4503/content/sites/engage/en.html {#http-localhost-content-sites-engage-en-html}`
 
@@ -86,17 +82,17 @@ I det övre högra hörnet väljer du `Log in`och signera med användarnamn (aar
 När du har loggat in som registrerad community-medlem kan du lägga märke till följande menyalternativ för att klicka och utforska din community-webbplats:
 
 * **Profil** kan du visa och redigera din profil.
-* [Meddelanden](/help/communities/configure-messaging.md) till avsnittet för direktmeddelanden där du kan:
+* [Meddelanden](/help/communities/configure-messaging.md) till avsnittet för direktmeddelanden där du kan göra följande:
 
    1. Visa direktmeddelanden som du har tagit emot (Inkorgen), skickat (Skickat) och tagit bort (Papperskorgen).
-   1. Skapa nya direktmeddelanden att skicka till enskilda personer och grupper.
+   1. Skapa nya direktmeddelanden så att du kan skicka till enskilda personer och grupper.
 
 * [Meddelanden](/help/communities/notifications.md) går till meddelandeavsnittet där du kan visa dina intressanta händelser och redigera meddelandeinställningar.
 * [Administration](/help/communities/published-site.md#moderationlink) dirigerar dig till AEM Communities Moderation Page, om du har modereringsbehörighet.
 
 ![adminscreen](assets/adminscreen.png)
 
-Observera att kalendersidan är hemsidan eftersom den valda referensplatsmallen inkluderade kalenderfunktionen först, följt av aktivitetsströmfunktion, forumfunktion osv. Den här strukturen visas från [Webbplatsmall](/help/communities/sites.md#edit-site-template) konsol eller när webbplatsegenskaper ändras i redigeringsmiljön:
+Observera att kalendersidan är hemsidan eftersom den valda referenswebbplatsmallen inkluderade kalenderfunktionen först, följt av aktivitetsströmfunktion, forumfunktion osv. Den här strukturen visas från [Webbplatsmall](/help/communities/sites.md#edit-site-template) konsol eller när webbplatsegenskaper ändras i redigeringsmiljön:
 
 ![platsmall](assets/sitetemplate.png)
 
@@ -119,7 +115,7 @@ Besökarna kan visa inlägg och sortera dem på olika sätt.
 
 ### Länken Grupper {#groups-link}
 
-Eftersom Aaron är gruppadministratör kan Aron skapa en ny community-grupp genom att välja länken Grupper, välja en gruppmall, bild, om gruppen är öppen eller hemlig och bjuda in medlemmar.
+Eftersom Aaron är gruppadministratör kan Aron, genom att välja länken Grupper, skapa en community-grupp genom att välja en gruppmall, bild, om gruppen är öppen eller hemlig samt bjuda in medlemmar.
 
 Detta är ett exempel där en grupp skapas i publiceringsmiljön.
 
@@ -145,7 +141,7 @@ Skapa en referensgrupp:
 
    ![creategroup](assets/creategroup.png)
 
-När en ny grupp har skapats **välj den nya sportgruppen** för att skapa två grupper (kapslade) inuti. Eftersom en platsstruktur inte kan börja med gruppfunktionen måste du välja länken Grupper när du har öppnat gruppen Sport:
+När en ny grupp har skapats **välj den nya sportgruppen** om du vill skapa två grupper (kapslade) inuti. Eftersom en platsstruktur inte kan börja med gruppfunktionen måste du välja länken Grupper när du har öppnat gruppen Sport:
 
 ![grouplink1](assets/grouplink1.png)
 
@@ -166,7 +162,7 @@ Lägg till två `new groups`.
 **Meddelande**:
 
 * Det kan vara nödvändigt att uppdatera sidan innan båda grupperna visas.
-* Den här mallen gör det *not* innehåller gruppfunktionen, så att inga fler kapslingar av grupper blir möjliga.
+* Den här mallen gör det *not* inkluderar funktionen groups, så att inga fler kapslingar av grupper är möjliga.
 * På författaren [Gruppkonsol](/help/communities/groups.md) har ett tredje val - en `Public Group` (valfritt medlemskap).
 
 När båda grupperna har skapats väljer du Baseball-gruppen, en öppen grupp, och lägger märke till dess länkar:
@@ -186,7 +182,7 @@ Fortsätt publicera, logga ut som Aaron McDonald och visa grupperna i Sports Gro
 * Välj `Sports` link
 * Välj sport `Groups` link
 
-Bara Baseball-gruppen syns.
+Endast Baseball-gruppen är synlig.
 
 Logga in som Weston McCall (weston.mccall@dodgit.com / lösenord) och navigera till samma plats. Observera att Weston kan `Join` öppna `Baseball` grupp och antingen `enter or Leave` private `Gymnastics` grupp.
 
@@ -196,13 +192,13 @@ Logga in som Weston McCall (weston.mccall@dodgit.com / lösenord) och navigera t
 
 Visa den grundläggande webbsidan som finns på webbplatsen genom att välja länken Webbsida. Standardverktygen AEM kan användas för att lägga till innehåll på den här sidan i författarmiljön.
 
-Till exempel, gå till **författare** -instans, öppna `engage` i [Konsolen Webbplatser i Communities](/help/communities/sites-console.md)väljer du **Öppna webbplats** om du vill öppna redigeringsläget. Välj sedan förhandsvisningsläget för att välja `Web Page` och välj sedan redigeringsläge för att lägga till titel- och textkomponenter. Publicera sedan om antingen bara sidan eller hela webbplatsen.
+Till exempel, gå till **författare** -instans, öppna `engage` i [Konsolen Webbplatser i Communities](/help/communities/sites-console.md)väljer du **Öppna webbplats** om du vill öppna redigeringsläget. Välj sedan förhandsvisningsläget så att du kan välja `Web Page` och välj sedan redigeringsläge för att lägga till titel- och textkomponenter. Publicera sedan om antingen bara sidan eller hela webbplatsen.
 
 ![webpagelink](assets/webpagelink.png)
 
 ### Modereringslänk {#moderationlink}
 
-När communitymedlemmen har modereringsbehörighet visas länken Moderering och om du väljer den visas det communityinnehåll som publicerats och det kan [modererad](/help/communities/moderate-ugc.md) på ett sätt som liknar [modereringskonsol](/help/communities/moderation.md) i redigeringsmiljön.
+När communitymedlemmen har modereringsbehörighet visas länken Moderering. Om du väljer länken visas det communityinnehåll som är publicerat och det kan [modererad](/help/communities/moderate-ugc.md) på ett sätt som liknar [modereringskonsol](/help/communities/moderation.md) i redigeringsmiljön.
 
 Använd webbläsarens bakåtknapp för att gå tillbaka till den publicerade webbplatsen. De flesta konsoler är inte tillgängliga via global navigering i publiceringsmiljön.
 
@@ -210,7 +206,7 @@ Använd webbläsarens bakåtknapp för att gå tillbaka till den publicerade web
 
 ## Självregistrering {#self-registration}
 
-När du har loggat ut kan du skapa en ny användarregistrering.
+När du har loggat ut kan du skapa en användarregistrering.
 
 * Välj `Log In`
 * Välj `Sign up for a new account`
@@ -223,7 +219,7 @@ Som standard är e-postadressen inloggnings-ID. Om alternativet inte är markera
 
 När du har angett användarens namn, e-postadress och lösenord väljer du `Sign Up` skapar användaren och aktiverar den för signering.
 
-När du har loggat in visas den första sidan `Profile` sida, som de kan personalisera.
+När du har loggat in visas den första sidan som `Profile` sida, som de kan personalisera.
 
 ![profil](assets/profile.png)
 

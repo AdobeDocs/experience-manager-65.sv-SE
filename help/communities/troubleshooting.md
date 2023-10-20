@@ -1,14 +1,14 @@
 ---
 title: Felsökning för användargrupper
-description: Felsökning av användargrupper, inklusive kända fel
+description: Läs mer om felsökning av communityn, inklusive kända problem och problem.
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
 exl-id: ef4f4108-c485-4e2e-a58f-ff64eee9937e
-source-git-commit: 3d80ea6a6fbad05afcdd1f41f4b9de70921ab765
+source-git-commit: f03d0ab9d0f491441378e16e1590d33651f064b5
 workflow-type: tm+mt
-source-wordcount: '350'
+source-wordcount: '354'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ Det här avsnittet innehåller vanliga problem och kända problem vid felsöknin
 
 När du använder Dispatcher 4.1.5 med en nyare version av Jetty kan en uppdatering resultera i&quot;Det går inte att ta emot svar från fjärrservern&quot; efter att begäran har fått timeout.
 
-Du kan lösa problemet genom att använda Dispatcher 4.1.6 eller senare.
+Problemet åtgärdas med Dispatcher 4.1.6 eller senare.
 
 ### Det går inte att komma åt foruminlägg efter uppgradering från CQ 5.4 {#cannot-access-forum-post-after-upgrading-from-cq}
 
@@ -45,19 +45,19 @@ All kod som använder API:t RelativeTimeFormat() måste därför ändras:
 * Från: `final RelativeTimeFormat fmt = new RelativeTimeFormat("r a", resourceBundle);`
 * Till: `final RelativeTimeFormat fmt = new RelativeTimeFormat("r", resourceBundle);`
 
-Felet skiljer sig åt när det gäller författare och publicering. På författaren misslyckas det utan att det märks och forumämnena visas helt enkelt inte. Vid publicering genereras ett fel på sidan.
+Felet skiljer sig mellan författare och publicering. På författaren misslyckas det utan att det märks och forumämnena visas helt enkelt inte. Vid publicering genereras ett fel på sidan.
 
 Se [com.day.cq.commons.date.RelativeTimeFormat](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/commons/date/RelativeTimeFormat.html) API för mer information.
 
 ## Vanliga problem {#common-concerns}
 
-### Varning i loggar: Borttagna handtag {#warning-in-logs-handlebars-deprecated}
+### Varning i loggar: Hanteringsfält har tagits bort {#warning-in-logs-handlebars-deprecated}
 
-Under start (inte den första - men var tredje) kan följande varning visas i loggarna:
+Under start (inte den första - men var och en efter det) kan följande varning visas i loggarna:
 
 * `11.04.2014 08:38:07.223 WARN [FelixStartLevel]com.github.jknack.handlebars.Handlebars Helper 'i18n'` har ersatts med `com.adobe.cq.social.handlebars.I18nHelper@15bac645`
 
-Den här varningen kan ignoreras som `jknack.handlebars.Handlebars`, används av [SCF](scf.md#handlebarsjavascripttemplatinglanguage), har ett eget i18n-hjälpverktyg. Vid start ersätts den med en AEM [i18n - hjälp](handlebars-helpers.md#i-n). Den här varningen genereras av tredjepartsbiblioteket för att bekräfta åsidosättningen av en befintlig hjälpreda.
+Denna varning kan ignoreras som `jknack.handlebars.Handlebars`, används av [SCF](scf.md#handlebarsjavascripttemplatinglanguage), har ett eget i18n-hjälpverktyg. Vid start ersätts den med en AEM [i18n - hjälp](handlebars-helpers.md#i-n). Den här varningen genereras av tredjepartsbiblioteket för att bekräfta åsidosättningen av en befintlig hjälpreda.
 
 ### Varning i loggar: OakResourceListener processOsgiEventQueue {#warning-in-logs-oakresourcelistener-processosgieventqueue}
 
@@ -76,7 +76,7 @@ Dessa varningar kan ignoreras.
 
 ### Fel i loggar: NoClassDefFoundError för IndexElementFactory {#error-in-logs-noclassdeffounderror-for-indexelementfactory}
 
-Om du uppgraderar AEM 5.6.1 GA till den senaste cq-socialcommunities-pkg-1.4.x eller till AEM 6.0 uppstår fel i loggfilen under starten, vilket ger en problemlösning som visas av det fel som inte visas vid omstart.
+Om du uppgraderar AEM 5.6.1 till den senaste cq-socialcommunities-pkg-1.4.x eller till AEM 6.0 uppstår fel i loggfilen. Detta inträffar under start för ett tillstånd som åtgärdar sig självt, vilket visas av felet som inte visas vid omstart.
 
 ```xml
 14.11.2013 20:52:39.453 ERROR [Apache Sling JCR Resource Event Queue Processor for path '/'] com.adobe.cq.social.storage.index.impl.IndexService Error occurred while processing event java.util.ConcurrentModificationException
