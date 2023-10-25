@@ -1,14 +1,14 @@
 ---
 title: Referens för arbetsflödesprocess
-description: Referens för arbetsflödesprocess
+description: Använd den här processreferensen för arbetsflöden i Adobe Experience Manager.
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: extending-aem
 content-type: reference
 exl-id: a9de8ec6-6948-4643-89c3-62d9b1f6293a
-source-git-commit: 69346a710708ee659ee97e9fdc193c8ea2658fe6
+source-git-commit: b703f356f9475eeeafb1d5408c650d9c6971a804
 workflow-type: tm+mt
-source-wordcount: '1068'
+source-wordcount: '1076'
 ht-degree: 0%
 
 ---
@@ -94,7 +94,7 @@ The `AbsoluteTimeAutoAdvancer` (Absolut tid för automatiskt avancerat) fungerar
 * **Java™-klass**: `com.adobe.granite.workflow.console.timeout.autoadvance.AbsoluteTimeAutoAdvancer`
 * **Nyttolast**: Ingen.
 * **Argument**: Ingen.
-* **Timeout**: Bearbetningstiderna är slut när den angivna tiden och datumet nås.
+* **Timeout**: Processen tar slut när den angivna tiden och datumet nås.
 
 ### AutoAdvantager (automatiskt avancerat) {#autoadvancer-auto-advancer}
 
@@ -104,11 +104,11 @@ The `AutoAdvancer` processen flyttar automatiskt arbetsflödet till nästa steg.
 
 * **Nyttolast**: Ingen.
 * **Argument**: Ingen.
-* **Timeout**: Bearbetningstiderna är slut efter angiven tidslängd.
+* **Timeout**: Processen tar slut efter angiven tidslängd.
 
 ### ProcessAssembler (Process Assembler) {#processassembler-process-assembler}
 
-The `ProcessAssembler` kör flera underprocesser sekventiellt i ett enda arbetsflödessteg. Så här använder du `ProcessAssembler`skapar du ett enda steg av den här typen i arbetsflödet och anger dess argument för att ange namn och argument för de underprocesser som du vill köra.
+The `ProcessAssembler` kör flera underprocesser sekventiellt i ett enda arbetsflödessteg. Använd `ProcessAssembler`skapar du ett enda steg av den här typen i arbetsflödet och anger dess argument för att ange namn och argument för de underprocesser som du vill köra.
 
 * **Java™-klass**: `com.day.cq.workflow.impl.process.ProcessAssembler`
 
@@ -126,11 +126,11 @@ The `ProcessAssembler` kör flera underprocesser sekventiellt i ett enda arbetsf
         listitem := /* A string */
 ```
 
-* **Timeout**: Respekt.
+* **Timeout**: Respektad.
 
 Till exempel:
 
-* Extrahera metadata från resursen.
+* Hämta metadata från resursen.
 * Skapa tre miniatyrbilder av de tre angivna storlekarna.
 * Skapa en JPEG-bild från resursen, förutsatt att resursen ursprungligen inte är GIF eller PNG (då skapas ingen JPEG).
 * Ange det senast ändrade datumet för tillgången.
@@ -232,6 +232,6 @@ Skapar en version av arbetsflödets nyttolast (AEM eller DAM-resurs).
 
 * **Java™-klass**: `com.day.cq.wcm.workflow.process.CreateVersionProcess`
 
-* **Nyttolast**: En JCR-sökväg eller UUID som refererar till en sida eller en DAM-resurs
+* **Nyttolast**: En JCR-sökväg eller ett UUID som refererar till en sida eller en DAM-resurs
 * **Argument**: Ingen
-* **Timeout**: Respekt
+* **Timeout**: Respektad

@@ -1,6 +1,6 @@
 ---
 title: Utveckla AEM projekt med IntelliJ IDEA
-description: Använda IntelliJ IDEA för att utveckla AEM projekt
+description: Lär dig använda IntelliJ IDEA för att utveckla Adobe Experience Manager-projekt.
 uuid: 382b5008-2aed-4e08-95be-03c48f2b549e
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -8,9 +8,9 @@ topic-tags: development-tools
 content-type: reference
 discoiquuid: df6410a2-794e-4fa2-ae8d-37271274d537
 exl-id: 5a79c79b-df65-4cb2-b9d4-eda994c992ec
-source-git-commit: af60428255fb883265ade7b2d9f363aacb84b9ad
+source-git-commit: b703f356f9475eeeafb1d5408c650d9c6971a804
 workflow-type: tm+mt
-source-wordcount: '633'
+source-wordcount: '638'
 ht-degree: 1%
 
 ---
@@ -40,7 +40,7 @@ Följ sedan installationsanvisningarna på den sidan.
 
 ### Konfigurera ditt AEM baserat på Maven {#set-up-your-aem-project-based-on-maven}
 
-Konfigurera sedan projektet med Maven enligt beskrivningen i [Så här skapar du AEM projekt med Apache Maven](/help/sites-developing/ht-projects-maven.md).
+Konfigurera sedan projektet med Maven enligt beskrivningen i [Skapa AEM projekt med Apache Maven](/help/sites-developing/ht-projects-maven.md).
 
 För att börja arbeta med AEM projekt i IntelliJ IDEA är grundinställningarna i [Komma igång om 5 minuter](https://maven.apache.org/guides/getting-started/maven-in-five-minutes.html) är tillräckligt.
 
@@ -51,11 +51,11 @@ IntelliJ IDEA kan även ge stöd vid arbete med JSP, till exempel:
 * automatisk komplettering av taggbibliotek
 * medvetenhet om objekt som definieras av `<cq:defineObjects />` och `<sling:defineObjects />`
 
-För att det ska fungera, följ instruktionerna på [Så här arbetar du med JSP:er](/help/sites-developing/ht-projects-maven.md#how-to-work-with-jsps) in [Så här skapar du AEM projekt med Apache Maven](/help/sites-developing/ht-projects-maven.md).
+För att det ska fungera, följ instruktionerna på [Så här arbetar du med JSP:er](/help/sites-developing/ht-projects-maven.md#how-to-work-with-jsps) in [Skapa AEM projekt med Apache Maven](/help/sites-developing/ht-projects-maven.md).
 
 ### Importera projektet Maven {#import-the-maven-project}
 
-1. Öppna **Importera** i IntelliJ IDEA genom
+1. Öppna **Importera** i IntelliJ IDEA genom att
 
    * markera **Importera projekt** på välkomstskärmen om du inte har något projekt öppet än
    * markera **Arkiv -> Importera projekt** på huvudmenyn
@@ -64,7 +64,7 @@ För att det ska fungera, följ instruktionerna på [Så här arbetar du med JSP
 
    ![chlimage_1-45](assets/chlimage_1-45a.png)
 
-1. Fortsätt med standardinställningarna som visas i dialogrutan nedan.
+1. Fortsätt med standardinställningarna enligt dialogrutan nedan.
 
    ![chlimage_1-46](assets/chlimage_1-46a.png)
 
@@ -106,7 +106,7 @@ IntelliJ IDEA måste förstå var JSP:er för felsökning ska hittas. Eftersom I
 
 1. Gå till **Kör -> Redigera konfigurationer**
 1. Träffa **+** och markera **JSR45-fjärr**
-1. I konfigurationsdialogrutan väljer du **Konfigurera** nästa **Programserver** och konfigurera en allmän server
+1. Välj **Konfigurera** nästa **Programserver** och konfigurera en allmän server
 1. Ange en lämplig URL för startsidan om du vill öppna en webbläsare när du startar felsökningen
 1. Ta bort alla **Före start** uppgifter om du använder vlt autosync eller konfigurerar lämpliga Maven-uppgifter om du inte gör det
 1. På **Start/anslutning** ruta, justera porten om det behövs

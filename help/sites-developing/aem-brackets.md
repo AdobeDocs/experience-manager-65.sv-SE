@@ -1,7 +1,7 @@
 ---
 title: AEM Brackets Extension
 seo-title: AEM Brackets Extension
-description: AEM Brackets Extension
+description: Lär dig hur du använder Adobe Experience Manager-tillägget för Brackets.
 seo-description: null
 uuid: 2f0dfa42-eb34-44ae-90eb-b5f321c03b79
 contentOwner: User
@@ -10,9 +10,9 @@ topic-tags: development-tools
 content-type: reference
 discoiquuid: 8231a30a-dcb7-4156-bb45-c5a23e5b56ef
 exl-id: 829d8256-b415-4a44-a353-455ac16950f3
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: b703f356f9475eeeafb1d5408c650d9c6971a804
 workflow-type: tm+mt
-source-wordcount: '930'
+source-wordcount: '938'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 ## Översikt {#overview}
 
-Tillägget AEM Brackets ger ett smidigt arbetsflöde för att redigera AEM komponenter och klientbibliotek och utnyttjar kraften i [Hakparenteser](https://brackets.io/) kodredigeraren som ger åtkomst från kodredigeraren till Photoshop-filer och -lager. Den enkla synkronisering som tillägget ger (ingen Maven eller filvalv krävs) ökar utvecklarens effektivitet och hjälper även gränssnittsutvecklare med begränsade AEM att delta i projekt. Det här tillägget har även stöd för [HTML-mallspråk (HTL)](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html), vilket minskar komplexiteten i JSP och gör komponentutvecklingen enklare och säkrare.
+Tillägget AEM Brackets ger ett smidigt arbetsflöde för att redigera AEM komponenter och klientbibliotek och utnyttjar kraften i [Parenteser](https://brackets.io/) kodredigeraren som ger åtkomst från kodredigeraren till Photoshop-filer och -lager. Den enkla synkronisering som tillägget ger (ingen Maven eller filvalv krävs) ökar utvecklarens effektivitet och hjälper även gränssnittsutvecklare med begränsade AEM att delta i projekt. Det här tillägget har även stöd för [HTML-mallspråk (HTL)](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html), vilket minskar komplexiteten i JSP och gör komponentutvecklingen enklare och säkrare.
 
 ![chlimage_1-53](assets/chlimage_1-53a.png)
 
@@ -43,9 +43,9 @@ Brackets innehåller dessutom många användbara funktioner för AEM teckensnitt
 
 ## Installation {#installation}
 
-### Hakparenteser {#brackets}
+### Parenteser {#brackets}
 
-AEM Brackets Extension stöder Brackets version 1.0 eller senare.
+AEM Brackets Extension har stöd för Brackets version 1.0 eller senare.
 
 Hämta den senaste Brackets-versionen från [hakparenteser.io](https://brackets.io/).
 
@@ -53,7 +53,7 @@ Hämta den senaste Brackets-versionen från [hakparenteser.io](https://brackets.
 
 Så här installerar du tillägget:
 
-1. Öppna hakparenteser. På menyn **Fil**, markera **Extension Manager...**
+1. Öppna Brackets. På menyn **Fil**, markera **Extension Manager...**
 1. Retur **AEM** i sökfältet och leta efter **AEM Brackets Extension**.
 
    ![chlimage_1-54](assets/chlimage_1-54a.png)
@@ -67,19 +67,19 @@ Så här installerar du tillägget:
 
 När tillägget har installerats kan du börja utveckla AEM komponenter genom att öppna en innehållspaketmapp från filsystemet med hakparenteser.
 
-Projektet måste innehålla minst följande:
+Projektet måste innehålla minst
 
 1. a `jcr_root` mapp (till exempel `myproject/jcr_root`)
 
-1. a `filter.xml` fil (till exempel `myproject/META-INF/vault/filter.xml`). för mer information om strukturen i `filter.xml` se filen [Filterdefinition för arbetsyta](https://jackrabbit.apache.org/filevault/filter.html).
+1. a `filter.xml` fil (till exempel `myproject/META-INF/vault/filter.xml`); för mer information om strukturen på `filter.xml` filen finns på [Filterdefinition för arbetsyta](https://jackrabbit.apache.org/filevault/filter.html).
 
-I hakparenteser **Fil** meny, välja **Öppna mapp...** och välj `jcr_root` eller den överordnade projektmappen.
+In Brackets&#39; **Fil** meny, välja **Öppna mapp...** och välj antingen `jcr_root` eller den överordnade projektmappen.
 
 >[!NOTE]
 >
 >Om du inte har ett eget projekt med ett innehållspaket kan du testa [HTL TodoMVC-exempel](https://github.com/Adobe-Marketing-Cloud/aem-sightly-sample-todomvc). På GitHub klickar du på **Ladda ned ZIP**, extrahera filerna lokalt och enligt instruktionerna ovan öppnar du `jcr_root` i Brackets. Följ sedan stegen nedan för att konfigurera **Projektinställningar** och slutligen överföra hela paketet till din AEM genom att göra en **Exportera innehållspaket** enligt instruktionerna längre ned i avsnittet Fullständig synkronisering av innehållspaket.
 >
->Efter dessa steg bör du kunna komma åt `/content/todo.html` URL-adressen till din AEM-utvecklingsinstans och du kan börja göra ändringar i koden i hakparenteser och se hur ändringarna synkroniserades direkt till AEM-servern när du har gjort en uppdatering i webbläsaren.
+>Efter dessa steg bör du kunna komma åt `/content/todo.html` URL-adressen till din AEM-utvecklingsinstans och du kan börja göra ändringar i koden i hakparenteser och se hur ändringarna synkroniserades direkt till den AEM servern när du gjort en uppdatering i webbläsaren.
 
 ### Projektinställningar {#project-settings}
 
@@ -152,7 +152,7 @@ Inom ett uttryck `${}`, vanliga variabelnamn slutförs automatiskt.
 
 ## Mer information {#more-information}
 
-AEM Brackets Extension är ett öppen källkodsprojekt som hanteras av GitHub av [Adobe Marketing Cloud](https://github.com/Adobe-Marketing-Cloud) organisation, under Apache License, version 2.0:
+AEM Brackets Extension är ett öppen källkodsprojekt som hanteras av GitHub av [Adobe Marketing Cloud](https://github.com/Adobe-Marketing-Cloud) under Apache License, version 2.0:
 
 * Koddatabas: [https://github.com/Adobe-Marketing-Cloud/aem-sightly-brackets-extension](https://github.com/Adobe-Marketing-Cloud/aem-sightly-brackets-extension)
 * Apache License, version 2.0: [https://www.apache.org/licenses/LICENSE-2.0.html](https://www.apache.org/licenses/LICENSE-2.0.html)

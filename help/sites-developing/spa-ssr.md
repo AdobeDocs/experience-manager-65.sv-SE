@@ -1,15 +1,15 @@
 ---
 title: SPA- och serveråtergivning
-description: "SPA och serversidesrendering"
+description: Lär dig mer om SPA och serveråtergivning i Adobe Experience Manager.
 contentOwner: bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: spa
 content-type: reference
 docset: aem65
 exl-id: a80bc883-e0f6-4714-bd28-108262f96d77
-source-git-commit: a66814fa065b7545ec39fe9109b4c5815fa199da
+source-git-commit: b703f356f9475eeeafb1d5408c650d9c6971a804
 workflow-type: tm+mt
-source-wordcount: '1718'
+source-wordcount: '1724'
 ht-degree: 0%
 
 ---
@@ -30,7 +30,7 @@ Single page-applikationer (SPA) kan ge användaren en rik, dynamisk upplevelse s
 
 Detta kan dock leda till längre inledande inläsningstider, särskilt om SPA är stor och har mycket innehåll. För att optimera inläsningstiden kan en del av innehållet återges på serversidan. Med SSR-återgivning (server-side rendering) går sidans initiala belastning snabbare och skickar sedan vidare återgivning till klienten.
 
-## När SSR ska användas {#when-to-use-ssr}
+## Använd SSR {#when-to-use-ssr}
 
 SSR krävs inte för alla projekt. Även om AEM stöder JS SSR fullt ut för SPA rekommenderar Adobe inte att man implementerar det systematiskt för varje projekt.
 
@@ -38,14 +38,14 @@ När du beslutar dig för att implementera SSR måste du först uppskatta vilken
 
 SSR ger vanligtvis ett visst värde när det finns ett tydligt&quot;ja&quot; till någon av följande frågor:
 
-* **SEO:** Krävs fortfarande SSR för att din webbplats ska kunna indexeras korrekt av sökmotorer som genererar trafik? Kom ihåg att de viktigaste sökmotorcrawlarna nu utvärderar JS.
+* **SEO:** Krävs det fortfarande SSR för att din webbplats ska kunna indexeras korrekt av sökmotorer som genererar trafik? Kom ihåg att de viktigaste sökmotorcrawlarna nu utvärderar JS.
 * **Sidhastighet:** Ger SSR en mätbar hastighetsförbättring i realtidsmiljöer och ökar den övergripande användarupplevelsen?
 
 Endast när minst en av dessa två frågor besvaras med ett tydligt&quot;ja&quot; för ditt projekt rekommenderar Adobe att SSR implementeras. I följande avsnitt beskrivs hur du gör detta med Adobe I/O Runtime.
 
 ## Adobe I/O Runtime {#adobe-i-o-runtime}
 
-Om du [är säkra på att ditt projekt kräver SSR-implementering](/help/sites-developing/spa-ssr.md#when-to-use-ssr), rekommenderas Adobe att använda Adobe I/O Runtime.
+Om du [är säkra på att ditt projekt kräver SSR](/help/sites-developing/spa-ssr.md#when-to-use-ssr), rekommenderas Adobe att använda Adobe I/O Runtime.
 
 Mer information om Adobe I/O Runtime finns i:
 
@@ -59,7 +59,7 @@ I följande avsnitt beskrivs hur Adobe I/O Runtime kan användas för att implem
 
 >[!NOTE]
 >
->Adobe rekommenderar en separat Adobe I/O Runtime-arbetsyta per miljö (stage, prod, testing osv.). Detta möjliggör typiska mönster för systemutvecklingens livscykel (SDLC) med olika versioner av ett enda program som distribueras till olika miljöer. Se dokumentet [CI/CD för Project App Builder-program](https://developer.adobe.com/app-builder/docs/guides/deployment/ci_cd_for_firefly_apps/) för mer information.
+>Adobe rekommenderar en separat Adobe I/O Runtime-arbetsyta per miljö (stage, prod, testing osv.). Detta möjliggör typiska mönster för systemutvecklingscykler (SDLC) med olika versioner av ett enda program som distribueras till olika miljöer. Se dokumentet [CI/CD för Project App Builder-program](https://developer.adobe.com/app-builder/docs/guides/deployment/ci_cd_for_firefly_apps/) för mer information.
 >
 >En separat arbetsyta behövs inte per instans (författare, publicering) såvida det inte finns skillnader i körtidsimplementeringen per instanstyp.
 
@@ -176,7 +176,7 @@ Ett enkelt exempel finns på [App för återförsäljningsjournal](https://githu
 
 >[!NOTE]
 >
->Alla AEM ska använda [AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html), som stöder SPA projekt med React eller Angular och använder SPA SDK.
+>Alla AEM ska använda [AEM Project Archettype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html), som stöder SPA projekt med React eller Angular och använder SPA SDK.
 
 ## Använda Node.js {#using-node-js}
 
@@ -202,13 +202,13 @@ The [Konfiguration av fjärrinnehållsrenderare](#remote-content-renderer-config
 
 `RemoteContentRenderingService` kan injiceras genom beroendeinvertering till antingen en anpassad Sling-modell eller servlet när ytterligare innehållsmanipulering krävs.
 
-Den här tjänsten används internt av [RemoteContentRendererRequestHandlerServlet](#remotecontentrendererrequesthandlerservlet).
+Tjänsten används internt av [RemoteContentRendererRequestHandlerServlet](#remotecontentrendererrequesthandlerservlet).
 
 ### RemoteContentRendererRequestHandlerServlet {#remotecontentrendererrequesthandlerservlet}
 
 The `RemoteContentRendererRequestHandlerServlet` kan användas för att ställa in konfigurationen för begäran programmatiskt. `DefaultRemoteContentRendererRequestHandlerImpl`, den medföljande standardimplementeringen av begäranhanteraren, gör att du kan skapa flera OSGi-konfigurationer för att mappa en plats i innehållsstrukturen till en fjärrslutpunkt.
 
-Implementera `RemoteContentRendererRequestHandler` gränssnitt. Var noga med att ange `Constants.SERVICE_RANKING` egenskapen component till ett heltal som är högre än 100, vilket är rankningen för `DefaultRemoteContentRendererRequestHandlerImpl`.
+Implementera `RemoteContentRendererRequestHandler` gränssnitt. Var noga med att ställa in `Constants.SERVICE_RANKING` egenskapen component till ett heltal som är högre än 100, vilket är rankningen för `DefaultRemoteContentRendererRequestHandlerImpl`.
 
 ```
 @Component(immediate = true,

@@ -1,14 +1,14 @@
 ---
 title: Kodningstips
-description: Tips för kodning för AEM
+description: Lär dig några tips om hur du kodar de effektivaste strategierna i Adobe Experience Manager.
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: best-practices
 exl-id: 85ca35e5-6e2b-447a-9711-b12601beacdd
-source-git-commit: b9c164321baa3ed82ae87a97a325fcf0ad2f6ca0
+source-git-commit: b703f356f9475eeeafb1d5408c650d9c6971a804
 workflow-type: tm+mt
-source-wordcount: '856'
+source-wordcount: '861'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ Koden skrivs en gång, men läses många gånger. Om du lägger lite tid på att
 
 ### Välj namn som ska avslöjas {#choose-intention-revealing-names}
 
-Helst behöver inte en annan programmerare öppna en modul för att förstå vad den gör. De bör också kunna avgöra vad en metod gör utan att läsa den. Ju bättre du kan prenumerera på dessa idéer, desto enklare är det att läsa koden och desto snabbare kan du skriva och ändra koden.
+Helst behöver inte en annan programmerare öppna en modul för att förstå vad den gör. På samma sätt bör de kunna avgöra vad en metod gör utan att läsa den. Ju bättre du kan prenumerera på dessa idéer, desto enklare är det att läsa koden och desto snabbare kan du skriva och ändra koden.
 
 I AEM används följande konventioner:
 
@@ -44,11 +44,11 @@ Helst borde namn visa sin avsikt. Ett vanligt kodtest för när namn inte är s�
 <table>
  <tbody>
   <tr>
-   <td><p><strong>Otydlig</strong></p> </td>
+   <td><p><strong>Oskarp</strong></p> </td>
    <td><p><strong>Rensa</strong></p> </td>
   </tr>
   <tr>
-   <td><p>int d, //förfluten tid i dagar</p> </td>
+   <td><p>int d; //förfluten tid i dagar</p> </td>
    <td><p>int elapsedTimeInDays;</p> </td>
   </tr>
   <tr>
@@ -60,7 +60,7 @@ Helst borde namn visa sin avsikt. Ett vanligt kodtest för när namn inte är s�
 
 ### Upprepa inte dig själv  {#don-t-repeat-yourself}
 
-DRY anger att samma uppsättning kod aldrig ska dupliceras. Detta gäller även för exempelvis stränglitteraler. Kodduplicering öppnar dörren för defekter när något måste ändras och bör sökas ut och elimineras.
+DRY anger att samma koduppsättning aldrig ska dupliceras. Detta gäller även för exempelvis stränglitteraler. Kodduplicering öppnar dörren för defekter när något måste ändras och bör sökas ut och elimineras.
 
 ### Undvik nakna CSS-regler {#avoid-naked-css-rules}
 
@@ -80,17 +80,17 @@ Alla strängar som inte tillhandahålls av en författare ska kapslas in i ett a
 
 ### Använd XSS API och/eller HTML för att skydda mot serveröverskridande skriptattacker (cross-site scripting) {#use-the-xss-api-and-or-htl-to-protect-against-cross-site-scripting-attacks}
 
-AEM tillhandahåller ett XSS-API för att enkelt rensa parametrar och säkerställa säkerheten vid serveröverskridande skriptattacker (cross-site scripting). HTML har dessutom dessa skydd inbyggda direkt i mallspråket. Ett API-kalkylblad finns att ladda ned på [Utveckling - riktlinjer och bästa praxis](/help/sites-developing/dev-guidelines-bestpractices.md).
+AEM tillhandahåller ett XSS-API för att enkelt rensa parametrar och säkerställa säkerheten vid serveröverskridande skriptattacker (cross-site scripting). HTML har dessutom dessa skydd inbyggda direkt i mallspråket. Ett API-kalkylblad finns att ladda ned på [Utveckling - Riktlinjer och bästa praxis](/help/sites-developing/dev-guidelines-bestpractices.md).
 
 ### Implementera lämplig loggning {#implement-appropriate-logging}
 
 För Java™-kod har AEM stöd för slf4j som standard-API för loggningsmeddelanden och bör användas med de konfigurationer som görs tillgängliga via OSGi-konsolen för att ge en konsekvent administration. Slf4j visar fem olika loggningsnivåer. Adobe rekommenderar att du använder följande riktlinjer när du väljer vilken nivå ett meddelande ska loggas på:
 
-* FEL: När något har brutits i koden kan bearbetningen inte fortsätta. Detta beror ofta på ett oväntat undantag. Det är praktiskt att inkludera stackspår i dessa scenarier.
-* VARNING: När något inte har fungerat som det ska, men bearbetningen kan fortsätta. Detta beror ofta på ett undantag som vi förväntade oss, som *PathNotFoundException*.
-* INFORMATION: Information som kan vara användbar vid övervakning av ett system. Tänk på att detta är standardinställningen och att de flesta kunder låter detta vara kvar i sina miljöer. Använd den därför inte för mycket.
-* FELSÖKNING: Lägre information om bearbetning. Användbart vid felsökning av supportproblem.
-* TRACE: Information på den lägsta nivån, till exempel genom att ange/avsluta metoder. Detta används vanligtvis bara av utvecklare.
+* FEL: När något har brutits i koden och bearbetningen inte kan fortsätta. Detta beror ofta på ett oväntat undantag. Det är praktiskt att ta med stackspår i dessa scenarier.
+* VARNING: När något inte har fungerat som det ska, men bearbetningen kan fortsätta. Detta beror ofta på ett undantag som vi förväntade oss, till exempel ett *PathNotFoundException*.
+* INFORMATION: Information som kan vara användbar när du övervakar ett system. Tänk på att detta är standardinställningen och att de flesta kunder låter detta vara på plats i sina miljöer. Använd den därför inte för mycket.
+* FELSÖK: Information om bearbetning på lägre nivå. Användbart vid felsökning av supportproblem.
+* TRACE: Information på lägsta nivå, till exempel genom att ange/avsluta metoder. Detta används vanligtvis bara av utvecklare.
 
 JavaScript *console.log* ska bara användas under utvecklingen och alla loggsatser ska tas bort före lanseringen.
 

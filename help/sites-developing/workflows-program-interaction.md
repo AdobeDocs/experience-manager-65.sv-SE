@@ -1,7 +1,7 @@
 ---
 title: Interagera med arbetsflöden programmatiskt
 seo-title: Interacting with Workflows Programmatically
-description: Interagera med arbetsflöden programmatiskt
+description: Lär dig interagera med arbetsflöden programmatiskt i Adobe Experience Manager.
 seo-description: null
 uuid: a0f19fc6-b9bd-4b98-9c0e-fbf4f7383026
 contentOwner: User
@@ -10,9 +10,9 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: cb621332-a149-4f8d-9425-fd815b033c38
 exl-id: 2b396850-e9fb-46d9-9daa-ebd410a9e1a5
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+source-git-commit: b703f356f9475eeeafb1d5408c650d9c6971a804
 workflow-type: tm+mt
-source-wordcount: '2004'
+source-wordcount: '2011'
 ht-degree: 0%
 
 ---
@@ -50,7 +50,7 @@ Följande tabell innehåller länkar till referensdokumentationen för flera vik
 
 Enligt beskrivning i [Hitta skriptet](/help/sites-developing/the-basics.md#locating-the-script), AEM (via Apache Sling) tillhandahåller en ECMA-skriptmotor som kör ECMA-skript på serversidan. The [`org.apache.sling.scripting.core.ScriptHelper`](https://sling.apache.org/apidocs/sling5/org/apache/sling/scripting/core/ScriptHelper.html) klassen är omedelbart tillgänglig för dina skript som `sling` variabel.
 
-The `ScriptHelper` klassen ger åtkomst till `SlingHttpServletRequest` som du kan använda för att till slut få `WorkflowSession` objekt, till exempel:
+The `ScriptHelper` klassen ger åtkomst till `SlingHttpServletRequest` som du kan använda för att till slut få `WorkflowSession` object; till exempel:
 
 ```
 var wfsession = sling.getRequest().getResource().getResourceResolver().adaptTo(Packages.com.adobe.granite.workflow.WorkflowSession);
@@ -58,7 +58,7 @@ var wfsession = sling.getRequest().getResource().getResourceResolver().adaptTo(P
 
 ## Använda REST API för arbetsflöde {#using-the-workflow-rest-api}
 
-Arbetsflödeskonsolen använder REST API i stor utsträckning. så den här sidan beskriver REST API för arbetsflöden.
+Arbetsflödeskonsolen använder REST API i stor utsträckning, så den här sidan beskriver REST API för arbetsflöden.
 
 >[!NOTE]
 >
@@ -75,7 +75,7 @@ Följande åtgärder stöds med REST API:
 >
 >Genom att använda Firebug, ett Firefox-tillägg för webbutveckling, är det möjligt att följa HTTP-trafiken när konsolen används. Du kan till exempel kontrollera parametrarna och värdena som skickas till AEM med en `POST` begäran.
 
-På den här sidan antas att AEM körs på localhost vid port `4502` och att installationskontexten är `/`&quot; (root). Om det inte är fallet med din installation måste de URI:er som HTTP-begäran gäller anpassas därefter.
+På den här sidan antas att AEM körs på localhost vid port `4502` och att installationssammanhanget är `/`&quot; (root). Om det inte är fallet med din installation måste de URI:er som HTTP-begäran gäller anpassas därefter.
 
 Återgivning stöds för `GET` begäranden är JSON-återgivningen. URL:er för `GET` bör ha `.json` tillägg, till exempel:
 
@@ -155,12 +155,12 @@ Följande metoder för HTTP-begäran gäller:
   </tr>
   <tr>
    <td><code>POST</code></td>
-   <td>Skapar en ny arbetsflödesmodell. Om parametern <code>title</code> skickas, en ny modell skapas med den angivna titeln. Koppla en JSON-modelldefinition som parameter <code>model</code> skapar en ny arbetsflödesmodell enligt den angivna definitionen.<br /> A <code>201</code> svar (<code>CREATED</code>) skickas tillbaka med ett platshuvud som innehåller URL:en för den nya arbetsflödesmodellresursen.<br /> Samma sak händer när en modelldefinition bifogas som en filparameter som kallas <code>modelfile</code>.<br /> I båda fallen gäller <code>model</code> och <code>modelfile</code> parametrar, ytterligare en parameter anropas <code>type</code> krävs för att definiera serialiseringsformatet. Nya serialiseringsformat kan integreras med OSGI API. En vanlig JSON-serialisering levereras med arbetsflödesmotorn. Dess typ är JSON. Nedan finns ett exempel på formatet.</td>
+   <td>Skapar en ny arbetsflödesmodell. Om parametern <code>title</code> skickas, en ny modell skapas med den angivna titeln. Koppla en JSON-modelldefinition som parameter <code>model</code> skapar en ny arbetsflödesmodell enligt den angivna definitionen.<br /> A <code>201</code> svar (<code>CREATED</code>) skickas tillbaka med ett platshuvud som innehåller URL:en för den nya arbetsflödesmodellresursen.<br /> Samma sak händer när en modelldefinition bifogas som en filparameter som kallas <code>modelfile</code>.<br /> I båda fallen gäller <code>model</code> och <code>modelfile</code> parametrar, en extra parameter som anropas <code>type</code> krävs för att definiera serialiseringsformatet. Nya serialiseringsformat kan integreras med OSGI API. En vanlig JSON-serialisering levereras med arbetsflödesmotorn. Dess typ är JSON. Nedan finns ett exempel på formatet.</td>
   </tr>
  </tbody>
 </table>
 
-Exempel: i webbläsaren, en begäran att `http://localhost:4502/etc/workflow/models.json` genererar ett json-svar som liknar följande:
+Exempel: i webbläsaren skickar du en begäran till `http://localhost:4502/etc/workflow/models.json` genererar ett json-svar som liknar följande:
 
 ```
 [
@@ -253,7 +253,7 @@ Plats `*{uri}*` är sökvägen till modellnoden i databasen.
  </tbody>
 </table>
 
-Exempel: i webbläsaren, en begäran att `http://localhost:4502/var/workflow/models/publish_example.json` returnerar `json` ett svar som liknar följande kod:
+Exempel: i webbläsaren skickar du en begäran till `http://localhost:4502/var/workflow/models/publish_example.json` returnerar `json` ett svar som liknar följande kod:
 
 ```shell
 {
@@ -372,7 +372,7 @@ Följande metoder för HTTP-begäran gäller:
 
 | HTTP-begärandemetod | Åtgärder |
 |---|---|
-| `GET` | Hämtar inkorgens data (definition och metadata) `WorkItem` identifieras av dess ID. |
+| `GET` | Hämtar data (definition och metadata) för inkorgen `WorkItem` identifieras av dess ID. |
 
 ## Exempel {#examples}
 
@@ -390,7 +390,7 @@ Exempel med vändning:
 curl -u admin:admin http://localhost:4502/etc/workflow/instances.RUNNING.json
 ```
 
-The `uri` som visas i resultaten kan användas som instans `id` andra kommandon, till exempel:
+The `uri` som visas i resultaten kan användas som instans `id` i andra kommandon, till exempel:
 
 ```shell
 [
@@ -410,7 +410,7 @@ The `uri` som visas i resultaten kan användas som instans `id` andra kommandon,
 
 * med följande parametrar:
 
-   * `action`: dess värde måste vara: `UPDATE`
+   * `action`: värdet måste vara: `UPDATE`
    * `workflowTitle`: arbetsflödets titel
 
 #### Ändra arbetsflödets titel - REST med vändning {#how-to-change-the-workflow-title-rest-using-curl}
@@ -479,7 +479,7 @@ I följande exempel visas hur du får åtkomst till arbetsflödesmodeller:
 
 De exempel som används:
 
-1. Skapa en modell (med ID:t) `/var/workflow/models/mymodel/jcr:content/model`).
+1. Skapa en modell (med ID `/var/workflow/models/mymodel/jcr:content/model`).
 1. Ta bort modellen.
 
 >[!NOTE]
@@ -495,15 +495,15 @@ När du skapar en ny modell:
    * `sling:resourceType`: `cq/workflow/components/pages/model`
    * `cq:template`: `/libs/cq/workflow/templates/model`
 
-   När du skapar en modell måste du först skapa den `cq:Page` nod och använd dess `jcr:content` noden som modellnodens överordnade nod.
+  När du skapar en modell måste du först skapa den `cq:Page` nod och använd dess `jcr:content` noden som modellnodens överordnade nod.
 
 * The `id` argument som vissa metoder kräver för att identifiera modellen är den absoluta sökvägen till modellnoden i databasen:
 
-   `/var/workflow/models/<*model_name>*/jcr:content/model`
+  `/var/workflow/models/<*model_name>*/jcr:content/model`
 
-   >[!NOTE]
-   >
-   >Se [Lista alla arbetsflödesmodeller](#how-to-list-all-workflow-models).
+  >[!NOTE]
+  >
+  >Se [Lista alla arbetsflödesmodeller](#how-to-list-all-workflow-models).
 
 #### Skapa, läsa eller ta bort arbetsflödesmodeller - Java {#creating-reading-or-deleting-workflow-models-java}
 
@@ -626,63 +626,63 @@ wfSession.terminateWorkflow(workflow);
 
 * **Starta ett arbetsflöde**
 
-   ```shell
-   # starting a workflow
-   curl -d "model={id}&payloadType={type}&payload={payload}" http://localhost:4502/etc/workflow/instances
-   
-   # for example:
-   curl -u admin:admin -d "model=/var/workflow/models/request_for_activation&payloadType=JCR_PATH&payload=/content/we-retail/us/en/products" http://localhost:4502/etc/workflow/instances
-   ```
+  ```shell
+  # starting a workflow
+  curl -d "model={id}&payloadType={type}&payload={payload}" http://localhost:4502/etc/workflow/instances
+  
+  # for example:
+  curl -u admin:admin -d "model=/var/workflow/models/request_for_activation&payloadType=JCR_PATH&payload=/content/we-retail/us/en/products" http://localhost:4502/etc/workflow/instances
+  ```
 
 * **Visar instanser**
 
-   ```shell
-   # listing the instances
-   curl -u admin:admin http://localhost:4502/etc/workflow/instances.json
-   ```
+  ```shell
+  # listing the instances
+  curl -u admin:admin http://localhost:4502/etc/workflow/instances.json
+  ```
 
-   Detta kommer att omfatta alla förekomster; till exempel:
+  Då visas alla förekomster, till exempel:
 
-   ```shell
-   [
-       {"uri":"/var/workflow/instances/server0/2018-02-26/prototype-01_1"}
-       ,{"uri":"/var/workflow/instances/server0/2018-02-26/prototype-01_2"}
-   ]
-   ```
+  ```shell
+  [
+      {"uri":"/var/workflow/instances/server0/2018-02-26/prototype-01_1"}
+      ,{"uri":"/var/workflow/instances/server0/2018-02-26/prototype-01_2"}
+  ]
+  ```
 
-   >[!NOTE]
-   >
-   >Se [Hämta en lista med alla arbetsflöden som körs](#how-to-get-a-list-of-all-running-workflows-with-their-ids) med sina ID:n för att lista instanser med en viss status.
+  >[!NOTE]
+  >
+  >Se [Hämta en lista med alla arbetsflöden som körs](#how-to-get-a-list-of-all-running-workflows-with-their-ids) med sina ID:n för att lista instanser med en viss status.
 
 * **Pausa ett arbetsflöde**
 
-   ```shell
-   # suspending a workflow
-   curl -d "state=SUSPENDED" http://localhost:4502/etc/workflow/instances/{id}
-   
-   # for example:
-   curl -u admin:admin -d "state=SUSPENDED" http://localhost:4502/etc/workflow/instances/server0/2017-03-08/request_for_activation_1
-   ```
+  ```shell
+  # suspending a workflow
+  curl -d "state=SUSPENDED" http://localhost:4502/etc/workflow/instances/{id}
+  
+  # for example:
+  curl -u admin:admin -d "state=SUSPENDED" http://localhost:4502/etc/workflow/instances/server0/2017-03-08/request_for_activation_1
+  ```
 
 * **Återuppta ett arbetsflöde**
 
-   ```shell
-   # resuming a workflow
-   curl -d "state=RUNNING" http://localhost:4502/etc/workflow/instances/{id}
-   
-   # for example:
-   curl -u admin:admin -d "state=RUNNING" http://localhost:4502/etc/workflow/instances/server0/2017-03-08/request_for_activation_1
-   ```
+  ```shell
+  # resuming a workflow
+  curl -d "state=RUNNING" http://localhost:4502/etc/workflow/instances/{id}
+  
+  # for example:
+  curl -u admin:admin -d "state=RUNNING" http://localhost:4502/etc/workflow/instances/server0/2017-03-08/request_for_activation_1
+  ```
 
 * **Avsluta en arbetsflödesinstans**
 
-   ```shell
-   # terminating a workflow
-   curl -d "state=ABORTED" http://localhost:4502/etc/workflow/instances/{id}
-   
-   # for example:
-   curl -u admin:admin -d "state=ABORTED" http://localhost:4502/etc/workflow/instances/server0/2017-03-08/request_for_activation_1
-   ```
+  ```shell
+  # terminating a workflow
+  curl -d "state=ABORTED" http://localhost:4502/etc/workflow/instances/{id}
+  
+  # for example:
+  curl -u admin:admin -d "state=ABORTED" http://localhost:4502/etc/workflow/instances/server0/2017-03-08/request_for_activation_1
+  ```
 
 ### Interagera med arbetsuppgifter {#interacting-with-work-items}
 
@@ -706,7 +706,7 @@ wfSession.delegateWorkItem(workItem, delegatees.get(0));
 wfSession.complete(workItem, routes.get(0));
 ```
 
-#### Interagera med arbetsuppgifter - ECMA Script {#interacting-with-work-items-ecma-script}
+#### Interagera med arbetsobjekt - ECMA Script {#interacting-with-work-items-ecma-script}
 
 ```
 // querying work items
@@ -728,89 +728,89 @@ wfSession.complete(workItem, routes.get(0));
 
 * **Visar arbetsobjekt från inkorgen**
 
-   ```shell
-   # listing the work items
-   curl -u admin:admin http://localhost:4502/bin/workflow/inbox
-   ```
+  ```shell
+  # listing the work items
+  curl -u admin:admin http://localhost:4502/bin/workflow/inbox
+  ```
 
-   Information om de arbetsobjekt som finns i Inkorgen visas. till exempel:
+  Information om arbetsobjekt som finns i Inkorgen visas, till exempel:
 
-   ```shell
-   [{
-       "uri_xss": "/var/workflow/instances/server0/2018-02-26/prototype-01_2/workItems/node2_var_workflow_instances_server0_2018-02-26_prototype-01_2",
-       "uri": "/var/workflow/instances/server0/2018-02-26/prototype-01_2/workItems/node2_var_workflow_instances_server0_2018-02-26_prototype-01_2",
-       "currentAssignee_xss": "workflow-administrators",
-       "currentAssignee": "workflow-administrators",
-       "startTime": 1519656289274,
-       "payloadType_xss": "JCR_PATH",
-       "payloadType": "JCR_PATH",
-       "payload_xss": "/content/we-retail/es/es",
-       "payload": "/content/we-retail/es/es",
-       "comment_xss": "Process resource is null",
-       "comment": "Process resource is null",
-       "type_xss": "WorkItem",
-       "type": "WorkItem"
-     },{
-       "uri_xss": "configuration/configure_analyticstargeting",
-       "uri": "configuration/configure_analyticstargeting",
-       "currentAssignee_xss": "administrators",
-       "currentAssignee": "administrators",
-       "type_xss": "Task",
-       "type": "Task"
-     },{
-       "uri_xss": "configuration/securitychecklist",
-       "uri": "configuration/securitychecklist",
-       "currentAssignee_xss": "administrators",
-       "currentAssignee": "administrators",
-       "type_xss": "Task",
-       "type": "Task"
-     },{
-       "uri_xss": "configuration/enable_collectionofanonymoususagedata",
-       "uri": "configuration/enable_collectionofanonymoususagedata",
-       "currentAssignee_xss": "administrators",
-       "currentAssignee": "administrators",
-       "type_xss": "Task",
-       "type": "Task"
-     },{
-       "uri_xss": "configuration/configuressl",
-       "uri": "configuration/configuressl",
-       "currentAssignee_xss": "administrators",
-       "currentAssignee": "administrators",
-       "type_xss": "Task",
-       "type": "Task"
-     }
-   ```
+  ```shell
+  [{
+      "uri_xss": "/var/workflow/instances/server0/2018-02-26/prototype-01_2/workItems/node2_var_workflow_instances_server0_2018-02-26_prototype-01_2",
+      "uri": "/var/workflow/instances/server0/2018-02-26/prototype-01_2/workItems/node2_var_workflow_instances_server0_2018-02-26_prototype-01_2",
+      "currentAssignee_xss": "workflow-administrators",
+      "currentAssignee": "workflow-administrators",
+      "startTime": 1519656289274,
+      "payloadType_xss": "JCR_PATH",
+      "payloadType": "JCR_PATH",
+      "payload_xss": "/content/we-retail/es/es",
+      "payload": "/content/we-retail/es/es",
+      "comment_xss": "Process resource is null",
+      "comment": "Process resource is null",
+      "type_xss": "WorkItem",
+      "type": "WorkItem"
+    },{
+      "uri_xss": "configuration/configure_analyticstargeting",
+      "uri": "configuration/configure_analyticstargeting",
+      "currentAssignee_xss": "administrators",
+      "currentAssignee": "administrators",
+      "type_xss": "Task",
+      "type": "Task"
+    },{
+      "uri_xss": "configuration/securitychecklist",
+      "uri": "configuration/securitychecklist",
+      "currentAssignee_xss": "administrators",
+      "currentAssignee": "administrators",
+      "type_xss": "Task",
+      "type": "Task"
+    },{
+      "uri_xss": "configuration/enable_collectionofanonymoususagedata",
+      "uri": "configuration/enable_collectionofanonymoususagedata",
+      "currentAssignee_xss": "administrators",
+      "currentAssignee": "administrators",
+      "type_xss": "Task",
+      "type": "Task"
+    },{
+      "uri_xss": "configuration/configuressl",
+      "uri": "configuration/configuressl",
+      "currentAssignee_xss": "administrators",
+      "currentAssignee": "administrators",
+      "type_xss": "Task",
+      "type": "Task"
+    }
+  ```
 
 * **Delegera arbetsobjekt**
 
-   ```xml
-   # delegating
-   curl -d "item={item}&delegatee={delegatee}" http://localhost:4502/bin/workflow/inbox
-   
-   # for example:
-   curl -u admin:admin -d "item=/etc/workflow/instances/server0/2017-03-08/request_for_activation_1/workItems/node1_etc_workflow_instances_server0_2017-03-08_request_for_act_1&delegatee=administrators" http://localhost:4502/bin/workflow/inbox
-   ```
+  ```xml
+  # delegating
+  curl -d "item={item}&delegatee={delegatee}" http://localhost:4502/bin/workflow/inbox
+  
+  # for example:
+  curl -u admin:admin -d "item=/etc/workflow/instances/server0/2017-03-08/request_for_activation_1/workItems/node1_etc_workflow_instances_server0_2017-03-08_request_for_act_1&delegatee=administrators" http://localhost:4502/bin/workflow/inbox
+  ```
 
-   >[!NOTE]
-   >
-   >The `delegatee` måste vara ett giltigt alternativ för arbetsflödessteget.
+  >[!NOTE]
+  >
+  >The `delegatee` måste vara ett giltigt alternativ för arbetsflödessteget.
 
 * **Slutför eller flytta fram arbetsuppgifter till nästa steg**
 
-   ```xml
-   # retrieve the list of routes; the results will be similar to {"results":1,"routes":[{"rid":"233123169","label":"End","label_xss":"End"}]}
-   http://localhost:4502/etc/workflow/instances/<path-to-the-workitem>.routes.json
-   
-   # completing or advancing to the next step; use the appropriate route ID (rid value) from the above list
-   curl -d "item={item}&route={route}" http://localhost:4502/bin/workflow/inbox
-   
-   # for example:
-   curl -u admin:admin -d "item=/etc/workflow/instances/server0/2017-03-08/request_for_activation_1/workItems/node1_etc_workflow_instances_server0_2017-03-08_request_for_activation_1&route=233123169" http://localhost:4502/bin/workflow/inbox
-   ```
+  ```xml
+  # retrieve the list of routes; the results will be similar to {"results":1,"routes":[{"rid":"233123169","label":"End","label_xss":"End"}]}
+  http://localhost:4502/etc/workflow/instances/<path-to-the-workitem>.routes.json
+  
+  # completing or advancing to the next step; use the appropriate route ID (rid value) from the above list
+  curl -d "item={item}&route={route}" http://localhost:4502/bin/workflow/inbox
+  
+  # for example:
+  curl -u admin:admin -d "item=/etc/workflow/instances/server0/2017-03-08/request_for_activation_1/workItems/node1_etc_workflow_instances_server0_2017-03-08_request_for_activation_1&route=233123169" http://localhost:4502/bin/workflow/inbox
+  ```
 
 ### Lyssna efter arbetsflödeshändelser {#listening-for-workflow-events}
 
-Använd OSGi-händelseramverket för att lyssna efter händelser som [ `com.adobe.granite.workflow.event.WorkflowEvent`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/event/WorkflowEvent.html) -klassen definierar. Den här klassen innehåller också flera användbara metoder för att hämta information om föremålet för händelsen. Till exempel `getWorkItem` metoden returnerar `WorkItem` -objekt för det arbetsobjekt som är involverat i händelsen.
+Använd OSGi-händelseramverket för att lyssna efter händelser som [`com.adobe.granite.workflow.event.WorkflowEvent`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/event/WorkflowEvent.html) -klassen definierar. Den här klassen innehåller också flera användbara metoder för att hämta information om föremålet för händelsen. Till exempel `getWorkItem` metoden returnerar `WorkItem` -objekt för det arbetsobjekt som är involverat i händelsen.
 
 I följande exempelkod definieras en tjänst som avlyssnar arbetsflödeshändelser och utför åtgärder utifrån händelsetypen.
 

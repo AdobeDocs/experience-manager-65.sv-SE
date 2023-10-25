@@ -1,14 +1,14 @@
 ---
 title: Provar kärnkomponenter i We.Retail
-description: Provar kärnkomponenter i We.Retail
+description: Lär dig hur du provar kärnkomponenter i Adobe Experience Manager med hjälp av We.Retail.
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: best-practices
 exl-id: b5f2be67-c93c-4dbc-acc0-3edd8f1a282f
-source-git-commit: 69346a710708ee659ee97e9fdc193c8ea2658fe6
+source-git-commit: b703f356f9475eeeafb1d5408c650d9c6971a804
 workflow-type: tm+mt
-source-wordcount: '533'
+source-wordcount: '540'
 ht-degree: 2%
 
 ---
@@ -26,7 +26,7 @@ De centrala komponenterna är moderna, flexibla komponenter som är enkla att ut
 1. När du öppnar rälen i komponentkonsolen kan du filtrera efter en viss komponentgrupp. Kärnkomponenterna finns i
 
    * `.core-wcm`: Standardkärnkomponenterna
-   * `.core-wcm-form`: Baskomponenter för att skicka in formulär
+   * `.core-wcm-form`: Kärnkomponenterna för att skicka in formulär
 
    Välj `.core-wcm`.
 
@@ -44,7 +44,7 @@ De centrala komponenterna är moderna, flexibla komponenter som är enkla att ut
    ![chlimage_1-164](assets/chlimage_1-164.png)
 
 1. Återgå till komponentkonsolen. Filter för gruppen **Vi.butik** och väljer **Text** -komponenten.
-1. Se **Resurstyp** pekar på en komponent enligt `/apps/weretail` men **Resurssupertyp** återgår till kärnkomponenten `/apps/core/wcm/components/text/v1/text`.
+1. Se **Resurstyp** pekar på en komponent som förväntats under `/apps/weretail` men **Resurssupertyp** återgår till kärnkomponenten `/apps/core/wcm/components/text/v1/text`.
 
    ![chlimage_1-165](assets/chlimage_1-165.png)
 
@@ -75,7 +75,7 @@ De centrala komponenterna är moderna, flexibla komponenter som är enkla att ut
 
    ![chlimage_1-171](assets/chlimage_1-171.png)
 
-1. Med huvudkomponenterna kan mallskapare konfigurera vilka egenskaper som är tillgängliga för sidförfattarna. Det gäller funktioner som tillåtna inklistringskällor, formateringsalternativ och tillgängliga styckeformat.
+1. Med huvudkomponenterna kan mallskapare konfigurera vilka egenskaper som är tillgängliga för sidförfattarna. Det kan vara funktioner som tillåtna inklistringskällor, formateringsalternativ och tillgängliga styckeformat.
 
    Sådana designdialogrutor är tillgängliga för många viktiga komponenter och fungerar tillsammans med mallredigeraren. När de är aktiverade är de tillgängliga för författaren via komponentredigerarna.
 

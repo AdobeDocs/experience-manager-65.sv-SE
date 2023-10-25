@@ -1,7 +1,7 @@
 ---
 title: JavaScript API för klientkontext
 seo-title: Client Context JavaScript API
-description: JavaScript-API:t för klientkontext
+description: Lär dig mer om JavaScript API för klientkontext i Adobe Experience Manager.
 seo-description: The JavaScript API for Client Context
 uuid: be58998c-f23e-4768-8394-1f1ad3994c4c
 contentOwner: Guillaume Carlino
@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: a6e5810b-dac5-4137-93cf-5d8d53cacc49
 feature: Context Hub
 exl-id: 24bdf9fc-71e6-4b99-9dad-0f41a5e36b98
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: b703f356f9475eeeafb1d5408c650d9c6971a804
 workflow-type: tm+mt
-source-wordcount: '3153'
+source-wordcount: '3159'
 ht-degree: 0%
 
 ---
@@ -34,7 +34,7 @@ Returnerar ett sessionsarkiv med ett angivet namn. Se även [Åtkomst till ett s
 
 **Parametrar**
 
-* namn: Sträng. Namnet på sessionsarkivet.
+* name: String. Namnet på sessionsarkivet.
 
 **Returnerar**
 
@@ -76,9 +76,9 @@ När fördröjningen är inställd på `true` eller ett antal millisekunder vän
 
 **Parametrar**
 
-* storeName: Sträng. Namnet på det sessionsarkiv som avlyssnaren ska läggas till i.
-* callback: Funktion. Funktionen som ska anropas vid arkivinitiering.
-* fördröjning: Boolean eller Number. Den tid i millisekunder som anropet till återanropsfunktionen ska fördröjas. Ett booleskt värde på `true` använder standardfördröjningen för `200 ms`. Ett booleskt värde på `false` eller ett negativt tal gör att ingen fördröjning används.
+* storeName: String. Namnet på det sessionsarkiv som avlyssnaren ska läggas till i.
+* callback: Function. Funktionen som ska anropas vid arkivinitiering.
+* delay: Boolean eller Number. Den tid i millisekunder som anropet till återanropsfunktionen ska fördröjas. Ett booleskt värde på `true` använder standardfördröjningen för `200 ms`. Ett booleskt värde på `false` eller ett negativt tal gör att ingen fördröjning används.
 
 **Returnerar**
 
@@ -90,8 +90,8 @@ Registrerar en callback-funktion som anropas när ett sessionsarkiv registreras.
 
 **Parametrar**
 
-* storeName: Sträng. Namnet på det sessionsarkiv som avlyssnaren ska läggas till i.
-* callback: Funktion. Funktionen som ska anropas vid arkivinitiering.
+* storeName: String. Namnet på det sessionsarkiv som avlyssnaren ska läggas till i.
+* callback: Function. Funktionen som ska anropas vid arkivinitiering.
 
 **Returnerar**
 
@@ -117,11 +117,11 @@ Skapar ett CQ_Analytics.JSONPStore-objekt.
 
 **Parametrar**
 
-* storeName: Sträng. Namnet som ska användas som STORENAME-egenskap. Värdet för egenskapen STOREKEY anges till storeName med alla versaler. Om inget storeName anges returnerar metoden null.
-* serviceURL: Sträng. URL:en för JSONP-tjänsten
-* dynamicData: (Valfritt) Objekt. JSON-data som ska läggas till i butikens initieringsdata innan callback-funktionen anropas.
-* deferLoading: (Valfritt) Boolean. Värdet true förhindrar att JSONP-tjänsten anropas när objekt skapas. Värdet false gör att JSONP-tjänsten anropas.
-* loadingCallback: (Valfritt) Sträng. Namnet på den funktion som ska anropas för bearbetning av JSONP-objektet som JSONP-tjänsten returnerar. Callback-funktionen måste definiera en enda parameter som är ett CQ_Analytics.JSONPStore-objekt.
+* storeName: String. Namnet som ska användas som STORENAME-egenskap. Värdet för egenskapen STOREKEY anges till storeName med alla versaler. Om inget storeName anges returnerar metoden null.
+* serviceURL: String. URL:en för JSONP-tjänsten
+* dynamicData: (valfritt) Object. JSON-data som ska läggas till i butikens initieringsdata innan callback-funktionen anropas.
+* deferLoading: (Valfritt) Boolean. Värdet true förhindrar att JSONP-tjänsten anropas när objekt skapas. Värdet false anropar JSONP-tjänsten.
+* loadingCallback: (Valfritt) String. Namnet på den funktion som ska anropas för bearbetning av JSONP-objektet som JSONP-tjänsten returnerar. Callback-funktionen måste definiera en enda parameter som är ett CQ_Analytics.JSONPStore-objekt.
 
 **Returnerar**
 
@@ -141,13 +141,13 @@ En sträng som representerar tjänst-URL:en, eller null om ingen tjänst-URL har
 
 #### load(serviceURL, dynamicData, callback) {#load-serviceurl-dynamicdata-callback}
 
-Anropar JSONP-tjänsten. JSONP-URL:en är den tjänst-URL som har suffixet ett namn på en återanropsfunktion.
+Anropar JSONP. JSONP-URL:en är den tjänst-URL som har suffixet ett namn på en återanropsfunktion.
 
 **Parametrar**
 
-* serviceURL: (Valfritt) Sträng. JSONP-tjänsten att ringa. Värdet null gör att den redan konfigurerade tjänst-URL:en används. Ett värde som inte är null anger JSONP-tjänsten som ska användas för det här objektet. (Se setServiceURL.)
-* dynamicData: (Valfritt) Objekt. JSON-data som ska läggas till i butikens initieringsdata innan callback-funktionen anropas.
-* callback: (Valfritt) Sträng. Namnet på den funktion som ska anropas för bearbetning av JSONP-objektet som JSONP-tjänsten returnerar. Callback-funktionen måste definiera en enda parameter som är ett CQ_Analytics.JSONPStore-objekt.
+* serviceURL: (Valfritt) String. JSONP-tjänsten att ringa. Värdet null gör att den redan konfigurerade tjänst-URL:en används. Ett värde som inte är null anger JSONP-tjänsten som ska användas för det här objektet. (Se setServiceURL.)
+* dynamicData: (valfritt) Object. JSON-data som ska läggas till i butikens initieringsdata innan callback-funktionen anropas.
+* callback: (Valfritt) String. Namnet på den funktion som ska anropas för bearbetning av JSONP-objektet som JSONP-tjänsten returnerar. Callback-funktionen måste definiera en enda parameter som är ett CQ_Analytics.JSONPStore-objekt.
 
 **Returnerar**
 
@@ -159,10 +159,10 @@ Skapar ett CQ_Analytics.JSONPStore-objekt och registrerar arkivet med Client Con
 
 **Parametrar**
 
-* storeName: Sträng. Namnet som ska användas som STORENAME-egenskap. Värdet för egenskapen STOREKEY anges till storeName med alla versaler. Om inget storeName anges returnerar metoden null.
-* serviceURL: (Valfritt) Sträng. URL:en för JSONP-tjänsten.
-* dynamicData: (Valfritt) Objekt. JSON-data som ska läggas till i butikens initieringsdata innan callback-funktionen anropas.
-* callback: (Valfritt) Sträng. Namnet på den funktion som ska anropas för bearbetning av JSONP-objektet som JSONP-tjänsten returnerar. Callback-funktionen måste definiera en enda parameter som är ett CQ_Analytics.JSONPStore-objekt.
+* storeName: String. Namnet som ska användas som STORENAME-egenskap. Värdet för egenskapen STOREKEY anges till storeName med alla versaler. Om inget storeName anges returnerar metoden null.
+* serviceURL: (Valfritt) String. URL:en för JSONP-tjänsten.
+* dynamicData: (valfritt) Object. JSON-data som ska läggas till i butikens initieringsdata innan callback-funktionen anropas.
+* callback: (Valfritt) String. Namnet på den funktion som ska anropas för bearbetning av JSONP-objektet som JSONP-tjänsten returnerar. Callback-funktionen måste definiera en enda parameter som är ett CQ_Analytics.JSONPStore-objekt.
 
 **Returnerar**
 
@@ -174,7 +174,7 @@ Anger URL:en för JSONP-tjänsten som ska användas för att hämta JSON-data.
 
 **Parametrar**
 
-* serviceURL: Sträng. URL:en för JSONP-tjänsten som tillhandahåller JSON-data
+* serviceURL: String. URL:en för JSONP-tjänsten som tillhandahåller JSON-data
 
 **Returnerar**
 
@@ -194,11 +194,11 @@ Utökar CQ_Analytics.SessionStore.
 
 #### STOREKEY {#storekey}
 
-Nyckeln som identifierar butiken. Använd `getInstance` metod för att hämta det här värdet.
+Nyckeln som identifierar butiken. Använd `getInstance` metod för att hämta värdet.
 
 #### STORENAME {#storename}
 
-Butikens namn. Använd `getInstance` metod för att hämta det här värdet.
+Butikens namn. Använd `getInstance` metod för att hämta värdet.
 
 ### Metoder {#methods-3}
 
@@ -218,12 +218,12 @@ Inget returvärde.
 
 #### getInstance(storeName, jsonData) {#getinstance-storename-jsondata}
 
-Skapar ett CQ_Analytics.JSONStore-objekt med ett angivet namn och initieras med angivna JSON-data (anropar metoden initJSON).
+Skapar ett CQ_Analytics.JSONStore-objekt med ett givet namn och initieras med angivna JSON-data (anropar metoden initJSON).
 
 **Parametrar**
 
-* storeName: Sträng. Namnet som ska användas som STORENAME-egenskap. Värdet för egenskapen STOREKEY anges till storeName med alla versaler.
-* jsonData: Objekt. Ett objekt som innehåller JSON-data.
+* storeName: String. Namnet som ska användas som STORENAME-egenskap. Värdet för egenskapen STOREKEY anges till storeName med alla versaler.
+* jsonData: Object. Ett objekt som innehåller JSON-data.
 
 **Returnerar**
 
@@ -286,12 +286,12 @@ Inget returvärde.
 
 #### registerNewInstance(storeName, jsonData) {#registernewinstance-storename-jsondata}
 
-Skapar ett CQ_Analytics.JSONStore-objekt med ett angivet namn och initieras med angivna JSON-data (anropar metoden initJSON). Det nya objektet registreras automatiskt med Clickstream Cloud Manager.
+Skapar ett CQ_Analytics.JSONStore-objekt med ett givet namn och initieras med angivna JSON-data (anropar metoden initJSON). Det nya objektet registreras automatiskt med Clickstream Cloud Manager.
 
 **Parametrar**
 
-* storeName: Sträng. Namnet som ska användas som STORENAME-egenskap. Värdet för egenskapen STOREKEY anges till storeName med alla versaler.
-* jsonData: Objekt. Ett objekt som innehåller JSON-data.
+* storeName: String. Namnet som ska användas som STORENAME-egenskap. Värdet för egenskapen STOREKEY anges till storeName med alla versaler.
+* jsonData: Object. Ett objekt som innehåller JSON-data.
 
 **Returnerar**
 
@@ -309,9 +309,9 @@ Registrerar en avlyssnare för en händelse. Se även [Skapa en avlyssnare som k
 
 **Parametrar**
 
-* händelse: Sträng. Namnet på händelsen som ska avlyssnas.
-* fct: Funktion. Den funktion som anropas när händelsen inträffar.
-* omfång: (Valfritt) Objekt. Det omfång som hanterarfunktionen ska köras i. Hanterarfunktionens kontext &quot;this&quot;.
+* event: String. Namnet på händelsen som ska avlyssnas.
+* fct: Function. Den funktion som anropas när händelsen inträffar.
+* scope: (Valfritt) Objekt. Det omfång som hanterarfunktionen ska köras i. Hanterarfunktionens kontext &quot;this&quot;.
 
 **Returnerar**
 
@@ -323,8 +323,8 @@ Tar bort den angivna händelsehanteraren för en händelse.
 
 **Parametrar**
 
-* händelse: Sträng. Namnet på händelsen.
-* fct: Funktion. Händelsehanteraren.
+* event: String. Namnet på händelsen.
+* fct: Function. Händelsehanteraren.
 
 **Returnerar**
 
@@ -346,11 +346,11 @@ Skapar ett CQ_Analytics.PersistedJSONPStore-objekt.
 
 **Parametrar**
 
-* storeName: Sträng. Namnet som ska användas som STORENAME-egenskap. Värdet för egenskapen STOREKEY anges till storeName med alla versaler. Om inget storeName anges returnerar metoden null.
-* serviceURL: Sträng. URL:en för JSONP-tjänsten
-* dynamicData: (Valfritt) Objekt. JSON-data som ska läggas till i butikens initieringsdata innan callback-funktionen anropas.
-* deferLoading: (Valfritt) Boolean. Värdet true förhindrar att JSONP-tjänsten anropas när objekt skapas. Värdet false gör att JSONP-tjänsten anropas.
-* loadingCallback: (Valfritt) Sträng. Namnet på den funktion som ska anropas för bearbetning av JSONP-objektet som JSONP-tjänsten returnerar. Callback-funktionen måste definiera en enda parameter som är ett CQ_Analytics.JSONPStore-objekt.
+* storeName: String. Namnet som ska användas som STORENAME-egenskap. Värdet för egenskapen STOREKEY anges till storeName med alla versaler. Om inget storeName anges returnerar metoden null.
+* serviceURL: String. URL:en för JSONP-tjänsten
+* dynamicData: (valfritt) Object. JSON-data som ska läggas till i butikens initieringsdata innan callback-funktionen anropas.
+* deferLoading: (Valfritt) Boolean. Värdet true förhindrar att JSONP-tjänsten anropas när objekt skapas. Värdet false anropar JSONP-tjänsten.
+* loadingCallback: (Valfritt) String. Namnet på den funktion som ska anropas för bearbetning av JSONP-objektet som JSONP-tjänsten returnerar. Callback-funktionen måste definiera en enda parameter som är ett CQ_Analytics.JSONPStore-objekt.
 
 **Returnerar**
 
@@ -370,13 +370,13 @@ En sträng som representerar tjänst-URL:en, eller null om ingen tjänst-URL har
 
 #### load(serviceURL, dynamicData, callback) {#load-serviceurl-dynamicdata-callback-1}
 
-Anropar JSONP-tjänsten. JSONP-URL:en är den tjänst-URL som har suffixet ett namn på en återanropsfunktion.
+Anropar JSONP. JSONP-URL:en är den tjänst-URL som har suffixet ett namn på en återanropsfunktion.
 
 **Parametrar**
 
-* serviceURL: (Valfritt) Sträng. JSONP-tjänsten att ringa. Värdet null gör att den redan konfigurerade tjänst-URL:en används. Ett värde som inte är null anger JSONP-tjänsten som ska användas för det här objektet. (Se setServiceURL.)
-* dynamicData: (Valfritt) Objekt. JSON-data som ska läggas till i butikens initieringsdata innan callback-funktionen anropas.
-* callback: (Valfritt) Sträng. Namnet på den funktion som ska anropas för bearbetning av JSONP-objektet som JSONP-tjänsten returnerar. Callback-funktionen måste definiera en enda parameter som är ett CQ_Analytics.JSONPStore-objekt.
+* serviceURL: (Valfritt) String. JSONP-tjänsten att ringa. Värdet null gör att den redan konfigurerade tjänst-URL:en används. Ett värde som inte är null anger JSONP-tjänsten som ska användas för det här objektet. (Se setServiceURL.)
+* dynamicData: (valfritt) Object. JSON-data som ska läggas till i butikens initieringsdata innan callback-funktionen anropas.
+* callback: (Valfritt) String. Namnet på den funktion som ska anropas för bearbetning av JSONP-objektet som JSONP-tjänsten returnerar. Callback-funktionen måste definiera en enda parameter som är ett CQ_Analytics.JSONPStore-objekt.
 
 **Returnerar**
 
@@ -388,10 +388,10 @@ Skapar ett CQ_Analytics.PersistedJSONPStore-objekt och registrerar arkivet med C
 
 **Parametrar**
 
-* storeName: Sträng. Namnet som ska användas som STORENAME-egenskap. Värdet för egenskapen STOREKEY anges till storeName med alla versaler. Om inget storeName anges returnerar metoden null.
-* serviceURL: (Valfritt) Sträng. URL:en för JSONP-tjänsten.
-* dynamicData: (Valfritt) Objekt. JSON-data som ska läggas till i butikens initieringsdata innan callback-funktionen anropas.
-* callback: (Valfritt) Sträng. Namnet på den funktion som ska anropas för bearbetning av JSONP-objektet som JSONP-tjänsten returnerar. Callback-funktionen måste definiera en enda parameter som är ett CQ_Analytics.JSONPStore-objekt.
+* storeName: String. Namnet som ska användas som STORENAME-egenskap. Värdet för egenskapen STOREKEY anges till storeName med alla versaler. Om inget storeName anges returnerar metoden null.
+* serviceURL: (Valfritt) String. URL:en för JSONP-tjänsten.
+* dynamicData: (valfritt) Object. JSON-data som ska läggas till i butikens initieringsdata innan callback-funktionen anropas.
+* callback: (Valfritt) String. Namnet på den funktion som ska anropas för bearbetning av JSONP-objektet som JSONP-tjänsten returnerar. Callback-funktionen måste definiera en enda parameter som är ett CQ_Analytics.JSONPStore-objekt.
 
 **Returnerar**
 
@@ -403,7 +403,7 @@ Anger URL:en för JSONP-tjänsten som ska användas för att hämta JSON-data.
 
 **Parametrar**
 
-* serviceURL: Sträng. URL:en för JSONP-tjänsten som tillhandahåller JSON-data
+* serviceURL: String. URL:en för JSONP-tjänsten som tillhandahåller JSON-data
 
 **Returnerar**
 
@@ -419,11 +419,11 @@ Utökar `CQ_Analytics.PersistedSessionStore`.
 
 #### STOREKEY {#storekey-1}
 
-Nyckeln som identifierar butiken. Använd `getInstance` metod för att hämta det här värdet.
+Nyckeln som identifierar butiken. Använd `getInstance` metod för att hämta värdet.
 
 #### STORENAME {#storename-1}
 
-Butikens namn. Använd `getInstance` metod för att hämta det här värdet.
+Butikens namn. Använd `getInstance` metod för att hämta värdet.
 
 ### Metoder {#methods-6}
 
@@ -435,8 +435,8 @@ Skapar ett CQ_Analytics.PersistedJSONStore-objekt med ett givet namn och initier
 
 **Parametrar**
 
-* storeName: Sträng. Namnet som ska användas som STORENAME-egenskap. Värdet för egenskapen STOREKEY anges till storeName med alla versaler.
-* jsonData: Objekt. Ett objekt som innehåller JSON-data.
+* storeName: String. Namnet som ska användas som STORENAME-egenskap. Värdet för egenskapen STOREKEY anges till storeName med alla versaler.
+* jsonData: Object. Ett objekt som innehåller JSON-data.
 
 **Returnerar**
 
@@ -491,8 +491,8 @@ Skapar ett CQ_Analytics.PersistedJSONStore-objekt med ett givet namn och initier
 
 **Parametrar**
 
-* storeName: Sträng. Namnet som ska användas som STORENAME-egenskap. Värdet för egenskapen STOREKEY anges till storeName med alla versaler.
-* jsonData: Objekt. Ett objekt som innehåller JSON-data.
+* storeName: String. Namnet som ska användas som STORENAME-egenskap. Värdet för egenskapen STOREKEY anges till storeName med alla versaler.
+* jsonData: Object. Ett objekt som innehåller JSON-data.
 
 **Returnerar**
 
@@ -536,7 +536,7 @@ Avgör om en dataegenskap är beständig.
 
 **Parametrar**
 
-* namn: Sträng. Egenskapens namn.
+* name: String. Egenskapens namn.
 
 **Returnerar**
 
@@ -576,7 +576,7 @@ Flaggar en dataegenskap som inte beständig.
 
 **Parametrar**
 
-* namn: Sträng. Namnet på den egenskap som inte ska bevaras.
+* name: String. Namnet på den egenskap som inte ska bevaras.
 
 **Returnerar**
 
@@ -594,7 +594,7 @@ Utökar CQ_Analytics.Observable.
 
 #### STORENAME {#storename-2}
 
-Namnet på sessionsarkivet. Använd getName för att hämta värdet för den här egenskapen.
+Namnet på sessionsarkivet. Använd getName för att hämta egenskapens värde.
 
 ### Metoder {#methods-8}
 
@@ -606,8 +606,8 @@ Använd loadInitProperties för att fylla i sessionsarkivdata med initieringsvä
 
 **Parametrar**
 
-* namn: Sträng. Namnet på egenskapen som ska läggas till.
-* värde: Sträng. Värdet på egenskapen som ska läggas till.
+* name: String. Namnet på den egenskap som ska läggas till.
+* value: String. Värdet på egenskapen som ska läggas till.
 
 **Returnerar**
 
@@ -631,7 +631,7 @@ Returnerar lagringsdata. Namnegenskaperna kan också utelämnas från data. Anro
 
 **Parametrar**
 
-exkluderade: (Valfritt) En array med egenskapsnamn som ska uteslutas från returnerade data.
+exclude: (Valfritt) En array med egenskapsnamn som ska exkluderas från returnerade data.
 
 **Returnerar**
 
@@ -643,7 +643,7 @@ Hämtar värdet för en data-egenskap.
 
 **Parametrar**
 
-* namn: Sträng. Namnet på den dataegenskap som ska hämtas.
+* name: String. Namnet på den dataegenskap som ska hämtas.
 
 **Returnerar**
 
@@ -667,8 +667,8 @@ Returnerar värdet för en egenskap. Värdet returneras som raw-egenskapen eller
 
 **Parametrar**
 
-* namn: Sträng. Namnet på den dataegenskap som ska hämtas.
-* råformat: Boolean. Värdet true gör att raw-egenskapsvärdet returneras. Värdet false gör att det returnerade värdet XSS-filtreras.
+* name: String. Namnet på den dataegenskap som ska hämtas.
+* raw: Boolean. Värdet true gör att raw-egenskapsvärdet returneras. Värdet false gör att det returnerade värdet XSS-filtreras.
 
 **Returnerar**
 
@@ -680,7 +680,7 @@ Returnerar namnen på de egenskaper som sessionsarkivet innehåller. Anropar `in
 
 **Parametrar**
 
-exkluderade: (Valfritt) En array med egenskapsnamn som ska utelämnas från resultatet.
+exclude: (Valfritt) En array med egenskapsnamn som ska utelämnas från resultatet.
 
 **Returnerar**
 
@@ -729,7 +729,7 @@ Lägger till egenskaperna för ett givet objekt i sessionsarkivets initieringsda
 **Parametrar**
 
 * obj: Ett objekt som innehåller uppräkningsbara egenskaper.
-* setValues: Om värdet är true läggs obj-egenskaperna till i sessionsarkivets data om arkivdata inte redan innehåller en egenskap med samma namn. Om värdet är false läggs inga data till i sessionsarkivdata.
+* setValues: Om värdet är true läggs obj-egenskaperna till i sessionsarkivdata om lagringsdata inte redan innehåller en egenskap med samma namn. Om värdet är false läggs inga data till i sessionsarkivdata.
 
 **Returnerar**
 
@@ -741,7 +741,7 @@ Tar bort en egenskap från sessionsarkivet. Aktiverar `update` -händelse när a
 
 **Parametrar**
 
-* namn: Sträng. Namnet på egenskapen som ska tas bort.
+* name: String. Namnet på den egenskap som ska tas bort.
 
 **Returnerar**
 
@@ -777,8 +777,8 @@ Anger värdet för en egenskap. Aktiverar `update` -händelse när allt är klar
 
 **Parametrar**
 
-* namn: Sträng. Egenskapens namn.
-* värde: Sträng. Egenskapsvärde.
+* name: String. Egenskapens namn.
+* value: String. Egenskapsvärde.
 
 **Returnerar**
 

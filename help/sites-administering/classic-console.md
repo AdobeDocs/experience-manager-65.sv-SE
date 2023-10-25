@@ -1,7 +1,7 @@
 ---
 title: Klassiskt gränssnitt, taggningskonsol
 seo-title: Classic UI Tagging Console
-description: Lär dig mer om den klassiska UI-taggningskonsolen.
+description: Läs mer om Adobe Experience Manager Classic UI Tagging Console.
 seo-description: Learn about the Classic UI Tagging Console.
 uuid: 51e29422-f967-424b-a7fd-4ca2ddc6b8a3
 contentOwner: Chiradeep Majumdar
@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: b279c033-bc93-4e62-81ad-123c40b9fdd2
 docset: aem65
 exl-id: 8c6ba22f-5555-4e3c-998a-9353bd44715b
-source-git-commit: 21330d460d1080ab1dee3e82bc3c3877677c1420
+source-git-commit: b703f356f9475eeeafb1d5408c650d9c6971a804
 workflow-type: tm+mt
-source-wordcount: '889'
+source-wordcount: '892'
 ht-degree: 0%
 
 ---
@@ -80,7 +80,7 @@ Så här kommer du åt konsolen Klassisk UI-taggning:
 
 ## Aktivera och inaktivera taggar {#activating-and-deactivating-tags}
 
-1. I den högra rutan markerar du namnutrymmet eller taggen som du vill aktivera (publicera) eller inaktivera (avpublicera).
+1. Markera namnutrymmet eller taggen som du vill aktivera (publicera) eller inaktivera (avpublicera) i den högra rutan.
 1. Klicka **Aktivera** eller **Inaktivera** efter behov.
 
 ## Lista - visa var taggar refereras {#list-showing-where-tags-are-referenced}
@@ -112,7 +112,7 @@ The **Flytta tagg** ser ut så här:
 
 ## Sammanfoga taggar {#merging-tags}
 
-Du kan använda sammanfogningstaggar när en taxonomi har dubbletter. När tagg A sammanfogas med tagg B kommer alla sidor som taggas med tagg A att taggas med tagg B och tagg A är inte längre tillgängliga för författare.
+Du kan använda sammanslagningstaggar när en taxonomi har dubbletter. När tagg A sammanfogas med tagg B kommer alla sidor som taggas med tagg A att taggas med tagg B och tagg A är inte längre tillgängliga för författare.
 
 Så här sammanfogar du en tagg till en annan:
 
@@ -133,7 +133,7 @@ The **Sammanfoga tagg** ser ut så här:
 Så här ser du hur många gånger en tagg används:
 
 1. Öppna **Taggning** konsol.
-1. Klicka **Räkna användning** i det övre verktygsfältet: i kolumnen Antal visas resultatet.
+1. Klicka **Räkna användning** i det övre verktygsfältet: Kolumnen Antal visar resultatet.
 
 ## Hantera taggar på olika språk {#managing-tags-in-different-languages}
 
@@ -167,7 +167,7 @@ Som standard är taggen `titles`i sidegenskaperna visas på sidspråket. Dialogr
 
 1. Se föregående avsnitt för att lägga till den franska översättningen i **Djur** nedan **Taggar** > **Arkivfotografier**.
 1. Öppna sidegenskaperna för **Produkter** på den engelska delen av **Geometrixx** webbplats.
-1. Öppna **Taggar/nyckelord** (genom att välja den nedrullningsbara menyn till höger om visningsområdet Taggar/Nyckelord) och välja **Franska** i listrutan längst ned till höger.
+1. Öppna **Taggar/nyckelord** (genom att välja listrutan till höger om visningsområdet Taggar/Nyckelord) och markera **Franska** i listrutan längst ned till höger.
 1. Rulla med vänster-/högerpilarna tills du kan markera **Arkivfotografier** tab
 
    Välj **Djur** (**Animaux**) och markera utanför dialogrutan för att stänga den och lägga till taggen i sidegenskaperna.

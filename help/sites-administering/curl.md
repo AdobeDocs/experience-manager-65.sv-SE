@@ -1,7 +1,7 @@
 ---
 title: Använda cURL med AEM
 seo-title: Using cURL with AEM
-description: Lär dig hur du använder cURL med AEM.
+description: Lär dig hur du använder cURL för vanliga Adobe Experience Manager-uppgifter.
 seo-description: Learn how to use cURL with AEM.
 uuid: 771b9acc-ff3a-41c9-9fee-7e5d2183f311
 contentOwner: Silviu Raiman
@@ -10,9 +10,9 @@ topic-tags: operations
 content-type: reference
 discoiquuid: d4ceb82e-2889-4507-af22-b051af83be38
 exl-id: e3f018e6-563e-456f-99d5-d232f1a4aa55
-source-git-commit: fafcf5f9ec64f147447300b02afbc0590d0c5e22
+source-git-commit: b703f356f9475eeeafb1d5408c650d9c6971a804
 workflow-type: tm+mt
-source-wordcount: '881'
+source-wordcount: '885'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ På grund av Sling-ramverkets RESTful-karaktär, som AEM bygger på, kan de fles
 
 cURL är ett kommandoradsverktyg med öppen källkod som används för att utföra URL-ändringar. Den stöder ett brett spektrum av Internetprotokoll, inklusive HTTP, HTTPS, FTP, FTPS, SCP, SFTP, TFTP, LDAP, DAP, DICT, TELNET, FILE, IMAP, POP3, SMTP och RTSP.
 
-cURL är ett väletablerat och allmänt använt verktyg för att hämta och skicka data med URL-syntaxen och släpptes ursprungligen 1997. Namnet cURL innebar ursprungligen &quot;se URL&quot;.
+cURL är ett väletablerat och allmänt använt verktyg för att hämta och skicka data med URL-syntaxen och släpptes ursprungligen 1997. Namnet cURL betydde ursprungligen &quot;se URL&quot;.
 
 På grund av Sling-ramverkets RESTful-karaktär, som AEM bygger på, kan de flesta åtgärder minskas till ett URL-anrop, som kan köras med cURL. [Åtgärder för innehållsmanipulering](/help/sites-administering/curl.md#common-content-manipulation-aem-curl-commands) som att aktivera sidor och starta arbetsflöden samt [operativa uppgifter](/help/sites-administering/curl.md#common-operational-aem-curl-commands) som pakethantering och hantering av användare kan automatiseras med cURL. Dessutom kan du [skapa en egen cURL](/help/sites-administering/curl.md#building-a-curl-ready-aem-command) -kommandon för de flesta åtgärder i AEM.
 
@@ -62,7 +62,7 @@ I följande steg beskrivs hur du gör detta genom att skapa en ny sida i webblä
 
    ![chlimage_1-68](assets/chlimage_1-68a.png)
 
-1. Kopiera kommandot cURL till en textredigerare och ta bort alla rubriker från kommandot som börjar med `-H` (markerat med blått i bilden nedan) och lägg till rätt autentiseringsparameter som `-u <user>:<password>`.
+1. Kopiera kommandot cURL till en textredigerare och ta bort alla rubriker från kommandot som börjar med `-H` (markerat med blått i bilden nedan) och lägg till rätt autentiseringsparameter, som `-u <user>:<password>`.
 
    ![chlimage_1-69](assets/chlimage_1-69a.png)
 
@@ -70,7 +70,7 @@ I följande steg beskrivs hur du gör detta genom att skapa en ny sida i webblä
 
    ![chlimage_1-70](assets/chlimage_1-70a.png)
 
-## Vanliga AEM cURL-kommandon {#common-operational-aem-curl-commands}
+## AEM cURL-kommandon {#common-operational-aem-curl-commands}
 
 Här är en lista AEM cURL-kommandon för vanliga administrativa och operativa uppgifter.
 

@@ -1,14 +1,14 @@
 ---
 title: Adaptiv mallåtergivning
-description: Adaptiv mallåtergivning
+description: Lär dig mer om adaptiv mallrendering i Adobe Experience Manager.
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: platform
 content-type: reference
 exl-id: 58cac3b1-b7cd-44b2-b89b-f5ee8811c198
-source-git-commit: 260f71acd330167572d817fdf145a018b09cbc65
+source-git-commit: b703f356f9475eeeafb1d5408c650d9c6971a804
 workflow-type: tm+mt
-source-wordcount: '480'
+source-wordcount: '486'
 ht-degree: 1%
 
 ---
@@ -21,7 +21,7 @@ Med den adaptiva mallåtergivningen kan du hantera en sida med variationer. Den 
 
 Mallar byggs runt ett responsivt rutnät, och sidor som skapas baserat på dessa mallar är helt responsiva och justeras automatiskt till visningsrutan på klientenheten. Med verktygsfältet Emulator i sidredigeraren kan man rikta layouten till specifika enheter.
 
-Det går också att skapa mallar som stöder adaptiv återgivning. När enhetsgrupper är korrekt konfigurerade återges sidan med en annan väljare i URL:en när en enhet väljs i emulatorläge. Om du använder en väljare kan en viss sidåtergivning anropas direkt via webbadressen.
+Det går också att skapa mallar som har stöd för adaptiv återgivning. När enhetsgrupper är korrekt konfigurerade återges sidan med en annan väljare i URL:en när en enhet väljs i emulatorläge. Om du använder en väljare kan en viss sidåtergivning anropas direkt via webbadressen.
 
 Kom ihåg när du konfigurerar enhetsgrupper:
 
@@ -32,13 +32,13 @@ Kom ihåg när du konfigurerar enhetsgrupper:
 
 >[!NOTE]
 >
->Enhetsgruppen **Responsiva enheter har aldrig någon väljare eftersom enheter som identifieras som kompatibla med responsiv design antas inte behöva någon adaptiv layout
+>Enhetsgruppen **Responsiva enheter har aldrig någon väljare eftersom enheter som identifieras som kompatibla med responsiv design antas inte behöva någon anpassad layout
 
 ## Konfiguration {#configuration}
 
 Anpassningsbara återgivningsväljare kan konfigureras för befintliga enhetsgrupper eller till [grupper som du själv har skapat.](/help/sites-developing/mobile.md#device-groups)
 
-I det här exemplet ska du konfigurera den befintliga enhetsgruppen **Smarta telefoner** att ha en adaptiv återgivningsväljare som en del av **Experience Page** i We.Retail.
+I det här exemplet ska du konfigurera den befintliga enhetsgruppen **Smarta telefoner** för att ha en adaptiv återgivningsväljare som en del av **Experience Page** mall inom We.Retail.
 
 1. Redigera enhetsgruppen som kräver en adaptiv väljare i `http://localhost:4502/miscadmin#/etc/mobile/groups`
 
@@ -46,7 +46,7 @@ I det här exemplet ska du konfigurera den befintliga enhetsgruppen **Smarta tel
 
    ![chlimage_1-157](assets/chlimage_1-157.png)
 
-1. Väljaren är tillgänglig för **BlackBerry®** och **iPhone 4** tillhandahöll enhetsgruppen **Smart Phone** läggs till i mall- och sidstrukturerna i följande steg.
+1. Väljaren är tillgänglig för **BlackBerry®** och **IPHONE 4** tillhandahöll enhetsgruppen **Smart Phone** läggs till i mall- och sidstrukturerna i följande steg.
 
    ![chlimage_1-158](assets/chlimage_1-158.png)
 
@@ -60,7 +60,7 @@ I det här exemplet ska du konfigurera den befintliga enhetsgruppen **Smarta tel
 
    ![chlimage_1-159](assets/chlimage_1-159.png)
 
-1. Tillåt att enhetsgruppen används på din plats med CRXDE Lite genom att lägga till den i egenskapen för flervärdessträngen `cq:deviceGroups` på webbplatsens struktur.
+1. Tillåt att enhetsgruppen kan användas på din plats med CRXDE Lite genom att lägga till den i egenskapen för flervärdessträngen `cq:deviceGroups` på webbplatsens struktur.
 
    `/content/<your-site>/jcr:content`
 
@@ -70,7 +70,7 @@ I det här exemplet ska du konfigurera den befintliga enhetsgruppen **Smarta tel
 
    ![chlimage_1-160](assets/chlimage_1-160.png)
 
-Nu när du använder [emulator](/help/sites-authoring/responsive-layout.md#layout-definitions-device-emulation-and-breakpoints) i sidredigeraren (till exempel när [ändra layouten](/help/sites-authoring/responsive-layout.md)) och du väljer en enhet i den konfigurerade enhetsgruppen återges sidan med en väljare som en del av URL:en.
+Nu när du använder [emulator](/help/sites-authoring/responsive-layout.md#layout-definitions-device-emulation-and-breakpoints) i sidredigeraren (till exempel när [ändra layout](/help/sites-authoring/responsive-layout.md)) och du väljer en enhet i den konfigurerade enhetsgruppen återges sidan med en väljare som en del av URL:en.
 
 I det här exemplet, när du redigerar en sida baserat på **Experience Page** och väljer iPhone 4 i emulatorn återges sidan med väljaren som `arctic-surfing-in-lofoten.smart.html` i stället för `arctic-surfing-in-lofoten.html`
 

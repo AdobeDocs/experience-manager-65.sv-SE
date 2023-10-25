@@ -1,15 +1,15 @@
 ---
 title: Anpassa Adobe Analytics Framework
-description: Anpassa Adobe Analytics Framework
+description: Lär dig hur du anpassar Adobe Analytics ramverk för Adobe Experience Manager.
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: extending-aem
 content-type: reference
 discoiquuid: 11c0aac6-a7f6-4d6b-a080-b04643045a64
 exl-id: ab0d4f2e-f761-4510-ba51-4a2dcea49601
-source-git-commit: b9c164321baa3ed82ae87a97a325fcf0ad2f6ca0
+source-git-commit: b703f356f9475eeeafb1d5408c650d9c6971a804
 workflow-type: tm+mt
-source-wordcount: '1613'
+source-wordcount: '1620'
 ht-degree: 0%
 
 ---
@@ -64,7 +64,7 @@ Det finns flera fördefinierade variabler i Adobe Analytics som kan konfigureras
 
 ![aa-22](assets/aa-22.png)
 
-Du kan lägga till variabelnamn och värden i listan. Dessa fördefinierade variabler och eventuella variabler som du lägger till används för att konfigurera egenskaperna för `s` -objektet i filen analytics.sitecatalyst.js. I följande exempel visas hur den tillagda `prop10` värdeegenskap `CONSTANT` visas i JavaScript-koden:
+Du kan lägga till variabelnamn och värden i listan. Dessa fördefinierade variabler och eventuella variabler som du lägger till används för att konfigurera egenskaperna för `s` i filen analytics.sitecatalyst.js. I följande exempel visas hur den tillagda `prop10` värdeegenskap `CONSTANT` representeras i JavaScript-koden:
 
 ```
 var s_account = "my_sitecatalyst_account";
@@ -120,7 +120,7 @@ Koden som du lägger till läggs till i filen analytics.sitecatalyst.js. Därfö
 
 `s.prop10= 'CONSTANT';`
 
-Koden i [analytics.sitecatalyst.js](/help/sites-developing/extending-analytics-components.md) (som innehåller innehållet i Adobe Analytics `s-code.js` -filen) innehåller följande kod:
+Koden i [analytics.sitecatalyst.js](/help/sites-developing/extending-analytics-components.md) som innehåller Adobe Analytics `s-code.js` -filen) innehåller följande kod:
 
 `if (s.usePlugins) s.doPlugins(s)`
 
@@ -170,7 +170,7 @@ Följande värden genereras till exempel i Adobe Analytics:
 
 ### Lägga till global anpassad kod för alla Adobe Analytics-ramverk {#adding-global-custom-code-for-all-adobe-analytics-frameworks}
 
-Skapa anpassad JavaScript-kod som är integrerad i alla Adobe Analytics ramverk. När en sidas Adobe Analytics-ramverk inte innehåller någon anpassad [frihandsskript](/help/sites-administering/adobeanalytics.md), läggs det JavaScript som genereras av /libs/cq/analytics/components/sitecatalyst/config.js.jsp-skriptet till i [analytics.sitecatalyst.js](/help/sites-administering/adobeanalytics.md) -fil. Skriptet har som standard ingen effekt eftersom det kommenteras ut. Koden ställer också in `s.usePlugins` till `false`:
+Skapa anpassad JavaScript-kod som är integrerad i alla Adobe Analytics ramverk. När en sidas Adobe Analytics-ramverk inte innehåller någon anpassad [JavaScript utan extra kostnad](/help/sites-administering/adobeanalytics.md), läggs det JavaScript som genereras av /libs/cq/analytics/components/sitecatalyst/config.js.jsp-skriptet till i [analytics.sitecatalyst.js](/help/sites-administering/adobeanalytics.md) -fil. Skriptet har som standard ingen effekt eftersom det kommenteras ut. Koden ställer också in `s.usePlugins` till `false`:
 
 ```
 /* Plugin Config */
@@ -236,11 +236,11 @@ Därför bör ditt JavaScript anges `s.usePlugins` till `true` så att all kod i
 >
 >Om det finns text i JavaScript-koden med valfri form i en sidas ramverk (även om bara tomt utrymme), ignoreras config.js.jsp.
 
-### Använda Adobe Analytics-plugin-program i AEM {#using-adobe-analytics-plugins-in-aem}
+### Använda Adobe Analytics Plugins i AEM {#using-adobe-analytics-plugins-in-aem}
 
 Hämta JavaScript-koden för Adobe Analytics-plugin-program och integrera dem i ditt Adobe Analytics-ramverk i AEM. Lägg till koden i en biblioteksmapp i kategorin `sitecatalyst.plugins` så att de är tillgängliga för din anpassade JavaScript-kod.
 
-Om du till exempel integrerar `getQueryParams` plugin-programmet kan du anropa plugin-programmet från `s_doPlugins` funktionen i ditt anpassade JavaScript. Följande exempelkod skickar frågesträngen i **&quot;pid&quot;** från referentens URL som **eVar1**, när ett Adobe Analytics-samtal utlöses.
+Om du till exempel integrerar `getQueryParams` plugin-programmet kan du anropa plugin-programmet från `s_doPlugins` funktionen i det anpassade JavaScript-skriptet. Följande exempelkod skickar frågesträngen i **&quot;pid&quot;** från referentens URL som **eVar1**, när ett Adobe Analytics-samtal utlöses.
 
 ```
 s.usePlugins=true;
@@ -269,16 +269,16 @@ Använd följande procedur för att skapa klientbiblioteksmappen för dina plugi
 
 1. Högerklicka på mappen /apps/my-app/clientlibs och klicka på Skapa > Skapa nod. Ange följande egenskapsvärden och klicka sedan på OK:
 
-   * Namn: Ett namn för klientbiblioteksmappen, till exempel mina plugin-program
+   * Namn: Ett namn på klientbiblioteksmappen, till exempel mina plugin-program
 
    * Typ: cq:ClientLibraryFolder
 
 1. Markera klientbiblioteksmappen som du skapade och använd egenskapsfältet längst ned till höger för att lägga till följande egenskap:
 
    * Namn: kategorier
-   * Typ: Sträng
+   * Typ: String
    * Värde: sitecatalyst.plugins
-   * Flera: markerad
+   * Flera: markerade
 
    Klicka på OK i redigeringsfönstret för att bekräfta egenskapsvärdet.
 
@@ -289,7 +289,7 @@ Använd följande procedur för att skapa klientbiblioteksmappen för dina plugi
 Använd följande procedur för att hämta plugin-programkoden, lagra koden i AEM och lägga till koden i klientbiblioteksmappen.
 
 1. Logga in på [sc.omniture.com](https://sc.omniture.com/login/) med ditt Adobe Analytics-konto.
-1. På landningssidan går du till Hjälp > Hem för hjälpen.
+1. På landningssidan går du till Hjälp > Hjälp hemsida.
 1. Klicka på Implementeringsplugin-program i innehållsförteckningen till vänster.
 1. Klicka på länken till det plugin-program som du vill lägga till, och när sidan öppnas, leta reda på JavaScript-källkoden för plugin-programmet, markera koden och kopiera den.
 
@@ -307,4 +307,4 @@ Använd följande procedur för att hämta plugin-programkoden, lagra koden i AE
 >
 >När du använder plugin-program måste du även integrera eventuella plugin-program som stöds, annars känner JavaScript-pluginprogrammet inte igen de anrop som görs till funktionerna i det plugin-program som stöds. Plugin-programmet getPreviousValue() kräver till exempel att plugin-programmet split() fungerar korrekt.
 >
->Namnet på plugin-programmet för support måste läggas till i **js.txt** också.
+>Namnet på plugin-programmet måste läggas till i **js.txt** också.

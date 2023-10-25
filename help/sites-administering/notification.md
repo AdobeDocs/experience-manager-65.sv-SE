@@ -1,7 +1,7 @@
 ---
 title: Konfigurerar e-postmeddelande
 seo-title: Configuring Email Notification
-description: Lär dig hur du konfigurerar e-postmeddelanden i AEM.
+description: Lär dig hur du konfigurerar e-postmeddelanden i Adobe Experience Manager.
 seo-description: Learn how to configure Email Notification in AEM.
 uuid: 6cbdc312-860b-4a69-8bbe-2feb32204a27
 contentOwner: Guillaume Carlino
@@ -10,9 +10,9 @@ topic-tags: operations
 content-type: reference
 discoiquuid: 6466d7b8-e308-43c5-acdc-dec15f796f64
 exl-id: 918fcbbc-a78a-4fab-a933-f183ce6a907f
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: b703f356f9475eeeafb1d5408c650d9c6971a804
 workflow-type: tm+mt
-source-wordcount: '2069'
+source-wordcount: '2071'
 ht-degree: 0%
 
 ---
@@ -22,25 +22,25 @@ ht-degree: 0%
 
 AEM skickar e-postmeddelanden till användare som:
 
-* Prenumerera på sidhändelser, t.ex. ändring eller replikering. The [Inkorgen för meddelanden](/help/sites-classic-ui-authoring/author-env-inbox.md#subscribing-to-notifications) I beskrivs hur du prenumererar på sådana händelser.
+* Prenumerera på sidhändelser, till exempel ändringar eller replikering. The [Inkorgen för meddelanden](/help/sites-classic-ui-authoring/author-env-inbox.md#subscribing-to-notifications) I beskrivs hur du prenumererar på sådana händelser.
 
 * Prenumerera på forumevent.
-* Måste utföra ett steg i ett arbetsflöde. The [Deltagarsteg](/help/sites-developing/workflows-step-ref.md#participant-step) beskriver hur du aktiverar e-postmeddelanden i ett arbetsflöde.
+* Måste utföra ett steg i ett arbetsflöde. The [Deltagarsteg](/help/sites-developing/workflows-step-ref.md#participant-step) I beskrivs hur du utlöser e-postmeddelanden i ett arbetsflöde.
 
 Krav:
 
 * Användaren/användarna måste ha en giltig e-postadress definierad i profilen.
-* The **Dagens CQ-posttjänst** måste konfigureras korrekt.
+* The **Dagens CQ-tjänst för e-post** måste vara korrekt konfigurerade.
 
 När en användare meddelas får han eller hon ett e-postmeddelande på det språk som definieras i hans profil. Varje språk har en egen mall som kan anpassas. Nya e-postmallar kan läggas till för nya språk.
 
 >[!NOTE]
 >
->När du arbetar med AEM finns det flera metoder för att hantera konfigurationsinställningarna för sådana tjänster. se [Konfigurerar OSGi](/help/sites-deploying/configuring-osgi.md) om du vill ha mer information och rekommenderade rutiner.
+>När du arbetar med AEM finns det flera metoder för att hantera konfigurationsinställningarna för sådana tjänster. Mer information finns i [Konfigurerar OSGi](/help/sites-deploying/configuring-osgi.md) om du vill ha mer information och rekommenderade rutiner.
 
 ## Konfigurera e-posttjänsten {#configuring-the-mail-service}
 
-För AEM kunna skicka e-post **Dagens CQ-posttjänst** måste konfigureras korrekt. Du kan visa konfigurationen i webbkonsolen. När du arbetar med AEM finns det flera metoder för att hantera konfigurationsinställningarna för sådana tjänster. se [Konfigurerar OSGi](/help/sites-deploying/configuring-osgi.md) om du vill ha mer information och rekommenderade rutiner.
+För AEM kunna skicka e-post **Dagens CQ-tjänst för e-post** måste vara korrekt konfigurerade. Du kan visa konfigurationen i webbkonsolen. När du arbetar med AEM finns det flera metoder för att hantera konfigurationsinställningarna för sådana tjänster. Mer information finns i [Konfigurerar OSGi](/help/sites-deploying/configuring-osgi.md) om du vill ha mer information och rekommenderade rutiner.
 
 Följande begränsningar gäller:
 
@@ -49,7 +49,7 @@ Följande begränsningar gäller:
 * The **Värdnamn för SMTP-server** får inte vara tomt.
 * The **&quot;Från&quot;-adress** får inte vara tomt.
 
-Så här felsöker du ett problem med **Dagens CQ-posttjänst** kan du titta på loggarna för tjänsten:
+Så här felsöker du ett problem med **Dagens CQ-tjänst för e-post** kan du titta på loggarna för tjänsten:
 
 `com.day.cq.mailer.DefaultMailService`
 
@@ -59,9 +59,9 @@ Konfigurationen ser ut så här i webbkonsolen:
 
 ## Konfigurera e-postmeddelandekanalen {#configuring-the-email-notification-channel}
 
-När du prenumererar på en sida eller ett forum-event-meddelande anges e-postadressen till `no-reply@acme.com` som standard. Du kan ändra det här värdet genom att konfigurera **E-postkanal för avisering** i webbkonsolen.
+När du prenumererar på en sida eller ett forum-event-meddelande anges e-postadressen till `no-reply@acme.com` som standard. Du kan ändra värdet genom att konfigurera **E-postkanal för avisering** i webbkonsolen.
 
-Om du vill konfigurera från-e-postadressen lägger du till en `sling:OsgiConfig` till databasen. Använd följande procedur för att lägga till noden direkt med CRXDE Lite:
+Om du vill konfigurera from-email-adressen lägger du till en `sling:OsgiConfig` till databasen. Använd följande procedur för att lägga till noden direkt med CRXDE Lite:
 
 1. Lägg till en mapp med namnet i CRXDE Lite `config` nedanför din programmapp.
 1. Lägg till en nod med namnet:
@@ -204,7 +204,7 @@ subject=<text_1>
 >
 >Mer information om mallformatet finns i [javadocs för Properties.load()](https://docs.oracle.com/javase/8/docs/api/java/util/Properties.html#load-java.io.InputStream-) -metod.
 
-Metoden `${payload.path.open}` visar sökvägen till arbetsobjektets nyttolast. För en sida i Sites händer sedan `payload.path.open` skulle likna `/bin/wcmcommand?cmd=open&path=…`.; det här är utan servernamnet, vilket är orsaken till att mallen anger det här med `${host.prefix}`.
+Metoden `${payload.path.open}` visar sökvägen till arbetsobjektets nyttolast. För en sida i Sites händer sedan `payload.path.open` skulle likna `/bin/wcmcommand?cmd=open&path=…`.; detta är utan servernamnet, vilket är orsaken till att mallen anger detta med `${host.prefix}`.
 
 Följande variabler kan användas i e-postmallen:
 
@@ -227,7 +227,7 @@ Följande variabler kan användas i e-postmallen:
 * `${instance.id}`, arbetsflödes-ID
 * `${instance.state}`, arbetsflödets status
 * `${model.title}`, arbetsflödesmodellens titel
-* `${model.id}`, ID:t för arbetsflödesmodellen
+* `${model.id}`, arbetsflödesmodellens ID
 
 * `${model.version}`, arbetsflödesmodellens version
 * `${payload.data}`, nyttolasten
@@ -238,7 +238,7 @@ Följande variabler kan användas i e-postmallen:
 
 ### Lägga till en e-postmall för ett nytt språk {#adding-an-email-template-for-a-new-language}
 
-Så här lägger du till en mall för ett nytt språk:
+Lägga till en mall för ett nytt språk:
 
 1. Lägg till en fil i CRXDE `<language-code>.txt` nedan:
 
@@ -278,20 +278,20 @@ Du kan konfigurera OAuth för flera e-postleverantörer enligt instruktionerna n
 1. Lägg till följande två omfång på uppdateringsskärmen:
    * `https://mail.google.com/`
    * `https://www.googleapis.com//auth/gmail.send`
-1. När du har lagt till omfattningarna går du tillbaka till **Autentiseringsuppgifter** i den vänstra menyn och sedan gå till **Skapa autentiseringsuppgifter** - **OAuth-klient-ID** - **Datorprogram**
+1. När du har lagt till omfattningarna går du tillbaka till **Referenser** i den vänstra menyn och sedan gå till **Skapa autentiseringsuppgifter** - **OAuth-klient-ID** - **Skrivbordsapp**
 1. Ett nytt fönster öppnas med klient-ID och klienthemlighet.
 1. Spara dessa autentiseringsuppgifter.
 
-**AEM**
+**Konfigurationer på AEM**
 
 >[!NOTE]
 >
->Adobe Managed Service-kunder kan samarbeta med sin kundtjänsttekniker för att göra dessa ändringar i produktionsmiljöer.
+>Adobe Managed Service-kunder kan samarbeta med sin kundtjänsttekniker för att göra dessa ändringar i produktionsmiljöerna.
 
 Konfigurera först e-posttjänsten:
 
 1. Öppna AEM webbkonsol genom att gå till `http://serveraddress:serverport/system/console/configMgr`
-1. Leta efter och klicka sedan på **Dagens CQ-posttjänst**
+1. Leta efter och klicka sedan på **Dagens CQ-tjänst för e-post**
 1. Lägg till följande inställningar:
    * Värdnamn för SMTP-server: `smtp.gmail.com`
    * SMTP-serverport: `25` eller `587`, beroende på kraven
@@ -305,8 +305,8 @@ Konfigurera sedan SMTP OAuth-providern genom att följa proceduren nedan:
 1. Fyll i den obligatoriska informationen enligt följande:
    * Autentiserings-URL: `https://accounts.google.com/o/oauth2/auth`
    * Token-URL: `https://accounts.google.com/o/oauth2/token`
-   * Omfång: `https://www.googleapis.com/auth/gmail.send` och `https://mail.google.com/`. Du kan lägga till mer än ett omfång genom att trycka på **+** till höger om varje konfigurerat omfång.
-   * Klient-ID och klienthemlighet: konfigurera dessa fält med de värden som du har hämtat enligt beskrivningen i stycket ovan.
+   * Omfång: `https://www.googleapis.com/auth/gmail.send` och `https://mail.google.com/`. Du kan lägga till mer än ett omfång genom att trycka på **+** till höger om varje konfigurerat scope.
+   * Klient-ID och klienthemlighet: konfigurera dessa fält med de värden som du hämtade enligt beskrivningen i stycket ovan.
    * Uppdatera token-URL: `https://accounts.google.com/o/oauth2/token`
    * Uppdateringstoken förfaller: aldrig
 1. Klicka **Spara**.
@@ -319,7 +319,7 @@ När inställningarna har konfigurerats bör de se ut så här:
 
 Aktivera nu OAuth-komponenterna. Du kan göra detta genom att:
 
-1. Gå till komponentkonsolen genom att besöka den här URL:en: `http://serveraddress:serverport/system/console/components`
+1. Gå till komponentkonsolen genom att gå till den här URL:en: `http://serveraddress:serverport/system/console/components`
 1. Leta efter följande komponenter
    * `com.day.cq.mailer.oauth.servlets.handler.OAuthCodeGenerateServlet`
    * `com.day.cq.mailer.oauth.servlets.handler.OAuthCodeAccessTokenGenerator`
@@ -359,33 +359,33 @@ Bekräfta slutligen konfigurationen genom att:
 1. Upprepa ovanstående för varje publiceringsinstans
 1. Konfigurera inställningarna enligt dina krav
 1. Nästa, gå till **Certifikat och hemligheter**, klicka på **Ny klienthemlighet** och följ stegen på skärmen för att skapa en hemlighet. Observera denna hemlighet för senare bruk
-1. Tryck **Översikt** i den vänstra rutan och kopiera värdena för **Program-ID (klient)** och **Katalog-ID (klientorganisation)** för senare användning
+1. Tryck **Ökning** i den vänstra rutan och kopiera värdena för **Program-ID (klient)** och **Katalog-ID (klientorganisation)** för senare användning
 
 För att komma tillbaka behöver du följande information för att konfigurera OAuth2 för tjänsten Mailer på AEM sida:
 
-* Autentiserings-URL:en som skapas med klientorganisations-ID:t. Den kommer att ha följande formulär: `https://login.microsoftonline.com/<tenantID>/oauth2/v2.0/authorize`
+* Autentiserings-URL, som skapas med klientorganisations-ID. Den kommer att ha följande formulär: `https://login.microsoftonline.com/<tenantID>/oauth2/v2.0/authorize`
 * Token URL, som skapas med klient-ID. Den kommer att ha följande formulär: `https://login.microsoftonline.com/<tenantID>/oauth2/v2.0/token`
 * Uppdaterings-URL:en som skapas med klient-ID:t. Den kommer att ha följande formulär: `https://login.microsoftonline.com/<tenantID>/oauth2/v2.0/token`
 * Klient-ID
 * Klienthemlighet
 
-**AEM**
+**Konfigurationer på AEM**
 
 Integrera sedan dina OAuth2-inställningar med AEM:
 
-1. Gå till webbkonsolen för den lokala instansen genom att bläddra till `http://serveraddress:serverport/system/console/configMgr`
-1. Leta efter och klicka på **Dagens CQ-posttjänst**
+1. Gå till webbkonsolen för den lokala instansen genom att gå till `http://serveraddress:serverport/system/console/configMgr`
+1. Leta efter och klicka på **Dagens CQ-tjänst för e-post**
 1. Lägg till följande inställningar:
    * Värdnamn för SMTP-server: `smtp.office365.com`
    * SMTP-användare: ditt användarnamn i e-postformat
-   * &quot;Från&quot;-adress: E-postadressen som ska användas i fältet Från: i meddelanden som skickas av postlådan
+   * &quot;Från&quot;-adress: Den e-postadress som ska användas i fältet &quot;Från:&quot; i meddelanden som skickas av e-postavsändaren
    * SMTP-serverport: `25` eller `587` beroende på kraven
    * Markera kryssrutorna för **SMPT använder StarTLS** och **SMTP kräver StarTLS**
    * Kontrollera **OAuth-flöde** och klicka **Spara**.
 1. Leta efter och klicka sedan på **CQ Mailer SMTP OAuth2-provider**
 1. Fyll i den obligatoriska informationen enligt följande:
    * Fyll i auktoriserings-URL:en, token-URL:en och uppdatera token-URL:en genom att skapa dem enligt beskrivningen på [slutet av detta förfarande](#microsoft-outlook)
-   * Klient-ID och klienthemlighet: konfigurera dessa fält med de värden som du har hämtat enligt beskrivningen ovan.
+   * Klient-ID och klienthemlighet: konfigurera dessa fält med de värden som du hämtade enligt beskrivningen ovan.
    * Lägg till följande scope i konfigurationen:
       * open
       * offline_access
@@ -393,7 +393,7 @@ Integrera sedan dina OAuth2-inställningar med AEM:
       * `https://outlook.office365.com/Mail.Read`
       * `https://outlook.office365.com/SMTP.Send`
    * Omdirigerings-URL för AuthCode: `http://localhost:4503/services/mailer/oauth2/token`
-   * Uppdatera token-URL: detta bör ha samma värde som token-URL:en ovan
+   * Uppdatera token-URL: detta ska ha samma värde som token-URL:en ovan
 1. Klicka **Spara**.
 
 När inställningarna har konfigurerats bör de se ut så här:
@@ -402,7 +402,7 @@ När inställningarna har konfigurerats bör de se ut så här:
 
 Aktivera nu OAuth-komponenterna. Du kan göra detta genom att:
 
-1. Gå till komponentkonsolen genom att besöka den här URL:en: `http://serveraddress:serverport/system/console/components`
+1. Gå till komponentkonsolen genom att gå till den här URL:en: `http://serveraddress:serverport/system/console/components`
 1. Leta efter följande komponenter
    * `com.day.cq.mailer.oauth.servlets.handler.OAuthCodeGenerateServlet`
    * `com.day.cq.mailer.oauth.servlets.handler.OAuthCodeAccessTokenGenerator`

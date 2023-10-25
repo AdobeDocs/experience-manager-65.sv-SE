@@ -1,7 +1,7 @@
 ---
 title: Administrera taggar
 seo-title: Administering Tags
-description: Lär dig hur du administrerar taggar i AEM.
+description: Lär dig hantera och administrera taggar i Adobe Experience Manager.
 seo-description: Learn how to administer Tags in AEM.
 uuid: 77e1280a-feea-4edd-94b6-4fb825566c42
 contentOwner: Chiradeep Majumdar
@@ -10,9 +10,9 @@ topic-tags: content
 content-type: reference
 discoiquuid: 69253ee9-8c28-436b-9331-6fb875f64cba
 exl-id: ff041ef0-e566-4373-818e-76680ff668d8
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: b703f356f9475eeeafb1d5408c650d9c6971a804
 workflow-type: tm+mt
-source-wordcount: '1760'
+source-wordcount: '1764'
 ht-degree: 1%
 
 ---
@@ -31,11 +31,11 @@ Förutom sidor och resurser används taggar för AEM Communities-funktioner
 
 * användargenererat innehåll (se [Taggning (UGC)](/help/communities/tag-ugc.md)
 
-* Aktivera resurser (se [Aktiveringsresurser för taggning](/help/communities/functions.md#catalog-function))
+* Aktiveringsresurser (se [Aktiveringsresurser för taggning](/help/communities/functions.md#catalog-function))
 
 ## Märkordsfunktioner {#tag-features}
 
-Några av funktionerna i taggarna i AEM är:
+Några av funktionerna i AEM:
 
 * Taggar kan grupperas i olika namnutrymmen. Sådana hierarkier tillåter att taxonomier skapas. Dessa taxonomier är globala i hela AEM.
 * Huvudbegränsningen för nyligen skapade taggar är att de måste vara unika inom ett specifikt namnutrymme.
@@ -48,7 +48,7 @@ Några av funktionerna i taggarna i AEM är:
 * Taggar kan skapas och deras taxonomi ändras av medlemmar i gruppen&quot;tagghanterare&quot; och medlemmar som har ändringsbehörighet till `/content/cq:tags`.
 
    * En tagg som innehåller underordnade taggar kallas behållartagg
-   * En tagg som inte är en behållartagg kallas för en lövtagg
+   * En tagg som inte är en behållartagg kallas lövtagg
    * Ett taggnamnutrymme är antingen en lövtagg eller behållartagg
 
 * Taggar används av [Sökkomponent](https://helpx.adobe.com/experience-manager/core-components/using/quick-search.html) för att underlätta sökning efter innehåll.
@@ -60,7 +60,7 @@ Några av funktionerna i taggarna i AEM är:
 
 ## Taggningskonsolen {#tagging-console}
 
-Taggningskonsolen används för att skapa och hantera taggar och deras taxonomier. Ett av målen är att undvika att ha många liknande taggar som i princip gäller samma sak: till exempel sidor och sidor eller skor och skor.
+Taggningskonsolen används för att skapa och hantera taggar och deras taxonomier. Ett mål är att undvika att ha många liknande märkord som i stort sett liknar samma sak: till exempel sidor och sidor eller skor och skor.
 
 Taggar hanteras genom att gruppera i namnutrymmen, granska användningen av befintliga taggar innan du skapar nya och ordna om taggen utan att koppla från det aktuella innehållet.
 
@@ -78,22 +78,20 @@ Så här kommer du åt taggningskonsolen:
 
 ### Skapa ett namnutrymme {#creating-a-namespace}
 
-Om du vill skapa ett nytt namnutrymme väljer du **`Create Namespace`** ikon.
+Om du vill skapa ett nytt namnutrymme väljer du **`Create Namespace`** -ikon.
 
 Namnutrymmet är i sig en tagg och behöver inte innehålla några undertaggar. Om du vill fortsätta att skapa en taxonomi [skapa undertaggar](#creating-tags), som i sin tur kan vara antingen lövtaggar eller behållartaggar.
 
 ![chlimage_1-183](assets/chlimage_1-183a.png) ![creating_tags_andnamespaces](assets/creating_tags_andnamespacesa.png)
 
 * **Titel**
-
-   *(obligatoriskt)* En visningsrubrik för namnutrymmet.
+  *(obligatoriskt)* En visningsrubrik för namnutrymmet.
 
 * **Namn**
-   *(valfritt)* Ett namn för namnutrymmet. Om inget anges skapas ett giltigt nodnamn från titeln. Se [TaggID](/help/sites-developing/framework.md#tagid).
+  *(valfritt)* Ett namn för namnutrymmet. Om inget anges skapas ett giltigt nodnamn från titeln. Se [TaggID](/help/sites-developing/framework.md#tagid).
 
 * **Beskrivning**
-
-   *(valfritt)* En beskrivning av namnutrymmet.
+  *(valfritt)* En beskrivning av namnutrymmet.
 
 När den obligatoriska informationen har angetts
 
@@ -155,7 +153,7 @@ Sökvägen till referensen visas som ett verktygstips när du håller pekaren ö
 
 ![chlimage_1-193](assets/chlimage_1-193.png)
 
-När ett namnutrymme eller en annan tagg är markerad (genom att markera ikonen bredvid titeln) kan en underordnad tagg skapas för den aktuella taggen genom att markera **`Create Tag`** ikon.
+När ett namnutrymme eller en annan tagg är markerad (genom att markera ikonen bredvid titeln) kan en underordnad tagg skapas för den aktuella taggen genom att markera **`Create Tag`** -ikon.
 
 ![chlimage_1-194](assets/chlimage_1-194.png)
 
@@ -197,15 +195,13 @@ När ett namnutrymme eller en annan tagg är markerad väljer du **`Move`** Med 
 ![chlimage_1-198](assets/chlimage_1-198.png)
 
 * **Bana**
-
-   *(skrivskyddad)* Den aktuella sökvägen till den markerade taggen.
+  *(skrivskyddad)* Den aktuella sökvägen till den markerade taggen.
 
 * **Flytta till**
 Bläddra till den nya sökvägen under vilken du vill flytta taggen.
 
 * **Byt namn till**
-Visar den aktuella 
-`name`av -taggen. En ny `name`kan anges.
+Visar den aktuella `name`av -taggen. En ny `name`kan anges.
 
 * välj **Spara**
 
@@ -213,15 +209,14 @@ Visar den aktuella
 
 ![chlimage_1-199](assets/chlimage_1-199.png)
 
-Du kan använda sammanfogningstaggar när en taxonomi har dubbletter. När tagg A sammanfogas med tagg B kommer alla sidor som taggas med tagg A att taggas med tagg B och tagg A är inte längre tillgängliga för författare.
+Du kan använda sammanslagningstaggar när en taxonomi har dubbletter. När tagg A sammanfogas med tagg B kommer alla sidor som taggas med tagg A att taggas med tagg B och tagg A är inte längre tillgängliga för författare.
 
 När ett namnutrymme eller en annan tagg är markerad väljer du **Sammanfoga** öppnar en panel där banan som ska sammanfogas kan vara markerad.
 
 ![chlimage_1-200](assets/chlimage_1-200.png)
 
 * **Bana**
-
-   *(skrivskyddad)* Sökvägen till taggen som markerats för att sammanfogas med en annan tagg.
+  *(skrivskyddad)* Sökvägen till taggen som markerats för att sammanfogas med en annan tagg.
 
 * **Sammanfoga i**
 Bläddra till och markera sökvägen till taggen som du vill sammanfoga i.
@@ -254,7 +249,7 @@ När ett namnutrymme eller en annan tagg är markerad väljer du **Ta bort** -ik
 
 ## Ange taggbehörigheter {#setting-tag-permissions}
 
-Taggbehörigheter är [&#39;secure (as default)&#39;](/help/sites-administering/production-ready.md); en bra metod för publiceringsmiljön som kräver att läsbehörighet uttryckligen tillåts för taggar. Detta görs genom att skapa ett paket av taggnamnutrymmet efter att behörigheter har angetts för författaren och installera paketet på alla publiceringsinstanser.
+Taggbehörigheter är [&#39;secure (as default)&#39;](/help/sites-administering/production-ready.md); är en bra metod för publiceringsmiljön där läsbehörighet krävs för att explicit tillåtas för taggar. Detta görs genom att skapa ett paket av taggnamnutrymmet efter att behörigheter har angetts för författaren och installera paketet på alla publiceringsinstanser.
 
 * on author instance
 
@@ -262,14 +257,14 @@ Taggbehörigheter är [&#39;secure (as default)&#39;](/help/sites-administering/
    * åtkomst till [Säkerhetskonsol](/help/sites-administering/security.md#accessing-user-administration-with-the-security-console),
 
       * till exempel gå till http://localhost:4502/useradmin
+
    * i den vänstra rutan markerar den grupp (eller användare) som [läsbehörighet](/help/sites-administering/security.md#permissions) ska beviljas
    * i den högra rutan letar du reda på **Path **to the Tag Namespace
 
       * till exempel `/content/cq:tags/mycommunity`
+
    * välj `checkbox`i **Läs** kolumn
    * välj **Spara**
-
-
 
 ![chlimage_1-204](assets/chlimage_1-204.png)
 
@@ -278,10 +273,10 @@ Taggbehörigheter är [&#39;secure (as default)&#39;](/help/sites-administering/
    * en metod är att [skapa ett paket](/help/sites-administering/package-manager.md#package-manager) för namnutrymmet på författaren
 
       * på `Advanced` flik, för `AC Handling` välj `Overwrite`
+
    * replikera paketet
 
       * välj `Replicate` från pakethanteraren
-
 
 ## Hantera taggar på olika språk {#managing-tags-in-different-languages}
 
@@ -301,7 +296,7 @@ När alla översättningar har angetts väljer du **Spara** för att avsluta red
 
 ![chlimage_1-205](assets/chlimage_1-205.png)
 
-I allmänhet hämtas det språk som valts för taggen från sidspråket, när det är tillgängligt. När [ `tag` widget](/help/sites-developing/building.md#tagging-on-the-client-side) används i andra fall (t.ex. i formulär eller i dialogrutor), beror taggspråket på sammanhanget.
+I allmänhet hämtas det språk som valts för taggen från sidspråket, när det är tillgängligt. När [`tag` widget](/help/sites-developing/building.md#tagging-on-the-client-side) används i andra fall (t.ex. i formulär eller i dialogrutor), beror taggspråket på sammanhanget.
 
 I stället för att använda sidspråkinställningen används användarspråkinställningen i taggningskonsolen. I taggningskonsolen för taggen Animals visas Animaux för en användare som anger språket som franska i sina användaregenskaper.
 
@@ -315,6 +310,6 @@ Information om hur du lägger till ett nytt språk i dialogrutan finns i [Lägga
 
 * [Tagga för utvecklare](/help/sites-developing/tags.md)
 
-   Information om taggningsramverket samt hur du utökar och inkluderar taggar i anpassade program.
+  Information om taggningsramverket samt hur du utökar och inkluderar taggar i anpassade program.
 
 * [Klassiskt gränssnitt, taggningskonsol](/help/sites-administering/classic-console.md)

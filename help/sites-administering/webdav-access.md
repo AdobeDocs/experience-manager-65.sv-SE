@@ -1,7 +1,7 @@
 ---
 title: WebDAV-åtkomst
 seo-title: WebDAV Access
-description: Läs mer om WebDAV-åtkomst i AEM.
+description: Läs om hur du får åtkomst till Adobe Experience Manager med WebDAV.
 seo-description: Learn about WebDAV access in AEM.
 uuid: b0ecaa5d-5454-42df-8453-404ece734c32
 contentOwner: Chiradeep Majumdar
@@ -10,9 +10,9 @@ topic-tags: content
 content-type: reference
 discoiquuid: 1eaf7afe-a181-45df-8766-bd564b1ad22a
 exl-id: 891ee66c-e49c-4561-8fef-e6e448a8aa1c
-source-git-commit: e05f6cd7cf17f4420176cf76f28cb469bcee4a0a
+source-git-commit: b703f356f9475eeeafb1d5408c650d9c6971a804
 workflow-type: tm+mt
-source-wordcount: '1097'
+source-wordcount: '1101'
 ht-degree: 0%
 
 ---
@@ -33,7 +33,7 @@ http://localhost:4502
 
 ![chlimage_1-111](assets/chlimage_1-111a.png)
 
-Den här URL:en ger WebDAV-åtkomst till standardarbetsytan när den är ansluten från operativsystemsnivå ( `crx.default`). Eftersom det är enklare för användaren ger det dem inte större flexibilitet att ange namn på arbetsytor, vilket kan göras med ytterligare [WebDAV-URL:er](/help/sites-administering/webdav-access.md#webdav-urls).
+Den här URL:en ger WebDAV-åtkomst till standardarbetsytan när den är ansluten från operativsystemsnivå ( `crx.default`). Eftersom det är enklare för användaren ger det dem inte större flexibilitet att ange namn på arbetsytor, vilket kan göras med ytterligare [WebDAV-URL](/help/sites-administering/webdav-access.md#webdav-urls).
 
 AEM visar databasinnehållet på följande sätt:
 
@@ -47,7 +47,7 @@ När du använder WebDAV för att skapa och redigera mappar och filer skapar och
 >
 >Innan du konfigurerar WebDAV bör du kontrollera [Tekniska krav](/help/sites-deploying/technical-requirements.md#webdav-clients).
 
-## WebDAV-URL:er {#webdav-urls}
+## WebDAV-URL {#webdav-urls}
 
 URL:en för WebDAV-servern har följande struktur:
 
@@ -110,7 +110,7 @@ Anvisningar om hur du ansluter följande operativsystem finns:
 
 Om du vill ansluta ett Microsoft® Windows 7-system (och senare) till en AEM som inte är säker med SSL, måste du uttryckligen aktivera alternativet att upprätta grundläggande autentisering över ett oskyddat nätverk i Windows. Den här funktionen kräver en ändring i Windows-registret för WebClient.
 
-När registret har uppdaterats kan AEM mappas som en enhet.
+När registret har uppdaterats kan den AEM instansen mappas som en enhet.
 
 #### Konfiguration av Windows 7 och senare {#windows-and-greater-configuration}
 
@@ -148,7 +148,7 @@ Så här ansluter du till AEM via WebDAV i en Windows-miljö:
 
    ![chlimage_1-112](assets/chlimage_1-112a.png)
 
-1. Starta guiden genom att klicka på **Mappa nätverksenhet**.
+1. Starta guiden genom att klicka **Mappa nätverksenhet**.
 1. Ange mappningsinformationen:
 
    * **Drive**: Välj en tillgänglig bokstav
@@ -181,6 +181,7 @@ Det krävs inga konfigurationssteg för att ansluta via WebDAV på macOS. Du kan
 1. I **Anslut till server** anger du AEM plats:
 
    * `http://localhost:4502`
+
    >[!NOTE]
    >
    >Om AEM finns på en annan port använder du portnumret i stället för 4502. Om du inte kör innehållsdatabasen på den lokala datorn ersätter du `localhost` med respektive servernamn eller IP-adress.

@@ -1,7 +1,7 @@
 ---
 title: Felsöka integreringsproblem
 seo-title: Troubleshooting Integration Issues
-description: Lär dig hur du felsöker integreringsproblem.
+description: Lär dig felsöka problem när du integrerar med Adobe Experience Manager.
 seo-description: Learn how to troubleshoot integration issues.
 uuid: fe080e58-a855-4308-a611-f72eb47ba82d
 contentOwner: raiman
@@ -10,9 +10,9 @@ topic-tags: integration
 content-type: reference
 discoiquuid: 422ee332-23ae-46bd-8394-a4e0915beaa2
 exl-id: 11b0023e-34bd-4dfe-8173-5466db9fbe34
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: b703f356f9475eeeafb1d5408c650d9c6971a804
 workflow-type: tm+mt
-source-wordcount: '1096'
+source-wordcount: '1101'
 ht-degree: 0%
 
 ---
@@ -53,7 +53,7 @@ Rapportimporteraren orsakar hög CPU-/minnesanvändning eller orsakar `OutOfMemo
 
 #### Lösning {#solution}
 
-Du kan åtgärda det här problemet genom att försöka med följande:
+Du kan åtgärda problemet genom att prova följande:
 
 * Se till att det inte finns någon stor mängd registrerade PollingImporters (se avsnittet&quot;Shutdown take a long time due to PollingImporter&quot; nedan).
 * Kör rapportimporterare vid en viss tidpunkt på dagen med CRON-uttryck för `ManagedPollingImporter` konfigurationer i [OSGi-konsol](/help/sites-deploying/configuring-osgi.md).
@@ -62,7 +62,7 @@ Mer information om hur du skapar anpassade dataimporteringstjänster i AEM finns
 
 ### Avstängningen tar lång tid på grund av PollingImporter {#shutdown-takes-a-long-time-due-to-the-pollingimporter}
 
-Analyserna har utformats med en arvsmekanism i åtanke. Vanligtvis aktiverar du Analytics för en webbplats genom att lägga till en referens till en Analytics-konfiguration i sidegenskaperna [Cloud Services](/help/sites-developing/extending-cloud-config.md) -fliken. Konfigurationen ärvs sedan automatiskt till alla undersidor utan att du behöver referera till den igen, såvida inte en sida kräver en annan konfiguration. När du lägger till en referens till en plats skapas automatiskt flera noder (12 för AEM 6.3 och tidigare eller 6 för AEM 6.4 och senare) av typen. `cq;PollConfig` som instansierar PollingImporters som används för att importera Analytics-data till AEM. Resultatet blir:
+Analyserna har utformats med en arvsmekanism i åtanke. Vanligtvis aktiverar du Analytics för en webbplats genom att lägga till en referens till en Analytics-konfiguration i sidegenskaperna [Cloud Service](/help/sites-developing/extending-cloud-config.md) -fliken. Konfigurationen ärvs sedan automatiskt till alla undersidor utan att du behöver referera till den igen, såvida inte en sida kräver en annan konfiguration. När du lägger till en referens till en plats skapas automatiskt flera noder (12 för AEM 6.3 och tidigare eller 6 för AEM 6.4 och senare) av typen. `cq;PollConfig` som instansierar PollingImporters som används för att importera analysdata till AEM. Resultatet blir:
 
 * Många sidor som refererar till Analytics leder till en stor mängd PollingImporters.
 * Om du dessutom kopierar och klistrar in sidor med en referens till en Analytics-konfiguration dupliceras dess PollingImporters.
@@ -91,21 +91,21 @@ Mer information om hur du skapar anpassade dataimporteringstjänster i AEM finns
 
 ### DTM-skripttaggen återges inte i sidkällan {#the-dtm-script-tag-is-not-rendered-in-the-page-source}
 
-The [DTM](/help/sites-administering/dtm.md) script-taggen inkluderas inte korrekt på sidan även om konfigurationen har refererats i sidegenskaperna [Cloud Services](/help/sites-developing/extending-cloud-config.md) -fliken.
+The [DTM](/help/sites-administering/dtm.md) script-taggen inkluderas inte korrekt på sidan även om konfigurationen har refererats i sidegenskaperna [Cloud Service](/help/sites-developing/extending-cloud-config.md) -fliken.
 
 #### Lösning {#solution-2}
 
-Du kan åtgärda problemet genom att göra följande:
+Du kan försöka åtgärda problemet genom att göra följande:
 
 * Se till att krypterade egenskaper kan dekrypteras (observera att krypteringen kan använda olika automatiskt genererade nycklar för varje AEM). Mer information finns även i [Krypteringsstöd för konfigurationsegenskaper](/help/sites-administering/encryption-support-for-configuration-properties.md).
 * Publicera konfigurationerna som finns i `/etc/cloudservices/dynamictagmanagement`
 * Kontrollera åtkomstkontrollistor på `/etc/cloudservices`. Åtkomstkontrollistorna ska vara:
 
-   * tillåta, jcr:read; webservice-support-service-libfinder
-   * tillåta, jcr:read; alla, rep:glob:&amp;ast;/defaults/&amp;ast;
-   * tillåta, jcr:read; alla, rep:glob:&amp;ast;/defaults
-   * tillåta, jcr:read; alla, rep:glob:&amp;ast;/public/&amp;ast;
-   * tillåta, jcr:read; alla, rep:glob:&amp;ast;/public
+   * allow; jcr:read; webservice-support-serviclibfinder
+   * allow; jcr:read; all; rep:glob:&amp;ast;/defaults/&amp;ast;
+   * allow; jcr:read; all; rep:glob:&amp;ast;/default
+   * allow; jcr:read; all; rep:glob:&amp;ast;/public/&amp;ast;
+   * allow; jcr:read; all; rep:glob:&amp;ast;/public
 
 Mer information om hur du hanterar åtkomstkontrollistor finns i [Användaradministration och -säkerhet](/help/sites-administering/security.md#permissions-in-aem) sida.
 
@@ -141,7 +141,7 @@ När DTM används för att leverera `mbox.js` eller `at.js` Kontrollera att bibl
 
 Mer information finns i [Utveckla för riktat innehåll](/help/sites-developing/target.md#understanding-the-target-component) sida.
 
-### Felmeddelandet&quot;Report Suite ID saknas i AppMeasurement-initieringen&quot; visas i webbläsarkonsolen {#the-error-missing-report-suite-id-in-appmeasurement-initialization-is-displayed-in-the-browser-console}
+### Felmeddelandet&quot;Report Suite ID saknas i AppMeasurementet initieras&quot; visas i webbläsarkonsolen {#the-error-missing-report-suite-id-in-appmeasurement-initialization-is-displayed-in-the-browser-console}
 
 Problemet kan uppstå när Adobe Analytics implementeras på webbplatsen med DTM och använder anpassad kod. Orsaken är att `s = new AppMeasurement()` för att instansiera `s` -objekt.
 
@@ -158,7 +158,7 @@ var s=s_gi(s_account)
 
 Det här problemet kan ha flera orsaker:
 
-* Läser in målklientbibliotek ( `mbox.js` eller `at.js`) asynkront när du använder Tag Management Systems från tredje part kan det leda till att målgruppsanpassningen avbryts. Målbiblioteken ska läsas in synkront i sidhuvudet. Detta gäller alltid när biblioteken levereras från AEM.
+* Läser in målklientbibliotek ( `mbox.js` eller `at.js`) asynkront när du använder Tag Management Systems från tredje part kan det leda till att målgruppsanpassningen avbryts slumpmässigt. Målbiblioteken ska läsas in synkront i sidhuvudet. Detta gäller alltid när biblioteken levereras från AEM.
 
 * Läser in två målklientbibliotek ( `at.js`) samtidigt, till exempel en som använder DTM och en som använder Target-konfigurationen i AEM. Detta kan orsaka konflikter för `adobe.target` definition om `at.js` olika versioner.
 
@@ -167,7 +167,7 @@ Det här problemet kan ha flera orsaker:
 Du kan testa följande lösningar:
 
 * Kontrollera att kundkoden som läser in DTM-liknande bibliotek (som i sin tur läser in Target-biblioteken) körs synkront i [sidhuvud](/help/sites-developing/target.md#enabling-targeting-with-adobe-target-on-your-pages).
-* om webbplatsen är konfigurerad att använda DTM för att leverera Target-bibliotek ser du till att **Clientlib levererad av DTM** alternativet är markerat i [Målkonfiguration](https://helpx.adobe.com/experience-manager/6-3/sites/administering/using/target-configuring.html) för webbplatsen.
+* om webbplatsen är konfigurerad att använda DTM för att leverera Target-bibliotek säkerställer att **Clientlib levererad av DTM** alternativet är markerat i [Målkonfiguration](https://helpx.adobe.com/experience-manager/6-3/sites/administering/using/target-configuring.html) för webbplatsen.
 
 ### Ett standarderbjudande visas alltid i stället för rätt erbjudande när AT.js 1.3+ används {#a-default-offer-is-always-displayed-instead-of-correct-offer-when-using-at-js}
 
@@ -192,7 +192,7 @@ adobe.target.getOffer({
 
 ### Sidan Mål och inställningar visar inte avsnittet Rapporteringskällor {#the-goals-settings-page-does-not-show-the-reporting-sources-section}
 
-Det här problemet är troligen [A4T Analytics Cloud-konfiguration](/help/sites-administering/target-configuring.md) provisioneringsproblem.
+Det här problemet är sannolikt en [A4T Analytics Cloud-konfiguration](/help/sites-administering/target-configuring.md) provisioneringsproblem.
 
 #### Lösning {#solution-7}
 

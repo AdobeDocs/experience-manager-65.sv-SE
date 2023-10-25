@@ -1,15 +1,15 @@
 ---
 title: Migrering till Touch UI
-description: Migrering till Touch UI
+description: Läs om hur Adobe Experience Manager migrerar till Touch-gränssnittet och hur det påverkar dig.
 contentOwner: AEM Docs
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: introduction
 docset: aem65
 exl-id: 33dc1ee7-1e34-43d8-9265-c66535f5e002
-source-git-commit: 260f71acd330167572d817fdf145a018b09cbc65
+source-git-commit: b703f356f9475eeeafb1d5408c650d9c6971a804
 workflow-type: tm+mt
-source-wordcount: '659'
+source-wordcount: '669'
 ht-degree: 1%
 
 ---
@@ -68,13 +68,13 @@ Tänk på följande stora skillnader mellan det klassiska gränssnittet och pekg
     </ul> </td>
    <td><p>JavaScript-plats:</p>
     <ul>
-     <li>Imperativa delar kan inte bäddas in i dialogdefinitionen. olika ansvarsområden.</li>
+     <li>Imperativa delar kan inte bäddas in i dialogdefinition; ansvarsfördelning.</li>
     </ul> </td>
   </tr>
   <tr>
    <td><p>Händelsehantering:</p>
     <ul>
-     <li>Dialogwidgetar refererar direkt till JavaScript-kod.</li>
+     <li>Dialogrutewidgetar refererar direkt till JavaScript-kod.</li>
     </ul> </td>
    <td><p>Händelsehantering:</p>
     <ul>
@@ -90,7 +90,7 @@ Tänk på följande stora skillnader mellan det klassiska gränssnittet och pekg
    <td>Återgivning utförd av servern:
     <ul>
      <li>Klienten begär sidor tillsammans med det relaterade användargränssnittet.</li>
-     <li>Servern skickar (push) gränssnittet som HTML-dokument. med Coral UI-komponenter.<br /> </li>
+     <li>Servern skickar (push) gränssnittet som HTML-dokument och använder Coral UI-komponenter.<br /> </li>
     </ul> </td>
   </tr>
  </tbody>
@@ -114,7 +114,7 @@ Dialogrutor är en viktig faktor när du migrerar komponenter:
 
 * [Utveckla AEM](/help/sites-developing/developing-components.md) (med det pekaktiverade användargränssnittet)
 * [Migrera från en klassisk komponent](/help/sites-developing/developing-components.md#migrating-from-a-classic-component)
-* [AEM](/help/sites-developing/modernization-tools.md) - för att hjälpa dig att konvertera dialogrutorna för dina klassiska användargränssnittskomponenter till touchgränssnitt
+* [Verktyg för AEM](/help/sites-developing/modernization-tools.md) - för att hjälpa dig att konvertera dialogrutorna för dina klassiska användargränssnittskomponenter till touchgränssnitt
 
    * Det finns ett kompatibilitetslager med pekfunktion för att öppna en klassisk användargränssnittsdialogruta i en&quot;Touch UI wrapper&quot;, men det har begränsad funktionalitet och rekommenderas inte på lång sikt.
 

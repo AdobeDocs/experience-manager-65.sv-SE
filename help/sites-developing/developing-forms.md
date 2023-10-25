@@ -1,7 +1,7 @@
 ---
 title: Utveckla Forms (Classic UI)
 seo-title: Developing Forms (Classic UI)
-description: Lär dig utveckla formulär
+description: Lär dig utveckla formulär för Adobe Experience Manager klassiska användargränssnitt
 seo-description: Learn how to develop forms
 uuid: 33859f29-edc5-4bd5-a634-35549f3b5ccf
 contentOwner: Guillaume Carlino
@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 6ee3bd3b-51d1-462f-b12e-3cbe24898b85
 docset: aem65
 exl-id: f43e9491-aa8f-40af-9800-123695142559
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: b703f356f9475eeeafb1d5408c650d9c6971a804
 workflow-type: tm+mt
-source-wordcount: '1947'
+source-wordcount: '1953'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ En formulärs grundläggande struktur är:
 * Formulärelement
 * Formulärslut
 
-Alla dessa realiseras med en serie standardinställningar [Formulärkomponenter](/help/sites-authoring/default-components.md#form)som finns i en AEM standardinstallation.
+Alla dessa realiseras med en serie standardinställningar [Formulärkomponenter](/help/sites-authoring/default-components.md#form), som finns i en AEM standardinstallation.
 
 Förutom [utveckla nya komponenter](/help/sites-developing/developing-components-samples.md) för användning i formulären kan man också
 
@@ -40,7 +40,7 @@ Förutom [utveckla nya komponenter](/help/sites-developing/developing-components
 
 >[!NOTE]
 >
->Det här dokumentet fokuserar på att utveckla formulär med [Foundation Components](/help/sites-authoring/default-components-foundation.md) i det klassiska användargränssnittet. Adobe rekommenderar att du utnyttjar nya [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) och [Dölj villkor](/help/sites-developing/hide-conditions.md) för formulärutveckling i det beröringskänsliga användargränssnittet.
+>Det här dokumentet fokuserar på att utveckla formulär med [Foundation Components](/help/sites-authoring/default-components-foundation.md) i det klassiska användargränssnittet. Adobe rekommenderar att du utnyttjar nya [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) och [Dölj villkor](/help/sites-developing/hide-conditions.md) för formulärutveckling i användargränssnittet med pekfunktion.
 
 ## Förhandsladda formulärvärden {#preloading-form-values}
 
@@ -70,7 +70,7 @@ The **Inläsningssökväg för objekt** kan användas för att komma åt en list
 
 1. Skapa en ny försäljningsmapp ( `sling:Folder`), till exempel `/etc/designs/<myDesign>/formlistvalues`
 
-1. Lägg till en ny egenskap (till exempel `myList`) av typen sträng med flera värden ( `String[]`) som innehåller listan med nedrullningsbara objekt. Innehåll kan också importeras med hjälp av ett skript, t.ex. med ett JSP-skript eller cURL i ett gränssnittsskript.
+1. Lägg till en ny egenskap (till exempel `myList`) av typen sträng med flera värden ( `String[]`) för att innehålla listan med nedrullningsbara objekt. Innehåll kan också importeras med hjälp av ett skript, till exempel med ett JSP-skript eller cURL i ett gränssnittsskript.
 
 1. Använd hela sökvägen i **Inläsningssökväg för objekt** fält: till exempel `/etc/designs/geometrixx/formlistvalues/myList`
 
@@ -99,7 +99,7 @@ och i **Åtgärdstyp** listan med **Formulär** komponent:
 
 ![chlimage_1-8](assets/chlimage_1-8.png)
 
-I det här avsnittet beskrivs hur du kan utveckla egna formuläråtgärder som ska tas med i listan.
+I det här avsnittet beskrivs hur du kan utveckla egna formuläråtgärder som ska tas med i den här listan.
 
 Du kan lägga till en egen åtgärd under `/apps` enligt följande:
 
@@ -146,7 +146,7 @@ Skriptet kan definiera en sökväg. Den aktuella begäran vidarebefordras sedan 
 
    Körningsordningen för skripten är:
 
-   * När formuläret återges ( `GET`):
+   * Vid återgivning av formuläret ( `GET`):
 
       1. `init.jsp`
       1. för alla fältbegränsningar: `clientvalidation.jsp`
@@ -162,7 +162,7 @@ Skriptet kan definiera en sökväg. Den aktuella begäran vidarebefordras sedan 
       1. `forward.jsp`
       1. om en framåtriktad bana har angetts ( `FormsHelper.setForwardPath`), vidarebefordra begäran och sedan ringa `cleanup.jsp`
 
-      1. om ingen framåtriktad sökväg har angetts, ring `post.POST.jsp` (slutar här, nej `cleanup.jsp` )
+      1. om ingen framåtriktad sökväg har angetts, ring `post.POST.jsp` (slutar här, nej `cleanup.jsp` anropas)
 
 1. Lägg till igen i mappen om du vill:
 
@@ -176,7 +176,7 @@ Skriptet anropas när formuläret återges. Den kan användas för att initiera 
 
    1. Ett rensningsskript.
 Skriptnamnet är `cleanup.<extension>`, till exempel `cleanup.jsp`
-Skriptet kan användas för att rensa.
+Det här skriptet kan användas för att rensa.
 
 1. Använd **Forms** i en parsys. The **Åtgärdstyp** kommer nu att innehålla din nya åtgärd.
 
@@ -192,7 +192,7 @@ Skriptet kan användas för att rensa.
 Begränsningar kan införas på två nivåer:
 
 * För [enskilda fält (se följande procedur)](#constraints-for-individual-fields)
-* Som [global validering av formulär](#form-global-constraints)
+* Som [global validering](#form-global-constraints)
 
 #### Begränsningar för enskilda fält {#constraints-for-individual-fields}
 
@@ -208,7 +208,7 @@ Du kan lägga till egna begränsningar för ett enskilt fält (under `/apps`) en
 
    * `sling:resourceType` - ställs in på `foundation/components/form/constraint`
 
-   * `constraintMessage` - ett anpassat meddelande som visas om fältet inte är giltigt, enligt villkoret, när formuläret skickas
+   * `constraintMessage` - ett anpassat meddelande som visas om fältet inte är giltigt enligt villkoret när formuläret skickas
 
    * Valfritt:
 
@@ -217,10 +217,10 @@ Du kan lägga till egna begränsningar för ett enskilt fält (under `/apps`) en
 
 1. I den här mappen kan du behöva följande skript:
 
-   * Ett klientvalideringsskript: Skriptnamnet är `clientvalidation.<extension>`, till exempel `clientvalidation.jsp`
-Detta anropas när formulärfältet återges. Den kan användas för att skapa klient-javascript för att validera fältet på klienten.
+   * Ett klientvalideringsskript: Skriptets namn är `clientvalidation.<extension>`, till exempel `clientvalidation.jsp`
+Detta anropas när formulärfältet återges. Den kan användas för att skapa javascript för klienten för att validera fältet på klienten.
 
-   * Ett servervalideringsskript: Skriptnamnet är `servervalidation.<extension>`, till exempel `servervalidation.jsp`
+   * Ett servervalideringsskript: Skriptets namn är `servervalidation.<extension>`, till exempel `servervalidation.jsp`
 Detta anropas när formuläret skickas. Den kan användas för att validera fältet på servern efter att det har skickats.
 
 >[!NOTE]
@@ -261,7 +261,7 @@ Ett eller flera villkor visas under dessa fält. Ett villkor jämför värdet f�
 * En operator.
 * Ett värde jämförs med fältvärdet.
 
-En Radio Group-komponent med titeln `Receive email notifications?`* * innehåller `Yes` och `No` alternativknappar. En textfältskomponent med titeln `Email Address` använder följande villkor så att det är synligt om `Yes` är markerat:
+En Radio Group-komponent med titeln `Receive email notifications?`* * innehåller `Yes` och `No` alternativknappar. En textfältskomponent med titeln `Email Address` använder följande villkor så att det syns om `Yes` är markerat:
 
 ![showhidecondition](assets/showhidecondition.png)
 
@@ -291,7 +291,7 @@ I JavaScript använder villkor värdet för egenskapen Elementnamn för att refe
 
 1. Klicka **OK** för att spara definitionen.
 
-1. När du har sparat definitionen kan du **Redigera regler** visas bredvid **Visa/dölj** i formulärkomponentens egenskaper. Klicka på den här länken för att öppna **Redigera visa/dölj regler** för att göra ändringar.
+1. När du har sparat definitionen kan du **Redigera regler** länk visas bredvid **Visa/dölj** i formulärkomponentens egenskaper. Klicka på länken för att öppna **Redigera visa/dölj regler** för att göra ändringar.
 
    Klicka **OK** om du vill spara alla ändringar.
 
@@ -303,7 +303,7 @@ I JavaScript använder villkor värdet för egenskapen Elementnamn för att refe
    >
    >* in **Förhandsgranska** läge i redigeringsmiljön (kräver att sidan laddas om när du först växlar till förhandsgranskning)
    >
-   >* publiceringsmiljön
+   >* i publiceringsmiljön
 
 #### Hantera brutna komponentreferenser {#handling-broken-component-references}
 

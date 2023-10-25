@@ -1,19 +1,19 @@
 ---
-title: OSGI Bundles
-description: Tips för att hantera OSGi-paket
+title: OSGi Bundles
+description: Läs några tips om hur du hanterar OSGi-paket i Adobe Experience Manager.
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: best-practices
 exl-id: e18065c7-75b9-4b37-8294-cf94122a4dcf
-source-git-commit: e068cee192c0837f1473802143e0793674d400e8
+source-git-commit: b703f356f9475eeeafb1d5408c650d9c6971a804
 workflow-type: tm+mt
-source-wordcount: '340'
+source-wordcount: '346'
 ht-degree: 0%
 
 ---
 
-# OSGI Bundles{#osgi-bundles}
+# OSGi Bundles{#osgi-bundles}
 
 ## Använd semantisk versionshantering {#use-semantic-versioning}
 
@@ -21,7 +21,7 @@ Godkänd om bästa praxis för semantisk versionsnumrering finns på [https://se
 
 ## Bädda inte in fler klasser och burkar än vad som är absolut nödvändigt i OSGi-paket {#do-not-embed-more-classes-and-jars-than-strictly-needed-in-osgi-bundles}
 
-Gemensamma bibliotek bör delas upp i separata paket. På så sätt kan de återanvändas i alla era paket. När en *JAR* i ett OSGI-paket ska du kontrollera om någon redan har gjort detta online. En del vanliga platser att hitta befintliga paketbrytare på är: Apache Felix, Apache Sling, Apache Geronimo, Apache ServiceMix, Eclipse Bundle Recipes och SpringSource Enterprise Bundle Repository.
+Gemensamma bibliotek bör delas upp i separata paket. På så sätt kan de återanvändas i alla era paket. När en *JAR* i ett OSGi-paket kontrollerar du om någon redan har gjort detta på nätet. Några vanliga platser att hitta befintliga paketbrytare är: Apache Felix, Apache Sling, Apache Geronimo, Apache ServiceMix, Eclipse Bundle Recipes och SpringSource Enterprise Bundle Repository.
 
 ## Beroende på vilka paketversioner som finns till låg kostnad {#depend-on-the-lowest-needed-bundle-versions}
 

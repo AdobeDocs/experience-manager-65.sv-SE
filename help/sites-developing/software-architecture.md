@@ -1,6 +1,6 @@
 ---
 title: Programvaruarkitektur
-description: Bästa tillvägagångssätt för att skapa programvara
+description: Lär dig några tips om hur du kan skapa program för Adobe Experience Manager.
 uuid: a557f6ca-c3f1-486e-a45e-6e1f986fab41
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -8,16 +8,16 @@ content-type: reference
 topic-tags: best-practices
 discoiquuid: 92971747-1c74-4917-b5a0-7b79b3ae1e68
 exl-id: cd4f3b4c-5488-4ca7-9c1e-b4c819fda8e8
-source-git-commit: 78c584db8c35ea809048580fe5b440a0b73c8eea
+source-git-commit: b703f356f9475eeeafb1d5408c650d9c6971a804
 workflow-type: tm+mt
-source-wordcount: '614'
+source-wordcount: '620'
 ht-degree: 0%
 
 ---
 
 # Programvaruarkitektur{#software-architecture}
 
-## Design för uppgraderingar {#design-for-upgrades}
+## Designa för uppgraderingar {#design-for-upgrades}
 
 När du utökar OTB-beteenden är det viktigt att tänka på uppgraderingarna. Använd alltid anpassningar i katalogen /apps och lägg antingen över motsvarande noder i katalogen /libs eller använd sling:resourceSuperType för att utöka beteendet utanför rutan. Vissa ändringar kan behövas för att stödja en ny AEM, men den nya versionen bör inte skriva över dina anpassningar om den här metoden följs.
 
@@ -57,7 +57,7 @@ Spikes och testkod ingår i alla Agile-programimplementeringar. Men du vill vara
 
 ### Implementera skript för datamigrering i sin egen modul {#implement-data-migration-scripts-in-their-own-module}
 
-Skript för datamigrering körs bara en gång när en webbplats startas första gången. När webbplatsen publiceras blir därför skripten inaktiva. För att vara säker på att du inte skapar implementeringskod som är beroende av migreringsskripten, bör de implementeras i sin egen modul. På så sätt kan vi ta bort och kassera den här koden direkt efter start, vilket eliminerar den döda koden från systemet.
+Skript för datamigrering körs bara en gång när en webbplats startas första gången. När webbplatsen publiceras blir därför skripten inaktiva. För att vara säker på att du inte skapar implementeringskod som är beroende av migreringsskripten, bör de implementeras i en egen modul. På så sätt kan vi ta bort och kassera den här koden direkt efter start, vilket eliminerar den döda koden från systemet.
 
 ### Följ publicerade Maven-konventioner i POM-filer {#follow-published-maven-conventions-in-pom-files}
 
