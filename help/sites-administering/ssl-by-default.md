@@ -1,7 +1,7 @@
 ---
 title: SSL/TLS som standard
 seo-title: SSL/TLS By Default
-description: Lär dig hur du använder SSL som standard i AEM.
+description: Lär dig hur du använder SSL som standard i AEM 6.5.
 seo-description: Learn how to use SSL by Default in AEM.
 uuid: 2fbfd020-1d33-4b22-b963-c698e62f5bf6
 contentOwner: User
@@ -11,9 +11,9 @@ topic-tags: Security
 discoiquuid: 68077369-0549-4c0f-901b-952e323013ea
 docset: aem65
 exl-id: 574e2fc2-6ebf-49b6-9b65-928237a8a34d
-source-git-commit: 7edd848bbdbadfb387bd4d880b24931ad6758dbd
+source-git-commit: e54c1d422f2bf676e8a7b0f50a101e495c869c96
 workflow-type: tm+mt
-source-wordcount: '856'
+source-wordcount: '857'
 ht-degree: 0%
 
 ---
@@ -24,9 +24,9 @@ I ett försök att kontinuerligt förbättra AEM säkerhet har Adobe introducera
 
 ## Aktivera SSL/TLS som standard {#enabling-ssl-tls-by-default}
 
-Du kan börja konfigurera SSL/TLS som standard genom att klicka på det relevanta inkorgsmeddelandet från AEM startskärm. Tryck på klockikonen i skärmens övre högra hörn för att nå Inkorgen. Klicka sedan på **Visa alla**. Då visas en lista med alla aviseringar som har beställts i en listvy.
+Du kan börja konfigurera SSL/TLS som standard genom att klicka på det relevanta inkorgsmeddelandet från AEM startskärm. Om du vill nå Inkorgen trycker du på klockikonen i skärmens övre högra hörn. Klicka sedan på **Visa alla**. Då visas en lista med alla aviseringar som har beställts i en listvy.
 
-Markera och öppna **Konfigurera HTTPS** varning:
+I listan väljer du och öppnar **Konfigurera HTTPS** varning:
 
 ![chlimage_1-103](assets/chlimage_1-103.png)
 
@@ -34,7 +34,7 @@ Markera och öppna **Konfigurera HTTPS** varning:
 >
 >Om **Konfigurera HTTPS** ingen varning finns i Inkorgen. Du kan navigera direkt till HTTPS-guiden genom att gå till *<http://serveraddress:serverport/libs/granite/security/content/sslConfig.html?item=configuration%2fconfiguressl&_charset_=utf-8>*
 
-En tjänstanvändare ringde **ssl-service** har skapats för den här funktionen. När du har öppnat aviseringen vägleds du genom följande konfigurationsguide:
+En tjänstanvändare ringde **ssl-service** har skapats för funktionen. När du har öppnat aviseringen vägleds du genom följande konfigurationsguide:
 
 1. Konfigurera först arkivautentiseringsuppgifterna. Detta är autentiseringsuppgifterna för **ssl-service** systemanvändarens nyckelarkiv som kommer att innehålla den privata nyckeln och förtroendearkivet för HTTPS-avlyssnaren.
 
@@ -163,7 +163,7 @@ Här nedan hittar du ett exempel på hur du skapar ett självsignerat certifikat
 
 >[!NOTE]
 >
->Användningen av ett självsignerat certifikat är till exempel bara avsedd och bör inte användas i produktionen.
+>Användningen av ett självsignerat certifikat är till exempel bara till för ändamål och bör inte användas i produktionen.
 
 1. Skapa först den privata nyckeln:
 
@@ -202,7 +202,7 @@ Du kan också automatisera SSL-/TLS-konfigurationen med verktyget cURL. Du kan g
 
 *https://&lt;serveraddress>:&lt;serverport>/libs/granite/security/post/sslSetup.html*
 
-Nedan visas de parametrar du kan använda för att ändra de olika inställningarna i konfigurationsguiden:
+Nedan visas de parametrar som du kan använda för att ändra de olika inställningarna i konfigurationsguiden:
 
 * `-F "keystorePassword=password"` - Nyckellagringslösenordet.
 

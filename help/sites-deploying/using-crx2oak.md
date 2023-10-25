@@ -1,7 +1,7 @@
 ---
 title: Använda CRX2Oak Migration Tool
 seo-title: Using the CRX2Oak Migration Tool
-description: Lär dig hur du använder migreringsverktyget CRX2Oak.
+description: Lär dig hur du använder migreringsverktyget CRX2Oak med AEM.
 seo-description: Learn how to use the CRX2Oak migration tool.
 uuid: 9b788981-4ef0-446e-81f0-c327cdd3214b
 contentOwner: User
@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: e938bdc7-f8f5-4da5-81f6-7f60c6b4b8e6
 feature: Upgrading
 exl-id: ef3895b9-8d35-4881-8188-c864ae3f0b4c
-source-git-commit: 3d713021ac410ca2925a282c5dfca98ed4e483ee
+source-git-commit: e54c1d422f2bf676e8a7b0f50a101e495c869c96
 workflow-type: tm+mt
-source-wordcount: '1220'
+source-wordcount: '1222'
 ht-degree: 0%
 
 ---
@@ -144,7 +144,7 @@ Se [Apache-dokumentation](https://jackrabbit.apache.org/oak/docs/migration.html)
 
 * `--early-shutdown`: Stänger JCR2-källdatabasen efter att noderna har kopierats och innan implementeringshookarna tillämpas
 * `--fail-on-error`: Tvingar ett migreringsfel om noderna inte kan läsas från källdatabasen.
-* `--ldap`: Migrerar LDAP-användare från en CQ 5.x-instans till en Oak-baserad. För att detta ska fungera måste identitetsleverantören i Oak-konfigurationen heta ldap. Mer information finns i [LDAP-dokumentation](/help/sites-administering/ldap-config.md).
+* `--ldap`: Flyttar LDAP-användare från en CQ 5.x-instans till en Oak-baserad. För att detta ska fungera måste identitetsleverantören i Oak-konfigurationen heta ldap. Mer information finns i [LDAP-dokumentation](/help/sites-administering/ldap-config.md).
 
 * `--ldap-config:` Använd detta tillsammans med `--ldap` parameter för CQ 5.x-databaser som använde flera LDAP-servrar för autentisering. Du kan använda den för att peka på CQ 5.x `ldap_login.conf` eller `jaas.conf` konfigurationsfiler. Formatet är `--ldapconfig=path/to/ldap_login.conf`.
 
@@ -168,7 +168,7 @@ Se [Apache-dokumentation](https://jackrabbit.apache.org/oak/docs/migration.html)
 
 * `--src-s3datastore`: Den datalagerkatalog som ska användas för källan `S3DataStore`
 
-* `--src-s3config`: Konfigurationsfilen för källan `S3DataStore`.
+* `--src-s3config`: Källans konfigurationsfil `S3DataStore`.
 
 ### Alternativ för målblobStore {#destination-blobstore-options}
 
@@ -200,7 +200,7 @@ Du kan även aktivera felsökningsinformation för migreringsprocessen för att 
   </tr>
   <tr>
    <td>Fristående läge</td>
-   <td><p>Lägg till <strong>—trace</strong> alternativ till kommandoraden CRX2Oak för att visa TRACE-händelser för standardutdata (du måste omdirigera loggar dig själv med omdirigeringstecken: &gt; eller T-kommandot för senare kontroll).</p> </td>
+   <td><p>Lägg till <strong>—trace</strong> alternativ till kommandoraden för CRX2Oak om du vill visa TRACE-händelser för standardutdata (du måste omdirigera dig själv med omdirigeringstecknet: &gt; eller T-kommandot för senare kontroll).</p> </td>
   </tr>
  </tbody>
 </table>

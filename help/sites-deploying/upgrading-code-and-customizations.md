@@ -1,7 +1,7 @@
 ---
 title: Uppgradera kod och anpassningar
 seo-title: Upgrading Code and Customizations
-description: Läs mer om hur du uppgraderar anpassad kod i AEM.
+description: Läs mer om hur du uppgraderar kod och anpassningar i AEM.
 seo-description: Learn more about upgrading custom code in AEM.
 uuid: dec11ef0-bf85-4e4e-80ac-dcb94cc3c256
 contentOwner: sarchiz
@@ -13,9 +13,9 @@ docset: aem65
 targetaudience: target-audience upgrader
 feature: Upgrading
 exl-id: a36a310d-5943-4ff5-8ba9-50eaedda98c5
-source-git-commit: a296e459461973fc2dbd0641c6fdda1d89d8d524
+source-git-commit: e54c1d422f2bf676e8a7b0f50a101e495c869c96
 workflow-type: tm+mt
-source-wordcount: '2112'
+source-wordcount: '2113'
 ht-degree: 0%
 
 ---
@@ -44,8 +44,8 @@ Innan du fortsätter med en uppgradering bör du ha en stabil programkodbas som 
 
 Förutom att du kan uppgradera din kodbas och anpassa den så att den fungerar med den nya AEM-versionen kan 6.5 också hantera dina anpassningar effektivare med funktionen Bakåtkompatibilitet som beskrivs på [den här sidan](/help/sites-deploying/backward-compatibility.md).
 
-Kör [Mönsteravkännare](/help/sites-deploying/pattern-detector.md) i det första steget kan hjälpa dig att bedöma hur komplicerad uppgraderingen är generellt. Det kan också hjälpa dig att avgöra om du vill köra i kompatibilitetsläge eller uppdatera dina anpassningar så att de använder alla nya AEM 6.5-funktioner. Se [Bakåtkompatibilitet i AEM 6.5](/help/sites-deploying/backward-compatibility.md) sida för mer information.
-[ ![opt_cropped](assets/opt_cropped.png)](assets/upgrade-code-base-highlevel.png)
+Som nämnts ovan och visas i diagrammet nedan, kör [Mönsteravkännare](/help/sites-deploying/pattern-detector.md) i det första steget kan hjälpa dig att bedöma hur komplicerad uppgraderingen är generellt. Det kan också hjälpa dig att avgöra om du vill köra i kompatibilitetsläge eller uppdatera dina anpassningar så att de använder alla nya AEM 6.5-funktioner. Se [Bakåtkompatibilitet i AEM 6.5](/help/sites-deploying/backward-compatibility.md) sida för mer information.
+[![opt_cropped](assets/opt_cropped.png)](assets/upgrade-code-base-highlevel.png)
 
 ## Uppgradera kodbasen {#upgrade-code-base}
 
@@ -75,15 +75,15 @@ Användning av en administrativ session via `SlingRepository.loginAdministrative
 
 All användning av frågor i kodbasen måste noggrant testas som en del av uppgraderingen av kodbasen. För kunder som uppgraderar från Jackrabbit 2 (versioner av AEM äldre än 6.0) är den här testningen särskilt viktig eftersom Oak inte indexerar innehåll automatiskt och anpassade index bör skapas. Om du uppgraderar från en AEM 6.x-version kan indexdefinitionerna för &quot;out of the box Oak&quot; ha ändrats och påverka befintliga frågor.
 
-Följande verktyg är tillgängliga för analys och granskning av frågeprestanda:
+Följande verktyg är tillgängliga för att analysera och inspektera frågeprestanda:
 
 * [AEM](/help/sites-deploying/queries-and-indexing.md)
 
-* [Diagnostikverktyg för åtgärder - Frågeprestanda](/help/sites-administering/operations-dashboard.md#diagnosis-tools)
+* [Diagnostikverktyg för åtgärder - frågeprestanda](/help/sites-administering/operations-dashboard.md#diagnosis-tools)
 
 <!-- URL is 404 as of 04/24/23; commenting out * [Oak Utils](https://oakutils.appspot.com/). This is an open source tool that is not maintained by Adobe. -->
 
-### Klassisk gränssnittsredigering {#classic-ui-authoring}
+### Skapa klassiskt användargränssnitt {#classic-ui-authoring}
 
 Klassisk gränssnittsredigering är fortfarande tillgängligt i AEM 6.5, men är nu föråldrat. Mer information finns [här](/help/release-notes/deprecated-removed-features.md#pre-announcement-for-next-release). Om ditt program körs i den klassiska användargränssnittets redigeringsmiljö bör du uppgradera till AEM 6.5 och fortsätta använda det klassiska användargränssnittet. Migrering till Touch-gränssnittet kan sedan planeras som ett separat projekt som kan slutföras under flera utvecklingscykler. Om du vill använda det klassiska användargränssnittet i AEM 6.5 måste flera OSGi-konfigurationer implementeras i kodbasen. Mer information om hur du gör konfigurationen finns [här](/help/sites-administering/enable-classic-ui.md).
 
@@ -109,7 +109,7 @@ Anpassade sökytor kräver vissa manuella justeringar efter uppgraderingen för 
 
 >[!NOTE]
 >
->Den här proceduren krävs endast för uppgraderingar från versioner som är äldre än AEM 6.2.
+>Den här proceduren krävs endast för uppgraderingar från äldre versioner än AEM 6.2.
 
 Instanser som har anpassade Assets-distributioner måste förberedas för uppgraderingen. Den här åtgärden är nödvändig för att säkerställa att allt anpassat innehåll är kompatibelt med den nya 6.4-nodstrukturen.
 
@@ -141,7 +141,7 @@ Om du vill uppgradera resurser konfigurerar du paketet Associate Asset IDs i JMX
 
 Om du behöver resurs-ID:n för en delmängd av dina hela resurser använder du `migrateAssetsAtPath` API.
 
-Använd `migrateAllAssets()` API.
+För alla andra ändamål använder du `migrateAllAssets()` API.
 
 ### Anpassa InDesign-skript {#indesign-script-customizations}
 
@@ -173,7 +173,7 @@ En omfattande testplan bör utarbetas för testning av uppgraderingar. Testning 
 
 ### Testa uppgraderingsproceduren {#testing-the-upgrade-procedure}
 
-Uppgraderingsproceduren som beskrivs här bör testas i Dev- och QA-miljöer enligt din anpassade körningsbok (se [Planera din uppgradering](/help/sites-deploying/upgrade-planning.md)). Uppgraderingsproceduren bör upprepas tills alla steg har dokumenterats i uppgraderingsboken och uppgraderingsprocessen är smidig.
+Uppgraderingsproceduren som beskrivs här bör testas i Dev- och QA-miljöer så som de beskrivs i din anpassade körbok (se [Planera din uppgradering](/help/sites-deploying/upgrade-planning.md)). Uppgraderingsproceduren bör upprepas tills alla steg har dokumenterats i uppgraderingsboken och uppgraderingsprocessen är smidig.
 
 ### Implementeringstestområden  {#implementation-test-areas-}
 

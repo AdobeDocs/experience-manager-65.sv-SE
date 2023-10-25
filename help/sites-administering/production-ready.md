@@ -1,21 +1,21 @@
 ---
 title: Köra AEM i produktionsklart läge
-description: Lär dig hur du kör AEM i produktionsklart läge.
+description: Lär dig köra AEM i produktionsklart läge.
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: Security
 content-type: reference
 exl-id: 3c342014-f8ec-4404-afe5-514bdb651aae
-source-git-commit: 1ef5593495b4bf22d2635492a360168bccc1725d
+source-git-commit: e54c1d422f2bf676e8a7b0f50a101e495c869c96
 workflow-type: tm+mt
-source-wordcount: '378'
+source-wordcount: '379'
 ht-degree: 1%
 
 ---
 
 # Köra AEM i produktionsklart läge{#running-aem-in-production-ready-mode}
 
-Med AEM 6.1 introducerar Adobe den nya `"nosamplecontent"` körningsläge som automatiserar de steg som krävs för att förbereda en AEM instans för driftsättning i en produktionsmiljö.
+Med AEM 6.1 introducerar Adobe det nya `"nosamplecontent"` körningsläge som automatiserar de steg som krävs för att förbereda en AEM instans för driftsättning i en produktionsmiljö.
 
 Det nya körningsläget konfigurerar inte bara instansen automatiskt så att den uppfyller de säkerhetskrav som beskrivs i checklistan, utan tar även bort alla exempelprogram och -konfigurationer i Geometrixx.
 
@@ -41,7 +41,7 @@ java -jar aem-quickstart.jar -r author,crx3,crx3mongo,nosamplecontent -Doak.mong
 
 ## Ändrar en del av produktionsklart läge {#changes-part-of-the-production-ready-mode}
 
-Mer specifikt utförs följande konfigurationsändringar när AEM körs i produktionsklar läge:
+Mer specifikt utförs följande konfigurationsändringar när AEM körs i produktionsklart läge:
 
 1. The **CRXDE-supportpaket** ( `com.adobe.granite.crxde-support`) är inaktiverat som standard i produktionsklar läge. Den kan installeras när som helst från Adobe offentliga Maven-databasen. Version 3.0.0 krävs för AEM 6.1.
 

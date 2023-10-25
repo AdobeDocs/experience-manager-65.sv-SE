@@ -1,7 +1,7 @@
 ---
 title: Underhållsaktiviteter före uppgraderingen
 seo-title: Pre-Upgrade Maintenance Tasks
-description: Läs mer om föruppgraderingsuppgifterna i AEM.
+description: Läs mer om de föruppgraderingsuppgifter som rekommenderas för AEM.
 seo-description: Learn about the pre-upgrade tasks in AEM.
 uuid: 5da1cfc7-8a10-47b1-aafb-2cd112e3f818
 contentOwner: sarchiz
@@ -12,9 +12,9 @@ discoiquuid: 291c91e5-65ff-473d-ac11-3da480239e76
 docset: aem65
 feature: Upgrading
 exl-id: 37d4aee4-15eb-41ab-ad71-dfbd5c7910f8
-source-git-commit: 2981f11565db957fac323f81014af83cab2c0a12
+source-git-commit: e54c1d422f2bf676e8a7b0f50a101e495c869c96
 workflow-type: tm+mt
-source-wordcount: '2030'
+source-wordcount: '2031'
 ht-degree: 0%
 
 ---
@@ -42,7 +42,7 @@ Innan du påbörjar uppgraderingen är det viktigt att du följer dessa underhå
 
 ## Se till att det finns tillräckligt med diskutrymme {#ensure-sufficient-disk-space}
 
-När du utför uppgraderingen måste du utföra en databasmigrering, förutom innehålls- och koduppgraderingsaktiviteterna. Migreringen skapar en kopia av databasen i det nya segmenttjärformatet. Därför behöver du tillräckligt med diskutrymme för att behålla en andra, eventuellt större, version av databasen.
+När du utför uppgraderingen måste du utföra en databasmigrering, utöver content and code upgrade-aktiviteterna. Migreringen skapar en kopia av databasen i det nya segmenttjärformatet. Därför behöver du tillräckligt med diskutrymme för att behålla en andra, eventuellt större, version av databasen.
 
 ## Helt AEM {#fully-back-up-aem}
 
@@ -50,11 +50,11 @@ AEM bör säkerhetskopieras fullständigt innan uppgraderingen påbörjas. Säke
 
 ## Säkerhetskopiera ändringar i /etc {#backup-changes-etc}
 
-Uppgraderingsprocessen gör det möjligt att underhålla och sammanfoga befintligt innehåll och befintliga konfigurationer från `/apps` och `/libs` sökvägar i databasen. För ändringar i `/etc` sökväg, inklusive Context Hub-konfigurationer, är det ofta nödvändigt att återanvända dessa ändringar efter uppgraderingen. När uppgraderingen gör en säkerhetskopia av alla ändringar som den inte kan sammanfogas under `/var`rekommenderar Adobe att du säkerhetskopierar dessa ändringar manuellt innan du påbörjar uppgraderingen.
+Uppgraderingsprocessen gör det möjligt att underhålla och sammanfoga befintligt innehåll och befintliga konfigurationer från `/apps` och `/libs` sökvägar i databasen. För ändringar som gjorts i `/etc` sökväg, inklusive Context Hub-konfigurationer, är det ofta nödvändigt att återanvända dessa ändringar efter uppgraderingen. När uppgraderingen gör en säkerhetskopia av alla ändringar som den inte kan sammanfogas under `/var`rekommenderar Adobe att du säkerhetskopierar dessa ändringar manuellt innan du påbörjar uppgraderingen.
 
 ## Generera filen quickstart.properties {#generate-quickstart-properties}
 
-När du börjar AEM från filen jar `quickstart.properties` filen skapas under `crx-quickstart/conf`. Om AEM bara har startats med det tidigare startskriptet finns inte den här filen och uppgraderingen misslyckas. Kontrollera om filen finns och starta om AEM från filen jar om den inte finns.
+När du börjar AEM från filen jar `quickstart.properties` filen genereras under `crx-quickstart/conf`. Om AEM bara har startats med det tidigare startskriptet finns inte den här filen och uppgraderingen misslyckas. Kontrollera om filen finns och starta om AEM från filen jar om den inte finns.
 
 ## Konfigurera rensning av arbetsflöde och granskningslogg {#configure-wf-audit-purging}
 
@@ -94,7 +94,7 @@ You can find the packages at these locations:
 
 The `PreUpgradeTasksMBean` OSGI-komponenten levereras förkonfigurerad med en lista över föruppgraderade underhållsåtgärder som kan köras alla samtidigt. Du kan konfigurera uppgifterna genom att följa proceduren nedan:
 
-1. Gå till webbkonsolen genom att bläddra till *https://serveraddress:serverport/system/console/configMgr*
+1. Gå till webbkonsolen genom att gå till *https://serveraddress:serverport/system/console/configMgr*
 
 1. Sök efter &quot;**föruppgraderingsuppgifter**&quot; och klicka sedan på den första matchande komponenten. Komponentens fullständiga namn är `com.adobe.aem.upgrade.prechecks.mbean.impl.PreUpgradeTasksMBeanImpl`
 
@@ -226,7 +226,7 @@ Nedan visas en lista med alla tillgängliga metoder som `PreUpgradeTasksMBeanImp
   <tr>
    <td><code>runAllPreUpgradeHealthChecks(shutDownOnSuccess)</code></td>
    <td>ÅTGÄRD</td>
-   <td><p>Kör alla föruppgraderingskontroller och sparar statusen i en fil med namnet <code>preUpgradeHCStatus.properties</code> som är i den gångbara hemvägen. Om <code>shutDownOnSuccess</code> parametern är inställd på <code>true</code>AEM stängs av, men bara om alla hälsokontroller före uppgraderingen har statusen OK.</p> <p>Egenskapsfilen används som en förutsättning för framtida uppgraderingar<br /> och uppgraderingsprocessen avbryts om hälsokontrollen före uppgraderingen görs<br /> körningen misslyckades. Om du vill ignorera resultatet av föruppgraderingen<br /> hälsokontroller och starta uppgraderingen ändå kan du ta bort filen.</p> </td>
+   <td><p>Kör alla föruppgraderingskontroller och sparar statusen i en fil med namnet <code>preUpgradeHCStatus.properties</code> som är i den slingrande hemvägen. Om <code>shutDownOnSuccess</code> parametern är inställd på <code>true</code>AEM stängs av, men bara om alla hälsokontroller före uppgraderingen har statusen OK.</p> <p>Egenskapsfilen används som en förutsättning för framtida uppgraderingar<br /> och uppgraderingsprocessen avbryts om hälsokontrollen före uppgraderingen görs<br /> körningen misslyckades. Om du vill ignorera resultatet av föruppgraderingen<br /> hälsokontroller och starta uppgraderingen ändå kan du ta bort filen.</p> </td>
   </tr>
   <tr>
    <td><code>detectUsageOfUnavailableAPI(aemVersion)</code></td>
@@ -244,7 +244,6 @@ Nedan visas en lista med alla tillgängliga metoder som `PreUpgradeTasksMBeanImp
 >* Alla externa program som ansluter till JMX
 >* cURL
 >
-
 
 ## Inaktivera anpassade inloggningsmoduler {#disable-custom-login-modules}
 
@@ -289,7 +288,7 @@ Inaktivera anpassade moduler som definierats i JAAS-konfigurationen för `reposi
 >
 >Ta endast bort paket från katalogen crx-quickstart/install när AEM stängts. Det här steget är ett av de sista innan du startar uppgraderingsproceduren på plats.
 
-Ta bort alla servicepaket, funktionspaket eller snabbkorrigeringar som distribuerats via `crx-quickstart/install` på det lokala filsystemet. På så sätt förhindras oavsiktlig installation av gamla snabbkorrigeringar och servicepaket ovanpå den nya AEM när uppdateringen har slutförts.
+Ta bort alla servicepaket, funktionspaket eller snabbkorrigeringar som distribuerats via `crx-quickstart/install` på det lokala filsystemet. På så sätt förhindras oavsiktlig installation av gamla snabbkorrigeringar och servicepaket ovanpå den nya AEM-versionen när uppdateringen har slutförts.
 
 ## Stoppa alla väntelägesförekomster i kallt läge {#stop-tarmk-coldstandby-instance}
 
@@ -303,7 +302,7 @@ Inaktivera alla schemalagda OSGi-jobb som ingår i programkoden.
 
 >[!NOTE]
 >
->Detta steg är endast nödvändigt för TjärMK-installationer
+>Detta steg är endast nödvändigt för bensinanläggningar
 
 Om du använder tarMK bör du köra Revision Cleanup offline innan du uppgraderar. Detta gör att databasmigreringssteget och efterföljande uppgraderingsuppgifter körs mycket snabbare och hjälper till att säkerställa att rensning av onlineändringar kan utföras korrekt när uppgraderingen har slutförts. Mer information om hur du kör funktionen för borttagning av offlinerevision finns i [Utför rensning av offlineredigering](/help/sites-deploying/storage-elements-in-aem-6.md#performing-offline-revision-cleanup).
 
@@ -313,7 +312,7 @@ Om du använder tarMK bör du köra Revision Cleanup offline innan du uppgradera
 >
 >Det här steget är bara nödvändigt för instanser som kör crx3
 
-När du har kört revisionsrensning på CRX3-instanser bör du köra Datastore-skräpinsamlingen för att ta bort alla blobbar som inte refereras i datalagret. Instruktioner finns i dokumentationen om [Skräpinsamling för datalager](/help/sites-administering/data-store-garbage-collection.md).
+När du har kört revisionsrensning på CRX3-instanser bör du köra Datastore Garbage Collection för att ta bort alla blobbar som inte refereras i datalagret. Instruktioner finns i dokumentationen om [Skräpinsamling för datalager](/help/sites-administering/data-store-garbage-collection.md).
 
 ## Uppgradera databasschemat om det behövs {#upgrade-the-database-schema-if-needed}
 
@@ -328,7 +327,7 @@ Om du vill förhindra att ett sådant scenario inträffar uppgraderar du schemat
 
    Mer information om hur Oak hanterar schemauppgraderingar finns i [den här sidan på Apache-webbplatsen](https://jackrabbit.apache.org/oak/docs/nodestore/document/rdb-document-store.html#upgrade).
 
-1. Fortsätt med att uppgradera AEM.
+1. Fortsätt med AEM.
 
 ## Ta bort användare som kan tyda på en uppgradering {#delete-users-that-might-hinder-the-upgrade}
 
@@ -336,12 +335,11 @@ Om du vill förhindra att ett sådant scenario inträffar uppgraderar du schemat
 >
 >Underhållsuppgifterna är bara nödvändiga om:
 >
->* Du uppgraderar från AEM versioner som är äldre än AEM 6.3
+>* Du uppgraderar från AEM versioner äldre än AEM 6.3
 >* Du stöter på något av de fel som nämns nedan under uppgraderingen.
 >
 
-
-Det finns exceptionella fall när tjänstanvändare kan få en äldre AEM som felaktigt taggade som vanliga användare.
+Det finns exceptionella fall när tjänstanvändare kan hamna i en äldre AEM version som felaktigt taggats som vanliga användare.
 
 Om en sådan situation uppstår misslyckas uppgraderingen med ett meddelande som följande:
 
@@ -353,7 +351,7 @@ java.lang.RuntimeException: Unable to create service user [communities-utility-r
 Se till att du gör följande för att undvika problemet:
 
 1. Frigör instansen från produktionstrafiken
-1. Skapa en säkerhetskopia av en eller flera användare som orsakar problemet. Du kan utföra den här uppgiften med Pakethanteraren. Mer information finns i [Så här arbetar du med paket.](/help/sites-administering/package-manager.md)
+1. Skapa en säkerhetskopia av en eller flera användare som orsakar problemet. Du kan utföra den här uppgiften med Pakethanteraren. Mer information finns i [Arbeta med paket.](/help/sites-administering/package-manager.md)
 1. Ta bort en eller flera användare som orsakar problemet. Nedan finns en lista över användare som kan ingå i den här kategorin:
 
    1. `dynamic-media-replication`

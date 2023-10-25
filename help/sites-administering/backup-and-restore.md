@@ -1,7 +1,7 @@
 ---
 title: Säkerhetskopiering och återställning
 seo-title: Backup and Restore
-description: Lär dig hur du säkerhetskopierar och återställer AEM.
+description: Lär dig hur du säkerhetskopierar och återställer AEM innehåll och konfigurationer.
 seo-description: Learn how to backup and restore your AEM content.
 uuid: 446a466f-f508-4430-9e50-42cd4463760e
 contentOwner: Guillaume Carlino
@@ -10,9 +10,9 @@ topic-tags: operations
 content-type: reference
 discoiquuid: eb8bbb85-ca2f-4877-8ee0-bb1ee8b7d8de
 exl-id: dd26dade-b769-483e-bc11-dcfa5ed1f87e
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: e54c1d422f2bf676e8a7b0f50a101e495c869c96
 workflow-type: tm+mt
-source-wordcount: '2283'
+source-wordcount: '2285'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ Det finns två sätt att säkerhetskopiera och återställa databasinnehåll i A
 
 Den metod som beskrivs här gäller för säkerhetskopiering och återställning av system.
 
-Om du behöver säkerhetskopiera och/eller återställa en liten mängd innehåll som går förlorat behöver du inte nödvändigtvis återställa systemet:
+Om du behöver säkerhetskopiera och/eller återställa en liten mängd innehåll, som går förlorat, behöver du inte nödvändigtvis återställa systemet:
 
 * Antingen kan du hämta data från ett annat system via ett paket
 * Om du återställer säkerhetskopian på ett tillfälligt system skapar du ett innehållspaket och distribuerar det på systemet där det här innehållet saknas.
@@ -37,7 +37,7 @@ Mer information finns i [Säkerhetskopiera paket](/help/sites-administering/back
 
 ## Timing {#timing}
 
-Kör inte säkerhetskopiering parallellt med datastorminsamlingen eftersom det kan skada resultatet av båda processerna.
+Kör inte säkerhetskopiering parallellt med datastorns skräpinsamling eftersom det kan skada resultatet av båda processerna.
 
 ## Offlinesäkerhetskopiering {#offline-backup}
 
@@ -49,9 +49,9 @@ I de flesta fall använder du en ögonblicksbild av filsystemet för att skapa e
 * skapa en säkerhetskopia av en ögonblicksbild
 * starta programmet
 
-Eftersom säkerhetskopieringen av ögonblicksbilder vanligtvis tar några sekunder är hela driftstoppet mindre än några minuter.
+Eftersom säkerhetskopieringen av ögonblicksbilder normalt tar några sekunder är hela driftstoppet mindre än några minuter.
 
-## Onlinesäkerhetskopiering {#online-backup}
+## Säkerhetskopiering online {#online-backup}
 
 Med den här säkerhetskopieringsmetoden skapas en säkerhetskopia av hela databasen, inklusive alla program som distribueras under den, till exempel AEM. Säkerhetskopian innehåller innehåll, versionshistorik, konfiguration, programvara, snabbkorrigeringar, anpassade program, loggfiler, sökindex osv. Om du använder klustring och om den delade mappen är en underkatalog till `crx-quickstart` (antingen fysiskt eller via en programlänk) säkerhetskopieras även den delade katalogen.
 
@@ -74,7 +74,7 @@ Under alla omständigheter skapar säkerhetskopian en bild (eller ögonblicksbil
 >
 >Onlinesäkerhetskopieringen säkerhetskopierar bara filsystemet. Om du lagrar databasinnehållet och/eller databasfilerna i en databas måste den databasen säkerhetskopieras separat. Om du använder AEM med MongoDB läser du dokumentationen om hur du använder [Inbyggda verktyg för säkerhetskopiering i MongoDB](https://docs.mongodb.org/manual/tutorial/backup-with-mongodump/).
 
-### AEM Online Backup {#aem-online-backup}
+### AEM Online-säkerhetskopiering {#aem-online-backup}
 
 Med en onlinesäkerhetskopiering av databasen kan du skapa, hämta och ta bort säkerhetskopierade filer. Det är en &quot;hot&quot;- eller &quot;online&quot;-säkerhetskopieringsfunktion som kan köras medan databasen används normalt i läs-/skrivläge.
 
@@ -162,7 +162,7 @@ Säkerhetskopieringar kan automatiseras med `wget` eller `curl` HTTP-klienter. I
 
 >[!CAUTION]
 >
->I följande exempel finns olika parametrar i `curl` Kommandot kan behöva konfigureras för din instans; till exempel värdnamnet ( `localhost`), port ( `4502`), administratörslösenord ( `xyz`) och filnamn ( `backup.zip`).
+>I följande exempel finns olika parametrar i `curl` kommandot kan behöva konfigureras för din instans, till exempel värdnamnet ( `localhost`), port ( `4502`), administratörslösenord ( `xyz`) och filnamn ( `backup.zip`).
 
 ```shell
 curl -u admin:admin -X POST http://localhost:4502/system/console/jmx/com.adobe.granite:type=Repository/op/startBackup/java.lang.String?target=backup.zip
@@ -170,7 +170,7 @@ curl -u admin:admin -X POST http://localhost:4502/system/console/jmx/com.adobe.g
 
 Säkerhetskopian/katalogen skapas på servern i den överordnade mappen till mappen som innehåller mappen `crx-quickstart` (samma som om du skapade säkerhetskopian i webbläsaren). Om du till exempel har installerat AEM i katalogen `/InstallationKits/crx-quickstart/`skapas säkerhetskopian i `/InstallationKits` katalog.
 
-Kommandot curl returneras omedelbart, så du måste övervaka katalogen för att se när zip-filen är klar. När säkerhetskopieringen skapas kan en tillfällig katalog (med namnet som baseras på den slutliga ZIP-filen) visas, och i slutet kommer den att zippa. Till exempel:
+Kommandot curl returneras omedelbart, så du måste övervaka den här katalogen för att se när zip-filen är klar. När säkerhetskopieringen skapas kan en tillfällig katalog (med namnet som baseras på den slutliga ZIP-filen) visas, och i slutet kommer den att zippa. Till exempel:
 
 * den resulterande zip-filens namn: `backup.zip`
 * namn på tillfällig katalog: `backup.f4d5.temp`
@@ -193,7 +193,7 @@ curl -u admin:admin -X POST http://localhost:4502/system/console/jmx/com.adobe.g
 
 >[!NOTE]
 >
->En säkerhetskopia kan också utlösas [med hjälp av de MBeans som AEM tillhandahåller](/help/sites-administering/jmx-console.md).
+>En säkerhetskopia kan också utlösas [med de MBeans som AEM tillhandahåller](/help/sites-administering/jmx-console.md).
 
 ### Säkerhetskopiering av ögonblicksbild av filsystem {#filesystem-snapshot-backup}
 
@@ -201,7 +201,7 @@ Den process som beskrivs här lämpar sig särskilt för stora databaser.
 
 >[!NOTE]
 >
->Om du vill använda denna metod för säkerhetskopiering måste systemet ha stöd för ögonblicksbilder av filsystem. För Linux innebär detta att dina filsystem ska placeras på en logisk volym.
+>Om du vill använda den här säkerhetskopieringsmetoden måste systemet ha stöd för ögonblicksbilder av filsystem. För Linux innebär detta att dina filsystem ska placeras på en logisk volym.
 
 1. Gör en ögonblicksbild av det filsystem AEM distribueras på.
 
@@ -217,9 +217,9 @@ I onlinesäkerhetskopieringen används följande algoritm:
 1. När du skapar en zip-fil är det första steget att skapa eller hitta målkatalogen.
 
    * Om du säkerhetskopierar till en ZIP-fil skapas en tillfällig katalog. Katalognamnet börjar med `backup.` och slutar med `.temp`; till exempel `backup.f4d3.temp`.
-   * Om du säkerhetskopierar till en katalog används namnet som anges i målsökvägen. En befintlig katalog kan användas, annars skapas en ny katalog.
+   * Om du säkerhetskopierar till en katalog används namnet som anges i målsökvägen. En befintlig katalog kan användas, annars skapas en ny.
 
-      En tom fil med namnet `backupInProgress.txt` skapas i målkatalogen när säkerhetskopieringen startar. Den här filen tas bort när säkerhetskopieringen är klar.
+     En tom fil med namnet `backupInProgress.txt` skapas i målkatalogen när säkerhetskopieringen startar. Den här filen tas bort när säkerhetskopieringen är klar.
 
 1. Filerna kopieras från källkatalogen till målkatalogen (eller den tillfälliga katalogen när en zip-fil skapas). Segmentlagret kopieras före datalagret för att undvika att databasen skadas. Index- och cachedata utelämnas när säkerhetskopian skapas. Detta resulterar i data från `crx-quickstart/repository/cache` och `crx-quickstart/repository/index` ingår inte i säkerhetskopian. Förloppsindikatorn för processen ligger mellan 0 % och 70 % när en zip-fil skapas, eller 0 % - 100 % om ingen zip-fil skapas.
 

@@ -1,6 +1,6 @@
 ---
 title: Konfigurera LDAP med AEM 6
-description: Lär dig hur du konfigurerar LDAP med AEM.
+description: Lär dig hur du använder och konfigurerar LDAP-tjänster med AEM.
 uuid: 0007def4-86f0-401d-aa37-c8d49d5acea1
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -8,16 +8,16 @@ topic-tags: Security
 content-type: reference
 discoiquuid: 5faf6ee5-9242-48f4-87a8-ada887a3be1e
 exl-id: 2ebca4fb-20f7-499c-96a0-4018eaeddc1a
-source-git-commit: 768576e300b655962adc3e1db20fc5ec06a5ba6c
+source-git-commit: e54c1d422f2bf676e8a7b0f50a101e495c869c96
 workflow-type: tm+mt
-source-wordcount: '1625'
+source-wordcount: '1628'
 ht-degree: 0%
 
 ---
 
 # Konfigurera LDAP med AEM 6 {#configuring-ldap-with-aem}
 
-LDAP **L** ightweight **D** katalog **A**&#x200B;åtkomst **P** Protokoll) används för åtkomst till centraliserade katalogtjänster. Det minskar behovet av att hantera användarkonton eftersom de kan nås av flera program. En sådan LDAP-server är Active Directory. LDAP används ofta för att uppnå enkel inloggning, vilket gör att en användare kan få åtkomst till flera program efter inloggning en gång.
+LDAP ( **L** ightweight **D** katalog **A**&#x200B;åtkomst **P** Protokoll) används för åtkomst till centraliserade katalogtjänster. Det minskar den arbetsinsats som krävs för att hantera användarkonton eftersom de kan nås av flera program. En sådan LDAP-server är Active Directory. LDAP används ofta för att uppnå enkel inloggning, vilket gör att en användare kan få åtkomst till flera program efter inloggning en gång.
 
 Användarkonton kan synkroniseras mellan LDAP-servern och databasen med LDAP-kontoinformation som sparas i databasen. Den här funktionen gör att konton kan tilldelas till databasgrupper för att tilldela de behörigheter och behörigheter som krävs.
 
@@ -100,7 +100,7 @@ Följande konfigurationsalternativ är tillgängliga för LDAP-identitetsleveran
   </tr>
   <tr>
    <td><strong>Användar-bas-DN</strong></td>
-   <td>Unikt namn för användarsökningar</td>
+   <td>DN för användarsökningar</td>
   </tr>
   <tr>
    <td><strong>Användarobjektklasser</strong></td>
@@ -112,7 +112,7 @@ Följande konfigurationsalternativ är tillgängliga för LDAP-identitetsleveran
   </tr>
   <tr>
    <td><strong>Extra filter för användare</strong></td>
-   <td>Extra LDAP-filter som används vid sökning efter användare. Det sista filtret formateras så här: '(&amp;(&lt;idattr&gt;=&lt;userid&gt;)(objectclass=&lt;objectclass&gt;)&lt;extrafilter&gt;)' (user.extraFilter)</td>
+   <td>Extra LDAP-filter som används vid sökning efter användare. Det sista filtret formateras så här: (&amp;()&lt;idattr&gt;=&lt;userid&gt;)(objectclass=&lt;objectclass&gt;)&lt;extrafilter&gt;)' (user.extraFilter)</td>
   </tr>
   <tr>
    <td><strong>Användarens DN-sökvägar</strong></td>
@@ -132,7 +132,7 @@ Följande konfigurationsalternativ är tillgängliga för LDAP-identitetsleveran
   </tr>
   <tr>
    <td><strong>Gruppera extra filter</strong></td>
-   <td>Extra LDAP-filter som används vid sökning efter grupper. Det sista filtret formateras så här: '(&amp;(&lt;nameattr&gt;=&lt;groupname&gt;)(objectclass=&lt;objectclass&gt;)&lt;extrafilter&gt;)'</td>
+   <td>Extra LDAP-filter som används vid sökning efter grupper. Det sista filtret är formaterat så här: (&amp;()&lt;nameattr&gt;=&lt;groupname&gt;)(objectclass=&lt;objectclass&gt;)&lt;extrafilter&gt;)'</td>
   </tr>
   <tr>
    <td><strong>Gruppera DN-sökvägar</strong></td>
@@ -140,7 +140,7 @@ Följande konfigurationsalternativ är tillgängliga för LDAP-identitetsleveran
   </tr>
   <tr>
    <td><strong>Gruppmedlemsattribut</strong></td>
-   <td>Gruppattribut som innehåller en eller flera medlemmar i en grupp.</td>
+   <td>Gruppattribut som innehåller en eller flera gruppmedlemmar.</td>
   </tr>
  </tbody>
 </table>
@@ -164,7 +164,7 @@ Följande konfigurationsalternativ är tillgängliga för Synkroniseringshantera
    <td>Varaktighet tills en synkroniserad användare går ut.</td>
   </tr>
   <tr>
-   <td><strong>Automatiskt medlemskap för användare</strong></td>
+   <td><strong>Automedlemskap för användare</strong></td>
    <td>Lista över grupper som en synkroniserad användare automatiskt läggs till i.</td>
   </tr>
   <tr>
@@ -222,6 +222,7 @@ Följande konfigurationsalternativ är tillgängliga:
 | **Namn på synkroniseringshanterare** | Synkroniseringshanterarens namn. |
 
 >[!NOTE]
+>
 Om du planerar att ha fler än en LDAP-konfiguration med din AEM-instans måste separata identitetsleverantörer och synkroniseringshanterare skapas för varje konfiguration.
 
 ## Konfigurera LDAP över SSL {#configure-ldap-over-ssl}
@@ -276,14 +277,14 @@ Om du vill aktivera felsökningsloggning måste du göra följande:
 1. Gå till webbhanteringskonsolen.
 1. Sök efter&quot;Konfiguration av loggningslogg för Apache Sling&quot; och skapa två loggare med följande alternativ:
 
-* Loggnivå: Felsök
+* Loggnivå: Felsökning
 * Loggfil logs/ldap.log
-* Meddelandemönster: {0,date,dd.MM.yyyy HH:mm:ss.SSS} &amp;ast;{4}&amp;ast; {2} {3} {5}
+* Meddelandemönster: {0,datum,dd.MM.yyyy HH:mm:ss.SSS} &amp;ast;{4}&amp;ast; {2} {3} {5}
 * Logger: org.apache.jackrabbit.oak.security.authentication.ldap
 
-* Loggnivå: Felsök
+* Loggnivå: Felsökning
 * Loggfil: logs/external.log
-* Meddelandemönster: {0,date,dd.MM.yyyy HH:mm:ss.SSS} &amp;ast;{4}&amp;ast; {2} {3} {5}
+* Meddelandemönster: {0,datum,dd.MM.yyyy HH:mm:ss.SSS} &amp;ast;{4}&amp;ast; {2} {3} {5}
 * Logger: org.apache.jackrabbit.oak.spi.security.authentication.external
 
 ## Ett ord om gruppanknytning {#a-word-on-group-affiliation}

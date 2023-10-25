@@ -1,7 +1,7 @@
 ---
 title: Identity Management
 seo-title: Identity Management
-description: Läs om identitetshantering i AEM.
+description: Läs om hur identitetshantering fungerar i AEM.
 seo-description: Learn about identity management in AEM.
 uuid: d9b83cd7-c47a-41a5-baa4-bbf385d13bfd
 contentOwner: Guillaume Carlino
@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 994a5751-7267-4a61-9bc7-01440a256c65
 docset: aem65
 exl-id: acb5b235-523e-4c01-9bd2-0cc2049f88e2
-source-git-commit: 1036127ae508ec76c868db5fb67709c104c51123
+source-git-commit: e54c1d422f2bf676e8a7b0f50a101e495c869c96
 workflow-type: tm+mt
-source-wordcount: '1250'
+source-wordcount: '1254'
 ht-degree: 0%
 
 ---
@@ -88,7 +88,7 @@ Eftersom det finns en inloggningsmekanism krävs också en utloggningsmekanism. 
 
 ## Visa och uppdatera en profil {#viewing-and-updating-a-profile}
 
-Beroende på ditt registreringsformulär kan besökaren ha registrerat information i sin profil. De bör kunna visa och/eller uppdatera detta i ett senare skede. Detta kan göras i en liknande form; i Geometrixx:
+Beroende på ditt registreringsformulär kan besökaren ha registrerat information i sin profil. De bör kunna visa och/eller uppdatera detta i ett senare skede. Detta kan göras med ett liknande formulär, t.ex. i Geometrixx:
 
 ```
 http://localhost:4502/content/geometrixx-outdoors/en/user/profile.html
@@ -99,23 +99,23 @@ Klicka på **Min profil** i det övre högra hörnet på en sida, till exempel m
 
 Du kan visa en annan profil med [klientkontext](/help/sites-administering/client-context.md) (i redigeringsmiljön och med tillräcklig behörighet):
 
-1. Öppna en sida; till exempel Geometrixx:
+1. Öppna en sida, till exempel Geometrixx:
 
    `http://localhost:4502/cf#/content/geometrixx/en.html`
 
-1. Klicka **Min profil** i det övre högra hörnet. Du ser profilen för ditt aktuella konto; till exempel administratören.
+1. Klicka **Min profil** längst upp till höger. Du ser profilen för ditt aktuella konto, till exempel administratören.
 1. Tryck **control-alt-C** för att öppna klientkontexten.
 1. Klicka på knappen längst upp till vänster i klientkontexten **Läs in en profil** -knappen.
 
    ![Läsa in en profilikon](do-not-localize/loadprofile.png)
 
-1. Välj en annan profil i listrutan i dialogrutan. till exempel **Alison Parker**.
+1. Välj en annan profil i listrutan i dialogrutan, till exempel **Alison Parker**.
 1. Klicka **OK**.
 1. Klicka igen **Min profil**. Formuläret uppdateras med Alisons information.
 
    ![Exempelprofil för Alison](assets/profilealison.png)
 
-1. Du kan nu använda **Redigera profil** eller **Ändra lösenord** för att uppdatera informationen.
+1. Nu kan du använda **Redigera profil** eller **Ändra lösenord** för att uppdatera informationen.
 
 ## Lägga till fält i profildefinitionen {#adding-fields-to-the-profile-definition}
 
@@ -163,7 +163,7 @@ Detta görs med:
 
   Om du vill hantera åtgärder relaterade till lägena.
 
-Flera lägen kan definieras; I Geometrixx är dessa till exempel:
+Flera lägen kan definieras. I Geometrixx ingår till exempel:
 
 * prenumerera (eller avbryta prenumerationen) på meddelanden i nyhetsbrev eller kommentarstrådar
 * lägga till och ta bort en anslutning till en vän
@@ -174,14 +174,14 @@ En lägesprovider hanterar den aktuella statusen för den aktuella egenskapen ti
 
 Statliga leverantörer implementeras som komponenter, så de kan anpassas för ditt projekt. Bland Geometrixx finns följande:
 
-* Un-/Subscription Forum Topic
+* Un-/prenumerationsforum
 * Lägg till/ta bort vän
 
 ### Arbetsflöden {#workflows}
 
 Statliga leverantörer hanterar en profilegenskap och dess lägen.
 
-Det behövs ett arbetsflöde för att implementera åtgärder som är relaterade till lägena. När du prenumererar på meddelanden hanterar arbetsflödet till exempel den faktiska prenumerationsåtgärden; När du avbryter prenumerationen på meddelanden kommer arbetsflödet att hantera borttagningen av användaren från prenumerationslistan.
+Det behövs ett arbetsflöde för att implementera åtgärder som är relaterade till lägena. När du prenumererar på meddelanden hanterar arbetsflödet till exempel den faktiska prenumerationsåtgärden. När du avbryter prenumerationen på meddelanden hanterar arbetsflödet borttagningen av användaren från prenumerationslistan.
 
 ## Profiler och användarkonton {#profiles-and-user-accounts}
 
@@ -202,7 +202,7 @@ Det gör att:
 * forum, kommentarer eller blogginlägg för att visa information (t.ex. ikon eller fullständigt namn) från lämplig profil
 * länkar till profilsidor för geometrixx
 
-Om sådan åtkomst inte är lämplig för din installation kan du ändra dessa standardinställningar.
+Om sådan åtkomst inte passar för installationen kan du ändra dessa standardinställningar.
 
 Detta kan du göra med **[Åtkomstkontroll](/help/sites-administering/user-group-ac-admin.md#access-right-management)** tab:
 
