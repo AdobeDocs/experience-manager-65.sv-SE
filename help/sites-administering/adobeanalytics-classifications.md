@@ -1,8 +1,8 @@
 ---
 title: Adobe-klassificeringar
 seo-title: Adobe Classifications
-description: Läs mer om Adobe Classifications.
-seo-description: Learn about Adobe Classifications.
+description: Lär dig hur du använder Adobe-klassificeringar för att exportera klassificeringsdata till Adobe Analytics.
+seo-description: Learn how to use Adobe Classifications to export classifications data to Adobe Analytics.
 uuid: 57fb59f4-da90-4fe7-a5b1-c3bd51159a16
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,20 +10,20 @@ topic-tags: integration
 content-type: reference
 discoiquuid: 6787511a-2ce0-421a-bcfb-90d5f32ad35e
 exl-id: 0e675ce8-ba3b-481d-949e-0c85c97054d2
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: c7c32130a3257c14c98b52f9db31d80587d7993a
 workflow-type: tm+mt
-source-wordcount: '600'
+source-wordcount: '609'
 ht-degree: 1%
 
 ---
 
 # Adobe-klassificeringar{#adobe-classifications}
 
-Klassificeringar i Adobe exporterar klassificeringsdata till [Adobe Analytics](/help/sites-administering/adobeanalytics.md) på ett planerat sätt. Exportören är en tillämpning av **com.adobe.cq.scheduled.exporting.Exporter**.
+Klassificeringar i Adobe exporterar klassificeringsdata till [Adobe Analytics](/help/sites-administering/adobeanalytics.md) på ett schemalagt sätt. Exportören är en tillämpning av **com.adobe.cq.scheduled.exporting.Exporter**.
 
 Så här konfigurerar du:
 
-1. Använda **Navigering**, markera **verktyg**, **Cloud Services** sedan **Äldre Cloud Services**.
+1. Använda **Navigering**, markera **verktyg**, **Cloud Service** sedan **Äldre Cloud Service**.
 1. Bläddra till **Adobe Analytics** och markera **Visa konfigurationer**.
 1. Klicka på **[+]** -länk bredvid din Adobe Analytics-konfiguration.
 

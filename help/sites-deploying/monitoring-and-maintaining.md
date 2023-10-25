@@ -1,6 +1,6 @@
 ---
 title: Övervaka och underhålla Adobe Experience Manager-instansen
-description: Lär dig övervaka AEM.
+description: Lär dig övervaka och underhålla din Adobe Experience Manager-instans.
 uuid: 14466552-5c92-4730-a427-85675a2b121c
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,9 +10,9 @@ discoiquuid: 5d2364b7-4497-4f8b-85ef-6e780bfb8c36
 docset: aem65
 feature: Configuring
 exl-id: d3375935-090d-4052-8234-68ef4ddbab6a
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: c7c32130a3257c14c98b52f9db31d80587d7993a
 workflow-type: tm+mt
-source-wordcount: '5933'
+source-wordcount: '5939'
 ht-degree: 0%
 
 ---
@@ -61,13 +61,13 @@ Ofta utförs en fullständig säkerhetskopiering med regelbundna intervall (t.ex
 
 >[!NOTE]
 >
->Mer information om prestanda vid säkerhetskopiering finns i [avsnittet Säkerhetskopiera prestanda](/help/sites-deploying/configuring-performance.md#backup-performance) .
+>Mer information om prestanda för säkerhetskopiering finns i [avsnittet Säkerhetskopieringsprestanda](/help/sites-deploying/configuring-performance.md#backup-performance) .
 
 ### Säkerhetskopiera din programvaruinstallation {#backing-up-your-software-installation}
 
-Efter installationen, eller betydande ändringar i konfigurationen, skapar du en säkerhetskopia av programvaruinstallationen.
+Efter installationen, eller betydande ändringar i konfigurationen, skapar du en säkerhetskopia av din programvaruinstallation.
 
-För att utföra den här uppgiften säkerhetskopierar [du hela databasen](#backing-up-your-repository) och gör sedan följande:
+För att utföra den här uppgiften, [säkerhetskopiera hela lagringsplatsen](#backing-up-your-repository) och sedan:
 
 1. Sluta AEM.
 1. Säkerhetskopiera hela `<cq-installation-dir>` från filsystemet.
@@ -178,7 +178,7 @@ Processen visar alla noder som har bearbetats. Under processen kan en nod ha nå
 Konsolen ger dessutom användbar information om versionerna:
 
 * `V 1.0`: versionsnumret.
-* `V 1.0.1`&#42;: stjärnan indikerar att versionen är den aktuella (bas) versionen och inte kan rensas.
+* `V 1.0.1`&#42;: Stjärnan anger att versionen är den aktuella (basversionen) och inte kan rensas.
 
 * `Thu Mar 15 2012 08:37:32 GMT+0100`: datum för versionen.
 
@@ -292,7 +292,7 @@ I vissa fall kanske du vill skapa en anpassad loggfil med en annan loggnivå. G�
 
    * Namn: `org.apache.sling.commons.log.LogManager.factory.config-<identifier>`
 
-     Där `<identifier>` ersätts med fritext som du (måste) ange för att identifiera instansen (du kan inte utelämna denna information).
+     Där `<identifier>` ersätts med fritext som du (måste) ange för att identifiera instansen (du kan inte utelämna den här informationen).
 
      Till exempel, `org.apache.sling.commons.log.LogManager.factory.config-MINE`
 
@@ -433,11 +433,11 @@ I vissa fall kanske du vill skapa en anpassad loggfil med en annan loggnivå. G�
    >för att ange när en ny fil skapas (och den befintliga filen får ett nytt namn enligt namnmönstret).
    >
    >* En storleksgräns kan anges med ett tal. Om ingen storleksindikator anges används den som antal byte, eller så kan du lägga till en av storleksindikatorerna - `KB`, `MB`, eller `GB` (skiftläge ignoreras).
-   >* Ett tids-/datumschema kan anges som ett `java.util.SimpleDateFormat` mönster. Den definierar tidsperioden efter vilken filen roteras. Dessutom läggs suffixet till den roterade filen (för identifiering).
+   >* Ett tids-/datumschema kan anges som ett `java.util.SimpleDateFormat` mönster. Den definierar den tidsperiod efter vilken filen roteras. Dessutom läggs suffixet till i den roterade filen (för identifiering).
    >
-   >Standardvärdet är &#39;.&#39;åååå-MM-dd (för daglig loggrotation).
+   >Standardvärdet är &#39;.&#39;yyyy-MM-dd (för daglig loggrotation).
    >
-   >Till exempel vid midnatt den 20 januari 2010 (eller när det första loggmeddelandet efter detta datum inträffar för att vara exakt), .. /logs/error.log har bytt namn till .. /loggar/fel.log.2010-01-20. Loggning för 21 januari matas ut till (en ny och tom) .. /logs/error.log tills den återställs vid nästa byte av dag.
+   >Till exempel vid midnatt den 20 januari 2010 (eller när det första loggmeddelandet efter detta datum inträffar för att vara exakt), .. /logs/error.log byter namn till .. /logs/error.log.2010-01-20. Loggning för 21 januari matas ut till (en ny och tom) .. /logs/error.log tills den rullas över vid nästa ändring av dagen.
    >
    >| `'.'yyyy-MM` | Rotation i början av varje månad |
    >|---|---|
@@ -1134,10 +1134,10 @@ Om det inte finns tillräckligt med diskutrymme på datorn eller om det uppstår
 * Oavsett om du har inaktiverat en samling felsökningsinformation kan den konfigureras på olika platser, bland annat följande:
 
    * [Apache Sling JSP Script Handler](/help/sites-deploying/osgi-configuration-settings.md#apacheslingjspscripthandler)
-   * [Apache Sling JavaScript-hanterare](/help/sites-deploying/osgi-configuration-settings.md#apacheslingjavascripthandler)
-   * [Konfiguration av Apache Sling Logging](/help/sites-deploying/osgi-configuration-settings.md#apacheslingloggingconfiguration)
+   * [JavaScript-hanterare för Apache Sling](/help/sites-deploying/osgi-configuration-settings.md#apacheslingjavascripthandler)
+   * [Konfiguration av Apache Sling-loggning](/help/sites-deploying/osgi-configuration-settings.md#apacheslingloggingconfiguration)
    * [CQ HTML-bibliotekshanterare](/help/sites-deploying/osgi-configuration-settings.md#daycqhtmllibrarymanager)
-   * [CQ WCM felsökningsfilter](/help/sites-deploying/osgi-configuration-settings.md#daycqwcmdebugfilter)
+   * [Felsökningsfilter för CQ WCM](/help/sites-deploying/osgi-configuration-settings.md#daycqwcmdebugfilter)
    * [Loggers](/help/sites-deploying/monitoring-and-maintaining.md#activating-the-debug-log-level)
 
 * Om och hur du har konfigurerat [Rensning av version](/help/sites-deploying/version-purging.md)
@@ -1148,7 +1148,7 @@ Om det inte finns tillräckligt med diskutrymme på datorn eller om det uppstår
 
 ### Regelbunden prestandaförsämring {#regular-performance-degradation}
 
-Om du ser att instansens prestanda försämras efter varje omstart (ibland en vecka eller senare) kan följande kontrolleras:
+Om du ser att instansens prestanda försämras efter varje omstart (ibland en vecka eller senare) kan du kontrollera följande:
 
 * [Slut på minne](#outofmemory)
 * Kunskapsbasen:

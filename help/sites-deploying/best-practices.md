@@ -1,14 +1,14 @@
 ---
 title: Distribuera bästa praxis
-description: Driftsätta och underhålla bästa praxis.
+description: Lär dig hur du driftsätter och underhåller Adobe Experience Manager (AEM) på det mest effektiva och effektiva sättet.
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: best-practices
 exl-id: 4cbc0a30-d5f6-40ff-b7f6-8d64762e1970
-source-git-commit: fd937341e26edd0c3edfced8e862066ebc30f9a3
+source-git-commit: c7c32130a3257c14c98b52f9db31d80587d7993a
 workflow-type: tm+mt
-source-wordcount: '434'
+source-wordcount: '447'
 ht-degree: 0%
 
 ---
@@ -80,7 +80,7 @@ De bästa sätten att använda användargränssnittet beskrivs här:
 
 [Användargränssnitt Recommendations för kunder](/help/sites-deploying/ui-recommendations.md)
 
-AEM har för närvarande två gränssnitt: klassiskt och pekoptimerat gränssnitt i samma version. Därför måste kunderna fatta ett beslut om vilken användning som ska ske under projektets genomförande. Det här dokumentet är avsett att hjälpa till att hitta rätt alternativ.
+AEM har för närvarande två användargränssnitt: klassiskt och pekoptimerat användargränssnitt i samma version. Därför måste kunderna fatta ett beslut om vilken användning som ska ske under projektets genomförande. Det här dokumentet är avsett att hjälpa till att hitta rätt alternativ.
 
 ## Prestanda {#performance}
 

@@ -1,7 +1,7 @@
 ---
-title: Felsöka ekindex
+title: Felsökning av aktivitetsindex
 seo-title: Troubleshooting Oak Indexes
-description: Identifiera och åtgärda långsam omindexering.
+description: Lär dig hur du identifierar om indexeringen är långsam, hittar orsaken och löser problemet.
 uuid: 6567ddae-128c-4302-b7e8-8befa66b1f43
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -9,14 +9,14 @@ content-type: reference
 topic-tags: deploying
 discoiquuid: ea70758f-6726-4634-bfb4-a957187baef0
 exl-id: 85981463-189c-4f50-9d21-1d2f734b960a
-source-git-commit: 3d713021ac410ca2925a282c5dfca98ed4e483ee
+source-git-commit: c7c32130a3257c14c98b52f9db31d80587d7993a
 workflow-type: tm+mt
-source-wordcount: '1465'
+source-wordcount: '1473'
 ht-degree: 0%
 
 ---
 
-# Felsöka ekindex{#troubleshooting-oak-indexes}
+# Felsökning av aktivitetsindex{#troubleshooting-oak-indexes}
 
 ## Långsam omindexering  {#slow-re-indexing}
 
@@ -30,13 +30,13 @@ Se [Metodtips för frågor och indexering](/help/sites-deploying/best-practices-
 
 Inledande identifiering av långsam indexering kräver granskning av `IndexStats` JMX MBeans. Gör följande på den påverkade AEM:
 
-1. Öppna webbkonsolen och klicka på fliken JMX eller gå till https://&lt;host>:&lt;port>/system/console/jmx (t.ex. [http://localhost:4502/system/console/jmx](http://localhost:4502/system/console/jmx)).
+1. Öppna webbkonsolen och klicka på fliken JMX eller gå till https://&lt;host>:&lt;port>/system/console/jmx (till exempel [http://localhost:4502/system/console/jmx](http://localhost:4502/system/console/jmx)).
 1. Navigera till `IndexStats` Mönster.
-1. Öppna `IndexStats` MBeans for &quot; `async`&quot; och &quot; `fulltext-async`&quot;.
+1. Öppna `IndexStats` MBeans for &quot; `async`och &quot; `fulltext-async`&quot;.
 
 1. Kontrollera om **Klar** tidsstämpel och **LastIndexTime** tidsstämpeln är mindre än 45 minuter från den aktuella tiden.
 
-1. För MBean, om tidsvärdet (**Klar** eller **LastIndexedTime**) är längre än 45 minuter från den aktuella tiden. Indexjobbet misslyckas eller tar för lång tid. Detta problem gör att asynkrona index blir inaktuella.
+1. För antingen MBean, om tidsvärdet (**Klar** eller **LastIndexedTime**) är längre än 45 minuter från den aktuella tiden. Indexjobbet misslyckas eller tar för lång tid. Detta problem gör att asynkrona index blir inaktuella.
 
 ## Indexeringen pausas efter en tvingad avstängning {#indexing-is-paused-after-a-forced-shutdown}
 
@@ -59,9 +59,9 @@ I undantagsfall kan den trådpool som används för att hantera asynkron indexer
 
 1. Definiera en ny isolerad trådpool för Apache Sling Scheduler som ska användas för asynkron indexering:
 
-   * På den berörda AEM-instansen går du till AEM OSGi Web Console>OSGi>Configuration>Apache Sling Scheduler eller går till https://&lt;host>:&lt;port>/system/console/configMgr (t.ex. [http://localhost:4502/system/console/configMgr](http://localhost:4502/system/console/configMgr))
+   * I den berörda AEM går du till AEM OSGi Web Console>OSGi>Configuration>Apache Sling Scheduler eller till https://&lt;host>:&lt;port>/system/console/configMgr (till exempel [http://localhost:4502/system/console/configMgr](http://localhost:4502/system/console/configMgr))
    * Lägg till en post i fältet Tillåtna trådpooler med värdet eke.
-   * Spara ändringarna genom att klicka på **Spara** längst ned till höger.
+   * Klicka på **Spara** längst ned till höger.
 
    ![chlimage_1-119](assets/chlimage_1-119.png)
 
@@ -79,13 +79,13 @@ I undantagsfall kan den trådpool som används för att hantera asynkron indexer
 
 Om för många ändringar och implementeringar görs i databasen på kort tid kan indexeringen fördröjas på grund av en fullständig observationskö. Kontrollera först om observationskön är full:
 
-1. Gå till webbkonsolen och klicka på fliken JMX eller gå till https://&lt;host>:&lt;port>/system/console/jmx (t.ex. [http://localhost:4502/system/console/jmx](http://localhost:4502/system/console/jmx))
+1. Gå till webbkonsolen och klicka på fliken JMX eller gå till https://&lt;host>:&lt;port>/system/console/jmx (till exempel [http://localhost:4502/system/console/jmx](http://localhost:4502/system/console/jmx))
 1. Öppna MBean för Oak Repository-statistik och kontrollera om det finns några `ObservationQueueMaxLength` värdet är större än 10 000.
 
    * Vid normal användning måste det här maxvärdet alltid minskas till noll (särskilt i `per second` -avsnittet) så verifiera att `ObservationQueueMaxLength`Sekundärstatistik är 0.
    * Om värdena är 10 000 eller fler och ökar stadigt innebär det att minst en (eventuellt fler) kö inte kan bearbetas så fort nya ändringar (implementeringar) inträffar.
    * Varje observationskö har en gräns (10 000 som standard) och om kön når den gränsen försämras hanteringen.
-   * När du använder MongoMK försämras prestanda för intern ekacache när kölängden blir stor. Denna korrelation kan ses vid en ökad `missRate` för `DocChildren` i `Consolidated Cache` statistik MBean.
+   * När du använder MongoMK försämras prestanda för intern ekacache när kölängden blir stor. Denna korrelation kan ses vid en ökad `missRate` för `DocChildren` cachelagra i `Consolidated Cache` statistik MBean.
 
 1. För att undvika att överskrida tillåtna gränser för observationsköer bör du:
 
@@ -111,24 +111,24 @@ Så här identifierar och korrigerar du en fast omindexeringsprocess:
 
       * *org.apache.jackrabbit.oak.plugins.index.AsyncIndexUpdate*
       * *org.apache.jackrabbit.oak.plugins.index.IndexUpdate*
+
    * Samla in data från asynkron `IndexStats` MBean:
 
       * Navigera till AEM OSGi Web Console>Main>JMX>IndexStat>async
 
-         eller gå till [http://localhost:4502/system/console/jmx/org.apache.jackrabbit.oak%3Aname%3Dasync%2Ctype%3DIndexStats](http://localhost:4502/system/console/jmx/org.apache.jackrabbit.oak%3Aname%3Dasync%2Ctype%3DIndexStats)
+        eller gå till [http://localhost:4502/system/console/jmx/org.apache.jackrabbit.oak%3Aname%3Dasync%2Ctype%3DIndexStats](http://localhost:4502/system/console/jmx/org.apache.jackrabbit.oak%3Aname%3Dasync%2Ctype%3DIndexStats)
+
    * Använd [oak-run.jar konsolläge](https://github.com/apache/jackrabbit-oak/tree/trunk/oak-run) för att samla in uppgifter om vad som finns under * `/:async`* nod.
    * Samla in en lista med databaskontrollpunkter med `CheckpointManager` MBean:
 
       * AEM OSGi Web Console>Main>JMX>CheckpointManager>listCheckpoints()
 
-         eller gå till [http://localhost:4502/system/console/jmx/org.apache.jackrabbit.oak%3Aname%3DSegment+node+store+checkpoint+management%2Ctype%3DCheckpointManager](http://localhost:4502/system/console/jmx/org.apache.jackrabbit.oak%3Aname%3DSegment+node+store+checkpoint+management%2Ctype%3DCheckpointManager)
-
-
+        eller gå till [http://localhost:4502/system/console/jmx/org.apache.jackrabbit.oak%3Aname%3DSegment+node+store+checkpoint+management%2Ctype%3DCheckpointManager](http://localhost:4502/system/console/jmx/org.apache.jackrabbit.oak%3Aname%3DSegment+node+store+checkpoint+management%2Ctype%3DCheckpointManager)
 
 1. När du har samlat in all information som beskrivs i steg 1 startar du om AEM.
 
    * Att starta om AEM kan lösa problemet om det finns en hög samtidig belastning (spill i observationskön eller något liknande).
-   * Om en omstart inte löser problemet kan du öppna ett problem med [Adobe kundtjänst](https://experienceleague.adobe.com/?support-solution=General&amp;support-tab=home#support) och tillhandahålla all information som samlats in i steg 1.
+   * Om en omstart inte löser problemet öppnar du ett problem med [Adobe kundtjänst](https://experienceleague.adobe.com/?support-solution=General&amp;support-tab=home#support) och tillhandahålla all information som samlats in i steg 1.
 
 ## Säkert avbrytande av asynkron omindexering {#safely-aborting-asynchronous-re-indexing}
 
@@ -141,7 +141,7 @@ Så här avbryter du omindexering:
 
 1. Identifiera det IndexStats MBean som styr det omindexeringsintervall som måste stoppas.
 
-   * Navigera till rätt IndexStats MBean via JMX-konsolen genom att antingen gå till AEM OSGi Web Console>Main>JMX eller https://&lt;host>:&lt;port>/system/console/jmx (t.ex. [http://localhost:4502/system/console/jmx](http://localhost:4502/system/console/jmx))
+   * Navigera till rätt IndexStats MBean via JMX-konsolen genom att antingen gå till AEM OSGi Web Console>Main>JMX eller https://&lt;host>:&lt;port>/system/console/jmx (till exempel [http://localhost:4502/system/console/jmx](http://localhost:4502/system/console/jmx))
    * Öppna IndexStats MBean baserat på det omindexeringsfält som du vill stoppa ( `async`, `async-reindex`, eller `fulltext-async`)
 
       * Titta på egenskapen async för att identifiera lämpligt intervall och därmed instansen IndexStats MBean. Egenskapen &quot;async&quot; innehåller körfältets namn: `async`, `async-reindex`, eller `fulltext-async`.
@@ -150,16 +150,18 @@ Så här avbryter du omindexering:
    ![chlimage_1-121](assets/chlimage_1-121.png)
 
 1. Anropa `abortAndPause()` kommando på lämplig `IndexStats` MBean.
-1. Markera indexdefinitionen för att förhindra att indexeringen återupptas när indexeringsintervallet återupptas.
+1. Markera indexdefinitionen för att förhindra att indexering återupptas när indexeringsintervallet återupptas.
 
    * När en **befintlig** index, ange egenskapen reindex till false
 
       * `/oak:index/someExistingIndex@reindex=false`
-   * Eller, för **new** index, antingen:
+
+   * Eller, för **new** index, antingen
 
       * Ange att type-egenskapen ska vara inaktiverad
 
          * `/oak:index/someNewIndex@type=disabled`
+
       * eller ta bort indexdefinitionen helt
 
    Genomför ändringarna i databasen när de är klara.

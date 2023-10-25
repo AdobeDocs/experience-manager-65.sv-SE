@@ -1,15 +1,15 @@
 ---
 title: Analyser med externa leverantörer
-description: Lär dig mer om Analytics med externa leverantörer.
+description: Lär dig hur du konfigurerar en egen instans av Generic Analytics-kodfragment för att definiera en ny tjänstkonfiguration.
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
 content-type: reference
 docset: aem65
 exl-id: 9bf818f9-6e33-4557-b2e4-b0d4900f2a05
-source-git-commit: 1ef5593495b4bf22d2635492a360168bccc1725d
+source-git-commit: c7c32130a3257c14c98b52f9db31d80587d7993a
 workflow-type: tm+mt
-source-wordcount: '435'
+source-wordcount: '446'
 ht-degree: 0%
 
 ---
@@ -64,7 +64,7 @@ Sådana fragment gör det möjligt att samla in data och generera rapporter. De 
 För den grundläggande konfigurationen:
 
 1. Öppna **verktyg** konsol.
-1. Expandera från den vänstra rutan **Konfigurationer av Cloud Services**.
+1. Expandera från den vänstra rutan **Konfigurationer av Cloud Service**.
 1. Dubbelklicka **Kodavsnitt för allmän analys** för att öppna sidan:
 
    ![Kodavsnitt för allmän analys](assets/analytics_genericoverview.png)
@@ -84,13 +84,13 @@ För den grundläggande konfigurationen:
 När du har skapat tjänstkonfigurationen måste du nu konfigurera de sidor som krävs för att använda den:
 
 1. Navigera till sidan.
-1. Öppna **Sidegenskaper** från sidesparken, sedan **Cloud Services** -fliken.
+1. Öppna **Sidegenskaper** från sidesparken, sedan **Cloud Service** -fliken.
 1. Klicka **Lägg till tjänst** väljer du sedan önskad tjänst. Till exempel **Kodavsnitt för allmän analys**:
 
    ![Lägga till en molntjänst](assets/analytics_selectservice.png)
 
 1. Klicka **OK** att spara.
-1. Du kommer tillbaka till **Cloud Services** -fliken. The **Kodavsnitt för allmän analys** visas nu med meddelandet `Configuration reference missing`. Använd listrutan för att välja en specifik tjänstinstans. Till exempel Google-analys:
+1. Du kommer tillbaka till **Cloud Service** -fliken. The **Kodavsnitt för allmän analys** visas nu med meddelandet `Configuration reference missing`. Använd listrutan för att välja en specifik tjänstinstans. Till exempel Google-analytics:
 
    ![Lägger till molntjänstkonfiguration](assets/analytics_selectspecificservice.png)
 
