@@ -5,9 +5,9 @@ role: Admin
 feature: Integrations
 exl-id: 2660de7c-0281-4884-98d9-e78f20cf571c
 hide: true
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: a07765f95f01f05a30dce14138f75e7edbe94ae2
 workflow-type: tm+mt
-source-wordcount: '1619'
+source-wordcount: '1624'
 ht-degree: 0%
 
 ---
@@ -77,6 +77,7 @@ Metadatamappning mellan Workfront-projekt och AEM-mappar definieras AEM mappmeta
 
 Så här konfigurerar du mappningarna:
 
+1. Lägg till `jcr:read` behörigheter till `/conf/global/settings/dam/adminui-extension/foldermetadataschema` for `wf-workfront-users` grupp.
 1. Navigera till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Folder Metadata Schemas]**.
 1. Markera det mappmetadatamatchschema som du vill redigera och klicka på Redigera.
 1. Markera det formulärfält för mappmetadatamatchema som du vill redigera och välj fliken Inställningar på den högra panelen.
