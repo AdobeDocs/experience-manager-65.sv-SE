@@ -1,8 +1,7 @@
 ---
 title: Finjustera prestanda för hälsoövervakning
 seo-title: Fine-tuning Health Monitor performance
-description: Lär dig finjustera prestanda för hälsoövervakning
-seo-description: Learn how to fine-tune Health Monitor performance
+description: Lär dig hur du finjusterar prestandan för hälsoövervakaren. Styr systemstatistiken som påverkar formulärmiljöns prestanda med JAVA-inställningsalternativet.
 uuid: 770b10cb-065f-41b5-9594-a291e4311151
 contentOwner: admin
 content-type: reference
@@ -10,9 +9,9 @@ geptopics: SG_AEMFORMS/categories/health_monitor
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: b8f8bddc-0d38-4d5e-b33f-978f04bc16c6
 exl-id: 41042e08-5e14-4809-89b7-16d98a72d1b4
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 6caf3ef4a00275f0f73be52b6a9ccba77d277f1a
 workflow-type: tm+mt
-source-wordcount: '407'
+source-wordcount: '422'
 ht-degree: 0%
 
 ---
@@ -75,7 +74,7 @@ När du samlar in systemstatistik som fyller i hälsoövervakaren påverkas pres
 1. Skriv användarnamnet och lösenordet som du skapade för WebLogic Server-domänen och klicka på Logga under Change Center och klicka på Lock &amp; Edit.
 1. Klicka på Miljö > Servrar under Domänstruktur och klicka på namnet på den hanterade servern i den högra panelen.
 1. På nästa skärm klickar du på fliken Konfiguration > fliken Serverstart.
-1. I rutan Argument lägger du till de argument du vill ha i slutet av det aktuella innehållet. Till exempel lägger du till - `Dadobe.healthmonitor.enabled=false` inaktiverar hälsoövervakning.
+1. I rutan Argument lägger du till de argument du vill ha i slutet av det aktuella innehållet. Lägg till - `Dadobe.healthmonitor.enabled=false` inaktiverar hälsoövervakning.
 1. Klicka på Spara och sedan på Aktivera ändringar.
 1. Starta om WebLogic-hanterad server.
 
@@ -85,10 +84,10 @@ När du samlar in systemstatistik som fyller i hälsoövervakaren påverkas pres
 
    (WebSphere 6.x) Klicka på Servrar > Programservrar
 
-   (WebSphere 7.x) Klicka på Servrar > Servertyper > WebSphere-programservrar
+   (WebSphere 7.x) Klicka på Servrar > Servertyper > Webbplatsprogramservrar
 
 1. Klicka på servernamnet i den högra rutan.
 1. Under Serverinfrastruktur klickar du på arbetsflödet Java och formulär > Processdefinition.
 1. Klicka på Java Virtual Machine under Additional Properties (Ytterligare egenskaper).
 1. Skriv de argument du vill ha i rutan Allmänt om JVM-argument.
-1. Klicka på OK eller Använd och sedan på Spara direkt i den överordnad konfigurationen.
+1. Klicka på OK eller Använd och sedan på Spara direkt i huvudkonfigurationen.

@@ -1,8 +1,6 @@
 ---
 title: Synkronisera adaptiv Forms med XFA-formulärmallar
-seo-title: Synchronizing Adaptive Forms with XFA Form Templates
-description: Synkronisera adaptiva formulär med XFA-/XDP-filer.
-seo-description: Synchronizing Adaptive forms with XFA/XDP files.
+description: Lär dig synkronisera formulär med XFA-/XDP-filer. Fälten i formulär som synkroniserats med ändringar som gjorts i motsvarande fält i XFA-/XDP-filerna återanvänds.
 uuid: 92818132-1ae0-4576-84f2-ece485a34457
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
@@ -10,9 +8,9 @@ discoiquuid: dac4539b-804d-4420-9170-68000ebb2638
 docset: aem65
 feature: Adaptive Forms
 exl-id: fed67c23-a9b7-403e-9199-dfd527d5f209
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 6caf3ef4a00275f0f73be52b6a9ccba77d277f1a
 workflow-type: tm+mt
-source-wordcount: '1211'
+source-wordcount: '1231'
 ht-degree: 0%
 
 ---
@@ -23,7 +21,7 @@ ht-degree: 0%
 
 ## Introduktion {#introduction}
 
-Du kan skapa ett anpassat formulär baserat på en XFA-formulärmall ( `*.XDP` fil). Tack vare detta återanvändande kan du behålla din investering i befintliga XFA-formulär. Information om hur du använder en XFA-formulärmall för att skapa ett anpassat formulär finns i [Skapa ett anpassat formulär baserat på en mall](../../forms/using/creating-adaptive-form.md#p-create-an-adaptive-form-based-on-an-xfa-form-template-p).
+Du kan skapa ett adaptivt formulär baserat på en XFA-formulärmall ( `*.XDP` fil). Tack vare detta återanvändande kan du behålla din investering i befintliga XFA-formulär. Information om hur du använder en XFA-formulärmall för att skapa ett anpassat formulär finns i [Skapa ett anpassat formulär baserat på en mall](../../forms/using/creating-adaptive-form.md#p-create-an-adaptive-form-based-on-an-xfa-form-template-p).
 
 Du kan återanvända fält från XDP-filen i ditt adaptiva formulär. Dessa fält kallas för binda fält. Egenskaperna för de bindade fälten (till exempel skript, etiketter och visningsformat) kopieras från XDP-filen. Du kan också välja att åsidosätta värdet för vissa av dessa egenskaper.
 

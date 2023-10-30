@@ -1,8 +1,6 @@
 ---
 title: Ange teckensnitt som ska bäddas in
-seo-title: Specifying fonts to embed
-description: Lär dig hur du anger teckensnitt som ska bäddas in.
-seo-description: Learn how to specify fonts to embed.
+description: Lär dig hur du anger teckensnitt som ska bäddas in i ett anpassat formulär. Du kan ange vilka teckensnitt som är inbäddade eller aldrig inbäddade med formulär som genereras av Forms-tjänsten.
 uuid: 97de6f98-ed3b-4a93-854a-193a967b4672
 contentOwner: admin
 content-type: reference
@@ -10,9 +8,9 @@ geptopics: SG_AEMFORMS/categories/configuring_forms
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 4c83694c-b00f-40be-9ac4-f5785cd60741
 exl-id: b2cbf5f3-ee13-47bf-bf7f-f6a1884cee66
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 6caf3ef4a00275f0f73be52b6a9ccba77d277f1a
 workflow-type: tm+mt
-source-wordcount: '238'
+source-wordcount: '258'
 ht-degree: 0%
 
 ---

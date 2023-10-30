@@ -1,8 +1,6 @@
 ---
 title: Konfigurera e-postslutpunkter
-seo-title: Configuring email endpoints
-description: Lär dig hur du konfigurerar e-postslutpunkter.
-seo-description: Learn how to configure email endpoints.
+description: Lär dig hur du konfigurerar e-postslutpunkter. Med e-postslutpunkter kan du anropa en tjänst genom att skicka ett eller flera dokument till ett angivet e-postkonto.
 uuid: d47bb45b-0e0e-43ca-9e25-e347d0e60206
 contentOwner: admin
 content-type: reference
@@ -10,9 +8,9 @@ geptopics: SG_AEMFORMS/categories/managing_endpoints
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: dcf15c42-9ec6-4d1c-ad41-083aa0b8c7ae
 exl-id: 33583a12-4f20-4146-baa4-c9854e454bbf
-source-git-commit: 1cdd15800548362ccdd9e70847d9df8ce93ee06e
+source-git-commit: 6caf3ef4a00275f0f73be52b6a9ccba77d277f1a
 workflow-type: tm+mt
-source-wordcount: '3757'
+source-wordcount: '3776'
 ht-degree: 0%
 
 ---
@@ -51,12 +49,12 @@ Du kan konfigurera POP3, IMAP eller SMTP så att Secure Sockets Layer (SSL) anv�
    `keytool -import -file client_certificate -alias myalias -keystore BEA_HOME\jdk150_04\jre\security\cacerts`
 
 1. Ange lösenordet (för Java är standardlösenordet `changeit`). Du får ett meddelande om att certifikatet har importerats.
-1. Använd administrationskonsolen för att lägga till e-postslutpunkten i tjänsten.
+1. Använd administrationskonsolen för att lägga till e-postslutpunkten till tjänsten.
 1. Skapa e-postslutpunkten i administrationskonsolen. När du konfigurerar slutpunktsinställningarna väljer du POP3/IMAP SSL aktiverat för inkommande meddelanden och SMTP SSL aktiverat för utgående meddelanden, och ändrar portegenskaperna därefter.
 
 >[!NOTE]
 >
->Tips: Om du får problem när du använder SSL kan du använda en e-postklient som Microsoft Outlook för att kontrollera om den kan komma åt e-postservern med SSL. Om e-postklienten inte har åtkomst till e-postservern är problemet relaterat till konfigurationen av antingen ditt certifikat eller e-postservern.
+>Tips! Om du får problem med SSL kan du använda en e-postklient som Microsoft Outlook för att kontrollera om den har åtkomst till e-postservern med SSL. Om e-postklienten inte har åtkomst till e-postservern är problemet relaterat till konfigurationen av antingen ditt certifikat eller e-postservern.
 
 ## Konfigurera standardinställningar för e-postslutpunkt {#configure-default-email-endpoint-settings}
 
@@ -67,7 +65,7 @@ För att formulärarbetsflöden ska kunna ta emot och hantera inkommande e-postm
 ### Ändra standardvärden för e-postslutpunkter {#change-the-default-values-for-email-endpoints}
 
 1. I administrationskonsolen klickar du på Tjänster > Program och tjänster > Tjänsthantering.
-1. Klicka på E-post på sidan Tjänsthantering: 1.0 (komponent-ID:t är com.adobe.idp.dsc.provider.service.email.Email).
+1. På sidan Tjänsthantering klickar du på E-post: 1.0 (komponent-ID:t är com.adobe.idp.dsc.provider.service.email.Email).
 1. Ange standardinställningarna för e-postslutpunkten på fliken Konfiguration och klicka sedan på Spara.
 
 ### Standardinställningar för e-postslutpunkt {#default-email-endpoint-settings}
@@ -84,7 +82,7 @@ För att formulärarbetsflöden ska kunna ta emot och hantera inkommande e-postm
 
 **Asynkron:** Identifierar anropstypen som asynkron eller synkron. Övergående och synkrona processer kan bara anropas synkront. Standardvärdet är asynkront.
 
-**Domänmönster:** Det domännamnsmönster som används för att filtrera inkommande e-post. Om du till exempel använder adobe.com kommer endast e-post från adobe.com att bearbetas; e-post från andra domäner ignoreras.
+**Domänmönster:** Det domännamnsmönster som används för att filtrera inkommande e-post. Om du till exempel använder adobe.com kommer endast e-post från adobe.com att bearbetas, och e-post från andra domäner ignoreras.
 
 **Filmönster:** Inkommande mönster för bifogade filer som accepteras av providern. Detta inkluderar filer som har specifika tillägg (&amp;ast;.dat, &amp;ast;.xml), specifika namn (data) och sammansatta uttryck i namnet och tillägget (.[dD][aA]port). Standardvärdet är &amp;ast;.&amp;ast;.
 
@@ -96,17 +94,17 @@ För att formulärarbetsflöden ska kunna ta emot och hantera inkommande e-postm
 
 **Inkorgsport:** Inkorgsportnumret som e-postleverantören ska skanna. Om värdet är 0 används IMAP- eller POP3-standardporten.
 
-**Inkorgsprotokoll:** E-postprotokollet för e-postslutpunkten som ska användas för att skanna inkorgen. Alternativen är IMAP eller POP3. Inkorgens värdserver för e-post måste ha stöd för dessa protokoll.
+**Inkorgsprotokoll:** E-postprotokollet för e-postslutpunkten som ska användas för att skanna inkorgen. Alternativen är IMAP eller POP3. Inkorgens värdserver för e-post måste stödja dessa protokoll.
 
 **Inkorgens timeout:** Anger hur lång tid slutpunkten ska vänta innan den avbryts när den försöker ansluta till inkorgen. Om ingen anslutning hämtas innan timeout-värdet har nåtts avsöks inte inkorgen.
 
 **Inkorgsanvändare:** Användarnamnet som krävs för att logga in på e-postkontot. Beroende på e-postservern och konfigurationen kan det här namnet endast vara användarnamnsdelen i e-postmeddelandet eller den fullständiga e-postadressen.
 
-**Inkorgslösenord:** Lösenordet för Inkorgen-användaren.
+**Inkorg:** Lösenordet för Inkorgen-användaren.
 
 **POP3/IMAP SSL aktiverat:** När det här alternativet är markerat aktiveras SSL.
 
-**SMTP-värd:** Värdnamnet för den e-postserver som e-postleverantören använder för att skicka resultat och felmeddelanden. Till exempel mail.example.com.
+**SMTP-värd:** Värdnamnet för den e-postserver som e-postleverantören använder för att skicka resultat och felmeddelanden. Exempel: mail.example.com.
 
 **SMTP-port:** Den port som används för att ansluta till e-postservern. Standardvärdet är 25.
 
@@ -150,7 +148,7 @@ Använd följande inställningar för att konfigurera en e-postslutpunkt.
 
 **Cron-uttryck:** Ange ett cron-uttryck om e-postmeddelandet måste schemaläggas med ett cron-uttryck.
 
-**Antal upprepningar:** Antal gånger som e-postslutpunkten skannar mappen eller katalogen. Värdet -1 anger obestämd skanning. Standardvärdet är -1.
+**Antal upprepningar:** Antal gånger som e-postslutpunkten skannar mappen eller katalogen. Värdet -1 anger oändlig skanning. Standardvärdet är -1.
 
 **Upprepa intervall:** Den skanningsfrekvens som mottagaren använder för att kontrollera inkommande e-post.
 
@@ -162,7 +160,7 @@ Använd följande inställningar för att konfigurera en e-postslutpunkt.
 
 **Domännamn:** En obligatorisk inställning, som är användarens domän. Standardvärdet är DefaultDom.
 
-**Domänmönster:** Anger domänmönster för inkommande e-post som accepteras av providern. Om du till exempel använder adobe.com behandlas endast e-post från adobe.com; e-post från andra domäner ignoreras.
+**Domänmönster:** Anger domänmönster för inkommande e-post som accepteras av providern. Om du till exempel använder adobe.com bearbetas bara e-post från adobe.com. E-post från andra domäner ignoreras.
 
 **Filmönster:** Anger mönster för inkommande bifogade filer som accepteras av providern. Detta inkluderar filer som har specifika tillägg (&amp;ast;.dat, &amp;ast;.xml), specifika namn (data) eller sammansatta uttryck i namn och tillägg (&amp;ast;).[dD][aA]port).
 
@@ -170,7 +168,7 @@ Använd följande inställningar för att konfigurera en e-postslutpunkt.
 
 Om du vill inaktivera den här inställningen lämnar du inställningen tom. I vissa fall vill du utlösa en process och inte få ett e-postmeddelande om resultatet.
 
-**Jobbmottagare misslyckades:** En e-postadress dit meddelanden skickas för att ange misslyckade jobb. Som standard skickas alltid ett felmeddelande till avsändaren. Om du skriver avsändare skickas e-postresultaten till avsändaren. Stöd för upp till 100 mottagare. Ange ytterligare mottagare med e-postadresser, avgränsade med kommatecken (,).
+**Jobbmottagare misslyckades:** En e-postadress dit meddelanden skickas för att ange misslyckade jobb. Som standard skickas alltid ett meddelande om misslyckat jobb till avsändaren. Om du skriver avsändare skickas e-postresultaten till avsändaren. Stöd för upp till 100 mottagare. Ange ytterligare mottagare med e-postadresser, avgränsade med kommatecken (,).
 
 Om du vill inaktivera den här inställningen lämnar du inställningen tom. I vissa fall vill du utlösa en process och inte få ett e-postmeddelande om resultatet.
 
@@ -178,15 +176,15 @@ Om du vill inaktivera den här inställningen lämnar du inställningen tom. I v
 
 **Inkorgsport:** Den port som e-postservern använder. Standardvärdet för POP3 är 110 och standardvärdet för IMAP är 143. Om SSL är aktiverat är standardvärdet för POP3 995 och standardvärdet för IMAP är 993.
 
-**Inkorgsprotokoll:** E-postprotokollet för e-postslutpunkten som ska användas för att skanna inkorgen. Värdena är IMAP eller POP3. Inkorgens värdserver för e-post måste ha stöd för dessa protokoll.
+**Inkorgsprotokoll:** E-postprotokollet för e-postslutpunkten som ska användas för att skanna inkorgen. Värdena är IMAP eller POP3. Inkorgens värdserver för e-post måste stödja dessa protokoll.
 
 **Inkorgens timeout:** Tidsgränsen i sekunder för e-postprovidern att vänta på inkorgssvar.
 
 **Inkorgsanvändare:** Användarnamnet som krävs för att logga in på e-postkontot. Beroende på e-postservern och konfigurationen kan det här värdet vara endast användarnamnsdelen i e-postmeddelandet eller den fullständiga e-postadressen.
 
-**Inkorgslösenord:** Lösenordet för inkorgsanvändaren.
+**Inkorg:** Lösenordet för inkorgsanvändaren.
 
-**POP3/IMAP SSL aktiverat:** Välj den här inställningen för att tvinga e-postleverantören att använda SSL för att skanna inkorgen. Kontrollera att e-postservern har stöd för SSL.
+**POP3/IMAP SSL aktiverat:** Välj den här inställningen för att tvinga e-postleverantören att använda SSL för att skanna inkorgen. Kontrollera att e-postservern stöder SSL.
 
 **SMTP-värd:** Värdnamnet på den e-postserver som e-postleverantören använder för att skicka resultat och felmeddelanden.
 
@@ -198,13 +196,13 @@ Om du vill inaktivera den här inställningen lämnar du inställningen tom. I v
 
 **Skicka från:** E-postadressen (till exempel user@company.com) som används för att skicka e-postmeddelanden om resultat och fel. Om du inte anger något Skicka från-värde försöker e-postservern att fastställa e-postadressen genom att kombinera värdet som anges i inställningen SMTP-användare med en standarddomän som konfigurerats på e-postservern. Om e-postservern inte har någon standarddomän och du inte anger något värde för Skicka från, kan fel uppstå. Om du vill vara säker på att e-postmeddelandena har rätt från-adress anger du ett värde för inställningen Skicka från.
 
-**SMTP SSL aktiverat:** Välj den här inställningen för att tvinga e-postleverantören att använda SSL för att skanna inkorgen. Kontrollera att e-postservern har stöd för SSL.
+**SMTP SSL aktiverat:** Välj den här inställningen för att tvinga e-postleverantören att använda SSL för att skanna inkorgen. Kontrollera att e-postservern stöder SSL.
 
 **Mapp för e-post som skickades misslyckades:** Anger en katalog där resultat ska lagras om SMTP-e-postservern inte fungerar.
 
-**asynkron:** När det är synkront bearbetas alla indatadokument och ett svar returneras. När inställningen är asynkron skickas ett svar för varje dokument som bearbetas.
+**asynkron:** När det är synkront bearbetas alla indatadokument och ett enda svar returneras. När inställningen är asynkron skickas ett svar för varje dokument som bearbetas.
 
-En e-postslutpunkt skapas till exempel för en tjänst som tar ett enstaka Word-dokument och returnerar det dokumentet som en PDF-fil. Ett e-postmeddelande kan skickas till slutpunktens inkorg som innehåller flera (3) Word-dokument. När alla tre dokument har bearbetats och slutpunkten har konfigurerats som synkron, skickas ett e-postmeddelande med alla tre bifogade dokument. Om slutpunkten är asynkron skickas ett e-postmeddelande när varje Word-dokument har konverterats till PDF. Resultatet är tre e-postmeddelanden, var och en med en bifogad PDF.
+En e-postslutpunkt skapas till exempel för en tjänst som tar ett enstaka Word-dokument och returnerar det dokumentet som en PDF-fil. Ett e-postmeddelande kan skickas till slutpunktens inkorg som innehåller flera (3) Word-dokument. När alla tre dokument har bearbetats och slutpunkten har konfigurerats som synkron, skickas ett e-postmeddelande med alla tre bifogade dokument. Om slutpunkten är asynkron skickas ett e-postmeddelande när varje Word-dokument har konverterats till PDF. Resultatet är tre e-postmeddelanden, var och en med en bifogad PDF-fil.
 
 Standardvärdet är asynkront.
 
@@ -232,7 +230,7 @@ Standardvärdet är asynkront.
 
 **Literal:** I e-postmeddelandet används det värde som anges i fältet när det visas.
 
-**Variabel:** Du kan mappa en sträng från e-postens ämne, brödtext, rubrik eller avsändarens e-postadress. Om du vill göra det använder du något av följande nyckelord: %SUBJECT%, %BODY%, %HEADER% eller %SENDER%. Om du till exempel använder %SUBJECT% används innehållet i e-postämnet som indataparameter. Om du vill hämta bifogade filer anger du ett filmönster som e-postslutpunkten kan använda för att välja bifogade dokument. Om du till exempel anger &amp;ast;.pdf väljs alla bifogade dokument som har filnamnstillägget .pdf. Ingående &amp;sista; markerar alla bifogade dokument. Om du anger example.pdf väljs alla bifogade dokument som heter example.pdf.
+**Variabel:** Du kan mappa en sträng från e-postens ämne, brödtext, rubrik eller avsändarens e-postadress. Om du vill göra det använder du något av följande nyckelord: %SUBJECT%, %BODY%, %HEADER% eller %SENDER%. Om du till exempel använder %SUBJECT% används innehållet i e-postämnet som indataparameter. Om du vill hämta bifogade filer anger du ett filmönster som e-postslutpunkten kan använda för att välja bifogade dokument. Om du till exempel anger &amp;ast;.pdf väljs alla bifogade dokument som har filnamnstillägget .pdf. Inmatning &amp;ast; markerar ett bifogat dokument. Om du anger example.pdf väljs alla bifogade dokument som heter example.pdf.
 
 **Mappningar av utdataparameter:** Används för att konfigurera tjänstens och åtgärdens utdata. Följande tecken i mappningsvärdena för utdataparametrar utökas i filnamnet för den bifogade filen:
 
@@ -246,7 +244,7 @@ Alla förekomster av det omvända snedstrecket (\) ersätts med %%.
 
 Följande värden är tillgängliga:
 
-**Ett objekt:** E-postleverantören har inte källmappens mål; resultaten returneras som bilagor. Mönstret är Result/%F.ps och returnerar Result%%sourcefilename.ps som bifogad fil.
+**Ett objekt:** E-postprovidern har inte källmappens mål. Resultatet returneras som bilagor. Mönstret är Result/%F.ps och returnerar Result%%sourcefilename.ps som bifogad fil.
 
 **Lista:** Mönstret är Result/%F/ och returnerar Result%%sourcefilename%%file1 som bifogad fil.
 

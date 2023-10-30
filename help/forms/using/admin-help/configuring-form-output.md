@@ -1,8 +1,6 @@
 ---
 title: Konfigurera formulärutdata
-seo-title: Configuring form output
-description: Lär dig hur du konfigurerar formulärutdata.
-seo-description: Learn how to configure form output.
+description: Lär dig konfigurera formulärutdata. Om du vill konfigurera formulärutdata och aktivera funktionen använder du de anpassade skripten innan formuläret skickas.
 uuid: 70aad14e-c845-4ef3-a751-ad8860d5d505
 contentOwner: admin
 content-type: reference
@@ -10,9 +8,9 @@ geptopics: SG_AEMFORMS/categories/configuring_forms
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 17c9b69a-3c6f-47e3-a828-841bb90eba8b
 exl-id: d739806c-ce72-40fd-b304-3262a0988d96
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 6caf3ef4a00275f0f73be52b6a9ccba77d277f1a
 workflow-type: tm+mt
-source-wordcount: '228'
+source-wordcount: '244'
 ht-degree: 0%
 
 ---
@@ -26,7 +24,7 @@ ht-degree: 0%
 
    **Full HTML:** Om du vill återge formuläret med fullständiga HTML-taggar (en hel HTML-sida). Det här värdet är standardvärdet.
 
-   **Formulärbrödtext:** Återge formuläret inom `<BODY>` taggar (inte en fullständig HTML-sida).
+   **Formulärtext:** Återge formuläret inom `<BODY>` taggar (inte en fullständig HTML-sida).
 
 1. Klicka på Spara.
 
@@ -36,7 +34,7 @@ ht-degree: 0%
 
    **Klient:** Återge PDF forms i Adobe Acrobat eller Adobe Reader. Klientsidorendering förbättrar prestanda för AEM formulär och gäller endast för PDFForm-omvandling.
 
-   **Server:** Återge PDF forms på programservern.
+   **Server:** Om du vill återge PDF forms på programservern.
 
    **Auto:** Återge formuläret PDF på den plats som anges av `dynamicRender` XDP-filens konfigurationsvärde. Det här värdet är standardvärdet.
 
@@ -48,7 +46,7 @@ Gör så här för att aktivera funktionen:
 
 1. Logga in på administrationskonsolen.
 1. Gå till **Tjänster** > **formulär**.
-1. Ange utdatatypen som Formulärbrödtext.
+1. Ange utdatatypen Form Body.
 1. Spara inställningarna.
 1. Deklarera en JavaScript-variabel, __CUSTOM_SCRIPTS_VERSION, i huvudsektionen i HTML-koden och ställ in värdet på 1.
 

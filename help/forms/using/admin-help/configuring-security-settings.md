@@ -1,8 +1,6 @@
 ---
 title: Konfigurera säkerhetsinställningar
-seo-title: Configuring security settings
-description: Lär dig hur du konfigurerar säkerhetsinställningar.
-seo-description: Learn how to configure security settings.
+description: Lär dig hur du konfigurerar säkerhetsinställningar. Du kan skydda PDF-dokument genom att begränsa åtkomsten. Du kan kryptera, certifiera eller lösenordsskydda dokumentet.
 uuid: 9747f268-3551-4064-8dba-e1de4a577843
 contentOwner: admin
 content-type: reference
@@ -11,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: a89ab508-173f-4b1c-88d9-ef944af4d9ae
 feature: PDF Generator
 exl-id: be076477-2681-4570-953d-6c44d3c30843
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 6caf3ef4a00275f0f73be52b6a9ccba77d277f1a
 workflow-type: tm+mt
-source-wordcount: '1358'
+source-wordcount: '1375'
 ht-degree: 0%
 
 ---
@@ -22,7 +20,7 @@ ht-degree: 0%
 
 Du kan begränsa åtkomsten till PDF-dokument genom att ange lösenord och begränsa vissa funktioner, som utskrift och redigering. När ett PDF-dokument har begränsade funktioner är verktyg och menyalternativ som är relaterade till dessa funktioner nedtonade. Du kan också använda andra metoder för att skapa säkra dokument, till exempel kryptera eller certifiera ett dokument. En säkerhetsinställning innehåller lösenordet och specifika alternativ som kan användas för vissa PDF-konverteringar.
 
-På sidan Säkerhetsinställningar kan du göra följande:
+På sidan Skyddsinställningar kan du göra följande:
 
 ## Skapa eller redigera en säkerhetsinställning {#create-or-edit-a-security-setting}
 

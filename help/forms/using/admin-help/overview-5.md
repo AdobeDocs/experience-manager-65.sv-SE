@@ -1,8 +1,6 @@
 ---
 title: Introduktion till arbete med PDF Generator
-seo-title: Introduction to working with PDF Generator
-description: Lär dig hur du konverterar olika filformat till PDF.
-seo-description: Learn how to convert various file formats to PDF.
+description: Lär dig hur du konverterar olika filformat till PDF. Dessutom konverteras PDF till andra filformat och storleken på PDF-dokument optimeras.
 uuid: 1942bf9f-99cc-48b6-89f4-e78c1957a300
 contentOwner: admin
 content-type: reference
@@ -12,16 +10,16 @@ discoiquuid: 9e25ea72-e7ba-400b-9cab-de256fe64888
 docset: aem65
 feature: PDF Generator
 exl-id: 08e2381e-c7e8-4690-9cbf-6934064a04f8
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 6caf3ef4a00275f0f73be52b6a9ccba77d277f1a
 workflow-type: tm+mt
-source-wordcount: '134'
+source-wordcount: '149'
 ht-degree: 0%
 
 ---
 
 # Introduktion till arbete med PDF Generator {#introduction-to-working-with-pdf-generator}
 
-PDF Generator konverterar olika filformat till PDF. Dessutom konverteras PDF till andra filformat och storleken på PDF-dokument optimeras. En lista över filformat som stöds finns i [Programvarusupport för PDF Generator](/help/forms/using/aem-forms-jee-supported-platforms.md)
+PDF Generator konverterar olika filformat till PDF. Dessutom konverteras PDF till andra filformat och storleken på PDF-dokument optimeras. En lista över filformat som stöds finns i [Programsupport för PDF Generator](/help/forms/using/aem-forms-jee-supported-platforms.md)
 
 **Skicka filer till PDF Generator för bearbetning**
 

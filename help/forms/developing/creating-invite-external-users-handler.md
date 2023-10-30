@@ -1,11 +1,11 @@
 ---
 title: Skapa en hanterare för att bjuda in externa användare
-description: Skapa en hanterare för att bjuda in externa användare
+description: Lär dig hur du skapar en hanterare för att bjuda in externa användare. Tjänsten Rights Management gör det möjligt att bjuda in externa användare till Rights Management.
 role: Developer
 exl-id: b0416716-dcc9-4f80-986a-b9660a7c8f6b
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: 6caf3ef4a00275f0f73be52b6a9ccba77d277f1a
 workflow-type: tm+mt
-source-wordcount: '1075'
+source-wordcount: '1093'
 ht-degree: 0%
 
 ---

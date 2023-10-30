@@ -1,14 +1,14 @@
 ---
 title: Importera och hantera program
-description: Lär dig hur du importerar och hanterar program.
+description: Lär dig hur du importerar och hanterar program. Ett program är en behållare för lagring av resurser som krävs för att implementera en lösning för AEM formulär.
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/importing_and_managing_applications_and_archives
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 exl-id: f17726c0-3591-4d25-a8b5-3a7024249a56
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: 6caf3ef4a00275f0f73be52b6a9ccba77d277f1a
 workflow-type: tm+mt
-source-wordcount: '820'
+source-wordcount: '838'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ I AEM formulär *program* är en behållare för lagring av resurser som krävs 
 
 När ett program är klart för distribution till en produktionsserver paketerar Workbench-användaren programmet i en *AEM formulärprogramfil* (.lca). Därefter använder en administratör administrationskonsolen för att importera och distribuera programfilen på fliken Program på sidan Programhantering.
 
-Du kan också använda fliken Kurvor på sidan Programhantering för att importera LCA-konton som har skapats med workbench 8.x.
+Du kan också använda arkivfliken på sidan Programhantering för att importera LCA-konton som har skapats med workbench 8.x.
 
 >[!NOTE]
 >

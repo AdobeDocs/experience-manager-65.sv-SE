@@ -1,8 +1,6 @@
 ---
 title: Konfigurera platser för Forms
-seo-title: Configuring locations for Forms
-description: Lär dig hur du konfigurerar plats för Forms.
-seo-description: Learn how to configure location for Forms.
+description: Lär dig hur du konfigurerar plats för AEM. Du kan ange filplatser för attributet, formulärets plats, startfilen för PDF och cacheplatsen.
 uuid: ba35888b-492c-4678-890b-160b53e7d659
 contentOwner: admin
 content-type: reference
@@ -10,9 +8,9 @@ geptopics: SG_AEMFORMS/categories/configuring_forms
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 3d2b7cfb-228c-4cc2-8fcd-d500f0010010
 exl-id: 0d9eb7fe-28a6-444e-957d-023687158c61
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 6caf3ef4a00275f0f73be52b6a9ccba77d277f1a
 workflow-type: tm+mt
-source-wordcount: '804'
+source-wordcount: '826'
 ht-degree: 0%
 
 ---
@@ -33,7 +31,7 @@ Du kan ange URL, URI och filplatser för attribut som webbroten, platsen för de
 >
 >Bas-URL stöder endast HTTP- eller databasprotokoll. Den stöder inte protokoll som file:///. Om du behöver komma åt en resurs, till exempel en anpassad CSS eller en URI för digitala signaturer, använder du lämpligt API-parametervärde för att ange den absoluta platsen.
 
-När en beroendesökväg är absolut ignoreras värdet för bas-URL. I annat fall kombineras beroendesökvägen med bas-URL:en.
+När en beroendesökväg är absolut, ignoreras värdet för bas-URL. I annat fall kombineras beroendesökvägen med bas-URL:en.
 
 Standardvärdet är en tom sträng.
 
@@ -43,7 +41,7 @@ Följande exempel pekar på samma innehåll (med Content Root URI och Base URL):
 
 `(BaseURL)/subdir/image1.jpg`
 
-**URI för FS-webbrot:** URL:en för Forms webbprogram. Du kan lämna rutan tom om Forms webbprogram och klientprogrammet distribueras på samma programserver. URL:en för Forms API-webbroten kommer att användas.
+**URI för FS-webbrot:** URL:en för Forms webbprogram. Du kan lämna den här rutan tom om Forms webbprogram och klientprogram distribueras på samma programserver. URL:en för Forms API-webbroten används.
 
 Om Forms webbprogram och klientprogram inte distribueras till samma programserver anger du URL:en för Forms webbprogram i den här rutan, som i det här exemplet:
 
@@ -65,7 +63,7 @@ Standardvärdet är en tom sträng.
 
 Standardvärdet är `com/adobe/formServer/PA/pa.xci`.
 
-**URI för teckensnittskarta:** Den relativa eller absoluta platsen för teckensnittsmappningsfilen. För ett relativt värde antas den här filen finnas i den distribuerbara AEM formulärens EAR-fil.
+**URI för teckensnittskarta:** Den relativa eller absoluta platsen för teckensnittsmappningsfilen. För ett relativt värde antas den här filen finnas i den distribuerbara AEM formen EAR..
 
 Teckensnittsmappningsfilen används för att skapa anpassade teckensnittsmappningar för HTML-omformningar i formulär, vilket gör att du kan ange vilket teckensnitt som ska användas när ett teckensnitt inte finns på klientdatorn.
 
@@ -83,7 +81,7 @@ Standardvärdet är en tom sträng.
 
 **Standardplats:** Det här är standardvalet. När det här alternativet är markerat skapas cachen på en plats som är beroende av den programserver som du använder:
 
-* **JBoss:** [JBoss - startsida]\server\[installationstyp]\svcdata\FormServer\Cache
+* **JBoss:** [JBoss Home]\server\[installationstyp]\svcdata\FormServer\Cache
 * **WebLogic:** [WebLogic - startsida]\user_projects\domains\[aem-forms Domain Name]\adobe\[forms server name]\FormServer\Cache
 * **WebSphere:** [IBM Home]\WebSphere\AppServer\installedApps\adobe\server1\FormServer\Cache
 
