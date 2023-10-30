@@ -1,7 +1,6 @@
 ---
-title: Förstå AEM Forms-processer
-seo-title: Understanding AEM Forms Processes
-description: Förstå AEM Forms-processer
+title: Förstå AEM Forms processer
+description: AEM Forms-processerna innefattar blankettgenerering, inlämning, datahantering, validering, integration, automatisering av arbetsflöden och hantering av utdata.
 uuid: 7cbebe7d-f222-42fa-8eb6-d2443458a791
 contentOwner: admin
 content-type: reference
@@ -10,14 +9,14 @@ topic-tags: development-tools, coding
 discoiquuid: ac9fe461-63e7-442b-bd1c-eb9576ef55aa
 role: Developer
 exl-id: 434ac316-8a01-43a6-844b-1b792f60fa21
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 20b0d0db54dc30285c056a10032f02ba45f8baca
 workflow-type: tm+mt
-source-wordcount: '803'
+source-wordcount: '815'
 ht-degree: 0%
 
 ---
 
-# Förstå AEM Forms-processer {#understanding-aem-forms-processes}
+# Förstå AEM Forms processer {#understanding-aem-forms-processes}
 
 **Exempel och exempel i det här dokumentet är bara för AEM Forms i JEE-miljö.**
 
@@ -33,11 +32,11 @@ Det finns dock situationer där en process inte kan slutföras synkront på grun
 * En process kan omfatta flera organisatoriska gränser.
 * En process behöver externa indata för att den ska kunna slutföras. Tänk dig till exempel en situation där ett formulär skickas till en chef som inte är på kontoret. I det här fallet är processen inte slutförd förrän hanteraren returnerar och fyller i formuläret.
 
-   Dessa typer av processer kallas långvariga processer. En långvarig process utförs asynkront, vilket gör att systemen kan interagera när resurserna tillåter det, och som gör det möjligt att spåra och övervaka operationen. När en långvarig process anropas skapar AEM Forms ett anrops-ID-värde som en del av en post som spårar den långvariga processens status. Posten lagras i AEM Forms-databasen. Du kan rensa långvariga processposter när de inte längre behövs.
+  Dessa typer av processer kallas långvariga processer. En långvarig process utförs asynkront, vilket gör att systemen kan interagera när resurserna tillåter det, och som gör det möjligt att spåra och övervaka operationen. När en långvarig process anropas skapar AEM Forms ett anrops-ID-värde som en del av en post som spårar den långvariga processens status. Posten lagras i AEM Forms-databasen. Du kan rensa långvariga processposter när de inte längre behövs.
 
 >[!NOTE]
 >
->AEM Forms skapar inte en post när en kortlivad process anropas.
+>AEM Forms skapar inte en post när en kort process anropas.
 
 Med hjälp av anropsidentifierarvärdet kan du spåra den långvariga processens status. Du kan till exempel använda processens identifierarvärde för anrop för att utföra processhanteraråtgärder som att avsluta en pågående processinstans.
 
@@ -49,11 +48,11 @@ Följande bild är ett exempel på en kortlivad process som heter *MyApplication
 >
 >Processen bygger inte på någon befintlig AEM Forms-process. Om du vill följa med i kodexemplen som beskriver hur du anropar den här processen skapar du en process med namnet `MyApplication/EncryptDocument` med Workbench. (Se [Använda Workbench](https://www.adobe.com/go/learn_aemforms_workbench_63).)
 
-När den här korta processen anropas utför den följande åtgärder:
+När den här kortvariga processen anropas utför den följande åtgärder:
 
 1. Hämtar det oskyddade PDF-dokumentet som skickas till processen som ett indatavärde.
-1. Krypterar PDF-dokumentet med ett lösenord. Namnet på indataparametern för den här processen är `inDoc` och datatypen är dokument.
-1. Sparar det lösenordskrypterade PDF-dokumentet som en PDF-fil i det lokala filsystemet. Den här processen returnerar det krypterade PDF-dokumentet som ett utdatavärde. Namnet på utdataparametern för den här processen är `outDoc` och datatypen är dokument.
+1. Krypterar PDF-dokumentet med ett lösenord. Namnet på indataparametern för processen är `inDoc` och datatypen är dokument.
+1. Sparar det lösenordskrypterade PDF-dokumentet som en PDF-fil i det lokala filsystemet. Den här processen returnerar det krypterade PDF-dokumentet som ett utdatavärde. Namnet på utdataparametern för processen är `outDoc` och datatypen är dokument.
 
    Den här processen slutförs synkront på samma körningstråd som den anropades från. Namnet på den här korta processen är `MyApplication/EncryptDocument`och operationen är `invoke`.
 
@@ -76,7 +75,7 @@ När den här korta processen anropas utför den följande åtgärder:
 
 Följande bild är ett exempel på en långvarig process.
 
-Denna process anropas när en sökande lämnar in en låneblankett. Processen är inte slutförd förrän en lånehandläggare godkänner eller avvisar låneansökan. Namnet på den här långvariga processen är *FirstAppSolution/PreLoanProcess* och operationen är `invoke_Async`. Den här processen måste anropas asynkront. Mer information om att programmatiskt anropa den här långvariga processen finns i [Anropa personalcentrerade, långlivade processer](/help/forms/developing/invoking-human-centric-long-lived.md#invoking-human-centric-long-lived-processes).
+Denna process anropas när en sökande lämnar in en låneblankett. Processen är inte slutförd förrän en lånehandläggare godkänner eller avvisar låneansökan. Den här långvariga processen heter *FirstAppSolution/PreLoanProcess* och operationen är `invoke_Async`. Den här processen måste anropas asynkront. Mer information om att programmatiskt anropa den här långvariga processen finns i [Anropa personalcentrerade, långlivade processer](/help/forms/developing/invoking-human-centric-long-lived.md#invoking-human-centric-long-lived-processes).
 
 >[!NOTE]
 >

@@ -1,7 +1,6 @@
 ---
 title: Java API QuickStart(SOAP) för slutpunktsregister
-seo-title: Endpoint Registry Java API QuickStart(SOAP)
-description: Java API QuickStart(SOAP) för slutpunktsregister
+description: Lägg till slutpunkter som EJB, SOAP, bevakad mapp, e-postslutpunkt, fjärrslutpunkt med mera. Du kan också ändra, ta bort och hämta en slutpunkt med Java API.
 uuid: 986c55d0-e199-46f8-a3cc-a6baf5cce316
 contentOwner: admin
 content-type: reference
@@ -10,9 +9,9 @@ topic-tags: develop
 discoiquuid: e5989859-e58d-4049-9e0d-c4c848d597af
 role: Developer
 exl-id: 985a6fc5-6675-4c25-80e4-34dcb658de72
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 1917989005a98469776befc967e40ab7b40c31f5
 workflow-type: tm+mt
-source-wordcount: '543'
+source-wordcount: '560'
 ht-degree: 0%
 
 ---
@@ -37,7 +36,7 @@ Java API Quick Start (SOAP) är tillgängligt för slutpunktsregistret.
 
 [QuickStart: Ta bort en slutpunkt med Java API](endpoint-registry-java-api-quick.md#quickstart-removing-an-endpoint-using-the-java-api)
 
-[QuickStart: Hämta slutpunktsanslutningsinformation med Java API](endpoint-registry-java-api-quick.md#quickstart-retrieving-endpoint-connector-information-using-the-java-api)
+[QuickStart: Hämtar slutpunktsanslutningsinformation med Java API](endpoint-registry-java-api-quick.md#quickstart-retrieving-endpoint-connector-information-using-the-java-api)
 
 AEM Forms-åtgärder kan utföras med AEM Forms starkt typade API och anslutningsläget bör anges till SOAP.
 
@@ -1009,7 +1008,7 @@ Följande Java-kod tar bort en EJB-slutpunkt från en tjänst med namnet *MyAppl
  
 ```
 
-## QuickStart: Hämta slutpunktsanslutningsinformation med Java API {#quickstart-retrieving-endpoint-connector-information-using-the-java-api}
+## QuickStart: Hämtar slutpunktsanslutningsinformation med Java API {#quickstart-retrieving-endpoint-connector-information-using-the-java-api}
 
 Följande Java-kod hämtar information om en bevakad mappslutpunkt. Information om varje konfigurationsvärde hämtas och visas. Den här kodlistan anger om varje konfigurationsvärde är obligatoriskt eller valfritt. Dessutom visas namn och värde för varje konfigurationsvärde. (Se [Hämtar information om slutpunktsanslutning](/help/forms/developing/programmatically-endpoints.md#retrieving-endpoint-connector-information).)
 

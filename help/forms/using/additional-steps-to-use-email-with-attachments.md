@@ -1,10 +1,10 @@
 ---
 title: Ytterligare steg för att hämta e-post med bifogad fil
-description: Ytterligare steg för att hämta e-post med bifogad fil
+description: Åtgärda felet när du inte kan hämta e-post med bilagor för AEM Forms på JEE-plattformar.
 exl-id: 0d0713fb-d95a-4a95-91ef-9cdaea30e343
-source-git-commit: a56d5121a6ce11b42a6c30dae9e479564d16af27
+source-git-commit: 20b0d0db54dc30285c056a10032f02ba45f8baca
 workflow-type: tm+mt
-source-wordcount: '224'
+source-wordcount: '235'
 ht-degree: 0%
 
 ---
@@ -26,14 +26,14 @@ Användaren kan inte utföra åtgärder som Skicka PDF via e-post eller Inkluder
 
 1. Öppna manifestfilen och ersätt alla förekomster av `1.5.0` med `1.5.6` och `Bundle-Version: 1.0` med `Bundle-Version:1.5`
 
-1. Skapa en egen burk (`java.mail-1.5.jar`) med hjälp av följande kommando i `C:\Adobe\Adobe_Experience_Manager_Forms\java\jdk\bin` mapp som:
+1. Skapa en egen burk (`java.mail-1.5.jar`) genom att använda följande kommando i `C:\Adobe\Adobe_Experience_Manager_Forms\java\jdk\bin` mapp som:
    `jar -cfm java.mail-1.5.jar manifest.mf`
 
    I ovanstående kommando *manifest.mf* är namnet på manifestfilen och *java.mail-1.5.jar* är namnet på den fil som skulle skapas när ovanstående kommando kördes.
 
-1. Hämta [javax.mail-1.5.6.redhat-1.jar](https://mvnrepository.com/artifact/com.sun.mail/javax.mail/1.5.6.redhat-1).
+1. Ladda ned [javax.mail-1.5.6.redhat-1.jar](https://mvnrepository.com/artifact/com.sun.mail/javax.mail/1.5.6.redhat-1).
 
-1. Navigera till `http://<server name>:<port>/lc/system/console/bundles`och ta bort paketet med ett namn som `JavaMail API (com.sun.mail.javax.mail) version 1.6.2`.
+1. Navigera till `http://<server name>:<port>/lc/system/console/bundles`och ta bort paketet med namnet `JavaMail API (com.sun.mail.javax.mail) version 1.6.2`.
 
 1. Installera `java.mail-1.5.jar` som erhållits från steg 3. Det här steget startar om slingegenskaperna för JEE-distributionen. Vänta på de installerade paketen på `http://<server name>:<port>/lc/system/console/bundles` för att visa status som **Aktiv**.
 

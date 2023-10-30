@@ -1,6 +1,6 @@
 ---
-title: APIQuick Starts för säkerhetskopiering och återställning
-description: APIQuick Starts för säkerhetskopiering och återställning
+title: APIQuick Startar säkerhetskopiering och återställning
+description: Med API-snabbstart för AEM Forms Backup & Restore kan du skapa och återställa säkerhetskopior effektivt.
 uuid: c3992be2-ceb4-480d-9c8f-71eb0ea66dde
 contentOwner: admin
 content-type: reference
@@ -9,9 +9,9 @@ topic-tags: develop
 discoiquuid: 813162be-dbf5-4dc1-80ff-e37dbc25ef60
 role: Developer
 exl-id: ae17fd3a-0ba4-4a00-907b-811e500b0e14
-source-git-commit: 78c584db8c35ea809048580fe5b440a0b73c8eea
+source-git-commit: 68a1edf5f62d7a988094fceb3f762504711dc2f1
 workflow-type: tm+mt
-source-wordcount: '246'
+source-wordcount: '254'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 Java™ API Quick Start (SOAP) finns för API:t för tjänsten Backup and Restore.
 
-[Snabbstart: Gå in i säkerhetskopieringsläge med Java](backup-restore-service-api-quick.md#quick-start-soap-mode-entering-backup-mode-using-the-java-api)
+[Snabbstart: Ange säkerhetskopieringsläge med Java](backup-restore-service-api-quick.md#quick-start-soap-mode-entering-backup-mode-using-the-java-api)
 
 [Snabbstart: Lämna säkerhetskopieringsläge med Java](backup-restore-service-api-quick.md#quick-start-soap-mode-leaving-backup-mode-using-the-java-api)
 
@@ -32,7 +32,7 @@ AEM Forms-åtgärder kan utföras med AEM Forms starkt typbestämda API och ansl
 >
 >Snabbstarter i Programmering med AEM Forms baseras på Forms operativsystem. Om du använder ett annat operativsystem, till exempel UNIX®, ska du ersätta Windows-specifika sökvägar med sökvägar som stöds av det aktuella operativsystemet. På samma sätt måste du ange giltiga anslutningsegenskaper om du använder en annan J2EE-programserver. Se [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
-## Snabbstart (SOAP-läge): Gå in i säkerhetskopieringsläge med Java™ API {#quick-start-soap-mode-entering-backup-mode-using-the-java-api}
+## Snabbstart (SOAP-läge): Startar säkerhetskopieringsläge med Java™ API {#quick-start-soap-mode-entering-backup-mode-using-the-java-api}
 
 Följande Java™-kodexempel försätts i säkerhetskopieringsläge med en unik etikett i två timmar. När säkerhetskopieringstiden har gått ut eller om säkerhetskopieringsläget uttryckligen har avslutats, återgår Forms Server till att rensa filer från den globala dokumentlagringen. (Se [Läget för säkerhetskopiering på Forms Server aktiveras](/help/forms/developing/preparing-aem-forms-backup.md#entering-backup-mode-on-the-forms-server).)
 

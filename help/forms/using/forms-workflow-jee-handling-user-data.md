@@ -1,16 +1,15 @@
 ---
 title: Forms JEE-arbetsflöden | Hantera användardata
-seo-title: Forms JEE workflows | Handling user data
-description: Forms JEE-arbetsflöden | Hantera användardata
+description: AEM Forms JEE-arbetsflöden för att utforma, skapa och hantera affärsprocesser.
 uuid: 3b06ef19-d3c4-411e-9530-2c5d2159b559
 topic-tags: grdp
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 5632a8df-a827-4e38-beaa-18b61c2208a3
 role: Admin
 exl-id: 847fa303-8d1e-4a17-b90d-5f9da5ca2d77
-source-git-commit: 37d2c70bff770d13b8094c5959e488f5531aef55
+source-git-commit: 0e5b89617d481c69882ec5d4658e76855aa9b691
 workflow-type: tm+mt
-source-wordcount: '1365'
+source-wordcount: '1370'
 ht-degree: 0%
 
 ---
@@ -38,7 +37,7 @@ När en process aktiveras genereras ett unikt processinstans-ID och ett långliv
 Du kan dock inte identifiera processens instans-ID för en initierare i följande scenarier:
 
 * **Processen utlöses via en bevakad mapp**: Det går inte att identifiera en processinstans med dess initierare om processen aktiveras av en bevakad mapp. I det här fallet kodas användarinformationen i de lagrade data.
-* **Processen har initierats från AEM**: Alla processinstanser som aktiveras från AEM publiceringsinstans samlar inte in information om initieraren. Användardata kan dock hämtas i det format som är associerat med processen, som lagras i arbetsflödesvariabler.
+* **Processen har initierats från publiceringens AEM**: Alla processinstanser som aktiveras från AEM publiceringsinstans samlar inte in information om initieraren. Användardata kan dock hämtas i det format som är associerat med processen, som lagras i arbetsflödesvariabler.
 * **Process initierad via e-post**: Avsändarens e-post-ID hämtas som en egenskap i en ogenomskinlig blobkolumn i `tb_job_instance` databastabell, som inte kan läsas direkt.
 
 ### Identifiera processinstans-ID när arbetsflödesinitieraren eller deltagaren är känd {#initiator-participant}
@@ -62,7 +61,7 @@ Utför följande steg för att identifiera processinstans-ID för en arbetsflöd
    Frågan returnerar uppgifter som initierats av den angivna `initiator`_ `principal_id`. Det finns två typer av uppgifter:
 
    * **Slutförda uppgifter**: Dessa uppgifter har skickats in och ett alfanumeriskt värde visas i `process_instance_id` fält. Observera alla processinstans-ID:n för skickade uppgifter och fortsätt med stegen.
-   * **Aktiviteter som initierats men inte slutförts**: Dessa uppgifter har initierats men inte skickats ännu. Värdet i `process_instance_id` fältet för dessa uppgifter är **0** (noll). I det här fallet bör du tänka på motsvarande uppgifts-ID och se [Arbeta med överblivna uppgifter](#orphan).
+   * **Aktiviteter som initierats men inte slutförts**: De här uppgifterna har initierats men har inte skickats ännu. Värdet i `process_instance_id` fältet för dessa uppgifter är **0** (noll). I det här fallet bör du tänka på motsvarande uppgifts-ID och se [Arbeta med överblivna uppgifter](#orphan).
 
 1. (**För arbetsflödesdeltagare**) Kör följande kommando för att hämta processinstans-ID:n som är associerade med processdeltagarens huvud-ID för initieraren från `tb_assignment` databastabell.
 
@@ -76,7 +75,7 @@ Utför följande steg för att identifiera processinstans-ID för en arbetsflöd
 
    För överblivna uppgifter eller uppgifter där `process_instance_id` är 0 (noll), observera motsvarande uppgifts-ID och se [Arbeta med överblivna uppgifter](#orphan).
 
-1. Följ instruktionerna i [Rensa användardata från arbetsflödesinstanser baserat på processens instans-ID](/help/forms/using/forms-workflow-jee-handling-user-data.md#purge) för att ta bort användardata för identifierade processinstans-ID:n.
+1. Följ instruktionerna i [Rensa användardata från arbetsflödesinstanser baserat på processens instans-ID](/help/forms/using/forms-workflow-jee-handling-user-data.md#purge) för att ta bort användardata för identifierade processinstans-ID.
 
 ### Identifiera processens instans-ID när användardata lagras i primitiva variabler {#primitive}
 
@@ -112,7 +111,7 @@ Utför följande steg för att avgöra om ett arbetsflöde som lagrar data i pri
 
    Frågan returnerar alla processinstans-ID:n som är associerade med den angivna `user_ID`.
 
-1. Följ instruktionerna i [Rensa användardata från arbetsflödesinstanser baserat på processens instans-ID](/help/forms/using/forms-workflow-jee-handling-user-data.md#purge) för att ta bort användardata för identifierade processinstans-ID:n.
+1. Följ instruktionerna i [Rensa användardata från arbetsflödesinstanser baserat på processens instans-ID](/help/forms/using/forms-workflow-jee-handling-user-data.md#purge) för att ta bort användardata för identifierade processinstans-ID.
 
 ### Rensa användardata från arbetsflödesinstanser baserat på processens instans-ID {#purge}
 
@@ -165,6 +164,7 @@ När du har uppgifts-ID:n gör du följande för att rensa de associerade filern
       I GDS-filsystemet:
 
       1. Sök efter filer med följande sessions-ID-strängar som tillägg:
+
       * `_wfattach<task_id>`
       * `_wftask<fd_id>`
       * `_wftaskformid<fd_id>`
@@ -174,6 +174,7 @@ När du har uppgifts-ID:n gör du följande för att rensa de associerade filern
       `<file_name_guid>.session<session_id_string>`
 
       1. Ta bort alla markörfiler och andra filer med exakt samma filnamn som `<file_name_guid>` från filsystemet.
+
    1. **GDS i databasen**
 
       Kör följande kommandon för varje sessions-ID:
@@ -184,10 +185,7 @@ När du har uppgifts-ID:n gör du följande för att rensa de associerade filern
       delete from tb_dm_deletion where sessionid=<session_id>
       ```
 
-
-
-
-1. Kör följande kommandon för att ta bort data för uppgifts-ID:n från AEM Forms serverdatabas:
+1. Utför följande kommandon för att ta bort data för uppgifts-ID:n från AEM Forms serverdatabas:
 
    ```sql
    delete from tb_task_acl where task_id=<task_id>

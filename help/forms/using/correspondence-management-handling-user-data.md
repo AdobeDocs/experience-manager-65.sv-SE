@@ -1,16 +1,15 @@
 ---
 title: Korrespondenshantering | Hantera användardata
-seo-title: Correspondence Management | Handling user data
-description: Korrespondenshantering | Hantera användardata
+description: Korrespondenshantering och hantering av användardata i AEM Forms-miljö.
 uuid: d5bb190b-d668-4da3-95da-b7705ad302d9
 topic-tags: grdp
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 764d8e0d-604d-4c7b-89cd-7686ce5f03ff
 role: Admin
 exl-id: a0c6a02c-47a3-4e70-a14c-953ee016b8e4
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+source-git-commit: 0e5b89617d481c69882ec5d4658e76855aa9b691
 workflow-type: tm+mt
-source-wordcount: '540'
+source-wordcount: '545'
 ht-degree: 0%
 
 ---
@@ -41,7 +40,7 @@ Beroende på den datalagringsbeständighet som har konfigurerats för din AEM-di
   <tr>
    <td><p>Standard</p> </td>
    <td><p>AEM för publiceringsinstans och författarinstanser som anges i konfigurationen för omvänd replikering</p> </td>
-   <td><p><code>/content/apps/cm/letterInstances/[yyyy]/[mm]/[dd]/[node-id]/[letter-instance-name]/</code> </p> </td>
+   <td><p><code>/content/apps/cm/letterInstances/[yyyy]/[mm]/[dd]/[node-id]/[letter-instance-name]/</code><br /> </p> </td>
   </tr>
   <tr>
    <td><p>Fjärr</p> </td>
@@ -61,7 +60,7 @@ Under [letter-instance-name] nod skapas följande nodstruktur och data för varj
 
 | Nod | Beskrivning |
 |---|---|
-| `extendedProperties` | Lagrar metadataegenskaper för bokstavsinstansen. |
+| `extendedProperties` | Lagrar egenskaper för bokstavsinstansens metadata. |
 | `dataXML` | Lagrar en nedladdningsbar dataXML-fil som innehåller korrespondensdata i binärt format. |
 | `processedXDP` | Innehåller information om XDP-mallen som används för att skapa det skickade brevet. Den här noden skapas endast för skickade korrespondenser. |
 | `submittedLetter` | Lagrar skickade bokstavsdata i hämtningsbart binärt format. Den här noden skapas endast för skickade korrespondenser. |

@@ -1,8 +1,6 @@
 ---
 title: Skillnaden mellan HTML5-formulär och PDF forms
-seo-title: Feature differentiation between HTML5 forms and PDF forms
-description: Funktion som stöds i HTML5-formulär och PDF forms
-seo-description: Feature supported in HTML5 forms and PDF forms
+description: Läs om skillnaderna mellan HTML5-formulär och PDF forms.
 uuid: 6ddee197-d108-4897-9976-77d115a06504
 contentOwner: robhagat
 content-type: reference
@@ -12,9 +10,9 @@ discoiquuid: bdd97c20-d1f2-4898-9862-1a6a8071be88
 docset: aem65
 feature: Mobile Forms
 exl-id: 3150f95f-7150-4eee-b5a9-121422dec2a1
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 0e5b89617d481c69882ec5d4658e76855aa9b691
 workflow-type: tm+mt
-source-wordcount: '444'
+source-wordcount: '446'
 ht-degree: 1%
 
 ---
@@ -47,12 +45,12 @@ I följande tabell anges funktionsstödet för HTML5-formulär och PDF forms:
   </tr>
   <tr>
    <td>Bilder</td>
-   <td>Data-URI-schemat används för att visa bilder. Alla moderna versioner av webbläsare har stöd för det här schemat, men det finns skillnader i det intervall med bildformat som varje webbläsare har stöd för.<br /> </td>
+   <td>Data-URI-schemat används för att visa bilder. Alla moderna versioner av webbläsare stöder det här schemat, men det finns skillnader i det intervall med bildformat som varje webbläsare stöder.<br /> </td>
    <td>Formaten .gif, .png, .jpeg, .bmp och .tiff stöds.</td>
   </tr>
   <tr>
    <td>Sidnumrering<br /> </td>
-   <td><p>Ett HTML5-formulär är uppdelat i paneler och rutor för att ge det ett utseende som liknar PDF forms. Sidstorleken beräknas dynamiskt. Om allt innehåll på en sida i ett HTML5-formulär tas bort eller markeras som dolt, döljs den tomma sidan och inget tomt utrymme (blanksteg) visas mellan sidorna ovanför och under den tomma sidan.</p> <p>Om datasammanfogning eller skript lägger till innehåll på en sida utökas sidans längd så att det nya innehållet får plats. Inga nya sidor läggs till i formuläret så att det nya innehållet får plats. </p> <p><strong>Obs!</strong> När allt innehåll på en sida i ett HTML5-formulär tas bort eller markeras som dolt, förblir den tomma sidan (tomt utrymme) synlig mellan första och andra sidan, men inte mellan andra sidor.</p> </td>
+   <td><p>Ett HTML5-formulär är uppdelat i paneler och rutor för att ge det ett utseende som liknar PDF forms. Sidans storlek beräknas dynamiskt. Om allt innehåll på en sida i ett HTML5-formulär tas bort eller markeras som dolt, döljs den tomma sidan och inget tomt utrymme (blanksteg) visas mellan sidorna ovanför och under den tomma sidan.</p> <p>Om datasammanfogning eller skript lägger till innehåll på en sida utökas sidans längd så att det nya innehållet får plats. Inga nya sidor läggs till i formuläret så att det nya innehållet får plats. </p> <p><strong>Obs!</strong> När allt innehåll på en sida i ett HTML5-formulär tas bort eller markeras som dolt, förblir den tomma sidan (tomt utrymme) synlig mellan första och andra sidan, men inte mellan andra sidor.</p> </td>
    <td>Sidnumrering i PDF beror på det sammanslagna datainnehållet eller på att användarinnehållet och antalet sidor ökar/minskar baserat på det.</td>
   </tr>
   <tr>

@@ -1,8 +1,6 @@
 ---
 title: Anpassa mallar för komponenter i formulärportalen
-seo-title: Customizing templates for forms portal components
-description: Visa anpassade metadata i formulärlistan
-seo-description: Display custom metadata in form listing
+description: Med AEM Forms användargränssnitt kan man lägga in metadata i blanketter. Anpassade metadata förbättrar användarupplevelsen när det gäller att lista formulär och söka efter information i organisationen.
 uuid: 212109ca-85c8-4915-82e5-a18a0443be1b
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -11,9 +9,9 @@ discoiquuid: 7566203f-2f80-4ce7-bff9-073d67119f64
 docset: aem65
 feature: Forms Portal
 exl-id: f889d996-77f7-4a4f-a637-da43fe1343c5
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+source-git-commit: 20b0d0db54dc30285c056a10032f02ba45f8baca
 workflow-type: tm+mt
-source-wordcount: '1225'
+source-wordcount: '1243'
 ht-degree: 0%
 
 ---
@@ -38,13 +36,14 @@ Följ de här stegen för att skapa en anpassad mall för olika Forms Portal-kom
 
 1. Skapa en slinga:Mappnod under /apps
 
-   Lägg till en fpContentType-egenskap. Ange lämpliga värden för egenskapen beroende på vilken komponent du definierar den anpassade mallen för.
+   Lägg till egenskapen fpContentType. Ange lämpliga värden för egenskapen beroende på vilken komponent du definierar den anpassade mallen för.
 
-   * Komponenten Search &amp; Lister: &quot;/libs/fd/fp/formTemplate&quot;
+   * Search &amp; Lister component: &quot;/libs/fd/fp/formTemplate&quot;
    * Komponenten Utkast och inskickat material:
 
       * Avsnittet Utkast: /libs/fd/fp/draftTemplate
       * Inlämningsavsnitt: /libs/fd/fp/sendingTemplate
+
    * Länkkomponent: /libs/fd/fp/linkTemplate
 
    Lägg till en titel som du vill ska visas när du väljer layoutmallar.
@@ -91,11 +90,11 @@ Om du vill ta med en repeterbar post konfigurerar du värdet för attributet **d
 
 *I det exempel som beskrivs finns två Div-element högst upp i den anpassade mallen. Den första, med CSS-klassen&quot;__FP_boxes-container&quot;, fungerar som ett behållarelement för de formulär som visas. Den andra, med CSS-klassen&quot;__FP_boxes&quot;, är en mall för de grundläggande entiteterna, i det här fallet ett formulär. The **data-repeterbar**attributet i Div-elementet har värdet **true**.*
 
-Varje platshållare har en exklusiv OTB-metadatauppsättning. Om du vill visa anpassade metadata på en viss plats i formuläret lägger du till **${metadata_prop}, egenskap** på stället.
+Varje platshållare har en exklusiv OTB-metadatauppsättning. Om du vill visa anpassade metadata på en viss plats i formuläret lägger du till **${metadata_prop} property** på stället.
 
 *I exemplet används metadataegenskapen i flera instanser. Den används till exempel i **description**,**name**,**formUrl**,**htmlStyle**,**pdfUrl**,**pdfStyle**och **bana**på föreskrivet sätt.*
 
-## Inga metadata {#out-of-the-box-metadata}
+## Metadata utanför kartongen {#out-of-the-box-metadata}
 
 Olika Forms Portal-komponenter innehåller exklusiva uppsättningar OTB-metadata som du kan använda för att visa en lista.
 
@@ -118,13 +117,13 @@ Olika Forms Portal-komponenter innehåller exklusiva uppsättningar OTB-metadata
 
 Stöd för lokalisering, sortering och användning av konfigurationsegenskaper i användargränssnittet (endast sökning och lister):
 
-1. **Lokaliseringsstöd**: Använd attributet för att lokalisera statisk text `${localize-YOUR_TEXT}` och göra det lokaliserade värdet tillgängligt, om det inte redan finns.
+1. **Lokaliseringsstöd**: Om du vill lokalisera statisk text använder du attributet `${localize-YOUR_TEXT}` och göra det lokaliserade värdet tillgängligt, om det inte redan finns.
    *I exemplet som behandlas är attributen `${localize-Apply}` och `${localize-Download}` används för att lokalisera texten Tillämpa och Hämta.*
 
 1. **Stöd för sortering**: Klicka på elementet HTML för att sortera sökresultaten. Om du vill implementera sortering i en skickad layout lägger du till attributet data-sortKey i den aktuella tabellrubriken. Lägg dessutom till dess värde som de metadata som du vill sortera efter.
 För rubrikrubriken i stödrastervyn är värdet för rubriken&quot;data-sortKey&quot; till exempel&quot;title&quot;. Klicka på rubriken om du vill sortera värdena i en viss kolumn.
 
-1. **Använda konfigurationsegenskaper**: Komponenten Sök och visa har flera konfigurationer som du kan använda i användargränssnittet. Om du till exempel vill visa HTML-verktygstipstext som har sparats i redigeringsdialogrutan använder du `${config-htmlLinkText}` -attribut. **På samma sätt kan du använda kommandot** `${config-pdfLinkText}` -attribut.
+1. **Använda konfigurationsegenskaper**: Komponenten Search &amp; Lister har flera konfigurationer som du kan använda i användargränssnittet. Om du till exempel vill visa HTML-verktygstipstext som har sparats i redigeringsdialogrutan använder du `${config-htmlLinkText}` -attribut. **På samma sätt kan du använda kommandot** `${config-pdfLinkText}` -attribut.
 
 ### Länkkomponent {#link-component}
 
@@ -136,22 +135,22 @@ För rubrikrubriken i stödrastervyn är värdet för rubriken&quot;data-sortKey
 ### Komponenten Utkast och inskickat material {#drafts-amp-submissions-component}
 
 * **Bana**: Sökväg till metadatanoden för utkast/överföringar. Använd det med tillägget .HTML som en URL för att öppna ett utkast eller en sändning.
-* **contextPath**: AEM kontextsökväg
-* **firstLetter**: Första bokstaven (versaler) i titeln på det adaptiva formuläret, som sparats som utkast eller skickad.
-* **formName**: Titeln på det adaptiva formuläret, som har sparats som utkast eller skickats.
+* **contextPath**: Kontextsökväg för AEM
+* **firstLetter**: Första bokstaven (versaler) i titeln på det adaptiva formuläret, som sparades som utkast eller skickades.
+* **formName**: Titeln på det adaptiva formuläret, som sparats som utkast eller skickat.
 * **draftID**: ID för det utkast som visas (Använd bara i mallen för avsnittet Utkast).
 * **submitID**: ID för överföringen som visas (Använd bara i mallen för avsnittet Skicka).
 * **status**: Status för det skickade formuläret. (Använd endast i mallen för avsnittet Skicka).
 * **description**: Beskrivning av det adaptiva formulär som är kopplat till utkastet eller inlämningen.
-* **diffTime**: Skillnaden mellan aktuell tid och den senaste sparåtgärden för utkastet. Alternativt kan det vara en skillnad mellan den aktuella tiden och den senaste sändningsåtgärden för överföringen.
+* **diffTime**: Skillnad mellan aktuell tid och den senaste sparåtgärden för utkastet. Alternativt kan det vara en skillnad mellan den aktuella tiden och den senaste sändningsåtgärden för överföringen.
 * **iconClass**: CSS-klass som används för att visa den första bokstaven i utkastet/sändningen. Forms Portal innehåller följande klasser med olika färgade bakgrunder.
-* **ägare**: Användare som skapade utkastet/överföringen.
+* **ägare**: Användare som skapade utkastet/sändningen.
 * **Idag**: Datum då utkastet eller inlämningen skapades i DD:MM:YYYY-format.
 * **TimeNow**: Tid då utkastet eller inlämningen skapades i HH:MM:SS 24-timmarsformat
 
 *Obs!*
 
-1. Om du vill ta bort alternativet i avsnittet Utkast under komponenten Utkast och överföringar ska du ge CSS-klassen namnet&quot;__FP_deleteDraft&quot;. Inkludera dessutom attributet &quot;draftID&quot; med värdet **${draftID}**, som är utkastets ID.
+1. Om du vill ta bort alternativet i avsnittet Utkast under komponenten Utkast och överföringar ska du ge CSS-klassen namnet&quot;__FP_deleteDraft&quot;. Inkludera dessutom attributet &quot;draftID&quot; med värdet **${draftID}**, som är utkast-ID för motsvarande utkast.
 
 1. När du skapar länkar till öppna utkast och inskickade dokument kan du ange **${path}.html** som värdet för **href** -attribut för ankartaggen.
 
@@ -173,7 +172,7 @@ För rubrikrubriken i stödrastervyn är värdet för rubriken&quot;data-sortKey
 
 1. Använd inte enkla citattecken (&#39;) i någon anpassad mall.
 1. För anpassade metadata sparar du den här egenskapen på **jcr:innehåll/metadata** endast nod. Om du lagrar det på något annat ställe kan inte Forms Portal visa metadata.
-1. Kontrollera att namnet på anpassade metadata eller befintliga metadata inte innehåller ett kolon (: ). Om det gör det kan du inte visa det i användargränssnittet.
+1. Kontrollera att namnet på anpassade metadata eller befintliga metadata inte innehåller ett kolon ( : ). Om det gör det kan du inte visa det i användargränssnittet.
 1. **data-repeterbar** har ingen betydelse för **Länk** -komponenten. Adobe rekommenderar att du undviker att använda den här egenskapen i mallen för en länkkomponent.
 
 ## Relaterade artiklar

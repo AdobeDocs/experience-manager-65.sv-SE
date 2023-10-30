@@ -1,24 +1,22 @@
 ---
-title: "Självstudie: Skapa formulärdatamodell"
-seo-title: Create Form Data Model Tutorial
-description: Skapa formulärdatamodell
-seo-description: Create form data model
+title: "Självstudiekurs: Skapa formulärdatamodell"
+description: Konfigurera MySQL som datakälla, skapa en formulärdatamodell (FDM), konfigurera den och testa för AEM Forms.
 uuid: b9d2bb1b-90f0-44f4-b1e3-0603cdf5f5b8
 contentOwner: khsingh
 products: SG_EXPERIENCEMANAGER/6.3/FORMS
 discoiquuid: 12e6c325-ace0-4a57-8ed4-6f7ceee23099
 docset: aem65
 exl-id: 40bc5af6-9023-437e-95b0-f85d3df7d8aa
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 0e5b89617d481c69882ec5d4658e76855aa9b691
 workflow-type: tm+mt
-source-wordcount: '1441'
+source-wordcount: '1454'
 ht-degree: 1%
 
 ---
 
-# Självstudie: Skapa formulärdatamodell {#tutorial-create-form-data-model}
+# Självstudiekurs: Skapa formulärdatamodell {#tutorial-create-form-data-model}
 
-![04-skapa-formulär-data-modell-huvud](assets/04-create-form-data-model-main.png)
+![04-skapa-formulär-data-modell-main](assets/04-create-form-data-model-main.png)
 
 Den här självstudiekursen är ett steg i [Skapa ditt första adaptiva formulär](../../forms/using/create-your-first-adaptive-form.md) serie. Vi rekommenderar att du följer serien i kronologisk ordning för att förstå, utföra och demonstrera det fullständiga självstudiekurserna.
 
@@ -58,7 +56,7 @@ Gör följande för att konfigurera [!DNL MySQL] databas:
 1. Installera JDBC-drivrutin för [!DNL MySQL] databas som ett OSGi-paket:
 
    1. Ladda ned [!DNL MySQL] JDBC Driver OSGi Bundle från `http://www.java2s.com/ref/jar/download-orgosgiservicejdbc100jar-file.html`. <!-- This URL is an insecure link but using https is not possible -->
-   1. Logga in på AEM Author Instance som administratör och gå till AEM [!DNL Forms] webbkonsolpaket. Standardwebbadressen är [https://localhost:4502/system/console/bundles](https://localhost:4502/system/console/bundles).
+   1. Logga in på AEM Author-instansen som administratör och gå till AEM [!DNL Forms] webbkonsolpaket. Standard-URL:en är [https://localhost:4502/system/console/bundles](https://localhost:4502/system/console/bundles).
 
    1. Tryck på **[!UICONTROL Install/Update]**. En [!UICONTROL Upload / Install Bundles] dialogruta visas.
 
@@ -77,9 +75,9 @@ Gör följande för att konfigurera [!DNL MySQL] databas:
 
       >[!NOTE]
       >
-      > När [!DNL MySQL] databasen ligger bakom en brandvägg och databasens värdnamn är inte en publik DNS. IP-adressen för databasen måste läggas till i *filen /etc/hosts* på AEM.
+      > När [!DNL MySQL] databasen ligger bakom en brandvägg och databasens värdnamn är inte en publik DNS. IP-adressen för databasen måste läggas till i *filen /etc/hosts* på den AEM värddatorn.
 
-      * **Användarnamn:** Databasens användarnamn. Du måste aktivera JDBC-drivrutinen för att upprätta en anslutning till databasen.
+      * **Användarnamn:** Databasens användarnamn. Det krävs för att JDBC-drivrutinen ska kunna upprätta en anslutning till databasen.
       * **Lösenord:** Lösenord för databasen. Det krävs för att JDBC-drivrutinen ska kunna upprätta en anslutning till databasen.
 
       >[!NOTE]
@@ -99,9 +97,9 @@ Gör följande för att konfigurera [!DNL MySQL] databas:
 
 ## Steg 2: Skapa formulärdatamodell {#create-fdm}
 
-AEM [!DNL Forms] tillhandahåller ett intuitivt användargränssnitt för att [skapa en formulärdatamodell](data-integration.md) från konfigurerade datakällor. Du kan använda flera datakällor i en formulärdatamodell. För vårt användningsfall använder vi den konfigurerade [!DNL MySQL] datakällan.
+AEM [!DNL Forms] har ett intuitivt användargränssnitt för att [skapa en formulärdatamodell](data-integration.md) från konfigurerade datakällor. Du kan använda flera datakällor i en formulärdatamodell. I vårt användningsfall använder vi den konfigurerade [!DNL MySQL] datakällan.
 
-Skapa en formulärdatamodell genom att göra följande:
+Gör så här för att skapa en formulärdatamodell:
 
 1. I AEM författarinstans går du till **[!UICONTROL Forms]** > **[!UICONTROL Data Integrations]**.
 1. Tryck på **[!UICONTROL Create]** > **[!UICONTROL Form Data Model]**.
@@ -169,7 +167,7 @@ Gör följande för att konfigurera formulärdatamodellen:
 
    1. Tryck **[!UICONTROL Done]** om du vill spara datamodellens objektegenskaper. Tryck sedan på **[!UICONTROL Save]** för att spara formulärdatamodellen.
 
-      Tjänsterna **[!UICONTROL get]** och **[!UICONTROL update]** läggs till som standardtjänster för datamodellobjektet.
+      Tjänsterna **[!UICONTROL get]** och **[!UICONTROL update]** läggs till som standardtjänster för datamodellsobjektet.
 
       ![data-modell-objekt](assets/data-model-object.png)
 
@@ -188,7 +186,7 @@ Gör följande för att konfigurera formulärdatamodellen:
         kundinformationsschema
 
       * **Returnera matris**: Inaktivera **Returnera matris** alternativ.
-      * **Argument**: Välj argument med namnet **ID**.
+      * **Argument:** Välj argument med namnet **ID.**
 
       Tryck på **[!UICONTROL Done]**. Tjänsten för att hämta kundinformation från MySQL-databasen har konfigurerats.
 

@@ -1,15 +1,15 @@
 ---
 title: Streckkodad Forms Service Java APIQuick Start(SOAP)
-description: Streckkodad Forms Service Java APIQuick Start(SOAP)
+description: Med streckkodsfunktionen Forms Java API Quick Start (SOAP) i AEM Forms kan streckkoder behandlas smidigt.
 contentOwner: admin
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 role: Developer
 exl-id: 907c12be-dab4-48b5-9da1-a76b711f49f2
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: 68a1edf5f62d7a988094fceb3f762504711dc2f1
 workflow-type: tm+mt
-source-wordcount: '216'
+source-wordcount: '226'
 ht-degree: 0%
 
 ---

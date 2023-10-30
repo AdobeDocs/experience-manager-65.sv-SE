@@ -1,15 +1,14 @@
 ---
 title: Protect ett dokument för en annan användares räkning
-seo-title: Protect a document on behalf of another user
-description: Protect ett dokument för en annan användares räkning
+description: AEM Forms Document Security Java SDK erbjuder API:er för ett användarkonto som skyddar ett dokument åt en annan användare, utan att någon redigeringsbehörighet krävs.
 uuid: 76f4b30b-6d0c-4cae-98b3-334efdbf27bb
 geptopics: SG_AEMFORMS/categories/working_with_document_security
 discoiquuid: 7cb8140d-dd62-4659-8cc7-21361bd5d3f6
 feature: Document Security
 exl-id: e5c80569-d3c0-4358-9b91-b98a64d1c004
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 20b0d0db54dc30285c056a10032f02ba45f8baca
 workflow-type: tm+mt
-source-wordcount: '368'
+source-wordcount: '385'
 ht-degree: 0%
 
 ---
@@ -20,7 +19,7 @@ AEM Forms Document Security Java SDK innehåller API:er som gör att ett använd
 
 * **protectDocumentUse** Skydda dokumentets API om du vill tillämpa en profil på ett dokument för
 
-   ett annat användarkonto. Behörigheterna för det användarkonto som används för att tillämpa profilen förblir begränsade till att skydda dokumentet. Det ger inte rätt att öppna och visa dokumentet. RMSecureDocumentResult protectDocument(Document inDoc, String documentName, String policySetName, String policyName, RMLocale locale, boolean bExactMatchForNames)
+  ett annat användarkonto. Behörigheterna för det användarkonto som används för att tillämpa profilen förblir begränsade till att skydda dokumentet. Det ger inte rätt att öppna och visa dokumentet. RMSecureDocumentResult protectDocument(Document inDoc, String documentName, String policySetName, String policyName, RMLocale locale, boolean bExactMatchForNames)
 
 * **createLicenseUse** CreateLicense API för att skapa en licens för en princip för ett annat användarkonto. PublishLicenseDTO createLicense(String policyId, String documentName, booleskt logSecureDocEvent)
 * **protectDocumentWithCoverPageUse** API:t ProtectDocumentWithCoverPage om du vill tillämpa en profil och lägga till en försättssida i ett dokument för en annan användares räkning. Behörigheterna för det användarkonto som används för att tillämpa profilen förblir begränsade till att skydda dokumentet. Det uppfyller inte rätten att öppna och visa dokumentet. RMSecureDocumentResult protectDocumentWithCoverPage(Document inDoc, String documentName, String policySetName, String policyName, Document coverDoc, boolean bExactMatchForNames)
@@ -29,8 +28,8 @@ AEM Forms Document Security Java SDK innehåller API:er som gör att ett använd
 
 Gör så här för att skydda ett dokument för en annan användares räkning och utan att behöva ha behörighet att redigera dokumentet:
 
-1. Skapa en principuppsättning. Exempel: PolicySet1.
-1. Skapa en profil i den nya principuppsättningen. Exempel: Policy1 i PolicySet1.
+1. Skapa en principuppsättning. PolicySet1.
+1. Skapa en profil i den nya principuppsättningen. Policy1 i PolicySet1.
 1. Skapa en användare med rollen Rights Management-slutanvändare. Exempel: Användare1. Ge den nyskapade användaren behörighet att visa dokument som skyddas med Policy1.
 1. Skapa en ny roll. Till exempel Role1. Ange behörigheten Tjänstanrop till den nyligen skapade rollen. Skapa en användare med en nyskapad roll. Exempel: Användare2.Du kan använda Användare2 eller en administratör för att skapa en SDK-anslutning och anropa tjänsten protectDocument.
 

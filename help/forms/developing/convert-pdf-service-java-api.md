@@ -1,7 +1,6 @@
 ---
-title: Konvertera PDF Service Java API QuickStart(SOAP)
-seo-title: Convert PDF Service Java API QuickStart(SOAP)
-description: Konvertera PDF Service Java API QuickStart(SOAP)
+title: Konvertera SOAP (PDF Service Java API QuickStart)
+description: Med tjänsten Konvertera PDF kan du konvertera PDF-dokument till PostScript- eller bildfiler (JPEG, JPEG 2000, PNG och TIFF).
 uuid: 97253ac7-f0c1-4766-a7bd-c19af52adf51
 contentOwner: admin
 content-type: reference
@@ -10,9 +9,9 @@ topic-tags: develop
 discoiquuid: bdd9bb56-14f6-448b-be4a-7c11f670e901
 role: Developer
 exl-id: 8974c468-ff2b-431d-96fb-e987698619bc
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 68a1edf5f62d7a988094fceb3f762504711dc2f1
 workflow-type: tm+mt
-source-wordcount: '251'
+source-wordcount: '261'
 ht-degree: 0%
 
 ---
@@ -33,7 +32,7 @@ AEM Forms-åtgärder kan utföras med AEM Forms starkt typade API och anslutning
 
 ## Snabbstart (SOAP-läge): Konvertera ett PDF-dokument till PostScript med Java API {#quick-start-soap-mode-converting-a-pdf-document-to-postscript-using-the-java-api}
 
-I följande kodexempel konverteras ett PDF-dokument med namnet *Loan.pdf* till ett PostScript-dokument som anropas *Loan.ps*. (Se [Konverterar PDF-dokument till PostScript](/help/forms/developing/converting-pdf-postscript-image-files.md#converting-pdf-documents-to-postscript).)
+I följande kodexempel konverteras ett PDF-dokument med namnet *Loan.pdf* till ett PostScript-dokument som kallas *Loan.ps*. (Se [Konverterar PDF-dokument till PostScript](/help/forms/developing/converting-pdf-postscript-image-files.md#converting-pdf-documents-to-postscript).)
 
 ```java
  /*
@@ -148,7 +147,7 @@ I följande kodexempel konverteras ett PDF-dokument med namnet *Loan.pdf* till e
 
 ## Snabbstart (SOAP-läge): Konvertera ett PDF-dokument till JPEG med Java API {#quick-start-soap-mode-converting-a-pdf-document-to-jpeg-files-using-the-java-api}
 
-I följande Java-kodexempel konverteras ett PDF-dokument med namnet *Loan.pdf* till en uppsättning JPEG-filer och lagrar dem i mappen C:\Adobe directory. Varje fil har ett namn `tempFile[index].jpg`, där den första bildfilen namnges *tempFile0.jpg*. (Se [Konvertera PDF-dokument till bildformat](/help/forms/developing/converting-pdf-postscript-image-files.md#converting-pdf-documents-to-image-formats).)
+I följande Java-kodexempel konverteras ett PDF-dokument med namnet *Loan.pdf* till en uppsättning JPEG-filer och lagrar dem i katalogen C:\Adobe. Varje fil har ett namn `tempFile[index].jpg`, där den första bildfilen har ett namn *tempFile0.jpg*. (Se [Konvertera PDF-dokument till bildformat](/help/forms/developing/converting-pdf-postscript-image-files.md#converting-pdf-documents-to-image-formats).)
 
 ```java
  /*

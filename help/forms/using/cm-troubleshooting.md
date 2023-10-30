@@ -1,8 +1,6 @@
 ---
-title: "Korrespondenshantering: Felsökning"
-seo-title: Correspondence Management Troubleshooting
-description: Felsökning av korrespondenshantering
-seo-description: Correspondence Management Troubleshooting
+title: "Korrespondenshantering: felsökning"
+description: Hantera fel som kan uppstå när ett brev sparas i en AEM Forms-miljö.
 uuid: 25828cdd-110e-4a84-8f31-d82cd610a54f
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -10,9 +8,9 @@ topic-tags: correspondence-management
 discoiquuid: cc473808-e71a-4834-bb30-91e6df783e60
 feature: Correspondence Management
 exl-id: cf06796b-bb8c-4a65-8f42-02fb0cfa3ebd
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 68a1edf5f62d7a988094fceb3f762504711dc2f1
 workflow-type: tm+mt
-source-wordcount: '199'
+source-wordcount: '213'
 ht-degree: 0%
 
 ---
@@ -43,7 +41,7 @@ Kontrollera att det datalexikon som du använder i brevet finns på servern och 
 
 ### Problem {#issue-1}
 
-Felet&quot;Fel vid inläsning av brev: Det gick inte att importera resursen från XML-indata&quot; visas även när en tidigare opublicerad textresurs i bokstaven publiceras.
+När du förhandsgranskar en bokstav visas felet&quot;Fel vid inläsning av bokstav: Det gick inte att importera resurs från XML-indata&quot; även när en tidigare opublicerad textresurs i bokstaven publiceras.
 
 ### Tillfällig lösning {#workaround-1}
 
@@ -53,4 +51,4 @@ Felet&quot;Fel vid inläsning av brev: Det gick inte att importera resursen frå
 1. Välj **Konfigurationer för korrespondenshantering**.
 1. I **Konfigurationer för korrespondenshantering**, inaktivera **Aktivera bokstavscache** och sedan klicka **Spara.**
 1. Aktivera **Aktivera bokstavscache** och sedan klicka **Spara**.
-1. Försök visa brevet igen.
+1. Försök att visa brevet igen.

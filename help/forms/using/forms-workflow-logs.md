@@ -1,8 +1,6 @@
 ---
 title: Logga in i AEM Forms arbetsflöden
-seo-title: Logging in AEM Forms workflows
-description: Använd loggar för att felsöka problem i AEM Forms arbetsflöde.
-seo-description: Use logs to debug AEM Forms workflow issues.
+description: Felsök arbetsflödesproblem i AEM Forms och aktivera felsökningsloggning för arbetsflöden i AEM Forms för att visa loggarna.
 uuid: 869d0271-c7e3-4b6d-8e63-893dc6af8b8a
 contentOwner: anujkapo
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -10,9 +8,9 @@ topic-tags: publish
 discoiquuid: 14bb521a-42ea-4fe2-90fb-202e7ddf917a
 docset: aem65
 exl-id: 601c8d95-0d1a-4945-a522-e85d3e9fc4ae
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 20b0d0db54dc30285c056a10032f02ba45f8baca
 workflow-type: tm+mt
-source-wordcount: '269'
+source-wordcount: '278'
 ht-degree: 6%
 
 ---
@@ -26,35 +24,35 @@ Som standard är all loggningsinformation tillgänglig i **error.log** filen på
 Felsökningsloggarna för formulärarbetsflöden innehåller:
 
 * Inmatning av varje arbetsflödessteg. Till exempel:\
-   `[DEBUG] "Executing Invoke DDX Process step"`
+  `[DEBUG] "Executing Invoke DDX Process step"`
 
 * Avsluta varje arbetsflödessteg. Till exempel:\
-   `[DEBUG] "Successfully finished Invoke DDX Process step"`
+  `[DEBUG] "Successfully finished Invoke DDX Process step"`
 
 * Meddelanden om serviceanrop. Till exempel:\
-   `[DEBUG] Invoking Adobe Sign Service for creating agreement`
+  `[DEBUG] Invoking Adobe Sign Service for creating agreement`
 
 * Meddelanden om tjänstavslutning. Till exempel:\
-   `[DEBUG] Agreement created successfully with agreement id <agreement id>`
+  `[DEBUG] Agreement created successfully with agreement id <agreement id>`
 
 * Variabler som läses från metadatamappningen. Till exempel:\
-   `[DEBUG] Successfully retrieved variable <variable name> from workflow meta data map`
+  `[DEBUG] Successfully retrieved variable <variable name> from workflow meta data map`
 
 * Variabler skrivna i JCR-databasen. Till exempel:
 
-   ```verilog
-      [DEBUG] Successfully written variable <variable name> into meta data node at <JCR path where meta data is being written>
-   ```
+  ```verilog
+     [DEBUG] Successfully written variable <variable name> into meta data node at <JCR path where meta data is being written>
+  ```
 
-* Undantagsmeddelanden med fullständig stackspårning. Till exempel:\
-   `[DEBUG] Exception in Adobe Sign Service <complete stack trace>`
+* Undantag med fullständig stackspårning. Till exempel:\
+  `[DEBUG] Exception in Adobe Sign Service <complete stack trace>`
 
-* Metadataparametrar för dynamiskt steg. Till exempel:
+* Parametrar för metadata för dynamiskt steg. Till exempel:
 
-   ```verilog
-   [DEBUG] Document of Record to be generated for adaptive form <path of adaptive form>
-    [DEBUG] Locale to be used for Document of Record is <locale>
-   ```
+  ```verilog
+  [DEBUG] Document of Record to be generated for adaptive form <path of adaptive form>
+   [DEBUG] Locale to be used for Document of Record is <locale>
+  ```
 
 I följande exempel visas loggarna för steget Signera dokument:
 

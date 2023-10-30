@@ -1,8 +1,6 @@
 ---
 title: Snabbstart för Forms Service API
-seo-title: Forms Service API Quick Starts
-description: Använd snabbstarter för Forms Service API.
-seo-description: Use the Quick Starts for the Forms Service API.
+description: Rendera interaktiva PDF, HTML Forms, fragment med JAVA API.
 uuid: dfce259a-e392-4929-ad7e-6d902faceaeb
 contentOwner: admin
 content-type: reference
@@ -11,7 +9,7 @@ topic-tags: develop
 discoiquuid: 9fe48243-24c6-4e08-9886-148cd99dec87
 role: Developer
 exl-id: acb33000-25b3-4471-9df9-b6e039ab2bda
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 0e5b89617d481c69882ec5d4658e76855aa9b691
 workflow-type: tm+mt
 source-wordcount: '1549'
 ht-degree: 0%
@@ -38,21 +36,21 @@ Följande snabbstarter är tillgängliga för tjänsten Forms:
 
 [Snabbstart (SOAP-läge): Hantera PDF forms som skickats som XML med Java API](forms-service-api-quick-starts.md#quick-start-soap-mode-handling-pdf-forms-submitted-as-xml-using-the-java-api)
 
-[Snabbstart (SOAP-läge): Hantera PDF forms som skickats som PDF med Java API](forms-service-api-quick-starts.md#quick-start-soap-mode-handling-pdf-forms-submitted-as-pdf-using-the-java-api)
+[Snabbstart (SOAP-läge): Hantera PDF forms som har skickats som PDF med Java API](forms-service-api-quick-starts.md#quick-start-soap-mode-handling-pdf-forms-submitted-as-pdf-using-the-java-api)
 
 [Snabbstart (SOAP-läge): Hantera HTML-formulär som skickats som XML med Java API](forms-service-api-quick-starts.md#quick-start-soap-mode-handling-html-forms-submitted-as-xml-using-the-java-api)
 
 [Snabbstart (SOAP-läge): Skapa PDF-dokument med skickade XML-data med Java API](forms-service-api-quick-starts.md#quick-start-soap-mode-creating-pdf-documents-with-submitted-xml-data-using-the-java-api)
 
-[Snabbstart (SOAP-läge): Förifyll Forms med flödeslayouter med Java API](forms-service-api-quick-starts.md#quick-start-soap-mode-prepopulating-forms-with-flowable-layouts-using-the-java-api)
+[Snabbstart (SOAP-läge): Fylla i Forms i förväg med flödeslayouter med Java API](forms-service-api-quick-starts.md#quick-start-soap-mode-prepopulating-forms-with-flowable-layouts-using-the-java-api)
 
 [Snabbstart (SOAP-läge): Hantera ett formulär som innehåller ett beräkningsskript med Java API](forms-service-api-quick-starts.md#quick-start-soap-mode-handling-a-form-containing-a-calculation-script-using-the-java-api)
 
 [Snabbstart (SOAP-läge): Optimera prestanda med Java API](forms-service-api-quick-starts.md#quick-start-soap-mode-optimizing-performance-using-the-java-api)
 
-[Snabbstart (SOAP-läge): Återgivning med hjälp av Java API](forms-service-api-quick-starts.md#quick-start-soap-mode-rendering-by-value-using-the-java-api)
+[Snabbstart (SOAP-läge): Återge efter värde med Java API](forms-service-api-quick-starts.md#quick-start-soap-mode-rendering-by-value-using-the-java-api)
 
-[Snabbstart (SOAP-läge): Skicka dokument till Forms-tjänsten med Java API](forms-service-api-quick-starts.md#quick-start-soap-mode-passing-documents-to-the-forms-service-using-the-java-api)
+[Snabbstart (SOAP-läge): skicka dokument till Forms-tjänsten med Java API](forms-service-api-quick-starts.md#quick-start-soap-mode-passing-documents-to-the-forms-service-using-the-java-api)
 
 Programlogik som använder Forms tjänst-API implementeras som Java-servrar. AEM Forms-åtgärder kan utföras med AEM Forms starkt typade API och anslutningsläget bör anges till SOAP.
 
@@ -60,7 +58,7 @@ Programlogik som använder Forms tjänst-API implementeras som Java-servrar. AEM
 >
 >Snabbstart i Programmering med v baseras på den formulärserver som du använder ett annat operativsystem, till exempel Unix, och ersätter Windows-specifika sökvägar med sökvägar som stöds av det aktuella operativsystemet. På samma sätt måste du ange giltiga anslutningsegenskaper om du använder en annan J2EE-programserver. Se [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
-**Tips**: På Adobe Developer webbplats finns följande artikel som handlar om hur du skapar ett ASP.NET-program som anropar tjänsten Forms och återger formulär.
+**Tips**: Adobe Developer webbplats innehåller följande artikel som handlar om hur du skapar ett ASP.NET som anropar tjänsten Forms och återger formulär.
 
 ## Snabbstart (SOAP-läge): Återge ett interaktivt PDF-formulär med Java API {#quick-start-soap-mode-rendering-an-interactive-pdf-form-using-the-java-api}
 
@@ -337,7 +335,7 @@ I följande kodexempel återges ett formulär med namnet *Loan.xdp* på klienten
  
 ```
 
-## Snabbstart (SOAP-läge): Återge en stödlinje (föråldrad) med Java API {#quick-start-soap-mode-rendering-a-guide-deprecated-using-the-java-api}
+## Snabbstart (SOAP-läge): Återge en stödlinje (inaktuell) med Java API {#quick-start-soap-mode-rendering-a-guide-deprecated-using-the-java-api}
 
 I följande kodexempel återges en guide (utgått) med namnet *TLALifeClaim.xdp* till en webbläsare.
 
@@ -1061,7 +1059,7 @@ I följande kodexempel återges ett HTML-formulär med Forms klient-API. Namnet 
 
 ## Snabbstart (SOAP-läge): Återge ett HTML-formulär med ett anpassat verktygsfält med Java API {#quick-start-soap-mode-rendering-an-html-form-with-a-custom-toolbar-using-the-java-api}
 
-I följande kodexempel återges ett HTML-formulär med ett verktygsfält som visas på franska. Platsen för fscmenu.xml är C:\Adobe (den här mappen måste finnas på den server som är värd för AEM Forms). Observera att språkvärdet är `fr_FR`. I avsnittet som handlar om hur du återger ett HTML-formulär med ett anpassat verktygsfält visas syntaxen för filen fscmenu.xml som används i snabbstarten. (Se [Återge HTML Forms med anpassade verktygsfält](/help/forms/developing/rendering-forms.md#rendering-html-forms-with-custom-toolbars).)
+I följande kodexempel återges ett HTML-formulär med ett verktygsfält som visas på franska. Platsen för fscmenu.xml är C:\Adobe (den här mappen måste finnas på den server där AEM Forms finns). Observera att språkvärdet är `fr_FR`. I avsnittet som handlar om hur du återger ett HTML-formulär med ett anpassat verktygsfält visas syntaxen för filen fscmenu.xml som används i snabbstarten. (Se [Återge HTML Forms med anpassade verktygsfält](/help/forms/developing/rendering-forms.md#rendering-html-forms-with-custom-toolbars).)
 
 ```java
  /*
@@ -1217,7 +1215,7 @@ I följande kodexempel återges ett HTML-formulär med ett verktygsfält som vis
 
 ## Snabbstart (SOAP-läge): Hantera PDF forms som skickats som XML med Java API {#quick-start-soap-mode-handling-pdf-forms-submitted-as-xml-using-the-java-api}
 
-I följande kodexempel hanteras ett formulär som skickas som XML. Värdet för innehållstypen som skickas till `processFormSubmission` metoden is `CONTENT_TYPE=text/xml`. Värdena som motsvarar fälten med namnet `mortgageAmount`, `lastName`och `firstName` visas. En användardefinierad metod med namnet `getNodeText` används i den här snabbstarten. Den godkänner `org.w3c.dom.Document` -instans och ett strängvärde som anger nodnamnet. Den här metoden returnerar ett strängvärde som representerar nodens värde. (Se [Hantera skickade Forms](/help/forms/developing/rendering-forms.md#handling-submitted-forms).)
+I följande kodexempel hanteras ett formulär som skickas som XML. Värdet för innehållstypen som skickas till `processFormSubmission` metoden is `CONTENT_TYPE=text/xml`. Värdena som motsvarar fälten med namnet `mortgageAmount`, `lastName`och `firstName` visas. En användardefinierad metod med namnet `getNodeText` används i denna snabbstart. Den godkänner `org.w3c.dom.Document` -instans och ett strängvärde som anger nodnamnet. Den här metoden returnerar ett strängvärde som representerar nodens värde. (Se [Hantera skickade Forms](/help/forms/developing/rendering-forms.md#handling-submitted-forms).)
 
 ```java
  /*
@@ -1384,7 +1382,7 @@ I följande kodexempel hanteras ett formulär som skickas som XML. Värdet för 
 >
 >När en `com.adobe.idp.Document` objekt och `org.w3c.dom.Document` i samma applikation, fullständigt kvalificera `org.w3c.dom.Document`.
 
-## Snabbstart (SOAP-läge): Hantera PDF forms som skickats som PDF med Java API {#quick-start-soap-mode-handling-pdf-forms-submitted-as-pdf-using-the-java-api}
+## Snabbstart (SOAP-läge): Hantera PDF forms som har skickats som PDF med Java API {#quick-start-soap-mode-handling-pdf-forms-submitted-as-pdf-using-the-java-api}
 
 I följande kodexempel hanteras ett formulär som skickas som PDF data. Värdet för innehållstypen som skickas till `processFormSubmission` metoden is `CONTENT_TYPE=application/pdf`. Det skickade formuläret sparas som en PDF-fil med namnet *tempPDF.pdf*. Eftersom formuläret skickas som PDF kan även bifogade filer hämtas. Bifogade filer sparas som JPEG-filer. (Se [Hantera skickade Forms](/help/forms/developing/rendering-forms.md#handling-submitted-forms).)
 
@@ -1536,7 +1534,7 @@ I följande kodexempel hanteras ett formulär som skickas som PDF data. Värdet 
 
 ## Snabbstart (SOAP-läge): Hantera HTML-formulär som skickats som XML med Java API {#quick-start-soap-mode-handling-html-forms-submitted-as-xml-using-the-java-api}
 
-I följande kodexempel hanteras ett HTML-formulär som skickas som XML-data. Värdet för innehållstypen som skickas till `processFormSubmission` metoden is `CONTENT_TYPE=application/x-www-form-urlencoded`.Värdena som motsvarar fälten namngivna `mortgageAmount`, `lastName`och `firstName` visas. En användardefinierad metod med namnet `getNodeText` används i den här snabbstarten. Den godkänner `org.w3c.dom.Document` -instans och ett strängvärde som anger nodnamnet. Den här metoden returnerar ett strängvärde som representerar nodens värde. (Se [Hantera skickade Forms](/help/forms/developing/rendering-forms.md#handling-submitted-forms).)
+I följande kodexempel hanteras ett HTML-formulär som skickas som XML-data. Värdet för innehållstypen som skickas till `processFormSubmission` metoden is `CONTENT_TYPE=application/x-www-form-urlencoded`.Värdena som motsvarar fälten namngivna `mortgageAmount`, `lastName`och `firstName` visas. En användardefinierad metod med namnet `getNodeText` används i denna snabbstart. Den godkänner `org.w3c.dom.Document` -instans och ett strängvärde som anger nodnamnet. Den här metoden returnerar ett strängvärde som representerar nodens värde. (Se [Hantera skickade Forms](/help/forms/developing/rendering-forms.md#handling-submitted-forms).)
 
 ```java
  /*
@@ -1966,7 +1964,7 @@ I följande Java-kodexempel hanteras formulärdata som skickas som XML. Formulä
  }
 ```
 
-## Snabbstart (SOAP-läge): Förifyll Forms med flödeslayouter med Java API {#quick-start-soap-mode-prepopulating-forms-with-flowable-layouts-using-the-java-api}
+## Snabbstart (SOAP-läge): Fylla i Forms i förväg med flödeslayouter med Java API {#quick-start-soap-mode-prepopulating-forms-with-flowable-layouts-using-the-java-api}
 
 I följande kodexempel förifylls ett formulär med en dynamisk datakälla. Det innebär att datakällan skapas vid körning och inte finns i en XML-fil eller skapas under designen. Det här kodexemplet innehåller tre användardefinierade metoder:
 
@@ -2371,7 +2369,7 @@ I följande kodexempel bearbetas ett formulär som innehåller ett beräkningssk
 
 ## Snabbstart (SOAP-läge): Optimera prestanda med Java API {#quick-start-soap-mode-optimizing-performance-using-the-java-api}
 
-Följande kodexempel optimerar prestanda genom att ställa in alternativen för cache-lagring, fristående och linjär. En linjär fil är optimerad för webben. (Se [Optimera prestanda för Forms-tjänsten](/help/forms/developing/rendering-forms.md#optimizing-the-performance-of-the-forms-service).)
+Följande kodexempel optimerar prestanda genom att ställa in alternativen för cache-lagring, fristående och linjär. En linjär fil är optimerad för webben. (Se [Optimera prestandan för Forms-tjänsten](/help/forms/developing/rendering-forms.md#optimizing-the-performance-of-the-forms-service).)
 
 ```java
  /*
@@ -2497,7 +2495,7 @@ Följande kodexempel optimerar prestanda genom att ställa in alternativen för 
  }
 ```
 
-## Snabbstart (SOAP-läge): Återgivning med hjälp av Java API {#quick-start-soap-mode-rendering-by-value-using-the-java-api}
+## Snabbstart (SOAP-läge): Återge efter värde med Java API {#quick-start-soap-mode-rendering-by-value-using-the-java-api}
 
 Följande Java-snabbstart återger ett interaktivt PDF-formulär som bygger på en formulärdesign med namnet *Loan.xdp* efter värde. Observera att formulärdesignen används för att fylla i en `com.adobe.idp.Document` objekt namngivet *inputXDP*. (Se [Återger Forms efter värde](/help/forms/developing/rendering-forms.md#rendering-forms-by-value).)
 
@@ -2624,9 +2622,9 @@ Följande Java-snabbstart återger ett interaktivt PDF-formulär som bygger på 
  }
 ```
 
-## Snabbstart (SOAP-läge): Skicka dokument till Forms-tjänsten med Java API {#quick-start-soap-mode-passing-documents-to-the-forms-service-using-the-java-api}
+## Snabbstart (SOAP-läge): skicka dokument till Forms-tjänsten med Java API {#quick-start-soap-mode-passing-documents-to-the-forms-service-using-the-java-api}
 
-Följande Java-snabbstart hämtar filen Loan.xdp från Content Services (utgått). Den här XDP-filen finns i rymden `/Company Home/Form Designs`. XDP-filen returneras i en `com.adobe.idp.Document` -instans. The `com.adobe.idp.Document` -instansen skickas till Forms-tjänsten. Det interaktiva formuläret skrivs till en webbläsare. (Se [Skicka dokument till Forms-tjänsten](/help/forms/developing/passing-documents-forms-service.md).)
+Följande Java-snabbstart hämtar filen Loan.xdp från Content Services (utgått). Den här XDP-filen finns i rymden `/Company Home/Form Designs`. XDP-filen returneras i en `com.adobe.idp.Document` -instans. The `com.adobe.idp.Document` -instansen skickas till Forms-tjänsten. Det interaktiva formuläret skrivs till en webbläsare. (Se [Skicka dokument till Forms](/help/forms/developing/passing-documents-forms-service.md).)
 
 ```java
  /*
