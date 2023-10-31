@@ -2,9 +2,9 @@
 title: Asynkrona jobb
 description: Adobe Experience Manager optimerar prestandan genom att asynkront slutföra vissa resurskrävande uppgifter.
 exl-id: 4af1bcfe-9f2e-44a4-8666-881f2dccc3bc
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: cc63291c32f7a234398ebe8bf67ab53aaf8fa90f
 workflow-type: tm+mt
-source-wordcount: '804'
+source-wordcount: '724'
 ht-degree: 96%
 
 ---
@@ -19,7 +19,6 @@ Dessa åtgärder omfattar:
 * Att flytta många resurser eller resurser med många referenser.
 * Att exportera/importera metadata för resurser i grupp.
 * Att hämta resurser som ligger över det angivna gränsvärdet från en fjärrdistribution av Experience Manager.
-* Att flytta sidor.
 * Att öppna Live-kopior.
 
 Du kan se statusen för asynkrona jobb på **[!UICONTROL Async Job Status]** instrumentpanelen via **Global Navigation** -> **Tools** -> **Operations** -> **Jobs**.
@@ -113,19 +112,6 @@ Om antalet resurser/mappar eller referenser som ska flyttas överstiger gränsv�
 1. I rutan **[!UICONTROL Threshold number of assets/references]** ska du ange gränsvärdet för antal resurser/mappar eller referenser gällande asynkron bearbetning av flyttningar.
 
    ![Gränsvärde för resursflyttning](assets/async-move-threshold.png)
-
-1. Markera alternativet **Enable email notification** för att få e-postmeddelanden för den här jobbstatusen. till exempel om det lyckades, misslyckades.
-1. Spara ändringarna.
-
-### Konfigurera asynkrona åtgärder för att flytta sidor {#configuring-asynchronous-page-move-operations}
-
-Om antalet referenser till de sidor som ska flyttas överstiger gränsvärdet utförs flytten asynkront.
-
-1. Klicka på **[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Web Console]** i Global Navigation.
-1. Öppna **[!UICONTROL Async Page Move Operation Job Processing Configuration.]** via webbkonsolen
-1. I fältet **[!UICONTROL Threshold number of references]** ska du ange gränsvärdet för antal referenser gällande asynkron bearbetning för att flytta sidor.
-
-   ![Tröskelvärde för att flytta sidor](assets/async-page-move.png)
 
 1. Markera alternativet **Enable email notification** för att få e-postmeddelanden för den här jobbstatusen. till exempel om det lyckades, misslyckades.
 1. Spara ändringarna.
