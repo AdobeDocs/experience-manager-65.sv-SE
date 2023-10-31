@@ -57,11 +57,11 @@ Navigera till rätt katalog och skriv i en kommandotolk `./aem65_cfp_install.bin
 
    * Eller avmarkera **Starta Configuration Manager** innan du klickar **[!UICONTROL Done]**. Före körning **Konfigurationshanteraren** använda **ConfigurationManager.exe** eller **ConfigurationManager_IPv6.exe**, navigera till *`<AEMForms_Install_Dir>\configurationManager\bin`* katalog och ersätta [ConfigurationManager.lax](/help/assets/ConfigurationManager.lax) och [ConfigurationManager_IPV6.lax](/help/assets/ConfigurationManager_IPv6.lax) filer.
 
-   
-   >[!NOTE]
+   >>
+   [!NOTE]
+   >>
+   Använda **ConfigurationManager.bat** Med hjälp av filen kan du undvika att uppdatera namnet på .lax-filer manuellt.
    >
-   >Använda **ConfigurationManager.bat** Med hjälp av filen kan du undvika att uppdatera namnet på .lax-filer manuellt.
-   
 
 1. **[Endast för Unix-baserade]:**
 
