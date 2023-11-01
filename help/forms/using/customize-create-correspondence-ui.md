@@ -7,7 +7,7 @@ topic-tags: correspondence-management
 docset: aem65
 feature: Correspondence Management
 exl-id: 9593ca2a-7f9e-4487-a1a5-ca44114bff17
-source-git-commit: 0e5b89617d481c69882ec5d4658e76855aa9b691
+source-git-commit: 000c22028259eb05a61625d43526a2e8314a1d60
 workflow-type: tm+mt
 source-wordcount: '1092'
 ht-degree: 0%
@@ -83,7 +83,7 @@ Följ de här stegen för att skapa den nödvändiga mappstrukturen i `/apps` gr
 
    1. Klicka **OK**. CSS-mappen skapas i den angivna sökvägen.
 
-1. Skapa en mapp med namnet i appmappen `imgs` med en sökväg/struktur som liknar mappen imgs (i mappen ccrui).
+1. Skapa en mapp med namnet i appmappen `imgs` med en bana/struktur som liknar `imgs` i crui-mappen.
 
    1. Högerklicka på **imgs** mapp på följande sökväg och välj **Överläggsnod**: `/libs/fd/cm/ccr/gui/components/admin/clientlibs/ccrui/imgs`
    1. Kontrollera att dialogrutan Overlay Node har följande värden:

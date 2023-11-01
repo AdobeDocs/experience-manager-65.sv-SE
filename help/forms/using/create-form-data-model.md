@@ -1,24 +1,22 @@
 ---
-title: "Självstudiekurs: Skapa formulärdatamodell"
-description: Konfigurera MySQL som datakälla, skapa en formulärdatamodell (FDM), konfigurera den och testa för AEM Forms.
-uuid: b9d2bb1b-90f0-44f4-b1e3-0603cdf5f5b8
+title: "Självstudiekurs: Skapa formulärdatamodell "
+description: Lär dig hur du konfigurerar MySQL som en datakälla, skapar en formulärdatamodell (FDM), konfigurerar den och testar för AEM Forms.
 contentOwner: khsingh
 products: SG_EXPERIENCEMANAGER/6.3/FORMS
-discoiquuid: 12e6c325-ace0-4a57-8ed4-6f7ceee23099
 docset: aem65
 exl-id: 40bc5af6-9023-437e-95b0-f85d3df7d8aa
-source-git-commit: 0e5b89617d481c69882ec5d4658e76855aa9b691
+source-git-commit: 000c22028259eb05a61625d43526a2e8314a1d60
 workflow-type: tm+mt
-source-wordcount: '1454'
+source-wordcount: '1458'
 ht-degree: 1%
 
 ---
 
 # Självstudiekurs: Skapa formulärdatamodell {#tutorial-create-form-data-model}
 
-![04-skapa-formulär-data-modell-main](assets/04-create-form-data-model-main.png)
+![04-create-form-data-model-main](assets/04-create-form-data-model-main.png)
 
-Den här självstudiekursen är ett steg i [Skapa ditt första adaptiva formulär](../../forms/using/create-your-first-adaptive-form.md) serie. Vi rekommenderar att du följer serien i kronologisk ordning för att förstå, utföra och demonstrera det fullständiga självstudiekurserna.
+Den här självstudiekursen är ett steg i [Skapa ditt första adaptiva formulär](../../forms/using/create-your-first-adaptive-form.md) serie. Adobe rekommenderar att du följer serien i kronologisk ordning för att förstå, utföra och demonstrera det fullständiga självstudiekursen.
 
 ## Om självstudiekursen {#about-the-tutorial}
 
@@ -49,43 +47,43 @@ Kontrollera att du har följande innan du börjar:
 
 ## Steg 1: Konfigurera MySQL-databasen som datakälla {#config-database}
 
-Du kan konfigurera olika typer av datakällor för att skapa en formulärdatamodell. I den här självstudiekursen konfigurerar vi MySQL-databasen som du har konfigurerat och fyllt i med exempeldata. Mer information om andra datakällor som stöds och hur du konfigurerar dem finns i [AEM Forms dataintegrering](../../forms/using/data-integration.md).
+Du kan konfigurera olika typer av datakällor för att skapa en formulärdatamodell. I den här självstudiekursen konfigurerar du MySQL-databasen som du har konfigurerat och fyllt i med exempeldata. Mer information om andra datakällor som stöds och hur du konfigurerar dem finns i [AEM Forms dataintegrering](../../forms/using/data-integration.md).
 
 Gör följande för att konfigurera [!DNL MySQL] databas:
 
-1. Installera JDBC-drivrutin för [!DNL MySQL] databas som ett OSGi-paket:
+1. Installera JDBC-drivrutinen för [!DNL MySQL] databasen som ett OSGi-paket:
 
-   1. Ladda ned [!DNL MySQL] JDBC Driver OSGi Bundle från `http://www.java2s.com/ref/jar/download-orgosgiservicejdbc100jar-file.html`. <!-- This URL is an insecure link but using https is not possible -->
-   1. Logga in på AEM Author-instansen som administratör och gå till AEM [!DNL Forms] webbkonsolpaket. Standard-URL:en är [https://localhost:4502/system/console/bundles](https://localhost:4502/system/console/bundles).
+   1. Hämta [!DNL MySQL] JDBC Driver OSGi Bundle från `http://www.java2s.com/ref/jar/download-orgosgiservicejdbc100jar-file.html`. <!-- This URL is an insecure link but using https is not possible -->
+   1. Logga in på AEM [!DNL Forms] Skapa instans som administratör och gå till AEM webbkonsolpaket. Standardwebbadressen är [https://localhost:4502/system/console/bundles](https://localhost:4502/system/console/bundles).
 
-   1. Tryck på **[!UICONTROL Install/Update]**. En [!UICONTROL Upload / Install Bundles] dialogruta visas.
+   1. Tryck på **[!UICONTROL Install/Update]**. An [!UICONTROL Upload / Install Bundles] visas.
 
-   1. Tryck **[!UICONTROL Choose File]** för att bläddra och välja [!DNL MySQL] JDBC driver OSGi bundle. Välj **[!UICONTROL Start Bundle]** och **[!UICONTROL Refresh Packages]** och trycka **[!UICONTROL Install or Update]**. Se till att [!DNL Oracle Corporation's] JDBC Driver för [!DNL MySQL] är aktivt. Drivrutinen är installerad.
+   1. Tryck **[!UICONTROL Choose File]** för att bläddra och välja [!DNL MySQL] JDBC driver OSGi bundle. Välj **[!UICONTROL Start Bundle]** och **[!UICONTROL Refresh Packages]** och trycka **[!UICONTROL Install or Update]**. Kontrollera att JDBC-drivrutinen [!DNL Oracle Corporation's] för [!DNL MySQL] är aktiv. Drivrutinen är installerad.
 
-1. Konfigurera [!DNL MySQL] databas som en datakälla:
+1. Konfigurera [!DNL MySQL] databasen som en datakälla:
 
    1. Gå till AEM webbkonsol på [https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr).
-   1. Sök **Poolad datakälla för Apache Sling-anslutning** konfiguration. Tryck för att öppna konfigurationen i redigeringsläge.
+   1. Leta reda på **konfigurationen Apache Sling Connection Pooled DataSource** . Tryck för att öppna konfigurationen i redigeringsläge.
    1. Ange följande information i konfigurationsdialogrutan:
 
       * **Datakällans namn:** Du kan ange vilket namn som helst. Ange till exempel **WeRetailMySQL**.
       * **Egenskapsnamn för DataSource-tjänst**: Ange namnet på den tjänsteegenskap som innehåller namnet på datakällan. Den anges när datakällinstansen registreras som OSGi-tjänst. Till exempel: **datakälla.namn**.
-      * **JDBC-drivrutinsklass**: Ange Java-klassnamnet för JDBC-drivrutinen. För [!DNL MySQL] databas anger du **com.mysql.jdbc.Driver**.
-      * **URI för JDBC-anslutning**: Ange anslutnings-URL för databasen. För [!DNL MySQL] databas som körs på port 3306 och schema var detaljerat, URL:en är: `jdbc:mysql://'server':3306/weretail?autoReconnect=true&useUnicode=true&characterEncoding=utf-8`
+      * **JDBC-drivrutinsklass**: Ange Java™-klassnamn för JDBC-drivrutinen. För [!DNL MySQL] databas, ange **com.mysql.jdbc.Driver**.
+      * **JDBC-anslutnings-URI:** Ange anslutnings-URL för databasen. För [!DNL MySQL] databas som körs på port 3306 och schema `weretail`är URL:en: `jdbc:mysql://'server':3306/weretail?autoReconnect=true&useUnicode=true&characterEncoding=utf-8`
 
       >[!NOTE]
       >
-      > När [!DNL MySQL] databasen ligger bakom en brandvägg och databasens värdnamn är inte en publik DNS. IP-adressen för databasen måste läggas till i *filen /etc/hosts* på den AEM värddatorn.
+      > [!DNL MySQL] När databasen finns bakom en brandvägg är databasens värdnamn inte en offentlig DNS. IP-adressen för databasen måste läggas till i *filen /etc/hosts* på AEM.
 
-      * **Användarnamn:** Databasens användarnamn. Det krävs för att JDBC-drivrutinen ska kunna upprätta en anslutning till databasen.
+      * **Användarnamn:** Användarnamn för databasen. Det krävs för att JDBC-drivrutinen ska kunna upprätta en anslutning till databasen.
       * **Lösenord:** Lösenord för databasen. Det krävs för att JDBC-drivrutinen ska kunna upprätta en anslutning till databasen.
 
       >[!NOTE]
       >
-      >AEM Forms stöder inte NT Authentication för [!DNL MySQL]. Gå till AEM webbkonsol på [https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr) och sök i &quot;Apache Sling Connection Pooled Datasource&quot;. För egenskapen &quot;JDBC connection URI&quot; anger du värdet &quot;integratedSecurity&quot; som False och använder det skapade användarnamnet och lösenordet för att ansluta med [!DNL MySQL] databas.
+      >AEM Forms stöder inte NT Authentication för [!DNL MySQL]. Gå till AEM webbkonsol på [https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr) och sök efter &quot;Apache Sling Connection Pooled Datasource&quot;. För egenskapen &quot;JDBC-anslutnings-URI&quot; anger du värdet för &quot;integratedSecurity&quot; som False och använder skapat användarnamn och lösenord för att ansluta till [!DNL MySQL] databasen.
 
-      * **Test on Borgo:** Aktivera **[!UICONTROL Test on Borrow]** alternativ.
-      * **Test vid retur:** Aktivera **[!UICONTROL Test on Return]** alternativ.
+      * **Testa på lån:** Aktivera alternativet **[!UICONTROL Test on Borrow]** .
+      * **Testa vid retur:** Aktivera **[!UICONTROL Test on Return]** alternativet.
       * **Valideringsfråga:** Ange en SELECT-fråga (SQL) för att validera anslutningar från poolen. Frågan måste returnera minst en rad. Till exempel: **välj &#42; från kundinformation**.
       * **Transaktionsisolering**: Ange värdet till **READ_COMMTED**.
 
@@ -97,9 +95,9 @@ Gör följande för att konfigurera [!DNL MySQL] databas:
 
 ## Steg 2: Skapa formulärdatamodell {#create-fdm}
 
-AEM [!DNL Forms] har ett intuitivt användargränssnitt för att [skapa en formulärdatamodell](data-integration.md) från konfigurerade datakällor. Du kan använda flera datakällor i en formulärdatamodell. I vårt användningsfall använder vi den konfigurerade [!DNL MySQL] datakällan.
+AEM [!DNL Forms] har ett intuitivt användargränssnitt för att [skapa en formulärdatamodell](data-integration.md) från konfigurerade datakällor. Du kan använda flera datakällor i en formulärdatamodell. I det här fallet kan du använda den konfigurerade [!DNL MySQL] datakälla.
 
-Gör så här för att skapa en formulärdatamodell:
+Gör följande för att skapa formulärdatamodell:
 
 1. I AEM författarinstans går du till **[!UICONTROL Forms]** > **[!UICONTROL Data Integrations]**.
 1. Tryck på **[!UICONTROL Create]** > **[!UICONTROL Form Data Model]**.
@@ -126,7 +124,7 @@ Gör följande för att konfigurera formulärdatamodellen:
 
    ![default-fdm](assets/default-fdm.png)
 
-1. Expandera trädet för datakällan WeRailMySQL. Välj följande datamodellsobjekt och -tjänster från **weretail** > **kundinformation** schema till formulärdatamodell:
+1. Expandera trädet för datakällan WeRailMySQL. Välj följande datamodellsobjekt och -tjänster från **weretail** > **kundinformation** schema så att du kan skapa datamodell:
 
    * **Datamodellsobjekt**:
 
@@ -134,12 +132,12 @@ Gör följande för att konfigurera formulärdatamodellen:
       * name
       * shippingAddress
       * stad
-      * läge
-      * Postnummer
+      * stat
+      * zipcode
 
    * **Tjänster:**
 
-      * få
+      * get
       * uppdatera
 
    Tryck **Lägg till markerade** om du vill lägga till markerade datamodellsobjekt och tjänster i formulärdatamodellen.
@@ -161,36 +159,36 @@ Gör följande för att konfigurera formulärdatamodellen:
 
       ![write-default](assets/write-default.png)
 
-      Lägg till och konfigurera **id** argumentet enligt följande.
+      Lägg till och konfigurera **id** argumentet på följande sätt.
 
       ![id-arg](assets/id-arg.png)
 
-   1. Tryck **[!UICONTROL Done]** om du vill spara datamodellens objektegenskaper. Tryck sedan på **[!UICONTROL Save]** för att spara formulärdatamodellen.
+   1. Tryck **[!UICONTROL Done]** för att spara datamodellens objektegenskaper. Tryck sedan på **[!UICONTROL Save]** för att spara formulärdatamodellen.
 
-      Tjänsterna **[!UICONTROL get]** och **[!UICONTROL update]** läggs till som standardtjänster för datamodellsobjektet.
+      The **[!UICONTROL get]** och **[!UICONTROL update]** tjänster läggs till som standardtjänster för datamodellobjektet.
 
-      ![data-modell-objekt](assets/data-model-object.png)
+      ![data-model-object](assets/data-model-object.png)
 
 1. Gå till **[!UICONTROL Services]** och konfigurera **[!UICONTROL get]** och **[!UICONTROL update]** tjänster.
 
    1. Välj **[!UICONTROL get]** service och knacka **[!UICONTROL Edit Properties]**. Dialogrutan Egenskaper öppnas.
    1. Ange följande i dialogrutan Redigera egenskaper:
 
-      * **Titel**: Ange tjänstens titel. Exempel: Hämta leveransadress.
+      * **Titel**: Ange titel för tjänsten. Till exempel: Hämta leveransadress.
       * **Beskrivning**: Ange en beskrivning som innehåller detaljerad funktionalitet för tjänsten. Till exempel:
 
-        Tjänsten hämtar leveransadress och annan kundinformation från [!DNL MySQL] databas
+        Den här tjänsten hämtar leveransadressen och annan kundinformation från [!DNL MySQL] databas
 
       * **Objekt för utdatamodell**: Välj schema som innehåller kunddata. Till exempel:
 
         kundinformationsschema
 
       * **Returnera matris**: Inaktivera **Returnera matris** alternativ.
-      * **Argument:** Välj argument med namnet **ID.**
+      * **Argument**: Välj argument med namnet **ID**.
 
       Tryck på **[!UICONTROL Done]**. Tjänsten för att hämta kundinformation från MySQL-databasen har konfigurerats.
 
-      ![shiiping-adress-hämtning](assets/shiiping-address-retrieval.png)
+      ![leveransadress-hämtning](assets/shiiping-address-retrieval.png)
 
    1. Välj **[!UICONTROL update]** service och knacka **[!UICONTROL Edit Properties]**. Dialogrutan Egenskaper öppnas.
 
@@ -207,7 +205,7 @@ Gör följande för att konfigurera formulärdatamodellen:
 
       * **Utdatatyp**: Välj **BOOLEAN**.
 
-      * **Argument**: Välj argument med namnet **ID** och **kundinformation**.
+      * **Argument**: Välj argumentnamn **ID** och **kundinformation**.
 
       Tryck på **[!UICONTROL Done]**. The **[!UICONTROL update]** tjänst för att uppdatera kundinformation i [!DNL MySQL] databasen är konfigurerad.
 

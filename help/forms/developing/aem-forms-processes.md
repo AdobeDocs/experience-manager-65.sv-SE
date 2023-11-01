@@ -1,17 +1,15 @@
 ---
 title: Förstå AEM Forms processer
-description: AEM Forms-processerna innefattar blankettgenerering, inlämning, datahantering, validering, integration, automatisering av arbetsflöden och hantering av utdata.
-uuid: 7cbebe7d-f222-42fa-8eb6-d2443458a791
+description: Läs om hur AEM Forms processer innefattar blankettgenerering, inlämning, datahantering, validering, integrering, automatisering av arbetsflöden och hantering av utdata.
 contentOwner: admin
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: development-tools, coding
-discoiquuid: ac9fe461-63e7-442b-bd1c-eb9576ef55aa
 role: Developer
 exl-id: 434ac316-8a01-43a6-844b-1b792f60fa21
-source-git-commit: 20b0d0db54dc30285c056a10032f02ba45f8baca
+source-git-commit: 000c22028259eb05a61625d43526a2e8314a1d60
 workflow-type: tm+mt
-source-wordcount: '815'
+source-wordcount: '814'
 ht-degree: 0%
 
 ---
@@ -63,7 +61,7 @@ När den här kortvariga processen anropas utför den följande åtgärder:
    *Programmera med AEM* I beskrivs följande sätt att programmässigt anropa den här korta processen:
 
    * [Anropa en kort process genom att skicka ett osäkert dokument med AEM Forms Remoting](/help/forms/developing/invoking-aem-forms-using-remoting.md#invoking-a-short-lived-process-by-passing-an-unsecure-document-using-remoting) (Använda ett Flex-program)
-   * [Anropa en kort process med anrops-API](/help/forms/developing/invoking-aem-forms-using-java.md#invoking-a-short-lived-process-using-the-invocation-api) (Java Invocation API)
+   * [Anropa en kort process med anrops-API](/help/forms/developing/invoking-aem-forms-using-java.md#invoking-a-short-lived-process-using-the-invocation-api) (Java™ Anrop-API)
    * [Anropa AEM Forms med Base64-kodning](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding) (webbtjänstexempel)
    * [Anropa AEM Forms med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom) (webbtjänstexempel)
    * [Anropa AEM Forms med SwaRef](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref) (webbtjänstexempel)

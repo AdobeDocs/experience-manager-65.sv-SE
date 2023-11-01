@@ -1,23 +1,21 @@
 ---
 title: Logga in i AEM Forms arbetsflöden
-description: Felsök arbetsflödesproblem i AEM Forms och aktivera felsökningsloggning för arbetsflöden i AEM Forms för att visa loggarna.
-uuid: 869d0271-c7e3-4b6d-8e63-893dc6af8b8a
+description: Lär dig hur du felsöker problem i AEM Forms Workflow och aktiverar felsökningsloggning för AEM Forms-arbetsflöden för att visa loggarna.
 contentOwner: anujkapo
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: publish
-discoiquuid: 14bb521a-42ea-4fe2-90fb-202e7ddf917a
 docset: aem65
 exl-id: 601c8d95-0d1a-4945-a522-e85d3e9fc4ae
-source-git-commit: 20b0d0db54dc30285c056a10032f02ba45f8baca
+source-git-commit: 000c22028259eb05a61625d43526a2e8314a1d60
 workflow-type: tm+mt
-source-wordcount: '278'
+source-wordcount: '282'
 ht-degree: 6%
 
 ---
 
 # Logga in i AEM Forms arbetsflöden{#logging-in-aem-forms-workflows}
 
-I Forms arbetsflödessteg finns detaljerade loggar som du kan använda för att felsöka arbetsflödesrelaterade problem. Aktivera felsökningsloggning för AEM Forms-arbetsflöden för att visa loggarna.
+I Formens Workflow steg finns detaljerade loggar som du kan använda för att felsöka arbetsflödesrelaterade problem. Aktivera felsökningsloggning för AEM Forms-arbetsflöden för att visa loggarna.
 
 Som standard är all loggningsinformation tillgänglig i **error.log** filen på */crx-database/logs/* katalog.
 
@@ -68,7 +66,7 @@ I följande exempel visas loggarna för steget Signera dokument:
 
 Använd loggarna för att utvärdera att:
 
-* Du använder en korrekt konfiguration för Adobe Sign.
+* Du använder en korrekt Adobe Sign-konfiguration.
 * Adobe Sign-tjänsten avslutas när ett avtal har skapats.
 * Signera dokument-steget avslutas med ett meddelande om att åtgärden lyckades.
 

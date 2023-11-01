@@ -1,17 +1,15 @@
 ---
 title: APIQuick Startar säkerhetskopiering och återställning
-description: Med API-snabbstart för AEM Forms Backup & Restore kan du skapa och återställa säkerhetskopior effektivt.
-uuid: c3992be2-ceb4-480d-9c8f-71eb0ea66dde
+description: Lär dig hur AEM Forms API Quick Starts möjliggör effektiva processer för att skapa och återställa säkerhetskopior.
 contentOwner: admin
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
-discoiquuid: 813162be-dbf5-4dc1-80ff-e37dbc25ef60
 role: Developer
 exl-id: ae17fd3a-0ba4-4a00-907b-811e500b0e14
-source-git-commit: 68a1edf5f62d7a988094fceb3f762504711dc2f1
+source-git-commit: 000c22028259eb05a61625d43526a2e8314a1d60
 workflow-type: tm+mt
-source-wordcount: '254'
+source-wordcount: '256'
 ht-degree: 0%
 
 ---
@@ -26,7 +24,7 @@ Java™ API Quick Start (SOAP) finns för API:t för tjänsten Backup and Restor
 
 [Snabbstart: Lämna säkerhetskopieringsläge med Java](backup-restore-service-api-quick.md#quick-start-soap-mode-leaving-backup-mode-using-the-java-api)
 
-AEM Forms-åtgärder kan utföras med AEM Forms starkt typbestämda API och anslutningsläget bör anges till SOAP.
+AEM Forms-åtgärder kan utföras med AEM Forms starkt typade API och anslutningsläget bör anges till SOAP.
 
 >[!NOTE]
 >

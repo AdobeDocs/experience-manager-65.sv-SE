@@ -1,16 +1,14 @@
 ---
 title: "Korrespondenshantering: felsökning"
-description: Hantera fel som kan uppstå när ett brev sparas i en AEM Forms-miljö.
-uuid: 25828cdd-110e-4a84-8f31-d82cd610a54f
+description: Lär dig hur du hanterar fel som uppstår när du sparar ett brev i en AEM Forms-miljö.
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: correspondence-management
-discoiquuid: cc473808-e71a-4834-bb30-91e6df783e60
 feature: Correspondence Management
 exl-id: cf06796b-bb8c-4a65-8f42-02fb0cfa3ebd
-source-git-commit: 68a1edf5f62d7a988094fceb3f762504711dc2f1
+source-git-commit: 000c22028259eb05a61625d43526a2e8314a1d60
 workflow-type: tm+mt
-source-wordcount: '213'
+source-wordcount: '215'
 ht-degree: 0%
 
 ---
@@ -50,5 +48,5 @@ När du förhandsgranskar en bokstav visas felet&quot;Fel vid inläsning av boks
 1. Gå till **`https://'[server]:[port]'/[contextPath]/system/console/configMgr`** och logga in som administratör.
 1. Välj **Konfigurationer för korrespondenshantering**.
 1. I **Konfigurationer för korrespondenshantering**, inaktivera **Aktivera bokstavscache** och sedan klicka **Spara.**
-1. Aktivera **Aktivera bokstavscache** och sedan klicka **Spara**.
+1. Kontrollera **Aktivera bokstavscache** och sedan klicka **Spara**.
 1. Försök att visa brevet igen.

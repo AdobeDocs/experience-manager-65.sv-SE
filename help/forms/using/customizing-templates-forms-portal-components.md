@@ -1,22 +1,20 @@
 ---
-title: Anpassa mallar för komponenter i formulärportalen
-description: Med AEM Forms användargränssnitt kan man lägga in metadata i blanketter. Anpassade metadata förbättrar användarupplevelsen när det gäller att lista formulär och söka efter information i organisationen.
-uuid: 212109ca-85c8-4915-82e5-a18a0443be1b
+title: Anpassa mallar för Forms Portal-komponenter
+description: Läs om hur man i AEM Forms användargränssnitt lägger in metadata i blanketter. Anpassade metadata förbättrar användarupplevelsen när det gäller att lista och söka i formulär.
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: customization
-discoiquuid: 7566203f-2f80-4ce7-bff9-073d67119f64
 docset: aem65
 feature: Forms Portal
 exl-id: f889d996-77f7-4a4f-a637-da43fe1343c5
-source-git-commit: 20b0d0db54dc30285c056a10032f02ba45f8baca
+source-git-commit: 000c22028259eb05a61625d43526a2e8314a1d60
 workflow-type: tm+mt
-source-wordcount: '1243'
+source-wordcount: '1250'
 ht-degree: 0%
 
 ---
 
-# Anpassa mallar för komponenter i formulärportalen{#customizing-templates-for-forms-portal-components}
+# Anpassa mallar för Forms Portal-komponenter{#customizing-templates-for-forms-portal-components}
 
 ## Förutsättningar {#prerequisites}
 
@@ -30,7 +28,7 @@ Med AEM Forms användargränssnitt kan du lägga till metadata i alla formulär.
 
 Med Forms Portal kan du använda anpassade metadata i formulärlistor. När du skapar anpassade mallar för resurser kan du ändra deras layout och använda anpassade metadata med din CSS-formatuppsättning.
 
-Följ de här stegen för att skapa en anpassad mall för olika Forms Portal-komponenter.
+Gör följande så att du kan skapa en anpassad mall för olika Forms Portal-komponenter.
 
 ## Skapa en anpassad mall {#creating-a-nbsp-custom-template}
 
@@ -55,7 +53,7 @@ Följ de här stegen för att skapa en anpassad mall för olika Forms Portal-kom
    I följande bild visas konfigurationen för komponenten Sök och Lister.
    ![Skapa en slinga:Mapp](assets/1.png)
 
-1. Skapa en filmall.html i den här mappen som ska fungera som anpassad mall.
+1. Skapa en filmall.html i den här mappen så att den kan fungera som en anpassad mall.
 1. Skriv den anpassade mallen och använd anpassade metadata enligt beskrivningen nedan.
 
 ## Exempel {#working-example}
@@ -105,7 +103,7 @@ Olika Forms Portal-komponenter innehåller exklusiva uppsättningar OTB-metadata
 * **description**: Beskrivning av formuläret
 * **formUrl**: URL för att återge formuläret som HTML
 * **pdfUrl**: URL för att återge formuläret som PDF
-* **assetType**: Typ av tillgång. Giltiga värden är **Formulär**,**PDF Form**, **Skriv ut formulär** och **Adaptiv form**
+* **assetType**: Typ av tillgång. Giltiga värden är **Formulär**, **PDF Form**, **Skriv ut formulär** och **Adaptiv form**
 
 * **htmlStyle**&amp; **pdfStyle**: Visningsformat för HTML och PDF som används för återgivning. Giltiga värden är **__FP_display_none**&quot; eller tomt.
 
@@ -120,8 +118,8 @@ Stöd för lokalisering, sortering och användning av konfigurationsegenskaper i
 1. **Lokaliseringsstöd**: Om du vill lokalisera statisk text använder du attributet `${localize-YOUR_TEXT}` och göra det lokaliserade värdet tillgängligt, om det inte redan finns.
    *I exemplet som behandlas är attributen `${localize-Apply}` och `${localize-Download}` används för att lokalisera texten Tillämpa och Hämta.*
 
-1. **Stöd för sortering**: Klicka på elementet HTML för att sortera sökresultaten. Om du vill implementera sortering i en skickad layout lägger du till attributet data-sortKey i den aktuella tabellrubriken. Lägg dessutom till dess värde som de metadata som du vill sortera efter.
-För rubrikrubriken i stödrastervyn är värdet för rubriken&quot;data-sortKey&quot; till exempel&quot;title&quot;. Klicka på rubriken om du vill sortera värdena i en viss kolumn.
+1. **Stöd för sortering**: Klicka på elementet HTML för att sortera sökresultaten. Om du vill implementera sortering i en tabelllayout lägger du till attributet data-sortKey i den aktuella tabellrubriken. Lägg dessutom till dess värde som de metadata som du vill sortera efter.
+För rubrikrubriken i stödrastervyn är värdet för rubriken&quot;data-sortKey&quot; till exempel&quot;title&quot;. Klicka på rubriken så att du kan sortera värdena i en viss kolumn.
 
 1. **Använda konfigurationsegenskaper**: Komponenten Search &amp; Lister har flera konfigurationer som du kan använda i användargränssnittet. Om du till exempel vill visa HTML-verktygstipstext som har sparats i redigeringsdialogrutan använder du `${config-htmlLinkText}` -attribut. **På samma sätt kan du använda kommandot** `${config-pdfLinkText}` -attribut.
 
@@ -134,7 +132,7 @@ För rubrikrubriken i stödrastervyn är värdet för rubriken&quot;data-sortKey
 
 ### Komponenten Utkast och inskickat material {#drafts-amp-submissions-component}
 
-* **Bana**: Sökväg till metadatanoden för utkast/överföringar. Använd det med tillägget .HTML som en URL för att öppna ett utkast eller en sändning.
+* **Bana**: Sökväg till metadatanoden för utkast/överföringar. Använd det med tillägget .HTML som en URL-adress så att du kan öppna ett utkast eller en sändning.
 * **contextPath**: Kontextsökväg för AEM
 * **firstLetter**: Första bokstaven (versaler) i titeln på det adaptiva formuläret, som sparades som utkast eller skickades.
 * **formName**: Titeln på det adaptiva formuläret, som sparats som utkast eller skickat.
@@ -142,7 +140,7 @@ För rubrikrubriken i stödrastervyn är värdet för rubriken&quot;data-sortKey
 * **submitID**: ID för överföringen som visas (Använd bara i mallen för avsnittet Skicka).
 * **status**: Status för det skickade formuläret. (Använd endast i mallen för avsnittet Skicka).
 * **description**: Beskrivning av det adaptiva formulär som är kopplat till utkastet eller inlämningen.
-* **diffTime**: Skillnad mellan aktuell tid och den senaste sparåtgärden för utkastet. Alternativt kan det vara en skillnad mellan den aktuella tiden och den senaste sändningsåtgärden för överföringen.
+* **diffTime**: Skillnad mellan aktuell tid och den senaste sparåtgärden för utkastet. Alternativt kan du ange skillnaden mellan den aktuella tiden och den senast skickade åtgärden för överföringen.
 * **iconClass**: CSS-klass som används för att visa den första bokstaven i utkastet/sändningen. Forms Portal innehåller följande klasser med olika färgade bakgrunder.
 * **ägare**: Användare som skapade utkastet/sändningen.
 * **Idag**: Datum då utkastet eller inlämningen skapades i DD:MM:YYYY-format.
@@ -162,7 +160,7 @@ För rubrikrubriken i stödrastervyn är värdet för rubriken&quot;data-sortKey
 
 **C.** Attribut som kan upprepas för varje formulär i mallavsnittet
 
-**D.** För att lokalisera strängen &quot;Använd&quot;
+**D.** Localize &quot;Apply&quot; string
 
 **E.** Använda konfigurationsegenskapen pdfLinkText
 
@@ -177,11 +175,11 @@ För rubrikrubriken i stödrastervyn är värdet för rubriken&quot;data-sortKey
 
 ## Relaterade artiklar
 
-* [Aktivera komponenter i formulärportalen](/help/forms/using/enabling-forms-portal-components.md)
-* [Skapa portalsida för formulär](/help/forms/using/creating-form-portal-page.md)
+* [Aktivera Forms Portal-komponenter](/help/forms/using/enabling-forms-portal-components.md)
+* [Skapa Forms Portal-sida](/help/forms/using/creating-form-portal-page.md)
 * [Visa formulär på en webbsida med API:er](/help/forms/using/listing-forms-webpage-using-apis.md)
 * [Använda komponenten Utkast och inskickat material](/help/forms/using/draft-submission-component.md)
 * [Anpassa lagring av utkast och inskickade formulär](/help/forms/using/draft-submission-component.md)
-* [Exempel för att integrera komponent för utkast och inlämning med databas](/help/forms/using/integrate-draft-submission-database.md)
-* [Anpassa mallar för komponenter i formulärportalen](/help/forms/using/customizing-templates-forms-portal-components.md)
+* [Exempel på hur man integrerar utkast och inskickningskomponenter med databas](/help/forms/using/integrate-draft-submission-database.md)
+* [Anpassa mallar för Forms Portal-komponenter](/help/forms/using/customizing-templates-forms-portal-components.md)
 * [Introduktion till att publicera formulär på en portal](/help/forms/using/introduction-publishing-forms.md)

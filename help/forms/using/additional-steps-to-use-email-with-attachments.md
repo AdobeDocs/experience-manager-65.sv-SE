@@ -1,10 +1,10 @@
 ---
-title: Ytterligare steg för att hämta e-post med bifogad fil
-description: Åtgärda felet när du inte kan hämta e-post med bilagor för AEM Forms på JEE-plattformar.
+title: Ytterligare steg för att få e-post med bilagor
+description: Lär dig hur du åtgärdar felet när du inte kan hämta e-post med bilagor för AEM Forms på JEE-plattformar.
 exl-id: 0d0713fb-d95a-4a95-91ef-9cdaea30e343
-source-git-commit: 20b0d0db54dc30285c056a10032f02ba45f8baca
+source-git-commit: 000c22028259eb05a61625d43526a2e8314a1d60
 workflow-type: tm+mt
-source-wordcount: '235'
+source-wordcount: '237'
 ht-degree: 0%
 
 ---
@@ -12,6 +12,7 @@ ht-degree: 0%
 # Det går inte att hämta e-post med bilagor för AEM Forms på JEE-plattformar{#unable-to-get-email-with-attachments}
 
 Problemet gäller följande version:
+
 * Experience Manager 6.5 Forms
 
 ## Problem {#issue}
@@ -37,7 +38,7 @@ Användaren kan inte utföra åtgärder som Skicka PDF via e-post eller Inkluder
 
 1. Installera `java.mail-1.5.jar` som erhållits från steg 3. Det här steget startar om slingegenskaperna för JEE-distributionen. Vänta på de installerade paketen på `http://<server name>:<port>/lc/system/console/bundles` för att visa status som **Aktiv**.
 
-   >Obs! Om statusen fortfarande är **InActive** starta om   **JBoss®** från **Services Console**.
+   >Om statusen fortfarande är **InActive** starta om   **JBoss®** från **Services Console**.
 
 
 1. Installera `javax.mail-1.5.6.redhat-1.jar`filen laddades ned i steg 5.

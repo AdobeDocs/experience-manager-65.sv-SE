@@ -1,13 +1,13 @@
 ---
 title: AEM Forms JEE Patch Installer
-description: AEM Forms JEE Patch Installer för att åtgärda problem i AEM 6.5 Forms-komponenter.
+description: Lär dig hur du använder AEM Forms JEE Patch Installer för att åtgärda problem i AEM 6.5 Forms-komponenter.
 uuid: 76662858-afca-4ba3-883b-9b9a61874f15
 content-type: reference
 discoiquuid: b0283feb-c3ec-4ef0-885c-46bc83a61e26
 exl-id: 6b17472b-9226-4319-b305-4dba862d21af
-source-git-commit: 0e5b89617d481c69882ec5d4658e76855aa9b691
+source-git-commit: 000c22028259eb05a61625d43526a2e8314a1d60
 workflow-type: tm+mt
-source-wordcount: '519'
+source-wordcount: '525'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->[Kontakta supporten](https://www.adobe.com/account/sign-in.supportportal.html) för mer information eller för att få plåstret.
+>[Kontakta supporten](https://experienceleague.adobe.com/?support-solution=General&amp;support-tab=home#support) för mer information eller för att få plåstret.
 
 ## Om patch-installationsprogrammet {#about-the-patch-installer}
 
@@ -39,10 +39,10 @@ Navigera till rätt katalog på installationsmediet eller mappen på hårddisken
       * (32-bitars Windows) `Windows\Disk1\InstData\VM`
       * (64-bitars Windows) `Windows_64Bit`\ `Disk1\InstData\VM`
 
-   * **Linux**
+   * **Linux®**
 Navigera till rätt katalog och skriv i en kommandotolk `./aem65_cfp_install.bin`.
 
-      * (Linux) `Linux/Disk1/InstData/NoVM`
+      * (Linux®) `Linux/Disk1/InstData/NoVM`
 
    Då startas en installationsguide som vägleder dig genom installationen.
 
@@ -52,8 +52,8 @@ Navigera till rätt katalog och skriv i en kommandotolk `./aem65_cfp_install.bin
 1. Läs mer i Förinstallationssammanfattning och klicka på **[!UICONTROL Install]**.
 1. När installationen är klar klickar du **[!UICONTROL Next]** för att använda snabbkorrigeringsuppdateringar på dina installerade filer.
 
-1. **[Endast för Windows]:** Gör något av följande:
-   * Avmarkera **Starta Configuration Manager** innan du klickar **[!UICONTROL Done]**. Kör **Konfigurationshanteraren** genom att använda **ConfigurationManager.bat** filen finns i `[aem-forms root]\configurationManager\bin`.
+1. **[Endast för Windows]:** Gör följande:
+   * Avmarkera **Starta Configuration Manager** innan du klickar **[!UICONTROL Done]**. Kör **Konfigurationshanteraren** genom att använda **ConfigurationManager.bat** fil i `[aem-forms root]\configurationManager\bin`.
 
    * Eller avmarkera **Starta Configuration Manager** innan du klickar **[!UICONTROL Done]**. Före körning **Konfigurationshanteraren** använda **ConfigurationManager.exe** eller **ConfigurationManager_IPv6.exe**, navigera till *`<AEMForms_Install_Dir>\configurationManager\bin`* katalog och ersätta [ConfigurationManager.lax](/help/assets/ConfigurationManager.lax) och [ConfigurationManager_IPV6.lax](/help/assets/ConfigurationManager_IPv6.lax) filer.
 
@@ -69,16 +69,16 @@ Navigera till rätt katalog och skriv i en kommandotolk `./aem65_cfp_install.bin
 
 1. Beroende på programservern väljer du ett av följande dokument och följer instruktionerna i *Konfigurera och distribuera AEM* -avsnitt.
 
-   * [Installera och distribuera AEM formulär för JBoss](https://www.adobe.com/go/learn_aemforms_installJBoss_65)
-   * [Installera och distribuera AEM formulär för WebSphere](https://www.adobe.com/go/learn_aemforms_installWebSphere_65)
+   * [Installera och distribuera AEM formulär för JBoss®](https://www.adobe.com/go/learn_aemforms_installJBoss_65)
+   * [Installera och distribuera AEM för WebSphere®](https://www.adobe.com/go/learn_aemforms_installWebSphere_65)
 
-1. (Endast JBoss) När du har installerat korrigeringen och konfigurerat servern tar du bort tmp och arbetskataloger för JBoss-programservern.
+1. (Endast JBoss®) När du har installerat korrigeringen och konfigurerat servern tar du bort tmp och arbetskataloger för JBoss®-programservern.
 
 ## Konfigurationer efter distributionen {#post-deployment-configurations}
 
 ### SAML-konfigurationer {#saml-configurations}
 
-Om du har konfigurerat SAML-autentisering och har problem med stora IDP-metadata gör du följande när du har installerat korrigeringen:
+Om du har konfigurerat SAML-autentisering och har problem med stora IDP-metadata gör du följande efter att du har installerat korrigeringen:
 
 1. Ange följande systemegenskap på programservern:\
    `um.saml.enable.large.xml=true`
@@ -91,4 +91,4 @@ Om du har konfigurerat SAML-autentisering och har problem med stora IDP-metadata
 * Dokumentsäkerhet
 * Foundation JEE
 
-[Kontakta supporten](https://www.adobe.com/account/sign-in.supportportal.html)
+[Kontakta supporten](https://experienceleague.adobe.com/?support-solution=General&amp;support-tab=home#support)

@@ -1,20 +1,20 @@
 ---
-title: Java API QuickStart(SOAP) för Assembler Service
-description: Sammanställ, demontera och skapa dynamiskt ett PDF-dokument med Java API QuickStart (SOAP) i Assembler Service.
+title: Assembler Service Java&trade; API QuickStart(SOAP)
+description: Lär dig hur du sammanställer, demonterar och dynamiskt skapar ett PDF-dokument med Assembler Service Java&trade; API QuickStart (SOAP).
 contentOwner: admin
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 role: Developer
 exl-id: 306cd40b-1831-45aa-9f58-3ab1983a68c5
-source-git-commit: 0e5b89617d481c69882ec5d4658e76855aa9b691
+source-git-commit: 000c22028259eb05a61625d43526a2e8314a1d60
 workflow-type: tm+mt
-source-wordcount: '1012'
+source-wordcount: '1019'
 ht-degree: 0%
 
 ---
 
-# Java API QuickStart(SOAP) för Assembler Service {#assembler-service-java-api-quickstart-soap}
+# Assembler Service Java™ API QuickStart(SOAP) {#assembler-service-java-api-quickstart-soap}
 
 Java API Quick Start (SOAP) är tillgängligt för Assembler-tjänsten
 
@@ -44,7 +44,7 @@ AEM Forms-åtgärder kan utföras med AEM Forms starkt typade API och anslutning
 
 >[!NOTE]
 >
->Snabbstart i Programmering med AEM Forms baseras på den Forms-server som distribueras på JBoss Application Server och Microsoft Windows. Om du använder ett annat operativsystem, till exempel UNIX, ska du ersätta Windows-specifika sökvägar med sökvägar som stöds av det aktuella operativsystemet. På samma sätt måste du ange giltiga anslutningsegenskaper om du använder en annan J2EE-programserver. Se [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
+>Snabbstart i programmering med AEM Forms baseras på Forms Server som distribueras på JBoss® Application Server och operativsystemet Microsoft® Windows. Om du använder ett annat operativsystem, till exempel UNIX®, ska du ersätta Windows-specifika sökvägar med sökvägar som stöds av det aktuella operativsystemet. På samma sätt måste du ange giltiga anslutningsegenskaper om du använder en annan J2EE-programserver. Se [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
 ## Snabbstart (SOAP-läge): Sammanställa ett PDF-dokument med Java API {#quick-start-soap-mode-assembling-a-pdf-document-using-the-java-api}
 
@@ -736,7 +736,7 @@ I följande Java-kodexempel sätts ett icke-interaktivt PDF-dokument samman. Det
 
 ## Snabbstart (SOAP-läge): Kontrollera om ett dokument är PDF/A-kompatibelt med Java API {#quick-start-soap-mode-determining-whether-a-document-is-pdf-a-compliant-using-the-java-api}
 
-I följande Java-kodexempel avgörs om indatadokumentet PDF är PDF/A-kompatibelt. Indatadokumentet i PDF som skickas till Assembler-tjänsten har ett namn *Loan.pdf*. DDX-dokumentets namn är shell_PDFA.xml. Det XML-dokument som returneras från Assembler-tjänsten och anger om det inmatade PDF-dokumentet är PDF/A-kompatibelt sparas som en XML-fil med namnet result.xml. Mer information om *shell_PDFA.xml* DDX-dokument som används i det här kodexemplet finns i [Avgöra om dokument är PDF/A-kompatibla](/help/forms/developing/assembling-pdf-documents.md#determining-whether-documents-are-pdf-a-compliant).
+I följande Java-kodexempel avgörs om indatadokumentet PDF är PDF/A-kompatibelt. Indatadokumentet i PDF som skickas till Assembler-tjänsten har ett namn *Loan.pdf*. DDX-dokumentets namn är shell_PDFA.xml. XML-dokumentet som returneras från Assembler-tjänsten och anger om indatadokumentet för PDF är PDF/A-kompatibelt sparas som en XML-fil med namnet result.xml. Mer information om *shell_PDFA.xml* DDX-dokument som används i det här kodexemplet finns i [Avgöra om dokument är PDF/A-kompatibla](/help/forms/developing/assembling-pdf-documents.md#determining-whether-documents-are-pdf-a-compliant).
 
 ```java
  /*
@@ -1687,7 +1687,7 @@ Följande kodexempel tar bort ett PDF-dokument med `PDFUtility`.
 
 >[!NOTE]
 >
->`PDFUtility` kan bara redigera bort PDF som har markerats för bortredigering med Acrobat.
+The `PDFUtility` kan bara redigera bort PDF som har markerats för bortredigering med Acrobat.
 
 ```java
 /*

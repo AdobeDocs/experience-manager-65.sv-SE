@@ -1,15 +1,13 @@
 ---
 title: Korrespondenshantering | Hantera användardata
-description: Korrespondenshantering och hantering av användardata i AEM Forms-miljö.
-uuid: d5bb190b-d668-4da3-95da-b7705ad302d9
+description: Läs om Correspondence Management och hur man hanterar användardata i en Adobe Experience Manager Forms-miljö.
 topic-tags: grdp
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: 764d8e0d-604d-4c7b-89cd-7686ce5f03ff
 role: Admin
 exl-id: a0c6a02c-47a3-4e70-a14c-953ee016b8e4
-source-git-commit: 0e5b89617d481c69882ec5d4658e76855aa9b691
+source-git-commit: 000c22028259eb05a61625d43526a2e8314a1d60
 workflow-type: tm+mt
-source-wordcount: '545'
+source-wordcount: '550'
 ht-degree: 0%
 
 ---
@@ -73,7 +71,7 @@ Du kan få åtkomst till utkast och skickade korrespondensdata i de konfigurerad
 
 Korrespondenshanteringen innehåller API:er som du kan använda för att hitta och komma åt utkast och skickade brev. Med API:erna kan du söka efter och öppna bokstavsinstanser med hjälp av bokstavsinstans-ID:t eller den användare som sparade eller skickade korrespondensen. Mer information finns i [API:er för åtkomst till bokstavsinstanser](/help/forms/using/cm-apis-to-access-letter-instances.md).
 
-Du kan också navigera till bokstavsinstansen i AEM med CRX DELite. Se [Användardata och datalager](/help/forms/using/correspondence-management-handling-user-data.md#data) för information om lagrade data och lagringsplats.
+Du kan också navigera till bokstavsinstansen AEM databasen med CRXDE Lite. Se [Användardata och datalager](/help/forms/using/correspondence-management-handling-user-data.md#data) för information om lagrade data och lagringsplats.
 
 ### Ta bort användardata {#delete-user-data}
 

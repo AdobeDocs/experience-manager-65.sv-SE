@@ -1,14 +1,12 @@
 ---
 title: Använda ett anpassat formulär på arbetsytan i HTML
-description: Lär dig använda ett adaptivt formulär i arbetsytan i HTML för att fältarbetare ska kunna få åtkomst till formuläret på sina enheter.
-uuid: 473d5daf-a3ed-449f-9136-585755b59922
+description: Lär dig hur du använder ett adaptivt formulär på arbetsytan i HTML där fältarbetare kan få åtkomst till formuläret på sina enheter.
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
-discoiquuid: 2b6875cd-2ee7-4aa8-90c7-d33583dc2f0e
 docset: aem65
 exl-id: 15b9ae98-059f-4bf7-bfdd-9cfeb8eb30a4
-source-git-commit: 68a1edf5f62d7a988094fceb3f762504711dc2f1
+source-git-commit: 000c22028259eb05a61625d43526a2e8314a1d60
 workflow-type: tm+mt
 source-wordcount: '697'
 ht-degree: 0%
@@ -17,9 +15,9 @@ ht-degree: 0%
 
 # Använda ett anpassat formulär på arbetsytan i HTML{#using-an-adaptive-form-in-html-workspace}
 
-Med AEM Forms på JEE kan du använda ett anpassat formulär i arbetsytan i HTML.
+Med AEM Forms på JEE kan du använda ett anpassningsbart formulär i arbetsytan i HTML.
 
-Eftersom man kan välja en XDP-fil under processdesignen har man lagt till möjligheten att bläddra i en befintlig databas AEM adaptiva formulär. Funktionen ger processdesignern möjlighet att konfigurera ett adaptivt formulär i både startpunkten och i uppgiften.
+Eftersom man kan välja en XDP-fil under processdesignen har man lagt till möjligheten att bläddra i en befintlig databas AEM adaptiva formulär. Funktionen ger processdesignern möjlighet att konfigurera ett anpassningsbart formulär i Startpunkten och i Aktivitet.
 
 ## Processdesignupplevelse {#process-design-experience}
 
@@ -37,17 +35,17 @@ Eftersom adaptiva formulär finns i AEM innehåller LiveCyclets programexport en
 
 HTML Workspace innehåller vissa adaptiva formulärspecifika kontroller förutom kontroller som är tillgängliga för mobilformulär. En användare kan lägga till bilagor, spara, signera, skicka och navigera i anpassade formulär i HTML Workspace när användaren öppnar en uppgift eller startpunkt. Nedan beskrivs närmare:
 
-1. Om du vill bifoga filer använder du uppgiftsbilagor, som i Mobile Forms. Alla knappar av typen bifogad fil i anpassat formulär är dolda.
+1. Om du vill bifoga filer använder du uppgiftsbilagor, vilket var fallet i Mobile Forms. Alla knappar av typen bifogad fil i anpassat formulär är dolda.
 
 1. Om du vill spara ett anpassat formulär klickar du på **Spara**, som i Mobile Forms. Alla knappar av typen Spara i anpassat formulär är dolda.
 
 1. Använd **Skicka** knappar eller ruttåtgärder är tillgängliga, vilket var fallet i Mobile Forms. Alla knappar av typen Skicka i anpassat formulär är dolda.
 
-1. **Global verktygsfältsynlighet för anpassat formulär**: Om processdesignern döljer det globala verktygsfältet/verktygsfältet på den översta nivån visas inte verktygsfältet och knapparna i anpassningsbara formulär.
+1. **Global verktygsfältsynlighet för anpassat formulär**: Om Process Designer döljer det globala verktygsfältet/verktygsfältet på den översta nivån visas inte verktygsfältet och knapparna i anpassningsbara formulär.
 
-1. **Navigeringskontroller för arbetsytan i Adaptive Forms**: Knapparna Nästa/Föregående är tillgängliga tillsammans med knapparna Spara, Skicka och Vidarebefordra åtgärd för ett anpassat formulär i arbetsytan HTML. Klicka på knapparna Nästa/Föregående för att navigera i paneler med anpassningsbara formulär på arbetsytan i HTML. Knapparna Nästa/Föregående ger djup navigering, på liknande sätt som navigeringskontrollerna i mobilvyn för adaptiva formulär.
+1. **Navigeringskontroller för arbetsytan i Adaptive Forms**: Knapparna Nästa/Föregående är tillgängliga tillsammans med knapparna Spara, Skicka och Vidarebefordra åtgärd för ett anpassat formulär i arbetsytan HTML. Klicka på knapparna Nästa/Föregående så att du kan navigera i paneler med anpassningsbara formulär på arbetsytan i HTML. Knapparna Nästa/Föregående ger djup navigering, på liknande sätt som navigeringskontrollerna i mobilvyn för adaptiva formulär.
 
-1. **eSign-tjänster och sammanfattningskomponent i anpassat formulär**: Sammanfattningskomponenten fungerar inte i HTML Workspace. Det innebär att om ett adaptivt formulär har en Sammanfattningskomponent visas det inte på arbetsytan. I stället för att skicka automatiskt i eSign-komponenten klickar arbetsyteanvändaren på åtgärden Skicka eller en vägåtgärd i HTML Workspace. När ett dokument har signerats visas det som ett platt signerat dokument. Klicka **Skicka** eller en vägåtgärd för att stänga/slutföra uppgiften eller startpunkten.\
+1. **eSign-tjänster och sammanfattningskomponent i anpassat formulär**: Sammanfattningskomponenten fungerar inte i HTML Workspace. Det innebär att om ett adaptivt formulär har en Sammanfattningskomponent visas det inte på arbetsytan. I stället för att skicka automatiskt i e-signeringskomponenten klickar arbetsyteanvändaren på åtgärden Skicka eller en vägåtgärd i arbetsytan HTML. När ett dokument har signerats visas det som ett platt signerat dokument. Klicka **Skicka** eller en vägåtgärd så att du kan stänga/slutföra uppgiften eller startpunkten.\
    Det signerade dokumentet samlas in från eSign-servern och XML-datafilen vidarebefordras till nästa steg i processen.
 
 ## Steg för att använda adaptiva formulär i processdesign {#steps-to-use-adaptive-forms-in-process-design}
@@ -58,13 +56,13 @@ HTML Workspace innehåller vissa adaptiva formulärspecifika kontroller förutom
 
    ![Skapa nytt program](assets/create_new_appl.png)
 
-   Skapa nytt program
+   Skapa program
 
 1. Skapa en process eller använd en befintlig process i programmet.
 
    ![Skapa ny process](assets/create_new_process.png)
 
-   Skapa ny process
+   Skapa process
 
 1. Skapa en startpunkt eller Tilldela uppgift och dubbelklicka på den.
 1. Under **[!UICONTROL Presentation & Data]** avsnitt, markera **[!UICONTROL use a CRX asset]** och klicka på ellipserna före resursen.

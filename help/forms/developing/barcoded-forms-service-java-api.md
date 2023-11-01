@@ -1,34 +1,34 @@
 ---
-title: Streckkodad Forms Service Java APIQuick Start(SOAP)
-description: Med streckkodsfunktionen Forms Java API Quick Start (SOAP) i AEM Forms kan streckkoder behandlas smidigt.
+title: Streckkodad Forms Service Java&trade; API Quick Start(SOAP)
+description: Lär dig hur den streckkodade Forms Service Java&trade; API Quick Start (SOAP) i AEM Forms möjliggör smidig bearbetning av streckkoder.
 contentOwner: admin
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 role: Developer
 exl-id: 907c12be-dab4-48b5-9da1-a76b711f49f2
-source-git-commit: 68a1edf5f62d7a988094fceb3f762504711dc2f1
+source-git-commit: 000c22028259eb05a61625d43526a2e8314a1d60
 workflow-type: tm+mt
-source-wordcount: '226'
+source-wordcount: '230'
 ht-degree: 0%
 
 ---
 
-# Streckkodad Forms Service Java API Quick Start (SOAP) {#barcoded-forms-service-java-apiquick-start-soap}
+# Streckkodad Forms Service Java™ API Quick Start (SOAP) {#barcoded-forms-service-java-apiquick-start-soap}
 
-Java API Quick Start (SOAP) är tillgängligt för tjänsten Barcoded Forms:
+Java™ API Quick Start (SOAP) finns för tjänsten Barcoded Forms:
 
-[Snabbstart (SOAP-läge): Avkoda streckkodade formulärdata med Java API](barcoded-forms-service-java-api.md#quick-start-soap-mode-decoding-barcoded-form-data-using-the-java-api)
+[Snabbstart (SOAP-läge): Avkoda streckkodade formulärdata med Java](barcoded-forms-service-java-api.md#quick-start-soap-mode-decoding-barcoded-form-data-using-the-java-api)
 
 AEM Forms-åtgärder kan utföras med AEM Forms starkt typade API och anslutningsläget bör anges till SOAP.
 
 >[!NOTE]
 >
->Snabbstarter i Programmering med AEM Forms baseras på den Forms-server som distribueras på JBoss Application Server och Microsoft Windows. Om du använder ett annat operativsystem, till exempel UNIX, ska du ersätta Windows-specifika sökvägar med sökvägar som stöds av det aktuella operativsystemet. På samma sätt måste du ange giltiga anslutningsegenskaper om du använder en annan J2EE-programserver. Se [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
+>Snabbstart i programmering med AEM Forms baseras på Forms Server som distribueras på JBoss® Application Server och operativsystemet Microsoft® Windows. Om du använder ett annat operativsystem, till exempel UNIX®, ska du ersätta Windows-specifika sökvägar med sökvägar som stöds av det aktuella operativsystemet. På samma sätt måste du ange giltiga anslutningsegenskaper om du använder en annan J2EE-programserver. Se [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
-## Snabbstart (SOAP-läge): Avkoda streckkodade formulärdata med Java API {#quick-start-soap-mode-decoding-barcoded-form-data-using-the-java-api}
+## Snabbstart (SOAP-läge): Avkoda streckkodade formulärdata med Java™ API {#quick-start-soap-mode-decoding-barcoded-form-data-using-the-java-api}
 
-Följande Java-kod avkodar formulärdata som finns i ett PDF-formulär som sparas som Loan.pdf. De avkodade data sparas som en XML-fil med namnet extractData.xml. I det här kodexemplet konverteras en `org.w3c.dom.Document` objekt till `com.adobe.idp.Document` -objekt. (Se [Avkoda streckkodade formulärdata](/help/forms/developing/barcoded-forms.md#decoding-barcoded-form-data).)
+Följande Java™-kod avkodar formulärdata som finns i ett PDF-formulär som sparas som Loan.pdf. De avkodade data sparas som en XML-fil med namnet extractData.xml. I det här kodexemplet konverteras en `org.w3c.dom.Document` objekt till `com.adobe.idp.Document` -objekt. (Se [Avkoda streckkodade formulärdata](/help/forms/developing/barcoded-forms.md#decoding-barcoded-form-data).)
 
 ```java
  /*
@@ -217,4 +217,4 @@ Följande Java-kod avkodar formulärdata som finns i ett PDF-formulär som spara
 
 >[!NOTE]
 >
->När du använder både `org.w3c.dom.Document` objekt och `com.adobe.idp.Document` -objekt i samma programlogik är det bra rutin att kvalificera båda objekten fullt ut.
+När du använder både `org.w3c.dom.Document` objekt och `com.adobe.idp.Document` -objekt i samma programlogik är det bra rutin att kvalificera båda objekten fullt ut.

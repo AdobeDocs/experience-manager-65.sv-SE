@@ -1,16 +1,14 @@
 ---
 title: Konfigurera en Correspondence Management-lösning
-description: Konfigurera en Correspondence Management-lösning i AEM Forms-miljö.
-uuid: 76b25004-fe47-44d7-9bed-7c0fd963306b
+description: Lär dig hur du konfigurerar en Correspondence Management-lösning i en AEM Forms-miljö.
 topic-tags: correspondence-management
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.3/FORMS
-discoiquuid: 186ca75c-638b-4057-826e-cd5d56aa0397
 feature: Correspondence Management
 exl-id: f7f5eb0d-a283-45ea-84d3-d6375d2bb95b
-source-git-commit: 20b0d0db54dc30285c056a10032f02ba45f8baca
+source-git-commit: 000c22028259eb05a61625d43526a2e8314a1d60
 workflow-type: tm+mt
-source-wordcount: '280'
+source-wordcount: '286'
 ht-degree: 0%
 
 ---

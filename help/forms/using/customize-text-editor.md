@@ -1,17 +1,15 @@
 ---
 title: Anpassa textredigeraren
-description: Lär dig hur du anpassar textredigeraren i AEM Forms-miljö.
-uuid: 598246fe-8f15-49b6-b6d3-9154bebcd27e
+description: Lär dig hur du anpassar textredigeraren i en Adobe Experience Manager Forms-miljö.
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: correspondence-management
-discoiquuid: 666fee78-a103-44dc-afe7-71b90ce219b7
 docset: aem65
 feature: Correspondence Management
 exl-id: 1dd3f55c-24f7-4331-a9a3-c9223e613fec
-source-git-commit: 20b0d0db54dc30285c056a10032f02ba45f8baca
+source-git-commit: 000c22028259eb05a61625d43526a2e8314a1d60
 workflow-type: tm+mt
-source-wordcount: '609'
+source-wordcount: '604'
 ht-degree: 0%
 
 ---
@@ -29,7 +27,7 @@ Du kan anpassa för att ändra följande i teckensnittsinställningarna:
 * Standardvärden för teckensnittsfamilj och -storlek, höjd, teckenavstånd och datumformat
 * Punktindrag
 
-För att göra detta måste du:
+Gör följande:
 
 1. [Anpassa teckensnitt genom att redigera filen tbxeditor-config.xml i CRX](#customizefonts)
 1. [Lägga till anpassade teckensnitt på klientdatorn](#addcustomfonts)
@@ -159,7 +157,7 @@ Så här anpassar du teckensnitt genom att redigera filen tbxeditor-config.xml:
       </editorConfig>
       ```
 
-   1. Gör de ändringar du behöver i filen för att ändra följande i teckensnittsinställningarna:
+   1. Gör önskade ändringar i filen så att du kan ändra följande i teckensnittsinställningarna:
 
       * Lägg till eller ta bort teckensnittsfamilj och -storlek
       * Egenskaper som höjd och teckenavstånd
@@ -174,7 +172,7 @@ Så här anpassar du teckensnitt genom att redigera filen tbxeditor-config.xml:
 
 ## Lägga till anpassade teckensnitt på klientdatorn {#addcustomfonts}
 
-När du öppnar ett teckensnitt i textredigeraren för Correspondence Management måste det finnas på klientdatorn som du använder för att få åtkomst till Correspondence Management. Om du vill kunna använda ett anpassat teckensnitt i textredigeraren måste du först installera det på klientdatorn.
+När du öppnar ett teckensnitt i textredigeraren för Korrespondenshantering måste det finnas på klientdatorn som du använder för att få åtkomst till Correspondence Management. För att kunna använda ett anpassat teckensnitt i textredigeraren måste du först installera det på klientdatorn.
 
 Mer information om hur du installerar teckensnitt finns i:
 
@@ -183,7 +181,7 @@ Mer information om hur du installerar teckensnitt finns i:
 
 ## Få tillgång till teckensnittsanpassningar {#access-font-customizations}
 
-När du har ändrat teckensnitten i filen tbxeditor-config.xml i CRX och installerat teckensnitten på klientdatorn som används för att få åtkomst till AEM Forms, visas ändringarna i textredigeraren.
+När du har ändrat teckensnitt i `tbxeditor-config.xml` filen i CRX och de teckensnitt som krävs på klientdatorn som används för att få åtkomst till AEM Forms visas ändringarna i textredigeraren.
 
 Till exempel har teckensnittet Sazanami Mincho Medium lagts till i [Anpassa teckensnitt genom att redigera filen tbxeditor-config.xml i CRX](#customizefonts) proceduren visas i textredigerarens användargränssnitt enligt följande:
 

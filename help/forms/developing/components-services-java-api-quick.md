@@ -1,37 +1,35 @@
 ---
-title: Komponenter och tjänster - Java APIQuick Start(SOAP)
-description: Hantera AEM Forms-komponenter och -tjänster programmatiskt med Java API Quick Start (SOAP).
-uuid: 7d9ade2d-f927-4558-9e80-df08bd572772
+title: Java&handel med komponenter och tjänster; APIQuick Start (SOAP)
+description: Lär dig hur du programmässigt hanterar AEM Forms-komponenter och -tjänster med Java&trade; API Quick Start (SOAP).
 contentOwner: admin
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: develop
-discoiquuid: 14f17126-e744-479b-a8e6-24c131615b46
 role: Developer
 exl-id: fe1198b5-4145-4dcd-ab8a-4015daaf89b7
-source-git-commit: 0e5b89617d481c69882ec5d4658e76855aa9b691
+source-git-commit: 000c22028259eb05a61625d43526a2e8314a1d60
 workflow-type: tm+mt
-source-wordcount: '433'
+source-wordcount: '430'
 ht-degree: 0%
 
 ---
 
-# Komponenter och tjänster - Java API snabbstart (SOAP) {#components-and-services-java-apiquick-start-soap}
+# Komponenter och tjänster - Java™ API snabbstart (SOAP) {#components-and-services-java-apiquick-start-soap}
 
-Java API Quick Start (SOAP) är tillgängligt för komponenter och tjänster.
+Java™ API Quick Start (SOAP) är tillgängligt för komponenter och tjänster.
 
 
-[Snabbstart (SOAP-läge): Distribuera en komponent med Java API](components-services-java-api-quick.md#quick-start-soap-mode-deploying-a-component-using-the-java-api)
+[Snabbstart (SOAP-läge): Distribuera en komponent med Java](components-services-java-api-quick.md#quick-start-soap-mode-deploying-a-component-using-the-java-api)
 
-[Snabbstart (SOAP-läge): Ange körningskontexten för en tjänst med Java API](components-services-java-api-quick.md#quick-start-soap-mode-setting-the-execution-context-of-a-service-using-the-java-api)
+[Snabbstart (SOAP-läge): Ange körningskontexten för en tjänst med hjälp av Java](components-services-java-api-quick.md#quick-start-soap-mode-setting-the-execution-context-of-a-service-using-the-java-api)
 
-[Snabbstart (SOAP-läge): Inaktivera tjänstsäkerhet med Java API](components-services-java-api-quick.md#quick-start-soap-mode-disabling-service-security-using-the-java-api)
+[Snabbstart (SOAP-läge): Inaktivera tjänstsäkerhet med Java](components-services-java-api-quick.md#quick-start-soap-mode-disabling-service-security-using-the-java-api)
 
-[Snabbstart (SOAP-läge): Starta en tjänst med Java API](components-services-java-api-quick.md#quick-start-soap-mode-starting-a-service-using-the-java-api)
+[Snabbstart (SOAP-läge): Starta en tjänst med Java](components-services-java-api-quick.md#quick-start-soap-mode-starting-a-service-using-the-java-api)
 
-[Snabbstart (SOAP-läge): Ändra konfigurationsvärden för tjänster med Java API](components-services-java-api-quick.md#quick-start-soap-mode-modifying-a-services-configuration-values-using-the-java-api)
+[Snabbstart (SOAP-läge): Ändra tjänstkonfigurationsvärden med Java](components-services-java-api-quick.md#quick-start-soap-mode-modifying-a-services-configuration-values-using-the-java-api)
 
-[Snabbstart (SOAP-läge): Ta bort komponenter med Java API](components-services-java-api-quick.md#quick-start-soap-mode-removing-components-using-the-java-api)
+[Snabbstart (SOAP-läge): Ta bort komponenter med Java](components-services-java-api-quick.md#quick-start-soap-mode-removing-components-using-the-java-api)
 
 
 AEM Forms-åtgärder kan utföras med AEM Forms starkt typade API och anslutningsläget bör anges till SOAP.
@@ -42,15 +40,15 @@ AEM Forms-åtgärder kan utföras med AEM Forms starkt typade API och anslutning
 
 >[!NOTE]
 >
->Snabbstarter i Programmering med AEM baseras på den Forms-server som distribueras på JBoss och Windows. Om du använder ett annat operativsystem, till exempel Unix, ersätter du fönsterspecifika sökvägar med sökvägar som stöds av det aktuella operativsystemet. På samma sätt måste du ange giltiga anslutningsegenskaper om du använder en annan J2EE-programserver. Se [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
+>Snabbstart i programmering med AEM formulär baseras på Forms Server som distribueras på JBoss® och operativsystemet Windows. Om du använder ett annat operativsystem, till exempel UNIX®, ska du ersätta Windows-specifika sökvägar med sökvägar som stöds av det aktuella operativsystemet. På samma sätt måste du ange giltiga anslutningsegenskaper om du använder en annan J2EE-programserver. Se [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
 >[!NOTE]
 >
->Om du har en anpassad komponent och använder SOAP- eller EJB-protokoll för att anropa DSC:er på samma lokala server, och dessa anrop slutar att fungera efter en uppgradering, använder du en startstrategi för den virtuella datorn. Använd DSC-anropsmetoden in-VM med ServiceClientFactory som standard och konstruera inte ServiceClientFactory med SOAP- eller EJB-protokoll.
+Om du har en anpassad komponent och använder SOAP- eller EJB-protokoll för att anropa DSC:er på samma lokala server, och dessa anrop slutar att fungera efter en uppgradering, använder du en startstrategi för den virtuella datorn. Använd DSC-anropsmetoden in-VM med ServiceClientFactory som standard och konstruera inte ServiceClientFactory med SOAP- eller EJB-protokoll.
 
-## Snabbstart (SOAP-läge): Distribuera en komponent med Java API {#quick-start-soap-mode-deploying-a-component-using-the-java-api}
+## Snabbstart (SOAP-läge): Distribuera en komponent med Java™ API {#quick-start-soap-mode-deploying-a-component-using-the-java-api}
 
-I följande Java-exempel distribueras en komponent som är baserad på en JAR-fil med namnet *adobe-emailSample-dsc.jar*.
+I följande Java™-exempel distribueras en komponent som är baserad på en JAR-fil med namnet *adobe-emailSample-dsc.jar*.
 
 ```java
  /* 
@@ -150,9 +148,9 @@ I följande Java-exempel distribueras en komponent som är baserad på en JAR-fi
  
 ```
 
-## Snabbstart (SOAP-läge): Ange körningskontexten för en tjänst med Java API {#quick-start-soap-mode-setting-the-execution-context-of-a-service-using-the-java-api}
+## Snabbstart (SOAP-läge): Ange körningskontext för en tjänst med Java™ API {#quick-start-soap-mode-setting-the-execution-context-of-a-service-using-the-java-api}
 
-I följande Java-kodexempel anges körningskontexten för Kör som-anrop till en exempeltjänst med namnet *EncryptDocument*.
+I följande Java™-kodexempel anges körningskontexten för Kör som-anrop till en exempeltjänst med namnet *EncryptDocument*.
 
 ```java
  /* 
@@ -242,9 +240,9 @@ I följande Java-kodexempel anges körningskontexten för Kör som-anrop till en
  
 ```
 
-## Snabbstart (SOAP-läge): Inaktivera tjänstsäkerhet med Java API {#quick-start-soap-mode-disabling-service-security-using-the-java-api}
+## Snabbstart (SOAP-läge): Inaktivera tjänstsäkerhet med Java™ API {#quick-start-soap-mode-disabling-service-security-using-the-java-api}
 
-I följande Java-kodexempel inaktiveras skyddet från exempeltjänsten EncryptDocument och de tjänster som anropas från den här tjänsten (tjänsterna Set Value och Encryption).
+I följande Java™-kodexempel inaktiveras säkerheten från exempeltjänsten EncryptDocument och de tjänster som anropas från den här tjänsten (tjänsterna Set Value och Encryption).
 
 ```java
  /* 
@@ -355,9 +353,9 @@ I följande Java-kodexempel inaktiveras skyddet från exempeltjänsten EncryptDo
  
 ```
 
-## Snabbstart (SOAP-läge): Starta en tjänst med Java API {#quick-start-soap-mode-starting-a-service-using-the-java-api}
+## Snabbstart (SOAP-läge): Starta en tjänst med Java™ API {#quick-start-soap-mode-starting-a-service-using-the-java-api}
 
-I följande Java-kodexempel startas en tjänst med namnet *SendEmailService*.
+I följande Java™-kodexempel startas en tjänst med namnet *SendEmailService*.
 
 ```java
  package com.adobe.sample.servicemanager; 
@@ -413,9 +411,9 @@ I följande Java-kodexempel startas en tjänst med namnet *SendEmailService*.
  
 ```
 
-## Snabbstart (SOAP-läge): Ändra konfigurationsvärden för tjänster med Java API {#quick-start-soap-mode-modifying-a-services-configuration-values-using-the-java-api}
+## Snabbstart (SOAP-läge): Ändra konfigurationsvärden för tjänster med Java™ API {#quick-start-soap-mode-modifying-a-services-configuration-values-using-the-java-api}
 
-I följande Java-exempel ändras konfigurationsvärden som tillhör SendEmail Service.
+I följande Java™-exempel ändras konfigurationsvärden som tillhör SendEmail Service.
 
 ```java
  /* 
@@ -504,7 +502,7 @@ I följande Java-exempel ändras konfigurationsvärden som tillhör SendEmail Se
              modService.setConfigParameterAsText("smtpUser","smyUserName");     
              modService.setConfigParameterAsText("smtpPassword","myPassword");     
                       
-             //Modify the service’s configuration values 
+             //Modify the service's configuration values 
              serviceReg.modifyConfiguration(modService); 
                           
              //Conform the new configuration values 
@@ -525,9 +523,9 @@ I följande Java-exempel ändras konfigurationsvärden som tillhör SendEmail Se
  
 ```
 
-## Snabbstart (SOAP-läge): Ta bort komponenter med Java API {#quick-start-soap-mode-removing-components-using-the-java-api}
+## Snabbstart (SOAP-läge): Ta bort komponenter med Java™ API {#quick-start-soap-mode-removing-components-using-the-java-api}
 
-I följande Java-kodexempel tas en komponent bort med Java API.
+I följande Java™-kodexempel tas en komponent bort med Java™-API:t.
 
 ```java
  /* 

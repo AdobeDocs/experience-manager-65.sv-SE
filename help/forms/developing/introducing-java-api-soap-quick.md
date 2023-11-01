@@ -1,6 +1,6 @@
 ---
-title: Introduktion till Java API QuickStart
-description: AEM Forms-åtgärder kan utföras med AEM Forms Java-API som är heltypat och aktiverat med SOAP-anslutning.
+title: Introduktion till Java&trade; API QuickStart
+description: Lär dig hur AEM Forms-åtgärder kan utföras med AEM Forms JavaTrade; mycket typat API aktiverat med SOAP-anslutning.
 uuid: 480e1809-f789-4ad8-b5d5-2d97aba8411a
 contentOwner: admin
 content-type: reference
@@ -9,14 +9,14 @@ topic-tags: develop, development-tools
 discoiquuid: 38fd51ec-347e-4ae3-86d4-9d2429f79bdd
 role: Developer
 exl-id: 1d4062ef-fb24-4527-b899-896ce757beda
-source-git-commit: 0e5b89617d481c69882ec5d4658e76855aa9b691
+source-git-commit: 000c22028259eb05a61625d43526a2e8314a1d60
 workflow-type: tm+mt
-source-wordcount: '534'
+source-wordcount: '531'
 ht-degree: 0%
 
 ---
 
-# Introducing Java API Quick Start {#introducing-java-api-quickstart}
+# Introduktion till Java™ API - snabbstart {#introducing-java-api-quickstart}
 
 **Exempel och exempel i det här dokumentet är bara för AEM Forms i JEE-miljö.**
 
@@ -24,9 +24,9 @@ Snabbstart för Adobe AEM Forms kan hjälpa dig att snabba upp arbetet med att u
 
 AEM Forms-åtgärder kan utföras med AEM Forms starkt typade API och anslutningsläget bör anges till SOAP.
 
-Java-API Quick Start innehåller en lista över JAR-filer som krävs för att köra Java-programmet. De flesta Java Quick Starts är konsolprogram som körs i `main`. Snabbstart för Forms Java-typbestämd API implementeras dock som Java-server som körs i ett webbprogram.
+Java™-API Quick Start innehåller en lista över JAR-filer som krävs för att köra Java™-programmet. De flesta Java™ Quick Starts är konsolprogram som körs i `main`. Men Forms Java™-snabbstart av starkt typifierad API är implementerat som en Java™-servlet som körs i ett webbprogram.
 
-JAR-fillistan finns i ett kommentaravsnitt som finns i början av snabbstarten. Följande kommentar finns till exempel i en snabbstart för utdata och är en typisk JAR-fillista som finns i varje Java snabbstart.
+JAR-fillistan finns i ett kommentarsavsnitt i början av snabbstarten. Följande kommentar är till exempel i en snabbstart för utdata och är en typisk JAR-fillista som finns i varje Java™ snabbstart.
 
 ```java
  /*
@@ -65,26 +65,26 @@ JAR-fillistan finns i ett kommentaravsnitt som finns i början av snabbstarten. 
 
 ## Snabbstart för flera tjänster {#multiple-services-quick-start}
 
-De flesta snabbstarter som finns i *Programmera med AEM Forms i JEE* anropa en viss tjänst för att utföra en åtgärd. Vissa snabbstarter anropar dock flera AEM Forms-tjänster för att kunna utföra ett visst arbetsflöde. Följande lista innehåller Java-snabbstarter som anropar fler än en AEM Forms-tjänst:
+Snabbaste starten i *Programmera med AEM Forms i JEE* anropa en specifik tjänst för att utföra en åtgärd. Vissa snabbstarter anropar dock flera AEM Forms-tjänster för ett visst arbetsflöde. Följande lista innehåller Java™-snabbstarter som anropar fler än en AEM Forms-tjänst:
 
-[Snabbstart (SOAP-läge): skicka ett dokument som finns i AEM Forms-databasen till utdatatjänsten med Java API](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-passing-a-document-located-in-the-repository-to-the-output-service-using-the-java-api) (anropar tjänsten Repository and Output)
+[Snabbstart (SOAP-läge): skicka ett dokument i AEM Forms-databasen till utdatatjänsten med Java™ API](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-passing-a-document-located-in-the-repository-to-the-output-service-using-the-java-api) (anropar tjänsten Repository and Output)
 
-[Snabbstart (SOAP-läge): Skapa ett PDF-dokument baserat på fragment med Java API](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-creating-a-pdf-document-based-on-fragments-using-the-java-api) (anropar Assembler- och Output-tjänsten)
+[Snabbstart (SOAP-läge): Skapa ett PDF-dokument baserat på fragment med Java™ API](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-creating-a-pdf-document-based-on-fragments-using-the-java-api) (anropar Assembler- och Output-tjänsten)
 
-[Snabbstart (SOAP-läge): Skapa PDF-dokument med skickade XML-data med Java API](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-creating-pdf-documents-with-submitted-xml-data-using-the-java-api) (anropar tjänsten Forms, Output och Document Management)
+[Snabbstart (SOAP-läge): Skapa PDF-dokument med inskickade XML-data med Java™ API](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-creating-pdf-documents-with-submitted-xml-data-using-the-java-api) (anropar tjänsten Forms, Output och Document Management)
 
-[Snabbstart (SOAP-läge): skicka dokument till Forms-tjänsten med Java API](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-passing-documents-to-the-forms-service-using-the-java-api) (anropar tjänsten Forms och Document Management)
+[Snabbstart (SOAP-läge): skicka dokument till Forms-tjänsten med Java™ API](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-passing-documents-to-the-forms-service-using-the-java-api) (anropar tjänsten Forms och Document Management)
 
-[Snabbstart (SOAP-läge): Signera ett XFA-baserat formulär digitalt med Java API](/help/forms/developing/signature-service-java-api-quick.md#quick-start-soap-mode-digitally-signing-a-xfa-based-form-using-the-java-api) (anropar tjänsten Forms och Signature)
+[Snabbstart (SOAP-läge): Signera ett XFA-baserat formulär digitalt med Java™ API](/help/forms/developing/signature-service-java-api-quick.md#quick-start-soap-mode-digitally-signing-a-xfa-based-form-using-the-java-api) (anropar tjänsten Forms och Signature)
 
-[Snabbstart (SOAP-läge): Hantera roller och behörigheter med Java API](/help/forms/developing/user-manager-java-api-quick.md#quick-start-soap-mode-managing-roles-and-permissions-using-the-java-api) (anropar DirectoryManager och tjänsten AuthorizationManager)
+[Snabbstart (SOAP-läge): Hantera roller och behörigheter med Java™ API](/help/forms/developing/user-manager-java-api-quick.md#quick-start-soap-mode-managing-roles-and-permissions-using-the-java-api) (anropar DirectoryManager och tjänsten AuthorizationManager)
 
-[Snabbstart (SOAP-läge): skicka dokument till utdatatjänsten med Java API](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-passing-documents-to-the-output-service-using-the-java-api) (anropa tjänsten Output and Document Management)
-
->[!NOTE]
->
->Snabbstart i Programmering med AEM Forms baseras på att AEM Forms körs på JBoss® Application Server och operativsystemet Microsoft® Windows®. Om du använder ett annat operativsystem, till exempel UNIX®, ska du ersätta Windows-specifika sökvägar med sökvägar som stöds av det aktuella operativsystemet. På samma sätt måste du ange giltiga anslutningsegenskaper om du använder en annan J2EE-programserver. (Se [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).)
+[Snabbstart (SOAP-läge): skicka dokument till utdatatjänsten med Java™ API](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-passing-documents-to-the-output-service-using-the-java-api) (anropa tjänsten Output and Document Management)
 
 >[!NOTE]
 >
->De flesta snabbstarter för webbtjänster skrivs i C# och använder .NET-ramverket. Du kan dock skapa klientprogramlogik som kan anropa AEM Forms-tjänster i alla utvecklingsmiljöer som stöder SOAP-standarder. (Se [Anropa AEM Forms med webbtjänster](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-web-services).)
+>Quick Starts in Programming with AEM Forms är baserat på att AEM Forms körs på JBoss® Application Server och operativsystemet Microsoft® Windows®. Om du använder ett annat operativsystem, till exempel UNIX®, ska du ersätta Windows-specifika sökvägar med sökvägar som stöds av det aktuella operativsystemet. På samma sätt måste du ange giltiga anslutningsegenskaper om du använder en annan J2EE-programserver. (Se [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).)
+
+>[!NOTE]
+>
+De flesta snabbstarter för webbtjänster skrivs i C# och använder .NET-ramverket. Du kan dock skapa klientprogramlogik som kan anropa AEM Forms-tjänster i alla utvecklingsmiljöer som stöder SOAP-standarder. (Se [Anropa AEM Forms med webbtjänster](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-web-services).)

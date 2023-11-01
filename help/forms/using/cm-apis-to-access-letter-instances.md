@@ -1,14 +1,14 @@
 ---
 title: API:er för åtkomst till bokstavsinstanser
-description: Upptäck API:er och använd dem för att programmässigt komma åt bokstavsinstanser i AEM Forms-miljö.
+description: Upptäck API:er och använd dem för att programmässigt komma åt bokstavsinstanser i AEM Forms-miljön.
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: correspondence-management
 feature: Correspondence Management
 exl-id: 9d43d9d4-5487-416c-b641-e807227ac056
-source-git-commit: 68a1edf5f62d7a988094fceb3f762504711dc2f1
+source-git-commit: 000c22028259eb05a61625d43526a2e8314a1d60
 workflow-type: tm+mt
-source-wordcount: '599'
+source-wordcount: '597'
 ht-degree: 0%
 
 ---
@@ -134,8 +134,8 @@ Boolean result = letterInstanceService.letterInstanceExists(letterInstanceName )
 
 Bokstavsinstans kan vara av typen Skickat eller Utkast. Om du öppnar båda bokstavsinstansstyperna visas olika beteenden:
 
-* Om det är en instans av en skickad bokstav öppnas en PDF som representerar instansen. Den skickade Letter-instansen som finns kvar på servern innehåller även dataXML och bearbetad XDP, som kan användas för att utföra och ytterligare anpassad användning av exempelvis PDF/A.
-* När det gäller en förekomst av ett utkast till brev, läses gränssnittet för att skapa korrespondens in på nytt till exakt föregående läge som det var när utkastet skapades
+* Om det finns en instans av Skickat brev öppnas en PDF som representerar förekomsten av brevet. Den skickade Letter-instansen som finns kvar på servern innehåller även dataXML och bearbetad XDP, som kan användas för att utföra och ytterligare anpassad användning av exempelvis PDF/A.
+* Om det finns en förekomst av ett utkast till brev, läses gränssnittet för att skapa korrespondens in på nytt till exakt föregående läge som det var när utkastet skapades
 
 ### Instans för inledande av utkast  {#opening-draft-letter-instance-nbsp}
 

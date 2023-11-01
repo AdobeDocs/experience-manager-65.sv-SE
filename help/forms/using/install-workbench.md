@@ -1,13 +1,13 @@
 ---
 title: Installera workbench
-description: Installera, avinstallera, konfigurera, administrera eller distribuera AEM Forms Workbench.
+description: Lär dig hur du installerar, avinstallerar, konfigurerar, administrerar eller distribuerar AEM Forms Workbench.
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
 role: Admin
 exl-id: d530dbb9-f95e-4329-9665-37faf8f7931b
-source-git-commit: ad5d98c5519cda29cecde54a880958bae81c4764
+source-git-commit: 000c22028259eb05a61625d43526a2e8314a1d60
 workflow-type: tm+mt
-source-wordcount: '2238'
+source-wordcount: '2242'
 ht-degree: 0%
 
 ---
@@ -84,7 +84,7 @@ Följande krav rekommenderas som minimum: Diskutrymme för installation:
 >
 >Om alla dessa platser finns på en enda enhet måste det finnas 1,5 GB ledigt utrymme under installationen. De filer som kopieras till de tillfälliga katalogerna tas bort när installationen är klar.
 
-* Maskinvarukrav: Intel® Pentium® 4 eller AMD®-motsvarighet, 1 GHz processor.
+* Maskinvarukrav: Intel® Pentium® 4- eller AMD®-motsvarighet, 1 GHz-processor.
 * Java™ Runtime Environment (JRE) 7.0 update 51 or later updates to 7.0.
 * Minst 1 024 × 768 pixlar eller högre bildskärmsupplösning med 16-bitars färg eller högre.
 * TCP/IPv4- eller TCP/IPv6-nätverksanslutning till AEM Forms Server.
@@ -119,7 +119,7 @@ Olika versioner av Designer kan finnas samtidigt i samma system, till exempel De
   </tr>
   <tr>
    <td><p>Designer (fristående)</p> </td>
-   <td><p>Ingen. <br />Den version av Designer som ingår i Workbench är endast engelsk. <br />Installationsprogrammet för Workbench kommer inte att installera om en ny version av Designer. Istället kommer en uppdaterad version som medföljer Workbench-installationsprogrammet att korrigeras. På så sätt kan du även använda din lokaliserade version av Designer i Workbench.<br /> </p> </td>
+   <td><p>Ingen. <br />Den version av Designer som ingår i Workbench är endast engelsk. <br />Installationsprogrammet för Workbench installerar inte om en ny version av Designer. Istället patchas en uppdaterad version som medföljer installationsprogrammet för Workbench. På så sätt kan du även använda din lokaliserade version av Designer i Workbench.<br /> </p> </td>
   </tr>
  </tbody>
 </table>
@@ -167,7 +167,7 @@ Innan du installerar Workbench måste du kontrollera att miljön innehåller den
    Installationskatalogsökvägen får inte innehålla tecknen # (pund) och $ (dollar).
 
 1. Granska förinstallationssammanfattningen och klicka på Installera. Installationsprogrammet visar installationsförloppet.
-1. Granska installationssammanfattningen. Välj Starta AEM Forms Workbench för att starta Workbench och klicka på Nästa.
+1. Granska installationssammanfattningen. Välj Starta AEM Forms Workbench så att du kan starta Workbench och klicka sedan på Nästa.
 1. Granska versionsinformationen och klicka på Klar.
 1. Följande objekt är nu installerade på datorn:
    * **Workbench**: Om du vill köra Workbench från Start-menyn väljer du Alla program > AEM Forms > Workbench, om du väljer att spara genvägsmappen där. Mer information finns i <a href="https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/pdf/WorkbenchHelp.pdf">Använda Workbench</a> dokumentation.
@@ -184,7 +184,7 @@ Om du vill använda Workbench måste du ha en instans av AEM Forms igång, vanli
 
 >[!NOTE]
 >
-Om du har konfigurerat AEM Forms att använda databasprovidern EMC Documentum® eller IBM® FileNet och du vill logga in i en annan databas än den som är konfigurerad som standard i administrationskonsolen för formulär, anger du användarnamnet som username@Repository.
+Om du har konfigurerat AEM Forms att använda EMC Documentum®- eller IBM® FileNet-databasprovidern och du vill logga in i en annan databas än den som är konfigurerad som standard i AEM formuläradministrationskonsol, anger du användarnamnet som username@Repository.
 
 ### Konfigurera timeout-inställningar {#configuring-timeout-settings}
 
@@ -205,7 +205,7 @@ Kontrollera att du ansluter till HTTPS med det namn som anges i certifikatet. De
 
    >[!NOTE]
    >
-   Om du vill exportera certifikatet öppnar du en webbläsare och loggar in på administrationskonsolen, installerar certifikatet i webbläsaren och exporterar sedan certifikatet från webbläsaren till en tillfällig lagringsplats (eller direkt till [Workbench_HOME]/workbench/jre/lib/security directory).
+   Om du vill exportera certifikatet öppnar du en webbläsare och loggar in på administrationskonsolen. Installera certifikatet i webbläsaren och exportera sedan certifikatet från webbläsaren till en tillfällig lagringsplats (eller direkt till [Workbench_HOME]/workbench/jre/lib/security directory).
 
 1. Kopiera certifikatet till [Workbench_HOME]/workbench/jre/lib/security directory.
 
@@ -224,7 +224,7 @@ Var:
 
 Följande aspekter av cacheåtgärden bör beaktas om programmet genererar unika mallar direkt genom att automatiskt uppdatera XFA-innehåll. I själva verket använder varje transaktion en ny, unik mall.
 
-När formulärgeneratorn eller utdataanvändaren söker efter, eller uppdaterar, poster i cachen efter en viss formulärmall, används flera nyckelvärden för att hitta den specifika cachepost som ska användas.
+När formulärgeneratorn eller utdataanvändaren söker efter, eller uppdaterar, poster i cachen efter en viss formulärmall, används flera nyckelvärden för att hitta den specifika cachepost som är tillgänglig.
 
 * **Mallfilnamn**: Plats och filnamn för mallen som används som primär unik identifierare för det cachelagrade formuläret.
 * **Tidsstämpel**: Mallfilen innehåller en tidsstämpel som används för att fastställa formulärets senaste uppdateringstid.
@@ -237,18 +237,21 @@ När formulärgeneratorn eller utdataanvändaren söker efter, eller uppdaterar,
 
 
 Forms-tjänsten tar emot mallar utifrån filnamn eller databasplats, eller efter värde som ett XML-objekt i minnet.
+
 * **Mallar som skickas med referens**: Innehållsroten och formulärnamnet används. Om unika mallar med olika filnamn skickas i varje begäran med den här metoden växer diskcachen oändligt och återanvänds aldrig. För att förhindra detta bör unika mallar skickas med samma filnamn för att säkerställa att samma cache uppdateras för alla begäranden.
-* **Mallar som skickas av värde**: Använder mallbyte som skickas tillsammans med data med parametern inDataDoc. Om unika mallar med olika UUID skickas med den här metoden växer diskcachen oändligt och kommer aldrig att återanvändas. För att förhindra detta bör UUID-attributet tas bort från alla mallar för att säkerställa att ingen cache skapas för mallen. Om du skickar samma UUID som inte är null kan cacheobjekten skapas, men det säkerställer att samma cache uppdateras vid varje begäran.
+* **Mallar som skickas av värde**: Använder mallbyte som skickas tillsammans med data med parametern inDataDoc. Om unika mallar med olika UUID skickas med den här metoden växer diskcachen oändligt och återanvänds aldrig. För att förhindra detta bör UUID-attributet tas bort från alla mallar för att säkerställa att ingen cache skapas för mallen. Om du skickar samma UUID som inte är null kan cacheobjekten skapas, men det säkerställer att samma cache uppdateras vid varje begäran.
 
 För att förhindra att cacheminnet växer i oändlighet bör du överväga följande faktorer för att återge dynamiskt genererade mallar med de nya AEM Forms-API:erna renderHTMLForm2 och renderPDFForm2.
 
 När du använder de nya API:erna skickas mallen som ett dokumentobjekt, som hanteras i Forms-tjänsten baserat på om den är passiv eller inte.
 
 För passiva dokument där UUID och innehållsroten fungerar som cachenyckel bör du tänka på följande:
+
 * Cachen skapas inte för passiva indatamallar utan UUID.
 * Om fler än en passiv indatamall med samma UUID och innehållsrot skickas, skrivs samma cache över.
 
 För icke-passiva dokument där filnamnet och innehållsroten fungerar som cachenyckel bör du tänka på följande:
+
 * För icke-passiva indatamallar beror cachelagringen på innehållsroten och filnamnet som dokumentet genererades från.
 Samma cache används endast för begäranden med samma innehållsrot och mallfilnamn.
 Med följande metodtips kan du vara säker på att cacheminnet inte växer i oändlighet när dynamiskt genererade mallar skickas till Forms-tjänsten:
@@ -257,7 +260,7 @@ Med följande metodtips kan du vara säker på att cacheminnet inte växer i oä
 
 ### Avinstallerar Workbench {#uninstalling-workbench}
 
-Använd funktionen Lägg till eller ta bort program på Kontrollpanelen för att starta avinstallationsprogrammet. Workbench- och Designer-programmen har separata avinstallationsprogram.
+Använd funktionen Lägg till eller ta bort program på Kontrollpanelen så att du kan starta avinstallationsprogrammet. Workbench- och Designer-programmen har separata avinstallationsprogram.
 
 ## Konfigurera AEM Forms XDC Editor {#configuring-aem-forms-xdc-editor}
 
@@ -266,9 +269,11 @@ Med XDC-redigeringsprogrammet kan nätverksskrivaradministratörer skapa och än
 Innan administratören för nätverksskrivaren använder XDC-redigeringsprogrammet ska du flytta XDC-exempelfilerna och läsa Skapa enhetsprofiler med XDC-redigeringsprogrammet.
 
 **Hämta XDC-exempelfilerna**:
+
 1. På AEM Forms Server letar du reda på XDC-mappen i [AEM Forms root]\sdk\samples\Output\IVS.
 1. Kopiera innehållet i den här mappen till en katalog som är tillgänglig från Workbench- eller Eclipse-systemet.
 
 **Få hjälp om XDC Editor**:
+
 1. Gå till AEM Forms dokumentationswebbplats.
 1. Klicka på **Utveckla** och navigera till Skapa enhetsprofiler med XDC-redigeringsprogrammet. Hämta filen xdc_editor_help_web.zip och installera hjälpfilerna genom att följa instruktionerna i Viktigt-filen.

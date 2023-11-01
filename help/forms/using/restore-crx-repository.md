@@ -1,8 +1,8 @@
 ---
 title: Det går inte att återställa en skadad CRX-databas som kan användas på JEE-klusterservern
-description: Steg för att återställa en skadad CRX-databas.
+description: Lär dig hur du kan återställa en skadad CRX-databas.
 exl-id: 212f61f1-360f-4abe-b874-055ec65454c7
-source-git-commit: 0e5b89617d481c69882ec5d4658e76855aa9b691
+source-git-commit: 000c22028259eb05a61625d43526a2e8314a1d60
 workflow-type: tm+mt
 source-wordcount: '179'
 ht-degree: 0%
@@ -21,7 +21,6 @@ Säkerhetskopiera din CRX-databas innan du utför stegen nedan.
 
 ## Lösning {#solution}
 
-Utför följande steg för att lösa problemet:
 1. Gå till  `https://[AEM Forms Server]:[port]/system/console/bundles`.
 
 1. Leta reda på `oak-core` paketera och kontrollera om det körs.
@@ -33,6 +32,4 @@ Utför följande steg för att lösa problemet:
 
 ## Gäller för {#applies-to}
 
-Denna lösning gäller
-
-* AEM Forms i JEE-kluster
+Den här lösningen gäller för AEM Forms i JEE Cluster.

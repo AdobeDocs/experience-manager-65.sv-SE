@@ -1,32 +1,32 @@
 ---
 title: Forms Portal | Hantera användardata
-description: Hantera användardata som åtkomst, borttagning och datalagring på AEM Forms-portalen.
+description: Lär dig hur du hanterar användardata som åtkomst, borttagning och datalager på AEM Forms Portal.
 contentOwner: vishgupt
 topic-tags: grdp
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 role: Admin
 exl-id: 791524a4-a8bb-4632-a68d-e96864e139a9
-source-git-commit: bb1e1790b8b9e6d6224c62b1f51d8af50a82e975
+source-git-commit: 000c22028259eb05a61625d43526a2e8314a1d60
 workflow-type: tm+mt
-source-wordcount: '859'
+source-wordcount: '861'
 ht-degree: 0%
 
 ---
 
 # Forms Portal | Hantera användardata {#forms-portal-handling-user-data}
 
-[!DNL AEM Forms] -portalen innehåller komponenter som du kan använda för att lista adaptiva formulär, HTML5-formulär och andra Forms-resurser på [!DNL AEM Sites] sida. Dessutom kan du konfigurera den så att den visar utkast och skickade adaptiva formulär och HTML5-formulär för en inloggad användare. Mer information om formulärportalen finns i [Introduktion till att publicera formulär på en portal](/help/forms/using/introduction-publishing-forms.md).
+[!DNL AEM Forms] Portal innehåller komponenter som du kan använda för att lista adaptiva formulär, HTML5-formulär och andra Forms-resurser på [!DNL AEM Sites] sida. Dessutom kan du konfigurera den så att den visar utkast och skickade adaptiva formulär och HTML5-formulär för en inloggad användare. Mer information om Forms Portal finns i [Introduktion till att publicera formulär på en portal](/help/forms/using/introduction-publishing-forms.md).
 
-När en inloggad användare sparar ett adaptivt formulär som ett utkast eller skickar det, visas de på flikarna Utkast och Skicka på formulärportalen. Data för ifyllda eller inskickade formulär lagras i datalagret som är konfigurerat för AEM. Utkast och inskickade data för anonyma användare visas inte på formulärportalsidan, men data lagras i det konfigurerade datalagret. Se [Konfigurera lagringstjänster för utkast och överföringar](/help/forms/using/configuring-draft-submission-storage.md).
+När en inloggad användare sparar ett anpassat formulär som ett utkast eller skickar det, visas de på flikarna Utkast och Inskickat på Forms Portal. Data för ifyllda eller inskickade formulär lagras i datalagret som är konfigurerat för AEM. Utkast och inskickade data från anonyma användare visas inte på Forms Portal-sidan, men data lagras i det konfigurerade datalagret. Se [Konfigurera lagringstjänster för utkast och överföringar](/help/forms/using/configuring-draft-submission-storage.md).
 
 ## Användardata och datalager {#user-data-and-data-stores}
 
-Forms portal lagrar data för utkast och inskickade formulär i följande scenarier:
+Forms Portal lagrar data för utkast och skickade formulär i följande scenarier:
 
 * Skicka-åtgärden som konfigurerats i det adaptiva formuläret är **Forms Portal Submit Action**.
-* För andra skicka-åtgärder än **Forms Portal Submit Action**, **[!UICONTROL Store data in forms portal]** är aktiverat i **[!UICONTROL Submission]** egenskaper för den adaptiva formulärbehållaren.
+* För andra skicka-åtgärder än **Forms Portal Submit Action**, **[!UICONTROL Store data in Forms Portal]** är aktiverat i **[!UICONTROL Submission]** egenskaper för den adaptiva formulärbehållaren.
 
-För varje utkast och skickat formulär för inloggade och anonyma användare lagras följande data i formulärportalen:
+För varje utkast och skickat formulär för inloggade och anonyma användare lagras följande data i Forms Portal:
 
 * Formulärmetadata som formulärnamn, formulärsökväg, utkast- eller överförings-ID, sökväg till bilagor och användar-ID
 * Bifogade formulär som databyte
@@ -43,17 +43,17 @@ Beroende på den konfigurerade datalagringens beständighet lagras utkast och sk
   </tr>
   <tr>
    <td><p>Standard</p> </td>
-   <td><p>AEM databas med författare och publiceringsinstanser</p> </td>
+   <td><p>AEM databas för författare- och publiceringsinstanser</p> </td>
    <td><p><code>/content/forms/fp/</code></p> </td>
   </tr>
   <tr>
    <td><p>Fjärr</p> </td>
-   <td><p>AEM databas med författare och AEM</p> </td>
+   <td><p>AEM databas för författare och AEM</p> </td>
    <td><p><code>/content/forms/fp/</code></p> </td>
   </tr>
   <tr>
    <td><p>Databas</p> </td>
-   <td><p>AEM databas för författarinstans och databastabeller</p> </td>
+   <td><p>AEM databas för Author-instans och databastabeller</p> </td>
    <td>Databastabeller <code>data</code>, <code>metadata</code>och <code>additionalmetadata</code></td>
   </tr>
  </tbody>
@@ -97,7 +97,7 @@ Utkast och inlämningsdata för alla anonyma användare lagras i den gemensamma 
 
 ### Databas {#database}
 
-När AEM har konfigurerats för att lagra data i en databas lagras formulärportalutkast och överföringsdata i följande databastabeller för både inloggade och anonyma användare:
+När AEM har konfigurerats för att lagra data i en databas lagras Forms Portal-utkast och överföringsdata i följande databastabeller för både inloggade och anonyma användare:
 
 * data
 * metadata
