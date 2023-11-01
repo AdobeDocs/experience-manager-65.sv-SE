@@ -7,9 +7,9 @@ topic-tags: extending-aem
 content-type: reference
 docset: aem65
 exl-id: c4fb1b5e-e15e-450e-b882-fe27b165ff9f
-source-git-commit: b703f356f9475eeeafb1d5408c650d9c6971a804
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '1787'
+source-wordcount: '1785'
 ht-degree: 0%
 
 ---
@@ -214,7 +214,7 @@ public interface ExperienceFragmentLinkRewriterProvider {
 
 Om du vill använda gränssnittet måste du först skapa ett paket som innehåller en ny tjänstkomponent som implementerar providergränssnittet för Länkskrivare.
 
-Den här tjänsten används för att ansluta till Experience Fragment Export till Target för att få tillgång till de olika länkarna.
+Den här tjänsten används för att ansluta till Experience Fragment Export till Target-omskrivning för att få tillgång till de olika länkarna.
 
 Till exempel, `ComponentService`:
 

@@ -12,9 +12,9 @@ discoiquuid: 6bcf0fcc-481a-4283-b30d-80b517701280
 docset: aem65
 feature: Multi Site Manager
 exl-id: ac24b8b4-b3ed-47fa-9a73-03f0c9e68ac8
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '2701'
+source-wordcount: '2699'
 ht-degree: 0%
 
 ---
@@ -38,9 +38,9 @@ I det här avsnittet finns information om de installerade rollout-konfiguratione
 
 Varje utrullningskonfiguration använder en utlösare som gör att utrullningen sker. Utrullningskonfigurationer kan använda någon av följande utlösare:
 
-* **Vid utrullning**: The **Utrullning** -kommandot används på den blå utskriftssidan, eller **Synkronisera** -kommandot används på live-kopieringssidan.
+* **Vid utrullning**: **Utrullning** -kommandot används på den blå utskriftssidan, eller **Synkronisera** -kommandot används på live-kopieringssidan.
 
-* **Vid ändring**: Källsidan ändras.
+* **Vid ändring**: Källsidan har ändrats.
 
 * **Vid aktivering**: Källsidan aktiveras.
 
@@ -72,7 +72,7 @@ I följande tabell visas de utrullningskonfigurationer som har installerats med 
    <td>Aktivera vid aktivering av utkast</td>
    <td>Publicerar live-kopian när källan publiceras.</td>
    <td>Vid aktivering</td>
-   <td>targetActivate</td>
+   <td>targetActive</td>
   </tr>
   <tr>
    <td>Inaktivera vid inaktivering av utkast</td>
@@ -94,7 +94,7 @@ I följande tabell visas de utrullningskonfigurationer som har installerats med 
   </tr>
   <tr>
    <td>Promote Launch</td>
-   <td>Standardutrullningskonfiguration för att marknadsföra startsidor.</td>
+   <td>Standardkonfiguration för lansering av startsidor.</td>
    <td>Vid utrullning</td>
    <td>contentUpdate<br /> contentCopy<br /> contentDelete<br /> referencesUpdate<br /> orderChildren<br /> markLiveRelationship</td>
   </tr>
@@ -158,11 +158,11 @@ I följande tabell visas de synkroniseringsåtgärder som har installerats med A
      <li>The <code>sling:resourceType</code> egenskaper som är inställda på <code>contentpage</code> eller till <code>homepage</code> är inställda på <code>mobilecontentpage.</code></li>
      <li>The <code>cq:template</code> egenskaper som är inställda på <code>contentpage</code> är inställda på <code>mobilecontentpage.</code></li>
     </ul> </td>
-   <td><p> </p> <p>editMap: (String) Identifierar egenskapen, det aktuella värdet och det nya värdet. Mer information finns i beskrivningen.<br /> </p> </td>
+   <td><p> </p> <p>editMap: (String) Anger egenskapen, det aktuella värdet och det nya värdet. Mer information finns i beskrivningen.<br /> </p> </td>
   </tr>
   <tr>
    <td>meddela</td>
-   <td>Skickar en sidhändelse om att sidan har rullats ut. För att kunna meddelas måste du först prenumerera på utrullningshändelser.</td>
+   <td>Skickar en sidhändelse om att sidan har rullats ut. För att kunna meddelas måste man först prenumerera på utrullningshändelser.</td>
    <td> </td>
   </tr>
   <tr>
@@ -181,7 +181,7 @@ I följande tabell visas de synkroniseringsåtgärder som har installerats med A
    <td> </td>
   </tr>
   <tr>
-   <td>targetActivate</td>
+   <td>targetActive</td>
    <td><p>Aktiverar live-kopian.</p> <p>Den här åtgärden måste vara den enda synkroniseringsåtgärden som ingår i en utrullningskonfiguration.</p> </td>
    <td> </td>
   </tr>
@@ -193,7 +193,7 @@ I följande tabell visas de synkroniseringsåtgärder som har installerats med A
   <tr>
    <td>arbetsflöde</td>
    <td><p>Startar arbetsflödet som definieras av egenskapen target (endast för sidor) och tar live-kopian som nyttolast.</p> <p>Målsökvägen är modellnodens sökväg.</p> </td>
-   <td>mål: (String) Sökvägen till arbetsflödesmodellen.<br /> </td>
+   <td>target: (String) Sökvägen till arbetsflödesmodellen.<br /> </td>
   </tr>
   <tr>
    <td>obligatoriskt</td>
@@ -203,7 +203,7 @@ I följande tabell visas de synkroniseringsåtgärder som har installerats med A
      <li>ActionSet.ACTION_NAME_SET_PROPERTY</li>
      <li>ActionSet.ACTION_NAME_ACL_MODIFY</li>
     </ul> <p>Använd den här åtgärden endast för sidor.</p> </td>
-   <td>mål: (String) ID:t för gruppen som du anger behörigheter för. <br /> </td>
+   <td>target: (String) ID:t för gruppen som du anger behörigheter för. <br /> </td>
   </tr>
   <tr>
    <td>mandatoryContent</td>
@@ -212,22 +212,22 @@ I följande tabell visas de synkroniseringsåtgärder som har installerats med A
      <li>ActionSet.ACTION_NAME_SET_PROPERTY</li>
      <li>ActionSet.ACTION_NAME_ACL_MODIFY</li>
     </ul> <p>Använd den här åtgärden endast för sidor.</p> </td>
-   <td>mål: (String) ID:t för gruppen som du anger behörigheter för. </td>
+   <td>target: (String) ID:t för gruppen som du anger behörigheter för. </td>
   </tr>
   <tr>
    <td>mandatoryStructure</td>
    <td>Anger behörigheten för ACTIONSet.ACTION_NAME_REMOVE ACL på den aktiva kopieringssidan som skrivskyddad för en viss användargrupp. Använd den här åtgärden endast för sidor.</td>
-   <td>mål: (String) ID:t för gruppen som du anger behörigheter för. </td>
+   <td>target: (String) ID:t för gruppen som du anger behörigheter för. </td>
   </tr>
   <tr>
    <td>VersionCopyÅtgärd</td>
-   <td>Om utkast-/källsidan har publicerats minst en gång skapar en live-kopieringssida med den publicerade versionen. Obs! den här åtgärden är bara tillgänglig för att skapa en live-kopia baserad på en publicerad källsida, inte för att uppdatera en befintlig live-kopia-sida. </td>
+   <td>Om utkast-/källsidan har publicerats minst en gång skapar en live-kopieringssida med den publicerade versionen. Obs! Den här åtgärden är bara tillgänglig för att skapa en live-kopia baserad på en publicerad källsida, inte för att uppdatera en befintlig live-kopia-sida. </td>
    <td> </td>
   </tr>
   <tr>
    <td>PageMoveAction</td>
    <td><p>PageMoveAction används när en sida har flyttats i utkastet.</p> <p>Åtgärden kopierar i stället för att flytta (relaterad) LiveCopy-sidan från platsen före flytten till platsen efter.</p> <p>PageMoveAction ändrar inte LiveCopy-sidan på platsen före flyttningen. Därför har den statusen LiveRelationship utan utkast för efterföljande RolloutConfigurations.</p> <p><a href="#excluding-properties-and-node-types-from-synchronization">Konfigurera tjänsten CQ MSM Page Move Action</a> för att ange vilka nodtyper, styckeobjekt och sidegenskaper som ska uteslutas. </p> <p>Den här åtgärden måste vara den enda synkroniseringsåtgärden som ingår i en utrullningskonfiguration.</p> </td>
-   <td><p>prop_referenceUpdate: (Boolean) Ange som true om du vill uppdatera referenser. Standardvärdet är true.</p> <p> </p> </td>
+   <td><p>prop_referenceUpdate: (Boolean) Ange som true för att uppdatera referenser. Standardvärdet är true.</p> <p> </p> </td>
   </tr>
   <tr>
    <td>productCreateUpdate</td>
@@ -269,7 +269,7 @@ Den nya utrullningskonfigurationen är sedan tillgänglig för dig när du stäl
 
 Du kan konfigurera flera OSGi-tjänster som stöder motsvarande synkroniseringsåtgärder så att de inte påverkar specifika nodtyper och egenskaper. Många egenskaper och delnoder som rör AEM interna funktion ska till exempel inte tas med i en live-kopia. Endast det innehåll som är relevant för sidans användare ska kopieras.
 
-När du arbetar med AEM finns det flera metoder för att hantera konfigurationsinställningarna för sådana tjänster. se [Konfigurerar OSGi](/help/sites-deploying/configuring-osgi.md) om du vill ha mer information och rekommenderade rutiner.
+När du arbetar med AEM finns det flera metoder för att hantera konfigurationsinställningarna för sådana tjänster. Mer information finns i [Konfigurerar OSGi](/help/sites-deploying/configuring-osgi.md) om du vill ha mer information och rekommenderade rutiner.
 
 I följande tabell visas de synkroniseringsåtgärder som du kan ange vilka noder som ska uteslutas för. Tabellen innehåller namnen på tjänsterna som ska konfigureras med webbkonsolen och PID:t för konfigurering med en databasnod.
 
@@ -302,7 +302,7 @@ I följande tabell beskrivs egenskaperna som du kan konfigurera:
    <td>Ett reguljärt uttryck som matchar sidegenskaperna som ska uteslutas från synkroniseringsåtgärden.</td>
   </tr>
   <tr>
-   <td><p>Ignorerade Mixin NodeTypes</p> <p>cq.wcm.msm.action.ignoredMixin</p> </td>
+   <td><p>Ignorerade Mixin NodeType</p> <p>cq.wcm.msm.action.ignoredMixin</p> </td>
    <td>Finns endast för CQ MSM Content Update Action. Ett reguljärt uttryck som matchar namnen på de mixin-nodtyper som ska uteslutas från synkroniseringsåtgärden.</td>
   </tr>
  </tbody>
@@ -320,7 +320,7 @@ I följande tabell beskrivs egenskaperna som du kan konfigurera:
 
 Flera egenskaper och nodtyper exkluderas som standard, de definieras i OSGi-konfigurationen av **CQ MSM Content Update Action**, under **Uteslutna sidegenskaper**.
 
-Som standard är egenskaper som matchar följande reguljära uttryck exkluderade (dvs. inte uppdaterade) vid utrullning:
+Som standard är egenskaper som matchar följande reguljära uttryck exkluderade (d.v.s. inte uppdaterade) vid utrullning:
 
 ![CQ MSM Content Update Action](assets/chlimage_1.png)
 
@@ -334,7 +334,7 @@ Om du till exempel vill ha sidan **Titel** som ska ingå i de ändringar som öv
 
 Du kan konfigurera flera OSGi-tjänster som stöder motsvarande synkroniseringsåtgärder som är relaterade till uppdatering av referenser.
 
-När du arbetar med AEM finns det flera metoder för att hantera konfigurationsinställningarna för sådana tjänster. se [Konfigurerar OSGi](/help/sites-deploying/configuring-osgi.md) om du vill ha mer information och rekommenderade rutiner.
+När du arbetar med AEM finns det flera metoder för att hantera konfigurationsinställningarna för sådana tjänster. Mer information finns i [Konfigurerar OSGi](/help/sites-deploying/configuring-osgi.md) om du vill ha mer information och rekommenderade rutiner.
 
 I följande tabell visas de synkroniseringsåtgärder som du kan ange referensuppdatering för. Tabellen innehåller namnen på tjänsterna som ska konfigureras med webbkonsolen och PID:t för konfigurering med en databasnod.
 
@@ -357,7 +357,7 @@ I följande tabell visas de synkroniseringsåtgärder som du kan ange referensup
 
 ## Ange vilka utrullningskonfigurationer som ska användas {#specifying-the-rollout-configurations-to-use}
 
-Med MSM kan du ange uppsättningar av utrullningskonfigurationer som används generellt, och när det behövs kan du åsidosätta dem för specifika live-kopior. MSM erbjuder flera platser för att ange vilka rollout-konfigurationer som ska användas. Platsen avgör om konfigurationen gäller för en specifik live-kopia.
+Med MSM kan du ange uppsättningar av utrullningskonfigurationer som används generellt, och när det behövs kan du åsidosätta dem för specifika live-kopior. MSM erbjuder flera platser för att ange vilka utrullningskonfigurationer som ska användas. Platsen avgör om konfigurationen gäller för en specifik live-kopia.
 
 I följande lista över platser där du kan ange vilka rollout-konfigurationer som ska användas beskrivs hur MSM avgör vilka rollout-konfigurationer som ska användas för en live-kopia:
 
@@ -372,9 +372,9 @@ I en plan används till exempel referensplatsen We.Retail som källinnehåll. En
 * Rotsidan för referenswebbplatsen för Vi.Retail har konfigurerats med flera utrullningskonfigurationer. MSM använder dessa utrullningskonfigurationer för alla live-kopieringssidor.
 * Rotsidan för referenswebbplatsen We.Retail konfigureras med flera rollout-konfigurationer och rotsidan för den aktiva kopieringswebbplatsen konfigureras med en annan uppsättning rollout-konfigurationer. MSM använder de utrullningskonfigurationer som är konfigurerade på den aktiva kopians rotsida.
 
-### Ange utrullningskonfigurationer för en Live Copy-sida {#setting-the-rollout-configurations-for-a-live-copy-page}
+### Ställa in utrullningskonfigurationer för en Live Copy-sida {#setting-the-rollout-configurations-for-a-live-copy-page}
 
-Konfigurera en sida med en live-kopia med de utrullningskonfigurationer som ska användas när källsidan rullas ut. Underordnade sidor ärver konfigurationen som standard. När du konfigurerar utrullningskonfigurationen att använda åsidosätter du konfigurationen som den aktiva kopieringssidan ärver från sin överordnade.
+Konfigurera en live-kopieringssida med de utrullningskonfigurationer som ska användas när källsidan distribueras. Underordnade sidor ärver konfigurationen som standard. När du konfigurerar utrullningskonfigurationen att använda åsidosätter du konfigurationen som den aktiva kopieringssidan ärver från sin överordnade.
 
 Du kan också konfigurera utrullningskonfigurationerna för en live-kopia-sida när du [skapa live-kopia](/help/sites-administering/msm-livecopy.md#creating-a-live-copy-of-a-page).
 
@@ -405,10 +405,10 @@ Observera att de underordnade sidorna för den blå sidan ärver konfigurationen
 1. Använd **Webbplatser** för att välja rotsidan för ritningen.
 1. Välj **Egenskaper** i verktygsfältet.
 1. Öppna **Blueprint** -fliken.
-1. Markera en eller flera **Konfigurationer för utrullning** med listruteväljaren.
+1. Markera en eller flera **Utrullningskonfigurationer** med listruteväljaren.
 1. Behåll uppdateringarna med **Spara**.
 
-### Ange systemets standardkonfiguration för utrullning {#setting-the-system-default-rollout-configuration}
+### Ställa in systemets standardkonfiguration för utrullning {#setting-the-system-default-rollout-configuration}
 
 Ange en utrullningskonfiguration som ska användas som systemstandard. Konfigurera OSGi-tjänsten om du vill ange standardvärdet:
 

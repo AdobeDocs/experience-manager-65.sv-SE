@@ -12,18 +12,18 @@ topic-tags: operations
 discoiquuid: 9f883483-b81e-42c6-a4a1-eb499dd112e7
 role: Developer
 exl-id: 5a746c6c-bf6e-4b25-ba7c-a35edb1f55f3
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '1431'
+source-wordcount: '1429'
 ht-degree: 0%
 
 ---
 
-# Optimera prestanda för Forms-tjänsten {#optimizing-the-performance-of-theforms-service}
+# Optimera prestandan för Forms-tjänsten {#optimizing-the-performance-of-theforms-service}
 
 **Exempel och exempel i det här dokumentet är bara för AEM Forms i JEE-miljö.**
 
-## Optimera prestanda för Forms-tjänsten {#optimizing-the-performance-of-the-forms-service}
+## Optimera prestandan för Forms-tjänsten {#optimizing-the-performance-of-the-forms-service}
 
 När du återger ett formulär kan du ange körningsalternativ som optimerar prestanda för Forms-tjänsten. En annan uppgift som du kan utföra för att förbättra prestandan för Forms-tjänsten är att lagra XDP-filer i databasen. I det här avsnittet beskrivs dock inte hur du utför den här uppgiften. (Se [Anropa en tjänst med ett Java-klientbibliotek](/help/forms/developing/invoking-aem-forms-using-java.md#invoking-a-service-using-a-java-client-library).)
 
@@ -56,7 +56,7 @@ Du kan ställa in följande alternativ för prestandakörning för att förbätt
 * **Cache-lagring av formulär**: Du kan cachelagra ett formulär som återges som PDF i servercachen. Varje formulär cachelagras när det har skapats för första gången. Om det cachelagrade formuläret vid en efterföljande återgivning är nyare än formulärdesignens tidsstämpel hämtas formuläret från cachen. Genom att cache-lagra formulär förbättrar du prestanda för Forms-tjänsten eftersom den inte behöver hämta formulärdesignen från en databas.
 * Det kan ta längre tid att återge formulärstödlinjer (inaktuella) än andra omformningstyper. Vi rekommenderar att du cache-lagrar formulärguider (borttagna) för att förbättra prestandan.
 * **Fristående alternativ**: Om du inte behöver Forms-tjänsten för att utföra beräkningar på serversidan kan du ange alternativet Fristående till `true`, vilket resulterar i att formulär återges utan lägesinformation. Lägesinformation är nödvändig om du vill återge ett interaktivt formulär till en slutanvändare som sedan anger information i formuläret och skickar tillbaka formuläret till Forms. Forms-tjänsten utför sedan en beräkningsåtgärd och återger formuläret till användaren med de resultat som visas i formuläret. Om ett formulär utan statusinformation skickas tillbaka till Forms-tjänsten är endast XML-data tillgängliga och serversidesberäkningar utförs inte.
-* **Linjäriserad PDF**: En linjäriserad PDF-fil ordnas för att möjliggöra effektiv inkrementell åtkomst i en nätverksmiljö. PDF-filen är giltig PDF i alla avseenden och kompatibel med alla befintliga visningsprogram och andra PDF-program. Det innebär att en linjär PDF kan visas medan den fortfarande hämtas.
+* **Linjäriserad PDF**: En linjäriserad PDF-fil ordnas för att möjliggöra effektiv inkrementell åtkomst i en nätverksmiljö. PDF-filen är giltig PDF i alla avseenden och kompatibel med alla befintliga visningsprogram och andra PDF-program. Det vill säga att en linjär PDF kan visas medan den fortfarande hämtas.
 * Det här alternativet förbättrar inte prestanda när ett PDF-formulär återges på klienten.
 * **GuideRSL, alternativ**: Aktiverar generering av formulärguiden (borttagen) med hjälp av delade bibliotek vid körning. Det innebär att den första begäran hämtar en mindre SWF-fil, plus större delade bibliotek som lagras i webbläsarens cache. Mer information finns i RSL i Flex-dokumentationen.
 * Du kan även förbättra prestanda för Forms-tjänsten genom att återge ett formulär på klienten. (Se [Återger Forms på klienten](/help/forms/developing/rendering-forms-client.md).)
@@ -85,7 +85,7 @@ När Forms-tjänsten återger ett formulär returneras en formulärdataström so
 
 ### Optimera prestanda med Java API {#optimize-the-performance-using-the-java-api}
 
-Rendera ett formulär med optimerade prestanda med Forms API (Java):
+Rendera ett formulär med optimerade prestanda med hjälp av Forms API (Java):
 
 1. Inkludera projektfiler
 
@@ -159,7 +159,7 @@ Rendera ett formulär med optimerade prestanda med Forms API (webbtjänst):
    * A `PDFFormRenderSpecc` objekt som lagrar körningsalternativ.
    * A `URLSpec` objekt som innehåller URI-värden som krävs av Forms-tjänsten.
    * A `java.util.HashMap` objekt som lagrar bifogade filer. Det här är en valfri parameter och du kan ange `null` om du inte vill bifoga filer till formuläret.
-   * En tom `com.adobe.idp.services.holders.BLOBHolder` objekt som fylls i av metoden. Detta används för att lagra det återgivna PDF-formuläret.
+   * En tom `com.adobe.idp.services.holders.BLOBHolder` objekt som fylls i av metoden. Det här används för att lagra det återgivna PDF-formuläret.
    * En tom `javax.xml.rpc.holders.LongHolder` objekt som fylls i av metoden. (Det här argumentet lagrar antalet sidor i formuläret).
    * En tom `javax.xml.rpc.holders.StringHolder` objekt som fylls i av metoden. (Det här argumentet lagrar språkets värde).
    * En tom `com.adobe.idp.services.holders.FormsResultHolder` objekt som innehåller resultatet av den här åtgärden.

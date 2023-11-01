@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 06b8c0be-4362-4bd1-ad57-ea5503616b17
 docset: aem65
 exl-id: 7b34be66-bb61-4697-8cc8-428f7c63a887
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '1659'
+source-wordcount: '1653'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 Single page applications (SPA) can offer compelling experiences for website users. Utvecklare vill kunna skapa webbplatser med SPA ramverk och författare vill smidigt redigera innehåll i AEM för en webbplats som skapats med sådana ramverk.
 
-SPA Editor erbjuder en omfattande lösning för SPA inom AEM. På den här sidan får du en översikt över hur SPA stöds är strukturerat i AEM, hur SPA redigeraren fungerar och hur SPA ramverk och AEM är synkroniserade.
+SPA Editor erbjuder en omfattande lösning för SPA inom AEM. På den här sidan får du en översikt över hur SPA stöds är uppbyggt i AEM, hur SPA redigeraren fungerar och hur SPA ramverk och AEM är synkroniserade.
 
 >[!NOTE]
 >
@@ -38,16 +38,16 @@ SPA i AEM innehåller ett tunt JS-lager som interagerar med den SPA JS-koden nä
 
 Mer information om SPA i AEM finns i följande dokument:
 
-* [SPA Blueprint](/help/sites-developing/spa-blueprint.md) för tekniska krav för en SPA
+* [SPA](/help/sites-developing/spa-blueprint.md) för de tekniska kraven för en SPA
 * [Komma igång med SPA i AEM](/help/sites-developing/spa-getting-started-react.md) för en snabb genomgång av en enkel SPA
 
 ## Design {#design}
 
-Sidkomponenten för en SPA tillhandahåller inte elementen HTML i dess underordnade komponenter via JSP- eller HTML-filen. Den här åtgärden har delegerats till SPA ramverk. Representationen av underordnade komponenter eller modeller hämtas som en JSON-datastruktur från JCR. De SPA komponenterna läggs sedan till på sidan enligt den strukturen. Det här beteendet skiljer sidkomponentens ursprungliga brödkomposition från icke-SPA.
+Sidkomponenten för en SPA tillhandahåller inte elementen HTML i dess underordnade komponenter via JSP- eller HTML-filen. Den här åtgärden har delegerats till SPA ramverk. Representationen av underordnade komponenter eller modeller hämtas som en JSON-datastruktur från JCR. SPA komponenter läggs sedan till på sidan enligt den strukturen. Det här beteendet skiljer sidkomponentens ursprungliga brödkomposition från icke-SPA.
 
 ### Sidmodellshantering {#page-model-management}
 
-Lösning och hantering av sidmodellen delegeras till en angiven `PageModel` bibliotek. SPA måste använda sidmodellbiblioteket för att kunna initieras och redigeras av SPA. Sidmodellbiblioteket som indirekt tillhandahålls AEM sidkomponenten via `aem-react-editable-components` npm. Sidmodellen är en tolk mellan AEM och SPA och måste därför alltid finnas. När sidan har skapats, ytterligare ett bibliotek `cq.authoring.pagemodel.messaging` måste läggas till för att det ska gå att kommunicera med sidredigeraren.
+Lösning och hantering av sidmodellen delegeras till en angiven `PageModel` bibliotek. SPA måste använda sidmodellbiblioteket för att initieras och redigeras av SPA Editor. Sidmodellbiblioteket som indirekt tillhandahålls AEM sidkomponenten via `aem-react-editable-components` npm. Sidmodellen är en tolk mellan AEM och SPA och måste därför alltid finnas. När sidan har skapats, ytterligare ett bibliotek `cq.authoring.pagemodel.messaging` måste läggas till för att det ska gå att kommunicera med sidredigeraren.
 
 Om den SPA sidkomponenten ärver från sidhuvudkomponenten finns det två alternativ för att skapa `cq.authoring.pagemodel.messaging` tillgänglig klientbibliotekskategori:
 
@@ -171,7 +171,7 @@ Tidigare versioner av dessa ramverk kan fungera med AEM SDK för redigeraren, me
 
 ### Ytterligare ramar {#additional-frameworks}
 
-Ytterligare SPA kan implementeras för att fungera med AEM SPA Editor SDK. Se [SPA Blueprint](/help/sites-developing/spa-blueprint.md) dokumentera de krav som ett ramverk måste uppfylla för att skapa ett ramverksspecifikt lager som består av moduler, komponenter och tjänster som ska fungera med AEM SPA.
+Ytterligare SPA kan implementeras för att fungera med AEM SPA Editor SDK. Se [SPA](/help/sites-developing/spa-blueprint.md) dokumentera de krav som ett ramverk måste uppfylla för att skapa ett ramverksspecifikt lager som består av moduler, komponenter och tjänster för att fungera med AEM SPA.
 
 ### Använda flera väljare {#multiple-selectors}
 
@@ -195,9 +195,9 @@ AEM SDK för SPA introducerades med AEM 6.4 Service Pack 2. Det stöds till full
 * Målläge
 * ContextHub
 * Redigering av infogad bild
-* Redigera konfigurationer (t.ex. avlyssnare)
+* Redigera konfigurationer (t ex avlyssnare)
 * Ångra/Gör om
-* Sidskillnader och tidsförvrängning
+* Sidskillnader och tidsförskjutning
 * Funktioner för att skriva om HTML på serversidan, t.ex. Länkkontroll, CDN-omskrivartjänst, URL-förkortning etc.
 * Utvecklarläge
 * AEM

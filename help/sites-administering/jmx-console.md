@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 873ce073-0055-4e1b-b3c6-ae7967700894
 docset: aem65
 exl-id: eabd8335-6140-4c15-8cff-21608719aa5f
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '4956'
+source-wordcount: '4950'
 ht-degree: 0%
 
 ---
@@ -41,17 +41,17 @@ Mer information om hur du skapar MBeans för att hantera tjänster med JMX-konso
 
 **listRunningWorkflowsPerModel** Visar antalet arbetsflödesinstanser som körs för varje arbetsflödesmodell.
 
-* Argument: ingen
+* Argument: none
 * Returnerat värde: Tabelldata som innehåller kolumnerna Count och ModelId.
 
 **listCompletedWorkflowsPerModel** Visar antalet slutförda arbetsflödesinstanser för varje arbetsflödesmodell.
 
-* Argument: ingen
+* Argument: none
 * Returnerat värde: Tabelldata som innehåller kolumnerna Count och ModelId.
 
 **returnWorkflowQueueInfo** Visar information om arbetsflödesobjekt som har bearbetats och som står i kö för bearbetning.
 
-* Argument: ingen
+* Argument: none
 * Returnerat värde: Tabelldata som innehåller följande kolumner:
 
    * Jobb
@@ -67,7 +67,7 @@ Mer information om hur du skapar MBeans för att hantera tjänster med JMX-konso
 
 **returnWorkflowJobTopicInfo** Visar bearbetningsinformation för arbetsflödesjobb, ordnade efter ämne.
 
-* Argument: ingen
+* Argument: none
 * Returnerat värde: Tabelldata som innehåller följande kolumner:
 
    * Ämnesnamn
@@ -82,7 +82,7 @@ Mer information om hur du skapar MBeans för att hantera tjänster med JMX-konso
 
 * Argument:
 
-   * modell: ID för modellen som ska frågas. Ange inget värde om du vill se antalet misslyckade arbetsflödesinstanser för alla arbetsflödesmodeller. ID är sökvägen till modellnoden, till exempel:
+   * modell: ID:t för modellen som ska frågas. Ange inget värde om du vill se antalet misslyckade arbetsflödesinstanser för alla arbetsflödesmodeller. ID är sökvägen till modellnoden, till exempel:
 
      `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
 
@@ -90,7 +90,7 @@ Mer information om hur du skapar MBeans för att hantera tjänster med JMX-konso
 
 **returnFailedWorkflowCountPerModel** Visar antalet arbetsflödesinstanser som har misslyckats för varje arbetsflödesmodell.
 
-* Argument: ingen.
+* Argument: none.
 * Returnerat värde: Tabelldata som innehåller kolumnerna Antal och Modell-ID.
 
 **terminateFailedInstances** Avsluta misslyckade arbetsflödesinstanser. Du kan avsluta alla misslyckade instanser eller endast de misslyckade instanserna för en viss modell. Du kan också starta om instanserna när de har avslutats. Du kan också testa åtgärden för att se resultaten utan att faktiskt utföra åtgärden.
@@ -98,8 +98,8 @@ Mer information om hur du skapar MBeans för att hantera tjänster med JMX-konso
 * Argument:
 
    * Starta om instansen: (Valfritt) Ange värdet `true` om du vill starta om instanserna när de har avslutats. Standardvärdet för `false` orsakar ingen omstart av avslutade arbetsflödesinstanser.
-   * Torr körning: (Valfritt) Ange värdet `true` för att se resultatet av åtgärden utan att faktiskt utföra åtgärden. Standardvärdet för `false` gör att åtgärden utförs.
-   * Modell: (Valfritt) ID:t för den modell som åtgärden tillämpas på. Ange ingen modell för att använda åtgärden på misslyckade instanser av alla arbetsflödesmodeller. ID är sökvägen till modellnoden, till exempel:
+   * Torr körning: (valfritt) Ange värdet `true` för att se resultatet av åtgärden utan att faktiskt utföra åtgärden. Standardvärdet för `false` gör att åtgärden utförs.
+   * Modell: (Valfritt) ID:t för modellen som åtgärden ska tillämpas på. Ange ingen modell för att använda åtgärden på misslyckade instanser av alla arbetsflödesmodeller. ID är sökvägen till modellnoden, till exempel:
 
      `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
 
@@ -116,12 +116,12 @@ Mer information om hur du skapar MBeans för att hantera tjänster med JMX-konso
 
 * Argument:
 
-   * Torr körning: (Valfritt) Ange värdet `true` för att se resultatet av åtgärden utan att faktiskt utföra åtgärden. Standardvärdet för `false` gör att åtgärden utförs.
-   * Modell: (Valfritt) ID:t för den modell som åtgärden tillämpas på. Ange ingen modell för att använda åtgärden på misslyckade arbetsobjekt i alla arbetsflödesmodeller. ID är sökvägen till modellnoden, till exempel:
+   * Torr körning: (valfritt) Ange värdet `true` för att se resultatet av åtgärden utan att faktiskt utföra åtgärden. Standardvärdet för `false` gör att åtgärden utförs.
+   * Modell: (Valfritt) ID:t för modellen som åtgärden ska tillämpas på. Ange ingen modell för att använda åtgärden på misslyckade arbetsobjekt i alla arbetsflödesmodeller. ID är sökvägen till modellnoden, till exempel:
 
      `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
 
-* Returnerat värde: Tabelldata om misslyckade arbetsobjekt som har provats på nytt, inklusive följande kolumner:
+* Returnerat värde: Tabelldata om misslyckade arbetsobjekt som provas igen, inklusive följande kolumner:
 
    * Initierare
    * InstanceId
@@ -134,11 +134,11 @@ Mer information om hur du skapar MBeans för att hantera tjänster med JMX-konso
 
 * Argument:
 
-   * Modell: (Valfritt) ID:t för den modell som åtgärden tillämpas på. Ange ingen modell för att använda åtgärden på arbetsflödesinstanserna för alla arbetsflödesmodeller. ID är sökvägen till modellnoden, till exempel:
+   * Modell: (Valfritt) ID:t för modellen som åtgärden ska tillämpas på. Ange ingen modell för att använda åtgärden på arbetsflödesinstanserna för alla arbetsflödesmodeller. ID är sökvägen till modellnoden, till exempel:
 
      `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
    * Antal dagar sedan arbetsflödet startades: Åldern på arbetsflödesinstanserna som ska rensas, i dagar.
-   * Torr körning: (Valfritt) Ange värdet `true` för att se resultatet av åtgärden utan att faktiskt utföra åtgärden. Standardvärdet för `false` gör att åtgärden utförs.
+   * Torr körning: (valfritt) Ange värdet `true` för att se resultatet av åtgärden utan att faktiskt utföra åtgärden. Standardvärdet för `false` gör att åtgärden utförs.
 
 * Returnerat värde: Tabelldata om de aktiva arbetsflödesinstanserna som rensas, inklusive följande kolumner:
 
@@ -153,7 +153,7 @@ Mer information om hur du skapar MBeans för att hantera tjänster med JMX-konso
 
 * Argument:
 
-   * Modell: (Valfritt) ID:t för den modell som åtgärden tillämpas på. Ange ingen modell för att använda åtgärden på arbetsflödesinstanserna för alla arbetsflödesmodeller. ID är sökvägen till modellnoden, till exempel:
+   * Modell: (Valfritt) ID:t för modellen som åtgärden ska tillämpas på. Ange ingen modell för att använda åtgärden på arbetsflödesinstanserna för alla arbetsflödesmodeller. ID är sökvägen till modellnoden, till exempel:
 
      `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
 
@@ -163,16 +163,16 @@ Mer information om hur du skapar MBeans för att hantera tjänster med JMX-konso
 
 * Argument:
 
-   * Modell: (Valfritt) ID:t för den modell som åtgärden tillämpas på. Ange ingen modell för att använda åtgärden på inaktuella instanser av alla arbetsflödesmodeller. ID är sökvägen till modellnoden, till exempel:
+   * Modell: (Valfritt) ID:t för modellen som åtgärden ska tillämpas på. Ange ingen modell för att använda åtgärden på inaktuella instanser av alla arbetsflödesmodeller. ID är sökvägen till modellnoden, till exempel:
 
      `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
-   * Torr körning: (Valfritt) Ange värdet `true` för att se resultatet av åtgärden utan att faktiskt utföra åtgärden. Standardvärdet för `false` gör att åtgärden utförs.
+   * Torr körning: (valfritt) Ange värdet `true` för att se resultatet av åtgärden utan att faktiskt utföra åtgärden. Standardvärdet för `false` gör att åtgärden utförs.
 
 * Returnerat värde: En lista över arbetsflödesinstanser som har startats om.
 
 **fetchModelList** Visar alla arbetsflödesmodeller.
 
-* Argument: ingen
+* Argument: none
 * Returnerat värde: Tabelldata som identifierar arbetsflödesmodellerna inklusive kolumnerna ModelId och ModelName.
 
 **countRunningWorkflows** Returnerar antalet arbetsflödesinstanser som körs. Du kan hämta antalet instanser som körs för alla arbetsflödesmodeller eller för en viss modell.
@@ -199,11 +199,11 @@ Mer information om hur du skapar MBeans för att hantera tjänster med JMX-konso
 
 * Argument:
 
-   * Modell: (Valfritt) ID:t för den modell som åtgärden tillämpas på. Ange ingen modell för att använda åtgärden på arbetsflödesinstanserna för alla arbetsflödesmodeller. ID är sökvägen till modellnoden, till exempel:
+   * Modell: (Valfritt) ID:t för modellen som åtgärden ska tillämpas på. Ange ingen modell för att använda åtgärden på arbetsflödesinstanserna för alla arbetsflödesmodeller. ID är sökvägen till modellnoden, till exempel:
 
      `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
-   * Antal dagar sedan arbetsflödet har slutförts: Antalet dagar som arbetsflödesinstanserna har försatts i slutfört läge.
-   * Torr körning: (Valfritt) Ange värdet `true` för att se resultatet av åtgärden utan att faktiskt utföra åtgärden. Standardvärdet för `false` gör att åtgärden utförs.
+   * Antal dagar sedan arbetsflödet har slutförts: Det antal dagar som arbetsflödesinstanserna har varit i slutfört läge.
+   * Torr körning: (valfritt) Ange värdet `true` för att se resultatet av åtgärden utan att faktiskt utföra åtgärden. Standardvärdet för `false` gör att åtgärden utförs.
 
 * Returnerat värde: Tabelldata om de slutförda arbetsflödesinstanserna som rensas, inklusive följande kolumner:
 
@@ -257,8 +257,8 @@ Information om CRX-databasen
     <ul>
      <li>identifier.ability.indefinite.duration: Identifierare ändras inte.</li>
      <li>identifier.ability.method.duration: Identifierare kan ändras mellan metodanrop.</li>
-     <li>identifier.ability.save.duration: Identifierare ändras inte i en sparnings-/uppdateringscykel.</li>
-     <li>identifier.Stabilitet.session.duration: Identifierare ändras inte under en session.</li>
+     <li>identifier.ability.save.duration: Identifierare ändras inte under en start-/uppdateringscykel.</li>
+     <li>identifier.ability.session.duration: Identifierare ändras inte under en session.</li>
     </ul> </td>
   </tr>
   <tr>
@@ -311,7 +311,7 @@ Information om CRX-databasen
   </tr>
   <tr>
    <td>node.type.management.primary.item.name.supported</td>
-   <td>true anger att databasen aktiverar noddefinitioner så att de innehåller ett primärt objekt som underordnat objekt. Ett primärt objekt kan nås med API:t utan att objektnamnet är känt.</td>
+   <td>true anger att databasen aktiverar noddefinitioner så att de innehåller ett primärt objekt som underordnat objekt. Ett primärt objekt kan nås via API utan att objektnamnet är känt.</td>
   </tr>
   <tr>
    <td>level.2.supported</td>
@@ -363,7 +363,7 @@ Information om CRX-databasen
   </tr>
   <tr>
    <td>query.stored.queries.supported</td>
-   <td>true anger att databasen har stöd för lagrade frågor.</td>
+   <td>true anger att databasen stöder lagrade frågor.</td>
   </tr>
   <tr>
    <td>query.full.text.search.supported</td>
@@ -371,11 +371,11 @@ Information om CRX-databasen
   </tr>
   <tr>
    <td>node.type.management.inheritance</td>
-   <td><p>Anger nivån på databasstöd för nodtyparv. Följande värden är möjliga:</p> <p>node.type.management.inherance.minimum: Registrering av primära nodtyper är begränsad till dem som bara har not:base som supertyp. Registrering av blandnodtyper är begränsad till dem som saknar supertyp.</p> <p>node.type.management.inheritance.single: Registrering av primära nodtyper är begränsad till dem med en supertyp. Registrering av blandnodtyper är begränsad till dem med högst en supertyp.</p> <p><br /> node.type.management.inheritance.multiple: Primära nodtyper kan registreras med en eller flera supertyper. Blandnodtyper kan registreras med noll eller flera supertyper.</p> </td>
+   <td><p>Anger nivån på databasstöd för nodtyparv. Följande värden är möjliga:</p> <p>node.type.management.inherance.minimum: Registreringen av primära nodtyper är begränsad till de som bara har nt:base som supertyp. Registrering av blandnodtyper är begränsad till dem som saknar supertyp.</p> <p>node.type.management.inheritance.single: Registreringen av primära nodtyper är begränsad till dem med en supertyp. Registrering av blandnodtyper är begränsad till dem med högst en supertyp.</p> <p><br /> node.type.management.inherance.multiple: Primära nodtyper kan registreras med en eller flera supertyper. Blandnodtyper kan registreras med noll eller flera supertyper.</p> </td>
   </tr>
   <tr>
    <td>crx.cluster.preferredMaster</td>
-   <td>true anger att den här klusternoden är den rekommenderade överordnad i klustret.</td>
+   <td>true anger att den här klusternoden är den primära huvudnoden i klustret.</td>
   </tr>
   <tr>
    <td>option.transactions.supported</td>
@@ -432,15 +432,15 @@ Information om CRX-databasen
   </tr>
   <tr>
    <td>node.type.management.residual.definitions.supported</td>
-   <td>true anger att databasen stöder namnegenskaper med restdefinitioner. Om det stöds kan namnattributet för en objektdefinition vara en asterisk ("*").</td>
+   <td>true anger att databasen stöder namnegenskaper med restdefinitioner. Om det stöds kan namnattributet för en objektdefinition vara en asterisk (*).</td>
   </tr>
   <tr>
    <td>node.type.management.autocreated.definitions.supported</td>
-   <td>true anger att databasen automatiskt stöder skapande av underordnade objekt (noder eller egenskaper) för en nod när noden skapas.</td>
+   <td>true anger att databasen automatiskt har stöd för att skapa underordnade objekt (noder eller egenskaper) för en nod när noden skapas.</td>
   </tr>
   <tr>
    <td>crx.cluster.master</td>
-   <td>true anger att den här databasnoden är den överordnad noden i klustret.</td>
+   <td>true anger att den här databasnoden är huvudnoden i klustret.</td>
   </tr>
   <tr>
    <td>level.1.supported</td>
@@ -509,7 +509,7 @@ Information om CRX-databasen
 * Säkerhetskopieringen avbröts: Säkerhetskopieringen har avbrutits.
 * Säkerhetskopieringen slutfördes med fel: Ett fel uppstod under säkerhetskopieringen. Felmeddelandet innehåller information om orsaken.
 * Säkerhetskopieringen har slutförts: Säkerhetskopieringen lyckades.
-* Ingen säkerhetskopiering har utförts hittills: Det finns ingen pågående säkerhetskopiering.
+* Ingen säkerhetskopiering har utförts hittills: Ingen säkerhetskopiering pågår.
 
 Skrivskyddad.
 
@@ -523,7 +523,7 @@ Skrivskyddad.
 
 **ClusterId** Identifieraren för det här databaskluster. Skrivskyddad.
 
-**ClusterMasterId** Identifieraren för den överordnad noden i det här databaskluster. Skrivskyddad.
+**ClusterMasterId** Identifieraren för databasklustrets huvudnod. Skrivskyddad.
 
 **ClusterNodeId** Identifieraren för den här noden i databaskluster. Skrivskyddad.
 
@@ -533,7 +533,7 @@ Skrivskyddad.
 
 * Argument:
 
-   * namn: Ett strängvärde som representerar namnet på den nya arbetsytan.
+   * name: Ett strängvärde som representerar namnet på den nya arbetsytan.
 
 * Returnerat värde: ingen
 
@@ -541,20 +541,20 @@ Skrivskyddad.
 
 * Argument:
 
-   * ta bort: Ett booleskt värde som anger om oanvända databasobjekt ska tas bort. Värdet true medför att oanvända noder och egenskaper tas bort. Värdet false gör att alla noder skannas, men inga tas bort.
+   * delete: Ett booleskt värde som anger om oanvända databasobjekt ska tas bort. Värdet true medför att oanvända noder och egenskaper tas bort. Värdet false gör att alla noder skannas, men inga tas bort.
 
 * Returnerat värde: ingen
 
 **stopDataStoreGarbageCollection** Stoppar en skräpinsamling i ett datalager som körs.
 
-* Argument: ingen
+* Argument: none
 * Returnerat värde: strängbeteckning för aktuell status
 
 **startBackup** Säkerhetskopierar databasdata i en ZIP-fil.
 
 * Argument:
 
-   * `target`: (Valfritt) A `String` värde som representerar namnet på den ZIP-fil eller katalog där databasdata ska arkiveras. Om du vill använda en ZIP-fil inkluderar du filnamnstillägget ZIP. Om du vill använda en katalog ska du inte inkludera något filnamnstillägg.
+   * `target`: (Valfritt) A `String` värde som representerar namnet på den ZIP-fil eller katalog där databasdata ska arkiveras. Om du vill använda en ZIP-fil inkluderar du filnamnstillägget ZIP. Om du vill använda en katalog utan filnamnstillägg.
 
      Om du vill utföra en stegvis säkerhetskopiering anger du katalogen som tidigare användes för säkerhetskopieringen.
 
@@ -566,27 +566,27 @@ Skrivskyddad.
 
 **cancelBackup** Stoppar den aktuella säkerhetskopieringsprocessen och tar bort det temporära arkivet som processen skapade för arkivering av data.
 
-* Argument: ingen
+* Argument: none
 * Returnerat värde: ingen
 
 **blockRepositoryWrites** Blockerar ändringar av databasdata. Alla databassäkerhetskopieringslyssnare meddelas om blocket.
 
-* Argument: ingen
+* Argument: none
 * Returnerat värde: ingen
 
 **unblockRepositoryWrites** Tar bort blocket från databasen. Alla databassäkerhetskopieringslyssnare meddelas om att block har tagits bort.
 
-* Argument: ingen
+* Argument: none
 * Returnerat värde: ingen
 
 **startTarsOptimization** Startar optimeringsprocessen för TAR-filen med standardvärdet för tarOptimizationDelay.
 
-* Argument: ingen
+* Argument: none
 * Returnerat värde: ingen
 
 **stopTarsOptimization** Stoppar optimering av TAR-filer.
 
-* Argument: ingen
+* Argument: none
 * Returnerat värde: ingen
 
 **tarIndexMerge** Sammanfogar de översta indexfilerna för alla TAR-uppsättningar. De vanligaste indexfilerna är filer med olika huvudversioner. Följande filer sammanfogas till filen index_3_1.tar: index_1_1.tar, index_2_0.tar, index_3_0.tar. De filer som har sammanfogats tas bort (i föregående exempel tas index_1_1.tar, index_2_0.tar och index_3_0.tar bort).
@@ -597,16 +597,16 @@ Skrivskyddad.
 
 * Returnerat värde: ingen
 
-**becomesClusterMaster** Anger den här databasnoden som överordnad nod i klustret. Om det inte redan är överordnad stoppar det här kommandot den aktuella överordnad instansens avlyssnare och startar en överordnad avlyssnare på den aktuella noden. Den här noden anges sedan som den överordnad noden och startas om, vilket gör att alla andra noder i klustret (dvs. de som styrs av den överordnad) ansluter till den här instansen.
+**becomesClusterMaster** Anger den här databasnoden som huvudnod i klustret. Om det inte redan är en huvudserver stoppar det här kommandot den aktuella huvudinstansens avlyssnare och startar en huvudavlyssnare på den aktuella noden. Den här noden anges sedan som huvudnod och startas om, vilket gör att alla andra noder i klustret (dvs. de som styrs av huvudnoden) ansluter till den här instansen.
 
-* Argument: ingen
+* Argument: none
 * Returnerat värde: ingen
 
-**joinCluster** Lägger till den här databasen i ett kluster som en nod som styrs av klustrets överordnad. Du måste ange ett användarnamn och lösenord för autentisering. Anslutningen använder grundläggande autentisering. Säkerhetsuppgifterna är base-64-kodade innan de skickas till servern.
+**joinCluster** Lägger till den här databasen i ett kluster som en nod som styrs av klusterhanteraren. Du måste ange ett användarnamn och lösenord för autentisering. Anslutningen använder grundläggande autentisering. Säkerhetsuppgifterna är base-64-kodade innan de skickas till servern.
 
 * Argument:
 
-   * `master`: Ett strängvärde som representerar IP-adressen eller datornamnet för den dator som kör den överordnad databasnoden.
+   * `master`: Ett strängvärde som representerar IP-adressen eller datornamnet på den dator som kör huvuddatabasnoden.
    * `username`: Namnet som ska användas för att autentisera med klustret.
    * `password`: Lösenordet som ska användas för autentisering.
 
@@ -675,14 +675,14 @@ Statistisk information om databasfrågor.
 
 ### Användning {#operations-2}
 
-**clearSlowQueriesQueue** Tar bort alla frågor från listan SlowQueries.
+**clearSlowQueriesQueue** Tar bort alla frågor från listan Långsfrågor.
 
-* Argument: ingen
+* Argument: none
 * Returnerat värde: ingen
 
 **clearPopularQueriesQueue** Tar bort alla frågor från PopularQueries-listan.
 
-* Argument: ingen
+* Argument: none
 * Returnerat värde: ingen
 
 ## Replikeringsagenter {#replication-agents}
@@ -738,12 +738,12 @@ Läs/skriv.
 
 **queueForceRetry** För blockerade köer skickar kommandot Försök igen till kön.
 
-* Argument: ingen
+* Argument: none
 * Returnerat värde: ingen
 
 **queueClear** Tar bort alla jobb från kön.
 
-* Argument: ingen
+* Argument: none
 * Returnerat värde: ingen
 
 ## Sling Engine {#sling-engine}
@@ -762,7 +762,7 @@ Tillhandahåller statistik om HTTP-begäranden så att du kan övervaka prestand
 
 **MaxRequestDurationMsec** Den längsta tid (i millisekunder) som krävdes för att bearbeta en begäran sedan statistiken senast återställdes.
 
-**StandardAvvikelseVaraktighetMsek** Standardavvikelsen för den tid som krävdes för att behandla begäranden. Standardavvikelsen beräknas med hjälp av alla begäranden sedan statistiken senast återställdes.
+**StandardAvvikelseVaraktighetMsek** Standardavvikelsen för den tid som krävdes för att bearbeta begäranden. Standardavvikelsen beräknas med hjälp av alla begäranden sedan statistiken senast återställdes.
 
 **MeanRequestDurationMsec** Den genomsnittliga tid som krävdes för att bearbeta en begäran. Medelvärdet beräknas med hjälp av alla begäranden sedan statistiken senast återställdes
 
@@ -770,7 +770,7 @@ Tillhandahåller statistik om HTTP-begäranden så att du kan övervaka prestand
 
 **resetStatistics** Anger all statistik till noll. Återställ statistiken när du behöver analysera bearbetningsprestanda för begäranden under en viss tidsperiod.
 
-* Argument: ingen
+* Argument: none
 * Returnerat värde: ingen
 
 **id** Strängbeteckningen för paket-ID:t.
@@ -809,7 +809,7 @@ Argument:
 
 Anropar metoden startFinished för serverstartprogrammet. Metoden försöker öppna välkomstsidan i en webbläsare.
 
-* Argument: ingen
+* Argument: none
 * Returnerat värde: ingen
 
 **startupProgress**
@@ -896,7 +896,7 @@ JMX-konsolens huvudsida innehåller en tjänsttabell. Varje rad i tabellen repre
 
 Med CRX kan externa program interagera med hanterade bönor (MBeans) via [Java Management Extensions (JMX)](https://docs.oracle.com/javase/6/docs/technotes/guides/management/overview.html). Använda generiska konsoler som [JConsole](https://java.sun.com/developer/technicalArticles/J2SE/jconsole.html) eller domänspecifika övervakningsprogram gör det möjligt att hämta och ställa in CRX-konfigurationer och -egenskaper samt att övervaka prestanda och resursanvändning.
 
-### Använda JConsole för att ansluta till CRX {#using-jconsole-to-connect-to-crx}
+### Ansluta till CRX med JConsole {#using-jconsole-to-connect-to-crx}
 
 Så här ansluter du till CRX med JConsole:
 
@@ -915,13 +915,13 @@ JConsole visar en lista över lokala Java Virtual Machine-processer. Listan inne
 
 ### Ansluta till en fjärr-CRX-process {#connecting-to-a-remote-crx-process}
 
-För att kunna ansluta till en fjärr-CRX-process måste den JVM som är värd för fjärr-CRX-processen aktiveras för att acceptera fjärr-JMX-anslutningar.
+För att ansluta till en fjärr-CRX-process måste den JVM som är värd för fjärr-CRX-processen aktiveras för att acceptera fjärr-JMX-anslutningar.
 
 Om du vill aktivera fjärr-JMX-anslutningar måste följande systemegenskap anges när du startar JVM:
 
 `com.sun.management.jmxremote.port=portNum`
 
-I egenskapen ovan `portNum` är portnumret genom vilket du vill aktivera JMX RMI-anslutningar. Ange ett portnummer som inte används. Förutom att publicera en RMI-anslutning för lokal åtkomst, publicerar den här egenskapen en extra RMI-anslutning i ett privat skrivskyddat register på den angivna porten med ett välkänt namn, &quot;jmxrmi&quot;.
+I egenskapen ovan `portNum` är det portnummer genom vilket du vill aktivera JMX RMI-anslutningar. Ange ett portnummer som inte används. Förutom att publicera en RMI-anslutning för lokal åtkomst, publicerar den här egenskapen en extra RMI-anslutning i ett privat skrivskyddat register på den angivna porten med ett välkänt namn, &quot;jmxrmi&quot;.
 
 När du aktiverar JMX-agenten för fjärrövervakning använder den som standard lösenordsautentisering baserat på en lösenordsfil som måste anges med följande systemegenskap när Java VM startas:
 
@@ -944,7 +944,7 @@ När du har anslutit till snabbstartprocessen innehåller JConsole ett antal all
 
 ![screen_shot_2012-03-26at115056am](assets/screen_shot_2012-03-26at115056am.png)
 
-För att få tillgång till CRX interna övervaknings- och konfigurationsalternativ går du till fliken MBeans och från det hierarkiska innehållsträdet till vänster väljer du de attribut eller åtgärder som du är intresserad av. Till exempel avsnittet com.adobe.granite/Repository/Operations.
+Om du vill få tillgång till CRX interna övervaknings- och konfigurationsalternativ går du till fliken MBeans och från det hierarkiska innehållsträdet till vänster väljer du de attribut eller åtgärder som du är intresserad av. Till exempel avsnittet com.adobe.granite/Repository/Operations.
 
 I det avsnittet markerar du det önskade attributet eller funktionsmakrot i den vänstra rutan.
 

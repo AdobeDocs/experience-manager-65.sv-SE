@@ -6,9 +6,9 @@ role: Developer
 feature: APIs,Assets HTTP API,Developer Tools
 exl-id: 6bc10f4e-a951-49ba-9c71-f568a7f2e40d
 hide: true
-source-git-commit: 71b3f7c6ad2c7712762a29518de6cf0639081cb7
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '1734'
+source-wordcount: '1732'
 ht-degree: 0%
 
 ---
@@ -122,7 +122,7 @@ Hämtar en siren-representation av en befintlig mapp och av dess underordnade en
 * 404 - HITTADES INTE - mappen finns inte eller är inte tillgänglig.
 * 500 - INTERNT SERVERFEL - Om något annat går fel.
 
-**Svar**: Klassen för enheten som returneras är en resurs eller en mapp. Egenskaperna för enheter som ingår är en deluppsättning av alla egenskaper för varje enhet. För att få en fullständig representation av enheten bör kunderna hämta innehållet i den URL som länken pekar på med en `rel` av `self`.
+**Svar**: Klassen för enheten som returneras är en resurs eller en mapp. Egenskaperna för enheter som ingår är en deluppsättning av alla egenskaper för varje enhet. För att få en fullständig representation av enheten ska klienterna hämta innehållet i den URL som länken pekar på med en `rel` av `self`.
 
 ## Skapa en mapp {#create-a-folder}
 

@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 7a3322fe-554e-479e-a27c-4259cdd3ba2e
 docset: aem65
 exl-id: 69c66c82-fbd6-406e-aefd-b85480a62109
-source-git-commit: 3400df1ecd545aa0fb0e3fcdcc24f629ce4c99ba
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '1980'
+source-wordcount: '1978'
 ht-degree: 0%
 
 ---
@@ -92,7 +92,7 @@ När komponenten visas i Context Cloud används ett Google-API för att visa en 
 
 **JSONP Store** En komponent som visar innehåll som är beroende av installationen.
 
-JSONP-standarden är ett komplement till JSON som gör det möjligt att kringgå samma ursprungspolicy (vilket gör det omöjligt för ett webbprogram att kommunicera med servrar som finns på en annan domän). Den består av att kapsla JSON-objektet i ett funktionsanrop för att kunna läsa in det som en `<script>` från den andra domänen (vilket är ett tillåtet undantag till samma ursprungspolicy).
+JSONP-standarden är ett komplement till JSON som gör det möjligt att kringgå samma ursprungspolicy (vilket gör det omöjligt för ett webbprogram att kommunicera med servrar som finns på en annan domän). Det består av att kapsla in JSON-objektet i ett funktionsanrop för att kunna läsa in det som en `<script>` från den andra domänen (vilket är ett tillåtet undantag till samma ursprungspolicy).
 
 JSONP Store är som vilken annan butik som helst, men den läser in information som kommer från en annan domän utan att du behöver ha en proxy för den informationen på den aktuella domänen. Se exemplet i [Lagra data i klientkontext via JSONP](/help/sites-administering/client-context.md#storing-data-in-client-context-via-jsonp).
 

@@ -7,9 +7,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 role: Developer
 exl-id: ff42579e-6aaf-433d-8b5d-9e9dd0957250
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '15513'
+source-wordcount: '15485'
 ht-degree: 0%
 
 ---
@@ -714,7 +714,7 @@ Följande snabbstarter innehåller kodexempel på hur du använder dokumentsäke
 
 ## Ta bort profiler från PDF-dokument {#removing-policies-from-pdf-documents}
 
-Du kan ta bort en profil från ett profilskyddat dokument för att ta bort skyddet från dokumentet. Det vill säga om du inte längre vill att dokumentet ska skyddas av en profil. Om du vill uppdatera ett policyskyddat dokument med en nyare profil är det effektivare att byta profil i stället för att ta bort profilen och lägga till den uppdaterade profilen.
+Du kan ta bort en profil från ett profilskyddat dokument om du vill ta bort skyddet från dokumentet. Det vill säga om du inte längre vill att dokumentet ska skyddas av en profil. Om du vill uppdatera ett policyskyddat dokument med en nyare profil är det effektivare att byta profil i stället för att ta bort profilen och lägga till den uppdaterade profilen.
 
 >[!NOTE]
 >
@@ -744,7 +744,7 @@ Du kan hämta ett principskyddat PDF-dokument om du vill ta bort en profil. Om d
 
 **Ta bort profilen från dokumentet PDF**
 
-Du kan ta bort en princip från ett principskyddat PDF-dokument under förutsättning att en administratör anges i anslutningsinställningarna. Annars måste profilen som används för att skydda ett dokument innehålla `SWITCH_POLICY` behörighet för att ta bort en profil från ett PDF-dokument. Dessutom måste den användare som anges i AEM Forms anslutningsinställningar också ha den behörigheten. Annars genereras ett undantag.
+Du kan ta bort en princip från ett principskyddat PDF-dokument under förutsättning att en administratör anges i anslutningsinställningarna. Annars måste profilen som används för att skydda ett dokument innehålla `SWITCH_POLICY` behörighet att ta bort en profil från ett PDF-dokument. Dessutom måste den användare som anges i AEM Forms anslutningsinställningar också ha den behörigheten. Annars genereras ett undantag.
 
 **Spara det oskyddade PDF-dokumentet**
 
@@ -880,7 +880,7 @@ Innan du programmässigt kan utföra en dokumentsäkerhetstjänståtgärd måste
 
 Du måste hämta ett principskyddat PDF-dokument för att kunna återkalla det. Du kan inte återkalla ett dokument som redan har återkallats eller som inte är ett principskyddat dokument.
 
-Om du känner till licensvärdet för det profilskyddade dokumentet behöver du inte hämta det profilskyddade PDF-dokumentet. I de flesta fall måste du dock hämta PDF-dokumentet för att få fram licensens identifieringsvärde.
+Om du känner till licensvärdet för det profilskyddade dokumentet behöver du inte hämta det profilskyddade PDF-dokumentet. I de flesta fall måste du dock hämta PDF-dokumentet för att få fram licensvärdet.
 
 **Återkalla det profilskyddade dokumentet**
 
@@ -2136,7 +2136,7 @@ Du måste hämta ett principskyddat Word-dokument för att kunna ta bort en prof
 
 **Ta bort profilen från Word-dokumentet**
 
-Du kan ta bort en princip från ett principskyddat Word-dokument förutsatt att en administratör har angetts i anslutningsinställningarna. Annars måste profilen som används för att skydda ett dokument innehålla `SWITCH_POLICY` behörighet för att ta bort en profil från ett Word-dokument. Dessutom måste den användare som anges i AEM Forms anslutningsinställningar också ha den behörigheten. Annars genereras ett undantag.
+Du kan ta bort en princip från ett principskyddat Word-dokument förutsatt att en administratör har angetts i anslutningsinställningarna. Annars måste profilen som används för att skydda ett dokument innehålla `SWITCH_POLICY` behörighet att ta bort en profil från ett Word-dokument. Dessutom måste den användare som anges i AEM Forms anslutningsinställningar också ha den behörigheten. Annars genereras ett undantag.
 
 **Spara det oskyddade Word-dokumentet**
 

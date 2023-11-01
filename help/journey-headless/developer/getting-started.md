@@ -2,9 +2,9 @@
 title: Kom igång med AEM Headless
 description: I den här delen av AEM Headless Developer Journey kan du läsa om AEM Headless-krav.
 exl-id: a94794a4-bf8b-4f3b-a761-3f02feedd5c0
-source-git-commit: 9c517590c2b78eed7c52e33e0a106237a2af3bb7
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '3042'
+source-wordcount: '3038'
 ht-degree: 0%
 
 ---
@@ -195,7 +195,7 @@ Mappar kan även begränsas till att endast tillåta vissa typer av innehåll (b
 * Förhindrar att innehållsförfattare skapar innehåll som inte tillhör mappen.
 * Optimerar processen för att skapa innehåll genom att filtrera de innehållstyper som tillåts i mappen under skapandet så att endast giltiga typer av innehåll visas.
 
-Genom att skapa en lämplig innehållsstruktur blir det enklare att samordna redigering av headless-innehåll i olika kanaler för att maximera återanvändningen av innehållet. Genom att utnyttja innehåll i flera kanaler blir innehållsproduktionen effektivare och ändringshanteringen effektivare.
+Genom att skapa en lämplig innehållsstruktur blir det enklare att samordna redigering av headless-innehåll i olika kanaler för att maximera återanvändningen av innehåll. Genom att utnyttja innehåll i flera kanaler blir innehållsproduktionen effektivare och ändringshanteringen effektivare.
 
 ##### Upprätta praktiska namnkonventioner {#naming-conventions}
 

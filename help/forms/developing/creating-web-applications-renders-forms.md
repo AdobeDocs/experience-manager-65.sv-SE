@@ -12,9 +12,9 @@ topic-tags: operations
 discoiquuid: f29b089e-8902-4744-81c5-15ee41ba8069
 role: Developer
 exl-id: 85e00003-8c8b-463a-b728-66af174be295
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '1874'
+source-wordcount: '1872'
 ht-degree: 0%
 
 ---
@@ -55,11 +55,11 @@ I det här avsnittet används exempelfiler som kan finnas på följande plats:
 
 &lt;*Installationskatalog för Forms Designer*>/Samples/Forms/Purchase Order/Form Fragments
 
-där &lt;*installationskatalog*> är installationssökvägen. För klientprogrammet kopierades filen Purchase Order Dynamic.xdp från installationsplatsen och distribuerades till ett Forms-program med namnet *Program/FormsApplication*. Filen Purchase Order Dynamic.xdp placeras i en mapp som heter FormsFolder. På samma sätt placeras fragmenten i mappen Fragments, som på följande bild.
+där &lt;*installationskatalog*> är installationssökvägen. För klientprogrammet kopierades filen Purchase Order Dynamic.xdp från den här installationsplatsen och distribuerades till ett Forms-program med namnet *Program/FormsApplication*. Filen Purchase Order Dynamic.xdp placeras i en mapp som heter FormsFolder. På samma sätt placeras fragmenten i mappen Fragments, som på följande bild.
 
 ![cw_cw_fragmentsdatabas](assets/cw_cw_fragmentsrepository.png)
 
-Om du vill öppna formulärdesignen Purchase Order Dynamic.xdp anger du `Applications/FormsApplication/1.0/FormsFolder/Purchase Order Dynamic.xdp` som formulärnamn (den första parametern som skickas till `renderPDFForm` metod) och `repository:///` som innehållsrots-URI-värde.
+Om du vill öppna formulärdesignen Purchase Order Dynamic.xdp anger du `Applications/FormsApplication/1.0/FormsFolder/Purchase Order Dynamic.xdp` som formulärnamnet (den första parametern som skickas till `renderPDFForm` metod) och `repository:///` som innehållsrots-URI-värde.
 
 De XML-datafiler som används av webbprogrammet har flyttats från mappen Data till `C:\Adobe`(filsystemet som tillhör J2EE-programservern som är värd för AEM Forms). Filnamnen är Inköpsorder *Canada.xml* och inköpsorder *US.xml*.
 
@@ -107,7 +107,7 @@ Information om var dessa JAR-filer finns i [Inkludera AEM Forms Java-biblioteksf
 1. Klicka **Java build path** och klicka sedan på **Bibliotek** -fliken.
 1. Klicka på **Lägg till externa JAR** och bläddra till de JAR-filer som ska inkluderas.
 
-**Så här lägger du till en Java-server i ditt projekt:**
+**Så här lägger du till en Java-servlet i ditt projekt:**
 
 1. I fönstret Projektutforskaren högerklickar du på `FragmentsWebApplication` projekt och välj **Nytt** >  **Övriga**.
 1. Expandera **Webb** mapp, markera **Servlet** och klicka sedan på **Nästa**.
@@ -151,7 +151,7 @@ Så här återger du ett formulär baserat på fragment med hjälp av Forms tjä
 1. Skapa en `URLSpec` objekt som lagrar URI-värden med hjälp av dess konstruktor.
 1. Anropa `URLSpec` objektets `setApplicationWebRoot` och skicka ett strängvärde som representerar programmets webbrot.
 1. Anropa `URLSpec` objektets `setContentRootURI` och skicka ett strängvärde som anger innehållets rot-URI-värde. Kontrollera att formulärdesignen och fragmenten finns i innehållets rot-URI. Annars genereras ett undantag. Om du vill referera till AEM Forms-databasen anger du `repository://`.
-1. Anropa `URLSpec` objektets `setTargetURL` och skicka ett strängvärde som anger det mål-URL-värde som formulärdata ska skickas till. Om du definierar mål-URL:en i formulärdesignen kan du skicka en tom sträng. Du kan också ange den URL dit ett formulär skickas för att utföra beräkningar.
+1. Anropa `URLSpec` objektets `setTargetURL` och skicka ett strängvärde som anger det mål-URL-värde som formulärdata ska skickas till. Om du definierar mål-URL:en i formulärdesignen kan du skicka en tom sträng. Du kan också ange den URL dit ett formulär ska skickas för att utföra beräkningar.
 1. Anropa `FormsServiceClient` objektets `renderPDFForm` och skicka följande värden:
 
    * Ett strängvärde som anger formulärdesignens namn, inklusive filnamnstillägget.
@@ -379,7 +379,7 @@ Om du vill distribuera den Java-server som anropar Forms-tjänsten paketerar du 
 
 **Så här paketerar du ett webbprogram till en WAR-fil:**
 
-1. Från **Projektutforskaren** fönster, högerklicka på `FragmentsWebApplication` projekt och välj **Exportera** > **WAR-fil**.
+1. Från **Project Explorer** fönster, högerklicka på `FragmentsWebApplication` projekt och välj **Exportera** > **WAR-fil**.
 1. I **Webbmodul** textruta, skriva `FragmentsWebApplication` för Java-projektets namn.
 1. I **Mål** textruta, skriva `FragmentsWebApplication.war`**för** filnamn, ange platsen för WAR-filen och klicka sedan på Slutför.
 
@@ -397,4 +397,4 @@ När du har distribuerat webbprogrammet kan du testa det med en webbläsare. Om 
 
 * http://localhost:8080/FragmentsWebApplication/index.html
 
-   Markera en alternativknapp och klicka på knappen Skicka. Ett formulär som är baserat på fragment visas i webbläsaren. Om det uppstår problem kan du läsa loggfilen för J2EE-programservern.
+  Markera en alternativknapp och klicka på knappen Skicka. Ett formulär som är baserat på fragment visas i webbläsaren. Om det uppstår problem läser du loggfilen för J2EE-programservern.

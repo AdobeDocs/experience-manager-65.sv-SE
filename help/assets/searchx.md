@@ -5,9 +5,9 @@ contentOwner: AG
 role: Developer
 feature: Search
 exl-id: 9e33d1c0-232b-458a-ad6a-f595aa541a5a
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '825'
+source-wordcount: '823'
 ht-degree: 12%
 
 ---
@@ -22,11 +22,11 @@ Du kan också lägga till fler flikar i [!DNL Assets] admin panel.
 
 >[!CAUTION]
 >
->Från och med [!DNL Experience Manager] 6.4, Classic UI är föråldrat. Adobe rekommenderar att du använder ett användargränssnitt som har stöd för pekfunktioner. Information om anpassning finns i [sökfack](/help/assets/search-facets.md).
+>Från [!DNL Experience Manager] 6.4, Classic UI är föråldrat. Adobe rekommenderar att du använder ett användargränssnitt som har stöd för pekfunktioner. Information om anpassning finns i [sökfack](/help/assets/search-facets.md).
 
 ## Övertäckning {#overlaying}
 
-Om du vill täcka över de förkonfigurerade predikaten kopierar du `facets` nod från `/libs/dam/content/search/searchpanel` till `/apps/dam/content/search/searchpanel/` eller ange en annan `facetURL` -egenskapen i `searchpanel` konfiguration (standard är `/libs/dam/content/search/searchpanel/facets.overlay.infinity.json`).
+Om du vill täcka över de förkonfigurerade predikaten kopierar du `facets` från `/libs/dam/content/search/searchpanel` till `/apps/dam/content/search/searchpanel/` eller ange en annan `facetURL` -egenskapen i `searchpanel` konfiguration (standard är `/libs/dam/content/search/searchpanel/facets.overlay.infinity.json`).
 
 ![screen_shot_2012-06-05at113619am](assets/screen_shot_2012-06-05at113619am.png)
 
@@ -38,18 +38,18 @@ Om du vill täcka över de förkonfigurerade predikaten kopierar du `facets` nod
 
 Du kan lägga till fler sökflikar genom att konfigurera dem i dialogrutan [!DNL Assets] administratörsgränssnitt. Så här skapar du ytterligare flikar:
 
-1. Skapa mappstrukturen `/apps/wcm/core/content/damadmin/tabs,`om den inte redan finns, och kopiera `tabs` nod från `/libs/wcm/core/content/damadmin` och klistra in den.
+1. Skapa mappstrukturen `/apps/wcm/core/content/damadmin/tabs,`om den inte redan finns, och kopiera `tabs` från `/libs/wcm/core/content/damadmin` och klistra in den.
 1. Skapa och konfigurera den andra fliken efter behov.
 
    >[!NOTE]
    >
-   >När du skapar en sekund `siteadminsearchpanel`måste du ange en `id` för att förhindra formulärkonflikter.
+   >När du skapar en sekund `siteadminsearchpanel`måste du ange en `id` -egenskap för att förhindra formulärkonflikter.
 
 ## Skapa anpassade predikat {#creating-custom-predicates}
 
 [!DNL Assets] innehåller en uppsättning fördefinierade predikat som kan användas för att anpassa en resursdelssida. Att anpassa en resurs på det här sättet beskrivs i [skapa och konfigurera en resursdelningssida](/help/assets/assets-finder-editor.md#creating-and-configuring-an-asset-share-page).
 
-Förutom att använda befintliga predikat [!DNL Experience Manager] utvecklare kan också skapa egna predikat med [Query Builder API](/help/sites-developing/querybuilder-api.md).
+Förutom att använda befintliga predikat [!DNL Experience Manager] utvecklare kan också skapa egna predikar med [Query Builder API](/help/sites-developing/querybuilder-api.md).
 
 Om du vill skapa anpassade predikat måste du ha grundläggande kunskaper om [Widgetramverk](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html).
 
@@ -256,7 +256,7 @@ Följande predikat är tillgängliga som förkonfigurerade ExtJS-widgetar.
 | Egenskap | Typ | Beskrivning |
 |---|---|---|
 | predikateName | Sträng | Predikatets namn. Standardvärdet är `fulltext` |
-| searchCallback |  -funktion | Återanrop för att aktivera sökning vid händelse `keyup`. Standardvärdet är `CQ.wcm.SiteAdmin.doSearch` |
+| searchCallback |  -funktion | Återanrop för att utlösa sökning vid händelse `keyup`. Standardvärdet är `CQ.wcm.SiteAdmin.doSearch` |
 
 ### PropertyPredicate {#propertypredicate}
 
@@ -299,4 +299,4 @@ Följande predikat är tillgängliga som förkonfigurerade ExtJS-widgetar.
 
 Presentationen av sökresultaten på en resursdelningssida styrs av det valda objektivet. [!DNL Experience Manager Assets] innehåller en uppsättning fördefinierade objektiv som kan användas för att anpassa en resursdelssida. Att anpassa en resurs på det här sättet beskrivs i [Skapa och konfigurera en resursdelningssida](/help/assets/assets-finder-editor.md#creating-and-configuring-an-asset-share-page).
 
-Förutom att använda befintliga linser, [!DNL Experience Manager] utvecklare kan också skapa egna objektiv.
+Förutom att använda befintliga linser [!DNL Experience Manager] utvecklare kan också skapa egna objektiv.

@@ -11,9 +11,9 @@ topic-tags: operations
 discoiquuid: 180cac3f-6378-42bc-9a47-60f9f08a7103
 role: Developer
 exl-id: 10535740-e3c2-4347-a88f-86706ad699b4
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '7850'
+source-wordcount: '7848'
 ht-degree: 0%
 
 ---
@@ -592,7 +592,7 @@ I det här dokumentet används termen *internt program* för att ange vilket pro
 1. Öppna dialogrutan Skriv ut genom att välja Arkiv > Skriv ut
 1. Kontrollera att dialogrutan Skriv ut visas
 
-AppMon använder Win32-API:er av standardtyp för att interagera med tredjepartsprogram för att överföra gränssnittshändelser som tangenttryckningar och musklick, vilket är användbart för att styra dessa program för att skapa PDF-filer från dem.
+AppMon använder Win32-standardAPI:er för att interagera med program från tredje part för att överföra gränssnittshändelser som tangenttryckningar och musklick, vilket är användbart för att styra programmen för att skapa PDF-filer från dem.
 
 På grund av en begränsning med dessa Win32 API:er kan AppMon inte skicka dessa UI-händelser till vissa specifika typer av fönster, till exempel flytande menyrader (som finns i vissa program som TextPad) och vissa typer av dialogrutor vars innehåll inte kan hämtas med Win32 API:er.
 
@@ -982,7 +982,7 @@ I det här exemplet anges hur tjänsten Generate PDF ska samverka med Anteckning
 * from Adobe Systems Incorporated.
 *-->
 
-<!-- This file automates printing of text files via notepad to Adobe PDF printer. In order to see the complete hierarchy Adobe recommends using the Microsoft Spy++ which details the properties of windows necessary to write scripts. In this sample there are total of eight steps-->
+<!-- This file automates printing of text files via notepad to Adobe PDF printer. To see the complete hierarchy Adobe recommends using the Microsoft Spy++ which details the properties of windows necessary to write scripts. In this sample there are total of eight steps-->
 
 <application name="Notepad" version="9.0" locale="en_US" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="scripts.xsd">
 

@@ -8,9 +8,9 @@ content-type: reference
 docset: aem65
 exl-id: 39e35a07-140f-4853-8f0d-8275bce27a65
 feature: Security
-source-git-commit: e54c1d422f2bf676e8a7b0f50a101e495c869c96
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '6854'
+source-wordcount: '6836'
 ht-degree: 0%
 
 ---
@@ -96,7 +96,7 @@ Effekten av en enda CUG-princip vid utvärdering av tillstånd kan sammanfattas 
 Följande bästa metoder bör beaktas vid definition av begränsad läsåtkomst via användargränssnitten:
 
 * Fatta ett medvetet beslut om huruvida ditt behov av en CUG handlar om att begränsa läsåtkomst eller autentiseringskrav. Om det senare, eller om det finns ett behov av båda, finns mer information om autentiseringskrav i avsnittet Bästa metoder
-* Skapa en hotmodell för de data eller det innehåll som behöver skyddas för att identifiera hotgränser och få en tydlig bild av känsligheten hos data och de roller som är kopplade till auktoriserad åtkomst
+* Skapa en hotmodell för data eller innehåll som behöver skyddas för att identifiera hotgränser och få en tydlig bild av känsligheten hos data och de roller som är kopplade till auktoriserad åtkomst
 * Modellera databasinnehållet och kundupplevelsegrupperna med hänsyn till allmänna aspekter av auktorisering och bästa praxis:
 
    * Kom ihåg att läsbehörighet endast beviljas om en viss användargränssnittsenhet och utvärderingen av andra moduler som distribueras i konfigurationsbidraget tillåter att ett visst ämne läser ett visst databasobjekt
@@ -129,7 +129,7 @@ Eftersom den här typen av autentiseringskrav förväntas begränsas till vissa 
 
 Standardinställningen för AEM använder nu den här konfigurationen genom att tillåta att mixinen ställs in i författarens körningsläge, men att den endast får effekt vid replikering till publiceringsinstansen. Se [den här sidan](https://sling.apache.org/documentation/the-sling-engine/authentication/authenticationframework.html) om du vill ha mer information om hur Sling uppfyller autentiseringskravet.
 
-Lägga till `granite:AuthenticationRequired` blandningstypen i de konfigurerade sökvägarna som stöds gör att OSGi-registreringen av den ansvariga hanteraren uppdateras med en ny, extra post med `sling.auth.requirements` -egenskap. Om ett givet autentiseringskrav anger det valfria `granite:loginPath` -egenskapen registreras värdet dessutom med autentiseraren med ett &#39;-&#39;-prefix för att undantas från autentiseringskravet.
+Lägga till `granite:AuthenticationRequired` blandningstypen i de konfigurerade sökvägarna som stöds gör att OSGi-registreringen av den ansvariga hanteraren uppdateras med en ny, extra post med `sling.auth.requirements` -egenskap. Om ett givet autentiseringskrav anger det valfria `granite:loginPath` -egenskapen registreras värdet dessutom med autentiseraren med ett &#39;-&#39;-prefix som ska uteslutas från autentiseringskravet.
 
 #### Utvärdering och arv av autentiseringskrav {#evaluation-and-inheritance-of-the-authentication-requirement}
 
@@ -718,7 +718,7 @@ Läs [CUG-plug](https://jackrabbit.apache.org/oak/docs/security/authorization/cu
 
 ### Inaktivera autentiseringskravet {#disable-the-authentication-requirement}
 
-För att inaktivera stödet för autentiseringskraven enligt `granite.auth.authhandler` modul som det räcker att ta bort konfigurationen som är kopplad till **Autentiseringskrav och hanterare för inloggningssökväg för Adobe Granite**.
+Inaktivera stöd för autentiseringskrav enligt `granite.auth.authhandler` modul som det räcker att ta bort konfigurationen som är kopplad till **Autentiseringskrav och hanterare för inloggningssökväg för Adobe Granite**.
 
 >[!NOTE]
 >
@@ -794,7 +794,7 @@ I och med den nya implementeringen påverkas inte åtkomstkontrollinställningen
 
 **Redigera CUG-principer i åtkomststyrningshantering**
 
-Den här förändringen från kvarvarande JCR-egenskaper till en dedikerad åtkomstkontrollprincip påverkar behörigheten som behövs för att skapa eller ändra auktoriseringsdelen av CUG-funktionen. Eftersom detta anses vara en ändring av innehållet i kontrollpanelen krävs det `jcr:readAccessControl` och `jcr:modifyAccessControl` behörighet för att kunna skrivas till databasen. Därför kan bara innehållsförfattare som har behörighet att ändra innehållet i åtkomstkontrollen på en sida konfigurera eller ändra det här innehållet. Detta står i kontrast till den gamla implementeringen där möjligheten att skriva vanliga JCR-egenskaper var tillräcklig, vilket resulterar i eskalering av behörigheter.
+Den här förändringen från kvarvarande JCR-egenskaper till en dedikerad åtkomstkontrollprincip påverkar behörigheten som behövs för att skapa eller ändra auktoriseringsdelen av CUG-funktionen. Eftersom detta anses vara en ändring av innehållet i kontrollpanelen krävs det `jcr:readAccessControl` och `jcr:modifyAccessControl` behörigheter som ska skrivas till databasen. Därför kan bara innehållsförfattare som har behörighet att ändra innehållet i åtkomstkontrollen på en sida konfigurera eller ändra det här innehållet. Detta står i kontrast till den gamla implementeringen där möjligheten att skriva vanliga JCR-egenskaper var tillräcklig, vilket resulterar i eskalering av behörigheter.
 
 **Målnod definierad av princip**
 
@@ -870,7 +870,7 @@ Vid uppgradering AEM installation är det viktigt att se till att endast en CUG-
 
 ### Migrerar befintligt CUG-innehåll {#migrating-existing-cug-content}
 
-Adobe tillhandahåller ett verktyg för migrering till den nya CUG-implementeringen. Utför följande steg om du vill använda den:
+Adobe tillhandahåller ett verktyg för migrering till den nya CUG-implementeringen. Så här använder du den:
 
 1. Gå till `https://<serveraddress>:<serverport>/system/console/cug-migration` för att komma åt verktyget.
 1. Ange den rotsökväg som du vill kontrollera användargränssnitten för och tryck på **Utför torr körning** -knappen. Detta söker efter kundenheter som är berättigade till konvertering på den valda platsen.

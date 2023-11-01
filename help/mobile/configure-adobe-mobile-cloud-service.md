@@ -11,9 +11,9 @@ topic-tags: administering-adobe-phonegap-enterprise
 discoiquuid: 962e9e98-a303-435b-a938-31319282e022
 legacypath: /content/docs/en/aem/6-1/develop/mobile-apps/apps/managing-aem-mobile-apps/configure-your-adobe-phonegap-build-cloud-service1
 exl-id: 209c36f9-1a4b-4eea-8dde-22e0fc9718c1
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '451'
+source-wordcount: '449'
 ht-degree: 1%
 
 ---
@@ -47,13 +47,13 @@ AEM Command Center Metrics Tile
 
 ## Konfigurera Cloud Servicen {#configuring-the-cloud-service}
 
-För att kunna utnyttja Adobe Mobile Services Analytics måste du konfigurera AEM Mobile Analytics Cloud-tjänsten med din Adobe Analytics-kontoinformation.
+För att kunna dra nytta av Adobe Mobile Services Analytics måste du konfigurera AEM Mobile Analytics Cloud-tjänsten med din Adobe Analytics-kontoinformation.
 
-1. Klicka på ikonen längst upp till höger för att lägga till eller redigera Cloud Services från **Hantera Cloud Services** från appkontrollpanelen.
+1. Klicka på ikonen längst upp till höger för att lägga till eller redigera Cloud Service från **Hantera Cloud Service** från appkontrollpanelen.
 
    ![chlimage_1-23](assets/chlimage_1-23.png)
 
-1. The **Lägg till eller redigera Cloud Services** visas. Välj **Adobe Mobile Services** och klicka **Nästa**.
+1. The **Lägg till eller redigera Cloud Service** visas. Välj **Adobe Mobile Services** och klicka **Nästa**.
 
    ![chlimage_1-24](assets/chlimage_1-24.png)
 

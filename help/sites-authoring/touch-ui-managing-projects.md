@@ -10,9 +10,9 @@ topic-tags: projects
 content-type: reference
 discoiquuid: fb354c72-debb-4fb6-9ccf-56ff5785c3ae
 exl-id: 62586c8e-dab4-4be9-a44a-2c072effe3c0
-source-git-commit: 200b47070b7ead54ee54eea504bd960d4e0731d9
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '987'
+source-wordcount: '985'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 # Hantera projekt {#managing-projects}
 
-I **Projekt** -konsolen får du tillgång till och hanterar dina projekt.
+I **Projekt** -konsolen får du tillgång till och kan hantera dina projekt.
 
 ![Projects-konsolen](assets/projects-console.png)
 
@@ -32,7 +32,7 @@ Projicerar en AEM standardfunktion och kräver ingen ytterligare konfiguration.
 
 Men för användare i projekt som vill se andra användare/grupper medan de använder projekt, till exempel när de skapar projekt, skapar uppgifter/arbetsflöden eller visar och hanterar teamet, måste de användarna ha läsåtkomst på `/home/users` och `/home/groups`.
 
-Det enklaste sättet att göra detta är att ge **projekt-användare** gruppläsåtkomst till `/home/users` och `/home/groups`.
+Det enklaste sättet är att ge **projekt-användare** gruppläsåtkomst till `/home/users` och `/home/groups`.
 
 ## Skapa ett projekt {#creating-a-project}
 
@@ -66,13 +66,13 @@ Så här associerar du resurser med ditt projekt:
 
 ### Lägga till objekt i en platta {#adding-items-to-a-tile}
 
-I vissa rutor kanske du vill lägga till mer än ett objekt. Du kan till exempel ha flera arbetsflöden som körs samtidigt eller fler än en upplevelse.
+I vissa rutor kanske du vill lägga till mer än ett objekt. Du kan till exempel ha flera arbetsflöden som körs samtidigt eller fler än en funktion.
 
 Så här lägger du till objekt i en platta:
 
 1. I **Projekt** navigerar du till projektet och klickar på nedåtvinklingsikonen längst upp till höger på den ruta där du vill lägga till ett objekt och väljer lämpligt alternativ.
 
-   * Alternativet beror på plattans typ. Det kan till exempel vara **Skapa uppgift** för **Uppgifter** platta eller **Starta arbetsflöde** för **Arbetsflöden** platta.
+   * Alternativet beror på plattans typ. Det kan till exempel vara **Skapa uppgift** för **Uppgifter** eller **Starta arbetsflöde** för **Arbetsflöden** platta.
 
    ![Tile chevron](assets/project-tile-create-task.png)
 
@@ -113,7 +113,7 @@ För att växla mellan [inaktiva projekt,](#making-projects-inactive-or-active) 
 
 ![Ikon för att växla aktiva projekt](assets/projects-toggle-active.png)
 
-Som standard visas aktiva projekt i konsolen. Klicka på **Växla aktiva projekt** -ikonen en gång för att växla till att visa inaktiva projekt. Klicka på den igen för att växla tillbaka till aktiva projekt.
+Som standard visas aktiva projekt i konsolen. Klicka på **Växla aktiva projekt** en gång för att växla till att visa inaktiva projekt. Klicka igen för att växla tillbaka till aktiva projekt.
 
 ## Organisera projekt {#organizing-projects}
 
@@ -121,13 +121,13 @@ Det finns flera alternativ som hjälper dig att ordna dina projekt så att du ka
 
 ### Projektmappar {#project-folders}
 
-Du kan skapa mappar i **Projekt** konsol för att gruppera och organisera liknande projekt.
+Du kan skapa mappar i **Projekt** för att gruppera och organisera liknande projekt.
 
 1. I **Projekt** tryck på konsolen eller klicka **Skapa** och sedan **Skapa mapp**.
 
    ![Skapa mapp](assets/project-create-folder.png)
 
-1. Ge mappen en titel och klicka på **Skapa**.
+1. Ge mappen en titel och klicka **Skapa**.
 
 1. Mappen läggs till i konsolen.
 
@@ -135,7 +135,7 @@ Nu kan du skapa projekt i mappen. Du kan skapa flera mappar och även kapsla map
 
 ### Inaktiverar projekt {#making-projects-inactive-or-active}
 
-Du kan markera ett projekt som inaktivt om det är färdigt men du vill behålla informationen om projektet. [Inaktiva projekt visas nu](#viewing-active-inactive-projects) som standard i **Projekt** konsol.
+Du kan markera ett projekt som inaktivt om det är färdigt, men du vill ändå behålla informationen om projektet. [Inaktiva projekt visas nu](#viewing-active-inactive-projects) som standard i **Projekt** konsol.
 
 Följ de här stegen för att göra ett projekt inaktivt.
 
@@ -149,7 +149,7 @@ Följ de här stegen för att göra ett projekt inaktivt.
 
 ### Tar bort projekt {#deleting-a-project}
 
-Följ de här stegen för att ta bort ett projekt.
+Så här tar du bort ett projekt.
 
 1. Navigera till den översta nivån i **Projekt** konsol.
 1. Välj projektet i konsolen.

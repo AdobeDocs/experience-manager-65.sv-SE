@@ -10,9 +10,9 @@ discoiquuid: 87742cb2-357b-421f-b79d-e355887ddec0
 docset: aem65
 feature: Correspondence Management
 exl-id: da966787-a3b9-420f-8b7c-f00d05c61d43
-source-git-commit: c47b4dcfd2fbdcb0b98ad815f5b04d8f593e4f64
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '3813'
+source-wordcount: '3811'
 ht-degree: 0%
 
 ---
@@ -81,7 +81,7 @@ På fliken Innehåll hanterar du innehåll som dokumentfragment och innehållsva
 
 1. Redigera innehållsmodulerna efter behov på fliken Innehåll. Om du vill fokusera på den relevanta innehållsmodulen i innehållshierarkin kan du antingen trycka på den relevanta raden eller det relevanta stycket i förhandsgranskningen av bokstaven eller trycka på innehållsmodulen direkt i innehållshierarkin.
 
-   Till exempel raden&quot;Vi har granskat.. &quot; är markerat i bilden nedan och den relevanta innehållsmodulen är markerad på fliken Innehåll.
+   Till exempel markeras raden&quot;Vi har granskat..&quot; i bilden nedan och den relevanta innehållsmodulen markeras på fliken Innehåll.
 
    ![4_highlightmoduleincontent](assets/4_highlightmoduleincontent.png)
 
@@ -150,10 +150,10 @@ På fliken Innehåll hanterar du innehåll som dokumentfragment och innehållsva
 
    Du kan infoga sidbrytningar ovanför och under datamoduler även när de ingår i listor och villkor.
 
-1. Tryck på Öppna/Stäng innehållsvariabel ( ![opencontentvariables](assets/opencontentvariables.png)) för att öppna innehållsvariablerna och fylla i dem korrekt.
+1. Tryck på Öppna/Stäng innehållsvariabel ( ![opencontentvariables](assets/opencontentvariables.png)) för att öppna innehållsvariablerna och fylla i dem på rätt sätt.
 1. När du har fyllt i den ofyllda variabeln korrekt anges antalet ofyllda variabler till 0.
 
-   I användargränssnittet Skapa korrespondens visas det ofyllda variabelantalet på varje nivå i hierarkin för en modul som innehåller minst en variabel. Om en modul innehåller ofyllda variabler visas antalet på variabel-, modul-, målområdes- och brevmallsnivå.
+   I användargränssnittet Skapa korrespondens visas antalet ofyllda variabler på varje nivå i hierarkin för en modul som innehåller minst en variabel. Om en modul innehåller ofyllda variabler visas antalet på variabel-, modul-, målområdes- och brevmallsnivå.
 
    Antal ofyllda variabler inkluderar:
 
@@ -179,8 +179,6 @@ På fliken Innehåll hanterar du innehåll som dokumentfragment och innehållsva
 
    * Ett numeriskt variabelfält blir som standard *0 (noll)*. Variabeln anses dock vara ofylld. Det innebär att variabelantalet innehåller alla numeriska variabelfält med värde *0 (noll)*.
 
-
-
 #### Åtgärder och information som är tillgängliga på fliken Skapa korrespondensinnehåll {#actions-and-info-available-in-the-create-correspondence-content-tab}
 
 **Målområde**
@@ -192,12 +190,12 @@ På fliken Innehåll hanterar du innehåll som dokumentfragment och innehållsva
 
 **Modul**
 
-* Markering (ögonikon): Inkluderar\exkluderar modul från brevet.
+* Markering (ögonikon): Inkluderar\exkluderar modul från bokstaven.
 * Hoppa över punkter (gäller för listmoduler och deras underordnade moduler): Hoppar över punkter i en viss modul.
-* Sidbrytning före (gäller för underordnade moduler i målområdet): Infogar sidbrytning före modulen.
-* Sidbrytning efter (gäller för underordnade moduler i målområdet): Infogar sidbrytning före modulen.
+* Sidbrytning före (gäller för underordnade moduler i målområdet): infogar sidbrytning före modulen.
+* Sidbrytning efter (gäller för underordnade moduler i målområdet): infogar sidbrytning före modulen.
 * Ofyllda värden (info): Anger antalet ofyllda variabler i målområdet.
-* Redigera (endast textmoduler): Öppna RTF-redigeraren för att redigera textmodulen.
+* Redigera (endast textmoduler): Öppna RTF-redigerare för redigering av textmodulen.
 * Datapanelen (text- och villkorsmoduler): Öppna alla variabler i modulen.
 
 **Listmodul**
@@ -233,7 +231,7 @@ Du kan göra layout- och innehållsrelaterade ändringar för att se till att br
 
 1. Redigera innehållsmodulerna efter behov på fliken Innehåll. Om du vill fokusera på den relevanta innehållsmodulen i innehållshierarkin kan du antingen trycka på den relevanta raden eller det relevanta stycket i förhandsgranskningen av bokstaven eller trycka på innehållsmodulen direkt i innehållshierarkin.
 
-   Till exempel raden &quot;Att ge oss åtkomst..&quot; är markerat i bilden nedan och motsvarande innehållsmodul är markerad på fliken Innehåll.
+   Till exempel markeras raden &quot;Att ge oss åtkomst..&quot; i bilden nedan och motsvarande innehållsmodul markeras på fliken Innehåll.
 
    Genom att trycka på Markera valda moduler i innehållet ( ![highlightselectedmodulesincontentccr](assets/highlightselectedmodulesincontentccr.png)) kan du inaktivera eller aktivera funktioner för att markera innehållsmodulen på fliken Innehåll när användaren knackar på den relevanta texten, stycket eller datafältet i förhandsgranskningen av bokstaven.
 
@@ -253,7 +251,7 @@ Du kan göra layout- och innehållsrelaterade ändringar för att se till att br
 
    ![saveasdraft](assets/saveasdraft.png)
 
-   Dialogrutan Utkastbokstavsnamn visas med bokstavskod-ID. Du kan också redigera detta ID. Anteckna brev-ID:t och tryck sedan på **Klar**. Du kan senare använda detta ID för att [läsa in utkastet igen](submit-letter-topostprocess.md#reloaddraft).
+   Dialogrutan Utkastbokstavsnamn visas med bokstavskod-ID:t. Du kan också redigera detta ID. Anteckna brev-ID:t och tryck sedan på **Klar**. Du kan senare använda detta ID för att [läsa in utkastet igen](submit-letter-topostprocess.md#reloaddraft).
 
 1. Om du vill förhandsgranska bokstaven som ett förenklat PDF med exakt layout och sidbrytningar när den skickas trycker du på ( ![förhandsgranska](assets/preview.png)) Förhandsgranska.
 
@@ -263,7 +261,7 @@ Du kan göra layout- och innehållsrelaterade ändringar för att se till att br
    >
    >Om du använder återgivningstypen Mozilla Firefox och HTML måste du använda insticksprogrammet för webbläsaren och inte Acrobat för att förhandsgranska bokstaven som separerad PDF. Om du vill välja insticksprogrammet för webbläsaren går du till Mozilla Firefox-inställningarna och för innehållstypen PDF väljer du Förhandsgranska i Firefox.
 
-1. Om du tycker att den förenklade förhandsvisningen av PDF är tillfredsställande trycker du **Skicka** för att skicka brevet. Du kan också ändra brevet genom att trycka **Avsluta förhandsgranskning** om du vill gå tillbaka till förhandsgranskningen av gränssnittet Skapa korrespondens för brevet för att göra ändringar i brevet. När du trycker på Submit (Skicka), om konfigurationen Hantera bokstavsinstans är aktiverad på Publish-instansen, genereras instansen för att skicka brev.
+1. Om du tycker att den förenklade förhandsvisningen av PDF är tillfredsställande trycker du **Skicka** skicka brevet. Du kan också ändra brevet genom att trycka **Avsluta förhandsgranskning** om du vill gå tillbaka till förhandsgranskningen av gränssnittet Skapa korrespondens för brevet för att göra ändringar i brevet. När du trycker på Submit (Skicka), om konfigurationen Hantera bokstavsinstans är aktiverad på Publish-instansen, genereras instansen för att skicka brev.
 
    Mer information finns i Utkastinstans under Spara utkast och skicka brevinstanser.
 
@@ -277,11 +275,11 @@ Du kan göra layout- och innehållsrelaterade ändringar för att se till att br
 
 När ett brev återges i användargränssnittet Skapa korrespondens kan du spara brevet som om det visas.
 
-Det finns två typer av bokstavsinstanser som kan sparas: Utkastinstans och Skicka-instans.
+Det finns två typer av bokstavsinstanser som kan sparas: förekomst av utkast och förekomst av Skicka.
 
-* **Utkastinstans**: Utkastinstansen fångar det aktuella läget för den bokstav du förhandsgranskar. Om du vill spara en utkastinstans måste du först kontrollera att bokstaven och alla resurser som den refererar till är i publicerat läge. Mer information om hur du publicerar brev finns i [Publicera en resurs](../../forms/using/publishing-unpublishing-forms.md#publishanasset). Du måste publicera ett brev innan du kan spara det som ett utkast, eftersom du när du publicerar ett brev skapar en version av brevet, dess beroende resurser och data vid den tidpunkten. Den publicerade versionen av ett brev kan inte redigeras av dig eller en annan användare och kan återställas senare utan oväntade avvikelser från den publicerade versionen. Du kan gå tillbaka till den här instansen senare och fortsätta därifrån du gick.
+* **Utkastinstans**: Utkastinstans fångar det aktuella läget för den bokstav du förhandsgranskar. Om du vill spara en utkastinstans måste du först kontrollera att bokstaven och alla resurser som den refererar till är i publicerat läge. Mer information om hur du publicerar brev finns i [Publicera en resurs](../../forms/using/publishing-unpublishing-forms.md#publishanasset). Du måste publicera ett brev innan du kan spara det som ett utkast, eftersom du när du publicerar ett brev skapar en version av brevet, dess beroende resurser och data vid den tidpunkten. Den publicerade versionen av ett brev kan inte redigeras av dig eller en annan användare och kan återställas senare utan oväntade avvikelser från den publicerade versionen. Du kan gå tillbaka till den här instansen senare och fortsätta därifrån du gick.
 
-* **Skicka instans**: Submit-förekomster används för att hämta status för brevet när det skickas. Instansen Submit lagrar PDF-läget för bokstavsinstansen efter att den har efterbearbetats tillsammans med de data som anges av användaren i användargränssnittet Create Correspondence.
+* **Skicka instans**: Submit-instanser fångar statusen för brevet när det skickas. Instansen Submit lagrar PDF-läget för bokstavsinstansen efter att den har efterbearbetats tillsammans med de data som anges av användaren i användargränssnittet Create Correspondence.
 
 Sådana instanser kan bara sparas när brevet visas på en publiceringsinstans. Som standard är sparandet av instanser inaktiverat. Gör så här om du vill att instanser av bokstäver ska kunna sparas:
 
@@ -293,7 +291,7 @@ Sådana instanser kan bara sparas när brevet visas på en publiceringsinstans. 
 
 Innan du publicerar brev eller sparar utkast på publiceringsinstansen utför du följande steg på författaren och publiceringsinstansen för att aktivera funktionen Spara som utkast:
 
-The *cq:lastReplicationAction*, *cq:lastreplikerad* och *cq:lastReplicatedBy* egenskaperna överförs inte som standard till publiceringsinstansen. För att föra över *cq:lastReplicationAction*, *cq:lastreplikerad* och *cq:lastReplicatedBy* egenskaper för publiceringsinstans, inaktivera [!UICONTROL com.day.cq.replication.impl.ReplicationPropertiesFilterFactory] -komponenten. Så här inaktiverar du komponenten:
+The *cq:lastReplicationAction*, *cq:lastreplikerad* och *cq:lastReplicatedBy* egenskaperna överförs inte som standard till publiceringsinstansen. För överföring *cq:lastReplicationAction*, *cq:lastreplikerad* och *cq:lastReplicatedBy* egenskaper för att publicera instansen, inaktivera [!UICONTROL com.day.cq.replication.impl.ReplicationPropertiesFilterFactory] -komponenten. Så här inaktiverar du komponenten:
 
 1. Öppna Adobe Experience Manager Web Console Components-konsolen på författarinstansen. Standardwebbadressen är `http://author-server:port/system/console/components`
 
@@ -315,7 +313,7 @@ Om du vill aktivera Spara som utkast-funktionen ersätter du den befintliga URL:
 
 ![Publiceringsinstans](/help/forms/using/assets/correspondencemanagement.png)
 
-När du har aktiverat funktionen för att spara bokstäver kan du välja var du vill spara bokstavsinstanserna. Det finns två alternativ för att spara bokstavsinstanser: Spara lokalt eller Fjärrspara.
+När du har aktiverat sparandet av bokstavsinstanser kan du välja var du vill spara bokstavsinstanserna. Det finns två alternativ för att spara bokstavsinstanserna: Spara lokalt eller Spara fjärranslutet.
 
 ### Spara lokalt {#local-save}
 
@@ -323,7 +321,7 @@ Bokstavsinstanser sparas på publiceringsinstansen och replikeras omvänt på f�
 
 ### Fjärrspara {#remote-save}
 
-Det här alternativet finns för personer som har problem med att spara användardata vid publiceringsinstanser, vilket vanligtvis är utanför företagets brandvägg. När fjärrsparning är aktiverat sparas inte bokstavsinstanserna i publiceringsinstansen, men de sparas på fjärrbasis på den bearbetningsförfattare som har angetts via SDK-konfigurationerna för LiveCycle-klienten.
+Det här alternativet finns för personer som har problem med att spara användardata vid publiceringsinstanser, vilket vanligtvis är utanför företagets brandvägg. När fjärrsparning är aktiverat sparas inte bokstavsinstanserna i publiceringsinstansen, men de sparas på fjärrbasis på den bearbetningsförfattare som anges i SDK-konfigurationerna för LiveCyclet Client.
 
 #### Aktivera fjärrsparande {#enable-remote-save}
 
@@ -337,11 +335,11 @@ Det här alternativet finns för personer som har problem med att spara använda
 
    ![Konfiguration av Adobe Experience Manager Web Console](assets/2configmanager.png)
 
-1. På den här sidan letar du upp SDK-konfigurationen för LiveCycle-klienten och expanderar den genom att klicka på den.
+1. På den här sidan letar du upp SDK-konfigurationen för LiveCyclet Client och expanderar den genom att klicka på den.
 
-1. Ange namnet på LiveCycle-servern i URL-adressen till bearbetningsservern, ange inloggningsinformationen och klicka sedan på **Spara**.
+1. Ange LiveCyclets servernamn, ange inloggningsinformationen och klicka sedan på **Spara**.
 
-   ![Ange namn och inloggningsinformation för LiveCycle-servern](assets/3configmanager.png)
+   ![Ange LiveCyclets servernamn och inloggningsinformation](assets/3configmanager.png)
 
 1. Ange vid behov användarnamnet och lösenordet som du vill använda för att få åtkomst till servern.
 
@@ -362,14 +360,14 @@ Nedan följer de fördelar och funktioner som finns i HTML och PDF Preview.
 
 * **Tryck på ett datafältvärde för att markera motsvarande datafält**: I användargränssnittet Skapa korrespondens kan du trycka på ett datafältvärde i brevet för att markera motsvarande datafält på fliken Data. Mer information finns i [Ange data](#enterdata).
 
-* **Stöd för webbläsare**: Webbläsare: stöd för att dra tillbaka NPAPI gradvis, vilket påverkar förhandsgranskningen av brevet i PDF. Förhandsgranskning av brev i HTML/mobilformulär påverkas inte av detta.
+* **Stöd för webbläsare**: Webbläsare har stegvis stöd för NPAPI som påverkar förhandsgranskningen av brevet i PDF. Förhandsgranskning av brev i HTML/mobilformulär påverkas inte av detta.
 * **Markera redigerbart innehåll i en bokstav**: I användargränssnittet Skapa korrespondens kan du trycka på Markera redigerbart innehåll för att markera allt redigerbart innehåll i brevet i grått. Mer information finns i [Hantera innehåll](#managecontent).
 
 `<li>` `<li>Benefits of HTML preview  <ul>   <li>Right to left</li>   <li>NPAPI</li>   <li>Highlight Editable Content</li>  </ul> </li>` `<li>Benefits of PDF preview  <ul>   <li>Page Break</li>   <li>Final Preview</li>  </ul> </li>`
 `<li>` `<li>Benefits of HTML preview  <ul>   <li>Right to left</li>   <li>NPAPI</li>   <li>Highlight Editable Content</li>  </ul> </li>` `<li>Benefits of PDF preview  <ul>   <li>Page Break</li>   <li>Final Preview</li>  </ul> </li>`  **Fördelar med PDF Preview**
 
 * **Sidbrytning**: I förhandsgranskningen av PDF kan du se exakt hur sidbrytningarna i brevet påverkar utdata.
-* **Slutlig förhandsgranskning**: I förhandsgranskningen av PDF kan du se den exakta formateringen och utseendet på brevet så som det kommer att se ut i utskriften.
+* **Slutlig förhandsgranskning**: I förhandsgranskningen av PDF kan du visa den exakta formateringen och utseendet på brevet så som det kommer att se ut i utskriften.
 
 Mer information om skriptstöd i PDF forms finns i [Skriptstöd](https://help.adobe.com/en_US/livecycle/11.0/ScriptingSupport/index.html).
 
@@ -377,12 +375,12 @@ Mer information om skriptstöd i HTML5-formulär finns i [Skriptstöd för HTML5
 
 ### Ändra återgivningsläge för bokstav {#changerenditionmode}
 
-Som standard använder gränssnittet Skapa korrespondens HTML eller mobilformulär för att återge förhandsgranskningen av brevet. Förhandsgranskningen av mobilformulär har inga problem med återgivningen i någon webbläsare, eftersom webbläsarens inbyggda plugin-program används och inga ytterligare plugin-program krävs. Du kan ändra förhandsgranskningsläget för brev till PDF. Webbläsarbegränsningar kan dock skapa problem för olika funktioner i den interaktiva PDF-förhandsgranskningen av brevet.
+Som standard använder gränssnittet Skapa korrespondens HTML eller mobilformulär för att återge förhandsgranskningen av brevet. Förhandsgranskningen av mobilformulär har inga problem med återgivningen i någon webbläsare, eftersom webbläsarens inbyggda plugin-program används och inga ytterligare plugin-program krävs. Du kan ändra förhandsgranskningsläget för brev till PDF. Webbläsarbegränsningar kan dock skapa problem för olika funktioner i den interaktiva PDF-förhandsvisningen av brevet.
 
 Mer information om webbläsarkompatibilitet med förhandsgranskning av brev finns i [Avbrutna insticksprogram för NPAPI-webbläsare och deras inverkan](https://helpx.adobe.com/acrobat/kb/change-in-support-for-acrobat-and-reader-plug-ins-in-modern-web-.html).
 
 Om du vill ändra förhandsgranskningsläget för brevet utför du följande steg:
 
-1. Gå till `https://[system]:'port'/system/console/configMgr` och logga in som administratör om det behövs.
+1. Gå till `https://[system]:'port'/system/console/configMgr` och, om det behövs, logga in som administratör.
 1. Gå till **[!UICONTROL Correspondence Management Configurations]** > **[!UICONTROL Rendition Type]** och markera **HTML Rendition** (Standard) eller **PDF Rendition**.
 1. Klicka på **[!UICONTROL Save]**.

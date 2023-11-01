@@ -11,9 +11,9 @@ topic-tags: operations
 discoiquuid: d2c95881-6c02-4e34-85af-84607df54287
 role: Developer
 exl-id: a07e51ca-fea0-4719-8071-1b7e805de2ae
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '9113'
+source-wordcount: '9109'
 ht-degree: 0%
 
 ---
@@ -474,7 +474,7 @@ Visa resurser med hjälp av Repository-tjänstens API (webbtjänst):
 
 ## Läser resurser {#reading-resources}
 
-Du kan hämta resurser från en viss plats i databasen för att kunna läsa deras innehåll och metadata. Arbetsflödet avslutas av ett initieringsformulär. Processen har alla behörigheter som krävs för att läsa formuläret. Systemet hämtar dataformuläret och läser innehållet från databasen. Databasen ger åtkomst till innehållet och metadata (möjlighet att ens veta att resursen finns).
+Du kan hämta resurser från en viss plats i databasen för att läsa deras innehåll och metadata. Arbetsflödet avslutas av ett initieringsformulär. Processen har alla behörigheter som krävs för att läsa formuläret. Systemet hämtar dataformuläret och läser innehållet från databasen. Databasen ger åtkomst till innehållet och metadata (möjlighet att ens veta att resursen finns).
 
 Databasen har följande fyra behörighetstyper:
 
@@ -842,7 +842,7 @@ Sök efter en resurs med hjälp av Repository Service API (Java):
 
 1. Hämta resurserna från sökresultatet
 
-   Om du vill hämta resurserna i sökresultatet itererar du genom `List` och omvandla varje objekt till `Resource` för att kunna extrahera sina uppgifter. I det här exemplet visas namnet på varje resurs.
+   Om du vill hämta resurserna i sökresultatet itererar du genom `List` och omvandla varje objekt till `Resource` för att extrahera informationen. I det här exemplet visas namnet på varje resurs.
 
 **Se även**
 

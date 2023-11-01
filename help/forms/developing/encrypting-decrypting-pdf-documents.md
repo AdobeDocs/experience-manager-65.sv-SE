@@ -11,9 +11,9 @@ topic-tags: operations
 discoiquuid: 5e4bda3a-5648-4c0f-b2f8-bdbebb88f537
 role: Developer
 exl-id: d3cbca7f-9277-4d61-b198-abf4bb008f15
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '8189'
+source-wordcount: '8187'
 ht-degree: 0%
 
 ---
@@ -45,7 +45,7 @@ När du krypterar ett PDF-dokument med ett lösenord måste användaren ange lö
 
 >[!NOTE]
 >
->Om du överför ett krypterat PDF-dokument till AEM Forms-databasen kan det inte dekryptera PDF-dokumentet och extrahera XDP-innehållet. Vi rekommenderar att du inte krypterar ett dokument innan du överför det till AEM Forms-databasen. (Se [Skriver resurser](/help/forms/developing/aem-forms-repository.md#writing-resources).)
+>Om du överför ett krypterat PDF-dokument till AEM Forms-databasen kan det inte dekryptera PDF-dokumentet och extrahera XDP-innehållet. Du bör inte kryptera ett dokument innan du skickar det till AEM Forms-databasen. (Se [Skriver resurser](/help/forms/developing/aem-forms-repository.md#writing-resources).)
 
 >[!NOTE]
 >
@@ -84,7 +84,7 @@ Du måste skaffa ett okrypterat PDF-dokument för att kunna kryptera dokumentet 
 
 **Ange alternativ för kryptering vid körning**
 
-Om du vill kryptera ett PDF-dokument med ett lösenord anger du fyra värden, inklusive två lösenordsvärden. Det första lösenordsvärdet används för att kryptera PDF-dokumentet och måste anges när dokumentet öppnas i PDF. Det andra lösenordsvärdet, som heter överordnad lösenord, används för att ta bort kryptering från PDF-dokumentet. Lösenordsvärdena är skiftlägeskänsliga och dessa två lösenordsvärden kan inte vara samma.
+Om du vill kryptera ett PDF-dokument med ett lösenord anger du fyra värden, inklusive två lösenordsvärden. Det första lösenordsvärdet används för att kryptera PDF-dokumentet och måste anges när dokumentet öppnas i PDF. Det andra lösenordsvärdet, som heter huvudlösenordsvärdet, används för att ta bort kryptering från PDF-dokumentet. Lösenordsvärdena är skiftlägeskänsliga och dessa två lösenordsvärden kan inte vara samma.
 
 Du måste ange vilka dokumentresurser i PDF som ska krypteras. Du kan kryptera hela PDF-dokumentet, allt utom dokumentets metadata eller bara dokumentets bilagor. Om du bara krypterar dokumentets bilagor uppmanas användaren att ange ett lösenord när de försöker få åtkomst till de bifogade filerna.
 
@@ -145,11 +145,11 @@ Kryptera ett PDF-dokument med ett lösenord med hjälp av krypterings-API (Java)
    * Ange en behörighet genom att anropa `java.util.List` objekt&quot;s `add` och skickar ett uppräkningsvärde som motsvarar den behörighet som du vill ange. Om du till exempel vill ange den behörighet som tillåter en användare att kopiera data som finns i PDF-dokumentet, anger du `PasswordEncryptionPermission.PASSWORD_EDIT_COPY`. (Upprepa det här steget för varje behörighet att ange).
    * Ange kompatibilitetsalternativet för Acrobat genom att anropa `PasswordEncryptionOptionSpec` objektets `setCompatability` och skickar ett uppräkningsvärde som anger kompatibilitetsnivån för Acrobat. Du kan till exempel ange `PasswordEncryptionCompatability.ACRO_7`.
    * Ange det lösenordsvärde som gör att en användare kan öppna det krypterade PDF-dokumentet genom att anropa `PasswordEncryptionOptionSpec` objektets `setDocumentOpenPassword` och skickar ett strängvärde som representerar det öppna lösenordet.
-   * Ange det överordnad lösenordsvärdet som gör att en användare kan ta bort kryptering från PDF-dokumentet genom att anropa `PasswordEncryptionOptionSpec` objektets `setPermissionPassword` och skickar ett strängvärde som representerar det överordnad lösenordet.
+   * Ange det huvudlösenordsvärde som gör att en användare kan ta bort kryptering från PDF-dokumentet genom att anropa `PasswordEncryptionOptionSpec` objektets `setPermissionPassword` och skickar ett strängvärde som representerar huvudlösenordet.
 
 1. Lägg till lösenordet.
 
-   Kryptera PDF-dokumentet genom att anropa `EncryptionServiceClient` objektets `encryptPDFUsingPassword` och skicka följande värden:
+   Kryptera PDF genom att anropa `EncryptionServiceClient` objektets `encryptPDFUsingPassword` och skicka följande värden:
 
    * The `com.adobe.idp.Document` som innehåller det PDF-dokument som ska krypteras med lösenordet.
    * The `PasswordEncryptionOptionSpec` objekt som innehåller alternativ för kryptering vid körning.
@@ -181,13 +181,13 @@ Kryptera ett PDF-dokument med ett lösenord med hjälp av krypterings-API:t (web
 
    >[!NOTE]
    >
-   >Ersätt `localhost` med IP-adressen till den server som är värd för AEM Forms.
+   >Ersätt `localhost` med IP-adressen till den server där AEM Forms finns.
 
 1. Skapa ett API-objekt för krypteringsklient.
 
    * Skapa en `EncryptionServiceClient` genom att använda dess standardkonstruktor.
-   * Skapa en `EncryptionServiceClient.Endpoint.Address` genom att använda `System.ServiceModel.EndpointAddress` konstruktor. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/EncryptionService?WSDL`.) Du behöver inte använda `lc_version` -attribut. Det här attributet används när du skapar en tjänstreferens.)
-   * Skapa en `System.ServiceModel.BasicHttpBinding` genom att hämta värdet för `EncryptionServiceClient.Endpoint.Binding` fält. Sänd returvärdet till `BasicHttpBinding`.
+   * Skapa en `EncryptionServiceClient.Endpoint.Address` genom att använda `System.ServiceModel.EndpointAddress` konstruktor. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/EncryptionService?WSDL`.) Du behöver inte använda `lc_version` -attribut. Detta attribut används när du skapar en tjänstreferens.)
+   * Skapa en `System.ServiceModel.BasicHttpBinding` genom att hämta värdet för `EncryptionServiceClient.Endpoint.Binding` fält. Skicka returvärdet till `BasicHttpBinding`.
    * Ange `System.ServiceModel.BasicHttpBinding` objektets `MessageEncoding` fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
    * Aktivera grundläggande HTTP-autentisering genom att utföra följande åtgärder:
 
@@ -207,14 +207,14 @@ Kryptera ett PDF-dokument med ett lösenord med hjälp av krypterings-API:t (web
 1. Ange alternativ för kryptering vid körning.
 
    * Skapa en `PasswordEncryptionOptionSpec` genom att använda dess konstruktor.
-   * Ange vilka PDF-dokumentresurser som ska krypteras genom att tilldela en `PasswordEncryptionOption` uppräkningsvärde till `PasswordEncryptionOptionSpec` objektets `encryptOption` datamedlem. Om du vill kryptera hela PDF, inklusive dess metadata och bilagor, tilldelar du `PasswordEncryptionOption.ALL` till den här datamedlemmen.
-   * Ange kompatibilitetsalternativet för Acrobat genom att tilldela en `PasswordEncryptionCompatability` uppräkningsvärde till `PasswordEncryptionOptionSpec` objektets `compatability` datamedlem. Tilldela till exempel `PasswordEncryptionCompatability.ACRO_7` till den här datamedlemmen.
+   * Ange vilka PDF-dokumentresurser som ska krypteras genom att tilldela en `PasswordEncryptionOption` uppräkningsvärde till `PasswordEncryptionOptionSpec` objektets `encryptOption` datamedlem. Om du vill kryptera hela PDF, inklusive dess metadata och bilagor, tilldelar du `PasswordEncryptionOption.ALL` till denna datamedlem.
+   * Ange kompatibilitetsalternativet för Acrobat genom att tilldela en `PasswordEncryptionCompatability` uppräkningsvärde till `PasswordEncryptionOptionSpec` objektets `compatability` datamedlem. Tilldela till exempel `PasswordEncryptionCompatability.ACRO_7` till denna datamedlem.
    * Ange det lösenordsvärde som gör att en användare kan öppna det krypterade PDF-dokumentet genom att tilldela ett strängvärde som representerar det öppna lösenordet till `PasswordEncryptionOptionSpec` objektets `documentOpenPassword` datamedlem.
-   * Ange det lösenordsvärde som gör att en användare kan ta bort kryptering från PDF-dokumentet genom att tilldela ett strängvärde som representerar det överordnad lösenordet till `PasswordEncryptionOptionSpec` objektets `permissionPassword` datamedlem.
+   * Ange det lösenordsvärde som gör att en användare kan ta bort kryptering från PDF-dokumentet genom att tilldela ett strängvärde som representerar huvudlösenordet till `PasswordEncryptionOptionSpec` objektets `permissionPassword` datamedlem.
 
 1. Lägg till lösenordet.
 
-   Kryptera PDF-dokumentet genom att anropa `EncryptionServiceClient` objektets `encryptPDFUsingPassword` och skicka följande värden:
+   Kryptera PDF genom att anropa `EncryptionServiceClient` objektets `encryptPDFUsingPassword` och skicka följande värden:
 
    * The `BLOB` som innehåller det PDF-dokument som ska krypteras med lösenordet.
    * The `PasswordEncryptionOptionSpec` objekt som innehåller alternativ för kryptering vid körning.
@@ -245,11 +245,11 @@ Med certifikatbaserad kryptering kan du kryptera ett dokument för specifika mot
 
 En av nycklarna fungerar som en användares privata nyckel. Det är viktigt att bara användaren har tillgång till den här nyckeln. Den andra nyckeln är användarens offentliga nyckel, som kan delas med andra.
 
-Ett certifikat för offentlig nyckel innehåller en användares offentliga nyckel och identifieringsinformation. X.509-formatet används för att lagra certifikat. Certifikat utfärdas och signeras vanligtvis digitalt av en certifikatutfärdare (CA), som är en erkänd enhet som kan mäta förtroendet för certifikatets giltighet. Certifikat har ett förfallodatum, efter vilket de inte längre är giltiga. Dessutom innehåller listor över återkallade certifikat information om certifikat som återkallats före förfallodatumet. CRL-listor publiceras regelbundet av certifikatutfärdare. Återkallningsstatusen för ett certifikat kan också hämtas via OCSP (Online Certificate Status Protocol) via nätverket.
+Ett certifikat för offentlig nyckel innehåller en användares offentliga nyckel och identifieringsinformation. X.509-formatet används för att lagra certifikat. Certifikat utfärdas och signeras vanligtvis digitalt av en certifikatutfärdare (CA), som är en erkänd enhet som kan mäta förtroendet för certifikatets giltighet. Certifikat har ett förfallodatum och är inte längre giltiga. Dessutom innehåller listor över återkallade certifikat information om certifikat som återkallats före förfallodatumet. CRL-listor publiceras regelbundet av certifikatutfärdare. Återkallningsstatusen för ett certifikat kan också hämtas via OCSP (Online Certificate Status Protocol) via nätverket.
 
 >[!NOTE]
 >
->Om du överför ett krypterat PDF-dokument till AEM Forms-databasen kan det inte dekryptera PDF-dokumentet och extrahera XDP-innehållet. Vi rekommenderar att du inte krypterar ett dokument innan du överför det till AEM Forms-databasen. (Se [Skriver resurser](/help/forms/developing/aem-forms-repository.md#writing-resources).)
+>Om du överför ett krypterat PDF-dokument till AEM Forms-databasen kan det inte dekryptera PDF-dokumentet och extrahera XDP-innehållet. Du bör inte kryptera ett dokument innan du skickar det till AEM Forms-databasen. (Se [Skriver resurser](/help/forms/developing/aem-forms-repository.md#writing-resources).)
 
 >[!NOTE]
 >
@@ -285,7 +285,7 @@ Följande JAR-filer måste läggas till i projektets klasssökväg:
 
 **Skapa ett API-objekt för krypteringsklient**
 
-Om du vill utföra en krypteringstjänståtgärd programmatiskt måste du skapa en krypteringstjänstklient. Om du använder Java-krypteringstjänstens API skapar du en `EncrytionServiceClient` -objekt. Skapa en `EncryptionServiceService` -objekt.
+Om du vill utföra en krypteringstjänståtgärd programmatiskt måste du skapa en krypteringstjänstklient. Om du använder Java-krypteringstjänstens API skapar du en `EncrytionServiceClient` -objekt. Om du använder webbtjänstens API för krypteringstjänst skapar du en `EncryptionServiceService` -objekt.
 
 **Få ett PDF-dokument att kryptera**
 
@@ -303,7 +303,7 @@ Ange vilka dokumentresurser i PDF som ska krypteras. Du kan kryptera hela PDF-do
 
 **Skapa ett certifikatkrypterat PDF-dokument**
 
-När du har hämtat ett oskyddat PDF-dokument, refererat till certifikatet och angett körningsalternativ, kan du skapa ett certifikatkrypterat PDF-dokument. När PDF-dokumentet har krypterats behöver du motsvarande offentliga nyckel för att dekryptera det.
+När du har hämtat ett oskyddat PDF-dokument, refererat till certifikatet och angett körningsalternativ, kan du skapa ett certifikatkrypterat PDF-dokument. När PDF-dokumentet har krypterats behöver du motsvarande publika nyckel för att dekryptera det.
 
 **Spara det krypterade PDF-dokumentet som en PDF-fil**
 
@@ -344,10 +344,10 @@ Kryptera ett PDF-dokument med ett certifikat med hjälp av krypterings-API (Java
 1. Referera till certifikatet.
 
    * Skapa en `java.util.List` objekt som lagrar behörighetsinformation med hjälp av dess konstruktor.
-   * Ange behörigheten som är kopplad till det krypterade dokumentet genom att anropa `java.util.List` objektets `add` metod och skicka en `CertificateEncryptionPermissions` uppräkningsvärde som representerar behörigheter som beviljas den användare som öppnar det skyddade PDF-dokumentet. Om du till exempel vill ange alla behörigheter skickar du `CertificateEncryptionPermissions.PKI_ALL_PERM`.
+   * Ange behörigheten för det krypterade dokumentet genom att anropa `java.util.List` objektets `add` metod och skicka en `CertificateEncryptionPermissions` uppräkningsvärde som representerar behörigheter som beviljas den användare som öppnar det skyddade PDF-dokumentet. Om du till exempel vill ange alla behörigheter skickar du `CertificateEncryptionPermissions.PKI_ALL_PERM`.
    * Skapa en `Recipient` genom att använda dess konstruktor.
    * Skapa en `java.io.FileInputStream` objekt som representerar certifikatet som används för att kryptera PDF-dokumentet med hjälp av dess konstruktor och skicka ett strängvärde som anger platsen för certifikatet.
-   * Skapa en `com.adobe.idp.Document` genom att använda konstruktorn och skicka `java.io.FileInputStream` som representerar certifikatet.
+   * Skapa en `com.adobe.idp.Document` genom att använda konstruktorn och skicka `java.io.FileInputStream` objekt som representerar certifikatet.
    * Anropa `Recipient` objektets `setX509Cert` och skicka `com.adobe.idp.Document` som innehåller certifikatet. (Dessutom har `Recipient`-objektet kan ha ett förvaltarcertifikatalias eller en LDAP-URL som certifikatkälla.)
    * Skapa en `CertificateEncryptionIdentity` objekt som lagrar behörighet och certifikatinformation med hjälp av dess konstruktor.
    * Anropa `CertificateEncryptionIdentity` objektets `setPerms` och skicka `java.util.List` objekt som lagrar behörighetsinformation.
@@ -396,13 +396,13 @@ Kryptera ett PDF-dokument med ett certifikat med hjälp av krypterings-API:t (we
 
    >[!NOTE]
    >
-   >Ersätt `localhost` med IP-adressen till den server som är värd för AEM Forms.
+   >Ersätt `localhost` med IP-adressen till den server där AEM Forms finns.
 
 1. Skapa ett API-objekt för krypteringsklient.
 
    * Skapa en `EncryptionServiceClient` genom att använda dess standardkonstruktor.
-   * Skapa en `EncryptionServiceClient.Endpoint.Address` genom att använda `System.ServiceModel.EndpointAddress` konstruktor. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/EncryptionService?WSDL`.) Du behöver inte använda `lc_version` -attribut. Det här attributet används när du skapar en tjänstreferens.)
-   * Skapa en `System.ServiceModel.BasicHttpBinding` genom att hämta värdet för `EncryptionServiceClient.Endpoint.Binding` fält. Sänd returvärdet till `BasicHttpBinding`.
+   * Skapa en `EncryptionServiceClient.Endpoint.Address` genom att använda `System.ServiceModel.EndpointAddress` konstruktor. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/EncryptionService?WSDL`.) Du behöver inte använda `lc_version` -attribut. Detta attribut används när du skapar en tjänstreferens.)
+   * Skapa en `System.ServiceModel.BasicHttpBinding` genom att hämta värdet för `EncryptionServiceClient.Endpoint.Binding` fält. Skicka returvärdet till `BasicHttpBinding`.
    * Ange `System.ServiceModel.BasicHttpBinding` objektets `MessageEncoding` fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
    * Aktivera grundläggande HTTP-autentisering genom att utföra följande åtgärder:
 
@@ -422,21 +422,21 @@ Kryptera ett PDF-dokument med ett certifikat med hjälp av krypterings-API:t (we
 1. Referera till certifikatet.
 
    * Skapa en `Recipient` genom att använda dess konstruktor. Det här objektet lagrar certifikatinformation.
-   * Skapa en `BLOB` genom att använda dess konstruktor. Detta `BLOB` kommer att lagra certifikatet som krypterar PDF-dokumentet.
+   * Skapa en `BLOB` genom att använda dess konstruktor. Detta `BLOB` -objektet kommer att lagra certifikatet som krypterar PDF-dokumentet.
    * Skapa en `System.IO.FileStream` genom att anropa dess konstruktor och skicka ett strängvärde som representerar certifikatets filplats och läget som filen ska öppnas i.
    * Skapa en bytearray som lagrar innehållet i `System.IO.FileStream` -objekt. Du kan bestämma storleken på bytearrayen genom att hämta `System.IO.FileStream` objektets `Length` -egenskap.
    * Fylla i bytearrayen med strömdata genom att anropa `System.IO.FileStream` objektets `Read` och skickar bytearrayen, startpositionen och den flödeslängd som ska läsas.
    * Fyll i `BLOB` genom att tilldela innehållet i bytearrayen till `BLOB` objektets `MTOM` datamedlem.
-   * Tilldela `BLOB` objektet som lagrar certifikatet till `Recipient` objektets `x509Cert` datamedlem.
+   * Tilldela `BLOB` det objekt som lagrar certifikatet till `Recipient` objektets `x509Cert` datamedlem.
    * Skapa en `CertificateEncryptionIdentity` objekt som lagrar certifikatinformation med hjälp av dess konstruktor.
-   * Tilldela `Recipient` objektet som lagrar certifikatet till `CertificateEncryptionIdentity`objektets mottagande datamedlem.
+   * Tilldela `Recipient` det objekt som lagrar certifikatet till `CertificateEncryptionIdentity`objektets mottagande datamedlem.
    * Skapa en `Object` arrayen och tilldela `CertificateEncryptionIdentity` -objektet till det första elementet i `Object` array. Detta `Object` arrayen skickas som en parameter till `encryptPDFUsingCertificates` -metod.
 
 1. Ange alternativ för kryptering vid körning.
 
    * Skapa en `CertificateEncryptionOptionSpec` genom att använda dess konstruktor.
-   * Ange vilka PDF-dokumentresurser som ska krypteras genom att tilldela en `CertificateEncryptionOption` uppräkningsvärde till `CertificateEncryptionOptionSpec` objektets `option` datamedlem. Om du vill kryptera hela PDF-dokumentet, inklusive dess metadata och bilagor, tilldelar du `CertificateEncryptionOption.ALL` till den här datamedlemmen.
-   * Ange kompatibilitetsalternativet för Acrobat genom att tilldela en `CertificateEncryptionCompatibility` uppräkningsvärde till `CertificateEncryptionOptionSpec` objektets `compat` datamedlem. Tilldela till exempel `CertificateEncryptionCompatibility.ACRO_7` till den här datamedlemmen.
+   * Ange vilka PDF-dokumentresurser som ska krypteras genom att tilldela en `CertificateEncryptionOption` uppräkningsvärde till `CertificateEncryptionOptionSpec` objektets `option` datamedlem. Om du vill kryptera hela PDF-dokumentet, inklusive dess metadata och bilagor, tilldelar du `CertificateEncryptionOption.ALL` till denna datamedlem.
+   * Ange kompatibilitetsalternativet för Acrobat genom att tilldela en `CertificateEncryptionCompatibility` uppräkningsvärde till `CertificateEncryptionOptionSpec` objektets `compat` datamedlem. Tilldela till exempel `CertificateEncryptionCompatibility.ACRO_7` till denna datamedlem.
 
 1. Skapa ett certifikatkrypterat PDF-dokument.
 
@@ -495,7 +495,7 @@ Följande JAR-filer måste läggas till i projektets klasssökväg:
 
 **Skapa en krypteringstjänstklient**
 
-Om du vill utföra en krypteringstjänståtgärd programmatiskt måste du skapa en krypteringstjänstklient. Om du använder Java-krypteringstjänstens API skapar du en `EncrytionServiceClient` -objekt. Skapa en `EncryptionServiceService` -objekt.
+Om du vill utföra en krypteringstjänståtgärd programmatiskt måste du skapa en krypteringstjänstklient. Om du använder Java-krypteringstjänstens API skapar du en `EncrytionServiceClient` -objekt. Om du använder webbtjänstens API för krypteringstjänst skapar du en `EncryptionServiceService` -objekt.
 
 **Hämta det krypterade PDF-dokumentet**
 
@@ -545,7 +545,7 @@ Ta bort certifikatbaserad kryptering från ett PDF-dokument med krypterings-API 
 
 1. Ta bort kryptering.
 
-   Ta bort certifikatbaserad kryptering från PDF-dokumentet genom att anropa `EncryptionServiceClient` objektets `removePDFCertificateSecurity` och skicka följande värden:
+   Ta bort certifikatbaserad kryptering från PDF genom att anropa `EncryptionServiceClient` objektets `removePDFCertificateSecurity` och skicka följande värden:
 
    * The `com.adobe.idp.Document` som innehåller det krypterade PDF-dokumentet.
    * Ett strängvärde som anger aliasnamnet för den privata nyckel som motsvarar nyckeln som används för att kryptera PDFf-dokumentet.
@@ -577,13 +577,13 @@ Ta bort certifikatbaserad kryptering med hjälp av krypterings-API:t (webbtjäns
 
    >[!NOTE]
    >
-   >Ersätt `localhost` med IP-adressen till den server som är värd för AEM Forms.
+   >Ersätt `localhost` med IP-adressen till den server där AEM Forms finns.
 
 1. Skapa en krypteringstjänstklient.
 
    * Skapa en `EncryptionServiceClient` genom att använda dess standardkonstruktor.
-   * Skapa en `EncryptionServiceClient.Endpoint.Address` genom att använda `System.ServiceModel.EndpointAddress` konstruktor. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/EncryptionService?WSDL`.) Du behöver inte använda `lc_version` -attribut. Det här attributet används när du skapar en tjänstreferens.)
-   * Skapa en `System.ServiceModel.BasicHttpBinding` genom att hämta värdet för `EncryptionServiceClient.Endpoint.Binding` fält. Sänd returvärdet till `BasicHttpBinding`.
+   * Skapa en `EncryptionServiceClient.Endpoint.Address` genom att använda `System.ServiceModel.EndpointAddress` konstruktor. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/EncryptionService?WSDL`.) Du behöver inte använda `lc_version` -attribut. Detta attribut används när du skapar en tjänstreferens.)
+   * Skapa en `System.ServiceModel.BasicHttpBinding` genom att hämta värdet för `EncryptionServiceClient.Endpoint.Binding` fält. Skicka returvärdet till `BasicHttpBinding`.
    * Ange `System.ServiceModel.BasicHttpBinding` objektets `MessageEncoding` fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
    * Aktivera grundläggande HTTP-autentisering genom att utföra följande åtgärder:
 
@@ -656,7 +656,7 @@ Följande JAR-filer måste läggas till i projektets klasssökväg:
 
 **Skapa en krypteringstjänstklient**
 
-Om du vill utföra en krypteringstjänståtgärd programmatiskt måste du skapa en krypteringstjänstklient. Om du använder Java-krypteringstjänstens API skapar du en `EncrytionServiceClient` -objekt. Skapa en `EncryptionServiceService` -objekt.
+Om du vill utföra en krypteringstjänståtgärd programmatiskt måste du skapa en krypteringstjänstklient. Om du använder Java-krypteringstjänstens API skapar du en `EncrytionServiceClient` -objekt. Om du använder webbtjänstens API för krypteringstjänst skapar du en `EncryptionServiceService` -objekt.
 
 **Hämta det krypterade PDF-dokumentet**
 
@@ -664,7 +664,7 @@ Du måste få ett krypterat PDF-dokument för att kunna ta bort lösenordsbasera
 
 **Ta bort lösenordet**
 
-Om du vill ta bort lösenordsbaserad kryptering från ett krypterat PDF-dokument måste du ha både ett krypterat PDF-dokument och ett överordnad lösenordsvärde som används för att ta bort kryptering från PDF-dokumentet. Lösenordet som används för att öppna ett lösenordskrypterat PDF-dokument kan inte användas för att ta bort kryptering. Ett överordnad lösenord anges när PDF-dokumentet krypteras med ett lösenord. (Se [Kryptera PDF-dokument med ett lösenord](encrypting-decrypting-pdf-documents.md#encrypting-pdf-documents-with-a-password).)
+Om du vill ta bort lösenordsbaserad kryptering från ett krypterat PDF-dokument måste du ha både ett krypterat PDF-dokument och ett huvudlösenordsvärde som används för att ta bort kryptering från PDF-dokumentet. Lösenordet som används för att öppna ett lösenordskrypterat PDF-dokument kan inte användas för att ta bort kryptering. Ett huvudlösenord anges när PDF-dokumentet krypteras med ett lösenord. (Se [Kryptera PDF-dokument med ett lösenord](encrypting-decrypting-pdf-documents.md#encrypting-pdf-documents-with-a-password).)
 
 **Spara PDF-dokumentet**
 
@@ -703,7 +703,7 @@ Ta bort lösenordsbaserad kryptering från ett PDF-dokument med krypterings-API 
    Ta bort lösenordsbaserad kryptering från PDF-dokumentet genom att anropa `EncryptionServiceClient` objektets `removePDFPasswordSecurity` och skicka följande värden:
 
    * A `com.adobe.idp.Document` som innehåller det krypterade PDF-dokumentet.
-   * Ett strängvärde som anger det överordnad lösenordsvärdet som används för att ta bort kryptering från PDF-dokumentet.
+   * Ett strängvärde som anger det huvudlösenordsvärde som används för att ta bort kryptering från PDF-dokumentet.
 
    The `removePDFPasswordSecurity` returnerar en `com.adobe.idp.Document` objekt som innehåller ett oskyddat PDF-dokument.
 
@@ -726,13 +726,13 @@ Ta bort lösenordsbaserad kryptering med hjälp av krypterings-API:t (webbtjäns
 
    >[!NOTE]
    >
-   >Ersätt `localhost` med IP-adressen till den server som är värd för AEM Forms.
+   >Ersätt `localhost` med IP-adressen till den server där AEM Forms finns.
 
 1. Skapa en krypteringstjänstklient.
 
    * Skapa en `EncryptionServiceClient` genom att använda dess standardkonstruktor.
-   * Skapa en `EncryptionServiceClient.Endpoint.Address` genom att använda `System.ServiceModel.EndpointAddress` konstruktor. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/EncryptionService?WSDL`.) Du behöver inte använda `lc_version` -attribut. Det här attributet används när du skapar en tjänstreferens.)
-   * Skapa en `System.ServiceModel.BasicHttpBinding` genom att hämta värdet för `EncryptionServiceClient.Endpoint.Binding` fält. Sänd returvärdet till `BasicHttpBinding`.
+   * Skapa en `EncryptionServiceClient.Endpoint.Address` genom att använda `System.ServiceModel.EndpointAddress` konstruktor. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/EncryptionService?WSDL`.) Du behöver inte använda `lc_version` -attribut. Detta attribut används när du skapar en tjänstreferens.)
+   * Skapa en `System.ServiceModel.BasicHttpBinding` genom att hämta värdet för `EncryptionServiceClient.Endpoint.Binding` fält. Skicka returvärdet till `BasicHttpBinding`.
    * Ange `System.ServiceModel.BasicHttpBinding` objektets `MessageEncoding` fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
    * Aktivera grundläggande HTTP-autentisering genom att utföra följande åtgärder:
 
@@ -773,7 +773,7 @@ Ta bort lösenordsbaserad kryptering med hjälp av krypterings-API:t (webbtjäns
 
 ## Låsa upp krypterade PDF-dokument {#unlocking-encrypted-pdf-documents}
 
-Ett lösenordskrypterat eller certifikatkrypterat PDF-dokument måste låsas upp innan en annan AEM Forms-åtgärd kan utföras på det. Om du försöker utföra en åtgärd på ett krypterat PDF-dokument genereras ett undantag. När du har låst upp ett krypterat PDF-dokument kan du utföra en eller flera åtgärder på det. De här åtgärderna kan tillhöra andra tjänster, till exempel Acrobat Reader DC-tilläggstjänsten.
+Ett lösenordskrypterat eller certifikatkrypterat PDF-dokument måste låsas upp innan en annan AEM Forms-åtgärd kan utföras på det. Om du försöker utföra en åtgärd på ett krypterat PDF-dokument genereras ett undantag. När du har låst upp ett krypterat PDF-dokument kan du utföra en eller flera åtgärder på det. De här åtgärderna kan tillhöra andra tjänster, t.ex. Acrobat Reader DC-tilläggstjänsten.
 
 >[!NOTE]
 >
@@ -803,7 +803,7 @@ Följande JAR-filer måste läggas till i projektets klasssökväg:
 
 **Skapa en krypteringstjänstklient**
 
-Om du vill utföra en krypteringstjänståtgärd programmatiskt måste du skapa en krypteringstjänstklient. Om du använder Java-krypteringstjänstens API skapar du en `EncrytionServiceClient` -objekt. Skapa en `EncryptionServiceService` -objekt.
+Om du vill utföra en krypteringstjänståtgärd programmatiskt måste du skapa en krypteringstjänstklient. Om du använder Java-krypteringstjänstens API skapar du en `EncrytionServiceClient` -objekt. Om du använder webbtjänstens API för krypteringstjänst skapar du en `EncryptionServiceService` -objekt.
 
 **Hämta det krypterade PDF-dokumentet**
 
@@ -823,7 +823,7 @@ När ett krypterat PDF-dokument har låsts upp kan du utföra en annan tjänstå
 
 [Lås upp ett krypterat PDF-dokument med Java API](encrypting-decrypting-pdf-documents.md#unlock-an-encrypted-pdf-document-using-the-java-api)
 
-[Lås upp ett krypterat PDF-dokument med webbtjänstens API](encrypting-decrypting-pdf-documents.md#unlock-an-encrypted-pdf-document-using-the-web-service-api)
+[Lås upp ett krypterat PDF-dokument med hjälp av webbtjänstens API](encrypting-decrypting-pdf-documents.md#unlock-an-encrypted-pdf-document-using-the-web-service-api)
 
 [Inkludera AEM Forms Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -881,7 +881,7 @@ Lås upp ett krypterat PDF-dokument med hjälp av krypterings-API (Java):
 
 [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-### Lås upp ett krypterat PDF-dokument med webbtjänstens API {#unlock-an-encrypted-pdf-document-using-the-web-service-api}
+### Lås upp ett krypterat PDF-dokument med hjälp av webbtjänstens API {#unlock-an-encrypted-pdf-document-using-the-web-service-api}
 
 Lås upp ett krypterat PDF-dokument med hjälp av krypterings-API:t (webbtjänsten):
 
@@ -891,13 +891,13 @@ Lås upp ett krypterat PDF-dokument med hjälp av krypterings-API:t (webbtjänst
 
    >[!NOTE]
    >
-   >Ersätt `localhost` med IP-adressen till den server som är värd för AEM Forms.
+   >Ersätt `localhost` med IP-adressen till den server där AEM Forms finns.
 
 1. Skapa en krypteringstjänstklient.
 
    * Skapa en `EncryptionServiceClient` genom att använda dess standardkonstruktor.
-   * Skapa en `EncryptionServiceClient.Endpoint.Address` genom att använda `System.ServiceModel.EndpointAddress` konstruktor. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/EncryptionService?WSDL`.) Du behöver inte använda `lc_version` -attribut. Det här attributet används när du skapar en tjänstreferens.)
-   * Skapa en `System.ServiceModel.BasicHttpBinding` genom att hämta värdet för `EncryptionServiceClient.Endpoint.Binding` fält. Sänd returvärdet till `BasicHttpBinding`.
+   * Skapa en `EncryptionServiceClient.Endpoint.Address` genom att använda `System.ServiceModel.EndpointAddress` konstruktor. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/EncryptionService?WSDL`.) Du behöver inte använda `lc_version` -attribut. Detta attribut används när du skapar en tjänstreferens.)
+   * Skapa en `System.ServiceModel.BasicHttpBinding` genom att hämta värdet för `EncryptionServiceClient.Endpoint.Binding` fält. Skicka returvärdet till `BasicHttpBinding`.
    * Ange `System.ServiceModel.BasicHttpBinding` objektets `MessageEncoding` fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
    * Aktivera grundläggande HTTP-autentisering genom att utföra följande åtgärder:
 
@@ -980,7 +980,7 @@ Följande JAR-filer måste läggas till i projektets klasssökväg:
 
 **Skapa en tjänstklient**
 
-Om du vill utföra en krypteringstjänståtgärd programmatiskt måste du skapa en krypteringstjänstklient. Om du använder Java-krypteringstjänstens API skapar du en `EncrytionServiceClient` -objekt. Skapa en `EncryptionServiceService` -objekt.
+Om du vill utföra en krypteringstjänståtgärd programmatiskt måste du skapa en krypteringstjänstklient. Om du använder Java-krypteringstjänstens API skapar du en `EncrytionServiceClient` -objekt. Om du använder webbtjänstens API för krypteringstjänst skapar du en `EncryptionServiceService` -objekt.
 
 **Hämta det krypterade PDF-dokumentet**
 
@@ -988,13 +988,13 @@ Du måste skaffa ett PDF-dokument för att kunna avgöra vilken typ av krypterin
 
 **Bestämma krypteringstypen**
 
-Du kan ange vilken typ av kryptering som skyddar ett PDF-dokument. Om PDF-dokumentet inte är skyddat visas ett meddelande om att PDF-dokumentet inte är skyddat av krypteringstjänsten.
+Du kan ange vilken typ av kryptering som skyddar ett PDF-dokument. Om dokumentet från PDF inte är skyddat visas ett meddelande om att dokumentet från PDF inte är skyddat av krypteringstjänsten.
 
 **Se även**
 
 [Identifiera krypteringstypen med Java API](encrypting-decrypting-pdf-documents.md#determine-the-encryption-type-using-the-java-api)
 
-[Kontrollera krypteringstypen med hjälp av webbtjänstens API](encrypting-decrypting-pdf-documents.md#determine-the-encryption-type-using-the-web-service-api)
+[Identifiera krypteringstypen med hjälp av webbtjänstens API](encrypting-decrypting-pdf-documents.md#determine-the-encryption-type-using-the-web-service-api)
 
 [Inkludera AEM Forms Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -1024,7 +1024,7 @@ Bestäm vilken typ av kryptering som skyddar ett PDF-dokument med hjälp av kryp
 
 1. Bestäm krypteringstypen.
 
-   * Bestäm krypteringstypen genom att anropa `EncryptionServiceClient` objektets `getPDFEncryption` metoden och skicka `com.adobe.idp.Document` som innehåller dokumentet PDF. Den här metoden returnerar en `EncryptionTypeResult` -objekt.
+   * Kontrollera krypteringstypen genom att anropa `EncryptionServiceClient` objektets `getPDFEncryption` metoden och skicka `com.adobe.idp.Document` -objekt som innehåller dokumentet PDF. Den här metoden returnerar en `EncryptionTypeResult` -objekt.
    * Anropa `EncryptionTypeResult` objektets `getEncryptionType` -metod. Den här metoden returnerar en `EncryptionType` enum-värde som anger krypteringstypen. Om PDF-dokumentet till exempel skyddas med lösenordsbaserad kryptering returnerar den här metoden `EncryptionType.PASSWORD`.
 
 **Se även**
@@ -1037,7 +1037,7 @@ Bestäm vilken typ av kryptering som skyddar ett PDF-dokument med hjälp av kryp
 
 [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-### Kontrollera krypteringstypen med hjälp av webbtjänstens API {#determine-the-encryption-type-using-the-web-service-api}
+### Identifiera krypteringstypen med hjälp av webbtjänstens API {#determine-the-encryption-type-using-the-web-service-api}
 
 Bestäm vilken typ av kryptering som skyddar ett PDF-dokument med hjälp av krypterings-API:t (webbtjänsten):
 
@@ -1047,13 +1047,13 @@ Bestäm vilken typ av kryptering som skyddar ett PDF-dokument med hjälp av kryp
 
    >[!NOTE]
    >
-   >Ersätt `localhost` med IP-adressen till den server som är värd för AEM Forms.
+   >Ersätt `localhost` med IP-adressen till den server där AEM Forms finns.
 
 1. Skapa en tjänstklient.
 
    * Skapa en `EncryptionServiceClient` genom att använda dess standardkonstruktor.
-   * Skapa en `EncryptionServiceClient.Endpoint.Address` genom att använda `System.ServiceModel.EndpointAddress` konstruktor. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/EncryptionService?WSDL`.) Du behöver inte använda `lc_version` -attribut. Det här attributet används när du skapar en tjänstreferens.)
-   * Skapa en `System.ServiceModel.BasicHttpBinding` genom att hämta värdet för `EncryptionServiceClient.Endpoint.Binding` fält. Sänd returvärdet till `BasicHttpBinding`.
+   * Skapa en `EncryptionServiceClient.Endpoint.Address` genom att använda `System.ServiceModel.EndpointAddress` konstruktor. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/EncryptionService?WSDL`.) Du behöver inte använda `lc_version` -attribut. Detta attribut används när du skapar en tjänstreferens.)
+   * Skapa en `System.ServiceModel.BasicHttpBinding` genom att hämta värdet för `EncryptionServiceClient.Endpoint.Binding` fält. Skicka returvärdet till `BasicHttpBinding`.
    * Ange `System.ServiceModel.BasicHttpBinding` objektets `MessageEncoding` fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
    * Aktivera grundläggande HTTP-autentisering genom att utföra följande åtgärder:
 
@@ -1072,7 +1072,7 @@ Bestäm vilken typ av kryptering som skyddar ett PDF-dokument med hjälp av kryp
 
 1. Bestäm krypteringstypen.
 
-   * Anropa `EncryptionServiceClient` objektets `getPDFEncryption` och skicka `BLOB` som innehåller dokumentet PDF. Den här metoden returnerar en `EncryptionTypeResult` -objekt.
+   * Anropa `EncryptionServiceClient` objektets `getPDFEncryption` och skicka `BLOB` -objekt som innehåller dokumentet PDF. Den här metoden returnerar en `EncryptionTypeResult` -objekt.
    * Hämta värdet för `EncryptionTypeResult` objektets `encryptionType` datametod. Om PDF-dokumentet till exempel skyddas med lösenordsbaserad kryptering är värdet för den här datamedlemmen `EncryptionType.PASSWORD`.
 
 **Se även**

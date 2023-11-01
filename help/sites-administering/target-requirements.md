@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: ae4a6e97-c0d7-472d-a25f-b89b1abf4df3
 docset: aem65
 exl-id: 30813c44-51ac-4e6e-8ee6-4e8baacb1ff9
-source-git-commit: e85aacd45a2bbc38f10d03915e68286f0a55364e
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '558'
+source-wordcount: '556'
 ht-degree: 0%
 
 ---
@@ -36,9 +36,9 @@ Klientkoden identifierar Adobe Target-kundkontot när Adobe Target-servern anrop
 
 ## Aktivera målreplikeringsagenten {#enabling-the-target-replication-agent}
 
-Test och Target [replikeringsagent](/help/sites-deploying/replication.md) måste vara aktiverat på författarinstansen. Observera att den här replikeringsagenten inte är aktiverad som standard om du använde [nosamplingContent](/help/sites-deploying/configure-runmodes.md#using-samplecontent-and-nosamplecontent) körningsläge för installation av AEM. Mer information om hur du skyddar din produktionsmiljö finns i [Säkerhetschecklista](/help/sites-administering/security-checklist.md).
+Test och Target [replikeringsagent](/help/sites-deploying/replication.md) måste vara aktiverat på författarinstansen. Observera att den här replikeringsagenten inte är aktiverad som standard om du använde [nosamplingContent](/help/sites-deploying/configure-runmodes.md#using-samplecontent-and-nosamplecontent) körningsläge för AEM. Mer information om hur du skyddar din produktionsmiljö finns i [Säkerhetschecklista](/help/sites-administering/security-checklist.md).
 
-1. På AEM startsida klickar du på **verktyg** > **Distribution** > **Replikering**.
+1. På AEM startsida klickar du på eller trycker **verktyg** > **Distribution** > **Replikering**.
 1. Klicka eller tryck **Agenter på författare**.
 1. Klicka eller tryck på **Test och Target (test och target)** replikeringsagent och klicka eller tryck sedan på **Redigera**.
 1. Välj alternativet Aktiverad och klicka eller tryck sedan på **OK**.
@@ -53,7 +53,7 @@ Test och Target [replikeringsagent](/help/sites-deploying/replication.md) måste
 
 Du måste skydda noden för aktivitetsinställningar **cq:ActivitySettings** på publiceringsinstansen så att den inte är tillgänglig för vanliga användare. Noden för aktivitetsinställningar ska bara vara tillgänglig för tjänsten som hanterar aktivitetssynkroniseringen till Adobe Target.
 
-The **cq:ActivitySettings** noden är tillgänglig i CRXDE lite under `/content/campaigns/*nameofbrand*`* *under aktiviteterna jcr:content node;* *till exempel `/content/campaign/we-retail/master/myactivity/jcr:content/cq:ActivitySettings`. Den här noden skapas bara efter att du har angett en komponent som mål.
+The **cq:ActivitySettings** noden är tillgänglig i CRXDE lite under `/content/campaigns/*nameofbrand*`* *under aktiviteterna jcr:innehållsnod;* *till exempel `/content/campaign/we-retail/master/myactivity/jcr:content/cq:ActivitySettings`. Den här noden skapas bara efter att du har angett en komponent som mål.
 
 The **cq:ActivitySettings** nod under aktivitetens jcr:innehåll skyddas av följande åtkomstkontrollistor:
 

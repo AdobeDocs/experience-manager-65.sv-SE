@@ -1,16 +1,14 @@
 ---
 title: Omstrukturering av Dynamic Media-arkiv i Adobe Experience Manager 6.5
-description: Lär dig hur du gör de ändringar som krävs för att migrera till den nya databasstrukturen i Experience Manager 6.5 för Dynamic Media.
-uuid: e26d61a4-47b6-493a-9ba2-4c58b200ddd9
+description: Lär dig hur du gör nödvändiga ändringar för att migrera till den nya databasstrukturen i Experience Manager 6.5 för Dynamic Media.
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: repo_restructuring
-discoiquuid: 61cd5751-0dc8-48e0-873e-3a64899489bb
 feature: Upgrading
 exl-id: 4e736924-74ea-431a-be19-1c4ff022f464
-source-git-commit: f4b7566abfa0a8dbb490baa0e849de6c355a3f06
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '413'
+source-wordcount: '409'
 ht-degree: 0%
 
 ---
@@ -79,7 +77,7 @@ Enligt beskrivning på överordnad [Omstrukturering av lager i Adobe Experience 
  </tbody>
 </table>
 
-### Dynamic Media (DM Hybrid) Cloud Service configuration {#cloudserviceconfiguration}
+### Konfiguration av Dynamic Media-Cloud Service (DM Hybrid) {#cloudserviceconfiguration}
 
 <table>
  <tbody>

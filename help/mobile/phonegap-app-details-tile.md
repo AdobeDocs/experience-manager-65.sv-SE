@@ -6,9 +6,9 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: authoring-adobe-phonegap-enterprise
 exl-id: 8bcf70ef-94d2-4958-90b5-bc375b360916
-source-git-commit: 260f71acd330167572d817fdf145a018b09cbc65
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '1252'
+source-wordcount: '1248'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ The **Hantera program** På panelen App Dashboard kan du ändra information om p
 
 ## Om Hantera programpanel {#understanding-the-manage-app-tile}
 
-Du kan gå på djupet i varje ruta i **Hantera program** om du vill visa eller redigera detaljer genom att klicka på ... i det nedre högra hörnet.
+Du kan gå på djupet i varje platta i **Hantera program** för att visa eller redigera detaljer genom att klicka på ... i det nedre högra hörnet.
 
 ### Fliken Grundläggande {#the-basic-tab}
 
@@ -33,11 +33,11 @@ Du kan redigera **Namn**, **Upphovsman**, **Kort beskrivning** och **Beskrivning
 
 ![chlimage_1-117](assets/chlimage_1-117.png)
 
-### Fliken Avancerat {#the-advanced-tab}
+### Avancerat {#the-advanced-tab}
 
-Varje plattform för mobilapplikationer beskriver vilka data som samlas in, specifikt för varje applikationsbutik.
+Varje plattform för mobilapplikationer beskriver vilka data som samlas in, och riktar sig specifikt till varje applikationsbutik.
 
-De plattformar som visas styrs av innehållet config.xml för PhoneGap:
+De plattformar som visas styrs av innehållet config.xml i PhoneGap:
 
 ```xml
 <widget>
@@ -60,7 +60,7 @@ Alla leverantörsapplikationsbutiker - till exempel Apple App Store eller Google
 
 >[!NOTE]
 >
->När du känner till **Hantera program** platta, se [Redigera appmetadata](/help/mobile/phonegap-editmetadata.md) för att visa och redigera metadata.
+>När du känner till **Hantera program** sida vid sida, se [Redigera appmetadata](/help/mobile/phonegap-editmetadata.md) för att visa och redigera metadata.
 
 #### Vanliga metadata {#common-metadata}
 
@@ -72,9 +72,9 @@ I det här avsnittet definierar du URL:en för Content Update Server, landningss
 
 **App-version** är programmets arbetsversion. Det bästa sättet är att använda en 3-decimalteckning och börja under 1.0.0 före den första versionen.
 
-**PhoneGap-version** är den version i vilken du vill kompilera programmet med PhoneGap. Bästa sättet är att hålla jämna steg med den aktuella versionen för att vara säker på att du får de senaste och bästa funktionerna och felkorrigeringarna.
+**PhoneGap-version** är den version i vilken du vill kompilera programmet med PhoneGap. Det bästa sättet är att hålla jämna steg med den aktuella versionen för att säkerställa att du får de senaste och bästa funktionerna och felkorrigeringarna.
 
-**URL för Content Update Server** är den URL som ditt program använder för att anropa ContentSync-uppdateringar. Den måste anges till din Dispatcher-URL eller, om inte en Dispatcher används, till en av dina publiceringsinstanser som ska användas för ContentSync-uppdateringar av programmet.
+**URL för Content Update Server** är den URL som ditt program kommer att använda för att anropa ContentSync-uppdateringar. Den måste anges till din Dispatcher-URL eller, om inte en Dispatcher används, till en av dina publiceringsinstanser som ska användas för ContentSync-uppdateringar av programmet.
 
 ![chlimage_1-119](assets/chlimage_1-119.png)
 
@@ -82,7 +82,7 @@ I det här avsnittet definierar du URL:en för Content Update Server, landningss
 >
 >Det här avsnittet kan vara tomt om det inte finns data som fyller i fälten.
 >
->Överst i detaljvyn visas programversion, PhoneGap-version och URL för uppdatering. Varje värde kan anges i avsnittet Vanliga metadata. Program-ID kan dock inte redigeras.
+>Överst i detaljvyn visas programversion, PhoneGap-version och URL-adress för uppdatering. Varje värde kan anges i avsnittet Vanliga metadata. Program-ID kan dock inte redigeras.
 
 #### Plattformsmetadata {#platform-metadata}
 
@@ -98,9 +98,9 @@ För plattformar som inte AEM förstår går det fortfarande att utöka använda
 
 #### iOS-metadata {#ios-metadata}
 
-Apple AppStore kräver ytterligare metadata för att du ska kunna skicka in programmet för distribution. iOS metadataavsnitt försöker samla in den information som Apple iTMSTTransporter-verktyg kan använda för att publicera metadata på det associerade Apple-utvecklarkontot.
+Apple AppStore kräver ytterligare metadata för att skicka in ditt program för distribution. IOS metadataavsnitt försöker samla in den information som Apple iTMSTTransporter-verktyg kan använda för att publicera metadata på det associerade Apple-utvecklarkontot.
 
-För att få tillgång till de Apple-specifika metadata måste du först skapa ditt program på [https://itunesconnect.apple.com](https://itunesconnect.apple.com/). När du skapar ditt program genererar Apple metadata, vilket krävs i metadataavsnittet för iOS, om du vill använda verktyget Apple iTMSTTransporter för att validera och överföra metadata till itunesconnect.apple.com. Om du bara vill få fram metadata för att samla in behöver du inte nödvändigtvis fylla i iOS-specifika metadata. Du kan fortfarande exportera metadata som sammanfogar iOS-metadata och gemensamma metadata och samla alla skärmbilder i en zip-fil som kan laddas ned när som helst.
+För att få tillgång till de Apple-specifika metadata måste du först skapa ditt program på [https://itunesconnect.apple.com](https://itunesconnect.apple.com/). När du skapar ditt program genererar Apple metadata, vilket krävs i metadataavsnittet för iOS, om du vill använda Apple iTMSTTransporter-verktyget för att validera och överföra metadata till itunesconnect.apple.com. Om du bara vill få fram metadata för att samla in behöver du inte nödvändigtvis fylla i iOS-specifika metadata. Du kan fortfarande exportera metadata som sammanfogar iOS-metadata och gemensamma metadata och samla alla skärmbilder i en zip-fil som kan laddas ned när som helst.
 
 Den hämtade zip-filen innehåller en itmsp-fil som kan inspekteras för metadata.xml. ActionScript-filen innehåller exporterade metadata (i filen metadata.xml), tillsammans med alla associerade skärmbilder.
 
@@ -120,7 +120,7 @@ Exportfunktionen används för att underlätta insamling av skärmbilder och met
 
 En av de viktigaste funktionerna i AEM är möjligheten att låta ett mobilprogram begära nytt innehåll via ContentSync, där innehållet kan vara HTML-resurser, sidor, video, bilder, text och mycket mer. När en innehållsförfattare har uppdaterat innehållet och sedan publicerat det gör servern innehållsuppdateringen tillgänglig för det mobilprogram som ska laddas ned.
 
-Egenskapen URL för Content Update Server är den URL som måste peka på en publiceringsinstans. antingen direkt eller via Dispatcher eller CDN. Formatet på URL:en är helt enkelt:
+Egenskapen URL för innehållsuppdateringsservern är den URL som måste peka på en publiceringsinstans, antingen direkt eller via Dispatcher eller CDN. Formatet på URL:en är helt enkelt:
 
 `https://[hostname]:[port]`
 

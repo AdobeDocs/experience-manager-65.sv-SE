@@ -13,9 +13,9 @@ legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/image-
 feature: Image Presets
 role: User, Admin
 exl-id: 556b99fe-91c3-441f-ba81-22cb8c10ef7f
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '3695'
+source-wordcount: '3693'
 ht-degree: 6%
 
 ---
@@ -46,7 +46,7 @@ Du kan skapa två bildförinställningar: en med 500 x 500 pixlar för skrivbord
 
 Bilder som minskar i storlek när de levereras dynamiskt kan förlora i skärpa och detaljer. Därför innehåller varje bildförinställning formateringskontroller för optimering av en bild när den levereras i en viss storlek. Med dessa kontroller kan du vara säker på att dina bilder är skarpa och tydliga när de levereras till din webbplats eller ditt program.
 
-Administratörer kan skapa bildförinställningar. Om du vill skapa en bildförinställning kan du börja från början eller så kan du börja från en befintlig förinställning och spara den under ett nytt namn.
+Administratörer kan skapa bildförinställningar. Om du vill skapa en bildförinställning kan du börja från början eller så kan du börja från en befintlig och spara den under ett nytt namn.
 
 ## Hantera Dynamic Media bildförinställningar {#managing-image-presets-1}
 
@@ -58,7 +58,7 @@ Du hanterar dina bildförinställningar i Experience Manager genom att trycka p�
 >
 >Alla bildförinställningar som du skapar är också tillgängliga som dynamiska återgivningar när du förhandsvisar eller levererar resurser.
 >
->I *Dynamic Media - Scene7-läge* det gör du *not* måste publicera bildförinställningar när bildförinställningar publiceras automatiskt.
+>I *DYNAMIC MEDIA - SCENE7* det gör du *not* måste publicera bildförinställningar när bildförinställningar publiceras automatiskt.
 >
 >I *Dynamic Media - hybridläge* måste du publicera bildförinställningar manuellt.
 >
@@ -76,7 +76,7 @@ Du hanterar dina bildförinställningar i Experience Manager genom att trycka p�
 
 Om du tänker ge stöd för att lägga in AI-, EPS- och PDF-filer så att du kan generera dynamiska återgivningar av dessa filformat bör du granska följande information innan du skapar bildförinställningar.
 
-Adobe Illustrator filformat är en variant av PDF. De största skillnaderna när det gäller Experience Manager Assets är följande:
+Adobe Illustrator filformat är en variant av PDF. De största skillnaderna i Experience Manager Assets är följande:
 
 * Adobe Illustrator-dokument består av en sida med flera lager. Varje lager extraheras som en PNG-delresurs under Illustrator huvudresurs.
 * PDF-dokument består av en eller flera sidor. Varje sida extraheras som en enda PDF-delresurs under det huvudsakliga flersidiga PDF-dokumentet.
@@ -85,9 +85,9 @@ Delresurserna skapas av `Create Sub Asset process` -komponenten inom det övergr
 
 Se även [Visa sidor i en flersidig fil](/help/assets/managing-linked-subassets.md#view-pages-of-a-multi-page-file).
 
-Du kan visa delresurserna eller sidorna när du öppnar resursen, trycka på menyn Innehåll och välja **[!UICONTROL Subassets]** eller **[!UICONTROL Pages]**. Deltillgångarna är verkliga tillgångar. PDF sidor extraheras med andra ord av `Create Sub Asset` arbetsflödeskomponent. De lagras sedan som `page1.pdf`, `page2.pdf`och så vidare, under huvudtillgången. När de är lagrade `DAM Update Asset` arbetsflödet behandlar dem.
+Du kan visa delresurserna eller sidorna när du öppnar resursen, trycka på Innehåll-menyn och välja **[!UICONTROL Subassets]** eller **[!UICONTROL Pages]**. Deltillgångarna är verkliga tillgångar. PDF sidor extraheras med andra ord av `Create Sub Asset` arbetsflödeskomponent. De lagras sedan som `page1.pdf`, `page2.pdf`och så vidare, under huvudtillgången. När de är lagrade `DAM Update Asset` de behandlas i arbetsflödet.
 
-Om du vill använda Dynamic Media för att förhandsgranska och generera dynamiska renderingar för AI-, EPS- eller PDF-filer måste du utföra följande steg:
+Om du vill använda Dynamic Media för att förhandsgranska och generera dynamiska renderingar för AI-, EPS- eller PDF-filer måste du utföra följande åtgärder:
 
 1. I `DAM Update Asset` arbetsflöde, `Rasterize PDF/AI Image Preview Rendition` processkomponenten rastrerar den första sidan i den ursprungliga resursen - med den konfigurerade upplösningen - till en `cqdam.preview.png` återgivning.
 
@@ -97,7 +97,7 @@ Om du vill använda Dynamic Media för att förhandsgranska och generera dynamis
 >
 >I [!UICONTROL DAM Update Asset] arbetsflöde, **[!UICONTROL EPS thumbnails]** genererar miniatyrbilder för EPS-filer.
 
-#### PDF/AI/EPS-metadataegenskaper för objekt {#pdf-ai-eps-asset-metadata-properties}
+#### PDF/AI/EPS-metadata för objekt {#pdf-ai-eps-asset-metadata-properties}
 
 | **Metadataegenskap** | **Beskrivning** |
 |---|---|
@@ -106,7 +106,7 @@ Om du vill använda Dynamic Media för att förhandsgranska och generera dynamis
 
 Du har åtkomst `Rasterize PDF/AI Image Preview Rendition` bearbeta komponentalternativ via `DAM Update Asset` arbetsflöde.
 
-Tryck på Adobe Experience Manager i det övre vänstra hörnet, navigera till **[!UICONTROL Tools]** > **[!UICONTROL Workflow]** > **[!UICONTROL Models]**. På sidan Arbetsflödesmodeller väljer du **[!UICONTROL DAM Update Asset]** och sedan trycker du på **[!UICONTROL Edit]**. På [!UICONTROL DAM Update Asset] arbetsflödessida, dubbeltrycka på `Rasterize PDF/AI Image Preview Rendition` för att öppna dialogrutan Stegegenskaper.
+Tryck på Adobe Experience Manager i det övre vänstra hörnet, navigera till **[!UICONTROL Tools]** > **[!UICONTROL Workflow]** > **[!UICONTROL Models]**. Välj på sidan Arbetsflödesmodeller **[!UICONTROL DAM Update Asset]** och sedan trycker du på **[!UICONTROL Edit]**. På [!UICONTROL DAM Update Asset] arbetsflödessida, dubbeltrycka på `Rasterize PDF/AI Image Preview Rendition` bearbetningskomponent för att öppna dialogrutan Stegegenskaper.
 
 #### Rastrera återgivningsalternativen PDF/AI Image Preview {#rasterize-pdf-ai-image-preview-rendition-options}
 
@@ -150,15 +150,15 @@ Maximal bredd och Maximal höjd begränsar upplösningen som rastreras. Om maxv�
 
 The `Rasterize PDF/AI Image Preview Rendition` processkomponenten har en definierad maxgräns för att säkerställa att den inte skapar för stora bilder i minnet. Sådana stora bilder kan flöda över minnet som Java™ Virtual Machine (Java™ Virtual Machine) har fått. Man måste se till att JVM får tillräckligt med minne för att hantera det konfigurerade antalet parallella arbetsflöden, där var och en har möjlighet att skapa en bild med den högsta konfigurerade storleken.
 
-### InDesign (INDD), filformat {#indesign-indd-file-format}
+### Filformatet InDesign (INDD) {#indesign-indd-file-format}
 
 Om du tänker ge stöd för inmatning av INDD-filer så att du kan generera en dynamisk återgivning av det här filformatet, kanske du vill granska följande information innan du skapar bildförinställningar.
 
-För InDesign-filer extraheras underresurser endast om Adobe InDesign Server är integrerat med Experience Manager. Refererade resurser länkas baserat på deras metadata. InDesign Server krävs inte för länkning. De refererade resurserna måste dock finnas i Experience Manager innan InDesign-filerna bearbetas för de länkar som ska skapas mellan InDesign-filerna och de refererade resurserna.
+För InDesign-filer extraheras underresurser endast om Adobe InDesign Server är integrerat med Experience Manager. Refererade resurser länkas baserat på deras metadata. InDesign Server krävs inte för länkning. De refererade resurserna måste dock finnas i Experience Manager innan InDesignen bearbetas för de länkar som ska skapas mellan InDesignen och de refererade resurserna.
 
 Se [Integrera Experience Manager Assets med InDesign Server](/help/assets/indesign.md).
 
-Processkomponenten för medieextraheringsprocessen i `DAM Update Asset` arbetsflödet kör flera förkonfigurerade Extend Scripts för att bearbeta InDesign-filer.
+Processkomponenten Medieextrahering i `DAM Update Asset` arbetsflödet kör flera förkonfigurerade Extend Scripts för att bearbeta InDesigner.
 
 ![ExtendScript-sökvägarna i argumenten i medieextraheringsprocessen](assets/6_5_mediaextractionprocess.png)
 
@@ -181,7 +181,7 @@ Följande skript används av Dynamic Media-integrering:
   <tr>
    <td>JPEGPagesExport.jsx</td>
    <td>Ja</td>
-   <td>Skapar en 300 PPI JPEG-underresurs för varje sida. Underresursen JPEG är en reell tillgång som lagras under resursen InDesign. Den är också optimerad och omvandlad till en PTIFF av <code>DAM Update Asset</code> arbetsflöde.<br /> </td>
+   <td>Skapar en 300 PPI JPEG-underresurs för varje sida. Underresursen JPEG är en reell tillgång som lagras under InDesignen. Den är också optimerad och omvandlad till en PTIFF av <code>DAM Update Asset</code> arbetsflöde.<br /> </td>
   </tr>
   <tr>
    <td>PDFPagesExport.jsx</td>
@@ -201,11 +201,10 @@ Storleksändring för miniatyrbilder definieras i följande format: **[!UICONTRO
 
 >[!NOTE]
 >
->* Miniatyrstorlekar för EPS-filer konfigureras i **[!UICONTROL EPS thumbnails]** steg, i **[!UICONTROL Arguments]** under Miniatyrbilder.
+>* Miniatyrstorlekar för EPS-filer konfigureras i **[!UICONTROL EPS thumbnails]** i **[!UICONTROL Arguments]** under Miniatyrbilder.
 >
->* Miniatyrbildsstorlekar för videoklipp konfigureras i **[!UICONTROL FFmpeg thumbnails]** steg, i **[!UICONTROL Process]** flik under **[!UICONTROL Arguments]**.
+>* Miniatyrbildsstorlekar för videor konfigureras i **[!UICONTROL FFmpeg thumbnails]** i **[!UICONTROL Process]** flik under **[!UICONTROL Arguments]**.
 >
-
 
 **Så här konfigurerar du miniatyrbildens storlek:**
 
@@ -253,11 +252,11 @@ Om du tänker ge stöd för att lägga in AI-, PDF- och EPS-filer så att du kan
 Se [Adobe Illustrator (AI), Postscript (EPS) och PDF](#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats).
 
 Om du tänker ge stöd för inmatning av INDD-filer så att du kan generera en dynamisk återgivning av det här filformatet, kanske du vill granska följande information innan du skapar bildförinställningar.
-Se [InDesign (INDD), filformat](#indesign-indd-file-format).
+Se [Filformatet InDesign (INDD)](#indesign-indd-file-format).
 
 >[!NOTE]
 >
->Om du vill skapa förinställningar för Dynamic Media-bilder måste du ha administratörsbehörighet som Experience Manager-administratör eller Admin Console-administratör.
+>Om du vill skapa förinställningar för Dynamic Media-bilder måste du ha administratörsbehörighet som administratör för Experience Manager eller Admin Console.
 
 **Så här skapar du en bildförinställning för Dynamic Media:**
 
@@ -286,7 +285,7 @@ Om du lämnar dem tomma visas information för Experience Manager om att den hä
 
 >[!NOTE]
 >
->För att se **[!UICONTROL URL]** och **[!UICONTROL RESS]** när du använder en bildförinställning på en resurs måste resursen publiceras.
+>Om du vill visa knapparna **[!UICONTROL URL]** och **[!UICONTROL RESS]** när du använder en bildförinställning på en resurs måste resursen publiceras.
 >
 >![chlimage_1-79](assets/chlimage_1-498.png)
 >
@@ -296,7 +295,7 @@ Om du lämnar dem tomma visas information för Experience Manager om att den hä
 
 ### Alternativ för bildförinställning {#image-preset-options}
 
-När du skapar eller redigerar bildförinställningar finns alternativen som beskrivs i det här avsnittet. Adobe rekommenderar dessutom att du börjar med följande alternativ:
+När du skapar eller redigerar bildförinställningar finns alternativen som beskrivs i det här avsnittet. Adobe rekommenderar dessutom att du börjar med följande&quot;best practice&quot;-alternativ:
 
 * **[!UICONTROL Format]** (**[!UICONTROL Basic]** tab) - Select **[!UICONTROL JPEG]** eller något annat format som uppfyller dina krav. Alla webbläsare har stöd för JPEG-bildformatet. Det ger en bra balans mellan små filstorlekar och bildkvalitet. I bilder med JPEG-format används dock förstörande komprimering, som kan ge upphov till oönskade bildartefakter om komprimeringsinställningen är för låg. Därför rekommenderar Adobe att du ställer in komprimeringskvaliteten på 75. Den här inställningen ger en bra balans mellan bildkvalitet och liten filstorlek.
 
@@ -330,11 +329,11 @@ När du skapar eller redigerar bildförinställningar finns alternativen som bes
     <div>
       Välja
      <strong>GIF</strong> eller
-     <strong>GIF med alfa</strong> innehåller ytterligare
+     <strong>GIF med alfa</strong> innehåller dessa ytterligare
      <strong>Färgkvantifiering för GIF</strong> alternativ:
     </div>
     <ul>
-     <li><strong>Typ </strong>- Välj <strong>Adaptiv</strong> (standard), <strong>Webb</strong>, eller <strong>Macintosh</strong>. Om du väljer <strong>GIF med alfa</strong>är alternativet Macintosh inte tillgängligt.</li>
+     <li><strong>Typ </strong>- Välj <strong>Adaptiv</strong> (standard), <strong>Webb</strong>, eller <strong>Macintosh</strong>. Om du väljer <strong>GIF med Alpha</strong>är alternativet Macintosh inte tillgängligt.</li>
      <li><strong>Gitter</strong> - Välj <strong>Diffusera</strong> eller <strong>Av</strong>.</li>
      <li><strong>Antal färger </strong>- Ange ett tal mellan 2 och 256.</li>
      <li><strong>Färglista</strong> - Ange en kommaavgränsad lista. För vitt, grått och svart anger du <code>000000,888888,ffffff</code>.</li>
@@ -343,15 +342,15 @@ När du skapar eller redigerar bildförinställningar finns alternativen som bes
       Välja
      <strong>PDF</strong>,
      <strong>TIFF</strong>, eller
-     <strong>TIFF med alfa</strong> innehåller ytterligare alternativ:
+     <strong>TIFF med alfa</strong> innehåller ytterligare ett alternativ:
     </div>
     <ul>
-     <li><strong>Komprimering</strong> - Välj en komprimeringsalgoritm. Algoritmalternativ för PDF är <strong>Ingen</strong>, <strong>Postnummer</strong>och <strong>Jpeg</strong>; för TIFF är alternativen <strong>Ingen</strong>, <strong>LZW</strong>, <strong>Jpeg</strong>och <strong>Postnummer</strong>; och TIFF med alfa är <strong>Ingen</strong>, <strong>LZW</strong>och <strong>Postnummer</strong>.</li>
-    </ul> <p>Välja <strong>PNG</strong>, <strong>PNG med alfa,</strong> eller <strong>EPS</strong> innehåller inga ytterligare alternativ.</p> </td>
+     <li><strong>Komprimering</strong> - Välj en komprimeringsalgoritm. Algoritmalternativ för PDF är <strong>Ingen</strong>, <strong>Postnummer</strong>och <strong>Jpeg</strong>För TIFF är alternativen <strong>Ingen</strong>, <strong>LZW</strong>, <strong>Jpeg</strong>och <strong>Postnummer</strong>och för TIFF med Alpha är <strong>Ingen</strong>, <strong>LZW</strong>och <strong>Postnummer</strong>.</li>
+    </ul> <p>Välja <strong>PNG</strong>, <strong>PNG med Alpha,</strong> eller <strong>EPS</strong> innehåller inga ytterligare alternativ.</p> </td>
   </tr>
   <tr>
    <td><strong>Skärpa</strong></td>
-   <td>Välj <strong>Aktivera enkel skärpa</strong> om du vill använda ett grundläggande skärpefilter på bilden när all skalförändring har gjorts. Skärpa kan kompensera för oskärpa som kan uppstå när du visar en bild i en annan storlek. </td>
+   <td>Välj <strong>Aktivera enkel skärpa</strong> om du vill använda ett grundläggande skärpefilter på bilden efter att all skalförändring har gjorts. Skärpa kan kompensera för oskärpa som kan uppstå när du visar en bild i en annan storlek. </td>
   </tr>
  </tbody>
 </table>
@@ -374,7 +373,7 @@ När du skapar eller redigerar bildförinställningar finns alternativen som bes
   </tr>
   <tr>
    <td><strong>Återgivningsmetod</strong></td>
-   <td>Du kan åsidosätta standardåtergivningsmetoden. Återgivningsmetoden bestämmer vad som händer med färger som inte kan återges i målfärgprofilen (ej tryckbart). Återgivningsmetoden ignoreras om den inte är kompatibel med ICC-profilen.
+   <td>Du kan åsidosätta standardåtergivningsmetoden. Återgivningsmetoden avgör vad som händer med färger som inte kan återges i målfärgprofilen (ej tryckbart). Återgivningsmetoden ignoreras om den inte är kompatibel med ICC-profilen.
     <ul>
      <li>Välj <strong>Perceptuell</strong> om du vill komprimera det totala färgomfånget från en färgrymd till en annan när en eller flera färger i den ursprungliga bilden är utanför färgomfånget för målfärgrymden.</li>
      <li>Välj <strong>Relativa färgvärden</strong> när en färg i den aktuella färgrymden inte är tryckbar i målfärgrymden. Och du vill mappa den till närmaste möjliga färg inom färgomfånget för målfärgrymden utan att påverka några andra färger. </li>
@@ -400,7 +399,7 @@ När du skapar eller redigerar bildförinställningar finns alternativen som bes
     </ul> <p>I <strong>Oskarp mask</strong>har du följande alternativ:</p>
     <ul>
      <li><strong>Belopp</strong> - Styr mängden kontrast som används på kantpixlar. Standardvärdet för reella tal är 1,0. För högupplösta bilder kan du öka den till upp till 5.0. Tänk på Mängd som ett mått på filterintensiteten.</li>
-     <li><strong>Radie</strong> - Anger antalet pixlar runt kantpixlarna som påverkar skärpan. För högupplösta bilder anger du ett reellt tal mellan 1 och 2. Med ett lågt värde ökas endast kantpixlarna skärpan. ett högt värde ökar skärpan i ett större antal pixlar. Vilket värde som är korrekt beror på bildens storlek.</li>
+     <li><strong>Radie</strong> - Anger antalet pixlar runt kantpixlarna som påverkar skärpan. För högupplösta bilder anger du ett reellt tal mellan 1 och 2. Med ett lågt värde ökas skärpan endast för kantpixlarna. Med ett högt värde ökas skärpan för ett bredare intervall av pixlar. Vilket värde som är korrekt beror på bildens storlek.</li>
      <li><strong>Tröskelvärde</strong> - Anger det kontrastintervall som ska ignoreras när det oskarpa maskfiltret används. Med andra ord, det här alternativet avgör hur olika de pixlar som ska göras skarpare måste vara från det omgivande området innan de betraktas som kantpixlar och blir skarpare. Experimentera med heltalsvärden mellan 2 och 20 för att undvika brus. </li>
      <li><strong>Använd på</strong> - Avgör om den oskarpa inställningen ska gälla för varje färg eller intensitet.</li>
     </ul>
@@ -422,20 +421,20 @@ När du skapar eller redigerar bildförinställningar finns alternativen som bes
   </tr>
   <tr>
    <td><strong>Utskriftsupplösning</strong></td>
-   <td>Välj en upplösning för utskrift av den här bilden; 72 pixlar är standard.</td>
+   <td>Välj en upplösning för utskrift av den här bilden. 72 pixlar är standard.</td>
   </tr>
   <tr>
    <td><strong>Bildmodifierare</strong></td>
-   <td><p>Förutom de vanliga bildinställningarna i användargränssnittet har Dynamic Media stöd för många avancerade bildändringar som du kan ange i <strong>Bildmodifierare</strong> fält. Dessa parametrar definieras i <a href="https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/c-command-reference.html#image-serving-api">Kommandoreferens för Image Server-protokoll</a>.</p> <p>Viktigt: Följande funktioner i API:t stöds inte:</p>
+   <td><p>Förutom de vanliga bildinställningarna i användargränssnittet stöder Dynamic Media många avancerade bildändringar som du kan ange i <strong>Bildmodifierare</strong> fält. Dessa parametrar definieras i <a href="https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/c-command-reference.html#image-serving-api">Kommandoreferens för Image Server Protocol</a>.</p> <p>Viktigt: Följande funktioner i API:t stöds inte:</p>
     <ul>
      <li>Grundläggande kommandon för mallar och textåtergivning: <code>text= textAngle= textAttr= textFlowPath= textFlowXPath= textPath=</code> och <code>textPs=</code></li>
-     <li>Lokaliseringskommandon: <code>locale=</code> och <code>req=xlate</code></li>
+     <li>Localization commands: <code>locale=</code> och <code>req=xlate</code></li>
      <li><code>req=set</code> är inte tillgängligt för allmän användning.</li>
      <li><code>req=mbrset</code></li>
      <li><code>req=saveToFile</code></li>
      <li><code>req=targets</code></li>
      <li><code>template=</code></li>
-     <li>Icke-kärntjänster från Dynamic Media: SVG, bildåtergivning och webb-till-tryck</li>
+     <li>Icke-centrala Dynamic Media-tjänster: SVG, bildåtergivning och web-to-Print</li>
     </ul> </td>
   </tr>
  </tbody>
@@ -453,43 +452,43 @@ Nedan följer några grundläggande exempel på vad du kan göra med bildmodifie
 
 * [op_invert](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-op-invert.html#image-serving-api) - Inverterar varje färgkomponent för en negativ bildeffekt.
 
-   ```xml
-   &op_invert=1
-   ```
+  ```xml
+  &op_invert=1
+  ```
 
-   ![6_5_imagepreset-edit-invert](assets/6_5_imagepreset-edit-invert.png)
+  ![6_5_imagepreset-edit-invert](assets/6_5_imagepreset-edit-invert.png)
 
 * [op_blur](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-op-blur.html#image-serving-api) - Använder ett oskärpefilter på bilden.
 
-   ```xml
-   &op_blur=7
-   ```
+  ```xml
+  &op_blur=7
+  ```
 
-   ![6_5_imagepreset-edit-blur](assets/6_5_imagepreset-edit-blur.png)
+  ![6_5_imagepreset-edit-blur](assets/6_5_imagepreset-edit-blur.png)
 
 * Kombinerade kommandon - op_blur och op-invert
 
-   ```xml
-   &op_invert=1&op_blur=7
-   ```
+  ```xml
+  &op_invert=1&op_blur=7
+  ```
 
-   ![chlimage_1-80](assets/chlimage_1-501.png)
+  ![chlimage_1-80](assets/chlimage_1-501.png)
 
 * [op_brightness](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-op-brightness.html#image-serving-api) - Minskar eller ökar intensiteten.
 
-   ```xml
-   &op_brightness=58
-   ```
+  ```xml
+  &op_brightness=58
+  ```
 
-   ![6_5_imagepreset-edit-brightness](assets/6_5_imagepreset-edit-brightness.png)
+  ![6_5_imagepreset-edit-brightness](assets/6_5_imagepreset-edit-brightness.png)
 
 * [opac](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-opac.html#image-serving-api) - Justerar bildens opacitet. Du kan minska förgrundens opacitet.
 
-   ```xml
-   opac=29
-   ```
+  ```xml
+  opac=29
+  ```
 
-   ![6_5_imagepreset-edit-opacity](assets/6_5_imagepreset-edit-opacity.png)
+  ![6_5_imagepreset-edit-opacity](assets/6_5_imagepreset-edit-opacity.png)
 
 ## Redigera bildförinställningar {#modifying-image-presets}
 
@@ -504,7 +503,7 @@ Nedan följer några grundläggande exempel på vad du kan göra med bildmodifie
 
 Om du kör Dynamic Media - hybrid-läge måste du publicera bildförinställningar manuellt.
 
-(Om du kör Dynamic Media - Scene7-läge publiceras bildförinställningar automatiskt åt dig; behöver du inte utföra dessa steg.)
+(Om du kör Dynamic Media - Scene7-läge publiceras bildförinställningar automatiskt åt dig. Du behöver inte utföra dessa steg.)
 
 **Så här publicerar du bildförinställningar i Dynamic Media - hybrid-läge:**
 
@@ -518,4 +517,4 @@ Om du kör Dynamic Media - hybrid-läge måste du publicera bildförinställning
 
 1. I Experience Manager: tryck eller klicka på Experience Manager-logotypen för att komma åt den globala navigeringskonsolen.
 1. Tryck på **[!UICONTROL Tools]** ikonen, navigera sedan till **[!UICONTROL Assets]** > **[!UICONTROL Image Presets]**.
-1. Välj en förinställning och klicka sedan på **[!UICONTROL Delete]**. Dynamic Media bekräftar att du vill ta bort den. Tryck **[!UICONTROL Delete]** ta bort eller trycka **[!UICONTROL Cancel]** för att avbryta.
+1. Välj en förinställning och klicka sedan på **[!UICONTROL Delete]**. Dynamic Media bekräftar att du vill ta bort den. Tryck **[!UICONTROL Delete]** för att ta bort eller trycka **[!UICONTROL Cancel]** för att avbryta.

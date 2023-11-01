@@ -11,9 +11,9 @@ topic-tags: operations
 discoiquuid: 076889a7-9c9f-4b6f-a45b-67a9b3923c36
 role: Developer
 exl-id: b94dcca2-136b-4b7d-b5ce-544804575876
-source-git-commit: 0c7dba43dad8608b4a5de271e1e44942c950fb16
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '10805'
+source-wordcount: '10801'
 ht-degree: 0%
 
 ---
@@ -57,7 +57,7 @@ Du kan utföra följande uppgifter med hjälp av tjänsten för slutpunktsregist
 
 ## Lägga till EJB-slutpunkter {#adding-ejb-endpoints}
 
-Du kan programmässigt lägga till en EJB-slutpunkt till en tjänst med AEM Forms Java API. Genom att lägga till en EJB-slutpunkt till en tjänst aktiverar du ett klientprogram att anropa tjänsten i EJB-läge. Det innebär att du kan välja EJB-läge när du anger anslutningsegenskaper som krävs för att anropa AEM Forms. (Se [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).)
+Du kan programmässigt lägga till en EJB-slutpunkt till en tjänst med hjälp av AEM Forms Java API. Genom att lägga till en EJB-slutpunkt till en tjänst aktiverar du ett klientprogram att anropa tjänsten i EJB-läge. Det innebär att du kan välja EJB-läge när du anger anslutningsegenskaper som krävs för att anropa AEM Forms. (Se [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).)
 
 >[!NOTE]
 >
@@ -134,15 +134,15 @@ Lägg till en EJB-slutpunkt med Java API:
 1. Ange EJB-slutpunktsattribut.
 
    * Skapa en `CreateEndpointInfo` genom att använda dess konstruktor.
-   * Ange värdet för anslutaridentifieraren genom att anropa `CreateEndpointInfo` objektets `setConnectorId` metoden och skicka strängvärdet `EJB`.
+   * Ange anslutnings-ID-värdet genom att anropa `CreateEndpointInfo` objektets `setConnectorId` metoden och skicka strängvärdet `EJB`.
    * Ange beskrivningen av slutpunkten genom att anropa `CreateEndpointInfo` objektets `setDescription` och skickar ett strängvärde som beskriver slutpunkten.
    * Ange slutpunktens namn genom att anropa `CreateEndpointInfo` objektets `setName` och skickar ett strängvärde som anger namnet.
    * Ange tjänsten som slutpunkten tillhör genom att anropa `CreateEndpointInfo` objektets `setServiceId` och skickar ett strängvärde som anger tjänstnamnet.
-   * Ange åtgärden som anropas genom att anropa `CreateEndpointInfo` objektets `setOperationName` och skicka ett strängvärde som anger åtgärdens namn. För SOAP- och EJB-slutpunkter anger du ett jokertecken ( `*`), vilket betyder alla operationer.
+   * Ange åtgärden som anropas genom att anropa `CreateEndpointInfo` objektets `setOperationName` och skicka ett strängvärde som anger åtgärdsnamnet. För SOAP- och EJB-slutpunkter anger du ett jokertecken ( `*`), vilket betyder alla operationer.
 
 1. Skapa en EJB-slutpunkt.
 
-   Skapa slutpunkten genom att anropa `EndpointRegistryClient` objektets `createEndpoint` metoden och skicka `CreateEndpointInfo` -objekt. Den här metoden returnerar en `Endpoint` objekt som representerar den nya EJB-slutpunkten.
+   Skapa slutpunkten genom att starta `EndpointRegistryClient` objektets `createEndpoint` metoden och skicka `CreateEndpointInfo` -objekt. Den här metoden returnerar en `Endpoint` objekt som representerar den nya EJB-slutpunkten.
 
 1. Aktivera slutpunkten.
 
@@ -239,7 +239,7 @@ Lägg till en SOAP-slutpunkt till en tjänst med hjälp av Java API:
 1. Ange SOAP-slutpunktsattribut.
 
    * Skapa en `CreateEndpointInfo` genom att använda dess konstruktor.
-   * Ange värdet för anslutaridentifieraren genom att anropa `CreateEndpointInfo` objektets `setConnectorId` metoden och skicka strängvärdet `SOAP`.
+   * Ange anslutnings-ID-värdet genom att anropa `CreateEndpointInfo` objektets `setConnectorId` metoden och skicka strängvärdet `SOAP`.
    * Ange beskrivningen av slutpunkten genom att anropa `CreateEndpointInfo` objektets `setDescription` och skickar ett strängvärde som beskriver slutpunkten.
    * Ange slutpunktens namn genom att anropa `CreateEndpointInfo` objektets `setName` och skickar ett strängvärde som anger namnet.
    * Ange tjänsten som slutpunkten tillhör genom att anropa `CreateEndpointInfo` objektets `setServiceId` och skickar ett strängvärde som anger tjänstnamnet.
@@ -247,7 +247,7 @@ Lägg till en SOAP-slutpunkt till en tjänst med hjälp av Java API:
 
 1. Skapa en SOAP-slutpunkt.
 
-   Skapa slutpunkten genom att anropa `EndpointRegistryClient` objektets `createEndpoint` metoden och skicka `CreateEndpointInfo` -objekt. Den här metoden returnerar en `Endpoint` objekt som representerar den nya SOAP-slutpunkten.
+   Skapa slutpunkten genom att starta `EndpointRegistryClient` objektets `createEndpoint` metoden och skicka `CreateEndpointInfo` -objekt. Den här metoden returnerar en `Endpoint` objekt som representerar den nya SOAP-slutpunkten.
 
 1. Aktivera slutpunkten.
 
@@ -265,9 +265,9 @@ Lägg till en SOAP-slutpunkt till en tjänst med hjälp av Java API:
 
 ## Lägga till bevakade mappslutpunkter {#adding-watched-folder-endpoints}
 
-Du kan programmässigt lägga till en bevakad mappslutpunkt till en tjänst med hjälp av AEM Forms Java API. Genom att lägga till en bevakad mappslutpunkt kan användare placera en fil (till exempel en PDF-fil) i en mapp. När filen placeras i mappen anropas den konfigurerade tjänsten och filen ändras. När tjänsten har utfört den angivna åtgärden sparas den ändrade filen i en angiven utdatamapp. En bevakad mapp är konfigurerad för att skannas med ett fast intervall eller med ett cron-schema, till exempel varje måndag, onsdag och fredag kl. 12.00.
+Du kan programmässigt lägga till en bevakad mappslutpunkt till en tjänst med hjälp av AEM Forms Java API. Genom att lägga till en bevakad mappslutpunkt kan användare placera en fil (till exempel en PDF-fil) i en mapp. När filen placeras i mappen anropas den konfigurerade tjänsten och filen ändras. När tjänsten har utfört den angivna åtgärden sparas den ändrade filen i en angiven utdatamapp. En bevakad mapp är konfigurerad för att skannas med ett fast intervall eller med ett cron-schema, till exempel varje måndag, onsdag och fredag vid tolv.
 
-Om du vill lägga till en övervakad mappslutpunkt i en tjänst med programkod bör du överväga följande kortlivade process med namnet *EncryptDocument*. (Se [Förstå AEM Forms-processer](/help/forms/developing/aem-forms-processes.md#understanding-aem-forms-processes).)
+Om du vill lägga till en övervakad mappslutpunkt i en tjänst med programkod bör du överväga följande kortlivade process med namnet *EncryptDocument*. (Se [Förstå AEM Forms processer](/help/forms/developing/aem-forms-processes.md#understanding-aem-forms-processes).)
 
 ![aw_aw_encryptdocumentProcess](assets/aw_aw_encryptdocumentprocess.png)
 
@@ -312,7 +312,7 @@ Om du vill lägga till en bevakad mappslutpunkt med programkod måste du skapa e
 Om du vill skapa en bevakad mappslutpunkt för en tjänst anger du följande värden:
 
 * **Kopplingsidentifierare**: Anger den typ av slutpunkt som skapas. Om du vill skapa en bevakad mappslutpunkt anger du `WatchedFolder`.
-* **Beskrivning**: Anger beskrivningen av slutpunkten.
+* **Beskrivning**: Anger slutpunktens beskrivning.
 * **Namn**: Anger slutpunktens namn.
 * **Tjänstidentifierare**: Anger den tjänst som slutpunkten tillhör. Om du till exempel vill lägga till en bevakad mappslutpunkt i processen som introduceras i det här avsnittet (en process blir en tjänst när den aktiveras med Workbench) anger du `EncryptDocument`.
 * **Åtgärdsnamn**: Anger namnet på åtgärden som anropas med slutpunkten. När du skapar en bevakad mappslutpunkt för en tjänst som kommer från en process som har skapats i Workbench, är namnet på åtgärden vanligtvis `invoke`.
@@ -327,33 +327,33 @@ Följande lista anger konfigurationsvärden som anges när en bevakad mappslutpu
 * **asynkron**: Identifierar anropstypen som asynkron eller synkron. Övergående och synkrona processer kan bara anropas synkront. Standardvärdet är true. Asynkron rekommenderas.
 * **cronExpression**: Används av kvarts för att schemalägga avsökningen av indatakatalogen.
 * **purgeDuration**: Detta är ett obligatoriskt attribut. Filer och mappar i resultatmappen tas bort när de är äldre än det här värdet. Detta värde mäts i dagar. Det här attributet är användbart för att säkerställa att resultatmappen inte blir full. Värdet -1 dagar anger att resultatmappen aldrig ska tas bort. Standardvärdet är -1.
-* **repeatInterval**: Intervallet, i sekunder, för inläsning av den bevakade mappen. Om inte strypning är aktiverat ska det här värdet vara längre än tiden för att bearbeta ett genomsnittligt jobb. annars kan systemet bli överbelastat. Standardvärdet är 5.
-* **repeatCount**: Antalet gånger som en bevakad mapp genomsöker mappen eller katalogen. Värdet -1 anger obestämd skanning. Standardvärdet är -1.
+* **repeatInterval**: Intervallet, i sekunder, för inläsning av den bevakade mappen. Om inte strypning är aktiverat bör det här värdet vara längre än tiden för att bearbeta ett genomsnittligt jobb. Annars kan systemet bli överbelastat. Standardvärdet är 5.
+* **repeatCount**: Antal gånger en bevakad mapp genomsöker mappen eller katalogen. Värdet -1 anger oändlig skanning. Standardvärdet är -1.
 * **strypningPå**: Begränsar antalet övervakade mappjobb som kan bearbetas vid en given tidpunkt. Det maximala antalet jobb bestäms av batchSize-värdet.
-* **userName**: Användarnamnet som används när en måltjänst anropas från den bevakade mappen. Detta värde är obligatoriskt. Standardvärdet är SuperAdmin.
+* **userName**: Det användarnamn som används när en måltjänst anropas från den bevakade mappen. Detta värde är obligatoriskt. Standardvärdet är SuperAdmin.
 * **domainName**: Användarens domän. Detta värde är obligatoriskt. Standardvärdet är DefaultDom.
-* **batchSize**: Antalet filer eller mappar som ska hämtas per skanning. Använd det här värdet för att förhindra överbelastning på systemet. Om du skannar in för många filer samtidigt kan det resultera i en krasch. Standardvärdet är 2.
-* **waitTime**: Tiden, i millisekunder, att vänta innan en mapp eller fil skannas efter att den har skapats. Om väntetiden t.ex. är 36 000 000 millisekunder (en timme) och filen skapades för en minut sedan, hämtas den här filen när 59 eller fler minuter har gått. Det här attributet är användbart för att säkerställa att en fil eller mapp kopieras helt till indatamappen. Om du till exempel har en stor fil att bearbeta och det tar tio minuter att hämta filen, ställer du in väntetiden på 10&amp;ast;60 &amp;ast;1 000 millisekunder. Den här inställningen förhindrar att den bevakade mappen skannar filen om den inte har väntat i tio minuter. Standardvärdet är 0.
-* **excludeFilePattern**: Mönstret som en bevakad mapp använder för att avgöra vilka filer och mappar som ska sökas igenom och hämtas. Filer eller mappar med det här mönstret skannas inte för bearbetning. Den här inställningen är användbar när indata är en mapp som innehåller flera filer. Innehållet i mappen kan kopieras till en mapp som har ett namn som kommer att hämtas av den bevakade mappen. Det här steget förhindrar att den bevakade mappen hämtar en mapp för bearbetning innan mappen kopieras helt till indatamappen. Om värdet excludeFilePattern till exempel är `data*`, alla filer och mappar som matchar `data*` har inte hämtats. Detta inkluderar filer och mappar med namn `data1`, `data2`och så vidare. Dessutom kan mönstret kompletteras med jokertecken för att ange filmönster. Den bevakade mappen ändrar det reguljära uttrycket så att det stöder jokerteckenmönster som `*.*` och `*.pdf`. Dessa mönster med jokertecken stöds inte av reguljära uttryck.
-* **includeFilePattern**: Det mönster som den bevakade mappen använder för att avgöra vilka mappar och filer som ska sökas igenom och hämtas. Om det här värdet till exempel är `*`, alla filer och mappar som matchar `input*` plockas upp. Detta inkluderar filer och mappar med namn `input1`, `input2`och så vidare. Standardvärdet är `*`. Detta värde anger alla filer och mappar. Dessutom kan mönstret kompletteras med jokertecken för att ange filmönster. Den bevakade mappen ändrar det reguljära uttrycket så att det stöder jokerteckenmönster som `*.*` och `*.pdf`. Dessa mönster med jokertecken stöds inte av reguljära uttryck. Detta värde är obligatoriskt.
+* **batchSize**: Antalet filer eller mappar som ska hämtas per skanning. Använd det här värdet om du vill förhindra överbelastning på datorn. Om du skannar för många filer samtidigt kan det resultera i en krasch. Standardvärdet är 2.
+* **waitTime**: Den tid i millisekunder som du vill vänta innan du skannar en mapp eller fil efter att den har skapats. Om väntetiden t.ex. är 36 000 000 millisekunder (en timme) och filen skapades för en minut sedan, hämtas den här filen när 59 eller fler minuter har gått. Det här attributet är användbart för att säkerställa att en fil eller mapp kopieras helt till indatamappen. Om du till exempel har en stor fil att bearbeta och det tar tio minuter att hämta filen, ställer du in väntetiden på 10&amp;ast;60 &amp;ast;1 000 millisekunder. Den här inställningen förhindrar att den bevakade mappen skannar filen om den inte har väntat i tio minuter. Standardvärdet är 0.
+* **excludeFilePattern**: Det mönster som en bevakad mapp använder för att avgöra vilka filer och mappar som ska sökas igenom och plockas upp. Filer eller mappar med det här mönstret skannas inte för bearbetning. Den här inställningen är användbar när indata är en mapp som innehåller flera filer. Innehållet i mappen kan kopieras till en mapp som har ett namn som kommer att hämtas av den bevakade mappen. Det här steget förhindrar att den bevakade mappen hämtar en mapp för bearbetning innan mappen kopieras helt till indatamappen. Om värdet excludeFilePattern till exempel är `data*`, alla filer och mappar som matchar `data*` har inte hämtats. Detta inkluderar filer och mappar med namn `data1`, `data2`och så vidare. Dessutom kan mönstret kompletteras med jokertecken för att ange filmönster. Den bevakade mappen ändrar det reguljära uttrycket så att det stöder jokerteckenmönster som `*.*` och `*.pdf`. Dessa mönster med jokertecken stöds inte av reguljära uttryck.
+* **includeFilePattern**: Det mönster som den bevakade mappen använder för att avgöra vilka mappar och filer som ska sökas igenom och hämtas. Om värdet till exempel är `*`, alla filer och mappar som matchar `input*` plockas upp. Detta inkluderar filer och mappar med namn `input1`, `input2`och så vidare. Standardvärdet är `*`. Detta värde anger alla filer och mappar. Dessutom kan mönstret kompletteras med jokertecken för att ange filmönster. Den bevakade mappen ändrar det reguljära uttrycket så att det stöder jokerteckenmönster som `*.*` och `*.pdf`. Dessa mönster med jokertecken stöds inte av reguljära uttryck. Detta värde är obligatoriskt.
 * **resultFolderName**: Mappen där de sparade resultaten lagras. Platsen kan vara en absolut eller relativ katalogsökväg. Om resultaten inte visas i den här mappen kontrollerar du felmappen. Skrivskyddade filer bearbetas inte och sparas i felmappen. Standardvärdet är `result/%Y/%M/%D/`. Det här är resultatmappen i den bevakade mappen.
-* **preserveFolderName**: Den plats där filerna lagras efter att sökningen och hämtningen har slutförts. Platsen kan vara en absolut, relativ eller null-katalogsökväg. Standardvärdet är `preserve/%Y/%M/%D/`.
+* **preserveFolderName**: Den plats där filerna lagras efter att sökningen och hämtningen har slutförts. Den här platsen kan vara en absolut, relativ eller en null-katalogsökväg. Standardvärdet är `preserve/%Y/%M/%D/`.
 * **errorFolderName**: Mappen där felfiler sparas. Den här platsen är alltid relativ till den bevakade mappen. Skrivskyddade filer bearbetas inte och sparas i felmappen. Standardvärdet är `failure/%Y/%M/%D/`.
 * **preserveOnFailure**: Bevara indatafiler om det inte går att utföra åtgärden på en tjänst. Standardvärdet är true.
-* **overwriteDuplicateFilename**: Om värdet är true skrivs filerna i resultatmappen och i den bevarade mappen över. Om värdet är false används filer och mappar med ett numeriskt indexsuffix som namn. Standardvärdet är false.
+* **overwriteDuplicateFilename**: Om true skrivs filerna i resultatmappen och i den bevarade mappen över. Om värdet är false används filer och mappar med ett numeriskt indexsuffix som namn. Standardvärdet är false.
 
 **Definiera indataparametervärden**
 
-När du skapar en bevakad mappslutpunkt måste du definiera indataparametervärden. Du måste alltså beskriva indatavärdena som skickas till åtgärden som anropas av den bevakade mappen. Ta till exempel en titt på processen som introducerades i det här avsnittet. Den har ett indatavärde med namnet `InDoc` och dess datatyp är `com.adobe.idp.Document`. När du skapar en bevakad mappslutpunkt för den här processen (när en process har aktiverats blir den en tjänst) måste du definiera värdet för indataparametern.
+När du skapar en bevakad mappslutpunkt måste du definiera värden för indataparametrar. Du måste alltså beskriva indatavärdena som skickas till åtgärden som anropas av den bevakade mappen. Ta till exempel en titt på processen som introducerades i det här avsnittet. Den har ett indatavärde med namnet `InDoc` och dess datatyp är `com.adobe.idp.Document`. När du skapar en bevakad mappslutpunkt för den här processen (när en process har aktiverats blir den en tjänst) måste du definiera värdet för indataparametern.
 
-Ange följande värden om du vill definiera indataparametervärden som krävs för en bevakad mappslutpunkt:
+Om du vill definiera indataparametervärden som krävs för en bevakad mappslutpunkt anger du följande värden:
 
 **Namn på indataparameter**: Namnet på indataparametern. Namnet på ett indatavärde anges i Workbench för en process. Om indatavärdet tillhör en tjänståtgärd (en tjänst som inte är en process som har skapats i Workbench) anges indatanamnet i filen component.xml. Namnet på indataparametern för processen som introduceras i det här avsnittet är till exempel `InDoc`.
 
 **Mappningstyp**: Används för att konfigurera de indatavärden som krävs för att anropa tjänståtgärden. Det finns två typer av mappningar:
 
-* `Literal`: Slutpunkten Bevakade mappar använder det värde som anges i fältet när det visas. Alla grundläggande Java-typer stöds. Om ett API till exempel använder indata som String, long, int och Boolean, konverteras strängen till rätt typ och tjänsten anropas.
-* `Variable`: Det angivna värdet är ett filmönster som används av den bevakade mappen för att välja indata. Om du till exempel väljer Variabel som mappningstyp och indatadokumentet måste vara en PDF-fil, kan du ange `*.pdf`som mappningsvärde.
+* `Literal`: Slutpunkten för bevakad mapp använder det värde som anges i fältet när det visas. Alla grundläggande Java-typer stöds. Om ett API till exempel använder indata som String, long, int och Boolean, konverteras strängen till rätt typ och tjänsten anropas.
+* `Variable`: Det angivna värdet är ett filmönster som den bevakade mappen använder för att välja indata. Om du till exempel väljer Variabel som mappningstyp och indatadokumentet måste vara en PDF-fil, kan du ange `*.pdf`som mappningsvärde.
 
 **Mappningsvärde**: Anger värdet för mappningstypen. Om du till exempel väljer en `Variable` mappningstyp, du kan ange `*.pdf` som filmönstret.
 
@@ -367,7 +367,7 @@ Om du vill definiera ett utdataparametervärde som krävs för en bevakad mappsl
 
 **Namn på utdataparameter**: Namnet på utdataparametern. Namnet på ett processutdatavärde anges i Workbench. Om utdatavärdet tillhör en tjänståtgärd (en tjänst som inte är en process som har skapats i Workbench) anges utdatanamnet i filen component.xml. Namnet på utdataparametern för processen som introduceras i det här avsnittet är till exempel `SecuredDoc`.
 
-**Mappningstyp**: Används för att konfigurera tjänstens och åtgärdens utdata. Följande alternativ är tillgängliga:
+**Mappningstyp**: Används för att konfigurera utdata för tjänsten och åtgärden. Följande alternativ är tillgängliga:
 
 * Om tjänsten returnerar ett enstaka objekt (ett enstaka dokument) är mönstret `%F.pdf` och källmålet är sourceFilename.pdf. Processen som introducerades i det här avsnittet returnerar till exempel ett enstaka dokument. Därför kan mappningstypen definieras som `%F.pdf` ( `%F` använder det angivna filnamnet). Mönstret `%E` Anger tillägget för indatadokumentet.
 * Om tjänsten returnerar en lista är mönstret `Result\%F\`och källmålet är Result\sourcefilename\source1 (output 1) och Result\sourcefilename\source2 (output 2).
@@ -407,7 +407,7 @@ Lägg till en bevakad mappslutpunkt med AEM Forms Java API:
 1. Ange slutpunktsattribut för bevakad mapp.
 
    * Skapa en `CreateEndpointInfo` genom att använda dess konstruktor.
-   * Ange värdet för anslutaridentifieraren genom att anropa `CreateEndpointInfo` objektets `setConnectorId` metoden och skicka strängvärdet `WatchedFolder`.
+   * Ange anslutnings-ID-värdet genom att anropa `CreateEndpointInfo` objektets `setConnectorId` metoden och skicka strängvärdet `WatchedFolder`.
    * Ange beskrivningen av slutpunkten genom att anropa `CreateEndpointInfo` objektets `setDescription` och skickar ett strängvärde som beskriver slutpunkten.
    * Ange slutpunktens namn genom att anropa `CreateEndpointInfo` objektets `setName` och skickar ett strängvärde som anger namnet.
    * Ange tjänsten som slutpunkten tillhör genom att anropa `CreateEndpointInfo` objektets `setServiceId` och skickar ett strängvärde som anger tjänstnamnet.
@@ -415,7 +415,7 @@ Lägg till en bevakad mappslutpunkt med AEM Forms Java API:
 
 1. Ange konfigurationsvärden.
 
-   För varje konfigurationsvärde som ska anges för slutpunkten för bevakad mapp måste du anropa `CreateEndpointInfo` objektets `setConfigParameterAsText` -metod. För att till exempel ange `url` konfigurationsvärde, anropa `CreateEndpointInfo` objektets `setConfigParameterAsText` och skicka följande strängvärden:
+   För varje konfigurationsvärde som ska anges för slutpunkten för bevakad mapp måste du anropa `CreateEndpointInfo` objektets `setConfigParameterAsText` -metod. För att till exempel ställa in `url` konfigurationsvärde, anropa `CreateEndpointInfo` objektets `setConfigParameterAsText` och skicka följande strängvärden:
 
    * Ett strängvärde som anger namnet på konfigurationsvärdet. När du anger `url` konfigurationsvärde, ange `url`.
    * Ett strängvärde som anger värdet för konfigurationsvärdet. När du anger `url` konfigurationsvärde, anger platsen för bevakad mapp.
@@ -428,7 +428,7 @@ Lägg till en bevakad mappslutpunkt med AEM Forms Java API:
 
    Definiera ett indataparametervärde genom att anropa `CreateEndpointInfo` objektets `setInputParameterMapping` och skicka följande värden:
 
-   * Ett strängvärde som anger namnet på indataparametern. Namnet på indataparametern för EncryptDocument-tjänsten är till exempel `InDoc`.
+   * Ett strängvärde som anger namnet på indataparametern. Namnet på indataparametern för EncryptDocument-tjänsten är `InDoc`.
    * Ett strängvärde som anger datatypen för indataparametern. Datatypen för `InDoc` indataparametern är `com.adobe.idp.Document`.
    * Ett strängvärde som anger mappningstypen. Du kan till exempel ange `variable`.
    * Ett strängvärde som anger mappningstypsvärdet. Du kan till exempel ange &amp;ast;.pdf som filmönster.
@@ -442,12 +442,12 @@ Lägg till en bevakad mappslutpunkt med AEM Forms Java API:
    Definiera ett utdataparametervärde genom att anropa `CreateEndpointInfo` objektets `setOutputParameterMapping` och skicka följande värden:
 
    * Ett strängvärde som anger namnet på utdataparametern. Namnet på utdataparametern för EncryptDocument-tjänsten är till exempel `SecuredDoc`.
-   * Ett strängvärde som anger datatypen för utdataparametern. Datatypen för `SecuredDoc` utdataparametern är `com.adobe.idp.Document`.
+   * Ett strängvärde som anger datatypen för utdataparametern. Datatypen för `SecuredDoc` output-parametern är `com.adobe.idp.Document`.
    * Ett strängvärde som anger mappningstypen. Du kan till exempel ange `%F.pdf`.
 
 1. Skapa en bevakad mappslutpunkt.
 
-   Skapa slutpunkten genom att anropa `EndpointRegistryClient` objektets `createEndpoint` metoden och skicka `CreateEndpointInfo` -objekt. Den här metoden returnerar en `Endpoint` som representerar den bevakade mappens slutpunkt.
+   Skapa slutpunkten genom att starta `EndpointRegistryClient` objektets `createEndpoint` metoden och skicka `CreateEndpointInfo` -objekt. Den här metoden returnerar en `Endpoint` som representerar den bevakade mappens slutpunkt.
 
 1. Aktivera slutpunkten.
 
@@ -465,7 +465,7 @@ Lägg till en bevakad mappslutpunkt med AEM Forms Java API:
 
 ### Konstanta filer för mappkonfigurationsvärden som bevakas {#watched-folder-configuration-values-constant-file}
 
-The [QuickStart: Lägga till en bevakad mappslutpunkt med Java API](/help/forms/developing/endpoint-registry-java-api-quick.md#quickstart-adding-a-watched-folder-endpoint-using-the-java-api) använder en konstant fil som måste ingå i Java-projektet för att kunna kompilera snabbstarten. Den här konstanta filen representerar konfigurationsvärden som måste anges när du lägger till en bevakad mappslutpunkt. Följande Java-kod representerar den konstanta filen.
+The [QuickStart: Lägga till en bevakad mappslutpunkt med Java API](/help/forms/developing/endpoint-registry-java-api-quick.md#quickstart-adding-a-watched-folder-endpoint-using-the-java-api) använder en konstant fil som måste ingå i Java-projektet för att kompilera snabbstarten. Den här konstanta filen representerar konfigurationsvärden som måste anges när du lägger till en bevakad mappslutpunkt. Följande Java-kod representerar den konstanta filen.
 
 ```java
  /**
@@ -500,7 +500,7 @@ The [QuickStart: Lägga till en bevakad mappslutpunkt med Java API](/help/forms/
 
 Du kan programmässigt lägga till en e-postslutpunkt till en tjänst med AEM Forms Java API. Genom att lägga till en e-postslutpunkt kan du göra det möjligt för användare att skicka ett e-postmeddelande med en eller flera bifogade filer till ett angivet e-postkonto. Sedan anropas åtgärden för konfigurationstjänsten och filerna ändras. När tjänsten har utfört den angivna åtgärden skickas ett e-postmeddelande till avsändaren med de ändrade filerna som bifogade filer.
 
-Om du vill lägga till en e-postslutpunkt i en tjänst programmatiskt bör du överväga följande kortlivade process med namnet *MyApplication\EncryptDocument*. Mer information om kortvariga processer finns i [Förstå AEM Forms-processer](/help/forms/developing/aem-forms-processes.md#understanding-aem-forms-processes).
+Om du vill lägga till en e-postslutpunkt i en tjänst programmatiskt bör du överväga följande kortlivade process med namnet *MyApplication\EncryptDocument*. Mer information om kortvariga processer finns i [Förstå AEM Forms processer](/help/forms/developing/aem-forms-processes.md#understanding-aem-forms-processes).
 
 ![ae_ae_encryptdokumentprocess](assets/ae_ae_encryptdocumentprocess.png)
 
@@ -558,34 +558,34 @@ Du måste ange konfigurationsvärden för en e-postslutpunkt när du programmäs
 >
 >Det e-postkonto som övervakas är ett specialkonto som endast används för e-postslutpunkten. Det här kontot är inte en vanlig användares e-postkonto. En vanlig användares e-postkonto får inte konfigureras som det konto som e-postprovidern använder eftersom e-postprovidern tar bort e-postmeddelanden från inkorgen när den är klar med meddelandena.
 
-Följande konfigurationsvärden anges när en e-postslutpunkt läggs till i en tjänst via programmering:
+Följande konfigurationsvärden ställs in när en e-postslutpunkt läggs till i en tjänst via programmering:
 
 * **cronExpression**: Ett cron-uttryck om e-postmeddelandet måste schemaläggas med ett cron-uttryck.
-* **repeatCount**: Antal gånger som e-postslutpunkten skannar mappen eller katalogen. Värdet -1 anger obestämd skanning. Standardvärdet är -1.
+* **repeatCount**: Antal gånger som e-postslutpunkten skannar mappen eller katalogen. Värdet -1 anger oändlig skanning. Standardvärdet är -1.
 * **repeatInterval**: Skanningsfrekvensen i sekunder som mottagaren använder för att kontrollera inkommande e-post. Standardvärdet är 10.
 * **startDelay**: Den tid det tar att vänta på genomsökningen efter att schemaläggaren har startats. Standardtiden är 0.
 * **batchSize**: Antalet e-postmeddelanden som mottagaren bearbetar per sökning för optimala prestanda. Värdet -1 anger alla e-postmeddelanden. Standardvärdet är 2.
-* **userName**: Användarnamnet som används när en måltjänst anropas från e-post. Standardvärdet är `SuperAdmin`.
+* **userName**: Det användarnamn som används när en måltjänst anropas från e-post. Standardvärdet är `SuperAdmin`.
 * **domainName**: Ett obligatoriskt konfigurationsvärde. Standardvärdet är `DefaultDom`.
 * **domainPattern**: Anger domänmönster för inkommande e-post som accepteras av providern. Om `adobe.com` används, endast e-post från adobe.com behandlas, e-post från andra domäner ignoreras.
-* **filePattern**: Anger mönster för inkommande bifogade filer som accepteras av providern. Detta inkluderar filer som har specifika filnamnstillägg (&amp;ast;.dat, &amp;ast;.xml), filer som har specifika namn (data) och filer som har sammansatta uttryck i namn och filnamnstillägg (&amp;ast;).[dD][aA]port). Standardvärdet är `*`.
+* **filePattern**: Anger inkommande mönster för bifogade filer som accepteras av providern. Detta inkluderar filer som har specifika filnamnstillägg (&amp;ast;.dat, &amp;ast;.xml), filer som har specifika namn (data) och filer som har sammansatta uttryck i namn och filnamnstillägg (&amp;ast;).[dD][aA]port). Standardvärdet är `*`.
 * **receiveSuccessfulJob**: En e-postadress dit meddelanden skickas för att ange slutförda jobb. Som standard skickas alltid ett meddelande om att jobbet lyckades till avsändaren. Om du skriver `sender`, skickas e-postresultat till avsändaren. Stöd för upp till 100 mottagare. Ange ytterligare mottagare med e-postadresser, där var och en avgränsas med kommatecken. Om du vill inaktivera det här alternativet lämnar du det här värdet tomt. I vissa fall kanske du vill utlösa en process och inte skicka ett e-postmeddelande om resultatet. Standardvärdet är `sender`.
 * **receiveFailedJob**: En e-postadress dit meddelanden skickas för att ange misslyckade jobb. Som standard skickas alltid ett meddelande om misslyckat jobb till avsändaren. Om du skriver `sender`, skickas e-postresultat till avsändaren. Stöd för upp till 100 mottagare. Ange ytterligare mottagare med e-postadresser, där var och en avgränsas med kommatecken. Om du vill inaktivera det här alternativet lämnar du det här värdet tomt. Standardvärdet är `sender`.
 * **inboxHost**: Inkorgens värdnamn eller IP-adress som e-postprovidern ska skanna.
 * **inboxPort**: Den port som e-postservern använder. Standardvärdet för POP3 är 110 och standardvärdet för IMAP är 143. Om SSL är aktiverat är standardvärdet för POP3 995 och standardvärdet för IMAP är 993.
-* **inboxProtocol**: E-postprotokollet för e-postslutpunkten som ska användas för att skanna inkorgen. Alternativen är `IMAP` eller `POP3`. Inkorgens värdserver för e-post måste ha stöd för dessa protokoll.
-* **inboxTimeOut**: Tidsgräns i sekunder för att e-postleverantören ska vänta på inkorgssvar. Standardvärdet är 60.
-* **inboxUser**: Användarnamnet som krävs för att logga in på e-postkontot. Beroende på e-postservern och konfigurationen kan det här endast vara användarnamnsdelen i e-postmeddelandet eller den fullständiga e-postadressen.
+* **inboxProtocol**: E-postprotokollet för e-postslutpunkten som ska användas för att skanna inkorgen. Alternativen är `IMAP` eller `POP3`. Inkorgens värdserver för e-post måste stödja dessa protokoll.
+* **inboxTimeOut**: Tidsgräns i sekunder för att e-postprovidern ska vänta på inkorgssvar. Standardvärdet är 60.
+* **inboxUser**: Det användarnamn som krävs för att logga in på e-postkontot. Beroende på e-postservern och konfigurationen kan det här endast vara användarnamnsdelen i e-postmeddelandet eller den fullständiga e-postadressen.
 * **inboxPassword**: Lösenordet för inkorgsanvändaren.
 * **inboxSSLEnabled**: Ange det här värdet för att tvinga e-postleverantören att använda SSL när meddelanden om resultat eller fel skickas. Kontrollera att IMAP- eller POP3-värden har stöd för SSL.
-* **smtpHost**: Värdnamnet för den e-postserver som e-postleverantören skickar resultat och felmeddelanden till.
+* **smtpHost**: Värdnamnet på den e-postserver som e-postleverantören skickar resultat och felmeddelanden till.
 * **smtpPort**: Standardvärdet för SMTP-porten är 25.
 * **smtpUser**: Användarkontot som e-postleverantören ska använda när den skickar e-postmeddelanden om resultat och fel.
 * **smtpPassword**: Lösenordet för SMTP-kontot. Vissa e-postservrar kräver inget SMTP-lösenord.
 * **charSet**: Den teckenuppsättning som används av e-postleverantören. Standardvärdet är `UTF-8`.
-* **smtpSSLEnabled**: Ange det här värdet för att tvinga e-postleverantören att använda SSL när meddelanden om resultat eller fel skickas. Kontrollera att SMTP-värden har stöd för SSL.
+* **smtpSSLEnabled**: Ange det här värdet för att tvinga e-postleverantören att använda SSL när meddelanden om resultat eller fel skickas. Kontrollera att SMTP-värden stöder SSL.
 * **failedJobFolder**: Anger en katalog där resultat ska lagras när SMTP-e-postservern inte är i drift.
-* **asynkron**: När det är synkront bearbetas alla indatadokument och ett enda svar returneras. När inställningen är asynkron skickas ett svar för varje indatadokument som bearbetas. En e-postslutpunkt skapas till exempel för den process som introduceras i det här avsnittet, och ett e-postmeddelande skickas till slutpunktens inkorg som innehåller flera oskyddade PDF-dokument. När alla PDF-dokument har krypterats med ett lösenord, och om slutpunkten har konfigurerats som synkron, skickas ett enda e-postmeddelande med alla säkra PDF-dokument bifogade. Om slutpunkten är konfigurerad som asynkron skickas ett separat e-postmeddelande för svar för varje skyddat PDF-dokument. Varje e-postmeddelande innehåller ett enda dokument i PDF som en bifogad fil. Standardvärdet är asynkront.
+* **asynkron**: När det är synkront bearbetas alla indatadokument och ett svar returneras. När inställningen är asynkron skickas ett svar för varje indatadokument som bearbetas. En e-postslutpunkt skapas till exempel för den process som introduceras i det här avsnittet, och ett e-postmeddelande skickas till slutpunktens inkorg som innehåller flera oskyddade PDF-dokument. När alla PDF-dokument har krypterats med ett lösenord, och om slutpunkten har konfigurerats som synkron, skickas ett enda e-postmeddelande med alla säkra PDF-dokument bifogade. Om slutpunkten är konfigurerad som asynkron skickas ett separat e-postmeddelande för svar för varje skyddat PDF-dokument. Varje e-postmeddelande innehåller ett enda dokument i PDF som en bifogad fil. Standardvärdet är asynkront.
 
 **Definiera indataparametervärden**
 
@@ -612,7 +612,7 @@ Om du vill definiera ett utdataparametervärde som krävs för en e-postslutpunk
 
 **Namn på utdataparameter**: Namnet på utdataparametern. Namnet på ett processutdatavärde anges i Workbench. Om utdatavärdet tillhör en tjänståtgärd (en tjänst som inte är en process som har skapats i Workbench) anges utdatanamnet i filen component.xml. Namnet på utdataparametern för processen som introduceras i det här avsnittet är till exempel `SecuredDoc`.
 
-**Mappningstyp**: Används för att konfigurera tjänstens och åtgärdens utdata. Följande alternativ är tillgängliga:
+**Mappningstyp**: Används för att konfigurera utdata för tjänsten och åtgärden. Följande alternativ är tillgängliga:
 
 * Om tjänsten returnerar ett enstaka objekt (ett enstaka dokument) är mönstret `%F.pdf` och källmålet är sourceFilename.pdf. Processen som introducerades i det här avsnittet returnerar till exempel ett enstaka dokument. Därför kan mappningstypen definieras som `%F.pdf` ( `%F` använder det angivna filnamnet). Mönstret `%E` Anger tillägget för indatadokumentet.
 * Om tjänsten returnerar en lista är mönstret `Result\%F\`och källmålet är Result\sourcefilename\source1 (output 1) och Result\sourcefilename\source2 (output 2).
@@ -622,7 +622,7 @@ Om du vill definiera ett utdataparametervärde som krävs för en e-postslutpunk
 
 **Skapa e-postslutpunkten**
 
-När du har angett slutpunktsattribut för e-post och konfigurationsvärden, och definierat in- och utdataparametervärden, måste du skapa e-postslutpunkten.
+När du har angett attribut och konfigurationsvärden för e-postslutpunkten och angett in- och utdataparametervärden måste du skapa e-postslutpunkten.
 
 **Aktivera slutpunkten**
 
@@ -652,7 +652,7 @@ Lägg till en e-postslutpunkt med Java API:
 1. Ange slutpunktsattribut för e-post.
 
    * Skapa en `CreateEndpointInfo` genom att använda dess konstruktor.
-   * Ange värdet för anslutaridentifieraren genom att anropa `CreateEndpointInfo` objektets `setConnectorId` metoden och skicka strängvärdet `Email`.
+   * Ange anslutnings-ID-värdet genom att anropa `CreateEndpointInfo` objektets `setConnectorId` metoden och skicka strängvärdet `Email`.
    * Ange beskrivningen av slutpunkten genom att anropa `CreateEndpointInfo` objektets `setDescription` och skickar ett strängvärde som beskriver slutpunkten.
    * Ange slutpunktens namn genom att anropa `CreateEndpointInfo` objektets `setName` och skickar ett strängvärde som anger namnet.
    * Ange tjänsten som slutpunkten tillhör genom att anropa `CreateEndpointInfo` objektets `setServiceId` och skickar ett strängvärde som anger tjänstnamnet.
@@ -660,7 +660,7 @@ Lägg till en e-postslutpunkt med Java API:
 
 1. Ange konfigurationsvärden.
 
-   För varje konfigurationsvärde som ska anges för e-postslutpunkten måste du anropa `CreateEndpointInfo` objektets `setConfigParameterAsText` -metod. För att till exempel ange `smtpHost` konfigurationsvärde, anropa `CreateEndpointInfo` objektets `setConfigParameterAsText` och skicka följande värden:
+   För varje konfigurationsvärde som ska anges för e-postslutpunkten måste du anropa `CreateEndpointInfo` objektets `setConfigParameterAsText` -metod. För att till exempel ställa in `smtpHost` konfigurationsvärde, anropa `CreateEndpointInfo` objektets `setConfigParameterAsText` och skicka följande värden:
 
    * Ett strängvärde som anger namnet på konfigurationsvärdet. När du anger `smtpHost` konfigurationsvärde, ange `smtpHost`.
    * Ett strängvärde som anger värdet för konfigurationsvärdet. När du anger `smtpHost` konfigurationsvärde anger du ett strängvärde som anger namnet på SMTP-servern.
@@ -673,7 +673,7 @@ Lägg till en e-postslutpunkt med Java API:
 
    Definiera ett indataparametervärde genom att anropa `CreateEndpointInfo` objektets `setInputParameterMapping` och skicka följande värden:
 
-   * Ett strängvärde som anger namnet på indataparametern. Namnet på indataparametern för EncryptDocument-tjänsten är till exempel `InDoc`.
+   * Ett strängvärde som anger namnet på indataparametern. Namnet på indataparametern för EncryptDocument-tjänsten är `InDoc`.
    * Ett strängvärde som anger datatypen för indataparametern. Datatypen för `InDoc` indataparametern är `com.adobe.idp.Document`.
    * Ett strängvärde som anger mappningstypen. Du kan till exempel ange `variable`.
    * Ett strängvärde som anger mappningstypsvärdet. Du kan till exempel ange &amp;ast;.pdf som filmönster.
@@ -687,12 +687,12 @@ Lägg till en e-postslutpunkt med Java API:
    Definiera ett utdataparametervärde genom att anropa `CreateEndpointInfo` objektets `setOutputParameterMapping` och skicka följande värden:
 
    * Ett strängvärde som anger namnet på utdataparametern. Namnet på utdataparametern för EncryptDocument-tjänsten är till exempel `SecuredDoc`.
-   * Ett strängvärde som anger datatypen för utdataparametern. Datatypen för `SecuredDoc` utdataparametern är `com.adobe.idp.Document`.
+   * Ett strängvärde som anger datatypen för utdataparametern. Datatypen för `SecuredDoc` output-parametern är `com.adobe.idp.Document`.
    * Ett strängvärde som anger mappningstypen. Du kan till exempel ange `%F.pdf`.
 
 1. Skapa e-postslutpunkten.
 
-   Skapa slutpunkten genom att anropa `EndpointRegistryClient` objektets `createEndpoint` metoden och skicka `CreateEndpointInfo` -objekt. Den här metoden returnerar en `Endpoint` objekt som representerar e-postslutpunkten.
+   Skapa slutpunkten genom att starta `EndpointRegistryClient` objektets `createEndpoint` metoden och skicka `CreateEndpointInfo` -objekt. Den här metoden returnerar en `Endpoint` objekt som representerar e-postslutpunkten.
 
 1. Aktivera slutpunkten.
 
@@ -710,7 +710,7 @@ Lägg till en e-postslutpunkt med Java API:
 
 ### Konstantfil för e-postkonfigurationsvärden {#email-configuration-values-constant-file}
 
-The [QuickStart: Lägga till en e-postslutpunkt med Java API](/help/forms/developing/endpoint-registry-java-api-quick.md#quickstart-adding-an-email-endpoint-using-the-java-api) använder en konstant fil som måste ingå i Java-projektet för att kunna kompilera snabbstarten. Den här konstanta filen representerar konfigurationsvärden som måste anges när du lägger till en e-postslutpunkt. Följande Java-kod representerar den konstanta filen.
+The [QuickStart: Lägga till en e-postslutpunkt med Java API](/help/forms/developing/endpoint-registry-java-api-quick.md#quickstart-adding-an-email-endpoint-using-the-java-api) använder en konstant fil som måste ingå i Java-projektet för att kompilera snabbstarten. Den här konstanta filen representerar konfigurationsvärden som måste anges när du lägger till en e-postslutpunkt. Följande Java-kod representerar den konstanta filen.
 
 ```java
  /**
@@ -752,7 +752,7 @@ The [QuickStart: Lägga till en e-postslutpunkt med Java API](/help/forms/develo
 
 >[!NOTE]
 >
->LiveCycle Remoting API:er har tagits bort för AEM formulär på JEE.
+>LiveCycle Remoting-API:er har tagits bort för AEM formulär i JEE.
 
 Du kan programmässigt lägga till en fjärrslutpunkt till en tjänst med hjälp av AEM Forms Java API. Genom att lägga till en fjärrslutpunkt aktiverar du ett Flex-program att anropa tjänsten med hjälp av fjärrkommunikation. (Se [Anropa AEM Forms Remoting med (borttaget för AEM)](/help/forms/developing/invoking-aem-forms-using-remoting.md#invoking-aem-forms-using-remoting).)
 
@@ -800,7 +800,7 @@ Om du vill lägga till en fjärrslutpunkt med programkod måste du skapa en `End
 Om du vill skapa en fjärrslutpunkt för en tjänst anger du följande värden:
 
 * **Identifieringsvärde för koppling**: Anger den typ av slutpunkt som skapas. Om du vill skapa en fjärrslutpunkt anger du `Remoting`.
-* **Beskrivning**: Anger beskrivningen av slutpunkten.
+* **Beskrivning**: Anger slutpunktens beskrivning.
 * **Namn**: Anger slutpunktens namn.
 * **Tjänstidentifierarvärde**: Anger den tjänst som slutpunkten tillhör. Om du till exempel vill lägga till en fjärrslutpunkt i processen som introduceras i det här avsnittet (en process blir en tjänst när den aktiveras i Workbench) anger du `EncryptDocument`.
 * **Åtgärdsnamn**: Anger namnet på åtgärden som anropas med slutpunkten. När du skapar en fjärrslutpunkt anger du ett jokertecken (&amp;ast;).
@@ -837,15 +837,15 @@ Lägg till en fjärrslutpunkt med Java API:
 1. Ange slutpunktsattribut för fjärrstyrning.
 
    * Skapa en `CreateEndpointInfo` genom att använda dess konstruktor.
-   * Ange värdet för anslutaridentifieraren genom att anropa `CreateEndpointInfo` objektets `setConnectorId` metoden och skicka strängvärdet `Remoting`.
+   * Ange anslutnings-ID-värdet genom att anropa `CreateEndpointInfo` objektets `setConnectorId` metoden och skicka strängvärdet `Remoting`.
    * Ange beskrivningen av slutpunkten genom att anropa `CreateEndpointInfo` objektets `setDescription` och skickar ett strängvärde som beskriver slutpunkten.
    * Ange slutpunktens namn genom att anropa `CreateEndpointInfo` objektets `setName` och skickar ett strängvärde som anger namnet.
    * Ange tjänsten som slutpunkten tillhör genom att anropa `CreateEndpointInfo` objektets `setServiceId` och skickar ett strängvärde som anger tjänstnamnet.
-   * Ange åtgärden som anropas av `CreateEndpointInfo` objektets `setOperationName` och skickar ett strängvärde som anger åtgärdens namn. Ange ett jokertecken (&amp;ast;) för en fjärrslutpunkt.
+   * Ange den åtgärd som anropas av `CreateEndpointInfo` objektets `setOperationName` och skickar ett strängvärde som anger åtgärdens namn. Ange ett jokertecken (&amp;ast;) för en fjärrslutpunkt.
 
 1. Skapa en fjärrslutpunkt.
 
-   Skapa slutpunkten genom att anropa `EndpointRegistryClient` objektets `createEndpoint` metoden och skicka `CreateEndpointInfo` -objekt. Den här metoden returnerar en `Endpoint` objekt som representerar den nya fjärrslutpunkten.
+   Skapa slutpunkten genom att starta `EndpointRegistryClient` objektets `createEndpoint` metoden och skicka `CreateEndpointInfo` -objekt. Den här metoden returnerar en `Endpoint` objekt som representerar den nya fjärrslutpunkten.
 
 1. Aktivera slutpunkten.
 
@@ -910,11 +910,11 @@ Kategorier används för att ordna tjänster i Workspace. Det innebär att en Wo
 Om du vill skapa en TaskManager-slutpunkt för en tjänst anger du följande värden:
 
 * **Kopplingsidentifierare**: Anger den typ av slutpunkt som skapas. Om du vill skapa en TaskManager-slutpunkt anger du `TaskManagerConnector`.
-* **Beskrivning**: Anger beskrivningen av slutpunkten.
+* **Beskrivning**: Anger slutpunktens beskrivning.
 * **Namn**: Anger slutpunktens namn.
 * **Tjänstidentifierare**: Anger den tjänst som slutpunkten tillhör.
-* **Kategori**: Anger ett kategoriidentifierarvärde som är associerat med TaskManager-slutpunkten.
-* **Åtgärdsnamn**: När du skapar en TaskManager-slutpunkt för en tjänst som kommer från en process som har skapats i Workbench, brukar namnet på åtgärden vara `invoke`.
+* **Kategori**: Anger ett värde för kategoriidentifierare som är associerat med TaskManager-slutpunkten.
+* **Åtgärdsnamn**: När du skapar en TaskManager-slutpunkt för en tjänst som kommer från en process som har skapats i Workbench är namnet på åtgärden vanligtvis `invoke`.
 
 **Skapa en TaskManager-slutpunkt**
 
@@ -951,13 +951,13 @@ Lägg till en TaskManager-slutpunkt med Java API:
 
       * Ett strängvärde som anger kategoriens identifierarvärde
       * Ett strängvärde som anger beskrivningen av kategorin
-   * Skapa kategorin genom att anropa `EndpointRegistryClient` objektets `createEndpointCategory` metoden och skicka `CreateEndpointCategoryInfo` -objekt. Den här metoden returnerar en `EndpointCategory` objekt som representerar den nya kategorin.
 
+   * Skapa kategorin genom att starta `EndpointRegistryClient` objektets `createEndpointCategory` metoden och skicka `CreateEndpointCategoryInfo` -objekt. Den här metoden returnerar en `EndpointCategory` objekt som representerar den nya kategorin.
 
 1. Ange slutpunktsattribut för TaskManager.
 
    * Skapa en `CreateEndpointInfo` genom att använda dess konstruktor.
-   * Ange värdet för anslutaridentifieraren genom att anropa `CreateEndpointInfo` objektets `setConnectorId` metoden och skicka strängvärdet `TaskManagerConnector`.
+   * Ange anslutnings-ID-värdet genom att anropa `CreateEndpointInfo` objektets `setConnectorId` metoden och skicka strängvärdet `TaskManagerConnector`.
    * Ange beskrivningen av slutpunkten genom att anropa `CreateEndpointInfo` objektets `setDescription` och skickar ett strängvärde som beskriver slutpunkten.
    * Ange slutpunktens namn genom att anropa `CreateEndpointInfo` objektets `setName` och skickar ett strängvärde som anger namnet.
    * Ange tjänsten som slutpunkten tillhör genom att anropa `CreateEndpointInfo` objektets `setServiceId` och skickar ett strängvärde som anger tjänstnamnet.
@@ -966,7 +966,7 @@ Lägg till en TaskManager-slutpunkt med Java API:
 
 1. Skapa en TaskManager-slutpunkt.
 
-   Skapa slutpunkten genom att anropa `EndpointRegistryClient` objektets `createEndpoint` metoden och skicka `CreateEndpointInfo` -objekt. Den här metoden returnerar en `Endpoint` objekt som representerar den nya TaskManager-slutpunkten.
+   Skapa slutpunkten genom att starta `EndpointRegistryClient` objektets `createEndpoint` metoden och skicka `CreateEndpointInfo` -objekt. Den här metoden returnerar en `Endpoint` objekt som representerar den nya TaskManager-slutpunkten.
 
 1. Aktivera slutpunkten.
 
@@ -994,7 +994,7 @@ För att visa hur du ändrar en slutpunkt ändrar det här avsnittet en bevakad 
 
 ### Sammanfattning av steg {#summary_of_steps-6}
 
-Så här ändrar du en slutpunkt:
+Gör så här om du vill ändra en slutpunkt:
 
 1. Inkludera projektfiler.
 1. Skapa en `EndpointRegistryClient` -objekt.
@@ -1069,10 +1069,10 @@ Ange nya konfigurationsvärden när du ändrar en slutpunkt. Om du till exempel 
    * Skapa en `ModifyEndpointInfo` genom att anropa dess konstruktor.
    * För varje konfigurationsvärde som ska anges anropar du `ModifyEndpointInfo` objektets `setConfigParameterAsText` -metod. Om du till exempel vill ange ett URL-konfigurationsvärde anropar du `ModifyEndpointInfo` objektets `setConfigParameterAsText` och skicka följande värden:
 
-      * Ett strängvärde som anger namnet på konfigurationsvärdet. För att till exempel ange `url` konfigurationsvärde, ange `url`.
+      * Ett strängvärde som anger namnet på konfigurationsvärdet. För att till exempel ställa in `url` konfigurationsvärde, ange `url`.
       * Ett strängvärde som anger värdet för konfigurationsvärdet. Definiera ett värde för `url` konfigurationsvärde, anger platsen för bevakad mapp.
-   * Anropa `EndpointRegistryClient` objektets `modifyEndpoint` och skicka `ModifyEndpointInfo` -objekt.
 
+   * Anropa `EndpointRegistryClient` objektets `modifyEndpoint` och skicka `ModifyEndpointInfo` -objekt.
 
 **Se även**
 
@@ -1086,7 +1086,7 @@ Ange nya konfigurationsvärden när du ändrar en slutpunkt. Om du till exempel 
 
 ## Tar bort slutpunkter {#removing-endpoints}
 
-Du kan ta bort en slutpunkt från en tjänst genom att använda AEM Forms Java API. När du har tagit bort en slutpunkt kan tjänsten inte anropas med den anropsmetod som slutpunkten aktiverade. Om du till exempel tar bort en SOAP-slutpunkt från en tjänst kan du inte anropa tjänsten i SOAP-läge.
+Du kan ta bort en slutpunkt från en tjänst programmatiskt med AEM Forms Java API. När du har tagit bort en slutpunkt kan tjänsten inte anropas med den anropsmetod som slutpunkten aktiverade. Om du till exempel tar bort en SOAP-slutpunkt från en tjänst kan du inte anropa tjänsten i SOAP-läge.
 
 För att visa hur du tar bort en slutpunkt från en tjänst tar det här avsnittet bort en EJB-slutpunkt från en tjänst med namnet *EncryptDocument*.
 
@@ -1153,7 +1153,7 @@ Ta bort en slutpunkt med Java API:
 
 1. Hämta slutpunkten som ska tas bort.
 
-   * Hämta en lista med alla slutpunkter som den aktuella användaren (som anges i anslutningsegenskaperna) har åtkomst till genom att anropa `EndpointRegistryClient` objektets `getEndpoints` metod och skicka en `PagingFilter` objekt som fungerar som ett filter. Du kan skicka `(PagingFilter)null` för att returnera alla slutpunkter. Den här metoden returnerar en `java.util.List` objekt där varje element är ett `Endpoint` -objekt.
+   * Hämta en lista över alla slutpunkter som den aktuella användaren (som anges i anslutningsegenskaperna) har åtkomst till genom att anropa `EndpointRegistryClient` objektets `getEndpoints` metod och skicka en `PagingFilter` objekt som fungerar som ett filter. Du kan skicka `(PagingFilter)null` för att returnera alla slutpunkter. Den här metoden returnerar en `java.util.List` objekt där varje element är ett `Endpoint` -objekt.
    * Iterera genom `java.util.List` -objekt för att avgöra om det har slutpunkter. Om det finns slutpunkter är varje element ett `EndPoint` -instans.
    * Bestäm vilken tjänst som motsvarar en slutpunkt genom att anropa `EndPoint` objektets `getServiceId` -metod. Den här metoden returnerar ett strängvärde som anger tjänstnamnet.
    * Bestäm typen av slutpunkt genom att anropa `EndPoint` objektets `getConnectorId` -metod. Den här metoden returnerar ett strängvärde som anger typen av slutpunkt. Om slutpunkten till exempel är en EJB-slutpunkt returnerar den här metoden `EJB`.
@@ -1221,7 +1221,7 @@ Ange den typ av koppling som informationen ska hämtas från. Följande typer av
 * **Bevakad mapp**: Gör att bevakade mappar kan anropa en tjänst.
 * **E-post**: Gör att e-postmeddelanden kan anropa en tjänst.
 * **Remoting**: Gör att ett Flex-klientprogram kan anropa en tjänst.
-* **TaskManagerKoppling**: Gör att en Workspace-användare kan anropa en tjänst från Workspace.
+* **TaskManagerKoppling**: Gör det möjligt för en arbetsyteanvändare att anropa en tjänst från arbetsytan.
 
 **Hämta konfigurationsvärden**
 
@@ -1261,7 +1261,7 @@ Hämta information om slutpunktsanslutning med Java API:
 
 [Sammanfattning av steg](programmatically-endpoints.md#summary-of-steps)
 
-[QuickStart: Hämta slutpunktsanslutningsinformation med Java API](/help/forms/developing/endpoint-registry-java-api-quick.md#quickstart-retrieving-endpoint-connector-information-using-the-java-api)
+[QuickStart: Hämtar slutpunktsanslutningsinformation med Java API](/help/forms/developing/endpoint-registry-java-api-quick.md#quickstart-retrieving-endpoint-connector-information-using-the-java-api)
 
 [Inkludera AEM Forms Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 

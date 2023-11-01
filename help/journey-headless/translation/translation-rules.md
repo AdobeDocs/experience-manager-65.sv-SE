@@ -2,9 +2,9 @@
 title: Konfigurera översättningsregler
 description: Lär dig hur du definierar översättningsregler för att identifiera innehåll för översättning.
 exl-id: 262503af-361b-491c-8639-0bb32f0a4c0e
-source-git-commit: f627bc2b58578df1b4ff6c95d87f0c64daafa1c7
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '871'
+source-wordcount: '869'
 ht-degree: 0%
 
 ---
@@ -68,7 +68,7 @@ I **Översättningskonfiguration** Det finns ett antal alternativ för översät
 1. AEM sparar konfigurationen.
 1. Du måste välja den kontext du just skapade och sedan trycka eller klicka **Redigera**. Då öppnas **Redigerare för översättningsregler** för att konfigurera egenskaperna.
    ![Redigerare för översättningsregler](assets/translation-rules-editor.png)
-1. Som standard ärvs alla konfigurationer från den överordnade sökvägen, i det här fallet `/content/dam`. Avmarkera alternativet **Ärv från`/content/dam`** för att lägga till ytterligare fält i konfigurationen.
+1. Som standard ärvs alla konfigurationer från den överordnade sökvägen, i det här fallet `/content/dam`. Avmarkera alternativet **Ärv från`/content/dam`** om du vill lägga till ytterligare fält i konfigurationen.
 1. När avmarkerat, under **Allmänt** i listan lägger du till egenskapsnamnen för de innehållsfragmentmodeller som du [som tidigare identifierats som fält för översättning.](getting-started.md#content-models)
    1. Ange egenskapsnamnet i dialogrutan **Ny egenskap** fält.
    1. Alternativen **Översätt** och **Inherit** kontrolleras automatiskt.

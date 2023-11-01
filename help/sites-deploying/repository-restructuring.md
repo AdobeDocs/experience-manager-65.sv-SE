@@ -11,9 +11,9 @@ topic-tags: repo_restructuring
 discoiquuid: fc879b0b-823b-4bdc-aaa6-36f53a33fb22
 feature: Upgrading
 exl-id: 2572aa8d-2a3a-4e5b-ae5f-07e1017ea0f4
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '534'
+source-wordcount: '532'
 ht-degree: 0%
 
 ---
@@ -40,7 +40,7 @@ När du uppgraderar till AEM 6.5 dupliceras en stor delmängd av innehållet und
 
 ### Omstruktureringsvägledning {#restructuring-guidance}
 
-Vid planering av en uppgradering till AEM 6.5 ska följande sidor per lösning refereras för att bedöma arbetsinsatsen:
+När du planerar en uppgradering till AEM 6.5 ska du referera till följande sidor per lösning för att utvärdera arbetsinsatsen:
 
 * [Omstrukturering av lager som är gemensamma för alla AEM](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md)
 * [Omstrukturering av AEM Sites-arkiv](/help/sites-deploying/sites-repository-restructuring-in-aem-6-5.md)
@@ -52,4 +52,4 @@ Vid planering av en uppgradering till AEM 6.5 ska följande sidor per lösning r
 
 Varje sida innehåller två avsnitt som motsvarar hur brådskande de nödvändiga ändringarna är. Allt under&quot;Med 6.5-uppgradering&quot; ska hanteras som en del av uppgraderingsprojektet för AEM 6.5. Om du vill kan du skjuta upp allt under&quot;Före framtida uppgradering&quot; till efter uppgraderingen.
 
-Varje post på sidan innehåller ett fält för&quot;vägledning om omstrukturering&quot;, som beskriver den rekommenderade tekniska strategin för anpassning till den nya 6.5-databasmodellen så att det refereras till de nya platserna för innehåll som tidigare fanns under mappen /etc. Ett extra&quot;Anteckningsfält&quot; ger ytterligare användbar kontext.
+Varje post på sidan innehåller ett fält för&quot;vägledning om omstrukturering&quot;, som beskriver den rekommenderade tekniska strategin för anpassning till den nya 6.5-databasmodellen så att det refereras till nya platser för innehåll som tidigare fanns under mappen /etc.. Ett extra&quot;Anteckningsfält&quot; ger ytterligare användbar kontext.

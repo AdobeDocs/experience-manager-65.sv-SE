@@ -11,9 +11,9 @@ topic-tags: site-features
 discoiquuid: 8386a16a-9d47-46d5-bc60-5f290c59e60e
 docset: aem65
 exl-id: 3beea5cd-5ae0-485b-8dfc-8b3a23c11586
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '576'
+source-wordcount: '574'
 ht-degree: 1%
 
 ---
@@ -72,7 +72,7 @@ Skillnaden identifierar ändringar på komponentnivå och HTML-nivå. Objekt som
 
 ### Helskärm och avslutande {#fullscreen-and-exiting}
 
-Om du vill fokusera på ett visst innehåll kan du klicka på helskärmsikonen för endera&quot;sidan&quot; av diff:n för att förstora den till hela webbläsarfönstret.
+Om du vill fokusera på visst innehåll kan du klicka på helskärmsikonen för endera sidan av diff-ikonen och förstora den till hela webbläsarfönstret.
 
 ![Ikon för helskärmsläge](do-not-localize/chlimage_1-18.png)
 

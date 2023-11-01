@@ -7,9 +7,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 role: Developer
 exl-id: a521bfac-f417-4002-9c5c-8d7794d3eec7
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '19016'
+source-wordcount: '19006'
 ht-degree: 0%
 
 ---
@@ -162,7 +162,7 @@ Ange filens URI-alternativ när du skapar ett PDF-dokument. Det här alternative
 
 **Ange alternativ för återgivning vid körning**
 
-Du kan ange alternativ för återgivning vid körning när du skapar ett PDF-dokument. Även om dessa alternativ inte är nödvändiga (till skillnad från körningsalternativ för PDF som krävs) kan du utföra åtgärder som att förbättra prestanda för utdatatjänsten. Du kan till exempel cachelagra formulärdesignen som används av utdatatjänsten för att förbättra dess prestanda.
+Du kan ange alternativ för återgivning vid körning när du skapar ett PDF-dokument. Även om dessa alternativ inte är nödvändiga (till skillnad från körningsalternativ för PDF som krävs) kan du utföra åtgärder som att förbättra prestanda för utdatatjänsten. Du kan till exempel cachelagra den formulärdesign som Output-tjänsten använder för att förbättra dess prestanda.
 
 Om du använder ett taggat Acrobat-formulär som indata kan du inte använda Java- eller webbtjänstens API för utdatatjänsten för att inaktivera den taggade inställningen. Om du försöker att programmatiskt ange det här alternativet till `false`, är det resulterande PDF-dokumentet fortfarande taggat.
 
@@ -1749,7 +1749,7 @@ Du måste ange följande körningsalternativ för Output-tjänsten för att kunn
 
 **Ange alternativ för återgivning vid körning**
 
-Du kan ange alternativ för återgivning vid körning när du skapar flera filer. Även om dessa alternativ inte är nödvändiga (till skillnad från alternativ för körning av utdata som krävs) kan du utföra åtgärder som att förbättra prestanda för utdatatjänsten. Du kan till exempel cachelagra den formulärdesign som Output-tjänsten använder för att förbättra prestandan.
+Du kan ange alternativ för återgivning vid körning när du skapar flera filer. Även om dessa alternativ inte är nödvändiga (till skillnad från alternativ för körning av utdata som krävs) kan du utföra åtgärder som att förbättra prestanda för utdatatjänsten. Du kan till exempel cachelagra formulärdesignen som Output-tjänsten använder för att förbättra prestandan.
 
 När utdatatjänsten bearbetar batchposter, läses data som innehåller flera poster stegvis. Det innebär att Output-tjänsten läser data till minnet och frigör data när en grupp med poster bearbetas. Utdatatjänsten läser in data stegvis när något av två körningsalternativ är inställt. Om du anger körningsalternativet Postnamn läser utdatatjänsten in data stegvis. Om du anger körningsalternativet Postnivå till 2 eller högre läser utdatatjänsten in data stegvis.
 
@@ -1998,7 +1998,7 @@ Ange följande körningsalternativ för PDF för att Output-tjänsten ska kunna 
 
 **Ange alternativ för återgivning vid körning**
 
-Du kan ange alternativ för återgivning vid körning när du skapar PDF-filer. Även om dessa alternativ inte är nödvändiga (till skillnad från körningsalternativen för PDF) kan du utföra åtgärder som att förbättra prestanda för utdatatjänsten. Du kan till exempel cachelagra den formulärdesign som Output-tjänsten använder för att förbättra prestandan.
+Du kan ange alternativ för återgivning vid körning när du skapar PDF-filer. Även om dessa alternativ inte är nödvändiga (till skillnad från körningsalternativen för PDF) kan du utföra åtgärder som att förbättra prestanda för utdatatjänsten. Du kan till exempel cachelagra formulärdesignen som Output-tjänsten använder för att förbättra prestandan.
 
 **Skapa ett PDF-dokument**
 

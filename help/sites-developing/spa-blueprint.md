@@ -1,23 +1,19 @@
 ---
-title: SPA Blueprint
-seo-title: SPA Blueprint
-description: I det här dokumentet beskrivs det allmänna, ramverksoberoende kontrakt som SPA ska uppfylla för att implementera redigerbara SPA komponenter inom AEM.
-seo-description: This document describes the general, framework-independent contract that any SPA framework should fulfill in order to implement editable SPA components within AEM.
-uuid: 48f2d415-ec34-49dc-a8e1-6feb5a8a5bbe
+title: SPA
+description: I det här dokumentet beskrivs det allmänna, ramverksoberoende kontraktet som alla SPA ska uppfylla för att implementera redigerbara SPA-komponenter inom AEM.
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: spa
 content-type: reference
-discoiquuid: 04ac8203-320b-4671-aaad-6e1397b12b6f
 docset: aem65
 exl-id: 383f84fd-455c-49a4-9e2b-1c4757cc188b
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '2080'
+source-wordcount: '2074'
 ht-degree: 0%
 
 ---
 
-# SPA Blueprint{#spa-blueprint}
+# SPA{#spa-blueprint}
 
 Om du vill att författaren ska kunna använda AEM SPA Editor för att redigera innehållet i en SPA, finns det krav som SPA måste uppfylla, vilket beskrivs i det här dokumentet.
 
@@ -39,7 +35,7 @@ I det här dokumentet beskrivs det allmänna kontraktet att alla SPA ramverk ska
 >
 >Även om SPA i AEM är ramverksoberoende stöds för närvarande bara ramverken React och Angular.
 
-Om du vill att författaren ska kunna använda AEM Page Editor för att redigera data som exponeras av ett ramverk för ett enkelsidigt program, måste ett projekt kunna tolka modellstrukturen som representerar semantiken för data som lagras för ett program i AEM. För att uppnå detta mål finns två ramverksbaserade bibliotek: den `PageModelManager` och `ComponentMapping`.
+Om du vill att författaren ska kunna använda AEM Page Editor för att redigera data som exponeras av ett ramverk för ett enkelsidigt program, måste ett projekt kunna tolka modellstrukturen som representerar semantiken för data som lagras för ett program i AEM. För att uppnå detta mål finns det två ramverksbaserade bibliotek: `PageModelManager` och `ComponentMapping`.
 
 ### PageModelManager {#pagemodelmanager}
 
@@ -57,7 +53,7 @@ Vid initiering av `PageModelManager`läser biblioteket först in den angivna rot
 
 The `ComponentMapping` -modulen tillhandahålls som ett NPM-paket till frontendprojektet. Det lagrar komponenter i gränssnittet och tillhandahåller ett sätt för SPA att mappa komponenter i gränssnittet till AEM resurstyper. Detta aktiverar en dynamisk upplösning för komponenter när JSON-modellen för programmet analyseras.
 
-Varje objekt i modellen innehåller en `:type` fält som visar en AEM resurstyp. När den är monterad kan den främre komponenten återge sig själv med det fragment av modellen som den har fått från de underliggande biblioteken.
+Varje objekt i modellen innehåller en `:type` fält som visar en AEM. När den är monterad kan den främre komponenten återge sig själv med det fragment av modellen som den har fått från de underliggande biblioteken.
 
 #### Dynamisk mappning av modell till komponent {#dynamic-model-to-component-mapping}
 
@@ -67,7 +63,7 @@ Mer information om hur den dynamiska mappningen av modell till komponent sker i 
 
 Ett tredje lager måste implementeras för varje frontramverk. Detta tredje bibliotek ansvarar för interaktionen med de underliggande biblioteken och erbjuder en serie välintegrerade och lättanvända startpunkter för interaktion med datamodellen.
 
-Resten av detta dokument beskriver kraven för det mellanliggande ramverksspecifika lagret och strävar efter att vara ramverksoberoende. Genom att uppfylla följande krav kan ett ramverksspecifikt lager tillhandahållas för projektkomponenterna för interaktion med de underliggande biblioteken som ansvarar för att hantera datamodellen.
+I resten av detta dokument beskrivs kraven för det mellanliggande ramverksspecifika lagret och strävar efter att vara ramverksoberoende. Genom att uppfylla följande krav kan ett ramverksspecifikt lager tillhandahållas för projektkomponenterna för interaktion med de underliggande biblioteken som ansvarar för att hantera datamodellen.
 
 ## Allmänna begrepp {#general-concepts}
 
@@ -83,10 +79,10 @@ Sidmodellen utnyttjar JSON-modellens exporterare, som i sin tur är baserad på 
 
 * `:type`: Typ av AEM (standard = resurstyp)
 * `:children`: Hierarkiska underordnade för den aktuella resursen. Underordnade är inte en del av den aktuella resursens inre innehåll (kan hittas på objekt som representerar en sida)
-* `:hierarchyType`: Hierarkisk typ av en resurs. The `PageModelManager` har för närvarande stöd för sidtypen
+* `:hierarchyType`: Hierarkisk typ av resurs. The `PageModelManager` har för närvarande stöd för sidtypen
 
 * `:items`: Underordnade innehållsresurser för den aktuella resursen (kapslad struktur, endast i behållare)
-* `:itemsOrder`: Ordnad lista över de underordnade. JSON-mappningsobjektet garanterar inte fältordningen. Genom att ha både kartan och den aktuella arrayen får API-konsumenten fördelarna med båda strukturerna
+* `:itemsOrder`: Ordnad lista över underordnade. JSON-mappningsobjektet garanterar inte fältordningen. Genom att ha både kartan och den aktuella arrayen får API-konsumenten fördelarna med båda strukturerna
 * `:path`: Innehållssökväg för ett objekt (finns i objekt som representerar en sida)
 
 Se även [Komma igång med AEM Content Services.](https://helpx.adobe.com/experience-manager/kt/sites/using/content-services-tutorial-use.html)
@@ -169,7 +165,7 @@ Komponenten för responsivt stödraster bör mappas i förväg till den AEM mots
 
 #### Platshållare för det motstående stödrastret {#placeholder-of-the-reponsive-grid}
 
-Komponenten SPA mappas till en grafisk behållare, t.ex. det responsiva stödrastret, och måste lägga till en virtuell underordnad platshållare när innehållet skapas. När innehållet i SPA redigeras av sidredigeraren bäddas innehållet in i redigeraren med hjälp av en iframe och `data-cq-editor` -attribut läggs till i dokumentnoden för det innehållet. När `data-cq-editor` -attributet finns, måste behållaren innehålla ett HTMLElement som representerar det område som författaren interagerar med när en ny komponent infogas på sidan.
+Komponenten SPA mappas till en grafisk behållare, t.ex. det responsiva stödrastret, och måste lägga till en virtuell underordnad platshållare när innehållet skapas. När innehållet i SPA redigeras av sidredigeraren bäddas innehållet in i redigeraren med en iframe och `data-cq-editor` -attribut läggs till i dokumentnoden för det innehållet. När `data-cq-editor` -attributet finns, måste behållaren innehålla ett HTMLElement som representerar det område som författaren interagerar med när en ny komponent infogas på sidan.
 
 Till exempel:
 
@@ -236,13 +232,13 @@ ComponentMapping.map = function map (resourceTypes, clazz, editConfig) {};
 
 Projektkomponenterna måste generera minst följande dataattribut så att redigeraren kan interagera med dem.
 
-* `data-cq-data-path`: Komponentens relativa sökväg som anges av `PageModel` (t.ex. `"root/responsivegrid/image"`). Det här attributet ska inte läggas till på sidor.
+* `data-cq-data-path`: Relativ sökväg för komponenten enligt `PageModel` (till exempel `"root/responsivegrid/image"`). Det här attributet ska inte läggas till på sidor.
 
 Sammanfattningsvis, för att sidredigeraren ska kunna tolka som redigerbar, måste en projektkomponent respektera följande kontrakt:
 
 * Ange de förväntade attributen för att associera en komponentinstans i början till en AEM resurs.
 * Ange den förväntade serie attribut och klassnamn som gör att tomma platshållare kan skapas.
-* Ange de förväntade klassnamnen för att aktivera dra och släpp av resurser.
+* Ange de förväntade klassnamnen för att aktivera dra och släpp-funktionen för resurser.
 
 ### Normal elementstruktur i HTML {#typical-html-element-structure}
 

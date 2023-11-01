@@ -4,9 +4,9 @@ description: I den här artikeln beskrivs begreppen för en SPA och du kan gå i
 topic-tags: spa
 content-type: reference
 exl-id: 95990112-2afc-420a-a7c7-9613f40d4c4a
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '1967'
+source-wordcount: '1965'
 ht-degree: 0%
 
 ---
@@ -37,8 +37,8 @@ Genomgången baseras på AEM och exempelappen WKND SPA Project. Om du vill följ
 * [AEM version 6.5.4 eller senare](/help/release-notes/release-notes.md)
    * Du måste ha administratörsbehörighet för systemet.
 * [Exempelappen WKND SPA Project som finns på GitHub](https://github.com/adobe/aem-guides-wknd-spa)
-   * Ladda ned [den senaste versionen av React-appen.](https://github.com/adobe/aem-guides-wknd-spa/releases) Namnet kommer att likna `wknd-spa-react.all.classic-X.Y.Z-SNAPSHOT.zip`.
-   * Ladda ned [senaste exempelbilder](https://github.com/adobe/aem-guides-wknd-spa/releases) för appen. Namnet kommer att likna `wknd-spa-sample-images-X.Y.Z.zip`.
+   * Ladda ned [den senaste versionen av React-appen.](https://github.com/adobe/aem-guides-wknd-spa/releases) Namnet liknar det `wknd-spa-react.all.classic-X.Y.Z-SNAPSHOT.zip`.
+   * Ladda ned [senaste exempelbilder](https://github.com/adobe/aem-guides-wknd-spa/releases) för appen. Namnet liknar det `wknd-spa-sample-images-X.Y.Z.zip`.
    * [Använd pakethanteraren](/help/sites-administering/package-manager.md) om du vill installera paketen på samma sätt som andra paket i AEM.
    * Appen behöver inte installeras med Maven för den här genomgången.
 
@@ -46,7 +46,7 @@ Genomgången baseras på AEM och exempelappen WKND SPA Project. Om du vill följ
 >
 >Det här dokumentet använder [WKND Spa Project-app](https://github.com/adobe/aem-guides-wknd-spa) endast i demonstrationssyfte. Det ska inte användas för något projektarbete.
 >
->Alla AEM ska utnyttja [AEM Project Archetype,](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) som stöder SPA projekt med React eller Angular och använder SPA SDK.
+>Alla AEM ska utnyttja [AEM Project Archettype,](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) som stöder SPA projekt med React eller Angular och använder SPA SDK.
 
 ### Vad är en SPA? {#what-is-a-spa}
 
@@ -79,7 +79,7 @@ Genom att vara snabbare, smidigare och mer som ett systemspecifikt program blir 
 
 ### Hur fungerar en SPA? {#how-does-a-spa-work}
 
-Den främsta idén bakom en SPA är att anrop och beroende av en server minskas för att minimera fördröjningar som orsakas av serveranrop så att SPA närmar sig svarstiden för ett internt program.
+Den främsta idén bakom en SPA är att anrop och beroende av en server minskas för att minimera fördröjningar som orsakas av serveranrop så att SPA närmar sig svarstiden för ett systemspecifikt program.
 
 På en traditionell, sekventiell webbsida läses bara de data som behövs för den omedelbara sidan in. Det innebär att när besökaren flyttar till en annan sida anropas servern för de extra resurserna. Ytterligare anrop kan behövas eftersom besökaren interagerar med element på sidan. Dessa anrop kan ge en känsla av fördröjning eller fördröjning eftersom sidan måste hinna ifatt besökarens önskemål.
 
@@ -99,7 +99,7 @@ Genom att återge på klientsidan reagerar sidelementet snabbare och besökarens
 
 När en SPA är byggd för att dra nytta av den AEM SPA redigeraren märker innehållsförfattaren ingen skillnad när du redigerar och skapar innehåll. Vanliga AEM är tillgängliga och inga ändringar i författarens arbetsflöde krävs.
 
-1. Redigera WKND SPA Project-appen i AEM.
+1. Redigera WKND-SPA i AEM.
 
    `http://<host>:<port>/editor.html/content/wknd-spa-react/us/en/home.html`
 
@@ -129,9 +129,9 @@ Ytterligare redigeringsverktyg som att dra och släppa ytterligare komponenter p
 
 >[!NOTE]
 >
->SPA redigerare ändrar inte programmets DOM. SPA ansvarar själv för DOM.
+>SPA redigerare ändrar inte programmets DOM. SPA är själv ansvarig för DOM.
 >
->Om du vill se hur det här fungerar fortsätter du till nästa avsnitt i den här artikeln [SPA och AEM SPA](#spa-apps-and-the-aem-spa-editor).
+>Fortsätt till nästa avsnitt i den här artikeln om du vill se hur det fungerar [SPA och AEM SPA](#spa-apps-and-the-aem-spa-editor).
 
 ## SPA och AEM SPA {#spa-apps-and-the-aem-spa-editor}
 
@@ -155,13 +155,13 @@ Genom att uppleva hur en SPA fungerar för slutanvändaren och sedan inspektera 
 
    ![Steg 3](assets/spa-walkthrough-step-1-3.png)
 
-   Trafiken är mycket liten när du går från sida till sida i appen. Sidan läses inte in igen och endast de nya bilderna efterfrågas.
+   Trafiken är mycket liten när du går från sida till sida i appen. Sidan läses inte in igen och endast de nya bilderna begärs.
 
    SPA hanterar innehållet och routningen enbart på klientsidan.
 
 Så om sidan inte läses in igen när du navigerar genom de underordnade sidorna, hur läses den in?
 
-Nästa avsnitt, [Läsa in ett SPA program,](#loading-an-spa-application) går djupare in i hur SPA läses in och hur innehåll kan läsas in synkront och asynkront.
+Nästa avsnitt, [Läsa in ett SPA,](#loading-an-spa-application) går djupare in i hur SPA läses in och hur innehåll kan läsas in synkront och asynkront.
 
 ### Läsa in ett SPA {#loading-an-spa-application}
 
@@ -175,7 +175,7 @@ Nästa avsnitt, [Läsa in ett SPA program,](#loading-an-spa-application) går dj
 1. Observera att källans innehåll är extremt begränsat.
 
    * Sidan har inget innehåll i sin brödtext. Den består huvudsakligen av formatmallar och ett anrop till olika skript, som `clientlib-react.min.js`.
-   * Dessa skript är de primära drivrutinerna för det här programmet och ansvarar för att återge allt innehåll.
+   * Dessa skript är de primära drivrutinerna för det här programmet och ansvarar för återgivningen av allt innehåll.
 
 1. Använd webbläsarens inbyggda verktyg för att inspektera sidan. Se innehållet i DOM som är fullständigt inläst.
 
@@ -201,7 +201,7 @@ Nästa avsnitt, [Läsa in ett SPA program,](#loading-an-spa-application) går dj
 
 1. Modellen kan också gruppera sidor så att de läses in synkront, vilket minskar antalet sidomladdningar som behövs.
 
-   I exemplet med WKND SPA Project-appen `home`, `page-1`, `page-2`och `page-3` sidor läses in synkront eftersom besökarna vanligtvis besöker alla dessa sidor.
+   I exemplet med WKND SPA Project-programmet `home`, `page-1`, `page-2`och `page-3` sidor läses in synkront eftersom besökarna vanligtvis besöker alla dessa sidor.
 
    Detta beteende är inte obligatoriskt och är helt definierbart.
 
@@ -241,7 +241,7 @@ I följande avsnitt utforskar vi kontraktet som gör det möjligt för SPA Edito
 
    >[!NOTE]
    >
-   >Detta är en förändring av serversidans renderade sidor i AEM, där det finns en `cq` element infogat för varje redigerbar komponent.
+   >Detta är en förändring av serversidans renderade sidor i AEM, där det finns en `cq` -element infogat för varje redigerbar komponent.
    >
    >
    >Detta tillvägagångssätt i SPA tar bort behovet av att injicera anpassade element, endast genom att förlita sig på ett extra dataattribut, vilket gör markeringen enklare för klientutvecklaren.

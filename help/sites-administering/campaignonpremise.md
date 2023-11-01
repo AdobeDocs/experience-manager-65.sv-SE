@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
 content-type: reference
 exl-id: a7281ca0-461f-4762-a631-6bb539596200
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '1583'
+source-wordcount: '1581'
 ht-degree: 0%
 
 ---
@@ -124,7 +124,7 @@ Integrationspaketet skapar automatiskt `aemserver` som AEM använder för att an
 
 ## Konfigurera Campaign-integrering i AEM {#campaign-integration}
 
-AEM [operatorn som du redan har ställt in i Campaign](#create-operator) för att kommunicera med Campaign
+AEM [operatorn som du redan har ställt in i Campaign](#create-operator) kommunicera med Campaign
 
 1. Logga in som administratör i AEM redigeringsinstans.
 

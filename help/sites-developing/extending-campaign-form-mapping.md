@@ -10,9 +10,9 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: d5dac1db-2dde-4b75-a31b-e057b447f6e2
 exl-id: bce6c586-9962-4217-82cb-c837e479abc0
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '530'
+source-wordcount: '528'
 ht-degree: 1%
 
 ---
@@ -34,7 +34,7 @@ Se [Integrera AEM med Adobe Campaign Classic](/help/sites-administering/campaign
 
 ## Skapa anpassade formulärmappningar {#creating-custom-form-mappings-2}
 
-Om du vill skapa anpassade formulärmappningar måste du följa dessa steg på hög nivå, som beskrivs i detalj i följande avsnitt:
+Om du vill skapa anpassade formulärmappningar måste du följa de här stegen på hög nivå, som beskrivs i detalj i följande avsnitt:
 
 1. Skapa en anpassad tabell.
 1. Utöka **frö** tabell.
@@ -58,7 +58,7 @@ Börja med att skapa en anpassad tabell i Adobe Campaign. I det här exemplet an
 
 När du har skapat händelsetabellen kör du **Guiden Uppdatera databasstruktur** för att skapa tabellen.
 
-### Utöka dirigeringstabellen {#extending-the-seed-table}
+### Utöka dirigerad tabell {#extending-the-seed-table}
 
 I Adobe Campaign: tryck/klicka **Lägg till** för att skapa ett nytt tillägg till **Fröadresser (nms)** tabell.
 
@@ -91,11 +91,11 @@ I **Administration/kampanjhantering** t, gå till **Målmappningar** och lägga 
 
 I det här steget lägger du till en leveransmall som använder den skapade **Målmappning**.
 
-I **Resurser/mallar** navigera till leveransmallen och duplicera den befintliga AEM. När du klickar **Till**, välj händelsen create **Målmappning**.
+I **Resurser/mallar** navigerar du till leveransmallen och duplicerar den befintliga AEM. När du klickar **Till**, välj händelsen create **Målmappning**.
 
 ![chlimage_1-196](assets/chlimage_1-196.png)
 
-### Bygga formuläret i AEM {#building-the-form-in-aem}
+### Skapa formuläret i AEM {#building-the-form-in-aem}
 
 I AEM kontrollerar du att du har konfigurerat en Cloud Service i **Sidegenskaper**.
 
@@ -123,8 +123,8 @@ Nu kan du skicka formuläret och validera om värdena sparas på Adobe Campaign-
 
 ## Felsökning {#troubleshooting}
 
-**&quot;Ogiltig typ för värdet &#39;02/02/2015&#39; från elementet &#39;@eventdate&#39; (dokument av typen &#39;Event ([adb:event])&quot;**
+**&quot;Ogiltig typ för värdet &#39;02/02/2015&#39; från elementet &#39;@eventdate&#39; (dokument av typen &#39;Event ([adb:event])&#39;)&quot;**
 
-När formuläret skickas loggas detta fel i **error.log** AEM.
+När formuläret skickas loggas det här felet i **error.log** AEM.
 
 Detta beror på ett ogiltigt format för datumfältet. Lösningen är att tillhandahålla **yyyy-mm-dd** som värdet.

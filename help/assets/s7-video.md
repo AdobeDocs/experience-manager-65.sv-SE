@@ -11,9 +11,9 @@ role: User, Admin
 mini-toc-levels: 3
 exl-id: 56009925-1a36-48b5-b96c-ec2e468da106
 feature: Video
-source-git-commit: 77687a0674b939460bd34011ee1b94bd4db50ba4
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '1508'
+source-wordcount: '1504'
 ht-degree: 0%
 
 ---
@@ -30,12 +30,12 @@ Tack vare Dynamic Media Classic videointegration kan optimerad video även anvä
 
 ## Om FFMPEG och Dynamic Media Classic {#about-ffmpeg-and-scene}
 
-Standardprocessen för videokodning bygger på den FFMPEG-baserade integrationen med videoprofiler. Därför innehåller det körklara arbetsflödet för DAM-inmatning följande två åtgärder:
+Standardprocessen för videokodning bygger på den FFMPEG-baserade integrationen med videoprofiler. Därför innehåller det körklara arbetsflödet för DAM-inmatning följande två åtgärder för ffmpeg-baserade arbetsflöden:
 
 * FFMPEG-miniatyrbilder
 * FFMPEG-kodning
 
-Om du aktiverar och konfigurerar Dynamic Media Classic-integreringen tas inte dessa två arbetsflödessteg bort automatiskt från det körklara arbetsflödet för DAM-import. Om du redan använder den FFMPEG-baserade videokodningen i Adobe Experience Manager är det troligt att du har FFMPEG installerat i dina redigeringsmiljöer. I det här fallet kodas en ny video som hämtas med DAM två gånger: en gång från FFMPEG-kodaren och en gång från Dynamic Media Classic-integreringen.
+Om du aktiverar och konfigurerar Dynamic Media Classic-integreringen tas inte dessa två arbetsflödessteg bort automatiskt från det körklara arbetsflödet för DAM-import. Om du redan använder den FFMPEG-baserade videokodningen i Adobe Experience Manager är det troligt att du har FFMPEG installerat i dina redigeringsmiljöer. I det här fallet kodas en ny video som har importerats med DAM två gånger: en gång från FFMPEG-kodaren och en gång från Dynamic Media Classic-integreringen.
 
 Om du har konfigurerat och installerat den FFMPEG-baserade videokodningen i Experience Manager rekommenderar Adobe att du tar bort de två FFMPEG-arbetsflödena från arbetsflödena för DAM-inhämtning.
 
@@ -53,22 +53,22 @@ Hur du avgör var du ska överföra dina videoresurser beror på följande:
 * Behöver du ett arbetsflöde för videoresursen?
 * Behöver du versionskontroll för videoresursen?
 
-Om svaret är ja på någon av eller båda dessa frågor överför du videon direkt till Adobe DAM. Om svaret är&quot;nej&quot; på båda frågorna överför du videon direkt till Dynamic Media Classic. Arbetsflödet för varje scenario beskrivs i följande avsnitt.
+Om svaret är ja på någon av eller båda dessa frågor överför du videon direkt till Adobe DAM. Om svaret är nej på båda frågorna överför du videon direkt till Dynamic Media Classic. Arbetsflödet för varje scenario beskrivs i följande avsnitt.
 
 ### Om du överför videon direkt till Adobe DAM {#if-you-are-uploading-your-video-directly-to-adobe-dam}
 
 Om du behöver ett arbetsflöde eller en versionshantering för dina resurser ska du först överföra till Adobe DAM. Här följer det rekommenderade arbetsflödet:
 
 1. Ladda upp videomaterialet till Adobe DAM och koda och publicera automatiskt till Dynamic Media Classic.
-1. I Experience Manager får du tillgång till videomaterial i WCM i **[!UICONTROL Movies]** i Content Finder.
+1. I Experience Manager får du tillgång till videomaterial i WCM i **[!UICONTROL Movies]** -fliken i Content Finder.
 1. Författare med **[!UICONTROL Scene7 Video]** eller **[!UICONTROL Foundation Video]** -komponenten.
 
 ### Om du överför din video till Dynamic Media Classic {#if-you-are-uploading-your-video-to-scene}
 
 Om du inte behöver ett arbetsflöde eller en versionshantering för dina resurser överför du dina resurser till Scene7. Här följer det rekommenderade arbetsflödet:
 
-1. I Dynamic Media Classic [konfigurera en schemalagd FTP-överföring och -kodning till Scene7 (automatisk systeminstallation)](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/upload-publish/uploading-files.html#upload-files-using-via-ftp).
-1. I Experience Manager får du tillgång till videomaterial i WCM i **[!UICONTROL Scene7]** i Content Finder.
+1. I DYNAMIC MEDIA CLASSIC [konfigurera en schemalagd FTP-överföring och -kodning till Scene7 (automatisk systeminstallation)](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/upload-publish/uploading-files.html#upload-files-using-via-ftp).
+1. I Experience Manager får du tillgång till videomaterial i WCM i **[!UICONTROL Scene7]** -fliken i Content Finder.
 1. Författare med **[!UICONTROL Scene7 Video]** -komponenten.
 
 ## Konfigurera integrering med Scene7 Video {#configuring-integration-with-scene-video}
@@ -131,9 +131,9 @@ I följande matris förklaras när du ska använda vilken komponent:
 
 Följande tabell innehåller en högnivåjämförelse mellan videokomponenten i Experience Manager Foundation och Scene7 Video-komponenten som stöds:
 
-|  | Experience Manager Foundation Video | Scene7 Video |
+|   | Experience Manager Foundation Video | Scene7 Video |
 |---|---|---|
-| Metod | HTML5:a första metoden. Flash används endast för reservlösningar som inte är HTML5. | Flash på de flesta stationära datorer. HTML5 används för mobiler och surfplattor. |
+| Metod | HTML5:a första metoden. Flash används bara för reservlösningar som inte är HTML5. | Flash på de flesta datorer. HTML5 används för mobiler och surfplattor. |
 | Leverans | Progressiv | Adaptiv strömning |
 | Spårning | Ja | Ja |
 | Utbyggbarhet | Ja | Nej |
@@ -177,10 +177,10 @@ The **[!UICONTROL Foundation Video]** -komponenten måste känna till vilka vide
 
 >[!NOTE]
 >
->Ändringar i designen kräver att designen aktiveras för att börja gälla vid publiceringen.
+>Ändringar som görs i designen kräver att designen aktiveras för publicering.
 
 1. Öppna **[!UICONTROL Foundation Video]** -komponentens designdialogruta och ändra till **[!UICONTROL Profiles]** -fliken. Ta sedan bort färdiga profiler och lägg till de nya videoprofilerna för S7. Ordningen på profillistan i designdialogrutan definierar ordningen på videokällelementet vid återgivning.
-1. I webbläsare som inte stöder HTML5 kan du konfigurera ett Flash-reservläge med videokomponenten. Öppna dialogrutan för design av videokomponenter och ändra till **[!UICONTROL Flash]** -fliken. Konfigurera inställningarna för Flash-spelaren och tilldela en reservprofil för Flash Player.
+1. I webbläsare som inte stöder HTML5 kan du konfigurera en Flash-reserv med videokomponenten. Öppna dialogrutan för design av videokomponenter och ändra till **[!UICONTROL Flash]** -fliken. Konfigurera Flashens spelarinställningar och tilldela en reservprofil för Flash Player.
 
 #### Checklista {#checklist}
 

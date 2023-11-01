@@ -3,9 +3,9 @@ title: Skapa en hanterare för att bjuda in externa användare
 description: Lär dig hur du skapar en hanterare för att bjuda in externa användare. Tjänsten Rights Management gör det möjligt att bjuda in externa användare till Rights Management.
 role: Developer
 exl-id: b0416716-dcc9-4f80-986a-b9660a7c8f6b
-source-git-commit: 6caf3ef4a00275f0f73be52b6a9ccba77d277f1a
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '1093'
+source-wordcount: '1091'
 ht-degree: 0%
 
 ---
@@ -170,7 +170,7 @@ public class InviteExternalUsersSample implements InvitedUserProvider
 
 ## Definiera komponentens XML-fil för behörighetshanteraren {#define-component-xml-authorization-handler}
 
-Du måste definiera en komponent-XML-fil för att kunna distribuera hanterarkomponenten för inbjudna externa användare. En komponent-XML-fil finns för varje komponent och innehåller metadata om komponenten.
+Du måste definiera en komponent-XML-fil för att distribuera den externa användarhanterarkomponenten. En komponent-XML-fil finns för varje komponent och innehåller metadata om komponenten.
 
 Följande `component.xml` filen används för att bjuda in externa användarhanterare. Observera att tjänstnamnet är `InviteExternalUsersSample` och åtgärden som den här tjänsten visar har ett namn `invitedUser`. Indataparametern är en `java.util.List` -instans och utdatavärdet är en array med `com.adobe.edc.server.spi.esrp.InvitedUserProviderResult` -instanser.
 

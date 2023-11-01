@@ -1,7 +1,7 @@
 ---
 title: Adaptiva formulärmallar
 seo-title: Adaptive Form Templates
-description: Skapa anpassningsbara formulärmallar genom att definiera den grundläggande strukturen och det ursprungliga formulärinnehållet med hjälp av mallredigeraren.
+description: Skapa anpassningsbara formulärmallar genom att definiera den grundläggande strukturen och det ursprungliga formulärinnehållet med mallredigeraren.
 seo-description: Create adaptive form templates by defining the basic structure and initial form content using the Template Editor.
 uuid: 317ca3ab-f809-49a7-a063-9d0c17a35fe4
 contentOwner: sashanka
@@ -11,16 +11,16 @@ discoiquuid: b21a48ba-eccd-4bb5-9b92-3039026ddf2a
 docset: aem65
 feature: Adaptive Forms
 exl-id: d7287ee7-fb4e-4d47-b37e-0a9260344070
-source-git-commit: e7a3558ae04cd6816ed73589c67b0297f05adce2
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '2044'
+source-wordcount: '2042'
 ht-degree: 0%
 
 ---
 
 # Adaptiva formulärmallar{#adaptive-form-templates}
 
-<span class="preview"> Adobe rekommenderar att man använder modern och utbyggbar datainhämtning [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) for [skapa ny Adaptive Forms](/help/forms/using/create-an-adaptive-form-core-components.md) eller [lägga till adaptiv Forms på AEM Sites-sidor](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-program, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptive Forms med grundläggande komponenter. </span>
+<span class="preview"> Adobe rekommenderar att man använder modern och utbyggbar datainhämtning [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) for [skapa ny Adaptive Forms](/help/forms/using/create-an-adaptive-form-core-components.md) eller [lägga till adaptiv Forms på AEM Sites-sidor](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-filer, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptiv Forms med baskomponenter. </span>
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
@@ -47,8 +47,8 @@ När du trycker för att öppna en mapp finns knappen Skapa som gör att du kan 
 
 När du har skapat en mapp öppnar du mappen och utför följande steg för att skapa en mall:
 
-1. Tryck på i mallkonsolen **Skapa** i den mapp du har skapat.
-1. I avsnittet Välj en malltyp väljer du **Adaptiv formulärmall** och trycka **Nästa**.
+1. Tryck på **Skapa** i den mapp du har skapat.
+1. I avsnittet Välj en malltyp väljer du **Adaptiv formulärmall** och knacka **Nästa**.
 
 1. Ange en malltitel i avsnittet Mallinformation och tryck på **Skapa**.
 Du kan ange en beskrivning och miniatyrbild som du kan se när du kan välja den skapade mallen när du redigerar formuläret.
@@ -62,13 +62,13 @@ När du öppnar en mall för redigering kan du se följande AEM Editor-komponent
 * **Verktygsfältet Sida**
 Innehåller följande alternativ:
 
-   * **Växla sidopanel**: Här kan du visa eller dölja sidofältet.
-   * **Sidinformation**: Här kan du ange information som publicerings-/avpubliceringstid, miniatyrbilder, klientbibliotek, sidprincip och klientbibliotek för siddesign.
+   * **Växla sidopanel**: Visa eller dölj sidofältet.
+   * **Sidinformation**: Gör att du kan ange information som publicerings-/avpubliceringstid, miniatyrbilder, klientbibliotek, sidprincip och klientbibliotek för siddesign.
    * **Emulator**: Gör att du kan simulera och anpassa utseendet för olika enheter.
-   * **Lagerväljare:** Här kan du ändra lagret.
-Du kan välja **Struktur** lager eller **Ursprungligt innehåll** lager. Med strukturlagret kan du lägga till och anpassa sidhuvud och sidfot. Med lagret Ursprungligt innehåll kan du anpassa formulärinnehållet.
+   * **Lagerväljare:** Gör att du kan ändra lagret.
+Du kan **Struktur** lager eller **Ursprungligt innehåll** lager. Med strukturlagret kan du lägga till och anpassa sidhuvud och sidfot. Med det inledande innehållslagret kan du anpassa formulärinnehållet.
 
-   * **Förhandsgranska:** Gör att du kan förhandsgranska hur mallen ser ut när du publicerar den. Du kan använda Lagerväljaren och Förhandsgranska för att växla redigerings- och förhandsgranskningsläge.
+   * **Förhandsgranska:** Gör att du kan förhandsgranska hur mallen ser ut när du publicerar den. Du kan använda Lagerväljaren och Förhandsgranska för att växla redigerings- och förhandsgranskningslägen.
 
 * **Sidofält:** Tillhandahåller webbläsarna Innehåll, Egenskaper, Resurser och Komponenter.
 * **Komponentverktygsfältet:** När du markerar en komponent visas ett verktygsfält där du kan anpassa komponenten.
@@ -105,7 +105,7 @@ Sidhuvud och sidfot som lagts till i strukturlagret
 
 #### Låsa/låsa upp komponenter i strukturlagret {#locking-unlocking-components-in-the-structure-layer}
 
-När du redigerar mallen med strukturlagret markerat kan du låsa upp mallens sidhuvud och sidfot. Om en komponent är olåst i mallen kan formulärförfattare redigera komponenten i det adaptiva formulär som använder mallen. Genom att låsa en komponent kan formulärförfattare inte redigera den i det anpassade formuläret. Alternativet Lås är tillgängligt i komponentens verktygsfält.
+När du redigerar mallen med strukturlagret markerat kan du låsa upp mallens sidhuvud och sidfot. Om en komponent är olåst i mallen kan formulärförfattare redigera komponenten i det adaptiva formulär som använder mallen. Genom att låsa en komponent förhindrar du att formulärförfattare redigerar den i det anpassade formuläret. Alternativet Lås är tillgängligt i komponentens verktygsfält.
 
 Du kan till exempel lägga till rubrikkomponenten i mallen. När du markerar komponenten kan du se ett låsalternativ i komponentens verktygsfält. Vanligtvis innehåller rubriken företagsnamn och logotyp, och du vill inte att formulärförfattare ska ändra logotypen och rubriken i en mall. I ett adaptivt formulär som skapats med mallen med huvudkomponenten låst kan formulärförfattare inte ändra logotypen och företagsnamnet.
 
@@ -148,7 +148,7 @@ Du har lagt till en logotyp, angett en rubrik och lagt till en sidfot i struktur
 * Du kan dra och släppa panelkomponenten från komponentwebbläsaren i sidofältet.
 * Du kan lägga till en underordnad panel till `guideRootPanel` i komponentens verktygsfält.
 
-Om du vill skapa flikarna Allmän information och Professional Information lägger du till två paneler i den underordnade panelen i `guideRootPanel`. Markera panelerna och tryck på ![cmppr](assets/cmppr.png) för att öppna egenskaperna i sidofältet. Ändra elementnamnen som `general-info` och `professional-info`och titlar som General Information respektive Professional Information. I sidlisten: tryck på innehåll för att öppna innehållsläsaren. På fliken Formulärobjekt väljer du `guideRootPanel`. I redigeraren markeras guideRootPanel. Tryck ![cmppr](assets/cmppr.png) i komponentens verktygsfält för att öppna dess egenskaper. Välj **Flikar överst** och trycka **Klar**. Flikmallstrukturen används.
+Om du vill skapa flikarna Allmän information och Professional Information lägger du till två paneler i den underordnade panelen i `guideRootPanel`. Markera panelerna och tryck på ![cmppr](assets/cmppr.png) för att öppna egenskaperna i sidofältet. Ändra elementnamnen som `general-info` och `professional-info`och titlar som General Information respektive Professional Information. I sidlisten: tryck på innehåll för att öppna innehållsläsaren. På fliken Formulärobjekt väljer du `guideRootPanel`. I redigeraren markeras guideRootPanel. Tryck ![cmppr](assets/cmppr.png) i komponentens verktygsfält för att öppna dess egenskaper. I fältet Panellayout väljer du **Flikar överst** och knacka **Klar**. Flikmallstrukturen används.
 
 #### Lägga till innehåll på flikar {#adding-content-in-tabs}
 
@@ -180,7 +180,7 @@ Ett formulär fungerar med sin mall. När du hämtar ett adaptivt formulär som 
 
 När du har skapat och aktiverat en mall är den tillgänglig i formulärhanteraren när du skapar ett anpassat formulär. Information om hur du använder en mall och skapar ett anpassat formulär finns i [Skapa ett anpassat formulär](../../forms/using/creating-adaptive-form.md).
 
-## Ändra visningsalternativ för mallar som inte är i kartong  {#change-display-option-of-out-of-the-box-templates}
+## Ändra visningsalternativ för mallar som ligger utanför rutan  {#change-display-option-of-out-of-the-box-templates}
 
 Du kan skapa anpassade mallar för adaptiva formulär för att definiera grundläggande struktur och ursprungligt innehåll. AEM Forms har också en uppsättning färdiga mallar för anpassningsbara formulär. Du kan välja att visa eller dölja mallarna.
 
@@ -195,7 +195,7 @@ Så här visar och döljer du mallar:
 1. Leta reda på och öppna **FormsManager-konfiguration** inställningar:
 
    * Om du vill visa eller dölja formulärmallar som anpassar sig markerar eller avmarkerar du **Inkludera mallar för AF och AD** alternativ.
-   * Om du vill visa eller dölja anpassade formulärmallar som har lagts till i Forms-utgåvorna AEM 6.0 eller AEM 6.1 men nu är borttagna markerar eller avmarkerar du **Inkludera AEM 6.0 AF-mallar** alternativ. Om det här alternativet är markerat krävs det **Inkludera mallar för AF och AD** konfiguration som ska aktiveras.
+   * Om du vill visa eller dölja anpassade formulärmallar som har lagts till i Forms-utgåvorna AEM 6.0 eller AEM 6.1 men nu är borttagna markerar eller avmarkerar du **Inkludera AEM 6.0 AF-mallar** alternativ. Om det här alternativet är markerat måste du **Inkludera mallar för AF och AD** konfiguration som ska aktiveras.
 
 1. Klicka **Spara**. Visningsalternativen för mallar som inte finns i kartongen ändras.
 

@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: best-practices
 exl-id: 6dfaa14d-5dcf-4e89-993a-8d476a36d668
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '4609'
 ht-degree: 0%
 
 ---
@@ -111,7 +111,7 @@ För frågestatistik kan du titta på MBean med namnet **Oak Query-statistik**.
 
 Om du vill gå in i indexen med ett verktyg som [Luke](https://code.google.com/archive/p/luke/)måste du använda Oak-konsolen för att dumpa indexvärdet från `NodeStore` till en filsystemkatalog. Anvisningar om hur du gör detta finns i [Lucene-dokumentation](https://jackrabbit.apache.org/oak/docs/query/lucene.html).
 
-Du kan också extrahera indexvärdena i systemet i JSON-format. För att kunna göra detta måste du ha `https://server:port/oak:index.tidy.-1.json`
+Du kan också extrahera indexvärdena i systemet i JSON-format. Om du vill göra det måste du ha tillgång till `https://server:port/oak:index.tidy.-1.json`
 
 ### Frågegränser {#query-limits}
 

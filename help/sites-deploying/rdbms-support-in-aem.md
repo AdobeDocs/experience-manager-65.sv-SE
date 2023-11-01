@@ -12,9 +12,9 @@ discoiquuid: 6a754d42-da30-4c2f-8b9c-369e1f1f92b5
 docset: aem65
 feature: Configuring
 exl-id: 1e34c5ca-9e08-4b2a-901c-ab28aeb4a807
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '621'
+source-wordcount: '619'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ ht-degree: 0%
 
 Stöd för relationsdatabasbeständighet i AEM implementeras med Document Microkernel. Dokumentmikrokärnan är grunden som också används för implementering av MongoDB-beständighet.
 
-Det består av ett Java-API som baseras på Mongo Java API. En implementering av ett BlobStore API ingår också. Bloggar lagras som standard i databasen.
+Det består av ett Java-API som är baserat på Mongo Java API. En implementering av ett BlobStore API ingår också. Bloggar lagras som standard i databasen.
 
 Mer information om implementering finns i [RDBDocumentStore](https://jackrabbit.apache.org/oak/docs/apidocs/org/apache/jackrabbit/oak/plugins/document/rdb/RDBDocumentStore.html) och [RDBBlobStore](https://jackrabbit.apache.org/oak/docs/apidocs/org/apache/jackrabbit/oak/plugins/document/rdb/RDBBlobStore.html) dokumentation.
 
@@ -48,7 +48,7 @@ Anvisningar om hur du skapar OSGi-paket för JDBC-drivrutiner finns i detta [dok
 När paketen är på plats följer du stegen nedan för att konfigurera AEM med RDB-beständighet:
 
 1. Kontrollera att databasdaemon har startats och att du har en aktiv databas som kan användas med AEM.
-1. Kopiera AEM 6.3 burk till installationskatalogen.
+1. Copy the AEM 6.3 jar into the installation directory.
 1. Skapa en mapp med namnet `crx-quickstart\install` i installationskatalogen.
 1. Konfigurera dokumentnodarkivet genom att skapa en konfigurationsfil med följande namn i `crx-quickstart\install` katalog:
 
@@ -57,6 +57,7 @@ När paketen är på plats följer du stegen nedan för att konfigurera AEM med 
 1. Konfigurera datakällan och JDBC-parametrarna genom att skapa en annan konfigurationsfil med följande namn i `crx-quickstart\install` mapp:
 
    * `org.apache.sling.datasource.DataSourceFactory-oak.config`
+
    >[!NOTE]
    >
    >Detaljerad information om datakällkonfigurationen för varje databas som stöds finns i [Konfigurationsalternativ för datakälla](/help/sites-deploying/rdbms-support-in-aem.md#data-source-configuration-options).

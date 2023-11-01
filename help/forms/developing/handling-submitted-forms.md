@@ -12,9 +12,9 @@ topic-tags: operations
 discoiquuid: 3d838027-6bde-4a71-a428-4d5102f7d799
 role: Developer
 exl-id: 419335b2-2aae-4e83-98ff-18e61b7efa9c
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '2904'
+source-wordcount: '2902'
 ht-degree: 0%
 
 ---
@@ -62,7 +62,7 @@ När formulärdata skickas som XML kan du hämta XML-data som representerar skic
 
 ![hs_hs_loanformdata](assets/hs_hs_loanformdata.png)
 
-I följande bild visas motsvarande XML-data som hämtas med hjälp av API:t för Forms-tjänstklienten.
+I följande bild visas motsvarande XML-data som hämtas med hjälp av Forms klienttjänstens API.
 
 ![hs_hs_loandata](assets/hs_hs_loandata.png)
 
@@ -94,7 +94,7 @@ I följande tabell beskrivs stegen i det här diagrammet.
   </tr>
   <tr>
    <td><p>2</p></td>
-   <td><p>Forms-tjänsten återger ett interaktivt PDF-formulär till klientens webbläsare.</p></td>
+   <td><p>Forms-tjänsten återger ett interaktivt PDF-formulär till webbläsaren.</p></td>
   </tr>
   <tr>
    <td><p>3</p></td>
@@ -117,7 +117,7 @@ Om formulärdata skickas som URL UTF-16-data kräver klientdatorn Adobe Reader e
 
 ## Sammanfattning av steg {#summary-of-steps}
 
-Gör så här för att hantera skickade formulär:
+Utför följande uppgifter för att hantera skickade formulär:
 
 1. Inkludera projektfiler.
 1. Skapa ett Forms Client API-objekt.
@@ -143,7 +143,7 @@ Du kan även hämta formulärfält från ett formulär som har skickats som PDF-
 * Ange `RenderOptionsSpec` objektets `PDFToXDP` värde till `true`
 * Ange `RenderOptionsSpec` objektets `ExportDataFormat` värde till `XMLData`
 
-Du anger innehållstypen för det skickade formuläret när du anropar `processFormSubmission` -metod. Följande lista anger tillämpliga värden för innehållstyp:
+Du anger innehållstypen för det skickade formuläret när du anropar `processFormSubmission` -metod. I följande lista anges tillämpliga värden för innehållstyp:
 
 * **text/xml**: Representerar innehållstypen som ska användas när ett PDF-formulär skickar formulärdata som XML.
 * **application/x-www-form-urlencoded**: Representerar innehållstypen som ska användas när ett HTML-formulär skickar data som XML.
@@ -151,17 +151,17 @@ Du anger innehållstypen för det skickade formuläret när du anropar `processF
 
 >[!NOTE]
 >
->Du kommer att märka att det finns tre motsvarande snabbstarter kopplade till avsnittet Hantera skickade Forms. Hanteringen av PDF forms som har skickats som PDF med Java API-snabbstarten visar hur inskickade PDF-data hanteras. Innehållstypen som anges i snabbstarten är `application/pdf`. I PDF forms Hantera som skickas som XML med Java API-snabbstarten visas hur inskickade XML-data från ett PDF-formulär hanteras. Innehållstypen som anges i snabbstarten är `text/xml`. På samma sätt visar Hantera HTML-formulär som skickas som XML med Java API-snabbstarten hur inskickade XML-data från ett HTML-formulär hanteras. Innehållstypen som anges i snabbstarten är application/x-www-form-urlencoded.
+>Du kommer att märka att det finns tre motsvarande snabbstarter kopplade till avsnittet Hantera skickade Forms. Hanteringen av PDF forms som har skickats som PDF med Java API-snabbstarten visar hur inskickade PDF-data hanteras. Innehållstypen som anges i snabbstarten är `application/pdf`. I PDF forms Hantera som skickas som XML med Java API-snabbstarten visas hur inskickade XML-data från ett PDF-formulär hanteras. Innehållstypen som anges i snabbstarten är `text/xml`. På samma sätt visar Hantera HTML-formulär som har skickats som XML med Java API-snabbstarten hur du hanterar skickade XML-data som har skickats från ett HTML-formulär. Innehållstypen som anges i snabbstarten är application/x-www-form-urlencoded.
 
 Du hämtar formulärdata som har skickats till Forms-tjänsten och fastställer bearbetningstillståndet. Det vill säga, när data skickas till Forms-tjänsten behöver det inte innebära att Forms-tjänsten är klar med databehandlingen och att data är klara att bearbetas. Data kan till exempel skickas till Forms så att en beräkning kan utföras. När beräkningen är klar återges formuläret tillbaka till användaren med beräkningsresultaten visade. Innan du bearbetar inskickade data bör du ta reda på om Forms-tjänsten har slutfört databearbetningen.
 
 Forms-tjänsten returnerar följande värden för att ange om databearbetningen är klar:
 
-* **0 (Skicka):** Skickade data kan nu bearbetas.
+* **0 (Skicka):** Skickade data är klara att bearbetas.
 * **1 (Beräkna):** Forms-tjänsten utförde en beräkningsåtgärd för data och resultaten måste återges för användaren.
 * **2 (Validera):** Forms-tjänsten validerade formulärdata och resultaten måste återges för användaren.
 * **3 (Nästa):** Den aktuella sidan har ändrats med resultat som måste skrivas till klientprogrammet.
-* **4 (Föregående**): Den aktuella sidan har ändrats med resultat som måste skrivas till klientprogrammet.
+* **4 (föregående**): Den aktuella sidan har ändrats med resultat som måste skrivas till klientprogrammet.
 
 >[!NOTE]
 >
@@ -169,17 +169,17 @@ Forms-tjänsten returnerar följande värden för att ange om databearbetningen 
 
 **Kontrollera om formuläröverföringen innehåller bifogade filer**
 
-Forms som skickas till Forms-tjänsten kan innehålla bifogade filer. Med Acrobat inbyggda bilagefanel kan man t.ex. markera bifogade filer som ska skickas tillsammans med formuläret. Användaren kan också markera bifogade filer med hjälp av verktygsfältet HTML som återges med en HTML-fil.
+Forms som skickas till Forms kan innehålla bifogade filer. Med Acrobat inbyggda bilagefanel kan man t.ex. markera bifogade filer som ska skickas tillsammans med formuläret. Användaren kan också markera bifogade filer med hjälp av verktygsfältet HTML som återges med en HTML-fil.
 
 När du har fastställt om ett formulär innehåller bifogade filer kan du bearbeta data. Du kan till exempel spara den bifogade filen i det lokala filsystemet.
 
 >[!NOTE]
 >
->Formuläret måste skickas in som data i PDF för att du ska kunna hämta bifogade filer. Om formuläret skickas som XML-data skickas inga bifogade filer.
+>Formuläret måste skickas som data i PDF för att du ska kunna hämta bifogade filer. Om formuläret skickas som XML-data skickas inga bifogade filer.
 
 **Bearbeta skickade data**
 
-Beroende på innehållstypen för inskickade data kan du extrahera enskilda formulärfältsvärden från inskickade XML-data eller spara inskickade PDF-data som en PDF-fil (eller skicka dem till en annan tjänst). Om du vill extrahera enskilda formulärfält konverterar du inskickade XML-data till en XML-datakälla och hämtar sedan XML-datakällsvärden med hjälp av `org.w3c.dom` klasser.
+Beroende på innehållstypen för inskickade data kan du extrahera enskilda formulärfältsvärden från inskickade XML-data eller spara inskickade PDF-data som en PDF-fil (eller skicka dem till en annan tjänst). Om du vill extrahera enskilda formulärfält konverterar du inskickade XML-data till en XML-datakälla och hämtar sedan XML-datakällsvärden med hjälp av `org.w3c.dom` -klasser.
 
 **Se även**
 
@@ -189,7 +189,7 @@ Beroende på innehållstypen för inskickade data kan du extrahera enskilda form
 
 [Snabbstart för Forms Service API](/help/forms/developing/forms-service-api-quick-starts.md#forms-service-api-quick-starts)
 
-[Skicka dokument till Forms-tjänsten](/help/forms/developing/passing-documents-forms-service.md)
+[Skicka dokument till Forms](/help/forms/developing/passing-documents-forms-service.md)
 
 [Skapa webbprogram som återger Forms](/help/forms/developing/creating-web-applications-renders-forms.md)
 
@@ -213,7 +213,7 @@ Hantera inskickade formulär med Forms API (Java):
 
    >[!NOTE]
    >
-   >Du kan instruera Forms-tjänsten att skapa XDP- eller XML-data från inskickat PDF-innehåll genom att anropa `RenderOptionsSpec` objektets `setPDF2XDP` metod och att skicka `true` och även ringa `setXMLData` och skicka `true`. Du kan sedan anropa `FormsResult` objektets `getOutputXML` metod för att hämta XML-data som motsvarar XDP/XML-data. (Med `FormsResult` objektet returneras av `processFormSubmission` som förklaras i nästa delsteg.)
+   >Du kan instruera Forms att skapa XDP- eller XML-data från inskickat PDF-innehåll genom att anropa `RenderOptionsSpec` objektets `setPDF2XDP` metod och att skicka `true` och även ringa `setXMLData` och skicka `true`. Du kan sedan anropa `FormsResult` objektets `getOutputXML` metod för att hämta XML-data som motsvarar XDP/XML-data. (Med `FormsResult` objektet returneras av `processFormSubmission` som förklaras i nästa delsteg.)
 
    * Anropa `FormsServiceClient` objektets `processFormSubmission` och skicka följande värden:
 
@@ -222,11 +222,9 @@ Hantera inskickade formulär med Forms API (Java):
       * Ett strängvärde som anger `HTTP_USER_AGENT` rubrikvärde, till exempel . `Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322)`. Det här parametervärdet är valfritt.
       * A `RenderOptionsSpec` objekt som lagrar körningsalternativ.
 
-      The `processFormSubmission` returnerar en `FormsResult` objekt som innehåller resultaten av formuläröverföringen.
+     The `processFormSubmission` returnerar en `FormsResult` objekt som innehåller resultaten av formuläröverföringen.
 
-   * Avgör om Forms-tjänsten har slutfört bearbetningen av formulärdata genom att anropa `FormsResult` objektets `getAction` -metod. Om den här metoden returnerar värdet `0`är data färdiga att bearbetas.
-
-
+   * Kontrollera om Forms-tjänsten har bearbetat formulärdata genom att anropa `FormsResult` objektets `getAction` -metod. Om den här metoden returnerar värdet `0`är data färdiga att bearbetas.
 
 1. Kontrollera om formuläröverföringen innehåller bifogade filer
 
@@ -246,13 +244,13 @@ Hantera inskickade formulär med Forms API (Java):
       * Skapa en `org.w3c.dom.DocumentBuilderFactory` genom att anropa det statiska `org.w3c.dom.DocumentBuilderFactory` objektets `newInstance` -metod.
       * Skapa en `org.w3c.dom.DocumentBuilder` genom att anropa `org.w3c.dom.DocumentBuilderFactory` objektets `newDocumentBuilder` -metod.
       * Skapa en `org.w3c.dom.Document` genom att anropa `org.w3c.dom.DocumentBuilder` objektets `parse` metoden och skicka `java.io.InputStream` -objekt.
-      * Hämta värdet för varje nod i XML-dokumentet. Ett sätt att utföra den här uppgiften är att skapa en anpassad metod som accepterar två parametrar: den `org.w3c.dom.Document` och namnet på noden vars värde du vill hämta. Den här metoden returnerar ett strängvärde som representerar nodens värde. I kodexemplet som följer den här processen anropas den här anpassade metoden `getNodeText`. Innehållet i den här metoden visas.
+      * Hämta värdet för varje nod i XML-dokumentet. Ett sätt att utföra den här uppgiften är att skapa en anpassad metod som accepterar två parametrar: `org.w3c.dom.Document` och namnet på noden vars värde du vill hämta. Den här metoden returnerar ett strängvärde som representerar nodens värde. I kodexemplet som följer den här processen anropas den här anpassade metoden `getNodeText`. Innehållet i den här metoden visas.
+
    * Om datainnehållstypen är `application/pdf`skapar du programlogik för att spara inskickade PDF-data som en PDF-fil.
 
       * Skapa en `com.adobe.idp.Document` genom att anropa `FormsResult` objektets `getOutputContent` -metod.
-      * Skapa en `java.io.File` genom att använda dess public-konstruktor. Var noga med att ange PDF som filnamnstillägg.
+      * Skapa en `java.io.File` genom att använda dess public-konstruktor. Ange PDF som filnamnstillägg.
       * Fylla i PDF-filen genom att anropa `com.adobe.idp.Document` objektets `copyToFile` metoden och skicka `java.io.File` -objekt.
-
 
 **Se även**
 
@@ -260,7 +258,7 @@ Hantera inskickade formulär med Forms API (Java):
 
 [Snabbstart (SOAP-läge): Hantera HTML-formulär som skickats som XML med Java API](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-handling-html-forms-submitted-as-xml-using-the-java-api)
 
-[Snabbstart (SOAP-läge): Hantera PDF forms som skickats som PDF med Java API](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-handling-pdf-forms-submitted-as-pdf-using-the-java-api)
+[Snabbstart (SOAP-läge): Hantera PDF forms som har skickats som PDF med Java API](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-handling-pdf-forms-submitted-as-pdf-using-the-java-api)
 
 [Inkludera AEM Forms Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -292,7 +290,7 @@ Hantera inskickade formulär med Forms API (webbtjänst):
 
       * The `BLOB` som innehåller formulärdata.
       * Ett strängvärde som anger miljövariabler inklusive alla relevanta HTTP-huvuden. Ange den innehållstyp som ska hanteras. Om du vill hantera XML-data anger du följande strängvärde för den här parametern: `CONTENT_TYPE=text/xml`. Om du vill hantera PDF data anger du följande strängvärde för den här parametern: `CONTENT_TYPE=application/pdf`.
-      * Ett strängvärde som anger `HTTP_USER_AGENT` rubrikvärde; till exempel `Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322)`.
+      * Ett strängvärde som anger `HTTP_USER_AGENT` rubrikvärde, till exempel `Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322)`.
       * A `RenderOptionsSpec` objekt som lagrar körningsalternativ.
       * En tom `BLOBHolder` objekt som fylls i av metoden.
       * En tom `javax.xml.rpc.holders.StringHolder` objekt som fylls i av metoden.
@@ -302,14 +300,13 @@ Hantera inskickade formulär med Forms API (webbtjänst):
       * En tom `MyArrayOf_xsd_anyTypeHolder` objekt som fylls i av metoden. Den här parametern används för att lagra bifogade filer som skickas tillsammans med formuläret.
       * En tom `FormsResultHolder` objekt som fylls i av metoden med det formulär som skickas.
 
-      The `processFormSubmission` metoden fyller i `FormsResultHolder` parametern med resultaten av formuläröverföringen.
+     The `processFormSubmission` metoden fyller i `FormsResultHolder` parametern med resultaten av formuläröverföringen.
 
-   * Avgör om Forms-tjänsten har slutfört bearbetningen av formulärdata genom att anropa `FormsResult` objektets `getAction` -metod. Om den här metoden returnerar värdet `0`är formulärdata färdiga att bearbetas. Du kan få en `FormsResult` genom att hämta värdet för `FormsResultHolder` objektets `value` datamedlem.
-
+   * Kontrollera om Forms-tjänsten har bearbetat formulärdata genom att anropa `FormsResult` objektets `getAction` -metod. Om den här metoden returnerar värdet `0`är formulärdata färdiga att bearbetas. Du kan få en `FormsResult` genom att hämta värdet för `FormsResultHolder` objektets `value` datamedlem.
 
 1. Kontrollera om formuläröverföringen innehåller bifogade filer
 
-   Hämta värdet för `MyArrayOf_xsd_anyTypeHolder` objektets `value` datamedlem ( `MyArrayOf_xsd_anyTypeHolder` objektet skickades till `processFormSubmission` metod). Den här datamedlemmen returnerar en array med `Objects`. Varje element i `Object` arrayen är en `Object`som motsvarar de filer som har skickats in tillsammans med formuläret. Du kan hämta varje element i arrayen och omvandla det till en `BLOB` -objekt.
+   Hämta värdet för `MyArrayOf_xsd_anyTypeHolder` objektets `value` datamedlem ( `MyArrayOf_xsd_anyTypeHolder` objektet skickades till `processFormSubmission` metod). Den här datamedlemmen returnerar en array med `Objects`. Varje element i `Object` är en `Object`som motsvarar de filer som har skickats in tillsammans med formuläret. Du kan hämta varje element i arrayen och omvandla det till en `BLOB` -objekt.
 
 1. Bearbeta skickade data
 
@@ -321,15 +318,15 @@ Hantera inskickade formulär med Forms API (webbtjänst):
       * Skapa en `org.w3c.dom.DocumentBuilderFactory` genom att anropa det statiska `org.w3c.dom.DocumentBuilderFactory` objektets `newInstance` -metod.
       * Skapa en `org.w3c.dom.DocumentBuilder` genom att anropa `org.w3c.dom.DocumentBuilderFactory` objektets `newDocumentBuilder` -metod.
       * Skapa en `org.w3c.dom.Document` genom att anropa `org.w3c.dom.DocumentBuilder` objektets `parse` metoden och skicka `java.io.InputStream` -objekt.
-      * Hämta värdet för varje nod i XML-dokumentet. Ett sätt att utföra den här uppgiften är att skapa en anpassad metod som accepterar två parametrar: den `org.w3c.dom.Document` och namnet på noden vars värde du vill hämta. Den här metoden returnerar ett strängvärde som representerar nodens värde. I kodexemplet som följer den här processen anropas den här anpassade metoden `getNodeText`. Innehållet i den här metoden visas.
+      * Hämta värdet för varje nod i XML-dokumentet. Ett sätt att utföra den här uppgiften är att skapa en anpassad metod som accepterar två parametrar: `org.w3c.dom.Document` och namnet på noden vars värde du vill hämta. Den här metoden returnerar ett strängvärde som representerar nodens värde. I kodexemplet som följer den här processen anropas den här anpassade metoden `getNodeText`. Innehållet i den här metoden visas.
+
    * Om datainnehållstypen är `application/pdf`skapar du programlogik för att spara inskickade PDF-data som en PDF-fil.
 
       * Skapa en `BLOB` genom att anropa `FormsResult` objektets `getOutputContent` -metod.
       * Skapa en bytearray genom att anropa `BLOB` objektets `getBinaryData` -metod.
-      * Skapa en `java.io.File` genom att använda dess public-konstruktor. Var noga med att ange PDF som filnamnstillägg.
+      * Skapa en `java.io.File` genom att använda dess public-konstruktor. Ange PDF som filnamnstillägg.
       * Skapa en `java.io.FileOutputStream` genom att använda konstruktorn och skicka `java.io.File` -objekt.
       * Fylla i PDF-filen genom att anropa `java.io.FileOutputStream` objektets `write` och skicka bytearrayen.
-
 
 **Se även**
 

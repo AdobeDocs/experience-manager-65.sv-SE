@@ -7,9 +7,9 @@ topic-tags: introduction
 content-type: reference
 docset: aem65
 exl-id: 408ac30c-60ab-4d6c-855c-d544af8d5cf9
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '2860'
+source-wordcount: '2856'
 ht-degree: 0%
 
 ---
@@ -52,7 +52,7 @@ Varje `cq:ClientLibraryFolder` innehåller en uppsättning JS- och/eller CSS-fil
 
 * `categories`: Identifierar de kategorier i vilka uppsättningen JS- och/eller CSS-filer i detta `cq:ClientLibraryFolder` höst. The `categories` eftersom en biblioteksmapp är flervärdesdel kan den ingå i mer än en kategori (se nedan hur detta kan vara användbart).
 
-* `dependencies`: Det här är en lista över andra klientbibliotekskategorier som den här biblioteksmappen är beroende av. Anges till exempel två `cq:ClientLibraryFolder` noder `F` och `G`, om det finns en fil i `F` kräver en annan fil i `G` för att fungera på rätt sätt måste minst en av `categories` av `G` ska vara bland `dependencies` av `F`.
+* `dependencies`: Det här är en lista över andra klientbibliotekskategorier som den här biblioteksmappen är beroende av. Anges till exempel två `cq:ClientLibraryFolder` noder `F` och `G`, om det finns en fil i `F` kräver en annan fil i `G` för att fungera korrekt, och minst en av `categories` av `G` ska vara bland `dependencies` av `F`.
 
 * `embed`: Används för att bädda in kod från andra bibliotek. Om nod F bäddar in noderna G och H blir HTML en koncentration av innehållet från noderna G och H.
 * `allowProxy`: Om ett klientbibliotek finns under `/apps`, tillåter den här egenskapen åtkomst till den via en proxyserver. Se [Hitta en klientbiblioteksmapp och använda servern för proxyklientbibliotek](/help/sites-developing/clientlibs.md#locating-a-client-library-folder-and-using-the-proxy-client-libraries-servlet) nedan.
@@ -134,7 +134,7 @@ I tidigare versioner fanns klientbiblioteksmapparna nedan `/etc/clientlibs` i da
 
 >[!NOTE]
 >
->För att kunna isolera kod från innehåll och konfiguration rekommenderar vi att du letar upp klientbibliotek under `/apps` och visa dem via `/etc.clientlibs` genom att använda `allowProxy` -egenskap.
+>För att isolera kod från innehåll och konfiguration rekommenderar vi att du letar upp klientbibliotek under `/apps` och visa dem via `/etc.clientlibs` genom att använda `allowProxy` -egenskap.
 
 I ordning för klientbiblioteken under `/apps` För att vara tillgänglig används en proxyserver. Åtkomstkontrollistorna används fortfarande i klientbiblioteksmappen, men med den kan innehållet läsas via `/etc.clientlibs/` om `allowProxy` egenskapen är inställd på `true`.
 

@@ -1,19 +1,15 @@
 ---
 title: Avlastar jobb
-seo-title: Offloading Jobs
-description: Lär dig hur du konfigurerar och använder AEM instanser i en topologi för att utföra specifika typer av bearbetning.
-seo-description: Learn how to configure and use AEM instances in a topology in order to perform specific types of processing.
-uuid: e971d403-dfd2-471f-b23d-a67e35f1ed88
+description: Lär dig hur du konfigurerar och använder AEM instanser i en topologi för att utföra vissa typer av bearbetning.
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: configuring
 content-type: reference
-discoiquuid: 370151df-3b8e-41aa-b586-5c21ecb55ffe
 feature: Configuring
 exl-id: 429c96ff-4185-4215-97e8-9bd2c130a9b1
-source-git-commit: 08a6777bf1ff3abf62f45fe1e164ef2027996848
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '2364'
+source-wordcount: '2362'
 ht-degree: 0%
 
 ---
@@ -58,7 +54,7 @@ Topologier är löst kopplade Experience Manager-kluster som deltar i avlastning
 
 Varje instans i Experience Manager kör följande avlastningsrelaterade tjänster:
 
-* Discovery Service: Skickar begäranden till en Topology Connector om att gå med i topologin.
+* Identifieringstjänst: Skickar begäranden till en topologianslutning för att gå med i topologin.
 * Topology Connector: Tar emot kopplingsbegäranden och godkänner eller avvisar varje begäran.
 
 Identifieringstjänsten för alla medlemmar i topologin pekar på Topology Connector på en av medlemmarna. I efterföljande avsnitt kallas den här medlemmen rotmedlem.
@@ -178,7 +174,7 @@ Utför följande procedur på rotmedlemmen i topologin. Proceduren lägger till 
 
 ## Konfigurera ämnesförbrukning {#configuring-topic-consumption}
 
-Använd Avlastningsläsaren för att konfigurera ämnesförbrukning för Experience Manager-instanserna i topologin. För varje förekomst kan du ange ämnen som den upptar. Om du till exempel vill konfigurera din topologi så att endast en instans förbrukar ämnen av en viss typ, inaktiverar du ämnet för alla instanser utom en.
+Använd Avlastningsläsaren för att konfigurera ämnesförbrukning för Experience Manager-instanserna i topologin. För varje förekomst kan du ange ämnen som den upptar. Om du till exempel vill konfigurera din topologi så att bara en instans förbrukar ämnen av en viss typ, inaktiverar du ämnet för alla instanser utom en.
 
 Jobb fördelas mellan instanser där det associerade ämnet är aktiverat med hjälp av resurslogik.
 
@@ -199,7 +195,7 @@ Jobb fördelas mellan instanser där det associerade ämnet är aktiverat med hj
 
    * Aktiverad: Den här instansen förbrukar jobb i det här avsnittet.
    * Inaktiverad: Den här instansen förbrukar inte jobb i det här avsnittet.
-   * Exklusivt: Den här instansen förbrukar endast jobb i det här avsnittet.
+   * Exklusiv: Den här instansen förbrukar endast jobb i det här avsnittet.
 
    **Obs!** När du väljer Exklusiv för ett ämne ställs alla andra ämnen automatiskt in på Inaktiverad.
 
@@ -243,7 +239,7 @@ Skapa de replikeringsagenter som transporterar jobbnyttolaster mellan instanser 
 
 ![chlimage_1-115](assets/chlimage_1-115.png)
 
-Installationen kräver följande tre agenter:
+För den här installationen krävs följande tre agenter:
 
 1. En utgående agent på författarinstansen som replikeras till arbetarinstansen.
 1. En omvänd agent på författarinstansen som hämtas från utkorgen på arbetarinstansen.
@@ -277,7 +273,7 @@ Exempel: `offloading_reverse_f5c8494a-4220-49b8-b079-360a72f71559`
 
 ### Skapar den utgående agenten {#creating-the-outgoing-agent}
 
-1. Skapa en **Replikeringsagent** på författaren. (Se [dokumentation för replikeringsagenter](/help/sites-deploying/replication.md)). Ange **Titel**. The **Namn** måste följa namnkonventionen.
+1. Skapa en **Replikeringsagent** på författaren. (Se [dokumentation för replikeringsagenter](/help/sites-deploying/replication.md)). Ange alla **Titel**. The **Namn** måste följa namnkonventionen.
 1. Skapa agenten med följande egenskaper:
 
    | Egenskap | Värde |
@@ -291,7 +287,7 @@ Exempel: `offloading_reverse_f5c8494a-4220-49b8-b079-360a72f71559`
 
 ### Skapar den omvända agenten {#creating-the-reverse-agent}
 
-1. Skapa en **Agenten för omvänd replikering** på författaren. (Se [dokumentation för replikeringsagenter](/help/sites-deploying/replication.md).) Ange **Titel**. The **Namn** måste följa namnkonventionen.
+1. Skapa en **Agenten för omvänd replikering** på författaren. (Se [dokumentation för replikeringsagenter](/help/sites-deploying/replication.md).) Ange alla **Titel**. The **Namn** måste följa namnkonventionen.
 1. Skapa agenten med följande egenskaper:
 
    | Egenskap | Värde |
@@ -304,7 +300,7 @@ Exempel: `offloading_reverse_f5c8494a-4220-49b8-b079-360a72f71559`
 
 ### Skapa en utkorgsagent {#creating-the-outbox-agent}
 
-1. Skapa en **Replikeringsagent** på arbetarinstansen. (Se [dokumentation för replikeringsagenter](/help/sites-deploying/replication.md).) Ange **Titel**. The **Namn** måste vara `offloading_outbox`.
+1. Skapa en **Replikeringsagent** på arbetarinstansen. (Se [dokumentation för replikeringsagenter](/help/sites-deploying/replication.md).) Ange alla **Titel**. The **Namn** måste vara `offloading_outbox`.
 1. Skapa agenten med följande egenskaper.
 
    | Egenskap | Värde |
@@ -354,6 +350,6 @@ The following procedure assumes the following characteristics for the offloading
 
 ## Ytterligare läsning {#further-reading}
 
-Förutom informationen på den här sidan kan du läsa följande:
+Förutom den information som visas på den här sidan kan du även läsa följande:
 
 * Mer information om hur du använder Java API:er för att skapa jobb och jobbkunder finns i [Skapa och använda jobb för avlastning](/help/sites-developing/dev-offloading.md).

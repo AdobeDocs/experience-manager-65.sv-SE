@@ -1,25 +1,21 @@
 ---
 title: Repositionsomstrukturering för AEM Communities i 6.4
-seo-title: Repository Restructuring for AEM Communities in 6.4
-description: Lär dig hur du gör nödvändiga ändringar för att migrera till den nya databasstrukturen i AEM 6.4 för Communities.
-seo-description: Learn how to make the necessary changes in order to migrate to the new repository structure in AEM 6.4 for Communities.
-uuid: d161655f-4074-44a7-8d69-38e80934c58b
+description: Lär dig hur du gör de ändringar som krävs för att migrera till den nya databasstrukturen i AEM 6.4 for Communities.
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: repo_restructuring
-discoiquuid: 7383265b-0ed4-4ea7-b741-0a417d187bdd
 feature: Upgrading
 exl-id: 4d2bdd45-a29a-4936-b8da-f7e011d81e83
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '1011'
+source-wordcount: '1009'
 ht-degree: 0%
 
 ---
 
 # Repositionsomstrukturering för AEM Communities i 6.5 {#repository-restructuring-for-aem-communities-in}
 
-Enligt beskrivning på överordnad [Omstrukturering av lager i AEM 6.4](/help/sites-deploying/repository-restructuring.md) som uppgraderar till AEM 6.5 ska använda den här sidan för att bedöma arbetsinsatsen i samband med databasändringar som påverkar AEM Communities-lösningen. Vissa ändringar kräver arbete under uppgraderingsprocessen för AEM 6.5, medan andra kan skjutas upp till en framtida uppgradering.
+Enligt beskrivning på överordnad [Omstrukturering av lager i AEM 6.4](/help/sites-deploying/repository-restructuring.md) på denna sida bör kunder som uppgraderar till AEM 6.5 använda denna sida för att bedöma arbetsinsatsen i samband med databasändringar som påverkar AEM Communities-lösningen. Vissa ändringar kräver arbete under uppgraderingsprocessen för AEM 6.5, medan andra kan skjutas upp till en framtida uppgradering.
 
 **Med 6.5-uppgradering**
 
@@ -35,7 +31,7 @@ Enligt beskrivning på överordnad [Omstrukturering av lager i AEM 6.4](/help/si
 
 * [Pinterest Social Login Configurations](/help/sites-deploying/communities-repository-restructuring-in-aem-6-5.md#pinterest-social-login-configurations)
 * [Bedömningskonfigurationer](/help/sites-deploying/communities-repository-restructuring-in-aem-6-5.md#scoring-configurations)
-* [Twitter Social Login Configurations](/help/sites-deploying/communities-repository-restructuring-in-aem-6-5.md#twitter-social-login-configurations)
+* [Konfigurationer för social inloggning för twitter](/help/sites-deploying/communities-repository-restructuring-in-aem-6-5.md#twitter-social-login-configurations)
 * [Diverse](/help/sites-deploying/communities-repository-restructuring-in-aem-6-5.md#misc)
 
 ## Med 6.5-uppgradering {#with-upgrade}
@@ -121,7 +117,7 @@ Enligt beskrivning på överordnad [Omstrukturering av lager i AEM 6.4](/help/si
   </tr>
   <tr>
    <td><strong>Ny plats(er)</strong></td>
-   <td><p><strong>Badge Rules:</strong></p> <p><code>/libs/settings/community/badging</code></p> <p><strong>Badge Images:</strong></p> <p>För standardbilder: <code>/etc/community/badging/images are moved to /libs/community/badging/images</code></p> <p>För anpassade bilder: <code>/content/community/badging/images</code></p> <p> </p> </td>
+   <td><p><strong>Badge Rules:</strong></p> <p><code>/libs/settings/community/badging</code></p> <p><strong>Bilder:</strong></p> <p>För standardbilder: <code>/etc/community/badging/images are moved to /libs/community/badging/images</code></p> <p>För anpassade bilder: <code>/content/community/badging/images</code></p> <p> </p> </td>
   </tr>
   <tr>
    <td><strong>Omstruktureringsvägledning</strong></td>
@@ -133,7 +129,7 @@ Enligt beskrivning på överordnad [Omstrukturering av lager i AEM 6.4](/help/si
      <li>Flytta relevanta regler för märkning och poängsättning från <code>/etc/community/*</code> till platskontextgruppen som skapades i föregående steg.</li>
      <li>Justera egenskaperna för badging-regler och bedömningsregler i platsroten för att få relativa referenser till nya regelplatser.
       <ol>
-       <li>Om egenskapen för <code>cq:conf = /conf/we-retail</code>sedan <code>badgingRules [] = community/badging/rules</code> om regler nu flyttas till den här nya bucket.</li>
+       <li>Om egenskapen för till exempel <code>cq:conf = /conf/we-retail</code>sedan <code>badgingRules [] = community/badging/rules</code> om regler nu flyttas till den här nya bucket.</li>
       </ol> </li>
      <li>På samma sätt kan du justera referenserna för poängregler i en nod med en badging-regel så att de har en relativ sökväg.</li>
     </ol> <p> </p> <p>Rensa slutligen genom att ta bort resursen <code>/etc/community/badging</code></p> </td>
@@ -187,7 +183,7 @@ Enligt beskrivning på överordnad [Omstrukturering av lager i AEM 6.4](/help/si
     <ol>
      <li>Migrera befintliga konfigurationer på den föregående platsen till den nya platsen.
       <ol>
-       <li>Återskapa nya Facebook Social Login Configurations manuellt via redigeringsgränssnittet för AEM på <strong>Verktyg &gt; Cloud Services &gt; Facebook konfiguration för social inloggning</strong>.<br /> eller <br /> </li>
+       <li>Återskapa nya Facebook Social Login Configurations manuellt via redigeringsgränssnittet för AEM på <strong>Verktyg &gt; Cloud Service &gt; Facebook konfiguration för social inloggning</strong>.<br /> eller <br /> </li>
        <li>Kopiera alla nya Facebook Cloud-konfigurationer från föregående plats till rätt nya plats, under <code>/conf/global or /conf/&lt;tenant&gt;</code>.</li>
       </ol> </li>
      <li>Uppdatera valfri AEM Communities-platsrot för att referera till den nya konfigurationen för Facebook Social Login genom att ställa in <code>[cq:Page]/jcr:content@cq:conf</code> till den absoluta sökvägen i Ny plats.</li>
@@ -243,7 +239,7 @@ Enligt beskrivning på överordnad [Omstrukturering av lager i AEM 6.4](/help/si
     <ol>
      <li>Migrera befintliga konfigurationer på den föregående platsen till den nya platsen.
       <ol>
-       <li>Återskapa nya Pinterest Social Login Configurations manuellt via redigeringsgränssnittet för AEM på <strong>Verktyg &gt; Cloud Services &gt; Pinterest konfiguration för social inloggning</strong>.<br /> eller</li>
+       <li>Återskapa nya Pinterest Social Login Configurations manuellt via redigeringsgränssnittet för AEM på <strong>Verktyg &gt; Cloud Service &gt; Pinterest konfiguration för social inloggning</strong>.<br /> eller</li>
        <li>Kopiera alla nya Pinterest Cloud-konfigurationer från föregående plats till rätt nya plats under <code>/conf/global or /conf/&lt;tenant&gt;</code>.</li>
       </ol> </li>
      <li>Uppdatera valfri AEM Communities-platsrot för att referera till den nya konfigurationen för Pinterest Social Login med inställningarna i <code>[cq:Page]/jcr:content@cq:conf</code> till den absoluta sökvägen i Ny plats.</li>
@@ -274,7 +270,7 @@ Enligt beskrivning på överordnad [Omstrukturering av lager i AEM 6.4](/help/si
    <td><p>Om du vill anpassa till den nya databasstrukturen kan poängsättningsreglerna sparas i <code>/apps/settings/</code> eller /<code>conf/.../settings</code></p>
     <ol>
      <li>För <code>/apps/settings</code>fungerar detta som globala regler eller standardregler som hanteras i SCM.</li>
-    </ol> <p>Skapa sammanhangsberoende konfigurationer i <code>/conf/</code> genom att använda CRXDELite:</p>
+    </ol> <p>Skapa sammanhangsberoende konfigurationer i <code>/conf/</code> med CRXDELite:</p>
     <ol>
      <li>Skapa konfigurationerna i önskat <code>/conf/.../settings</code> plats<br /> </li>
      <li>Webbplatsen Communities måste ha <code>cq:conf </code>egenskapsuppsättning.
@@ -290,7 +286,7 @@ Enligt beskrivning på överordnad [Omstrukturering av lager i AEM 6.4](/help/si
  </tbody>
 </table>
 
-### Twitter Social Login Configurations {#twitter-social-login-configurations}
+### Konfigurationer för social inloggning för twitter {#twitter-social-login-configurations}
 
 <table>
  <tbody>
@@ -309,11 +305,11 @@ Enligt beskrivning på överordnad [Omstrukturering av lager i AEM 6.4](/help/si
     <ol>
      <li>Migrera befintliga konfigurationer på den föregående platsen till den nya platsen.
       <ol>
-       <li>Återskapa nya Twitter Social Login Configurations manuellt via redigeringsgränssnittet för AEM på <strong>Verktyg &gt; Cloud Services &gt; Twitter konfiguration för social inloggning</strong>.<br /> eller <br /> </li>
-       <li>Kopiera alla nya Twitter Cloud-konfigurationer från föregående plats till rätt nya plats, under <code>/conf/global or /conf/&lt;tenant&gt;</code>.</li>
+       <li>Återskapa konfigurationer för social inloggning för nya Twitter manuellt via redigeringsgränssnittet för AEM på <strong>Verktyg &gt; Cloud Service &gt; Twitter konfiguration för social inloggning</strong>.<br /> eller <br /> </li>
+       <li>Kopiera alla nya Twitter Cloud-konfigurationer från tidigare plats till lämplig ny plats, under <code>/conf/global or /conf/&lt;tenant&gt;</code>.</li>
       </ol> </li>
-     <li>Uppdatera valfri AEM Communities-platsrot för att referera till den nya konfigurationen för Twitter Social Login genom att ställa in <code>[cq:Page]/jcr:content@cq:conf</code> till den absoluta sökvägen i Ny plats.</li>
-     <li>Avassociera den gamla Twitter Connect-Cloud Servicen från alla AEM Communities webbplatsrötter som har uppdaterats för att referera till den nya platsen.</li>
+     <li>Uppdatera valfri AEM Communities-platsrot så att den refererar till den nya Twitternas konfiguration för social inloggning genom att ställa in <code>[cq:Page]/jcr:content@cq:conf</code> till den absoluta sökvägen i Ny plats.</li>
+     <li>Koppla inte bort den gamla Twitter Connect-Cloud Servicen från några av AEM Communities webbplatsrötter som har uppdaterats för att referera till den nya platsen.</li>
     </ol> </td>
   </tr>
   <tr>

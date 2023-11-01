@@ -1,18 +1,14 @@
 ---
 title: Importera och exportera konfigurationsfilen
-seo-title: Importing and exporting the configuration file
 description: Lär dig hur du importerar och exporterar konfigurationsfilen för att redigera serverinställningar eller konfigurera en annan AEM för formulär.
-seo-description: Learn how to import and export the configuration file in order to edit server preferences or configure another AEM forms product instance.
-uuid: 32e8a709-2d7c-4740-9533-d53aa751bc58
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/configuring_user_management
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: c1636537-f7dc-48d8-a3f0-9052bcd28b62
 exl-id: 225dbeb5-a21c-4338-98c7-e10c32973721
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '254'
+source-wordcount: '252'
 ht-degree: 0%
 
 ---
@@ -25,7 +21,7 @@ För att undvika säkerhetsrisker inkluderas inte det binda lösenordsvärdet f�
 
 >[!NOTE]
 >
->Om du importerar konfigurationsfilen konfigureras AEM formulär baserat på informationen i filen. Det är bara systemadministratörer eller konsulter som känner till AEM och XML som kan ändra konfigurationsfilen. De kan behöva redigera konfigurationsfilen, till exempel för att konfigurera om en skadad inställning.
+>Om du importerar konfigurationsfilen konfigureras AEM formulär baserat på informationen i filen. Det är bara systemadministratörer eller konsulter som känner till AEM och XML som kan ändra konfigurationsfilen. De kan behöva redigera konfigurationsfilen, t.ex. för att konfigurera om en skadad inställning.
 
 **Exportera konfigurationsinformationen**
 

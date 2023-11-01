@@ -2,9 +2,9 @@
 title: Skapa och ordna sidor med AEM
 description: Lär dig hur du skapar och hanterar sidor med Adobe Experience Manager.
 exl-id: 74576e51-4b4e-464e-a0b8-0fae748a505d
-source-git-commit: cc63291c32f7a234398ebe8bf67ab53aaf8fa90f
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '2436'
+source-wordcount: '2434'
 ht-degree: 4%
 
 ---
@@ -94,7 +94,7 @@ När du skapar en ny sida finns det två nyckelfält:
 
 Sidans **titel** och **namn** kan skapas separat men hänger ihop:
 
-* När du skapar en sida är det bara **Titel** fältet är obligatoriskt. Om nej **Namn** anges när sidan skapas, kommer AEM att generera ett namn från de 64 första tecknen i titeln (med den validering som anges nedan). Endast de första 64 tecknen används för att ge stöd åt de bästa sätten att använda korta sidnamn.
+* När du skapar en sida är det bara **Titel** fältet är obligatoriskt. Om nej **Namn** anges när sidan skapas, kommer AEM att generera ett namn från de 64 första tecknen i titeln (med den validering som anges nedan). Endast de första 64 tecknen används för att ge stöd åt de bästa sätten med namn på korta sidor.
 
 * Om ett sidnamn anges manuellt av författaren gäller inte gränsen på 64 tecken, men andra tekniska begränsningar på sidnamnets längd kan förekomma.
 

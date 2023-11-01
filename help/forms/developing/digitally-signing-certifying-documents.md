@@ -7,9 +7,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 role: Developer
 exl-id: c200f345-40ab-46fd-b6ed-f3af0a23796b
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '17047'
+source-wordcount: '17045'
 ht-degree: 0%
 
 ---
@@ -597,7 +597,7 @@ När du har lagt till det här konfigurationsvärdet i cknfastrc-filen kan de ny
 
 **Underskriften är inte betrodd**
 
-När du certifierar och signerar samma dokument i PDF visas en gul triangel mot den första signaturen när du öppnar dokumentet i PDF i Acrobat eller Adobe Reader, om den certifierande signaturen inte är tillförlitlig. Certifikatsignaturen måste vara betrodd för att detta ska undvikas.
+När du certifierar och signerar samma dokument i PDF visas en gul triangel mot den första signaturen när du öppnar dokumentet i PDF i Acrobat eller Adobe Reader, om den certifierande signaturen inte är tillförlitlig. Certifikatsignaturen måste vara betrodd för att den här situationen ska undvikas.
 
 **Signera dokument som är XFA-baserade formulär**
 

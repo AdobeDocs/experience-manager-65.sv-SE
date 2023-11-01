@@ -1,7 +1,7 @@
 ---
 title: CSRF Protection Framework
 seo-title: The CSRF Protection Framework
-description: Ramverket använder variabler för att garantera att kundens begäran är berättigad
+description: Ramverket använder tokens för att garantera att kundens begäran är berättigad
 seo-description: The framework makes use of tokens to guarantee that the client request is legitimate
 uuid: 7cb222ba-fc7a-46ee-8b49-a5f39a53580b
 contentOwner: Guillaume Carlino
@@ -10,9 +10,9 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: f453427d-c813-48b7-b2f9-adadea39c67d
 exl-id: e6b0f8f7-54b0-4dd6-86ad-5516954c6d90
-source-git-commit: f841e3886771fb00eee6e476d7111d4a335a9d51
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '260'
+source-wordcount: '254'
 ht-degree: 0%
 
 ---
@@ -31,15 +31,15 @@ Ramverket använder tokens för att garantera att kundens begäran är berättig
 
 ### Beroenden {#dependencies}
 
-Alla komponenter som är beroende av `granite.jquery` CSRF Protection Framework kommer automatiskt att dra nytta av beroendet. Om detta inte är fallet för någon av dina komponenter måste du deklarera ett beroende för `granite.csrf.standalone` innan du kan använda ramverket.
+Alla komponenter som är beroende av `granite.jquery` CSRF Protection Framework kommer automatiskt att dra nytta av beroendet. Om detta inte är fallet för någon av dina komponenter måste du deklarera ett beroende för `granite.csrf.standalone` före ramverket.
 
 ### Replikerar krypteringsnyckeln {#replicating-crypto-keys}
 
-Om du vill kunna använda token måste du replikera HMAC-binärfilen till alla instanser i distributionen. Se [Replikerar HMAC-nyckeln](/help/sites-administering/encapsulated-token.md#replicating-the-hmac-key) för mer information.
+Om du vill använda token måste du replikera HMAC-binärfilen till alla instanser i distributionen. Se [Replikerar HMAC-nyckeln](/help/sites-administering/encapsulated-token.md#replicating-the-hmac-key) för mer information.
 
 >[!NOTE]
 >
->Se också till att du gör nödvändiga [Konfigurationsändringar för Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/user-guide.html) för att kunna använda ramverket för skydd av CSRF.
+>Se också till att du gör nödvändiga [Konfigurationsändringar för Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/user-guide.html) för att använda ramverket för skydd av CSRF.
 
 >[!NOTE]
 >

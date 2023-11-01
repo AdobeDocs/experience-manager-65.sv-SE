@@ -11,9 +11,9 @@ topic-tags: operations
 discoiquuid: 1e6cc554-aef1-463c-906b-634b80a27917
 role: Developer
 exl-id: 966c3554-25df-4467-866e-11c43cc15b58
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '2358'
+source-wordcount: '2356'
 ht-degree: 0%
 
 ---
@@ -35,7 +35,7 @@ Tjänsten DocConverter kan konvertera PDF-dokument till PDA/A-dokument. Du kan u
 
 Du kan använda tjänsten DocConverter för att konvertera ett PDF-dokument till ett PDF/A-dokument. Eftersom PDF/A är ett arkiveringsformat för långtidsbevaring av dokumentets innehåll, bäddas alla teckensnitt in och filen är okomprimerad. Därför är ett PDF/A-dokument vanligtvis större än ett PDF-standarddokument. Ett PDF/A-dokument innehåller inte heller ljud- och videoinnehåll. Innan du konverterar ett PDF-dokument till ett PDF/A-dokument måste du kontrollera att PDF-dokumentet inte är ett PDF/A-dokument.
 
-Specifikationen PDF/A-1 består av två överensstämmelsenivåer, nämligen A och B. Den största skillnaden mellan de två är stödet för den logiska strukturen (hjälpmedel), som inte krävs för överensstämmelsenivå B. Oavsett överensstämmelsenivå anger PDF/A-1 att alla teckensnitt är inbäddade i det genererade PDF/A-dokumentet. För närvarande stöds endast PDF/A-1b vid validering (och konvertering).
+Specifikationen PDF/A-1 består av två överensstämmelsenivåer, nämligen A och B. Den största skillnaden mellan de två är stöd för logisk struktur (hjälpmedel), som inte krävs för överensstämmelsenivå B. Oavsett överensstämmelsenivå anger PDF/A-1 att alla teckensnitt är inbäddade i det genererade PDF/A-dokumentet. För närvarande stöds endast PDF/A-1b vid validering (och konvertering).
 
 PDF/A är standard för arkivering av PDF-dokument, men det är inte obligatoriskt att använda PDF/A för arkivering om ett standarddokument från PDF uppfyller företagets krav. Syftet med standarden PDF/A är att upprätta en PDF fil som är avsedd för långtidsarkivering och dokumentarkivering.
 
@@ -70,7 +70,7 @@ Mer information om var dessa JAR-filer finns i [Inkludera AEM Forms Java-bibliot
 
 **Skapa en DocConvert-klient**
 
-Innan du programmässigt kan utföra en DocConverter-åtgärd måste du skapa en DocConverter-klient. Om du använder Java API skapar du en `DocConverterServiceClient` -objekt. Skapa en `DocConverterServiceService` -objekt.
+Innan du programmässigt kan utföra en DocConverter-åtgärd måste du skapa en DocConverter-klient. Om du använder Java API skapar du en `DocConverterServiceClient` -objekt. Om du använder webbtjänstens API:t DocConverter skapar du en `DocConverterServiceService` -objekt.
 
 **Referera ett PDF-dokument som ska konverteras till ett PDF/A-dokument**
 
@@ -121,7 +121,7 @@ Konvertera ett PDF-dokument till ett PDF/A-dokument med Java API:
 1. Ange spårningsinformation
 
    * Skapa en `PDFAConversionOptionSpec` genom att använda dess konstruktor.
-   * Ange informationsspårningsnivå genom att anropa `PDFAConversionOptionSpec` objektets `setLogLevel` och skickar ett strängvärde som anger spårningsnivån. Skicka till exempel värdet `FINE`. Information om de olika värdena finns i `setLogLevel` metoden i [AEM Forms API-referens](https://www.adobe.com/go/learn_aemforms_javadocs_63_en).
+   * Ange informationsspårningsnivå genom att anropa `PDFAConversionOptionSpec` objektets `setLogLevel` och skickar ett strängvärde som anger spårningsnivån. Skicka till exempel värdet `FINE`. Mer information om de olika värdena finns i `setLogLevel` metoden i [AEM Forms API-referens](https://www.adobe.com/go/learn_aemforms_javadocs_63_en).
 
 1. Konvertera dokumentet
 
@@ -173,7 +173,7 @@ Konvertera ett PDF-dokument till ett PDF/A-dokument med hjälp av DocConverter A
 1. Ange spårningsinformation
 
    * Skapa en `PDFAConversionOptionSpec` genom att använda dess konstruktor.
-   * Ange informationsspårningsnivå genom att tilldela ett värde som anger spårningsnivån till `PDFAConversionOptionSpec` objektets `logLevel` datamedlem. Tilldela till exempel värdet `FINE` till den här datamedlemmen.
+   * Ange informationsspårningsnivå genom att tilldela ett värde som anger spårningsnivån till `PDFAConversionOptionSpec` objektets `logLevel` datamedlem. Tilldela till exempel värdet `FINE` till denna datamedlem.
 
 1. Konvertera dokumentet
 
@@ -234,11 +234,11 @@ Mer information om var dessa JAR-filer finns i [Inkludera AEM Forms Java-bibliot
 
 **Skapa en DocConvert-klient**
 
-Innan du programmässigt kan utföra en DocConverter-åtgärd måste du skapa en DocConverter-klient. Om du använder Java API skapar du en `DocConverterServiceClient` -objekt. Skapa en `DocConverterServiceService` -objekt.
+Innan du programmässigt kan utföra en DocConverter-åtgärd måste du skapa en DocConverter-klient. Om du använder Java API skapar du en `DocConverterServiceClient` -objekt. Om du använder webbtjänstens API:t DocConverter skapar du en `DocConverterServiceService` -objekt.
 
 **Referera till ett PDF-dokument som används för att fastställa kompatibiliteten mellan PDF och A**
 
-Ett PDF-dokument måste refereras till och skickas till DocConverter-tjänsten för att det ska gå att avgöra om PDF-dokumentet är PDF/A-kompatibelt.
+Ett PDF-dokument måste refereras och skickas till DocConverter-tjänsten för att avgöra om PDF-dokumentet är PDF/A-kompatibelt.
 
 **Ange körningsalternativ**
 
@@ -280,13 +280,13 @@ Kontrollera kompatibiliteten PDF/A med Java API:
 
    * Skapa en `PDFAValidationOptionSpec` genom att använda dess konstruktor.
    * Ange efterlevnadsnivån genom att anropa `PDFAValidationOptionSpec` objektets `setCompliance` metod och att skicka `PDFAValidationOptionSpec.Compliance.PDFA_1B`.
-   * Ange informationsspårningsnivå genom att anropa `PDFAValidationOptionSpec` objektets `setLogLevel` och skickar ett strängvärde som anger spårningsnivån. Skicka till exempel värdet `FINE`. Information om de olika värdena finns i `setLogLevel` metoden i [AEM Forms API-referens](https://www.adobe.com/go/learn_aemforms_javadocs_63_en).
+   * Ange informationsspårningsnivå genom att anropa `PDFAValidationOptionSpec` objektets `setLogLevel` och skickar ett strängvärde som anger spårningsnivån. Skicka till exempel värdet `FINE`. Mer information om de olika värdena finns i `setLogLevel` metoden i [AEM Forms API-referens](https://www.adobe.com/go/learn_aemforms_javadocs_63_en).
 
 1. Hämta information om PDF-dokumentet
 
    Kontrollera PDF/A-kompatibiliteten genom att anropa `DocConverterServiceClient` objektets `isPDFA` och skicka följande värden:
 
-   * The `com.adobe.idp.Document` som innehåller dokumentet PDF.
+   * The `com.adobe.idp.Document` -objekt som innehåller dokumentet PDF.
    * The `PDFAValidationOptionSpec` objekt som anger körningsalternativ.
 
    The `isPDFA` returnerar en `PDFAValidationResult` objekt som innehåller resultatet av den här åtgärden.
@@ -333,7 +333,7 @@ Kontrollera kompatibiliteten PDF/A med hjälp av webbtjänstens API:
 
    Kontrollera PDF/A-kompatibiliteten genom att anropa `DocConverterServiceService` objektets `isPDFA` och skicka följande värden:
 
-   * The `BLOB` som innehåller dokumentet PDF.
+   * The `BLOB` -objekt som innehåller dokumentet PDF.
    * The `PDFAValidationOptionSpec` objekt som innehåller körningsalternativ.
 
    The `isPDFA` returnerar en `PDFAValidationResult` objekt som innehåller resultatet av den här åtgärden.

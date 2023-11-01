@@ -12,9 +12,9 @@ topic-tags: operations
 discoiquuid: a65c5303-0ebd-43a9-a777-401042d8fcad
 role: Developer
 exl-id: febf5350-3fc5-48c0-8bc5-198daff15936
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '2209'
+source-wordcount: '2205'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ ht-degree: 0%
 
 ## Återge Forms baserat på fragment {#rendering-forms-based-on-fragments-inner}
 
-Forms-tjänsten kan återge formulär som är baserade på fragment som du skapar med Designer. A *fragment* är en återanvändbar del av ett formulär och sparas som en separat XDP-fil som kan infogas i flera formulärdesigner. Ett fragment kan t.ex. innehålla ett adressblock eller juridisk text.
+Forms kan återge formulär som är baserade på fragment som du skapar med Designer. A *fragment* är en återanvändbar del av ett formulär och sparas som en separat XDP-fil som kan infogas i flera formulärdesigner. Ett fragment kan t.ex. innehålla ett adressblock eller juridisk text.
 
 Med fragment blir det enklare och snabbare att skapa och underhålla stora mängder formulär. När du skapar ett nytt formulär infogar du en referens till det önskade fragmentet och fragmentet visas i formuläret. Fragmentreferensen innehåller ett delformulär som pekar på den fysiska XDP-filen. Mer information om hur du skapar formulärdesigner baserade på fragment finns i [Forms Designer](https://www.adobe.com/go/learn_aemforms_designer_63)
 
@@ -36,7 +36,7 @@ A *skriptfragment* innehåller återanvändbara JavaScript-funktioner eller -vä
 Här är några fördelar med att använda fragment:
 
 * **Återanvändning av innehåll**: Du kan använda fragment för att återanvända innehåll i flera formulärdesigner. När du behöver använda en del av samma innehåll i flera formulär är det snabbare och enklare att använda ett fragment än att kopiera eller återskapa innehållet. Genom att använda fragment säkerställs också att de delar av en formulärdesign som används ofta har ett konsekvent innehåll och utseende i alla referensformulär.
-* **Globala uppdateringar**: Du kan använda fragment för att göra globala ändringar i flera formulär endast en gång i en fil. Du kan ändra innehåll, skriptobjekt, databindningar, layout eller format i ett fragment, och alla XDP-formulär som refererar till fragmentet återger ändringarna.
+* **Globala uppdateringar**: Du kan bara använda fragment för att göra globala ändringar i flera formulär en gång i en fil. Du kan ändra innehåll, skriptobjekt, databindningar, layout eller format i ett fragment, och alla XDP-formulär som refererar till fragmentet återger ändringarna.
 * Ett vanligt element i många formulär kan till exempel vara ett adressblock som innehåller ett nedrullningsbart listobjekt för landet. Om du behöver uppdatera värdena för listruteobjektet måste du öppna många formulär för att kunna göra ändringarna. Om du inkluderar adressblocket i ett fragment behöver du bara öppna en fragmentfil för att kunna göra ändringarna.
 * Om du vill uppdatera ett fragment i ett PDF-formulär måste du spara om formuläret i Designer.
 * **Skapa delade formulär**: Du kan använda fragment för att dela skapandet av formulär mellan flera resurser. Blankettutvecklare med expertis inom skript eller andra avancerade funktioner i Designer kan utveckla och dela fragment som utnyttjar skriptning och dynamiska egenskaper. Formulärdesigners kan använda dessa fragment för att utforma formulärdesigner och säkerställa att alla delar av ett formulär har ett konsekvent utseende och funktion i flera formulär som utformats av flera personer.
@@ -123,7 +123,7 @@ När Forms-tjänsten återger ett formulär returneras en formulärdataström so
    * Skapa en `URLSpec` objekt som lagrar URI-värden med hjälp av dess konstruktor.
    * Anropa `URLSpec` objektets `setApplicationWebRoot` och skicka ett strängvärde som representerar programmets webbrot.
    * Anropa `URLSpec` objektets `setContentRootURI` och skicka ett strängvärde som anger innehållets rot-URI-värde. Kontrollera att formulärdesignen och fragmenten finns i innehållets rot-URI. Annars genereras ett undantag. Om du vill referera till databasen anger du `repository://`.
-   * Anropa `URLSpec` objektets `setTargetURL` och skicka ett strängvärde som anger det mål-URL-värde som formulärdata ska skickas till. Om du definierar mål-URL:en i formulärdesignen kan du skicka en tom sträng. Du kan också ange den URL dit ett formulär skickas för att utföra beräkningar.
+   * Anropa `URLSpec` objektets `setTargetURL` och skicka ett strängvärde som anger det mål-URL-värde som formulärdata ska skickas till. Om du definierar mål-URL:en i formulärdesignen kan du skicka en tom sträng. Du kan också ange den URL dit ett formulär ska skickas för att utföra beräkningar.
 
 1. Återge formuläret
 
@@ -175,7 +175,7 @@ När Forms-tjänsten återger ett formulär returneras en formulärdataström so
    * Skapa en `URLSpec` objekt som lagrar URI-värden med hjälp av dess konstruktor.
    * Anropa `URLSpec` objektets `setApplicationWebRoot` och skicka ett strängvärde som representerar programmets webbrot.
    * Anropa `URLSpec` objektets `setContentRootURI` och skicka ett strängvärde som anger innehållets rot-URI-värde. Kontrollera att formulärdesignen finns i innehållets rot-URI. Annars genereras ett undantag. Om du vill referera till databasen anger du `repository://`.
-   * Anropa `URLSpec` objektets `setTargetURL` och skicka ett strängvärde som anger det mål-URL-värde som formulärdata ska skickas till. Om du definierar mål-URL:en i formulärdesignen kan du skicka en tom sträng. Du kan också ange den URL dit ett formulär skickas för att utföra beräkningar.
+   * Anropa `URLSpec` objektets `setTargetURL` och skicka ett strängvärde som anger det mål-URL-värde som formulärdata ska skickas till. Om du definierar mål-URL:en i formulärdesignen kan du skicka en tom sträng. Du kan också ange den URL dit ett formulär ska skickas för att utföra beräkningar.
 
 1. Återge formuläret
 

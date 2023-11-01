@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: a08cee9c-e981-4483-8bdc-e6353977f854
 feature: Upgrading
 exl-id: 797bbdf9-917a-4537-a5f9-bf2682db968b
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '1685'
+source-wordcount: '1683'
 ht-degree: 0%
 
 ---
@@ -36,13 +36,13 @@ Mer information finns i dokumentationen om [Sök efter ansikten](/help/assets/se
 
 ## Ändra egenskapen resourceType {#changing-the-resourcetype-property}
 
-Om inget annat anges måste de flesta justeringar som behöver göras efter uppgraderingen ändras `sling:resourceType` för den konfigurerade anpassade söknings-Forms. Detta behövs så att egenskapen pekar på rätt plats för återgivningsskriptet.
+Om inget annat anges måste de flesta justeringar som måste göras efter uppgraderingen ändras `sling:resourceType` för den konfigurerade anpassade söknings-Forms. Detta behövs så att egenskapen pekar på rätt plats för återgivningsskriptet.
 
 Du kan ändra egenskapen genom att göra följande:
 
 1. Öppna CRXDE Lite genom att gå till `https://server:port/crx/de/index.jsp`
 1. Bläddra till platsen för noden som behöver justeras, enligt listan med [Anpassad sökning i Forms](/help/sites-deploying/upgrading-custom-search-forms.md#list-of-custom-search-forms) nedan.
-1. Klicka på noden. Klicka på och ändra den högra egenskapspanelen **sling:resourceType** -egenskap.
+1. Klicka på noden. Klicka på och ändra i den högra egenskapspanelen **sling:resourceType** -egenskap.
 1. Spara ändringarna genom att trycka på **Spara alla** -knappen.
 
 ## Lista över anpassade sökningar i Forms {#list-of-custom-search-forms}
@@ -68,7 +68,7 @@ Här nedan hittar du en lista över alla anpassade sökningar i Forms och de än
  </tbody>
 </table>
 
-I AEM 6.1 ingick standardpredikatet för fulltext i sökformuläret. I 6.2 har fulltextfältet ersatts av OmniSearch. Det här predikatet hoppas över programmatiskt och kan tas bort.
+I AEM 6.1 ingick standardpredikatet för fulltext i sökformuläret. I 6.2 har fulltextfältet ersatts av OmniSearch. Detta predikat hoppas över programmatiskt och kan tas bort.
 
 **Åtgärd:** Ta bort noden helt.
 
@@ -375,7 +375,7 @@ Nedan visas namnen i `/conf/global/settings/dam/search/facets/assets/items`
 | Resurstyp i 6.1 | dam/gui/components/admin/customsearch/searchpreates/fulltextpredikate |
 | Resurstyp i 6.2 | n/a |
 
-I 6.1 ingick standardpredikatet för fulltext i sökformuläret. I 6.2 har fulltextfältet ersatts av OmniSearch. Det här predikatet hoppas över programmatiskt och kan tas bort.
+I 6.1 ingick standardpredikatet för fulltext i sökformuläret. I 6.2 har fulltextfältet ersatts av OmniSearch. Detta predikat hoppas över programmatiskt och kan tas bort.
 
 **Åtgärd:** Ta bort noden ovan.
 
@@ -413,7 +413,7 @@ I 6.1 ingick standardpredikatet för fulltext i sökformuläret. I 6.2 har fullt
 | Resurstyp i 6.1 | dam/gui/components/admin/customsearch/searchpreates/assetlastmodifiedpredikate |
 | Resurstyp i 6.2 | dam/gui/coral/components/admin/customsearch/searchpreates/assetlastmodifiedpredicate |
 
-Åtgärd: Justera egenskapen resourceType (lägg till &quot;/coral&quot; på samma sätt som i 6.2-platsen som anges ovan).
+Åtgärd: Justera egenskapen resourceType (lägg till&quot;/coral&quot; på samma sätt som i 6.2-platsen som anges ovan).
 
 ### Publicera predikat {#publish-predicate}
 

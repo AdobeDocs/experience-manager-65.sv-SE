@@ -10,18 +10,18 @@ topic-tags: Security
 content-type: reference
 discoiquuid: 6ed09b5d-5089-43d2-b9d5-e7db57be5c02
 exl-id: 8e54bccf-0ff1-448d-a237-ec42fd3bfa23
-source-git-commit: 6fa3679429527e026313b22d953267503598d1a9
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '843'
+source-wordcount: '837'
 ht-degree: 0%
 
 ---
 
 # SAML 2.0-autentiseringshanterare{#saml-authentication-handler}
 
-AEM levererar [SAML](https://saml.xml.org/saml-specifications) autentiseringshanterare. Hanteraren har stöd för [SAML](https://saml.xml.org/saml-specifications) 2.0 Authentication Request Protocol (Web-SSO-profil) med `HTTP POST` bindning.
+AEM levererar en [SAML](https://saml.xml.org/saml-specifications) autentiseringshanterare. Hanteraren har stöd för [SAML](https://saml.xml.org/saml-specifications) 2.0 Authentication Request Protocol (Web-SSO-profil) med `HTTP POST` bindning.
 
-Det har stöd för:
+Den stöder:
 
 * signering och kryptering av meddelanden
 * automatiskt skapa användare
@@ -40,12 +40,11 @@ The [Webbkonsol](/help/sites-deploying/configuring-osgi.md) ger åtkomst till [S
 
 >[!NOTE]
 >
->Autentiseringshanteraren för SAML 2.0 är inaktiverad som standard. Du måste ange minst en av följande egenskaper för att kunna aktivera hanteraren:
+>Autentiseringshanteraren för SAML 2.0 är inaktiverad som standard. Du måste ange minst en av följande egenskaper för att aktivera hanteraren:
 >
->* Identitetsleverantörens POST-URL eller IDP-URL.
+>* Identity Provider POST URL eller IDP URL.
 >* Tjänstleverantörens enhets-ID.
 >
-
 
 >[!NOTE]
 >
@@ -70,13 +69,13 @@ The [Webbkonsol](/help/sites-deploying/configuring-osgi.md) ger åtkomst till [S
 >[!NOTE]
 >
 >Den här platsen används bara om `request-path` cookie har inte angetts. Om du begär en sida under den konfigurerade sökvägen utan en giltig inloggningstoken, lagras den begärda sökvägen i en cookie
->och webbläsaren omdirigeras till den här platsen igen när autentiseringen är klar.
+>och webbläsaren kommer att omdirigeras till den här platsen igen när autentiseringen är klar.
 
 **Användar-ID-attribut** Namnet på attributet som innehåller det användar-ID som används för att autentisera och skapa användaren i CRX-databasen.
 
 >[!NOTE]
 >
->Användar-ID:t hämtas inte från `saml:Subject` noden i SAML-försäkran men från den `saml:Attribute`.
+>Användar-ID hämtas inte från `saml:Subject` noden i SAML-försäkran men från den `saml:Attribute`.
 
 **Använd kryptering** Om den här autentiseringshanteraren förväntar sig krypterade SAML-försäkringar eller inte.
 

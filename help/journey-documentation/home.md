@@ -1,17 +1,17 @@
 ---
 title: AEM dokumentationsresor
-description: Dokumentation Journeys innehåller en berättande struktur i AEM dokumentation genom att sammanfoga komplexa och olika funktioner för att lösa ett affärsmål på ett sätt som är beprövat med bästa praxis. Resorna är utformade med AEM nybörjare i åtanke och presenterar koncept och funktioner för att uppnå ett mål från A till Ö.
+description: Dokumentation Journeys innehåller en berättande struktur i AEM dokumentation genom att sammanfoga komplexa och skilda funktioner för att lösa ett affärsmål på ett sätt som är lämpligt för alla. Resorna är utformade med AEM nybörjare i åtanke och presenterar koncept och funktioner för att uppnå ett mål från A till Ö.
 exl-id: bb0a26e2-5686-4fb7-bb6e-231dafc8268b
-source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '1234'
+source-wordcount: '1228'
 ht-degree: 0%
 
 ---
 
 # AEM dokumentationsresor {#aem-documentation-journeys}
 
-Dokumentation Journeys innehåller en berättande struktur i AEM dokumentation genom att sammanfoga komplexa och olika funktioner för att lösa ett affärsmål på ett sätt som är beprövat med bästa praxis. Resorna är utformade med AEM nybörjare i åtanke och presenterar koncept och funktioner för att uppnå ett mål från A till Ö.
+Dokumentation Journeys innehåller en berättande struktur i AEM dokumentation genom att sammanfoga komplexa och skilda funktioner för att lösa ett affärsmål på ett sätt som är lämpligt för alla. Resorna är utformade med AEM nybörjare i åtanke och presenterar koncept och funktioner för att uppnå ett mål från A till Ö.
 
 ## Vad är en dokumentationsresa? {#what-is}
 
@@ -75,13 +75,13 @@ Dokumentationsresor är avsedda som komplement till befintlig AEM teknisk dokume
 | Dokumentationstyp | Syfte | Målgrupp | Anta | Utelämnanden | Innehållstyp | Längd |
 |---|---|---|---|---|---|---|
 | Dokumentationsresa | En resa definierar hur AEM kan lösa ett allmänt affärsproblem med hjälp av en berättelse som vägleder läsarna genom komplexa, samhörande processer och funktioner. Det visar hur flera funktioner fungerar tillsammans för att lösa ett affärsbehov på ett bra sätt. | Reader nybörjare på AEM | Allmän CMS-kunskap | Detaljerade alternativ och konfigurationer | Text | Ca. 1 timme |
-| Tekniska dokument | Tekniska dokument fokuserar på enskilda funktioner, med detaljerad information om funktionens tekniska arbetssätt och alla alternativ som är tillgängliga för användaren. | Erfarna AEM | AEM upplevelse | Kontext och bakgrund | Text | Varierar |
+| Teknisk dokumentation | Tekniska dokument fokuserar på enskilda funktioner, med detaljerad information om funktionens tekniska arbetssätt och alla alternativ som är tillgängliga för användaren. | Erfarna AEM | AEM upplevelse | Kontext och bakgrund | Text | Varierar |
 | Självstudiekurs | En självstudiekurs är en djupdykning i ett ämne som visar en utvecklare eller administratör hur du kan uppnå ett tekniskt mål (vanligtvis programmering eller systemkonfiguration) steg för steg, med specifika exempel och exempelkod, som vanligtvis utnyttjar en begränsad uppsättning funktioner. | AEM utvecklare eller administratörer | AEM upplevelse | Bakgrund och teori | Video | >1 timme |
 | Starthandbok | En guide för att komma igång är en blixtsnabb genomgång av en viss ny AEM. Det är en snabb översikt av en enskild funktion, som leder användaren genom de viktiga (men inte alla) stegen för att konfigurera och använda ett enkelt användningssätt. | AEM | AEM upplevelse | Bakgrund, teori, detaljerade alternativ | Text | &lt;1 timme |
 
 ## Vilka resor finns det? {#journeys}
 
-Det finns redan ett antal dokumentationsresor tillgängliga för dig. Eftersom varje resa är utformad som en berättelse, var vänlig och börja med inledningen och läs igenom hela vägen för att få en fullständig förståelse för ämnet i AEM.
+Det finns redan ett antal dokumentationsresor tillgängliga för dig. Eftersom varje resa är utformad som en berättelse börjar du med introduktionen och läser igenom hela vägen för att få en fullständig förståelse för ämnet i AEM.
 
 | Resa | Beskrivning |
 |---|---|

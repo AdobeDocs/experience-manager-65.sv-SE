@@ -12,9 +12,9 @@ topic-tags: operations
 discoiquuid: d4c2b2f0-613a-409d-b39b-8e37fdb96eea
 role: Developer
 exl-id: 012a3a9f-542c-4ed1-a092-572bfccbdf21
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '1459'
+source-wordcount: '1457'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 Forms-tjänsten kan återge formulär som har användarrättigheter. Användningsrättigheterna gäller funktioner som är tillgängliga som standard i Acrobat men inte i Adobe Reader, t.ex. möjligheten att lägga till kommentarer i ett formulär eller att fylla i formulärfält och spara formuläret. Forms med användarrättigheter kallas för rättighetsaktiverade formulär. En användare som öppnar ett rättighetsaktiverat formulär i Adobe Reader kan utföra åtgärder som är aktiverade för det formuläret.
 
-För att kunna lägga in användarrättigheter i ett formulär måste Acrobat Reader DC-tilläggstjänsten ingå i installationen av AEM formulär. Du måste också ha en giltig autentiseringsuppgift som gör att du kan tillämpa användarrättigheter på PDF-dokument. Det innebär att du måste konfigurera Acrobat Reader DC-tilläggstjänsten innan du kan återge ett rättighetsaktiverat formulär. (Se [Om Acrobat Reader DC-tilläggstjänsten](/help/forms/developing/assigning-usage-rights.md#about-the-acrobat-reader-dc-extensions-service).)
+Om du vill lägga in användarrättigheter i ett formulär måste Acrobat Reader DC-tilläggstjänsten ingå i installationen av AEM formulär. Du måste också ha en giltig autentiseringsuppgift som gör att du kan tillämpa användarrättigheter på PDF-dokument. Det innebär att du måste konfigurera Acrobat Reader DC-tilläggstjänsten innan du kan återge ett rättighetsaktiverat formulär. (Se [Om Acrobat Reader DC-tilläggstjänsten](/help/forms/developing/assigning-usage-rights.md#about-the-acrobat-reader-dc-extensions-service).)
 
 >[!NOTE]
 >

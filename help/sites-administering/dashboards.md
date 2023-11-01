@@ -10,9 +10,9 @@ topic-tags: operations
 content-type: reference
 discoiquuid: 40560e06-2508-45a4-a648-39629ed54f28
 exl-id: 5b934e3a-f554-46ec-a913-8d570abb1503
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '839'
+source-wordcount: '837'
 ht-degree: 1%
 
 ---
@@ -25,7 +25,7 @@ När du använder AEM kan du hantera många olika typer av innehåll (till exemp
 >
 >AEM Dashboards skapas per användare så att en användare bara kan komma åt sin egen kontrollpanel.
 >
->Men [Kontrollpanelsmallar](#creating-a-dashboard-template) kan användas för att dela gemensam konfiguration och Dashboard-layout.
+>Men [Instrumentpanelsmallar](#creating-a-dashboard-template) kan användas för att dela gemensam konfiguration och Dashboard-layout.
 
 ![chlimage_1-22](assets/chlimage_1-22.jpeg)
 
@@ -47,7 +47,7 @@ Du kanske vill ha flera kontrollpaneler för att snabbt se information om ditt i
 
 1. I **verktyg** avsnitt, klicka **Konfigurationskonsol**.
 
-1. Klicka på **Kontrollpanel**.
+1. Klicka på i trädet **Kontrollpanel**.
 1. Klicka på den kontrollpanel som du vill klona.
 
 1. Klicka **Klona**.
@@ -58,7 +58,7 @@ Du kanske vill ha flera kontrollpaneler för att snabbt se information om ditt i
 
 1. I **verktyg** avsnitt, klicka **Konfigurationskonsol**.
 
-1. Klicka på **Kontrollpanel**.
+1. Klicka på i trädet **Kontrollpanel**.
 1. Klicka på den kontrollpanel som du vill ta bort.
 
 1. Klicka **Ta bort**.
@@ -86,19 +86,19 @@ Rapporteringskomponenterna initieras med en standardkonfiguration som hjälper d
 
 #### Grundkonfiguration {#basic-configuration}
 
-The **Grundläggande** ger åtkomst till följande konfigurationsposter:
+The **Grundläggande** -fliken ger åtkomst till följande konfigurationsposter:
 
 **Titel** Titeln som visas på instrumentpanelen.
 
 **Typ av begäran** Hur data begärs.
 
-**Konfiguration i SiteCatalyst (valfritt)** Den konfiguration som du vill använda för att ansluta till SiteCatalyst. Om den inte anges antas konfigurationen vara konfigurerad på instrumentpanelssidan (via sidegenskaper).
+**Konfiguration av SiteCatalyst (valfritt)** Den konfiguration som du vill använda för att ansluta till SiteCatalysten. Om den inte anges antas konfigurationen vara konfigurerad på instrumentpanelssidan (via sidegenskaper).
 
-**Report Suite-ID (valfritt)** Den SiteCatalyst-rapportserie som du vill använda för att generera diagrammet.
+**Report Suite-ID (valfritt)** Den rapportserie som du vill använda för att generera SiteCatalysten.
 
 #### Rapportkonfiguration {#report-configuration}
 
-För att kunna visa webbstatistik måste du definiera datumintervallet för de data som du vill hämta. The **Rapport** -fliken innehåller två fält som definierar det intervallet.
+Om du vill visa webbstatistik måste du definiera datumintervallet för de data som du vill hämta. The **Rapport** -fliken innehåller två fält som definierar det intervallet.
 
 >[!NOTE]
 >
@@ -128,7 +128,7 @@ Varje komponent definierar också specifika inställningar.
 
 **Mått** Händelsen som du vill visa.
 
-**Nej. de översta objekten** Antal objekt som visas av rapporten.
+**Nej. av de översta objekten** Antal objekt som visas av rapporten.
 
 #### Rankad rapport {#ranked-report}
 
@@ -144,7 +144,7 @@ Den här komponenten visar ett diagram över det mer besökta avsnittet på en w
 
 ![chlimage_1-29](assets/chlimage_1-29a.png)
 
-**Nej. de översta objekten** Antal avsnitt som visas i rapporten.
+**Nej. av de översta objekten** Antal avsnitt som visas i rapporten.
 
 #### Trendrapport {#trended-report}
 

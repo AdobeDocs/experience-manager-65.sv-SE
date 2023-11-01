@@ -1,10 +1,10 @@
 ---
-title: Skicka autentiseringsuppgifter med WS-security headers
+title: Skicka inloggningsuppgifter med WS-security headers
 description: Lär dig hur du skickar inloggningsuppgifter med WS-security headers
 exl-id: 519d57ad-81ab-4caf-ae25-4390ae2eee13
-source-git-commit: a2fd3c0c1892ac648c87ca0dec440e22144c37a2
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '217'
+source-wordcount: '215'
 ht-degree: 0%
 
 ---
@@ -39,4 +39,3 @@ För att få ut det mesta av det här dokumentet måste du ha en god förståels
 >[!MORELIKETHIS]
 >
 >* [Skicka inloggningsuppgifter med WS-Security-huvuden](assets/passing-credentials-using-ws-security-headers.pdf)
-

@@ -7,9 +7,9 @@ topic-tags: upgrading
 content-type: reference
 feature: Upgrading
 exl-id: 85bc041e-0ab1-42de-8bcc-c98a175d7494
-source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '1341'
+source-wordcount: '1339'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 ## Introduktion {#introduction}
 
-En av de största utmaningarna när det gäller att uppgradera Adobe Experience Manager är att det inte tar längre tid att uppgradera när en uppgradering på plats utförs. Innehållsförfattare kan inte komma åt miljön under en uppgradering. Därför är det önskvärt att minimera tiden det tar att genomföra uppgraderingen. För stora databaser, särskilt AEM Assets-projekt, som vanligtvis har stora datalager och stora uppladdningar av resurser per timme, tar omindexering av Oak-index en avsevärd del av uppgraderingstiden.
+En av de största utmaningarna när det gäller att uppgradera Adobe Experience Manager är att det inte tar längre tid att uppgradera när en uppgradering på plats utförs. Innehållsförfattare kan inte komma åt miljön under en uppgradering. Därför är det önskvärt att minimera tiden det tar att genomföra uppgraderingen. För stora databaser, särskilt AEM Assets-projekt, som vanligtvis har stora datalager och stora uppladdningar av resurser per timme, tar omindexering av Oak-index en betydande del av uppgraderingstiden.
 
 I det här avsnittet beskrivs hur du använder Oak-run-verktyget för att indexera om databasen **före** som utför uppgraderingen, vilket minskar tiden för driftavbrott under den faktiska uppgraderingen. Stegen som presenteras kan användas på [Lucene](https://jackrabbit.apache.org/oak/docs/query/lucene.html) index för version AEM 6.4 och senare.
 
@@ -32,14 +32,14 @@ Det problem som de flesta kunder står inför under en uppgradering är att tide
 
 ![offline-reindexing-upgrade-text-extraction](assets/offline-reindexing-upgrade-process.png)
 
-Tanken är att skapa indexet före uppgraderingen, mot indexdefinitionerna för AEM målversionen med hjälp av [Oak-run](/help/sites-deploying/indexing-via-the-oak-run-jar.md) verktyg. I bilden ovan visas omindexeringsmetoden offline.
+Tanken är att skapa indexet före uppgraderingen, mot indexdefinitionerna för AEM målversionen med [Oak-run](/help/sites-deploying/indexing-via-the-oak-run-jar.md) verktyg. I bilden ovan visas omindexeringsmetoden offline.
 
 Detta är dessutom ordningen för stegen som beskrivs i metoden:
 
 1. Text från binärfiler extraheras först
 2. Målindexdefinitioner skapas
 3. Offlineindex skapas
-4. Indexen importeras sedan under uppgraderingsprocessen
+4. Index importeras sedan under uppgraderingsprocessen
 
 ### Textextrahering {#text-extraction}
 
@@ -127,7 +127,7 @@ java -cp oak-run.jar:bundle-com.adobe.granite.repository.jar org.apache.jackrabb
 
 >[!NOTE]
 >
->Processen för att skapa indexdefinitioner ovan stöds endast från `oak-run-1.12.0` från och med version. Målsättningen är att använda Granite-databaskaketet `com.adobe.granite.repository-x.x.xx.jar`.
+>Processen för att skapa indexdefinitioner ovan stöds endast från `oak-run-1.12.0` från och med version. Målsättningen görs med Granites databaskaket `com.adobe.granite.repository-x.x.xx.jar`.
 
 Ovanstående steg skapar en JSON-fil med namnet `merge-index-definitions_target.json` som är indexdefinitionen.
 
@@ -135,7 +135,7 @@ Ovanstående steg skapar en JSON-fil med namnet `merge-index-definitions_target.
 
 Skapa en kontrollpunkt i produktionen **källa** AEM med lång livstid. Detta bör göras innan databasen klonas.
 
-Via JMX-konsolen på `http://serveraddress:serverport/system/console/jmx`, gå till `CheckpointMBean` och skapa en kontrollpunkt med lång livslängd (till exempel 200 dagar). Anropa `CheckpointMBean#createCheckpoint` med `17280000000` som argument för livstidens varaktighet i millisekunder.
+Via JMX-konsolen på `http://serveraddress:serverport/system/console/jmx`, gå till `CheckpointMBean` och skapa en kontrollpunkt med lång livslängd (till exempel 200 dagar). Anropa `CheckpointMBean#createCheckpoint` med `17280000000` som argument för livstid i millisekunder.
 
 När du är klar kopierar du det nya kontrollpunkts-ID:t och validerar livstiden med JMX `CheckpointMBean#listCheckpoints`.
 
@@ -145,7 +145,7 @@ När du är klar kopierar du det nya kontrollpunkts-ID:t och validerar livstiden
 
 Mer information finns i [skapa kontrollpunkter](https://jackrabbit.apache.org/oak/docs/query/oak-run-indexing.html#out-of-band-create-checkpoint) i dokumentationen för eken.
 
-**Utför offlineindexering för de genererade indexdefinitionerna**
+**Indexera offline för de genererade indexdefinitionerna**
 
 Omindexering av Lucene kan göras offline med ekkörning. Den här processen skapar indexdata på disken under `indexing-result/indexes`. Det gör det **not** skriver till databasen och behöver därför inte stoppa den AEM som körs. Det skapade textarkivet matas in i den här processen:
 
@@ -166,7 +166,7 @@ Ytterligare teknisk information finns i [körningsdokumentation för indexering]
 
 ### Importera index {#importing-indexes}
 
-Med AEM 6.4 och senare versioner har AEM den inbyggda möjligheten att importera index från disk i startsekvenser. Mappen `<repository>/indexing-result/indexes` bevakas för att se om det finns indexdata under start. Du kan kopiera det förskapade indexet till ovanstående plats under [uppgraderingsprocess](in-place-upgrade.md#performing-the-upgrade) innan du börjar med den nya versionen av **target** AEM burk. AEM importerar den till databasen och tar bort motsvarande kontrollpunkt från systemet. Därför undviks helt omindexering.
+Med AEM 6.4 och senare versioner har AEM den inbyggda möjligheten att importera index från disk i startsekvenser. Mappen `<repository>/indexing-result/indexes` bevakas för att se om det finns indexdata under start. Du kan kopiera det förskapade indexet till ovanstående plats under [uppgraderingsprocess](in-place-upgrade.md#performing-the-upgrade) innan den nya versionen av **target** AEM burk. AEM importerar den till databasen och tar bort motsvarande kontrollpunkt från systemet. Därför undviks helt omindexering.
 
 ## Fler tips och felsökning {#troubleshooting}
 

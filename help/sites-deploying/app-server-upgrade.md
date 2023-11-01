@@ -1,11 +1,11 @@
 ---
 title: Uppgradera steg för programserverinstallationer
-description: Lär dig hur du uppgraderar instanser av AEM som distribueras via programservrar.
+description: Lär dig hur du uppgraderar AEM som distribueras via programservrar.
 feature: Upgrading
 exl-id: 86dd10ae-7f16-40c8-84b6-91ff2973a523
-source-git-commit: c0574b50f3504a4792405d6fcd8aa3a2e8e6c686
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '452'
+source-wordcount: '446'
 ht-degree: 0%
 
 ---
@@ -57,7 +57,7 @@ I alla exemplen i den här proceduren används Tomcat som Application Server och
 
       1. `sling.run.mode.install.options`
 
-1. Ta bort filer och mappar som inte längre behövs. De objekt du behöver ta bort är:
+1. Ta bort filer och mappar som inte längre behövs. Objekten som du behöver ta bort specifikt är:
 
    * The **startplatta/startmapp**. Du kan ta bort den genom att köra följande kommando i terminalen: `rm -rf crx-quickstart/launchpad/startup`
 
@@ -78,16 +78,16 @@ I alla exemplen i den här proceduren används Tomcat som Application Server och
 
    * Lägg till följande rad i `org.apache.jackrabbit.oak.segment.SegmentNodeStoreService.config`:
 
-      `customBlobStore=true`
+     `customBlobStore=true`
 
    * Lägg sedan till följande rader i `org.apache.jackrabbit.oak.plugins.blob.datastore.FileDataStore.config`:
 
-      ```
-      path=./crx-quickstart/repository/datastore
-      minRecordLength=4096
-      ```
+     ```
+     path=./crx-quickstart/repository/datastore
+     minRecordLength=4096
+     ```
 
-1. Nu måste du ändra körningslägena i AEM 6.5-filen. För att göra det skapar du först en tillfällig mapp som ska rymma AEM 6.5-kriget. Namnet på mappen i det här exemplet blir `temp`. När krigsfilen har kopierats kan du extrahera innehållet genom att köra det inifrån den tillfälliga mappen:
+1. Nu måste du ändra körningslägena i AEM 6.5-filen. För att göra det måste du först skapa en tillfällig mapp som rymmer AEM 6.5-kriget. Namnet på mappen i det här exemplet blir `temp`. När krigsfilen har kopierats kan du extrahera innehållet genom att köra det inifrån den tillfälliga mappen:
 
    ```
    jar xvf aem-quickstart-6.5.0.war

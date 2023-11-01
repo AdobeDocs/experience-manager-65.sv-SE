@@ -7,9 +7,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: coding
 role: Developer
 exl-id: 036c35c1-1be7-4825-bbb6-ea025e49c6f6
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '5398'
+source-wordcount: '5396'
 ht-degree: 0%
 
 ---
@@ -650,7 +650,7 @@ I följande exempel visas innehållet i en jndi.properties-fil som används för
  java.naming.provider.url=corbaloc::appserver1:9810,:appserver2:9810
 ```
 
-**WebLogic**
+**WebLogic (på engelska)**
 
 I följande exempel visas innehållet i en jndi.properties-fil som används för att ansluta till AEM Forms som distribueras på WebLogic.
 
@@ -675,7 +675,7 @@ I följande exempel visas innehållet i en jndi.properties-fil som används för
 
 **Se även**
 
-[Inkludera AEM Forms Java-biblioteksfiler](invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[Inklusive AEM Forms Java-biblioteksfiler](invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [Skicka data till AEM Forms-tjänster med Java API](invoking-aem-forms-using-java.md#passing-data-to-aem-forms-services-using-the-java-api)
 
@@ -825,7 +825,7 @@ Den URL som anges för `com.adobe.idp.Document` objektet läses alltid på den s
      Document doc = new Document(new java.net.URL("file:c:/temp/input.pdf"));
 ```
 
-Filen c:/temp/input.pdf måste finnas på klientdatorn (inte på serverdatorn). Klientdatorn är där URL:en läses och där `com.adobe.idp.Document` objektet skapades.
+Filen c:/temp/input.pdf måste finnas på klientdatorn (inte på serverdatorn). Klientdatorn är den plats där URL:en läses och där `com.adobe.idp.Document` objektet skapades.
 
 **Skapa ett dokument baserat på innehåll som är tillgängligt från en URL**
 
@@ -841,11 +841,11 @@ Filen c:/temp/input.pdf måste finnas på klientdatorn (inte på serverdatorn). 
 
 [Anropa AEM Forms med Java API](invoking-aem-forms-using-java.md#invoking-aem-forms-using-the-java-api)
 
-[Ange anslutningsegenskaper](invoking-aem-forms-using-java.md#setting-connection-properties)
+[Ställa in förbindningsegenskaper](invoking-aem-forms-using-java.md#setting-connection-properties)
 
-### Hantera returnerade dokument {#handling-returned-documents}
+### Hantering av returnerade dokument {#handling-returned-documents}
 
-Tjänståtgärder som returnerar ett PDF-dokument (eller andra datatyper, till exempel XML-data) som ett utdatavärde, returnerar ett `com.adobe.idp.Document` objekt. När du har tagit emot ett `com.adobe.idp.Document` objekt kan du konvertera det till följande format:
+Tjänståtgärder som returnerar ett PDF-dokument (eller andra datatyper, till exempel XML-data) som ett utdatavärde returnerar ett `com.adobe.idp.Document` objekt. När du har fått ett `com.adobe.idp.Document` objekt kan du konvertera det till följande format:
 
 * Ett `java.io.File` objekt
 * Ett `java.io.InputStream` objekt
@@ -958,7 +958,7 @@ AEM Forms tjänståtgärder kan anropas med hjälp av en tjänsts starkt typbest
 
 Om du vill utföra en tjänståtgärd anropar du en metod som tillhör Java-objektet. Ett Java-klientbibliotek innehåller metoder som vanligtvis mappar en-till-en med serviceåtgärder. Ange nödvändiga anslutningsegenskaper när du använder ett Java-klientbibliotek. (Se [Ange anslutningsegenskaper](invoking-aem-forms-using-java.md#setting-connection-properties).)
 
-Skapa en `ServiceClientFactory` -objekt som används för att instansiera ett Java-objekt som gör att du kan anropa en tjänst. Varje tjänst som har ett Java-klientbibliotek har ett motsvarande klientobjekt. Om du till exempel vill anropa tjänsten Databas skapar du en `ResourceRepositoryClient` genom att använda konstruktorn och skicka `ServiceClientFactory` -objekt. Objektet `ServiceClientFactory` ansvarar för att upprätthålla anslutningsinställningar som krävs för att anropa AEM Forms-tjänster.
+Skapa en `ServiceClientFactory` -objekt som används för att instansiera ett Java-objekt som gör att du kan anropa en tjänst. Varje tjänst som har ett Java-klientbibliotek har ett motsvarande klientobjekt. Om du till exempel vill anropa tjänsten Databas skapar du en `ResourceRepositoryClient` genom att använda konstruktorn och skicka `ServiceClientFactory` -objekt. Objektet `ServiceClientFactory` ansvarar för att underhålla de anslutningsinställningar som krävs för att anropa AEM Forms-tjänster.
 
 Trots att du får en `ServiceClientFactory` är vanligtvis snabb, en del overheadkostnader uppstår när fabriken används för första gången. Det här objektet är optimerat för återanvändning och därför, när det är möjligt, ska du använda samma `ServiceClientFactory` när du skapar flera Java-klientobjekt. Det vill säga, skapa inte en separat `ServiceClientFactory` -objekt för varje klientbiblioteksobjekt som du skapar.
 
@@ -973,8 +973,8 @@ Du kan anropa databastjänsten med hjälp av ett Java-klientbibliotek och genom 
 1. Inkludera JAR-klientfiler, till exempel adobe-repository-client.jar, i Java-projektets klassökväg. Information om platsen för dessa filer finns i [Inkludera AEM Forms Java-biblioteksfiler](invoking-aem-forms-using-java.md#including-aem-forms-java-library-files).
 1. Ange anslutningsegenskaper som krävs för att anropa en tjänst.
 1. Skapa en `ServiceClientFactory` genom att anropa `ServiceClientFactory` objektets statiska `createInstance` metoden och skicka `java.util.Properties` objekt som innehåller anslutningsegenskaper.
-1. Skapa ett `ResourceRepositoryClient` objekt genom att använda dess konstruktor och skicka `ServiceClientFactory` objektet. Använd objektet `ResourceRepositoryClient` för att anropa databastjänståtgärder.
-1. Skapa ett `RepositoryInfomodelFactoryBean` objekt med hjälp av dess konstruktor och skicka `null`. Med det här objektet kan du skapa ett `Resource` objekt som representerar innehållet som läggs till i databasen.
+1. Skapa ett `ResourceRepositoryClient` objekt med hjälp av dess konstruktor och skicka `ServiceClientFactory` objektet. Använd objektet `ResourceRepositoryClient` för att anropa åtgärder för databastjänsten.
+1. Skapa ett `RepositoryInfomodelFactoryBean` objekt med hjälp av dess konstruktor och skicka `null`. Med det här objektet kan du skapa ett `Resource` objekt som representerar det innehåll som läggs till i databasen.
 1. Skapa ett `Resource` objekt genom att anropa `RepositoryInfomodelFactoryBean` objektets `newImage` metod och skicka följande värden:
 
    * Ett unikt ID-värde genom att ange `new Id()`.
@@ -1004,7 +1004,7 @@ Du kan anropa databastjänsten med hjälp av ett Java-klientbibliotek och genom 
 
 ## Anropa en kort process med anrops-API {#invoking-a-short-lived-process-using-the-invocation-api}
 
-Du kan anropa en kort process med Java Anvocation API. När du anropar en kort process med anrops-API:t skickar du obligatoriska parametervärden med hjälp av en `java.util.HashMap` -objekt. För varje parameter som ska skickas till en tjänst anropar du `java.util.HashMap` objektets `put` och ange det namn/värde-par som krävs av tjänsten för att utföra den angivna åtgärden. Ange det exakta namnet på parametrarna som tillhör den kortvariga processen.
+Du kan anropa en kort process med Java Anvocation API. När du anropar en kort process med anrops-API:t skickar du obligatoriska parametervärden med hjälp av en `java.util.HashMap` -objekt. För varje parameter som ska skickas till en tjänst anropar du `java.util.HashMap` objektets `put` och ange det namn/värde-par som krävs för att tjänsten ska kunna utföra den angivna åtgärden. Ange det exakta namnet på parametrarna som tillhör den kortvariga processen.
 
 >[!NOTE]
 >

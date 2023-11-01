@@ -2,9 +2,9 @@
 title: Kom igång med AEM headless translation
 description: Lär dig hur du ordnar ditt headless-innehåll och hur AEM översättningsverktyg fungerar.
 exl-id: 764f78a7-1d3d-4406-85b1-b80dffae2350
-source-git-commit: f627bc2b58578df1b4ff6c95d87f0c64daafa1c7
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '1495'
+source-wordcount: '1493'
 ht-degree: 0%
 
 ---
@@ -64,7 +64,7 @@ AEM innehåll, oavsett om det är headless eller traditionella webbsidor, styrs 
 
 ## Så här lagrar AEM Headless-innehåll {#headless-content-in-aem}
 
-För översättningsspecialisten är det inte viktigt att förstå hur AEM hanterar headless-innehåll. Att känna till de grundläggande begreppen och terminologin kan dock vara praktiskt när du senare använder AEM översättningsverktyg. Viktigast av allt är att ni måste förstå ert eget innehåll och hur det är strukturerat för att kunna översätta det effektivt.
+För översättningsspecialisten är det inte viktigt att förstå hur AEM hanterar headless-innehåll. Att känna till de grundläggande begreppen och terminologin kan dock vara praktiskt när du senare använder AEM översättningsverktyg. Viktigast av allt är att ni måste förstå ert eget innehåll och hur det är strukturerat för att effektivt kunna översätta det.
 
 ### Innehållsmodeller {#content-models}
 
