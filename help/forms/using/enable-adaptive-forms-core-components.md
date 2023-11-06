@@ -1,20 +1,18 @@
 ---
 title: Hur aktiverar man adaptiva Forms Core-komponenter i AEM 6.5 Forms?
-seo-title: How to enable Adaptive Forms Core Components on AEM 6.5 Forms?
 description: Steg för steg-guide som hjälper dig att aktivera adaptiva Forms Core-komponenter i en AEM 6.5 Forms-miljö.
-seo-description: Step-by-Step guide to help you enable Adaptive Forms Core Components on an AEM 6.5 Forms environment.
 keywords: Aktivera kärnkomponenter, kärnkomponenter adaptiva Forms, kärnkomponenter i 6.5, adaptiva Forms Core-komponenter i AEM 6.5, AF Core-komponenter i AEM 6.5, AEM 6.5 Forms Core-komponenter
 contentOwner: Khushwant Singh
 topic-tags: Adaptive Forms
 docset: aem65
 role: Admin, Developer
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+exl-id: 6585ea71-6242-47d3-bc59-6f603cf507b6
+source-git-commit: 1da3abac8a7f09d41127818a5abacf29524f1365
 workflow-type: tm+mt
-source-wordcount: '888'
+source-wordcount: '990'
 ht-degree: 0%
 
 ---
-
 
 # Aktivera adaptiva Forms Core-komponenter i AEM 6.5 Forms {#enable-adaptive-forms-core-components}
 
@@ -27,10 +25,9 @@ ht-degree: 0%
 
 Genom att aktivera adaptiva Forms Core-komponenter kan du börja skapa, publicera och leverera [Core Components based Adaptive Forms](create-an-adaptive-form-core-components.md) och [Headless Adaptive Forms](https://experienceleague.adobe.com/docs/experience-manager-headless-adaptive-forms/using/overview.html) från din AEM 6.5 Forms-miljö.
 
-Om du vill aktivera AHAdaptive Forms Core Components i din Forms 6.5-miljö ska du installera och driftsätta en [AEM Archetype 41 eller senare](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) baserat projekt (med formuläralternativ aktiverade) på alla dina författarinstanser och publiceringsinstanser.
+Om du vill aktivera adaptiva Forms Core-komponenter i din Forms-miljö med AEM 6.5 installerar och driftsätter du en [AEM Archetype 41 eller senare](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) baserat projekt (med formuläralternativ aktiverade) på alla dina författarinstanser och publiceringsinstanser.
 
-I den här artikeln finns detaljerade anvisningar om hur du konfigurerar och distribuerar AEM Archetype 41 eller senare baserat på ditt projekt i Forms-miljön AEM 6.5 för att aktivera adaptiva Forms Core-komponenter.
-
+I den här artikeln finns detaljerade anvisningar om hur du konfigurerar och distribuerar AEM Archetype 41 eller senare baserat på ditt projekt i Forms-miljön AEM 6.5 för att aktivera adaptiva Forms Core-komponenter. Du kan läsa listan nedan för **AEM 6.5** kompatibla versioner för aktivering av Forms Core Components:
 
 ## Förutsättningar {#prerequisites}
 
@@ -107,7 +104,16 @@ Så här skapar du en AEM Archetype 41 eller [senare](https://github.com/adobe/a
 1. Uppdatera projektet så att det innehåller den senaste versionen av Forms Core Components:
 
    1. Öppna [AEM Archetype-projektmapp]/pom.xml för redigering.
-   1. Ange version av `core.forms.components.version` och `core.forms.components.af.version` till [senaste Forms Core Components](https://github.com/adobe/aem-core-forms-components/tree/release/650) version.
+   1. Ange version av `core.forms.components.version` och `core.forms.components.af.version` till [senaste Forms Core Components](https://github.com/adobe/aem-core-forms-components/tree/release/650#system-requirements) och se till att båda har samma version som **Forms Core Components** som anges i tabellen och ange version av `core.wcm.components.version` som anges i **WCM-kärnkomponenter**.
+
+      >[!WARNING]
+      >
+      >* När du skapar ett Arketype-projekt med `version 45`, [AEM Archetype-projektmapp]/pom.xml ställer först in versionen av formulärets kärnkomponenter till `1.1.28`. Innan du bygger eller driftsätter Archetype-projektet ska du uppdatera komponentversionen för formulär till `1.1.26`.
+
+
+      >[!NOTE]
+      >
+      >* Om du konfigurerar någon annan topologi måste du lägga till överförings-, förifyllnings- och andra URL-adresser till tillåtelselista i Dispatcher-lagret.
 
    1. Spara och stäng filen.
 
