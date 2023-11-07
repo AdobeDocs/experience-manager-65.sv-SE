@@ -11,9 +11,9 @@ topic-tags: personalization
 discoiquuid: 81102d77-e856-4c85-b932-f22de8ca6462
 docset: aem65
 exl-id: 34293432-cfdc-466b-96bd-2c43b566a420
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
 workflow-type: tm+mt
-source-wordcount: '866'
+source-wordcount: '865'
 ht-degree: 2%
 
 ---
@@ -70,7 +70,7 @@ När du har skapat erbjudandet kan du öppna det och redigera innehållet.
    ![screen-shot_2019-03-05at124557-1](assets/screen-shot_2019-03-05at124557-1.png)
 
 1. Välj **Erbjudandesida** mall och sedan klicka eller peka **Nästa**.
-1. Skriv en titel för erbjudandet och välj eller skriv in en eller flera taggar som du vill associera med erbjudandet. Klicka eller tryck sedan på **Skapa**.
+1. Skriv en titel för erbjudandet och välj eller skriv in en eller flera taggar som ska kopplas till erbjudandet. Klicka eller tryck sedan **Skapa**.
 1. Öppna erbjudandet för redigering genom att klicka eller trycka på **Öppna sida**.
 
 ## Redigera ett erbjudande {#editing-an-offer}
@@ -95,7 +95,7 @@ Du kan ta bort ett erbjudande när du visar antingen mappinnehåll i ett erbjuda
 1. Klicka på eller tryck i dialogrutan som visas **Ta bort** för att bekräfta borttagningen.
 1. Om erbjudandet används i en eller flera upplevelser visas en dialogruta som anger att det hänvisas till erbjudandet:
 
-   * Om du vill ta bort erbjudandet och ta bort det från upplevelserna klickar eller trycker du **Tvinga borttagning**.
+   * Om du vill ta bort erbjudandet och ta bort det från upplevelserna klickar eller trycker du på **Tvinga borttagning**.
    * Klicka eller tryck för att behålla erbjudandet **Avbryt**.
 
 ## Söker efter erbjudanden {#searching-for-offers}

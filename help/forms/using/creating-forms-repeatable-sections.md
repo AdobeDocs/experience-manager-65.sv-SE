@@ -9,20 +9,20 @@ topic-tags: author
 discoiquuid: 01724ca0-6901-45e7-b045-f44814ed574e
 feature: Adaptive Forms
 exl-id: f2abae0a-f7fd-4a39-bd8c-03492ce06fe9
-source-git-commit: e7a3558ae04cd6816ed73589c67b0297f05adce2
+source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
 workflow-type: tm+mt
-source-wordcount: '1174'
+source-wordcount: '1172'
 ht-degree: 0%
 
 ---
 
 # Skapa formulär med repeterbara avsnitt {#creating-forms-with-repeatable-sections}
 
-<span class="preview"> Adobe rekommenderar att man använder modern och utbyggbar datainhämtning [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) for [skapa ny Adaptive Forms](/help/forms/using/create-an-adaptive-form-core-components.md) eller [lägga till adaptiv Forms på AEM Sites-sidor](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-program, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptive Forms med grundläggande komponenter. </span>
+<span class="preview"> Adobe rekommenderar att man använder modern och utbyggbar datainhämtning [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) for [skapa ny Adaptive Forms](/help/forms/using/create-an-adaptive-form-core-components.md) eller [lägga till adaptiv Forms på AEM Sites-sidor](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-filer, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptiv Forms med baskomponenter. </span>
 
 Upprepningsbara avsnitt är paneler som kan läggas till eller tas bort dynamiskt i ett formulär.
 
-När du t.ex. ansöker om ett jobb, ger den jobbsökande tidigare anställningsinformation som företagsnamn, roll, projekt och annan information. Information om alla arbetsgivare kräver olika men likartade sektioner. I ett sådant scenario tillhandahåller anställningsblanketten en arbetsgivaravdelning och ger även möjlighet att dynamiskt lägga till fler sådana avsnitt. Dessa avsnitt, som läggs till dynamiskt, kallas upprepningsbara avsnitt.
+När du t.ex. ansöker om ett jobb, ger den jobbsökande tidigare anställningsinformation som företagsnamn, roll, projekt och annan information. Information om alla arbetsgivare kräver olika men likartade sektioner. I ett sådant scenario tillhandahåller anställningsblanketten en arbetsgivaravdelning och ger också möjlighet att dynamiskt lägga till fler sådana avsnitt. Dessa avsnitt, som läggs till dynamiskt, kallas upprepningsbara avsnitt.
 
 Du kan använda någon av följande metoder för att skapa repeterbara paneler:
 
@@ -40,7 +40,7 @@ Du kan använda någon av följande metoder för att skapa repeterbara paneler:
 
 1. Panelens överordnade panel, som ska upprepas, bör innehålla knappar för att lägga till och ta bort för att hantera instanser av de repeterbara panelerna. Följ de här stegen för att infoga knappar i det överordnade objektet och aktivera skript på knapparna:
 
-   1. Dra och släpp en knappkomponent från sidofältet till panelens överordnade objekt. Markera komponenten och tryck på ![edit-rules](assets/edit-rules.png). Reglerna för knappen öppnas i regelredigeraren.
+   1. Dra och släpp en knappkomponent från sidofältet till panelens överordnade. Markera komponenten och tryck på ![edit-rules](assets/edit-rules.png). Reglerna för knappen öppnas i regelredigeraren.
    1. Klicka på **Skapa**.
 
       Välj **Visual Editor** på raden Formulärobjekt och -funktioner.
@@ -90,11 +90,11 @@ Du kan använda någon av följande metoder för att skapa repeterbara paneler:
       >`Panel1.instanceManager.instances[1].textbox.value`
       >
       >
-      >Mer information finns i: Klass: InstanceManager#instances i [AEM Forms Java API-referens](https://adobe.com/go/learn_aemforms_documentation_63).
+      >Mer information finns i: Class: InstanceManager#instances i [AEM Forms Java API-referens](https://adobe.com/go/learn_aemforms_documentation_63).
 
       >[!NOTE]
       >
-      >När alla instanser av en panel har tagits bort från ett adaptivt formulär kan du lägga till en instans av den borttagna panelen med syntaxen _panelName för att fånga instanshanteraren på panelen och använda instanshanterarens addInstance API för att lägga till den borttagna instansen. Till exempel _panelName.addInstance(). En instans av den borttagna panelen läggs till.
+      >När alla instanser av en panel tas bort från ett adaptivt formulär kan du lägga till en instans av den borttagna panelen med syntaxen _panelName för att fånga instanshanteraren på panelen och använda API:t addInstance för instanshanteraren för att lägga till den borttagna instansen. Till exempel _panelName.addInstance(). En instans av den borttagna panelen läggs till.
 
 ## Använda dragspelslayouten för den överordnade panelen   {#using-the-accordion-layout-for-the-parent-panel-nbsp}
 

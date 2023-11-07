@@ -1,16 +1,14 @@
 ---
 title: Konfigurera tjänstinställningar
 description: Lär dig hur du konfigurerar tjänstinställningar. Du kan använda sidan Tjänsthantering för att konfigurera inställningarna för var och en av de tjänster som ingår i AEM formulär.
-uuid: e95425a4-62f6-473e-b21b-d081c432e02d
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/managing_services
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
-discoiquuid: 2fab4b0c-e5db-47cd-b85a-4ff5ad6eb178
 exl-id: a6a10ff0-6f4d-42df-9b4e-f98a53cf1806
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
 workflow-type: tm+mt
-source-wordcount: '10694'
+source-wordcount: '10692'
 ht-degree: 0%
 
 ---
@@ -26,7 +24,7 @@ Du kan använda sidan Tjänsthantering för att konfigurera inställningar för 
 
    >[!NOTE]
    >
-   >Alla tjänster på sidan Tjänsthantering har inte fliken Konfiguration. För processer som du har skapat visas bara fliken Konfiguration om du har lagt till en konfigurationsparameter till processen i Workbench. (Se&quot;Konfigurationsparametrar&quot; i [Workbench - hjälp](https://www.adobe.com/go/learn_aemforms_workbench_63) .)
+   >Alla tjänster som listas på sidan Tjänsthantering har inte fliken Konfiguration. För processer som du har skapat visas bara fliken Konfiguration om du har lagt till en konfigurationsparameter till processen i Workbench. (Se&quot;Konfigurationsparametrar&quot; i [Workbench - hjälp](https://www.adobe.com/go/learn_aemforms_workbench_63) .)
 
 
 1. Klicka på fliken Säkerhet och ange säkerhetsinställningarna för tjänsten. Se [Ändra säkerhetsinställningar för en tjänst](configure-service-settings.md#modifying-security-settings-for-a-service).
@@ -223,7 +221,7 @@ Följande inställningar är tillgängliga för krypteringstjänsten.
 
 >[!NOTE]
 >
->Använd endast enkel autentisering (användarnamn och lösenord) när anslutningen skyddas via SSL (med LDAPS).
+Använd endast enkel autentisering (användarnamn och lösenord) när anslutningen skyddas via SSL (med LDAPS).
 
 **Kompatibilitetsläge:**
 
@@ -259,7 +257,7 @@ Följande inställningar är tillgängliga för tjänsten Generate PDF.
 
 **Aktivera Acrobat-baserade AutoCAD-konverteringar (endast Windows):** När den här inställningen är true använder Generate PDF-tjänsten Acrobat X Pro för alla DWG-konverteringar till PDF. Den här inställningen är bara användbar om AutoCAD inte är installerat på servern eller om AutoCAD-konverteringsfunktionen inte kan konvertera filer.
 
-**Reguljära uttryck för att hitta förbjudna specialtecken i användarnamnet (endast Windows):** Anger tecken som stör åtgärderna Export PDF och Optimize PDF när tecknen visas i användarens namn.
+**Reguljära uttryck för att hitta förbjudna specialtecken i användarnamnet (endast Windows):** Anger tecken som stör åtgärderna Export PDF och Optimize PDF när tecknen visas i en användares namn.
 
 **Poolstorlek för ImageToPDF:** Poolstorleken för standardkonverteraren (ren Java) Image-to-PDF i tjänsten Generate PDF. Den här inställningen styr de maximala samtidiga Image-to-PDF-konverteringar som tjänsten Generate PDF kan utföra. Standardvärdet för den här inställningen (rekommenderas för enprocessorsystem) är 3, som du kan öka på flerprocessorsystem.
 
@@ -431,7 +429,7 @@ Följande inställningar är tillgängliga för konfigurationstjänsten för Mic
 
 >[!NOTE]
 >
->Om offlinesupport har aktiverats och sedan inaktiverats uppdateras användarnas provisioneringsprofiler omedelbart, eller så snart de är online. Om en användare har arbetat offline återgår alla väntande uppgifter till uppgiftslistan och alla objekt i kön, inklusive väntande formulär, uppgifter och formulär som innehåller valideringsfel, tas bort från kön.
+Om offlinesupport har aktiverats och sedan inaktiverats uppdateras användarnas provisioneringsprofiler omedelbart, eller så snart de är online. Om en användare har arbetat offline återgår alla väntande uppgifter till uppgiftslistan och alla objekt i kön, inklusive väntande formulär, uppgifter och formulär som innehåller valideringsfel, tas bort från kön.
 
 **Android:** Tillåter Android-enheter att ansluta till servern.
 
@@ -733,7 +731,7 @@ Om sökvägen inte är absolut men relativ skapas mappen i den bevakade mappen. 
 
 >[!NOTE]
 >
->Ju mindre resultatmapparna är, desto bättre prestanda blir Bevakade mappar. Om den beräknade belastningen för den bevakade mappen till exempel är 1 000 filer varje timme kan du prova ett mönster som `result/%Y%M%D%H` så att en ny undermapp skapas varje timme. Om inläsningen är mindre (till exempel 1 000 filer per dag) kan du använda ett mönster som `result/%Y%M%D`.
+Ju mindre resultatmapparna är, desto bättre prestanda blir Bevakade mappar. Om den beräknade belastningen för den bevakade mappen till exempel är 1 000 filer varje timme kan du prova ett mönster som `result/%Y%M%D%H` så att en ny undermapp skapas varje timme. Om inläsningen är mindre (till exempel 1 000 filer per dag) kan du använda ett mönster som `result/%Y%M%D`.
 
 **Scenmapp:** Standardnamnet för scenmappen i den bevakade mappen.
 
@@ -815,7 +813,7 @@ Standardsäkerhetsprofiler installeras, som sedan kan konfigureras för att uppf
 
    >[!NOTE]
    >
-   >Renderings- och skicka-tjänster som används med variablerna xfaForm, Document Form och Form körs alltid med användarkontot i System.
+   Renderings- och skicka-tjänster som används med variablerna xfaForm, Document Form och Form körs alltid med användarkontot i System.
 
 1. Klicka på Lägg till huvudnamn för att ange behörigheter som användare och grupper har för tjänsten.
 1. På skärmen Välj huvudnamn visas de användare och grupper som är konfigurerade i Användarhantering. Om användaren eller gruppen som du vill använda inte visas använder du sökfunktionen för att hitta den. Klicka på ett användar- eller gruppnamn.

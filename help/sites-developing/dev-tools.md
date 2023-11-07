@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: development-tools
 content-type: reference
 exl-id: 97310ed5-f8fb-416c-8a66-68f652abeaa0
-source-git-commit: 26c0411d6cc16f4361cfa9e6b563eba0bfafab1e
+source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
 workflow-type: tm+mt
-source-wordcount: '379'
+source-wordcount: '378'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ Följande verktygsuppsättningar är tillgängliga för att utveckla dina JCR-, 
    * Ett centralt system för beroendehantering. Exempel: Apache Archiva.
    * Och ett system för automatisering av bygge. Exempel: Apache Continuum.
 
-  Med den här installationen kan du helt integrera programmet (innehåll, kod, konfiguration) i alla utvecklingsmiljöer och processer. Länken mellan de olika elementen är filsystemrepresentationen av databasen via FileVault, eftersom alla tidigare nämnda utvecklingsverktyg kan användas med filer.
+  Med den här installationen kan du helt integrera programmet (innehåll, kod, konfiguration) i alla utvecklingsmiljöer och processer. Länken mellan de olika elementen är databasens filsystemrepresentation via FileVault, eftersom alla tidigare nämnda utvecklingsverktyg kan användas med filer.
 
 ## Tillägg för integrerade utvecklingsmiljöer {#extensions-for-integrated-development-environments}
 
@@ -55,7 +55,7 @@ AEM levereras med andra verktyg som underlättar utvecklingen:
 
 Verktyg som underlättar skapandet av nya projekt:
 
-* [AEM Project Archetype](https://github.com/adobe/aem-project-archetype)
+* [AEM Project Archettype](https://github.com/adobe/aem-project-archetype)
 * [AEM Lazybone Templates](https://github.com/Adobe-Consulting-Services/lazybones-aem-templates)
 
 >[!NOTE]

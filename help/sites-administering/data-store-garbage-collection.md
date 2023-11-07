@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 5b1e46c5-7e56-433e-b62e-2a76ea7be0fd
 docset: aem65
 exl-id: 0dc4a8ce-5b0e-4bc9-a6f5-df2a67149e22
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
 workflow-type: tm+mt
-source-wordcount: '1885'
+source-wordcount: '1884'
 ht-degree: 0%
 
 ---
@@ -45,7 +45,7 @@ Om databasen har konfigurerats med ett externt datalager, [skräpinsamlingen i d
 
 Skräpinsamlaren för datalagret gör först en anteckning om den aktuella tidsstämpeln när processen börjar. Samlingen utförs sedan med hjälp av en algoritm för flerpassmärke/svepmönster.
 
-I den första fasen utför skräpinsamlaren i datalagret en omfattande genomgång av allt databasinnehåll. För varje innehållsobjekt som har en referens till en datalagringspost, placerades filen i filsystemet och en metadatauppdatering utfördes - det ändrade attributet &quot;last modified&quot; eller MTIME ändrades. I det här läget blir filer som nås av den här fasen nyare än den inledande baslinjetidstämpeln.
+I den första fasen utför skräpinsamlaren för datalagring en omfattande genomgång av allt databasinnehåll. För varje innehållsobjekt som har en referens till en datalagringspost, placerades filen i filsystemet och en metadatauppdatering utfördes - det ändrade attributet &quot;last modified&quot; eller MTIME ändrades. I det här läget blir filer som nås av den här fasen nyare än den inledande baslinjetidstämpeln.
 
 I den andra fasen går skräpinsamlaren för datalagret igenom den fysiska katalogstrukturen i datalagret på ungefär samma sätt som en &quot;sök&quot;. Den undersökte filens&quot;senast ändrade&quot; eller MTIME-attribut och fastställer följande:
 

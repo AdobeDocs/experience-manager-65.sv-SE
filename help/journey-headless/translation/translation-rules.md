@@ -2,9 +2,9 @@
 title: Konfigurera översättningsregler
 description: Lär dig hur du definierar översättningsregler för att identifiera innehåll för översättning.
 exl-id: 262503af-361b-491c-8639-0bb32f0a4c0e
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
 workflow-type: tm+mt
-source-wordcount: '864'
+source-wordcount: '861'
 ht-degree: 0%
 
 ---
@@ -46,7 +46,7 @@ Eftersom modeller för innehållsfragment, som definierar strukturen för dina i
 
 >[!TIP]
 >
->Innehållsarkitekten förser översättningsspecialisten med **Egenskapsnamn**&#x200B;är en del av alla fält som behövs för översättning. Dessa namn behövs för att konfigurera översättningsregler. Som översättningsspecialist [kan hitta dessa **Egenskapsnamn**&#x200B;är dig själv](getting-started.md#content-models) som tidigare beskrivits under denna resa.
+>Innehållsarkitekten förser översättningsspecialisten med **Egenskapsnamn** som innehåller alla fält som behövs för översättning. Dessa namn behövs för att konfigurera översättningsregler. Som översättningsspecialist [kan hitta dessa **Egenskapsnamn**&#x200B;är dig själv](getting-started.md#content-models) som tidigare beskrivits under denna resa.
 
 ## Skapa översättningsregler {#creating-rules}
 

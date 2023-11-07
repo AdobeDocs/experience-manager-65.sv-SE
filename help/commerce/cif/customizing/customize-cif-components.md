@@ -1,6 +1,6 @@
 ---
-title: Anpassa CIF-kärnkomponenter
-description: Lär dig hur du anpassar Adobe Experience Manager CIF Core Components. Självstudiekursen handlar om hur du på ett säkert sätt kan utöka en CIF Core-komponent för att uppfylla företagsspecifika krav. Lär dig hur du utökar en GraphQL-fråga för att returnera ett anpassat attribut och visa det nya attributet i en CIF Core-komponent.
+title: Anpassa CIF kärnkomponenter
+description: Lär dig hur du anpassar Adobe Experience Manager CIF Core Components. Självstudiekursen handlar om hur du på ett säkert sätt kan utöka en CIF Core Component för att uppfylla företagsspecifika krav. Lär dig hur du utökar en GraphQL-fråga för att returnera ett anpassat attribut och visa det nya attributet i en CIF Core-komponent.
 sub-product: Commerce
 topics: Development
 version: Cloud Service
@@ -11,26 +11,26 @@ feature: Commerce Integration Framework
 kt: 4279
 thumbnail: customize-aem-cif-core-component.jpg
 exl-id: 8933942e-be49-49d3-bf0a-7225257e2803
-source-git-commit: 1d914b12c3279bacaf5cabb3b1953e927c04bad1
+source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
 workflow-type: tm+mt
-source-wordcount: '2571'
+source-wordcount: '2567'
 ht-degree: 0%
 
 ---
 
-# Anpassa Adobe Experience Manager CIF Core Components {#customize-cif-components}
+# Anpassa Adobe Experience Manager CIF-komponenter {#customize-cif-components}
 
-The [CIF Venia Project](https://github.com/adobe/aem-cif-guides-venia) är en referenskodbas för att använda [CIF-kärnkomponenter](https://github.com/adobe/aem-core-cif-components). I den här självstudiekursen utökar du [Product Teaser](https://github.com/adobe/aem-core-cif-components/tree/master/ui.apps/src/main/content/jcr_root/apps/core/cif/components/commerce/productteaser/v1/productteaser) om du vill visa ett anpassat attribut från Adobe Commerce. Du får också lära dig mer om GraphQL integrering mellan Adobe Experience Manager (AEM) och Adobe Commerce och de förlängningskopplingar som CIF Core Components tillhandahåller.
+The [CIF Venia Project](https://github.com/adobe/aem-cif-guides-venia) är en referenskodbas för att använda [CIF-kärnkomponenter](https://github.com/adobe/aem-core-cif-components). I den här självstudiekursen utökar du [Product Teaser](https://github.com/adobe/aem-core-cif-components/tree/master/ui.apps/src/main/content/jcr_root/apps/core/cif/components/commerce/productteaser/v1/productteaser) om du vill visa ett anpassat attribut från Adobe Commerce. Du får också lära dig mer om GraphQL integrering mellan Adobe Experience Manager (AEM) och Adobe Commerce och de tilläggskopplingar som finns i CIF Core Components.
 
 >[!TIP]
 >
->Använd [AEM](https://github.com/adobe/aem-project-archetype) när du startar en egen implementering av e-handeln.
+>Använd [AEM projekttyp](https://github.com/adobe/aem-project-archetype) när du startar en egen implementering av e-handeln.
 
 ## Vad du ska bygga
 
 Varumärket Venia började nyligen tillverka vissa produkter med hjälp av hållbara material och företaget skulle vilja visa en **Miljövänlig** som en del av Product Teaser. Ett nytt anpassat attribut skapas i Adobe Commerce för att ange om en produkt använder **Miljövänlig** material. Det här anpassade attributet läggs till som en del av GraphQL-frågan och visas i Product Teaser för angivna produkter.
 
-![Slutlig implementering av miljöanpassade märken](../assets/customize-cif-components/final-product-teaser-eco-badge.png)
+![Slutlig implementering av Eco-Friendly Badge](../assets/customize-cif-components/final-product-teaser-eco-badge.png)
 
 ## Förutsättningar {#prerequisites}
 
@@ -52,7 +52,7 @@ Du klonar [Venedig-projektet](https://github.com/adobe/aem-cif-guides-venia) och
    $ git clone git@github.com:adobe/aem-cif-guides-venia.git
    ```
 
-1. Bygg och distribuera projektet till en lokal instans av AEM:
+1. Skapa och distribuera projektet till en lokal instans av AEM:
 
    ```shell
    $ cd aem-cif-guides-venia/
@@ -77,7 +77,7 @@ Product Teaser Component utökas genom hela kursen. Som ett första steg lägger
 
    ![Insert Product Teaser](../assets/customize-cif-components/product-teaser-add-component.png)
 
-3. Expandera sidopanelen (om den inte redan är aktiverad) och växla till listrutan för resurssökning **Produkter**. Här visas en lista över tillgängliga produkter från en ansluten Adobe Commerce-instans. Välj en produkt och **dra och släpp** på **Product Teaser** på sidan.
+3. Expandera sidopanelen (om den inte redan är aktiverad) och växla till listrutan för resurssökning. **Produkter**. Här visas en lista över tillgängliga produkter från en ansluten Adobe Commerce-instans. Välj en produkt och **dra och släpp** den på **Product Teaser** på sidan.
 
    ![Dra och släpp Product Teaser](../assets/customize-cif-components/drag-drop-product-teaser.png)
 
@@ -103,7 +103,7 @@ De produkter och produktdata som visas i AEM lagras i Adobe Commerce. Lägg seda
 
    ![Sök efter Valeria-produkt](../assets/customize-cif-components/search-valeria-product.png)
 
-1. I produktvyn klickar du på **Lägg till attribut** > **Skapa nytt attribut**.
+1. Klicka på i produktvyn **Lägg till attribut** > **Skapa nytt attribut**.
 1. Fyll i **Nytt attribut** formulär med följande värden (lämna standardinställningarna för andra värden)
 
    | Fältuppsättning | Fältetikett | Värde |
@@ -137,7 +137,7 @@ De produkter och produktdata som visas i AEM lagras i Adobe Commerce. Lägg seda
 
 ## Använd en GraphQL-utvecklingsmiljö för att verifiera attribut {#use-graphql-ide}
 
-Innan du börjar använda AEM kod är det praktiskt att utforska [Adobe Commerce GraphQL](https://devdocs.magento.com/guides/v2.4/graphql/) med en GraphQL IDE. Adobe Commerce integrering med AEM görs huvudsakligen via en serie GraphQL-frågor. Att förstå och ändra GraphQL-frågor är ett av de viktigaste sätten att utöka CIF Core-komponenterna.
+Innan du hoppar in i AEM kod är det praktiskt att utforska [Adobe Commerce GraphQL](https://devdocs.magento.com/guides/v2.4/graphql/) med en GraphQL IDE. Adobe Commerce integrering med AEM görs huvudsakligen via en serie GraphQL-frågor. Att förstå och ändra GraphQL-frågor är ett av de viktigaste sätten att utöka CIF kärnkomponenter.
 
 Använd sedan en GraphQL-utvecklingsmiljö för att verifiera att `eco_friendly` har lagts till i produktattributuppsättningen. Skärmbilder i den här självstudiekursen använder [Altair GraphQL Client](https://chrome.google.com/webstore/detail/altair-graphql-client/flnheeellpciglgpaodhkhmapeljopja).
 
@@ -186,7 +186,7 @@ Värdet för **Ja** är ett heltal av **1**. Detta är användbart när du skriv
 
 ## Uppdatera produktundervisningsmodellen {#updating-sling-model-product-teaser}
 
-Därefter ska du utöka produktTeaser affärslogik genom att implementera en Sling Model. [Sling Models](https://sling.apache.org/documentation/bundles/models.html), är anteckningsdrivna &quot;POJOs&quot; (Plain Old Java™ Objects) som implementerar någon av de affärslogik som komponenten behöver. Sling-modeller används med HTML-skript som en del av komponenten. Du kommer att följa [Delegeringsmönster för delningsmodeller](https://github.com/adobe/aem-core-wcm-components/wiki/Delegation-Pattern-for-Sling-Models) så att du kan utöka delar av den befintliga Product Teaser-modellen.
+Därefter ska du utöka produktTeaser affärslogik genom att implementera en Sling Model. [Sling Models](https://sling.apache.org/documentation/bundles/models.html), är anteckningsdrivna &quot;POJOs&quot; (Plain Old Java™ Objects) som implementerar någon av de affärslogik som komponenten behöver. Sling-modeller används med HTML-skript som en del av komponenten. Du följer [Delegeringsmönster för delningsmodeller](https://github.com/adobe/aem-core-wcm-components/wiki/Delegation-Pattern-for-Sling-Models) så att du kan utöka delar av den befintliga Product Teaser-modellen.
 
 Sling Models implementeras som Java™ och finns i **kärna** för det genererade projektet.
 
@@ -236,7 +236,7 @@ Detta är en ny metod för att kapsla in logiken som anger om produkten har `eco
 
    Detta minimerar mängden Java™-kod som en implementering måste skriva.
 
-1. En av de extra tilläggspunkterna AEM CIF Core Components är `AbstractProductRetriever` som ger tillgång till specifika produktattribut. Inspect `initModel()` metod:
+1. En av de extra tilläggspunkterna AEM Core Components är `AbstractProductRetriever` som ger tillgång till specifika produktattribut. Inspect `initModel()` metod:
 
    ```java
    import javax.annotation.PostConstruct;
@@ -291,7 +291,7 @@ Detta är en ny metod för att kapsla in logiken som anger om produkten har `eco
    >
    >The `createdAt()` har implementerats som en del av [Produktgränssnitt](https://github.com/adobe/commerce-cif-magento-graphql/blob/master/src/main/java/com/adobe/cq/commerce/magento/graphql/ProductInterface.java). De flesta av de vanligaste schemaattributen har implementerats, så använd bara `addCustomSimpleField` för verkligt anpassade attribut.
 
-1. Lägg till en loggare som kan hjälpa dig att felsöka Java™-koden:
+1. Lägg till en loggare som felsöker Java™-koden:
 
    ```java
    import org.slf4j.Logger;
@@ -332,11 +332,11 @@ Detta är en ny metod för att kapsla in logiken som anger om produkten har `eco
 
 Ett vanligt tillägg för AEM är att ändra den kod som genereras av komponenten. Detta görs genom att åsidosätta [HTL-skript](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html) som komponenten använder för att återge sin kod. HTML Template Language (HTL) är ett lättviktsmallspråk som används AEM komponenter för att dynamiskt återge kod baserat på det innehåll som skapats, vilket gör att komponenterna kan återanvändas. Product Teaser kan till exempel återanvändas om och om igen för att visa olika produkter.
 
-I det här fallet vill du återge en banderoll ovanpå teaser för att ange att produkten är&quot;miljövänlig&quot; baserat på ett anpassat attribut. Designmönstret för [anpassa markeringen](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/customizing.html#customizing-the-markup) för en komponent är faktiskt standard för alla AEM, inte bara för AEM CIF Core Components.
+I det här fallet vill du återge en banderoll ovanpå teaser för att ange att produkten är&quot;miljövänlig&quot; baserat på ett anpassat attribut. Designmönstret för [anpassa markeringen](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/customizing.html#customizing-the-markup) för en komponent är faktiskt standard för alla AEM, inte bara för AEM CIF.
 
 >[!NOTE]
 >
->Om du anpassar en komponent med CIF-produkt- och kategoriväljare som denna Product Teaser eller CIF-sidkomponenten måste du inkludera den `cif.shell.picker` clientlib för komponentdialogrutorna. Se [Användning av CIF-produkt- och kategoriväljare](use-cif-pickers.md) för mer information.
+>Om du anpassar en komponent med hjälp av CIF produkt- och kategoriväljare som detta Product Teaser eller den CIF sidkomponenten ser du till att du inkluderar de nödvändiga `cif.shell.picker` clientlib för komponentdialogrutorna. Se [Användning av CIF produkt- och kategoriväljare](use-cif-pickers.md) för mer information.
 
 1. Navigera i och expandera dialogrutan `ui.apps` och expandera mapphierarkin till: `ui.apps/src/main/content/jcr_root/apps/venia/components/commerce/productteaser` och inspektera `.content.xml` -fil.
 
@@ -352,7 +352,7 @@ I det här fallet vill du återge en banderoll ovanpå teaser för att ange att 
        componentGroup="Venia - Commerce"/>
    ```
 
-   Komponentdefinitionen för Product Teaser Component i det här projektet är ovan. Observera egenskapen `sling:resourceSuperType="core/cif/components/commerce/productteaser/v1/productteaser"`. Det här är ett exempel på hur du skapar en [Proxy-komponent](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/get-started/using.html#create-proxy-components). I stället för att kopiera och klistra in alla Product Teaser HTML-skript från AEM CIF Core Components kan du använda `sling:resourceSuperType` för att ärva alla funktioner.
+   Komponentdefinitionen för Product Teaser Component i det här projektet är ovan. Observera egenskapen `sling:resourceSuperType="core/cif/components/commerce/productteaser/v1/productteaser"`. Det här är ett exempel på hur du skapar en [Proxy-komponent](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/get-started/using.html#create-proxy-components). I stället för att kopiera och klistra in alla HTML-skript för Product Teaser från AEM Core Components kan du använda `sling:resourceSuperType` för att ärva alla funktioner.
 
 1. Öppna filen `productteaser.html`. Det här är en kopia av `productteaser.html` från [CIF Product Teaser](https://github.com/adobe/aem-core-cif-components/blob/master/ui.apps/src/main/content/jcr_root/apps/core/cif/components/commerce/productteaser/v1/productteaser/productteaser.html)
 
@@ -367,7 +367,7 @@ I det här fallet vill du återge en banderoll ovanpå teaser för att ange att 
    ></sly>
    ```
 
-   Observera att Sling Model för `MyProductTeaser` används och tilldelas `product` variabel.
+   Observera att Sling-modellen för `MyProductTeaser` används och tilldelas `product` variabel.
 
 1. Ändra `productteaser.html` för att ringa `isEcoFriendly` metod som har använts i föregående övning:
 
@@ -415,9 +415,9 @@ I det här fallet vill du återge en banderoll ovanpå teaser för att ange att 
 
    ![Miljövänligt meddelande visas](../assets/customize-cif-components/eco-friendly-text-displayed.png)
 
-   Om produkten har `eco_friendly` attribut inställt på **Ja** ska du se texten&quot;Eco-Friendly&quot; på sidan. Försök att byta till olika produkter för att se hur beteendet förändras.
+   Om produkten har `eco_friendly` attribut inställt på **Ja** ska du se texten&quot;Eco-Friendly&quot; på sidan. Försök med att byta till olika produkter för att se hur beteendet förändras.
 
-1. Öppna sedan AEM `error.log` för att se de loggsatser som lagts till. The `error.log` är på `<AEM SDK Install Location>/crx-quickstart/logs/error.log`.
+1. Öppna sedan AEM `error.log` om du vill visa de loggsatser som har lagts till. The `error.log` är på `<AEM SDK Install Location>/crx-quickstart/logs/error.log`.
 
    Sök i AEM loggar för att se de loggsatser som lagts till i Sling-modellen:
 
@@ -471,7 +471,7 @@ I det här läget är logiken för när **Miljövänlig** emblemet fungerar, men
 
    >[!NOTE]
    >
-   >Checka ut [Utforma CIF-kärnkomponenter](./style-cif-component.md) för mer information om arbetsflöden.
+   >Checka ut [Utforma CIF kärnkomponenter](./style-cif-component.md) för mer information om arbetsflöden.
 
 1. Spara ändringarna och distribuera uppdateringarna till AEM med dina Maven-kunskaper från en kommandoradsterminal:
 
@@ -482,11 +482,11 @@ I det här läget är logiken för när **Miljövänlig** emblemet fungerar, men
 
 1. Uppdatera till **Venia - startsida** på [http://localhost:4502/editor.html/content/venia/us/en.html](http://localhost:4502/editor.html/content/venia/us/en.html) där Product Teaser har lagts till.
 
-   ![Slutlig implementering av miljöanpassade märken](../assets/customize-cif-components/final-product-teaser-eco-badge.png)
+   ![Slutlig implementering av Eco-Friendly Badge](../assets/customize-cif-components/final-product-teaser-eco-badge.png)
 
 ## Grattis {#congratulations}
 
-Du anpassade din första AEM CIF-komponent! Ladda ned [färdiga lösningsfiler här](../assets/customize-cif-components/customize-cif-component-SOLUTION_FILES.zip).
+Du anpassade den första AEM CIF komponenten! Ladda ned [färdiga lösningsfiler här](../assets/customize-cif-components/customize-cif-component-SOLUTION_FILES.zip).
 
 ## Bonus Challenge {#bonus-challenge}
 
@@ -498,7 +498,7 @@ Granska funktionaliteten i **Nytt** emblem som redan har implementerats i Produc
 
 - [AEM](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html)
 - [AEM CIF-kärnkomponenter](https://github.com/adobe/aem-core-cif-components)
-- [Anpassa AEM CIF-kärnkomponenter](https://github.com/adobe/aem-core-cif-components)
+- [Anpassa AEM CIF kärnkomponenter](https://github.com/adobe/aem-core-cif-components)
 - [Anpassa kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/customizing.html)
 - [Komma igång med AEM Sites](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)
-- [Användning av CIF-produkt- och kategoriväljare](use-cif-pickers.md)
+- [Användning av CIF produkt- och kategoriväljare](use-cif-pickers.md)

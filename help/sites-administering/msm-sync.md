@@ -12,9 +12,9 @@ discoiquuid: 6bcf0fcc-481a-4283-b30d-80b517701280
 docset: aem65
 feature: Multi Site Manager
 exl-id: ac24b8b4-b3ed-47fa-9a73-03f0c9e68ac8
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
 workflow-type: tm+mt
-source-wordcount: '2695'
+source-wordcount: '2693'
 ht-degree: 0%
 
 ---
@@ -368,8 +368,8 @@ I följande lista över platser där du kan ange vilka rollout-konfigurationer s
 
 I en plan används till exempel referensplatsen We.Retail som källinnehåll. En webbplats skapas utifrån planen. Varje post i följande lista beskriver olika scenarier för användning av utrullningskonfigurationer:
 
-* Ingen av sidorna för utkast eller live-kopia är konfigurerad att använda en rollout-konfiguration. MSM använder systemets standardkonfiguration för utrullning för alla live-kopieringssidor.
-* Rotsidan för referenswebbplatsen för Vi.Retail har konfigurerats med flera utrullningskonfigurationer. MSM använder dessa utrullningskonfigurationer för alla live-kopieringssidor.
+* Ingen av sidorna för utkast eller live-kopia är konfigurerad att använda en rollout-konfiguration. MSM använder systemets standardkonfiguration för utrullning av alla live-kopieringssidor.
+* Rotsidan för referenswebbplatsen för Vi.Retail har konfigurerats med flera utrullningskonfigurationer. MSM använder dessa rollout-konfigurationer för alla live-kopieringssidor.
 * Rotsidan för referenswebbplatsen We.Retail konfigureras med flera rollout-konfigurationer och rotsidan för den aktiva kopieringswebbplatsen konfigureras med en annan uppsättning rollout-konfigurationer. MSM använder de utrullningskonfigurationer som är konfigurerade på den aktiva kopians rotsida.
 
 ### Ställa in utrullningskonfigurationer för en Live Copy-sida {#setting-the-rollout-configurations-for-a-live-copy-page}

@@ -1,16 +1,12 @@
 ---
 title: Arbeta med uppgifter
-seo-title: Working with tasks
 description: Använd sidan Uppgiftssökning om du vill söka efter uppgifter efter användarnamn eller uppgifts-ID. Läs mer om hur du arbetar med uppgifter.
-seo-description: Use the Task Search page to search for tasks by user name or task ID. Learn more about working with tasks.
-uuid: 630372d5-255f-4ea8-974d-d4f923108673
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/configuring_forms_workflow
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: 9161c8ca-ef33-4ec9-affc-94b5b3e48a4c
 exl-id: 375376d1-60b3-49a4-8893-ba9336e6bf7b
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
 workflow-type: tm+mt
 source-wordcount: '840'
 ht-degree: 0%
@@ -29,8 +25,8 @@ Använd sidan Uppgiftssökning om du vill söka efter uppgifter efter användarn
 
 1. Klicka på Tjänster > Formulärarbetsflöde > Uppgiftssökning i administrationskonsolen.
 1. Välj Användarnamn i Sök efter. Om du känner till en del av användarnamnet som du söker efter skriver du det i rutan. Klicka på Sök efter användare.
-1. Sidan Sök efter användare visas. Du kan begränsa sökningen ytterligare genom att söka efter användarnamn eller e-postadress. När du hittar användaren du söker efter markerar du alternativknappen bredvid namnet och klickar på OK.
-1. Som standard söker uppgiftssökningen efter uppgifter som är tilldelade användaren. Om du även vill söka efter uppgifter som tidigare har tilldelats användaren väljer du Visa ej tilldelad uppgift. Om du även vill söka efter uppgifter som användaren har slutfört väljer du Visa slutförd uppgift.
+1. Sidan Sök efter användare visas. Du kan förfina sökningen ytterligare genom att söka efter användarnamn eller e-postadress. När du hittar användaren du söker efter markerar du alternativknappen bredvid namnet och klickar på OK.
+1. Som standard söker uppgiftssökningen efter uppgifter som för närvarande är tilldelade användaren. Om du även vill söka efter uppgifter som tidigare har tilldelats användaren väljer du Visa ej tilldelad uppgift. Om du även vill söka efter uppgifter som användaren har slutfört väljer du Visa slutförd uppgift.
 1. Klicka på Sök. Sidan Uppgiftslista visas med sökresultatet.
 
 ## Sök efter en uppgift när du känner till dess uppgifts-ID {#search-for-a-task-when-you-know-its-task-id}

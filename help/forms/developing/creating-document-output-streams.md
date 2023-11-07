@@ -7,7 +7,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 role: Developer
 exl-id: a521bfac-f417-4002-9c5c-8d7794d3eec7
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
 workflow-type: tm+mt
 source-wordcount: '18965'
 ht-degree: 0%
@@ -1638,7 +1638,7 @@ Skicka en utskriftsström till en nätverksskrivare med hjälp av Output API (we
 
 Utdatatjänsten kan skapa separata dokument för varje post i en XML-datakälla eller en enda fil som innehåller alla poster (den här funktionen är standard). Anta till exempel att tio poster finns i en XML-datakälla och att du instruerar Output-tjänsten att skapa separata PDF-dokument (eller andra typer av utdata) för varje post med hjälp av API:t för utdatatjänsten. Resultatet blir att Output-tjänsten genererar tio PDF-dokument. (I stället för att skapa dokument kan du skicka flera utskriftsströmmar till en skrivare.)
 
-I följande bild visas också hur Output-tjänsten bearbetar en XML-datafil som innehåller flera poster. Anta dock att du instruerar Output-tjänsten att skapa ett enda PDF-dokument som innehåller alla dataposter. I det här fallet genererar Output-tjänsten ett dokument som innehåller alla poster.
+I följande bild visas också hur Output-tjänsten bearbetar en XML-datafil som innehåller flera poster. Anta dock att du instruerar Output-tjänsten att skapa ett enda PDF-dokument som innehåller alla dataposter. I det här fallet genererar utdatatjänsten ett dokument som innehåller alla poster.
 
 Följande bild visar hur Output-tjänsten bearbetar en XML-datafil som innehåller flera poster. Anta att du instruerar Output-tjänsten att skapa ett separat PDF-dokument för varje datapost. I sådana fall genererar Output-tjänsten ett separat PDF-dokument för varje datapost.
 

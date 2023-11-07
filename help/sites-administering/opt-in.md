@@ -1,18 +1,14 @@
 ---
 title: Ingå i Adobe Analytics och Adobe Target
-seo-title: Opting Into Adobe Analytics and Adobe Target
 description: Lär dig hur du väljer Adobe Analytics och Adobe Target.
-seo-description: Learn how to opt into Adobe Analytics and Adobe Target.
-uuid: 9090a0f3-d373-4826-aa68-6aa82c0fbfbb
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
 content-type: reference
-discoiquuid: de466511-d82f-4ddb-8f6a-7ca9240fdeab
 exl-id: 3603e929-2aa1-4c25-ad9a-b10ff52a59f4
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
 workflow-type: tm+mt
-source-wordcount: '1308'
+source-wordcount: '1305'
 ht-degree: 0%
 
 ---
@@ -191,8 +187,7 @@ Vilka parametrar du skickar beror på följande:
   curl -v -u admin:admin -X POST -d"automaticProvisioning=true&servicename=target&servicename=analytics&path=/content/we-retail" http://localhost:4502/libs/cq/cloudservicesprovisioning/content/autoprovisioning.json
   ```
 
-* Om du inte vill använda **marketingcloud.properties** måste du skicka inloggningsuppgifterna och parametrarna, till exempel:
-
+* Om du inte vill använda **marketingcloud.properties** måste du skicka inloggningsuppgifterna och parametrarna. Till exempel:
    * automaticProvisioning= `true`
    * servicename= `analytics|target`
    * path=path to an AEM page to attach the created cloud services configs; multiple paths can can defined

@@ -2,9 +2,9 @@
 title: Läs om CMS Headless Development
 description: I den här delen av AEM Headless Developer Journey kan du lära dig mer om headless-teknik och varför du skulle använda den.
 exl-id: f0989cea-3102-43cd-976e-9a6b265d9c15
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
 workflow-type: tm+mt
-source-wordcount: '1612'
+source-wordcount: '1611'
 ht-degree: 0%
 
 ---

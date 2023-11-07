@@ -7,9 +7,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 role: Developer
 exl-id: ff42579e-6aaf-433d-8b5d-9e9dd0957250
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
 workflow-type: tm+mt
-source-wordcount: '15469'
+source-wordcount: '15468'
 ht-degree: 0%
 
 ---
@@ -1513,7 +1513,7 @@ Om du vill ändra en vattenstämpel måste du hämta en befintlig vattenstämpel
 
 **Ange vattenstämpelattribut**
 
-Om du vill ändra en befintlig vattenstämpel ändrar du värdet för ett eller flera vattenstämpelattribut. När du uppdaterar en vattenstämpel med hjälp av en webbtjänst måste du ange alla de attribut som ursprungligen var angivna, även om värdet inte ändras. Anta till exempel att följande vattenstämpelattribut har angetts: `WaterBackCmd:IS_USERID_ENABLED`, `WaterBackCmd:IS_CUSTOMTEXT_ENABLED`, `WaterBackCmd:OPACITY`och `WaterBackCmd:SRCTEXT`. Även om det enda attribut du vill ändra är `WaterBackCmd:OPACITY`måste du ange att de andra värdena är bra.
+Om du vill ändra en befintlig vattenstämpel ändrar du värdet för ett eller flera vattenstämpelattribut. När du uppdaterar en vattenstämpel med hjälp av en webbtjänst måste du ange alla attribut som ursprungligen var angivna, även om värdet inte ändras. Anta till exempel att följande vattenstämpelattribut har angetts: `WaterBackCmd:IS_USERID_ENABLED`, `WaterBackCmd:IS_CUSTOMTEXT_ENABLED`, `WaterBackCmd:OPACITY`och `WaterBackCmd:SRCTEXT`. Även om det enda attribut du vill ändra är `WaterBackCmd:OPACITY`måste du ange att de andra värdena är bra.
 
 >[!NOTE]
 >

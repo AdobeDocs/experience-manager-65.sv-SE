@@ -5,9 +5,9 @@ contentOwner: AG
 role: Architect, Admin
 feature: Migration,Renditions,Asset Management
 exl-id: 184f1645-894a-43c1-85f5-8e0d2d77aa73
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
 workflow-type: tm+mt
-source-wordcount: '1777'
+source-wordcount: '1773'
 ht-degree: 8%
 
 ---
@@ -55,7 +55,7 @@ Du kanske redan har en tagg-taxonomi på plats som du tillämpar på dina bilder
 
 ### Ingående resurser {#ingesting-assets}
 
-Prestanda och stabilitet är viktiga frågor när du ska hämta in resurser i systemet. Eftersom du läser in en stor mängd data i systemet bör du se till att systemet fungerar och att det kan minimera den tid som krävs och undvika att överbelasta systemet, vilket kan leda till att systemet kraschar, särskilt i system som redan är i produktion.
+Prestanda och stabilitet är viktiga frågor när du ska hämta in resurser i systemet. Eftersom du läser in en stor mängd data i systemet bör du se till att systemet fungerar bra för att minimera den tid som krävs och undvika att överbelasta systemet, vilket kan orsaka en systemkrasch, särskilt i system som redan är i produktion.
 
 Det finns två sätt att läsa in resurser i systemet: en push-baserad metod med HTTP eller en pull-baserad metod med JCR API:erna.
 

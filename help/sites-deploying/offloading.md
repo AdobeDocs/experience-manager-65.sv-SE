@@ -7,9 +7,9 @@ topic-tags: configuring
 content-type: reference
 feature: Configuring
 exl-id: 429c96ff-4185-4215-97e8-9bd2c130a9b1
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
 workflow-type: tm+mt
-source-wordcount: '2362'
+source-wordcount: '2359'
 ht-degree: 0%
 
 ---
@@ -218,7 +218,7 @@ Tjänsten Apache Sling Job Consumer Manager innehåller egenskaperna tillåtelse
 
 **Obs!** Om instansen tillhör en topologi kan du även använda Avlastningsläsaren på vilken dator som helst i topologin för att aktivera eller inaktivera ämnen.
 
-Den logik som skapar listan med aktiverade ämnen tillåter först alla ämnen som finns i tillåtelselista och tar sedan bort ämnen som finns i blockeringslista. Som standard är alla ämnen aktiverade (tillåtelselista är `*`) och inga ämnen är inaktiverade (blockeringslista har inget värde).
+Den logik som skapar listan med aktiverade ämnen tillåter först alla ämnen som finns i tillåtelselista och tar sedan bort ämnen som finns på blockeringslista. Som standard är alla ämnen aktiverade (tillåtelselista är `*`) och inga ämnen är inaktiverade (blockeringslista har inget värde).
 
 Använd webbkonsol eller en `sling:OsgiConfig` -nod för att konfigurera följande egenskaper. För `sling:OsgiConfig` noder, PID för tjänsten Job Consumer Manager är org.apache.sling.event.impl.job.JobConsumerManager.
 

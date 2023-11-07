@@ -8,9 +8,9 @@ topic-tags: upgrading
 docset: aem65
 feature: Upgrading
 exl-id: 0dea2b3e-fd7c-4811-a04a-6852ffc1e6d6
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
 workflow-type: tm+mt
-source-wordcount: '2397'
+source-wordcount: '2395'
 ht-degree: 0%
 
 ---
@@ -151,7 +151,7 @@ Den mönsteravkännare som introducerades nyligen bör ge en korrekt uppskattnin
 
 ### Bygga Runbook för uppgradering och återställning {#building-the-upgrade-and-rollback-runbook}
 
-Adobe har dokumenterat processen för uppgradering av en AEM instans, men varje kunds nätverkslayout, driftsättningsarkitektur och anpassningar kräver att man finjusterar och skräddarsyr den här metoden. Därför rekommenderar Adobe att du granskar all dokumentation som tillhandahålls och använder den för att informera en projektspecifik Runbook som beskriver de uppgraderings- och återställningsprocedurer som du kommer att följa i din miljö. Om du uppgraderar från CRX2 måste du se till att utvärdera hur lång tid det tar att migrera innehåll när du flyttar från CRX2 till Oak. För stora databaser kan det vara mycket viktigt.
+Adobe har dokumenterat processen för uppgradering av en AEM instans, men varje kunds nätverkslayout, driftsättningsarkitektur och anpassningar kräver att man finjusterar och skräddarsyr den här metoden. Därför rekommenderar Adobe att du granskar all dokumentation och använder den för att informera en projektspecifik Runbook som beskriver de uppgraderings- och återställningsprocedurer som du kommer att följa i din miljö. Om du uppgraderar från CRX2 måste du se till att utvärdera hur lång tid det tar att migrera innehåll när du flyttar från CRX2 till Oak. För stora databaser kan det vara mycket viktigt.
 
 ![runbook-chart](assets/runbook-diagram.png)
 

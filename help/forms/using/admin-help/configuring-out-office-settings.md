@@ -1,16 +1,12 @@
 ---
 title: Konfigurerar frånvaroinställningar
-seo-title: Configuring Out of Office Settings
 description: Med funktionen Frånvarande kan du ange när en användare ska vara frånvarande och inte kunna utföra uppgifter som tilldelats av AEM formulär.
-seo-description: The Out of Office feature enables you to specify when a user will be out of the office and unable to complete tasks assigned by AEM forms.
-uuid: 0d01df0a-aa6a-40e5-bf24-423ed1c932cc
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/configuring_forms_workflow
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: 30312159-58a5-4781-b554-29dcbce696cb
 exl-id: 1c8ad09b-d44a-4d90-86d5-d4c66cf5c57c
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
 workflow-type: tm+mt
 source-wordcount: '659'
 ht-degree: 0%
@@ -30,7 +26,7 @@ När du skapar en process kan Workbench-användaren ange om en uppgift kan omdir
 
    **Sök efter namn**
 
-   Välj alternativet Sök efter namn. Skriv hela eller en del av användarnamnet och klicka på Sök. Om du lämnar fältet tomt returnerar Forms-arbetsflödet en lista över alla användare
+   Välj alternativet Sök efter namn. Skriv hela eller en del av användarnamnet och klicka på Sök. Om du lämnar fältet tomt returneras en lista över alla användare i Forms-arbetsflödet.
 
    **Sök efter datumintervall**
 

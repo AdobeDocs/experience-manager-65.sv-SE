@@ -1,18 +1,14 @@
 ---
 title: Arbetshanteraren och begränsning
-seo-title: Work Manager and throttling
 description: Det här dokumentet innehåller bakgrundsinformation om Work Manager och anvisningar om hur du konfigurerar begränsningsalternativ för Work Manager.
-seo-description: This document provides background information on Work Manager, and provides instructions on configuring Work Manager throttling options.
-uuid: b90998bc-e3d4-493a-9371-55ccb44da20d
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/maintaining_aem_forms
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: 9a8b4e3a-f416-4dc6-a90a-9018df5c844e
 exl-id: 1f765de2-1362-4318-9302-c5036e6fa7d6
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
 workflow-type: tm+mt
-source-wordcount: '1023'
+source-wordcount: '1022'
 ht-degree: 0%
 
 ---
@@ -53,7 +49,7 @@ Du kan konfigurera begränsning för Work Manager så att arbetsobjekt schemalä
  <tbody>
   <tr>
    <td><code> adobe.work-manager.queue-refill-interval</code></td>
-   <td><p>Anger det tidsintervall i millisekunder som används i Work Manager vid sökning efter nya objekt i kön.</p><p>Värdet för det här alternativet är ett heltal. Standardvärdet är <code>1000</code> millisekunder (1 sekund). </p><p>Om volymen för asynkrona anrop är låg kan du öka värdet. Du kan till exempel öka den till något mellan 2 000 och 5 000 (2 till 5 sekunder). </p><p>Om volymen för asynkrona anrop är hög bör standardvärdet vara tillräckligt, men du kan använda ett lägre värde om det behövs. Om du minskar det här värdet för mycket (till exempel under 50, vilket ger en avfrågningsfrekvens på 20 gånger per sekund) genereras en avsevärd belastning på systemet.</p></td>
+   <td><p>Anger det tidsintervall i millisekunder som används i Arbetshanteraren vid sökning efter nya objekt i kön.</p><p>Värdet för det här alternativet är ett heltal. Standardvärdet är <code>1000</code> millisekunder (1 sekund). </p><p>Om volymen för asynkrona anrop är låg kan du öka värdet. Du kan till exempel öka den till något mellan 2 000 och 5 000 (2 till 5 sekunder). </p><p>Om volymen för asynkrona anrop är hög bör standardvärdet vara tillräckligt, men du kan använda ett lägre värde om det behövs. Om du minskar det här värdet för mycket (till exempel under 50, vilket ger en avfrågningsfrekvens på 20 gånger per sekund) genereras en avsevärd belastning på systemet.</p></td>
   </tr>
   <tr>
    <td><code> adobe.workmanager.debug-mode-enabled</code></td>
@@ -65,11 +61,11 @@ Du kan konfigurera begränsning för Work Manager så att arbetsobjekt schemalä
   </tr>
   <tr>
    <td><code> adobe.workmanager.memory-control.high-limit</code></td>
-   <td><p>Anger den maximala procentandel av minnet som kan användas innan Work Manager stryper inkommande jobb.</p><p>Standardvärdet för det här alternativet är <code>95</code>. Det här värdet bör vara bra för de flesta system. Öka den bara om ditt system behöver utnyttja sin maximala kapacitet. Men tänk på att när du ökar det här värdet ökar även risken för minnesbrist.</p><p>Om du kör AEM formulär i en klustermiljö kanske du vill ange inställningar för minneskontrollgräns på olika noder i klustret. Du kan till exempel ha en lägre hög gräns för noderna A och B, som är programmerade i belastningsutjämnaren för interaktivt arbete. Och du kan ha högre höga gränser för noderna C och D, som inte används av belastningsutjämnaren, utan reserveras för asynkront arbete.</p></td>
+   <td><p>Anger den maximala procentandel av minnet som kan användas innan Work Manager stryper inkommande jobb.</p><p>Standardvärdet för alternativet är <code>95</code>. Det här värdet bör vara bra för de flesta system. Öka den bara om ditt system behöver utnyttja sin maximala kapacitet. Men tänk på att när du ökar det här värdet ökar även risken för minnesbrist.</p><p>Om du kör AEM formulär i en klustermiljö kanske du vill ange inställningar för minneskontrollgräns på olika noder i klustret. Du kan till exempel ha en lägre hög gräns för noderna A och B, som är programmerade i belastningsutjämnaren för interaktivt arbete. Och du kan ha högre höga gränser för noderna C och D, som inte används av belastningsutjämnaren, utan reserveras för asynkront arbete.</p></td>
   </tr>
   <tr>
    <td><code> adobe.workmanager.memory-control.low-limit</code></td>
-   <td><p>Anger den maximala procentandel av minnet som kan användas innan Work Manager slutar begränsa inkommande jobb.</p><p>Standardvärdet för det här alternativet är <code>20</code>. Det här värdet bör vara bra för de flesta system.</p></td>
+   <td><p>Anger den maximala procentandel av minnet som kan användas innan Work Manager slutar begränsa inkommande jobb.</p><p>Standardvärdet för alternativet är <code>20</code>. Det här värdet bör vara bra för de flesta system.</p></td>
   </tr>
   <tr>
    <td><code>Dadobe.workmanager.allocate.max-batch-size</code></td>
@@ -104,4 +100,4 @@ Du kan konfigurera begränsning för Work Manager så att arbetsobjekt schemalä
 1. Under Serverinfrastruktur klickar du på arbetsflödet Java och formulär > Processdefinition.
 1. Klicka på Java Virtual Machine under Additional Properties (Ytterligare egenskaper).
 1. Skriv de argument du vill ha i rutan Allmänt om JVM-argument.
-1. Klicka på OK eller Använd och sedan på Spara direkt i den överordnad konfigurationen.
+1. Klicka på OK eller Använd och sedan på Spara direkt i huvudkonfigurationen.

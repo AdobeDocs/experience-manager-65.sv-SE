@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: extending-aem
 content-type: reference
 exl-id: 8753aaab-959f-459b-bdb6-057cbe05d480
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
 workflow-type: tm+mt
-source-wordcount: '1835'
+source-wordcount: '1833'
 ht-degree: 0%
 
 ---
@@ -169,7 +169,7 @@ Med gruppredigeraren kan du lägga till, ändra, ta bort, filtrera och exportera
 Källkoden för produktlistkomponenten finns i databasen i /apps/geometrixx/components/productlist och består av flera delar som alla Adobe Experience Manager-komponenter (AEM):
 
 * HTML: Återgivningen görs i en JSP-fil (/apps/geometrixx/components/productlist/productlist.jsp). JSP läser delnoderna för den aktuella produktlistkomponenten och visar var och en av dem som en rad i en HTML-tabell.
-* Dialogrutan Redigera, där du definierar konfigurationen för gruppredigeraren. Konfigurera dialogrutan så att den matchar komponentens behov: tillgängliga kolumner och möjliga åtgärder som utförs i rutnätet eller i sökningen. Se [Konfigurationsegenskaper för gruppredigeraren](#bulk-editor-configuration-properties) om du vill ha information om alla konfigurationsegenskaper.
+* Dialogrutan Redigera, där du definierar konfigurationen för gruppredigeraren. Konfigurera dialogrutan så att den matchar komponentens behov: tillgängliga kolumner och möjliga åtgärder som utförs i rutnätet eller i sökningen. Se [Konfigurationsegenskaper för gruppredigeraren](#bulk-editor-configuration-properties) för information om alla konfigurationsegenskaper.
 
 Här är en XML-representation av delnoderna i dialogrutan:
 

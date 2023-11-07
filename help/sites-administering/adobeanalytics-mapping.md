@@ -1,15 +1,15 @@
 ---
 title: Mappa komponentdata med Adobe Analytics-egenskaper
-description: Lär dig hur du mappar komponentdata med SiteCatalyst-egenskaper.
+description: Lär dig hur du mappar komponentdata med SiteCatalyster.
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
 content-type: reference
 docset: aem65
 exl-id: c7c0c705-ec16-40f5-ad08-193f82d01263
-source-git-commit: 260f71acd330167572d817fdf145a018b09cbc65
+source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
 workflow-type: tm+mt
-source-wordcount: '1440'
+source-wordcount: '1439'
 ht-degree: 0%
 
 ---
@@ -35,7 +35,7 @@ Mappade data skickas till Adobe Analytics när sidan läses in och följande vil
 
 Använd följande procedur för att mappa CQ-komponentvariabler med Adobe Analytics rapportegenskaper.
 
-1. I **AEM** drar du en spårningskomponent från sidosparken till ramverket. Dra till exempel **Sida** från **Allmänt** kategori.
+1. I **AEM** drar du en spårningskomponent från sidosparken till ramverket. Dra till exempel **Sida** -komponenten från **Allmänt** kategori.
 
    ![aa-13](assets/aa-13.png)
 
@@ -75,7 +75,7 @@ AEM använder en konvention för att namnge produktrelaterade variabler och hän
 | `product.quantity` | `product.quantity` (konverteringsvariabel) | Antalet produkter som köpts. |
 | `product.price` | `product.price` (konverteringsvariabel) | Produktpriset. |
 | `product.events.<eventName>` | Vilka lyckade händelser som ska kopplas till produkten i din rapport. | `product.events` är prefixet för namngivna händelser *eventName.* |
-| `product.evars.<eVarName>` | Konverteringsvariabler ( `eVar`) för att associera med produkten. | `product.evars` är prefixet för namngivna eVar *eVarName.* |
+| `product.evars.<eVarName>` | Konverteringsvariabler ( `eVar`) för att associera med produkten. | `product.evars` är prefixet för eVar-variabler med namnet *eVarName.* |
 
 Flera AEM Commerce-komponenter använder dessa variabelnamn.
 
@@ -89,7 +89,7 @@ Flera AEM Commerce-komponenter använder dessa variabelnamn.
 1. Se till att det RSID som du valde är det som användes i föregående steg.
 1. I **Rapporter** (till vänster på sidan) väljer **Anpassad konvertering** sedan **Anpassad konvertering 1-10** och markera variabeln som motsvarar `eVar7`
 
-1. Beroende på vilken version av Adobe Analytics du använder måste du vänta i genomsnitt 45 minuter tills rapporten uppdateras med det sökord som används. t.ex. eggplant i exemplet
+1. Beroende på vilken version av Adobe Analytics du använder måste du vänta i genomsnitt 45 minuter tills rapporten uppdateras med det sökord som används, till exempel eggplant i exemplet
 
 ## Använda Content Finder (cf#) med Adobe Analytics-ramverk {#using-the-content-finder-cf-with-adobe-analytics-frameworks}
 
@@ -144,11 +144,11 @@ Vid en given tidpunkt kan man växla mellan två sätt att visa Adobe Analytics-
 
 ![aa-23](assets/aa-23.png)
 
-Med bilden ovan som exempel **AEM** har följande egenskaper:
+Om du tar bilden ovan som exempel visas **AEM** har följande egenskaper:
 
 1. Det här är standardvyn när ramverket öppnas.
-1. Vänster sida: Innehållssökaren (cf#) fylls i med Adobe Analytics-variabler som baseras på de RSID(n) som valts.
-1. Flikrubriker (**AEM** och **Analysvy**): använder du dessa för att växla mellan de två vyerna.
+1. Vänster sida: innehållssökaren (cf#) fylls i med Adobe Analytics-variabler baserat på de RSID(n) som valts.
+1. Flikrubriker (**AEM** och **Analysvy**): använd dessa för att växla mellan de två vyerna.
 
 1. **AEM**:
 
@@ -156,9 +156,9 @@ Med bilden ovan som exempel **AEM** har följande egenskaper:
 
       1. Ärvda komponenter är låsta.
       1. Om du vill låsa upp en ärvd komponent dubbelklickar du på hänglåset bredvid komponentens namn
-      1. Om du vill återställa arvet tar du bort den olåsta komponenten; därefter återfår den sin låsta status.
+      1. Om du vill återställa arvet tar du bort den olåsta komponenten. Därefter återfår den sin låsta status.
 
-   1. **Dra komponenter hit för att inkludera dem i analysramverket**: Komponenter kan dras från Sidekick och släppas här.
+   1. **Dra komponenterna hit för att inkludera dem i analysramverket**: Komponenter kan dras från Sidekick och släppas här.
    1. Du kan hitta alla komponenter som för närvarande ingår i analysramverket:
 
       1. Om du vill lägga till en komponent drar du den från sidosparkens komponentflik
@@ -170,8 +170,8 @@ Med bilden ovan som exempel **AEM** har följande egenskaper:
 ![aa-24](assets/aa-24.png)
 
 1. Du kommer åt den här vyn genom att växla till **Analysvy** -fliken i ramverket.
-1. Vänster sida: Content Finder (cf#) ifylld av CQ-variabler baserade på de komponenter som dras till ramverket i CQ-vyn.
-1. Flikrubriker (**AEM** och **Analysvy**): använder du dessa för att växla mellan de två vyerna.
+1. Vänster sida: Content Finder (cf#) ifyllt av CQ-variabler baserat på de komponenter som dras till ramverket i CQ-vyn.
+1. Flikrubriker (**AEM** och **Analysvy**): använd dessa för att växla mellan de två vyerna.
 
 1. De tre tabellerna (Traffic, Conversion, Event) innehåller alla tillgängliga Adobe Analytics-variabler. som tillhör de markerade RSID:erna. Mappningarna som visas här ska vara desamma som i AEM:
 
@@ -197,7 +197,7 @@ Med bilden ovan som exempel **AEM** har följande egenskaper:
 >
 >Till exempel bredvid `prop3` du kan lägga till:
 >     `'`* `Adobe:'+pagedata.title+':'+pagedata.sitesection`\
-för att skicka *title* av en sida sammanfogad med *platshållare* använda *:* (kolon) och prefix med *Adobe* as `prop3`
+skicka *title* av en sida sammanfogad med *platshållare* använda *:* (kolon) och prefix med *Adobe* as `prop3`
 >
 
 >[!CAUTION]

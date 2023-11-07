@@ -1,18 +1,14 @@
 ---
 title: Konfigurera SSL för JBoss Application Server
-seo-title: Configuring SSL for JBoss Application Server
 description: Lär dig hur du konfigurerar SSL för JBoss Application Server.
-seo-description: Learn how to configure SSL for JBoss Application Server.
-uuid: 7c13cf00-ea89-4894-a4fc-aaeec7ae9f66
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/configuring_ssl
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: c187daa4-41b7-47dc-9669-d7120850cafd
 exl-id: 8eb4f691-a66b-498e-8114-307221f63718
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
 workflow-type: tm+mt
-source-wordcount: '908'
+source-wordcount: '907'
 ht-degree: 0%
 
 ---
@@ -25,14 +21,14 @@ Du kan köra nyckelverktyget med ett enda kommando som innehåller all informati
 
 I denna procedur:
 
-* `[appserver root]` är arbetskatalogen för den programserver som kör AEM formulär.
+* `[appserver root]` är hemkatalogen för den programserver som kör AEM formulär.
 * `[type]` är ett mappnamn som varierar beroende på vilken typ av installation du har utfört.
 
-## Skapa en SSL-autentiseringsuppgift {#create-an-ssl-credential}
+## Skapa en SSL-referens {#create-an-ssl-credential}
 
 1. I en kommandotolk går du till *[JAVA HOME]*/bin och skriv följande kommando för att skapa autentiseringsuppgifter och nyckelbehållare:
 
-   `keytool -genkey -dname "CN=`*Värdnamn* `, OU=`*Gruppnamn* `, O=`*Företag* `,L=`*Ortsnamn* `, S=`*Läge* `, C=`Landskod&quot; `-alias "AEMForms Cert"` `-keyalg RSA -keypass`*key_password* `-keystore`*keystorename* `.keystore`
+   `keytool -genkey -dname "CN=`*Värdnamn* `, OU=`*Gruppnamn* `, O=`*Företagsnamn* `,L=`*Ortsnamn* `, S=`*Läge* `, C=`Landskod&quot; `-alias "AEMForms Cert"` `-keyalg RSA -keypass`*key_password* `-keystore`*keystorename* `.keystore`
 
    >[!NOTE]
    >
@@ -70,7 +66,7 @@ I denna procedur:
    * `keytool -printcert -v -file [appserver root]\standalone\configuration\AEMForms_cert.cer`
    * `keytool -printcert -v -file [appserver root]\domain\configuration\AEMForms_cert.cer`
 
-1. Att ge kontofilen skrivåtkomst i `[JAVA_HOME]\jre\lib\security`utför följande uppgifter om det behövs:
+1. För att ge skrivåtkomst till kontofilen i `[JAVA_HOME]\jre\lib\security`utför följande uppgifter om det behövs:
 
    * (Windows) Högerklicka på kontofilen och välj Egenskaper. Avmarkera sedan det skrivskyddade attributet.
    * (Linux) Type `chmod 777 cacerts`
@@ -84,14 +80,14 @@ I denna procedur:
 1. Om du ansluter via SSL från Workbench installerar du certifikatet på Workbench-datorn.
 1. Öppna följande filer för redigering i en textredigerare:
 
-   * En server - `[appserver root]`/standalone/configuration/lc_&lt;dbname turnkey=&quot;&quot;>.xml
+   * En server - `[appserver root]`/standalone/configuration/lc_&lt;dbname turnkey=&quot;&quot;>XML
 
    * Serverkluster - `[appserver root]`/domain/configuration/host.xml
 
-   * Serverkluster - `[appserver root]`/domain/configuration/domain_&lt;dbname>.xml
+   * Serverkluster - `[appserver root]`/domain/configuration/domain_&lt;dbname>XML
 
 1. 
-   * **För en enda server** i lc_&lt;dbaname tunkey=&quot;&quot;>.xml-fil, lägg till följande efter &lt;security-realms> avsnitt:
+   * **För en enda server** i lc_&lt;dbaname tunkey=&quot;&quot;>XML-fil, lägg till följande efter &lt;security-realms> avsnitt:
 
    ```xml
    <security-realm name="SSLRealm">
@@ -145,20 +141,20 @@ I denna procedur:
       * Välj Åtgärd > Stoppa.
       * Vänta tills tjänstens status visas som stoppad.
       * Välj Åtgärd > Start.
+
    * För förkonfigurerade eller manuellt konfigurerade JBoss-installationer i Adobe:
 
-      * Navigera från en kommandotolk till *`[appserver root]`*/bin.
+      * Navigera från en kommandotolk till *`[appserver root]`*/bin
       * Stoppa servern genom att ange följande kommando:
 
          * (Windows) `shutdown.bat -S`
          * (Linux) `./shutdown.sh -S`
+
       * Vänta tills JBoss-processen har stängts av helt (när JBoss-processen återgår till terminalen startades den i).
       * Starta servern genom att ange följande kommando:
 
          * (Windows) `run.bat -c <profile>`
          * (Linux) `./run.sh -c <profile>`
-
-
 
 1. Om du vill komma åt administrationskonsolen med SSL skriver du `https://[host name]:'port'/adminui` i en webbläsare:
 
@@ -168,7 +164,7 @@ I denna procedur:
 
 1. I en kommandotolk går du till *[JAVA HOME]*/bin och skriv följande kommando för att skapa nyckelbehållaren och nyckeln:
 
-   `keytool -genkey -dname "CN=`*Värdnamn* `, OU=`*Gruppnamn* `, O=`*Företag* `, L=`*Ortsnamn* `, S=`*Läge* `, C=`*Landskod*&quot; `-alias "AEMForms Cert"` `-keyalg RSA -keypass`-*key_password* `-keystore`*keystorename* `.keystore`
+   `keytool -genkey -dname "CN=`*Värdnamn* `, OU=`*Gruppnamn* `, O=`*Företagsnamn* `, L=`*Ortsnamn* `, S=`*Läge* `, C=`*Landskod*&quot; `-alias "AEMForms Cert"` `-keyalg RSA -keypass`-*key_password* `-keystore`*keystorename* `.keystore`
 
    >[!NOTE]
    >
@@ -180,7 +176,7 @@ I denna procedur:
 
 1. När din begäran om en certifikatfil är klar slutför du nästa procedur.
 
-## Använd en autentiseringsuppgift som hämtats från en certifikatutfärdare för att aktivera SSL {#use-a-credential-obtained-from-a-ca-to-enable-ssl}
+## Använd en autentiseringsuppgift från en certifikatutfärdare för att aktivera SSL {#use-a-credential-obtained-from-a-ca-to-enable-ssl}
 
 1. I en kommandotolk går du till *`[JAVA HOME]`*/bin och skriv följande kommando för att importera rotcertifikatet för den certifikatutfärdare som CSR har signerats med:
 
@@ -201,5 +197,4 @@ I denna procedur:
    >* Ersätt `[JAVA_HOME]` med den katalog där JDK är installerat och ersätt texten i kursiv stil med värden som motsvarar din miljö.
    >* Det importerade CA-signerade certifikatet ersätter ett självsignerat offentligt certifikat om det finns.
 
-
-1. Slutför steg 13-18 i Skapa en SSL-autentiseringsuppgift.
+1. Slutför steg 13-18 i Skapa en SSL-referens.

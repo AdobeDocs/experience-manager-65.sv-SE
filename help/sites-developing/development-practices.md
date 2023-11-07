@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: best-practices
 exl-id: 65b2029e-03c9-4df4-8579-2b15dbee1035
-source-git-commit: 260f71acd330167572d817fdf145a018b09cbc65
+source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
 workflow-type: tm+mt
-source-wordcount: '616'
+source-wordcount: '615'
 ht-degree: 0%
 
 ---
@@ -60,7 +60,7 @@ Verktyg för kodanalys kan vara värdefulla, men bara om deras rapporter leder t
 
 ### Följ Pojkens Scout-regel {#follow-the-boy-scout-rule}
 
-Pojkens Scout har en regel: &quot;Låt det vara bättre än du hittade det.&quot; Så länge alla medlemmar i utvecklingsteamet följer den här regeln och lagar något när de stöter på en enda röra, kommer koden hela tiden att förbättras.
+Pojke Scout har en regel: &quot;Låt det vara bättre än du hittade det.&quot; Så länge alla medlemmar i utvecklingsteamet följer den här regeln och lagar något när de stöter på en enda röra, kommer koden hela tiden att förbättras.
 
 ### Undvik att implementera YAGNI-funktioner {#avoid-implementing-yagni-features}
 

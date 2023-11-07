@@ -4,9 +4,9 @@ description: Installera, konfigurera och anpassa ett AEM Forms-demopaket.
 contentOwner: anujkapo
 docset: aem65
 exl-id: 1fee474e-7da5-4ab2-881a-34b8e055aa29
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
 workflow-type: tm+mt
-source-wordcount: '4604'
+source-wordcount: '4598'
 ht-degree: 0%
 
 ---
@@ -57,7 +57,7 @@ The [AEM Forms Web.Gov-demopaket](https://experience.adobe.com/#/downloads/conte
 
    * **we-gov-forms.ui.analytics-&lt;version>.zip** - *Innehåller alla Web.Gov Forms Analytics-data som ska lagras i databasen.*
 
-   * **we-gov-forms.config.public-&lt;version>.zip** - *Innehåller alla standardkonfigurationsnoder, inklusive platshållarmolnkonfigurationer, för att undvika formulärdatamodell och tjänstbindningsproblem.*
+   * **we-gov-forms.config.public-&lt;version>.zip** - *Innehåller alla standardkonfigurationsnoder, inklusive platshållarmolnkonfigurationer, för att undvika problem med formulärdatamodell och tjänstbindning.*
 
 De tillgångar som ingår i detta paket omfattar:
 
@@ -626,7 +626,7 @@ När konfigurationen är konfigurerad kan användare testa den genom att överf�
 
    ![Avancerade konverteringsinställningar](assets/aftia-conversion-settings-2.jpg)
 
-1. Välj startkonvertering när du har konfigurerat alla alternativ som du vill använda.
+1. Välj att starta konverteringen när du har konfigurerat alla alternativ som du vill använda.
 
 1. När konverteringsprocessen börjar bör användarna se följande skärm:
 

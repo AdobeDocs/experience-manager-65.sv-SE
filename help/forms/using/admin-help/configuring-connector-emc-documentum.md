@@ -1,18 +1,14 @@
 ---
 title: Konfigurera Connector for EMC Documentum
-seo-title: Configuring Connector for EMC Documentum
 description: Lär dig hur du konfigurerar anslutningsprogrammet för EMC Documentum för att möjliggöra kommunikation mellan AEM och EMC Documentum.
-seo-description: Learn how to configure the Connector for EMC Documentum to enable communication between AEM forms and EMC Documentum.
-uuid: fc96900a-ec8a-4efd-ad8e-25e9967e649b
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/connecting_to_a_content_management_system
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: e62370a7-9d9e-43a3-8014-8e53800c870d
 exl-id: a31a496f-87b9-43c0-a98c-5f6ca5d11690
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
 workflow-type: tm+mt
-source-wordcount: '1024'
+source-wordcount: '1023'
 ht-degree: 0%
 
 ---
@@ -49,7 +45,7 @@ När du konfigurerar de huvudsakliga inloggningsuppgifterna beror det databasnam
 
 Om du anger fel användarnamn eller lösenord får du följande resultat, beroende på om tjänsten körs för närvarande:
 
-* Om både EMC Documentum-databasprovidertjänsten och EMC Documentum Content Repository Connector-tjänsten stoppas visas inget fel när du sparar tjänstens konfigurationsinformation. Nästa gång du startar tjänsten inträffar dock ett undantag och tjänsten kommer inte att starta.
+* Om både EMC Documentum-databasprovidertjänsten och EMC Documentum Content Repository Connector-tjänsten stoppas visas inget fel när du sparar tjänstens konfigurationsinformation. Nästa gång du startar tjänsten genereras dock ett undantag och tjänsten kommer inte att starta.
 * Om antingen EMC Documentum Repository Provider-tjänsten eller EMC Documentum Content Repository Connector-tjänsten startas försöker tjänsten omedelbart validera inloggningsinformationen när du sparar tjänstens konfigurationsinformation. I det här fallet inträffar ett fel och konfigurationsinformationen sparas inte.
 
 1. I administrationskonsolen klickar du på Tjänster > Koppling för EMC Documentum > Konfigurationsinställningar.
@@ -75,9 +71,9 @@ Du kan konfigurera vilken databastjänstleverantör som ska användas med Docume
 1. Välj den alternativa databastjänstleverantören i informationsfältet för databastjänstleverantör.
 1. Klicka på Spara.
 
-## Konfigurerar databasreferenser {#configuring-repository-credentials}
+## Konfigurerar databasinloggningsuppgifter {#configuring-repository-credentials}
 
-Documentum-inloggningsinformationen används i systemkontexten för AEM formulär. Databasens autentiseringsuppgifter är specifika för vissa databaser i Documentum. Du kan ange autentiseringsuppgifter för valfritt antal databaser; Du kan dock bara ange en uppsättning uppgifter per databas.
+Documentum-inloggningsinformationen används i systemkontexten för AEM formulär. Databasens autentiseringsuppgifter är specifika för vissa databaser i Documentum. Du kan ange autentiseringsuppgifter för ett valfritt antal databaser, men du kan bara ange en uppsättning uppgifter per databas.
 
 ### Lägg till en databasautentiseringsuppgift {#add-a-repository-credential}
 
