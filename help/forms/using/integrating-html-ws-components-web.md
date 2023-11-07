@@ -1,16 +1,12 @@
 ---
 title: Integrera AEM Forms-arbetsytekomponenter i webbprogram
-seo-title: Integrating AEM Forms workspace components in web applications
-description: Hur du återanvänder AEM Forms arbetsytekomponenter i dina egna webbprogram för att utnyttja funktionaliteten och få en nära integrering.
-seo-description: How to reuse AEM Forms workspace components in your own webapps to leverage functionality and provide tight integration.
-uuid: bb9b8aa0-3f41-4f44-8eb7-944e778ee8a6
+description: Hur du återanvänder AEM Forms arbetsytekomponenter i dina egna webbprogram för att använda funktionalitet och få en nära integrering.
 contentOwner: robhagat
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
-discoiquuid: 6be87939-007e-42c7-8a41-e34ac2b8bed4
 exl-id: bb4a500d-c34f-4586-83f0-ad7ef69b4fb1
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '344'
 ht-degree: 0%
@@ -63,10 +59,10 @@ Du kan använda arbetsytan i AEM Forms [komponenter](/help/forms/using/descripti
 
    ```javascript
    define([
-       ‘jquery’,
-       ‘underscore’,
-       ‘backbone’,
-       ‘runtime/views/userinfo'],
+       'jquery',
+       'underscore',
+       'backbone',
+       'runtime/views/userinfo'],
        function($, _, Backbone, UserInfo){
            var demoUserInfo = UserInfo.extend({
                //override the functions to customize the functionality
@@ -81,7 +77,7 @@ Du kan använda arbetsytan i AEM Forms [komponenter](/help/forms/using/descripti
    });
    ```
 
-1. Ändra portalens CSS för att konfigurera layout, placering och format för de nödvändiga komponenterna på portalen. Du vill till exempel behålla bakgrundsfärgen som svart för den här portalen för att kunna visa userInfo-komponenten på ett bra sätt. Du kan göra detta genom att ändra bakgrundsfärgen i `/apps/sampleApplication/wscomponents/css/style.css` enligt följande:
+1. Ändra portalens CSS för att konfigurera layout, placering och format för de nödvändiga komponenterna på portalen. Du vill till exempel att bakgrundsfärgen ska vara svart för den här portalen så att komponenten userInfo visas korrekt. Du kan göra detta genom att ändra bakgrundsfärgen i `/apps/sampleApplication/wscomponents/css/style.css` enligt följande:
 
    ```css
    body {

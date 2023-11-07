@@ -6,9 +6,9 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/aem_forms_backup_and_recovery
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 exl-id: 536615a4-ab42-4b72-83b1-fad110b011ee
-source-git-commit: 3885cc51f7e821cdb352737336a29f9c4f0c2f41
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1535'
+source-wordcount: '1533'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ För att säkerhetskopieringen och återställningen ska lyckas måste det allti
 
 Genom att säkerhetskopiera databasen samtidigt som säkerhetskopiorna av GDS, AEM och Content Storage Root kan du synkronisera dessa system om det skulle behövas någon återställning.
 
-Säkerhetskopieringsproceduren som beskrivs i det här avsnittet kräver att du aktiverar läget för säker säkerhetskopiering innan du säkerhetskopierar katalogerna AEM Forms-databas, AEM, GDS och Content Storage Root. När säkerhetskopieringen är klar måste du avsluta läget för säker säkerhetskopiering. Säkert säkerhetskopieringsläge används för att markera långlivade och beständiga dokument som finns i GDS. I det här läget säkerställs att den automatiska filrensningsfunktionen (filinsamlaren) inte tar bort filer som har gått ut förrän det säkra säkerhetskopieringsläget har släppts. En GDS-säkerhetskopia måste synkroniseras med en databassäkerhetskopia.
+Säkerhetskopieringsproceduren som beskrivs i det här avsnittet kräver att du aktiverar läget för säker säkerhetskopiering innan du säkerhetskopierar katalogerna AEM Forms-databas, AEM, GDS och Content Storage Root. När säkerhetskopieringen är klar måste du avsluta läget för säker säkerhetskopiering. Säkert säkerhetskopieringsläge används för att markera långlivade och beständiga dokument som finns i GDS. I det här läget säkerställs att den automatiska filrensningsfunktionen (filinsamlaren) inte tar bort utgångna filer förrän det säkra säkerhetskopieringsläget släpps. En GDS-säkerhetskopiering måste synkroniseras med en databassäkerhetskopiering.
 
 Hur ofta GDS-platsen måste säkerhetskopieras beror på hur AEM Forms används och vilka säkerhetskopieringsfönster som är tillgängliga. Säkerhetskopieringsfönstret kan påverkas av långvariga processer eftersom de kan köras i flera dagar. Om du kontinuerligt ändrar, lägger till och tar bort filer i den här katalogen bör du säkerhetskopiera GDS-platsen oftare.
 
@@ -35,18 +35,18 @@ Om databasen körs i ett loggningsläge, vilket beskrivs i föregående avsnitt,
 >
 >Filer som inte refereras kan finnas kvar i GDS-katalogen efter återställningsprocessen. Detta är en känd begränsning för närvarande.
 
-## Säkerhetskopiera katalogerna databas, GDS, AEM och Content Storage Root {#back-up-the-database-gds-aem-repository-and-content-storage-root-directories}
+## Säkerhetskopiera katalogerna databas, GDS, AEM och Content Storage Root. {#back-up-the-database-gds-aem-repository-and-content-storage-root-directories}
 
 Du måste placera AEM Forms i läget för säker säkerhetskopiering (ögonblicksbild) eller rullande säkerhetskopiering (kontinuerlig täckning). Innan du anger att AEM Forms ska ange något av säkerhetskopieringslägena bör du kontrollera följande:
 
 * Verifiera systemversionen och registrera de korrigeringar eller uppdateringar som tillämpats sedan den senaste fullständiga säkerhetskopieringen av systemavbildningen.
-* Om du använder säkerhetskopiering i rullnings- eller ögonblicksbildläge måste databasen vara konfigurerad med rätt logginställningar för att tillåta säkerhetskopiering av databasen under körning. (Se [AEM Forms-databas](/help/forms/using/admin-help/files-back-recover.md#aem-forms-database).)
+* Om du använder säkerhetskopiering i rullnings- eller ögonblicksbildläge måste databasen vara konfigurerad med rätt logginställningar för att tillåta säkerhetskopiering av databasen. (Se [AEM Forms databas](/help/forms/using/admin-help/files-back-recover.md#aem-forms-database).)
 
 Förutom detta bör du följa följande riktlinjer för säkerhetskopiering/återställning.
 
 * Säkerhetskopiera GDS-katalogen med hjälp av ett tillgängligt operativsystem eller ett verktyg för säkerhetskopiering från tredje part. (Se [GDS-plats](/help/forms/using/admin-help/files-back-recover.md#gds-location).)
 * (Valfritt) Säkerhetskopiera rotkatalogen för innehållslagring med hjälp av ett tillgängligt operativsystem eller ett säkerhetskopierings- och verktyg från tredje part. (Se [Rotplats för innehållslagring (fristående miljö)](/help/forms/using/admin-help/files-back-recover.md#content-storage-root-location-stand-alone-environment) eller [Rotplats för innehållslagring (klustrad miljö)](/help/forms/using/admin-help/files-back-recover.md#content-storage-root-location-clustered-environment).)
-* Säkerhetskopiera författare och publiceringsinstanser (crx -database backup).
+* Säkerhetskopiera författare och publicera instanser (crx -database backup).
 
   Om du vill säkerhetskopiera Correspondence Management Solution-miljön utför du stegen på författaren och publicerar instanserna enligt beskrivningen i [Säkerhetskopiering och återställning](/help/sites-administering/backup-and-restore.md).
 
@@ -57,7 +57,7 @@ Förutom detta bör du följa följande riktlinjer för säkerhetskopiering/åte
    * Workbench-utvecklare kan fortsätta att arbeta med sina processer lokalt. De bör inte driftsätta några nya processer under säkerhetskopieringsfasen.
    * Beslutet om längden på varje säkerhetskopieringssession (för rullande säkerhetskopieringsläge) bör baseras på den totala tid det tar att säkerhetskopiera alla data i AEM Forms (DB, GDS, AEM och andra anpassade data).
 
-Säkerhetskopiera AEM Forms-databasen, inklusive eventuella transaktionsloggar. Se [AEM Forms-databas](/help/forms/using/admin-help/files-back-recover.md#aem-forms-database).
+Säkerhetskopiera AEM Forms-databasen, inklusive eventuella transaktionsloggar. Se [AEM Forms databas](/help/forms/using/admin-help/files-back-recover.md#aem-forms-database).
 
 Mer information finns i lämplig kunskapsbasartikel för din databas:
 <!-- The four URLs below are all 404s; checked July 19, 2023 -->
@@ -74,11 +74,11 @@ Dessa artiklar ger vägledning om grundläggande databasfunktioner för säkerhe
 
 ### Ange lägen för säkerhetskopiering {#entering-the-backup-modes}
 
-Du kan antingen använda administrationskonsolen, kommandot LCBackupMode eller det API som är tillgängligt i AEM Forms-installationen för att gå in i och lämna säkerhetskopieringslägena. För rullande säkerhetskopiering (kontinuerlig täckning) är administrationskonsolalternativet inte tillgängligt. använder du antingen kommandoradsalternativet eller API:t. <!-- Fix broken link For information about using the API to enter and leave backup modes, see AEM Forms API Reference on Help and Tutorials page. -->
+Du kan antingen använda administrationskonsolen, kommandot LCBackupMode eller det API som är tillgängligt i AEM Forms-installationen för att gå in i och lämna säkerhetskopieringslägena. För rullande säkerhetskopiering (kontinuerlig täckning) är administrationskonsolalternativet inte tillgängligt. Använd antingen kommandoradsalternativet eller API:t. <!-- Fix broken link For information about using the API to enter and leave backup modes, see AEM Forms API Reference on Help and Tutorials page. -->
 
 >[!NOTE]
 >
->Om du har konfigurerat SSL på Forms Server kan du inte placera Forms Server i säkerhetskopieringsläge med hjälp av skriptet LCBackupMode.CMD.
+>Om du har konfigurerat SSL på Forms Server kan du inte placera Forms Server i säkerhetskopieringsläge med skriptet LCBackupMode.CMD.
 
 **Använda administrationskonsolen för att gå in i säkert säkerhetskopieringsläge**
 
@@ -110,7 +110,7 @@ Du kan använda kommandoradsgränssnittet `LCBackupMode` skript som sätter AEM 
 
    `password` är AEM Forms-administratörens lösenord.
 
-   `label` är textetiketten, som kan vara vilken sträng som helst, för denna säkerhetskopiering.
+   `label` är textetiketten, som kan vara vilken sträng som helst, för den här säkerhetskopian.
 
    `timeout` är antalet sekunder efter vilket säkerhetskopieringsläget automatiskt lämnas. Den kan vara 0-10 080. Om värdet är 0, vilket är standardvärdet, kommer säkerhetskopieringsläget aldrig att fungera.
 
@@ -126,7 +126,7 @@ Utför följande åtgärder om du vill använda administrationskonsolen för att
 
 1. Logga in på administrationskonsolen.
 1. Klicka på Inställningar > Systeminställningar > Verktyg för säkerhetskopiering.
-1. Avmarkera Använd i säkert säkerhetskopieringsläge och klicka på OK.
+1. Avmarkera Använd i säkert läge och klicka på OK.
 
 **Lämna alla säkerhetskopieringslägen**
 
@@ -137,7 +137,7 @@ Du kan använda kommandoradsgränssnittet för att ta AEM Forms ur säkert säke
 
    >[!NOTE]
    >
-   >Du måste ange katalogen JAVA_HOME enligt beskrivningen i det kapitel som gäller för programservern i [Installationen av AEM Forms förbereds](https://www.adobe.com/go/learn_aemforms_prepareInstallsingle_63)*.*
+   >Ställ in JAVA_HOME-katalogen enligt beskrivningen i lämpligt kapitel för programservern i [Installationen av AEM Forms förbereds](https://www.adobe.com/go/learn_aemforms_prepareInstallsingle_63)*.*
 
 1. Kör följande kommando på en rad:
 

@@ -2,9 +2,9 @@
 title: Redigera en extern SPA i Adobe Experience Manager
 description: I det här dokumentet beskrivs de rekommenderade stegen för att överföra en fristående SPA till en Adobe Experience Manager-instans, lägga till redigerbara innehållsavsnitt och aktivera redigering.
 exl-id: 25236af4-405a-4152-8308-34d983977e9a
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2440'
+source-wordcount: '2432'
 ht-degree: 0%
 
 ---
@@ -247,7 +247,7 @@ När innehållsförfattaren uppdaterar den här komponenten visas en ny `text_20
 
 #### Krav och begränsningar {#limitations}
 
-Det finns flera krav för att lägga till virtuella bladkomponenter samt vissa begränsningar.
+Det finns flera krav för att lägga till virtuella bladkomponenter och vissa begränsningar.
 
 * The `pagePath` -egenskapen är obligatorisk för att skapa en virtuell komponent.
 * Den sidnod som finns på sökvägen i `pagePath` måste finnas i AEM.
@@ -286,7 +286,7 @@ Fler komponenter och innehåll kan läggas till i behållaren nu när författar
 
 #### Krav och begränsningar {#container-limitations}
 
-Det finns flera krav för att lägga till virtuella behållare samt vissa begränsningar.
+Det finns flera krav för att lägga till virtuella behållare och vissa begränsningar.
 
 * Principen för att bestämma vilka komponenter som kan läggas till ärvs från den överordnade behållaren.
 * Den omedelbara överordnade behållaren för den behållare som ska skapas måste redan finnas i AEM.
@@ -314,9 +314,9 @@ Anta till exempel att vi har en SPA där programmet återges inuti en `div` för
 
 1. I AEM sidkomponentbrödtext:
 
-   1. Skapa ett nytt `body.html` för sidkomponenten.
+   1. Skapa en `body.html` för sidkomponenten.
 
-   ![Skapa en ny body.html-fil](assets/external-spa-update-body.gif)
+   ![Skapa filen body.html](assets/external-spa-update-body.gif)
 
    1. Lägg till det nya rotelementet i det nya `body.html` -fil.
 
@@ -336,9 +336,9 @@ Följande steg krävs för att aktivera redigering i AEM för det här SPA.
 
    * För vårt urval, vi överväger `wknd-spa-react/us/en` som SPA. Det innebär att allt som är före den banan AEM bara sidor/innehåll.
 
-1. Skapa en ny sida på önskad nivå.
+1. Skapa en sida på önskad nivå.
 
-   * I det här exemplet redigeras sidan `mydomain.com/test`. `test` finns i programmets rotsökväg. Detta måste också bevaras när du skapar sidan i AEM. Därför kan vi skapa en ny sida på den rotnivå som definierades i föregående steg.
+   * I det här exemplet redigeras sidan `mydomain.com/test`. `test` finns i programmets rotsökväg. Detta måste också bevaras när du skapar sidan i AEM. Därför kan du skapa en sida på den rotnivå som definierades i föregående steg.
    * Den nya sidan måste ha samma namn som sidan som ska redigeras. I detta exempel `mydomain.com/test`måste den nya sidan skapas `/path/to/aem/root/test`.
 
 1. Lägg till hjälpredor i SPA.

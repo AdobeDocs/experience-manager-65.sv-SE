@@ -4,9 +4,9 @@ description: Lär dig hur du använder Resurskonsolen för att hantera AEM inneh
 feature: Content Fragments
 role: User
 exl-id: 25c91a85-06ff-4666-a809-46778a689e25
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1724'
+source-wordcount: '1714'
 ht-degree: 6%
 
 ---
@@ -319,7 +319,7 @@ Till exempel:
 
 The **Jämför med aktuell** finns tillgänglig från [Tidslinje](/help/assets/content-fragments/content-fragments-managing.md#timeline-for-content-fragments) när du har valt en viss version.
 
-Den här öppnas:
+Den öppnas:
 
 * den **Aktuell** (senaste) version (vänster)
 

@@ -6,7 +6,7 @@ topic-tags: spa
 content-type: reference
 docset: aem65
 exl-id: 383f84fd-455c-49a4-9e2b-1c4757cc188b
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '2074'
 ht-degree: 0%
@@ -71,11 +71,11 @@ I resten av detta dokument beskrivs kraven för det mellanliggande ramverksspeci
 
 Innehållsstrukturen för sidan lagras i AEM. Sidans modell används för att mappa och instansiera SPA. SPA utvecklare skapar SPA komponenter som de mappar till AEM komponenter. För att göra detta använder de resurstypen (eller sökvägen till AEM) som en unik nyckel.
 
-De SPA komponenterna måste vara synkroniserade med sidmodellen och uppdateras med eventuella ändringar av innehållet. Ett mönster som utnyttjar dynamiska komponenter måste användas för att instansiera komponenter i farten efter den angivna sidmodellstrukturen.
+De SPA komponenterna måste vara synkroniserade med sidmodellen och uppdateras med eventuella ändringar av innehållet. Ett mönster som använder dynamiska komponenter måste användas för att instansiera komponenter i farten efter den angivna sidmodellstrukturen.
 
 ### Metafält {#meta-fields}
 
-Sidmodellen utnyttjar JSON-modellens exporterare, som i sin tur är baserad på [Sling Model](https://sling.apache.org/documentation/bundles/models.html) API. De exporterbara snedsättningsmodellerna visar följande fältlista för att de underliggande biblioteken ska kunna tolka datamodellen:
+Sidmodellen använder JSON Model Exporter, som i sin tur är baserad på [Sling Model](https://sling.apache.org/documentation/bundles/models.html) API. De exporterbara snedsättningsmodellerna visar följande fältlista för att de underliggande biblioteken ska kunna tolka datamodellen:
 
 * `:type`: Typ av AEM (standard = resurstyp)
 * `:children`: Hierarkiska underordnade för den aktuella resursen. Underordnade är inte en del av den aktuella resursens inre innehåll (kan hittas på objekt som representerar en sida)

@@ -8,9 +8,9 @@ content-type: reference
 topic-tags: site-features
 discoiquuid: b11f0e4c-4dec-4b66-9f54-a0aa13ac77b9
 exl-id: 298fcfeb-dc8d-4edc-8743-83c0e5e5bc08
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '210'
+source-wordcount: '208'
 ht-degree: 6%
 
 ---
@@ -25,7 +25,7 @@ Med AEM kan du automatisera en serie steg som utförs på en sida eller en resur
 
 Vanligtvis:
 
-* Innehållsförfattare använder arbetsflöden både på sidor och i arbetsflöden.
+* Innehållsförfattare tillämpar arbetsflöden på sidor och deltar i arbetsflöden.
 * De arbetsflöden du använder är specifika för organisationens affärsprocesser.
 
 Följande sidor omfattar:

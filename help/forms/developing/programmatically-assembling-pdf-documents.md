@@ -12,9 +12,9 @@ topic-tags: operations
 discoiquuid: ebe8136b-2a79-4035-b9d5-aa70a5bbd4af
 role: Developer
 exl-id: 7d6fd230-e477-4286-9fb3-18a3474e3e48
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2124'
+source-wordcount: '2123'
 ht-degree: 0%
 
 ---
@@ -55,13 +55,13 @@ Det här DDX-dokumentet sammanfogar två PDF-dokument med namnet *map.pdf* och *
 >
 >Mer information om ett DX-dokument finns i [Assembler Service och DDX Reference](https://www.adobe.com/go/learn_aemforms_ddx_63).
 
-## Att tänka på när Assembler-tjänsten anropas med webbtjänster {#considerations-when-invoking-assembler-service-using-web-services}
+## Att tänka på vid anrop av Assembler-tjänsten med webbtjänster {#considerations-when-invoking-assembler-service-using-web-services}
 
-När du lägger till sidhuvuden och sidfötter när du sammanställer stora dokument kan du stöta på ett `OutOfMemory` och filerna kommer inte att sättas ihop. Om du vill minska risken för det här problemet lägger du till en `DDXProcessorSetting` -element till ditt DDX-dokument, vilket visas i följande exempel.
+När du lägger till sidhuvuden och sidfötter när du sammanställer stora dokument kan det uppstå ett `OutOfMemory` och filerna kommer inte att sättas ihop. Om du vill minska risken för det här problemet lägger du till en `DDXProcessorSetting` -element till ditt DDX-dokument, vilket visas i följande exempel.
 
 `<DDXProcessorSetting name="checkpoint" value="2000" />`
 
-Du kan lägga till det här elementet som ett underordnat element till `DDX` element eller som underordnad till `PDF result` -element. Standardvärdet för den här inställningen är 0 (noll), vilket inaktiverar kontrollpunkten och DDX fungerar som om `DDXProcessorSetting` elementet finns inte. Om du har hittat ett `OutOfMemory` kan du behöva ange ett heltal som är mellan 500 och 5000. Ett litet kontrollpunktsvärde resulterar i mer frekventa kontrollpunkter.
+Du kan lägga till det här elementet som ett underordnat element till `DDX` element eller som underordnad till ett `PDF result` -element. Standardvärdet för den här inställningen är 0 (noll), vilket stänger av kontrollpunkten och DDX fungerar som om `DDXProcessorSetting` elementet finns inte. Om du har hittat ett `OutOfMemory` kan du behöva ange ett heltal som är mellan 500 och 5000. Ett litet kontrollpunktsvärde resulterar i mer frekventa kontrollpunkter.
 
 ## Sammanfattning av steg {#summary-of-steps}
 
@@ -105,11 +105,11 @@ Både filen map.pdf och filen Directions.pdf måste placeras i ett samlingsobjek
 
 >[!NOTE]
 >
->An `AssemblerResult` -objektet, som innehåller ett samlingsobjekt, returneras om du anropar `invokeDDX` operation. Den här åtgärden används när du skickar två eller flera PDF-indatadokument till Assembler-tjänsten. Om du bara skickar ett indatavärde PDF till Assembler-tjänsten och bara förväntar dig ett returdokument, ska du anropa `invokeOneDocument` operation. När den här åtgärden anropas returneras ett enda dokument. Mer information om hur du använder den här åtgärden finns i [Sammanställa krypterade PDF-dokument](/help/forms/developing/assembling-encrypted-pdf-documents.md#assembling-encrypted-pdf-documents).
+>An `AssemblerResult` -objektet, som innehåller ett samlingsobjekt, returneras om du anropar `invokeDDX` operation. Den här åtgärden används när du skickar två eller flera PDF-indatadokument till Assembler-tjänsten. Om du bara skickar en inmatning PDF till Assembler-tjänsten och bara förväntar dig ett returdokument, ska du anropa `invokeOneDocument` operation. När den här åtgärden anropas returneras ett enda dokument. Mer information om hur du använder den här åtgärden finns i [Sammanställa krypterade PDF-dokument](/help/forms/developing/assembling-encrypted-pdf-documents.md#assembling-encrypted-pdf-documents).
 
 **Ange körningsalternativ**
 
-Du kan ställa in körningsalternativ som styr beteendet för Assembler-tjänsten när den utför ett jobb. Du kan till exempel ange ett alternativ som instruerar Assembler-tjänsten att fortsätta bearbeta ett jobb om ett fel uppstår. Mer information om de körningsalternativ du kan ange finns i `AssemblerOptionSpec` klassreferens i [AEM Forms API-referens](https://www.adobe.com/go/learn_aemforms_javadocs_63_en).
+Du kan ställa in körningsalternativ som styr beteendet för Assembler-tjänsten när den utför ett jobb. Du kan till exempel ange ett alternativ som instruerar Assembler-tjänsten att fortsätta bearbeta ett jobb om ett fel uppstår. Mer information om alternativ för körning som du kan ange finns i `AssemblerOptionSpec` klassreferens i [AEM Forms API-referens](https://www.adobe.com/go/learn_aemforms_javadocs_63_en).
 
 **Sammanställa PDF-indatadokument**
 
@@ -117,9 +117,9 @@ När du har skapat tjänstklienten, refererat till en DDX-fil, skapat ett samlin
 
 **Extrahera resultaten**
 
-Assembler-tjänsten returnerar en `java.util.Map` -objekt, som kan hämtas från `AssemblerResult` och som innehåller åtgärdsresultat. Den returnerade `java.util.Map` -objektet innehåller de resulterande dokumenten och eventuella undantag.
+Assembler-tjänsten returnerar `java.util.Map` -objekt, som kan hämtas från `AssemblerResult` och som innehåller åtgärdsresultat. Den returnerade `java.util.Map` -objektet innehåller de resulterande dokumenten och eventuella undantag.
 
-I följande tabell sammanfattas några av de nyckelvärden och objekttyper som kan finnas i den returnerade `java.util.Map` -objekt.
+I följande tabell sammanfattas några nyckelvärden och objekttyper som kan finnas i den returnerade `java.util.Map` -objekt.
 
 <table>
  <thead>
@@ -162,7 +162,7 @@ Sammanställa ett PDF-dokument med hjälp av Assembler Service API (Java):
 
 1. Inkludera projektfiler.
 
-   Inkludera JAR-klientfiler, t.ex. adobe-assembler-client.jar, i Java-projektets klassökväg.
+   Inkludera JAR-klientfiler, som adobe-assembler-client.jar, i Java-projektets klassökväg.
 
 1. Skapa en PDF Assembler-klient.
 
@@ -171,14 +171,14 @@ Sammanställa ett PDF-dokument med hjälp av Assembler Service API (Java):
 
 1. Referera till ett befintligt DDX-dokument.
 
-   * Skapa en `java.io.FileInputStream` som representerar DDX-dokumentet genom att använda dess konstruktor och skicka ett strängvärde som anger platsen för DDX-filen.
+   * Skapa en `java.io.FileInputStream` -objekt som representerar DDX-dokumentet genom att använda dess konstruktor och skicka ett strängvärde som anger platsen för DDX-filen.
    * Skapa en `com.adobe.idp.Document` genom att använda konstruktorn och skicka `java.io.FileInputStream` -objekt.
 
 1. Referera PDF-dokument för indata.
 
    * Skapa en `java.util.Map` objekt som används för att lagra indatadokument i PDF genom att använda en `HashMap` konstruktor.
    * För varje indatadokument i PDF skapar du en `java.io.FileInputStream` genom att använda dess konstruktor och skicka indatadokumentets plats i PDF.
-   * För varje indatadokument i PDF skapar du en `com.adobe.idp.Document` -objektet och skicka `java.io.FileInputStream` som innehåller dokumentet PDF.
+   * För varje indatadokument i PDF skapar du en `com.adobe.idp.Document` -objektet och skicka `java.io.FileInputStream` -objekt som innehåller dokumentet PDF.
    * Lägg till en post i `java.util.Map` genom att anropa dess `put` och skicka följande argument:
 
       * Ett strängvärde som representerar nyckelnamnet. Detta värde måste matcha värdet för källelementet PDF som anges i DDX-dokumentet.
@@ -203,13 +203,13 @@ Sammanställa ett PDF-dokument med hjälp av Assembler Service API (Java):
 
    Utför följande åtgärder för att hämta det nya PDF-dokumentet:
 
-   * Anropa `AssemblerResult` objektets `getDocuments` -metod. Detta returnerar `java.util.Map` -objekt.
+   * Anropa `AssemblerResult` objektets `getDocuments` -metod. Detta returnerar en `java.util.Map` -objekt.
    * Iterera genom `java.util.Map` tills du hittar resultatet `com.adobe.idp.Document` -objekt. (Du kan använda resultatelementet PDF som anges i DDX-dokumentet för att hämta dokumentet.)
    * Anropa `com.adobe.idp.Document` objektets `copyToFile` metod för att extrahera PDF-dokumentet.
 
    >[!NOTE]
    >
-   >If `LOG_LEVEL` har angetts för att skapa en logg, du kan extrahera loggen med `AssemblerResult` objektets `getJobLog` -metod.
+   >If `LOG_LEVEL` har angetts för att skapa en logg, du kan extrahera loggen med hjälp av `AssemblerResult` objektets `getJobLog` -metod.
 
 **Se även**
 
@@ -229,13 +229,13 @@ Sammanställa PDF-dokument med Assembler Service API (webbtjänst):
 
    >[!NOTE]
    >
-   >Ersätt `localhost` med IP-adressen till den server som är värd för AEM Forms.
+   >Ersätt `localhost` med IP-adressen till den server där AEM Forms finns.
 
 1. Skapa en PDF Assembler-klient.
 
    * Skapa en `AssemblerServiceClient` genom att använda dess standardkonstruktor.
    * Skapa en `AssemblerServiceClient.Endpoint.Address` genom att använda `System.ServiceModel.EndpointAddress` konstruktor. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/AssemblerService?blob=mtom`). Du behöver inte använda `lc_version` -attribut. Det här attributet används när du skapar en tjänstreferens.
-   * Skapa en `System.ServiceModel.BasicHttpBinding` genom att hämta värdet för `AssemblerServiceClient.Endpoint.Binding` fält. Sänd returvärdet till `BasicHttpBinding`.
+   * Skapa en `System.ServiceModel.BasicHttpBinding` genom att hämta värdet för `AssemblerServiceClient.Endpoint.Binding` fält. Skicka returvärdet till `BasicHttpBinding`.
    * Ange `System.ServiceModel.BasicHttpBinding` objektets `MessageEncoding` fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
    * Aktivera grundläggande HTTP-autentisering genom att utföra följande åtgärder:
 
@@ -262,7 +262,7 @@ Sammanställa PDF-dokument med Assembler Service API (webbtjänst):
    * Skapa en `MyMapOf_xsd_string_To_xsd_anyType` -objekt. Det här samlingsobjektet används för att lagra indatadokument i PDF.
    * För varje indatadokument i PDF skapar du en `MyMapOf_xsd_string_To_xsd_anyType_Item` -objekt. Om du t.ex. använder två indata-PDF-dokument skapar du två `MyMapOf_xsd_string_To_xsd_anyType_Item` objekt.
    * Tilldela ett strängvärde som representerar nyckelnamnet till `MyMapOf_xsd_string_To_xsd_anyType_Item` objektets `key` fält. Detta värde måste matcha värdet för källelementet PDF som anges i DDX-dokumentet. (Utför den här åtgärden för varje dokument i PDF.)
-   * Tilldela `BLOB` objekt som lagrar PDF-dokumentet till `MyMapOf_xsd_string_To_xsd_anyType_Item` objektets `value` fält. (Utför den här åtgärden för varje dokument i PDF.)
+   * Tilldela `BLOB` det objekt som lagrar PDF-dokumentet till `MyMapOf_xsd_string_To_xsd_anyType_Item` objektets `value` fält. (Utför den här åtgärden för varje dokument i PDF.)
    * Lägg till `MyMapOf_xsd_string_To_xsd_anyType_Item` objekt till `MyMapOf_xsd_string_To_xsd_anyType` -objekt. Anropa `MyMapOf_xsd_string_To_xsd_anyType` objektets `Add` och skicka `MyMapOf_xsd_string_To_xsd_anyType` -objekt. (Utför den här åtgärden för varje dokument i PDF.)
 
 1. Ange körningsalternativ.
@@ -285,7 +285,7 @@ Sammanställa PDF-dokument med Assembler Service API (webbtjänst):
    Utför följande åtgärder för att hämta det nya PDF-dokumentet:
 
    * Öppna `AssemblerResult` objektets `documents` fält, vilket är ett `Map` -objekt som innehåller de resulterande PDF-dokumenten.
-   * Iterera genom `Map` tills du hittar nyckeln som matchar namnet på det resulterande dokumentet. Sätt sedan den arraymedlemmens `value` till `BLOB`.
+   * Iterera genom `Map` tills du hittar nyckeln som matchar namnet på det resulterande dokumentet. Sätt sedan in den arraymedlemmens `value` till `BLOB`.
    * Extrahera de binära data som representerar PDF-dokumentet genom att öppna dess `BLOB` objektets `MTOM` -egenskap. Detta returnerar en array med byte som du kan skriva ut till en PDF-fil.
 
    >[!NOTE]

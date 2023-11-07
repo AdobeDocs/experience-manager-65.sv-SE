@@ -8,9 +8,9 @@ topic-tags: Security
 discoiquuid: b1bd04bf-0d6d-4e6b-8c7c-eafd1a24b5fe
 role: Admin
 exl-id: 5da3cc59-4243-4098-b1e0-438304fcd0c5
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1443'
+source-wordcount: '1440'
 ht-degree: 0%
 
 ---
@@ -129,7 +129,7 @@ Som standard är resurser som är tillgängliga på publiceringsnoderna tillgän
 * /etc.clientlibs/fd/&amp;ast;
 * /libs/fd/&amp;ast;
 
-## Hantera blankettdata på ett säkert sätt  {#securely-handle-forms-data}
+## Hantera blankettdata säkert  {#securely-handle-forms-data}
 
 AEM Forms lagrar data till fördefinierade platser och tillfälliga mappar. Ni bör skydda uppgifterna för att förhindra obehörig användning.
 
@@ -141,11 +141,11 @@ I ovanstående scenarier sparas data endast för autentiserade användare. Dessu
 
 ### Skydda data som sparats av formulärportalens överföringsåtgärd {#secure-data-saved-by-forms-portal-submit-action}
 
-Som standard sparar formulärportalens åtgärd för att skicka anpassade formulär data i den lokala databasen på publiceringsnoden. Informationen sparas på /content/forms/fp. **Du bör inte lagra data på en publiceringsinstans.**
+Som standard sparar formulärportalens åtgärd för att skicka adaptiva formulär data i den lokala databasen på publiceringsnoden. Informationen sparas på /content/forms/fp. **Du bör inte lagra data på en publiceringsinstans.**
 
 Du kan konfigurera lagringstjänsten så att den skickar över nätverket till det kluster som bearbetas, utan att något sparas lokalt på publiceringsnoden. Bearbetningsklustret ligger i en säker zon bakom den privata brandväggen och data förblir säkra.
 
-Använd autentiseringsuppgifterna för bearbetningsservern för tjänsten AEM DS-inställningar för att publicera data från publiceringsnoden till bearbetningsservern. Vi rekommenderar att du använder autentiseringsuppgifter för en begränsad icke-administrativ användare med läs- och skrivbehörighet till databasen med bearbetningsservern. Mer information finns i [Konfigurera lagringstjänster för utkast och överföringar](/help/forms/using/configuring-draft-submission-storage.md).
+Använd autentiseringsuppgifterna för bearbetningsservern för tjänsten AEM DS-inställningar för att publicera data från publiceringsnoden till bearbetningsservern. Använd inloggningsuppgifterna för en begränsad icke-administrativ användare med läs- och skrivbehörighet till databasen för bearbetningsservern. Mer information finns i [Konfigurera lagringstjänster för utkast och överföringar](/help/forms/using/configuring-draft-submission-storage.md).
 
 ### Säkra data som hanteras av formulärdatamodell (FDM) {#secure-data-handled-by-form-data-model-fdm}
 
@@ -168,20 +168,20 @@ En annan uppsättning användarprofiler krävs för att skapa, publicera och bea
 
 **På en författarinstans:**
 
-* Det finns olika fördefinierade grupper med specifik behörighet för varje person. Tilldela användare till grupp.
+* Det finns olika fördefinierade grupper med specifik behörighet för varje person. Tilldela användare att gruppera.
 
    * Användare av användargrupp för formulär:
 
-      * kan skapa, fylla i, publicera och skicka ett formulär.
+      * kan skapa, fylla i, publicera och skicka in ett formulär.
       * kan inte skapa ett XDP-baserat adaptivt formulär.
       * har inte behörighet att skriva skript för adaptiva formulär.
       * kan inte importera XDP eller paket som innehåller XDP
+
    * Användare av kraftfulla blanketter kan skapa, fylla i, publicera och skicka alla typer av blanketter, skriva skript för adaptiva blanketter och importera paket som innehåller XDP.
    * En användare av mallar-författare och mallanvändare kan förhandsgranska och skapa en mall.
-   * En användare av fdm-författare kan skapa och ändra en formulärdatamodell.
+   * En användare av formulärförfattare kan skapa och ändra en formulärdatamodell.
    * En användare av cm-user-agent-gruppen kan skapa, förhandsgranska och publicera brev för korrespondenshantering.
    * En användare i en grupp för arbetsflödesredigerare kan skapa ett inkorgsprogram och en arbetsflödesmodell.
-
 
 **Vid behandlande författare:**
 
@@ -190,7 +190,7 @@ En annan uppsättning användarprofiler krävs för att skapa, publicera och bea
 
 ## Säkra intranätselement i en AEM Forms-miljö {#secure-intranet-elements-of-an-aem-forms-environment}
 
-Vanligtvis körs Bearbetningskluster och tilläggsprogram för Forms Workflow (AEM Forms på JEE) bakom en brandvägg. De här anses säkra. Du kan fortfarande utföra några steg för att förbättra dessa miljöer:
+Vanligtvis körs Bearbetningskluster och tilläggsprogram för Forms Workflow (AEM Forms på JEE) bakom en brandvägg. De här betraktas alltså som säkra. Du kan fortfarande utföra några steg för att förbättra dessa miljöer:
 
 ### Kluster för säker bearbetning {#secure-processing-cluster}
 

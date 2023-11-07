@@ -7,9 +7,9 @@ content-type: reference
 topic-tags: deploying
 feature: Configuring
 exl-id: e53c4c81-f62e-4b6d-929a-6649c8ced23c
-source-git-commit: 3885cc51f7e821cdb352737336a29f9c4f0c2f41
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '5814'
+source-wordcount: '5811'
 ht-degree: 0%
 
 ---
@@ -40,13 +40,13 @@ Du kan även läsa [officiell dokumentation](https://jackrabbit.apache.org/oak/d
 
 ## Så här kör du rensning av onlineändringar {#how-to-run-online-revision-cleanup}
 
-Rensning av onlineändringar är konfigurerat som standard att automatiskt köras en gång om dagen på både AEM Author- och Publish-instanser. Allt du behöver göra är att definiera underhållsfönstret under en period med minsta användaraktivitet. Du kan konfigurera rensningsaktiviteten för onlineändringar enligt följande:
+Rensa onlineändringar är konfigurerat som standard så att det automatiskt körs en gång om dagen på både AEM författare- och publiceringsinstanser. Allt du behöver göra är att definiera underhållsfönstret under en period med minsta användaraktivitet. Du kan konfigurera rensningsaktiviteten för onlineändringar på följande sätt:
 
 1. I AEM går du till **Verktyg - Drift - Kontrollpanel - Underhåll** eller hänvisa webbläsaren till `https://serveraddress:serverport/libs/granite/operations/content/maintenance.html`
 
    ![chlimage_1-90](assets/chlimage_1-90.png)
 
-1. Hovra över **Daglig underhållsperiod** och klicka på **Inställningar** ikon.
+1. Hovring **Daglig underhållsperiod** och klicka på **Inställningar** -ikon.
 
    ![chlimage_1-91](assets/chlimage_1-91.png)
 
@@ -58,14 +58,14 @@ Om du vill köra revideringsrensningen manuellt kan du:
 
 1. Gå till **Verktyg - Drift - Kontrollpanel - Underhåll** eller gå direkt till `https://serveraddress:serverport/libs/granite/operations/content/maintenance.html`
 1. Klicka på **Daglig underhållsperiod**.
-1. Hovra över **Revision Cleanup** ikon.
+1. Hovra över **Revision Cleanup** -ikon.
 1. Klicka **Kör**.
 
    ![chlimage_1-93](assets/chlimage_1-93.png)
 
 ### Online Revision Cleanup After Offline Revision Cleanup {#running-online-revision-cleanup-after-offline-revision-cleanup}
 
-Rensningsprocessen för revision återtar gamla versioner av generationer. Det innebär att varje gång du kör en revideringsrensning skapas en ny generation som sparas på disken. Det finns dock en skillnad mellan de två typerna av revisionsrensning: rensning av offlineändringar sparar en generation medan rensning av onlineändringar sparar två generationer. Så när du rensar onlineändringar **efter** när en offlineredigering rensas händer följande:
+Rensningsprocessen för revision återtar gamla versioner av generationer. Det innebär att varje gång du kör en revideringsrensning skapas en ny generation som sparas på disken. Det finns dock en skillnad mellan de två sorteringstyperna av revisioner: när du rensar en version offline behålls en generation medan rensning av onlineversioner behåller två generationer. Så när du rensar onlineändringar **efter** när en offlineredigering rensas händer följande:
 
 1. När den första rensningen av onlineversionen har gjorts dubbleras databasstorleken. Det beror på att det nu finns två generationer som finns på disken.
 1. Under efterföljande körningar kommer databasen att växa tillfälligt medan den nya generationen skapas och sedan stabiliseras tillbaka till den storlek som den hade efter den första körningen, när rensningsprocessen för onlineändringar återtar den tidigare generationen.
@@ -81,7 +81,7 @@ På grund av detta bör du göra skivans storlek minst två eller tre gånger st
 * The **full komprimering** I läget skrivs alla segment och tjärfiler i hela databasen om. Den efterföljande rensningsfasen kan på så sätt ta bort den maximala mängden skräp i databasen. Eftersom fullständig komprimering påverkar hela databasen krävs det mycket systemresurser och tid för att slutföra. Fullständig komprimering motsvarar komprimeringsfasen i AEM 6.3.
 * The **svanskomprimering** I läget skrivs endast de senaste segmenten och tjärfilerna i databasen om. De senaste segmenten och tjärfilerna är de som har lagts till sedan den senaste gången komprimeringen kördes, antingen helt eller slut. Den efterföljande rensningsfasen kan därför bara ta bort det skräp som finns i den senaste delen av databasen. Eftersom slutkomprimering bara påverkar en del av databasen krävs betydligt mindre systemresurser och tid för att slutföra kompaktionen än fullständig komprimering.
 
-Dessa komprimeringslägen utgör en kompromiss mellan effektivitet och resursförbrukning: Även om slutkomprimeringen är mindre effektiv har den mindre inverkan på den normala systemdriften. Fullständig komprimering är däremot mer effektivt men har större inverkan på den normala systemdriften.
+Dessa komprimeringslägen utgör en kompromiss mellan effektivitet och resursförbrukning: även om slutkomprimeringen är mindre effektiv har den mindre inverkan på den normala systemdriften. Fullständig komprimering är däremot mer effektivt men har större inverkan på den normala systemdriften.
 
 I AEM 6.5 introduceras också en effektivare funktion för borttagning av dubbletter vid komprimering, vilket ytterligare minskar databasens diskutrymme.
 
@@ -105,7 +105,7 @@ Tänk också på följande:
 
 Tänk på följande när du använder de nya komprimeringslägena:
 
-* Du kan övervaka in-/utdataaktiviteten (I/O), till exempel: I/O-åtgärder, CPU väntar på IO, bekräftar köstorlek. Detta hjälper till att avgöra om systemet håller på att bli I/O-bundet och kräver en uppgradering.
+* Du kan övervaka in-/utdataaktiviteten (I/O), till exempel I/O-åtgärder, CPU som väntar på IO, spara köstorlek. Detta hjälper till att avgöra om systemet håller på att bli I/O-bundet och kräver en uppgradering.
 * The `RevisionCleanupTaskHealthCheck` visar den övergripande hälsostatusen för onlinerevideringsrensningen. Det fungerar på samma sätt som i AEM 6.3 och skiljer inte mellan full- och svanskomprimering.
 * Loggmeddelandena innehåller relevant information om komprimeringslägena. När t.ex. onlineredigering av revision startas, visar motsvarande loggmeddelanden komprimeringsläget. I vissa hörnfall återställs systemet till fullständig komprimering när det var schemalagt att köra en slutkomprimering och loggmeddelandena indikerar den här ändringen. Loggexemplen nedan visar komprimeringsläget och ändringen från svans till full komprimering:
 
@@ -220,7 +220,7 @@ Ibland kan rensningsprocessen fördröjas om du växlar mellan svansen och det f
   </tr>
   <tr>
    <td><strong>Finns det en maxfrekvens som inte får överskridas för onlinerensning av revision?</strong></td>
-   <td>Vi rekommenderar att du kör rensning av onlineändringar en gång om dagen enligt standardinställningarna.<br /> </td>
+   <td>Vi rekommenderar att du kör rensning av onlineändringar en gång om dagen, enligt konfigurationen som standard.<br /> </td>
    <td> </td>
   </tr>
   <tr>
@@ -240,7 +240,7 @@ Ibland kan rensningsprocessen fördröjas om du växlar mellan svansen och det f
   </tr>
   <tr>
    <td><strong>Skulle författare och publicering vanligtvis ha olika fönster för rensning av onlineversioner?</strong></td>
-   <td>Detta beror på kontorstid och kundens trafikmönster online. Underhållsfönstren bör konfigureras utanför de huvudsakliga produktionstiderna för att ge bästa möjliga rensningseffekt. För flera AEM Publish-instanser (tarMK-servergrupp) bör underhållsfönstren för onlinerevision Cleanup mellanlagras.</td>
+   <td>Detta beror på kontorstid och kundens trafikmönster online. Underhållsfönstren bör konfigureras utanför de huvudsakliga produktionstiderna för att ge bästa möjliga rensningseffekt. För flera AEM publiceringsinstanser (tarMK-servergrupp) bör underhållsfönstren för onlinerevision Cleanup mellanlagras.</td>
    <td> </td>
   </tr>
   <tr>
@@ -261,7 +261,7 @@ Ibland kan rensningsprocessen fördröjas om du växlar mellan svansen och det f
   </tr>
   <tr>
    <td><strong>Kan skribenter fortfarande arbeta medan onlineversionen rensas?</strong></td>
-   <td>Ja, onlinerevision Cleanup kan hantera samtidiga skrivningar. Online Revision Cleanup fungerar dock snabbare och effektivare utan samtidiga write-transaktioner. Adobe rekommenderar att underhållsaktiviteten för onlinerättning schemaläggs till en relativt lugn tid utan någon större trafik.</td>
+   <td>Ja, onlineredigering kan hantera samtidiga skrivningar. Online Revision Cleanup fungerar dock snabbare och effektivare utan samtidiga write-transaktioner. Adobe rekommenderar att underhållsaktiviteten för onlinerättning schemaläggs till en relativt lugn tid utan någon större trafik.</td>
    <td> </td>
   </tr>
   <tr>
@@ -296,7 +296,7 @@ Ibland kan rensningsprocessen fördröjas om du växlar mellan svansen och det f
   </tr>
   <tr>
    <td><strong>Varför ignoreras skräpinsamlingen för revideringar?</strong></td>
-   <td><p>Revision Cleanup förlitar sig på en uppskattningsfas för att avgöra om det finns tillräckligt med skräp att rengöra. Uppskattaren jämför den aktuella storleken med storleken på databasen efter att den senast kompilerades. Om storleken överskrider den konfigurerade deltavärdet körs rensning. Storleksdeltavärdet är inställt på 1 GB. Detta innebär att om databasstorleken inte har ökat med 1 GB sedan den senaste rensningen, hoppas den nya versionen över. </p> <p>Nedan anges de relevanta loggposterna för uppskattningsfasen:</p>
+   <td><p>Revision Cleanup förlitar sig på en uppskattningsfas för att avgöra om det finns tillräckligt med skräp att rengöra. Uppskattaren jämför den aktuella storleken med storleken på databasen efter den senaste komprimeringen. Om storleken överskrider den konfigurerade deltavärdet körs rensning. Storleksdeltavärdet är inställt på 1 GB. Detta innebär att om databasstorleken inte har ökat med 1 GB sedan den senaste rensningen, hoppas den nya versionen över. </p> <p>Nedan anges de relevanta loggposterna för uppskattningsfasen:</p>
     <ul>
      <li>Revision GC körs: <em>Storleksförändringen är N% eller N/N (N/N byte), så komprimering körs</em></li>
      <li>Revision GC gör <strong>not</strong> run: <em>Storleksförändringen är N% eller N/N (N/N byte), så hoppa över komprimering för tillfället</em></li>
@@ -304,7 +304,7 @@ Ibland kan rensningsprocessen fördröjas om du växlar mellan svansen och det f
    <td> </td>
   </tr>
   <tr>
-   <td><strong>Går det att avbryta den automatiska komprimeringen om prestandan är för hög?</strong></td>
+   <td><strong>Går det att avbryta den automatiska komprimeringen på ett säkert sätt om prestandan är för hög?</strong></td>
    <td>Ja. Sedan AEM 6.3 kan den stoppas på ett säkert sätt via underhållsuppgiftsfönstret på kontrollpanelen för drift eller via JMX.</td>
    <td> </td>
   </tr>
@@ -332,8 +332,8 @@ Ibland kan rensningsprocessen fördröjas om du växlar mellan svansen och det f
    <td><strong>Vad händer om det finns för mycket störningar från samtidiga skrivningar till databasen?</strong></td>
    <td><p>Om det finns samtidiga skrivningar i systemet kan rensning av onlineversioner kräva exklusiv skrivåtkomst för att ändringarna ska kunna verkställas i slutet av en kompaktionscykel. Systemet <strong>forceCompact-läge</strong>, vilket förklaras mer ingående i <a href="https://jackrabbit.apache.org/oak/docs/nodestore/segment/overview.html" target="_blank">Oak-dokumentation</a>. Under force compact hämtas ett exklusivt skrivlås för att slutligen genomföra ändringarna utan att några samtidiga skrivningar stör. För att begränsa effekten på svarstiderna kan ett timeout-värde definieras. Detta värde är inställt på en minut som standard, vilket innebär att om force compact inte slutförs inom en minut avbryts komprimeringsprocessen till förmån för samtidiga implementeringar.</p> <p>Kraftkomprimeringens varaktighet beror på följande faktorer:</p>
     <ul>
-     <li>maskinvara: specifikt IOPS. Varaktigheten minskar med fler IOPS.</li>
-     <li>segmentbutiksstorlek: längden ökar med segmentbutikens storlek.</li>
+     <li>maskinvara: IOPS. Varaktigheten minskar med fler IOPS.</li>
+     <li>segmentbutikens storlek: längden ökar med segmentbutikens storlek.</li>
     </ul> </td>
    <td> </td>
   </tr>
@@ -378,12 +378,12 @@ Ibland kan rensningsprocessen fördröjas om du växlar mellan svansen och det f
   </tr>
   <tr>
    <td><strong>Hur kontrollerar jag om rensningen av onlineversionen har slutförts utan problem?</strong></td>
-   <td><p>Du kan kontrollera om rensningen av onlineändringar har slutförts genom att kontrollera loggarna.</p> <p>Till exempel "<code>TarMK GC #{}: compaction completed in {} ({} ms), after {} cycles</code>" innebär att komprimeringssteget slutfördes utan att föregås av meddelandet "<code>TarMK GC #{}: compaction gave up compacting concurrent commits after {} cycles</code>", vilket betyder att det var för mycket samtidig belastning.</p> <p>Motsvarande meddelande visas<code>TarMK GC #{}: cleanup completed in {} ({} ms</code>" för att slutföra rensningssteget.</p> </td>
+   <td><p>Du kan kontrollera om rensningen av onlineändringar har slutförts genom att kontrollera loggarna.</p> <p>Till exempel "<code>TarMK GC #{}: compaction completed in {} ({} ms), after {} cycles</code>" innebär att komprimeringssteget slutfördes utan att föregås av meddelandet "<code>TarMK GC #{}: compaction gave up compacting concurrent commits after {} cycles</code>", vilket betyder att det var för mycket samtidig belastning.</p> <p>Motsvarande meddelande visas<code>TarMK GC #{}: cleanup completed in {} ({} ms</code>" för att rensningssteget ska slutföras.</p> </td>
    <td><p> </p> </td>
   </tr>
   <tr>
    <td><strong>Var hittar vi statistik över de senaste rensningarna av onlineversioner?</strong></td>
-   <td><p>Status, förlopp och statistik visas via JMX (<code>SegmentRevisionGarbageCollection</code> MBean). Mer information om <code>SegmentRevisionGarbageCollection</code> MBean, läs <a href="https://jackrabbit.apache.org/oak/docs/nodestore/segment/overview.html#monitoring-via-jmx" target="_blank">efter stycke</a>.</p> <p>Förloppet kan spåras via <code>EstimatedRevisionGCCompletion</code> attributet för <code>SegmentRevisionGarbageCollection MBean.</code></p> <p>Du kan hämta en referens för MBean med <code>ObjectName org.apache.jackrabbit.oak:name="Segment node store revision garbage collection",type="SegmentRevisionGarbageCollection"</code>.</p> <p>Statistiken är endast tillgänglig sedan den senaste systemstarten. Externa övervakningsverktyg kan användas för att hålla data utanför AEM drifttid. Se <a href="/help/sites-administering/operations-dashboard.md#monitoring-with-nagios" target="_blank">AEM dokumentation för att bifoga hälsokontroller till Nagios som ett exempel på ett externt övervakningsverktyg</a>.</p> </td>
+   <td><p>Status, förlopp och statistik visas via JMX (<code>SegmentRevisionGarbageCollection</code> MB). Mer information om <code>SegmentRevisionGarbageCollection</code> MBean, se <a href="https://jackrabbit.apache.org/oak/docs/nodestore/segment/overview.html#monitoring-via-jmx" target="_blank">efter stycke</a>.</p> <p>Förloppet kan spåras via <code>EstimatedRevisionGCCompletion</code> attributet för <code>SegmentRevisionGarbageCollection MBean.</code></p> <p>Du kan hämta en referens för MBean med <code>ObjectName org.apache.jackrabbit.oak:name="Segment node store revision garbage collection",type="SegmentRevisionGarbageCollection"</code>.</p> <p>Statistiken är endast tillgänglig sedan den senaste systemstarten. Externa övervakningsverktyg kan användas för att hålla data utanför AEM drifttid. Se <a href="/help/sites-administering/operations-dashboard.md#monitoring-with-nagios" target="_blank">AEM dokumentation för att bifoga hälsokontroller till Nagios som ett exempel på ett externt övervakningsverktyg</a>.</p> </td>
    <td> </td>
   </tr>
   <tr>
@@ -392,11 +392,11 @@ Ibland kan rensningsprocessen fördröjas om du växlar mellan svansen och det f
     <ul>
      <li>Rensa onlineändringar har startats/stoppats
       <ul>
-       <li>Rensa onlineändringar består av tre faser: uppskattning, komprimering och rensning. Uppskattningen kan tvinga komprimering och rensning att hoppa över om databasen inte innehåller tillräckligt mycket skräp. I den senaste versionen av AEM visas meddelandet<code>TarMK GC #{}: estimation started</code>" är början på uppskattningen, "<code>TarMK GC #{}: compaction started, strategy={}</code>" markerar början av komprimeringen och "T<code>arMK GC #{}: cleanup started. Current repository size is {} ({} bytes</code>" är början på rensningen.</li>
+       <li>Rensa onlineändringar består av tre faser: uppskattning, komprimering och rensning. Uppskattningen kan tvinga komprimering och rensning att hoppa över om databasen inte innehåller tillräckligt mycket skräp. I den senaste versionen AEM meddelandet<code>TarMK GC #{}: estimation started</code>" är början på uppskattningen, "<code>TarMK GC #{}: compaction started, strategy={}</code>" markerar början av komprimeringen och "T<code>arMK GC #{}: cleanup started. Current repository size is {} ({} bytes</code>" är början på rensningen.</li>
       </ul> </li>
      <li>Det diskutrymme som frigjorts vid rensning av revision
       <ul>
-       <li>Utrymmet återvinns endast när rensningsfasen är klar. Slutet av rensningsfasen markeras med loggmeddelandet "T<code>arMK GC #{}: cleanup completed in {} ({} ms</code>". Storleken efter rensning är {} ({} bytes) och återvunnet utrymme {} ({} byte). Vikt/djup för komprimeringskarta är {}/{} ({} byte/{})."</li>
+       <li>Utrymmet återvinns endast när rensningsfasen är slutförd. Slutet av rensningsfasen markeras med loggmeddelandet "T<code>arMK GC #{}: cleanup completed in {} ({} ms</code>". Storleken efter rensning är {} ({} bytes) och återvunnet utrymme {} ({} byte). Vikt/djup för komprimeringskarta är {}/{} ({} byte/{})."</li>
       </ul> </li>
      <li>Ett fel uppstod under rensningen av revisionen
       <ul>
@@ -414,8 +414,8 @@ Ibland kan rensningsprocessen fördröjas om du växlar mellan svansen och det f
    <td><strong>Hur kontrollerar jag databasens integritet efter att onlineversionen har rensats?</strong></td>
    <td><p>Det behövs ingen integritetskontroll för databasen efter rensning av onlinerevision. </p> <p>Du kan dock utföra följande åtgärder för att kontrollera databasens status efter rensning:</p>
     <ul>
-     <li>En databas <a href="/help/sites-deploying/consistency-check.md" target="_blank">traversal check</a></li>
-     <li>Använd ekkörningsverktyget när rensningsprocessen har slutförts för att kontrollera om det finns några inkonsekvenser. Mer information finns i <a href="https://github.com/apache/jackrabbit-oak/blob/trunk/oak-doc/src/site/markdown/nodestore/segment/overview.md#check" target="_blank">Apache-dokumentation.</a> Du behöver inte stänga av AEM för att köra verktyget.</li>
+     <li>En databas <a href="/help/sites-deploying/consistency-check.md" target="_blank">genomgång</a></li>
+     <li>Använd ekkörningsverktyget när rensningsprocessen har slutförts för att kontrollera om det finns några inkonsekvenser. Mer information om hur du gör detta finns i <a href="https://github.com/apache/jackrabbit-oak/blob/trunk/oak-doc/src/site/markdown/nodestore/segment/overview.md#check" target="_blank">Apache-dokumentation.</a> Du behöver inte stänga av AEM för att köra verktyget.</li>
     </ul> </td>
    <td> </td>
   </tr>
@@ -426,7 +426,7 @@ Ibland kan rensningsprocessen fördröjas om du växlar mellan svansen och det f
   </tr>
   <tr>
    <td><strong>Vilken information visas i hälsokontrollen för Revision Cleanup? Hur och när bidrar de till den färgkodade statusnivån? </strong></td>
-   <td><p>Hälsokontrollen vid rensning av revideringar ingår i <a href="/help/sites-administering/operations-dashboard.md#health-reports" target="_blank">Instrumentpanel för åtgärder</a>.<br /> </p> <p>Statusen är <strong>GRÖNT</strong> om den senaste körningen av underhållsaktiviteten för rensning av onlinerevision har slutförts.</p> <p>Det är <strong>GULA</strong> om underhållsaktiviteten Rensa onlineändringar har avbrutits en gång.<br /> </p> <p>Det är <strong>RED</strong> om underhållsaktiviteten Rensa onlineändringar har avbrutits tre gånger i rad. <strong>I detta fall krävs manuell interaktion</strong> eller rensning av onlineversioner kommer troligtvis att misslyckas igen. Mer information finns i <a href="/help/sites-deploying/revision-cleanup.md#troubleshooting-online-revision-cleanup">Felsökning</a> nedan.<br /> </p> <p>Observera också att hälsokontrollsstatusen återställs när systemet har startats om. En nyligen omstartad instans visar en grön status i hälsokontrollen för Revision Cleanup. Externa övervakningsverktyg kan användas för att hålla data utanför AEM drifttid. Se <a href="/help/sites-administering/operations-dashboard.md#monitoring-with-nagios">AEM dokumentation för att bifoga hälsokontroller till Nagios som ett exempel på ett externt övervakningsverktyg</a>.</p> </td>
+   <td><p>Hälsokontrollen vid rensning av revideringar ingår i <a href="/help/sites-administering/operations-dashboard.md#health-reports" target="_blank">Instrumentpanel för åtgärder</a>.<br /> </p> <p>Statusen är <strong>GRÖNT</strong> om den senaste körningen av underhållsaktiviteten för rensning av onlinerevision har slutförts.</p> <p>Det är <strong>GULA</strong> om underhållsaktiviteten Rensa onlineändringar har avbrutits en gång.<br /> </p> <p>Det är <strong>RED</strong> om underhållsaktiviteten Rensa onlineändringar har avbrutits tre gånger i rad. <strong>I detta fall krävs manuell interaktion</strong> eller rensning av onlineversioner kommer troligtvis att misslyckas igen. Mer information finns i <a href="/help/sites-deploying/revision-cleanup.md#troubleshooting-online-revision-cleanup">Felsökning</a> nedan.<br /> </p> <p>Dessutom återställs hälsokontrollsstatusen efter en omstart av systemet. En instans som har startats om nyligen visar en grön status i hälsokontrollen för Revision Cleanup. Externa övervakningsverktyg kan användas för att hålla data utanför AEM drifttid. Se <a href="/help/sites-administering/operations-dashboard.md#monitoring-with-nagios">AEM dokumentation för att bifoga hälsokontroller till Nagios som ett exempel på ett externt övervakningsverktyg</a>.</p> </td>
    <td> </td>
   </tr>
   <tr>
@@ -523,7 +523,7 @@ error.log är utförlig om det finns incidenter under rensningen av onlineversio
   </tr>  
   <tr>
     <td>Uppskattning</td>
-    <td>TjärMK GC #2: uppskattningen hoppades över eftersom komprimeringen har pausats.</td>
+    <td>TjäraMK GC #2: Uppskattningen hoppades över eftersom komprimeringen pausas.</td>
     <td>Uppskattningsfasen hoppas över när komprimering är inaktiverat i systemet efter konfiguration.</td>
     <td>Aktivera rensning av onlineversioner.</td>
   </td>
@@ -531,27 +531,27 @@ error.log är utförlig om det finns incidenter under rensningen av onlineversio
   <tr>
     <td>Ej tillämpligt</td>
     <td>TjärMK GC #2: Uppskattningen avbröts: ${REASON}. Hoppar över komprimering.</td>
-    <td>Uppskattningsfasen avslutades i förtid. Exempel på händelser som kan avbryta beräkningsfasen: det finns inte tillräckligt med minne eller diskutrymme på värdsystemet.</td>
+    <td>Uppskattningsfasen avslutades i förtid. Några exempel på händelser som kan avbryta beräkningsfasen: det finns inte tillräckligt med minne eller diskutrymme på värdsystemet.</td>
     <td>Beroende på den angivna orsaken.</td>
   </td>
   </tr>
   <tr>
     <td>Komprimering</td>
-    <td>TjärMK GC #2: komprimering pausad.</td>
+    <td>TjäraMK GC #2: komprimering pausad.</td>
     <td>Så länge komprimeringsfasen pausas av konfigurationen körs varken beräkningsfasen eller komprimeringsfasen.</td>
     <td>Aktivera rensning av onlineversioner.</td>
   </td>
   </tr>
    <tr>
     <td>Ej tillämpligt</td>
-    <td>TjärMK GC #2: komprimeringen avbröts: ${REASON}.</td>
-    <td>Komprimeringsfasen avslutades för tidigt. Exempel på händelser som kan avbryta kompaktionsfasen: det finns inte tillräckligt med minne eller diskutrymme på värdsystemet. Komprimeringen kan också avbrytas genom att systemet stängs av eller genom att det uttryckligen avbryts via administrativa gränssnitt som underhållspanelen i Operations Dashboard.</td>
+    <td>TjäraMK GC #2: komprimeringen har avbrutits: ${REASON}.</td>
+    <td>Komprimeringsfasen avslutades för tidigt. Några exempel på händelser som kan avbryta komprimeringsfasen: det finns inte tillräckligt med minne eller diskutrymme på värdsystemet. Komprimeringen kan också avbrytas genom att systemet stängs av eller genom att det uttryckligen avbryts via administrativa gränssnitt som underhållspanelen i Operations Dashboard.</td>
     <td>Beroende på den angivna orsaken.</td>
   </td>
   </tr>
   <tr>
     <td>Ej tillämpligt</td>
-    <td>TjärMK GC #2: komprimering misslyckades med 32,902 min (1974140 ms), efter 5 cykler.</td>
+    <td>TjärMK GC #2: komprimering misslyckades i 32,902 min (1974140 ms), efter 5 cykler.</td>
     <td>Det här meddelandet betyder inte att det fanns ett oåterkalleligt fel, men bara den komprimeringen avslutades efter några försök. Läs även <a href="https://jackrabbit.apache.org/oak/docs/nodestore/segment/overview.html#how-does-compaction-works-with-concurrent-writes">efter stycke.</a></td>
     <td>Läs följande <a href="https://jackrabbit.apache.org/oak/docs/nodestore/segment/overview.html#how-does-compaction-works-with-concurrent-writes">Oak-dokumentation</a>och den sista frågan i avsnittet Running Online Revision Cleanup.</a></td>
   </td>
@@ -560,7 +560,7 @@ error.log är utförlig om det finns incidenter under rensningen av onlineversio
     <td>Rensa</td>
     <td>TjärMK GC #2: rensningen avbröts.</td>
     <td>Rensningen avbröts genom att databasen stängdes av. Ingen påverkan på konsekvensen förväntas. Dessutom kommer diskutrymmet troligtvis inte att återvinnas i full utsträckning. Den kommer att återvinnas under nästa revisionsrensningscykel.</td>
-    <td>Undersök varför databasen har stängts av och gå framåt för att undvika att stänga av databasen under underhållsfönster.</td>
+    <td>Undersök varför databasen har stängts av och gå framåt för att undvika att stänga av databasen under underhållsfönstren.</td>
   </td>
   </tr>
   </tbody>
@@ -576,7 +576,7 @@ Adobe har ett verktyg som heter **Oak-run** för att rensa revisioner. Den kan l
 
 [https://repo1.maven.org/maven2/org/apache/jackrabbit/oak-run/](https://repo1.maven.org/maven2/org/apache/jackrabbit/oak-run/)
 
-Verktyget är en burk som kan köras manuellt för att komprimera databasen. Processen kallas för rensning av offlineändringar eftersom databasen måste stängas av för att verktyget ska kunna köras korrekt. Se till att planera rensningen i enlighet med ditt underhållsfönster.
+Verktyget är en körbar burk som kan köras manuellt för att komprimera databasen. Processen kallas för rensning av offlineändringar eftersom databasen måste stängas av för att verktyget ska kunna köras korrekt. Se till att planera rensningen i enlighet med ditt underhållsfönster.
 
 Tips om hur du kan förbättra rensningsprocessens prestanda finns i [Förbättra prestanda för rensning av offlinerevision](/help/sites-deploying/revision-cleanup.md#increasing-the-performance-of-offline-revision-cleanup).
 
@@ -612,7 +612,7 @@ Verktyget för ekakning innehåller flera funktioner som syftar till att öka pr
 
 Listan innehåller flera kommandoradsparametrar, enligt beskrivningen nedan:
 
-* **-mmap.** Du kan ange detta som sant eller falskt. Om värdet är true används minnesmappad åtkomst. Om värdet är false används filåtkomst. Om inget anges används minnesmappad åtkomst på 64-bitarssystem och filåtkomst används på 32-bitarssystem. I Windows används alltid vanlig filåtkomst och det här alternativet ignoreras. **Den här parametern har ersatt parametern -Dtar.memoryMMapped.**
+* **-mmap.** Du kan ange det här som sant eller falskt. Om värdet är true används minnesmappad åtkomst. Om värdet är false används filåtkomst. Om inget anges används minnesmappad åtkomst på 64-bitarssystem och filåtkomst används på 32-bitarssystem. I Windows används alltid vanlig filåtkomst och det här alternativet ignoreras. **Den här parametern har ersatt parametern -Dtar.memoryMMapped.**
 
 * **-Dupdate.limit**. Definierar tröskelvärdet för tömning av en temporär transaktion till disk. Standardvärdet är 10000.
 
@@ -626,7 +626,7 @@ Listan innehåller flera kommandoradsparametrar, enligt beskrivningen nedan:
 
 >[!CAUTION]
 >
->Använda `--force` parametern uppgraderar segmentbutiken till den senaste versionen, vilket inte är kompatibelt med äldre Oak-versioner. Tänk också på att ingen nedgradering är möjlig. I allmänhet bör du använda dessa parametrar med försiktighet och endast om du har kunskap om hur de används.
+>Använda `--force` parametern uppgraderar segmentbutiken till den senaste versionen, vilket inte är kompatibelt med äldre Oak-versioner. Tänk också på att ingen nedgradering är möjlig. I allmänhet bör du använda dessa parametrar med försiktighet och endast om du har kunskap om hur du använder dem.
 
 Ett exempel på de parametrar som används:
 
@@ -640,7 +640,7 @@ Förutom metoderna ovan kan du även aktivera funktionen för revisionsrensning 
 
 1. Öppna JMX-konsolen genom att gå till [http://localhost:4502/system/console/jmx](http://localhost:4502/system/console/jmx)
 1. Klicka på **RevisionGarbageCollection** MBean.
-1. I nästa fönster klickar du på **startRevisionGC()** och sedan **Anropa** för att starta jobbet Revision Skräpsamling.
+1. Klicka på i nästa fönster **startRevisionGC()** och sedan **Anropa** för att starta jobbet Revision Skräpsamling.
 
 ### Vanliga frågor och svar om rensning av offlinerevision {#offline-revision-cleanup-frequently-asked-questions}
 

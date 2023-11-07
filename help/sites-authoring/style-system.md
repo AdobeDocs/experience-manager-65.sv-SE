@@ -9,9 +9,9 @@ content-type: reference
 topic-tags: site-features
 discoiquuid: e3ccddb6-be5e-4e5f-a017-0eed263555ce
 exl-id: 1772368a-f5c9-440c-a92a-0f1d34cc4bf8
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1306'
+source-wordcount: '1304'
 ht-degree: 1%
 
 ---
@@ -24,7 +24,7 @@ På så sätt elimineras behovet av att utveckla en anpassad komponent för varj
 
 ## Användningsfall {#use-case}
 
-Mallförfattare behöver inte bara kunna konfigurera hur komponenterna fungerar för innehållsförfattarna, utan även konfigurera ett antal alternativa visuella varianter av en komponent.
+Mallförfattare behöver inte bara kunna konfigurera hur komponenterna fungerar för innehållsförfattarna, utan även konfigurera flera alternativa visuella varianter av en komponent.
 
 På samma sätt behöver innehållsförfattare inte bara kunna strukturera och ordna sitt innehåll, utan också kunna välja hur det ska presenteras visuellt.
 
@@ -160,4 +160,4 @@ Den här egenskapen ställs in på `cq:Component` nod. Till exempel:
 
 Den här möjligheten att definiera formatnamn är användbar för mycket generiska komponenter, som Layoutbehållaren eller komponenten Innehållsfragment, för att ge dem ytterligare innebörd.
 
-Den tillåter till exempel att en Layout Container får semantik som `<main>`, `<aside>`, `<nav>`, osv.
+Den tillåter till exempel att en Layout Container får semantik som `<main>`, `<aside>`, `<nav>`och så vidare.

@@ -2,9 +2,9 @@
 title: Konfigurera standardkomponenter i designläge
 description: Konfigurera Adobe Experience Manager-komponenter i designläge.
 exl-id: 5e232886-75c1-4f0f-b359-4739ae035fd3
-source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '915'
+source-wordcount: '914'
 ht-degree: 0%
 
 ---
@@ -46,7 +46,7 @@ Innehållet på en produktsida kan till exempel innehålla ett styckesystem som 
 >
 >Vi rekommenderar att du definierar design av statiska mallar genom att redigera designen i designläge enligt beskrivningen i den här artikeln
 >
->Det är till exempel inte bra att ändra designen i CRX DE och tillämpningen av den kan variera från förväntat beteende. Se utvecklardokumentet [Sidmallar - statiska](/help/sites-developing/page-templates-static.md#how-template-designs-are-applied) för mer information.
+>Det är till exempel inte bra att ändra designen i CRX DE, och tillämpningen av den typen av design kan variera från förväntat beteende. Se utvecklardokumentet [Sidmallar - statiska](/help/sites-developing/page-templates-static.md#how-template-designs-are-applied) för mer information.
 
 ## Aktivera/inaktivera komponenter {#enable-disable-components}
 
@@ -95,7 +95,7 @@ Så här aktiverar eller inaktiverar du en komponent:
 
    >[!NOTE]
    >
-   >Adaptiva formulärkomponenter är utformade för att fungera inuti en adaptiv formulärbehållare för att utnyttja Forms ekosystem. Därför får dessa komponenter endast användas i en anpassad formulärredigerare och de fungerar inte i sidredigeraren Platser.
+   >Adaptiva formulärkomponenter är utformade för att fungera i adaptiva formulärbehållare för att använda Forms ekosystem. Därför får dessa komponenter endast användas i en anpassad formulärredigerare och de fungerar inte i sidredigeraren Platser.
 
    **Inställningar**
 

@@ -5,7 +5,7 @@ contentOwner: AG
 role: User, Admin
 feature: Asset Insights,Asset Reports
 exl-id: 80e8f84e-3235-4212-9dcd-6acdb9067893
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '586'
 ht-degree: 1%
@@ -14,11 +14,11 @@ ht-degree: 1%
 
 # Aktivera resursinsikter via DTM {#enable-asset-insights-through-dtm}
 
-Adobe Dynamic Tag Management är ett verktyg som aktiverar era verktyg för digital marknadsföring. Det tillhandahålls kostnadsfritt till Adobe Analytics-kunder. Du kan antingen anpassa din spårningskod för att aktivera CMS-lösningar från tredje part för att använda Assets Insights eller så kan du använda DTM för att infoga Assets Insights-taggar. Insikter stöds endast och tillhandahålls för bilder.
+Adobe Dynamic Tag Management är ett verktyg som aktiverar era verktyg för digital marknadsföring. Det tillhandahålls kostnadsfritt till Adobe Analytics-kunder. Du kan antingen anpassa din spårningskod för att aktivera CMS-lösningar från tredje part för att använda Assets Insights eller använda DTM för att infoga Assets Insights-taggar. Insikter stöds endast och tillhandahålls för bilder.
 
 >[!CAUTION]
 >
->Adobe DTM är ersatt med [!DNL Adobe Experience Platform] och kommer snart att nå [livstid](https://medium.com/launch-by-adobe/dtm-plans-for-a-sunset-3c6aab003a6f). Adobe rekommenderar att du [use [!DNL Adobe Experience Platform] för resursinsikter](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/advanced/asset-insights-launch-tutorial.html).
+>Adobe DTM är ersatt med [!DNL Adobe Experience Platform] och kommer snart [livstid](https://medium.com/launch-by-adobe/dtm-plans-for-a-sunset-3c6aab003a6f). Adobe rekommenderar att du [use [!DNL Adobe Experience Platform] för resursinsikter](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/advanced/asset-insights-launch-tutorial.html).
 
 Utför dessa steg för att aktivera Assets Insights via DTM.
 
@@ -32,11 +32,11 @@ Utför dessa steg för att aktivera Assets Insights via DTM.
 
    * Välj **[!UICONTROL Web Properties]** och sedan klicka på **[!UICONTROL Add Property]**.
 
-   * Uppdatera fälten efter behov och klicka på **[!UICONTROL Create Property]**. Se [dokumentation](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html).
+   * Uppdatera fälten efter behov och klicka **[!UICONTROL Create Property]**. Se [dokumentation](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html).
 
    ![Skapa redigera webbegenskap](assets/Create-edit-web-property.png)
 
-1. I **[!UICONTROL Rules]** flik, välja **[!UICONTROL Page Load Rules]** i navigeringsrutan och klicka **[!UICONTROL Create New Rule]**.
+1. I **[!UICONTROL Rules]** flik, välja **[!UICONTROL Page Load Rules]** i navigeringsrutan och klicka på **[!UICONTROL Create New Rule]**.
 
    ![chlimage_1-58](assets/chlimage_1-194.png)
 
@@ -54,9 +54,9 @@ Utför dessa steg för att aktivera Assets Insights via DTM.
    >* Beroende på var Assets Insights Page Tracker finns (till exempel Experience Manager, CDN och så vidare) kan skriptkällans ursprung kräva ändringar.
    >* För sidspåraren som är värd för Experience Manager ska källan peka på en publiceringsinstans med hjälp av värdnamnet för dispatcher-instansen.
 
-1. Öppna `https://dtm.adobe.com`. Klicka **[!UICONTROL Overview]** i webbegenskapen och klicka på **[!UICONTROL Add Tool]** eller öppna ett befintligt Adobe Analytics-verktyg. När du skapar verktyget kan du ange **[!UICONTROL Configuration Method]** till **[!UICONTROL Automatic]**.
+1. Öppna `https://dtm.adobe.com`. Klicka **[!UICONTROL Overview]** i webbegenskapen och klicka **[!UICONTROL Add Tool]** eller öppna ett befintligt Adobe Analytics-verktyg. När du skapar verktyget kan du ange **[!UICONTROL Configuration Method]** till **[!UICONTROL Automatic]**.
 
-   ![Lägg till Adobe Analytics](assets/Add-Adobe-Analytics-Tool.png)
+   ![Verktyget Lägg till Adobe Analytics](assets/Add-Adobe-Analytics-Tool.png)
 
    Välj rapportsviter för mellanlagring/produktion efter behov.
 
@@ -110,7 +110,7 @@ Utför dessa steg för att aktivera Assets Insights via DTM.
    * Kodanrop `assetAnalytics.dispatcher.init()` efter att ha kontrollerat att `_satellite.getToolsByType('sc')[0].getS()` initieras och `assetAnalytics,dispatcher.init` är tillgängligt. Du kan därför hoppa över att lägga till den i steg 11.
    * Enligt kommentarerna i Insights Page Tracker-koden (**[!UICONTROL Tools > Assets > Insights Page Tracker]**), när sidspåraren inte skapar en `AppMeasurement` är de tre första argumenten (RSID, Tracking Server och Visitor Namespace) irrelevanta. Tomma strängar skickas i stället för att markera detta.\
      De återstående argumenten motsvarar konfigurationen på sidan Insights Configuration (**[!UICONTROL Tools > Assets > Insights Configuration]**).
-   * AppMeasurementet hämtas genom att en fråga skickas `satelliteLib` för alla tillgängliga SiteCatalyst-motorer. Om flera taggar har konfigurerats ändrar du indexvärdet för arrayväljaren på rätt sätt. Posterna i arrayen ordnas enligt de SiteCatalyst-verktyg som finns i DTM-gränssnittet.
+   * AppMeasurementet hämtas genom att en fråga skickas `satelliteLib` för alla tillgängliga SiteCatalyster. Om flera taggar har konfigurerats ändrar du indexvärdet för arrayväljaren på rätt sätt. Posterna i arrayen ordnas enligt de verktyg för SiteCatalyst som finns i DTM-gränssnittet.
 
 1. Spara och stäng fönstret Kodredigeraren och spara sedan ändringarna i verktygskonfigurationen.
-1. I **[!UICONTROL Approvals]** godkänner du båda väntande godkännanden. DTM-taggen kan infogas på webbsidan.
+1. I **[!UICONTROL Approvals]** godkänner du båda väntande godkännanden. DTM-taggen är klar att infogas på webbsidan.

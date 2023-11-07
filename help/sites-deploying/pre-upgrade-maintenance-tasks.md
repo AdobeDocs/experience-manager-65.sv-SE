@@ -12,9 +12,9 @@ discoiquuid: 291c91e5-65ff-473d-ac11-3da480239e76
 docset: aem65
 feature: Upgrading
 exl-id: 37d4aee4-15eb-41ab-ad71-dfbd5c7910f8
-source-git-commit: e54c1d422f2bf676e8a7b0f50a101e495c869c96
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2031'
+source-wordcount: '2029'
 ht-degree: 0%
 
 ---
@@ -60,7 +60,7 @@ När du börjar AEM från filen jar `quickstart.properties` filen genereras unde
 
 The `WorkflowPurgeTask` och `com.day.cq.audit.impl.AuditLogMaintenanceTask` uppgifter kräver separata OSGi-konfigurationer och kan inte fungera utan dem. Om de inte fungerar när en uppgift körs före uppgraderingen är det mest troligt att konfigurationer saknas. Se därför till att du lägger till OSGi-konfigurationer för dessa uppgifter eller tar bort dem helt och hållet från listan över uppgifter som ska optimeras före uppgraderingen om du inte vill köra dem. Dokumentation om hur du konfigurerar rensningsåtgärder för arbetsflöden finns på [Administrera arbetsflödesinstanser](/help/sites-administering/workflows-administering.md) och konfigurationen av underhållsaktiviteten för granskningsloggen finns på [Granskningslogghantering i AEM 6](/help/sites-administering/operations-audit-log.md).
 
-Information om rensning av arbetsflödes- och granskningslogg på CQ 5.6 samt rensning av granskningslogg på AEM 6.0 finns i [Rensa arbetsflödes- och granskningsnoder](https://helpx.adobe.com/experience-manager/kb/howtopurgewf.html).
+Mer information om rensning av arbetsflödes- och granskningslogg i CQ 5.6 och rensning av granskningslogg i AEM 6.0 finns i [Rensa arbetsflödes- och granskningsnoder](https://helpx.adobe.com/experience-manager/kb/howtopurgewf.html).
 
 ## Installera, konfigurera och köra uppgifter före uppgradering {#install-configure-run-pre-upgrade-tasks}
 

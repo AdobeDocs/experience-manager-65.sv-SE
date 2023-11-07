@@ -7,9 +7,9 @@ topic-tags: introduction
 content-type: reference
 docset: aem65
 exl-id: 55803b7a-9064-4392-9cc2-9f113fa8dc29
-source-git-commit: f03d0ab9d0f491441378e16e1590d33651f064b5
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '549'
+source-wordcount: '548'
 ht-degree: 1%
 
 ---
@@ -50,7 +50,7 @@ De här konsolerna liknar konsolen Communities Sites.
    * **[!UICONTROL Community Group Root]**: *lämna som standard*
    * **[!UICONTROL Additional Available Community Group Language(s)]**: använd listrutan för att välja tillgängliga språk för communitygrupper. Menyn innehåller alla språk som den överordnade communitywebbplatsen skapas på. Användarna kan välja mellan dessa språk för att skapa grupper i flera språkområden i det här steget. Samma grupp skapas på flera angivna språk i gruppkonsolen för respektive communityplats.
    * **[!UICONTROL Community Group Name]**: konst
-   * **[!UICONTROL Template]**: listruta att välja `Reference Group`
+   * **[!UICONTROL Template]**: nedrullningsbar meny att välja `Reference Group`
    * Välj **[!UICONTROL Next]**
 
 ![Kapslade communitygrupper](assets/parent-to-nestedgroup.png)
@@ -148,7 +148,7 @@ Efter publicering av den huvudsakliga communitywebbplatsen:
 
 ## Upplevelse vid publicering {#experience-on-publish}
 
-Det går att uppleva de olika grupperna när de loggas in, till exempel med [demoanvändare](/help/communities/tutorials.md#demo-users) används för:
+Det går att uppleva de olika grupperna när de är inloggade, till exempel med [demoanvändare](/help/communities/tutorials.md#demo-users) används för:
 
 * Medlem i konst-/historikgrupp: `emily.andrews@mailinator.com/password`
    * Den begränsade (hemliga) gruppen, konst/historik, är synlig:

@@ -10,9 +10,9 @@ geptopics: SG_AEMFORMS/categories/setting_up_and_managing_domains
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 31dd8db3-ddac-429e-82f8-8c5dc4ffc186
 exl-id: d72a3977-1423-49e0-899b-234bb76be378
-source-git-commit: 1cdd15800548362ccdd9e70847d9df8ce93ee06e
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1576'
+source-wordcount: '1575'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ Om du aktiverar enkel inloggning med SPNEGO lägger du till en Kerberos-autentis
 ## Lägg till en autentiseringsprovider {#add-an-authentication-provider}
 
 1. I administrationskonsolen klickar du på Inställningar > Användarhantering > Domänhantering.
-1. Klicka på en befintlig domän i listan. Om du lägger till autentisering för en ny domän finns mer information i [Lägg till en företagsdomän](/help/forms/using/admin-help/adding-domains.md#add-an-enterprise-domain) eller [Lägg till en hybriddomän](/help/forms/using/admin-help/adding-domains.md#add-a-hybrid-domain).
+1. Klicka på en befintlig domän i listan. Om du lägger till autentisering för en ny domän, se [Lägg till en företagsdomän](/help/forms/using/admin-help/adding-domains.md#add-an-enterprise-domain) eller [Lägg till en hybriddomän](/help/forms/using/admin-help/adding-domains.md#add-a-hybrid-domain).
 1. Klicka på Lägg till autentisering och välj en leverantör i listan Autentiseringsprovider, beroende på vilken autentiseringsmetod din organisation använder.
 1. Ange eventuell ytterligare information som krävs på sidan. (Se [Autentiseringsinställningar](configuring-authentication-providers.md#authentication-settings).)
 1. (Valfritt) Klicka på Testa för att testa konfigurationen.
@@ -58,7 +58,7 @@ Om du vill använda den LDAP-server som anges i katalogkonfigurationen väljer d
 
 Om du vill använda en annan LDAP-server för autentisering, markerar du LDAP som autentiseringsprovider och markerar kryssrutan Anpassad LDAP-autentisering. Följande konfigurationsinställningar visas.
 
-**Server:** (Obligatoriskt) Fullständigt kvalificerat domännamn (FQDN) för katalogservern. För en dator som till exempel heter x i example.com-nätverket är FQDN x.example.com. En IP-adress kan användas i stället för FQDN-servernamnet.
+**Server:** (Obligatoriskt) Katalogserverns fullständiga domännamn (FQDN). För en dator som till exempel heter x i example.com är FQDN x.example.com. En IP-adress kan användas i stället för FQDN-servernamnet.
 
 **Port:** (Obligatoriskt) Den port som katalogservern använder. Vanligtvis 389, eller 636, om SSL-protokollet (Secure Sockets Layer) används för att skicka autentiseringsinformation över nätverket.
 
@@ -104,18 +104,18 @@ Om du konfigurerar autentisering för en företagsdomän eller hybriddomän och 
 
 **Identitetsprovidern stöder grundläggande klientautentisering:** Grundläggande klientautentisering används när IDP använder en SAML-artefaktmatchningsprofil. I den här profilen ansluter Hantering av användare tillbaka till en webbtjänst som körs på IDP för att hämta SAML-försäkran. IDP kan kräva autentisering. Om IDP kräver autentisering markerar du det här alternativet och anger ett användarnamn och lösenord i rutorna.
 
-**Egna egenskaper:** Gör att du kan ange ytterligare egenskaper. De ytterligare egenskaperna är namn=värde-par avgränsade med nya rader.
+**Egna egenskaper:** Du kan ange ytterligare egenskaper. De ytterligare egenskaperna är namn=värde-par avgränsade med nya rader.
 
 Följande anpassade egenskaper krävs om artefaktbindning används.
 
-* Lägg till följande anpassade egenskap för att ange ett användarnamn som representerar den AEM formulärtjänstleverantören, som kommer att användas för autentisering till tjänsten IDP Artifact Resolution.
-   `saml.idp.resolve.username=<username>`
+* Lägg till följande anpassade egenskap för att ange ett användarnamn som representerar den AEM formulärtjänstleverantören, som används för att autentisera till tjänsten IDP Artifact Resolution.
+  `saml.idp.resolve.username=<username>`
 
 * Lägg till följande anpassade egenskap för att ange lösenordet för användaren som anges i `saml.idp.resolve.username`.
-   `saml.idp.resolve.password=<password>`
+  `saml.idp.resolve.password=<password>`
 
 * Lägg till följande anpassade egenskap så att tjänstleverantören kan ignorera certifikatverifieringen när anslutningen med tjänsten Artefaktmatchning upprättas via SSL.
-   `saml.idp.resolve.ignorecert=true`
+  `saml.idp.resolve.ignorecert=true`
 
 ### Anpassade inställningar {#custom-settings}
 
@@ -133,9 +133,9 @@ Den här proceduren beskriver hur traditionell autentisering fungerar i AEM form
 
    **Finns** Om användaren är aktuell och olåst returnerar Hantering av användare autentiseringen. Om användaren inte är aktuell eller låst returneras ett autentiseringsfel.
 
-   **Finns inte** Användarhantering returnerar autentiseringsfel.
+   **Finns inte** Användarhantering returnerar ett autentiseringsfel.
 
-   **Ogiltig** Användarhantering returnerar autentiseringsfel.
+   **Ogiltig** Användarhantering returnerar ett autentiseringsfel.
 
 1. Resultatet som returneras av autentiseringsprovidern utvärderas. Om autentiseringsprovidern returnerade autentiseringen kan användaren logga in. Annars kontrolleras användarhanteringen med nästa autentiseringsprovider (steg 2-3).
 1. Autentiseringsfel returneras om ingen tillgänglig autentiseringsprovider validerar inloggningsuppgifterna.
@@ -155,7 +155,7 @@ Autentiseringen misslyckas om en användare autentiseras utan att etablera just-
 1. Om du vill skapa en domän klickar du på Ny företagsdomän eller Ny hybrid-domän. Om du vill redigera en befintlig domän klickar du på domänens namn.
 1. Markera Aktivera etablering i realtid.
 
-   ***anteckning **: Om kryssrutan Enable Just In Time Provisioning (Aktivera endast tidsprovisionering) saknas klickar du på Home (Hem) > Settings (Inställningar) > User Management (Användarhantering) > Configuration (Konfiguration) > Advanced System Attributes (Avancerade systemattribut) och klickar sedan på Läs in igen.*
+   ***anteckning **: Om kryssrutan Enable Just In Time Provisioning (Aktivera endast tidsprovisionering) saknas klickar du på Home (Hem) > Settings (Inställningar) > User Management (Användarhantering) > Configuration (Konfiguration) > Advanced System Attributes (Avancerade systemattribut) och sedan på Läs in igen.*
 
 1. Lägg till autentiseringsproviders. När du lägger till autentiseringsproviders väljer du en registrerad identitetsskapare och tilldelningsprovider på skärmen Ny autentisering. (Se [Konfigurerar autentiseringsproviders](configuring-authentication-providers.md#configuring-authentication-providers).)
 1. Spara domänen.

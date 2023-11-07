@@ -10,9 +10,9 @@ topic-tags: development-tools
 content-type: reference
 discoiquuid: aa58cfb8-ec15-4698-a8f0-97683b0de51c
 exl-id: 9d421599-0417-4329-a528-9cda4e3716f5
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '436'
+source-wordcount: '434'
 ht-degree: 0%
 
 ---
@@ -48,7 +48,7 @@ Installera Eclipse efter [Installationsanvisningar](https://wiki.eclipse.org/Ecl
 
 ## Konfigurera ditt AEM baserat på Maven {#set-up-your-aem-project-based-on-maven}
 
-Konfigurera sedan projektet med Maven enligt beskrivningen i [Så här skapar du AEM projekt med Apache Maven](/help/sites-developing/ht-projects-maven.md).
+Konfigurera sedan projektet med Maven enligt beskrivningen i [Skapa AEM projekt med Apache Maven](/help/sites-developing/ht-projects-maven.md).
 
 ## Förbered JSP-stöd för Eclipse {#prepare-jsp-support-for-eclipse}
 
@@ -57,14 +57,14 @@ Eclipse kan även ge stöd vid arbete med JSP, till exempel
 * automatisk komplettering av taggbibliotek
 * Eclipse-medvetenhet om objekt som definieras av &lt;cq:defineobjects /> och &lt;sling:defineobjects />
 
-För att det ska fungera:
+Så fungerar det:
 
-1. Följ instruktionerna på [Så här arbetar du med JSP:er](/help/sites-developing/ht-projects-maven.md#how-to-work-with-jsps) in [Så här skapar du AEM projekt med Apache Maven](/help/sites-developing/ht-projects-maven.md).
+1. Följ instruktionerna på [Så här arbetar du med JSP:er](/help/sites-developing/ht-projects-maven.md#how-to-work-with-jsps) in [Skapa AEM projekt med Apache Maven](/help/sites-developing/ht-projects-maven.md).
 1. Lägg till följande i &lt;build /> i innehållsmodulens POM.
 
    Eclipse&#39;s Maven support plugin, m2e, ger inte stöd för maven-jspc-plugin, och den här konfigurationen anger för m2e att ignorera plugin-programmet och den relaterade uppgiften att rensa upp de tillfälliga kompileringsresultaten.
 
-   Detta är inget problem: enligt vad som anges i [Så här arbetar du med JSP:er](/help/sites-developing/ht-projects-maven.md#how-to-work-with-jsps)används maven-jspc-plugin i den här konfigurationen bara för att validera att JSP:er kompileras som en del av byggprocessen. Eclipse rapporterar redan om JSP-problem och förlitar sig inte på denna Maven-plugin för att kunna göra det.
+   Detta är inte något problem: vilket beskrivs i [Så här arbetar du med JSP:er](/help/sites-developing/ht-projects-maven.md#how-to-work-with-jsps)används maven-jspc-plugin i den här konfigurationen bara för att validera att JSP:er kompileras som en del av byggprocessen. Eclipse rapporterar redan om JSP-problem och förlitar sig inte på denna Maven-plugin för att kunna göra det.
 
    **myproject/content/pom.xml**
 

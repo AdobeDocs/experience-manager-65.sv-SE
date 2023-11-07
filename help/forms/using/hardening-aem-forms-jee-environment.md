@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.4
 discoiquuid: 6b380e92-f90d-4875-b7a2-f3958daf2364
 role: Admin
 exl-id: 6fb260f9-d0f8-431e-8d4e-535b451e4124
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '7667'
+source-wordcount: '7665'
 ht-degree: 0%
 
 ---
@@ -430,7 +430,7 @@ Du kan ange antalet misslyckade försök och efterföljande låsningstid som AEM
 
 ### Granskning och loggning {#auditing-and-logging}
 
-En korrekt och säker användning av programgranskning och loggning kan bidra till att säkerställa att säkerheten och andra avvikande händelser spåras och upptäcks så snabbt som möjligt. Effektiv användning av granskning och loggning i ett program omfattar bland annat att spåra genomförda och misslyckade inloggningar samt viktiga programhändelser som skapande eller borttagning av nyckelposter.
+En korrekt och säker användning av programgranskning och loggning kan bidra till att säkerställa att säkerheten och andra avvikande händelser spåras och upptäcks så snabbt som möjligt. Effektiv användning av granskning och loggning i ett program omfattar bland annat att spåra genomförda och misslyckade inloggningar och viktiga programhändelser som skapande eller borttagning av nyckelposter.
 
 Du kan använda granskning för att identifiera många typer av attacker, bland annat:
 
@@ -662,7 +662,7 @@ Vissa URL:er markeras som användarvänliga webbprogram. Du bör undvika att exp
 
 En CSRF-attack (Cross-Site Request Forgery) utnyttjar det förtroende som en webbplats har för användaren för att överföra kommandon som är otillåtna och oavsedda av användaren. Anfallet konfigureras genom att en länk, ett skript eller en URL-adress läggs till i ett e-postmeddelande för att komma åt en annan webbplats som användaren redan har autentiserats på.
 
-Du kan till exempel vara inloggad på administrationskonsolen samtidigt som du bläddrar på en annan webbplats. En av webbsidorna kan innehålla en HTML-bildtagg med en `src` attribut som riktar sig till ett skript på den drabbade webbplatsen. Genom att utnyttja den cookie-baserade sessionsautentiseringsmekanismen som tillhandahålls av webbläsare kan angripande webbplats skicka skadliga förfrågningar till detta skript på servern, som masquerading är den legitima användaren. Fler exempel finns i [https://owasp.org/www-community/attacks/csrf#Examples](https://owasp.org/www-community/attacks/csrf#Examples).
+Du kan till exempel vara inloggad på administrationskonsolen samtidigt som du bläddrar på en annan webbplats. En av webbsidorna kan innehålla en HTML-bildtagg med en `src` attribut som riktar sig till ett skript på den drabbade webbplatsen. Genom att använda den cookie-baserade sessionsautentiseringsmekanismen som tillhandahålls av webbläsare kan angripande webbplats skicka skadliga förfrågningar till detta skript på servern, som masquerading är den legitima användaren. Fler exempel finns i [https://owasp.org/www-community/attacks/csrf#Examples](https://owasp.org/www-community/attacks/csrf#Examples).
 
 Följande egenskaper är gemensamma för CSRF:
 

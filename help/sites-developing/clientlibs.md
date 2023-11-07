@@ -7,9 +7,9 @@ topic-tags: introduction
 content-type: reference
 docset: aem65
 exl-id: 408ac30c-60ab-4d6c-855c-d544af8d5cf9
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2856'
+source-wordcount: '2853'
 ht-degree: 0%
 
 ---
@@ -122,7 +122,7 @@ Webbklienten måste ha behörighet att komma åt `cq:ClientLibraryFolder` nod. D
 
 ### Åsidosätta bibliotek i /lib {#overriding-libraries-in-lib}
 
-Klientbiblioteksmappar som finns nedan `/apps` har företräde framför mappar med samma namn som finns i `/libs`. Till exempel: `/apps/cq/ui/widgets` har företräde framför `/libs/cq/ui/widgets`. När dessa bibliotek tillhör samma kategori visas biblioteket nedan `/apps` används.
+Klientbiblioteksmappar som finns nedan `/apps` har företräde framför mappar med samma namn som har liknande namn i `/libs`. Till exempel: `/apps/cq/ui/widgets` har företräde framför `/libs/cq/ui/widgets`. När dessa bibliotek tillhör samma kategori visas biblioteket nedan `/apps` används.
 
 ### Hitta en klientbiblioteksmapp och använda servern för proxyklientbibliotek {#locating-a-client-library-folder-and-using-the-proxy-client-libraries-servlet}
 
@@ -197,7 +197,7 @@ Sedan ställer du in `allowProxy` egenskap på `foo` till true.
 
 ### Länka till beroenden {#linking-to-dependencies}
 
-När koden i klientbiblioteksmappen refererar till andra bibliotek identifierar du de andra biblioteken som beroenden. I JSP:n `ui:includeClientLib` -taggen som refererar till din klientbiblioteksmapp gör att HTML-koden innehåller en länk till den biblioteksfil som genereras samt beroenden.
+När koden i klientbiblioteksmappen refererar till andra bibliotek identifierar du de andra biblioteken som beroenden. I JSP:n `ui:includeClientLib` -taggen som refererar till din klientbiblioteksmapp gör att HTML-koden innehåller en länk till den biblioteksfil som genereras och beroendena.
 
 Beroenden måste vara ett annat `cq:ClientLibraryFolder`. Om du vill identifiera beroenden lägger du till en egenskap i `cq:ClientLibraryFolder` nod med följande attribut:
 

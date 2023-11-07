@@ -7,9 +7,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: coding
 role: Developer
 exl-id: 991fbc56-f144-4ae6-b010-8d02f780d347
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2506'
+source-wordcount: '2505'
 ht-degree: 0%
 
 ---
@@ -321,4 +321,4 @@ Den fullständiga URL:en för att anropa processen är https://hiro-xp:8080/rest
 
 Om processen kräver ett PDF-dokument som indatavärde måste du skicka formuläret som PDF, vilket visades i föregående bild. För att en process ska kunna anropas måste processen dessutom returnera ett PDF-dokument. Annars kan Acrobat inte hantera returvärdet och ett fel inträffar. Du behöver inte ange namnet på indataprocessvariabeln. Till exempel *MyApplication/EncryptDocument* processen har en indatavariabel med namnet `inDoc`. Du behöver inte ange inDoc så länge formuläret skickas som PDF.
 
-Du kan också skicka formulärdata som XML till en Forms-process. Om du vill skicka XML-data måste du se till att `Submit As` listrutan anger XML. Eftersom processens returvärde måste vara ett PDF-dokument, visas PDF-dokumentet i Acrobat.
+Du kan också skicka formulärdata som XML till en Forms-process. Om du vill skicka XML-data måste du se till att `Submit As` anger XML. Eftersom processens returvärde måste vara ett PDF-dokument, visas PDF-dokumentet i Acrobat.

@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: introduction
 content-type: reference
 exl-id: 8eef7e4d-a6f2-4b87-a995-0761447283c6
-source-git-commit: 4e2ee7da5424ac6677eaa2392de7803e7543d13c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1085'
+source-wordcount: '1084'
 ht-degree: 0%
 
 ---
@@ -19,13 +19,13 @@ ht-degree: 0%
 
 Adobe Experience Manager (AEM) komponenter och mallar utgör en kraftfull verktygslåda. De kan användas av utvecklare för att ge användare, redaktörer och administratörer på webbplatser möjlighet att anpassa sina webbplatser efter förändrade affärsbehov (innehållsflexibilitet). Allt detta med bibehållen enhetlig layout för webbplatserna (varumärkesskydd).
 
-En typisk utmaning för en person som ansvarar för en webbplats, eller en uppsättning webbplatser (till exempel på ett globalt företags kontor) är att presentera en ny typ av innehållspresentation på deras webbplatser.
+En typisk utmaning för en person som ansvarar för en webbplats, eller en uppsättning webbplatser (till exempel på ett lokalkontor i ett globalt företag) är att presentera en ny typ av innehållspresentation på sina webbplatser.
 
 Låt oss anta att det finns ett behov av att lägga till en nyhetslistsida på webbplatserna, som listar utdrag från andra artiklar som redan har publicerats. Sidan ska ha samma design och struktur som resten av webbplatsen.
 
 Det rekommenderade sättet att hantera en sådan utmaning är att
 
-* Återanvänd en befintlig mall så att du kan skapa en ny typ av sida. Mallen definierar en sidstruktur (navigeringselement, paneler och så vidare) som finjusteras ytterligare av dess design (CSS, grafik).
+* Återanvänd en befintlig mall så att du kan skapa en typ av sida. Mallen definierar en sidstruktur (navigeringselement, paneler och så vidare) som finjusteras ytterligare av dess design (CSS, grafik).
 * Använd styckesystemet (parsys/iparsys) på de nya sidorna.
 * Definiera direkt åtkomst till styckesystemens designläge, så att endast behöriga personer (vanligtvis administratören) kan ändra dem.
 * Definiera de komponenter som tillåts i det angivna styckesystemet så att redigerare sedan kan placera de nödvändiga komponenterna på sidan. I det här fallet kan det vara en listkomponent som kan gå igenom ett underträd med sidor och extrahera informationen enligt fördefinierade regler.
@@ -46,7 +46,7 @@ Följande allmänna regler för utvecklare passar bäst i de vanligaste projekte
 
 ### Anpassa komponenter och andra element {#customizing-components-and-other-elements}
 
-När du skapar egna komponenter eller anpassar en befintlig komponent är det oftast enklast (och säkraste) att återanvända befintliga definitioner. Samma principer gäller även för andra element i AEM, till exempel felhanteraren.
+När du skapar egna komponenter eller anpassar en befintlig komponent är det oftast enklast (och säkraste) att återanvända befintliga definitioner. Samma principer gäller även andra element i AEM, till exempel felhanteraren.
 
 Detta kan du göra genom att kopiera och ersätta den befintliga definitionen. Med andra ord, kopiera definitionen från `/libs` till `/apps/<your-project>`. Den här nya definitionen, i `/apps`, kan uppdateras efter dina behov.
 

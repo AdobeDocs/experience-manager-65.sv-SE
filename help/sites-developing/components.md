@@ -10,7 +10,7 @@ topic-tags: components
 content-type: reference
 discoiquuid: 45efff93-2fe5-4313-83a0-0e23a540da93
 exl-id: 9e30c969-2692-4380-943a-b022ee900ce8
-source-git-commit: b886844dc80482ae4aae5fc7ce09e466efecc3bd
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '581'
 ht-degree: 0%
@@ -28,7 +28,7 @@ På den här sidan finns en översikt över Adobe Experience Manager (AEM) kompo
 * Utvecklas som självständiga enheter i en mapp i databasen.
 * Har inga dolda konfigurationsfiler.
 * Kan innehålla andra komponenter.
-* Kan köras var som helst i vilket AEM som helst. De kan också begränsas till att köras under specifika komponenter.
+* Kan köras var som helst i alla AEM. De kan också begränsas till att köras under specifika komponenter.
 * ha ett standardiserat användargränssnitt.
 * Har redigeringsbeteende som kan konfigureras.
 * Använda dialogrutor som är byggda med delelement som är baserade på GRÄNSSNITTSkomponenter i Granite
@@ -75,11 +75,11 @@ Det finns två uppsättningar AEM komponenterna som tillhandahålls av Adobe:
 >
 >[Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) är de bästa metoderna för komponentdesign och -utveckling och fungerar som referensimplementationer.
 >
->[AEM](modernization-tools.md) kan hjälpa dig att migrera till kärnkomponenter.
+>[Verktyg för AEM](modernization-tools.md) kan hjälpa dig att migrera till kärnkomponenter.
 
 ### Visa tillgängliga komponenter {#viewing-available-components}
 
-Använd kommandot [Komponentkonsol](/help/sites-authoring/default-components-console.md).
+Om du vill se en översikt över alla tillgängliga komponenter i AEM ska du använda [Komponentkonsol](/help/sites-authoring/default-components-console.md).
 
 Du kan också använda CRXDE Lite för att få en lista över alla komponenter som är tillgängliga i databasen.
 

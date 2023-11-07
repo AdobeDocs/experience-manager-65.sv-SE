@@ -8,9 +8,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: personalization
 content-type: reference
 exl-id: df28180f-7af4-437d-8e91-bfd305f73113
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1176'
+source-wordcount: '1174'
 ht-degree: 1%
 
 ---
@@ -44,7 +44,7 @@ Källkoden finns på /libs/granite/contexthub/code/ui/container/js/ContextHub.UI
 Konfigurera gränssnittsmodulen contexthub.base med hjälp av ett JavaScript-objekt i JSON-format. Inkludera någon av följande egenskaper för att konfigurera gränssnittsmodulens funktioner:
 
 * **bild:** En URL till en bild som ska visas som ikon.
-* **ikon:** Namnet på en [Coral UI: ikon](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/coral-ui/coralui3/Coral.Icon.html) klassen. Om du anger ett värde för både ikonen och bildegenskaperna används bilden.
+* **ikon:** Namnet på en [Coral UI icon](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/coral-ui/coralui3/Coral.Icon.html) klassen. Om du anger ett värde för både ikonen och bildegenskaperna används bilden.
 
 * **titel:** En rubrik för gränssnittsmodulen. Titeln visas när pekaren pausas över ikonen för modulen Gränssnitt.
 * **helskärm:** Ett booleskt värde som anger om gränssnittsmodulen stöder helskärmsläge. Använd `true` för helskärmsläge och `false` för att förhindra helskärmsläge.
@@ -54,10 +54,10 @@ Konfigurera gränssnittsmodulen contexthub.base med hjälp av ett JavaScript-obj
 * **storeMapping:** En nyckel/arkivmappning. Använd nyckeln i Handlebar-mallar för att komma åt associerade ContextHub-lagringsdata.
 * **lista:** En array med objekt som ska visas som en lista i en portfölj när användaren klickar på gränssnittsmodulen. Om du tar med det här objektet ska du inte ta med poverTemplate. Värdet är en array med objekt med följande tangenter:
 
-   * titel: Den text som ska visas för det här objektet
-   * bild: (Valfritt) En URL till en bild som ska visas till vänster
-   * ikon: (Valfritt) En CUI-ikonklass som ska visas till vänster. ignoreras om en bild anges
-   * markerat: (Valfritt) Ett booleskt värde som anger om det här objektet ska visas som markerat (true=selected). Som standard visas markerade objekt med ett fetstil. Använd en `listType` -egenskap för att konfigurera andra utseenden (se nedan).
+   * title: Den text som ska visas för objektet
+   * image: (Valfritt) En URL till en bild som ska visas till vänster
+   * ikon: (Valfritt) En CUI-ikonklass som ska visas till vänster, ignoreras om en bild har angetts
+   * selected: (Valfritt) Ett booleskt värde som anger om objektet ska visas som markerat (true=selected). Som standard visas markerade objekt med ett fetstil. Använd en `listType` för att konfigurera andra utseenden (se nedan).
 
 * **listType:** Det format som ska användas för att överföra listobjekt. Använd något av följande värden:
 
@@ -69,7 +69,7 @@ Konfigurera gränssnittsmodulen contexthub.base med hjälp av ett JavaScript-obj
 
 ### Exempel {#example}
 
-I följande exempel konfigureras användargränssnittsmodulen contexthub.base så att information från en [contexthub.emulators](/help/sites-developing/ch-samplestores.md#granite-emulators-sample-store-candidate) butik. The `template` -objektet visar hur du hämtar data från arkivet med hjälp av nyckeln som `storeMapping` artikel upprättas.
+I följande exempel konfigureras användargränssnittsmodulen contexthub.base så att information från en [contexthub.emulators](/help/sites-developing/ch-samplestores.md#granite-emulators-sample-store-candidate) butik. The `template` visar hur du hämtar data från arkivet med hjälp av nyckeln som `storeMapping` artikel upprättas.
 
 ```xml
 {
@@ -105,7 +105,7 @@ Instanser av gränssnittsmodulen contexthub.browserinfo kräver inget värde fö
 }
 ```
 
-## kontexthub.datetime, gränssnittsmodultyp {#contexthub-datetime-ui-module-type}
+## kontexthub.datetime, gränssnittsmodul, typ {#contexthub-datetime-ui-module-type}
 
 Användargränssnittsmodulen contexthub.datetime visar det datum och den tid som lagras i en butik med namnet datetime som baseras på [contexthub.datetime](/help/sites-developing/ch-samplestores.md#contexthub-datetime-sample-store-candidate) lagringskandidat.
 
@@ -183,7 +183,7 @@ Källan till användargränssnittsmodulen finns i /libs/granite/contexthub/compo
 
 ### Konfiguration {#configuration-5}
 
-Instanser av gränssnittsmodulen contexthub.screen-orientation kräver inget värde för Detaljkonfiguration. Följande JSON-text representerar modulens standardkonfiguration. Observera att `clickable` egenskapen är `false` som standard. Om du åsidosätter standardkonfigurationen som ska anges `clickable` till `true`Om du klickar på modulen visas ett popup-fönster där du kan välja orientering.
+Instanser av gränssnittsmodulen contexthub.screen-orientation kräver inget värde för Detaljkonfiguration. Följande JSON-text representerar modulens standardkonfiguration. The `clickable` egenskapen är `false` som standard. Om du åsidosätter standardkonfigurationen som ska anges `clickable` till `true`Om du klickar på modulen visas ett popup-fönster där du kan välja orientering.
 
 ```xml
 {

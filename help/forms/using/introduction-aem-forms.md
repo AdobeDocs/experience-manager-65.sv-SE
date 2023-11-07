@@ -11,7 +11,7 @@ discoiquuid: a20383f2-f86a-45bf-a39e-725ee764503b
 docset: aem65
 feature: Adaptive Forms
 exl-id: e5533b4f-93b7-4ea9-a01d-fdf9528652c8
-source-git-commit: 1683338f02d01d5d9843368955fa42f309718f26
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '919'
 ht-degree: 0%
@@ -51,7 +51,7 @@ Sammanfattningsvis har AEM Forms kraftfulla funktioner för blanketthantering, s
 * Integrering med Adobe Document Cloud eSign-tjänster eller Scribble för att elektroniskt signera dokument som innehåller konfidentiell information
 * Automatiserade funktioner för blankettpublicering och möjlighet att leverera skräddarsydd kommunikation i rätt tid via flera kanaler
 
-## AEM {#aem-form-types}
+## AEM formulärtyper {#aem-form-types}
 
 Med AEM Forms kan du utöka nya och befintliga formulär för att skapa:
 
@@ -72,13 +72,13 @@ Anpassningsbara formulär kan dynamiskt anpassa sig till användarsvar genom att
 
 ### Funktioner som stöds {#supported-features}
 
-Alla formulärtyper har stöd för följande funktioner:
+Alla formulärtyper stöder följande funktioner:
 
 * Dynamisk layout
 * Validering av formulärfält
 * Kontextkänslig hjälp
 * Skript och XML-datahantering
-* Utformning och kontroll av hjälpmedel
+* Utformning och kontroll av tillgänglighet
 * Möjlighet att spara blanketter på serversidan
 * Stöd för bifogade filer
 * Integrering med HTML Workspace för datainhämtning
@@ -87,7 +87,7 @@ Alla formulärtyper har stöd för följande funktioner:
 
 När blankettdata har skickats kopplar Adobe Experience Manager blankettdata till befintliga system, affärsregler och personer.
 
-AEM Forms erbjuder Forms Workspace, en mobilapplikation som utvidgar era digitala affärsprocesser till mobila enheter. Med Forms Workspace kan du samla in och registrera data även offline. Forms Workspace utnyttjar funktionerna i din mobila enhet och gör att du kan ta foton, videoklipp och samla in data som tidsstämplar och annan information. Nästa gång du ansluter till ett nätverk kan du synkronisera insamlade data.
+AEM Forms erbjuder Forms Workspace, en mobilapplikation som utvidgar era digitala affärsprocesser till mobila enheter. Med Forms Workspace kan du samla in och registrera data även offline. Forms Workspace använder funktionerna i din mobila enhet och gör att du kan ta foton, videoklipp och samla in data som tidsstämplar och annan information. Nästa gång du ansluter till ett nätverk kan du synkronisera insamlade data.
 
 Att samla in data offline och synkronisera dem nästa gång du returnerar online är särskilt användbart för personer på fältet. Det förbättrar produktiviteten och minskar antalet fel.
 

@@ -9,7 +9,7 @@ content-type: reference
 discoiquuid: dc0191d0-f181-4e1e-b3f4-73427aa22073
 docset: aem65
 exl-id: bc9c864b-8bc3-42b4-ba25-6c5108be4f65
-source-git-commit: 4fd5e9a1bc603202ee52e85a1c09125b13cec315
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '3392'
 ht-degree: 1%
@@ -113,7 +113,7 @@ Adobe rekommenderar att du bara publicerar resurser till Dynamic Media Classic (
    ![chlimage_1-49](assets/chlimage_1-49.png)
 
 1. Lägg till en Dynamic Media Classic-komponent (Scene7) på önskad plats på webbsidan.
-1. Dra en digital resurs från innehållssökaren till komponenten. Du ser en länk till **[!UICONTROL Check Dynamic Media Classic (Scene7) Publication Status]**.
+1. Dra en digital resurs från innehållssökaren till komponenten. En länk till **[!UICONTROL Check Dynamic Media Classic (Scene7) Publication Status]**.
 
    >[!NOTE]
    >
@@ -149,7 +149,7 @@ När de har gjorts tillgängliga i designläge kan du lägga till komponenterna 
 
 ### Meddelande om att Flash Viewer har upphört {#flash-viewers-end-of-life-notice}
 
-Från och med den 31 januari 2017 upphörde Adobe Dynamic Media Classic (Scene7) officiellt stödet för visningsprogramplattformen Flash.
+Från och med den 31 januari 2017 upphörde Adobe Dynamic Media Classic (Scene7) officiellt stödet för visningsprogramplattformen för Flash.
 
 ### Lägga till en Dynamic Media Classic-komponent (Scene7) på en sida {#adding-a-scene-component-to-a-page}
 
@@ -175,13 +175,13 @@ Responsiv design för dina resurser innebär att dina resurser anpassas beroende
 
 Så här lägger du till en interaktiv visningsupplevelse på en responsiv webbplats i det klassiska användargränssnittet:
 
-1. Logga in på Experience Manager och kontrollera att du har [konfigurerade Adobe Dynamic Media Classic-Cloud Services (Scene7)](/help/sites-administering/scene7.md#configuring-scene-integration) och att Dynamic Media Classic-komponenter (Scene7) är tillgängliga.
+1. Logga in på Experience Manager och kontrollera att du har [konfigurerade Adobe Dynamic Media Classic-Cloud Service (Scene7)](/help/sites-administering/scene7.md#configuring-scene-integration) och att Dynamic Media Classic-komponenter (Scene7) är tillgängliga.
 
    >[!NOTE]
    >
    >Om Dynamic Media Classic (Scene7) WCM-komponenter inte är tillgängliga måste du aktivera dem i designläge.
 
-1. Dra en **[!UICONTROL Image]** till sidan.
+1. På en webbplats där komponenterna i Dynamic Media Classic (Scene7) är aktiverade drar du **[!UICONTROL Image]** till sidan.
 1. Redigera komponenten och justera brytpunkterna i **[!UICONTROL Dynamic Media Classic (Scene7) Settings]** -fliken.
 
    ![chlimage_1-51](assets/chlimage_1-51.png)
@@ -194,7 +194,7 @@ Så här lägger du till en interaktiv visningsupplevelse på en responsiv webbp
 
 * **Filreferens**- Bläddra till en fil som du vill referera till. Filreferensen visar resurs-URL:en och inte nödvändigtvis den fullständiga Dynamic Media Classic-URL:en (Scene7) inklusive URL-kommandona och -parametrarna. Du kan inte lägga till Dynamic Media Classic (Scene7) URL-kommandon och -parametrar i det här fältet. De måste i stället läggas till via motsvarande funktioner i komponenten.
 * **Bredd** - Ange bredden.
-* **Höjd** - Här kan du ange höjden.
+* **Höjd** - Ange höjden.
 
 Du anger dessa konfigurationsalternativ genom att öppna (dubbelklicka) en Dynamic Media Classic-komponent (Scene7), till exempel när du öppnar en **Zooma** komponent:
 
@@ -202,7 +202,7 @@ Du anger dessa konfigurationsalternativ genom att öppna (dubbelklicka) en Dynam
 
 ### Zooma {#zoom}
 
-Zoomkomponenten för HTML5 visar en större bild när du trycker på plusknappen (+).
+Zoomkomponenten för HTML5 visar en större bild när du trycker på plusknappen.
 
 Resursen har zoomverktyg längst ned. Välj **[!UICONTROL +]** för att förstora. Välj **[!UICONTROL -]** för att minska. Markera **[!UICONTROL x]** eller zoompilen återställer bilden till den ursprungliga storlek som den importerades som. Markera de diagonala pilarna så att du kan göra den i helskärmsläge. Välj **[!UICONTROL Edit]** så att du kan konfigurera komponenten. Med den här komponenten kan du konfigurera [gemensamma inställningar för alla Dynamic Media Classic-komponenter (Scene7)](#settings-common-to-all-scene-components).
 
@@ -210,7 +210,7 @@ Resursen har zoomverktyg längst ned. Välj **[!UICONTROL +]** för att förstor
 
 ### Utfällbar {#flyout}
 
-I den utfällbara komponenten HTML5 visas resursen som en delad skärm. lämnade tillgången i den angivna storleken, till höger visas zoomdelen. Välj **[!UICONTROL Edit]** så att du kan konfigurera komponenten. Med den här komponenten kan du konfigurera [gemensamma inställningar för alla Dynamic Media Classic-komponenter (Scene7)](/help/sites-administering/scene7.md#settingscommontoallscene7components).
+I den utfällbara komponenten för HTML5 visas resursen som en delad skärm, lämnas i den angivna storleken och den högra delen av zoomningen visas. Välj **[!UICONTROL Edit]** så att du kan konfigurera komponenten. Med den här komponenten kan du konfigurera [gemensamma inställningar för alla Dynamic Media Classic-komponenter (Scene7)](/help/sites-administering/scene7.md#settingscommontoallscene7components).
 
 >[!NOTE]
 >
@@ -222,7 +222,7 @@ I den utfällbara komponenten HTML5 visas resursen som en delad skärm. lämnade
 
 ### Bild {#image}
 
-Med Dynamic Media Classic (Scene7) Image-komponenten kan du lägga till Dynamic Media Classic (Scene7)-funktioner i dina bilder, till exempel Dynamic Media Classic (Scene7)-modifierare, bild- eller visningsförinställningar samt skärpa. Dynamic Media Classic-bildkomponenten (Scene7) liknar andra bildkomponenter i Experience Manager med speciella Dynamic Media Classic-funktioner (Scene7). I det här exemplet har bilden URL-modifieraren för Dynamic Media Classic (Scene7), `&op_invert=1` används.
+Med Dynamic Media Classic (Scene7) Image-komponenten kan du lägga till Dynamic Media Classic (Scene7)-funktioner i dina bilder, till exempel Dynamic Media Classic (Scene7)-modifierare, bild- eller visningsförinställningar samt skärpa. Dynamic Media Classic-bildkomponenten (Scene7) liknar andra bildkomponenter i Experience Manager med speciella Dynamic Media Classic-funktioner (Scene7). I det här exemplet har bilden Dynamic Media Classic (Scene7) URL-modifierare, `&op_invert=1` används.
 
 ![Bild av en sfär inuti Dynamic Media Classic-bildkomponenten (Scen 7)](do-not-localize/chlimage_1-4.png)
 
@@ -254,11 +254,11 @@ Välj **[!UICONTROL Edit]** - för att konfigurera komponenten. Du kan konfigure
 
 ![chlimage_1-55](assets/chlimage_1-55.png)
 
-**Filreferens, bredd, höjd** - Se [gemensamma inställningar för alla Dynamic Media Classic-komponenter (Scene7)](/help/sites-administering/scene7.md#settingscommontoallscene7components).
+**Filreferens, Bredd, Höjd** - Se [gemensamma inställningar för alla Dynamic Media Classic-komponenter (Scene7)](/help/sites-administering/scene7.md#settingscommontoallscene7components).
 
 >[!NOTE]
 >
->Dynamic Media Classic (Scene7) URL-kommandon och -parametrar kan inte läggas till direkt i filreferensens URL. De kan bara definieras i komponentens användargränssnitt i **[!UICONTROL Parameter]** -panelen.
+>Dynamic Media Classic (Scene7) URL-kommandon och -parametrar kan inte läggas till direkt i filreferensens URL. De kan bara definieras i komponentgränssnittet i **[!UICONTROL Parameter]** -panelen.
 
 **Titel, Alt-text** - På fliken Dynamic Media Classic (Scene7) Bildmall lägger du till en titel i bilden och alternativ text för användare som har bilder inaktiverade.
 
@@ -280,7 +280,7 @@ Texten i bilden ändras. Du kan återställa texten till det ursprungliga värde
 
 ![chlimage_1-59](assets/chlimage_1-59.png)
 
-#### Ändra text så att den återspeglar värdet för ett klientkontextvärde {#changing-text-to-reflect-the-value-of-a-client-context-value}
+#### Ändra text så att värdet för en klientkontext återspeglas {#changing-text-to-reflect-the-value-of-a-client-context-value}
 
 Om du vill länka ett fält till ett klientkontextvärde väljer du **[!UICONTROL Select]** för att öppna klientsnabbmenyn väljer du klientkontext och väljer **[!UICONTROL OK]**. I det här exemplet ändras namnet baserat på att namnet länkas till det formaterade namnet i profilen.
 
@@ -303,11 +303,11 @@ Du kan göra Dynamic Media Classic-bildmallskomponenten (Scene7) till en klickba
 
 ### Videokomponent {#video-component}
 
-Dynamic Media Classic (Scene7) **[!UICONTROL Video]** -komponenten (tillgänglig från Dynamic Media Classic (Scene7) i sidosparken) använder enhets- och bandbreddsidentifiering för att leverera rätt video till varje skärm. Den här komponenten är en videospelare för HTML5. det är ett enda visningsprogram som kan användas över flera kanaler.
+Dynamic Media Classic (Scene7) **[!UICONTROL Video]** -komponenten (tillgänglig från Dynamic Media Classic (Scene7) i sidosparken) använder enhets- och bandbreddsidentifiering för att leverera rätt video till varje skärm. Den här komponenten är en HTML5-videospelare, det är ett enda visningsprogram som kan användas över flera kanaler.
 
 Den kan användas för adaptiva videouppsättningar, en enda MP4-video eller en enda F4V-video.
 
-Se [Video](/help/sites-classic-ui-authoring/manage-assets-classic-s7-video.md) om du vill ha mer information om hur videofilmer fungerar med Dynamic Media Classic-integrering (Scene7). Se även hur [den **Dynamic Media Classic (Scene7) - video** -komponenten jämfört med grunden **video** komponent](/help/sites-classic-ui-authoring/manage-assets-classic-s7-video.md).
+Se [Video](/help/sites-classic-ui-authoring/manage-assets-classic-s7-video.md) om du vill ha mer information om hur videofilmer fungerar med Dynamic Media Classic-integrering (Scene7). Se även hur [den **Dynamic Media Classic (Scene7) video** -komponenten jämfört med grunden **video** komponent](/help/sites-classic-ui-authoring/manage-assets-classic-s7-video.md).
 
 ![chlimage_1-63](assets/chlimage_1-63.png)
 
@@ -322,7 +322,7 @@ När du använder en adaptiv videouppsättning med videokomponenten i Dynamic Me
 
 ## Dynamic Media Classic (Scene7) {#scene-content-browser}
 
-Med Dynamic Media Classic (Scene7) webbläsare kan du visa innehåll från Dynamic Media Classic (Scene7) direkt i Experience Manager. Om du vill öppna innehållsläsaren väljer du i Innehållssökning **Dynamic Media Classic (Scene7)** i det pekoptimerade användargränssnittet eller **S7** -ikonen i det klassiska användargränssnittet. Funktionen är identisk mellan båda användargränssnitten.
+Med Dynamic Media Classic (Scene7) innehållsläsare kan du visa innehåll från Dynamic Media Classic (Scene7) direkt i Experience Manager. Om du vill öppna innehållsläsaren väljer du i Innehållssökning **Dynamic Media Classic (Scene7)** i det pekoptimerade användargränssnittet eller **S7** i det klassiska användargränssnittet. Funktionen är identisk mellan båda användargränssnitten.
 
 Om du har flera konfigurationer visas Experience Manager som standard [standardkonfiguration](/help/sites-administering/scene7.md#configuring-a-default-configuration). Du kan välja olika konfigurationer direkt i Dynamic Media Classic (Scene7) innehållsläsare i listrutan.
 
@@ -334,7 +334,7 @@ Om du har flera konfigurationer visas Experience Manager som standard [standardk
 >* För video har Dynamic Media Classic (Scene7) en innehållsläsare stöd för:
 >   * Adaptiva videouppsättningar: behållare för alla videoåtergivningar som behövs för sömlös uppspelning på flera skärmar
 >   * Enkel MP4-video
->   * En F4V-video
+>   * Enkelt F4V-videoklipp
 
 ### Bläddra i innehåll {#browsing-content-in-the-classic-ui}
 
@@ -354,7 +354,7 @@ Som standard visas resurser efter filnamn. Du kan även filtrera resultat efter 
 >
 >* Adaptiva videouppsättningar: behållare för alla videoåtergivningar som behövs för sömlös uppspelning på flera skärmar
 >* Enkel MP4-video
->* En F4V-video
+>* Enkelt F4V-videoklipp
 >
 
 ### Söka efter Dynamic Media Classic (Scene7)-resurser med innehållsläsaren {#searching-for-scene-assets-with-the-content-browser}
@@ -381,11 +381,11 @@ Som standard söker Experience Manager i den markerade mappen och i alla underma
 
 ![chlimage_1-67](assets/chlimage_1-67.png)
 
-**Konfiguration** - Om du har definierat mer än en Dynamic Media Classic-konfiguration (Scene7) i Cloud Services kan du markera den här. Därför ändras mappen baserat på den konfiguration du väljer.
+**Konfiguration** - Om du har definierat mer än en Dynamic Media Classic-konfiguration (Scene7) i Cloud Service kan du markera den här. Därför ändras mappen baserat på den konfiguration du väljer.
 
 ![chlimage_1-68](assets/chlimage_1-68.png)
 
-**Tillgångstyp** - I webbläsaren Dynamic Media Classic (Scene7) kan du filtrera resultatet så att det omfattar något av följande: bilder, mallar, videor och anpassningsbara videouppsättningar. Om du inte väljer någon resurstyp söker Experience Manager som standard igenom alla resurstyper.
+**Tillgångstyp** - I webbläsaren Dynamic Media Classic (Scene7) kan du filtrera resultaten så att de omfattar något av följande: bilder, mallar, videor och anpassningsbara videouppsättningar. Om du inte väljer någon resurstyp söker Experience Manager som standard igenom alla resurstyper.
 
 ![chlimage_1-69](assets/chlimage_1-69.png)
 
@@ -397,6 +397,6 @@ Som standard söker Experience Manager i den markerade mappen och i alla underma
 >* När du söker i en adaptiv videouppsättning söker du i mappen och i alla undermappar, men bara om du har lagt till ett nyckelord i sökningen. Om du inte har lagt till något nyckelord söker Experience Manager inte i undermapparna.
 >
 
-**Publiceringsstatus** - Du kan filtrera efter resurser baserat på publiceringsstatus: Opublicerad eller publicerad. Om du inte väljer någon publiceringsstatus söker Experience Manager som standard igenom alla publiceringsstatusar.
+**Publiceringsstatus** - Du kan filtrera efter resurser baserat på publiceringsstatus: Opublicerad eller Publicerad. Om du inte väljer någon publiceringsstatus söker Experience Manager som standard igenom alla publiceringsstatusar.
 
 ![chlimage_1-70](assets/chlimage_1-70.png)

@@ -8,9 +8,9 @@ products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-adobe-phonegap-enterprise
 discoiquuid: 9890d045-cead-4d70-b797-95319284e0d8
 exl-id: 49e0b3f6-7ac7-4417-9c31-cc3d3c2305f3
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2692'
+source-wordcount: '2688'
 ht-degree: 0%
 
 ---
@@ -169,16 +169,16 @@ Utför följande procedur på instansen där du vill uppdatera cachen. Om ditt p
 
 ### Använda appmallar {#using-app-templates}
 
-Det här är en funktion som är tillgänglig med Apps 6.1 Feature Pack 2 och som gör det enkelt att utnyttja befintliga appmallar för att skapa nya appar i AEM.
+Det här är en funktion som är tillgänglig med Apps 6.1 Feature Pack 2 och som gör det enkelt att använda befintliga appmallar för att skapa nya appar i AEM.
 
 Vad är en appmall? Se det som en samling sidmallar och komponenter som utgör en grund eller grund för ett program.
-När du skapar ett nytt program baserat på en mall för ett annat program får du ett program som har en startpunkt som representerar det program som det skapades från.
+När du skapar ett program baserat på en mall för ett annat program får du ett program som har en startpunkt som representerar det program som det skapades från.
 
 Du måste ha en befintlig mobilappsmall (eller en app som har en appmall) för att kunna använda den här funktionen.
 
 Det senaste exempelpaketet AEM Apps 6.1 innehåller en uppdaterad version av Geometrixx-appen med en appmall. Du kan också installera StarterKit, som även innehåller en mall.
 
-Steg för att skapa ett nytt program baserat på en appmall:
+Steg för att skapa ett program baserat på en appmall:
 
 1. Se till att du har det senaste AEM Apps 6.1-funktionspaketet och referensexempelpaketen installerade
 1. Klicka på Appar från den vänstra listen.
@@ -219,7 +219,7 @@ Om du vill öppna programmet går du till fliken Mobilprogram och väljer sedan 
 
 Varje sida i mobilappen innehåller följande funktioner:
 
-* En bakåtknapp för att gå tillbaka till den överordnade sidan. Observera att bakåtknappen inte visas på hemsidan.
+* En bakåtknapp för att gå tillbaka till den överordnade sidan. Bakåtknappen visas inte på hemsidan.
 * En stödlinje som innehåller en meny med kommandon och länkar:
 
    * Öppna sidan Platser.

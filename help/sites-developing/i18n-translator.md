@@ -1,18 +1,14 @@
 ---
 title: Använda översättare för att hantera ordlistor
-seo-title: Using Translator to Manage Dictionaries
 description: AEM tillhandahåller en konsol för hantering av olika översättningar av texter som används i komponentens användargränssnitt
-seo-description: AEM provides a console for managing the various translations of texts used in component UI
-uuid: 4eea3110-e958-473e-8d22-c84fa435edbd
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: components
-discoiquuid: adf3364c-11f1-45c6-b41d-2c7d48b626f9
 exl-id: a8d50c09-72d0-406e-874e-50a985227a56
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2327'
+source-wordcount: '2320'
 ht-degree: 0%
 
 ---
@@ -25,7 +21,7 @@ AEM tillhandahåller en konsol för hantering av olika översättningar av texte
 
 Använd översättningsverktyget för att hantera engelska strängar och deras översättningar. Ordlistorna skapas i databasen, till exempel /apps/myproject/i18n.
 
-Observera att översättningsverktyget och de ordlistor du hanterar är till för att presentera komponentgränssnitt på olika språk. Om du vill översätta sida eller användargenererat innehåll, se [Översätta innehåll för flerspråkiga webbplatser](/help/sites-administering/translation.md) och [Översättning av användargenererat innehåll](/help/communities/translate-ugc.md).
+Översättningsverktyget och de ordlistor du hanterar används för att presentera komponentgränssnitt på olika språk. Om du vill översätta sida eller användargenererat innehåll, se [Översätta innehåll för flerspråkiga webbplatser](/help/sites-administering/translation.md) och [Översättning av användargenererat innehåll](/help/communities/translate-ugc.md).
 
 >[!CAUTION]
 >
@@ -43,7 +39,7 @@ Observera att översättningsverktyget och de ordlistor du hanterar är till fö
 
 Du kan söka efter, filtrera och redigera den engelska och översatta texten. Du kan också exportera ordlistor till XLIFF-format för översättning och sedan importera översättningarna tillbaka till ordlistorna.
 
-Det går också att lägga till i18n-ordlistorna i ett översättningsprojekt från den här konsolen. Du kan antingen skapa en ny eller lägga till i ett befintligt projekt.
+Det går också att lägga till i18n-ordlistorna i ett översättningsprojekt från den här konsolen. Du kan antingen skapa ett eller lägga till i ett befintligt projekt.
 
 1. Klicka **Översätt ordlista**.
 
@@ -113,7 +109,7 @@ Strängarna som du lägger till i ett lexikon måste exakt matcha strängen som 
 
 Använd egenskapen Commenet för ordlistesträngen för att ange information till översättaren för att förtydliga strängens betydelse. Användargränssnittet hjälper användaren oftast att avgöra innebörden av tvetydiga ord. Översättaren kan dock inte se strängen i gränssnittets kontext. Översättningstipset tar bort tvetydigheten. En kommentar hjälper till exempel översättaren att förstå att det engelska ordet Request används som ett substantiv i stället för som ett verb.
 
-Översättningstipsen skiljer också på strängar som är identiska och har olika innebörd. Till exempel kan ordet Sök vara ett substantiv eller ett verb, vilket kräver två sökposter i ordlistan med två olika översättningstips. Koden som begär strängen innehåller också översättningstipset så att rätt sträng används i användargränssnittet.
+Översättningstipsen skiljer också på strängar som är identiska och har olika innebörd. Ordet Sök kan till exempel vara ett substantiv eller ett verb, vilket kräver två&quot;Sök&quot;-poster i ordlistan med två olika översättningstips. Koden som begär strängen innehåller också översättningstipset så att rätt sträng används i användargränssnittet.
 
 **Inkludera indexerade variabler**
 
@@ -283,7 +279,7 @@ Lägg till eller ta bort språk som stöds av översättningsverktyget och som t
 
 Använd följande procedur för att lägga till eller ta bort språk.
 
-1. Skapa en ny nod med CRXDE Lite:
+1. Skapa en nod med CRXDE Lite:
 
    `/etc/languages`
 
@@ -382,7 +378,7 @@ På samma sätt bör testning av ordlistesträngar utföras som en del av den no
 
 >[!NOTE]
 >
->Regelbunden publiceringsfunktion, eller replikering, ska inte användas för ordlistor. Ordlistor ska i stället behandlas på samma sätt som kod och konfiguration. Detta inkluderar att använda källkontroll för att spåra ändringar och att använda innehållspaket för att tillämpa ändringar på författare och publicering.
+>Använd inte vanliga publiceringsfunktioner, eller replikering, för ordlistor. Ordlistor ska i stället behandlas på samma sätt som kod och konfiguration. Detta inkluderar att använda källkontroll för att spåra ändringar och att använda innehållspaket för att tillämpa ändringar på författare och publicering.
 
 >[!NOTE]
 >

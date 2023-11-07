@@ -7,9 +7,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 role: Developer
 exl-id: ff42579e-6aaf-433d-8b5d-9e9dd0957250
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '15485'
+source-wordcount: '15469'
 ht-degree: 0%
 
 ---
@@ -293,7 +293,7 @@ Skapa en profil med hjälp av API:t för dokumentsäkerhet (webbtjänsten):
    * Skapa en `PolicySpec` genom att använda dess konstruktor.
    * Ange principens namn genom att tilldela ett strängvärde till `PolicySpec` objektets `name` datamedlem.
    * Ange principens beskrivning genom att tilldela ett strängvärde till `PolicySpec` objektets `description` datamedlem.
-   * Ange den principuppsättning som principen tillhör genom att tilldela ett strängvärde till `PolicySpec` objektets `policySetName` datamedlem. Du måste ange ett befintligt principuppsättningsnamn. (Du kan ange `null` för det här parametervärdet som resulterar i att principen läggs till i *Mina policyer*.)
+   * Ange den principuppsättning som principen tillhör genom att tilldela ett strängvärde till `PolicySpec` objektets `policySetName` datamedlem. Ange ett befintligt principuppsättningsnamn. (Du kan ange `null` för det här parametervärdet som resulterar i att principen läggs till i *Mina policyer*.)
    * Ange principens låneperiod offline genom att tilldela ett heltalsvärde till `PolicySpec` objektets `offlineLeasePeriod` datamedlem.
    * Ange `PolicySpec` objektets `policyXml` datamedlem med ett strängvärde som representerar PDRL XML-data. Skapa en .NET-fil om du vill utföra den här åtgärden `StreamReader` genom att använda dess konstruktor. Skicka platsen för en PDRL XML-fil som representerar principen till `StreamReader` konstruktor. Anropa `StreamReader` objektets `ReadLine` och tilldela returvärdet till en strängvariabel. Iterera genom `StreamReader` objektet tills `ReadLine` returnerar null. Tilldela strängvariabeln till `PolicySpec` objektets `policyXml` datamedlem.
 
@@ -325,7 +325,7 @@ Följande snabbstarter innehåller kodexempel på hur du använder dokumentsäke
 
 Du kan ändra en befintlig profil med Java API:t för dokumentsäkerhet eller webbtjänstens API. Om du vill ändra en befintlig princip hämtar du den, ändrar den och uppdaterar sedan principen på servern. Anta till exempel att du hämtar en befintlig princip och förlänger dess giltighetsperiod. Du måste uppdatera profilen innan ändringen börjar gälla.
 
-Du kan ändra en profil när affärskraven ändras och profilen inte längre speglar dessa krav. I stället för att skapa en ny profil kan du helt enkelt uppdatera en befintlig profil.
+Du kan ändra en profil när affärskraven ändras och profilen inte längre speglar dessa krav. I stället för att skapa en profil kan du helt enkelt uppdatera en befintlig profil.
 
 Om du vill ändra principattribut med en webbtjänst (till exempel med Java-proxyklasser som har skapats med JAX-WS) måste du se till att profilen har registrerats med dokumentsäkerhetstjänsten. Du kan sedan referera till den befintliga profilen med `PolicySpec.getPolicyXml` och ändra principattributen med hjälp av tillämpliga metoder. Du kan till exempel ändra offlineleasingperioden genom att anropa `PolicySpec.setOfflineLeasePeriod` -metod.
 
@@ -353,7 +353,7 @@ Innan du programmässigt kan utföra en Document Security-tjänståtgärd måste
 
 **Hämta en befintlig princip**
 
-Du måste hämta en befintlig princip för att kunna ändra den. Om du vill hämta en princip anger du principnamnet och den principuppsättning som principen tillhör. Om du anger en `null` värdet för principuppsättningsnamnet hämtas principen från *Mina policyer* principuppsättning.
+Hämta en befintlig princip om du vill ändra den. Om du vill hämta en princip anger du principnamnet och den principuppsättning som principen tillhör. Om du anger en `null` värdet för principuppsättningsnamnet hämtas principen från *Mina policyer* principuppsättning.
 
 **Ange profilens attribut**
 
@@ -878,9 +878,9 @@ Innan du programmässigt kan utföra en dokumentsäkerhetstjänståtgärd måste
 
 **Hämta ett profilskyddat PDF-dokument**
 
-Du måste hämta ett principskyddat PDF-dokument för att kunna återkalla det. Du kan inte återkalla ett dokument som redan har återkallats eller som inte är ett principskyddat dokument.
+Hämta ett principskyddat PDF-dokument om du vill återkalla det. Du kan inte återkalla ett dokument som redan har återkallats eller som inte är ett principskyddat dokument.
 
-Om du känner till licensvärdet för det profilskyddade dokumentet behöver du inte hämta det profilskyddade PDF-dokumentet. I de flesta fall måste du dock hämta PDF-dokumentet för att få fram licensvärdet.
+Om du känner till licensvärdet för det profilskyddade dokumentet behöver du inte hämta det profilskyddade PDF-dokumentet. I de flesta fall måste du dock hämta PDF-dokumentet för att få fram värdet för licensidentifieraren.
 
 **Återkalla det profilskyddade dokumentet**
 
@@ -1020,7 +1020,7 @@ Innan du programmässigt kan utföra en dokumentsäkerhetstjänståtgärd måste
 
 **Hämta licensidentifieraren för det återkallade PDF-dokumentet**
 
-Du måste hämta licensidentifieraren för det återkallade PDF-dokumentet för att kunna återskapa ett återkallat PDF-dokument. När du har fått fram licensens ID-värde kan du återskapa ett återkallat dokument. Om du försöker återskapa ett dokument som inte har återkallats genereras ett undantag.
+Hämta licensidentifieraren för det återkallade PDF-dokumentet för att återskapa ett återkallat PDF-dokument. När du har fått fram licensens ID-värde kan du återskapa ett återkallat dokument. Om du försöker återskapa ett dokument som inte har återkallats genereras ett undantag.
 
 **Återställa åtkomst till det återkallade PDF-dokumentet**
 
@@ -1287,7 +1287,7 @@ Innan du programmässigt kan utföra en dokumentsäkerhetstjänståtgärd måste
 
 **Ange vattenstämpelattribut**
 
-Om du vill skapa en ny vattenstämpel måste du ange vattenstämpelattribut. Namnattributet måste alltid definieras. Förutom name-attributet måste du ange minst ett av följande attribut:
+Om du vill skapa en vattenstämpel måste du ange vattenstämpelattribut. Namnattributet måste alltid definieras. Förutom name-attributet måste du ange minst ett av följande attribut:
 
 * Egen text
 * DatumInkluderat
@@ -1622,9 +1622,9 @@ Tjänsten Rights Management spårar specifika åtgärder när de utförs, t.ex. 
 
 Händelser faller inom en av följande kategorier:
 
-* Administratörshändelser är åtgärder som är relaterade till en administratör, till exempel att skapa ett nytt administratörskonto.
+* Administratörshändelser är åtgärder som är relaterade till en administratör, till exempel att skapa ett administratörskonto.
 * Dokumenthändelser är åtgärder som är relaterade till ett dokument, t.ex. stängning av ett policyskyddat dokument.
-* Policyhändelser är åtgärder som är relaterade till en profil, t.ex. att skapa en ny policy.
+* Policyhändelser är åtgärder som är relaterade till en profil, till exempel att skapa en profil.
 * Tjänstehändelser är åtgärder som är relaterade till tjänsten Rights Management, t.ex. synkronisering med användarkatalogen.
 
 Du kan söka efter specifika händelser genom att använda Java API:t för Rights Management eller webbtjänstens API. Genom att söka efter händelser kan du utföra åtgärder, till exempel skapa en loggfil med vissa händelser.
@@ -1652,7 +1652,7 @@ Innan du programmässigt kan utföra en Rights Management-tjänståtgärd måste
 
 **Ange vilka händelser som ska sökas efter**
 
-Du måste ange vilken händelse du vill söka efter. Du kan till exempel söka efter händelsen create för principen, som inträffar när en ny princip skapas.
+Ange händelsen som du vill söka efter. Du kan till exempel söka efter händelsen create för principen, som inträffar när en ny princip skapas.
 
 **Sök efter händelsen**
 
@@ -1977,7 +1977,7 @@ Innan du programmässigt kan utföra en dokumentsäkerhetstjänståtgärd måste
 
 **Hämta ett Word-dokument**
 
-Du måste hämta ett Word-dokument för att kunna tillämpa en profil. När du har tillämpat en profil på Word-dokumentet är användarna begränsade när de använder dokumentet. Om profilen t.ex. inte aktiverar dokumentet för att öppnas offline måste användarna vara online för att kunna öppna dokumentet.
+Hämta ett Word-dokument om du vill tillämpa en profil. När du har tillämpat en profil på Word-dokumentet är användarna begränsade när de använder dokumentet. Om profilen t.ex. inte aktiverar dokumentet för att öppnas offline måste användarna vara online för att kunna öppna dokumentet.
 
 **Tillämpa en befintlig profil på Word-dokumentet**
 
@@ -2132,7 +2132,7 @@ Skapa ett klientobjekt för tjänsten Dokumentsäkerhet innan du programmässigt
 
 **Hämta ett policyskyddat Word-dokument**
 
-Du måste hämta ett principskyddat Word-dokument för att kunna ta bort en profil. Om du försöker ta bort en profil från ett Word-dokument som inte skyddas av en profil genereras ett undantagsfel.
+Hämta ett principskyddat Word-dokument om du vill ta bort en profil. Om du försöker ta bort en profil från ett Word-dokument som inte skyddas av en profil genereras ett undantagsfel.
 
 **Ta bort profilen från Word-dokumentet**
 

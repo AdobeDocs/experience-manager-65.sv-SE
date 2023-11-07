@@ -2,7 +2,7 @@
 title: Sidexporteraren
 description: Lär dig hur du använder Adobe Experience Manager (AEM) Page Exporter.
 exl-id: 15d08758-cf75-43c0-9818-98a579d64183
-source-git-commit: 6799f1d371734b69c547f3c0c68e1e633aa63229
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '1034'
 ht-degree: 0%
@@ -107,7 +107,7 @@ Gör mallen tillgänglig när du har konfigurerat den:
 
 Mallen består av en nodstruktur som använder [Innehållssynkroniseringsramverk](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/contentsync/package-summary.html). Varje nod har en `type` -egenskap som definierar en viss åtgärd när zip-filen skapas.
 
-<!-- For more details about the type property, refer to the Overview of configuration types section in the Content Sync framework page.
+<!-- For more details about the type property, see the Overview of configuration types section in the Content Sync framework page.
 -->
 
 Följande noder kan användas för att skapa en exportmall:
@@ -131,7 +131,7 @@ Sidnoden används för att kopiera sidans HTML-kod till zip-filen. Den har följ
 
 * `rewrite`
 Noden rewrite definierar hur länkarna skrivs om på den exporterade sidan. De omskrivna länkarna kan antingen peka på filerna som finns i ZIP-filen eller på resurserna på servern.
-  <!-- Please refer to the Content Sync page for a complete description of the `rewrite` node. -->
+  <!-- See the Content Sync page for a complete description of the `rewrite` node. -->
 
 * `design`
 Designnoden används för att kopiera designen som används för den exporterade sidan. Den har följande egenskaper:
@@ -177,7 +177,7 @@ As you may have noticed in the node structure, the **Geometrixx** page export te
 
 Implementera en [anpassad uppdateringshanterare](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/contentsync/handler/package-summary.html).
 
-<!-- To meet some specific requirements, you may need to implement a custom `type` property: to do so, refer to the Implementing a custom update handler section in the Content Sync page.
+<!-- To meet some specific requirements, you may need to implement a custom `type` property. To do so, see the Implementing a custom update handler section in the Content Sync page.
 -->
 
 ## Programmatisk export av en sida {#programmatically-exporting-a-page}

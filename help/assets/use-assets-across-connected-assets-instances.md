@@ -7,7 +7,7 @@ role: User, Admin, Leader
 feature: Connected Assets,User and Groups
 exl-id: 4ceb49d8-b619-42b1-81e7-c3e83d4e6e62
 hide: true
-source-git-commit: bc6a97a55f392cba03131ee3ca7cad35b8c1e69b
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '3832'
 ht-degree: 16%
@@ -32,7 +32,7 @@ Funktionen för anslutna resurser har stöd för ovanstående användningsfall g
 
 ## Översikt över Connected Assets {#overview-of-connected-assets}
 
-Vid redigering av sidor i [!UICONTROL Page Editor] som målmål kan författarna söka, bläddra bland och bädda in resurser från ett annat [!DNL Assets] driftsättning som fungerar som en källa till resurser. Administratörerna skapar en engångsintegrering av en distribution av [!DNL Experience Manager] med [!DNL Sites] med en annan driftsättning av [!DNL Experience Manager] med [!DNL Assets] funktioner. Man kan också använda Dynamic Media-bilder på webbplatsens webbsidor med hjälp av uppkopplade resurser och utnyttja Dynamic Media funktioner, som smart beskärning och bildförinställningar.
+Vid redigering av sidor i [!UICONTROL Page Editor] som målmål kan författarna söka, bläddra bland och bädda in resurser från ett annat [!DNL Assets] driftsättning som fungerar som en källa till resurser. Administratörerna skapar en engångsintegrering av en distribution av [!DNL Experience Manager] med [!DNL Sites] med en annan driftsättning av [!DNL Experience Manager] med [!DNL Assets] funktioner. Webbplatsens författare kan också använda Dynamic Media-bilder på webbplatsens webbsidor med hjälp av uppkopplade resurser och Dynamic Media-funktioner, som smarta beskärnings- och bildförinställningar.
 
 För [!DNL Sites] författare är fjärrresurserna tillgängliga som skrivskyddade lokala resurser. Funktionen stöder smidig sökning och åtkomst till fjärrresurser i Site Editor. För andra användningsområden där det kan krävas att hela resursen är tillgänglig på platser bör du överväga att migrera resurserna satsvis i stället för att använda anslutna resurser. Se [Migreringsguide för Experience Manager Assets](/help/assets/assets-migration-guide.md).
 
@@ -145,7 +145,7 @@ Du kan kontrollera anslutningen mellan konfigurerade [!DNL Sites] driftsättning
 ## Använda Dynamic Media-resurser {#dynamic-media-assets}
 
 
-Med sammankopplade resurser kan du använda bildresurser som bearbetats av [!DNL Dynamic Media] från fjärrdistribution av DAM på Sites-sidor och utnyttja Dynamic Media-funktioner, som smarta beskärnings- och bildförinställningar.
+Med sammankopplade resurser kan du använda bildresurser som bearbetats av [!DNL Dynamic Media] från fjärrdistribution av DAM på Sites-sidor och använda Dynamic Media-funktioner, som smarta beskärnings- och bildförinställningar.
 
 Används [!DNL Dynamic Media] med sammankopplade resurser:
 

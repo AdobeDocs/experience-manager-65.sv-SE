@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: personalization
 exl-id: d7e4d424-0ca7-449f-95fb-c4fe19dd195d
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2753'
+source-wordcount: '2749'
 ht-degree: 1%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 1%
 
 Du kan skapa e-postinnehåll i AEM och bearbeta det i Adobe Campaign e-postmeddelanden. Om du vill göra det måste du:
 
-1. Skapa ett nytt nyhetsbrev i AEM från en Adobe Campaign-specifik mall.
+1. Skapa ett nyhetsbrev i AEM från en Adobe Campaign-specifik mall.
 1. Välj [en Adobe Campaign-tjänst](#selecting-the-adobe-campaign-cloud-service-and-template) innan du redigerar innehållet för att få tillgång till alla funktioner.
 1. Redigera innehållet.
 1. Validera innehållet.
@@ -125,7 +125,7 @@ Så här redigerar du e-postinnehåll:
 
    >[!NOTE]
    >
-   >Om personaliseringsfälten i egenskaperna i redigeraren är nedtonade bör du kontrollera konfigurationen på nytt.
+   >Om personaliseringsfälten i egenskaperna i redigeraren är nedtonade bör du kontrollera konfigurationen igen.
 
    ![chlimage_1-21](assets/chlimage_1-21a.png)
 
@@ -187,7 +187,7 @@ Så här infogar du anpassning:
 
 ### Förhandsgranska ett nyhetsbrev {#previewing-a-newsletter}
 
-Du kan förhandsgranska hur nyhetsbrevet kommer att se ut samt förhandsgranska personaliseringen.
+Du kan förhandsgranska hur nyhetsbrevet kommer att se ut och förhandsgranska personaliseringen.
 
 1. Öppna nyhetsbrevet och klicka på **Förhandsgranska** i AEM övre högra hörn. AEM visar hur nyhetsbrevet ser ut när användarna får det.
 
@@ -257,7 +257,7 @@ Om ett nyhetsbrev är länkat till flera leveranser visas antalet länkade lever
 
 Så här länkar du en sida som skapats i AEM med ett e-postmeddelande från Adobe Campaign:
 
-1. Skapa ett nytt e-postmeddelande baserat på en AEM specifik e-postmall. Se [Skapa e-postmeddelanden i Adobe Campaign Standard](https://helpx.adobe.com/campaign/standard/channels/using/creating-an-email.html) för mer information.
+1. Skapa ett e-postmeddelande baserat på en AEM specifik e-postmall. Se [Skapa e-postmeddelanden i Adobe Campaign Standard](https://helpx.adobe.com/campaign/standard/channels/using/creating-an-email.html) för mer information.
 
    ![chlimage_1-36](assets/chlimage_1-36a.png)
 
@@ -351,8 +351,8 @@ Synkronisera innehåll som skapats i AEM med en leverans från Adobe Campaign:
 
    ![chlimage_1-42](assets/chlimage_1-42a.png)
 
-1. Ange övriga parametrar för leveransen (mål, osv.)
-1. Starta godkännandeprocessen i Adobe Campaign om det behövs. Innehållsgodkännande i AEM krävs utöver godkännanden som konfigurerats i Adobe Campaign (budget, mål osv.). Godkännande av innehåll i Adobe Campaign är bara möjligt om innehållet redan har godkänts i AEM.
+1. Ange de andra parametrarna för leveransen (mål och så vidare)
+1. Starta godkännandeprocessen i Adobe Campaign om det behövs. Godkännande av innehåll i AEM krävs utöver godkännanden som konfigurerats i Adobe Campaign (budget, mål och så vidare). Godkännande av innehåll i Adobe Campaign är bara möjligt om innehållet redan har godkänts i AEM.
 1. Kör leveransen. Under leveransanalysen återställs den senaste versionen av det AEM innehållet.
 
    >[!NOTE]

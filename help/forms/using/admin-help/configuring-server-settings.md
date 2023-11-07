@@ -10,9 +10,9 @@ geptopics: SG_AEMFORMS/categories/configuring_forms_workflow
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: e047a95e-0acb-438a-8d27-f005c0adc508
 exl-id: 362b7b91-c58b-4e47-a6ef-56a4b54a100c
-source-git-commit: 0c7dba43dad8608b4a5de271e1e44942c950fb16
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2625'
+source-wordcount: '2623'
 ht-degree: 0%
 
 ---
@@ -45,7 +45,7 @@ Om processerna har utformats och implementerats utan att e-post krävs behöver 
 
    >[!NOTE]
    >
-   >Om du använder Microsoft Exchange Server och e-postadressen är en ogiltig e-postadress kan Microsoft Exchange-servern inte skicka något e-postmeddelande till distributionslistor. För att lösa problemet väljer du **Aktivera extern kommunikation** separat för varje distributionslista på Microsoft Exchange-servern.
+   >Om du använder Microsoft Exchange Server och e-postadressen är en ogiltig e-postadress kan Microsoft Exchange-servern inte skicka något e-postmeddelande till distributionslistor. Du löser problemet genom att välja **Aktivera extern kommunikation** separat för varje distributionslista på Microsoft Exchange-servern.
 
 1. Klicka på Spara.
 
@@ -119,7 +119,7 @@ Du kan skicka aviseringar om deadline till användare och grupper när deadline 
 
 1. I administrationskonsolen klickar du på Tjänster > Forms-arbetsflöde > Serverinställningar > Aktivitetsmeddelanden.
 1. Klicka på Deadline (för användare) eller Grupp - Deadline (för grupper) under Meddelandetyp.
-1. Välj Aktivera tidsgräns eller Aktivera grupp - tidsgräns.
+1. Välj Aktivera deadline eller Aktivera grupp - deadline.
 1. Skriv texten för ämnesraden i e-postmeddelandet i rutan Ämne. Det här fältet är förifyllt med standardtext. Mer information om hur du anpassar det här fältet finns i [Anpassa innehållet i meddelanden](configuring-server-settings.md#customizing-the-content-of-notifications).
 1. Skriv texten för e-postmeddelandets brödtext i rutan Meddelandemall. Det här fältet är förifyllt med standardtext. Mer information om hur du anpassar det här fältet finns i [Anpassa innehållet i meddelanden](configuring-server-settings.md#customizing-the-content-of-notifications).
 1. I listan Meddelandeformat väljer du det format som e-postmeddelandet skickas i, antingen HTML eller Text. Standardformatet är HTML.
@@ -157,7 +157,7 @@ Om en gren avbryts (avbryter processen antingen avsiktligt eller på grund av et
 1. I listan E-postkodning väljer du kodningsformatet som ska användas för e-postmeddelandet. Standardvärdet är UTF-8, som de flesta användare utanför Japan använder. Användare i Japan kan välja ISO2022-JP.
 1. Klicka på Spara.
 
-### Konfigurera meddelanden om fast åtgärd {#configure-stalled-operation-notifications}
+### Konfigurera aviseringar om fasta åtgärder {#configure-stalled-operation-notifications}
 
 Om en åtgärd avbryts (avbryter processen antingen avsiktligt eller på grund av ett fel) kan du få ett e-postmeddelande skickat till en administratör eller en annan användare som kan undersöka problemet.
 
@@ -179,7 +179,7 @@ På sidorna Aktivitetsmeddelanden och Administratörsmeddelanden finns flera fun
 
 ### RTF-redigerare {#rich-text-editor}
 
-Området Meddelandemall är en textredigerare som du kan använda för att skapa HTML för e-postmeddelanden. Den innehåller alternativ för teckensnitt och styckeformatering, som finns under rutan Meddelandemall. Alternativen omfattar teckensnitt, storlek, format och färg samt styckejustering och punkter.
+Området Meddelandemall är en textredigerare som du kan använda för att skapa HTML för e-postmeddelanden. Den innehåller alternativ för teckensnitt och styckeformatering, som finns under rutan Meddelandemall. Alternativen är teckensnitt, storlek, format och färg samt styckejustering och punkter.
 
 ### URL-generering {#url-generation}
 
@@ -187,11 +187,11 @@ Endast för aktivitetsmeddelanden innehåller Forms-arbetsflödet två fördefin
 
 * OpenTask är tillgängligt för meddelandetyperna Påminnelse och Uppgiftstilldelning. Den här URL:en innehåller en länk till arbetsytan så att användaren snabbt kan komma åt uppgiften via e-postmeddelandet. När du drar URL:en för OpenTask till rutan Meddelandemall har URL:en följande format:
 
-   `https://@@notification-host@@:<PORT>/workpace/Main.html?taskId=@@taskid@@`
+  `https://@@notification-host@@:<PORT>/workpace/Main.html?taskId=@@taskid@@`
 
 * ClaimTask är tillgängligt för meddelandetyperna Grupp - Påminnelse och Grupp - Aktivitetstilldelning. Den här URL:en innehåller en länk till uppgiftsinformationssidan i Workspace, där användaren kan göra anspråk på eller göra anspråk på och öppna arbetsposten. När du drar ClaimTask-URL:en till rutan Meddelandemall har URL:en följande format:
 
-   `https://@@notification-host@@:<PORT>/workpace/Main.html?taskId=@@taskid@@`
+  `https://@@notification-host@@:<PORT>/workpace/Main.html?taskId=@@taskid@@`
 
 >[!NOTE]
 >

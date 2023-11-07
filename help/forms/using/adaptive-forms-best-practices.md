@@ -5,9 +5,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
 feature: Adaptive Forms
 exl-id: 5c75ce70-983e-4431-a13f-2c4c219e8dde
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '4734'
+source-wordcount: '4725'
 ht-degree: 0%
 
 ---
@@ -68,7 +68,7 @@ När du väl har skapat AEM projekt kan du definiera en strategi för att skapa 
    * **XFA-formulärmall**: Det är en idealisk formulärmodell om du har investeringar i XFA-baserade HTML5-formulär. Det är ett direkt sätt att konvertera XFA-baserade formulär till anpassningsbara formulär. Alla befintliga XFA-regler behålls i de tillhörande adaptiva formulären. De färdiga adaptiva formulären har stöd för XFA-konstruktioner, till exempel valideringar, händelser, egenskaper och mönster.
    * **Formulärdatamodell**: Det är en standardformulärmodell om du vill integrera backend-system som databaser, webbtjänster och AEM användarprofil för att fylla i anpassade formulär i förväg och skriva in skickade formulärdata i backend-systemen. Med en redigerare för formulärdatamodell kan du definiera och konfigurera enheter och tjänster i en formulärdatamodell som du kan använda för att skapa adaptiva formulär. Mer information finns i [AEM Forms dataintegrering](/help/forms/using/data-integration.md).
 
-Det är viktigt att du noga väljer den datamodell som inte bara passar dina behov utan också utökar dina befintliga investeringar i XFA- och XSD-resurser, om det finns några. Vi rekommenderar att du använder XSD-modell för att skapa formulärmallar eftersom den genererade XML-filen innehåller data enligt XPATH som definieras av schemat. Att använda XSD-modell som standardval för formulärdatamodell är också till hjälp eftersom det frigör formulärdesignen från det bakomliggande system som bearbetar och förbrukar data och förbättrar formulärens prestanda på grund av en-till-en-mappning av formulärfält. Dessutom kan BindRef för fältet göras till XPATH för dess datavärde i XML.
+Det är viktigt att du noga väljer den datamodell som inte bara passar dina behov utan också utökar dina befintliga investeringar i XFA- och XSD-resurser, om det finns några. Använd XSD-modellen för att skapa formulärmallar eftersom den genererade XML-filen innehåller data enligt XPATH som definieras av schemat. Att använda XSD-modell som standardval för formulärdatamodell är också till hjälp eftersom det frigör formulärdesignen från det bakomliggande system som bearbetar och förbrukar data och förbättrar formulärens prestanda på grund av en-till-en-mappning av formulärfält. Dessutom kan BindRef för fältet göras till XPATH för dess datavärde i XML.
 
 Mer information finns i [Skapa ett anpassat formulär](/help/forms/using/creating-adaptive-form.md).
 
@@ -103,7 +103,7 @@ Formulärmallarna kan också laddas upp från adaptiva formulärpaket som skapat
 * The **nosamplingContent** runmode rekommenderas endast för författaren och inte för publiceringsnoderna.
 * Redigering av resurser som anpassningsbara formulär, teman, mallar eller molnkonfigurationer utförs endast via redigeringsnoder, som kan publiceras på de konfigurerade publiceringsnoderna.
 Mer information finns i [Publicera och avpublicera formulär och dokument](https://experienceleague.adobe.com/docs/experience-manager-65/forms/publish-process-aem-forms/publishing-unpublishing-forms.html?lang=en)
-* Forms tilläggspaket krävs för redigering och publicering för att dokumenttjänståtgärderna ska kunna hanteras. Det kan därför anses vara ett beroende.
+* Forms-tilläggspaket krävs för redigering och publicering för att dokumenttjänståtgärderna ska kunna hanteras. Det kan därför anses vara ett beroende.
 Om du bara vill hämta Forms-relaterade exempelmallar, teman och DOR-paket kan du hämta dem från [aemforms-references-*-paket](https://experienceleague.adobe.com/docs/experience-manager-65/forms/publish-process-aem-forms/publishing-unpublishing-forms.html?lang=en).
 
 Mer information finns i de effektivaste strategierna i [Introduktion till utveckling av anpassningsbara formulär](/help/forms/using/introduction-forms-authoring.md).
@@ -187,7 +187,7 @@ Regelredigeraren innehåller en visuell redigerare och en kodredigerare för att
 
 ### Arbeta med teman {#working-with-themes}
 
-Med anpassningsbara teman kan du skapa återanvändbara format som kan användas i olika formulär för enhetlig utformning och formatering. Vi rekommenderar att du använder teman för att definiera format för formulärkomponenter och paneler. Här följer några tips om teman:
+Med anpassningsbara teman kan du skapa återanvändbara format som kan användas i olika formulär för enhetlig utformning och formatering. Använd teman för att definiera format för formulärkomponenter och paneler. Här följer några tips om teman:
 
 * Använd resursbiblioteket för snabb användning av textformat, bakgrund och bilder. När ett format läggs till i resursbiblioteket är det tillgängligt för andra teman och i formredigerarens formatläge.
 * Använd globala inställningar som teckensnitt och sidbakgrund med sidnivåväljaren.
@@ -241,7 +241,7 @@ För adaptiva formulär krävs Skicka-åtgärder för att bearbeta användarspec
 * Du kan skriva en anpassad sändningsåtgärd om standardåtgärderna för att skicka inte uppfyller ditt användningssätt. Mer information finns i [Skriva anpassad skickaåtgärd för anpassningsbara formulär](/help/forms/using/custom-submit-action-form.md).
 * Inkludera validering på serversidan för att förhindra att ogiltiga data skickas.
 
-Ni kan utnyttja Adobe Sign multisigneringsfunktion i anpassningsbara formulär. Tänk på följande när du konfigurerar Adobe Sign i adaptiva formulär. Mer information finns i [Använda Adobe Sign i en adaptiv form](/help/forms/using/working-with-adobe-sign.md).
+Du kan använda multisigneringsfunktionen i Adobe Sign i adaptiva formulär. Tänk på följande när du konfigurerar Adobe Sign i adaptiva formulär. Mer information finns i [Använda Adobe Sign i en adaptiv form](/help/forms/using/working-with-adobe-sign.md).
 
 * Anpassningsbart formulär som aktiveras av Adobe Sign skickas endast när alla signerare har signerat formuläret. Forms visas i Väntande signering tills formuläret har signerats av alla signerare.
 * Du kan konfigurera signeringsupplevelsen i ett formulär eller dirigera om signerare till en signeringssida när de skickas.

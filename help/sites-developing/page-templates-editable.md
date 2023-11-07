@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: 1099cc44-de6d-499e-8b52-f2f5811ae086
 docset: aem65
 exl-id: dcb66b6d-d731-493e-8936-12d529f6cbde
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '3221'
+source-wordcount: '3219'
 ht-degree: 0%
 
 ---
@@ -56,7 +56,7 @@ Skapa redigerbara mallar i första hand med [mallkonsol och mallredigerare](/hel
 
 Mer information om hur du använder redigerbara mallar i ett AEM projekt finns i [Skapa ett AEM projekt med Lazybone](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/create-aem-project-structure-using-lazybones/m-p/186478).
 
-När du skapar en ny redigerbar mall:
+När du skapar en redigerbar mall:
 
 1. Skapa en [mapp för mallarna](#template-folders). Den här mappen är inte obligatorisk, men rekommenderas.
 1. Välj en [malltyp](#template-type). Den här typen kopieras för att skapa [malldefinition](#template-definitions).
@@ -416,7 +416,7 @@ The [enhetsgrupper](/help/sites-developing/mobile.md#device-groups) används fö
 * På den redigerbara malltypen
 * På den redigerbara mallen
 
-När du skapar en ny redigerbar mall kopieras värdet från malltypen till den enskilda mallen. Om värdet inte anges för typen kan det anges i mallen. När en mall har skapats finns det inget arv från typen till mallen.
+När du skapar en redigerbar mall kopieras värdet från malltypen till den enskilda mallen. Om värdet inte anges för typen kan det anges i mallen. När en mall har skapats finns det inget arv från typen till mallen.
 
 >[!CAUTION]
 >

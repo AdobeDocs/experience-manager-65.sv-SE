@@ -2,9 +2,9 @@
 title: Kom igång med AEM Headless
 description: I den här delen av AEM Headless Developer Journey kan du läsa om AEM Headless-krav.
 exl-id: a94794a4-bf8b-4f3b-a761-3f02feedd5c0
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '3038'
+source-wordcount: '3032'
 ht-degree: 0%
 
 ---
@@ -113,13 +113,13 @@ Denna nivå av integration bygger på nivå två genom att göra det möjligt at
 
 ### Du har ännu inte någon extern konsument av det Headless-innehåll som ett program med en enda sida (SPA). {#do-not-have-a-spa}
 
-Om målet är att skapa en ny SPA som använder innehåll från AEM i bakgrunden kan du använda funktioner som Content Fragments för att hantera ditt headless-innehåll och även skapa en SPA med AEM SPA Editor-ramverket.
+Om målet är att skapa en SPA som konsumerar innehåll i bakgrunden från AEM kan du använda funktioner som Content Fragments för att hantera ditt headless-innehåll och även skapa en SPA med AEM SPA Editor-ramverket.
 
 Med SPA Editor konsumerar SPA inte bara innehåll från AEM, utan kan även redigeras i AEM av innehållsförfattarna, vilket ger dig både flexibiliteten med headless-leverans och kontextredigering inom AEM.
 
 ## Krav och krav {#requirements-prerequisites}
 
-Det finns ett antal krav innan du börjar AEM headless-projektet.
+Det finns flera krav innan du börjar ditt AEM.
 
 ### Kunskap {#knowledge}
 
@@ -175,7 +175,7 @@ Skapa en plan för vilken innehållsöversättning du behöver.
 * Behöver ni olika språk eller språk för att anpassa er till regionala särdrag?
 * Behöver multimediematerial som bilder och videor vara olika för olika språkområden?
 
-Var tydlig med arbetsflödet för innehållsuppdatering. Vilken godkännandeprocess måste systemet stödja? Kan AEM arbetsflöden utnyttjas för att automatisera denna process?
+Var tydlig med arbetsflödet för innehållsuppdatering. Vilken godkännandeprocess måste systemet stödja? Kan AEM arbetsflöden användas för att automatisera den här processen?
 
 Observera att [innehållshierarki](#content-hierarchy) kan användas för att underlätta översättning.
 
@@ -186,7 +186,7 @@ Se [ytterligare resurser](#additional-resources) för ytterligare dokumentation 
 Mapphierarkin kan hantera två viktiga problem när det gäller innehållshantering:
 
 * [Översättning](#translation) - AEM hanterar översättning av innehåll genom att underhålla kopior av innehåll i språkspecifika mappar.
-* Organisation - Mappar används för att definiera en innehållshierarki som krävs för översättningsbehov och för att hantera innehållsfragment logiskt.
+* Organisation - Mappar används för att definiera en innehållshierarki som krävs för översättningsbehov och för att logiskt hantera innehållsfragment.
 
 AEM ger en flexibel innehållsstruktur och en hierarki kan vara godtyckligt stor. Det är dock viktigt att komma ihåg att ändringar i mappstrukturen kan få oönskade konsekvenser för befintliga frågor som [förlitar sig på innehållssökvägen.](#developer) Därför kan en väldefinierad hierarki som är tydligt angiven i förväg vara till hjälp för innehållsförfattarna.
 

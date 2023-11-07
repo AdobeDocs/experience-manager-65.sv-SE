@@ -6,9 +6,9 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-adobe-phonegap-enterprise
 exl-id: 7e358660-bc2f-4d8f-8d74-6cdb6c1ea7b5
-source-git-commit: 96e2e945012046e6eac878389b7332985221204e
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1052'
+source-wordcount: '1051'
 ht-degree: 0%
 
 ---
@@ -40,7 +40,7 @@ Adobe Mobile Analytics SDK innehåller följande:
 1. **Geolokaliseringsanalys** - Ta reda på var era appanvändare öppnar och interagerar med era mobilupplevelser via GPS-positionering eller intressepunkter.
 1. **Bananalys** - Se hur användarna navigerar i appen för att avgöra vilka skärmar och gränssnittselement som är engagerande användare och vilka som får användarna att släppa.
 
-I det här avsnittet beskrivs hur [AEM](#developers) kan sedan lära sig hur man kan mäta AEM Mobile-appar med hjälp av analysspårning.
+Detta avsnitt beskriver hur [AEM](#developers) kan sedan lära sig hur man kan mäta AEM Mobile-appar med analysspårning.
 
 Äntligen [AEM administratörer](#administrators) lära dig:
 
@@ -68,7 +68,7 @@ Om du klickar på kugghjulsikonen i rutan Analysera mått öppnas den modala dia
 
 För att skapa en molntjänst för mobiltjänster i Adobe finns det två steg: anslutning till tjänsten och val av vilken rapporteringssvit som ska tilldelas konfigurationen.
 
-Börja med att klicka på plusknappen (+) på panelen Hantera Cloud Services på kontrollpanelen.
+Börja med att klicka på plusknappen (+) på panelen Hantera Cloud Service på kontrollpanelen.
 
 ![chlimage_1-126](assets/chlimage_1-126.png)
 
@@ -76,7 +76,7 @@ När du klickat på&#x200B;**+**&#39;, **Lägg till Cloud Service** visas.
 
 ![chlimage_1-127](assets/chlimage_1-127.png)
 
-Välj eller skapa en ny konfiguration för mobiltjänster genom att fylla i de obligatoriska fälten som visas nedan. Din AEM kräver den här informationen för att anslutningen till Adobe Mobile Services ska kunna skapas.
+Välj eller skapa en mobiltjänstkonfiguration genom att fylla i obligatoriska fält enligt nedan. Din AEM kräver den här informationen för att anslutningen till Adobe Mobile Services ska kunna skapas.
 
 ![chlimage_1-128](assets/chlimage_1-128.png)
 

@@ -3,7 +3,7 @@ title: Tekniska krav
 description: En lista över de klient- och serverplattformar som stöds för Adobe Experience Manager.
 topic-tags: platform
 exl-id: 47529b9a-c4e5-434f-ac26-b01714ff863b
-source-git-commit: 0dd6e3fc2fa9539e5c3ce4e99ab367752dfeaad6
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '3597'
 ht-degree: 0%
@@ -146,9 +146,9 @@ MongoDB är ett program från tredje part och ingår inte i AEM licenspaket. Mer
 >
 För att få ut så mycket som möjligt av er AEM med MongoDB rekommenderar Adobe att ni har licenser för MongoDB Enterprise-versionen och får tillgång till professionell support. Se [Rekommenderade distributioner](/help/sites-deploying/recommended-deploys.md#prerequisites-and-recommendations-when-deploying-aem-with-mongomk) för mer information.
 >
-Licensen innehåller en standardreplikuppsättning som består av en primär och två sekundära instanser som kan användas för antingen författar- eller publiceringsdistributionerna.
+Licensen innehåller en standardreplikuppsättning som består av en primär och två sekundära instanser som kan användas för antingen författaren eller publiceringsdistributionerna.
 >
-Om du vill köra både författare och publicera på MongoDB måste två separata licenser köpas.
+Om du vill köra både författare och publicering på MongoDB måste två separata licenser köpas.
 >
 Adobe kundtjänst hjälper till med kvalificerande problem som rör användningen av MongoDB med AEM.
 >
@@ -202,13 +202,13 @@ Adobe Experience Manager fungerar med följande serverplattformar för produktio
 1. Linux® Kernel 2.6, 3. x, 4. x och 5. x innehåller derivat från distributionen av Red Hat®, inklusive Red Hat® Enterprise Linux®, CentOS, Oracle Linux® och Amazon Linux®. AEM Forms tilläggsfunktioner stöds endast i CentOS 7, Red Hat® Enterprise Linux® 7, Red Hat® Enterprise Linux® 8 och Red Hat® Enterprise Linux® 9.
 1. AEM Forms stöds på Ubuntu 20.04 LTS.
 1. Linux®-distribution stöds av Adobe Managed Services.
-1. Produktionsinstallationer i Microsoft® Windows stöds för kunder som uppgraderar till 6.5 och för icke-produktionsanvändning. Nya distributioner är på begäran för AEM Sites and Assets.
-1. AEM Forms stöds på Microsoft® Window Server utan begränsningar på supportnivå R.
-1. AEM Forms har tagit bort stöd för Microsoft® Windows Server 2016.
+1. Produktionsinstallationer i Microsoft® Windows stöds för kunder som uppgraderar till 6.5 och för icke-produktionsanvändning. Nya distributioner är på begäran för AEM Sites och Assets.
+1. AEM Forms stöds på Microsoft® Window Server utan Support-Level R-begränsningar.
+1. AEM Forms har tagit bort stödet för Microsoft® Windows Server 2016.
 
 >[!NOTE]
 >
-Om du installerar AEM Forms 6.5 kontrollerar du att du har installerat följande 32-bitars Microsoft® Visual C++ Redistributable.
+Om du installerar AEM Forms 6.5 måste du se till att du har installerat följande 32-bitars omdistribuerbara Microsoft® Visual C++.
 >
 * Microsoft® Visual C++ 2008 återdistribuerbar
 * Återdistribuerbar Microsoft® Visual C++ 2010
@@ -226,7 +226,7 @@ För en molnbaserad miljö kan du titta på det senaste erbjudandet från produk
 
 Adobe erbjuder också Adobe Managed Services att distribuera AEM på Azure eller AWS. Adobe Managed Services förser experterna med erfarenhet och kompetens av att driftsätta och AEM i dessa molnmiljöer. Se [ytterligare dokumentation om Adobe Managed Services](https://business.adobe.com/products/experience-manager/managed-services.html?aemClk=t).
 
-I alla andra fall där AEM distribueras på Azure eller AWS, eller i någon annan molndatormiljö, finns stöd från Adobe i den virtuella datormiljön. Den virtuella miljön måste köras i enlighet med de tekniska specifikationer som anges på den här sidan. Alla rapporterade problem som rör AEM som körs i någon av dessa molnmiljöer måste kunna reproduceras oberoende av alla molntjänster som är specifika för molndatormiljön. Det vill säga, om inte molntjänsten stöds som en del av de tekniska krav som anges på den här sidan, till exempel Azure Blob Storage eller AWS S3.
+I alla andra fall där AEM distribueras på Azure eller AWS, eller i någon annan molndatormiljö, finns stöd från Adobe i den virtuella datormiljön. Den virtuella miljön måste köras i enlighet med de tekniska specifikationer som anges på den här sidan. Alla rapporterade problem som rör AEM som körs i någon av dessa molnmiljöer måste kunna reproduceras oberoende av alla molntjänster som är specifika för molndatormiljön. Det vill säga, om inte molntjänsten stöds som en del av de tekniska krav som anges på den här sidan, till exempel Azure Blob-lagring eller AWS S3.
 
 Adobe rekommenderar att du arbetar direkt med molnleverantören för att få rekommendationer om hur du ska distribuera AEM på Azure eller AWS utanför Adobe Managed Services. Eller i samarbete med Adobe partners som stöder driftsättningen av AEM i molnmiljön. Den valda molnleverantören eller partnern ansvarar för storleksspecifikationer, utformning och implementering av arkitekturen för att uppfylla dina specifika krav på prestanda, belastning, skalbarhet och säkerhet.
 
@@ -255,7 +255,7 @@ Följande webbservrar kan användas med Dispatcher version 4.3.2:
 
 Adobe Experience Manager användargränssnitt fungerar med följande klientplattformar. Alla webbläsare testas med standarduppsättningen med plugin-program och tillägg.
 
-AEM användargränssnitt är optimerat för större skärmar (vanligtvis bärbara och stationära datorer) och surfplattans formfaktor (till exempel Apple iPad eller Microsoft® Surface). Telefonformfaktorn stöds inte.
+AEM användargränssnitt är optimerat för större skärmar (vanligtvis bärbara och stationära datorer) och surfplattor (t.ex. Apple iPad eller Microsoft® Surface). Telefonformfaktorn stöds inte.
 
 >[!NOTE]
 >
@@ -271,9 +271,9 @@ Uppdateringar för Mozilla Firefox, Google Chrome och Microsoft® Edge var sjät
    <td><strong>Stöd för Classic UI</strong></td>
   </tr>
   <tr>
-   <td><strong>Google Chrome (vintergrön)</strong></td>
-   <td>A: Stöds</td>
-   <td>A: Stöds</td>
+   <td><strong>Google Chrome (Evergreen)</strong></td>
+   <td>S: Stöds</td>
+   <td>S: Stöds</td>
   </tr>
   <tr>
    <td>Microsoft® Edge (Evergreen)</td>
@@ -292,12 +292,12 @@ Uppdateringar för Mozilla Firefox, Google Chrome och Microsoft® Edge var sjät
   </tr>
   <tr>
    <td>Mozilla Firefox last ESR [1]</td>
-   <td>A: Stöds</td>
-   <td>A: Stöds</td>
+   <td>S: Stöds</td>
+   <td>S: Stöds</td>
   </tr>
   <tr>
-   <td>Apple Safari på macOS (vintergrön)</td>
-   <td>A: Stöds</td>
+   <td>Apple Safari på macOS (Evergreen)</td>
+   <td>S: Stöds</td>
    <td>A: Stöds</td>
   </tr>
   <tr>
@@ -337,7 +337,7 @@ När du ansluter med Microsoft® Windows 7+ till en AEM som inte är skyddad med
 
 1. Lägg till registerposten BasicAuthLevel till den här undernyckeln med värdet 2 eller mer.
 
-## Ytterligare plattformsanteckningar {#additional-platform-notes}
+## Ytterligare plattformsanmärkningar {#additional-platform-notes}
 
 Det här avsnittet innehåller särskilda anteckningar och mer detaljerad information om hur du kör Adobe Experience Manager och dess tillägg.
 
@@ -347,7 +347,7 @@ Alla element i Adobe Experience Manager (Instance, Dispatcher) kan installeras i
 
 Driften är sömlös eftersom ingen speciell konfiguration krävs. Du anger en IP-adress med det format som är lämpligt för din nätverkstyp, om det behövs.
 
-När en IP-adress måste anges kan du välja (efter behov) från följande:
+När en IP-adress måste anges kan du välja (efter behov) bland följande:
 
 * En IPv6-adress. Till exempel, `https://[ab12::34c5:6d7:8e90:1234]:4502`
 
@@ -365,7 +365,7 @@ När Dynamic Media är aktiverat gäller följande ytterligare tekniska krav.
 
 >[!NOTE]
 >
-Dessa systemkrav **gäller endast** om du använder Dynamic Media - Hybrid-läge. Dynamic Media - Hybrid-läget har en inbäddad bildserver som endast är certifierad på vissa operativsystem.
+Dessa systemkrav **gäller bara** om du använder Dynamic Media - Hybrid-läge. Dynamic Media - Hybrid-läget har en inbäddad bildserver, som bara är certifierad på vissa operativsystem.
 >
 För Dynamic Media-kunder som kör Dynamic Media - Scene7-läge (d.v.s. dynamicmedia_scene7 **körningsläge) finns det inga ytterligare systemkrav, bara samma systemkrav som AEM.** Dynamic Media - Scene7-lägesarkitektur använder den molnbaserade bildtjänsten och inte den tjänst som är inbäddad i AEM.
 
@@ -380,7 +380,7 @@ Följande maskinvarukrav gäller för både Linux® och Windows:
 
 Om du använder Dynamic Media i Linux® måste följande krav vara uppfyllda:
 
-* Red Hat® Enterprise 7 eller CentOS 7 och senare med de senaste korrigeringsfilerna
+* Red Hat® Enterprise 7 eller CentOS 7 och senare med de senaste korrigeringskorrigeringarna
 * 64-bitars operativsystem
 * Växling inaktiverad (rekommenderas)
 * SELinux är inaktiverat (se anm. nedan)
@@ -399,13 +399,13 @@ Om språkinställningen är inställd så att LC_CTYPE inte är lika med `en_US.
 >
 **NUMA-arkitektur:** System med processorer med AMD64 och Intel® EM64T är vanligtvis konfigurerade som icke-enhetliga minnesarkitekturplattformar (NUMA). Det innebär att kärnan konstruerar flera minnesnoder vid start i stället för att konstruera en enda minnesnod.
 >
-Konstruktionen för flera noder kan resultera i minnesöverbelastning på en eller flera av noderna innan andra noder töms. När minnet är uttömt kan kärnan välja att döda processer (till exempel Image Server eller Platform Server) trots att det finns tillgängligt minne.
+Konstruktionen för flera noder kan resultera i minnesöverbelastning på en eller flera av noderna innan andra noder töms. När minnesöverbelastning inträffar kan kärnan bestämma sig för att avsluta processer (till exempel Image Server eller Platform Server) även om det finns tillgängligt minne.
 >
 Därför rekommenderar Adobe att du, om du kör ett sådant system, stänger av NUMA med startalternativet **numa=off** för att undvika att kärnan dödar dessa processer.
 
 >[!NOTE]
 >
-**Servervärdnamnet måste matchas:** Kontrollera att serverns värdnamn kan matchas mot en IP-adress. Om det inte är möjligt, lägg till det fullständigt kvalificerade värdnamnet och IP-adressen till **/etc/hosts**:
+**Serverns värdnamn måste matchas:** Kontrollera att serverns värdnamn kan matchas till en IP-adress. Om det inte är möjligt lägger du till det fullständigt kvalificerade värdnamnet och IP-adressen i **/etc/hosts**:
 >
 `<ip address> <fully qualified hostname>`
 
@@ -448,7 +448,7 @@ För Windows x86:
    <td>XPS, bildformat (BMP, GIF, JPEG, JPG, TIF, TIFF, PNG, JPF, JPX, JP2, J2K, J2C, JPC), HTML, HTM, DWG, DXF och DWF</td>
   </tr>
   <tr>
-   <td><a href="https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html">Acrobat 2017 klassiskt spår</a> senaste versionen (föråldrad)</td>
+   <td><a href="https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html">Senaste versionen av Acrobat 2017 Classic Track</a> (borttagen)</td>
    <td>XPS, bildformat (BMP, GIF, JPEG, JPG, TIF, TIFF, PNG, JPF, JPX, JP2, J2K, J2C, JPC), HTML, HTM, DWG, DXF och DWF</td>
   </tr>
   <tr>
@@ -456,7 +456,7 @@ För Windows x86:
    <td>DOC, DOCX, XLS, XLSX, PPT, PPTX, RTF och TXT</td>
   </tr>
   <tr>
-   <td>Microsoft® Office 2016 (föråldrad)</td>
+   <td>Microsoft® Office 2016 (inaktuellt)</td>
    <td>DOC, DOCX, XLS, XLSX, PPT, PPTX, RTF och TXT</td>
   </tr>
   <tr>
@@ -476,7 +476,7 @@ För Windows x86:
    <td>PUB</td>
   </tr>
   <tr>
-   <td>Microsoft® Project 2016 (föråldrad)<br /> </td>
+   <td>Microsoft® Project 2016 (inaktuellt)<br /> </td>
    <td>MPP</td>
   </tr>
   <tr>
@@ -496,7 +496,7 @@ PDF Generator har endast stöd för engelska, franska, tyska och japanska versio
 >
 Dessutom
 >
-* PDF Generator kräver en 32-bitarsversion av [Acrobat 2020 classic track version 20.004.30006](https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html) eller Acrobat 2017 version 17.011.30078 för att utföra konverteringen.
+* PDF Generator kräver en 32-bitarsversion av [Acrobat 2020 klassisk spårversion 20.004.30006](https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html) eller Acrobat 2017 version 17.011.30078 för att utföra konverteringen.
 * PDF Generator-konverteringar för OpenOffice stöds bara i Windows och Linux®.
 * PDF Generator har endast stöd för 32-bitarsversionen av Microsoft® Office Professional Plus och andra program som krävs för konvertering i Windows.
 * PDF Generator stöder 32- och 64-bitarsversionerna av OpenOffice i Linux®.

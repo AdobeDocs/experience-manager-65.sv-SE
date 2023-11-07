@@ -2,10 +2,10 @@
 title: Experience Fragments
 description: Upplev fragment vid framtagning av Adobe Experience Manager Sites.
 exl-id: 1ff9ac47-9a3a-4a4e-8af8-bc73048e0409
-source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1444'
-ht-degree: 6%
+source-wordcount: '1440'
+ht-degree: 5%
 
 ---
 
@@ -267,7 +267,7 @@ Du kan välja en eller flera komponenter för att skapa en byggsten för återvi
 
 ### Skapa ett byggblock {#creating-a-building-block}
 
-Så här skapar du ett nytt byggblock:
+Så här skapar du ett byggblock:
 
 1. Välj de komponenter som du vill återanvända i Experience Fragment-redigeraren:
 
@@ -281,7 +281,7 @@ Så här skapar du ett nytt byggblock:
 
    ![xf-11](assets/xf-11.png)
 
-1. **Byggblocket** visas på fliken och kan markeras i styckesystemet:
+1. The **Byggblock** visas på fliken och kan markeras i styckesystemet:
 
    ![xf-12](assets/xf-12.png)
 

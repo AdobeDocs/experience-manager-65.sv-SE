@@ -10,9 +10,9 @@ topic-tags: document_services
 discoiquuid: 6a99042f-79c7-494b-bca0-73f2b5725b58
 docset: aem65
 exl-id: 2acd6b19-0fe8-4994-b0f4-c9d5b9f3fdf1
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2121'
+source-wordcount: '2115'
 ht-degree: 0%
 
 ---
@@ -35,7 +35,7 @@ Följande bild visar tre källdokument som sammanfogas till ett enda resulterand
 
 Sammanställa ett enkelt PDF-dokument från flera PDF-dokument
 
-Följande exempel är ett enkelt DDX-dokument som används för att montera dokumentet. Här anges namnen på källdokumenten som används för att skapa det resulterande dokumentet samt namnet på det resulterande dokumentet:
+Följande exempel är ett enkelt DDX-dokument som används för att montera dokumentet. Här anges namnen på källdokumenten som används för att skapa det resulterande dokumentet och namnet på det resulterande dokumentet:
 
 ```xml
 <PDF result="Doc4">
@@ -78,7 +78,7 @@ När Assembler-tjänsten tolkar följande DDX-dokument, sätts ett PDF-Portfolio
 
 När du sammanställer ett dokument kan du även kryptera PDF-dokumentet med ett lösenord. När ett PDF-dokument har krypterats med ett lösenord måste användaren ange lösenordet för att kunna visa PDF-dokumentet i Adobe Reader eller Acrobat. Om du vill kryptera ett PDF-dokument med ett lösenord måste DDX-dokumentet innehålla krypteringselementvärden som krävs för att kryptera ett PDF-dokument.
 
-Krypteringstjänsten behöver inte vara en del av LiveCycle-installationen för att kunna kryptera ett PDF-dokument med ett lösenord.
+Krypteringstjänsten behöver inte ingå i LiveCyclet för att kunna kryptera ett PDF-dokument med ett lösenord.
 
 Om ett eller flera av indatadokumenten är krypterade anger du ett lösenord för att öppna dokumentet som en del av DDX-filen.
 
@@ -86,15 +86,15 @@ Om ett eller flera av indatadokumenten är krypterade anger du ett lösenord fö
 
 När du sammanställer ett dokument kan du använda Bates-numrering för att tillämpa en unik sididentifierare på varje sida. När du använder Bates-numrering tilldelas varje sida i dokumentet (eller dokumentuppsättningen) ett nummer som unikt identifierar sidan. Till exempel kan tillverkningsdokument som innehåller produktstruktur och som är kopplade till produktionen av en sammansättning innehålla en identifierare. Ett Bates-nummer innehåller ett numeriskt värde i följd samt ett valfritt prefix och suffix. Prefixet + det numeriska värdet + suffixet kallas för ett bates-mönster.
 
-Följande bild visar ett PDF-dokument som innehåller en unik identifierare som finns i dokumentets sidhuvud.
+Följande bild visar ett PDF-dokument som innehåller en unik identifierare i dokumentets sidhuvud.
 
-![Ett PDF-dokument som innehåller en unik identifierare som finns i dokumentets rubrik](do-not-localize/as_batesnumber.png)
+![Ett PDF-dokument som innehåller en unik identifierare i dokumentets rubrik](do-not-localize/as_batesnumber.png)
 
-Ett PDF-dokument som innehåller en unik identifierare som finns i dokumentets rubrik
+Ett PDF-dokument som innehåller en unik identifierare i dokumentets rubrik
 
 ### Förenkla och sammanställ dokument {#flatten-and-assemble-documents}
 
-Du kan använda tjänsten Assembler för att omvandla ett interaktivt PDF-dokument (till exempel ett formulär) till ett icke-interaktivt PDF-dokument. Med ett interaktivt PDF-dokument kan användare ange eller ändra data som finns i dokumentfälten i PDF. Processen att omforma ett interaktivt PDF-dokument till ett icke-interaktivt PDF-dokument kallas för förenkling. När ett PDF-dokument förenklas bevaras det grafiska utseendet i formulärfälten, men de är inte längre interaktiva. Ett skäl till att förenkla ett PDF-dokument är att se till att data inte kan ändras. Dessutom fungerar inte längre skript som är kopplade till fälten.
+Du kan använda tjänsten Assembler för att omvandla ett interaktivt PDF-dokument (till exempel ett formulär) till ett icke-interaktivt PDF-dokument. Med ett interaktivt PDF-dokument kan användare ange eller ändra data i dokumentfälten i PDF. Processen att omforma ett interaktivt PDF-dokument till ett icke-interaktivt PDF-dokument kallas för förenkling. När ett PDF-dokument förenklas bevaras det grafiska utseendet i formulärfälten, men de är inte längre interaktiva. Ett skäl till att förenkla ett PDF-dokument är att se till att data inte kan ändras. Dessutom fungerar inte längre skript som är kopplade till fälten.
 
 När du skapar ett PDF-dokument som har sammanställts från interaktiva PDF-dokument, förenklas dessa formulär av tjänsten Assembler innan de sammanställs i det resulterande dokumentet.
 
@@ -176,7 +176,7 @@ resulterande dokument till alla, som i exemplet nedan:
 </DDX
 ```
 
-Du kan också ange attributet för alla XDP-källdokument oberoende av varandra för att få samma\
+Du kan också ange attributet för alla XDP-källdokument separat för att få samma\
 resultat.
 
 ```xml
@@ -260,11 +260,11 @@ Du kan använda Assembler-tjänsten för att paketera ett XDP-dokument som ett P
 </DDX>
 ```
 
-## Dela upp PDF-dokument {#disassemble-pdf-documents}
+## Disassemblera PDF-dokument {#disassemble-pdf-documents}
 
 Du kan använda Assembler-tjänsten för att demontera ett PDF-dokument. Tjänsten kan extrahera sidor från källdokumentet eller dela upp ett källdokument baserat på bokmärken. Vanligtvis är den här uppgiften användbar om PDF-dokumentet ursprungligen skapades från många enskilda dokument, till exempel en samling programsatser.
 
-### Extrahera sidor från ett källdokument {#extract-pages-from-a-source-document}
+### Hämta sidor från ett källdokument {#extract-pages-from-a-source-document}
 
 På följande bild extraheras sidorna 1-3 från källdokumentet och placeras i ett nytt resulterande dokument.
 
@@ -311,25 +311,25 @@ Du kan använda Assembler-tjänsten för att hämta följande information om ett
    * Meningar i varje stycke på varje sida i dokumentet
 
 * Bokmärken, inklusive sidnummer, rubrik, mål och utseende. Du kan exportera den här\
-   data från ett PDF-dokument och importera det till ett PDF-dokument.
+  data från ett PDF-dokument och importera det till ett PDF-dokument.
 
 * Bifogade filer, inklusive filinformation. För bilagor på sidnivå innehåller den även\
-   platsen för anteckningen om den bifogade filen. Du kan exportera dessa data från ett PDF-dokument och\
-   importera det till ett PDF-dokument.
+  platsen för anteckningen om den bifogade filen. Du kan exportera dessa data från ett PDF-dokument och\
+  importera det till ett PDF-dokument.
 
 * Paketfiler, inklusive filinformation, mappar, paket, schema och fältdata. Du kan exportera dessa data från ett PDF-dokument och importera dem till ett PDF-dokument.
 
 ## Validera DDX-dokument {#validate-ddx-documents}
 
-Du kan använda Assembler-tjänsten för att avgöra om ett DDX-dokument är giltigt. Om du till exempel uppgraderar från en tidigare version av LiveCycle säkerställer valideringen att ditt DDX-dokument är giltigt.
+Du kan använda Assembler-tjänsten för att avgöra om ett DDX-dokument är giltigt. Om du till exempel uppgraderar från en tidigare version av LiveCyclet säkerställer valideringen att ditt DDX-dokument är giltigt.
 
 ## Ring andra tjänster {#call-other-services}
 
-Du kan använda DDX-dokument som gör att Assembler-tjänsten anropar följande LiveC-cykeltjänster. Assembler-tjänsten kan bara anropa de tjänster som installeras med LiveCycle.
+Du kan använda DDX-dokument som gör att Assembler-tjänsten anropar följande LiveC-cykeltjänster. Assembler-tjänsten kan bara anropa de tjänster som installeras med LiveCyclet.
 
 **Tjänsten Reader Extensions**: Gör det möjligt för Adobe Reader-användare att digitalt signera det resulterande PDF-dokumentet.
 
-**Forms-tjänst**: Sammanfogar en XDP-fil och en XML-datafil för att skapa ett PDF-dokument som innehåller det ifyllda interaktiva formuläret.
+**Forms**: Sammanfogar en XDP-fil och en XML-datafil för att skapa ett PDF-dokument som innehåller det ifyllda interaktiva formuläret.
 
 **Utdatatjänst**: Konverterar ett dynamiskt XML-formulär till ett PDF-dokument som innehåller ett icke-interaktivt formulär (förenklar formuläret). Assembler-tjänsten förenklar statiska XML-formulär och Acrobat-formulär utan att du behöver anropa Output-tjänsten.
 

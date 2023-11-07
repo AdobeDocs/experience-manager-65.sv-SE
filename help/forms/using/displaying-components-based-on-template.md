@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: f658da57-0134-4458-9ef9-a99787b66742
 docset: aem65
 exl-id: 1fc56829-db81-4450-b1d8-b4a31110199e
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '352'
+source-wordcount: '351'
 ht-degree: 1%
 
 ---
@@ -36,7 +36,7 @@ Följ de här stegen för att visa komponenterna i sidofältet baserat på en ma
 
 1. I CRXDE navigerar du till: `/conf/<your-folder>/settings/wcm/policies/fd/af/layouts/gridFluidLayout/`
 
-   Om du vill välja en grupp komponenter krävs en ny innehållsprincip. Om du vill skapa en ny princip kopierar och klistrar du in standardprincipen och byter namn på den.
+   Om du vill välja en grupp komponenter krävs en ny innehållsprincip. Om du vill skapa en profil kopierar och klistrar du in standardprincipen och byter namn på den.
 
    Sökvägen till standardinnehållsprincipen är: `/conf/<your-folder>/settings/wcm/policies/fd/af/layouts/gridFluidLayout/default`
 

@@ -1,5 +1,5 @@
 ---
-title: Utdatatjänst
+title: Output Service
 seo-title: Output Service
 description: Beskriver Output Service, som ingår i AEM Document Services
 seo-description: Describes Output Service, which is part of AEM Document Services
@@ -10,14 +10,14 @@ topic-tags: document_services
 discoiquuid: 51ab91ff-c0c0-4165-ae02-f306e45eea03
 docset: aem65
 exl-id: 1b62e1c1-428d-4c0f-98a8-486f319fa581
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '512'
 ht-degree: 0%
 
 ---
 
-# Utdatatjänst{#output-service}
+# Output Service{#output-service}
 
 ## Översikt {#overview}
 

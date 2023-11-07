@@ -5,9 +5,9 @@ contentOwner: AG
 role: User
 feature: Collaboration,Asset Management
 exl-id: ddb69727-74a0-4a4d-a14e-7d3bb5ceea2a
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '606'
+source-wordcount: '605'
 ht-degree: 1%
 
 ---
@@ -24,7 +24,7 @@ Med den här funktionen kan du dela en lågupplöst PDF-fil eller JPG-fil med le
 
 ## Relatera resurser {#relating-assets}
 
-1. Från [!DNL Experience Manager] gränssnitt, öppna **[!UICONTROL Properties]** sidan för en resurs som du vill relatera.
+1. Från [!DNL Experience Manager] -gränssnittet, öppna **[!UICONTROL Properties]** sidan för en resurs som du vill relatera.
 
    ![öppna en tillgångs egenskapssida för att relatera resursen](assets/asset-properties-relate-assets.png)
 
@@ -42,7 +42,7 @@ Med den här funktionen kan du dela en lågupplöst PDF-fil eller JPG-fil med le
 1. Gör något av följande:
 
    * Om du vill relatera resursens källfil väljer du **[!UICONTROL Source]** från listan.
-   * Om du vill relatera en härledd fil väljer du **[!UICONTROL Derived]** från listan.
+   * Om du vill koppla en härledd fil väljer du **[!UICONTROL Derived]** från listan.
    * Om du vill skapa en dubbelriktad relation mellan resurserna väljer du **[!UICONTROL Others]** från listan.
 
 1. Från **[!UICONTROL Select Asset]** navigera till platsen för resursen som du vill relatera och markera den.
@@ -54,7 +54,7 @@ Med den här funktionen kan du dela en lågupplöst PDF-fil eller JPG-fil med le
 
    ![chlimage_1-278](assets/chlimage_1-278.png)
 
-1. Om du vill ta bort kopplingen för en resurs klickar du på **[!UICONTROL Unrelate]** ![ej hänförliga tillgångar](assets/do-not-localize/link-unrelate-icon.png) i verktygsfältet.
+1. Om du vill ta bort kopplingen för en resurs klickar du **[!UICONTROL Unrelate]** ![ej hänförliga tillgångar](assets/do-not-localize/link-unrelate-icon.png) i verktygsfältet.
 
 1. Välj de resurser som du vill ta bort kopplingen för i **[!UICONTROL Remove Relations]** och klickar **[!UICONTROL Unrelate]**.
 
@@ -72,9 +72,9 @@ Om källfilen är relaterad till en annan resurs [!DNL Experience Manager Assets
 
 ![sidan med resursegenskaper visar den relaterade resursens källfil som ska inkluderas för översättning](assets/asset-properties-source-asset.png)
 
-*Bild: Källtillgång för relaterade tillgångar som ska inkluderas för översättning.*
+*Figur: Källtillgång för relaterade tillgångar som ska inkluderas för översättning.*
 
-1. Översätt resurserna i källmappen till ett målspråk genom att följa stegen i [Skapa ett nytt översättningsprojekt](translation-projects.md#create-a-new-translation-project). I det här fallet kan du till exempel översätta dina resurser till franska.
+1. Översätt resurserna i källmappen till ett målspråk genom att följa stegen i [Skapa ett översättningsprojekt](translation-projects.md#create-a-new-translation-project). I det här fallet kan du till exempel översätta dina resurser till franska.
 
 1. Från [!UICONTROL Projects] öppnar du översättningsmappen.
 

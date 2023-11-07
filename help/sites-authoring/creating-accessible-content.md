@@ -2,9 +2,9 @@
 title: Creating Accessible Content for Adobe Experience Manager (WCAG 2.1-överensstämmelse)
 description: Använd AEM för att göra webbinnehåll tillgängligt för och användbart för personer med funktionshinder
 exl-id: 2145d761-f51d-482b-a0e7-ef7500c4872f
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '13817'
+source-wordcount: '13810'
 ht-degree: 3%
 
 ---
@@ -438,7 +438,7 @@ På samma sätt innebär information som kräver att man skiljer mellan olika lj
 
 Se till att all information som bygger på visuella egenskaper för sidinnehåll också presenteras i ett alternativt format.
 
-* Förlita dig inte på visuell position för att ge information. Om du till exempel vill hänvisa användare till en meny till höger på sidan för att få tillgång till mer information, ska du inte hänvisa till *menyn till höger*; i stället ger du menyn ett namn (till exempel via en rubrik) och refererar till det namnet i texten.
+* Förlita dig inte på visuell position för att ge information. Om du till exempel vill hänvisa användare till en meny till höger på sidan för att få tillgång till mer information, ska du inte hänvisa till *menyn till höger*; i stället ger du menyn ett namn (t.ex. som rubrik) och refererar till det namnet i texten.
 * Förlita dig inte på att textformatering (till exempel fet eller kursiv text) är det enda sättet att förmedla information.
 
 >[!NOTE]
@@ -840,7 +840,7 @@ Se framför allt till att länkens syfte tydligt beskrivs i länktexten.
 
 Länkarna ska vara enhetliga på olika sidor, särskilt för navigeringsfält. Om till exempel en länk till en viss sida heter **Publikationer** på en sida använder du den texten på andra sidor för att säkerställa konsekvens.
 
-När du skriver finns det vissa problem med användningen av rubrikattribut som säkerställer att liknande länkar som visas på en sida ger unik information om destinationen (till exempel &quot;läs mer&quot; avser ofta en rad olika destinationer):
+Vid skrivtillfället finns det vissa problem som omger användningen av rubrikattribut för att säkerställa att liknande länkar som visas på en sida ger unik information om destinationen (t.ex.&quot;läs mer&quot; avser ofta ett intervall av olika destinationer):
 
 * Texten i rubrikattributet är bara tillgänglig för musanvändare som popup-fönster med verktygstips och kan inte öppnas konsekvent med tangentbordet eller av mobilanvändare.
 * Skärmläsare kan läsa upp rubrikattribut, men den här funktionen kanske inte är aktiverad som standard. Därför kanske användarna inte känner till att det finns ett rubrikattribut.
@@ -1094,7 +1094,7 @@ Följ riktlinjerna i [Så här uppfyller du kriterierna för framgång 3.2.2](ht
 
 Syftet med detta kriterium är att uppmuntra till enhetlig presentation och layout för användare som interagerar med upprepat innehåll på en uppsättning webbsidor och måste hitta specifik information eller funktionalitet mer än en gång. Personer med nedsatt syn som använder skärmförstoring för att visa en liten del av skärmen i taget använder ofta visuella ledtrådar och sidgränser för att snabbt hitta upprepat innehåll. Att presentera upprepat innehåll i samma ordning är också viktigt för visuella användare som använder rumsligt minne eller visuella ledtrådar i designen för att hitta upprepat innehåll.
 
-Det är viktigt att komma ihåg att användningen av frasen&quot;samma ordning&quot; i detta avsnitt inte ska innebära att undernavigeringsmenyer inte kan användas eller att block av sekundär navigering eller sidstruktur inte kan användas. Istället är resultatvillkoret avsett att hjälpa användare som interagerar med upprepat innehåll på webbsidor att kunna förutse var innehållet finns. Och hitta det snabbare när de kommer på det igen.
+Användningen av frasen &quot;samma ordning&quot; i detta avsnitt innebär inte att undernavigeringsmenyer inte kan användas eller att block av sekundär navigering eller sidstruktur inte kan användas. Istället är resultatvillkoret avsett att hjälpa användare som interagerar med upprepat innehåll på webbsidor att kunna förutse var innehållet finns. Och hitta det snabbare när de kommer på det igen.
 
 Användare kan initiera en ändring av ordningen med hjälp av adaptiva användaragenter eller genom att ange inställningar så att informationen presenteras på ett sätt som är mest användbart för dem.
 

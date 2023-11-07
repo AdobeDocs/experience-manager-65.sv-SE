@@ -10,9 +10,9 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: be2aa297-5b78-4b1d-8ff1-e6a585a177dd
 exl-id: 17a4e4dc-804e-44a9-9942-c37dbfc8016f
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '858'
+source-wordcount: '856'
 ht-degree: 0%
 
 ---
@@ -74,15 +74,15 @@ En anpassad sidkomponent kan till exempel innehålla en sidegenskap som författ
 >
 >Be er analyskonsult om hjälp med att utveckla en effektiv strategi för er `s.pageName` värde.
 
-### Implementera en leverantör av sidnamn för analyser {#implementing-an-analytics-page-name-provider-service}
+### Implementera en tjänst för leverantör av sidnamn för analyser {#implementing-an-analytics-page-name-provider-service}
 
 Implementera `com.day.cq.analytics.sitecatalyst.AnalyticsPageNameProvider` som en OSGi-tjänst för att anpassa logiken som hämtar `s.pageName` egenskapsvärde. Webbplatssidans analys och Content Insight använder tjänsten för att hämta rapportdata från Analytics.
 
 Gränssnittet AnalyticsPageNameProvider definierar två metoder som du måste implementera:
 
-* `getPageName`: Returnerar ett `String` värdet som representerar värdet som ska användas som `s.pageName` -egenskap.
+* `getPageName`: Returnerar en `String` värdet som representerar värdet som ska användas som `s.pageName` -egenskap.
 
-* `getResource`: Returnerar ett `org.apache.sling.api.resource.Resource` objekt som representerar sidan som är associerad med `s.pageName` -egenskap.
+* `getResource`: Returnerar en `org.apache.sling.api.resource.Resource` objekt som representerar sidan som är associerad med `s.pageName` -egenskap.
 
 Båda metoderna har en `com.day.cq.analytics.sitecatalyst.AnalyticsPageNameContext` -objekt som en parameter. The `AnalyticsPageNameContext` klassen ger information om kontexten för analysanropen:
 
@@ -91,7 +91,7 @@ Båda metoderna har en `com.day.cq.analytics.sitecatalyst.AnalyticsPageNameConte
 * The `Resource` objekt för sidan.
 * The `ResourceResolver` objekt för sidan.
 
-Klassen innehåller också en set för sidnamnet.
+Klassen innehåller också en set-metod för sidnamnet.
 
 ### Exempel på implementering av AnalyticsPageNameProvider {#example-analyticspagenameprovider-implementation}
 
@@ -99,8 +99,8 @@ Följande exempel `AnalyticsPageNameProvider` implementeringen stöder en anpass
 
 * Komponenten utökar bassidans komponent.
 * Dialogrutan innehåller ett fält som författare använder för att ange värdet för `s.pageName` -egenskap.
-* Egenskapsvärdet lagras i egenskapen pageName för `jcr:content`noden för sidinstanserna.
-* Den analysegenskap som lagrar `s.pageName` egenskapen anropas `pagedata.pagename`. Den här egenskapen är mappad till `s.pageName` i Analytics-ramverket.
+* Egenskapsvärdet lagras i egenskapen pageName för `jcr:content`noden för sidinstanser.
+* Analysegenskapen som lagrar `s.pageName` egenskapen anropas `pagedata.pagename`. Den här egenskapen är mappad till `s.pageName` i Analytics-ramverket.
 
 Följande implementering av `getPageName` metoden returnerar värdet för nodegenskapen pageName om ramverksmappningen är korrekt konfigurerad:
 
@@ -154,7 +154,7 @@ Följande implementering av metoden getResource returnerar resursobjektet för s
     }
 ```
 
-Följande kod representerar hela klassen, inklusive SCR-anteckningar som konfigurerar tjänsten. Observera att servicerankningen är 200 vilket åsidosätter standardtjänsten.
+Följande kod representerar hela klassen, inklusive SCR-anteckningar som konfigurerar tjänsten. Tjänstrankningen är 200 vilket åsidosätter standardtjänsten.
 
 ```java
 /*************************************************************************

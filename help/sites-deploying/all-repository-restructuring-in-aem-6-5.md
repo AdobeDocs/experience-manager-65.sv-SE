@@ -6,7 +6,7 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: repo_restructuring
 exl-id: 2d852d9d-9be3-487a-966a-4902bd7df7f9
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '2689'
 ht-degree: 0%
@@ -578,13 +578,13 @@ I.e. the `sling:resourceType` för ContextHub-konfigurationen måste vara relati
   </tr>
   <tr>
    <td><strong>Anteckningar</strong></td>
-   <td><p>Om du startar om paketet Day Communique Tagging OSGi registreras den nya platsen endast som taggrot om den föregående platsen är tom.</p> <p>Referenser till den föregående platsen fortsätter att fungera efter migrering till den nya platsen för alla funktioner som använder AEM TagManager API för taggupplösning.</p> <p>Anpassad kod som uttryckligen refererar till sökvägen <code>/etc/tags</code> måste uppdateras till <span class="code">/content/
+   <td><p>Om du startar om paketet Day Communique Tagging OSGi registreras den nya platsen endast som taggrot om den föregående platsen är tom.</p> <p>Referenser till föregående plats fortsätter att fungera efter migrering till Ny plats för alla funktioner som använder AEM TagManager API för taggupplösning.</p> <p>Anpassad kod som uttryckligen refererar till sökvägen <code>/etc/tags</code> måste uppdateras till <span class="code">/content/
       <code>
        cq
       </code>
       <code>
        :tags
-      </code></span>, eller helst skrivas om för att utnyttja TagManagers Java API, tillsammans med den här migreringen.</p> </td>
+      </code></span>, eller helst skrivas om för att använda Java-API:t TagManager tillsammans med den här migreringen.</p> </td>
   </tr>
  </tbody>
 </table>

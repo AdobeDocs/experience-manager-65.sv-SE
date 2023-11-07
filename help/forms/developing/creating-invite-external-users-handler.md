@@ -3,9 +3,9 @@ title: Skapa en hanterare för att bjuda in externa användare
 description: Lär dig hur du skapar en hanterare för att bjuda in externa användare. Tjänsten Rights Management gör det möjligt att bjuda in externa användare till Rights Management.
 role: Developer
 exl-id: b0416716-dcc9-4f80-986a-b9660a7c8f6b
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1091'
+source-wordcount: '1090'
 ht-degree: 0%
 
 ---
@@ -32,7 +32,7 @@ Om du vill utveckla en hanterare för att bjuda in externa användare måste du 
 
 ## Konfigurera utvecklingsmiljön {#setting-up-development-environment}
 
-Om du vill konfigurera utvecklingsmiljön måste du skapa ett nytt Java-projekt, till exempel ett Eclipse-projekt. Den version av Eclipse som stöds är `3.2.1` eller senare.
+Om du vill konfigurera utvecklingsmiljön måste du skapa ett Java-projekt, till exempel ett Eclipse-projekt. Den version av Eclipse som stöds är `3.2.1` eller senare.
 
 SPI för Rights Management kräver `edc-server-spi.jar` filen som ska anges i projektets klassökväg. Om du inte refererar till den här JAR-filen kan du inte använda Rights Management SPI i ditt Java-projekt. Den här JAR-filen installeras med AEM Forms SDK i `[install directory]\Adobe\Adobe_Experience_Manager_forms\sdk\spi` mapp.
 

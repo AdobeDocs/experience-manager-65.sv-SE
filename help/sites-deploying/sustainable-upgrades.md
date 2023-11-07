@@ -8,9 +8,9 @@ topic-tags: upgrading
 docset: aem65
 feature: Upgrading
 exl-id: b777fdca-e7a5-427a-9e86-688dd7cac636
-source-git-commit: 26c0411d6cc16f4361cfa9e6b563eba0bfafab1e
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '838'
+source-wordcount: '834'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 Customization Framework-funktionen är utformad för att minska antalet fel i icke-utökningsbara områden i koden (som APIS) eller innehåll (som övertäckningar) som inte är uppgraderingsvänliga.
 
-Det finns två komponenter i anpassningsramverket: den **API-gränssnitt** och **Innehållsklassificering**.
+Det finns två komponenter i anpassningsramverket: **API-gränssnitt** och **Innehållsklassificering**.
 
 #### API-gränssnitt {#api-surface}
 
@@ -33,7 +33,7 @@ I tidigare versioner av Adobe Experience Manager (AEM) exponerades många API:er
 
 * Offentliga API:er är bakåtkompatibla med installationen av ett kompatibilitetspaket.
 * Kompatibilitetspaketet innehåller en Uber JAR-kompatibel komponent för att säkerställa bakåtkompatibilitet
-* Java™-API:er markerade som `Private` är avsedda att endast användas av AEM interna paket och ska inte användas av anpassade paket.
+* Java™-API:er markerade som `Private` är avsedda att endast användas av AEM interna paket, inte av anpassade paket.
 
 >[!NOTE]
 >
@@ -43,7 +43,7 @@ I tidigare versioner av Adobe Experience Manager (AEM) exponerades många API:er
 
 #### Innehållsklassificeringar {#content-classifications}
 
-AEM har länge använt principen för övertäckningar och Sling Resource Merger för att ge kunderna möjlighet att utöka och anpassa AEM. Fördefinierade funktioner som driver AEM konsoler och användargränssnitt lagras i **/libs**. Kunderna kan aldrig ändra något under **/libs** men kan lägga till ytterligare innehåll under **/apps** för att täcka över och utöka funktionaliteten som definieras i **/libs** (Mer information finns i Utveckla med övertäckningar.) Detta orsakade fortfarande många problem när AEM uppgraderades som innehåll i **/libs** kan ändra så att övertäckningsfunktionen bryts på oväntade sätt. Kunderna kan också utöka AEM genom arv genom att använda `sling:resourceSuperType`eller bara referera till en komponent i **/libs** direkt som sling:resourceType. Liknande uppgraderingsproblem kan uppstå med referens- och åsidosättningsanvändningsfall.
+AEM har länge använt principen för övertäckningar och Sling Resource Merger för att ge kunderna möjlighet att utöka och anpassa AEM. Fördefinierade funktioner som driver AEM konsoler och användargränssnitt lagras i **/libs**. Kunderna kan aldrig ändra något under **/libs** men kan lägga till ytterligare innehåll under **/apps** för att täcka över och utöka funktionaliteten som definieras i **/libs** (Mer information finns i Utveckla med övertäckningar.) Detta orsakade fortfarande många problem när AEM uppgraderades som innehåll i **/libs** kan ändra så att övertäckningsfunktionen bryts på oväntade sätt. Kunderna kan också utöka AEM genom arv genom att använda `sling:resourceSuperType`eller referera en komponent i **/libs** direkt som sling:resourceType. Liknande uppgraderingsproblem kan uppstå med referens- och åsidosättningsanvändningsfall.
 
 För att göra det säkrare och enklare för kunderna att förstå vilka delar av **/libs** är säkra att använda och täcka över innehållet i **/libs** har klassificerats med följande blandningar:
 

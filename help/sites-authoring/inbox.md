@@ -2,9 +2,9 @@
 title: Inkorgen för att hantera uppgifter
 description: Hantera dina uppgifter med inkorgen i Adobe Experience Manager 6.5.
 exl-id: 80b7f179-b011-4f90-b5ab-9ef8a669d271
-source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1148'
+source-wordcount: '1144'
 ht-degree: 7%
 
 ---
@@ -67,7 +67,7 @@ Så här öppnar du AEM inkorg:
 
 1. Klicka/tryck på indikatorn i verktygsfältet.
 
-1. Välj **Visa alla**. **AEM -inkorgen** öppnas. I inkorgen visas objekt från arbetsflöden, projekt och uppgifter.
+1. Välj **Visa alla**. The **AEM** öppnas. I inkorgen visas objekt från arbetsflöden, projekt och uppgifter.
 1. Standardvyn är [Listvy](#inbox-list-view), men du kan även växla till [Kalendervy](#inbox-calendar-view). Detta görs med vyväljaren (verktygsfält, överst till höger).
 
    För båda vyerna kan du även definiera [Visa inställningar](#inbox-view-settings); de tillgängliga alternativen beror på den aktuella vyn.
@@ -161,7 +161,7 @@ Alternativet Admin Control är bara synligt för medlemmarna i `administrators` 
 >Även om det går att markera mer än ett objekt, kan åtgärder bara vidtas för ett objekt i taget.
 
 
-1. Om du vill utföra en åtgärd för ett objekt markerar du miniatyrbilden för det aktuella objektet. Ikoner för de åtgärder som är tillämpliga på det objektet visas i verktygsfältet:
+1. Om du vill utföra en åtgärd för ett objekt markerar du miniatyrbilden för det aktuella objektet. Ikoner för de åtgärder som gäller för det objektet visas i verktygsfältet:
 
    ![wf-84](assets/wf-84.png)
 
@@ -223,7 +223,7 @@ I inkorgen kan du skapa uppgifter:
 
    * **Avancerat**
 
-      * **Namn**: this will used to form the URL; if blank it will be based on the **Titel**.
+      * **Namn**: den används för att skapa URL:en. Om den är tom kommer den att baseras på **Titel**.
 
    ![wf-87](assets/wf-87.png)
 

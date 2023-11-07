@@ -8,7 +8,7 @@ topic-tags: configuring
 docset: aem65
 feature: Configuring
 exl-id: cfa822c8-f9a9-4122-9eac-0293d525f6b5
-source-git-commit: 26c0411d6cc16f4361cfa9e6b563eba0bfafab1e
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '1227'
 ht-degree: 0%
@@ -60,12 +60,12 @@ Kontrollera detta genom att gå till /etc/replication/agents.author.html och sed
 1. Det kan vara något fel med att snedställa jobbköer i utvecklingsramverket. Prova att starta om paketet org.apache.sling.event i /system/console.
 1. Det kan bero på att jobbbearbetningen är avstängd. Det kan du kolla under Felix Console på fliken Sling Eventing. Kontrollera om den visas - Apache Sling Eventing (JOBBBEARBETNING ÄR INAKTIVERAD!)
 
-   * Om ja, kontrollera Apache Sling Job Event Handler under fliken Konfiguration i Felix Console. Det kan bero på att kryssrutan Jobbbearbetning är aktiverad inte är markerad. Om detta är markerat och fortfarande visar att jobbbearbetning är inaktiverad, kontrollerar du om det finns någon övertäckning under /apps/system/config som inaktiverar jobbbearbetningen. Försök att skapa en osgi:config-nod för jobmanager.enabled med ett booleskt värde till true och kontrollera om aktiveringen har startat och det inte finns några fler jobb i kö.
+   * Om ja, kontrollera Apache Sling Job Event Handler på fliken Konfiguration i Felix Console. Det kan bero på att kryssrutan Jobbbearbetning är aktiverad inte är markerad. Om detta är markerat och fortfarande visar att jobbbearbetning är inaktiverad, kontrollerar du om det finns någon övertäckning under /apps/system/config som inaktiverar jobbbearbetningen. Försök att skapa en osgi:config-nod för jobmanager.enabled med ett booleskt värde till true och kontrollera om aktiveringen har startat och det inte finns några fler jobb i kö.
 
-1. Det kan också vara så att DefaultJobManager-konfigurationen försätts i ett inkonsekvent tillstånd. Detta kan inträffa när någon manuellt ändrar konfigurationen av &quot;Apache Sling Job Event Handler&quot; via OSGiconsole (t.ex. inaktiverar och återaktiverar egenskapen &quot;Jobbbearbetning aktiverad&quot; och sparar konfigurationen).
+1. Det kan också vara så att DefaultJobManager-konfigurationen försätts i ett inkonsekvent tillstånd. Detta kan inträffa när någon manuellt ändrar konfigurationen av &quot;Apache Sling Job Event Handler&quot; via OSGiconsole (t.ex. inaktivera och återaktivera egenskapen &quot;Jobbbearbetning aktiverad&quot; och spara konfigurationen).
 
    * I det här läget försätts DefaultJobManager-konfigurationen som lagras på crx-quickstart/launchpad/config/org/apache/sling/event/impl/jobs/DefaultJobManager.config i ett inkonsekvent läge. Och även om egenskapen &quot;Apache Sling Job Event Handler&quot; visar att &quot;Job Processing Enabled&quot; är i markerat läge, visas meddelandet &quot;Job Processing Enabled&quot; (Jobbbearbetning är inaktiverat) när man går till fliken Sling Eventing Eventing, och replikeringen fungerar inte.
-   * Du löser det här problemet genom att navigera till konfigurationssidan för OSGi-konsolen och ta bort konfigurationen Apache Sling Job Event Handler. Starta sedan om den Överordnad noden i klustret så att konfigurationen återställs till ett konsekvent tillstånd. Detta bör åtgärda problemet och replikeringen börjar fungera igen.
+   * Du löser det här problemet genom att navigera till konfigurationssidan för OSGi-konsolen och ta bort konfigurationen Apache Sling Job Event Handler. Starta sedan om klusternoden för att få tillbaka konfigurationen till ett konsekvent tillstånd. Detta bör åtgärda problemet och replikeringen börjar fungera igen.
 
 **Skapa en replikering.log**
 
@@ -83,7 +83,7 @@ Ibland kan det vara praktiskt att ange att all replikeringsloggning ska läggas 
 
 ## Pausar kön för replikeringsagent  {#pausing-replication-agent-queue}
 
-Ibland kan det vara lämpligt att pausa replikeringskön för att minska belastningen på författarsystemet, utan att inaktivera den. Detta är för närvarande endast möjligt om en port konfigureras tillfälligt. Från och med 5.4 kan du se pausknappen i replikeringsagentkön.
+Ibland kan det vara lämpligt att pausa replikeringskön för att minska belastningen på författarsystemet, utan att inaktivera den. Detta är för närvarande endast möjligt om en port konfigureras tillfälligt. Från och med 5.4 kan du se pausknappen i replikeringsagentkön. Den har vissa begränsningar
 
 1. Tillståndet är inte beständigt, vilket innebär att om du startar om en server eller ett replikeringspaket återställs det till körningsläge.
 1. Pausen är inaktiv under en kortare period (OOB 1 timme efter inga aktiviteter med replikering från andra trådar) och inte under en längre tid. Eftersom det finns en funktion i sling som undviker inaktiva trådar. Kontrollera i princip om en jobbkötråd har varit oanvänd en längre tid, och i så fall startas rensningscyklerna. På grund av rensningscykeln stoppas kopplingen och därför försvinner den pausade inställningen. Eftersom jobb är beständiga initieras en ny tråd för att bearbeta kön som inte har information om den pausade konfigurationen. På grund av den här kön blir det körläge.

@@ -1,16 +1,12 @@
 ---
 title: Utveckla mobilprogram i AEM
-seo-title: Developing Mobile Applications in AEM
 description: Följ den här sidan när du vill börja utveckla mobilappar i AEM med Adobe PhoneGap Enterprise.
-seo-description: Follow this page to start developing mobile application in AEM using Adobe PhoneGap Enterprise.
-uuid: d8442447-ee04-4bb2-a0d7-17dcc8979dba
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-adobe-phonegap-enterprise
-discoiquuid: fd7bcf17-af7e-4bd6-8137-48401d9743c5
 exl-id: cf8ba05c-6dcd-4880-b8bf-72382118cd80
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '582'
 ht-degree: 0%
@@ -56,7 +52,7 @@ Viktigt om Git-databasen för Starter Kit innehåller en självstudiekurs om hur
 
 ## Utveckla för IOS 9 och HTTP-värdar {#developing-for-ios-and-http-hosts}
 
-iOS-utvecklare bör vara medvetna om ett öppet problem med Cordova-appar som körs på iOS 9. Detta förhindrar att förfrågningar görs till osäkra värdar (som *http://localhost:4502*). Problemet kommer att lösas med en kommande version av cordova-ios (som Cordova CLI konsumerar), men under tiden finns det två tillfälliga lösningar:
+IOS-utvecklare bör vara medvetna om ett öppet problem med Cordova-appar som körs på iOS 9. Detta förhindrar att förfrågningar görs till osäkra värdar (som *http://localhost:4502*). Problemet kommer att lösas med en kommande version av cordova-ios (som Cordova CLI konsumerar), men under tiden finns det två tillfälliga lösningar:
 
 1. Som en omedelbar lösning kan du fortfarande använda någon av iOS 8-simulatorerna utan problem.
 1. Om du måste använda iOS 9, dina program -Info.plist (hittas efter körning `cordova platform add ios` in &quot;&lt;app root=&quot;&quot;>/platforms/ios/&lt;app name=&quot;&quot;>/&lt;app name=&quot;&quot;>-Info.plist&quot;) kan redigeras manuellt för att inkludera följande egenskap:

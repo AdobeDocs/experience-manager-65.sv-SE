@@ -9,9 +9,9 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/configuring_ssl
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 968c2574-ec9a-45ca-9c64-66f4caeec285
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1048'
+source-wordcount: '1047'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 # Konfigurera SSL för WebLogic Server {#configuring-ssl-for-weblogic-server}
 
-Om du vill konfigurera SSL på WebLogic-servern behöver du en SSL-autentiseringsuppgift för autentisering. Du kan använda Java-nyckelverktyget för att utföra följande åtgärder för att skapa en referens:
+Om du vill konfigurera SSL på WebLogic-servern behöver du en SSL-autentiseringsuppgift för autentisering. Du kan använda Java-nyckelverktyget för att utföra följande åtgärder för att skapa en autentiseringsuppgift:
 
 * Skapa ett par med offentlig/privat nyckel, slå ihop den offentliga nyckeln i ett självsignerat X.509 v1-certifikat som lagras som en certifikatkedja med ett element och lagra sedan certifikatkedjan och den privata nyckeln i en ny nyckelbehållare. Den här nyckelbehållaren är programserverns nyckelbehållare för anpassad identitet.
 * Extrahera certifikatet och infoga det i en ny nyckelbehållare. Den här nyckelbehållaren är programserverns nyckelbehållare för anpassat förtroende.
@@ -41,7 +41,7 @@ Nyckelverktygskommandot finns vanligtvis i Java-katalogen jre/bin och måste inn
  <tbody>
   <tr>
    <td><p>-alias</p></td>
-   <td><p>Aliaset för nyckelbehållaren.</p></td>
+   <td><p>Nyckelbehållarens alias.</p></td>
    <td>
     <ul>
      <li><p>Nyckelbehållare för anpassad identitet: <code>ads-credentials</code></p></li>
@@ -77,7 +77,7 @@ Nyckelverktygskommandot finns vanligtvis i Java-katalogen jre/bin och måste inn
    <td><p>Lösenordet som skyddar innehållet i nyckelbehållaren. </p></td>
    <td>
     <ul>
-     <li><p>Nyckelbehållare för anpassad identitet: Nyckellagringslösenordet måste motsvara SSL-autentiseringslösenordet som har angetts för Trust Store-komponenten i administrationskonsolen.</p></li>
+     <li><p>Nyckelbehållare för anpassad identitet: Lösenordet för nyckelbehållaren måste motsvara lösenordet för SSL-autentiseringsuppgifter som har angetts för komponenten Trust Store i administrationskonsolen.</p></li>
      <li><p>Nyckelbehållare för anpassat förtroende: Använd samma lösenord som du använde för nyckelbehållaren för anpassad identitet.</p></li>
     </ul></td>
   </tr>
@@ -158,14 +158,14 @@ Mer information om hur du använder kommandot keytool finns i filen keytool.html
    C:\Program Files\Java\jrockit-jdk1.6.0_24-R28\bin\keytool" -import -v -noprompt -alias bedrock -file "ads-ca.cer" -keystore "ads-ca.jks" -storepass Password1 -keypass Password1
    ```
 
-Nyckelfilen för anpassat förtroende med namnet&quot;ads-ca.jks&quot; skapas i [appserverdomain]/adobe/&#39;server&#39;-katalog.
+Nyckelfilen för anpassat förtroende med namnet&quot;ads-ca.jks&quot; skapas i [appserverdomain]/adobe/&#39;server&#39;.
 
 Konfigurera WebLogic så att den använder nyckelbehållaren Custom Identity och Custom Trust som du skapade. Inaktivera även funktionen för verifiering av WebLogic-värdnamn eftersom det unika namn som användes för att skapa nyckelbehållarfilerna inte innehöll namnet på den dator som är värd för WebLogic-servern.
 
 ## Konfigurera WebLogic att använda SSL {#configure-weblogic-to-use-ssl}
 
 1. Starta administrationskonsolen för WebLogic Server genom att skriva `https://`*[värdnamn ]*`:7001/console` på URL-raden i en webbläsare.
-1. Under Miljö, under Domänkonfigurationer, väljer du **Servrar > &#39;server&#39; > Konfiguration > Allmänt**.
+1. Under Miljö, under Domänkonfigurationer, väljer du **Servrar > &#39;server&#39; > Configuration > General**.
 1. Under Allmänt, under Konfiguration, ser du till att **Lyssna-port aktiverad** och **SSL-lyssningsporten aktiverad** är markerade. Om det inte är aktiverat gör du följande:
 
    1. Klicka på under Ändringscenter **Lås och redigera** om du vill ändra markeringar och värden.
@@ -173,7 +173,7 @@ Konfigurera WebLogic så att den använder nyckelbehållaren Custom Identity och
 
 1. Om den här servern är en hanterad server ändrar du lyssningsporten till ett oanvänt portvärde (till exempel 8001) och SSL-lyssningsporten till ett oanvänt portvärde (till exempel 8002). På en fristående server är SSL-standardporten 7002.
 1. Klicka **Versionskonfiguration**.
-1. Under Miljö, i Domänkonfigurationer, klickar du på **Servrar > [*Hanterad server*] > Konfiguration > Allmänt**.
+1. I Domänkonfigurationer klickar du på under Miljö **Servrar > [*Hanterad server*] > Configuration > General**.
 1. Under Allmänt, under Konfiguration, väljer du **Nyckelbehållare**.
 1. Klicka på under Ändringscenter **Lås och redigera** om du vill ändra markeringar och värden.
 1. Klicka **Ändra** för att hämta nyckelbehållarlistan som nedrullningsbar lista och välja **Anpassad identitet och anpassat förtroende**.
@@ -194,10 +194,10 @@ Konfigurera WebLogic så att den använder nyckelbehållaren Custom Identity och
    **Nyckelarkivlösenfras för anpassat förtroende**: *mypassword* (lösenord för nyckel för anpassat förtroende)
 
 1. Under Allmänt, under Konfiguration, väljer du **SSL**.
-1. Som standard är Keystore valt för Identity and Trust Locations. Om inte, ändra den till nyckelbehållare.
+1. Som standard är Keystore valt för Identity and Trust Locations. Om inte, ändra den till nyckelbehållaren.
 1. Ange följande värden under Identitet:
 
-   **Alias för privat nyckel**: reklamreferenser
+   **Alias för privat nyckel**: ads-credentials
 
    **Lösenfras**: *mypassword*
 

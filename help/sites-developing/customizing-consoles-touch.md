@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 61a4e196-bd53-4ef0-816b-c14401462457
 docset: aem65
 exl-id: 6e67f2b3-78b9-45f2-b496-61776b9fd9cc
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '667'
+source-wordcount: '669'
 ht-degree: 0%
 
 ---
@@ -158,6 +158,6 @@ Så här anpassar du kolumnerna i listvyn:
 
 ### Filtreringsresurser {#filtering-resources}
 
-När du använder en konsol är det vanligt att användaren måste välja bland resurser (till exempel sidor, komponenter, resurser osv.). Detta kan vara en lista som författaren till exempel måste välja ett objekt från.
+När du använder en konsol är ett vanligt användningsfall när användaren måste välja bland resurser (till exempel sidor, komponenter, resurser och så vidare). Detta kan t.ex. vara en lista som författaren måste välja ett alternativ från.
 
 För att hålla listan i en rimlig storlek och även relevant för användningsfallet kan ett filter implementeras i form av ett anpassat predikat. Se [den här artikeln](/help/sites-developing/customizing-page-authoring-touch.md#filtering-resources) för mer information.

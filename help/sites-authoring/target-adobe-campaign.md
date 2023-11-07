@@ -1,25 +1,23 @@
 ---
 title: Rikta din Adobe Campaign
 description: Ni kan skapa riktade upplevelser för Adobe Campaign efter att ha skapat segmentering.
-uuid: 8fcc9210-d8c5-44e3-8aa8-6c6db810c98e
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: personalization
-discoiquuid: f1cb5e98-ccd1-4b2c-acca-2b3cc1b7ac5f
 exl-id: fc6fccba-41c5-4c13-aac0-b4ef67767abe
-source-git-commit: f4b6eb2ded17ec641f23a1fc3b977ce77169c8a1
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '811'
+source-wordcount: '806'
 ht-degree: 0%
 
 ---
 
-# Inrikta er på Adobe Campaign{#targeting-your-adobe-campaign}
+# Rikta in er på Adobe Campaign{#targeting-your-adobe-campaign}
 
 Om du vill använda ditt Adobe Campaign-nyhetsbrev måste du först skapa segmentering, som bara är tillgängligt i det klassiska användargränssnittet (för klientkontext). Efter det kan ni skapa riktade upplevelser för Adobe Campaign. Båda beskrivs i det här avsnittet.
 
-## Ställa in segmentering i AEM {#setting-up-segmentation-in-aem}
+## Ställ in segmentering i AEM {#setting-up-segmentation-in-aem}
 
 Om du vill ställa in segmentering måste du använda det klassiska användargränssnittet för att ställa in segmenten. De återstående stegen kan utföras i standardgränssnittet.
 
@@ -34,9 +32,9 @@ Att skapa segmentering innefattar att skapa segment, ett varumärke, en kampanj 
 Så här skapar du segment:
 
 1. Öppna [segmenteringskonsol](http://localhost:4502/miscadmin#/etc/segmentation) på **&lt;host>:&lt;port>/miscadmin#/etc/segmentering**.
-1. Skapa en ny sida och ange en rubrik, till exempel **AC-segment**- och väljer **Segment (Adobe Campaign)** mall.
+1. Skapa en sida och ange en rubrik, till exempel **AC-segment**- och väljer **Segment (Adobe Campaign)** mall.
 1. Markera den skapade sidan i trädvyn till vänster.
-1. Skapa ett segment, till exempel för manliga användare, genom att skapa en ny sida under segmentet som du skapade som kallas hane och markera **Segment (Adobe Campaign)** mall.
+1. Skapa till exempel ett segment som riktar sig till manliga användare genom att skapa en sida under segmentet som du skapade som kallas hane och markera **Segment (Adobe Campaign)** mall.
 1. Öppna den skapade segmentsidan och dra och släpp en **Segment-ID** från sidosparken till sidan.
 1. Dubbelklicka på trait och ange det ID som i det här fallet representerar det manliga segment som definieras i Adobe Campaign, till exempel **MALE** - och klicka **OK**. Följande meddelande ska visas: *`targetData.segmentCode == "MALE"`*
 1. Upprepa stegen för ett annat segment, till exempel ett segment som riktar sig till kvinnliga användare.
@@ -46,24 +44,24 @@ Så här skapar du segment:
 Så här skapar du ett varumärke:
 
 1. I **Webbplatser**, navigera till **Kampanjer** mapp (till exempel i We.Retail).
-1. Klicka **Skapa sida** och ange en rubrik för sidan, till exempel&quot;Varumärke&quot; och välj **Varumärke** mall.
+1. Klicka **Skapa sida** och ange en rubrik för sidan, till exempel We.Retail Brand och välj **Varumärke** mall.
 
 ### Skapa en kampanj {#creating-a-campaign}
 
-Så här skapar du en kampanj:
+Skapa en kampanj:
 
-1. Öppna **Varumärke** sida du just skapade.
+1. Öppna **Varumärke** sida som du skapade.
 1. Klicka **Skapa sida** och ange en rubrik för sidan, till exempel We.Retail Campaign, och välj **Campaign** mall och klicka på **Skapa**.
 
 ### Skapa upplevelser {#creating-experiences}
 
 Så här skapar du upplevelser för segment:
 
-1. Öppna **Campaign** sida du just skapade.
+1. Öppna **Campaign** sida som du skapade.
 1. Skapa upplevelser för era segment genom att klicka **Skapa sida** och ange en rubrik för sidan, t.ex. Handla när du skapar en upplevelse för manligt segment, och välj **Upplevelse** mall.
 1. Öppna den skapade Experience-sidan.
 1. Klicka **Redigera** och sedan under Segment klickar du **Lägg till objekt**.
-1. Ange sökvägen till det manliga segmentet, till exempel **/etc/segmentation/ac-segments/man** och klicka **OK**. Följande meddelande ska visas: *Upplevelsen är inriktad på följande: Man*
+1. Ange sökvägen till det manliga segmentet, till exempel **/etc/segmentation/ac-segments/man** och klicka **OK**. Följande meddelande ska visas: *Upplevelsen är inriktad på: man*
 1. Upprepa föregående steg för att skapa en upplevelse för alla segment, till exempel kvinnligt mål.
 
 ## Skapa ett nyhetsbrev med riktat innehåll {#creating-a-newsletter-with-targeted-content}
@@ -88,7 +86,7 @@ Så här skapar du ett nyhetsbrev med riktat innehåll:
 
    >[!NOTE]
    >
-   >Som standard använder de e-postexempel som ingår i AEM Adobe Campaign som målmotor. För anpassade nyhetsbrev kan du behöva välja Adobe Campaign som målmotor. När du väljer mål trycker eller klickar du på + i verktygsfältet, anger en titel för den nya aktiviteten och väljer **Adobe Campaign** som målmotor.
+   >Som standard använder de e-postexempel som ingår i AEM Adobe Campaign som målmotor. För anpassade nyhetsbrev kan du behöva välja Adobe Campaign som målmotor. När du väljer mål trycker eller klickar du på + i verktygsfältet, anger en titel för den nya aktiviteten och väljer **Adobe Campaign** som målinriktningsmotor.
 
 1. Klicka **Standard** och sedan komponenten Text och Personalization som du har lagt till så ser du Bullseye med en pil. Klicka på ikonen om du vill ange komponenten som mål.
 

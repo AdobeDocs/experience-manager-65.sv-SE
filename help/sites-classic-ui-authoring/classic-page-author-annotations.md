@@ -7,9 +7,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: page-authoring
 content-type: reference
 exl-id: d60e9601-d15b-4378-a33e-e90961f63195
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '764'
+source-wordcount: '761'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ En anteckning placerar en färgmarkör/anteckning på sidan. Med anteckningen ka
 
 >[!NOTE]
 >
->Anteckningar som skapas i det klassiska användargränssnittet visas också i det pekoptimerade användargränssnittet. Skisser är dock gränssnittsspecifika och visas endast i det användargränssnitt där de skapades.
+>Anteckningar som skapas i det klassiska användargränssnittet visas i det pekoptimerade användargränssnittet. Skisser är dock användargränssnittsspecifika och visas endast i det användargränssnitt där de skapades.
 
 >[!CAUTION]
 >

@@ -10,9 +10,9 @@ topic-tags: Security
 content-type: reference
 discoiquuid: 6ed09b5d-5089-43d2-b9d5-e7db57be5c02
 exl-id: 8e54bccf-0ff1-448d-a237-ec42fd3bfa23
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '837'
+source-wordcount: '835'
 ht-degree: 0%
 
 ---
@@ -40,7 +40,7 @@ The [Webbkonsol](/help/sites-deploying/configuring-osgi.md) ger åtkomst till [S
 
 >[!NOTE]
 >
->Autentiseringshanteraren för SAML 2.0 är inaktiverad som standard. Du måste ange minst en av följande egenskaper för att aktivera hanteraren:
+>Autentiseringshanteraren för SAML 2.0 är inaktiverad som standard. Aktivera hanteraren genom att ange minst en av följande egenskaper:
 >
 >* Identity Provider POST URL eller IDP URL.
 >* Tjänstleverantörens enhets-ID.

@@ -9,7 +9,7 @@ content-type: reference
 discoiquuid: 2418777e-4eb2-4d82-aa9e-8d1b0bf740f3
 docset: aem65
 exl-id: 6666eddc-dc17-4bd4-9d55-e6522f40a680
-source-git-commit: 3f48e059ec8b0b255caf7d29749930e0534a37f7
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '1081'
 ht-degree: 0%
@@ -35,7 +35,7 @@ Använd dessa rutiner när du skapar ett eget nyhetsbrev.
 >
 >Allt kampanjinnehåll ska skapas under en `master` textsida `cq/personalization/components/ambitpage`.
 >
->Exempel: Den planerade kampanjstrukturen ser ut ungefär som
+>Om er planerade kampanjstruktur till exempel är något liknande
 >
 >`/content/campaigns/teasers/en/campaign-promotion-global`
 >
@@ -70,7 +70,7 @@ Använd dessa rutiner när du skapar ett eget nyhetsbrev.
    <td><p>Tabeller används i hela mallen för att strukturera innehåll. Använder för närvarande maximalt fyra kapslade tabeller (1 bastabell + max). 3 kapslingsnivåer)</p> <p>&lt;div&gt; -taggar används endast i redigeringsläge för att säkerställa korrekt komponentredigering.</p> </td>
   </tr>
   <tr>
-   <td>Använd elementattribut (t.ex. cellfyllnad, justering och bredd) för att ange tabelldimensioner. Den här metoden tvingar en box-model-struktur.</td>
+   <td>Använd elementattribut (till exempel cellfyllnad, justering och bredd) för att ange tabelldimensioner. Den här metoden tvingar en box-model-struktur.</td>
    <td><p>Alla tabeller innehåller nödvändiga attribut som <i>border</i>, <i>cellutfyllnad</i>, <i>cellmellanrum</i>och <i>width</i>.</p> <p>För att harmonisera elementplaceringen i tabeller har alla tabellceller attributet <i>valign="top"</i> anges.</p> </td>
   </tr>
   <tr>
@@ -134,15 +134,15 @@ Använd dessa rutiner när du skapar ett eget nyhetsbrev.
 
 ## Mallar och exempel för kampanjnyhetsbrev {#campaign-newsletter-templates-and-examples}
 
-AEM innehåller flera mallar och komponenter som du kan använda för att skapa nyhetsbrev om kampanjer. Du kan använda de här mallarna och komponenterna för att skapa anpassade nyhetsbrev.
+AEM innehåller flera mallar och komponenter som du kan använda för att skapa nyhetsbrev om kampanjer. Du kan använda dessa mallar och komponenter för att skapa anpassade nyhetsbrev.
 
 ### Mallar {#templates}
 
 Det finns tre något olika malltyper som är tillgängliga direkt när du vill erbjuda en heltäckande bas och bredda möjligheterna för innehållsflöde. Du kan enkelt använda dessa tre typer för att skapa anpassade nyhetsbrev.
 
-Alla har en **header**, a **sidfot** och en **brödtext** -avsnitt. Under brödavsnittet skiljer sig mallarna åt i **stapelsymbol** (en, två eller tre kolumner).
+Alla har en **header**, a **sidfot** och en **brödtext** -avsnitt. Under brödavsnittet skiljer sig varje mall åt i **stapelsymbol** (en, två eller tre kolumner).
 
-![Varianter på nyhetsbrev](assets/chlimage_1-69.png)
+![Varianter på möjliga nyhetsbrev](assets/chlimage_1-69.png)
 
 ### Komponenter {#components}
 
@@ -160,6 +160,6 @@ Det finns för närvarande [sju komponenter som kan användas i kampanjmallar](/
 
 >[!NOTE]
 >
->Dessa komponenter är optimerade för e-postinnehåll; dvs. de följer de bästa praxis som beskrivs i detta dokument. Om du använder andra komponenter som inte finns installerade i systemet bryter det vanligtvis mot dessa regler.
+>De här komponenterna är optimerade för e-postinnehåll, vilket innebär att de följer den bästa praxis som beskrivs i det här dokumentet. Om du använder andra komponenter som inte finns installerade i systemet bryter det vanligtvis mot dessa regler.
 
 Dessa komponenter beskrivs ingående i [Adobe Campaign-komponenter](/help/sites-authoring/adobe-campaign-components.md).

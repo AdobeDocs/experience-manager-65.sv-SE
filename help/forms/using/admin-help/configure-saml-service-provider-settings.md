@@ -10,9 +10,9 @@ geptopics: SG_AEMFORMS/categories/configuring_user_management
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 1169d0d1-cbfb-486b-acca-9b9de3d410dc
 exl-id: dd302cfb-eae1-4189-aa7b-9f2533ebd164
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '599'
+source-wordcount: '598'
 ht-degree: 0%
 
 ---
@@ -51,13 +51,13 @@ En förklaring av SAML finns på [Security Assertion Markup Language (SAML) V2.0
 
    * Du kan konfigurera AEM formulär att utfärda en SAML-försäkran för en giltighetsperiod som matchar giltighetsperioden för en tredjepartsförsäkran. Lägg till följande rad i Anpassade egenskaper för att efterleva tidsgränsen för SAML-försäkran från tredje part:
 
-      `saml.sp.honour.idp.assertion.expiry=true`
+     `saml.sp.honour.idp.assertion.expiry=true`
 
    * Lägg till följande anpassade egenskap för att använda RelayState för att bestämma den URL där användaren ska omdirigeras efter lyckad autentisering.
 
-      `saml.sp.use.relaystate=true`
+     `saml.sp.use.relaystate=true`
 
-   * Lägg till följande anpassade egenskap för att konfigurera URL:en för Java Server Pages (JSP), som ska användas för att återge den registrerade listan över identitetsleverantörer. Om du inte har distribuerat något anpassat webbprogram används standardsidan för användarhantering för att återge listan.
+   * Lägg till följande anpassade egenskap för att konfigurera URL:en för Java Server Pages (JSP), som används för att återge den registrerade listan över identitetsleverantörer. Om du inte har distribuerat något anpassat webbprogram används standardsidan för användarhantering för att återge listan.
 
    `saml.sp.discovery.url=/custom/custom.jsp`
 

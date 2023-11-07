@@ -10,7 +10,7 @@ discoiquuid: 2fd2276e-cfe3-47ad-94c1-9c7af56b7a17
 docset: aem65
 feature: Adaptive Forms
 exl-id: 048bd9e8-ef34-40fb-9f46-73743d7b47c8
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '2802'
 ht-degree: 0%
@@ -284,7 +284,7 @@ Utför följande steg för att skapa ett anpassat mönster för en viss fälttyp
 1. Öppna fliken Egenskaper för noden som skapades. Öppna till exempel fliken Egenskaper för `textboxpatterns`. Lägg till `guideComponentType` egenskapen för den här noden och ange dess värde till *fd/af/components/formter/guideTextBox*.
 
 1. Värdet för den här egenskapen varierar beroende på vilket fält du vill definiera mönstren för. För numeriska fält är värdet för `guideComponentType` egenskapen är *fd/af/components/formter/guideNumericBox*. Värdet för Datepicker-fältet är *fd/af/components/formter/guideDatepicker*. &quot;
-1. Du kan lägga till ett eget mönster genom att tilldela en egenskap till `textboxpatterns` nod. Lägga till en egenskap med ett namn (till exempel `pattern1`) och ange värdet för mönstret som du vill lägga till. Lägg till en egenskap `pattern1` med värdet Fax=text{99-999-9999999}. Mönstret är tillgängligt för alla textrutor som du använder i Adaptiv Forms.
+1. Du kan lägga till ett eget mönster genom att tilldela en egenskap till `textboxpatterns` nod. Lägg till en egenskap med ett namn (till exempel `pattern1`) och ange värdet för mönstret som du vill lägga till. Lägg till en egenskap `pattern1` med värdet Fax=text{99-999-9999999}. Mönstret är tillgängligt för alla textrutor som du använder i Adaptiv Forms.
 
    ![Skapa anpassade mönster för fält i CrxDe](assets/creating-custom-patterns.png)
 

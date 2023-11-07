@@ -2,9 +2,9 @@
 title: Konfigurera översättningsregler
 description: Lär dig hur du definierar översättningsregler för att identifiera innehåll för översättning.
 exl-id: 262503af-361b-491c-8639-0bb32f0a4c0e
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '869'
+source-wordcount: '864'
 ht-degree: 0%
 
 ---
@@ -59,14 +59,14 @@ Det finns en **Översättningskonfiguration** konsolen är tillgänglig för kon
 1. Navigera till **verktyg** -> **Allmänt**.
 1. Tryck eller klicka **Översättningskonfiguration**.
 
-I **Översättningskonfiguration** Det finns ett antal alternativ för översättningsreglerna. Här beskrivs de mest nödvändiga och typiska stegen som krävs för en grundläggande headless-lokaliseringskonfiguration.
+I **Översättningskonfiguration** Gränssnittet innehåller flera alternativ för översättningsreglerna. Här beskrivs de mest nödvändiga och typiska stegen som krävs för en grundläggande headless-lokaliseringskonfiguration.
 
 1. Tryck eller klicka **Lägg till kontext**så att du kan lägga till en bana. Detta är sökvägen till innehållet som påverkas av regeln.
    ![Lägg till kontext](assets/add-translation-context.png)
 1. Använd sökvägsläsaren för att välja önskad sökväg och tryck eller klicka på **Bekräfta** knappen som ska sparas. Kom ihåg att innehållsfragment, som innehåller headless-innehåll, vanligtvis finns under `/content/dam/<your-project>`.
    ![Markera banan](assets/select-context.png)
 1. AEM sparar konfigurationen.
-1. Du måste välja den kontext du just skapade och sedan trycka eller klicka **Redigera**. Då öppnas **Redigerare för översättningsregler** för att konfigurera egenskaperna.
+1. Du måste markera kontexten som du skapade och sedan trycka eller klicka **Redigera**. Då öppnas **Redigerare för översättningsregler** för att konfigurera egenskaperna.
    ![Redigerare för översättningsregler](assets/translation-rules-editor.png)
 1. Som standard ärvs alla konfigurationer från den överordnade sökvägen, i det här fallet `/content/dam`. Avmarkera alternativet **Ärv från`/content/dam`** om du vill lägga till ytterligare fält i konfigurationen.
 1. När avmarkerat, under **Allmänt** i listan lägger du till egenskapsnamnen för de innehållsfragmentmodeller som du [som tidigare identifierats som fält för översättning.](getting-started.md#content-models)
@@ -81,7 +81,7 @@ Du har nu konfigurerat dina översättningsregler.
 
 ## Avancerad användning {#advanced-usage}
 
-Det finns ett antal ytterligare egenskaper som kan konfigureras som en del av översättningsreglerna. Dessutom kan du ange regler manuellt som XML, vilket ger större specificitet och flexibilitet.
+Det finns flera andra egenskaper som kan konfigureras som en del av översättningsreglerna. Dessutom kan du ange regler manuellt som XML, vilket ger större specificitet och flexibilitet.
 
 Sådana funktioner behövs vanligtvis inte för att komma igång med lokalisering av ditt headless-innehåll, men du kan läsa mer om dem i [Ytterligare resurser](#additional-resources) om du är intresserad.
 

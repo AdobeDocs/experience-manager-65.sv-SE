@@ -1,17 +1,13 @@
 ---
 title: JSON-objektbeskrivning för AEM Forms arbetsyta
-seo-title: AEM Forms workspace JSON object description
-description: Konceptuell information om JSON JavaScript-objekt som används i arbetsytan LiveCycle AEM Forms för anpassning, tillägg, ändring och återanvändning.
-seo-description: Conceptual information about the JSON JavaScript objects used in LiveCycle AEM Forms workspace for customization, extension, modification, and reuse.
-uuid: 91c923c8-144a-4453-ba91-6a5193f1c4c4
+description: Konceptuell information om JSON JavaScript-objekt som används i arbetsytan i LiveCycle AEM Forms för anpassning, tillägg, ändring och återanvändning.
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
-discoiquuid: 61b7246d-ed28-4470-a0a2-a4aaf1a061a4
 exl-id: f837a2b3-4650-4261-84c6-291bb2a46dc7
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2109'
+source-wordcount: '2113'
 ht-degree: 0%
 
 ---
@@ -29,7 +25,7 @@ JSON-objekt som används i AEM Forms-arbetsytan beskrivs nedan.
   <tr>
    <td><strong>Egenskap</strong></td>
    <td><strong>Endast klient</strong></td>
-   <td><strong>Kommentarer</strong></td>
+   <td><strong>Kommentar</strong></td>
   </tr>
   <tr>
    <td>name</td>
@@ -54,7 +50,7 @@ JSON-objekt som används i AEM Forms-arbetsytan beskrivs nedan.
   <tr>
    <td>startPointsList<br type="_moz" /> </td>
    <td>T</td>
-   <td>Innehåller en lista med alla startpunkter som finns i en kategori</td>
+   <td>Innehåller en lista med alla startpunkter i en kategori</td>
   </tr>
   <tr>
    <td>categoryList</td>
@@ -72,7 +68,7 @@ JSON-objekt som används i AEM Forms-arbetsytan beskrivs nedan.
 
    Startpunkten används för att starta en process från arbetsytan när den anropas.
 
-   | **Egenskap** | **Endast klient** | **Kommentarer** |
+   | **Egenskap** | **Endast klient** | **Kommentar** |
    |---|---|---|
    | categoryId | F | Den innehåller ID för den kategori som startpunkten tillhör. |
    | description | F | Den innehåller en beskrivning för en startpunkt. |
@@ -94,7 +90,7 @@ JSON-objekt som används i AEM Forms-arbetsytan beskrivs nedan.
   <tr>
    <td>Egenskap<br /> </td>
    <td>Endast klient<br /> </td>
-   <td>Kommentarer<br /> </td>
+   <td>Kommentar<br /> </td>
   </tr>
   <tr>
    <td>classOfTask</td>
@@ -274,7 +270,7 @@ JSON-objekt som används i AEM Forms-arbetsytan beskrivs nedan.
   <tr>
    <td>taskFormType<br /> </td>
    <td>T</td>
-   <td>Den innehåller formulärtyp för uppgift. I det här fältet återges uppgiften på klienten som PDF för, swf-formulär osv.<br /> </td>
+   <td>Den innehåller formulärtyp för uppgift. I det här fältet återges uppgiften på klienten som PDF för, swf-formulär och så vidare.<br /> </td>
   </tr>
   <tr>
    <td>showDirectActions<br /> </td>
@@ -393,7 +389,7 @@ JSON-objekt som används i AEM Forms-arbetsytan beskrivs nedan.
   <tr>
    <td><strong>Egenskap</strong></td>
    <td><strong>Endast klient</strong></td>
-   <td><strong>Kommentarer</strong></td>
+   <td><strong>Kommentar</strong></td>
   </tr>
   <tr>
    <td>isDefault <br type="_moz" /> </td>
@@ -437,7 +433,7 @@ JSON-objekt som används i AEM Forms-arbetsytan beskrivs nedan.
   <tr>
    <td><strong>Egenskap</strong><br type="_moz" /> </td>
    <td><strong>Endast klient</strong><br type="_moz" /> </td>
-   <td><strong>Kommentarer</strong><br type="_moz" /> </td>
+   <td><strong>Kommentar</strong><br type="_moz" /> </td>
   </tr>
   <tr>
    <td>dateRanges<br type="_moz" /> </td>
@@ -496,7 +492,7 @@ JSON-objekt som används i AEM Forms-arbetsytan beskrivs nedan.
   <tr>
    <td><strong>Egenskap</strong></td>
    <td><strong>Endast klient</strong></td>
-   <td><strong>Kommentarer</strong></td>
+   <td><strong>Kommentar</strong></td>
   </tr>
   <tr>
    <td>description<br type="_moz" /> </td>
@@ -558,7 +554,7 @@ JSON-objekt som används i AEM Forms-arbetsytan beskrivs nedan.
   <tr>
    <td><strong>Egenskap</strong></td>
    <td><strong>Endast klient</strong></td>
-   <td><strong>Kommentarer</strong></td>
+   <td><strong>Kommentar</strong></td>
   </tr>
   <tr>
    <td>processMajorVersion<br type="_moz" /> </td>
@@ -597,7 +593,7 @@ JSON-objekt som används i AEM Forms-arbetsytan beskrivs nedan.
   <tr>
    <td><strong>Egenskap</strong></td>
    <td><strong>Endast klient</strong></td>
-   <td><strong>Kommentarer</strong></td>
+   <td><strong>Kommentar</strong></td>
   </tr>
   <tr>
    <td>assignCreateTime<br type="_moz" /> </td>
@@ -622,26 +618,26 @@ JSON-objekt som används i AEM Forms-arbetsytan beskrivs nedan.
   <tr>
    <td>queueOwner<br type="_moz" /> </td>
    <td>F</td>
-   <td>Namn på aktuell ägare av uppgiften.<br type="_moz" /> </td>
+   <td>Namn på den aktuella ägaren av uppgiften.<br type="_moz" /> </td>
   </tr>
   <tr>
    <td>queueOwnerId<br type="_moz" /> </td>
    <td>F</td>
-   <td>ID för aktuell ägare av uppgiften.<br type="_moz" /> </td>
+   <td>ID för den aktuella aktivitetsägaren.<br type="_moz" /> </td>
   </tr>
  </tbody>
 </table>
 
 1. ACL-objekt för aktivitet
 
-   ACL-objektet för aktiviteten innehåller information om behörigheter som vidarebefordra, dela, fråga osv. för en uppgift. Här följer egenskaperna för aktivitetens ACL.
+   ACL-objektet för aktiviteten innehåller information om behörigheter som vidarebefordra, dela, läsa och så vidare för en uppgift. Här följer egenskaperna för aktivitetens ACL.
 
 <table>
  <tbody>
   <tr>
    <td><strong>Egenskap</strong></td>
    <td><strong>Endast klient</strong></td>
-   <td><strong>Kommentarer</strong></td>
+   <td><strong>Kommentar</strong></td>
   </tr>
   <tr>
    <td>canAddAttachments<br type="_moz" /> </td>
@@ -685,7 +681,7 @@ JSON-objekt som används i AEM Forms-arbetsytan beskrivs nedan.
   <tr>
    <td><strong>Egenskap</strong></td>
    <td><strong>Endast klient</strong></td>
-   <td><strong>Kommentarer</strong></td>
+   <td><strong>Kommentar</strong></td>
   </tr>
   <tr>
    <td>creationDate<br type="_moz" /> </td>
@@ -695,7 +691,7 @@ JSON-objekt som används i AEM Forms-arbetsytan beskrivs nedan.
   <tr>
    <td>creatorId<br type="_moz" /> </td>
    <td>F</td>
-   <td>ID för den användare som lade till den bifogade filen.<br type="_moz" /> </td>
+   <td>ID för den användare som lade till bilagan.<br type="_moz" /> </td>
   </tr>
   <tr>
    <td>creatorName<br type="_moz" /> </td>
@@ -774,7 +770,7 @@ JSON-objekt som används i AEM Forms-arbetsytan beskrivs nedan.
   <tr>
    <td><strong>Egenskap</strong></td>
    <td><strong>Endast klient</strong></td>
-   <td><strong>Kommentarer</strong></td>
+   <td><strong>Kommentar</strong></td>
   </tr>
   <tr>
    <td>adress<br type="_moz" /> </td>
@@ -784,7 +780,7 @@ JSON-objekt som används i AEM Forms-arbetsytan beskrivs nedan.
   <tr>
    <td>commonName<br type="_moz" /> </td>
    <td>F</td>
-   <td>Användarens namn.<br type="_moz" /> </td>
+   <td>Användarens allmänna namn.<br type="_moz" /> </td>
   </tr>
   <tr>
    <td>description<br type="_moz" /> </td>

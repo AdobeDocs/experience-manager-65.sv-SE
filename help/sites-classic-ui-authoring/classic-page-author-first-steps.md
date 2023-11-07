@@ -8,9 +8,9 @@ content-type: reference
 topic-tags: page-authoring, introduction
 discoiquuid: 7f5713fe-01e3-450e-b71a-dc567d9a192e
 exl-id: b41aa7e5-1a5f-4e5e-be79-637d9f71ad72
-source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '412'
+source-wordcount: '410'
 ht-degree: 0%
 
 ---
@@ -21,9 +21,9 @@ I det här avsnittet får du en översikt över de huvuduppgifter som du kommer 
 
 Den omfattar följande:
 
-* [Komma igång](#getting-started): Information om den grundläggande händelsesekvensen som du behöver för att skapa och publicera din första sida.
+* [Komma igång](#getting-started): Detaljerar den grundläggande händelsesekvensen som du behöver för att skapa och publicera din första sida.
 
-* [Ytterligare åtgärder](#further-actions): Fortsätt med de många andra åtgärderna som du kan använda när du redigerar.
+* [Ytterligare åtgärder](#further-actions): Fortsätt med de många andra åtgärder du kan använda vid redigering.
 
 ## Komma igång {#getting-started}
 
@@ -35,7 +35,7 @@ Innehållet på din webbplats hålls i en trädstruktur. Om du vill skapa eller 
 
 ### Skapa en ny sida {#creating-a-new-page}
 
-Innan du redigerar måste du [skapa en ny sida](/help/sites-classic-ui-authoring/classic-page-author-manage-pages.md#creating-a-new-page).
+Innan du redigerar måste du [skapa en sida](/help/sites-classic-ui-authoring/classic-page-author-manage-pages.md#creating-a-new-page).
 
 ### Öppna en sida {#opening-a-page}
 
@@ -43,7 +43,7 @@ För många åtgärder, till exempel redigering, måste du [öppna en sida](/hel
 
 ### Redigera en sida {#editing-a-page}
 
-Om instansen redan har befintliga sidor eller om du just har skapat en ny sida själv kan du [redigera en sida](/help/sites-classic-ui-authoring/classic-page-author-edit-content.md) av:
+Om instansen redan har befintliga sidor eller om du själv har skapat en ny sida kan du [redigera en sida](/help/sites-classic-ui-authoring/classic-page-author-edit-content.md) av:
 
 * [Infoga en komponent (stycke)](/help/sites-classic-ui-authoring/classic-page-author-edit-content.md#inserting-a-component)
 * [Redigera en komponent](/help/sites-classic-ui-authoring/classic-page-author-edit-content.md#editing-a-component-content-and-properties)
@@ -83,9 +83,9 @@ Om en sida inte längre behövs kanske du vill [ta bort sidan](/help/sites-class
 
 Varje [sidan har egenskaper](/help/sites-classic-ui-authoring/classic-page-author-edit-page-properties.md) som du kan definiera för att avgöra olika aspekter av åtgärden.
 
-### Skapa en version av en sida {#creating-a-version-of-a-page}
+### Skapa en sidversion {#creating-a-version-of-a-page}
 
-Du kan [skapa en version av en sida](/help/sites-classic-ui-authoring/classic-page-author-work-with-versions.md#creating-a-new-version) och sedan [återgå till en version](/help/sites-classic-ui-authoring/classic-page-author-work-with-versions.md#restoring-a-page-version-from-sidekick) vid behov.
+Du kan [skapa en sidversion](/help/sites-classic-ui-authoring/classic-page-author-work-with-versions.md#creating-a-new-version) och sedan [återgå till en version](/help/sites-classic-ui-authoring/classic-page-author-work-with-versions.md#restoring-a-page-version-from-sidekick) vid behov.
 
 ## Mer information {#more-information}
 

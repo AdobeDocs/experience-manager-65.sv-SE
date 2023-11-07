@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 11ff8bb3-39eb-4f77-b3dc-720262fa7f3f
 docset: aem65
 exl-id: 0e13112b-d9df-4ba6-bd73-431c87890b79
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1180'
+source-wordcount: '1175'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 I AEM är Marketing Campaign Manager (MCM) en konsol som hjälper er att hantera flerkanalskampanjer. Med denna programvara för automatiserad marknadsföring kan ni hantera alla varumärken, kampanjer och upplevelser tillsammans med relaterade segment, listor, leads och rapporter.
 
-MCM kan nås från olika platser i AEM. Välkomstskärmen, till exempel med hjälp av ikonen Kampanjer eller med URL-adressen:
+MCM kan nås från olika platser i AEM, till exempel välkomstskärmen med hjälp av Campaigns-ikonen eller URL-adressen:
 
 `https://<hostname>:<port>/libs/mcm/content/admin.html`
 
@@ -38,8 +38,8 @@ Från MCM får du tillgång till:
 Detta är uppdelat i fyra rutor:
 
    * [Listor](#lists)
-I den här rutan visas de listor du redan har skapat tillsammans med antalet leads i listan. I den här rutan kan du skapa en ny lista direkt eller importera leads för att skapa en ny lista.
-Om du väljer en viss lista kommer du till [Listor](#lists) -sektion som visar information om din lista.
+I den här rutan visas de listor du redan har skapat tillsammans med antalet leads i listan. I den här rutan kan du skapa en lista direkt eller importera leads för att skapa en lista.
+Om du väljer en viss lista visas [Listor](#lists) -sektion som visar information om din lista.
 
    * [Segment](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#anoverviewofsegmentation)
 I den här rutan visas de segment som du har definierat. Med segment kan du karakterisera en samling besökare som delar vissa egenskaper.
@@ -54,14 +54,14 @@ I den här rutan visas era kampanjupplevelser, som [nyhetsbrev](/help/sites-clas
 
 * **[Leads](#leads)**
 Här kan ni hantera era leads. Du kan skapa eller importera leads, redigera specifik information för enskilda leads eller ta bort när de inte längre behövs. Du kan också placera leads i olika grupper, som kallas listor. **Obs!** Adobe planerar inte att ytterligare förbättra denna kapacitet.
-Rekommendationen är att [utnyttja Adobe Campaign och integrationen för att AEM](/help/sites-administering/campaign.md).
+Rekommendationen är att använda [Adobe Campaign och integrationen med AEM](/help/sites-administering/campaign.md).
 
 * **[Listor](#lists)**
 Här kan du hantera dina listor (av leads).**Obs!** Adobe planerar inte att ytterligare förbättra denna kapacitet.
-Rekommendationen är att [utnyttja Adobe Campaign och integrationen för att AEM](/help/sites-administering/campaign.md).
+Rekommendationen är att använda [Adobe Campaign och integrationen med AEM](/help/sites-administering/campaign.md).
 
 * **[Kampanjer](#campaigns)**
-Här kan ni hantera varumärken, kampanjer och upplevelser.
+Här kan ni hantera era varumärken, kampanjer och upplevelser.
 
 ## Kontrollpanel {#dashboard}
 
@@ -74,9 +74,9 @@ På kontrollpanelen visas fyra rutor som ger dig en översikt över dina listor 
 >[!NOTE]
 >
 >Adobe planerar inte att ytterligare förbättra denna funktion (Hantera leads).
->Rekommendationen är att [Adobe Campaign och integrationen med AEM](/help/sites-administering/campaign.md).
+>Rekommendationen är att använda [Adobe Campaign och integrationen med AEM](/help/sites-administering/campaign.md).
 
-I AEM MCM kan du ordna och lägga till leads genom att antingen ange dem manuellt eller importera en kommaseparerad lista; till exempel en utskickslista. Ytterligare sätt att generera leads är från nyhetsbrev eller communityregistreringar (om de är konfigurerade kan de utlösa ett arbetsflöde som fyller i leads). Leads kategoriseras vanligen och placeras i en lista så att du senare kan utföra åtgärder i hela listan. till exempel skicka ut ett anpassat e-postmeddelande till en viss lista.
+I AEM MCM kan du ordna och lägga till leads genom att antingen ange dem manuellt eller importera en kommaseparerad lista, till exempel en utskickslista. Ytterligare sätt att generera leads är från nyhetsbrev eller communityregistreringar (om de är konfigurerade kan de utlösa ett arbetsflöde som fyller i leads). Leads kategoriseras vanligen och placeras i en lista så att du senare kan utföra åtgärder i hela listan, till exempel skicka ut ett anpassat e-postmeddelande till en viss lista.
 
 Under **Leads** i den vänstra rutan kan du skapa, importera, redigera och ta bort dina leads och sedan aktivera eller inaktivera efter behov. Du kan lägga till en lead i en lista eller se vilka listor den redan tillhör.
 
@@ -91,9 +91,9 @@ Under **Leads** i den vänstra rutan kan du skapa, importera, redigera och ta bo
 >[!NOTE]
 >
 >Adobe planerar inte att ytterligare förbättra denna funktion (Hantera listor).
->Rekommendationen är att [Adobe Campaign och integrationen med AEM](/help/sites-administering/campaign.md).
+>Rekommendationen är att använda [Adobe Campaign och integrationen med AEM](/help/sites-administering/campaign.md).
 
-Med listor kan du ordna dina leads i grupper. Med listor kan ni inrikta era marknadsföringskampanjer på en utvald grupp människor. Du kan till exempel skicka ett riktat nyhetsbrev till en lista.
+Med listor kan du ordna dina leads i grupper. Med listor kan ni inrikta era marknadsföringskampanjer på en viss grupp människor, till exempel kan ni skicka ett riktat nyhetsbrev till en lista.
 
 Under **Listor** kan du hantera dina listor genom att skapa, importera, redigera, sammanfoga och ta bort listor som du sedan kan aktivera eller inaktivera efter behov. Du kan också visa leads i den listan, se om listan är medlem i en annan lista eller visa beskrivningen.
 
@@ -114,9 +114,9 @@ Om du vill få tillgång till befintliga kampanjer går du till MCM och klickar 
 ![screen_shot_2012-02-21at1106pm](assets/screen_shot_2012-02-21at11106pm.png)
 
 * **I den vänstra rutan**: Det finns en lista över alla varumärken och kampanjer.
-Ett enda klick på ett varumärke innebär att
+Ett enda klick på ett varumärke ger båda:
 
-   * utöka listan för att visa alla relaterade kampanjer i den vänstra rutan, i den här listan visas även antalet upplevelser som finns för varje kampanj.
+   * expandera listan så att alla relaterade kampanjer visas i den vänstra rutan. Den här listan visar också antalet upplevelser som finns för varje kampanj.
    * öppnar varumärkesöversikten i den högra rutan.
 
 * **I den högra rutan**: Ikoner visas för varje varumärke (historiska kampanjer visas inte).
@@ -131,7 +131,7 @@ Härifrån kan du:
 * Se hur många kampanjer och upplevelser (antal visas i den vänstra rutan) som finns för det här varumärket.
 * Skapa en **Nytt...** kampanj för det här varumärket.
 
-* Ändra den tidsrymd som ska visas, välj **Vecka**, **Månad** eller **Kvartal**, använder du pilarna för att markera specifika punkter eller går tillbaka till **Idag**.
+* Ändra tidsintervallet som visas. Välj **Vecka**, **Månad** eller **Kvartal**, använder du pilarna för att markera specifika punkter eller går tillbaka till **Idag**.
 
 * Välj en kampanj (i den högra rutan) för att:
 
@@ -174,7 +174,7 @@ Det finns två tillgängliga vyer för de enskilda kampanjerna:
 
    Härifrån kan du:
 
-   * Skapa en **Nytt...** erfarenhet, Adobe Target erbjuder till exempel, teasers och nyhetsbrev.
+   * Skapa en **Nytt...** upplevelse, till exempel, erbjudanden, teasers och nyhetsbrev från Adobe Target.
    * **Redigera** information om en viss teaser-sida eller nyhetsbrev (dubbelklick kan också användas).
    * Definiera **Egenskaper...** för en viss teaser page eller nyhetsbrev.
    * **Simulera** en upplevelses utseende och känsla (teaser page eller newsletter).
@@ -194,7 +194,7 @@ Klicka på **Kampanjer**. Kontrollera att listvyn är aktiv, välj sedan önskad
 
 Härifrån kan du även öppna sidosparken (klicka på den lilla nedpilen) för att ändra till redigeringsläge för uppdatering av sidan.
 
-### Analysera era Campaign-upplevelser {#analyzing-your-campaign-experiences}
+### Analysera era kampanjupplevelser {#analyzing-your-campaign-experiences}
 
 Klicka på **Kampanjer**. Kontrollera att listvyn är aktiv, välj sedan önskad kampanjupplevelse och välj **Analysera...**. Ett diagram över sidvisningar över tiden visas.
 

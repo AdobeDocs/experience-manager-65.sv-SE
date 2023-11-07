@@ -3,9 +3,9 @@ title: Hantera GDPR-begäranden för Adobe Experience Manager Foundation
 description: Hantera GDPR-begäranden för Adobe Experience Manager Foundation
 contentOwner: sarchiz
 exl-id: 411d40ab-6be8-4658-87f6-74d2ac1a4913
-source-git-commit: 96e2e945012046e6eac878389b7332985221204e
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '431'
+source-wordcount: '433'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->GDPR används som exempel i avsnitten nedan, men de ingående detaljerna är tillämpliga på alla dataskydds- och sekretessbestämmelser. såsom GDPR, CCPA osv.
+>GDPR används som exempel i avsnitten nedan, men de ingående detaljerna gäller alla dataskydds- och sekretessbestämmelser, som GDPR, CCPA och så vidare.
 
 ## Stöd för AEM Foundation GDPR {#aem-foundation-gdpr-support}
 
@@ -24,7 +24,7 @@ På AEM Foundation-nivå är de personuppgifter som lagras användarprofilen. D�
 
 ### Manuella steg {#manual-steps}
 
-1. Öppna konsolen Användaradministration genom att bläddra till **[!UICONTROL Settings - Security - Users]** eller genom att bläddra direkt till `https://<serveraddress>:<serverport>/libs/granite/security/content/useradmin.html`
+1. Öppna konsolen för användaradministration genom att bläddra till **[!UICONTROL Settings - Security - Users]** eller genom att gå direkt till `https://<serveraddress>:<serverport>/libs/granite/security/content/useradmin.html`
 
    ![useradmin2](assets/useradmin2.png)
 

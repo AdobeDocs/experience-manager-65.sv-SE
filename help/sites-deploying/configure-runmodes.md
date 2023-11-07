@@ -1,26 +1,22 @@
 ---
 title: Körningslägen
-seo-title: Run Modes
 description: Lär dig hur du trimmar AEM för särskilda syften med körningslägen.
-seo-description: Learn how to tune your AEM instance for specific purposes by using run modes.
-uuid: 8a0c6e5c-4fae-43e2-b745-eee58f346ceb
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: configuring
 content-type: reference
-discoiquuid: 12329e26-40bc-4c94-bc60-6d9cbd01345f
 feature: Configuring
 exl-id: 6d03cb1d-500e-4a23-80e5-347a43dff30e
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '745'
+source-wordcount: '744'
 ht-degree: 0%
 
 ---
 
 # Körningslägen{#run-modes}
 
-Med körningslägen kan du trimma AEM för ett specifikt ändamål, till exempel författare eller publicera, testa, utveckla, intranät eller andra.
+Med körningslägen kan du trimma AEM för ett specifikt ändamål, till exempel författare eller publicera, testa, utveckling, intranät eller andra.
 
 Du kan:
 
@@ -153,7 +149,7 @@ java -jar cq-56-p4545.jar -r dev
 
 En systemegenskap i startskriptet kan användas för att ange körningsläget.
 
-* Använd till exempel följande för att starta en instans som publiceringsinstans för produktion i USA:
+* Använd till exempel följande för att starta en instans som publiceringsinstans i USA:
 
   `-Dsling.run.modes=publish,prod,us`
 

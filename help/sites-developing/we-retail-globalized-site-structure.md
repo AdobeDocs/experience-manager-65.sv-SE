@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: best-practices
 exl-id: e1de20b0-6d7a-4bda-b62f-c2808fd0af28
-source-git-commit: b703f356f9475eeeafb1d5408c650d9c6971a804
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '420'
+source-wordcount: '419'
 ht-degree: 2%
 
 ---
@@ -66,6 +66,6 @@ Vi. Detaljhandeln har byggts med en global webbplatsstruktur som erbjuder en spr
 >
 >Den här proceduren demonstrerade den inbyggda integrationen med maskinöversättning från Microsoft®. Använda [AEM Translation Integration Framework](/help/sites-administering/translation.md)kan ni integrera med många standardöversättningstjänster för att samordna översättningen av AEM.
 
-## Ytterligare information {#further-information}
+## Mer information {#further-information}
 
 Mer information finns i redigeringsdokumentet [Översätta innehåll för flerspråkiga webbplatser](/help/sites-administering/translation.md) för fullständig teknisk information.

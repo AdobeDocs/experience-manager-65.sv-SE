@@ -2,9 +2,9 @@
 title: Anpassade HTTP-huvuden
 description: Lär dig hur du konfigurerar anpassade HTTP-huvuden i Adobe Experience Manager Commerce.
 exl-id: 834aadac-c3be-4e7a-a3cb-349608810b40
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '276'
+source-wordcount: '273'
 ht-degree: 0%
 
 ---
@@ -26,8 +26,8 @@ Om du vill konfigurera anpassade HTTP-huvuden måste du först definiera dem. De
 
 Du kan konfigurera värdena för HTTP-rubrikerna på Cloud Servicens konfigurationssida för ditt projekt:
 
-1. Gå till konfigurationssidan för Cloud Servicen under Verktyg -> Cloud Services -> CIF Konfiguration
-1. Öppna en befintlig eller ny konfiguration
+1. Gå till konfigurationssidan för Cloud Servicen under Verktyg > Cloud Services > CIF Konfiguration.
+1. Öppna en befintlig konfiguration eller skapa en.
 1. Gå till fliken &quot;Avancerat&quot; och leta upp det anpassade fältet för HTTP-rubriker. Du kan markera rubrikerna som du definierade tidigare och tilldela dem värden.
 
 Komponenterna som använder molntjänstkonfigurationen ovan skickar dessa HTTP-huvuden med alla GraphQL-förfrågningar.

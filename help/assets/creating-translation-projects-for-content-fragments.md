@@ -8,9 +8,9 @@ content-type: reference
 feature: Content Fragments
 role: User, Admin
 exl-id: 19bb58da-8220-404e-bddb-34be94a3a7d7
-source-git-commit: 3400df1ecd545aa0fb0e3fcdcc24f629ce4c99ba
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '922'
+source-wordcount: '917'
 ht-degree: 3%
 
 ---
@@ -36,14 +36,14 @@ När källinnehållets fragment uppdateras eller ändras kräver motsvarande spr
 Arbetsflödet Skapa och översätt innehåller följande alternativ. Procedurstegen som är kopplade till varje alternativ liknar dem som är kopplade till motsvarande alternativ för tillgångar.
 
 * Skapa endast struktur: Information om steg för procedurer finns i [Skapa struktur endast för resurser](translation-projects.md#create-structure-only).
-* Skapa ett nytt översättningsprojekt: Information om procedurer finns i [Skapa ett nytt översättningsprojekt för resurser](translation-projects.md#create-a-new-translation-project).
+* Skapa ett översättningsprojekt: Om du vill se procedurer läser du [Skapa ett översättningsprojekt för resurser](translation-projects.md#create-a-new-translation-project).
 * Lägg till i befintligt översättningsprojekt: Information om procedurer finns i [Lägg till i befintligt översättningsprojekt för resurser](translation-projects.md#add-to-existing-translation-project).
 
 ## Uppdatera arbetsflödet för språkkopior {#update-language-copies-workflow}
 
 Arbetsflödet för att uppdatera språkkopior innehåller följande alternativ. Procedurstegen som är kopplade till varje alternativ liknar dem som är kopplade till motsvarande alternativ för tillgångar.
 
-* Skapa ett nytt översättningsprojekt: Information om procedurer finns i [Skapa ett nytt översättningsprojekt för resurser](translation-projects.md#create-a-new-translation-project) (uppdateringsarbetsflöde).
+* Skapa ett översättningsprojekt: Om du vill se procedurer läser du [Skapa ett översättningsprojekt för resurser](translation-projects.md#create-a-new-translation-project) (uppdateringsarbetsflöde).
 * Lägg till i befintligt översättningsprojekt: Information om procedurer finns i [Lägg till i befintligt översättningsprojekt för resurser](translation-projects.md#add-to-existing-translation-project) (uppdateringsarbetsflöde).
 
 Du kan också skapa tillfälliga språkkopior för fragment som liknar det sätt som du skapar tillfälliga kopior för resurser. Mer information finns i [Skapa tillfälliga språkkopior för resurser](translation-projects.md#creating-temporary-language-copies).

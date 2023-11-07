@@ -1,8 +1,8 @@
 ---
 title: Skicka dokument till FormsService
 seo-title: Passing Documents to the FormsService
-description: Skicka ett com.adobe.idp.Document-objekt som innehåller formulärdesignen till tjänsten Forms. Forms-tjänsten återger formulärdesignen som finns i objektet com.adobe.idp.Document.
-seo-description: Pass a com.adobe.idp.Document object that contains the form design to the Forms service. The Forms service renders the form design located in the com.adobe.idp.Document object.
+description: Skicka ett com.adobe.idp.Document-objekt som innehåller formulärdesignen till tjänsten Forms. Forms-tjänsten återger formulärdesignen i objektet com.adobe.idp.Document.
+seo-description: Pass a com.adobe.idp.Document object that contains the form design to the Forms service. The Forms service renders the form design in the com.adobe.idp.Document object.
 uuid: 841e97f3-ebb8-4340-81a9-b6db11f0ec82
 contentOwner: admin
 content-type: reference
@@ -12,20 +12,20 @@ topic-tags: operations
 discoiquuid: e23de3c3-f8a0-459f-801e-a0942fb1c6aa
 role: Developer
 exl-id: 29c7ebda-407a-464b-a9db-054163f5b737
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1684'
+source-wordcount: '1682'
 ht-degree: 0%
 
 ---
 
-# Skicka dokument till Forms-tjänsten {#passing-documents-to-the-formsservice}
+# Skicka dokument till Forms {#passing-documents-to-the-formsservice}
 
 **Exempel och exempel i det här dokumentet är bara för AEM Forms i JEE-miljö.**
 
-AEM Forms-tjänsten återger interaktiv PDF forms till klientenheter, vanligtvis webbläsare, för att samla in information från användare. Ett interaktivt PDF-formulär baseras på en formulärdesign som vanligtvis sparas som en XDP-fil och skapas i Designer. Från och med AEM Forms kan du skicka `com.adobe.idp.Document` objekt som innehåller formulärdesignen för Forms-tjänsten. Forms-tjänsten återger sedan formulärdesignen som finns i `com.adobe.idp.Document` -objekt.
+AEM Forms-tjänsten återger interaktiv PDF forms till klientenheter, vanligtvis webbläsare, för att samla in information från användare. Ett interaktivt PDF-formulär baseras på en formulärdesign som vanligtvis sparas som en XDP-fil och skapas i Designer. Från och med AEM Forms kan du skicka `com.adobe.idp.Document` objekt som innehåller formulärdesignen för Forms-tjänsten. Forms-tjänsten återger sedan formulärdesignen i `com.adobe.idp.Document` -objekt.
 
-En fördel med att skicka en `com.adobe.idp.Document` objekt för tjänsten Forms är att andra serviceåtgärder returnerar `com.adobe.idp.Document` -instans. Det innebär att du kan få en `com.adobe.idp.Document` -instans från en annan tjänståtgärd och återge den. Anta till exempel att en XDP-fil lagras i en Content Services-nod (utgått) med namnet `/Company Home/Form Designs`, vilket visas på följande bild.
+En fördel med att skicka en `com.adobe.idp.Document` objekt för Forms-tjänsten är att andra serviceåtgärder returnerar `com.adobe.idp.Document` -instans. Du kan alltså få en `com.adobe.idp.Document` -instans från en annan tjänståtgärd och återge den. Anta till exempel att en XDP-fil lagras i en Content Services-nod (utgått) med namnet `/Company Home/Form Designs`, vilket visas på följande bild.
 
 Du kan hämta Loan.xdp programmatiskt från Content Services (utgått) (utgått) och skicka XDP-filen till Forms-tjänsten i en `com.adobe.idp.Document` -objekt.
 
@@ -61,7 +61,7 @@ Om du vill återge ett interaktivt formulär skickar du `com.adobe.idp.Document`
 
 >[!NOTE]
 >
->Du kan skicka en `com.adobe.idp.Document` som innehåller formulärdesignen för Forms-tjänsten. Två nya metoder namngivna `renderPDFForm2` och `renderHTMLForm2` acceptera `com.adobe.idp.Document` objekt som innehåller en formulärdesign.
+>Du kan skicka en `com.adobe.idp.Document` som innehåller formulärdesignen för Forms. Två nya metoder namngivna `renderPDFForm2` och `renderHTMLForm2` acceptera `com.adobe.idp.Document` objekt som innehåller en formulärdesign.
 
 **Utför en åtgärd med formulärdataströmmen**
 
@@ -94,7 +94,7 @@ Skicka ett dokument som hämtats från Content Services (utgått) med hjälp av 
    Anropa `DocumentManagementServiceClientImpl` objektets `retrieveContent` och skicka följande värden:
 
    * Ett strängvärde som anger den lagringsplats där innehållet läggs till. Standardarkivet är `SpacesStore`. Detta värde är en obligatorisk parameter.
-   * Ett strängvärde som anger den fullständigt kvalificerade sökvägen för innehållet som ska hämtas (till exempel `/Company Home/Form Designs/Loan.xdp`). Detta värde är en obligatorisk parameter.
+   * Ett strängvärde som anger den fullständiga, kvalificerade sökvägen för innehållet som ska hämtas (till exempel `/Company Home/Form Designs/Loan.xdp`). Detta värde är en obligatorisk parameter.
    * Ett strängvärde som anger versionen. Det här värdet är en valfri parameter och du kan skicka en tom sträng. I det här fallet hämtas den senaste versionen.
 
    The `retrieveContent` returnerar en `CRCResult` -objekt som innehåller XDP-filen. Hämta en `com.adobe.idp.Document` instans genom att anropa `CRCResult` objektets `getDocument` -metod.
@@ -123,13 +123,13 @@ Skicka ett dokument som hämtats från Content Services (utgått) med hjälp av 
 
 **Se även**
 
-[Snabbstart (SOAP-läge): Skicka dokument till Forms-tjänsten med Java API](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-passing-documents-to-the-forms-service-using-the-java-api)
+[Snabbstart (SOAP-läge): skicka dokument till Forms-tjänsten med Java API](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-passing-documents-to-the-forms-service-using-the-java-api)
 
 [Inkludera AEM Forms Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-## Skicka dokument till Forms-tjänsten med hjälp av webbtjänstens API {#pass-documents-to-the-forms-service-using-the-web-service-api}
+## Skicka dokument till Forms-tjänsten med hjälp av API:t för webbtjänsten {#pass-documents-to-the-forms-service-using-the-web-service-api}
 
 Skicka ett dokument som hämtats från Content Services (utgått) med hjälp av API:t för Forms-tjänsten och innehållstjänster (utgått) (webbtjänsten):
 
@@ -143,19 +143,20 @@ Skicka ett dokument som hämtats från Content Services (utgått) med hjälp av 
 
    >[!NOTE]
    >
-   >Ersätt `localhost`med IP-adressen till den server som är värd för AEM Forms.
+   >Ersätt `localhost`med IP-adressen till den server där AEM Forms finns.
 
 1. Skapa ett Forms- och ett API-objekt för dokumenthanteringsklienten
 
    * Skapa en `FormsServiceClient` genom att använda dess standardkonstruktor.
-   * Skapa en `FormsServiceClient.Endpoint.Address` genom att använda `System.ServiceModel.EndpointAddress` konstruktor. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/FormsService?WSDL`). Du behöver inte använda `lc_version` -attribut. Det här attributet används när du skapar en tjänstreferens.)
-   * Skapa en `System.ServiceModel.BasicHttpBinding` genom att hämta värdet för `FormsServiceClient.Endpoint.Binding` fält. Sänd returvärdet till `BasicHttpBinding`.
+   * Skapa en `FormsServiceClient.Endpoint.Address` genom att använda `System.ServiceModel.EndpointAddress` konstruktor. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/FormsService?WSDL`). Du behöver inte använda `lc_version` -attribut. Detta attribut används när du skapar en tjänstreferens.)
+   * Skapa en `System.ServiceModel.BasicHttpBinding` genom att hämta värdet för `FormsServiceClient.Endpoint.Binding` fält. Skicka returvärdet till `BasicHttpBinding`.
    * Ange `System.ServiceModel.BasicHttpBinding` objektets `MessageEncoding` fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
    * Aktivera grundläggande HTTP-autentisering genom att utföra följande åtgärder:
 
       * Tilldela AEM formuläranvändarnamn till fältet `FormsServiceClient.ClientCredentials.UserName.UserName`.
       * Tilldela motsvarande lösenordsvärde till fältet `FormsServiceClient.ClientCredentials.UserName.Password`.
       * Tilldela konstantvärdet `HttpClientCredentialType.Basic` till fältet `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
+
    * Tilldela konstantvärdet `BasicHttpSecurityMode.TransportCredentialOnly` till fältet `BasicHttpBindingSecurity.Security.Mode`.
 
    >[!NOTE]
@@ -167,12 +168,12 @@ Skicka ett dokument som hämtats från Content Services (utgått) med hjälp av 
    Hämta innehåll genom att anropa `DocumentManagementServiceClient` objektets `retrieveContent` och skicka följande värden:
 
    * Ett strängvärde som anger den lagringsplats där innehållet läggs till. Standardarkivet är `SpacesStore`. Detta värde är en obligatorisk parameter.
-   * Ett strängvärde som anger den fullständigt kvalificerade sökvägen för innehållet som ska hämtas (till exempel `/Company Home/Form Designs/Loan.xdp`). Detta värde är en obligatorisk parameter.
+   * Ett strängvärde som anger den fullständiga, kvalificerade sökvägen för innehållet som ska hämtas (till exempel `/Company Home/Form Designs/Loan.xdp`). Detta värde är en obligatorisk parameter.
    * Ett strängvärde som anger versionen. Det här värdet är en valfri parameter och du kan skicka en tom sträng. I det här fallet hämtas den senaste versionen.
    * En strängutdataparameter som lagrar värdet för bläddringslänken.
    * A `BLOB` utdataparameter som lagrar innehållet. Du kan använda den här utdataparametern för att hämta innehållet.
-   * A `ServiceReference1.MyMapOf_xsd_string_To_xsd_anyType` output-parameter som lagrar innehållsattribut.
-   * A `CRCResult` output-parameter. I stället för att använda det här objektet kan du använda `BLOB` output-parameter för att hämta innehållet.
+   * A `ServiceReference1.MyMapOf_xsd_string_To_xsd_anyType` utdataparameter som lagrar innehållsattribut.
+   * A `CRCResult` output-parameter. Du kan använda kommandot `BLOB` output-parameter för att hämta innehållet.
 
 1. Återge ett interaktivt PDF-formulär
 

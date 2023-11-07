@@ -1,7 +1,7 @@
 ---
 title: Visa ytterligare data i ToDo-listan
 seo-title: Displaying additional data in ToDo list
-description: Anpassa visningen av Att göra-listan på arbetsytan i LiveCycle AEM Forms så att du kan visa mer information än standardinställningen.
+description: Anpassa visningen av Att göra-listan för arbetsytan i LiveCycle AEM Forms så att du kan visa mer information än standardinställningen.
 seo-description: How-to customize the display of the To-do list of LiveCycle AEM Forms workspace to show more information besides the default.
 uuid: 9467c655-dce2-43ce-8e8f-54542fe81279
 content-type: reference
@@ -10,7 +10,7 @@ topic-tags: forms-workspace
 discoiquuid: fed3b562-bcc2-4fb7-8fd2-35b1ac621e16
 docset: aem65
 exl-id: f8b84f13-02d3-4787-95e1-25fd684e6d3b
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '282'
 ht-degree: 0%
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 # Visa ytterligare data i ToDo-listan{#displaying-additional-data-in-todo-list}
 
-Som standard visas uppgiftens visningsnamn och beskrivning i listan Uppgift på arbetsytan i AEM Forms. Du kan dock lägga till annan information, t.ex. skapandedatum och deadlinedatum. Du kan också lägga till ikoner och ändra visningsformatet.
+Som standard visas uppgiftens visningsnamn och beskrivning i listan Uppgift på arbetsytan i AEM Forms. Du kan dock lägga till annan information, t.ex. skapandedatum och slutdatum. Du kan också lägga till ikoner och ändra visningsformatet.
 
 ![En titt på fliken Uppgift på arbetsyta i HTML som visar standardkonfigurationen](assets/html-todo-list.png)
 
@@ -36,7 +36,7 @@ Mer information om JSON-objektbeskrivningen finns i [this](/help/forms/using/htm
 1. Följ [Allmänna steg för anpassning av AEM Forms arbetsyta](../../forms/using/generic-steps-html-workspace-customization.md).
 1. Om du vill visa ytterligare information för en uppgift måste motsvarande nyckelvärdepar läggas till i aktivitetsblocket för `translation.json`.
 
-   Till exempel ändra `/apps/ws/locales/en-US/translation.json` för engelska:
+   Ändra till exempel `/apps/ws/locales/en-US/translation.json` för engelska:
 
    ```json
    "task" : {

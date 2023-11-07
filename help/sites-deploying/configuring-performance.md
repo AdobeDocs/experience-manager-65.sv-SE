@@ -9,7 +9,7 @@ topic-tags: configuring
 discoiquuid: 80118cd1-73e1-4675-bbdf-85d66d150abc
 feature: Configuring
 exl-id: 5b0c9a8c-0f5f-46ee-a455-adb9b9d27270
-source-git-commit: af60428255fb883265ade7b2d9f363aacb84b9ad
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '6503'
 ht-degree: 1%
@@ -36,13 +36,12 @@ Den här miljön används av författare som anger och uppdaterar innehåll. Den
 
 ## Publiceringsmiljö {#publish-environment}
 
-Den här miljön innehåller innehåll som du gör tillgängligt för användarna. Här är antalet förfrågningar ännu större och hastigheten är lika viktig. Men eftersom förfrågningarnas karaktär är mindre dynamisk kan ytterligare mekanismer för prestandaförbättring tillämpas. till exempel cachelagra innehållet eller belastningsutjämning.
+Den här miljön innehåller innehåll som du gör tillgängligt för användarna. Här är antalet förfrågningar ännu större och hastigheten är lika viktig. Men eftersom typen av begäran är mindre dynamisk kan ytterligare prestandaförbättringar tillämpas, som cachelagring av innehållet eller belastningsutjämning.
 
 >[!NOTE]
 >
 >* När du har konfigurerat för prestandaoptimering följer du anvisningarna i [Tålig dag](/help/sites-developing/tough-day.md) för att testa miljön under tung belastning.
 >* Se även [Prestandajusteringstips.](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-performance.html?lang=en)
-
 
 ## Prestandaoptimeringsmetod {#performance-optimization-methodology}
 
@@ -80,7 +79,7 @@ Det är svårt att simulera verkligheten och hur mycket arbete du vill lägga p�
 
 ![chlimage_1-5](assets/chlimage_1-5.jpeg)
 
-Det är inte underskattat hur viktigt det är att uppnå prestationsmålen på rätt sätt. Efter det att man fokuserat på specifika prestationsmål är det ofta svårt att ändra dessa mål efteråt, även om de bygger på antaganden.
+Det är inte underskattat hur viktigt det är att uppnå prestationsmålen på ett korrekt sätt. Efter det att man fokuserat på specifika prestationsmål är det ofta svårt att ändra dessa mål efteråt, även om de bygger på antaganden.
 
 Att uppnå goda, gedigna prestationsmål är verkligen ett av de svåraste områdena. Det är oftast bäst att samla in riktiga livsloggar och referensvärden från en jämförbar webbplats (till exempel den nya webbplatsens föregångare).
 
@@ -108,7 +107,7 @@ I allmänhet bör du spara dina ocachelagrade HTML-begäranden på mindre än 10
 * 1 % av förfrågningarna om sidor ska få ett svar inom 500 millisekunder - 1 000 millisekunder.
 * Inga sidor ska svara långsammare än 1 sekund.
 
-Siffrorna ovan förutsätter följande villkor:
+Numren ovan förutsätter följande villkor:
 
 * Mätt vid publicering (inga allmänna omkostnader relaterat till en redigeringsmiljö)
 * Mätt på servern (ingen nätverksbelastning)
@@ -142,7 +141,7 @@ Två saker påverkar prestandan här:
 
 Om du vill förbättra prestanda bör du tänka på följande:
 
-* Hur många mediefiler överförs per dag? En god uppskattning kan baseras på
+* Hur många mediefiler överförs per dag? En god uppskattning kan baseras på följande:
 
 ![chlimage_1-77](assets/chlimage_1-77.png)
 
@@ -152,7 +151,7 @@ Om du vill förbättra prestanda bör du tänka på följande:
 
 ![chlimage_1-78](assets/chlimage_1-78.png)
 
-* 80 % av alla redigeringar görs på 20 % av tiden, så vid maximal tid har du fyra gånger så hög genomsnittlig datahastighet. Detta är ditt mål.
+* 80 % av alla redigeringar görs på 20 % av tiden, så vid maximal tid har du fyra gånger högre datahastighet än den genomsnittliga. Detta är ditt mål.
 
 ## Prestandaövervakning {#performance-monitoring}
 
@@ -179,9 +178,9 @@ Prestanda kan illustreras på olika platser i hela webbkedjan.
 
 Det finns flera funktionsområden som ofta är ansvariga för att påverka prestandan:
 
-* Cachelagring
+* Cachning
 * Programkod (ditt projekt)
-* Sökfunktion
+* Sökfunktionalitet
 
 ### Grundläggande regler för prestanda {#basic-rules-regarding-performance}
 
@@ -196,7 +195,7 @@ Vissa regler bör beaktas vid prestandaoptimering:
 
 >[!NOTE]
 >
->Tänk på att den mekanism du använder för att mäta prestanda ofta påverkar exakt det du försöker mäta. Försök att ta hänsyn till dessa skillnader och eliminera så mycket av deras effekt som möjligt, särskilt bör webbläsarplugin-program avaktiveras när det är möjligt.
+>Tänk på att den mekanism du använder för att mäta prestanda ofta påverkar exakt det du försöker mäta. Försök att ta hänsyn till dessa skillnader och eliminera så mycket av deras effekt som möjligt. I synnerhet bör webbläsarplugin-program inaktiveras när det är möjligt.
 
 ## Konfigurera för prestanda {#configuring-for-performance}
 
@@ -223,8 +222,8 @@ När bilder (eller DAM-resurser i allmänhet) överförs, importeras bilderna au
 
 Arbetsflödesmotorn använder Apache Sling-jobbköer för hantering och schemaläggning av bearbetning av arbetsobjekt. Följande jobbkötjänster har skapats som standard från tjänsten Apache Sling Job Queue Configuration för bearbetning av arbetsflödesjobb:
 
-* Begränsa arbetsflödeskö: De flesta arbetsflödesstegen, till exempel de som bearbetar DAM-resurser, använder tjänsten Begränsa arbetsflödeskö.
-* Begränsa arbetsflöde för extern processjobbkö: Den här tjänsten används för särskilda externa arbetsflödessteg som vanligtvis används för att kontakta ett externt system och avfråga resultat. Exempelvis implementeras steget InDesign Media Extraction Process som en extern process. Arbetsflödesmotorn använder den externa kön för att bearbeta avsökningen. (Se [com.day.cq.workflow.exec.WorkflowExternalProcess](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/workflow/exec/WorkflowExternalProcess.html).)
+* Begränsa arbetsflödeskö: De flesta arbetsflödessteg, t.ex. de som bearbetar DAM-resurser, använder tjänsten Begränsa arbetsflödeskö.
+* Begränsa arbetsflödets externa processjobbkö: Den här tjänsten används för särskilda externa arbetsflödessteg som vanligtvis används för att kontakta ett externt system och avfråga resultat. InDesign Media Extraction Process-steget implementeras som en extern process. Arbetsflödesmotorn använder den externa kön för att bearbeta avsökningen. (Se [com.day.cq.workflow.exec.WorkflowExternalProcess](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/workflow/exec/WorkflowExternalProcess.html).)
 
 Konfigurera de här tjänsterna för att begränsa antalet arbetsflödesprocesser som körs samtidigt.
 
@@ -283,7 +282,7 @@ Tjänsten inaktiveras av [konfigurera OSGi-tjänsten](/help/sites-deploying/conf
 
 Distribuering av flera DAM-instanser kan hjälpa prestandan när till exempel:
 
-* Du har en hög belastning på grund av regelbunden överföring av många resurser för författarmiljön; här kan en separat DAM-instans dedikeras till tjänstförfattaren.
+* Du har en hög belastning på grund av regelbunden överföring av många resurser för författarmiljön. Här kan en separat DAM-instans användas för att betjäna författaren.
 * Du har flera team i hela världen (till exempel USA, Europa, Asien).
 
 Ytterligare överväganden är:
@@ -293,9 +292,9 @@ Ytterligare överväganden är:
 
 ## Bästa metoder för kvalitetssäkring {#best-practices-for-quality-assurance}
 
-Prestanda är av stor betydelse för er publiceringsmiljö. Därför måste du noga planera och analysera prestandatesterna du gör för publiceringsmiljön när du implementerar projektet.
+Prestanda är av stor betydelse för er publiceringsmiljö. Därför måste du noga planera och analysera prestandatesterna som du gör för publiceringsmiljön när du implementerar projektet.
 
-Det här avsnittet syftar till att ge en standardiserad översikt över problemen med att definiera ett testkoncept specifikt för prestandatester på *publicera* miljö. Den här informationen är främst av intresse för kvalitetstekniker, projektledare och systemadministratörer.
+Detta avsnitt ger en standardiserad översikt över problemen med att definiera ett testkoncept specifikt för prestandatester på *publicera* miljö. Den här informationen är främst av intresse för kvalitetstekniker, projektledare och systemadministratörer.
 
 Följande omfattar en standardiserad metod för prestandatester för en AEM på *Publicera* miljö. Prestandatestet omfattar följande fem faser:
 
@@ -324,7 +323,7 @@ Du behöver en återgivning av den planerade publiceringsmiljön, tillsammans me
 
 Få en tydlig översikt som du kan använda för att skapa en karta över hela programmet (du kanske redan har den här kartan från tester i redigeringsmiljön).
 
-En diagramrepresentation av applikationens interna delar kan ge en översikt över testkraven. med färgkodning kan den också fungera som grund för rapporter.
+En diagramrepresentation av de interna elementen i programmet kan ge en översikt över testkraven. Med färgkodning kan den också fungera som grund för rapportering.
 
 ### Omfattningsdefinition {#scope-definition}
 
@@ -332,12 +331,12 @@ Ett program har vanligtvis ett urval av användningsfall. Vissa användningsomr�
 
 Om du vill fokusera omfattningen på prestandatestningen vid publicering rekommenderar Adobe att du definierar följande:
 
-* Viktiga användningsfall
+* Viktigaste användningsområdena
 * Mest kritiska tekniska användningsfall
 
 Antalet användningsfall är upp till dig, men bör begränsas till ett enkelt hanterbart antal (till exempel mellan 5 och 10).
 
-När de viktigaste användningsfallen har valts kan nyckelutförandeindikatorerna (KPI) och de verktyg som används för att mäta dem definieras för varje fall. Exempel på vanliga KPI:er är:
+När de viktigaste användningsfallen har valts kan nyckelutförandeindikatorerna (KPI) och de verktyg som används för att mäta dem definieras för varje fall. Exempel på vanliga nyckeltal är:
 
 * Svarstid från slut till slut
 * Svarstid för server
@@ -387,9 +386,9 @@ I båda fallen kan du definiera det förväntade antalet transaktioner per sekun
 | Komponent | Testtyp | Nej. Användare | Tx/sek (förväntas) | Tx/sek (testad) | Beskrivning |
 |---|---|---|---|---|---|
 | Startsida - en användare | Genomsnittlig | 1 | 1 |  |  |
-|  | Toppvärde | 1 | 3 |  |  |
+|   | Toppvärde | 1 | 3 |  |  |
 | Startsida 100 användare | Genomsnittlig | 100 | 3 |  |  |
-|  | Toppvärde | 100 | 3 |  |
+|   | Toppvärde | 100 | 3 |  |
 
 #### Komponenttester {#combined-component-tests}
 
@@ -398,15 +397,15 @@ Genom att testa komponenterna i kombination får du en närmare bild av hur prog
 | Scenario | Komponent | Nej. Användare | Tx/sek (förväntas) | Tx/sek (testad) | Beskrivning |
 |---|---|---|---|---|---|
 | Blandat genomsnitt | Hemsida | 10 | 1 |  |  |
-|  | Sökning | 10 | 1 |  |  |
-|  | Nyheter | 10 | 2 |  |  |
-|  | Händelser | 10 | 1 |  |  |
-|  | Aktiveringar | 10 | 3 |  | Simulering av författarbeteende. |
+|   | Sökning | 10 | 1 |  |  |
+|   | Nyheter | 10 | 2 |  |  |
+|   | Händelser | 10 | 1 |  |  |
+|   | Aktiveringar | 10 | 3 |  | Simulering av författarbeteende. |
 | Blandad topp | Hemsida | 100 | 5 |  |  |
-|  | Sökning | 50 | 5 |  |  |
-|  | Nyheter | 100 | 10 |  |  |
-|  | Händelser | 100 | 10 |  |  |
-|  | Aktiveringar | 20 | 20 |  | Simulering av författarbeteende. |
+|   | Sökning | 50 | 5 |  |  |
+|   | Nyheter | 100 | 10 |  |  |
+|   | Händelser | 100 | 10 |  |  |
+|   | Aktiveringar | 20 | 20 |  | Simulering av författarbeteende. |
 
 #### Pågående direkttester {#going-live-tests}
 
@@ -415,10 +414,10 @@ Under de första dagarna efter det att webbplatsen har tillgängliggjorts kan du
 | Scenario | Testtyp | Nej. Användare | Tx/sek (förväntas) | Tx/sek (testad) | Beskrivning |
 |---|---|---|---|---|---|
 | Live-topp på väg | Hemsida | 200 | 20 |  |  |
-|  | Sökning | 100 | 10 |  |  |
-|  | Nyheter | 200 | 20 |  |  |
-|  | Händelser | 200 | 20 |  |  |
-|  | Aktiveringar | 20 | 20 |  | Simulering av författarbeteende. |
+|   | Sökning | 100 | 10 |  |  |
+|   | Nyheter | 200 | 20 |  |  |
+|   | Händelser | 200 | 20 |  |  |
+|   | Aktiveringar | 20 | 20 |  | Simulering av författarbeteende. |
 
 #### Felscenariotest {#error-scenario-tests}
 
@@ -431,10 +430,10 @@ När man utformar dessa tester bör man komma ihåg att inte alla scenarier intr
 
 | Felscenario | Feltyp | Nej. Användare | Tx/sek (förväntas) | Tx/sek (testad) | Beskrivning |
 |---|---|---|---|---|---|
-| Överlagring av sökkomponent | Sök på globalt jokertecken (asterisk) | 10 | 1 |  | Endast &amp;senaste;&amp;senaste; söks igenom. |
-|  | Stoppord | 20 | 2 |  | Söker efter ett stoppord. |
-|  | Tom sträng | 10 | 1 |  | Söker efter en tom sträng. |
-|  | Specialtecken | 10 | 1 |  | Söker efter specialtecken. |
+| Överlagring av sökkomponent | Sök på globalt jokertecken (asterisk) | 10 | 1 |  | &amp;Endast senaste;&amp;sista; söks igenom. |
+|   | Stoppord | 20 | 2 |  | Söker efter ett stoppord. |
+|   | Tom sträng | 10 | 1 |  | Söker efter en tom sträng. |
+|   | Specialtecken | 10 | 1 |  | Söker efter specialtecken. |
 
 #### Bevarandetester {#endurance-tests}
 
@@ -443,21 +442,21 @@ Vissa problem uppstår bara efter att systemet har körts kontinuerligt, antinge
 | Scenario | Testtyp | Nej. Användare | Tx/sek (förväntas) | Tx/sek (testad) | Beskrivning |
 |---|---|---|---|---|---|
 | Varaktighetsprovning (72 timmar) | Hemsida | 10 | 1 |  |  |
-|  | Sökning | 10 | 1 |  |  |
-|  | Nyheter | 20 | 2 |  |  |
-|  | Händelser | 10 | 1 |  |  |
-|  | Aktiveringar | 1 | 3 |  | Simulering av författarbeteende. |
+|   | Sökning | 10 | 1 |  |  |
+|   | Nyheter | 20 | 2 |  |  |
+|   | Händelser | 10 | 1 |  |  |
+|   | Aktiveringar | 1 | 3 |  | Simulering av författarbeteende. |
 
 ### Optimering {#optimization}
 
 I de senare implementeringsfaserna optimerar du programmet så att det uppfyller och maximerar prestandamålen.
 
-Alla optimeringar som görs måste testas för att säkerställa att de har:
+Alla optimeringar måste testas för att säkerställa att de har:
 
 * Påverkar inte funktionen
 * har verifierats med lastproven innan de släpps
 
-Det finns ett urval verktyg som kan hjälpa dig med lastgenerering, prestandaövervakning och resultatanalys. Några av dessa verktyg är:
+Det finns ett urval verktyg som kan hjälpa dig med lastgenerering, prestandaövervakning och resultatanalys. Några av dessa verktyg är följande:
 
 * [JMeter](https://jmeter.apache.org/)
 * [Load Runner](https://www.microfocus.com/en-us/portfolio/performance-engineering/overview)
@@ -491,13 +490,14 @@ Dispatcher har flera inbyggda funktioner som du kan använda för att optimera p
 
 >[!NOTE]
 >
->Det kan hjälpa dig att komma ihåg att Dispatcher lagrar cachen på en standardwebbserver. Om du känner till den här informationen kan du cachelagra allt som du kan lagra som en sida och begära via en URL. Och du kan inte lagra andra saker, som cookies, sessionsdata och formulärdata.
+>Det kan hjälpa dig att komma ihåg att Dispatcher lagrar cachen på en standardwebbserver. Om du känner till den här informationen kan du cachelagra allt som du kan lagra som en sida och begära med hjälp av en URL. Och du kan inte lagra andra saker, som cookies, sessionsdata och formulärdata.
 >
 >I allmänhet innebär många cachelagringsstrategier att du måste välja bra URL:er och inte förlita dig på dessa ytterligare data.
 >
 >Med Dispatcher version 4.1.11 kan du även cachelagra svarshuvuden, se [Cachelagra HTTP-svarshuvuden](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#configuring-the-dispatcher-cache-cache).
+>
 
-### Beräkna Dispatcher-cachens proportioner {#calculating-the-dispatcher-cache-ratio}
+### Beräkna Dispatcher-cachens förhållande {#calculating-the-dispatcher-cache-ratio}
 
 Cachekvotsformeln uppskattar procentandelen begäranden som hanteras av cachen av det totala antalet begäranden som kommer in i systemet. För att beräkna cachekvoten behöver du följande:
 
@@ -507,7 +507,7 @@ Cachekvotsformeln uppskattar procentandelen begäranden som hanteras av cachen a
 
 Formeln för beräkning av cacheförhållandet är:
 
-* (Totalt antal begäranden **minus** antalet begäranden vid publicering) **delad** efter det totala antalet begäranden.
+* (Totalt antal begäranden **minus** antalet begäranden vid publicering) **dividerat** efter det totala antalet begäranden.
 
 Om det totala antalet begäranden till exempel är 129491 och antalet begäranden som hanteras av Publish-instansen är 58959 är cachekvoten: **(129491 - 58959)/129491= 54,5 %**.
 
@@ -522,7 +522,7 @@ Om du inte har ett enda utgivar-/dispatcherpar lägger du till förfrågningar f
 Med Dispatcher version 4.1.11 kan du cachelagra svarshuvuden. Om du inte cachelagrar svarshuvuden i Dispatcher kan det uppstå problem om du lagrar sidkodningsinformation i sidhuvudet. I det här fallet används webbserverns standardkodning för sidan när Dispatcher visar en sida från cachen. Det finns två sätt att undvika det här problemet:
 
 * Om du bara använder en kodning kontrollerar du att den kodning som används på webbservern är densamma som standardkodningen för den AEM webbplatsen.
-* Om du vill ställa in kodningen använder du en `<META>` -taggen i HTML `head` som i följande exempel:
+* Om du vill ställa in kodningen använder du `<META>` -taggen i HTML `head` -avsnittet, som i följande exempel:
 
 ```xml
         <META http-equiv="Content-Type" content="text/html; charset=EUC-JP">
@@ -632,7 +632,7 @@ För de flesta filer används MIME-typen i filtillägget. Det vill säga,
 1. Med filnamnstillägget (till exempel `.html`, `.gif`och `.jpg`).
 1. Med MIME-typen som servern skickar med filen.
 
-Om filnamnet inte har något filtillägg visas det som oformaterad text.
+Om filnamnet saknar filtillägg visas det som oformaterad text.
 
 Med Dispatcher version 4.1.11 kan du cachelagra svarshuvuden. Om du inte cachelagrar svarshuvuden för Dispatcher är MIME-typen en del av HTTP-huvudet. Om ditt AEM returnerar filer som inte har ett känt filslut, och i stället använder MIME-typen, kan dessa filer visas felaktigt.
 
@@ -641,7 +641,7 @@ Följ dessa riktlinjer för att vara säker på att filerna cachelagras korrekt:
 * Kontrollera att filerna alltid har rätt filtillägg.
 * Undvik generiska filserverskript med URL-adresser som `download.jsp?file=2214`. Om du vill använda URL:er som innehåller filspecifikationen skriver du om skriptet. I föregående exempel är den här omskrivningen `download.2214.pdf`.
 
-## Säkerhetskopieringsprestanda {#backup-performance}
+## Säkerhetskopiera prestanda {#backup-performance}
 
 I det här avsnittet presenteras en serie prestandatester som används för att utvärdera AEM säkerhetskopiering och hur säkerhetskopiering påverkar programmets prestanda. AEM säkerhetskopieringar är mycket belastade på systemet medan det körs, och Adobe mäter effekten och effekterna av inställningarna för fördröjning av säkerhetskopieringen som försöker modulera dessa effekter. Målet är att tillhandahålla vissa referensdata om förväntade prestanda för säkerhetskopieringar i realistiska konfigurationer och kvantiteter av produktionsdata, och att ge vägledning om hur man beräknar säkerhetskopieringstider för planerade system.
 
@@ -664,7 +664,7 @@ Den AEM konfigurationen placerar databasen och datalagret på samma logiska voly
 
 #### Datavolymer {#data-volumes}
 
-Följande tabell visar storleken på datavolymer som används i prestandatesterna för säkerhetskopiering. Det ursprungliga baslinjeinnehållet installeras först, sedan läggs ytterligare kända datamängder till för att öka storleken på det säkerhetskopierade innehållet. Säkerhetskopior skapas i specifika steg för att representera en stor ökning av innehållet och vad som kan produceras under en dag. Distributionen av innehåll (sidor, bilder, taggar) är i stort sett baserad på realistisk komposition av produktionsresurser. Sidor, bilder och taggar är begränsade till högst 800 underordnade sidor. Varje sida innehåller komponenterna title, Flash, text/image, video, bildspel, form, table, cloud och carousel. Bilder överförs från en pool med 400 unika filstorlekar från 37 kB till 594 kB.
+Följande tabell visar storleken på datavolymer som används i prestandatesterna för säkerhetskopiering. Det ursprungliga baslinjeinnehållet installeras först, sedan läggs ytterligare kända datamängder till för att öka storleken på det säkerhetskopierade innehållet. Säkerhetskopior skapas i specifika steg för att representera en stor ökning av innehållet och vad som kan produceras under en dag. Distributionen av innehåll (sidor, bilder, taggar) är i stort sett baserad på realistisk komposition av produktionsresurser. Sidor, bilder och taggar är begränsade till högst 800 underordnade sidor. Varje sida innehåller rubriker, Flash, text/bild, video, bildspel, formulär, tabell, moln och karusellkomponenter. Bilder överförs från en pool med 400 unika filstorlekar från 37 kB till 594 kB.
 
 | Innehåll | Noder | Sidor | Bilder | Taggar |
 |---|---|---|---|---|
@@ -676,16 +676,16 @@ Prestandatestvärdet för säkerhetskopiering upprepas med ytterligare innehåll
 
 #### Benchmark-scenarier {#benchmark-scenarios}
 
-Referensvärdena för säkerhetskopiering omfattar två huvudscenarier: säkerhetskopierar när systemet är under en betydande programbelastning och säkerhetskopierar när systemet är inaktivt. Även om den allmänna rekommendationen är att säkerhetskopieringar ska utföras när AEM är så inaktiv som möjligt, finns det situationer då det är nödvändigt att säkerhetskopieringen måste köras när systemet är under laddning.
+Referensvärdena för säkerhetskopiering omfattar två huvudscenarier: säkerhetskopieringar när systemet är kraftigt belastat och säkerhetskopieringar när systemet är ledigt. Även om den allmänna rekommendationen är att säkerhetskopieringar ska utföras när AEM är så inaktiv som möjligt, finns det situationer då det är nödvändigt att säkerhetskopieringen måste köras när systemet är under laddning.
 
 * **Inaktivitetsläge** - Säkerhetskopieringar utförs utan någon annan aktivitet på AEM.
 * **Under inläsning** - Säkerhetskopieringar utförs medan systemet är under 80 % inläst från onlineprocesser. Fördröjningen för säkerhetskopiering varierade för att se effekten på inläsningen.
 
-Tidpunkter och storlek för säkerhetskopieringen hämtas från AEM. Det rekommenderas normalt att säkerhetskopieringar schemaläggs i fel tider när AEM är ledig, till exempel mitt i natten. Detta scenario är representativt för den rekommenderade metoden.
+Tidpunkter och storlek för säkerhetskopieringen hämtas från AEM. Det rekommenderas normalt att säkerhetskopieringar schemaläggs i fel tider när AEM är ledig, t.ex. mitt i natten. Detta scenario är representativt för den rekommenderade metoden.
 
 Inläsningen består av sidor som skapats, sidor som tagits bort, bläddringar och frågor med de flesta inläsningar som kommer från sidbläddringar och frågor. Om du lägger till och tar bort för många sidor ökar arbetsytans storlek kontinuerligt och förhindrar att säkerhetskopiorna slutförs. Den lastfördelning som skriptet använder är 75 % sidvändningar, 24 % frågor och 1 % sidskapande (en nivå utan kapslade undersidor). Maximalt medelvärde för transaktioner per sekund i ett system som är inaktivt uppnås med fyra samtidiga trådar, som används vid testning av säkerhetskopior som läses in.
 
-Inläsningens inverkan på säkerhetskopieringsprestanda kan uppskattas av skillnaden mellan prestanda med och utan den här programinläsningen. Effekten av säkerhetskopieringen på programmets dataflöde hittas genom att man jämför scenariogenomströmningen i transaktioner per timme med och utan en pågående samtidig säkerhetskopiering och med säkerhetskopieringar som körs med olika inställningar för fördröjning av säkerhetskopiering.
+Inläsningens inverkan på säkerhetskopieringsprestanda kan uppskattas av skillnaden mellan prestanda med och utan den här programinläsningen. Effekten av säkerhetskopieringen på programmets dataflöde hittas genom att man jämför scenariogenomströmningen i transaktioner per timme med och utan en pågående säkerhetskopiering, och med säkerhetskopieringar som körs med olika inställningar för fördröjning av säkerhetskopiering.
 
 * **Fördröjningsinställning** - I flera av dessa scenarier varierades inställningarna för fördröjning av säkerhetskopiering, med värden på 10 millisekunder (standard), 1 millisekunder och 0 millisekunder, för att undersöka hur den här inställningen påverkade säkerhetskopieringens prestanda.
 * **Typ av säkerhetskopiering** - Alla säkerhetskopior var externa säkerhetskopior av databasen som gjorts till en säkerhetskopieringskatalog utan att skapa en zip, utom i ett fall för jämförelse där tjärkommandot användes direkt. Eftersom det inte går att skapa stegvisa säkerhetskopieringar till en zip-fil, eller när den tidigare fullständiga säkerhetskopieringen är en zip-fil, är säkerhetskopieringskatalogmetoden den metod som oftast används i produktionssituationer.
@@ -716,7 +716,7 @@ Parametern för fördröjning av säkerhetskopiering anges för att begränsa i 
 
 ![chlimage_1-83](assets/chlimage_1-83.png)
 
-Som en jämförelse kan nämnas den genomströmning som erhålls med en säkerhetskopia av filsystemet (&#39;tar&#39;) för att säkerhetskopiera samma databasfiler. Tjärans prestanda är jämförbar, men något högre än säkerhetskopian med fördröjningen inställd på noll. Även om du anger en liten fördröjning minskar säkerhetskopieringens genomströmning avsevärt och standardfördröjningen på 10 millisekunder resulterar det i avsevärt mindre genomströmning. I situationer där säkerhetskopieringar kan schemaläggas när den totala programanvändningen är låg eller programmet kan vara inaktivt, kan du minska fördröjningen under standardvärdet så att säkerhetskopieringen kan fortsätta snabbare.
+Som en jämförelse kan nämnas den genomströmning som erhålls med en säkerhetskopia av filsystemet (&#39;tar&#39;) för att säkerhetskopiera samma databasfiler. Tjärans prestanda är jämförbar, men något högre än säkerhetskopian med fördröjningen inställd på noll. Även om du anger en liten fördröjning minskar säkerhetskopieringens genomströmning avsevärt och standardfördröjningen på 10 millisekunder resulterar det i avsevärt mindre genomströmning. I situationer där säkerhetskopieringar kan schemaläggas när den totala programanvändningen är låg, eller när programmet kan vara inaktivt, kan du minska fördröjningen under standardvärdet så att säkerhetskopieringen kan fortsätta snabbare.
 
 Den faktiska effekten av applikationens genomströmning vid en pågående säkerhetskopiering beror på applikations- och infrastrukturinformationen. Fördröjningsvärdet bör väljas genom empirisk analys av programmet, men bör väljas så litet som möjligt så att säkerhetskopieringen kan slutföras så snabbt som möjligt. Eftersom det bara finns en svag korrelation mellan valet av fördröjningsvärde och effekten på applikationens genomströmning, bör fördröjning främja kortare övergripande säkerhetskopieringstider för att minimera den övergripande effekten av säkerhetskopieringar. En säkerhetskopiering som tar åtta timmar att slutföra men påverkar dataflödet med -20 % har troligen större total effekt än en som tar två timmar att slutföra men påverkar dataflödet med -30 %.
 

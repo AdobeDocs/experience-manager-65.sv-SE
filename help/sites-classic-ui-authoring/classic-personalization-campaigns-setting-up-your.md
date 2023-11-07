@@ -7,9 +7,9 @@ topic-tags: personalization
 content-type: reference
 docset: aem65
 exl-id: 1b607a52-f065-4e35-8215-d54df7c8403d
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2257'
+source-wordcount: '2223'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ I konfigurationen av en ny kampanj ingår följande (allmänna) steg:
 
 1. [Skapa ett varumärke](#creating-a-new-brand) för era kampanjer.
 1. Om det behövs kan du [definiera egenskaperna för ert nya varumärke](#defining-the-properties-for-your-new-brand).
-1. [Skapa en kampanj](#creating-a-new-campaign) för upplevelser, till exempel teasersidor eller nyhetsbrev.
+1. [Skapa en kampanj](#creating-a-new-campaign) för upplevelser, t.ex. teasersidor eller nyhetsbrev.
 1. Om det behövs kan du [definiera egenskaperna för den nya kampanjen](#defining-the-properties-for-your-new-campaign).
 
 Beroende på vilken typ av upplevelser du skapar måste du [skapa en upplevelse](#creating-a-new-experience). Hur upplevelsen ser ut och vilka åtgärder som följer efter att den har skapats beror på vilken typ av upplevelse du vill skapa:
@@ -50,15 +50,13 @@ Beroende på vilken typ av upplevelser du skapar måste du [skapa en upplevelse]
 
 ## Skapa ett nytt varumärke {#creating-a-new-brand}
 
-Skapa ett nytt varumärke:
-
 1. Öppna **MCM** och markera **Kampanjer** i den vänstra rutan.
 
 1. Välj **Nytt...** för att ange **Titel** och **Namn** och mall som ska användas för ert nya varumärke:
 
    ![chlimage_1-17](assets/chlimage_1-17.png)
 
-1. Klicka **Skapa**. Ditt nya varumärke kommer att visas i MCM (med en standardikon).
+1. Klicka **Skapa**. Ditt nya varumärke visas i MCM (med en standardikon).
 
 ### Definiera egenskaperna för ditt nya varumärke {#defining-the-properties-for-your-new-brand}
 
@@ -71,8 +69,6 @@ Skapa ett nytt varumärke:
 1. Klicka **OK** att spara.
 
 ### Skapa en ny kampanj {#creating-a-new-campaign}
-
-Skapa en ny kampanj:
 
 1. Från **Kampanjer** markerar du ditt nya varumärke i den vänstra rutan eller dubbelklickar på ikonen i den högra rutan.
 
@@ -105,7 +101,7 @@ Konfigurera kampanjegenskaper som styr beteendet:
 
 ### Skapa en ny upplevelse {#creating-a-new-experience}
 
-Hur man skapar en ny upplevelse beror på vilken typ av upplevelse det är:
+Hur man skapar en upplevelse beror på vilken typ av upplevelse det är:
 
 * [Skapa ett Teaser](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#creatingateaser)
 * [Skapa ett nyhetsbrev](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#creatinganewsletter)
@@ -154,7 +150,7 @@ Om du har befintliga upplevelser kan du lägga till en kontaktyta direkt från k
 >[!NOTE]
 >
 >Adobe planerar inte att ytterligare förbättra denna funktion (Hantera leads).
->Rekommendationen är [utnyttja Adobe Campaign och integrationen för att AEM](/help/sites-administering/campaign.md).
+>Rekommendationen är att använda [Adobe Campaign och integrationen med AEM](/help/sites-administering/campaign.md).
 
 I AEM MCM kan du ordna och lägga till leads antingen genom att ange dem manuellt eller importera en kommaseparerad lista, till exempel en utskickslista. Ytterligare sätt att generera leads är från nyhetsbrev eller communityregistreringar (om de är konfigurerade kan de utlösa ett arbetsflöde som fyller i leads).
 
@@ -172,7 +168,7 @@ I Kontrollpanelen får du tillgång till alla leads genom att klicka på **Leads
 
 När du har skapat nya leads ska du se till att [aktivera dem](#activating-or-deactivating-leads) så att ni kan spåra deras aktivitet i publiceringsinstansen och personalisera deras upplevelse.
 
-Så här skapar du en ny lead manuellt:
+Så här skapar du en lead manuellt:
 
 1. I AEM navigerar du till MCM. Klicka på **Leads**.
 1. Klicka **Nytt**. The **Skapa nytt** öppnas.
@@ -207,7 +203,7 @@ Till aktiva eller inaktiverade leads:
 
 ### Importerar nya leads {#importing-new-leads}
 
-När du importerar nya leads kan du automatiskt lägga till dem i en befintlig lista eller skapa en ny lista som inkluderar dessa leads.
+När du importerar nya leads kan du automatiskt lägga till dem i en befintlig lista eller skapa en lista som innehåller dessa leads.
 
 Så här importerar du leads från en kommaavgränsad lista:
 
@@ -302,7 +298,7 @@ Om du vill ta bort befintliga leads i MCM markerar du kryssrutan bredvid leadet 
 >[!NOTE]
 >
 >Adobe planerar inte att ytterligare förbättra denna funktion (hantera listor).
->Rekommendationen är [utnyttja Adobe Campaign och integrationen för att AEM](/help/sites-administering/campaign.md).
+>Rekommendationen är att använda [Adobe Campaign och integrationen med AEM](/help/sites-administering/campaign.md).
 
 Med listor kan du ordna dina leads i grupper. Med listor kan ni inrikta era marknadsföringskampanjer på en viss grupp personer, till exempel kan ni skicka ett målinriktat nyhetsbrev till en lista. Listor visas i MCM-modulen, antingen på kontrollpanelen eller genom att klicka på **Listor**. Båda ger dig namnet på listan och antalet medlemmar.
 
@@ -314,8 +310,6 @@ Klicka **Listor** kan du även visa om listan är medlem i en annan lista och se
 
 ### Skapa nya listor {#creating-new-lists}
 
-Så här skapar du en ny lista (grupp):
-
 1. Klicka på på MCM-kontrollpanelen **Ny lista ...** eller in **Listor**, klicka **Nytt** ... Fönstret Skapa lista öppnas.
 
    ![screen_shot_2012-02-21at125147pm](assets/screen_shot_2012-02-21at125147pm.png)
@@ -325,8 +319,6 @@ Så här skapar du en ny lista (grupp):
    ![screen_shot_2012-02-21at125320pm](assets/screen_shot_2012-02-21at125320pm.png)
 
 ### Ändra befintliga listor {#modifying-existing-lists}
-
-Ändra en befintlig lista:
 
 1. Klicka på **Listor**.
 
@@ -384,7 +376,7 @@ Så här sammanfogar du befintliga listor:
 
 Du kan när som helst visa vilka leads som hör till en viss lista genom att bläddra bland eller söka efter medlemmar.
 
-Så här visar du leads som tillhör en lista:
+Så här visar du leads i listor:
 
 1. Klicka på **Listor**.
 

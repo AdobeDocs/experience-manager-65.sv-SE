@@ -10,7 +10,7 @@ topic-tags: forms-workspace
 discoiquuid: 6a32d240-c6a6-4937-a31f-7a5ec3c60b1f
 docset: aem65
 exl-id: 46de0101-9607-4429-84c3-7c1f34d2da27
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '901'
 ht-degree: 0%
@@ -23,14 +23,14 @@ ht-degree: 0%
 
 När du definierar en `AssignTask` anger du ett visst formulär (XDP- eller PDF-formulär). Ange även en uppsättning renderings- och Skicka-tjänster via en åtgärdsprofil.
 
-En XDP kan återges som ett PDF-formulär eller ett HTML-formulär. Bland de nya funktionerna finns möjligheten att:
+En XDP kan återges som ett PDF-formulär eller ett HTML-formulär. De nya funktionerna innefattar möjligheten att
 
 * Återge och skicka ett XDP-formulär som HTML
 * Rendera och skicka ett XDP-formulär som PDF på datorn och som HTML på mobila enheter (till exempel en iPad)
 
 ### Ny HTML Forms-tjänst {#new-html-forms-service}
 
-Den nya tjänsten HTML Forms utnyttjar den nya funktionen i Forms för att stödja återgivning av XDP-formulär som HTML. Den nya tjänsten HTML Forms har följande metoder:
+Den nya tjänsten HTML Forms använder den nya funktionen i Forms för att ge stöd för återgivning av XDP-formulär som HTML. Den nya tjänsten HTML Forms har följande metoder:
 
 ```java
 /*
@@ -57,7 +57,7 @@ public Map<String, Object> renderHTMLForm (TaskContext taskContext, String profi
 
 Mer information om profiler för mobilformulär finns på [Skapa en anpassad profil](/help/forms/using/custom-profile.md).
 
-## Återgivning och skickning av nya formulär i HTML {#new-html-form-render-amp-submit-processes}
+## Återgivning och inskickning av nya formulär i HTML {#new-html-form-render-amp-submit-processes}
 
 För varje AssignTask-åtgärd anger du en renderings- och en Submit-process med formuläret. Dessa processer anropas av TaskManager `renderForm`och `submitForm`API:er som tillåter anpassad hantering. Semantics of these processes for New HTML Form:
 
@@ -116,7 +116,7 @@ Webbläsare drar gradvis tillbaka stödet för NPAPI-baserade plugin-program, in
 
 1. Markera de program som du vill ändra återgivningen av mobilformulär för och klicka på **OK**.
 1. Öppna den process som du vill ändra återgivningen för.
-1. Öppna målstartpunkten/målaktiviteten, gå till avsnittet Presentation &amp; Data och klicka på **Hantera åtgärdsprofiler**.
+1. Öppna målstartpunkten/målaktiviteten, navigera till avsnittet Presentation &amp; Data och klicka på **Hantera åtgärdsprofiler**.
 
    Dialogrutan Hantera åtgärdsprofiler visas.
 1. Ändra standardåtergivningsprofilskonfigurationer från PDF till HTML och klicka på **OK**.
@@ -139,7 +139,7 @@ Några vanliga frågor om åtgärdsprofiler är följande:
 * Formuläret Återge nytt HTML (nytt)
 * Standardåtergivningsformulär (nytt)
 
-Och likvärdiga sändningsprocesser.
+Och likvärdiga inskickningsprocesser.
 
 ![gen_question_b_20](assets/gen_question_b_20.png) **Vilka åtgärdsprofiler kommer att vara tillgängliga direkt?**
 
@@ -159,7 +159,7 @@ Användaren måste markera alternativknappen HTML för standardprofilen.
 
 Ja, eftersom de tidigare återgivnings- och skicketjänsterna som är kopplade till standardåtgärdsprofilen var olika, behandlas dessa som en anpassning av befintliga formulär. Vid klickning **Återställ standardvärden**, ställs standardtjänsterna för återgivning och sändning in i stället.
 
-Om du har ändrat de befintliga Rendera- eller Submit PDF Form-tjänsterna eller skapat anpassade tjänster (till exempel custom1), och nu vill använda samma funktioner för HTML-rendering. Du måste replikera den nya renderings- eller skicka-tjänsten (till exempel custom2) och tillämpa liknande anpassningar på dessa. Nu kan du ändra åtgärdsprofilen för XDP-filen så att den börjar använda anpassade2-tjänster i stället för custom1 för rendering eller sändning.
+Om du har ändrat de befintliga renderings- eller Skicka formulär-tjänsterna i PDF eller skapat anpassade tjänster (till exempel custom1) och nu vill använda samma funktioner för HTML-rendering. Du måste replikera den nya renderings- eller skicka-tjänsten (till exempel custom2) och tillämpa liknande anpassningar på dessa. Nu kan du ändra åtgärdsprofilen för XDP-filen så att den börjar använda anpassade2-tjänster i stället för custom1 för rendering eller sändning.
 
 Vad behöver processdesignern göra för att formuläret ska kunna återges i HTML på en enhet och i PDF på en dator?
 Vad behöver processdesignern göra för att formuläret ska kunna återges i HTML på en enhet och i PDF på en dator?

@@ -7,9 +7,9 @@ content-type: reference
 topic-tags: site-features
 docset: aem65
 exl-id: 58e61302-cfb4-4a3d-98d4-3c92baa2ad42
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1429'
+source-wordcount: '1427'
 ht-degree: 0%
 
 ---
@@ -58,7 +58,7 @@ Skaffets brödtext är formen. När en användare vill skapa en sida med hjälp 
 
 ### Skapa ett ställningar {#creating-a-scaffold}
 
-Om du vill skapa ett nytt ställningar går du till **verktyg** konsol, sedan **Standardsidans placering** och skapa en sida. Det finns en malltyp för en sida, *Ställningsmall.*
+Om du vill skapa en schablon går du till **verktyg** konsol, sedan **Standardsidans placering** och skapa en sida. Det finns en malltyp för en sida, *Ställningsmall.*
 
 Gå till **Sidegenskaper** på den nya sidan och ange *Titeltext*, *Beskrivning*, *Målmall* och *Målsökväg*, enligt beskrivningen ovan.
 

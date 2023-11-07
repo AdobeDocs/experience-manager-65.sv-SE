@@ -10,7 +10,7 @@ content-type: reference
 topic-tags: site-features
 discoiquuid: 60f980fd-049e-43c1-8b5d-60a8279b357a
 exl-id: 187f3cde-a0db-4c02-9e8b-08272987a67d
-source-git-commit: 245d501d4124d9aaa3f2b12bdb06a5bdd1661e8c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '530'
 ht-degree: 1%
@@ -48,7 +48,7 @@ Rapporterna visar data för en tidsperiod som du bestämmer. När du justerar ra
 >
 >Tidslinjen för kontrollpanelen för Content Insight finns i `GMT`.
 
-Du kan också ange hur detaljerad den rapporterade informationen är, t.ex. kan du se data varje dag, vecka, månad eller år.
+Du kan också ange hur detaljerad den rapporterade informationen är. Du kan till exempel se data varje dag, vecka, månad eller år.
 
 Se [Ändra rapporteringsperioden](/help/sites-authoring/ci-analyze.md#changing-the-reporting-period).
 
@@ -79,7 +79,7 @@ Rapporten Page Average Engaged innehåller följande funktioner för utvärderin
 
 ## Källrapporten {#the-sources-report}
 
-Källrapporten visar hur användare navigerade till sidan, t.ex. från sökmotorresultat eller med den kända URL:en.
+Källrapporten visar hur användare navigerade till sidan, till exempel från sökmotorresultat eller med den kända URL:en.
 
 ![chlimage_1-314](assets/chlimage_1-314.png)
 

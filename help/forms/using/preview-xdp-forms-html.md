@@ -10,9 +10,9 @@ discoiquuid: 34e6d1bc-4eca-42dc-9ae5-9a2107fbefce
 docset: aem65
 feature: Mobile Forms
 exl-id: 548f302b-57f0-4bdc-8a99-1a4967caa32f
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '822'
+source-wordcount: '818'
 ht-degree: 0%
 
 ---
@@ -41,6 +41,7 @@ Gör så här om du vill att Designer ska kunna generera en förhandsgranskning 
 
       * -/content/xfaforms
       * -/etc/clientlibs
+
    * AEM Forms on OSGi
 
       * -/content/xfaforms
@@ -55,7 +56,7 @@ Gör så här om du vill att Designer ska kunna generera en förhandsgranskning 
 
 ### Inaktivera skyddat läge {#disable-protected-mode}
 
-The [skyddat läge](../../forms/using/get-xdp-pdf-documents-aem.md) är aktiverat som standard. Låt det vara aktiverat för produktionsmiljöerna. Du kan inaktivera det för en utvecklingsmiljö och förhandsgranska HTML5 Forms i Designer. Gör så här för att inaktivera den:
+The [skyddat läge](../../forms/using/get-xdp-pdf-documents-aem.md) är aktiverat som standard. Låt det vara aktiverat för produktionsmiljöerna. Du kan inaktivera det för en utvecklingsmiljö och förhandsgranska HTML5 Forms i Designer. Utför följande steg för att inaktivera den:
 
 1. Logga in på AEM webbkonsol som administratör.
 
@@ -67,7 +68,7 @@ The [skyddat läge](../../forms/using/get-xdp-pdf-documents-aem.md) är aktivera
 
 ### Ange information om AEM Forms-server {#provide-details-of-aem-forms-server}
 
-1. I Designer går du till **verktyg** > **Alternativ**.
+1. Gå till Designer **verktyg** > **Alternativ**.
 1. I fönstret Alternativ väljer du **Serveralternativ** sida, ange följande information och klicka på **OK**.
 
    * **Server-URL**: AEM Forms server-URL.
@@ -78,6 +79,7 @@ The [skyddat läge](../../forms/using/get-xdp-pdf-documents-aem.md) är aktivera
       * `/content/xfaforms/profiles/default.html` (AEM Forms on OSGi)
 
       * `/lc/content/xfaforms/profiles/default.html` (AEM Forms on JEE)
+
    * **Forms Manager Context:** Den kontextsökväg där användargränssnittet för Forms Manager distribueras. Standardvärdena är:
 
       * `/aem/forms` (AEM Forms on OSGi)
@@ -100,7 +102,8 @@ The [skyddat läge](../../forms/using/get-xdp-pdf-documents-aem.md) är aktivera
    >
    >    * Om fliken Förhandsgranska HTML är stängd trycker du på F4 för att öppna fliken Förhandsgranska HTML. Du kan också välja Förhandsgranska HTML på Visa-menyn för att öppna fliken Förhandsgranska HTML.
    >    * Förhandsgranskningen i HTML stöder inte PDF-dokument, HTML är bara för XDP-dokument.
-
+   >
+   >
 
    >[!CAUTION]
    >
@@ -120,6 +123,6 @@ Om du testar formuläret med en exempeldatakälla ser du till att data och fält
 
 1. Klicka **OK**. Nästa gång du förhandsgranskar formuläret i **Förhandsgranska HTML** -fliken visas datavärdena från XML-exempelfilen i respektive objekt.
 
-## Förhandsgranska formulär som finns i en databas {#html-preview-of-forms-in-forms-manager}
+## Förhandsgranska formulär i en databas {#html-preview-of-forms-in-forms-manager}
 
-I AEM Forms kan du förhandsgranska formulär och dokument i en databas. Med Förhandsgranska vet du exakt hur formulären ser ut och fungerar som de kommer att användas av slutanvändarna.
+I AEM Forms kan du förhandsgranska formulär och dokument i en databas. Med Förhandsgranska kan du veta exakt hur formulären ser ut och fungerar för slutanvändarna.

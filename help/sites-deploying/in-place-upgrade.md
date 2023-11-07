@@ -4,9 +4,9 @@ description: Lär dig hur du uppgraderar till AEM 6.5 på plats.
 topic-tags: upgrading
 feature: Upgrading
 exl-id: aef6ef00-993c-4252-b0ad-ddc4917beaf7
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1242'
+source-wordcount: '1238'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 Innan du utför uppgraderingen måste du utföra flera steg. Se [Uppgradera kod och anpassningar](/help/sites-deploying/upgrading-code-and-customizations.md) och [Underhållsaktiviteter före uppgraderingen](/help/sites-deploying/pre-upgrade-maintenance-tasks.md) för mer information. Kontrollera dessutom att datorn uppfyller kraven för den nya versionen av AEM. Se hur Mönsteravkännare kan hjälpa dig att beräkna uppgraderingens komplexitet och även se avsnittet Upgrade Scope och Requirements i [Planera din uppgradering](/help/sites-deploying/upgrade-planning.md) för mer information.
 
-<!--Finally, note that the downtime during the upgrade can be significally reduced by indexing the repository **before** performing the upgrade. For more information, see [Using Offline Reindexing To Reduce Downtime During an Upgrade](/help/sites-deploying/upgrade-offline-reindexing.md)-->
+<!--Finally, the downtime during the upgrade can be significally reduced by indexing the repository **before** performing the upgrade. For more information, see [Using Offline Reindexing To Reduce Downtime During an Upgrade](/help/sites-deploying/upgrade-offline-reindexing.md)-->
 
 ## Krav för migrering {#migration-prerequisites}
 
@@ -161,11 +161,11 @@ Plats `/path/to/datastore` representerar sökvägen till File DataStore.
 
 ### Kontrollera rätt startkommando för uppgradering {#determining-the-correct-upgrade-start-command}
 
-För att kunna genomföra uppgraderingen är det viktigt att du börjar AEM använda filen jar för att ta fram instansen. För uppgradering till 6.5, se även andra alternativ för innehållsomstrukturering och migrering i [Lazy Content Migration](/help/sites-deploying/lazy-content-migration.md) som du kan välja med uppgraderingskommandot.
+För att kunna genomföra uppgraderingen är det viktigt att du börjar AEM använda filen jar för att ta fram instansen. För uppgradering till 6.5, se andra alternativ för innehållsomstrukturering och migrering i [Lazy Content Migration](/help/sites-deploying/lazy-content-migration.md) som du kan välja med uppgraderingskommandot.
 
 >[!IMPORTANT]
 >
->Om du kör Oracle Java 11 (eller i allmänhet versioner av Java nyare än 8) måste ytterligare växlar läggas till på kommandoraden när du startar AEM. Mer information finns i [Java 11 - överväganden](/help/sites-deploying/custom-standalone-install.md#java-considerations).
+>Om du kör Oracle Java 11 (eller vanligtvis versioner av Java nyare än 8) måste ytterligare växlar läggas till på kommandoraden när du startar AEM. Mer information finns i [Java 11 - överväganden](/help/sites-deploying/custom-standalone-install.md#java-considerations).
 
 Observera att AEM från startskriptet inte startar uppgraderingen. De flesta kunder börjar AEM med startskriptet och har anpassat det här startskriptet för att inkludera växlar för miljökonfigurationer som minnesinställningar, säkerhetscertifikat osv. Adobe rekommenderar därför att du följer den här proceduren för att fastställa rätt uppgraderingskommando:
 

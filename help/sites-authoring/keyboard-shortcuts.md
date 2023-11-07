@@ -1,6 +1,6 @@
 ---
-title: Kortkommandon för konsoler i AEM
-description: Spara tid när du redigerar med dessa kortkommandon.
+title: Kortkommandon för AEM
+description: Spara tid när du arbetar med kortkommandon.
 uuid: 3b90570f-e187-4f09-9ccf-838e5657de2f
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -8,9 +8,9 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: f5ab3f61-aa5a-49ae-a976-6ab7f0d11ea6
 exl-id: c58981a0-cdde-4593-b633-7f6898f8f5f5
-source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '380'
+source-wordcount: '382'
 ht-degree: 1%
 
 ---
@@ -48,7 +48,7 @@ Följande genvägar är tillgängliga för konsolerna Webbplatser, Handel, Skär
 |  | `Backspace` | Ta bort |
 | Egenskapssidor | `Ctrl+s` | Spara |
 
-Tangentkombinationerna visas i Windows [modifieringstangenter](/help/sites-authoring/keyboard-shortcuts.md#os-specific-modifier-keys).
+Tangentkombinationerna listas med Windows [modifieringstangenter](/help/sites-authoring/keyboard-shortcuts.md#os-specific-modifier-keys).
 
 Du kan även använda olika kortkommandon för skrivbordsanvändare när du använder [sidredigerare](/help/sites-authoring/page-authoring-keyboard-shortcuts.md) för att skapa sidor.
 
@@ -81,7 +81,7 @@ Dessutom är kortkommandon samma för alla språk och tangentbordslayouter.
 
 ## Inaktivera kortkommandon {#deactivating-keyboard-shortcuts}
 
-AEM innehåller kortkommandon för några av de vanligaste funktionerna (redigering, egenskaper, kopiera/klistra in, med olika sidospetsmenyer osv.).
+AEM innehåller kortkommandon för några av de vanligaste funktionerna (redigering, egenskaper, kopiera/klistra in, med olika sidospetsmenyer och så vidare).
 
 För användare som inte använder kortkommandon eller har vissa tillgänglighetskrav kan alla kortkommandon inaktiveras.
 

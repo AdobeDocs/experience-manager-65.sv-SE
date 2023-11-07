@@ -2,9 +2,9 @@
 title: Kom igång med AEM headless translation
 description: Lär dig hur du ordnar ditt headless-innehåll och hur AEM översättningsverktyg fungerar.
 exl-id: 764f78a7-1d3d-4406-85b1-b80dffae2350
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1493'
+source-wordcount: '1490'
 ht-degree: 0%
 
 ---
@@ -32,7 +32,7 @@ Det här dokumentet hjälper dig att förstå hur du kommer igång med att över
 
 ## Krav och krav {#requirements-prerequisites}
 
-Det finns ett antal krav innan du börjar översätta ditt AEM innehåll.
+Det finns flera krav innan du börjar översätta ditt AEM innehåll utan rubrik.
 
 ### Kunskap {#knowledge}
 
@@ -44,7 +44,7 @@ Det finns ett antal krav innan du börjar översätta ditt AEM innehåll.
 
 >[!TIP]
 >
->Om du inte är van vid att använda ett stort CMS-system som AEM kan du titta i [Grundläggande hantering](/help/sites-authoring/basic-handling.md) dokumentation innan du fortsätter. Dokumentationen för grundläggande hantering är inte en del av resan, så gå tillbaka till den här sidan när du är klar.
+>Om du inte är van vid att använda ett stort CMS-system som AEM kan du titta i [Grundläggande hantering](/help/sites-authoring/basic-handling.md) dokumentation innan du fortsätter. Dokumentationen för grundläggande hantering är inte en del av resan, så gå tillbaka till den här sidan när den är klar.
 
 ### verktyg {#tools}
 

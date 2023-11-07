@@ -9,9 +9,9 @@ breadcrumb-title: Användarhandbok om Forms
 user-guide-description: Skapa, hantera, publicera och uppdatera digitala formulär.
 role: User
 feature: Forms Service
-source-git-commit: 28cc10b79d2ac8cf12ddfd0bf7d1a8e013fe6238
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '3912'
+source-wordcount: '3911'
 ht-degree: 0%
 
 ---
@@ -228,7 +228,7 @@ ht-degree: 0%
    + [Introduktion till Anpassa AEM](using/introduction-customizing-html-workspace.md)
    + [Allmänna steg för anpassning av AEM Forms arbetsyta](using/generic-steps-html-workspace-customization.md)
    + [Ändra språkområdet för användargränssnittet i AEM Forms arbetsyta](using/changing-locale-user-interface.md)
-   + [Skapa en ny inloggningsskärm](using/creating-new-login-screen.md)
+   + [Skapa en inloggningsskärm](using/creating-new-login-screen.md)
    + [Anpassa feldialogrutor](using/customizing-error-dialogs.md)
    + [Anpassa flikar för en uppgift](using/customizing-tabs-task.md)
    + [Anpassa sidan med uppgiftsinformation](using/customizing-task-details-page.md)

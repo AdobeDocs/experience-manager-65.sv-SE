@@ -2,9 +2,9 @@
 title: Publicera innehållssidor
 description: Lär dig publicera innehållssidor i Adobe Experience Manager 6.5.
 exl-id: 61144bbe-6710-4cae-a63e-e708936ff360
-source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1664'
+source-wordcount: '1660'
 ht-degree: 6%
 
 ---
@@ -60,7 +60,7 @@ Om du redigerar en sida kan den publiceras direkt från redigeraren.
    * Sidan publiceras direkt om det inte finns några referenser att publicera.
    * Om sidan innehåller referenser som behöver publiceras visas dessa i **Publicera** guide, där du kan
 
-      * Ange vilket av resurserna/taggarna/etc. du vill publicera tillsammans med sidan och sedan använda **Publicera** för att slutföra processen.
+      * Ange vilket av resurserna/taggarna du vill publicera tillsammans med sidan och använd sedan **Publicera** för att slutföra processen.
 
       * Använd **Avbryt** om du vill avbryta åtgärden.
 
@@ -111,7 +111,7 @@ Så här publicerar du en sida med Snabbpublicering:
 
 #### Hantera publikation {#manage-publication}
 
-**Hantera publikation** erbjuder fler alternativ än Snabbpublicering, så att underordnade sidor kan inkluderas, referenser anpassas och tillämpliga arbetsflöden startas samt möjlighet att publicera vid ett senare datum.
+**Hantera publikation** har fler alternativ än Snabbpublicering, vilket gör det möjligt att inkludera underordnade sidor, anpassa referenserna och starta tillämpliga arbetsflöden och erbjuda möjlighet att publicera vid ett senare tillfälle.
 
 Så här publicerar eller avpublicerar du en sida med Hantera publikation:
 
@@ -182,7 +182,7 @@ Så här publicerar eller avpublicerar du en sida med Hantera publikation:
 
    >[!NOTE]
    >
-   >The **Arbetsflöden** visas baserat på vilka rättigheter din användare har eller inte har. Se [föregående anteckning på denna sida](/help/sites-authoring/publishing-pages.md#main-pars-note-0-ejsjqg-refd) om publiceringsrättigheter samt [Hantera åtkomst till arbetsflöden](/help/sites-administering/workflows-managing.md) och [Använda arbetsflöden på sidor](/help/sites-authoring/workflows-applying.md#main-pars-text-5-bvhbkh-refd) för mer information.
+   >The **Arbetsflöden** visas baserat på vilka rättigheter din användare har eller inte har. Se [föregående anteckning på denna sida](/help/sites-authoring/publishing-pages.md#main-pars-note-0-ejsjqg-refd) gällande publiceringsrättigheter och [Hantera åtkomst till arbetsflöden](/help/sites-administering/workflows-managing.md) och [Använda arbetsflöden på sidor](/help/sites-authoring/workflows-applying.md#main-pars-text-5-bvhbkh-refd) för mer information.
 
    Resurserna grupperas efter de arbetsflöden som utlöses och de olika alternativen:
 

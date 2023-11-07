@@ -2,9 +2,9 @@
 title: Hantera översättningsprojekt
 description: Lär dig hantera översättningsprojekt i Adobe Experience Manager.
 exl-id: 968bba02-98fe-4eaf-9937-ce5cfdf5b413
-source-git-commit: 9438868191961404e9e18cb0dd2e844985ac9db0
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '3588'
+source-wordcount: '3578'
 ht-degree: 1%
 
 ---
@@ -123,7 +123,7 @@ När du har skapat ett översättningsprojekt kan du använda rutan Resurser fö
 
 När du lägger till sidor i ett översättningsprojekt inkluderas sidorna i ett nytt översättningsjobb. Du kan också [lägga till sidor i ett befintligt jobb](#adding-pages-assets-to-a-translation-job).
 
-Precis som när du skapar ett nytt projekt läggs kopior av sidorna till i en programstart när det behövs för att undvika att befintliga språkkopior skrivs över. (Se [Skapa översättningsprojekt för befintliga språkkopior](#performing-initial-translations-and-updating-existing-translations).)
+När du lägger till sidor i ett projekt läggs kopior av sidorna till i en programstart när det behövs för att undvika att befintliga språkkopior skrivs över. (Se [Skapa översättningsprojekt för befintliga språkkopior](#performing-initial-translations-and-updating-existing-translations).)
 
 1. Använd webbplatskonsolen för att välja sidan som du lägger till i översättningsprojektet.
 
@@ -234,7 +234,7 @@ När ett projekt skapas med hjälp av en sidas resurspanel konfigureras dessa eg
 
 ## Övervaka status för ett översättningsjobb {#monitoring-the-status-of-a-translation-job}
 
-Översättningsjobbpanelen i ett översättningsprojekt anger status för ett översättningsjobb samt antalet sidor och resurser i jobbet.
+Översättningsjobbpanelen i ett översättningsprojekt anger status för ett översättningsjobb och antalet sidor och resurser i jobbet.
 
 ![chlimage_1-259](assets/chlimage_1-259.png)
 
@@ -412,7 +412,7 @@ Fyll i din språkkopia så att den innehåller innehåll från huvudspråket som
 
 ## Flytta eller byta namn på en källsida {#move-source}
 
-Om en redan översatt källsida måste [ändrat namn eller flyttat](/help/sites-authoring/managing-pages.md#moving-or-renaming-a-page)om du översätter sidan igen efter flytten skapas en ny språkkopia baserad på det nya sidnamnet/den nya platsen. Den gamla språkkopian som baseras på föregående namn/plats kommer fortfarande att finnas där. Du kan förhindra detta genom att använda funktionen för att kopiera uppdateringsspråk efter flytten:
+Om en redan översatt källsida måste [ändrat namn eller flyttat](/help/sites-authoring/managing-pages.md#moving-or-renaming-a-page)när du översätter sidan igen efter flytten skapas en språkkopia baserad på det nya sidnamnet/den nya sidplatsen. Den gamla språkkopian som baseras på föregående namn/plats finns fortfarande kvar. Du kan förhindra detta genom att använda funktionen för att kopiera uppdateringsspråk efter flytten:
 
 1. Flytta en sida som har en språkkopia.
 1. Välj språkkopieringsroten.
@@ -423,9 +423,9 @@ Om en redan översatt källsida måste [ändrat namn eller flyttat](/help/sites-
 1. Klicka **Uppdatera**. A [Starta](/help/sites-authoring/launches-promoting.md) skapas.
 1. Navigera till den önskade språkroten och markera den.
 1. Använda **Referenser** panel, markera **Startar**.
-1. Klicka på Launch som just skapades och klicka på **Befordra lansering**.
+1. Klicka på Launch som skapades och klicka på **Befordra lansering**.
 
-Nu har källsidan flyttats samt tillhörande språkkopia.
+Nu har källsidan flyttats och tillhörande språkkopia.
 
 ## Skapa ett översättningsprojekt med projektkonsolen {#creating-a-translation-project-using-the-projects-console}
 
@@ -458,7 +458,7 @@ Du kan hämta innehållet i ett översättningsjobb, till exempel för att skick
 
 ## Importera ett översättningsjobb {#importing-a-translation-job}
 
-Du kan importera översatt innehåll till AEM, till exempel när översättningsleverantören skickar det till dig eftersom de inte är integrerade med AEM via en koppling.
+Du kan importera översatt innehåll till AEM när översättningsleverantören skickar det till dig eftersom det inte är integrerat med AEM via en koppling.
 
 1. Klicka på eller tryck på Importera i listrutan i rutan Översättningsjobb.
 1. Använd webbläsarens dialogruta för att markera filen som ska importeras.

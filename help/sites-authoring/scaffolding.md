@@ -8,9 +8,9 @@ content-type: reference
 topic-tags: site-features
 discoiquuid: f5025f64-d3ce-43e8-9666-5c7c162536c7
 exl-id: e3488c9d-035f-4165-ad32-21103ec7e581
-source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '153'
+source-wordcount: '151'
 ht-degree: 0%
 
 ---
@@ -23,4 +23,4 @@ Med hjälp av ställningar kan du skapa ett formulär (en struktur) med fält so
 
 >[!NOTE]
 >
->Även om det finns en skolledning [läge](/help/sites-authoring/author-environment-tools.md#page-modes) som finns att tillgå kan man underhålla och skapa ställningar samt skapa nya sidor från ställningar i det klassiska användargränssnittet. Se [Ställning](/help/sites-classic-ui-authoring/classic-feature-scaffolding.md) i den klassiska användargränssnittsdokumentationen om du vill ha mer information.
+>Även om det finns en skolledning [läge](/help/sites-authoring/author-environment-tools.md#page-modes) som finns i det klassiska användargränssnittet är att underhålla och skapa ställningar och nya sidor från ställningar. Se [Ställning](/help/sites-classic-ui-authoring/classic-feature-scaffolding.md) i den klassiska användargränssnittsdokumentationen om du vill ha mer information.

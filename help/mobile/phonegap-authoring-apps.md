@@ -8,7 +8,7 @@ products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: authoring-adobe-phonegap-enterprise
 discoiquuid: abfeea65-102d-4800-abeb-304d61afcc13
 exl-id: 073daff7-0c1d-4715-bfd4-3e2336e4cb88
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '1013'
 ht-degree: 0%
@@ -71,7 +71,7 @@ Med innehållspaketet kan AEM App Author hantera sidinnehåll i AEM och låta ut
 
 Innehållspaket skapar en ZIP-fil, som betraktas som ett innehållspaket, för varje uppdatering. Dessa paket innehåller HTML-resurser och HTML-sidor som genereras när programmet återges och är tillräckligt intelligenta för att bara paketera de filer som har ändrats sedan den senaste uppdateringen.
 
-Panelerna Hantera innehållspaket **Typ** kolumnen visar antingen App (App) för att beteckna Application Shell-innehåll, till exempel ramverk eller infrastruktur för appen som hanteras av en utvecklare eller Content (Content) som representerar sidinnehåll som hanteras av innehållsförfattaren.
+Panelerna Hantera innehållspaket **Typ** kolumnen visar antingen &quot;App&quot; för att beteckna Application Shell-innehåll, till exempel ramverket eller infrastrukturen för appen som hanteras av en utvecklare eller &quot;Content&quot; som representerar sidinnehåll som hanteras av innehållsförfattaren.
 
 Innehåll kan representeras som ett språk eller som en viss del av programmet där flera innehållsversionspaket används av programmet. Valet av hur ni paketerar ert innehåll är flexibelt och helt i linje med hur ni vill hantera innehåll för er applikation.
 

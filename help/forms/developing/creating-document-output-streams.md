@@ -7,9 +7,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 role: Developer
 exl-id: a521bfac-f417-4002-9c5c-8d7794d3eec7
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '19006'
+source-wordcount: '18965'
 ht-degree: 0%
 
 ---
@@ -42,7 +42,7 @@ I följande avsnitt visas hur du skickar en formulärdesign till utdatatjänsten
 
 I följande avsnitt visas hur du skickar en formulärdesign i en `com.adobe.idp.Document` instans:
 
-* [Skicka dokument som finns i innehållstjänster (borttagna) till utdatatjänsten](creating-document-output-streams.md#passing-documents-located-in-content-services-deprecated-to-the-output-service)
+* [Skicka dokument i innehållstjänster (borttaget) till utdatatjänsten](creating-document-output-streams.md#passing-documents-located-in-content-services-deprecated-to-the-output-service)
 * [Skapa PDF-dokument med fragment](creating-document-output-streams.md#creating-pdf-documents-using-fragments)
 
 När du bestämmer vilken teknik du ska använda är det viktigt att du hämtar formulärdesignen från en annan AEM Forms-tjänst och sedan skickar den i en `com.adobe.idp.Document` -instans. Båda *Skicka dokument till Output Service* och *Skapa PDF-dokument med fragment* visas hur du hämtar en formulärdesign från en annan AEM Forms-tjänst. Det första avsnittet hämtar formulärdesignen från innehållstjänster (borttagen). Det andra avsnittet hämtar formulärdesignen från Assembler-tjänsten.
@@ -57,7 +57,7 @@ Du kan utföra följande uppgifter med hjälp av utdatatjänsten:
 
 * [Skapa PDF-dokument](creating-document-output-streams.md#creating-pdf-documents)
 * [Skapa PDF/A-dokument](creating-document-output-streams.md#creating-pdf-a-documents)
-* [Skicka dokument som finns i innehållstjänster (borttagna) till utdatatjänsten](creating-document-output-streams.md#passing-documents-located-in-content-services-deprecated-to-the-output-service)
+* [Skicka dokument i innehållstjänster (borttaget) till utdatatjänsten](creating-document-output-streams.md#passing-documents-located-in-content-services-deprecated-to-the-output-service)
 * [Skapa PDF-dokument med fragment](creating-document-output-streams.md#creating-pdf-documents-using-fragments)
 * [Skriva ut till filer](creating-document-output-streams.md#printing-to-files)
 * [Skicka utskriftsströmmar till skrivare](creating-document-output-streams.md#sending-print-streams-to-printers)
@@ -188,7 +188,7 @@ Om XDP-filen innehåller bilder (eller andra resurser som fragment) placerar du 
 
 >[!NOTE]
 >
->Om du vill se en fullständig snabbstart som skapar ett PDF-dokument genom att referera till en XDP-fil som finns i ett Forms-program går du till [Snabbstart (EJB-läge): Skapa ett PDF-dokument baserat på en program-XDP-fil med Java API](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-creating-a-pdf-document-based-on-an-application-xdp-file-using-the-java-api).
+>Om du vill se en fullständig snabbstart som skapar ett PDF-dokument genom att referera till en XDP-fil i ett Forms-program går du till [Snabbstart (EJB-läge): Skapa ett PDF-dokument baserat på en program-XDP-fil med Java API](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-creating-a-pdf-document-based-on-an-application-xdp-file-using-the-java-api).
 
 **Hämta resultatet av åtgärden**
 
@@ -265,7 +265,7 @@ Skapa ett PDF-dokument med hjälp av utdata-API (Java):
 
    >[!NOTE]
    >
-   >Du kan också skapa ett PDF-dokument genom att anropa `OutputClient` objektets `generatePDFOutput2` -metod. (Se [Skicka dokument som finns i innehållstjänster (borttagna) till utdatatjänsten ](creating-document-output-streams.md#passing-documents-located-in-content-services-deprecated-to-the-output-service)*.)*
+   >Du kan också skapa ett PDF-dokument genom att anropa `OutputClient` objektets `generatePDFOutput2` -metod. (Se [Skicka dokument i innehållstjänster (borttaget) till utdatatjänsten ](creating-document-output-streams.md#passing-documents-located-in-content-services-deprecated-to-the-output-service)*.)*
 
 1. Hämta resultatet av åtgärden.
 
@@ -358,7 +358,7 @@ Skapa ett PDF-dokument med hjälp av Output API (webbtjänsten):
 
    >[!NOTE]
    >
-   >Du kan också skapa ett PDF-dokument genom att anropa `OutputClient` objektets `generatePDFOutput2` -metod. (Se [Skicka dokument som finns i innehållstjänster (borttagna) till utdatatjänsten ](creating-document-output-streams.md#passing-documents-located-in-content-services-deprecated-to-the-output-service)*.)*
+   >Du kan också skapa ett PDF-dokument genom att anropa `OutputClient` objektets `generatePDFOutput2` -metod. (Se [Skicka dokument i innehållstjänster (borttaget) till utdatatjänsten ](creating-document-output-streams.md#passing-documents-located-in-content-services-deprecated-to-the-output-service)*.)*
 
 1. Hämta resultatet av åtgärden.
 
@@ -385,7 +385,7 @@ Du kan använda utdatatjänsten för att skapa ett PDF/A-dokument. Eftersom PDF/
 
 Specifikationen PDF/A-1 består av två överensstämmelsenivåer, nämligen a och b. Den största skillnaden mellan de två är stödet för den logiska strukturen (hjälpmedel), som inte krävs för överensstämmelsenivå b. Oavsett överensstämmelsenivå anger PDF/A-1 att alla teckensnitt är inbäddade i det genererade PDF/A-dokumentet.
 
-Även om PDF/A är standarden för arkivering av dokument från PDF är det inte obligatoriskt att använda PDF/A för arkivering om ett standarddokument från PDF uppfyller företagets behov. Syftet med PDF/A-standarden är att upprätta en PDF-fil som kan lagras under lång tid och som uppfyller kraven för dokumentarkivering. En URL kan till exempel inte bäddas in i PDF/A eftersom URL:en kan bli ogiltig över tiden.
+Även om PDF/A är standarden för arkivering av dokument från PDF är det inte obligatoriskt att använda PDF/A för arkivering om ett standarddokument från PDF uppfyller företagets behov. Syftet med PDF/A-standarden är att upprätta en PDF-fil som kan lagras under lång tid och som uppfyller kraven på dokumentarkivering. En URL kan till exempel inte bäddas in i PDF/A eftersom URL:en kan bli ogiltig över tiden.
 
 Organisationen måste bedöma sina egna behov, hur lång tid du tänker behålla dokumentet, ta hänsyn till filstorlek och fastställa en egen arkiveringsstrategi. Med tjänsten DocConverter kan du programmässigt avgöra om ett PDF-dokument är PDF/A-kompatibelt. (Se [Programmerat fastställa PDF/A-överensstämmelse](/help/forms/developing/pdf-a-documents.md#programmatically-determining-pdf-a-compliancy).)
 
@@ -523,7 +523,7 @@ Skapa ett PDF/A-dokument med hjälp av utdata-API (Java):
 
    >[!NOTE]
    >
-   >Du kan också skapa ett PDF/A-dokument genom att anropa `OutputClient` objektets `generatePDFOutput`2-metod. (Se [Skicka dokument som finns i innehållstjänster (borttagna) till utdatatjänsten](creating-document-output-streams.md#passing-documents-located-in-content-services-deprecated-to-the-output-service).)
+   >Du kan också skapa ett PDF/A-dokument genom att anropa `OutputClient` objektets `generatePDFOutput`2-metod. (Se [Skicka dokument i innehållstjänster (borttaget) till utdatatjänsten](creating-document-output-streams.md#passing-documents-located-in-content-services-deprecated-to-the-output-service).)
 
 1. Hämta resultatet av åtgärden.
 
@@ -609,7 +609,7 @@ Skapa ett PDF/A-dokument med hjälp av Output API (webbtjänsten):
 
    >[!NOTE]
    >
-   >Du kan också skapa ett PDF/A-dokument genom att anropa `OutputClient` objektets `generatePDFOutput`2-metod. (Se [Skicka dokument som finns i innehållstjänster (borttagna) till utdatatjänsten](creating-document-output-streams.md#passing-documents-located-in-content-services-deprecated-to-the-output-service).)
+   >Du kan också skapa ett PDF/A-dokument genom att anropa `OutputClient` objektets `generatePDFOutput`2-metod. (Se [Skicka dokument i innehållstjänster (borttaget) till utdatatjänsten](creating-document-output-streams.md#passing-documents-located-in-content-services-deprecated-to-the-output-service).)
 
 1. Hämta resultatet av åtgärden.
 
@@ -626,9 +626,9 @@ Skapa ett PDF/A-dokument med hjälp av Output API (webbtjänsten):
 
 [Anropa AEM Forms med SwaRef](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
 
-## Skicka dokument som finns i innehållstjänster (borttagna) till utdatatjänsten {#passing-documents-located-in-content-services-deprecated-to-the-output-service}
+## Skicka dokument i innehållstjänster (borttaget) till utdatatjänsten {#passing-documents-located-in-content-services-deprecated-to-the-output-service}
 
-Output-tjänsten återger ett icke-interaktivt PDF-formulär som är baserat på en formulärdesign som vanligtvis sparas som en XDP-fil och skapas i Designer. Du kan skicka en `com.adobe.idp.Document` objekt som innehåller formulärdesignen för Output-tjänsten. Utdatatjänsten återger sedan formulärdesignen som finns i `com.adobe.idp.Document` -objekt.
+Output-tjänsten återger ett icke-interaktivt PDF-formulär som är baserat på en formulärdesign som vanligtvis sparas som en XDP-fil och skapas i Designer. Du kan skicka en `com.adobe.idp.Document` objekt som innehåller formulärdesignen för Output-tjänsten. Utdatatjänsten återger sedan formulärdesignen i `com.adobe.idp.Document` -objekt.
 
 En fördel med att skicka en `com.adobe.idp.Document` -objektet till Output-tjänsten är att andra AEM Forms-serviceåtgärder returnerar ett `com.adobe.idp.Document` -instans. Du kan alltså få en `com.adobe.idp.Document` -instans från en annan tjänståtgärd och återge den. Anta till exempel att en XDP-fil lagras i en Content Services-nod (utgått) med namnet `/Company Home/Form Designs`, vilket visas på följande bild.
 
@@ -815,25 +815,25 @@ Skicka ett dokument som hämtats från innehållstjänster (borttaget) med hjäl
 
 [Anropa AEM Forms med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
 
-## Skicka dokument som finns i databasen till utdatatjänsten {#passing-documents-located-in-the-repository-to-the-output-service}
+## Skicka dokument i databasen till utdatatjänsten {#passing-documents-located-in-the-repository-to-the-output-service}
 
-Output-tjänsten återger ett icke-interaktivt PDF-formulär som är baserat på en formulärdesign som vanligtvis sparas som en XDP-fil och skapas i Designer. Du kan skicka en `com.adobe.idp.Document` objekt som innehåller formulärdesignen för Output-tjänsten. Utdatatjänsten återger sedan formulärdesignen som finns i `com.adobe.idp.Document` -objekt.
+Output-tjänsten återger ett icke-interaktivt PDF-formulär som är baserat på en formulärdesign som vanligtvis sparas som en XDP-fil och skapas i Designer. Du kan skicka en `com.adobe.idp.Document` objekt som innehåller formulärdesignen för Output-tjänsten. Utdatatjänsten återger sedan formulärdesignen i `com.adobe.idp.Document` -objekt.
 
 En fördel med att skicka en `com.adobe.idp.Document` -objektet till Output-tjänsten är att andra AEM Forms-serviceåtgärder returnerar ett `com.adobe.idp.Document` -instans. Du kan alltså få en `com.adobe.idp.Document` -instans från en annan tjänståtgärd och återge den. Anta till exempel att en XDP-fil lagras i AEM Forms-databasen, vilket visas i följande bild.
 
 ![pd_pd_formdatabas](assets/pd_pd_formrepository.png)
 
-The *FormsFolder* är en användardefinierad plats i AEM Forms-databasen (den här platsen är ett exempel och finns inte som standard). I det här exemplet finns en formulärdesign med namnet Loan.xdp i den här mappen. Förutom formulärdesignen kan andra formulärdata, t.ex. bilder, lagras på den här platsen. Sökvägen till en resurs i AEM Forms-databasen är:
+The *FormsFolder* är en användardefinierad plats i AEM Forms-databasen (den här platsen är ett exempel och finns inte som standard). I det här exemplet finns en formulärdesign med namnet Loan.xdp i den här mappen. Förutom formulärdesignen kan andra formulärdata, t.ex. bilder, lagras på den här platsen. Sökvägen till en resurs i AEM Forms-databasen:
 
 `Applications/Application-name/Application-version/Folder.../Filename`
 
 Du kan hämta Loan.xdp programmatiskt från AEM Forms-databasen och skicka det till Output-tjänsten i en `com.adobe.idp.Document` -objekt.
 
-Du kan skapa en PDF baserad på en XDP-fil som finns i databasen på något av två sätt. Du kan skicka XDP-platsen med referens eller så kan du hämta XDP-filen från databasen programmässigt och skicka den till utdatatjänsten i en XDP-fil.
+Du kan skapa en PDF baserad på en XDP-fil i databasen på något av två sätt. Du kan skicka XDP-platsen med referens eller så kan du hämta XDP-filen från databasen programmässigt och skicka den till utdatatjänsten i en XDP-fil.
 
 [Snabbstart (EJB-läge): Skapa ett PDF-dokument baserat på en program-XDP-fil med Java API](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-creating-a-pdf-document-based-on-an-application-xdp-file-using-the-java-api) (visar hur du skickar platsen för XDP-filen med referens).
 
-[Snabbstart (EJB-läge): skicka ett dokument som finns i AEM Forms-databasen till utdatatjänsten med Java API](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-passing-a-document-located-in-the-repository-to-the-output-service-using-the-java-api) (visar hur du programmässigt hämtar XDP-filen från AEM Forms-databasen och skickar den till Output-tjänsten i en `com.adobe.idp.Document` -instans). (I det här avsnittet beskrivs hur du utför den här uppgiften)
+[Snabbstart (EJB-läge): skicka ett dokument i AEM Forms-databasen till utdatatjänsten med Java API](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-passing-a-document-located-in-the-repository-to-the-output-service-using-the-java-api) (visar hur du programmässigt hämtar XDP-filen från AEM Forms-databasen och skickar den till Output-tjänsten i en `com.adobe.idp.Document` -instans). (I det här avsnittet beskrivs hur du utför den här uppgiften)
 
 >[!NOTE]
 >
@@ -877,7 +877,7 @@ Du kan spara det icke-interaktiva formuläret som en PDF-fil. Formuläret kan vi
 
 **Se även**
 
-[Skicka dokument som finns i databasen till utdatatjänsten med Java API](creating-document-output-streams.md#pass-documents-located-in-the-repository-to-the-output-service-using-the-java-api)
+[Skicka dokument i databasen till utdatatjänsten med Java API](creating-document-output-streams.md#pass-documents-located-in-the-repository-to-the-output-service-using-the-java-api)
 
 [Inkludera AEM Forms Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -887,7 +887,7 @@ Du kan spara det icke-interaktiva formuläret som en PDF-fil. Formuläret kan vi
 
 ResursDatabasKlient
 
-### Skicka dokument som finns i databasen till utdatatjänsten med Java API {#pass-documents-located-in-the-repository-to-the-output-service-using-the-java-api}
+### Skicka dokument i databasen till utdatatjänsten med Java API {#pass-documents-located-in-the-repository-to-the-output-service-using-the-java-api}
 
 Skicka ett dokument som hämtats från databasen med hjälp av utdatatjänsten och databas-API (Java):
 
@@ -928,7 +928,7 @@ Skicka ett dokument som hämtats från databasen med hjälp av utdatatjänsten o
 
 [Sammanfattning av steg](creating-document-output-streams.md#summary-of-steps)
 
-[Snabbstart (EJB-läge): skicka ett dokument som finns i AEM Forms-databasen till utdatatjänsten med Java API](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-passing-a-document-located-in-the-repository-to-the-output-service-using-the-java-api)
+[Snabbstart (EJB-läge): skicka ett dokument i AEM Forms-databasen till utdatatjänsten med Java API](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-passing-a-document-located-in-the-repository-to-the-output-service-using-the-java-api)
 
 [Inkludera AEM Forms Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -936,7 +936,7 @@ Skicka ett dokument som hämtats från databasen med hjälp av utdatatjänsten o
 
 ## Skapa PDF-dokument med fragment {#creating-pdf-documents-using-fragments}
 
-Du kan använda utdata- och Assembler-tjänsterna för att skapa en utdataström, till exempel ett PDF-dokument, som är baserad på fragment. Assembler-tjänsten sätter ihop ett XDP-dokument som är baserat på fragment som finns i flera XDP-filer. Det monterade XDP-dokumentet skickas till utdatatjänsten, som skapar ett PDF-dokument. Även om det här arbetsflödet visar att ett PDF-dokument genereras kan utdatatjänsten generera andra utdatatyper, som ZPL, för det här arbetsflödet. Ett PDF-dokument används endast i diskussionssyfte.
+Du kan använda utdata- och Assembler-tjänsterna för att skapa en utdataström, till exempel ett PDF-dokument, som är baserad på fragment. Assembler-tjänsten sätter ihop ett XDP-dokument som är baserat på fragment i flera XDP-filer. Det monterade XDP-dokumentet skickas till utdatatjänsten, som skapar ett PDF-dokument. Även om det här arbetsflödet visar att ett PDF-dokument genereras kan utdatatjänsten generera andra utdatatyper, som ZPL, för det här arbetsflödet. Ett PDF-dokument används endast i diskussionssyfte.
 
 Följande bild visar det här arbetsflödet.
 
@@ -1241,7 +1241,7 @@ Skriva ut till en fil med hjälp av utdata-API (Java):
 1. Ange alternativ för utskriftskörning som krävs för att skriva ut till en fil.
 
    * Skapa en `PrintedOutputOptionsSpec` genom att använda dess konstruktor.
-   * Ange filen genom att anropa PrintedOutputOptionsSpec-objektets `setFileURI` och skickar ett strängvärde som representerar filens namn och plats. Om du till exempel vill att utdatatjänsten ska skriva ut till en PostScript-fil med namnet MortgageForm.ps som finns i C:\Adobe anger du C:\\Adobe\MortgageForm.ps.
+   * Ange filen genom att anropa PrintedOutputOptionsSpec-objektets `setFileURI` och skickar ett strängvärde som representerar filens namn och plats. Om du till exempel vill att utdatatjänsten ska skriva ut till en PostScript-fil med namnet MortgageForm.ps i C:\Adobe anger du C:\\Adobe\MortgageForm.ps.
    * Ange antalet kopior som ska skrivas ut genom att anropa `PrintedOutputOptionsSpec` objektets `setCopies` och skickar ett heltalsvärde som representerar antalet kopior.
 
 1. Skriv ut utskriftsströmmen till en fil.
@@ -1741,7 +1741,7 @@ Det måste finnas ett XML-element för varje formulärfält som du vill fylla i 
 
 **Ange körningsalternativ för PDF**
 
-Du måste ange följande körningsalternativ för Output-tjänsten för att kunna skapa flera filer baserade på en XML-datakälla:
+Ange följande körningsalternativ för Output-tjänsten för att skapa flera filer baserade på en XML-datakälla:
 
 * **Många filer**: Anger om utdatatjänsten skapar ett eller flera dokument. Du kan ange true eller false. Om du vill skapa ett separat dokument för varje datapost i XML-datakällan anger du true.
 * **Fil-URI**: Anger platsen för de filer som genereras av utdatatjänsten. Anta till exempel att du anger C:\\Adobe\forms\Loan.pdf. I sådana fall skapar Output-tjänsten en fil med namnet Loan.pdf och placerar filen i mappen C:\\Adobe\forms. När det finns flera filer är filnamnen Loan0001.pdf, Loan0002.pdf, Loan003.pdf och så vidare. Om du anger en filplats placeras filerna på servern, inte på klientdatorn.
@@ -1935,7 +1935,7 @@ Skapa flera PDF-filer med hjälp av Output API (webbtjänsten):
 
 ## Skapa sökregler {#creating-search-rules}
 
-Du kan skapa sökregler som resulterar i att Output-tjänsten undersöker indata och använder olika formulärdesigner baserade på datainnehållet för att generera utdata. Om texten *pantbrev* finns i indata, kan Output-tjänsten använda en formulärdesign som heter Mortgage.xdp. På samma sätt om texten *bil* finns i indata, kan Output-tjänsten använda en formulärdesign som sparas som AutomobleLoan.xdp. Även om utdatatjänsten kan generera olika utdatatyper förutsätter det här avsnittet att utdatatjänsten genererar en PDF-fil. I följande diagram visas hur Output-tjänsten genererar en PDF-fil genom att bearbeta en XML-datafil och använda en av många formulärdesigner.
+Du kan skapa sökregler som resulterar i att Output-tjänsten undersöker indata och använder olika formulärdesigner baserade på datainnehållet för att generera utdata. Om texten *pantbrev* finns i indata, kan Output-tjänsten använda en formulärdesign som heter Mortgage.xdp. På samma sätt om texten *bil* finns i indata kan Output-tjänsten använda en formulärdesign som sparas som AutomobleLoan.xdp. Även om utdatatjänsten kan generera olika utdatatyper förutsätter det här avsnittet att utdatatjänsten genererar en PDF-fil. I följande diagram visas hur Output-tjänsten genererar en PDF-fil genom att bearbeta en XML-datafil och använda en av många formulärdesigner.
 
 Dessutom kan utdatatjänsten generera dokumentpaket där flera poster finns i datauppsättningen och varje post matchas mot en formulärdesign och ett dokument skapas som består av flera formulärdesigner.
 

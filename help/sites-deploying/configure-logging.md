@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 5aa69b10-2cd0-4d34-8104-8c3b88405926
 feature: Configuring
 exl-id: b32001a1-0078-43f6-89d6-781d6d2e9c94
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '662'
+source-wordcount: '660'
 ht-degree: 0%
 
 ---
@@ -135,13 +135,13 @@ De andra paren följer standardkonfigurationen:
 
 Du kan definiera ett eget par för loggare/skrivare:
 
-1. Skapa en ny instans av fabrikskonfigurationen [Konfiguration av loggningsloggare för Apache Sling](/help/sites-deploying/osgi-configuration-settings.md).
+1. Skapa en instans av fabrikskonfigurationen [Konfiguration av loggningsloggare för Apache Sling](/help/sites-deploying/osgi-configuration-settings.md).
 
    1. Ange loggfilen.
    1. Ange loggaren.
    1. Konfigurera de andra parametrarna efter behov.
 
-1. Skapa en ny instans av fabrikskonfigurationen [Konfiguration av skrivprogram för Apache Sling Logging](/help/sites-deploying/osgi-configuration-settings.md).
+1. Skapa en instans av fabrikskonfigurationen [Konfiguration av skrivprogram för Apache Sling Logging](/help/sites-deploying/osgi-configuration-settings.md).
 
    1. Ange loggfilen - den måste matcha den som har angetts för loggaren.
    1. Konfigurera de andra parametrarna efter behov.

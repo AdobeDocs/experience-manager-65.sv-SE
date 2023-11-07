@@ -12,9 +12,9 @@ topic-tags: operations
 discoiquuid: f8749793-e53f-4812-a093-8278f480e6a8
 role: Developer
 exl-id: ec9ccf04-7cec-493a-91ab-0e399a905338
-source-git-commit: 0c7dba43dad8608b4a5de271e1e44942c950fb16
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '571'
+source-wordcount: '569'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ Med tjänsten Forms kan du skapa interaktiva klientapplikationer för datainhäm
 
 När en slutanvändare begär ett formulär skickar ett klientprogram begäran till Forms-tjänsten, som returnerar formuläret i lämpligt format. Så snart Forms-tjänsten tar emot en begäran sammanfogar den data med en formulärdesign och skickar sedan formuläret i önskat format. Formulärtjänstutdata är ett interaktivt formulär, vanligtvis ett PDF-dokument. Med ett interaktivt formulär kan användarna fylla i fält som finns i formuläret.
 
-Beroende på vilken typ av klientprogram du använder kan du skriva formuläret till en webbläsare eller spara formuläret som en PDF-fil. Ett webbaserat program kan skriva formuläret till webbläsaren. Ett skrivbordsprogram kan spara formuläret som en PDF-fil. Om du vill visa hur du skriver till en webbläsare och en PDF-fil börjar snabbkommandot i *Återger Forms* -avsnittet är organiserat på följande sätt:
+Beroende på vilken typ av klientprogram du använder kan du skriva formuläret till en webbläsare eller spara formuläret som en PDF-fil. Ett webbaserat program kan skriva formuläret till webbläsaren. Ett skrivbordsprogram kan spara formuläret som en PDF-fil. Om du vill visa hur du skriver till en webbläsare och till en PDF-fil börjar snabbmenyerna i *Återger Forms* -avsnittet är organiserat på följande sätt:
 
 * Exemplen med Java API med stark typ (SOAP-läge) är en Java-servlet.
 * Webbtjänstens (Java Base64) exempel är en Java-server.
@@ -41,8 +41,8 @@ Beroende på vilken typ av klientprogram du använder kan du skriva formuläret 
 
 Du kan skicka en formulärdesign (en XDP-fil) eller ett PDF-dokument till Forms-tjänsten på något av följande två sätt:
 
-* Du kan referera till formulärdesignen med ett URL-värde. Det här tillvägagångssättet innebär att använda en `URLSpec` -objekt. Innehållsroten skickas till Forms-tjänsten med `URLSpec` objektets `setContentRootURI` -metod. Formulärdesignens namn ( `formQuery`) skickas som en separat parameter. De två värdena sammanfogas för att få den absoluta referensen till formulärdesignen. (Största delen av snabbstarten finns i *Återger Forms* -avsnittet använder den här metoden.)
-* Du kan skicka en `com.adobe.idp.Document` som innehåller formulärdesignen för Forms-tjänsten. Två nya metoder namngivna `renderPDFForm2` och `renderHTMLForm2` acceptera `com.adobe.idp.Document` objekt som innehåller en formulärdesign. (Se [Skicka dokument till Forms-tjänsten](/help/forms/developing/passing-documents-forms-service.md)
+* Du kan referera till formulärdesignen med ett URL-värde. Det här tillvägagångssättet innebär att använda en `URLSpec` -objekt. Innehållsroten skickas till Forms-tjänsten med `URLSpec` objektets `setContentRootURI` -metod. Formulärdesignens namn ( `formQuery`) skickas som en separat parameter. De två värdena sammanfogas för att få den absoluta referensen till formulärdesignen. (Det mesta av snabbkommandot börjar i *Återger Forms* -avsnittet använder den här metoden.)
+* Du kan skicka en `com.adobe.idp.Document` som innehåller formulärdesignen för Forms. Två nya metoder namngivna `renderPDFForm2` och `renderHTMLForm2` acceptera `com.adobe.idp.Document` objekt som innehåller en formulärdesign. (Se [Skicka dokument till Forms](/help/forms/developing/passing-documents-forms-service.md)
 
 Du kan utföra följande uppgifter med Forms-tjänsten:
 
@@ -55,6 +55,6 @@ Du kan utföra följande uppgifter med Forms-tjänsten:
 * Hantera skickade formulär. (Se [Hantera skickade Forms](/help/forms/developing/handling-submitted-forms.md).)
 * Skapa PDF-dokument med skickade XML-data. (Se [Skapa PDF-dokument med inskickade XML-data](/help/forms/developing/creating-pdf-documents-submitted-xml.md).)
 * Fyll i formulär i förväg. (Se [Förifyll Forms med flödeslayouter](/help/forms/developing/prepopulating-forms-flowable-layouts.md).)
-* Skicka dokument. (Se [Skicka dokument till Forms-tjänsten](/help/forms/developing/passing-documents-forms-service.md)
+* Skicka dokument. (Se [Skicka dokument till Forms](/help/forms/developing/passing-documents-forms-service.md)
 * Beräkna formulärdata. (Se [Beräknar formulärdata](/help/forms/developing/calculating-form-data.md).)
-* Optimera ett program. (Se [Optimera prestanda för Forms-tjänsten](/help/forms/developing/optimizing-performance-forms-service.md).)
+* Optimera ett program. (Se [Optimera prestandan för Forms-tjänsten](/help/forms/developing/optimizing-performance-forms-service.md).)

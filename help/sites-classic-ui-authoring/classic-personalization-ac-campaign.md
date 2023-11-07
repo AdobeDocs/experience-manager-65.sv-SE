@@ -1,18 +1,14 @@
 ---
 title: Arbeta med Adobe Campaign 6.1 och Adobe Campaign Standard
-seo-title: Working with Adobe Campaign 6.1 and Adobe Campaign Standard
 description: Du kan skapa e-postinnehåll i AEM och bearbeta det i Adobe Campaign e-postmeddelanden.
-seo-description: You can create email content in AEM and process it in Adobe Campaign emails.
-uuid: 439df7fb-590b-45b8-9768-565b022a808b
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: personalization
 content-type: reference
-discoiquuid: 61b2bd47-dcef-4107-87b1-6bf7bfd3043b
 exl-id: a4717cb8-b70c-4150-b816-35e9b871e792
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1167'
+source-wordcount: '1163'
 ht-degree: 1%
 
 ---
@@ -21,7 +17,7 @@ ht-degree: 1%
 
 Du kan skapa e-postinnehåll i AEM och bearbeta det i Adobe Campaign e-postmeddelanden. Om du vill göra det måste du:
 
-1. Skapa ett nytt nyhetsbrev i AEM från en Adobe Campaign-specifik mall.
+1. Skapa ett nyhetsbrev i AEM från en Adobe Campaign-specifik mall.
 1. Välj [en Adobe Campaign-tjänst](#selectingtheadobecampaigncloudservice) innan du redigerar innehållet för att få tillgång till alla funktioner.
 1. Redigera innehållet.
 1. Validera innehållet.
@@ -115,7 +111,7 @@ Du kan redigera e-postinnehåll antingen i det klassiska användargränssnittet 
 
 När du redigerar innehåll kan du infoga:
 
-* Adobe Campaign-kontextfält. Det här är fält som du kan infoga i texten och som anpassas efter mottagarens data (till exempel förnamn, efternamn eller andra data i måldimensionen).
+* Adobe Campaign-kontextfält. Det här är fält som du kan infoga i texten och som anpassas efter mottagarens data (t.ex. förnamn, efternamn eller andra data i måldimensionen).
 * Adobe Campaign personaliseringsblock. Detta är block med fördefinierat innehåll som inte är relaterat till mottagarens data, t.ex. en logotyp eller en länk till en spegelsida.
 
 Se [Adobe Campaign Components](/help/sites-classic-ui-authoring/classic-personalization-ac-components.md) för en fullständig beskrivning av Campaign-komponenterna.
@@ -147,7 +143,7 @@ Se [Adobe Campaign Components](/help/sites-classic-ui-authoring/classic-personal
 
 ### Förhandsgranska ett nyhetsbrev {#previewing-a-newsletter}
 
-Du kan förhandsgranska hur nyhetsbrevet kommer att se ut samt förhandsgranska personaliseringen.
+Du kan förhandsgranska hur nyhetsbrevet kommer att se ut och förhandsgranska personaliseringen.
 
 1. Öppna nyhetsbrevet som du vill förhandsgranska och klicka på Förhandsgranska (förstoringsglas) för att krympa sidbrytaren.
 1. Klicka på en av ikonerna för e-postklienten för att se hur nyhetsbrevet ser ut i varje e-postklient.

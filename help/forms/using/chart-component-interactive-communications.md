@@ -11,9 +11,9 @@ discoiquuid: e21714ad-d445-4aff-b0db-d577061e0907
 docset: aem65
 feature: Interactive Communication
 exl-id: 0f877a15-a17f-427f-8d89-62ada4d20918
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2579'
+source-wordcount: '2575'
 ht-degree: 0%
 
 ---
@@ -161,7 +161,7 @@ Konfigurera följande egenskaper när du skapar diagram för tryck- och webbkana
    <td><p>Förutom vanliga konfigurationer finns följande diagramspecifika konfiguration tillgänglig:</p>
     <ul>
      <li><strong>Visa förklaring: </strong>Visar en förklaring för cirkeldiagrammet eller mundiagrammet när det är aktiverat.</li>
-     <li><strong>Förklaringens position: </strong>Anger förklaringens position i förhållande till diagrammet. De tillgängliga alternativen är Höger, Vänster, Upptill och Nedtill. Vi rekommenderar att du använder högersidesförklaringen i utskriftskanalen.</li>
+     <li><strong>Förklaringens position: </strong>Anger förklaringens position i förhållande till diagrammet. De tillgängliga alternativen är Höger, Vänster, Upptill och Nedtill. Använd den högra teckenförklaringen i utskriftskanalen.</li>
      <li><strong>Innerradie</strong>: Finns för Donut-diagram för att ange radien (i pixlar) för den inre cirkeln i diagrammet.</li>
      <li><strong>Linjefärg</strong>: Finns för linjediagram, linjediagram, punktdiagram och ytdiagram för att ange linjefärgen i diagrammet.</li>
      <li><strong>Punktfärg</strong>: Tillgängligt för punkttecken, linjer och punkter för att ange färg för punkterna i diagrammet.<br /> </li>

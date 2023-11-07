@@ -7,9 +7,9 @@ breadcrumb-title: Användarhandbok om mobila appar
 user-guide-description: Skapa och hantera innehåll för mobila appar.
 feature: Mobile
 role: User
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '331'
+source-wordcount: '330'
 ht-degree: 5%
 
 ---
@@ -63,7 +63,7 @@ ht-degree: 5%
    + [Redigera appmetadata](phonegap-editmetadata.md)
    + [Programdefinitioner](phonegap-app-definitions.md)
    + [Skapa och hantera appinnehåll](phonegap-manage-app-content.md)
-   + [Skapa en ny AEM Mobile-app med guiden Skapa](phonegap-create-new-app.md)
+   + [Skapa ett AEM Mobile-program med guiden Skapa](phonegap-create-new-app.md)
    + [Skapa mobilprogram](phonegap-authoring-apps.md)
    + [Hantera apppanel](phonegap-app-details-tile.md)
    + [AEM Mobile innehållspersonalisering](phonegap-aem-mobile-content-personalization.md)

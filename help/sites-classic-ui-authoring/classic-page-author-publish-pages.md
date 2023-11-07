@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: 46d6bde0-8645-4cff-b79c-8e1615ba4ed4
 docset: aem65
 exl-id: 3f6aa06e-b5fd-4ab0-9ecc-14250cb3f55e
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1037'
+source-wordcount: '1035'
 ht-degree: 0%
 
 ---
@@ -88,7 +88,7 @@ Du kan också aktivera en sida när du har den öppen för redigering.
 
 När du har öppnat sidan och ändrat innehållet i den:
 
-1. Välj **Sida** i Sidekick.
+1. Välj **Sida** -fliken i Sidekick.
 1. Klicka **Aktivera sida**.
 Ett meddelande visas längst upp till höger i fönstret som bekräftar att sidan har aktiverats.
 
@@ -120,7 +120,7 @@ Så här schemalägger du aktiveringen en senare tid:
 
 När du aktiverar senare startas ett arbetsflöde för att aktivera den här versionen av sidan vid den angivna tidpunkten. Omvänt gäller att om du inaktiverar senare startas ett arbetsflöde för att inaktivera den här versionen av sidan vid en viss tidpunkt.
 
-Om du vill avbryta aktiveringen/inaktiveringen går du till [Arbetsflödeskonsol](/help/sites-administering/workflows-administering.md#main-pars_title_3-yjqslz-refd) för att avsluta motsvarande arbetsflöde.
+Om du vill avbryta aktiveringen går du till [Arbetsflödeskonsol](/help/sites-administering/workflows-administering.md#main-pars_title_3-yjqslz-refd) för att avsluta motsvarande arbetsflöde.
 
 ### Inaktivera senare {#deactivate-later}
 
@@ -148,7 +148,7 @@ Statusen visas på menyn [Webbplatskonsol](/help/sites-classic-ui-authoring/auth
 
 Från **Webbplatser** kan du aktivera de enskilda sidorna. När du har angett eller uppdaterat ett stort antal innehållssidor, som alla finns på samma rotsida, kan det vara enklare att aktivera hela trädet i en åtgärd. Du kan också köra en torr körning för att emulera en aktivering och markera vilka sidor som ska aktiveras.
 
-1. Öppna **verktyg** genom att välja den i **Välkommen** och dubbelklicka **Replikering** för att öppna konsolen ( `https://localhost:4502/etc/replication.html`).
+1. Öppna **verktyg** genom att välja den i **Välkommen** sida och dubbelklicka **Replikering** för att öppna konsolen ( `https://localhost:4502/etc/replication.html`).
 
    ![screen_shot_2012-02-08at125033pm](assets/screen_shot_2012-02-08at125033pm.png)
 
@@ -161,9 +161,9 @@ Från **Webbplatser** kan du aktivera de enskilda sidorna. När du har angett el
 1. Ange **Startbana**. Detta anger sökvägen till roten för det avsnitt som du vill aktivera (publicera). Den här sidan och alla underliggande sidor kan aktiveras (eller användas i emuleringen om en torr körning har valts).
 1. Aktivera urvalskriterierna efter behov:
 
-   * **Endast ändrad**: bara aktivera sidor som har ändrats.
-   * **Endast aktiverad**: bara aktivera sidor som har (redan) aktiverats. Fungerar som en form av omaktivering.
-   * **Ignorera inaktiverad**: ignorera sidor som har inaktiverats.
+   * **Endast ändrad**: aktivera endast sidor som har ändrats.
+   * **Endast aktiverad**: aktivera endast sidor som har (redan) aktiverats. Fungerar som en form av omaktivering.
+   * **Ignorera inaktiverad**: ignorera alla sidor som har inaktiverats.
 
 1. Välj den åtgärd som du vill utföra:
 

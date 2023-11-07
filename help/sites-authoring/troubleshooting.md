@@ -8,9 +8,9 @@ topic-tags: page-authoring
 content-type: reference
 discoiquuid: da0a5644-2e1d-4394-a6aa-11bb41406ba6
 exl-id: 05586b17-35d4-496e-8f0e-293c755eb066
-source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '295'
+source-wordcount: '294'
 ht-degree: 10%
 
 ---
@@ -25,13 +25,13 @@ I följande avsnitt beskrivs några problem som du kan stöta på när du använ
 
 >[!NOTE]
 >
->Användare som har administratörsbehörighet och som vill felsöka problem med AEM kan använda felsökningsmetoderna som beskrivs i [AEM (för administratörer)](/help/sites-administering/troubleshoot.md). Om du inte har tillräcklig behörighet kontaktar du systemadministratören om felsökning AEM.
+>Användare som har administratörsbehörighet och som vill felsöka problem med AEM kan använda felsökningsmetoderna som beskrivs i [AEM (för administratörer)](/help/sites-administering/troubleshoot.md). Om du inte har tillräcklig behörighet kan du kontakta systemadministratören om felsökning av AEM.
 
-## Gammal sidversion finns fortfarande på publicerad webbplats {#old-page-version-still-on-published-site}
+## Gammal sidversion på publicerad webbplats {#old-page-version-still-on-published-site}
 
 * **Problem**:
 
-   * Du har gjort ändringar på en sida och replikerat sidan till publiceringsplatsen, men *gammal* versionen av sidan visas fortfarande på publiceringswebbplatsen.
+   * Du har ändrat en sida och replikerat sidan till publiceringsplatsen, men *gammal* versionen av sidan visas fortfarande på publiceringswebbplatsen.
 
 * **Orsak**:
 
@@ -41,13 +41,13 @@ I följande avsnitt beskrivs några problem som du kan stöta på när du använ
 
    * Här finns olika möjligheter:
    * Bekräfta att sidan har replikerats korrekt. Kontrollera sidstatus och, om det behövs, status för replikeringskön.
-   * Rensa cacheminnet i den lokala webbläsaren och öppna sidan igen.
-   * Lägg till `?` till slutet av sid-URL:en. Till exempel:
+   * Rensa cacheminnet i den lokala webbläsaren och få åtkomst till sidan igen.
+   * Lägg till `?` till slutet av sidans URL. Till exempel:
 
       * `http://localhost:4502/sites.html/content?`
       * Detta begär sidan direkt från AEM och kringgår Dispatcher. Om du får den uppdaterade sidan är det en indikation på att du bör rensa Dispatcher-cachen.
-   * Kontakta systemadministratören om det finns problem med replikeringsköerna.
 
+   * Kontakta systemadministratören om det finns problem med replikeringsköerna.
 
 ## Komponentåtgärder visas inte i verktygsfältet {#component-actions-not-visible-on-toolbar}
 

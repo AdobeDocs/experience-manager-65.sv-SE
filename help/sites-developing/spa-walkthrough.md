@@ -4,9 +4,9 @@ description: I den här artikeln beskrivs begreppen för en SPA och du kan gå i
 topic-tags: spa
 content-type: reference
 exl-id: 95990112-2afc-420a-a7c7-9613f40d4c4a
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1965'
+source-wordcount: '1950'
 ht-degree: 0%
 
 ---
@@ -44,9 +44,9 @@ Genomgången baseras på AEM och exempelappen WKND SPA Project. Om du vill följ
 
 >[!CAUTION]
 >
->Det här dokumentet använder [WKND Spa Project-app](https://github.com/adobe/aem-guides-wknd-spa) endast i demonstrationssyfte. Det ska inte användas för något projektarbete.
+>Det här dokumentet använder [WKND Spa Project-app](https://github.com/adobe/aem-guides-wknd-spa) endast i demonstrationssyfte. Använd inte för projektarbete.
 >
->Alla AEM ska utnyttja [AEM Project Archettype,](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) som stöder SPA projekt med React eller Angular och använder SPA SDK.
+>Alla AEM ska använda [AEM Project Archettype,](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) som stöder SPA projekt med React eller Angular och använder SPA SDK.
 
 ### Vad är en SPA? {#what-is-a-spa}
 
@@ -75,7 +75,7 @@ Genom att vara snabbare, smidigare och mer som ett systemspecifikt program blir 
 **Utvecklare**
 
 * Utvecklarna vill att det ska finnas tydliga skillnader mellan innehåll och presentation.
-* Ren separation gör systemet mer utbyggbart samt möjliggör oberoende framend-utveckling.
+* Ren separation gör systemet mer utbyggbart och möjliggör oberoende frontendutveckling.
 
 ### Hur fungerar en SPA? {#how-does-a-spa-work}
 
@@ -97,7 +97,7 @@ Genom att återge på klientsidan reagerar sidelementet snabbare och besökarens
 
 ## Innehållsredigering med SPA {#content-editing-experience-with-spa}
 
-När en SPA är byggd för att dra nytta av den AEM SPA redigeraren märker innehållsförfattaren ingen skillnad när du redigerar och skapar innehåll. Vanliga AEM är tillgängliga och inga ändringar i författarens arbetsflöde krävs.
+När en SPA har byggts för att använda AEM SPA Editor märker innehållsförfattaren ingen skillnad när innehållet redigeras och skapas. Vanliga AEM är tillgängliga och inga ändringar i författarens arbetsflöde krävs.
 
 1. Redigera WKND-SPA i AEM.
 
@@ -109,7 +109,7 @@ När en SPA är byggd för att dra nytta av den AEM SPA redigeraren märker inne
 
    ![Steg 2](assets/spa-walkthrough-step-2.png)
 
-1. Redigera innehållet som vanligt i AEM och notera att ändringarna bevaras.
+1. Redigera innehållet som vanligt i AEM. Ändringarna sparas.
 
    ![Steg 3](assets/spa-walkthrough-step-3.png)
 
@@ -172,7 +172,7 @@ Nästa avsnitt, [Läsa in ett SPA,](#loading-an-spa-application) går djupare in
    ![Steg 1](assets/spa-walkthrough-step-1-1.png)
 
 1. Använd det inbyggda verktyget i webbläsaren för att visa sidans källa.
-1. Observera att källans innehåll är extremt begränsat.
+1. Källans innehåll är extremt begränsat.
 
    * Sidan har inget innehåll i sin brödtext. Den består huvudsakligen av formatmallar och ett anrop till olika skript, som `clientlib-react.min.js`.
    * Dessa skript är de primära drivrutinerna för det här programmet och ansvarar för återgivningen av allt innehåll.
@@ -183,7 +183,7 @@ Nästa avsnitt, [Läsa in ett SPA,](#loading-an-spa-application) går djupare in
 
 1. Växla till **Nätverk** -fliken för utvecklingsverktygen och läsa in sidan igen.
 
-   Observera att de primära resurser som har lästs in för sidan är själva sidan, CSS, React JavaScript, dess beroenden samt JSON-data för sidan.
+   När bildbegäranden ignoreras är de primära resurserna som har lästs in för sidan själva sidan, CSS, React JavaScript, dess beroenden och JSON-data för sidan.
 
    ![Steg 5](assets/spa-walkthrough-step-1-5.png)
 
@@ -213,7 +213,7 @@ Nästa avsnitt, [Läsa in ett SPA,](#loading-an-spa-application) går djupare in
 
 ### Interaktion med SPA {#interaction-with-the-spa-editor}
 
-Med exempelprogrammet WKND SPA Project är det tydligt hur appen fungerar och läses in när den publiceras, och utnyttjar innehållstjänster för JSON-innehållsleverans samt asynkron inläsning av resurser.
+Med exempelprogrammet WKND SPA Project är det tydligt hur appen fungerar och läses in när den publiceras, med hjälp av innehållstjänster för JSON-innehållsleverans och asynkron inläsning av resurser.
 
 Dessutom är det smidigt för innehållsförfattaren att skapa innehåll med en SPA redigerare i AEM.
 
@@ -225,7 +225,7 @@ I följande avsnitt utforskar vi kontraktet som gör det möjligt för SPA Edito
 
 1. Kontrollera sidans innehåll med hjälp av webbläsarens inbyggda utvecklarverktyg. Använd markeringsverktyget och markera en redigerbar komponent på sidan och visa elementinformationen.
 
-   Observera att komponenten har ett nytt dataattribut `data-cq-data-path`.
+   Komponenten har ett nytt dataattribut `data-cq-data-path`.
 
    ![Steg 2](assets/spa-walkthrough-step-2-2.png)
 
@@ -235,7 +235,7 @@ I följande avsnitt utforskar vi kontraktet som gör det möjligt för SPA Edito
 
    Den här sökvägen tillåter hämtning och associering av konfigurationsobjektet för redigeringssammanhanget för varje komponent.
 
-   Det här är det enda markeringsattribut som krävs för att redigeraren ska kunna identifiera det som en redigerbar komponent i SPA. Utifrån det här attributet avgör SPA redigerare vilken redigerbar konfiguration som är kopplad till komponenten, så att rätt bildruta, verktygsfält osv. har lästs in.
+   Det här är det enda markeringsattribut som krävs för att redigeraren ska kunna identifiera det som en redigerbar komponent i SPA. Utifrån det här attributet avgör SPA redigerare vilken redigerbar konfiguration som är kopplad till komponenten så att rätt bildruta, verktygsfält och så vidare läses in.
 
    Vissa specifika klassnamn läggs också till för att markera platshållare och för att dra och släppa resurser.
 

@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 6ee3bd3b-51d1-462f-b12e-3cbe24898b85
 docset: aem65
 exl-id: f43e9491-aa8f-40af-9800-123695142559
-source-git-commit: b703f356f9475eeeafb1d5408c650d9c6971a804
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1953'
+source-wordcount: '1947'
 ht-degree: 0%
 
 ---
@@ -40,7 +40,7 @@ Förutom [utveckla nya komponenter](/help/sites-developing/developing-components
 
 >[!NOTE]
 >
->Det här dokumentet fokuserar på att utveckla formulär med [Foundation Components](/help/sites-authoring/default-components-foundation.md) i det klassiska användargränssnittet. Adobe rekommenderar att du utnyttjar nya [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) och [Dölj villkor](/help/sites-developing/hide-conditions.md) för formulärutveckling i användargränssnittet med pekfunktion.
+>Det här dokumentet fokuserar på att utveckla formulär med [Foundation Components](/help/sites-authoring/default-components-foundation.md) i det klassiska användargränssnittet. Adobe rekommenderar att du använder nya [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) och [Dölj villkor](/help/sites-developing/hide-conditions.md) för formulärutveckling i användargränssnittet med pekfunktion.
 
 ## Förhandsladda formulärvärden {#preloading-form-values}
 
@@ -60,7 +60,7 @@ Detta är ett valfritt fält som anger sökvägen till en nod i databasen. När 
 
 Olika formulärfält har även **Inläsningssökväg för objekt**, en valfri sökväg som pekar på en nod i databasen.
 
-The **Inläsningssökväg för objekt** är sökvägen till nodegenskaper som används för att läsa in fördefinierade värden i det specifika fältet i formuläret, till exempel en [nedrullningsbar lista](/help/sites-authoring/default-components-foundation.md#dropdown-list), [kryssrutegrupp](/help/sites-authoring/default-components-foundation.md#checkbox-group) eller [alternativgrupp](/help/sites-authoring/default-components-foundation.md#radio-group).
+The **Inläsningssökväg för objekt** är sökvägen till nodegenskaper som används för att läsa in fördefinierade värden i det specifika fältet i formuläret, till exempel en [listruta](/help/sites-authoring/default-components-foundation.md#dropdown-list), [kryssrutegrupp](/help/sites-authoring/default-components-foundation.md#checkbox-group) eller [alternativgrupp](/help/sites-authoring/default-components-foundation.md#radio-group).
 
 #### Exempel - Förhandsladda en listruta med flera värden {#example-preloading-a-dropdown-list-with-multiple-values}
 
@@ -68,7 +68,7 @@ En nedrullningsbar lista kan konfigureras med ditt värdeintervall för val.
 
 The **Inläsningssökväg för objekt** kan användas för att komma åt en lista från en mapp i databasen och läsa in dessa i fältet i förväg:
 
-1. Skapa en ny försäljningsmapp ( `sling:Folder`), till exempel `/etc/designs/<myDesign>/formlistvalues`
+1. Skapa en försäljningsmapp ( `sling:Folder`), till exempel `/etc/designs/<myDesign>/formlistvalues`
 
 1. Lägg till en ny egenskap (till exempel `myList`) av typen sträng med flera värden ( `String[]`) för att innehålla listan med nedrullningsbara objekt. Innehåll kan också importeras med hjälp av ett skript, till exempel med ett JSP-skript eller cURL i ett gränssnittsskript.
 
@@ -78,7 +78,7 @@ Observera att om värdena i `String[]` har följande format:
 
 * `AL=Alabama`
 * `AK=Alaska`
-* osv.
+* och så vidare
 
 kommer AEM att generera listan som:
 
@@ -178,7 +178,7 @@ Skriptet anropas när formuläret återges. Den kan användas för att initiera 
 Skriptnamnet är `cleanup.<extension>`, till exempel `cleanup.jsp`
 Det här skriptet kan användas för att rensa.
 
-1. Använd **Forms** i en parsys. The **Åtgärdstyp** kommer nu att innehålla din nya åtgärd.
+1. Använd **Forms** i en parsys. The **Åtgärdstyp** den nya funktionsmakrot kommer nu att visas i listrutan.
 
    >[!NOTE]
    >
@@ -208,7 +208,7 @@ Du kan lägga till egna begränsningar för ett enskilt fält (under `/apps`) en
 
    * `sling:resourceType` - ställs in på `foundation/components/form/constraint`
 
-   * `constraintMessage` - ett anpassat meddelande som visas om fältet inte är giltigt enligt villkoret när formuläret skickas
+   * `constraintMessage` - ett anpassat meddelande som visas om fältet inte är giltigt, enligt villkoret, när formuläret skickas
 
    * Valfritt:
 

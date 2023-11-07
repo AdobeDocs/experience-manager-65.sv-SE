@@ -6,7 +6,7 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: deploying
 exl-id: 3a90f1d2-e53f-4cc4-8122-024ad6500de0
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '1165'
 ht-degree: 0%
@@ -46,7 +46,7 @@ Om den distribueras händer följande som standard:
 * körningsläget är `author`
 * instansen (Repository, Felix OSGI environment, bundles, osv.) installeras i `${user.dir}/crx-quickstart`där `${user.dir}` är den aktuella arbetskatalogen, den här sökvägen till crx-quickstart anropas `sling.home`
 
-* kontextroten är krigsfilens namn, till exempel: `aem-6`
+* kontextroten är exempelvis krigsfilens namn,  `aem-6`
 
 #### Konfiguration {#configuration}
 
@@ -56,7 +56,7 @@ Du kan ändra standardbeteendet på följande sätt:
 
 * sling.home: konfigurera `sling.home` -parametern i `WEB-INF/web.xml`fil för AEM krigsfil före distribution
 
-* kontextrot: byta namn på AEM krigsfil
+* kontextrot: ändra namn på AEM krigsfil
 
 #### Publicera installation {#publish-installation}
 
@@ -71,7 +71,7 @@ Om du vill distribuera en publiceringsinstans måste du ange att körningsläget
 
 Om du vill kontrollera om alla är installerade kan du:
 
-* svansen `error.log`för att se att allt innehåll är installerat
+* svansa `error.log`för att se att allt innehåll är installerat
 * titta in `/system/console` att alla paket är installerade
 
 #### Två instanser på samma programserver {#two-instances-on-the-same-application-server}
@@ -100,14 +100,14 @@ Före en distribution ska du läsa [Allmän beskrivning](#general-description) o
 
 * Låt Basic Auth Headers gå igenom:
 
-   * Ett sätt för AEM att autentisera en användare är att inaktivera WebSphere®-serverns globala administrativa säkerhet: Gå till Säkerhet -> Global säkerhet och avmarkera kryssrutan Aktivera administrativ säkerhet, spara och starta om servern.
+   * Ett sätt för AEM att autentisera en användare är att inaktivera den globala administrativa säkerheten för WebSphere®-servern: gå till Security -> Global Security och avmarkera kryssrutan Enable administrative security (Aktivera administrativ säkerhet), spara och starta om servern.
 
 * set `"JAVA_OPTS= -Xmx2048m"`
 * Om du vill installera AEM med kontextroten = /, ändrar du kontextroten för det befintliga standardwebbprogrammet.
 
 **Distribuera AEM webbprogram**
 
-* Hämta AEM
+* Ladda ned AEM
 * Gör dina konfigurationer i web.xml vid behov (se ovan i den allmänna beskrivningen)
 
    * Packa upp WEB-INF/web.xml
@@ -119,7 +119,7 @@ Före en distribution ska du läsa [Allmän beskrivning](#general-description) o
 
    * Välj en kontextrot (om du vill ange de körningslägen för sling som du behöver för att välja detaljerade steg i distributionsguiden, anger du dem sedan i steg 6 i guiden)
 
-* Starta AEM webbprogram
+* Starta AEM
 
 #### JBoss® EAP 6.3.0/6.4.0 {#jboss-eap}
 
@@ -166,8 +166,8 @@ Detta använder en enkel serverlayout med endast en Admin Server.
 
 **Distribuera AEM webbprogram**
 
-* Hämta AEM
-* Lägg AEM i ${myDomain}/packages/cq mapp
+* Ladda ned AEM
+* Lägg AEM krigsfil i ${myDomain}/packages/cq mapp
 * Gör dina konfigurationer till `WEB-INF/web.xml` vid behov (se ovan i den allmänna beskrivningen)
 
    * Packa upp `WEB-INF/web.xml`fil
@@ -233,7 +233,7 @@ Före en distribution ska du läsa [Allmän beskrivning](#general-description) o
 
 * **Distribuera AEM webbprogram**
 
-   * Hämta AEM
+   * Ladda ned AEM
    * Gör dina konfigurationer i web.xml vid behov (se ovan i den allmänna beskrivningen)
 
       * Packa upp WEB-INF/web.xml

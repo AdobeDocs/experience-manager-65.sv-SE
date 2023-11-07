@@ -13,9 +13,9 @@ discoiquuid: c4706632-02e5-4510-ad9c-4f732d5fbdad
 docset: aem65
 role: Developer
 exl-id: 54d98c69-2b2e-46cb-9f6a-7e9bdbe5c378
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1887'
+source-wordcount: '1883'
 ht-degree: 0%
 
 ---
@@ -74,9 +74,9 @@ DDX-dokumentet innehåller en XDP `result` -tagg som anger resultatets namn. I d
  }
 ```
 
-The `XDP source` -taggen anger XDP-filen som representerar ett fullständigt XDP-dokument som kan användas som behållare för att lägga till XDP-fragment eller som ett av ett antal dokument som läggs ihop i ordning. I det här fallet används XDP-dokumentet bara som en behållare (den första bilden som visas i *Sammanställa flera XDP-fragment*). De andra XDP-filerna placeras alltså i XDP-behållaren.
+The `XDP source` -taggen anger XDP-filen som representerar ett fullständigt XDP-dokument som kan användas som behållare för att lägga till XDP-fragment eller som ett av flera dokument som läggs ihop i ordning. I det här fallet används XDP-dokumentet bara som en behållare (den första bilden som visas i *Sammanställa flera XDP-fragment*). De andra XDP-filerna placeras alltså i XDP-behållaren.
 
-För varje delformulär kan du lägga till en `XDPContent` element (det här elementet är valfritt). Observera att det finns tre delformulär i exemplet ovan: `subPatientContact`, `subPatientPhysical`och `subPatientHealth`. Båda `subPatientPhysical` delformulär och `subPatientHealth` delformuläret finns i samma XDP-fil, tuc018_patient.xdp. Fragmentelementet anger namnet på delformuläret, enligt Designer.
+För varje delformulär kan du lägga till en `XDPContent` element (detta element är valfritt). I exemplet ovan är det tre delformulär: `subPatientContact`, `subPatientPhysical`och `subPatientHealth`. Båda `subPatientPhysical` delformulär och `subPatientHealth` delformuläret finns i samma XDP-fil, tuc018_patient.xdp. Fragmentelementet anger namnet på delformuläret, enligt Designer.
 
 >[!NOTE]
 >
@@ -160,7 +160,7 @@ Sammanställa flera XDP-fragment med Assembler Service API (Java):
 
 1. Inkludera projektfiler.
 
-   Inkludera JAR-klientfiler, t.ex. adobe-assembler-client.jar, i Java-projektets klassökväg.
+   Inkludera JAR-klientfiler, som adobe-assembler-client.jar, i Java-projektets klassökväg.
 
 1. Skapa en PDF Assembler-klient.
 
@@ -169,7 +169,7 @@ Sammanställa flera XDP-fragment med Assembler Service API (Java):
 
 1. Referera till ett befintligt DDX-dokument.
 
-   * Skapa en `java.io.FileInputStream` som representerar DDX-dokumentet genom att använda dess konstruktor och skicka ett strängvärde som anger platsen för DDX-filen.
+   * Skapa en `java.io.FileInputStream` -objekt som representerar DDX-dokumentet genom att använda dess konstruktor och skicka ett strängvärde som anger platsen för DDX-filen.
    * Skapa en `com.adobe.idp.Document` genom att använda konstruktorn och skicka `java.io.FileInputStream` -objekt.
 
 1. Referera till XDP-dokumenten.
@@ -225,13 +225,13 @@ Sammanställa flera XDP-fragment med Assembler Service API (webbtjänst):
 
    >[!NOTE]
    >
-   >Ersätt `localhost` med IP-adressen till den server som är värd för AEM Forms.
+   >Ersätt `localhost` med IP-adressen till den server där AEM Forms finns.
 
 1. Skapa en PDF Assembler-klient.
 
    * Skapa en `AssemblerServiceClient` genom att använda dess standardkonstruktor.
    * Skapa en `AssemblerServiceClient.Endpoint.Address` genom att använda `System.ServiceModel.EndpointAddress` konstruktor. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten, till exempel `https://localhost:8080/soap/services/AssemblerService?blob=mtom`). Du behöver inte använda `lc_version` -attribut. Det här attributet används när du skapar en tjänstreferens.
-   * Skapa en `System.ServiceModel.BasicHttpBinding` genom att hämta värdet för `AssemblerServiceClient.Endpoint.Binding` fält. Sänd returvärdet till `BasicHttpBinding`.
+   * Skapa en `System.ServiceModel.BasicHttpBinding` genom att hämta värdet för `AssemblerServiceClient.Endpoint.Binding` fält. Skicka returvärdet till `BasicHttpBinding`.
    * Ange `System.ServiceModel.BasicHttpBinding` objektets `MessageEncoding` fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
    * Aktivera grundläggande HTTP-autentisering genom att utföra följande åtgärder:
 
@@ -256,9 +256,9 @@ Sammanställa flera XDP-fragment med Assembler Service API (webbtjänst):
    * Fylla i bytearrayen med strömdata genom att anropa `System.IO.FileStream` objektets `Read` -metod. Skicka bytearrayen, startpositionen och strömlängden som ska läsas.
    * Fyll i `BLOB` genom att tilldela `MTOM` fält med bytearrayens innehåll.
    * Skapa en `MyMapOf_xsd_string_To_xsd_anyType` -objekt. Samlingsobjektet används för att lagra indatafiler som krävs för att skapa ett sammansatt XDP-dokument.
-   * För varje indatafil skapar du en `MyMapOf_xsd_string_To_xsd_anyType_Item` -objekt.
+   * Skapa en `MyMapOf_xsd_string_To_xsd_anyType_Item` -objekt.
    * Tilldela ett strängvärde som representerar nyckelnamnet till `MyMapOf_xsd_string_To_xsd_anyType_Item` objektets `key` fält. Detta värde måste matcha värdet för elementet som anges i DDX-dokumentet. (Utför den här åtgärden för varje XDP-indatafil.)
-   * Tilldela `BLOB` objekt som lagrar indatafilen till `MyMapOf_xsd_string_To_xsd_anyType_Item` objektets `value` fält. (Utför den här åtgärden för varje XDP-indatafil.)
+   * Tilldela `BLOB` det objekt som lagrar indatafilen till `MyMapOf_xsd_string_To_xsd_anyType_Item` objektets `value` fält. (Utför den här åtgärden för varje XDP-indatafil.)
    * Lägg till `MyMapOf_xsd_string_To_xsd_anyType_Item` objekt till `MyMapOf_xsd_string_To_xsd_anyType` -objekt. Anropa `MyMapOf_xsd_string_To_xsd_anyType` objektets `Add` och skicka `MyMapOf_xsd_string_To_xsd_anyType` -objekt. (Utför den här åtgärden för varje XDP-indatadokument.)
 
 1. Ange körningsalternativ.

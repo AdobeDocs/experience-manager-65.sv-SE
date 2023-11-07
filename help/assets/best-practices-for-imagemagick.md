@@ -5,7 +5,7 @@ contentOwner: AG
 role: Admin
 feature: Renditions,Developer Tools
 exl-id: 6c149d31-1e64-4d29-a32a-58bd69e9fa98
-source-git-commit: b2faf81983216bef9151548d90ae86f1c26a9f91
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '655'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Installera och konfigurera ImageMagick så att det fungerar med [!DNL Experience Manager Assets] {#install-and-configure-imagemagick-to-work-with-aem-assets}
 
-ImageMagick är en plugin för att skapa, redigera, komponera och konvertera bitmappsbilder. Det kan läsa och skriva bilder i olika format (över 200), bland annat PNG, JPEG, JPEG-2000, GIF, TIFF, DPX, EXR, WebP, Postscript, PDF och SVG. Använd ImageMagick för att ändra storlek, vända, spegla, rotera, förvränga, skeva och omforma bilder. Du kan också justera bildfärger, använda olika specialeffekter eller rita text, linjer, polygoner, ellipser och kurvor med ImageMagick.
+ImageMagick är ett plugin-program för att skapa, redigera, komponera och konvertera bitmappsbilder. Det kan läsa och skriva bilder i olika format (över 200), bland annat PNG, JPEG, JPEG-2000, GIF, TIFF, DPX, EXR, WebP, Postscript, PDF och SVG. Använd ImageMagick för att ändra storlek, vända, spegla, rotera, förvränga, skeva och omforma bilder. Du kan också justera bildfärger, använda olika specialeffekter eller rita text, linjer, polygoner, ellipser och kurvor med ImageMagick.
 
 Använd [!DNL Adobe Experience Manager] mediehanterare från kommandoraden för att bearbeta bilder via ImageMagick. Information om hur du arbetar med olika filformat med ImageMagick finns i [Metodtips för att skapa filformat](/help/assets/assets-file-format-best-practices.md). Mer information om alla filformat som stöds finns i [Format som stöds för resurser](/help/assets/assets-formats.md).
 
@@ -52,7 +52,7 @@ Du kan ställa in kommandoradens processsteg för ditt särskilda användningsfa
 
    ![select_flags](assets/select_flags.png)
 
-1. I **[!UICONTROL Web Enabled Image]** anger du information för återgivningen med måtten 1 280 × 1 280 pixlar. Ange dessutom `image/jpeg` i **[!UICONTROL Mimetype]** box.
+1. I **[!UICONTROL Web Enabled Image]** anger du information för återgivningen med måtten 1 280 × 1 280 pixlar. Dessutom anger du `image/jpeg` i **[!UICONTROL Mimetype]** box.
 
    ![web_enabled_image](assets/web_enabled_image.png)
 
@@ -60,7 +60,7 @@ Du kan ställa in kommandoradens processsteg för ditt särskilda användningsfa
 
    >[!NOTE]
    >
-   >The `convert` -kommandot kanske inte kan köras med vissa Windows-versioner (till exempel Windows SE) eftersom det är i konflikt med det inbyggda `convert` som ingår i Windows-installationen. I det här fallet anger du den fullständiga sökvägen för verktyget ImageMagick. Ange t.ex.
+   >The `convert` -kommandot kanske inte kan köras med vissa Windows-versioner (till exempel Windows SE) eftersom det är i konflikt med de ursprungliga `convert` som ingår i Windows-installationen. I det här fallet anger du den fullständiga sökvägen för verktyget ImageMagick. Ange till exempel
    >
    >
    >`"C:\Program Files\ImageMagick-6.8.9-Q16\convert.exe" -define jpeg:size=319x319 ./${filename} -thumbnail 319x319 cq5dam.thumbnail.319.319.png`
@@ -77,7 +77,7 @@ Du kan ställa in kommandoradens processsteg för ditt särskilda användningsfa
 
 1. Om du vill verifiera korrekt bearbetning överför du en JPG-bild till [!DNL Assets]. När bearbetningen är klar kontrollerar du om en bild som har vänts och återgivningarna har genererats eller inte.
 
-## Minska säkerhetsluckor {#mitigating-security-vulnerabilities}
+## Minska säkerhetsbrister {#mitigating-security-vulnerabilities}
 
 Det finns flera säkerhetsluckor i samband med användning av ImageMagick för att bearbeta bilder. Att bearbeta bilder som skickas in av användaren innebär till exempel en risk för fjärrexekvering av kod (RCE).
 

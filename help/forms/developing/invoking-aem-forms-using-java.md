@@ -7,9 +7,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: coding
 role: Developer
 exl-id: 036c35c1-1be7-4825-bbb6-ea025e49c6f6
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '5396'
+source-wordcount: '5393'
 ht-degree: 0%
 
 ---
@@ -632,7 +632,7 @@ I det här scenariot körs ett klientprogram i sin egen JVM och anropar AEM Form
 
 ### Klientprogrammet anropar klustrade AEM Forms-instanser {#client-application-invoking-clustered-aem-forms-instances}
 
-I följande diagram visas ett klientprogram som körs i en egen JVM och som anropar AEM Forms-instanser som finns i ett kluster.
+I följande diagram visas ett klientprogram som körs i en egen JVM och som anropar AEM Forms-instanser i ett kluster.
 
 Detta scenario liknar ett klientprogram som anropar en fristående AEM Forms-instans. Providerns URL är dock annorlunda. Om ett klientprogram vill ansluta till en specifik J2EE-programserver måste programmet ändra URL:en så att den refererar till den specifika J2EE-programservern.
 

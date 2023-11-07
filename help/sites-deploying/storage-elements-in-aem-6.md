@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 0aa2c22f-32bb-4e50-8328-63ed73c0f19e
 legacypath: /content/docs/en/aem/6-0/deploy/upgrade/microkernels-in-aem-6-0
 exl-id: 52437eb5-f9fb-4945-9950-5a1562fe878d
-source-git-commit: 9defa6d1843007e9375d839f72f6993c691a37c0
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '708'
+source-wordcount: '707'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ Denna artikel omfattar följande:
 
 En av de viktigaste ändringarna i AEM 6 är innovationerna på databasnivå.
 
-Det finns för närvarande två nodlagringsimplementationer i AEM6: Tjärlagring och MongoDB-lagring.
+För närvarande finns det två nodlagringsimplementationer i AEM6: Tjärlagring och MongoDB-lagring.
 
 ### Tjärlagring {#tar-storage}
 
@@ -76,11 +76,11 @@ AEM 6 kan konfigureras för att köras med MongoDB-lagring enligt följande proc
 
 1. Redigera filen och ange konfigurationsalternativ. Följande alternativ är tillgängliga:
 
-   * `mongouri`: The [MongoURI](https://docs.mongodb.org/manual/reference/connection-string/) krävs för att ansluta till Mongo-databasen. Standardvärdet är `mongodb://localhost:27017`
-   * `db`: Namn på Mongo-databasen. Som standard används nya AEM 6-installationer **aem-author** som databasnamn.
+   * `mongouri`: [MongoURI](https://docs.mongodb.org/manual/reference/connection-string/) krävs för att ansluta till Mongo-databasen. Standardvärdet är `mongodb://localhost:27017`
+   * `db`: Namnet på Mongo-databasen. Som standard används nya AEM 6-installationer **aem-author** som databasnamn.
    * `cache`: Cachestorleken i MB. Cachestorleken fördelas mellan olika cacheminnen som används i DocumentNodeStore. Standardvärdet är 256.
-   * `changesSize`: Storlek i MB på den mappade samling som används i Mongo för cache-lagring av diff-utdata. Standardvärdet är 256.
-   * `customBlobStore`: Booleskt värde som anger att ett anpassat datalager används. Standardvärdet är false.
+   * `changesSize`: Storlek i MB på en kopplad samling som används i Mongo för cache-lagring av diff-utdata. Standardvärdet är 256.
+   * `customBlobStore`: Ett booleskt värde som anger att ett anpassat datalager används. Standardvärdet är false.
 
 1. Skapa en konfigurationsfil med PID för det datalager som du vill använda och redigera filen för att ange konfigurationsalternativen. Mer information finns på [Konfigurera nodarkiv och datalager](/help/sites-deploying/data-store-config.md).
 
@@ -122,7 +122,6 @@ Red Hat® Linux® använder en minneshanteringsalgoritm som kallas för Transpar
 >* Mer information om genomskinliga stora sidor i Red Hat® Linux® finns i [artikel](https://access.redhat.com/solutions/46111).
 * Linux®-justeringstips finns här [artikel](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-performance.html?lang=en).
 >
-
 
 ## Underhålla databasen {#maintaining-the-repository}
 

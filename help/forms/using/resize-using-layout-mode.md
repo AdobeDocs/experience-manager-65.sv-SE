@@ -3,7 +3,7 @@ title: Använd layoutläget för att ändra storlek på komponenter för anpassn
 description: Definiera placeringen av komponenterna med det responsiva stödrastret som finns i layoutläget
 feature: Adaptive Forms
 exl-id: 5cf76cb1-c92c-4aed-9945-37494fef2d29
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '1092'
 ht-degree: 0%
@@ -29,7 +29,7 @@ Du kan använda layoutläget för att ändra storlek på komponenter för alla e
 Välj **Layout** från listrutan som visas högst upp i gränssnittet för redigering av anpassningsbara formulär bredvid **Förhandsgranska** alternativ. Formuläret visas i layoutläget.
 
 1. Logga in på AEM författarinstans och navigera till **Adobe Experience Manager** > **Forms** > **Forms och dokument**.
-1. Skapa ett nytt eller öppna ett befintligt [adaptiv form](../../forms/using/creating-adaptive-form.md).
+1. Skapa en [adaptiv form](../../forms/using/creating-adaptive-form.md) eller öppna en befintlig.
 1. Välj **Layout** från listrutan som visas högst upp bredvid **Förhandsgranska** alternativ. Formuläret visas i layoutläget.
 
    ![Layoutläge](assets/layout_mode_ic_new.png)

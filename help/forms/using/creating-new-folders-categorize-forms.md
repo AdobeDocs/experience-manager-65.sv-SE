@@ -10,9 +10,9 @@ topic-tags: forms-manager
 discoiquuid: 2a8f4380-8d0f-4354-b2da-4e0c02a545e3
 role: Admin
 exl-id: f8af1ac3-6a95-4f91-8979-6b41a7e02ca4
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '389'
+source-wordcount: '388'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ Du kan skapa en mapp i AEM Forms på något av följande sätt:
 
 * Överför en ZIP-fil som innehåller resurser i den önskade mappstrukturen (se, [Hämta XDP- och PDF-dokument i AEM Forms](/help/forms/using/get-xdp-pdf-documents-aem.md))
 
-* Skapa en ny tom mapp
+* Skapa en tom mapp
 
 1. Logga in på AEM Forms användargränssnitt på `https://<server>:<port>/aem/forms.html`.
 1. Navigera till den plats där du vill skapa en mapp.
@@ -38,7 +38,7 @@ Du kan skapa en mapp i AEM Forms på något av följande sätt:
 1. Ange följande information:
 
    * **Titel:** Visningsnamn för mappen
-   * **Namn:** *(Obligatoriskt)* Nodnamnet som du vill lagra mappen under i databasen
+   * **Namn:** *(Obligatoriskt)* Det nodnamn under vilket du vill lagra mappen i databasen
 
    >[!NOTE]
    >
@@ -48,7 +48,7 @@ Du kan skapa en mapp i AEM Forms på något av följande sätt:
 
    En ny mapp med den titel du har definierat visas på den aktuella platsen i resurslistan.
 
-   Om det finns en mapp med det angivna namnet misslyckas överföringen med ett fel. Du kan visa felmeddelandet genom att hovra över felet ![aem6forms_error_alert](assets/aem6forms_error_alert.png) -ikonen som visas bredvid namnfältet.
+   Om det finns en mapp med det angivna namnet misslyckas överföringen. Du kan visa felmeddelandet genom att hovra över felet ![aem6forms_error_alert](assets/aem6forms_error_alert.png) -ikonen som visas bredvid namnfältet.
 
 ### Redigera mapptiteln {#edit-the-folder-title-br}
 

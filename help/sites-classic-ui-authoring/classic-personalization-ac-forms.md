@@ -8,9 +8,9 @@ topic-tags: personalization
 content-type: reference
 discoiquuid: 3086a8a1-8d2e-455a-a055-91b07d31ea65
 exl-id: 3f9ed24e-c54b-4bd4-9212-eabc67bb540e
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1222'
+source-wordcount: '1220'
 ht-degree: 0%
 
 ---
@@ -61,7 +61,7 @@ Först och främst bör du kontrollera anslutningen mellan författaren och publ
 
    >[!NOTE]
    >
-   >Om mallen inte är tillgänglig kan du läsa [Göra en mall tillgänglig](/help/sites-classic-ui-authoring/classic-personalization-ac.md#activatingatemplate) -avsnitt.
+   >Om mallen inte är tillgänglig går du till [Göra en mall tillgänglig](/help/sites-classic-ui-authoring/classic-personalization-ac.md#activatingatemplate) -avsnitt.
 
 1. Klicka **Skapa** för att skapa formuläret.
 
@@ -81,7 +81,7 @@ I det här avsnittet beskrivs endast specifika länkar till Adobe Campaign. Mer 
 
 1. Navigera till formuläret som du vill redigera.
 1. I verktygslådan väljer du **Sida** > **Sidegenskaper...** går du till **Cloud Service** popup-fönstrets flik.
-1. Lägg till tjänsten Adobe Campaign genom att klicka på **Lägg till tjänst** och sedan välja den konfiguration som motsvarar din Adobe Campaign-instans i tjänstens listruta. Den här konfigurationen utförs när anslutningen mellan instanserna skapas. Mer information finns i [Ansluta AEM till Adobe Campaign](/help/sites-administering/campaignonpremise.md#connecting-aem-to-adobe-campaign).
+1. Lägg till tjänsten Adobe Campaign genom att klicka på **Lägg till tjänst** och sedan välja den konfiguration som motsvarar din Adobe Campaign-instans i tjänstens nedrullningsbara lista. Den här konfigurationen utförs när anslutningen mellan instanserna skapas. Mer information finns i [Ansluta AEM till Adobe Campaign](/help/sites-administering/campaignonpremise.md#connecting-aem-to-adobe-campaign).
 
    >[!NOTE]
    >

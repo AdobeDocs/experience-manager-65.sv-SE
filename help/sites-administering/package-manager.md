@@ -10,9 +10,9 @@ content-type: reference
 discoiquuid: 6694a135-d1e1-4afb-9f5b-23991ee70eee
 docset: aem65
 exl-id: e8929d7c-9920-4c02-95a9-6f7f7a365203
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '3570'
+source-wordcount: '3568'
 ht-degree: 0%
 
 ---
@@ -275,7 +275,7 @@ Du kan behöva [återskapa paketet](#building-a-package) för att uppdatera inne
 
 ### Rewrapping a Package {#rewrapping-a-package}
 
-När ett paket har byggts kan det paketeras om. När du gör om en förpackning ändras paketinformationen utan att t.ex. en miniatyrbild, beskrivning o.s.v. ändras utan att paketinnehållet ändras.
+När ett paket har byggts kan det paketeras om. När du gör om en paketering ändras paketinformationen utan miniatyrbild, beskrivning och så vidare, utan att paketinnehållet ändras.
 
 1. [Åtkomst till pakethanteraren.](#accessing)
 

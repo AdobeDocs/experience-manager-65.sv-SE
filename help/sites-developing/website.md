@@ -7,7 +7,7 @@ topic-tags: introduction
 content-type: reference
 docset: aem65
 exl-id: d7cf843c-c837-4b97-b6c5-0fbd6793bdd4
-source-git-commit: a56d5121a6ce11b42a6c30dae9e479564d16af27
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '4941'
 ht-degree: 2%
@@ -96,7 +96,7 @@ Exempel på static.css-fil och bilder
 
    ![chlimage_1-27](assets/chlimage_1-27.png)
 
-1. I mappträdet väljer du **Designs** mapp och klicka sedan på **Nytt** > **Ny sida**. Typ `mywebsite` som titel och klicka **Skapa**.
+1. Välj **Designer** mapp och klicka sedan på **Nytt** > **Ny sida**. Typ `mywebsite` som titel och klicka **Skapa**.
 
 1. Om mywebsite-objektet inte visas i tabellen uppdaterar du trädet eller tabellen.
 
@@ -122,8 +122,8 @@ En mall definierar standardinnehållet för en ny sida. Komplexa webbplatser kan
 
 1. I dialogrutan Skapa mall skriver du följande värden och klickar sedan på **Nästa**:
 
-   * **Etikett**: innehållsida
-   * **Titel**: Min mall för webbplatsinnehållssida
+   * **Etikett**: innehållpage
+   * **Titel**: Min mall för webbplatsinnehåll
    * **Beskrivning**: Det här är min mall för webbplatsens innehållssida
    * **Resurstyp:** mywebsite/components/contentpage
 
@@ -141,20 +141,20 @@ En mall definierar standardinnehållet för en ny sida. Komplexa webbplatser kan
 
    När en författare skapar en sida under /content, **innehållsida** -mallen visas i en lista med tillgängliga mallar som ska användas.
 
-1. Klicka **Nästa** i **Tillåtna överordnade** och **Tillåtna underordnade** paneler och klicka **OK**. Klicka på CRXDE Lite **Spara alla**.
+1. Klicka **Nästa** i **Tillåtna överordnade** och **Tillåtna underordnade** och klicka på **OK**. Klicka på CRXDE Lite **Spara alla**.
 
    ![chlimage_1-31](assets/chlimage_1-31.png)
 
-#### Skapa komponenten ContentPage {#creating-the-contentpage-component}
+#### Skapa innehållsideskomponenten {#creating-the-contentpage-component}
 
 Skapa *komponent* som definierar innehållet och återger sidorna som använder innehållsidesmallen. Platsen för komponenten måste motsvara värdet för egenskapen Resurstyp i innehållsidesmallen.
 
 1. Högerklicka i CRXDE Lite `/apps/mywebsite/components` och klicka **Skapa** > **Komponent**.
 1. I **Skapa komponent** skriver du följande egenskapsvärden:
 
-   * **Etikett**: innehållsida
-   * **Titel**: Min webbsidkomponent
-   * **Beskrivning**: Det här är min innehållskomponent för webbplats
+   * **Etikett**: innehållpage
+   * **Titel**: Sidkomponent för mitt webbplatsinnehåll
+   * **Beskrivning**: Det här är komponenten för innehållssidan på min webbplats
 
    ![chlimage_1-32](assets/chlimage_1-32.png)
 
@@ -211,13 +211,13 @@ Lägg till kod i skriptet contentpage.jsp för att definiera sidinnehållet.
 
 ### Skapa webbsidor och innehållssidor {#creating-your-website-page-and-content-pages}
 
-I det här avsnittet skapar du följande sidor som alla använder innehållsidesmallen: Min webbplats, engelska, produkter, tjänster och kunder.
+I det här avsnittet skapar du följande sidor som alla använder innehållsmallen: Min webbplats, engelska, produkter, tjänster och kunder.
 
 1. På AEM välkomstsida ([https://localhost:4502/libs/cq/core/content/welcome.html](https://localhost:4502/libs/cq/core/content/welcome.html)) klickar du på Webbplatser.
 
    ![chlimage_1-34](assets/chlimage_1-34.png)
 
-1. I mappträdet väljer du **Webbplatser** mapp och klicka sedan på **Nytt** > **Ny sida**.
+1. Välj **Webbplatser** mapp och klicka sedan på **Nytt** > **Ny sida**.
 1. I **Skapa sida** anger du följande:
 
    * Titel: `My Website`
@@ -226,29 +226,29 @@ I det här avsnittet skapar du följande sidor som alla använder innehållsides
 
    ![chlimage_1-35](assets/chlimage_1-35.png)
 
-1. Klicka **Skapa**. I mappträdet väljer du **/Webbplatser/Min webbplats** sida och klicka **Nytt** > **Ny sida**.
+1. Klicka **Skapa**. Välj **/Webbplatser/Min webbplats** sida och klicka **Nytt** > **Ny sida**.
 1. Ange följande egenskapsvärden i dialogrutan Skapa sida och klicka sedan på Skapa:
 
-   * Titel: Engelska
+   * Titel: engelska
    * Namn: en
    * Välj sidmallen Min webbplats innehåll
 
-1. I mappträdet väljer du **/Webbplatser/Min webbplats/engelska** sida och klicka **Nytt**> **Ny sida**.
+1. Välj **/Webbplatser/Min webbplats/engelska** sida och klicka **Nytt**> **Ny sida**.
 1. I **Skapa sida** anger du följande egenskapsvärden och klickar sedan på **Skapa**:
 
-   * Titel: Produkter
+   * Title: Products
    * Välj sidmallen Min webbplats innehåll
 
-1. I mappträdet väljer du **/Webbplatser/Min webbplats/engelska** sida och klicka **Nytt** > **Ny sida**.
+1. Välj **/Webbplatser/Min webbplats/engelska** sida och klicka **Nytt** > **Ny sida**.
 1. I **Skapa sida** anger du följande egenskapsvärden och klickar sedan på **Skapa**:
 
    * Titel: Tjänster
    * Välj sidmallen Min webbplats innehåll
 
-1. I mappträdet väljer du **/Webbplatser/Min webbplats/engelska** sida och klicka **Nytt** > **Ny sida**.
+1. Välj **/Webbplatser/Min webbplats/engelska** sida och klicka **Nytt** > **Ny sida**.
 1. I **Skapa sida** anger du följande egenskapsvärden och klickar sedan på **Skapa**:
 
-   * Titel: Kunder
+   * Title: Customers
    * Välj sidmallen Min webbplats innehåll
 
    Din struktur ser ut så här:
@@ -258,7 +258,7 @@ I det här avsnittet skapar du följande sidor som alla använder innehållsides
 1. Om du vill länka dina sidor till min webbplatsdesign väljer du i CRXDE Lite `/content/mywebsite/en/jcr:content` nod. På fliken Egenskaper anger du följande värden för en ny egenskap och klickar sedan på Lägg till:
 
    * Namn: cq:designPath
-   * Typ: Sträng
+   * Typ: String
    * Värde: /etc/designs/mywebsite
 
    ![chlimage_1-37](assets/chlimage_1-37.png)
@@ -478,7 +478,7 @@ Komponenten Sida definierar egenskaper som gör att du kan ange underrubriker f�
 
 1. Öppna **Produkter** sida.
 1. På Sidekick **Sida** flik, klicka **Sidegenskaper**.
-1. Utöka **Fler rubriker och beskrivningar,** och **Underrubrik** egenskap, typ **vad vi gör**. Klicka **OK**.
+1. Utöka på fliken Grundläggande i dialogrutan **Fler rubriker och beskrivningar,** och **Underrubrik** egenskap, typ **vad vi gör**. Klicka **OK**.
 1. Upprepa föregående steg för att lägga till underrubriken **om våra tjänster** till **Tjänster** sida.
 1. Upprepa föregående steg för att lägga till underrubriken **det förtroende vi får** till **Kunder** sida.
 
@@ -488,13 +488,13 @@ Komponenten Sida definierar egenskaper som gör att du kan ange underrubriker f�
 
 Förbättra återgivningsskriptet för den övre komponenten så att bildlänkar används i stället för hypertext för navigeringskontrollerna. Bilden innehåller länkmålets titel och underrubrik.
 
-Denna övning visar [Behandling av säljförfrågningar](/help/sites-developing/the-basics.md#sling-request-processing). Skriptet topnav.jsp ändras för att anropa ett skript som dynamiskt genererar bilder som ska användas för sidnavigeringslänkarna. I den här övningen tolkar Sling URL:en för bildkällfiler för att avgöra vilket skript som ska användas för att återge bilderna.
+Denna övning demonstrerar [Bearbetning av försäljningsbegäran](/help/sites-developing/the-basics.md#sling-request-processing). Skriptet topnav.jsp ändras för att anropa ett skript som dynamiskt genererar bilder som ska användas för sidnavigeringslänkarna. I den här övningen tolkar Sling URL:en för bildkällfiler för att avgöra vilket skript som ska användas för att återge bilderna.
 
 Till exempel kan bildlänken till sidan Produkter vara https://localhost:4502/content/mywebsite/en/products.navimage.png. Sling tolkar denna URL för att fastställa resurstypen och skriptet som ska användas för att återge resursen:
 
 1. Sling avgör sökvägen till resursen som ska `/content/mwebysite/en/products.png.`
 1. Sling matchar den här sökvägen med `/content/mywebsite/en/products` nod.
-1. Sling avgör `sling:resourceType` för den här noden som ska `mywebsite/components/contentpage`.
+1. Sling avgör `sling:resourceType` för noden som ska `mywebsite/components/contentpage`.
 
 1. Sling hittar det skript i den här komponenten som bäst matchar URL-väljaren ( `navimage`) och filnamnstillägg ( `png`).
 
@@ -513,7 +513,7 @@ I den här övningen matchar Sling dessa URL:er med det /apps/mywebsite/componen
    ```
 
 1. Spara ändringarna.
-1. Högerklicka på `/apps/mywebsite/components/contentpage` nod och klicka **Skapa** > **Skapa fil**.
+1. Högerklicka på `/apps/mywebsite/components/contentpage` och klicka på **Skapa** > **Skapa fil**.
 1. I **Skapa fil** fönster, som **Namn**, typ `navimage.png.java`.
 
    Filnamnstillägget .java anger för Sling att stödet för Apache Sling Scripting Java™ ska användas för att kompilera skriptet och skapa en serverlet.
@@ -650,22 +650,22 @@ Skapa komponenten listchild som genererar en lista med sidlänkar som innehålle
 
 ![chlimage_1-41](assets/chlimage_1-41.png)
 
-#### Skapa produktsidor {#creating-product-pages}
+#### Skapar produktsidor {#creating-product-pages}
 
 Skapa två sidor under sidan Produkter. För varje sida som beskriver två specifika produkter anger du en titel, en beskrivning och ett datum.
 
-1. I mappträdet på sidan Webbplatser väljer du alternativet Webbplatser/Min webbplats/engelska/Produkter och klickar på Ny > Ny sida.
+1. Markera Webbplatser/Min webbplats/engelska/Produkter i mappträdet på sidan Webbplatser och klicka på Ny > Ny sida.
 1. Ange följande egenskapsvärden i dialogrutan och klicka sedan på Skapa:
 
-   * Titel: Produkt 1.
+   * Title: Product 1.
    * Namn: product1.
-   * Välj Min mall för webbplatsinnehållssida
+   * Välj Min mall för webbplatsinnehåll
 
 1. Skapa en till sida under Produkter med följande egenskapsvärden:
 
    * Titel: Produkt 2
    * Namn: product2
-   * Välj Min mall för webbplatsinnehållssida
+   * Välj Min mall för webbplatsinnehåll
 
 1. I CRXDE Lite anger du en beskrivning och ett datum för sidan Product 1:
 
@@ -680,8 +680,8 @@ Skapa två sidor under sidan Produkter. För varje sida som beskriver två speci
    1. I **Egenskaper** skapar du en annan egenskap med följande värden:
 
       * Namn: datum
-      * Typ: Sträng
-      * Värde: 02/14/2008
+      * Typ: String
+      * Value: 02/14/2008
       * Klicka på Lägg till.
 
    1. Klicka på Spara alla.
@@ -692,14 +692,14 @@ Skapa två sidor under sidan Produkter. För varje sida som beskriver två speci
    1. I **Egenskaper** anger du följande värden:
 
       * Namn: jcr:description
-      * Typ: Sträng
+      * Typ: String
       * Värde: Detta är en beskrivning av produkt 2!.
 
    1. Klicka **Lägg till**.
    1. Ersätt de tidigare värdena i samma textrutor med följande värden:
 
       * Namn: datum
-      * Typ: Sträng
+      * Typ: String
       * Värde: 05/11/2012
       * Klicka på Lägg till.
 
@@ -714,13 +714,13 @@ Så här skapar du komponenten listchildren:
 
    * Etikett: listchildren.
    * Titel: Min ListChildren-komponent.
-   * Beskrivning: Det här är min ListChildren-komponent.
+   * Beskrivning: Detta är Min ListChildren-komponent.
 
 1. Fortsätt klicka på Nästa tills panelen Tillåtna underordnade visas och klicka sedan på OK.
 
 #### Skapa skriptet List Children {#creating-the-list-children-script}
 
-Utveckla skriptet för komponenten listchildren.
+Utveckla skriptet för listchild-komponenten.
 
 1. Öppna filen i CRXDE Lite `listchildren.jsp` under `/apps/mywebsite/components/listchildren`.
 1. Ersätt standardkoden med följande kod:
@@ -729,7 +729,7 @@ Utveckla skriptet för komponenten listchildren.
    <%@include file="/libs/foundation/global.jsp"%><%
    %><%@ page import="java.util.Iterator,
             com.day.cq.wcm.api.PageFilter"%><%
-        /* Create a new Page object using the path of the current page */
+        /* Create a Page object using the path of the current page */
          String listroot = properties.get("listroot", currentPage.getPath());
         Page rootPage = pageManager.getPage(listroot);
         /* iterate through the child pages and gather properties */
@@ -757,7 +757,7 @@ Skapa den dialogruta som används för att konfigurera komponentegenskaperna lis
 
 1. Skapa dialognoden under komponenten listchildren:
 
-   1. I CRXDE Lite högerklickar du på `/apps/mywebsite/components/listchildren`nod och klicka **Skapa** > **Dialogrutan Skapa**.
+   1. I CRXDE Lite högerklickar du på `/apps/mywebsite/components/listchildren`och klicka på **Skapa** > **Dialogrutan Skapa**.
 
    1. Ange följande egenskapsvärden i dialogrutan och klicka på OK
 
@@ -825,7 +825,7 @@ Om du vill se den här komponentens fullständiga funktion kan du visa sidan Pro
 * när den överordnade sidan (&quot;Sökväg till listrot&quot;) inte har definierats.
 * när den överordnade sidan (&quot;Sökväg till listrot&quot;) har definierats.
 
-1. Läs in produktsidan igen i webbläsaren. Komponenten listchildren visas så här:
+1. Läs in produktsidan igen i webbläsaren. Komponenten listchildren ser ut så här:
 
    ![chlimage_1-43](assets/chlimage_1-43.png)
 
@@ -835,7 +835,7 @@ Om du vill se den här komponentens fullständiga funktion kan du visa sidan Pro
 
    ![chlimage_1-45](assets/chlimage_1-45.png)
 
-### Skapa logokomponenten {#creating-the-logo-component}
+### Skapa Logo-komponenten {#creating-the-logo-component}
 
 Skapa en komponent som visar företagets logotyp och tillhandahåller en länk till webbplatsens hemsida. Komponenten innehåller en dialogruta för designläge så att egenskapsvärden lagras i webbplatsdesignen (/etc/designs/mywebsite):
 
@@ -910,7 +910,7 @@ Skapa en dialogruta där du kan konfigurera logotypkomponenten i designläge. Di
 
 1. Skapa dialognoden under logokomponenten:
 
-   1. Högerklicka på `/apps/mywebsite/components/logo` nod och klicka **Skapa** > **Dialogrutan Skapa**.
+   1. Högerklicka på `/apps/mywebsite/components/logo` och klicka på **Skapa** > **Dialogrutan Skapa**.
 
    1. Ange följande egenskapsvärden och klicka sedan på OK:
 
@@ -1094,7 +1094,7 @@ Styckesystemet (parsys) är en viktig del av en webbplats när det hanterar en l
 
 Lägg till den överordnade komponenten (en av grundkomponenterna) i innehållsideskomponenten.
 
-1. I CRXDE Lite går du till `/apps/mywebsite/components/contentpage`öppnar du filen `center.jsp`och följande kodrad finns:
+1. I CRXDE Lite går du till `/apps/mywebsite/components/contentpage`öppnar du filen `center.jsp`och leta upp följande kodrad:
 
    ```xml
    <div>parsys</div>
@@ -1127,13 +1127,13 @@ Skapa en komponent som visar en bild i styckesystemet. För att spara tid skapas
 1. Välj `image` och ändra följande egenskapsvärden:
 
    * `jcr:title:` Min bildkomponent.
-   * `jcr:description`: Det här är min bildkomponent.
+   * `jcr:description`: Detta är min bildkomponent.
 
 1. Lägg till en egenskap i `image` nod med följande egenskapsvärden:
 
    * Namn: componentGroup
-   * Typ: Sträng
-   * Värde: MinWebbplats
+   * Typ: String
+   * Värde: Min webbplats
 
 1. Under `image` nod, ändra namn på `design_dialog` nod till `dialog`.
 
@@ -1175,7 +1175,7 @@ The `cq:editConfig` Med nodtypen kan du konfigurera vissa beteenden för kompone
 
 I det här avsnittet använder du en cq:editConfig-nod för att dra resurser från Content Finder till bildkomponenten.
 
-1. I CRXDE Lite, under noden /apps/mywebsite/components/image, skapar du en nod enligt följande:
+1. I CRXDE Lite, under noden /apps/mywebsite/components/image, skapar du en nod på följande sätt:
 
    * Namn: cq:editConfig.
    * Typ: cq:EditConfig.
@@ -1212,9 +1212,9 @@ I det här avsnittet lägger du till ikonen som ska visas bredvid bildkomponente
 I det här avsnittet visas **Produkter** och lägg till bildkomponenten i styckesystemet.
 
 1. Läs in **Produkter** sida.
-1. Klicka på Sidekick **designläge** ikon.
+1. Klicka på Sidekick **designläge** -ikon.
 1. Klicka på knappen Redigera om du vill redigera dekordialogrutan.
-1. I dialogrutan visas en lista med **Tillåtna komponenter** visas, navigera till **MinWebbplats** väljer du **Min bildkomponent** och klicka **OK.**
+1. I dialogrutan visas en lista med **Tillåtna komponenter** visas; navigera till **MinWebbplats** väljer du **Min bildkomponent** och klicka **Okej.**
 1. Återgå till **redigeringsläge.**
 1. Dubbelklicka på den parsys-bildrutan (på **Dra komponenter eller resurser hit**). The **Infoga ny komponent** och **Sidekick** väljarna ser ut så här:
 
@@ -1241,7 +1241,7 @@ Det finns flera alternativ i redigeringsläge och designläge.
 1. I mappträdet på sidan AEM webbplatser väljer du Webbplatser/Min webbplats/engelska och klickar sedan på Ny > Ny sida. Ange följande egenskapsvärden och klicka på Skapa:
 
    * Titel: Verktygsfält
-   * Välj Min mall för webbplatsinnehållssida
+   * Välj Min mall för webbplatsinnehåll
 
 1. Högerklicka på sidan Verktygsfält i listan med sidor och klicka på Egenskaper. Välj Dölj i navigering och klicka på OK.
 
@@ -1260,7 +1260,7 @@ Det finns flera alternativ i redigeringsläge och designläge.
 
 ### Skapa sökkomponenten {#creating-the-search-component}
 
-I det här avsnittet skapar du komponenten som du vill söka efter innehåll på webbplatsen. Den här sökkomponenten kan placeras i styckesystemet på vilken sida som helst (till exempel på en specialiserad sökresultatsida).
+I det här avsnittet skapar du komponenten som du vill söka efter innehåll på webbplatsen. Den här sökkomponenten kan placeras i styckesystemet på en sida (till exempel på en specialiserad sökresultatsida).
 
 När du är klar bör sökrutan se ut så här på **Engelska** sida:
 
@@ -1275,8 +1275,8 @@ När du är klar bör sökrutan se ut så här på **Engelska** sida:
 
       * Etikett: sök
       * Titel: Min sökkomponent
-      * Beskrivning: Det här är min sökkomponent
-      * Grupp: MinWebbplats
+      * Beskrivning: Detta är min sökkomponent
+      * Grupp: Min webbplats
 
    1. Klicka på Nästa. och sedan på Nästa igen.
    1. Klicka på plusknappen (+) på panelen Tillåtna överordnade och skriv `*/parsys`.
@@ -1504,7 +1504,7 @@ I det här avsnittet lägger du till sökkomponenten i styckesystemet.
 
    ![chlimage_1-58](assets/chlimage_1-58.png)
 
-1. Gå till din produktsida. Sök efter kunder i inmatningsrutan och tryck på Retur. Du omdirigeras till söksidan. Växla till förhandsgranskningsläge: Utdata har ett liknande format som följande:
+1. Gå till din produktsida. Sök efter kunder i inmatningsrutan och tryck på Retur. Du omdirigeras till söksidan. Växla till förhandsgranskningsläge: utdata har ett liknande format som följande:
 
    ![chlimage_1-59](assets/chlimage_1-59.png)
 

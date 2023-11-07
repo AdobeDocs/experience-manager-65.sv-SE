@@ -10,9 +10,9 @@ geptopics: SG_AEMFORMS/categories/get_started_with_administering_aem_forms_on_je
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: bd648c38-731b-420e-973d-a4728b69868e
 exl-id: e1519477-b5a8-4947-8597-26b945a3b819
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1704'
+source-wordcount: '1701'
 ht-degree: 0%
 
 ---
@@ -44,13 +44,13 @@ Mer information om hur du aktiverar läget för säker säkerhetskopiering finns
 **Rotkatalog för global dokumentlagring** Rotkatalogen för global dokumentlagring (GDS) används för följande syften:
 
 * Lagra långlivade dokument. Långa dokument har ingen förfallotid och finns kvar tills de tas bort (t.ex. PDF-filer som används i en arbetsflödesprocess). De långvariga dokumenten utgör en kritisk del av det övergripande systemtillståndet. Om några eller alla dessa dokument förloras eller skadas kan formulärservern bli instabil. Därför är det viktigt att den här katalogen lagras på en RAID-enhet.
-* Lagra tillfälliga dokument som behövs under bearbetningen.
+* Lagra temporära dokument som behövs under bearbetningen.
 
 >[!NOTE]
 >
 >Du kan även aktivera dokumentlagring i AEM formulärdatabas. Systemprestanda är dock bättre när du använder GDS.
 
-* Överför dokument mellan noder i ett kluster. Om du kör AEM formulär i en klustermiljö måste katalogen vara tillgänglig från alla noder i klustret.
+* Överför dokument mellan noder i ett kluster. Om du kör AEM formulär i en klustrad miljö måste katalogen vara tillgänglig från alla noder i klustret.
 * Tar emot inkommande parametrar från fjärr-API-anrop.
 
 Om du inte anger någon GDS-rotkatalog används en programserverkatalog som standard:
@@ -69,13 +69,13 @@ Om du inte anger någon GDS-rotkatalog används en programserverkatalog som stan
 
 Mer information om GDS-katalogen finns i [Förbereder installation av AEM (Single Server)](https://www.adobe.com/go/learn_aemforms_prepareInstallsingle_63).
 
-**Sökväg till Adobe Server Fonts-katalogen** Ange sökvägen till katalogen som innehåller serverteckensnitten Adobe. De här teckensnitten installeras med AEM formulär. Standardplatsen för teckensnitten är [aem-forms root]/teckensnittskatalog. Om den här katalogen inte är tillgänglig kan du kopiera teckensnitten någon annanstans och använda den här inställningen för att ange den nya platsen.
+**Sökväg till Adobe Server Fonts-katalogen** Ange sökvägen till katalogen som innehåller serverteckensnitten Adobe. De här teckensnitten installeras med AEM formulär. Standardplatsen för teckensnitten är [aem-forms root]/fonts-katalog. Om den här katalogen inte är tillgänglig kan du kopiera teckensnitten någon annanstans och använda den här inställningen för att ange den nya platsen.
 
 **Plats för kundteckensnittskatalogen** Skriv sökvägen till en katalog som innehåller ytterligare teckensnitt som du vill använda.
 
 ***anteckning **: Teckensnitt hämtas från Windows-systemets teckensnittscache och en systemomstart krävs för att uppdatera cachen. När du har angett kundens teckensnittskatalog måste du starta om systemet där AEM är installerat.*
 
-**Plats för katalogen System Fonts** Ange sökvägen till teckensnittskatalogen som operativsystemet tillhandahåller. Flera kataloger kan läggas till, avgränsade med semikolon **;**.
+**Plats för katalogen System Fonts** Skriv sökvägen till teckensnittskatalogen som ditt operativsystem tillhandahåller. Flera kataloger kan läggas till, avgränsade med semikolon **;**.
 
 **Plats för Data Services-konfigurationsfilen** Anger platsen för services-config.xml-filen. Som standard är den här filen inbäddad i filen adobe-core-appserver.ear och är inte användartillgänglig. En kopia av standardfilen services-config.xml finns i [aem-forms root]\sdk\misc\DataServices\Server-Configuration. Om du har ändrat den här filen och flyttat den anger du den nya platsen i det här fältet.
 
@@ -99,13 +99,13 @@ Den här inställningen är obligatorisk. Standardvärdet är 30 sekunder.
 
 FIPS-läget stöder inte krypteringsalgoritmer som används i tidigare Adobe Acrobat®-versioner än 7.0. Om FIPS-läget är aktiverat och du använder krypteringstjänsten för att kryptera PDF med ett lösenord med kompatibilitetsnivån Acrobat 5, misslyckas krypteringsförsöket med ett fel.
 
-När FIPS är aktiverat används vanligtvis inte lösenordskryptering för något dokument. Om du försöker göra det genereras ett FIPSModeException-undantag som anger att lösenordskryptering inte tillåts i FIPS-läge. Dessutom stöds inte elementet PDFsFromBookmarks (DX) i dokumentbeskrivningens XML-element i FIPS-läge när basdokumentet är lösenordskrypterat.
+När FIPS är aktiverat används vanligtvis inte lösenordskryptering på något dokument. Om du försöker göra det genereras ett FIPSModeException-undantag som anger att lösenordskryptering inte tillåts i FIPS-läge. Dessutom stöds inte elementet PDFsFromBookmarks (DX) i dokumentbeskrivningens XML-element i FIPS-läge när basdokumentet är lösenordskrypterat.
 
 >[!NOTE]
 >
->AEM validerar inte koden för att säkerställa FIPS-kompatibiliteten. Den tillhandahåller ett FIPS-driftläge så att FIPS-godkända algoritmer används för kryptografiska tjänster från FIPS-godkända bibliotek (RSA).
+>AEM validerar inte koden för att säkerställa FIPS-kompatibilitet. Den tillhandahåller ett FIPS-driftläge så att FIPS-godkända algoritmer används för kryptografiska tjänster från FIPS-godkända bibliotek (RSA).
 
-**Aktivera WSDL** Välj det här alternativet om du vill aktivera generering av WSDL (Web Service Definition Language) för alla tjänster som är en del av AEM formulär.
+**Aktivera WSDL** Välj det här alternativet om du vill aktivera generering av WSDL (Web Service Definition Language) för alla tjänster som ingår i AEM formulär.
 
 Aktivera det här alternativet i utvecklingsmiljöer, där utvecklare använder WSDL-generering för att skapa sina klientprogram. Du kan välja att inaktivera WSDL-generering i en produktionsmiljö för att undvika att visa tjänstens interna information.
 
@@ -117,6 +117,6 @@ Aktivera det här alternativet i utvecklingsmiljöer, där utvecklare använder 
 
 **Tillåt icke-skyddad RDS-begäran** När det här alternativet är markerat behöver RDS-begäranden inte använda https. Som standard är det här alternativet inte markerat och all kommunikation till datatjänster måste vara https-begäranden.
 
-**Tillåt oskyddad dokumentöverföring från Flex-program:** Filöverföringsservern som används för att överföra dokument från Adobe Flex®-program till AEM formulär kräver att användare är autentiserade och behöriga innan de kan överföra dokument. Användaren måste tilldelas rollen som användare av Document Upload Application eller en annan roll som innefattar behörigheten Dokumentöverföring. Detta förhindrar obehöriga användare från att överföra dokument till AEM formulärserver. Välj det här alternativet om du vill inaktivera den här säkerhetsfunktionen i en utvecklingsmiljö eller för bakåtkompatibilitet med tidigare versioner av AEM formulär. Som standard är det här alternativet inte markerat. Mer information finns i&quot;Anropa AEM formulär med AEM formulärborttagning&quot; i Programmering med AEM formulär.
+**Tillåt oskyddad dokumentöverföring från Flex-program:** Filöverföringsservern som används för att överföra dokument från Adobe Flex®-program till AEM formulär kräver att användare är autentiserade och behöriga innan de kan överföra dokument. Användaren måste tilldelas rollen som användare av Document Upload Application eller en annan roll som innefattar behörigheten Dokumentöverföring. Detta förhindrar obehöriga användare från att överföra dokument till AEM formulärserver. Välj det här alternativet om du vill inaktivera den här säkerhetsfunktionen i en utvecklingsmiljö eller för bakåtkompatibilitet med tidigare versioner av AEM formulär. Som standard är det här alternativet inte markerat. Mer information finns i Anropa AEM formulär med AEM formulärborttagning i Programmering med AEM formulär.
 
 **Tillåt oskyddad dokumentöverföring från Java SDK-program:** Överföringar med HTTP DocumentManager måste vara skyddade. Som standard kräver HTTP-överföringar att användare autentiseras och auktoriseras innan de kan överföra dokument. Användaren måste tilldelas rollen Tjänstanvändare eller en annan roll som innehåller behörigheten Tjänstanrop. Detta förhindrar obehöriga användare från att överföra dokument till formulärservern. Välj det här alternativet om du vill inaktivera den här säkerhetsfunktionen i en utvecklingsmiljö, för bakåtkompatibilitet med tidigare versioner av AEM formulär eller baserat på din brandvägg. Som standard är det här alternativet inte markerat. Mer information finns i&quot;Anropa AEM formulär med Java API&quot; i Programmering med AEM formulär.

@@ -12,9 +12,9 @@ topic-tags: operations
 discoiquuid: 77e9b895-1313-4a5b-a2d5-cdb65bdc1966
 role: Developer
 exl-id: 2a4e21c4-f2f5-44cd-b8ed-7b572782a2f1
-source-git-commit: 10227bcfcfd5a9b0f126fee74dce6ec7842f5e95
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1922'
+source-wordcount: '1921'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ ht-degree: 0%
 
 Du kan sätta ihop PDF-dokument som innehåller unika sididentifierare genom att använda Bates-numrering. *Bates-numrering* är en metod för att tillämpa unika identifieringsmetoder på en grupp av relaterade dokument. Varje sida i dokumentet (eller dokumentuppsättningen) tilldelas ett Bates-nummer som unikt identifierar sidan. Till exempel kan tillverkningsdokument som innehåller produktstruktur och som är kopplade till produktionen av en sammansättning innehålla en identifierare. Ett Bates-nummer innehåller ett numeriskt värde i följd samt ett valfritt prefix och suffix. Prefixet + numeriskt + suffix kallas *bates-mönster*.
 
-Följande bild visar ett PDF-dokument som innehåller en unik identifierare som finns i dokumentets sidhuvud.
+Följande bild visar ett PDF-dokument som innehåller en unik identifierare i dokumentets sidhuvud.
 
 ![au_au_batesnumber](assets/au_au_batesnumber.png)
 

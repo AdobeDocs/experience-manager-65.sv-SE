@@ -2,9 +2,9 @@
 title: Projekt
 description: Med projekt kan du gruppera resurser i en enhet vars gemensamma, delade miljö gör det enkelt att hantera dina projekt.
 exl-id: 632c0608-2ab8-4a5b-8251-cd747535449b
-source-git-commit: 1d64a9a6d6dfbc7606d7c222ef50a21bf9b902d6
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1365'
+source-wordcount: '1359'
 ht-degree: 5%
 
 ---
@@ -34,7 +34,7 @@ Projektkonsolen är den plats där du får åtkomst till och hanterar dina proje
 
 ![Projektkonsolen](assets/screen-shot_2019-03-05at125110.png)
 
-Projektkonsolen liknar andra konsoler i AEM, ger möjlighet till ett antal åtgärder i enskilda projekt samt att justera visningen av projekten.
+Projektkonsolen liknar andra konsoler i AEM, tillåter flera åtgärder i enskilda projekt och justerar visningen av projekten.
 
 ### Växla läge {#modes}
 

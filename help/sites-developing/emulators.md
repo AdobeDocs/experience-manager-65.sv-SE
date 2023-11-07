@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: c51fca81-5dfc-4838-9672-acb6de62778b
 legacypath: /content/docs/en/aem/6-0/develop/mobile/emulators
 exl-id: 009b7e2c-ac37-4acc-a656-0a34d3853dfd
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '634'
 ht-degree: 0%
@@ -49,7 +49,7 @@ En emulator:
 
 ### Hur emulatorn omformar innehållet {#how-the-emulator-transforms-the-content}
 
-Emulatorn fungerar genom att kapsla in HTML innehåll i emulatorns DIV. Följande HTML-kod:
+Emulatorn fungerar genom att kapsla in HTML innehåll i emulatorns DIV:er. Följande html-kod:
 
 ```xml
 <body>
@@ -93,7 +93,7 @@ Två div-taggar har lagts till:
 
 * div med id `cq-emulator-content` som representerar enhetens visningsruta/skärm/innehållsområde där sidinnehållet finns.
 
-Nya CSS-klasser tilldelas också till de nya emulatordiven: de representerar namnet på den aktuella emulatorn.
+Nya CSS-klasser tilldelas också till den nya emulatorns divar: de representerar namnet på den aktuella emulatorn.
 
 Plugin-program för en emulator kan utöka listan med tilldelade CSS-klasser ytterligare, som i exemplet med plugin-programmet för rotation, genom att infoga en&quot;vertikal&quot; eller&quot;horisontell&quot; klass beroende på den aktuella enhetsrotationen.
 
@@ -118,7 +118,7 @@ När sidkomponenten är beroende av den mobila sidkomponenten ( `/libs/wcm/mobil
 
   `deviceGroup.drawHead(pageContext);`
 
-* Metoden `DeviceGroup.drawHead(pageContext)` innehåller emulatorns init-komponent, d.v.s. anropar `init.html.jsp` för emulatorkomponenten. Om emulatorkomponenten inte har en egen `init.html.jsp` och förlitar sig på emulatorn för mobilbasen ( `wcm/mobile/components/emulators/base)`anropas initieringsskriptet för mobilbasemulatorn ( `/libs/wcm/mobile/components/emulators/base/init.html.jsp`).
+* Metoden `DeviceGroup.drawHead(pageContext)` innehåller emulatorns init-komponent, dvs. anropar `init.html.jsp` för emulatorkomponenten. Om emulatorkomponenten inte har en egen `init.html.jsp` och förlitar sig på emulatorn för mobilbasen ( `wcm/mobile/components/emulators/base)`anropas initieringsskriptet för mobilbasemulatorn ( `/libs/wcm/mobile/components/emulators/base/init.html.jsp`).
 
 * Initieringsskriptet för mobilbasemulatorn definierar via JavaScript:
 
@@ -131,7 +131,7 @@ När sidkomponenten är beroende av den mobila sidkomponenten ( `/libs/wcm/mobil
 
      `/libs/wcm/emulator/widgets/source/EmulatorManager.js`
 
-#### Skapa en anpassad mobilemulator {#creating-a-custom-mobile-emulator}
+#### Skapa en anpassad emulator för mobiler {#creating-a-custom-mobile-emulator}
 
 Så här skapar du en anpassad mobilemulator:
 
@@ -143,14 +143,14 @@ Så här skapar du en anpassad mobilemulator:
 
    Du kan till exempel referera till noden `/libs/wcm/mobile/components/emulators/iPhone/css`
 
-1. Definiera vid behov ett JS-klientbibliotek, t.ex. för att definiera ett specifikt plugin-program: name = js, nodtyp = cq:ClientLibrary
+1. Om det behövs definierar du till exempel ett JS-klientbibliotek för att definiera ett specifikt plugin-program: name = js, nodtyp = cq:ClientLibrary
 
    Du kan till exempel referera till noden `/libs/wcm/mobile/components/emulators/base/js`
 
-1. Om emulatorn har stöd för vissa funktioner som definieras av plugin-program (som pekrullning) skapar du en konfigurationsnod under emulatorn: name = `cq:emulatorConfig`, nodtyp = `nt:unstructured` och lägg till egenskapen som definierar plugin-programmet:
+1. Om emulatorn har stöd för vissa funktioner som definieras av plugin-program (som pekbläddring) skapar du en konfigurationsnod under emulatorn: name = `cq:emulatorConfig`, nodtyp = `nt:unstructured` och lägg till egenskapen som definierar plugin-programmet:
 
-   * Namn = `canRotate`, typ = `Boolean`, värde = `true`: för att inkludera rotationsfunktionen.
+   * Namn = `canRotate`, typ = `Boolean`, värde = `true`: om du vill ta med rotationsfunktionen.
 
-   * Namn = `touchScrolling`, typ = `Boolean`, värde = `true`: för att inkludera pekskärmsfunktionen.
+   * Namn = `touchScrolling`, typ = `Boolean`, värde = `true`: om du vill ta med touchbläddringsfunktionen.
 
    Du kan lägga till fler funktioner genom att definiera egna plugin-program.

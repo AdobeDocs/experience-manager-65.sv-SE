@@ -1,7 +1,7 @@
 ---
 title: Ingå i Adobe Analytics och Adobe Target
 seo-title: Opting Into Adobe Analytics and Adobe Target
-description: Läs om hur du anmäler dig till Adobe Analytics och Adobe Target.
+description: Lär dig hur du väljer Adobe Analytics och Adobe Target.
 seo-description: Learn how to opt into Adobe Analytics and Adobe Target.
 uuid: 9090a0f3-d373-4826-aa68-6aa82c0fbfbb
 contentOwner: Guillaume Carlino
@@ -10,9 +10,9 @@ topic-tags: integration
 content-type: reference
 discoiquuid: de466511-d82f-4ddb-8f6a-7ca9240fdeab
 exl-id: 3603e929-2aa1-4c25-ad9a-b10ff52a59f4
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1310'
+source-wordcount: '1308'
 ht-degree: 0%
 
 ---
@@ -21,17 +21,17 @@ ht-degree: 0%
 
 AEM har en anmälningsprocedur som hjälper dig att integrera med Adobe Analytics och Adobe Target. Detta är tillgängligt när du vill, som en förinläst uppgift som tilldelats administratörsanvändargruppen.
 
-När du loggar in som administratör den här uppgiften (**Konfigurera Analytics och Target**) finns på [Inkorg](/help/sites-authoring/inbox.md#out-of-the-box-administrative-tasks). Baserat på de autentiseringsuppgifter du anger hjälper det dig att konfigurera och integrera dessa tjänster.
+När du loggar in som administratör den här uppgiften (**Konfigurera Analytics och Target**) är tillgängligt från [Inkorg](/help/sites-authoring/inbox.md#out-of-the-box-administrative-tasks). Baserat på de autentiseringsuppgifter du anger hjälper det dig att konfigurera och integrera dessa tjänster.
 
 Du har följande alternativ för att konfigurera integreringen:
 
 * Konfigurera integreringen via uppgiften.
 
-   Detta kan göras antingen direkt eller senare, och aktiviteten finns kvar i Inkorgen tills någon åtgärd har utförts. I båda fallen kan konfigurationen göras direkt i användargränssnittet, eller med en fördefinierad `.properties` -fil.
+  Detta kan göras antingen direkt eller senare, och aktiviteten finns kvar i Inkorgen tills någon åtgärd har utförts. I båda fallen kan konfigurationen göras direkt i användargränssnittet, eller med en fördefinierad `.properties` -fil.
 
-* Avanmäl dig från integreringen.
+* Välj bort från integreringen.
 
-   Välj det här alternativet om du föredrar att [konfigurera integreringen manuellt](/help/sites-administering/marketing-cloud.md). Se även [Integrera AEM med Adobe Target och Adobe Analytics med DTM](https://helpx.adobe.com/experience-manager/using/integrate-digital-marketing-solutions.html).
+  Välj det här alternativet om du föredrar att [konfigurera integreringen manuellt](/help/sites-administering/marketing-cloud.md). Se även [Integrera AEM med Adobe Target och Adobe Analytics med DTM](https://helpx.adobe.com/experience-manager/using/integrate-digital-marketing-solutions.html).
 
 * Konfigurera konfiguration och etablering med hjälp av ett skript.
 
@@ -42,13 +42,13 @@ Anmäl dig till integrationen med:
 * Analyser som gör det möjligt att använda deras funktioner för sidspårning och sidanalys.
 * Rikta in er för att utnyttja deras personaliseringsfunktioner.
 
-För båda alternativen måste du ange användarkontoinformationen och ange vilka sidor som ska spåras.
+För båda alternativen måste du ange användarkontoinformationen och ange sidorna som spåras.
 
 >[!NOTE]
 >
 >Du kan också ange Analytics- och Target-kontoinformation med hjälp av en egenskapsfil som läses när servern startas. Se [Ange kontoinformation med hjälp av en egenskapsfil](/help/sites-administering/opt-in.md#providing-account-information-using-a-properties-file).
 
-När du väljer att integrera utför AEM följande uppgifter:
+När du väljer att delta i integreringen utför AEM följande uppgifter:
 
 * Skapar molnkonfigurationer som aktiverar anslutningen till Analytics och Target.
 * Skapar ramverk som bestämmer vilka data som spåras.
@@ -70,7 +70,7 @@ Så här avanmäler du dig från den förinlästa uppgiften:
 
    1. Ange användarkontoinformationen för Analytics och klicka sedan på motsvarande **Lägg till** -knappen.
    1. Autentiseringsuppgifterna är autentiserade.
-   1. När Analytics-kontot autentiseras väljer du den Analytics-rapportsserie som ska användas. AEM hämtar dessa analysrapportsviter. Statusen uppdateras till **Tillagd**.
+   1. När Analytics-kontot autentiseras väljer du den Analytics-rapportsserie som ska användas. AEM hämtar de här Analytics-rapportsviterna. Statusen uppdateras till **Tillagd**.
 
 1. För mål:
 
@@ -86,18 +86,18 @@ Så här avanmäler du dig från den förinlästa uppgiften:
    >
    >När du har valt att konfigurera måste du publicera den eller de berörda platserna för att replikera dessa ändringar till publiceringsinstansen.
 
-## Avanmäl dig från integreringen {#opting-out-of-the-integration}
+## Avanmäl dig från integrationen {#opting-out-of-the-integration}
 
-Avanmäl dig från integreringen med Analytics och Target när du antingen:
+Välj bort integreringen med Analytics och Target när du antingen:
 
 * Vill inte integreras med dessa produkter.
 * Använd det här alternativet om du vill konfigurera integreringarna manuellt.
 
-   Mer information om hur du konfigurerar integreringarna manuellt finns i [Integrera med Adobe Analytics](/help/sites-administering/adobeanalytics.md) och [Integrera med Adobe Target](/help/sites-administering/target.md).
+  Mer information om hur du konfigurerar integreringarna manuellt finns i [Integrera med Adobe Analytics](/help/sites-administering/adobeanalytics.md) och [Integrera med Adobe Target](/help/sites-administering/target.md).
 
 Om du vill avanmäla dig måste du slutföra den förinlästa uppgiften:
 
-* Från [Inkorg, markera och **Slutförd** Konfigurera analys och anpassning](/help/sites-authoring/inbox.md#taking-action-on-an-item) uppgift.
+* Från [Inkorg, markera och **Complete** Konfigurera analys och anpassning](/help/sites-authoring/inbox.md#taking-action-on-an-item) uppgift.
 
 ## Ange kontoinformation med hjälp av en egenskapsfil {#providing-account-information-using-a-properties-file}
 
@@ -105,13 +105,13 @@ Installera en egenskapsfil som AEM läser när servern startas för att konfigur
 
 Egenskapsfilen är en textfil med namnet marketingcloud.properties som du sparar i arbetskatalogen som används i AEM (vanligtvis samma katalog som JAR-filen). Filen innehåller följande egenskaper:
 
-* analytics.server: URL:en till det Analytics-datacenter som du använder.
+* analytics.server: URL:en för det Analytics-datacenter som du använder.
 * analytics.company: Det företag som är associerat med ditt Analytics-användarkonto.
 * analytics.username: Ditt användarnamn för Analytics.
 * analytics.secrets: Den hemlighet som är kopplad till ditt användarnamn i Analytics.
-* analytics.reportsuite: Namnet på analysrapportsviten som ska användas.
-* target.clientcode: Klientkoden som är associerad med ditt Target-konto.
-* target.email: E-postadressen som du använder för att autentisera ditt Target-konto.
+* analytics.reportSuite: Namnet på den Analytics-rapportsvit som ska användas.
+* target.clientcode: Den klientkod som är associerad med ditt Target-konto.
+* target.email: Den e-postadress som du använder för att autentisera ditt Target-konto.
 * target.password: Lösenordet som är kopplat till din e-postadress.
 
 Egenskaper och värden avgränsas med likhetstecken (=). Analysegenskaperna har prefixet `analytics`och Target-egenskaperna har prefixet `target`. Om du vill konfigurera en tjänst anger du värden för alla egenskaper för den tjänsten. Om du inte vill konfigurera en tjänst anger du inga värden för den tjänsten.
@@ -143,7 +143,7 @@ I proceduren nedan beskrivs hur du väljer att gå med i integreringen med hjäl
 
 1. Lägg till egenskapsvärden enligt dina Analytics- och/eller Target-konton.
 1. Starta eller starta om servern och logga sedan in med ett administratörskonto.
-1. Öppna aktiviteten Konfigurera analys och anpassning enligt beskrivningen i [Konfigurera integreringen](/help/sites-administering/opt-in.md#configuring-the-integration). I stället för att begära din kontoinformation använder guiden värdena från `.properties` -fil.
+1. Öppna aktiviteten Konfigurera analys och målanpassning enligt beskrivningen i [Konfigurera integreringen](/help/sites-administering/opt-in.md#configuring-the-integration). I stället för att begära din kontoinformation använder guiden värdena från `.properties` -fil.
 
    Välj **Lägg till** fortsätt med guiden för att hitta rätt tjänst.
 
@@ -151,7 +151,7 @@ I proceduren nedan beskrivs hur du väljer att gå med i integreringen med hjäl
 
 ## Om molnkonfigurationer {#about-the-cloud-configurations}
 
-När du konfigurerar integreringen med Analytics och Target skapar AEM automatiskt de molnkonfigurationer och ramverk som krävs. Molnkonfigurationen för Analytics kallas till exempel för Provisioned Analytics-konto.
+När du konfigurerar integreringen med Analytics och Target skapar AEM automatiskt de molnkonfigurationer och ramverk som krävs. Till exempel kallas molnkonfigurationen för Analytics för provisionerad analys.
 
 Du behöver inte ändra molnkonfigurationerna. Du kan dock konfigurera ramverken efter behov. (Se [Mappa komponentdata med Adobe Analytics-egenskaper](/help/sites-administering/adobeanalytics-mapping.md) och [Lägg till ett målramverk](/help/sites-administering/target.md).)
 
@@ -159,7 +159,7 @@ Du behöver inte ändra molnkonfigurationerna. Du kan dock konfigurera ramverken
 >
 >Som standard aktiveras korrekt målgruppsanpassning när du väljer att använda konfigurationsguiden för Adobe Target.
 >
->Korrekt målinriktning innebär att molntjänstkonfigurationen väntar på att kontexten ska läsas in innan innehållet läses in. Därför kan en korrekt målinriktning i fråga om prestanda skapa en fördröjning på några millisekunder innan innehållet läses in.
+>Korrekt målinriktning innebär att molntjänstkonfigurationen väntar på att kontexten ska läsas in innan innehållet läses in. Därför kan en korrekt målinriktning, vad gäller prestanda, skapa en fördröjning på några millisekunder innan innehållet läses in.
 >
 >Korrekt målinriktning är alltid aktiverat på författarinstansen. På publiceringsinstansen kan du dock välja att inaktivera korrekt målanpassning globalt genom att avmarkera kryssrutan bredvid Korrekt målanpassning i molntjänstkonfigurationen (**http://localhost:4502/etc/cloudservices.html**). Du kan även aktivera och inaktivera exakt målinriktning för enskilda komponenter, oavsett vilken inställning du har i molntjänstkonfigurationen.
 >
@@ -167,7 +167,7 @@ Du behöver inte ändra molnkonfigurationerna. Du kan dock konfigurera ramverken
 
 >[!CAUTION]
 >
->När du väljer att delta i Analytics-konfigurationen och ett specifikt `reportsuite` väljs, begränsas ramverket till publiceringskörningsläget. Det innebär att spårning bara fungerar på publiceringsinstansen.
+>När du väljer att delta i Analytics-konfigurationen och ett specifikt `reportsuite` är markerat begränsas ramverket till publiceringskörningsläget. Det innebär att spårning bara fungerar på publiceringsinstansen.
 >
 >Om det behövs även spårning för en redigeringsförekomst ska värdet ändras till `all`.
 
@@ -185,17 +185,17 @@ Vilka parametrar du skickar beror på följande:
    * `servicename`= `analytics|target`
    * `path`=sökväg till en AEM sida för att koppla de molntjänster som skapats
 
-   En curl-begäran som skapar både Analytics- och Target-konfigurationer och bifogar dem till sidan we.retail skulle till exempel vara:
+  En curl-begäran som skapar både Analytics- och Target-konfigurationer och bifogar dem till sidan we.retail skulle till exempel vara:
 
-   ```shell
-   curl -v -u admin:admin -X POST -d"automaticProvisioning=true&servicename=target&servicename=analytics&path=/content/we-retail" http://localhost:4502/libs/cq/cloudservicesprovisioning/content/autoprovisioning.json
-   ```
+  ```shell
+  curl -v -u admin:admin -X POST -d"automaticProvisioning=true&servicename=target&servicename=analytics&path=/content/we-retail" http://localhost:4502/libs/cq/cloudservicesprovisioning/content/autoprovisioning.json
+  ```
 
-* Om du inte vill använda **marketingcloud.properties** måste du skicka inloggningsuppgifterna och parametrarna; till exempel:
+* Om du inte vill använda **marketingcloud.properties** måste du skicka inloggningsuppgifterna och parametrarna, till exempel:
 
    * automaticProvisioning= `true`
    * servicename= `analytics|target`
-   * path=path to an AEM page to attach the created cloud services configs; flera banor kan definieras
+   * path=path to an AEM page to attach the created cloud services configs; multiple paths can can defined
    * analytics.server= `https://servername`
    * analytics.company= `Name of company`
    * analytics.username= `me`
@@ -205,8 +205,8 @@ Vilka parametrar du skickar beror på följande:
    * target.email= `me@adobe.com`
    * target.password= `password`
 
-   I det här fallet skulle den begäran som skapar både Analytics- och Target-konfigurationer och bifogar dem till webbsidan vara:
+  I det här fallet skulle den begäran som skapar både Analytics- och Target-konfigurationer och bifogar dem till webbsidan vara:
 
-   ```shell
-   curl -v -u admin:admin -X POST -d"automaticProvisioning=false&servicename=target&servicename=analytics&path=/content/we-retail&analytics.server=https://servername/&analytics.company=Name of company&analytics.username=me&analytics.secret=secret&analytics.reportsuite=weretail&target.clientcode=mycompany&target.email=me@adobe.com&target.password=password" http://localhost:4502/libs/cq/cloudservicesprovisioning/content/autoprovisioning.json
-   ```
+  ```shell
+  curl -v -u admin:admin -X POST -d"automaticProvisioning=false&servicename=target&servicename=analytics&path=/content/we-retail&analytics.server=https://servername/&analytics.company=Name of company&analytics.username=me&analytics.secret=secret&analytics.reportsuite=weretail&target.clientcode=mycompany&target.email=me@adobe.com&target.password=password" http://localhost:4502/libs/cq/cloudservicesprovisioning/content/autoprovisioning.json
+  ```

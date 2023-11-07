@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: c68d5853-684f-42f2-a215-c1eaee06f58a
 docset: aem65
 exl-id: 6d759907-8796-4749-bd80-306ec7f2c819
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1136'
+source-wordcount: '1132'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->I det här dokumentet beskrivs konfigurationen av segmentering så som den används med klientkontexten. Information om hur du konfigurerar segment med ContextHub med hjälp av pekrörelsegränssnittet finns i [Konfigurera segmentering med ContextHub](/help/sites-administering/segmentation.md).
+>I det här dokumentet beskrivs konfigurationen av segmentering så som den används med klientkontexten. Information om hur du konfigurerar segment med ContextHub med hjälp av pekgränssnittet finns i [Konfigurera segmentering med ContextHub](/help/sites-administering/segmentation.md).
 
 Segmentering är en viktig faktor när man skapar en kampanj. Se [Segmenteringsordlista](/help/sites-authoring/segmentation-overview.md) för information om hur segmentering fungerar och nyckeltermer.
 
@@ -131,10 +131,10 @@ Så här definierar du det nya segmentet:
 1. Skapa en [ny sida](/help/sites-authoring/editing-content.md#creatinganewpage) med **Segment** mall.
 1. Öppna den nya sidan och se segmentredigeraren:
 
-   ![Det första steget i att skapa ett nytt segment i segmentredigeraren](assets/screen_shot_2012-02-02at101726am.png)
+   ![Det första steget för att skapa ett segment i segmentredigeraren](assets/screen_shot_2012-02-02at101726am.png)
 
 1. Använd antingen sidosparken eller snabbmenyn (oftast högerklickar du med musknappen och väljer sedan **Nytt...** för att öppna fönstret Infoga ny komponent) för att hitta det segment du behöver. Dra den sedan till **Segmentredigerare** kommer det att visas i standardinställningarna **OCH** behållare.
-1. Dubbelklicka på det nya tecknet för att redigera de specifika parametrarna, till exempel musens position:
+1. Dubbelklicka på den nya egenskapen för att redigera de specifika parametrarna, till exempel musens position:
 
    ![Redigera en komponent i segmentredigeraren](assets/screen_shot_2012-02-02at103135am.png)
 

@@ -11,9 +11,9 @@ discoiquuid: 79437b96-7b57-4581-b7e7-fcaedc3d05de
 docset: aem65
 feature: Correspondence Management
 exl-id: ba2e145d-51ee-4844-a9e1-9927971d25a1
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '4435'
+source-wordcount: '4428'
 ht-degree: 0%
 
 ---
@@ -47,7 +47,7 @@ I det här scenariot visas hur du kan lägga till en anpassad egenskap för alla
 Följ de här stegen för att lägga till en anpassad egenskap för alla resurstyper och bokstäver:
 
 1. Gå till `https://'[server]:[port]'/[ContextPath]/crx/de` och logga in som administratör.
-1. I appen skapar du en mapp med namnet css med en sökväg/struktur som liknar css-mappen (finns i ccrui-mappen) enligt följande:
+1. I appen skapar du en mapp med namnet css med en sökväg/struktur som liknar css-mappen (i css-mappen) enligt följande:
 
    1. Högerklicka på objektmappen i följande sökväg och välj **Överläggsnod**:
 
@@ -69,7 +69,7 @@ Följ de här stegen för att lägga till en anpassad egenskap för alla resurst
 
    1. Klicka **Spara alla**.
 
-1. Lägg till en nod för den anpassade egenskapen i alla resurser under den nyligen skapade objektmappen (Exempel: GeoLocation) med följande steg:
+1. Lägg till en nod för den anpassade egenskapen i alla resurser (Exempel: GeoLocation) under den nyligen skapade objektmappen enligt följande steg:
 
    1. Högerklicka på objektmappen och välj **Skapa** > **Skapa nod**.
 
@@ -88,7 +88,7 @@ Följ de här stegen för att lägga till en anpassad egenskap för alla resurst
 
       | **Namn** | **Typ** | **Värde** |
       |---|---|---|
-      | fieldLabel | Sträng | Namnet som du vill ge fältet/egenskapen. (Här: Mottagarnas plats) |
+      | fieldLabel | Sträng | Namnet som du vill ge fältet/egenskapen. (Här: mottagarnas plats) |
       | name | Sträng | `./extendedproperties/GeoLocation` (Behåll värdet som det fältnamn du skapade under noden Objekt) |
       | renderReadOnly | Boolean | true |
       | sling:resourceType | Sträng | `granite/ui/components/coral/foundation/form/textfield` |
@@ -105,9 +105,9 @@ Följ de här stegen för att lägga till en anpassad egenskap för alla resurst
 
    >[!NOTE]
    >
-   >De gemensamma egenskaperna för alla resurser som du lägger till visas på fliken Grundläggande i resursegenskaperna. Som standard visas de gemensamma egenskaper som lagts till för alla resurser på egenskapssidan samt på sidan för att skapa resurser. Om du vill dölja de gemensamma egenskaperna måste du <!--link to show / hide properties]-->.
+   >De gemensamma egenskaperna för alla resurser som du lägger till visas på fliken Grundläggande i resursegenskaperna. Som standard visas de gemensamma egenskaper som lagts till för alla resurser på egenskapssidan och på sidan där resursen skapas. Om du vill dölja de gemensamma egenskaperna måste du <!--link to show / hide properties]-->.
 
-### Scenario: Lägga till anpassad listruta och värden till en anpassad egenskap/ett anpassat fält {#scenario-add-custom-drop-down-and-values-to-a-custom-property-field}
+### Scenario: Lägg till anpassad listruta och värden i en anpassad egenskap/fält {#scenario-add-custom-drop-down-and-values-to-a-custom-property-field}
 
 I det här scenariot visas hur du kan lägga till en anpassad egenskap för alla resurstyper och lägga till nedrullningsbara värden i den.
 
@@ -180,7 +180,7 @@ Den anpassade listrutan visas enligt följande i resursegenskaper:
 
 ![drop-down_customization](assets/drop-down_customization.png)
 
-### Scenario: Fliken Gemensamt för alla resurstyper {#scenario-common-tab-for-all-asset-types}
+### Scenario: Fliken Allmänt för alla resurstyper {#scenario-common-tab-for-all-asset-types}
 
 I det här scenariot visas hur du kan lägga till en anpassad flik, Mottagare, i alla resurstyper (text, lista, villkor och layoutfragment) och bokstäverna. På fliken Mottagare kan du planera för att alla anpassade egenskaper ska vara relevanta för mottagarna.
 
@@ -189,7 +189,7 @@ I det här scenariot visas hur du kan lägga till en anpassad flik, Mottagare, i
 Med följande procedur kan du lägga till en flik med ett fält i alla resurser:
 
 1. Gå till `https://'[server]:[port]'/[ContextPath]/crx/de` och logga in som administratör.
-1. I mappen apps skapar du en mapp med namnet cmmetadataProperties med en sökväg/struktur som liknar mappen för metadataegenskaper (som finns i innehållsmappen) enligt följande:
+1. I mappen apps skapar du en mapp med namnet cmmetadataProperties med en sökväg/struktur som liknar mappen för metadataegenskaper (i innehållsmappen) enligt följande:
 
    1. Högerklicka på mappen för metadataegenskaper i följande sökväg och välj **Överläggsnod**:
 
@@ -211,7 +211,7 @@ Med följande procedur kan du lägga till en flik med ett fält i alla resurser:
 
       Klicka **Spara alla**.
 
-1. Lägg till en nod för att skapa en anpassad flik för alla resurser i mappen cmmetadata-properties (Exempel: vanliga) med följande steg:
+1. Under mappen för cmmetadata-properties lägger du till en nod för att skapa en anpassad flik för alla resurser (Exempel: commontab) med följande steg:
 
    1. Högerklicka på mappen för metadataegenskaper och välj **Skapa** > **Skapa nod**.
 
@@ -236,7 +236,7 @@ Med följande procedur kan du lägga till en flik med ett fält i alla resurser:
          <tr>
           <td>jcr:title</td>
           <td>Sträng</td>
-          <td>Namnet som du vill ge kolumnen. (Här: Mottagare)</td>
+          <td>Namnet som du vill ge kolumnen. (Här: mottagare)</td>
          </tr>
          <tr>
           <td>sling:resourceType</td>
@@ -424,7 +424,7 @@ Så här lägger du till en egenskap till en resurstyp:
 
       Klicka **Spara alla**.
 
-1. Lägg till en nod för den anpassade fliken i resursen i mappen för nyligen skapade objekt (Exempel: anpassad (flik) med följande steg:
+1. Lägg till en nod för den anpassade fliken i resursen (Exempel: anpassad flik) i den nya objektmappen enligt följande steg:
 
    1. Högerklicka på objektmappen och välj **Skapa** > **Skapa nod**.
    1. Kontrollera att dialogrutan Skapa nod har följande värden och klicka på **OK**:
@@ -519,13 +519,13 @@ Så här lägger du till en egenskap till en resurstyp:
 
 ### Visa anpassade egenskaper på sidan Skapa resurs {#display-custom-properties-on-the-asset-creation-page}
 
-Som standard visas anpassade egenskaper som lagts till på nya flikar bara på egenskapssidan och inte på sidan där resursen skapas, eftersom sidan där resursen skapas inte har någon fliklayout. Om du vill visa anpassade egenskaper på sidan där resurser skapas tillsammans med andra egenskaper måste du göra följande:
+Som standard visas anpassade egenskaper som lagts till på nya flikar bara på egenskapssidan och inte på sidan där resursen skapas, eftersom sidan där resursen skapas inte har någon fliklayout. Om du vill visa de anpassade egenskaperna på sidan där resursen skapas tillsammans med andra egenskaper måste du göra följande:
 
 1. Högerklicka på objektmappen i följande sökväg och välj **Överläggsnod**:
 
    `/libs/fd/cm/ma/gui/content/createasset/createletter/jcr:content/body/items/form/items/letterWizard/items/properties/items/properties/items/letterproperties/items`
 
-1. Kontrollera att dialogrutan Overlay Node har följande värden för letter. För andra tillgångstyper anges sökväg i följande tabell:
+1. Se till att dialogrutan Overlay Node har följande värden för letter. För andra tillgångstyper anges sökväg i följande tabell:
 
    **Sökväg:** /libs/fd/cm/ma/gui/content/create/asset/createletter/jcr:content/body/items/form/items/letterWizard/items/properties/items/items/items/letterproperties/items
 
@@ -730,7 +730,7 @@ Följ de här stegen för att visa den anpassade egenskapen i resurslistan för 
 
    Den användargränssnittskolumn och egenskap som läggs till i den här proceduren visas för alla resurstyper. Värdena i dessa egenskaper kan dock bara anges och visas för de resurstyper som du ursprungligen lade till den anpassade egenskapen för.
 
-   Använd till exempel Scenario: Om du lägger till anpassade egenskaper för specifika resurstyper som du lägger till en anpassad egenskap i textresurser kan du bara ange anpassade egenskaper i textresurser. Om du däremot visar den anpassade egenskapen i användargränssnittet visas kolumnen för alla resurstyper.
+   Om du till exempel använder Scenario: Lägga till anpassade egenskaper för specifika resurstyper kan du lägga till en anpassad egenskap i textresurser. Du kan bara ange anpassade egenskaper för textresurser. Om du däremot visar den anpassade egenskapen i användargränssnittet visas kolumnen för alla resurstyper.
 
    ![anpassad egenskap:listvy](assets/custompropertyinlistview.png)
 
@@ -751,7 +751,7 @@ Följ de här stegen för att visa den anpassade egenskapen i resurslistan för 
  </tbody>
 </table>
 
-När du lägger till egenskapen sling:orderBefore för att ange kolumnplatsen måste du också uppdatera ordningen för motsvarande &lt;td> som anges i steg 6.4 i den här proceduren. I det här fallet måste du till exempel se till att &lt;td> taggen för geografisk plats placeras före &lt;td> -tagg för versionskolumnen:
+När du lägger till egenskapen sling:orderBefore för att ange kolumnplatsen måste du också uppdatera ordningen för motsvarande &lt;td> som anges i steg 6.4 i den här proceduren. I det här fallet måste du se till att &lt;td> taggen för geografisk plats placeras före &lt;td> -tagg för versionskolumnen:
 
 ```xml
 <td is="coral-td" value="<%= xssAPI.encodeForHTMLAttr(geographicalLocation) %>"><%= xssAPI.encodeForHTML(geographicalLocation) %></td>
@@ -846,7 +846,7 @@ Så här tillåter du indexering av anpassade egenskaper:
 ## Ändra standardvy för söksidan {#change-default-view-of-the-search-page}
 
 1. Gå till `https://'[server]:[port]'/[ContextPath]/crx/de` och logga in som administratör.
-1. I mappen apps skapar du en mapp med namnet list med en sökväg/struktur som liknar listmappen i /libs/granite/ui/content/shell/omnissearch/searchresults/singleresults/views:
+1. I mappen apps skapar du en mapp med namnet list med sökväg/struktur som liknar listmappen i /libs/granite/ui/content/shell/omnissearch/searchresults/singleresults/views:
 
    1. Högerklicka på objektmappen i följande sökväg och välj **Överläggsnod**:
 
@@ -864,7 +864,7 @@ Så här tillåter du indexering av anpassade egenskaper:
 
    1. Klicka **Spara alla**.
 
-1. Lägg till följande egenskap och klicka på **Spara alla**:
+1. Lägg till följande egenskap i listan över nyligen skapade noder och klicka på **Spara alla**:
 
    <table>
    <tbody>
@@ -910,7 +910,7 @@ Så här tillåter du indexering av anpassade egenskaper:
 
    1. Klicka **Spara alla**.
 
-1. Lägg till följande egenskap och klicka på **Spara alla**:
+1. Lägg till följande egenskap i listan över nyligen skapade noder och klicka på **Spara alla**:
 
    <table>
    <tbody>
@@ -933,7 +933,7 @@ Så här tillåter du indexering av anpassade egenskaper:
 
 Om du vill visa eller dölja de anpassade egenskaperna utför du följande steg:
 
-1. Under den anpassade egenskapsnoden, till exempel geografisk placering, skapar du en ny nod med namnet &quot;granite:rendercondition&quot; av typen &quot;nt:undefined&quot;.
+1. Under den anpassade egenskapsnoden, till exempel geografisk placering, skapar du en nod med namnet &quot;granite:rendercondition&quot; av typen &quot;nt:undefined&quot;.
 1. Lägg till följande egenskap i noden och klicka på **Spara alla**:
 
    <table>

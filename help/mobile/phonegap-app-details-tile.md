@@ -6,9 +6,9 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: authoring-adobe-phonegap-enterprise
 exl-id: 8bcf70ef-94d2-4958-90b5-bc375b360916
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1248'
+source-wordcount: '1246'
 ht-degree: 0%
 
 ---
@@ -74,7 +74,7 @@ I det här avsnittet definierar du URL:en för Content Update Server, landningss
 
 **PhoneGap-version** är den version i vilken du vill kompilera programmet med PhoneGap. Det bästa sättet är att hålla jämna steg med den aktuella versionen för att säkerställa att du får de senaste och bästa funktionerna och felkorrigeringarna.
 
-**URL för Content Update Server** är den URL som ditt program kommer att använda för att anropa ContentSync-uppdateringar. Den måste anges till din Dispatcher-URL eller, om inte en Dispatcher används, till en av dina publiceringsinstanser som ska användas för ContentSync-uppdateringar av programmet.
+**URL för Content Update Server** är den URL som ditt program kommer att använda för att anropa ContentSync-uppdateringar. Den måste anges till din Dispatcher-URL eller, om inte en Dispatcher används, till en av dina publiceringsinstanser som används för ContentSync-uppdateringar av programmet.
 
 ![chlimage_1-119](assets/chlimage_1-119.png)
 
@@ -130,7 +130,7 @@ Egenskapen URL för innehållsuppdateringsservern är den URL som måste peka p�
 
 ### Fliken Plugins {#the-plugins-tab}
 
-The **Plugins** beskriver de plugin-program som är associerade med din app. Den här informationen kommer att användas för att hämta rätt plugin-program under ett bygge.
+The **Plugins** beskriver de plugin-program som är associerade med din app. Den här informationen används för att hämta lämpligt plugin-program under en programutveckling.
 
 ![chlimage_1-122](assets/chlimage_1-122.png)
 

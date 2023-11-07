@@ -8,9 +8,9 @@ discoiquuid: 76d178d1-8e40-41b3-80d4-66b2f8d04211
 docset: aem65
 feature: Adaptive Forms
 exl-id: 096f61b0-59f4-4699-9093-8fb1ed81fded
-source-git-commit: 6caf3ef4a00275f0f73be52b6a9ccba77d277f1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '741'
+source-wordcount: '737'
 ht-degree: 0%
 
 ---
@@ -79,7 +79,7 @@ Du kan trycka på **Konfigurera** ![konfigurera](assets/configure.png) -ikonen f
    * **Mallmeddelande:** Ange meddelandet som ska visas medan signaturen PDF läses in. Adobe Sign tjänster tar lite tid att förbereda och läsa in signaturen PDF.
    * **Underteckningstjänst:** Välj **Klottersignatur** alternativ.
 
-   * **CSS-klass**: Ange CSS-klass för klientbiblioteket, om sådan finns. Det rekommenderas att använda [teman](../../forms/using/themes.md) och [infogade format](../../forms/using/inline-style-adaptive-forms.md) i stället för CSS-klassen.
+   * **CSS-klass**: Ange CSS-klass för klientbiblioteket, om sådan finns. Använd [teman](../../forms/using/themes.md) och [infogade format](../../forms/using/inline-style-adaptive-forms.md) i stället för CSS-klassen.
 
    Tryck på Klar ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png) om du vill spara ändringarna. Signaturen har konfigurerats.
 

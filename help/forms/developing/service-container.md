@@ -10,9 +10,9 @@ topic-tags: coding, development-tools
 discoiquuid: dd9c0ec4-a195-4b78-8992-81d0efcc0a7e
 role: Developer
 exl-id: 6abf2401-5a87-4f72-9028-74580df5b9de
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '927'
+source-wordcount: '924'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 **Exempel och exempel i det här dokumentet är bara för AEM Forms i JEE-miljö.**
 
-AEM Forms-tjänster som finns i tjänstbehållaren (inklusive standardtjänster som krypteringstjänsten, långvariga och kortlivade processer) kan anropas med olika leverantörer, till exempel en EJB-leverantör. Med en EJB-leverantör kan AEM Forms-tjänster anropas via RMI/IIOP. En webbtjänstleverantör visar tjänster som webbtjänster (WSDL Generation) med standarder som SOAP/HTTP och SOAP/JMS.
+AEM Forms tjänster i tjänstbehållaren (inklusive standardtjänster som krypteringstjänsten, långvariga och kortlivade processer) kan anropas med olika leverantörer, till exempel en EJB-leverantör. Med en EJB-leverantör kan AEM Forms-tjänster anropas via RMI/IIOP. En webbtjänstleverantör visar tjänster som webbtjänster (WSDL Generation) med standarder som SOAP/HTTP och SOAP/JMS.
 
 I följande tabell beskrivs de olika sätt som du kan anropa AEM Forms-tjänster på programmatiskt.
 
@@ -47,7 +47,7 @@ I följande tabell beskrivs de olika sätt som du kan anropa AEM Forms-tjänster
   </tr>
   <tr>
    <td><p>REST-begäranden</p></td>
-   <td><p>AEM Forms stöder REST-begäranden. En tjänst kan anropas direkt från en HTML-sida. (Se <a href="/help/forms/developing/invoking-aem-forms-using-rest.md#invoking-aem-forms-using-rest-requests">Anropa AEM Forms med REST-begäran</a>.)</p></td>
+   <td><p>AEM Forms stöder REST-begäranden. En tjänst kan anropas direkt från HTML. (Se <a href="/help/forms/developing/invoking-aem-forms-using-rest.md#invoking-aem-forms-using-rest-requests">Anropa AEM Forms med REST-begäran</a>.)</p></td>
   </tr>
  </tbody>
 </table>
@@ -61,23 +61,23 @@ Följande bild visar olika sätt som AEM Forms-tjänster kan anropas på med pro
 Tjänstbehållaren har följande funktioner:
 
 * Tillåter att AEM Forms tjänster anropas med olika metoder. Du kan konfigurera en tjänst genom att ange slutpunkter så att den kan anropas med alla metoder: Remoting, Java API, web services och REST. (Se [Hantera slutpunkter programmatiskt](/help/forms/developing/programmatically-endpoints.md#programmatically-managing-endpoints).)
-* Konverterar ett meddelande till ett normaliserat format som kallas för en anropsbegäran. En anropsbegäran skickas från ett klientprogram (eller en annan tjänst) till en tjänst som finns i tjänstbehållaren. En anropsbegäran innehåller information som namnet på tjänsten som ska anropas och datavärden som krävs för att utföra åtgärden. Många tjänster kräver ett dokument för att utföra en åtgärd. Därför innehåller en anropsbegäran vanligtvis ett dokument, som kan vara PDF data, XDP-data, XML-data osv.
+* Konverterar ett meddelande till ett normaliserat format som kallas för en anropsbegäran. En anropsbegäran skickas från ett klientprogram (eller en annan tjänst) till en tjänst i tjänstbehållaren. En anropsbegäran innehåller information som namnet på tjänsten som ska anropas och datavärden som krävs för att utföra åtgärden. Många tjänster kräver ett dokument för att utföra en åtgärd. Därför innehåller en anropsbegäran vanligtvis ett dokument, som kan vara PDF data, XDP-data, XML-data osv.
 * Slussar anropsbegäranden till lämpliga tjänster (namnet på tjänsten som ska anropas är en del av anropsbegäran).
 * Utför uppgifter som att avgöra om anroparen har behörighet att anropa den angivna tjänståtgärden. Anropsbegäran måste innehålla ett giltigt användarnamn och lösenord för AEM.
 
-   Det finns olika sätt att skicka en anropsbegäran till en tjänst. Det finns också olika sätt att skicka obligatoriska indatavärden till tjänsten. Anta till exempel att du använder Java API för att anropa en tjänst som kräver ett PDF-dokument. Motsvarande Java-metod innehåller en parameter som godkänner ett PDF-dokument. I det här fallet är parameterns datatyp `com.adobe.idp.Document`. (Se [Skicka data till AEM Forms-tjänster med Java API](/help/forms/developing/invoking-aem-forms-using-java.md#passing-data-to-aem-forms-services-using-the-java-api).)
+  Det finns olika sätt att skicka en anropsbegäran till en tjänst. Det finns också olika sätt att skicka obligatoriska indatavärden till tjänsten. Anta till exempel att du använder Java API för att anropa en tjänst som kräver ett PDF-dokument. Motsvarande Java-metod innehåller en parameter som godkänner ett PDF-dokument. I det här fallet är parameterns datatyp `com.adobe.idp.Document`. (Se [Skicka data till AEM Forms-tjänster med Java API](/help/forms/developing/invoking-aem-forms-using-java.md#passing-data-to-aem-forms-services-using-the-java-api).)
 
-   Om du anropar en tjänst med bevakade mappar skickas en anropsbegäran när du monterar en fil i en konfigurerad bevakad mapp. Om du anropar en tjänst via e-post skickas en anropsbegäran till en tjänst när ett e-postmeddelande tas emot i en konfigurerad inkorg.
+  Om du anropar en tjänst med bevakade mappar skickas en anropsbegäran när du monterar en fil i en konfigurerad bevakad mapp. Om du anropar en tjänst via e-post skickas en anropsbegäran till en tjänst när ett e-postmeddelande tas emot i en konfigurerad inkorg.
 
-   Tjänstbehållaren skickar tillbaka ett anropssvar när åtgärden har utförts. Ett anropssvar innehåller information om till exempel åtgärdsresultaten. Om åtgärden till exempel ändrar ett PDF-dokument innehåller anropssvaret det ändrade PDF-dokumentet. Om åtgärden misslyckades innehåller anropssvaret ett felmeddelande.
+  Tjänstbehållaren skickar tillbaka ett anropssvar när åtgärden har utförts. Ett anropssvar innehåller information om till exempel åtgärdsresultaten. Om åtgärden till exempel ändrar ett PDF-dokument innehåller anropssvaret det ändrade PDF-dokumentet. Om åtgärden misslyckades innehåller anropssvaret ett felmeddelande.
 
-   Ett anropssvar kan hämtas på samma sätt som en anropsbegäran skickas. Det innebär att om anropsbegäran skickas med Java API kan ett anropssvar hämtas med Java API. Anta till exempel att en åtgärd ändrar ett PDF-dokument. Du kan hämta det ändrade PDF-dokumentet genom att hämta returvärdet för Java-metoden som anropade tjänsten.
+  Ett anropssvar kan hämtas på samma sätt som en anropsbegäran skickas. Det innebär att om anropsbegäran skickas med Java API kan ett anropssvar hämtas med Java API. Anta till exempel att en åtgärd ändrar ett PDF-dokument. Du kan hämta det ändrade PDF-dokumentet genom att hämta returvärdet för Java-metoden som anropade tjänsten.
 
-   När en långvarig process anropas innehåller ett anropssvar ett identifierarvärde som är associerat med anropsbegäran. Med det här identifierarvärdet kan du kontrollera processens status vid ett senare tillfälle. Tänk dig till exempel den långa tjänsten MortgageLoan. Med hjälp av identifierarvärdet kan du kontrollera om processen har slutförts. (Se [Anropa personalcentrerade, långlivade processer](/help/forms/developing/invoking-human-centric-long-lived.md#invoking-human-centric-long-lived-processes).)
+  När en långvarig process anropas innehåller ett anropssvar ett identifierarvärde som är associerat med anropsbegäran. Med det här identifierarvärdet kan du kontrollera processens status vid ett senare tillfälle. Tänk dig till exempel den långa tjänsten MortgageLoan. Med hjälp av identifierarvärdet kan du kontrollera om processen har slutförts. (Se [Anropa personalcentrerade, långlivade processer](/help/forms/developing/invoking-human-centric-long-lived.md#invoking-human-centric-long-lived-processes).)
 
-   I följande diagram visas ett klientprogram (som använder Java API) som anropar en tjänst.
+  I följande diagram visas ett klientprogram (som använder Java API) som anropar en tjänst.
 
-   När ett klientprogram anropar en tjänst inträffar tre händelser:
+  När ett klientprogram anropar en tjänst inträffar tre händelser:
 
    1. Ett klientprogram skickar en anropsbegäran till en tjänst.
    1. Tjänsten utför den åtgärd som anges i anropsbegäran.
@@ -85,7 +85,7 @@ Tjänstbehållaren har följande funktioner:
 
 **Se även**
 
-[Förstå AEM Forms-processer](/help/forms/developing/aem-forms-processes.md#understanding-aem-forms-processes)
+[Förstå AEM Forms processer](/help/forms/developing/aem-forms-processes.md#understanding-aem-forms-processes)
 
 [Anropa AEM Forms med (borttaget för AEM) AEM Forms Remoting](/help/forms/developing/invoking-aem-forms-using-remoting.md#invoking-aem-forms-using-remoting)
 

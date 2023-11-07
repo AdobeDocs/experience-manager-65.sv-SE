@@ -11,9 +11,9 @@ discoiquuid: 5855d21b-340c-4139-aabe-c3a534cedb98
 docset: aem65
 feature: Interactive Communication
 exl-id: 3d15a723-df6c-4b4a-992e-a6636f4cf3dc
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1312'
+source-wordcount: '1310'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ Användargränssnittet för redigering [Interaktiv kommunikation](/help/forms/us
 * WYSIWYG-dokumentredigerare med dra-och-släpp
 * Integrerad databas för resurser - de resurser som överförs till och skapas på servern finns i resursläsaren i redigeringsgränssnittet för interaktiv kommunikation
 
-När du [skapa en ny eller redigera en befintlig interaktiv kommunikation](../../forms/using/create-interactive-communication.md)använder du följande element i användargränssnittet:
+När du [skapa eller redigera en befintlig interaktiv kommunikation](../../forms/using/create-interactive-communication.md)använder du följande element i användargränssnittet:
 
 * [Sidebar](#sidebar)
 * [Verktygsfältet Sida](#page-toolbar)

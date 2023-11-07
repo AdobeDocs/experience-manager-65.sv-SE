@@ -7,9 +7,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: coding
 role: Developer
 exl-id: 3139564f-9346-4933-8e39-2e1642bff097
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '9901'
+source-wordcount: '9888'
 ht-degree: 0%
 
 ---
@@ -143,7 +143,7 @@ I följande tabell visas WSDL-definitioner för tjänsten (förutsatt att AEM Fo
 
 **WSDL-definitioner för AEM Forms Process**
 
-Du måste ange programnamnet och processnamnet i WSDL-definitionen för att komma åt en WSDL som tillhör en process som skapats i Workbench. Anta att namnet på programmet är `MyApplication` och processens namn är `EncryptDocument`. Ange i så fall följande WSDL-definition:
+Ange programnamnet och processnamnet i WSDL-definitionen för att få åtkomst till en WSDL som tillhör en process som skapats i Workbench. Anta att namnet på programmet är `MyApplication` och processens namn är `EncryptDocument`. Ange i så fall följande WSDL-definition:
 
 ```java
  http://localhost:8080/soap/services/MyApplication/EncryptDocument?wsdl
@@ -208,7 +208,7 @@ The `MTOM` och `swaRef` endast i AEM Forms. Du kan bara använda de nya fälten 
 
 **Tillhandahålla BLOB-objekt i serviceförfrågningar**
 
-Om en AEM Forms-tjänståtgärd kräver en `BLOB` typ som indatavärde, skapa en instans av `BLOB` skriva in programlogiken. (Många webbtjänstsnabbkommandon finns i *Programmera med AEM* visa hur du arbetar med datatypen BLOB.)
+Om en AEM Forms-tjänståtgärd kräver en `BLOB` typ som indatavärde, skapa en instans av `BLOB` skriva in programlogiken. (Många av webbtjänstens snabbkommandon börjar i *Programmera med AEM* visa hur du arbetar med datatypen BLOB.)
 
 Tilldela värden till fält som tillhör `BLOB` -instans enligt följande:
 
@@ -357,7 +357,7 @@ Du kan använda JAX-WS för att konvertera en Forms-tjänst-WSDL till Java-proxy
 1. Installera JDK 1.6 eller senare.
 
    * Lägg till bin-katalogen för JDK i klassökvägen.
-   * Lägg till JRE-katalogen bin i klassökvägen. Den här behållaren finns i `[JDK_INSTALL_LOCATION]/jre` katalog.
+   * Lägg till JRE-katalogen bin i klassökvägen. Den här behållaren är i `[JDK_INSTALL_LOCATION]/jre` katalog.
    * Ange `JAVA_HOME` systemvariabel till den katalog där du installerade JDK.
 
    JDK 1.6 innehåller wimport-programmet som används i filen build.xml. JDK 1.5 innehåller inte det programmet.
@@ -431,7 +431,7 @@ Du kan använda JAX-WS för att konvertera en Forms-tjänst-WSDL till Java-proxy
 
 1. Paketera JAVA-filerna i en JAR-fil. Om du arbetar med Eclipse gör du så här:
 
-   * Skapa ett nytt Java-projekt som används för att paketera JAVA-proxyfilerna i en JAR-fil.
+   * Skapa ett Java-projekt som används för att paketera JAVA-proxyfilerna i en JAR-fil.
    * Skapa en källmapp i projektet.
    * Skapa en `com.adobe.idp.services` i källmappen.
    * Välj `com.adobe.idp.services` paketera och sedan importera JAVA-filerna från mappen adobe/idp/services till paketet.
@@ -440,11 +440,11 @@ Du kan använda JAX-WS för att konvertera en Forms-tjänst-WSDL till Java-proxy
    * Ställ in Java-kompilatorns kompatibilitetsnivå till 5.0 eller högre.
    * Bygg projektet.
    * Exportera projektet som en JAR-fil.
-   * Importera den här JAR-filen i ett klientprojekts klassökväg. Importera dessutom alla JAR-filer som finns i &lt;install directory=&quot;&quot;>\Adobe\Adobe_Experience_Manager_forms\sdk\client-libs\thirdparty.
+   * Importera den här JAR-filen i ett klientprojekts klassökväg. Importera dessutom alla JAR-filer i &lt;install directory=&quot;&quot;>\Adobe\Adobe_Experience_Manager_forms\sdk\client-libs\thirdparty.
 
    >[!NOTE]
    >
-   >Alla Java-webbtjänstsnabbstarter (utom Forms-tjänsten) som finns i Programmering med AEM formulär skapar Java-proxyfiler med JAX-WS. Dessutom startar alla Java-webbtjänstsnabbstarter med SwaRef. (Se [Anropa AEM Forms med SwaRef](#invoking-aem-forms-using-swaref).)
+   >Alla Java-webbtjänstsnabbstarter (utom Forms-tjänsten) i Programmering med AEM formulär skapar Java-proxyfiler med JAX-WS. Dessutom startar alla Java-webbtjänstsnabbstarter med SwaRef. (Se [Anropa AEM Forms med SwaRef](#invoking-aem-forms-using-swaref).)
 
 **Se även**
 
@@ -669,7 +669,7 @@ Du kan anropa en AEM Forms-tjänst med hjälp av Java-proxyklasser och Base64. A
    >Ersätt `hiro-xp` *med IP-adressen till J2EE-programtjänstleverantören som är värd för AEM Forms.*
 
 1. Paketera Java-proxyklasserna som skapats med JAX-WS i en JAR-fil.
-1. Inkludera JAR-proxyfilen för Java och JAR-filerna som finns i följande sökväg:
+1. Inkludera JAR-proxyfilen för Java och JAR-filerna i följande sökväg:
 
    &lt;install directory=&quot;&quot;>\Adobe\Adobe_Experience_Manager_forms\sdk\client-libs\thirdparty
 
@@ -864,7 +864,7 @@ Anropa `MyApplication/EncryptDocument` utför följande steg med Java-proxyfiler
    >Ersätt `hiro-xp` *med IP-adressen till J2EE-programservern som är värd för AEM Forms.*
 
 1. Paketera Java-proxyklasserna som skapats med JAX-WS i en JAR-fil.
-1. Inkludera JAR-proxyfilen för Java och JAR-filerna som finns i följande sökväg:
+1. Inkludera JAR-proxyfilen för Java och JAR-filerna i följande sökväg:
 
    &lt;install directory=&quot;&quot;>\Adobe\Adobe_Experience_Manager_forms\sdk\client-libs\thirdparty
 
@@ -966,7 +966,7 @@ Du kan anropa `MyApplication/EncryptDocument` -tjänst (som skapades i Workbench
 1. Anropa `MyApplication/EncryptDocument` genom att anropa `MyApplication_EncryptDocumentService` objektets `invoke` metoden och skicka `BLOB` -objekt. Den här processen returnerar ett krypterat PDF-dokument i en `BLOB` -objekt.
 1. Skapa en `System.UriBuilder` genom att använda dess konstruktor och skicka värdet för det returnerade `BLOB` objektets `remoteURL` datamedlem.
 1. Konvertera `System.UriBuilder` objekt till `System.IO.Stream` -objekt. (Den snabbstart på C# som följer den här listan visar hur du utför den här uppgiften.)
-1. Skapa en bytearray och fyll i den med data som finns i `System.IO.Stream` -objekt.
+1. Skapa en bytearray och fyll i den med data i `System.IO.Stream` -objekt.
 1. Skapa en `System.IO.BinaryWriter` genom att anropa dess konstruktor och skicka `System.IO.FileStream` -objekt.
 1. Skriv bytearrayinnehållet till en PDF-fil genom att anropa `System.IO.BinaryWriter` objektets `Write` och skicka bytearrayen.
 
@@ -987,7 +987,7 @@ Du kan anropa en AEM Forms-tjänst med hjälp av Java-proxyklasser och BLOB-data
    >Ersätt `hiro-xp` *med IP-adressen till J2EE-programservern som är värd för AEM Forms.*
 
 1. Paketera Java-proxyklasserna som skapats med JAX-WS i en JAR-fil.
-1. Inkludera JAR-proxyfilen för Java och JAR-filerna som finns i följande sökväg:
+1. Inkludera JAR-proxyfilen för Java och JAR-filerna i följande sökväg:
 
    &lt;install directory=&quot;&quot;>\Adobe\Adobe_Experience_Manager_forms\sdk\client-libs\thirdparty
 
@@ -1106,7 +1106,7 @@ Du kan anropa en Forms-tjänst med DIME. Tänk på `MyApplication/EncryptDocumen
 1. Anropa `EncryptDocumentServiceWse.RequestSoapContext.Attachments.Add` och skicka `Microsoft.Web.Services2.Dime.DimeAttachment` -objekt.
 1. Anropa `MyApplication/EncryptDocument` genom att anropa `EncryptDocumentServiceWse` objektets `invoke` metoden och skicka `BLOB` som innehåller DIME-bilagan. Den här processen returnerar ett krypterat PDF-dokument i en `BLOB` -objekt.
 1. Hämta bilageidentifierarvärdet genom att hämta värdet för det returnerade `BLOB` objektets `attachmentID` datamedlem.
-1. Iterera genom de bifogade filerna som finns i `EncryptDocumentServiceWse.ResponseSoapContext.Attachments` och använd ID-värdet för bifogade filer för att hämta det krypterade PDF-dokumentet.
+1. Iterera genom de bifogade filerna i `EncryptDocumentServiceWse.ResponseSoapContext.Attachments` och använd ID-värdet för bifogade filer för att hämta det krypterade PDF-dokumentet.
 1. Hämta en `System.IO.Stream` genom att hämta värdet för `Attachment` objektets `Stream` datamedlem.
 1. Skapa en bytearray och skicka bytearrayen till `System.IO.Stream` objektets `Read` -metod. Den här metoden fyller i bytearrayen med en dataström som representerar det krypterade PDF-dokumentet.
 1. Skapa en `System.IO.FileStream` genom att anropa dess konstruktor och skicka ett strängvärde som representerar filplatsen PDF. Det här objektet representerar det krypterade PDF-dokumentet.

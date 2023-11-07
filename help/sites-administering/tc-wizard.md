@@ -3,9 +3,9 @@ title: Guiden Kopiera språk
 description: Läs om hur du använder guiden för språkkopiering i Adobe Experience Manager.
 feature: Language Copy
 exl-id: 99f9929f-26de-4e95-9ee3-d70512d53bb7
-source-git-commit: 2d87022aa2223df261e245fba65df054c041cd69
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '215'
+source-wordcount: '214'
 ht-degree: 2%
 
 ---
@@ -40,7 +40,7 @@ Så här öppnar du guiden:
    >
    >Som standard finns det bara en översättningsinställning. Om du vill kunna välja andra inställningar måste du först konfigurera molnkonfigurationer. Se [Konfigurera översättningsintegreringsramverket](/help/sites-administering/tc-tic.md).
 
-1. The **Nästa** för dig till **Översätt** steg i guiden. Här kan du välja mellan att skapa enbart strukturen, skapa ett nytt översättningsprojekt eller lägga till i ett befintligt översättningsprojekt.
+1. The **Nästa** för dig till **Översätt** steg i guiden. Här kan du välja mellan att skapa enbart strukturen, skapa ett översättningsprojekt eller lägga till i ett befintligt översättningsprojekt.
 
    >[!NOTE]
    >

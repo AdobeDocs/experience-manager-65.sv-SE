@@ -5,7 +5,7 @@ contentOwner: AG
 role: User
 feature: Asset Management,Developer Tools
 exl-id: 12c92aad-3a1d-486e-a830-31de2fc6d07b
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '1503'
 ht-degree: 1%
@@ -89,7 +89,7 @@ Du kan redigera en sammanställning direkt när du har skapat den. Du kan även 
 
    >[!NOTE]
    >
-   >Se till att [!DNL Experience Manager] driftsättningen är integrerad med [!DNL InDesign Server] för att aktivera [!DNL Experience Manager Assets] för att extrahera data från [!DNL InDesign] och göra den tillgänglig för redigering. Mer information finns i [integrera Experience Manager Assets med InDesign Server](/help/assets/indesign.md).
+   >Se till att [!DNL Experience Manager] driftsättningen är integrerad med [!DNL InDesign Server] aktivera [!DNL Experience Manager Assets] för att extrahera data från [!DNL InDesign] och göra den tillgänglig för redigering. Mer information finns i [integrera Experience Manager Assets med InDesign Server](/help/assets/indesign.md).
 
 1. Om du vill ändra texten i ett redigerbart fält klickar du på textfältet i listan med redigerbara fält och redigerar texten i fältet.
 
@@ -120,22 +120,20 @@ Du kan redigera en sammanställning direkt när du har skapat den. Du kan även 
    >
    >* Bilderna bäddas inte in i den underliggande [!DNL InDesign] mall.
    >* Bilderna länkas från det lokala filsystemet.
-
    >
    >Aktivera [!DNL Experience Manager] Så här löser du bilderna:
    >
    >* Bädda in bilder när du skapar [!DNL InDesign] mallar (se [Om länkar och inbäddade bilder](https://helpx.adobe.com/indesign/using/graphics-links.html)).
    >* Montera [!DNL Experience Manager] till det lokala filsystemet och mappa sedan saknade ikoner med befintliga resurser i [!DNL Experience Manager].
-
    >
-   >Mer information om att arbeta med [!DNL InDesign] dokument, se [bästa sättet att arbeta med InDesign-dokument i Experience Manager](https://helpx.adobe.com/experience-manager/kb/best-practices-idd-docs-aem.html).
+   >Mer information om att arbeta med [!DNL InDesign] dokument, se [bästa sättet att arbeta med InDesign dokument i Experience Manager](https://helpx.adobe.com/experience-manager/kb/best-practices-idd-docs-aem.html).
 
 1. Om du vill skapa en PDF-återgivning för broschyren väljer du alternativet Acrobat i dialogrutan och klickar sedan på **[!UICONTROL Continue]**.
 1. Säkerheten skapas i den mapp du började med. Om du vill visa återgivningarna öppnar du säkerheterna och väljer **[!UICONTROL Renditions]** från listan GlobalNav.
 
    ![chlimage_1-118](assets/chlimage_1-323.png)
 
-1. Klicka på återgivningen PDF i listan över återgivningar för att hämta PDF-filen. Öppna filen PDF för att granska materialet.
+1. Klicka på återgivningen PDF i listan över återgivningar för att hämta PDF-filen. Öppna PDF-filen för att granska materialet.
 
    ![chlimage_1-119](assets/chlimage_1-324.png)
 
@@ -176,6 +174,6 @@ Du kan redigera en sammanställning direkt när du har skapat den. Du kan även 
    >
    >Du kan inte redigera en sammanfogad säkerhet senare eller använda den för att skapa annan säkerhet.
 
-## God praxis och begränsningar {#best-practices-limitations-tips}
+## Bästa praxis och begränsningar {#best-practices-limitations-tips}
 
 * The [!DNL InDesign] redigerare i [!DNL Experience Manager] fungerar på taggnivå och all text under en tagg betraktas som en enda enhet. Om du vill bevara textformatering och format när du redigerar, lägger du till märkord i varje stycke (eller text med olika format) separat.

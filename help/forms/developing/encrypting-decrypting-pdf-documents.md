@@ -11,9 +11,9 @@ topic-tags: operations
 discoiquuid: 5e4bda3a-5648-4c0f-b2f8-bdbebb88f537
 role: Developer
 exl-id: d3cbca7f-9277-4d61-b198-abf4bb008f15
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '8187'
+source-wordcount: '8184'
 ht-degree: 0%
 
 ---
@@ -86,7 +86,7 @@ Du måste skaffa ett okrypterat PDF-dokument för att kunna kryptera dokumentet 
 
 Om du vill kryptera ett PDF-dokument med ett lösenord anger du fyra värden, inklusive två lösenordsvärden. Det första lösenordsvärdet används för att kryptera PDF-dokumentet och måste anges när dokumentet öppnas i PDF. Det andra lösenordsvärdet, som heter huvudlösenordsvärdet, används för att ta bort kryptering från PDF-dokumentet. Lösenordsvärdena är skiftlägeskänsliga och dessa två lösenordsvärden kan inte vara samma.
 
-Du måste ange vilka dokumentresurser i PDF som ska krypteras. Du kan kryptera hela PDF-dokumentet, allt utom dokumentets metadata eller bara dokumentets bilagor. Om du bara krypterar dokumentets bilagor uppmanas användaren att ange ett lösenord när de försöker få åtkomst till de bifogade filerna.
+Ange vilka dokumentresurser i PDF som ska krypteras. Du kan kryptera hela PDF-dokumentet, allt utom dokumentets metadata eller bara dokumentets bilagor. Om du bara krypterar dokumentets bilagor uppmanas användaren att ange ett lösenord när de försöker få åtkomst till de bifogade filerna.
 
 När du krypterar ett PDF-dokument kan du ange behörigheter som är kopplade till det skyddade dokumentet. Genom att ange behörigheter kan du styra vilka åtgärder en användare som öppnar ett lösenordskrypterat PDF-dokument får utföra. Om du till exempel vill extrahera formulärdata måste du ange följande behörigheter:
 
@@ -142,7 +142,7 @@ Kryptera ett PDF-dokument med ett lösenord med hjälp av krypterings-API (Java)
    * Skapa en `PasswordEncryptionOptionSpec` genom att anropa dess konstruktor.
    * Ange vilka PDF-dokumentresurser som ska krypteras genom att anropa `PasswordEncryptionOptionSpec` objektets `setEncryptOption` metod och skicka en `PasswordEncryptionOption` uppräkningsvärde som anger vilka dokumentresurser som ska krypteras. Om du till exempel vill kryptera hela PDF-dokumentet, inklusive dess metadata och bilagor, anger du `PasswordEncryptionOption.ALL`.
    * Skapa en `java.util.List` som lagrar krypteringsbehörigheterna med `ArrayList` konstruktor.
-   * Ange en behörighet genom att anropa `java.util.List` objekt&quot;s `add` och skickar ett uppräkningsvärde som motsvarar den behörighet som du vill ange. Om du till exempel vill ange den behörighet som tillåter en användare att kopiera data som finns i PDF-dokumentet, anger du `PasswordEncryptionPermission.PASSWORD_EDIT_COPY`. (Upprepa det här steget för varje behörighet att ange).
+   * Ange en behörighet genom att anropa `java.util.List` objekt&quot;s `add` och skickar ett uppräkningsvärde som motsvarar den behörighet som du vill ange. Om du till exempel vill ange den behörighet som gör att en användare kan kopiera data i PDF-dokumentet, anger du `PasswordEncryptionPermission.PASSWORD_EDIT_COPY`. (Upprepa det här steget för varje behörighet att ange).
    * Ange kompatibilitetsalternativet för Acrobat genom att anropa `PasswordEncryptionOptionSpec` objektets `setCompatability` och skickar ett uppräkningsvärde som anger kompatibilitetsnivån för Acrobat. Du kan till exempel ange `PasswordEncryptionCompatability.ACRO_7`.
    * Ange det lösenordsvärde som gör att en användare kan öppna det krypterade PDF-dokumentet genom att anropa `PasswordEncryptionOptionSpec` objektets `setDocumentOpenPassword` och skickar ett strängvärde som representerar det öppna lösenordet.
    * Ange det huvudlösenordsvärde som gör att en användare kan ta bort kryptering från PDF-dokumentet genom att anropa `PasswordEncryptionOptionSpec` objektets `setPermissionPassword` och skickar ett strängvärde som representerar huvudlösenordet.

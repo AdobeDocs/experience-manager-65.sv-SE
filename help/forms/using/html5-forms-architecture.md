@@ -12,9 +12,9 @@ discoiquuid: a644978e-5736-4771-918a-dfefe350a4a1
 docset: aem65
 feature: Mobile Forms
 exl-id: ed8349a1-f761-483f-9186-bf435899df7d
-source-git-commit: 4fa868f3ae4778d3a637e90b91f7c5909fe5f8aa
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2011'
+source-wordcount: '2010'
 ht-degree: 0%
 
 ---
@@ -29,11 +29,11 @@ HTML 5-formulärsfunktionen distribueras som ett paket i den inbäddade AEM och 
 
 ### Använda Sling Framework {#using-sling-framework}
 
-[Apache Sling](https://sling.apache.org/) är resurscentrerad. Den använder en begärande URL för att först matcha resursen. Varje resurs har en **sling:resourceType** (eller **sling:resourceSuperType**). Baserat på den här egenskapen, förfrågningsmetoden och egenskaperna för begärande-URL:en, väljs sedan ett sling-skript för att hantera begäran. Det här snedstrecksskriptet kan vara en JSP eller en servlet. För HTML5-formulär **Profil** noder fungerar som säljresurser och **Profilåtergivning** fungerar som ett snedstreck som hanterar begäran om att återge mobilformuläret med en viss profil. A **Profilåtergivning** är en JSP som läser parametrar från en begäran och anropar Forms OSGi Service.
+[Apache Sling](https://sling.apache.org/) är resurscentrerad. Den använder en begärande URL för att först matcha resursen. Varje resurs har en **sling:resourceType** (eller **sling:resourceSuperType**). Baserat på den här egenskapen, förfrågningsmetoden och egenskaperna för begärande-URL:en, väljs sedan ett sling-skript för att hantera begäran. Det här snedstrecksskriptet kan vara en JSP eller en servlet. För HTML5-formulär **Profil** fungerar som säljresurser och **Profilåtergivning** fungerar som ett snedstreck som hanterar begäran om att återge mobilformuläret med en viss profil. A **Profilåtergivning** är en JSP som läser parametrar från en begäran och anropar Forms OSGi Service.
 
 Mer information om REST-slutpunkten och parametrar för begäran som stöds finns i [Återger formulärmall](/help/forms/using/rendering-form-template.md).
 
-När en användare gör en begäran från en klientenhet som webbläsaren iOS eller Android™, löser Sling först profilnoden baserat på den begärda URL:en. Från den här profilnoden läses den **sling:resourceSuperType** och **sling:resourceType** för att fastställa alla tillgängliga skript som kan hantera den här formuläråtergivningsbegäran. Sedan används väljare för Sling-begäran tillsammans med begärandemetoden för att identifiera det skript som lämpar sig bäst för att hantera denna begäran. När begäran når en profilåtergivnings-JSP anropar JSP:n Forms OSGi-tjänsten.
+När en användare gör en begäran från en klientenhet som webbläsaren iOS eller Android™, löser Sling först profilnoden baserat på den begärda URL:en. Från den här profilnoden läses **sling:resourceSuperType** och **sling:resourceType** för att fastställa alla tillgängliga skript som kan hantera den här formuläråtergivningsbegäran. Sedan används väljare för Sling-begäran tillsammans med begärandemetoden för att identifiera det skript som lämpar sig bäst för att hantera denna begäran. När begäran når en profilåtergivnings-JSP anropar JSP:n Forms OSGi-tjänsten.
 
 Mer information om SLING-skriptupplösningen finns i [AEM Sling Cheat Sheet](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=en) eller [Apache Sling Url-nedbrytning](https://sling.apache.org/documentation/the-sling-engine/url-decomposition.html).
 
@@ -52,7 +52,7 @@ HTML5-formulär cache-lagrar inte mallar som saknar referenser till fragment och
 Forms OSGi-tjänsten bearbetar en begäran i två steg:
 
 * **Skapa layout och ursprungligt formulärtillstånd**: Forms OSGi-renderingstjänsten anropar Forms Cache-komponenten för att avgöra om formuläret redan har cache-lagrats och inte har ogiltigförklarats. Om formuläret är cache-lagrat och giltigt, skickas det genererade HTML från cachen. Om formuläret blir ogiltigt genererar Forms OSGi-renderingstjänsten den första formulärlayouten och formulärläget i XML-format. Denna XML omvandlas till HTML layout och inledande JSON-formulärtillstånd av tjänsten Forms OSGi och cachas sedan för efterföljande förfrågningar.
-* **Förifylld Forms**: Under återgivningen, om en användare begär formulär med förifyllda data, anropar Forms OSGi-renderingstjänsten Forms tjänstbehållare och genererar ett nytt formulärtillstånd med sammanfogade data. Eftersom layouten redan genereras i ovanstående steg är anropet snabbare än det första anropet. Detta anrop utför bara datasammanfogningen och kör skripten på data.
+* **Förifylld Forms**: Vid återgivning och om en användare begär formulär med förifyllda data, anropar Forms OSGi-renderingstjänsten Forms tjänstbehållare och genererar ett nytt formulärtillstånd med sammanfogade data. Eftersom layouten redan genereras i ovanstående steg är anropet snabbare än det första anropet. Detta anrop utför bara datasammanfogningen och kör skripten på data.
 
 Om det finns någon uppdatering i formuläret eller något av resurserna som används i formuläret, upptäcks den av formulärets cachekomponent och cachen för det aktuella formuläret ogiltigförklaras. När Forms OSGi-tjänsten har slutfört bearbetningen lägger Profile Renderer jsp till JavaScript-biblioteksreferenser och format i det här formuläret och returnerar svaret till klienten. En vanlig webbserver som [Apache](https://httpd.apache.org/) kan användas här med HTML-komprimering aktiverat. En webbserver skulle minska svarsstorleken, nätverkstrafiken och den tid som krävs för att strömma data mellan servern och klientdatorn avsevärt.
 
@@ -60,7 +60,7 @@ När en användare skickar formuläret skickar webbläsaren formulärets status 
 
 ## Komponenter {#components}
 
-Du behöver AEM Forms tilläggspaket för att kunna aktivera HTML5-formulär. Information om hur du installerar AEM Forms tilläggspaket finns i [Installera och konfigurera AEM Forms](../../forms/using/installing-configuring-aem-forms-osgi.md).
+Du behöver AEM Forms tilläggspaket för att kunna aktivera HTML5-formulär. Mer information om hur du installerar AEM Forms tilläggspaket finns i [Installera och konfigurera AEM Forms](../../forms/using/installing-configuring-aem-forms-osgi.md).
 
 ### OSGi Components (adobe-lc-forms-core.jar) {#osgi-components-adobe-lc-forms-core-jar}
 
@@ -101,7 +101,7 @@ HTML5-formulär använder cachelagring för att optimera dataflödet och svarsti
  </tbody>
 </table>
 
-HTML5-formulär utför cachelagring i minnet med LRU-strategi. Om cachestrategin är inställd på Ingen skapas ingen cache och befintliga cachedata rensas, om det finns några. Förutom cachelagringsstrategin kan du även konfigurera den totala cachestorleken i minnet, vilket kan bidra till att få den maximala gränsen för cachestorleken och om den går längre kommer LRU-läget att frigöra cacheresurser att användas.
+HTML5-formulär utför cachelagring i minnet med LRU-strategi. Om cachestrategin är inställd på Ingen skapas ingen cache och befintliga cachedata rensas, om det finns några. Förutom cachelagringsstrategin kan du även konfigurera den totala cachestorleken i minnet, vilket kan bidra till att få den maximala gränsen för cachestorleken och om den går längre kommer LRU-läget att frigöra cacheresurser.
 
 >[!NOTE]
 >
@@ -111,7 +111,7 @@ HTML5-formulär utför cachelagring i minnet med LRU-strategi. Om cachestrategin
 
 Med konfigurationstjänsten kan du justera konfigurationsparametrar och cacheinställningar för HTML5-formulär.
 
-Om du vill uppdatera de här inställningarna går du till CQ Felix Admin Console (finns på https://&lt;&#39;[server]:[port]&#39;/system/console/configMgr), sök efter och välj Mobile Forms Configuration.
+Om du vill uppdatera inställningarna går du till CQ Felix Admin Console (finns på https://&lt;&#39;[server]:[port]&#39;/system/console/configMgr), sök efter och välj Mobile Forms Configuration.
 
 Du kan konfigurera cachestorleken eller inaktivera cacheminnet med hjälp av konfigurationstjänsten. Du kan även aktivera felsökning med parametern Felsökningsalternativ. Mer information om felsökning av formulär finns på [Felsöka HTML5-formulär](/help/forms/using/debug.md).
 
@@ -135,7 +135,7 @@ Mer information finns i [Form Bridge](/help/forms/using/form-bridge-apis.md) art
 
 #### Layoutmotor {#layout-engine}
 
-Layouten och den visuella aspekten av HTML5-formulär baseras på SVG 1.1-, jQuery-, BackBone- och CSS3-funktioner. Det ursprungliga utseendet för ett formulär genereras och cachelagras på servern. Den inledande layouten och eventuella ytterligare ändringar av formulärlayouten hanteras på klienten. För att uppnå detta innehåller körtidspaketet en layoutmotor som är skriven i JavaScript och baserad på jQuery/Backbone. Den här motorn hanterar allt dynamiskt beteende, som Lägg till/ta bort repeterbara instanser och Utbyggbar objektlayout. Den här layoutmotorn återger ett formulär en sida i taget. Inledningsvis visar en användare bara en sida och den vågräta rullningslisten bara första sidan. När en användare rullar nedåt börjar dock nästa sida återgivningen. Den här återgivningen sida för sida minskar den tid som krävs för att återge den första sidan i en webbläsare och förbättrar formulärets upplevda prestanda. Motorn/biblioteket är en del av CQ-klientbiblioteket med kategorinamnet **xfaforms.profile**.
+Layouten och den visuella aspekten av HTML5-formulären baseras på SVG 1.1-, jQuery-, BackBone- och CSS3-funktioner. Det ursprungliga utseendet för ett formulär genereras och cachelagras på servern. Den inledande layouten och eventuella ytterligare ändringar av formulärlayouten hanteras på klienten. För att uppnå detta innehåller körtidspaketet en layoutmotor som är skriven i JavaScript och baserad på jQuery/Backbone. Den här motorn hanterar allt dynamiskt beteende, som Lägg till/ta bort repeterbara instanser och Utbyggbar objektlayout. Den här layoutmotorn återger ett formulär en sida i taget. Inledningsvis visar en användare bara en sida och den vågräta rullningslisten bara första sidan. När en användare rullar nedåt börjar dock nästa sida återgivningen. Den här återgivningen sida för sida minskar den tid som krävs för att återge den första sidan i en webbläsare och förbättrar formulärets upplevda prestanda. Motorn/biblioteket är en del av CQ-klientbiblioteket med kategorinamnet **xfaforms.profile**.
 
 Layoutmotorn innehåller också en uppsättning widgetar som används för att hämta värdet för formulärfält från en användare. Dessa widgetar är modellerade som [Gränssnittswidgetar för jQuery](https://api.jqueryui.com/jQuery.widget/) som implementerar vissa ytterligare kontrakt som fungerar smidigt med Layout Engine.
 
@@ -170,13 +170,13 @@ Sling-paketet innehåller innehåll som är relaterat till profiler och profilå
 
 #### Profiler {#profiles}
 
-Profiler är resursnoder som representerar ett formulär eller Forms-familjen. På CQ-nivå är dessa profiler JCR-noder. Noderna finns under **/content** i JCR-databasen och kan finnas i alla undermappar under **/content** mapp.
+Profiler är resursnoder som representerar ett formulär eller Forms-familjen. På CQ-nivå är dessa profiler JCR-noder. Noderna finns under **/content** -mappen i JCR-databasen och kan finnas i alla undermappar under **/content** mapp.
 
 #### Profilåtergivare {#profile-renderers}
 
-Profilnoden har en egenskap **sling:resourceSuperType** med värde **xfaforms/profile**. Den här egenskapen skickar begäranden internt till snedställningsskriptet för profilnoder som finns i **/libs/xfaforms/profile** mapp. Dessa skript är JSP-sidor, som är behållare för att sätta ihop HTML-formulären och obligatoriska JS/CSS-artefakter. Sidorna innehåller referenser till:
+Profilnoden har en egenskap **sling:resourceSuperType** med värde **xfaforms/profile**. Den här egenskapen skickar begäranden internt till snedställningsskriptet för profilnoder i **/libs/xfaforms/profile** mapp. Dessa skript är JSP-sidor, som är behållare för att sätta ihop HTML-formulären och obligatoriska JS/CSS-artefakter. Sidorna innehåller referenser till:
 
-* **xfaforms.I18N.&lt;locale>**: Det här biblioteket innehåller lokaliserade data.
+* **xfaforms.I18N.&lt;locale>**: Detta bibliotek innehåller lokaliserade data.
 * **xfaforms.profile**: Det här biblioteket innehåller implementering för XFA Scripting and Layout Engine.
 
 Dessa bibliotek är modellerade som CQ Client Libraries, som utnyttjar automatisk sammanfogning, miniatyrbildnings- och komprimeringsfunktioner i JavaScript-bibliotek för CQ-ramverket.

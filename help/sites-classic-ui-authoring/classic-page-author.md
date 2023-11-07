@@ -8,7 +8,7 @@ topic-tags: page-authoring
 content-type: reference
 discoiquuid: 3fe5b6cc-1494-43e1-add7-2f7828b676ad
 exl-id: a3606d72-1bd8-4886-9285-6457dae66486
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '297'
 ht-degree: 0%
@@ -27,7 +27,7 @@ Här följer en översikt över redigering med AEM:
 
 ## Snabböversikt över funktioner som används för att skapa sidor {#quick-overview-of-features-used-for-authoring-pages}
 
-För att underlätta utvecklingen av sidor innehåller redigeringsmiljön funktioner som:
+För att du ska få hjälp med att skapa sidor innehåller redigeringsmiljön funktioner som:
 
 * **Dra och släpp**
 Komponenter (t.ex. Text, Bild) och digitala resurser (t.ex. bilder) kan placeras på sidan genom att dra och släppa dem på önskad plats.
@@ -42,7 +42,7 @@ Text- och bildkomponenter kan redigeras direkt på webbsidan utan att du behöve
 Ett flytande &quot;kontrollfönster&quot; som visas på den redigerbara sidan. Härifrån kan nya komponenter dras till sidan och sidspecifika åtgärder kan utföras.
 
 * **[Content Finder](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md#thecontentfinderclassicui)**
-Till vänster på varje redigerbar sida ger innehållssökaren snabb åtkomst till en rad olika resurser, inklusive digitala resurser (som andra bilder, element och dokument i Flash), andra sidor och stycken. Dessa objekt kan dras till sidan; till exempel för att placera resurser eller skapa länkar till andra sidor.
+Till vänster på varje redigerbar sida ger innehållssökaren snabb åtkomst till en rad olika resurser, inklusive digitala resurser (som andra Flashar, element och dokument), andra sidor och stycken. Dessa objekt kan dras till sidan, t.ex. för att placera resurser eller skapa länkar till andra sidor.
 
 * **Snabbmeny**
 Högerklick på de flesta element på skärmen (till exempel stycken på sidan) öppnar en snabbmeny med lämpliga åtgärdsalternativ.

@@ -10,9 +10,9 @@ topic-tags: projects
 content-type: reference
 discoiquuid: fb354c72-debb-4fb6-9ccf-56ff5785c3ae
 exl-id: 62586c8e-dab4-4be9-a44a-2c072effe3c0
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '985'
+source-wordcount: '981'
 ht-degree: 0%
 
 ---
@@ -36,7 +36,7 @@ Det enklaste sättet är att ge **projekt-användare** gruppläsåtkomst till `/
 
 ## Skapa ett projekt {#creating-a-project}
 
-Följ de här stegen för att skapa ett nytt projekt.
+Följ de här stegen för att skapa ett projekt.
 
 1. I **Projekt** konsol, tryck eller klicka **Skapa** för att öppna **Skapa projekt** guide.
 1. Välj en mall och klicka på **Nästa**. Du kan läsa mer om standardprojektmallarna [här.](/help/sites-authoring/projects.md#project-templates)
@@ -76,7 +76,7 @@ Så här lägger du till objekt i en platta:
 
    ![Tile chevron](assets/project-tile-create-task.png)
 
-1. Lägg till objektet i rutan på samma sätt som när du skapar en ny platta. Projektpaneler beskrivs [här.](/help/sites-authoring/projects.md#project-tiles)
+1. Lägg till objektet i rutan på samma sätt som när du skapar en platta. Projektpaneler beskrivs [här.](/help/sites-authoring/projects.md#project-tiles)
 
 ## Visa projektinformation {#viewing-project-info}
 

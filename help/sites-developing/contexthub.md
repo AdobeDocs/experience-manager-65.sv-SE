@@ -1,18 +1,14 @@
 ---
 title: ContextHub
-seo-title: ContextHub
 description: ContextHub är ett ramverk för att lagra, ändra och presentera kontextdata
-seo-description: ContextHub is a framework for storing, manipulating, and presenting context data
-uuid: 14e6ff4f-ffbe-454a-b2ec-a35333526e27
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: personalization
 content-type: reference
-discoiquuid: acf5c17a-95b7-43ba-9734-241e20f4f374
 exl-id: 3fd50655-7461-4900-a3b8-c01b04c7ba7a
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '286'
+source-wordcount: '284'
 ht-degree: 0%
 
 ---
@@ -29,7 +25,7 @@ ContextHub är ett ramverk för att lagra, ändra och presentera kontextdata. Me
 >
 >Sökvägen som innehåller exempelkonfigurationen för ContextHub som används av [Referensimplementering för Vi.butik](/help/sites-developing/we-retail.md) ( `/libs/settings/cloudsettings/legacy`) ska bara användas som referens när du skapar en egen konfiguration.
 >
->Den ska inte användas i ett projekt som din egen ContextHub-konfiguration.
+>Använd inte i ett projekt som din egen ContextHub-konfiguration.
 
 ## Persistence {#persistence}
 
@@ -48,7 +44,7 @@ ContextHub innehåller en segmenteringsmotor som hanterar segment och fastställ
 
 ## Presentation {#presentation}
 
-The [ContextHub-verktygsfältet](/help/sites-authoring/ch-previewing.md) gör det möjligt för marknadsförare och författare att se och ändra butiksdata för att simulera användarupplevelsen när de skapar sidor. Verktygsfältet består av grupper med gränssnittsmoduler som ger åtkomst till ContextHub-butiker.
+The [ContextHub-verktygsfältet](/help/sites-authoring/ch-previewing.md) gör det möjligt för marknadsförare och författare att se och ändra butiksdata för att simulera användarupplevelsen när de skapar sidor. Verktygsfältet består av grupper med UI-moduler som ger åtkomst till ContextHub-butiker.
 
 Varje ContextHub-gränssnittsmodul är en instans av en fördefinierad modultyp:
 

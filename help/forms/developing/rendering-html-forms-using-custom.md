@@ -1,20 +1,16 @@
 ---
 title: Återge HTML Forms med anpassade CSS-filer
-seo-title: Rendering HTML Forms Using Custom CSS Files
 description: Använd tjänsten Forms för att referera till anpassade CSS-filer för att återge HTML-formulär som svar på en HTTP-begäran från en webbläsare. Du kan återge ett HTML-formulär som använder en CSS-fil med Java API och Web Service API.
-seo-description: Use the Forms service to refer to custom CSS files to render HTML forms in response to an HTTP request from a web browser. You can render an HTML form that uses a CSS file using the Java API and Web Service API.
-uuid: a44e96f1-001d-48a2-8c96-15cb9d0c71b3
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/rendering_forms
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
-discoiquuid: 8fe7c072-7df0-44b7-92d0-bf39dc1e688a
 role: Developer
 exl-id: 5fa385a7-f030-4c0c-8938-0991d02ef361
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1688'
+source-wordcount: '1687'
 ht-degree: 0%
 
 ---
@@ -25,7 +21,7 @@ ht-degree: 0%
 
 Forms-tjänsten återger HTML-formulär som svar på en HTTP-begäran från en webbläsare. När du återger ett HTML-formulär kan Forms-tjänsten referera till en anpassad CSS-fil. Du kan skapa en anpassad CSS-fil som uppfyller dina affärskrav och referera till den CSS-filen när du använder tjänsten Forms för att återge formulär i HTML.
 
-Forms-tjänsten tolkar den anpassade CSS-filen tyst. Det innebär att Forms-tjänsten inte rapporterar fel som kan uppstå om den anpassade CSS-filen inte uppfyller CSS-standarderna. I det här fallet ignorerar Forms-tjänsten formatet och fortsätter med de återstående formaten som finns i CSS-filen.
+Forms-tjänsten tolkar den anpassade CSS-filen tyst. Det innebär att Forms-tjänsten inte rapporterar fel som kan uppstå om den anpassade CSS-filen inte uppfyller CSS-standarderna. I det här fallet ignorerar Forms-tjänsten formatet och fortsätter med de återstående formaten i CSS-filen.
 
 I följande lista anges format som stöds i en anpassad CSS-fil:
 
@@ -127,7 +123,7 @@ När Forms-tjänsten återger ett HTML-formulär returneras ett formulärdatafl�
 
 1. Skriv formulärdataströmmen till klientens webbläsare
 
-   * Skapa en `com.adobe.idp.Document` genom att anropa `FormsResult` objekt&quot;s `getOutputContent` -metod.
+   * Skapa en `com.adobe.idp.Document` genom att anropa `FormsResult` objekt `getOutputContent` -metod.
    * Hämta innehållstypen för `com.adobe.idp.Document` genom att anropa dess `getContentType` -metod.
    * Ange `javax.servlet.http.HttpServletResponse` objektets innehållstyp genom att anropa dess `setContentType` metoden och skicka innehållstypen för `com.adobe.idp.Document` -objekt.
    * Skapa en `javax.servlet.ServletOutputStream` som används för att skriva formulärdataströmmen till klientens webbläsare genom att anropa `javax.servlet.h\ttp.HttpServletResponse` objektets `getOutputStream` -metod.
@@ -175,7 +171,7 @@ När Forms-tjänsten återger ett HTML-formulär returneras ett formulärdatafl�
    * A `URLSpec` objekt som lagrar de URI-värden som krävs för att återge ett HTML-formulär.
    * A `java.util.HashMap` objekt som lagrar bifogade filer. Det här är en valfri parameter som du kan ange `null` om du inte vill bifoga filer till formuläret.
    * En tom `com.adobe.idp.services.holders.BLOBHolder` objekt som fylls i av `(Deprecated) renderHTMLForm` -metod. Det här parametervärdet lagrar det återgivna formuläret.
-   * En tom `com.adobe.idp.services.holders.BLOBHolder` objekt som fylls i av `(Deprecated) renderHTMLForm` -metod. Den här parametern lagrar XML-data för utdata.
+   * En tom `com.adobe.idp.services.holders.BLOBHolder` objekt som fylls i av `(Deprecated) renderHTMLForm` -metod. Den här parametern lagrar XML-utdata.
    * En tom `javax.xml.rpc.holders.LongHolder` objekt som fylls i av `(Deprecated) renderHTMLForm` -metod. Det här argumentet lagrar antalet sidor i formuläret.
    * En tom `javax.xml.rpc.holders.StringHolder` objekt som fylls i av `(Deprecated) renderHTMLForm` -metod. Det här argumentet lagrar språkets värde.
    * En tom `javax.xml.rpc.holders.StringHolder` objekt som fylls i av `(Deprecated) renderHTMLForm` -metod. Det här argumentet lagrar återgivningsvärdet som används för HTML.

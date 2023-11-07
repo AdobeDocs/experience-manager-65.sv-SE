@@ -2,16 +2,16 @@
 title: Sammansatta komponenter i SPA
 description: Lär dig hur du skapar egna sammansatta komponenter, komponenter som består av andra komponenter, som fungerar med AEM Single-Page Application (SPA) Editor.
 exl-id: 02b6c698-d169-467a-9168-9fa6181bed6c
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '783'
+source-wordcount: '781'
 ht-degree: 0%
 
 ---
 
 # Sammansatta komponenter i SPA {#composite-components-in-spas}
 
-Sammansatta komponenter utnyttjar den modulära karaktären hos AEM komponenter genom att kombinera flera baskomponenter till en enda komponent. Ett vanligt användningsfall för sammansatta komponenter är kortkomponenten som består av en kombination av bild- och textkomponenterna.
+Komponenter som består av sammansatta komponenter är modulära AEM genom att kombinera flera baskomponenter till en enda komponent. Ett vanligt användningsfall för sammansatta komponenter är kortkomponenten som består av en kombination av bild- och textkomponenterna.
 
 När sammansatta komponenter implementeras på rätt sätt i redigeringsramverket för AEM Single Page Application (SPA) kan innehållsförfattarna dra och släppa sådana komponenter som vilken annan komponent som helst, men ändå ha möjlighet att redigera varje komponent som utgör den sammansatta komponenten separat.
 
@@ -19,7 +19,7 @@ I den här artikeln visas hur du kan lägga till en sammansatt komponent i ett e
 
 ## Användningsfall {#use-case}
 
-I den här artikeln används den vanliga kortkomponenten som exempel på hur den används. Kort är ett vanligt gränssnittselement för många digitala upplevelser och består vanligtvis av en bild och tillhörande text eller bildtext. En författare vill kunna dra och släppa hela kortet, men kan redigera kortets bild individuellt samt anpassa den tillhörande texten.
+I den här artikeln används den vanliga kortkomponenten som exempel på hur den används. Kort är ett vanligt gränssnittselement för många digitala upplevelser och består vanligtvis av en bild och tillhörande text eller bildtext. En författare vill kunna dra och släppa hela kortet, men kan redigera kortets bild individuellt och anpassa den tillhörande texten.
 
 ## Förutsättningar {#prerequisites}
 
@@ -33,13 +33,13 @@ Följande modeller för stöd av användning av sammansatta komponenter kräver 
 
 Det finns tre olika modeller för implementering av den sammansatta komponenten beroende på SPA implementering i AEM.
 
-* [Komponenten finns inte i AEM.](#component-does-not-exist)
-* [Komponenten finns i AEM men det obligatoriska innehållet gör det inte.](#content-does-not-exist)
+* [Komponenten finns inte i ditt AEM.](#component-does-not-exist)
+* [Komponenten finns i ditt AEM men det obligatoriska innehållet gör det inte.](#content-does-not-exist)
 * [Komponenten och dess obligatoriska innehåll finns båda i AEM.](#both-exist)
 
 I följande avsnitt ges exempel på hur du implementerar varje fall med kortkomponenten som exempel.
 
-### Komponenten finns inte i AEM. {#component-does-not-exist}
+### Komponenten finns inte i ditt AEM. {#component-does-not-exist}
 
 Börja med att skapa de komponenter som ska utgöra den sammansatta komponenten, dvs. komponenter för bilden och dess text.
 
@@ -104,7 +104,7 @@ export const AEMCard = ({ pagePath, itemPath}) => (
 );
 ```
 
-Den sammansatta komponenten kan nu placeras var som helst i programmet och platshållare för en text och en bildkomponent läggs till i SPA Editor. I exemplet nedan läggs kortkomponenten till i hemkomponenten under rubriken.
+Den sammansatta komponenten kan nu placeras var som helst i programmet och platshållare för en text och en bildkomponent läggs till i SPA. I exemplet nedan läggs kortkomponenten till i hemkomponenten under rubriken.
 
 ```javascript
 function Home() {
@@ -118,11 +118,11 @@ function Home() {
 }
 ```
 
-Då visas en tom platshållare för en text och en bild i redigeraren. När du anger värden för dessa med redigeraren lagras de på den angivna sidsökvägen, d.v.s. `/content/wknd-spa/home`  på rotnivån med de namn som anges i `itemPath`.
+Då visas en tom platshållare för text och bilder i redigeraren. När du anger värden för dessa med redigeraren lagras de på den angivna sidsökvägen, d.v.s. `/content/wknd-spa/home`  på rotnivån med de namn som anges i `itemPath`.
 
 ![Kompositkortskomponent i redigeraren](assets/composite-card.png)
 
-### Komponenten finns i AEM men det obligatoriska innehållet gör det inte. {#content-does-not-exist}
+### Komponenten finns i ditt AEM men det obligatoriska innehållet gör det inte. {#content-does-not-exist}
 
 I det här fallet har kortkomponenten redan skapats i ditt AEM med titel- och bildnoder. De underordnade noderna (text och bild) har motsvarande resurstyper.
 
@@ -130,7 +130,7 @@ I det här fallet har kortkomponenten redan skapats i ditt AEM med titel- och bi
 
 Sedan kan du lägga till den i SPA och hämta dess innehåll.
 
-1. Skapa en motsvarande komponent i SPA för detta. Se till att de underordnade komponenterna mappas till motsvarande AEM resurstyper i det SPA projektet. I det här exemplet använder vi samma `AEMText` och `AEMImage` komponenter som [i föregående fall.](#component-does-not-exist)
+1. Skapa en motsvarande komponent i SPA för detta. Se till att de underordnade komponenterna mappas till motsvarande AEM resurstyper i det SPA projektet. I detta exempel använder vi samma `AEMText` och `AEMImage` komponenter som detaljerade [i föregående fall.](#component-does-not-exist)
 
    ```javascript
    import React from 'react';

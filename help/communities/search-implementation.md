@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
 exl-id: 8af5ee58-19d7-47b6-b45d-e88006703a5d
-source-git-commit: f03d0ab9d0f491441378e16e1590d33651f064b5
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1189'
+source-wordcount: '1188'
 ht-degree: 0%
 
 ---
@@ -82,7 +82,7 @@ Oak-index skapas inte automatiskt för AEM plattformssökning, men från och med
 
 Om anpassade egenskaper används och sökningarna är långsamma, måste ytterligare index skapas för de anpassade egenskaperna för att de ska bli bättre. Om du vill behålla bärbarheten följer du [namngivningskrav](#naming-of-custom-properties) när du skapar anpassade egenskaper som är sökbara.
 
-Om du vill ändra befintliga index eller skapa egna index läser du [Fråga och indexering](../../help/sites-deploying/queries-and-indexing.md).
+Information om hur du ändrar befintliga index eller skapar anpassade index finns i [Fråga och indexering](../../help/sites-deploying/queries-and-indexing.md).
 
 The [Oak Index Manager](https://adobe-consulting-services.github.io/acs-aem-commons/features/oak-index-manager.html) finns på ACS AEM Commons. Den innehåller följande:
 

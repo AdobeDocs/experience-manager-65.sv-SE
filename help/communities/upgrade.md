@@ -11,9 +11,9 @@ topic-tags: deploying
 discoiquuid: abe5a998-bbe3-4a2b-bcf7-b490a8275219
 docset: aem65
 exl-id: ea41d35c-967c-4606-b4ec-377e817902e4
-source-git-commit: 066a61a332aa620078740d36bd7f8689282fbf14
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '624'
+source-wordcount: '621'
 ht-degree: 0%
 
 ---
@@ -61,8 +61,7 @@ För alla AEM 6.3-instanser:
 
          * Välj **Spara**
 
-      ![utilities](assets/utilities.png)
-
+     ![utilities](assets/utilities.png)
 
 ### Lokal lagring {#on-premise-storage}
 
@@ -71,7 +70,7 @@ Om den uppgraderade webbplatsen inte använde molnlagring måste eventuell befin
 Ett migreringsverktyg med öppen källkod är tillgängligt på GitHub:
 [AEM Communities UGC-migreringsverktyg](https://github.com/Adobe-Marketing-Cloud/communities-ugc-migration)
 
-### Java API:er {#java-apis}
+### Java-API:er {#java-apis}
 
 När du uppgraderar från AEM 6.0 sociala communityn till AEM 6.3 Communities bör du vara medveten om att många API:er har omorganiserats till olika paket. De flesta bör vara lätta att lösa när man använder en integrerad utvecklingsmiljö för anpassning av communityfunktioner.
 
@@ -83,7 +82,7 @@ Se även [Använda Maven for Communities](/help/communities/maven.md).
 
 The [ramverk för sociala komponenter](/help/communities/scf.md) (SCF) använder [HandtagBarJS](https://handlebarsjs.com/) (HBS) mallspråk i stället för Java Server Pages (JSP) som användes före AEM 6.0.
 
-I AEM 6.0 låg JSP-komponenterna kvar tillsammans med de nya HBS-ramverkskomponenterna på samma plats, där HBS-komponenterna vanligtvis finns i undermappar med namnet&quot;hbs&quot;.
+I AEM 6.0 låg JSP-komponenterna kvar tillsammans med de nya HBS-ramverkskomponenterna på samma plats, och HBS-komponenterna fanns vanligtvis i undermappar med namnet&quot;hbs&quot;.
 
 Från och med AEM 6.1 togs JSP-komponenterna bort helt. För Communities rekommenderas att all användning av JSP-komponenter ersätts med SCF-komponenter.
 
@@ -97,8 +96,8 @@ Förutom att flytta användargenererat innehåll från tidigare versioner går d
 
 Det finns tre generationer av communitykomponenter:
 
-**Gen 1**: CQ 5.4 till AEM 5.6.0: **kollab** -komponenter som lagrade UGC i den lokala databasen med replikering som ett sätt att synkronisera UGC över olika plattformar. Andra skillnader är implementeringen med Java Server Pages (JSP) och bloggfunktionen som bara består av redigering i författarmiljön.
+**Gen 1**: CQ 5.4 till AEM 5.6.0 är de **kollab** -komponenter som lagrade UGC i den lokala databasen med replikering som ett sätt att synkronisera UGC över olika plattformar. Andra skillnader är implementeringen med Java Server Pages (JSP) och bloggfunktionen som bara består av redigering i författarmiljön.
 
-**Gen 2**: Från AEM 5.6.1 till och med AEM 6.1 är detta en blandning av **kollab** och **social** -komponenter. AEM 6.0 introducerade [ramverk för sociala komponenter](/help/communities/scf.md) (SCF) och AEM 6.2 införde ett [gemensam UGC-butik](/help/communities/working-with-srp.md) där UGC används med [lagringsresursprovider](/help/communities/srp.md) (SRP).
+**Gen 2**: Från AEM 5.6.1 till och med AEM 6.1 är detta en blandning av **kollab** och **social** -komponenter. AEM 6.0 introducerade [ramverk för sociala komponenter](/help/communities/scf.md) (SCF) och AEM 6.2 införde ett [gemensam UGC-butik](/help/communities/working-with-srp.md) där UGC används med en [lagringsresursprovider](/help/communities/srp.md) (SRP).
 
 **Gen 3**: Från AEM 6.2 och framåt finns det bara **social** -komponenter, implementerade i SCF som HBS-komponenter (Handlebars) som kräver val av SRP för UGC.

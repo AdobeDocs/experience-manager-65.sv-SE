@@ -1,19 +1,15 @@
 ---
 title: AEM portaler och portlets
-seo-title: AEM Portals and Portlets
 description: Lär dig hur du konfigurerar och administrerar AEM som en portal och hur du konfigurerar och visar AEM i en portlet.
-seo-description: Learn how to configure and administer AEM as a portal and how to configure and display AEM content in a portlet.
-uuid: 7f9e316d-277e-4a1e-b6f3-cd89addc897b
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
 content-type: reference
-discoiquuid: 99528fda-5c8c-4034-bcbe-a4cea42f694b
 docset: aem65
 exl-id: b5f3d3a6-39c0-4aa5-8562-3cc6fa2b9e46
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '6098'
+source-wordcount: '6093'
 ht-degree: 0%
 
 ---
@@ -193,7 +189,7 @@ Så här konfigurerar du en replikeringsagent för portalen:
 
    ![screen_shot_2012-02-15at40817pm](assets/screen_shot_2012-02-15at40817pm.png)
 
-1. Dubbelklicka på den replikeringsagent som du nyss skapade. Den visas som ogiltig eftersom den ännu inte har konfigurerats.
+1. Dubbelklicka på den replikeringsagent som du skapade. Den visas som ogiltig eftersom den ännu inte har konfigurerats.
 
    ![screen_shot_2012-02-15at41001pm](assets/screen_shot_2012-02-15at41001pm.png)
 
@@ -247,7 +243,7 @@ De alternativ för autentiseringskonfiguration som portleten använder i AEM WCM
 
 >[!NOTE]
 >
->När du arbetar med AEM finns det flera metoder för att hantera konfigurationsinställningar för OSGi-tjänster (konsol- eller databasnoder).
+>När du arbetar med AEM finns det flera metoder för att hantera konfigurationsinställningarna för OSGi-tjänster (konsol- eller databasnoder).
 >
 >Se [Konfigurerar OSGi](/help/sites-deploying/configuring-osgi.md) för fullständig information.
 
@@ -741,7 +737,7 @@ Portleten ansluter som standard till publiceringsinstansen vid localhost:4503 oc
 
 >[!NOTE]
 >
->Dessa procedurer använder webbsfär-portalen som exempel, även om de är så allmänna som möjligt. Observera att procedurer varierar för andra webbportaler. Stegen är i stort sett identiska för alla webbportaler, men du måste återanvända stegen för din webbportal.
+>Dessa procedurer använder webbsfär-portalen som exempel, även om de är så allmänna som möjligt. Tänk på att procedurer varierar för andra webbportaler. Stegen är i stort sett identiska för alla webbportaler, men du måste återanvända stegen för din webbportal.
 
 #### Installera portleten {#installing-the-portlet}
 
@@ -799,7 +795,7 @@ Vanligtvis pekar startbanan direkt mot innehållet i AEM. Om du vill behålla st
 Så här lägger du till portleten på portalsidan:
 
 1. Se till att du är i administrationsfönstret på programservern och navigerar till den plats där du hanterar sidor. (i t.ex. WebSphere 6.1 klickar du **Hantera sidor**).
-1. Markera portletens namn och välj sedan en befintlig sida eller skapa en ny.
+1. Markera portletens namn och markera sedan en befintlig sida eller skapa en sida.
 1. Redigera sidlayouten.
 1. Markera portleten och lägg till den i en behållare.
 1. Spara ändringarna.

@@ -1,19 +1,15 @@
 ---
 title: Getting Started with SPA in AEM - React
-seo-title: Getting Started with SPAs in AEM - React
 description: I den här artikeln visas ett exempel SPA programmet, hur det sätts ihop och hur du snabbt kommer igång med ditt eget SPA med React Framework.
-seo-description: This article presents a sample SPA application, explains how it is put together, and lets you get up-and-running with your own SPA quickly using the React framework.
-uuid: 2beca277-a381-4482-99f6-85005d826d06
 contentOwner: bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: spa
 content-type: reference
-discoiquuid: cc1e5c20-cc9c-4222-8a11-ec5a963d4466
 docset: aem65
 exl-id: 552649e7-6054-4ae8-b570-5ba7230e6f19
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1164'
+source-wordcount: '1161'
 ht-degree: 0%
 
 ---
@@ -52,7 +48,7 @@ Det här dokumentet kommer att gå igenom strukturen i en förenklad SPA som ska
 
 ## Beroenden, konfiguration och byggteknik {#dependencies-configuration-and-building}
 
-Förutom det förväntade React-beroendet kan SPA utnyttja ytterligare bibliotek för att göra det enklare att skapa SPA.
+Förutom det förväntade React-beroendet kan SPA använda ytterligare bibliotek för att göra det enklare att skapa SPA.
 
 ### Beroenden {#dependencies}
 
@@ -114,7 +110,7 @@ module.exports = {
 
 ### Byggnad {#building}
 
-Bygg appen faktiskt [Webpack](https://webpack.js.org/) för implementering förutom aem-clientlib-generator för automatisk generering av klientbibliotek. Därför påminner kommandot build om:
+Faktiskt bygga appen som använder [Webpack](https://webpack.js.org/) för implementering förutom aem-clientlib-generator för automatisk generering av klientbibliotek. Därför påminner kommandot build om:
 
 `"build": "webpack && clientlib --verbose"`
 
@@ -122,7 +118,7 @@ När paketet har skapats kan det överföras till en AEM.
 
 ### AEM Project Archettype {#aem-project-archetype}
 
-Alla AEM ska utnyttja [AEM Project Archettype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html), som stöder SPA projekt med React eller Angular och använder SPA SDK.
+Alla AEM ska använda [AEM Project Archettype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html), som stöder SPA projekt med React eller Angular och använder SPA SDK.
 
 ## Programstruktur {#application-structure}
 
@@ -134,7 +130,7 @@ En förenklad bildkomponent används som exempel, men alla komponenter i program
 
 ### index.js {#index-js}
 
-Ingångspunkten i SPA är förstås `index.js` filen som visas här förenklades för att fokusera på det viktiga innehållet.
+Startpunkten i SPA är `index.js` filen som visas här förenklades för att fokusera på det viktiga innehållet.
 
 ```
 import ReactDOM from 'react-dom';
@@ -151,7 +147,7 @@ ReactDOM.render(
 });
 ```
 
-Huvudfunktionen i `index.js` är att utnyttja `ReactDOM.render` för att bestämma var i DOM programmet ska injiceras.
+Huvudfunktionen i `index.js` är att använda `ReactDOM.render` för att bestämma var i DOM programmet ska injiceras.
 
 Det här är en standardanvändning av den här funktionen, som inte är unik för det här exempelprogrammet.
 
@@ -285,4 +281,4 @@ Mer information om hur du organiserar dig för att utveckla SPA för AEM finns i
 
 Mer information om den dynamiska modellen till komponentmappning och hur den fungerar i SPA i AEM finns i artikeln [Dynamisk mappning av modell till komponent för SPA](/help/sites-developing/spa-dynamic-model-to-component-mapping.md).
 
-Om du vill implementera SPA i AEM för ett annat ramverk än React eller Angular eller bara vill fördjupa dig i hur SPA SDK för AEM fungerar, se [SPA](/help/sites-developing/spa-blueprint.md) artikel.
+Om du vill implementera SPA i AEM för ett annat ramverk än React eller Angular eller bara vill ta en grundlig titt på hur SPA SDK för AEM fungerar, se [SPA](/help/sites-developing/spa-blueprint.md) artikel.

@@ -7,9 +7,9 @@ topic-tags: spa
 content-type: reference
 docset: aem65
 exl-id: a80bc883-e0f6-4714-bd28-108262f96d77
-source-git-commit: b703f356f9475eeeafb1d5408c650d9c6971a804
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1724'
+source-wordcount: '1723'
 ht-degree: 0%
 
 ---
@@ -172,7 +172,7 @@ Ett enkelt exempel finns på [App för återförsäljningsjournal](https://githu
 
 >[!CAUTION]
 >
->The [App för återförsäljningsjournal](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail-journal) är endast till för demonstrationsbruk och använder därför Node.js som ett enkelt exempel i stället för den rekommenderade Adobe I/O Runtime. Det här exemplet ska inte användas för något projektarbete.
+>The [App för återförsäljningsjournal](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail-journal) är endast till för demonstrationsbruk och använder därför Node.js som ett enkelt exempel i stället för den rekommenderade Adobe I/O Runtime. Använd inte det här exemplet för något projektarbete.
 
 >[!NOTE]
 >

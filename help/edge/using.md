@@ -2,7 +2,7 @@
 title: Använda Edge Delivery Services
 description: Använda Edge Delivery Services
 exl-id: 6c9178b0-c8f3-4fc7-8614-8e71ffc2f0b8
-source-git-commit: 6a1d96125ca6647770718fff74ec21afb5c91a68
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '609'
 ht-degree: 1%
@@ -28,7 +28,7 @@ Med Edge Delivery är det smidigt att publicera innehåll oavsett innehållskäl
 
 ## Edge Delivery Services och GitHub {#github-edge}
 
-Edge Delivery utnyttjar GitHub så att kunderna kan hantera och driftsätta kod direkt från sin GitHub-databas. Du kan till exempel skriva innehåll i antingen Google Docs eller Microsoft Word och utveckla webbplatsens funktionalitet med hjälp av CSS och JavaScript i GitHub. Webbplatser skapas automatiskt för var och en av dina grenar, från förhandsgranskning av innehåll till produktion. Alla resurser du lägger in i GitHub-databasen är tillgängliga på din webbplats utan någon byggprocess.
+Edge Delivery använder GitHub så att kunderna kan hantera och driftsätta kod direkt från sin GitHub-databas. Du kan till exempel skriva innehåll i antingen Google Docs eller Microsoft Word och utveckla webbplatsens funktionalitet med hjälp av CSS och JavaScript i GitHub. Webbplatser skapas automatiskt för var och en av dina grenar, från förhandsgranskning av innehåll till produktion. Alla resurser du lägger in i GitHub-databasen är tillgängliga på din webbplats utan någon byggprocess.
 
 ## Använda Sidekick {#using-sidekick}
 

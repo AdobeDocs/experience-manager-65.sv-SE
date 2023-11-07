@@ -6,16 +6,16 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: platform
 content-type: reference
 exl-id: e4820330-2ee6-4eca-83fd-462aa0b83647
-source-git-commit: 26c0411d6cc16f4361cfa9e6b563eba0bfafab1e
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '527'
+source-wordcount: '525'
 ht-degree: 0%
 
 ---
 
 # Skapa en ny GRE-fältkomponent{#creating-a-new-granite-ui-field-component}
 
-Gränssnittet Granite innehåller ett antal komponenter som är avsedda att användas i formulär. kallas *fält* i GRUND-språket Granite. Standardkomponenterna i Granite finns under:
+Gränssnittet Granite innehåller ett antal komponenter som är utformade för att användas i formulär. Dessa kallas *fält* i GRUND-språket Granite. Standardkomponenterna i Granite-formuläret finns under:
 
 `/libs/granite/ui/components/foundation/form/*`
 
@@ -36,7 +36,7 @@ Använd ramverket Granite UI Foundation för att utveckla och/eller utöka Grani
       * grund - modulär, sammansättningsbar, lagerhanterbar, återanvändbar
       * komponenter - Sling-komponenter
 
-   * hjälpmedel för utveckling av ansökningar
+   * hjälpmedel för utveckling av applikationer
 
 * klientsidan:
 
@@ -44,8 +44,8 @@ Använd ramverket Granite UI Foundation för att utveckla och/eller utöka Grani
 
 Den generiska användargränssnittskomponenten Granite `field` består av två intressanta filer:
 
-* `init.jsp`: hanterar den allmänna behandlingen, etiketter, beskrivning och tillhandahåller formulärvärden som du behöver när du återger fältet.
-* `render.jsp`: Det är här som den faktiska återgivningen av fältet utförs och måste åsidosättas för ditt anpassade fält. ingår i `init.jsp`.
+* `init.jsp`: hanterar den generiska bearbetningen; etiketter, beskrivning och tillhandahåller formulärvärden som du behöver när du återger fältet.
+* `render.jsp`: det är här som den faktiska återgivningen av fältet utförs och måste åsidosättas för ditt anpassade fält; inkluderas av `init.jsp`.
 
 Se [Bevilja gränssnittsdokumentation - fält](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/components/foundation/form/field/index.html) för mer information.
 
@@ -53,13 +53,13 @@ Se till exempel:
 
 * `cqgems/customizingfield/components/colorpicker`
 
-   * från [Kodexempel](/help/sites-developing/developing-components-samples.md#code-sample-how-to-customize-dialog-fields)
+   * tillhandahålls av [Kodexempel](/help/sites-developing/developing-components-samples.md#code-sample-how-to-customize-dialog-fields)
 
 * `granite/ui/components/foundation/form`
 
 >[!NOTE]
 >
->Eftersom den här mekanismen använder JSP, ges i18n och XSS inte direkt. Det innebär att du måste internationalisera och undvika dina strängar. Följande katalog innehåller de generiska fälten från en standardinstans och du kan använda dessa som referens:
+>Eftersom JSP används för den här mekanismen, ges i18n och XSS inte direkt. Det innebär att du måste internationalisera och undvika dina strängar. Följande katalog innehåller de generiska fälten från en standardinstans och du kan använda dessa som referens:
 >
 >`/libs/granite/ui/components/foundation/form` katalog
 
@@ -85,7 +85,7 @@ Ditt anpassade fält bör bara åsidosätta `render.jsp` skript, där du anger k
    vm.get("value, String.class");
    ```
 
-   Mer information finns i implementeringen av körklara GRÄNSSNITTSfält för Granite. till exempel `/libs/granite/ui/components/foundation/form/textfield`.
+   Mer information finns i implementeringen av färdiga GRA-fält, till exempel: `/libs/granite/ui/components/foundation/form/textfield`.
 
    >[!NOTE]
    >
@@ -96,7 +96,7 @@ Ditt anpassade fält bör bara åsidosätta `render.jsp` skript, där du anger k
 Så här lägger du till specifikt klientbeteende i komponenten:
 
 1. Skapa ett clientlib för kategori `cq.authoring.dialog`.
-1. Skapa ett clientlib för kategori `cq.authoring.dialog` och definiera `JS`/ `CSS` inuti.
+1. Skapa ett clientlib för kategori `cq.authoring.dialog` och definiera `JS`/ `CSS` inuti den.
 
    Definiera `JS`/ `CSS` inuti klientlib.
 

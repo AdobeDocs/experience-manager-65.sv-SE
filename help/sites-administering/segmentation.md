@@ -10,9 +10,9 @@ topic-tags: personalization
 content-type: reference
 discoiquuid: 6cade87c-9ed5-47d7-9b39-c942268afdad
 exl-id: 8bd6c88b-f36a-422f-ae6c-0d59f365079a
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1783'
+source-wordcount: '1774'
 ht-degree: 0%
 
 ---
@@ -34,7 +34,7 @@ AEM gör det enkelt att personalisera användarnas upplevelse. Du kan också kon
 
 ## Åtkomst till segment {#accessing-segments}
 
-The [Målgrupper](/help/sites-authoring/managing-audiences.md) konsolen används för att hantera segment för ContextHub eller Client Context samt målgrupper för ditt Adobe Target-konto. I den här dokumentationen beskrivs hur du hanterar segment för ContextHub. För [Kundkontextsegment](/help/sites-administering/campaign-segmentation.md) och Adobe Target segment, se relevant dokumentation.
+The [Målgrupper](/help/sites-authoring/managing-audiences.md) konsolen används för att hantera segment för ContextHub eller Client Context och målgrupper för ditt Adobe Target-konto. I den här dokumentationen beskrivs hur du hanterar segment för ContextHub. För [Kundkontextsegment](/help/sites-administering/campaign-segmentation.md) och Adobe Target-segment, se relevant dokumentation.
 
 För att få tillgång till dina segment måste du välja din konfiguration. Välj **Navigering > Personalisering > Publiker**. De tillgängliga konfigurationerna visas:
 
@@ -141,7 +141,7 @@ Så här definierar du det nya segmentet:
 
    ![chlimage_1-311](assets/chlimage_1-311.png)
 
-1. I **Nytt ContextHub-segment**, ange en titel för segmentet samt ett ökningsvärde om det behövs och tryck eller klicka sedan **Skapa**.
+1. I **Nytt ContextHub-segment**, ange en titel för segmentet och ett ökningsvärde om det behövs och tryck eller klicka **Skapa**.
 
    ![chlimage_1-312](assets/chlimage_1-312.png)
 

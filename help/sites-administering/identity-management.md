@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 994a5751-7267-4a61-9bc7-01440a256c65
 docset: aem65
 exl-id: acb5b235-523e-4c01-9bd2-0cc2049f88e2
-source-git-commit: e54c1d422f2bf676e8a7b0f50a101e495c869c96
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1254'
+source-wordcount: '1250'
 ht-degree: 0%
 
 ---
@@ -76,7 +76,7 @@ Inloggningskomponenten kan användas för att samla in inloggningsinformationen 
 
 Detta förser besökaren med standardfälten i **Användarnamn** och **Lösenord**, med **Inloggning** för att aktivera inloggningsprocessen när inloggningsuppgifterna anges.
 
-Användare kan till exempel antingen logga in eller skapa ett nytt konto med **Logga in** i verktygsfältet i Geometrixx där sidan används:
+Användare kan till exempel antingen logga in eller skapa ett konto med **Logga in** i verktygsfältet i Geometrixx där sidan används:
 
 `http://localhost:4502/content/geometrixx-outdoors/en/user/sign-in.html`
 
@@ -99,7 +99,7 @@ Klicka på **Min profil** i det övre högra hörnet på en sida, till exempel m
 
 Du kan visa en annan profil med [klientkontext](/help/sites-administering/client-context.md) (i redigeringsmiljön och med tillräcklig behörighet):
 
-1. Öppna en sida, till exempel Geometrixx:
+1. Öppna en Geometrixx, till exempel:
 
    `http://localhost:4502/cf#/content/geometrixx/en.html`
 
@@ -119,7 +119,7 @@ Du kan visa en annan profil med [klientkontext](/help/sites-administering/client
 
 ## Lägga till fält i profildefinitionen {#adding-fields-to-the-profile-definition}
 
-Du kan lägga till fält i profildefinitionen. Om du till exempel vill lägga till ett&quot;Favoritfärg&quot;-fält i Geometrixx profil:
+Du kan lägga till fält i profildefinitionen. Så här lägger du till ett&quot;Favoritfärg&quot;-fält i Geometrixx:
 
 1. Gå till Geometrixx Outdoors Site > English > User > My Profile i webbplatskonsolen.
 1. Dubbelklicka på **Min profil** för att öppna den för redigering.
@@ -145,7 +145,7 @@ Du kan lägga till fält i profildefinitionen. Om du till exempel vill lägga ti
 
 ## Profiltillstånd {#profile-states}
 
-Det finns ett antal användningsområden som kräver att du vet om en användare (eller snarare deras profil) finns i en *specifikt läge* eller inte.
+Det finns flera användningsfall som kräver att du vet om en användare (eller snarare deras profil) finns i en *specifikt läge* eller inte.
 
 Detta innebär att definiera en lämplig egenskap i användarprofilen på följande sätt:
 

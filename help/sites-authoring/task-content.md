@@ -10,9 +10,9 @@ topic-tags: projects
 content-type: reference
 discoiquuid: 1b79d373-73f4-4228-b309-79e74d191f3e
 exl-id: a0719745-8d67-44bc-92ba-9ab07f31f8d2
-source-git-commit: 200b47070b7ead54ee54eea504bd960d4e0731d9
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '597'
+source-wordcount: '595'
 ht-degree: 3%
 
 ---
@@ -65,7 +65,7 @@ Du kan visa, redigera och lägga till information i en uppgift via olika flikar.
 * **Uppgift** - Allmän uppgiftsinformation
 * **Projektinformation** - Sammanfattning av projektet som aktiviteten är kopplad till
 * **Arbetsflöde in** - Sammanfattning av arbetsflödet som aktiviteten är kopplad till (om tillämpligt)
-* **Kommentarer** - Allmänna kommentarer om själva uppgiften
+* **Kommentar** - Allmänna kommentarer om själva uppgiften
 
 ### Lägga till uppgifter {#adding-tasks}
 
@@ -89,4 +89,4 @@ I inkorgen kan du öppna uppgifterna och ange aktivitetsstatus. Uppgifter visas 
 
 ![Inkorg](assets/project-inbox.png)
 
-Om du vill slutföra en uppgift markerar du uppgiften och klickar på **Slutförd** i verktygsfältet. Lägg till information till uppgiften och klicka sedan på **Klar**. Se [Din inkorg](/help/sites-authoring/inbox.md) för mer information.
+Om du vill slutföra en uppgift markerar du uppgiften och klickar på **Complete** i verktygsfältet. Lägg till information till uppgiften och klicka sedan på **Klar**. Se [Din inkorg](/help/sites-authoring/inbox.md) för mer information.

@@ -6,9 +6,9 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/managing_endpoints
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 exl-id: ec169a01-a113-47eb-8803-bd783ea2c943
-source-git-commit: 22d9b22a0fc0bc5f753f2e11ca66e2627e1a8405
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '7181'
+source-wordcount: '7177'
 ht-degree: 0%
 
 ---
@@ -35,7 +35,7 @@ Du kan skapa en bevakad mapp på följande två sätt:
 
 * Skapa en mapp i filsystemet innan du konfigurerar en bevakad mappslutpunkt och skriv sedan den fullständiga sökvägen i rutan Sökväg.
 
-I en klustermiljö måste mappen som ska användas som en bevakad mapp vara tillgänglig, skrivbar och delad i filsystemet eller nätverket. I det här fallet måste varje programserverinstans i klustret ha åtkomst till samma delade mapp.
+I en klustermiljö måste mappen som används som en bevakad mapp vara tillgänglig, skrivbar och delad i filsystemet eller nätverket. I det här fallet måste varje programserverinstans i klustret ha åtkomst till samma delade mapp.
 
 Om programservern körs som en tjänst i Windows måste den startas med lämplig åtkomst till den delade mappen på något av följande sätt:
 
@@ -62,7 +62,7 @@ Om jobbet innehåller mer än en indatafil måste användaren skapa en mapp utan
 
 ## Bevakade mapputdata {#watched-folder-output}
 
-När indata är en mapp och utdata består av flera filer skapar AEM en utdatamapp med samma namn som indatamappen och kopierar utdatafilerna till den mappen. När utdata består av en dokumentöversikt som innehåller ett nyckelvärdepar, t.ex. utdata från en utdataprocess, används nyckeln som utdatafilens namn.
+När indata är en mapp och utdata består av flera filer skapar AEM en utdatamapp med samma namn som indatamappen och kopierar utdatafilerna till den mappen. När utdata består av en dokumentöversikt som innehåller ett nyckelvärdepar, till exempel utdata från en utdataprocess, används nyckeln som utdatafilens namn.
 
 Namn på utdatafiler som härrör från en slutpunktsprocess får inte innehålla andra tecken än bokstäver, siffror och punkter (.) före filtillägget. AEM konverterar andra tecken till sina hexadecimala värden.
 
@@ -386,7 +386,7 @@ Här följer några tips och råd när du konfigurerar slutpunkten för bevakad 
    * För `java.lang.String`: Administratören har två alternativ. Först kan administratören ange mappningstypen som `Literal` och ange ett mappningsvärde som en sträng, till exempel `hello.` Bevakad mapp anropar tjänsten med strängen `hello`. Därefter kan administratören ange mappningstypen som `Variable` och ange ett mappningsvärde med ett mönster som `*.txt`. I det senare fallet läses filer med tillägget .txt som ett dokument som tvingas som en sträng för att anropa tjänsten.
    * Primitiv Java-typ: Administratören kan ange mappningstypen som `Literal` och ange värdet. Bevakad mapp anropar tjänsten med det angivna värdet.
 
-* Bevakad mapp fungerar med dokument. De utdata som stöds är `com.adobe.idp.Document`, `org.w3c.Document`, `org.w3c.Node`samt en lista och karta över dessa typer. Alla andra typer resulterar i felutdata i felmappen.
+* Bevakad mapp fungerar med dokument. De utdata som stöds är `com.adobe.idp.Document`, `org.w3c.Document`, `org.w3c.Node`och en lista och karta över dessa typer. Alla andra typer resulterar i felutdata i felmappen.
 * Om resultaten inte finns i resultatmappen kontrollerar du om ett fel har inträffat i felmappen.
 * Bevakade mappar fungerar bäst om de används i asynkront läge. I det här läget placerar Bevakad mapp anropsbegäran i kön och anropar igen. Kön bearbetas sedan asynkront. När alternativet Asynkron inte har angetts anropas måltjänsten synkront av Bevakade mappar och processmotorn väntar tills tjänsten har slutförts med begäran och resultaten har skapats. Om måltjänsten tar lång tid att behandla begäran kan timeoutfel uppstå i den bevakade mappen.
 * Om du skapar bevakade mappar för import- och exportåtgärder tillåts inte abstraktion av filnamnstillägg. När du anropar tjänsten för integrering av formulärdata med bevakade mappar kanske inte filnamnstilläggstypen för utdatafilen matchar det avsedda utdataformatet för dokumentobjekttypen. Om indatafilen till en bevakad mapp som anropar exportåtgärden till exempel är ett XFA-formulär som innehåller data, bör utdata vara en XDP-datafil. Om du vill få en utdatafil med rätt filnamnstillägg kan du ange den i mappningen av utdataparametrar. I det här exemplet kan du använda %F.xdp för att mappa utdataparametrar.

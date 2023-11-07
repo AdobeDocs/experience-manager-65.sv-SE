@@ -6,9 +6,9 @@ topic-tags: deploying
 docset: aem65
 feature: Configuring
 exl-id: c1c90d6a-ee5a-487d-9a8a-741b407c8c06
-source-git-commit: 2ed19ac8c60dbf49422b8f1f665be4004689e00e
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '3550'
+source-wordcount: '3549'
 ht-degree: 0%
 
 ---
@@ -90,7 +90,7 @@ Dokumentnodarkivet är grunden för AEM MongoMK-implementering. Den använder `o
 
 * `changesSize`: Storlek i MB på en kopplad samling som används i Mongo för cache-lagring av diff-utdata. Standardvärdet är `256`
 
-* `customBlobStore`: Ett booleskt värde som anger att ett anpassat datalager kommer att användas. Standardvärdet är `false`.
+* `customBlobStore`: Ett booleskt värde som anger att ett anpassat datalager används. Standardvärdet är `false`.
 
 Följande är ett exempel `org.apache.jackrabbit.oak.plugins.document.DocumentNodeStoreService.config` fil:
 

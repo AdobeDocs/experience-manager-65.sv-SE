@@ -2,10 +2,10 @@
 title: Asynkrona jobb
 description: Adobe Experience Manager optimerar prestandan genom att asynkront slutföra vissa resurskrävande uppgifter.
 exl-id: 4af1bcfe-9f2e-44a4-8666-881f2dccc3bc
-source-git-commit: cc63291c32f7a234398ebe8bf67ab53aaf8fa90f
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '724'
-ht-degree: 96%
+source-wordcount: '722'
+ht-degree: 89%
 
 ---
 
@@ -55,7 +55,7 @@ Gå till sidan **[!UICONTROL Async Job Status]** för att se detaljerad status g
 
    ![stop_icon](assets/async-stop-icon.png)
 
-1. Välj åtgärden och klicka på **[!UICONTROL Open]** i verktygsfältet för att se ytterligare information såsom beskrivning och loggar.
+1. Om du vill visa extra information, till exempel beskrivning och loggar, markerar du åtgärden och klickar på **[!UICONTROL Open]** i verktygsfältet.
 
    ![open_icon](assets/async-open-icon.png)
 
@@ -88,7 +88,7 @@ Du kan ändra schemat för rensningen och hur länge information om slutförda j
 
 ## Konfigurera asynkron bearbetning {#configuring-asynchronous-processing}
 
-Du kan konfigurera gränsvärdet för antal resurser, sidor eller referenser vilket låter AEM bearbeta en viss åtgärd asynkront samt skicka e-postmeddelanden när jobben bearbetas.
+Du kan konfigurera tröskelvärdet för antal resurser, sidor eller referenser för AEM att bearbeta en viss åtgärd asynkront och växla e-postmeddelanden för när jobben bearbetas.
 
 ### Konfigurera asynkrona åtgärder för att ta bort resurser {#configuring-synchronous-delete-operations}
 

@@ -1,5 +1,5 @@
 ---
-title: Uppgraderingsprocedur
+title: Uppgraderingsförfarande
 description: Läs om hur du uppgraderar Adobe Experience Manager (AEM).
 contentOwner: sarchiz
 topic-tags: upgrading
@@ -9,20 +9,20 @@ docset: aem65
 targetaudience: target-audience upgrader
 feature: Upgrading
 exl-id: 5242600c-2281-46f9-a347-d985b4e319b3
-source-git-commit: a56d5121a6ce11b42a6c30dae9e479564d16af27
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '815'
+source-wordcount: '813'
 ht-degree: 0%
 
 ---
 
-# Uppgraderingsprocedur {#upgrade-procedure}
+# Uppgraderingsförfarande {#upgrade-procedure}
 
 >[!NOTE]
 >
 >Uppgraderingen kräver driftstopp för Author-nivån eftersom de flesta uppgraderingar av Adobe Experience Manager (AEM) utförs på plats. Genom att följa dessa rutiner kan du minimera eller eliminera driftstopp i publiceringsskiktet.
 
-När du uppgraderar dina AEM-miljöer måste du ta hänsyn till skillnaderna mellan att uppgradera författarmiljöer eller publiceringsmiljöer för att minimera driftstoppen för både författare och slutanvändare. På den här sidan beskrivs hur du uppgraderar en AEM topologi som för närvarande körs på en version av AEM 6.x. Eftersom processen skiljer sig mellan redigerings- och publiceringsnivåer samt Mongo- och TarmMK-baserade distributioner, har varje nivå och mikrokärna listats i ett separat avsnitt. När du utför distributionen rekommenderar Adobe att du först uppgraderar din författarmiljö, avgör om du lyckas och sedan fortsätter till publiceringsmiljöerna.
+När du uppgraderar dina AEM-miljöer måste du ta hänsyn till skillnaderna i strategi mellan att uppgradera författarmiljöer eller publiceringsmiljöer för att minimera driftstoppen för både författare och slutanvändare. På den här sidan beskrivs hur du uppgraderar en AEM topologi som för närvarande körs på en version av AEM 6.x. Eftersom processen skiljer mellan redigerings- och publiceringsnivåer och Mongo- och tarMK-baserade distributioner har varje nivå och mikrokärna listats i ett separat avsnitt. När du utför distributionen rekommenderar Adobe att du först uppgraderar din författarmiljö, avgör om du lyckas och sedan fortsätter till publiceringsmiljöerna.
 
 <!--
 >[!IMPORTANT]
@@ -44,7 +44,7 @@ Den topologi som antas för det här avsnittet består av en författarserver so
 
 1. Stoppa framtagning av innehåll.
 
-1. Stoppa standby-instansen.
+1. Stoppa vänteläget.
 
 1. Inaktivera replikeringsagenter på författaren.
 
@@ -83,7 +83,7 @@ Den topologi som antas för det här avsnittet består av en författarserver so
 
 ### Startopologi {#starting-topology-1}
 
-Den topologi som antas för det här avsnittet består av ett MongoMK Author-kluster med minst två AEM Author-instanser, som stöds av minst två MongoMK-databaser. Alla författarinstanser delar ett datalager. Dessa steg bör gälla både S3- och File-datalager. Replikering sker från författarservrarna till TjärMK-publiceringsservergruppen.
+Den topologi som antas för det här avsnittet består av ett MongoMK Author-kluster med minst två AEM Author-instanser, som stöds av minst två MongoMK-databaser. Alla författarinstanser delar ett datalager. De här stegen bör gälla för både S3- och File-datalager. Replikering sker från författarservrarna till TjärMK-publiceringsservergruppen.
 
 ![mongo-topologi](assets/mongo-topology.jpg)
 
@@ -93,7 +93,7 @@ Den topologi som antas för det här avsnittet består av ett MongoMK Author-klu
 
 1. Stoppa framtagning av innehåll.
 1. Klona datalagret för säkerhetskopiering.
-1. Stoppa alla instanser utom en av AEM Author, din primära författare.
+1. Stoppa alla utom en AEM författarinstans, din primära författare.
 1. Ta bort alla MongoDB-noder utom en från replikuppsättningen, den primära Mongo-instansen.
 1. Uppdatera `DocumentNodeStoreService.cfg` på den primära författaren för att återspegla replikuppsättningen för en enskild medlem.
 1. Starta om den primära författaren för att säkerställa att den startar om ordentligt.
@@ -119,7 +119,7 @@ Den topologi som antas för det här avsnittet består av ett MongoMK Author-klu
 
 1. Uppdatera `DocumentNodeStoreService.cfg` som återspeglar hela replikuppsättningen.
 
-1. Starta om författarinstanserna, en åt gången.
+1. Starta om Author-instanserna, en åt gången.
 
 1. Ta bort det klonade datalagret.
 

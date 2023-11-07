@@ -7,9 +7,9 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: 11c0aac6-a7f6-4d6b-a080-b04643045a64
 exl-id: ab0d4f2e-f761-4510-ba51-4a2dcea49601
-source-git-commit: b703f356f9475eeeafb1d5408c650d9c6971a804
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1620'
+source-wordcount: '1619'
 ht-degree: 0%
 
 ---
@@ -92,9 +92,9 @@ Använd följande procedur för att lägga till variabler i listan:
 
 1. På din Adobe Analytics-ramverkssida kan du **Allmänna analysinställningar** område.
 1. Under variabellistan klickar du på Lägg till objekt för att lägga till en ny variabel i listan.
-1. I den vänstra cellen anger du ett namn för variabeln, till exempel `prop10`.
+1. I den vänstra cellen anger du ett namn för variabeln, till exempel: `prop10`.
 
-1. I den högra kolumnen anger du ett värde för variabeln, till exempel `CONSTANT`.
+1. I den högra kolumnen anger du ett värde för variabeln, till exempel: `CONSTANT`.
 
 1. Om du vill ta bort en variabel klickar du på knappen (-) bredvid variabeln.
 
@@ -199,7 +199,7 @@ Därför bör ditt JavaScript anges `s.usePlugins` till `true` så att all kod i
    1. Ange `cq` som mappnamn och klicka på OK.
    1. På samma sätt skapar du `analytics` och `components` mappar.
 
-1. Högerklicka på `components` mapp som du nyss skapade och klicka på Skapa > Skapa komponent. Ange följande egenskapsvärden:
+1. Högerklicka på `components` som du skapade och klickar på Skapa > Skapa komponent. Ange följande egenskapsvärden:
 
    * Etikett: `sitecatalyst`
    * Titel: `sitecatalyst`

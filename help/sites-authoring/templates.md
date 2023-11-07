@@ -1,32 +1,28 @@
 ---
 title: Skapa sidmallar
-seo-title: Creating Page Templates
 description: Mallen definierar strukturen för den resulterande sidan och med mallredigeraren är det inte längre en uppgift som bara är avsedd för utvecklare att skapa och underhålla mallar
-seo-description: The template defines the structure of the resultant page and with the template editor, creating and maintaining templates is no longer a developer-only task
-uuid: e14cd298-289f-43f0-aacb-314ed5d56c12
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: site-features
-discoiquuid: b53348ca-fc50-4e7d-953d-b4c03a5025bb
 docset: aem65
 exl-id: 363b8fab-6ce7-4338-8478-3f25f2a1f117
-source-git-commit: 71b3f7c6ad2c7712762a29518de6cf0639081cb7
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '4862'
-ht-degree: 8%
+source-wordcount: '4840'
+ht-degree: 7%
 
 ---
 
 # Skapa sidmallar{#creating-page-templates}
 
-När du skapar en sida måste du välja en mall som ska användas som bas för att skapa den nya sidan. Mallen definierar strukturen för den resulterande sidan, allt ursprungligt innehåll och de komponenter som kan användas.
+När du skapar en sida måste du välja en mall, som används som bas för att skapa den nya sidan. Mallen definierar strukturen för den resulterande sidan, allt ursprungligt innehåll och de komponenter som kan användas.
 
 Tack vare **mallredigeraren** är det inte längre bara utvecklare som kan skapa och underhålla mallar. En typ av superanvändare, som kallas **mallskapare**, kan också arbeta med detta. Utvecklare måste fortfarande installera miljön, skapa klientbibliotek och skapa de komponenter som ska användas, men när dessa grunder väl är på plats kan **mallskaparen** skapa och konfigurera mallar utan något utvecklingsprojekt.
 
 The **Mallkonsol** tillåter mallskapare att:
 
-* Skapa en ny mall eller kopiera en befintlig mall.
+* Skapa en mall eller kopiera en befintlig mall.
 * Hantera mallens livscykel.
 
 The **Mallredigerare** tillåter mallskapare att:
@@ -55,13 +51,13 @@ Detaljerad information om hur redigerbara mallar fungerar på teknisk nivå finn
 
 Följande punkter är viktiga att tänka på innan du börjar:
 
-* Att skapa en ny mall kräver samarbete. Därför är [Roll](#roles) anges för varje uppgift.
+* Att skapa en mall kräver samarbete. Därför är [Roll](#roles) anges för varje uppgift.
 
 * Beroende på hur instansen är konfigurerad kan det vara bra att vara medveten om att AEM nu innehåller [två grundläggande typer av mallar](/help/sites-authoring/templates.md#editable-and-static-templates). Det här påverkar inte hur du faktiskt [använda en mall för att skapa en sida](#using-a-template-to-create-a-page), men det påverkar malltypen som du kan skapa och hur en sida relaterar till dess mall.
 
 ### Roller {#roles}
 
-Om du vill skapa en ny mall med hjälp av **mallkonsolen** och **mallredigeraren** måste följande roller samarbeta:
+Skapa en mall med **Mallkonsol** och **Mallredigerare** kräver samarbete mellan följande roller:
 
 * **Administratör**:
 
@@ -110,24 +106,24 @@ AEM har nu två grundläggande typer av mallar:
    * De är [från utvecklarna](/help/sites-developing/page-templates-static.md)så de kan inte skapas eller redigeras av författare.
    * Kopieras för att skapa den nya sidan, men det finns ingen dynamisk anslutning efter detta (även om mallnamnet är registrerat för information).
    * Använd [Designläge](/help/sites-authoring/default-components-designmode.md) för att behålla designegenskaper.
-   * Eftersom det är en utvecklares enda uppgift att redigera statiska mallar finns det information i utvecklardokumentet [Sidmallar - statiska](/help/sites-developing/page-templates-static.md) för mer information.
+   * Eftersom det är en utvecklares enda uppgift att redigera statiska mallar finns mer information i utvecklardokumentet [Sidmallar - statiska](/help/sites-developing/page-templates-static.md) för mer information.
 
 I mallkonsolen och mallredigeraren går det bara att skapa och redigera redigerbara mallar. Därför fokuserar det här dokumentet enbart på redigerbara mallar.
 
 ### Skapa en sida med en mall {#using-a-template-to-create-a-page}
 
-När en mall används för [skapa en ny sida](/help/sites-authoring/managing-pages.md#creating-a-new-page) det inte finns någon synlig skillnad och ingen indikation mellan statiska och redigerbara mallar. För sidförfattaren är processen genomskinlig.
+När en mall används för [skapa en sida](/help/sites-authoring/managing-pages.md#creating-a-new-page) det inte finns någon synlig skillnad och ingen indikation mellan statiska och redigerbara mallar. För sidförfattaren är processen genomskinlig.
 
 ## Skapa och hantera mallar {#creating-and-managing-templates}
 
-När du skapar en ny redigerbar mall:
+När du skapar en redigerbar mall:
 
 * Använd **Mall** konsol. Det här är tillgängligt i **Allmänt** i **verktyg** konsol.
 
    * Eller direkt på: [https://localhost:4502/libs/wcm/core/content/sites/templates.html/conf](https://localhost:4502/libs/wcm/core/content/sites/templates.html/conf)
 
 * Kan [skapa en mapp för mallarna](#creating-a-template-folder-admin) vid behov
-* [Skapa en ny mall](#creatinganewtemplateauthor), som till att börja med är tom
+* [Skapa en mall](#creatinganewtemplateauthor), som inledningsvis är tom
 
 * [Definiera ytterligare egenskaper](#definingtemplatepropertiesauthor) för mallen om det behövs
 * [Redigera mallen](#editingtemplates) för att definiera
@@ -200,7 +196,7 @@ En mall kan ha följande egenskaper:
 
 * Beskrivning
 
-   * En valfri beskrivning som ger mer information om mallen och dess användning, som kan visas t.ex. i **Skapa sida** guide.
+   * En valfri beskrivning som ger mer information om mallen och hur den används, som kan visas t.ex. i **Skapa sida** guide.
 
 Så här visar och/eller redigerar du egenskaperna:
 
@@ -251,7 +247,7 @@ En mall kan aktiveras eller inaktiveras så att den blir tillgänglig eller inte
 
 1. I **Mallkonsol** markerar du mallen.
 1. Välj **Aktivera** eller **Inaktivera** i verktygsfältet och i bekräftelsedialogrutan igen.
-1. Nu kan du använda mallen när [skapa en ny sida](/help/sites-authoring/managing-pages.md#creating-a-new-page), även om du antagligen vill [redigera mallen](#editingatemplate) enligt dina krav.
+1. Nu kan du använda mallen när [skapa en sida](/help/sites-authoring/managing-pages.md#creating-a-new-page)även om du troligen vill [redigera mallen](#editingatemplate) enligt era egna krav.
 
 >[!NOTE]
 >
@@ -318,7 +314,7 @@ Följande aspekter av en mall kan redigeras:
 
   >[!NOTE]
   >
-  >I **Ursprungligt innehåll** samt på de resulterande sidorna kan alla olåsta komponenter som har en tillgänglig överordnad (dvs. komponenter i en layoutbehållare) tas bort.
+  >I **Ursprungligt innehåll** och på de resulterande sidorna kan alla olåsta komponenter som har en tillgänglig överordnad (dvs. komponenter i en layoutbehållare) tas bort.
 
 * [Layout](#editingatemplatelayout)
 
@@ -465,7 +461,7 @@ I **Struktur** mallredigerarens läge:
 
   På **Huvud** -fliken definieras de viktigaste inställningarna för komponenten.
 
-  För en bildkomponent kan till exempel de tillåtna bredderna definieras tillsammans med aktivering av lazy loading.
+  För en bildkomponent kan till exempel tillåtna bredder definieras tillsammans med aktivering av lazy loading.
 
   Om en inställning tillåter flera konfigurationer klickar du på eller trycker på **Lägg till** om du vill lägga till en annan konfiguration.
 
@@ -559,7 +555,7 @@ I **Struktur** mallredigerarens läge:
 
   ![chlimage_1-146](assets/chlimage_1-146.png)
 
-  Detta inkluderar upplåsning av behållarkomponenter så att ytterligare komponenter kan läggas till, antingen i läget **ursprungligt innehåll** eller på resulterande sidor. Om du redan har lagt till komponenter/innehåll i behållaren innan du låser upp den visas dessa inte längre i **strukturläget**, men de visas i **ursprungligt innehåll**. I **strukturläget** visas bara själva behållarkomponenten med dess lista över **tillåtna komponenter**.
+  Detta inkluderar upplåsning av behållarkomponenter så att ytterligare komponenter kan läggas till, antingen i läget **ursprungligt innehåll** eller på resulterande sidor. Om du redan har lagt till komponenter/innehåll i behållaren innan du låser upp den visas dessa inte längre när du använder **Struktur** läge, men de visas i **Ursprungligt innehåll** läge. I **Strukturläge**, visas bara behållarkomponenten med sin lista över **Tillåtna komponenter**.
 
   ![chlimage_1-147](assets/chlimage_1-147.png)
 
@@ -682,7 +678,7 @@ Med hjälp av sidegenskaper kan du definiera nödvändiga klientbibliotek genom 
 
 >[!NOTE]
 >
->Mallförfattaren kan ange sidprincipen för mallen, men han eller hon måste få information om lämpliga klientbibliotek från utvecklaren.
+>Mallförfattaren kan ange sidprincipen för mallen, men måste få information om lämpliga klientbibliotek från utvecklaren.
 
 ### Redigera en mall - Inledande sidegenskaper - Författare {#editing-a-template-initial-page-properties-author}
 

@@ -8,7 +8,7 @@ content-type: reference
 pagetitle: Configuring Email
 role: Admin
 exl-id: bf97d388-f8ca-4e37-88e2-0c536834311e
-source-git-commit: 0a4aca939c564720f63f055e9522e56942eaa128
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '752'
 ht-degree: 0%
@@ -41,7 +41,7 @@ Standardtjänsten för e-post krävs för både meddelanden och prenumerationer.
 
 Detta baseras på dokumentationen till [Konfigurerar e-postmeddelande](../../help/sites-administering/notification.md), men med en skillnad i det fältet `"From" address` är *not* krävs och ska lämnas tom.
 
-Till exempel (ifylld med värden endast för illustrationsändamål):
+Exempel (ifylld med värden endast för illustrativa syften):
 
 ![email-config](assets/email-config.png)
 

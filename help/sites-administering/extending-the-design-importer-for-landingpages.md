@@ -7,9 +7,9 @@ topic-tags: personalization
 content-type: reference
 docset: aem65
 exl-id: 1b8c6075-13c6-4277-b726-8dea7991efec
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '3501'
+source-wordcount: '3498'
 ht-degree: 0%
 
 ---
@@ -113,7 +113,7 @@ Observera följande begränsningar innan du importerar:
 
 ### Alla attribut, som klass eller id, som används i taggen lt;body> bevaras inte {#any-attribute-like-class-or-id-applied-on-the-amp-lt-body-tag-is-not-preserved}
 
-Om till exempel ett attribut som id eller class tillämpas på body-taggen `<body id="container">` bevaras inte efter importen. Därför bör designen som importeras inte vara beroende av attributen som används på `<body>` -tagg.
+Om ett attribut som id eller class tillämpas på body-taggen, till exempel `<body id="container">` bevaras inte efter importen. Därför bör designen som importeras inte vara beroende av attributen som används på `<body>` -tagg.
 
 ### Dra och släpp zip {#drag-and-drop-zip}
 
@@ -321,7 +321,7 @@ Ett lead-formulär är ett formulär som används för att samla in profilinform
 
 * Fördefinierade lead-fält - förnamn, efternamn, adress, dob, kön, about, userId, emailId, submit-knapp är tillgängliga i sidosparken. Dra-och-släpp den komponent du behöver i ditt lead-formulär.
 * Med hjälp av dessa komponenter kan författaren utforma ett fristående lead-formulär, motsvarar dessa fält formulärfält lead. I det fristående eller importerade ZIP-programmet kan användaren lägga till extra fält med cq:form eller cta lead-formulärfält, namn och utforma dem enligt kraven.
-* Mappa lead-formulärfält med specifika fördefinierade namn för CTA-lead-formulär, till exempel firstName för förnamn i lead-formulär och så vidare.
+* Mappa leadformulärfält med specifika fördefinierade namn för CTA-leadformulär, till exempel: firstName för förnamn i lead-formulär och så vidare.
 * Fält som inte är mappade till lead-formulärmappar till cq:formulärkomponenter - text, radio, kryssruta, listruta, dold, lösenord.
 * Användaren kan ange titeln med taggen&quot;label&quot; och formateringen med hjälp av formatattributet&quot;class&quot; (endast tillgängligt för CTA-formulärkomponenter).
 * Tack! Sidan och prenumerationslistan kan anges som en dold parameter i formuläret (finns i index.htm) eller kan läggas till/redigeras från redigeringsfältet i &quot;Början av lead-formuläret&quot;
@@ -438,9 +438,9 @@ Om ingen kodning anges i det importerade HTML är standardkodningen som anges av
 
 ### Överläggningsmall {#overlaying-template}
 
-Mallen Tom landningssida kan överlagras genom att en ny skapas på: `/apps/<appName>/designimporter/templates/<templateName>`
+Mallen Tom landningssida kan överlagras genom att skapa en på: `/apps/<appName>/designimporter/templates/<templateName>`
 
-Steg för att skapa en ny mall i AEM förklaras [här](/help/sites-developing/templates.md).
+Steg för att skapa en mall i AEM förklaras [här](/help/sites-developing/templates.md).
 
 ### Referera en komponent från landningssidan {#referring-a-component-from-landing-page}
 

@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 774c2553-b629-456b-afa7-5713490f4a0a
 role: Admin
 exl-id: 4237085a-d70d-41de-975d-153f58336daa
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1907'
+source-wordcount: '1903'
 ht-degree: 0%
 
 ---
@@ -74,7 +74,7 @@ Använd [Säkerhetskonsol](../../help/sites-administering/security.md)
 
 | Om gruppmedlem... | Primär roll |
 |---|---|
-| administratörer | Administratörsgruppen består av systemadministratörer som har alla funktioner som en community-administratör har samt möjlighet att hantera gruppen Community Administrators. |
+| administratörer | Administratörsgruppen består av systemadministratörer som har alla funktioner som en community-administratör har och möjlighet att hantera gruppen Community Administrators. |
 | Community-administratörer | Gruppen Community Administrators blir automatiskt medlem i alla communitysajter och i alla communitygrupper som skapas på webbplatsen. En inledande medlem i gruppen Community Administrators är gruppen Administratörer. I redigeringsmiljön kan communityadministratörer skapa communitysajter, hantera webbplatser, hantera medlemmar (de kan förbjuda medlemmar från communityn) och moderera innehåll. |
 | Community &lt;*webbplatsnamn*> Sitecontentmanager | Content Manager för communitysajt kan utföra AEM, skapa innehåll och ändra sidor för en community-sajt. |
 | Ingen | En anonym besökare får inte åtkomst till författarmiljön. |
@@ -200,7 +200,7 @@ Följ samma steg som att skapa och tilldela en användare rollen som aktiverings
 
 ### LDAP-integrering {#ldap-integration}
 
-AEM stöder användning av LDAP för autentisering av användare och skapande av användarkonton. Detta beskrivs i [Konfigurera LDAP med AEM 6](../../help/sites-administering/ldap-config.md).
+AEM stöder användningen av LDAP för autentisering av användare och skapande av användarkonton. Detta beskrivs i [Konfigurera LDAP med AEM 6](../../help/sites-administering/ldap-config.md).
 
 Nedan följer några konfigurationsdetaljer som är specifika för communitymedlemmar och medlemsgrupper.
 

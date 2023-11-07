@@ -1,19 +1,15 @@
 ---
 title: Klientkontext
-seo-title: Client Context
 description: Lär dig hur du använder klientkontexten för att se information om den aktuella sidan och besökaren i Adobe Experience Manager.
-seo-description: Learn how to use the Client Context in AEM.
-uuid: 82b2f976-cb41-42f8-ad4b-3a5cd23cc5f5
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: personalization
 content-type: reference
-discoiquuid: 7a3322fe-554e-479e-a27c-4259cdd3ba2e
 docset: aem65
 exl-id: 69c66c82-fbd6-406e-aefd-b85480a62109
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1978'
+source-wordcount: '1979'
 ht-degree: 0%
 
 ---
@@ -64,13 +60,13 @@ Klientkontexten kan visa följande egenskaper ([beroende på vad som har markera
 * den **mus X** position
 * den **mus Y** position
 
-**Aktivitetsström** Detta ger information om användarens sociala aktivitet på olika plattformar, t.ex. AEM forum, bloggar, omdömen etc.
+**Aktivitetsström** Detta ger information om användarens sociala aktivitet på olika plattformar, till exempel AEM forum, bloggar, omdömen och så vidare.
 
 **Campaign** Gör att författare kan simulera en specifik upplevelse för en kampanj. Den här komponenten åsidosätter normal kampanjupplösning och val av upplevelse för att möjliggöra testning av olika permutationer.
 
 Kampanjupplösning baseras vanligtvis på kampanjens prioritetsegenskap. Upplevelsen väljs vanligtvis baserat på segmentering.
 
-**Kundvagn** Visar kundvagnsinformation inklusive produktposter (titel, kvantitet, prisFormaterat osv.), lösta kampanjer (titel, meddelande osv.) och verifikationer (kod, beskrivning osv.).
+**Kundvagn** Visar kundvagnsinformation inklusive produktposter (titel, kvantitet, prisFormaterat o.s.v.), lösta kampanjer (titel, meddelande o.s.v.) och verifikationer (kod, beskrivning o.s.v.).
 
 Kundsessionslagringen meddelar också servern om lösta kampanjändringar (baserat på segmenteringsändringar) med hjälp av ClientContextCartServlet.
 
@@ -154,7 +150,7 @@ När du är klar kan du [återställa profilen](#resetting-the-profile-to-the-cu
 
    ![Ikonen Läs in profil för klientkontext](do-not-localize/clientcontext_loadprofile.png)
 
-1. Dialogrutan öppnas där du kan välja vilken profil du vill läsa in:
+1. Då öppnas dialogrutan där du kan välja vilken profil som ska läsas in:
 
    ![Dialogrutan Profilinläsare visar listrutan för att välja en profil](assets/clientcontext_profileloader.png)
 
@@ -164,7 +160,7 @@ När du är klar kan du [återställa profilen](#resetting-the-profile-to-the-cu
 
 Du kan också välja en profil med markeringsreglaget:
 
-1. Dubbelklicka på ikonen som representerar den aktuella användaren. Väljaren öppnas, använder pilarna för att navigera och ser tillgängliga profiler:
+1. Dubbelklicka på ikonen som representerar den aktuella användaren. Väljaren öppnas och du kan använda pilarna för att navigera och visa tillgängliga profiler:
 
    ![Användarväljaren](assets/clientcontext_profileselector.png)
 

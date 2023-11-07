@@ -7,16 +7,16 @@ doc-type: tutorial
 kt: 5826
 thumbnail: 39476.jpg
 exl-id: 48479725-8b52-4ff2-a599-d20958b26ee6
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '871'
+source-wordcount: '869'
 ht-degree: 0%
 
 ---
 
 # Utveckla AEM {#develop}
 
-Utveckla AEM handelsprojekt som bygger på Commerce Integration Framework (CIF) för AEM följer samma regler och bästa praxis som andra AEM. Granska dessa först:
+Utveckla AEM handelsprojekt som bygger på Commerce integration framework (CIF) för AEM följer samma regler och bästa praxis som andra AEM projekt. Granska dessa först:
 
 - [Användarhandbok om AEM 6.5-utveckling](/help/sites-developing/home.md)
 - [AEM Core Concepts](/help/sites-developing/the-basics.md)
@@ -25,13 +25,13 @@ Utveckla AEM handelsprojekt som bygger på Commerce Integration Framework (CIF) 
 
 ## Lokal utveckling för AEM {#local}
 
-En lokal utvecklingsmiljö rekommenderas för arbete med CIF-projekt.
+En lokal utvecklingsmiljö rekommenderas för CIF.
 
 >[!NOTE]
 >
 >Följande instruktioner hjälper dig att konfigurera en lokal AEM utvecklingsmiljö för AEM Commerce med CIF med fokus för AEM 6.5). Om du använder AEM as a Cloud Service kan du läsa [AEM Commerce as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content-and-commerce/home.html) dokumentation.
 
-AEM Commerce Add-On för AEM 6.5 alias. CIF-tillägget finns även för lokal utveckling och tillhandahålls som ett AEM. Den kan laddas ned från [Programdistributionsportal](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html) som ett funktionspaket.
+AEM Commerce Add-On för AEM 6.5 alias. CIF Add-On finns även för lokal utveckling och tillhandahålls som ett AEM. Den kan laddas ned från [Programdistributionsportal](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html) som ett funktionspaket.
 
 ### Nödvändig programvara
 
@@ -45,17 +45,17 @@ Följande bör installeras lokalt:
 - [npm 6+](https://www.npmjs.com/)
 - [Git](https://git-scm.com/)
 
-### Åtkomst till CIF-tillägget
+### Åtkomst till CIF
 
-CIF-tillägget kan hämtas från [Programdistributionsportal](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html), söker du efter AEM Commerce add-on.
+Tillägget CIF kan hämtas från [Programdistributionsportal](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html), söker du efter AEM Commerce add-on.
 
 >[!TIP]
 >
->Se till att du alltid använder den senaste CIF-tilläggsversionen.
+>Se till att du alltid använder den senaste CIF Add-On-versionen.
 
 ### Lokal installation
 
-För lokal CIF-projektutveckling med AEM och CIF-tillägget:
+För lokal CIF projektutveckling med AEM och CIF steg:
 
 1. Hämta AEM 6.5 och installera AEM 6.5 Service Pack. AEM 6.5 Service Pack 7 krävs, men Adobe rekommenderar att du installerar det senaste tillgängliga Service Pack-paketet.
 
@@ -67,15 +67,15 @@ För lokal CIF-projektutveckling med AEM och CIF-tillägget:
 
 1. Skapa en `crx-quickstart/install` mapp
 
-1. Kopiera CIF-tillägget för alla paket som hämtats från portalen för distribution av programvara till `crx-quickstart/install` mapp.
+1. Kopiera CIF-tillägget för alla paket som hämtats från Software Distribution Portal till `crx-quickstart/install` mapp.
 
 >[!TIP]
 >
->Ett alternativ är att CIF-tilläggspaketet också kan installeras via Package Manager.
+>CIF tilläggspaket kan också installeras via Package Manager.
 
 1. Starta AEM snabbstart
 
-Verifiera konfigurationen via OSGI-konsolen: `http://localhost:4502/system/console/osgi-installer`. Listan bör innehålla CIF-tilläggsrelaterade paket, innehållspaket och OSGI-konfigurationer. Se till att alla paket har startats.
+Verifiera konfigurationen via OSGI-konsolen: `http://localhost:4502/system/console/osgi-installer`. Listan ska innehålla de CIF tilläggspaketen, innehållspaketet och OSGI-konfigurationer. Se till att alla paket har startats.
 
 ## Projektinställningar {#project}
 
@@ -83,7 +83,7 @@ Det finns två sätt att starta AEM Commerce-projekt med CIF.
 
 ### Använd AEM projekttyp
 
-The [AEM Project Archettype](https://github.com/adobe/aem-project-archetype) är huvudverktyget för att starta ett förkonfigurerat projekt för att komma igång med CIF. CIF Core Components och alla nödvändiga konfigurationer kan inkluderas i ett genererat projekt med ett extra alternativ.
+The [AEM Project Archettype](https://github.com/adobe/aem-project-archetype) är huvudverktyget för att starta ett förkonfigurerat projekt för att komma igång med CIF. CIF kärnkomponenter och alla nödvändiga konfigurationer kan inkluderas i ett genererat projekt med ett extra alternativ.
 
 >[!TIP]
 >
@@ -106,7 +106,7 @@ mvn -B archetype:generate \
  -D includeCommerce=y
 ```
 
-CIF Core Components kan användas i alla projekt, antingen med de medföljande `all` paket eller individ som använder CIF-innehållspaketet och tillhörande OSGI-paket. Om du vill lägga till CIF-kärnkomponenter manuellt i ett projekt använder du följande beroenden:
+CIF kärnkomponenter kan användas i alla projekt, antingen med de medföljande `all` paket eller individ som använder CIF och tillhörande OSGI-paket. Om du vill lägga till CIF kärnkomponenter manuellt i ett projekt använder du följande beroenden:
 
 ```java
 <dependency>
@@ -140,7 +140,7 @@ CIF Core Components kan användas i alla projekt, antingen med de medföljande `
 
 ### Använd AEM Venia Reference Store
 
-Ett annat alternativ för att starta ett CIF-projekt är att klona och använda [AEM Venia Reference Store](https://github.com/adobe/aem-cif-guides-venia). AEM Venia Reference Store är ett exempel på en butiksapplikation som demonstrerar användningen av CIF Core Components för AEM. Det är avsett som en uppsättning med metodtips och en potentiell utgångspunkt för att utveckla din egen funktionalitet.
+Ett andra alternativ för att starta ett CIF är att klona och använda [AEM Venia Reference Store](https://github.com/adobe/aem-cif-guides-venia). AEM Venia Reference Store är ett exempel på referensarkivprogram som demonstrerar användningen av CIF Core Components for AEM. Det är avsett som en uppsättning med metodtips och en potentiell utgångspunkt för att utveckla din egen funktionalitet.
 
 Kom igång med Venia Reference Store genom att klona [Git-databas](https://github.com/adobe/aem-cif-guides-venia) och börja anpassa projektet efter dina behov.
 
@@ -156,9 +156,9 @@ Båda, ett projekt som genereras av [AEM Project Archettype](https://github.com/
 
 Ersätt värdet för `url` in `com.adobe.cq.commerce.graphql.client.impl.GraphqlClientImpl~default.cfg.json` med GraphQL slutpunkt i e-handelssystemet som används av projektet.
 
-AEM Commerce Add-On och CIF Core Components ansluter till GraphQL-slutpunkten via AEM och direkt via webbläsaren. CIF-kärnkomponenter på klientsidan och CIF-tilläggsverktyg som standard ansluter till `/api/graphql`. Vid behov kan detta justeras via CIF-Cloud Servicens konfiguration (se nedan).
+AEM Commerce Add-On och CIF Core Components ansluter till e-handelsplatsen för GraphQL via AEM server och direkt via webbläsaren. Huvudkomponenter CIF klientsidan och redigeringsverktygen för CIF tillägg som standard ansluter till `/api/graphql`. Vid behov kan detta justeras via CIF Cloud Service-konfigurationen (se nedan).
 
-CIF-tillägget tillhandahåller en GraphQL-proxyserver på `/api/graphql`. Om du inte tänker använda en lokal AEM Dispatcher rekommenderar vi att du även konfigurerar GraphQL proxyserver.
+Tillägget CIF tillhandahåller en GraphQL-proxyserver på `/api/graphql`. Om du inte tänker använda en lokal AEM Dispatcher rekommenderar vi att du även konfigurerar GraphQL proxyserver.
 
 Navigera till http://localhost:4502/system/console/configMgr och skapa en OSGI-konfiguration för `Adobe CIF GraphQL Proxy Configuration` service. Använd samma GraphQL-slutpunkt i e-handelssystemet som för GraphQL-klienten ovan.
 

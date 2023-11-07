@@ -6,9 +6,9 @@ mini-toc-levels: 1
 role: Architect, Admin
 feature: Asset Management
 exl-id: 1d9388de-f601-42bf-885b-6a7c3236b97e
-source-git-commit: 3d713021ac410ca2925a282c5dfca98ed4e483ee
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2680'
+source-wordcount: '2674'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 # [!DNL Adobe Experience Manager Assets] guide för prestandajustering {#assets-performance-tuning-guide}
 
-An [!DNL Experience Manager Assets] installationen innehåller ett antal maskinvaru-, programvaru- och nätverkskomponenter. Beroende på ditt driftsättningsscenario kan du behöva specifika konfigurationsändringar för maskinvara, programvara och nätverkskomponenter för att ta bort flaskhalsar i prestandan.
+An [!DNL Experience Manager Assets] installationen innehåller flera maskinvaru-, programvaru- och nätverkskomponenter. Beroende på ditt driftsättningsscenario kan du behöva specifika konfigurationsändringar för maskinvara, programvara och nätverkskomponenter för att ta bort flaskhalsar i prestandan.
 
 Genom att identifiera och följa vissa riktlinjer för optimering av maskinvara och programvara kan du dessutom skapa en stabil grund som gör att [!DNL Experience Manager Assets] driftsättning för att uppfylla förväntningarna om prestanda, skalbarhet och tillförlitlighet.
 
@@ -25,15 +25,15 @@ Dåliga prestanda i [!DNL Experience Manager Assets] kan påverka användarupple
 
 Prestandaoptimering är en grundläggande uppgift som du utför innan du fastställer målvärden för ett projekt.
 
-Här är några viktiga fokusområden där du kan identifiera och åtgärda prestandaproblem innan de påverkar användarna.
+Här är några viktiga fokusområden som du kan använda för att identifiera och åtgärda prestandaproblem innan de påverkar användarna.
 
 ## Plattform {#platform}
 
-Experience Manager stöds på ett antal plattformar, men Adobe har funnit det bästa stödet för inbyggda verktyg i Linux och Windows, vilket ger optimala prestanda och förenklad implementering. Bäst är att du driftsätter ett 64-bitars operativsystem för att uppfylla de höga minneskraven i en [!DNL Experience Manager Assets] distribution. Precis som med andra Experience Manager-distributioner bör du implementera tarMK där det är möjligt. Även om TonaMK inte kan skalas bortom en enda författarinstans, fungerar det bättre än MongoMK. Du kan lägga till instanser för TjärtMK-avlastning för att öka arbetsflödets bearbetningskraft [!DNL Experience Manager Assets] distribution.
+Experience Manager stöds på flera plattformar, men Adobe har funnit det bästa stödet för inbyggda verktyg i Linux och Windows, vilket ger optimala prestanda och enklare implementering. Bäst är att du driftsätter ett 64-bitars operativsystem för att uppfylla de höga minneskraven i en [!DNL Experience Manager Assets] distribution. Precis som med andra Experience Manager-distributioner bör du implementera tarMK där det är möjligt. Även om StjärmMK inte kan skalas bortom en enda författarinstans, fungerar det bättre än MongoMK. Du kan lägga till instanser för TjärtMK-avlastning för att öka arbetsflödets bearbetningskraft [!DNL Experience Manager Assets] distribution.
 
 ### Tillfällig mapp {#temp-folder}
 
-Om du vill förbättra överföringstiderna använder du högpresterande lagringsutrymme för den tillfälliga Java-katalogen. I Linux och Windows kan en RAM-enhet eller SSD användas. I molnbaserade miljöer kan en motsvarande typ av höghastighetslagring användas. I Amazon EC2 kan du till exempel [kortdisk](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html) kan användas för den tillfälliga mappen.
+Om du vill förbättra överföringstiderna använder du högpresterande lagringsutrymme för den tillfälliga Java-katalogen. I Linux och Windows kan en RAM-enhet eller SSD användas. I molnbaserade miljöer kan en motsvarande typ av höghastighetslagring användas. I Amazon EC2 kan du till exempel [kortkörning](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html) kan användas för den temporära mappen.
 
 Om servern har tillräckligt med minne konfigurerar du en RAM-enhet. Kör följande kommandon i Linux för att skapa en 8 GB RAM-enhet:
 
@@ -46,7 +46,7 @@ mkfs -q /dev/ram1 800000
 
 I Windows använder du en drivrutin från tredje part för att skapa en RAM-enhet eller bara använda lagring med höga prestanda, till exempel SSD.
 
-När den tillfälliga volymen med höga prestanda är klar anger du JVM-parametern `-Djava.io.tmpdir`. Du kan till exempel lägga till JVM-parametern nedan i `CQ_JVM_OPTS` variabeln i `bin/start` skript för [!DNL Experience Manager]:
+När den tillfälliga volymen med höga prestanda är klar anger du JVM-parametern `-Djava.io.tmpdir`. Du kan till exempel lägga till JVM-parametern nedan i `CQ_JVM_OPTS` i `bin/start` skript för [!DNL Experience Manager]:
 
 `-Djava.io.tmpdir=/mnt/aem-tmp`
 
@@ -116,12 +116,12 @@ accessKey=<snip>
 
 Adobe rekommenderar att du aktiverar HTTPS eftersom många företag har brandväggar som fångar upp HTTP-trafik, vilket påverkar överföringar negativt och skadar filer. För stora filöverföringar måste användarna ha kabelanslutna anslutningar till nätverket eftersom ett WiFi-nätverk snabbt blir mättat. Riktlinjer för att identifiera flaskhalsar i nätverket finns i [Guide för resursstorlek](/help/assets/assets-sizing-guide.md). Information om hur du utvärderar nätverksprestanda genom att analysera nätverkstopologi finns i [Resurser för nätverksaspekter](/help/assets/assets-network-considerations.md).
 
-Din nätverksoptimeringsstrategi är i första hand beroende av hur mycket bandbredd som är tillgänglig och belastningen på din [!DNL Experience Manager] -instans. Gemensamma konfigurationsalternativ, inklusive brandväggar och proxies, kan förbättra nätverkets prestanda. Här följer några viktiga punkter att tänka på:
+Din nätverksoptimeringsstrategi är i första hand beroende av hur mycket bandbredd som är tillgänglig och belastningen på din [!DNL Experience Manager] -instans. Gemensamma konfigurationsalternativ, inklusive brandväggar och proxies, kan förbättra nätverkets prestanda. Här följer några viktiga saker att tänka på:
 
 * Beroende på vilken instanstyp du har (liten, måttlig, stor) kontrollerar du att du har tillräcklig nätverksbandbredd för instansen Experience Manager. Lämplig bandbreddsallokering är särskilt viktig om [!DNL Experience Manager] ligger hos AWS.
 * Om [!DNL Experience Manager] som finns på AWS kan du dra nytta av en mångsidig skalningspolicy. Överför instansen om användarna förväntar sig hög belastning. Minska storleken för måttlig/låg belastning.
-* HTTPS: De flesta användare har brandväggar som tolkar HTTP-trafik, vilket kan påverka överföringen av filer negativt eller till och med skada filer under överföringen.
-* Stora filöverföringar: Kontrollera att användarna har kabelanslutna anslutningar till nätverket (WiFi-anslutningar blir snabbt mättade).
+* HTTPS: De flesta användare har brandväggar som krypterar HTTP-trafik, vilket kan påverka överföringen av filer negativt eller till och med skada filer under överföringen.
+* Stora filöverföringar: Se till att användarna har kabelanslutna anslutningar till nätverket (WiFi-anslutningar blir snabbt mättade).
 
 ## Arbetsflöden {#workflows}
 
@@ -161,7 +161,7 @@ Som standard [!DNL Experience Manager] kör ett maximalt antal parallella jobb s
 
 1. Uppdatera värdet för **[!UICONTROL Maximum Parallel Jobs]** och klicka **[!UICONTROL Save]**.
 
-Att ställa in en kö på hälften av de tillgängliga processorerna är en användbar lösning att börja med. Du kan dock behöva öka eller minska det här antalet för att få maximal genomströmning och justera det efter miljö. Det finns separata köer för tillfälliga och icke-tillfälliga arbetsflöden samt andra processer, till exempel externa arbetsflöden. Om flera köer är inställda på 50 % av processorerna aktiva samtidigt kan systemet snabbt bli överbelastat. De köer som används ofta varierar mycket mellan olika implementeringar. Därför kan du behöva konfigurera dem noggrant för maximal effektivitet utan att ge avkall på serverstabiliteten.
+Att ställa in en kö på hälften av de tillgängliga processorerna är en användbar lösning att börja med. Du kan dock behöva öka eller minska det här antalet för att få maximal genomströmning och justera det efter miljö. Det finns separata köer för tillfälliga och icke-tillfälliga arbetsflöden och andra processer, till exempel externa arbetsflöden. Om flera köer är inställda på 50 % av processorerna aktiva samtidigt kan systemet snabbt bli överbelastat. De köer som används ofta varierar mycket mellan olika implementeringar. Därför kan du behöva konfigurera dem noggrant för maximal effektivitet utan att ge avkall på serverstabiliteten.
 
 ### DAM-uppdateringskonfiguration {#dam-update-asset-configuration}
 
@@ -173,7 +173,7 @@ Det är en tillfällig ökning och datalagret återställs till den ursprungliga
 
 Vanligtvis körs skräpinsamlingsaktiviteten för datalager varje vecka tillsammans med andra schemalagda underhållsaktiviteter.
 
-Om du har begränsat diskutrymme och kör [!UICONTROL DAM Update Asset] arbetsflöden intensivt bör du överväga att schemalägga skräpinsamlingen oftare.
+Om du har begränsat diskutrymme och kör [!UICONTROL DAM Update Asset] arbetsflöden intensivt bör du överväga att schemalägga skräpinsamlingsuppgifterna oftare.
 
 #### Generering av rendering vid körning {#runtime-rendition-generation}
 
@@ -212,17 +212,17 @@ Dessutom anger du sökvägen till den tillfälliga mappen för ImageMagick i `co
 >
 >ImageMagick `policy.xml` och `configure.xml` filer finns på `/usr/lib64/ImageMagick-&#42;/config/` i stället för `/etc/ImageMagick/`.Se [ImageMagick-dokumentation](https://www.imagemagick.org/script/resources.php) för platsen för konfigurationsfilerna.
 
-Om du använder [!DNL Experience Manager] om du planerar att bearbeta stora PSD- eller PSB-filer på Adobe Managed Services (AMS) kan du kontakta Adobe kundsupport. Samarbeta med Adobe kundsupportrepresentant för att implementera de bästa metoderna för driftsättningen av AMS och för att välja de bästa möjliga verktygen och modellerna för Adobe egna format. [!DNL Experience Manager] kan inte bearbeta PSB-filer med hög upplösning som är större än 30000 x 23000 pixlar.
+Om du använder [!DNL Experience Manager] på Adobe Managed Services (AMS), kontakta Adobe kundsupport om du tänker bearbeta många stora PSD- eller PSB-filer. Samarbeta med Adobe kundsupportrepresentant för att implementera de bästa metoderna för driftsättningen av AMS och för att välja de bästa möjliga verktygen och modellerna för Adobe egna format. [!DNL Experience Manager] kan inte bearbeta PSB-filer med hög upplösning som är större än 30000 x 23000 pixlar.
 
-### XMP {#xmp-writeback}
+### XMP tillbakaskrivning {#xmp-writeback}
 
 XMP återföring uppdaterar originalresursen när metadata ändras i [!DNL Experience Manager], vilket ger följande resultat:
 
-* Själva tillgången ändras
+* Själva tillgången har ändrats
 * En version av resursen skapas
 * [!UICONTROL DAM Update Asset] körs mot resursen
 
-De listade resultaten kräver stora resurser. Adobe rekommenderar därför att XMP avaktiveras om det inte behövs. Mer information finns i [XMP](/help/assets/xmp-writeback.md).
+De listade resultaten förbrukar avsevärda resurser. Adobe rekommenderar därför att XMP avaktiveras om det inte behövs. Mer information finns i [XMP tillbakaskrivning](/help/assets/xmp-writeback.md).
 
 Om du importerar en stor mängd metadata kan det leda till resurskrävande XMP återskrivningsaktivitet om körningsarbetsflödesflaggan är markerad. Planera en sådan import under begränsad serveranvändning så att prestanda för andra användare inte påverkas.
 
@@ -242,7 +242,7 @@ När du replikerar resurser till ett stort antal publiceringsinstanser, till exe
 
 ## Sökindex {#search-indexes}
 
-Installera [senaste Service Pack](/help/release-notes/release-notes.md) och prestandarelaterade snabbkorrigeringar, eftersom de ofta innehåller uppdateringar av systemindex. Se [tips för prestandajustering](https://experienceleague.adobe.com/docs/experience-manager-65/assets/administer/performance-tuning-guidelines.html?lang=en) för vissa indexoptimeringar.
+Installera [de senaste Service Packs](/help/release-notes/release-notes.md) och prestandarelaterade snabbkorrigeringar, eftersom de ofta innehåller uppdateringar av systemindex. Se [tips för prestandajustering](https://experienceleague.adobe.com/docs/experience-manager-65/assets/administer/performance-tuning-guidelines.html?lang=en) för vissa indexoptimeringar.
 
 Skapa anpassade index för frågor som du kör ofta. Mer information finns i [metod för att analysera långsamma frågor](https://aemfaq.blogspot.com/2014/08/oak-query-log-file-analyzer-tool.html) och [skapa egna index](/help/sites-deploying/queries-and-indexing.md). Mer information om metodtips för frågor och index finns i [Metodtips för frågor och indexering](/help/sites-deploying/best-practices-for-queries-and-indexing.md).
 
@@ -255,20 +255,20 @@ Vissa optimeringar kan göras för Oak-indexkonfigurationer som kan förbättra 
 1. Lägg till en `String[]` property `excludedPaths` med värden `/var`, `/etc/workflow/instances`och `/etc/replication`.
 1. Bläddra till `/oak:index/damAssetLucene`. Lägg till en `String[]` property `includedPaths` med värde `/content/dam`. Spara ändringar.
 
-Om dina användare inte behöver göra fulltextsökning av resurser, till exempel söka igenom text i PDF-dokument, kan du inaktivera det. Du förbättrar indexets prestanda genom att inaktivera fulltextindexering. Inaktivera [!DNL Apache Lucene] textrahering, följ dessa steg:
+Om dina användare inte behöver göra fulltextsökning av resurser, till exempel söka igenom text i PDF-dokument, kan du inaktivera det. Du kan förbättra indexets prestanda genom att inaktivera fulltextindexering. Inaktivera [!DNL Apache Lucene] textrahering, följ dessa steg:
 
 1. I [!DNL Experience Manager] gränssnitt, åtkomst [!UICONTROL Package Manager].
 1. Överför och installera det paket som finns på [disable_indexingbinarytextextraction-10.zip](assets/disable_indexingbinarytextextraction-10.zip).
 
 ### Gissa totalt {#guess-total}
 
-När du skapar frågor som genererar stora resultatuppsättningar använder du `guessTotal` så att du slipper använda mycket minne när du kör dem.
+Använd kommandot `guessTotal` så att du slipper använda mycket minne när du kör dem.
 
 ## Kända fel {#known-issues}
 
 ### Stora filer {#large-files}
 
-Det finns två viktiga kända problem med stora filer i [!DNL Experience Manager]. När filer når större storlekar än 2 GB kan synkronisering med vänteläge i kallt läge hamna i en situation där minnet är slut. I vissa fall förhindras att standby-synkronisering körs. I andra fall kraschar den primära instansen. Detta scenario gäller alla filer i [!DNL Experience Manager] som är större än 2 GB, inklusive innehållspaket.
+Det finns två viktiga kända problem med stora filer i [!DNL Experience Manager]. När filer når större storlekar än 2 GB kan synkronisering med kalla väntelägen hamna i en situation där minnet är slut. I vissa fall förhindras att standby-synkronisering körs. I andra fall kraschar den primära instansen. Detta scenario gäller alla filer i [!DNL Experience Manager] som är större än 2 GB, inklusive innehållspaket.
 
 På samma sätt kan det ta lite tid innan filen är helt beständig från cachen till filsystemet om filen är 2 GB stor när ett delat S3-datalager används. Detta innebär att om du använder en binär replikering utan binärfiler kan det hända att binära data inte har befunnits beständiga innan replikeringen slutförs. Denna situation kan leda till problem, särskilt om datatillgängligheten är viktig.
 
@@ -288,10 +288,10 @@ Utför följande uppgifter för alla problem med nätverkets prestanda från kun
 
 ### [!DNL Experience Manager] driftsättningstest {#aem-deployment-testing}
 
-För att minimera latens och uppnå hög genomströmning genom effektiv processoranvändning och lastdelning bör du övervaka prestandan hos [!DNL Experience Manager] regelbundet. Särskilt gäller följande:
+För att minimera latens och uppnå hög genomströmning genom effektiv CPU-användning och lastdelning bör du övervaka prestandan hos [!DNL Experience Manager] distribuera regelbundet. Särskilt gäller följande:
 
 * Kör belastningstester mot [!DNL Experience Manager] distribution.
-* Övervaka uppladdningsprestanda och användargränssnittets svarstider.
+* Övervaka uppladdningsprestanda och hur användargränssnittet påverkas.
 
 ## [!DNL Experience Manager Assets] resultatchecklista och påverkan av tillgångshanteringsåtgärder {#checklist}
 
@@ -301,11 +301,11 @@ För att minimera latens och uppnå hög genomströmning genom effektiv processo
 * Ange optimala JVM-parametrar.
 * Konfigurera ett datalager i filsystemet eller ett S3-datalager.
 * Inaktivera generering av underresurser. Om det är aktiverat skapar AEM en separat resurs för varje sida i en flersidig resurs. Var och en av dessa sidor är en enskild resurs som förbrukar mer diskutrymme, kräver versionshantering och ytterligare arbetsflödesbearbetning. Om du inte behöver separata sidor inaktiverar du generering av delresurser och sidextrahering.
-* Möjliggör tillfälliga arbetsflöden.
+* Aktivera tillfälliga arbetsflöden.
 * Justera Granite-arbetsflödesköerna för att begränsa antalet samtidiga jobb.
 * Konfigurera [!DNL ImageMagick] för att begränsa resursförbrukning.
 * Ta bort onödiga steg från [!UICONTROL DAM Update Asset] arbetsflöde.
 * Konfigurera arbetsflöde och versionsrensning.
 * Optimera index med de senaste Service Pack-uppdateringarna och snabbkorrigeringarna. Kontakta Adobe kundsupport för eventuella ytterligare indexoptimeringar.
 * Använd gissningTotal för att optimera frågeprestanda.
-* Om du konfigurerar [!DNL Experience Manager] för att identifiera filtyper från filinnehållet (genom att aktivera **[!UICONTROL Day CQ DAM Mime Type Service]** i **[!UICONTROL AEM Web Console]**) kan du överföra många filer samtidigt under icke-toppvärdesdagar eftersom det är resurskrävande.
+* Om du konfigurerar [!DNL Experience Manager] för att identifiera filtyper från filernas innehåll (genom att aktivera **[!UICONTROL Day CQ DAM Mime Type Service]** i **[!UICONTROL AEM Web Console]**) kan du överföra många filer samtidigt under icke-toppvärdesdagar eftersom det är resurskrävande.

@@ -5,9 +5,9 @@ feature: Content Fragments,Assets HTTP API
 role: Developer
 exl-id: 0f9efb47-a8d1-46d9-b3ff-a6c0741ca138
 hide: true
-source-git-commit: 71b3f7c6ad2c7712762a29518de6cf0639081cb7
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1956'
+source-wordcount: '1959'
 ht-degree: 1%
 
 ---
@@ -204,7 +204,7 @@ Svaret kommer att innehålla sidindelningsinformation som en del av `properties`
 
 Mappar fungerar som behållare för resurser och andra mappar. De återspeglar strukturen i AEM innehållsdatabas.
 
-Resursens REST API visar åtkomst till egenskaperna för en mapp, till exempel dess namn, titel osv. Resurser visas som underordnade enheter till mappar och undermappar.
+Resursens REST API visar åtkomst till egenskaperna för en mapp, till exempel dess namn, titel och så vidare. Resurser visas som underordnade enheter till mappar och undermappar.
 
 >[!NOTE]
 >
@@ -235,9 +235,9 @@ Innehållsfragment:
 
 #### Innehållsmodeller och innehållsfragment {#content-models-and-content-fragments}
 
-För närvarande visas inte modellerna som definierar strukturen för ett innehållsfragment via ett HTTP-API. Därför *konsument* behöver känna till modellen för ett fragment (minst ett minimum), även om den mesta informationen kan härledas från nyttolasten, som datatyper osv. är en del av definitionen.
+För närvarande visas inte modellerna som definierar strukturen för ett innehållsfragment via ett HTTP-API. Därför *konsument* måste känna till modellen för ett fragment (minst ett minimum), även om den mesta informationen kan härledas från nyttolasten, som datatyper och så vidare. är en del av definitionen.
 
-Om du vill skapa ett nytt innehållsfragment måste modellens (interna databas) sökväg anges.
+Om du vill skapa ett innehållsfragment måste modellens (interna databas) sökväg anges.
 
 #### Associerat innehåll {#associated-content}
 
@@ -307,7 +307,7 @@ Användning sker via:
 
 Det finns några begränsningar:
 
-* **Modeller för innehållsfragment stöds för närvarande inte**: de kan inte läsas eller skapas. För att kunna skapa ett nytt, eller uppdatera ett befintligt, innehållsfragment, måste utvecklarna veta rätt sökväg till innehållsfragmentmodellen. För närvarande är det enda sättet att få en översikt över dessa genom administrationsgränssnittet.
+* **Modeller för innehållsfragment stöds för närvarande inte**: de kan inte läsas eller skapas. För att kunna skapa ett innehållsfragment, eller uppdatera ett befintligt, måste utvecklarna veta rätt sökväg till innehållsfragmentmodellen. För närvarande är det enda sättet att få en översikt över dessa genom administrationsgränssnittet.
 * **Referenser ignoreras**. För närvarande finns det inga kontroller för om ett befintligt innehållsfragment refereras. Om du tar bort ett innehållsfragment kan det därför leda till problem på en sida som innehåller en referens till det borttagna innehållsfragmentet.
 * **JSON-datatyp** REST API-utdata för *JSON-datatyp* är för närvarande *strängbaserade utdata*.
 

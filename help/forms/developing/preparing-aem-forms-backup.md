@@ -11,9 +11,9 @@ topic-tags: operations
 discoiquuid: e747147e-e96d-43c7-87b3-55947eef81f5
 role: Developer
 exl-id: aeab003d-ba64-4760-9c56-44638501e9ff
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2520'
+source-wordcount: '2519'
 ht-degree: 0%
 
 ---
@@ -59,7 +59,7 @@ Du aktiverar säkerhetskopieringsläget för att tillåta säkerhetskopiering av
 * Den tid det tar för säkerhetskopieringen att slutföras.
 * En flagga som anger om du ska vara i kontinuerligt säkerhetskopieringsläge, vilket bara är användbart om du utför rullande säkerhetskopiering.
 
-Innan du skriver program som ska gå in i säkerhetskopieringsläge bör du känna till de säkerhetskopieringsprocedurer som ska användas när formulärservern har placerats i säkerhetskopieringsläge. Mer information om vad du bör tänka på när du gör säkerhetskopieringar för AEM Forms finns i [administrationshjälp](https://www.adobe.com/go/learn_aemforms_admin_63).
+Innan du skriver program som ska gå in i säkerhetskopieringsläge bör du känna till de säkerhetskopieringsprocedurer som används efter att du har placerat formulärservern i säkerhetskopieringsläge. Mer information om vad du bör tänka på när du gör säkerhetskopieringar för AEM Forms finns i [administrationshjälp](https://www.adobe.com/go/learn_aemforms_admin_63).
 
 >[!NOTE]
 >
@@ -135,7 +135,7 @@ Ange säkerhetskopieringsläge med API:t för säkerhetskopiering och återstäl
    * An `int` värde som anger antalet minuter som ska behållas i säkerhetskopieringsläge. Du kan ange ett värde från `1` till `10080` (antalet minuter i en vecka). Detta värde ignoreras när läget för kontinuerlig säkerhetskopiering används.
    * A `Boolean` ett värde som anger om du vill vara i kontinuerligt säkerhetskopieringsläge. Värdet för `True` används för att vara i kontinuerligt säkerhetskopieringsläge. I läget för kontinuerlig säkerhetskopiering ignoreras det värde du anger för hur många minuter som ska vara kvar i läget för säkerhetskopiering.
 
-      Kontinuerligt säkerhetskopieringsläge innebär att en ny session i säkerhetskopieringsläge startas när den aktuella sessionen har slutförts. Värdet för `False` betyder att kontinuerligt säkerhetskopieringsläge inte används och att rensning av filer från GDS-systemet återupptas efter att säkerhetskopieringsläget har avslutats.
+     Kontinuerligt säkerhetskopieringsläge innebär att en ny session i säkerhetskopieringsläge startas när den aktuella sessionen har slutförts. Värdet för `False` betyder att kontinuerligt säkerhetskopieringsläge inte används och att rensning av filer från GDS-systemet återupptas efter att säkerhetskopieringsläget har avslutats.
 
 1. Hämta information om sessionen för säkerhetskopieringsläge på servern
 
@@ -170,11 +170,11 @@ Ange säkerhetskopieringsläge med webbtjänsten som tillhandahålls av API:t f�
    * A `Uint32` värde som anger antalet minuter som ska behållas i säkerhetskopieringsläge. Du kan ange ett värde från `1` till `10080` (antal minuter i en vecka). Detta värde ignoreras när läget för kontinuerlig säkerhetskopiering används.
    * A `Boolean` ett värde som anger om du vill vara i kontinuerligt säkerhetskopieringsläge. Värdet för `True` används för att vara i kontinuerligt säkerhetskopieringsläge. I läget för kontinuerlig säkerhetskopiering ignoreras det värde du anger för hur många minuter som ska vara kvar i läget för säkerhetskopiering. Kontinuerligt säkerhetskopieringsläge innebär att en ny session i säkerhetskopieringsläge startas när den aktuella sessionen har slutförts.
 
-      Värdet för `False` betyder att kontinuerligt säkerhetskopieringsläge inte används och att rensning av filer från GDS-systemet återupptas efter att säkerhetskopieringsläget har avslutats.
+     Värdet för `False` betyder att kontinuerligt säkerhetskopieringsläge inte används och att rensning av filer från GDS-systemet återupptas efter att säkerhetskopieringsläget har avslutats.
 
 1. Hämta information om sessionen för säkerhetskopieringsläge på servern
 
-   Hämta information om sessionen för säkerhetskopieringsläge efter att metoden enterBackupMode har anropats från BackupModeEntryResult som returneras för att bekräfta att den lyckades. Den information du kan hämta när du har aktiverat säkerhetskopieringsläget kan vara användbar för integrering med dina säkerhetskopieringsprocedurer. Etiketten, säkerhetskopierings-ID:t och starttiden kan till exempel vara användbara som indata för filnamn för säkerhetskopieringsproceduren.
+   Hämta information om säkerhetskopieringsläget när du har anropat metoden enterBackupMode från BackupModeEntryResult som returneras för att bekräfta att den lyckades. Den information du kan hämta när du har aktiverat säkerhetskopieringsläget kan vara användbar för integrering med dina säkerhetskopieringsprocedurer. Etiketten, säkerhetskopierings-ID:t och starttiden kan till exempel vara användbara som indata för filnamn för säkerhetskopieringsproceduren.
 
 1. Säkerhetskopiera GDS och databasen
 

@@ -1,16 +1,12 @@
 ---
 title: AEM Sites - GDPR-beredskap
-seo-title: AEM Sites - GDPR Readiness
 description: Lär dig mer om hur du hanterar GDPR-förfrågningar i AEM Sites och hur du använder dem.
-seo-description: Learn about the details of GDPR Readiness for AEM Sites.
-uuid: 00d1fdce-ef9a-4902-a7a5-7225728e8ffc
 contentOwner: AEM Docs
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: best-practices
-discoiquuid: 772f6188-5e0b-4e66-b94a-65a0cc267ed3
 exl-id: 8c1ea483-7319-4e5c-be4c-d43a2b67d316
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '837'
 ht-degree: 0%
@@ -21,7 +17,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->GDPR används som exempel i avsnitten nedan, men de ingående detaljerna gäller alla dataskydds- och sekretessbestämmelser, såsom GDPR, CCPA osv.
+>GDPR används som exempel i avsnitten nedan, men de ingående detaljerna gäller alla dataskydds- och sekretessbestämmelser, som GDPR, CCPA och så vidare.
 
 Europeiska unionens allmänna dataskyddsförordning om integritetsskydd får verkan från och med maj 2018.
 
@@ -151,7 +147,7 @@ Om du vill förhandsgranska den beständiga ContextHub som används kan använda
       * ContextHub.Utils.Persistence.Modes.COOKIE
       * ContextHub.Utils.Persistence.Modes.WINDOW
 
-     ContextHub-arkivet definierar vilket beständigt lager som ska användas, och för att visa det aktuella läget för beständigheten bör alla lager kontrolleras.
+     ContextHub-arkivet definierar vilket beständigt lager som används, och för att visa det aktuella läget för beständigheten bör alla lager kontrolleras.
 
 Så här visar du data som lagras i localStorage:
 
@@ -180,7 +176,7 @@ Om du vill förhandsgranska den beständiga ContextHub som används kan använda
       * ContextHub.Utils.Persistence.Modes.COOKIE
       * ContextHub.Utils.Persistence.Modes.WINDOW
 
-     ContextHub-arkivet definierar vilket beständigt lager som ska användas, och för att visa det aktuella läget för beständigheten bör alla lager kontrolleras.
+     ContextHub-arkivet definierar vilket beständigt lager som används, och för att visa det aktuella läget för beständigheten bör alla lager kontrolleras.
 
 Så här visar du data som lagras i localStorage:
 

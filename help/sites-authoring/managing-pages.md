@@ -2,10 +2,10 @@
 title: Skapa och ordna sidor med AEM
 description: Lär dig hur du skapar och hanterar sidor med Adobe Experience Manager.
 exl-id: 74576e51-4b4e-464e-a0b8-0fae748a505d
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2434'
-ht-degree: 4%
+source-wordcount: '2412'
+ht-degree: 2%
 
 ---
 
@@ -21,11 +21,11 @@ I det här avsnittet beskrivs hur du skapar och hanterar sidor med Adobe Experie
 
 >[!NOTE]
 >
->Det finns ett antal [kortkommandon](/help/sites-authoring/keyboard-shortcuts.md) som du kan använda från webbplatskonsolen som gör det enklare att ordna sidorna.
+>Det finns flera [kortkommandon](/help/sites-authoring/keyboard-shortcuts.md) som du kan använda från webbplatskonsolen som gör det enklare att ordna sidorna.
 
 ## Organisera din webbplats {#organizing-your-website}
 
-Som författare måste du ordna din webbplats inom AEM. Detta innebär att du skapar och namnger innehållssidorna så att:
+Som författare kan du ordna din webbplats i AEM. Detta innebär att du skapar och namnger innehållssidorna så att:
 
 * Du kan enkelt hitta dem i redigeringsmiljön
 * Besökare på webbplatsen kan enkelt hitta dem i publiceringsmiljön
@@ -78,7 +78,7 @@ Du kan se grenen uppåt från vägbeskrivningar i sidhuvudsfältet:
 
 ### Konventioner för sidnamngivning {#page-naming-conventions}
 
-När du skapar en ny sida finns det två nyckelfält:
+När du skapar en sida finns det två nyckelfält:
 
 * **[Titel](#title)**:
 
@@ -104,7 +104,7 @@ Sidans **titel** och **namn** kan skapas separat men hänger ihop:
 >
 >Tänk också på att vissa webbläsare (till exempel äldre versioner av IE) bara kan acceptera URL:er med en viss längd, så det finns också tekniska skäl att hålla sidnamnen korta.
 
-AEM skapar en ny sida [validera sidnamnet enligt konventionerna](/help/sites-developing/naming-conventions.md) som ålagts av AEM och JCR.
+När du skapar en sida AEM [validerar sidnamnet enligt konventionerna](/help/sites-developing/naming-conventions.md) som ålagts av AEM och JCR.
 
 Minsta tillåtna tecken är:
 
@@ -122,7 +122,7 @@ Fullständig information om alla tillåtna tecken finns i [namnkonventioner](/he
 
 #### Titel {#title}
 
-Om du bara anger en **sidtitel** när du skapar en ny sida härleds sidans **namn**[ i AEM från den här strängen och namnet valideras enligt konventionerna i AEM och JCR. ](/help/sites-developing/naming-conventions.md) A **Titel** fält som innehåller ogiltiga tecken accepteras, men det härledda namnet kommer att ha de ogiltiga tecknen ersatta. Till exempel:
+Om du bara anger en sida **Titel** när du skapar en sida, hämtar AEM sidan **Namn** från denna sträng och [validera namnet enligt konventionerna](/help/sites-developing/naming-conventions.md) som ålagts av AEM och JCR. A **Titel** fält som innehåller ogiltiga tecken accepteras, men det härledda namnet kommer att ha de ogiltiga tecknen ersatta. Till exempel:
 
 | Titel | Härlett namn |
 |---|---|
@@ -131,7 +131,7 @@ Om du bara anger en **sidtitel** när du skapar en ny sida härleds sidans **nam
 
 #### Namn {#name}
 
-När du anger en sida **Namn** när du skapar en ny sida AEM [validera namnet enligt konventionerna](/help/sites-developing/naming-conventions.md) som ålagts av AEM och JCR. Du kan inte skicka ogiltiga tecken i **Namn** fält. När AEM upptäcker ogiltiga tecken markeras fältet med en förklaring.
+När du anger en sida **Namn** när du skapar en sida, AEM [validerar namnet enligt konventionerna](/help/sites-developing/naming-conventions.md) som ålagts av AEM och JCR. Du kan inte skicka ogiltiga tecken i **Namn** fält. När AEM upptäcker ogiltiga tecken markeras fältet med en förklaring.
 
 ![caop-02](assets/caop-02.png)
 
@@ -143,7 +143,7 @@ När du anger en sida **Namn** när du skapar en ny sida AEM [validera namnet en
 
 ### Mallar {#templates}
 
-I AEM anger en mall en speciell typ av sida. En mall kommer att användas som bas för alla nya sidor som skapas.
+I AEM anger en mall en speciell typ av sida. En mall används som bas för alla nya sidor som skapas.
 
 Mallen definierar strukturen för en sida, inklusive en miniatyrbild och andra egenskaper. Du kan till exempel ha separata mallar för produktsidor, platskartor och kontaktinformation. Mallar består av [komponenter](#components).
 
@@ -186,7 +186,7 @@ Om du inte har skapat alla sidor åt dig i förväg måste du skapa en sida inna
 
 1. Öppna Sites-konsolen (till exempel [https://localhost:4502/sites.html/content](https://localhost:4502/sites.html/content)).
 1. Navigera till den plats där du vill skapa den nya sidan.
-1. Öppna listrutan med **Skapa** i verktygsfältet och välj sedan **Sida** i listan:
+1. Öppna den nedrullningsbara väljaren med **Skapa** i verktygsfältet väljer du **Sida** från listan:
 
    ![caop-03](assets/caop-03.png)
 
@@ -213,7 +213,7 @@ Om du inte har skapat alla sidor åt dig i förväg måste du skapa en sida inna
    * **Namn**:
 
       * Detta används för att generera URI. Om inget anges hämtas namnet från titeln.
-      * Om du anger en sida **Namn** när du skapar en ny sida AEM [validera namnet enligt konventionerna](/help/sites-developing/naming-conventions.md) som ålagts av AEM och JCR.
+      * Om du anger en sida **Namn** när du skapar en sida, AEM [validerar namnet enligt konventionerna](/help/sites-developing/naming-conventions.md) som ålagts av AEM och JCR.
 
       * Du **kan inte skicka ogiltiga tecken** i **Namn** fält. När AEM upptäcker ogiltiga tecken markeras fältet och en förklaring visas som anger vilka tecken som behöver tas bort/ersättas.
 
@@ -221,7 +221,7 @@ Om du inte har skapat alla sidor åt dig i förväg måste du skapa en sida inna
    >
    >Se [Konventioner för sidnamngivning](#page-naming-conventions).
 
-   Minimiinformationen som krävs för att skapa en ny sida är **Titel**.
+   Minimiinformationen som krävs för att skapa en sida är **Titel**.
 
    ![caop-05](assets/caop-05.png)
 
@@ -231,7 +231,7 @@ Om du inte har skapat alla sidor åt dig i förväg måste du skapa en sida inna
 
    >[!NOTE]
    >
-   >Om du skapar en sida med ett namn som redan finns på den platsen, genereras automatiskt en variant av namnet genom att en siffra läggs till. Till exempel om `winter` finns redan en ny sida `winter0`.
+   >Om du skapar en sida med ett namn som redan finns på den platsen, genereras automatiskt en variant av namnet genom att en siffra läggs till. Om `winter` finns redan en ny sida `winter0`.
 
 1. Om du återgår till konsolen ser du den nya sidan:
 
@@ -291,7 +291,7 @@ Du kan kopiera en sida och alla dess underordnade sidor till en ny plats:
 
    >[!NOTE]
    >
-   >Om du kopierar sidan till en plats där det redan finns en sida med samma namn som originalet, kommer systemet automatiskt att generera en variant av namnet genom att lägga till en siffra. Till exempel om `winter` finns redan `winter` kommer `winter1`.
+   >Om du kopierar sidan till en plats där det redan finns en sida med samma namn som originalet, kommer systemet automatiskt att generera en variant av namnet genom att lägga till en siffra. Om `winter` finns redan `winter` kommer `winter1`.
 
 ### Flytta eller byta namn på en sida {#moving-or-renaming-a-page}
 
@@ -335,7 +335,7 @@ I AEM finns funktioner för att uppdatera interna länkar som refererar till sid
 
    >[!NOTE]
    >
-   >Om du flyttar en sida till en plats där det redan finns en sida med samma namn, kommer systemet automatiskt att generera en variant av namnet genom att lägga till en siffra. Till exempel om `winter` finns redan `winter` kommer `winter1`.
+   >Om du flyttar en sida till en plats där det redan finns en sida med samma namn, kommer systemet automatiskt att generera en variant av namnet genom att lägga till en siffra. Om `winter` finns redan `winter` kommer `winter1`.
 
 1. Från **Välj mål** steg i guiden som du kan antingen:
 
@@ -354,7 +354,7 @@ I AEM finns funktioner för att uppdatera interna länkar som refererar till sid
 
    >[!NOTE]
    >
-   >Om du flyttar en sida till en plats där det redan finns en sida med samma namn, kommer systemet automatiskt att generera en variant av namnet genom att lägga till en siffra. Till exempel om `winter` finns redan `winter` kommer `winter1`.
+   >Om du flyttar en sida till en plats där det redan finns en sida med samma namn, kommer systemet automatiskt att generera en variant av namnet genom att lägga till en siffra. Om `winter` finns redan `winter` kommer `winter1`.
 
 1. Om sidan är länkad till eller refererad, eller har publicerats, listas informationen i **Justera/publicera igen** steg.
 

@@ -1,19 +1,15 @@
 ---
 title: Hantera användare
-seo-title: Managing Users
-description: Använd API:t för användarhantering för att skapa klientprogram som kan hantera roller, behörigheter och huvudkonton (som kan vara användare eller grupper) samt autentisera användare.
-seo-description: Use the User Management API to create client applications that can manage roles, permissions, and principals (which can be users or groups), as well as authenticate users.
-uuid: 68d8a0bc-6e3d-4286-ba5c-534dcf58cb84
+description: Använd API:t för användarhantering för att skapa klientprogram som kan hantera roller, behörigheter och huvudkonton (som kan vara användare eller grupper) och autentisera användare.
 contentOwner: admin
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
-discoiquuid: 95804bff-9e6f-4807-aae4-790bd9e7cb57
 role: Developer
 exl-id: d7c5bb84-a988-4b2e-a587-f4e5b50fea58
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '6226'
+source-wordcount: '6218'
 ht-degree: 0%
 
 ---
@@ -24,7 +20,7 @@ ht-degree: 0%
 
 **Om användarhantering**
 
-Du kan använda API:t för användarhantering för att skapa klientprogram som kan hantera roller, behörigheter och principer (som kan vara användare eller grupper) samt autentisera användare. API:t för användarhantering består av följande AEM Forms-API:er:
+Du kan använda API:t för användarhantering för att skapa klientprogram som kan hantera roller, behörigheter och principer (som kan vara användare eller grupper) och autentisera användare. API:t för användarhantering består av följande AEM Forms-API:er:
 
 * API för kataloghanterartjänst
 * Tjänst-API för Autentiseringshanteraren
@@ -66,7 +62,7 @@ I följande tabell beskrivs varje steg i autentiseringsprocessen.
   </tr>
   <tr>
    <td><p>2</p></td>
-   <td><p>Användarhantering skickar användarnamn och lösenord samt konfigurationsinformation till autentiseringsprovidern.</p></td>
+   <td><p>Användarhantering skickar användarnamn, lösenord och konfigurationsinformation till autentiseringsprovidern.</p></td>
   </tr>
   <tr>
    <td><p>3</p></td>
@@ -547,7 +543,7 @@ Utför följande uppgifter för att programmässigt hantera användare, grupper 
 
 1. Anropa lämpliga användar- eller gruppåtgärder.
 
-   Om du vill hitta en användare eller grupp anropar du en av `DirectoryManagerServiceClient` objektets metoder för att hitta objekt (eftersom ett huvudnamn kan vara en användare eller en grupp). I exemplet nedan är `findPrincipals` metoden anropas med ett sökfilter (en `PrincipalSearchFilter` -objekt).
+   Om du vill hitta en användare eller grupp anropar du en av `DirectoryManagerServiceClient` objektets metoder för att söka efter objekt (eftersom ett huvudnamn kan vara en användare eller en grupp). I exemplet nedan är `findPrincipals` metoden anropas med ett sökfilter (en `PrincipalSearchFilter` -objekt).
 
    Eftersom returvärdet i det här fallet är `java.util.List` innehållande `Principal` objekt, iterera genom resultatet och byta `Principal` objekt till antingen `User` eller `Group` objekt.
 
@@ -580,7 +576,7 @@ Utför följande uppgifter för att programmässigt hantera användare, grupper 
 
 1. Anropa lämpliga användar- eller gruppåtgärder.
 
-   Om du vill hitta en användare eller grupp anropar du en av `DirectoryManagerServiceService` objektets metoder för att hitta objekt (eftersom ett huvudnamn kan vara en användare eller en grupp). I exemplet nedan är `findPrincipalsWithFilter` metoden anropas med ett sökfilter (en `PrincipalSearchFilter` -objekt). När en `PrincipalSearchFilter` objekt, lokala huvudobjekt returneras bara om `isLocal` egenskapen är inställd på `true`. Detta beteende skiljer sig från vad som skulle hända med Java API.
+   Om du vill hitta en användare eller grupp anropar du en av `DirectoryManagerServiceService` objektets metoder för att söka efter objekt (eftersom ett huvudnamn kan vara en användare eller en grupp). I exemplet nedan är `findPrincipalsWithFilter` metoden anropas med ett sökfilter (en `PrincipalSearchFilter` -objekt). När en `PrincipalSearchFilter` objekt, lokala huvudobjekt returneras bara om `isLocal` egenskapen är inställd på `true`. Detta beteende skiljer sig från vad som skulle hända med Java API.
 
    >[!NOTE]
    >

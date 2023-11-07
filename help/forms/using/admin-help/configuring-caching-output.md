@@ -10,9 +10,9 @@ geptopics: SG_AEMFORMS/categories/configuring_output
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: e5398abd-f62c-485d-9f4b-a316c0de2b6b
 exl-id: 1015f5c9-6ab8-4656-a5c8-40f82b9938b9
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1440'
+source-wordcount: '1439'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ Utdatasidan i administrationskonsolen innehåller inställningar som styr hur ut
 
 Utdatatjänsten cachelagrar följande objekt:
 
-* **formulärdesigner:** Output-tjänsten cachelagrar formulärdesigner som hämtas från databasen eller från HTTP-källor. Denna cachelagring förbättrar prestanda eftersom Output-tjänsten hämtar formulärdesignen från cachen i stället för från databasen för efterföljande renderingsbegäranden.
+* **formulärdesign:** Output-tjänsten cachelagrar formulärdesigner som hämtas från databasen eller från HTTP-källor. Denna cachelagring förbättrar prestanda eftersom Output-tjänsten hämtar formulärdesignen från cachen i stället för från databasen för efterföljande renderingsbegäranden.
 * **fragment och bilder:** Utdatatjänsten kan cachelagra fragment och bilder som används i formulärdesigner. När utdatatjänsten cachelagrar dessa objekt förbättras prestandan eftersom fragmenten och bilderna endast läses från databasen vid den första begäran.
 
 Output lagrar cacheminnet på två platser:
@@ -40,7 +40,7 @@ Output stöder två cachelagringslägen:
 * ovillkorlig
 * med cachekontrollpunkten
 
-Om du växlar mellan cachelägen startar du om utdatatjänsten för att ändringen ska börja gälla. Om du vill starta om den här tjänsten använder du Workbench eller läser [Starta eller stoppa tjänster som är kopplade till AEM formulärmoduler](/help/forms/using/admin-help/starting-stopping-services.md#start-or-stop-the-services-associated-with-aem-forms-modules) för instruktioner.
+Om du växlar mellan cachelägen startar du om utdatatjänsten för att ändringen ska börja gälla. Använd antingen Workbench eller se om du vill starta om tjänsten [Starta eller stoppa tjänster som är kopplade till AEM formulärmoduler](/help/forms/using/admin-help/starting-stopping-services.md#start-or-stop-the-services-associated-with-aem-forms-modules) för instruktioner.
 
 Tidpunkten för cachekontrollen återställs automatiskt när du växlar mellan lägena.
 
@@ -90,7 +90,7 @@ Om du vill komma åt de här inställningarna i administrationskonsolen klickar 
 
 ### Ange globala cacheinställningar {#specifying-global-cache-settings}
 
-Inställningarna i **Globala cacheinställningar** påverkar alla typer av cacheminnen. Om du ändrar någon av dessa inställningar startar du om utdatatjänsten så att ändringen börjar gälla. Om du vill starta om den här tjänsten använder du Workbench eller läser [Starta eller stoppa tjänster som är kopplade till AEM formulärmoduler](/help/forms/using/admin-help/starting-stopping-services.md#start-or-stop-the-services-associated-with-aem-forms-modules) för instruktioner.
+Inställningarna i **Globala cacheinställningar** påverkar alla typer av cacher. Om du ändrar någon av dessa inställningar startar du om utdatatjänsten så att ändringen börjar gälla. Använd antingen Workbench eller se om du vill starta om tjänsten [Starta eller stoppa tjänster som är kopplade till AEM formulärmoduler](/help/forms/using/admin-help/starting-stopping-services.md#start-or-stop-the-services-associated-with-aem-forms-modules) för instruktioner.
 
 **Maximal dokumentstorlek för cache (kB):** Den maximala storleken, i kilobyte, för en formulärdesign eller annan resurs som kan lagras i vilken cache som helst i minnet. Det här är en global inställning som gäller för alla cacheminnen i minnet. Om resursen är större än det här värdet cachelagras den inte i minnet. Standardvärdet är 1 024 kB. Den här inställningen påverkar inte diskcachen.
 
@@ -100,11 +100,11 @@ Inställningarna i **Globala cacheinställningar** påverkar alla typer av cache
 
 När utdatatjänsten tar emot en återgivningsbegäran, hämtar den formulärdesignen från databasen eller från en HTTP-källa och cachelagrar den. Denna cachelagring förbättrar prestanda eftersom Output-tjänsten hämtar formulärdesignen från cachen i stället för från databasen för efterföljande renderingsbegäranden.
 
-Utdatatjänsten cachelagrar alltid formulärdesigner på disk. Om formulärdesigner lagras på servern betraktas dessa filer som diskcachen. Utdatatjänsten cachelagrar också formulärdesigner i minnet enligt inställningarna i **Cacheminne för minnesmall** område. Om du ändrar någon av dessa inställningar startar du om utdatatjänsten så att ändringen börjar gälla. Om du vill starta om den här tjänsten använder du Workbench eller läser [Starta eller stoppa tjänster som är kopplade till AEM formulärmoduler](/help/forms/using/admin-help/starting-stopping-services.md#start-or-stop-the-services-associated-with-aem-forms-modules) för instruktioner.
+Utdatatjänsten cachelagrar alltid formulärdesigner på disk. Om formulärdesigner lagras på servern betraktas dessa filer som diskcachen. Utdatatjänsten cachelagrar också formulärdesigner i minnet enligt inställningarna i **Cacheminne för minnesmall** område. Om du ändrar någon av dessa inställningar startar du om utdatatjänsten så att ändringen börjar gälla. Använd antingen Workbench eller se om du vill starta om tjänsten [Starta eller stoppa tjänster som är kopplade till AEM formulärmoduler](/help/forms/using/admin-help/starting-stopping-services.md#start-or-stop-the-services-associated-with-aem-forms-modules) för instruktioner.
 
 **Cachestorlek för mallkonfiguration:** Det maximala antalet mallkonfigurationsobjekt som ska behållas i minnet. Standardvärdet är 100. Vi rekommenderar att du anger det här värdet som är större än eller lika med värdet för Mallcachestorlek. Den här inställningen påverkar inte diskcachen.
 
-**Mallcachestorlek:** Det maximala antalet mallinnehållsobjekt som ska behållas i minnet. Standardvärdet är 100. Den här inställningen påverkar inte diskcachen.
+**Mallcache-storlek:** Det maximala antalet mallinnehållsobjekt som ska behållas i minnet. Standardvärdet är 100. Den här inställningen påverkar inte diskcachen.
 
 **Aktiverad:** Som standard är den här kryssrutan markerad, vilket innebär att formulärmallar cachelagras i minnet. När det här alternativet inte är markerat cachelagras endast formulärmallar på disken.
 
@@ -122,7 +122,7 @@ Du kan använda följande inställningar för att styra cachning på disk av fra
 
 **Inaktiverad:** Utdatatjänsten cachelagrar inte fragment eller bilder.
 
-**Rensningsintervall (sekunder):** Anger hur ofta utdatatjänsten tar bort gamla ogiltiga cachefiler. Utdatatjänsten tar inte bort giltiga cachefiler. Om du ändrar rensningsintervallet startar du om utdatatjänsten för att ändringen ska börja gälla. Om du vill starta om den här tjänsten använder du antingen Workbench eller läser Starta eller stoppa tjänster som är kopplade till AEM formulärmoduler för instruktioner.
+**Rensningsintervall (sekunder):** Anger hur ofta utdatatjänsten tar bort gamla ogiltiga cachefiler. Tjänsten Output tar inte bort giltiga cachefiler. Om du ändrar rensningsintervallet startar du om utdatatjänsten för att ändringen ska börja gälla. Om du vill starta om den här tjänsten använder du antingen Workbench eller läser Starta eller stoppa tjänster som är kopplade till AEM formulärmoduler för instruktioner.
 
 ## Klusteröverväganden för cacher {#clustering-considerations-for-caches}
 

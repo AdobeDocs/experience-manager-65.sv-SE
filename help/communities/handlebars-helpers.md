@@ -8,7 +8,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 8b6c1697-d693-41f4-8337-f41658465107
 exl-id: bfb95cae-4b0f-4521-a113-042dc4005a63
-source-git-commit: d673a447e9ce2377c8645c87f12be81cbad06238
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '1473'
 ht-degree: 1%
@@ -23,9 +23,9 @@ ht-degree: 1%
 
 Handlister Hjälpprogram är metoder som kan anropas från Handlebars-skript för att underlätta arbetet med SCF-komponenter.
 
-Implementeringen innehåller en definition på klientsidan och en serversida. Det är också möjligt för utvecklare att skapa anpassade hjälpprogram.
+Implementeringen innehåller en definition på klientsidan och en definition på serversidan. Det är också möjligt för utvecklare att skapa anpassade hjälpprogram.
 
-De anpassade SCF-hjälpen som levereras med AEM Communities definieras i [klientbibliotek](../../help/sites-developing/clientlibs.md):
+De anpassade SCF-hjälprarna som levereras med AEM Communities definieras i [klientbibliotek](../../help/sites-developing/clientlibs.md):
 
 * `/etc/clientlibs/social/commons/scf/helpers.js`
 
@@ -37,7 +37,7 @@ De anpassade SCF-hjälpen som levereras med AEM Communities definieras i [klient
 
 En hjälp som returnerar en förkortad sträng som uppfyller egenskaperna maxWords och maxLength.
 
-Strängen som ska förkortas anges som kontext. Om inget sammanhang anges returneras en tom sträng.
+Strängen som ska förkortas anges som kontext. Om ingen kontext anges returneras en tom sträng.
 
 Först trimmas kontexten till maxLength och sedan delas kontexten upp i ord och reduceras till maxWords.
 
@@ -45,15 +45,15 @@ Om safeString är true är den returnerade strängen SafeString.
 
 ### Parametrar {#parameters}
 
-* **kontext**: Sträng
+* **kontext**: String
 
   (Valfritt) Standard är den tomma strängen
 
-* **maxLength**: Nummer
+* **maxLength**: Number
 
   (Valfritt) Standard är längden på kontexten.
 
-* **maxWords**: Nummer
+* **maxWords**: Number
 
   (Valfritt) Standard är antalet ord i den trimmade strängen.
 
@@ -93,19 +93,19 @@ Ett hjälpmedel för att lägga till två intervall under en div, ett för den f
 
 ### Parametrar {#parameters-1}
 
-* **kontext**: Sträng
+* **kontext**: String
 
   (Valfritt) Standard är den tomma strängen.
 
-* **numChars**: Nummer
+* **numChars**: Number
 
   (Valfritt) Det antal tecken som ska visas när inte den fullständiga texten visas. Standardvärdet är 100.
 
-* **moreText**: Sträng
+* **moreText**: String
 
   (Valfritt) Den text som ska visas anger att det finns mer text att visa. Standardvärdet är &quot;more&quot;.
 
-* **ellipsesText**: Sträng
+* **ellipsesText**: String
 
   (Valfritt) Den text som ska visas anger att det finns dold text. Standardvärdet är &quot;..&quot;.
 
@@ -133,13 +133,13 @@ En hjälp som returnerar en formaterad datumsträng.
 
 ### Parametrar {#parameters-2}
 
-* **kontext**: Nummer
+* **kontext**: Number
 
   (Valfritt) en millisekundförskjutning från 1 januari 1970 (epok). Standard är aktuellt datum.
 
-* **format**: Sträng
+* **format**: String
 
-  (Valfritt) Datumformatet som ska användas. Standardvärdet är &quot;YYY-MM-DDTHH:mm:ss.sssZ&quot; och resultatet visas som&quot;2015-03-18T18&quot;:17:13-07:00&quot;
+  (Valfritt) Datumformatet som ska användas. Standardvärdet är &quot;YYY-MM-DDTHH:mm:ss.sssZ&quot; och resultatet visas som 2015-03-18T18:17:13-07:00&quot;
 
 ### Exempel {#examples-1}
 
@@ -161,11 +161,11 @@ En hjälpfunktion som returnerar innehåll beroende på ett likhetsvillkor.
 
 ### Parametrar {#parameters-3}
 
-* **lvalue**: Sträng
+* **lvalue**: String
 
-  Värdet till vänster som ska jämföras.
+  Det vänstra värdet som ska jämföras.
 
-* **rvalue**: Sträng
+* **rvalue**: String
 
   Högervärdet som ska jämföras.
 
@@ -185,13 +185,13 @@ En blockhjälp som testar det aktuella värdet för [WCM-läge](https://develope
 
 ### Parametrar {#parameters-4}
 
-* **kontext**: Sträng
+* **kontext**: String
 
   (Valfritt) Den sträng som ska översättas. Obligatoriskt om inget standardvärde har angetts.
 
-* **läge**: Sträng
+* **läge**: String
 
-  (Valfritt) En kommaavgränsad lista med [WCM-lägen](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/api/WCMMode.html) för att testa om det är inställt.
+  (Valfritt) En kommaavgränsad lista med [WCM-lägen](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/api/WCMMode.html) för att testa om det finns.
 
 ### Exempel {#example-2}
 
@@ -211,15 +211,15 @@ Se även [Internationalisering av strängar i JavaScript-kod](../../help/sites-d
 
 ### Parametrar {#parameters-5}
 
-* **kontext**: Sträng
+* **kontext**: String
 
   (Valfritt) Den sträng som ska översättas. Obligatoriskt om inget standardvärde har angetts.
 
-* **standard**: Sträng
+* **standard**: String
 
   (Valfritt) Standardsträngen som ska översättas. Obligatoriskt om ingen kontext har angetts.
 
-* **kommentar**: Sträng
+* **kommentar**: String
 
   (Valfritt) Ett översättningstips
 
@@ -250,15 +250,15 @@ Den här hjälpen, som bara är lämplig på serversidan, har funktioner som lik
 
   Använd `this.id` för att hämta resursen på `id` för återgivning av begärd resourceType.
 
-* **resourceType**: Sträng
+* **resourceType**: String
 
   (Valfritt) Resurstypen är som standard resurstyp från kontext.
 
-* **mall**: Sträng
+* **mall**: String
 
   Sökväg till komponentskript.
 
-* **bana**: Sträng
+* **bana**: String
 
   (Obligatoriskt) Sökvägen till resursen. Om sökvägen är relativ måste en kontext anges, annars returneras den tomma strängen.
 
@@ -276,25 +276,25 @@ Innehåller en ny kommentarkomponent på `this.id` + /comments.
 
 ## IncludeClientLib {#includeclientlib}
 
-En handledare som innehåller ett AEM HTML-klientbibliotek, som kan vara ett js, en css eller ett temabibliotek. Om flera inkluderingar av olika typer, till exempel js och css, används den här taggen flera gånger i Handlebars-skriptet.
+En handledare som innehåller ett AEM HTML-klientbibliotek, som kan vara ett js, en css eller ett temabibliotek. Om flera inkluderingar av olika typer, till exempel js och css, ska den här taggen användas flera gånger i Handlebars-skriptet.
 
 Den här hjälpen, som bara är lämplig på serversidan, har funktioner som liknar [ui:includeClientLib](../../help/sites-developing/taglib.md) för JSP-skript.
 
 ### Parametrar {#parameters-7}
 
-* **kategorier**: Sträng
+* **kategorier**: String
 
   (Valfritt) En lista med kommaavgränsade klientbibliotekskategorier. Inkludera alla JavaScript- och CSS-bibliotek för de angivna kategorierna. Temanamnet extraheras från begäran.
 
-* **tema**: Sträng
+* **tema**: String
 
   (Valfritt) En lista med kommaavgränsade klientbibliotekskategorier. Inkludera alla temarelaterade bibliotek (både CSS och JS) för de angivna kategorierna. Temanamnet extraheras från begäran.
 
-* **js**: Sträng
+* **js**: String
 
   (Valfritt) En lista med kommaavgränsade klientbibliotekskategorier. Inkluderar alla JavaScript-bibliotek för de angivna kategorierna.
 
-* **css**: Sträng
+* **css**: String
 
   (Valfritt) En lista med kommaavgränsade klientbibliotekskategorier. Inkluderar alla CSS-bibliotek för de angivna kategorierna.
 
@@ -349,11 +349,11 @@ Till exempel:
 
 ### Parametrar {#parameters-8}
 
-* **kontext**: Nummer
+* **kontext**: Number
 
   Tidigare kunde man jämföra med&quot;now&quot;. Tiden uttrycks som en millisekundförskjutning från 1 januari 1970 (epok).
 
-* **daysCutoff**: Nummer
+* **daysCutoff**: Number
 
   Antalet dagar sedan innan du växlar till ett faktiskt datum. Standardvärdet är 60.
 
@@ -399,7 +399,7 @@ OBS! Den här hjälpen är inte en validerare och ska inte användas för att sk
 
 ### Parametrar {#parameters-10}
 
-* **kontext**: Objekt
+* **kontext**: Object
 
   HTML som ska kodas.
 
@@ -417,7 +417,7 @@ OBS! Den här hjälpen är inte en validerare och ska inte användas för att sk
 
 ### Parametrar {#parameters-11}
 
-* **kontext**: Objekt
+* **kontext**: Object
 
   HTML som ska kodas.
 
@@ -435,7 +435,7 @@ OBS! Den här hjälpen kan returnera en tom sträng.
 
 ### Parametrar {#parameters-12}
 
-* **kontext**: Objekt
+* **kontext**: Object
 
   Den URL som ska saneras.
 
@@ -453,7 +453,7 @@ OBS! Den här hjälpen kan returnera en tom sträng.
 * Värdena i hash-argument är Handlebars-uttryck: enkla identifierare, sökvägar eller strängar.
 * Det aktuella sammanhanget `this`, är alltid tillgängligt för Handlebars hjälpprogram.
 * Kontexten kan vara ett String-, number-, boolean- eller JSON-dataobjekt.
-* Det går att skicka ett objekt som är inkapslat i den aktuella kontexten som kontext, t.ex. `this.url` eller `this.id` (se följande exempel på enkla och blockerade hjälpmedel).
+* Det går att skicka ett objekt som är inkapslat i den aktuella kontexten som kontext, till exempel `this.url` eller `this.id` (se följande exempel på enkla och blockerade hjälpmedel).
 
 * Blockhjälpredor är funktioner som kan anropas var som helst i mallen. De kan anropa ett mallblock noll eller flera gånger med olika kontext varje gång. De innehåller ett sammanhang mellan `{{#*name*}}` och `{{/*name*}}`.
 
@@ -597,7 +597,7 @@ Klientlib måste:
 * Läs in när Hanterarfält har lästs in.
 * be [ingår](clientlibs.md).
 
-Obs! Hjälpprogrammen för SCF definieras i `/etc/clientlibs/social/commons/scf/helpers.js`.
+Obs! SCF-hjälprarna definieras i `/etc/clientlibs/social/commons/scf/helpers.js`.
 
 | **[⇐ - funktioner](essentials.md)** | **[Anpassning på serversidan](server-customize.md)** |
 |---|---|

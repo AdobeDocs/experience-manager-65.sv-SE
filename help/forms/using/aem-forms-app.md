@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-app
 discoiquuid: e18aa345-034c-473b-b4c2-01678bb10616
 exl-id: 171754a2-1ba5-42dc-b6d2-3d730807cc31
-source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2420'
+source-wordcount: '2418'
 ht-degree: 0%
 
 ---
@@ -55,12 +55,12 @@ Formulären hämtas till din app och är tillgängliga offline. Du driver t.ex. 
 
 Så här synkroniserar du formuläret i AEM Forms-appen:
 
-1. Markera ett formulär och klicka på **[!UICONTROL View Properties]**.
+1. Markera ett formulär i författarinstansen och klicka på **[!UICONTROL View Properties]**.
 
 1. På egenskapssidan klickar du på **[!UICONTROL Advanced]**.
-1. Aktivera alternativet under Avancerat: **[!UICONTROL Sync with AEM Forms App]** och trycka **[!UICONTROL Save]**.
+1. Aktivera alternativet under Avancerat: **[!UICONTROL Sync with AEM Forms App]** och knacka **[!UICONTROL Save]**.
 
-När formuläret publiceras synkroniseras programmet med servern och formuläret hämtas. Om du vill synkronisera flera formulär väljer du flera formulär i formulärhanteraren och trycker på **[!UICONTROL Sync with AEM Forms App]**.
+När formuläret publiceras synkroniseras programmet med servern och formuläret hämtas. Om du vill synkronisera flera formulär väljer du flera formulär i formulärhanteraren i författarinstansen och trycker på **[!UICONTROL Sync with AEM Forms App]**.
 
 ## Stöd för mobila enheter {#mobile-device-support}
 
@@ -72,7 +72,7 @@ Se [AEM Forms (tidigare Mobile Workspace)](/help/forms/using/aem-forms-jee-suppo
 
 Du kan synkronisera din app med AEM Forms-servern och arbeta med formulär på din mobila enhet.
 
-Med AEM Forms Workflow Server kan ett formulär kopplas till en startpunkt i en workbench-process och AEM Inbox-program. Ett AEM Inkorgsprogram kan ha ett associerat adaptivt formulär. En startpunkt kan ha en adaptiv form, ett HTML5-formulär eller en tillhörande formuläruppsättning. En startpunkt kan skickas som en uppgift eller så kan uppgiften sparas som ett utkast. Mer information om skillnader mellan ett AEM Inkorgsprogram och en startpunkt finns i [Åtgärder och funktioner i formulärcentrerade AEM arbetsflöden i OSGi- och AEM Forms JEE-arbetsflöden](capabilities-osgi-jee-workflows.md).
+Med AEM Forms Workflow Server kan ett formulär kopplas till en startpunkt i en workbench-process och AEM Inbox-program. Ett AEM Inkorgsprogram kan ha ett associerat adaptivt formulär. En startpunkt kan ha en adaptiv form, ett HTML5-formulär eller en tillhörande formuläruppsättning. En startpunkt kan skickas som en uppgift eller så kan uppgiften sparas som ett utkast. Mer information om skillnader mellan AEM och startpunkter finns i [Åtgärder och funktioner i formulärcentrerade AEM arbetsflöden i OSGi- och AEM Forms JEE-arbetsflöden](capabilities-osgi-jee-workflows.md).
 
 Med en AEM Forms-server utan AEM Forms-arbetsflöde återges ett formulär som är aktiverat för synkronisering i appen i AEM Forms-appen. Forms finns på fliken Forms i programmet, kan skickas eller sparas som ett utkast. Anpassningsbara formulär och mobilformulär stöds i appen.
 
@@ -105,7 +105,7 @@ Se:
 
 Du kan arbeta på din mobila enhet i offlineläge. Du kan logga in i programmet även om det inte finns någon nätverksanslutning och arbeta med alla formulär som synkroniserades med enheten när du var online senast. Mer information om hur du synkroniserar formulär finns i [Synkroniserar appen](/help/forms/using/sync-app.md). Om du väljer att synkronisera de bilagor som är kopplade till ett formulär kan du även öppna de bifogade filerna i offlineläge. Du kan redigera formuläret, lägga till kommentarer och skicka eller spara ett formulär i offlineläge. Formuläret synkroniseras med AEM Forms-servern nästa gång du är online.
 
-Mer information finns i [Arbeta i offlineläge](/help/forms/using/work-offline-mode.md).
+Mer information finns i [Arbeta i offline-läge](/help/forms/using/work-offline-mode.md).
 
 ### Lägga till anteckningar {#adding-annotations}
 
@@ -117,7 +117,7 @@ Du kan lägga till följande bifogade filer i ett formulär på din mobila enhet
 
 ### Spara automatiskt {#autosave}
 
-När en användare matar in data i AEM Forms-appen sparar funktionen automatiskt dem med regelbundna intervall. Autosparfunktionen i AEM Forms-appen hjälper dig att undvika dataförluster om appen stängs på grund av förhållanden som låg batterinivå.
+När en användare matar in data i AEM Forms-appen sparar funktionen automatiskt dem med regelbundna intervall. Funktionen för autosparande i AEM Forms-appen hjälper dig att undvika dataförluster om appen stängs på grund av förhållanden som låg batterinivå.
 
 Se [Använda automatiskt sparade i AEM Forms-appen](/help/forms/using/autosave-data-app.md).
 
@@ -127,7 +127,7 @@ Två av de framträdande sätten att starta ett Forms-centrerat arbetsflöde anv
 
 ## Formulär som stöds {#supported-forms}
 
-Formulärtyper som stöds i AEM Forms-appen:
+Formulärtyper som stöds i AEM Forms:
 
 ### Adaptiv form {#adaptive-form}
 
@@ -137,7 +137,7 @@ Ett anpassningsbart formulär som dynamiskt anpassar sig till användarindata st
 
 Du kan skapa formulär för mobila enheter i AEM Forms. Mobila formulär återges som HTML-formulär på mobila enheter som anpassar sig efter visningsenheter.
 
-### Format {#formset}
+### Formset {#formset}
 
 Med formuläruppsättningar kan flera formulär som är kopplade till en tjänst eller process grupperas för att automatisera en affärsprocess och presenteras för slutanvändarna. I ett sådant scenario kan användarna fylla i hela uppsättningen som ett och det finns inget behov av att arkivera, skicka och spåra enskilda formulär eller processer.
 
@@ -163,7 +163,7 @@ AEM Forms-appen är enkel att anpassa för organisationsspecifika behov. Program
 
 Du kan anpassa din app för:
 
-**Varumärke**: Ändra programikonen, appnamnet, startbilder och sidor i AEM Forms-appen. Du kan också ändra text för att lokalisera programmet för ett visst område. Mer information om hur du använder AEM Forms finns i [Anpassning av varumärken](/help/forms/using/branding-customization.md).
+**Varumärke**: Ändra programikonen, programnamnet, startbilder och sidor i AEM Forms-appen. Du kan också ändra text för att lokalisera programmet för ett visst område. Mer information om hur du använder AEM Forms finns i [Anpassning av varumärken](/help/forms/using/branding-customization.md).
 
 **Tema**: Ändra format som färger, teckensnitt och mellanrum i AEM Forms appgränssnitt. Mer information finns i [Anpassa teman](/help/forms/using/theme-customization.md).
 
@@ -176,7 +176,7 @@ Mer information om hur du konfigurerar ett AEM Forms-appprojekt för anpassning 
 * [Konfigurera Xcode-projekt och bygg en iOS-app](/help/forms/using/setup-xcode-project-build-installer.md)
 * [Konfigurera Eclipse-projektet och bygg en Android-app](/help/forms/using/setup-eclipse-project-build-installer.md)
 
-### Bygg och distribuera {#build-and-distribute}
+### Skapa och distribuera {#build-and-distribute}
 
 Källkoden för AEM Forms-appen kan extraheras från `adobe-lc-mobileworkspace-src.zip` som ingår i AEM Forms programkällpaket för programdistribution.
 
@@ -185,9 +185,9 @@ Så här hämtar du programkällan för AEM Forms:
 1. Öppna [Programvarudistribution](https://experience.adobe.com/downloads). Du behöver en Adobe ID för att logga in på Software Distribution.
 1. Tryck **[!UICONTROL Adobe Experience Manager]** finns i rubrikmenyn.
 1. I **[!UICONTROL Filters]** avsnitt:
-   1. Välj **[!UICONTROL Forms]** från **[!UICONTROL Solution]** nedrullningsbar lista.
+   1. Välj **[!UICONTROL Forms]** från **[!UICONTROL Solution]** listruta.
    2. Välj version och typ för paketet. Du kan också använda **[!UICONTROL Search Downloads]** för att filtrera resultaten.
-1. Tryck på det paketnamn som gäller för operativsystemet och välj **[!UICONTROL Accept EULA Terms]** och trycka **[!UICONTROL Download]**.
+1. Tryck på det paketnamn som gäller för ditt operativsystem och välj **[!UICONTROL Accept EULA Terms]** och trycka **[!UICONTROL Download]**.
 1. Öppna [Pakethanteraren](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html)  och klicka **[!UICONTROL Upload Package]** för att överföra paketet.
 1. Markera paketet och klicka på **[!UICONTROL Install]**.
 
@@ -218,4 +218,4 @@ Du kan uppgradera appen direkt från spelbutiken.
 
 * **Om en tidigare version av appen har skapats och installerats med källkoden (gäller för iOS och Android)**:
 
-   Synkronisera alla data med AEM Forms-servern innan du installerar det nya programmet. När data har synkroniserats avinstallerar du den tidigare versionen av programmet och installerar den nya appen.
+  Synkronisera alla data med AEM Forms-servern innan du installerar det nya programmet. När data har synkroniserats avinstallerar du den tidigare versionen av programmet och installerar den nya appen.

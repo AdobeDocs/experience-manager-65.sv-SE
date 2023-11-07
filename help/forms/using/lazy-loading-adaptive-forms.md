@@ -6,9 +6,9 @@ topic-tags: develop
 docset: aem65
 feature: Adaptive Forms
 exl-id: f7e3e2cd-0cbe-4b26-9e55-7afc6dc3af63
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1079'
+source-wordcount: '1074'
 ht-degree: 0%
 
 ---
@@ -45,7 +45,7 @@ Forms-baserade transaktioner innefattar dynamiska element för att hämta in rel
 * **Skriv regler för att kontrollera synligheten för fält**
 Forms innehåller fält och avsnitt som inte är tillämpliga för alla användare och under alla förhållanden. Forms författare och utvecklare använder synlighets- eller visningsregler för att styra synligheten baserat på användarindata. Fältet Kontorsadress visas t.ex. inte för användare som väljer Arbetslösa i fältet Anställningsstatus i ett formulär. Mer information om hur du skriver regler finns i [Använda regelredigeraren](../../forms/using/rule-editor.md).
 
-  Du kan använda synlighetsregler i de lagligen inlästa fragmenten så att villkorsfält bara visas när de är obligatoriska. Markera dessutom det villkorliga fältet globalt så att det refererar till det i synlighetsuttrycket för det lagerinlästa fragmentet.
+  Du kan använda synlighetsregler i de lagerinlästa fragmenten så att villkorsfält bara visas när de är obligatoriska. Markera dessutom det villkorliga fältet globalt så att det refererar till det i synlighetsuttrycket för det lagerinlästa fragmentet.
 
 ## Konfigurerar lazy loading {#configuring-lazy-loading}
 
@@ -73,7 +73,7 @@ Du kan markera objektvärden i det lagerinlästa fragmentet som globala så att 
 
 Vissa begränsningar, rekommendationer och viktiga punkter som du bör tänka på när du arbetar med lazy loading är följande:
 
-* Vi rekommenderar att du använder XSD-schemabaserade adaptiva formulär över XFA-baserade adaptiva formulär för att konfigurera lazy loading på stora formulär. Prestandavinster på grund av lazy loading-implementering i XFA-baserade adaptiva formulär är relativt mindre än förstärkning i XSD-baserade adaptiva formulär.
+* Använd XSD-schemabaserade adaptiva formulär över XFA-baserade adaptiva formulär för att konfigurera lat inläsande på stora formulär. Prestandavinster på grund av lazy loading-implementering i XFA-baserade adaptiva formulär är relativt mindre än förstärkning i XSD-baserade adaptiva formulär.
 * Konfigurera inte lat inläsning på fragment i ett adaptivt formulär som använder **[!UICONTROL Responsive -everything on one page without navigation]** rotpanelens layout. Som ett resultat av layoutkonfigurationen Responsiv läses alla fragment in samtidigt i en adaptiv form. Det kan också leda till försämrade prestanda.
 * Vi rekommenderar att du inte konfigurerar lazy loading för det första avsnittet i en adaptiv form.
 * Vi rekommenderar att du inte konfigurerar lazy loading på fragment på den första panelen som återges när det adaptiva formuläret läses in.
@@ -87,7 +87,7 @@ Vissa begränsningar, rekommendationer och viktiga punkter som du bör tänka p�
 Viktiga punkter att tänka på när du utvecklar skript för lazy loading-paneler är följande:
 
 * Se till att initiera och beräkna skript som används på fälten i ett lazy loaded fragment är idempotenta till sin natur. Idempotenta skript är sådana som har samma effekt även efter flera exekveringar.
-* Använd den globalt tillgängliga egenskapen för fält för att göra värden för fält som finns i en lat inläsningspanel tillgängliga för alla andra paneler i ett formulär.
+* Använd den globalt tillgängliga egenskapen för fält för att göra fältvärden i en lat inläsningspanel tillgängliga för alla andra paneler i ett formulär.
 * Vidarebefordra inte referensvärdet för ett fält i en lat panel oavsett om fältet markeras globalt över fragment eller inte.
 * Använd panelåterställningsfunktionen för att återställa allt som visas på panelen med följande klickuttryck.\
   guideBridge.resolveNode(guideBridge.getFocus({&quot;focusOption&quot;: &quot;navigablePanel&quot;})).resetData()

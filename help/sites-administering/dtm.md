@@ -10,9 +10,9 @@ topic-tags: integration
 content-type: reference
 discoiquuid: b8c7a20a-7694-4a49-b66a-060720f17dad
 exl-id: 1e0821f5-627f-4262-ba76-62303890e112
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2208'
+source-wordcount: '2206'
 ht-degree: 0%
 
 ---
@@ -33,16 +33,15 @@ När du har konfigurerat integreringen behöver du inte ändra den dynamiska Tag
 >* 4.x har konfigurerats med [http://localhost:4502/system/console/configMgr/org.apache.http.proxyconfigurator](http://localhost:4502/system/console/configMgr/org.apache.http.proxyconfigurator)
 >
 
-
 ## Distributionsalternativ {#deployment-options}
 
 Följande distributionsalternativ påverkar konfigurationen av integreringen med Dynamic Tag Management.
 
 ### Dynamic Tag Management Hosting {#dynamic-tag-management-hosting}
 
-AEM stöder Dynamic Tag Management som ligger i molnet eller AEM.
+AEM har stöd för Dynamic Tag Management som ligger i molnet eller AEM.
 
-* Molnbaserad: De dynamiska javascript-biblioteken i Tag Management lagras i molnet och dina AEM refererar direkt till dem.
+* Molnbaserade: De dynamiska javascript-biblioteken i Tag Management lagras i molnet och dina AEM sidor refererar direkt till dem.
 * AEM: Dynamic Tag Management genererar javascript-bibliotek. AEM använder en arbetsflödesmodell för att hämta och installera biblioteken.
 
 Vilken typ av värdtjänst implementeringen använder avgör vilka konfigurations- och implementeringsuppgifter du utför. Mer information om värdalternativ finns i [Hosting - fliken Embed](https://microsite.omniture.com/t2/help/en_US/dtm/#Hosting__Embed_Tab) i Dynamic Tag Management Help.
@@ -59,18 +58,18 @@ Om du vill kan du använda produktionsbiblioteken i din författarinstans. Webbl
 
 När AEM är värd för de dynamiska Tag Management-biblioteken kan du använda Dynamic Tag Management-tjänsten för att automatiskt överföra biblioteksuppdateringar till AEM. Biblioteksuppdateringar överförs när ändringar görs i biblioteken, till exempel när egenskaperna för den dynamiska Tag Management-webbegenskapen redigeras.
 
-Dynamic Tag Management måste kunna ansluta till den AEM instansen som är värd för biblioteken för att kunna använda distributionspaken. Du måste [aktivera åtkomst till AEM](/help/sites-administering/dtm.md#enabling-access-for-the-deployment-hook-service) för de dynamiska Tag Management-servrarna.
+Dynamic Tag Management måste kunna ansluta till den AEM instansen som är värd för biblioteken för att kunna använda distributionspaken. Du måste [aktivera åtkomst till AEM](/help/sites-administering/dtm.md#enabling-access-for-the-deployment-hook-service) för dynamiska Tag Management-servrar.
 
 I vissa fall kan AEM vara oåtkomliga, till exempel när AEM ligger bakom en brandvägg. I dessa fall kan du använda alternativet AEM avsökningsimporteraren för att regelbundet hämta biblioteken. Ett cron-jobbuttryck bestämmer schemat för bibliotekshämtning.
 
 ## Aktivera åtkomst för distributionsnätverkstjänsten {#enabling-access-for-the-deployment-hook-service}
 
-Aktivera Dynamic Tag Management-tjänsten för distributionskoppling för att få åtkomst till AEM så att tjänsten kan uppdatera AEM bibliotek. Ange IP-adressen för dynamiska Tag Management-servrar som uppdaterar mellanlagrings- och produktionsbiblioteken efter behov:
+Aktivera Dynamic Tag Management-tjänsten för distributionskoppling så att AEM kan uppdatera AEM bibliotek. Ange IP-adressen för dynamiska Tag Management-servrar som uppdaterar mellanlagrings- och produktionsbiblioteken efter behov:
 
 * Mellanlagring: `107.21.99.31`
 * Produktion: `23.23.225.112` och `204.236.240.48`
 
-Utför konfigurationen med antingen [Webbkonsol](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console) eller en [`sling:OsgiConfig`](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository) nod:
+Utför konfigurationen med hjälp av [Webbkonsol](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console) eller en [`sling:OsgiConfig`](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository) nod:
 
 * I webbkonsolen använder du Adobe DTM Deploy Hook Configuration-objektet på konfigurationssidan.
 * Tjänstens-PID är för en OSGi-konfiguration `com.adobe.cq.dtm.impl.servlets.DTMDeployHookServlet`.
@@ -100,7 +99,7 @@ Skapa en molnkonfiguration så att den AEM instansen kan autentisera med Dynamic
   </tr>
   <tr>
    <td>API-token</td>
-   <td>Värdet på API-tokenegenskapen för ditt Dynamic Tag Management-användarkonto. AEM använder den här egenskapen för att autentisera med Dynamic Tag Management.</td>
+   <td>Värdet på API-tokenegenskapen för ditt Dynamic Tag Management-användarkonto. AEM använder den här egenskapen för autentisering med Dynamic Tag Management.</td>
   </tr>
   <tr>
    <td>Företag</td>
@@ -145,7 +144,7 @@ När du har de dynamiska Tag Management-biblioteken AEM konfigurerar AEM automat
   </tr>
   <tr>
    <td>Hämta arbetsflöde</td>
-   <td><p>Arbetsflödesmodellen som ska användas för att hämta och installera det dynamiska Tag Management-biblioteket. Standardmodellen är DTM Bundle Download. Använd den här modellen om du inte har skapat en anpassad modell.</p> <p>Observera att standardarbetsflödet för hämtning automatiskt aktiverar biblioteken när de hämtas.</p> </td>
+   <td><p>Arbetsflödesmodellen som ska användas för att hämta och installera det dynamiska Tag Management-biblioteket. Standardmodellen är DTM Bundle Download. Använd den här modellen om du inte har skapat en anpassad modell.</p> <p>Standardarbetsflödet för hämtning aktiverar automatiskt biblioteken när de hämtas.</p> </td>
   </tr>
   <tr>
    <td>Domäntips</td>
@@ -161,10 +160,10 @@ När du har de dynamiska Tag Management-biblioteken AEM konfigurerar AEM automat
   </tr>
   <tr>
    <td>Aktivera avsökningsimporteraren</td>
-   <td><p>(Valfritt) Välj att regelbundet hämta och installera det dynamiska Tag Management-biblioteket för att vara säker på att du använder en uppdaterad version. När detta är markerat skickar inte Dynamic Tag Management HTTP-POST-begäranden till Distribuera hook-URL:en.</p> <p>AEM konfigurerar automatiskt egenskapen Distribuera URL för hook i bibliotekets hämtningsegenskaper för den dynamiska Tag Management-webbegenskapen. När du väljer det här alternativet konfigureras egenskapen utan värde. Om du inte väljer det här alternativet konfigureras egenskapen med URL:en för din dynamiska Tag Management-konfiguration.</p> <p>Aktivera avsökningsimporteraren när den dynamiska Tag Management-distributionslösningen inte kan ansluta till AEM, till exempel när AEM ligger bakom en brandvägg.</p> </td>
+   <td><p>(Valfritt) Välj att regelbundet hämta och installera det dynamiska Tag Management-biblioteket för att vara säker på att du använder en uppdaterad version. När detta är markerat skickar inte Dynamic Tag Management HTTP-POST-begäranden till Distribuera hook-URL:en.</p> <p>AEM konfigurerar automatiskt egenskapen Distribuera URL för hook i bibliotekets hämtningsegenskaper för den dynamiska Tag Management-webbegenskapen. När du väljer det här alternativet konfigureras egenskapen utan värde. Om du inte väljer det här alternativet konfigureras egenskapen med URL:en för din dynamiska Tag Management-konfiguration.</p> <p>Aktivera avsökningsimporteraren när Dynamic Tag Management-distributionkroken inte kan ansluta till AEM, till exempel när AEM ligger bakom en brandvägg.</p> </td>
   </tr>
   <tr>
-   <td>Schemauttryck</td>
+   <td>Schemalägg uttryck</td>
    <td>(Visas och krävs när Aktivera avsökningsimporterare är markerat.) Ett cron-uttryck som styr när de dynamiska tagghanteringsbiblioteken hämtas.</td>
   </tr>
  </tbody>
@@ -201,7 +200,7 @@ Du konfigurerar följande egenskaper för din dynamiska Tag Management-konfigura
 
 I följande procedur används det pekoptimerade användargränssnittet för att konfigurera integreringen med Dynamic Tag Management.
 
-1. Klicka på Verktyg > Åtgärder > Moln > Cloud Services på listen.
+1. Klicka på Verktyg > Åtgärder > Moln > Cloud Service på listen.
 1. I området Dynamic Tag Management visas en av följande länkar för att lägga till en konfiguration:
 
    * Klicka på Konfigurera nu om det här är den första konfigurationen som du lägger till.
@@ -229,7 +228,7 @@ I följande procedur används det pekoptimerade användargränssnittet för att 
 
 Hämta de dynamiska Tag Management-biblioteken manuellt för att uppdatera dem direkt AEM. Du kan till exempel hämta manuellt när du vill testa ett uppdaterat bibliotek innan avsökningsimporteraren är schemalagd att hämta biblioteket automatiskt.
 
-1. Klicka på Verktyg > Åtgärder > Moln > Cloud Services på listen.
+1. Klicka på Verktyg > Åtgärder > Moln > Cloud Service på listen.
 1. Klicka på Visa konfigurationer i området Dynamiska Tag Management och klicka sedan på din konfiguration.
 1. Klicka på knappen Trigger Download Workflow (Utlös hämtning av arbetsflöde) i området för mellanlagringsinställningar eller i området för produktionsinställningar för att hämta och distribuera bibliotekspaketet.
 
@@ -247,7 +246,6 @@ Hämta de dynamiska Tag Management-biblioteken manuellt för att uppdatera dem d
 >* `servertype`
 >
 
-
 ## Koppla en dynamisk Tag Management-konfiguration till din plats {#associating-a-dynamic-tag-management-configuration-with-your-site}
 
 Koppla din dynamiska Tag Management-konfiguration till webbplatsens sidor så att AEM lägger till det nödvändiga skriptet på sidorna. Associera platsens rotsida med konfigurationen. Alla underordnade till den sidan ärver kopplingen. Om det behövs kan du åsidosätta associationen på en underordnad sida.
@@ -256,7 +254,7 @@ Använd följande procedur för att associera en sida och de underordnade med en
 
 1. Öppna webbplatsens rotsida i det klassiska användargränssnittet.
 1. Använd Sidekick för att öppna sidegenskaperna.
-1. På fliken Cloud Services klickar du på Lägg till tjänst, väljer Dynamisk Tag Management och sedan på OK.
+1. På fliken Cloud Service klickar du på Lägg till tjänst, väljer Dynamisk Tag Management och sedan på OK.
 
    ![chlimage_1-357](assets/chlimage_1-357.png)
 
@@ -266,7 +264,7 @@ Använd följande procedur för att åsidosätta den ärvda konfigurationsassoci
 
 1. Öppna sidan i det klassiska användargränssnittet.
 1. Använd Sidekick för att öppna sidegenskaperna.
-1. På fliken Cloud Services klickar du på hänglåsikonen bredvid egenskapen Ärvd från och sedan på Ja i bekräftelsedialogrutan.
+1. På fliken Cloud Service klickar du på hänglåsikonen bredvid egenskapen Ärvd från och sedan på Ja i bekräftelsedialogrutan.
 
    ![chlimage_1-358](assets/chlimage_1-358.png)
 

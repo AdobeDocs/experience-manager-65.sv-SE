@@ -1,19 +1,15 @@
 ---
 title: Landningssidor
-seo-title: Landing Pages
 description: Med funktionen för landningssidor kan du snabbt och enkelt importera en design och ett innehåll direkt till en AEM sida. En webbutvecklare kan förbereda HTML och ytterligare resurser som kan importeras som en hel sida eller som endast en del av en sida.
-seo-description: The landing pages feature allows quick and easy importing of a design and content right into an AEM page. A web developer can prepare the HTML and additional assets that can be imported as a full page or only a part of a page.
-uuid: b294c43f-63ae-4b5b-bef0-04566e350b63
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: personalization
 content-type: reference
-discoiquuid: 061dee36-a3bb-4166-a9c1-3ab7e4de1d1d
 docset: aem65
 exl-id: 0f1014a7-b0ba-4455-b3a4-5023bcd4c5a1
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '3329'
+source-wordcount: '3323'
 ht-degree: 0%
 
 ---
@@ -41,7 +37,7 @@ Att förbereda designpaketet för import beskrivs i [Utöka och konfigurera desi
 
 ## Vad är landningssidor? {#what-are-landing-pages}
 
-Landningssidor är ensidiga eller flersidiga webbplatser som utgör&quot;slutpunkten&quot; för en marknadsföringsstrategi, till exempel e-post, lösenord/banners, sociala medier. En landningssida kan tjäna olika syften, men alla har en sak gemensamt - besökaren bör utföra en uppgift och som definierar landningssidans framgång.
+Landningssidor är ensidiga eller flersidiga webbplatser som utgör&quot;slutpunkten&quot; för en marknadsföringsstrategi, till exempel med e-post, lösenord/banners, sociala medier. En landningssida kan tjäna olika syften, men alla har en sak gemensamt - besökaren bör utföra en uppgift och som definierar landningssidans framgång.
 
 Med funktionen för landningssidor i AEM kan marknadsförare arbeta med webbdesigners på byråer eller interna kreativa team för att skapa siddesign som enkelt kan importeras till AEM och fortfarande kan redigeras av marknadsförarna och publiceras under samma ledning som resten av de AEM sajterna.
 
@@ -351,13 +347,13 @@ Adobe rekommenderar att du använder designimporteraren i en mellanlagringsinsta
 
 ### Skapa en importsida {#creating-an-importer-page}
 
-Innan du kan importera designen för landningssidan måste du skapa en importsida, till exempel under en kampanj. Med importsidmallen kan du importera hela landningssidan för HTML. Sidan innehåller en listruta där designpaketet för landningssidan kan importeras med dra och släpp.
+Innan du kan importera designen för landningssidan måste du skapa en importsida, till exempel, under en kampanj. Med importsidmallen kan du importera hela landningssidan för HTML. Sidan innehåller en listruta där designpaketet för landningssidan kan importeras med dra och släpp.
 
 >[!NOTE]
 >
 >Som standard kan en importsida bara skapas under kampanjer, men du kan också täcka över den här mallen för att skapa en landningssida under `/content/mysite`.
 
-Så här skapar du en ny landningssida:
+Så här skapar du en landningssida:
 
 1. Gå till **Webbplatser** konsol.
 1. Välj kampanj i den vänstra rutan.
@@ -417,7 +413,7 @@ När du importerar designpaketet **Rensa design** och **Hämta importerad ZIP** 
 
 ### Hämta det importerade designpaketet {#downloading-the-imported-design-package}
 
-När du laddar ned zip-filen kan du registrera vilken zip som importerades med en viss landningssida. Observera att ändringar som görs på en sida inte läggs till i zippen.
+När du laddar ned zip-filen kan du registrera vilken zip som importerades med en viss landningssida. Ändringar som görs på en sida läggs inte till i zippen.
 
 Om du vill hämta det importerade designpaketet klickar du på **Ladda ned zip** i verktygsfältet Landningssida.
 
@@ -439,7 +435,7 @@ När du rensar landningssidan kan du ta bort innehållsändringarna. Klicka **Ne
 
 >[!NOTE]
 >
->Om du bestämmer dig för att ta bort innehållsändringarna försvinner alla ändringar som du har gjort på den importerade landningssidan samt alla sidegenskaper när du klickar på **Rensa**.
+>Om du bestämmer dig för att ta bort innehållsändringarna försvinner alla ändringar som du har gjort på den importerade landningssidan och alla sidegenskaper när du klickar på **Rensa**.
 
 ### Ändra och lägga till komponenter på en landningssida {#modifying-and-adding-components-on-a-landing-page}
 

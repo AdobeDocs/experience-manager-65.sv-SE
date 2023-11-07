@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
 content-type: reference
 exl-id: caa43d80-1f38-46fc-a8b9-9485c235c0ca
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1831'
+source-wordcount: '1825'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ Tack vare den här integreringen kan AEM och Adobe Campaign Standard användas o
 
 ## Integreringssteg {#integration-steps}
 
-Konfigurationen av integrationen mellan AEM och Adobe Campaign Standard kräver ett antal steg i båda lösningarna.
+Konfigurationen av integreringen mellan AEM och Adobe Campaign Standard kräver flera steg i båda lösningarna.
 
 1. [Konfigurera ](#aemserver-user)
 1. [Verifiera ](#resource-type-filter)
@@ -42,7 +42,7 @@ Det här dokumentet leder dig igenom dessa steg i detalj.
 ## Förutsättningar {#prerequisites}
 
 * Administratörsåtkomst till Adobe Campaign Standard
-   * Om du vill ha mer information om hur du konfigurerar och konfigurerar Adobe Campaign Standard kan du läsa [Adobe Campaign Standard dokumentation.](https://experienceleague.adobe.com/docs/campaign-standard/using/campaign-standard-home.html)
+   * Om du behöver mer information om hur du konfigurerar och konfigurerar Adobe Campaign Standard finns i [Adobe Campaign Standard dokumentation.](https://experienceleague.adobe.com/docs/campaign-standard/using/campaign-standard-home.html)
 * Administratörsåtkomst till AEM
 
 ## Konfigurera eServer-användaren i Campaign {#aemserver-user}
@@ -63,7 +63,7 @@ Adobe Campaign Standard har som standard en `aemserver` användare som AEM anvä
 
 Dina `aemserver` har nu den behörighet som krävs för att AEM ska kunna använda den för att kommunicera med Adobe Campaign.
 
-Innan AEM kan använda `aemserver` -användare måste dess lösenord anges. Detta kan inte göras via Adobe Campaign. Den ska utföras av en Adobe supporttekniker. [Boka en biljett till Adobe kundtjänst](https://experienceleague.adobe.com/?support-tab=home#support) för att begära återställning av `aemserver` lösenord. När du har fått lösenordet från Adobe kundtjänst, spara det på en säker plats.
+Innan AEM kan använda `aemserver` -användare måste dess lösenord anges. Detta kan inte göras via Adobe Campaign. Den ska utföras av en Adobe supporttekniker. [Skicka in en biljett till Adobe kundtjänst](https://experienceleague.adobe.com/?support-tab=home#support) för att begära återställning av `aemserver` lösenord. När du har fått lösenordet från Adobe kundtjänst kan du förvara det på en säker plats.
 
 ## Verifiera AEMResourceTypeFilter i Campaign {#resource-type-filter}
 

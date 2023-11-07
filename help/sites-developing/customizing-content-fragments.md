@@ -7,9 +7,9 @@ topic-tags: extending-aem
 content-type: reference
 docset: aem65
 exl-id: 08c88e70-4df9-4627-8a66-1fabe3aee50b
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2784'
+source-wordcount: '2793'
 ht-degree: 0%
 
 ---
@@ -51,7 +51,7 @@ Beroende på fragmenttypen används även modeller eller mallar:
    * Modeller för innehållsfragment definierar strukturen för ett innehållsfragment när det skapas.
    * Ett fragment refererar till modellen, så ändringar i modellen kan påverka alla beroende fragment.
    * Modeller är inbyggda i datatyper.
-   * Funktioner för att lägga till nya varianter, osv., måste uppdatera fragmentet därefter.
+   * Funktioner för att lägga till nya varianter, och så vidare, måste uppdatera fragmentet därefter.
 
   >[!CAUTION]
   >
@@ -62,8 +62,8 @@ Beroende på fragmenttypen används även modeller eller mallar:
    * Används för att definiera enkla innehållsfragment.
    * Mallar definierar (grundläggande, endast text) strukturen för ett innehållsfragment när det skapas.
    * Mallen kopieras till fragmentet när den skapas, så fler ändringar av mallen återspeglas inte i befintliga fragment.
-   * Funktioner för att lägga till nya varianter, osv., måste uppdatera fragmentet därefter.
-   * [Mallar för innehållsfragment](/help/sites-developing/content-fragment-templates.md) fungerar på ett annat sätt än andra mallmekanismer i det AEM ekosystemet (t.ex. sidmallar). De bör därför beaktas separat.
+   * Funktioner för att lägga till nya varianter, och så vidare, måste uppdatera fragmentet därefter.
+   * [Mallar för innehållsfragment](/help/sites-developing/content-fragment-templates.md) fungerar på ett annat sätt än andra mallfunktioner i det AEM ekosystemet (till exempel sidmallar och så vidare). De bör därför beaktas separat.
    * När MIME-typen för innehållet baseras på en mall hanteras det faktiska innehållet. Det innebär att varje element och variant kan ha olika MIME-typer.
 
 ### Integrering med Assets {#integration-with-assets}
@@ -72,7 +72,7 @@ Content Fragment Management (CFM) ingår i AEM Assets som:
 
 * Innehållsfragment är resurser.
 * De använder befintliga Assets-funktioner.
-* De är helt integrerade med Assets (Admin Consoles, etc.).
+* De är helt integrerade med Assets (administrationskonsoler och så vidare).
 
 #### Mappa strukturerade innehållsfragment till resurser {#mapping-structured-content-fragments-to-assets}
 
@@ -138,7 +138,7 @@ Innehållsfragment kan refereras från AEM sidor, precis som andra resurstyper. 
 * Dessutom kan ett styckeintervall markeras för att begränsa utdata. Det kan till exempel användas för utdata med flera kolumner.
 * Komponenten tillåter [mellanliggande innehåll](/help/sites-developing/components-content-fragments.md#in-between-content):
 
-   * Här kan du montera andra resurser (bilder osv.) mellan styckena i det refererade fragmentet.
+   * Här kan du placera andra resurser (bilder och så vidare) mellan styckena i det refererade fragmentet.
    * För det mellanliggande innehållet behöver du:
 
       * vara medveten om risken för instabila referenser. Mellanliggande innehåll (som läggs till när en sida redigeras) har ingen fast relation till det stycke som det placeras bredvid, infogning av ett nytt stycke (i innehållsfragmentredigeraren) innan placeringen av det mellanliggande innehållet kan förlora den relativa positionen
@@ -254,7 +254,7 @@ Följande tre gränssnitt kan fungera som startpunkter:
 
 * **Fragmentmall** ([FragmentTemplate](https://www.adobe.io/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/dam/cfm/FragmentTemplate.html))
 
-  Använd `FragmentTemplate.createFragment()` för att skapa ett nytt fragment.
+  Använd `FragmentTemplate.createFragment()` för att skapa ett fragment.
 
   ```
   Resource templateOrModelRsc = resourceResolver.getResource("...");
@@ -492,9 +492,9 @@ if (fragmentResource != null) {
 }
 ```
 
-### Exempel: Skapa ett nytt innehållsfragment {#example-creating-a-new-content-fragment}
+### Exempel: Skapa ett innehållsfragment {#example-creating-a-new-content-fragment}
 
-Om du vill skapa ett nytt innehållsfragment programmatiskt måste du använda:
+Om du vill skapa ett innehållsfragment programmatiskt måste du använda:
 
 `com.adobe.cq.dam.cfm.ContentFragmentManager#create`
 

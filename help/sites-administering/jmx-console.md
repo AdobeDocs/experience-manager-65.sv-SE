@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 873ce073-0055-4e1b-b3c6-ae7967700894
 docset: aem65
 exl-id: eabd8335-6140-4c15-8cff-21608719aa5f
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '4950'
+source-wordcount: '4962'
 ht-degree: 0%
 
 ---
@@ -355,7 +355,7 @@ Information om CRX-databasen
   </tr>
   <tr>
    <td>option.shareable.nodes.supported</td>
-   <td>true anger att databasen stöder skapande av delningsbara noder.</td>
+   <td>true anger att databasen har stöd för att skapa delningsbara noder.</td>
   </tr>
   <tr>
    <td>crx.cluster.id</td>
@@ -480,11 +480,11 @@ Information om CRX-databasen
   </tr>
   <tr>
    <td>option.retention.supported</td>
-   <td>true anger att databasen har stöd för användning av externa program för kvarhållningshantering för att tillämpa kvarhållningsprinciper på innehåll och stöder spärr och release.</td>
+   <td>true anger att databasen stöder användning av externa program för kvarhållningshantering för att tillämpa kvarhållningsprinciper på innehåll och stöder spärr och release.</td>
   </tr>
   <tr>
    <td>option.lifecycle.supported</td>
-   <td>true anger att databasen stöder livscykelhantering.</td>
+   <td>true anger att databasen har stöd för livscykelhantering.</td>
   </tr>
  </tbody>
 </table>
@@ -894,7 +894,7 @@ JMX-konsolens huvudsida innehåller en tjänsttabell. Varje rad i tabellen repre
 
 ## Använda externa JMX-program för övervakning {#using-external-jmx-applications-for-monitoring}
 
-Med CRX kan externa program interagera med hanterade bönor (MBeans) via [Java Management Extensions (JMX)](https://docs.oracle.com/javase/6/docs/technotes/guides/management/overview.html). Använda generiska konsoler som [JConsole](https://java.sun.com/developer/technicalArticles/J2SE/jconsole.html) eller domänspecifika övervakningsprogram gör det möjligt att hämta och ställa in CRX-konfigurationer och -egenskaper samt att övervaka prestanda och resursanvändning.
+Med CRX kan externa program interagera med hanterade bönor (MBeans) via [Java Management Extensions (JMX)](https://docs.oracle.com/javase/6/docs/technotes/guides/management/overview.html). Använda generiska konsoler som [JConsole](https://java.sun.com/developer/technicalArticles/J2SE/jconsole.html) eller domänspecifika övervakningsprogram, tillåter hämtning och inställning av CRX-konfigurationer och -egenskaper samt övervakning av prestanda och resursanvändning.
 
 ### Ansluta till CRX med JConsole {#using-jconsole-to-connect-to-crx}
 
@@ -915,7 +915,7 @@ JConsole visar en lista över lokala Java Virtual Machine-processer. Listan inne
 
 ### Ansluta till en fjärr-CRX-process {#connecting-to-a-remote-crx-process}
 
-För att ansluta till en fjärr-CRX-process måste den JVM som är värd för fjärr-CRX-processen aktiveras för att acceptera fjärr-JMX-anslutningar.
+Om du vill ansluta till en fjärr-CRX-process måste den JVM som är värd för fjärr-CRX-processen vara aktiverad för att acceptera fjärr-JMX-anslutningar.
 
 Om du vill aktivera fjärr-JMX-anslutningar måste följande systemegenskap anges när du startar JVM:
 

@@ -1,7 +1,7 @@
 ---
-source-git-commit: 1ef5593495b4bf22d2635492a360168bccc1725d
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '745'
+source-wordcount: '743'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ Bidrag som inte uppfyller dessa standarder kan avvisas.
 
 ### Dokumentets standardanvändningsexempel.
 
-AEM dokumentation täcker standardanvändningsfall. Användningsfall som inte omfattas av standardinstallation och -användning ingår inte i AEM.
+AEM dokumentation täcker standardanvändningsfall. Användningsfall som inte omfattas av standardinstallationer och standardanvändning av produkten ingår inte i AEM.
 
 ### Dokumentationen dokumenterar vanligtvis inte fel eller tillfälliga lösningar.
 
@@ -35,7 +35,7 @@ Undantag från den här regeln gäller versionsinformationen där kända problem
 
 ### Dokumentationsbidragen är inte till för att besvara tekniska frågor.
 
-Alla idéer du kan behöva förbättra AEM dokumentation är välkomna som bidrag. Kommentarer, problem och pull-förfrågningar är dock avsedda för *avgifter* endast. De är inte avsedda att användas för att besvara frågor om hur du använder AEM, implementerar ditt AEM eller löser tekniska problem.
+Alla idéer du kan behöva förbättra AEM dokumentation är välkomna som bidrag. Kommentarer, problem och förfrågningar är dock avsedda för *avgifter* endast. De är inte avsedda att användas för att besvara frågor om hur du använder AEM, implementerar ditt AEM eller löser tekniska problem.
 
 Om du har frågor om hur AEM eller tekniska fel har använts ska du rapportera via den normala supportprocessen via [Experience Manager supportportal](https://experienceleague.adobe.com/?support-solution=Experience+Manager#support) eller diskuteras i [Experience Manager community](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/ct-p/adobe-experience-manager-community).
 
@@ -43,7 +43,7 @@ Om du har frågor om hur AEM eller tekniska fel har använts ska du rapportera v
 
 ### Bidragen ska tydligt hänvisa till berörda dokumentationssidor.
 
-Om du skapar ett problem som kan föreslå förbättringar av dokumentationen måste du inkludera länkar till de sidor som påverkas. Om du skapar ett problem med **Redigera den här sidan** på en dokumentationssida skapas problemet automatiskt med en länk till sidan.
+Om du skapar ett problem som kan föreslå förbättringar av dokumentationen måste du inkludera länkar till de sidor som påverkas. Om du skapar ett problem med hjälp av **Redigera den här sidan** på en dokumentationssida skapas problemet automatiskt med en länk till sidan.
 
 Detta gäller inte för pull-begäranden eftersom pull-begäranden till sin natur refererar till de berörda sidorna.
 
@@ -79,7 +79,7 @@ Kom ihåg att läsarna av AEM är från hela världen och inte kan förväntas v
 
 Skärmbilder ska användas med omdöme och endast när en textbeskrivning är otillräcklig.
 
-Markörer eller andra anteckningar i skärmbilder (som röda ramar, pilar eller text) bör inte användas. På så sätt är skärmbilderna enklare att återanvända eller replikera i lokaliserade versioner av dokumentationen.
+Använd inte markörer eller andra anteckningar i skärmbilder (som röda ramar, pilar eller text). På så sätt är skärmbilderna enklare att återanvända eller replikera i lokaliserade versioner av dokumentationen.
 
 ### Versionsspecifika referenser
 
@@ -87,6 +87,6 @@ Undvik om möjligt direkta referenser till en viss version i dokumentationsinneh
 
 ### Användning av dag, AEM, CQ, CRX
 
-Produkten ska alltid refereras till med sitt fullständiga namn **Adobe Experience Manager** för första gången i en artikel och kan därefter kallas **AEM**.
+Produktens fullständiga namn ska alltid anges **Adobe Experience Manager** för första gången i en artikel och kan därefter kallas **AEM**.
 
-Day, Day Software, CQ och CRX bör inte användas utom när det är oundvikligt, t.ex. i klassnamn eller med hänvisning till AEM.
+Använd inte Dag, Dag Software, CQ och CRX utom när det är oundvikligt, t.ex. i klassnamn eller med hänvisning till AEM.

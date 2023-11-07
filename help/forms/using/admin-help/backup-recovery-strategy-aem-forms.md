@@ -6,9 +6,9 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/aem_forms_backup_and_recovery
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 exl-id: 01ec6ebc-6d80-4417-9604-c8571aebb57e
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1489'
+source-wordcount: '1487'
 ht-degree: 0%
 
 ---
@@ -94,7 +94,7 @@ Om du använder TCP-cachelagring i stället för UDP i ett kluster måste du upp
 
 ### Ändra sökvägar för AEM formulärnodfil {#changing-the-aem-forms-node-file-system-paths}
 
-Om du ändrar filsystemsökvägarna för en fristående nod måste du uppdatera lämpliga referenser i inställningar, andra systemkonfigurationer, anpassade program och distribuerade AEM formulärprogram. För ett kluster måste alla noder däremot använda samma sökvägskonfiguration i filsystemet. Du måste ange rotkatalogen för GDS (Global Document Storage) och se till att den pekar på en kopia av den återställda GDS-servern som är synkroniserad med den återställda databasen. Det är viktigt att ange GDS-sökvägen eftersom GDS kan innehålla data som ska finnas kvar mellan omstarter av programservern.
+Om du ändrar filsystemsökvägarna för en fristående nod måste du uppdatera lämpliga referenser i inställningar, andra systemkonfigurationer, anpassade program och distribuerade AEM formulärprogram. För ett kluster måste alla noder däremot använda samma sökvägskonfiguration i filsystemet. Ange rotkatalogen för GDS (Global Document Storage) och se till att den pekar på en kopia av den återställda GDS-servern som är synkroniserad med den återställda databasen. Det är viktigt att ange GDS-sökvägen eftersom GDS kan innehålla data som ska finnas kvar mellan omstarter av programservern.
 
 I en klustrad miljö bör databasens filsystemskonfiguration vara densamma för alla klusternoder före och efter säkerhetskopieringen.
 

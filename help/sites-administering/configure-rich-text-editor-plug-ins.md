@@ -3,7 +3,7 @@ title: Konfigurera plugin-programmen för RTF-redigeraren
 description: Lär dig konfigurera plugin-programmen för Adobe Experience Manager Rich Text Editor så att enskilda funktioner aktiveras.
 contentOwner: AG
 exl-id: 6bfd6caa-a68a-40ba-9826-4ba02cd1dbfb
-source-git-commit: 71b3f7c6ad2c7712762a29518de6cf0639081cb7
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '4380'
 ht-degree: 0%
@@ -226,7 +226,7 @@ Detta gör du genom att aktivera stilplugin-programmet.
 
 Ange sedan platserna för de formatmallar som du vill referera till:
 
-1. Navigera till textkomponentens rotnod, till exempel `/apps/<myProject>/components/text`.
+1. Navigera till rotnoden för textkomponenten, till exempel `/apps/<myProject>/components/text`.
 1. Lägg till egenskapen `externalStyleSheets` till den överordnade noden för `<rtePlugins-node>`:
 
    * **Namn** `externalStyleSheets`
@@ -327,7 +327,7 @@ All text som skapas i textredigeraren placeras i en blocktagg med standardvärde
 
 >[!NOTE]
 >
->Om en blocktagg används till exempel en &lt;hr> -tagg, kan inte tilldelas till ett stycke, det är inte ett giltigt användningsfall för ett plugin-program för paraformat.
+>Om en blocktagg exempelvis &lt;hr> -tagg, kan inte tilldelas till ett stycke, det är inte ett giltigt användningsfall för ett plugin-program för paraformat.
 
 När plugin-programmet Styckeformat är aktiverat för första gången är inga standardstyckeformat tillgängliga. Popup-listan är tom. Så här förser du författarna med styckeformat:
 

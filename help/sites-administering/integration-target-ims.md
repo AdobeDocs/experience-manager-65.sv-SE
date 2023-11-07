@@ -2,9 +2,9 @@
 title: Integrering med Adobe Target med IMS
 description: Lär dig hur du integrerar AEM med Adobe Target med IMS.
 exl-id: 8ddd86d5-a5a9-4907-b07b-b6552d7afdc8
-source-git-commit: fd8bb7d3d9040e0a7a6b2f65751445f41aeab73e
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1557'
+source-wordcount: '1556'
 ht-degree: 0%
 
 ---
@@ -105,7 +105,7 @@ Med Adobe Developer Console skapar du ett projekt (integration) med Adobe Target
 
 1. Granska inloggningsuppgifterna och fortsätt med **Nästa**:
 
-   ![Skapa ett nytt projekt](assets/integration-target-io-15.png)
+   ![Skapa ett projekt](assets/integration-target-io-15.png)
 
 1. Välj önskade produktprofiler och fortsätt med **Spara konfigurerat API**:
 

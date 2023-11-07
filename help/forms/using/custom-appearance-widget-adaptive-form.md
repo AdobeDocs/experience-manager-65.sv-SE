@@ -1,18 +1,14 @@
 ---
 title: Skapa anpassade utseenden för anpassade formulärfält
-seo-title: Create custom appearances for adaptive form fields
 description: Anpassa utseendet på färdiga komponenter i Adaptive Forms.
-seo-description: Customize appearance of out-of-the-box components in Adaptive Forms.
-uuid: 1aa36443-774a-49fb-b3d1-d5a2d5ff849a
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: customization
-discoiquuid: d388acef-7313-4e68-9395-270aef6ef2c6
 docset: aem65
 exl-id: 770e257a-9ffd-46a4-9703-ff017ce9caed
-source-git-commit: 8a24ca02762e7902b7d0033b36560629ee711de1
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1703'
+source-wordcount: '1702'
 ht-degree: 0%
 
 ---
@@ -21,13 +17,13 @@ ht-degree: 0%
 
 ## Introduktion {#introduction}
 
-Adaptiva formulär utnyttjar [utseenderamverk](/help/forms/using/introduction-widgets.md) för att hjälpa dig att skapa anpassade utseenden för anpassningsbara formulärfält och ge en annan användarupplevelse. Ersätt till exempel alternativknappar och kryssrutor med växlingsknappar eller använd anpassade jQuery-plugin-program för att begränsa användarnas indata i fält som telefonnummer eller e-post-ID.
+Adaptiva formulär använder [utseenderamverk](/help/forms/using/introduction-widgets.md) för att hjälpa dig att skapa anpassade utseenden för anpassningsbara formulärfält och ge en annan användarupplevelse. Ersätt till exempel alternativknappar och kryssrutor med växlingsknappar eller använd anpassade jQuery-plugin-program för att begränsa användarnas indata i fält som telefonnummer eller e-post-ID.
 
-Det här dokumentet förklarar hur du använder ett jQuery-plugin-program för att skapa dessa alternativa upplevelser för anpassningsbara formulärfält. Dessutom visas ett exempel om du vill skapa ett anpassat utseende för att en numerisk fältkomponent ska visas som en numerisk nummerlista eller skjutreglage.
+I det här dokumentet förklaras hur du använder ett jQuery-plugin-program för att skapa dessa alternativa upplevelser för anpassningsbara formulärfält. Dessutom visas ett exempel om du vill skapa ett anpassat utseende för att en numerisk fältkomponent ska visas som en numerisk nummerlista eller skjutreglage.
 
 Först ska vi titta på de termer och begrepp som används i den här artikeln.
 
-**Utseende** Hänvisar till format, utseende och känsla samt organisation för olika element i ett adaptivt formulärfält. Det innehåller vanligtvis en etikett, ett interaktivt område med indata, en hjälpikon samt korta och långa fältbeskrivningar. Den anpassning av utseendet som beskrivs i den här artikeln kan användas för utseendet på indataområdet i fältet.
+**Utseende** Hänvisar till format, utseende och känsla samt hur de olika elementen i ett adaptivt formulärfält är organiserade. Det innehåller vanligtvis en etikett, ett interaktivt område med indata, en hjälpikon samt korta och långa fältbeskrivningar. Den anpassning av utseendet som beskrivs i den här artikeln kan användas för utseendet på indataområdet i fältet.
 
 **jQuery plugin** Tillhandahåller en standardmekanism, baserad på jQuery-widgetramverket, för att implementera ett alternativt utseende.
 
@@ -46,14 +42,14 @@ Stegen på en hög nivå för att skapa ett anpassat utseende är följande:
 1. **Skapa ett klientbibliotek**: Skapa en `clientLib: af.customwidget` och lägga till de JavaScript- och CSS-filer som behövs.
 
 1. **Bygg och installera projektet**: Bygg Maven-projektet och installera det genererade innehållspaketet på AEM.
-1. **Uppdatera det adaptiva formuläret**: Uppdatera anpassningsbara formulärfältsegenskaper så att de använder det anpassade utseendet.
+1. **Uppdatera det adaptiva formuläret**: Uppdatera egenskaper för anpassningsbara formulärfält så att de använder det anpassade utseendet.
 
 ### Skapa ett projekt {#create-a-project}
 
 En maven-arkityp är en startpunkt för att skapa ett anpassat utseende. Följande detaljer gäller för den arkitetyp som ska användas:
 
 * **Databas**: https://repo1.maven.org/maven2/com/adobe/
-* **Artefakt-ID**: custom-appearance-archietype
+* **Artefakt-ID**: custom-appearance-architype
 * **Grupp-ID**: com.adobe.aemforms
 * **Version**: 1.0.4
 
@@ -141,7 +137,7 @@ När projektmallen har skapats gör du följande ändringar efter behov:
   </tr>
   <tr>
    <td><code>getCommitValue</code></td>
-   <td>jQuery-widgetramverket läser in funktionen när värdet för jQuery-widgeten sparas i XFA-modellen (till exempel vid exit-händelsen för ett textfält). Implementeringen ska returnera värdet som sparats i widgeten. Hanteraren har det nya värdet för alternativet.</td>
+   <td>jQuery-widgetramverket läser in funktionen när värdet för jQuery-widgeten sparas i XFA-modellen (t.ex. vid en exit-händelse för ett textfält). Implementeringen ska returnera värdet som sparats i widgeten. Hanteraren har det nya värdet för alternativet.</td>
   </tr>
   <tr>
    <td><code>showValue</code></td>
@@ -154,17 +150,17 @@ När projektmallen har skapats gör du följande ändringar efter behov:
  </tbody>
 </table>
 
-1. Uppdatera JavaScript-filen i `integration/javascript` efter behov.
+1. Uppdatera JavaScript-filen i `integration/javascript` mapp, efter behov.
 
    * Ersätta texten `__widgetName__` med det faktiska widgetnamnet.
-   * Utöka widgeten från en lämplig widgetklass. I de flesta fall är det widgetklassen som motsvarar den befintliga widget som ersätts. Det överordnade klassnamnet används på flera platser, så du bör söka efter alla förekomster av strängen `xfaWidget.textField` i filen och ersätta dem med den överordnade klass som används.
+   * Utöka widgeten från en lämplig widgetklass. I de flesta fall är det widgetklassen som motsvarar den befintliga widget som ersätts. Det överordnade klassnamnet används på flera platser, så du bör söka efter alla förekomster av strängen `xfaWidget.textField` i filen och ersätt dem med den aktuella överordnade klassen som används.
    * Utöka `render` metod för att ange ett alternativt användargränssnitt. Det är den plats från vilken jQuery-plugin-programmet anropas för att uppdatera användargränssnittet eller interaktionsbeteendet. The `render` -metoden ska returnera ett användarkontrollelement.
 
    * Utöka `getOptionsMap` metod för att åsidosätta en alternativinställning som påverkas på grund av en ändring i widgeten. Funktionen returnerar en mappning som innehåller information om åtgärden som ska utföras vid ändring av ett alternativ. Tangenterna är alternativen som tillhandahålls widgeten och värdena är de funktioner som anropas när en ändring av alternativet upptäcks.
    * The `getEventMap` metoden mappar händelser som utlöses av widgeten, med de händelser som krävs av den adaptiva formulärmodellen. Standardvärdet mappar HTML-standardhändelser för standardwidgeten och måste uppdateras om en alternativ händelse aktiveras.
    * The `showDisplayValue` och `showValue` använda satsen för visning och redigering av bild och kan åsidosättas för att få ett alternativt beteende.
 
-   * The `getCommitValue` -metoden anropas av det adaptiva formulärramverket när `commit`inträffar. Vanligtvis är det händelsen exit (utom för elementen för listrutor, alternativknappar och kryssrutor där det sker vid ändring). Mer information finns i [Adaptiva Forms-uttryck](../../forms/using/adaptive-form-expressions.md#p-value-commit-script-p).
+   * The `getCommitValue` -metoden anropas av det adaptiva formulärramverket när `commit`-händelsen inträffar. Vanligtvis är det händelsen exit (utom för elementen för listrutor, alternativknappar och kryssrutor där det sker vid ändring). Mer information finns i [Adaptiva Forms-uttryck](../../forms/using/adaptive-form-expressions.md#p-value-commit-script-p).
 
    * Mallfilen innehåller exempelimplementering för olika metoder. Ta bort metoder som inte ska utökas.
 
@@ -233,7 +229,7 @@ Nu ska vi titta på ett exempel för att skapa ett anpassat utseende så att ett
 
    [https://www.jqueryscript.net/form/User-Friendly-Number-Input-Spinner-with-jQuery-Bootstrap.html](https://www.jqueryscript.net/form/User-Friendly-Number-Input-Spinner-with-jQuery-Bootstrap.html)
 
-   Granska plugin-programkoden i Eclipse-projektet i `plugin.js` för att se till att den matchar kraven för utseendet. I det här exemplet uppfyller utseendet följande krav:
+   Granska plugin-programkoden i Eclipse-projektet i `plugin.js` för att se till att den uppfyller kraven för utseendet. I det här exemplet uppfyller utseendet följande krav:
 
    * Den numeriska nummerlistan ska sträcka sig från `- $.xfaWidget.numericInput`.
    * The `set value` -metoden för widgeten ställer in värdet efter att fokus är på fältet. Det är ett obligatoriskt krav för en widget för anpassningsbara formulär.
@@ -320,4 +316,4 @@ Nu ska vi titta på ett exempel för att skapa ett anpassat utseende så att ett
 
    1. Uppdatera **[!UICONTROL CSS class]** egenskap som ska läggas till `widget_numericStepper`.
 
-Det nya utseendet som du nyss skapade kan nu användas.
+Det nya utseendet som du har skapat kan nu användas.

@@ -11,9 +11,9 @@ topic-tags: operations
 discoiquuid: d2c95881-6c02-4e34-85af-84607df54287
 role: Developer
 exl-id: a07e51ca-fea0-4719-8071-1b7e805de2ae
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '9109'
+source-wordcount: '9095'
 ht-degree: 0%
 
 ---
@@ -36,7 +36,7 @@ Observera att det finns en fil med namnet Loan.xdp i FormsFolder. Du öppnar den
 >
 >Mer information om hur du skapar ett Forms-program med Workbench finns i [Workbench - hjälp](https://www.adobe.com/go/learn_aemforms_workbench_63).
 
-Sökvägen till en resurs i AEM Forms-databasen är:
+Sökvägen till en resurs i AEM Forms-databasen:
 
 `Applications/Application-name/Application-version/Folder.../Filename`
 
@@ -50,7 +50,7 @@ Följande värden visar några exempel på URI-värden:
 >
 >Du kan bläddra i AEM Forms-databasen med en webbläsare. Om du vill bläddra i databasen anger du följande URL i en webbläsare `https://[server name]:[server port]/repository`. Du kan verifiera snabbstartsresultat som är kopplade till avsnittet Arbeta med AEM Forms-databas med en webbläsare. Om du till exempel lägger till innehåll i AEM Forms-databasen kan du se innehållet i en webbläsare. (Se [Snabbstart (SOAP-läge): Skriva en resurs med Java API](/help/forms/developing/repository-service-api-quick-starts.md#quick-start-soap-mode-writing-a-resource-using-the-java-api).)
 
-Databas-API:t innehåller ett antal åtgärder som du kan använda för att lagra och hämta information från databasen. Du kan till exempel få en lista med resurser eller hämta särskilda resurser som lagras i databasen när en resurs behövs som en del av bearbetningen av ett program.
+Databas-API:t innehåller flera åtgärder som du kan använda för att lagra och hämta information från databasen. Du kan till exempel få en lista med resurser eller hämta särskilda resurser som lagras i databasen när en resurs behövs som en del av bearbetningen av ett program.
 
 >[!NOTE]
 >
@@ -305,7 +305,7 @@ Skriv en resurs med hjälp av Repository Service API (Java):
 
 1. Skriv resursen till målmappen
 
-   Anropa `ResourceRepositoryClient` objektets `writeResource` och skicka URI:n för mappen, samt `Resource` -objekt.
+   Anropa `ResourceRepositoryClient` objektets `writeResource` -metoden och skicka in URI:n för mappen, och `Resource` -objekt.
 
 **Se även**
 
@@ -354,7 +354,7 @@ Skriv en resurs med hjälp av Repository-tjänstens API (webbtjänst):
 
 1. Skriv resursen till målmappen
 
-   Anropa `RepositoryServiceService` objektets `writeResource` och skicka URI:n för mappen, samt `Resource` -objekt. Godkänd `null` för de andra två parametrarna.
+   Anropa `RepositoryServiceService` objektets `writeResource` -metoden och skicka in URI:n för mappen, och `Resource` -objekt. Godkänd `null` för de andra två parametrarna.
 
 **Se även**
 
@@ -716,7 +716,7 @@ Du kan hämta relaterade resurser för att fastställa beroenden mellan ett form
 
 **Frågesatser**
 
-A *fråga* innehåller en eller flera satser som är logiskt kopplade till villkor. A *programsats* består av en vänster operand, en operator och en höger operand. Dessutom kan du ange den sorteringsordning som ska användas för sökresultaten. The *sorteringsordning* innehåller information som motsvarar en SQL `ORDER BY` -satsen och består av element som innehåller de attribut som sökningen baseras på samt ett värde som anger om stigande eller fallande ordning ska användas.
+A *fråga* innehåller en eller flera satser som är logiskt kopplade till villkor. A *programsats* består av en vänster operand, en operator och en höger operand. Dessutom kan du ange den sorteringsordning som ska användas för sökresultaten. The *sorteringsordning* innehåller information som motsvarar en SQL `ORDER BY` -satsen och består av element som innehåller de attribut som sökningen baseras på och ett värde som anger om stigande eller fallande ordning ska användas.
 
 Du kan programmässigt söka efter resurser med Java API:t för databastjänsten. För närvarande går det inte att använda webbtjänstens API för att söka efter resurser.
 

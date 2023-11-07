@@ -6,9 +6,9 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-on-demand-services-app
 exl-id: a6e59334-09e2-4bb8-b445-1868035da556
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '2973'
 ht-degree: 0%
 
 ---
@@ -215,7 +215,7 @@ I listan nedan visas ett exempel på en konfiguration för innehållssynkroniser
 
 **events.plist** - Den här posten är lite speciell. Som nämndes i inledningen bör programmet tillhandahålla en kartvy med markörer för händelsernas platser. Den nödvändiga platsinformationen tillhandahålls som en separat fil i PLIST-format. För att detta ska fungera har händelselistkomponenten som används på indexsidan ett skript som heter plist.jsp. Skriptet körs när komponentens resurs begärs med `.plist` tillägg. Som vanligt anges komponentsökvägen i egenskapen path och typen ställs in på content eftersom du vill använda [Bearbetning av försäljningsbegäran](/help/sites-developing/the-basics.md#sling-request-processing).
 
-**events.touch.html** - Därefter kommer de sidor som visas i appen. Egenskapen path ställs in på händelsens rotsida. Alla händelsesidor under den sidan inkluderas också eftersom egenskapen deep har standardvärdet true. Du använder sidor som konfigurationstyp så att alla bilder eller andra filer som kan refereras från en bild eller hämtas från en komponent på en sida inkluderas. Om du dessutom ställer in pekväljaren får vi en mobilversion av sidorna. Konfigurationen i funktionspaketet innehåller fler poster av den här typen, men utelämnas för enkelhetens skull här.
+**events.touch.html** - Därefter kommer de faktiska sidorna som visas i appen. Egenskapen path ställs in på händelsens rotsida. Alla händelsesidor under den sidan inkluderas också eftersom egenskapen deep har standardvärdet true. Du använder sidor som konfigurationstyp så att alla bilder eller andra filer som kan refereras från en bild eller hämtas från en komponent på en sida inkluderas. Om du dessutom ställer in pekväljaren får vi en mobilversion av sidorna. Konfigurationen i funktionspaketet innehåller fler poster av den här typen, men utelämnas för enkelhetens skull här.
 
 **logo** - Logotypens konfigurationstyp har inte nämnts hittills och den är ingen av de inbyggda typerna. Ramverket för innehållssynkronisering är dock delvis utökningsbart och det är ett exempel på det, som kommer att behandlas i nästa avsnitt.
 

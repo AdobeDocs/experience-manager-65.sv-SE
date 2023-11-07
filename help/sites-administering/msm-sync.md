@@ -12,9 +12,9 @@ discoiquuid: 6bcf0fcc-481a-4283-b30d-80b517701280
 docset: aem65
 feature: Multi Site Manager
 exl-id: ac24b8b4-b3ed-47fa-9a73-03f0c9e68ac8
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2699'
+source-wordcount: '2695'
 ht-degree: 0%
 
 ---
@@ -52,7 +52,7 @@ Varje utrullningskonfiguration använder en utlösare som gör att utrullningen 
 
 ### Installerade utrullningskonfigurationer {#installed-rollout-configurations}
 
-I följande tabell visas de utrullningskonfigurationer som har installerats med AEM. Tabellen innehåller utlösar- och synkroniseringsåtgärderna för varje utrullningskonfiguration. Om de installerade rollout-konfigurationsåtgärderna inte uppfyller dina krav kan du [skapa en ny utrullningskonfiguration](#creating-a-rollout-configuration).
+I följande tabell visas de utrullningskonfigurationer som har installerats med AEM. Tabellen innehåller utlösar- och synkroniseringsåtgärderna för varje utrullningskonfiguration. Om de installerade rollout-konfigurationsåtgärderna inte uppfyller dina krav kan du [skapa en utrullningskonfiguration](#creating-a-rollout-configuration).
 
 <table>
  <tbody>
@@ -269,7 +269,7 @@ Den nya utrullningskonfigurationen är sedan tillgänglig för dig när du stäl
 
 Du kan konfigurera flera OSGi-tjänster som stöder motsvarande synkroniseringsåtgärder så att de inte påverkar specifika nodtyper och egenskaper. Många egenskaper och delnoder som rör AEM interna funktion ska till exempel inte tas med i en live-kopia. Endast det innehåll som är relevant för sidans användare ska kopieras.
 
-När du arbetar med AEM finns det flera metoder för att hantera konfigurationsinställningarna för sådana tjänster. Mer information finns i [Konfigurerar OSGi](/help/sites-deploying/configuring-osgi.md) om du vill ha mer information och rekommenderade rutiner.
+När du arbetar med AEM finns det flera metoder för att hantera konfigurationsinställningarna för sådana tjänster. Se [Konfigurerar OSGi](/help/sites-deploying/configuring-osgi.md) om du vill ha mer information och rekommenderade rutiner.
 
 I följande tabell visas de synkroniseringsåtgärder som du kan ange vilka noder som ska uteslutas för. Tabellen innehåller namnen på tjänsterna som ska konfigureras med webbkonsolen och PID:t för konfigurering med en databasnod.
 
@@ -334,7 +334,7 @@ Om du till exempel vill ha sidan **Titel** som ska ingå i de ändringar som öv
 
 Du kan konfigurera flera OSGi-tjänster som stöder motsvarande synkroniseringsåtgärder som är relaterade till uppdatering av referenser.
 
-När du arbetar med AEM finns det flera metoder för att hantera konfigurationsinställningarna för sådana tjänster. Mer information finns i [Konfigurerar OSGi](/help/sites-deploying/configuring-osgi.md) om du vill ha mer information och rekommenderade rutiner.
+När du arbetar med AEM finns det flera metoder för att hantera konfigurationsinställningarna för sådana tjänster. Se [Konfigurerar OSGi](/help/sites-deploying/configuring-osgi.md) om du vill ha mer information och rekommenderade rutiner.
 
 I följande tabell visas de synkroniseringsåtgärder som du kan ange referensuppdatering för. Tabellen innehåller namnen på tjänsterna som ska konfigureras med webbkonsolen och PID:t för konfigurering med en databasnod.
 
@@ -400,12 +400,12 @@ Du kan också konfigurera utrullningskonfigurationerna för en live-kopia-sida n
 
 Konfigurera en ritningssida med de utrullningskonfigurationer som ska användas när ritningssidan rullas ut.
 
-Observera att de underordnade sidorna för den blå sidan ärver konfigurationen. När du konfigurerar utrullningskonfigurationen att använda kan du åsidosätta konfigurationen som sidan ärver från sin överordnade.
+De underordnade sidorna för ritningssidan ärver konfigurationen. När du konfigurerar utrullningskonfigurationen att använda kan du åsidosätta konfigurationen som sidan ärver från sin överordnade.
 
 1. Använd **Webbplatser** för att välja rotsidan för ritningen.
 1. Välj **Egenskaper** i verktygsfältet.
 1. Öppna **Blueprint** -fliken.
-1. Markera en eller flera **Utrullningskonfigurationer** med listruteväljaren.
+1. Markera en eller flera **Utrullningskonfigurationer** med hjälp av den nedrullningsbara väljaren.
 1. Behåll uppdateringarna med **Spara**.
 
 ### Ställa in systemets standardkonfiguration för utrullning {#setting-the-system-default-rollout-configuration}

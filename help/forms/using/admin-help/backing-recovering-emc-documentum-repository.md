@@ -1,18 +1,14 @@
 ---
 title: Säkerhetskopiera och återställa EMC Documentum-databasen
-seo-title: Backing up and recovering the EMC Documentum repository
 description: I det här dokumentet beskrivs de uppgifter som krävs för att säkerhetskopiera och återställa EMC Documentum-databasen som konfigurerats för din AEM formulärmiljö.
-seo-description: This document describes the tasks required to back up and recover the EMC Documentum repository configured for your AEM forms environment.
-uuid: ab3b1fb1-25b3-4c95-801f-82d4b58f05ff
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/aem_forms_backup_and_recovery
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: f146202f-25f1-46a0-9943-c483f5f09f9f
 exl-id: bc21659f-88d6-4dff-8baf-12746e1b3ed9
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '803'
+source-wordcount: '802'
 ht-degree: 0%
 
 ---
@@ -23,7 +19,7 @@ I det här avsnittet beskrivs de uppgifter som krävs för att säkerhetskopiera
 
 >[!NOTE]
 >
->Dessa instruktioner förutsätter att AEM formulär med kopplingar för ECM och EMC Documentum Content Server installeras och konfigureras enligt behov.
+>I dessa anvisningar förutsätts att AEM formulär med kopplingar för ECM och EMC Documentum Content Server installeras och konfigureras efter behov.
 
 För både säkerhetskopiering och återställning finns det två huvudsakliga uppgifter:
 
@@ -67,7 +63,7 @@ I det här avsnittet beskrivs hur du installerar och konfigurerar EMC NetWorker-
     #
     # Parameters not shown can be set in this file (as per site customisation) #or from the command-line.
     #
-    # Please refer to the user Guides for details on all parameters, including
+    # See the user Guides for details on all parameters, including
     # those not listed below.
     # Note: DCTM environment for D6 is slightly different from D5, refer to D6
     # Installation Guide to update the values.
@@ -198,29 +194,29 @@ I det här avsnittet beskrivs hur du installerar och konfigurerar EMC NetWorker-
 
    * Fullständig säkerhetskopiering av databasen (nsrnmddbf.bat):
 
-      `NetWorker_database_module_root` `-s`*&lt;networker_server_name>* `-U``[username]` `-P`*[lösenord ]*`-l full`*&lt;database_name>*
+     `NetWorker_database_module_root` `-s`*&lt;networker_server_name>* `-U``[username]` `-P`*[lösenord ]*`-l full`*&lt;database_name>*
 
    * Inkrementell säkerhetskopiering av databas (nsrnmddbi.bat):
 
-      `[NetWorker_database_module_root]` `-s`*&lt;NetWorker_Server_Name>* `-U``[username]` `-P``[password]` `-l 1 -R`*&lt;database_name>*
+     `[NetWorker_database_module_root]` `-s`*&lt;NetWorker_Server_Name>* `-U``[username]` `-P``[password]` `-l 1 -R`*&lt;database_name>*
 
    * Säkerhetskopiering av databaslogg (nsrnmddbl.bat):
 
-      `[NetWorker_database_module_root]` `-s``<NetWorker_Server_Name>` `-U``[username]` `-P``[password]` `-l incr -R`*&lt;database_name>*
+     `[NetWorker_database_module_root]` `-s``<NetWorker_Server_Name>` `-U``[username]` `-P``[password]` `-l incr -R`*&lt;database_name>*
 
-      Var:
+     Var:
 
-      `[NetWorker_database_module_root]` är installationskatalogen för NetWorker-modulen. Standardinstallationskatalogen för NetWorker-modulen för SQL Server är till exempel C:\Program Files\Legato\nsr\bin\nsrsqlsv.
+     `[NetWorker_database_module_root]` är installationskatalogen för NetWorker-modulen. Standardinstallationskatalogen för NetWorker-modulen för SQL Server är till exempel C:\Program Files\Legato\nsr\bin\nsrsqlsv.
 
-      `NetWorker_Server_Name` är den server där NetWorker är installerat.
+     `NetWorker_Server_Name` är den server där NetWorker är installerat.
 
-      `username` &amp; `password` är användarnamn och lösenord för databasadministratörsanvändaren.
+     `username` &amp; `password` är användarnamn och lösenord för databasadministratörsanvändaren.
 
-      `database_name` är namnet på den databas som ska säkerhetskopieras.
+     `database_name` är namnet på den databas som ska säkerhetskopieras.
 
 **Skapa en säkerhetskopieringsenhet**
 
-1. Skapa en ny katalog på EMC Documentum-servern och dela mappen genom att ge fullständig behörighet till alla användare.
+1. Skapa en katalog på EMC Documentum-servern och dela mappen genom att ge fullständig behörighet till alla användare.
 1. Starta EMC NetWorker-administratören och klicka på Mediehantering > Enheter.
 1. Högerklicka på Enheter och välj Skapa.
 1. Ange följande värden och klicka på OK:

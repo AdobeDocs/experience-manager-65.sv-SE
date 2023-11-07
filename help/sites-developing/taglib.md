@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: platform
 content-type: reference
 exl-id: 50e608d5-951f-4a3f-bed4-9e92ff5d7bd4
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2462'
+source-wordcount: '2460'
 ht-degree: 0%
 
 ---
@@ -117,7 +117,7 @@ Den har följande valfria attribut:
 
 **tagName** - Namnet på det element som omger ett utdata som inte är tomt. Som standard är det DIV.
 
-**platshållare** - Standardvärde som används för null eller tom text i redigeringsläge, det vill säga platshållaren. Observera att standardkontrollen utförs efter den valfria formateringen och escape-konverteringen, det vill säga att den skrivs som den är till utdata. Standardvärdet är:
+**platshållare** - Standardvärde som används för null eller tom text i redigeringsläge, det vill säga platshållaren. Standardkontrollen utförs efter den valfria formateringen och escape-konverteringen, d.v.s. efter att utdata har skrivits som de är. Standardvärdet är:
 
 `<div><span class="cq-text-placeholder">&para;</span></div>`
 
@@ -545,7 +545,7 @@ Den har följande attribut:
 
 >[!NOTE]
 >
->Resursens och skriptets upplösning som ingår i `<sling:include>` -taggen är densamma som för en vanlig sling-URL-upplösning. Som standard används väljarna, tillägget och så vidare från den aktuella begäran även för det inkluderade skriptet. De kan ändras med taggattributen: till exempel `replaceSelectors="foo.bar"` gör att du kan skriva över väljarna.
+>Resursens och skriptets upplösning som ingår i `<sling:include>` -taggen är densamma som för en vanlig sling-URL-upplösning. Som standard används väljarna, tillägget och så vidare från den aktuella begäran även för det inkluderade skriptet. De kan ändras med taggattributen: `replaceSelectors="foo.bar"` gör att du kan skriva över väljarna.
 
 Exempel:
 

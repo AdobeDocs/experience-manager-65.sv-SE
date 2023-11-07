@@ -9,9 +9,9 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 discoiquuid: ec4ada04-e429-4ad4-a060-2dccac847cf0
 exl-id: 5f050baa-fe10-4acc-ad32-de20793edc13
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1160'
+source-wordcount: '1154'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ AEM Mobile On-Demand tillhandahåller en fullständigt konfigurerad programmall,
 
 We.Unlimited App är en exempelmall som representerar gränssnittet i en fullt konfigurerbar och hanterbar AEM Mobile On-Demand-applikation.
 
-Om du väljer den här exempelmallen när du skapar en ny app får du en funktionsrik instrumentpanel i AEM Mobile.
+Om du väljer den här exempelmallen när du skapar en app får du en funktionsrik instrumentpanel i AEM Mobile.
 
 ![chlimage_1-70](assets/chlimage_1-70.png)
 
@@ -36,22 +36,22 @@ Om du väljer den här exempelmallen när du skapar en ny app får du en funktio
 
 ## Skapa appmallar {#creating-app-templates}
 
-En appmall används för att skapa ett nytt program och fungerar som en samling sidmallar och komponenter som representerar en baslinje eller grund för ett program. Mallen stämplar ut vissa grundläggande egenskaper så att de leder programmet på rätt sätt. I allmänhet skulle en kund inte skapa för många appar.
+En appmall används för att skapa ett program och fungerar som en samling sidmallar och komponenter som representerar en baslinje eller grund för ett program. Mallen stämplar ut vissa grundläggande egenskaper så att de leder programmet på rätt sätt. I allmänhet skulle en kund inte skapa för många appar.
 
-Appmallar är ett enkelt sätt att utnyttja befintliga designer som skapats av utvecklare och som används för att skapa nya appar i AEM.
+Appmallar är ett enkelt sätt att använda befintliga designer som skapats av utvecklare och som används för att skapa nya appar i AEM.
 
-När du skapar ett nytt program baserat på en mall för ett annat program får du ett program som har en startpunkt som representerar det program som det skapades från.
+När du skapar ett program baserat på en mall för ett annat program får du ett program som har en startpunkt som representerar det program som det skapades från.
 
-Steg för att skapa ett nytt program baserat på en appmall:
+Steg för att skapa ett program baserat på en appmall:
 
-1. Gå till AEM Mobile programkatalog: *&lt;server-url>/aem/apps.html/content/mobileapps*
+1. Gå till AEM Mobile programkatalog: *&lt;server-url>/aem/apps.html/content/mobile/apps*
 1. Välj **Skapa** —> **App** som visas nedan
 
 När du har skapat ett program med den här mallen kan du lägga till artiklar, banners och samlingar i programmet. Mer information om hur du återbesöker, skapar artiklar, banners och samlingar finns i [Innehållshanteringsåtgärder](/help/mobile/mobile-apps-ondemand-manage-content-ondemand.md).
 
 >[!NOTE]
 >
->Du kan också välja en exempelprogrammall, till exempel **We.Unlimited** app, som är tillgänglig för dig av en AEM utvecklare. Om du använder den här exempelmallen för din app får du några exempelartiklar och samlingar att arbeta med. Du kan använda exempelmallarna och -komponenterna, anpassa befintliga mallar eller skapa nya för programmet.
+>Du kan också välja en exempelprogrammall, till exempel **We.Unlimited** app, som är tillgänglig för dig av en AEM. Om du använder den här exempelmallen för din app får du några exempelartiklar och samlingar att arbeta med. Du kan använda exempelmallarna och -komponenterna, anpassa befintliga mallar eller skapa nya för programmet.
 
 >[!CAUTION]
 >
@@ -75,7 +75,7 @@ Varje entitetstyp har två färdiga mallar. Dessa är:
 
 Obegränsad artikel är en exempelmall som representerar en typisk AEM Mobile On-Demand-artikellayout.
 
-1. Klicka på **+** in **Hantera artiklar** för att skapa en ny artikel. Du kan välja ett **Obegränsad artikel** eller en **RTF-artikel**. Bilden nedan visar det alternativ som gör att du kan välja mellan någon av dessa två artikelmallar.
+1. I **Hantera artiklar**, markera **+**  för att skapa en artikel. Du kan välja ett **Obegränsad artikel** eller en **RTF-artikel**. Bilden nedan visar det alternativ som gör att du kan välja mellan någon av dessa två artikelmallar.
 
 1. Klicka **Nästa** om du vill definiera artikelmetadata som artikelnamn/titel, beskrivning, författare, abstrakt, avdelning, miniatyrbild, artikelåtkomst och så vidare.
 1. Klicka **Nästa** för att fylla i Advertisement Properties.
@@ -102,7 +102,7 @@ Välj &#39;**+**&#39; på den vänstra panelen för att lägga till komponenter 
 
 Det finns inga färdiga artikelmallar, men det finns en standardmall som anpassade mallar ska utöka, se Geometrixx Unlimited-appens [Exempel på artikelmall](http://localhost:4502/crx/de/index.jsp#/apps/geometrixx-unlimited-app/templates/article).
 
-De viktigaste egenskaperna utöver de normala AEM mallegenskaper som krävs är bland annat
+De viktigaste egenskaperna utöver de normala AEM som krävs är bland annat
 
 ***dps-resourceType=&quot;dps:Article&quot;***
 
@@ -142,7 +142,7 @@ När komponenten redan har inkluderats på en AEM sida, tillsammans med några a
 
 ![chlimage_1-75](assets/chlimage_1-75.png)
 
-**Så här redigerar du en befintlig komponent:**
+**Redigera en befintlig komponent:**
 
 1. Välj den sidan och kontrollera att du är **Redigera** och markera komponenten
 1. Tryck på skiftnyckelsikonen för att konfigurera komponenten

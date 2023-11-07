@@ -10,9 +10,9 @@ geptopics: SG_AEMFORMS/categories/configuring_forms
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 8a07dddf-1281-45ac-a55e-4333b860a261
 exl-id: 6b57d00e-5ba0-41ee-8497-49ecfec5b9ed
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1608'
+source-wordcount: '1606'
 ht-degree: 0%
 
 ---
@@ -21,12 +21,12 @@ ht-degree: 0%
 
 Forms tar formulärdesigner som skapats i Designer och återger dem i olika format.
 
-Forms-sidan i administrationskonsolen innehåller inställningar som styr hur Forms-tjänsten cachelagrar objekt. Du kan justera dessa inställningar för att optimera prestandan för Forms-tjänsten.
+Forms-sidan i administrationskonsolen innehåller inställningar som styr hur Forms-tjänsten cachelagrar objekt. Du kan justera de här inställningarna för att optimera prestandan för Forms-tjänsten.
 
 Forms-tjänsten cachelagrar följande objekt:
 
-* **formulärdesigner:** Forms-tjänsten cachelagrar formulärdesigner som hämtas från databasen eller från HTTP-källor. Denna cachning förbättrar prestanda eftersom Forms-tjänsten hämtar formulärdesignen från cachen i stället för från databasen för efterföljande återgivningsbegäranden.
-* **fragment och bilder:** Forms-tjänsten kan cachelagra fragment och bilder som används i formulärdesigner. När Forms-tjänsten cachelagrar dessa objekt förbättras prestandan eftersom fragmenten och bilderna endast läses från databasen vid den första begäran.
+* **formulärdesign:** Forms-tjänsten cachelagrar formulärdesigner som hämtas från databasen eller från HTTP-källor. Denna cachning förbättrar prestanda eftersom Forms-tjänsten hämtar formulärdesignen från cachen i stället för från databasen för efterföljande återgivningsbegäranden.
+* **fragment och bilder:** Forms kan cachelagra fragment och bilder som används i formulärdesigner. När Forms-tjänsten cachelagrar dessa objekt förbättras prestandan eftersom fragmenten och bilderna endast läses från databasen vid den första begäran.
 * **formulär:** Forms-tjänsten cachelagrar de formulär som återges. Den här typen av cachning förbättrar prestanda eftersom Forms-tjänsten inte behöver matcha och återge samma formulär vid efterföljande begäranden.
 
 Forms sparar cacheminnet på två platser:
@@ -41,7 +41,7 @@ Forms har stöd för två cachelagringslägen:
 * ovillkorlig
 * med cachekontrollpunkten
 
-Om du växlar mellan cachelägen startar du om Forms-tjänsten för att ändringen ska börja gälla. Om du vill starta om den här tjänsten använder du Workbench eller läser [Starta eller stoppa tjänster som är kopplade till AEM formulärmoduler](/help/forms/using/admin-help/starting-stopping-services.md#start-or-stop-the-services-associated-with-aem-forms-modules) för instruktioner.
+Om du växlar mellan cachelägen startar du om Forms-tjänsten för att ändringen ska börja gälla. Använd antingen Workbench eller se om du vill starta om tjänsten [Starta eller stoppa tjänster som är kopplade till AEM formulärmoduler](/help/forms/using/admin-help/starting-stopping-services.md#start-or-stop-the-services-associated-with-aem-forms-modules) för instruktioner.
 
 Tidpunkten för cachekontrollen återställs automatiskt när du växlar mellan lägena.
 
@@ -91,7 +91,7 @@ Om du vill komma åt de här inställningarna klickar du på Tjänster > Forms i
 
 ### Ange globala cacheinställningar {#specifying-global-cache-settings}
 
-Inställningarna i **Globala cacheinställningar** påverkar alla typer av cacheminnen. Om du ändrar någon av dessa inställningar startar du om Forms-tjänsten så att ändringen börjar gälla. Om du vill starta om den här tjänsten använder du Workbench eller läser [Starta eller stoppa tjänster som är kopplade till AEM formulärmoduler](/help/forms/using/admin-help/starting-stopping-services.md#start-or-stop-the-services-associated-with-aem-forms-modules) för instruktioner.
+Inställningarna i **Globala cacheinställningar** påverkar alla typer av cacher. Om du ändrar någon av dessa inställningar startar du om Forms-tjänsten så att ändringen börjar gälla. Använd antingen Workbench eller se om du vill starta om tjänsten [Starta eller stoppa tjänster som är kopplade till AEM formulärmoduler](/help/forms/using/admin-help/starting-stopping-services.md#start-or-stop-the-services-associated-with-aem-forms-modules) för instruktioner.
 
 **Maximal dokumentstorlek för cache (kB):** Den maximala storleken, i kilobyte, för en formulärdesign eller annan resurs som kan lagras i vilken cache som helst i minnet. Det här är en global inställning som gäller för alla cacheminnen i minnet. Om en resurs är större än det här värdet cachelagras den inte i minnet. Standardvärdet är 1 024 kB. Den här inställningen påverkar inte diskcachen.
 
@@ -101,11 +101,11 @@ Inställningarna i **Globala cacheinställningar** påverkar alla typer av cache
 
 När Forms-tjänsten tar emot en renderingsbegäran, hämtas formulärdesignen från databasen och cachelagras. Denna cachning förbättrar prestanda eftersom Forms-tjänsten hämtar formulärdesignen från cachen i stället för från databasen för efterföljande återgivningsbegäranden.
 
-Forms-tjänsten cachelagrar alltid formulärdesigner på disk. Om formulärdesigner lagras på servern betraktas dessa filer som diskcachen. Forms-tjänsten cachelagrar också formulärdesigner i minnet enligt inställningarna i **Cacheminne för minnesmall** område. Om du ändrar någon av dessa inställningar startar du om Forms-tjänsten så att ändringen börjar gälla. Om du vill starta om den här tjänsten använder du Workbench eller läser [Starta eller stoppa tjänster som är kopplade till AEM formulärmoduler](/help/forms/using/admin-help/starting-stopping-services.md#start-or-stop-the-services-associated-with-aem-forms-modules) för instruktioner.
+Forms-tjänsten cachelagrar alltid formulärdesigner på disk. Om formulärdesigner lagras på servern betraktas dessa filer som diskcachen. Forms-tjänsten cachelagrar också formulärdesigner i minnet enligt inställningarna i **Cacheminne för minnesmall** område. Om du ändrar någon av dessa inställningar startar du om Forms-tjänsten så att ändringen börjar gälla. Använd antingen Workbench eller se om du vill starta om tjänsten [Starta eller stoppa tjänster som är kopplade till AEM formulärmoduler](/help/forms/using/admin-help/starting-stopping-services.md#start-or-stop-the-services-associated-with-aem-forms-modules) för instruktioner.
 
 **Cachestorlek för mallkonfiguration:** Det maximala antalet mallkonfigurationsobjekt som ska behållas i minnet. Standardvärdet är 100. Vi rekommenderar att du anger det här värdet som är större än eller lika med värdet för Mallcachestorlek. Den här inställningen påverkar inte diskcachen.
 
-**Mallcachestorlek:** Det maximala antalet mallinnehållsobjekt som ska behållas i minnet. Standardvärdet är 100. Den här inställningen påverkar inte diskcachen.
+**Mallcache-storlek:** Det maximala antalet mallinnehållsobjekt som ska behållas i minnet. Standardvärdet är 100. Den här inställningen påverkar inte diskcachen.
 
 **Aktiverad:** Som standard är den här kryssrutan markerad, vilket innebär att formulärmallar cachelagras i minnet. När det här alternativet inte är markerat cachelagras endast formulärmallar på disken.
 
@@ -113,7 +113,7 @@ Forms-tjänsten cachelagrar alltid formulärdesigner på disk. Om formulärdesig
 
 Forms-tjänsten cachelagrar återgivna formulär så att de inte behöver matcha och återge samma formulär vid efterföljande förfrågningar. Återgivna formulär cachelagras både på disk och i minnet.
 
-De här inställningarna finns i **Cacheminne för återgivning av minnesformulär** område. Om du ändrar någon av dessa inställningar startar du om Forms-tjänsten så att ändringen börjar gälla. Om du vill starta om den här tjänsten använder du Workbench eller läser [Starta eller stoppa tjänster som är kopplade till AEM formulärmoduler](/help/forms/using/admin-help/starting-stopping-services.md#start-or-stop-the-services-associated-with-aem-forms-modules) för instruktioner.
+De här inställningarna finns i **Cacheminne för återgivning av minnesformulär** område. Om du ändrar någon av dessa inställningar startar du om Forms-tjänsten så att ändringen börjar gälla. Använd antingen Workbench eller se om du vill starta om tjänsten [Starta eller stoppa tjänster som är kopplade till AEM formulärmoduler](/help/forms/using/admin-help/starting-stopping-services.md#start-or-stop-the-services-associated-with-aem-forms-modules) för instruktioner.
 
 **Cachestorlek:** Anger det maximala antalet återgivna formulär som kan finnas i cachen i minnet. Standardvärdet är 100. Den här inställningen påverkar inte diskcachen.
 
@@ -133,7 +133,7 @@ Du kan använda följande inställningar för att styra cachning på disk av fra
 
 **Inaktiverad:** Forms-tjänsten cachelagrar inte fragment eller bilder.
 
-**Rensningsintervall (sekunder):** Anger hur ofta Forms-tjänsten tar bort gamla ogiltiga cachefiler. Forms-tjänsten tar inte bort giltiga cachefiler. Om du ändrar rensningsintervallet startar du om Forms-tjänsten så att ändringen börjar gälla. Om du vill starta om den här tjänsten använder du antingen Workbench eller läser Starta eller stoppa tjänster som är kopplade till AEM formulärmoduler för instruktioner. Standardvärdet är 600 sekunder.
+**Rensningsintervall (sekunder):** Anger hur ofta Forms-tjänsten tar bort gamla ogiltiga cachefiler. Forms tar inte bort giltiga cachefiler. Om du ändrar rensningsintervallet startar du om Forms-tjänsten så att ändringen börjar gälla. Om du vill starta om den här tjänsten använder du antingen Workbench eller läser Starta eller stoppa tjänster som är kopplade till AEM formulärmoduler för instruktioner. Standardvärdet är 600 sekunder.
 
 ## Klusteröverväganden för cacher {#clustering-considerations-for-caches}
 

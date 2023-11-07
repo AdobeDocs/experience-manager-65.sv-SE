@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
 content-type: reference
 exl-id: a7281ca0-461f-4762-a631-6bb539596200
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1581'
+source-wordcount: '1573'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ Tack vare den här integreringen kan AEM och Adobe Campaign Classic användas ob
 
 ## Integreringssteg {#integration-steps}
 
-Integrationen mellan AEM och Campaign kräver ett antal steg i båda lösningarna.
+Integrationen mellan AEM och Campaign kräver flera steg i båda lösningarna.
 
 1. [Installera AEM integreringspaket i Campaign.](#install-package)
 1. [Skapa en operator för AEM i Campaign](#create-operator)
@@ -41,12 +41,12 @@ Det här dokumentet leder dig igenom dessa steg i detalj.
 
 * Administratörsåtkomst till Adobe Campaign Classic
    * För att kunna utföra integreringen behöver du en fungerande Adobe Campaign Classic-instans, inklusive en konfigurerad databas.
-   * Om du vill ha mer information om hur du konfigurerar och konfigurerar Adobe Campaign Classic kan du läsa [Adobe Campaign Classic dokumentation,](https://experienceleague.adobe.com/docs/campaign-classic/using/campaign-classic-home.html) särskilt i installations- och konfigureringshandboken.
+   * Om du behöver mer information om hur du konfigurerar och konfigurerar Adobe Campaign Classic finns i [Adobe Campaign Classic dokumentation,](https://experienceleague.adobe.com/docs/campaign-classic/using/campaign-classic-home.html) särskilt i installations- och konfigureringshandboken.
 * Administratörsåtkomst till AEM
 
 ## Installera AEM integreringspaket i Campaign {#install-package}
 
-The **AEM** i Adobe Campaign innehåller ett antal standardkonfigurationer som krävs för att ansluta till AEM.
+The **AEM** paket i Adobe Campaign innehåller flera standardkonfigurationer som krävs för att ansluta till AEM.
 
 1. Som administratör loggar du in på Adobe Campaign-instansen med klientkonsolen.
 
@@ -112,7 +112,7 @@ Integrationspaketet skapar automatiskt `aemserver` som AEM använder för att an
    >
    >Som standard finns ingen säkerhetszon konfigurerad för operatorn. För att AEM ska kunna ansluta till Adobe Campaign måste du välja en zon enligt beskrivningen i föregående steg.
    >
-   >Adobe rekommenderar starkt att du skapar en säkerhetszon som ska AEM för att undvika säkerhetsproblem. Mer information om detta finns i [Adobe Campaign Classic dokumentation.](https://experienceleague.adobe.com/docs/campaign-classic/using/installing-campaign-classic/additional-configurations/security-zones.html)
+   >Adobe rekommenderar starkt att du skapar en säkerhetszon som ska AEM för att undvika säkerhetsproblem. Mer information om det här avsnittet finns i [Adobe Campaign Classic dokumentation.](https://experienceleague.adobe.com/docs/campaign-classic/using/installing-campaign-classic/additional-configurations/security-zones.html)
 
 1. Gå tillbaka till Campaign-klienten `aemserver` -operatorn och väljer **Allmänt** -fliken.
 

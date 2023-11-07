@@ -7,9 +7,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 discoiquuid: ccc0e434-8847-4e12-8a18-84b55fb2964b
 docset: aem65
 exl-id: 5623dcf4-bda9-4dee-ace3-5a1f6057e96c
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1828'
+source-wordcount: '1823'
 ht-degree: 0%
 
 ---
@@ -44,7 +44,7 @@ Du kan redigera texten direkt på sidan i stället för i ett dialogrutefönster
 
 >[!NOTE]
 >
->Om du har innehållshanteraren öppen visas ett verktygsfält med formateringsalternativen för textredigering överst på fliken (se ovan).
+>Om du har innehållshanteraren öppen visas ett verktygsfält med formateringsalternativen för textredigering överst på fliken (enligt ovan).
 >
 >Om innehållssökaren inte är öppen visas inte verktygsfältet.
 
@@ -78,7 +78,7 @@ Alla fungerar som en växlingsknapp, så om du väljer det tas formatet bort.
 
 ![cq55_rte_stylesparagraph](assets/cq55_rte_stylesparagraph.png)
 
-Installationen kan innehålla fördefinierade format och format. Dessa finns i **[!UICONTROL Style]** och **[!UICONTROL Format]** listrutor och kan användas på text som du har valt.
+Installationen kan innehålla fördefinierade format och format. Dessa finns i **[!UICONTROL Style]** och **[!UICONTROL Format]** nedrullningsbara listor och kan användas på text som du har valt.
 
 Ett format kan användas på en viss sträng (ett format korrelerar till CSS):
 
@@ -353,7 +353,7 @@ Markera en enskild cell för att dela den:
 
 ![chlimage_1-107](assets/chlimage_1-107.png)
 
-Om du skapar en kapslad tabell skapas en ny, fristående tabell i den aktuella cellen.
+När du skapar en kapslad tabell skapas en tabell i den aktuella cellen som innehåller en egen tabell.
 
 >[!NOTE]
 >

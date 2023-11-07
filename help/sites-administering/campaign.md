@@ -1,6 +1,6 @@
 ---
 title: Integrera AEM 6.5 med Adobe Campaign
-description: Läs om AEM stöd för integrering med Adobe Campaign.
+description: Läs om AEM stöd för integrering med Adobe Campaign i 6.5.
 uuid: 6113279e-d1f5-46c3-ac94-50270fa55060
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -8,17 +8,17 @@ topic-tags: integration
 content-type: reference
 discoiquuid: fd96f30c-0616-445e-adb9-050d52862ffc
 exl-id: ab41e540-1d43-4fc2-99d4-621ff2290e77
-source-git-commit: 6fe5e617ceac3c97a77de2d574ec370f30887330
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '335'
+ht-degree: 3%
 
 ---
 
 
 # Integrera AEM 6.5 med Adobe Campaign{#integrating-with-adobe-campaign}
 
-Läs om AEM stöd för integrering med Adobe Campaign.
+Läs om AEM stöd för integrering med Adobe Campaign i 6.5.
 
 Adobe Campaign är en uppsättning lösningar som gör att ni kan personalisera och leverera kampanjer i alla kanaler, både online och offline.
 
@@ -30,7 +30,7 @@ Adobe Campaign är en uppsättning lösningar som gör att ni kan personalisera 
 
 ## Integrera med Adobe Campaign Classic {#acc}
 
-Det finns ett antal Adobe Campaign Classic-versioner (ACC). Stödet för integrering med AEM beror på vilken ACC-version du har implementerat och om AEM är installerad lokalt i AMS (Adobe Manage Services).
+Det finns flera Adobe Campaign Classic-versioner (ACC). Stödet för integrering med AEM beror på vilken ACC-version du har implementerat och om AEM är installerad lokalt i AMS (Adobe Manage Services).
 
 | ACC-version | Integrering med AEM 6.5 <br>On Premises | Integrering med AEM 6.5<br>AMS |
 |---|---|---|
@@ -46,7 +46,7 @@ I följande dokumentation beskrivs hur du integrerar AEM med Adobe Campaign Clas
 
 I följande ytterligare dokumentation beskrivs hur du använder integreringen.
 
-* [E-postkärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/email/introduction.html) - Lär dig mer om standardkomponenterna för e-post som du kan använda för att skapa Campaign-innehåll i AEM.
+* [E-postkärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/email/introduction.html) - Lär dig mer om de e-postkomponenter som du kan använda för att skapa Campaign-innehåll i AEM.
 * [Felsökning av Adobe Campaign Classic-integrering](/help/sites-administering/troubleshooting-campaignintegration.md) - Lär dig hur du åtgärdar de vanligaste problemen med AEM-ACC-integrering.
 
 ## Integrera med Adobe Campaign Standard {#acs}

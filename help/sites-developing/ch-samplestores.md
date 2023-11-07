@@ -8,9 +8,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: personalization
 content-type: reference
 exl-id: d8d9a799-3e30-442a-843b-d4d7ba70c557
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '471'
+source-wordcount: '468'
 ht-degree: 1%
 
 ---
@@ -25,7 +25,7 @@ ContextHub innehåller flera exempel på lämpliga lagringskanaler som du kan an
 
 >[!WARNING]
 >
->Exempelbutikskandidaterna tillhandahålls som referenskonfigurationer som hjälper dig att skapa en egen dedikerad konfiguration för ditt projekt och bör därför inte användas direkt.
+>Exempelbutikskandidaterna tillhandahålls som referenskonfigurationer som hjälper dig att skapa en egen dedikerad konfiguration för ditt projekt. Använd dem inte direkt.
 
 ## aem.segmentation Sample Store Candidate {#aem-segmentation-sample-store-candidate}
 

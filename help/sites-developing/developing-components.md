@@ -12,9 +12,9 @@ discoiquuid: 8cdb6db4-adaa-4eda-af7d-310a0b44b80b
 docset: aem65
 legacypath: /content/docs/en/aem/6-2/develop/components/components-touch-optimized
 exl-id: 573cdc36-e9c3-4803-9c4e-cebd0cf0a56f
-source-git-commit: 823e756f470b0599f7d53a3e08fdf650b4e892d1
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '3454'
+source-wordcount: '3446'
 ht-degree: 0%
 
 ---
@@ -206,13 +206,13 @@ Se till exempel:
 
 Widgetar för det beröringsaktiverade användargränssnittet implementeras som GRE-komponenter.
 
-Om du vill skapa en ny widget som ska användas i en komponentdialogruta för det beröringsaktiverade användargränssnittet måste du [skapa en ny gränssnittskomponent för Granite](/help/sites-developing/granite-ui-component.md).
+Om du vill skapa en widget som ska användas i en komponentdialogruta för det beröringsaktiverade användargränssnittet måste du [skapa en GRA-fältkomponent](/help/sites-developing/granite-ui-component.md).
 
 >[!NOTE]
 >
->Mer information om GRENITE finns i [Granite UI-dokumentation](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/index.html).
+>Mer information om GREND finns i [Granite UI-dokumentation](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/index.html).
 
-Om du ser dialogrutan som en enkel behållare för ett formulärelement kan du även se det primära innehållet i dialogrutan som formulärfält. När du skapar ett nytt formulärfält måste du skapa en resurstyp. Det motsvarar att skapa en ny komponent. För att du ska få hjälp med den uppgiften erbjuder Granite UI en generisk fältkomponent att ärva från (med `sling:resourceSuperType`):
+Om du ser dialogrutan som en enkel behållare för ett formulärelement kan du även se det primära innehållet i dialogrutan som formulärfält. När du skapar ett formulärfält måste du skapa en resurstyp. Det motsvarar att skapa en komponent. För att du ska få hjälp med den uppgiften erbjuder Granite UI en generisk fältkomponent att ärva från (med `sling:resourceSuperType`):
 
 `/libs/granite/ui/components/coral/foundation/form/field`
 
@@ -228,7 +228,7 @@ När du har skapat resurstypen kan du skapa en instans av fältet genom att läg
 
 Om du vill definiera format och beteende för komponenten kan du skapa en dedikerad [klientbibliotek](/help/sites-developing/clientlibs.md) som definierar din egen CSS/LESS och JS.
 
-Om du vill att klientbiblioteket ska läsas in enbart för komponentdialogrutan (d.v.s. den inte ska läsas in för en annan komponent) måste du ange egenskapen `extraClientlibs` i dialogrutan till kategorinamnet för det klientbibliotek du just har skapat. Detta rekommenderas om klientbiblioteket är stort och/eller om fältet är specifikt för den dialogrutan och inte behövs i andra dialogrutor.
+Om du vill att klientbiblioteket ska läsas in enbart för komponentdialogrutan (d.v.s. den inte ska läsas in för en annan komponent) måste du ange egenskapen `extraClientlibs` i dialogrutan till kategorinamnet för det klientbibliotek du har skapat. Detta rekommenderas om klientbiblioteket är stort och/eller om fältet är specifikt för den dialogrutan och inte behövs i andra dialogrutor.
 
 Om du vill att klientbiblioteket ska läsas in för alla dialogrutor anger du kategoriegenskapen för klientbiblioteket till `cq.authoring.dialog`. Det här är kategorinamnet för klientbiblioteket som inkluderas som standard när alla dialogrutor återges. Du vill göra det om klientbiblioteket är litet och/eller fältet är generiskt och kan återanvändas i andra dialogrutor.
 
@@ -346,7 +346,7 @@ Om den nya komponenten refererar till innehåll från andra sidor kan du överv�
 
 AEM markerar bara komponenten Reference. Om du vill lägga till din komponent måste du konfigurera OSGi-paketet **Referenskonfiguration för WCM-redigeringsinnehåll**.
 
-Skapa en ny post i definitionen som anger komponenten tillsammans med den egenskap som ska kontrolleras. Till exempel:
+Skapa en post i definitionen och ange komponenten tillsammans med den egenskap som ska kontrolleras. Till exempel:
 
 `/apps/<*your-Project*>/components/reference@parentPath`
 
@@ -373,12 +373,12 @@ Detta beteende och den nödvändiga relationen mellan resurser och komponenter k
 
    * `/etc/designs/<myApp>/page/par`
 
-   Skapa en ny nod:
+   Skapa en nod:
 
    * Namn: `cq:authoring`
    * Typ: `nt:unstructured`
 
-1. Skapa en ny nod under detta för att innehålla alla mappningar av resurs-till-komponent:
+1. Under det här avsnittet skapar du en nod som innehåller alla mappningar av resurs-till-komponent:
 
    * Namn: `assetToComponentMapping`
    * Typ: `nt:unstructured`

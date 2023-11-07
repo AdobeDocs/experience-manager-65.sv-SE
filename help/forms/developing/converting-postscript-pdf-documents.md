@@ -11,9 +11,9 @@ topic-tags: operations
 discoiquuid: 06ad343a-f74d-41f5-b3c8-b85bb723ceeb
 role: Developer
 exl-id: 744df8b2-0c61-410f-89e9-20b8adddbf45
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1325'
+source-wordcount: '1323'
 ht-degree: 0%
 
 ---
@@ -40,7 +40,7 @@ I det här avsnittet beskrivs hur du kan använda Distiller Service API (Java oc
 
 >[!NOTE]
 >
->Om du vill konvertera PostScript-filer till PDF-dokument måste något av följande vara installerat på den server som är värd för AEM Forms: Acrobat 9 eller Microsoft Visual C++ 2005, återdistribuerbart paket.
+>Om du vill konvertera PostScript-filer till PDF-dokument måste något av följande vara installerat på värdservern för AEM Forms: Acrobat 9 eller Microsoft Visual C++ 2005 återdistribuerbart paket.
 
 ### Sammanfattning av steg {#summary-of-steps}
 
@@ -49,12 +49,12 @@ Gör så här om du vill konvertera någon av de typer som stöds till ett PDF-d
 1. Inkludera projektfiler.
 1. Skapa en Distiller-tjänstklient.
 1. Hämta filen som ska konverteras.
-1. Anropa åtgärden Skapa PDF.
+1. Anropa åtgärden att skapa PDF.
 1. Spara dokumentet PDF.
 
 **Inkludera projektfiler**
 
-Inkludera nödvändiga filer i utvecklingsprojektet. Om du skapar ett klientprogram med Java, inkluderar du de JAR-filer som behövs. Om du använder webbtjänster måste du inkludera proxyfilerna.
+Inkludera nödvändiga filer i utvecklingsprojektet. Om du skapar ett klientprogram med Java, inkluderar du de JAR-filer som behövs. Om du använder webbtjänster måste du ta med proxyfilerna.
 
 **Skapa en Distiller-tjänstklient**
 
@@ -62,7 +62,7 @@ Innan du programmässigt kan utföra en Distiller-tjänståtgärd måste du skap
 
 **Hämta filen som ska konverteras**
 
-Du måste hämta filen som du vill konvertera. Om du till exempel vill konvertera en PS-fil till ett PDF-dokument måste du hämta PS-filen.
+Hämta filen som du vill konvertera. Om du till exempel vill konvertera en PS-fil till ett PDF-dokument måste du hämta PS-filen.
 
 **Anropa skapandet av PDF**
 
@@ -90,7 +90,7 @@ Konvertera en PostScript-fil till PDF med Distiller Service API (Java):
 
 1. Inkludera projektfiler.
 
-   Inkludera JAR-klientfiler, t.ex. adobe-distiller-client.jar, i Java-projektets klassökväg.
+   Inkludera JAR-klientfiler, som adobe-distiller-client.jar, i Java-projektets klassökväg.
 
 1. Skapa en Distiller-tjänstklient.
 
@@ -102,7 +102,7 @@ Konvertera en PostScript-fil till PDF med Distiller Service API (Java):
    * Skapa en `java.io.FileInputStream` objekt som representerar filen som ska konverteras med hjälp av konstruktorn och som skickar ett strängvärde som anger filens plats.
    * Skapa en `com.adobe.idp.Document` genom att använda konstruktorn och skicka `java.io.FileInputStream` -objekt.
 
-1. Anropa åtgärden Skapa PDF.
+1. Anropa åtgärden att skapa PDF.
 
    Anropa `DistillerServiceClient` objektets `createPDF` och skicka följande värden:
 
@@ -119,14 +119,13 @@ Konvertera en PostScript-fil till PDF med Distiller Service API (Java):
 
    Utför följande åtgärder för att hämta det nya PDF-dokumentet:
 
-   * Anropa `CreatePDFResult` objektets `getCreatedDocument` -metod. Detta returnerar `com.adobe.idp.Document` -objekt.
+   * Anropa `CreatePDFResult` objektets `getCreatedDocument` -metod. Detta returnerar en `com.adobe.idp.Document` -objekt.
    * Anropa `com.adobe.idp.Document` objektets `copyToFile` metod för att extrahera PDF-dokumentet.
 
    Utför på samma sätt följande åtgärder för att hämta loggdokumentet.
 
-   * Anropa `CreatePDFResult` objektets `getLogDocument` -metod. Detta returnerar `com.adobe.idp.Document` -objekt.
+   * Anropa `CreatePDFResult` objektets `getLogDocument` -metod. Detta returnerar en `com.adobe.idp.Document` -objekt.
    * Anropa `com.adobe.idp.Document` objektets `copyToFile` metod för att extrahera loggdokumentet.
-
 
 **Se även**
 
@@ -148,13 +147,13 @@ Konvertera en PostScript-fil till ett PDF-dokument med Distiller Service API (we
 
    >[!NOTE]
    >
-   >Ersätt `localhost` med IP-adressen till den server som är värd för AEM Forms.
+   >Ersätt `localhost` med IP-adressen till den server där AEM Forms finns.
 
 1. Skapa en Distiller-tjänstklient.
 
    * Skapa en `DistillerServiceClient` genom att använda dess standardkonstruktor.
    * Skapa en `DistillerServiceClient.Endpoint.Address` genom att använda `System.ServiceModel.EndpointAddress` konstruktor. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/DistillerService?blob=mtom`.) Du behöver inte använda `lc_version` -attribut. Det här attributet används när du skapar en tjänstreferens. Ange dock `?blob=mtom` för att använda MTOM.
-   * Skapa en `System.ServiceModel.BasicHttpBinding` genom att hämta värdet för `DistillerServiceClient.Endpoint.Binding` fält. Sänd returvärdet till `BasicHttpBinding`.
+   * Skapa en `System.ServiceModel.BasicHttpBinding` genom att hämta värdet för `DistillerServiceClient.Endpoint.Binding` fält. Skicka returvärdet till `BasicHttpBinding`.
    * Ange `System.ServiceModel.BasicHttpBinding` objektets `MessageEncoding` fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
    * Aktivera grundläggande HTTP-autentisering genom att utföra följande åtgärder:
 
@@ -171,7 +170,7 @@ Konvertera en PostScript-fil till ett PDF-dokument med Distiller Service API (we
    * Fylla i bytearrayen med strömdata genom att anropa `System.IO.FileStream` objektets `Read` och skickar bytearrayen, startpositionen och den flödeslängd som ska läsas.
    * Fyll i `BLOB` genom att tilldela `MTOM` med bytearrayens innehåll.
 
-1. Anropa åtgärden Skapa PDF.
+1. Anropa åtgärden att skapa PDF.
 
    Anropa `DistillerServiceService` objektets `CreatePDF2` och skicka följande obligatoriska värden:
 

@@ -1,17 +1,13 @@
 ---
 title: Hämtar aktivitetsvariabler i sammanställnings-URL
-seo-title: Getting Task Variables in Summary URL
 description: Hur du återanvänder informationen om en uppgift och skapar en sammanfattande URL för att sammanfatta eller beskriva en uppgift.
-seo-description: How-to reuse the information about a task and generate a Summary URL to summarize or describe a task.
-uuid: 9eab3a6a-a99a-40ae-b483-33ec7d21c5b6
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
-discoiquuid: 6dc31bec-b02d-47db-a4f4-be8c14c5619e
 exl-id: b5e27b54-d141-48dd-a4ed-dd0a691319a5
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '432'
+source-wordcount: '431'
 ht-degree: 0%
 
 ---
@@ -63,9 +59,9 @@ I den här exempelstrukturen skickar en medarbetare ett ledighetsansökningsform
    1. Skapa en process **skapa PTO-sammanfattning** och använda detta som en underprocess före **Tilldela uppgift** i er organisation.
    1. Definiera **employeeName**, **employeeID**, **ptoReason**, **totalDays** och **nodeName** som indatavariabler i den nya processen. Dessa variabler skickas som skickade formulärdata.
 
-      Definiera även en utdatavariabel **ptoNodePath** som ska användas när sammanfattnings-URL anges.
+      Definiera även en utdatavariabel **ptoNodePath** som används när sammanfattnings-URL anges.
 
-   1. I **skapa PTO-sammanfattning** använder du **ange värde** för att ange indatainformation i en **nodeProperty**(**nodeProps**).
+   1. I **skapa PTO-sammanfattning** -processen, använda **ange värde** för att ange indatainformation i en **nodeProperty**(**nodeProps**).
 
       Tangenterna på kartan ska vara desamma som tangenterna som definierades i HTML-renderaren i föregående steg.
 
@@ -75,13 +71,13 @@ I den här exempelstrukturen skickar en medarbetare ett ledighetsansökningsform
 
       Den har tre indatavariabler:
 
-      * **Mappsökväg**: Sökvägen där den nya CRX-noden skapas. Ange banan som **/content**.
+      * **Mappsökväg**: Den sökväg där den nya CRX-noden skapas. Ange banan som **/content**.
       * **Nodnamn**: Tilldela indatavariabeln nodeName till det här fältet. Detta är en unik nodnamnssträng.
       * **Nodtyp**: Definiera typen som **nt:ostrukturerad**. Utdata för den här processen är nodePath. nodePath är CRX-sökvägen för den nyskapade noden. The ndoePath skulle vara det slutliga resultatet av **skapa PTO** sammanfattningsprocess.
+
    1. Skicka skickade formulärdata (**employeeName**, **employeeID**, **ptoReason** och **totalDays**) som indata till den nya processen **skapa PTO-sammanfattning**. Ta resultatet som **ptoSummaryNodePath**.
 
-
-1. Definiera sammanfattnings-URL:en som ett XPath-uttryck som innehåller serverinformationen tillsammans med **ptoSummaryNodePath**.
+1. Definiera sammanfattnings-URL som ett XPath-uttryck som innehåller serverinformationen tillsammans med **ptoSummaryNodePath**.
 
    XPath: `concat('https://[*server*]:[*port*]/lc',/process_data/@ptoSummaryNodePath,'.html')`.
 

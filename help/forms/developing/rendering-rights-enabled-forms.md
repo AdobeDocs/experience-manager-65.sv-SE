@@ -12,9 +12,9 @@ topic-tags: operations
 discoiquuid: d4c2b2f0-613a-409d-b39b-8e37fdb96eea
 role: Developer
 exl-id: 012a3a9f-542c-4ed1-a092-572bfccbdf21
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1457'
+source-wordcount: '1455'
 ht-degree: 0%
 
 ---
@@ -57,7 +57,7 @@ Innan du programmässigt kan utföra en API-åtgärd för Forms-tjänstklienten 
 
 **Ange körningsalternativ för användningsrättigheter**
 
-Du måste ange alternativ för användningsbehörighet vid körning för att kunna återge ett rättighetsaktiverat formulär. Du måste också ange aliaset för de autentiseringsuppgifter som används för att tillämpa användarrättigheter på ett formulär. När du har angett aliasvärdet anger du vilken användningsbehörighet som ska gälla för formuläret.
+Ange körningsalternativ för användningsrättigheter för att återge ett rättighetsaktiverat formulär. Du måste också ange aliaset för de autentiseringsuppgifter som används för att tillämpa användarrättigheter på ett formulär. När du har angett aliasvärdet anger du vilken användningsbehörighet som ska gälla för formuläret.
 
 **Återge ett rättighetsaktiverat formulär**
 

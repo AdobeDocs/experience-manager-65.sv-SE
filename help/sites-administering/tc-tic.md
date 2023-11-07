@@ -4,9 +4,9 @@ description: Lär dig hur du konfigurerar översättningsintegreringsramverket i
 contentOwner: Guillaume Carlino
 feature: Language Copy
 exl-id: 7562754b-d9fd-441b-8ae5-c7eebe458cef
-source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1573'
+source-wordcount: '1571'
 ht-degree: 0%
 
 ---
@@ -196,7 +196,7 @@ Om du vill konfigurera översättning av källsidor till andra språk associerar
 * Den molnkonfiguration som ansluter AEM till översättningsleverantören.
 * Översättningsintegrationsramverket som konfigurerar informationen för översättningen.
 
-Observera att molnkonfigurationen för översättningsintegreringsramverket identifierar den molnkonfiguration som ska användas för att ansluta till tjänstleverantören. När du associerar en källsida med en ramverkets molnkonfiguration måste sidan associeras med tjänstleverantörens molnkonfiguration som används i ramverkets molnkonfiguration.
+Konfigurationen av översättningsintegreringsramverket i molnet identifierar den molnkonfiguration som ska användas för att ansluta till tjänstleverantören. När du associerar en källsida med en ramverkets molnkonfiguration måste sidan associeras med tjänstleverantörens molnkonfiguration som används i ramverkets molnkonfiguration.
 
 När du associerar en sida med en molnkonfiguration ärver de underordnade sidorna kopplingen. Om du till exempel associerar sidan /content/geometrixx/en/products med ett Translation Integration Framework, översätts sidan Produkter och alla sidor under den enligt ramverket.
 

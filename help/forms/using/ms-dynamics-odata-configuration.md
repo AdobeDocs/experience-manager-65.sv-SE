@@ -1,18 +1,14 @@
 ---
 title: Microsoft Dynamics OData-konfiguration
-seo-title: Microsoft Dynamics ODtata configuration
-description: Utnyttja, integrera och arbeta med online- och lokala Microsoft Dynamics-tjänster via formulärdatamodell.
-seo-description: Learn how to leverage integrate and work with online and on-premises Microsoft Dynamics services through form data model.
-uuid: 37e59633-484b-4a20-808d-2a0bc0d336cc
+description: Lär dig hur du använder, integrerar och arbetar med online- och lokala Microsoft Dynamics-tjänster via formulärdatamodell.
 topic-tags: integration
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: 627507f5-1ffc-48f8-8cc9-5dbc5e409ae3
 docset: aem65
 feature: Form Data Model
 exl-id: 90cc9452-e107-4e57-80a3-f44f0bde132e
-source-git-commit: 5ca6c5abeb5ed09d8929d1986aa24c1416e0cc06
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1215'
+source-wordcount: '1218'
 ht-degree: 0%
 
 ---
@@ -32,7 +28,7 @@ Microsoft Dynamics är en CRM- och ERP-programvara (Enterprise Resource Planning
 * Skriv data i Microsoft Dynamics när formulär skickas med adaptiv form
 * Skriv data i Microsoft Dynamics via anpassade entiteter som definierats i formulärdatamodellen och omvänt
 
-AEM Forms tilläggspaket innehåller även OData-referenskonfiguration som du kan använda för att snabbt integrera Microsoft Dynamics med AEM Forms.
+AEM Forms tilläggspaket innehåller även OData-konfiguration för referens som du kan använda för att snabbt integrera Microsoft Dynamics med AEM Forms.
 
 När paketet är installerat är följande enheter och tjänster tillgängliga på din AEM Forms-instans:
 
@@ -51,7 +47,7 @@ Innan du börjar konfigurera och konfigurera Microsoft Dynamics måste du se til
    * Lokal Microsoft Dynamics 365
    * Lokal Microsoft Dynamics 2016
 
-* [Registrerade programmet för onlinetjänsten Microsoft Dynamics med Microsoft Azure Active Directory](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/walkthrough-register-dynamics-365-app-azure-active-directory). Notera värdena för klient-ID (kallas även program-ID) och klienthemlighet för den registrerade tjänsten. Dessa värden används medan [konfigurera molntjänsten för din Microsoft Dynamics-tjänst](../../forms/using/ms-dynamics-odata-configuration.md#configure-cloud-service-for-your-microsoft-dynamics-service).
+* [Registrerade programmet för onlinetjänsten Microsoft Dynamics med Microsoft Azure Active Directory](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/walkthrough-register-dynamics-365-app-azure-active-directory). Notera värdena för klient-ID (kallas även program-ID) och klienthemlighet för den registrerade tjänsten. Dessa värden används medan [konfigurerar molntjänsten för din Microsoft Dynamics-tjänst](../../forms/using/ms-dynamics-odata-configuration.md#configure-cloud-service-for-your-microsoft-dynamics-service).
 
 ## Ange svars-URL för registrerat Microsoft Dynamics-program {#set-reply-url-for-registered-microsoft-dynamics-application}
 
@@ -65,7 +61,7 @@ Gör följande för att ange svars-URL för det registrerade Microsoft Dynamics-
 
    `https://'[server]:[port]'/libs/fd/fdm/gui/components/admin/fdmcloudservice/createcloudconfigwizard/cloudservices.html`
 
-   ![Azure-katalog](assets/azure_directory_new.png)
+   ![Azure-katalogen](assets/azure_directory_new.png)
 
 1. Spara konfigurationen.
 
@@ -126,7 +122,7 @@ The **MS Dynamics OData-Cloud Service (OData-tjänst)** konfigurationen leverera
 
    I **Autentiseringsinställningar** tab:
 
-   1. Ange värdet för **Tjänstrot** fält. Gå till Dynamics-instansen och navigera till **Resurser för utvecklare** för att visa värdet för fältet Tjänstrot. Till exempel https://&lt;tenant-name>/api/data/v9.1/
+   1. Ange värdet för **Tjänstrot** fält. Gå till Dynamics-instansen och navigera till **Resurser för utvecklare** om du vill visa värdet för fältet Tjänstrot. Till exempel https://&lt;tenant-name>/api/data/v9.1/
 
    1. Ersätt standardvärdena i dialogrutan **Klient-ID**(kallas även **Program-ID**), **Klienthemlighet**, **OAuth-URL**, **Uppdatera token-URL**, **Åtkomsttoken-URL** och **Resurs** fält med värden från din Microsoft Dynamics-tjänstkonfiguration. Det är obligatoriskt att ange dynamicinstansens URL i **Resurs** för att konfigurera Microsoft Dynamics med en formulärdatamodell. Använd tjänstens rot-URL för att härleda den dynamiska instansens URL. Till exempel: [https://org.crm.dynamics.com](https://org.crm.dynamics.com/).
 
@@ -147,7 +143,7 @@ När du installerar AEM Forms-paketet skapas en formulärdatamodell,**Microsoft 
 
 När formulärdatamodellen öppnas för första gången ansluter den till den konfigurerade Microsoft Dynamics-tjänsten och hämtar enheter från din Microsoft Dynamics-instans. Enheterna &quot;contact&quot; och &quot;lead&quot; från Microsoft Dynamics har redan lagts till i formulärdatamodellen.
 
-Om du vill granska formulärdatamodellen går du till **[!UICONTROL Forms > Data Integrations]**. Välj **Microsoft Dynamics FDM** och klicka **Redigera** för att öppna formulärdatamodellen i redigeringsläge. Du kan även öppna formulärdatamodellen direkt från följande URL:
+Gå till om du vill granska formulärdatamodellen **[!UICONTROL Forms > Data Integrations]**. Välj **Microsoft Dynamics FDM** och klicka **Redigera** för att öppna formulärdatamodellen i redigeringsläge. Du kan även öppna formulärdatamodellen direkt från följande URL:
 
 `https://'[server]:[port]'/aem/fdm/editor.html/content/dam/formsanddocuments-fdm/ms-dynamics-fdm`
 

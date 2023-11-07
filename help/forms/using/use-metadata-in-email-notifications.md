@@ -1,14 +1,10 @@
 ---
 title: Använd metadata i ett e-postmeddelande
-seo-title: Use metadata in an email notification
 description: Använd metadata för att fylla i information i e-postmeddelanden i formulärarbetsflödet
-seo-description: Use metadata to populate information in a forms workflow email notification
-uuid: 9075b64e-1934-44d5-8b16-aa6e95e93da9
 topic-tags: publish
-discoiquuid: d48b5137-c866-43cd-925b-7a6a8eac8c0b
 docset: aem65
 exl-id: 18cfc4be-676d-4f08-afc1-4f11bb48dab6
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '894'
 ht-degree: 0%
@@ -19,11 +15,11 @@ ht-degree: 0%
 
 Du kan använda steget Tilldela uppgift för att skapa och tilldela uppgifter till en användare eller grupp. När en uppgift tilldelas en användare eller grupp skickas ett e-postmeddelande till den angivna användaren eller till varje medlem i den definierade gruppen. En typisk [e-postmeddelande](../../forms/using/use-custom-email-template-assign-task-step.md) innehåller en länk till den tilldelade uppgiften och information om uppgiften.
 
-Du kan använda metadata i en e-postmall för att dynamiskt fylla i information i ett e-postmeddelande. Värdet för titel, beskrivning, förfallodatum, prioritet, arbetsflöde och sista datum i följande e-postmeddelande väljs dynamiskt vid körningen (när ett e-postmeddelande genereras).
+Du kan använda metadata i en e-postmall för att dynamiskt fylla i information i ett e-postmeddelande. Värdet på titeln, beskrivningen, förfallodatumet, prioriteten, arbetsflödet och det sista datumet i följande e-postmeddelande väljs dynamiskt vid körningen (när ett e-postmeddelande genereras).
 
 ![Standardmall för e-post](assets/default_email_template_metadata_new.png)
 
-Metadata lagras i nyckelvärdepar. Du kan ange nyckeln i e-postmallen och nyckeln ersätts med ett värde vid körningen (när ett e-postmeddelande genereras). I följande kodexempel är &quot;$ {workitem_title} &quot; en nyckel. Den ersätts med värdet&quot;Lånebegäran&quot; vid körningen.
+Metadata lagras i nyckelvärdepar. Du kan ange nyckeln i e-postmallen och nyckeln ersätts med ett värde vid körningen (när ett e-postmeddelande genereras). I exemplet nedan visas &quot;$ {workitem_title} &quot; är en nyckel. Den ersätts med värdet&quot;Lånebegäran&quot; vid körningen.
 
 ```html
 subject=Task Assigned - ${workitem_title}
@@ -87,7 +83,7 @@ message=<html><body>\n\
    </tr>\n\
    <tr>\n\
     <td style="border-top: solid 1px #EDEAE7; padding: 16px;">\n\
-     <p><span style="font-size: 12px; font-weight: normal; font-style: italic; color: #919191;">This is an automatically generated email. Please do not reply to this email.</code></p>\n\
+     <p><span style="font-size: 12px; font-weight: normal; font-style: italic; color: #919191;">This is an automatically generated email. Do not reply to this email.</code></p>\n\
     </td>\n\
    </tr>\n\
   </tbody>\n\
@@ -186,7 +182,7 @@ Du kan också använda anpassade metadata i ett e-postmeddelande. Anpassade meta
    Om du inte anger titeln visas den fullständiga sökvägen till ECMAScript-filen i fältet Egna metadata. Utför följande steg för att ange en beskrivande titel för skriptet:
 
    1. Expandera skriptnoden genom att högerklicka på **[!UICONTROL jcr:content]** och klicka på **[!UICONTROL Mixins]**.
-   1. Textblandning:titel i dialogrutan Redigera blandningar och klicka **+**.
+   1. Textblandning:titel i dialogrutan Redigera mixar och klicka **+**.
    1. Lägg till en egenskap med följande värden.
 
       | Namn | jcr:title |
@@ -198,7 +194,7 @@ Du kan också använda anpassade metadata i ett e-postmeddelande. Anpassade meta
 
 Du kan använda Java-gränssnittet WorkitemUserMetadataService för att lägga till anpassade metadata för e-postmallar. Du kan skapa ett OSGi-paket som använder Java-gränssnittet WorkitemUserMetadataService och distribuera det till AEM Forms-servern. Metadata blir tillgängliga för val i steget Tilldela uppgift.
 
-Om du vill skapa ett OSGi-paket med Java-gränssnitt lägger du till [AEM Forms Client SDK](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) jar och [granit burk](https://repo1.maven.org/maven2/com/adobe/granite/com.adobe.granite.workflow.api/1.0.2/) filer som externa beroenden till OSGi-paketprojektet. Du kan använda vilken Java-utvecklingsmiljö som helst för att skapa ett OSGi-paket. I följande procedur beskrivs hur du använder Eclipse för att skapa ett OSGi-paket:
+Lägg till ett OSGi-paket med Java-gränssnitt [AEM Forms Client SDK](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) jar och [granit burk](https://repo1.maven.org/maven2/com/adobe/granite/com.adobe.granite.workflow.api/1.0.2/) filer som externa beroenden till OSGi-paketprojektet. Du kan använda vilken Java-utvecklingsmiljö som helst för att skapa ett OSGi-paket. I följande procedur beskrivs hur du använder Eclipse för att skapa ett OSGi-paket:
 
 1. Öppna Eclipse IDE. Navigera till Arkiv > Nytt projekt.
 

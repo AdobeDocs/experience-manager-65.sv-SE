@@ -1,18 +1,14 @@
 ---
 title: AEM Brackets Extension
-seo-title: AEM Brackets Extension
 description: Lär dig hur du använder Adobe Experience Manager-tillägget för Brackets.
-seo-description: null
-uuid: 2f0dfa42-eb34-44ae-90eb-b5f321c03b79
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: development-tools
 content-type: reference
-discoiquuid: 8231a30a-dcb7-4156-bb45-c5a23e5b56ef
 exl-id: 829d8256-b415-4a44-a353-455ac16950f3
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '936'
+source-wordcount: '935'
 ht-degree: 0%
 
 ---
@@ -71,7 +67,7 @@ Projektet måste innehålla minst
 
 1. a `jcr_root` mapp (till exempel `myproject/jcr_root`)
 
-1. a `filter.xml` fil (till exempel `myproject/META-INF/vault/filter.xml`); för mer information om strukturen på `filter.xml` filen finns på [Filterdefinition för arbetsyta](https://jackrabbit.apache.org/filevault/filter.html).
+1. a `filter.xml` fil (till exempel `myproject/META-INF/vault/filter.xml`); för mer information om strukturen på `filter.xml` filen finns i [Filterdefinition för arbetsyta](https://jackrabbit.apache.org/filevault/filter.html).
 
 In Brackets&#39; **Fil** meny, välja **Öppna mapp...** och välj antingen `jcr_root` eller den överordnade projektmappen.
 

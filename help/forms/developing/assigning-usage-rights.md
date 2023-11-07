@@ -11,9 +11,9 @@ topic-tags: operations
 discoiquuid: 9e8db506-9ace-4e1f-8a7b-c4e9b15dde7e
 role: Developer
 exl-id: 6af148eb-427a-4b54-9c5f-8750736882d8
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '3918'
+source-wordcount: '3914'
 ht-degree: 0%
 
 ---
@@ -69,7 +69,7 @@ Om du vill utföra en programstyrd Acrobat Reader DC extensions service-åtgärd
 
 **Hämta ett PDF-dokument**
 
-Du måste hämta ett PDF-dokument för att kunna tillämpa användningsrättigheter. PDF-dokument med aktiverade rättigheter innehåller en ordlista med användningsrättigheter. När Adobe Reader öppnar ett dokument som innehåller en sådan ordlista aktiveras de användningsrättigheter som anges i ordlistan endast för det dokumentet. Om dokumentet inte innehåller någon användarrättighetsordlista skapar Acrobat Reader DC-tjänsten en sådan. Om den redan innehåller en ordlista skriver Acrobat Reader DC-tilläggstjänsten över befintliga användningsrättigheter med de som du anger. Ordlistan anger vilka användarrättigheter som är aktiverade. När en användare öppnar dokumentet i Adobe Reader tillåts bara de användningsrättigheter som anges i ordlistan.
+Hämta ett PDF-dokument om du vill använda användningsrättigheter. PDF-dokument med aktiverade rättigheter innehåller en ordlista med användningsrättigheter. När Adobe Reader öppnar ett dokument som innehåller en sådan ordlista aktiveras de användningsrättigheter som anges i ordlistan endast för det dokumentet. Om dokumentet inte innehåller någon användarrättighetsordlista skapar Acrobat Reader DC-tjänsten en sådan. Om den redan innehåller en ordlista skriver Acrobat Reader DC-tilläggstjänsten över befintliga användningsrättigheter med de som du anger. Ordlistan anger vilka användarrättigheter som är aktiverade. När en användare öppnar dokumentet i Adobe Reader tillåts bara de användningsrättigheter som anges i ordlistan.
 
 **Ange användningsbehörighet att använda**
 
@@ -388,7 +388,7 @@ Innan du programmässigt kan utföra en Acrobat Reader DC-tilläggstjänståtgä
 
 **Hämta ett rättighetsaktiverat PDF-dokument**
 
-Du måste hämta ett rättighetsaktiverat PDF-dokument för att kunna hämta information om autentiseringsuppgifterna. Du kan även hämta information om en autentiseringsuppgift genom att ange dess alias. Om du vill hämta information om en autentiseringsuppgift som användes för att tillämpa användarrättigheter på ett visst rättighetsaktiverat PDF-dokument måste du dock hämta dokumentet.
+Hämta ett rättighetsaktiverat PDF-dokument om du vill hämta information om autentiseringsuppgifterna. Du kan även hämta information om en autentiseringsuppgift genom att ange dess alias. Om du vill hämta information om en autentiseringsuppgift som användes för att tillämpa användarrättigheter på ett visst rättighetsaktiverat PDF-dokument måste du dock hämta dokumentet.
 
 **Hämta information om autentiseringsuppgifterna**
 

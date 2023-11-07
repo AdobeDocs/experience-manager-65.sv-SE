@@ -3,9 +3,9 @@ title: Concepts
 description: Lär dig de allmänna koncepten för e-handel med Adobe Experience Manager.
 contentOwner: Guillaume Carlino
 exl-id: 290b2af6-257f-42f2-b809-1248227a4795
-source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '4480'
+source-wordcount: '4481'
 ht-degree: 0%
 
 ---
@@ -486,7 +486,7 @@ När du skapar en katalog används tio noder per produkt, eftersom den innehåll
 
 För proxysidor används en tvånodsstruktur ( `cq:Page` och `jcr:content`) som inte innehåller något av det faktiska produktinnehållet. Innehållet genereras på begäran genom att produktdata och mallsidan refereras.
 
-Men det finns en kompromiss. Du kommer inte att kunna anpassa produktinformationen i AEM, utan en standardmall (som definierats för webbplatsen) kommer att användas.
+Men det finns en kompromiss. Du kommer inte att kunna anpassa produktinformationen i AEM, utan en standardmall (som definierats för din webbplats) används.
 
 >[!NOTE]
 >
@@ -574,7 +574,7 @@ En kampanj kan hållas antingen som en upplevelse eller direkt i kampanjen:
 
 >[!NOTE]
 >
->[hybris](https://www.hybris.com/modules/promotion) och [hybrivouchers](https://www.hybris.com/en/modules/voucher) täcker allt som påverkar kundvagnen och är kopplat till priset. Marknadsföringsspecifikt innehåll (t.ex. banners) ingår inte i hybris-kampanjen.
+>[hybris](https://www.hybris.com/modules/promotion) och [hybrivouchers](https://www.hybris.com/en/modules/voucher) täcker allt som påverkar kundvagnen och är kopplat till priset. Marknadsföringsspecifikt innehåll (t.ex. banners). ingår inte i hybris-kampanjen.
 
 ## Personanpassning {#personalization}
 

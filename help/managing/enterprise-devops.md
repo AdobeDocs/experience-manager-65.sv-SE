@@ -6,16 +6,16 @@ products: SG_EXPERIENCEMANAGER/6.5/MANAGING
 topic-tags: managing
 content-type: reference
 exl-id: e67f848a-a8cd-4585-a734-e6b1de8a8d74
-source-git-commit: 260f71acd330167572d817fdf145a018b09cbc65
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '983'
+source-wordcount: '982'
 ht-degree: 60%
 
 ---
 
 # Enterprise DevOps{#enterprise-devops}
 
-DevOps omfattar de processer, metoder och den kommunikation som krävs för att
+DevOps omfattar processer, metoder och kommunikation som krävs för att
 
 * Underlätta driftsättningen av programvaran i olika miljöer.
 * Förenkla samarbetet mellan utvecklings-, testnings- och driftsättningsteamen.
@@ -58,7 +58,7 @@ Beroende på hur omfattande ditt system är kan utvecklingsmiljön ha både för
 
 ### Kvalitetssäkring {#quality-assurance}
 
-Den här miljön används av kvalitetssäkringsteamet för att [test](/help/sites-developing/test-plan.md) ditt nya system, både design och funktion. Den bör ha både författar- och publiceringsmiljöer med lämpligt innehåll och tillhandahålla alla tjänster som behövs för att möjliggöra en komplett serie tester.
+Den här miljön används av kvalitetssäkringsgruppen för att [test](/help/sites-developing/test-plan.md) ditt nya system, både design och funktion. Den bör ha både författar- och publiceringsmiljöer med lämpligt innehåll och tillhandahålla alla tjänster som behövs för att möjliggöra en komplett serie tester.
 
 ### Mellanlagring {#staging}
 
@@ -94,7 +94,7 @@ Om du vill återreplikera data som genererats i en publiceringsmiljö till förf
 
 #### Publicera {#publish}
 
-En publiceringsmiljö finns i DMZ (Demilitarized Zone). Detta är den miljö där besökare kommer åt ditt innehåll (t.ex. via en webbplats eller i form av en mobilapp) och interagerar med det. vara offentligt, eller i intranätet. En publiceringsmiljö:
+En publiceringsmiljö finns i DMZ (Demilitarized Zone). Detta är den miljö där besökare får tillgång till ditt innehåll (till exempel via en webbplats eller i form av en mobilapp) och interagerar med det, oavsett om det är offentligt eller i intranätet. En publiceringsmiljö:
 
 * innehåller innehåll som replikerats från författarmiljön
 * gör innehållet tillgängligt för besökare
@@ -117,7 +117,7 @@ Koden (till exempel anpassade webbprogramfunktioner och designmallar) överförs
 AEM utlöser ofta koddistribution:
 
 * Automatiskt: för överföring till utvecklings- och QA-miljöer.
-* Manuellt: driftsättning till stagnings- och produktionsmiljöerna sker på ett mer kontrollerat sätt, ofta manuellt, Automatisering är dock möjlig, om det behövs.
+* Manuellt: distributioner till staging- och produktionsmiljöerna görs på ett mer kontrollerat sätt, ofta manuellt, men det går att automatisera vid behov.
 
 ![chlimage_1](assets/chlimage_1.png)
 
@@ -131,7 +131,7 @@ Produktionsinnehållet bör flyttas från produktionsmiljön till mellanlagrings
 
 >[!NOTE]
 >
->Detta innebär inte att mellanlagringsinnehållet måste synkroniseras kontinuerligt med produktionen, att regelbundna uppdateringar är tillräckliga, men framför allt innan en ny kodupprepning testas. Innehåll i kvalitetssäkring och utvecklingsmiljöer behöver inte uppdateras lika ofta, utan bör vara en bra representation av produktionsinnehållet.
+>Detta innebär inte att mellanlagringsinnehållet måste synkroniseras kontinuerligt med produktionen, att det räcker med regelbundna uppdateringar, men framför allt innan du testar en ny kodupprepning. Innehåll i kvalitetssäkring och utvecklingsmiljöer behöver inte uppdateras lika ofta, utan bör vara en bra representation av produktionsinnehållet.
 
 Innehåll kan överföras:
 

@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: 85ebc05d-ce45-4bbb-b9cc-b21810d0d877
 docset: aem65
 exl-id: b2103774-1876-4bf8-a29a-2ba0d51e7914
-source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '407'
+source-wordcount: '405'
 ht-degree: 0%
 
 ---
@@ -23,10 +23,10 @@ I det här avsnittet får du en översikt över de huvuduppgifter som du kommer 
 Den omfattar följande:
 
 * [Komma igång](#getting-started)\
-   Information om den grundläggande händelsesekvensen som du behöver för att skapa och publicera din första sida.
+  Information om den grundläggande händelsesekvensen som du behöver för att skapa och publicera din första sida.
 
 * [Ytterligare åtgärder](#further-actions)\
-   Fortsätt med de många andra åtgärderna som du kan använda när du redigerar.
+  Fortsätt med de många andra åtgärderna som du kan använda när du redigerar.
 
 ## Komma igång {#getting-started}
 
@@ -38,7 +38,7 @@ Innehållet på din webbplats hålls i en trädstruktur. Om du vill skapa eller 
 
 ### Skapa en ny sida {#creating-a-new-page}
 
-Innan du redigerar måste du [skapa en ny sida](/help/sites-authoring/managing-pages.md#creating-a-new-page).
+Innan du redigerar måste du [skapa en sida](/help/sites-authoring/managing-pages.md#creating-a-new-page).
 
 ### Öppna en sida {#opening-a-page}
 
@@ -46,7 +46,7 @@ För många åtgärder, till exempel redigering, måste du [öppna en sida](/hel
 
 ### Redigera en sida {#editing-a-page}
 
-Om instansen redan har befintliga sidor eller om du just har skapat en ny sida själv kan du [redigera en sida](/help/sites-authoring/editing-content.md) av:
+Om instansen redan har befintliga sidor eller om du själv har skapat en ny sida kan du [redigera en sida](/help/sites-authoring/editing-content.md) av:
 
 * [Infoga en komponent (stycke)](/help/sites-authoring/editing-content.md#inserting-a-component)
 * [Redigera/konfigurera/kopiera/klipp/ta bort/klistra in](/help/sites-authoring/editing-content.md#edit-configure-copy-cut-delete-paste) en komponent
@@ -85,7 +85,7 @@ Om en sida inte längre behövs kanske du vill [ta bort sidan](/help/sites-autho
 
 Varje [sidan har egenskaper](/help/sites-authoring/editing-page-properties.md) som du kan definiera för att avgöra olika aspekter av åtgärden. Dessa kan uppdateras med båda användargränssnitten.
 
-### Skapa en version av en sida {#creating-a-version-of-a-page}
+### Skapa en sidversion {#creating-a-version-of-a-page}
 
 Du kan [skapa en version](/help/sites-authoring/working-with-page-versions.md#creating-a-new-version) på en sida och sedan [återgå till en version](/help/sites-authoring/working-with-page-versions.md#reverting-to-a-page-version) vid behov.
 

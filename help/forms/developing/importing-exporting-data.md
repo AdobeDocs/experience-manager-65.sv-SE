@@ -11,9 +11,9 @@ topic-tags: operations
 discoiquuid: 2e783745-c986-45ba-8e65-7437d114ca38
 role: Developer
 exl-id: 96310e0a-8e95-4a55-9508-5298b8d67f83
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2774'
+source-wordcount: '2771'
 ht-degree: 0%
 
 ---
@@ -123,7 +123,7 @@ Om du vill importera data till ett PDF-formulär måste du referera till antinge
 
 **Referera en XML-datakälla**
 
-Om du vill importera formulärdata måste du referera till en giltig datakälla. Om du vill importera data till ett XFA XML-formulär som skapats i Designer måste du använda en XDP XML-datakälla. Om du refererar till ett Acrobat-formulär måste du använda en XFDF-datakälla. För varje fält som du vill importera data till måste du ange ett värde. Om ett element som finns i XML-datakällan inte motsvarar ett fält i formuläret, ignoreras elementet.
+Om du vill importera formulärdata måste du referera till en giltig datakälla. Om du vill importera data till ett XFA XML-formulär som skapats i Designer måste du använda en XDP XML-datakälla. Om du refererar till ett Acrobat-formulär måste du använda en XFDF-datakälla. För varje fält som du vill importera data till måste du ange ett värde. Om ett element i XML-datakällan inte motsvarar ett fält i formuläret, ignoreras elementet.
 
 **Importera data till formuläret PDF**
 
@@ -177,7 +177,7 @@ Importera formulärdata med hjälp av API:t för integrering av formulärdata (J
    * The `com.adobe.idp.Document` objekt som lagrar PDF-formuläret.
    * The `com.adobe.idp.Document` objekt som lagrar formulärdata.
 
-   The `importData` returnerar en `com.adobe.idp.Document` objekt som lagrar ett PDF-formulär som innehåller data som finns i XML-datakällan.
+   The `importData` returnerar en `com.adobe.idp.Document` objekt som lagrar ett PDF-formulär som innehåller data i XML-datakällan.
 
 1. Spara PDF-formuläret som en PDF-fil.
 
@@ -242,7 +242,7 @@ Importera formulärdata med hjälp av API:t för integrering av formulärdata (w
    * The `BLOB` objekt som lagrar PDF-formuläret.
    * The `BLOB` objekt som lagrar formulärdata.
 
-   The `importData` returnerar en `BLOB` objekt som lagrar ett PDF-formulär som innehåller data som finns i XML-datakällan.
+   The `importData` returnerar en `BLOB` objekt som lagrar ett PDF-formulär som innehåller data i XML-datakällan.
 
 1. Spara PDF-formuläret som en PDF-fil.
 

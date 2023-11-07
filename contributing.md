@@ -1,7 +1,7 @@
 ---
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '522'
+source-wordcount: '516'
 ht-degree: 2%
 
 ---
@@ -9,7 +9,7 @@ ht-degree: 2%
 
 Tack för att du väljer att delta i Adobe Experience Manager-dokumentationen! Adobe välkomnar bidrag från hela läsarcommunityn och från medarbetare i Adobe.
 
-I den här filen beskrivs hur du kan bidra samt vilka riktlinjer du ska följa när du gör dina bidrag.
+I den här filen beskrivs hur du kan bidra och de riktlinjer som ska följas när du gör dina bidrag visas.
 
 ## Adobe uppförandekod med öppen källkod
 
@@ -54,7 +54,7 @@ Titta på följande video för att få en snabb översikt över hur du skapar pr
 
 Om du är anställd i Adobe och har ett bidrag använder du `AdobeDocs` i företagsgit.
 
-Vi är naturligtvis glada över eventuella bidrag och kommer att granska ditt bidrag om det görs i den offentliga databasen, men det är lättare att behandla förfrågningar från Adobe anställda och de kan godkännas snabbare i företagets rapport. Se till att all företagsinformation endast behandlas i företagets rapport.
+Vi är glada över eventuella bidrag och kommer att granska ditt bidrag om det görs i det offentliga arkivet, men det är enklare att behandla förfrågningar från Adobe och de kan godkännas snabbare i företagets rapport. Se till att all företagsinformation bara behandlas i företagets rapport.
 
 ## Ytterligare information
 

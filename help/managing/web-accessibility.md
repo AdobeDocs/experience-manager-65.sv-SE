@@ -2,10 +2,10 @@
 title: Adobe Experience Manager (AEM) och Web Accessibility Guidelines
 description: En introduktion till Adobe Experience Manager (AEM) och Web Accessibility Guidelines
 exl-id: db8785b9-09eb-444a-addc-74c520e710a9
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '415'
-ht-degree: 69%
+source-wordcount: '412'
+ht-degree: 67%
 
 ---
 
@@ -19,11 +19,11 @@ Skapa tillgängliga webbplatser och innehåll med AEM påverkan:
 
 * Författare som använder dessa funktioner för att skapa tillgängliga webbplatser.
 
-   Att skapa tillgängligt innehåll är en process. AEM har de funktioner som behövs, men innehållsförfattare måste se till att de följer de tekniker som krävs för att skapa tillgängligt innehåll.
+  Att skapa tillgängligt innehåll är en process. AEM har de funktioner som behövs, men innehållsförfattare måste se till att de följer de tekniker som krävs för att skapa tillgängligt innehåll.
 
 * Mallutvecklare bör också vara medvetna om sådana frågor när de implementerar webbplatsdesignen.
 
-Adobe Experience Manager arbetar med [riktlinjer](#wcag-accessibility-guidelines) från [World Wide Web Consortium](#world-wide-web-consortium).
+Adobe Experience Manager arbetar med [riktlinjer](#wcag-accessibility-guidelines) tillhandahålls av [World Wide Web Consortium](#world-wide-web-consortium).
 
 >[!NOTE]
 >
@@ -51,7 +51,7 @@ Med Adobe Experience Manager kan författare och/eller webbplatsägare skapa web
 Riktlinjer för hur administratörer kan konfigurera AEM för att skapa tillgängligt innehåll.
 
 * [Creating Accessible Adaptive Forms](/help/forms/using/creating-accessible-adaptive-forms.md)
-Adobe Experience Manager (AEM) innehåller ett antal funktioner som gör det enklare att använda adaptiva formulär för användare med olika funktioner. Lösningen hjälper också formulärförfattare att skapa tillgängliga adaptiva formulär.
+Adobe Experience Manager (AEM) innehåller flera funktioner som gör det enklare att använda adaptiva formulär för användare med olika funktioner. Lösningen hjälper också formulärförfattare att skapa tillgängliga adaptiva formulär.
 
 >[!NOTE]
 >

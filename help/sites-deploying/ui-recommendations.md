@@ -11,9 +11,9 @@ topic-tags: best-practices
 discoiquuid: 8f06d4b6-7d30-4ebc-9c6a-3bb8607a9be8
 docset: aem65
 exl-id: 7b71119a-ff58-47c0-aeef-a705ed8c40e0
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '783'
+source-wordcount: '781'
 ht-degree: 0%
 
 ---
@@ -90,7 +90,7 @@ Nedan följer en lista över rekommendationer från Product Management för Adob
     </ol> <p>I en andra fas:</p>
     <ol>
      <li>Uppdatera komponentdialogrutorna så att de använder Dialogrutan Coral 3. Adobe rekommenderar att du använder <a href="/help/sites-developing/modernization-tools.md">Verktyg för AEM</a> för att uppdatera komponenterna.</li>
-     <li>Konfigurera ContextHub (ersättning för ClientContexten) och uppdatera sidmallarna så att ContextHub används. Observera att ContextHub har ett kompatibilitetsläge som tillåter inläsning av anpassade ClientContexter.</li>
+     <li>Konfigurera ContextHub (ersättning för ClientContexten) och uppdatera sidmallarna så att ContextHub används. ContextHub har ett kompatibilitetsläge som tillåter inläsning av anpassade ClientContexter.</li>
     </ol> </td>
   </tr>
   <tr>

@@ -1,19 +1,15 @@
 ---
 title: Konverterar PDF till PostScript- och bildfiler
-seo-title: Converting PDF to Postscript andImage Files
-description: Använd tjänsten Convert PDF för att konvertera PDF-dokument till PostScript och till ett antal bildformat (JPEG, JPEG 2000, PNG och TIFF) med Java API och Web Service API.
-seo-description: Use the Convert PDF service to convert PDF documents to PostScript and to a number of image formats (JPEG, JPEG 2000, PNG, and TIFF) using the Java API and Web Service API.
-uuid: 07da0391-7180-4197-aaa6-ae753d753b84
+description: Använd tjänsten Convert PDF för att konvertera PDF-dokument till PostScript och till flera bildformat (JPEG, JPEG 2000, PNG och TIFF) med Java API och Web Service API.
 contentOwner: admin
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
-discoiquuid: f8707752-2c83-461a-b83d-708754b0f3f6
 role: Developer
 exl-id: 31730c24-46c3-4111-9391-ccd4342740e9
-source-git-commit: 135f50cc80f8bb449b2f1621db5e2564f5075968
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2809'
+source-wordcount: '2801'
 ht-degree: 0%
 
 ---
@@ -24,7 +20,7 @@ ht-degree: 0%
 
 **Om tjänsten Convert PDF**
 
-Med tjänsten Konvertera PDF kan du konvertera PDF-dokument till PostScript och ett antal bildformat (JPEG, JPEG 2000, PNG och TIFF). Att konvertera ett PDF-dokument till PostScript är användbart för oövervakad serverbaserad utskrift på en PostScript-skrivare. Det är praktiskt att konvertera ett PDF-dokument till en flersidig TIFF-fil när du arkiverar dokument i innehållshanteringssystem som inte stöder PDF.
+Med tjänsten Konvertera PDF kan du konvertera PDF-dokument till PostScript och till flera bildformat (JPEG, JPEG 2000, PNG och TIFF). Att konvertera ett PDF-dokument till PostScript är användbart för oövervakad serverbaserad utskrift på en PostScript-skrivare. Det är praktiskt att konvertera ett PDF-dokument till en flersidig TIFF-fil när du arkiverar dokument i innehållshanteringssystem som inte stöder PDF.
 
 Du kan utföra följande uppgifter med hjälp av tjänsten Konvertera PDF:
 
@@ -56,15 +52,15 @@ Så här konverterar du ett PDF-dokument till en PostScript-fil:
 
 **Inkludera projektfiler**
 
-Inkludera nödvändiga filer i utvecklingsprojektet. Om du skapar ett klientprogram med Java, inkluderar du de JAR-filer som behövs. Om du använder webbtjänster måste du inkludera proxyfilerna.
+Inkludera nödvändiga filer i utvecklingsprojektet. Om du skapar ett klientprogram med Java, inkluderar du de JAR-filer som behövs. Om du använder webbtjänster måste du ta med proxyfilerna.
 
-**Skapa en Convert PDF-klient**
+**Skapa en Konvertera PDF-klient**
 
 Innan du programmässigt kan utföra en Convert PDF service-åtgärd måste du skapa en Convert PDF service client. Om du använder Java API skapar du en `ConvertPdfServiceClient` -objekt. Om du använder webbtjänstens API skapar du en `ConvertPDFServiceService` -objekt.
 
 I det här avsnittet används webbtjänstfunktioner som introducerades i AEM Forms. För att få tillgång till nya funktioner måste du skapa proxyobjektet med `lc_version` -attribut. (Se &quot;Åtkomst av nya funktioner med hjälp av webbtjänster&quot; i [Anropa AEM Forms med Web Services](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-web-services).)
 
-**Referera PDF-dokumentet som ska konverteras till en PostScript-fil**
+**Referera PDF-dokumentet till en PostScript-fil**
 
 Referera det PDF-dokument som du vill konvertera till en PostScript-fil. Som tidigare nämnts i det här avsnittet måste PDF-dokumentet vara ett icke-interaktivt PDF-dokument. Om du försöker konvertera ett interaktivt PDF-dokument till en PostScript-fil genereras ett undantag.
 
@@ -116,7 +112,7 @@ Konvertera ett PDF-dokument till PostScript med hjälp av Java (Convert PDF Serv
 1. Referera PDF-dokumentet som ska konverteras till en PostScript-fil.
 
    * Skapa en `java.io.FileInputStream` genom att använda dess konstruktor och skicka ett strängvärde som anger platsen för det PDF-dokument som ska konverteras.
-   * Skapa en `com.adobe.idp.Document` som lagrar PDF-dokumentet med hjälp av `com.adobe.idp.Document` konstruktor. Skicka `java.io.FileInputStream` som innehåller dokumentet PDF.
+   * Skapa en `com.adobe.idp.Document` som lagrar PDF-dokumentet med hjälp av `com.adobe.idp.Document` konstruktor. Skicka `java.io.FileInputStream` -objekt som innehåller dokumentet PDF.
 
 1. Ange alternativ för konvertering vid körning.
 
@@ -127,8 +123,8 @@ Konvertera ett PDF-dokument till PostScript med hjälp av Java (Convert PDF Serv
 
    Anropa `ConvertPdfServiceClient`objektets `toPS2` och skicka följande värden:
 
-   * A `com.adobe.idp.Document` -objekt som representerar det PDF-dokument som ska konverteras till en PostScript-fil.
-   * A `ToPSOptionsSpec` objekt som anger alternativ för PostScript-körning.
+   * A `com.adobe.idp.Document` som representerar det PDF-dokument som ska konverteras till en PostScript-fil.
+   * A `ToPSOptionsSpec` -objekt som anger alternativ för PostScript-körning.
 
    The `toPS2` returnerar en `Document` som innehåller det nya PostScript-dokumentet.
 
@@ -157,13 +153,13 @@ Konvertera ett PDF-dokument till PostScript med hjälp av API:t för konverterin
 
    >[!NOTE]
    >
-   >Ersätt `localhost` med IP-adressen till den server som är värd för AEM Forms.
+   >Ersätt `localhost` med IP-adressen till den server där AEM Forms finns.
 
 1. Skapa en Convert PDF-klient.
 
    * Skapa en `ConvertPdfServiceClient` genom att använda dess standardkonstruktor.
    * Skapa en `ConvertPdfServiceClient.Endpoint.Address` genom att använda `System.ServiceModel.EndpointAddress` konstruktor. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/ConvertPDFService?blob=mtom`.) Du behöver inte använda `lc_version` -attribut. Ange dock `?blob=mtom`.
-   * Skapa en `System.ServiceModel.BasicHttpBinding` genom att hämta värdet för `ConvertPdfServiceClient.Endpoint.Binding` fält. Sänd returvärdet till `BasicHttpBinding`.
+   * Skapa en `System.ServiceModel.BasicHttpBinding` genom att hämta värdet för `ConvertPdfServiceClient.Endpoint.Binding` fält. Skicka returvärdet till `BasicHttpBinding`.
    * Ange `System.ServiceModel.BasicHttpBinding` objektets `MessageEncoding` fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
    * Aktivera grundläggande HTTP-autentisering genom att utföra följande åtgärder:
 
@@ -232,19 +228,19 @@ Så här konverterar du ett PDF-dokument till någon av de typer som stöds:
 
 **Inkludera projektfiler**
 
-Inkludera nödvändiga filer i utvecklingsprojektet. Om du skapar ett klientprogram med Java, inkluderar du de JAR-filer som behövs. Om du använder webbtjänster måste du inkludera proxyfilerna.
+Inkludera nödvändiga filer i utvecklingsprojektet. Om du skapar ett klientprogram med Java, inkluderar du de JAR-filer som behövs. Om du använder webbtjänster måste du ta med proxyfilerna.
 
-**Skapa en Convert PDF-klient**
+**Skapa en Konvertera PDF-klient**
 
 Innan du programmässigt kan utföra en Convert PDF service-åtgärd måste du skapa en Convert PDF service client. Om du använder Java API skapar du en `ConvertPdfServiceClient` -objekt. Om du använder webbtjänstens API skapar du en `ConvertPDFServiceService` -objekt.
 
 **Hämta det PDF-dokument som ska konverteras**
 
-Du måste hämta PDF-dokumentet för att kunna konvertera till en bild. Du kan inte konvertera ett interaktivt PDF-dokument till en bild. Om du försöker göra det genereras ett undantag. Om du vill konvertera ett interaktivt PDF-dokument till en bildfil måste du förenkla PDF-dokumentet innan du konverterar det. (Se [Förenklar dokument i PDF](/help/forms/developing/creating-document-output-streams.md#flattening-pdf-documents).)
+Hämta dokumentet PDF för att konvertera till en bild. Du kan inte konvertera ett interaktivt PDF-dokument till en bild. Om du försöker göra det genereras ett undantag. Om du vill konvertera ett interaktivt PDF-dokument till en bildfil måste du förenkla PDF-dokumentet innan du konverterar det. (Se [Förenklar dokument i PDF](/help/forms/developing/creating-document-output-streams.md#flattening-pdf-documents).)
 
 **Ange körningsalternativ**
 
-Du måste ange körningsalternativ som bildformat och upplösningsvärden. Mer information om körningsvärden finns i `ToImageOptionsSpec` klassreferens i [AEM Forms API-referens](https://www.adobe.com/go/learn_aemforms_javadocs_63_en).
+Ange körningsalternativ som bildformat och upplösningsvärden. Mer information om körningsvärden finns i `ToImageOptionsSpec` klassreferens i [AEM Forms API-referens](https://www.adobe.com/go/learn_aemforms_javadocs_63_en).
 
 **Konvertera PDF till en bild**
 
@@ -285,7 +281,7 @@ Konvertera ett PDF-dokument till ett bildformat med hjälp av Java (Convert PDF 
 1. Ange körningsalternativ.
 
    * Skapa en `ToImageOptionsSpec` genom att använda dess konstruktor.
-   * Anropa metoder som tillhör det här objektet efter behov. Du kan till exempel ange bildtypen genom att anropa `setImageConvertFormat` och skicka en `ImageConvertFormat` enum-värde som anger formattypen.
+   * Anropa metoder som tillhör det här objektet efter behov. Ange till exempel bildtypen genom att anropa `setImageConvertFormat` metod och skicka en `ImageConvertFormat` enum-värde som anger formattypen.
 
    >[!NOTE]
    >
@@ -302,7 +298,7 @@ Konvertera ett PDF-dokument till ett bildformat med hjälp av Java (Convert PDF 
 
 1. Hämta bildfilerna från en samling.
 
-   Iterera genom `java.util.List` -objekt för att avgöra om det finns bilder. Varje element är en `com.adobe.idp.Document` -instans. Spara bilden genom att anropa `com.adobe.idp.Document` objektets `copyToFile` metod och skicka en `java.io.File` -objekt.
+   Iterera genom `java.util.List` -objekt för att avgöra om det finns bilder. Varje element är en `com.adobe.idp.Document` -instans. Spara bilden genom att starta `com.adobe.idp.Document` objektets `copyToFile` metod och skicka en `java.io.File` -objekt.
 
 **Se även**
 
@@ -318,13 +314,13 @@ Konvertera ett PDF-dokument till ett bildformat med hjälp av API:t för konvert
 
    >[!NOTE]
    >
-   >Ersätt `localhost` med IP-adressen till den server som är värd för AEM Forms.
+   >Ersätt `localhost` med IP-adressen till den server där AEM Forms finns.
 
 1. Skapa en konverteringsklient för PDF.
 
    * Skapa en `ConvertPdfServiceClient` genom att använda dess standardkonstruktor.
    * Skapa en `ConvertPdfServiceClient.Endpoint.Address` genom att använda `System.ServiceModel.EndpointAddress` konstruktor. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/ConvertPDFService?blob=mtom`.) Du behöver inte använda `lc_version` -attribut. Ange dock `?blob=mtom`.
-   * Skapa en `System.ServiceModel.BasicHttpBinding` genom att hämta värdet för `ConvertPdfServiceClient.Endpoint.Binding` fält. Sänd returvärdet till `BasicHttpBinding`.
+   * Skapa en `System.ServiceModel.BasicHttpBinding` genom att hämta värdet för `ConvertPdfServiceClient.Endpoint.Binding` fält. Skicka returvärdet till `BasicHttpBinding`.
    * Ange `System.ServiceModel.BasicHttpBinding` objektets `MessageEncoding` fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
    * Aktivera grundläggande HTTP-autentisering genom att utföra följande åtgärder:
 
@@ -344,7 +340,7 @@ Konvertera ett PDF-dokument till ett bildformat med hjälp av API:t för konvert
 1. Ange körningsalternativ.
 
    * Skapa en `ToImageOptionsSpec` genom att använda dess konstruktor.
-   * Anropa metoder som tillhör det här objektet efter behov. Du kan till exempel ange bildtypen genom att anropa `setImageConvertFormat` och skicka en `ImageConvertFormat` uppräkningsvärde som anger formattypen.
+   * Anropa metoder som tillhör det här objektet efter behov. Ange till exempel bildtypen genom att anropa `setImageConvertFormat` metod och skicka en `ImageConvertFormat` uppräkningsvärde som anger formattypen.
 
    >[!NOTE]
    >
@@ -357,11 +353,11 @@ Konvertera ett PDF-dokument till ett bildformat med hjälp av API:t för konvert
    * A `BLOB` objekt som representerar filen som ska konverteras
    * A `ToImageOptionsSpec` objekt som innehåller de olika inställningarna för målbildens format
 
-   The `toImage2` returnerar en `MyArrayOfBLOB` som innehåller de nyskapade bildfilerna.
+   The `toImage2` returnerar en `MyArrayOfBLOB` -objekt som innehåller de nyskapade bildfilerna.
 
 1. Hämta bildfilerna från en samling.
 
-   * Bestäm antalet element i `MyArrayOfBLOB` genom att hämta värdet för dess `Count` fält. Varje element är en `BLOB` som innehåller bilden.
+   * Ange antalet element i `MyArrayOfBLOB` genom att hämta värdet för dess `Count` fält. Varje element är en `BLOB` som innehåller bilden.
    * Iterera genom `MyArrayOfBLOB` och spara varje bildfil.
 
 **Se även**

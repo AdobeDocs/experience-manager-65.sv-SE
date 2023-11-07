@@ -1,17 +1,15 @@
 ---
 title: Adobe Campaign Components
 description: När du integrerar med Adobe Campaign finns det komponenter som du kan använda när du arbetar med nyhetsbrev och formulär.
-uuid: cc9417c9-4cc1-4554-858e-2ecd682dc92f
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: personalization
 content-type: reference
-discoiquuid: 5afe864d-5794-4ffa-99e7-a3233f982aff
 docset: aem65
 exl-id: eeff89c1-41b3-403d-b4bf-c79b09b24d4a
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2531'
+source-wordcount: '2530'
 ht-degree: 0%
 
 ---
@@ -24,7 +22,7 @@ När du integrerar med Adobe Campaign finns det komponenter som du kan använda 
 >
 >AEM e-postkomponenter har tagits bort. På grund av e-postens natur, som sammanfogar innehåll och format, blir de e-postkomponenter som AEM tillhandahåller direkt i kartong av begränsad återanvändning för kunderna på grund av behovet av att implementera anpassade format i de komponenter som behövs för projekt.
 >
->E-postkomponenter kan implementeras på projektnivå och de borttagna AEM e-postkomponenterna visar hur man kan uppnå detta. Dessa inaktuella komponenter bör dock inte användas i projekt.
+>E-postkomponenter kan implementeras på projektnivå och de borttagna AEM e-postkomponenterna visar hur man kan uppnå detta. Använd dock inte de här inaktuella komponenterna i projekt.
 
 ## Adobe Campaign Newsletter Components {#adobe-campaign-newsletter-components}
 
@@ -174,7 +172,7 @@ Dra en bild från innehållssökaren eller klicka för att bläddra till en bild
 * **Bildegenskaper** (**Avancerade bildegenskaper**) Här kan du ange följande:
 
    * **Titel**
-Blockets titel; visas med muspekaren.
+Blockets titel, som visas med muspekaren.
 
    * **Alt-text**
 Alternativ text som visas om bilden inte kan visas.

@@ -2,7 +2,7 @@
 title: Migrering till tillägget AEM Commerce Integration Framework (CIF)
 description: Så här migrerar du till tillägget AEM Commerce integration framework (CIF) från en gammal version.
 exl-id: c6c0c2fc-6cfa-4c64-b3d8-7e428b2a4b2e
-source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '265'
 ht-degree: 0%
@@ -35,4 +35,4 @@ Om du använder katalogutkast med klassiska CIF måste du uppdatera produktkatal
 
 ## Icke-cacheable Data and Shopping Interaction
 
-Begäranden på klientsidan om icke-cachelagrade data och interaktioner (t.ex. tillägg till kundvagnen, sökning) ska gå direkt till slutpunkten för e-handeln (antingen e-handelslösningen eller integreringslagret) via CDN/Dispatcher. Ta bort alla samtal där AEM bara var en proxy.
+Begäranden på klientsidan om icke-cachelagrade data och interaktioner (t.ex. tillägg i kundvagnen, sökning) ska gå direkt till slutpunkten för e-handeln (antingen e-handelslösningen eller integreringslagret) via CDN/Dispatcher. Ta bort alla samtal där AEM bara var en proxy.

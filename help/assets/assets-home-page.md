@@ -5,7 +5,7 @@ contentOwner: AG
 feature: Developer Tools, Asset Management
 role: Admin, User
 exl-id: 042bd959-256a-4794-a34d-0848a6b8840d
-source-git-commit: e24316cb9495a552960ae0620e4198f10a08b691
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '507'
 ht-degree: 1%
@@ -68,11 +68,11 @@ Det här avsnittet visas under välkomstavsnittet och visar widgetar som inte fi
 
 **Aktivitet**: Under det här avsnittet **[!UICONTROL My Activity]** widgeten visar de senaste aktiviteterna som den inloggade användaren har utfört med resurser (inklusive resurser utan återgivningar), till exempel överföringar av resurser, hämtningar, skapande av resurser, redigeringar, kommentarer, anteckningar och delningar.
 
-**Senaste**: The **[!UICONTROL Recently Viewed]** widgeten under det här avsnittet visar nyligen använda entiteter av den inloggade användaren, inklusive mappar, samlingar och projekt.
+**Senaste**: **[!UICONTROL Recently Viewed]** widgeten under det här avsnittet visar nyligen använda entiteter av den inloggade användaren, inklusive mappar, samlingar och projekt.
 
-**Upptäck**: The **[!UICONTROL New]** visas resurser och återgivningar som nyligen har överförts till [!DNL Assets] distribution.
+**Upptäck**: **[!UICONTROL New]** visas resurser och återgivningar som nyligen har överförts till [!DNL Assets] distribution.
 
-Aktivera alternativet **[!UICONTROL DAM Event Purge Service]** från Configuration Manager. När du har aktiverat den här tjänsten tas aktiviteter av den inloggade användaren som överskrider ett angivet nummer bort av systemet.
+Om du vill aktivera rensning av användaraktivitetsdata aktiverar du **[!UICONTROL DAM Event Purge Service]** från Configuration Manager. När du har aktiverat den här tjänsten tas aktiviteter av den inloggade användaren som överskrider ett angivet nummer bort av systemet.
 
 Välkomstskärmen innehåller enkla navigeringshjälpmedel, t.ex. ikoner i verktygsfältet för att komma åt mappar, samlingar och kataloger.
 

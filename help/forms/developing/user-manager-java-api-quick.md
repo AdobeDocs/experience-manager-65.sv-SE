@@ -11,9 +11,9 @@ topic-tags: develop
 discoiquuid: e0c20fd2-b084-4f61-936c-5282826a8d3d
 role: Developer
 exl-id: 7f622371-0f0f-4789-b2e7-e4b536a21c4d
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '494'
+source-wordcount: '493'
 ht-degree: 0%
 
 ---
@@ -32,15 +32,15 @@ Java API Quick Start (SOAP) är tillgängligt för API:t för användarhanterare
 
 [Snabbstart (SOAP-läge): Hantera roller och behörigheter med Java API](user-manager-java-api-quick.md#quick-start-soap-mode-managing-roles-and-permissions-using-the-java-api)
 
-[Snabbstart (SOAP-läge): Synkronisera användare programmatiskt med Java API](user-manager-java-api-quick.md#quick-start-soap-mode-programmatically-synchronizing-users-using-the-java-api)
+[Snabbstart (SOAP-läge): Programmatiskt synkronisera användare med Java API](user-manager-java-api-quick.md#quick-start-soap-mode-programmatically-synchronizing-users-using-the-java-api)
 
-[Snabbstart (SOAP-läge): Hantera inställningsnoderna programmatiskt med Java API](user-manager-java-api-quick.md#quick-start-soap-mode-programmatically-managing-the-preferences-nodes-using-the-java-api)
+[Snabbstart (SOAP-läge): Hantera inställningsnoder programmatiskt med Java API](user-manager-java-api-quick.md#quick-start-soap-mode-programmatically-managing-the-preferences-nodes-using-the-java-api)
 
 AEM Forms-åtgärder kan utföras med AEM Forms starkt typade API och anslutningsläget bör anges till SOAP.
 
 >[!NOTE]
 >
->Snabbstart i Programmering med AEM formulär baseras på dokumentet om du använder ett annat operativsystem, till exempel Unix, och ersätter Windows-specifika sökvägar med sökvägar som stöds av det aktuella operativsystemet. På samma sätt måste du ange giltiga anslutningsegenskaper om du använder en annan J2EE-programserver. Se [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
+>Snabbstart vid programmering med AEM formulär baseras på dokumentet om du använder ett annat operativsystem, som Unix, och ersätter Windows-specifika sökvägar med sökvägar som stöds av det aktuella operativsystemet. På samma sätt måste du ange giltiga anslutningsegenskaper om du använder en annan J2EE-programserver. Se [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
 ## Snabbstart (SOAP-läge): Lägga till användare med Java API {#quick-start-soap-mode-adding-users-using-the-java-api}
 
@@ -72,7 +72,7 @@ I följande kodexempel läggs en användare med namnet Wendy Blue till i AEM For
      * The JBoss files must be kept in the jboss\client folder. You can copy the client folder to
      * your local development environment and then include the 3 JBoss JAR files in your class path
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/sdk/client-libs/common
      *
      *
@@ -81,7 +81,7 @@ I följande kodexempel läggs en användare med namnet Wendy Blue till i AEM For
      * If you want to invoke a remote forms server instance and there is a
      * firewall between the client application and the server, then it is
      * recommended that you use the SOAP mode. When using the SOAP mode,
-     * you have to include additional JAR files located in the following
+     * you have to include additional JAR files in the following
      * path
      * <install directory>/sdk/client-libs/thirdparty
      *
@@ -190,7 +190,7 @@ I följande kodexempel tas en användare med namnet Wendy Blue bort från AEM Fo
      * The JBoss files must be kept in the jboss\client folder. You can copy the client folder to
      * your local development environment and then include the 3 JBoss JAR files in your class path
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/sdk/client-libs/common
      *
      *
@@ -199,7 +199,7 @@ I följande kodexempel tas en användare med namnet Wendy Blue bort från AEM Fo
      * If you want to invoke a remote forms server instance and there is a
      * firewall between the client application and the server, then it is
      * recommended that you use the SOAP mode. When using the SOAP mode,
-     * you have to include additional JAR files located in the following
+     * you have to include additional JAR files in the following
      * path
      * <install directory>/sdk/client-libs/thirdparty
      *
@@ -286,7 +286,7 @@ I följande kodexempel hittas en lokal användare och den lokala grupp som anvä
      * The JBoss files must be kept in the jboss\client folder. You can copy the client folder to
      * your local development environment and then include the 3 JBoss JAR files in your class path
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/sdk/client-libs/common
      *
      *
@@ -295,7 +295,7 @@ I följande kodexempel hittas en lokal användare och den lokala grupp som anvä
      * If you want to invoke a remote forms server instance and there is a
      * firewall between the client application and the server, then it is
      * recommended that you use the SOAP mode. When using the SOAP mode,
-     * you have to include additional JAR files located in the following
+     * you have to include additional JAR files in the following
      * path
      * <install directory>/sdk/client-libs/thirdparty
      *
@@ -382,7 +382,7 @@ I följande kodexempel hittas en lokal användare och den lokala grupp som anvä
 
 ## Snabbstart (SOAP-läge): Hantera roller och behörigheter med Java API {#quick-start-soap-mode-managing-roles-and-permissions-using-the-java-api}
 
-I följande kodexempel tilldelas användarrollen Tjänster till ett huvudkonto, de roller huvudmannen har skrivs ut och rollen tas sedan bort från huvudkontot. Två tjänster anropas för den här snabbstarten: DirectoryManager-tjänsten och AuthorizationManager-tjänsten.(Se [Hantera roller och behörigheter](/help/forms/developing/users.md#managing-roles-and-permissions).)
+I följande kodexempel tilldelas användarrollen Tjänster till ett huvudkonto, de roller huvudmannen har skrivs ut och rollen tas sedan bort från huvudkontot. Två tjänster anropas för den här snabbstarten: tjänsten DirectoryManager och tjänsten AuthorizationManager.(Se [Hantera roller och behörigheter](/help/forms/developing/users.md#managing-roles-and-permissions).)
 
 ```java
  /*
@@ -410,7 +410,7 @@ I följande kodexempel tilldelas användarrollen Tjänster till ett huvudkonto, 
      * The JBoss files must be kept in the jboss\client folder. You can copy the client folder to
      * your local development environment and then include the 3 JBoss JAR files in your class path
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/sdk/client-libs/common
      *
      *
@@ -419,7 +419,7 @@ I följande kodexempel tilldelas användarrollen Tjänster till ett huvudkonto, 
      * If you want to invoke a remote forms server instance and there is a
      * firewall between the client application and the server, then it is
      * recommended that you use the SOAP mode. When using the SOAP mode,
-     * you have to include additional JAR files located in the following
+     * you have to include additional JAR files in the following
      * path
      * <install directory>/sdk/client-libs/thirdparty
      *
@@ -523,7 +523,7 @@ I följande kodexempel tilldelas användarrollen Tjänster till ett huvudkonto, 
  
 ```
 
-## Snabbstart (SOAP-läge): Synkronisera användare programmatiskt med Java API {#quick-start-soap-mode-programmatically-synchronizing-users-using-the-java-api}
+## Snabbstart (SOAP-läge): Programmatiskt synkronisera användare med Java API {#quick-start-soap-mode-programmatically-synchronizing-users-using-the-java-api}
 
 I följande Java-kodexempel synkroniseras användare med hjälp av API:er för användarhantering. (Se [Synkronisera användare programmatiskt](/help/forms/developing/users.md#programmatically-synchronizing-users).)
 
@@ -554,7 +554,7 @@ I följande Java-kodexempel synkroniseras användare med hjälp av API:er för a
      * The JBoss files must be kept in the jboss\client folder. You can copy the client folder to
      * your local development environment and then include the 3 JBoss JAR files in your class path
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/sdk/client-libs/common
      *
      *
@@ -563,7 +563,7 @@ I följande Java-kodexempel synkroniseras användare med hjälp av API:er för a
      * If you want to invoke a remote forms server instance and there is a
      * firewall between the client application and the server, then it is
      * recommended that you use the SOAP mode. When using the SOAP mode,
-     * you have to include additional JAR files located in the following
+     * you have to include additional JAR files in the following
      * path
      * <install directory>/sdk/client-libs/thirdparty
      *
@@ -662,7 +662,7 @@ I följande kodexempel läggs en användare med namnet Wendy Blue till i AEM For
      * The JBoss files must be kept in the jboss\client folder. You can copy the client folder to
      * your local development environment and then include the 3 JBoss JAR files in your class path
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/sdk/client-libs/common
      *
      *
@@ -671,7 +671,7 @@ I följande kodexempel läggs en användare med namnet Wendy Blue till i AEM For
      * If you want to invoke a remote forms server instance and there is a
      * firewall between the client application and the server, then it is
      * recommended that you use the SOAP mode. When using the SOAP mode,
-     * you have to include additional JAR files located in the following
+     * you have to include additional JAR files in the following
      * path
      * <install directory>/sdk/client-libs/thirdparty
      *
@@ -780,7 +780,7 @@ I följande kodexempel skapas en grupp med namnet AdobeGroup till AEM Forms. (Se
      * The JBoss files must be kept in the jboss\client folder. You can copy the client folder to
      * your local development environment and then include the 3 JBoss JAR files in your class path
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/sdk/client-libs/common
      *
      *
@@ -789,7 +789,7 @@ I följande kodexempel skapas en grupp med namnet AdobeGroup till AEM Forms. (Se
      * If you want to invoke a remote forms server instance and there is a
      * firewall between the client application and the server, then it is
      * recommended that you use the SOAP mode. When using the SOAP mode,
-     * you have to include additional JAR files located in the following
+     * you have to include additional JAR files in the following
      * path
      * <install directory>/sdk/client-libs/thirdparty
      *
@@ -866,7 +866,7 @@ I följande kodexempel skapas en grupp med namnet AdobeGroup till AEM Forms. (Se
          }
  
      /**
-         * Search for a group located in the specified domain
+         * Search for a group in the specified domain
          */
         private static String checkGroupExist(String groupName, String domainName, DirectoryManagerServiceClient directoryManager){
           try {
@@ -904,7 +904,7 @@ I följande kodexempel skapas en grupp med namnet AdobeGroup till AEM Forms. (Se
 
 ## Snabbstart (SOAP-läge) Hantera inställningsnoder {#quick-start-soap-mode-managing-preferences-nodes}
 
-Följande Java-kodmodeller hanterar Preferences Nodes med API:erna för användarhantering. ( Se [Hantera inställningsnoderna programmatiskt](/help/forms/developing/programmatically-preferences-nodes.md#programmatically-managing-the-preferences-nodes))
+Följande Java-kodsmodeller hanterar Preferences Nodes med API:erna för användarhantering. ( Se [Hantera inställningsnoderna programmatiskt](/help/forms/developing/programmatically-preferences-nodes.md#programmatically-managing-the-preferences-nodes))
 
 ```java
 /*
@@ -929,7 +929,7 @@ Följande Java-kodmodeller hanterar Preferences Nodes med API:erna för använda
     * 17. xbean.jar (required for SOAP mode)
     * 18. xercesImpl.jar (required for SOAP mode)
  *
- * These JAR files are located in the following path:
+ * These JAR files are in the following path:
  * <install directory>/Adobe/Adobe_Experience_Manager_forms/sdk/client-libs/common
  *
  * <install directory>/Adobe/Adobe_Experience_Manager_forms/sdk/client-libs/jboss
@@ -939,7 +939,7 @@ Följande Java-kodmodeller hanterar Preferences Nodes med API:erna för använda
  * If you want to invoke a remote AEM Forms instance and there is a
  * firewall between the client application and AEM Forms, then it is
  * recommended that you use the SOAP mode. When using the SOAP mode,
- * you have to include additional JAR files located in the following
+ * you have to include additional JAR files in the following
  * path
  * <install directory>/Adobe/Adobe_Experience_Manager_forms/sdk/client-libs/thirdparty
  *
@@ -1005,7 +1005,7 @@ public class ManagePreferences {
 }
 ```
 
-## Snabbstart (SOAP-läge): Hantera inställningsnoderna programmatiskt med Java API {#quick-start-soap-mode-programmatically-managing-the-preferences-nodes-using-the-java-api}
+## Snabbstart (SOAP-läge): Hantera inställningsnoder programmatiskt med Java API {#quick-start-soap-mode-programmatically-managing-the-preferences-nodes-using-the-java-api}
 
 Följande Java-kodmodeller hanterar Preferences Nodes med API:er för användarhantering ( Se [Hantera inställningsnoderna programmatiskt](/help/forms/developing/programmatically-preferences-nodes.md#programmatically-managing-the-preferences-nodes))
 
@@ -1016,7 +1016,7 @@ Följande Java-kodmodeller hanterar Preferences Nodes med API:er för användarh
  * 1. adobe-livecycle-client.jar
  * 2. adobe-usermanager-client.jar
  *
- * These JAR files are located in the following path:
+ * These JAR files are in the following path:
  * <install directory>/Adobe/Adobe_Experience_Manager_forms/sdk/client-libs/common
  *
  * <install directory>/Adobe/Adobe_Experience_Manager_forms/sdk/client-libs/jboss
@@ -1026,7 +1026,7 @@ Följande Java-kodmodeller hanterar Preferences Nodes med API:er för användarh
  * If you want to invoke a remote AEM Forms instance and there is a
  * firewall between the client application and AEM FOrms, then it is
  * recommended that you use the SOAP mode. When using the SOAP mode,
- * you have to include additional JAR files located in the following
+ * you have to include additional JAR files in the following
  * path
  * <install directory>/Adobe/Adobe_Experience_Manager_forms/sdk/client-libs/thirdparty
  *

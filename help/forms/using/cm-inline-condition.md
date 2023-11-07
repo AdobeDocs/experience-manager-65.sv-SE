@@ -11,9 +11,9 @@ discoiquuid: bbaba39b-e15a-4143-b6fc-7789fa2917b4
 docset: aem65
 feature: Correspondence Management
 exl-id: bc5d6c5b-c833-4849-aace-e07f8a522b32
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1659'
+source-wordcount: '1657'
 ht-degree: 0%
 
 ---
@@ -168,7 +168,7 @@ I följande exempel visas hur du använder upprepning för att strukturera och �
 
    Om du vill upprepa den statiska texten tillsammans med DD-elementen måste du upprepa enligt anvisningarna i de följande stegen.
 
-1. Markera den statiska texten samt de DD-element som du vill upprepa enligt nedan:
+1. Markera den statiska texten och de DD-element som du vill upprepa, som visas nedan:
 
    ![2_repeat_selectText](assets/2_repeat_selecttext.png)
 

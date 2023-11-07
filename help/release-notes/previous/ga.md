@@ -2,7 +2,7 @@
 title: Allmän versionsinformation för [!DNL Adobe Experience Manager] 6.5
 description: "[!DNL Adobe Experience Manager] 6.5 som beskriver versionsinformation, nyheter, hur man installerar och detaljerade ändringslistor."
 exl-id: b3d4a527-44ca-4eb6-b393-f3e8117cf1a6
-source-git-commit: a51a863a4edf7e8b951a8361c5c7f0517b09f12a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '4675'
 ht-degree: 1%
@@ -48,7 +48,7 @@ Quickstart använder Eclipse Jetty 9.4.15 som servermotor.
 
 #### Java™ Development {#java-development}
 
-* Det finns nu [två versioner av Uberjar](/help/sites-developing/ht-projects-maven.md#experience-manager-api-dependencies), en rekommenderad version med publika gränssnitt som inte är markerade för borttagning och en version som innehåller gränssnitt som är markerade för borttagning.
+* Det finns [två versioner av Uberjar](/help/sites-developing/ht-projects-maven.md#experience-manager-api-dependencies), en rekommenderad version med publika gränssnitt som inte är markerade för borttagning och en version som innehåller gränssnitt som är markerade för borttagning.
 
 #### Användargränssnitt {#user-interface}
 
@@ -58,7 +58,7 @@ Ett antal förbättringar har gjorts i användargränssnittet för att göra det
 * Kolumnvyer läser nu bara in poster som är synliga på skärmen och som bara läses in mer när användaren börjar rulla. List- och kortvyn gjorde redan det sedan 6.0 (förbättrat i 6.4).
 * Kolumnvyer innehåller nu arbetsflödesstatus för sidor/resurser när det är tillämpligt.
 * The [Markera alla](/help/sites-authoring/basic-handling.md#select-all) är ett snabbt sätt att utföra en åtgärd med alla sidor/resurser i samma mapp.
-* The [Markera alla](/help/sites-authoring/basic-handling.md#select-all) -åtgärden försöker utföra åtgärden på alla sidor/resurser, inte bara det som har lästs in. En varningsdialogruta visas om åtgärden inte har uppgraderats för att hantera gruppåtgärder.
+* The [Markera alla](/help/sites-authoring/basic-handling.md#select-all) försöker utföra åtgärden på alla sidor/resurser, inte bara det som har lästs in. En varningsdialogruta visas om åtgärden inte har uppgraderats för att hantera gruppåtgärder.
 
 >[!CAUTION]
 >
@@ -83,7 +83,7 @@ Ett antal förbättringar har gjorts i användargränssnittet för att göra det
 
 #### Databas {#repository}
 
-* Grunden till Adobe Experience Manager 6.5 bygger på uppdaterade versioner av det OSGi-baserade ramverket (Apache Sling och Apache Felix) och Java™ Content Repository: Apache Jackrabbit Oak 1.10.2.
+* Grunden till Adobe Experience Manager 6.5 bygger på uppdaterade versioner av OSGi-baserade ramverk (Apache Sling och Apache Felix) och Java™ Content Repository: Apache Jackrabbit Oak 1.10.2.
 * En översikt över åtgärdade problem finns i [Apache Jackrabbit Oak Jira v. 1.10.0](https://archive.apache.org/dist/jackrabbit/oak/1.10.0/RELEASE-NOTES.txt), [Apache Jackrabbit Oak Jira v. 1.10.1](https://archive.apache.org/dist/jackrabbit/oak/1.10.1/RELEASE-NOTES.txt) och [Apache Jackrabbit Oak Jira v. 1.10.2](https://archive.apache.org/dist/jackrabbit/oak/1.10.2/RELEASE-NOTES.txt).
 
 >[!CAUTION]
@@ -110,7 +110,7 @@ Med Page Editor kan du redigera innehåll i sitt sammanhang och skapa/layouta i 
 
 Först levererad som en del av AEM 6.4 SP2, med AEM 6.5 får SPA support följande fördelar:
 
-* Använd mallredigeraren för att redigera och konfigurera AEM redigerbara delar av SPA
+* Använd mallredigeraren för att redigera och konfigurera de AEM redigerbara delarna i SPA
 * Använd hantering av flera webbplatser för att skapa SPA, franchise eller white-label
 
 #### Headless Content Management {#headless-content-management}
@@ -134,7 +134,7 @@ Designa, leverera och optimera effektivt upplevelser på alla digitala skärmar,
 * Uppspelning med datapriser i en sekvenskanal
 * Skapa projektstruktur automatiskt med en källfil som ett Excel-blad
 * Utökat stöd för mediespelare med robust online- och offlinefunktion (Smart Sync) som kan skalas till även de största signeringsnätverken.
-* Anpassa efter plats eller konfiguration av data som triggat innehåll med hjälp av dynamiska platshållare.
+* Anpassa efter plats eller konfiguration av data som utlöses av dynamiska platshållare.
 * Enhetliga insikter som bygger på Adobe Analytics integration i AEM Screens Player
 
 Mer information om ändringar i AEM Screens finns i versionsinformationen i [AEM Screens Användarhandbok](https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/aem-screens-introduction.html?lang=en).
@@ -147,31 +147,31 @@ Mer information om ändringar i AEM Screens finns i versionsinformationen i [AEM
 
    * in-operatorn för strängar, arrayer och objekt:
 
-      ```html
-      ${'a' in 'abc'}
-      ${100 in myArray}
-      ${'a' in myObject}
-      ```
+     ```html
+     ${'a' in 'abc'}
+     ${100 in myArray}
+     ${'a' in myObject}
+     ```
 
    * Variabeldeklarationer med datavänligt angivna:
-      `<sly data-sly-set.title="${currentPage.title}"/>${title}`
+     `<sly data-sly-set.title="${currentPage.title}"/>${title}`
 
-   * Lista och upprepa kontrollparametrar: begin, step, end:
-      `<h2 data-sly-repeat="${currentPage.listChildren @ begin = 1, step=2}">${item.title}</h2>`
+   * Parametrar för att visa och upprepa kontroller: begin, step, end:
+     `<h2 data-sly-repeat="${currentPage.listChildren @ begin = 1, step=2}">${item.title}</h2>`
 
-   * Identifierare för automatisk uppbrytning av data:
+   * Identifierare för datauppfriskande:
 
-      ```html
-      <div data-sly-unwrap.isUnwrapped="${myCondition || myOtherCondition}">
-      text <span data-sly-test="${isUnwrapped}>is unwrapped</code>
-      </div>
-      ```
+     ```html
+     <div data-sly-unwrap.isUnwrapped="${myCondition || myOtherCondition}">
+     text <span data-sly-test="${isUnwrapped}>is unwrapped</code>
+     </div>
+     ```
 
    * Stöd för negativa tal
 
 * Core Components 2.3.2+, se [GitHub för versionsinformation](https://github.com/adobe/aem-core-wcm-components/releases).
 * Stödrastersystem för layoutbehållare, se [GitHub](https://github.com/Adobe-Marketing-Cloud/aem-responsivegrid).
-* Clientlib Manager: gjorde Google Closure Compiler till standard för minification of JavaScript clientlibs (gammalt standard var Yahoo YUI) och uppdaterade Google Closure Compiler till version v20190121
+* Clientlib Manager: gjorde Google Closure Compiler till standard med minification of JavaScript clientlibs (gammalt standard var Yahoo YUI) och uppdaterade Google Closure Compiler till version v20190121
 * Mallredigerare och profiler
 
    * Skapa och redigera mallar för single-page-appar som använder JS SDK (kallas även SPA Editor)
@@ -211,7 +211,7 @@ Mer information om ändringar i AEM Screens finns i versionsinformationen i [AEM
 #### Översättning {#translation}
 
 * Förenkla framtagningen av översättningsprojekt med Projektmallar.
-* Förenkla körningen av översättningsprojekt genom att ange att översättningsjobb som standard ska vara godkända.
+* Förenkla körningen av översättningsprojekt genom att ange att översättningsjobben ska vara godkända som standard.
 * Tillåt uppdatering av översatta sidor med ändringar i översättningsminne från tredje part.
 * Tillåt export av översättningsjobb i JSON-format.
 * Uppdatera integreringen med Microsoft® Translation till att använda V3 API.
@@ -241,19 +241,18 @@ Mer information om ändringar i AEM Screens finns i versionsinformationen i [AEM
 >
 >* Båda `at.js. 1.x` och `at.js 2.x` stöds om du använder Experience Fragment-export till Target och kör aktiviteter i Target-konsolen.
 
-
 * Integreringen med Adobe Target använder nu Target Standard API. I tidigare versioner av AEM används Target Classic HTTP API, som nu är föråldrat.
-* Adobe Target `mbox.js` version 63 ingår. Adobe rekommenderar att du byter implementering till `at.js` v1.x.
+* Adobe Target `mbox.js` version 63 ingår. Adobe rekommenderar starkt att du byter implementering till `at.js` v1.x
 * `at.js` version 1.5.0 ingår nu. Adobe rekommenderar att du använder [Adobe Experience Platform Launch](https://business.adobe.com/products/experience-platform/launch.html) att tillhandahålla `at.js` v1.x in på webbplatsen.
 
 #### AEM och Adobe Analytics {#aem-amp-adobe-analytics}
 
 * `s_code.js` H.27.5 ingår. Adobe rekommenderar att du byter implementering till `AppMeasurement.js`
-* `AppMeasurement.js` v1.8.0 ingår. Adobe rekommenderar att du använder [Adobe Experience Platform Launch](https://business.adobe.com/products/experience-platform/launch.html) för att etablera AppMeasurement.js på webbplatsen.
+* `AppMeasurement.js` v1.8.0 ingår. Adobe rekommenderar att du använder [Adobe Experience Platform Launch](https://business.adobe.com/products/experience-platform/launch.html) att etablera AppMeasurement.js på webbplatsen.
 
 #### AEM och handel {#aem-commerce}
 
-Förbättringar av Commerce Integration Framework pågår snabbare sedan AEM 6.4. [Läs mer här](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/content-and-commerce/integrations/magento.html).
+Commerce integrationa frameworken har förbättrats snabbare sedan AEM 6.4. [Läs mer här](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/content-and-commerce/integrations/magento.html).
 
 #### Webbgrupper, tillägg {#communities-add-on}
 
@@ -268,7 +267,7 @@ AEM Communities tillåter nu registrerade användare att tagga (nämna) andra re
 
 Community-användare behöver inte söka efter sina förnamn, efternamn eller användarnamn för att se om någon har kommit fram till dem eller behöver deras uppmärksamhet. Dessutom kan UGC-författare söka svar från specifika registrerade användare som bäst kan åtgärda problemet och lägga till indata.
 
-Community-administratörer måste **Aktivera omnämnande** om communitykomponenter för att tillåta registrerade användare att använda funktionerna för dessa komponenter.
+Community-administratörer måste **Aktivera omnämns** om communitykomponenter för att tillåta registrerade användare att använda funktionerna för dessa komponenter.
 
 **Gruppmeddelanden**
 
@@ -296,7 +295,7 @@ Ny listvy med förbättrat användargränssnitt har tillhandahållits i bulkmode
 
 **Författare av webbplats- och gruppadministratörer**
 
-Communities, AEM 6.5 och framåt, medger decentraliserad administration (och förvaltning) av olika communityplatser och grupper/ kapslade grupper. Organisationer som har flera communitysajter och kapslade grupper kan nu välja medlemmar för administratörsroller på författarsidan när webbplatsen (och gruppen) skapas.
+Communities, AEM 6.5 och framåt, medger decentraliserad administration (och förvaltning) av olika communitysajter och grupper/ kapslade grupper. Organisationer som har flera communitysajter och kapslade grupper kan nu välja medlemmar för administratörsroller på författarsidan när webbplatsen (och gruppen) skapas.
 
 ![Webbplatsadministratör](/help/release-notes/assets/site-admin.png)
 
@@ -320,7 +319,7 @@ Aktiveringsfunktionen i AEM 6.5 Communities har stöd för Shareable Content Obj
 
 I AEM 6.5 introduceras följande funktioner och förbättringar som ökar produktiviteten hos AEM, DAM-roller och associerade kreativa roller och marknadsföringsroller.
 
-#### Integration med [!DNL Adobe Creative Cloud] och kreativa arbetsflöden {#integration-with-adobe-creative-cloud-and-creative-workflows}
+#### Integrering med [!DNL Adobe Creative Cloud] och kreativa arbetsflöden {#integration-with-adobe-creative-cloud-and-creative-workflows}
 
 [!DNL Adobe Experience Manager] erbjuder olika sätt att integrera med [!DNL Adobe Creative Cloud] och dela resurser för användning i arbetsflöden där kreatörerna och marknadsförarna eller affärsteamen samarbetar nära. [!DNL Experience Manager] 6.5 fortsätter att förbättra integreringen och effektivisera den ytterligare för att ge fler möjligheter och effektivisera befintliga metoder.
 
@@ -354,7 +353,7 @@ Mer information finns på [Använda Adobe Stock-resurser i Experience Manager As
 
 [!DNL Experience Manager Assets] används i [!DNL Adobe InDesign] filer är dynamiska. Referenserna uppdateras automatiskt om de refererade resurserna flyttas i databasen. Mer information finns i [hantera sammansatta resurser](/help/assets/managing-linked-subassets.md).
 
-#### Brand Portal-funktioner {#brand-portal-capabilities}
+#### Brand Portal {#brand-portal-capabilities}
 
 [!DNL Experience Manager Assets Brand Portal] hjälper er att enkelt skaffa, effektivt kontrollera och på ett säkert sätt distribuera godkända resurser till externa leverantörer/myndigheter och interna företagsanvändare på olika enheter. Det bidrar till att effektivisera tillgångsdelningen, snabbar upp time-to-market för tillgångar och eliminerar risken för otillåten användning och obehörig åtkomst.
 
@@ -378,13 +377,13 @@ Mer information om nya [!DNL Dynamic Media] funktioner, se [Versionsinformation 
 
 ##### Stöd för 360-video {#video-support}
 
-Hantera dina 360-videofiler direkt i [!DNL Experience Manager] med de allra senaste tittarna för att leverera VR-upplevelser till datorer, mobiler och VR-headset. Mer information finns i [Använda 360-video](/help/assets/360-video.md).
+Hantera dina 360-videofiler direkt i [!DNL Experience Manager] med de allra senaste tittarna för att leverera VR-upplevelser till datorer, mobiler och VR-headset. Mer information finns i [Using 360 Video](/help/assets/360-video.md).
 
 ##### Egna videominiatyrer {#custom-video-thumbnails}
 
 Nu kan du anpassa miniatyrbilderna för videomaterialet med hjälp av bildrutor från själva videon eller annat innehåll som lagras i DAM. Ytterligare instruktioner finns i [Om videominiatyrer](/help/assets/video.md#about-video-thumbnails-in-dynamic-media-scene-mode).
 
-##### Förbättrad tillgänglighet {#accessibility-enhancements}
+##### Förbättringar av hjälpmedel {#accessibility-enhancements}
 
 [!DNL Dynamic Media] visningsprogrammen har nu stöd för förbättrade hjälpmedelsfunktioner som Aria-support, skärmläsare och Alt-text. Mer information finns i [Referenshandbok för visningsprogram](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/homeviewers.html).
 
@@ -396,7 +395,7 @@ Nu kan du anpassa miniatyrbilderna för videomaterialet med hjälp av bildrutor 
 
 *Bild: Se antalet resurser utan att filtrera sökresultaten i sökfaktorer.*
 
-#### Förbättrad användbarhet {#usability-enhancement}
+#### Förbättrad användarvänlighet {#usability-enhancement}
 
 Du kan nu välja alla inlästa resurser i en mapp eller från ett sökresultat på en gång. Det hjälper dig att hantera flera resurser snabbt. Kryssrutan markerar alla resurser som passar scenariot, till exempel ett sökresultat, och inte bara de resurser som är synliga i [!DNL Experience Manager] gränssnitt.
 
@@ -422,7 +421,7 @@ AEM 6.5 Forms har flera nya funktioner och förbättringar. Högdagrarna är fö
 * Förbättrad användning av interaktiv kommunikation
 * Molnbaserade digitala signaturer i anpassningsbara formulär
 * Bädda in adaptiva formulär och interaktiv kommunikation i ett AEM Sites-program med en enda sida (SPA).
-* Stöd för variabler i AEM arbetsflöden
+* Stöd för variabler i AEM
 * Stöd för datavisningsmönster i interaktiv kommunikation
 * Sortera adaptiva formulär och interaktiva kommunikationstabeller
 * Automatisk validering av indata i formulärdatamodeller
@@ -452,7 +451,7 @@ Denna prioriteringsprocess har resulterat i över 750 kundfokuserade förändrin
 **Sites**
 
 * Kärnkomponenter ([GitHub-projekt](https://github.com/adobe/aem-core-wcm-components))
-* Implementering av referens för Vi.butik ([läs mer](/help/sites-developing/we-retail.md))
+* Implementering av referens för butik ([läs mer](/help/sites-developing/we-retail.md))
 * Maven Project Archetypes:
 
    * för fullstacksplatser: [GitHub-projekt](https://github.com/adobe/aem-project-archetype)
@@ -522,20 +521,20 @@ För [!DNL Adobe Experience Manager] 6.5, [läs listan över borttagna funktione
 
 * Ett problem rapporteras där CRX-Quickstart och dess innehåll tas bort.
 
-   Kontrollera att egenskapen `htmllibmanager.fileSystemOutputCacheLocation` är inte en tom sträng:
+  Kontrollera att egenskapen `htmllibmanager.fileSystemOutputCacheLocation` är inte en tom sträng:
 
    1. Anropar `/libs/granite/ui/content/dumplibs.rebuild.html?invalidate=true`.
    2. Uppgraderar till AEM 6.5.
    3. Kör migrering av&quot;lat innehåll&quot; på AEM 6.5.
 
-   A [Knowledge Base](https://helpx.adobe.com/experience-manager/kb/avoid-crx-quickstart-deletion-in-aem-6-5.html) det finns mer information och en lösning på problemet i artikeln.
+  A [Knowledge Base](https://helpx.adobe.com/experience-manager/kb/avoid-crx-quickstart-deletion-in-aem-6-5.html) det finns mer information och en lösning på problemet i artikeln.
 
 * Om du använder JDK 11 med AEM 6.5-instansen kan vissa sidor visas som tomma efter distributionen av vissa paket. Följande felmeddelande visas i loggfilen:
 
-   ```java
-   *ERROR* [OsgiInstallerImpl] org.apache.sling.scripting.sightly bundle org.apache.sling.scripting.sightly:1.1.2.1_4_0 (558)[org.apache.sling.scripting.sightly.impl.engine.extension.use.JavaUseProvider(3345)] : Error during instantiation of the implementation object (java.lang.NoClassDefFoundError: jdk/internal/reflect/ConstructorAccessorImpl)
-   java.lang.NoClassDefFoundError: jdk/internal/reflect/ConstructorAccessorImpl
-   ```
+  ```java
+  *ERROR* [OsgiInstallerImpl] org.apache.sling.scripting.sightly bundle org.apache.sling.scripting.sightly:1.1.2.1_4_0 (558)[org.apache.sling.scripting.sightly.impl.engine.extension.use.JavaUseProvider(3345)] : Error during instantiation of the implementation object (java.lang.NoClassDefFoundError: jdk/internal/reflect/ConstructorAccessorImpl)
+  java.lang.NoClassDefFoundError: jdk/internal/reflect/ConstructorAccessorImpl
+  ```
 
 Så här löser du felet:
 
@@ -571,19 +570,19 @@ org.osgi.framework.bootdelegation=sun.*,com.sun.*,jdk.internal.reflect,jdk.inter
 * När en formulärdatamodelltjänst anropas från regelredigeraren för att dynamiskt uppdatera värden för bildvalskomponenten, uppdateras inte värdena för bildvalskomponenten i en adaptiv varifrån. (CQ-4254754)
 * AEM Forms Designer-installationsprogrammet kräver 32-bitarsversionen av [Visual C++ redistributable runtime package 2012](https://docs.microsoft.com/en-US/cpp/windows/latest-supported-vc-redist?view=msvc-170) och [Omdistribuerbara Visual C++-körtidspaket 2013](https://support.microsoft.com/en-us/topic/update-for-visual-c-2013-and-visual-c-redistributable-package-5b2ac5ab-4139-8acc-08e2-9578ec9b2cf1). Kontrollera att tidigare nämnda omdistribuerbara körtidspaket är installerade innan du startar installationen. (CQ-4265668)
 
-* PDF Generator stöder inte autentisering med smartkort. När en administratör aktiverar grupprincipen `Interactive Logon: Require Smart card` på en Windows-server blir alla användare av PDF Generator ogiltiga.
+* PDF Generator stöder inte autentisering med smartkort. När en administratör aktiverar grupprincipen `Interactive Logon: Require Smart card` på en Windows-server blir alla befintliga PDF Generator-användare ogiltiga.
 
 * När ett adaptivt formulär har konfigurerats för att dynamiskt uppdatera värden för en komponent och den publiceringsinstans som är värd för formuläret nås via Dispatcher, slutar funktionen att dynamiskt uppdatera värden för ett fält att fungera. Du löser problemet genom att öppna CRXDE på publiceringsinstansen och navigera till `/libs/fd/af/runtime/clientlibs/guideChartReducer`och skapa den egenskap som anges nedan.
 
    * Namn: allowProxy
    * Typ: Boolean
    * Värde: true
-   * Skyddad: Falskt
+   * Skyddat: Falskt
    * Obligatoriskt: Falskt
    * Flera: Falskt
    * Automatiskt skapad: Falskt
 
-   Egenskapen gör att klientbiblioteken under körningsmappen kan komma åt proxies. (CQ-4268679)
+  Egenskapen gör att klientbiblioteken under körningsmappen kan komma åt proxies. (CQ-4268679)
 
 * När AEM Forms startas `SAX Security Manager could not be setup` visas.
 * När du öppnar ett PDF som är skyddat med AEM Forms Document Security på en Apple iOS eller iPadOS med version 20.10.00 av Adobe Acrobat Reader
@@ -593,7 +592,7 @@ org.osgi.framework.bootdelegation=sun.*,com.sun.*,jdk.internal.reflect,jdk.inter
 
 Följande webbplatser är bara tillgängliga för kunder. Om du är kund och behöver åtkomst kontaktar du din kontoansvarige på Adobe.
 
-* [Produktnedladdning på licensing.adobe.com](https://licensing.adobe.com/).
+* [Nedladdning av produkt på licensing.adobe.com](https://licensing.adobe.com/).
 
 * Produktuppdateringar, patchar och paket för ytterligare funktionalitet i [Programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html).
 

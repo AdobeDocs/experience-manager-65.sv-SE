@@ -1,20 +1,16 @@
 ---
 title: Stöd för RDBMS i AEM 6.4
-seo-title: RDBMS Support in AEM 6.4
 description: Läs mer om stöd för relationsdatabasens beständighet i AEM 6.4 och de tillgängliga konfigurationsalternativen.
-seo-description: Learn about the relational database persistence support in AEM 6.4 and the available configuration options.
-uuid: c8422b0d-c6df-488d-bb6a-af92c9afda50
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: deploying
-discoiquuid: 6a754d42-da30-4c2f-8b9c-369e1f1f92b5
 docset: aem65
 feature: Configuring
 exl-id: 1e34c5ca-9e08-4b2a-901c-ab28aeb4a807
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '619'
+source-wordcount: '616'
 ht-degree: 0%
 
 ---
@@ -27,7 +23,7 @@ Stöd för relationsdatabasbeständighet i AEM implementeras med Document Microk
 
 Det består av ett Java-API som är baserat på Mongo Java API. En implementering av ett BlobStore API ingår också. Bloggar lagras som standard i databasen.
 
-Mer information om implementering finns i [RDBDocumentStore](https://jackrabbit.apache.org/oak/docs/apidocs/org/apache/jackrabbit/oak/plugins/document/rdb/RDBDocumentStore.html) och [RDBBlobStore](https://jackrabbit.apache.org/oak/docs/apidocs/org/apache/jackrabbit/oak/plugins/document/rdb/RDBBlobStore.html) dokumentation.
+Mer information om implementeringsdetaljer finns i [RDBDocumentStore](https://jackrabbit.apache.org/oak/docs/apidocs/org/apache/jackrabbit/oak/plugins/document/rdb/RDBDocumentStore.html) och [RDBBlobStore](https://jackrabbit.apache.org/oak/docs/apidocs/org/apache/jackrabbit/oak/plugins/document/rdb/RDBBlobStore.html) dokumentation.
 
 >[!NOTE]
 >
@@ -43,7 +39,7 @@ Databasen skapas genom att `DocumentNodeStoreService` OSGi-tjänst. Det har utö
 
 För att en datakälla ska fungera måste den konfigureras med AEM. Detta görs via `org.apache.sling.datasource.DataSourceFactory.config` -fil. JDBC-drivrutinerna för respektive databas måste anges separat som OSGi-paket i den lokala konfigurationen.
 
-Anvisningar om hur du skapar OSGi-paket för JDBC-drivrutiner finns i detta [dokumentation](https://sling.apache.org/documentation/bundles/datasource-providers.html#convert-driver-jars-to-bundle) på webbplatsen Apache Sling.
+Anvisningar om hur du skapar OSGi-paket för JDBC-drivrutiner finns i det här [dokumentation](https://sling.apache.org/documentation/bundles/datasource-providers.html#convert-driver-jars-to-bundle) på webbplatsen Apache Sling.
 
 När paketen är på plats följer du stegen nedan för att konfigurera AEM med RDB-beständighet:
 

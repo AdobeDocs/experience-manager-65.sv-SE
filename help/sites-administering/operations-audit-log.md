@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 565d89de-b3ca-41a5-8e1c-d10905c25fb5
 exl-id: 1e05faf5-619a-4ea3-acbf-2fd37c71e6d2
 feature: Operations
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '602'
+source-wordcount: '600'
 ht-degree: 0%
 
 ---
@@ -58,7 +58,7 @@ Så här konfigurerar du rensning av granskningslogg:
    >Innehållssökvägen gäller endast för underordnade objekt till `/var/audit/com.day.cq.wcm.core.page` i databasen.
 
 1. Spara regeln.
-1. Regeln som du nyss skapade måste visas på kontrollpanelen för åtgärder för att den ska kunna köras. För att göra detta, gå **Verktyg - Drift - Underhåll** på AEM välkomstskärm.
+1. Regeln som du skapade måste visas på kontrollpanelen för åtgärder för att den ska kunna köras. För att göra detta, gå **Verktyg - Drift - Underhåll** på AEM välkomstskärm.
 
 1. Tryck på **Underhållsfönster varje vecka** kort.
 

@@ -6,10 +6,10 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: page-authoring
 content-type: reference
 exl-id: bd2636d1-6f13-4c6c-b8cd-3bed9e83a101
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1906'
-ht-degree: 2%
+source-wordcount: '1892'
+ht-degree: 0%
 
 ---
 
@@ -72,7 +72,7 @@ Den här strukturen kan visas från webbplatskonsolen som du kan använda för a
 
 ### Konventioner för sidnamngivning {#page-naming-conventions}
 
-När du skapar en ny sida finns det två nyckelfält:
+När du skapar en sida finns det två nyckelfält:
 
 * **[Titel](#title)**:
 
@@ -84,7 +84,7 @@ När du skapar en ny sida finns det två nyckelfält:
    * Detta används för att generera URI.
    * Användarindata för det här fältet är valfria. Om inget anges hämtas namnet från titeln.
 
-AEM skapar en ny sida [validera sidnamnet enligt konventionerna](/help/sites-developing/naming-conventions.md) som ålagts av AEM och JCR.
+När du skapar en sida AEM [validerar sidnamnet enligt konventionerna](/help/sites-developing/naming-conventions.md) som ålagts av AEM och JCR.
 
 Implementeringen och listan över tillåtna tecken skiljer sig något beroende på användargränssnittet (det är mer omfattande för det beröringsaktiverade användargränssnittet), men det minsta tillåtna är:
 
@@ -98,7 +98,7 @@ Använd bara dessa tecken om du vill vara säker på att de accepteras/används 
 
 #### Titel {#title}
 
-Om du bara anger en **sidtitel** när du skapar en ny sida härleds sidans **namn**[ i AEM från den här strängen och namnet valideras enligt konventionerna i AEM och JCR. ](/help/sites-developing/naming-conventions.md) I båda användargränssnitten är **Titel** fält som innehåller ogiltiga tecken accepteras, men det härledda namnet får de ogiltiga tecknen understött. Till exempel:
+Om du bara anger en sida **Titel** när du skapar en sida, hämtar AEM sidan **Namn** från denna sträng och [validera namnet enligt konventionerna](/help/sites-developing/naming-conventions.md) som ålagts av AEM och JCR. I båda användargränssnitten är **Titel** fält som innehåller ogiltiga tecken accepteras, men det härledda namnet får de ogiltiga tecknen understött. Till exempel:
 
 | Titel | Härlett namn |
 |---|---|
@@ -107,7 +107,7 @@ Om du bara anger en **sidtitel** när du skapar en ny sida härleds sidans **nam
 
 #### Namn {#name}
 
-Om du anger en sida **Namn** när du skapar en ny sida AEM [validera namnet enligt konventionerna](/help/sites-developing/naming-conventions.md) som ålagts av AEM och JCR.
+Om du anger en sida **Namn** när du skapar en sida, AEM [validerar namnet enligt konventionerna](/help/sites-developing/naming-conventions.md) som ålagts av AEM och JCR.
 
 I det klassiska användargränssnittet **kan inte ange ogiltiga tecken** i **Namn** fält.
 
@@ -122,7 +122,7 @@ I det klassiska användargränssnittet **kan inte ange ogiltiga tecken** i **Nam
 
 ### Mallar {#templates}
 
-I AEM anger en mall en speciell typ av sida. En mall kommer att användas som bas för alla nya sidor som skapas.
+I AEM anger en mall en speciell typ av sida. En mall används som bas för alla nya sidor som skapas.
 
 Mallen definierar strukturen för en sida, inklusive en miniatyrbild och andra egenskaper. Du kan till exempel ha separata mallar för produktsidor, platskartor och kontaktinformation. Mallar består av [komponenter](#components).
 
@@ -155,7 +155,7 @@ När du har skapat och öppnat en sida kan du [lägga till innehåll med kompone
 
 Om du inte har skapat alla sidor åt dig i förväg måste du skapa en sida innan du kan börja skapa innehåll:
 
-1. Från **Webbplatser** väljer du den nivå där du vill skapa en ny sida.
+1. Från **Webbplatser** väljer du den nivå där du vill skapa en sida.
 
    I följande exempel skapar du en sida under nivån **Produkter** - visas i den vänstra rutan; den högra rutan visar sidor som redan finns på nivån under **Produkter**.
 
@@ -170,7 +170,7 @@ Om du inte har skapat alla sidor åt dig i förväg måste du skapa en sida inna
    * Ange en **Titel**; detta visas för användaren.
    * Ange en **Namn**; den används för att generera URI:n. Om inget anges hämtas namnet från titeln.
 
-      * Om du anger en sida **Namn** när du skapar en ny sida AEM [validera namnet enligt konventionerna](/help/sites-developing/naming-conventions.md) av AEM och JCR.
+      * Om du anger en sida **Namn** när du skapar en sida, AEM [validerar namnet enligt konventionerna](/help/sites-developing/naming-conventions.md) av AEM och JCR.
       * I det klassiska användargränssnittet **kan inte ange ogiltiga tecken** i **Namn** fält.
 
    * Klicka på den mall som du vill använda för att skapa den nya sidan.
@@ -181,7 +181,7 @@ Om du inte har skapat alla sidor åt dig i förväg måste du skapa en sida inna
    >
    >Se [Konventioner för sidnamngivning](#page-naming-conventions).
 
-   Minimiinformationen som krävs för att skapa en ny sida är **Titel** och den mall som krävs.
+   Minimiinformationen som krävs för att skapa en sida är **Titel** och den mall som krävs.
 
    ![screen_shot_2012-02-15at114845am](assets/screen_shot_2012-02-15at114845am.png)
 
@@ -195,7 +195,7 @@ Om du inte har skapat alla sidor åt dig i förväg måste du skapa en sida inna
 
    >[!NOTE]
    >
-   >Du kan också skapa en sida när du redigerar en befintlig sida. Använda **Skapa underordnad sida **från **Sida** -fliken i sidosparken skapar en ny sida direkt under den sida som redigeras.
+   >Du kan också skapa en sida när du redigerar en befintlig sida. Använda **Skapa underordnad sida** från **Sida** -fliken i sidsparken skapar en sida direkt under den sida som redigeras.
 
 ### Öppna en sida för redigering {#opening-a-page-for-editing}
 
@@ -235,7 +235,7 @@ Vid kopiering kan du antingen kopiera:
 
    >[!NOTE]
    >
-   >Du kan också använda **Kopiera sida** från **Sida** sidosparkens flik. Då öppnas en dialogruta där du kan ange mål, osv.
+   >Du kan också använda **Kopiera sida** från **Sida** sidosparkens flik. Då öppnas en dialogruta där du kan ange mål och så vidare.
 
 ### Flytta eller byta namn på sida {#moving-or-renaming-page}
 

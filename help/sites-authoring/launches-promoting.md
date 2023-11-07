@@ -10,9 +10,9 @@ discoiquuid: 3d4737ef-f758-4540-bc8f-ecd9f05f6bb0
 docset: aem65
 legacypath: /content/docs/en/aem/6-0/author/site-page-features/launches
 exl-id: f59f12a2-ecd6-49cf-90ad-621719fe51bf
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '774'
+source-wordcount: '772'
 ht-degree: 1%
 
 ---
@@ -28,7 +28,7 @@ Du måste befordra startsidor för att kunna flytta tillbaka innehållet till k�
 
 >[!NOTE]
 >
->När du har befordrat startsidorna till målet (**Produktion**) kan du aktivera **Produktion** sidor som en enhet (för att göra processen snabbare). Lägg till sidorna i ett arbetsflödespaket och använd det som nyttolast för ett arbetsflöde som aktiverar ett sidpaket. Du måste skapa arbetsflödespaketet innan du befordrar starten. Se [Bearbeta befordrade sidor med AEM](#processing-promoted-pages-using-aem-workflow).
+>När du har befordrat startsidorna till målet (**Produktion**) kan du aktivera **Produktion** sidor som en enhet (för att göra processen snabbare). Lägg till sidorna i ett arbetsflödespaket och använd det som nyttolast för ett arbetsflöde som aktiverar ett sidpaket. Du måste skapa arbetsflödespaketet innan du befordrar starten. Se [Bearbeta befordrade sidor med AEM arbetsflöde](#processing-promoted-pages-using-aem-workflow).
 
 >[!CAUTION]
 >
@@ -36,7 +36,7 @@ Du måste befordra startsidor för att kunna flytta tillbaka innehållet till k�
 
 >[!CAUTION]
 >
->När du befordrar starter för *ändrad* sidor, ändringar i både käll- och startgrenarna beaktas.
+>Vid marknadsföring av starter för *ändrad* sidor, ändringar i både käll- och startgrenarna beaktas.
 
 ## Marknadsför startsidor {#promoting-launch-pages}
 
@@ -73,7 +73,7 @@ Du kan befordra starter från **Webbplatser** konsolen eller **Startar** konsol:
 
    * **Omfång**
 
-      * **Befordra en fullständig lansering**
+      * **Befordra en fullständig start**
       * **Befordra ändrade sidor**
       * **Höj upp aktuell sida**
       * **Befordra aktuella sidor och undersidor**
@@ -95,7 +95,7 @@ Du kan befordra starter från **Webbplatser** konsolen eller **Startar** konsol:
 
 ## Befordra startsidor vid redigering {#promoting-launch-pages-when-editing}
 
-När du redigerar en startsida visas **Promote Launch** åtgärd är också tillgänglig från **Sidinformation**. Guiden öppnas för att samla in den information som behövs.
+När du redigerar en startsida visas **Promote Launch** åtgärd är också tillgänglig från **Sidinformation**. Guiden öppnas och samlar in den information som behövs.
 
 ![Promote Launch](assets/chlimage_1-103.png)
 
@@ -105,7 +105,7 @@ När du redigerar en startsida visas **Promote Launch** åtgärd är också till
 
 ## Befordra en kapslad start {#promoting-a-nested-launch}
 
-När du har skapat en kapslad start kan du befordra den tillbaka till någon av källorna, inklusive rotkällan (produktionen).
+När du har skapat en kapslad programstart kan du befordra den tillbaka till någon av källorna, inklusive rotkällan (produktionen).
 
 ![Översikt över att befordra en kapslad programstart](assets/chlimage_1-104.png)
 
@@ -125,7 +125,7 @@ När du har befordrat den valda starten och alla starter som är kapslade i den 
    * **Omfång**
 Här kan du välja om du vill befordra hela starten eller bara sidor som faktiskt har redigerats. Om det är det senare alternativet kan du välja att ta med/exkludera underordnade sidor. Standardkonfigurationen är att endast befordra sidändringar för den aktuella sidan:
 
-      * **Befordra en fullständig lansering**
+      * **Befordra en fullständig start**
       * **Befordra ändrade sidor**
       * **Höj upp aktuell sida**
       * **Befordra aktuella sidor och undersidor**

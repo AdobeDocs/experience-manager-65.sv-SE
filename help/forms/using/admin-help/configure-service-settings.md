@@ -8,9 +8,9 @@ geptopics: SG_AEMFORMS/categories/managing_services
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 2fab4b0c-e5db-47cd-b85a-4ff5ad6eb178
 exl-id: a6a10ff0-6f4d-42df-9b4e-f98a53cf1806
-source-git-commit: 6caf3ef4a00275f0f73be52b6a9ccba77d277f1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '10699'
+source-wordcount: '10694'
 ht-degree: 0%
 
 ---
@@ -109,7 +109,7 @@ Standardvärdet för inställningen är `/LiveCycleES/ConnectorforIBMFileNet/Ass
 
 ## Konvertera tjänstinställningar för PDF {#convert-pdf-service-settings}
 
-Tjänsten Convert PDF ( `ConvertPdfService`) konverterar PDF-dokument till PostScript och till ett antal bildformat (JPEG, JPEG 2000, PNG och TIFF). Att konvertera ett PDF-dokument till PostScript är användbart för oövervakad serverbaserad utskrift på en PostScript-skrivare. Det är praktiskt att konvertera ett PDF-dokument till en flersidig TIFF-fil när du arkiverar dokument i content management-system som saknar stöd för PDF-dokument.
+Tjänsten Convert PDF ( `ConvertPdfService`) konverterar PDF-dokument till PostScript och till flera bildformat (JPEG, JPEG 2000, PNG och TIFF). Att konvertera ett PDF-dokument till PostScript är användbart för oövervakad serverbaserad utskrift på en PostScript-skrivare. Det är praktiskt att konvertera ett PDF-dokument till en flersidig TIFF-fil när du arkiverar dokument i content management-system som saknar stöd för PDF-dokument.
 
 Följande inställningar är tillgängliga för tjänsten Convert PDF.
 
@@ -243,7 +243,7 @@ Följande inställningar är tillgängliga för FTP-tjänsten.
 
 ## Generera tjänstinställningar för PDF {#generate-pdf-service-settings}
 
-Tjänsten Generate PDF ( `GeneratePDFService`) konverterar filer i olika format till PDF-dokument och konverterar PDF-dokument till ett antal filformat.
+Tjänsten Generate PDF ( `GeneratePDFService`) konverterar filer i olika format till PDF-dokument och konverterar PDF-dokument till flera filformat.
 
 Följande inställningar är tillgängliga för tjänsten Generate PDF.
 
@@ -326,7 +326,7 @@ Standardvärdena för tjänsten Guide Utilities har stöd för de flesta fall. O
 
 ### Använda stödlinjer i ett serverkluster {#using-guides-in-a-server-cluster}
 
-Rendering a Guide in a server Cluster that does not use sticky sessions fails with a NullPointerException. En begäran om stödlinjer utnyttjar säkra URL:er som som standard är unika för den server som de genereras på. I ett kluster som använder kladdiga sessioner dirigeras alla efterföljande begäranden för den sessionen eller användaren enbart till servern efter att en begäran träffar en nod i klustret, och allt är ok. I ett kluster som inte använder klibbiga sessioner kan efterföljande begäranden påverka alla servrar i klustret. Om servern som begäran träffar på inte är den ursprungliga servern, kan de inte matcha den säkra URL:en.
+Rendering a Guide in a server Cluster that does not use sticky sessions fails with a NullPointerException. En begäran om stödlinjer använder säkra URL:er som som standard är unika för den server som de genereras på. I ett kluster som använder kladdiga sessioner dirigeras alla efterföljande begäranden för den sessionen eller användaren enbart till servern efter att en begäran träffar en nod i klustret, och allt är ok. I ett kluster som inte använder klibbiga sessioner kan efterföljande begäranden påverka alla servrar i klustret. Om servern som begäran träffar på inte är den ursprungliga servern, kan de inte matcha den säkra URL:en.
 
 Om du använder stödlinjer i ett serverkluster som inte använder kladdiga sessioner, anger du värdet macKeySeed för tjänsten GuidesUtility och stoppar och startar sedan klustret.
 
@@ -826,7 +826,7 @@ Standardsäkerhetsprofiler installeras, som sedan kan konfigureras för att uppf
    * **SUPERVISOR_PERM:** Så här visar du processinstansdata för en tjänst som skapats från en process
    * **START_STOP_PERM:** Starta och stoppa en tjänst
    * **ADD_REMOVE_ENDPOINTS_PERM:** Lägga till, ta bort och ändra slutpunkter för en tjänst
-   * **CREATE_VERSION_PERM:** Skapa en ny version av tjänsten
+   * **CREATE_VERSION_PERM:** Skapa en version av tjänsten
    * **DELETE_VERSION_PERM:** Ta bort en version av tjänsten
    * **MODIFY_VERSION_PERM:** Ändra en version av tjänsten
    * **READ_PERM:** Så här visar du tjänsten

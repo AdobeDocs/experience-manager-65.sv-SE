@@ -9,7 +9,7 @@ docset: aem65
 pagetitle: Community Groups Console
 role: Admin
 exl-id: ef371ff8-6b4f-4e5a-98fb-d7c274927c46
-source-git-commit: 0a4aca939c564720f63f055e9522e56942eaa128
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '1686'
 ht-degree: 0%
@@ -32,7 +32,7 @@ De olika delarna av communitygrupper är:
 * **Kontroll**: gruppen kan vara öppen eller hemlig.
 * **Kapsling**: grupp kan innehålla noll eller flera grupper.
 
-<!-- This is a 404 on helpx. Please update or remove.
+<!-- This is a 404 on helpx. Update or remove.
 >[!NOTE]
 >
 >Community groups, created in the publish environment before the [existence of the Community Groups console](/help/communities/version-history.md#featurepack1fp1), is not listed in the Community Groups console, and thus, are not modifiable using the console.
@@ -304,4 +304,4 @@ När gruppen har publicerats visas följande meddelande:
 
 Ta bort en grupp från gruppkonsolen genom att markera ikonen Ta bort grupp, som visas när du håller muspekaren över gruppen.
 
-Detta tar bort alla objekt som är kopplade till gruppen, till exempel så tas allt innehåll i gruppen bort permanent och användarmedlemskap tas bort från systemet.
+Detta tar bort alla objekt som är kopplade till gruppen, till exempel tas allt innehåll i gruppen bort permanent och användarmedlemskap tas bort från systemet.

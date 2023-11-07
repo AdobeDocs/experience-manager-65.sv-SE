@@ -5,7 +5,7 @@ contentOwner: AG
 role: Architect, Admin
 feature: Developer Tools
 exl-id: 1313842c-18b1-4727-ba63-b454d0f5a2cc
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '992'
 ht-degree: 0%
@@ -61,7 +61,7 @@ I det här exemplet har företaget en upplänk på 10 Gbit/s. Den borde vara til
 
 Det här är den minsta klientorienterade kodpunkten. Du kan dock utvärdera om en tillåtelselista har ändrats eller konfigurerats med den nätverksåtgärdsgrupp som ansvarar för den här brandväggen.
 
-I exempeldiagrammen kan du dra slutsatsen att sex enheter delar en konceptuell kanal på 10 Mbit/s. Beroende på storleken på de tillgångar som används kan detta vara otillräckligt för att uppfylla användarnas förväntningar.
+I exempeldiagrammen kan du dra slutsatsen att sex enheter delar en konceptuell kanal på 10 Mbit/s. Beroende på storleken på de resurser som används kan detta vara otillräckligt för att uppfylla användarnas förväntningar.
 
 ## Topologi av [!DNL Experience Manager] miljö {#topology-of-the-aem-environment}
 

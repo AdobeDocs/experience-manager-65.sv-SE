@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: b41de64a-7d27-4633-a8d5-ac91d47eb1bb
 docset: aem65
 exl-id: c2fbf858-8815-426e-a2e5-f92bcf909ad0
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '613'
 ht-degree: 0%
@@ -32,7 +32,7 @@ Om du vill skapa en effektiv startsida för nyhetsbrevet måste du göra följan
 >[!NOTE]
 >
 >Adobe planerar inte att ytterligare förbättra denna funktion (Hantera leads och listor).
->Rekommendationen är att [Adobe Campaign och integrationen med AEM](/help/sites-administering/campaign.md).
+>Rekommendationen är att använda [Adobe Campaign och integrationen med AEM](/help/sites-administering/campaign.md).
 
 ## Skapa en lista för nyhetsbrevet {#creating-a-list-for-the-newsletter}
 
@@ -48,7 +48,7 @@ Skapa ett registreringsformulär för nyhetsbrev där användarna kan prenumerer
 
 Om du vill skapa ett eget nyhetsbrevformulär läser du i informationen om hur du skapar formulär i [Forms-dokumentation](/help/sites-authoring/default-components.md#form). Nyhetsbrevet använder taggarna från taggbiblioteket. Mer information om hur du lägger till ytterligare taggar finns i [Taggsadministration](/help/sites-authoring/tags.md#tagadministration).
 
-De dolda fälten i följande exempel anger den minsta mängden information (e-post). Du kan dessutom lägga till fler fält senare, men detta påverkar konverteringsgraden.
+De dolda fälten i följande exempel anger den minsta mängden information (e-post). Dessutom kan du lägga till fler fält senare men detta påverkar konverteringsgraden.
 
 Följande exempel är ett formulär som skapats på https://localhost:4502/cf#/content/geometrixx/en/toolbar/newsletter.html.
 
@@ -68,7 +68,7 @@ Följande exempel är ett formulär som skapats på https://localhost:4502/cf#/c
 
 När användare klickar på **Prenumerera nu** vill du att sidan Tack ska öppnas automatiskt. Skapa sidan Tack på sidan Geometrixx Newsletter. När du har skapat nyhetsbrevformuläret redigerar du formulärelementet och lägger till sökvägen på tacksidan.
 
-Om du skickar begäran tar det användaren till en **Tack** sida efter vilken de får ett e-postmeddelande. Denna tacksida skapades på /content/geometrixx/en/toolbar/newsletter/thanks_you.
+Om du skickar begäran tar det användaren till **Tack** sida efter vilken de får ett e-postmeddelande. Denna tacksida skapades på /content/geometrixx/en/toolbar/newsletter/thanks_you.
 
 ![mcm_newsletter_thankyoupage](assets/mcm_newsletter_thankyoupage.png)
 

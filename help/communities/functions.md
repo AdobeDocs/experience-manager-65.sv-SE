@@ -12,9 +12,9 @@ discoiquuid: 91833914-b811-4355-a97d-e1a9cb7441f1
 docset: aem65
 role: Admin
 exl-id: 2395c895-c611-43ac-abb6-c2bc4b4a41f4
-source-git-commit: 4dbbcc41757843d3b2d5a3bbb2656ef587e83d2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2220'
+source-wordcount: '2216'
 ht-degree: 0%
 
 ---
@@ -23,11 +23,11 @@ ht-degree: 0%
 
 Den typ av funktioner som förväntas av en community-upplevelse är välkända. Community-funktioner är tillgängliga som communityfunktioner. De är i princip en eller flera sidor som är färdiga för implementering av en communityfunktion som kräver mer än att bara lägga till en komponent på en sida i redigeringsläge. De är de byggstenar som används för att definiera strukturen för en [mall för communitywebbplats](/help/communities/sites.md) från vilka communitywebbplatser [skapad](/help/communities/sites-console.md).
 
-När en communitywebbplats har skapats kan innehåll läggas till på de resulterande sidorna med hjälp av standarden [AEM](/help/sites-authoring/editing-content.md). Olika communityfunktioner är tillgängliga enligt vad som visas i användarfunktionskonsolen.
+När en communitywebbplats har skapats kan innehåll läggas till på de resulterande sidorna med hjälp av standarden [AEM redigeringsläge](/help/sites-authoring/editing-content.md). Olika communityfunktioner är tillgängliga enligt vad som visas i användarfunktionskonsolen.
 
 >[!NOTE]
 >
->Konsolerna för att skapa [communitysajter](/help/communities/sites-console.md), [mallar för communitysajter](/help/communities/sites.md), [communitygruppsmallar](/help/communities/tools-groups.md)och [communityfunktioner](/help/communities/functions.md) används endast i författarmiljön.
+>Konsolerna för att skapa [communitysajter](/help/communities/sites-console.md), [mallar för communitywebbplatser](/help/communities/sites.md), [community-gruppmallar](/help/communities/tools-groups.md)och [communityfunktioner](/help/communities/functions.md) används endast i författarmiljön.
 
 ## Community Function Console {#community-functions-console}
 
@@ -45,7 +45,7 @@ En mall för en community-webbplats innehåller strukturen för en community-web
 
 ### Titel- och URL-inställningar {#title-and-url-settings}
 
-**Titel** och **URL** är egenskaper som är gemensamma för alla communityfunktioner.
+**Titel** och **URL** är gemensamma egenskaper för alla communityfunktioner.
 
 När en communityfunktion läggs till i en mall för en community-webbplats eller läggs till när [ändra](/help/communities/sites-console.md#modifying-site-properties) strukturen för en communitywebbplats öppnas funktionens dialogruta så att titeln och URL:en kan konfigureras.
 
@@ -55,13 +55,13 @@ När en communityfunktion läggs till i en mall för en community-webbplats elle
 
 * **Titel**
 
-   (*Obligatoriskt*) Texten som visas på menyn med funktioner för webbplatsen
+  (*Obligatoriskt*) Den text som visas på menyn med funktioner för webbplatsen
 
 * **URL**
 
-   (*Obligatoriskt*) Namnet som används för att generera URI:n. Namnet måste överensstämma med [namnkonventioner](/help/sites-developing/naming-conventions.md) som ålagts av AEM och JCR.
+  (*Obligatoriskt*) Namnet som används för att generera URI:n. Namnet måste överensstämma med [namnkonventioner](/help/sites-developing/naming-conventions.md) som ålagts av AEM och JCR.
 
-Använd till exempel den webbplats som skapas från följande [Komma igång](/help/communities/getting-started.md) självstudiekurs, om
+Använd till exempel den webbplats som skapas från följande [Komma igång](/help/communities/getting-started.md) självstudie, om
 
 * Titel = webbsida
 * URL = sida
@@ -84,17 +84,17 @@ När du lägger till en mall öppnas följande dialogruta:
 
 * [Titel- och URL-inställningar](#title-and-url-settings)
 
-* **Visa vyn&quot;Mina aktiviteter&quot;**
+* **Visa vyn Mina aktiviteter**
 
-   Om du väljer det här alternativet innehåller sidan Aktiviteter en flik som filtrerar aktiviteter baserat på aktiviteter som genererats i communityn av den aktuella medlemmen. Standard är valt.
+  Om du väljer det här alternativet innehåller sidan Aktiviteter en flik som filtrerar aktiviteter baserat på aktiviteter som genererats i communityn av den aktuella medlemmen. Standard är valt.
 
 * **Visa vyn Alla aktiviteter**
 
-   Om du väljer det här alternativet innehåller sidan Aktiviteter en flik som innehåller alla aktiviteter som genereras i den community som den aktuella medlemmen har tillgång till. Standard är valt.
+  Om du väljer det här alternativet innehåller sidan Aktiviteter en flik som innehåller alla aktiviteter som genereras i den community som den aktuella medlemmen har tillgång till. Standard är valt.
 
 * **Visa vyn Nyhetsfeed**
 
-   Om du väljer det här alternativet innehåller aktivitetssidorna en flik som filtrerar aktiviteter baserat på de som den aktuella medlemmen följer. Standard är valt.
+  Om du väljer det här alternativet innehåller aktivitetssidorna en flik som filtrerar aktiviteter baserat på de som den aktuella medlemmen följer. Standard är valt.
 
 ### Bloggfunktion {#blog-function}
 
@@ -108,19 +108,19 @@ När du lägger till en mall öppnas följande dialogruta:
 
 * **Tillåt behöriga medlemmar**
 
-   Om du väljer det här alternativet tillåter bloggen endast behöriga medlemmar att skapa artiklar genom att tillåta val av en [privilegierad medlemsgrupp](/help/communities/users.md#privileged-members-group). Om det inte är markerat kan alla community-medlemmar skapa. Standard är avmarkerat.
+  Om du väljer det här alternativet tillåter bloggen endast behöriga medlemmar att skapa artiklar genom att tillåta val av en [privilegierad medlemsgrupp](/help/communities/users.md#privileged-members-group). Om det inte är markerat kan alla community-medlemmar skapa. Standard är avmarkerat.
 
 * **Tillåt filöverföringar**
 
-   Om du väljer det här alternativet kan medlemmarna ladda upp filer. Standard är valt.
+  Om du väljer det här alternativet kan medlemmarna ladda upp filer. Standard är valt.
 
 * **Tillåt kopplade svar**
 
-   Om det inte är markerat tillåter bloggen svar (kommentarer) på en artikel, men det är inte tillåtet att svara på kommentarer. Standard är valt.
+  Om det inte är markerat tillåter bloggen svar (kommentarer) på en artikel, men det är inte tillåtet att svara på kommentarer. Standard är valt.
 
 * **Tillåt innehåll**
 
-   Om du väljer det här alternativet identifieras bloggen som [innehåll](/help/communities/featured.md). Standard är valt.
+  Om du väljer det här alternativet identifieras bloggen som [presenterat innehåll](/help/communities/featured.md). Standard är valt.
 
 ### Kalenderfunktion {#calendar-function}
 
@@ -134,23 +134,23 @@ När du lägger till en mall öppnas följande dialogruta:
 
 * **Tillåt fästa**
 
-   Om du väljer det här alternativet kan ämnessvar fästas till början av kommentarlistan. Standard är valt.
+  Om du väljer det här alternativet kan ämnessvar fästas till början av kommentarlistan. Standard är valt.
 
 * **Tillåt behöriga medlemmar**
 
-   Om du väljer det här alternativet tillåter bloggen endast behöriga medlemmar att skapa artiklar genom att tillåta val av en [privilegierad medlemsgrupp](/help/communities/users.md#privileged-members-group). Om det inte är markerat kan alla community-medlemmar skapa. Standard är avmarkerat.
+  Om du väljer det här alternativet tillåter bloggen endast behöriga medlemmar att skapa artiklar genom att tillåta val av en [privilegierad medlemsgrupp](/help/communities/users.md#privileged-members-group). Om det inte är markerat kan alla community-medlemmar skapa. Standard är avmarkerat.
 
 * **Tillåt filöverföringar**
 
-   Om du väljer det här alternativet kan medlemmarna ladda upp filer. Standard är valt.
+  Om du väljer det här alternativet kan medlemmarna ladda upp filer. Standard är valt.
 
 * **Tillåt kopplade svar**
 
-   Om det inte är markerat tillåter bloggen svar (kommentarer) på en artikel, men det är inte tillåtet att svara på kommentarer. Standard är valt.
+  Om det inte är markerat tillåter bloggen svar (kommentarer) på en artikel, men det är inte tillåtet att svara på kommentarer. Standard är valt.
 
 * **Tillåt innehåll**
 
-   Om det här alternativet är markerat identifieras dess innehåll som [innehåll](/help/communities/featured.md). Standard är valt.
+  Om det här alternativet är markerat identifieras dess innehåll som [presenterat innehåll](/help/communities/featured.md). Standard är valt.
 
 ### Funktion för aktuellt innehåll {#featured-content-function}
 
@@ -180,23 +180,23 @@ När du lägger till en mall öppnas följande dialogruta:
 
 * **Tillåt fästa**
 
-   Om du väljer det här alternativet kan ämnessvar fästas till början av kommentarlistan. Standard är valt.
+  Om du väljer det här alternativet kan ämnessvar fästas till början av kommentarlistan. Standard är valt.
 
 * **Tillåt behöriga medlemmar**
 
-   Om det här alternativet är markerat tillåter forumet endast behöriga medlemmar att publicera ämnen genom att tillåta val av en [privilegierad medlemsgrupp](/help/communities/users.md#privileged-members-group). Om det inte är markerat får alla community-medlemmar publicera. Standard är avmarkerat.
+  Om det här alternativet är markerat tillåter forumet endast behöriga medlemmar att publicera ämnen genom att tillåta val av en [privilegierad medlemsgrupp](/help/communities/users.md#privileged-members-group). Om det inte är markerat får alla community-medlemmar publicera. Standard är avmarkerat.
 
 * **Tillåt filöverföringar**
 
-   Om du väljer det här alternativet kan medlemmarna ladda upp filer. Standard är valt.
+  Om du väljer det här alternativet kan medlemmarna ladda upp filer. Standard är valt.
 
 * **Tillåt kopplade svar**
 
-   Om det inte är markerat tillåter forumet kommentarer om ett ämne, men svar på dessa kommentarer tillåts inte. Standard är valt.
+  Om det inte är markerat tillåter forumet kommentarer om ett ämne, men det är inte tillåtet att svara på dessa kommentarer. Standard är valt.
 
 * **Tillåt innehåll**
 
-   Om det här alternativet är markerat identifieras komponentens innehåll som [innehåll](/help/communities/featured.md). Standard är valt.
+  Om det här alternativet är markerat identifieras komponentens innehåll som [presenterat innehåll](/help/communities/featured.md). Standard är valt.
 
 ### Funktionen Grupper {#groups-function}
 
@@ -208,7 +208,7 @@ När du lägger till en mall öppnas följande dialogruta:
 
 Med gruppfunktionen kan communitymedlemmar skapa undergrupper på communitywebbplatsen i publiceringsmiljön.
 
-Beroende på [inställningar](/help/communities/sites-console.md#groupmanagement) när funktionen Grupper ingår i en [mall för communitywebbplats](/help/communities/sites.md), kan grupperna vara offentliga eller privata och en eller flera communitygruppsmallar kan konfigureras för att erbjuda ett urval av mallar när communitygruppen faktiskt skapas (t.ex. från publiceringsmiljön). A [community-gruppmall](/help/communities/tools-groups.md) anger vilka communityfunktioner som skapas för gruppsidorna, t.ex. forum och kalendrar.
+Beroende på [inställningar](/help/communities/sites-console.md#groupmanagement) när funktionen Grupper ingår i en [mall för communitywebbplats](/help/communities/sites.md), kan grupperna vara offentliga eller privata och en eller flera communitygruppsmallar kan konfigureras för att erbjuda ett urval av mallar när communitygruppen faktiskt skapas (till exempel från publiceringsmiljön). A [community-gruppmall](/help/communities/tools-groups.md) anger vilka communityfunktioner som skapas för gruppsidorna, till exempel forum och kalendrar.
 
 När en community-grupp skapas skapas en medlemsgrupp dynamiskt för den nya gruppen, som medlemmar kan tilldelas eller ansluta till. Mer information finns i [Hantera användare och användargrupper](/help/communities/users.md).
 
@@ -222,15 +222,15 @@ När du lägger till en mall öppnas följande dialogruta:
 
 * **Välj gruppmallar**
 
-   En nedrullningsbar meny som gör det möjligt att välja mellan en eller flera aktiverade gruppmallar som den som skapar en ny community (i publiceringsmiljön) kan välja mellan.
+  En nedrullningsbar meny som gör det möjligt att välja mellan en eller flera aktiverade gruppmallar som den som skapar en ny community (i publiceringsmiljön) kan välja mellan.
 
 * **Tillåt behöriga medlemmar**
 
-   Om det här alternativet är markerat tillåter forumet endast behöriga medlemmar att publicera ämnen genom att tillåta val av en [säkerhetsgrupp för behöriga medlemmar](/help/communities/users.md#privileged-members-group). Om det inte är markerat får alla community-medlemmar publicera. Standard är avmarkerat.
+  Om det här alternativet är markerat tillåter forumet endast behöriga medlemmar att publicera ämnen genom att tillåta val av en [säkerhetsgrupp för behöriga medlemmar](/help/communities/users.md#privileged-members-group). Om det inte är markerat får alla community-medlemmar publicera. Standard är avmarkerat.
 
 * **Tillåt skapande av publicering**
 
-   Om du väljer det här alternativet kan auktoriserade communitymedlemmar skapa en grupp i publiceringsmiljön. Om du avmarkerar det här alternativet kan nya grupper (undergrupper) bara skapas i författarmiljön från gruppkonsolen Webbplatser.
+  Om du väljer det här alternativet kan auktoriserade communitymedlemmar skapa en grupp i publiceringsmiljön. Om du avmarkerar det här alternativet kan nya grupper (undergrupper) bara skapas i författarmiljön från gruppkonsolen Webbplatser.
 Standard är valt.
 
 ### Ideationsfunktion {#ideation-function}
@@ -245,25 +245,25 @@ När du lägger till en mall öppnas följande dialogruta, som anger standardnam
 
 * **Tillåt behöriga medlemmar**
 
-   Om det här alternativet är markerat tillåter forumet endast behöriga medlemmar att publicera ämnen genom att tillåta val av en [säkerhetsgrupp för behöriga medlemmar](/help/communities/users.md#privileged-members-group). Om det inte är markerat får alla community-medlemmar publicera. Standard är avmarkerat.
+  Om det här alternativet är markerat tillåter forumet endast behöriga medlemmar att publicera ämnen genom att tillåta val av en [säkerhetsgrupp för behöriga medlemmar](/help/communities/users.md#privileged-members-group). Om det inte är markerat får alla community-medlemmar publicera. Standard är avmarkerat.
 
 * **Tillåt filöverföringar**
 
-   Om du väljer det här alternativet kan medlemmarna överföra filer. Standard är valt.
+  Om du väljer det här alternativet kan medlemmarna överföra filer. Standard är valt.
 
 * **Tillåt kopplade svar**
 
-   Om du inte väljer det här alternativet tillåts svar (kommentarer) på ett ämne, men det är inte tillåtet att svara på kommentarer. Standard är valt.
+  Om du inte väljer det här alternativet tillåts svar (kommentarer) på ett ämne, men det är inte tillåtet att svara på kommentarer. Standard är valt.
 
 * **Tillåt innehåll**
 
-   Om det här alternativet är markerat identifieras dess innehåll som [innehåll](/help/communities/featured.md). Standard är valt.
+  Om det här alternativet är markerat identifieras dess innehåll som [presenterat innehåll](/help/communities/featured.md). Standard är valt.
 
 ### Ledarbordsfunktion {#leaderboard-function}
 
 Ledpanelsfunktionen är en sida med en [Ledarpanelskomponent](/help/communities/enabling-leaderboard.md).
 
-**ANMÄRKNING**: Komponenten Leaderboard behöver konfigureras ytterligare *efter* en communitywebbplats skapas från en community-mall som innehåller funktionen Ledarpanel. Ange komponenterna i Ledarpanelen [regler](/help/communities/enabling-leaderboard.md#rules-tab), som är beroende av konfigurationen av [poängsättning och märken](/help/communities/implementing-scoring.md) för communitywebbplatsen.
+**ANMÄRKNING**: Komponenten Leaderboard behöver konfigureras ytterligare *efter* en communitywebbplats skapas från en community-mall som innehåller funktionen Ledarpanel. Ange komponenterna i Ledarpanelen [regler](/help/communities/enabling-leaderboard.md#rules-tab), som är beroende av konfigurationen av [poängsättning och emblem](/help/communities/implementing-scoring.md) för communitywebbplatsen.
 
 När du lägger till en mall öppnas följande dialogruta, som anger standardnamn för titel och URL samt standardvisningsinställningar för mallen:
 
@@ -273,22 +273,22 @@ När du lägger till en mall öppnas följande dialogruta, som anger standardnam
 
 * **Visa märke**
 
-   Om du väljer det här alternativet inkluderas en kolumn för ikoner för emblem i rankningslistan.
+  Om du väljer det här alternativet inkluderas en kolumn för ikoner för emblem i rankningslistan.
 Standard är avmarkerat.
 
 * **Visa märkesnamn**
 
-   Om du väljer det här alternativet inkluderas en kolumn för märkordsnamnet i resultatlistan.
+  Om du väljer det här alternativet inkluderas en kolumn för märkordsnamnet i resultatlistan.
 Standard är avmarkerat.
 
 * **Display Avatar**
 
-   Om du väljer det här alternativet inkluderas avatarbilden för medlemmen i ledningsgruppen bredvid namnlänken till medlemsprofilen.
+  Om du väljer det här alternativet inkluderas avatarbilden för medlemmen i ledningsgruppen bredvid namnlänken till medlemsprofilen.
 Standard är avmarkerat.
 
 ### Sidfunktion {#page-function}
 
-Sidfunktionen lägger till en tom sida på communitywebbplatsen som den är kopplad till funktionerna på communitywebbplatsen: inloggning, meny, meddelanden, meddelanden, teman och branding. Innehållet läggs till på sidan med [AEM](/help/sites-authoring/editing-content.md).
+Sidfunktionen lägger till en tom sida på communitywebbplatsen som den är kopplad till funktionerna på communitywebbplatsen: inloggning, meny, meddelanden, meddelanden, teman och varumärken. Innehållet läggs till på sidan med [AEM](/help/sites-authoring/editing-content.md).
 
 När det läggs till i en mall är den enda konfigurationen för [Titel- och URL-inställningar](#title-and-url-settings).
 
@@ -304,25 +304,25 @@ När konfigurationen läggs till i en mall tillåts begränsningar för behörig
 
 * **Tillåt fästa**
 
-   Om du väljer det här alternativet kan ämnessvar fästas till början av kommentarlistan. Standard är valt.
+  Om du väljer det här alternativet kan ämnessvar fästas till början av kommentarlistan. Standard är valt.
 
 * **Tillåt behöriga medlemmar**
 
-   Om det här alternativet är markerat tillåter QnA-forumet endast behöriga medlemmar att skicka frågor genom att tillåta val av en [privilegierad medlemsgrupp](/help/communities/users.md#privileged-members-group). Om det inte är markerat får alla community-medlemmar publicera. Standard är avmarkerat.
+  Om det här alternativet är markerat tillåter QnA-forumet endast behöriga medlemmar att skicka frågor genom att tillåta val av en [privilegierad medlemsgrupp](/help/communities/users.md#privileged-members-group). Om det inte är markerat får alla community-medlemmar publicera. Standard är avmarkerat.
 
 * **Tillåt filöverföringar**
 
-   Om du väljer det här alternativet kan medlemmarna ladda upp filer. Standard är valt.
+  Om du väljer det här alternativet kan medlemmarna ladda upp filer. Standard är valt.
 
 * **Tillåt kopplade svar**
 
-   Om det inte är markerat tillåter QnA-forumet kommentarer (svar) till en publicerad fråga, men svar på svar tillåts inte. Standard är valt.
+  Om det inte är markerat tillåter QnA-forumet kommentarer (svar) till en publicerad fråga, men svar på svar tillåts inte. Standard är valt.
 
 * **Tillåt innehåll**
 
-   Om det här alternativet är markerat identifieras dess innehåll som [innehåll](/help/communities/featured.md). Standard är valt.
+  Om det här alternativet är markerat identifieras dess innehåll som [presenterat innehåll](/help/communities/featured.md). Standard är valt.
 
-## Skapa community-funktion {#create-community-function}
+## Skapa communityfunktion {#create-community-function}
 
 Du kan skapa en communityfunktion genom att välja `Create Community Function` ikonen längst upp i användarfunktionskonsolen. Flera funktioner som är baserade på samma AEM kan skapas och sedan anpassas unikt genom att du öppnar i redigeringsläget.
 
@@ -336,17 +336,17 @@ På panelen Community Function Name konfigureras ett namn, en beskrivning och om
 
 * **Community-funktionsnamn**
 
-   Det funktionsnamn som används för visning och lagring.
+  Det funktionsnamn som används för visning och lagring.
 
 * **Beskrivning av communityfunktion**
 
-   Funktionsbeskrivningen för visning.
+  Funktionsbeskrivningen för visning.
 
 * **Handikappade/aktiverade**
 
-   En växlingsväxling som styr om funktionen kan refereras.
+  En växlingsväxling som styr om funktionen kan refereras.
 
-### AEM Blueprint {#aem-blueprint}
+### AEM {#aem-blueprint}
 
 ![aem-blueprint](assets/aem-blueprint.png)
 
@@ -354,15 +354,15 @@ På `AEM Blueprint` kan du välja en plan som är den underliggande implementeri
 
 Community-funktionen är en miniwebbplats som innehåller en eller flera sidor som är färdiga att ingå i en community-webbplats, inklusive inloggning, användarprofiler, meddelanden, webbplatsmeny, söknings-, teman- och varumärkesfunktioner. När funktionen har skapats är det möjligt att [öppna funktionen](#open-community-function) i redigeringsläget och anpassa sid- eller komponentinställningarna.
 
-Eftersom communityfunktionen är implementerad som en [live copy](/help/sites-administering/msm.md#live-copies) av [skiss](/help/sites-administering/msm-livecopy.md#creatingablueprint)är det möjligt att göra ändringar i en funktion som påverkar alla communitywebbplatssidor som skapas från [mall för communitywebbplats](/help/communities/sites.md) eller [community-gruppmall](/help/communities/tools-groups.md) som innehåller funktionen. Det går också att ta bort kopplingen mellan en sida och dess överordnade plan för att göra ändringar på sidnivå.
+Eftersom communityfunktionen används som [live copy](/help/sites-administering/msm.md#live-copies) av [skiss](/help/sites-administering/msm-livecopy.md#creatingablueprint)är det möjligt att göra ändringar i en funktion som påverkar alla communitywebbplatssidor som skapas från [mall för communitywebbplats](/help/communities/sites.md) eller [community-gruppmall](/help/communities/tools-groups.md) som innehåller funktionen. Det går också att ta bort kopplingen mellan en sida och dess överordnade plan för att göra ändringar på sidnivå.
 
 Se även [Multi Site Manager](/help/sites-administering/msm.md).
 
 ### Miniatyrbild {#thumbnail}
 
-![miniatyrbild](assets/funtion-thumbnail.png)
+![miniatyrbild av funktion](assets/funtion-thumbnail.png)
 
-På panelen Miniatyrbilder kan en bild överföras för visning i [Konsol för communityfunktioner](#community-functions-console).
+På panelen Miniatyrbilder kan en bild överföras för visning i [Community Function console](#community-functions-console).
 
 ## Öppen communityfunktion {#open-community-function}
 

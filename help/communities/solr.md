@@ -1,7 +1,7 @@
 ---
 title: Solr-konfiguration för SRP
 seo-title: Solr Configuration for SRP
-description: En Apache Solr-installation kan delas mellan nodbutiken (Oak) och den gemensamma lagringsplatsen (SRP) med hjälp av olika samlingar
+description: En Apache Solr-installation kan delas mellan nodbutiken (Oak) och den gemensamma lagringsplatsen (SRP) med olika samlingar
 seo-description: An Apache Solr installation may be shared between the node store (Oak) and common store (SRP) by using different collections
 uuid: 7356343d-073c-4266-bdcb-c7e999281476
 contentOwner: Janice Kendall
@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: e228f1db-91ea-4ec3-86da-06d89d74bc72
 role: Admin
 exl-id: a9fc9c06-b9e6-4a5e-ab5e-0930ecd4b51b
-source-git-commit: ce6d24e53a27b64a5d0a9db2e4b6672bd77cf9ec
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1424'
+source-wordcount: '1422'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 ## Solr for AEM Platform {#solr-for-aem-platform}
 
-An [Apache Solr](https://solr.apache.org/) kan delas mellan [nodarkiv](../../help/sites-deploying/data-store-config.md) (Oak) och [gemensam lagringsplats](working-with-srp.md) (SRP) genom att använda olika samlingar.
+An [Apache Solr](https://solr.apache.org/) installationen kan delas mellan [nodarkiv](../../help/sites-deploying/data-store-config.md) (Oak) och [gemensam lagringsplats](working-with-srp.md) (SRP) med olika samlingar.
 
 Om både Oak- och SRP-samlingarna används intensivt kan en andra Solr installeras av prestandaskäl.
 
@@ -72,7 +72,7 @@ När du kör i SolrCloud-läge måste du, innan du installerar MLS, använda och
 Referens:
 [https://solr.apache.org/guide/6_6/command-line-utilities.html](https://solr.apache.org/guide/6_6/command-line-utilities.html)
 
-Användning: sh ./scripts/cloud-scripts/zkcli.sh \
+Syntax: sh ./scripts/cloud-scripts/zkcli.sh \
 -cmd upconfig \
 -zkhost *server:port* \
 -confiname *myconfig-name *\
@@ -100,7 +100,7 @@ Länka en samling till en konfiguration som redan har överförts till ZooKeeper
 Referens:
 [https://solr.apache.org/guide/6_6/command-line-utilities.html](https://solr.apache.org/guide/6_6/command-line-utilities.html)
 
-Användning: sh ./scripts/cloud-scripts/zkcli.sh \
+Syntax: sh ./scripts/cloud-scripts/zkcli.sh \
 -cmd linkconfig \
 -zkhost *server:port* \
 -collection *mycollection-name* \
@@ -110,20 +110,20 @@ Användning: sh ./scripts/cloud-scripts/zkcli.sh \
 
 Flerspråkig sökning (MLS) för AEM Communities är byggd för Solr-plattformen för att ge bättre sökning på alla språk som stöds, inklusive engelska.
 
-MLS för AEM Communities finns antingen som Standard MLS eller Advanced MLS. Standard-MLS innehåller endast Solr-konfigurationsinställningar och utesluter alla plugin-program eller resursfiler. Advanced MLS är den mer omfattande lösningen och innehåller Solr-konfigurationsinställningar samt plugin-program och relaterade resurser
+MLS för AEM Communities finns antingen som Standard MLS eller Advanced MLS. Standard-MLS innehåller endast Solr-konfigurationsinställningar och utesluter alla plugin-program eller resursfiler. Advanced MLS är den mer omfattande lösningen och innehåller Solr-konfigurationsinställningar, plugin-program och relaterade resurser
 
 Standard-MLS innehåller förbättringar för innehållssökning för följande språk:
 
-* Engelska: Förbättrad ordstam för försök att matcha ordhärledning.
+* Engelska: Förbättrad ordstammare för att matcha ordhärledning.
 * Japanska: Förbättrad japansk tokenisering för halvbreddstecken.
 
 Avancerad MLS innehåller förbättringar för innehållssökning för följande språk:
 
-* Engelska: Ersatte ordstam med lemmatiker.
+* Engelska: Ersatt ordstam med lemmatizer.
 * Tyska: Lagt till decomunder.
-* Franska: Utelöjningshantering har lagts till.
+* Franska: Uteslutningshantering har lagts till.
 * Kinesiska (förenklad): En smartare tokeniserare har lagts till.
-* Olika språk: En ordlista, stoppordslista och normalisering har lagts till.
+* Olika språk: har lagt till en ordlista, stoppordlista och en normaliserare.
 
 Följande 33 språk stöds i avancerad MLS.
 
@@ -183,12 +183,12 @@ Standard-MLS-filerna lagras i AEM.
 
    1. Create new-config-dir* such as `solr-install-dir*/myconfig/`
 
-   1. Kopiera innehållet i den befintliga Solr-konfigurationskatalogen till *new-config-dir*
+   1. Kopiera innehållet i befintlig Solr-konfigurationskatalog till *new-config-dir*
 
       * För Solr4: copy `solr-install-dir/example/solr/collection1/conf/`
       * För Solr5: copy `solr-install-dir/server/solr/configsets/data_driven_schema_configs/`
-   1. Kopiera den hämtade filen **schema.xml** och **solrconfig.xml** till *new-config-dir* för att skriva över befintliga filer.
 
+   1. Kopiera den hämtade filen **schema.xml** och **solrconfig.xml** till *new-config-dir* för att skriva över befintliga filer.
 
 1. [Överför den nya konfigurationen](#upload-a-configuration-to-zookeeper) till ZooKeeper.
 1. [Skapa en samling](#create-a-collection) ange nödvändiga parametrar, t.ex. antal skevningar, antal repliker och konfigurationsnamn.
@@ -244,21 +244,21 @@ Installationsanvisningar - notera de få skillnaderna för Solr4 och Solr5:
 
       * Som `solr-install-dir/myconfig/`
       * Skapa undermappar `stopwords/` och `lang/`
+
    1. Kopiera innehållet i den befintliga Solr-konfigurationsdir till *new-config-dir*
 
-      * För Solr4: Kopiera `solr-install-dir/example/solr/collection1/conf/`
-      * För Solr5: Kopiera `solr-install-dir/server/solr/configsets/data_driven_schema_configs/`
+      * För Solr4: Copy `solr-install-dir/example/solr/collection1/conf/`
+      * För Solr5: Copy `solr-install-dir/server/solr/configsets/data_driven_schema_configs/`
+
    1. Kopiera den extraherade **schema.xml** och **solrconfig.xml** till *new-config-dir* för att skriva över befintliga filer.
-   1. För Solr5: Kopiera `solr_install_dir/server/solr/configsets/sample_techproducts_configs/conf/lang/*.txt` till `new-config-dir/lang/`
+   1. För Solr5: Copy `solr_install_dir/server/solr/configsets/sample_techproducts_configs/conf/lang/*.txt` till `new-config-dir/lang/`
    1. Kopiera den extraherade **stopwords/** mapp till *new-config-dir* resulterar i `new-config-dir/stopwords/*.txt`
-
-
 
 1. [Överför den nya konfigurationen](#upload-a-configuration-to-zookeeper) till ZooKeeper
 1. Kopiera nya **profiler/** mapp ...
 
    * För Solr4: Kopiera till varje nods resurser/mapp
-   * För Solr5: Kopiera till varje Solr-installations server/resurser/-mapp. Om alla noder finns i samma installationskatalog för Solr utförs det här steget endast en gång.
+   * För Solr5: Kopiera till varje Solr-installations server/resurser/mapp. Om alla noder finns i samma installationskatalog för Solr utförs det här steget endast en gång.
 
 1. Skapa en **lib/** i Solr-home-katalogen (innehåller solr.xml) för varje nod i SolrCloud. Kopiera burar från följande platser till den nya lib/-mappen på varje nod:
 
@@ -296,19 +296,19 @@ där:
 
    * -d solrhome
 
-      Installationskatalog för Solr
+     Installationskatalog för Solr
 
    * -c samlingssökväg
 
-      Samlingsbana i skarp form
+     Samlingsbana i skarp form
 
    * —help
 
-      Skriv ut kommandoradsalternativ
+     Skriv ut kommandoradsalternativ
 
    * -v [4|5]
 
-      Ange version för soler
+     Ange version för soler
 
 * Exempel för Solr 4.10.4:
 
@@ -330,4 +330,4 @@ The **solrconfig.xml** -filen styr intervallet för automatisk implementering oc
 
 Om du vill ändra sökningen till att använda ett index som har uppdaterats för att återspegla ändringar på grund av implementeringen, ändrar du det i `openSearcher` till true.
 
-`autoSoftCommit`: En &quot;soft&quot;-implementering ser till att ändringar är synliga (indexet uppdateras), men säkerställer inte att ändringar synkroniseras till stabil lagring (fast implementering). Resultatet blir en prestandaförbättring. Som standard `autoSoftCommit` är inaktiverat med innehållet `maxTime` anges till -1.
+`autoSoftCommit`: En &quot;soft&quot;-implementering ser till att ändringarna är synliga (indexet uppdateras), men säkerställer inte att ändringarna synkroniseras till ett stabilt lagringsutrymme (fast implementering). Resultatet blir en prestandaförbättring. Som standard `autoSoftCommit` är inaktiverat med innehållet `maxTime` anges till -1.

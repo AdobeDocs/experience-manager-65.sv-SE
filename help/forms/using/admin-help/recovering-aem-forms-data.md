@@ -10,9 +10,9 @@ geptopics: SG_AEMFORMS/categories/aem_forms_backup_and_recovery
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 4e093114-219b-4018-9530-9002eb665448
 exl-id: 9e648bab-9284-4fda-abb4-8bd7cd085981
-source-git-commit: 3d713021ac410ca2925a282c5dfca98ed4e483ee
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1122'
+source-wordcount: '1121'
 ht-degree: 0%
 
 ---
@@ -55,10 +55,10 @@ Om en enskild nod i ett Multinode-kluster inte fungerar och de återstående nod
 1. Om det behövs kan du återskapa det fysiska systemet från en systemavbildning. Det här steget är kanske inte nödvändigt om orsaken till återställningen är en felaktig databasserver.
 1. Använd patchar eller uppdateringar på AEM formulär som använts sedan bilden skapades. Denna information registrerades under säkerhetskopieringen. AEM formulär måste korrigeras på samma nivå som när systemet säkerhetskopierades.
 1. (WebSphere® Application Server) Om du återställer till en ny instans av WebSphere® Application Server kör du kommandot restoreConfig.bat/sh.
-1. Återställ AEM formulärdatabas genom att först köra en databasåterställningsåtgärd med hjälp av databasens säkerhetskopieringsfiler och sedan använda transaktionsupprepningsloggarna på den återställda databasen. (Se [AEM](/help/forms/using/admin-help/files-back-recover.md#aem-forms-database).) Mer information finns i en av följande artiklar i kunskapsbasen:
+1. Återställ AEM formulärdatabas genom att först köra en databasåterställningsåtgärd med hjälp av databasens säkerhetskopieringsfiler och sedan använda transaktionsupprepningsloggarna på den återställda databasen. (Se [AEM formulärdatabas](/help/forms/using/admin-help/files-back-recover.md#aem-forms-database).) Mer information finns i en av följande artiklar i kunskapsbasen:
 
    * [DB2](/help/forms/using/admin-help/files-back-recover.md#db2)
-   * [Säkerhetskopiering och återställning av oracle för AEM](/help/forms/using/admin-help/files-back-recover.md#oracle)
+   * [Säkerhetskopiering och återställning av oracle för AEM formulär](/help/forms/using/admin-help/files-back-recover.md#oracle)
    * [Microsoft](/help/forms/using/admin-help/files-back-recover.md#sql-server)
    * [MySQL Backup and Recovery for AEM forms](/help/forms/using/admin-help/files-back-recover.md#mysql)
 
@@ -71,15 +71,15 @@ Om en enskild nod i ett Multinode-kluster inte fungerar och de återstående nod
 
    * (JBoss®) Byt namn `[appserver root]/server/'server'/svcnative/DocumentStorage/backup` till:
 
-      `[appserver root]/server/'server'/svcnative/DocumentStorage/restore`.
+     `[appserver root]/server/'server'/svcnative/DocumentStorage/restore`.
 
    * (WebLogic) Byt namn `[appserverdomain]/'server'/adobe/AEMformsserver/DocumentStorage/backup` till:
 
-      `[appserverdomain]/'server'/adobe/AEMformsserver/DocumentStorage/restore`.
+     `[appserverdomain]/'server'/adobe/AEMformsserver/DocumentStorage/restore`.
 
    * (WebSphere®) Byt namn `[appserver root]/installedApps/adobe/'server'/DocumentStorage/backup` till:
 
-      `[appserver root]/installedApps/adobe/'server'/DocumentStorage/restore`.
+     `[appserver root]/installedApps/adobe/'server'/DocumentStorage/restore`.
 
 1. Återställ rotkatalogen för innehållslagring genom att först ta bort innehållet i rotkatalogen för innehållslagring i den befintliga installationen av AEM formulär och sedan återställa innehållet genom att utföra följande åtgärder för antingen fristående eller grupperade miljöer:
 
@@ -89,7 +89,7 @@ Om en enskild nod i ett Multinode-kluster inte fungerar och de återstående nod
 
    **Fristående:** Återställ alla kataloger som säkerhetskopierades under återställningsprocessen. När katalogerna återställs och katalogen /backup-lucene-indexes finns byter du namn på den till /lucene-indexes. I annat fall ska katalogen lucene-indexes redan finnas och ingen åtgärd krävs.
 
-   **Grupperad:** Återställ alla kataloger som säkerhetskopierades under återställningsprocessen. Så här återställer du indexrotkatalogen:
+   **Grupperad:** Återställ alla kataloger som säkerhetskopierades under återställningsprocessen. Om du vill återställa indexrotkatalogen utför du följande steg på varje nod i klustret:
 
    * Ta bort allt innehåll i indexrotkatalogen.
    * Om katalogen /backup-lucene-indexes finns kopierar du innehållet i *Rotkatalog för innehållslagring*/backup-lucene-indexes directory to the Index Root directory and delete the *Rotkatalog för innehållslagring*/backup-lucene-indexes katalog.
@@ -99,15 +99,15 @@ Om en enskild nod i ett Multinode-kluster inte fungerar och de återstående nod
 
    * **Fristående**
 
-      *Återställa författare och publicera instanser*: Om ett haveri inträffar kan du återställa databasen till det senast säkerhetskopierade tillståndet genom att utföra de steg som beskrivs i [Säkerhetskopiera och återställ.](https://helpx.adobe.com/experience-manager/kb/CRXBackupAndRestoreProcedure.html)
+     *Återställa författare och publicera instanser*: Om ett haveri inträffar kan du återställa databasen till det senast säkerhetskopierade tillståndet genom att utföra de steg som beskrivs i [Säkerhetskopiera och återställ.](https://helpx.adobe.com/experience-manager/kb/CRXBackupAndRestoreProcedure.html)
 
-      När författarnoden återställs kontrolleras även återställningen av Forms Manager- och AEM Forms Workspace-data.
+     När författarnoden återställs kontrolleras även återställningen av Forms Manager- och AEM Forms Workspace-data.
 
    * **Grupperad**
 
-      För återställning i en klustermiljö, se [Strategi för säkerhetskopiering och återställning i en klustrad miljö](/help/forms/using/admin-help/strategy-backup-restore-clustered-environment.md#strategy-for-backup-and-restore-in-a-clustered-environment).
+     För återställning i en klustermiljö, se [Strategi för säkerhetskopiering och återställning i en klustrad miljö](/help/forms/using/admin-help/strategy-backup-restore-clustered-environment.md#strategy-for-backup-and-restore-in-a-clustered-environment).
 
-1. Ta bort eventuella AEM temporära filer som har skapats i katalogen java.io.temp eller i Adobe temp-katalogen.
+1. Ta bort eventuella AEM temporära filer som har skapats i katalogen java.io.temp eller i den tillfälliga Adobe-katalogen.
 1. Starta AEM formulär (se [Starta och stoppa tjänster](/help/forms/using/admin-help/starting-stopping-services.md#starting-and-stopping-services))<!-- BROKEN LINK and the application server(s) (see [Maintaining the Application Server](/help/forms/using/admin-help/topics/maintaining-the-application-server.md))-->.
 
 ## Ändra GDS-platsen under återställning {#changing-the-gds-location-during-recovery}
@@ -124,7 +124,7 @@ Om ditt GDS återställs till en annan plats än den ursprungliga kör du LCSetG
 
 >[!NOTE]
 >
->Komponentdistributionen misslyckas i Windows om GDS-katalogen finns i enhetsroten (till exempel D:\). För GDS måste du se till att katalogen inte finns i enhetens rot utan i en underkatalog. Katalogen ska till exempel vara D:\GDS and not simply D:\.
+>Komponentdistributionen misslyckas i Windows om GDS-katalogen finns i enhetsroten (till exempel D:\). För GDS måste du se till att katalogen inte finns i enhetens rot utan i en underkatalog. Katalogen ska till exempel vara D:\GDS och inte bara D:\.
 
 ## Återställa GDS till en klustrad miljö {#recovering-the-gds-to-a-clustered-environment}
 

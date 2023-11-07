@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: authoring-on-demand-services-app
 discoiquuid: ccafd49a-5c8a-44eb-9b0c-37070560bb52
 exl-id: dbe81ead-dfaa-4af0-9b66-a14917a1bcc7
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '443'
+source-wordcount: '442'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ ht-degree: 0%
 
 ## Skapa ett on demand-program {#creating-an-on-demand-application}
 
-Att skapa en app är ofta det första steget mot att skapa och hantera AEM Mobile On-Demand-innehåll, och det görs ofta på AEM administratörsnivå. Det representerar ett innehållskal som kan visas på mobila enheter och som kan visa innehåll som författaren skapat, t.ex. artiklar, bilder, samlingar osv.
+Att skapa en app är ofta det första steget mot att skapa och hantera AEM Mobile On-Demand-innehåll, och det görs ofta på AEM administratörsnivå. Det representerar ett innehållskal som kan visas på mobila enheter, klart att visa innehåll som författaren skapat, t.ex. artiklar, bilder, samlingar och så vidare.
 
 Information om ditt program kan visas på kontrollpanelen eller i AEM Mobile Control Center.
 
@@ -39,7 +39,7 @@ Information om ditt program kan visas på kontrollpanelen eller i AEM Mobile Con
 
 1. Välj **Mobil** från sidospåret.
 1. Välj **Appar** från Navigation.
-1. Klicka **Skapa** och markera **App** från listrutan.
+1. Klicka **Skapa** och markera **App** i listrutan.
 1. Välj mallen för mobilappar och klicka på **Nästa**.
 1. Ange appegenskaper som **Titel**, **Namn**, **Beskrivning**.
 1. Klicka på **Nästa**.
@@ -54,10 +54,10 @@ Information om ditt program kan visas på kontrollpanelen eller i AEM Mobile Con
 
 ## Använda appmallar {#using-app-templates}
 
-Appmallar är ett enkelt sätt att utnyttja befintliga designer som skapats av utvecklare och som används för att skapa nya appar i AEM.
+Appmallar är ett enkelt sätt att använda befintliga designer som skapats av utvecklare och som används för att skapa nya appar i AEM.
 
 Vad är en appmall? Se det som en samling sidmallar och komponenter som utgör en grund eller grund för ett program.
-När du skapar ett nytt program baserat på en mall för ett annat program får du ett program som har en startpunkt som representerar det program som det skapades från.
+När du skapar ett program baserat på en mall för ett annat program får du ett program som har en startpunkt som representerar det program som det skapades från.
 
 Du måste ha en befintlig mobilappsmall (eller en app som har en appmall) för att kunna använda den här funktionen.
 
@@ -67,7 +67,7 @@ När du har skapat en On-Demand-app från kontrollpanelen för program är näst
 
 Se [Koppla ditt program till molnkonfigurationen](/help/mobile/mobile-on-demand-associating-an-on-demand-app-to-cloud-configuration.md) för mer information.
 
-### Komma framåt {#getting-ahead}
+### Komma i förväg {#getting-ahead}
 
 När du är bekant med att skapa ett on-demand-program och därmed koppla det programmet till en molnkonfiguration kan du läsa [Innehållshanteringsåtgärder](/help/mobile/mobile-apps-ondemand-manage-content-ondemand.md).
 

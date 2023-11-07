@@ -5,7 +5,7 @@ contentOwner: AG
 role: User, Admin
 feature: Collaboration
 exl-id: 130cec6d-1cdd-4304-94bb-65e6bb573e55
-source-git-commit: 260f71acd330167572d817fdf145a018b09cbc65
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '949'
 ht-degree: 0%
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 >[!CAUTION]
 >
->The [!DNL Experience Manager] till [!DNL Creative Cloud] Mappdelningsfunktionen är föråldrad. Adobe rekommenderar att du använder nyare funktioner som [Adobe Asset Link](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html) eller [Experience Manager](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html). Läs mer i [Bästa praxis för integrering mellan Experience Manager och Creative Cloud](/help/assets/aem-cc-integration-best-practices.md).
+>The [!DNL Experience Manager] till [!DNL Creative Cloud] Mappdelningsfunktionen är föråldrad. Adobe rekommenderar att du använder nyare funktioner som [Adobe Asset Link](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html) eller [Experience Manager datorprogram](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html). Läs mer i [Bästa praxis för integrering mellan Experience Manager och Creative Cloud](/help/assets/aem-cc-integration-best-practices.md).
 
 [!DNL Adobe Experience Manager] kan konfigureras för att tillåta användare i [!DNL Assets] för att dela mappar med användare av [!DNL Adobe Creative Cloud] appar, så de är tillgängliga som delade mappar i [!DNL Adobe Creative Cloud] tillgångstjänst. Funktionen kan användas för utbyte av filer mellan olika team och [!DNL Assets] -användare, särskilt när de kreativa användarna inte har tillgång till [!DNL Assets] distribution (de finns inte i företagsnätverket).
 
@@ -39,11 +39,11 @@ I följande diagram visas en översikt över integreringen.
 
 Integreringen innehåller följande element:
 
-* **[!DNL Experience Manager Assets]** driftsätts i företagsnätverket (Managed Services eller lokalt): Mappdelning initieras här.
-* **[!DNL Adobe Experience Cloud Assets]bastjänst**: Fungerar som mellanhand mellan [!DNL Experience Manager] och [!DNL Creative Cloud] lagringstjänster. En administratör för en organisation som använder integreringen måste upprätta en förtroenderelation mellan Experience Cloud-organisationen och [!DNL Assets] distribution. De [Definiera en lista över godkända medarbetare i Creative Cloud](https://experienceleague.adobe.com/docs/core-services/interface/services/assets/t-admin-add-cc-user.html)som [!DNL Assets] -användare kan dela mappar för att öka säkerheten.
+* **[!DNL Experience Manager Assets]** distribueras i företagsnätverket (Managed Services eller lokalt): Mappdelning initieras här.
+* **[!DNL Adobe Experience Cloud Assets]bastjänst**: Fungerar som mellanhand mellan [!DNL Experience Manager] och [!DNL Creative Cloud] lagringstjänster. En administratör för en organisation som använder integreringen måste upprätta en förtroenderelation mellan Experience Cloud och [!DNL Assets] distribution. De [Definiera en lista över godkända medarbetare i Creative Cloud](https://experienceleague.adobe.com/docs/core-services/interface/services/assets/t-admin-add-cc-user.html), som [!DNL Assets] -användare kan dela mappar för att öka säkerheten.
 
-* **[!DNL Creative Cloud]Assets web services** (lagring och [!DNL Creative Cloud] filwebbgränssnitt): Det är här specifika användare av appen Creative Cloud används [!DNL Assets] mappen delades, skulle kunna acceptera inbjudan och visa mappen i Creative Cloud-kontoarkivet.
-* **Creative Cloud**: (Valfritt) Ger direktåtkomst till delade mappar/filer från den kreativa användarens skrivbord via synkronisering med [!DNL Creative Cloud] Resurslagring.
+* **[!DNL Creative Cloud]Assets web services** (lagring och [!DNL Creative Cloud] filer (webbgränssnitt): Här är specifika Creative Cloud-appanvändare, som [!DNL Assets] mappen delades, skulle kunna acceptera inbjudan och visa mappen i Creative Cloud-kontoarkivet.
+* **Creative Cloud datorprogram**: (Valfritt) Tillåter direktåtkomst till delade mappar/filer från den kreativa användarens skrivbord via synkronisering med [!DNL Creative Cloud] Resurslagring.
 
 ## Egenskaper och begränsningar {#characteristics-and-limitations}
 
@@ -55,7 +55,7 @@ Integreringen innehåller följande element:
 
 * **Utrymmesbegränsningar:** Storleken på och mängden filer som utbyts begränsas av de specifika [Creative Cloud Assets-kvot](https://helpx.adobe.com/creative-cloud/kb/file-storage-quota.html) för kreativa användare (beroende på prenumerationsnivå) och en begränsning på 5 GB maximal filstorlek. Utrymmet begränsas också av organisationens tillgångskvot i Adobe Experience Cloud Assets bastjänst.
 
-* **Utrymmeskrav:** Filerna i delade mappar måste också lagras fysiskt i [!DNL Experience Manager] och sedan in [!DNL Creative Cloud] konto, med en cachelagrad kopia i [!DNL Experience Cloud Assets] bastjänst.
+* **Utrymmeskrav:** Filerna i delade mappar måste också lagras fysiskt i [!DNL Experience Manager] och sedan [!DNL Creative Cloud] konto, med en cachelagrad kopia i [!DNL Experience Cloud Assets] bastjänst.
 * **Nätverk och bandbredd:** Filerna i delade mappar och alla uppdateringar måste transporteras över nätverket mellan systemen. Se till att endast relevanta filer och uppdateringar delas.
 * **Mapptyp**: Dela en [!DNL Assets] typmapp `sling:OrderedFolder`, stöds inte i samband med delning i [!DNL Adobe Experience Cloud]. Om du vill dela en mapp när du skapar den i [!DNL Assets]markerar du inte [!UICONTROL Ordered] alternativ.
 
@@ -66,9 +66,9 @@ Bästa tillvägagångssätt för att använda [!DNL Experience Manager] till [!D
 * **Volymeffekter:** [!DNL Experience Manager] och [!DNL Creative Cloud] Mappdelning bör användas för att dela ett mindre antal filer, t.ex. relevanta för en viss kampanj eller aktivitet. Om du vill dela större uppsättningar resurser, som alla godkända resurser i organisationen, använder du andra distributionsmetoder (till exempel [!DNL Assets Brand Portal]) eller [!DNL Experience Manager] datorprogram.
 * **Undvik delning av djupa hierarkier:** Delningen fungerar rekursivt och tillåter inte selektiv delning. Normalt bör endast mappar utan undermappar, eller med en ytlig hierarki, som en undermappsnivå, användas för delning.
 * **Separata mappar för envägsdelning:** Separata mappar bör användas för att dela det slutliga materialet från [!DNL Assets] till [!DNL Creative Cloud] filer och för att dela kreativa resurser tillbaka från [!DNL Creative Cloud] filer till [!DNL Assets]. Tillsammans med en bra namnkonvention för de här mapparna skapar den en lättbegriplig arbetsmiljö för [!DNL Assets] och [!DNL Creative Cloud] användare.
-* **Undvik PIA i den delade mappen:** Delad mapp ska inte användas för pågående arbete - använd en separat mapp i Creative Cloud-filer för att utföra arbete som kräver att filen ändras ofta.
-* **Starta nytt arbete utanför den delade mappen:** Nya designer (kreativa filer) ska startas i den separata Pågående arbete-mappen i Creative Cloud-filer och när de är klara att delas med [!DNL Assets] -användare bör de flyttas eller sparas i den delade mappen.
-* **Förenkla delningsstrukturen:** Om du vill ha en mer hanterbar driftsättning kan du förenkla delningsstrukturen. Istället för att dela med alla kreativa användare [!DNL Assets] bör endast delas med teamrepresentanter, som creative director eller teammanager. Chefen på den kreativa sidan skulle få det slutliga materialet, besluta om arbetstilldelning och sedan låta designers arbeta i sina egna Creative Cloud-konton på PIA-resurser. De kan använda samarbetsfunktionerna i Creative Cloud för att samordna arbetet och slutligen välja och lägga resurser som är redo att delas tillbaka till [!DNL Assets] till deras kreativa färdiga delade mapp.
+* **Undvik PIA i den delade mappen:** Använd inte en delad mapp för pågående arbete - använd en separat mapp i Creative Cloud-filer för att utföra arbete som kräver att filen ändras ofta.
+* **Starta nytt arbete utanför den delade mappen:** Nya designer (kreativa filer) ska startas i den separata Pågående arbete-mappen i Creative Cloud-filer och när de ska delas med [!DNL Assets] -användare bör de flyttas eller sparas i den delade mappen.
+* **Förenkla delningsstrukturen:** Om du vill ha en mer hanterbar driftsättning kan du förenkla delningsstrukturen. Istället för att dela med andra användare [!DNL Assets] bör endast delas med teamrepresentanter, som creative director eller teammanager. Chefen på den kreativa sidan skulle få det slutliga materialet, besluta om arbetstilldelning och sedan låta designers arbeta i sina egna Creative Cloud-konton på PIA-resurser. De kan använda samarbetsfunktionerna i Creative Cloud för att samordna arbetet och slutligen välja och lägga resurser som är redo att delas tillbaka till [!DNL Assets] till deras kreativa färdiga delade mapp.
 
 I följande diagram visas ett exempel på hur du skapar design baserat på befintliga slutliga resurser från [!DNL Assets].
 

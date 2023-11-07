@@ -10,7 +10,7 @@ topic-tags: customization
 discoiquuid: ad6db3fd-0d26-4241-bf73-be74b7f6e509
 docset: aem65
 exl-id: 64b88423-aaae-4258-bf48-73df5c9353ea
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '332'
 ht-degree: 0%
@@ -28,7 +28,7 @@ ht-degree: 0%
 
 ## Procedur för att dynamiskt fylla i nedrullningsbara listor {#procedure-to-dynamically-populate-drop-down-lists}
 
-Tänk dig ett scenario där du vill fylla i **Läge** nedrullningsbar lista baserad på ett värde som du väljer i **Land** nedrullningsbar lista. Om du väljer Australien i dialogrutan **Land** nedrullningsbar lista, **Läge** i den nedrullningsbara listan visas lägena i Australien. I proceduren nedan beskrivs hur du utför den här uppgiften.
+Tänk dig ett scenario där du vill fylla i **Läge** nedrullningsbar lista baserad på ett värde som du väljer i **Land** listruta. Om du väljer Australien i dialogrutan **Land** nedrullningsbar lista **Läge** i den nedrullningsbara listan visas lägena i Australien. I proceduren nedan beskrivs hur du utför den här uppgiften.
 
 1. Skapa ett projekt med följande moduler:
 
@@ -148,7 +148,7 @@ Tänk dig ett scenario där du vill fylla i **Läge** nedrullningsbar lista base
 
 1. Skapa en nedrullningsbar nod under en viss mapphierarki i program (skapa till exempel en nod under /apps/myfolder/demo). Se till att `sling:resourceType` -parametern för noden är densamma som den som servleten pekar på (/apps/populatedDrop).
 
-   ![Skapa en nedrullningsbar nod](assets/dropdown-node.png)
+   ![Skapa en listnod](assets/dropdown-node.png)
 
 1. Paketera noden och bädda in .jar-filen på en viss plats (till exempel /apps/myfolder/demo/install/). Distribuera samma fil på servern.
 1. Skapa ett anpassat formulär och lägg till två listrutor, Land och Delstat. Listan Land kan innehålla namn på länder. Tillståndslistan kan dynamiskt fylla i namn på lägen för det land du väljer i den första listan.
@@ -173,6 +173,6 @@ Tänk dig ett scenario där du vill fylla i **Läge** nedrullningsbar lista base
    .responseText);
    ```
 
-Innehållspaketet som innehåller ett exempel på en adaptiv form (demo/AFdemo) med ovanstående kod implementerad.
+Innehållspaketet som innehåller ett exempel på en adaptiv form (demo/AFdemo) med koden ovan implementerad.
 
 [Hämta fil](assets/dropdown-demo-content-1.0.1-snapshot.zip)

@@ -6,16 +6,16 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: development-tools
 content-type: reference
 exl-id: efbba312-9fc8-4670-b8f1-d2a86162d075
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2713'
+source-wordcount: '2707'
 ht-degree: 0%
 
 ---
 
 # Så här använder du VLT-verktyget {#how-to-use-the-vlt-tool}
 
-Jackrabbit FileVault-verktyget (VLT) är ett verktyg som utvecklats av [Apache Foundation](https://www.apache.org/) som mappar innehållet i en Jackrabbit/AEM-instans till filsystemet. VLT-verktyget har liknande funktioner som källkontrollssystemklienten (t.ex. en Subversion-klient), med normala in-, utchecknings- och hanteringsåtgärder samt konfigurationsalternativ för flexibel representation av projektinnehållet.
+Jackrabbit FileVault-verktyget (VLT) är ett verktyg som utvecklats av [Apache Foundation](https://www.apache.org/) som mappar innehållet i en Jackrabbit/AEM-instans till filsystemet. VLT-verktyget har liknande funktioner som en VLT-klient (till exempel en Subversion-klient), med normala in-, utchecknings- och hanteringsåtgärder samt konfigurationsalternativ för flexibel representation av projektinnehållet.
 
 Du kör VLT-verktyget från kommandoraden. I det här dokumentet beskrivs hur du använder verktyget, inklusive hur du kommer igång och får hjälp, samt en lista med alla [kommandon](#vlt-commands) och tillgängliga [alternativ](#vlt-global-options).
 
@@ -781,7 +781,7 @@ Tjänsten vault sync används för att synkronisera databasinnehåll med en loka
 
 >[!NOTE]
 >
->Tjänsten för vaultsynkronisering är ett utvecklingsverktyg och bör inte användas i ett produktivt system. Observera också att tjänsten bara kan synkroniseras med det lokala filsystemet och inte kan användas för fjärrutveckling.
+>Tjänsten för vaultsynkronisering är ett utvecklingsverktyg och bör inte användas i ett produktivt system. Tjänsten kan bara synkroniseras med det lokala filsystemet och kan inte användas för fjärrutveckling.
 
 ### Installera tjänsten med VLT {#installing-the-service-using-vlt}
 
@@ -854,7 +854,7 @@ När tjänsten körs kan den konfigureras med följande parametrar:
 >
 >Tjänsten kan konfigureras med webbkonsolen eller en `sling:OsgiConfig` nod (med namnet `com.day.jcr.sync.impl.VaultSyncServiceImpl`) i databasen.
 >
->När du arbetar med AEM finns det flera metoder för att hantera konfigurationsinställningarna för sådana tjänster. Mer information finns i [Konfigurerar OSGi](/help/sites-deploying/configuring-osgi.md) för fullständig information.
+>När du arbetar med AEM finns det flera metoder för att hantera konfigurationsinställningarna för sådana tjänster. Se [Konfigurerar OSGi](/help/sites-deploying/configuring-osgi.md) för fullständig information.
 
 #### Synkronisera mappkonfiguration {#sync-folder-configuration}
 

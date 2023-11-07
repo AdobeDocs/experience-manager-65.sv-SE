@@ -11,9 +11,9 @@ topic-tags: hTML5_forms
 discoiquuid: 4ef78c8c-783f-4aac-a499-692cd4acef75
 feature: Mobile Forms
 exl-id: bcb5afc5-2190-4269-aba2-63842db9df3f
-source-git-commit: c4045313200ffecbf05abfacd67aabc80ad67e7f
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '3892'
+source-wordcount: '3888'
 ht-degree: 1%
 
 ---
@@ -52,7 +52,7 @@ JavaScript, FormCalc-egenskaper och metoder som stöds i HTML5-formulär är som
     <ul>
      <li>Om att markera och ersätta text</li>
      <li>När du tar bort, kopierar och klistrar in text.</li>
-     <li>Om du skriver vissa specialteckennycklar (till exempel $, (, ), &amp;, @ och annat) i numeriska fält<br /> </li>
+     <li>Om du skriver vissa specialteckennycklar (till exempel $, (, ), &amp;, @ och mer) i numeriska fält<br /> </li>
      <li>Vid användning av Skift+alfanumerisk kombination. </li>
      <li>Använda datum/tid-fält.</li>
     </ul>
@@ -67,19 +67,19 @@ JavaScript, FormCalc-egenskaper och metoder som stöds i HTML5-formulär är som
     <ul>
      <li>Om att markera och ersätta text</li>
      <li>När du tar bort, kopierar och klistrar in text.</li>
-     <li>Om du skriver vissa specialteckennycklar (till exempel $, (,), &amp;, @ och annat) i numeriska fält<br /> </li>
+     <li>Om du skriver vissa specialteckennycklar (till exempel $, (,), &amp;, @ och mer) i numeriska fält<br /> </li>
      <li>Vid användning av Skift+alfanumerisk kombination. </li>
      <li>Använda datum/tid-fält.</li>
     </ul> <p>Det går inte att ange värde via skript.</p> </td>
   </tr>
   <tr>
-   <td>tangentnedtryckning</td>
+   <td>keydown</td>
    <td>Avgör om en användare trycker på en piltangent för att göra en markering. Den här egenskapen är bara tillgänglig för listrutor och nedrullningsbara listor.</td>
    <td>Ingen</td>
   </tr>
   <tr>
    <td>modifierare</td>
-   <td>Avgör om modifieringstangenten (till exempel Ctrl i Microsoft® Windows®) ska hållas ned när en viss händelse utförs.</td>
+   <td>Avgör om modifieringstangenten (t.ex. Ctrl i Microsoft® Windows®) ska hållas ned när en viss händelse utförs.</td>
    <td>Ingen</td>
   </tr>
  </tbody>
@@ -107,7 +107,7 @@ JavaScript, FormCalc-egenskaper och metoder som stöds i HTML5-formulär är som
   <tr>
    <td><code>numPages</code></td>
    <td>Returnerar antalet sidor i dokumentet.</td>
-   <td>Sidnumreringsprincipen för HTML5-formulär är inte identisk med PDF forms sidnumreringspolicy. API:t numPages kan alltså returnera olika värden i båda fallen.</td>
+   <td>Sidnumreringsprincipen för HTML5-formulär är inte identisk med PDF forms sidnumreringsprincipen. API:t numPages kan alltså returnera olika värden i båda fallen.</td>
   </tr>
   <tr>
    <td><code>platform</code></td>
@@ -188,7 +188,7 @@ JavaScript, FormCalc-egenskaper och metoder som stöds i HTML5-formulär är som
   </tr>
   <tr>
    <td><code>name</code></td>
-   <td>En identifierare som används för att identifiera det här elementet i skriptuttryck.</td>
+   <td>En identifierare som används för att identifiera elementet i skriptuttryck.</td>
    <td>HTML5-formulär tillåter inte att namnegenskap anges för objekt. Det är en skrivskyddad egenskap för HTML5-formulär.</td>
   </tr>
   <tr>
@@ -359,7 +359,7 @@ JavaScript, FormCalc-egenskaper och metoder som stöds i HTML5-formulär är som
 
 | Egenskap | Beskrivning |
 |---|---|
-| `name` | En identifierare som används för att identifiera det här elementet i skriptuttryck. |
+| `name` | En identifierare som används för att identifiera elementet i skriptuttryck. |
 | `occur` | Beskriver begränsningarna över antalet tillåtna instanser för den omslutande behållaren. |
 | `min` | Anger det minsta antalet instanser som kan instansieras. |
 | `max` | Anger maximalt antal instanser som kan instansieras. |
@@ -461,7 +461,7 @@ JavaScript, FormCalc-egenskaper och metoder som stöds i HTML5-formulär är som
   </tr>
   <tr>
    <td>name</td>
-   <td>En identifierare som används för att identifiera det här elementet i skriptuttryck.</td>
+   <td>En identifierare som används för att identifiera elementet i skriptuttryck.</td>
    <td>Ingen</td>
   </tr>
   <tr>
@@ -819,7 +819,7 @@ JavaScript, FormCalc-egenskaper och metoder som stöds i HTML5-formulär är som
   </tr>
   <tr>
    <td>name<br /> </td>
-   <td>En identifierare som används för att identifiera det här elementet i skriptuttryck.</td>
+   <td>En identifierare som används för att identifiera elementet i skriptuttryck.</td>
    <td>Ingen</td>
   </tr>
  </tbody>
@@ -1205,7 +1205,7 @@ FormCalc är ett XFA-specifikt språk för att skapa e-formulärbaserade logiska
    1. Rad2Deg()
    1. Pi()
 
-1. **Ekonomiska funktioner**
+1. **Finansfunktioner**
 
    1. Apr()
    1. Cterm()
@@ -1253,7 +1253,7 @@ FormCalc är ett XFA-specifikt språk för att skapa e-formulärbaserade logiska
   <tr>
    <td><strong>API</strong></td>
    <td><strong>Beskrivning</strong></td>
-   <td><strong>Avvikelse</strong></td>
+   <td><strong>Avvikelser</strong></td>
   </tr>
   <tr>
    <td>console.println()</td>
@@ -1287,7 +1287,7 @@ FormCalc är ett XFA-specifikt språk för att skapa e-formulärbaserade logiska
   </tr>
   <tr>
    <td>app.setTimeOut()</td>
-   <td>Anger ett JavaScript-skript och en tidsperiod. Skriptet körs bara en gång, efter att perioden har gått ut. Returvärdet för metoden måste finnas i en JavaScript-variabel. I annat fall kan timeout-objektet vara skräpsamlingar, vilket skulle få klockan att stanna. Om du vill avbryta timeout-händelsen skickar du det returnerade timeout-objektet till clearTimeOut.</td>
+   <td>Anger ett JavaScript-skript och en tidsperiod. Skriptet körs bara en gång, efter att perioden har gått ut. Returvärdet för den här metoden måste finnas i en JavaScript-variabel. I annat fall kan timeout-objektet vara skräpsamlingar, vilket skulle få klockan att stanna. Om du vill avbryta timeout-händelsen skickar du det returnerade timeout-objektet till clearTimeOut.</td>
    <td> </td>
   </tr>
   <tr>
@@ -1307,7 +1307,7 @@ FormCalc är ett XFA-specifikt språk för att skapa e-formulärbaserade logiska
   </tr>
   <tr>
    <td>app.activeDocs</td>
-   <td>En array som innehåller Doc-objektet för varje aktivt dokument. Om inga dokument är aktiva returnerar activeDocs ingenting; dvs. den har samma beteende som d = new Array(0) i JavaScript-kärnan.</td>
+   <td>En array som innehåller Doc-objektet för varje aktivt dokument. Om inga dokument är aktiva returnerar activeDocs ingenting, d.v.s. det har samma beteende som d = new Array(0) i JavaScript-kärnan.</td>
    <td>Returnerar en tom array för HTMl5-formulär.</td>
   </tr>
   <tr>
@@ -1353,4 +1353,4 @@ Följande klientsidade XFA-händelser stöds:
 
 >[!NOTE]
 >
->HTML5-formulär återges på klientsidan (webbläsare). Vi rekommenderar att du använder klientsidan **validera** och **beräkna** skript i stället för serverbaserade skript.
+>HTML5-formulär återges på klientsidan (webbläsare). Använd klientsidan **validera** och **beräkna** skript i stället för serverbaserade skript.

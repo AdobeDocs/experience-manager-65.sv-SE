@@ -8,9 +8,9 @@ content-type: reference
 docset: aem65
 exl-id: 39e35a07-140f-4853-8f0d-8275bce27a65
 feature: Security
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '6836'
+source-wordcount: '6818'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ Sedan AEM 6.3 finns det en ny implementering av en stängd användargrupp som ä
 
 >[!NOTE]
 >
->För enkelhetens skull kommer förkortningen CUG att användas i denna dokumentation.
+>För enkelhetens skull används förkortningen CUG genomgående i denna dokumentation.
 
 Målet med den nya implementeringen är att vid behov ta med befintliga funktioner samtidigt som man åtgärdar problem och designbegränsningar från äldre versioner. Resultatet blir en ny CUG-design med följande egenskaper:
 
@@ -243,7 +243,7 @@ session.save();
 
 #### Redigera en befintlig CUG-princip {#edit-an-existing-cug-policy}
 
-Följande steg krävs för att redigera en befintlig CUG-princip. Observera att den ändrade profilen måste skrivas tillbaka och att ändringarna måste sparas med `javax.jcr.Session.save()`.
+Följande steg krävs för att redigera en befintlig CUG-princip. Den ändrade principen måste skrivas tillbaka och ändringarna måste sparas med `javax.jcr.Session.save()`.
 
 ```java
 String path = [...] // needs to be a supported, absolute path
@@ -281,7 +281,7 @@ Hanteringen av JCR-åtkomstkontroll definierar en metod för bästa förmåga at
 
 >[!NOTE]
 >
->Observera skillnaden mellan `getEffectivePolicies` och det efterföljande kodexemplet som går upp i hierarkin för att hitta om en angiven sökväg redan ingår i en befintlig CUG.
+>Skillnaden mellan `getEffectivePolicies` och det efterföljande kodexemplet som går upp i hierarkin för att hitta om en angiven sökväg redan ingår i en befintlig CUG.
 
 ```java
 String path = [...] // needs to be a supported, absolute path
@@ -338,7 +338,7 @@ Ett nytt autentiseringskrav skapas, ändras eller tas bort genom att målnodens 
 
 #### Lägga till ett nytt verifieringskrav {#adding-a-new-auth-requirement}
 
-Steg för att skapa ett nytt autentiseringskrav beskrivs nedan. Observera att kravet bara registreras med Apache Sling Authenticator om `RequirementHandler` har konfigurerats för trädet som innehåller målnoden.
+Steg för att skapa ett autentiseringskrav beskrivs nedan. Kravet registreras endast med Apache Sling Authenticator om `RequirementHandler` har konfigurerats för trädet som innehåller målnoden.
 
 ```java
 Node targetNode = [...]
@@ -349,7 +349,7 @@ session.save();
 
 #### Lägg till ett nytt autentiseringskrav med inloggningssökväg {#add-a-new-auth-requirement-with-login-path}
 
-Steg för att skapa ett nytt autentiseringskrav, inklusive en inloggningssökväg. Observera att kravet och undantaget för inloggningssökvägen endast registreras hos Apache Sling Authenticator om `RequirementHandler` har konfigurerats för trädet som innehåller målnoden.
+Steg för att skapa ett autentiseringskrav, inklusive en inloggningssökväg. Observera att kravet och undantaget för inloggningssökvägen endast registreras hos Apache Sling Authenticator om `RequirementHandler` har konfigurerats för trädet som innehåller målnoden.
 
 ```java
 Node targetNode = [...]
@@ -582,7 +582,7 @@ De tillgängliga konfigurationsalternativen som är kopplade till modulen CUG-au
 
 #### Utesluta huvudkonton från CUG-utvärderingen {#excluding-principals-from-cug-evaluation}
 
-Undantaget av enskilda huvudkonton från CUG-utvärderingen har antagits från den tidigare tillämpningen. Den nya CUG-auktoriseringen täcker detta med ett dedikerat gränssnitt som heter CugExclude. Apache Jackrabbit Oak 1.4 levereras med en standardimplementering som utesluter en fast uppsättning huvuduppgifter samt en utökad implementering som tillåter konfigurering av enskilda huvudnamn. Den senare konfigureras i AEM publiceringsinstanser.
+Undantaget av enskilda huvudkonton från CUG-utvärderingen har antagits från den tidigare tillämpningen. Den nya CUG-auktoriseringen täcker detta med ett dedikerat gränssnitt som heter CugExclude. Apache Jackrabbit Oak 1.4 levereras med en standardimplementering som utesluter en fast uppsättning huvudnamn och en utökad implementering som tillåter att enskilda huvudnamn konfigureras. Den senare konfigureras i AEM publiceringsinstanser.
 
 Standardvärdet eftersom AEM 6.3 förhindrar att följande objekt påverkas av CUG-principer:
 
@@ -768,11 +768,11 @@ Om du konfigurerar CUG:er i kombination med LiveCopy representeras de i database
 
 Båda dessa element skapas under `cq:Page`. I den aktuella designen hanterar MSM bara noder och egenskaper som finns under `cq:PageContent` (`jcr:content`)-nod.
 
-Därför kan CUG-grupper inte rullas ut till Live-kopior från utkast. Se till att du undviker detta när du konfigurerar Live Copy.
+Därför kan CUG-grupper inte rullas ut till Live-kopior från utkast. Planera runt detta när du konfigurerar Live Copy.
 
 ## Ändringar i den nya CUG-implementeringen {#changes-with-the-new-cug-implementation}
 
-Syftet med detta avsnitt är att ge en översikt över de ändringar som gjorts i CUG-funktionen samt en jämförelse mellan den gamla och den nya implementeringen. Här listas de ändringar som påverkar hur CUG-stöd konfigureras och hur och av vilka CUG-grupper hanteras i databasinnehållet.
+Syftet med detta avsnitt är att ge en översikt över de ändringar som gjorts i CUG-funktionen och en jämförelse mellan den gamla och den nya implementeringen. Här listas de ändringar som påverkar hur CUG-stöd konfigureras och hur och av vilka CUG-grupper hanteras i databasinnehållet.
 
 ### Skillnader i CUG-inställningar och konfiguration {#differences-in-cug-setup-and-configuration}
 

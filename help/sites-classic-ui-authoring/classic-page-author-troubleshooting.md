@@ -8,9 +8,9 @@ topic-tags: page-authoring
 content-type: reference
 discoiquuid: 9b492b17-9029-46ae-9dc0-bb21e6b484df
 exl-id: 27a6b012-576e-40bc-9b50-c310b3c56c9e
-source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '430'
+source-wordcount: '429'
 ht-degree: 7%
 
 ---
@@ -25,13 +25,13 @@ I följande avsnitt beskrivs några problem som du kan stöta på när du använ
 
 >[!NOTE]
 >
->Användare som har administratörsbehörighet och som vill felsöka problem med AEM kan använda felsökningsmetoderna som beskrivs i [AEM (för administratörer)](/help/sites-administering/troubleshoot.md). Om du inte har tillräcklig behörighet kontaktar du systemadministratören om felsökning AEM.
+>Användare som har administratörsbehörighet och som vill felsöka problem med AEM kan använda felsökningsmetoderna som beskrivs i [AEM (för administratörer)](/help/sites-administering/troubleshoot.md). Om du inte har tillräcklig behörighet kan du kontakta systemadministratören om felsökning av AEM.
 
-## Gammal sidversion finns fortfarande på publicerad webbplats {#old-page-version-still-on-published-site}
+## Gammal sidversion på publicerad webbplats {#old-page-version-still-on-published-site}
 
 * **Problem**:
 
-   * Du har gjort ändringar på en sida och replikerat sidan till publiceringsplatsen, men *gammal* versionen av sidan visas fortfarande på publiceringswebbplatsen.
+   * Du har ändrat en sida och replikerat sidan till publiceringsplatsen, men *gammal* versionen av sidan visas fortfarande på publiceringswebbplatsen.
 
 * **Orsak**:
 
@@ -41,20 +41,20 @@ I följande avsnitt beskrivs några problem som du kan stöta på när du använ
 
    * Här finns olika möjligheter:
    * Bekräfta att sidan har replikerats korrekt. Kontrollera sidstatus och, om det behövs, status för replikeringskön.
-   * Rensa cacheminnet i den lokala webbläsaren och öppna sidan igen.
-   * Lägg till `?` till slutet av sid-URL:en. Till exempel:
+   * Rensa cacheminnet i den lokala webbläsaren och få åtkomst till sidan igen.
+   * Lägg till `?` till slutet av sidans URL. Till exempel:
 
-      `http://localhost:4502/sites.html/content?`
+     `http://localhost:4502/sites.html/content?`
 
-      Detta begär sidan direkt från AEM och kringgår Dispatcher. Om du får den uppdaterade sidan är det en indikation på att du bör rensa Dispatcher-cachen.
+     Detta begär sidan direkt från AEM och kringgår Dispatcher. Om du får den uppdaterade sidan är det en indikation på att du bör rensa Dispatcher-cachen.
 
    * Kontakta systemadministratören om det finns problem med replikeringsköerna.
 
-## Sidekick inte synlig {#sidekick-not-visible}
+## Sidekick är inte synlig {#sidekick-not-visible}
 
 * **Problem**:
 
-   * Sidsparken syns inte när du redigerar en innehållssida i författarmiljön.
+   * Sidekick är inte synligt när du redigerar en innehållssida i redigeringsmiljön.
 
 * **Orsak**:
 
@@ -62,13 +62,13 @@ I följande avsnitt beskrivs några problem som du kan stöta på när du använ
 
 * **Lösning**:
 
-   * Logga ut från den aktuella sessionen och logga in igen. Sparken återgår till standardpositionen.
+   * Logga ut från den aktuella sessionen och logga in igen. Sidekick återgår till standardpositionen.
 
 ## Sök och ersätt - alla förekomster ersätts inte {#find-replace-not-all-instances-are-replaced}
 
 * **Problem:**
 
-   * När du använder **Sök och ersätt** kan det hända att inte alla instanser av `find` termen ersätts på en sida.
+   * När du använder **Sök och ersätt** kan det hända att inte alla instanser av `find` ersätts på en sida.
 
 * **Orsak**:
 
@@ -81,6 +81,6 @@ I följande avsnitt beskrivs några problem som du kan stöta på när du använ
 
 * **Lösning**:
 
-   * Dessa definitioner kan ändras med konfigurationen för **Dag CQ WCM Sök Ersätt server** med **Webbkonsol**; till exempel
+   * Dessa definitioner kan ändras med konfigurationen för **Dag CQ WCM Sök Ersätt server** med **Webbkonsol**; till exempel vid
 
-      `http://localhost:4502/system/console/configMgr`
+     `http://localhost:4502/system/console/configMgr`

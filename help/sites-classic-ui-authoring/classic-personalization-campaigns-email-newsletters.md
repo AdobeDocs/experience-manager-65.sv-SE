@@ -10,9 +10,9 @@ topic-tags: personalization
 content-type: reference
 discoiquuid: b9618913-5433-4baf-9ff6-490a26860505
 exl-id: c07692f7-3618-4e8c-96d7-4db09f2d9896
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1107'
+source-wordcount: '1106'
 ht-degree: 0%
 
 ---
@@ -39,7 +39,7 @@ Om du vill publicera din e-post till e-postleverantören måste du utföra följ
 
 Ett e-postmeddelande eller nyhetsbrev som du vill publicera till en e-posttjänst kan skapas under en kampanj med hjälp av **Geometrixx Newsletter** mall. Du kan också använda **Geometrixx Outdoors E-mail** mall. Exempel på e-post/nyhetsbrev baserat på **Geometrixx Outdoors E-mail** -mallen är tillgänglig på `https://<hostname>:<port>/cf#/content/campaigns/geometrixx-outdoors/e-mails.html`.
 
-Så här skapar du ett nytt e-postmeddelande som publiceras till den konfigurerade e-posttjänsten:
+Så här skapar du ett e-postmeddelande som publiceras till den konfigurerade e-posttjänsten:
 
 1. Gå till **Webbplatser** och sedan **Kampanjer**. Välj en kampanj.
 1. Klicka **Nytt** för att öppna **Skapa sida** -fönstret.

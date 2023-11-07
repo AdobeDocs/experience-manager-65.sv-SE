@@ -10,9 +10,9 @@ content-type: reference
 topic-tags: best-practices
 discoiquuid: 3cc8ac23-98ff-449f-bd76-1203c7cbbed7
 exl-id: efebe66d-3d30-4033-9c4c-ae347e134f2f
-source-git-commit: b703f356f9475eeeafb1d5408c650d9c6971a804
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '486'
+source-wordcount: '480'
 ht-degree: 9%
 
 ---
@@ -29,7 +29,7 @@ Alla sidor i We.Retail baseras på redigerbara mallar, vilket gör att icke-utve
 
    http://localhost:4502/editor.html/content/we-retail/language-masters/en/equipment.html
 
-1. Observera att lägesväljaren inte längre har något designläge. Alla sidor för webben.Detaljhandel baseras på redigerbara mallar och för att ändra designen av redigerbara mallar måste de redigeras i mallredigeraren.
+1. Lägesväljaren har inte längre något designläge. Alla sidor för webben.Detaljhandel baseras på redigerbara mallar och för att ändra designen av redigerbara mallar måste de redigeras i mallredigeraren.
 1. Från **Sidinformation** menyval **Redigera mall**.
 1. Nu redigerar du Hero Page-mallen.
 
@@ -45,7 +45,7 @@ Alla sidor i We.Retail baseras på redigerbara mallar, vilket gör att icke-utve
 
 1. I layoutdialogrutan för layoutbehållaren kan du
 
-   * Välj en befintlig profil eller skapa en ny profil för behållaren
+   * Välj en befintlig princip eller skapa en profil för behållaren
    * Välj vilka komponenter som tillåts i behållaren
    * Definiera de standardkomponenter som ska placeras när en resurs dras till behållaren
 
@@ -55,7 +55,7 @@ Alla sidor i We.Retail baseras på redigerbara mallar, vilket gör att icke-utve
 
    På så sätt kan du:
 
-   * Välj en befintlig profil eller skapa en ny profil för behållaren
+   * Välj en befintlig princip eller skapa en profil för behållaren
    * Definiera de funktioner som är tillgängliga för sidförfattaren när den här komponenten, som
 
       * Tillåtna inklistringskällor
@@ -73,6 +73,6 @@ Alla sidor i We.Retail baseras på redigerbara mallar, vilket gör att icke-utve
 
 ## Mer information {#more-information}
 
-Mer information finns i dokumentet [Skapa sidmallar](/help/sites-authoring/templates.md) eller utvecklardokumentsidan [Mallar - redigerbara](/help/sites-developing/page-templates-editable.md) för fullständig teknisk information om redigerbara mallar.
+Mer information finns i redigeringsdokumentet [Skapa sidmallar](/help/sites-authoring/templates.md) eller utvecklardokumentsidan [Mallar - redigerbara](/help/sites-developing/page-templates-editable.md) för fullständig teknisk information om redigerbara mallar.
 
 Du kanske också vill undersöka [kärnkomponenter](/help/sites-developing/we-retail-core-components.md). Se redigeringsdokumentet [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) för en översikt över de viktigaste komponenternas och utvecklardokumentets funktioner [Utveckla kärnkomponenter](https://helpx.adobe.com/experience-manager/core-components/using/developing.html) för en teknisk översikt.

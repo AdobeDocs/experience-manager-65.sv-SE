@@ -1,19 +1,15 @@
 ---
 title: Skapa arbetsflödesmodeller
-seo-title: Creating Workflow Models
-description: Du skapar en arbetsflödesmodell som definierar de steg som körs när en användare startar arbetsflödet.
-seo-description: You create a workflow model to define the series of steps executed when a user starts the workflow.
-uuid: 31071d3a-d6d5-4476-9ac0-7b335de406d9
+description: Du skapar en arbetsflödesmodell för att definiera de steg som ska köras när en användare startar arbetsflödet.
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: extending-aem
 content-type: reference
-discoiquuid: c097b60f-bcdf-45de-babe-b4c2e2b746a1
 docset: aem65
 exl-id: 6790202f-0542-4779-b3ce-d394cdba77b4
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2426'
+source-wordcount: '2414'
 ht-degree: 0%
 
 ---
@@ -22,7 +18,7 @@ ht-degree: 0%
 
 >[!CAUTION]
 >
->Om du vill använda det klassiska användargränssnittet läser du [AEM 6.3-dokumentation](https://helpx.adobe.com/experience-manager/6-3/help/sites-developing/workflows-models.html) för referens.
+>Om du vill använda det klassiska användargränssnittet läser du i [AEM 6.3-dokumentation](https://helpx.adobe.com/experience-manager/6-3/help/sites-developing/workflows-models.html) för referens.
 
 Du skapar en [arbetsflödesmodell](/help/sites-developing/workflows.md#model) för att definiera serie steg som körs när en användare startar arbetsflödet. Du kan också definiera modellegenskaper, t.ex. om arbetsflödet är tillfälligt eller använder flera resurser.
 
@@ -30,14 +26,14 @@ När en användare startar ett arbetsflöde startas en instans. Det här är mot
 
 ## Skapa ett nytt arbetsflöde {#creating-a-new-workflow}
 
-När du först skapar en ny arbetsflödesmodell innehåller den:
+När du först skapar en arbetsflödesmodell innehåller den:
 
 * Stegen, **Flödesstart** och **Flödesslut**.
 Dessa representerar början och slutet av arbetsflödet. Dessa steg är obligatoriska och kan inte redigeras/tas bort.
 * Ett exempel **Deltagare** step named **Steg 1**.
 Det här steget är konfigurerat för att tilldela en arbetsuppgift till arbetsflödesinitieraren. Redigera eller ta bort det här steget och lägg till steg efter behov.
 
-Så här skapar du ett nytt arbetsflöde med redigeraren:
+Så här skapar du ett arbetsflöde med redigeraren:
 
 1. Öppna **Arbetsflödesmodeller** konsol, via **verktyg**, **Arbetsflöde**, **Models** eller, till exempel: [https://localhost:4502/aem/workflow](https://localhost:4502/aem/workflow)
 1. Välj **Skapa** sedan **Skapa modell**.
@@ -86,8 +82,8 @@ När du öppnar en [Standardmodell och/eller äldre modell](/help/sites-developi
 * Stegwebbläsaren är inte tillgänglig (vänster sida).
 * Det finns en **Redigera** åtgärd som finns i verktygsfältet (höger sida).
 * Till att börja med visas modellen och dess egenskaper i skrivskyddat läge som:
-   * Standardarbetsflöden finns i `/libs`
-   * Äldre arbetsflöden finns i `/etc`
+   * Standardarbetsflöden är i `/libs`
+   * Äldre arbetsflöden är `/etc`
 Markera **Redigera** kommer att
 * ta en kopia av arbetsflödet till `/conf`
 * göra stegwebbläsaren tillgänglig
@@ -167,7 +163,7 @@ Du kan **Konfigurera** och anpassa ett arbetsflödesstegs beteende med **Stegege
 
 ### Skapa ett tillfälligt arbetsflöde {#creating-a-transient-workflow}
 
-Du kan skapa [Övergående](/help/sites-developing/workflows.md#transient-workflows) arbetsflödesmodell när du skapar en ny modell eller redigerar en befintlig:
+Du kan skapa [Övergående](/help/sites-developing/workflows.md#transient-workflows) arbetsflödesmodell när du skapar en modell eller redigerar en befintlig:
 
 1. Öppna arbetsflödesmodellen för [redigera](#editinganexistingworkflow).
 1. Välj **Egenskaper för arbetsflödesmodell** i verktygsfältet.
@@ -207,7 +203,7 @@ Om det finns en arbetsflödesmodell i det klassiska användargränssnittet, men 
 
 ### Konfigurera ett arbetsflöde för stöd för flera resurser {#configuring-a-workflow-for-multi-resource-support}
 
-Du kan konfigurera en arbetsflödesmodell för [Stöd för flera resurser](/help/sites-developing/workflows.md#multi-resource-support) när du skapar en ny modell eller redigerar en befintlig:
+Du kan konfigurera en arbetsflödesmodell för [Stöd för flera resurser](/help/sites-developing/workflows.md#multi-resource-support) när du skapar en modell eller redigerar en befintlig:
 
 1. Öppna arbetsflödesmodellen för [redigera](#editinganexistingworkflow).
 1. Välj **Egenskaper för arbetsflödesmodell** i verktygsfältet.
@@ -264,7 +260,7 @@ Definiera **Steg** för ditt arbetsflöde:
 
 Så här exporterar du en arbetsflödesmodell i ett paket:
 
-1. Skapa ett nytt paket med [Pakethanteraren](/help/sites-administering/package-manager.md#package-manager):
+1. Skapa ett paket med [Pakethanteraren](/help/sites-administering/package-manager.md#package-manager):
 
    1. Navigera till Package Manager via **verktyg**, **Distribution**, **Paket**.
 
@@ -299,7 +295,7 @@ Du kan konfigurera ett formulär som ska bearbetas av det valda arbetsflödet. N
 
 Så här konfigurerar du arbetsflödet som ska användas med formuläret:
 
-1. Skapa en ny sida och öppna den för redigering.
+1. Skapa en sida och öppna den för redigering.
 1. Lägg till en **Formulär** till sidan.
 1. **Konfigurera** den **Formulärstart** -komponent som visades på sidan.
 1. Använd **Starta arbetsflöde** för att välja önskat arbetsflöde bland de tillgängliga:
@@ -328,7 +324,7 @@ Du kan även konfigurera AEM att visa **FELSÖKNING** meddelanden i loggfilerna.
 
 För att illustrera några av möjligheterna att skapa ett arbetsflöde skapar följande exempel en variant av `Publish Example` arbetsflöde.
 
-1. [Skapa en ny arbetsflödesmodell](#creating-a-new-workflow).
+1. [Skapa en arbetsflödesmodell](#creating-a-new-workflow).
 
    Det nya arbetsflödet kommer att innehålla:
 

@@ -1,14 +1,12 @@
 ---
 title: Anpassad fristående installation
-seo-title: Custom Standalone Install
 description: Lär dig mer om de alternativ som är tillgängliga när du installerar en fristående AEM.
-seo-description: Learn about the options available when installing a standalone AEM instance.
 content-type: reference
 topic-tags: deploying
 exl-id: d6484bb7-8123-4f42-96e8-aa441b1093f3
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1616'
+source-wordcount: '1618'
 ht-degree: 0%
 
 ---
@@ -45,7 +43,7 @@ Det finns olika regler som ska följas när man byter namn på filen quickstart 
 
 ### Java 11 - överväganden {#java-considerations}
 
-Om du kör Oracle Java 11 (eller i allmänhet versioner av Java nyare än 8) måste ytterligare växlar läggas till på kommandoraden när du startar AEM.
+Om du kör Oracle Java 11 (eller vanligtvis versioner av Java nyare än 8) måste ytterligare växlar läggas till på kommandoraden när du startar AEM.
 
 * Följande - `-add-opens` behöver läggas till för att förhindra att relaterade reflektioner får åtkomst till VARNINGSmeddelanden i `stdout.log`
 
@@ -67,7 +65,7 @@ Om du kör en instans som är uppgraderad från AEM 6.3 ska du kontrollera att f
 
 ## Körningslägen {#run-modes}
 
-**Körningslägen** kan du trimma AEM för ett specifikt ändamål, till exempel författare eller publicera, testa, utveckling, intranät osv. Med de här lägena kan du styra användningen av exempelinnehåll. Det här exempelinnehållet definieras innan snabbstarten byggs och kan innehålla paket, konfigurationer osv. Detta kan vara särskilt användbart för produktionsklara installationer när du vill hålla installationen smidig och utan exempelinnehåll. Mer information finns i:
+**Körningslägen** kan du trimma AEM för ett specifikt ändamål, till exempel författare eller publicera, testa, utveckling, intranät och så vidare. Med de här lägena kan du styra användningen av exempelinnehåll. Det här exempelinnehållet definieras innan snabbstarten byggs och kan innehålla paket, konfigurationer och så vidare. Detta kan vara särskilt användbart för produktionsklara installationer när du vill hålla installationen smidig och utan exempelinnehåll. Mer information finns i:
 
 * [Körningslägen](/help/sites-deploying/configure-runmodes.md)
 
@@ -143,7 +141,7 @@ Om du vill avinstallera tjänsten klickar du på **Stoppa** i **Tjänster** navi
 
 ## Definiera om platsen för den tillfälliga arbetskatalogen {#redefining-the-location-of-the-temporary-work-directory}
 
-Standardplatsen för den tillfälliga mappen på Java-datorn är `/tmp`. AEM använder den här mappen också, till exempel när paket skapas.
+Standardplatsen för den tillfälliga mappen på Java-datorn är `/tmp`. AEM använder den här mappen också när paket skapas.
 
 Om du vill ändra platsen för den tillfälliga mappen (till exempel om du behöver en katalog med mer ledigt utrymme) definierar du en * `<new-tmp-path>`* genom att lägga till JVM-parametern:
 

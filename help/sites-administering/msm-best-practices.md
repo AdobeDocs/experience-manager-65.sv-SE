@@ -4,9 +4,9 @@ description: Här hittar du de bästa arbetssätten som skapats av Adobe teknike
 topic-tags: site-features, best-practices
 feature: Multi Site Manager
 exl-id: 3fedc1ba-64f5-4fbe-9ee5-9b96b75dda58
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1614'
+source-wordcount: '1609'
 ht-degree: 0%
 
 ---
@@ -52,11 +52,11 @@ Ytterligare fördelar med att använda en ritkonfiguration är att de:
 
 Om det inte finns någon referens till en ritningskonfiguration kan rollouts bara initieras från själva live-kopiorna, vilket i själva verket leder till att innehållet hämtas från källan.
 
-När du skapar en ny webbplats med en live-kopia är det fördelaktigt att skapa designkonfigurationer för att säkerställa att hela MSM-funktionsuppsättningen är tillgänglig.
+När du skapar en webbplats med en live-kopia är det fördelaktigt att skapa designkonfigurationer för att säkerställa att hela MSM-funktionsuppsättningen är tillgänglig.
 
 >[!NOTE]
 >
->Observera att CUG-filer på fliken Behörigheter inte kan rullas ut till Live-kopior från utkast. Se till att du undviker detta när du konfigurerar Live Copy.
+>Observera att CUG-filer på fliken Behörigheter inte kan rullas ut till Live-kopior från utkast. Planera runt detta när du konfigurerar Live Copy.
 
 ## Komponenter- och behållarsynkronisering {#components-and-container-synchronization}
 
@@ -87,7 +87,7 @@ Observera att AEM har två huvudmetoder för att skapa live-kopior:
 
 Tänk på följande när du skapar en plats:
 
-* Om du vill skapa en ny plats behöver du en [konfiguration av utkast](/help/sites-administering/msm-livecopy.md#managing-blueprint-configurations).
+* Om du vill skapa en plats behöver du en [konfiguration av utkast](/help/sites-administering/msm-livecopy.md#managing-blueprint-configurations).
 * Om du vill att språksökvägar ska kunna väljas på en ny plats måste motsvarande språkrörelser finnas i planen (källa).
 * En gång en [ny webbplats har skapats som en live-kopia](/help/sites-administering/msm-livecopy.md#creating-a-live-copy-of-a-site-from-a-blueprint-configuration) (med **Skapa** sedan **Plats**) är de två första nivåerna i den här live-kopian *grund*. Sidans underordnade hör inte till live-relationen, men en utrullning kommer ändå att gå ned om en live-relation som matchar utlösaren hittas.
 

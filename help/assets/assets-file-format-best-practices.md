@@ -5,7 +5,7 @@ contentOwner: AG
 role: Admin
 feature: Asset Management,Developer Tools
 exl-id: da080f12-4cf7-4c26-901b-cd40d9c00bcb
-source-git-commit: b2faf81983216bef9151548d90ae86f1c26a9f91
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '465'
 ht-degree: 0%
@@ -20,11 +20,11 @@ Information om vilka filformat som stöds finns i [Format som stöds för resurs
 
 >[!TIP]
 >
->Om du använder [!DNL Experience Manager] om du planerar att bearbeta stora PSD- eller PSB-filer på Adobe Managed Services (AMS) kan du kontakta Adobe kundsupport. Samarbeta med Adobe kundsupportrepresentant för att implementera de bästa metoderna för driftsättningen av AMS och för att välja de bästa möjliga verktygen och modellerna för Adobe egna format. [!DNL Experience Manager] kan inte bearbeta PSB-filer med hög upplösning som är större än 30000 x 23000 pixlar.
+>Om du använder [!DNL Experience Manager] på Adobe Managed Services (AMS), kontakta Adobe kundsupport om du tänker bearbeta många stora PSD- eller PSB-filer. Samarbeta med Adobe kundsupportrepresentant för att implementera de bästa metoderna för driftsättningen av AMS och för att välja de bästa möjliga verktygen och modellerna för Adobe egna format. [!DNL Experience Manager] kan inte bearbeta PSB-filer med hög upplösning som är större än 30000 x 23000 pixlar.
 
 ## [!DNL Adobe Camera Raw] bibliotek {#adobe-camera-raw-library}
 
-Adobe rekommenderar att du använder [!DNL Adobe Camera Raw] bibliotek för RAW- och DNG-filer.
+För optimala prestanda rekommenderar Adobe att du använder [!DNL Adobe Camera Raw] bibliotek för RAW- och DNG-filer.
 
 [!DNL Adobe Camera Raw] biblioteket stöder CMYK-färgprofil som indata. Däremot genereras utdata i färgrymden RGB och endast utdata i JPEG-format stöds. Källfilens färgrymd (till exempel CMYK) behålls inte i miniatyrbilderna.
 

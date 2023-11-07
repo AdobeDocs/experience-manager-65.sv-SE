@@ -1,15 +1,15 @@
 ---
 title: Digitalt signera och certifiera dokument
-description: Använd signaturtjänsten för att lägga till och ta bort fält för elektroniska underskrifter i ett PDF-dokument, hämta namn på signaturfält i ett PDF-dokument, ändra signaturfält, digitalt signera PDF-dokument, certifiera PDF-dokument, validera digitala signaturer i ett PDF-dokument, validera alla digitala signaturer i ett PDF-dokument och ta bort en digital signatur från ett signaturfält.
+description: Använd signaturtjänsten för att lägga till och ta bort fält för elektroniska underskrifter i ett PDF-dokument, hämta namn på fält för underskrifter i ett PDF-dokument, ändra fält för underskrifter, signera PDF-dokument digitalt, certifiera PDF-dokument, validera digitala signaturer i ett PDF-dokument, validera alla digitala signaturer i ett PDF-dokument och ta bort en digital signatur från ett signaturfält.
 contentOwner: admin
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 role: Developer
 exl-id: c200f345-40ab-46fd-b6ed-f3af0a23796b
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '17045'
+source-wordcount: '17029'
 ht-degree: 0%
 
 ---
@@ -213,7 +213,7 @@ Så här lägger du till ett signaturfält med signatur-API:t (webbtjänsten):
 
 ## Hämtar namn på signaturfält {#retrieving-signature-field-names}
 
-Du kan hämta namnen på alla signaturfält som finns i ett PDF-dokument som du vill signera eller certifiera. Om du är osäker på vilka signaturfältsnamn som finns i ett PDF-dokument eller vill verifiera namnen, kan du hämta dem programmatiskt. Signaturtjänsten returnerar signaturfältets kvalificerade namn, till exempel `form1[0].grantApplication[0].page1[0].SignatureField1[0]`.
+Du kan hämta namnen på alla signaturfält i ett PDF-dokument som du vill signera eller certifiera. Om du är osäker på vilka signaturfältsnamn som finns i ett PDF-dokument eller vill verifiera namnen, kan du hämta dem programmatiskt. Signaturtjänsten returnerar signaturfältets kvalificerade namn, till exempel `form1[0].grantApplication[0].page1[0].SignatureField1[0]`.
 
 >[!NOTE]
 >
@@ -361,7 +361,7 @@ I det här avsnittet beskrivs hur du ändrar ett signaturfält genom att ändra 
 
 ### Sammanfattning av steg {#summary_of_steps-2}
 
-Gör så här om du vill ändra signaturfält som finns i ett PDF-dokument:
+Gör så här om du vill ändra signaturfält i ett PDF-dokument:
 
 1. Inkludera projektfiler.
 1. Skapa en signaturklient.
@@ -816,7 +816,7 @@ Så här signerar du ett PDF-dokument digitalt med signatur-API:t (webbtjänst):
 
 Du kan signera ett interaktivt formulär som skapas av Forms-tjänsten. Ta till exempel följande arbetsflöde:
 
-* Du sammanfogar ett XFA-baserat PDF-formulär som skapats med Designer och formulärdata som finns i ett XML-dokument med hjälp av Forms-tjänsten. Forms-servern återger ett interaktivt formulär.
+* Du sammanfogar ett XFA-baserat PDF-formulär som skapats med Designer och formulärdata i ett XML-dokument med hjälp av Forms-tjänsten. Forms-servern återger ett interaktivt formulär.
 * Du signerar det interaktiva formuläret med hjälp av API:t för signaturtjänsten.
 
 Resultatet är ett digitalt signerat interaktivt PDF-formulär. När du signerar ett PDF-formulär som är baserat på ett XFA-formulär ska du se till att du sparar PDF-filen som ett Adobe Static PDF. Om du försöker signera ett PDF-formulär som har sparats som ett Adobe dynamiskt PDF-formulär inträffar ett undantag. Eftersom du signerar formuläret som returneras från Forms-tjänsten måste du se till att formuläret innehåller ett signaturfält.
@@ -1514,7 +1514,7 @@ Verifiera en digital signatur med hjälp av Signature Service API (webbtjänst):
 
 ## Verifierar flera digitala signaturer {#verifying-multiple-digital-signatures}
 
-AEM Forms ger möjlighet att verifiera alla digitala signaturer som finns i ett PDF-dokument. Anta att ett PDF-dokument innehåller flera digitala signaturer som ett resultat av en affärsprocess som kräver signaturer från flera signerare. Ta till exempel en finansiell transaktion som kräver både en lånesammans och en chefs underskrift. Du kan använda Java API:t för signaturtjänsten eller webbtjänstens API för att verifiera alla signaturer i PDF-dokumentet. När du verifierar flera digitala signaturer kan du kontrollera status och egenskaper för varje signatur. Innan du litar på en elektronisk underskrift bör du verifiera den. Vi rekommenderar att du är bekant med att verifiera en enda digital signatur.
+AEM Forms ger möjlighet att verifiera alla digitala signaturer i ett PDF-dokument. Anta att ett PDF-dokument innehåller flera digitala signaturer som ett resultat av en affärsprocess som kräver signaturer från flera signerare. Ta till exempel en finansiell transaktion som kräver både en lånesammans och en chefs underskrift. Du kan använda Java API:t för signaturtjänsten eller webbtjänstens API för att verifiera alla signaturer i PDF-dokumentet. När du verifierar flera digitala signaturer kan du kontrollera status och egenskaper för varje signatur. Innan du litar på en elektronisk underskrift bör du verifiera den. Vi rekommenderar att du är bekant med att verifiera en enda digital signatur.
 
 >[!NOTE]
 >
@@ -1585,7 +1585,7 @@ Tidsstämpling är processen att spåra den tid då ett signerat eller certifier
 
 **Hämta alla digitala signaturer**
 
-Om du vill verifiera alla digitala signaturer som finns i ett PDF-dokument hämtar du de digitala signaturerna från PDF-dokumentet. Alla signaturer returneras i en lista. Som en del av verifieringen av en digital signatur kontrollerar du signaturens status.
+Om du vill verifiera alla digitala signaturer i ett PDF-dokument hämtar du de digitala signaturerna från PDF-dokumentet. Alla signaturer returneras i en lista. Som en del av verifieringen av en digital signatur kontrollerar du signaturens status.
 
 >[!NOTE]
 >
@@ -1641,7 +1641,7 @@ Verifiera flera digitala signaturer med Signature Service API (Java):
    * A `PKIOptions` objekt som innehåller alternativ för PKI-körning.
    * A `VerifySPIOptions` -instans som innehåller SPI-information. Du kan ange `null` för parametern.
 
-   The `verifyPDFDocument` returnerar en `PDFDocumentVerificationInfo` objekt som innehåller information om alla elektroniska underskrifter som finns i dokumentet PDF.
+   The `verifyPDFDocument` returnerar en `PDFDocumentVerificationInfo` objekt som innehåller information om alla digitala signaturer i PDF-dokumentet.
 
 1. Upprepa med alla signaturer
 
@@ -1707,7 +1707,7 @@ Verifiera flera digitala signaturer med Signature Service API (webbtjänst):
    * A `PKIOptions` objekt som innehåller alternativ för PKI-körning.
    * A `VerifySPIOptions` -instans som innehåller SPI-information. Du kan ange null för den här parametern.
 
-   The `verifyPDFDocument` returnerar en `PDFDocumentVerificationInfo` objekt som innehåller information om alla elektroniska underskrifter som finns i dokumentet PDF.
+   The `verifyPDFDocument` returnerar en `PDFDocumentVerificationInfo` objekt som innehåller information om alla digitala signaturer i PDF-dokumentet.
 
 1. Upprepa med alla signaturer
 

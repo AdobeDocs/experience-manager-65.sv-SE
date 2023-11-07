@@ -8,9 +8,9 @@ content-type: reference
 docset: aem65
 feature: Tagging
 exl-id: 53a37449-ef87-4fa6-82de-88fdc24cf988
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1645'
+source-wordcount: '1639'
 ht-degree: 0%
 
 ---
@@ -34,7 +34,7 @@ Så här taggar du innehåll och använder infrastrukturen för AEM taggar:
 * Taggad innehåll-nodens `NodeType` måste innehålla [`cq:Taggable`](#taggable-content-cq-taggable-mixin) blanda.
 * The [`TagID`](#tagid) läggs till i innehållsnodens [`cq:tags`](#tagged-content-cq-tags-property) -egenskap och löses till en nod av typen ` [cq:Tag](#tags-cq-tag-node-type)`.
 
-## Taggar: cq:Tag Node Type  {#tags-cq-tag-node-type}
+## Taggar : cq:Tag Node Type  {#tags-cq-tag-node-type}
 
 Deklarationen för en tagg hämtas i databasen i en nod av typen `cq:Tag`.
 
@@ -56,7 +56,7 @@ Med taggningsramverket kan du även begränsa möjligheten för författare och 
 * När taggen innehåller underordnade noder kallas den för [behållartagg.](#container-tags)
 * Taggen lagras i databasen under en bassökväg som kallas [taxonomirotnod.](#taxonomy-root-node)
 
-Eftersom taggar bara är JCR-noder måste nodnamnen förstås följa de [JCR-namnkonvention.](naming-conventions.md)
+Eftersom taggar bara är JCR-noder måste nodnamnen följa [JCR-namnkonvention.](naming-conventions.md)
 
 ### TaggID {#tagid}
 
@@ -127,7 +127,7 @@ Ett typiskt exempel är:
 * Ge användare/författare läsåtkomst till alla namnutrymmen som ska vara läsbara för dem (oftast alla).
 * Ger användare/författare skrivåtkomst till de namnutrymmen där taggar ska kunna definieras fritt av användare/författare (lägg till en nod under `/content/cq:tags/some_namespace`)
 
-## Taggbart innehåll: cq:Taggable Mixin {#taggable-content-cq-taggable-mixin}
+## Taggbart innehåll : cq:Taggable Mixin {#taggable-content-cq-taggable-mixin}
 
 För programutvecklare som vill bifoga taggning till en innehållstyp, nodens registrering ([CND](https://jackrabbit.apache.org/jcr/node-type-notation.html)) måste innehålla `cq:Taggable` blanda eller `cq:OwnerTaggable` blanda.
 
@@ -145,7 +145,7 @@ The `cq:OwnerTaggable` mixin, som ärver från `cq:Taggable`, är avsedd att ind
 
 Det finns nodtypsdefinitioner i databasen som CND-filer. CND-notation definieras som en del av JCR-dokumentationen [här](https://jackrabbit.apache.org/jcr/node-type-notation.html).
 
-De viktigaste definitionerna för de nodtyper som ingår i AEM är följande:
+De viktigaste definitionerna för nodtyperna i AEM är följande:
 
 ```xml
 [cq:Tag] > mix:title, nt:base
@@ -162,7 +162,7 @@ De viktigaste definitionerna för de nodtyper som ingår i AEM är följande:
     mixin
 ```
 
-## Taggat innehåll: cq:tagg, egenskap {#tagged-content-cq-tags-property}
+## Taggat innehåll: egenskapen cq:tags {#tagged-content-cq-tags-property}
 
 The `cq:tags` egenskapen är en `String` -matris som används för att lagra ett eller flera tagg-ID när de tillämpas på innehåll av författare eller webbplatsbesökare. Egenskapen har bara betydelse när den läggs till i en nod som definieras med `[cq:Taggable](#taggable-content-cq-taggable-mixin)` blanda.
 
@@ -213,7 +213,7 @@ Nedan följer en beskrivning av effekterna i databasen när du flyttar eller sam
 
 * Om du vill publicera ändringen när en tagg har flyttats eller sammanfogats väljer du `cq:Tag` noden och alla dess bakgrunder måste replikeras. Detta görs automatiskt när taggen aktiveras i tagghanteringskonsolen.
 
-* Senare uppdateringar av sidans `cq:tags` egenskapen rensar automatiskt de gamla referenserna. Detta utlöses eftersom en flyttad tagg som löses via API returnerar måltaggen och därmed anger måltaggens ID.
+* Senare uppdateringar av sidans `cq:tags` egenskapen rensar automatiskt gamla referenser. Detta utlöses eftersom en flyttad tagg som löses via API returnerar måltaggen och därmed anger måltaggens ID.
 
 >[!NOTE]
 >
@@ -223,4 +223,4 @@ Nedan följer en beskrivning av effekterna i databasen när du flyttar eller sam
 
 Sedan Adobe Experience Manager 6.4 lagras taggar i `/content/cq:tags` Tidigare versioner lagrade taggar under `/etc/tags`.
 
-När du uppgraderar ett AEM från en version som är tidigare än 6.4 måste taggar migreras till `/content/cq:tags`. Se dokumentet [Omstrukturering av de gemensamma tillgångarna i AEM 6.5](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md#tags) för mer information.
+När du uppgraderar ett AEM från en version som är tidigare än 6.4 måste taggar migreras till `/content/cq:tags`. Se [Omstrukturering av de gemensamma tillgångarna i AEM 6.5](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md#tags) för mer information.

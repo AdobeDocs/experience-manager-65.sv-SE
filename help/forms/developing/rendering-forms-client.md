@@ -12,9 +12,9 @@ topic-tags: operations
 discoiquuid: 08d36e9f-cafc-478e-9781-8fc29ac6262e
 role: Developer
 exl-id: e485980d-f200-46b7-9284-c9996003aa47
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1698'
+source-wordcount: '1694'
 ht-degree: 0%
 
 ---
@@ -41,7 +41,7 @@ Så här återger du ett formulär på klienten:
 1. Skapa ett Forms Client API-objekt.
 1. Ange körningsalternativ för klientåtergivning.
 1. Återge ett formulär på klienten.
-1. Skriv formuläret till klientens webbläsare.
+1. Skriv formuläret till webbläsaren.
 
 **Inkludera projektfiler**
 
@@ -53,7 +53,7 @@ Innan du programmässigt kan utföra en API-åtgärd för Forms-tjänstklienten 
 
 **Ange körningsalternativ för klientåtergivning**
 
-Du måste ställa in körtidsalternativet för klientåtergivning för att återge ett formulär på klienten genom att ställa in `RenderAtClient` körningsalternativ till `true`. Detta resulterar i att formuläret levereras till klientenheten där det återges. If `RenderAtClient` är `auto` (standardvärdet) avgör formulärdesignen om formuläret återges hos klienten. Formulärdesignen måste vara en formulärdesign med flödeslayout.
+Ange körtidsalternativet för klientåtergivning för att återge ett formulär på klienten genom att ställa in `RenderAtClient` körningsalternativ till `true`. Detta resulterar i att formuläret levereras till klientenheten där det återges. If `RenderAtClient` är `auto` (standardvärdet) avgör formulärdesignen om formuläret återges hos klienten. Formulärdesignen måste vara en formulärdesign med flödeslayout.
 
 Ett valfritt körningsalternativ som du kan ange är `SeedPDF` alternativ. The `SeedPDF` används för att kombinera PDF-behållaren (dirigerat PDF-dokument) med formulärdesignen och XML-data. Både formulärdesignen och XML-data levereras till Acrobat eller Adobe Reader, där formuläret återges. The `SeedPDF` kan användas när klientdatorn inte har teckensnitt som används i formuläret, till exempel när en slutanvändare inte har licens att använda ett teckensnitt som formulärägaren har licens att använda.
 
@@ -73,7 +73,7 @@ Om du vill återge ett formulär på klienten måste du se till att alternativen
 
 **Skriv formulärdataströmmen till klientens webbläsare**
 
-Forms-tjänsten skapar en formulärdataström som du måste skriva till klientens webbläsare. När formuläret skrivs till webbläsaren återges det av Acrobat 7.0 eller Adobe Reader 7.0 eller senare och är synligt för användaren.
+Forms skapar en formulärdataström som du måste skriva till klientens webbläsare. När formuläret skrivs till webbläsaren återges det av Acrobat 7.0 eller Adobe Reader 7.0 eller senare och är synligt för användaren.
 
 **Se även**
 
@@ -87,7 +87,7 @@ Forms-tjänsten skapar en formulärdataström som du måste skriva till klienten
 
 [Snabbstart för Forms Service API](/help/forms/developing/forms-service-api-quick-starts.md#forms-service-api-quick-starts)
 
-[Skicka dokument till Forms-tjänsten](/help/forms/developing/passing-documents-forms-service.md)
+[Skicka dokument till Forms](/help/forms/developing/passing-documents-forms-service.md)
 
 [Skapa webbprogram som återger Forms](/help/forms/developing/creating-web-applications-renders-forms.md)
 

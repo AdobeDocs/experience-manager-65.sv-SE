@@ -1,7 +1,7 @@
 ---
 title: Söker efter processinstanser
 seo-title: Searching for process instances
-description: Använd sidan Processsökning för att ange sökvillkor för att hitta en processinstans.
+description: Använd sidan Processsökning om du vill ange sökvillkor för att hitta en processinstans.
 seo-description: Use the Process Search page to enter search criteria for finding a process instance.
 uuid: 4a9c5b05-add5-4278-9c6f-d1928b6860d2
 contentOwner: admin
@@ -10,16 +10,16 @@ geptopics: SG_AEMFORMS/categories/configuring_forms_workflow
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 88b634bb-8f6c-4830-ad01-821668609615
 exl-id: 35f9acbf-7a82-43b1-9e17-9be4de666212
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '449'
+source-wordcount: '447'
 ht-degree: 0%
 
 ---
 
 # Söker efter processinstanser{#searching-for-process-instances}
 
-Använd sidan Processsökning för att ange sökvillkor för att hitta en processinstans. Du kommer åt sidan Processsökning från sidan för formulärarbetsflöde eller genom att klicka på Sök på sidan Processinstans.
+Använd sidan Processsökning om du vill ange sökvillkor för att hitta en processinstans. Du kommer åt sidan Processsökning från sidan för formulärarbetsflöde eller genom att klicka på Sök på sidan Processinstans.
 
 Du kan ange grundläggande villkor för att utföra en allmän sökning, särskilda attribut för att utföra en detaljerad sökning eller en kombination av grundläggande villkor och specifika attribut för att utföra en kombinerad sökning.
 
@@ -50,7 +50,7 @@ Du kan ange specifika attribut för att göra en detaljerad sökning. En detalje
    * Välj en operator i filterlistan.
    * I rutan Värde anger du ett värde som passar det attribut du har valt.
 
-1. Om du vill lägga till ytterligare en rad väljer du Fler filter. En annan uppsättning med attribut-, filter- och värdeslistor visas, liksom en villkorslista.
+1. Om du vill lägga till ytterligare en rad väljer du Fler filter. En annan uppsättning med attribut-, filter- och värdeslistor visas och en villkorslista.
 1. Välj OCH eller ELLER under Villkor. Upprepa steg 1-3 om det behövs för att begränsa sökningen ytterligare.
 1. Om du vill lägga till eller ta bort rader klickar du på Fler filter eller Färre filter. Du kan ha mellan en och fyra rader.
 1. Klicka på Sök. Sidan Processinstans visas med en lista över de hittade instanserna.

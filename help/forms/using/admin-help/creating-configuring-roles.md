@@ -1,7 +1,7 @@
 ---
 title: Skapa och konfigurera roller
 seo-title: Creating and configuring roles
-description: Lär dig hur du associerar användare och grupper med roller som redan ingår i databasen för användarhantering. Du kan också skapa, redigera och ta bort roller.
+description: Lär dig hur du associerar användare och grupper med roller som redan är en del av databasen för användarhantering. Du kan också skapa, redigera och ta bort roller.
 seo-description: Learn how to associate users and groups with roles that are already part of the User Management database. You can also create, edit, and delete roles.
 uuid: e8e4331d-48e1-4fa9-8f44-f885f4ab1a54
 contentOwner: admin
@@ -10,9 +10,9 @@ geptopics: SG_AEMFORMS/categories/setting_up_and_organizing_users
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 737fb4d1-adef-47e1-9a0d-8cddd13132cb
 exl-id: b447e545-f73e-4fde-a001-86e0e1cf4a12
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2525'
+source-wordcount: '2523'
 ht-degree: 0%
 
 ---
@@ -23,9 +23,9 @@ På webbsidorna för användarhantering kan du koppla användare och grupper til
 
 Användarhantering har två typer av roller:
 
-**Muterbara roller:** Den här typen av roll kan redigeras och tas bort och rollbehörigheter kan läggas till och tas bort från de här rolltyperna. Alla roller som du skapar betraktas som ändringsbara. Du kan lägga till eller ta bort användare och grupper som tilldelats till ändringsbara roller.
+**Muterbara roller:** Den här typen av roll kan redigeras och tas bort, och rollbehörigheter kan läggas till och tas bort från de här rolltyperna. Alla roller som du skapar betraktas som ändringsbara. Du kan lägga till eller ta bort användare och grupper som tilldelats till ändringsbara roller.
 
-**Oföränderliga roller:** Standardrollerna som ingår i användarhantering är oföränderliga roller. Dessa roller kan inte redigeras eller tas bort. Du kan dock lägga till eller ta bort användare och grupper som tilldelats oföränderliga roller.
+**Oändringsbara roller:** Standardrollerna som ingår i användarhantering är oföränderliga roller. Dessa roller kan inte redigeras eller tas bort. Du kan dock lägga till eller ta bort användare och grupper som tilldelats oföränderliga roller.
 
 Både ändringsbara och oföränderliga roller kan också skapas via API:er för AEM formulär.
 
@@ -67,7 +67,7 @@ Följande extra standardroller kan inkluderas, beroende på vilka AEM du har ins
 
 **Rights Management Administrator:** Utför alla åtgärder som krävs för alla serverkonfigurationer på de relevanta Rights Management-sidorna
 
-**Rights Management-slutanvändare:** Kan komma åt Rights Management:s webbsidor
+**Rights Management-slutanvändare:** Har åtkomst till slutanvändarwebbsidor i Rights Management
 
 **Rights Management Invite User:** Kan bjuda in användare
 
@@ -79,7 +79,7 @@ Följande extra standardroller kan inkluderas, beroende på vilka AEM du har ins
 
 **AEM Workspace Administrator:** Kan visa och ändra inställningar från sidan Arbetsyta i administrationskonsolen
 
-***anteckning **: Flex Workspace är föråldrat för AEM formulärreleaser.*
+***anteckning **: Flex Workspace är föråldrat för AEM formulärrelease.*
 
 **Arbetsytans användare:** Kan logga in på slutanvändarprogrammet för arbetsytan
 
@@ -116,7 +116,7 @@ Följande extra standardroller kan inkluderas, beroende på vilka AEM du har ins
    * Ange sökvillkoren i rutan Sök.
    * Välj Namn, E-post eller Användar-ID och välj sedan Användare, Grupper eller Användare och grupper.
    * Markera domänen, välj antalet resultat som ska visas och klicka på Sök.
-   * Markera kryssrutorna för de användare och grupper som rollen ska tilldelas till och klicka på OK.
+   * Markera kryssrutorna för de användare och grupper som den här rollen ska tilldelas och klicka på OK.
 
 1. Markera enheten om du vill visa användar- och gruppinformation.
 1. Klicka på OK och sedan på Slutför.
@@ -151,7 +151,7 @@ Du kan ta bort alla roller som du har skapat, men inte standardrollerna AEM form
 ## Tilldela användare och grupper en roll {#assign-a-role-to-users-and-groups}
 
 1. I administrationskonsolen klickar du på Inställningar > Användarhantering > Användare och grupper.
-1. Ange information om du vill begränsa sökningen och klicka på Sök. Sökresultaten visas längst ned på sidan. Du kan sortera listan genom att klicka på någon av kolumnrubrikerna.
+1. Ange information om du vill begränsa sökningen och klicka på Sök. Resultatet av sökningen visas längst ned på sidan. Du kan sortera listan genom att klicka på någon av kolumnrubrikerna.
 1. Markera kryssrutorna bredvid de användare och grupper som ska associeras med en roll och klicka på Tilldela roll.
 1. Välj den roll som ska tilldelas användaren eller gruppen och klicka på OK.
 
@@ -191,7 +191,7 @@ Du kan ändra behörigheterna för alla roller som du har skapat. Du kan inte ä
 
 **Lägg till komponent:** Installera en ny komponent i systemet
 
-**Ta bort komponent:** Ta bort alla komponenter i systemet
+**Ta bort komponent:** Ta bort valfri komponent i systemet
 
 **Komponenten har lästs:** Läs alla komponenter i systemet
 
@@ -201,7 +201,7 @@ Du kan ändra behörigheterna för alla roller som du har skapat. Du kan inte ä
 
 **Styrning av kärninställningar:** Hantera inställningarna på sidan Core System Settings i administrationskonsolen
 
-**CREATE_VERSION_PERM:** Skapa en ny version av en tjänst
+**CREATE_VERSION_PERM:** Skapa en tjänstversion
 
 **Ändra autentiseringsuppgifter:** Ändra eventuella signeringsreferenser i Trust Store
 
@@ -217,7 +217,7 @@ Du kan ändra behörigheterna för alla roller som du har skapat. Du kan inte ä
 
 **Delegat:** Ange en åtkomstkontrollista för en resurs
 
-**DELETE_VERSION_PERM:** Ta bort en version av en tjänst
+**DELETE_VERSION_PERM:** Ta bort en tjänstversion
 
 **Dokumentöverföring:** Överför dokument i AEM formulär
 
@@ -233,7 +233,7 @@ Du kan ändra behörigheterna för alla roller som du har skapat. Du kan inte ä
 
 **Uppdatering av License Manager:** Uppdatera licensinformation
 
-**MODIFY_CONFIG_PERM:** Ändra konfigurationen för en tjänst
+**ÄNDRA_KONFIG_PERM:** Ändra konfigurationen för en tjänst
 
 **TERM** Ändra versionen av en tjänst
 
@@ -251,7 +251,7 @@ Du kan ändra behörigheterna för alla roller som du har skapat. Du kan inte ä
 
 **PERM_OUTPUT_ADMIN:** Utdataadministratör
 
-**PERM_READER_EXTENSIONS_WEB_APPLICATION:** Använda webbprogrammet Acrobat Reader DC-tillägg
+**PERM_READER_EXTENSIONS_WEB_APPLICATION:** Använda webbprogrammet Acrobat Reader DC Extensions
 
 **PERM_SP_ADMIN:** Hantera inställningar för SharePoint Connector
 
@@ -259,7 +259,7 @@ Du kan ändra behörigheterna för alla roller som du har skapat. Du kan inte ä
 
 **PERM_WORKSPACE_USER:** Logga in i slutanvändarprogrammet för arbetsytan
 
-**Huvudkontroll:** Hantera användare och grupper för alla domäner och hantera rolltilldelningar för alla användare och grupper i alla domäner
+**Principal Control:** Hantera användare och grupper för alla domäner och hantera rolltilldelningar för alla användare och grupper i alla domäner
 
 **Läs/ta bort processinspelning:** Visa och hämta arbetsflödesgranskningsinstanser
 
@@ -275,7 +275,7 @@ Du kan ändra behörigheterna för alla roller som du har skapat. Du kan inte ä
 
 **Databasläsning:** Läs innehållet i en resurs
 
-**Databasgenomgång:** Inkludera en resurs i en resursbegäran i en lista eller läs metadata för en resurs
+**Databasgenomgång:** Inkludera en resurs i en resursbegäran eller läs metadata för en resurs
 
 **Databasskrivning:** Skriv databasmetadata och -innehåll
 
@@ -291,7 +291,7 @@ Du kan ändra behörigheterna för alla roller som du har skapat. Du kan inte ä
 
 **Lägg till koordinator för Rights Management-principuppsättning:** Lägga till, ta bort och ändra behörigheter för koordinatorer för principuppsättningar
 
-**Skapa princip för Rights Management-principuppsättning:** Skapa en ny princip för en principuppsättning
+**Skapa princip för Rights Management-principuppsättning:** Skapa en profil för en principuppsättning
 
 **Ta bort princip för uppsättningsuppsättning för Rights Management-princip:** Ta bort en profil från en principuppsättning
 
@@ -305,7 +305,7 @@ Du kan ändra behörigheterna för alla roller som du har skapat. Du kan inte ä
 
 **Byteprincip för Rights Management-principuppsättning:** Byta profil för ett dokument
 
-**Rights Management-principuppsättning Avåterkalla dokument:** Återkalla ett dokument
+**Rights Management-princip Ange Unrevoke-dokument:** Återkalla ett dokument
 
 **Vyhändelse för Rights Management Policy Set:** Visa policy- och dokumenthändelser för alla profiler eller dokument i en principuppsättning
 
@@ -319,7 +319,7 @@ Du kan ändra behörigheterna för alla roller som du har skapat. Du kan inte ä
 
 **Inaktivering av tjänst:** Stoppa alla tjänster i systemet
 
-**Radera tjänst:** Ta bort alla tjänster i systemet, inklusive processer och processvarianter
+**Borttagning av tjänst:** Ta bort alla tjänster i systemet, inklusive processer och processvarianter
 
 **Anropa tjänst:** Anropa alla tjänster i tjänstregistret som är tillgängliga vid körning
 
@@ -335,7 +335,7 @@ Du kan ändra behörigheterna för alla roller som du har skapat. Du kan inte ä
 
 **SUPERVISOR_PERM:** Visa processinstansdata för en tjänst som skapats från en process
 
-**Bläddra:** Inkludera en resurs i en resursbegäran i en lista eller läs metadata för en resurs
+**Gå igenom:** Inkludera en resurs i en resursbegäran eller läs metadata för en resurs
 
 **Skriv:** Skriv databasmetadata och -innehåll
 

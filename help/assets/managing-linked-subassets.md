@@ -5,9 +5,9 @@ contentOwner: AG
 role: User, Admin
 feature: Asset Management
 exl-id: 1ea9d8fe-602c-452b-9a24-4125b705aedf
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1351'
+source-wordcount: '1350'
 ht-degree: 0%
 
 ---
@@ -63,7 +63,7 @@ Den här proceduren liknar [lägga till digitala resurser som referenser i Adobe
 
 ### Skapa referenser till resurser genom att exportera en ZIP-fil {#create-references-to-aem-assets-by-exporting-a-zip-file}
 
-1. Utför stegen i [Skapa arbetsflödesmodeller](/help/sites-developing/workflows-models.md) för att skapa ett nytt arbetsflöde.
+1. Utför stegen i [Skapa arbetsflödesmodeller](/help/sites-developing/workflows-models.md) för att skapa ett arbetsflöde.
 1. Använd [Paketfunktion](https://helpx.adobe.com/indesign/how-to/indesign-package-files-for-handoff.html) av [!DNL Adobe InDesign] för att exportera dokumentet. [!DNL Adobe InDesign] kan exportera ett dokument och de länkade resurserna som ett paket. I det här fallet innehåller den exporterade mappen en `Links` mapp som innehåller delresurser i [!DNL InDesign] -fil. The `Links` finns i samma mapp som INDD-filen.
 1. Skapa en ZIP-fil och överför den till [!DNL Experience Manager] databas.
 1. Starta `Unarchiver` arbetsflöde.

@@ -12,9 +12,9 @@ topic-tags: operations
 discoiquuid: b4f57e42-60a6-407d-9764-15a11615827d
 role: Developer
 exl-id: 28abf044-6c8e-4578-ae2e-54cdbd694c5f
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1882'
+source-wordcount: '1878'
 ht-degree: 0%
 
 ---
@@ -55,7 +55,7 @@ I följande tabell beskrivs stegen i det här diagrammet.
   </tr>
   <tr>
    <td><p>2</p></td>
-   <td><p>The <code>GetLoanForm</code> Java Servlet använder Forms klient-API för att återge låneformuläret till klientens webbläsare. Skillnaden mellan återgivning av ett formulär som innehåller ett skript som är konfigurerat att köras på servern och återgivning av ett formulär som inte innehåller något skript är att du måste ange målplatsen som används för att köra skriptet. Om ingen målplats anges körs inte ett skript som är konfigurerat att köras på servern. Tänk dig till exempel programmet som introducerades i det här avsnittet. The <code>CalculateData</code> Java Servlet är målplatsen där skriptet körs.</p></td>
+   <td><p>The <code>GetLoanForm</code> Java Servlet använder Forms klient-API:t för att återge låneformuläret till klientens webbläsare. Skillnaden mellan återgivning av ett formulär som innehåller ett skript som är konfigurerat att köras på servern och återgivning av ett formulär som inte innehåller något skript är att du måste ange målplatsen som används för att köra skriptet. Om ingen målplats anges körs inte ett skript som är konfigurerat att köras på servern. Tänk dig till exempel programmet som introducerades i det här avsnittet. The <code>CalculateData</code> Java Servlet är den målplats där skriptet körs.</p></td>
   </tr>
   <tr>
    <td><p>3</p></td>
@@ -80,7 +80,7 @@ För att illustrera användningen av ett formulärdesignskript undersöker det h
 
 **S.** Ett fält med namnet NumericField1 **B.** Ett fält med namnet NumericField2 **C.** Ett fält med namnet NumericField3
 
-Skriptet i den här formulärdesignen har följande syntax:
+Skriptets syntax i den här formulärdesignen är följande:
 
 ```javascript
      NumericField3 = NumericField2 + NumericField1
@@ -121,7 +121,7 @@ Kontrollera att bearbetningstillståndet som är associerat med det skickade for
 
 **Skriv tillbaka formulärdataströmmen till klientens webbläsare**
 
-När du har verifierat bearbetningstillståndet som är kopplat till ett skickat formulär är `1`måste du skriva tillbaka resultaten till klientens webbläsare. När formuläret visas visas det beräknade värdet i respektive fält.
+När du har verifierat bearbetningstillståndet som är kopplat till ett skickat formulär är `1`måste du skriva tillbaka resultaten till webbläsaren. När formuläret visas visas det beräknade värdet i respektive fält.
 
 **Se även**
 
@@ -152,14 +152,13 @@ Beräkna formulärdata med Forms API (Java):
    * Anropa `FormsServiceClient` objektets `processFormSubmission` och skicka följande värden:
 
       * The `com.adobe.idp.Document` som innehåller formulärdata.
-      * Ett strängvärde som anger miljövariabler inklusive alla relevanta HTTP-huvuden. Du måste ange vilken innehållstyp som ska hanteras genom att ange ett eller flera värden för `CONTENT_TYPE` systemvariabel. Om du till exempel vill hantera XML- och PDF-data anger du följande strängvärde för den här parametern: `CONTENT_TYPE=application/xml&CONTENT_TYPE=application/pdf`
-      * Ett strängvärde som anger `HTTP_USER_AGENT` rubrikvärde; till exempel `Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322)`.
+      * Ett strängvärde som anger miljövariabler inklusive alla relevanta HTTP-huvuden. Ange vilken innehållstyp som ska hanteras genom att ange ett eller flera värden för `CONTENT_TYPE` miljövariabel. Om du till exempel vill hantera XML- och PDF-data anger du följande strängvärde för den här parametern: `CONTENT_TYPE=application/xml&CONTENT_TYPE=application/pdf`
+      * Ett strängvärde som anger `HTTP_USER_AGENT` rubrikvärde, till exempel `Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322)`.
       * A `RenderOptionsSpec` objekt som lagrar körningsalternativ.
 
-      The `processFormSubmission` returnerar en `FormsResult` objekt som innehåller resultaten av formuläröverföringen.
+     The `processFormSubmission` returnerar en `FormsResult` objekt som innehåller resultaten av formuläröverföringen.
 
    * Kontrollera att bearbetningstillståndet som är associerat med ett skickat formulär är `1` genom att anropa `FormsResult` objektets `getAction` -metod. Om den här metoden returnerar värdet `1`beräkningarna utfördes och data kan skrivas tillbaka till klientens webbläsare.
-
 
 1. Skriv tillbaka formulärdataströmmen till klientens webbläsare
 
@@ -201,7 +200,7 @@ Beräkna formulärdata med Forms API (webbtjänst):
 
       * The `BLOB` som innehåller formulärdata.
       * Ett strängvärde som anger miljövariabler inkluderade alla relevanta HTTP-huvuden. Du kan till exempel ange följande strängvärde: `HTTP_REFERER=referrer&HTTP_CONNECTION=keep-alive&CONTENT_TYPE=application/xml`
-      * Ett strängvärde som anger `HTTP_USER_AGENT` rubrikvärde; till exempel `Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322)`.
+      * Ett strängvärde som anger `HTTP_USER_AGENT` rubrikvärde, till exempel `Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322)`.
       * A `RenderOptionsSpec` objekt som lagrar körningsalternativ. Mer information finns i .
       * En tom `BLOBHolder` objekt som fylls i av metoden.
       * En tom `javax.xml.rpc.holders.StringHolder` objekt som fylls i av metoden.
@@ -211,10 +210,9 @@ Beräkna formulärdata med Forms API (webbtjänst):
       * En tom `MyArrayOf_xsd_anyTypeHolder` objekt som fylls i av metoden. Den här parametern används för att lagra bifogade filer som skickas tillsammans med formuläret.
       * En tom `FormsResultHolder` objekt som fylls i av metoden med det formulär som skickas.
 
-      The `processFormSubmission` metoden fyller i `FormsResultHolder` parametern med resultaten av formuläröverföringen. The `processFormSubmission` returnerar en `FormsResult` objekt som innehåller resultaten av formuläröverföringen.
+     The `processFormSubmission` metoden fyller i `FormsResultHolder` parametern med resultaten av formuläröverföringen. The `processFormSubmission` returnerar en `FormsResult` objekt som innehåller resultaten av formuläröverföringen.
 
    * Kontrollera att bearbetningstillståndet som är associerat med ett skickat formulär är `1` genom att anropa `FormsResult` objektets `getAction` -metod. Om den här metoden returnerar värdet `1`beräkningarna utfördes och data kan skrivas tillbaka till klientens webbläsare.
-
 
 1. Skriv tillbaka formulärdataströmmen till klientens webbläsare
 

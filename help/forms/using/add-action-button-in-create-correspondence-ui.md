@@ -7,9 +7,9 @@ topic-tags: correspondence-management
 docset: aem65
 feature: Correspondence Management
 exl-id: a582ba41-83cb-46f2-9de9-3752f6a7820a
-source-git-commit: 10227bcfcfd5a9b0f126fee74dce6ec7842f5e95
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1880'
+source-wordcount: '1879'
 ht-degree: 0%
 
 ---
@@ -40,7 +40,7 @@ Om du lägger till en knapp med en åtgärd (här skickar du ett brev för grans
 ### Lägg till knappen i användargränssnittet Skapa korrespondens {#add-the-button-to-the-create-correspondence-user-interface}
 
 1. Gå till `https://'[server]:[port]'/[ContextPath]/crx/de` och logga in som administratör.
-1. Skapa en mapp med namnet i appmappen `defaultApp` med en sökväg/struktur som liknar defaultApp-mappen (finns i config-mappen). Så här skapar du mappen:
+1. Skapa en mapp med namnet i appmappen `defaultApp` med en sökväg/struktur som liknar defaultApp-mappen (i config-mappen). Så här skapar du mappen:
 
    1. Högerklicka på **defaultApp** mapp på följande sökväg och välj **Överläggsnod**:
 

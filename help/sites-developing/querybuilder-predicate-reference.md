@@ -6,7 +6,7 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: platform
 exl-id: 54b942f9-5dd9-4826-9a0a-028f2d7b8e41
-source-git-commit: 4e2ee7da5424ac6677eaa2392de7803e7543d13c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '2347'
 ht-degree: 0%
@@ -247,7 +247,7 @@ Stöder extrahering av ansikten. Tillhandahåller bucket för varje unik språkk
 
 * **språk**
 
-  ISO-språkkod, till exempel &quot; `de`&quot;
+  ISO-språkkod, till exempel &quot;`de`&quot;
 
 ### huvudtillgång {#mainasset}
 
@@ -313,7 +313,7 @@ Låter resultaten sorteras. Om det krävs en ordning efter flera egenskaper mås
 
 * **orderby**
 
-  JCR-egenskapsnamnet som anges av t.ex. radavståndet @ `@jcr:lastModified` eller `@jcr:content/jcr:title`eller ett annat predikat i frågan, till exempel `2_property`, som vi ska sortera efter.
+  Antingen JCR-egenskapsnamn som anges av t.ex. ett radavstånd på @ `@jcr:lastModified` eller `@jcr:content/jcr:title`eller ett annat predikat i frågan, till exempel `2_property`, som vi ska sortera efter.
 
 * **sortera**
 
@@ -459,7 +459,7 @@ Namnet &quot;root&quot; används aldrig i en fråga, det är implicit.
 
 * **p.gissningTotal**
 
-  Rekommenderas: undvik att beräkna det totala resultatet som kan vara kostsamt; antingen en siffra som anger det högsta antalet som ska räknas upp till (till exempel 1000, ett tal som ger användarna tillräckligt med feedback på grovstorleken och exakta tal för mindre resultat) eller &quot; `true`&quot; för att endast räkna upp till det minsta nödvändiga `p.offset` + `p.limit`.
+  Rekommenderas: undvik att beräkna det totala resultatet som kan vara kostsamt; antingen en siffra som anger det högsta antalet som ska räknas upp till (t.ex. 1000, ett tal som ger användarna tillräckligt med feedback på grovstorleken och exakta tal för mindre resultat) eller &quot; `true`&quot; för att endast räkna upp till det minsta nödvändiga `p.offset` + `p.limit`.
 
 * **p.excerpt**
 
@@ -521,7 +521,7 @@ Stöder extrahering av ansikten. Tillhandahåller bucket för varje unik tagg me
 
 * **tag**
 
-  Taggtitelsökväg att söka efter, t.ex. &quot;Resursegenskaper : Orientation / Landscape&quot;.
+  Taggtitelsökväg som du vill söka efter, t.ex. &quot;Resursegenskaper : Orientation / Landscape&quot;.
 
 * **N_värde**
 
@@ -541,7 +541,7 @@ Stöder extrahering av ansikten. Tillhandahåller bucket för varje unik tagg me
 
 * **tagid**
 
-  Tagg-id så att du kan söka efter t.ex. &quot; `properties:orientation/landscape`&quot;.
+  Tagg-id så att du till exempel kan leta efter&quot; `properties:orientation/landscape`&quot;.
 
 * **N_värde**
 

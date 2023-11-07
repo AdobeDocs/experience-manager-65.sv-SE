@@ -6,7 +6,7 @@ role: User, Admin
 feature: Metadata
 exl-id: 82148ae5-37e9-4fc5-ada9-db3d91b29c33
 hide: true
-source-git-commit: 8bd103e392bf5630cb2db654dedcfe4f926b2c9d
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '736'
 ht-degree: 4%
@@ -22,7 +22,7 @@ ht-degree: 4%
 
 Den här XMP återskrivningsfunktionen i [!DNL Adobe Experience Manager Assets] återger metadataändringarna i återgivningarna av den ursprungliga resursen. När du ändrar metadata för en resurs i Resurser eller när du överför resursen, lagras ändringarna först i metadatanoden i resurshierarkin.
 
-Med funktionen XMP kan du sprida metadataändringarna till alla eller vissa återgivningar av resursen. Funktionen skriver bara tillbaka de metadataegenskaper som använder registrerade namnutrymmen, det vill säga en egenskap med namnet `dc:title` skrivs tillbaka men egenskapen heter `mytitle` inte.
+Med XMP återskrivningsfunktion kan du sprida metadataändringarna till alla eller vissa återgivningar av resursen. Funktionen skriver bara tillbaka de metadataegenskaper som använder registrerade namnutrymmen, det vill säga en egenskap med namnet `dc:title` skrivs tillbaka men egenskapen heter `mytitle` inte.
 
 Tänk dig ett scenario där du ändrar [!UICONTROL Title] egenskap för tillgången i namnet `Classic Leather` till `Nylon`.
 
@@ -34,11 +34,11 @@ I det här fallet [!DNL Experience Manager Assets] sparar ändringarna i **[!UIC
 
 Men [!DNL Experience Manager Assets] sprider inte automatiskt metadataändringar till återgivningar av en resurs. Se [aktivera XMP-tillbakaskrivning](#enable-xmp-writeback).
 
-## Aktivera XMP {#enable-xmp-writeback}
+## Aktivera XMP tillbakaskrivning {#enable-xmp-writeback}
 
 Om du vill att metadataändringarna ska kunna spridas till återgivningarna av resursen när du överför den ändrar du **[!UICONTROL Adobe CQ DAM Rendition Maker]** konfiguration i Configuration Manager.
 
-1. Öppna Configuration Manager genom att öppna `https://[aem_server]:[port]/system/console/configMgr`.
+1. Om du vill öppna Configuration Manager öppnar du `https://[aem_server]:[port]/system/console/configMgr`.
 1. Öppna **[!UICONTROL Adobe CQ DAM Rendition Maker]** konfiguration.
 1. Välj **[!UICONTROL Propagate XMP]** och spara sedan ändringarna.
 
@@ -73,7 +73,7 @@ Metadataändringarna sprids till miniatyrbilden för återgivningarna.140.100.pn
 >
 >Information om vilka plattformar som stöds finns i [XMP för metadataåterskrivning](/help/sites-deploying/technical-requirements.md#requirements-for-aem-assets-xmp-metadata-write-back).
 
-## Filtrera XMP metadata {#filtering-xmp-metadata}
+## Filtrera XMP {#filtering-xmp-metadata}
 
 [!DNL Experience Manager Assets] har stöd för både blockeringslista och tillåtelselista-filtrering av egenskaper/noder för XMP metadata som läses från objektbinärfiler och lagras i JCR när resurser hämtas.
 
@@ -85,9 +85,9 @@ Filtrering av XMP metadata via tillåtelselista löser problemet genom att du ka
 >
 >Filtrering fungerar bara för egenskaper som härletts från XMP källor i objektbinärfiler. För egenskaper som härleds från andra källor än XMP, som EXIF- och IPTC-format, fungerar inte filtreringen. Datumet då en resurs skapas sparas till exempel i egenskapen med namnet `CreateDate` i EXIF TIFF. Experience Manager lagrar det här värdet i ett metadatafält med namnet `exif:DateTimeOriginal`. Eftersom källan inte är en XMP källa fungerar inte filtrering på den här egenskapen.
 
-1. Öppna Configuration Manager genom att öppna `https://[aem_server]:[port]/system/console/configMgr`.
+1. Om du vill öppna Configuration Manager öppnar du `https://[aem_server]:[port]/system/console/configMgr`.
 1. Öppna **[!UICONTROL Adobe CQ DAM XmpFilter]** konfiguration.
-1. Om du vill använda filtrering via tillåtelselista väljer du **[!UICONTROL Apply Allowlist to XMP Properties]** och ange de egenskaper som ska importeras i **[!UICONTROL Allowed XML Names for XMP filtering]** box.
+1. Om du vill använda filtrering via en tillåtelselista väljer du **[!UICONTROL Apply Allowlist to XMP Properties]** och ange de egenskaper som ska importeras i **[!UICONTROL Allowed XML Names for XMP filtering]** box.
 
    ![chlimage_1-136](assets/chlimage_1-347.png)
 

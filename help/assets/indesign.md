@@ -5,9 +5,9 @@ contentOwner: AG
 role: Admin
 feature: Publishing
 exl-id: 5ba020a3-c36c-402b-a11b-d6b0426b03bf
-source-git-commit: 67e145e250bbe386168ab2c0f8967f91aa9d8a36
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1559'
+source-wordcount: '1557'
 ht-degree: 1%
 
 ---
@@ -18,9 +18,9 @@ ht-degree: 1%
 
 * En proxy som distribuerar inläsningen av vissa bearbetningsuppgifter. En proxy är en [!DNL Experience Manager] instans som kommunicerar med en proxyarbetare för att utföra en viss uppgift, och andra [!DNL Experience Manager] -instanser för att leverera resultaten.
 * En proxyarbetare som definierar och hanterar en viss uppgift.
-Dessa kan omfatta en mängd olika arbetsuppgifter. till exempel använda en [!DNL InDesign Server] för att bearbeta filer.
+Dessa kan omfatta en mängd olika uppgifter, till exempel med hjälp av en [!DNL InDesign Server] för att bearbeta filer.
 
-Så här överför du filer helt till [!DNL Experience Manager Assets] som du har skapat med [!DNL Adobe InDesign] en proxy används. Detta använder en proxyarbetare för att kommunicera med [!DNL Adobe InDesign Server], där [skript](https://www.adobe.com/devnet/indesign/documentation.html#idscripting) körs för att extrahera metadata och generera olika renderingar för [!DNL Experience Manager Assets]. Proxyarbetaren möjliggör tvåvägskommunikation mellan [!DNL InDesign Server] och [!DNL Experience Manager] instanser i en molnkonfiguration.
+Så här överför du filer till [!DNL Experience Manager Assets] som du har skapat med [!DNL Adobe InDesign] en proxy används. Detta använder en proxyarbetare för att kommunicera med [!DNL Adobe InDesign Server], där [skript](https://www.adobe.com/devnet/indesign/documentation.html#idscripting) körs för att extrahera metadata och generera olika renderingar för [!DNL Experience Manager Assets]. Proxyarbetaren möjliggör tvåvägskommunikation mellan [!DNL InDesign Server] och [!DNL Experience Manager] instanser i en molnkonfiguration.
 
 >[!NOTE]
 >
@@ -35,7 +35,7 @@ The [!DNL Adobe InDesign Server] kan integreras med [!DNL Experience Manager Ass
 >Tidigare versioner av [!DNL Experience Manager] kunde extrahera XMP och miniatyrbilden, nu kan alla media extraheras.
 
 1. Överför INDD-filen till [!DNL Experience Manager Assets].
-1. Ett ramverk skickar kommandoskript till [!DNL InDesign Server] via SOAP (Simple Object Access Protocol).
+1. Ett ramverk skickar kommandoskript till [!DNL InDesign Server] via SOAP (Simple Object Access Protocol)
 Detta kommandoskript kommer att:
 
    * Hämta INDD-filen.
@@ -44,6 +44,7 @@ Detta kommandoskript kommer att:
       * Strukturen, texten och eventuella mediefiler extraheras.
       * PDF och JPG genereras.
       * HTML och IDML-renderingar genereras.
+
    * Lägg tillbaka de resulterande filerna i [!DNL Experience Manager Assets].
 
    >[!NOTE]
@@ -64,10 +65,10 @@ Detta kommandoskript kommer att:
 
 Integrera [!DNL InDesign Server] för användning med [!DNL Experience Manager Assets] När du har konfigurerat proxyn måste du:
 
-1. [Installera InDesign Server](#installing-the-indesign-server).
+1. [Installera InDesignen Server](#installing-the-indesign-server).
 1. Om det behövs, [konfigurera Experience Manager Assets Workflow](#configuring-the-aem-assets-workflow).
 Detta är bara nödvändigt om standardvärdena inte passar för din instans.
-1. Konfigurera en [proxyarbetare för InDesign Server](#configuring-the-proxy-worker-for-indesign-server).
+1. Konfigurera en [proxyarbetare för InDesignen Server](#configuring-the-proxy-worker-for-indesign-server).
 
 ### Installera [!DNL InDesign Server] {#installing-the-indesign-server}
 
@@ -85,7 +86,7 @@ Installera och starta [!DNL InDesign Server] för användning med [!DNL Experien
 
    >[!NOTE]
    >
-   >Om du vill spara utdatameddelandena i en fil använder du omdirigering; under Windows:
+   >Om du vill spara utdatameddelandena i en fil använder du omdirigering, till exempel under Windows:
    >`<ids-installation-dir>/InDesignServer.com -port 8080 > ~/temp/INDD-logfile.txt 2>&1`
 
 ### Konfigurera [!DNL Experience Manager Assets] arbetsflöde {#configuring-the-aem-assets-workflow}
@@ -111,7 +112,7 @@ Medieextraheringsargument och skriptsökvägar
 
 * **ExtendScript-bibliotek**: Detta är ett enkelt http get/post-metodbibliotek som krävs av de andra skripten.
 
-* **Utöka skript**: Här kan du ange olika skriptkombinationer. Om du vill att dina egna skript ska köras på [!DNL InDesign Server], spara skripten på `/apps/settings/dam/indesign/scripts`.
+* **Utöka skript**: Du kan ange olika skriptkombinationer här. Om du vill att dina egna skript ska köras på [!DNL InDesign Server], spara skripten på `/apps/settings/dam/indesign/scripts`.
 
 <!-- TBD: Hiding this link since ADC is not available anymore. 
 For information about [!DNL Adobe InDesign] scripts, see [InDesign developer documentation](https://www.adobe.com/devnet/indesign/documentation.html#idscripting).
@@ -133,15 +134,15 @@ Om du vill anpassa kan du redigera **[!UICONTROL Arguments]** -fliken i **[!UICO
 
 ![chlimage_1-96](assets/chlimage_1-289.png)
 
-* **Extraheringshanterare för sida**: Välj den hanterare som du vill använda i popup-listan. En extraheringshanterare fungerar på en viss återgivning, som väljs av en relaterad `RenditionPicker` (se API:t för `ExtractionHandler`).
-I en standard [!DNL Experience Manager] installation av följande:
+* **Extraheringshanterare**: Välj den hanterare som du vill använda i popup-listan. En extraheringshanterare fungerar på en viss återgivning, som väljs av en relaterad `RenditionPicker` (se API:t för `ExtractionHandler`).
+I en standard [!DNL Experience Manager] installation av följande finns:
    * Extraheringshandtag för IDML-export: Fungerar på `IDML` återgivning genererad i MediaExtract-steget.
 
-* **Sidnamn**: Ange det namn som du vill tilldela den resulterande sidan. Om det lämnas tomt är namnet&quot;page&quot; (eller ett derivat om&quot;page&quot; redan finns).
+* **Sidnamn**: Ange det namn som du vill ska tilldelas till den resulterande sidan. Om det lämnas tomt är namnet&quot;page&quot; (eller ett derivat om&quot;page&quot; redan finns).
 
 * **Sidrubrik**: Ange den titel som du vill tilldela den resulterande sidan.
 
-* **Sidrotsökväg**: Sökvägen till rotplatsen för den resulterande sidan. Om den lämnas tom används den nod som innehåller resursens återgivningar.
+* **Sidrotsökväg**: Sökvägen till rotplatsen för den resulterande sidan. Om den lämnas tom används noden med resursens återgivningar.
 
 * **Sidmall**: Den mall som ska användas när den resulterande sidan genereras.
 
@@ -187,7 +188,7 @@ Nu kan du aktivera parallell jobbbearbetning för IDS. Bestäm det maximala anta
 
 Så här konfigurerar du antalet parallella IDS-jobb:
 
-1. Öppna **[!UICONTROL Configurations]** fliken i Felix Console, till exempel: `https://[aem_server]:[port]/system/console/configMgr`.
+1. Öppna **[!UICONTROL Configurations]** fliken Felix Console, till exempel: `https://[aem_server]:[port]/system/console/configMgr`.
 
 1. Välj IDS-bearbetningskön under `Apache Sling Job Queue Configuration`.
 
@@ -210,7 +211,7 @@ TBD: Make updates to configurations for allow and block list after product updat
 >
 >När du arbetar med en grupp arbetare kan du aktivera blockeringslista för IDS-arbetare.
 >
->Om du vill göra det aktiverar du **[!UICONTROL enable.retry.name]** kryssruta, under `com.day.cq.dam.ids.impl.IDSJobProcessor.name` konfiguration, vilket möjliggör omprövningar av IDS-jobb.
+>Aktivera **[!UICONTROL enable.retry.name]** kryssruta, under `com.day.cq.dam.ids.impl.IDSJobProcessor.name` konfiguration, vilket möjliggör omprövningar av IDS-jobb.
 >
 >Under `com.day.cq.dam.ids.impl.IDSPoolImpl.name` konfiguration, ange ett positivt värde för `max.errors.to.blacklist` parameter som bestämmer antalet jobbomprövningar innan ett ID tas bort från jobbarbetslistan.
 >
@@ -222,7 +223,7 @@ För [!DNL InDesign Server] 10.0 eller senare utför du följande steg för att 
 
 1. Öppna Configuration Manager från din [!DNL Experience Manager Assets] instance `https://[aem_server]:[port]/system/console/configMgr`.
 1. Redigera konfigurationen `com.day.cq.dam.ids.impl.IDSJobProcessor.name`.
-1. Välj **[!UICONTROL ids.cc.enable]** och klicka **[!UICONTROL Save]**.
+1. Välj **[!UICONTROL ids.cc.enable]** och klicka på **[!UICONTROL Save]**.
 
 >[!NOTE]
 >
@@ -239,4 +240,3 @@ Du kan ändra administratörens standardautentiseringsuppgifter (användarnamn o
 >[!MORELIKETHIS]
 >
 >* [Om Adobe InDesign Server](https://www.adobe.com/products/indesignserver/faq.html)
-

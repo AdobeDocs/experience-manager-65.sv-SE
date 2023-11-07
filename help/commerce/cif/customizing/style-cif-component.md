@@ -1,6 +1,6 @@
 ---
-title: Formatera Adobe Experience Manager CIF-kärnkomponenter
-description: Lär dig att utforma Adobe Experience Manager CIF Core Components. Självstudiekursen beskriver hur bibliotek och klientlibs på klientsidan används för att distribuera och hantera CSS och JavaScript för en Adobe Experience Manager (AEM) Commerce-implementering. Den här självstudiekursen handlar också om hur modulen ui.front och ett webbpaketprojekt är integrerade i hela byggprocessen.
+title: Formatera Adobe Experience Manager CIF Core Components
+description: Lär dig hur du utformar Adobe Experience Manager CIF Core Components. Självstudiekursen beskriver hur klientbibliotek och klientbibliotek används för att distribuera och hantera CSS och JavaScript för en Adobe Experience Manager (AEM) Commerce-implementering. Den här självstudiekursen handlar också om hur modulen ui.front och ett webbpaketprojekt är integrerade i hela byggprocessen.
 sub-product: Commerce
 topics: Development
 version: Cloud Service
@@ -9,24 +9,24 @@ feature: Commerce Integration Framework
 kt: 3456
 thumbnail: 3456-style-cif.jpg
 exl-id: 04d553be-c67d-4ecb-a23f-2694c2adfc2b
-source-git-commit: 1ef5593495b4bf22d2635492a360168bccc1725d
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2535'
+source-wordcount: '2533'
 ht-degree: 0%
 
 ---
 
-# Stil AEM CIF-kärnkomponenter {#style-aem-cif-core-components}
+# Stil AEM CIF kärnkomponenter {#style-aem-cif-core-components}
 
-The [CIF Venia Project](https://github.com/adobe/aem-cif-guides-venia) är en referenskodbas för att använda [CIF-kärnkomponenter](https://github.com/adobe/aem-core-cif-components). I den här självstudiekursen inspekterar du Venias referensprojekt och förstår hur CSS och JavaScript som används AEM CIF Core-komponenter är organiserade. Du skapar också ett format med CSS för att uppdatera standardformatet för **Product Teaser** -komponenten.
+The [CIF Venia Project](https://github.com/adobe/aem-cif-guides-venia) är en referenskodbas för att använda [CIF-kärnkomponenter](https://github.com/adobe/aem-core-cif-components). I den här självstudiekursen inspekterar du Venias referensprojekt och förstår hur CSS och JavaScript som används AEM kärnkomponenterna är ordnade. Du kommer också att skapa ett format med CSS för att uppdatera standardformatet för **Product Teaser** -komponenten.
 
 >[!TIP]
 >
->Använd [AEM](https://github.com/adobe/aem-project-archetype) när du startar en egen implementering av e-handeln.
+>Använd [AEM projekttyp](https://github.com/adobe/aem-project-archetype) när du startar en egen implementering av e-handeln.
 
 ## Vad du ska bygga
 
-I den här självstudiekursen implementeras en ny stil för Product Teaser-komponenten som liknar ett kort. Lektioner som du lär dig i självstudiekursen kan användas på andra CIF-kärnkomponenter.
+I den här självstudiekursen implementeras en ny stil för Product Teaser-komponenten som liknar ett kort. Lektioner du lär dig i självstudiekursen kan användas på andra CIF.
 
 ![Vad du ska bygga](../assets/style-cif-component/what-you-will-build.png)
 
@@ -48,7 +48,7 @@ Vi klonar [Venedig-projektet](https://github.com/adobe/aem-cif-guides-venia) och
    $ git clone git@github.com:adobe/aem-cif-guides-venia.git
    ```
 
-1. Bygg och distribuera projektet till en lokal instans av AEM:
+1. Skapa och distribuera projektet till en lokal instans av AEM:
 
    ```shell
    $ cd aem-cif-guides-venia/
@@ -63,11 +63,11 @@ Vi klonar [Venedig-projektet](https://github.com/adobe/aem-cif-guides-venia) och
 
    ![Storefront konfigurerat med Venia-tema](../assets/style-cif-component/venia-store-configured.png)
 
-## Klientbibliotek och modulen ui.front {#introduction-to-client-libraries}
+## Klientbibliotek och modulen ui.frontEdge {#introduction-to-client-libraries}
 
-Den CSS och JavaScript som ansvarar för återgivningen av temat/formaten för butiken hanteras i AEM av en [klientbibliotek](/help/sites-developing/clientlibs.md) eller kortfilmer. Med klientbibliotek kan du ordna CSS och JavaScript i ett projekts kod och sedan leverera på sidan.
+Den CSS och JavaScript som ansvarar för återgivningen av temat/formaten för butiken hanteras i AEM av en [klientbibliotek](/help/sites-developing/clientlibs.md) eller kortfilmer. Klientbibliotek erbjuder en mekanism för att ordna CSS och JavaScript i ett projekts kod och sedan leverera på sidan.
 
-Märkesspecifika format kan användas på AEM CIF Core-komponenter genom att lägga till och åsidosätta den CSS som hanteras av dessa klientbibliotek. Det är viktigt att förstå hur klientbibliotek är strukturerade och inkluderas på sidan.
+Du kan använda varumärkesspecifika format på AEM kärnkomponenter genom att lägga till och åsidosätta den CSS som hanteras av dessa klientbibliotek. Det är viktigt att förstå hur klientbibliotek är strukturerade och inkluderas på sidan.
 
 The [ui.front](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend.html) är en dedikerad [webbpaket](https://webpack.js.org/) projekt för att hantera alla resurser i ett projekt. Detta gör att gränssnittsutvecklare kan använda valfritt antal språk och tekniker som [TypeScript](https://www.typescriptlang.org/), [Sass](https://sass-lang.com/) och mycket annat.
 
@@ -85,7 +85,7 @@ Gör sedan en liten ändring av Teaser-stilen för att se hur `ui.frontend` modu
 
    ![ui.front.commerce, mapp](../assets/style-cif-component/ui-frontend-commerce-folder.png)
 
-   Observera att det finns flera Sass (`.scss`) filer under mappen. Det här är de Commerce-specifika formaten för var och en av Commerce-komponenterna.
+   Observera att det finns flera Sass (`.scss`) filer under mappen. Det här är de Commerce-specifika formaten för varje Commerce-komponent.
 
 1. Öppna filen `_productteaser.scss`.
 
@@ -160,11 +160,11 @@ Gör sedan en liten ändring av Teaser-stilen för att se hur `ui.frontend` modu
 
    Detta är konfigurationsfilen för [aem-clientlib-generator](https://github.com/wcm-io-frontend/aem-clientlib-generator) och avgör var och hur kompilerad CSS och JavaScript ska omvandlas till ett AEM klientbibliotek.
 
-1. I `ui.apps` kontrollerar filen: `ui.apps/src/main/content/jcr_root/apps/venia/clientlibs/clientlib-site/css/site.css`:
+1. I `ui.apps` ska du kontrollera filen: `ui.apps/src/main/content/jcr_root/apps/venia/clientlibs/clientlib-site/css/site.css`:
 
    ![Kompilerad CSS för webbplats i ui.apps](../assets/style-cif-component/comiled-css-ui-apps.png)
 
-   Detta kopierar `site.css` till `ui.apps` projekt. Den ingår nu i ett klientbibliotek med namnet `clientlib-site` med en kategori `venia.site`. När filen är en del av `ui.apps` -modul som den kan distribueras till AEM.
+   Detta kopierar `site.css` till `ui.apps` projekt. Den ingår nu i ett klientbibliotek med namnet `clientlib-site` med en kategori `venia.site`. När filen ingår i `ui.apps` -modul som den kan distribueras till AEM.
 
    >[!NOTE]
    >
@@ -255,13 +255,13 @@ Kontrollera sedan att klientbiblioteken finns med på sidan.
 
 Det finns flera alternativ för hur du inkluderar ett klientbibliotek. Kontrollera sedan hur det genererade projektet innehåller `clientlib-site` bibliotek via [Sidmallar](/help/sites-developing/templates.md).
 
-1. Navigera till **Hemsida** för webbplatsen i AEM Editor: [http://localhost:4502/editor.html/content/venia/us/en.html](http://localhost:4502/editor.html/content/venia/us/en.html).
+1. Navigera till **Hemsida** för webbplatsen i AEM: [http://localhost:4502/editor.html/content/venia/us/en.html](http://localhost:4502/editor.html/content/venia/us/en.html).
 
 1. Välj **Sidinformation** meny och klicka **Redigera mall**:
 
    ![Redigera mallen](../assets/style-cif-component/edit-template.png)
 
-   Detta öppnar **Landningssida** mallen **Startsida** sidan baseras på.
+   Då öppnas **Landningssida** mallen **Startsida** sidan baseras på.
 
    >[!NOTE]
    >
@@ -275,7 +275,7 @@ Det finns flera alternativ för hur du inkluderar ett klientbibliotek. Kontrolle
 
    ![Sidprofil - landningssida](../assets/style-cif-component/page-policy-properties.png)
 
-   Till höger ser du en lista över klientbibliotek **kategorier** som kommer att inkluderas på alla sidor som använder den här mallen.
+   Till höger ser du en lista över klientbibliotek **kategorier** som inkluderas på alla sidor som använder den här mallen.
 
    * `venia.dependencies` - Tillhandahåller eventuella leverantörsbibliotek som `venia.site` beroende av.
    * `venia.site` - Det här är kategorin för `clientlib-site` som `ui.frontend` modulen genererar.
@@ -330,11 +330,11 @@ Webbpack-dev-server-proxies bilder och en del CSS/JavaScript från den lokala in
    >
    >Om du får ett Sass-relaterat fel stoppar du servern och kör kommandot `npm rebuild node-sass` och upprepa stegen ovan. Detta kan inträffa om du har en annan version av `npm` och `node` anges sedan i projektet `aem-cif-guides-venia/pom.xml`.
 
-1. Navigera till [http://localhost:8080/](http://localhost:8080/) på en ny flik med samma webbläsare som en inloggad instans av AEM. Webbsidan Venia finns på webbpack-dev-server:
+1. Navigera till [http://localhost:8080/](http://localhost:8080/) på en ny flik med samma webbläsare som en inloggad instans av AEM. Du kan se Venias hemsida via webbpack-dev-server:
 
    ![Webbpaketets dev-server på port 80](../assets/style-cif-component/webpack-dev-server-port80.png)
 
-   Låt webbpack-dev-server vara igång. Det kommer att användas i nästa övning.
+   Låt webbpack-dev-server vara igång. Det används i nästa övning.
 
 ## Implementera kortstil för Product Teaser {#update-css-product-teaser}
 
@@ -455,7 +455,7 @@ När koden för projektet har distribuerats till AEM kan du se ändringarna i Pr
 
 1. Experimentera genom att lägga till ytterligare produktutbildningar. Använd layoutläget om du vill ändra komponenternas bredd och förskjutning så att flera scener visas på en rad.
 
-   ![Flera produkttekniker](../assets/style-cif-component/multiple-teasers-final.png)
+   ![Flera produktteam](../assets/style-cif-component/multiple-teasers-final.png)
 
 ## Felsökning {#troubleshooting}
 
@@ -477,9 +477,9 @@ Använd [AEM](/help/sites-authoring/style-system.md) om du vill skapa två forma
 
 ## Ytterligare resurser {#additional-resources}
 
-* [AEM Project Archetype](https://github.com/adobe/aem-project-archetype)
+* [AEM Project Archettype](https://github.com/adobe/aem-project-archetype)
 * [AEM CIF-kärnkomponenter](https://github.com/adobe/aem-core-cif-components)
 * [Konfigurera en lokal AEM utvecklingsmiljö](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html)
-* [Klientbibliotek](/help/sites-developing/clientlibs.md)
+* [Bibliotek på klientsidan](/help/sites-developing/clientlibs.md)
 * [Komma igång med AEM Sites](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)
 * [Utveckla med Style System](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/style-system.html)

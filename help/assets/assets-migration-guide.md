@@ -5,9 +5,9 @@ contentOwner: AG
 role: Architect, Admin
 feature: Migration,Renditions,Asset Management
 exl-id: 184f1645-894a-43c1-85f5-8e0d2d77aa73
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1779'
+source-wordcount: '1777'
 ht-degree: 8%
 
 ---
@@ -18,7 +18,7 @@ När resurser migreras till [!DNL Adobe Experience Manager]finns det flera steg 
 
 ## Förutsättningar {#prerequisites}
 
-Granska och implementera vägledningen i [Prestandajusteringstips för resurser](performance-tuning-guidelines.md). Många av stegen, som att konfigurera maximalt antal samtidiga jobb, förbättrar i hög grad serverns stabilitet och prestanda vid inläsning. Andra steg, som att konfigurera ett fildatalager, är mycket svårare att utföra efter att systemet har lästs in med resurser.
+Granska och implementera vägledningen i [Prestandajusteringstips för resurser](performance-tuning-guidelines.md). Många av stegen, som att konfigurera maximalt antal samtidiga jobb, förbättrar serverns stabilitet och prestanda under inläsning avsevärt. Andra steg, som att konfigurera ett fildatalager, är mycket svårare att utföra efter att systemet har lästs in med resurser.
 
 >[!NOTE]
 >
@@ -55,13 +55,13 @@ Du kanske redan har en tagg-taxonomi på plats som du tillämpar på dina bilder
 
 ### Ingående resurser {#ingesting-assets}
 
-Prestanda och stabilitet är viktiga frågor när du ska hämta in resurser i systemet. Eftersom du läser in en stor mängd data i systemet bör du se till att systemet fungerar så bra som möjligt för att minimera tidsåtgången och undvika att överbelasta systemet, vilket kan leda till att systemet kraschar, särskilt i system som redan är i produktion.
+Prestanda och stabilitet är viktiga frågor när du ska hämta in resurser i systemet. Eftersom du läser in en stor mängd data i systemet bör du se till att systemet fungerar och att det kan minimera den tid som krävs och undvika att överbelasta systemet, vilket kan leda till att systemet kraschar, särskilt i system som redan är i produktion.
 
 Det finns två sätt att läsa in resurser i systemet: en push-baserad metod med HTTP eller en pull-baserad metod med JCR API:erna.
 
 #### Skicka via HTTP {#pushing-through-http}
 
-Adobe Managed Services-team använder ett verktyg som heter Glutton för att läsa in data i kundmiljöer. Glutton är ett litet Java-program som läser in alla resurser från en katalog till en annan katalog på en [!DNL Experience Manager] distribution. I stället för Glutton kan du också använda verktyg som Perl-skript för att publicera resurserna i databasen.
+Adobe Managed Services team använder ett verktyg som kallas Glutton för att läsa in data i kundmiljöer. Glutton är ett litet Java-program som läser in alla resurser från en katalog till en annan katalog på en [!DNL Experience Manager] distribution. I stället för Glutton kan du också använda verktyg som Perl-skript för att publicera resurserna i databasen.
 
 Det finns två nackdelar med att använda metoden att gå igenom https:
 

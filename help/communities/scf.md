@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
 exl-id: 5ca58bc3-8505-4d91-9cd1-6b2e2671f1be
-source-git-commit: e161c37544c3391607cbe495644f3353b9f77fe3
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1478'
+source-wordcount: '1477'
 ht-degree: 0%
 
 ---
@@ -21,16 +21,16 @@ Fördelarna med ramverket:
 
 * **Funktionell**: Enkel integrering direkt med liten eller ingen anpassning för 80 % av användningsfallen.
 * **Skalbar**: Enhetlig användning av HTML-attribut för CSS-format.
-* **Utbyggbart**: Komponentimplementeringen är objektorienterad och lätt utifrån affärslogik - enkel att lägga till inkrementell företagsinloggning på servern.
-* **Flexibel**: Enkla logikfria JavaScript-mallar som är enkla att överlagra och anpassa.
+* **Utbyggbart**: Komponentimplementering är objektorienterad och lätt utifrån affärslogik - enkel att lägga till inkrementell företagsinloggning på servern.
+* **Flexibel**: Enkla logikfria JavaScript-mallar som enkelt kan överlappas och anpassas.
 * **Tillgänglig**: HTTP-API:t stöder publicering från alla klienter, inklusive mobilappar.
 * **Portable**: Integrera/bädda in i alla webbsidor som bygger på valfri teknik.
 
-Utforska en författare eller publicera en instans med hjälp av den interaktiva [Community Components Guide](components-guide.md).
+Utforska en författare eller publicera en instans med den interaktiva [Community Components Guide](components-guide.md).
 
 ## Översikt {#overview}
 
-I SCF består en komponent av en SocialComponent POJO, en Handlebars JS-mall (för att återge komponenten) och CSS (för att formatera komponenten).
+I SCF består en komponent av en SocialComponent POJO, en Handlebars JS-mall (som återger komponenten) och CSS (som formaterar komponenten).
 
 JS-mallar för handtag kan utöka JS-komponenterna för modell/vy för att hantera användarinteraktion med komponenten på klienten.
 
@@ -57,7 +57,7 @@ Om du vill anpassa eller utöka komponenterna skriver du bara övertäckningar o
 * Så här lägger du till anpassad bearbetning under åtgärder:
    * Skriv en [OperationExtension](server-customize.md#operationextension-class).
 * Så här lägger du till en anpassad åtgärd:
-   * Skapa ett nytt [Sling-poståtgärd](server-customize.md#postoperation-class).
+   * Skapa en [Sling-poståtgärd](server-customize.md#postoperation-class).
    * Använd befintlig [OperationServices](server-customize.md#operationservice-class) efter behov.
    * Lägg till JavaScript-kod för att anropa åtgärden från klientsidan efter behov.
 
@@ -65,7 +65,7 @@ Om du vill anpassa eller utöka komponenterna skriver du bara övertäckningar o
 
 Ramverket innehåller API:er för att komma åt funktioner på servern och stödja interaktion mellan klienten och servern.
 
-### Java™ API:er {#java-apis}
+### Java™-API:er {#java-apis}
 
 Java™-API:erna innehåller abstrakta klasser och gränssnitt som är enkla att ärva eller gruppera.
 
@@ -95,7 +95,7 @@ En standardserver för GET lyssnar på .social.json-begäranden som SocialCompon
 
 ![scf-framework](assets/scf-framework.png)
 
-### HTTP API - POSTER {#http-api-post-requests}
+### HTTP API - POST-begäranden {#http-api-post-requests}
 
 Förutom åtgärderna GET (Läs) definierar ramverket ett slutpunktsmönster som möjliggör andra åtgärder för en komponent, inklusive Skapa, Uppdatera och Ta bort. Dessa slutpunkter är HTTP-API:er som accepterar indata och svarar med antingen en HTTP-statuskod eller med ett JSON-svarsobjekt.
 
@@ -117,7 +117,7 @@ Mer information om hur du hanterar UGC som lagras i [community content store](wo
 
 ### Anpassningar på serversidan {#server-side-customizations}
 
-Besök [Serveranpassning](server-customize.md) om du vill ha information om hur du anpassar affärslogiken och beteendet för en Communities-komponent på serversidan.
+Besök [Anpassningar på serversidan](server-customize.md) om du vill ha information om hur du anpassar affärslogiken och beteendet för en Communities-komponent på serversidan.
 
 ## Hanterarfält - språk för JS-mallar {#handlebars-js-templating-language}
 
@@ -133,7 +133,7 @@ När Sling löser en GET-begäran på servern identifieras det skript som använ
 
 HBS-mallfiler (Handlebars) (.hbs) är detsamma som .jsp- och .html-mallfiler, förutom att de kan användas för återgivning både i klientwebbläsaren och på servern. En klientwebbläsare som begär en klientmall får därför en .hbs-fil från servern.
 
-Detta kräver att alla HBS-mallar i sling-söksökvägen (alla HBS-filer under /libs/ eller /apps) kan hämtas av alla användare från författaren eller publiceringen.
+Detta kräver att alla HBS-mallar i den sling-söksökvägen (alla HBS-filer under /libs/ eller /apps) kan hämtas av alla användare från författaren eller publiceringen.
 
 HTTP-åtkomst till HBS-filer är inte förbjuden.
 
@@ -151,18 +151,18 @@ Resultatet är en underordnad JCR-nod under en par-nod, som är Sling-adresserba
 
 **Inkludera en komponent**
 
-Att ta med en komponent refererar till processen att lägga till en referens till en [&quot;non-existing&quot; resource](srp.md#for-non-existing-resources-ners) (ingen JCR-nod) i mallen, t.ex. med ett skriptspråk.
+Att ta med en komponent refererar till processen att lägga till en referens till en [&quot;non-existing&quot; resource](srp.md#for-non-existing-resources-ners) (ingen JCR-nod) i mallen, till exempel med ett skriptspråk.
 
 Från och med Adobe Experience Manager (AEM) 6.1 går det att redigera komponentens egenskaper i författaren när en komponent inkluderas dynamiskt i stället för att läggas till *design* läge.
 
 Endast ett fåtal av AEM Communities-komponenterna kan inkluderas dynamiskt. De är:
 
-* [Kommentarer](essentials-comments.md)
+* [Kommentar](essentials-comments.md)
 * [Klassificering](rating-basics.md)
 * [Recensioner](reviews-basics.md)
 * [Omröstning](essentials-voting.md)
 
-The [Community Components Guide](components-guide.md) gör att inkluderbara komponenter kan växlas från att läggas till till till att inkluderas.
+The [Guide för communitykomponenter](components-guide.md) gör att inkluderbara komponenter kan växlas från att läggas till till till att inkluderas.
 
 **När du använder handtag** mallspråk inkluderas den icke-befintliga resursen med [include helper](handlebars-helpers.md#include) genom att ange dess resourceType:
 

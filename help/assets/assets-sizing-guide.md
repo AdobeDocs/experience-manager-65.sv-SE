@@ -5,9 +5,9 @@ contentOwner: AG
 role: Architect, Admin
 feature: Asset Management
 exl-id: fd58ead9-5e18-4f55-8d20-1cf4402fad97
-source-git-commit: 10227bcfcfd5a9b0f126fee74dce6ec7842f5e95
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1614'
+source-wordcount: '1611'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ Versionshanteringsfunktionerna i [!DNL Experience Manager] lagra kopior av resur
 
 Med tanke på dessa faktorer behöver du en metod för att beräkna ett tillräckligt exakt lagringsutrymme för lagring av användarresurser.
 
-1. Fastställ storleken och antalet resurser som ska läsas in i systemet.
+1. Fastställ storleken och antalet resurser som läses in i systemet.
 1. Hämta ett representativt urval av de tillgångar som ska överföras till [!DNL Experience Manager]. Om du t.ex. tänker läsa in PSD, JPG, AI och PDF i systemet, behöver du flera exempelbilder för varje filformat. Dessutom bör dessa prover representera de olika filstorlekarna och komplexiteterna i bilderna.
 1. Definiera de återgivningar som ska användas.
 1. Skapa återgivningarna i [!DNL Experience Manager] använda [!DNL ImageMagick] eller [!DNL Adobe Creative Cloud] program. Förutom de återgivningar som användarna anger skapar du färdiga återgivningar. För användare som implementerar Dynamic Media kan du använda IC-binärfilen för att generera PTIFF-återgivningar som ska lagras i Experience Manager.
@@ -103,7 +103,7 @@ Använd SSD-diskar eller diskar med en IOPS-nivå som är högre än 3 000 för 
 
 ## Nätverk {#network}
 
-[!DNL Assets] har ett antal användningsfall som gör nätverksprestanda viktigare än många av våra [!DNL Experience Manager] projekt. En kund kan ha en snabb server, men om nätverksanslutningen inte är tillräckligt stor för att stödja belastningen på de användare som överför och hämtar resurser från systemet verkar den ändå vara långsam. Det finns en bra metod för att fastställa kodpunkten i en användares nätverksanslutning till [!DNL Experience Manager] på [Resurshänsyn för användarupplevelser, instansstorlek, utvärdering av arbetsflöde och nätverkstopologi](/help/assets/assets-network-considerations.md).
+[!DNL Assets] har flera användningsfall som gör nätverksprestanda viktigare än många av våra [!DNL Experience Manager] projekt. En kund kan ha en snabb server, men om nätverksanslutningen inte är tillräckligt stor för att stödja belastningen på de användare som överför och hämtar resurser från systemet verkar den ändå vara långsam. Det finns en bra metod för att fastställa kodpunkten i en användares nätverksanslutning till [!DNL Experience Manager] på [Resurshänsyn för användarupplevelser, instansstorlek, utvärdering av arbetsflöde och nätverkstopologi](/help/assets/assets-network-considerations.md).
 
 ## Begränsningar {#limitations}
 

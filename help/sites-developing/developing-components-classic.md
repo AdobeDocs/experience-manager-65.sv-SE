@@ -7,9 +7,9 @@ topic-tags: components
 content-type: reference
 legacypath: /content/docs/en/aem/6-2/develop/components/components-classic
 exl-id: 3f078139-73fd-4913-9d67-264fb2515f8a
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2385'
+source-wordcount: '2384'
 ht-degree: 0%
 
 ---
@@ -196,7 +196,7 @@ Om du vill utveckla nya komponenter för AEM baserat på en befintlig komponent 
    * använda CRXDE Lite för att lägga till värdet `<path-to-component>` (till exempel `/apps/geometrixx/components/myComponent`) till nodens egenskapskomponenter `/etc/designs/geometrixx/jcr:content/contentpage/par`
    * följa instruktionerna i [Lägga till nya komponenter i styckesystem](#adding-a-new-component-to-the-paragraph-system-design-mode)
 
-1. I AEM WCM öppnar du en sida på webbplatsen och infogar ett stycke av den typ som du just skapade för att säkerställa att komponenten fungerar som den ska.
+1. I AEM WCM öppnar du en sida på webbplatsen och infogar ett stycke av den typ som du skapade för att säkerställa att komponenten fungerar som den ska.
 
 >[!NOTE]
 >

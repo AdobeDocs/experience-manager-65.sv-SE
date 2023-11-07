@@ -8,9 +8,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 role: Developer
 exl-id: d9f32939-c2c0-4531-b15e-f63941c289e3
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2483'
+source-wordcount: '2478'
 ht-degree: 0%
 
 ---
@@ -76,7 +76,7 @@ Det här formuläret återges av exempelprogrammets `HandleData` Java Servlet.
 
 ![ri_ri_confirm](assets/ri_ri_confirm.png)
 
-The `HandleData` Java Servlet fyller i formuläret i förväg med användarens för- och efternamn samt mängden. När formuläret har fyllts i i i förväg skickas det till klientens webbläsare. (Se [Förifyll Forms med flödeslayouter](/help/forms/developing/prepopulating-forms-flowable-layouts.md))
+The `HandleData` Java Servlet förifyller det här formuläret med användarens för- och efternamn och mängden. När formuläret har fyllts i i i förväg skickas det till klientens webbläsare. (Se [Förifyll Forms med flödeslayouter](/help/forms/developing/prepopulating-forms-flowable-layouts.md))
 
 **Java Servlets**
 

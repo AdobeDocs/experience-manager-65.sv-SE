@@ -10,7 +10,7 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: f23408c3-6b37-4047-9cce-0cab97bb6c5c
 exl-id: 9e205912-50a6-414a-b8d4-a0865269d0e0
-source-git-commit: b703f356f9475eeeafb1d5408c650d9c6971a804
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '3588'
 ht-degree: 0%
@@ -825,7 +825,7 @@ Ett enkelt sätt att börja skapa egna anpassade steg är att kopiera ett befint
 
      Måste ärva från ett befintligt steg.
 
-     I det här exemplet ärver vi från bassteget vid `cq/workflow/components/model/step`men du kan använda andra supertyper som `participant`, `process`, osv.
+     I det här exemplet ärver vi från bassteget vid `cq/workflow/components/model/step`men du kan använda andra supertyper som `participant`, `process`och så vidare.
 
    * `jcr:title`
 
@@ -1042,4 +1042,4 @@ The `_cq_dialog/.content.xml` exempel som används i detta exempel:
 >* `/libs/wcm/workflow/components/autoassign`
 >* `/libs/cq/projects`
 >
->  Du får inte ändra något i `/libs`, använd dem bara som exempel. Om du vill utnyttja något av de befintliga stegen kopierar du dem till `/apps` och ändra dem där.
+>  Du får inte ändra något i `/libs`, använd dem bara som exempel. Om du vill använda något av de befintliga stegen kopierar du dem till `/apps` och ändra dem där.

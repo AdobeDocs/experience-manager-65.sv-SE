@@ -7,9 +7,9 @@ geptopics: SG_AEMFORMS/categories/working_with_document_security
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 feature: Document Security
 exl-id: fe132f13-5f9a-4c86-a385-0a0026c812e2
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '10239'
+source-wordcount: '10229'
 ht-degree: 0%
 
 ---
@@ -581,7 +581,7 @@ Följande inställningar finns under Filter för e-postbegränsning på sidan In
 
 ### Parametrar för server- och registreringskonton {#server-and-registration-account-parameters}
 
-Följande inställningar finns under Allmänna inställningar på sidan Inbjuden användarregistrering.
+Följande inställningar finns i området Allmänna inställningar på sidan Inbjuden användarregistrering.
 
 **SMTP-värd:** SMTP-serverns värdnamn. SMTP-servern hanterar meddelandena om utgående e-post för att registrera och aktivera inbjudna användarkonton.
 
@@ -625,7 +625,7 @@ Om det krävs av SMTP-värden anger du nödvändig information i rutorna SMTP-se
 
 ### E-postinställningar för registreringsinbjudan {#registration-invitation-email-settings}
 
-Dokumentsäkerheten skickar automatiskt en registreringsinbjudan via e-post när du skapar ett nytt, inbjudet användarkonto eller när en befintlig användare lägger till en extern mottagare som inte tidigare har registrerat sig eller har bjudits in att registrera sig för en profil. E-postmeddelandet innehåller en länk som mottagaren kan använda för att komma åt registreringssidan och ange information om ditt personliga konto, inklusive användarnamn och lösenord. Lösenordet kan bestå av en kombination av åtta tecken.
+Dokumentsäkerheten skickar automatiskt en registreringsinbjudan via e-post när du skapar ett inbjudet användarkonto eller när en befintlig användare lägger till en extern mottagare som inte tidigare har registrerat sig eller har bjudits in att registrera sig för en profil. E-postmeddelandet innehåller en länk som mottagaren kan använda för att komma åt registreringssidan och ange information om ditt personliga konto, inklusive användarnamn och lösenord. Lösenordet kan bestå av en kombination av åtta tecken.
 
 När mottagaren aktiverar kontot blir användaren en lokal användare.
 
@@ -645,7 +645,7 @@ Dokumentsäkerheten skickar ett aktiveringsmejl när inbjudna användare har reg
 
 När mottagaren aktiverar användarkontot blir användaren en lokal användare.
 
-Följande inställningar finns under E-postkonfiguration för aktivering på sidan Inbjuden användarregistrering.
+Följande inställningar finns i området E-postkonfiguration för aktivering på sidan Inbjuden användarregistrering.
 
 >[!NOTE]
 >
@@ -706,7 +706,7 @@ Dina valda användare och grupper har nu behörighet att skapa anpassade profile
 
 ### Ange användare och grupper som visas i sökningar {#specify-users-and-groups-that-are-visible-in-searches}
 
-När användare hanterar sina egna profiler kan de söka efter användare och grupper att lägga till i sina profiler. Du måste ange från vilka domäner användare och grupper ska visas i sökningarna.
+När användare hanterar sina egna profiler kan de söka efter användare och grupper att lägga till i sina profiler. Ange de domäner från vilka användare och grupper visas i sökningarna.
 
 1. På dokumentsäkerhetssidan klickar du på Konfiguration > Mina principer.
 1. Klicka på fliken Synliga användare och grupper på sidan Mina profiler.

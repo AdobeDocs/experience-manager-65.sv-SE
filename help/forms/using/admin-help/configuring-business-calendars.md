@@ -10,9 +10,9 @@ geptopics: SG_AEMFORMS/categories/configuring_forms_workflow
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 7a85e13d-4800-47c4-812a-5c6e2355298a
 exl-id: 4282718a-41f1-411a-9cd7-8c470005107d
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1907'
+source-wordcount: '1901'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ En påminnelse om en aktivitet är till exempel konfigurerad att inträffa tre a
 
 >[!NOTE]
 >
->När du beräknar datum och tid med hjälp av affärskalendrar används datum och tid för den server där den körs AEM formulär, och justerar inte skillnaden mellan tidszoner. Om en påminnelse om en uppgift till exempel är schemalagd till 10:00 på en server som körs i London, men användaren som tar emot påminnelsen finns i New York City, får användaren påminnelsen kl. 5:00 lokal tid.
+>När du beräknar datum och tid med hjälp av affärskalendrar används datum och tid för den server där den körs AEM formulär, och justerar inte skillnaden mellan tidszoner. Om en påminnelse om en uppgift till exempel är schemalagd till klockan 10.00 på en server som körs i London, men användaren som tar emot påminnelsen är i New York, får användaren påminnelsen kl. 17.00 lokal tid.
 
 ## Använda standardaffärskalendern {#using-the-default-business-calendar}
 
@@ -65,7 +65,7 @@ Om din organisation innehåller olika uppsättningar användare som har olika ic
 
 >[!NOTE]
 >
->Om du inte skapar någon ny affärskalender används standardkalendern.
+>Om du inte skapar någon affärskalender används standardkalendern.
 
 1. I administrationskonsolen klickar du på Tjänster > Forms-arbetsflöde > Affärskalendrar.
 1. Om du vill lägga till en ny affärskalender klickar du på ![bus_cal_plus](assets/bus_cal_plus.png). Texten *Ny kalender* visas i listrutan. Markera texten och ange ett annat namn för kalendern.

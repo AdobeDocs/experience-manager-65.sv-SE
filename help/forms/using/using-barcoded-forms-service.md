@@ -1,16 +1,12 @@
 ---
 title: Barcoded Forms Service
-seo-title: Using AEM Forms Barcoded Forms Service
 description: Använd tjänsten AEM Forms Barcoded Forms för att extrahera data från elektroniska bilder av streckkoder.
-seo-description: Use AEM Forms Barcoded Forms service to extract data from electronic images of barcodes.
-uuid: b044a788-0e4a-4718-b71a-bd846933d51b
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: document_services
-discoiquuid: d431c4cb-e4be-41a5-8085-42393d4d468c
 docset: aem65
 exl-id: edaf12be-473f-4175-b4e0-549b41159a55
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '1022'
 ht-degree: 0%
@@ -115,7 +111,7 @@ När du avkodar streckkoder kan du ange vilken teckenuppsättningskodning som sk
 
 ### API-begränsningar {#api-limitations}
 
-När du använder BCF API:er bör du tänka på följande begränsningar:
+Tänk på följande begränsningar när du använder BCF API:er:
 
 * Dynamiska formulär stöds inte.
 * Interaktiva formulär avkodas inte korrekt om de inte förenklas.
@@ -138,7 +134,7 @@ Du kan använda **AEMFD Barcoded Forms Service** i AEM Console för att konfigur
 
 Barcoded Forms Service innehåller följande två API:er:
 
-* **[decode](https://helpx.adobe.com/experience-manager/6-3/forms/javadocs/com/adobe/fd/bcf/api/BarcodedFormsService.html#decode)**: Avkodar alla streckkoder som är tillgängliga i ett PDF-inmatningsdokument eller en TIFF-bild. Det returnerar ett annat XML-dokument som innehåller data som hämtats från alla streckkoder som finns i indatadokumentet eller bilden.
+* **[decode](https://helpx.adobe.com/experience-manager/6-3/forms/javadocs/com/adobe/fd/bcf/api/BarcodedFormsService.html#decode)**: Avkodar alla streckkoder som är tillgängliga i ett inmatningsdokument eller en TIFF-bild. Det returnerar ett annat XML-dokument som innehåller data som hämtats från alla streckkoder som finns i indatadokumentet eller bilden.
 
 * **[extractToXML](https://helpx.adobe.com/experience-manager/6-3/forms/javadocs/com/adobe/fd/bcf/api/BarcodedFormsService.html#decode)**: Konvertera data som avkodats med avkodnings-API till XML-data. Dessa XML-data kan sammanfogas med ett XFA-formulär. Den returnerar en lista med XML-dokument, en för varje streckkod.
 
@@ -175,13 +171,13 @@ Följande exempelkod avkodar en streckkod i ett dokument och sparar XML-utdata p
 
  // Create a Docmanager Document object for 
  // the tiff file containing barcode
- // Please see Docmanager Document javadoc for
+ // See Docmanager Document javadoc for
  // more details
  Document inputDoc = new Document(documentPath);
 
  // Invoke decode operation of barcoded forms service 
  // Second parameter is set to true to decode PDF417 barcode symbology
- // Please see javadoc for details of parameters
+ // See javadoc for details of parameters
 
  org.w3c.dom.Document result = bcfService.decode(inputDoc, // Input Document Object
                                                     true, 
@@ -231,7 +227,7 @@ Följande exempelkod avkodar en streckkod i ett dokument och sparar XML-utdata p
 %>
 ```
 
-### Använda BCF-tjänsten med AEM arbetsflöden {#using-the-bcf-service-with-aem-workflows}
+### Använda BCF-tjänsten med AEM {#using-the-bcf-service-with-aem-workflows}
 
 Att köra Barcoded Forms-tjänsten från ett arbetsflöde påminner om att köra tjänsten från JSP/Servlet. Den enda skillnaden är när tjänsten körs från JSP/Servlet som dokumentobjektet automatiskt hämtar en instans av ResourceResolver-objektet från objektet ResourceResolverHelper. Den här automatiska mekanismen fungerar inte när koden anropas från ett arbetsflöde.
 

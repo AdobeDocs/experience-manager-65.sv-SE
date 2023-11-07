@@ -10,9 +10,9 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: 0be8b88c-6f57-4dcc-ae11-77b378a2decd
 exl-id: 14775476-6fe5-4583-8ab5-b55fef892174
-source-git-commit: b703f356f9475eeeafb1d5408c650d9c6971a804
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1929'
+source-wordcount: '1923'
 ht-degree: 0%
 
 ---
@@ -33,7 +33,7 @@ När du konfigurerar arbetsflödesprocesser (anpassade och/eller färdiga) finns
 
 För att optimera stora mängder inmatningsmaterial kan du definiera en [arbetsflöde som tillfälligt](/help/sites-developing/workflows.md#transient-workflows).
 
-När ett arbetsflöde är övergående bevaras inte körningsdata som relaterar till de mellanliggande arbetsstegen i JCR när de körs (utdatarenderingarna behålls förstås).
+När ett arbetsflöde är övergående bevaras inte körningsdata som relaterar till de mellanliggande arbetsstegen i JCR när de körs (utdatarenderingarna bevaras).
 
 Fördelarna kan vara:
 
@@ -285,7 +285,7 @@ Arbetsflöden kan medföra en avsevärd mängd overheadkostnader, både när det
 
 Ett exempel på detta är ett arbetsflöde som implementerar en affärsprocess för en uppsättning innehåll och sedan aktiverar innehållet. Det är bättre att skapa en anpassad arbetsflödesprocess som aktiverar var och en av dessa noder, i stället för att starta en **Aktivera innehåll** modell för varje innehållsnod som behöver publiceras. Det här arbetssättet kräver ytterligare utvecklingsarbete, men är mer effektivt när det körs än att starta en separat arbetsflödesinstans för varje aktivering.
 
-Ett annat exempel är ett arbetsflöde som bearbetar ett antal noder, skapar ett arbetsflödespaket och sedan aktiverar det paketet. I stället för att skapa paketet och sedan starta ett separat arbetsflöde med paketet som nyttolast, kan du ändra arbetsflödets nyttolast i det steg som skapar paketet och sedan anropa steget för att aktivera paketet i samma arbetsflödesmodell.
+Ett annat exempel är ett arbetsflöde som bearbetar flera noder, skapar ett arbetsflödespaket och sedan aktiverar det paketet. I stället för att skapa paketet och sedan starta ett separat arbetsflöde med paketet som nyttolast, kan du ändra arbetsflödets nyttolast i det steg som skapar paketet och sedan anropa steget för att aktivera paketet i samma arbetsflödesmodell.
 
 ### Avancerad hanterare {#handler-advance}
 

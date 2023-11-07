@@ -7,9 +7,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: coding
 role: Developer
 exl-id: 94a48776-f537-4b4e-8d71-51b08e463cba
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '4597'
+source-wordcount: '4593'
 ht-degree: 0%
 
 ---
@@ -550,7 +550,7 @@ När du skickar ett säkert dokument ska du använda enkel inloggning och ange e
 
 >[!NOTE]
 >
-När du skapar en ny roll och vill att medlemmar med den rollen ska överföra säkra dokument måste du ange behörigheten Dokumentöverföring.
+När du skapar en roll och vill att medlemmar med den rollen ska överföra säkra dokument måste du ange behörigheten Dokumentöverföring.
 
 AEM Forms stöder en åtgärd med namnet `getFileUploadToken` som returnerar en token som skickas till överföringsservern. The `DocumentReference.constructRequestForUpload` -metoden kräver en URL till AEM Forms tillsammans med den token som returneras av `LC.FileUploadAuthenticator.getFileUploadToken` -metod. Den här metoden returnerar en `URLRequest` objekt som används i anropet till överföringsservern. I följande kod visas den här programlogiken.
 
@@ -889,7 +889,7 @@ om AEM Forms är konfigurerat att endast tillåta att säkra dokument överförs
 
 ## Anropa anpassade komponenttjänster med Remoting {#invoking-custom-component-services-using-remoting}
 
-Du kan anropa tjänster som finns i en anpassad komponent med Remoting. Ta till exempel komponenten Bank som innehåller kundtjänsten. Du kan anropa åtgärder som tillhör kundtjänsten med ett klientprogram som är skrivet i Flex. Innan du kan utföra snabbstarten som är kopplad till det här avsnittet måste du skapa den anpassade komponenten Bank.
+Du kan anropa tjänster i en anpassad komponent med Remoting. Ta till exempel komponenten Bank som innehåller kundtjänsten. Du kan anropa åtgärder som tillhör kundtjänsten med ett klientprogram som är skrivet i Flex. Innan du kan utföra snabbstarten som är kopplad till det här avsnittet måste du skapa den anpassade komponenten Bank.
 
 Kundtjänsten visar en åtgärd med namnet `createCustomer`. Här beskrivs hur du skapar ett Flex-klientprogram som anropar kundtjänsten och skapar en kund. Den här åtgärden kräver ett komplext objekt av typen `com.adobe.livecycle.sample.customer.Customer` som representerar den nya kunden. Följande bild visar klientprogrammet som anropar kundtjänsten och skapar en ny kund. The `createCustomer` returnerar ett kundidentifierarvärde. Identifierarvärdet visas i textrutan Kundidentifierare.
 

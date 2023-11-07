@@ -2,9 +2,9 @@
 title: Hantera GraphQL-slutpunkter i AEM
 description: Lär dig hur du hanterar GraphQL slutpunkter i Adobe Experience Manager för leverans av headless-material.
 exl-id: a59a5e50-0787-4c1c-a83d-bb3eac1479a8
-source-git-commit: a8616b3b30ac04ea24c4a869cabd47518af1a35f
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '511'
+source-wordcount: '510'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 Slutpunkten är den sökväg som används för att komma åt GraphQL för AEM. Med den här sökvägen kan du (eller din app):
 
 * tillgång till GraphQL schema,
-* skicka dina GraphQL-frågor,
+* skicka dina GraphQL-frågor
 * ta emot svaren (på dina GraphQL-frågor).
 
 Det finns två typer av slutpunkter i AEM:
@@ -34,7 +34,7 @@ Det finns två typer av slutpunkter i AEM:
 >
 >I så fall går det inte att hämta allt innehåll med en platskonfigurationsspecifik slutpunkt.
 >
->Innehållsförfattaren bör kontrollera detta scenario; Det kan till exempel vara bra att överväga att placera delade modeller för innehållsfragment under konfigurationen för globala platser.
+>Innehållsförfattaren bör styra det här scenariot. Det kan till exempel vara bra att överväga att placera delade modeller för innehållsfragment under konfigurationen för globala webbplatser.
 
 Databassökvägen för den globala slutpunkten för GraphQL AEM är:
 
@@ -62,15 +62,14 @@ Så här aktiverar du motsvarande slutpunkt:
 1. Navigera till **verktyg**, **Resurser** väljer **GraphQL**.
 1. Välj **Skapa**.
 1. The **Skapa ny GraphQL-slutpunkt** öppnas. Här kan du ange:
-   * **Namn**: Slutpunktens namn. du kan skriva vilken text som helst.
-   * **Använd GraphQL-schema från**: Använd listrutan för att välja önskad plats/önskat projekt.
+   * **Namn**: slutpunktens namn; du kan ange valfri text.
+   * **Använd GraphQL-schema från**: använd listrutan för att välja önskad plats/projekt.
 
    >[!NOTE]
    >
    >Följande varning visas i dialogrutan:
    >
    >* *GraphQL slutpunkter kan medföra problem med datasäkerhet och prestanda om de inte hanteras varsamt. Kontrollera att du har angett rätt behörigheter när du har skapat en slutpunkt.*
-
 
 1. Bekräfta med **Skapa**.
 1. The **Nästa steg** kommer att innehålla en direktlänk till säkerhetskonsolen så att du kan se till att den nyskapade slutpunkten har rätt behörigheter.
@@ -91,4 +90,4 @@ Markera den nya slutpunkten och **Publicera** för att göra den helt tillgängl
 >
 >På publiceringsinstanser kan detta utgöra ett säkerhetsproblem, eftersom GraphQL-frågor kan medföra en stor belastning på servern.
 >
->Du måste konfigurera åtkomstkontrollistor som passar ditt användningsfall på slutpunkten.
+>Ställ in åtkomstkontrollistor som passar ditt användningsfall på slutpunkten.

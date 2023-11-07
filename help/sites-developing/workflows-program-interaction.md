@@ -10,9 +10,9 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: cb621332-a149-4f8d-9425-fd815b033c38
 exl-id: 2b396850-e9fb-46d9-9daa-ebd410a9e1a5
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2009'
+source-wordcount: '2008'
 ht-degree: 0%
 
 ---
@@ -132,7 +132,7 @@ Följande metoder för HTTP-begäran gäller:
   </tr>
   <tr>
    <td><code>POST</code></td>
-   <td>Ändrar instansens tillstånd. Det nya läget skickas som parameter <code>state</code> och måste ha något av följande värden: <code>RUNNING</code>, <code>SUSPENDED</code>, eller <code>ABORTED</code>.<br /> Om det inte går att nå det nya läget (till exempel när du gör uppehåll i en avslutad instans) kan du <code>409</code> (<code>CONFLICT</code>) skickas tillbaka till klienten.</td>
+   <td>Ändrar instansens tillstånd. Det nya läget skickas som parameter <code>state</code> och måste ha något av följande värden: <code>RUNNING</code>, <code>SUSPENDED</code>, eller <code>ABORTED</code>.<br /> Om det inte går att nå det nya läget (t.ex. när du gör uppehåll i en avslutad instans) <code>409</code> (<code>CONFLICT</code>) skickas tillbaka till klienten.</td>
   </tr>
  </tbody>
 </table>
@@ -488,7 +488,7 @@ De exempel som används:
 >
 >Modellnoden tas inte bort.
 
-När du skapar en ny modell:
+När du skapar en modell:
 
 * Arbetsflödesmodellredigeraren kräver att modellerna använder en viss nodstruktur nedan `/var/workflow/models`. Modellens överordnade nod måste vara av typen `cq:Page` har `jcr:content` nod med följande egenskapsvärden:
 

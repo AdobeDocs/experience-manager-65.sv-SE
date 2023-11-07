@@ -10,7 +10,7 @@ topic-tags: components
 content-type: reference
 discoiquuid: 505bf3e3-ce3c-40aa-9619-e1b9f6634deb
 exl-id: 7c856e87-9f90-435d-aceb-994f10ea6f50
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '943'
 ht-degree: 0%
@@ -475,9 +475,10 @@ Konfigurera tjänsten Dag CQ WCM Workflow Package Info Provider så att den retu
 
 >[!NOTE]
 >
->Fliken Arbetsflöde i Sidekick använder PageInfo-servern för att hämta en lista med arbetsflödespaket. I listan kan du välja det paket som den aktuella sidan ska läggas till i. De filter du skapar påverkar den här listan.
+>Fliken Arbetsflöde i Sidekick använder PageInfo-servern för att hämta en lista över arbetsflödespaket. I listan kan du välja det paket som den aktuella sidan ska läggas till i. De filter du skapar påverkar den här listan.
+>
 
-Tjänstens ID är `com.day.cq.wcm.workflow.impl.WorkflowPackageInfoProvider`. Om du vill skapa ett filter anger du ett värde för `workflowpackageinfoprovider.filter` -egenskap.
+Tjänstens ID är `com.day.cq.wcm.workflow.impl.WorkflowPackageInfoProvider`. Skapa ett filter genom att ange ett värde för `workflowpackageinfoprovider.filter` -egenskap.
 
 Egenskapsvärden prefixeras med tecknet + eller - följt av paketsökvägen:
 
@@ -494,7 +495,7 @@ Tjänsten tillämpar det kumulativa resultatet för alla filter. Följande filte
 
 >[!NOTE]
 >
->När du arbetar med AEM finns det flera sätt att hantera konfigurationsinställningarna för sådana tjänster. Se [Konfigurerar OSGi](/help/sites-deploying/configuring-osgi.md) för fullständig information.
+>När du arbetar med AEM finns det flera metoder för att hantera konfigurationsinställningarna för sådana tjänster. Se [Konfigurerar OSGi](/help/sites-deploying/configuring-osgi.md) för fullständig information.
 
 Så här konfigurerar du till exempel tjänsten med CRXDE Lite:
 
@@ -516,7 +517,7 @@ Så här konfigurerar du tjänsten i din projektkälla:
 
 1. Leta reda på eller skapa konfigurationsmappen för AEM i projektkällan.
 
-   Om du t.ex. använde en flermodulsarketyp för plugin-programmet för innehållspaket Maven för att skapa ditt projekt, blir mappsökvägen `<projectroot>/content/src/ for example content/src/main/content/jcr_root/apps/<appname>/config`.
+   Om du t.ex. använde en flermodulsarketyp för plugin-programmet för innehållspaket Maven för att skapa ditt projekt, blir mappsökvägen `<projectroot>/content/src/ for example, content/src/main/content/jcr_root/apps/<appname>/config`.
 1. Skapa en textfil med namnet com.day.cq.wcm.workflow.impl.WorkflowPackageInfoProvider.xml i konfigurationsmappen
 1. Kopiera följande text till filen:
 
@@ -547,8 +548,8 @@ Skapa en anpassad tjänst för sidinformationsleverantör för att lägga till m
 1. Lägg till följande egenskap i PageInfoProvider-noden:
 
    * Namn: className
-   * Typ: Sträng
-   * Värde: PID för PageInfoProvider-tjänsten.
+   * Typ: String
+   * Värde: PID:t för PageInfoProvider-tjänsten.
 
 För resurser som använder programsidkomponenten som `sling:resourceType`returnerar PageInfo-servern dessutom de anpassade PageInfoProvider-metadata utöver standardmetadata för PageInfoProvider.
 

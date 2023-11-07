@@ -5,9 +5,9 @@ contentOwner: AG
 role: Architect, Admin
 feature: Translation
 exl-id: 8990feca-cfda-4974-915e-27aa9d8f2ee1
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1736'
+source-wordcount: '1732'
 ht-degree: 10%
 
 ---
@@ -30,7 +30,7 @@ Om du vill skapa en språkkopia aktiverar du ett av följande språkkopieringsar
 Du använder arbetsflödet för att skapa och översätta för att generera språkkopior för ett visst språk för första gången. Arbetsflödet innehåller följande alternativ:
 
 * Skapa endast struktur.
-* Skapa ett nytt översättningsprojekt.
+* Skapa ett översättningsprojekt.
 * Lägg till i befintligt översättningsprojekt.
 
 ### Skapa endast struktur {#create-structure-only}
@@ -55,7 +55,7 @@ Använd **[!UICONTROL Create structure only]** om du vill skapa en målmappshier
 
    ![avslöjande av tillgångar](assets/reveal-in-assets.png)
 
-### Skapa ett nytt översättningsprojekt {#create-a-new-translation-project}
+### Skapa ett översättningsprojekt {#create-a-new-translation-project}
 
 Om du använder det här alternativet kopieras resurser som ska översättas till språkroten för det språk som du vill översätta till. Beroende på vilka alternativ du väljer skapas ett översättningsprojekt för resurserna i projektkonsolen. Beroende på inställningarna kan översättningsprojektet startas manuellt eller automatiskt så snart översättningsprojektet skapas.
 
@@ -164,10 +164,10 @@ Om du använder det här alternativet körs översättningsarbetsflödet för re
 
 Kör det här arbetsflödet för att översätta alla ytterligare resurser och inkludera dem i en språkkopia för en viss språkinställning. I det här fallet läggs de översatta resurserna till i målmappen som redan innehåller översatta resurser. Beroende på vilka alternativ du väljer skapas ett översättningsprojekt eller så uppdateras ett befintligt översättningsprojekt för de nya resurserna. Arbetsflödet för att uppdatera språkkopior innehåller följande alternativ:
 
-* Skapa ett nytt översättningsprojekt
+* Skapa ett översättningsprojekt
 * Lägg till i befintligt översättningsprojekt
 
-### Skapa ett nytt översättningsprojekt {#create-a-new-translation-project-1}
+### Skapa ett översättningsprojekt {#create-a-new-translation-project-1}
 
 Om du använder det här alternativet skapas ett översättningsprojekt för den resursuppsättning som du vill uppdatera en språkkopia för.
 

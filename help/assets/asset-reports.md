@@ -6,7 +6,7 @@ role: User, Admin
 feature: Asset Reports,Asset Management
 exl-id: b4963a03-3496-4c6c-9d30-8812304d0e9f
 hide: true
-source-git-commit: 3d5e9ad8ee19756b05e5a77a3f748bc647fcf734
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '1096'
 ht-degree: 9%
@@ -44,8 +44,8 @@ Så här skapar du rapporter:
 [!DNL Experience Manager Assets] genererar följande standardrapporter:
 
 * Överför
-* Hämta
-* Förfaller
+* Ladda ned
+* Förfallotid
 * Ändring
 * Publicera
 * [!DNL Brand Portal] publicera
@@ -84,7 +84,7 @@ Så här skapar du rapporter:
    >
    >Om du väljer att schemalägga rapporten senare måste du ange datum och tid i fälten Datum och Tid. Om du inte anger något värde behandlas det som en rapport som ska genereras omedelbart.
 
-   Konfigurationsfälten kan variera beroende på vilken typ av rapport du skapar. Till exempel **[!UICONTROL Disk Usage]** rapporten innehåller alternativ för att inkludera resursåtergivningar när du beräknar det diskutrymme som används av resurserna. Du kan välja att inkludera eller exkludera resurser i undermappar för beräkning av diskanvändning.
+   Konfigurationsfälten kan skilja sig åt beroende på vilken typ av rapport du skapar. Till exempel **[!UICONTROL Disk Usage]** rapporten innehåller alternativ för att inkludera resursåtergivningar när du beräknar det diskutrymme som används av resurserna. Du kan välja att inkludera eller exkludera resurser i undermappar för beräkning av diskanvändning.
 
    >[!NOTE]
    >
@@ -108,12 +108,12 @@ Så här skapar du rapporter:
 
    ![Markera eller avbryta markeringen av rapportkolumner](assets/configure_columns.png)
 
-   Om du vill visa ett anpassat kolumnnamn eller en egenskapssökväg konfigurerar du egenskaperna för resursens binärfil under `jcr:content` nod i CRX. Du kan också lägga till den via egenskapssökvägsväljaren.
+   Om du vill visa ett anpassat kolumnnamn eller en egenskapssökväg konfigurerar du egenskaperna för resursens binärfil under `jcr:content` i CRX. Du kan också lägga till den via egenskapssökvägsväljaren.
 
    ![Markera eller avbryta markeringen av rapportkolumner](assets/custom_columns.png)
 
 1. Klicka på **[!UICONTROL Create]** i verktygsfältet. Ett meddelande meddelar att rapportgenereringen har initierats.
-1. På [!UICONTROL Asset Reports] sidan, baseras rapportgenereringsstatusen på rapportjobbets aktuella tillstånd, till exempel [!UICONTROL Success], [!UICONTROL Failed], [!UICONTROL Queued], eller [!UICONTROL Scheduled]. Samma status visas i inkorgen för meddelanden.Om du vill visa rapportsidan klickar du på rapportlänken. Du kan också markera rapporten och klicka på **[!UICONTROL View]** i verktygsfältet.
+1. På [!UICONTROL Asset Reports] sidan baseras rapportgenereringsstatusen på rapportjobbets aktuella tillstånd, till exempel [!UICONTROL Success], [!UICONTROL Failed], [!UICONTROL Queued], eller [!UICONTROL Scheduled]. Samma status visas i inkorgen för meddelanden.Om du vill visa rapportsidan klickar du på rapportlänken. Du kan också markera rapporten och klicka på **[!UICONTROL View]** i verktygsfältet.
 
    ![En genererad rapport](assets/report_page.png)
 
@@ -124,8 +124,8 @@ Så här skapar du rapporter:
 Du kan lägga till anpassade kolumner i följande rapporter om du vill visa mer data för dina anpassade krav:
 
 * Överför
-* Hämta
-* Förfaller
+* Ladda ned
+* Förfallotid
 * Ändring
 * Publicera
 * [!DNL Brand Portal] publicera
@@ -137,7 +137,7 @@ Följ de här stegen för att lägga till anpassade kolumner i de här rapporter
 1. På [!UICONTROL Asset Reports] sida, klicka **[!UICONTROL Create]** i verktygsfältet.
 
 1. Från **[!UICONTROL Create Report]** väljer du den rapport du vill skapa och klickar på **[!UICONTROL Next]**.
-1. Konfigurera rapportinformation som titel, beskrivning, miniatyrbild, mappsökväg och datumintervall.
+1. Konfigurera rapportinformation som titel, beskrivning, miniatyrbild, mappsökväg och datumintervall efter behov.
 
 1. Om du vill visa en anpassad kolumn anger du namnet på kolumnen under **[!UICONTROL Custom Columns]**.
 
@@ -166,4 +166,4 @@ Om du vill ta bort rapporter som du inte längre behöver konfigurerar du tjäns
 
 * Ta bort de rapporter som inte längre behövs. Använd konfigurationsalternativen i tjänsten DAM Report Renge för att konfigurera villkoren för att rensa rapporter.
 
-* Om rapporten för diskanvändning inte genereras och du använder [!DNL Dynamic Media], se till att alla resurser fortsätter korrekt. Du löser problemet genom att bearbeta resurserna på nytt och sedan generera rapporten igen.
+* Om användningsrapporten inte genereras och du använder [!DNL Dynamic Media], se till att alla resurser fortsätter korrekt. Du löser problemet genom att bearbeta resurserna på nytt och sedan generera rapporten igen.

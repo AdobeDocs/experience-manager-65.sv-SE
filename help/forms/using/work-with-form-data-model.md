@@ -10,9 +10,9 @@ discoiquuid: c47ef627-261e-4b4b-8846-873d3d84234b
 docset: aem65
 feature: Form Data Model
 exl-id: 16b76265-9ec4-4993-9ac0-b7aef1b1e5f1
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '4070'
+source-wordcount: '4067'
 ht-degree: 0%
 
 ---
@@ -96,7 +96,7 @@ Så här skapar du ett datamodellsobjekt utan datakällor:
 
 1. Logga in på AEM författarinstans, navigera till **[!UICONTROL Forms > Data Integrations]** och öppna den formulärdatamodell i vilken du vill skapa ett datamodellsobjekt eller en datamodell.
 1. Tryck på **[!UICONTROL Create Entity]**.
-1. I dialogrutan Skapa datamodell anger du ett namn för datamodellobjektet och trycker på **[!UICONTROL Add]**. Ett datamodellsobjekt läggs till i formulärdatamodellen. Observera att det nya datamodellsobjektet inte är bundet till en datakälla och inte har några egenskaper som visas i följande bild.
+1. I dialogrutan Skapa datamodell anger du ett namn för datamodellobjektet och trycker på **[!UICONTROL Add]**. Ett datamodellsobjekt läggs till i formulärdatamodellen. Det nya datamodellsobjektet är inte bundet till en datakälla och har inga egenskaper som visas i följande bild.
 
    ![new-entity](assets/new-entity.png)
 
@@ -317,7 +317,7 @@ En beräknad egenskap är den vars värde beräknas baserat på en regel eller e
 
 Du kan till exempel skapa en beräknad egenskap **FullName** vars värde är ett resultat av sammanfogning av den befintliga **FirstName** och **LastName** egenskaper. Så här gör du:
 
-1. Skapa en ny egenskap med namnet `FullName` vars datatyp är String.
+1. Skapa en egenskap med namnet `FullName` vars datatyp är String.
 1. Aktivera **[!UICONTROL Computed]** och knacka **[!UICONTROL Done]** för att skapa egenskapen.
 
    ![beräknad](assets/computed.png)

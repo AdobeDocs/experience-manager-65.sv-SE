@@ -10,9 +10,9 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: fbcdea8a-72e9-431b-9c32-dc02d4cdb9c8
 exl-id: d989e235-5993-4738-8523-5b9a5f6bf712
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '487'
+source-wordcount: '486'
 ht-degree: 1%
 
 ---
@@ -25,7 +25,7 @@ ht-degree: 1%
 
 AEM integreras med PhoneGap så att du enkelt kan skapa appar med AEM sidor. Med PhoneGap kan användaren skapa verktygsappar som gör att användarna kan arbeta med innehållet. Med Innehållssynkronisering kan du skapa versionshanterade arkiv med sidor som kan paketeras med appar.
 
-Vanligtvis en ***AEM*** ansvarar för att lägga till ett nytt program i AEM Mobile-katalogen, antingen genom att skapa ett nytt program med guiden Skapa eller genom att importera ett befintligt program.
+Vanligtvis en ***AEM*** ansvarar för att lägga till ett nytt program i AEM Mobile-katalogen, antingen genom att skapa ett program med hjälp av guiden Skapa eller genom att importera ett befintligt program.
 
 Härifrån kan ***AEM*** (eller *Marknadsförare*) kan nu använda färdiga mallar och komponenter för att lägga till och redigera sidor, dra och släppa komponenter och lägga till media av alla typer från DAM, inklusive bilder, videor och textfragment (innehållsfragment).
 

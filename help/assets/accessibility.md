@@ -5,7 +5,7 @@ contentOwner: AG
 feature: Asset Management
 role: User, Architect, Leader
 exl-id: 15555941-99a2-4586-8d7b-b22f3ec17805
-source-git-commit: 399ae241593b5cc14ef1c2efd090f0d1fae7c2df
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '1905'
 ht-degree: 1%
@@ -17,9 +17,9 @@ Possible topics to cover in this article are below.
 
 * Compile a list of enhancements done in the last ~1 year.
 * Showcase a few prominent use cases (search?) in a screencast.
-* Top-level actions supported, such as clickable UI elements, keyboard shortcuts, popup dialogs, etc.
+* Top-level actions supported, such as clickable UI elements, keyboard shortcuts, popup dialogs, and so on.
 * List all UIs that are keyboard navigable.
-* Unified list of the product tasks supported, such as, search assets, download assets, add or editing metadata, use DM Viewers, etc.
+* Unified list of the product tasks supported, such as, search assets, download assets, add or editing metadata, use DM Viewers, and so on.
 * Do we need to add support matrix of user tasks with browser and screen reader combinations. Everything may not work in all browsers and/or using all screen readers.
 * Any exceptions that users should be aware of. It may help to call out (it may be done in ACR) what tasks are NOT supported.
 * CTAs – what's next and more info from AEM team:
@@ -37,7 +37,7 @@ Possible topics to cover in this article are below.
 [!DNL Experience Manager] ger olika nivåer av stöd för följande standarder:
 
 * [Web Content Accessibility Guidelines (WCAG) 2.1](https://www.w3.org/TR/WCAG/).
-* [Reviderad paragraf 508 i Rehabilitation Act](https://www.access-board.gov/guidelines-and-standards/communications-and-it/about-the-ict-refresh/final-rule/text-of-the-standards-and-guidelines).
+* [Reviderat avsnitt 508 i Rehabilitation Act](https://www.access-board.gov/guidelines-and-standards/communications-and-it/about-the-ict-refresh/final-rule/text-of-the-standards-and-guidelines).
 * [Accessibility Initiative - Accessible Rich Internet Applications (WAI-ARIA) av W3C](https://www.w3.org/WAI/standards-guidelines/aria/).
 * [EN 301 549](https://en.wikipedia.org/wiki/EN_301_549).
 
@@ -50,7 +50,7 @@ Att veta hur [!DNL Dynamic Media] är tillgänglig, se [tillgänglighet i [!DNL 
 Användare med funktionshinder förlitar sig ofta på maskinvara och programvara för att få tillgång till webbinnehåll och använda programvaror. Dessa verktyg kallas hjälpmedelstekniker. [!DNL Experience Manager Assets] kan fungera med följande typer av hjälpmedelstekniker (AT) när du använder programmets huvudfunktioner:
 
 * Skärmläsare och skärmförstorare.
-* Programvara för taligenkänning.
+* Taligenkänningsprogram.
 * Tangentbordsanvändning - navigering och genvägar.
 * Hjälpmaskinvara, inklusive switchkontroller, uppdateringsbara blindskriftsskärmar och andra indataenheter.
 * Förstoringsverktygen i användargränssnittet.
@@ -98,7 +98,7 @@ Följande åtgärder i [!DNL Assets] arbeta med de kortkommandon som visas. De f
 | Resursen eller mappen är markerad | `Ctrl + c` | Kopiera den markerade resursen. |
 | Resursen eller mappen är markerad | `Esc` | Avbryt markeringen. |
 | Dialogrutan öppnas och är i fokus | `Esc` | Stäng dialogrutan. |
-| I en mapp i DAM | `Ctrl + v` | Klistra in den kopierade resursen. |
+| I en mapp i DAM | `Ctrl + v` | Klistra in kopierad resurs. |
 | [!DNL Assets] Konsol | `Ctrl + A` | Markera alla resurser. |
 | Egenskapssidor för resurs | `Ctrl + S` | Spara ändringar. |
 | [!DNL Assets] Konsol | `?` | Visa en lista med kortkommandon. |
@@ -109,7 +109,7 @@ Användare kan använda tangentbordet för att navigera till och fylla i inloggn
 
 Efter inloggning kan DAM-användare navigera i [!DNL Assets] användargränssnitt med tangentbord. Elementen i användargränssnittet, som vänsterkant, menyer, användarprofil, sökfält, filer och mappar samt inställningar för administration och konfiguration, kan navigeras med tangentbordet. Tangentbordsnavigeringsordningen är från vänster till höger och uppifrån och ned. När du navigerar med ett tangentbord markeras ett alternativ som kan användas när det är i fokus med bättre färgkontrast och berättas av en skärmläsare. Om det är lämpligt kommer läget - t.ex. utvidgat, komprimerat och blandat läge - för de fokuserade alternativen på menyn att meddelas av en skärmläsare. Skärmläsaren meddelar även syftet med det användbara alternativet, i stället för utseendet eller gränssnittets placering.
 
-Om en användare utökar alternativet för hjälp eller användarprofil på menyn, visas rätt alternativ eller status i skärmläsaren. Om en användare utökar alternativet för användarprofil kan de tillgängliga alternativen väljas med ett tangentbord. En administratör kan till exempel personifiera en annan användare. Om en användare söker efter en sträng från [!UICONTROL Help] om du väljer det här alternativet visas&quot;Hjälp för sökning&quot; som indikerar att en sökning pågår.
+Om en användare utökar alternativet för hjälp eller användarprofil på menyn, visas rätt alternativ eller status i skärmläsaren. Om en användare utökar alternativet för användarprofil kan de tillgängliga alternativen väljas med hjälp av ett tangentbord. En administratör kan till exempel personifiera en annan användare. Om en användare söker efter en sträng från [!UICONTROL Help] om du väljer det här alternativet visas&quot;Hjälp för sökning&quot; som indikerar att en sökning pågår.
 
 <!-- TBD: Removing for now. Add a more informative video later. Host it on tv.adobe
 
@@ -143,7 +143,7 @@ Följande funktioner förbättrar tillgängligheten när du bläddrar i resurska
 * Elementen på varje rad i listvyn presenteras som elementen på samma rad av skärmläsare.
 * Vid navigering med `Tab` kan fokus flyttas till stängningsalternativet i förhandsversionen.
 * När du använder tangentbordet för att bläddra har de markerade alternativen för det användbara gränssnittet mer framträdande visuellt fokus med förbättrad kontrast. Det gör det fokuserade området mer identifierbart för användaren.
-* Användning av `Esc` tangenten för att ta bort snabbåtgärdsikonerna från miniatyrbildsvyn tar inte bort tangentbordsfokus från det senast fokuserade objektet.
+* Användning av `Esc` tangenten för att ta bort snabbredigeringsikonerna från miniatyrbildsvyn tar inte bort tangentbordsfokus från det senast fokuserade objektet.
 * När en resurs är markerad väljer du `Alt + 4` kortkommandot öppnar [!UICONTROL References] listan i den vänstra listen. Använda `Tab` -tangenten kan användarna navigera genom referensposterna som inte är noll. Att bläddra igenom enbart referensposter som inte är noll sparar både arbete och tangenttryckningar.
 * Kommentarer om en resurs är tillgängliga på resursens tidslinje. Det är tillgängligt om du har åtkomst till den vänstra listen via ett tangentbord eller ett kortkommando.
 * [!UICONTROL View Settings] in [!DNL Experience Manager] är tillgängliga via ett tangentbord. Användare kan navigera bland de tillgängliga kortstorlekarna med piltangenterna och välja och bläddra igenom för att ange andra element i den befintliga vyn Visa inställningar.
@@ -170,18 +170,18 @@ För metadataåtgärder som vanligtvis utförs av roller som marknadsförare och
 * [!UICONTROL Save & Close] option on asset [!UICONTROL Properties] sidan kan nu öppnas via tangentbordet.
 * Skärmläsare meddelar alternativ för att ta bort de markerade taggarna i [!UICONTROL Basic] tillgångsflik [!UICONTROL Properties].
 * Användare kan använda popup-dialogrutan Datumväljare med ett tangentbord. Användargränssnittselementet Datepicker används för att ställa in tider och tider och välja datum.
-* Dragningsfunktionen med tangentbordet fungerar korrekt i [!UICONTROL Metadata Schema Editor] i skärmläsarens bläddringsläge.
+* Dragningsfunktionen med tangentbordet fungerar korrekt i [!UICONTROL Metadata Schema Editor] i skärmläsarläge.
 * En användare kan flytta fokus med tangentbordet till fältet Lägg till användare eller grupp under [!UICONTROL Closed User Group] i [!UICONTROL Permissions] mappflik [!UICONTROL Properties].
 
 ## Söka efter digitala resurser {#search-assets}
 
-En snabb och smidig sökupplevelse av resurser ökar innehållets hastighet. Användningsexempel för snabb innehållsanvändning är en del av kärnan [!DNL Assets] funktionalitet. Användare kan använda kortkommandon för att starta en sökning från omsökningsfältet `/` eller använda `Tab` tillsammans med skärmläsare för att snabbt hitta sökalternativet. Skärmläsaren visar namnet på alternativet som &quot;Sökknapp&quot; när sökalternativet är i fokus ![sökalternativ](assets/do-not-localize/search_icon.png). Användarna kan välja `Return` för att öppna Omnissearch-rutan. Skärmläsaren lägger inte bara till en berättarröst för det nyckelord som skrivs i sökrutan utan visar även de förslag som ges av [!DNL Experience Manager Assets]. Användare kan använda en kombination av piltangenter, `Return`och `Tab` för att komma åt de olika alternativen för att utlösa en sökning.
+En snabb och smidig sökupplevelse av resurser ökar innehållets hastighet. Användningsexempel för snabb innehållshantering ingår i kärnan [!DNL Assets] funktionalitet. Användare kan använda kortkommandon för att starta en sökning från omsökningsfältet `/` eller använda `Tab` tillsammans med skärmläsare för att snabbt hitta sökalternativet. Skärmläsaren visar namnet på alternativet som &quot;Sökknapp&quot; när sökalternativet är i fokus ![sökalternativ](assets/do-not-localize/search_icon.png). Användarna kan välja `Return` för att öppna Omnissearch-rutan. Skärmläsaren lägger inte bara till en berättarröst för det nyckelord som skrivs i sökrutan utan visar även de förslag som ges av [!DNL Experience Manager Assets]. Användare kan använda en kombination av piltangenter, `Return`och `Tab` för att komma åt de olika alternativen för att utlösa en sökning.
 
 Sökfunktionen är tillgänglig med följande funktioner:
 
 * Sidtitel, som är tillgänglig för en skärmläsare, hjälper dig att identifiera sidan som resursens söksida.
 * Användare söker efter resurser inifrån sökfältet. Användarna kan öppna den via tangentbordsnavigering eller med ett kortkommando `/`.
-* Användarna kan börja skriva söknyckelordet och sedan välja de automatiska förslagen med piltangenterna. Det markerade förslaget kan markeras med `Return` och resurser söks efter det valda förslaget.
+* Användarna kan börja skriva söknyckelordet och sedan välja de automatiska förslagen med piltangenterna. Det markerade förslaget kan markeras med `Return` Nyckel och resurser söks efter det valda förslaget.
 * Skärmläsare kan identifiera och meddela kryssrutorna för blandade tillstånd (där kryssrutorna på första nivån inte markeras och genomstrykas om du inte markerar alla kapslade prefix) i panelen Filter när sökresultaten filtreras.
 * Användarfokus flyttas till sökalternativen när Omnissökrutan har stängts.
 
@@ -217,10 +217,10 @@ Följande funktioner förbättrar tillgängligheten när du delar resurser:
 
 ## Ge feedback {#a11y-feedback}
 
-Använd följande metoder för att ge feedback, ställa frågor och begära produktförbättringar som rör tillgänglighet:
+Om du vill ge feedback, ställa frågor och begära produktförbättringar som rör tillgänglighet använder du följande metoder:
 
 * Fyll i formuläret på [www.adobe.com/accessibility/feedback.html](https://www.adobe.com/accessibility/feedback.html).
-* Skicka e-post till oss på access@adobe.com.
+* Mejla oss på access@adobe.com.
 
 >[!MORELIKETHIS]
 >
@@ -228,4 +228,3 @@ Använd följande metoder för att ge feedback, ställa frågor och begära prod
 >* [Versionsinformation om förbättringar som gjorts i varje Service Pack-version](/help/release-notes/release-notes.md).
 >* [[!DNL Adobe Experience Manager] riktlinjer för hjälpmedel](/help/managing/web-accessibility.md).
 >* [Överensstämmelserapporter (ACR) och VPAT-listor för Adobe-lösningar](https://www.adobe.com/accessibility/compliance.html).
-

@@ -7,9 +7,9 @@ topic-tags: managing
 content-type: reference
 docset: aem65
 exl-id: 5837ef4f-d4e0-49d7-a671-87d5547e0d98
-source-git-commit: 260f71acd330167572d817fdf145a018b09cbc65
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2793'
+source-wordcount: '2795'
 ht-degree: 0%
 
 ---
@@ -35,7 +35,7 @@ Grundläggande faktorer att beakta är (i denna ordning):
 
 * **I/O-prestanda**
 
-   * Filens eller databaslagringens prestanda och effektivitet
+   * Prestanda och effektivitet för fil- eller databaslagring
 
 * **Hårddisk**
 
@@ -43,7 +43,7 @@ Grundläggande faktorer att beakta är (i denna ordning):
 
 * **Minne**
 
-   * Webbplatsens storlek (antal innehållsobjekt, sidor och användare)
+   * Webbplatsens storlek (antal objekt, sidor och användare)
    * Antal användare/sessioner som är aktiva samtidigt
 
 ## Arkitektur {#architecture}
@@ -85,7 +85,7 @@ Krav på maskinvarustorlek för fall med avancerad användning måste baseras p�
 
 Det diskutrymme som krävs beror till stor del på både volymen och typen av webbprogram. Beräkningarna ska ta hänsyn till följande:
 
-* mängden och storleken på sidor, resurser och andra databaslagrade enheter som arbetsflöden, profiler osv.
+* mängden och storleken på sidor, resurser och andra databaslagrade enheter som arbetsflöden, profiler och så vidare.
 * den uppskattade frekvensen av innehållsändringar och därmed skapandet av innehållsversioner
 * mängden DAM-resursåtergivningar som ska genereras
 * den totala innehållstillväxten över tiden
@@ -115,7 +115,7 @@ Alla system körs, men det finns bättre datorprestanda. Den extra prestandan ä
 Beräkningen av hur många klusternoder som behövs baseras på de grundläggande kraven och specifika användningsfall för det aktuella webbprojektet:
 
 * När det gäller felsäkerhet är det nödvändigt att för alla miljöer fastställa hur allvarligt felet är och hur lång tid det tar för en klusternod att återställa felet.
-* För skalbarhetsaspekten är antalet skrivåtgärder i grunden den viktigaste faktorn. se [Författare som arbetar parallellt](/help/managing/hardware-sizing-guidelines.md#authors-working-in-parallel) för redigeringsmiljön och [Samverkan i samhället](/help/managing/hardware-sizing-guidelines.md#socialcollaborationspecificconsiderations) för publiceringsmiljön. Belastningsbalansering kan upprättas för åtgärder som enbart har tillgång till systemet för att behandla läsåtgärder. se [Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=en) för mer information.
+* När det gäller skalbarhet är antalet skrivåtgärder i grunden den viktigaste faktorn; se [Författare som arbetar parallellt](/help/managing/hardware-sizing-guidelines.md#authors-working-in-parallel) för redigeringsmiljön och [Samverkan i samhället](/help/managing/hardware-sizing-guidelines.md#socialcollaborationspecificconsiderations) för publiceringsmiljön. Belastningsutjämning kan upprättas för åtgärder som enbart använder systemet för att bearbeta läsåtgärder. Se [Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=en) för mer information.
 
 ## Skapa miljöspecifika beräkningar {#author-environment-specific-calculations}
 
@@ -131,15 +131,15 @@ Maximalt dataflöde för en enkel sidskapandeövning som ovan (betraktas som en 
 Beräkna maximal genomströmning när inläsningsprofilen har en blandning av nya sidor (10 %), ändringar av en befintlig sida (80 %) och sedan ändring av en sida i följd (10 %). Sidornas komplexitet är densamma som i profilen för test 1. Den grundläggande ändringen av sidan görs genom att en bild läggs till och textinnehållet ändras. Återigen utfördes övningen utöver en basbelastning på 300 sidor med samma komplexitet som definieras i test 1 av prestandan.
 
    * **Resultat**
-Maximalt dataflöde för ett sådant blandningsåtgärdsscenario var 3252 transaktioner per timme.
+Maximalt dataflöde för ett sådant blandningsåtgärdsscenario befanns vara 3252 transaktioner per timme.
 
 >[!NOTE]
 >
 >Genomströmningsfrekvensen skiljer inte mellan transaktionstyper i en lastprofil. Den metod som används för att mäta genomströmning säkerställer att en fast andel av varje typ av transaktion inkluderas i arbetsbelastningen.
 
-De två ovanstående testerna visar tydligt att flödet varierar beroende på typ av åtgärd. Använd aktiviteterna i din miljö som grund för att ändra systemstorlek. Du får bättre genomströmning med mindre krävande åtgärder som att ändra (vilket också är vanligare).
+De två ovanstående testerna visar tydligt att flödet varierar beroende på typ av åtgärd. Använd aktiviteterna i din miljö som grund för att ändra storlek på systemet. Du får bättre genomströmning med mindre krävande åtgärder som att ändra (vilket också är vanligare).
 
-### Cachelagring {#caching}
+### Cachning {#caching}
 
 I redigeringsmiljön är cachningseffektiviteten vanligtvis mycket lägre eftersom det är vanligare att ändra webbplatsen och innehållet är mycket interaktivt och personaliserat. Med Dispatcher kan du cachelagra AEM bibliotek, JavaScript, CSS-filer och layoutbilder. Detta snabbar upp vissa delar av redigeringsprocessen. Om du konfigurerar webbservern så att även sidhuvuden anges för webbläsarcachelagring på de här resurserna, minskar antalet HTTP-begäranden och därmed förbättras systemets svarstider enligt författarnas önskemål.
 
@@ -177,9 +177,9 @@ Den här formeln kan fungera som en allmän riktlinje för skalning av CPU:er n�
 
 Se även [Parallellisering](/help/managing/hardware-sizing-guidelines.md#parallelization-of-aem-instances) och [Prestandaoptimering](/help/sites-deploying/configuring-performance.md).
 
-### Maskinvara Recommendations {#hardware-recommendations}
+### Maskinvarubaserad Recommendations {#hardware-recommendations}
 
-Vanligtvis kan du använda samma maskinvara för din författarmiljö som du rekommenderas för din publiceringsmiljö. Vanligtvis är webbplatstrafiken mycket lägre i redigeringssystemen, men cacheeffektiviteten är också lägre. Den grundläggande faktorn här är dock antalet författare som arbetar parallellt, tillsammans med den typ av åtgärder som görs i systemet. I allmänhet är AEM (i författarmiljön) mest effektivt vid skalning av läsåtgärder. Ett AEM kluster kan med andra ord skalas bra tillsammans med författare som utför grundläggande redigeringsåtgärder.
+Vanligtvis kan du använda samma maskinvara för din författarmiljö som du rekommenderas för din publiceringsmiljö. Vanligtvis är webbplatstrafiken mycket lägre i redigeringssystemen, men cacheeffektiviteten är också lägre. Den grundläggande faktorn här är dock antalet författare som arbetar parallellt, tillsammans med den typ av åtgärder som görs i systemet. I allmänhet är AEM (i författarmiljön) mest effektivt vid skalning av läsåtgärder, med andra ord kan ett AEM skalas bra tillsammans med författare som utför grundläggande redigeringsåtgärder.
 
 Testerna på Adobe utfördes med operativsystemet Red Hat® 5.5, som körs på en Hewlett-Packard ProLiant DL380 G5-maskinvaruplattform med följande konfiguration:
 
@@ -310,7 +310,7 @@ Resursanvändningen när du använder AEM MSM i en redigeringsmiljö beror till 
 
 Genom att testa det planerade användningsexemplet med ett representativt utdrag kan du få en bättre förståelse för resursanvändningen. Om du extrapolerar resultaten med det planerade dataflödet kan du utvärdera de ytterligare resurser som krävs för AEM MSM.
 
-Ta även hänsyn till skribenter som arbetar parallellt. De upplever prestandabiverkningar om AEM används mer resurser än planerat.
+Ta även hänsyn till parallella författare. De upplever prestandabiverkningar om AEM används mer resurser än planerat.
 
 ### Viktigt om AEM Communities-storleksändring {#aem-communities-sizing-considerations}
 
@@ -320,7 +320,7 @@ Vilka storleksöverväganden som gäller för en community-webbplats beror på d
 
 Användargenererat innehåll (UGC) som skickas till medlemmar lagras separat från sidinnehållet. Även om den AEM plattformen använder ett nodarkiv som replikerar webbplatsinnehåll från författaren till publiceringen, använder AEM Communities en gemensam lagringsplats för UGC som aldrig replikeras.
 
-För UGC-arkivet är det nödvändigt att välja en leverantör av lagringsresurser (SRP) som påverkar den valda distributionen.
+För UGC-arkivet är det nödvändigt att välja en lagringsresursleverantör (SRP) som påverkar den valda distributionen.
 Se
 
 * [Community-innehåll](/help/communities/working-with-srp.md)

@@ -1,19 +1,15 @@
 ---
 title: Skapa en stängd användargrupp
-seo-title: Creating a Closed User Group
 description: Lär dig skapa en stängd användargrupp.
-seo-description: Learn how to work with Closed User Groups in Adobe Experience Manager.
-uuid: dc3c7dbd-2e86-43f9-9377-3b75053203b3
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: Security
 content-type: reference
-discoiquuid: 6ae57874-a9a1-4208-9001-7f44a1f57cbe
 docset: aem65
 exl-id: 9efba91d-45e8-42e1-9db6-490d21bf7412
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '751'
+source-wordcount: '747'
 ht-degree: 0%
 
 ---
@@ -54,7 +50,7 @@ Så här skapar du en sluten användargrupp:
 
    ![screenshot_2018-10-30at145502](assets/screenshot_2018-10-30at145502.png)
 
-1. Tryck på **Skapa** i det övre högra hörnet för att skapa en ny grupp.
+1. Tryck på **Skapa** i det övre högra hörnet för att skapa en grupp.
 1. Ge den nya gruppen ett namn, till exempel `cug_access`.
 
    ![screenshot_2018-10-30at151459](assets/screenshot_2018-10-30at151459.png)
@@ -82,7 +78,7 @@ Så här använder du CUG-filen på en sida eller sidor:
    1. Aktivera **Aktivera** kryssruta.
 
    1. Lägg till sökvägen till **Inloggningssida**.
-Detta är valfritt. Om det lämnas tomt används standardinloggningssidan.
+Detta är valfritt, om det lämnas tomt används standardinloggningssidan.
 
    ![CUG har lagts till](assets/cug-authentication-requirement.png)
 
@@ -92,7 +88,7 @@ Detta är valfritt. Om det lämnas tomt används standardinloggningssidan.
 
    >[!NOTE]
    >
-   >CUG-filer på fliken Behörigheter kan inte rullas ut till Live-kopior från utkast. Se till att du undviker detta när du konfigurerar Live Copy.
+   >CUG-filer på fliken Behörigheter kan inte rullas ut till Live-kopior från utkast. Planera runt detta när du konfigurerar Live Copy.
    >
    >Mer information finns i [den här sidan](closed-user-groups.md#aem-livecopy).
 

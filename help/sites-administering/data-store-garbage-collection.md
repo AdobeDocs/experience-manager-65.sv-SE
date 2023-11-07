@@ -11,20 +11,20 @@ content-type: reference
 discoiquuid: 5b1e46c5-7e56-433e-b62e-2a76ea7be0fd
 docset: aem65
 exl-id: 0dc4a8ce-5b0e-4bc9-a6f5-df2a67149e22
-source-git-commit: 10227bcfcfd5a9b0f126fee74dce6ec7842f5e95
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1889'
+source-wordcount: '1885'
 ht-degree: 0%
 
 ---
 
 # Skräpinsamling för datalager {#data-store-garbage-collection}
 
-När en konventionell WCM-resurs tas bort kan referensen till den underliggande datalagreposten tas bort från nodhierarkin, men själva datalagreposten finns kvar. Den här dataarkivposten utan referenser blir då&quot;skräp&quot; som inte behöver behållas. Om det finns ett antal skräpinlägg är det bra att ta bort dem för att bevara utrymme och optimera prestanda för säkerhetskopiering och filsystemsunderhåll.
+När en konventionell WCM-resurs tas bort kan referensen till den underliggande datalagreposten tas bort från nodhierarkin, men själva datalagreposten finns kvar. Den här dataarkivposten utan referenser blir då&quot;skräp&quot; som inte behöver behållas. Om det finns flera skräpinresurser är det bra att ta bort dem för att bevara utrymme och optimera prestanda för säkerhetskopiering och filsystemsunderhåll.
 
 För det mesta tenderar ett WCM-program att samla in information men inte ta bort information nästan lika ofta. Även om nya bilder läggs till, och till och med ersätter gamla versioner, behåller versionskontrollsystemet den gamla och kan återställas om det behövs. Därför lagras merparten av det innehåll som vi anser vara utökat i systemet permanent. Så vad är den typiska källan för&quot;skräp&quot; i databasen som vi kanske vill rensa upp?
 
-AEM använder databasen som lagring för ett antal interna aktiviteter och hushållsaktiviteter:
+AEM använder databasen som lagring för flera interna aktiviteter och hushållsaktiviteter:
 
 * Paket som byggts och laddats ned
 * Tillfälliga filer har skapats för publiceringsreplikering

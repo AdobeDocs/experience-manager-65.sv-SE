@@ -7,9 +7,9 @@ topic-tags: administering
 content-type: reference
 role: Admin
 exl-id: b64e24d2-8407-484c-8216-8d328ef5fa4f
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '915'
+source-wordcount: '910'
 ht-degree: 0%
 
 ---
@@ -145,7 +145,7 @@ Medlemmen kan läggas till i en eller flera medlemsgrupper. Börja med att ange 
 
 ### Fliken BADGES {#badges-tab}
 
-The `BADGES` kan du tilldela och återkalla märken manuellt. Märken kan användas för tilldelade roller samt för märken som vanligtvis används.
+The `BADGES` kan du tilldela märken manuellt och återkalla dem. Märken kan vara till för tilldelade roller och märken som vanligtvis införskaffas.
 
 Se även [Betygsättning och emblem](implementing-scoring.md).
 
@@ -174,7 +174,7 @@ Välj `Add Group` för att skapa en grupp i publiceringsmiljön.
 
 ![Fönstret Skapa ny grupp](assets/group-console1.png)
 
-Följande fält krävs för att skapa en ny medlemsgrupp på publiceringssidan:
+Följande fält krävs för att skapa en medlemsgrupp på publiceringssidan:
 
 * **[!UICONTROL ID]**
 

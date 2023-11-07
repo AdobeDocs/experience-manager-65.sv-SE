@@ -10,9 +10,9 @@ docset: aem65
 feature: Viewers
 role: User, Admin,Developer,Data Engineer,Data Architect
 exl-id: 161dfe22-bc1c-4b60-8ab6-a19407a39e2e
-source-git-commit: 04941e17054951bcf6264da957d951a5d1107896
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '6226'
+source-wordcount: '6222'
 ht-degree: 7%
 
 ---
@@ -429,7 +429,7 @@ Som en del av konfigurationen bör du kontrollera att du har tillgång till ett 
 
 ## Konfigurera Adobe Analytics för integreringen {#configuring-adobe-analytics-for-the-integration}
 
-När du har konfigurerat Adobe Analytics kommer följande att konfigureras för integreringen:
+När du har konfigurerat Adobe Analytics konfigureras följande för integreringen:
 
 * En rapportsvit finns på plats och har valts.
 * Analysvariabler är tillgängliga för att ta emot spårningsdata.
@@ -469,7 +469,7 @@ Se även [Implementeringshandbok för analyser](https://experienceleague.adobe.c
 
    Se [Översikt över utkast och eVars](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar.html#vars).
 
-   I den här dokumentationen kommer endast en anpassad trafikvariabel (props) att användas eftersom de blir tillgängliga i en analysrapport inom några minuter efter att en åtgärd har utförts på en webbsida.
+   I den här dokumentationen används endast en anpassad trafikvariabel (props) eftersom de blir tillgängliga i en analysrapport inom några minuter efter att en åtgärd har utförts på en webbsida.
 
    Om du vill aktivera en ny anpassad trafikvariabel går du till Adobe Analytics i verktygsfältet **[!UICONTROL Admin]** > **[!UICONTROL Report Suites]**.
 
@@ -496,7 +496,7 @@ Se även [Implementeringshandbok för analyser](https://experienceleague.adobe.c
 
 ## Konfigurera Experience Platform-taggar för integreringen {#configuring-adobe-launch-for-the-integration}
 
-När du har konfigurerat Experience Platform-taggar kommer följande att konfigureras för integreringen:
+När du har konfigurerat Experience Platform-taggar ställs följande in för integreringen:
 
 * Skapandet av en ny egenskap som håller ihop alla dina konfigurationer.
 * Installation och installation av tillägg. Klientkoden för alla tillägg som är installerade i egenskapen kompileras tillsammans till ett bibliotek. Det här biblioteket används av webbsidan senare.
@@ -826,7 +826,7 @@ Till exempel: `https://ims-na1.adobelogin.com/`
 
    I **[!UICONTROL Library URI]** (Uniform Resource Identifier) kontrollerar du platsen för mellanlagringsversionen av Experience Platform Tags Library. Experience Manager fyller i det här fältet automatiskt.
 
-   I det här steget används t.ex. bibliotek för Experience Platform-taggar som distribueras till Adobe CDN.
+   I det här steget används endast bibliotek för Experience Platform-taggar som distribueras till Adobe CDN.
 
    >[!NOTE]
    >

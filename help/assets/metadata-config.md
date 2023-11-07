@@ -6,7 +6,7 @@ role: User, Admin
 feature: Metadata
 exl-id: 56c92b7f-e687-4ab5-a376-afa58bdb6ee0
 hide: true
-source-git-commit: 3d5e9ad8ee19756b05e5a77a3f748bc647fcf734
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '1843'
 ht-degree: 3%
@@ -21,7 +21,7 @@ ht-degree: 3%
 | AEM 6.5 | Den här artikeln |
 
 <!-- Scope of metadata articles:
-* metadata.md: The scope of this article is basic metadata updates, changes, etc. operations that end-users can do.
+* metadata.md: The scope of this article is basic metadata updates, changes, and so on, operations that end-users can do.
 * metadata-concepts.md: All conceptual information. Minor instructions are OK but it is an FYI article about support and standards.
 * metadata-config.md: New article. Contains all configuration and administration how-to info related to metadata of assets.
 -->
@@ -37,7 +37,7 @@ Mer information finns i [redigera metadata-schemaformulär](metadata-schemas.md#
 Du kan lägga till egna namnutrymmen i [!DNL Experience Manager]. Precis som det finns fördefinierade namnutrymmen som `cq`, `jcr`och `sling`kan du ha ett namnutrymme för databasens metadata och XML-bearbetning.
 
 1. Åtkomst till administrationssidan för nodtypen `https://[aem_server]:[port]/crx/explorer/nodetypes/index.jsp`.
-1. Klicka på **[!UICONTROL Namespaces]** överst på sidan.
+1. Klicka på om du vill öppna sidan för namnutrymmesadministration **[!UICONTROL Namespaces]** överst på sidan.
 1. Om du vill lägga till ett namnutrymme klickar du på **[!UICONTROL New]** längst ned på sidan.
 1. Ange ett anpassat namnutrymme i XML-namnutrymmeskonventionen. Ange ID:t i form av en URI och ett associerat prefix för ID:t. Klicka på **[!UICONTROL Save]**.
 
@@ -99,7 +99,7 @@ Med en metadataprofil kan du använda standardmetadata för resurser i en mapp. 
 
 ### Kopiera en metadataprofil {#copying-a-metadata-profile}
 
-1. Från **[!UICONTROL Metadata Profiles]** väljer du en metadataprofil för att göra en kopia av den.
+1. Från **[!UICONTROL Metadata Profiles]** väljer du en metadataprofil och kopierar den.
 
    ![Kopiera en metadataprofil](assets/metadata-profile-edit-copy-option.png)
 
@@ -136,7 +136,7 @@ To apply a metadata profile globally, follow these steps:
   ![See applied metadata profile to a folder in the JCR in CRXDE](assets/metadata-profile-folder-setting2.png)
 -->
 
-## Metadata-schema för en mapp {#folder-metadata-schema}
+## Metadataschema för en mapp {#folder-metadata-schema}
 
 [!DNL Adobe Experience Manager Assets] Med kan du skapa metadatascheman för resursmappar, som definierar layouten och metadata som visas på mappegenskapssidor.
 
@@ -158,11 +158,11 @@ Du kan redigera ett nyligen tillagt eller befintligt metadatchemaformulär, som 
 Du kan mappa/konfigurera dessa formulärobjekt till ett fält i en metadatanod i CRX-databasen. Du kan lägga till nya flikar eller formulärobjekt i metadatchemaformuläret.
 
 1. På Forms-sidan Schema väljer du det formulär du skapade och väljer sedan **[!UICONTROL Edit]** i verktygsfältet.
-1. Klicka på knappen Schemaredigeraren för mappmetadata `+` om du vill lägga till en flik i formuläret. Om du vill byta namn på fliken klickar du på standardnamnet och anger det nya namnet under **[!UICONTROL Settings]**.
+1. Klicka på knappen Schemaredigeraren för mappmetadata `+` om du vill lägga till en flik i formuläret. Klicka på standardnamnet och ange det nya namnet under **[!UICONTROL Settings]**.
 
    ![custom_tab](assets/custom_tab.png)
 
-   Om du vill lägga till fler flikar klickar du på `+`. Om du vill ta bort klickar du på `X` på en flik.
+   Om du vill lägga till fler flikar klickar du på `+`. Om du vill ta bort klickar du `X` på en flik.
 
 1. Lägg till en eller flera komponenter från fliken Aktiv **[!UICONTROL Build Form]** -fliken.
 
@@ -170,13 +170,13 @@ Du kan mappa/konfigurera dessa formulärobjekt till ett fält i en metadatanod i
 
    Om du skapar flera flikar klickar du på en viss flik för att lägga till komponenter.
 
-1. Om du vill konfigurera en komponent markerar du den och ändrar dess egenskaper i **[!UICONTROL Settings]** -fliken.
+1. Konfigurera en komponent genom att markera den och ändra dess egenskaper i **[!UICONTROL Settings]** -fliken.
 
    Ta bort en komponent från **[!UICONTROL Settings]** -fliken.
 
    ![configure_properties](assets/configure_properties.png)
 
-1. Spara ändringarna genom att välja **[!UICONTROL Save]** i verktygsfältet.
+1. Om du vill spara ändringarna väljer du **[!UICONTROL Save]** i verktygsfältet.
 
 #### Komponenter för att skapa formulär {#components-to-build-forms}
 
@@ -189,7 +189,7 @@ The **[!UICONTROL Build Form]** På fliken visas formulärobjekt som du använde
 | [!UICONTROL Multi Value Text] | Lägg till en textegenskap med flera värden. Den lagras som en strängarray. |
 | [!UICONTROL Number] | Lägg till en sifferkomponent. |
 | [!UICONTROL Date] | Lägg till en datumkomponent. |
-| [!UICONTROL Dropdown] | Lägg till en nedrullningsbar lista. |
+| [!UICONTROL Dropdown] | Lägg till en listruta. |
 | [!UICONTROL Standard Tags] | Lägg till en tagg. |
 | [!UICONTROL Hidden Field] | Lägg till ett dolt fält. Den skickas som en POST-parameter när resursen sparas. |
 
@@ -205,7 +205,7 @@ Följande är giltiga värden för den här egenskapen:
 
 * `./jcr:content/metadata/dc:title`: Lagrar värdet i mappens metadatanod som egenskapen `dc:title`.
 
-* `./jcr:created`: Visar JCR-egenskapen vid mappens nod. Om du konfigurerar de här egenskaperna i CRXDE rekommenderar Adobe att du markerar dem som Inaktivera redigering eftersom de är skyddade. Annars returneras felet `Asset(s) failed to modify`&#39; inträffar när du sparar resursens egenskaper.
+* `./jcr:created`: Visar JCR-egenskapen vid mappnoden. Om du konfigurerar de här egenskaperna i CRXDE rekommenderar Adobe att du markerar dem som Inaktivera redigering eftersom de är skyddade. I annat fall är felet `Asset(s) failed to modify`&#39; inträffar när du sparar resursens egenskaper.
 
 För att komponenten ska visas på rätt sätt i schemaformuläret för metadata ska du inte ta med något utrymme i egenskapssökvägen.
 
@@ -217,7 +217,7 @@ För att komponenten ska visas på rätt sätt i schemaformuläret för metadata
 
 **[!UICONTROL Description]**: Använd den här egenskapen om du vill lägga till en kort beskrivning för metadatakomponenten.
 
-**[!UICONTROL Class]**: Den objektklass som egenskapen är associerad med.
+**[!UICONTROL Class]**: Objektklass som egenskapen är associerad med.
 
 ### Ta bort schemaformulär för mappmetadata {#delete-folder-metadata-schema-forms}
 
@@ -263,7 +263,7 @@ Du kan tilldela ett mappmetadatchema när du skapar en mapp. Om det finns minst 
 
 Öppna egenskaperna för en mapp som har konfigurerats med ett schema för mappmetadata. A **[!UICONTROL Folder Metadata]** -fliken visas i mappen [!UICONTROL Properties] sida. Om du vill visa formuläret för schemat med mappmetadata väljer du den här fliken.
 
-Ange metadatavärden i de olika fälten och klicka på **[!UICONTROL Save]** för att lagra värdena. De värden du anger lagras i mappnoden i CRX-databasen.
+Ange metadatavärden i de olika fälten och klicka **[!UICONTROL Save]** för att lagra värdena. De värden du anger lagras i mappnoden i CRX-databasen.
 
 ![folder_metadata_properties-1](assets/folder_metadata_properties-1.png)
 
@@ -271,14 +271,13 @@ Ange metadatavärden i de olika fälten och klicka på **[!UICONTROL Save]** fö
 
 * Om du vill importera metadata för anpassade namnutrymmen måste du först registrera namnutrymmena.
 * Egenskapsväljaren visar egenskaper som används i schemaredigerare och sökformulär. Egenskapsväljaren väljer inte metadataegenskaper för en resurs.
-* Det kan finnas befintliga metadataprofiler sedan du uppgraderade till [!DNL Experience Manager] 6.5. Om du har tillämpat en sådan profil i mappen efter uppgraderingen [!UICONTROL Properties] in [!UICONTROL Metadata Profiles] visas inte metadatafälten. Om du däremot använder en ny metadataprofil visas formulärfälten, men de är inte tillgängliga som förväntat. Funktionsbortfall är inte kvar, men om du vill se (ej tillgängliga) formulärfält redigerar du och sparar de befintliga metadataprofilerna.
+* Det kan finnas befintliga metadataprofiler sedan du uppgraderade till [!DNL Experience Manager] 6.5. Efter uppgraderingen, om du tillämpar en sådan profil i mappen [!UICONTROL Properties] in [!UICONTROL Metadata Profiles] visas inte metadatafälten. Om du däremot använder en ny metadataprofil visas formulärfälten, men de är inte tillgängliga som förväntat. Funktionsbortfall är inte kvar, men om du vill se (ej tillgängliga) formulärfält redigerar du och sparar de befintliga metadataprofilerna.
 
 >[!MORELIKETHIS]
 >
 >* [Metadatabegrepp och -förståelse](metadata-concepts.md).
 >* [Redigera metadataegenskaper för flera samlingar](manage-collections.md#editing-collection-metadata-in-bulk).
 >* [Import och export av metadata i Experience Manager Assets](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/metadata/metadata-import-export.html).
->* [Profiler för att bearbeta metadata, bilder och videoklipp](processing-profiles.md).
+>* [Profiler för att bearbeta metadata, bilder och videor](processing-profiles.md).
 >* [De bästa sätten att ordna digitala resurser så att de kan använda bearbetningsprofiler](/help/assets/organize-assets.md).
->* [XMP](/help/assets/xmp-writeback.md).
-
+>* [XMP tillbakaskrivning](/help/assets/xmp-writeback.md).

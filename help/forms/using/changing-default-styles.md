@@ -11,9 +11,9 @@ discoiquuid: 582b0fe8-a92b-4a1d-b859-57f13f53d0d8
 docset: aem65
 feature: Mobile Forms
 exl-id: 4c84cfd1-50a4-416f-b4a5-7f2f4c7f10af
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '367'
+source-wordcount: '366'
 ht-degree: 0%
 
 ---
@@ -32,7 +32,7 @@ I följande två bilder visas skillnaden mellan standardformat och anpassade for
 
 1. **Välj en profil för att lägga till egna format**
 
-   Gå till CRX DE-gränssnittet på URL: **https://&lt;server>:&lt;port>/crx/de** och skapa en profil eller välja en befintlig profil. Mer information om hur du skapar en profil finns i [Skapa en ny profil](/help/forms/using/custom-profile.md)
+   Gå till CRX DE-gränssnittet på URL: **https://&lt;server>:&lt;port>/crx/de** och skapa en profil eller välja en befintlig profil. Mer information om hur du skapar en profil finns i [Skapa en profil](/help/forms/using/custom-profile.md)
 
 1. **Skapa en CSS-formatmall för formatering av HTML5-formulär**
 

@@ -1,18 +1,14 @@
 ---
 title: Konfigurerar e-postmeddelande
-seo-title: Configuring Email Notification
 description: Lär dig hur du konfigurerar e-postmeddelanden i Adobe Experience Manager.
-seo-description: Learn how to configure Email Notification in AEM.
-uuid: 6cbdc312-860b-4a69-8bbe-2feb32204a27
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: operations
 content-type: reference
-discoiquuid: 6466d7b8-e308-43c5-acdc-dec15f796f64
 exl-id: 918fcbbc-a78a-4fab-a933-f183ce6a907f
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2069'
+source-wordcount: '2067'
 ht-degree: 0%
 
 ---
@@ -36,11 +32,11 @@ När en användare meddelas får han eller hon ett e-postmeddelande på det spr�
 
 >[!NOTE]
 >
->När du arbetar med AEM finns det flera metoder för att hantera konfigurationsinställningarna för sådana tjänster. Mer information finns i [Konfigurerar OSGi](/help/sites-deploying/configuring-osgi.md) om du vill ha mer information och rekommenderade rutiner.
+>När du arbetar med AEM finns det flera metoder för att hantera konfigurationsinställningarna för sådana tjänster. Se [Konfigurerar OSGi](/help/sites-deploying/configuring-osgi.md) om du vill ha mer information och rekommenderade rutiner.
 
 ## Konfigurera e-posttjänsten {#configuring-the-mail-service}
 
-För AEM kunna skicka e-post **Dagens CQ-tjänst för e-post** måste vara korrekt konfigurerade. Du kan visa konfigurationen i webbkonsolen. När du arbetar med AEM finns det flera metoder för att hantera konfigurationsinställningarna för sådana tjänster. Mer information finns i [Konfigurerar OSGi](/help/sites-deploying/configuring-osgi.md) om du vill ha mer information och rekommenderade rutiner.
+För AEM kunna skicka e-post **Dagens CQ-tjänst för e-post** måste vara korrekt konfigurerade. Du kan visa konfigurationen i webbkonsolen. När du arbetar med AEM finns det flera metoder för att hantera konfigurationsinställningarna för sådana tjänster. Se [Konfigurerar OSGi](/help/sites-deploying/configuring-osgi.md) om du vill ha mer information och rekommenderade rutiner.
 
 Följande begränsningar gäller:
 
@@ -279,7 +275,7 @@ Du kan konfigurera OAuth för flera e-postleverantörer enligt instruktionerna n
    * `https://mail.google.com/`
    * `https://www.googleapis.com//auth/gmail.send`
 1. När du har lagt till omfattningarna går du tillbaka till **Referenser** i den vänstra menyn och sedan gå till **Skapa autentiseringsuppgifter** - **OAuth-klient-ID** - **Skrivbordsapp**
-1. Ett nytt fönster öppnas med klient-ID och klienthemlighet.
+1. Ett nytt fönster öppnas med klient-ID och Klienthemlighet.
 1. Spara dessa autentiseringsuppgifter.
 
 **Konfigurationer på AEM**
@@ -361,7 +357,7 @@ Bekräfta slutligen konfigurationen genom att:
 1. Nästa, gå till **Certifikat och hemligheter**, klicka på **Ny klienthemlighet** och följ stegen på skärmen för att skapa en hemlighet. Observera denna hemlighet för senare bruk
 1. Tryck **Ökning** i den vänstra rutan och kopiera värdena för **Program-ID (klient)** och **Katalog-ID (klientorganisation)** för senare användning
 
-För att komma tillbaka behöver du följande information för att konfigurera OAuth2 för tjänsten Mailer på AEM sida:
+För att kunna göra en sammanfattning måste du ha följande information för att konfigurera OAuth2 för tjänsten Mailer på AEM sida:
 
 * Autentiserings-URL, som skapas med klientorganisations-ID. Den kommer att ha följande formulär: `https://login.microsoftonline.com/<tenantID>/oauth2/v2.0/authorize`
 * Token URL, som skapas med klient-ID. Den kommer att ha följande formulär: `https://login.microsoftonline.com/<tenantID>/oauth2/v2.0/token`

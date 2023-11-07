@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: b2c09e6b-a1d8-4b30-af2c-988442a3a986
 docset: aem65
 exl-id: bb812614-f4d8-4f57-bea2-8f7d31457039
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '549'
 ht-degree: 0%
@@ -40,7 +40,7 @@ En transaktion finns kvar i bufferten under en angiven period (Tömningstid för
 
 ## Topologi som stöds {#supported-topology}
 
-Transaktionsrapporter finns endast för AEM Forms i OSGi-miljö. Det stöder författarpublicering, författarbearbetning-publicering och endast bearbetningstopologier. Till exempel topologier finns i [Arkitektur och driftsättningstopologier för AEM Forms](../../forms/using/transaction-reports-overview.md).
+Transaktionsrapporter finns endast för AEM Forms i OSGi-miljö. Det stöder författarpublicering, författarbearbetning-publicering och endast bearbetningstopologier. Till exempel finns topologier i [Arkitektur och driftsättningstopologier för AEM Forms](../../forms/using/transaction-reports-overview.md).
 
 Transaktionsantalet replikeras baklänges från publiceringsinstanser till författare eller bearbetningsinstanser. En indikativ topologi för författarpublicering visas nedan:
 

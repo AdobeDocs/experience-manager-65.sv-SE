@@ -10,7 +10,7 @@ topic-tags: personalization
 content-type: reference
 discoiquuid: 03ebc494-8baa-4741-b8de-dac5ace743c8
 exl-id: 3a550a33-b54b-4217-b9a6-b5a7971276ee
-source-git-commit: 3400df1ecd545aa0fb0e3fcdcc24f629ce4c99ba
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '1698'
 ht-degree: 0%
@@ -67,10 +67,10 @@ Personalisering kan användas i många fall, till exempel:
 
 ### Specifika, begränsade, målanvändargrupper - extranät {#extranets}
 
-* Användare kräver en inloggning för auktorisering. Den länkas till en profil som innehåller information som krävs för personalisering, och kan innehålla information som plats, relation till produkten, användningshistorik, budgeteringsansvar osv.
+* Användare kräver en inloggning för auktorisering. Den länkas till en profil som innehåller information som krävs för personalisering, och kan innehålla information som plats, relation till produkten, användningshistorik, budgeteringsansvar och så vidare.
 * Sådana instanser kan variera mellan webbplatser som:
 * Företag som tillhandahåller webbplatser till en mycket specialiserad del av sin marknad, till exempel ett läkemedelsföretag som tillhandahåller en specialiserad webbplats för läkare.
-* Företag som tillhandahåller webbplatser som gör det möjligt för sina kunder att se aktuell konto- och faktureringsinformation, till exempel telefonleverantörer.
+* Företag som tillhandahåller webbplatser som gör det möjligt för sina kunder att visa aktuell konto- och faktureringsinformation, till exempel telefonleverantörer.
 
 ### Försäljnings- och distributionswebbplats {#sales-site}
 
@@ -180,4 +180,4 @@ Utan Communities-tillägg kan olika metoder för att undersöka frågan om enhet
 * Synkronisera flera publiceringsinstanser vid behov
 * Skicka användargenererat innehåll från publiceringsinstansen till författarmiljön, varifrån det kan publiceras på ett sätt som liknar publicering av sidinnehåll
 
-Den metod som används för att uppnå enhetlighet i användargenererat innehåll i en publiceringsmiljö som består av flera publiceringsinstanser bör utformas noggrant och testas med avseende på prestanda och konsekvens.
+Den metod som används för att uppnå enhetlighet i användargenererat innehåll i en publiceringsmiljö som består av flera publiceringsinstanser bör utformas noggrant och testas med avseende på prestanda och enhetlighet.

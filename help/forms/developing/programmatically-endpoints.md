@@ -11,9 +11,9 @@ topic-tags: operations
 discoiquuid: 076889a7-9c9f-4b6f-a45b-67a9b3923c36
 role: Developer
 exl-id: b94dcca2-136b-4b7d-b5ce-544804575876
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '10801'
+source-wordcount: '10790'
 ht-degree: 0%
 
 ---
@@ -108,7 +108,7 @@ När du har angett EJB-slutpunktsattribut kan du skapa en EJB-slutpunkt för en 
 
 **Aktivera slutpunkten**
 
-När du har skapat en ny slutpunkt måste du aktivera den. När du har aktiverat slutpunkten kan den användas för att anropa tjänsten. När du har aktiverat slutpunkten kan du visa den i administrationskonsolen.
+När du har skapat en slutpunkt måste du aktivera den. När du har aktiverat slutpunkten kan den användas för att anropa tjänsten. När du har aktiverat slutpunkten kan du visa den i administrationskonsolen.
 
 **Se även**
 
@@ -213,7 +213,7 @@ När du har angett SOAP-slutpunktsattribut kan du skapa en SOAP-slutpunkt.
 
 **Aktivera slutpunkten**
 
-När du har skapat en ny slutpunkt måste du aktivera den. När slutpunkten är aktiverad kan den användas för att anropa tjänsten. När du har aktiverat slutpunkten kan du visa den i administrationskonsolen.
+När du har skapat en slutpunkt måste du aktivera den. När slutpunkten är aktiverad kan den användas för att anropa tjänsten. När du har aktiverat slutpunkten kan du visa den i administrationskonsolen.
 
 **Se även**
 
@@ -319,7 +319,7 @@ Om du vill skapa en bevakad mappslutpunkt för en tjänst anger du följande vä
 
 **Ange konfigurationsvärden**
 
-Du måste ange konfigurationsvärden för en bevakad mappslutpunkt när du programmässigt lägger till en bevakad mappslutpunkt till en tjänst. Dessa konfigurationsvärden anges av en administratör om en bevakad mappslutpunkt läggs till med administrationskonsolen.
+Ange konfigurationsvärden för en bevakad mappslutpunkt när du programmässigt lägger till en bevakad mappslutpunkt till en tjänst. Dessa konfigurationsvärden anges av en administratör om en bevakad mappslutpunkt läggs till med administrationskonsolen.
 
 Följande lista anger konfigurationsvärden som anges när en bevakad mappslutpunkt läggs till i en tjänst via programmering:
 
@@ -552,7 +552,7 @@ Om du vill skapa en e-postslutpunkt för en tjänst anger du följande värden:
 
 **Ange konfigurationsvärden**
 
-Du måste ange konfigurationsvärden för en e-postslutpunkt när du programmässigt lägger till en e-postslutpunkt till en tjänst. Dessa konfigurationsvärden anges av en administratör om en e-postslutpunkt läggs till med administrationskonsolen.
+Ange konfigurationsvärden för en e-postslutpunkt när du programmässigt lägger till en e-postslutpunkt till en tjänst. Dessa konfigurationsvärden anges av en administratör om en e-postslutpunkt läggs till med administrationskonsolen.
 
 >[!NOTE]
 >
@@ -811,7 +811,7 @@ När du har angett slutpunktsattribut för Remoting kan du skapa en slutpunkt f�
 
 **Aktivera slutpunkten**
 
-När du har skapat en ny slutpunkt måste du aktivera den. När en fjärrslutpunkt är aktiverad aktiveras den av en Flex-klient för att anropa tjänsten.
+När du har skapat en slutpunkt måste du aktivera den. När en fjärrslutpunkt är aktiverad aktiveras den av en Flex-klient för att anropa tjänsten.
 
 **Se även**
 
@@ -899,7 +899,7 @@ Innan du kan lägga till en TaskManager-slutpunkt med programkod måste du skapa
 
 **Skapa en kategori för slutpunkten**
 
-Kategorier används för att ordna tjänster i Workspace. Det innebär att en Workspace-användare kan anropa en tjänst som har en TaskManager-slutpunkt genom att välja en kategori i Workspace. När du skapar en TaskManager-slutpunkt kan du antingen referera till en befintlig kategori eller skapa en ny kategori programmatiskt.
+Kategorier används för att ordna tjänster i Workspace. Det innebär att en Workspace-användare kan anropa en tjänst som har en TaskManager-slutpunkt genom att välja en kategori i Workspace. När du skapar en TaskManager-slutpunkt kan du antingen referera till en befintlig kategori eller skapa en kategori programmatiskt.
 
 >[!NOTE]
 >
@@ -922,7 +922,7 @@ När du har angett slutpunktsattribut för TaskManager kan du skapa en TaskManag
 
 **Aktivera slutpunkten**
 
-När du har skapat en ny slutpunkt måste du aktivera den. När slutpunkten är aktiverad kan den användas för att anropa tjänsten inifrån Workspace. När du har aktiverat slutpunkten kan du visa den i administrationskonsolen.
+När du har skapat en slutpunkt måste du aktivera den. När slutpunkten är aktiverad kan den användas för att anropa tjänsten inifrån Workspace. När du har aktiverat slutpunkten kan du visa den i administrationskonsolen.
 
 **Se även**
 
@@ -1034,7 +1034,7 @@ Ange nya konfigurationsvärden när du ändrar en slutpunkt. Om du till exempel 
 
 >[!NOTE]
 >
->Du kan inte ändra tjänsten som anropas av slutpunkten. Om du försöker ändra tjänsten genereras ett undantag. Om du vill ändra tjänsten som är kopplad till en viss slutpunkt tar du bort slutpunkten och skapar en ny. (Se [Tar bort slutpunkter](programmatically-endpoints.md#removing-endpoints).)
+>Du kan inte ändra tjänsten som anropas av slutpunkten. Om du försöker ändra tjänsten genereras ett undantag. Om du vill ändra tjänsten som är kopplad till en viss slutpunkt tar du bort slutpunkten och skapar en. (Se [Tar bort slutpunkter](programmatically-endpoints.md#removing-endpoints).)
 
 **Se även**
 
@@ -1128,7 +1128,7 @@ Du kan hämta en slutpunkt genom att hämta en lista med slutpunkter. Du kan sed
 
 **Ta bort slutpunkten**
 
-När du har skapat en ny slutpunkt måste du aktivera den. När slutpunkten är aktiverad kan den användas för att anropa tjänsten. När du har aktiverat slutpunkten kan du visa den i administrationskonsolen.
+När du har skapat en slutpunkt måste du aktivera den. När slutpunkten är aktiverad kan den användas för att anropa tjänsten. När du har aktiverat slutpunkten kan du visa den i administrationskonsolen.
 
 **Se även**
 

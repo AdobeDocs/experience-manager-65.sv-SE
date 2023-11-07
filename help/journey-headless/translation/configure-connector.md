@@ -2,9 +2,9 @@
 title: Konfigurera översättningsintegrering
 description: Lär dig hur du ansluter AEM till en översättningstjänst.
 exl-id: a1a4b1ca-d353-46e2-a992-f38be6be338e
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1162'
+source-wordcount: '1159'
 ht-degree: 0%
 
 ---
@@ -68,7 +68,7 @@ När kopplingspaketet för den översättningstjänst du föredrar har installer
 * Om översättning till människa eller dator ska utföras
 * Om annat innehåll som är associerat med innehållsfragmentet ska översättas, till exempel taggar
 
-Så här skapar du en ny översättningskonfiguration:
+Så här skapar du en översättningskonfiguration:
 
 1. Klicka eller tryck på den globala navigeringsmenyn **verktyg** -> **Cloud Service** -> **Cloud Service för översättning**.
 1. Navigera till den plats där du vill skapa konfigurationen i innehållsstrukturen. Detta baseras ofta på ett visst projekt eller kan vara globalt.
@@ -78,7 +78,7 @@ Så här skapar du en ny översättningskonfiguration:
 
 1. Ange följande information i fälten och klicka eller tryck sedan **Skapa**.
    1. Välj **Konfigurationstyp** i listrutan. Välj **Översättningsintegrering** från listan.
-   1. Ange en **Titel** för din konfiguration. The **Titel** identifierar konfigurationen i **Cloud Service** Console samt i listrutor för sidegenskaper.
+   1. Ange en **Titel** för din konfiguration. The **Titel** identifierar konfigurationen i **Cloud Service** console och in page property drop-down lists.
    1. Om du vill kan du skriva **Namn** som ska användas för den databasnod som lagrar konfigurationen.
 
    ![Skapa översättningskonfiguration](assets/create-translation-configuration.png)

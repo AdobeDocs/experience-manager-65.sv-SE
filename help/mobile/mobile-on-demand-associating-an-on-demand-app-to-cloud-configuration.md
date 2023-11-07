@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: authoring-on-demand-services-app
 discoiquuid: d0d29b99-53d4-4b0d-947b-39d91b381de7
 exl-id: 37428543-c310-4712-a4ec-1f482579fb4b
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '409'
+source-wordcount: '407'
 ht-degree: 1%
 
 ---
@@ -35,7 +35,7 @@ Därifrån blir det möjligt att publicera, förhandsgranska och hantera innehå
 >
 >Mer information finns i [Konfigurera AEM Mobile On-demand Services](/help/mobile/aem-mobile-setup.md) i avsnittet Administrera.
 
-Om du vill konfigurera Cloud Services för mobil on demand klickar du på den översta kugghjulet i det högra hörnet av **Hantera anslutning** från appkontrollpanelen.
+Om du vill konfigurera Cloud Service för mobil on demand klickar du på den översta kugghjulet i det högra hörnet av **Hantera anslutning** från appkontrollpanelen.
 
 Du bör känna till appkontrollpanelen och tillgängliga paneler. Se [AEM Mobile Application Dashboard](/help/mobile/mobile-apps-ondemand-application-dashboard.md) för mer information.
 
@@ -54,7 +54,7 @@ I följande steg beskrivs hur du konfigurerar länken till molnkonfigurationen:
 
    ![chlimage_1-65](assets/chlimage_1-65.png)
 
-1. Ange den befintliga konfigurationen eller skapa en ny genom att ange **Konfigurationstitel**, **Enhets-ID** och **Enhetstoken**.
+1. Ange den befintliga konfigurationen eller skapa en genom att ange **Konfigurationstitel**, **Enhets-ID** och **Enhetstoken**.
 
    ![chlimage_1-66](assets/chlimage_1-66.png)
 

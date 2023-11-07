@@ -5,9 +5,9 @@ role: Admin
 feature: Integrations
 exl-id: 2660de7c-0281-4884-98d9-e78f20cf571c
 hide: true
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1611'
+source-wordcount: '1608'
 ht-degree: 0%
 
 ---
@@ -95,7 +95,7 @@ Metadatamappning mellan Adobe Workfront-dokument och -resurser definieras AEM me
 Så här konfigurerar du mappningarna:
 
 1. Navigera till **verktyg** > **Resurser** > **Metadata-scheman**.
-1. Markera det metadatamatchemaformulär som du vill redigera och klicka på **Redigera** eller skapa ett nytt metadatchema från grunden.
+1. Markera det metadatamatchemaformulär som du vill redigera och klicka på **Redigera** eller skapa ett metadatamatchema från grunden.
 1. Markera det formulärfält för metadatdataschema som du vill redigera och markera **Inställningar** på den högra panelen.
 1. I [!DNL Workfront] Anpassat formulärfält markerar namnet på [!DNL Workfront] fält som du vill mappa till den markerade AEM. Tillgängliga alternativ är:
 
@@ -173,7 +173,7 @@ Om du vill behålla versionshistorik för resurser i AEM konfigurerar du resursv
 
 1. Välj alternativ **[!UICONTROL Store assets with the same name as versions of the existing asset]**. När du markerar det här alternativet aktiveras lagring av resurser som överförts med samma namn och till samma plats som versionen av den befintliga resursen. Om alternativet inte är markerat skapas en ny resurs med ett annat namn (till exempel `asset-name.pdf` och `asset-name-1.pdf`).
 
-1. Välj alternativ **[!UICONTROL Update asset metadata when creating a new version]**. När det här alternativet är markerat uppdateras resursens metadata varje gång en ny version av resursen skapas. Om alternativet inte är markerat behåller resursen de metadata som den hade innan den nya versionen skapades.
+1. Välj alternativ **[!UICONTROL Update asset metadata when creating a version]**. När det här alternativet är markerat uppdateras resursens metadata varje gång en ny version av resursen skapas. Om alternativet inte är markerat behåller resursen de metadata som den hade innan den nya versionen skapades.
 
 ![konfigurera resursversionshantering](/help/assets/assets/wf-config-versioning.png)
 

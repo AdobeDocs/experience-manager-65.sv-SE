@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: dd11fd83-3df1-4727-8340-8c5426812823
 docset: aem65
 exl-id: 8d17194b-8baf-4878-b3ae-d351a056aebf
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1078'
+source-wordcount: '1077'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ Dessutom konsoliderar AEM Inkorg meddelanden och uppgifter från olika AEM kompo
 
 Användargränssnittet i Inkorgen innehåller lista- och kalendervyer för att visa uppgifter. Du kan också konfigurera visningsinställningarna. Du kan filtrera uppgifter baserat på olika parametrar. Mer information om visning och filter finns i [Din inkorg](/help/sites-authoring/inbox.md).
 
-Sammanfattningsvis kan du i Inkorgen skapa ett nytt program och hantera tilldelade uppgifter.
+Sammanfattningsvis kan du i Inkorgen skapa ett program och hantera tilldelade uppgifter.
 
 >[!NOTE]
 >

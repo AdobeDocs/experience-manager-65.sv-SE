@@ -2,9 +2,9 @@
 title: Headless and Headless in AEM
 description: AEM kan implementeras i en headful och headless-modell, men valet är inte binärt. AEM erbjuder flexibiliteten att utnyttja fördelarna med båda modellerna i ett och samma projekt.
 exl-id: c9597c78-be05-42ff-84fe-f7451119e83d
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1012'
+source-wordcount: '1013'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ Men detta behöver inte vara ett binärt val. AEM erbjuder oöverträffad flexib
 
 ![AEM implementeringsmodeller](/help/sites-developing/headless/getting-started/assets/aem-implementation-models.png)
 
-I en modell med headful eller full stack hanteras innehållet i den AEM databasen och AEM komponenter baserade på Java, HTML osv. används för att återge innehållet för användarupplevelsen. I den här modellen skapas innehållet, formateras, presenteras och distribueras allt i AEM.
+I en modell med headful eller full stack hanteras innehållet i AEM och AEM komponenter som baseras på Java, HTL och så vidare används för att återge innehållet för användarupplevelsen. I den här modellen skapas innehållet, formateras, presenteras och distribueras allt i AEM.
 
 I en headless-modell hanteras innehållet i AEM, men levereras via API:er som REST och GraphQL till ett annat system för att återge innehållet för användarupplevelsen. I den här modellen skapas innehåll i AEM, men formateras, presenteras och distribueras allt på en annan plattform.
 
@@ -43,7 +43,7 @@ I nästa avsnitt beskrivs dessa integreringsnivåer mer ingående.
 
 >[!NOTE]
 >
->Naturligtvis kan du också återimplementera SPA som en AEM fullt fungerande SPA [med hjälp av AEM redigeringsramverk.](/help/sites-developing/spa-walkthrough.md) Om du redan har AEM och vill skapa en ny webbshop eller andra SPA rekommenderas den här metoden, men den ligger utanför det här dokumentets omfång.
+>Naturligtvis kan du också återimplementera SPA som en AEM fullt fungerande SPA [med hjälp av AEM redigeringsramverk.](/help/sites-developing/spa-walkthrough.md) Om du redan har AEM och vill skapa en webshop eller någon annan SPA, rekommenderas den här metoden, men den ligger utanför omfånget för det här dokumentet.
 
 ## SPA integreringsnivåer {#integration-levels}
 

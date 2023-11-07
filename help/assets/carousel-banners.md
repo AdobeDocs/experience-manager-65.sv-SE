@@ -1,19 +1,17 @@
 ---
 title: Carousel banners
 description: Lär dig arbeta med karusellbanners i Dynamic Media
-uuid: 73684a08-d84d-4665-ab89-3a1bf88ac5dd
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: dynamic-media
 content-type: reference
-discoiquuid: e26c7f7f-bdd7-421a-8614-ba48abf381d2
 docset: aem65
 feature: Carousel Banners
 role: User, Admin
 exl-id: 53d34d3a-ecb6-4fa0-9665-60d21f48021e
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '4640'
+source-wordcount: '4636'
 ht-degree: 2%
 
 ---
@@ -179,7 +177,7 @@ Titta på följande exempel på QuickView-URL:er och deras resulterande hotspot-
 
 ## Överför bildbanderoller {#uploading-image-banners}
 
-Om du redan har överfört de bilder du vill använda går du vidare till nästa steg, [Skapa Carousel-uppsättningar](#creating-carousel-sets). Observera att bilderna som används i karusellen måste laddas upp när Dynamic Media har aktiverats.
+Om du redan har överfört de bilder du vill använda går du vidare till nästa steg, [Skapa Carousel-uppsättningar](#creating-carousel-sets). Observera att bilderna som används i karusellen måste överföras när Dynamic Media har aktiverats.
 
 Information om hur du överför bildbanderoller finns i [Överför resurser](/help/assets/manage-assets.md).
 

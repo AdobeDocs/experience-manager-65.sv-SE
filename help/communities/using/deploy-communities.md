@@ -3,7 +3,7 @@ title: Distribuera webbgrupper
 description: Så här distribuerar du AEM Communities
 content-type: reference
 topic-tags: deploying
-source-git-commit: e33816b3b8d190e185d2b23dad3a05aca272f01c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '1761'
 ht-degree: 1%
@@ -150,7 +150,7 @@ Installera de paket som visas i `adobeaemcloud.com` på en lokal AEM måste pake
 * Välj **Resurser** tab
 * Välj **ladda ned till disk**
 
-På den lokala AEM-instansen använder du en Package Manager (till exempel [https://localhost:4502/crx/packmgr/](https://localhost:4502/crx/packmgr/)) för att överföra till den lokala AEM.
+På den lokala AEM-instansen använder du en pakethanterare (till exempel [https://localhost:4502/crx/packmgr/](https://localhost:4502/crx/packmgr/)) för att överföra till den lokala AEM.
 
 Du kan också komma åt paketet med hjälp av Package Share från den lokala AEM-instansen (till exempel [https://localhost:4502/crx/packageshare/](https://localhost:4502/crx/packageshare/)), `Download` laddar ned till den lokala AEM instansens paketdatabas.
 

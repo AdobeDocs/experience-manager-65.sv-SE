@@ -12,9 +12,9 @@ topic-tags: operations
 discoiquuid: 669ede46-ea55-444b-a23f-23a86e5aff8e
 role: Developer
 exl-id: e6887e45-a472-41d4-9620-c56fd5b72b4c
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '4150'
+source-wordcount: '4143'
 ht-degree: 0%
 
 ---
@@ -55,7 +55,7 @@ När en formulärdesign återges som ett HTML-formulär återges varje delformul
 
 När formulärdesigner återges som HTML-formulär begränsas inte panelerna till någon viss sidstorlek. Om du har dynamiska delformulär bör de vara kapslade i paneldelformuläret. Dynamiska delformulär kan expandera till ett obegränsat antal HTML-sidor.
 
-När ett formulär återges som ett HTML-formulär har sidstorlekar (som krävs för att numrera formulär som återges som PDF) ingen betydelse. Eftersom ett formulär med flödeslayout kan utvidgas till ett obegränsat antal HTML-sidor är det viktigt att undvika sidfötter på den överordnad sidan. En sidfot under innehållsområdet på en överordnad sida kan skriva över HTML-innehåll som flödar förbi en sidgräns.
+När ett formulär återges som ett HTML-formulär har sidstorlekar (som krävs för att numrera formulär som återges som PDF) ingen betydelse. Eftersom ett formulär med flödeslayout kan utvidgas till ett obegränsat antal HTML-sidor är det viktigt att undvika sidfötter på mallsidan. En sidfot under innehållsområdet på en mallsida kan skriva över HTML-innehåll som flödar förbi en sidgräns.
 
 Du måste gå från panel till panel med `xfa.host.pageUp` och `xfa.host.pageDown` metoder. Du ändrar sidor genom att skicka ett formulär till Forms och låta Forms-tjänsten återge formuläret till klientenheten, vanligtvis en webbläsare.
 
@@ -69,11 +69,11 @@ Du måste gå från panel till panel med `xfa.host.pageUp` och `xfa.host.pageDow
 
 **.fsc-ds-ssb**: Den här formatmallen används för tomma teckenfält.
 
-**.fsc-ds-ssv**: Den här formatmallen kan användas för fält med giltiga tecken.
+**.fsc-ds-ssv**: Den här formatmallen används för fält med giltiga tecken.
 
-**.fsc-ds-ssc**: Den här formatmallen används för ett giltigt signeringsfält, men data har ändrats.
+**.fsc-ds-ssc**: Den här formatmallen används för fält med giltiga tecken, men data har ändrats.
 
-**.fsc-ds-ssi**: Den här formatmallen kan användas för ogiltiga signaturfält.
+**.fsc-ds-ssi**: Den här formatmallen kan användas vid ogiltiga teckenfält.
 
 **.fsc-ds-popup-bg**: Den här formatmallsegenskapen används inte.
 
@@ -81,17 +81,17 @@ Du måste gå från panel till panel med `xfa.host.pageUp` och `xfa.host.pageDow
 
 ## Köra skript {#running-scripts}
 
-En formulärförfattare anger om ett skript ska köras på servern eller klienten. Forms-tjänsten skapar en distribuerad händelsebearbetningsmiljö för att köra blankettintelligens som kan distribueras mellan klienten och servern med hjälp av `runAt` -attribut. Mer information om det här attributet och hur du skapar skript i formulärdesigner finns i [Forms Designer](https://www.adobe.com/go/learn_aemforms_designer_63)
+En formulärförfattare anger om ett skript ska köras på servern eller på klienten. Forms-tjänsten skapar en distribuerad händelsebearbetningsmiljö för att köra formulärdata som kan distribueras mellan klienten och servern med hjälp av `runAt` -attribut. Mer information om det här attributet och hur du skapar skript i formulärdesigner finns i [Forms Designer](https://www.adobe.com/go/learn_aemforms_designer_63)
 
 Forms-tjänsten kan köra skript medan formuläret återges. Det innebär att du kan förifylla ett formulär med data genom att ansluta till en databas eller till webbtjänster som kanske inte är tillgängliga på klienten. Du kan också ange en knapps `Click` händelse som ska köras på servern så att klienten skickar data till servern. Detta gör att klienten kan köra skript som kan kräva serverresurser, t.ex. en företagsdatabas, medan en användare interagerar med ett formulär. För HTML-formulär kan formulärskript endast köras på servern. Därför måste du markera dessa skript som ska köras på `server` eller `both`.
 
-Du kan utforma formulär som rör sig mellan sidor (paneler) genom att anropa `xfa.host.pageUp` och `xfa.host.pageDown` metoder. Skriptet placeras i en knapps `Click` -händelsen och `runAt` attribute is set to `Both`. Orsaken du väljer `Both` så att Adobe Reader eller Acrobat (för formulär som återges som PDF) kan ändra sidor utan att gå till servern, och HTML kan ändra sidor genom att skicka data till servern. Det innebär att ett formulär skickas till Forms och att ett formulär återges som HTML när den nya sidan visas.
+Du kan utforma formulär som rör sig mellan sidor (paneler) genom att anropa `xfa.host.pageUp` och `xfa.host.pageDown` metoder. Skriptet placeras i en knapps `Click` och `runAt` attribute is set to `Both`. Orsaken du väljer `Both` så att Adobe Reader eller Acrobat (för formulär som återges som PDF) kan ändra sidor utan att gå till servern, och HTML kan ändra sidor genom att skicka data till servern. Det innebär att ett formulär skickas till Forms och att ett formulär återges som HTML när den nya sidan visas.
 
 Vi rekommenderar att du inte ger skriptvariabler och formulärfält samma namn, till exempel objekt. I vissa webbläsare, t.ex. Internet Explorer, går det inte att initiera en variabel med samma namn som ett formulärfält, vilket resulterar i ett skriptfel. Det är god praxis att ge formulärfält och skriptvariabler olika namn.
 
-När du återger HTML-formulär som innehåller både sidnavigeringsfunktioner och formulärskript (t.ex. antar att ett skript hämtar fältdata från en databas varje gång formuläret återges), kontrollerar du att formulärskriptet finns i händelsen form:calculate i stället för i formatet:readyevent.
+När du återger HTML-formulär som innehåller både sidnavigeringsfunktioner och formulärskript (t.ex. förutsätter att ett skript hämtar fältdata från en databas varje gång formuläret återges), ska du se till att formulärskriptet är i händelsen form:calculate i stället för i formen:readyevent.
 
-Formulärskript som finns i formen:ready-händelsen körs bara en gång under den inledande återgivningen av formuläret och körs inte för efterföljande sidhämtningar. Händelsen form:calculate körs däremot för varje sidnavigering där formuläret återges.
+Formulärskript som finns i formen:ready-händelsen körs bara en gång under den inledande återgivningen av formuläret och inte körs för efterföljande sidhämtningar. Händelsen form:calculate körs däremot för varje sidnavigering där formuläret återges.
 
 >[!NOTE]
 >
@@ -99,9 +99,9 @@ På ett flersidigt formulär behålls inte ändringar som JavaScript gjort på e
 
 Du kan anropa egna skript innan du skickar in ett formulär. Den här funktionen fungerar i alla tillgängliga webbläsare. Den kan dock bara användas när användare återger det HTML-formulär som har dess `Output Type` egenskap inställd på `Form Body`. Det fungerar inte när `Output Type` är `Full HTML`. Mer information om hur du konfigurerar den här funktionen finns i Konfigurera formulär i administrationshjälpen.
 
-Du måste definiera en callback-funktion som anropas innan formuläret skickas, där funktionens namn är `_user_onsubmit`. Det antas att funktionen inte genererar något undantag, eller att undantaget ignoreras om det gör det. Vi rekommenderar att du placerar JavaScript-funktionen i huvudet i html. Du kan emellertid deklarera det var som helst före slutet av de skripttaggar som innehåller `xfasubset.js`.
+Du måste definiera en callback-funktion som anropas innan formuläret skickas, där funktionens namn är `_user_onsubmit`. Det antas att funktionen inte genererar något undantag, eller att undantaget ignoreras om det gör det. Vi rekommenderar att du placerar JavaScript-funktionen i head-avsnittet i html, men du kan deklarera den var som helst före slutet av script-taggarna som innehåller `xfasubset.js`.
 
-När formserver återger en XDP-fil som innehåller en nedrullningsbar lista skapas även två dolda textfält förutom att listrutan skapas. Dessa textfält lagrar data i den nedrullningsbara listan (ett lagrar alternativens visningsnamn och andra lagrar alternativens värden). Därför skickas alla data i den nedrullningsbara listan varje gång en användare skickar formuläret. Om du inte vill skicka så mycket data varje gång kan du skriva ett eget skript som inaktiverar det. Till exempel: Listrutan heter `drpOrderedByStateProv` och är omsluten under delformulärsrubriken. HTML-indataelementets namn blir `header[0].drpOrderedByStateProv[0]`. Namnet på de dolda fält som lagrar och skickar data i listrutan har följande namn: `header[0].drpOrderedByStateProv_DISPLAYITEMS_[0] header[0].drpOrderedByStateProv_VALUEITEMS_[0]`
+När formserver återger en XDP-fil som innehåller en nedrullningsbar lista skapas även två dolda textfält förutom att listrutan skapas. Dessa textfält lagrar data i den nedrullningsbara listan (ett lagrar alternativens visningsnamn och andra lagrar alternativens värden). Därför skickas alla data i den nedrullningsbara listan varje gång en användare skickar formuläret. Om du inte vill skicka så mycket data varje gång kan du skriva ett eget skript som inaktiverar det. Till exempel: Listrutan har namnet `drpOrderedByStateProv` och är omsluten under delformulärsrubriken. HTML-indataelementets namn blir `header[0].drpOrderedByStateProv[0]`. Namnet på de dolda fält som lagrar och skickar data i listrutan har följande namn: `header[0].drpOrderedByStateProv_DISPLAYITEMS_[0] header[0].drpOrderedByStateProv_VALUEITEMS_[0]`
 
 Du kan inaktivera dessa indataelement på följande sätt om du inte vill publicera data. `var __CUSTOM_SCRIPTS_VERSION = 1; //enabling the feature function _user_onsubmit() { var elems = document.getElementsByName("header[0].drpOrderedByStateProv_DISPLAYITEMS_[0]"); elems[0].disabled = true; elems = document.getElementsByName("header[0].drpOrderedByStateProv_VALUEITEMS_[0]"); elems[0].disabled = true; }`
 
@@ -123,13 +123,13 @@ var __CUSTOM_SCRIPTS_VERSION = 1; //enabling the feature
 
 När du skapar formulärdesigner som ska återges som HTML måste du begränsa skripten till XFA-delmängden för skript i JavaScript-språket.
 
-Skript som körs på klienten eller körs både på klienten och servern måste skrivas i XFA-delmängden. Skript som körs på servern kan använda den fullständiga XFA-skriptmodellen och även FormCalc. Mer information om hur du använder JavaScript finns i [Forms Designer](https://www.adobe.com/go/learn_aemforms_designer_63).
+Skript som körs på klienten eller körs både på klienten och servern måste skrivas i XFA-delmängden. Skript som körs på servern kan använda den fullständiga XFA-skriptmodellen och även FormCalc. Mer information om JavaScript finns i [Forms Designer](https://www.adobe.com/go/learn_aemforms_designer_63).
 
-När skript körs på klienten kan bara den aktuella panelen som visas använda skript. Du kan till exempel inte skriva skript mot fält som finns i panel A när panel B visas. När du kör skript på servern är alla paneler tillgängliga.
+När du kör skript på klienten kan bara den aktuella panelen som visas använda skript. Du kan till exempel inte skriva skript mot fält som finns på panel A när panel B visas. När du kör skript på servern är alla paneler tillgängliga.
 
 Du måste också vara försiktig när du använder SOM-uttryck (Scripting Object Model) i skript som körs på klienten. Endast en förenklad delmängd av SOM-uttryck stöds av skript som körs på klienten.
 
-## Händelsetiming {#event-timing}
+## Tidsinställning för händelser {#event-timing}
 
 XFA-delmängden definierar XFA-händelser som mappas till HTML-händelser. Det finns en liten skillnad i beteendet när det gäller tidpunkten för beräkning och validering av händelser. I en webbläsare körs en fullständig calculate-händelse när du avslutar ett fält. Beräkningshändelser körs inte automatiskt när du ändrar ett fältvärde. Du kan tvinga fram en calculate-händelse genom att anropa `xfa.form.execCalculate` -metod.
 
@@ -144,7 +144,7 @@ Mer information om ett null-test finns i [Forms Designer](https://www.adobe.com/
 
 ## Formulärknappar {#form-buttons}
 
-När du klickar på en skicka-knapp skickas formulärdata till Forms-tjänsten och det här är slutet på formulärbearbetningen. The `preSubmit` -händelsen kan ställas in för att köras på klienten eller servern. The `preSubmit` -händelsen körs före formuläröverföringen om den är konfigurerad att köras på klienten. I annat fall visas `preSubmit` -händelsen körs på servern när formuläret skickas. Mer information om `preSubmit` händelse, se [Forms Designer](https://www.adobe.com/go/learn_aemforms_designer_63).
+När du klickar på en skicka-knapp skickas formulärdata till Forms-tjänsten och anger att formulärbearbetningen är slutförd. The `preSubmit` -händelsen kan ställas in så att den körs på klienten eller servern. The `preSubmit` -händelsen körs före formuläröverföringen om den är konfigurerad att köras på klienten. I annat fall `preSubmit` -händelsen körs på servern när formuläret skickas. Mer information om `preSubmit` händelse, se [Forms Designer](https://www.adobe.com/go/learn_aemforms_designer_63).
 
 Om en knapp inte har något klientskript kopplat till sig, skickas data till servern, beräkningar utförs på servern och HTML-formuläret genereras om. Om en knapp innehåller ett klientskript skickas inga data till servern och klientskriptet körs i webbläsaren.
 
@@ -152,7 +152,7 @@ Om en knapp inte har något klientskript kopplat till sig, skickas data till ser
 
 En webbläsare som bara har stöd för HTML 4.0 kan inte hantera XFA-deluppsättningens klientskriptmodell. När du skapar en formulärdesign som ska fungera i både HTML 4.0 och MSDHTML eller CSS2HTML kommer ett skript som är markerat för att köras på klienten att köras på servern. Anta till exempel att en användare klickar på en knapp som finns i ett formulär som visas i webbläsaren HTML 4.0. I sådana fall skickas formulärdata till servern där skriptet på klientsidan körs.
 
-Du bör placera formulärlogiken i calculate-händelser som körs på servern i HTML 4.0 och på klienten för MSDHTML eller CSS2HTML.
+Vi rekommenderar att du placerar formulärlogiken i calculate-händelser som körs på servern i HTML 4.0 och på klienten för MSDHTML eller CSS2HTML.
 
 ## Underhåll presentationsändringar {#maintaining-presentation-changes}
 
@@ -188,7 +188,7 @@ Du kan återge ett fullständigt HTML-formulär som är kompatibelt med riktlinj
 
 ## Validerar formulärdata {#validating-form-data}
 
-Vi rekommenderar att du begränsar användningen av valideringsregler för formulärfält när du återger formuläret som ett HTML-formulär. Vissa valideringsregler kanske inte stöds för HTML-formulär. När valideringsmönstret MM-DD-YYY används på en `Date/Time` fält som finns i en formulärdesign som återges som ett HTML-formulär fungerar inte korrekt, även om datumet är korrekt angivet. Det här valideringsmönstret fungerar emellertid korrekt för formulär som återges som PDF.
+Vi rekommenderar att du begränsar användningen av valideringsregler för formulärfält när du återger formuläret som ett HTML-formulär. Vissa valideringsregler kanske inte stöds för HTML-formulär. När valideringsmönstret MM-DD-YYY används på en `Date/Time` fält i en formulärdesign som återges som ett HTML-formulär fungerar inte korrekt, även om datumet är korrekt inskrivet. Det här valideringsmönstret fungerar emellertid korrekt för formulär som återges som PDF.
 
 >[!NOTE]
 >
@@ -216,7 +216,7 @@ Innan du programmässigt kan importera data till ett PDF formClient-API måste d
 
 Du anger körningsalternativ för HTML när du återger ett HTML-formulär. Du kan till exempel lägga till ett verktygsfält i ett HTML-formulär så att användare kan välja bifogade filer på klientdatorn eller hämta bifogade filer som återges med formuläret HTML. Som standard är verktygsfältet HTML inaktiverat. Om du vill lägga till ett verktygsfält i ett HTML-formulär måste du programmässigt ange körningsalternativ. Som standard består verktygsfältet HTML av följande knappar:
 
-* `Home`: Tillhandahåller en länk till programmets webbrot.
+* `Home`: Skapar en länk till programmets webbrot.
 * `Upload`: Innehåller ett användargränssnitt för att välja filer som ska bifogas det aktuella formuläret.
 * `Download`: Innehåller ett användargränssnitt för att visa de bifogade filerna.
 
@@ -242,7 +242,7 @@ Om du vill återge ett HTML-formulär måste du ange en formulärdesign som har 
 
 **Skriv formulärdataströmmen till klientens webbläsare**
 
-När Forms-tjänsten återger ett HTML-formulär returneras en formulärdataström som du måste skriva till klientens webbläsare. När formuläret HTML skrivs till webbläsaren visas det för användaren.
+När Forms-tjänsten återger ett HTML-formulär returneras ett formulärdataflöde som du måste skriva till klientens webbläsare. När formuläret HTML skrivs till webbläsaren visas det för användaren.
 
 **Se även**
 
@@ -294,7 +294,7 @@ När Forms-tjänsten återger ett HTML-formulär returneras en formulärdatastr�
    * A `TransformTo` uppräkningsvärde som anger inställningstypen HTML. Om du till exempel vill återge ett HTML-formulär som är kompatibelt med dynamiskt HTML för Internet Explorer 5.0 eller senare anger du `TransformTo.MSDHTML`.
    * A `com.adobe.idp.Document` objekt som innehåller data som ska sammanfogas med formuläret. Om du inte vill sammanfoga data skickar du en tom `com.adobe.idp.Document` -objekt.
    * The `HTMLRenderSpec` objekt som lagrar körningsalternativ för HTML.
-   * Ett strängvärde som anger `HTTP_USER_AGENT` rubrikvärde; till exempel `Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322)`.
+   * Ett strängvärde som anger `HTTP_USER_AGENT` rubrikvärde, till exempel `Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322)`.
    * A `URLSpec` objekt som lagrar de URI-värden som krävs för att återge ett HTML-formulär.
    * A `java.util.HashMap` objekt som lagrar bifogade filer. Det här är en valfri parameter och du kan ange `null` om du inte vill bifoga filer till formuläret.
 
@@ -352,7 +352,7 @@ När Forms-tjänsten återger ett HTML-formulär returneras en formulärdatastr�
    * A `TransformTo` uppräkningsvärde som anger inställningstypen HTML. Om du till exempel vill återge ett HTML-formulär som är kompatibelt med dynamiskt HTML för Internet Explorer 5.0 eller senare anger du `TransformTo.MSDHTML`.
    * A `BLOB` objekt som innehåller data som ska sammanfogas med formuläret. Om du inte vill sammanfoga data skickar du `null`. (Se [Förifyll Forms med flödeslayouter](/help/forms/developing/prepopulating-forms-flowable-layouts.md#prepopulating-forms-with-flowable-layouts).)
    * The `HTMLRenderSpec` objekt som lagrar körningsalternativ för HTML.
-   * Ett strängvärde som anger `HTTP_USER_AGENT` rubrikvärde; till exempel `Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322)`. Du kan skicka en tom sträng om du inte vill ange det här värdet.
+   * Ett strängvärde som anger `HTTP_USER_AGENT` rubrikvärde, till exempel `Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322)`. Du kan skicka en tom sträng om du inte vill ange det här värdet.
    * A `URLSpec` objekt som lagrar de URI-värden som krävs för att återge ett HTML-formulär. (Se [Ange URI-värden](/help/forms/developing/rendering-interactive-pdf-forms.md).)
    * A `java.util.HashMap` objekt som lagrar bifogade filer. Det här är en valfri parameter och du kan ange `null` om du inte vill bifoga filer till formuläret. (Se [Bifoga filer i formuläret](/help/forms/developing/rendering-interactive-pdf-forms.md).)
    * En tom `com.adobe.idp.services.holders.BLOBHolder` objekt som fylls i av metoden. Det här parametervärdet lagrar det återgivna formuläret.

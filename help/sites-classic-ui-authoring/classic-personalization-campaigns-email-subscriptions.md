@@ -1,18 +1,14 @@
 ---
 title: Hantera prenumerationer
-seo-title: Managing Subscriptions
 description: Användare kan uppmanas att prenumerera på e-postleverantörens e-postlistor med hjälp av formulärkomponenten som används på en AEM webbsida. Om du vill förbereda en AEM sida med ett registreringsformulär för prenumeration på e-posttjänstens e-postlistor måste du använda motsvarande tjänstkonfiguration på den AEM sidan som den potentiella prenumeranten kommer att besöka.
-seo-description: Users can be asked to subscribe to Email Service Provider's mailing lists with the help of the Form component used on an AEM web page. To prepare an AEM page with a sign-up form for subscription to your e-mail service mailing lists, you must apply the corresponding service configuration to the AEM page that the potential subscriber will visit.
-uuid: b2578a3d-dba1-4114-b21a-5f34c0cccc5a
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: personalization
 content-type: reference
-discoiquuid: 295cb0a6-29db-42aa-824e-9141b37b5086
 exl-id: add05d22-3a11-49e9-a554-2315962552d5
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '914'
+source-wordcount: '913'
 ht-degree: 0%
 
 ---
@@ -22,7 +18,7 @@ ht-degree: 0%
 >[!NOTE]
 >
 >Adobe planerar inte att ytterligare förbättra denna funktion (Hantera leads och listor).
->Rekommendationen är att [Adobe Campaign och dess AEM integrering](/help/sites-administering/campaign.md).
+>Rekommendationen är att använda [Adobe Campaign och dess AEM integrering](/help/sites-administering/campaign.md).
 
 Användare kan uppmanas att prenumerera på **E-postleverantörens** e-postlistor med hjälp av **Formulär** som används på en AEM webbsida. Om du vill förbereda en AEM sida med ett registreringsformulär för prenumeration på e-posttjänstens e-postlistor måste du använda motsvarande tjänstkonfiguration på den AEM sidan som den potentiella prenumeranten kommer att besöka.
 
@@ -72,7 +68,7 @@ Så här skapar du ett anmälningsformulär och konfigurerar det för prenumerat
 För att e-posttjänsten ska kunna prenumerera och sluta prenumerera via anmälningsformuläret på publiceringsinstansen måste du följa dessa steg:
 
 1. Gå till Package Manager på författarinstansen.
-1. Skapa ett nytt paket. Ställ in filtret som `/etc/key`.
+1. Skapa ett paket. Ställ in filtret som `/etc/key`.
 1. Bygg och hämta paketet.
 1. Navigera till Package Manager på publiceringsinstansen och överför det här paketet.
 1. Navigera till Publish SGB-konsolen och starta om paketet med namnet **Stöd för Adobe Granite Crypto**.

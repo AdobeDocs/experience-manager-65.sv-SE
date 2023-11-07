@@ -1,18 +1,14 @@
 ---
 title: Administrera taggar
-seo-title: Administering Tags
 description: Lär dig hantera och administrera taggar i Adobe Experience Manager.
-seo-description: Learn how to administer Tags in AEM.
-uuid: 77e1280a-feea-4edd-94b6-4fb825566c42
 contentOwner: Chiradeep Majumdar
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: content
 content-type: reference
-discoiquuid: 69253ee9-8c28-436b-9331-6fb875f64cba
 exl-id: ff041ef0-e566-4373-818e-76680ff668d8
-source-git-commit: b703f356f9475eeeafb1d5408c650d9c6971a804
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1764'
+source-wordcount: '1761'
 ht-degree: 1%
 
 ---
@@ -78,7 +74,7 @@ Så här kommer du åt taggningskonsolen:
 
 ### Skapa ett namnutrymme {#creating-a-namespace}
 
-Om du vill skapa ett nytt namnutrymme väljer du **`Create Namespace`** -ikon.
+Om du vill skapa ett namnutrymme väljer du **`Create Namespace`** -ikon.
 
 Namnutrymmet är i sig en tagg och behöver inte innehålla några undertaggar. Om du vill fortsätta att skapa en taxonomi [skapa undertaggar](#creating-tags), som i sin tur kan vara antingen lövtaggar eller behållartaggar.
 
@@ -310,6 +306,6 @@ Information om hur du lägger till ett nytt språk i dialogrutan finns i [Lägga
 
 * [Tagga för utvecklare](/help/sites-developing/tags.md)
 
-  Information om taggningsramverket samt hur du utökar och inkluderar taggar i anpassade program.
+  Information om taggningsramverket och hur du utökar och inkluderar taggar i anpassade program.
 
 * [Klassiskt gränssnitt, taggningskonsol](/help/sites-administering/classic-console.md)

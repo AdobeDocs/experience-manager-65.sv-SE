@@ -9,9 +9,9 @@ topic-tags: interactive-communications, introduction
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 67b03098-c58d-4a57-90e0-e4ddd78e5d99
 exl-id: 6cfbeec0-0be3-48b2-a4bb-fd19c69c92c7
-source-git-commit: e9f64722ba7df0a7f43aaf1005161483e04142f5
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '487'
+source-wordcount: '485'
 ht-degree: 3%
 
 ---
@@ -32,7 +32,7 @@ Här följer några av de viktigaste funktionerna i Interactive Communications:
 - Enkel integrering med formulärdatamodellen för enkel och smidig åtkomst till backend-databaser och andra CRM-system, som MS® Dynamics
 - Integrerat redigeringsgränssnitt för tryck- och webbkanaler med möjlighet att automatiskt generera webbkanaler från tryckkanalen
 - Diagram som visar information i lättbegripliga visuella format i tryck och på webben
-- Dokumentfragment har stöd för regelredigerare och formulärdatamodell
+- Dokumentfragment stöder regelredigerare och formulärdatamodell
 - Agentanvändargränssnittet visar förhandsgranskning av interaktiv kommunikation i tryck och på webben
 - Dra och släpp komponenter för att snabbt skapa utskrifts- och webbkanaler
 
@@ -57,7 +57,7 @@ Skapa en interaktiv kommunikation med [byggstenar](#buildingblocks) för Interac
    1. [Dokumentfragment](/help/forms/using/create-interactive-communication.md#document-fragment-properties)
 
 1. Förhandsgranska tryck- och webbkanaler och redigera vid behov interaktiv kommunikation.
-1. Agentens användargränssnitt används för att [förbereda interaktiv kommunikation](/help/forms/using/prepare-send-interactive-communication.md) för att skicka det till mottagar-/postprocessen.
+1. Agentens användargränssnitt använder [färdigställa interaktiv kommunikation](/help/forms/using/prepare-send-interactive-communication.md) för att skicka det till mottagar-/postprocessen.
 
 ### Byggblock {#buildingblocks}
 
@@ -107,16 +107,16 @@ Interaktiv kommunikation är standardmetoden och rekommenderas för att skapa ku
   <tr>
    <td>Redigering</td>
    <td>Dra-och-släpp-gränssnitt för att skapa utskrift och webbkanal</td>
-   <td>Ingen dra och släpp-funktion </td>
+   <td>Ingen dra-och-släpp-mekanism </td>
   </tr>
   <tr>
    <td>Diagram</td>
-   <td>Diagram som kan användas både i tryck och i webbkanaler</td>
+   <td>Diagram som stöds i tryck- och webbkanaler</td>
    <td>Stöds inte</td>
   </tr>
   <tr>
    <td>Teman</td>
-   <td>Använder teman för att utforma webbkanaler</td>
+   <td>Använder teman för att utforma webbkanalen</td>
    <td>Stöder inte teman</td>
   </tr>
    <tr>
@@ -136,7 +136,7 @@ Interaktiv kommunikation är standardmetoden och rekommenderas för att skapa ku
    <td>Stöds</td>
   </tr>
    <tr>
-   <td>Versionshantering</td>
+   <td>Versioner</td>
    <td>Stöds ej</td>
    <td>Stöds</td>
   </tr>

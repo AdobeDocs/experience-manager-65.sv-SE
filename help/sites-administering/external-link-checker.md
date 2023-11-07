@@ -2,9 +2,9 @@
 title: Länkkontrollen
 description: Länkkontrollen hjälper till att validera både interna och externa länkar och tillåter att länkar skrivs om.
 exl-id: 8ec4c399-b192-46fd-be77-3f49b83ce711
-source-git-commit: 0b9de3261d8747f3e7107962b6aea1dbdf9d6773
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '987'
+source-wordcount: '981'
 ht-degree: 0%
 
 ---
@@ -19,13 +19,13 @@ Länkkontrollen körs automatiskt så att skribenterna kan få hjälp med sina l
 * Visar en lista över alla externa länkar i innehållet
 * Utföra länktomformningar
 
-Länkkontrollen har ett antal [konfigurationsalternativ](#configuring) som att definiera den interna valideringen, tillåta att vissa länkar eller länkmönster utelämnas från valideringen och skriva om regler för länkreskrivning.
+Länkkontrollen har flera [konfigurationsalternativ](#configuring) som att definiera den interna valideringen, tillåta att vissa länkar eller länkmönster utelämnas från valideringen och skriva om regler för länkreskrivning.
 
 Länkkontrollen validerar båda [interna länkar](#internal) och [externa länkar.](#external)
 
 >[!NOTE]
 >
->Eftersom länkkontrollen används för att kontrollera länkarna på alla innehållssidor kan länkkontrollen påverka prestanda för stora databaser. I sådana fall kan du behöva [konfigurera hur ofta länkkontrollen körs](#configuring) eller [inaktivera det.](#disabling)
+>Eftersom länkkontrollen används för att kontrollera länkarna på alla innehållssidor kan länkkontrollen påverka prestanda för stora databaser. I sådana fall kan du behöva [konfigurera hur ofta länkkontrollen körs](#configuring) eller [avaktivera det.](#disabling)
 
 ## Intern länkkontroll {#internal}
 
@@ -69,7 +69,7 @@ Så här använder du den externa länkkontrollen:
 Följande information visas:
 
 * **Status** - Valideringsstatusen för länken, som kan vara något av följande:
-   * **Giltig** - Den externa länken kan nås via länkkontrollen
+   * **Giltig** - Den externa länken kan nås via Länkkontroll
    * **Väntande** - Den externa länken lades till i webbplatsinnehållet, men har ännu inte validerats av Länkkontrollen
    * **Ogiltig** - Den externa länken kan inte nås av Länkkontrollen
 * **URL** - Den externa länken
@@ -88,21 +88,21 @@ Du kan ändra innehållet i fönstret genom att använda de två knapparna högs
 
 ### Så här fungerar den externa länkkontrollen {#how-it-works}
 
-Extern länkkontroll är enkel att använda men är beroende av ett antal tjänster och om du förstår hur de fungerar blir det lättare att förstå hur [konfigurera länkkontrollen](#configuring) för att tillgodose dina behov.
+Extern länkkontroll är lätt att använda men är beroende av flera tjänster och du kan lättare förstå hur de fungerar [konfigurera länkkontrollen](#configuring) för att tillgodose dina behov.
 
 1. När en innehållsförfattare sparar en länk till en sida aktiveras en händelsehanterare.
 1. Händelsehanteraren går igenom allt innehåll under `/content` och söker efter nya eller uppdaterade länkar och lägger till dem i ett cacheminne för länkkontrollen.
 1. The **Dag CQ Link Checker Service** körs sedan regelbundet för att kontrollera om posterna i cachen har giltig syntax.
-1. De syntaxvaliderade länkarna visas sedan i [Extern länkkontroll](#external-link-checker) -fönstret. De kommer dock att **Väntande** tillstånd.
+1. Syntaxvaliderade länkar visas sedan i [Extern länkkontroll](#external-link-checker) -fönstret. De kommer dock att **Väntande** tillstånd.
 1. The **CQ-länkkontrolluppgift för dag** körs sedan regelbundet för att validera länkarna genom att ringa ett GET-anrop.
 1. The **CQ-länkkontrolluppgift för dag** uppdaterar sedan posterna i fönstret External Link Checker med resultatet av GET-anropen.
 
 ## Konfigurera länkkontrollen {#configuring}
 
-Länkkontrollen är automatiskt tillgänglig i AEM. Det finns emellertid ett antal OSGi-konfigurationer som kan ändras för att ändra dess beteende:
+Länkkontrollen är automatiskt tillgänglig i AEM. Det finns dock flera OSGi-konfigurationer som kan ändras för att ändra dess beteende:
 
 * **Information om lagringsinformation för CQ-länkkontroll dag** - Den här tjänsten definierar storleken på cache-minnet för Länkkontroll i databasen.
-* **Dag CQ Link Checker Service** - Den här tjänsten utför asynkron kontroll av syntaxen för externa länkar. Du kan bland annat definiera kontrollperioden och vilka typer av länkar som ignoreras av kontrollfunktionen.
+* **Dag CQ Link Checker Service** - Tjänsten utför asynkron kontroll av syntaxen för externa länkar. Du kan bland annat definiera kontrollperioden och vilka typer av länkar som ignoreras av kontrollfunktionen.
 * **CQ-länkkontrolluppgift för dag** - Den här tjänsten utför GET-validering av externa länkar. Det gör att olika definitioner av intervall kan kontrollera dåliga och bra länkar bland andra alternativ.
 * **Dag CQ Link Checker Transformer** - Möjliggör konvertering av länkar baserat på en användardefinierad regeluppsättning.
 
@@ -114,8 +114,8 @@ Du kan välja att inaktivera länkkontrollen helt. Så här gör du:
 
 1. Öppna OSGi-konsolen.
 1. Redigera **Dag CQ Link Checker Transformer**
-1. Markera de alternativ du vill inaktivera:
-   * **Inaktivera kontroll** - för att inaktivera validering av länkar
+1. Markera de alternativ som du vill inaktivera:
+   * **Inaktivera kontroll** - inaktivera validering av länkar
    * **Inaktivera omskrivning** - för att inaktivera länkändringar
 
 >[!NOTE]

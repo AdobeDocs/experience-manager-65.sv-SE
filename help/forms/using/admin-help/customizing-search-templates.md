@@ -10,9 +10,9 @@ geptopics: SG_AEMFORMS/categories/configuring_workspace
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 6e4b4dfa-3af5-4c21-a2a1-b90ef02d8514
 exl-id: bf69de86-2ca6-4d21-936c-07c1debacfa0
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '856'
+source-wordcount: '855'
 ht-degree: 0%
 
 ---
@@ -41,16 +41,16 @@ Du kan skapa så många sökmallar som behövs.
 1. I administrationskonsolen klickar du på Tjänster > Arbetsyta > Sökmallar.
 1. (Valfritt) Om du redigerar en befintlig mall eller använder en befintlig mall som bas för en ny mall, väljer du mallen i listan Sökmallsnamn.
 1. Ange syftet med mallen i rutan Sökmallsbeskrivning.
-1. (Valfritt) I rutan Användarinstruktioner anger du eventuella instruktioner som kan vara till hjälp när du använder mallen. Dessa instruktioner visas i arbetsytan när en användare väljer sökmallen.
+1. (Valfritt) I rutan Användarinstruktioner anger du eventuella instruktioner som kan vara till hjälp när du använder mallen. De här instruktionerna visas i arbetsytan när en användare väljer sökmallen.
 1. Klicka på fliken Villkor. Här definierar du ett eller flera sökvillkor. Så här lägger du till ett sökvillkor:
 
    * Välj ett processelement eller ett aktivitetselement högst upp på fliken Villkor.
 
-      **Tips**: *Om du tidigare har markerat elementet Processnamn och angett en process kan du även välja processvariabler som definierats i den processen.*
+     **Tips**: *Om du tidigare har markerat elementet Processnamn och angett en process kan du även välja processvariabler som definierats i den processen.*
 
-      **Tips**: *Om du väljer elementet Task Visible kan användarna ta bort slutförda uppgifter från sökresultaten.*
+     **Tips**: *Om du väljer elementet Task Visible kan användarna ta bort slutförda uppgifter från sökresultaten.*
 
-      Sökvillkorsfälten för det markerade elementet visas längst ned på fliken Kriterier.
+     Sökvillkorsfälten för det markerade elementet visas längst ned på fliken Kriterier.
 
    * Fyll i motsvarande sökfält längst ned på fliken Villkor för varje processelement, aktivitetselement och processvariabel som du väljer:
 
@@ -58,10 +58,9 @@ Du kan skapa så många sökmallar som behövs.
       * (Valfritt) Om du vill att användare ska kunna ändra operandvärdet i arbetsytan väljer du Tillåt användaren att ändra operanden.
       * (Valfritt) Om du vill att användare ska kunna ändra relationsoperatorn markerar du Tillåt användaren att välja en annan relationsoperator. I listan som visas väljer du de operatorer som ska vara tillgängliga för användaren.
 
-      **Tips**: *Om du valde Processnamn som element kan du klicka på ikonen bredvid operandfältet för att visa en lista där du kan välja en process som körs på formulärservern. När du har valt en process är alla processvariabler som definieras i den processen tillgängliga under Processvariabler i det övre avsnittet på fliken Kriterier.*
+     **Tips**: *Om du valde Processnamn som element kan du klicka på ikonen bredvid operandfältet för att visa en lista där du kan välja en process som körs på formulärservern. När du har valt en process är alla processvariabler som definieras i den processen tillgängliga under Processvariabler i det övre avsnittet på fliken Kriterier.*
 
-      **Tips**: *Du kan ta bort ett element från sökmallen genom att klicka på ikonen Ta bort bredvid elementets sökvillkor.*
-
+     **Tips**: *Du kan ta bort ett element från sökmallen genom att klicka på ikonen Ta bort bredvid elementets sökvillkor.*
 
 1. (Valfritt) För varje kolumnrubrik som ska visas i sökresultaten klickar du på fliken Layout och utför följande steg:
 
@@ -71,7 +70,7 @@ Du kan skapa så många sökmallar som behövs.
 
    >[!NOTE]
    >
-   >Layouten som anges i sökmallen åsidosätter användarens inställningar som anges för kolumnrubriker i Workspace.
+   >Layouten som anges i sökmallen åsidosätter användarens inställningar som anges för kolumnrubriker i arbetsytan.
 
 1. (Valfritt) För varje kolumn som du vill sortera i sökresultaten klickar du på fliken Sortera och utför följande steg:
 
@@ -80,7 +79,7 @@ Du kan skapa så många sökmallar som behövs.
    * (Valfritt) Om du vill sortera en kolumn i fallande ordning markerar du kryssrutan bredvid elementnamnet. Om kryssrutan inte är markerad sorteras kolumnen i stigande ordning.
 
 1. Klicka på fliken Spara.
-1. (Valfritt) Om du skapar en ny sökmall ger du den ett unikt namn. Om du inte anger ett unikt namn kan du skriva över en befintlig mall.
+1. (Valfritt) Om du skapar en sökmall ger du den ett unikt namn. Om du inte anger ett unikt namn kan du skriva över en befintlig mall.
 1. Klicka på knappen Spara.
 
 ## Ta bort en sökmall {#delete-a-search-template}

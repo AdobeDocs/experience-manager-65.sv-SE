@@ -1,19 +1,15 @@
 ---
 title: Adaptiva formulärmallar
-seo-title: Adaptive Form Templates
 description: Skapa anpassningsbara formulärmallar genom att definiera den grundläggande strukturen och det ursprungliga formulärinnehållet med mallredigeraren.
-seo-description: Create adaptive form templates by defining the basic structure and initial form content using the Template Editor.
-uuid: 317ca3ab-f809-49a7-a063-9d0c17a35fe4
 contentOwner: sashanka
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
-discoiquuid: b21a48ba-eccd-4bb5-9b92-3039026ddf2a
 docset: aem65
 feature: Adaptive Forms
 exl-id: d7287ee7-fb4e-4d47-b37e-0a9260344070
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2042'
+source-wordcount: '2040'
 ht-degree: 0%
 
 ---
@@ -39,9 +35,9 @@ Du vill till exempel att alla formulärförfattare ska ha vissa textrutor, navig
 
 ## Arbeta med mallar {#working-with-templates}
 
-Du kommer åt mallredigeraren på Verktyg-menyn genom att gå till **Adobe Experience Manager > Verktyg > Mallar**. Här är mallarna ordnade i mappar som är aktiverade för redigerbara mallar. AEM innehåller en global mapp för att ordna mallar. Den är dock inte aktiverad som standard. Du kan begära att administratören aktiverar den globala mappen eller skapar en ny mapp för mallar. Mer information om hur du skapar mappar finns i [Mallmappar](/help/sites-developing/page-templates-editable.md).
+Du kommer åt mallredigeraren på Verktyg-menyn genom att gå till **Adobe Experience Manager > Verktyg > Mallar**. Här är mallarna ordnade i mappar som är aktiverade för redigerbara mallar. AEM innehåller en global mapp för att ordna mallar. Den är dock inte aktiverad som standard. Du kan begära att administratören aktiverar den globala mappen eller skapar en mapp för mallar. Mer information om hur du skapar mappar finns i [Mallmappar](/help/sites-developing/page-templates-editable.md).
 
-När du trycker för att öppna en mapp finns knappen Skapa som gör att du kan skapa en ny mall för adaptiva formulär.
+När du trycker för att öppna en mapp visas en Skapa-knapp där du kan skapa en mall för adaptiva formulär.
 
 ### Skapa en mall {#create-template}
 

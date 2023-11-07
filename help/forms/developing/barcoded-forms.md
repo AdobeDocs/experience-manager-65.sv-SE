@@ -11,9 +11,9 @@ topic-tags: operations
 discoiquuid: eb28ac30-265c-4611-8247-1f4bc826f254
 role: Developer
 exl-id: dd32808e-b773-48a2-90e1-7a277d349493
-source-git-commit: 135f50cc80f8bb449b2f1621db5e2564f5075968
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1920'
+source-wordcount: '1915'
 ht-degree: 0%
 
 ---
@@ -60,13 +60,13 @@ Följande JAR-filer måste läggas till i projektets klassökväg:
 * adobe-barcodedforms-client.jar
 * adobe-utilities.jar (krävs om AEM Forms används i JBoss)
 * jbossall-client.jar (krävs om AEM Forms distribueras på JBoss)
-* xercesImpl.jar (finns i &lt;install directory=&quot;&quot;>/Adobe/Adobe_Experience_Manager_forms/sdk/client-libs\thirdparty)
+* xercesImpl.jar (in &lt;install directory=&quot;&quot;>/Adobe/Adobe_Experience_Manager_forms/sdk/client-libs\thirdparty)
 
-Om AEM Forms körs på en J2EE-programserver som inte är JBOSS måste du ersätta adobe-utilities.jar och jbossall-client.jar med JAR-filer som är specifika för J2EE-programservern där AEM Forms är distribuerad. Information om platsen för alla AEM Forms JAR-filer finns i [Inkludera AEM Forms Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files).
+Om AEM Forms körs på en J2EE-programserver som stöds och som inte är JBOSS, måste du ersätta adobe-utilities.jar och jbossall-client.jar med JAR-filer som är specifika för J2EE-programservern som AEM Forms är distribuerad på. Information om platsen för alla AEM Forms JAR-filer finns i [Inkludera AEM Forms Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files).
 
 **Skapa ett klient-API-objekt för streckkodade formulär**
 
-Innan du programmässigt kan utföra en streckkodsåtgärd måste du skapa en streckkodad Forms-tjänstklient. Om du använder Java API skapar du en `BarcodedFormsServiceClient` -objekt. Skapa en `BarcodedFormsServiceService` -objekt.
+Innan du programmässigt kan utföra en streckkodsåtgärd måste du skapa en streckkodad Forms-tjänstklient. Om du använder Java API skapar du en `BarcodedFormsServiceClient` -objekt. Om du använder webb-API:t för streckkodade formulär skapar du en `BarcodedFormsServiceService` -objekt.
 
 **Hämta ett PDF-formulär som innehåller streckkodsdata**
 
@@ -161,12 +161,12 @@ Avkoda formulärdata med hjälp av API:t för streckkodade formulär (Java):
 1. Bearbeta avkodade data
 
    * Iterera genom `java.util.List` objekt som hämtar varje `org.w3c.dom.Document` objekt som finns i listan.
-   * För varje element i listan konverterar du `org.w3c.dom.Document` objekt till `com.adobe.idp.Document` -objekt. (Den programlogik som konverterar en `org.w3c.dom.Document` objekt till `com.adobe.idp.Document` -objektet visas i streckkodsdata för avkodning med hjälp av Java API-exemplet).
+   * Konvertera för varje element i listan `org.w3c.dom.Document` objekt till `com.adobe.idp.Document` -objekt. (Den programlogik som konverterar en `org.w3c.dom.Document` objekt till `com.adobe.idp.Document` -objektet visas i streckkodsdata för avkodning med hjälp av Java API-exemplet).
    * Spara XML-data som en XML-fil genom att anropa `com.adobe.idp.Document` objektets `copyToFile`och skickar ett File-objekt som representerar XML-filen.
 
 **Se även**
 
-[Snabbstart (SOAP-läge): Avkoda streckkodsdata med Java API](/help/forms/developing/barcoded-forms-service-java-api.md#quick-start-soap-mode-decoding-barcoded-form-data-using-the-java-api)
+[Snabbstart (SOAP-läge): Avkoda streckkodade formulärdata med Java API](/help/forms/developing/barcoded-forms-service-java-api.md#quick-start-soap-mode-decoding-barcoded-form-data-using-the-java-api)
 
 [Inkludera AEM Forms Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -183,7 +183,7 @@ Avkoda formulärdata med API:t för streckkodade formulär (webbtjänst):
 
 1. Skapa ett klient-API-objekt för streckkodade formulär
 
-   Skapa en `BarcodedFormsServiceService` genom att anropa dess standardkonstruktor.
+   Skapa en Microsoft .NET-klientsammansättning som använder den streckkodade formulärtjänsten WSDL `BarcodedFormsServiceService` genom att anropa dess standardkonstruktor.
 
 1. Hämta ett PDF-formulär som innehåller streckkodsdata
 

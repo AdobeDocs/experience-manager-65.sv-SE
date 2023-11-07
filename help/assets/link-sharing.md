@@ -1,14 +1,14 @@
 ---
 title: Dela resurser via en länk
-description: Dela resurser, mappar och samlingar som en URL-adress.
+description: Dela resurser, mappar och samlingar som en URL.
 contentOwner: AG
 role: User
 feature: Link Sharing,Asset Management
 exl-id: 20370b00-862e-4d04-af2f-7d1c74a842dd
 hide: true
-source-git-commit: 3d5e9ad8ee19756b05e5a77a3f748bc647fcf734
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '936'
+source-wordcount: '935'
 ht-degree: 3%
 
 ---
@@ -25,8 +25,7 @@ ht-degree: 3%
 >[!PREREQUISITES]
 >
 >* Du behöver `Edit ACL` behörighet för mappen eller resursen som du vill dela som en länk.
->* Konfigurera SMTP-serverinformationen i [Dagens CQ-posttjänst](#configmailservice).
-
+>* Konfigurera SMTP-serverinformationen i [Dagens CQ-tjänst för e-post](#configmailservice).
 
 ## Dela resurser {#share-assets}
 
@@ -37,7 +36,7 @@ Om du vill generera URL:en för resurser som du vill dela med användare använd
 
 1. I [!DNL Assets] i användargränssnittet väljer du den resurs som ska delas som en länk.
 
-1. I verktygsfältet klickar du på **[!UICONTROL Share Link]** ![dela resurser, ikon](assets/do-not-localize/assets_share.png). Länken som skapas när du klickar på **[!UICONTROL Share]** visas i förväg i [!UICONTROL Share Link] fält. Länken skapas inte förrän du väljer **[!UICONTROL Submit]**.
+1. Klicka på **[!UICONTROL Share Link]** ![dela resurser, ikon](assets/do-not-localize/assets_share.png). Länken som skapas efter att du klickat **[!UICONTROL Share]** visas i förväg i [!UICONTROL Share Link] fält. Länken skapas inte förrän du väljer **[!UICONTROL Submit]**.
 
    ![Dialogruta med länkresurs](assets/share-assets-as-link.png)
 
@@ -57,11 +56,11 @@ Om du vill generera URL:en för resurser som du vill dela med användare använd
 
    ![Ange förfallodatum för delad länk](assets/Set-shared-link-expiration.png)
 
-1. Om du vill att användarna ska kunna hämta den ursprungliga resursen väljer du **[!UICONTROL Allow download of original file]**. Om du bara vill att användarna ska kunna hämta renderingar av de delade resurserna väljer du **[!UICONTROL Allow download of renditions of file]**.
+1. Om du vill låta användarna hämta den ursprungliga resursen väljer du **[!UICONTROL Allow download of original file]**. Om du bara vill att användarna ska kunna hämta renderingar av de delade resurserna väljer du **[!UICONTROL Allow download of renditions of file]**.
 
 1. Klicka på **[!UICONTROL Share]**. Ett meddelande bekräftar att länken delas med användarna via ett e-postmeddelande.
 
-1. Om du vill visa den delade resursen klickar du på länken i e-postmeddelandet som skickas till användaren. Om du vill generera en förhandsgranskning av resursen klickar du på den delade resursen. Om du vill stänga förhandsgranskningen klickar du på **[!UICONTROL Back]**. Om du har delat en mapp klickar du på **[!UICONTROL Parent Folder]** för att återgå till den överordnade mappen.
+1. Om du vill visa den delade resursen klickar du på länken i e-postmeddelandet som skickas till användaren. Om du vill generera en förhandsgranskning av resursen klickar du på den delade resursen. Klicka på om du vill stänga förhandsgranskningen **[!UICONTROL Back]**. Om du har delat en mapp klickar du på **[!UICONTROL Parent Folder]** för att återgå till den överordnade mappen.
 
    ![Förhandsgranskning av delad resurs](assets/chlimage_1-546.png)
 
@@ -73,7 +72,7 @@ Om du vill generera URL:en för resurser som du vill dela med användare använd
 
    ![Verktygsfältsalternativ för att hämta den delade resursen](assets/chlimage_1-547.png)
 
-1. Om du vill visa resurser som du har delat som länkar går du till [!DNL Assets] användargränssnittet och klicka på [!DNL Experience Manager] logotyp. Välj **[!UICONTROL Navigation]**. Välj **[!UICONTROL Shared Links]** för att visa en lista med delade resurser.
+1. Om du vill visa resurser som du har delat som länkar går du till [!DNL Assets] -användargränssnittet och klicka på [!DNL Experience Manager] logotyp. Välj **[!UICONTROL Navigation]**. Välj **[!UICONTROL Shared Links]** för att visa en lista med delade resurser.
 
 1. Om du vill ta bort delningen av en resurs markerar du den och klickar på **[!UICONTROL Unshare]** i verktygsfältet. Ett bekräftelsemeddelande följer. Posten för resursen tas bort från listan.
 
@@ -83,9 +82,9 @@ Om du vill generera URL:en för resurser som du vill dela med användare använd
 1. I listan över tjänster letar du upp **[!UICONTROL Day CQ Mail Service]**.
 1. Klicka **[!UICONTROL Edit]** bredvid tjänsten och konfigurera följande parametrar för **[!UICONTROL Day CQ Mail Service]** med de uppgifter som anges mot deras namn:
 
-   * Värdnamn för SMTP-server: värdnamn för e-postserver
+   * SMTP-serverns värdnamn: e-postserverns värdnamn
    * SMTP-serverport: e-postserverport
-   * SMTP-användare: e-postserverns användarnamn
+   * SMTP-användare: användarnamn för e-postserver
    * SMTP-lösenord: e-postserverlösenord
 
    ![chlimage_1-263](assets/chlimage_1-548.png)
@@ -109,7 +108,7 @@ När du hämtar resurser från den länk som delas med funktionen Länkdelning, 
 * Resursmappar eller samlingar som innehåller ett tomt utrymme i namnet kanske inte delas.
 * Om användarna inte kan hämta de delade resurserna bör du kontakta [!DNL Experience Manager] administrera vad [hämtningsgränser](#configure-maximum-data-size) är.
 * Om du inte kan skicka e-post med länkar till delade resurser eller om andra användare inte kan ta emot din e-post, bör du kontakta din [!DNL Experience Manager] administratör om [e-posttjänst](#configure-day-cq-mail-service) är konfigurerad eller inte.
-* Om du inte kan dela resurser med hjälp av länkdelningsfunktionen måste du se till att du har rätt behörighet. Se [dela resurser](#share-assets).
+* Om du inte kan dela resurser med hjälp av länkdelningsfunktionen måste du se till att du har rätt behörighet. Se [aktiekurser](#share-assets).
 * Om en delad resurs flyttas till en annan plats slutar länken att fungera. Återskapa länken och dela den på nytt med användarna.
 
 * Om du vill dela länkar från [!DNL Experience Manager] Skapa distribution till externa entiteter och se till att du bara visar följande URL:er som används för länkdelning, för `GET` endast begäranden. Blockera andra URL-adresser av säkerhetsskäl.
@@ -117,4 +116,5 @@ När du hämtar resurser från den länk som delas med funktionen Länkdelning, 
    * `http://[aem_server]:[port]/linkshare.html`
    * `http://[aem_server]:[port]/linksharepreview.html`
    * `http://[aem_server]:[port]/linkexpired.html`
-   I [!DNL Experience Manager] gränssnitt, åtkomst **[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Web Console]**. Öppna **[!UICONTROL Day CQ Link Externalizer]** konfigurera och ändra följande egenskaper i **[!UICONTROL Domains]** fält med de värden som anges mot `local`, `author`och `publish`. För `local` och `author` anger du URL:en för de lokala instanserna respektive författarinstanserna. Om du kör en [!DNL Experience Manager] Använd samma värde för Author-instansen `local` och `author` egenskaper. Ange URL:en för publiceringsinstanser [!DNL Experience Manager] Publicera instans.
+
+  I [!DNL Experience Manager] gränssnitt, åtkomst **[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Web Console]**. Öppna **[!UICONTROL Day CQ Link Externalizer]** konfigurera och ändra följande egenskaper i **[!UICONTROL Domains]** fält med de värden som anges mot `local`, `author`och `publish`. För `local` och `author` anger du URL:en för de lokala instanserna respektive författarinstanserna. Om du kör en [!DNL Experience Manager] Använd samma värde för Author-instansen `local` och `author` egenskaper. Ange URL:en för publiceringsinstanser [!DNL Experience Manager] Publicera instans.

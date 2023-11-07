@@ -5,7 +5,7 @@ contentOwner: AG
 role: Admin
 feature: Renditions,Developer Tools,Asset Processing
 exl-id: b67465f9-177c-49c4-b4eb-a1d6e09ac9a2
-source-git-commit: 10227bcfcfd5a9b0f126fee74dce6ec7842f5e95
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '942'
 ht-degree: 0%
@@ -23,7 +23,7 @@ Adobe Imaging Transcoding Library är en tillverkarspecifik bildbehandlingslösn
 * JPEG-komprimering
 * Storleksändring av bild
 
-Bildkonverteringsbiblioteket har stöd för CMYK och fullt stöd för alfa, förutom CMYK-Alpha.
+Bildkonverteringsbiblioteket har stöd för CMYK och fullt stöd för alfa, utom CMYK -Alpha.
 
 Förutom stöd för ett stort antal filformat och profiler har Imaging Transcoding Library betydande fördelar jämfört med andra tredjepartslösningar när det gäller prestanda, skalbarhet och kvalitet. Här är några av fördelarna med att använda Imaging Transcoding Library:
 
@@ -58,8 +58,8 @@ Du kan konfigurera följande alternativ för `-resize` parameter:
 
 * `X`: Fungerar ungefär som [!DNL Experience Manager]. Till exempel -resize 319.
 * `WxH`: Proportionerna behålls inte, till exempel `-resize 319x319`.
-* `Wx`: Fastställer bredden och beräknar höjden med bibehållna proportioner. Till exempel `-resize 319x`.
-* `xH`: Korrigerar höjden och beräknar bredden med bibehållna proportioner. Till exempel `-resize x319`.
+* `Wx`: Fastställer bredden och beräknar höjden med bibehållna proportioner. Till exempel, `-resize 319x`.
+* `xH`: Korrigerar höjden och beräknar bredden med bibehållna proportioner. Till exempel, `-resize x319`.
 
 ```shell
  -AllowUpsampling (Resizes smaller images)

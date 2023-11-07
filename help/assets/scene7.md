@@ -11,7 +11,7 @@ feature: Dynamic Media Classic
 role: User, Admin
 mini-toc-levels: 3
 exl-id: 815f577d-4774-4830-8baf-0294bd085b83
-source-git-commit: d947bd98b3a0f6fd79cde5b5b2fca23487077da3
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '2707'
 ht-degree: 1%
@@ -53,6 +53,7 @@ Du kan publicera digitala resurser till Dynamic Media Classic på följande sät
 >[!NOTE]
 >
 >Experience Manager publicerar till Dynamic Media Classic asynkront. När du har valt **[!UICONTROL Publish]**, tar det några sekunder för resursen att publicera till Dynamic Media Classic.
+>
 
 ## Dynamic Media Classic-komponenter {#scene-components}
 
@@ -76,17 +77,17 @@ När de är tillgängliga i **[!UICONTROL Design]** I kan du lägga till kompone
 
 ### Meddelande om att Flash Viewer har upphört {#flash-viewers-end-of-life-notice}
 
-Från och med den 31 januari 2017 upphörde Adobe Dynamic Media Classic stödet för visningsprogramplattformen Flash.
+Från och med den 31 januari 2017 upphörde Adobe Dynamic Media Classic stödet för visningsprogramplattformen för Flash.
 
 ### Lägga till en Dynamic Media Classic-komponent (Scene7) på en sida {#adding-a-scene-component-to-a-page}
 
-Att lägga till en Dynamic Media Classic-komponent (Scene7) på en sida är detsamma som att lägga till en komponent på en sida. Dynamic Media Classic-komponenter beskrivs i detalj i följande avsnitt.
+Att lägga till en Dynamic Media Classic-komponent (Scene7) på en sida är detsamma som att lägga till en komponent på en sida. Dynamic Media Classic-komponenterna beskrivs i detalj i följande avsnitt.
 
 **Så här lägger du till en Dynamic Media Classic-komponent (Scene7) på en sida:**
 
 1. Öppna den sida där du vill lägga till Experience Manager **[!UICONTROL Dynamic Media Classic (Scene7)]** -komponenten.
 
-1. Om det inte finns några Dynamic Media Classic-komponenter tillgängliga väljer du **[!UICONTROL Design]** läge, markera en komponent med en blå kant, välj **[!UICONTROL Parent]** -ikonen och sedan **[!UICONTROL Configuration]** ikon. I **[!UICONTROL Parsys (Design)]**, markerar alla Dynamic Media Classic-komponenter för att göra dem tillgängliga och väljer **[!UICONTROL OK]**.
+1. Om det inte finns några Dynamic Media Classic-komponenter tillgängliga väljer du **[!UICONTROL Design]** läge, markera valfri komponent med en blå kant, välj **[!UICONTROL Parent]** -ikonen och sedan **[!UICONTROL Configuration]** -ikon. I **[!UICONTROL Parsys (Design)]**, markerar alla Dynamic Media Classic-komponenter för att göra dem tillgängliga och väljer **[!UICONTROL OK]**.
 
    ![chlimage_1-224](assets/chlimage_1-224.png)
 
@@ -111,11 +112,11 @@ Se även [Responsiv design för webbsidor](/help/sites-developing/responsive.md)
 
 **Så här lägger du till en interaktiv tittarupplevelse på en responsiv webbplats:**
 
-1. Logga in på Experience Manager och kontrollera att du har [konfigurerade Adobe Dynamic Media Classic-Cloud Services](/help/sites-administering/scene7.md#configuring-scene-integration) och att Dynamic Media Classic-komponenterna är tillgängliga.
+1. Logga in på Experience Manager och kontrollera att du har [konfigurerade Adobe Dynamic Media Classic-Cloud Service](/help/sites-administering/scene7.md#configuring-scene-integration) och att Dynamic Media Classic-komponenterna är tillgängliga.
 
    >[!NOTE]
    >
-   >Om Dynamic Media Classic-komponenterna inte är tillgängliga bör du kontrollera att [aktivera dem i designläge](/help/sites-authoring/default-components-designmode.md).
+   >Om Dynamic Media Classic-komponenterna inte är tillgängliga bör du kontrollera att [för att aktivera dem i designläge](/help/sites-authoring/default-components-designmode.md).
 
 1. På en webbplats med **[!UICONTROL Dynamic Media Classic]** aktiverade komponenter, dra och **[!UICONTROL Image]** till sidan.
 1. Markera komponenten och välj konfigurationsikonen.
@@ -131,7 +132,7 @@ Se även [Responsiv design för webbsidor](/help/sites-developing/responsive.md)
 
 * **[!UICONTROL File Reference]** - Bläddra till en fil som du vill referera till. Filreferensen visar resurs-URL:en och inte nödvändigtvis den fullständiga Dynamic Media Classic-URL:en inklusive URL-kommandon och -parametrar. Du kan inte lägga till Dynamic Media Classic URL-kommandon och -parametrar i det här fältet. I stället lägger du till dem via motsvarande funktioner i komponenten.
 * **[!UICONTROL Width]** - Ange bredden.
-* **[!UICONTROL Height]** - Här kan du ange höjden.
+* **[!UICONTROL Height]** - Ange höjden.
 
 Du anger dessa konfigurationsalternativ genom att öppna (dubbelklicka) en Dynamic Media Classic-komponent, till exempel när du öppnar en **[!UICONTROL Zoom]** komponent:
 
@@ -141,19 +142,19 @@ Du anger dessa konfigurationsalternativ genom att öppna (dubbelklicka) en Dynam
 
 Zoomkomponenten för HTML5 visar en större bild när du trycker på **[!UICONTROL +]** -knappen.
 
-Resursen har zoomverktyg längst ned. Välj **[!UICONTROL +]** om du vill förstora; välj **[!UICONTROL -]** om du vill minska. Tryck på **[!UICONTROL x]** eller zoompilen återställer bilden till den ursprungliga storlek den importerades som. Markera de diagonala pilarna så att du kan göra den i helskärmsläge. Välj **[!UICONTROL Edit]** så att du kan konfigurera komponenten. Med den här komponenten kan du konfigurera [gemensamma inställningar för alla [!UICONTROL Dynamic Media Classic] komponenter](#settings-common-to-all-scene-components).
+Resursen har zoomverktyg längst ned. Välj **[!UICONTROL +]** om du vill förstora, markera **[!UICONTROL -]** om du vill minska. Tryck på **[!UICONTROL x]** eller zoompilen återställer bilden till den ursprungliga storlek den importerades som. Markera de diagonala pilarna så att du får helskärmsläget. Välj **[!UICONTROL Edit]** så att du kan konfigurera komponenten. Med den här komponenten kan du konfigurera [gemensamma inställningar för alla [!UICONTROL Dynamic Media Classic] komponenter](#settings-common-to-all-scene-components).
 
 ![chlimage_1-227](/help/assets/assets/do-not-localize/chlimage_1-227.png)
 
 ### Utfällbar {#flyout}
 
-I HTML5 **[!UICONTROL Flyout]** komponenten visas resursen som delad skärm, lämnade tillgången i den angivna storleken, till höger visas zoomdelen. Välj **[!UICONTROL Edit]** så att du kan konfigurera komponenten. Med den här komponenten kan du konfigurera [gemensamma inställningar för alla Dynamic Media Classic-komponenter](#settings-common-to-all-scene-components).
+I HTML5 **[!UICONTROL Flyout]** -komponenten visas resursen som en delad skärm. Lämna resursen i den angivna storleken. Höger visas zoomdelen. Välj **[!UICONTROL Edit]** så att du kan konfigurera komponenten. Med den här komponenten kan du konfigurera [gemensamma inställningar för alla Dynamic Media Classic-komponenter](#settings-common-to-all-scene-components).
 
 >[!NOTE]
 >
 >Om **[!UICONTROL Flyout]** -komponenten använder en anpassad storlek, sedan används den anpassade storleken och responsiv konfiguration av komponenten inaktiveras.
 >
->Om **[!UICONTROL Flyout]** -komponenten använder standardstorleken, enligt **[!UICONTROL Design View]** används standardstorleken och komponenten töjs för att passa sidlayoutstorleken när responsiv installation av komponenten är aktiverad. Det finns en begränsning för responsiv konfiguration av komponenten. När du använder **[!UICONTROL Flyout]** -komponent med responsiv konfiguration ska du inte använda den med full sidsträckning. I annat fall visas **[!UICONTROL Flyout]** sträcker sig utanför sidans högra kant.
+>Om **[!UICONTROL Flyout]** -komponenten använder standardstorleken, enligt inställningen i **[!UICONTROL Design View]** används standardstorleken och komponenten töjs för att passa sidlayoutstorleken när responsiv installation av komponenten är aktiverad. Det finns en begränsning för responsiv konfiguration av komponenten. När du använder **[!UICONTROL Flyout]** -komponent med responsiv konfiguration ska du inte använda den med full sidsträckning. I annat fall **[!UICONTROL Flyout]** sträcker sig utanför sidans högra kant.
 
 ![chlimage_1-228](assets/chlimage_1-228.png)
 
@@ -163,7 +164,7 @@ Dynamic Media Classic **[!UICONTROL Image]** kan du lägga till Dynamic Media Cl
 
 ![chlimage_1-229](assets/chlimage_1-229.png)
 
-**[!UICONTROL Title, Alt Text]** - I **[!UICONTROL Advanced]** lägger du till en titel i bilden och alternativ text för användare som har grafik inaktiverad.
+**[!UICONTROL Title, Alt Text]** - I dialogrutan **[!UICONTROL Advanced]** lägger du till en titel i bilden och alternativ text för användare som har grafik inaktiverad.
 
 **[!UICONTROL URL, Open in]** - Du kan ställa in en resurs från för att öppna en länk. Ange **[!UICONTROL URL]** och in **[!UICONTROL Open in]** ange om du vill att den ska öppnas i samma fönster eller i ett nytt fönster.
 
@@ -195,7 +196,7 @@ Välj **[!UICONTROL Edit]** om du vill konfigurera komponenten. Du kan konfigure
 
 >[!NOTE]
 >
->Dynamic Media Classic URL-kommandon och -parametrar kan inte läggas till direkt i filreferensens URL. De kan bara definieras i komponentens användargränssnitt i **[!UICONTROL Parameter]** -panelen.
+>Dynamic Media Classic URL-kommandon och -parametrar kan inte läggas till direkt i filreferensens URL. De kan bara definieras i komponentgränssnittet i **[!UICONTROL Parameter]** -panelen.
 
 **[!UICONTROL Title, Alt Text]** - På fliken Dynamic Media Classic Image Template (Bildmall) lägger du till en titel i bilden och alternativ text för användare som har bilder inaktiverade.
 
@@ -217,7 +218,7 @@ Texten i bilden ändras. Du kan återställa texten till det ursprungliga värde
 
 ![chlimage_1-235](assets/chlimage_1-235.png)
 
-#### Ändra text så att den återspeglar värdet för ett klientkontextvärde {#changing-text-to-reflect-the-value-of-a-client-context-value}
+#### Ändra text så att värdet för en klientkontext återspeglas {#changing-text-to-reflect-the-value-of-a-client-context-value}
 
 Om du vill länka ett fält till ett klientkontextvärde väljer du **[!UICONTROL Select]** för att öppna klientsnabbmenyn väljer du klientkontext och väljer **[!UICONTROL OK]**. I det här exemplet ändras namnet baserat på att namnet länkas till det formaterade namnet i profilen.
 
@@ -227,7 +228,7 @@ Texten återspeglar namnet på den inloggade användaren. Du kan återställa te
 
 ![chlimage_1-237](assets/chlimage_1-237.png)
 
-#### Gör Dynamic Media Classic Image Template till en länk {#making-the-scene-image-template-a-link}
+#### Länka Dynamic Media Classic Image Template {#making-the-scene-image-template-a-link}
 
 1. På sidan med Dynamic Media Classic **[!UICONTROL Image Template]** komponent, markera **[!UICONTROL Edit]**.
 1. I **[!UICONTROL URL]** anger du den URL som användarna går till när användaren trycker på bilden. I **[!UICONTROL Open in]** väljer du om du vill att målet ska öppnas (ett nytt fönster eller samma fönster).
@@ -238,7 +239,7 @@ Texten återspeglar namnet på den inloggade användaren. Du kan återställa te
 
 ### Videokomponent {#video-component}
 
-Dynamic Media Classic **[!UICONTROL Video]** -komponenten (tillgänglig från Dynamic Media Classic-delen av sidosparken) använder enhets- och bandbreddsidentifiering för att leverera rätt video till varje skärm. Den här komponenten är en videospelare för HTML5. det är ett enda visningsprogram som kan användas över flera kanaler.
+Dynamic Media Classic **[!UICONTROL Video]** -komponenten (tillgänglig från Dynamic Media Classic-delen av sidosparken) använder enhets- och bandbreddsidentifiering för att leverera rätt video till varje skärm. Den här komponenten är en HTML5-videospelare, det är ett enda visningsprogram som kan användas över flera kanaler.
 
 Den kan användas för adaptiva videouppsättningar, en enda MP4-video eller en enda F4V-video.
 
@@ -257,7 +258,7 @@ När du använder en adaptiv videouppsättning med videokomponenten i Dynamic Me
 
 ## Dynamic Media Classic Content Browser {#scene-content-browser}
 
-Med Dynamic Media Classic innehållsläsare kan du visa innehåll från Dynamic Media Classic direkt i Experience Manager. Om du vill öppna innehållsläsaren går du till **[!UICONTROL Content Finder]**, markera **[!UICONTROL Dynamic Media Classic]** i det pekoptimerade användargränssnittet eller **[!UICONTROL S7]** -ikonen i det klassiska användargränssnittet. Funktionen är identisk mellan båda användargränssnitten.
+Med Dynamic Media Classic innehållsläsare kan du visa innehåll från Dynamic Media Classic direkt i Experience Manager. Om du vill öppna innehållsläsaren går du till **[!UICONTROL Content Finder]**, markera **[!UICONTROL Dynamic Media Classic]** i det pekoptimerade användargränssnittet eller **[!UICONTROL S7]** i det klassiska användargränssnittet. Funktionen är identisk mellan båda användargränssnitten.
 
 Om du har flera konfigurationer visas Experience Manager som standard [standardkonfiguration](/help/sites-administering/scene7.md#configuring-a-default-configuration). Du kan välja olika konfigurationer direkt i Dynamic Media Classic innehållsläsare i listrutan.
 
@@ -267,11 +268,10 @@ Om du har flera konfigurationer visas Experience Manager som standard [standardk
 >* När [Säker förhandsvisning är aktiverat](/help/sites-administering/scene7.md#configuring-the-state-published-unpublished-of-assets-pushed-to-scene), både publicerade och opublicerade resurser på Dynamic Media Classic visas i Dynamic Media Classic innehållsläsare.
 >* Om du inte ser **[!UICONTROL Dynamic Media Classic]** eller **[!UICONTROL S7]** som ett alternativ i webbläsaren måste du [konfigurera Dynamic Media Classic så att det fungerar med Experience Manager](/help/sites-administering/scene7.md).
 >* För video har Dynamic Media Classic Content Browser stöd för:
-   >
-   >   * Adaptiva videouppsättningar: behållare för alla videoåtergivningar som behövs för sömlös uppspelning på flera skärmar
-   >   * Enkel MP4-video
-   >   * En F4V-video
-
+>
+>   * Adaptiva videouppsättningar: behållare för alla videoåtergivningar som behövs för sömlös uppspelning på flera skärmar
+>   * Enkel MP4-video
+>   * Enkelt F4V-videoklipp
 
 ### Bläddra i det pekoptimerade användargränssnittet {#browsing-content-in-the-touch-optimized-ui}
 
@@ -286,7 +286,6 @@ Bläddra bland Dynamic Media Classic-resurser genom att välja **[!UICONTROL Dyn
 >* Dynamic Media Classic innehållsläsare läser in cirka 100 resurser och sorterar dem efter namn.
 >* Om du har en säker förhandsgranskningsserver angiven använder webbläsaren den förhandsvisningsservern för att återge miniatyrer och resurser.
 >
-
 
 ![chlimage_1-240](assets/chlimage_1-240.png)
 
@@ -325,7 +324,7 @@ Som standard söker Experience Manager i den markerade mappen och i alla underma
 
 ![chlimage_1-245](assets/chlimage_1-245.png)
 
-**[!UICONTROL Asset type]** - I Dynamic Media Classic webbläsare kan du filtrera resultaten så att de innehåller något av följande: bilder, mallar, videor och anpassningsbara videouppsättningar. Om du inte väljer någon resurstyp söker Experience Manager som standard i alla resurstyper.
+**[!UICONTROL Asset type]** - I Dynamic Media Classic webbläsare kan du filtrera resultaten så att de omfattar något av följande: bilder, mallar, videor och adaptiva videouppsättningar. Om du inte väljer någon resurstyp söker Experience Manager som standard i alla resurstyper.
 
 ![chlimage_1-246](assets/chlimage_1-246.png)
 
@@ -336,7 +335,6 @@ Som standard söker Experience Manager i den markerade mappen och i alla underma
 >* När du söker efter video söker du efter en enskild återgivning. Resultatet returnerar den ursprungliga återgivningen (endast &amp;ast;.mp4) och den kodade återgivningen.
 >* När du söker i en adaptiv videouppsättning söker du i mappen och i alla undermappar, men bara om du har lagt till ett nyckelord i sökningen. Om du inte har lagt till något nyckelord söker Experience Manager inte i undermapparna.
 >
-
 
 **[!UICONTROL Publish Status]** - Du kan filtrera efter resurser baserat på publiceringsstatus: **[!UICONTROL Unpublished]** eller **[!UICONTROL Published]**. Om du inte markerar någon **[!UICONTROL Publish Status]** söker Experience Manager som standard igenom alla publiceringsstatusar.
 

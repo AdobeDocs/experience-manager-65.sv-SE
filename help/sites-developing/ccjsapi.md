@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: a6e5810b-dac5-4137-93cf-5d8d53cacc49
 feature: Context Hub
 exl-id: 24bdf9fc-71e6-4b99-9dad-0f41a5e36b98
-source-git-commit: b703f356f9475eeeafb1d5408c650d9c6971a804
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '3159'
+source-wordcount: '3157'
 ht-degree: 0%
 
 ---
@@ -72,7 +72,7 @@ Ett sessionsarkiv är till exempel baserat på ett JSON-objekt och hämtas via e
 * Butiken är förifylld med standardvärden (init-egenskaper), men begäran misslyckas (timeout). Det finns bara en initiering med standardvärden.
 * Butiken är förifylld.
 
-När fördröjningen är inställd på `true` eller ett antal millisekunder väntar metoden innan callback-metoden anropas. Om en annan initieringshändelse utlöses innan fördröjningen skickas, väntar den tills fördröjningstiden överskrids utan någon initieringshändelse. Detta gör att det går att vänta på att en andra initieringshändelse ska utlösas och anropar callback-funktionen i det mest optimala fallet.
+När fördröjningen är inställd på `true` eller flera millisekunder väntar metoden innan callback-metoden anropas. Om en annan initieringshändelse utlöses innan fördröjningen skickas, väntar den tills fördröjningstiden överskrids utan någon initieringshändelse. Detta gör att det går att vänta på att en andra initieringshändelse ska utlösas och anropar callback-funktionen i det mest optimala fallet.
 
 **Parametrar**
 

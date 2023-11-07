@@ -3,9 +3,9 @@ title: Skapa och synkronisera Live-kopior
 description: Lär dig hur du skapar och synkroniserar Live-kopior i Adobe Experience Manager.
 feature: Multi Site Manager
 exl-id: 896b35dd-4510-4c94-8615-03d9649c2f64
-source-git-commit: b703f356f9475eeeafb1d5408c650d9c6971a804
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '4233'
+source-wordcount: '4226'
 ht-degree: 0%
 
 ---
@@ -123,8 +123,8 @@ Så här skapar du en live-kopia:
    * Markerad: skapa en live-kopia av den markerade sidan (endast begränsad live-kopia)
    * Inte markerad: skapa en live-kopia som innehåller alla underordnade till den markerade sidan (djup live-kopia)
 
-1. (Valfritt) Använd kommandot **Utrullningskonfigurationer** för att välja dem. Markerade konfigurationer visas under den nedrullningsbara väljaren.
-1. Klicka eller tryck **Skapa**. Ett bekräftelsemeddelande visas. Här kan du välja **Öppna** eller **Klar**.
+1. (Valfritt) Använd kommandot **Utrullningskonfigurationer** för att markera dem. Markerade konfigurationer visas under den nedrullningsbara väljaren.
+1. Klicka eller tryck **Skapa**. Ett bekräftelsemeddelande visas. Här kan du välja antingen **Öppna** eller **Klar**.
 
 ### Skapa en Live-kopia av en plats från en designkonfiguration {#creating-a-live-copy-of-a-site-from-a-blueprint-configuration}
 
@@ -325,7 +325,7 @@ Om du vill ändra innehållet i en live-kopia kan du:
 
 >[!NOTE]
 >
->Om du skapar en ny sida manuellt i den aktiva kopian är den lokal för den aktiva kopian, vilket innebär att den inte har någon motsvarande källsida att koppla till.
+>Om du skapar en sida manuellt i den aktiva kopian är den lokal för den aktiva kopian, vilket innebär att den inte har någon motsvarande källsida att koppla till.
 >
 >Det bästa sättet att skapa en lokal sida som ingår i relationen är att skapa den i källan och göra en (djup) utrullning. Då skapas sidan lokalt som live-kopior.
 
@@ -418,7 +418,7 @@ När du väljer det här alternativet visas dialogrutan. Du kan välja en synkro
 
 The [Åtgärden Återuppta är också tillgänglig från Live Copy Overview](/help/sites-administering/msm-livecopy-overview.md#using-the-live-copy-overview)när en Live Copy-sida är markerad.
 
-1. Öppna [Live Copy - översikt](/help/sites-administering/msm-livecopy-overview.md#using-the-live-copy-overview) och väljer en Live Copy-sida som har pausats, visas som **ARV AVBRUTEN**.
+1. Öppna [Live Copy - översikt](/help/sites-administering/msm-livecopy-overview.md#using-the-live-copy-overview) och väljer en Live Copy-sida som har pausats. Den visas som **ARV AVBRUTEN**.
 1. Välj **Återuppta** i verktygsfältet.
 1. Ange om du vill synkronisera sidan efter att ha återställt arv och bekräfta sedan **Återuppta** i **Återuppta Live Copy** -dialogrutan.
 
@@ -624,7 +624,7 @@ Det påverkar var i trädet du använder **Koppla loss**:
 
       * Detta beror på att MSM betraktar dem som manuellt skapade sidor som orsakar en konflikt eftersom de har samma namn som de livecopy-sidor som de försöker skapa.
 
-   1. Skapa en ny (livecopy) sida med det ursprungliga namnet som innehåller ändringarna från utrullningen.
+   1. Skapa en (livecopy) sida med det ursprungliga namnet som innehåller ändringarna från utrullningen.
 
   >[!NOTE]
   >

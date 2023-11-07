@@ -4,9 +4,9 @@ description: Lär dig förbereda innehåll för översättning i Adobe Experienc
 contentOwner: Guillaume Carlino
 feature: Language Copy
 exl-id: 81978733-89a6-4436-bcf1-4bde962ed54f
-source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '685'
+source-wordcount: '683'
 ht-degree: 0%
 
 ---
@@ -47,11 +47,11 @@ Skapa en språkrot som rotsida för en språkkopia som identifierar språket i i
 
 Om du vill skapa språkroten skapar du en sida och använder en ISO-språkkod som värde för egenskapen Namn. Språkkoden måste ha något av följande format:
 
-* `<language-code>`Den språkkod som stöds är en kod med två bokstäver som definieras av ISO-639-1, till exempel `en`.
+* `<language-code>`Den språkkod som stöds är en kod med två bokstäver enligt ISO-639-1, till exempel `en`.
 
 * `<language-code>_<country-code>` eller `<language-code>-<country-code>`Den landskod som stöds är en tvåbokstavskod med gemener eller versaler enligt ISO 3166, till exempel `en_US`, `en_us`, `en_GB`, `en-gb`.
 
-Du kan använda båda formaten enligt den struktur som du har valt för den globala platsen.  Rotsidan för den franska språkkopian av Geometrixx har till exempel `fr` som egenskapen Name. Observera att egenskapen Namn används som namn på sidnoden i databasen och därför bestämmer sökvägen till sidan. (http://localhost:4502/content/geometrixx/fr.html)
+Du kan använda båda formaten enligt den struktur som du har valt för den globala platsen.  Rotsidan för den franska språkkopian av Geometrixx har till exempel `fr` som egenskapen Name. Egenskapen Namn används som namn på sidnoden i databasen och avgör därför sidans sökväg. (http://localhost:4502/content/geometrixx/fr.html)
 
 I följande procedur används det pekoptimerade användargränssnittet för att skapa en språkkopia av en webbplats. Instruktioner om hur du använder det klassiska användargränssnittet finns i [Skapa en språkrot med det klassiska användargränssnittet](/help/sites-administering/tc-lroot-classic.md).
 

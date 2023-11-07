@@ -1,19 +1,15 @@
 ---
 title: Generera arkivdokument för anpassningsbara formulär
-seo-title: Generate Document of Record for adaptive forms
 description: Beskriver hur du kan generera en mall för ett postdokument (DoR) för adaptiva formulär.
-seo-description: Explains how you can generate a template for a document of record (DoR) for adaptive forms.
-uuid: 2dc7e0de-fff9-43fa-9426-e9b047eb2595
 content-type: reference
 topic-tags: adaptive_forms, develop
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: ce65cb5f-94ec-4423-9fa9-d617e9703091
 docset: aem65
 feature: Adaptive Forms
 exl-id: 7240897f-6b3a-427a-abc6-66310c2998f3
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '3415'
+source-wordcount: '3416'
 ht-degree: 0%
 
 ---
@@ -218,7 +214,7 @@ De adaptiva formulärtabellkomponenterna som sidhuvud, sidfot och radmappning ti
 
 Basmallen innehåller formaterings- och utseendeinformation för urkunder. Du kan anpassa standardutseendet för automatiskt genererade postdokument. Du vill till exempel lägga till företagets logotyp i sidhuvudet och copyrightinformation i sidfoten i postdokumentet. Mallsidan från basmallen används som mallsida för postmalldokument. Mallsidan kan innehålla information som sidhuvud, sidfot och sidnummer som du kan använda på postdokument. Du kan använda sådan information för att dokumentera med hjälp av basmallen för automatisk generering av postdokument. Med hjälp av basmallen kan du ändra standardegenskaperna för fält.
 
-Följ [Grundmallskonventioner](#base-template-conventions) när du utformar en basmall.
+Se till att du följer [Grundmallskonventioner](#base-template-conventions) när du utformar en basmall.
 
 ## Grundmallskonventioner {#base-template-conventions}
 
@@ -234,7 +230,7 @@ En basmall används för att definiera sidhuvud, sidfot, format och utseende fö
 
 **Formatkonventioner för fält**
 
-* Om du vill använda format på fälten i postdokumentet innehåller basmallen fält som finns i `AF_FIELDSSUBFORM` under `AF_METATEMPLATE` rotdelformulär.
+* Om du vill använda format på fälten i postdokumentet innehåller basmallen fält i `AF_FIELDSSUBFORM` under `AF_METATEMPLATE` rotdelformulär.
 
 * Egenskaperna för dessa fält används för fälten i postdokumentet. Dessa fält ska följa `AF_<name of field in all caps>_XFO` namnkonvention. Fältnamnet för kryssrutan bör till exempel vara `AF_CHECKBOX_XFO`.
 

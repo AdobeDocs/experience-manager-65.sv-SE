@@ -2,9 +2,9 @@
 title: Redigera egenskaper för innehållssidor
 description: Definiera de egenskaper som krävs för en sida i Adobe Experience Manager.
 exl-id: 3cd9374f-6f16-40fb-97cf-5f9a750b8dd2
-source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1872'
+source-wordcount: '1871'
 ht-degree: 2%
 
 ---
@@ -257,7 +257,7 @@ Du kan definiera sidegenskaper:
 
 * Från **Webbplatser** konsol:
 
-   * [Skapa en ny sida](/help/sites-authoring/managing-pages.md#creating-a-new-page) (en delmängd av egenskaperna)
+   * [Skapa en sida](/help/sites-authoring/managing-pages.md#creating-a-new-page) (en delmängd av egenskaperna)
 
    * Klicka eller peka **Egenskaper**
 
@@ -352,7 +352,7 @@ När du har valt Massredigering kan du göra följande:
    * Vanliga egenskaper med ett gemensamt värde
 
       * Endast egenskaper med ett gemensamt värde visas i visningsläget.
-      * När fältet har flera värden (till exempel taggar) visas värden bara när *alla* är vanliga. Om bara vissa är vanliga visas de bara vid redigering.
+      * När fältet har flera värden (till exempel Taggar) visas värden bara när *alla* är vanliga. Om bara vissa är vanliga visas de bara vid redigering.
 
   När det inte finns några egenskaper med ett gemensamt värde visas ett meddelande.
 

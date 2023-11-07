@@ -2,9 +2,9 @@
 title: AEM Headless Journeys
 description: En samling dokumentationsresor som beskriver hur du använder Adobe Experience Manager som headless CMS.
 exl-id: 369f79ab-c8ae-4d49-9b0b-e3a2e423b40f
-source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '459'
+source-wordcount: '457'
 ht-degree: 1%
 
 ---
@@ -23,7 +23,7 @@ Om du inte är van vid AEM och/eller headless, är AEM Headless Journeys en bra 
 
 ## AEM dokumentationsresor {#documentation-journeys}
 
-[En dokumentationsresa](/help/journey-documentation/home.md) binder samman många olika och kanske komplicerade ämnen och funktioner genom att tillhandahålla en berättarröst som hjälper läsaren, som kan vara ny att AEM, förstå och lösa ett affärsproblem från början till slut, samtidigt som man antar minimala tidigare ämnesområden eller AEM kunskap.
+[En dokumentationsresa](/help/journey-documentation/home.md) binder samman många olika och kanske komplicerade ämnen och funktioner genom att tillhandahålla en berättarröst som hjälper läsaren att, som kan vara ny att AEM, förstå och lösa ett affärsproblem från början till slut, samtidigt som man antar minimala tidigare ämnesområden eller AEM kunskap.
 
 Dokumentation Journeys bygger på principer för god praxis, grundade på Adobe senaste forskning, beprövade implementeringserfarenheter från Adobe konsulter och återkoppling från kundprojekt.
 
@@ -35,7 +35,7 @@ Headless Journeys är utformade för olika personligheter och innehåller krav, 
 
 En enskild resa definieras för en viss person eller målgrupp, men definierar även ytterligare personligheter som läsaren interagerar med.
 
-Information på resorna kan förstås vara användbar för flera personer, men en resa är inriktad på en viss person och viss information kan vara överflödig för vissa roller.
+Information på resorna kan vara användbar för flera personer, men en resa är inriktad på en viss person och viss information kan vara överflödig för vissa roller.
 
 ## Huvudlösa resor {#headless-journeys}
 

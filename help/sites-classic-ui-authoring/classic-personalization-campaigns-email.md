@@ -1,19 +1,15 @@
 ---
 title: E-postmarknadsföring
-seo-title: E-mail Marketing
-description: E-postmarknadsföring (till exempel nyhetsbrev) är en viktig del av alla marknadsföringskampanjer när ni använder dem för att förmedla innehåll till era leads. I AEM kan du skapa nyhetsbrev från befintligt AEM och lägga till nytt innehåll som är specifikt för nyhetsbreven.
-seo-description: E-mail marketing (for example, newsletters) are an important part of any marketing campaign as you use them to push content to your leads. In AEM, you can create newsletters from existing AEM content as well as add new content, specific to the newsletters.
-uuid: 565943bf-fe37-4d5c-98c3-7c629c4ba264
+description: E-postmarknadsföring (till exempel nyhetsbrev) är en viktig del av alla marknadsföringskampanjer när ni använder dem för att förmedla innehåll till era leads. I AEM kan du skapa nyhetsbrev från befintligt AEM och lägga till nytt innehåll, som är specifikt för nyhetsbreven.
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: personalization
 content-type: reference
-discoiquuid: 69ca5acb-83f9-4e1b-9639-ec305779c931
 docset: aem65
 exl-id: a1d8b74e-67eb-4338-9e8e-fd693b1dbd48
-source-git-commit: 1ba34f95cf3ce3f136482075802d2e4372f28917
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1770'
+source-wordcount: '1764'
 ht-degree: 0%
 
 ---
@@ -24,9 +20,9 @@ ht-degree: 0%
 >[!NOTE]
 >
 >Adobe planerar inte att ytterligare förbättra e-postspårningen av öppna meddelanden/studsar (som inte kan levereras) som skickas av AEM SMTP-tjänst.
->Rekommendationen är att [utnyttja Adobe Campaign och integrationen för att AEM](/help/sites-administering/campaign.md).
+>Rekommendationen är att använda [Adobe Campaign och integrationen med AEM](/help/sites-administering/campaign.md).
 
-E-postmarknadsföring (till exempel nyhetsbrev) är en viktig del av alla marknadsföringskampanjer när ni använder dem för att förmedla innehåll till era leads. I AEM kan du skapa nyhetsbrev från befintligt AEM och lägga till nytt innehåll som är specifikt för nyhetsbreven.
+E-postmarknadsföring (till exempel nyhetsbrev) är en viktig del av alla marknadsföringskampanjer när ni använder dem för att förmedla innehåll till era leads. I AEM kan du skapa nyhetsbrev från befintligt AEM och lägga till nytt innehåll, som är specifikt för nyhetsbreven.
 
 När de har skapats kan du skicka nyhetsbrev till den specifika användargruppen antingen direkt eller vid en annan schemalagd tidpunkt (med hjälp av ett arbetsflöde). Dessutom kan användare prenumerera på nyhetsbrev i det format de väljer.
 
@@ -61,7 +57,7 @@ I det här dokumentet beskrivs grunderna för hur du skapar nyhetsbrev i AEM. Me
 
 1. Klicka **Nytt...**
 
-   Du kan ange **Titel**, **Namn** och den typ av erfarenhet som ska skapas, i det här fallet nyhetsbrevet.
+   Du kan ange **Titel**, **Namn** och den typ av upplevelse som ska skapas, i det här fallet nyhetsbrevet.
 
    ![Dialogrutan Skapa upplevelse](assets/mcm_createnewsletter.png)
 
@@ -105,7 +101,7 @@ Du kan lägga till innehåll, inklusive dynamiskt innehåll, i nyhetsbrevet på 
 1. Klicka på **Kampanjer** och dubbelklicka på det nyhetsbrev som du vill lägga till innehåll i eller redigera. Nyhetsbrevet öppnas.
 
 1. Om komponenterna inte visas går du till designvyn och aktiverar de nödvändiga komponenterna (till exempel komponenterna i nyhetsbrevet) innan du börjar redigera.
-1. Ange eventuell ny text, bilder eller andra komponenter. I Geometrixx finns fyra komponenter: Text, bild, rubrik och 2 kolumner. Nyhetsbrevet kan ha fler eller färre komponenter beroende på hur du konfigurerar det.
+1. Ange eventuell ny text, bilder eller andra komponenter. I exemplet med Geometrixx finns fyra komponenter: Text, Bild, Rubrik och 2 spalter. Nyhetsbrevet kan ha fler eller färre komponenter beroende på hur du konfigurerar det.
 
    >[!NOTE]
    >
@@ -115,7 +111,7 @@ Du kan lägga till innehåll, inklusive dynamiskt innehåll, i nyhetsbrevet på 
 
 1. Om du vill infoga variabler väljer du variabeln i listan och klickar på **Infoga**. Variabler fylls i från profilen.
 
-## Anpassa nyhetsbrev {#personalizing-newsletters}
+## Personaliserar nyhetsbrev {#personalizing-newsletters}
 
 Du kan personalisera nyhetsbrev genom att infoga fördefinierade variabler i Text-komponenten i nyhetsbreven i Geometrixx. Värden för variablerna ärvs från informationen i användarprofilen.
 
@@ -123,7 +119,7 @@ Du kan också simulera hur ett nyhetsbrev personaliseras genom att använda klie
 
 Så här anpassar du ett nyhetsbrev och simulerar hur det kommer att se ut:
 
-1. Öppna det nyhetsbrev som du vill anpassa inställningarna för i MCM.
+1. I MCM öppnar du det nyhetsbrev som du vill anpassa inställningarna för.
 
 1. Öppna den textkomponent som du vill anpassa.
 
@@ -158,7 +154,7 @@ För närvarande kan du visa nyhetsbrev i följande e-postklienter:
 
 Klicka på motsvarande ikon för att visa nyhetsbrevet i e-postklienten för att växla mellan olika klienter:
 
-1. Öppna det nyhetsbrev som du vill anpassa inställningarna för i MCM.
+1. I MCM öppnar du det nyhetsbrev som du vill anpassa inställningarna för.
 
 1. Klicka på en e-postklient i det övre fältet för att se hur nyhetsbrevet skulle se ut i klienten.
 
@@ -173,11 +169,11 @@ Klicka på motsvarande ikon för att visa nyhetsbrevet i e-postklienten för att
 Även om bara behöriga användare kan skicka nyhetsbrev bör du anpassa följande:
 
 * Ämnesraden, så att användare kan öppna ditt e-postmeddelande och även försäkra sig om att det inte kommer att sluta som skräppost.
-* Från-adressen, till exempel noreply@geometrixx.com, så att användarna får e-post från en angiven adress.
+* Från-adressen, till exempel `noreply@geometrixx.com`så att användarna får e-post från en angiven adress.
 
 Så här anpassar du inställningar för nyhetsbrev:
 
-1. Öppna det nyhetsbrev som du vill anpassa inställningarna för i MCM.
+1. I MCM öppnar du det nyhetsbrev som du vill anpassa inställningarna för.
 
    ![Öppna ett nyhetsbrev](assets/mcm_newsletter_open.png)
 
@@ -223,7 +219,7 @@ Så här gör du för att testa nyhetsbrev:
 >[!NOTE]
 >
 >Adobe planerar inte att ytterligare förbättra e-postspårningen av öppna meddelanden/studsar (som inte kan levereras) som skickas av AEM SMTP-tjänst.
->Rekommendationen är att [utnyttja Adobe Campaign och integrationen för att AEM](/help/sites-administering/campaign.md).
+>Rekommendationen är att använda [Adobe Campaign och integrationen med AEM](/help/sites-administering/campaign.md).
 
 Du kan skicka ut ett nyhetsbrev från nyhetsbrevet eller från listan. Båda procedurerna beskrivs.
 
@@ -272,13 +268,13 @@ Så här skickar du ut ett nyhetsbrev från en lista:
 
    >[!NOTE]
    >
-   >Innan du skickar iväg nyhetsbrevet bör du kontrollera att du har anpassat ämnet och e-postadressen [anpassa inställningarna](#customizing-newsletter-settings). Du kan inte testa ett nyhetsbrev om du skickar det från listan; du kan [flygprov](#flight-testing-newsletters) om du skickar det från nyhetsbrevet.
+   >Innan du skickar iväg nyhetsbrevet bör du kontrollera att du har anpassat ämnet och e-postadressen [anpassa inställningarna](#customizing-newsletter-settings). Du kan inte testa ett nyhetsbrev om du skickar det från listan. Du kan [flygprov](#flight-testing-newsletters) om du skickar det från nyhetsbrevet.
 
 1. Markera kryssrutan bredvid listan med leads som du vill skicka ett nyhetsbrev till.
 
 1. I **verktyg** meny, välja **Skicka nyhetsbrev**. The **Skicka nyhetsbrev** öppnas.
 
-   ![Newletter console](assets/mcm_newslettersendfromlist.png)
+   ![Konsol för nyhetsbrev](assets/mcm_newslettersendfromlist.png)
 
 1. I **Nyhetsbrev** markerar du det nyhetsbrev som du vill skicka och klickar på **Nästa**.
 

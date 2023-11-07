@@ -2,9 +2,9 @@
 title: Skapa en startguide för en resursmapp utan rubrik
 description: Använd AEM Content Fragment Models för att definiera strukturen för Content Fragments, som är grunden för ditt headless-innehåll.
 exl-id: 8d913056-fcfa-4cdd-b40a-771f13dfd0f4
-source-git-commit: 7355c149500f9e5044c9ff78af208d36ee681f56
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '379'
+source-wordcount: '375'
 ht-degree: 0%
 
 ---
@@ -21,11 +21,11 @@ Du måste dock först skapa en resursmapp där du lagrar dem.
 
 Resursmappar används för [ordna traditionellt innehåll](/help/assets/manage-assets.md) som bilder, video och innehållsfragment.
 
-## Så här skapar du en resursmapp {#how-to-create-an-assets-folder}
+## Skapa en resursmapp {#how-to-create-an-assets-folder}
 
 En administratör behöver bara skapa mappar då och då för att ordna innehållet när det skapas. I den här guiden behöver vi bara skapa en mapp.
 
-1. Logga in AEM och välj **Navigering -> Resurser -> Filer**.
+1. Logga in AEM och välj **Navigation -> Assets -> Files**.
 1. Tryck eller klicka **Skapa -> Mapp**.
 1. Ange en **Titel** och **Namn** för din mapp.
    * The **Titel** ska vara beskrivande.
@@ -34,17 +34,16 @@ En administratör behöver bara skapa mappar då och då för att ordna innehål
       * Den kan vid behov justeras.
 
    ![Skapa mapp](assets/assets-folder-create.png)
-1. Markera mappen som du just skapade och välj sedan **Egenskaper** i verktygsfältet (eller använd `p` [kortkommando.](/help/sites-authoring/keyboard-shortcuts.md))
-1. I **Egenskaper** väljer du **Cloud Services** -fliken.
-1. För **Molnkonfiguration** Välj [som du skapade tidigare.](create-configuration.md)
-
+1. Markera mappen som du skapade och välj sedan **Egenskaper** i verktygsfältet (eller använd `p` [kortkommando.](/help/sites-authoring/keyboard-shortcuts.md))
+1. I **Egenskaper** väljer du **Cloud Service** -fliken.
+1. För **Molnkonfiguration** Välj [konfiguration som du skapade tidigare.](create-configuration.md)
    ![Konfigurera resursmapp](assets/assets-folder-configure.png)
 1. Tryck eller klicka **Spara och stäng**.
 1. Tryck eller klicka **OK** i bekräftelsefönstret.
 
    ![Bekräftelsefönstret](assets/assets-folder-confirmation.png)
 
-Du kan skapa ytterligare undermappar i den mapp du just skapade. Undermapparna ärver **Molnkonfiguration** för den överordnade mappen. Detta kan dock åsidosättas om du vill använda modeller från en annan konfiguration.
+Du kan skapa ytterligare undermappar i den mapp du skapade. Undermapparna ärver **Molnkonfiguration** för den överordnade mappen. Detta kan dock åsidosättas om du vill använda modeller från en annan konfiguration.
 
 Om du använder en lokaliserad platsstruktur kan du [skapa en språkrot](/help/assets/multilingual-assets.md) nedanför den nya mappen.
 

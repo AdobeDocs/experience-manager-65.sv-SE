@@ -12,9 +12,9 @@ topic-tags: operations
 discoiquuid: f29b089e-8902-4744-81c5-15ee41ba8069
 role: Developer
 exl-id: 85e00003-8c8b-463a-b728-66af174be295
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1872'
+source-wordcount: '1865'
 ht-degree: 0%
 
 ---
@@ -71,7 +71,7 @@ De XML-datafiler som används av webbprogrammet har flyttats från mappen Data t
 
 Så här skapar du ett webbaserat program som återger formulär baserat på fragment:
 
-1. Skapa ett nytt webbprojekt.
+1. Skapa ett webbprojekt.
 1. Skapa Java-programlogik som representerar Java-servleten.
 1. Skapa webbsidan för webbprogrammet.
 1. Paketera webbprogrammet i en WAR-fil.
@@ -84,7 +84,7 @@ Så här skapar du ett webbaserat program som återger formulär baserat på fra
 
 ### Skapa ett webbprojekt {#creating-a-web-project}
 
-Det första steget för att skapa ett webbprogram som innehåller en Java-server som kan anropa Forms-tjänsten är att skapa ett nytt webbprojekt. Den Java-IDE som det här dokumentet är baserat på är Eclipse 3.3. Med Eclipse IDE skapar du ett webbprojekt och lägger till de JAR-filer som behövs i projektet. Lägg slutligen till en HTML-sida med namnet *index.html* och en Java-servlet till ditt projekt.
+Det första steget för att skapa ett webbprogram som innehåller en Java-server som kan anropa Forms-tjänsten är att skapa ett webbprojekt. Den Java-IDE som det här dokumentet är baserat på är Eclipse 3.3. Med Eclipse IDE skapar du ett webbprojekt och lägger till de JAR-filer som behövs i projektet. Lägg slutligen till en HTML-sida med namnet *index.html* och en Java-servlet till ditt projekt.
 
 I följande lista anges de JAR-filer som du måste lägga till i ditt webbprojekt:
 
@@ -145,7 +145,7 @@ Normalt placerar du inte klientkod i en Java-servers `doGet` eller `doPost` -met
 Så här återger du ett formulär baserat på fragment med hjälp av Forms tjänst-API:
 
 1. Inkludera JAR-klientfiler, t.ex. adobe-forms-client.jar, i Java-projektets klassökväg. Information om platsen för dessa filer finns i [Inkludera AEM Forms Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files).
-1. Hämta värdet för alternativknappen som skickas från formuläret HTML och ange om amerikansk eller kanadensisk information ska användas. Skapa en `com.adobe.idp.Document` som lagrar data som finns i *Purchase Order US.xml*. På samma sätt kan du skapa en `com.adobe.idp.Document` som lagrar data som finns i *Purchase Order Canada.xml* -fil.
+1. Hämta värdet för alternativknappen som skickas från formuläret HTML och ange om amerikansk eller kanadensisk information ska användas. Skapa en `com.adobe.idp.Document` som lagrar data i *Purchase Order US.xml*. På samma sätt kan du skapa en `com.adobe.idp.Document` som lagrar data i *Purchase Order Canada.xml* -fil.
 1. Skapa en `ServiceClientFactory` objekt som innehåller anslutningsegenskaper. (Se [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).)
 1. Skapa en `FormsServiceClient` genom att använda konstruktorn och skicka `ServiceClientFactory` -objekt.
 1. Skapa en `URLSpec` objekt som lagrar URI-värden med hjälp av dess konstruktor.
@@ -184,7 +184,7 @@ Följande kodexempel representerar den Java-server som anropar Forms-tjänsten o
      * that contains this quick start is exported as a WAR file which
      * is deployed to the J2EE application server)
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/sdk/client-libs
      *
      * For complete details about the location of these JAR files,

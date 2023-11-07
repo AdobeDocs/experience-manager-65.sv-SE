@@ -4,9 +4,9 @@ description: Installera, konfigurera och anpassa ett AEM Forms-demopaket.
 contentOwner: anujkapo
 docset: aem65
 exl-id: 1fee474e-7da5-4ab2-881a-34b8e055aa29
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '4607'
+source-wordcount: '4604'
 ht-degree: 0%
 
 ---
@@ -362,7 +362,7 @@ Det här paketet levereras förkonfigurerat för att ansluta till Adobe Analytic
 
    ![Konfiguration av molntjänster för Analytics](assets/analytics_config.jpg)
 
-1. Klicka på knappen Redigera om du vill uppdatera Adobe Analytics-konfigurationen (du måste ange den delade hemligheten). Klicka på Anslut till analys för att ansluta och OK för att slutföra.
+1. Klicka på knappen Redigera om du vill uppdatera Adobe Analytics-konfigurationen (du måste ange Delad hemlighet). Klicka på Anslut till analys för att ansluta och OK för att slutföra.
 
    ![We.Gov Adobe Analytics](assets/wegov_adobe_analytics.jpg)
 
@@ -700,7 +700,7 @@ Sidorna i paketet har även stöd för Style System:
 
 [Formatsystem](../../sites-authoring/style-system.md)
 
-Du kan även referera till [Anpassningsformatsystem för mallar](../../forms/using/forms-install-configure-gov-reference-site.md#customizetemplates) om du vill ha dokumentation om vilka format som stöds.
+Du kan också se [Anpassningsformatsystem för mallar](../../forms/using/forms-install-configure-gov-reference-site.md#customizetemplates) om du vill ha dokumentation om vilka format som stöds.
 
 ### Anpassning av adaptiva blanketter {#adaptive-forms-customization}
 
@@ -749,7 +749,7 @@ Det här avsnittet innehåller information om demonstrationsfunktioner och desig
 
 ### Aktivera hjälpmedelstestning av Chrome Lägg till på {#enable-chrome-add-on}
 
-Installera Chrome-plugin-programmet här för att utföra tillgänglighetstestning `https://chrome.google.com/webstore/detail/accessibility-developer-t/fpkknkljclfencbdbgkenhalefipecmb?hl=en`. <!-- This URL is a 404. As such, please fix and update this entire topic. We ought not to be writing about third-party software that we have no control over to avoid these 404s. Consider making this topic entirely generic and leaving it up to the user to choose their own Accessibility Testing add-on. -->
+Installera Chrome-plugin-programmet här för att utföra tillgänglighetstestning `https://chrome.google.com/webstore/detail/accessibility-developer-t/fpkknkljclfencbdbgkenhalefipecmb?hl=en`. <!-- This URL is a 404. As such, fix and update this entire topic. We ought not to be writing about third-party software that we have no control over to avoid these 404s. Consider making this topic entirely generic and leaving it up to the user to choose their own Accessibility Testing add-on. -->
 
 När du har installerat den läser du in den sida som du vill testa i webbläsaren i Chrome (Obs! Om du har flera flikar öppna kan det påverka poängen, det är bäst att bara ha en flik öppen). När sidan har lästs in **högerklicka** på sidan och markera **Granskningar** -fliken. Det finns utvecklare som kan välja vilken typ av granskning som ska utföras av plugin-programmet för tillgänglighet. När alla önskade alternativ har valts kan användaren klicka på knappen Generera rapport. Detta genererar ett dokument i PDF som visar den övergripande tillgänglighetsgraderingen och vad som kan användas för att öka den övergripande tillgänglighetsgraderingen.
 

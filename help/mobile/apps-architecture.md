@@ -6,9 +6,9 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-on-demand-services-app
 exl-id: 397def36-45b2-47a7-b103-99ca22b6dae1
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2666'
+source-wordcount: '2664'
 ht-degree: 0%
 
 ---
@@ -59,9 +59,9 @@ Innehållet på en Angular återges på olika sätt beroende på om wcmMode iden
 
 I redigeringsläge återges varje enskild sida separat. Angular hanterar inte dirigering mellan sidor och inte heller en ng-view som används för att läsa in en del av en mall som innehåller sidans komponenter. I stället inkluderas sidmallens innehåll (template.jsp) på serversidan via `cq:include` -tagg.
 
-Den här strategin aktiverar författarfunktionerna (som att lägga till och redigera komponenter i styckesystemet, Sidekick, designläget osv.) att fungera utan ändringar. Sidor som förlitar sig på klientsidans återgivning, t.ex. de för appar, fungerar inte så bra AEM redigeringsläget.
+Med den här strategin kan författarfunktionerna (som att lägga till och redigera komponenter i styckesystemet, Sidekick, designläget och så vidare) fungera utan ändringar. Sidor som förlitar sig på klientsidans återgivning, t.ex. de för appar, fungerar inte så bra AEM redigeringsläget.
 
-Observera att include i template.jsp finns i en `div` elementet som innehåller `ng-controller` -direktivet. Den här strukturen gör att DOM-innehållet kan länkas till kontrollenheten. Även om sidor som återges på klientsidan misslyckas, fungerar därför enskilda komponenter som gör det bra (se avsnittet Komponenter nedan).
+Inkluderingen template.jsp finns i en `div` elementet som innehåller `ng-controller` -direktivet. Den här strukturen gör att DOM-innehållet kan länkas till kontrollenheten. Även om sidor som återges på klientsidan misslyckas, fungerar därför enskilda komponenter som gör det bra (se avsnittet Komponenter nedan).
 
 ```xml
 <div ng-controller="<c:out value="${controllerNameStripped}"/>">
@@ -144,7 +144,7 @@ Skriptet controller.js.jsp genererar kontrollenhetsfragmentet för varje sida. D
 ])
 ```
 
-Observera att `data` variabeln tilldelas det löfte som returneras av Angularna `$http.get` -metod. Alla komponenter på den här sidan kan, om så önskas, göra en del .json-innehåll tillgängligt (via skriptet angular.json.jsp) och agera på innehållet i den här begäran när den löses. Begäran är mycket snabb på mobila enheter eftersom den bara använder filsystemet.
+The `data` variabeln tilldelas det löfte som returneras av Angularna `$http.get` -metod. Alla komponenter på den här sidan kan, om så önskas, göra en del .json-innehåll tillgängligt (via skriptet angular.json.jsp) och agera på innehållet i den här begäran när den löses. Begäran är mycket snabb på mobila enheter eftersom den bara använder filsystemet.
 
 För att en komponent ska kunna vara en del av kontrollenheten på det här sättet bör den utöka komponenten /libs/mobileapps/components/angular/ng-component och innehålla `frameworkType: angular` -egenskap.
 

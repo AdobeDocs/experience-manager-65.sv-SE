@@ -1,17 +1,15 @@
 ---
 title: Arbetsflödesdeltagande
 description: Arbetsflödena omfattar vanligtvis steg som kräver att en person utför en aktivitet på en sida eller en resurs.
-uuid: 15d56bcc-1e84-4cc0-8b71-7fb906cd7ff7
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: site-features
-discoiquuid: f170613c-329e-446b-9ac3-350615f1bfb6
 docset: aem65
 exl-id: e47270e8-bace-4d0f-a088-7269b6356315
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1525'
+source-wordcount: '1519'
 ht-degree: 1%
 
 ---
@@ -41,7 +39,7 @@ När du tilldelas en arbetsuppgift (till exempel **Godkänn innehåll**) visas o
 
 * När du använder sidredigeraren visas statusfältet:
 
-   * Namnet på arbetsflödet eller arbetsflödena som används på sidan, till exempel Begäran om aktivering.
+   * Namnet på arbetsflödet eller arbetsflödena som används på sidan, till exempel begäran om aktivering.
    * Alla åtgärder som är tillgängliga för den aktuella användaren för det aktuella steget i arbetsflödet, till exempel Fullständigt, Delegera, Visa information.
    * Antalet arbetsflöden som sidan är underställd. Du kan:
 
@@ -143,7 +141,7 @@ Använd följande procedur för att delegera en arbetsuppgift:
 1. Öppna **[AEM](/help/sites-authoring/inbox.md)**.
 1. Markera det arbetsflödesobjekt som du vill utföra åtgärden på (tryck/klicka på miniatyrbilden).
 1. Välj **Delegera** i verktygsfältet.
-1. Dialogrutan öppnas. Ange **Användare** i listrutan (det kan också vara en grupp) och lägga till en **Kommentar** vid behov.
+1. Dialogrutan öppnas. Ange **Användare** i den nedrullningsbara väljaren (detta kan också vara en grupp) och lägga till en **Kommentar** vid behov.
 1. Använd **OK** för att slutföra steget (eller **Avbryt** för att avbryta åtgärden).
 
 #### Delegera ett deltagarsteg - sidredigeraren {#delegating-a-participant-step-page-editor}
@@ -152,7 +150,7 @@ Använd följande procedur för att delegera en arbetsuppgift:
 
 1. Öppna [sida för redigering](/help/sites-authoring/managing-pages.md#opening-a-page-for-editing).
 1. Välj **Delegera** i statusfältet högst upp.
-1. Dialogrutan öppnas. Ange **Användare** i listrutan (det kan också vara en grupp) och lägga till en **Kommentar** vid behov.
+1. Dialogrutan öppnas. Ange **Användare** i den nedrullningsbara väljaren (detta kan också vara en grupp) och lägga till en **Kommentar** vid behov.
 1. Använd **OK** för att slutföra steget (eller **Avbryt** för att avbryta åtgärden).
 
 #### Delegera ett deltagarsteg - tidslinje {#delegating-a-participant-step-timeline}

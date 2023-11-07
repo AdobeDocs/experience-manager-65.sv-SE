@@ -6,9 +6,9 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/aem_forms_backup_and_recovery
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 exl-id: d2dd381d-a7d2-4fec-a8ba-7ca037fd9dc1
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2072'
+source-wordcount: '2065'
 ht-degree: 0%
 
 ---
@@ -109,7 +109,7 @@ DB2 har inbyggda funktioner för att säkerhetskopiera en databas till Tivoli St
 
 Använd säkerhetskopiering av ögonblicksbilder eller konfigurera Oraclets databas så att den körs i arkivloggläge. (Se [Säkerhetskopiering av oracle: En introduktion](https://www.databasedesign-resource.com/oracle-backup.md).) Mer information om hur du säkerhetskopierar och återställer Oraclet finns på följande platser:
 
-[Säkerhetskopiering och återställning av oracle:](https://www.oracle.com/technetwork/database/features/availability/br-overview-097160.html) Beskriver koncepten för säkerhetskopiering och återställning och de vanligaste teknikerna för användning av Recovery Manager (RMAN) för säkerhetskopiering, återställning och rapportering, samt ger mer information om hur du planerar en strategi för säkerhetskopiering och återställning.
+[Säkerhetskopiering och återställning av oracle:](https://www.oracle.com/technetwork/database/features/availability/br-overview-097160.html) Beskriver koncepten för säkerhetskopiering och återställning och de vanligaste teknikerna för användning av Recovery Manager (RMAN) för säkerhetskopiering, återställning och rapportering mer i detalj samt ger mer information om hur du planerar en strategi för säkerhetskopiering och återställning.
 
 [Användarhandbok för säkerhetskopiering och återställning av Oracle-databas:](https://download.oracle.com/docs/cd/E11882_01/backup.112/e10642.pdf) Innehåller detaljerad information om RMAN-arkitektur, koncept och mekanismer för säkerhetskopiering och återställning, avancerade återställningstekniker som återställning vid tidpunkt och funktioner för databasflashback samt prestandajustering för säkerhetskopiering och återställning. Det omfattar även användarhanterad säkerhetskopiering och återställning med användarens operativsystem istället för RMAN. Den här volymen är väsentlig för säkerhetskopiering och återställning av mer avancerade databasdistributioner och för avancerade återställningsscenarier.
 
@@ -163,7 +163,7 @@ Säkerhetskopiera följande kataloger i rotkatalogen för innehållslagring:
 
 /backup-lucene-indexes
 
-Om katalogen /backup-lucene-indexes inte finns säkerhetskopierar du katalogen /lucene-indexes, som också finns i katalogen Content Storage Root. Om katalogen /backup-lucene-indexes finns ska du inte säkerhetskopiera katalogen /lucene-indexes eftersom det kan orsaka fel.
+Om katalogen /backup-lucene-indexes inte finns säkerhetskopierar du katalogen /lucene-indexes, även i rotkatalogen för innehållslagring. Om katalogen /backup-lucene-indexes finns ska du inte säkerhetskopiera katalogen /lucene-indexes eftersom det kan orsaka fel.
 
 ### Rotplats för innehållslagring (klustrad miljö) {#content-storage-root-location-clustered-environment}
 
@@ -183,7 +183,7 @@ Standardplatsen för rotkatalogen för innehållslagring är `[GDS root]/lccs_da
 
 /backup-lucene-indexes
 
-Om katalogen /backup-lucene-indexes inte finns säkerhetskopierar du katalogen /lucene-indexes, som också finns i katalogen Content Storage Root. Om katalogen /backup-lucene-indexes finns ska du inte säkerhetskopiera katalogen /lucene-indexes eftersom det kan orsaka fel.
+Om katalogen /backup-lucene-indexes inte finns säkerhetskopierar du katalogen /lucene-indexes, även i rotkatalogen för innehållslagring. Om katalogen /backup-lucene-indexes finns ska du inte säkerhetskopiera katalogen /lucene-indexes eftersom det kan orsaka fel.
 
 Standardplatsen för indexrotkatalogen är `[aem-forms root]/lucene-indexes` på varje nod.
 
@@ -193,6 +193,6 @@ Om du har installerat ytterligare teckensnitt i din AEM formulärmiljö måste d
 
 >[!NOTE]
 >
-Som standard finns de Adobe-teckensnitt som installeras med AEM i `[aem-forms root]/fonts` katalog.
+Som standard finns de Adobe-teckensnitt som installeras med AEM formulär i `[aem-forms root]/fonts` katalog.
 
 Om du initierar om operativsystemet på värddatorn och vill använda teckensnitt från det tidigare operativsystemet, bör innehållet i systemteckensnittskatalogen också säkerhetskopieras. (Mer information finns i dokumentationen för ditt operativsystem).

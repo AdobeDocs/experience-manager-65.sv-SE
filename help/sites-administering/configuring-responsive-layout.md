@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 10940000-808a-48ae-8e46-61eccef71eab
 legacypath: /content/docs/en/aem/6-2/administer/operations/page-authoring/configuring-responsive-layouting
 exl-id: 61152b2d-4c0b-4cfd-9669-cf03d32cb7c7
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1285'
+source-wordcount: '1283'
 ht-degree: 0%
 
 ---
@@ -269,7 +269,7 @@ Den adaptiva bildmekanismen görs tillgänglig via ett skript som styr valet av 
 
 >[!CAUTION]
 >
->Klientlibs för anpassade formatmallar måste läsas in som en del av sidhuvudet för att de ska fungera korrekt både när de skapas och publiceras.
+>Klientlibs för anpassade formatmallar måste läsas in som en del av sidhuvudet för att de ska fungera på rätt sätt när de skapas och publiceras.
 
 ## Aktivera layoutbehållarkomponenten för sidan {#enable-the-layout-container-component-for-page}
 

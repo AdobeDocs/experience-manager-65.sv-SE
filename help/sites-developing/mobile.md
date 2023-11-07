@@ -8,9 +8,9 @@ content-type: reference
 docset: aem65
 legacypath: /content/docs/en/aem/6-0/develop/mobile/mobile
 exl-id: 21b2037a-685a-441d-aecd-865884253e03
-source-git-commit: 69346a710708ee659ee97e9fdc193c8ea2658fe6
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '3787'
+source-wordcount: '3786'
 ht-degree: 0%
 
 ---
@@ -61,9 +61,9 @@ Komponenten för mobilsidan ( `/libs/wcm/mobile/components/page`):
 
 ## Skapa en mobil webbplats med Multi Site Manager {#creating-a-mobile-site-with-the-multi-site-manager}
 
-Använd Multi Site Manager (MSM) för att skapa en mobil live kopia från en standardwebbplats. Standardwebbplatsen omvandlas automatiskt till en mobil webbplats: mobilsajten har alla funktioner som finns på mobilsajterna (till exempel utgåva i en emulator) och kan hanteras synkroniserat med standardsajten. Se avsnittet [Skapa en Live-kopia för olika kanaler](/help/sites-administering/msm.md) på sidan Multi Site Manager.
+Använd Multi Site Manager (MSM) för att skapa en mobil live kopia från en standardwebbplats. Standardwebbplatsen omvandlas automatiskt till en mobilwebbplats: den mobila webbplatsen har alla funktioner som finns på mobilsajterna (till exempel utgåva i en emulator) och kan hanteras synkroniserat med standardwebbplatsen. Se avsnittet [Skapa en Live-kopia för olika kanaler](/help/sites-administering/msm.md) på sidan Multi Site Manager.
 
-## Mobile API för serversidan {#server-side-mobile-api}
+## Mobil-API på serversidan {#server-side-mobile-api}
 
 Java™-paketen som innehåller mobilklasserna är:
 
@@ -107,7 +107,7 @@ The **Webbplats för mobil demo inom detaljhandeln** använder följande mobila 
   <tr>
    <td>mobilreferens</td>
    <td>Mobil</td>
-   <td><p>- som liknar komponenten för referensgrunden</p> <p>- mappar en textimage-komponent till en mobilextimage en och en image-komponent till en mobilbild en</p> </td>
+   <td><p>- som liknar komponenten för referensstiftelsen</p> <p>- mappar en textimage-komponent till en mobilextimage en och en image-komponent till en mobilbild en</p> </td>
   </tr>
   <tr>
    <td>mobiletextimage</td>
@@ -164,14 +164,14 @@ Enhetsemulatorn visar den mobila enheten på sidan medan den vanliga redigeringe
 
 **Skapa en emulator**
 
-Information om hur du skapar en emulator finns i [Skapa en anpassad mobilemulator](/help/sites-developing/emulators.md) på den generiska Emulatorsidan.
+Information om hur du skapar en emulator finns i [Skapa en anpassad emulator för mobiler](/help/sites-developing/emulators.md) på den generiska Emulatorsidan.
 
 **De viktigaste egenskaperna hos emulatorer för mobila enheter**
 
 * En enhetsgrupp består av en av flera emulatorer: konfigurationssidan för enhetsgruppen, till exempel /etc/mobile/groups/touch, innehåller `emulators` egenskapen under `jcr:content` nod.
-Obs! Även om det är möjligt att samma emulator tillhör flera enhetsgrupper så är det inte särskilt klokt.
+Obs! Även om det är möjligt att samma emulator hör till flera enhetsgrupper så är det inte särskilt klokt.
 
-* Via enhetsgruppens konfigurationsdialogruta kan du `emulators` egenskapen ställs in med sökvägen för emulatorerna. Till exempel: `/libs/wcm/mobile/components/emulators/iPhone4`.
+* Via enhetsgruppens konfigurationsdialogruta kan `emulators` egenskapen ställs in med sökvägen för emulatorerna. Till exempel: `/libs/wcm/mobile/components/emulators/iPhone4`.
 
 * Emulatorkomponenterna (till exempel `/libs/wcm/mobile/components/emulators/iPhone4`) utöka den grundläggande mobilemulatorkomponenten ( `/libs/wcm/mobile/components/emulators/base`).
 
@@ -181,7 +181,7 @@ Obs! Även om det är möjligt att samma emulator tillhör flera enhetsgrupper s
 
 ### Enhetsgrupper {#device-groups}
 
-Mobila enhetsgrupper ger segmentering av mobila enheter baserat på enhetens funktioner. En enhetsgrupp innehåller den information som krävs för emulatorbaserad redigering på författarinstansen och för korrekt innehållsåtergivning på publiceringsinstansen: När författarna har lagt till innehåll på mobilsidan och publicerat det kan sidan begäras på publiceringsinstansen. I stället för emulatorns redigeringsvy återges innehållssidan med en av de konfigurerade enhetsgrupperna. Valet av enhetsgruppen görs baserat på [mobilenhetsidentifiering](#devicedetection). Den matchande enhetsgruppen tillhandahåller sedan nödvändig formatinformation.
+Mobila enhetsgrupper ger segmentering av mobila enheter baserat på enhetens funktioner. En enhetsgrupp innehåller den information som krävs för emulatorbaserad redigering på författarinstansen och för korrekt innehållsåtergivning på publiceringsinstansen: när författarna har lagt till innehåll på mobilsidan och publicerat det kan sidan begäras på publiceringsinstansen. I stället för emulatorns redigeringsvy återges innehållssidan med en av de konfigurerade enhetsgrupperna. Valet av enhetsgruppen görs baserat på [mobilenhetsidentifiering](#devicedetection). Den matchande enhetsgruppen tillhandahåller sedan nödvändig formatinformation.
 
 Enhetsgrupper definieras som innehållssidor nedan `/etc/mobile/devices` och använder **Mobilenhetsgrupp** mall. Enhetens gruppmall fungerar som en konfigurationsmall för enhetsgruppsdefinitioner i form av innehållssidor. Dess huvudsakliga egenskaper är:
 
@@ -253,14 +253,14 @@ På **Allmänt** tab:
 
    * **Titel**: namnet på mobilenhetsgruppen.
    * **Beskrivning**: beskrivning av gruppen.
-   * **Användaragent**: användaragentsträng som enheterna matchas mot. Den är valfri och kan vara en regex. Exempel: `BlackBerryZ10`
+   * **Användaragent**: user-agent-sträng som enheterna matchas mot. Den är valfri och kan vara en regex. Exempel: `BlackBerryZ10`
    * **Funktioner**: definierar om gruppen kan hantera bilder, CSS, JavaScript eller enhetsrotation.
    * **Minsta skärmbredd** och **Höjd**
-   * **Inaktivera emulatorn**: för att aktivera/inaktivera emulatorn under innehållsredigering.
+   * **Inaktivera emulatorn**: att aktivera/inaktivera emulatorn under innehållsredigering.
 
    På **Emulatorer** tab:
 
-   * **Emulatorer**: Välj emulatorerna som är tilldelade den här enhetsgruppen.
+   * **Emulatorer**: välj de emulatorer som tilldelats den här enhetsgruppen.
 
    På **Filter** tab:
 
@@ -317,7 +317,7 @@ När en enhet kommer åt din mobila webbplats, identifierar AEM enheten, mappar 
 
 Den trunkerade WURFL™-databasen som installeras med AEM är en release som är före den 30 augusti 2011. Om din version av WURFL släpptes efter den 30 augusti 2011 kontrollerar du att din användning är förenlig med din licens.
 
-Så här installerar du en WURFL™-databas:
+Installera en WURFL™-databas:
 
 1. Skapa följande mapp i CRXDE Lite: `/apps/wcm/mobile/devicespecs`
 1. Kopiera WURFL™-filen till mappen.
@@ -336,12 +336,12 @@ Lägg till en användaragent som ett reguljärt uttryck nedan /apps/wcm/mobile/d
 1. I **CRXDE Lite** skapar du en nod under /apps/wcm/mobile/devicespecs/regexp, till exempel `apple_ipad_ver1`.
 1. Lägg till följande egenskaper i noden:
 
-   * **regexp**: reguljära uttryck som definierar användaragenter, till exempel .&#42;Mozilla.&#42;iPad.&#42;AppleWebKit.&#42;Safari.&#42;
+   * **regexp**: reguljärt uttryck som definierar användaragenter, till exempel .&#42;Mozilla.&#42;iPad.&#42;AppleWebKit.&#42;Safari.&#42;
    * **deviceId**: enhets-ID enligt definitionen i wurfl.xml, till exempel `apple_ipad_ver1`
 
 Ovanstående konfiguration gör att enheter som User-Agent matchar det angivna reguljära uttrycket mappas till Apple_ipad_ver1 WURFL™-enhets-ID, om det finns.
 
-## Identifiering av klientenhet {#client-side-device-detection}
+## Enhetsidentifiering på klientsidan {#client-side-device-detection}
 
 I det här avsnittet beskrivs hur du använder enhetsidentifiering på klientsidan för AEM för att optimera sidåtergivning eller för att ge klienten alternativa webbplatsversioner.
 
@@ -350,7 +350,7 @@ AEM har stöd för enhetsidentifiering på klientsidan baserat på `BrowserMap`.
 `BrowserMap` innehåller tre strategier som du kan använda för att tillhandahålla en alternativ webbplats till en kund, som används i följande ordning:
 
 1. [Alternativa länkar](#providing-alternate-links)
-1. [Enhetsgruppspecifik URL](#definingdevicegroupspecificurl)
+1. [Enhetsgruppsspecifik URL](#definingdevicegroupspecificurl)
 1. [Väljarbaserad URL](#defining-selector-based-urls)
 
 >[!NOTE]
@@ -363,10 +363,10 @@ The `PageVariantsProvider` OSGi-tjänsten kan generera alternativa länkar för 
 
 The `cq:siteVariant` noden måste ha följande egenskaper:
 
-* `cq:childNodesMapTo` - bestämmer vilket attribut i länkelementet som de underordnade noderna ska mappas till, Vi rekommenderar att du ordnar innehållet på din webbplats på ett sådant sätt att rotnodens underordnade objekt representerar roten för en språkvariant av din globala webbplats (till exempel `/content/mysite/en`, `/content/mysite/de`), i vilket fall värdet på `cq:childNodesMapTo` bör `hreflang`;
-* `cq:variantDomain` - anger vad `Externalizer` Domänen kommer att användas för att generera sidvarianternas absoluta URL:er. Om detta värde inte anges genereras sidvarianterna med relativa länkar.
-* `cq:variantFamily` - anger vilken typ av webbplatser denna webbplats tillhör, Flera enhetsspecifika representationer av samma webbplats bör tillhöra samma familj.
-* `media` - lagrar värdena för länkelementets medieattribut, vi rekommenderar att du använder namnet på `BrowserMap` registrerad `DeviceGroups`så att `BrowserMap` biblioteket kan automatiskt vidarebefordra klienterna till rätt variant av webbplatsen.
+* `cq:childNodesMapTo` - avgör vilket attribut i länkelementet som de underordnade noderna mappas till. Vi rekommenderar att du ordnar innehållet på din webbplats på ett sådant sätt att rotnodens underordnade noder representerar roten för en språkvariant av din globala webbplats (till exempel `/content/mysite/en`, `/content/mysite/de`), i vilket fall värdet på `cq:childNodesMapTo` bör `hreflang`;
+* `cq:variantDomain` - anger vad `Externalizer` Domänen används för att generera sidvarianternas absoluta URL:er. Om värdet inte anges genereras sidvarianterna med relativa länkar.
+* `cq:variantFamily` - anger till vilken grupp av webbplatser denna webbplats tillhör; flera enhetsspecifika representationer av samma webbplats bör tillhöra samma familj,
+* `media` - lagrar värdena för länkelementets mediaattribut; du bör använda namnet på `BrowserMap` registrerad `DeviceGroups`så att `BrowserMap` biblioteket kan automatiskt vidarebefordra klienterna till rätt variant av webbplatsen.
 
 #### PageVariantsProvider och Externalizer {#pagevariantsprovider-and-externalizer}
 
@@ -374,7 +374,7 @@ När värdet för `cq:variantDomain` egenskap för en `cq:siteVariant` noden är
 
 >[!NOTE]
 >
-När du arbetar med AEM finns det flera metoder för att hantera konfigurationsinställningarna för sådana tjänster. se [Konfigurerar OSGi](/help/sites-deploying/configuring-osgi.md) om du vill ha mer information och rekommenderade rutiner.
+När du arbetar med AEM finns det flera metoder för att hantera konfigurationsinställningarna för sådana tjänster. Se [Konfigurerar OSGi](/help/sites-deploying/configuring-osgi.md) om du vill ha mer information och rekommenderade rutiner.
 
 ### Definiera en enhetsgruppsspecifik URL {#defining-a-device-group-specific-url}
 
@@ -390,7 +390,7 @@ Mer information finns i [Anpassad BrowserMap](#creatingacustomisedbrowsermap).
 
 Om ingen av de tidigare funktionerna har använts för att ange en alternativ plats för `BrowserMap`och sedan väljare som ska använda namnen på `DeviceGroups` läggs till i `URL`s, och i så fall bör du tillhandahålla dina egna servrar som hanterar förfrågningarna.
 
-Till exempel en enhetssurfning `www.example.com/index.html` identifieras som `smartphone` av BrowserMap vidarebefordras till `www.example.com/index.smartphone.html.`
+En enhetssurfning till exempel `www.example.com/index.html` identifierad som `smartphone` av BrowserMap vidarebefordras till `www.example.com/index.smartphone.html.`
 
 ### Använda BrowserMap på dina sidor {#using-browsermap-on-your-pages}
 
@@ -400,13 +400,13 @@ Om du vill använda standardklientbiblioteket BrowserMap på en sida måste du i
 <cq:include script="/libs/wcm/core/browsermap/browsermap.jsp" />
 ```
 
-Förutom att lägga till `BrowserMap` klientbibliotek i `JSP` -filer måste du också lägga till en `cq:deviceIdentificationMode` Strängegenskap inställd på `client-side` till `jcr:content` noden nedanför webbplatsens rot.
+Förutom att lägga till `BrowserMap` klientbibliotek i din `JSP` -filer måste du också lägga till en `cq:deviceIdentificationMode` Strängegenskap inställd på `client-side` till `jcr:content` noden nedanför webbplatsens rot.
 
 ### Åsidosätta BrowserMaps standardbeteende {#overriding-browsermap-s-default-behaviour}
 
-Om du vill anpassa `BrowserMap` - genom att åsidosätta `DeviceGroups` eller lägga till fler avsökningar - du bör skapa ett eget klientbibliotek där du bäddar in `browsermap.standard`bibliotek på klientsidan.
+Om du vill anpassa `BrowserMap` - genom att åsidosätta `DeviceGroups` eller lägga till fler avsökningar - skapa ett eget klientbibliotek där du bäddar in `browsermap.standard`klientbibliotek.
 
-Dessutom måste du manuellt ringa `BrowserMap.forwardRequest()` i `JavaScript` kod.
+Dessutom måste du manuellt anropa `BrowserMap.forwardRequest()` i `JavaScript` kod.
 
 >[!NOTE]
 >
@@ -414,7 +414,7 @@ Mer information om integrering av klientbibliotek finns i [Använda HTML-bibliot
 
 När du har skapat en skräddarsydd `BrowserMap` klientbiblioteket, Adobe föreslår följande tillvägagångssätt:
 
-1. Skapa en `browsermap.jsp` -fil i ditt program
+1. Skapa en `browsermap.jsp` i ditt program
 
    ```xml
    <%@include file="/libs/foundation/global.jsp" %>
@@ -576,11 +576,11 @@ The **Statistik** sidan är nu tillgänglig.
 
 ### Cachelagring av stödsidor för länkar av typen &quot;skicka länk till en vän&quot; {#supporting-page-caching-for-send-link-to-a-friend-links}
 
-Mobilsidor kan nås via Dispatcher, eftersom sidor som återges för en enhetsgrupp särskiljs i sidans URL av enhetsgruppsväljaren, till exempel `/content/mobilepage.touch.html`. En begäran till en mobilsida utan väljare cachelagras aldrig, som i det här fallet utförs enhetsidentifieringen och dirigeras till den matchande enhetsgruppen (eller&quot;nominatch&quot; för den delen). En mobilsida som återges med en enhetsgruppsväljare bearbetas av länkomskrivaren, som skriver om alla länkar på sidan så att de även innehåller enhetsgruppsväljaren, vilket förhindrar att enhetsidentifieringen utförs på nytt för varje klick på en redan kvalificerad sida.
+Mobilsidor kan nås på Dispatcher, eftersom sidor som återges för en enhetsgrupp särskiljs i sidans URL av enhetsgruppsväljaren, till exempel `/content/mobilepage.touch.html`. En begäran till en mobilsida utan väljare cachelagras aldrig, som i det här fallet utförs enhetsidentifieringen och dirigeras till den matchande enhetsgruppen (eller&quot;nominatch&quot; för den delen). En mobilsida som återges med en enhetsgruppsväljare bearbetas av länkomskrivaren, som skriver om alla länkar på sidan så att de även innehåller enhetsgruppsväljaren, vilket förhindrar att enhetsidentifieringen utförs på nytt för varje klick på en redan kvalificerad sida.
 
 Därför kan du stöta på följande scenario:
 
-Användare Alice omdirigeras till `coolpage.feature.html`, och skickar den URL:en till en kompis Bob som kommer åt den med en annan klient som finns i `touch` enhetsgrupp.
+Alice omdirigeras till `coolpage.feature.html`, och skickar den URL:en till en kompis Bob som kommer åt den med en annan klient som finns i `touch` enhetsgrupp.
 
 If `coolpage.feature.html` kommer från ett klientcache-minne, AEM har inte möjlighet att analysera begäran för att ta reda på att mobilväljaren inte matchar den nya användaragenten och Bob får fel representation.
 

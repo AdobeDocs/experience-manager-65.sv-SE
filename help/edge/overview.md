@@ -2,9 +2,9 @@
 title: Komma igång med Edge Delivery Services
 description: Komma igång med Edge Delivery Services (EDS).
 exl-id: 8d2b2d6c-ae11-4829-842e-b186f5491713
-source-git-commit: 6a1d96125ca6647770718fff74ec21afb5c91a68
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '869'
+source-wordcount: '865'
 ht-degree: 1%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 1%
 
 Med Edge Delivery Services levererar AEM exceptionella upplevelser som skapar engagemang och konverteringar. AEM gör det genom att leverera slagkraftiga upplevelser som är snabba att skapa och utveckla. Det är en sammanslagen uppsättning tjänster som möjliggör en snabb utvecklingsmiljö där författare snabbt kan uppdatera och publicera och nya webbplatser snabbt lanseras. Med Edge Delivery Services kan du öka konverteringsgraden, minska kostnaderna och skapa extrem innehållshastighet.
 
-Genom att utnyttja Edge Delivery kan man
+Med Edge Delivery kan man
 
 * Skapa snabba sajter med perfekt Lightroom Score och övervaka webbplatsens prestanda kontinuerligt med hjälp av RUM (Real User Monitoring).
 * Öka redigeringseffektiviteten genom att frikoppla innehållskällor. När du är klar kan du använda både AEM och dokumentbaserad redigering. På så sätt kan du arbeta med flera innehållskällor på samma webbplats.
@@ -29,7 +29,7 @@ Edge Delivery är en sammansatt uppsättning tjänster som ger stor flexibilitet
 
 Du kan till exempel använda innehåll direkt från Microsoft Word eller Google Docs. Det innebär att dokument från dessa källor kan bli sidor på din webbplats. Dessutom kan rubriker, listor, bilder och teckensnittselement överföras från den ursprungliga källan till webbplatsen. Det nya innehållet läggs till omedelbart utan någon omgenereringsprocess.
 
-Edge Delivery utnyttjar GitHub så att kunderna kan hantera och driftsätta kod direkt från sin GitHub-databas. Du kan t.ex. skriva innehåll i antingen Google Docs eller Microsoft Word och du kan utveckla webbplatsens funktionalitet med hjälp av CSS och JavaScript i GitHub. När du är klar kan du använda webbläsartillägget Sidekick för att förhandsgranska och publicera innehållsuppdateringar.
+Edge Delivery använder GitHub så att kunderna kan hantera och driftsätta kod direkt från sin GitHub-databas. Du kan t.ex. skriva innehåll i antingen Google Docs eller Microsoft Word och du kan utveckla webbplatsens funktionalitet med hjälp av CSS och JavaScript i GitHub. När du är klar kan du använda webbläsartillägget Sidekick för att förhandsgranska och publicera innehållsuppdateringar.
 
 Läs mer:
 
@@ -49,7 +49,7 @@ Det är enkelt att komma igång med Edge Delivery Services. Kom igång genom att
 
 ## Få hjälp från Adobe {#adobe-gethelp}
 
-Du kan kontakta Adobe produktteam via den tilldelade produktsamarbetskanalen (se nedan för mer information) för att få svar på frågor om produktanvändning eller bästa praxis. Observera att det inte finns några servicenivåvillkor (SLT) kopplade till konversationerna via produktsamarbetskanalen. Om ett produktproblem kräver ytterligare utredning och felsökning, och måste uppfylla svars-SLT:er, kan du skicka ett supportärende efter [supportprocess](https://experienceleague.adobe.com/?lang=en&amp;support-tab=home#support).
+Du kan kontakta Adobe produktteam via den tilldelade produktsamarbetskanalen (se nedan för mer information) för att få svar på frågor om produktanvändning eller bästa praxis. Det finns inga servicenivåvillkor (SLT) kopplade till konversationerna via produktsamarbetskanalen. Om ett produktproblem kräver ytterligare utredning och felsökning, och måste uppfylla svars-SLT:er, kan du skicka ett supportärende efter [supportprocess](https://experienceleague.adobe.com/?lang=en&amp;support-tab=home#support).
 
 Adobe har tre kanaler som kan hjälpa dig med Edge Delivery Services:
 
@@ -72,7 +72,7 @@ Mer information finns i [Använda Slack Bot](https://www.hlx.live/docs/slack) f�
 Steg för att logga en supportanmälan via Admin Console:
 
 1. Lägg till **Edge Delivery** i biljettens titel.
-2. Ange följande i beskrivningen:
+2. Ange följande information i beskrivningen:
 
    * Den publicerade webbplatsens URL. Till exempel: [www.mydomain.com].
    * URL för den ursprungliga webbplatsen (.hlx URL).

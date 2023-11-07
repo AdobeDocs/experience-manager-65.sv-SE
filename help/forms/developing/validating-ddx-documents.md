@@ -12,9 +12,9 @@ topic-tags: operations
 discoiquuid: 693859b0-a0c3-43f1-95c0-be48a90d7d8d
 role: Developer
 exl-id: 1f5a2cf3-ef6b-45b4-8fa8-b300e492fee1
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1526'
+source-wordcount: '1525'
 ht-degree: 0%
 
 ---
@@ -72,7 +72,7 @@ När du validerar ett DX-dokument måste du ange specifika körningsalternativ s
 
 **Utför valideringen**
 
-När du har skapat Assembler-tjänstklienten, refererat till DDX-dokumentet och angett körningsalternativ kan du anropa `invokeDDX` för att validera DDX-dokumentet. När du validerar DDX-dokumentet kan du skicka det `null` som map-parametern (den här parametern lagrar vanligtvis PDF-dokument som Assembler kräver för att utföra de åtgärder som anges i DDX-dokumentet).
+När du har skapat Assembler-tjänstklienten, refererat till DDX-dokumentet och angett körningsalternativ, kan du anropa `invokeDDX` åtgärd för att validera DDX-dokumentet. När du validerar DDX-dokumentet kan du skicka det `null` som map-parametern (den här parametern lagrar vanligtvis PDF-dokument som Assembler kräver för att utföra de åtgärder som anges i DDX-dokumentet).
 
 Om valideringen misslyckas genereras ett undantag och loggfilen innehåller information som förklarar varför DDX-dokumentet är ogiltigt kan hämtas från `OperationException` -instans. Efter den grundläggande XML-tolkningen och schemakontrollen utförs valideringen mot DDX-specifikationen. Alla fel som finns i DDX-dokumentet anges i loggen.
 
@@ -98,7 +98,7 @@ Validera ett DX-dokument med Assembler Service API (Java):
 
 1. Inkludera projektfiler.
 
-   Inkludera JAR-klientfiler, t.ex. adobe-assembler-client.jar, i Java-projektets klassökväg.
+   Inkludera JAR-klientfiler, som adobe-assembler-client.jar, i Java-projektets klassökväg.
 
 1. Skapa en PDF Assembler-klient.
 
@@ -107,7 +107,7 @@ Validera ett DX-dokument med Assembler Service API (Java):
 
 1. Referera till ett befintligt DDX-dokument.
 
-   * Skapa en `java.io.FileInputStream` som representerar DDX-dokumentet genom att använda dess konstruktor och skicka ett strängvärde som anger platsen för DDX-filen.
+   * Skapa en `java.io.FileInputStream` -objekt som representerar DDX-dokumentet genom att använda dess konstruktor och skicka ett strängvärde som anger platsen för DDX-filen.
    * Skapa en `com.adobe.idp.Document` genom att använda konstruktorn och skicka `java.io.FileInputStream` -objekt.
 
 1. Ange körningsalternativ för att validera DDX-dokumentet.
@@ -162,7 +162,7 @@ Validera ett DX-dokument med Assembler Service API (webbtjänsten):
 
    * Skapa en `AssemblerServiceClient` genom att använda dess standardkonstruktor.
    * Skapa en `AssemblerServiceClient.Endpoint.Address` genom att använda `System.ServiceModel.EndpointAddress` konstruktor. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/AssemblerService?blob=mtom`). Du behöver inte använda `lc_version` -attribut. Det här attributet används när du skapar en tjänstreferens.
-   * Skapa en `System.ServiceModel.BasicHttpBinding` genom att hämta värdet för `AssemblerServiceClient.Endpoint.Binding` fält. Sänd returvärdet till `BasicHttpBinding`.
+   * Skapa en `System.ServiceModel.BasicHttpBinding` genom att hämta värdet för `AssemblerServiceClient.Endpoint.Binding` fält. Skicka returvärdet till `BasicHttpBinding`.
    * Ange `System.ServiceModel.BasicHttpBinding` objektets `MessageEncoding` fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
    * Aktivera grundläggande HTTP-autentisering genom att utföra följande åtgärder:
 
@@ -183,7 +183,7 @@ Validera ett DX-dokument med Assembler Service API (webbtjänsten):
 
    * Skapa en `AssemblerOptionSpec` objekt som lagrar körningsalternativ med hjälp av dess konstruktor.
    * Ange det körningsalternativ som instruerar Assembler-tjänsten att validera DDX-dokumentet genom att tilldela värdet true till `AssemblerOptionSpec` objektets `validateOnly` datamedlem.
-   * Ange mängden information som Assembler-tjänsten skriver till loggfilen genom att tilldela ett strängvärde till `AssemblerOptionSpec` objektets `logLevel` datamedlem. -metod När du validerar ett DX-dokument vill du att mer information ska skrivas till loggfilen som ska vara till hjälp vid valideringsprocessen. Därför kan du ange värdet `FINE` eller `FINER`. Mer information om de körningsalternativ du kan ange finns i `AssemblerOptionSpec` klassreferens i [AEM Forms API-referens](https://www.adobe.com/go/learn_aemforms_javadocs_63_en).
+   * Ange mängden information som Assembler-tjänsten skriver till loggfilen genom att tilldela ett strängvärde till `AssemblerOptionSpec` objektets `logLevel` datamedlem. -metod När du validerar ett DX-dokument vill du att mer information ska skrivas till loggfilen som ska vara till hjälp vid valideringsprocessen. Därför kan du ange värdet `FINE` eller `FINER`. Mer information om alternativ för körning som du kan ange finns i `AssemblerOptionSpec` klassreferens i [AEM Forms API-referens](https://www.adobe.com/go/learn_aemforms_javadocs_63_en).
 
 1. Utför valideringen.
 

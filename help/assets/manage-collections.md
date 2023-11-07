@@ -1,5 +1,5 @@
 ---
-title: Hantera samlingar av digitala resurser
+title: Hantera samlingar med digitala resurser
 description: Lär dig mer om hur du hanterar samlingar med resurser, som att skapa, visa, ta bort, redigera och hämta samlingar.
 contentOwner: AG
 mini-toc-levels: 1
@@ -7,7 +7,7 @@ role: User
 feature: Collections,Asset Management
 exl-id: 2117b2de-8024-4aa8-9ce0-68a156928356
 hide: true
-source-git-commit: 3d5e9ad8ee19756b05e5a77a3f748bc647fcf734
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '2047'
 ht-degree: 10%
@@ -43,7 +43,7 @@ Du kan skapa en samling med [statiska referenser](#creating-a-collection-with-st
 
 ### Skapa en samling med statiska referenser {#creating-a-collection-with-static-references}
 
-Du kan skapa en samling med statiska referenser, t.ex. en samling med referenser till resurser, mappar, samlingar, snurrsuppsättningar och bilduppsättningar.
+Du kan skapa en samling med statiska referenser, t.ex. en samling med referenser till resurser, mappar, samlingar, snurruppsättningar och bilduppsättningar.
 
 1. Navigera till **[!UICONTROL Collections]** konsol.
 1. Klicka på **[!UICONTROL Create]** i verktygsfältet.
@@ -61,7 +61,7 @@ Du kan skapa en samling med statiska referenser, t.ex. en samling med referenser
    >
    >[!DNL Experience Manager Assets] I kan du skapa granskningsåtgärder för en samling på samma sätt som du skapar granskningsåtgärder för en resursmapp.
 
-   Om du vill lägga till resurser i samlingen går du till [!DNL Assets] användargränssnitt. Mer information finns i [Lägga till resurser i en samling](#adding-assets-to-a-collection).
+   Navigera till [!DNL Assets] användargränssnitt. Mer information finns i [Lägga till resurser i en samling](#adding-assets-to-a-collection).
 
 ### Skapa samlingar med dropzone {#create-collections-using-dropzone}
 
@@ -87,7 +87,7 @@ Så här skapar du en smart samling:
 
 1. Navigera till [!DNL Assets] -användargränssnittet och klicka på Sök.
 
-1. Skriv söknyckelordet i rutan Sök och välj `Enter`. Öppna filterpanelen och använd ett sökfilter.
+1. Skriv söknyckelordet i sökrutan och markera `Enter`. Öppna filterpanelen och använd ett sökfilter.
 
 1. Från **[!UICONTROL Files & Folders]** lista, välj **[!UICONTROL Files]**.
 
@@ -127,7 +127,7 @@ Du kan också dra resursen till **[!UICONTROL Drop in Collection]** -området i 
 Smarta samlingar byggs genom att en sökning sparas så att du kan ändra deras innehåll genom att ändra sökparametrarna för [sparad sökning](#saved-searches).
 
 1. I [!DNL Assets] i användargränssnittet klickar du på sökalternativet ![sökalternativ](assets/do-not-localize/search_icon.png) i verktygsfältet.
-1. Markera med markören i rutan Sök `Return` nyckel.
+1. Markera med markören i rutan Sök `Return` -tangenten.
 1. I [!DNL Experience Manager] öppnar du panelen Filter.
 1. Välj den smarta samling du vill ändra i listan **[!UICONTROL Saved Searches]**. På sökpanelen visas de filter som har konfigurerats för den sparade sökningen.
 
@@ -142,7 +142,7 @@ Smarta samlingar byggs genom att en sökning sparas så att du kan ändra deras 
 
 1. Klicka på **[!UICONTROL Save]**. The **[!UICONTROL Edit Smart Collection]** visas.
 1. Klicka **[!UICONTROL Overwrite]** om du vill ersätta den ursprungliga smarta samlingen med den redigerade samlingen. Du kan också välja **[!UICONTROL Save As]** om du vill spara den redigerade samlingen separat.
-1. I bekräftelsedialogrutan klickar du på **[!UICONTROL Save]** för att slutföra processen.
+1. Klicka på i bekräftelsedialogrutan **[!UICONTROL Save]** för att slutföra processen.
 
 ## Visa och redigera samlingsmetadata {#view-edit-collection-metadata}
 
@@ -150,7 +150,7 @@ Samlingsmetadata omfattar data om samlingen, inklusive taggar som läggs till.
 
 1. Från [!UICONTROL Collections] konsol, markera en samling och klicka på **[!UICONTROL Properties]** i verktygsfältet.
 1. I **[!UICONTROL Collection Metadata]** sidan, visa samlingsmetadata från **[!UICONTROL Basic]** och **[!UICONTROL Advanced]** -tabbar.
-1. Ändra metadata efter behov. Spara ändringarna genom att klicka på **[!UICONTROL Save & Close]** i verktygsfältet.
+1. Ändra metadata efter behov. Klicka på **[!UICONTROL Save & Close]** i verktygsfältet.
 
 ## Redigera metadata för flera samlingar samtidigt {#editing-collection-metadata-in-bulk}
 
@@ -165,7 +165,6 @@ Du kan redigera metadata för flera samlingar samtidigt. Med den här funktionen
    >
    >* I [!UICONTROL Properties] kan du ta bort samlingar från listan med samlingar genom att avbryta markeringen. I samlingslistan är alla samlingar markerade som standard. [!DNL Experience Manager] uppdaterar inte metadata för de samlingar som du tar bort.
    >* Överst i listan markerar du kryssrutan nära **[!UICONTROL Title]** för att växla mellan att markera samlingarna och rensa listan.
-
 
 1. Klicka **[!UICONTROL Save & Close]** i verktygsfältet och stäng sedan bekräftelsedialogrutan.
 1. Om du vill lägga till nya metadata till de befintliga metadata väljer du **[!UICONTROL Append mode]**. Om du inte markerar det här alternativet ersätter de nya metadata de data som finns i fälten. Klicka på **[!UICONTROL Submit]**.
@@ -199,7 +198,7 @@ Du kan redigera samlingsinställningar, till exempel rubrik och beskrivning, ell
 1. Markera en samling och klicka på **[!UICONTROL Settings]** i verktygsfältet. Du kan även använda **[!UICONTROL Settings]** snabbåtgärd från samlingsminiatyrbilden.
 1. Ändra inställningarna för samlingen på sidan **[!UICONTROL Collection Settings]**. Du kan till exempel ändra samlingens rubrik, beskrivningar, medlemmar och behörigheter enligt [Lägga till samlingar](#creating-a-collection).
 
-1. Spara ändringarna genom att klicka på **[!UICONTROL Save]**.
+1. Klicka på **[!UICONTROL Save]**.
 
 ## Ta bort en samling {#deleting-a-collection}
 
@@ -217,7 +216,7 @@ När du hämtar en samling hämtas hela resurshierarkin i samlingen, inklusive m
 
 1. Välj en eller flera samlingar som du vill hämta från samlingskonsolen.
 1. Klicka på **[!UICONTROL Download]** i verktygsfältet.
-1. I dialogrutan **[!UICONTROL Download]** klickar du på **[!UICONTROL Download]**. Om du vill hämta återgivningarna av resurserna i samlingen väljer du **[!UICONTROL Renditions]**. Välj **[!UICONTROL Email]** möjlighet att skicka ett e-postmeddelande till samlingens ägare.
+1. I dialogrutan **[!UICONTROL Download]** klickar du på **[!UICONTROL Download]**. Om du vill hämta återgivningarna av resurserna i samlingen väljer du **[!UICONTROL Renditions]**. Välj **[!UICONTROL Email]** om du vill skicka ett e-postmeddelande till samlingens ägare.
 
    När du väljer en samling som ska hämtas hämtas hela mapphierarkin under samlingen. Om du vill inkludera varje samling som du hämtar (inklusive resurser i underordnade samlingar som är kapslade under den överordnade samlingen) i en enskild mapp väljer du **[!UICONTROL Create separate folder for each asset]**.
 
@@ -256,7 +255,7 @@ Att redigera sparade sökningar är detsamma som att redigera smarta samlingar. 
 Så här tar du bort sparade sökningar:
 
 1. I [!DNL Assets] användargränssnitt, klicka på sök ![sökalternativ](assets/do-not-localize/search_icon.png).
-1. Markera med markören i fältet Sök `Return` nyckel.
+1. Markera med markören i fältet Sök `Return` -tangenten.
 1. I [!DNL Experience Manager] öppnar du panelen Filter.
 1. Från **[!UICONTROL Saved Searches]** lista, klicka på **[!UICONTROL Delete]** bredvid den smarta samling som du vill ta bort.
 
@@ -278,4 +277,3 @@ Du kan köra ett arbetsflöde för resurserna i en samling. Om samlingen innehå
 >
 >* [Konfigurera e-postmeddelanden från Experience Manager Assets](/help/sites-administering/notification.md#assetsconfig)
 >* [Skapa en granskningsuppgift för samlingar](bulk-approval.md)
-

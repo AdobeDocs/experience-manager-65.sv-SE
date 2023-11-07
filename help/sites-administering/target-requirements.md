@@ -1,19 +1,15 @@
 ---
 title: Krav för integrering med Adobe Target
-seo-title: Prerequisites for Integrating with Adobe Target
-description: Läs om förutsättningarna för integrering med Adobe Target.
-seo-description: Find out about the prerequisites for integrating with Adobe Target.
-uuid: 55d87a96-5fe7-4f7e-93c1-fdf7fbb7c971
+description: Läs mer om förutsättningarna för integrering med Adobe Target.
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
 content-type: reference
-discoiquuid: ae4a6e97-c0d7-472d-a25f-b89b1abf4df3
 docset: aem65
 exl-id: 30813c44-51ac-4e6e-8ee6-4e8baacb1ff9
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '556'
+source-wordcount: '549'
 ht-degree: 0%
 
 ---
@@ -47,7 +43,7 @@ Test och Target [replikeringsagent](/help/sites-deploying/replication.md) måste
    >
    >När du konfigurerar replikeringsagenten Test och Target finns det i **Transport** -tabben, anges URI som standard till **tnt:///**. Ersätt inte denna URI med **https://admin.testandtarget.omniture.com**.
    >
-   >Observera att om du försöker testa anslutningen med **tnt:///**, genereras ett fel. Detta är förväntat eftersom denna URI endast är avsedd för internt bruk och inte ska användas med **Testanslutning**.
+   >Om du försöker testa anslutningen med **tnt:///**, genereras ett fel. Detta beteende förväntas eftersom denna URI endast är avsedd för internt bruk. Använd inte med **Testanslutning**.
 
 ## Skydda noden Aktivitetsinställningar {#securing-the-activity-settings-node}
 

@@ -1,23 +1,19 @@
 ---
-title: Skapa en ny AEM Mobile-app med guiden Skapa
-seo-title: Creating a new AEM Mobile app using create wizard
-description: AEM Mobile-programmen bygger på en plan som definierar en sidstruktur och egenskaper. Följ den här sidan om du vill veta mer om hur du skapar ett nytt program baserat på en appmall.
-seo-description: AEM Mobile apps are based on a blueprint that defines a page structure and properties. Follow this page to learn about how to create a new app based on an app template.
-uuid: c2bd63a5-3dff-4a72-b1fb-0c776e0afa33
+title: Skapa ett AEM Mobile-program med guiden Skapa
+description: AEM Mobile-programmen bygger på en plan som definierar en sidstruktur och egenskaper. Följ den här sidan om du vill veta mer om hur du skapar ett program baserat på en appmall.
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: authoring-adobe-phonegap-enterprise
-discoiquuid: 27605eb7-59b2-42d4-8cc5-02cfa52b4491
 exl-id: be093025-b19f-4499-a7b5-aae5ab74f966
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '637'
+source-wordcount: '632'
 ht-degree: 0%
 
 ---
 
-# Skapa en ny AEM Mobile-app med guiden Skapa{#creating-a-new-aem-mobile-app-using-create-wizard}
+# Skapa ett AEM Mobile-program med guiden Skapa{#creating-a-new-aem-mobile-app-using-create-wizard}
 
 >[!NOTE]
 >
@@ -32,28 +28,28 @@ AEM Mobile-programmen bygger på en plan som definierar en sidstruktur och egens
 * **Beskrivning:** En beskrivning av programmet.
 * **Server-URL:** Den URL som innehåller OTA-innehåll (Over-the-Air) uppdateras i programmet. Standardvärdet är publiceringsserverns URL-adress för instansen som används för att skapa ett program (hämtas från externaliseringstjänsten). Observera att detta måste vara en publiceringsserverinstans i stället för en författare, vilket kräver autentisering.
 
-Du kan också tillhandahålla en bildfil som du kan använda som programminiatyrbild, välja vilken PhoneGap Build som ska användas och välja vilken mobilappsanalyskonfiguration som ska användas. Den här bilden används bara som miniatyrbild för att representera ditt mobilprogram i mobilappskonsolen i Experience Manager.
+Du kan också tillhandahålla en bildfil som du kan använda som programminiatyrbild, välja vilken PhoneGap Build-konfiguration som ska användas och välja vilken mobilappsanalyskonfiguration som ska användas. Den här bilden används bara som miniatyrbild för att representera ditt mobilprogram i mobilappskonsolen i Experience Manager.
 
 Det finns ytterligare (och valfria) flikar för att bygga molntjänster och integrera plugin-programmet Adobe Mobile Services SDK i appen.
 
-* Bygg: Klicka på Hantera konfigurationer och konfigurera bygg.phonegap.com här. I listrutan kan du sedan välja den nya molntjänsten PhoneGap build.
+* Bygg: Klicka på Hantera konfigurationer och konfigurera build.phonegap.com här. I listrutan kan du sedan välja den nya molntjänsten PhoneGap build.
 * Analyser: Klicka på Hantera konfigurationer och konfigurera [Adobe Mobile Services SDK](https://experienceleague.adobe.com/docs/mobile-services/using/home.html) molntjänst. I listrutan kan du sedan välja den nya mobiltjänsten som ska integreras i din mobilapp.
 
 ## Använda appmallar {#using-app-templates}
 
-Appmallar är ett enkelt sätt att utnyttja befintliga designer som skapats av utvecklare och som används för att skapa nya appar i AEM.
+Appmallar är ett enkelt sätt att använda befintliga designer som skapats av utvecklare och som används för att skapa nya appar i AEM.
 
 Vad är en appmall? Se det som en samling sidmallar och komponenter som utgör en grund eller grund för ett program.
-När du skapar ett nytt program baserat på en mall för ett annat program får du ett program som har en startpunkt som representerar det program som det skapades från.
+När du skapar ett program baserat på en mall för ett annat program får du ett program som har en startpunkt som representerar det program som det skapades från.
 
 Du måste ha en befintlig mobilappsmall (eller en app som har en appmall) för att kunna använda den här funktionen.
 
-Det senaste exempelpaketet AEM program innehåller en uppdaterad version av Geometrixx-appen med en programmall. Du kan även installera [StarterKit](https://github.com/Adobe-Marketing-Cloud-Apps/aem-phonegap-starter-kit) som också innehåller en mall.
+Det senaste exempelpaketet AEM program innehåller en uppdaterad version av Geometrixx-appen med en appmall. Du kan även installera [StarterKit](https://github.com/Adobe-Marketing-Cloud-Apps/aem-phonegap-starter-kit) som också innehåller en mall.
 
-Steg för att skapa ett nytt program baserat på en appmall:
+Steg för att skapa ett program baserat på en appmall:
 
-1. Gå till AEM Mobile programkatalog: &lt;*server-url*>aem/apps.html/content/mobileapps
-1. Välj **Skapa** och sedan välja **App** som visas nedan
+1. Navigera till AEM Mobile programkatalog: &lt;*server-url*>aem/apps.html/content/mobileapps
+1. Välj **Skapa** välj **App** som visas nedan
 
 ![chlimage_1-158](assets/chlimage_1-158.png)
 

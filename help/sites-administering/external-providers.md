@@ -7,7 +7,7 @@ topic-tags: integration
 content-type: reference
 docset: aem65
 exl-id: 9bf818f9-6e33-4557-b2e4-b0d4900f2a05
-source-git-commit: c7c32130a3257c14c98b52f9db31d80587d7993a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '446'
 ht-degree: 0%
@@ -55,7 +55,7 @@ Sådana fragment gör det möjligt att samla in data och generera rapporter. De 
 >
 >Demonsplatsen Geometrixx-Outdoor är konfigurerad så att attributen i Sidegenskaperna läggs till i HTML-källkoden (alldeles ovanför `</html>` sluttagg) i motsvarande `js` skript.
 >
->Om din egen `/apps` ärver inte från standardsidkomponenten ( `/libs/foundation/components/page`) måste du (eller dina utvecklare) se till att motsvarande `js` skript inkluderas, t.ex. genom att `cq/cloudserviceconfigs/components/servicescomponents`eller med en liknande mekanism.
+>Om din egen `/apps` ärver inte från standardsidkomponenten ( `/libs/foundation/components/page`) måste du (eller dina utvecklare) se till att motsvarande `js` skript inkluderas, till exempel genom att `cq/cloudserviceconfigs/components/servicescomponents`eller med en liknande mekanism.
 >
 >Utan detta kommer ingen av tjänsterna (Generic, Analytics, Target och så vidare) att fungera.
 
@@ -69,7 +69,7 @@ För den grundläggande konfigurationen:
 
    ![Kodavsnitt för allmän analys](assets/analytics_genericoverview.png)
 
-1. Klicka på + för att lägga till en ny konfiguration med dialogrutan. Tilldela ett namn, till exempel Google Analytics:
+1. Klicka på + för att lägga till en ny konfiguration med dialogrutan. Tilldela åtminstone ett namn, till exempel Google Analytics:
 
    ![Skapa en konfiguration](assets/analytics_addconfig.png)
 

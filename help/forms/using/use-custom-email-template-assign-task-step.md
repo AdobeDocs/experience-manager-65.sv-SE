@@ -8,9 +8,9 @@ topic-tags: publish
 discoiquuid: 2ad4b7b5-2162-4599-af3f-9476f1256de6
 docset: aem65
 exl-id: d4035c91-ee8d-4f12-bdac-e3912be732d7
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '523'
+source-wordcount: '521'
 ht-degree: 0%
 
 ---
@@ -21,9 +21,9 @@ Du kan använda steget Tilldela uppgift för att skapa och tilldela uppgifter ti
 
 ![E-postavisering med mall utanför rutan](do-not-localize/default_email_template_new.png)
 
-Du kan anpassa utseendet och använda anpassade metadata i ett e-postmeddelande. AEM Forms tillhandahåller en färdig mall för e-postmeddelanden. Du kan anpassa mallen som inte finns i kartongen eller skapa en ny mall från början.
+Du kan anpassa utseendet och använda anpassade metadata i ett e-postmeddelande. AEM Forms tillhandahåller en färdig mall för e-postmeddelanden. Du kan anpassa mallen som inte finns i kartongen eller skapa en helt ny mall.
 
-Mallar för e-postmeddelanden baseras på [HTML email](https://en.wikipedia.org/wiki/HTML_email). Dessa e-postmeddelanden anpassar sig efter olika e-postklienter och skärmstorlekar. Dessutom definieras formatet för e-postmeddelandet i mallen.
+Mallar för e-postmeddelanden baseras på [HTML email](https://en.wikipedia.org/wiki/HTML_email). Dessa e-postmeddelanden anpassas efter olika e-postklienter och skärmstorlekar. Dessutom definieras formatet för e-postmeddelandet i mallen.
 
 I följande bild visas ett anpassat e-postmeddelande:
 
@@ -31,7 +31,7 @@ I följande bild visas ett anpassat e-postmeddelande:
 
 ## Anpassa den befintliga mallen {#customize-the-existing-template}
 
-När allt är klart tillhandahåller AEM Forms en mall för e-postmeddelanden. Mallen innehåller titelbeskrivning, förfallodatum, prioritet, arbetsflödets namn och länk för den tilldelade uppgiften. Du kan anpassa mallen för att ändra utseendet. Gör så här för att anpassa mallen:
+När allt är klart tillhandahåller AEM Forms en mall för e-postmeddelanden. Mallen innehåller titelbeskrivning, förfallodatum, prioritet, arbetsflödets namn och länk för den tilldelade uppgiften. Du kan anpassa mallen för att ändra utseendet. Anpassa mallen genom att utföra följande steg:
 
 1. Logga in på CRXDE med administratörskonto.
 
@@ -57,7 +57,7 @@ När allt är klart tillhandahåller AEM Forms en mall för e-postmeddelanden. M
 
 1. Lägg till egen HTML-kod i filen.
 
-   En e-postmeddelandemall är en [HTML email](https://en.wikipedia.org/wiki/HTML_email). Du kan lägga till egen HTML-kod i filen för att skapa en ny mall.
+   En e-postmeddelandemall är en [HTML email](https://en.wikipedia.org/wiki/HTML_email). Du kan lägga till egen HTML-kod i filen för att skapa en mall.
 
 1. Spara filen. Mallen är klar att användas i steget Tilldela uppgift.
 

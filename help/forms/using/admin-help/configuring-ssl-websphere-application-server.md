@@ -6,9 +6,9 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/configuring_ssl
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 exl-id: b0786b52-879e-4a24-9cc9-bd9dcb2473cc
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1225'
+source-wordcount: '1222'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ I det här avsnittet beskrivs följande steg för att konfigurera SSL med IBM We
 
 För att aktivera SSL behöver WebSphere åtkomst till ett användarkonto i det lokala operativsystemets användarregister som har behörighet att administrera systemet:
 
-* (Windows) Skapa en ny Windows-användare som är en del av gruppen Administratörer och har behörighet att fungera som en del av operativsystemet. (Se [Skapa en Windows-användare för WebSphere](configuring-ssl-websphere-application-server.md#create-a-windows-user-for-websphere).)
+* (Windows) Skapa en Windows-användare som ingår i gruppen Administratörer och har behörighet att fungera som en del av operativsystemet. (Se [Skapa en Windows-användare för WebSphere](configuring-ssl-websphere-application-server.md#create-a-windows-user-for-websphere).)
 * (Linux, UNIX) Användaren kan vara en rotanvändare eller en annan användare som har rotbehörighet. När du aktiverar SSL på WebSphere använder du den här användarens server-ID och lösenord.
 
 ### Skapa en Linux- eller UNIX-användare för WebSphere {#create-a-linux-or-unix-user-for-websphere}
@@ -32,12 +32,12 @@ För att aktivera SSL behöver WebSphere åtkomst till ett användarkonto i det 
    * (Linux och Sun Solaris) `useradd`
    * (IBM AIX) `mkuser`
 
-1. Ställ in lösenordet för den nya användaren genom att ange `passwd` kommandotolken.
+1. Ställ in lösenordet för den nya användaren genom att ange `passwd` i kommandotolken.
 1. (Linux och Solaris) Skapa en skugglösenordsfil genom att ange `pwconv` (utan parametrar) i kommandotolken.
 
    >[!NOTE]
    >
-   >(Linux och Solaris) För att WebSphere Application Server Local OS-säkerhetsregistret ska fungera måste det finnas en skugglösenordsfil. Skugglösenordsfilen heter **vanligtvis /etc/shadow** och baseras på filen /etc/passwd. Om skugglösenordsfilen inte finns uppstår ett fel efter aktivering av global säkerhet och konfiguration av användarregistret som lokalt operativsystem.
+   >(Linux och Solaris) För att säkerhetsregistret för det lokala operativsystemet WebSphere Application Server ska fungera måste det finnas en skugglösenordsfil. Skugglösenordsfilen heter **vanligtvis /etc/shadow** och baseras på filen /etc/passwd. Om skugglösenordsfilen inte finns uppstår ett fel när du har aktiverat global säkerhet och konfigurerat användarregistret som lokalt operativsystem.
 
 1. Öppna gruppfilen från katalogen /etc i en textredigerare.
 1. Lägg till användaren som du skapade i steg 2 i `root` gruppen.
@@ -51,7 +51,7 @@ För att aktivera SSL behöver WebSphere åtkomst till ett användarkonto i det 
 1. Högerklicka på Användare och välj **Ny användare**.
 1. Skriv ett användarnamn och lösenord i rutorna och ange eventuell annan information som du vill ha i de övriga rutorna.
 1. Avmarkera **Användaren måste ändra lösenordet vid nästa inloggning**, klicka **Skapa** och klicka sedan på **Stäng**.
-1. Klicka **Användare**, högerklicka på den användare du just skapade och välj **Egenskaper**.
+1. Klicka **Användare**, högerklicka på den användare du skapade och välj **Egenskaper**.
 1. Klicka på **medlem i** och sedan klicka på **Lägg till**.
 1. Skriv i rutan Ange de objektnamn du vill markera `Administrators`klickar du på Kontrollera namn för att se till att gruppnamnet är korrekt.
 1. Klicka **OK** och sedan klicka **OK** igen.
@@ -95,22 +95,22 @@ Du kan skapa förtroendelager och nyckelbehållare med hjälp av nyckelverktyget
 1. Klicka **Nyckelbehållare och certifikat** under Relaterade artiklar.
 1. I **Användning av nyckelbehållare** listruta, kontrollera att **SSL-nyckelbehållare** är markerat. Klicka **Nytt**.
 1. Ange ett logiskt namn och en beskrivning.
-1. Ange sökvägen där du vill att nyckelbehållaren ska skapas. Om du redan har skapat en nyckelbehållare via ikeyman anger du sökvägen till nyckellagerfilen.
+1. Ange sökvägen där du vill att nyckelbehållaren ska skapas. Om du redan har skapat en nyckelbehållare via ikeyman anger du sökvägen till nyckelbehållaren.
 1. Ange och bekräfta lösenordet.
 1. Välj typ av nyckelbehållare och klicka på **Använd**.
 1. Spara huvudkonfigurationen.
 1. Klicka **Personligt certifikat**.
 1. Om du redan har skapat en nyckelbehållare med nyckelhanteraren visas ditt certifikat. Annars måste du lägga till ett nytt självsignerat certifikat genom att utföra följande steg:
 
-   1. Välj **Skapa > själv signerat certifikat**.
+   1. Välj **Skapa > självsignerat certifikat**.
    1. Ange lämpliga värden i certifikatformuläret. Se till att du behåller Alias och eget namn som fullständigt kvalificerat domännamn för datorn.
-   1. Klicka på **Använd.**
+   1. Klicka på **Använd**.
 
 1. Upprepa steg 2 till 10 för att skapa en truststore.
 
-## Tillämpa anpassad nyckellagring och truststore på servern {#apply-custom-keystore-and-truststore-to-the-server}
+## Tillämpa anpassad keystore och truststore på servern {#apply-custom-keystore-and-truststore-to-the-server}
 
-1. I WebSphere Administrative Console väljer du **Säkerhets- > SSL-certifikat och nyckelhantering**.
+1. I WebSphere-administrationskonsolen väljer du **Säkerhet > SSL-certifikat och nyckelhantering**.
 1. Klicka på **Hantera konfiguration** av slutpunktssäkerhet. Den lokala topologikartan öppnas.
 1. Under Inkommande väljer du direkt underordnad noder.
 1. Under Relaterade objekt väljer du **SSL-konfigurationer**.

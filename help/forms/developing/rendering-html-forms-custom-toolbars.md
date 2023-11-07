@@ -12,9 +12,9 @@ topic-tags: operations
 discoiquuid: 7eb0e8a8-d76a-43f7-a012-c21157b14cd4
 role: Developer
 exl-id: 0b992b1c-3878-447a-bccc-7034aa3e98bc
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2345'
+source-wordcount: '2340'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ Med Forms-tjänsten kan du anpassa ett verktygsfält som återges med ett HTML-f
 
 >[!NOTE]
 >
->Denna URI-plats finns i filen adobe-forms-core.jar som finns i filen adobe-forms-dsc.jar. Filen adobe-forms-dsc.jar finns i C:\Adobe\Adobe_Experience_Manager_forms\ folder (C:\ is the installation directory). Du kan använda ett filextraheringsverktyg, till exempel Win RAR, för att öppna Adobe-filen.
+>Denna URI-plats finns i filen adobe-forms-core.jar, som finns i filen adobe-forms-dsc.jar. Filen adobe-forms-dsc.jar finns i mappen C:\Adobe\Adobe_Experience_Manager_forms\ (C:\ är installationskatalogen). Du kan använda ett filextraheringsverktyg, till exempel Win RAR, för att öppna Adobe-filen.
 
 Du kan kopiera fscmenu.xml från den här platsen, ändra den så att den uppfyller dina krav och sedan placera den på en anpassad URI-plats. Använd sedan Forms Service API för att ange körningsalternativ som resulterar i att Forms-tjänsten använder fscmenu.xml-filen från den angivna platsen. Dessa åtgärder resulterar i att Forms-tjänsten återger ett HTML-formulär med ett anpassat verktygsfält.
 
@@ -48,15 +48,15 @@ fscCSS är en formatmall som är kopplad till en viss nod. Formaten i CSS-filern
 
 Kontrollera att det finns referenser till alla ovanstående filer i filen fscmenu.xml. I filen fscmenu.xml anger du URI-platser som ska peka på dessa filer så att Forms-tjänsten kan hitta dem. Som standard är de här filerna tillgängliga på URI-platser, med början med interna nyckelord `FSWebRoot` eller `ApplicationWebRoot`.
 
-Om du vill anpassa verktygsfältet ersätter du nyckelorden med hjälp av det externa nyckelordet `FSToolBarURI`. Nyckelordet representerar den URI som skickas till Forms-tjänsten vid körning (den här metoden visas senare i det här avsnittet).
+Om du vill anpassa verktygsfältet ersätter du nyckelorden med det externa nyckelordet `FSToolBarURI`. Detta nyckelord representerar den URI som skickas till Forms-tjänsten vid körning (detta visas senare i detta avsnitt).
 
-Du kan också ange de absoluta platserna för dessa JS- och CSS-filer, till exempel https://www.mycompany.com/scripts/misc/fscmenu.js. I sådana fall behöver du inte använda `FSToolBarURI` nyckelord.
+Du kan också ange absoluta platser för dessa JS- och CSS-filer, till exempel https://www.mycompany.com/scripts/misc/fscmenu.js. I sådana fall behöver du inte använda `FSToolBarURI` nyckelord.
 
 >[!NOTE]
 >
 >Vi rekommenderar inte att du blandar de sätt på vilka dessa filer refereras. Det innebär att alla URI:er ska refereras med antingen `FSToolBarURI` nyckelord eller en absolut plats.
 
-Du kan hämta JS- och CSS-filerna genom att öppna adobe-forms-&lt;appserver>.ear-fil. I den här filen öppnar du adobe-forms-res.war. Alla dessa filer finns i WAR-filen. Adobe-formulären&lt;appserver>.ear-filen finns i installationsmappen för AEM formulär (C:\ is the installation directory). Du kan öppna Adobe-formulären-&lt;appserver>Använd ett filextraheringsverktyg som WinRAR.
+Du kan hämta JS- och CSS-filerna genom att öppna adobe-forms-&lt;appserver>.ear-fil. I den här filen öppnar du adobe-forms-res.war. Alla dessa filer finns i WAR-filen. Adobe-formulären&lt;appserver>.ear-filen finns i AEM installationsmapp (C:\ är installationskatalogen). Du kan öppna Adobe-formulären-&lt;appserver>Använd ett filextraheringsverktyg som WinRAR.
 
 I följande XML-syntax visas ett exempel på filen fscmenu.xml.
 
@@ -110,7 +110,7 @@ När du anpassar ett verktygsfält kan du ändra det nationella värdet för ver
 
 >[!NOTE]
 >
->Det går inte att skapa ett anpassat verktygsfält på mer än ett språk. Verktygsfält kan inte använda olika XML-filer baserade på språkinställningarna.
+>Det går inte att skapa ett anpassat verktygsfält på flera språk. Verktygsfält kan inte använda olika XML-filer baserade på språkinställningarna.
 
 Om du vill ändra språkvärdet för ett verktygsfält kontrollerar du att filen fscmenu.xml innehåller det språk som du vill visa. Följande XML-syntax visar filen fscmenu.xml som används för att visa ett franskt verktygsfält.
 
@@ -301,7 +301,7 @@ När Forms-tjänsten återger ett HTML-formulär returneras ett formulärdatafl�
    * A `URLSpec` objekt som lagrar URI-värden som krävs för att återge ett HTML-formulär.
    * A `java.util.HashMap` objekt som lagrar bifogade filer. Den här parametern är valfri och du kan ange `null` om du inte tänker bifoga filer till formuläret.
    * En tom `com.adobe.idp.services.holders.BLOBHolder` objekt som fylls i av `renderHTMLForm` -metod. Det här parametervärdet lagrar det återgivna formuläret.
-   * En tom `com.adobe.idp.services.holders.BLOBHolder` objekt som fylls i av `renderHTMLForm` -metod. Den här parametern lagrar XML-data för utdata.
+   * En tom `com.adobe.idp.services.holders.BLOBHolder` objekt som fylls i av `renderHTMLForm` -metod. Den här parametern lagrar XML-utdata.
    * En tom `javax.xml.rpc.holders.LongHolder` objekt som fylls i av `renderHTMLForm` -metod. Det här argumentet lagrar antalet sidor i formuläret.
    * En tom `javax.xml.rpc.holders.StringHolder` objekt som fylls i av `renderHTMLForm` -metod. Det här argumentet lagrar språkets värde.
    * En tom `javax.xml.rpc.holders.StringHolder` objekt som fylls i av `renderHTMLForm` -metod. Det här argumentet lagrar återgivningsvärdet som används för HTML.

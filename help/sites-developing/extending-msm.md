@@ -1,19 +1,15 @@
 ---
 title: Utöka Multi Site Manager
-seo-title: Extending the Multi Site Manager
 description: Den här sidan hjälper dig att utöka funktionerna i Multi Site Manager
-seo-description: This page helps you extend the functionalities of the Multi Site Manager
-uuid: dfa7d050-29fc-4401-8d4d-d6ace6b49bea
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: extending-aem
 content-type: reference
-discoiquuid: 6128c91a-4173-42b4-926f-bbbb2b54ba5b
 docset: aem65
 exl-id: bba64ce6-8b74-4be1-bf14-cfdf3b9b60e1
-source-git-commit: 71b3f7c6ad2c7712762a29518de6cf0639081cb7
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2585'
+source-wordcount: '2578'
 ht-degree: 0%
 
 ---
@@ -23,7 +19,7 @@ ht-degree: 0%
 På den här sidan kan du utöka funktionerna i Multi Site Manager:
 
 * Läs mer om huvudmedlemmarna i MSM Java API.
-* Skapa en ny synkroniseringsåtgärd som kan användas i en utrullningskonfiguration.
+* Skapa en synkroniseringsåtgärd som kan användas i en utrullningskonfiguration.
 * Ändra standardspråk och landskoder.
 
 <!-- * Remove the "Chapters" step in the Create Site wizard. -->
@@ -111,7 +107,7 @@ The `LiveActionFactory` skapar instanser av `LiveAction` klass för en viss konf
 
 * `LiveAction` -klasser innehåller följande metoder:
 
-   * `getName`: Returnerar åtgärdens namn Namnet används för att referera till åtgärden, till exempel i utrullningskonfigurationer.
+   * `getName`: Returnerar åtgärdens namn. Namnet används för att referera till åtgärden, till exempel i utrullningskonfigurationer.
    * `execute`: Utför åtgärderna.
 
 * `LiveActionFactory` -klasserna innehåller följande medlemmar:
@@ -181,8 +177,6 @@ Den nya utrullningskonfigurationen är sedan tillgänglig för dig när du stäl
 >Se även [de bästa sätten att anpassa utrullningar](/help/sites-administering/msm-best-practices.md#customizing-rollouts).
 
 ### Skapa utrullningskonfiguration {#create-the-rollout-configuration}
-
-Så här skapar du en ny utrullningskonfiguration:
 
 1. Öppna CRXDE Lite, till exempel:
    [http://localhost:4502/crx/de](http://localhost:4502/crx/de)
@@ -600,7 +594,7 @@ In some cases, the **Chapters** selection is not required in the create site wiz
 1. In CRX Explorer, remove the node:
    `/etc/blueprints/weretail-english/jcr:content/dialog/items/tabs/items/tab_chap`.
 
-1. Navigate to `/libs/wcm/msm/templates/blueprint/defaults/livecopy_tab/items` and create a new node:
+1. Navigate to `/libs/wcm/msm/templates/blueprint/defaults/livecopy_tab/items` and create a node:
 
     1. **Name** = `chapters`; **Type** = `cq:Widget`.
 

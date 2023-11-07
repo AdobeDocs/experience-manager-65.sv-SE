@@ -10,9 +10,9 @@ geptopics: SG_AEMFORMS/categories/setting_up_and_managing_domains
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 1f15f028-aa81-478e-97eb-f83a4dc0418c
 exl-id: 30edcef2-e8fa-403a-9850-b8dfeeb9ac65
-source-git-commit: 1cdd15800548362ccdd9e70847d9df8ce93ee06e
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '3227'
+source-wordcount: '3226'
 ht-degree: 0%
 
 ---
@@ -36,7 +36,7 @@ Ange de kataloger som autentiseringsprovidern efterfrågar användarinformation 
 1. Välj Användarinställningar och konfigurera inställningarna efter behov. (Se [Kataloginställningar](configuring-directories.md#directory-settings).)
 1. Om du vill verifiera att det grundläggande unika namnet och andra konfigurerade attribut samlar in rätt grupp med användare klickar du på Testa. LDAP försöker hämta de första 200 posterna med de angivna inställningarna (till exempel bas-DN, sökfilter och alla attribut).
 
-   Om användarna returneras visar resultaten de värden som tilldelas varje fält enligt attributuppsättningen. Om testet misslyckas på grund av ett servernamn som inte finns, felaktig auktoriseringsinformation eller felaktiga attribut visas följande felmeddelande: &quot;De angivna sökvillkoren returnerade inget resultat&quot;. Granska undantaget i loggfilen för Application Server för att fastställa felets rotorsak. Klicka på Stäng och sedan på Nästa.
+   Om användarna returneras visar resultaten de värden som tilldelas varje fält enligt attributuppsättningen. Om testet misslyckas på grund av ett servernamn som inte finns, felaktig auktoriseringsinformation eller felaktiga attribut visas följande felmeddelande:&quot;De sökvillkor som anges returnerade inget resultat&quot;. Granska undantaget i loggfilen för Application Server för att fastställa felets rotorsak. Klicka på Stäng och sedan på Nästa.
 
 1. Välj Gruppinställningar och konfigurera inställningarna efter behov. (Se [Kataloginställningar](configuring-directories.md#directory-settings).)
 1. Om du vill verifiera att det grundläggande unika namnet och andra konfigurerade attribut samlar in rätt gruppuppsättning klickar du på Testa. Om grupper returneras visar resultaten de värden som tilldelas varje fält enligt attributuppsättningen. Klicka på Stäng.
@@ -78,7 +78,7 @@ När du synkroniserar dina domäner efter att ha tagit bort en katalog markeras 
 
 När du lägger till en katalog i en domän anger du följande kataloginställningar.
 
-**Server:** (Obligatoriskt) Fullständigt kvalificerat domännamn (FQDN) för katalogservern. För en dator som till exempel heter x i adobe.com-nätverket är FQDN x.adobe.com. En IP-adress kan användas i stället för FQDN-servernamnet.
+**Server:** (Obligatoriskt) Katalogserverns fullständiga domännamn (FQDN). För en dator som till exempel heter x i adobe.com är FQDN x.adobe.com. En IP-adress kan användas i stället för FQDN-servernamnet.
 
 **Port:** (Obligatoriskt) Den port som katalogservern använder. Vanligtvis 389, eller 636, om SSL-protokollet (Secure Sockets Layer) används för att skicka autentiseringsinformation över nätverket.
 
@@ -92,7 +92,7 @@ När du lägger till en katalog i en domän anger du följande kataloginställni
 
 **Namn:** Namn som kan användas för att ansluta till LDAP-databasen när anonym åtkomst inte har aktiverats. För Active Directory 2003 anger du `[domain name]\[userid]`. För Sun™ One, eDirectory eller IBM Tivoli Directory Server anger du det fullständiga, kvalificerade namnet på användaren, till exempel uid=lcuser,ou=it,o=company.com.
 
-**Lösenord:** Lösenord som motsvarar det namn du angav för att ansluta till LDAP-databasen när anonym åtkomst inte är aktiverat.
+**Lösenord:** Lösenord som motsvarar det namn du angav för att ansluta till LDAP-databasen när anonym åtkomst inte är aktiverad.
 
 **Fyll sida med:** När det här alternativet är markerat fylls attribut på användar- och gruppinställningssidorna i med motsvarande LDAP-standardvärden.
 
@@ -102,7 +102,7 @@ När du lägger till en katalog i en domän anger du följande kataloginställni
 
 >[!NOTE]
 >
->Klicka på Testa för att verifiera att det går att ansluta till LDAP-servern. Granska undantaget i loggfilen för programservern för att fastställa orsaken till eventuella fel.
+>Klicka på Testa för att verifiera att det går att ansluta till LDAP-servern. Om du vill ta reda på orsaken till eventuella fel granskar du undantaget i loggfilen för programservern.
 
 ### Användarinställningar {#user-settings}
 
@@ -138,7 +138,7 @@ Om du valde alternativet Aktivera referens i kataloginställningarna anger du ba
 
 **Affärskalender:** Ger dig möjlighet att mappa en affärskalender till en användare baserat på värdet för den här inställningen (affärskalendernyckeln). Affärskalendrar definierar affärsdagar och icke-affärsdagar. AEM kan använda affärskalendrar vid beräkning av framtida datum och tidpunkter för händelser som påminnelser, deadlines och eskalering. Hur du tilldelar användare affärskalendernycklar beror på om du använder en företagsdomän, lokal domän eller hybriddomän. (Se Konfigurera affärskalendrar.)
 
-Om du använder en företagsdomän kan du mappa inställningen för Business Calendar till ett fält i LDAP-katalogen. Om till exempel varje användarpost i din katalog innehåller en *land* och du vill tilldela affärskalendrar baserat på det land där användaren befinner sig, anger du *land* fältnamn som värde för inställningen för affärskalender. Du kan sedan mappa affärskalendernycklarna (de värden som definierats för *land* i LDAP-katalogen) till affärskalendrar i formulärarbetsflödet.
+Om du använder en företagsdomän kan du mappa inställningen för Business Calendar till ett fält i LDAP-katalogen. Om till exempel varje användarpost i katalogen innehåller en *land* och du vill tilldela affärskalendrar baserat på det land där användaren befinner sig, anger du *land* fältnamn som värde för inställningen för affärskalender. Du kan sedan mappa affärskalendernycklarna (de värden som definierats för *land* i LDAP-katalogen) till affärskalendrar i formulärarbetsflödet.
 
 Mängden utrymme som används för att visa namnet på affärskalendernyckeln på arbetsflödessidorna för formulär är begränsad. Begränsa namnet på affärskalendernyckeln till mindre än 53 tecken så att det inte trunkeras på dessa sidor.
 
@@ -216,7 +216,7 @@ Om användare och grupper returneras visar resultaten de värden som tilldelas v
 
 >[!NOTE]
 >
->Användarhantering stöder inte dubbla användar-ID:n inom en domän; bara en användare med användar-ID synkroniseras.
+>Användarhantering stöder inte duplicerade användar-ID:n inom en domän. Endast en användare med användar-ID synkroniseras.
 
 ## Konfigurera användarhantering för att använda VLV (Virtual List View) {#configure-user-management-to-use-virtual-list-view-vlv}
 
@@ -234,7 +234,7 @@ LDAP-protokollet innehåller en mekanism för att fråga stora datauppsättninga
 
 ### Konfigurera Sun ONE Directory Server for VLV {#configuring-the-sun-one-directory-server-for-vlv}
 
-För att skapa en VLV krävs ett par poster som innehåller `vlvSearch` och `vlvIndex` objektklasser. vlvSearch-posten innehåller en sökbas och `vlvFilter` -attribut, som anger den objektklass som innehåller de attribut som du vill sortera. The `vlvIndex` objektklassen innehåller `vlvSort` -attribut, som anger ett eller flera attribut att sortera och i vilken ordning de ska sorteras. (Ett minustecken (-) anger omvänd alfabetisk ordning). Att använda VLV med AEM formulär kräver separata poster för användare och grupper.
+För att skapa en VLV krävs ett par poster som innehåller `vlvSearch` och `vlvIndex` objektklasser. vlvSearch-posten innehåller en sökbas och `vlvFilter` -attribut, som anger den objektklass som innehåller de attribut som du vill sortera. The `vlvIndex` objektklassen innehåller `vlvSort` -attribut, som anger ett eller flera attribut att sortera och i vilken ordning de ska sorteras. (Ett minustecken (-) betecknar omvänd alfabetisk ordning). Att använda VLV med AEM formulär kräver separata poster för användare och grupper.
 
 >[!NOTE]
 >
@@ -263,11 +263,11 @@ Här följer ett exempel på LDIF för VLV-post för användare:
 
 1. Exempelskriptet har en LDAP-post med namnet `lcuser`. Den här posten är avsedd för VLV-relaterad konfiguration för användarsynkronisering i AEM formulär. Ändra följande egenskaper i enlighet med detta:
 
-   **Postnamn:** Posten i det här exemplet är `lcuser`. If `lcuser` ändras måste den ändras i alla områden i exempelskriptet.
+   **Postnamn:** Posten i exemplet är `lcuser`. If `lcuser` ändras måste den ändras i alla områden i exempelskriptet.
 
-   **vlvBase:** Det basnamn som har angetts på sidan Användarinställningar.
+   **vBase:** Det basnamn som har angetts på sidan Användarinställningar.
 
-   **vlvFilter:** Det sökfilter som anges på sidan Användarinställningar.
+   **vFilter:** Det sökfilter som anges på sidan Användarinställningar.
 
    **vlvSort:** Det sorteringsfält som anges i avsnittet VLV-inställningar på sidan Användarinställningar. En VLV-kontroll kräver att du anger en sorteringskontroll. Det här fältet används som sorteringsparameter för det VLV-index som skapas.
 
@@ -307,7 +307,7 @@ När du har konfigurerat kataloginställningarna och skapat LDAP VLV-poster för
     [21/Nov/2007:16:47:29 +051800] - userRoot: Finished indexing.
    ```
 
-   Vlvindex-verktyget finns i katalogserverns instanskatalog. Om Sun ONE Server har två instanser som kör server1 och server2 finns verktyget vlvindex i *Sun ONE server directory*\server1-katalog. Värdet för parametern `-T` är värdet för `cn` attribut för den vlvindex-post som tidigare skapats i LDIF-provet. I det här fallet är det `lcuser`.
+   Vlvindex-verktyget finns i katalogserverns instanskatalog. Om Sun ONE Server har två instanser som kör server1 och server2 är vlvindex-verktyget i *Sun ONE server directory*\server1-katalog. Värdet för parametern `-T` är värdet för `cn` attribut för den vlvindex-post som tidigare skapats i LDIF-provet. I det här fallet är det `lcuser`.
 
 1. Om VLV även är aktiverat för grupper skapar du motsvarande index för grupperna. Kontrollera om indexen har skapats med följande kommando:
 

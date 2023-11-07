@@ -6,7 +6,7 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: introduction
 content-type: reference
 exl-id: 6ce6a204-db59-4ed2-8383-00c6afba82b4
-source-git-commit: f7b24617dec77c6907798b1615debdc2329c9d80
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '1775'
 ht-degree: 0%
@@ -53,7 +53,7 @@ Ytterligare databegränsningar som obligatoriska eller typ- och värdebegränsni
 
 #### Exempel {#example-1}
 
-Ovanstående exempel på en `lastModified` Date-egenskapen på till exempel bloggen post-noden betyder inte att det finns ett behov av en särskild nodtyp. Jag skulle definitivt använda `nt:unstructured` för mina blogginläggsnoder åtminstone från början. Allt jag gör i mitt bloggprogram är att visa datumet lastModified i alla fall (eventuellt &quot;order by&quot;). Jag bryr mig knappt om det är ett datum alls. Eftersom jag ändå litar på att mitt blogginläggsprogram ska placera ett &quot;datum&quot; så finns det ingen anledning att deklarera en `lastModified` datum i form av en nodtyp.
+Ovanstående exempel på en `lastModified` Date-egenskapen för till exempel noden&quot;blog post&quot; innebär inte att det finns ett behov av en särskild nodtyp. Jag skulle definitivt använda `nt:unstructured` för mina blogginläggsnoder åtminstone från början. Allt jag gör i mitt bloggprogram är att visa datumet lastModified i alla fall (eventuellt &quot;order by&quot;). Jag bryr mig knappt om det är ett datum alls. Eftersom jag ändå litar på att mitt blogginläggsprogram ska placera ett &quot;datum&quot; så finns det ingen anledning att deklarera en `lastModified` datum i form av en nodtyp.
 
 ### Regel 2: Kör innehållshierarkin, låt det inte ske. {#rule-drive-the-content-hierarchy-don-t-let-it-happen}
 

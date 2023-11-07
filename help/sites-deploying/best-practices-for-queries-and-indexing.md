@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: best-practices
 exl-id: 6dfaa14d-5dcf-4e89-993a-8d476a36d668
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '4609'
+source-wordcount: '4602'
 ht-degree: 0%
 
 ---
@@ -85,7 +85,7 @@ Medan alla frågor konverteras till SQL2 innan de körs är overheadkostnaden f�
 
 ### Verktyget Förklara fråga {#the-explain-query-tool}
 
-Precis som med andra frågespråk är det första steget för att optimera en fråga att förstå hur den kommer att köras. Om du vill aktivera aktiviteten kan du använda [Förklara fråga, verktyg](/help/sites-administering/operations-dashboard.md#explain-query) som ingår i kontrollpanelen för åtgärder. Med det här verktyget kan en fråga kopplas in och förklaras. En varning visas om frågan kommer att orsaka problem med en stor databas och körningstid samt de index som kommer att användas. Verktyget kan även läsa in en lista med långsamma och populära frågor som sedan kan förklaras och optimeras.
+Precis som med andra frågespråk är det första steget för att optimera en fråga att förstå hur den kommer att köras. Om du vill aktivera aktiviteten kan du använda [Förklara fråga, verktyg](/help/sites-administering/operations-dashboard.md#explain-query) som ingår i kontrollpanelen för åtgärder. Med det här verktyget kan en fråga kopplas in och förklaras. En varning visas om frågan kommer att orsaka problem med en stor databas och körningstid samt de index som används. Verktyget kan även läsa in en lista med långsamma och populära frågor som sedan kan förklaras och optimeras.
 
 ### DEBUG-loggning för frågor {#debug-logging-for-queries}
 
@@ -109,7 +109,7 @@ När du är inloggad på JMX-konsolen söker du efter **Lucene Index Statistik**
 
 För frågestatistik kan du titta på MBean med namnet **Oak Query-statistik**.
 
-Om du vill gå in i indexen med ett verktyg som [Luke](https://code.google.com/archive/p/luke/)måste du använda Oak-konsolen för att dumpa indexvärdet från `NodeStore` till en filsystemkatalog. Anvisningar om hur du gör detta finns i [Lucene-dokumentation](https://jackrabbit.apache.org/oak/docs/query/lucene.html).
+Om du vill gå in i indexen med ett verktyg som [Luke](https://code.google.com/archive/p/luke/)måste du använda Oak-konsolen för att dumpa indexvärdet från `NodeStore` till en filsystemkatalog. Instruktioner om hur du gör detta finns i [Lucene-dokumentation](https://jackrabbit.apache.org/oak/docs/query/lucene.html).
 
 Du kan också extrahera indexvärdena i systemet i JSON-format. Om du vill göra det måste du ha tillgång till `https://server:port/oak:index.tidy.-1.json`
 
@@ -166,7 +166,7 @@ Vanligtvis rekommenderar vi att du använder Lucene-index, såvida det inte finn
 
 ### Solr-indexering {#solr-indexing}
 
-AEM har även stöd för Solr-indexering som standard. Detta används för att stödja fullständig textsökning, men det kan också användas för att stödja alla typer av JCR-frågor. Solr bör beaktas när AEM inte har processorkapacitet att hantera antalet frågor som krävs vid sökintensiva distributioner, som sökdrivna webbplatser med ett stort antal samtidiga användare. Solr kan också implementeras i en crawlningsbaserad metod för att använda några av de mer avancerade funktionerna i plattformen.
+AEM har även stöd för Solr-indexering som standard. Detta används för att stödja textsökning, men det kan också användas för att stödja alla typer av JCR-frågor. Solr bör beaktas när AEM inte har processorkapacitet att hantera antalet frågor som krävs vid sökintensiva distributioner, som sökdrivna webbplatser med ett stort antal samtidiga användare. Solr kan också implementeras i en crawlningsbaserad metod för att använda några av de mer avancerade funktionerna i plattformen.
 
 Solr-index kan konfigureras för att köras inbäddade på AEM server för utvecklingsmiljöer eller avlastas till en fjärrinstans för att förbättra sökskalbarheten i produktions- och stagningsmiljöer. När du avlastar sökningen förbättras skalbarheten, vilket medför fördröjning och därför rekommenderas inte om det inte krävs. Mer information om hur du konfigurerar Solr-integrering och hur du skapar Solr-index finns i [Frågor och indexering](/help/sites-deploying/queries-and-indexing.md#the-solr-index).
 
@@ -189,7 +189,7 @@ I Oak-dokumentationen för Lucene-index finns flera saker att tänka på när du
 * I ett egenskapsindex kan det vara till hjälp att minska storleken på ett index om du har ett unikt egenskapsnamn, men för Lucene-index kan du använda `nodeTypes` och `mixins` bör göras för att uppnå sammanhängande index. Fråga en viss `nodeType` eller `mixin` blir mer prestandaförbättrande än att fråga `nt:base`. När du använder det här arbetssättet definierar du `indexRules` för `nodeTypes` i fråga.
 
 * Om dina frågor bara körs under vissa sökvägar skapar du dessa index under dessa sökvägar. Index behöver inte finnas i databasens rot.
-* Du bör använda ett enda index när alla egenskaper som indexeras är relaterade så att Lucene kan utvärdera så många egenskapsbegränsningar som möjligt internt. Dessutom kommer en fråga endast att använda ett index, även när en koppling görs.
+* Använd ett enda index när alla egenskaper som indexeras är relaterade så att Lucene kan utvärdera så många egenskapsbegränsningar som möjligt internt. Dessutom kommer en fråga endast att använda ett index, även när en koppling görs.
 
 ### CopyOnRead {#copyonread}
 
@@ -426,7 +426,7 @@ Textförextrahering kan inte användas för nytt innehåll som läggs till i dat
 
 Nytt innehåll läggs till i databasen naturligt och inkrementellt efter den asynkrona fulltextindexeringsprocessen (som standard var femte sekund).
 
-Vid normal AEM, till exempel överföring av resurser via webbgränssnittet eller programmatisk import av resurser, indexeras det nya binära innehållet automatiskt och stegvis i heltextindexet av AEM. Eftersom datamängden är inkrementell och relativt liten (ungefär den datamängd som kan sparas i databasen på 5 sekunder) kan AEM utföra fulltextextraheringen från binärfilerna under indexeringen utan att påverka den övergripande systemprestandan.
+Vid normal användning av AEM, till exempel vid överföring av resurser via webbgränssnittet eller programmatisk import av resurser, kommer AEM automatiskt och stegvis att indexera det nya binära innehållet. Eftersom datamängden är inkrementell och relativt liten (ungefär den datamängd som kan sparas i databasen på 5 sekunder) kan AEM utföra fulltextextraheringen från binärfilerna under indexeringen utan att påverka den övergripande systemprestandan.
 
 #### Förutsättningar för att använda förextrahering av text {#prerequisites-to-using-text-pre-extraction}
 

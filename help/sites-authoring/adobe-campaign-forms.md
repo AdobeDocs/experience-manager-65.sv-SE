@@ -8,9 +8,9 @@ content-type: reference
 topic-tags: personalization
 discoiquuid: d53ef3e2-14ca-4444-b563-be67be15c040
 exl-id: 7d60673e-484a-4447-83cf-d62a0d7ad745
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1288'
+source-wordcount: '1286'
 ht-degree: 0%
 
 ---
@@ -54,7 +54,7 @@ Först och främst bör du kontrollera anslutningen mellan författaren och publ
 >Se till att **acMapping** på sidans **jcr:innehåll** noden är inställd på **mapRecipient** eller **profil** när du använder Adobe Campaign Classic eller Adobe Campaign Standard
 >
 
-1. I AEM navigerar du till den plats där du vill skapa en ny sida.
+1. I AEM navigerar du till den plats där du vill skapa en sida.
 1. Skapa en sida och markera **Adobe Campaign Classic-profil** eller **Adobe Campaign Standard-profil** och klicka **Nästa**.
 
    ![chlimage_1-43](assets/chlimage_1-43a.png)
@@ -95,7 +95,7 @@ I det här avsnittet beskrivs endast specifika länkar till Adobe Campaign. Mer 
    * **Adobe Campaign: Prenumerera på tjänster**: gör att du kan hantera prenumerationer för en mottagare i Adobe Campaign.
    * **Adobe Campaign: Avbeställ tjänsterna**: gör att du kan avbryta prenumerationen på en mottagare i Adobe Campaign.
 
-1. Du måste ha en **Krypterad primärnyckel** -komponenten i varje formulär. Den här komponenten definierar vilken URL-parameter som ska användas för att acceptera den krypterade primärnyckeln för en Adobe Campaign-profil. I Komponenter väljer du Adobe Campaign så att bara de komponenterna visas.
+1. Du måste ha en **Krypterad primärnyckel** -komponenten i varje formulär. Den här komponenten definierar vilken URL-parameter som används för att acceptera den krypterade primärnyckeln för en Adobe Campaign-profil. I Komponenter väljer du Adobe Campaign så att bara de komponenterna visas.
 1. Dra komponenten **Krypterad primärnyckel** till formuläret (var som helst) och klicka eller tryck på **Konfiguration** -ikon. I **Adobe Campaign** anger du ett namn för URL-parametern. Klicka eller tryck på bockmarkeringen för att spara ändringarna.
 
    Genererade länkar till det här formuläret måste använda den här URL-parametern och tilldela den krypterade primärnyckeln till en Adobe Campaign-profil. Den krypterade primärnyckeln måste vara rätt URL-kodad (procent).

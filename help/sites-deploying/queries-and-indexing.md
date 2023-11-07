@@ -8,9 +8,9 @@ topic-tags: deploying
 legacypath: /content/docs/en/aem/6-0/deploy/upgrade/queries-and-indexing
 feature: Configuring
 exl-id: d9ec7728-84f7-42c8-9c80-e59e029840da
-source-git-commit: c7c32130a3257c14c98b52f9db31d80587d7993a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '3034'
+source-wordcount: '3032'
 ht-degree: 0%
 
 ---
@@ -429,7 +429,7 @@ AEM kan även konfigureras för att fungera med en fjärrserver för Solr:
 
 #### Rekommenderad konfiguration för Solr {#recommended-configuration-for-solr}
 
-Nedan visas ett exempel på en baskonfiguration som kan användas med alla tre Solr-distributioner som beskrivs i den här artikeln. Den rymmer de dedikerade egenskapsindex som redan finns i AEM och bör inte användas med andra program.
+Nedan visas ett exempel på en baskonfiguration som kan användas med alla tre Solr-distributioner som beskrivs i den här artikeln. Den innehåller de dedikerade egenskapsindexen som redan finns i AEM. Använd inte med andra program.
 
 Om du vill använda det på rätt sätt måste du placera innehållet i arkivet direkt i Solr Home Directory. Om det finns distributioner med flera noder bör den placeras direkt under rotmappen för varje nod.
 

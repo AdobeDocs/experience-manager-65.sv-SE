@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: document_services
 discoiquuid: 32118d3b-54d0-4283-b489-780bdcbfc8d2
 exl-id: 9bf090db-2c14-439e-ad78-6832678a309d
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '6430'
+source-wordcount: '6419'
 ht-degree: 0%
 
 ---
@@ -32,7 +32,7 @@ Exempel och exempel i det här dokumentet hjälper dig att förstå och använda
 
 * Hämta och konfigurera [AEM Forms Client SDK](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) med dig AEM maven-projektet. De klientklasser som krävs för att skapa Maven Projects med AEM Document Services finns i [AEM Forms Client SDK](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html)
 
-* Lär dig [hur du bygger AEM projekt med Maven](/help/sites-developing/ht-projects-maven.md)
+* Läs [hur du bygger AEM projekt med Maven](/help/sites-developing/ht-projects-maven.md)
 
 ## DocAssurance-tjänst {#docassurance-service}
 
@@ -50,7 +50,7 @@ Du kan utföra följande åtgärder med tjänsten DocAssurance:
 * [Använd dokumenttidsstämpel](/help/forms/using/aem-document-services-programmatically.md#apply-document-timestamp)
 
 * [Hämta signatur](/help/forms/using/aem-document-services-programmatically.md#p-getting-signature-p)
-* [Hämta signaturfältlista](/help/forms/using/aem-document-services-programmatically.md#p-getting-signature-field-list-nbsp-p)
+* [Hämta signaturfältslista](/help/forms/using/aem-document-services-programmatically.md#p-getting-signature-field-list-nbsp-p)
 * [Ändra signaturfält](/help/forms/using/aem-document-services-programmatically.md#p-modifying-signature-fields-nbsp-p)
 
 * [Säkert dokument](/help/forms/using/aem-document-services-programmatically.md#p-securing-documents-p)
@@ -93,7 +93,7 @@ Digitala signaturer visas i signaturfält, som är formulärfält som innehålle
    <td>Dokumentobjekt som innehåller PDF.<br /> </td>
   </tr>
   <tr>
-   <td><code>signatureFieldName</code> </td>
+   <td><code>signatureFieldName</code><br /> </td>
    <td>Namnet på signaturfältet. Den här parametern är obligatorisk och kan inte ha värdet null.<br /> </td>
   </tr>
   <tr>
@@ -283,7 +283,7 @@ public Document addSignatureField(Document inDoc,
   </tr>
   <tr>
    <td><code>positionRectangle</code></td>
-   <td>A <code>PositionRectangle object</code> som anger signaturfältets position. Den här parametern är obligatorisk och kan inte acceptera ett null-värde. Om den angivna rektangeln inte finns åtminstone delvis i beskärningsrutan på den angivna sidan kan du <code>InvalidArgumentException</code> kastas. Dessutom kan varken höjden eller bredden på den angivna rektangeln vara 0 eller negativ. De nedre vänstra X-koordinaterna eller de nedre vänstra Y-koordinaterna kan vara 0 eller större men inte negativa och är relativa till sidans beskärningsruta.</td>
+   <td>A <code>PositionRectangle object</code> som anger positionen för signaturfältet. Den här parametern är obligatorisk och kan inte acceptera ett null-värde. Om den angivna rektangeln inte finns åtminstone delvis i beskärningsrutan på den angivna sidan kan du <code>InvalidArgumentException</code> kastas. Dessutom kan varken höjden eller bredden på den angivna rektangeln vara 0 eller negativ. De nedre vänstra X-koordinaterna eller de nedre vänstra Y-koordinaterna kan vara 0 eller större men inte negativa och är relativa till sidans beskärningsruta.</td>
   </tr>
   <tr>
    <td><code>fieldMDPOptionsSpec</code></td>
@@ -295,7 +295,7 @@ public Document addSignatureField(Document inDoc,
   </tr>
   <tr>
    <td><code>unlockOptions</code></td>
-   <td>Inkluderar de parametrar som krävs för att låsa upp en krypterad fil. Den här parametern krävs bara för krypterade filer.</td>
+   <td>Inkluderar de parametrar som krävs för att låsa upp en krypterad fil. Den här parametern krävs bara för de krypterade filerna.</td>
   </tr>
  </tbody>
 </table>
@@ -441,7 +441,7 @@ Du kan tidsstämpla ett dokument enligt [PAdES 4](https://en.wikipedia.org/wiki/
    <th>Beskrivning</th>
   </tr>
   <tr>
-   <td><code>doc</code> </td>
+   <td><code>doc</code><br /> </td>
    <td>Dokumentobjekt som innehåller PDF.<br /> </td>
   </tr>
   <tr>
@@ -635,7 +635,7 @@ import com.adobe.fd.signatures.pki.client.types.prefs.TSPPreferencesImpl;
 
 ### Hämtar signatur {#getting-signature}
 
-Du kan hämta namnen på alla signaturfält som finns i ett PDF-dokument som du vill signera eller certifiera. Om du inte är säker på vilka signaturfältsnamn som finns i ett PDF-dokument eller om du vill verifiera namnen hämtar du namnen programmatiskt. Signaturtjänsten returnerar signaturfältets kvalificerade namn, till exempel `form1[0].grantApplication[0].page1[0].SignatureField1[0]`.
+Du kan hämta namnen på alla signaturfält i ett PDF-dokument som du vill signera eller certifiera. Om du inte är säker på signaturfältens namn i ett PDF-dokument eller om du vill verifiera namnen, hämtar du namnen programmatiskt. Signaturtjänsten returnerar signaturfältets kvalificerade namn, till exempel `form1[0].grantApplication[0].page1[0].SignatureField1[0]`.
 
 **Syntax**: `getSignature(Document doc, String signatureFieldName, UnlockOptions unlockOptions)`
 
@@ -648,7 +648,7 @@ Du kan hämta namnen på alla signaturfält som finns i ett PDF-dokument som du 
    <th>Beskrivning</th>
   </tr>
   <tr>
-   <td><code>doc</code> </td>
+   <td><code>doc</code><br /> </td>
    <td>Dokumentobjekt som innehåller PDF.<br /> </td>
   </tr>
   <tr>
@@ -662,7 +662,7 @@ Du kan hämta namnen på alla signaturfält som finns i ett PDF-dokument som du 
  </tbody>
 </table>
 
-Följande Java-kodexempel hämtar signaturinformationen för det angivna signaturfältet som finns i ett PDF-dokument.
+Följande Java-kodexempel hämtar signaturinformationen för det angivna signaturfältet i ett PDF-dokument.
 
 ```java
 /*************************************************************************
@@ -704,12 +704,12 @@ import com.adobe.fd.signatures.pdf.inputs.UnlockOptions;
 import com.adobe.fd.signatures.client.types.PDFSignature;
 
 /**
- * You can retrieve the names of all signature fields that are located in a PDF document that you want to sign or certify.
- * If you are unsure of the signature field names that are located in a PDF document or you want to verify the names, you can
+ * You can retrieve the names of all signature fields that are in a PDF document that you want to sign or certify.
+ * If you are unsure of the signature field names that are in a PDF document or you want to verify the names, you can
  * programmatically retrieve them. The Signature service returns the fully qualified name of the signature field, such as
  * form1[0].grantApplication[0].page1[0].SignatureField1[0].
  *
- * The following Java code example retrieves the Signature Info for the given signature field located in a PDF document.
+ * The following Java code example retrieves the Signature Info for the given signature field in a PDF document.
  */
 
 @Component
@@ -757,9 +757,9 @@ public class GetSignature {
 }
 ```
 
-### Hämtar signaturfältlista  {#getting-signature-field-list-nbsp}
+### Hämtar signaturfältslista  {#getting-signature-field-list-nbsp}
 
-Du kan hämta namnen på alla signaturfält som finns i ett PDF-dokument som du vill signera eller certifiera. Om du är osäker på signaturfältens namn i ett PDF-dokument kan du hämta och verifiera dem programmatiskt. Signaturtjänsten returnerar signaturfältets kvalificerade namn, till exempel `form1[0].grantApplication[0].page1[0].SignatureField1[0]`.
+Du kan hämta namnen på alla signaturfält i ett PDF-dokument som du vill signera eller certifiera. Om du är osäker på signaturfältens namn i ett PDF-dokument kan du hämta och verifiera dem programmatiskt. Signaturtjänsten returnerar signaturfältets kvalificerade namn, till exempel `form1[0].grantApplication[0].page1[0].SignatureField1[0]`.
 
 **Syntax**: `public List <PDFSignatureField> getSignatureFieldList (Document inDoc, UnlockOptions unlockOptions)`
 
@@ -808,12 +808,12 @@ import com.adobe.fd.signatures.client.types.exceptions.SignaturesBaseException;
 import com.adobe.fd.signatures.pdf.inputs.UnlockOptions;
 
 /**
- * You can retrieve the names of all signature fields that are located in a PDF document that you want to sign or certify.
- * If you are unsure of the signature field names that are located in a PDF document or you want to verify the names, you can
+ * You can retrieve the names of all signature fields that are in a PDF document that you want to sign or certify.
+ * If you are unsure of the signature field names that are in a PDF document or you want to verify the names, you can
  * programmatically retrieve them. The Signature service returns the fully qualified name of the signature field, such as
  * form1[0].grantApplication[0].page1[0].SignatureField1[0].
  *
- * The following Java code example retrieves the names of signature fields located in a PDF document.
+ * The following Java code example retrieves the names of signature fields in a PDF document.
  */
 
 @Component
@@ -955,7 +955,7 @@ import com.adobe.fd.signatures.client.types.exceptions.SignaturesOtherException;
 import com.adobe.fd.signatures.pdf.inputs.UnlockOptions;
 
 /**
- * You can modify signature fields that are located in a PDF document by using the Java API and web service API. Modifying a signature field involves
+ * You can modify signature fields that are in a PDF document by using the Java API and web service API. Modifying a signature field involves
  * manipulating its signature field lock dictionary values or seed value dictionary values.
  * A field lock dictionary specifies a list of fields that are locked when the signature field is signed. A locked field prevents users from making
  * changes to the field. A seed value dictionary contains constraining information that is used at the time the signature is applied.
@@ -1063,11 +1063,11 @@ secureDocument(Document inDoc, EncryptionOptions encryptionOptions,
    <th>Beskrivning</th>
   </tr>
   <tr>
-   <td><code>inDoc</code> </td>
+   <td><code>inDoc</code><br /> </td>
    <td>Dokumentinmatningsdokument PDF<br /> </td>
   </tr>
   <tr>
-   <td><code>encryptionOptions</code> </td>
+   <td><code>encryptionOptions</code><br /> </td>
    <td>Inkluderar de argument som krävs för att kryptera ett PDF-dokument<br /> </td>
   </tr>
   <tr>
@@ -1076,7 +1076,7 @@ secureDocument(Document inDoc, EncryptionOptions encryptionOptions,
   </tr>
   <tr>
    <td><code>readerExtensionOptions</code></td>
-   <td>Innehåller de alternativ som krävs för att utöka ett PDF-dokument i Reader</td>
+   <td>Inkluderar de alternativ som krävs för att utöka ett PDF-dokument i Reader</td>
   </tr>
   <tr>
    <td><code>unlockOptions</code></td>
@@ -1365,7 +1365,7 @@ En algoritm används för att generera två stora tal, så kallade nycklar med f
 * En av nycklarna fungerar som en användares privata nyckel. Det är viktigt att bara användaren har tillgång till den här nyckeln.
 * Den andra nyckeln är användarens offentliga nyckel, som kan delas med andra.
 
-Ett certifikat för offentlig nyckel innehåller en användares offentliga nyckel och identifieringsinformation. X.509-formatet används för att lagra certifikat. Certifikat utfärdas och signeras vanligtvis digitalt av en certifikatutfärdare (CA), som är en erkänd enhet som kan mäta förtroendet för certifikatets giltighet. Certifikat har ett förfallodatum, efter vilket de inte längre är giltiga.
+Ett certifikat för offentlig nyckel innehåller en användares offentliga nyckel och identifieringsinformation. X.509-formatet används för att lagra certifikat. Certifikat utfärdas och signeras vanligtvis digitalt av en certifikatutfärdare (CA), som är en erkänd enhet som kan mäta förtroendet för certifikatets giltighet. Certifikat har ett förfallodatum och är inte längre giltiga.
 
 Dessutom innehåller listor över återkallade certifikat information om certifikat som återkallats före förfallodatumet. CRL-listor publiceras regelbundet av certifikatutfärdare. Återkallningsstatusen för ett certifikat kan också hämtas via OCSP (Online Certificate Status Protocol) via nätverket.
 
@@ -1401,7 +1401,7 @@ Den offentliga nyckeln lagras i användarens certifikat som måste vara tillgän
 
 Du kan skydda ett PDF-dokument genom att certifiera det med en viss typ av signatur som kallas för en certifierad signatur. En certifierad signatur skiljer sig från en digital signatur på följande sätt:
 
-Det måste vara den första signaturen som gäller för PDF-dokumentet. dvs. när den certifierade signaturen tillämpas måste alla andra signaturfält i dokumentet vara osignerade.
+Det måste vara den första signaturen som tillämpas på dokumentet i PDF. Det vill säga, när den certifierade signaturen tillämpas, måste alla andra signaturfält i dokumentet vara osignerade.
 
 Endast en certifierad signatur tillåts i ett PDF-dokument. Om du vill signera och certifiera ett PDF-dokument måste du certifiera det innan du signerar det.
 
@@ -1440,11 +1440,11 @@ secureDocument(Document inDoc,
    <th>Beskrivning</th>
   </tr>
   <tr>
-   <td><code>inDoc</code> </td>
+   <td><code>inDoc</code><br /> </td>
    <td>Dokumentindata PDF dokument<br /> </td>
   </tr>
   <tr>
-   <td><code>encryptionOptions</code> </td>
+   <td><code>encryptionOptions</code><br /> </td>
    <td>Inkluderar de argument som krävs för att kryptera ett PDF-dokument<br /> </td>
   </tr>
   <tr>
@@ -1764,7 +1764,7 @@ public class PassEncryptCertifyExtend {
 }
 ```
 
-**Exempel 2**: Det här exemplet används för att utföra PKI-kryptering, signera ett signaturfält och Reader utöka dokumentet PDF.
+**Exempel 2**: Det här exemplet används för att utföra PKI-kryptering, signera ett signaturfält och Reader för att utöka dokumentet PDF.
 
 ```java
 /*************************************************************************
@@ -2119,11 +2119,11 @@ Så här hämtar du information om användningsrättigheter för de autentiserin
    <th>Beskrivning</th>
   </tr>
   <tr>
-   <td><code>credentialAlias</code> </td>
+   <td><code>credentialAlias</code><br /> </td>
    <td>The <code>credentialAlias</code> som anger autentiseringsuppgifterna.<br /> </td>
   </tr>
   <tr>
-   <td><code>credentialPassword</code> </td>
+   <td><code>credentialPassword</code><br /> </td>
    <td>Lösenordet för autentiseringsuppgiften om autentiseringsuppgiften är krypterad, null måste användas om autentiseringsuppgiften inte är krypterad.<br /> </td>
   </tr>
  </tbody>
@@ -2210,7 +2210,7 @@ Om du vill hämta information om användningsrättigheter för ett visst dokumen
    <th>Beskrivning</th>
   </tr>
   <tr>
-   <td><code>inDocument</code> </td>
+   <td><code>inDocument</code><br /> </td>
    <td>Dokumentet som användningsrättighetsinformation ska hämtas från<br /> </td>
   </tr>
  </tbody>
@@ -2328,11 +2328,11 @@ Du kan ta bort användningsrättigheterna för ett dokument genom att anropa `re
    <th>Beskrivning</th>
   </tr>
   <tr>
-   <td><code>inDocument</code> </td>
+   <td><code>inDocument</code><br /> </td>
    <td>Dokumentet som användningsrättigheterna ska tas bort från.<br /> </td>
   </tr>
   <tr>
-   <td><code>unlockOptions</code> </td>
+   <td><code>unlockOptions</code><br /> </td>
    <td>Innehåller de parametrar som krävs för att låsa upp en krypterad fil. Detta krävs bara om filen är krypterad.<br /> </td>
   </tr>
  </tbody>
@@ -2455,17 +2455,17 @@ Digitala signaturer kan verifieras för att säkerställa att ett signerat PDF-d
    <th>Beskrivning</th>
   </tr>
   <tr>
-   <td><code>inDoc</code> </td>
+   <td><code>inDoc</code><br /> </td>
    <td>Dokumentobjekt som innehåller PDF<br /> </td>
   </tr>
   <tr>
    <td><code class="code">signatureField
-      Name</code> </td>
+      Name</code><br /> </td>
    <td>Namnet på det signaturfält som ska valideras. antingen ett fullständigt eller partiellt namn kan anges<br /> </td>
   </tr>
   <tr>
    <td><code>revocationCheckStyle</code></td>
-   <td>Alternativet att styra spärrkontroll av certifikat som påträffas under validering</td>
+   <td>Alternativet för att styra spärrkontroll av certifikat som påträffas under validering</td>
   </tr>
   <tr>
    <td><code>verificationTime</code></td>
@@ -2609,17 +2609,17 @@ public class VerifyFieldEncryptedPDF {
 
              //Determine the status of the signature
              if (sigStatus == SignatureStatus.DynamicFormSignatureUnknown)
-                 myStatus = "The signatures located in the dynamic PDF form are unknown";
+                 myStatus = "The signatures in the dynamic PDF form are unknown";
              else if (sigStatus == SignatureStatus.DocumentSignatureUnknown)
-                 myStatus = "The signatures located in the PDF document are unknown";
+                 myStatus = "The signatures in the PDF document are unknown";
              else if (sigStatus == SignatureStatus.CertifiedDynamicFormSignatureTamper)
-                 myStatus = "The signatures located in a certified PDF form are valid";
+                 myStatus = "The signatures in a certified PDF form are valid";
              else if (sigStatus == SignatureStatus.SignedDynamicFormSignatureTamper)
-                 myStatus = "The signatures located in a signed dynamic PDF form are valid";
+                 myStatus = "The signatures in a signed dynamic PDF form are valid";
              else if (sigStatus == SignatureStatus.CertifiedDocumentSignatureTamper)
-                 myStatus = "The signatures located in a certified PDF document are valid";
+                 myStatus = "The signatures in a certified PDF document are valid";
              else if (sigStatus == SignatureStatus.SignedDocumentSignatureTamper)
-                 myStatus = "The signatures located in a signed PDF document are valid";
+                 myStatus = "The signatures in a signed PDF document are valid";
              else if (sigStatus == SignatureStatus.SignatureFormatError)
                  myStatus = "The format of a signature in a signed document is invalid";
              else if (sigStatus == SignatureStatus.DynamicFormSigNoChanges)
@@ -2760,7 +2760,7 @@ public class VerifyFieldEncryptedPDF {
 
 ### Verifiera flera digitala signaturer {#verifying-multiple-digital-signatures}
 
-AEM kan du verifiera digitala signaturer i PDF-dokument. Ett PDF-dokument kan innehålla flera digitala signaturer om det genomgår en affärsprocess som kräver signaturer från flera signerare. En finansiell transaktion kräver till exempel underskrifter av både lånechefen och förvaltaren. Du kan använda API:t för signaturtjänsten för att verifiera alla signaturer i PDF-dokumentet. När du verifierar flera digitala signaturer kan du kontrollera status och egenskaper för varje signatur. Innan du litar på en elektronisk underskrift rekommenderar Adobe att du kontrollerar den.
+AEM kan du verifiera digitala signaturer i PDF-dokument. Ett PDF-dokument kan innehålla flera digitala signaturer om det genomgår en affärsprocess som kräver signaturer från flera signerare. En finansiell transaktion kräver till exempel underskrifter av både lånechefen och förvaltaren. Du kan använda Signature Service API för att verifiera alla signaturer i PDF-dokumentet. När du verifierar flera digitala signaturer kan du kontrollera status och egenskaper för varje signatur. Innan du litar på en elektronisk underskrift rekommenderar Adobe att du kontrollerar den.
 
 **Syntax**: `verifyDocument(Document doc, RevocationCheckStyle revocationCheckStyle, VerificationTime verificationTime, ValidationPreferences prefStore, ResourceResolver resourceResolver)`
 
@@ -2773,12 +2773,12 @@ AEM kan du verifiera digitala signaturer i PDF-dokument. Ett PDF-dokument kan in
    <th>Beskrivning</th>
   </tr>
   <tr>
-   <td><code>inDoc</code> </td>
+   <td><code>inDoc</code><br /> </td>
    <td>Dokumentobjekt som innehåller PDF<br /> </td>
   </tr>
   <tr>
    <td><code>revocationCheckStyle</code></td>
-   <td>Alternativet att styra spärrkontroll av certifikat som påträffas under validering</td>
+   <td>Alternativet för att styra spärrkontroll av certifikat som påträffas under validering</td>
   </tr>
   <tr>
    <td><code>verificationTime</code></td>
@@ -2913,7 +2913,7 @@ public class VerifyEncryptedPDFDoc {
                  dssPrefs,
                  resourceResolver);
 
-             //Get a list of all signatures that are located in the PDF document
+             //Get a list of all signatures that are in the PDF document
              List allSignatures = docInfo.getVerificationInfos();
 
            //Create an Iterator object and iterate through
@@ -2929,17 +2929,17 @@ public class VerifyEncryptedPDFDoc {
 
                    //Determine the status of the signature
                      if (sigStatus == SignatureStatus.DynamicFormSignatureUnknown)
-                         myStatus = "The signatures located in the dynamic PDF form are unknown";
+                         myStatus = "The signatures in the dynamic PDF form are unknown";
                      else if (sigStatus == SignatureStatus.DocumentSignatureUnknown)
-                         myStatus = "The signatures located in the PDF document are unknown";
+                         myStatus = "The signatures in the PDF document are unknown";
                      else if (sigStatus == SignatureStatus.CertifiedDynamicFormSignatureTamper)
-                         myStatus = "The signatures located in a certified PDF form are valid";
+                         myStatus = "The signatures in a certified PDF form are valid";
                      else if (sigStatus == SignatureStatus.SignedDynamicFormSignatureTamper)
-                         myStatus = "The signatures located in a signed dynamic PDF form are valid";
+                         myStatus = "The signatures in a signed dynamic PDF form are valid";
                      else if (sigStatus == SignatureStatus.CertifiedDocumentSignatureTamper)
-                         myStatus = "The signatures located in a certified PDF document are valid";
+                         myStatus = "The signatures in a certified PDF document are valid";
                      else if (sigStatus == SignatureStatus.SignedDocumentSignatureTamper)
-                         myStatus = "The signatures located in a signed PDF document are valid";
+                         myStatus = "The signatures in a signed PDF document are valid";
                      else if (sigStatus == SignatureStatus.SignatureFormatError)
                          myStatus = "The format of a signature in a signed document is invalid";
                      else if (sigStatus == SignatureStatus.DynamicFormSigNoChanges)
@@ -3071,7 +3071,7 @@ Du kan bara använda en ny digital signatur i ett signaturfält efter att du har
    <th>Beskrivning</th>
   </tr>
   <tr>
-   <td><code>inDoc</code> </td>
+   <td><code>inDoc</code><br /> </td>
    <td>Dokumentobjekt som innehåller PDF<br /> </td>
   </tr>
   <tr>
@@ -3079,7 +3079,7 @@ Du kan bara använda en ny digital signatur i ett signaturfält efter att du har
    <td>Namnet på signaturfältet<br /> </td>
   </tr>
   <tr>
-   <td><code>unlockOptions</code> </td>
+   <td><code>unlockOptions</code><br /> </td>
    <td>Inkluderar de parametrar som krävs för att låsa upp en krypterad fil. Detta är endast nödvändigt om filen är krypterad<br /> </td>
   </tr>
  </tbody>
@@ -3179,7 +3179,7 @@ public class ClearSignatureField {
 
 ### Hämtar certifieringssignaturfält {#getting-certifying-signature-field}
 
-Du kan hämta namnen på alla signaturfält som finns i ett PDF-dokument som du vill signera eller certifiera. Om du är osäker på vilka signaturfältsnamn som finns i ett PDF-dokument eller vill verifiera namnen, kan du hämta dem programmatiskt. Signaturtjänsten returnerar signaturfältets kvalificerade namn, till exempel `form1[0].grantApplication[0].page1[0].SignatureField1[0]`.
+Du kan hämta namnen på alla signaturfält i ett PDF-dokument som du vill signera eller certifiera. Om du är osäker på vilka signaturfältsnamn som finns i ett PDF-dokument eller vill verifiera namnen, kan du hämta dem programmatiskt. Signaturtjänsten returnerar signaturfältets kvalificerade namn, till exempel `form1[0].grantApplication[0].page1[0].SignatureField1[0]`.
 
 **Syntax**: `getCertifyingSignatureField(Document inDoc, UnlockOptions unlockOptions)`
 
@@ -3192,7 +3192,7 @@ Du kan hämta namnen på alla signaturfält som finns i ett PDF-dokument som du 
    <th>Beskrivning</th>
   </tr>
   <tr>
-   <td><code>inDoc</code> </td>
+   <td><code>inDoc</code><br /> </td>
    <td>Dokumentobjekt som innehåller PDF.<br /> </td>
   </tr>
   <tr>
@@ -3243,8 +3243,8 @@ import com.adobe.fd.signatures.client.types.exceptions.SignaturesBaseException;
 import com.adobe.fd.signatures.pdf.inputs.UnlockOptions;
 
 /**
- * You can retrieve the names of all signature fields that are located in a PDF document that you want to sign or certify.
- * If you are unsure of the signature field names that are located in a PDF document or you want to verify the names, you can
+ * You can retrieve the names of all signature fields that are in a PDF document that you want to sign or certify.
+ * If you are unsure of the signature field names that are in a PDF document or you want to verify the names, you can
  * programmatically retrieve them. The Signature service returns the fully qualified name of the signature field, such as
  * form1[0].grantApplication[0].page1[0].SignatureField1[0].
  *
@@ -3298,7 +3298,7 @@ public class GetCertifyingSignatureField {
 
 ### Hämtar krypteringstypen PDF {#getting-pdf-encryption-type}
 
-Du kan hämta namnen på alla signaturfält som finns i ett PDF-dokument som du vill signera eller certifiera. Om du är osäker på vilka signaturfältsnamn som finns i ett PDF-dokument eller vill verifiera namnen, kan du hämta dem programmatiskt. Signaturtjänsten returnerar signaturfältets kvalificerade namn, som `asform1[0].grantApplication[0].page1[0].SignatureField1[0]`.
+Du kan hämta namnen på alla signaturfält i ett PDF-dokument som du vill signera eller certifiera. Om du är osäker på vilka signaturfältsnamn som finns i ett PDF-dokument eller vill verifiera namnen, kan du hämta dem programmatiskt. Signaturtjänsten returnerar signaturfältets kvalificerade namn, som `asform1[0].grantApplication[0].page1[0].SignatureField1[0]`.
 
 **Syntax**: `void getPDFEncryption(Document inDoc)`
 
@@ -3311,13 +3311,13 @@ Du kan hämta namnen på alla signaturfält som finns i ett PDF-dokument som du 
    <th>Beskrivning</th>
   </tr>
   <tr>
-   <td><code>inDoc</code> </td>
+   <td><code>inDoc</code><br /> </td>
    <td>Ett dokument som anges som indata. Det kan vara krypterat eller inte.<br /> </td>
   </tr>
  </tbody>
 </table>
 
-Följande Java-kodexempel hämtar signaturinformationen för det angivna signaturfältet som finns i ett PDF-dokument.
+Följande Java-kodexempel hämtar signaturinformationen för det angivna signaturfältet i ett PDF-dokument.
 
 ```java
 /*************************************************************************
@@ -3359,12 +3359,12 @@ import com.adobe.fd.signatures.pdf.inputs.UnlockOptions;
 import com.adobe.fd.encryption.client.EncryptionTypeResult;
 
 /**
- * You can retrieve the names of all signature fields that are located in a PDF document that you want to sign or certify.
- * If you are unsure of the signature field names that are located in a PDF document or you want to verify the names, you can
+ * You can retrieve the names of all signature fields that are in a PDF document that you want to sign or certify.
+ * If you are unsure of the signature field names that are in a PDF document or you want to verify the names, you can
  * programmatically retrieve them. The Signature service returns the fully qualified name of the signature field, such as
  * form1[0].grantApplication[0].page1[0].SignatureField1[0].
  *
- * The following Java code example retrieves the Signature Info for the given signature field located in a PDF document.
+ * The following Java code example retrieves the Signature Info for the given signature field in a PDF document.
  */
 
 @Component
@@ -3427,11 +3427,11 @@ Ta bort lösenordsbaserad kryptering från ett PDF-dokument så att användare k
    <th>Beskrivning</th>
   </tr>
   <tr>
-   <td><code>inDoc</code> </td>
+   <td><code>inDoc</code><br /> </td>
    <td>Dokumentet tillhandahålls som indata. Den måste vara lösenordsskyddad.<br /> </td>
   </tr>
   <tr>
-   <td><code>password</code> </td>
+   <td><code>password</code><br /> </td>
    <td>Antingen ett öppet dokument eller ett behörighetslösenord som ska användas för att ta bort skyddet från dokumentet.<br /> </td>
   </tr>
  </tbody>
@@ -3526,11 +3526,11 @@ Du kan ta bort certifikatbaserad kryptering från ett PDF-dokument så att anvä
    <th>Beskrivning</th>
   </tr>
   <tr>
-   <td><code>inDoc</code> </td>
+   <td><code>inDoc</code><br /> </td>
    <td>Ett Document-objekt som representerar det certifikatkrypterade PDF-dokumentet.<br /> </td>
   </tr>
   <tr>
-   <td><code>alias</code> </td>
+   <td><code>alias</code><br /> </td>
    <td>Aliaset som motsvarar nyckeln i Granite Trust Store som används för att ta bort certifikatbaserad kryptering från PDF-dokumentet.<br /> </td>
   </tr>
   <tr>
@@ -3633,7 +3633,7 @@ Följande Java-kodexempel tar bort certifikatbaserad kryptering från ett PDF-do
     }
 ```
 
-## Utdatatjänst {#output-service}
+## Output Service {#output-service}
 
 Tjänsten Output innehåller API:er för att återge en XDP-fil i formaten .pdf, .pcl, .zpl och .ps. Tjänsten stöder följande API:er:
 
@@ -3647,7 +3647,7 @@ Tjänsten Output innehåller API:er för att återge en XDP-fil i formaten .pdf,
 
 ### generatePDFOutput {#generatepdfoutput}
 
-GenereraPDFOutput-API:t genererar ett PDF-dokument genom att sammanfoga en formulärdesign med data. Om du vill kan du generera en metadatafil för varje post eller spara utdata i en PDF-fil. Använd generatePDFOutput API för formulärdesigner eller data som lagras på en nätverksplats, ett lokalt filsystem eller en HTTP-plats som litteralvärden. Om formulärdesignen och XML-data lagras i ett program använder du [generatePDFOutput](/help/forms/using/aem-document-services-programmatically.md#p-generatepdfoutput-p) API.
+GenereraPDFOutput-API:t genererar ett PDF-dokument genom att sammanfoga en formulärdesign med data. Om du vill kan du generera en metadatafil för varje post eller spara utdata i en PDF-fil. Använd generatePDFOutput-API:t för formulärdesigner eller data som lagras på en nätverksplats, ett lokalt filsystem eller en HTTP-plats som litteralvärden. Om formulärdesignen och XML-data lagras i ett program använder du [generatePDFOutput](/help/forms/using/aem-document-services-programmatically.md#p-generatepdfoutput-p) API.
 
 **Syntax:** `Document generatePDFOutput(String uriOrFileName, Document data, PDFOutputOptions options);`
 
@@ -4460,7 +4460,7 @@ private File importData(File inDoc, File inXML)
 
 ## Tjänsten PDF Generator {#pdfgeneratorservice}
 
-PDF Generator-tjänsten tillhandahåller API:er för konvertering av inbyggda filformat till PDF. Dessutom konverteras PDF till andra filformat och storleken på PDF-dokument optimeras.
+Tjänsten PDF Generator tillhandahåller API:er för konvertering av inbyggda filformat till PDF. Dessutom konverteras PDF till andra filformat och storleken på PDF-dokument optimeras.
 
 ### GenereraPDFService {#generatepdfservice}
 
@@ -4469,7 +4469,7 @@ GeneratePDFService innehåller API:er för konvertering av olika filformat, till
 * **createPDF**: Konverterar en filtyp som stöds till ett PDF-dokument. Det stöder filformat som Microsoft Word, Microsoft PowerPoint, Microsoft Excel och Microsoft Project. Förutom dessa program kan alla andra tredje parters generiska programtyper för generering av PDF också kopplas till API:t.
 * **exportPDF**: Konverterar ett PDF-dokument till en filtyp som stöds. Metoden accepterar PDF som indata och exporterar innehållet i PDF i angivet filformat. Du kan exportera ett PDF-dokument i Encapsulated PostScript( eps), HTML 3.2( htm, html), HTML 4.01 med CSS 1.0( htm, html), JPEG( jpg, jpeg, jpe), JPEG2000( jpf, jpx, jp2, j2k, j2c, jpg) pc), Microsoft Word-dokument( doc, docx) Microsoft Excel-arbetsbok( xlsx), Microsoft PowerPoint-presentation( pptx), PNG( png), PostScript( ps), Rich Text Format( rtf), Text(Accessible)( txt), Text(Plain)( txt) TIFF(tif, tiff), XML 1.0( xml), PDF/A-1a(sRGB), PDF/A-1b, PDF/A-2a(sRGB), PDF/A-2b(sRGB), PDF/A-3a(sRGB), PDF/A-3b(sRGB). Du kan också ange [anpassade preflight-profiler](https://helpx.adobe.com/acrobat/using/preflight-profiles-acrobat-pro.html) för utdata från PDF.
 
-* **optimeraPDF**: Optimerar PDF-dokumentet och konverterar även ett PDF-dokument från en typ till en annan. Metoden accepterar ett PDF-dokument som indata.
+* **optimeraPDF**: Optimerar PDF-dokumentet och konverterar ett PDF-dokument från en typ till en annan. Metoden accepterar ett PDF-dokument som indata.
 * **htmlToPdf2**: Konverterar en HTML-sida till ett PDF-dokument. URL-adressen till HTML-sidan accepteras som indata.
 
 >[!NOTE]
@@ -4520,7 +4520,7 @@ För konverteringen är bara ett fåtal parametrar obligatoriska. Ett indatadoku
 
 CreatePDF-tjänsten returnerar en java.util.Map med resultat. Kartans nycklar är:
 
-* ConvertedDoc: Det innehåller det nya PDF-dokumentet.
+* ConvertedDoc: Det innehåller det nyskapade PDF-dokumentet.
 * LogDoc: Den innehåller loggfilen.
 
 CreatePDF-tjänsten ger följande undantag:
@@ -4585,7 +4585,7 @@ CreatePDF-tjänsten ger följande undantag:
  </tbody>
 </table>
 
-Följande Java-kod konverterar ett dokument av en filtyp som stöds till ett PDF-dokument.
+Följande Java-kod konverterar ett dokument av den filtyp som stöds till ett PDF-dokument.
 
 ```java
 @Reference GeneratePDFService generatePdfService;
@@ -4653,7 +4653,7 @@ Konverterar ett PDF-dokument till en filtyp som stöds. Metoden accepterar PDF s
 
 CreatePDF-tjänsten returnerar en java.util.Map med resultat. Kartans nycklar är:
 
-* ConvertedDoc: Den innehåller utdatadokumentet.
+* ConvertedDoc: Det innehåller utdatadokumentet.
 
 CreatePDF-tjänsten ger följande undantag:
 
@@ -4929,8 +4929,8 @@ Distiller-tjänsten konverterar PostScript-, Encapsulated PostScript- (EPS) och 
 
 CreatePDF-tjänsten returnerar en java.util.Map med resultat. Kartans nycklar är:
 
-* ConvertedDoc : Det innehåller det nya PDF-dokumentet.
-* LogDoc: Den innehåller loggfilen.
+* ConvertedDoc : Det innehåller det nyskapade PDF-dokumentet.
+* LogDoc : Den innehåller loggfilen.
 
 CreatePDF-tjänsten ger följande undantag:
 

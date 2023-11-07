@@ -9,9 +9,9 @@ docset: aem65
 tagskeywords: scoring, badging, badges, gamification
 role: Admin
 exl-id: 4aa857f7-d111-4548-8f03-f6d6c27acf51
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2852'
+source-wordcount: '2851'
 ht-degree: 0%
 
 ---
@@ -385,15 +385,15 @@ cURL -i -X POST -H *header* -u *signera* -F *operation* -F *bricka* *member-prof
 
 *header* = &quot;Acceptera:program/json&quot;, anpassad rubrik som ska skickas till servern (obligatoriskt)
 
-*signera* = administrator-id:password till exempel : admin:admin
+*signera* = administrator-id:password, till exempel, admin:admin
 
 *operation* = &quot;:operation=social:assignBadge&quot; OR &quot;:operation=social:deleteBadge&quot;
 
 *bricka* = &quot;badgeContentPath=*badge-image-file*&quot;
 
-*badge-image-file* = platsen för badge-bildfilen i databasen, till exempel: /libs/settings/community/badging/images/moderator/jcr:content/moderator.png
+*badge-image-file* = platsen för badge-bildfilen i databasen, till exempel /libs/settings/community/badging/images/moderator/jcr:content/moderator.png
 
-*member-profile-url* = slutpunkten för medlemmens profil vid publicering, till exempel: https://&lt;server>:&lt;port>/home/users/community/riley/profile.social.json
+*member-profile-url* = slutpunkten för medlemmens profil vid publicering, t.ex. https://&lt;server>:&lt;port>/home/users/community/riley/profile.social.json
 
 >[!NOTE]
 >
@@ -616,7 +616,7 @@ Nästa, [publicera igen](/help/communities/sites-console.md#publishing-the-site)
 Äntligen
 
 * Bläddra till komponenten i publiceringsinstansen.
-* Logga in som community-medlem (till exempel: weston.mccall@dodgit.com / lösenord).
+* Logga in som community-medlem (till exempel weston.mccall@dodgit.com/lösenord).
 * Lägg upp ett nytt forumtema.
 * Sidan måste uppdateras för att emblemet ska kunna visas.
 

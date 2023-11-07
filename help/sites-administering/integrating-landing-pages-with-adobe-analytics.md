@@ -10,16 +10,16 @@ topic-tags: personalization
 content-type: reference
 discoiquuid: 8ae7ccec-489b-4d20-ac56-6101402fb18a
 exl-id: da3f7b7e-87e5-446a-9a77-4b12b850a381
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '376'
+source-wordcount: '374'
 ht-degree: 0%
 
 ---
 
 # Integrera landningssidor med Adobe Analytics{#integrating-landing-pages-with-adobe-analytics}
 
-AEM har integrerat landningssidorna med [Adobe Analytics](https://www.omniture.com/en/products/analytics/sitecatalyst) genom att använda följande CTA-komponenter (Call-to-action):
+AEM har integrerat landningssidornas lösning med [Adobe Analytics](https://www.omniture.com/en/products/analytics/sitecatalyst) genom att använda följande CTA-komponenter (Call-to-action):
 
 1. Klicka genom komponent
 1. Komponent för grafisk länk
@@ -28,7 +28,7 @@ Dessa komponenter visar vissa attribut som kan mappas via Adobe Analytics-variab
 
 ## Förutsättningar {#prerequisites}
 
-Adobe rekommenderar att du går igenom [integrering med AEM-Adobe Analytics](/help/sites-administering/adobeanalytics.md) för att förstå hur den här integreringen fungerar.
+Adobe rekommenderar att du går igenom [integrering med AEM-Adobe Analytics](/help/sites-administering/adobeanalytics.md) för att förstå hur integreringen fungerar.
 
 ## Komponenter tillgängliga för mappning {#components-available-for-mapping}
 
@@ -40,7 +40,7 @@ AEM **Utlysning** komponenter - **ClickThroughLink** och **GraphicalLink** - som
 
 Så här mappar du landningssidans komponenter till Adobe Analytics:
 
-1. När du har skapat Adobe Analytics-konfigurationen och skapat ett nytt ramverk väljer du lämplig rapporteringssvit i listrutan. Detta leder till att Adobe Analytics-variablerna hämtas och visas i innehållssökaren.
+1. När du har skapat Adobe Analytics-konfigurationen och skapat ett ramverk väljer du lämplig rapporteringssvit i listrutan. Detta leder till att Adobe Analytics-variablerna hämtas och visas i innehållssökaren.
 1. Dra och släpp CTA-komponenter (Call to Action) från sidosparken till mappningsområdet mitt på sidan, beroende på vad som är lämpligt.
 
 <table>
@@ -89,7 +89,7 @@ Så här mappar du landningssidans komponenter till Adobe Analytics:
 </table>
 
 1. Mappa dessa exponerade attribut med eventuella Adobe Analytics-variabler från innehållssökaren. Ramverket är nu klart att användas.
-1. Nu kan du skapa en ny landningssida eller öppna en befintlig landningssida med befintliga CTA-komponenter och klicka på **Cloud Services** tabba in **Sidegenskaper** från sidosparken (i det pekoptimerade användargränssnittet väljer du **Öppna egenskaper** och klicka **Cloud Services**) och konfigurera ramverket som ska användas med landningssidan. Välj ramverket i listrutan.
+1. Nu kan du skapa en landningssida eller öppna en befintlig landningssida med befintliga CTA-komponenter och klicka på **Cloud Service** tabba in **Sidegenskaper** från sidosparken (i det pekoptimerade användargränssnittet väljer du **Öppna egenskaper** och klicka **Cloud Service**) och konfigurera ramverket som ska användas med landningssidan. Välj ramverket i listrutan.
 
    ![chlimage_1-25](assets/chlimage_1-25a.png)
 

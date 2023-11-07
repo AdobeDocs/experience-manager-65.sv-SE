@@ -10,9 +10,9 @@ geptopics: SG_AEMFORMS/categories/aem_forms_backup_and_recovery
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 6f775933-e989-4456-ad01-9bdf5dee3dad
 exl-id: 0d36160a-29fa-4cc4-a0ff-fc681d3e040e
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1090'
+source-wordcount: '1089'
 ht-degree: 1%
 
 ---
@@ -31,7 +31,7 @@ Det här innehållet beskriver hur bevakade mappar påverkas av olika scenarier 
 
 En användare eller ett klientprogram släpper först filen eller mappen i indatamappen. Tjänståtgärden flyttar sedan filen till scenmappen för bearbetning. När tjänsten har utfört den angivna åtgärden sparas den ändrade filen i utdatamappen. Källfiler som bearbetats har flyttats till mappen preserve och filer som inte kunde bearbetas har flyttats till felmappen. När `Preserve On Failure` om attributet för den bevakade mappen är aktiverat, flyttas misslyckade bearbetade källfiler till mappen preserve. (Se [Konfigurera bevakade mappslutpunkter](/help/forms/using/admin-help/configuring-watched-folder-endpoints.md#configuring-watched-folder-endpoints).)
 
-Du kan säkerhetskopiera bevakade mappar genom att säkerhetskopiera filsystemet.
+Du kan säkerhetskopiera bevakade mappar i filsystemet.
 
 >[!NOTE]
 >
@@ -39,7 +39,7 @@ Du kan säkerhetskopiera bevakade mappar genom att säkerhetskopiera filsystemet
 
 ## Hur bevakade mappar fungerar {#how-watched-folders-work}
 
-Det här innehållet beskriver den bevakade mappfilsbearbetningen. Det är viktigt att förstå denna process innan man utarbetar en återhämtningsplan. I det här exemplet `Preserve On Failure` -attributet för den bevakade mappen är aktiverat. Filerna bearbetas i den ordning som de kommer fram.
+Det här innehållet beskriver den bevakade mappfilsbearbetningen. Det är viktigt att förstå denna process innan man utarbetar en återhämtningsplan. I det här exemplet `Preserve On Failure` för den bevakade mappen är aktiverat. Filerna bearbetas i den ordning som de kommer fram.
 
 I följande tabell beskrivs filhanteringen för fem exempelfiler (fil1, fil2, fil3, fil4, fil5) under hela processen. I tabellen representerar x-axeln tid, till exempel Tid 1 eller T1, och y-axeln representerar mappar i den bevakade mapphierarkin, till exempel Indata.
 
@@ -112,7 +112,7 @@ I följande tabell beskrivs filhanteringen för fem exempelfiler (fil1, fil2, fi
 
 I följande text beskrivs filhanteringen för varje gång:
 
-**T1:** De fyra exempelfilerna placeras i indatamappen.
+**T1:** De fyra exempelfilerna placeras i indatamapp.
 
 **T2:** Tjänståtgärden flyttar fil1 till scenmappen för manipulering.
 
@@ -120,7 +120,7 @@ I följande text beskrivs filhanteringen för varje gång:
 
 **T4:** Tjänståtgärden placerar filen3 i scenmappen för manipulering. Resultatet av fil2 placeras i utdatamappen och fil2 placeras i den reserverade mappen.
 
-**T5:** Tjänståtgärden placerar fil4 i scenmappen för manipulering. Hanteringen av filen3 misslyckas och den placeras i felmappen.
+**T5:** Tjänståtgärden placerar fil4 i scenmappen för manipulering. Hanteringen av filen3 misslyckas och den placeras i felmappen av tjänståtgärden.
 
 **T6:** Tjänståtgärden placerar fil5 i indatamappen. Resultatet av filen 4 placeras i utdatamappen och filen 4 placeras i mappen preserve.
 
@@ -155,9 +155,9 @@ Följande strategier kan minimera dataförlust för utdata och indatamappar när
 * Säkerhetskopiera utdata och felmappar ofta, t.ex. en timme, för att undvika förlust av resultat och felfiler.
 * Säkerhetskopiera indatafilerna i en annan mapp än den bevakade mappen. Detta garanterar att filen är tillgänglig efter återställning om du inte kan hitta filerna i utdata- eller felmappen. Kontrollera att filnamnsschemat är konsekvent.
 
-   Om du till exempel sparar utdata med `%F.`*extension*, kommer utdatafilen att ha samma namn som indatafilen. Detta hjälper dig att avgöra vilka indatafiler som ska ändras och vilka som ska skickas igen. Om du bara ser filen file1_out i resultatmappen och inte filen2_out, file3_out och file4_out, måste du skicka filen 2, file3 och file4 igen.
+  Om du till exempel sparar utdata med `%F.`*extension*, får utdatafilen samma namn som indatafilen. Detta hjälper dig att avgöra vilka indatafiler som ska ändras och vilka som ska skickas igen. Om du bara ser filen file1_out i resultatmappen och inte filen2_out, file3_out och file4_out, måste du skicka filen 2, file3 och file4 igen.
 
-* Om den bevakade säkerhetskopian av mappen som är tillgänglig är äldre än den tid det tar att bearbeta jobbet, bör du låta systemet skapa en ny bevakad mapp och automatiskt placera filerna i indatamappen.
+* Om den bevakade säkerhetskopian av mappen som är tillgänglig är äldre än den tid det tar att bearbeta jobbet, bör du låta systemet skapa en bevakad mapp och automatiskt placera filerna i indatamappen.
 * Om den senaste tillgängliga säkerhetskopian inte är tillräckligt aktuell är säkerhetskopieringstiden kortare än den tid det tar att bearbeta filerna och den bevakade mappen återställs, har filen manipulerats i någon av följande steg:
 
    * **Steg 1:** I indatamappen
@@ -166,11 +166,11 @@ Följande strategier kan minimera dataförlust för utdata och indatamappar när
    * **Steg 4:** Hantering pågår
    * **Steg 5:** Returnerade resultat
 
-   Om filerna finns på scen 1 ändras de. Om filerna finns i scen 2 eller 3 placerar du dem i indatamappen så att ändringarna utförs igen.
+  Om filerna finns på scen 1 ändras de. Om filerna finns i scen 2 eller 3 placerar du dem i indatamappen så att ändringarna utförs igen.
 
-   >[!NOTE]
-   >
-   >Om en fil manipuleras mer än en gång förhindras dataförlust, men resultatet kan dupliceras.
+  >[!NOTE]
+  >
+  >Om en fil manipuleras mer än en gång förhindras dataförlust, men resultatet kan dupliceras.
 
 ## Slutsats {#conclusion}
 

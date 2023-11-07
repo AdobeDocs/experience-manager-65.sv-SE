@@ -2,7 +2,7 @@
 title: Läs om hur du skapar modeller för innehållsfragment i AEM
 description: Lär dig mer om koncept och mekanismer för att modellera innehåll för Headless CMS med Content Fragments Models.
 exl-id: b377e01f-e392-4ef5-a259-73ce9ff941d0
-source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '690'
 ht-degree: 2%
@@ -13,7 +13,7 @@ ht-degree: 2%
 
 ## Story hittills {#story-so-far}
 
-I början av [AEM Headless Content Author Journey](overview.md) den [Grundläggande om innehållsmodellering för Headless med AEM](basics.md) har omfattat de grundläggande begrepp och termer som är relevanta för utvecklingen av headless.
+I början av [AEM Headless Content Author Trney](overview.md) den [Grundläggande om innehållsmodellering för Headless med AEM](basics.md) har omfattat de grundläggande begrepp och termer som är relevanta för utvecklingen av headless.
 
 Den här artikeln bygger vidare på dessa så att du förstår hur du skapar egna modeller för innehållsfragment för AEM headless-projekt.
 
@@ -28,7 +28,7 @@ Den här artikeln bygger vidare på dessa så att du förstår hur du skapar egn
 <!--
 ## Enabling Content Fragment Models {#enabling-content-fragment-models}
 
-At the very start you need to enable Content Fragment Models for your site, this is done in the Configuration Browser; under Tools -> General -> Configuration Browser. You can either select to configure the global entry, or create a new configuration. For example:
+At the very start you need to enable Content Fragment Models for your site, this is done in the Configuration Browser; under Tools -> General -> Configuration Browser. You can either select to configure the global entry, or create a configuration. For example:
 
 ![Define configuration](/help/assets/content-fragments/assets/cfm-conf-01.png)
 
@@ -45,7 +45,7 @@ Sedan kan du skapa modellerna för innehållsfragment och definiera strukturen. 
 
 När du har valt detta navigerar du till modellens plats och väljer **Skapa**. Här kan du ange olika nyckeldetaljer.
 
-Alternativet **Aktivera modell** är aktiverat som standard. Det innebär att din modell kommer att vara tillgänglig för användning (när du skapar innehållsfragment) så snart du har sparat den. Du kan inaktivera detta om du vill - det finns möjligheter att senare aktivera (eller inaktivera) en befintlig modell.
+Alternativet **Aktivera modell** aktiveras som standard. Det innebär att din modell kommer att vara tillgänglig för användning (när du skapar innehållsfragment) så snart du har sparat den. Du kan inaktivera detta om du vill - det finns möjligheter att senare aktivera (eller inaktivera) en befintlig modell.
 
 ![Skapa innehållsfragmentmodell](/help/assets/content-fragments/assets/cfm-models-02.png)
 
@@ -63,7 +63,7 @@ Du kan dra instanser av **Datatyper** till vänster - du definierar redan din mo
 
 ![Definiera fält](/help/assets/content-fragments/assets/cfm-models-04.png)
 
-När du lägger till en datatyp måste du definiera **Egenskaper** för det fältet. De beror på vilken typ som används. Till exempel:
+När du har lagt till en datatyp måste du definiera **Egenskaper** för det fältet. De beror på vilken typ som används. Till exempel:
 
 ![Dataegenskaper](/help/assets/content-fragments/assets/cfm-models-05.png)
 
@@ -100,7 +100,7 @@ Modeller för innehållsfragment måste publiceras när/innan beroende innehåll
 
 Så snart en modell har publicerats *låst* till skrivskyddat läge på författaren. Detta syftar till att förhindra ändringar som kan leda till fel i befintliga GraphQL-scheman och -frågor, särskilt i publiceringsmiljön. Den anges i konsolen av **Låst**.
 
-När modellen är **Låst** (i läget SKRIVSKYDDAD) kan du se modellernas innehåll och struktur, men du kan inte redigera dem direkt; trots att du kan hantera **Låst** modeller från antingen konsolen eller modellredigeraren.
+När modellen är **Låst** (i läget SKRIVSKYDDAD) kan du se innehåll och struktur i modeller, men du kan inte redigera dem direkt, men du kan hantera dem **Låst** modeller från antingen konsolen eller modellredigeraren.
 
 ## What&#39;s Next {#whats-next}
 
@@ -110,7 +110,7 @@ Nu när du har lärt dig grunderna är nästa steg att börja skapa egna modelle
 
 * [Redigeringsbegrepp](/help/sites-authoring/author.md)
 
-* [Grundläggande hantering](/help/sites-authoring/basic-handling.md) - den här sidan är huvudsakligen baserad på **Webbplatser** konsol, men många/de flesta funktioner är också relevanta för att navigera till och vidta åtgärder på, **Modeller för innehållsfragment** under **Resurser** konsol.
+* [Grundläggande hantering](/help/sites-authoring/basic-handling.md) - den här sidan är huvudsakligen baserad på **Webbplatser** konsol, men många/de flesta funktioner är också relevanta för navigering till och åtgärder på, **Modeller för innehållsfragment** under **Resurser** konsol.
 
 * [Arbeta med innehållsfragment](/help/assets/content-fragments/content-fragments.md)
 

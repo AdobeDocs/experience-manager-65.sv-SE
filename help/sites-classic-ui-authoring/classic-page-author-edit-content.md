@@ -9,7 +9,7 @@ content-type: reference
 discoiquuid: de321869-ebf9-41a1-8203-e12bdb088678
 docset: aem65
 exl-id: e1b5aea0-983c-4e7b-9d35-d7beeee45dc7
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '1832'
 ht-degree: 0%
@@ -79,7 +79,7 @@ Så här infogar du en ny komponent:
 
    ![screen_shot_2012-02-15at115605am](assets/screen_shot_2012-02-15at115605am.png)
 
-1. I både sidesparken och **Infoga ny komponent** visas en lista med tillgängliga komponenter (stycketyper). Dessa kan delas upp i olika avsnitt (t.ex. Allmänt, Kolumner o.s.v.) som kan färdigställas efter behov.
+1. I både sidesparken och **Infoga ny komponent** visas en lista med tillgängliga komponenter (stycketyper). Dessa kan delas upp i olika avsnitt (t.ex. Allmänt, Kolumner och så vidare) som kan färdigställas efter behov.
 
    Beroende på din produktionsmiljö kan dessa alternativ skilja sig åt. Fullständig information om komponenter finns i [Standardkomponenter](/help/sites-classic-ui-authoring/classic-page-author-default-components.md).
 
@@ -87,7 +87,7 @@ Så här infogar du en ny komponent:
 
 ### Infoga en komponent med hjälp av Innehållssökning {#inserting-a-component-using-the-content-finder}
 
-Du kan också lägga till en ny komponent på sidan genom att dra en resurs från [Content Finder](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md#the-content-finder). Då skapas automatiskt en ny komponent av lämplig typ som innehåller resursen.
+Du kan också lägga till en ny komponent på sidan genom att dra en resurs från [Content Finder](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md#the-content-finder). Då skapas automatiskt en komponent av lämplig typ som innehåller resursen.
 
 Detta gäller för följande tillgångstyper (vissa kommer att vara beroende av sid-/styckesystem):
 

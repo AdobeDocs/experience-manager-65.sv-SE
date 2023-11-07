@@ -5,9 +5,9 @@ contentOwner: AG
 role: User, Admin
 feature: Metadata
 exl-id: 312fff5f-39c1-48c1-aa99-40feb72c2f59
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2708'
+source-wordcount: '2706'
 ht-degree: 6%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 6%
 
 Metadata är data om data. I det här avseendet avser data era digitala resurser, till exempel en bild. Metadata är avgörande för effektiv resurshantering.
 
-Metadata är en samling med alla data som är tillgängliga för en resurs, men som inte nödvändigtvis finns i bilden. Några exempel på metadata är:
+Metadata är en samling med alla data som är tillgängliga för en resurs, men som inte nödvändigtvis finns i den bilden. Några exempel på metadata är:
 
 * Namnet på resursen.
 * Tid och datum för senaste ändring.
@@ -42,7 +42,7 @@ Med hjälp av metadata ökar värdet på en digital resurs eftersom resursen bli
 * Enklare att hantera - du kan hitta resurser med samma uppsättning egenskaper enklare och använda ändringarna på dem.
 * Fullständigt - materialet innehåller mer information och sammanhang med fler metadata.
 
-Av dessa skäl [!DNL Assets] ger dig rätt sätt att skapa, hantera och utbyta metadata för digitala resurser.
+Av dessa skäl [!DNL Assets] ger dig rätt sätt att skapa, hantera och utbyta metadata för dina digitala resurser.
 
 ## Typer av metadata {#types-of-metadata}
 
@@ -53,7 +53,7 @@ Tekniska metadata är användbara för program som hanterar digitala resurser oc
 * Storlek på en fil.
 * Dimensioner (höjd och bredd) för en bild.
 * Bithastighet för en ljud- eller videofil.
-* Upplösning (detaljnivå) för en bild.
+* Bildens upplösning (detaljnivå).
 
 Beskrivande metadata är metadata som rör programdomänen, till exempel det företag som en resurs kommer från. Beskrivande metadata kan inte bestämmas automatiskt. Den skapas manuellt eller halvautomatiskt. En GPS-aktiverad kamera kan till exempel automatiskt spåra latitud och longitud och lägga till geotagga bilden.
 
@@ -100,7 +100,7 @@ Andra metadata som kan bäddas in från filer inkluderar [!DNL Microsoft Word], 
 
 Metadata-scheman är fördefinierade uppsättningar metadataegenskapsdefinitioner som kan användas i olika program. Egenskaper är alltid kopplade till en resurs, vilket innebär att egenskaperna är&quot;about&quot; för resursen.
 
-Du kan också utforma egna metadatamatchningar om det inte finns några som passar dina behov. Duplicera inte befintlig information. Inom en organisation gör separerade scheman det enklare att dela metadata. [!DNL Experience Manager] innehåller en standardlista med de vanligaste metadataschemana. Listan hjälper dig att snabbt komma igång med metadatastrategin och snabbt välja de metadataegenskaper du behöver.
+Du kan också utforma egna metadatamatchningar om det inte finns några som passar dina behov. Duplicera inte befintlig information. Inom en organisation gör separering av scheman det enklare att dela metadata. [!DNL Experience Manager] innehåller en standardlista med de vanligaste metadataschemana. Listan hjälper dig att snabbt komma igång med metadatastrategin och snabbt välja de metadataegenskaper du behöver.
 
 De metadatamappningar som stöds listas nedan.
 
@@ -109,7 +109,7 @@ De metadatamappningar som stöds listas nedan.
 * DC - [!DNL Dublin Core] är en viktig och allmänt använd uppsättning metadata.
 * DICOM - Digital Imaging and Communications in Medicine.
 * `Iptc4xmpCore` och `iptc4xmpExt` - International Press Communications Standard innehåller många ämnesspecifika metadata.
-* RDF - Resource Description Framework - för generiska semantiska webbmetadata.
+* RDF - Resource Description Framework - for generic semantic web metadata.
 * XMP - [!DNL Extensible Metadata Platform].
 * `xmpBJ` - Grundläggande jobbiljetter.
 
@@ -160,7 +160,7 @@ Programspecifika metadata innehåller tekniska och beskrivande metadata. Om du a
 
 ## Referens för metadatamappningar {#metadata-schemata-reference}
 
-Följande referens innehåller information om en viss metadataram (i alfabetisk ordning) samt en lista över egenskaper och deras definitioner.
+Följande referens innehåller information om ett visst metadataram (i alfabetisk ordning) och en lista över egenskaper och deras definitioner.
 
 ### Dublin Core {#dublin-core}
 
@@ -220,7 +220,7 @@ XMP standardiserar hur metadata definieras, skapas och bearbetas genom att tillh
 
 Alla äldre metadata från EXIF, ID3 eller Microsoft Office översätts automatiskt till XMP, som kan utökas för att stödja kundspecifika metadatamatchningar, som produktkataloger.
 
-Metadata i XMP består av en uppsättning egenskaper. Dessa egenskaper är alltid kopplade till en viss enhet som kallas resurs. Egenskaperna är alltså&quot;om&quot; resursen. När det gäller XMP är resursen alltid resursen.
+Metadata i XMP består av en uppsättning egenskaper. De här egenskaperna är alltid kopplade till en viss enhet som kallas en resurs, det vill säga egenskaperna är&quot;om&quot; resursen. När det gäller XMP är resursen alltid resursen.
 
 ### XMP ekosystem {#xmp-ecosystem}
 
@@ -264,15 +264,15 @@ XMP kan innehålla egenskaper från ett eller flera av scheman. En vanlig delmä
 
 #### Språkalternativ {#language-alternatives}
 
-XMP kan du lägga till en `xml:lang` egenskapen till textegenskaper för att ange textens språk.
+XMP kan du lägga till `xml:lang` egenskapen till textegenskaper för att ange textens språk.
 
 ## Arbeta med IPTC-metadata {#support-for-iptc-metadata}
 
 Lär dig mer [!DNL Adobe Experience Manager Assets] har stöd för IPTC-metadata, kreativa klassificeringar och nyckelord som läggs till i resurser via [!DNL Adobe Bridge] och andra [!DNL Adobe Creative Cloud] appar.
 
-[!DNL Adobe Experience Manager Assets] har stöd för IPTC-metadatastandarden som används ofta för att beskriva resurser. Den här vägen [!DNL Assets] ger bättre acceptans för bilderna hos olika parter, inklusive fotografer, byråer, bibliotek, museer osv.
+[!DNL Adobe Experience Manager Assets] har stöd för IPTC-metadatastandarden som används ofta för att beskriva resurser. Den här vägen, [!DNL Assets] ger bättre acceptans för bilderna hos olika parter, inklusive fotografer, byråer, bibliotek, museer osv.
 
-Standardschemat för metadata för mediefiler innehåller nu metadatamodeller för IPTC Core och IPTC Extension för att definiera omfattande metadataegenskaper som gör att användare kan lägga till exakta och tillförlitliga data om personer, platser och produkter som visas i en bild. Det har även stöd för datum, namn och identifierare för att skapa bilden samt ett flexibelt sätt att uttrycka rättighetsinformation.
+Standardschemat för metadata för mediefiler innehåller nu metadatamatchningar för IPTC Core och IPTC Extension för att definiera omfattande metadataegenskaper som gör att användare kan lägga till exakta och tillförlitliga data om personer, platser och produkter som visas i en bild. Det har även stöd för datum, namn och identifierare för att skapa bilden samt ett flexibelt sätt att uttrycka rättighetsinformation.
 
 Egenskapssidan för resurser innehåller nu separata flikar för att visa IPTC-kärnan och IPTC-tilläggsmetadata i redigerbara fält.
 

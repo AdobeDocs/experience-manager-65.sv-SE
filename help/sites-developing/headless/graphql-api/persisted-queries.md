@@ -2,9 +2,9 @@
 title: Beständiga GraphQL-frågor
 description: Lär dig hur du bibehåller GraphQL-frågor i Adobe Experience Manager för att optimera prestandan. Beständiga frågor kan begäras av klientprogram med HTTP GET-metoden och svaret kan cachas i Dispatcher- och CDN-lagren, vilket i slutänden förbättrar klientprogrammens prestanda.
 exl-id: d7a1955d-b754-4700-b863-e9f66396cbe1
-source-git-commit: 71b3f7c6ad2c7712762a29518de6cf0639081cb7
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1423'
+source-wordcount: '1422'
 ht-degree: 1%
 
 ---
@@ -195,7 +195,7 @@ GET <AEM_HOST>/graphql/execute.json/<PERSISTENT_PATH>
 
 Plats `PERSISTENT_PATH` är en förkortad sökväg där den beständiga frågan sparas.
 
-1. Till exempel `wknd` är konfigurationsnamnet och `plain-article-query` är namnet på den beständiga frågan. Så här kör du frågan:
+1. Till exempel: `wknd` är konfigurationsnamnet och `plain-article-query` är namnet på den beständiga frågan. Så här kör du frågan:
 
    ```shell
    $ curl -X GET \
@@ -227,7 +227,7 @@ Mönstret ser ut så här:
 <AEM_HOST>/graphql/execute.json/<PERSISTENT_QUERY_PATH>;variable1=value1;variable2=value2
 ```
 
-Följande fråga innehåller till exempel en variabel `activity` om du vill filtrera en lista baserat på ett aktivitetsvärde:
+Följande fråga innehåller en variabel `activity` om du vill filtrera en lista baserat på ett aktivitetsvärde:
 
 ```graphql
 query getAdventuresByActivity($activity: String!) {
@@ -395,10 +395,10 @@ Beständiga frågor kan byggas in i [AEM](/help/sites-administering/package-mana
 Skapa ett paket:
 
 1. Navigera till **verktyg** > **Distribution** > **Paket**.
-1. Skapa ett nytt paket genom att trycka **Skapa paket**. Då öppnas en dialogruta där du kan definiera paketet.
+1. Skapa ett paket genom att trycka **Skapa paket**. Då öppnas en dialogruta där du kan definiera paketet.
 1. I dialogrutan Paketdefinition, under **Allmänt** ange en **Namn** som &quot;wknd-persistent-queries&quot;.
 1. Ange ett versionsnummer som &quot;1.0&quot;.
-1. Under **Filter** lägg till en ny **Filter**. Använd Sökväg för att välja `persistentQueries` under konfigurationen. Till exempel `wknd` konfiguration som den fullständiga sökvägen kommer att `/conf/wknd/settings/graphql/persistentQueries`.
+1. Under **Filter** lägg till en ny **Filter**. Använd Sökväg för att välja `persistentQueries` under konfigurationen. För `wknd` konfiguration som den fullständiga sökvägen kommer att `/conf/wknd/settings/graphql/persistentQueries`.
 1. Tryck **Spara** för att spara den nya paketdefinitionen och stänga dialogrutan.
 1. Tryck på **Bygge** i den nyligen skapade paketdefinitionen.
 

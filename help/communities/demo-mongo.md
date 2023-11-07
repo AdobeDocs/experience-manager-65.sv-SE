@@ -8,9 +8,9 @@ content-type: reference
 discoiquuid: 0b126218-b142-4d33-a28c-a91ab4fe99ac
 role: Admin
 exl-id: 7e257b34-a0f5-47db-b1a9-e26333c287d9
-source-git-commit: b9c164321baa3ed82ae87a97a325fcf0ad2f6ca0
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '763'
+source-wordcount: '761'
 ht-degree: 0%
 
 ---
@@ -116,7 +116,7 @@ Om du vill konfigurera en Solr-samling för MSRP för demo måste du fatta två 
 
 Metoden för att köra Solr kan variera beroende på version och installationssätt. The [Referenshandbok för solenergi](https://archive.apache.org/dist/lucene/solr/ref-guide/) är den officiella dokumentationen.
 
-Om du till exempel använder version 4.10 kan du enkelt starta Solr i fristående läge:
+För enkelhetens skull kan du använda version 4.10 som exempel genom att starta Solr i fristående läge:
 
 * cd till &lt;solrinstall>/example
 * Java™ -jar start.jar
@@ -133,7 +133,7 @@ Uppdatera i så fall `etc/hosts` fil med en ny post för det här värdnamnet (t
 
 ### SolrCloud {#solrcloud}
 
-Om du vill köra en grundläggande (inte en produktionsbaserad) solrCloud-installation börjar du med:
+Om du vill köra en grundkonfiguration (inte en produktion) av molnet börjar du med:
 
 * `java -Dbootstrap_confdir=./solr/collection1/conf -Dbootstrap_conf=true -DzkRun -jar start.jar`
 
@@ -147,9 +147,9 @@ Följ instruktionerna på huvuddokumentationssidan: [MSRP - MongoDB Common Store
 
 ## Testa {#test}
 
-Om du vill testa och verifiera den gemensamma lagringsplatsen för MongoDB skickar du en kommentar på publiceringsinstansen och visar den på författarinstansen, samt UGC:n i MongoDB och Solr:
+Om du vill testa och verifiera den gemensamma lagringsplatsen för MongoDB skickar du en kommentar på publiceringsinstansen och visar den på författarinstansen, och visar UGC:n i MongoDB och Solr:
 
-1. I publiceringsinstansen bläddrar du till [Community Components Guide](http://localhost:4503/content/community-components/en/comments.html) och väljer kommentarkomponenten.
+1. I publiceringsinstansen bläddrar du till [Guide för communitykomponenter](http://localhost:4503/content/community-components/en/comments.html) och väljer kommentarkomponenten.
 1. Logga in för att publicera en kommentar:
 1. Ange text i kommentartextrutan och klicka på **[!UICONTROL Post]**
 

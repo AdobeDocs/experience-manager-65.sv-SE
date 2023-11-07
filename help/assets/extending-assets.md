@@ -5,9 +5,9 @@ contentOwner: AG
 role: Developer
 feature: Developer Tools
 exl-id: 0271c528-23b0-4a3a-b5e8-5baf6cdeecc7
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '252'
+source-wordcount: '250'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 Resursredigeraren är den primära åtkomstpunkten som användare på en Adobe Enterprise Manager-webbplats använder för att hitta, visa och ändra digitala resurser i din databas.
 
-Som en [!DNL Experience Manager] kan du anpassa och utöka Resursredigeraren på flera olika sätt och ge användarna ett särskilt skräddarsytt gränssnitt och en uppsättning funktioner.
+Som en [!DNL Experience Manager] kan du anpassa och utöka Resursredigeraren på flera sätt och ge användarna ett särskilt skräddarsytt gränssnitt och en uppsättning funktioner.
 
 Följande funktionalitetsaspekter kan anpassas eller förbättras:
 

@@ -9,9 +9,9 @@ topic-tags: site-features
 discoiquuid: 4ec6b408-a165-4617-8d90-e89d8a415bb3
 legacypath: /content/docs/en/aem/6-0/author/site-page-features/launches
 exl-id: bc7897da-15f6-4de4-a9fd-9dd84e6c7eed
-source-git-commit: e85aacd45a2bbc38f10d03915e68286f0a55364e
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1040'
+source-wordcount: '1039'
 ht-degree: 13%
 
 ---
@@ -40,7 +40,7 @@ Du kan skapa en start från Sites- eller Launches-konsolen:
 
    * **Launches**:
 
-      1. Välj **Skapa start** i verktygsfältet för att öppna guiden.
+      1. Välj **Skapa start** Öppna guiden i verktygsfältet.
 
    * **Sites**:
 
@@ -64,7 +64,7 @@ Du kan skapa en start från Sites- eller Launches-konsolen:
 
    >[!NOTE]
    >
-   >Om du vill lägga till sidor och/eller grenar i en lansering måste de finnas på en webbplats. dvs. under en gemensam toppnivårot.
+   >Om du vill lägga till sidor och/eller grenar i en programstart måste de finnas på en plats, dvs. under en gemensam toppnivårot.
    >
    >Om en webbplats innehåller språkrötter under den översta nivån måste sidorna och grenarna för en start ligga under en gemensam språkrot.
    >
@@ -83,13 +83,13 @@ Du kan skapa en start från Sites- eller Launches-konsolen:
 1. I **Egenskaper** steg i guiden som du kan ange:
 
    * **Starta titel**: Namnet på Launch. Namnet ska vara meningsfullt för författare.
-   * **med befintligt innehåll**: det ursprungliga innehållet kommer att användas för att skapa starten.
+   * **med befintligt innehåll**: det ursprungliga innehållet används för att skapa starten.
    * **använda en ny mall för att ersätta sidan**: Se [Skapa start med ny mall](#create-launch-with-new-template) för mer information.
    * **Ärv källsidans livedata**: Välj det här alternativet om du automatiskt vill uppdatera innehållet på startsidor när källsidorna ändras. Det här alternativet uppnår du genom att göra starten till [live copy](/help/sites-administering/msm.md).
 
      Som standard är det här alternativet markerat.
 
-   * **Startdatum**: Datum och tid då startkopian ska aktiveras (beroende på **Produktionsklar** Flagga. se [Startar - ordningen för händelser](/help/sites-authoring/launches.md#launches-the-order-of-events)).
+   * **Startdatum**: Det datum och den tidpunkt då startkopian ska aktiveras (beroende på **Produktionsklar** flagga, se [Startar - ordningen för händelser](/help/sites-authoring/launches.md#launches-the-order-of-events)).
 
    ![Ange egenskaper](assets/chlimage_1-227.png)
 
@@ -119,7 +119,7 @@ Om du väljer det här alternativet kommer det att:
 
 >[!CAUTION]
 >
->Om du använder en annan mall kommer den nya sidan att vara tom. På grund av den annorlunda sidstrukturen kommer inget innehåll att kopieras över.
+>Om du använder en annan mall kommer den nya sidan att vara tom. På grund av den annorlunda sidstrukturen kopieras inget innehåll.
 >
 >Den här funktionen kan användas för att ändra mallen för en [befintlig sida](/help/sites-authoring/managing-pages.md#creating-a-new-page) - även om innehållsförlusten måste beaktas.
 

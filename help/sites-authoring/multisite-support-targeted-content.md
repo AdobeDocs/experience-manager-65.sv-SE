@@ -10,9 +10,9 @@ content-type: reference
 topic-tags: personalization
 discoiquuid: 4dda6a03-d3ad-4e65-8b37-cee030fa4f7f
 exl-id: 5e345ffd-4e9c-467f-8ebb-c798eeb61dea
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2869'
+source-wordcount: '2855'
 ht-degree: 5%
 
 ---
@@ -34,7 +34,7 @@ I det här dokumentet beskrivs följande:
 
 Om du vill ange hur dina webbplatser ska dela personaliserat innehåll måste du utföra följande steg:
 
-1. [Skapa ett nytt område](#creating-new-areas) eller [skapa ett nytt område som live-kopia](#creating-new-areas). Ett område innehåller alla aktiviteter som är tillgängliga för en *area* på sidan, d.v.s. den plats på sidan där komponenten är avsedd. När du skapar ett nytt område skapas ett tomt område, medan du kan ärva innehåll i olika webbplatsstrukturer genom att skapa ett nytt område som en dynamisk kopia.
+1. [Skapa ett område](#creating-new-areas) eller [skapa ett område som en live-kopia](#creating-new-areas). Ett område innehåller alla aktiviteter som är tillgängliga för en *area* på sidan, d.v.s. den plats på sidan där komponenten är avsedd. När du skapar ett område skapas ett tomt område, medan du kan ärva innehåll över webbplatsstrukturer genom att skapa ett område som en live-kopia.
 
 1. [Länka webbplatsen eller sidan](#linking-sites-to-an-area) till ett område.
 
@@ -130,11 +130,11 @@ Du kan när som helst göra uppehåll i arvet eller helt koppla loss arvet. Du k
 >
 >Mer teknisk information om den här funktionen finns i [Hur hantering av flera webbplatser för riktat innehåll är strukturerad](/help/sites-authoring/technical-multisite-targeted.md).
 
-### Skapa ett nytt område jämfört med att skapa ett nytt område som livecopy {#creating-a-new-area-versus-creating-a-new-area-as-livecopy}
+### Skapa ett område jämfört med att skapa ett område som livecopy {#creating-a-new-area-versus-creating-a-new-area-as-livecopy}
 
-I AEM kan du skapa ett nytt område eller skapa nya områden som livecopy. När du skapar ett nytt område grupperas aktiviteter och allt som hör till dessa aktiviteter, som erbjudanden, upplevelser och så vidare. Du skapar ett nytt område när du antingen vill skapa en helt distinkt uppsättning målinnehåll eller vill dela en uppsättning målinnehåll.
+I AEM kan du skapa ett område eller skapa ett område som livecopy. Att skapa ett område grupperar aktiviteter och allt som hör till dessa aktiviteter, som erbjudanden, upplevelser och så vidare. Du skapar ett område när du antingen vill skapa en helt distinkt uppsättning målinnehåll eller vill dela en uppsättning målinnehåll.
 
-Om du har skapat arv via MSM mellan de två platserna kanske du vill ärva aktiviteterna. I det här fallet skapar du ett nytt område som en live-kopia, där Y är en live-kopia av X och därför även ärver alla aktiviteter.
+Om du har skapat arv via MSM mellan de två platserna kanske du vill ärva aktiviteterna. I det här fallet skapar du ett område som en live-kopia, där Y är en live-kopia av X och därför även ärver alla aktiviteter.
 
 >[!NOTE]
 >
@@ -159,7 +159,7 @@ Områden kan omfatta aktiviteter och erbjudanden. När du har skapat ett område
 >
 >Standardområdet som kallas masterområde komprimeras som standard när du trycker eller klickar på namnet på ett varumärke **tills** du skapar ett annat område. När du sedan väljer ett varumärke på konsolen **Aktivitet** eller **Erbjudanden** visas konsolen **Område**.
 
-Så här skapar du ett nytt område:
+Så här skapar du ett område:
 
 1. Navigera till **Personalisering** > **Aktiviteter** eller **Erbjudanden** och sedan till ert varumärke.
 1. Tryck eller klicka **Skapa område**.

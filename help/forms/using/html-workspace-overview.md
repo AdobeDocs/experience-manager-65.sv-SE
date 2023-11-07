@@ -10,9 +10,9 @@ topic-tags: forms-workspace
 discoiquuid: 866cd9cb-6661-4b0f-a3af-e39453e6e51b
 docset: aem65
 exl-id: 0bedcbd9-2cf8-47da-9440-c773982e550c
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1043'
+source-wordcount: '1042'
 ht-degree: 0%
 
 ---
@@ -35,11 +35,11 @@ Följ genomgången för att lära dig hur man skapar en blankettapplikation som 
 
 Du kan använda AEM Forms arbetsyta för att utföra följande uppgifter:
 
-**Påbörja en affärsprocess:** AEM Forms arbetsyta klassar dina processer som de har utformats och konfigurerats av din organisation. Du kan använda de kategorier du använder ofta till att snabbt komma åt kategorierna. När du påbörjar en process fyller du vanligtvis i ett formulär för att påbörja en affärsprocess som styr arbetsflödet för formulär. Mer information finns i [Startar processer](/help/forms/using/starting-processes.md).
+**Påbörja en affärsprocess:** AEM Forms arbetsyta kategoriserar dina processer så som de har utformats och konfigurerats av din organisation. Du kan använda de kategorier du använder ofta till att snabbt komma åt kategorierna. När du påbörjar en process fyller du vanligtvis i ett formulär för att påbörja en affärsprocess som styr arbetsflödet för formulär. Mer information finns i [Startar processer](/help/forms/using/starting-processes.md).
 
 **Visa och agera på uppgifter:** När du visar dina Att göra-listor kan du se uppgifter från en affärsprocess som är tilldelade dig, eller till grupper som du tillhör eller som är delade uppgifter för andra användare. Du kan öppna, arbeta med och slutföra uppgifter efter behov. Vanligtvis innebär det att tillhandahålla information, godkänna ett formulär eller avslå ett formulär. Mer information finns i [Arbeta med att göra-listor](/help/forms/using/todo-lists.md).
 
-**Spåra uppgifter**: Om du vill spåra dina uppgifter använder du fliken Spärra/knip på arbetsytan i AEM Forms. Du kan söka efter aktiva eller slutförda processer som du har påbörjat eller deltagit i. Du kan visa uppgifter, uppdrag och formulär som ingår i processen. Du kan också starta nya processer med formulärdata från en process som du tidigare har initierat. Mer information finns i [Spåra processer](/help/forms/using/tracking-processes.md).
+**Spåra uppgifter**: Om du vill spåra dina uppgifter använder du fliken Spåra i AEM Forms arbetsyta. Du kan söka efter aktiva eller slutförda processer som du har påbörjat eller deltagit i. Du kan visa uppgifter, uppdrag och formulär som ingår i processen. Du kan också starta nya processer med formulärdata från en process som du tidigare har initierat. Mer information finns i [Spåra processer](/help/forms/using/tracking-processes.md).
 
 ## Nytt erbjudande på AEM Forms arbetsyta {#new-offering-of-aem-forms-workspace}
 
@@ -53,7 +53,7 @@ Flex Workspace stöds inte för AEM Forms-kunder. Alla kunder som använder Flex
 
 I AEM Forms-arbetsytan har standardtjänsterna för återgivning och sändning, i standardåtgärdsprofilen, som är kopplad till XDP-formulär ändrats och nya tjänster introducerats. Mer information finns i [Ny renderings- och skicka-tjänst](/help/forms/using/new-render-submit-service.md). Om du vill migrera befintliga processer som fungerar med XDP-formulär och använda dessa tjänster kan du följa [dessa steg](new-render-submit-service.md).
 
-**Anpassa Flex Workspace med AEM Forms**
+**Anpassa Flex Workspace med AEM Forms arbetsyta**
 
 Mappningen mellan olika typer av anpassningar i båda arbetsytorna är följande.
 
@@ -99,14 +99,14 @@ Mappningen mellan olika typer av anpassningar i båda arbetsytorna är följande
    <td>
     <ol>
      <li><a href="/help/forms/using/description-reusable-components.md">Arbeta med återanvändbara komponenter</a></li>
-     <li><a href="/help/forms/using/creating-new-login-screen.md">Skapa en ny inloggningsskärm</a></li>
+     <li><a href="/help/forms/using/creating-new-login-screen.md">Skapa en inloggningsskärm</a></li>
      <li>Godkännandebehållaren är inaktuell.</li>
     </ol> </td>
   </tr>
  </tbody>
 </table>
 
-Några av de funktioner i Flex Workspace som inte finns på arbetsytan i AEM Forms är: meddelanden och meddelanden, välkomstsida, godkännandebehållare och alternativ för att hantera kolumnrubriker. En fullständig lista finns på [Funktioner i Flex Workspace som inte finns på AEM Forms arbetsyta](/help/forms/using/features-flex-workspace-available-html.md).
+En del av funktionerna i Flex Workspace som inte är tillgängliga på AEM Forms-arbetsytan är: meddelanden och meddelanden, välkomstsida, godkännandebehållare och alternativ för att hantera kolumnrubriker. En fullständig lista finns på [Funktioner i Flex Workspace som inte finns på AEM Forms arbetsyta](/help/forms/using/features-flex-workspace-available-html.md).
 
 ## Utveckla med AEM Forms arbetsyta {#developing-with-aem-forms-workspace}
 
