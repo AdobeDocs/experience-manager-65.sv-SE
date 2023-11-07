@@ -6,9 +6,9 @@ content-type: reference
 topic-tags: deploying
 noindex: true
 exl-id: d25e3070-080a-4594-8fdb-9f09164135fc
-source-git-commit: ae08247c7be0824151637d744f17665c3bd82f2d
+source-git-commit: 2a97935a81cf9c0a1a832dd27b62d388805863e0
 workflow-type: tm+mt
-source-wordcount: '1386'
+source-wordcount: '1385'
 ht-degree: 0%
 
 ---
@@ -40,7 +40,7 @@ Kontroll av skadade index kan göras med hjälp av `--index-consistency-check` o
 java -jar oak-run*.jar index --fds-path=/path/to/datastore  /path/to/segmentstore/ --index-consistency-check
 ```
 
-Detta genererar en rapport i `indexing-result/index-consistency-check-report.txt`. Nedan finns en exempelrapport:
+Detta genererar en rapport i `indexing-result/index-consistency-check-report.txt`. Nedan finns ett exempel på en rapport:
 
 ```
 Valid indexes :
@@ -96,7 +96,7 @@ java -jar oak-run*.jar index --fds-path=/path/to/datastore  /path/to/segmentstor
 
 Rapporterna genereras i `indexing-result/index-info.txt` och `indexing-result/index-definitions.json`
 
-Dessutom tillhandahålls samma information via webbkonsolen och ingår i konfigurationsdumpens zip. De kan nås på följande plats:
+Dessutom tillhandahålls samma information via webbkonsolen och skulle ingå i konfigurationsdumpens zip. De kan nås på följande plats:
 
 `https://serverhost:serverport/system/console/status-oak-index-defn`
 
@@ -149,14 +149,14 @@ För `SegmentNodeStore` omindexering av installationer kan göras på något av 
 
 Följ det etablerade sättet där omindexering sker genom inställning `reindex` flagga.
 
-#### Online Reindex - SegmentNodeStore - Den AEM instansen körs {#onlinereindexsegmentnodestoretheaeminstanceisrunning}
+#### Online Reindex - SegmentNodeStore - AEM körs {#onlinereindexsegmentnodestoretheaeminstanceisrunning}
 
 För `SegmentNodeStore` -installationer kan bara en process få åtkomst till segmentfiler i läs- och skrivläge. På grund av detta kräver vissa åtgärder vid körning av ekning att ytterligare manuella åtgärder vidtas.
 
 Detta skulle innebära följande:
 
-1. Stega text
-1. Anslut `oak-run` till samma databas som används av AEM i skrivskyddat läge och som utför indexering. Ett exempel på hur du kan uppnå detta:
+1. Stegtext
+1. Anslut `oak-run` till samma databas som används av AEM i skrivskyddat läge och som utför indexering. Ett exempel på hur man uppnår detta:
 
    ```shell
    java -jar oak-run-1.7.6.jar index --fds-path=/Users/dhasler/dev/cq/quickstart/target/crx-quickstart/repository/datastore/ --checkpoint 26b7da38-a699-45b2-82fb-73aa2f9af0e2 --reindex --index-paths=/oak:index/lucene /Users/dhasler/dev/cq/quickstart/target/crx-quickstart/repository/segmentstore/
@@ -164,7 +164,7 @@ Detta skulle innebära följande:
 
 1. Importera slutligen de skapade indexfilerna via `IndexerMBean#importIndex` från den sökväg där körningen sparade indexeringsfilerna efter att ovanstående kommando kördes.
 
-I det här fallet behöver du inte stoppa AEM eller etablera någon ny instans. När indexering innefattar genomgång av hela databasen skulle dock I/O-belastningen på installationen öka, vilket påverkar körningens prestanda negativt.
+I det här fallet behöver du inte stoppa AEM eller etablera någon ny instans. När indexering innebär att hela databasen genomgås, ökar dock I/O-belastningen på installationen, vilket påverkar körningens prestanda negativt.
 
 #### Online Reindex - SegmentNodeStore - Den AEM instansen är avstängd {#onlinereindexsegmentnodestoreaeminstanceisdown}
 
@@ -186,7 +186,7 @@ I det här fallet kan du indexera om en klonad installation för att minimera p�
 1. Kopiera `crx-quickstart` mapp till en ny dator
 1. Utför omindexering med hjälp av indexkommandot för ekvering
 
-1. Kopiera de genererade indexfilerna till AEM server
+1. Kopiera de genererade indexfilerna till AEM
 
 1. Importera indexfilerna via JMX.
 
@@ -194,13 +194,13 @@ I det här fallet antas det att datalagret är tillgängligt i en annan instans 
 
 ## Användningsfall 4 - Uppdaterar indexdefinitioner {#usecase4updatingindexdefinitions}
 
-För närvarande kan du överföra indexdefinitionsändringar via [ACS - säkerställ index](https://adobe-consulting-services.github.io/acs-aem-commons/features/ensure-oak-index/index.html) paket. På så sätt kan indexdefinitioner levereras med hjälp av innehållspaket som senare kräver omindexering för att kunna ställas in `reindex` flagga till `true`.
+För närvarande kan du överföra indexdefinitionsändringar via [ACS - säkerställ index](https://adobe-consulting-services.github.io/acs-aem-commons/features/ensure-oak-index/index.html) paket. På så sätt kan indexdefinitioner levereras med hjälp av innehållspaket som senare kräver omindexering genom att ange `reindex` flagga till `true`.
 
 Detta fungerar bra för mindre installationer där omindexering inte tar lång tid. För stora databaser sker dock omindexering på betydligt längre tid. I sådana fall kan vi nu använda indexverktygen för ekakning.
 
 Funktionen Oak-run har nu stöd för att tillhandahålla indexdefinitioner i JSON-format och att skapa index i out-of-band-läge där inga ändringar görs i en live-instans.
 
-Processen som ska beaktas i detta fall är:
+Processen som ska beaktas för detta användningsfall är:
 
 1. En utvecklare uppdaterar indexdefinitionerna på en lokal instans och genererar sedan en JSON-fil för indexdefinitioner med hjälp av `--index-definitions` option
 
