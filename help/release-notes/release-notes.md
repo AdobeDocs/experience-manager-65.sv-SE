@@ -3,9 +3,9 @@ title: Versionsinformation för [!DNL Adobe Experience Manager] 6.5
 description: Hitta versionsinformation, nyheter, installationsanvisningar och en detaljerad ändringslista för [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 4
 exl-id: d0dc5dfb-25a3-4388-a1d4-abba70081cc3
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 61f3079a88e39c02b29bfafc7b2b9d4d098cef6b
 workflow-type: tm+mt
-source-wordcount: '4612'
+source-wordcount: '4620'
 ht-degree: 0%
 
 ---
@@ -492,7 +492,7 @@ Du löser problemet genom att leta reda på `<AEM_Forms_Installation_dir>\jboss\
 
 #### Interaktiv kommunikation
 
-* När du har uppgraderat till AEM Service Pack 18 går det inte att redigera interaktiva kommunikationsbrev. (FORMS-10578) Åtgärda problemet genom att utföra följande steg:
+* När du har uppgraderat till AEM Service Pack 18 går det inte att öppna den interaktiva kommunikationen med stora textbundna bilder i redigeringsläget. (FORMS-10578) Åtgärda problemet genom att utföra följande steg:
 
    1. Ladda ned [Programfix-FORMS-10578](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html) från SD-länk.
    1. Extrahera Hotfix-arkivfilen så att du kan hämta Experience Manager-paketfiler (.zip) och paketfiler (.jar).
