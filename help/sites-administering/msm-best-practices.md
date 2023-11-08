@@ -4,9 +4,9 @@ description: Här hittar du de bästa arbetssätten som skapats av Adobe teknike
 topic-tags: site-features, best-practices
 feature: Multi Site Manager
 exl-id: 3fedc1ba-64f5-4fbe-9ee5-9b96b75dda58
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: e2a3470784beb04c2179958ac6cb98861acfaa71
 workflow-type: tm+mt
-source-wordcount: '1609'
+source-wordcount: '1604'
 ht-degree: 0%
 
 ---
@@ -160,7 +160,7 @@ Mer information finns i [Översätta innehåll för flerspråkiga webbplatser](/
 
 ## Anpassa utrullningar {#customizing-rollouts}
 
-MSM-utrullningskonfigurationer är mycket anpassningsbara. Du bör vara medveten om att automatisering av utrullningar kan få omfattande konsekvenser. Det bästa sättet är att planera *mycket* noggrant före, till exempel:
+MSM-utrullningskonfigurationer är mycket anpassningsbara. Automatisering av utrullningar kan få stora konsekvenser. Det bästa sättet är att planera *mycket* noggrant före, till exempel:
 
 * automatisera utrullningar, till exempel med [onModify-utlösare](#onmodify),
 * anpassa [nodtyper/egenskaper](#node-types-properties),

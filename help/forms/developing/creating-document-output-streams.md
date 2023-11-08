@@ -7,9 +7,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 role: Developer
 exl-id: a521bfac-f417-4002-9c5c-8d7794d3eec7
-source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
+source-git-commit: e2a3470784beb04c2179958ac6cb98861acfaa71
 workflow-type: tm+mt
-source-wordcount: '18965'
+source-wordcount: '18956'
 ht-degree: 0%
 
 ---
@@ -257,7 +257,7 @@ Skapa ett PDF-dokument med hjälp av utdata-API (Java):
 
    >[!NOTE]
    >
-   >När ett PDF-dokument skapas genom att `generatePDFOutput` ska du vara medveten om att du inte kan sammanfoga data med ett XFA PDF-formulär som är signerat eller certifierat. (Se [Digitalt signera och certifiera dokument ](/help/forms/developing/digitally-signing-certifying-documents.md#digitally-signing-and-certifying-documents)*.)*
+   >När ett PDF-dokument skapas genom att `generatePDFOutput` kan du inte sammanfoga data med ett XFA PDF-formulär som är signerat eller certifierat. (Se [Digitalt signera och certifiera dokument ](/help/forms/developing/digitally-signing-certifying-documents.md#digitally-signing-and-certifying-documents)*.)*
 
    >[!NOTE]
    >
@@ -354,7 +354,7 @@ Skapa ett PDF-dokument med hjälp av Output API (webbtjänsten):
 
    >[!NOTE]
    >
-   >När ett PDF-dokument skapas genom att `generatePDFOutput` ska du vara medveten om att du inte kan sammanfoga data med ett XFA PDF-formulär som är signerat eller certifierat. (Se [Digitalt signera och certifiera dokument ](/help/forms/developing/digitally-signing-certifying-documents.md#digitally-signing-and-certifying-documents)*.)*
+   >När ett PDF-dokument skapas genom att `generatePDFOutput` kan du inte sammanfoga data med ett XFA PDF-formulär som är signerat eller certifierat. (Se [Digitalt signera och certifiera dokument ](/help/forms/developing/digitally-signing-certifying-documents.md#digitally-signing-and-certifying-documents)*.)*
 
    >[!NOTE]
    >
@@ -1505,7 +1505,7 @@ När du har hämtat ett dokument som ska skrivas ut kan du anropa utdatatjänste
 
 >[!NOTE]
 >
->Om PDFG är installerat på formulärservern och servern körs på Windows Server 2008, kan du inte använda egenskapen SharedPrinter. I det här fallet använder du ett annat skrivarprotokoll.
+>Om PDFG är installerat på Forms Server och servern körs på Windows Server 2008 kan du inte använda egenskapen SharedPrinter. I det här fallet använder du ett annat skrivarprotokoll.
 
 >[!NOTE]
 >
@@ -2173,7 +2173,7 @@ Skapa sökregler med hjälp av Output API (webbtjänsten):
 
    >[!NOTE]
    >
-   >När ett PDF-dokument skapas genom att `generatePDFOutput` ska du vara medveten om att du inte kan sammanfoga data med ett XFA PDF-formulär som är signerat, certifierat eller innehåller användningsbehörighet. Mer information om användningsrättigheter finns i [Använda användningsbehörighet för PDF-dokument](/help/forms/developing/assigning-usage-rights.md#applying-usage-rights-to-pdf-documents).
+   >När ett PDF-dokument skapas genom att `generatePDFOutput` kan du inte sammanfoga data med ett XFA PDF-formulär som är signerat, certifierat eller innehåller användningsrättigheter. Mer information om användningsrättigheter finns i [Använda användningsbehörighet för PDF-dokument](/help/forms/developing/assigning-usage-rights.md#applying-usage-rights-to-pdf-documents).
 
 1. Hämta resultatet av åtgärden
 

@@ -8,7 +8,7 @@ geptopics: SG_AEMFORMS/categories/managing_endpoints
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: dcf15c42-9ec6-4d1c-ad41-083aa0b8c7ae
 exl-id: 33583a12-4f20-4146-baa4-c9854e454bbf
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: c4cd9a61a226ace2a72d60b5b7b7432de12cb873
 workflow-type: tm+mt
 source-wordcount: '3775'
 ht-degree: 0%
@@ -116,11 +116,11 @@ För att formulärarbetsflöden ska kunna ta emot och hantera inkommande e-postm
 
 **SMTP SSL aktiverat:** När det här alternativet är markerat aktiveras SSL över SMTP.
 
-**Inkludera den ursprungliga e-postmeddelandetexten som en bifogad fil:** När du skickar ett e-postmeddelande till formulärservern inkluderas som standard meddelandets ursprungliga text i meddelandetexten. Välj det här alternativet om du i stället vill ta med texten som en bifogad fil.
+**Inkludera den ursprungliga e-postmeddelandetexten som en bifogad fil:** När du skickar ett e-postmeddelande till Forms Server inkluderas som standard den ursprungliga texten i meddelandet. Välj det här alternativet om du i stället vill ta med texten som en bifogad fil.
 
 **Använd den ursprungliga ämnesraden för resultatmeddelanden:** Som standard använder Forms-servern de värden som anges i inställningarna Ämne för lyckad e-post och Ämne för fele-post som ämnesrad när resultatmeddelanden skickas. Välj det här alternativet om du i stället vill använda samma ämnesrad som det ursprungliga e-postmeddelandet som skickades till servern.
 
-**Ämne för e-post:** När du har skickat ett e-postmeddelande till en e-postslutpunkt för att starta eller fortsätta en process får du ett returmeddelande från den AEM formulärservern. Om e-postmeddelandet lyckas får du ett e-postmeddelande om att det lyckades. Om e-postmeddelandet misslyckas får du ett felmeddelande som informerar om varför det misslyckades. Med den här inställningen kan du ange ämnesraden för e-postmeddelanden om lyckade åtgärder som skickas för den här slutpunkten.
+**Ämne för e-post:** När du har skickat ett e-postmeddelande till en e-postslutpunkt för att starta eller fortsätta en process får du ett returmeddelande från AEM Forms Server. Om e-postmeddelandet lyckas får du ett e-postmeddelande om att det lyckades. Om e-postmeddelandet misslyckas får du ett felmeddelande som informerar om varför det misslyckades. Med den här inställningen kan du ange ämnesraden för e-postmeddelanden om lyckade åtgärder som skickas för den här slutpunkten.
 
 **E-postbrödtext:** Gör att du kan ange brödtexten i e-postmeddelanden om lyckade åtgärder som skickats för den här slutpunkten.
 
@@ -130,9 +130,9 @@ För att formulärarbetsflöden ska kunna ta emot och hantera inkommande e-postm
 
 **E-postbrödtext för fel:** Gör att du kan ange den första raden i brödtexten för felmeddelanden som skickas för den här slutpunkten.
 
-**E-postsammanfattning:** Varje meddelande om att åtgärden lyckades eller misslyckades innehåller ett avsnitt med den ursprungliga e-posttexten som du skickade till formulärservern. Den här inställningen anger texten som visas ovanför avsnittet.
+**E-postsammanfattning:** Varje meddelande om att åtgärden lyckades eller misslyckades innehåller ett avsnitt med den ursprungliga e-posttexten som du skickade till Forms Server. Den här inställningen anger texten som visas ovanför avsnittet.
 
-**Validera inkorgen innan den här slutpunkten skapas/uppdateras:** När det här alternativet är markerat kontrollerar formulärservern om SMTP/POP3-inställningarna är korrekta innan slutpunkten skapas. När du klickar på Lägg till visas ett meddelande som anger om inkorgskontot är giltigt. Om det här alternativet inte är markerat skapas slutpunkten av AEM formulärserver utan att inkorgen valideras.
+**Validera inkorgen innan den här slutpunkten skapas/uppdateras:** När det här alternativet är markerat kontrollerar Forms Server om dina SMTP/POP3-inställningar är korrekta innan slutpunkten skapas. När du klickar på Lägg till visas ett meddelande som anger om inkorgskontot är giltigt. Om det här alternativet inte är markerat skapas slutpunkten utan att inkorgen valideras.
 
 **Teckenuppsättningskodning:** Det kodningsformat som ska användas för e-postmeddelandet. Standardvärdet är UTF-8, som de flesta användare utanför Japan kommer att använda. Användare i en japansk miljö kan välja ISO2022-JP.
 
@@ -206,11 +206,11 @@ En e-postslutpunkt skapas till exempel för en tjänst som tar ett enstaka Word-
 
 Standardvärdet är asynkront.
 
-**Inkludera den ursprungliga e-posttexten som en bifogad fil:** När du skickar ett e-postmeddelande till formulärservern inkluderas som standard meddelandets ursprungliga text i meddelandetexten. Välj det här alternativet om du i stället vill ta med texten som en bifogad fil.
+**Inkludera den ursprungliga e-posttexten som en bifogad fil:** När du skickar ett e-postmeddelande till Forms Server inkluderas som standard den ursprungliga texten i meddelandet. Välj det här alternativet om du i stället vill ta med texten som en bifogad fil.
 
 **Använd den ursprungliga ämnesraden för resultatmeddelanden:** Som standard använder Forms-servern de värden som anges i inställningarna Ämne för lyckad e-post och Ämne för fele-post som ämnesrad när resultatmeddelanden skickas. Välj det här alternativet om du i stället vill använda samma ämnesrad som det ursprungliga e-postmeddelandet som skickades till servern.
 
-**Ämne för e-post:** När du har skickat ett e-postmeddelande till en e-postslutpunkt för att starta eller fortsätta en process får du ett returmeddelande från den AEM formulärservern. Om e-postmeddelandet lyckas får du ett e-postmeddelande om att det lyckades. Om e-postmeddelandet misslyckas får du ett felmeddelande som informerar om varför det misslyckades. Med den här inställningen kan du ange ämnesraden för e-postmeddelanden om lyckade åtgärder som skickas för den här slutpunkten.
+**Ämne för e-post:** När du har skickat ett e-postmeddelande till en e-postslutpunkt för att starta eller fortsätta en process får du ett returmeddelande från AEM Forms Server. Om e-postmeddelandet lyckas får du ett e-postmeddelande om att det lyckades. Om e-postmeddelandet misslyckas får du ett felmeddelande som informerar om varför det misslyckades. Med den här inställningen kan du ange ämnesraden för e-postmeddelanden om lyckade åtgärder som skickas för den här slutpunkten.
 
 **E-postbrödtext:** Gör att du kan ange brödtexten i e-postmeddelanden om lyckade åtgärder som skickats för den här slutpunkten.
 
@@ -220,9 +220,9 @@ Standardvärdet är asynkront.
 
 **E-postbrödtext för fel:** Gör att du kan ange den första raden i brödtexten för felmeddelanden som skickas för den här slutpunkten.
 
-**E-postsammanfattning:** Varje meddelande om att åtgärden lyckades eller misslyckades innehåller ett avsnitt med den ursprungliga e-posttexten som du skickade till formulärservern. Den här inställningen anger texten som visas ovanför avsnittet.
+**E-postsammanfattning:** Varje meddelande om att åtgärden lyckades eller misslyckades innehåller ett avsnitt med den ursprungliga e-posttexten som du skickade till Forms Server. Den här inställningen anger texten som visas ovanför avsnittet.
 
-**Validera inkorgen innan du skapar/uppdaterar den här slutpunkten:** När det här alternativet är markerat kontrollerar formulärservern om SMTP/POP3-inställningarna är korrekta innan slutpunkten skapas. När du klickar på Lägg till visas ett meddelande som anger om inkorgskontot är giltigt. Om det här alternativet inte är markerat skapas slutpunkten av AEM formulärserver utan att inkorgen valideras.
+**Validera inkorgen innan du skapar/uppdaterar den här slutpunkten:** När det här alternativet är markerat kontrollerar Forms Server om dina SMTP/POP3-inställningar är korrekta innan slutpunkten skapas. När du klickar på Lägg till visas ett meddelande som anger om inkorgskontot är giltigt. Om det här alternativet inte är markerat skapas slutpunkten utan att inkorgen valideras.
 
 **Åtgärdsnamn:** Den här inställningen är obligatorisk. En lista över åtgärder som kan tilldelas e-postslutpunkten. Den åtgärd som du väljer här avgör vilka fält som visas i avsnitten Mappningar av indataparameter och Utdataparameter.
 

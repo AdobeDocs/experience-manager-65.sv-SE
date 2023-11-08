@@ -6,7 +6,7 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/managing_services
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 exl-id: a6a10ff0-6f4d-42df-9b4e-f98a53cf1806
-source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
 source-wordcount: '10692'
 ht-degree: 0%
@@ -35,7 +35,7 @@ Du kan använda sidan Tjänsthantering för att konfigurera inställningar för 
 
 ## Granska inställningar för arbetsflödestjänst {#audit-workflow-service-settings}
 
-Workbench ger möjlighet att spela in processinstanser när de körs under körning och sedan spela upp dem för att observera processens beteende. (Se [Workbench - hjälp](https://www.adobe.com/go/learn_aemforms_workbench_63).) För att spara utrymme i formulärserverns filsystem kan du begränsa mängden lagrade processinspelningsdata. Du kan konfigurera följande egenskaper för tjänsten Granskningsarbetsflöde ( `AuditWorkflowService`):
+Workbench ger möjlighet att spela in processinstanser när de körs under körning och sedan spela upp dem för att observera processens beteende. (Se [Workbench - hjälp](https://www.adobe.com/go/learn_aemforms_workbench_63).) För att spara utrymme i filsystemet i Forms Server kan du begränsa mängden lagrade processinspelningsdata. Du kan konfigurera följande egenskaper för tjänsten Granskningsarbetsflöde ( `AuditWorkflowService`):
 
 **maxNumberOfRecordingInstances:** Maximalt antal inspelningar som lagras. När det högsta antalet lagras tas den äldsta inspelningen bort från filsystemet när en ny inspelning skapas. Den här egenskapen är användbar om du tenderar att skapa många inspelningar och vill ta bort gamla inspelningar automatiskt. Standardvärdet är 50.
 
@@ -265,7 +265,7 @@ Följande inställningar är tillgängliga för tjänsten Generate PDF.
 
 **OCR-poolstorlek:** Poolstorleken för den PaperCaptureService som PDF Generator använder för OCR. Standardvärdet för den här inställningen (rekommenderas för enprocessorsystem) är 3, som du kan öka på flerprocessorsystem. Den här inställningen är endast giltig i Windows-system.
 
-**Reservteckensnittsfamilj för konverteringar från HTML till PDF:** Namnet på teckensnittsfamiljen som ska användas i PDF-dokument när teckensnittet som användes i det ursprungliga HTML inte är tillgängligt för AEM formulärserver. Ange en teckensnittsfamilj om du förväntar dig att konvertera HTML-sidor som använder otillgängliga teckensnitt. På sidor som skapats på regionala språk kan t.ex. otillgängliga teckensnitt användas.
+**Reservteckensnittsfamilj för konverteringar från HTML till PDF:** Namnet på teckensnittsfamiljen som ska användas i PDF-dokument när teckensnittet som användes i det ursprungliga HTML inte är tillgängligt för AEM Forms Server. Ange en teckensnittsfamilj om du förväntar dig att konvertera HTML-sidor som använder otillgängliga teckensnitt. På sidor som skapats på regionala språk kan t.ex. otillgängliga teckensnitt användas.
 
 **Återförsökslogik för interna konverteringar** Regerar generering av PDF om det första konverteringsförsöket har misslyckats:
 
@@ -283,7 +283,7 @@ Försök konvertera PDF igen om den tid som förbrukats för det första konvert
 
 ## Guides ES4 Utilities service settings {#guides-es4-utilities-service-settings}
 
-När du skapar en stödlinje bäddas vissa resurser, till exempel en definition av stödlinjen, in i stödlinjen. Resurser kan också finnas som referenser till programresurser som lagras lokalt eller på AEM formulärserver. Handboken innehåller inga data, och värdena för sändningsplatsen och indata passar inte för alla externa miljöer.
+När du skapar en stödlinje bäddas vissa resurser, till exempel en definition av stödlinjen, in i stödlinjen. Resurser kan också finnas som referenser till programresurser som lagras lokalt eller på AEM Forms Server. Handboken innehåller inga data, och värdena för sändningsplatsen och indata passar inte för alla externa miljöer.
 
 I de flesta fall räcker standardåtergivningstjänsten för stödlinjer för att förbereda en guide för användning i arbetsytor eller andra externa miljöer. (I vyn Tjänster i Workbench är standardtjänsten Guides (system)/Processes/Render Guide - 1.0.) Tjänsten Guide Utilities ( `GuidesUtility`) kan du skapa en anpassad process för att återge en stödlinje, om det behövs.
 
@@ -340,7 +340,7 @@ JDBC-tjänsten ( `JdbcService`) kan processerna interagera med databaser.
 
 Följande inställning är tillgänglig för JDBC-tjänsten.
 
-**Datakällans namn:** Ett strängvärde som representerar JNDI-namnet på datakällan som ska användas för att ansluta till databasservern. Datakällan måste definieras på den programserver som är värd för formulärservern. Standardvärdet är JNDI-namnet på datakällan för AEM formulärdatabas.
+**Datakällans namn:** Ett strängvärde som representerar JNDI-namnet på datakällan som ska användas för att ansluta till databasservern. Datakällan måste definieras på den programserver som är värd för Forms Server. Standardvärdet är JNDI-namnet på datakällan för AEM formulärdatabas.
 
 ## JMS-tjänstinställningar {#jms-service-settings}
 
@@ -482,7 +482,7 @@ Följande inställningar är tillgängliga för tjänsten PDFG Config ( `PDFGCon
 
 **Timeout för serverkonvertering:** Den maximala tidsgränsen för jobbkonvertering (i sekunder) för tjänsten Generate PDF och tjänsten Distiller. Den här inställningen begränsar den maximala konverteringstimeout som kan anges i filen config.xml och på administrationskonsolsidorna för PDF Generator. Standardvärdet är 270.
 
-**Serverns globala timeout:** Vid konvertering av PDF tar en formulärserver hänsyn till timeoutgränsen. Konfigurera timeout-värdet för att lösa problemet.
+**Serverns globala timeout:** Vid konvertering av PDF tar Forms Server hänsyn till tidsgränsen. Konfigurera timeout-värdet för att lösa problemet.
 
 **Prefix för jobbalternativ:** Ett prefix som används av tjänsten Generate PDF för att lägga till en kort sträng i jobbalternativsfilerna som skapas temporärt för Acrobat Distiller. Standardvärdet är pdfg.
 
@@ -704,7 +704,7 @@ I en klusterkonfiguration skalas inte gruppstorleken för en bevakad mappslutpun
 
 **Skriv över duplicerade filnamn:** En boolesk sträng som anger om den bevakade mappen skriver över duplicerade resultatfilnamn och om bevarade dokument med samma namn ska skrivas över.
 
-**Bevara mapp:** Standardvärdet för mappen preserve. Den här mappen används för att kopiera källfilerna till om indata bearbetas korrekt. Värdet kan vara en tom, relativ eller absolut sökväg med ett filmönster enligt beskrivningen för inställningen Resultatmapp.
+**Bevara mapp:** Standardvärdet för mappen preserve. Den här mappen används för att kopiera källfilerna till om bearbetningen av indata lyckas. Värdet kan vara en tom, relativ eller absolut sökväg med ett filmönster enligt beskrivningen för inställningen Resultatmapp.
 
 **Felmapp:** Namnet på den mapp där felfilerna kopieras. Värdet kan vara en tom, relativ eller absolut sökväg med ett filmönster enligt beskrivningen för inställningen Resultatmapp.
 
@@ -751,11 +751,11 @@ Webbtjänsten interagerar med webbtjänster genom att skicka och ta emot SOAP-me
 
 Följande inställningar är tillgängliga för webbtjänsten.
 
-**Nyckelarkiv:** Den fullständiga sökvägen till nyckelfilen som innehåller den privata nyckel som ska användas för autentisering. Formulärservern måste kunna komma åt filen.
+**Nyckelarkiv:** Den fullständiga sökvägen till nyckelfilen som innehåller den privata nyckel som ska användas för autentisering. Forms Server måste kunna komma åt filen.
 
 **Lösenord för nyckelbehållare:** Lösenordet för nyckelfilen.
 
-**Typ av nyckelarkiv:** Typ av nyckelbehållare. Ange inget värde för att använda standardnyckelbehållartypen som är konfigurerad för den JVM som kör formulärservern. Annars anger du något av följande värden:
+**Typ av nyckelarkiv:** Typ av nyckelbehållare. Ange inget värde för att använda standardnyckelbehållartypen som är konfigurerad för den JVM som kör Forms Server. Annars anger du något av följande värden:
 
 * jks
 * pkcs12
@@ -766,7 +766,7 @@ Följande inställningar är tillgängliga för webbtjänsten.
 
 **Lösenord för betrodd lagringsplats:** Lösenordet för förvaltarfilen.
 
-**Typ av förtroendearkiv:** Typ av förvaltararkiv. Ange inget värde för att använda standardnyckelbehållartypen som är konfigurerad för den JVM som kör formulärservern. Annars anger du något av följande värden:
+**Typ av förtroendearkiv:** Typ av förvaltararkiv. Ange inget värde för att använda standardnyckelbehållartypen som är konfigurerad för den JVM som kör Forms Server. Annars anger du något av följande värden:
 
 * jks
 * pkcs12
@@ -779,11 +779,11 @@ Tjänsten XSLT Transformation ( `XSLTService`) används för att processer ska k
 
 Följande inställning är tillgänglig för tjänsten XSLT-omvandling.
 
-**Fabriksnamn:** Det fullständiga, kvalificerade namnet på Java-klassen som ska användas för att utföra XSLT-omvandlingar. Om inget värde anges används standardfabriken som är konfigurerad i den Java Virtual Machine som kör formulärservern.
+**Fabriksnamn:** Det fullständiga, kvalificerade namnet på Java-klassen som ska användas för att utföra XSLT-omvandlingar. Om inget värde anges används standardfabriken som är konfigurerad i Java Virtual Machine som kör Forms Server.
 
 ## Ändra säkerhetsinställningar för en tjänst {#modifying-security-settings-for-a-service}
 
-Med formulärservern kan du konfigurera säkerhetsinställningar för varje tjänst, vilket gör att du kan konfigurera en detaljerad åtkomstkontroll på en tjänst-för-tjänst-nivå.
+Med Forms Server kan du konfigurera säkerhetsinställningar för varje tjänst, vilket gör att du kan konfigurera en detaljerad åtkomstkontroll på en tjänst-för-tjänst-nivå.
 
 Standardsäkerhetsprofiler installeras, som sedan kan konfigureras för att uppfylla dina systembehov. Varje säkerhetsprofil har en associerad domän och skapas antingen på användarnivå eller gruppnivå.
 

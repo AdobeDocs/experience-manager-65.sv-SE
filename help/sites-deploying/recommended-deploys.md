@@ -7,9 +7,9 @@ content-type: reference
 topic-tags: deploying
 docset: aem65
 exl-id: baec7fc8-d48c-4bc6-b12b-4bf4eff695ea
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '1780'
+source-wordcount: '1779'
 ht-degree: 0%
 
 ---
@@ -157,7 +157,7 @@ En minimidistribution med MongoDB omfattar vanligtvis följande topologi:
 
 Vi rekommenderar dessutom att du konfigurerar datalagret i ett delat filsystem eller i Amazon S3 så att resurserna eller binärfilerna inte lagras i MongoDB. Detta ger optimala prestanda i driftsättningen.
 
-En av de extra fördelarna med att distribuera en MongoDB-replikuppsättning med ett kluster med två eller flera författarinstanser är att ha ett automatiskt återställningsscenario med minimalt driftstopp om en författarinstans, en MongoDB-replik eller ett fullständigt datacenterfel uppstår. Valet av MongoMK framför tarMK bör dock inte enbart styras av återhämtningskravet, eftersom tarMK också kan tillhandahålla en minimalt låg driftstoppslösning med en kontrollerad failover-mekanism.
+En av de extra fördelarna med att distribuera en MongoDB-replikuppsättning med ett kluster med två eller flera författarinstanser är att ha ett automatiskt återställningsscenario med minimalt driftstopp om det finns författarinstanser, MongoDB-replikering eller ett fullständigt datacenterfel. Valet av MongoMK framför tarMK bör dock inte enbart styras av återhämtningskravet, eftersom tarMK också kan tillhandahålla en minimalt låg driftstoppslösning med en kontrollerad failover-mekanism.
 
 Om ovanstående kriterier inte förväntas vara uppfyllda under de första 18 månaderna av driftsättningen bör du först distribuera AEM med hjälp av tarMK, sedan utvärdera konfigurationen vid ett senare tillfälle när ovanstående villkor är uppfyllda och slutligen avgöra om du ska stanna kvar på tarMK eller migrera till MongoMK.
 

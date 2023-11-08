@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/configuring_forms_workflow
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: e047a95e-0acb-438a-8d27-f005c0adc508
 exl-id: 362b7b91-c58b-4e47-a6ef-56a4b54a100c
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: c4cd9a61a226ace2a72d60b5b7b7432de12cb873
 workflow-type: tm+mt
 source-wordcount: '2623'
 ht-degree: 0%
@@ -27,7 +27,7 @@ Sidan Serverinställningar ger åtkomst till olika inställningar för formulär
 
 ## Konfigurera e-postinställningar {#configuring-email-settings}
 
-Du kan ange ett e-postkonto för formulärservern, som skickar e-postmeddelanden till användare och administratörer AEM formulär. Dessa e-postmeddelanden används för att meddela och påminna användare om uppgifter som de måste slutföra, meddela användaren om uppgifter som har nått en deadline och meddela administratören om eventuella processfel som inträffar.
+Du kan ange ett e-postkonto för Forms Server, genom vilket e-postmeddelanden skickas till AEM användare och administratörer. Dessa e-postmeddelanden används för att meddela och påminna användare om uppgifter som de måste slutföra, meddela användaren om uppgifter som har nått en deadline och meddela administratören om eventuella processfel som inträffar.
 
 Om du vill aktivera sändning av e-postmeddelanden mellan AEM formulär och användare konfigurerar du inställningarna för utgående e-post på sidan E-postinställningar. Utgående e-post måste använda en SMTP-server.
 
@@ -288,7 +288,7 @@ På sidan BAM-konfigurationsinställningar anger du anslutningarna till servern 
 1. I administrationskonsolen klickar du på Tjänster > Forms-arbetsflöde > Serverinställningar > BAM-konfigurationsinställningar.
 1. Skriv namnet på servern som kör BAM i rutan BAM-värd. Standardvärdet är localhost.
 1. I rutan BAM-port skriver du den port som ska användas för att ansluta till servern som kör BAM. Standardporten för BAM för JBoss är 8080, WebLogic är 7001 och WebSphere är 9080.
-1. I rutan Servervärd skriver du namnet eller IP-adressen för värdformulärservern. Standardvärdet är localhost.
-1. Ange det portnummer som används av formulärservern i rutan Serverport.
+1. I rutan Servervärd skriver du namnet eller IP-adressen för Forms-värdservern. Standardvärdet är localhost.
+1. Ange portnumret som används av Forms Server i rutan Serverport.
 1. I rutorna Användarnamn och Lösenord anger du lämpligt användar-ID och lösenord för att komma åt BAM-servern. Standardanvändarnamnet är CognosNowAdmin och standardlösenordet är manager.
 1. Klicka på Spara.

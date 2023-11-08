@@ -8,9 +8,9 @@ content-type: reference
 docset: aem65
 exl-id: 39e35a07-140f-4853-8f0d-8275bce27a65
 feature: Security
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '6818'
+source-wordcount: '6816'
 ht-degree: 0%
 
 ---
@@ -594,7 +594,7 @@ Mer information finns i tabellen i [Standardkonfiguration sedan AEM 6.3](#defaul
 
 Exkluderingen av gruppen &#39;administratörer&#39; kan ändras eller utökas i systemkonsolen i konfigurationsavsnittet i **Apache Jackrabbit Oak CUG Exclude List**.
 
-Det går också att tillhandahålla och distribuera en anpassad implementering av gränssnittet CugExclude för att justera uppsättningen med uteslutna principer om det finns särskilda behov. Läs dokumentationen om [CUG-plug](https://jackrabbit.apache.org/oak/docs/security/authorization/cug.html#pluggability) om du vill ha mer information och ett exempel på implementering.
+Det går också att tillhandahålla och distribuera en anpassad implementering av gränssnittet CugExclude för att justera uppsättningen med undantagna principer om det finns särskilda behov. Läs dokumentationen om [CUG-plug](https://jackrabbit.apache.org/oak/docs/security/authorization/cug.html#pluggability) om du vill ha mer information och ett exempel på implementering.
 
 ### Autentisering: Installation och konfiguration {#authentication-setup-and-configuration}
 

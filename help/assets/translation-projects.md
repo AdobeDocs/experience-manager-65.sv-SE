@@ -5,9 +5,9 @@ contentOwner: AG
 role: Architect, Admin
 feature: Translation
 exl-id: 8990feca-cfda-4974-915e-27aa9d8f2ee1
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '1732'
+source-wordcount: '1730'
 ht-degree: 10%
 
 ---
@@ -234,7 +234,7 @@ Om du använder det här alternativet läggs resursuppsättningen till i ett bef
 
 ## Skapa tillfälliga språkkopior {#creating-temporary-language-copies}
 
-När du kör ett översättningsarbetsflöde för att uppdatera en språkkopia med redigerade versioner av originalresurser bevaras den befintliga språkkopian tills du godkänner översatta resurser. [!DNL Adobe Experience Manager Assets] lagrar de nyligen översatta resurserna på en tillfällig plats och uppdaterar den befintliga språkkopian efter att du uttryckligen har godkänt resurserna. Om du refuserar resurserna ändras inte språkkopian.
+När du kör ett översättningsarbetsflöde för att uppdatera en språkkopia med redigerade versioner av originalresurser bevaras den befintliga språkkopian tills du godkänner de översatta resurserna. [!DNL Adobe Experience Manager Assets] lagrar de nyligen översatta resurserna på en tillfällig plats och uppdaterar den befintliga språkkopian efter att du uttryckligen har godkänt resurserna. Om du refuserar resurserna ändras inte språkkopian.
 
 1. Klicka på källrotmappen under **[!UICONTROL Language Copies]** som du redan har skapat en språkkopia av och sedan klicka på **[!UICONTROL Reveal in Assets]** för att öppna mappen i [!DNL Experience Manager Assets].
 

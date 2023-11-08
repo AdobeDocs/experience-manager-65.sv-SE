@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
 content-type: reference
 exl-id: f244cfb5-5550-4f20-92f0-bb296e2bf76e
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '5295'
+source-wordcount: '5294'
 ht-degree: 0%
 
 ---
@@ -383,7 +383,7 @@ När en resurs läggs till i Experience Manager Assets överförs den automatisk
 
 1. Markera ikonen Experience Manager och navigera till **[!UICONTROL Deployment]** > **[!UICONTROL Cloud Services]**.
 1. Under rubriken Tillgängliga konfigurationer väljer du **[!UICONTROL dms7 (Dynamic Media]**).
-1. Välj **[!UICONTROL Advanced]** väljer du **[!UICONTROL Enable Automatic Upload]** markera kryssrutan och sedan markera **[!UICONTROL OK]**. Du måste nu konfigurera arbetsflödet för DAM-resurser så att det omfattar överföring till Dynamic Media Classic.
+1. Välj **[!UICONTROL Advanced]** väljer du **[!UICONTROL Enable Automatic Upload]** markera kryssrutan och sedan markera **[!UICONTROL OK]**. Du måste konfigurera arbetsflödet för DAM-resurser så att det omfattar överföring till Dynamic Media Classic.
 
    >[!NOTE]
    >

@@ -7,9 +7,9 @@ content-type: reference
 topic-tags: site-features
 docset: aem65
 exl-id: 58e61302-cfb4-4a3d-98d4-3c92baa2ad42
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '1427'
+source-wordcount: '1426'
 ht-degree: 0%
 
 ---
@@ -72,7 +72,7 @@ Dialogrutedefinitionen för ett ställningar fungerar på liknande sätt som fö
 
 * Komponentdialogrutans definitioner återges som vanliga dialogrutor (som i t.ex. den mittersta rutan i dialogruteredigeraren) medan definitioner i dialogrutan för att ställa in skala, trots att de visas som vanliga dialogrutor i dialogruteredigeraren, återges som ett ställningar på den skalbara sidan (som visas i **Nyheter** ställningar ovan).
 * Komponentdialogrutor innehåller endast fält för de värden som behövs för att definiera innehållet i en enskild specifik komponent. En strukturdialogruta måste innehålla fält för varje egenskap i varje stycke på sidan som ska skapas.
-* I komponentdialogrutor är komponenten som används för att återge det angivna innehållet implicit och därför är `sling:resourceType` styckets egenskap fylls i automatiskt när stycket skapas. I ett schackmönster måste all information som definierar både innehållet och den tilldelade komponenten för ett visst stycke anges i själva dialogrutan. I schackold-dialogrutor måste den här informationen anges med *Dold* fält för att skicka den här informationen när sidor skapas.
+* Om det finns komponentdialogrutor är komponenten som används för att återge det angivna innehållet implicit och därför är `sling:resourceType` styckets egenskap fylls i automatiskt när stycket skapas. I ett schackmönster måste all information som definierar både innehållet och den tilldelade komponenten för ett visst stycke anges i själva dialogrutan. I schackold-dialogrutor måste den här informationen anges med *Dold* fält för att skicka den här informationen när sidor skapas.
 
 En titt på exemplet **Nyheter** i dialogrutan kan du förklara hur det fungerar. Gå till designläge på scensidan och klicka på länken för dialogruteredigeraren.
 

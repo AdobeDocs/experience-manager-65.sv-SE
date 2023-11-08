@@ -1,10 +1,10 @@
 ---
 title: Dekoration-tagg
-description: När en komponent på en webbsida återges kan ett HTML-element genereras och den återgivna komponenten kapslas in i sig själv. För utvecklare har AEM en tydlig och enkel logik som styr de dekorationstaggar som omsluter de inkluderade komponenterna.
+description: När en komponent på en webbsida återges kan ett HTML-element genereras och den återgivna komponenten kapslas in i sig själv. För utvecklare har AEM en tydlig och enkel logik som styr de dekorationstaggar som omsluter komponenterna.
 exl-id: d049ebf1-7fa6-4d2c-86f9-b18e107092ea
-source-git-commit: 43a30b5ba76ea470cc50a962d4f04b4a1508964d
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '876'
+source-wordcount: '878'
 ht-degree: 0%
 
 ---
@@ -19,10 +19,10 @@ När en komponent på en webbsida återges kan ett HTML-element genereras och de
    * layoutinformation
    * formatinformation
 
-För utvecklare har AEM en tydlig och enkel logik som styr de dekorationstaggar som omsluter de inkluderade komponenterna. Om och hur dekorationstaggen återges definieras av en kombination av två faktorer som den här sidan kommer att dyka upp i:
+För utvecklare har AEM en tydlig och enkel logik som styr de dekorationstaggar som omsluter komponenterna. Om och hur dekorationstaggen återges definieras av en kombination av två faktorer som den här sidan kommer att dyka upp i:
 
 * Själva komponenten kan konfigurera sin dekorationstagg med en uppsättning egenskaper.
-* De skript som innehåller komponenter (HTL, JSP, dispatcher osv.) kan definiera aspekterna för dekorationstaggen med include-parametrar.
+* De skript som innehåller komponenter (HTL, JSP, dispatcher och så vidare) kan definiera aspekterna för dekorationstaggen med include-parametrar.
 
 ## Recommendations {#recommendations}
 
@@ -30,7 +30,7 @@ Här följer några allmänna rekommendationer för när wrapper-elementet ska t
 
 * Närvaron av wrapper-elementet får inte skilja sig mellan WCMModes (redigerings- eller förhandsgranskningsläge), instanser (författare eller publicering) eller miljö (staging eller produktion), så att CSS och JavaScript för sidan fungerar likadant i alla fall.
 * Radbrytningselementet bör läggas till i alla komponenter som är redigerbara, så att sidredigeraren kan initiera och uppdatera dem på rätt sätt.
-* För icke-redigerbara komponenter kan wrapper-elementet undvikas om det inte har någon speciell funktion, så att den resulterande koden inte blir onödigt utdragen.
+* För icke-redigerbara komponenter kan wrapper-elementet undvikas om det inte har någon speciell funktion, så att den resulterande koden inte blir onödigt utsvälld.
 
 ## Komponentkontroller {#component-controls}
 

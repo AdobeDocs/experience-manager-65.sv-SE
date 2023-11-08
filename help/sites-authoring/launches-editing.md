@@ -1,16 +1,14 @@
 ---
 title: Redigera startprogram
 description: När du har skapat en startsida för sidan (eller en uppsättning sidor) kan du redigera innehållet i startkopian av sidorna.
-uuid: 1f2c2e53-73a3-4bd7-b2c7-425491bc0118
 contentOwner: AEM Docs
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: site-features
-discoiquuid: 30aa3177-bcf4-4260-8f64-e73bc907942a
 docset: aem65
 legacypath: /content/docs/en/aem/6-0/author/site-page-features/launches
 exl-id: 2d441820-b394-47c8-b4ca-a8aede590937
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
 source-wordcount: '521'
 ht-degree: 18%
@@ -21,7 +19,7 @@ ht-degree: 18%
 
 ## Redigera startsidor {#editing-launch-pages}
 
-När en startsida har skapats för en sida (eller en uppsättning sidor) kan du redigera innehållet i startkopian av sidorna.
+När en startsida har skapats för en sida (eller en uppsättning sidor) kan du redigera innehållet i startkopian av sidorna).
 
 1. Öppna [Starta från referenser (platskonsolen)](/help/sites-authoring/launches.md#launches-in-references-sites-console) för att visa tillgängliga åtgärder.
 1. Välj **Gå till sidan** för att öppna sidan för redigering.
@@ -82,7 +80,7 @@ Du kan när som helst lägga till eller ta bort sidor till/från intervallet med
 
    >[!NOTE]
    >
-   >Om du vill lägga till sidor i en programstart måste de ligga under en gemensam språkrot, dvs. inom en och samma webbplats.
+   >Om du vill lägga till sidor i en programstart måste de ligga under en gemensam språkrot, det vill säga inom en enda plats.
 
 ## Redigera en startkonfiguration {#editing-a-launch-configuration}
 

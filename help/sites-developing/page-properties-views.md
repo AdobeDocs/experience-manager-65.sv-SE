@@ -10,16 +10,16 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: 6f8e08d1-831e-441a-ad1a-f5c8788f32d7
 exl-id: 292874bf-2ee6-4638-937c-f8f26c93ca65
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '483'
+source-wordcount: '484'
 ht-degree: 0%
 
 ---
 
 # Anpassa vyer av Sidegenskaper{#customizing-views-of-page-properties}
 
-Varje sida har en uppsättning [egenskaper](/help/sites-authoring/editing-page-properties.md) som kan visas och redigeras av användare, vissa krävs när du skapar sidan (skapar vy), andra kan visas och redigeras (redigeringsvy) i ett senare skede. Dessa sidegenskaper definieras och görs tillgängliga i dialogrutan ( `cq:dialog`) för rätt sidkomponent.
+Varje sida har en uppsättning [egenskaper](/help/sites-authoring/editing-page-properties.md) som kan visas och redigeras av användare. En del krävs när du skapar sidan (skapar vy), andra kan visas och redigeras (redigeringsvy) i ett senare skede. Dessa sidegenskaper definieras och görs tillgängliga i dialogrutan ( `cq:dialog`) för rätt sidkomponent.
 
 >[!CAUTION]
 >
@@ -43,7 +43,7 @@ Fälten måste vara specifikt konfigurerade om någon ändring krävs. Detta gö
    * Namn: `cq:hideOnEdit`
    * Typ: `Boolean`
 
-Se till exempel inställningarna för fält som grupperats under **Fler rubriker och beskrivning** på **Grundläggande** -fliken för grundsidkomponenten. De här är synliga i **Skapa sida** guide som `cq:showOnCreate` har angetts till `true`:
+Se till exempel inställningarna för fält som grupperats under **Fler rubriker och beskrivning** på **Grundläggande** -fliken för grundsidkomponenten. Dessa visas i **Skapa sida** guide som `cq:showOnCreate` har angetts till `true`:
 
 ```xml
 /libs/foundation/components/page/cq:dialog/content/items/tabs/items/basic/items/column/items/moretitles
@@ -60,7 +60,7 @@ Du kan också konfigurera fälten som är tillgängliga genom att konfigurera di
 Som standard är [**Skapa sida** guide](/help/sites-authoring/managing-pages.md#creating-a-new-page) visar fält grupperade under **Fler rubriker och beskrivning**. Så här döljer du dessa konfigurationer:
 
 1. Skapa sidkomponenten under `/apps`.
-1. Skapa en åsidosättning (med *dialogruta* från [Samla resurser](/help/sites-developing/sling-resource-merger.md)) för `basic` del av sidkomponenten, till exempel:
+1. Skapa en åsidosättning (med *dialogruta* tillhandahålls av [Samla resurser](/help/sites-developing/sling-resource-merger.md)) för `basic` del av sidkomponenten, till exempel:
 
    ```xml
    <your-page-component>/cq:dialog/content/items/tabs/items/basic
@@ -72,9 +72,9 @@ Som standard är [**Skapa sida** guide](/help/sites-authoring/managing-pages.md#
    >
    >    `/libs/wcm/foundation/components/basicpage/v1/basicpage/cq:dialog`
    >
-   Men du ***måste*** ändrar ingenting i `/libs` bana.
+   Du kan dock ***måste*** ändrar ingenting i dialogrutan `/libs` bana.
    >
-   Detta beror på innehållet i `/libs` skrivs över nästa gång du uppgraderar din instans (och kan mycket väl skrivas över när du använder en snabbkorrigering eller ett funktionspaket).
+   Detta beror på innehållet i `/libs` skrivs över nästa gång du uppgraderar din instans (och kan mycket väl skrivas över när du installerar en snabbkorrigering eller ett funktionspaket).
    >
    Den rekommenderade metoden för konfiguration och andra ändringar är:
    >
@@ -87,7 +87,7 @@ Som standard är [**Skapa sida** guide](/help/sites-authoring/managing-pages.md#
    /apps/demos/components/page/tabs/basic
    ```
 
-1. Skapa en åsidosättning av `basic` - `moretitles` avsnitt vid motsvarande sökväg, till exempel:
+1. Skapa en åsidosättning av `basic` - `moretitles` i motsvarande sökväg, till exempel:
 
    ```xml
    /apps/demos/components/page/tabs/basic/items/column/items/moretitles
@@ -107,7 +107,7 @@ Information om hur du konfigurerar sidegenskaper för användning med live-kopio
 
 ## Exempelkonfiguration av sidegenskaper {#sample-configuration-of-page-properties}
 
-I det här exemplet visas tekniken för dialogrutor i [Samla resurser](/help/sites-developing/sling-resource-merger.md); inklusive användning av [`sling:orderBefore`](/help/sites-developing/sling-resource-merger.md#properties). Det visar också hur man använder båda `cq:showOnCreate` och `cq:hideOnEdit`.
+I det här exemplet visas tekniken för dialogrutor i [Samla resurser](/help/sites-developing/sling-resource-merger.md), inklusive användning av [`sling:orderBefore`](/help/sites-developing/sling-resource-merger.md#properties). Det visar också hur man använder båda `cq:showOnCreate` och `cq:hideOnEdit`.
 
 KOD PÅ GITHUB
 

@@ -2,9 +2,9 @@
 title: Creating Accessible Content for Adobe Experience Manager (WCAG 2.1-överensstämmelse)
 description: Använd AEM för att göra webbinnehåll tillgängligt för och användbart för personer med funktionshinder
 exl-id: 2145d761-f51d-482b-a0e7-ef7500c4872f
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '13810'
+source-wordcount: '13806'
 ht-degree: 3%
 
 ---
@@ -1144,7 +1144,7 @@ Följ riktlinjerna i [Så här uppfyller du kriterierna för framgång 3.2.4](ht
 
 #### Syfte - Felidentifiering (3.3.1) {#purpose-error-identification}
 
-Syftet med detta villkor är att se till att användarna är medvetna om att ett fel har inträffat och kan avgöra vad som är fel. Felmeddelandet ska vara så specifikt som möjligt. Om ett formulär inte kan skickas räcker det inte att återvisa formuläret och ange felfälten för att vissa användare ska inse att ett fel har inträffat. Användare av skärmläsare vet till exempel inte om ett fel uppstod förrän de stöter på en av indikatorerna. De kan hoppa över hela formuläret innan felindikatorn påträffas, eftersom de tror att sidan helt enkelt inte fungerar. Enligt definitionen i WCAG, [indatafel](https://www.w3.org/TR/WCAG/#dfn-input-error) är information som användaren lämnar och som inte godkänns. Detta inkluderar följande:
+Syftet med detta villkor är att se till att användarna är medvetna om att ett fel har inträffat och kan avgöra vad som är fel. Felmeddelandet ska vara så specifikt som möjligt. Om det inte går att skicka in ett formulär, räcker det inte att återvisa formuläret och ange felfälten för att vissa användare ska inse att ett fel har inträffat. Användare av skärmläsare vet till exempel inte om ett fel uppstod förrän de stöter på en av indikatorerna. De kan hoppa över hela formuläret innan felindikatorn påträffas, eftersom de tror att sidan helt enkelt inte fungerar. Enligt definitionen i WCAG, [indatafel](https://www.w3.org/TR/WCAG/#dfn-input-error) är information som användaren lämnar och som inte godkänns. Detta inkluderar följande:
 
 Information som krävs av webbsidan men utelämnas av användaren, eller information som tillhandahålls av användaren men som ligger utanför det obligatoriska dataformatet eller tillåtna värden.
 Till exempel:
@@ -1221,7 +1221,7 @@ I enkla formulär med begränsad funktionalitet kan du märka en `Submit` kan fu
 
 Syftet med detta villkor är att se till att användarna får lämpliga förslag på hur ett indatafel kan korrigeras om det är möjligt. WCAG-definitionen för [indatafel](https://www.w3.org/TR/WCAG/#dfn-input-error) säger att det är&quot;information som användaren tillhandahåller som inte accepteras&quot; av systemet. Några exempel på information som inte accepteras är information som är obligatorisk men utelämnad av användaren och information som tillhandahålls av användaren men som ligger utanför det obligatoriska dataformatet eller tillåtna värden.
 
-Success Criterion 3.3.1 innehåller meddelanden om fel. Personer med kognitiva begränsningar kan dock finna det svårt att förstå hur felen ska korrigeras. Personer med visuella funktionshinder kanske inte kan komma på exakt hur felet ska korrigeras. Om formuläret inte kan skickas kan användaren överge det eftersom han/hon kanske inte vet hur felet ska åtgärdas trots att han/hon vet att det har inträffat.
+Success Criterion 3.3.1 innehåller meddelanden om fel. Personer med kognitiva begränsningar kan dock finna det svårt att förstå hur felen ska korrigeras. Personer med visuella funktionshinder kanske inte kan komma på exakt hur felet ska korrigeras. Om det inte går att skicka in formuläret kan användaren överge det eftersom han/hon kanske inte vet hur felet ska åtgärdas trots att han/hon vet att det har inträffat.
 
 Innehållsförfattaren kan ge en beskrivning av felet eller så kan användaragenten ge en beskrivning av felet baserat på teknikspecifik, programmässigt bestämd information.
 

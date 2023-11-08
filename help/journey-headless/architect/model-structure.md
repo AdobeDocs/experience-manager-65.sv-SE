@@ -2,7 +2,7 @@
 title: Läs om hur du skapar modeller för innehållsfragment i AEM
 description: Lär dig mer om koncept och mekanismer för att modellera innehåll för Headless CMS med Content Fragments Models.
 exl-id: b377e01f-e392-4ef5-a259-73ce9ff941d0
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
 source-wordcount: '690'
 ht-degree: 2%
@@ -28,7 +28,7 @@ Den här artikeln bygger vidare på dessa så att du förstår hur du skapar egn
 <!--
 ## Enabling Content Fragment Models {#enabling-content-fragment-models}
 
-At the very start you need to enable Content Fragment Models for your site, this is done in the Configuration Browser; under Tools -> General -> Configuration Browser. You can either select to configure the global entry, or create a configuration. For example:
+At the very start you need to enable Content Fragment Models for your site, this is done in the Configuration Browser; under Tools > General > Configuration Browser. You can either select to configure the global entry, or create a configuration. For example:
 
 ![Define configuration](/help/assets/content-fragments/assets/cfm-conf-01.png)
 
@@ -39,7 +39,7 @@ At the very start you need to enable Content Fragment Models for your site, this
 
 ## Skapa modeller för innehållsfragment {#creating-content-fragment-models}
 
-Sedan kan du skapa modellerna för innehållsfragment och definiera strukturen. Detta kan du göra under Verktyg -> Resurser -> Modeller för innehållsfragment.
+Sedan kan du skapa modellerna för innehållsfragment och definiera strukturen. Detta kan du göra under Verktyg > Resurser > Content Fragment Models.
 
 ![Content Fragment Models in Tools](assets/cfm-tools.png)
 

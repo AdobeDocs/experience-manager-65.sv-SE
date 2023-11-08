@@ -4,9 +4,9 @@ description: Installera, konfigurera och anpassa ett AEM Forms-demopaket.
 contentOwner: anujkapo
 docset: aem65
 exl-id: 1fee474e-7da5-4ab2-881a-34b8e055aa29
-source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '4598'
+source-wordcount: '4596'
 ht-degree: 0%
 
 ---
@@ -692,7 +692,7 @@ Mer information finns i Redigera sidinnehåll:
 
 Alla webbplatssidor är tillgängliga från: *https://&lt;aemserver>:&lt;port>/sites.html/content/we-go*
 
-Dessa webbplatssidor använder även paketet AEM stödraster för att styra layouten för några komponenter.
+De här webbplatssidorna använder även paketet AEM stödraster för att styra layouten för några komponenter.
 
 #### Formatsystem {#style-system}
 

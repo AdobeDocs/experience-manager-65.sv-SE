@@ -1,7 +1,7 @@
 ---
 title: Synkroniserar kataloger
 seo-title: Synchronizing directories
-description: Lär dig hur du synkroniserar användarhanteringsdatabasen med ändringar i källkatalogservrarna med hjälp av manuell eller schemalagd synkronisering.
+description: Lär dig synkronisera användarhanteringsdatabasen med ändringar i källkatalogservrarna med hjälp av manuell eller schemalagd synkronisering.
 seo-description: Learn how to synchronize the User Management database with changes to the source directory servers using manual or scheduled synchronization.
 uuid: 71cbc04d-6172-49b7-a490-ff3233c1b2bb
 contentOwner: admin
@@ -10,9 +10,9 @@ geptopics: SG_AEMFORMS/categories/setting_up_and_managing_domains
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 7ec0698a-9e6e-48d4-bba2-5a6eee313900
 exl-id: cb642289-4137-4ba7-8bde-0e458c8c94fe
-source-git-commit: 2a2f8538b6554540b546f4d345c0b3c0d3e706f3
+source-git-commit: e2a3470784beb04c2179958ac6cb98861acfaa71
 workflow-type: tm+mt
-source-wordcount: '1000'
+source-wordcount: '997'
 ht-degree: 0%
 
 ---
@@ -23,9 +23,9 @@ Om du vill synkronisera domäner kan du välja att göra en manuell eller schema
 
 Katalogsynkronisering används för att hämta information från katalogservrarna som du har angett i dina kataloginställningar till databasen för användarhantering. Senare kan du även göra en manuell synkronisering om det sker ändringar eller uppdateringar på katalogservrarna. Du kan till exempel göra en manuell synkronisering om användare och grupper läggs till eller om ändringar görs i en användares konto.
 
-Du kan också ställa in ett dagligt synkroniseringsschema så att användarhanteringsdatabasen automatiskt synkroniseras med ändringar eller uppdateringar av källkatalogservrarna. Tänk dock på att nätverks- och serverresurser används i den här processen. Välj användningstider och undvik schemaläggning av onödiga synkroniseringar som knyter samman system- och nätverksresurser. Om du vill minimera onödiga synkroniseringar använder du alternativet för omedelbar synkronisering i stället.
+Du kan också ställa in ett dagligt synkroniseringsschema så att användarhanteringsdatabasen automatiskt synkroniseras med ändringar eller uppdateringar av källkatalogservrarna. Den här processen använder dock nätverks- och serverresurser. Välj användningstider och undvik schemaläggning av onödiga synkroniseringar som knyter samman system- och nätverksresurser. Använd alternativet för omedelbar synkronisering i stället för att minimera onödiga synkroniseringar.
 
-Du kan också ange om användar- och gruppinformation ska skickas till Adobe Content Services 9 (föråldrat) när du synkroniserar domäner.
+Du kan också ange om användar- och gruppinformation ska skickas till Adobe LiveCycle Content Services 9 (föråldrat) när du synkroniserar domäner.
 
 >[!NOTE]
 >
@@ -37,7 +37,7 @@ Du kan också ange om användar- och gruppinformation ska skickas till Adobe Con
 
 >[!NOTE]
 >
->Adobe® LiveCycle® Content Services ES (utgått) är ett innehållshanteringssystem som installeras med LiveCycle. Det gör det möjligt för användarna att utforma, hantera, övervaka och optimera humancentrerade processer. Supporten för innehållstjänster (borttaget) upphör 2014-12-31. Se [Adobe produktlivscykeldokument](https://www.adobe.com/support/products/enterprise/eol/eol_matrix.html).
+>Adobe® LiveCycle® Content Services ES (Borttagen) är ett innehållshanteringssystem som installeras med LiveCycle. Det gör det möjligt för användarna att utforma, hantera, övervaka och optimera humancentrerade processer. Supporten för innehållstjänster (borttaget) upphör 2014-12-31. Se [Adobe product lifecycle document](https://www.adobe.com/support/products/enterprise/eol/eol_matrix.html).
 
 ## Aktivera deltakatalogsynkronisering {#enable-delta-directory-synchronization}
 
@@ -69,9 +69,9 @@ Som standard loggar Hantering av användare detaljerad statistik under synkronis
 Du kan konfigurera användarhantering så att det regelbundet görs en sökning efter misslyckade katalogsynkroniseringsförsök. Användarhantering försöker sedan slutföra de misslyckade synkroniseringarna.
 
 1. I administrationskonsolen klickar du på Inställningar > Användarhantering > Konfiguration > Konfigurera avancerade systemattribut.
-1. Under Synch Finisher Cron Expression anger du ett cron-uttryck som representerar intervallet där användarhanteringsförsök misslyckades med synkroniseringar. Användningen av cron-uttryck baseras på Quartz-systemet för jobbschemaläggning med öppen källkod, version 1.4.0.
+1. Under Synch Finisher Cron Expression anger du ett cron-uttryck som representerar intervallet där användarhanteringsförsök misslyckades med synkroniseringar. Användningen av cron-uttryck baseras på Quartz-systemet för jobbplanering med öppen källkod, version 1.4.0.
 
-   Standardvärdet är 0/13 &amp;ast; ? &amp;ast; vilket innebär att kontrollen utförs var 13:e minut.
+   Standardvärdet är 0/13 &amp;ast; ? &amp;ast; , vilket innebär att kontrollen utförs var 13:e minut.
 
 ## Synkronisera kataloger manuellt {#manually-synchronize-directories}
 
@@ -87,9 +87,9 @@ Du kan konfigurera användarhantering så att det regelbundet görs en sökning 
 1. Schemalägg synkronisering:
 
    * Om du vill aktivera automatisk synkronisering dagligen väljer du Inträffar under Schemaläggaren. Välj Dagligen i listan och skriv in tiden i 24-timmarsformat i motsvarande ruta. När du sparar inställningarna konverteras det här värdet till ett cron-uttryck, som visas i rutan Kron-uttryck.
-   * Om du vill schemalägga synkronisering på en viss dag i veckan eller månaden, eller under en viss månad, väljer du Cron Expression och skriver ett lämpligt uttryck i rutan. Synkronisera till exempel vid 1:30 A.M. den sista fredagen i månaden.
+   * Om du vill schemalägga synkronisering på en viss dag i veckan eller månaden, eller under en viss månad, väljer du Cron Expression och skriver ett lämpligt uttryck i rutan. Synkronisera till exempel kl. 1.30 den sista fredagen i månaden.
 
-Användningen av cron-uttryck baseras på Quartz-systemet för jobbschemaläggning med öppen källkod, version 1.4.0.
+Användningen av cron-uttryck baseras på Quartz-systemet för jobbplanering med öppen källkod, version 1.4.0.
 
 * Om du vill inaktivera automatisk synkronisering väljer du Inträffar och väljer Aldrig i listan.
 * (Valfritt) Om du vill överföra användar- och gruppinformation till innehållstjänster (borttagen) väljer du alternativet för att överföra användare och grupper till registrerade externa huvudlagringsleverantörer. Det här alternativet gäller också när nya användare och grupper läggs till via sidan Användare och grupper.

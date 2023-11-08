@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: ab018b6d-0233-4439-bb75-58c5421d769a
 feature: PDF Generator
 exl-id: 1bcb8429-c06e-4bd3-b422-4c512084dd09
-source-git-commit: 6caf3ef4a00275f0f73be52b6a9ccba77d277f1a
+source-git-commit: e2a3470784beb04c2179958ac6cb98861acfaa71
 workflow-type: tm+mt
-source-wordcount: '7285'
+source-wordcount: '7282'
 ht-degree: 0%
 
 ---
@@ -226,7 +226,7 @@ Dessa alternativ konfigurerar färgbilder, gråtonsbilder och monokroma bilder:
 
 **Delsampling till:** Markerar en pixel i mitten av exempelområdet och ersätter hela området med den pixeln med den angivna upplösningen. Delsampling minskar konverteringstiden avsevärt jämfört med nedsampling, men det resulterar i bilder som är mindre mjuka och kontinuerliga.
 
-Upplösningsinställningen för färg och gråskala bör vara 1,5 till 2 gånger rastertätheten som filen skrivs ut med. (Om du inte går under den här rekommenderade upplösningsinställningen påverkas inte bilder som inte innehåller några raka linjer, geometriska eller upprepade mönster av lägre upplösning.) Upplösningen för monokroma bilder bör vara densamma som för utdataenheten. Tänk dock på att om du sparar en monokrom bild med en upplösning på över 1 500 dpi ökar filstorleken utan att bildkvaliteten förbättras nämnvärt.
+Upplösningsinställningen för färg och gråskala bör vara 1,5 till 2 gånger rastertätheten som filen skrivs ut med. (Om du inte går under den här rekommenderade upplösningsinställningen påverkas inte bilder som inte innehåller några raka linjer, geometriska eller upprepade mönster av lägre upplösning.) Upplösningen för monokroma bilder bör vara densamma som för utdataenheten. Om du sparar en monokrom bild med en upplösning på över 1 500 dpi ökar filstorleken utan att bildkvaliteten förbättras nämnvärt.
 
 Tänk också på om användarna behöver förstora en sida. Om du t.ex. skapar ett dokument i PDF på en karta bör du använda en högre bildupplösning så att användare kan zooma in på kartan.
 

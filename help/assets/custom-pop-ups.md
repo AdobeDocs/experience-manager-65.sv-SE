@@ -9,9 +9,9 @@ discoiquuid: 4bcab3f4-500f-432e-b16b-cdc26b9bab4d
 feature: Viewers
 role: User, Admin
 exl-id: 4e7f17ea-6985-4644-b91c-2c1299d01321
-source-git-commit: 05af34f8be6a4e32c3488ec05bc0133154caff7f
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '1052'
+source-wordcount: '1050'
 ht-degree: 0%
 
 ---
@@ -78,7 +78,7 @@ Quickview stöds av följande visningsprogram i Dynamic Media:
     </tbody>
    </table>
 
-1. Visningsprogrammet som du använder nu måste kunna använda snabbvyn.
+1. Visningsprogrammet du använder måste kunna använda snabbvyn.
 
    Visningsprogrammet använder en hanterare som kallas `QuickViewActive`.
 
@@ -109,7 +109,7 @@ Anta att du använder följande exempelkod för inbäddning på webbsidan för e
    * Interaktivt bildvisningsprogram: [https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/jsapi-interactive-image/r-html5-aem-int-image-viewer-javascriptapiref-sethandlers.html](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/jsapi-interactive-image/r-html5-aem-int-image-viewer-javascriptapiref-sethandlers.html)
    * Interaktivt visningsprogram för video: [https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-video/jsapi-interactive-video/r-html5-aem-int-video-javascriptapiref-sethandlers.html](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-video/jsapi-interactive-video/r-html5-aem-int-video-javascriptapiref-sethandlers.html)
 
-1. Du måste nu konfigurera `quickViewActivate` hanterare.
+1. Du måste konfigurera `quickViewActivate` hanterare.
 
    The `quickViewActivate` -hanteraren styr snabbvyn i visningsprogrammet. Hanteraren innehåller variabellistan och funktionsanrop som kan användas med snabbvyn. Inbäddningskoden innehåller mappning för SKU-variabeluppsättningen i snabbvyn och ett exempel `loadQuickView` funktionsanrop.
 
@@ -148,9 +148,10 @@ Hanteraren kräver också ett funktionsanrop för att snabbvyn ska fungera. Funk
    * Mappa eventuella ytterligare variabler som finns i snabbvyn.
 
       * Uppdatera `loadQuickView(sku,*var1*,*var2*)` anropa om du lägger till ytterligare variabler.
+
    * Skapa en enkel `loadQuickView` () på sidan, utanför visningsprogrammet.
 
-      Följande skriver till exempel värdet på SKU till webbläsarkonsolen:
+     Följande skriver till exempel värdet på SKU till webbläsarkonsolen:
 
    ```xml
    function loadQuickView(sku){
@@ -160,9 +161,7 @@ Hanteraren kräver också ett funktionsanrop för att snabbvyn ska fungera. Funk
 
    * Ladda upp en testsida för HTML till en webbserver och öppna den.
 
-      När variablerna från snabbvyn är mappade och funktionsanropet är på plats, skriver webbläsarkonsolen variabelvärdet till webbläsarkonsolen med den angivna exempelfunktionen.
-
-
+     När variablerna från snabbvyn är mappade och funktionsanropet är på plats, skriver webbläsarkonsolen variabelvärdet till webbläsarkonsolen med den angivna exempelfunktionen.
 
 1. Du kan nu använda en funktion för att anropa ett enkelt popup-fönster i snabbvyn. I följande exempel används en `DIV` för en popup.
 1. Formatera popup-fönstret `DIV` på följande sätt. Lägg till egen formatering efter behov.
@@ -190,7 +189,7 @@ Hanteraren kräver också ett funktionsanrop för att snabbvyn ska fungera. Funk
    </div>
    ```
 
-1. Lägg till en funktion så att du kan uppdatera SKU-värdet i popup-fönstret; göra popup-fönstret synligt genom att ersätta den enkla funktionen som skapades i steg 5. med följande:
+1. Lägg till en funktion så att du kan uppdatera SKU-värdet i popup-fönstret; gör popup-fönstret synligt genom att ersätta den enkla funktionen som skapades i steg 5. med följande:
 
    ```xml
    <script type="text/javascript">

@@ -7,7 +7,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 docset: aem65
 exl-id: e50974a7-01ac-4a08-bea2-df9cc975c69e
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
 source-wordcount: '344'
 ht-degree: 0%
@@ -18,13 +18,13 @@ ht-degree: 0%
 
 På AEM Forms arbetsyta kan chefer nu komma åt uppgifter som tilldelats alla i deras hierarki - direkta eller indirekta rapporter - och utföra olika åtgärder på dem. Uppgifterna är tillgängliga på fliken Att göra på arbetsytan i AEM Forms. De åtgärder som stöds för de direkta rapporterna är:
 
-**Framåt** Vidarebefordra en uppgift från en direkt rapport till valfri användare.
+**Framåt** - Vidarebefordra en uppgift från en direkt rapport till valfri användare.
 
-**Anspråk** Gör anspråk på en uppgift som en direkt rapport.
+**Anspråk** - Gör anspråk på en uppgift som en direkt rapport.
 
-**Gör anspråk på &amp; öppna** Gör anspråk på en uppgift i en direkt rapport och öppna den automatiskt i listan Att göra i hanteraren.
+**Gör anspråk på &amp; öppna** - Gör anspråk på en uppgift i en direkt rapport och öppna den automatiskt i Att göra-listan för hanteraren.
 
-**Avvisa** Avvisa en uppgift som har vidarebefordrats till en direkt rapport av en annan användare. Det här alternativet är tillgängligt för uppgifter som vidarebefordras av andra användare till en direkt rapport.
+**Avvisa** - Avvisa en uppgift som har vidarebefordrats till en direkt rapport av en annan användare. Det här alternativet är tillgängligt för uppgifter som vidarebefordras av andra användare till en direkt rapport.
 
 AEM Forms begränsar en användares åtkomst till endast de uppgifter som användaren har åtkomstkontroll för. En sådan kontroll ser till att en användare bara kan hämta de uppgifter som användaren har åtkomstbehörighet för. Med hjälp av webbtjänster och implementeringar från tredje part för att definiera hierarkin kan en organisation anpassa definitionen av chef och dirigera rapporter efter deras behov.
 

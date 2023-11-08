@@ -6,7 +6,7 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/aem_forms_backup_and_recovery
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 exl-id: 01ec6ebc-6d80-4417-9604-c8571aebb57e
-source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
+source-git-commit: c4cd9a61a226ace2a72d60b5b7b7432de12cb873
 workflow-type: tm+mt
 source-wordcount: '1486'
 ht-degree: 0%
@@ -61,11 +61,11 @@ För att förhindra dataförlust måste de AEM formulärspecifika data säkerhet
 
 Använd följande riktlinjer om du måste återställa AEM formulär till en annan miljö på grund av följande ändringar:
 
-* Ändringar i IP-adressen, värdnamnet eller porten för AEM formulärserver
+* Ändring av IP-adress, värdnamn eller port för AEM Forms Server
 * Ändringar i enhetsbokstäver eller katalogsökväg
 * Byt till en annan databasvärd, port eller namn
 
-Sådana återställningsscenarier orsakas vanligtvis av maskinvarufel på servern som är värd för programservern, databasservern eller formulärservern. Förutom de AEM formulärspecifika konfigurationer som beskrivs i det här avsnittet, bör du även göra nödvändiga ändringar för andra delar av distributionen av AEM, som belastningsutjämnare och brandväggar, om värdnamnet eller IP-adressen för en AEM formulärserver ändras.
+Sådana återställningsscenarier orsakas vanligtvis av ett maskinvarufel på servern som är värd för programservern, databasservern eller Forms Server. Förutom de AEM formulärspecifika konfigurationer som beskrivs i det här avsnittet, bör du även göra nödvändiga ändringar för andra delar av distributionen av AEM, som belastningsutjämnare och brandväggar, om värdnamnet eller IP-adressen för en AEM Forms Server ändras.
 
 ### Vad kan inte ändras {#what-cannot-be-changed}
 
@@ -73,7 +73,7 @@ Sådana återställningsscenarier orsakas vanligtvis av maskinvarufel på server
 
 ### Starta om efter återställning {#restarting-after-a-recovery}
 
-Innan du startar om formulärservern efter en återställning gör du följande:
+Innan du startar om Forms Server efter en återställning gör du följande:
 
 1. Starta systemet i underhållsläge.
 1. Gör följande för att se till att Form Manager synkroniseras med AEM formulär i underhållsläge:
@@ -104,4 +104,4 @@ Använd `LCSetGDS`skript i `[*aem-forms root]*\sdk\misc\Foundation\SetGDSCommand
 >
 >Den här begränsningen är den enda under vilken du bör använda det här skriptet för att ändra GDS-platsen. Använd administrationskonsolen om du vill ändra GDS-platsen medan AEM är igång. (Se [Konfigurera allmänna inställningar AEM formulär](/help/forms/using/admin-help/configure-general-aem-forms-settings.md#configure-general-aem-forms-settings)*.) *
 
-När du har angett GDS-sökvägen startar du formulärservern i underhållsläge och använder administrationskonsolen för att uppdatera de återstående filsystemsökvägarna för den nya noden. När du har verifierat att alla nödvändiga konfigurationer har uppdaterats startar du om och testar AEM.
+När du har angett GDS-sökvägen startar du Forms Server i underhållsläge och använder administrationskonsolen för att uppdatera de återstående filsystemsökvägarna för den nya noden. När du har verifierat att alla nödvändiga konfigurationer har uppdaterats startar du om och testar AEM.

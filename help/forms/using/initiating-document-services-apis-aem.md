@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: document_services
 discoiquuid: 8b85bdc7-3864-49c9-81b0-cf15b8e986d9
 exl-id: 123087a2-9d09-4579-9185-2ccd7d25bf8d
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
 source-wordcount: '1160'
 ht-degree: 0%
@@ -54,7 +54,7 @@ På fliken Miljöalternativ kan du ange olika bearbetningsalternativ för anrops
 * *Jobbloggnivå*: Anger loggnivån för bearbetningsloggarna.
 * *Validera endast*: Kontrollerar giltigheten för indata-DDX.
 
-* *Fel vid fel*: Anger om anropet till Assembler-tjänsten ska misslyckas om ett fel inträffar. Standardvärdet är Falskt.
+* *Fel vid fel*: Anger om anropet till Assembler-tjänsten ska misslyckas om ett fel uppstår. Standardvärdet är Falskt.
 
 #### Utdatadokument {#output-documents}
 

@@ -9,9 +9,9 @@ feature: Commerce Integration Framework
 kt: 4933
 thumbnail: 34350.jpg
 exl-id: 0125021a-1c00-4ea3-b7fb-1533b7b9f4f2
-source-git-commit: 1ef5593495b4bf22d2635492a360168bccc1725d
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '898'
+source-wordcount: '896'
 ht-degree: 3%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 3%
 
 >[!NOTE]
 >
->Sökmotoroptimering (SEO) har blivit en viktig fråga för många marknadsförare. Därför måste SEO-frågor behandlas i många AEM projekt. Se [Bästa praxis för hantering av SEO och URL](https://experienceleague.adobe.com/docs/experience-manager-65/managing/managing-further-reference/seo-and-url-management.html) för ytterligare information.
+>Sökmotoroptimering (SEO) har blivit en viktig fråga för många marknadsförare. Därför måste SEO-frågor behandlas i många AEM projekt. Se [Bästa praxis för hantering av SEO och URL](https://experienceleague.adobe.com/docs/experience-manager-65/managing/managing-further-reference/seo-and-url-management.html) om du vill ha mer information.
 
 [AEM CIF-kärnkomponenter](https://github.com/adobe/aem-core-cif-components) innehåller avancerade konfigurationer för att anpassa URL:er för produkt- och kategorisidor. Många implementeringar anpassar dessa URL:er för sökmotoroptimering (SEO). Följande video visar hur du konfigurerar `UrlProvider` Service och funktioner i [Samlingsmappning](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html) för att anpassa URL:er för produkt- och kategorisidor.
 
@@ -28,11 +28,11 @@ ht-degree: 3%
 
 ## Konfiguration {#configuration}
 
-Så här konfigurerar du `UrlProvider` i enlighet med SEO-kraven och ett projekt måste tillhandahålla en OSGI-konfiguration för CIF URL Provider-konfigurationen.
+Konfigurera `UrlProvider` enligt SEO-kraven och ett projekt måste tillhandahålla en OSGI-konfiguration för konfigurationen CIF URL-provider.
 
 >[!NOTE]
 >
->Sedan version 2.0.0 av de AEM CIF Core-komponenterna finns det bara fördefinierade url-format i URL-providerkonfigurationen, i stället för de format som kan konfigureras fritt från 1.x-versioner. Dessutom har användningen av väljare för att skicka data i URL-adresser ersatts med suffix.
+>Sedan version 2.0.0 av AEM CIF Core Components finns det bara fördefinierade url-format i URL-providerkonfigurationen, i stället för de format som kan konfigureras fritt från 1.x-versioner. Dessutom har användningen av väljare för att skicka data i URL-adresser ersatts med suffix.
 
 ### URL-format för produktsida {#product}
 
@@ -44,7 +44,7 @@ Detta konfigurerar URL:erna för produktsidorna och stöder följande alternativ
 * `{{page}}.html/{{url_path}}.html#{{variant_sku}}`
 * `{{page}}.html/{{sku}}/{{url_path}}.html#{{variant_sku}}`
 
-När det gäller [Referensarkiv för Venedig](https://github.com/adobe/aem-cif-guides-venia):
+Om det finns [Referensarkiv för Venedig](https://github.com/adobe/aem-cif-guides-venia):
 
 * `{{page}}` ersätts med `/content/venia/us/en/products/product-page`
 * `{{sku}}` ersätts med exempelvis produktens SKU, `VP09`
@@ -63,7 +63,7 @@ Detta konfigurerar URL:erna för kategorierna eller produktlistsidorna och stöd
 * `{{page}}.html/{{url_path}}.html` (standard)
 * `{{page}}.html/{{url_key}}.html`
 
-När det gäller [Referensarkiv för Venedig](https://github.com/adobe/aem-cif-guides-venia):
+Om det finns [Referensarkiv för Venedig](https://github.com/adobe/aem-cif-guides-venia):
 
 * `{{page}}` ersätts med `/content/venia/us/en/products/category-page`
 * `{{url_key}}` ersätts av kategoriens `url_key` property
@@ -73,15 +73,15 @@ Med exempeldata ovan ser en kategorisidas URL-adress formaterad med standardform
 
 >[!NOTE]
 > 
->The `url_path` är en sammanfogning av `url_keys` för en produkts eller kategoris överordnade och produkten eller kategorin `url_key` avgränsad med `/` snedstreck.
+>The `url_path` är en kombination av `url_keys` för en produkts eller kategoris överordnade och produkten eller kategorin `url_key` avgränsad med `/` snedstreck.
 
 ### Specifik kategori-/produktsida {#specific-pages}
 
 Det går att skapa [flera kategorier och produktsidor](multi-template-usage.md) för endast en viss delmängd av kategorier eller produkter i en katalog.
 
-The `UrlProvider` är förkonfigurerat för att generera djupa länkar till sådana sidor på författarskiktsinstanser. Detta är användbart för redigerare som bläddrar på en webbplats i förhandsgranskningsläge, navigerar till en viss produkt- eller kategorisida och växlar tillbaka till redigeringsläget för att redigera sidan.
+The `UrlProvider` är förkonfigurerat för att generera djupa länkar till sådana sidor på instanser på författarnivå. Detta är användbart för redigerare som bläddrar på en webbplats i förhandsgranskningsläge, navigerar till en viss produkt- eller kategorisida och växlar tillbaka till redigeringsläget för att redigera sidan.
 
-Vid publiceringsnivåinstanser å andra sidan bör katalogsidans URL-adresser hållas stabila så att de inte förlorar vinster på rankningar för sökmotorer. På grund av detta kommer instanser av publiceringsnivån inte att återge djuplänkar till specifika katalogsidor per standard. Om du vill ändra det här beteendet _CIF URL Provider Specific Page Strategy_ kan konfigureras för att alltid generera särskilda sidadresser.
+Vid publiceringsnivåinstanser å andra sidan bör katalogsidans URL-adresser hållas stabila så att de inte förlorar vinster på rankningar för sökmotorer. På grund av detta kommer instanser av publiceringsnivån inte att återge djuplänkar till specifika katalogsidor per standard. Om du vill ändra detta beteende _CIF URL Provider Specific Page Strategy_ kan konfigureras för att alltid generera särskilda sidadresser.
 
 ## Anpassade URL-format {#custom-url-format}
 
@@ -95,7 +95,7 @@ Förutom `UrlProvider`går det också att konfigurera [Samlingsmappningar](https
 
 ## Kombinera med AEM Dispatcher {#dispatcher}
 
-URL-omskrivningar kan också göras med AEM Dispatcher HTTP-server med `mod_rewrite` -modul. The [AEM Project Archetype](https://github.com/adobe/aem-project-archetype) innehåller en referens AEM Dispatcher-konfiguration som redan innehåller grundläggande [skriv om regler](https://github.com/adobe/aem-project-archetype/tree/master/src/main/archetype/dispatcher.cloud) för den genererade storleken.
+URL-omskrivningar kan också göras med AEM Dispatcher HTTP-server med `mod_rewrite` -modul. The [AEM Project Archettype](https://github.com/adobe/aem-project-archetype) innehåller en referens AEM Dispatcher-konfiguration som redan innehåller grundläggande [skriv om regler](https://github.com/adobe/aem-project-archetype/tree/master/src/main/archetype/dispatcher.cloud) för den genererade storleken.
 
 ## Exempel
 
@@ -108,5 +108,5 @@ The [Referensarkiv för Venedig](https://github.com/adobe/aem-cif-guides-venia) 
 ## Ytterligare resurser
 
 * [Referensarkiv för Venedig](https://github.com/adobe/aem-cif-guides-venia)
-* [AEM](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/resource-mapping.html)
+* [AEM resursmappning](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/resource-mapping.html)
 * [Samlingsmappningar](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html)

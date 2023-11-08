@@ -1,5 +1,5 @@
 ---
-title: Aktivera enkel inloggning i AEM
+title: Aktivera enkel inloggning i AEM formulär
 seo-title: Enabling single sign-on in AEM forms
 description: Lär dig hur du aktiverar enkel inloggning (SSO) med HTTP-huvuden och SPNEGO.
 seo-description: Learn how to enable single sign-on (SSO) using HTTP headers and SPNEGO.
@@ -10,14 +10,14 @@ geptopics: SG_AEMFORMS/categories/configuring_user_management
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: ee54d9d4-190d-4665-925a-9740ac65fbd5
 exl-id: 89561ed0-d094-4ef7-9bc1-bde11f3c5bc3
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: c4cd9a61a226ace2a72d60b5b7b7432de12cb873
 workflow-type: tm+mt
 source-wordcount: '1520'
 ht-degree: 0%
 
 ---
 
-# Aktivera enkel inloggning i AEM{#enabling-single-sign-on-in-aem-forms}
+# Aktivera enkel inloggning i AEM formulär{#enabling-single-sign-on-in-aem-forms}
 
 AEM erbjuder två sätt att aktivera enkel inloggning (SSO) - HTTP-huvuden och SPNEGO.
 
@@ -41,13 +41,13 @@ Du kan även aktivera enkel inloggning med SPNEGO. (Se [Aktivera enkel inloggnin
    * **HTTP-huvud för domän:** (Inte obligatoriskt) Namnet på det huvud vars värde innehåller domännamnet. Använd bara den här inställningen om ingen enskild HTTP-rubrik unikt identifierar användaren. Använd den här inställningen för fall där det finns flera domäner och den unika identifieraren bara är unik inom en domän. I det här fallet anger du rubriknamnet i den här textrutan och anger domänmappning för flera domäner i rutan Domänmappning. (Se [Redigera och konvertera befintliga domäner](/help/forms/using/admin-help/editing-converting-existing-domains.md#editing-and-converting-existing-domains).)
    * **Domänmappning:** (Obligatoriskt) Anger mappning för flera domäner i formatet *header value=domain name*.
 
-      Tänk dig till exempel en situation där HTTP-huvudet för en domän är domainName och kan ha värdena domain1, domain2 och domain3. I det här fallet använder du domänmappning för att mappa domainName-värden till domännamn för användarhantering. Alla mappningar måste finnas på olika rader:
+     Tänk dig till exempel en situation där HTTP-huvudet för en domän är domainName och kan ha värdena domain1, domain2 och domain3. I det här fallet använder du domänmappning för att mappa domainName-värden till domännamn för användarhantering. Alla mappningar måste finnas på olika rader:
 
-      domain1=UMdomain1
+     domain1=UMdomain1
 
-      domain2=UMdomain2
+     domain2=UMdomain2
 
-      domain3=UMdomain3
+     domain3=UMdomain3
 
 ### Konfigurera tillåtna referenser {#configure-allowed-referers}
 
@@ -63,8 +63,8 @@ Du kan även aktivera enkel inloggning med HTTP-huvuden. (Se [Aktivera enkel inl
 >
 >AEM Forms på JEE stöder inte konfigurering av enkel inloggning med Kerberos/SPNEGO i flera underordnade domänmiljöer.
 
-1. Bestäm vilken domän som ska användas för att aktivera enkel inloggning. Den AEM formulärservern och användarna måste tillhöra samma Windows-domän eller betrodda domän.
-1. Skapa en användare som representerar AEM formulärserver i Active Directory. (Se [Skapa ett användarkonto](enabling-single-sign-on-aem.md#create-a-user-account).) Om du konfigurerar mer än en domän att använda SPNEGO måste du se till att lösenorden för var och en av dessa användare är olika. Om lösenorden inte är olika fungerar inte SPNEGO SSO.
+1. Bestäm vilken domän som ska användas för att aktivera enkel inloggning. AEM Forms Server och användarna måste tillhöra samma Windows-domän eller betrodda domän.
+1. I Active Directory skapar du en användare som representerar AEM Forms Server. (Se [Skapa ett användarkonto](enabling-single-sign-on-aem.md#create-a-user-account).) Om du konfigurerar mer än en domän att använda SPNEGO måste du se till att lösenorden för var och en av dessa användare är olika. Om lösenorden inte är olika fungerar inte SPNEGO SSO.
 1. Mappa tjänstens huvudnamn. (Se [Mappa ett SPN (Service Principal Name)](enabling-single-sign-on-aem.md#map-a-service-principal-name-spn).)
 1. Konfigurera domänkontrollanten. (Se [Förhindra fel i Kerberos-integritetskontroll](enabling-single-sign-on-aem.md#prevent-kerberos-integrity-check-failures).)
 1. Lägga till eller redigera en företagsdomän enligt beskrivningen i [Lägga till domäner](/help/forms/using/admin-help/adding-domains.md#adding-domains) eller [Redigera och konvertera befintliga domäner](/help/forms/using/admin-help/editing-converting-existing-domains.md#editing-and-converting-existing-domains). Utför följande uppgifter när du skapar eller redigerar företagsdomänen:
@@ -99,7 +99,7 @@ Du kan även aktivera enkel inloggning med HTTP-huvuden. (Se [Aktivera enkel inl
 ### Mappa ett SPN (Service Principal Name) {#map-a-service-principal-name-spn}
 
 1. Hämta KtPass-verktyget. Det här verktyget används för att mappa ett SPN till en REALM. Du kan hämta KtPass-verktyget som en del av Windows Server Tool Pack eller Resource Kit. (Se [Supportverktyg för Windows Server 2003 Service Pack 1](https://support.microsoft.com/kb/892777).)
-1. Kör i en kommandotolk `ktpass` med följande argument:
+1. Kör i kommandotolken `ktpass` med följande argument:
 
    `ktpass -princ HTTP/`*värd* `@`*REALM* `-mapuser`*användare*
 
@@ -109,7 +109,7 @@ Du kan även aktivera enkel inloggning med HTTP-huvuden. (Se [Aktivera enkel inl
 
    Värdena som du måste ange beskrivs enligt följande:
 
-   **värd:** Fullständigt kvalificerat namn på formulärservern eller en unik URL. I det här exemplet är det inställt på lcserver.um.lc.com.
+   **värd:** Fullständigt kvalificerat namn på Forms Server eller en unik URL. I det här exemplet är det inställt på lcserver.um.lc.com.
 
    **REALM:** Active Directory-sfären för domänkontrollanten. I det här exemplet är det inställt på UM.LC.COM. Se till att du anger sfären med versaler. Utför följande steg för att fastställa sfären för Windows 2003:
 
@@ -150,9 +150,9 @@ Om servern används med datornamnet, till exempel https://lcserver:8080, krävs 
 
 1. Gå till Verktyg > Internetalternativ och klicka på fliken Säkerhet.
 1. Klicka på ikonen Lokalt intranät och sedan på Webbplatser.
-1. Klicka på Avancerat och skriv webbadressen till formulärservern i rutan Lägg till den här webbplatsen i zonen. Skriv till exempel `https://lcserver.um.lc.com`
+1. Klicka på Avancerat och skriv webbadressen till din Forms-server i rutan Lägg till den här webbplatsen i zonen. Skriv till exempel `https://lcserver.um.lc.com`
 1. Klicka på OK tills alla dialogrutor är stängda.
-1. Testa konfigurationen genom att gå till URL:en för AEM formulärserver. Skriv t.ex. `https://lcserver.um.lc.com:8080/um/login?um_no_redirect=true`
+1. Testa konfigurationen genom att gå till webbadressen för din AEM Forms Server. Skriv t.ex. `https://lcserver.um.lc.com:8080/um/login?um_no_redirect=true`
 
 **Konfigurera Mozilla Firefox**
 

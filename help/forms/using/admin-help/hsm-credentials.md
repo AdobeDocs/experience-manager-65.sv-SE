@@ -6,7 +6,7 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/managing_certificates_and_credentials
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 exl-id: facbeab2-de95-4778-894c-faa771d3391e
-source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
 source-wordcount: '1323'
 ht-degree: 0%
@@ -23,7 +23,7 @@ AEM formulär Med digitala signaturer kan du använda autentiseringsuppgifter so
 
 >[!NOTE]
 >
->När du har ändrat HSM-konfigurationen startar du om AEM.
+>När du har ändrat HSM-konfigurationen startar du om AEM Forms Server.
 
 ## Skapa ett alias för en HSM-referens när HSM-enheten är online {#create-an-alias-for-an-hsm-credential-when-the-hsm-device-is-online}
 
@@ -50,7 +50,7 @@ AEM formulär Med digitala signaturer kan du använda autentiseringsuppgifter so
 1. I listan Facktyp väljer du Fack-ID, Fackindex eller Tokennamn och anger ett värde i rutan Fackinformation. AEM använder dessa inställningar för att avgöra var inloggningsuppgifterna lagras på HSM.
 
    * **Tokennamn:** Motsvarar ett partitionsnamn (till exempel HSMPART1).
-   * **Plats-ID:** Kortplats-ID är ett heltal som motsvarar kortplatsen, vilket i sin tur motsvarar en partition. Klienten (formulärservern) som till exempel har registrerats med HSMPART1-partitionen först. Detta mappar plats 1 till HSMPART1-partitionen för den här klienten. Eftersom HSMPART1 är den första registrerade partitionen är plats-ID 1 och du ställer in fackinformation till 1.
+   * **Plats-ID:** Kortplats-ID är ett heltal som motsvarar kortplatsen, vilket i sin tur motsvarar en partition. Klienten (Forms Server) har till exempel registrerats med HSMPART1-partitionen först. Detta mappar plats 1 till HSMPART1-partitionen för den här klienten. Eftersom HSMPART1 är den första registrerade partitionen är plats-ID 1 och du ställer in fackinformation till 1.
 
      Kortplats-ID anges klient för klient. Om du registrerade en andra dator till en annan partition (till exempel HSMPART2 på samma HSM-enhet) kopplas fack 1 till HSMPART2-partitionen för den klienten.
 
@@ -73,7 +73,7 @@ AEM formulär Med digitala signaturer kan du använda autentiseringsuppgifter so
 1. I administrationskonsolen klickar du på Inställningar > Lita på arkivhantering > HSM-autentiseringsuppgifter.
 1. Klicka i kryssrutan bredvid de autentiseringsuppgifter som du vill kontrollera och klicka sedan på Kontrollera status.
 
-Statuskolumnen återspeglar den aktuella statusen för autentiseringsuppgiften. Om fel uppstår visas ett rött X i statuskolumnen. Håll muspekaren över X för att visa ett verktygstips som innehåller orsaken till felet.
+Statuskolumnen återspeglar den aktuella statusen för autentiseringsuppgiften. Om ett fel uppstår visas ett rött X i statuskolumnen. Håll muspekaren över X för att visa ett verktygstips som innehåller orsaken till felet.
 
 ## Uppdatera egenskaper för HSM-autentiseringsalias {#update-hsm-credential-alias-properties}
 
@@ -83,7 +83,7 @@ Statuskolumnen återspeglar den aktuella statusen för autentiseringsuppgiften. 
 
 ## Återställ alla HSM-anslutningar {#reset-all-hsm-connections}
 
-Återställ de öppna anslutningarna till en HSM-enhet efter eventuella avbrott i nätverkssessionen mellan formulärservern och HSM-enheten. Det kan till exempel uppstå avbrott på grund av ett nätverksavbrott eller att HSM-enheten kopplas från för en programuppdatering. Efter ett avbrott är de befintliga anslutningarna inaktuella och eventuella signeringsbegäranden mot dessa anslutningar misslyckas. Om du använder alternativet Återställ alla HSM-anslutningar tas de gamla anslutningarna bort.
+Återställ de öppna anslutningarna till en HSM-enhet efter eventuella avbrott i nätverkssessionen mellan Forms Server och HSM-enheten. Det kan till exempel uppstå avbrott på grund av ett nätverksavbrott eller att HSM-enheten kopplas från för en programuppdatering. Efter ett avbrott är de befintliga anslutningarna inaktuella och eventuella signeringsbegäranden mot dessa anslutningar misslyckas. Om du använder alternativet Återställ alla HSM-anslutningar tas de gamla anslutningarna bort.
 
 1. I administrationskonsolen klickar du på Inställningar > Lita på arkivhantering > HSM-autentiseringsuppgifter.
 1. Klicka på Återställ alla HSM-anslutningar.

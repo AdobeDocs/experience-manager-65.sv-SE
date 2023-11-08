@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.4
 discoiquuid: d211d8b0-e75f-49c3-808d-5d0e26ad3a6b
 role: Admin
 exl-id: 40bc01b4-a59e-4420-81d6-2887857bddce
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+source-git-commit: c4cd9a61a226ace2a72d60b5b7b7432de12cb873
 workflow-type: tm+mt
 source-wordcount: '847'
 ht-degree: 0%
@@ -68,7 +68,7 @@ Gör så här med webbsidan Program och tjänster i administrationskonsolen:
 
 ## Inaktiverar onödvändig anonym åtkomst till tjänster {#disabling-non-essential-anonymous-access-to-services}
 
-Vissa formulärservertjänster tillåter oautentiserade (anonyma) anrop för vissa åtgärder. Det innebär att en eller flera åtgärder som exponeras av tjänsten kan anropas som en autentiserad användare eller som ingen autentiserad användare alls.
+Vissa Forms Server-tjänster tillåter oautentiserade (anonyma) anrop för vissa åtgärder. Det innebär att en eller flera åtgärder som exponeras av tjänsten kan anropas som en autentiserad användare eller som ingen autentiserad användare alls.
 
 1. Logga in på administrationskonsolen genom att skriva följande URL i en webbläsare:
 

@@ -6,9 +6,9 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-adobe-phonegap-enterprise
 exl-id: 8d965e94-c368-481d-b000-6e22456c34db
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '932'
+source-wordcount: '931'
 ht-degree: 0%
 
 ---
@@ -45,7 +45,7 @@ AEM Mobile kräver ett Adobe Analytics-konto för att samla in och rapportera sp
 
 När Analytics-kontot har konfigurerats skapar du en konfiguration för innehållssynkronisering som hämtar in innehållet i ditt mobilprogram.
 
-Mer information finns i Konfigurera Innehållssynkronisering. Konfigurationen måste instruera Innehållssynkronisering att placera ADBMobleConfig i katalogen /www. I Geometrixx Outdoors App är till exempel konfigurationen för innehållssynkronisering följande: */content/phonegap/geometrixx-outdoor/shell/jcr:content/page-app/app-config/ams-ADBMobileConfig*. Det finns även en konfiguration för utveckling, men den är identisk med den konfiguration som inte är utvecklad när det gäller Geometrixx Outdoors.
+Mer information finns i Konfigurera Innehållssynkronisering. Konfigurationen måste instruera Innehållssynkronisering att placera ADBMobleConfig i katalogen /www. I Geometrixx Outdoors App är till exempel konfigurationen för innehållssynkronisering följande: */content/phonegap/geometrixx-outdoor/shell/jcr:content/page-app/app-config/ams-ADBMobileConfig*. Det finns även en konfiguration för utveckling. Den är dock identisk med icke-utvecklingskonfigurationen om det finns Geometrixx Outdoors.
 
 Mer information om hur du hämtar ADBMomobileConfig från kontrollpanelen för mobilprogram AEM appar finns i Analytics - Mobile Services - Adobe Mobile Services SDK Config-fil.
 

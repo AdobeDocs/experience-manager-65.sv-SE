@@ -1,18 +1,14 @@
 ---
 title: Konfigurera segmentering med ContextHub
-seo-title: Configuring Segmentation with ContextHub
 description: Lär dig hur du konfigurerar segmentering med Context Hub.
-seo-description: Learn how to configure segmentation with Context Hub.
-uuid: 196cfb18-317c-443d-b6f1-f559e4221baa
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: personalization
 content-type: reference
-discoiquuid: 6cade87c-9ed5-47d7-9b39-c942268afdad
 exl-id: 8bd6c88b-f36a-422f-ae6c-0d59f365079a
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '1774'
+source-wordcount: '1772'
 ht-degree: 0%
 
 ---
@@ -52,7 +48,7 @@ The **Segmentredigerare** gör att du enkelt kan ändra ett segment. Om du vill 
 
 Med komponentwebbläsaren kan du lägga till **OCH** och **ELLER** behållare för att definiera segmentlogiken och sedan lägga till ytterligare komponenter för att jämföra egenskaper och värden eller referensskript och andra segment för att definiera urvalskriterierna (se [Skapa ett nytt segment](#creating-a-new-segment)) för att definiera det exakta scenariot för markering av segmentet.
 
-När hela programsatsen utvärderas till true har segmentet lösts. Om flera segment är tillämpliga ska **Öka** Även faktor används. Se [Skapa ett nytt segment](#creating-a-new-segment) för mer information om [förstärkningsfaktor.](/help/sites-administering/campaign-segmentation.md#boost-factor)
+När hela programsatsen utvärderas till true har segmentet lösts. Om det finns flera tillämpliga segment är **Öka** Även faktor används. Se [Skapa ett nytt segment](#creating-a-new-segment) för mer information om [förstärkningsfaktor.](/help/sites-administering/campaign-segmentation.md#boost-factor)
 
 >[!CAUTION]
 >
@@ -106,7 +102,7 @@ Följande segmentjämförelser är tillgängliga när du vill utvärdera segment
 
 >[!NOTE]
 >
->Om datatypen för jämförelsen inte är inställd (d.v.s. inställd på automatisk identifiering) vid jämförelse av värden, kommer segmenteringsmotorn för ContextHub helt enkelt att jämföra värdena som javascript skulle göra. Den konverterar inte värden till de förväntade typerna, vilket kan leda till missvisande resultat. Till exempel:
+>Om datatypen för jämförelsen inte är inställd (d.v.s. inställd på automatisk identifiering), kommer ContextHubs segmenteringsmotor att jämföra värdena som javascript skulle göra. Den konverterar inte värden till de förväntade typerna, vilket kan leda till missvisande resultat. Till exempel:
 >
 >`null < 30 // will return true`
 >

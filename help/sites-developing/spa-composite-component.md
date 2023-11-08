@@ -2,9 +2,9 @@
 title: Sammansatta komponenter i SPA
 description: Lär dig hur du skapar egna sammansatta komponenter, komponenter som består av andra komponenter, som fungerar med AEM Single-Page Application (SPA) Editor.
 exl-id: 02b6c698-d169-467a-9168-9fa6181bed6c
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '781'
+source-wordcount: '782'
 ht-degree: 0%
 
 ---
@@ -41,7 +41,7 @@ I följande avsnitt ges exempel på hur du implementerar varje fall med kortkomp
 
 ### Komponenten finns inte i ditt AEM. {#component-does-not-exist}
 
-Börja med att skapa de komponenter som ska utgöra den sammansatta komponenten, dvs. komponenter för bilden och dess text.
+Börja med att skapa de komponenter som ska utgöra den sammansatta komponenten, det vill säga komponenterna för bilden och dess text.
 
 1. Skapa textkomponenten i AEM.
 1. Lägg till motsvarande `resourceType` från projektet i komponentens `editConfig` nod.

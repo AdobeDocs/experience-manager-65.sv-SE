@@ -1,20 +1,16 @@
 ---
 title: Beräknar formulärdata
-seo-title: Calculating Form Data
 description: Använd tjänsten Forms för att beräkna värden som en användare anger i ett formulär och visa resultaten. Forms-tjänsten beräknar värdena med Java API och Web Service API.
-seo-description: Use the Forms service to calculate values that a user enters into a form and display the results. Forms service calculates the values using the Java API and Web Service API.
-uuid: ccd85bc7-8ccc-44d9-9424-dfc1f603e688
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/rendering_forms
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: operations
-discoiquuid: b4f57e42-60a6-407d-9764-15a11615827d
 role: Developer
 exl-id: 28abf044-6c8e-4578-ae2e-54cdbd694c5f
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '1878'
+source-wordcount: '1876'
 ht-degree: 0%
 
 ---
@@ -163,7 +159,7 @@ Beräkna formulärdata med Forms API (Java):
 1. Skriv tillbaka formulärdataströmmen till klientens webbläsare
 
    * Skapa en `javax.servlet.ServletOutputStream` som används för att skicka en formulärdataström till klientens webbläsare.
-   * Skapa en `com.adobe.idp.Document` genom att anropa `FormsResult` objekt&quot;s `getOutputContent` -metod.
+   * Skapa en `com.adobe.idp.Document` genom att anropa `FormsResult` objekt `getOutputContent` -metod.
    * Skapa en `java.io.InputStream` genom att anropa `com.adobe.idp.Document` objektets `getInputStream` -metod.
    * Skapa en bytearray och fylla den med formulärdataströmmen genom att anropa `InputStream` objektets `read` och skicka bytearrayen som ett argument.
    * Anropa `javax.servlet.ServletOutputStream` objektets `write` metod för att skicka formulärdataströmmen till klientens webbläsare. Skicka bytearrayen till `write` -metod.

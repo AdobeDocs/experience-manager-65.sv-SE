@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: developer-reference
 discoiquuid: c05c9911-7c49-4342-89de-61b8b9953c83
 exl-id: b598ef47-49ff-4806-8cc7-4394aa068eaa
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
 source-wordcount: '940'
 ht-degree: 0%
@@ -75,7 +75,7 @@ Returnerar versionsnumret för skriptbiblioteket
       * **Fel**: Felhanterarfunktion
       * **framgång**: Hanterarfunktionen Slutfört. Den här funktionen skickar ett objekt som innehåller XML i *data* -egenskap.
       * **kontext**: Det objekt som kontexten (this) för *framgång* funktionen är inställd
-      * **validationChecker**: Funktion som ska anropas för att kontrollera verifieringsfel som tagits emot från servern. Valideringsfunktionen skickar en array med felsträngar.
+      * **validationChecker**: Funktion att anropa för att kontrollera verifieringsfel som tagits emot från servern. Valideringsfunktionen skickar en array med felsträngar.
       * **formState**: JSON-tillståndet för XFA-formuläret som data-XML ska returneras för. Om inget anges returneras data-XML för det återgivna formuläret.
 
 * **Utdata:** Ingen
@@ -89,39 +89,38 @@ Returnerar versionsnumret för skriptbiblioteket
 
       * **widgetConfig:** Låter användaren åsidosätta standardwidgetarna i formuläret med anpassade widgetar. Konfigurationen åsidosätts enligt följande:
 
-         *formBridge.registerConfig(&quot;widgetConfig&quot;:{/&amp;ast;configuration&amp;ast;/})*
+        *formBridge.registerConfig(&quot;widgetConfig&quot;:{/&amp;ast;configuration&amp;ast;/})*
 
       * **pagingConfig:** Låter användaren åsidosätta standardbeteendet för återgivning av endast den första sidan. Konfigurationen åsidosätts enligt följande:
 
-         *window.formBridge.registerConfig(&quot;pagingConfig&quot;:{pagingDisabled: &lt;true false=&quot;&quot;>, crinkPageDisabled: &lt;true false=&quot;&quot;> }).*
+        *window.formBridge.registerConfig(&quot;pagingConfig&quot;:{pagingDisabled: &lt;true false=&quot;&quot;>, crinkPageDisabled: &lt;true false=&quot;&quot;> }).*
 
       * **LoggingConfig:** Låter användaren åsidosätta loggningsnivån, inaktivera loggning för en kategori eller visa loggkonsolen eller skicka till servern. Konfigurationen kan åsidosättas på följande sätt:
 
-      ```javascript
-      formBridge.registerConfig{
-        "LoggerConfig" : {
-      {
-      "on":`<true *| *false>`,
-      "category":`<array of categories>`,
-      "level":`<level of categories>`, "
-      type":`<"console"/"server"/"both">`
-      }
-        }
-      ```
+     ```javascript
+     formBridge.registerConfig{
+       "LoggerConfig" : {
+     {
+     "on":`<true *| *false>`,
+     "category":`<array of categories>`,
+     "level":`<level of categories>`, "
+     type":`<"console"/"server"/"both">`
+     }
+       }
+     ```
 
       * **SubmitServiceProxyConfig:** Tillåt användarna att registrera insändning och inloggningstjänster för proxy.
 
-         ```javascript
-         window.formBridge.registerConfig("submitServiceProxyConfig",
-         {
-         "submitServiceProxy" : "`<submitServiceProxy>`",
-         "logServiceProxy": "`<logServiceProxy>`",
-         "submitUrl" : "`<submitUrl>`"
-         });
-         ```
+        ```javascript
+        window.formBridge.registerConfig("submitServiceProxyConfig",
+        {
+        "submitServiceProxy" : "`<submitServiceProxy>`",
+        "logServiceProxy": "`<logServiceProxy>`",
+        "submitUrl" : "`<submitUrl>`"
+        });
+        ```
+
    * **config:** Konfigurationens värde
-
-
 
 * **Utdata:** Objekt som innehåller det ursprungliga värdet för konfigurationen i *data* -egenskap.
 
@@ -149,7 +148,7 @@ Returnerar versionsnumret för skriptbiblioteket
 
 * **Indata**: Ingen
 * **Utdata**: Ingen
-* **Fel**: Utlöser ett undantag om formulärtillståndet inte har initierats
+* **Fel**: Utlöser ett undantag om formulärtillståndet inte initieras
 
 **getFormState()** Returnerar den JSON som representerar formulärstatusen
 
@@ -165,9 +164,9 @@ Returnerar versionsnumret för skriptbiblioteket
    * **Alternativ:** JavaScript-objekt som innehåller följande egenskaper:
 
       * **Fel**: Felhanterarfunktion
-      * **framgång**: Hanterarfunktionen Slutfört
-      * **kontext**: Det objekt som kontexten (this) för *framgång* funktionen är inställd
-      * **formState**: Formulärets JSON-tillstånd. Formuläret återställs till JSON-läget.
+      * **framgång**: Hanterarfunktion för lyckade
+      * **kontext**: Det objekt som kontexten (this) för *framgång* function set
+      * **formState**: formulärets JSON-tillstånd. Formuläret återställs till JSON-läget.
 
 * **Utdata:** Ingen
 * **Fel:** Ingen
@@ -176,17 +175,17 @@ Returnerar versionsnumret för skriptbiblioteket
 
 * **Indata:** Ett uttryck för fältet som fokus ska ställas in på
 * **Utdata:** Ingen
-* **Fel:** Utlöser ett undantag om ett felaktigt SOM-uttryck används
+* **Fel:** Utlöser ett undantag om det finns ett felaktigt AS-uttryck
 
-**setFieldValue (som, värde)** Anger värdet för fälten för de angivna som-uttrycken
+**setFieldValue (som, värde)** Anger värdet för fälten för angivna som-uttryck
 
 * **Indata:**
 
    * **som:** Array som innehåller vissa uttryck för fältet. Det uttryck som anger fältets värde.
-   * **värde:** Array som innehåller värden som motsvarar &quot;SOM&quot;-uttryck som finns i en **som** array. Om värdeets datatyp inte är densamma som fieldType ändras inte värdet.
+   * **värde:** Array som innehåller värden som motsvarar &quot;SOM&quot;-uttryck i en **som** array. Om värdeets datatyp inte är densamma som fieldType ändras inte värdet.
 
 * **Utdata:** Ingen
-* **Fel:** Utlöser ett undantag om ett felaktigt SOM-uttryck används
+* **Fel:** Utlöser ett undantag om det finns ett felaktigt SOM-uttryck
 
 **getFieldValue (som)** Returnerar värdet för fälten för angivna som-uttryck
 
@@ -213,7 +212,7 @@ if(a.errors) {
 * **Indata:**
 
    * **som:** Array som innehåller vissa uttryck för fälten
-   * **property**: Namn på egenskapen vars värde krävs
+   * **property**: Namnet på den egenskap vars värde krävs
 
 * **Utdata:** Objekt som innehåller resultatet som en array i *data* property
 
@@ -224,7 +223,7 @@ if(a.errors) {
 * **Indata:**
 
    * **som:** Array som innehåller vissa uttryck för de fält vars värde måste anges
-   * **property**: Egenskap vars värde måste anges
+   * **property**: Egenskapen vars värde måste anges
    * **värde:** Array som innehåller värden för den angivna egenskapen för fält som anges i som-uttryck
 
 * **Utdata:** Ingen

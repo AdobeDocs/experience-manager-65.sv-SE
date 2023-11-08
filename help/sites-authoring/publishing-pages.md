@@ -2,9 +2,9 @@
 title: Publicera innehållssidor
 description: Lär dig publicera innehållssidor i Adobe Experience Manager 6.5.
 exl-id: 61144bbe-6710-4cae-a63e-e708936ff360
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '1660'
+source-wordcount: '1662'
 ht-degree: 6%
 
 ---
@@ -76,7 +76,7 @@ Om du redigerar en sida kan den publiceras direkt från redigeraren.
 
 >[!NOTE]
 >
->Publicering från redigeraren är en ytlig publicering, dvs endast den valda sidan/de markerade sidorna publiceras och inga underordnade sidor publiceras.
+>Publicering från redigeraren är en ytlig publicering, det vill säga bara den valda sidan/de markerade sidorna publiceras och inga underordnade sidor publiceras.
 
 >[!NOTE]
 >
@@ -107,7 +107,7 @@ Så här publicerar du en sida med Snabbpublicering:
 
 >[!NOTE]
 >
->Snabbpublicering är en grund publicering, d.v.s. endast den valda sidan/de markerade sidorna publiceras och inga underordnade sidor publiceras.
+>Snabbpublicering är en ytlig publicering, d.v.s. endast den valda sidan/de markerade sidorna publiceras och inga underordnade sidor publiceras.
 
 #### Hantera publikation {#manage-publication}
 

@@ -2,9 +2,9 @@
 title: Använda Edge Delivery Services
 description: Använda Edge Delivery Services
 exl-id: 6c9178b0-c8f3-4fc7-8614-8e71ffc2f0b8
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '609'
+source-wordcount: '608'
 ht-degree: 1%
 
 ---
@@ -20,7 +20,7 @@ Med Edge Delivery är det enkelt, snabbt och flexibelt att skapa. Du kan använd
 * Dokumentbaserad redigering (t.ex. Microsoft Word eller Google Docs) - [Mer information finns på den här länken](https://www.hlx.live/docs/authoring).
 * Page Editor/Universal Editor - Kontakta din Adobe-säljare.
 
-Vid dokumentbaserad redigering kan du arbeta med olika källor som Microsoft Word och Google Docs. Dokument från dessa källor blir sidor på din webbplats. Rubriker, listor, bilder, teckensnittselement och videor kan alla överföras från den ursprungliga källan till webbplatsen. Du kan lägga till metadata för SEO-syften eller använda block för att arbeta med strukturerat innehåll och lägga till funktioner.
+Om det finns dokumentbaserad redigering kan du arbeta med olika källor som Microsoft Word och Google Docs. Dokument från dessa källor blir sidor på din webbplats. Rubriker, listor, bilder, teckensnittselement och videor kan alla överföras från den ursprungliga källan till webbplatsen. Du kan lägga till metadata för SEO-syften eller använda block för att arbeta med strukturerat innehåll och lägga till funktioner.
 
 ## Publicering {#publishing-edge}
 

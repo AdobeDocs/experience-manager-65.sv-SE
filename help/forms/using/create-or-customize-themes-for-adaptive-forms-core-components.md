@@ -1,20 +1,18 @@
 ---
 title: Hur skapar eller anpassar man adaptiva formulärteman?
-seo-title: How to create a theme for Adaptive Forms Core Components?
 description: Lär dig att skapa eller anpassa teman för adaptiva Forms Core-komponenter med BEM-specifikationer
-seo-description: Learn to create or customize themes for Adaptive Forms Core Components using BEM specifications
 keywords: skapa anpassningsbara formulär, skapa ett nytt tema, anpassa tema, ladda upp nytt tema, använda tema i formulär, ta bort ett tema, skapa ett tema i AEM 6.5-formulär
 contentOwner: Khushwant Singh
 topic-tags: Adaptive Forms
 docset: aem65
 role: Admin, Developer
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+exl-id: 9f9b35a3-0479-4179-9fad-994a482c96b6
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '1967'
+source-wordcount: '1965'
 ht-degree: 0%
 
 ---
-
 
 # Skapa eller anpassa ett anpassat formulärtema {#introduction-to-theme}
 
@@ -339,4 +337,3 @@ Så här tar du bort oanvända eller oönskade teman:
 * [Skapa en mall för Core Components-baserade Adaptive Forms](template-editor.md)
 * [Skapa eller lägga till ett anpassat formulär på en AEM Sites-sida eller ett Experience Fragment](create-or-add-an-adaptive-form-to-aem-sites-page.md)
 * [Exempelmallar för teman och formulärdatamodeller](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/sample-themes-templates-form-data-models-core-components.html)
-

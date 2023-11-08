@@ -9,9 +9,9 @@ content-strategy: max-2018
 docset: aem65
 role: Admin
 exl-id: 0f9aab7d-8e41-449a-804b-7e1bfa90befd
-source-git-commit: 65c5a4442f17e6bc52deaa1588f535a05698083f
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '1737'
+source-wordcount: '1734'
 ht-degree: 0%
 
 ---
@@ -27,19 +27,19 @@ Migreringsverktyget konverterar [Adaptivt Forms-material](../../forms/using/intr
 
 >[!NOTE]
 >
->Om det gäller en uppgradering som inte är på plats, för Correspondence Management-resurser, kan du köra migreringen varje gång du importerar resurserna. För migrering av Correspondence Management måste Forms-kompatibilitetspaketet vara installerat.
+>Om det finns en uppgradering som inte är på plats för Correspondence Management-resurser kan du köra migreringen varje gång du importerar resurserna. För migrering av Correspondence Management måste Forms-kompatibilitetspaketet vara installerat.
 
 ## Migreringsmetod {#approach-to-migration}
 
 Du kan [uppgradera](../../forms/using/upgrade.md) till den senaste versionen av AEM Forms 6.5 från AEM Forms 6.4, 6.3 eller 6.2, eller en ny installation. Beroende på om du har uppgraderat din tidigare installation eller utfört en ny installation måste du göra något av följande:
 
-**Om det gäller en uppgradering på plats**
+**Om det finns en uppgradering på plats**
 
 Om du har utfört en uppgradering på plats har den uppgraderade instansen redan resurserna och dokumenten. Innan du kan använda resurserna och dokumenten måste du installera [AEMFD-kompatibilitetspaket](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=en) (inkluderar kompatibilitetspaket för hantering av korrespondenshantering)
 
 Sedan måste du uppdatera resurserna och dokumenten efter [köra migreringsverktyget](#runningmigrationutility).
 
-**Vid en installation på annan plats**
+**Om det finns en installation på annan plats**
 
 Om installationen är på fel plats (ny) måste du installera programmet innan du kan använda resurserna och dokumenten [AEMFD-kompatibilitetspaket](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=en) (inkluderar paketet Correspondence Management Compatibility).
 

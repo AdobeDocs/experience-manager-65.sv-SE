@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/get_started_with_administering_aem_forms_on_je
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: bd648c38-731b-420e-973d-a4728b69868e
 exl-id: e1519477-b5a8-4947-8597-26b945a3b819
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: c4cd9a61a226ace2a72d60b5b7b7432de12cb873
 workflow-type: tm+mt
 source-wordcount: '1701'
 ht-degree: 0%
@@ -43,7 +43,7 @@ Mer information om hur du aktiverar läget för säker säkerhetskopiering finns
 
 **Rotkatalog för global dokumentlagring** Rotkatalogen för global dokumentlagring (GDS) används för följande syften:
 
-* Lagra långlivade dokument. Långa dokument har ingen förfallotid och finns kvar tills de tas bort (t.ex. PDF-filer som används i en arbetsflödesprocess). De långvariga dokumenten utgör en kritisk del av det övergripande systemtillståndet. Om några eller alla dessa dokument förloras eller skadas kan formulärservern bli instabil. Därför är det viktigt att den här katalogen lagras på en RAID-enhet.
+* Lagra långlivade dokument. Långa dokument har ingen förfallotid och finns kvar tills de tas bort (t.ex. PDF-filer som används i en arbetsflödesprocess). De långvariga dokumenten utgör en kritisk del av det övergripande systemtillståndet. Om några eller alla dessa dokument förloras eller skadas kan Forms Server bli instabil. Därför är det viktigt att den här katalogen lagras på en RAID-enhet.
 * Lagra temporära dokument som behövs under bearbetningen.
 
 >[!NOTE]
@@ -117,6 +117,6 @@ Aktivera det här alternativet i utvecklingsmiljöer, där utvecklare använder 
 
 **Tillåt icke-skyddad RDS-begäran** När det här alternativet är markerat behöver RDS-begäranden inte använda https. Som standard är det här alternativet inte markerat och all kommunikation till datatjänster måste vara https-begäranden.
 
-**Tillåt oskyddad dokumentöverföring från Flex-program:** Filöverföringsservern som används för att överföra dokument från Adobe Flex®-program till AEM formulär kräver att användare är autentiserade och behöriga innan de kan överföra dokument. Användaren måste tilldelas rollen som användare av Document Upload Application eller en annan roll som innefattar behörigheten Dokumentöverföring. Detta förhindrar obehöriga användare från att överföra dokument till AEM formulärserver. Välj det här alternativet om du vill inaktivera den här säkerhetsfunktionen i en utvecklingsmiljö eller för bakåtkompatibilitet med tidigare versioner av AEM formulär. Som standard är det här alternativet inte markerat. Mer information finns i Anropa AEM formulär med AEM formulärborttagning i Programmering med AEM formulär.
+**Tillåt oskyddad dokumentöverföring från Flex-program:** Filöverföringsservern som används för att överföra dokument från Adobe Flex®-program till AEM formulär kräver att användare är autentiserade och behöriga innan de kan överföra dokument. Användaren måste tilldelas rollen som användare av Document Upload Application eller en annan roll som innefattar behörigheten Dokumentöverföring. Detta förhindrar att obehöriga laddar upp dokument till AEM Forms Server. Välj det här alternativet om du vill inaktivera den här säkerhetsfunktionen i en utvecklingsmiljö eller för bakåtkompatibilitet med tidigare versioner av AEM formulär. Som standard är det här alternativet inte markerat. Mer information finns i Anropa AEM formulär med AEM formulärborttagning i Programmering med AEM formulär.
 
-**Tillåt oskyddad dokumentöverföring från Java SDK-program:** Överföringar med HTTP DocumentManager måste vara skyddade. Som standard kräver HTTP-överföringar att användare autentiseras och auktoriseras innan de kan överföra dokument. Användaren måste tilldelas rollen Tjänstanvändare eller en annan roll som innehåller behörigheten Tjänstanrop. Detta förhindrar obehöriga användare från att överföra dokument till formulärservern. Välj det här alternativet om du vill inaktivera den här säkerhetsfunktionen i en utvecklingsmiljö, för bakåtkompatibilitet med tidigare versioner av AEM formulär eller baserat på din brandvägg. Som standard är det här alternativet inte markerat. Mer information finns i&quot;Anropa AEM formulär med Java API&quot; i Programmering med AEM formulär.
+**Tillåt oskyddad dokumentöverföring från Java SDK-program:** Överföringar med HTTP DocumentManager måste vara skyddade. Som standard kräver HTTP-överföringar att användare autentiseras och auktoriseras innan de kan överföra dokument. Användaren måste tilldelas rollen Tjänstanvändare eller en annan roll som innehåller behörigheten Tjänstanrop. Detta förhindrar att obehöriga laddar upp dokument till Forms Server. Välj det här alternativet om du vill inaktivera den här säkerhetsfunktionen i en utvecklingsmiljö, för bakåtkompatibilitet med tidigare versioner av AEM formulär eller baserat på din brandvägg. Som standard är det här alternativet inte markerat. Mer information finns i&quot;Anropa AEM formulär med Java API&quot; i Programmering med AEM formulär.

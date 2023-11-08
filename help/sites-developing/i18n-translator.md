@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: components
 exl-id: a8d50c09-72d0-406e-874e-50a985227a56
-source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '2318'
+source-wordcount: '2319'
 ht-degree: 0%
 
 ---
@@ -300,7 +300,7 @@ Använd följande procedur för att lägga till eller ta bort språk.
 
    >[!NOTE]
    >
-   >Översättaren sparar endast översättningar för språk som faktiskt är [finns i ordlistan](#creating-a-dictionary) (t.ex. under ordlistans sökväg, t.ex. `/apps/myProject/i18n`).
+   >Översättaren sparar endast översättningar för språk som faktiskt är [finns i ordlistan](#creating-a-dictionary) (d.v.s. under ordlistesökvägen som `/apps/myProject/i18n`).
    >
    >Kontrollera att de motsvarar de språk som visas i rutnätet.
 

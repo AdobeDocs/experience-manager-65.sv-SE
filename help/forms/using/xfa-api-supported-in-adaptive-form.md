@@ -10,9 +10,9 @@ discoiquuid: 05303b29-9058-4723-b134-4ba605fe40c7
 docset: aem65
 feature: Adaptive Forms
 exl-id: 255be73f-3169-457c-aaa7-a2fb59f1f2cd
-source-git-commit: e7a3558ae04cd6816ed73589c67b0297f05adce2
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '740'
+source-wordcount: '738'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 ## Introduktion {#introduction}
 
-<span class="preview"> Adobe rekommenderar att man använder modern och utbyggbar datainhämtning [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) for [skapa ny Adaptive Forms](/help/forms/using/create-an-adaptive-form-core-components.md) eller [lägga till adaptiv Forms på AEM Sites-sidor](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-program, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptive Forms med grundläggande komponenter. </span>
+<span class="preview"> Adobe rekommenderar att man använder modern och utbyggbar datainhämtning [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) for [skapa ny Adaptive Forms](/help/forms/using/create-an-adaptive-form-core-components.md) eller [lägga till adaptiv Forms på AEM Sites-sidor](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-filer, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptiv Forms med baskomponenter. </span>
 
 Adaptiva formulär har stöd för olika XFA-händelser, egenskaper, skript och valideringar som definieras i en XDP-fil, inklusive:
 
@@ -55,7 +55,7 @@ När ett adaptivt formulär skapas med en XDP-fil kan du dra och släppa ett XFA
   </tr>
   <tr>
    <td><p>Listruta </p> </td>
-   <td><p>Nedrullningsbar lista</p> </td>
+   <td><p>Listruta</p> </td>
   </tr>
   <tr>
    <td><p>Datum-/tidsfält </p> </td>
@@ -131,11 +131,11 @@ Följande tabell visar hur olika XFA-skript som definieras i XDP-filerna fungera
    <td><p>Mappad till rollegenskapen i adaptiv form.</p> </td>
   </tr>
   <tr>
-   <td><p>Tillgänglighet: talkPriority </p> </td>
+   <td><p>Tillgänglighet: TalkPriority </p> </td>
    <td><p>Mappad till egenskapen talkPriority i adaptiv form.</p> </td>
   </tr>
   <tr>
-   <td><p>Tillgänglighet: talkText</p> </td>
+   <td><p>Hjälpmedel: talkText</p> </td>
    <td><p>Mappas till den anpassade hjälpmedelstexten i anpassad form.</p> </td>
   </tr>
   <tr>
@@ -144,7 +144,7 @@ Följande tabell visar hur olika XFA-skript som definieras i XDP-filerna fungera
   </tr>
   <tr>
    <td><p>bildtext<em> (alla fälttyper)</em></p> </td>
-   <td><p>Mappad till egenskapen Title i adaptiv form.</p> </td>
+   <td><p>Mappad till egenskapen Title i anpassad form.</p> </td>
   </tr>
   <tr>
    <td><p>displayFormat<em> (alla fälttyper)</em></p> </td>
@@ -163,7 +163,7 @@ Följande tabell visar hur olika XFA-skript som definieras i XDP-filerna fungera
    <td><p>Mappas till egenskapen Maximum för tillåtna tecken i adaptiv form.</p> </td>
   </tr>
   <tr>
-   <td><p>flerradig<em> (Textfält)</em></p> </td>
+   <td><p>flera<em> (Textfält)</em></p> </td>
    <td><p>Mappad till egenskapen Tillåt flera rader i adaptiv form.</p> </td>
   </tr>
   <tr>
@@ -216,7 +216,7 @@ Följande tabell visar hur olika XFA-skript som definieras i XDP-filen fungerar 
    <td><p>Mappas till knappens Click-uttryck.</p> </td>
   </tr>
   <tr>
-   <td><p>Stöd för skript på serversidan</p> </td>
+   <td><p>Stöd för serverskript</p> </td>
    <td><p>Det här skriptet körs under körning och kan inte åsidosättas i adaptiv form.</p> </td>
   </tr>
   <tr>

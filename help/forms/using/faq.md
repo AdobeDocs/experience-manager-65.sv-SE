@@ -1,7 +1,7 @@
 ---
 title: Vanliga frågor och svar om HTML5-formulär
 seo-title: Frequently asked questions (FAQ) for HTML5 forms
-description: Vanliga frågor och svar om layout, stöd för skript och HTML5-formulärens omfattning.
+description: Vanliga frågor och svar om layout, stöd för skript och omfånget för HTML5-formulär.
 seo-description: Frequently Asked Questions (FAQ) about layout, scripting support, and scope of HTML5 forms.
 uuid: 398e31de-3e46-4288-b3cd-39d51fa17abc
 contentOwner: robhagat
@@ -12,7 +12,7 @@ discoiquuid: 4b676e7e-191f-4a19-8b8f-fc3e30244b59
 docset: aem65
 feature: Mobile Forms
 exl-id: 85c9315e-1bc8-44a9-937e-af6fc7cf54d1
-source-git-commit: 99c9eddad7a2ec7eb23b3c374a1c0e65e141da20
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
 source-wordcount: '2005'
 ht-degree: 0%
@@ -28,11 +28,11 @@ Det finns några vanliga frågor och svar om layout, skriptstöd och HTML5-formu
 
 1. Varför visas inte streckkoder och signaturfält i mitt formulär?
 
-   Svar: Streckkoder och signaturfält är inte relevanta i HTML eller mobilscenarier. Dessa fält visas som icke-interaktiva områden. AEM Forms Designer har dock ett nytt signaturskriptfält som kan användas istället för signaturfält. Du kan också lägga till en [anpassad widget](../../forms/using/custom-widgets.md) för streckkoder och integrera dem.
+   Svar: Streckkoder och signaturfält är inte relevanta i HTML eller mobilscenarier. Dessa fält visas som icke-interaktiva områden. AEM Forms Designer har dock ett nytt signaturskriptfält som kan användas i stället för signaturfält. Du kan också lägga till en [anpassad widget](../../forms/using/custom-widgets.md) för streckkoder och integrera dem.
 
 1. Stöds RTF för XFA-textfältet?
 
-   Svar: XFA-fältet, som tillåter multimediematerial i AEM Forms Designer, stöds inte och återges som normal text utan stöd för formatering av texten från användargränssnittet. Dessutom visas XFA-fält med kombinationsegenskaper som ett vanligt fält, även om det fortfarande finns begränsningar för antalet tillåtna tecken baserat på värdet för kombinationssiffror.
+   Svar: XFA-fältet, som tillåter multimediematerial i AEM Forms Designer, stöds inte och återges som vanlig text utan stöd för formatering av texten från användargränssnittet. Dessutom visas XFA-fält med kombinationsegenskaper som ett vanligt fält, även om det fortfarande finns begränsningar för antalet tillåtna tecken baserat på värdet för kombinationssiffror.
 
 1. Finns det några begränsningar för användning av repeterbara delformulär?
 
@@ -40,7 +40,7 @@ Det finns några vanliga frågor och svar om layout, skriptstöd och HTML5-formu
 
    1. Ange startvärdet för det repeterbara delformuläret till 1.
 
-      ![inledande räkning](assets/intial-count.png)
+      ![initialräkning](assets/intial-count.png)
 
    1. Använd händelsen initialize för formuläret för att dölja den primära instansen av delformuläret. Koden nedan döljer till exempel den primära instansen av delformuläret vid formulärinitiering. Den verifierar också apptypen för att säkerställa att skriptet bara körs på klientsidan:
 
@@ -116,7 +116,7 @@ Det finns några vanliga frågor och svar om layout, skriptstöd och HTML5-formu
 
 1. Varför är HTML formulär större än PDF forms?
 
-   Svar: Det krävs många mellanliggande datastrukturer och objekt som blankettdom, datatilldom och layoutdom för att kunna återge en XDP till ett HTML-formulär.
+   Svar: Det krävs många mellanliggande datastrukturer och objekt som blankettdom, datatilldom och layoutdom för att kunna återge en XDP-fil till ett HTML-formulär.
 
    För PDF forms har Adobe Acrobat en inbyggd XTG-motor för att skapa mellanliggande datastrukturer och objekt. Acrobat hanterar också layout och skript.
 
@@ -149,15 +149,15 @@ Det finns några vanliga frågor och svar om layout, skriptstöd och HTML5-formu
 
 1. När du håller pekaren över ett fält visas ett verktygstips. Hur inaktiverar man det?
 
-   Svar: Om du vill inaktivera verktygstipset vid hovring väljer du ingen på hjälpmedelspanelen i Designer.
+   Svar: Om du vill inaktivera verktygstipset när du hovrar väljer du inget på hjälpmedelspanelen i Designer.
 
 1. I Designer kan en användare konfigurera anpassade utseendeegenskaper för alternativknappar och kryssrutor. Tar HTML 5-formulär hänsyn till anpassade utseendeegenskaper när formulären återges?
 
-   Svar: I HTML5-formulär ignoreras de anpassade utseendeegenskaperna för alternativknappar och kryssrutor. Alternativknapparna och kryssrutorna visas enligt specifikationerna för den underliggande webbläsaren.
+   Svar: HTML5-formulär ignorerar de anpassade utseendeegenskaperna för alternativknappar och kryssrutor. Alternativknapparna och kryssrutorna visas enligt specifikationerna för den underliggande webbläsaren.
 
 1. När ett HTML5-formulär öppnas i en webbläsare som stöds justeras inte kantlinjen för de fält som placeras intill korrekt, eller så visas delformulär som överlappande. När samma HTML5-formulär förhandsgranskas i Forms Designer ser inte fält och layout feljusterade ut och delformulär visas i rätt position. Hur löser jag problemet?
 
-   Svar: När ett delformulär är inställt på att flöda innehåll och delformuläret har ett dolt ramelement, justeras inte kanten på de fält som placeras inåt korrekt eller så visas delformulär som överlappande. För att lösa problemet kan du ta bort eller kommentera det dolda &lt;border> -element från motsvarande XDP. Till exempel följande &lt;border> -elementet markeras som en kommentar:
+   Svar: När ett delformulär är inställt på att flöda innehåll och delformuläret har ett dolt ramelement, justeras inte kanten på de fält som placeras intill korrekt eller så visas delformulär som överlappande. För att lösa problemet kan du ta bort eller kommentera det dolda &lt;border> -element från motsvarande XDP. Till exempel följande &lt;border> -elementet markeras som en kommentar:
 
    ```xml
                <!--<border>
@@ -172,7 +172,7 @@ Det finns några vanliga frågor och svar om layout, skriptstöd och HTML5-formu
 
 1. Har HTML5-formulär stöd för visningsmönster för flytande fält?
 
-   Svar: HTML5-formulär stöder inte visningsmönster för flytande fält.
+   Svar: HTML5-formulär har inte stöd för visningsmönster för flytande fält.
 
 1. Vilket format har datumfältet i HTML5 Forms?
 
@@ -186,21 +186,21 @@ Svar: Datumfältet accepterar ISO-formatet ÅÅÅÅ-MM-DD. Om du anger ett datum
 
    * Stödet för xfa.connectionSet-skriptet är begränsat. För connectionSet stöds endast anrop på serversidan av webbtjänsten. Mer information finns i [Skriptstöd](/help/forms/using/scripting-support.md).
    * Det finns inget stöd för $record och $data i klientskript. Men om skripten skrivs i ett formReady, layoutReady-block fungerar skripten fortfarande eftersom dessa händelser körs på serversidan.
-   * XFA Draw-elementspecifika skript som ändring av Draw-texten (eller bildtext i fälten) stöds inte.
+   * XFA Draw-elementspecifika skript som att ändra Draw-texten (eller Bildtext om det finns fält) stöds inte.
 
 1. Finns det några begränsningar för att använda FormCalc?
 
-   Svar: Endast en delmängd av formCalc-skripten är för närvarande implementerade. Mer information finns i [Skriptstöd](/help/forms/using/scripting-support.md).
+   Svar: Endast en delmängd av FormCalc-skripten är för närvarande implementerade. Mer information finns i [Skriptstöd](/help/forms/using/scripting-support.md).
 
 1. Finns det någon rekommenderad namnkonvention och finns det några reserverade nyckelord att undvika?
 
    Svar:
    * I AEM Forms Designer rekommenderas att namnet på ett objekt (till exempel ett delformulär eller ett textfält) inte inleds med ett understreck (_). Om du vill använda understreck i början av namnet lägger du till ett prefix efter understrecket,_&lt;prefix>&lt;objectname>.
-   * Alla HTML5-formulär-API:er är reserverade nyckelord. Använd ett namn som inte är identiskt med [HTML5-formulär-API:er](/help/forms/using/scripting-support.md).
+   * Alla HTML5-formulär-API:er är reserverade nyckelord. Använd ett namn som inte är identiskt med för anpassade API:er/funktioner [HTML5-formulär-API:er](/help/forms/using/scripting-support.md).
 
 1. Har HTML5-formulär stöd för flytande fält?
 
-   Svar: Ja, HTML5 Forms har stöd för flytande fält. Om du vill aktivera flytande fält lägger du till följande egenskap i återgivningsprofilen:
+   Svar: Ja, HTML5 Forms stöder flytande fält. Om du vill aktivera flytande fält lägger du till följande egenskap i återgivningsprofilen:
 
    >[!NOTE]
    >
@@ -216,10 +216,10 @@ Svar: Datumfältet accepterar ISO-formatet ÅÅÅÅ-MM-DD. Om du anger ett datum
 
 1. Körs initieringsskriptet och formulärready-händelsen flera gånger i HTML5-formulär?
 
-   Svar: Ja, initieringsskripten och formulärfärdiga händelser körs flera gånger, minst en gång på servern och en gång på klientsidan. Det rekommenderas att skriva skript som initialize eller form:ready-händelser baserat på viss affärslogik (formulär- eller fältdata) så att åtgärden utförs baserat på data och idempotent (om data är samma).
+   Svar: Ja, initieringsskripten och händelser som är klara för formulär körs flera gånger, minst en gång på servern och en gång på klientsidan. Det rekommenderas att skriva skript som initialize eller form:ready-händelser baserat på viss affärslogik (formulär- eller fältdata) så att åtgärden utförs baserat på data och idempotent (om data är samma).
 
 ### Utforma XDP {#designing-xdp}
 
 1. Finns det några reserverade nyckelord i HTML5-formulär?
 
-   Svar: Alla HTML5-formulär-API:er är reserverade nyckelord. Använd ett namn som inte är identiskt med [HTML5-formulär-API:er](/help/forms/using/scripting-support.md). Förutom reserverade nyckelord bör du lägga till ett unikt prefix efter understrecket om du använder objektnamn som börjar med ett understreck (_). Genom att lägga till ett prefix undviker du eventuella konflikter med interna API:er för HTML5-formulär. Till exempel, `_fpField1`
+   Svar: Alla HTML5-formulär-API:er är reserverade nyckelord. Använd ett namn som inte är identiskt med för anpassade API:er/funktioner [HTML5-formulär-API:er](/help/forms/using/scripting-support.md). Förutom reserverade nyckelord bör du lägga till ett unikt prefix efter understrecket om du använder objektnamn som börjar med ett understreck (_). Genom att lägga till ett prefix undviker du eventuella konflikter med interna API:er för HTML5-formulär. Till exempel, `_fpField1`

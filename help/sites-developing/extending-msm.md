@@ -7,9 +7,9 @@ topic-tags: extending-aem
 content-type: reference
 docset: aem65
 exl-id: bba64ce6-8b74-4be1-bf14-cfdf3b9b60e1
-source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '2577'
+source-wordcount: '2582'
 ht-degree: 0%
 
 ---
@@ -655,11 +655,11 @@ Om till exempel två nya sidegenskaper läggs till:
 
 * E-postadress:
 
-   * Den här egendomen behöver inte rullas ut eftersom den kommer att vara olika i varje land (eller varumärke osv.).
+   * Den här egendomen behöver inte lanseras eftersom den kommer att vara olika i varje land (eller varumärke osv.).
 
 * Visuell huvudstil:
 
-   * Projektkravet är att denna egenskap ska rullas ut eftersom den (vanligtvis) är gemensam för alla länder (eller varumärken, osv.).
+   * Projektkravet är att den här egenskapen ska rullas ut eftersom den (vanligtvis) är gemensam för alla länder (eller varumärken osv.).
 
 Då måste du se till att:
 

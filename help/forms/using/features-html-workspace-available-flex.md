@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: 66c3cdc4-0e4c-4597-a107-f457dd0cc166
 exl-id: 4235e0ce-f1c4-432e-b486-2d72c390f320
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '380'
+source-wordcount: '378'
 ht-degree: 0%
 
 ---
@@ -41,4 +41,4 @@ Funktionen för integrering med tredjepartsprogram kan användas för att helt �
 
 ## Stöd för anpassad aktivitetsåtergivning baserat på slutanvändarens enhet {#support-for-custom-task-rendering-based-on-end-user-s-device}
 
-AEM Forms arbetsyta har stöd för HTML-återgivning av XDP-formulär. Detta stöd gör att användare kan visa ett XDP-formulär som HTML på mobila enheter och som PDF på en stationär dator när det används i en återgivningsprocess som dirigerar till olika återgivningar av XDP baserat på enheten eller användaragenten. Detta bidrar till att ge användare som arbetar i olika miljöer på olika enheter en smidig täckning av processhanteringen.
+AEM Forms arbetsyta stöder HTML-återgivning av XDP-formulär. Detta stöd gör att användare kan visa ett XDP-formulär som HTML på mobila enheter och som PDF på en stationär dator när det används i en återgivningsprocess som dirigerar till olika återgivningar av XDP baserat på enheten eller användaragenten. Detta bidrar till att ge användare som arbetar i olika miljöer på olika enheter en smidig täckning av processhanteringen.

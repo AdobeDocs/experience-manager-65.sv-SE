@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: best-practices
 exl-id: 85ca35e5-6e2b-447a-9711-b12601beacdd
-source-git-commit: b703f356f9475eeeafb1d5408c650d9c6971a804
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '861'
+source-wordcount: '860'
 ht-degree: 0%
 
 ---
@@ -92,7 +92,7 @@ För Java™-kod har AEM stöd för slf4j som standard-API för loggningsmeddela
 * FELSÖK: Information om bearbetning på lägre nivå. Användbart vid felsökning av supportproblem.
 * TRACE: Information på lägsta nivå, till exempel genom att ange/avsluta metoder. Detta används vanligtvis bara av utvecklare.
 
-JavaScript *console.log* ska bara användas under utvecklingen och alla loggsatser ska tas bort före lanseringen.
+Om det finns JavaScript, *console.log* ska bara användas under utvecklingen och alla loggsatser ska tas bort före lanseringen.
 
 ### Undvik lasthanteringsprogrammering {#avoid-cargo-cult-programming}
 

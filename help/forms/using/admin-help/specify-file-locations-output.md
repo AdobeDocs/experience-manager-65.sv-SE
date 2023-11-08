@@ -8,9 +8,9 @@ geptopics: SG_AEMFORMS/categories/configuring_output
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 460bbb31-8187-469c-8102-b310093b6c03
 exl-id: 620c69d6-4fe1-46d6-b5d4-3b562142e547
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: e2a3470784beb04c2179958ac6cb98861acfaa71
 workflow-type: tm+mt
-source-wordcount: '330'
+source-wordcount: '327'
 ht-degree: 0%
 
 ---
@@ -38,11 +38,11 @@ Standardvärdet är `com/adobe/formServer/PA/pa_output.xci`.
 **Standardplats:** Det här är standardvalet. När det här alternativet är markerat skapas cachen på en plats som är beroende av den programserver som du använder:
 
 * **JBoss:** `[JBoss Home]\server\[install type]\svcdata\Output\Cache`
-* **WebLogic:** `[WebLogic Home]\user_projects\domains\[aem-forms domain Name]\adobe\[forms server name]\Output\Cache`
+* **WebLogic:** `[WebLogic Home]\user_projects\domains\[aem-forms domain Name]\adobe\[Forms Server name]\Output\Cache`
 * **WebSphere:** `[IBM Home]\WebSphere\AppServer\installedApps\adobe\server1\Output\Cache`
 
 **Tillfällig katalog för LC:** Cachen skapas i en underkatalog till den AEM formulärkatalogen temporp, som anges i administrationskonsolen under Inställningar > Systeminställningar > Konfigurationer > Plats för tillfällig katalog. Underkatalogen heter `adobeoutput_[servername]`.
 
 >[!NOTE]
 >
->Om du använder ett tillfälligt rensningsverktyg bör du vara medveten om att funktionen inte påverkas om du tar bort de här katalogerna, men att prestandan kan påverkas avsevärt under en kort tid, tills den nya cachen skapas. För att undvika det här problemet ska du inte ta bort de här katalogerna samtidigt som du rensar den tillfälliga katalogen för AEM formulär.
+>Om du använder ett tillfälligt rensningsverktyg och tar bort de här katalogerna påverkar inte funktionerna avsevärt, men prestanda kan påverkas avsevärt under en kort tid tills det nya cacheminnet skapas. För att undvika det här problemet ska du inte ta bort de här katalogerna samtidigt som du rensar den tillfälliga katalogen för AEM formulär.

@@ -1,24 +1,22 @@
 ---
 title: Uppgradera till AEM 6.5 Forms på JEE
 description: Du kan uppgradera direkt från AEM 6.1 Forms, AEM 6.2 Forms och LiveCycle ES4 SP1 till AEM 6.3 Forms.
-uuid: 1435246a-9215-4d88-b52c-59a5c329bb77
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.3/FORMS
 topic-tags: installing
 geptopics: SG_AEMFORMS/categories/jee
-discoiquuid: e745033f-8015-4fae-9d82-99d35802c0a6
 role: Admin
 exl-id: 722e75a0-bcb3-465e-bb74-ea94a3b99fd3
-source-git-commit: fbc371e59c4f80195fe90da5f635267141c8849e
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '367'
+source-wordcount: '366'
 ht-degree: 0%
 
 ---
 
 # Uppgradera till AEM 6.5 Forms på JEE {#upgrade-to-aem-forms-jee}
 
-I AEM 6.5.18.0 Forms för JEE finns två typer av installationsprogram: Fullständigt installationsprogram och Patch-installationsprogram.
+AEM 6.5.18.0 Forms för JEE har två typer av installationsprogram: ett fullständigt installationsprogram och ett korrigeringsprogram.
 
 **Fullständig installationsfil**: Du kan använda [AEM 6.5.18.0 i JEE, fullständigt installationsprogram](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html) för att skapa nya AEM Forms-instanser eller utföra uppgraderingar från AEM 6.5.x.x Forms på JEE till AEM 6.5.18.0 Forms på JEE.
 

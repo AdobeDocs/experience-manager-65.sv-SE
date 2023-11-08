@@ -11,9 +11,9 @@ topic-tags: hTML5_forms
 discoiquuid: 4ef78c8c-783f-4aac-a499-692cd4acef75
 feature: Mobile Forms
 exl-id: bcb5afc5-2190-4269-aba2-63842db9df3f
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '3888'
+source-wordcount: '3887'
 ht-degree: 1%
 
 ---
@@ -117,7 +117,7 @@ JavaScript, FormCalc-egenskaper och metoder som stöds i HTML5-formulär är som
   <tr>
    <td><code>title</code></td>
    <td>Anger dokumentets titel. Den är bara tillgänglig för klientprogram.</td>
-   <td>Det returnerar HTML-dokumentets titel i form av ett formulär i stället för formulärets metadatanamn som i PDF forms.</td>
+   <td>Det returnerar HTML-dokumentets titel i form av ett formulär i stället för formulärets metadatanamn som om det fanns PDF forms.</td>
   </tr>
   <tr>
    <td><code>version</code></td>

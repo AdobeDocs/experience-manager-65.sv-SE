@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: testing
 content-type: reference
 exl-id: ed662279-0679-4ba3-b744-6649fb8dda17
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '975'
+source-wordcount: '977'
 ht-degree: 0%
 
 ---
@@ -41,7 +41,7 @@ Det finns många webbplatser, böcker och kurser som behandlar sådana principer
 
 Det är projektledarens ansvar att besluta om och initiera åtgärder beroende på resultaten.
 
-**Bli involverad** - Även om det är projektledarens ansvar att se till att alla parter är fullt engagerade vid alla möten (status, seminarier osv.) bör du också försöka bli involverad så tidigt som möjligt i projektcykeln, inklusive informationsinsamling och kravanalys.
+**Bli involverad** - Även om det är projektledarens ansvar att se till att alla parter är fullt engagerade vid alla möten (status, workshops osv.) bör du också försöka att bli involverade så tidigt som möjligt i projektcykeln, inklusive informationsinsamling och kravanalys.
 
 **Involvera kunden** - På ett liknande tema kan du försöka att engagera kunden (där det är möjligt) när du definierar testfall och -plan.
 

@@ -6,7 +6,7 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/aem_forms_backup_and_recovery
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 exl-id: d2dd381d-a7d2-4fec-a8ba-7ca037fd9dc1
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: c4cd9a61a226ace2a72d60b5b7b7432de12cb873
 workflow-type: tm+mt
 source-wordcount: '2065'
 ht-degree: 0%
@@ -25,7 +25,7 @@ Tänk på följande när det gäller säkerhetskopiering och återställning:
 
 ## Katalog för global dokumentlagring {#global-document-storage-directory}
 
-GDS är en katalog som används för att lagra långlivade filer som används i en process. Långvariga filer är avsedda att spänna över en eller flera starter av ett AEM och kan sträcka sig över flera dagar och till och med år. Dessa långvariga filer kan innehålla PDF, policyer och formulärmallar. Långvariga filer är en viktig del av det övergripande tillståndet för många AEM. Om vissa eller alla långlivade dokument förloras eller skadas kan formulärservern bli instabil.
+GDS är en katalog som används för att lagra långlivade filer som används i en process. Långvariga filer är avsedda att spänna över en eller flera starter av ett AEM och kan sträcka sig över flera dagar och till och med år. Dessa långvariga filer kan innehålla PDF, policyer och formulärmallar. Långvariga filer är en viktig del av det övergripande tillståndet för många AEM. Om vissa eller alla långlivade dokument förloras eller skadas kan Forms Server bli instabil.
 
 Indatadokument för asynkrona jobbanrop lagras också i GDS och måste vara tillgängliga för bearbetning av begäranden. Därför är det viktigt att du ser tillförlitligheten i det filsystem som är värd för GDS och använder en redundant uppsättning av oberoende diskar (RAID) eller annan teknik som passar för dina krav på kvalitet och servicenivå.
 

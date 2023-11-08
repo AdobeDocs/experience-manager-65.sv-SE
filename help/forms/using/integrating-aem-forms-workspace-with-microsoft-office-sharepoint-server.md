@@ -10,7 +10,7 @@ topic-tags: Configuration
 discoiquuid: 8990b422-f4f6-4080-871a-33cdf7ca6455
 docset: aem65
 exl-id: d080932f-d5fb-482d-9329-62da5df10362
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: c4cd9a61a226ace2a72d60b5b7b7432de12cb873
 workflow-type: tm+mt
 source-wordcount: '542'
 ht-degree: 0%
@@ -37,7 +37,7 @@ Du kan använda AEM Forms Workspace som en webbdel i Microsoft Office SharePoint
 
 Så här integrerar du AEM Forms Workspace i en webbdel:
 
-1. I en webbläsare navigerar du till SharePoint webbplats som, `https://[myMOSSserver]:44299/default.aspx` där `[myMOSSserver]` är namnet eller IP-adressen för SharePoint-servern.
+1. I en webbläsare navigerar du till SharePoint webbplats, till exempel `https://[myMOSSserver]:44299/default.aspx` där `[myMOSSserver]` är namnet eller IP-adressen för SharePoint-servern.
 
    >[!NOTE]
    >
@@ -46,7 +46,7 @@ Så här integrerar du AEM Forms Workspace i en webbdel:
 1. Klicka på uppe till höger på webbsidan **Webbplatsåtgärder** och markera **Redigera sida**.
 1. Klicka på **Lägga till en webbdel** -knappen.
 1. I dialogrutan Lägg till webbdelar - webbsida, under Övriga, väljer du **Webbdel för sidvisning** och sedan klicka **Lägg till**.
-1. I rutan Webbdel för sidvisningsprogrammet klickar du på **redigera** och markera **Ändra delad webbdel**.
+1. Klicka på i webbdelen för sidvisningsprogrammet **redigera** och markera **Ändra delad webbdel**.
 
    >[!NOTE]
    >
@@ -58,7 +58,7 @@ Så här integrerar du AEM Forms Workspace i en webbdel:
 
 1. Utför följande åtgärder på sidan för sidvisningsprogrammet:
 
-   1. I rutan Länk skriver du URL:en för AEM Forms Workspace, t.ex. `https://[AEM_forms_Server]:8080/lc/ws` där `[AEM_forms_Server]` representerar IP-adressen eller namnet AEM formulärservern.
+   1. I rutan Länk skriver du URL:en för AEM Forms Workspace, t.ex. `https://[AEM_forms_Server]:8080/lc/ws` där `[AEM_forms_Server]` representerar IP-adressen eller namnet för AEM Forms Server.
    1. Klicka **Utseende** och ändra höjd, bredd och titel så att du kan se hela användargränssnittet för arbetsytan. Du kan till exempel ange höjd och bredd till 6 tum respektive 11 tum.
    1. Klicka **Testa länk**. Ett nytt webbläsarfönster visas med arbetsytan.
    1. (Valfritt) Klicka på **Layout** och ändra layouten för arbetsytan i webbdelen.

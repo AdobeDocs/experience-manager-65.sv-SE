@@ -6,9 +6,9 @@ topic-tags: spa
 content-type: reference
 docset: aem65
 exl-id: 383f84fd-455c-49a4-9e2b-1c4757cc188b
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '2074'
+source-wordcount: '2075'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ Om du vill att författaren ska kunna använda AEM SPA Editor för att redigera 
 
 ## Introduktion {#introduction}
 
-I det här dokumentet beskrivs det allmänna kontraktet att alla SPA ramverk ska uppfylla (dvs. typ av AEM stödlager) för att implementera redigerbara SPA komponenter inom AEM.
+I det här dokumentet beskrivs det allmänna kontraktet att alla SPA (dvs. den typ av AEM supportskikt) ska uppfylla för att implementera redigerbara SPA i AEM.
 
 >[!NOTE]
 >

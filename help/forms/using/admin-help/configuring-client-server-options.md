@@ -7,9 +7,9 @@ geptopics: SG_AEMFORMS/categories/working_with_document_security
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 feature: Document Security
 exl-id: fe132f13-5f9a-4c86-a385-0a0026c812e2
-source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
+source-git-commit: e2a3470784beb04c2179958ac6cb98861acfaa71
 workflow-type: tm+mt
-source-wordcount: '10228'
+source-wordcount: '10221'
 ht-degree: 0%
 
 ---
@@ -51,7 +51,7 @@ En diskussion om hur offlinelån och synkronisering fungerar finns i [Primer om 
 
 **Tillåt utökad autentisering** Välj det här alternativet om du vill aktivera utökad autentisering och ange sedan den utökade URL:en för autentiseringslandning.
 
-Om du väljer det här alternativet kan klientprogram använda utökad autentisering. Utökad autentisering möjliggör anpassade autentiseringsprocesser och olika autentiseringsalternativ som konfigurerats på AEM formulärserver. Användare kan nu till exempel använda SAML-baserad autentisering i stället för AEM användarnamn/lösenord från Acrobat och Reader Client. Som standard innehåller landnings-URL:en *localhost* som servernamn. Ersätt servernamnet med ett fullständigt kvalificerat värdnamn. Värdnamnet i landnings-URL fylls automatiskt i från bas-URL:en om utökad autentisering inte har aktiverats ännu. Se [Lägg till utökad autentiseringsprovider](configuring-client-server-options.md#add-the-extended-authentication-provider).
+Om du väljer det här alternativet kan klientprogram använda utökad autentisering. Utökad autentisering ger anpassade autentiseringsprocesser och olika autentiseringsalternativ som konfigurerats på AEM Forms Server. Användare kan nu till exempel använda SAML-baserad autentisering i stället för AEM användarnamn/lösenord från Acrobat och Reader Client. Som standard innehåller landnings-URL:en *localhost* som servernamn. Ersätt servernamnet med ett fullständigt kvalificerat värdnamn. Värdnamnet i landnings-URL fylls automatiskt i från bas-URL:en om utökad autentisering inte har aktiverats ännu. Se [Lägg till utökad autentiseringsprovider](configuring-client-server-options.md#add-the-extended-authentication-provider).
 
 ***anteckning **: Utökad autentisering stöds i Apple Mac OS X med Adobe Acrobat version 11.0.6 och senare.*
 
@@ -99,7 +99,7 @@ AEM innehåller en exempelkonfiguration som du kan anpassa för din miljö. Utf�
 >Utökad autentisering stöds i Apple Mac OS X med Adobe Acrobat version 11.0.6 och senare.
 
 1. Hämta WAR-exempelfilen som distribuerar den. Se installationshandboken för din programserver.
-1. Kontrollera att formulärservern har ett fullständigt kvalificerat namn i stället för IP-adresser som bas-URL och att det är en HTTPS-URL. Se [Inställningar för serverkonfiguration](configuring-client-server-options.md#server-configuration-settings).
+1. Kontrollera att Forms Server har ett fullständigt kvalificerat namn i stället för IP-adresser som bas-URL och att det är en HTTPS-URL. Se [Inställningar för serverkonfiguration](configuring-client-server-options.md#server-configuration-settings).
 1. Aktivera utökad autentisering på sidan Serverkonfiguration. Se [Inställningar för serverkonfiguration](configuring-client-server-options.md#server-configuration-settings).
 1. Lägg till nödvändiga URL:er för omdirigering av enkel inloggning i konfigurationsfilen för användarhantering. Se [Lägg till omdirigerings-URL:er för enkel inloggning för utökad autentisering](configuring-client-server-options.md#add-sso-redirect-urls-for-extended-authentication).
 
@@ -154,7 +154,7 @@ Om du vill öppna ett principskyddat dokument offline måste användarens dator 
 
 Ett sätt att minska hotet mot offlinedokument är att undvika att ge offlineåtkomst till särskilt känsliga dokument. En annan metod är att regelbundet föra över huvudnycklarna. När dokumentskyddet rullar tangenten över kan inte befintliga nycklar komma åt de profilskyddade dokumenten längre. Om en gärningsman t.ex. får en huvudnyckel från en stulen bärbar dator, kan den nyckeln inte användas för att få tillgång till dokument som är skyddade efter överrullningen. Om du misstänker att en viss huvudnyckel har komprometterats kan du manuellt föra över nyckeln.
 
-Men du måste också vara medveten om att en tangentöverrullning påverkar alla huvudnycklar, inte bara en. Det minskar också systemets skalbarhet eftersom klienterna måste lagra fler nycklar för offlineåtkomst. Standardfrekvensen för överföring av nycklar är 20 dagar. Vi rekommenderar att du inte anger det här värdet under 14 dagar eftersom användare kan hindras från att visa offlinedokument och systemprestanda kan påverkas.
+Men en tangentöverrullning påverkar alla huvudnycklar, inte bara en. Det minskar också systemets skalbarhet eftersom klienterna måste lagra fler nycklar för offlineåtkomst. Standardfrekvensen för överföring av nycklar är 20 dagar. Vi rekommenderar att du inte anger det här värdet under 14 dagar eftersom användare kan hindras från att visa offlinedokument och systemprestanda kan påverkas.
 
 I följande exempel är Key1 den äldre av de två huvudnycklarna och Key2 den nyare. När du klickar på knappen Rollover Keys Now första gången blir Key1 ogiltig och en senare, giltig huvudnyckel (Key3) genereras. Användare får tillgång till tangent 3 när de synkroniserar med dokumentsäkerhet, vanligtvis genom att öppna ett skyddat dokument online. Användarna behöver dock inte synkronisera med dokumentsäkerheten förrän de når den maximala offlinelåneperioden som anges i en profil. Efter den första nyckelåterställningen kan användare som är offline fortfarande öppna offlinedokument, även de som skyddas av Key3, tills de når den maximala offlineleasingperioden. När du klickar på knappen Rollover Keys Now en andra gång blir Key2 ogiltigt och Key4 skapas. Användare som är offline under de två överrullningarna kan inte öppna dokument som är skyddade med Key3 eller Key4 förrän de synkroniserar med dokumentsäkerheten.
 
@@ -258,7 +258,7 @@ Du kan exportera granskningshändelser till en fil i arkiveringssyfte.
 
    * minimiåldern för revisionshändelser som ska exporteras
    * det maximala antalet granskningshändelser som ska inkluderas i en enda fil. Servern genererar en eller flera filer baserat på det här värdet.
-   * mappen där filen ska skapas. Den här mappen finns på formulärservern. Om mappsökvägen är relativ är den relativ till programserverns rotkatalog.
+   * mappen där filen ska skapas. Den här mappen finns på Forms Server. Om mappsökvägen är relativ är den relativ till programserverns rotkatalog.
    * filprefixet som ska användas för granskningshändelsefilerna
    * filens format, antingen en kommaavgränsad värdefil (CSV) som är kompatibel med Microsoft Excel eller en XML-fil.
 

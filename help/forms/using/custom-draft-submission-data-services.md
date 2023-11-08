@@ -7,7 +7,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: customization
 discoiquuid: 602fd6a9-9a65-411c-8475-a4082a3fdee0
 exl-id: ed10ef8c-7b9c-43cf-bea8-7cf9742a8cac
-source-git-commit: 78c584db8c35ea809048580fe5b440a0b73c8eea
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
 source-wordcount: '270'
 ht-degree: 0%
@@ -24,14 +24,14 @@ Som standard lagrar AEM Forms användardata som är kopplade till utkastet och �
 
 AEM Forms Portal-komponenterna tillhandahåller dock datatjänster som gör att du kan anpassa implementeringen av lagring av användardata för utkast och inskickningar. Du kan till exempel lagra data i ett datalager som är implementerat i din organisation.
 
-Om du vill anpassa lagringen av användardata måste du implementera [Utkastdata](/help/forms/using/custom-draft-submission-data-services.md#p-draft-data-service-p) och [Inlämningsdata](/help/forms/using/custom-draft-submission-data-services.md#p-submission-data-service-p) tjänster.
+För att anpassa lagring av användardata måste du implementera [Utkastdata](/help/forms/using/custom-draft-submission-data-services.md#p-draft-data-service-p) och [Inlämningsdata](/help/forms/using/custom-draft-submission-data-services.md#p-submission-data-service-p) tjänster.
 
 ## Förutsättningar {#prerequisites}
 
 * Aktivera [Forms Portal-komponenter](/help/forms/using/enabling-forms-portal-components.md)
 * Skapa en [Forms Portal page](/help/forms/using/creating-form-portal-page.md)
 * Aktivera [anpassningsbara formulär för Forms Portal](/help/forms/using/draft-submission-component.md)
-* Lär dig [implementeringsinformation för anpassad lagring](/help/forms/using/draft-submission-component.md#customizing-the-storage)
+* Läs [implementeringsinformation för anpassad lagring](/help/forms/using/draft-submission-component.md#customizing-the-storage)
 
 ## Utkastdatatjänst {#draft-data-service}
 
@@ -54,7 +54,7 @@ public interface DraftAFDataService {
  /**
   * Saves user data provided in the argument map
   *
-  * @param draftUserDataMap contains Form Data (key - "guideState"), Adaptive Form Name (Key - "guideName"), and Draft DataID (Key - "userDataID") in case of update
+  * @param draftUserDataMap contains Form Data (key - "guideState"), Adaptive Form Name (Key - "guideName"), and Draft DataID (Key - "userDataID") if there is update
   * @return userData ID would be returned which needs to be saved in metadata node
   * @throws FormsPortalException
   */

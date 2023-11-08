@@ -7,9 +7,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: coding
 role: Developer
 exl-id: 991fbc56-f144-4ae6-b010-8d02f780d347
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '2505'
+source-wordcount: '2503'
 ht-degree: 0%
 
 ---
@@ -117,9 +117,9 @@ Om jobbet har tagits bort returneras ett tomt meddelande.
 
 ## Felrapportering {#error-reporting}
 
-Om en synkron eller asynkron anropsbegäran inte kan slutföras på grund av att ett undantag utlöses på servern, rapporteras undantaget som en del av HTTP-svarsmeddelandet. Om anrops-URL:en (eller `async_result` URL i fallet med ett asynkront anrop) saknar XML-suffix, REST-providern returnerar HTTP-koden `500 Internal Server Error` följt av ett undantagsmeddelande.
+Om en synkron eller asynkron anropsbegäran inte kan slutföras på grund av att ett undantag utlöses på servern, rapporteras undantaget som en del av HTTP-svarsmeddelandet. Om anrops-URL:en (eller `async_result` URL (om det finns ett asynkront anrop) som inte har ett XML-suffix returnerar REST-providern HTTP-koden `500 Internal Server Error` följt av ett undantagsmeddelande.
 
-Om anrops-URL:en (eller `async_result` URL:en vid asynkront anrop) har XML-suffix, REST-providern returnerar HTTP-koden `200 OK`följt av ett XML-dokument som beskriver undantaget i följande format.
+Om anrops-URL:en (eller `async_result` URL (om det finns ett asynkront anrop) har XML-suffix, returnerar REST-providern HTTP-koden `200 OK`följt av ett XML-dokument som beskriver undantaget i följande format.
 
 ```xml
  <exception>
@@ -143,7 +143,7 @@ The `DSCError` -elementet är valfritt och finns bara om undantaget är en insta
 
 ## Säkerhet och autentisering {#security-and-authentication}
 
-För att tillhandahålla REST-anrop med en säker transport kan en AEM formuläradministratör aktivera HTTPS-protokollet på J2EE-programservern som är värd för AEM Forms. Den här konfigurationen är specifik för J2EE-programservern. Den ingår inte i formulärserverkonfigurationen.
+För att tillhandahålla REST-anrop med en säker transport kan en AEM formuläradministratör aktivera HTTPS-protokollet på J2EE-programservern som är värd för AEM Forms. Den här konfigurationen är specifik för J2EE-programservern. Den ingår inte i Forms Server-konfigurationen.
 
 >[!NOTE]
 >

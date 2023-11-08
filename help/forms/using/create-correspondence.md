@@ -1,18 +1,14 @@
 ---
 title: Skapa korrespondens
-seo-title: Create Correspondence
 description: När du har skapat en brevmall kan du använda den för att skapa korrespondens i AEM Forms genom att hantera data, innehåll och bilagor.
-seo-description: After you have created a letter template, you can use it to create correspondence in AEM Forms by managing data, content, and attachments.
-uuid: 48cf2b26-c9b4-4127-9ea0-1b36addbff60
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: correspondence-management
-discoiquuid: 87742cb2-357b-421f-b79d-e355887ddec0
 docset: aem65
 feature: Correspondence Management
 exl-id: da966787-a3b9-420f-8b7c-f00d05c61d43
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '3811'
+source-wordcount: '3807'
 ht-degree: 0%
 
 ---
@@ -261,11 +257,11 @@ Du kan göra layout- och innehållsrelaterade ändringar för att se till att br
    >
    >Om du använder återgivningstypen Mozilla Firefox och HTML måste du använda insticksprogrammet för webbläsaren och inte Acrobat för att förhandsgranska bokstaven som separerad PDF. Om du vill välja insticksprogrammet för webbläsaren går du till Mozilla Firefox-inställningarna och för innehållstypen PDF väljer du Förhandsgranska i Firefox.
 
-1. Om du tycker att den förenklade förhandsvisningen av PDF är tillfredsställande trycker du **Skicka** skicka brevet. Du kan också ändra brevet genom att trycka **Avsluta förhandsgranskning** om du vill gå tillbaka till förhandsgranskningen av gränssnittet Skapa korrespondens för brevet för att göra ändringar i brevet. När du trycker på Submit (Skicka), om konfigurationen Hantera bokstavsinstans är aktiverad på Publish-instansen, genereras instansen för att skicka brev.
+1. Om du tycker att den förenklade förhandsvisningen av PDF är tillfredsställande trycker du **Skicka** skicka brevet. Eller, om du vill ändra bokstaven, tryck **Avsluta förhandsgranskning** om du vill gå tillbaka till förhandsgranskningen av gränssnittet Skapa korrespondens för brevet för att göra ändringar i brevet. När du trycker på Submit (Skicka), om konfigurationen Hantera bokstavsinstans är aktiverad på Publish-instansen, genereras instansen för att skicka brev.
 
    Mer information finns i Utkastinstans under Spara utkast och skicka brevinstanser.
 
-   Du kan också spara brevet som ett utkast om du vill ändra det senare.
+   Du kan också spara brevet som ett utkast om du vill ändra bokstaven senare.
 
    När du har gjort de ändringar du vill kan du antingen skicka brevet från HTML5-förhandsvisningen eller trycka på Förhandsgranska igen för att granska den förenklade utskriften för PDF.
 

@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/configuring_workspace
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 6e4b4dfa-3af5-4c21-a2a1-b90ef02d8514
 exl-id: bf69de86-2ca6-4d21-936c-07c1debacfa0
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: c4cd9a61a226ace2a72d60b5b7b7432de12cb873
 workflow-type: tm+mt
 source-wordcount: '855'
 ht-degree: 0%
@@ -58,7 +58,7 @@ Du kan skapa så många sökmallar som behövs.
       * (Valfritt) Om du vill att användare ska kunna ändra operandvärdet i arbetsytan väljer du Tillåt användaren att ändra operanden.
       * (Valfritt) Om du vill att användare ska kunna ändra relationsoperatorn markerar du Tillåt användaren att välja en annan relationsoperator. I listan som visas väljer du de operatorer som ska vara tillgängliga för användaren.
 
-     **Tips**: *Om du valde Processnamn som element kan du klicka på ikonen bredvid operandfältet för att visa en lista där du kan välja en process som körs på formulärservern. När du har valt en process är alla processvariabler som definieras i den processen tillgängliga under Processvariabler i det övre avsnittet på fliken Kriterier.*
+     **Tips**: *Om du valde Processnamn som element kan du klicka på ikonen bredvid operandfältet för att visa en lista där du kan välja en process som körs på Forms Server. När du har valt en process är alla processvariabler som definieras i den processen tillgängliga under Processvariabler i det övre avsnittet på fliken Kriterier.*
 
      **Tips**: *Du kan ta bort ett element från sökmallen genom att klicka på ikonen Ta bort bredvid elementets sökvillkor.*
 

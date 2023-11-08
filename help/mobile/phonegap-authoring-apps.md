@@ -1,16 +1,14 @@
 ---
 title: Skapa mobilprogram
 description: Med AEM Mobile Dashboard kan du skapa, bygga och driftsätta mobilprogram, skapa, ta bort och redigera programmetadata. Följ den här sidan om du vill veta mer.
-uuid: 293b5d29-df7e-42dd-ae64-8c677317e7a5
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: authoring-adobe-phonegap-enterprise
-discoiquuid: abfeea65-102d-4800-abeb-304d61afcc13
 exl-id: 073daff7-0c1d-4715-bfd4-3e2336e4cb88
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '1013'
+source-wordcount: '1011'
 ht-degree: 0%
 
 ---
@@ -67,7 +65,7 @@ Innehåll kan skapas, uppdateras och tas bort i AEM Mobile på ungefär samma s�
 
 När du har lagt till eller ändrat innehåll via panelen Hantera sidinnehåll kan du skicka ut dessa ändringar till dina kunder med en uppdatering av innehållsreleasen.
 
-Med innehållspaketet kan AEM App Author hantera sidinnehåll i AEM och låta utvecklingsteamet göra ändringar i ditt PhoneGap Shell-program (d.v.s. appramverk eller infrastruktur) och sedan skicka ut ändringarna till dina kunder snabbt och utan att behöva registrera en utvecklare som kan skicka in ändringarna till olika butiker för distribution.
+Med innehållspaketet kan AEM App Author hantera sidinnehåll i AEM och låta utvecklingsteamet ändra ditt PhoneGap Shell-program (d.v.s. appramverket eller infrastrukturen) och sedan skicka ut ändringarna till dina kunder snabbt och utan att behöva registrera en utvecklare för att skicka in dem till olika butiker för distribution igen.
 
 Innehållspaket skapar en ZIP-fil, som betraktas som ett innehållspaket, för varje uppdatering. Dessa paket innehåller HTML-resurser och HTML-sidor som genereras när programmet återges och är tillräckligt intelligenta för att bara paketera de filer som har ändrats sedan den senaste uppdateringen.
 

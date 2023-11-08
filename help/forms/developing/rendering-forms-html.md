@@ -12,7 +12,7 @@ topic-tags: operations
 discoiquuid: 669ede46-ea55-444b-a23f-23a86e5aff8e
 role: Developer
 exl-id: e6887e45-a472-41d4-9620-c56fd5b72b4c
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
 source-wordcount: '4143'
 ht-degree: 0%
@@ -67,13 +67,13 @@ Du måste gå från panel till panel med `xfa.host.pageUp` och `xfa.host.pageDow
 >
 >Om du vill anpassa utseendet på knappen för digital signatur i HTML måste du ändra följande egenskaper i filen fscdigsig.css (i filen adobe-forms-ds.ear > adobe-forms-ds.war):
 
-**.fsc-ds-ssb**: Den här formatmallen används för tomma teckenfält.
+**.fsc-ds-ssb**: Den här formatmallen kan användas om det finns ett tomt teckenfält.
 
-**.fsc-ds-ssv**: Den här formatmallen används för fält med giltiga tecken.
+**.fsc-ds-ssv**: Den här formatmallen kan användas om det finns ett fält för giltig signatur.
 
-**.fsc-ds-ssc**: Den här formatmallen används för fält med giltiga tecken, men data har ändrats.
+**.fsc-ds-ssc**: Den här formatmallen kan användas om det finns ett giltigt signeringsfält men data har ändrats.
 
-**.fsc-ds-ssi**: Den här formatmallen kan användas vid ogiltiga teckenfält.
+**.fsc-ds-ssi**: Den här formatmallen kan användas om det finns ett ogiltigt teckenfält.
 
 **.fsc-ds-popup-bg**: Den här formatmallsegenskapen används inte.
 

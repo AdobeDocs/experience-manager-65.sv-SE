@@ -4,9 +4,9 @@ description: Lär dig hur du använder Resurskonsolen för att hantera AEM inneh
 feature: Content Fragments
 role: User
 exl-id: 25c91a85-06ff-4666-a809-46778a689e25
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '1714'
+source-wordcount: '1715'
 ht-degree: 6%
 
 ---
@@ -272,7 +272,7 @@ När du har skapat mallinnehållet kan du skapa och hantera [Variationer](/help/
 
 ## Koppla innehåll till fragment {#associating-content-with-your-fragment}
 
-Du kan också [associera innehåll](/help/assets/content-fragments/content-fragments-assoc-content.md) med ett fragment. Detta ger en anslutning så att resurser (t.ex. bilder) kan användas (valfritt) med fragmentet när det läggs till på en innehållssida.
+Du kan också [associera innehåll](/help/assets/content-fragments/content-fragments-assoc-content.md) med ett fragment. Detta ger en anslutning så att resurser (dvs. bilder) kan användas (valfritt) med fragmentet när det läggs till på en innehållssida.
 
 ## Visa och redigera metadata (egenskaper) för fragmentet {#viewing-and-editing-the-metadata-properties-of-your-fragment}
 

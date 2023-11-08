@@ -7,7 +7,7 @@ activity: setup
 audience: administrator
 feature: Commerce Integration Framework
 exl-id: 1d4e9b7b-848b-4007-b884-dd48682d62e8
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
 source-wordcount: '384'
 ht-degree: 0%
@@ -36,11 +36,11 @@ Följ stegen nedan för att ansluta en AEM plats och AEM CIF kärnkomponenter s�
 
 3. Skapa en underordnad konfiguration för CIF-Cloud Servicens konfiguration enligt följande:
 
-   * AEM går till Verktyg -> Allmänt -> [Konfigurationsläsaren](/help/sites-administering/configurations.md#using-configuration-browser)
+   * Gå AEM till Verktyg > Allmänt > [Konfigurationsläsaren](/help/sites-administering/configurations.md#using-configuration-browser)
    * Välj den baskonfiguration som du har skapat
    * Skapa en konfiguration med stegen som beskrivs i punkt 2 ovan
 
-   Den nya konfigurationen skapas som en underordnad konfiguration till den grundläggande konfigurationen. Du kan nu gå till Verktyg -> Allmänt -> Konfigurationsläsaren och skapa konfigurationsinställningarna.
+   Den nya konfigurationen skapas som en underordnad konfiguration till den grundläggande konfigurationen. Du kan nu gå till Verktyg > Allmänt > Konfigurationsläsaren och skapa konfigurationsinställningarna.
 
    >[!TIP]
    >

@@ -11,7 +11,7 @@ topic-tags: operations
 discoiquuid: e747147e-e96d-43c7-87b3-55947eef81f5
 role: Developer
 exl-id: aeab003d-ba64-4760-9c56-44638501e9ff
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: c4cd9a61a226ace2a72d60b5b7b7432de12cb873
 workflow-type: tm+mt
 source-wordcount: '2519'
 ht-degree: 0%
@@ -24,15 +24,15 @@ ht-degree: 0%
 
 ## Om tjänsten Säkerhetskopiering och återställning {#about-the-backup-and-restore-service}
 
-Med tjänsten för säkerhetskopiering och återställning kan du installera AEM Forms i *säkerhetskopieringsläge*, vilket möjliggör säkerhetskopiering under körning. Säkerhetskopierings- och återställningstjänsten utför inte någon säkerhetskopiering av AEM Forms eller återställning av systemet. I stället försätts servern i ett läge där det går att utföra konsekventa och tillförlitliga säkerhetskopieringar samtidigt som servern kan fortsätta att köras. Du ansvarar för åtgärderna för att säkerhetskopiera GDS (Global Document Storage) och databasen som är ansluten till formulärservern. GDS är en katalog som används för att lagra filer som används i en långvarig process.
+Med tjänsten för säkerhetskopiering och återställning kan du installera AEM Forms i *säkerhetskopieringsläge*, vilket möjliggör säkerhetskopiering under körning. Säkerhetskopierings- och återställningstjänsten utför inte någon säkerhetskopiering av AEM Forms eller återställning av systemet. I stället försätts servern i ett läge där det går att utföra konsekventa och tillförlitliga säkerhetskopieringar samtidigt som servern kan fortsätta att köras. Du ansvarar för åtgärderna för att säkerhetskopiera GDS (Global Document Storage) och databasen som är ansluten till Forms Server. GDS är en katalog som används för att lagra filer som används i en långvarig process.
 
-Säkerhetskopieringsläget är ett läge som servern försätts i så att filer i GDS inte rensas när en säkerhetskopieringsprocedur utförs. I stället skapas underkataloger under GDS-katalogen för att behålla en post med filer som ska rensas när säkerhetskopieringsläget har avslutats. En fil är avsedd att överleva systemomstarter och kan sträcka sig över flera dagar eller till och med år. Dessa filer utgör en viktig del av formulärserverns övergripande status och kan innehålla PDF-filer, profiler eller formulärmallar. Om någon av dessa filer förloras eller skadas kan processerna på formulärservern bli instabila och data gå förlorade.
+Säkerhetskopieringsläget är ett läge som servern försätts i så att filer i GDS inte rensas när en säkerhetskopieringsprocedur utförs. I stället skapas underkataloger under GDS-katalogen för att behålla en post med filer som ska rensas när säkerhetskopieringsläget har avslutats. En fil är avsedd att överleva systemomstarter och kan sträcka sig över flera dagar eller till och med år. Dessa filer är en viktig del av det övergripande tillståndet för Forms Server och kan innehålla PDF-filer, profiler eller formulärmallar. Om någon av dessa filer förloras eller skadas kan processerna på Forms Server bli instabila och data gå förlorade.
 
 Du kan välja att utföra säkerhetskopiering av ögonblicksbilder, där du vanligtvis aktiverar säkerhetskopieringsläget under en period och sedan lämnar säkerhetskopieringsläget när du har slutfört säkerhetskopieringsaktiviteterna. Du måste lämna säkerhetskopieringsläget så att filer kan rensas från GDS-systemet för att säkerställa att de inte växer i onödan. Du kan antingen lämna säkerhetskopieringsläget explicit eller vänta på att tiden ska gå ut i en session i säkerhetskopieringsläge.
 
 Du kan också lämna servern i permanent säkerhetskopieringsläge, vilket är typiskt för strategier för säkerhetskopiering vid rullande säkerhetskopiering eller kontinuerlig systemtäckning. Läget för rullande säkerhetskopiering anger att systemet alltid är i säkerhetskopieringsläge, med en ny session som påbörjas så snart som föregående session släpps. I läget för kontinuerlig säkerhetskopiering töms en fil efter två sessioner med säkerhetskopieringsläge och refereras inte längre till den.
 
-Du kan använda tjänsten Säkerhetskopiering och återställning för att lägga till i befintliga program eller nya program som du skapar för att utföra säkerhetskopieringar av GDS eller databasen som är ansluten till formulärservern.
+Du kan använda tjänsten Säkerhetskopiering och återställning för att lägga till i befintliga program eller nya program som du skapar för att utföra säkerhetskopieringar av GDS eller databasen som är ansluten till Forms Server.
 
 >[!NOTE]
 >
@@ -51,15 +51,15 @@ Du kan utföra följande åtgärder med tjänsten Säkerhetskopiera och återst�
 >
 >Mer information om tjänsten Backup and Restore finns i [Tjänstreferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
 
-## Läget Säkerhetskopiera på formulärservern aktiveras {#entering-backup-mode-on-the-forms-server}
+## Läget för säkerhetskopiering på Forms Server aktiveras {#entering-backup-mode-on-the-forms-server}
 
-Du aktiverar säkerhetskopieringsläget för att tillåta säkerhetskopiering av en formulärserver. När du aktiverar säkerhetskopieringsläge anger du följande information baserat på din organisations procedurer för säkerhetskopiering:
+Du aktiverar säkerhetskopieringsläget för att tillåta säkerhetskopiering av en Forms-server under en pågående säkerhetskopiering. När du aktiverar säkerhetskopieringsläge anger du följande information baserat på din organisations procedurer för säkerhetskopiering:
 
 * En unik etikett som identifierar den session i säkerhetskopieringsläget som kan vara användbar för dina säkerhetskopieringsprocesser.
 * Den tid det tar för säkerhetskopieringen att slutföras.
 * En flagga som anger om du ska vara i kontinuerligt säkerhetskopieringsläge, vilket bara är användbart om du utför rullande säkerhetskopiering.
 
-Innan du skriver program som ska gå in i säkerhetskopieringsläge bör du känna till de säkerhetskopieringsprocedurer som används efter att du har placerat formulärservern i säkerhetskopieringsläge. Mer information om vad du bör tänka på när du gör säkerhetskopieringar för AEM Forms finns i [administrationshjälp](https://www.adobe.com/go/learn_aemforms_admin_63).
+Innan du skriver program som ska gå in i säkerhetskopieringsläge bör du känna till de säkerhetskopieringsprocedurer som används när du har placerat Forms Server i säkerhetskopieringsläge. Mer information om vad du bör tänka på när du gör säkerhetskopieringar för AEM Forms finns i [administrationshjälp](https://www.adobe.com/go/learn_aemforms_admin_63).
 
 >[!NOTE]
 >
@@ -88,7 +88,7 @@ Om du vill lämna säkerhetskopieringsläget programmatiskt skapar du ett Backup
 
 **Bestäm på en unik etikett, bestäm hur lång tid säkerhetskopieringen ska utföras och bestäm om den ska vara i kontinuerligt säkerhetskopieringsläge**
 
-Innan du går in i säkerhetskopieringsläget bör du bestämma en unik etikett, fastställa hur lång tid du vill tilldela för att utföra säkerhetskopieringen och bestämma om du vill att formulärservern ska vara i säkerhetskopieringsläge. Dessa överväganden är viktiga att integrera med de säkerhetskopieringsprocedurer som din organisation har fastställt. (Se [administrationshjälp](https://www.adobe.com/go/learn_aemforms_admin_63).)
+Innan du går in i säkerhetskopieringsläget bör du bestämma en unik etikett, fastställa hur lång tid du vill tilldela för att utföra säkerhetskopieringen och bestämma om du vill att Forms Server ska vara i säkerhetskopieringsläge. Dessa överväganden är viktiga att integrera med de säkerhetskopieringsprocedurer som din organisation har fastställt. (Se [administrationshjälp](https://www.adobe.com/go/learn_aemforms_admin_63).)
 
 **Ange säkerhetskopieringsläge**
 
@@ -100,7 +100,7 @@ När du har aktiverat säkerhetskopieringsläget kan du hämta information om se
 
 **Säkerhetskopiera GDS och databasen**
 
-När du har aktiverat säkerhetskopieringsläget kan du säkerhetskopiera GDS (Global Document Storage) och den databas som formulärservern är ansluten till. Det här steget är specifikt för din organisation eftersom du kan utföra det här steget manuellt eller köra andra verktyg för att utföra säkerhetskopieringsproceduren.
+När du har aktiverat säkerhetskopieringsläget kan du säkerhetskopiera GDS (Global Document Storage) och den databas som Forms Server är ansluten till. Det här steget är specifikt för din organisation eftersom du kan utföra det här steget manuellt eller köra andra verktyg för att utföra säkerhetskopieringsproceduren.
 
 ### Ange säkerhetskopieringsläge med Java API {#enter-backup-mode-using-the-java-api}
 
@@ -125,7 +125,7 @@ Ange säkerhetskopieringsläge med API:t för säkerhetskopiering och återstäl
 
 1. Bestäm på en unik etikett, bestäm hur lång tid säkerhetskopieringen ska utföras och bestäm om den ska vara i kontinuerligt säkerhetskopieringsläge
 
-   Bestäm på en unik etikett, bestäm hur lång tid du vill tilldela för att utföra säkerhetskopieringen och bestäm om du vill att formulärservern ska vara i kontinuerligt säkerhetskopieringsläge.
+   Bestäm på en unik etikett, bestäm hur lång tid du vill tilldela för att utföra säkerhetskopieringen och bestäm om du vill att Forms Server ska vara i kontinuerligt säkerhetskopieringsläge.
 
 1. Ange säkerhetskopieringsläge
 
@@ -143,7 +143,7 @@ Ange säkerhetskopieringsläge med API:t för säkerhetskopiering och återstäl
 
 1. Säkerhetskopiera GDS och databasen
 
-   Säkerhetskopiera GDS (Global Document Storage) och den databas som formulärservern är ansluten till. Säkerhetskopieringsåtgärderna ingår inte i AEM Forms SDK och kan till och med innehålla manuella steg som är specifika för säkerhetskopieringsprocesserna i din organisation.
+   Säkerhetskopiera GDS (Global Document Storage) och den databas som din Forms Server är ansluten till. Säkerhetskopieringsåtgärderna ingår inte i AEM Forms SDK och kan till och med innehålla manuella steg som är specifika för säkerhetskopieringsprocesserna i din organisation.
 
 ### Ange säkerhetskopieringsläge med webbtjänstens API {#enter-backup-mode-using-the-web-service-api}
 
@@ -160,7 +160,7 @@ Ange säkerhetskopieringsläge med webbtjänsten som tillhandahålls av API:t f�
 
 1. Bestäm på en unik etikett, bestäm hur lång tid säkerhetskopieringen ska utföras och bestäm om den ska vara i kontinuerligt säkerhetskopieringsläge
 
-   Bestäm på en unik etikett, bestäm hur lång tid du vill tilldela för att utföra säkerhetskopieringen och bestäm om du vill att formulärservern ska vara i kontinuerligt säkerhetskopieringsläge.
+   Bestäm på en unik etikett, bestäm hur lång tid du vill tilldela för att utföra säkerhetskopieringen och bestäm om du vill att Forms Server ska vara i kontinuerligt säkerhetskopieringsläge.
 
 1. Ange säkerhetskopieringsläge
 
@@ -178,11 +178,11 @@ Ange säkerhetskopieringsläge med webbtjänsten som tillhandahålls av API:t f�
 
 1. Säkerhetskopiera GDS och databasen
 
-   Säkerhetskopiera GDS (Global Document Storage) och den databas som formulärservern är ansluten till. Säkerhetskopieringsåtgärderna ingår inte i AEM Forms SDK och kan till och med innehålla manuella steg som är specifika för säkerhetskopieringsprocesserna i din organisation.
+   Säkerhetskopiera GDS (Global Document Storage) och den databas som din Forms Server är ansluten till. Säkerhetskopieringsåtgärderna ingår inte i AEM Forms SDK och kan till och med innehålla manuella steg som är specifika för säkerhetskopieringsprocesserna i din organisation.
 
-## Avslutar säkerhetskopieringsläge på formulärservern {#leaving-backup-mode-on-the-forms-server}
+## Avslutar säkerhetskopieringsläge på Forms Server {#leaving-backup-mode-on-the-forms-server}
 
-Du lämnar säkerhetskopieringsläget så att formulärservern fortsätter att tömma filer från GDS (Global Document Storage) på formulärservern.
+Du lämnar säkerhetskopieringsläget så att Forms Server fortsätter att tömma filer från GDS (Global Document Storage) på Forms Server.
 
 Innan du skriver program för att gå över till viloläge rekommenderar vi att du förstår de säkerhetskopieringsprocedurer som används med AEM Forms. Mer information om vad du bör tänka på när du gör säkerhetskopieringar för AEM Forms finns i [administrationshjälp](https://www.adobe.com/go/learn_aemforms_admin_63).
 
@@ -197,7 +197,7 @@ Så här lämnar du säkerhetskopieringsläget:
 1. Inkludera projektfiler.
 1. Skapa ett BackupService-klientobjekt.
 1. Lämna säkerhetskopieringsläget.
-1. (Valfritt) Hämta information om sessionen för säkerhetskopieringsläge som kördes på formulärservern.
+1. (Valfritt) Hämta information om sessionen för säkerhetskopieringsläge som kördes på Forms Server.
 
 **Inkludera projektfiler**
 

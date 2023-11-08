@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.4
 discoiquuid: 6b380e92-f90d-4875-b7a2-f3958daf2364
 role: Admin
 exl-id: 6fb260f9-d0f8-431e-8d4e-535b451e4124
-source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '7661'
+source-wordcount: '7662'
 ht-degree: 0%
 
 ---
@@ -153,7 +153,7 @@ I det här avsnittet beskrivs tekniker som du kan använda under AEM Forms-insta
 
 När du har installerat AEM Forms på JEE är det viktigt att regelbundet upprätthålla miljön ur ett säkerhetsperspektiv.
 
-I följande avsnitt beskrivs i detalj de olika åtgärder som rekommenderas för att skydda den distribuerade formulärservern.
+I följande avsnitt beskrivs i detalj de olika åtgärder som rekommenderas för att skydda den distribuerade Forms Server.
 
 ### AEM Forms säkerhet {#aem-forms-security}
 
@@ -169,7 +169,7 @@ AEM Forms på JEE installerar som standard en tjänst med hjälp av kontot Local
 
 Följ dessa anvisningar för att köra den programserver där AEM Forms on JEE distribueras med ett specifikt icke-administrativt konto:
 
-1. I Microsoft Management Console (MMC) skapar du en lokal användare som formulärservertjänsten ska logga in som:
+1. I Microsoft Management Console (MMC) skapar du en lokal användare som Forms Server-tjänsten kan logga in som:
 
    * Välj **Användaren kan inte ändra lösenordet**.
    * På **medlem i** -fliken kontrollerar du att **Användare** finns i listan.
@@ -182,7 +182,7 @@ Följ dessa anvisningar för att köra den programserver där AEM Forms on JEE d
 1. Dubbelklicka på JBoss för AEM Forms på JEE och stoppa tjänsten.
 1. På **Logga in** flik, välja **Det här kontot**, bläddra efter det användarkonto du har skapat och ange lösenordet för kontot.
 1. Öppna i MMC **Lokala säkerhetsinställningar** och markera **Lokala principer** > **Tilldelning av användarrättigheter**.
-1. Tilldela följande behörigheter till användarkontot som formulärservern körs under:
+1. Tilldela följande behörigheter till användarkontot som Forms Server körs under:
 
    * Neka inloggning via Terminal Services
    * Neka lokal inloggning
@@ -273,7 +273,7 @@ Du kan inaktivera fjärråtkomst till alla Trust Store-tjänster genom att följ
 
 **Inaktivera all icke nödvändig anonym åtkomst**
 
-Vissa formulärservertjänster har åtgärder som kan anropas av en anonym anropare. Om anonym åtkomst till dessa tjänster inte krävs inaktiverar du den genom att följa stegen i [Inaktiverar onödvändig anonym åtkomst till tjänster](https://helpx.adobe.com/aem-forms/6-1/hardening-security/configuring-secure-administration-settings-aem.html#disabling_non_essential_anonymous_access_to_services).
+Vissa Forms Server-tjänster har åtgärder som kan anropas av en anonym anropare. Om anonym åtkomst till dessa tjänster inte krävs inaktiverar du den genom att följa stegen i [Inaktiverar onödvändig anonym åtkomst till tjänster](https://helpx.adobe.com/aem-forms/6-1/hardening-security/configuring-secure-administration-settings-aem.html#disabling_non_essential_anonymous_access_to_services).
 
 #### Ändra standardadministratörslösenordet {#change-the-default-administrator-password}
 
@@ -401,7 +401,7 @@ På WebSphere kan du bara konfigurera integrerad säkerhet när du använder en 
 
 ### Skydda åtkomst till känsligt innehåll i databasen {#protecting-access-to-sensitive-content-in-the-database}
 
-AEM Forms databasschema innehåller känslig information om systemkonfiguration och affärsprocesser och bör döljas bakom brandväggen. Databasen bör beaktas inom samma förtroendegräns som formulärservern. För att skydda mot informationsexponering och stöld av affärsdata måste databasen konfigureras av databasadministratören så att endast behöriga administratörer får åtkomst till databasen.
+AEM Forms databasschema innehåller känslig information om systemkonfiguration och affärsprocesser och bör döljas bakom brandväggen. Databasen bör beaktas inom samma förtroendegräns som Forms Server. För att skydda mot informationsexponering och stöld av affärsdata måste databasen konfigureras av databasadministratören så att endast behöriga administratörer får åtkomst till databasen.
 
 Som en extra försiktighetsåtgärd bör du överväga att använda databasleverantörsspecifika verktyg för att kryptera kolumner i tabeller som innehåller följande data:
 
@@ -537,13 +537,13 @@ Vissa URL:er markeras som användarvänliga webbprogram. Du bör undvika att exp
   </tr> 
   <tr> 
    <td><p>/soap/*</p> </td> 
-   <td><p>Informationssida för webbtjänster för formulärservrar</p> </td> 
+   <td><p>Informationssida för Forms Server-webbtjänster</p> </td> 
    <td><p>Nej</p> </td> 
    <td><p>Nej</p> </td> 
   </tr> 
   <tr> 
    <td><p>/soap/services/*</p> </td> 
-   <td><p>Webbtjänst-URL för alla formulärservertjänster</p> </td> 
+   <td><p>Webbtjänst-URL för alla Forms Server-tjänster</p> </td> 
    <td><p>Nej</p> </td> 
    <td><p>Nej</p> </td> 
   </tr> 
@@ -674,7 +674,7 @@ Följande egenskaper är gemensamma för CSRF:
 AEM Forms på JEE använder funktionen Refererarfilter för att blockera CSRF-attacker. Följande termer används i det här avsnittet för att beskriva mekanismen för referensfiltrering:
 
 * **Tillåten referent:** En referent är adressen till källsidan som skickar en begäran till servern. För JSP-sidor eller -formulär är referensen vanligtvis föregående sida i webbläsarhistoriken. Referent för bilder är vanligtvis de sidor som bilderna visas på. Du kan identifiera den referent som har behörighet till serverresurserna genom att lägga till dem i listan över tillåtna referenter.
-* **Tillåtna referensundantag:** Du kanske vill begränsa åtkomsten för en viss referent i listan över tillåtna referenter. Om du vill tillämpa den här begränsningen kan du lägga till enskilda sökvägar för den referenten i listan med tillåtna undantag för referenten. Begäranden som kommer från sökvägar i listan över tillåtna referensundantag förhindras från att anropa resurser på formulärservern. Du kan definiera tillåtna referensundantag för ett visst program och även använda en global lista med undantag som gäller för alla program.
+* **Tillåtna referensundantag:** Du kanske vill begränsa åtkomsten för en viss referent i listan över tillåtna referenter. Om du vill tillämpa den här begränsningen kan du lägga till enskilda sökvägar för den referenten i listan med tillåtna undantag för referenten. Begäranden som kommer från sökvägar i listan över tillåtna referensundantag förhindras från att anropa någon resurs på Forms Server. Du kan definiera tillåtna referensundantag för ett visst program och även använda en global lista med undantag som gäller för alla program.
 * **Tillåtna URI:er:** Det här är en lista över resurser som ska skickas utan att refererarens huvud har markerats. Resurser, t.ex. hjälpsidor som inte leder till statusändringar på servern, kan läggas till i den här listan. Resurserna i listan Tillåtna URI:er blockeras aldrig av referensfiltret oavsett vem som refererar.
 * **Null-referens:** En serverbegäran som inte är associerad med eller inte kommer från en överordnad webbsida betraktas som en begäran från en null-referens. När du till exempel öppnar ett nytt webbläsarfönster, skriver en adress och trycker på Retur är den referent som skickas till servern null. Ett skrivbordsprogram (.NET eller SWING) som gör en HTTP-begäran till en webbserver skickar även en Null-referens till servern.
 
@@ -682,12 +682,12 @@ AEM Forms på JEE använder funktionen Refererarfilter för att blockera CSRF-at
 
 Refererarfiltreringsprocessen kan beskrivas så här:
 
-1. Formulärservern kontrollerar HTTP-metoden som används för anrop:
+1. Forms Server kontrollerar HTTP-metoden som används för anrop:
 
-   1. Om det är POST utför formulärservern kontrollen av referensrubriken.
-   1. Om det är GET åsidosätter formulärservern referenskontrollen, såvida inte *CSRF_CHECK_GETS* är inställd på true, vilket innebär att rubrikkontrollen i Referer utförs. *CSRF_CHECK_GETS* anges i *web.xml* -fil för ditt program.
+   1. Om det är POST utför Forms Server rubrikkontrollen.
+   1. Om det är GET åsidosätter Forms Server referenskontrollen, såvida inte *CSRF_CHECK_GETS* är inställd på true, vilket innebär att rubrikkontrollen i Referer utförs. *CSRF_CHECK_GETS* anges i *web.xml* -fil för ditt program.
 
-1. Formulärservern kontrollerar om den begärda URI:n finns i tillåtelselista:
+1. Forms Server kontrollerar om den begärda URI:n finns i tillåtelselista:
 
    1. Om URI:n är tillåtslista accepterar servern begäran.
    1. Om den begärda URI:n inte är tillåtslista hämtar servern referenten för begäran.
@@ -706,7 +706,7 @@ Refererarfiltreringsprocessen kan beskrivas så här:
 
 AEM Forms på JEE tillhandahåller ett referensfilter för att ange vilken referent som har behörighet till serverresurserna. Som standard filtrerar referensfiltret inte begäranden som använder en säker HTTP-metod, till exempel GET, såvida inte *CSRF_CHECK_GETS* är inställt på true. Om portnumret för en post med tillåten referens är 0, tillåter AEM Forms på JEE alla förfrågningar från den värden oavsett portnummer. Om inget portnummer anges tillåts endast begäranden från standardporten 80 (HTTP) eller port 443 (HTTPS). Referensfiltrering är inaktiverat om alla poster i listan över tillåtna referenter tas bort.
 
-När du först installerar Document Services uppdateras listan över tillåtna referenter med adressen till den server där Document Services är installerat. Posterna för servern omfattar servernamnet, IPv4-adressen, IPv6-adressen om IPv6 är aktiverat, loopback-adressen och en localhost-post. Namnen som läggs till i listan över tillåtna referenter returneras av värdoperativsystemet. En server med IP-adressen 10.40.54.187 kommer till exempel att innehålla följande poster: `https://server-name:0, https://10.40.54.187:0, https://127.0.0.1:0, http://localhost:0`. Tillåtelselista uppdateras inte för alla okvalificerade namn som returneras av värdoperativsystemet (namn som inte har IPv4-adress, IPv6-adress eller kvalificerat domännamn). Ändra listan över tillåtna referenter så att den passar din affärsmiljö. Distribuera inte formulärservern i produktionsmiljön med standardlistan Tillåten referent. När du har ändrat någon av de tillåtna referenserna, referensundantagen eller URI:erna måste du starta om servern för att ändringarna ska börja gälla.
+När du först installerar Document Services uppdateras listan över tillåtna referenter med adressen till den server där Document Services är installerat. Posterna för servern omfattar servernamnet, IPv4-adressen, IPv6-adressen om IPv6 är aktiverat, loopback-adressen och en localhost-post. Namnen som läggs till i listan över tillåtna referenter returneras av värdoperativsystemet. En server med IP-adressen 10.40.54.187 kommer till exempel att innehålla följande poster: `https://server-name:0, https://10.40.54.187:0, https://127.0.0.1:0, http://localhost:0`. Tillåtelselista uppdateras inte för alla okvalificerade namn som returneras av värdoperativsystemet (namn som inte har IPv4-adress, IPv6-adress eller kvalificerat domännamn). Ändra listan över tillåtna referenter så att den passar din affärsmiljö. Distribuera inte Forms Server i produktionsmiljön med standardlistan Tillåten referent. När du har ändrat någon av de tillåtna referenserna, referensundantagen eller URI:erna måste du starta om servern för att ändringarna ska börja gälla.
 
 **Hantera listan Tillåten referent**
 
@@ -727,7 +727,7 @@ AEM Forms på JEE innehåller API:er för att hantera listan över tillåtna ref
 
 Mer information om API:erna finns i* AEM Forms on JEE API Reference*.
 
-Använd ***LC_GLOBAL_ALLOWED_REFERER_EXCEPTION*** lista för tillåtna referensundantag på global nivå, dvs. för att definiera undantag som gäller för alla program. Den här listan innehåller bara URI:er med antingen en absolut sökväg (till exempel `/index.html`) eller en relativ sökväg (till exempel `/sample/`). Du kan också lägga till ett reguljärt uttryck i slutet av en relativ URI, till exempel `/sample/(.)*`.
+Använd ***LC_GLOBAL_ALLOWED_REFERER_EXCEPTION*** lista för tillåtna referensundantag på global nivå, det vill säga, för att definiera undantag som är tillämpliga på alla program. Den här listan innehåller bara URI:er med antingen en absolut sökväg (till exempel `/index.html`) eller en relativ sökväg (till exempel `/sample/`). Du kan också lägga till ett reguljärt uttryck i slutet av en relativ URI, till exempel `/sample/(.)*`.
 
 The ***LC_GLOBAL_ALLOWED_REFERER_EXCEPTION*** list-ID definieras som en konstant i `UMConstants` klassen för `com.adobe.idp.um.api` namnutrymme, finns i `adobe-usermanager-client.jar`. Du kan använda AEM Forms API:er för att skapa, ändra eller redigera den här listan. Om du till exempel vill skapa listan Global Allowed Referrer Exceptions använder du:
 
@@ -739,7 +739,7 @@ Använd ***CSRF_ALLOWED_REFERER_EXCEPTIONS*** lista för programspecifika undant
 
 **Inaktivera referensfiltret**
 
-Om referensfiltret helt blockerar åtkomsten till formulärservern och du inte kan redigera listan Tillåten referent, kan du uppdatera serverns startskript och inaktivera Referensfiltrering.
+Om referensfiltret helt blockerar åtkomsten till Forms Server och du inte kan redigera listan Tillåten referent, kan du uppdatera serverns startskript och inaktivera Referensfiltrering.
 
 Inkludera `-Dlc.um.csrffilter.disabled=true` JAVA-argument i startskriptet och starta om servern. Se till att du tar bort JAVA-argumentet efter att du har konfigurerat om listan över tillåtna referenter.
 
@@ -749,7 +749,7 @@ Du kan ha skapat anpassade WAR-filer för att arbeta med AEM Forms i JEE för at
 
 **CSRF_CHECK_GETS** styr referentkontrollen vid GET-begäranden. Om den här parametern inte är definierad ställs standardvärdet in på false. Inkludera bara den här parametern om du vill filtrera dina GETTER.
 
-**CSRF_ALLOWED_REFERER_EXCEPTIONS** är ID:t för listan över tillåtna referensundantag. Refererarfiltret förhindrar att begäranden som kommer från referenter i listan som identifieras av list-ID anropar resurser på formulärservern.
+**CSRF_ALLOWED_REFERER_EXCEPTIONS** är ID:t för listan över tillåtna referensundantag. Refererarfiltret förhindrar att begäranden som kommer från referenter i listan som identifieras av list-ID anropar någon resurs på Forms Server.
 
 **CSRF_ALLOWED_URIS_LIST_NAME** är ID:t för listan Tillåtna URI:er. Refererarfiltret blockerar inte begäranden för någon av resurserna i listan som identifieras av list-ID, oavsett värdet på referensrubriken i begäran.
 
@@ -835,7 +835,7 @@ När du konfigurerar en säker nätverksarkitektur enligt beskrivningen i föreg
     <ul> 
      <li><p>Webbtjänstklientprogram, t.ex. .NET-program</p> </li> 
      <li><p>Adobe Reader® använder SOAP för AEM Forms på JEE-serverns webbtjänster</p> </li> 
-     <li><p>Adobe Flash®-program använder SOAP för webbtjänster för formulärservrar</p> </li> 
+     <li><p>Adobe Flash®-program använder SOAP för Forms Server-webbtjänster</p> </li> 
      <li><p>AEM Forms på JEE SDK-anrop när de används i SOAP-läge</p> </li> 
      <li><p>Workbench-designmiljö</p> </li> 
     </ul> </td> 
@@ -995,7 +995,7 @@ AEM Forms på JEE-körkortsinstallationen konfigurerar som standard ett tjänstk
 
 #### Kör programservern med ett icke-administrativt konto {#run-the-application-server-using-a-non-administrative-account}
 
-1. I Microsoft Management Console (MMC) skapar du en lokal användare som formulärservertjänsten ska logga in som:
+1. I Microsoft Management Console (MMC) skapar du en lokal användare som Forms Server-tjänsten kan logga in som:
 
    * Välj **Användaren kan inte ändra lösenordet**.
    * På **medlem i** kontrollerar du att gruppen Användare visas.
@@ -1003,7 +1003,7 @@ AEM Forms på JEE-körkortsinstallationen konfigurerar som standard ett tjänstk
 1. Välj **Inställningar** > **Administrativa verktyg** > **Tjänster**.
 1. Dubbelklicka på programservertjänsten och stoppa tjänsten.
 1. På **Logga in** flik, välja **Det här kontot**, bläddra efter det användarkonto du har skapat och ange lösenordet för kontot.
-1. I fönstret Lokala säkerhetsinställningar, under Tilldelning av användarrättigheter, ger du följande rättigheter till användarkontot som formulärservern körs under:
+1. I fönstret Lokala säkerhetsinställningar, under Tilldelning av användarrättigheter, ger du följande rättigheter till användarkontot som Forms Server körs under:
 
    * Neka inloggning via Terminal Services
    * Neka inloggning locallyxx
@@ -1040,7 +1040,7 @@ AEM Forms på JEE använder filsystemet på följande sätt:
 * Lagrar filer i den globala arkivbutiken som används för att stödja de installerade lösningskomponenterna
 * Bevakade mappar lagrar släppta filer som används som indata till en tjänst från en filsystemmapplats
 
-När du använder bevakade mappar som ett sätt att skicka och ta emot dokument med en formulärservertjänst bör du vidta extra försiktighetsåtgärder när det gäller filsystemsäkerhet. När en användare släpper innehåll i den bevakade mappen visas innehållet i den bevakade mappen. I det här fallet autentiserar tjänsten inte den faktiska slutanvändaren. I stället förlitar det sig på ACL- och Share-nivåsäkerhet som ställs in på mappnivå för att avgöra vem som effektivt kan anropa tjänsten.
+När du använder bevakade mappar som ett sätt att skicka och ta emot dokument med en Forms Server-tjänst bör du vidta extra försiktighetsåtgärder när det gäller filsystemsäkerhet. När en användare släpper innehåll i den bevakade mappen visas innehållet i den bevakade mappen. I det här fallet autentiserar tjänsten inte den faktiska slutanvändaren. I stället förlitar det sig på ACL- och Share-nivåsäkerhet som ställs in på mappnivå för att avgöra vem som effektivt kan anropa tjänsten.
 
 ## JBoss-specifika säkerhetsrekommendationer {#jboss-specific-security-recommendations}
 

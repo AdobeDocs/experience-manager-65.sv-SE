@@ -1,19 +1,15 @@
 ---
 title: Använda CAPTCHA i anpassningsbara formulär
-seo-title: Using CAPTCHA in adaptive forms
 description: Lär dig hur du konfigurerar AEM CAPTCHA- eller Google reCAPTCHA-tjänsten i adaptiva formulär.
-seo-description: Learn how to configure AEM CAPTCHA or Google reCAPTCHA service in adaptive forms.
-uuid: 0e11e98a-12ac-484c-b77f-88ebdf0f40e5
 contentOwner: vishgupt
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: adaptive_forms, author
-discoiquuid: 4c53dfc0-25ca-419d-abfe-cf31fc6ebf61
 docset: aem65
 feature: Adaptive Forms
 exl-id: 9b4219b8-d5eb-4099-b205-d98d84e0c249
-source-git-commit: 1ab5165dc87684918b33edabec133702b1f62663
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '1912'
+source-wordcount: '1910'
 ht-degree: 0%
 
 ---
@@ -26,7 +22,7 @@ ht-degree: 0%
 | AEM 6.5 | Den här artikeln |
 
 
-<span class="preview"> Adobe rekommenderar att man använder modern och utbyggbar datainhämtning [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) for [skapa ny Adaptive Forms](/help/forms/using/create-an-adaptive-form-core-components.md) eller [lägga till adaptiv Forms på AEM Sites-sidor](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-program, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptive Forms med grundläggande komponenter. </span>
+<span class="preview"> Adobe rekommenderar att man använder modern och utbyggbar datainhämtning [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) for [skapa ny Adaptive Forms](/help/forms/using/create-an-adaptive-form-core-components.md) eller [lägga till adaptiv Forms på AEM Sites-sidor](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-filer, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptiv Forms med baskomponenter. </span>
 
 CAPTCHA (Completely Automated Public Turing test to tell Computers and Humans Apart) är ett program som ofta används vid onlinetransaktioner för att skilja mellan människor och automatiserade program eller organ. Det utgör en utmaning och utvärderar användarens svar för att avgöra om det är en människa eller en robot som interagerar med webbplatsen. Det förhindrar användaren att fortsätta om testet misslyckas och gör onlinetransaktionerna säkra genom att förhindra att skräppost eller skadliga syften publiceras.
 
@@ -35,11 +31,11 @@ AEM Forms har stöd för CAPTCHA i anpassningsbara formulär. Du kan använda tj
 >[!NOTE]
 >
 >* AEM Forms support reCAPTCHA v2 and enterprise. Andra versioner stöds inte.
->* CAPTCHA i adaptiva formulär stöds inte i offlineläge i AEM Forms-appen.
+>* CAPTCHA i adaptiva formulär stöds inte i offlineläge i AEM Forms.
 
 ## Konfigurera tjänsten reCAPTCHA från Google för Adaptive Forms {#google-reCAPTCHA}
 
-AEM Forms-användare kan använda tjänsten reCAPTCHA från Google för att implementera CAPTCHA i adaptiva formulär. Den har avancerade CAPTCHA-funktioner för att skydda er webbplats. Mer information om hur reCAPTCHA fungerar finns i [Google reCAPTCHA](https://developers.google.com/recaptcha/). reCAPTCHA-tjänsten, inklusive reCAPTCHA v2 och reCAPTCHA Enterprise, är integrerad i AEM Forms. Beroende på dina behov kan du konfigurera tjänsten reCAPTCHA för att aktivera:
+AEM Forms-användare kan använda tjänsten reCAPTCHA från Google för att implementera CAPTCHA i adaptiva formulär. Den har avancerade CAPTCHA-funktioner för att skydda er webbplats. Mer information om hur reCAPTCHA fungerar finns i [Google reCAPTCHA](https://developers.google.com/recaptcha/). reCAPTCHA, inklusive reCAPTCHA v2 och reCAPTCHA Enterprise, är integrerat i AEM Forms. Beroende på dina behov kan du konfigurera tjänsten reCAPTCHA för att aktivera:
 
 * [reCAPTCHA Enterprise i AEM Forms](#steps-to-implement-reCAPTCHA-enterprise-in-forms)
 * [reCAPTCHA v2 i AEM Forms](#steps-to-implement-reCAPTCHA-v2-in-forms)
@@ -66,7 +62,7 @@ AEM Forms-användare kan använda tjänsten reCAPTCHA från Google för att impl
 
    1. Gå till Experience Manager ![verktyg-1](assets/tools-1.png) > **[!UICONTROL Cloud Services]**.
    1. Tryck på **[!UICONTROL reCAPTCHA]**. Sidan Konfigurationer öppnas. Välj den konfigurationsbehållare som skapades i föregående steg och tryck på **[!UICONTROL Create]**.
-   1. Välj version som reCAPTCHA Enterprise och ange Namn; Projekt-ID, webbplatsnyckel och API-nyckel (hämtas i steg 2 och 3) för reCAPTCHA Enterprise-tjänsten.
+   1. Välj version som reCAPTCHA Enterprise och ange Namn; Projekt-ID, Webbplatsnyckel och API-nyckel (hämtas i steg 2 och 3) för reCAPTCHA Enterprise-tjänsten.
    1. Välj nyckeltyp. Nyckeltypen ska vara densamma som den platsnyckel som konfigurerats i Google Cloud-projektet, till exempel **Platsnyckel för kryssruta** eller **Poängbaserad webbplatsnyckel**.
    1. Ange ett tröskelvärde i intervallet 0 till 1 ([Klicka för mer information om bakgrundsmusik](https://cloud.google.com/recaptcha-enterprise/docs/interpret-assessment#interpret_scores)). Poängvärden som är större än eller lika med tröskelvärdena identifierar mänsklig interaktion, vilket i annat fall omfattar båda interaktioner.
 
@@ -101,9 +97,9 @@ När du har aktiverat tjänsten reCAPTCHA Enterprise kan den användas i anpassn
 
 1. Konfigurera molntjänsten för reCAPTCHA v2.
 
-   1. Gå till AEM ![verktyg-1](assets/tools-1.png) > **Cloud Services**.
+   1. Gå till AEM ![verktyg-1](assets/tools-1.png) > **Cloud Service**.
    1. Tryck på **[!UICONTROL reCAPTCHA]**. Sidan Konfigurationer öppnas. Välj den konfigurationsbehållare som skapades i föregående steg och tryck på **[!UICONTROL Create]**.
-   1. Välj version som reCAPTCHA v2, ange Namn; Webbplatsnyckel och Hemlig nyckel för tjänsten reCAPTCHA (hämtas i steg 1) och tryck på **[!UICONTROL Create]** för att skapa molntjänstkonfigurationen.
+   1. Välj version som reCAPTCHA v2, ange Namn; Webbplatsnyckel och Hemlig nyckel för reCAPTCHA-tjänsten (hämtas i steg 1) och tryck på **[!UICONTROL Create]** för att skapa molntjänstkonfigurationen.
    1. I dialogrutan Redigera komponent anger du platsen och de hemliga nycklarna som fås i steg 1. Tryck **[!UICONTROL Save Settings]** och sedan trycka **OK** för att slutföra konfigurationen.
 
    När reCAPTCHA-tjänsten har konfigurerats är den tillgänglig för användning i adaptiva formulär. Mer information finns i [använda CAPTCHA i anpassningsbara formulär](#using-captcha).
@@ -215,7 +211,7 @@ Så här använder du reCAPTCHA i adaptiva former:
 
 
    **Om den valda konfigurationen har version reCAPTCHA v2**:
-   1. Välj storlek som **[!UICONTROL Normal]** eller **[!UICONTROL Compact]** för widgeten reCAPTCHA. Du kan också välja **[!UICONTROL Invisible]** möjlighet att visa CAPTCHA-utmaningen endast i händelse av en misstänkt aktivitet. The **skyddat av reCAPTCHA** emblemet, som visas nedan, visas på de skyddade formulären.
+   1. Välj storlek som **[!UICONTROL Normal]** eller **[!UICONTROL Compact]** för widgeten reCAPTCHA. Du kan också välja **[!UICONTROL Invisible]** om du bara vill visa CAPTCHA-utmaningen om det finns misstänkt aktivitet. The **skyddat av reCAPTCHA** emblemet, som visas nedan, visas på de skyddade formulären.
 
       ![Google skyddat av reCAPTCHA-märke](/help/forms/using/assets/google-recaptcha-v2.png)
 
@@ -226,7 +222,7 @@ Så här använder du reCAPTCHA i adaptiva former:
 
 >[!NOTE]
 > 
-> Markera inte **[!UICONTROL Default]** från listrutan Captcha-tjänst eftersom AEM CAPTCHA-tjänsten är föråldrad.
+> Markera inte **[!UICONTROL Default]** från listrutan Captcha-tjänst eftersom AEM CAPTCHA-tjänsten är inaktuell.
 
 ### Visa eller dölj CAPTCHA-komponent baserat på regler {#show-hide-captcha}
 
@@ -289,7 +285,7 @@ Exemplet anger att `ValidateCAPTCHA` API validerar bara CAPTCHA i formuläret om
 
 Utför följande steg för att använda `ValidateCAPTCHA` API för att validera CAPTCHA med en anpassad överföringsåtgärd:
 
-1. Lägg till skriptet som innehåller `ValidateCAPTCHA` API till anpassad skickaåtgärd. Mer information om anpassade överföringsåtgärder finns i [Skapa en anpassad Skicka-åtgärd för Adaptiv Forms](custom-submit-action-form.md).
+1. Lägg till skriptet som innehåller `ValidateCAPTCHA` API till anpassad skickaåtgärd. Mer information om anpassade överföringsåtgärder finns i [Skapa en anpassad inskickningsåtgärd för Adaptiv Forms](custom-submit-action-form.md).
 1. Välj namnet på den anpassade Skicka-åtgärden på menyn **[!UICONTROL Submit Action]** nedrullningsbar lista i **[!UICONTROL Submission]** egenskaper för ett adaptivt formulär.
 1. Tryck på **[!UICONTROL Submit]**. CAPTCHA valideras baserat på de villkor som definieras i `ValidateCAPTCHA` API för den anpassade åtgärden Skicka.
 
@@ -309,7 +305,7 @@ På samma sätt kan du använda regelredigeraren för att inkludera en anpassad 
 
 ### Lägg till anpassade CAPTCHA-tjänster {#add-custom-captcha-service}
 
-[!DNL Experience Manager Forms] tillhandahåller reCAPTCHA som CAPTCHA-tjänst. Du kan dock lägga till en anpassad tjänst som ska visas i **[!UICONTROL CAPTCHA Service]** nedrullningsbar lista.
+[!DNL Experience Manager Forms] tillhandahåller reCAPTCHA som CAPTCHA-tjänst. Du kan dock lägga till en anpassad tjänst som ska visas i **[!UICONTROL CAPTCHA Service]** listruta.
 
 Nedan följer ett exempel på en implementering av gränssnittet för att lägga till ytterligare CAPTCHA-tjänst i ditt adaptiva formulär:
 

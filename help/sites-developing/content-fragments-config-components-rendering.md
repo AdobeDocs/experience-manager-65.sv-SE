@@ -10,10 +10,10 @@ content-type: reference
 discoiquuid: 2aef9048-9d6e-4f5d-b443-5e73f8066d76
 docset: aem65
 exl-id: 9ef9ae75-cd8c-4adb-9bcb-e951d200d492
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '460'
-ht-degree: 5%
+source-wordcount: '461'
+ht-degree: 4%
 
 ---
 
@@ -76,22 +76,22 @@ OSGi-konfigurationen är:
   <tr>
    <td><strong>Resurstyp</strong></td>
    <td><code>dam.cfm.component.resourceType</code></td>
-   <td>Resurstypen som ska registreras. till exempel <br /> <p><span class="cmp-examples-demo__property-value"><code>core/wcm/components/contentfragment/v1/contentfragment</code></code></p> </td>
+   <td>Resurstypen som ska registreras, till exempel <br /> <p><span class="cmp-examples-demo__property-value"><code>core/wcm/components/contentfragment/v1/contentfragment</code></code></p> </td>
   </tr>
   <tr>
    <td><strong>Referensegenskap</strong></td>
    <td><code>dam.cfm.component.fileReferenceProp</code></td>
-   <td>Namnet på den egenskap som innehåller referensen till fragmentet. till exempel <code>fragmentPath</code> eller <code>fileReference</code></td>
+   <td>Namnet på den egenskap som innehåller referensen till fragmentet, till exempel <code>fragmentPath</code> eller <code>fileReference</code></td>
   </tr>
   <tr>
    <td><strong>Elementegenskap(er)</strong></td>
    <td><code>dam.cfm.component.elementsProp</code></td>
-   <td>Namnet på den egenskap som innehåller namnen på de element som ska återges. till exempel<code>elementName</code></td>
+   <td>Namnet på den egenskap som innehåller namnen på elementen som ska återges, till exempel<code>elementName</code></td>
   </tr>
   <tr>
    <td><strong>Variationsegenskap</strong><br /> </td>
    <td><code>dam.cfm.component.variationProp</code></td>
-   <td>Namnet på den egenskap som innehåller namnet på variationen som ska återges. till exempel<code>variationName</code></td>
+   <td>Namnet på den egenskap som innehåller namnet på variationen som ska återges, till exempel<code>variationName</code></td>
   </tr>
  </tbody>
 </table>
@@ -114,10 +114,10 @@ För vissa funktioner (till exempel för att endast återge ett styckeintervall)
   </tr>
   <tr>
    <td><code>paragraphScope</code></td>
-   <td><p>En strängegenskap som definierar hur stycken ska skrivas ut om de finns i <em>renderingsläge för enskilt element</em>.</p> <p>Värden:</p>
+   <td><p>En strängegenskap som definierar hur stycken ska skrivas ut i <em>renderingsläge för enskilt element</em>.</p> <p>Värden:</p>
     <ul>
-     <li><code>all</code> : återge alla stycken</li>
-     <li><code>range</code> : för att återge styckeintervallet som tillhandahålls av <code>paragraphRange</code></li>
+     <li><code>all</code> : för att återge alla stycken</li>
+     <li><code>range</code> : för att återge styckeintervallet från <code>paragraphRange</code></li>
     </ul> </td>
   </tr>
   <tr>

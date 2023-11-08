@@ -1,19 +1,15 @@
 ---
 title: Sidskillnader
-seo-title: Page Diff
 description: Med funktionen för sidskillnader kan du enkelt jämföra två sidor sida vid sida med skillnaderna markerade.
-seo-description: The page diff feature allows for the convenient side-by-side comparison of two pages with their differences highlighted.
-uuid: 5af8b466-5922-4fe6-9eae-7bad99be23e0
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: site-features
-discoiquuid: 8386a16a-9d47-46d5-bc60-5f290c59e60e
 docset: aem65
 exl-id: 3beea5cd-5ae0-485b-8dfc-8b3a23c11586
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '571'
+source-wordcount: '570'
 ht-degree: 1%
 
 ---
@@ -90,7 +86,7 @@ Du kan när som helst stänga diff sida vid sida genom att klicka på stängning
 
 I vissa situationer kan det hända att sidskillnader inte identifierar någon skillnad som förväntat.
 
-* När olika versioner och starter används inte dynamiska komponenter som vägbeskrivningar, menyer, produktlistor eller logotyper (komponenter som är beroende av webbplatsstrukturen för att återge sitt innehåll).
+* När olika versioner och starter görs tar inte differensen hänsyn till dynamiska komponenter som vägbeskrivningar, menyer, produktlistor eller logotyper (komponenter som är beroende av webbplatsstrukturen för att återge sitt innehåll).
 * För versioner återskapar inte diff åtkomstkontrollprincipen och Live copy-relationen.
 * Om en sida flyttas kan du inte längre göra några skillnader med versioner som gjorts före flyttningen.
 

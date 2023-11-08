@@ -2,9 +2,9 @@
 title: Inkorgen för att hantera uppgifter
 description: Hantera dina uppgifter med inkorgen i Adobe Experience Manager 6.5.
 exl-id: 80b7f179-b011-4f90-b5ab-9ef8a669d271
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '1144'
+source-wordcount: '1143'
 ht-degree: 7%
 
 ---
@@ -44,7 +44,7 @@ Du får dessa meddelanden i din egen Inkorg där du kan visa dem och vidta åtg�
 
 ## Inkorgen i sidhuvudet {#inbox-in-the-header}
 
-Från någon av konsolerna visas det aktuella antalet objekt i din inkorg i sidhuvudet. Indikatorn kan också öppnas för att ge snabb åtkomst till sidan/sidorna som kräver åtgärder eller åtkomst till inkorgen:
+Från någon av konsolerna visas det aktuella antalet objekt i din inkorg i sidhuvudet. Indikatorn kan också öppnas för att ge snabb åtkomst till sidor som kräver åtgärder eller åtkomst till inkorgen:
 
 ![wf-80](assets/wf-80.png)
 

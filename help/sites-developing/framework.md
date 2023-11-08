@@ -8,9 +8,9 @@ content-type: reference
 docset: aem65
 feature: Tagging
 exl-id: 53a37449-ef87-4fa6-82de-88fdc24cf988
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '1639'
+source-wordcount: '1641'
 ht-degree: 0%
 
 ---
@@ -80,7 +80,7 @@ Med namnutrymmen kan du gruppera saker. Det vanligaste användningsexemplet är 
 
 Taggens namnutrymme är den första nivån i taxonomiunderträdet, som är noden direkt under [taxonomirotnod](#taxonomy-root-node). Ett namnutrymme är en nod av typen `cq:Tag` vars överordnade inte är en `cq:Tag` nodtyp.
 
-Alla taggar har ett namnutrymme. Om inget namnutrymme anges tilldelas taggen standardnamnutrymmet, som är TagID `default` med rubriken `Standard Tags`, dvs. `/content/cq:tags/default`.
+Alla taggar har ett namnutrymme. Om inget namnutrymme anges tilldelas taggen standardnamnutrymmet, som är TagID `default` med rubriken `Standard Tags`, det vill säga `/content/cq:tags/default`.
 
 ### Behållartaggar {#container-tags}
 

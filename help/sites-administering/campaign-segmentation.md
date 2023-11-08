@@ -1,19 +1,15 @@
 ---
 title: Konfigurera segmentering
-seo-title: Configuring Segmentation
 description: Lär dig konfigurera segmentering för AEM Campaign.
-seo-description: Learn how to configure segmentation for AEM Campaign.
-uuid: 604ca34d-cdb9-49ff-8f75-02a44b60a8a2
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: personalization
 content-type: reference
-discoiquuid: c68d5853-684f-42f2-a215-c1eaee06f58a
 docset: aem65
 exl-id: 6d759907-8796-4749-bd80-306ec7f2c819
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '1132'
+source-wordcount: '1129'
 ht-degree: 0%
 
 ---
@@ -110,7 +106,7 @@ Följande segmentegenskaper är tillgängliga när som helst. De kan dras från 
 
 Du kan kombinera dessa egenskaper med hjälp av de booleska operatorerna OR och AND (se [Skapa ett nytt segment](#creating-a-new-segment)) för att definiera det exakta scenariot för markering av det här segmentet.
 
-När hela programsatsen utvärderas till true är det här segmentet löst. Om flera segment är tillämpliga ska **[Öka](/help/sites-administering/campaign-segmentation.md#boost-factor)** Även faktor används.
+När hela programsatsen utvärderas till true är det här segmentet löst. Om det finns flera tillämpliga segment är **[Öka](/help/sites-administering/campaign-segmentation.md#boost-factor)** Även faktor används.
 
 >[!CAUTION]
 >
@@ -149,7 +145,7 @@ Så här definierar du det nya segmentet:
 
 Du kan skapa komplexa segment i AEM. Man bör vara medveten om några grundläggande punkter:
 
-* Den översta nivån i definitionen är alltid den AND-behållare som ursprungligen skapades. Den kan inte ändras, men har ingen effekt på resten av segmentdefinitionen.
+* Definitionens översta nivå är alltid den AND-behållare som skapas från början. Detta kan inte ändras, men påverkar inte resten av segmentdefinitionen.
 * Se till att det är rimligt att kapsla behållaren. Behållarna kan ses som parenteser i ditt booleska uttryck.
 
 Följande exempel används för att välja besökare som antingen är:

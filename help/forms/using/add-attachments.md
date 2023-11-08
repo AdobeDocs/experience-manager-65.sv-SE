@@ -1,16 +1,12 @@
 ---
 title: Lägga till bilagor
-seo-title: Adding attachments
 description: Lägga till foton och anteckningar som anteckningar till dina uppgifter i AEM Forms-appen
-seo-description: Add photographs and scribble notes as annotations to your task in the AEM Forms app
-uuid: 3d2738b4-fd43-44ec-8eaf-a2ad4b7e5af5
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-app
-discoiquuid: d5976ed2-4482-495c-bf77-6d192379cfef
 docset: aem65
 exl-id: 82282e2d-63a1-47e9-b2ec-f50a4bd32bd3
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
 source-wordcount: '562'
 ht-degree: 0%
@@ -25,7 +21,7 @@ Med AEM Forms-appen kan du bifoga bilder, anteckningar och textanteckningar i di
 
 Dina alternativ är:
 
-* **Galleri**: Gör att du kan lägga till en bild från de bilder du har sparat på enheten.
+* **Galleri**: Gör att du kan lägga till en bild från de bilder som har sparats på enheten.
 
 * **Kamera**: Gör att du kan ta en bild och lägga till den i formuläret.
 
@@ -34,6 +30,7 @@ Dina alternativ är:
 >[!NOTE]
 >
 >Bifogade filer som läggs till av en användare visas för andra AEM Forms-appanvändare. Andra användare kan inte ta bort bilagor som lagts till av en användare.
+>
 
 ### Skärmen Bifogade filer {#the-attachments-screen}
 
@@ -77,7 +74,7 @@ The **Anteckningar** kan du lägga till frihandsskript och textbilagor i formul�
 
    * **Rensa**: Rensar skärmen.
    * **Knappen Klar**: Kopplar det aktuella klottret.
-   * **Avbryt-knapp**: Ignorerar det aktuella klottret och avslutar användargränssnittet i klottret.
+   * **Avbryt-knapp**: Ignorerar det aktuella skriptet och avslutar användargränssnittet i klotterprogrammet.
    * ![tangentbord](assets/keyboard.png): Rensar klottret och låter dig lägga till en textanteckning.
 
    ![Tangentbord i AEM Forms app scribble](assets/keyboard-inapp.png)
@@ -88,4 +85,4 @@ Bifogade filer för mobilformulär som synkroniseras med AEM Forms OSGi-servrar 
 
 Bilagor på formulärnivå stöds inte för adaptiva formulär som läses in i appen från en AEM Forms OSGi-server. Om du vill bifoga bilder eller textanteckningar aktiverar du bilagor på fältnivå i formuläret när du redigerar det. Dra och släpp den bifogade filkomponenten från komponentwebbläsaren i fältet.
 
-När det gäller anpassningsbara formulär kan du visa de bifogade filerna i postdokumentet (DoR). Se, [Generera arkivdokument för icke-XFA adaptiva formulär](../../forms/using/generate-document-of-record-for-non-xfa-based-adaptive-forms.md).
+Om det finns adaptiva formulär kan du visa de bifogade filerna i postdokumentet (DoR). Se, [Generera arkivdokument för icke-XFA adaptiva formulär](../../forms/using/generate-document-of-record-for-non-xfa-based-adaptive-forms.md).

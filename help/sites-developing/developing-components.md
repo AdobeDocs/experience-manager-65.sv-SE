@@ -12,9 +12,9 @@ discoiquuid: 8cdb6db4-adaa-4eda-af7d-310a0b44b80b
 docset: aem65
 legacypath: /content/docs/en/aem/6-2/develop/components/components-touch-optimized
 exl-id: 573cdc36-e9c3-4803-9c4e-cebd0cf0a56f
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '3446'
+source-wordcount: '3447'
 ht-degree: 0%
 
 ---
@@ -243,7 +243,7 @@ Se följande exempel:
 Beroende på dina behov kan du antingen:
 
 * Utöka ett visst GRE-fält efter komponentarv ( `sling:resourceSuperType`)
-* Utöka en given widget från det underliggande widgetbiblioteket (för Granite-gränssnittet är det korallgränssnitt) genom att följa widgetens biblioteks-API (JS/CSS-arv)
+* Utöka en given widget från det underliggande widgetbiblioteket (om det finns GRA-gränssnitt är det här Coral-gränssnittet) genom att följa widgetens biblioteks-API (JS/CSS-arv)
 
 #### Åtkomst till dialogrutefält {#access-to-dialog-fields}
 

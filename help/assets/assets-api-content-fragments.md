@@ -5,9 +5,9 @@ feature: Content Fragments,Assets HTTP API
 role: Developer
 exl-id: 0f9efb47-a8d1-46d9-b3ff-a6c0741ca138
 hide: true
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '1959'
+source-wordcount: '1961'
 ht-degree: 1%
 
 ---
@@ -178,7 +178,7 @@ Svaret kommer att innehålla sidindelningsinformation som en del av `properties`
 
 >[!NOTE]
 >
->Sidindelning används vanligtvis för behållarentiteter (d.v.s. mappar eller resurser med återgivningar), eftersom det relaterar till den begärda entitetens underordnade.
+>Sidindelning används vanligtvis för behållarentiteter (d.v.s. mappar eller resurser med återgivningar), eftersom den relaterar till den begärda entitetens underordnade.
 
 #### Exempel: Sidindelning {#example-paging}
 
@@ -231,7 +231,7 @@ Innehållsfragment:
 * Visa inga binära data.
 * Finns helt i JSON-utdata (i `properties` egenskap).
 
-* betraktas också som atomiska, dvs. elementen och variationerna exponeras som en del av fragmentets egenskaper jämfört med som länkar eller underordnade enheter. Detta ger effektiv åtkomst till nyttolasten för ett fragment.
+* betraktas också som atomiska, dvs. elementen och variationerna visas som en del av fragmentets egenskaper jämfört med som länkar eller underordnade enheter. Detta ger effektiv åtkomst till nyttolasten för ett fragment.
 
 #### Innehållsmodeller och innehållsfragment {#content-models-and-content-fragments}
 

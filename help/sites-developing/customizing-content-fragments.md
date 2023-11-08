@@ -7,9 +7,9 @@ topic-tags: extending-aem
 content-type: reference
 docset: aem65
 exl-id: 08c88e70-4df9-4627-8a66-1fabe3aee50b
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '2793'
+source-wordcount: '2794'
 ht-degree: 0%
 
 ---
@@ -78,7 +78,7 @@ Content Fragment Management (CFM) ingår i AEM Assets som:
 
 ![fragment-till-tillgångar-strukturerad](assets/fragment-to-assets-structured.png)
 
-Innehållsfragment med strukturerat innehåll (dvs. baserat på en innehållsfragmentmodell) mappas till en enda resurs:
+Innehållsfragment med strukturerat innehåll (d.v.s. baserat på en innehållsfragmentmodell) mappas till en enda resurs:
 
 * Allt innehåll lagras under `jcr:content/data` resursens nod:
 

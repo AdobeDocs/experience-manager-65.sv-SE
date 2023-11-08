@@ -7,9 +7,9 @@ topic-tags: personalization
 content-type: reference
 docset: aem65
 exl-id: 1b8c6075-13c6-4277-b726-8dea7991efec
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: e2a3470784beb04c2179958ac6cb98861acfaa71
 workflow-type: tm+mt
-source-wordcount: '3498'
+source-wordcount: '3493'
 ht-degree: 0%
 
 ---
@@ -598,4 +598,4 @@ Sedan `box img` används i designimportören, den resulterande landningssidan ve
 
 >[!NOTE]
 >
->Designers bör också vara medvetna om att bara kod i **id=cqcanvas** -taggen känns igen av importören, annars bevaras inte designen.
+>Designers bör bara koda inuti **id=cqcanvas** -taggen känns igen av importören, annars bevaras inte designen.

@@ -2,9 +2,9 @@
 title: AEM Content and Commerce Release Notes 2020
 description: Adobe Experience Manager Content and Commerce Release Notes 2020.
 exl-id: 440ecd8e-55dc-4606-8678-c65cda1d2b3a
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '1353'
+source-wordcount: '1352'
 ht-degree: 8%
 
 ---
@@ -143,7 +143,7 @@ Detta är den första versionen av CIF Core Components som stöds i Adobe Experi
 
 * Kategorifiltrering har lagts till som en fasett så att kunderna kan filtrera baserat på kategori.
 
-* Tjänstanvändarmappning har lagts till som en del av säkerhetskraven för att säkerställa åtkomst till /conf via tjänstanvändare och inte genom att direkt ändra åtkomstkontrollistor. CIF Core Components måste nu använda en tjänstanvändare för att få åtkomst till konfigurationer.
+* Tjänstanvändarmappning har lagts till som en del av säkerhetskraven för att säkerställa åtkomst till /conf via tjänstanvändare och inte genom att direkt ändra åtkomstkontrollistor. CIF Core Components måste använda en tjänstanvändare för att få åtkomst till konfigurationer.
 
 ### Vad har förbättrats {#what-is-improved-june}
 

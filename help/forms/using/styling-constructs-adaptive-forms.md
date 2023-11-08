@@ -1,18 +1,15 @@
 ---
 title: Formateringskonstruktioner för adaptiva formulär
-seo-title: Styling constructs for adaptive forms
 description: Använd LESS-ramverket för att anpassa utseendet på adaptiva formulär.
-seo-description: Use LESS framework to customize appearance of adaptive forms.
-uuid: d2e45ad9-7322-43ce-a1dd-ad97e2eea742
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: ed50fa70-a8dd-4cc6-82a9-d59de0fa417d
 docset: aem65
 feature: Adaptive Forms
 exl-id: 691608a6-be82-4d81-b876-427de997e5be
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '2363'
+source-wordcount: '2361'
 ht-degree: 0%
 
 ---
@@ -58,7 +55,7 @@ För närvarande definieras LESS-variabler bara för dessa egenskaper för de ol
 
 ## Ändra komponentstil {#changing-component-style}
 
-Du kan ändra elementens utseende, layout, placering och synlighet. För att utföra den här uppgiften skapar eller uppdaterar du dina anpassade css-filer så att de innehåller de formateringskonstruktioner som listas i den här artikeln.
+Du kan ändra utseende, layout, placering och synlighet för element. För att utföra den här uppgiften skapar eller uppdaterar du dina anpassade css-filer så att de innehåller de formateringskonstruktioner som listas i den här artikeln.
 
 Om du vill använda ett format på ett anpassat formulär öppnar du det adaptiva formuläret i för redigering, öppnar egenskaper för adaptiv formulärbehållare och anger sökvägen till en anpassad CSS-fil på fliken Grundläggande. Standardformateringskonstruktioner för det adaptiva formuläret och åsidosätts av de konstruktioner som anges i den anpassade css-filen.
 

@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: a975ea2e-5e24-4a96-bd62-63bb98836ff2
 docset: aem65
 exl-id: 1b75721c-b223-41f0-88d9-bd855b529f31
-source-git-commit: a2b1bd5462ae1837470e31cfeb87a95af1c69be5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '674'
+source-wordcount: '675'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 0%
 >
 >[Modeller för innehållsfragment](/help/assets/content-fragments/content-fragments-models.md) Vi rekommenderar att du skapar alla nya innehållsfragment.
 >
->Modeller för innehållsfragment används för alla exempel i WKND.
+>Innehållsfragmentmodeller används för alla exempel i WKND.
 
 >[!NOTE]
 >
@@ -50,18 +50,16 @@ Prioritetsordningen är (i fallande ordning) `/conf`, `/apps`, `/libs`.
 
 >[!CAUTION]
 >
->Du ***måste*** ändrar ingenting i `/libs` bana.
+>Du ***måste*** ändrar ingenting i dialogrutan `/libs` bana.
 >
->Detta beror på innehållet i `/libs` skrivs över nästa gång du uppgraderar din instans (och kan mycket väl skrivas över när du använder en snabbkorrigering eller ett funktionspaket).
+>Detta beror på innehållet i `/libs` skrivs över nästa gång du uppgraderar din instans (och kan mycket väl skrivas över när du installerar en snabbkorrigering eller ett funktionspaket).
 >
 >Den rekommenderade metoden för konfiguration och andra ändringar är:
 >
 >1. Återskapa önskat objekt (d.v.s. som det finns i `/libs`) under `/apps`
 >
 >1. Gör ändringar i `/apps`
-
 >
-
 
 En malls grundläggande struktur hålls under
 
@@ -109,7 +107,7 @@ Mer information om noderna och deras egenskaper är:
 
 * **Mall**
 
-   <table>
+  <table>
    <tbody>
     <tr>
      <th>Namn</th>
@@ -139,19 +137,19 @@ Mer information om noderna och deras egenskaper är:
     <tr>
      <td><code>precreateElements</code></td>
      <td><p><code>Boolean</code></p> <p>obligatoriskt</p> </td>
-     <td><p><code>true</code>, om de delresurser som representerar elementen (utom det överordnad elementet) i innehållsfragmentet ska skapas när innehållsfragmentet skapas, <em>false</em> om de ska skapas "i farten".</p> <p><strong>Anteckning</strong>: för närvarande måste den här parametern anges till <code>true</code>.</p> </td>
+     <td><p><code>true</code>, om de delresurser som representerar elementen (utom huvudelementet) i innehållsfragmentet ska skapas när innehållsfragmentet skapas, <em>false</em> om de ska skapas "i farten".</p> <p><strong>Anteckning</strong>: för närvarande måste den här parametern anges till <code>true</code>.</p> </td>
     </tr>
     <tr>
      <td><code>version</code></td>
      <td><p><code>Long</code></p> <p>obligatoriskt</p> </td>
-     <td><p>Innehållsstrukturens version. stöds för närvarande:</p> <p><strong>Anteckning</strong>: för närvarande måste den här parametern anges till <code>2</code>.<br /> </p> </td>
+     <td><p>Version av innehållsstrukturen som stöds för närvarande:</p> <p><strong>Anteckning</strong>: för närvarande måste den här parametern anges till <code>2</code>.<br /> </p> </td>
     </tr>
    </tbody>
   </table>
 
 * **Element**
 
-   <table>
+  <table>
    <tbody>
     <tr>
      <th>Namn</th>
@@ -159,16 +157,16 @@ Mer information om noderna och deras egenskaper är:
      <th>Värde</th>
     </tr>
     <tr>
-     <td><code>elements</code> </td>
+     <td><code>elements</code><br /> </td>
      <td><p><code>nt:unstructured</code></p> <p>obligatoriskt</p> </td>
-     <td><p>En nod som innehåller definitionen av elementen i innehållsfragmentet. Det är obligatoriskt och måste innehålla minst en underordnad nod för <strong>Huvud</strong> -element, men kan innehålla [1..n] underordnade noder.</p> <p>När mallen används kopieras elementundergrenen till fragmentets modellundergren.</p> <p>Det första elementet (som det visas i CRXDE Lite) anses automatiskt vara <i>main</i> element, nodnamnet är irrelevant och noden i sig inte har någon särskild betydelse, förutom det faktum att den representeras av huvudtillgången, övriga element hanteras som undertillgångar.</p> </td>
+     <td><p>En nod som innehåller definitionen av elementen i innehållsfragmentet. Det är obligatoriskt och måste innehålla minst en underordnad nod för <strong>Huvud</strong> -element, men kan innehålla [1..n] underordnade noder.</p> <p>När mallen används kopieras elementundergrenen till fragmentets modellundergren.</p> <p>Det första elementet (som det visas i CRXDE Lite) anses automatiskt vara <i>main</i> -element; nodnamnet är irrelevant och själva noden har ingen speciell betydelse, förutom att det representeras av huvudtillgången. De andra elementen hanteras som underresurser.</p> </td>
     </tr>
    </tbody>
   </table>
 
 * **Elementnamn**
 
-   <table>
+  <table>
    <tbody>
     <tr>
      <th>Namn</th>
@@ -188,12 +186,12 @@ Mer information om noderna och deras egenskaper är:
     <tr>
      <td><code>defaultContent</code></td>
      <td><p><code>String</code></p> <p>valfri</p> <p>standard: ""</p> </td>
-     <td>Elementets ursprungliga innehåll. används endast om <code>precreateElements</code><i> = </i><code>true</code></td>
+     <td>Elementets ursprungliga innehåll. Används endast om <code>precreateElements</code><i> = </i><code>true</code></td>
     </tr>
     <tr>
      <td><code>initialContentType</code></td>
      <td><p><code>String</code></p> <p>valfri</p> <p>standard: <code>text/html</code></p> </td>
-     <td><p>Elementets ursprungliga innehållstyp. används endast om <code>precreateElements</code><i> = </i><code>true</code>; stöds för närvarande:</p>
+     <td><p>Elementets ursprungliga innehållstyp. Används bara om <code>precreateElements</code><i> = </i><code>true</code>; stöds för närvarande:</p>
       <ul>
        <li><code>text/html</code></li>
        <li><code>text/plain</code></li>
@@ -203,14 +201,14 @@ Mer information om noderna och deras egenskaper är:
     <tr>
      <td><code>name</code></td>
      <td><p><code>String</code></p> <p>obligatoriskt</p> </td>
-     <td>Elementets interna namn. måste vara unik för fragmenttypen.</td>
+     <td>Elementets interna namn; måste vara unikt för fragmenttypen.</td>
     </tr>
    </tbody>
   </table>
 
 * **Variationer**
 
-   <table>
+  <table>
    <tbody>
     <tr>
      <th>Namn</th>
@@ -218,7 +216,7 @@ Mer information om noderna och deras egenskaper är:
      <th>Värde</th>
     </tr>
     <tr>
-     <td><code>variations</code> </td>
+     <td><code>variations</code><br /> </td>
      <td><p><code>nt:unstructured</code></p> <p>valfri</p> </td>
      <td>Den här valfria noden innehåller definitionen av de ursprungliga variationerna för innehållsfragmentet.</td>
     </tr>
@@ -227,7 +225,7 @@ Mer information om noderna och deras egenskaper är:
 
 * **Variantnamn**
 
-   <table>
+  <table>
    <tbody>
     <tr>
      <th>Namn</th>
@@ -235,7 +233,7 @@ Mer information om noderna och deras egenskaper är:
      <th>Värde</th>
     </tr>
     <tr>
-     <td><code>&lt;<i>variation-name</i>&gt;</code> </td>
+     <td><code>&lt;<i>variation-name</i>&gt;</code><br /> </td>
      <td><p><code>nt:unstructured</code></p> <p>krävs om det finns en variantnod</p> </td>
      <td><p>Definierar en ursprunglig variation.<br /> Variationen läggs som standard till i alla element i innehållsfragmentet.</p> <p>Variationen kommer att ha samma ursprungliga innehåll som respektive element (se <code class="code">defaultContent/
        initialContentType</code>)</p> </td>

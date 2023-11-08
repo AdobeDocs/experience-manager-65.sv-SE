@@ -1,19 +1,15 @@
 ---
 title: Layoutdesign
-seo-title: Layout Design
 description: Layoutdesigndetaljer förklarar hur du kan skapa layouter som ska användas för brev och interaktiv kommunikation.
-seo-description: Layout Design Details explains how you can create layouts to be used for your letters or Interactive Communications.
-uuid: 469a8a71-88f7-4102-bb02-38ed05390f6c
 content-type: reference
 topic-tags: correspondence-management, interactive-communications
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: 683809ac-089b-49bf-a72c-67d32439081f
 docset: aem65
 feature: Correspondence Management
 exl-id: 9e1b0067-c7dc-4bbb-a209-d674592be858
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '2170'
+source-wordcount: '2171'
 ht-degree: 0%
 
 ---
@@ -35,14 +31,14 @@ En layout definierar den grafiska layouten för en brev-/tryckkanal i ett intera
 
 ![Designer: skapa en layout](assets/claimsubrogationlayout.png)
 
-Följ de här stegen för att skapa layouter för brev/tryckkanaler i Interactive Communications:
+Följ de här stegen för att skapa layouter för brev/tryckkanaler i interaktiv kommunikation:
 
-1. Analysera layouten och avgöra vilket innehåll som upprepas på alla sidor. vanligtvis sidhuvud och sidfot får plats i den här kategorin. Innehållet placeras på överordnad layoutsidor. Det återstående innehållet går till layoutens innehållssidor. I en policyjacka kan logotypen och företagsadressen läggas till i det överordnad sidhuvudet och sidfoten. Anmärkning om annullering använder till exempel samma layout.
+1. Analysera layouten och ta reda på vilket innehåll som upprepas på alla sidor. Vanligtvis passar sidhuvud och sidfot in i den här kategorin. Det här innehållet placeras på mallsidor för layout. Det återstående innehållet går till layoutens innehållssidor. I en policyjacka kan logotypen och företagsadressen läggas till i mallsidans sidhuvud och sidfot. Anmärkning om annullering använder till exempel samma layout.
 1. När du utformar innehållssidor delar du upp sidinnehållet i avsnitt. Varje avsnitt är utformat som ett delformulär inbäddat i själva layouten eller som en fragmentlayout. Om avsnittet innehåller tabeller, modellerar du avsnittet som ett layoutfragment.
 1. En layout kan utformas så här:
 
    1. Gör varje avsnitt till ett separat delformulär som innehåller alla element i avsnittet.
-   1. Gör varje avsnittsdelformulär underordnat till samma överordnade delformulär. Det överordnade delformulärets layout är inställd på att flöda så att avsnitten kan flyttas nedan om stora data sammanfogas i föregående avsnitt.
+   1. Gör varje avsnittsdelformulär underordnat till samma överordnade delformulär. Det överordnade delformulärets layout är inställd på att flöda så att avsnitten kan flyttas under om det finns stora data som sammanfogats i tidigare avsnitt.
    1. Sektion Primär bosättning kan återanvändas även i andra layouter. Skapa den som en fragmentlayout.
    1. Avsnittet Ytterligare intresseinformation innehåller bara två element som placerats under varandra, kan innehålla stora data och är utformad som flödande.
    1. Andra avsnitt innehåller element vid specifika positioner så att de är utformade som positionerade layouter.
@@ -62,37 +58,37 @@ Utför följande steg för att använda delformulär i en XDP-mall:
 
 1. Öppna Forms Designer och välj **Fil** > **Nytt** > **Använd ett tomt formulär**, trycka **Nästa** och sedan trycka **Slutför** om du vill öppna formuläret för att skapa en mall.
 
-   Se till att **Objektbibliotek** och **Objekt** alternativ är markerade på **Fönster** -menyn.
+   Se till att **Objektbibliotek** och **Objekt** alternativen är markerade på menyn **Fönster** -menyn.
 
-1. Dra och släpp **Delformulär** från **Objektbibliotek** till formuläret.
+1. Dra och släpp **Delformulär** -komponenten från **Objektbibliotek** till formuläret.
 
    ![Komponentdesigner](assets/subform_component_designer_new.png)
 
 1. Markera delformuläret för att visa alternativen för delformuläret i **Objekt** i den högra rutan.
-1. Välj **Delformulär** och markera **Flödat** från **Innehåll** nedrullningsbar lista. Dra delformulärets vänstra slutpunkt för att justera längden.
+1. Välj **Delformulär** och markera **Flödat** från **Innehåll** listruta. Dra delformulärets vänstra slutpunkt för att justera längden.
 
    ![Flödat delformulär](assets/object_subform_flowed_new.png)
 
 1. I **Bindning** tab:
 
    1. Ange ett namn för delformuläret i dialogrutan **Namn** fält.
-   1. Välj **Ingen databindning** från **Databindning** nedrullningsbar lista.
+   1. Välj **Ingen databindning** från **Databindning** listruta.
 
-1. På samma sätt markerar du rotdelformuläret i den vänstra rutan.
+1. Markera på samma sätt rotdelformuläret i den vänstra rutan.
 
    ![Rotdelformulär](assets/root_subform_designer_new.png)
 
-1. Välj **Delformulär** och markera **Flödat** från **Innehåll** nedrullningsbar lista. I **Bindningar** tab:
+1. Välj **Delformulär** och markera **Flödat** från **Innehåll** listruta. I **Bindningar** tab:
 
    1. Ange ett namn för delformuläret i dialogrutan **Namn** fält.
-   1. Välj **Ingen databindning** från **Databindning** nedrullningsbar lista.
+   1. Välj **Ingen databindning** från **Databindning** listruta.
 
    Upprepa steg 2 till 5 om du vill lägga till fler delformulär i XDP-mallen. Lägg till [text, dokumentfragment, bilder och diagram](create-interactive-communication.md#step2) till målområdena endast när du skapar interaktiv kommunikation.
 
 1. Välj **Fil** > **Spara som** så här sparar du filen i det lokala filsystemet:
 
    1. Navigera till platsen där du vill spara filen och ange ett namn för XDP-mallen.
-   1. Välj **.xdp** från **Spara som typ** nedrullningsbar lista.
+   1. Välj **.xdp** från **Spara som typ** listruta.
 
    1. Tryck **Spara**.
 
@@ -106,12 +102,12 @@ Använd bildfältet eller delformulärskomponenten i XDP-mallen och lägg till e
 
 Utför följande steg för att använda komponenten Bildfält i en XDP-mall:
 
-1. Dra och släpp **Bildfält** från **Objektbibliotek** till formuläret.
+1. Dra och släpp **Bildfält** -komponenten från **Objektbibliotek** till formuläret.
 1. Markera delformuläret för att visa alternativen för delformuläret i **Objekt** i den högra rutan.
 1. I **Bindning** tab:
 
    1. Ange ett namn för bildfältet i dialogrutan **Namn** fält.
-   1. Välj **Ingen databindning** från **Databindning** nedrullningsbar lista.
+   1. Välj **Ingen databindning** från **Databindning** listruta.
 
 ### Skapa XDP-mall för layoutfragment {#xdplayoutfragments}
 
@@ -123,7 +119,7 @@ Använd tabellkomponenten i Forms Designer för att skapa layoutfragment och anv
 
 Utför följande steg för att använda tabellkomponenten i XDP-mallen med Forms Designer:
 
-1. Dra och släpp **Tabell** från **Objektbibliotek** till formuläret.
+1. Dra och släpp **Tabell** -komponenten från **Objektbibliotek** till formuläret.
 1. I **Infoga tabell** dialog:
 
    1. Ange antalet rader och kolumner för tabellen.
@@ -132,7 +128,7 @@ Utför följande steg för att använda tabellkomponenten i XDP-mallen med Forms
 
 1. Tryck **+** i den vänstra rutan bredvid tabellens namn högerklickar du på cellnamnen i rubriken och andra rader och väljer **Byt namn på objekt** om du vill byta namn på tabellcellerna.
 1. Klicka på tabellrubrikens textfält i dialogrutan **Designvy** och döp om dem.
-1. Dra och släpp **Textfält** från **Objektbibliotek** till varje tabellcell i **Designvy**. Utför det här steget om du vill kunna binda tabellceller till formulärdatamodellsobjekten när du redigerar interaktiv kommunikation.
+1. Dra och släpp **Textfält** -komponenten från **Objektbibliotek** till varje tabellcell i **Designvy**. Utför det här steget om du vill kunna binda tabellceller till formulärdatamodellsobjekten när du redigerar interaktiv kommunikation.
 
    ![Textfält i en tabell](assets/text_fields_table_new.png)
 
@@ -143,7 +139,7 @@ Utför följande steg för att använda tabellkomponenten i XDP-mallen med Forms
 1. Välj **Fil** > **Spara som** så här sparar du filen i det lokala filsystemet:
 
    1. Navigera till platsen där du vill spara filen och ange namnet på XDP-mallen.
-   1. Välj **.xdp** från **Spara som typ** nedrullningsbar lista.
+   1. Välj **.xdp** från **Spara som typ** listruta.
 
    1. Tryck **Spara**.
 
@@ -164,13 +160,13 @@ Du kan använda ett schema i ett layout- eller layoutfragment, men det behövs i
 
 ## Skapa relaterade fält {#creating-relatable-fields}
 
-Som standard anses alla fält vara relaterade till olika andra datakällor. Om layouten innehåller fält som inte är relaterade till en datakälla namnger du fältet med suffixet &quot;_int&quot; (internal); pageCount_int.
+Som standard anses alla fält vara relaterade till olika andra datakällor. Om layouten innehåller fält som inte är relaterade till en datakälla ger du fältet ett &quot;_int&quot;-suffix (internt), till exempel pageCount_int.
 
 Ett relaterbart fält måste:
 
 * vara en XFA &lt;field> eller &lt;exclgroup>
 * har en XFA-bindningsreferens
-* om det är en &lt;exclgroup>måste den ha minst ett underordnat alternativknappsfält. annars kan dess värdetyp inte bestämmas
+* om det är en &lt;exclgroup>måste den ha minst ett underordnat alternativknappsfält, annars kan dess värdetyp inte bestämmas
 
 Ett relaterbart fält måste:
 
@@ -182,15 +178,15 @@ Ett relaterbart fält får inte
 * har bindningen angiven som &quot;none&quot;
 * vara underordnad en &lt;exclgroup> element
 
-Så länge ett relaterbart fält uppfyller villkoren ovan kan det finnas på vilken plats som helst och på vilket kapslingsdjup som helst i layouten. Du kan använda relaterade fält på överordnad sidor.
+Så länge ett relaterbart fält uppfyller villkoren ovan kan det finnas på vilken plats som helst och på vilket kapslingsdjup som helst i layouten. Du kan använda relaterade fält på mallsidor.
 
-Fälten är flexiblare i layoutkonfigurationen än målområdesdelformulär. de är dock knutna till en enda värdetyp. Du kan göra ett fält stort eller ange en fast bredd och höjd och så vidare. Den lösta modulen eller regelresultatet överförs till fältet.
+Fälten är mer flexibla i layoutkonfigurationen än målområdesdelformulär, men de är kopplade till en enda värdetyp. Du kan göra ett fält stort eller ange en fast bredd och höjd och så vidare. Den lösta modulen eller regelresultatet överförs till fältet.
 
 ## Bestäm när delformulär och textfält ska användas {#deciding-when-to-use-subforms-and-text-nbsp-fields}
 
 Använd ett delformulär om du vill samla in flera modulinnehåll i en lodrät flödeslayout uppifrån och ned (flera stycken eller bilder). Layouten måste hantera det faktum att delformuläret växer i höjd så att innehållet får plats. Om du inte kan vara säker på att längden på innehållet som är associerat med delformuläret/målet aldrig överstiger det utrymme som är reserverat för delformuläret i layouten, skapar du delformuläret som ett underordnat formulär i en flödeslänkad delformulärsbehållare. Med den här processen ser du till att layoutobjekt under delformuläret flyttas nedåt när delformuläret växer.
 
-Använd ett fält om du vill hämta moduldata eller data från dataordlisteelement till layoutens schema (eftersom fält är bundna till data) eller visa modulinnehåll på en överordnad sida. Kom ihåg att innehåll på en överordnad sida inte kan flöda med brödtextsidans innehåll, så du måste se till att bildfältet används som rubriklogotyp. Tabellen innehåller fler kriterier för att bestämma när ett delformulär eller fält ska användas i en layout.
+Använd ett fält om du vill hämta moduldata eller data från dataordlisteelement till layoutens schema (eftersom fält är bundna till data) eller visa modulinnehåll på en mallsida. Kom ihåg att innehåll på en mallsida inte kan flöda med innehåll på innehållssidan, så du måste se till att bildfältet används som rubriklogotyp. Tabellen innehåller fler kriterier för att bestämma när ett delformulär eller fält ska användas i en layout.
 
 <table>
  <tbody>
@@ -200,7 +196,7 @@ Använd ett fält om du vill hämta moduldata eller data från dataordlisteeleme
   </tr>
   <tr>
    <td><p>Den innehåller en kombination av element, till exempel Efternamn och Förnamn</p> </td>
-   <td><p>Den innehåller ett enda element, till exempel ett principnummer.</p> </td>
+   <td><p>Den innehåller ett enda element, t.ex. ett principnummer.</p> </td>
   </tr>
   <tr>
    <td><p>Den innehåller flera stycken</p> </td>
@@ -208,11 +204,11 @@ Använd ett fält om du vill hämta moduldata eller data från dataordlisteeleme
   </tr>
   <tr>
    <td><p>Upprepade, valfria och villkorsstyrda datagrupper är bundna till delformulär, vilket minskar risken för designfel som kan uppstå om skript används för att uppnå samma resultat</p> </td>
-   <td><p>Element som organisationens logotyp och adress visas på alla sidor i ett brev/interaktivt meddelande. I det här fallet skapar du formulärfält för dessa element och placerar dem på den överordnad sidan. Om du anger att fältbindningen ska vara "Ingen databindning" visas inga fält som relaterade fält i Letter/Interactive Communication Editor. Om du vill relatera någon typ av innehåll till dessa fält måste de ha bindning.</p> <p>Om din företagsadress innehåller mer än en rad med data kan du använda textfältet med alternativet "Tillåt flera rader" för att representera adressen i layouten.</p> <p>Om datatypen för ett textfält är normal text, används den oformaterade textversionen av modulutdata i stället för RTF-versionen (all formatering ignoreras). Om du vill bevara formateringen anger du datatypen för textfältet till RTF.</p> </td>
+   <td><p>Element som organisationens logotyp och adress visas på alla sidor i ett brev/interaktivt meddelande. I det här fallet skapar du formulärfält för dessa element och placerar dem på mallsidan. Om du anger att fältbindningen ska vara "Ingen databindning" visas inga fält som relaterade fält i Letter/Interactive Communication Editor. Om du vill relatera någon typ av innehåll till dessa fält måste de ha bindning.</p> <p>Om din företagsadress innehåller mer än en rad med data kan du använda textfältet med alternativet "Tillåt flera rader" för att representera adressen i layouten.</p> <p>Om datatypen för ett textfält är normal text, används den oformaterade textversionen av modulutdata i stället för RTF-versionen (all formatering ignoreras). Om du vill bevara formateringen anger du datatypen för textfältet till RTF-text.</p> </td>
   </tr>
   <tr>
    <td><p>Texten flödas</p> </td>
-   <td><p>Textfält och bildfält används på överordnad sidor. Överordnad sidor kan inte använda delformulär som målområden.</p> </td>
+   <td><p>Textfält och bildfält används på mallsidor. Mallsidor kan inte använda delformulär som målområden.</p> </td>
   </tr>
   <tr>
    <td><p>Objekten grupperas och ordnas utan att delformuläret binds till ett dataelement</p> </td>
@@ -225,9 +221,9 @@ Använd ett fält om du vill hämta moduldata eller data från dataordlisteeleme
  </tbody>
 </table>
 
-## Ställa in repetitiva element {#setting-up-repetitive-elements}
+## Konfigurera repetitiva element {#setting-up-repetitive-elements}
 
-När element som organisationens logotyp och adress visas på alla sidor i ett brev/interaktiv kommunikation skapar du formulärfält för dessa element och placerar dem på den överordnad sidan. Använd namnbindning (fältnamn) för dessa fält.
+När element som organisationens logotyp och adress visas på alla sidor i ett brev/interaktiv kommunikation skapar du formulärfält för dessa element och placerar dem på mallsidan. Använd namnbindning (fältnamn) för dessa fält.
 
 ## Ange serveråtergivningsformat {#specify-the-server-nbsp-render-format}
 

@@ -5,9 +5,9 @@ contentOwner: AG
 role: User, Admin
 feature: Metadata
 exl-id: 312fff5f-39c1-48c1-aa99-40feb72c2f59
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '2706'
+source-wordcount: '2705'
 ht-degree: 6%
 
 ---
@@ -220,7 +220,7 @@ XMP standardiserar hur metadata definieras, skapas och bearbetas genom att tillh
 
 Alla äldre metadata från EXIF, ID3 eller Microsoft Office översätts automatiskt till XMP, som kan utökas för att stödja kundspecifika metadatamatchningar, som produktkataloger.
 
-Metadata i XMP består av en uppsättning egenskaper. De här egenskaperna är alltid kopplade till en viss enhet som kallas en resurs, det vill säga egenskaperna är&quot;om&quot; resursen. När det gäller XMP är resursen alltid resursen.
+Metadata i XMP består av en uppsättning egenskaper. De här egenskaperna är alltid kopplade till en viss enhet som kallas en resurs, det vill säga egenskaperna är&quot;om&quot; resursen. Om det finns XMP är resursen alltid resursen.
 
 ### XMP ekosystem {#xmp-ecosystem}
 

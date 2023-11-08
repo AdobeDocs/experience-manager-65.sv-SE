@@ -2,7 +2,7 @@
 title: Så här modellerar du ditt innehåll
 description: I den här delen av AEM Headless Developer Journey lär du dig att modellera ditt innehåll för AEM Headless-leverans med hjälp av Content Modeling med Content Fragment Models och Content Fragments.
 exl-id: f75b433f-5a81-4259-a9f5-b58954b87970
-source-git-commit: fd8bb7d3d9040e0a7a6b2f65751445f41aeab73e
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
 source-wordcount: '1809'
 ht-degree: 0%
@@ -206,7 +206,7 @@ Datatypen kan konfigureras så att fragmentförfattare kan:
 
 ### Skapa modeller för innehållsfragment {#creating-content-fragment-models}
 
-Först måste du aktivera Content Fragment Models för webbplatsen. Den här aktiveringen görs i Configuration Browser; under Tools -> General -> Configuration Browser. Du kan antingen välja att konfigurera den globala posten eller skapa en konfiguration. Till exempel:
+Först måste du aktivera Content Fragment Models för webbplatsen. Den här aktiveringen görs i konfigurationsläsaren, under Verktyg > Allmänt > Konfigurationsläsaren. Du kan antingen välja att konfigurera den globala posten eller skapa en konfiguration. Till exempel:
 
 ![Definiera konfiguration](assets/cfm-configuration.png)
 
@@ -214,7 +214,7 @@ Först måste du aktivera Content Fragment Models för webbplatsen. Den här akt
 >
 >Se Ytterligare resurser - Innehållsfragment i Configuration Browser
 
-Sedan kan du skapa modellerna för innehållsfragment och definiera strukturen. Detta kan du göra under Verktyg -> Resurser -> Modeller för innehållsfragment. Till exempel:
+Sedan kan du skapa modellerna för innehållsfragment och definiera strukturen. Detta kan du göra under Verktyg > Resurser > Content Fragment Models. Till exempel:
 
 ![Content Fragment Model](assets/cfm-model.png)
 
@@ -228,7 +228,7 @@ Innehållsfragment baseras alltid på en innehållsfragmentmodell. Modellen inne
 
 ### Välja lämplig modell {#select-model}
 
-Det första steget till att skapa innehåll är att skapa ett innehållsfragment. Detta görs med Skapa -> Innehållsfragment i den obligatoriska mappen under Resurser -> Filer. Guiden vägleder dig genom stegen.
+Det första steget till att skapa innehåll är att skapa ett innehållsfragment. Detta görs med Skapa > Innehållsfragment i den obligatoriska mappen under Resurser > Filer. Guiden vägleder dig genom stegen.
 
 Ett innehållsfragment baseras på en viss innehållsfragmentmodell som du väljer som första steg i skapandet.
 

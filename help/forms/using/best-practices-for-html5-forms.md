@@ -12,7 +12,7 @@ discoiquuid: db22f775-fab1-4a78-b334-a9c4fa613e43
 docset: aem65
 feature: Mobile Forms
 exl-id: 62ff6306-9989-43b0-abaf-b0a811f0a6a4
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: c4cd9a61a226ace2a72d60b5b7b7432de12cb873
 workflow-type: tm+mt
 source-wordcount: '1416'
 ht-degree: 0%
@@ -46,7 +46,7 @@ Att minska storleken på de externa resurserna och endast använda absolut nödv
 
 * Använd [komprimerade bilder](/help/assets/best-practices-for-optimizing-the-quality-of-your-images.md). Det minskar nätverksaktiviteten och den mängd minne som krävs för att återge ett formulär. Inläsningstiden för formuläret minskar därför avsevärt.
 * Använd alternativet minify i AEM Configuration Manager (Day CQ HTML Library Manager) för att komprimera JavaScript- och CSS-filer. Mer information finns i [Konfigurationsinställningar för OSGi](/help/sites-deploying/osgi-configuration-settings.md).
-* Aktivera webbkomprimering. Det minskar storleken på begäranden och svar som kommer från ett formulär. Mer information finns i [Prestandajustering AEM formulärserver](https://helpx.adobe.com/aem-forms/6-3/performance-tuning-aem-forms.html).
+* Aktivera webbkomprimering. Det minskar storleken på begäranden och svar som kommer från ett formulär. Mer information finns i [Prestandajustering av AEM Forms Server](https://helpx.adobe.com/aem-forms/6-3/performance-tuning-aem-forms.html).
 
 ## Håll intresset levande, visa endast obligatoriska fält  {#keep-the-interest-alive-show-only-required-fields}
 

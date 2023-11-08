@@ -11,9 +11,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: f34058c3-384a-4b73-a386-5bc9125acbf8
 feature: Document Security
 exl-id: 0eb6e769-97c1-41ee-8d12-91bece984947
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '2169'
+source-wordcount: '2168'
 ht-degree: 0%
 
 ---
@@ -69,7 +69,7 @@ Användare kan visa information om sina skyddade dokument. Administratörer kan 
 
 Om spårning av relaterade iterationer är aktiverat kan du spåra versioner av ett dokument som olika användare har sparat. Den här funktionen stöds endast av vissa program, som PTC Pro/ENGINEER Wildfire.
 
-Den här funktionen är användbar när flera användare samarbetar och sparar olika versioner av samma dokument. Dokumentsäkerhet kan hålla reda på de olika versionerna. Därför kan du enkelt visa dokumentinformation för de olika versionerna.
+Den här funktionen är användbar när flera användare samarbetar och sparar olika versioner av samma dokument. dokumentskydd kan hålla reda på de olika versionerna och därför kan du enkelt visa dokumentinformation för de olika versionerna.
 
 Om den här funktionen är aktiverad kan du visa relaterade versioner av ett dokument från dokumentsidan.
 
@@ -90,7 +90,7 @@ Du kan återkalla och återställa åtkomsten till profilskyddade dokument:
 
 **Användare:** Kan återkalla eller återskapa åtkomst till dokument som de skyddar med sina egna personliga profiler eller med delade profiler för vilka funktionen för återkallning är aktiverad för den användare som tillämpar profilen. Användare som inte kan återkalla åtkomst till ett dokument eller växla en profil måste kontakta administratören.
 
-**Administratörer:** Kan återkalla eller återskapa behörigheter till alla policyskyddade dokument, inklusive sådana som skyddas av personliga eller delade policyer. Om en administratör återkallar åtkomsten till ett dokument som är skyddat med en delad profil kan bara en administratör återskapa åtkomstbehörighet för det dokumentet.
+**Administratörer:** Kan återkalla eller återskapa behörigheter till alla policyskyddade dokument, inklusive sådana som skyddas av personliga eller delade policyer. Om en administratör återkallar åtkomsten till ett dokument som är skyddat med en delad princip, kan bara en administratör återskapa åtkomstbehörighet för det dokumentet.
 
 **Koordinatorer för principuppsättning:** Kan återkalla eller återskapa åtkomsträttigheter för dokument som skyddas av profiler från sina profiluppsättningar.
 
@@ -168,7 +168,7 @@ Ytterligare sökalternativ är bara tillgängliga för administratörer:
 1. (Valfritt) Välj ett datumintervallalternativ i datumlistan. Om du väljer Anpassade datum anger du datumet i formatet åååå/mm/dd i de rutor som visas eller använder datumväljaren för att ange datumintervall:
 
    * Klicka på kalendern för att öppna datumväljaren.
-   * Använd pilarna för att hitta ett år och en månad.
+   * Använd pilarna för att hitta år och månad.
    * Klicka på en dag i månaden i kalendern.
    * Klicka på OK för att stänga datumväljaren.
 
@@ -184,7 +184,7 @@ Du kan sortera listan med dokument efter kolumnrubrik. Triangelikoner bredvid ko
 
 ## Lägg till försättsblad i profilskyddade dokument {#add-cover-page-to-policy-protected-documents}
 
-Om du öppnar ett dokument som är skyddat av dokumentskydd i de flesta visningsprogram som inte kommer från Adobe PDF visas antingen den första sidan som en tom sida eller så avbryts programmet utan att dokumentet öppnas.
+Om det finns de flesta visningsprogram som inte kommer från Adobe PDF visas den första sidan som en tom sida om du öppnar ett dokument som är skyddat av dokumentskydd. Om du inte öppnar dokumentet avbryts programmet.
 
 Du kan använda stödet för sidan 0 (Brytningsdokument) för att tillåta användare som inte använder Adobe PDF att öppna ett skyddat dokument och visa en försättssida i dokumentet.
 
@@ -196,12 +196,12 @@ Du kan använda stödet för sidan 0 (Brytningsdokument) för att tillåta anvä
 
 Använd följande processer i workbench:
 
-**Protect-dokument med försättsblad:** Skyddar ett PDF-dokument med den angivna profilen och lägger till en försättsblad i dokumentet
+**Protect Document with Cover Page:** Skyddar ett PDF-dokument med den angivna profilen och lägger till en försättsblad i dokumentet
 
-**Extrahera skyddat dokument:** Extraherar det policyskyddade PDF-dokumentet från PDF med försättsblad
+**Extract Protected Document:** Extraherar det policyskyddade PDF-dokumentet från PDF med försättsblad
 
 Använd följande API:er för dokumentsäkerhet:
 
 **protectDocumentWithCoverPage:** Skyddar ett givet PDF med den angivna profilen och returnerar ett dokument med en försättsblad och det skyddade dokumentet som en bifogad fil
-`//Create a ServiceClientFactory instance ServiceClientFactory factory = ServiceClientFactory.createInstance(connectionProps); //Create a RightsManagementClient object RightsManagementClient rightsClient = new RightsManagementClient(factory); //Reference a PDF document to which a policy is applied FileInputStream fileInputStream = new FileInputStream("C:\\testFile.pdf"); Document inPDF = new Document(fileInputStream); //Reference a Cover Page document FileInputStream coverPageInputStream = new FileInputStream("C:\\CoverPage.pdf"); Document inCoverDoc = new Document(coverPageInputStream); //Create a Document Manager object DocumentManager documentManager = rightsClient.getDocumentManager(); //Apply a policy to the PDF document RMSecureDocumentResult rmSecureDocument = documentManager.protectDocumentWithCoverPage( inPDF, "ProtectedPDF.pdf", "PolicySetName", "PolicyName", null, null, inCoverDoc, true); //Retrieve the policy-protected PDF document Document protectPDF = rmSecureDocument.getProtectedDoc(); //Save the policy-protected PDF document File myFile = new File("C:\\PolicyProtectedDoc.pdf"); protectPDF.copyToFile(myFile);` **extractProtectedDocument:** Extraherar det skyddade dokumentet, som är en bifogad fil i dokumentet med försättsbladet. Dokumentet med försättsbladet kan skapas med metoden protectDocumentWithCoverPage
+`//Create a ServiceClientFactory instance ServiceClientFactory factory = ServiceClientFactory.createInstance(connectionProps); //Create a RightsManagementClient object RightsManagementClient rightsClient = new RightsManagementClient(factory); //Reference a PDF document to which a policy is applied FileInputStream fileInputStream = new FileInputStream("C:\\testFile.pdf"); Document inPDF = new Document(fileInputStream); //Reference a Cover Page document FileInputStream coverPageInputStream = new FileInputStream("C:\\CoverPage.pdf"); Document inCoverDoc = new Document(coverPageInputStream); //Create a Document Manager object DocumentManager documentManager = rightsClient.getDocumentManager(); //Apply a policy to the PDF document RMSecureDocumentResult rmSecureDocument = documentManager.protectDocumentWithCoverPage( inPDF, "ProtectedPDF.pdf", "PolicySetName", "PolicyName", null, null, inCoverDoc, true); //Retrieve the policy-protected PDF document Document protectPDF = rmSecureDocument.getProtectedDoc(); //Save the policy-protected PDF document File myFile = new File("C:\\PolicyProtectedDoc.pdf"); protectPDF.copyToFile(myFile);` **extractProtectedDocument:** Extraherar det skyddade dokumentet, som är en bifogad fil i dokumentet med försättsblad. Dokumentet med omslagssidan kan skapas med metoden protectDocumentWithCoverPage
 `//Create a ServiceClientFactory instance ServiceClientFactory factory = ServiceClientFactory.createInstance(connectionProps); //Create a RightsManagementClient object RightsManagementClient rightsClient = new RightsManagementClient(factory); //Reference a protected PDF document with a Cover Page FileInputStream fileInputStream = new FileInputStream("C:\\policyProtectedDocWithCoverPage.pdf"); Document inPDF = new Document(fileInputStream); //Create a Document Manager object DocumentManager documentManager = rightsClient.getDocumentManager(); //Apply a policy to the PDF document Document extractedDoc = documentManager.extractProtectedDocument(inPDF); //Save the policy-protected PDF document File myFile = new File("C:\\PolicyProtectedDoc.pdf"); extractedDoc.copyToFile(myFile);`

@@ -10,7 +10,7 @@ topic-tags: develop
 discoiquuid: b89293c4-ea2e-4fa4-9e5e-ef4f548e9608
 role: Developer
 exl-id: 76d855cf-ebfa-487a-b1c8-755e7e45dd73
-source-git-commit: 27e5c7fea4e90873bf80f976e179b5af0088f550
+source-git-commit: c4cd9a61a226ace2a72d60b5b7b7432de12cb873
 workflow-type: tm+mt
 source-wordcount: '1068'
 ht-degree: 0%
@@ -88,7 +88,7 @@ I följande Java-kodexempel skapas en ny princip med namnet *Tillåt kopiering*.
      *
      * <install directory>/jboss/bin/client
      *
-     * If you want to invoke a remote forms server instance and there is a
+     * If you want to invoke a remote Forms Server instance and there is a
      * firewall between the client application and the server, then it is
      * recommended that you use the SOAP mode. When using the SOAP mode,
      * you have to include additional JAR files in the following
@@ -217,7 +217,7 @@ I följande Java-kodexempel ändras en princip med namnet *Tillåt kopiering* ge
      * SOAP required JAR files are in the following path:
      * <install directory>/sdk/client-libs/thirdparty
      *
-     * If you want to invoke a remote forms server instance and there is a
+     * If you want to invoke a remote Forms Server instance and there is a
      * firewall between the client application and the server, then it is
      * recommended that you use the SOAP mode. When using the SOAP mode,
      * you have to include these additional JAR files
@@ -318,7 +318,7 @@ I följande Java-kodexempel tas en princip med namnet bort *Tillåt kopiering*. 
      *
      * <install directory>/jboss/bin/client
      *
-     * If you want to invoke a remote forms server instance and there is a
+     * If you want to invoke a remote Forms Server instance and there is a
      * firewall between the client application and the server, then it is
      * recommended that you use the SOAP mode. When using the SOAP mode,
      * you have to include additional JAR files in the following
@@ -410,7 +410,7 @@ I följande Java-kodexempel tillämpas en princip med namnet *Tillåt kopiering*
      * SOAP required JAR files are in the following path:
      * <install directory>/sdk/client-libs/thirdparty
      *
-     * If you want to invoke a remote forms server instance and there is a
+     * If you want to invoke a remote Forms Server instance and there is a
      * firewall between the client application and the server, then it is
      * recommended that you use the SOAP mode. When using the SOAP mode,
      * you have to include these additional JAR files
@@ -516,7 +516,7 @@ I följande kodexempel tas en princip bort från ett PDF-dokument med namnet *Po
      *
      * <install directory>/jboss/bin/client
      *
-     * If you want to invoke a remote forms server instance and there is a
+     * If you want to invoke a remote Forms Server instance and there is a
      * firewall between the client application and the server, then it is
      * recommended that you use the SOAP mode. When using the SOAP mode,
      * you have to include additional JAR files in the following
@@ -623,7 +623,7 @@ I följande Java-kodexempel återkallas ett principskyddat dokument med namnet *
      *
      * <install directory>/jboss/bin/client
      *
-     * If you want to invoke a remote forms server instance and there is a
+     * If you want to invoke a remote Forms Server instance and there is a
      * firewall between the client application and the server, then it is
      * recommended that you use the SOAP mode. When using the SOAP mode,
      * you have to include additional JAR files in the following
@@ -737,7 +737,7 @@ I följande Java-kodexempel undersöks ett principskyddat PDF-dokument med namne
      *
      * <install directory>/jboss/bin/client
      *
-     * If you want to invoke a remote forms server instance and there is a
+     * If you want to invoke a remote Forms Server instance and there is a
      * firewall between the client application and the server, then it is
      * recommended that you use the SOAP mode. When using the SOAP mode,
      * you have to include additional JAR files in the following
@@ -855,7 +855,7 @@ I följande Java-kodexempel återställs åtkomsten till ett återkallat PDF-dok
      *
      * <install directory>/jboss/bin/client
      *
-     * If you want to invoke a remote forms server instance and there is a
+     * If you want to invoke a remote Forms Server instance and there is a
      * firewall between the client application and the server, then it is
      * recommended that you use the SOAP mode. When using the SOAP mode,
      * you have to include additional JAR files in the following
@@ -962,14 +962,14 @@ I följande Java-kodexempel skapas en ny PDF-vattenstämpel med namnet&quot;Samp
  * SOAP required JAR files are in the following path:
  * <install directory>/Adobe/Adobe_Experience_Manager_forms/sdk/client-libs/thirdparty
  *
- * If you want to invoke a remote forms server instance and there is a
- * firewall between the client application and forms server, then it is
+ * If you want to invoke a remote Forms Server instance and there is a
+ * firewall between the client application and Forms Server, then it is
  * recommended that you use the SOAP mode. When using the SOAP mode,
  * you have to include these additional JAR files
  *
  * For information about the SOAP
  * mode, see "Setting connection properties" in Programming
- * with forms server
+ * with Forms Server
  */
 
 import java.io.FileInputStream;
@@ -1095,14 +1095,14 @@ I följande Java-kodexempel skapas en ny textvattenstämpel med namnet *Exempel 
  * SOAP required JAR files are in the following path:
  * <install directory>/Adobe/Adobe_Experience_Manager_forms/sdk/client-libs/thirdparty
  *
- * If you want to invoke a remote forms server instance and there is a
- * firewall between the client application and forms server, then it is
+ * If you want to invoke a remote Forms Server instance and there is a
+ * firewall between the client application and Forms Server, then it is
  * recommended that you use the SOAP mode. When using the SOAP mode,
  * you have to include these additional JAR files
  *
  * For information about the SOAP
  * mode, see "Setting connection properties" in Programming
- * with forms server
+ * with Forms Server
  */
 
 import com.adobe.livecycle.rightsmanagement.client.RightsManagementClient;
@@ -1244,14 +1244,14 @@ I följande Java-kodexempel ändras en vattenstämpel med namnet &#39;Exempel p�
  * SOAP required JAR files are in the following path:
  * <install directory>/Adobe/Adobe_Experience_Manager_forms/sdk/client-libs/thirdparty
  *
- * If you want to invoke a remote forms server instance and there is a
- * firewall between the client application and forms server, then it is
+ * If you want to invoke a remote Forms Server instance and there is a
+ * firewall between the client application and Forms Server, then it is
  * recommended that you use the SOAP mode. When using the SOAP mode,
  * you have to include these additional JAR files
  *
  * For information about the SOAP
  * mode, see "Setting connection properties" in Programming
- * with forms server
+ * with Forms Server
  */
 
 import java.util.*;
@@ -1355,7 +1355,7 @@ I följande Java-kodexempel ändras vattenstämpeln *Konfidentiellt* genom att �
      *
      * <install directory>/jboss/bin/client
      *
-     * If you want to invoke a remote forms server instance and there is a
+     * If you want to invoke a remote Forms Server instance and there is a
      * firewall between the client application and the server, then it is
      * recommended that you use the SOAP mode. When using the SOAP mode,
      * you have to include additional JAR files in the following
@@ -1453,7 +1453,7 @@ I följande Java-kodexempel söks det efter händelsen create policy.
      *
      * <install directory>/jboss/bin/client
      *
-     * If you want to invoke a remote forms server instance and there is a
+     * If you want to invoke a remote Forms Server instance and there is a
      * firewall between the client application and the server, then it is
      * recommended that you use the SOAP mode. When using the SOAP mode,
      * you have to include additional JAR files in the following
@@ -1566,7 +1566,7 @@ I följande Java-kodexempel tillämpas en princip med namnet *Tillåt kopiering*
      *
      * <install directory>/jboss/bin/client
      *
-     * If you want to invoke a remote forms server instance and there is a
+     * If you want to invoke a remote Forms Server instance and there is a
      * firewall between the client application and the server, then it is
      * recommended that you use the SOAP mode. When using the SOAP mode,
      * you have to include additional JAR files in the following
@@ -1681,7 +1681,7 @@ I följande kodexempel tas en princip bort från ett Word-dokument med namnet *P
      *
      * <install directory>/jboss/bin/client
      *
-     * If you want to invoke a remote forms server instance and there is a
+     * If you want to invoke a remote Forms Server instance and there is a
      * firewall between the client application and the server, then it is
      * recommended that you use the SOAP mode. When using the SOAP mode,
      * you have to include additional JAR files in the following
@@ -1790,14 +1790,14 @@ I följande Java-kodexempel skapas en ny abstrakt princip med namnet AllowCopy. 
  * SOAP required JAR files are in the following path:
  * <install directory>/Adobe/Adobe_Experience_Manager_forms/sdk/client-libs/thirdparty
  *
- * If you want to invoke a remote forms server instance and there is a
- * firewall between the client application and forms server, then it is
+ * If you want to invoke a remote Forms Server instance and there is a
+ * firewall between the client application and Forms Server, then it is
  * recommended that you use the SOAP mode. When using the SOAP mode,
  * you have to include these additional JAR files
  *
  * For information about the SOAP
  * mode, see "Setting connection properties" in Programming
- * with forms server
+ * with Forms Server
  */
 
 import java.util.*;
@@ -1813,7 +1813,7 @@ public class CreateAbstractPolicySoap {
 
     try{
 
-        //Set connection properties required to invoke forms server using SOAP mode
+        //Set connection properties required to invoke Forms Server using SOAP mode
         Properties connectionProps = new Properties();
         connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
         connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
@@ -1907,14 +1907,14 @@ I följande Java-kodexempel ändras en abstrakt princip med namnet AllowCopy. Pr
  * SOAP required JAR files are in the following path:
  * <install directory>/Adobe/Adobe_Experience_Manager_forms/sdk/client-libs/thirdparty
  *
- * If you want to invoke a remote forms server instance and there is a
- * firewall between the client application and forms server, then it is
+ * If you want to invoke a remote Forms Server instance and there is a
+ * firewall between the client application and Forms Server, then it is
  * recommended that you use the SOAP mode. When using the SOAP mode,
  * you have to include these additional JAR files
  *
  * For information about the SOAP
  * mode, see "Setting connection properties" in Programming
- * with forms server
+ * with Forms Server
  */
 import java.util.*;
 
@@ -1929,7 +1929,7 @@ public class ModifyingAbstractPolicySoap {
 
     try{
 
-        //Set connection properties required to invoke forms server using SOAP mode
+        //Set connection properties required to invoke Forms Server using SOAP mode
         Properties connectionProps = new Properties();
         connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
         connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
@@ -2006,14 +2006,14 @@ I följande Java-kodexempel tas en abstrakt princip som heter AllowCopy bort. Pr
  * SOAP required JAR files are in the following path:
  * <install directory>/Adobe/Adobe_Experience_Manager_forms/sdk/client-libs/thirdparty
  *
- * If you want to invoke a remote forms server instance and there is a
- * firewall between the client application and forms server, then it is
+ * If you want to invoke a remote Forms Server instance and there is a
+ * firewall between the client application and Forms Server, then it is
  * recommended that you use the SOAP mode. When using the SOAP mode,
  * you have to include these additional JAR files
  *
  * For information about the SOAP
  * mode, see "Setting connection properties" in Programming with AEM Forms
- * with forms server
+ * with Forms Server
  */
 import java.util.*;
 
@@ -2093,14 +2093,14 @@ I följande Java-kodexempel demonstreras metoden för att skydda ett dokument i 
  * SOAP required JAR files are in the following path:
  * <install directory>/Adobe/Adobe_Experience_Manager_forms/sdk/client-libs/thirdparty
  *
- * If you want to invoke a remote forms server instance and there is a
- * firewall between the client application and forms server, then it is
+ * If you want to invoke a remote Forms Server instance and there is a
+ * firewall between the client application and Forms Server, then it is
  * recommended that you use the SOAP mode. When using the SOAP mode,
  * you have to include these additional JAR files
  *
  * For information about the SOAP
  * mode, see "Setting connection properties" in Programming
- * with forms server
+ * with Forms Server
  */
 import java.util.*;
 import java.io.File;
@@ -2118,7 +2118,7 @@ public class protectStatementWorkFlowExistingUserSoap {
 
         try{
 
-            //Set connection properties required to invoke forms server using SOAP mode
+            //Set connection properties required to invoke Forms Server using SOAP mode
             Properties connectionProps = new Properties();
             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
@@ -2204,14 +2204,14 @@ I följande Java-kodexempel visas hur du kan skydda ett dokument i Statement Wor
  * SOAP required JAR files are in the following path:
  * <install directory>/Adobe/Adobe_Experience_Manager_forms/sdk/client-libs/thirdparty
  *
- * If you want to invoke a remote forms server instance and there is a
- * firewall between the client application and forms server, then it is
+ * If you want to invoke a remote Forms Server instance and there is a
+ * firewall between the client application and Forms Server, then it is
  * recommended that you use the SOAP mode. When using the SOAP mode,
  * you have to include these additional JAR files
  *
  * For information about the SOAP
  * mode, see "Setting connection properties" in Programming
- * with forms server
+ * with Forms Server
  */
 import java.util.*;
 import java.io.File;
@@ -2235,7 +2235,7 @@ public class protectStatementWorkFlowSoap {
 
         try{
 
-            //Set connection properties required to invoke forms server using SOAP mode
+            //Set connection properties required to invoke Forms Server using SOAP mode
             Properties connectionProps = new Properties();
             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);

@@ -1,6 +1,6 @@
 ---
 title: Query Builder API
-description: Funktionerna i Asset Share Query Builder visas via en Java&trade. API och ett REST API.
+description: Funktionerna i Asset Share Query Builder visas via Java&trade; API och REST API.
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: platform
@@ -8,9 +8,9 @@ content-type: reference
 pagetitle: Query Builder API
 tagskeywords: querybuilder
 exl-id: b2288442-d055-4966-8057-8b7b7b6bff28
-source-git-commit: a66814fa065b7545ec39fe9109b4c5815fa199da
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '2288'
+source-wordcount: '2284'
 ht-degree: 0%
 
 ---
@@ -31,7 +31,7 @@ REST API ger åtkomst till samma funktioner via HTTP med svar som skickas i JSON
 >
 >QueryBuilder-API:t byggs med JCR-API:t. Du kan även fråga Adobe Experience Manager JCR genom att använda JCR-API:t i ett OSGi-paket. Mer information finns i [Adobe Experience Manager med JCR API](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/access-jcr.html?lang=en).
 
-## Gem-session {#gem-session}
+## Gruppsession {#gem-session}
 
 [Adobe Experience Manager (AEM) Gems](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/overview.html) är en serie tekniska djupdykningar i Adobe Experience Manager som levereras av experter från Adobe. Den här sessionen som är avsedd för frågebyggaren är användbar för en översikt över och användning av verktyget.
 
@@ -103,7 +103,7 @@ p.guessTotal=true
 orderby=path
 ```
 
-Frågan returnerar `p.limit` standard för `10` resultat med `0` förskjutning:
+Frågan returnerar `p.limit` standard för `10` resultat med `0` offset:
 
 ```xml
 "success": true,
@@ -129,7 +129,7 @@ Den returnerar ett tal som har samma standardgräns på tio resultat med en för
 
 ### Implementera sidnumrering {#implementing-pagination}
 
-Som standard ger Query Builder även antalet träffar. Beroende på den resulterande storleken kan det ta lång tid att fastställa det korrekta antalet genom att kontrollera alla resultat för åtkomstkontroll. För det mesta används summan för att implementera sidnumrering för slutanvändargränssnittet. Eftersom det kan ta lång tid att fastställa det exakta antalet rekommenderar vi att du använder funktionen gissningssumma för att implementera sidnumreringen.
+Som standard ger Query Builder även antalet träffar. Beroende på den resulterande storleken kan det ta lång tid att fastställa det korrekta antalet genom att kontrollera alla resultat för åtkomstkontroll. För det mesta används summan för att implementera sidnumrering för slutanvändarens användargränssnitt. Eftersom det kan ta lång tid att fastställa det exakta antalet rekommenderar vi att du använder funktionen gissaTotal för att implementera sidnumreringen.
 
 Gränssnittet kan till exempel anpassa följande metod:
 
@@ -139,7 +139,7 @@ Gränssnittet kan till exempel anpassa följande metod:
 * Svaret kan ha följande resultat:
 
    * `total=43`, `more=false` - Anger att det totala antalet träffar är 43. Gränssnittet kan visa upp till tio resultat som en del av den första sidan och ge sidnumrering för de kommande tre sidorna. Du kan också använda den här implementeringen för att visa en beskrivande text som **&quot;43 resultat hittades&quot;**.
-   * `total=100`, `more=true` - Anger att det totala antalet träffar är större än 100 och att det exakta antalet inte är känt. Gränssnittet kan visas upp till tio som en del av den första sidan och sidnumreringen kan göras för de kommande tio sidorna. Du kan också använda den här för att visa text som **&quot;fler än 100 resultat hittades&quot;**. När användaren går till nästa sida kommer ett anrop till Query Builder att öka gränsen för `guessTotal` och `offset` och `limit` parametrar.
+   * `total=100`, `more=true` - Anger att det totala antalet träffar är större än 100 och att det exakta antalet inte är känt. Gränssnittet kan visas upp till tio som en del av den första sidan och sidnumreringen kan göras för de kommande tio sidorna. Du kan också använda den här för att visa text som **&quot;fler än 100 resultat hittades&quot;**. När användaren går till nästa sida kommer ett anrop till Query Builder att öka gränsen för `guessTotal` och även `offset` och `limit` parametrar.
 
 `guessTotal` bör användas i de fall där användargränssnittet behöver använda oändlig rullning för att undvika att frågeverktyget avgör det exakta träffantalet.
 
@@ -214,9 +214,9 @@ Den här frågan använder en *grupp* (med namnet &quot; `group`&quot;), som anv
 
 `"Management" and ("/content/geometrixx/en/company/management" or "/content/geometrixx/en/company/bod")`
 
-I gruppen i exemplet finns `path` predikatet används flera gånger. Om du vill differentiera och ordna de två instanserna av predikatet (ordningen krävs för vissa predikat) måste du prefix prefixet med *N* `_ where`*N* är ordningsindex. I föregående exempel är resultatpredikaten `1_path` och `2_path`.
+Inuti gruppen i exemplet finns `path` predikatet används flera gånger. Om du vill differentiera och ordna de två instanserna av predikatet (ordningen krävs för vissa predikat) måste du prefix prefixet med *N* `_ where`*N* är ordningsindex. I föregående exempel är resultatpredikaten `1_path` och `2_path`.
 
-The `p` in `p.or` är en särskild avgränsare som anger att följande (i det här fallet en `or`) är en *parameter* i gruppen, i motsats till ett underpredikt för gruppen, såsom `1_path`.
+The `p` in `p.or` är en särskild avgränsare som anger att följande (i det här fallet en `or`) är *parameter* i gruppen, i motsats till ett underpredikt för gruppen, såsom `1_path`.
 
 Om nej `p.or` ges så att alla predikat är OCHed tillsammans, vilket innebär att varje resultat måste uppfylla alla prediktiv.
 
@@ -236,7 +236,7 @@ property=cq:template
 property.value=/apps/geometrixx/templates/homepage
 ```
 
-Detta har nackdelen med att `jcr:content` noder på sidorna, inte själva sidorna, returneras. Du kan lösa detta genom att söka efter relativ sökväg:
+Det här är nackdelen med att `jcr:content` noder på sidorna, inte själva sidorna, returneras. Du kan lösa detta genom att söka efter relativ sökväg:
 
 `http://localhost:4502/bin/querybuilder.json?property=jcr%3acontent%2fcq%3atemplate&property.value=%2fapps%2fgeometrixx%2ftemplates%2fhomepage&type=cq%3aPage`
 
@@ -330,7 +330,7 @@ p.hits=selective
 p.properties=sling:resourceType jcr:primaryType
 ```
 
-En annan sak du kan göra är att ta med underordnade noder i QueryBuilder-svaret. Du måste ange
+En annan sak du kan göra är att ta med underordnade noder i QueryBuilder-svaret. För att göra detta måste du ange
 
 ```
 p.nodedepth=n
@@ -421,7 +421,7 @@ För sådana huvudegenskaper kan du förkorta frågan och använda &quot; `simil
 
 >[!NOTE]
 >
->Mer information om hur du skapar ett OSGi-paket som använder QueryBuilder-API:t och använder det OSGi-paketet i ett Adobe Experience Manager-program finns i [Skapa Adobe CQ OSGi-paket som använder Query Builder AP](https://helpx.adobe.com/experience-manager/using/using-query-builder-api.html)Jag.
+>Mer information om hur du skapar ett OSGi-paket som använder QueryBuilder API och använder det OSGi-paketet i ett Adobe Experience Manager-program finns i [Skapa Adobe CQ OSGi-paket som använder Query Builder AP](https://helpx.adobe.com/experience-manager/using/using-query-builder-api.html)Jag.
 
 Samma fråga som körs över HTTP med JSON-servern (Query Builder):
 
@@ -569,5 +569,5 @@ com.day.cq.search.impl.builder.QueryImpl query execution took 272 ms
 | [com.day.cq.search.facets](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/facets/package-summary.html) | Fasetter |
 | [com.day.cq.search.facets.bufickor](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/facets/buckets/package-summary.html) | Bucklar (inneslutna i facets) |
 | [com.day.cq.search.eval](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/eval/package-summary.html) | Förutse utvärderare |
-| [com.day.cq.search.facets.extractor](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/facets/extractors/package-summary.html) | Facet Extractor (för utvärderare) |
+| [com.day.cq.search.facets.extractor](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/facets/extractors/package-summary.html) | Fasettextraherare (för utvärderare) |
 | [com.day.cq.search.writer](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/writer/package-summary.html) | JSON Result Hit Writer för Querybuilder-servlet (/bin/querybuilder.json) |

@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/setting_up_and_organizing_users
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: e80c3f98-baa1-45bc-b713-51a2eb5ec165
 exl-id: 7bde0a09-192a-44a8-83d0-c18e335e9afa
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+source-git-commit: c4cd9a61a226ace2a72d60b5b7b7432de12cb873
 workflow-type: tm+mt
 source-wordcount: '573'
 ht-degree: 0%
@@ -31,16 +31,16 @@ Så här fungerar traditionell autentisering:
 
    **Finns:** Om användaren är aktuell och olåst returnerar Hantering av användare autentiseringen. Om användaren inte är aktuell eller låst returneras ett autentiseringsfel.
 
-   **Finns inte:** Användarhantering returnerar autentiseringsfel.
+   **Finns inte:** Användarhantering returnerar ett autentiseringsfel.
 
-   **Ogiltig:** Användarhantering returnerar autentiseringsfel.
+   **Ogiltig:** Användarhantering returnerar ett autentiseringsfel.
 
 1. Resultatet som returneras av autentiseringsprovidern utvärderas. Om autentiseringsprovidern returnerade autentiseringen kan användaren logga in. Annars kontrolleras användarhanteringen med nästa autentiseringsprovider (steg 2-3).
 1. Autentiseringsfel returneras om ingen tillgänglig autentiseringsprovider validerar inloggningsuppgifterna.
 
 När etablering bara är i tid implementeras skapas en ny användare dynamiskt i användarhantering om en av autentiseringsleverantörerna validerar användarens inloggningsuppgifter. (Efter steg 3 i den traditionella autentiseringsproceduren ovan.)
 
-## Implementera etablering av användare som är just-in-time {#implement-just-in-time-user-provisioning}
+## Implementera etablering av användare som bara är i tid {#implement-just-in-time-user-provisioning}
 
 ### API:er för etablering i precis tid {#apis-for-just-in-time-provisioning}
 
@@ -83,13 +83,13 @@ public Boolean assign(User user);
 
 ### Att tänka på när du skapar en domän som bara är aktiverad vid en viss tidpunkt {#considerations-while-creating-a-just-in-time-enabled-domain}
 
-* När du skapar en anpassad `IdentityCreator` för en hybriddomän, se till att ett dummy-lösenord anges för den lokala användaren. Lämna inte lösenordsfältet tomt.
+* När du skapar en anpassad `IdentityCreator` för en hybriddomän, se till att ett dummy-lösenord anges för den lokala användaren. Lämna inte det här lösenordsfältet tomt.
 * Rekommendation: Använd `DomainSpecificAuthentication` för att validera inloggningsuppgifter mot en specifik domän.
 
 ### Skapa en domän som är aktiverad just-in-time {#create-a-just-in-time-enabled-domain}
 
 1. Skriv en DSC som implementerar API:erna i avsnittet&quot;API:er för etablering i precis tid&quot;.
-1. Distribuera DSC till formulärservern.
+1. Distribuera DSC till Forms Server.
 1. Skapa en domän som bara är aktiverad vid en viss tidpunkt:
 
    * I administrationskonsolen klickar du på Inställningar > Användarhantering > Domänhantering > Ny företagsdomän.

@@ -6,9 +6,9 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/managing_endpoints
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 exl-id: ec169a01-a113-47eb-8803-bd783ea2c943
-source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '7176'
+source-wordcount: '7174'
 ht-degree: 0%
 
 ---
@@ -211,7 +211,7 @@ Skrivskyddade filer bearbetas inte och sparas i felmappen.
 
 Standardvärdet är fel/%Y/%M/%D/.
 
-**Bevara vid fel:** Bevara indatafiler om det inte går att utföra åtgärden på en tjänst. Standardvärdet är true.
+**Bevara vid fel:** Bevara indatafiler om det inte går att köra åtgärden på en tjänst. Standardvärdet är true.
 
 **Skriv över duplicerade filnamn:** När värdet är True skrivs filerna i resultatmappen och i den bevarade mappen över. Om värdet är Falskt används filer och mappar med ett numeriskt indexsuffix för namnet. Standardvärdet är Falskt.
 
@@ -225,7 +225,7 @@ Värdet -1 dagar anger att resultatmappen aldrig ska tas bort. Standardvärdet �
 
 **Literal:** Den bevakade mappen använder det värde som anges i fältet när det visas. Alla grundläggande Java-typer stöds. Om ett API till exempel använder indata som String, long, int och Boolean, konverteras strängen till rätt typ och tjänsten anropas.
 
-**Variabel:** Det angivna värdet är ett filmönster som används av den bevakade mappen för att välja indata. När det till exempel gäller tjänsten för krypterat lösenord, där indatadokumentet måste vara en PDF-fil, kan användaren använda &amp;ast;.pdf som filmönster. Den bevakade mappen hämtar alla filer i den bevakade mappen som matchar mönstret och anropar tjänsten för varje fil. När en variabel används konverteras alla indatafiler till dokument. Endast API:er som använder Document som indatatyp stöds.
+**Variabel:** Det angivna värdet är ett filmönster som används av den bevakade mappen för att välja indata. Om det till exempel finns en krypterad lösenordstjänst där indatadokumentet måste vara en PDF-fil, kan användaren använda &amp;ast;.pdf som filmönster. Den bevakade mappen hämtar alla filer i den bevakade mappen som matchar mönstret och anropar tjänsten för varje fil. När en variabel används konverteras alla indatafiler till dokument. Endast API:er som använder Document som indatatyp stöds.
 
 **Mappningar av utdataparameter:** Används för att konfigurera utdata för tjänsten och åtgärden. Vilka inställningar som är tillgängliga beror på vilken tjänst som använder den bevakade mappens slutpunkt.
 
@@ -271,7 +271,7 @@ Om mappningsmönstret för utdataparametrar avslutas med &quot;File.separator&qu
 
 ## Om begränsning {#about-throttling}
 
-När du har aktiverat begränsning för en bevakad mappslutpunkt begränsas antalet bevakade mappjobb som kan bearbetas vid en given tidpunkt. Det maximala antalet jobb bestäms av värdet för Gruppstorlek, som också kan konfigureras i slutpunkten för bevakad mapp. Inkommande dokument i indatakatalogen för den bevakade mappen avsöks inte när begränsningsgränsen har uppnåtts. Dokumenten kommer också att finnas kvar i indatakatalogen tills andra bevakade mappjobb har slutförts och ytterligare ett avsökningsförsök görs. Vid synkron bearbetning räknas alla jobb som bearbetas i en enda omröstning mot begränsningsgränsen, även om jobben bearbetas i följd i en enda tråd.
+När du har aktiverat begränsning för en bevakad mappslutpunkt begränsas antalet bevakade mappjobb som kan bearbetas vid en given tidpunkt. Det maximala antalet jobb bestäms av värdet för Gruppstorlek, som också kan konfigureras i slutpunkten för bevakad mapp. Inkommande dokument i indatakatalogen för den bevakade mappen avsöks inte när begränsningsgränsen har uppnåtts. Dokumenten kommer också att finnas kvar i indatakatalogen tills andra bevakade mappjobb har slutförts och ytterligare ett avsökningsförsök görs. Om det finns synkron bearbetning räknas alla jobb som bearbetas i en enda omröstning mot begränsningsgränsen, även om jobben bearbetas i följd i en enda tråd.
 
 >[!NOTE]
 >
@@ -284,15 +284,15 @@ Bevakad mapp skannar indatamappen vid varje upprepningsintervall, hämtar det an
 Begränsning förhindrar att bevakad mapp anropar nya jobb när tidigare jobb inte har slutförts. Bevakad mapp identifierar pågående jobb och bearbetar nya jobb baserat på batchstorleken minus pågående jobb. I det andra anropet anropas bara tre jobb till om antalet slutförda jobb är tre och ett jobb fortfarande pågår.
 
 * Bevakad mapp är beroende av antalet filer som finns i scenmappen för att ta reda på hur många jobb som pågår. Om filerna inte bearbetas i scenmappen kommer Bevakad mapp inte att anropa fler jobb. Om batchstorleken till exempel är fyra och tre jobb stoppas, kommer Bevakad mapp endast att anropa ett jobb i efterföljande anrop. Det finns flera scenarier som kan göra att filer förblir obearbetade i scenmappen. När jobben är klara kan administratören avsluta processen på administrationssidan för formulärarbetsflödet så att Bevakad mapp flyttar filerna från scenmappen.
-* Om formulärservern kraschar innan den bevakade mappen kan anropa jobben, kan administratören flytta filerna från scenmappen. Mer information finns i [Felpunkter och återställning](configuring-watched-folder-endpoints.md#failure-points-and-recovery).
-* Om formulärservern körs men den bevakade mappen inte körs när tjänsten Job Manager anropas tillbaka, vilket inträffar när tjänster inte startar i den ordnade sekvensen, kan administratören flytta filerna från scenmappen. Mer information finns i [Felpunkter och återställning](configuring-watched-folder-endpoints.md#failure-points-and-recovery).
+* Om Forms Server kraschar innan den bevakade mappen kan anropa jobben, kan administratören flytta filerna från scenmappen. Mer information finns i [Felpunkter och återställning](configuring-watched-folder-endpoints.md#failure-points-and-recovery).
+* Om Forms Server körs men Bevakade mappar inte körs när tjänsten Job Manager anropas tillbaka, vilket inträffar när tjänster inte startar i den ordnade sekvensen, kan administratören flytta filerna från scenmappen. Mer information finns i [Felpunkter och återställning](configuring-watched-folder-endpoints.md#failure-points-and-recovery).
 
 
 ## Prestanda och skalbarhet {#performance-and-scalability}
 
-Bevakad mapp kan hantera totalt 100 mappar på en enda nod. Hur speciell den bevakade mappen är beror på formulärserverns prestanda. För asynkrona anrop är prestanda mer beroende av systeminläsningen och jobben i jobbhanterarkön.
+Bevakad mapp kan hantera totalt 100 mappar på en enda nod. Hur övervakad mapp fungerar beror på Forms-serverns prestanda. För asynkrona anrop är prestanda mer beroende av systeminläsningen och jobben i jobbhanterarkön.
 
-Du kan förbättra prestanda för bevakade mappar genom att lägga till noder i klustret. Bevakade mappjobb distribueras mellan klusternoderna med hjälp av Quartz-schemaläggaren och, vid asynkrona begäranden, med tjänsten Job Manager. Alla jobb sparas i databasen.
+Du kan förbättra prestanda för bevakade mappar genom att lägga till noder i klustret. Bevakade mappjobb distribueras mellan klusternoderna med hjälp av Quartz-schemaläggaren och, om det finns asynkrona begäranden, med tjänsten Job Manager. Alla jobb sparas i databasen.
 
 Bevakad mapp är beroende av schemaläggningstjänsten för schemaläggning, avschemaläggning och omplanering av jobben. Andra tjänster, som händelsehanteringstjänsten, tjänsten User Manager och e-postprovidertjänsten, är tillgängliga som delar trådpoolen för tjänsten Scheduler. Detta kan påverka prestandan för bevakade mappar. Inställningen av trådpoolen för schemaläggningstjänsten behövs när alla tjänster börjar använda den.
 
@@ -408,7 +408,7 @@ Här följer några tips och råd när du konfigurerar slutpunkten för bevakad 
 
 ## Servicespecifika rekommendationer för bevakade mappar {#service-specific-recommendations-for-watched-folders}
 
-För alla tjänster bör du justera gruppstorleken och upprepningsintervallet för den bevakade mappen så att hastigheten med vilken bevakade mappar hämtar nya filer och mappar för bearbetning inte överstiger hastigheten för de jobb som kan bearbetas av AEM formulärserver. De faktiska parametrarna som ska användas kan variera beroende på hur många bevakade mappar som har konfigurerats, vilka tjänster som använder bevakade mappar och hur intensiva jobben är för processorn.
+För alla tjänster bör du justera gruppstorleken och upprepningsintervallet för den bevakade mappen så att hastigheten med vilken bevakade mappar hämtar nya filer och mappar för bearbetning inte överstiger hastigheten för de jobb som kan bearbetas av AEM Forms Server. De faktiska parametrarna som ska användas kan variera beroende på hur många bevakade mappar som har konfigurerats, vilka tjänster som använder bevakade mappar och hur intensiva jobben är för processorn.
 
 ### Generera servicerekommendationer för PDF {#generate-pdf-service-recommendations}
 

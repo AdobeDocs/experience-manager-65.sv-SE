@@ -1,18 +1,14 @@
 ---
 title: Skapa en interaktiv kommunikation
-seo-title: Create an Interactive Communication
 description: Skapa en interaktiv kommunikation med redigeraren för interaktiv kommunikation. Använd dra-och-släpp-funktionen för att bygga den interaktiva kommunikationen och förhandsgranska både utskrift och webb på olika enhetstyper.
-seo-description: Create an Interactive Communication using the Interactive Communication editor. Use drag-and-drop functionality to build the Interactive Communication, and preview both print and web outputs on different device types.
-uuid: d524a3de-00b4-444f-b3c7-be443fa24ec8
 topic-tags: interactive-communications
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: f4d98cb9-84d8-4735-91d2-b9ceec861e5e
 docset: aem65
 feature: Interactive Communication
 exl-id: 1f89c3bf-e67e-4d13-9285-3367be1ac8f8
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '5994'
+source-wordcount: '5989'
 ht-degree: 0%
 
 ---
@@ -141,7 +137,7 @@ Med hjälp av redigeringsgränssnittet kan du skilja mellan obundna och bundna f
 
 När du håller muspekaren över dessa element visas dessutom ett verktygstips med meddelandet Fält (obundet) eller Variabel (obundet).
 
-En obunden variabel som används i ett dokumentfragment kanske inte visas i redigeringsgränssnittet. Det kan inträffa på grund av en textbunden regel i ett dokumentfragment eller om ett villkorsfragment används. I sådana fall visas ett verktygstips, som är markerat med blått, som en del av dokumentfragmentet. Verktygstipset visar antalet obundna variabler som används i ett dokumentfragment.
+En obunden variabel som används i ett dokumentfragment kanske inte visas i redigeringsgränssnittet. Det kan inträffa på grund av en textbunden regel i ett dokumentfragment eller om det finns ett villkorsfragment. I sådana fall visas ett verktygstips, som är markerat med blått, som en del av dokumentfragmentet. Verktygstipset visar antalet obundna variabler som används i ett dokumentfragment.
 
 ![Obunden variabel](assets/df_unbound_variable_new.png)
 
@@ -562,7 +558,7 @@ Tryck på **[!UICONTROL Yes]**.
 
 ### Synkronisera {#synchronize-1}
 
-Om du använder Skriv ut som mallsida för webbkanal och gör ändringar i utskriftskanalen kan du synkronisera innehållet för att lägga till de nya ändringarna i webbkanalen.
+Om du använder Skriv ut som mallsida för webbkanal och ändrar utskriftskanalen, kan du synkronisera innehållet för att lägga till de nya ändringarna i webbkanalen.
 
 1. Om du vill synkronisera webbkanalen med skrivarkanalen växlar du till webbkanalen och trycker på ikonen Fler alternativ.
 

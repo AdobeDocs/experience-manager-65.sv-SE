@@ -7,9 +7,9 @@ content-type: reference
 topic-tags: site-features
 docset: aem65
 exl-id: 363b8fab-6ce7-4338-8478-3f25f2a1f117
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '4840'
+source-wordcount: '4834'
 ht-degree: 7%
 
 ---
@@ -53,7 +53,7 @@ Följande punkter är viktiga att tänka på innan du börjar:
 
 * Att skapa en mall kräver samarbete. Därför är [Roll](#roles) anges för varje uppgift.
 
-* Beroende på hur instansen är konfigurerad kan det vara bra att vara medveten om att AEM nu innehåller [två grundläggande typer av mallar](/help/sites-authoring/templates.md#editable-and-static-templates). Det här påverkar inte hur du faktiskt [använda en mall för att skapa en sida](#using-a-template-to-create-a-page), men det påverkar malltypen som du kan skapa och hur en sida relaterar till dess mall.
+* Beroende på hur din instans är konfigurerad, innehåller AEM nu [två grundläggande typer av mallar](/help/sites-authoring/templates.md#editable-and-static-templates). Det här påverkar inte hur du faktiskt [använda en mall för att skapa en sida](#using-a-template-to-create-a-page), men det påverkar malltypen som du kan skapa och hur en sida relaterar till dess mall.
 
 ### Roller {#roles}
 
@@ -97,7 +97,7 @@ AEM har nu två grundläggande typer av mallar:
 
    * Kan [skapad](#creatinganewtemplate) och [redigerad](#editingatemplate) efter mallskapare med **Mall** konsol och redigerare. The **Mall** konsolen är tillgänglig i **Allmänt** i **verktyg** konsol.
 
-   * När den nya sidan har skapats upprätthålls en dynamisk anslutning mellan sidan och mallen. Det innebär att ändringar i mallstrukturen och/eller det låsta innehållet återspeglas på alla sidor som skapas med mallen. Ändringar i det olåsta (dvs. initialt) innehållet kommer inte att återspeglas.
+   * När den nya sidan har skapats upprätthålls en dynamisk anslutning mellan sidan och mallen. Det innebär att ändringar i mallstrukturen och/eller det låsta innehållet återspeglas på alla sidor som skapas med mallen. Ändringar i det olåsta (dvs. det inledande) innehållet kommer inte att återspeglas.
    * Använd innehållsprofiler, som du kan definiera från mallredigeraren, för att behålla designegenskaperna. Designläget i sidredigeraren används inte längre för redigerbara mallar.
 
 * Statiska mallar
@@ -314,7 +314,7 @@ Följande aspekter av en mall kan redigeras:
 
   >[!NOTE]
   >
-  >I **Ursprungligt innehåll** och på de resulterande sidorna kan alla olåsta komponenter som har en tillgänglig överordnad (dvs. komponenter i en layoutbehållare) tas bort.
+  >I **Ursprungligt innehåll** och på de resulterande sidorna kan alla olåsta komponenter som har en tillgänglig överordnad (d.v.s. komponenter i en layoutbehållare) tas bort.
 
 * [Layout](#editingatemplatelayout)
 

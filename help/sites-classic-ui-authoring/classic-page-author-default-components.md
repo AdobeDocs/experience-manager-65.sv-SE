@@ -2,16 +2,14 @@
 title: Komponenter
 description: AEM innehåller en mängd färdiga komponenter som ger omfattande funktionalitet för webbplatsförfattare.
 page-status-flag: de-activated
-uuid: 02720edd-853c-4893-bf28-0e7b018029ea
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: page-authoring
 content-type: reference
-discoiquuid: 9ed820de-c108-416e-aaf7-b63a64ab4f80
 exl-id: 9e0a01da-7940-47aa-8604-788d74e5daa0
-source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '217'
+source-wordcount: '218'
 ht-degree: 0%
 
 ---
@@ -28,15 +26,15 @@ Adobe Experience Manager (AEM) innehåller en mängd färdiga komponenter som ge
 
 ## Komponenter - större områden {#components-major-areas}
 
-Följande sidor ger snabba länkar till några av de viktigaste områdena inom innehållshantering (länkar till fler områden finns på översiktssidan ovan):
+På följande sidor finns snabba länkar till några av de viktigaste områdena inom innehållshantering (länkar till fler områden finns på översiktssidan ovan):
 
 * [Komponenter för sidredigering](/help/sites-classic-ui-authoring/classic-page-author-edit-mode.md)
 
-   Komponenter som används för att skapa standardsidinnehåll finns i första hand i grupperna **Allmänt**, **Kolumner** och **Forms**.
+  Komponenter som används för att skapa standardsidinnehåll finns i första hand i grupperna **Allmänt**, **Kolumner** och **Forms**.
 
 * [eCommerce](/help/commerce/cif-classic/administering/ecommerce.md)
 
-   eCommerce-funktionaliteten i AEM innehåller också en rad komponenter som finns i **Handel** grupp. Faktisk användning kan bero på vilken e-handelsmotor som används.
+  eCommerce-funktionaliteten i AEM innehåller också en rad komponenter som finns i **Handel** grupp. Faktisk användning kan bero på vilken e-handelsmotor som används.
 
 ## Använda designläge för att konfigurera komponenter {#using-design-mode-to-configure-components}
 

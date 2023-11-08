@@ -11,9 +11,9 @@ discoiquuid: f79828d8-2230-4477-8ffa-eeb6a0413acd
 docset: aem65
 feature: Adaptive Forms, Acrobat Sign
 exl-id: a8decba9-229d-40a2-992a-3cc8ebefdd6d
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '3733'
+source-wordcount: '3734'
 ht-degree: 0%
 
 ---
@@ -201,7 +201,7 @@ Du kan bara ha en eller flera signerare för ett anpassat formulär. När du lä
 
    * **[!UICONTROL Is the signer and the person filling the form same?]:** Välj **Ja**, om formuläranvändaren och den första signeraren är samma person. Om alternativet är inställt på **Nej,** ska du inte använda signaturstegskomponenten i det adaptiva formuläret. Om formuläret innehåller en komponent för signatursteg ställs fältet automatiskt in på Ja.
 
-   * **[!UICONTROL Signer Email address]:** Ange signerarens e-postadress. Signeraren får signerade dokument/formulär på den angivna e-postadressen. Du kan välja att använda en e-postadress som finns i ett formulärfält, i AEM användarprofil för den inloggade användaren eller manuellt ange en e-postadress. Det är ett obligatoriskt steg. Kontrollera att e-postadressen för den första signeraren eller den enda signeraren (för en signerare) inte är identisk med [!DNL Adobe Sign] konto som används för att konfigurera AEM molntjänster.
+   * **[!UICONTROL Signer Email address]:** Ange signerarens e-postadress. Signeraren får signerade dokument/formulär på den angivna e-postadressen. Du kan välja att använda en e-postadress som finns i ett formulärfält, i AEM användarprofil för den inloggade användaren eller manuellt ange en e-postadress. Det är ett obligatoriskt steg. Kontrollera att e-postadressen för den första signeraren eller den enda signeraren (om det finns en signerare) inte är identisk med [!DNL Adobe Sign] konto som används för att konfigurera AEM molntjänster.
 
    * **[!UICONTROL Signer Authentication Method]:** Ange metoden för att autentisera en användare innan ett formulär öppnas för signering. Du kan välja mellan telefon, kunskapsbas och social ID-baserad autentisering. För Adobe Acrobat Sign Solutions for Government finns endast telefon- och kunskapsbaserad autentisering.
 
@@ -355,7 +355,7 @@ När [!DNL Adobe Sign] tjänsten är konfigurerad för ett adaptivt formulär. T
 * Kontrollera att API-programmet [!DNL Adobe Sign] server som används för att konfigurera [!DNL Adobe Sign] Molntjänsten har nödvändig behörighet.
 * Om du använder flera [!DNL Adobe Sign] Molntjänster, peka på **[!UICONTROL oAuth URL]** av alla tjänster till samma **[!UICONTROL Adobe Sign Shard]**.
 
-* Använd separata e-postadresser för att konfigurera [!DNL Adobe Sign] konto och för den första signeraren och en enda signerare. E-postadressen för den första signeraren eller den enda signeraren (för den enda signeraren) kan inte vara identisk med [!DNL Adobe Sign] konto som används för att konfigurera AEM molntjänster.
+* Använd separata e-postadresser för att konfigurera [!DNL Adobe Sign] konto och för den första signeraren och en enda signerare. E-postadressen till den första signeraren eller den enda signeraren (om det finns en signerare) kan inte vara identisk med [!DNL Adobe Sign] konto som används för att konfigurera AEM molntjänster.
 
 ### AEM [!DNL Forms] arbetsflöde konfigurerat för [!DNL Adobe Sign] aktiverat adaptivt formulär startar inte {#adobe-sign-aem-form-workflow-failures}
 

@@ -9,9 +9,9 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/working_with_pdf_generator
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 89f4d3cf-eb2e-4d55-8209-16ecbba03792
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: e2a3470784beb04c2179958ac6cb98861acfaa71
 workflow-type: tm+mt
-source-wordcount: '5876'
+source-wordcount: '5873'
 ht-degree: 0%
 
 ---
@@ -218,7 +218,7 @@ Aktivera dessa alternativ för att ange fönstrets utseende:
 
 ## Flash videoklipp till PDF {#flash-videos-to-pdf-settings}
 
-PDF Generator stöder möjligheten att skicka en video för Adobe Flash (SWF eller FLV) och skapa en PDF-fil med en inbäddad videofilm för Adobe Flash. Den här konverteringen kräver inte att Adobe Flash Player är installerad på formulärservern. Instruktioner om hur du använder det här alternativet finns i [Skapa eller redigera filtypsinställningar](configuring-file-type-settings.md#create-or-edit-file-type-settings).
+PDF Generator stöder möjligheten att skicka en video för Adobe Flash (SWF eller FLV) och skapa en PDF-fil med en inbäddad videofilm för Adobe Flash. Den här konverteringen kräver inte att Adobe Flash Player är installerad på Forms Server. Instruktioner om hur du använder det här alternativet finns i [Skapa eller redigera filtypsinställningar](configuring-file-type-settings.md#create-or-edit-file-type-settings).
 
 **Filnamnstillägg:** Kommaavgränsad lista med filnamnstillägg som kan konverteras.
 
@@ -253,7 +253,7 @@ Instruktioner om hur du använder den här inställningen finns i [Skapa eller r
 
    * Om det behövs väljer du en annan teckensnittskatalog i **Teckensnittskälla** listruta. I den här listrutan visas teckensnittskataloger som anges i **Hem > Inställningar > Core System > Core Configurations**.
    * Markera ett eller flera teckensnitt i dialogrutan **Tillgängliga teckensnitt** lista och klicka på **Lägg till**. De här teckensnitten läggs till i **Teckensnitt att ångra inbäddning** lista.
-   * Om du vill ta bort inbäddningen för vissa teckensnitt som inte finns på formulärservern anger du namnen på teckensnitten i **Lägg till teckensnitt för att frigöra inbäddning** box. Klicka **Lägg till**.
+   * Om du vill ta bort inbäddningen för vissa teckensnitt som inte finns på Forms Server anger du namnen på teckensnitten i **Lägg till teckensnitt för att frigöra inbäddning** box. Klicka **Lägg till**.
 
    >[!NOTE]
    >
@@ -315,7 +315,7 @@ Bevara övertryck: Blandar färgen i den genomskinliga teckningen med bakgrundsf
 
 I följande tabell visas vanliga typer av skrivare och deras upplösning mätt i dpi, deras standardrastertäthet mätt i linjer per tum (lpi) och en omsamplingsupplösning för bilder mätt i pixlar per tum (ppi). Om du till exempel skriver ut på en laserskrivare med 600 dpi anger du 170 som upplösning för omsampling av bilder.
 
-**Bilder** Välj Bilder om du vill ange komprimerings- och omsamplingsalternativ för färgbilder, gråskalebilder och monokroma bilder. Du kan experimentera med dessa alternativ för att hitta en lämplig balans mellan filstorlek och bildkvalitet. Upplösningen för färg- och gråskalebilder bör vara 1,5 till 2 gånger rastertätheten som filen skrivs ut med. Upplösningen för monokroma bilder bör vara densamma som för utdataenheten, men tänk på att om du sparar en monokrom bild med en upplösning på över 1 500 dpi ökar filstorleken utan att bildkvaliteten förbättras märkbart. Bilder som ska förstoras, t.ex. kartor, kan kräva högre upplösningar.
+**Bilder** Välj Bilder om du vill ange komprimerings- och omsamplingsalternativ för färgbilder, gråskalebilder och monokroma bilder. Du kan experimentera med dessa alternativ för att hitta en lämplig balans mellan filstorlek och bildkvalitet. Upplösningen för färg- och gråskalebilder bör vara 1,5 till 2 gånger rastertätheten som filen skrivs ut med. Upplösningen för monokroma bilder bör vara densamma som för utdataenheten, men om du sparar en monokrom bild med en upplösning på över 1 500 dpi ökar filstorleken utan att bildkvaliteten förbättras nämnvärt. Bilder som ska förstoras, t.ex. kartor, kan kräva högre upplösningar.
 
 >[!NOTE]
 >

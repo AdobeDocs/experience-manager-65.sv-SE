@@ -8,9 +8,9 @@ topic-tags: page-authoring
 content-type: reference
 discoiquuid: 668d1a8a-c757-4c9f-833f-e5dada4d0384
 exl-id: 760b8419-5cf8-49c5-8d4f-6691f5256c53
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '1795'
+source-wordcount: '1797'
 ht-degree: 6%
 
 ---
@@ -87,7 +87,7 @@ Enheten **Skrivbord**, som inte har någon specifik bredd, relaterar till standa
 >
 >Det skulle vara möjligt att definiera brytpunkter för varje enskild enhet, men detta skulle drastiskt öka den insats som krävs för att definiera och underhålla layout.
 
-När du använder emulatorn väljer du en specifik enhet för emulerings- och layoutdefinition och den relaterade brytpunkten markeras också. Alla layoutändringar du gör gäller för andra enheter som brytpunkten gäller för, dvs. enheter som är placerade till vänster om den aktiva brytpunktsmarkören, men före nästa brytpunktsmarkör.
+När du använder emulatorn väljer du en specifik enhet för emulerings- och layoutdefinition och den relaterade brytpunkten markeras också. Alla layoutändringar du gör gäller för andra enheter som brytpunkten gäller för, det vill säga alla enheter som är placerade till vänster om den aktiva brytpunktsmarkören, men före nästa brytpunktsmarkör.
 
 När du t.ex. väljer enheten **iPhone 6 Plus** (definierat med en bredd på 540 pixlar) för emulering och layout, brytpunkten **Telefon** (definierat som 768 pixlar) aktiveras också. Alla layoutändringar du gör för **IPHONE 6** kommer att gälla för andra enheter enligt **Telefoner** brytpunkt, som **IPHONE 5** (definierat som 320 pixlar).
 

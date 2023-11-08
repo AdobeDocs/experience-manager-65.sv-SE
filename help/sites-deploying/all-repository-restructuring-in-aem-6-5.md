@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: repo_restructuring
 exl-id: 2d852d9d-9be3-487a-966a-4902bd7df7f9
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '2689'
+source-wordcount: '2688'
 ht-degree: 0%
 
 ---
@@ -134,7 +134,7 @@ I.e. the `sling:resourceType` för ContextHub-konfigurationen måste vara relati
    <td>Alla explicita sökvägsreferenser i
     <code>
      custom
-    </code> koden till den föregående platsen bör även ta hänsyn till den nya platsen. Vi rekommenderar att koden ändras så att den använder API:erna för AEM arbetsflöde.</td>
+    </code> koden till Föregående plats ska också ta hänsyn till Ny plats. Vi rekommenderar att koden ändras så att den använder API:erna för AEM arbetsflöde.</td>
   </tr>
  </tbody>
 </table>

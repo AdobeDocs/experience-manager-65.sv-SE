@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: spa
 content-type: reference
 exl-id: 5b2ccac0-bf1d-4f06-8743-7fce6fb68378
-source-git-commit: 260f71acd330167572d817fdf145a018b09cbc65
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '345'
+source-wordcount: '344'
 ht-degree: 0%
 
 ---
@@ -25,9 +25,9 @@ I det här dokumentet beskrivs hur den dynamiska mappningen av modell till kompo
 
 The `ComponentMapping` -modulen tillhandahålls som ett NPM-paket till frontendprojektet. Det lagrar komponenter för användargränssnitt och tillhandahåller ett sätt för Single Page Application att mappa komponenter för användargränssnitt till AEM resurstyper. Detta aktiverar en dynamisk upplösning för komponenter när JSON-modellen för programmet analyseras.
 
-Varje objekt i modellen innehåller en `:type` fält som visar en AEM resurstyp. När den är monterad kan den främre komponenten återge sig själv med det fragment av modellen som den har fått från de underliggande biblioteken.
+Varje objekt i modellen innehåller en `:type` fält som visar en AEM. När den är monterad kan den främre komponenten återge sig själv med det fragment av modellen som den har fått från de underliggande biblioteken.
 
-Se [SPA Blueprint](/help/sites-developing/spa-blueprint.md) om du vill ha mer information om modellparsning och åtkomst till modellen för komponenter i gränssnittet.
+Se [SPA](/help/sites-developing/spa-blueprint.md) om du vill ha mer information om modellparsning och åtkomst till modellen för komponenter i gränssnittet.
 
 Se även npm-paketet: [https://www.npmjs.com/package/@adobe/aem-spa-component-mapping](https://www.npmjs.com/package/@adobe/aem-spa-component-mapping)
 
@@ -38,7 +38,7 @@ Single Page-program som använder JavaScript SPA SDK för AEM är modelldrivna:
 1. Front-end-komponenter registrerar sig för [Komponentmappningsarkiv](/help/sites-developing/spa-dynamic-model-to-component-mapping.md#componentmapping-module).
 1. Sedan [Behållare](/help/sites-developing/spa-blueprint.md#container), efter att ha fått en modell av [Modellprovider](/help/sites-developing/spa-blueprint.md#the-model-provider), itererar över sitt modellinnehåll ( `:items`).
 
-1. För en sida, dess underordnade sidor ( `:children`) hämta först en komponentklass från [Komponentmappning](/help/sites-developing/spa-blueprint.md#componentmapping) och sedan instansiera den.
+1. Om det finns en sida, dess underordnade sidor ( `:children`) hämta först en komponentklass från [Komponentmappning](/help/sites-developing/spa-blueprint.md#componentmapping) och sedan instansiera den.
 
 ## Programinitiering {#app-initialization}
 

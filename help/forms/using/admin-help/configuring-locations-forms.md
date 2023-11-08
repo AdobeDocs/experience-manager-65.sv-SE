@@ -8,9 +8,9 @@ geptopics: SG_AEMFORMS/categories/configuring_forms
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 3d2b7cfb-228c-4cc2-8fcd-d500f0010010
 exl-id: 0d9eb7fe-28a6-444e-957d-023687158c61
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: e2a3470784beb04c2179958ac6cb98861acfaa71
 workflow-type: tm+mt
-source-wordcount: '825'
+source-wordcount: '822'
 ht-degree: 0%
 
 ---
@@ -82,11 +82,11 @@ Standardvärdet är en tom sträng.
 **Standardplats:** Det här är standardvalet. När det här alternativet är markerat skapas cachen på en plats som är beroende av den programserver som du använder:
 
 * **JBoss:** [JBoss Home]\server\[installationstyp]\svcdata\FormServer\Cache
-* **WebLogic:** [WebLogic - startsida]\user_projects\domains\[aem-forms Domain Name]\adobe\[forms server name]\FormServer\Cache
+* **WebLogic:** [WebLogic - startsida]\user_projects\domains\[aem-forms Domain Name]\adobe\[Forms Server name]\FormServer\Cache
 * **WebSphere:** [IBM Home]\WebSphere\AppServer\installedApps\adobe\server1\FormServer\Cache
 
 **Tillfällig katalog för LC:** Cachen skapas i en underkatalog till den AEM formulärkatalogen temporp, som anges i administrationskonsolen under Inställningar > Systeminställningar > Konfigurationer > Plats för tillfällig katalog. Underkatalogen heter adobeform_[servernamn].
 
 >[!NOTE]
 >
->Om du använder ett tillfälligt rensningsverktyg bör du tänka på att även om du tar bort de här katalogerna inte påverkar funktionaliteten så kan det påverka prestanda avsevärt under en kort tid tills det nya cacheminnet skapas. För att undvika det här problemet ska du inte ta bort de här katalogerna samtidigt som du rensar den tillfälliga katalogen för AEM formulär.
+>Om du använder ett tillfälligt rensningsverktyg och tar bort de här katalogerna påverkar inte funktionen avsevärt prestanda under en kort tid tills det nya cacheminnet skapas. För att undvika det här problemet ska du inte ta bort de här katalogerna samtidigt som du rensar den tillfälliga katalogen för AEM formulär.

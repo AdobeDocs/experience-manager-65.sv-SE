@@ -3,9 +3,9 @@ title: Bästa praxis för översättning
 description: Här hittar du de bästa arbetssätten som skapats av Adobe tekniker och konsultteam så att du kan komma igång med översättningsprojekt.
 feature: Language Copy
 exl-id: 01a81c4b-cb30-4f7e-b281-7194ebb5fc70
-source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
+source-git-commit: e2a3470784beb04c2179958ac6cb98861acfaa71
 workflow-type: tm+mt
-source-wordcount: '837'
+source-wordcount: '836'
 ht-degree: 0%
 
 ---

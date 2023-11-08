@@ -10,9 +10,9 @@ topic-tags: platform
 content-type: reference
 discoiquuid: ec712ba0-0fd6-4bb8-93d6-07d09127df58
 exl-id: 1eed754e-9a7d-4b65-a929-757fc962614d
-source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '1252'
+source-wordcount: '1255'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ Med Sling Resource Merger får du tillgång till och kan sammanfoga resurser. De
 
 Med Sling Resource Merger sammanfogas överläggnings-/åsidosättningsresurserna och/eller egenskaperna med de ursprungliga resurserna/egenskaperna:
 
-* Innehållet i den anpassade definitionen har en högre prioritet än det ursprungliga (dvs. det *övertäckningar* eller *åsidosättningar* den).
+* Innehållet i den anpassade definitionen har en högre prioritet än det ursprungliga (det vill säga det *övertäckningar* eller *åsidosättningar* den).
 
 * Vid behov [egenskaper](#properties) som definieras i anpassningen anger du hur innehåll som sammanfogas från originalet ska användas.
 

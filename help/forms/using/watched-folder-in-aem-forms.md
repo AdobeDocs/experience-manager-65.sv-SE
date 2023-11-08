@@ -6,7 +6,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: publish
 docset: aem65
 exl-id: fbf5c7c3-cb01-4fda-8e5d-11d56792d4bf
-source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
 source-wordcount: '7144'
 ht-degree: 0%
@@ -159,7 +159,7 @@ Mer information om filmönster finns i [Om filmönster](../../forms/using/watche
 * **throttleOn (Boolean)**: När det här alternativet är markerat begränsas antalet övervakade mappjobb som AEM Forms bearbetar vid en given tidpunkt. Det maximala antalet jobb bestäms av värdet för Batchstorlek. Standardvärdet är true. (Se [Om begränsning](../../forms/using/watched-folder-in-aem-forms.md#p-about-throttling-p).)
 
 * **overwriteDuplicateFilename (Boolean)**: När värdet är True skrivs filerna i resultatmappen och i den bevarade mappen över. Om värdet är Falskt används filer och mappar med ett numeriskt indexsuffix för namnet. Standardvärdet är Falskt.
-* **preserveOnFailure (Boolean)**: Bevara indatafiler om det inte går att utföra åtgärden på en tjänst. Standardvärdet är true.
+* **preserveOnFailure (Boolean)**: Bevara indatafiler om det inte går att köra åtgärden på en tjänst. Standardvärdet är true.
 * **inputFilePattern (String)**: Anger mönstret för indatafilerna för en bevakad mapp. Skapar en tillåtelselista av filerna.
 * **asynch (Boolean)**: Identifierar anropstypen som asynkron eller synkron. Standardvärdet är true (asynkront). Filbearbetningen är en resurskrävande uppgift. Behåll värdet för asynch-flaggan till true för att förhindra att huvudtråden i sökningsjobbet kvävs. I en klustermiljö är det viktigt att flaggan är true för att det ska gå att använda belastningsutjämning för de filer som bearbetas på de tillgängliga servrarna. Om flaggan är false försöker sökningsjobbet att utföra bearbetning för varje fil/mapp på den översta nivån sekventiellt i sin egen tråd. Ange inte flaggan till false utan en specifik orsak, till exempel arbetsflödesbaserad bearbetning i en enskild serverkonfiguration.
 

@@ -6,9 +6,9 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-on-demand-services-app
 exl-id: 397def36-45b2-47a7-b103-99ca22b6dae1
-source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
+source-git-commit: e2a3470784beb04c2179958ac6cb98861acfaa71
 workflow-type: tm+mt
-source-wordcount: '2663'
+source-wordcount: '2658'
 ht-degree: 0%
 
 ---
@@ -75,7 +75,7 @@ I publiceringsläge (t.ex. när appen exporteras med Innehållssynkronisering) b
 
 Det finns bara en HTML-sida i en SPA (en sida som innehåller `<html>` element). Den här sidan kallas för&quot;layoutmall&quot;. I Angularnas terminologi är det &quot;...en mall som är gemensam för alla vyer i programmet&quot;. Se den här sidan som den översta appsidan. Appsidan på den översta nivån är `cq:Page` noden i programmet som är närmast roten (och inte är en omdirigering).
 
-Eftersom den faktiska URI:n för din app inte ändras i publiceringsläget måste referenser till externa resurser från den här sidan använda relativa sökvägar. Därför finns det en särskild bildkomponent som tar hänsyn till den här sidan på den översta nivån när bilder återges för export.
+Eftersom den faktiska URI:n för din app inte ändras i publiceringsläget måste referenser till externa resurser från den här sidan använda relativa sökvägar. Därför finns det en särskild bildkomponent som tar hänsyn till den översta sidan när bilder återges för export.
 
 Som SPA genererar den här layoutmallsidan helt enkelt ett div-element med ett ng-view-direktiv.
 
@@ -128,7 +128,7 @@ Om det behövs kan du åsidosätta det här skriptet för att hantera mer komple
 
 ### angular-app-controllers.js.jsp {#angular-app-controllers-js-jsp}
 
-I Angular sammanfogar styrenheter variabler i \$omfånget och visar dem för vyn. Skriptet angular-app-controllers.js.jsp följer det mönster som illustreras av angular-app-module.js.jsp på så sätt att det itererar genom varje underordnad sida (inklusive sig själv) och skapar det kontrollenhetsfragment som varje sida definierar (via controller.js.jsp). Modulen som definieras anropas `cqAppControllers` och måste listas som ett beroende för den översta programmodulen så att sidstyrenheterna blir tillgängliga.
+I Angular sammanfogar styrenheter variabler i \$omfånget och visar dem för vyn. Skriptet angular-app-controllers.js.jsp följer det mönster som illustreras av angular-app-module.js.jsp på så sätt att det itererar genom varje underordnad sida (inklusive sig själv) och skapar det kontrollenhetsfragment som varje sida definierar (via controller.js.jsp). Modulen som definieras anropas `cqAppControllers` och måste listas som ett beroende av den översta programmodulen så att sidstyrenheterna blir tillgängliga.
 
 ### controller.js.jsp {#controller-js-jsp}
 
@@ -191,7 +191,7 @@ Observera GUID &#39;24BA22ED-7D06-4330-B7EB-F6FC73251CA3&#39; i sökvägen.
 
 Som PhoneGap-utvecklare finns det innehåll du är intresserad av under www-katalogen. Använd relativa sökvägar för att komma åt appresurserna.
 
-För att lösa in problemet använder PhoneGap-programmet appmönstret för en sida (SPA) så att bas-URI:n (exklusive hash) aldrig ändras. Därför refererar alla resurser, mallar och skript som du refererar till **måste vara relativ till den översta sidan.** Sidan på den översta nivån initierar Angularnas routning och styrenheter med hjälp av `*<name>*.angular-app-module.js` och `*<name>*.angular-app-controllers.js`. Den här sidan ska vara den närmaste sidan till databasens rot som *inte *utökar en sling:redirect.
+För att lösa in problemet använder PhoneGap-programmet appmönstret för en sida (SPA) så att bas-URI:n (exklusive hash) aldrig ändras. Därför refererar alla resurser, mallar och skript som du refererar till **måste vara relativ till den översta sidan.** Den översta sidan initierar Angularnas routning och styrenheter med hjälp av `*<name>*.angular-app-module.js` och `*<name>*.angular-app-controllers.js`. Den här sidan ska vara den närmaste sidan till databasens rot som *inte *utökar en sling:redirect.
 
 Det finns flera hjälpmetoder för att hantera relativa sökvägar:
 

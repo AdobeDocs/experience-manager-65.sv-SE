@@ -7,9 +7,9 @@ topic-tags: configuring
 content-type: reference
 feature: Configuring
 exl-id: 6d03cb1d-500e-4a23-80e5-347a43dff30e
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '744'
+source-wordcount: '745'
 ht-degree: 0%
 
 ---
@@ -69,9 +69,9 @@ Du kan också välja anpassade körningslägen vid varje start.
 
 ## Använda exempelinnehåll och nosamplingsinnehåll {#using-samplecontent-and-nosamplecontent}
 
-Med dessa lägen kan du styra användningen av exempelinnehåll. Exempelinnehållet definieras innan snabbstarten byggs och kan innehålla paket, konfigurationer osv.:
+Med dessa lägen kan du styra användningen av exempelinnehåll. Exempelinnehållet definieras innan snabbstarten byggs och kan innehålla paket, konfigurationer och så vidare:
 
-* The `samplecontent` det här innehållet installeras i körningsläget (standardläget).
+* The `samplecontent` i körningsläge installeras det här innehållet (standardläget).
 
 * The `nosamplecontent` exempelinnehållet installeras inte i det här läget.
 

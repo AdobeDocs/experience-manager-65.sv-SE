@@ -10,7 +10,7 @@ discoiquuid: 1a32eb24-db3b-4fad-b1c7-6326b5af4e5e
 docset: aem65
 feature: Adaptive Forms
 exl-id: 2f276e9d-b3c1-48f7-a94a-bdf7eb15a031
-source-git-commit: d8e34f6ece9e3be4c4c5372f3046bc937538536e
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
 source-wordcount: '2115'
 ht-degree: 0%
@@ -44,10 +44,10 @@ Du kan skapa ett anpassat formulärfragment från grunden eller spara en panel i
    >
    >Se till att du anger ett unikt namn för fragmentet. Om det redan finns ett annat fragment med samma namn går det inte att skapa fragmentet.
 
-1. Klicka för att öppna **fliken Formulärmodell** och **välj någon av följande modeller för fragmentet i listrutan Välj från** :
+1. Klicka för att öppna **fliken Form Model** och välj en av följande modeller för fragmentet i **listrutan Select From** :
 
-   * **Ingen**: Anger att fragmentet ska skapas från grunden utan att någon formulärmodell används.
-   * **Formulärmall**: Anger att fragmentet ska skapas med hjälp av en XDP-mall som överförts till AEM Forms. Välj lämplig XDP-mall som formulärmodell för fragmentet.
+   * **Ingen**: Anger att fragmentet ska skapas från grunden utan att använda någon formulärmodell.
+   * **Formulärmall**: Anger att fragmentet ska skapas med en XDP-mall som överförts till AEM Forms. Välj lämplig XDP-mall som formulärmodell för fragmentet.
 
    ![Skapa ett anpassat formulär med formulärmallen som modell](assets/form-template-model.png)
 
@@ -67,7 +67,7 @@ Du kan skapa ett anpassat formulärfragment från grunden eller spara en panel i
 
 1. Klicka **Skapa** och sedan klicka **Öppna** om du vill öppna fragmentet, med en standardmall, i redigeringsläge.
 
-I redigeringsläge kan du dra och släppa valfri adaptiv formulärkomponent från AEM sidospark till fragmentet. Information om adaptiva formulärkomponenter finns i [Introduktion till redigering av adaptiva formulär](../../forms/using/introduction-forms-authoring.md).
+I redigeringsläge kan du dra och släppa alla adaptiva formulärkomponenter från AEM till fragmentet. Mer information om adaptiva formulärkomponenter finns i [Introduktion till utveckling av adaptiva formulär](../../forms/using/introduction-forms-authoring.md).
 
 Om du dessutom har valt ett XML-schema eller en XDP-formulärmall som formulärmodell för fragmentet visas en ny flik som visar formulärmodellhierarkin i innehållssökaren. Du kan dra och släppa formulärmodellelement till fragmentet. De tillagda elementen för formulärmodell konverteras till formulärkomponenter samtidigt som de ursprungliga egenskaperna från den associerade XDP- eller XSD-filen behålls.
 
@@ -95,7 +95,7 @@ Om du dessutom har valt ett XML-schema eller en XDP-formulärmall som formulärm
 
    * **Målsökväg**: Databassökväg där fragmentet ska sparas. Om du inte anger någon sökväg skapas en nod med samma namn som fragmentet bredvid noden som innehåller det adaptiva formuläret. Fragmentet sparas i den här noden.
 
-   * **Formulärmodell**: Beroende på formulärmodellen för det adaptiva formuläret visas **XML-schema****, formulärmall** eller **Ingen i** det här fältet. Det är ett fält som inte kan redigeras.
+   * **Formulärmodell**: Beroende på formulärmodellen för det adaptiva formuläret visas XML-schemat **,** formulärmallen **** eller **Ingen**. Det är ett icke-redigerbart fält.
 
    * **Fragmentmodellrot**: Visas endast i XSD-baserade adaptiva formulär. Den anger fragmentmodellens rot. Du kan **/** eller den komplexa XSD-typen i listrutan. Observera att du bara kan återanvända fragmentet i ett annat adaptivt formulär om du väljer den komplexa typen som fragmentmodellrot.
 Om du väljer **/** som fragmentmodellroten är hela XSD-trädet från roten synligt på fliken för adaptiv formulärdatamodell. För en fragmentmodellrot av en komplex typ visas bara de underordnade för den valda komplexa typen på fliken för adaptiv formulärdatamodell.
@@ -136,13 +136,13 @@ De anpassade formulärfragmenten som du skapar visas på fliken Adaptiva formul�
 1. Öppna det adaptiva formuläret, i redigeringsläge, där du vill infoga ett adaptivt formulärfragment.
 1. Klicka **Resurser** ![assets-browser](assets/assets-browser.png) i sidlisten. Välj **Adaptiva formulärfragment** i listrutan.
 
-   Du kan också välja att visa alla adaptiva formulärfragment eller filter baserat på deras formulärmodell – formulärmall, XML-schema eller Grundläggande.
+   Du kan också välja att visa alla adaptiva formulärfragment eller filter baserat på deras formulärmodell - Formulärmall, XML-schema eller Grundläggande.
 
-1. Dra och släpp ett adaptivt formulärfragment till det adaptiva formuläret.
+1. Dra och släpp ett adaptivt formulärfragment i det adaptiva formuläret.
 
    >[!NOTE]
    >
-   >Det adaptiva formulärfragmentet är inte aktiverat för redigering inifrån det adaptiva formuläret. Dessutom kan du inte använda ett XSD-baserat fragment i ett JSON-baserat adaptivt formulär och på motsatt sätt.
+   >Det adaptiva formulärfragmentet är inte aktiverat för redigering inifrån det adaptiva formuläret. Dessutom kan du inte använda ett XSD-baserat fragment i ett JSON-baserat adaptivt formulär och tvärtom.
 
 Det adaptiva formulärfragmentet infogas som referens i det adaptiva formuläret och synkroniseras med det fristående adaptiva formulärfragmentet. Det innebär att när du uppdaterar det adaptiva formulärfragmentet återspeglas ändringarna i alla adaptiva formulär där fragmentet används.
 
@@ -166,7 +166,7 @@ Du kan ersätta eller ändra ett adaptivt formulärfragment med ett annat fragme
 
 ## Automatisk mappning av fragment för databindning {#auto-mapping-of-fragments-for-data-binding}
 
-När du skapar ett adaptivt formulärfragment med hjälp av en XFA-formulärmall eller XSD-komplex typ och drar och släpper fragmentet till ett adaptivt formulär, ersätts XFA-avsnittet eller XSD-komplextypen automatiskt av motsvarande adaptiva formulärfragment vars fragmentmodellrot mappas till XFA-fragmentet eller XSD-komplextypen.
+När du skapar ett adaptivt formulärfragment med hjälp av en XFA-formulärmall eller komplex XSD-typ och drar och släpper fragmentet till ett adaptivt formulär, ersätts XFA-fragmentet eller den komplexa XSD-typen automatiskt med motsvarande adaptiva formulärfragment vars fragmentmodellrot mappas till XFA-fragmentet eller XSD-komplextypen.
 
 Du kan ändra fragmentresursen och dess bindningar i dialogrutan Redigera komponent.
 
@@ -176,7 +176,7 @@ Du kan ändra fragmentresursen och dess bindningar i dialogrutan Redigera kompon
 
 ## Hantera fragment {#manage-fragments}
 
-Du kan utföra flera åtgärder på adaptiva formulärfragment med AEM Forms-användargränssnittet.
+Du kan utföra flera åtgärder på adaptiva formulärfragment med AEM Forms-gränssnittet.
 
 1. Gå till `https://[hostname]:'port'/aem/forms.html`.
 
@@ -246,9 +246,9 @@ Om du vill lokalisera ett adaptivt formulär som innehåller adaptiva formulärf
 * Du kan inte redigera ett adaptivt formulärfragment, som infogas med referens, inifrån ett adaptivt formulär. Om du vill redigera kan du antingen redigera det fristående adaptiva formulärfragmentet eller bädda in fragmentet i det adaptiva formuläret.
 * När du publicerar ett adaptivt formulär måste du publicera de fristående adaptiva formulärfragmenten som infogats som referens i det adaptiva formuläret.
 * När du publicerar om ett uppdaterat adaptivt formulärfragment återspeglas ändringarna i de publicerade instanserna av det adaptiva formulär som fragmentet används i.
-* Adaptivt formulär som innehåller komponenten Verify stöder inte anonyma användare. Det rekommenderas inte heller att använda komponenten Verify i ett adaptivt formulärfragment.
-* (**Endast** Mac) För att säkerställa att formulärfragmentfunktionen fungerar perfekt i alla scenarier lägger du till följande post i filen /private/etc/hosts:
-  `127.0.0.1 <Host machine>`**Värddator**: Apple Mac-datorn där AEM Forms distribueras.
+* Adaptivt formulär som innehåller komponenten Verify har inte stöd för anonyma användare. Det rekommenderas inte heller att använda komponenten Verify i ett adaptivt formulärfragment.
+* (**Endast** Mac) Om du vill vara säker på att funktionen för formulärfragment fungerar perfekt i alla scenarier lägger du till följande post i filen /private/etc/hosts:
+  `127.0.0.1 <Host machine>`**Värddator**: Den Apple Mac-dator som AEM Forms distribueras på.
 
 ## Referensfragment {#reference-fragments}
 

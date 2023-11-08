@@ -7,9 +7,9 @@ topic-tags: integration
 content-type: reference
 docset: aem65
 exl-id: b5f3d3a6-39c0-4aa5-8562-3cc6fa2b9e46
-source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '6092'
+source-wordcount: '6087'
 ht-degree: 0%
 
 ---
@@ -737,7 +737,7 @@ Portleten ansluter som standard till publiceringsinstansen vid localhost:4503 oc
 
 >[!NOTE]
 >
->Dessa procedurer använder webbsfär-portalen som exempel, även om de är så allmänna som möjligt. Tänk på att procedurer varierar för andra webbportaler. Stegen är i stort sett identiska för alla webbportaler, men du måste återanvända stegen för din webbportal.
+>Dessa procedurer använder webbsfär-portalen som exempel, även om de är så allmänna som möjligt. Processerna varierar för andra webbportaler. Stegen är i stort sett identiska för alla webbportaler, men du måste återanvända stegen för din webbportal.
 
 #### Installera portleten {#installing-the-portlet}
 

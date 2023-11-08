@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/connecting_to_a_content_management_system
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: be4994de-12f8-436e-926a-49a6783b006e
 exl-id: f4045df5-a35b-41d7-910e-971017148597
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: c4cd9a61a226ace2a72d60b5b7b7432de12cb873
 workflow-type: tm+mt
 source-wordcount: '735'
 ht-degree: 0%
@@ -48,7 +48,7 @@ IBM FileNet P8 Content Engine tillhandahåller programvarutjänster för hanteri
 1. Ange sökvägen till krypteringsfilen i rutan Plats för krypteringsfil:
 
    * Om du valde Rensa som autentiseringsskyddsschema ignoreras det här nyckelordet och dess värde.
-   * Om du valde Symmetric som autentiseringsskyddsschema pekar den sökväg du anger på platsen för en krypteringsfil på formulärservern som innehåller de kryptografiska nycklar som ska användas.
+   * Om du valde Symmetric som autentiseringsskyddsschema pekar den sökväg du anger på platsen för en krypteringsfil på Forms Server som innehåller de kryptografiska nycklar som ska användas.
 
 1. I rutan Standardobjektarkiv anger du den objektarkivkoppling som AEM formulär ansluter till som standard.
 1. I rutan Användarnamn anger du användarnamnet för en användare som har behörighet till standardobjektarkivet som du angav i föregående steg.
@@ -71,7 +71,7 @@ Koppling för IBM FileNet innehåller Process Engine Connector för tjänsten IB
 
 Om du anger ett felaktigt användarnamn eller lösenord när du konfigurerar anslutningen till innehållsmotorn eller processmotorinställningarna får du följande resultat, beroende på om tjänsterna körs för närvarande:
 
-* Om både databasprovidertjänsten för IBM FileNet och Content Repository Connector för IBM FileNet-tjänsten stoppas visas inget fel när du sparar tjänstens konfigurationsinformation. Nästa gång du startar tjänsten inträffar dock ett undantag och tjänsten kommer inte att starta.
+* Om både databasprovidertjänsten för IBM FileNet och Content Repository Connector för IBM FileNet-tjänsten stoppas visas inget fel när du sparar tjänstens konfigurationsinformation. Nästa gång du startar tjänsten genereras dock ett undantag och tjänsten kommer inte att starta.
 * Om antingen databasprovidertjänsten för IBM FileNet eller Content Repository Connector för IBM FileNet-tjänsten startas försöker tjänsten att omedelbart validera inloggningsinformationen när du sparar tjänstens konfigurationsinformation. I det här fallet inträffar ett fel och konfigurationsinformationen sparas inte.
 
 ## Ändra databasens tjänstleverantör {#change-the-repository-service-provider}

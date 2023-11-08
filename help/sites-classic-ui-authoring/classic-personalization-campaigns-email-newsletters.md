@@ -10,9 +10,9 @@ topic-tags: personalization
 content-type: reference
 discoiquuid: b9618913-5433-4baf-9ff6-490a26860505
 exl-id: c07692f7-3618-4e8c-96d7-4db09f2d9896
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '1106'
+source-wordcount: '1105'
 ht-degree: 0%
 
 ---
@@ -152,7 +152,7 @@ E-post/nyhetsbrev kan publiceras till din e-posttjänst genom att följa dessa s
 
    Om det lyckas bekräftar AEM att du kan visa e-postmeddelandet i ExactTarget eller Silverpop Engage.
 
-   När det gäller ExactTarget kan det publicerade e-postmeddelandet visas genom att klicka på **Visa publicerad e-post**. Detta tar dig direkt till det publicerade nyhetsbrevet i ExactTarget ([https://members.exacttarget.com/](https://members.exacttarget.com/).).
+   Om det finns ExactTarget kan det publicerade e-postmeddelandet visas genom att klicka på **Visa publicerad e-post**. Detta tar dig direkt till det publicerade nyhetsbrevet i ExactTarget ([https://members.exacttarget.com/](https://members.exacttarget.com/).).
 
 >[!NOTE]
 >

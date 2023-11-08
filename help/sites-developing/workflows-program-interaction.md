@@ -10,7 +10,7 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: cb621332-a149-4f8d-9425-fd815b033c38
 exl-id: 2b396850-e9fb-46d9-9daa-ebd410a9e1a5
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
 source-wordcount: '2008'
 ht-degree: 0%
@@ -359,7 +359,7 @@ Följande metoder för HTTP-begäran gäller:
   </tr>
   <tr>
    <td><code>POST</code></td>
-   <td>Slutför arbetsobjektet vars URI skickas som parameter <code>item</code> och flyttar enligt arbetsflödesinstansen till nästa nod(er), som definieras av parametern <code>route</code> eller <code>backroute</code> om du går ett steg bakåt.<br /> Om parametern <code>delegatee</code> skickas, arbetsobjektet som identifieras av parametern <code>item</code> delegeras till den angivna deltagaren.</td>
+   <td>Slutför arbetsobjektet vars URI skickas som parameter <code>item</code> och flyttar enligt arbetsflödesinstansen till nästa nod(er), som definieras av parametern <code>route</code> eller <code>backroute</code> om det går ett steg tillbaka.<br /> Om parametern <code>delegatee</code> skickas, arbetsobjektet som identifieras av parametern <code>item</code> delegeras till den angivna deltagaren.</td>
   </tr>
  </tbody>
 </table>

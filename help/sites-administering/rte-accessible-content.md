@@ -3,30 +3,30 @@ title: Konfigurera RTF-redigeraren för att skapa tillgängliga webbsidor och we
 description: Konfigurera RTF-redigeraren för att skapa tillgängliga webbsidor och webbplatser.
 contentOwner: AG
 exl-id: d2451710-5abf-4816-8052-57d8f04a228e
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '932'
+source-wordcount: '933'
 ht-degree: 0%
 
 ---
 
 # Konfigurera RTE för att skapa tillgängliga webbsidor och webbplatser {#configure-rte-for-accessibility}
 
-Adobe Experience Manager har stöd för många vanliga tillgänglighetsfunktioner i enlighet med olika tillgänglighetsstandarder. Dessutom kan utvecklare anpassa eller utöka för att få funktioner som hjälper dig att skapa tillgängligt innehåll med hjälp av Experience Manager-komponenter som använder textredigeraren.
+Adobe Experience Manager har stöd för många vanliga tillgänglighetsfunktioner enligt olika tillgänglighetsstandarder. Dessutom kan utvecklare anpassa eller utöka för att få funktioner som hjälper dig att skapa tillgängligt innehåll med hjälp av Experience Manager-komponenter som använder textredigeraren.
 
 När du utformar webbsidor och lägger till innehåll på sidorna kan innehållsutvecklare och författare använda funktioner i textredigeraren för att tillhandahålla tillgänglighetsrelaterad information. Du kan till exempel lägga till strukturinformation via rubriker och styckeelement.
 
 Om du vill konfigurera och anpassa dessa funktioner [konfigurera RTE-plugin-program](#configure-the-plugin-features) för komponenten. Till exempel `paraformat` Med plugin-programmet kan du lägga till ytterligare semantiska element på blocknivå, inklusive utökning av antalet rubriknivåer som stöds utöver basnivån `H1`, `H2`och `H3` anges som standard.
 
-RTE finns i en mängd komponenter för det beröringsaktiverade användargränssnittet och det klassiska användargränssnittet. Den primära komponenten som ska användas för RTE är dock den **Text** som är tillgänglig för båda gränssnitten. I följande bilder visas RTE med ett antal aktiverade plugin-program, inklusive `paraformat`:
+RTE finns i en mängd komponenter för det beröringsaktiverade användargränssnittet och det klassiska användargränssnittet. Den primära komponenten som ska användas för RTE är dock **Text** som är tillgänglig för båda gränssnitten. I följande bilder visas textredigeraren med ett antal aktiverade plugin-program, inklusive `paraformat`:
 
 ![Textkomponent (RTE) i helskärmsläge i det beröringsaktiverade användargränssnittet.](assets/chlimage_1-206.png)
 
-*Bild: Komponenten Text i det Touch-aktiverade användargränssnittet.*
+*Bild: Textkomponenten i det Touch-aktiverade användargränssnittet.*
 
 ![Dialogrutan Redigera (RTE) för textkomponenten i det klassiska användargränssnittet.](assets/chlimage_1-207.png)
 
-*Bild: Komponenten Text i det klassiska användargränssnittet.*
+*Bild: Textkomponenten i det klassiska användargränssnittet.*
 
 Skillnaderna mellan de tillgängliga funktionerna för textredigering i de olika gränssnitten finns i [Plugin-program och deras funktioner](/help/sites-administering/rich-text-editor.md#aboutplugins).
 
@@ -41,7 +41,7 @@ Fullständiga anvisningar för hur du konfigurerar RTE finns i [konfigurera RTF-
 
 Genom att konfigurera ett plugin-program inom lämplig `rtePlugins` i CRXDE Lite kan du aktivera alla eller specifika funktioner för det plugin-programmet.
 
-![CRXDE Lite med exempelplugin-programmet ratePlugin.](assets/chlimage_1-208.png)
+![CRXDE Lite med exempelplugin-programmet.](assets/chlimage_1-208.png)
 
 ### Exempel - ange styckeformat som är tillgängliga i markeringsfältet för textredigering {#example-specifying-paragraph-formats-available-in-rte-selection-field}
 
@@ -59,7 +59,7 @@ Eftersom strukturella element är tillgängliga i textredigeraren via alternativ
 
 ## Användning av källredigeringsfunktionen {#use-of-the-source-edit-feature}
 
-I vissa fall måste innehållsförfattare granska och justera HTML källkoden som skapats med RTE. En del innehåll som skapats i en textredigerare kan till exempel kräva ytterligare kod för att säkerställa överensstämmelse med WCAG 2.0. Detta kan du göra med [källredigering](/help/sites-administering/rich-text-editor.md#aboutplugins) RTE-alternativ. Du kan ange [`sourceedit` på `misctools` plugin](/help/sites-administering/rich-text-editor.md#aboutplugins).
+I vissa fall måste innehållsförfattare granska och justera HTML källkoden som skapats med RTE. En del innehåll som skapats i en textredigerare kan till exempel kräva ytterligare kod för att säkerställa överensstämmelse med WCAG 2.0. Detta kan du göra med [källredigering](/help/sites-administering/rich-text-editor.md#aboutplugins) RTE-alternativ. Du kan ange [`sourceedit` funktionen på `misctools` plugin](/help/sites-administering/rich-text-editor.md#aboutplugins).
 
 >[!CAUTION]
 >
@@ -73,7 +73,7 @@ Följande procedur visar hur du utökar **Tabell** med en **Bildtext** element s
 
 ### Exempel - lägg till bildtexten i dialogrutan Tabellegenskaper {#example-adding-the-caption-to-the-table-properties-dialog}
 
-I konstruktorn för `TablePropertiesDialog`lägger du till ytterligare ett textinmatningsfält som används för att redigera bildtexten. Observera att `itemId` måste anges till `caption` (dvs. DOM-attributets namn) för att automatiskt hantera dess innehåll.
+I konstruktorn för `TablePropertiesDialog`lägger du till ytterligare ett textinmatningsfält som används för att redigera bildtexten. Observera att `itemId` måste anges till `caption` (det vill säga DOM-attributets namn) för att automatiskt hantera dess innehåll.
 
 I **Tabell**, anger eller tar bort attributet explicit till/från DOM-elementet. Värdet skickas av dialogrutan i `config` -objekt. Observera att DOM-attribut bör anges/tas bort med motsvarande `CQ.form.rte.Common` metoder ( `com` är en genväg till `CQ.form.rte.Common`) för att undvika vanliga fallgropar med webbläsarimplementeringar.
 

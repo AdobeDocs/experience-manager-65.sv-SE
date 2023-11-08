@@ -1,19 +1,15 @@
 ---
 title: Hantera slutpunkter programmatiskt
-seo-title: Programmatically Managing Endpoints
 description: Använd tjänsten Endpoint Registry för att lägga till EJB-slutpunkter, lägga till SOAP-slutpunkter, lägga till övervakade mappslutpunkter, lägga till e-postslutpunkter, lägga till fjärrslutpunkter, lägga till Task Manager-slutpunkter, ändra slutpunkter, ta bort slutpunkter och hämta slutpunktsanslutningsinformation.
-seo-description: Use the Endpoint Registry service to add EJB endpoints, add SOAP endpoint, add Watched Folder endpoints, add Email endpoints, add  Remoting endpoints, add Task Manager endpoints, modify endpoints, remove endpoints, and retrieve endpoint connector information.
-uuid: 5dc50946-3323-4c5d-a43b-31c1c980bd04
 contentOwner: admin
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
-discoiquuid: 076889a7-9c9f-4b6f-a45b-67a9b3923c36
 role: Developer
 exl-id: b94dcca2-136b-4b7d-b5ce-544804575876
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '10790'
+source-wordcount: '10791'
 ht-degree: 0%
 
 ---
@@ -339,7 +335,7 @@ Följande lista anger konfigurationsvärden som anges när en bevakad mappslutpu
 * **resultFolderName**: Mappen där de sparade resultaten lagras. Platsen kan vara en absolut eller relativ katalogsökväg. Om resultaten inte visas i den här mappen kontrollerar du felmappen. Skrivskyddade filer bearbetas inte och sparas i felmappen. Standardvärdet är `result/%Y/%M/%D/`. Det här är resultatmappen i den bevakade mappen.
 * **preserveFolderName**: Den plats där filerna lagras efter att sökningen och hämtningen har slutförts. Den här platsen kan vara en absolut, relativ eller en null-katalogsökväg. Standardvärdet är `preserve/%Y/%M/%D/`.
 * **errorFolderName**: Mappen där felfiler sparas. Den här platsen är alltid relativ till den bevakade mappen. Skrivskyddade filer bearbetas inte och sparas i felmappen. Standardvärdet är `failure/%Y/%M/%D/`.
-* **preserveOnFailure**: Bevara indatafiler om det inte går att utföra åtgärden på en tjänst. Standardvärdet är true.
+* **preserveOnFailure**: Bevara indatafiler om det inte går att köra åtgärden på en tjänst. Standardvärdet är true.
 * **overwriteDuplicateFilename**: Om true skrivs filerna i resultatmappen och i den bevarade mappen över. Om värdet är false används filer och mappar med ett numeriskt indexsuffix som namn. Standardvärdet är false.
 
 **Definiera indataparametervärden**

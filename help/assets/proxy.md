@@ -4,9 +4,9 @@ description: En proxy är en [!DNL Experience Manager] -instans som använder pr
 contentOwner: AG
 role: Admin, Architect
 exl-id: 42fff236-b4e1-4f42-922c-97da32a933cf
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '843'
+source-wordcount: '842'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 [!DNL Adobe Experience Manager Assets] använder en proxy för att distribuera bearbetning för vissa uppgifter.
 
-En proxy är en specifik (och ibland separat) Experience Manager-instans som använder proxyarbetare som processorer som hanterar ett jobb och skapar ett resultat. En proxyarbetare kan användas för en mängd olika uppgifter. I fallet med [!DNL Assets] proxy som kan användas för att läsa in resurser för återgivning i Assets. Till exempel [IDS-proxyarbetare](indesign.md) använder [!DNL Adobe InDesign] Server som bearbetar filer för användning i Assets.
+En proxy är en specifik (och ibland separat) Experience Manager-instans som använder proxyarbetare som processorer som hanterar ett jobb och skapar ett resultat. En proxyarbetare kan användas för en mängd olika uppgifter. Om det finns en [!DNL Assets] proxy som kan användas för att läsa in resurser för återgivning i Assets. Till exempel [IDS-proxyarbetare](indesign.md) använder [!DNL Adobe InDesign] Server som bearbetar filer för användning i Assets.
 
 När proxyn är en separat [!DNL Experience Manager] -instans som minskar belastningen på [!DNL Experience Manager] redigeringsinstans(er). Som standard [!DNL Assets] kör resurshanteringsuppgifterna i samma JVM (externaliserat via Proxy) för att minska belastningen på [!DNL Experience Manager] -redigeringsinstans.
 

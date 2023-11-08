@@ -3,9 +3,9 @@ title: Skapa och synkronisera Live-kopior
 description: Lär dig hur du skapar och synkroniserar Live-kopior i Adobe Experience Manager.
 feature: Multi Site Manager
 exl-id: 896b35dd-4510-4c94-8615-03d9649c2f64
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '4226'
+source-wordcount: '4227'
 ht-degree: 0%
 
 ---
@@ -424,7 +424,7 @@ The [Åtgärden Återuppta är också tillgänglig från Live Copy Overview](/he
 
 ### Ändra arvsdjup (grund/djup) {#changing-inheritance-depth-shallow-deep}
 
-På en befintlig Live-kopia kan du ändra siddjupet, dvs. om underordnade sidor ska tas med.
+På en befintlig live-kopia kan du ändra siddjupet, det vill säga om underordnade sidor ska tas med.
 
 * Byt till en ytlig live-kopia:
 
