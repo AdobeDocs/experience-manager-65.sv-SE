@@ -1,18 +1,14 @@
 ---
 title: Bädda in ett anpassningsbart formulär eller interaktiv kommunikation på AEM webbplatssida
-seo-title: Embed an adaptive form or interactive communication in AEM sites page
 description: Du kan bädda in anpassningsbara formulär AEM webbplatssidor. Användarna kan fylla i och skicka formulär utan att lämna webbplatsens sidor.
-seo-description: You can embed adaptive forms in AEM sites pages. Users can fill and submit forms without leaving the site pages.
-uuid: 59b49e2f-6d95-42e5-b31e-fc40936c42d2
 contentOwner: vishgupt
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author, interactive-communications
-discoiquuid: 43362643-69cd-4006-a613-f998c79eeddc
 feature: Adaptive Forms
 exl-id: 00ee7929-649f-4cbb-be79-ba13ac73a16d
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 451fb472e170a79f9854efadf9be1d4fe0628b94
 workflow-type: tm+mt
-source-wordcount: '1153'
+source-wordcount: '1155'
 ht-degree: 0%
 
 ---
@@ -69,7 +65,7 @@ Så här bäddar du in ett adaptivt formulär eller interaktiv kommunikation med
 
       * **Tack**: Skriv ett meddelande med textredigeraren som ska visas när formulär skickas. Det här alternativet är endast tillgängligt när du väljer att visa ett tackmeddelande.
       * **Tack**: Bläddra och välj den sida som ska visas när formuläret skickas. Det här alternativet är bara tillgängligt när du väljer att visa en tacksida.
-      * **Uppdatera sidan vid överföring**: Aktivera för att uppdatera sidan med det inbäddade adaptiva formuläret så att du kan visa tack-sidan. I annat fall ersätter tack-sidan det anpassade formuläret i AEM Forms-behållaren, utan att sidan uppdateras. Det här alternativet är bara tillgängligt när du väljer att visa en tacksida.
+      * **Uppdatera sidan vid överföring**: Aktivera så att du kan uppdatera sidan med det inbäddade adaptiva formuläret så att du kan visa tack-sidan. I annat fall ersätter tack-sidan det anpassade formuläret i AEM Forms-behållaren, utan att sidan uppdateras. Det här alternativet är bara tillgängligt när du väljer att visa en tacksida.
 
    * **Tema**: Välj ett tema som definierar formatering för komponenter i ditt adaptiva formulär eller interaktiva kommunikation. Formateringen innehåller utseendeegenskaper som teckensnittsstil, bakgrundsfärg, dimensioner och justering.
    * **Höjd**: Ange behållarens höjd. Lämna det tomt om du vill ändra storlek på behållaren automatiskt.

@@ -7,7 +7,7 @@ topic-tags: administering
 content-type: reference
 role: Admin
 exl-id: aed9247c-eb81-470c-9fa4-a98c3df2dcaa
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 451fb472e170a79f9854efadf9be1d4fe0628b94
 workflow-type: tm+mt
 source-wordcount: '2620'
 ht-degree: 0%
@@ -326,8 +326,8 @@ Om redigering är nödvändig, för varje AEM publiceringsinstans:
 
      Plats i databasen där användardata lagras. För en communitywebbplats, för att säkerställa behörighet för medlemmar att se varandras profil, bör sökvägen vara standardsökvägen `/home/users/community`.
 
-   * **[!UICONTROL Enable Params]** redigera inte
-   * **[!UICONTROL URL Parameters]** redigera inte
+   * **[!UICONTROL Enable Params]** - redigera inte
+   * **[!UICONTROL URL Parameters]** - redigera inte
    * **[!UICONTROL Update User]**
 
      Om du markerar det här alternativet uppdateras användardata i databasen vid varje inloggning så att profiländringar eller ytterligare data som efterfrågas återspeglas. Standardvärdet är avmarkerat.

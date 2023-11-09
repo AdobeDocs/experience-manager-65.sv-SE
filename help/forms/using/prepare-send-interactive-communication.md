@@ -1,24 +1,20 @@
 ---
-title: Förbereda och skicka interaktiv kommunikation med agentens användargränssnitt
-seo-title: Prepare and send Interactive Communication using the Agent UI
-description: Agentgränssnittet gör att agenterna kan förbereda och skicka interaktiv kommunikation till postprocessen. Agenten gör de ändringar som krävs och skickar den interaktiva kommunikationen till en postprocess, som e-post eller utskrift.
-seo-description: Prepare and send Interactive Communication using the Agent UI
-uuid: d1a19b83-f630-4648-9ad2-a22374e31aa9
+title: Förbereda och skicka interaktiv kommunikation med agentgränssnittet
+description: Agentgränssnittet gör att agenterna kan förbereda och skicka interaktiv kommunikation till postprocessen. Agenten gör de ändringar som behövs och skickar den interaktiva kommunikationen till en postprocess, som e-post eller utskrift.
 topic-tags: interactive-communications
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: 110c86ea-9bd8-4018-bfcc-ca33e6b3f3ba
 feature: Interactive Communication
 exl-id: 4fb82e9b-f870-47db-ac92-2d7510acace8
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 451fb472e170a79f9854efadf9be1d4fe0628b94
 workflow-type: tm+mt
-source-wordcount: '1991'
+source-wordcount: '1992'
 ht-degree: 0%
 
 ---
 
-# Förbereda och skicka interaktiv kommunikation med agentens användargränssnitt {#prepare-and-send-interactive-communication-using-the-agent-ui}
+# Förbereda och skicka interaktiv kommunikation med agentgränssnittet {#prepare-and-send-interactive-communication-using-the-agent-ui}
 
-Agentgränssnittet gör att agenterna kan förbereda och skicka interaktiv kommunikation till postprocessen. Agenten gör de ändringar som krävs och skickar den interaktiva kommunikationen till en postprocess, som e-post eller utskrift.
+Agentgränssnittet gör att agenterna kan förbereda och skicka interaktiv kommunikation till postprocessen. Agenten gör de ändringar som behövs och skickar den interaktiva kommunikationen till en postprocess, som e-post eller utskrift.
 
 ## Översikt {#overview}
 
@@ -41,7 +37,7 @@ När agenten förbereder den interaktiva kommunikationen med hjälp av agentgrä
 
    ![openagentiui](assets/openagentiui.png)
 
-   Agentgränssnittet visas med följande tre flikar baserat på innehållet och egenskaperna i det interaktiva kommunikationen: Data, innehåll och bifogad fil.
+   Utifrån innehållet och egenskaperna i det interaktiva kommunikationen visas agentgränssnittet med följande tre flikar: Data, Innehåll och Bifogad fil.
 
    ![agentuitabs](assets/agentuitabs.png)
 
@@ -63,13 +59,13 @@ På fliken Innehåll hanterar du innehåll som dokumentfragment och innehållsva
 
 1. Redigera dokumentfragmenten efter behov på fliken Innehåll. Om du vill fokusera på det relevanta avsnittet i innehållshierarkin kan du antingen trycka på den relevanta raden eller det relevanta stycket i förhandsvisningen av interaktiv kommunikation eller trycka på avsnittet direkt i innehållshierarkin.
 
-   Dokumentfragmentet med raden&quot;Gör en betalning online nu ... &quot; är markerat i förhandsvisningen i bilden nedan och samma dokumentfragment har markerats på fliken Innehåll.
+   Dokumentfragmentet med raden &quot;Gör en betalning online nu ...&quot; markeras i förhandsvisningen i bilden nedan och samma dokumentfragment har markerats på fliken Innehåll.
 
    ![contentmodulefocus](assets/contentmodulefocus.png)
 
    Genom att trycka på Markera valda moduler i innehållet på fliken Innehåll eller Data ( ![highlightselectedmodulesincontentccr](assets/highlightselectedmodulesincontentccr.png)) i det övre vänstra hörnet av förhandsgranskningen kan du inaktivera eller aktivera funktioner för att gå till dokumentfragmentet när användaren knackar på eller markerar den relevanta texten, stycket eller datafältet i förhandsvisningen.
 
-   Fragmenten som agenten kan redigera när den interaktiva kommunikationen skapas har Redigera markerat innehåll ( ![iconeditselectedContent](assets/iconeditselectedcontent.png)). Tryck på ikonen Redigera markerat innehåll för att starta fragmentet i redigeringsläge och göra ändringar i det. Använd följande alternativ för att formatera och hantera text:
+   Fragmenten som kan redigeras av agenten när interaktiv kommunikation skapas har Redigera markerat innehåll ( ![iconeditselectedContent](assets/iconeditselectedcontent.png)). Tryck på ikonen Redigera markerat innehåll för att starta fragmentet i redigeringsläge och göra ändringar i det. Använd följande alternativ för att formatera och hantera text:
 
    * [Formateringsalternativ](#formattingtext)
 
@@ -110,7 +106,7 @@ På fliken Innehåll hanterar du innehåll som dokumentfragment och innehållsva
 
 ## Formatera text {#formattingtext}
 
-När du redigerar ett textfragment i agentgränssnittet ändras verktygsfältet beroende på vilken typ av redigeringar du väljer att göra: Teckensnitt, Stycke eller Lista:
+När du redigerar ett textfragment i agentens användargränssnitt ändras verktygsfältet beroende på vilken typ av redigeringar du väljer att göra: Teckensnitt, Stycke eller Lista:
 
 ![typeofformattverktygsfält](assets/typeofformattingtoolbar.png) ![Verktygsfältet Teckensnitt](do-not-localize/fonttoolbar.png)
 
@@ -124,7 +120,7 @@ Verktygsfältet Stycke
 
 Verktygsfältet Lista
 
-### Markera/framhäv textdelar {#highlightemphasize}
+### Markera/framhäv delar av text {#highlightemphasize}
 
 Markera texten och tryck på Markera färg om du vill framhäva delar av texten i ett redigerbart fragment.
 
@@ -150,15 +146,15 @@ Agentgränssnittet har inbyggt stöd för 210 specialtecken. Administratören ka
 
 ![ ](do-not-localize/contentoptionsdocfragments.png)
 
-* **Upp- och nedpilar**: Pilar för att flytta dokumentfragment uppåt eller nedåt i interaktiv kommunikation.
+* **Upp- och nedpilar**: Pilar som flyttar dokumentfragment uppåt eller nedåt i interaktiv kommunikation.
 * **Ta bort**: Ta bort dokumentfragmentet från den interaktiva kommunikationen om det tillåts.
-* **Sidbrytning före** (gäller för underordnade fragment av målområdet): Infogar sidbrytning före dokumentfragmentet.
+* **Sidbrytning före** (gäller för underordnade fragment av målområdet): infogar sidbrytning före dokumentfragmentet.
 * **Indrag**: Öka eller minska indrag för ett dokumentfragment.
-* **Sidbrytning efter** (gäller för underordnade fragment av målområdet): Infogar sidbrytning efter dokumentfragmentet.
+* **Sidbrytning efter** (gäller för underordnade fragment av målområdet): infogar sidbrytning efter dokumentfragmentet.
 
 ![docfragoptions](assets/docfragoptions.png)
 
-* Redigera (endast textfragment): Öppna RTF-redigerare för att redigera textdokumentfragmentet. Mer information finns i [Formatera text](#formattingtext).
+* Redigera (endast textfragment): Öppna RTF-redigeraren för redigering av textdokumentfragmentet. Mer information finns i [Formatera text](#formattingtext).
 
 * Markering (ögonikon): Inkluderar\exkluderar dokumentfragment från interaktiv kommunikation.
 * Ofyllda värden (info): Anger antalet ofyllda variabler i dokumentfragmentet.
@@ -169,7 +165,7 @@ Agentgränssnittet har inbyggt stöd för 210 specialtecken. Administratören ka
 
 * Infoga tom rad: Infogar en ny tom rad.
 * Markering (ögonikon): Inkluderar\exkluderar dokumentfragment från interaktiv kommunikation.
-* Hoppa över punkter/nummer: Aktivera det här alternativet om du vill hoppa över punkter/numrering i listdokumentfragmentet.
+* Hoppa över punkter/numrering: Aktivera om du vill hoppa över punkter/numrering i listdokumentfragmentet.
 * Ofyllda värden (info): Anger antalet ofyllda variabler i dokumentfragmentet.
 
 ## Spara interaktiv kommunikation som utkast {#save-as-draft}
@@ -187,10 +183,10 @@ Funktionen Spara som utkast är inte aktiverad som standard. Gör så här för 
    Med SPI kan du spara utkastet till version av den interaktiva kommunikationen i databasen med ett utkast-ID som unik identifierare. Dessa instruktioner förutsätter att du har kunskap om hur du bygger ett OSGi-paket med ett Maven-projekt.
 
    Exempel på SPI-implementering finns i [Exempel på SPI-implementering av ccrDocumentInstance](#sample-ccrDocumentInstance-spi).
-1. Öppna `http://<hostname>:<port>/ system/console/bundles` och trycka **[!UICONTROL Install/Update]** för att ladda upp OSGi-paketet. Kontrollera att det överförda paketets status visas som **Aktiv**. Starta om servern om paketets status inte visas som **Aktiv**.
+1. Öppna `http://<hostname>:<port>/ system/console/bundles` och knacka **[!UICONTROL Install/Update]** för att ladda upp OSGi-paketet. Kontrollera att det överförda paketets status visas som **Aktiv**. Starta om servern om paketets status inte visas som **Aktiv**.
 1. Gå till `https://'[server]:[port]'/system/console/configMgr`.
 1. Tryck på **[!UICONTROL Create Correspondence Configuration]**.
-1. Välj **[!UICONTROL Enable Save Using CCRDocumentInstanceService]** och trycka **[!UICONTROL Save]**.
+1. Välj **[!UICONTROL Enable Save Using CCRDocumentInstanceService]** och knacka **[!UICONTROL Save]**.
 
 ### Spara interaktiv kommunikation som utkast {#save-as-draft-agent-ui}
 
@@ -202,7 +198,7 @@ Så här sparar du en interaktiv kommunikation som ett utkast:
 
 1. Ange namnet på utkastet i dialogrutan **[!UICONTROL Name]** fält och knacka **[!UICONTROL Done]**.
 
-När du har sparat interaktiv kommunikation som ett utkast trycker du **[!UICONTROL Save Changes]** om du vill spara ytterligare ändringar i utkastet.
+När du har sparat interaktiv kommunikation som ett utkast trycker du på **[!UICONTROL Save Changes]** om du vill spara ytterligare ändringar i utkastet.
 
 ### Hämta utkastet till interaktiv kommunikation {#retrieve-draft}
 
@@ -214,7 +210,7 @@ När du har sparat ett utkast för interaktiv kommunikation kan du hämta det oc
 
 ### Exempel på SPI-implementering av ccrDocumentInstance {#sample-ccrDocumentInstance-spi}
 
-Implementera `ccrDocumentInstance` SPI för att spara en interaktiv kommunikation som ett utkast. Följande är ett exempel på implementering av `ccrDocumentInstance` SPI.
+Implementera `ccrDocumentInstance` SPI för att spara interaktiv kommunikation som utkast. Följande är ett exempel på implementering av `ccrDocumentInstance` SPI.
 
 ```javascript
 package Implementation;
@@ -333,7 +329,7 @@ I följande tabell förklaras exemplet `ccrDocumentInstance` SPI-implementering.
    <td><p>Tjänsten mySQLDataBaseServiceCRUD verifierar Update som indatametod och sparar statusen för Interactive Communication-utkastet i databasen.</br></p><img src="assets/update-operation-service.png"/></td>
    </tr>
    <tr>
-   <td><p>API:t för get-åtgärden kontrollerar om den interaktiva kommunikationen innehåller ett utkast-ID. API:t anropar sedan tjänsten mySQLDataBaseServiceCRUD med Get som indatametod för att hämta data för den interaktiva kommunikationen.</br></p><img src="assets/save-as-draft-get-operation.png"/></td>
+   <td><p>API:t för get-åtgärden kontrollerar om den interaktiva kommunikationen innehåller ett utkast-ID. API:t anropar sedan tjänsten mySQLDataBaseServiceCRUD med metoden Get för att hämta data för den interaktiva kommunikationen.</br></p><img src="assets/save-as-draft-get-operation.png"/></td>
    <td><p>Tjänsten mySQLDataBaseServiceCRUD verifierar Get som indatametod och hämtar data för den interaktiva kommunikationen baserat på utkast-ID.</p></br><img src="assets/get-operation-service.png"/></td>
    </tr>
    <tr>
@@ -440,4 +436,4 @@ Följande är ett exempel på `pom.xml` fil som ingår i implementeringen:
 
 >[!NOTE]
 >
->Se till att du uppdaterar `aemfd-client-sdk` beroende av 6.0.160 i `pom.xml` -fil.
+>Uppdatera `aemfd-client-sdk` beroende av 6.0.160 i `pom.xml` -fil.

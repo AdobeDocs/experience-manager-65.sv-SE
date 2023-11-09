@@ -1,19 +1,15 @@
 ---
 title: Skriptstöd för HTML5-formulär
-seo-title: Scripting support for HTML5 forms
 description: JavaScript, FormCalc-egenskaper och andra metoder som stöds i HTML5 Forms.
-seo-description: JavaScript, FormCalc properties, and other methods that are supported in HTML5 Forms.
-uuid: 697d5ec4-c818-41e4-b813-883c01b7ff3a
 contentOwner: robhagat
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
-discoiquuid: 4ef78c8c-783f-4aac-a499-692cd4acef75
 feature: Mobile Forms
 exl-id: bcb5afc5-2190-4269-aba2-63842db9df3f
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 451fb472e170a79f9854efadf9be1d4fe0628b94
 workflow-type: tm+mt
-source-wordcount: '3887'
+source-wordcount: '3896'
 ht-degree: 1%
 
 ---
@@ -36,7 +32,7 @@ JavaScript, FormCalc-egenskaper och metoder som stöds i HTML5-formulär är som
    <td>Anger fältets innehåll innan det ändras som svar på en användares åtgärder. Det här värdet kan återkallas, ungefär som en ångra-funktion.</td>
    <td><p>Fungerar inte för listrutor och listrutor. <code>PrevText </code>fungerar inte korrekt i följande fall:</p>
     <ul>
-     <li>När du skriver vissa specialteckennycklar (till exempel $, (,), &amp;, @ och mer) i numeriska fält på iPad, och </li>
+     <li>Om du skriver vissa specialteckennycklar (till exempel $ eller , eller &amp; eller @ med flera) i numeriska fält på iPad, och </li>
      <li>För datumfältet (när datum anges via kalendern).<br /> </li>
     </ul> <p>Det går inte att ange värde via skript.</p> </td>
   </tr>
@@ -52,7 +48,7 @@ JavaScript, FormCalc-egenskaper och metoder som stöds i HTML5-formulär är som
     <ul>
      <li>Om att markera och ersätta text</li>
      <li>När du tar bort, kopierar och klistrar in text.</li>
-     <li>Om du skriver vissa specialteckennycklar (till exempel $, (, ), &amp;, @ och mer) i numeriska fält<br /> </li>
+     <li>Om du skriver vissa specialteckennycklar (till exempel $ eller , eller &amp; eller @ med flera) i numeriska fält<br /> </li>
      <li>Vid användning av Skift+alfanumerisk kombination. </li>
      <li>Använda datum/tid-fält.</li>
     </ul>
@@ -67,7 +63,7 @@ JavaScript, FormCalc-egenskaper och metoder som stöds i HTML5-formulär är som
     <ul>
      <li>Om att markera och ersätta text</li>
      <li>När du tar bort, kopierar och klistrar in text.</li>
-     <li>Om du skriver vissa specialteckennycklar (till exempel $, (,), &amp;, @ och mer) i numeriska fält<br /> </li>
+     <li>Om du skriver vissa specialteckennycklar (till exempel $ eller , eller &amp; eller @ med flera) i numeriska fält<br /> </li>
      <li>Vid användning av Skift+alfanumerisk kombination. </li>
      <li>Använda datum/tid-fält.</li>
     </ul> <p>Det går inte att ange värde via skript.</p> </td>

@@ -6,7 +6,7 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: authoring-on-demand-services-app
 exl-id: ea6c8aa3-f86e-4878-8550-fe1662f10696
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 451fb472e170a79f9854efadf9be1d4fe0628b94
 workflow-type: tm+mt
 source-wordcount: '677'
 ht-degree: 0%
@@ -118,7 +118,7 @@ Det allmänna arbetsflödet för att ta bort en artikel:
 
 1. Välj mobilappen i katalogen i Mobile On-Demand.
 1. Markera artikeln som ska tas bort i dialogrutan **Hantera artiklar** platta.
-1. Se till att det är markerat i listan (markera andra att ta bort efter behov).
+1. Se till att det är markerat i listan och markera andra att ta bort efter behov.
 1. Klicka **Ta bort** i åtgärdsfältet.
 1. Kontrollera om du vill ta bort från AEM och Mobile On-Demand.
 1. Klicka **Ta bort**.

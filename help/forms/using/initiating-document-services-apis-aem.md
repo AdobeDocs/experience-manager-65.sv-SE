@@ -1,15 +1,11 @@
 ---
 title: Initiera API:er för dokumenttjänster från AEM
-seo-title: Initiate Document Services APIs from AEM Workflow
 description: Lär dig hur du anropar AEM dokumenttjänster på DDX eller angivna indata. Se även hur du konverterar PDF till PDF/A
-seo-description: Learn how to invoke AEM Document services on DDX or supplied inputs. Also see hwo to convert PDF to PDF/A
-uuid: aacec2df-1ad6-4ff2-a99d-ef206efcdc09
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: document_services
-discoiquuid: 8b85bdc7-3864-49c9-81b0-cf15b8e986d9
 exl-id: 123087a2-9d09-4579-9185-2ccd7d25bf8d
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 451fb472e170a79f9854efadf9be1d4fe0628b94
 workflow-type: tm+mt
 source-wordcount: '1160'
 ht-degree: 0%
@@ -61,7 +57,7 @@ På fliken Miljöalternativ kan du ange olika bearbetningsalternativ för anrops
 Beroende på indata-DDX kan invoke-API:t generera flera utdatadokument. På fliken Utdatadokument kan du välja var utdatadokumentet ska sparas.
 
 1. *Spara utdata i nyttolast*: Sparar utdatadokument under nyttolastmappen, eller skriver över nyttolasten, om nyttolasten är en fil.
-1. *Karta för utdatadokument*: Gör att du uttryckligen kan ange var varje utdatadokument ska sparas genom att lägga till en post per utdatadokument. Varje post anger dokumentet och var det ska sparas. Ett utdatadokument kan skriva över nyttolasten eller sparas under nyttolastmappen. Det är användbart när det finns flera utdatadokument.
+1. *Karta för utdatadokument*: Du kan uttryckligen ange var varje utdatadokument ska sparas genom att lägga till en post per utdatadokument. Varje post anger dokumentet och var det ska sparas. Ett utdatadokument kan skriva över nyttolasten eller sparas under nyttolastmappen. Det är användbart när det finns flera utdatadokument.
 
 1. *Jobblogg*: Anger var jobbloggdokumentet ska sparas, vilket är praktiskt vid felsökning.
 
