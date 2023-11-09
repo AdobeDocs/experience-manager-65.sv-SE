@@ -6,7 +6,7 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/managing_endpoints
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 exl-id: ec169a01-a113-47eb-8803-bd783ea2c943
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
 source-wordcount: '7174'
 ht-degree: 0%
@@ -54,7 +54,7 @@ För en bevakad mappslutpunkt kan användare anropa genom att kopiera eller dra 
 
 Om jobbet endast kräver en indatafil kan användaren kopiera den filen till roten i den bevakade mappen för bevakade mappslutpunkter.
 
-Om jobbet innehåller mer än en indatafil måste användaren skapa en mapp utanför den bevakade mapphierarkin som innehåller alla nödvändiga filer. Den nya mappen bör innehålla indatafilerna (och eventuellt en DDX-fil om processen kräver det). När jobbmappen har skapats kopierar användaren den till den bevakade mappens indatamapp.
+Om jobbet innehåller mer än en indatafil måste användaren skapa en mapp utanför den bevakade mapphierarkin som innehåller alla nödvändiga filer. Den nya mappen bör innehålla indatafilerna (och eventuellt en DDX-fil om det behövs av processen). När jobbmappen har skapats kopierar användaren den till den bevakade mappens indatamapp.
 
 >[!NOTE]
 >

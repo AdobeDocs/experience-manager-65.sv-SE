@@ -8,9 +8,9 @@ content-type: reference
 docset: aem65
 exl-id: 39e35a07-140f-4853-8f0d-8275bce27a65
 feature: Security
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
-source-wordcount: '6816'
+source-wordcount: '6808'
 ht-degree: 0%
 
 ---
@@ -798,7 +798,7 @@ Den här förändringen från kvarvarande JCR-egenskaper till en dedikerad åtko
 
 **Målnod definierad av princip**
 
-CUG-principer förväntas skapas vid JCR-noden som definierar det underträd som ska ha begränsad läsåtkomst. Detta är sannolikt en AEM sida om CUG förväntas påverka hela trädet.
+Skapa CUG-principer på JCR-noden som definierar det underträd som ska ha begränsad läsåtkomst. Detta är sannolikt en AEM sida om CUG förväntas påverka hela trädet.
 
 Observera att om du bara placerar CUG-principen på jcr:content-noden under en viss sida begränsas åtkomsten till innehållet s.str för en viss sida, men det kommer inte att gälla för några jämställda eller underordnade sidor. Detta kan vara ett giltigt användningsexempel och det är möjligt att göra detta med en databasredigerare som kan använda detaljerat åtkomstinnehåll. Den kontrasterar emellertid den tidigare implementeringen där placeringen av en cq:cugEnabled-egenskap på jcr:content-noden mappades om internt till sidnoden. Mappningen utförs inte längre.
 
@@ -839,7 +839,7 @@ Till `granite:loginPath` gäller att samma behörighet krävs för att lägga ti
 
 #### Målnod definierad av blandningstyp {#target-node-defined-by-mixin-type}
 
-Autentiseringskrav förväntas skapas på JCR-noden som definierar det underträd som ska genomgå obligatorisk inloggning. Detta är sannolikt en AEM sida om CUG förväntas påverka hela trädet och användargränssnittet för den nya implementeringen kommer därför att lägga till blandningstypen för auth-krav på sidnoden.
+Skapa autentiseringskrav på JCR-noden som definierar det underträd som ska underställas obligatorisk inloggning. Detta är sannolikt en AEM sida om CUG förväntas påverka hela trädet och användargränssnittet för den nya implementeringen kommer därför att lägga till blandningstypen för auth-krav på sidnoden.
 
 Om du bara placerar CUG-principen vid jcr:content-noden som finns under en viss sida begränsas bara åtkomsten till innehållet, men det påverkar inte själva sidnoden eller underordnade sidor.
 

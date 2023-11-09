@@ -2,16 +2,16 @@
 title: Hur använder man den körda skripttjänsten i AEM Forms på JEE Workbench för att skapa XML-data?
 description: Använda den körda skripttjänsten i AEM Forms på JEE Workbench för att skapa XML-data
 exl-id: 2ec57cd4-f41b-4e5c-849d-88ca3d2cfe19
-source-git-commit: e2a3470784beb04c2179958ac6cb98861acfaa71
+source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
-source-wordcount: '979'
+source-wordcount: '977'
 ht-degree: 0%
 
 ---
 
 # Använda den körda skripttjänsten i AEM Forms på JEE Workbench för att skapa XML-data {#using-execute-script-service-forms-jee-workbench}
 
-Det finns mycket XML som rör arbetsflöden för JEE-processhantering, till exempel: XML-information kan byggas in i en process och skickas till ett Flex-program i AEM Forms på JEE Workspace, användas för systeminställningar eller för att skicka information till och från formulär. Det finns många tillfällen då en AEM Forms on JEE-utvecklare behöver hantera XML, och många gånger kräver detta att XML hanteras via en AEM Forms on JEE-process.
+Det finns mycket XML i AEM Forms i arbetsflöden för JEE Process Management, t.ex.: XML-information kan byggas in i en process och skickas till ett Flex-program i AEM Forms på JEE Workspace, användas för systeminställningar eller för att skicka information till och från formulär. Det finns många tillfällen då en AEM Forms on JEE-utvecklare behöver hantera XML, och många gånger kräver detta att XML hanteras via en AEM Forms on JEE-process.
 
 När du hanterar enkla XML-inställningar kan du använda `Set Value` som är standard för AEM Forms på JEE. Den här tjänsten anger värdet för ett eller flera dataobjekt i processdatamodellen. För enkla villkorsbaserade logik &quot;if this, then that&quot; kan den här tjänsten passa ändamålet.
 

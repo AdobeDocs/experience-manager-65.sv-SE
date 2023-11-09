@@ -11,7 +11,7 @@ discoiquuid: 69210727-dde3-495a-87b7-2e8173e6b664
 docset: aem65
 role: Admin
 exl-id: b5f6a54e-92d1-4631-a1d1-184f37d174b6
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
 source-wordcount: '2493'
 ht-degree: 0%
@@ -232,7 +232,7 @@ Följ de här stegen för att skapa kopior av resurser och brev:
 
    Om du kopierar och klistrar in resurserna/bokstäverna på samma plats läggs suffixet&quot;-CopyXX&quot; till i det befintliga namnet på resursen/bokstaven. Om det inte finns någon titel för den kopierade resursen/bokstaven förblir det automatiskt genererade titelfältet tomt.
 
-1. Om det behövs kan du redigera titeln och namnet som du vill spara kopian av resursen/bokstaven med.
+1. Om det behövs redigerar du titeln och namnet som du vill spara kopian av resursen/bokstaven med.
 1. Tryck på Klistra in. Nya kopior av de kopierade resurserna skapas.
 
 ## Sökning {#search-forms}

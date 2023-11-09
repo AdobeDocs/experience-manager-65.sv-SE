@@ -7,7 +7,7 @@ topic-tags: extending-aem
 content-type: reference
 docset: aem65
 exl-id: bba64ce6-8b74-4be1-bf14-cfdf3b9b60e1
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
 source-wordcount: '2582'
 ht-degree: 0%
@@ -614,7 +614,7 @@ AEM använder en standarduppsättning med språk- och landskoder.
 * Standardspråkkoden är den gemena tvåbokstavskoden enligt ISO-639-1.
 * Standardlandskoden är den gemena eller versala tvåbokstavskoden enligt ISO 3166.
 
-MSM använder en lagrad lista med språk- och landskoder för att fastställa namnet på landet som är associerat med namnet på språkversionen av sidan. Du kan ändra följande aspekter av listan om det behövs:
+MSM använder en lagrad lista med språk- och landskoder för att fastställa namnet på landet som är associerat med namnet på språkversionen av sidan. Du kan ändra följande delar av listan om det behövs:
 
 * Språktitlar
 * Landsnamn

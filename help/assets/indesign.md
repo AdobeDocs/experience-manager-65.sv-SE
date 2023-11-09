@@ -5,7 +5,7 @@ contentOwner: AG
 role: Admin
 feature: Publishing
 exl-id: 5ba020a3-c36c-402b-a11b-d6b0426b03bf
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
 source-wordcount: '1557'
 ht-degree: 1%
@@ -66,7 +66,7 @@ Detta kommandoskript kommer att:
 Integrera [!DNL InDesign Server] för användning med [!DNL Experience Manager Assets] När du har konfigurerat proxyn måste du:
 
 1. [Installera InDesignen Server](#installing-the-indesign-server).
-1. Om det behövs, [konfigurera Experience Manager Assets Workflow](#configuring-the-aem-assets-workflow).
+1. Vid behov, [konfigurera Experience Manager Assets Workflow](#configuring-the-aem-assets-workflow).
 Detta är bara nödvändigt om standardvärdena inte passar för din instans.
 1. Konfigurera en [proxyarbetare för InDesignen Server](#configuring-the-proxy-worker-for-indesign-server).
 

@@ -6,7 +6,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 docset: aem65
 feature: Interactive Communication
 exl-id: 1f89c3bf-e67e-4d13-9285-3367be1ac8f8
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
 source-wordcount: '5989'
 ht-degree: 0%
@@ -552,7 +552,7 @@ Dialogrutan Återställ arv visas.
 
 ![återarv](assets/revertinheritance.png)
 
-Välj **[!UICONTROL Synchronize The Page After Reverting Inheritance]**. Välj det här alternativet om du vill synkronisera hela den interaktiva kommunikationen. Om du inte markerar det här alternativet synkroniseras bara det relevanta målområdet när arvet återställs.
+Välj vid behov **[!UICONTROL Synchronize The Page After Reverting Inheritance]**. Välj det här alternativet om du vill synkronisera hela den interaktiva kommunikationen. Om du inte markerar det här alternativet synkroniseras bara det relevanta målområdet när arvet återställs.
 
 Tryck på **[!UICONTROL Yes]**.
 

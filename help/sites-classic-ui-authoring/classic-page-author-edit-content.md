@@ -1,17 +1,15 @@
 ---
 title: Redigera sidinnehåll
 description: Innehåll läggs till med komponenter som kan dras till sidan. Du kan sedan redigera dem på plats, flytta eller ta bort dem.
-uuid: e7b65ceb-263c-46f2-91e3-11dec3a016fa
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: page-authoring
 content-type: reference
-discoiquuid: de321869-ebf9-41a1-8203-e12bdb088678
 docset: aem65
 exl-id: e1b5aea0-983c-4e7b-9d35-d7beeee45dc7
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
-source-wordcount: '1832'
+source-wordcount: '1831'
 ht-degree: 0%
 
 ---
@@ -110,7 +108,7 @@ Så här skapar du en komponent genom att dra en av resurstyperna ovan:
 
    En komponent som passar resurstypen skapas på den önskade platsen, den innehåller den valda resursen.
 
-1. [Redigera](#editmovecopypastedelete) komponenten om det behövs.
+1. [Redigera](#editmovecopypastedelete) komponenten, om det behövs.
 
 ## Redigera en komponent (innehåll och egenskaper) {#editing-a-component-content-and-properties}
 
@@ -227,7 +225,7 @@ För större skalredigeringar av samma fras är **[Sök och ersätt](/help/sites
 
 ## Låsa en sida {#locking-a-page}
 
-AEM kan du låsa en sida så att ingen annan kan ändra innehållet. Det här är användbart när du gör många ändringar på en viss sida eller när du behöver frysa en sida en kort stund.
+AEM kan du låsa en sida så att ingen annan kan ändra innehållet. Det här är användbart när du gör flera ändringar på en viss sida eller när du behöver frysa en sida en kort stund.
 
 >[!CAUTION]
 >

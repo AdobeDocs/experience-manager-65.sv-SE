@@ -6,9 +6,9 @@ content-type: reference
 topic-tags: repo_restructuring
 feature: Upgrading
 exl-id: b4531792-06dd-4545-9dbb-57224be20dc7
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
-source-wordcount: '1460'
+source-wordcount: '1457'
 ht-degree: 0%
 
 ---
@@ -52,7 +52,7 @@ Enligt beskrivning på överordnad [Omstrukturering av lager i AEM 6.5](/help/si
   </tr>
   <tr>
    <td><strong>Omstruktureringsvägledning</strong></td>
-   <td><p>Om nya eller ändrade ContextHub-segment ska redigeras i källkontrollen i stället för att redigeras i AEM, måste de migreras till den nya platsen:</p>
+   <td><p>Om nya eller ändrade ContextHub-segment redigeras i källkontrollen i stället för att redigeras i AEM, måste de migreras till den nya platsen:</p>
     <ol>
      <li>Kopiera nya eller ändrade ContextHub-segment från föregående plats till rätt nya plats (/<code>apps</code>, <code>/conf/global</code> eller <code>/conf/&lt;tenant&gt;</code>)</li>
      <li>Uppdatera referenser till ContextHub-segment på föregående plats till migrerade ContextHub-segment på de nya platserna (<code>/apps</code>, <code>/conf/global</code>, <code>/conf/&lt;tenant&gt;</code>).</li>

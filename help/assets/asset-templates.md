@@ -5,7 +5,7 @@ contentOwner: AG
 role: User
 feature: Asset Management,Developer Tools
 exl-id: 12c92aad-3a1d-486e-a830-31de2fc6d07b
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
 source-wordcount: '1503'
 ht-degree: 1%
@@ -160,7 +160,7 @@ Du kan redigera en sammanställning direkt när du har skapat den. Du kan även 
    Du kan använda olika filter för att söka efter de önskade mallarna. Du kan till exempel söka efter mallar baserat på filtyp eller taggar.
 
 1. Klicka på **[!UICONTROL Next]** i verktygsfältet.
-1. I **[!UICONTROL Preview & Reorder]** ordnar du om mallarna om det behövs och förhandsgranskar valet av mallar som ska sammanfogas. Klicka sedan på **[!UICONTROL Next]** i verktygsfältet.
+1. I **[!UICONTROL Preview & Reorder]** kan du ordna om mallarna om det behövs och förhandsgranska valet av mallar som ska sammanfogas. Klicka sedan på **[!UICONTROL Next]** i verktygsfältet.
 
    ![chlimage_1-126](assets/chlimage_1-331.png)
 

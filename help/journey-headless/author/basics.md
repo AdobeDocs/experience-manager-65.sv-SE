@@ -2,9 +2,9 @@
 title: Lär dig grunderna i redigering
 description: Lär dig mer om hur du skapar innehåll för Headless CMS med hjälp av Content Fragments.
 exl-id: 125c4d0b-1572-4dba-823d-cdef2778f275
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
-source-wordcount: '1688'
+source-wordcount: '1689'
 ht-degree: 1%
 
 ---
@@ -108,7 +108,7 @@ En dialogruta öppnas där du kan ange information och sedan bekräfta med **Ska
 
 #### Använda banor och taggar för att begränsa antalet modeller för innehållsfragment i mappen {#tags-paths-for-models-in-folder}
 
-Det här avsnittet är något mer avancerat. Du behöver det inte om du bara börjar och försöker, men det är *mycket* är användbart när du har många fragment. Så det är bra att veta om - även om du inte använder det helt än.
+Det här avsnittet är något mer avancerat. Du behöver det inte riktigt om du bara börjar och försöker saker, men det är mest användbart när du har många fragment. Så det är bra att veta om - även om du inte använder det helt än.
 
 Din innehållsarkitekt har skapat alla innehållsfragmentmodeller som krävs för ditt aktuella projekt, och kanske även några andra projekt. För att göra det enklare för dig själv och andra författare kan du begränsa listan med modeller som är tillgängliga för en viss mapp.
 

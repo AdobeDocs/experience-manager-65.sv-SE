@@ -6,7 +6,7 @@ topic-tags: process-reporting
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 docset: aem65
 exl-id: a096eea0-b2fb-4d86-b729-ca47611135b2
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
 source-wordcount: '1668'
 ht-degree: 0%
@@ -93,7 +93,7 @@ Du använder process-/uppgiftssökning för att definiera filter för frågor i 
 När du har skapat en fråga använder du alternativen i det övre högra hörnet av **Skapa filter** till:
 
 * **Avbryt**: Avbryt ändringarna och gå tillbaka till **Mina filter** -panelen.
-* **Kör**: Kör den aktuella frågan för att se och/eller verifiera resultatet. I det här fallet behöver du inte spara frågan innan du kör frågan. Du kan verifiera resultatet, göra eventuella ändringar och sedan spara frågan när du är nöjd med resultatet.
+* **Kör**: Kör den aktuella frågan för att se och/eller verifiera resultatet. I det här fallet behöver du inte spara frågan innan du kör frågan. Du kan verifiera resultatet, göra ändringar om det behövs och sedan spara frågan när du är nöjd med resultatet.
 * **Spara**: Spara filtret Filtret kan sedan visas och köras från **Mina filter** -panelen.
 
 ### Alternativ på panelen Mina filter {#options-in-my-filters-panel}

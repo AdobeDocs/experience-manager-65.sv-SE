@@ -3,9 +3,9 @@ title: Introduktion och översikt
 description: Introduktion och översikt av innehåll och handel. Experience Manager Commerce integration framework (CIF) rekommenderas av Adobe att integrera och utöka handelstjänster från Adobe Commerce och andra tredjepartslösningar med Experience Cloud.
 thumbnail: introducing-aem-commerce.jpg
 exl-id: 52dad8f9-1812-42a3-8106-92b23f8517cd
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
-source-wordcount: '869'
+source-wordcount: '867'
 ht-degree: 0%
 
 ---
@@ -46,7 +46,7 @@ Med över 200 kunder har CIF etablerat sig som en framgångsrik ingrediens i ett
 
 ## CIF {#cif-benefits}
 
-CIF tillhandahåller färdiga e-handelskomponenter som minskar behovet av anpassad kod och snabbar upp time-to-market för varumärken. Alla kärnkomponenter integreras direkt med Adobe datalager på klientsidan för att utrusta kundprofiler, till exempel den enhetliga profilen. Den här profilen fångar i detalj en besökares beteende, som kan användas för att förutse och personalisera kundresan i realtid.
+CIF tillhandahåller färdiga e-handelskomponenter som minskar behovet av anpassad kod och snabbar upp time-to-market för varumärken. Alla huvudkomponenter är integrerade med Adobe datalager på klientsidan för att ge bättre överblick över kundprofiler, som den enhetliga profilen. Den här profilen fångar i detalj en besökares beteende, som kan användas för att förutse och personalisera kundresan i realtid.
 
 Tillägget CIF ger produktkontext i Experience Manager och innehåller redigeringsverktyg som produktkonsol och produkt-/kategoriväljare som ger marknadsföraren möjlighet att skapa och leverera köpbara upplevelser i Experience Manager utan att vara beroende av utvecklaren. Fördelar:
 

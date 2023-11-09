@@ -8,7 +8,7 @@ discoiquuid: 0d5436c6-1976-496c-b9a7-7dc6e830bb5d
 docset: aem65
 feature: Correspondence Management
 exl-id: 71754e41-45d7-4cc5-ba49-0748bd51c0cf
-source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
+source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
 source-wordcount: '6908'
 ht-degree: 0%
@@ -550,5 +550,5 @@ Om du snabbt vill skapa ett dokumentfragment med egenskaper och innehåll som li
 1. Välj ett eller flera dokumentfragment i listan med dokumentfragment. Gränssnittet visar ikonen Kopiera.
 1. Tryck på Kopiera. Gränssnittet visar ikonen Klistra in. Du kan också välja att gå in i en mapp innan du klistrar in. Olika mappar kan innehålla resurser med samma namn. Mer information om mappar finns i [Mappar och ordna resurser](/help/forms/using/import-export-forms-templates.md#folders-and-organizing-assets).
 1. Tryck på Klistra in. Dialogrutan Klistra in visas. Om du kopierar och klistrar in dokumentfragmenten på samma plats, tilldelas namn och titlar automatiskt till de nya kopiorna av bokstäverna, men du kan redigera bokstävernas namn.
-1. Om det behövs kan du redigera titeln och namnet som du vill spara kopian av dokumentfragmentet med.
+1. Om det behövs redigerar du titeln och namnet som du vill spara kopian av dokumentfragmentet med.
 1. Tryck på Klistra in. Kopian av dokumentfragmentet skapas.

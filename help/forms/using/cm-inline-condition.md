@@ -11,7 +11,7 @@ discoiquuid: bbaba39b-e15a-4143-b6fc-7789fa2917b4
 docset: aem65
 feature: Correspondence Management
 exl-id: bc5d6c5b-c833-4849-aace-e07f8a522b32
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
 source-wordcount: '1657'
 ht-degree: 0%
@@ -117,7 +117,7 @@ I följande exempel visas hur du använder upprepning för att strukturera och �
 
    ![3_repetera dialogruta](assets/3_repeatdialog.png)
 
-1. Välj Radbrytning som avgränsare och tryck, om det behövs, på Lägg till villkor för att skapa en regel. Du kan också använda text som avgränsare och ange vilka tecken som ska användas som avgränsare.
+1. Välj Radbrytning som avgränsare och tryck vid behov på Lägg till villkor för att skapa en regel. Du kan också använda text som avgränsare och ange vilka tecken som ska användas som avgränsare.
 
    Dialogrutan Skapa regel visas.
 

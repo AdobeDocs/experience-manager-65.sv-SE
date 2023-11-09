@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: introduction
 content-type: reference
 exl-id: e6b0f8f7-54b0-4dd6-86ad-5516954c6d90
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
-source-wordcount: '251'
+source-wordcount: '247'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ Ramverket använder tokens för att garantera att kundens begäran är berättig
 
 ### Beroenden {#dependencies}
 
-Alla komponenter som är beroende av `granite.jquery` CSRF Protection Framework kommer automatiskt att dra nytta av beroendet. Om detta inte är fallet för någon av dina komponenter måste du deklarera ett beroende för `granite.csrf.standalone` före ramverket.
+Alla komponenter som är beroende av `granite.jquery` beroendet kan automatiskt dra nytta av CSRF Protection Framework. Om inte måste du deklarera ett beroende för någon av dina komponenter `granite.csrf.standalone` före ramverket.
 
 ### Replikerar krypteringsnyckeln {#replicating-crypto-keys}
 

@@ -12,9 +12,9 @@ discoiquuid: 4b676e7e-191f-4a19-8b8f-fc3e30244b59
 docset: aem65
 feature: Mobile Forms
 exl-id: 85c9315e-1bc8-44a9-937e-af6fc7cf54d1
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
-source-wordcount: '2005'
+source-wordcount: '2003'
 ht-degree: 0%
 
 ---
@@ -116,7 +116,7 @@ Det finns några vanliga frågor och svar om layout, skriptstöd och HTML5-formu
 
 1. Varför är HTML formulär större än PDF forms?
 
-   Svar: Det krävs många mellanliggande datastrukturer och objekt som blankettdom, datatilldom och layoutdom för att kunna återge en XDP-fil till ett HTML-formulär.
+   Svar: Många mellanliggande datastrukturer och objekt som formulärdom, datatilldom och layoutdom krävs för att återge en XDP-fil till ett HTML-formulär.
 
    För PDF forms har Adobe Acrobat en inbyggd XTG-motor för att skapa mellanliggande datastrukturer och objekt. Acrobat hanterar också layout och skript.
 

@@ -7,7 +7,7 @@ geptopics: SG_AEMFORMS/categories/working_with_document_security
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 feature: Document Security
 exl-id: fe132f13-5f9a-4c86-a385-0a0026c812e2
-source-git-commit: e2a3470784beb04c2179958ac6cb98861acfaa71
+source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
 source-wordcount: '10221'
 ht-degree: 0%
@@ -585,7 +585,7 @@ Följande inställningar finns i området Allmänna inställningar på sidan Inb
 
 **SMTP-värd:** SMTP-serverns värdnamn. SMTP-servern hanterar meddelandena om utgående e-post för att registrera och aktivera inbjudna användarkonton.
 
-Om det krävs av SMTP-värden anger du nödvändig information i rutorna SMTP-serverkontonamn och SMTP-serverkontolösenord för att ansluta till SMTP-servern. Vissa organisationer tillämpar inte detta krav. Kontakta systemadministratören om du behöver information.
+Om det behövs av SMTP-värden anger du nödvändig information i rutorna SMTP-serverkontonamn och SMTP-serverkontolösenord för att ansluta till SMTP-servern. Vissa organisationer tillämpar inte detta krav. Kontakta systemadministratören om du behöver information.
 
 **Namn på socketklass för SMTP-server:** Socket-klassnamn för SMTP-servern. Exempel: javax.net.ssl.SSLSocketFactory.
 

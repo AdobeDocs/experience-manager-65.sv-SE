@@ -6,7 +6,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: publish
 docset: aem65
 exl-id: fbf5c7c3-cb01-4fda-8e5d-11d56792d4bf
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
 source-wordcount: '7144'
 ht-degree: 0%
@@ -486,7 +486,7 @@ För en bevakad mappslutpunkt kan användare starta filbearbetningsåtgärder ge
 
 Om ett jobb bara kräver en indatafil kan användaren kopiera filen till roten för den bevakade mappen för slutpunkterna i Bevakade mappar.
 
-Om jobbet innehåller mer än en indatafil måste användaren skapa en mapp utanför hierarkin Bevakade mappar som innehåller alla nödvändiga filer. Den nya mappen bör innehålla indatafilerna (och eventuellt en DDX-fil om processen kräver det). När jobbmappen har skapats kopierar användaren den till indatamappen för den bevakade mappen.
+Om jobbet innehåller mer än en indatafil måste användaren skapa en mapp utanför hierarkin Bevakade mappar som innehåller alla nödvändiga filer. Den nya mappen bör innehålla indatafilerna (och eventuellt en DDX-fil om det behövs av processen). När jobbmappen har skapats kopierar användaren den till indatamappen för den bevakade mappen.
 
 >[!NOTE]
 >

@@ -1,18 +1,14 @@
 ---
 title: Personanpassning
-seo-title: Personalization
 description: Lär dig mer om personalisering i Adobe Experience Manager för att ge användaren en skräddarsydd miljö med dynamiskt innehåll.
-seo-description: Learn about personalization in AEM.
-uuid: 5790a3e0-f0ec-4785-b915-330a10dea30c
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: personalization
 content-type: reference
-discoiquuid: 03ebc494-8baa-4741-b8de-dac5ace743c8
 exl-id: 3a550a33-b54b-4217-b9a6-b5a7971276ee
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
-source-wordcount: '1698'
+source-wordcount: '1696'
 ht-degree: 0%
 
 ---
@@ -115,7 +111,7 @@ Tänk på följande när du använder personalisering:
 
 * Personalisering som uppnås genom att spåra användarens beteende, eller genom att ställa in regler som baseras på användarens profil, måste vara korrekt och logiskt.
 * Det finns inget mer frustrerande för användaren än att ha innehåll som tvingats på eller nekats till dem på grund av den felaktiga logiken i en regel.
-* Därför måste regler vara väl genomtänkta - med användarens krav i förgrunden. Detta kan ta en hel del ansträngning och ska inte underskattas. Att definiera affärsreglerna uppväger ofta den tekniska ansträngningen vid personalisering.
+* Därför måste regler vara väl genomtänkta - med användarens krav i förgrunden. Detta kan ta stora ansträngningar, och ska inte underskattas. Att definiera affärsreglerna uppväger ofta den tekniska ansträngningen vid personalisering.
 
 #### När ska användas {#when-to-use}
 

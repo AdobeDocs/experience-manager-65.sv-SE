@@ -7,7 +7,7 @@ content-type: reference
 topic-tags: site-features
 docset: aem65
 exl-id: e47270e8-bace-4d0f-a088-7269b6356315
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
 source-wordcount: '1519'
 ht-degree: 1%
@@ -66,7 +66,7 @@ Du kan slutföra ett objekt så att arbetsflödet kan fortsätta till nästa ste
 På den här åtgärden kan du ange:
 
 * **Nästa steg**: nästa steg som ska tas; du kan välja från en lista
-* **Kommentar**: om obligatoriskt
+* **Kommentar**: vid behov
 
 Du kan slutföra ett deltagarsteg från:
 
@@ -125,7 +125,7 @@ Vilka användare som är tillgängliga för delegering beror på vem som har til
 På den här åtgärden kan du ange:
 
 * **Användare**: den användare du vill delegera till; du kan välja i en lista
-* **Kommentar**: om obligatoriskt
+* **Kommentar**: vid behov
 
 Du kan delegera ett deltagarsteg från antingen:
 
@@ -175,7 +175,7 @@ Om du upptäcker att ett steg, eller en serie steg, måste upprepas, kan du steg
 På den här åtgärden kan du ange:
 
 * **Tidigare steg**: det steg som du vill returnera till; du kan välja från en lista
-* **Kommentar**: om obligatoriskt
+* **Kommentar**: vid behov
 
 Du kan utföra steg tillbaka för ett deltagarsteg från antingen:
 
@@ -254,7 +254,7 @@ Så här öppnar du ett arbetsflödesobjekt och visar information:
 1. Markera det arbetsflödesobjekt som du vill utföra åtgärden på (tryck/klicka på miniatyrbilden).
 1. Välj **Öppna** för att öppna informationsflikarna.
 
-1. Om det behövs väljer du lämplig åtgärd, anger information och bekräftar med **OK** (eller **Avbryt**).
+1. Välj vid behov lämplig åtgärd, ange eventuella detaljer och bekräfta med **OK** (eller **Avbryt**).
 1. Använd **Spara** eller **Avbryt** för att avsluta.
 
 #### Öppnar arbetsflödesinformation - sidredigeraren {#opening-workflow-details-page-editor}
@@ -264,7 +264,7 @@ Så här öppnar du ett arbetsflödesobjekt och visar information:
 1. Öppna [sida för redigering](/help/sites-authoring/managing-pages.md#opening-a-page-for-editing).
 1. Välj **Visa detaljer** i statusfältet för att öppna informationsflikarna.
 
-1. Om det behövs väljer du lämplig åtgärd, anger information och bekräftar med **OK** (eller **Avbryt**).
+1. Välj vid behov lämplig åtgärd, ange eventuella detaljer och bekräfta med **OK** (eller **Avbryt**).
 1. Använd **Spara** eller **Avbryt** för att avsluta.
 
 ### Visa arbetsflödets nyttolast (flera resurser) {#viewing-the-workflow-payload-multiple-resources}

@@ -7,7 +7,7 @@ topic-tags: personalization
 content-type: reference
 docset: aem65
 exl-id: 1b607a52-f065-4e35-8215-d54df7c8403d
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
 source-wordcount: '2223'
 ht-degree: 0%
@@ -19,9 +19,9 @@ ht-degree: 0%
 I konfigurationen av en ny kampanj ingår följande (allmänna) steg:
 
 1. [Skapa ett varumärke](#creating-a-new-brand) för era kampanjer.
-1. Om det behövs kan du [definiera egenskaperna för ert nya varumärke](#defining-the-properties-for-your-new-brand).
+1. Du kan [definiera egenskaperna för ert nya varumärke](#defining-the-properties-for-your-new-brand).
 1. [Skapa en kampanj](#creating-a-new-campaign) för upplevelser, t.ex. teasersidor eller nyhetsbrev.
-1. Om det behövs kan du [definiera egenskaperna för den nya kampanjen](#defining-the-properties-for-your-new-campaign).
+1. Du kan [definiera egenskaperna för den nya kampanjen](#defining-the-properties-for-your-new-campaign).
 
 Beroende på vilken typ av upplevelser du skapar måste du [skapa en upplevelse](#creating-a-new-experience). Hur upplevelsen ser ut och vilka åtgärder som följer efter att den har skapats beror på vilken typ av upplevelse du vill skapa:
 

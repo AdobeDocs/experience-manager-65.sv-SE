@@ -1,8 +1,8 @@
 ---
 title: Skapa en guide till Headless-konfiguration
-description: Skapa en konfiguration som ett första steg till att komma igång med headless i AEM 6.5.
+description: Skapa en konfiguration som ett första steg för att komma igång med headless i AEM 6.5.
 exl-id: f1df97a1-164f-4ed4-bb63-34caf35ae27c
-source-git-commit: 7355c149500f9e5044c9ff78af208d36ee681f56
+source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
 source-wordcount: '295'
 ht-degree: 1%

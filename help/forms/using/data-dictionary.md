@@ -10,7 +10,7 @@ discoiquuid: a1a0ad6b-023a-4822-9cce-0618657c3f9d
 docset: aem65
 feature: Correspondence Management
 exl-id: aaed75e6-8849-46a8-b986-896ad729adda
-source-git-commit: 10227bcfcfd5a9b0f126fee74dce6ec7842f5e95
+source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
 source-wordcount: '3840'
 ht-degree: 0%
@@ -48,7 +48,7 @@ Du använder Data Dictionary Editor för att skapa ett datalexikon eller du kan 
 
 >[!NOTE]
 >
->Om du har flera bokstäver som kräver liknande element kan du skapa en gemensam dataordlista. En stor dataordlista med ett stort antal element kan dock leda till prestandaproblem när dataordlistan används och elementen läses in, t.ex. bokstäver och dokumentfragment. Om du stöter på prestandaproblem kan du skapa separata dataordlistor för olika bokstäver.
+>Om du har flera bokstäver som kräver liknande element kan du skapa en gemensam dataordlista. En stor dataordlista med ett stort antal element kan dock medföra prestandaproblem när dataordlistan används och elementen läses in, t.ex. bokstäver och dokumentfragment. Om du stöter på prestandaproblem kan du skapa separata dataordlistor för olika bokstäver.
 
 1. Välj **Forms** > **Dataordlistor**.
 1. Tryck **Skapa dataordlista**.
@@ -120,7 +120,7 @@ Om du snabbt vill skapa en eller flera dataordlistor med egenskaper och element 
 1. Välj lämpliga dataordlistor i listan med dataordlistor. Gränssnittet visar ikonen Kopiera.
 1. Tryck på Kopiera. Gränssnittet visar ikonen Klistra in.
 1. Tryck på Klistra in. Dialogrutan Klistra in visas. Systemet tilldelar automatiskt namn och titlar till de nya dataordlistorna.
-1. Om det behövs kan du redigera rubriken och namnet som du vill spara kopian av dataordlistan med.
+1. Om det behövs redigerar du den titel och det namn som du vill spara kopian av dataordlistan med.
 1. Tryck på Klistra in. Kopian av dataordlistan skapas. Nu kan du göra de ändringar som behövs i din nya dataordlista.
 
 ## Se de dokumentfragment eller dokument som refererar till ett Data Dictionary-element {#see-the-document-fragments-or-documents-that-refer-to-a-data-dictionary-element}

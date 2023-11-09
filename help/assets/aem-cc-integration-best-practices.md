@@ -7,9 +7,9 @@ role: User, Admin
 feature: Collaboration,Adobe Asset Link,Desktop App
 exl-id: c7d589a3-1c5f-4ff0-879e-15e1c556f6dc
 hide: true
-source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
+source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
-source-wordcount: '3263'
+source-wordcount: '3260'
 ht-degree: 14%
 
 ---
@@ -199,7 +199,7 @@ Adobe Asset Link har bra stöd för detta:
 * Eftersom resursen finns på Creative Cloud-kontot är den dessutom tillgänglig på andra enheter som användaren kan ha (till exempel kan öppnas eller redigeras i en dedikerad Creative Cloud-mobilapp) och kan delas med andra Creative Cloud-användare i samarbetssyfte.
 * När den kreativa användaren är klar med ändringarna kan han/hon utföra en incheckningsåtgärd för filen i Creative Cloud-programmet, med en valfri kommentar. Motsvarande tillgång i [!DNL Experience Manager] versionshanteras och uppdateras till med den nya binärfilen. [!DNL Experience Manager] -användare som marknadsförare eller LOB-användare har tillgång till större förändringar av tillgångar, eller milstolpar, via [!DNL Experience Manager] användargränssnitt för resurstidslinje.
 
-[!DNL Experience Manager] datorprogrammet har en nätverksresurs för resurser som öppnas i det ursprungliga programmet. Som standard överförs alla ändringar som görs lokalt till [!DNL Experience Manager] automatiskt efter en kort stund. Med en sådan konfiguration överförs ofta sparande under den pågående arbetsfasen till [!DNL Experience Manager] versionshantera, skapa mycket nätverkstrafik och potentiella skalbarhetsproblem - för att inte tala om onödiga versioner i [!DNL Experience Manager].
+[!DNL Experience Manager] datorprogrammet har en nätverksresurs för resurser som öppnas i det ursprungliga programmet. Som standard överförs alla ändringar som görs lokalt till [!DNL Experience Manager] automatiskt efter en kort stund. Med en sådan konfiguration överförs ofta sparande under den pågående arbetsfasen till [!DNL Experience Manager] versionshantera, skapa många nätverkstrafik och potentiella skalbarhetsproblem - för att inte tala om onödiga versioner i [!DNL Experience Manager].
 
 Här rekommenderas att du använder ett alternativ i [!DNL Experience Manager] datorprogram för att stänga av automatiska uppdateringar och överföra ändringar av resurser till [!DNL Experience Manager] manuellt med hjälp av åtgärden för överföring av ändringar i programmets användargränssnitt för resursstatus.
 
