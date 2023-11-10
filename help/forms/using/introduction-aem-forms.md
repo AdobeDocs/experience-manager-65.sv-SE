@@ -11,9 +11,9 @@ discoiquuid: a20383f2-f86a-45bf-a39e-725ee764503b
 docset: aem65
 feature: Adaptive Forms
 exl-id: e5533b4f-93b7-4ea9-a01d-fdf9528652c8
-source-git-commit: e4e2e8b58c0283182b2fbd4262a4ef9b607dac26
+source-git-commit: 6f45b0f8dad44e66570f6436a560060cbed56161
 workflow-type: tm+mt
-source-wordcount: '956'
+source-wordcount: '952'
 ht-degree: 0%
 
 ---
@@ -36,6 +36,10 @@ AEM Forms kombinerar framtagning, hantering och publicering av blanketter med fu
 I stora företag skapas formulär ofta en gång och återanvänds genom att man kopierar till ett innehållshanteringssystem. Det kan vara en stor utmaning att hålla en stor databas med blanketter uppdaterad och kunna upptäckas. AEM har en anpassningsbar Forms Portal som ser till att kunderna hittar och har tillgång till formulär de behöver via både webben och mobila kanaler.
 
 AEM Forms har verktyg för blanketthantering som inte bara gör det möjligt att hantera adaptiva formulär, utan även XFA-formulär, PDF forms och relaterade resurser. Mer information finns i [Introduktion till hantering av formulär](../../forms/using/introduction-managing-forms.md).
+
+>[!NOTE]
+>
+>AEM Forms-funktionen, som Adaptive Forms, finns i [AEM 6.5 QuickStart](/help/sites-deploying/deploy.md), endast för prospektering och utvärdering. För produktion krävs en giltig licens för AEM Forms.
 
 ![AEM](do-not-localize/4th-draft.gif)
 
@@ -124,6 +128,3 @@ Personaliserade dokument som kvitton, kvitton, välkomstpaket och kontoutdrag ka
 
 Effektivt arbetsflöde för skräddarsydd kommunikation
 
->[!NOTE]
->
->Funktionen Adaptive Forms, som finns i AEM 6.5 QuickStart, är avsedd endast för utforsknings- och utvärderingsändamål. För produktion krävs en giltig licens för AEM Forms, eftersom Adaptive Forms-funktionaliteten kräver rätt licensiering.
