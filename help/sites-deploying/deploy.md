@@ -7,9 +7,9 @@ content-type: reference
 topic-tags: deploying
 docset: aem65
 exl-id: 3df0662a-0768-4b56-8b94-c517657b4bd9
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: e4e2e8b58c0283182b2fbd4262a4ef9b607dac26
 workflow-type: tm+mt
-source-wordcount: '1765'
+source-wordcount: '1803'
 ht-degree: 1%
 
 ---
@@ -73,7 +73,7 @@ AEM bygger på denna bas och erbjuder även flera funktioner på programnivå f�
 * **Webbplatser**
 * **Mobila program**
 * **Digitala publikationer**
-* **Forms**
+* **Forms och dokument**
 * **Digital Assets**
 * **Communities**
 * **Online Commerce**
@@ -81,6 +81,10 @@ AEM bygger på denna bas och erbjuder även flera funktioner på programnivå f�
 Slutligen kan kunderna använda dessa byggstenar på infrastruktur- och applikationsnivå för att skapa anpassade lösningar genom att bygga egna applikationer.
 
 AEM server är **Java-baserad** och kan köras på de flesta operativsystem som stöder den plattformen. All kundinteraktion med AEM sker via en **webbläsare**.
+
+>[!NOTE]
+>
+>Funktionen Adaptive Forms, som finns i AEM 6.5 QuickStart, är avsedd endast för utforsknings- och utvärderingsändamål. För produktion krävs en giltig licens för AEM Forms, eftersom Adaptive Forms-funktionaliteten kräver rätt licensiering.
 
 ### Vanliga distributionsscenarier {#typical-deployment-scenarios}
 
