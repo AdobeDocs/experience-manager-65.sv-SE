@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 docset: aem65
 feature: Form Data Model
 exl-id: 7a1d9d57-66f4-4f20-91c2-ace5a71a52f2
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: d39b4b1d921fc93a4871b74469953f2dfc5c470b
 workflow-type: tm+mt
-source-wordcount: '1934'
+source-wordcount: '1935'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ ht-degree: 0%
 
 Med AEM Forms dataintegrering kan du konfigurera och ansluta till olika datakällor. Följande typer stöds inte. Men med liten anpassning kan ni också integrera andra datakällor.
 
-* Relationsdatabaser - MySQL, Microsoft SQL Server, IBM DB2, Oracle RDBMS och Sybase
+* Relationsdatabaser - MySQL, Microsoft SQL Server, IBM DB2, Oracle RDBMS, postgreSQL och Sybase
 * AEM användarprofil
 * RESTful web services
 * SOAP-baserade webbtjänster
