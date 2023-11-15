@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: development-tools
 content-type: reference
 exl-id: efbba312-9fc8-4670-b8f1-d2a86162d075
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 69a249e63e2e6b96ba08f9846baa3e91d42b865f
 workflow-type: tm+mt
-source-wordcount: '2707'
+source-wordcount: '2709'
 ht-degree: 0%
 
 ---
@@ -944,4 +944,4 @@ Din lokala mapp är nu synkroniserad med databasen. Synkroniseringen är dubbelr
 
 >[!NOTE]
 >
->Funktionen för VLT-synkronisering stöder endast enkla filer och mappar men identifierar särskilda serialiserade vault-filer (.content.xml, dialog.xml osv) och ignorerar dem. Det är därför möjligt att använda valvsynkronisering i en standardvärdeutcheckning.
+>Funktionen för VLT-synkronisering stöder endast enkla filer och mappar men identifierar särskilda serialiserade vault-filer (.content.xml, dialog.xml och så vidare) och ignorerar dem. Det är därför möjligt att använda valvsynkronisering i en standardvärdeutcheckning.

@@ -8,9 +8,9 @@ topic-tags: page-authoring
 content-type: reference
 discoiquuid: 6a3c69b5-6df6-4b8f-afa4-7d3e9dd458b5
 exl-id: f4ca5c11-e3ff-4da5-bc4a-fd7e0aefffb5
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 69a249e63e2e6b96ba08f9846baa3e91d42b865f
 workflow-type: tm+mt
-source-wordcount: '219'
+source-wordcount: '221'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ Olika kortkommandon finns i hela AEM. Vissa gäller när du redigerar sidor, and
 
 | Plats | Genväg | Beskrivning |
 |---|---|---|
-| Alla redigeringsfönsterlägen | `Ctrl-Shift-m` | Växla mellan **Förhandsgranska** och de markerade [läge](/help/sites-authoring/author-environment-tools.md#page-modes)</a> (t.ex. **Redigera**, **Layout**, etc)* |
+| Alla redigeringsfönsterlägen | `Ctrl-Shift-m` | Växla mellan **Förhandsgranska** och de markerade [läge](/help/sites-authoring/author-environment-tools.md#page-modes)</a> (till exempel **Redigera**, **Layout** och så vidare) |
 | **Redigera** läge | `Ctrl-z` | [Ångra senaste ändring](/help/sites-authoring/editing-content.md#undoing-and-redoing-page-edits) |
 |  | `Ctrl-y` | [Gör om senaste ändring](/help/sites-authoring/editing-content.md#undoing-and-redoing-page-edits) |
 |  | `Ctrl-Click` | Markera flera stycken |
@@ -41,7 +41,7 @@ Olika kortkommandon finns i hela AEM. Vissa gäller när du redigerar sidor, and
 
 >[!NOTE]
 >
->&amp;ast; När användaren börjar interagera med sidan i förhandsgranskningsläget `Ctrl-Shift-m` kortkommandot är inte längre tillgängligt. Användaren måste klicka på det övre redigeringsfältet eller gå tillbaka till redigeringsläget för genvägen för att bli tillgänglig igen.
+>&amp;ast; När användaren börjar interagera med sidan i förhandsgranskningsläget visas `Ctrl-Shift-m` kortkommandot är inte längre tillgängligt. Användaren måste klicka på det övre redigeringsfältet eller gå tillbaka till redigeringsläget för genvägen för att bli tillgänglig igen.
 
 Du kan även använda olika kortkommandon för skrivbordsanvändare när du använder [konsoler](/help/sites-authoring/keyboard-shortcuts.md).
 

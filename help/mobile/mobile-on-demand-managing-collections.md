@@ -6,9 +6,9 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: authoring-on-demand-services-app
 exl-id: 0b4aa1a4-449a-4882-8f7c-3ceea6ac7f83
-source-git-commit: 451fb472e170a79f9854efadf9be1d4fe0628b94
+source-git-commit: 69a249e63e2e6b96ba08f9846baa3e91d42b865f
 workflow-type: tm+mt
-source-wordcount: '796'
+source-wordcount: '798'
 ht-degree: 0%
 
 ---
@@ -75,7 +75,7 @@ Arbetsflödet för att redigera en samling:
 1. Välj mobilappen i katalogen i Mobile On-Demand.
 1. Välj en AEM källartikel i dialogrutan **Hantera samlingar** platta.
 1. Klicka på den markerade samlingen i listvyn för att öppna den i innehållsredigeraren.
-1. Använd innehållsredigeraren för att dra innehåll i samlingen (manuskript, bilder, text osv.).
+1. Använd innehållsredigeraren för att dra innehåll i samlingen (manuskript, bilder, text och så vidare).
 
 ### Visa och redigera metadata i en samling {#viewing-and-editing-the-metadata-within-a-collection}
 
