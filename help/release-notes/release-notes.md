@@ -2,9 +2,9 @@
 title: Versionsinformation för [!DNL Adobe Experience Manager] 6.5
 description: Hitta versionsinformation, nyheter, installationsanvisningar och en detaljerad ändringslista för [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 4
-source-git-commit: 41ef1b05e4082bb50b93ff6511542ed56a77497c
+source-git-commit: 7c5d45788583cce3403b8beca0c122a9ddf1ca49
 workflow-type: tm+mt
-source-wordcount: '3409'
+source-wordcount: '3589'
 ht-degree: 0%
 
 ---
@@ -41,11 +41,19 @@ Några av de viktigaste funktionerna och förbättringarna i den här versionen 
 
 **Viktiga funktioner**
 
-* A
+* Assets, Dynamic Media - [Stöd för flera undertexter och flerljudspår för videor i Dynamic Media](/help/assets/video.md#about-msma)—Nu kan du enkelt lägga till flera undertexter och flera ljudspår i en primär video. Detta innebär att videoklippen är tillgängliga för alla mottagare världen över. Du kan anpassa en enda publicerad primär video till en global publik på flera språk och följa riktlinjer för tillgänglighet för olika geografiska regioner. Författare kan också hantera undertexter och ljudspår från en enda flik i användargränssnittet.
+
+* Resurser - Från sökresultaten kan du nu navigera till den mapplats som innehåller en resurs så att du kan utföra olika resurshanteringsåtgärder. (ASSETS-23182)
 
 **Viktiga förbättringar**
 
-* S
+* Sites Polaris Picker i Content Fragments har förbättrat prestandan. (SITES-14092)
+
+* Användare av sidredigeraren/bildkomponenten har aktiverat platser för att referera till resurser från Cloud Servicen Fjärrresurser. (SITES-13448, SITES-13433)
+
+* För att snabbt hitta ett projekt i listvyn, där du kan ha många projekt i systemet, har Adobe nu stöd för sortering på serversidan. Projektnoder sorteras på serverdelen baserat på den kolumn som valts av användaren innan de återges i användargränssnittet. (NPR-41027)
+
+* AEM 6.5.18.0 stöder MongoDB 5.0 till 6.0.
 
 **Inaktuell funktion**
 
@@ -57,7 +65,6 @@ Några av de viktigaste funktionerna och förbättringarna i den här versionen 
 
 ### [!DNL Sites]{#sites-6519}
 
-* U
 
 #### Tillgänglighet{#sites-accessibility-6519}
 
