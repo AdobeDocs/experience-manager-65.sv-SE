@@ -6,9 +6,9 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/maintaining_aem_forms
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 exl-id: 1f765de2-1362-4318-9302-c5036e6fa7d6
-source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
+source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
 workflow-type: tm+mt
-source-wordcount: '1022'
+source-wordcount: '1021'
 ht-degree: 0%
 
 ---
@@ -49,7 +49,7 @@ Du kan konfigurera begränsning för Work Manager så att arbetsobjekt schemalä
  <tbody>
   <tr>
    <td><code> adobe.work-manager.queue-refill-interval</code></td>
-   <td><p>Anger det tidsintervall i millisekunder som används i Arbetshanteraren vid sökning efter nya objekt i kön.</p><p>Värdet för det här alternativet är ett heltal. Standardvärdet är <code>1000</code> millisekunder (1 sekund). </p><p>Om volymen för asynkrona anrop är låg kan du öka värdet. Du kan till exempel öka den till något mellan 2 000 och 5 000 (2 till 5 sekunder). </p><p>Om volymen för asynkrona anrop är hög bör standardvärdet vara tillräckligt, men du kan använda ett lägre värde om det behövs. Om du minskar det här värdet för mycket (till exempel under 50, vilket ger en avfrågningsfrekvens på 20 gånger per sekund) genereras en avsevärd belastning på systemet.</p></td>
+   <td><p>Anger det tidsintervall i millisekunder som används i Arbetshanteraren vid sökning efter nya objekt i kön.</p><p>Värdet för det här alternativet är ett heltal. Standardvärdet är <code>1000</code> millisekunder (1 sekund). </p><p>Om volymen för asynkrona anrop är låg kan du öka värdet. Du kan till exempel öka den till något mellan 2 000 och 5 000 (2-5 sekunder). </p><p>Om volymen för asynkrona anrop är hög bör standardvärdet vara tillräckligt, men du kan använda ett lägre värde om det behövs. Om du minskar det här värdet för mycket (till exempel under 50, vilket ger en avfrågningsfrekvens på 20 gånger per sekund) genereras en avsevärd belastning på systemet.</p></td>
   </tr>
   <tr>
    <td><code> adobe.workmanager.debug-mode-enabled</code></td>

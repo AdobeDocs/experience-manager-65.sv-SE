@@ -8,9 +8,9 @@ topic-tags: upgrading
 docset: aem65
 feature: Upgrading
 exl-id: 0dea2b3e-fd7c-4811-a04a-6852ffc1e6d6
-source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
+source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
 workflow-type: tm+mt
-source-wordcount: '2395'
+source-wordcount: '2396'
 ht-degree: 0%
 
 ---
@@ -135,7 +135,7 @@ Läs de tekniska kraven för AEM 6.5 och se till att din nuvarande maskin- och p
 
 #### Överväganden vid innehållsomstrukturering {#content-restructuring-considerations}
 
-AEM har infört ändringar i databasstrukturen som gör uppgraderingarna smidigare. Ändringarna innebär att flytta innehåll från mappen /etc till mappar som /libs, /apps och /content, baserat på om Adobe eller en kund äger innehållet, vilket minskar riskerna för att skriva över innehåll under releaser. Omstruktureringen av databasen har gjorts på ett sådant sätt att inga kodändringar behöver göras vid uppgraderingen till version 6.5, även om det rekommenderas att du läser informationen på [Omstrukturering av lager i AEM](/help/sites-deploying/repository-restructuring.md) när du planerar en uppgradering.
+AEM har infört ändringar i databasstrukturen som gör uppgraderingarna smidigare. Ändringarna innebär att flytta innehåll från mappen /etc till mappar som /libs, /apps och /content, baserat på om Adobe eller en kund äger innehållet, vilket minskar riskerna för att skriva över innehåll under releaser. Omstruktureringen av databasen har gjorts på ett sådant sätt att kodändringar inte krävs vid uppgraderingen av version 6.5, även om det rekommenderas att du läser informationen på [Omstrukturering av lager i AEM](/help/sites-deploying/repository-restructuring.md) när du planerar en uppgradering.
 
 ### Utvärderar uppgraderingskomplexitet {#assessing-upgrade-complexity}
 

@@ -8,9 +8,9 @@ content-type: reference
 docset: aem65
 role: Admin
 exl-id: d3bb6664-6c01-4bcf-840c-072fc491fc99
-source-git-commit: 0a4aca939c564720f63f055e9522e56942eaa128
+source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
 workflow-type: tm+mt
-source-wordcount: '1069'
+source-wordcount: '1068'
 ht-degree: 0%
 
 ---
@@ -79,7 +79,7 @@ Standardvärdet är ADD-verbet för QnA- och forumkomponenter.
   Standardvärdet är 216000 timmar (~24 år).
 
 * **Poängökningstakt**
-Detta anger poängen mellan 0 och poängintervallet, efter vilket tillväxten saktar ned för att begränsa antalet experter.
+Här anges poängen mellan poängintervallet 0, över vilket tillväxten saktar ned för att begränsa antalet experter.
 
   Standardvärdet är 50.
 

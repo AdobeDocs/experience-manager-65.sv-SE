@@ -7,9 +7,9 @@ topic-tags: spa
 content-type: reference
 docset: aem65
 exl-id: 7b34be66-bb61-4697-8cc8-428f7c63a887
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
 workflow-type: tm+mt
-source-wordcount: '1651'
+source-wordcount: '1652'
 ht-degree: 0%
 
 ---
@@ -177,7 +177,7 @@ Ytterligare anpassade väljare kan definieras och användas som en del av en SPA
 
 Om du vill använda redigeraren i stället för en textkomponent som skapats i SPA måste du konfigurera ytterligare.
 
-1. Ange ett attribut (det kan vara valfritt) för behållarelementet som innehåller texten HTML. Om det finns exempelinnehåll i WKND Journal är det en `<div>` -elementet och väljaren som har använts är `data-rte-editelement`.
+1. Ange ett attribut (det kan vara valfritt) för behållarelementet som innehåller texten HTML. Om det finns exempelinnehåll i WKND Journal är det ett `<div>` -elementet och väljaren som har använts är `data-rte-editelement`.
 1. Ange konfigurationen `editElementQuery` på motsvarande AEM `cq:InplaceEditingConfig` som pekar på den väljaren, till exempel `data-rte-editelement`. På så sätt kan redigeraren veta vilket HTML-element som radbryter HTML-texten.
 
 Ett exempel på hur detta görs finns i [Exempelinnehåll för WKND Journal.](https://github.com/adobe/aem-sample-we-retail-journal/pull/16/files)

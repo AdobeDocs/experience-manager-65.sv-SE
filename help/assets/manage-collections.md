@@ -7,9 +7,9 @@ role: User
 feature: Collections,Asset Management
 exl-id: 2117b2de-8024-4aa8-9ce0-68a156928356
 hide: true
-source-git-commit: e2a3470784beb04c2179958ac6cb98861acfaa71
+source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
 workflow-type: tm+mt
-source-wordcount: '2046'
+source-wordcount: '2048'
 ht-degree: 10%
 
 ---
@@ -222,7 +222,7 @@ När du hämtar en samling hämtas hela resurshierarkin i samlingen, inklusive m
 
 ## Skapa kapslade samlingar {#creating-nested-collections}
 
-Du kan lägga till en samling i en annan samling och på så sätt skapa en kapslad samling.
+Du kan lägga till en samling i en annan samling så att du kan skapa en kapslad samling.
 
 1. Välj önskad samling eller grupp med samlingar i konsolen Samlingar och klicka på **[!UICONTROL To Collection]** i verktygsfältet.
 

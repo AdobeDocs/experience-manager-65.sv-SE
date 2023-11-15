@@ -8,7 +8,7 @@ discoiquuid: 0d5436c6-1976-496c-b9a7-7dc6e830bb5d
 docset: aem65
 feature: Correspondence Management
 exl-id: 71754e41-45d7-4cc5-ba49-0748bd51c0cf
-source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
+source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
 workflow-type: tm+mt
 source-wordcount: '6908'
 ht-degree: 0%
@@ -271,7 +271,7 @@ Om du vill ändra ordningen på resurserna i listan trycker du på och håller n
    * **Markerat:** När det här alternativet är markerat är innehållet förvalt i användargränssnittet Skapa korrespondens.
    * **Hoppa över format:** När det här alternativet är markerat hoppar innehållet över punkter och numrering i användargränssnittet Skapa korrespondens. (Det här alternativet är inte tillgängligt för Image-moduler. Mellan Hoppa över format, Stansat och Ignorera listformat kan bara ett av alternativen användas i en modul. Ett av dessa alternativ kan användas för en modul när du väljer Lägg till punkter för en modul.)
    * **Indrag:** Du kan ändra indragsnivån för varje modul/innehåll som är markerat som en del av listan. Indrag anges i Nivåer (med början från noll), så att varje indragsnivå motsvarar en utfyllnad på 36 punkter.
-   * **Sammansatt:** När du väljer det här alternativet används den sammansatta numreringen som en kombination av den yttre (överordnade) listans format och dess eget format. Den sammansatta numreringen för den här kapslade listan baseras på den ordning i vilken den kapslade listan visas i den yttre listan.
+   * **Sammansatt:** När du väljer det här alternativet används den sammansatta numreringen som en kombination av den yttre (överordnade) listans format och dess egna format. Den sammansatta numreringen för den här kapslade listan baseras på den ordning i vilken den kapslade listan visas i den yttre listan.
    * **Ignorera listformat:** Om alternativet Sammansatt numrering är avmarkerat aktiveras alternativet att ignorera listformat. Den här markeringen ignorerar den kapslade listans eget format och numreringen fortsätter från den yttre listan. Därför behandlas modulerna i den kapslade listan som en del av den yttre listan, oavsett vilka format som har angetts i den kapslade listan. Om alternativet Ignorera listformat inte är markerat för en kapslad lista har de moduler som är en del av den kapslade listan ett eget numreringsformat.
    * **Håll ihop med nästa:** Anger sidbrytningen för resurserna i en lista. Om du ställer in egenskapen Behåll med nästa för en resurs i en lista på **På**, behåller resursen och nästa resurs på samma sida. Det innebär att innehållet i den valda resursen och nästa resurs inte bryts över flera sidor.
 

@@ -8,9 +8,9 @@ topic-tags: content
 content-type: reference
 docset: aem65
 exl-id: e8929d7c-9920-4c02-95a9-6f7f7a365203
-source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
+source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
 workflow-type: tm+mt
-source-wordcount: '3568'
+source-wordcount: '3574'
 ht-degree: 0%
 
 ---
@@ -358,7 +358,7 @@ Pakethanteraren kan utföra följande valideringar:
 
 ##### Validera OSGi-paketimporter {#osgi-package-imports}
 
-**Vad är markerat**
+**Vad är markerat?**
 
 Den här valideringen undersöker paketet för alla JAR-filer (OSGi-paket) och extraherar deras `manifest.xml` (som innehåller de versionshanteringsberoenden som OSGi-paketet är beroende av) och verifierar den AEM instansens export av dessa beroenden med rätt versioner.
 
@@ -376,7 +376,7 @@ För att åtgärda fel på grund av att OSGi-paket inte är nöjda måste beroen
 
 ##### Validera övertäckningar {#overlays}
 
-**Vad är markerat**
+**Vad är markerat?**
 
 Valideringen avgör om det paket som installeras innehåller en fil som redan finns i AEM.
 
@@ -400,7 +400,7 @@ För att lösa det här problemet måste du ha kvar övertäckningsfilen i `/app
 
 ##### Validera åtkomstkontrollistor {#acls}
 
-**Vad är markerat**
+**Vad är markerat?**
 
 Valideringen kontrollerar vilka behörigheter som läggs till, hur de hanteras (sammanfoga/ersätt) och om de aktuella behörigheterna påverkas.
 

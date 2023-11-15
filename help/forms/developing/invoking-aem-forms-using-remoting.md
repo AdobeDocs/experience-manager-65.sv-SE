@@ -7,7 +7,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: coding
 role: Developer
 exl-id: 94a48776-f537-4b4e-8d71-51b08e463cba
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
 workflow-type: tm+mt
 source-wordcount: '4593'
 ht-degree: 0%
@@ -311,7 +311,7 @@ Du aktiverar anpassad autentisering i administrationskonsolen genom att ändra a
 >
 I den tidigare versionen av AEM Forms skickade du autentiseringsuppgifter till ett mål genom att ringa `RemoteObject.setCredentials` -metod. The `setCredentials` metoden skickade inte inloggningsuppgifterna till servern förrän komponenten försökte ansluta till servern för första gången. Om komponenten har utfärdat en felhändelse kan du därför inte vara säker på om felet har inträffat på grund av ett autentiseringsfel eller av en annan anledning. The `ChannelSet.login` -metoden ansluter till servern när du anropar den så att du kan hantera ett autentiseringsproblem omedelbart. Du kan fortsätta använda `setCredentials` rekommenderar vi att du använder `ChannelSet.login` -metod.
 
-Eftersom flera destinationer kan använda samma kanaler och motsvarande ChannelSet-objekt, loggas in på ett mål och användaren loggas in på ett annat mål som använder samma kanal eller kanaler. Om två komponenter använder olika inloggningsuppgifter för samma ChannelSet-objekt används de senaste inloggningsuppgifterna. Om flera komponenter använder samma autentiserade ChannelSet-objekt, anropar du `logout` metoden loggar ut alla komponenter från destinationen.
+Eftersom flera destinationer kan använda samma kanaler och motsvarande ChannelSet-objekt, loggar du in på ett mål i användaren till ett annat mål som använder samma kanal eller kanaler. Om två komponenter använder olika inloggningsuppgifter för samma ChannelSet-objekt används de senaste inloggningsuppgifterna. Om flera komponenter använder samma autentiserade ChannelSet-objekt, anropar du `logout` metoden loggar ut alla komponenter från destinationen.
 
 I följande exempel används `ChannelSet.login` och `ChannelSet.logout` metoder med en RemoteObject-kontroll. Programmet utför följande åtgärder:
 

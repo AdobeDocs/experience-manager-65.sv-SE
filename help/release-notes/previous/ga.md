@@ -2,9 +2,9 @@
 title: Allmän versionsinformation för [!DNL Adobe Experience Manager] 6.5
 description: "[!DNL Adobe Experience Manager] 6.5 som beskriver versionsinformation, nyheter, hur man installerar och detaljerade ändringslistor."
 exl-id: b3d4a527-44ca-4eb6-b393-f3e8117cf1a6
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
 workflow-type: tm+mt
-source-wordcount: '4675'
+source-wordcount: '4676'
 ht-degree: 1%
 
 ---
@@ -187,7 +187,7 @@ Mer information om ändringar i AEM Screens finns i versionsinformationen i [AEM
 
 * The [Referens](/help/sites-authoring/author-environment-tools.md#references) har ett nytt avsnitt som visar interna länkar som pekar mot den markerade sidan. Det här är användbart när du planerar att ta en sida offline eller ta bort för att se vilka sidor som behöver justeras innan du tar dem offline.
 * The [listvy](/help/sites-authoring/basic-handling.md#list-view) har en ny arbetsflödeskolumn som visar status när sidan är i ett arbetsflöde.
-* I [sidegenskaper](/help/sites-authoring/editing-page-properties.md)kan du nu bläddra efter befintliga resurser när du tilldelar en miniatyrbild till sidan (fliken Miniatyrbilder).
+* I [sidegenskaper](/help/sites-authoring/editing-page-properties.md)går det nu att bläddra efter befintliga resurser när du tilldelar en miniatyrbild till sidan (fliken Miniatyrbilder).
 
 #### Page Editor {#page-editor}
 

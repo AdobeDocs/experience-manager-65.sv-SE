@@ -2,9 +2,9 @@
 title: Så här modellerar du ditt innehåll
 description: I den här delen av AEM Headless Developer Journey lär du dig att modellera ditt innehåll för AEM Headless-leverans med hjälp av Content Modeling med Content Fragment Models och Content Fragments.
 exl-id: f75b433f-5a81-4259-a9f5-b58954b87970
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
 workflow-type: tm+mt
-source-wordcount: '1809'
+source-wordcount: '1810'
 ht-degree: 0%
 
 ---

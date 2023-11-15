@@ -1,18 +1,14 @@
 ---
 title: Grunderna för communitykomponenter
-seo-title: Communities Components Basics
 description: Lägg till communityfunktioner AEM webbplatser i redigeringsläge och konfigurera komponenter
-seo-description: Add Communities features to AEM sites in edit mode and configure components
-uuid: c017a7c5-40d1-4592-9317-96fd727dac86
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: authoring
 content-type: reference
-discoiquuid: 21714581-7645-4b47-a9b0-9f1424013240
 exl-id: eb5ce76a-bf28-4540-bc2d-3b5ecb8286f2
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
 workflow-type: tm+mt
-source-wordcount: '359'
+source-wordcount: '360'
 ht-degree: 1%
 
 ---
@@ -55,7 +51,7 @@ De valda komponenterna är nu tillgängliga i komponentwebbläsaren:
 
 [Bibliotek på klientsidan](../../help/sites-developing/clientlibs.md) (clientlibs) krävs för att en komponent ska fungera korrekt (JavaScript) och formatera (CSS).
 
-När du lägger till en webbgruppskomponent på en sida, om resultatet är ett fel eller ett oväntat utseende, är det första du ska försöka att lägga till de nödvändiga klientlibs för webbkomponenterna. Mer information finns i [Clientlibs for Communities Components](clientlibs.md).
+När du lägger till en webbgruppskomponent på en sida och resultatet är ett fel eller ett oväntat utseende, är det första du bör försöka att lägga till nödvändiga klientlibs för webbkomponenterna. Mer information finns i [Clientlibs for Communities Components](clientlibs.md).
 
 ### Exempel: Inledande granskningar utan klientbibliotek.. {#example-initially-placed-reviews-without-client-libraries}
 

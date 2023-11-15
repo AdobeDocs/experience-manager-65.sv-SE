@@ -10,7 +10,7 @@ role: User, Admin
 mini-toc-levels: 4
 exl-id: badd0f5c-2eb7-430d-ad77-fa79c4ff025a
 feature: Configuration,Scene7 Mode
-source-git-commit: 78842fb50d5aa5e5c22801389713cb3c69cac4bf
+source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
 workflow-type: tm+mt
 source-wordcount: '6102'
 ht-degree: 2%
@@ -664,7 +664,7 @@ Kön för Bevilja övergång används för **[!UICONTROL DAM Update Asset]** arb
 
    Du kan öka **[!UICONTROL Maximum Parallel Jobs]** för att ge adekvat stöd för omfattande filöverföring till Dynamic Media. Det exakta värdet beror på maskinvarukapaciteten. I vissa scenarier, d.v.s. en inledande migrering eller en massöverföring som görs en gång, kan du använda ett stort värde. Tänk dock på att användning av ett stort värde (till exempel två gånger antalet kärnor) kan ha negativa effekter på andra samtidiga aktiviteter. Testa och justera värdet utifrån ditt specifika användningsfall.
 
-<!--    By default, the maximum number of parallel jobs depends on the number of available CPU cores. For example, on a 4-core server, it assigns 2 worker threads. (A value between 0.0 and 1.0 is ratio based, or any numbers greater than 1 will assign the number of worker threads.)
+<!--    By default, the maximum number of parallel jobs depends on the number of available CPU cores. For example, on a 4-core server, it assigns 2 worker threads. (A value between 0.0&ndash;1.0 is ratio based, or any numbers greater than 1 will assign the number of worker threads.)
 
    Adobe recommends that 32 **[!UICONTROL Maximum Parallel Jobs]** be configured to adequately support heavy upload of files to Dynamic Media Classic (Scene7). -->
 

@@ -7,7 +7,7 @@ topic-tags: introduction
 content-type: reference
 docset: aem65
 exl-id: 408ac30c-60ab-4d6c-855c-d544af8d5cf9
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
 workflow-type: tm+mt
 source-wordcount: '2853'
 ht-degree: 0%
@@ -36,7 +36,7 @@ Standardsättet att inkludera ett klientbibliotek (dvs. en JS- eller CSS-fil) HT
 
 Detta tillvägagångssätt fungerar i AEM, men kan leda till problem när sidor och deras beståndsdelar blir komplexa. I sådana fall finns det en risk för att flera exemplar av samma JS-bibliotek kan ingå i den slutliga utskriften för HTML. För att undvika detta och för att tillåta logisk organisering av klientbibliotek AEM använder **biblioteksmappar på klientsidan**.
 
-En biblioteksmapp på klientsidan är en databasnod av typen `cq:ClientLibraryFolder`. Det är en definition i [CND-notation](https://jackrabbit.apache.org/node-type-notation.html) är
+En biblioteksmapp på klientsidan är en databasnod av typen `cq:ClientLibraryFolder`. Dess definition i [CND-notation](https://jackrabbit.apache.org/node-type-notation.html) är
 
 ```shell
 [cq:ClientLibraryFolder] > sling:Folder

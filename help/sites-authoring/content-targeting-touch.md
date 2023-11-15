@@ -7,9 +7,9 @@ content-type: reference
 topic-tags: personalization
 docset: aem65
 exl-id: edde225d-0be7-4306-8dda-d18d46fae977
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
 workflow-type: tm+mt
-source-wordcount: '5383'
+source-wordcount: '5374'
 ht-degree: 5%
 
 ---
@@ -38,7 +38,7 @@ De aktiviteter och upplevelser som du ser i målläget speglar de [Aktiverar kon
 
 >[!NOTE]
 >
->När du skapar en kampanj i Adobe Target tilldelas den en egenskap som kallas `thirdPartyId`till varje kampanj. När du tar bort kampanjen i Adobe Target tas inte thirdPartyId bort. Du kan inte återanvända `thirdPartyId` för kampanjer av olika typer (AB, XT) och kan inte tas bort manuellt. För att undvika detta bör du namnge varje kampanj med ett unikt namn. Kampanjnamn kan därför inte återanvändas i olika kampanjtyper.
+>När du skapar en kampanj i Adobe Target tilldelas den en egenskap som kallas `thirdPartyId`till varje kampanj. När du tar bort kampanjen i Adobe Target tas inte thirdPartyId bort. Du kan inte återanvända `thirdPartyId` för kampanjer av olika typer (AB, XT) och kan inte tas bort manuellt. För att undvika det här problemet kan du namnge varje kampanj med ett unikt namn. Kampanjnamn kan inte återanvändas i olika kampanjtyper.
 >
 >Om du använder samma namn i samma kampanjtyp skriver du över den befintliga kampanjen.
 >
@@ -79,7 +79,7 @@ Så här lägger du till en aktivitet:
 
    >[!NOTE]
    >
-   >Vi rekommenderar [skapa varumärken via aktivitetskonsolen](/help/sites-authoring/activitylib.md#creating-a-brand-using-the-activities-console).
+   >Adobe rekommenderar att du [skapa varumärken via aktivitetskonsolen](/help/sites-authoring/activitylib.md#creating-a-brand-using-the-activities-console).
    >
    >
    >Om du skapar ett varumärke på något annat sätt måste du se till att noden `/campaigns/<brand>/master` finns eller ett fel uppstår när du försöker skapa en aktivitet.
@@ -140,7 +140,7 @@ Efter dig [starta målinriktningsprocessen](/help/sites-authoring/content-target
 
 >[!CAUTION]
 >
->Var försiktig när du inaktiverar mål för en komponent som redan har angetts som mål i författarinstansen. Aktiviteten raderas automatiskt även från publiceringsinstansen.
+>Var försiktig när du inaktiverar mål för en komponent som redan har angetts som mål i författarinstansen. Aktiviteten tas automatiskt bort från publiceringsinstansen också.
 
 >[!NOTE]
 >
@@ -402,11 +402,11 @@ Publiken visas till vänster i mappningsdiagrammet, och upplevelserna visas till
 
 ![chlimage_1-28](assets/chlimage_1-28.png)
 
-Definiera en målgrupp med ett segment. Molnkonfigurationen för sidinställningarna avgör vilka segment som är tillgängliga för dig. När sidan inte är kopplad till en molnkonfiguration från Adobe Target finns AEM segment tillgängliga för att definiera målgrupper. När sidan är kopplad till en Adobe Target-molnkonfiguration använder du målsegment.
+Definiera en målgrupp med ett segment. Molnkonfigurationen för sidan avgör vilka segment som är tillgängliga för dig. När sidan inte är kopplad till en molnkonfiguration från Adobe Target finns AEM segment tillgängliga för att definiera målgrupper. När sidan är kopplad till en Adobe Target-molnkonfiguration använder du målsegment.
 
 Information om målmotorer finns på [Målmotor](/help/sites-authoring/personalization.md#targeting-engine).
 
-En målgrupp får inte användas av mer än en upplevelse. En varningssymbol visas bredvid en upplevelse när den kopplas till en målgrupp som kopplas till en annan upplevelse.
+Använd inte en publik mer än en upplevelse. En varningssymbol visas bredvid en upplevelse när den kopplas till en målgrupp som kopplas till en annan upplevelse.
 
 ![Varningssymbol när den mappas till en publik som mappas till en annan upplevelse](do-not-localize/chlimage_1-6.png)
 
@@ -517,7 +517,7 @@ Använd de avancerade inställningarna för att avgöra vad som händer **efter*
     </ul> </td>
   </tr>
   <tr>
-   <td><strong>Ökningsantal, återinträde av användare och fält</strong></td>
+   <td><strong>Ökningsantal, frigör återinträde av användare och fält</strong></td>
    <td>Bestäm vad användaren ser i stället för aktivitetsinnehållet:
     <ul>
      <li>Samma upplevelse, utan spårning</li>

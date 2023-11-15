@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: Security
 content-type: reference
 exl-id: e24d815c-83e2-4639-8273-b4c0a6bb008a
-source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
+source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
 workflow-type: tm+mt
-source-wordcount: '791'
+source-wordcount: '790'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 Som standard använder AEM hanteraren för tokenautentisering för att autentisera varje begäran. För att autentiseringsbegäranden ska kunna hanteras måste hanteraren för tokenautentisering ha åtkomst till databasen för varje begäran. Detta inträffar eftersom cookies används för att upprätthålla autentiseringstillståndet. Logiskt sett måste tillståndet sparas i databasen för att efterföljande begäranden ska kunna valideras. Detta innebär att autentiseringsmekanismen är tillståndskänslig.
 
-Detta är särskilt viktigt för horisontell skalbarhet. I en konfiguration med flera instanser som den publiceringsgrupp som visas nedan kan belastningsutjämning inte uppnås på ett optimalt sätt. Med tillståndskänslig autentisering är det beständiga autentiseringstillståndet bara tillgängligt för den instans där användaren först autentiseras.
+Detta är särskilt viktigt för horisontell skalbarhet. I en konfiguration med flera instanser, som den publiceringsgrupp som visas nedan, kan belastningsutjämning inte uppnås på ett optimalt sätt. Med tillståndskänslig autentisering är det beständiga autentiseringstillståndet bara tillgängligt för den instans där användaren först autentiseras.
 
 ![chlimage_1-33](assets/chlimage_1-33a.png)
 

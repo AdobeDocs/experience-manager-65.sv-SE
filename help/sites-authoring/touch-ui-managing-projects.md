@@ -1,18 +1,14 @@
 ---
 title: Hantera projekt
-seo-title: Managing Projects
 description: Med projekt kan du ordna ditt projekt genom att gruppera resurser i en enhet som kan nås och hanteras i projektkonsolen
-seo-description: Projects lets you organize your project by grouping resources into one entity which can be acessed and managed intheProjects console
-uuid: ac937582-181f-429b-9404-3c71d1241495
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: projects
 content-type: reference
-discoiquuid: fb354c72-debb-4fb6-9ccf-56ff5785c3ae
 exl-id: 62586c8e-dab4-4be9-a44a-2c072effe3c0
-source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
+source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
 workflow-type: tm+mt
-source-wordcount: '980'
+source-wordcount: '981'
 ht-degree: 0%
 
 ---
@@ -135,7 +131,7 @@ Nu kan du skapa projekt i mappen. Du kan skapa flera mappar och även kapsla map
 
 ### Inaktiverar projekt {#making-projects-inactive-or-active}
 
-Du kan markera ett projekt som inaktivt om det är färdigt, men du vill ändå behålla informationen om projektet. [Inaktiva projekt visas nu](#viewing-active-inactive-projects) som standard i **Projekt** konsol.
+Du kan markera ett projekt som inaktivt om det är färdigt men du vill behålla informationen om projektet. [Inaktiva projekt visas nu](#viewing-active-inactive-projects) som standard i **Projekt** konsol.
 
 Följ de här stegen för att göra ett projekt inaktivt.
 

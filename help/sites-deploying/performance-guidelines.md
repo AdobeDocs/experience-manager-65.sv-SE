@@ -11,9 +11,9 @@ topic-tags: configuring
 discoiquuid: 9ccbc39e-aea7-455e-8639-9193abc1552f
 feature: Configuring
 exl-id: 5a305a5b-0c3d-413b-88c1-1f5abf7e1579
-source-git-commit: 9defa6d1843007e9375d839f72f6993c691a37c0
+source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
 workflow-type: tm+mt
-source-wordcount: '2913'
+source-wordcount: '2914'
 ht-degree: 1%
 
 ---
@@ -56,7 +56,7 @@ Illustrator below are the deployment options available for AEM (scroll to view a
    <td><p>Segment</p> </td>
    <td><p>Egenskap</p> </td>
    <td><p>Apache</p> </td>
-   <td><p>Edge</p> </td>
+   <td><p>Kant</p> </td>
    <td><p>Mål</p> </td>
   </tr>
   <tr>
@@ -132,7 +132,7 @@ Illustrator below are the deployment options available for AEM (scroll to view a
   <tr>
    <td><p>Handel</p> </td>
    <td><p>MSRP</p> </td>
-   <td><p>Apple OS</p> </td>
+   <td><p>APPLE OS</p> </td>
    <td><p> </p> </td>
    <td><p> </p> </td>
    <td><p> </p> </td>
@@ -266,33 +266,33 @@ Illustrator below are the deployment options available for AEM (scroll to view a
 
 Använd riktlinjerna för prestanda i följande situationer:
 
-* **Första gången**: När du planerar att distribuera AEM Sites eller Assets för första gången är det viktigt att du förstår vilka alternativ som finns. Särskilt när du konfigurerar Micro Kernel, Node Store och Data Store (jämfört med standardinställningarna). Om du till exempel ändrar standardinställningarna för datalagret för tarMK till fildatalagret.
+* **Första gången du distribuerar**: När du planerar att distribuera AEM Sites eller Assets för första gången är det viktigt att du förstår vilka alternativ som finns. Särskilt när du konfigurerar Micro Kernel, Node Store och Data Store (jämfört med standardinställningarna). Om du till exempel ändrar standardinställningarna för datalagret för tarMK till fildatalagret.
 * **Uppgradera till en ny version**: När du uppgraderar till en ny version är det viktigt att du förstår prestandaskillnaderna jämfört med körningsmiljön. Exempel: uppgradering från AEM 6.1 till 6.2 eller från AEM 6.0 CRX2 till 6.2 OAK.
 * **Svarstiden är långsam**: När den valda Nodestore-arkitekturen inte uppfyller dina krav är det viktigt att förstå prestandaskillnaderna jämfört med andra topologialternativ. Du kan till exempel distribuera tarMK i stället för MongoMK, eller använda en File Data Store i stället för ett Amazon S3- eller Microsoft® Azure-datalager.
-* **Lägga till fler författare**: När den rekommenderade TjäraMK-topologin inte uppfyller prestandakraven och om redigeringsnoden har fått den högsta tillgängliga kapaciteten, bör du förstå prestandaskillnaderna. Jämför med att använda MongoMK med tre eller fler Author-noder. Du kan till exempel distribuera MongoMK i stället för tarMK.
-* **Lägga till mer innehåll**: När den rekommenderade datalagerarkitekturen inte uppfyller dina krav är det viktigt att förstå prestandaskillnaderna jämfört med andra datalageralternativ. Exempel: med Amazon S3 eller Microsoft® Azure Data Store i stället för ett File Data Store.
+* **Lägga till fler författare**: Om den rekommenderade TjärMK-topologin inte uppfyller prestandakraven och om redigeringsnoden har nått den maximala tillgängliga kapaciteten, bör du förstå prestandaskillnaderna. Jämför med att använda MongoMK med tre eller fler Author-noder. Du kan till exempel distribuera MongoMK i stället för tarMK.
+* **Lägga till mer innehåll**: När den rekommenderade datalagerarkitekturen inte uppfyller dina krav är det viktigt att förstå prestandaskillnaderna jämfört med andra datalageralternativ. Exempel: använda Amazon S3 eller Microsoft® Azure Data Store i stället för ett File Data Store.
 
 ## Introduktion {#introduction}
 
 I det här kapitlet ges en allmän översikt över den AEM arkitekturen och dess viktigaste komponenter. Den innehåller också riktlinjer för utveckling och beskriver de testscenarier som används i prestandatesterna TjärMK och MongoMK.
 
-### AEM {#the-aem-platform}
+### AEM Platform {#the-aem-platform}
 
 Den AEM plattformen består av följande komponenter:
 
 ![chlimage_1](assets/chlimage_1a.png)
 
-Mer information om AEM finns i [Vad är AEM?](/help/sites-deploying/deploy.md#what-is-aem).
+Mer information om den AEM plattformen finns i [Vad är AEM](/help/sites-deploying/deploy.md#what-is-aem).
 
-### Den AEM arkitekturen {#the-aem-architecture}
+### AEM arkitektur {#the-aem-architecture}
 
-Det finns tre viktiga byggstenar för en AEM driftsättning. The **Författarinstans** som används av innehållsförfattare, redigerare och godkännare för att skapa och granska innehåll. När innehållet godkänns publiceras det till en andra instanstyp som heter **Publiceringsinstans** från vilken slutanvändarna har åtkomst till den. Den tredje byggstenen är **Dispatcher** som är en modul som hanterar cachelagring och URL-filtrering och som är installerad på webbservern. Mer information om den AEM arkitekturen finns i [Vanliga distributionsscenarier](/help/sites-deploying/deploy.md#typical-deployment-scenarios).
+Det finns tre viktiga byggstenar för en AEM. The **Författarinstans** som används av innehållsförfattare, redigerare och godkännare för att skapa och granska innehåll. När innehållet godkänns publiceras det till en andra instanstyp som heter **Publiceringsinstans** från vilken slutanvändarna har åtkomst till den. Den tredje byggstenen är **Dispatcher** som är en modul som hanterar cachelagring och URL-filtrering och som är installerad på webbservern. Mer information om den AEM arkitekturen finns i [Vanliga distributionsscenarier](/help/sites-deploying/deploy.md#typical-deployment-scenarios).
 
 ![chlimage_1-1](assets/chlimage_1-1a.png)
 
 ### Micro Kernels {#micro-kernels}
 
-Micro Kernels fungerar som beständiga chefer i AEM. Det finns tre typer av Micro Kernels som används med AEM: TARMK, MongoDB och Relational Database (med begränsat stöd). Vilken som passar bäst beror på instansens syfte och vilken distributionstyp du överväger. Mer information om Micro Kernels finns i [Rekommenderade distributioner](/help/sites-deploying/recommended-deploys.md) sida.
+Micro Kernels fungerar som beständiga chefer i AEM. Det finns tre typer av mikrokärnor som används med AEM: tarMK, MongoDB och Relational Database (med begränsat stöd). Vilken som passar bäst beror på instansens syfte och vilken distributionstyp du överväger. Mer information om Micro Kernels finns i [Rekommenderade distributioner](/help/sites-deploying/recommended-deploys.md) sida.
 
 ![chlimage_1-2](assets/chlimage_1-2a.png)
 
@@ -318,19 +318,19 @@ Mer information om tillgängliga konfigurationsalternativ finns i [Konfigurera n
 
 >[!NOTE]
 >
->Adobe rekommenderar att du väljer alternativet att distribuera AEM på Azure eller Amazon Web Services (AWS) med Adobes hanterade tjänster. Kunderna drar nytta av ett team som har erfarenhet och kompetens av att driftsätta och AEM i dessa molnmiljöer. Se [ytterligare dokumentation om Adobe Managed Services](https://business.adobe.com/products/experience-manager/managed-services.html?aemClk=t).
+>Adobe rekommenderar att du väljer alternativet att distribuera AEM på Azure eller Amazon Web Services (AWS) med Adobe Managed Services. Kunderna drar nytta av ett team som har erfarenhet och kompetens av att driftsätta och AEM i dessa molnmiljöer. Se [ytterligare dokumentation om Adobe Managed Services](https://business.adobe.com/products/experience-manager/managed-services.html?aemClk=t).
 >
->Adobe rekommenderar att du arbetar direkt med molnleverantören för rekommendationer om hur du ska distribuera AEM på Azure eller AWS utanför Adobe Managed Services. Eller samarbeta med en av Adobe som stöder driftsättningen av AEM i molnmiljön. Den valda molnleverantören eller partnern ansvarar för storleksspecifikationerna, designen och implementeringen av den arkitektur de stöder för att uppfylla just dina krav på prestanda, belastning, skalbarhet och säkerhet.
->Se även [tekniska krav](/help/sites-deploying/technical-requirements.md#supported-platforms) sida.
+>Adobe rekommenderar att du arbetar direkt med molnleverantören för att få rekommendationer om hur du ska distribuera AEM på Azure eller AWS utanför Adobe Managed Services. Eller samarbeta med en av Adobe som stöder driftsättningen av AEM i molnmiljön. Den valda molnleverantören eller partnern ansvarar för storleksspecifikationerna, designen och implementeringen av den arkitektur de stöder för att uppfylla just dina krav på prestanda, belastning, skalbarhet och säkerhet.
 >
->
->
+>>Se även [tekniska krav](/help/sites-deploying/technical-requirements.md#supported-platforms) sida.
+
 ### Sökning {#search-features}
 
 I det här avsnittet finns de anpassade indexproviders som används med AEM. Mer information om indexering finns i [Fråga och indexering](/help/sites-deploying/queries-and-indexing.md).
 
 >[!NOTE]
-För de flesta installationer rekommenderar Adobe att du använder Lucene-index. Använd Solr endast för skalbarhet vid specialiserad och komplex driftsättning.
+>
+>För de flesta installationer rekommenderar Adobe att du använder Lucene-index. Använd Solr endast för skalbarhet vid specialiserad och komplex driftsättning.
 
 ![chlimage_1-4](assets/chlimage_1-4a.png)
 
@@ -341,20 +341,20 @@ Utveckla för AEM **prestanda och skalbarhet**. Här följer några tips som du 
 **GÖR**
 
 * Separera presentation, logik och innehåll
-* Använd befintliga AEM-API:er (t.ex.: Sling) och verktyg (t.ex. replikering)
+* Använd befintliga AEM-API:er (t.ex. Sling) och verktyg (t.ex. replikering)
 * Utveckla i rätt sammanhang
 * Utveckla för optimal tillgänglighet
-* Minimera antalet besparingar (t.ex.: genom att använda tillfälliga arbetsflöden)
+* Minimera antalet besparingar (t.ex. genom att använda tillfälliga arbetsflöden)
 * Kontrollera att alla HTTP-slutpunkter är RESTful
 * Begränsa omfattningen av JCR-observation
-* Var uppmärksam på asynkron tråd
+* Tänk på asynkron tråd
 
-**INTE**
+**GÖR INTE**
 
 * Använd inte JCR-API:er direkt om du kan
 * Ändra inte /libs, utan använd övertäckningar
 * Använd inte frågor där det är möjligt
-* Använd inte Sling Bindings för att få OSGi-tjänster i Java™-kod, utan använd istället:
+* Använd inte Sling Bindings för att få tillgång till OSGi-tjänster i Java™-kod, utan använd istället:
 
    * @Referens i en DS-komponent
    * @Injicera i en körningsmodell
@@ -368,7 +368,8 @@ Mer information om hur du utvecklar AEM finns i [Utveckling - Grunderna](/help/s
 ### Benchmark-scenarier {#benchmark-scenarios}
 
 >[!NOTE]
-Alla test som visas på den här sidan har utförts i laboratoriemiljö.
+>
+>Alla test som visas på den här sidan har utförts i laboratoriemiljö.
 
 De testscenarier som beskrivs nedan används för prestandatestavsnitten i kapitlen TjärMK, MongoMk och TjärMK jämfört med MongoMk. Om du vill se vilket scenario som användes för ett visst test av prestandatestet läser du avsnittet Scenario i [Tekniska specifikationer](/help/sites-deploying/performance-guidelines.md#tarmk-performance-benchmark) tabell.
 
@@ -377,14 +378,14 @@ De testscenarier som beskrivs nedan används för prestandatestavsnitten i kapit
 AEM Assets:
 
 * Användarinteraktioner: Bläddra bland resurser/Sök resurser/Hämta resurs/Läs resursmetadata/Uppdatera resursmetadata/Överför resurs/Kör arbetsflöde för överföring av resurs
-* Körningsläge: samtidiga användare, enstaka interaktion per användare
+* Körningsläge: samtidiga användare, en interaktion per användare
 
 **Scenario med blandade produkter**
 
 AEM Sites + Assets:
 
-* Webbplatsens användarinteraktioner: Läs artikelsidan / Läs sidan / Skapa stycke / Redigera stycke / Skapa innehållssida / Aktivera innehållssida / Författarsökning
-* Resursens användarinteraktioner: Bläddra bland resurser/Sök resurser/Hämta resurs/Läs resursmetadata/Uppdatera resursmetadata/Överför resurs/Kör arbetsflöde för överföring av resurs
+* Webbplatsanvändarinteraktioner: Läs artikelsida / Läs sida / Skapa stycke / Redigera stycke / Skapa innehållssida / Aktivera innehållssida / Författarsökning
+* Resurser, användarinteraktioner: Bläddra bland resurser/Sök resurser/Hämta resurs/Läs resursmetadata/Uppdatera resursmetadata/Överför resurs/Kör arbetsflöde för överföring av resurs
 * Körningsläge: samtidiga användare, blandade interaktioner per användare
 
 **Vertikalt scenario för användning**
@@ -398,14 +399,15 @@ Media:
 
 I det här kapitlet finns allmänna riktlinjer för prestanda för TjäraMK som specificerar minimikraven för arkitektur och inställningskonfigurationen. Riktmärkestester tillhandahålls också för ytterligare förtydliganden.
 
-Adobe rekommenderar att TARMK är standardbeständighetstekniken som används av kunder i alla distributionsscenarier, både för AEM Author- och Publish-instanserna.
+Adobe rekommenderar att TARMK är standardbeständighetstekniken som används av kunder i alla distributionsscenarier, både för AEM Author och Publish.
 
 Mer information om tarMK finns i [Distributionsscenarier](/help/sites-deploying/recommended-deploys.md#deployment-scenarios) och [Tjärlagring](/help/sites-deploying/storage-elements-in-aem-6.md#tar-storage).
 
 ### TaMK - riktlinjer för minimiarkitektur {#tarmk-minimum-architecture-guidelines}
 
 >[!NOTE]
-De riktlinjer för minimiarkitektur som presenteras nedan gäller produktionsmiljöer och stora trafikplatser. Dessa riktlinjer **not** den [minimispecifikationer](/help/sites-deploying/technical-requirements.md#prerequisites) att köra AEM.
+>
+>De riktlinjer för minimiarkitektur som presenteras nedan gäller produktionsmiljöer och stora trafikplatser. Dessa riktlinjer **not** den [minimispecifikationer](/help/sites-deploying/technical-requirements.md#prerequisites) att köra AEM.
 
 För att få goda prestanda när du använder tarMK bör du utgå från följande arkitektur:
 
@@ -416,7 +418,8 @@ För att få goda prestanda när du använder tarMK bör du utgå från följand
 Nedan visas riktlinjerna för arkitektur för webbplatser AEM AEM Assets.
 
 >[!NOTE]
-Binärfri replikering ska vara aktiverad **PÅ** om fildatalagret delas.
+>
+>Binärfri replikering ska vara aktiverad **PÅ** om fildatalagret delas.
 
 **Riktlinjer för tjärarkitektur för AEM Sites**
 
@@ -489,9 +492,9 @@ För bästa prestanda bör du följa riktlinjerna nedan. Instruktioner om hur du
 
 Testerna utfördes på följande specifikationer:
 
-|  | **Författarnod** |
+| | **Författarnod** |
 |---|---|
-| Server | Maskinvara av oädel metall (HP) |
+| Server | Maskinvara av barrmetall (HP) |
 | Operativsystem | Red Hat® Linux® |
 | Processor/kärnor | Processorn Intel(R) Xeon(R) E5-2407 @2,40 GHz, 8 kärnor |
 | RAM | 32 GB |
@@ -506,7 +509,8 @@ Testerna utfördes på följande specifikationer:
 #### Resultat av prestandatest {#performance-benchmark-results}
 
 >[!NOTE]
-Siffrorna nedan har normaliserats till 1 som baslinje och är inte de faktiska flödenumren.
+>
+>Siffrorna nedan har normaliserats till 1 som baslinje och är inte de faktiska flödenumren.
 
 ![chlimage_1-7](assets/chlimage_1-7a.png) ![chlimage_1-8](assets/chlimage_1-8a.png)
 
@@ -526,10 +530,12 @@ För att få bra prestanda när du använder MongoMK bör du utgå från följan
 * Två utskickare
 
 >[!NOTE]
-I produktionsmiljöer används MongoDB alltid som en replikuppsättning med en primär och två sekundära. Läsningar och skrivningar går till huvudlistan och läsningar kan gå till de sekundära. Om lagring inte är tillgängligt kan en av de sekundära ersättas med en skiljedomare, men MongoDB-replikuppsättningar måste alltid bestå av ett ojämnt antal instanser.
+>
+>I produktionsmiljöer används MongoDB alltid som en replikuppsättning med en primär och två sekundära. Läsningar och skrivningar går till huvudlistan och läsningar kan gå till de sekundära. Om lagring inte är tillgängligt kan en av de sekundära ersättas med en skiljedomare, men MongoDB-replikuppsättningar måste alltid bestå av ett ojämnt antal instanser.
 
 >[!NOTE]
-Binärfri replikering ska vara aktiverad **PÅ** om fildatalagret delas.
+>
+>Binärfri replikering ska vara aktiverad **PÅ** om fildatalagret delas.
 
 ![chlimage_1-9](assets/chlimage_1-9a.png)
 
@@ -579,7 +585,7 @@ För bästa prestanda bör du följa riktlinjerna nedan. Instruktioner om hur du
    <td>DocumentNodeStoreService</td>
    <td><p><code>cache</code></p> <p><code>nodeCachePercentage</code></p> <p><code>childrenCachePercentage</code></p> <p><code>diffCachePercentage</code></p> <p><code>docChildrenCachePercentage</code></p> <p><code>prevDocCachePercentage</code></p> <p><code>persistentCache</code></p> </td>
    <td><p>2048</p> <p>35 (25)</p> <p>20 (10)</p> <p>30 (5)</p> <p>10 (3)</p> <p>4 (4)</p> <p>./cache,size=2048,binary=0,-compact,-compress</p> </td>
-   <td><p>Standardstorleken för cacheminnet är 256 MB.</p> <p>Påverkar hur lång tid det tar att göra cachen ogiltig.</p> </td>
+   <td><p>Standardstorleken för cachen är 256 MB.</p> <p>Påverkar hur lång tid det tar att göra cachen ogiltig.</p> </td>
   </tr>
   <tr>
    <td>ek-observation</td>
@@ -596,9 +602,9 @@ För bästa prestanda bör du följa riktlinjerna nedan. Instruktioner om hur du
 
 Testerna utfördes på följande specifikationer:
 
-|  | **Författarnod** | **MongoDB-nod** |
+| | **Författarnod** | **MongoDB-nod** |
 |---|---|---|
-| Server | Maskinvara av oädel metall (HP) | Maskinvara av oädel metall (HP) |
+| Server | Maskinvara av barrmetall (HP) | Maskinvara av barrmetall (HP) |
 | Operativsystem | Red Hat® Linux® | Red Hat® Linux® |
 | Processor/kärnor | Processorn Intel(R) Xeon(R) E5-2407 @2,40 GHz, 8 kärnor | Processorn Intel(R) Xeon(R) E5-2407 @2,40 GHz, 8 kärnor |
 | RAM | 32 GB | 32 GB |
@@ -613,13 +619,14 @@ Testerna utfördes på följande specifikationer:
 ### Resultat av prestandatest {#performance-benchmark-results-1}
 
 >[!NOTE]
-Siffrorna nedan har normaliserats till 1 som baslinje och är inte de faktiska flödenumren.
+>
+>Siffrorna nedan har normaliserats till 1 som baslinje och är inte de faktiska flödenumren.
 
 ![chlimage_1-10](assets/chlimage_1-10a.png) ![chlimage_1-11](assets/chlimage_1-11a.png)
 
 ## tarMK jämfört med MongoMK {#tarmk-vs-mongomk}
 
-Den grundläggande regeln som ska beaktas när du väljer mellan de två är att tarMK är utformat för prestanda, medan MongoMK används för skalbarhet. Adobe rekommenderar att TARMK är standardbeständighetstekniken som används av kunder i alla distributionsscenarier, både för AEM Author- och Publish-instanserna.
+Den grundläggande regeln som ska beaktas när du väljer mellan de två är att tarMK är utformat för prestanda, medan MongoMK används för skalbarhet. Adobe rekommenderar att TARMK är standardbeständighetstekniken som används av kunder i alla distributionsscenarier, både för AEM Author och Publish.
 
 Den främsta anledningen till att du väljer MongoMK-beständighetsbackend framför tarMK är att skalförändra instanserna vågrätt. Den här funktionen innebär att två eller flera aktiva författarinstanser alltid körs och att MongoDB används som beständigt lagringssystem. Behovet av att köra mer än en författarinstans beror i allmänhet på att processorn och minneskapaciteten på en enda server, som stöder alla samtidiga redigeringsaktiviteter, inte längre är hållbara.
 
@@ -631,22 +638,23 @@ Mer information om TjäraMK jämfört med MongoMK finns i [Rekommenderade distri
 
 * Ändamålsenlig för content management-program
 * Filerna är alltid konsekventa och kan säkerhetskopieras med valfritt filbaserat säkerhetskopieringsverktyg
-* Tillhandahåller en redundansmekanism - se [Vänteläge, kallt](/help/sites-deploying/tarmk-cold-standby.md) för mer information
+* Tillhandahåller en failover-mekanism - se [Vänteläge, kallt](/help/sites-deploying/tarmk-cold-standby.md) för mer information
 * Ger höga prestanda och tillförlitlig datalagring med minimal driftkostnad
 * Lägre ägandekostnader (total ägandekostnad)
 
 **Kriterier för att välja MongoMK**
 
-* Antal namngivna användare anslutna under en dag: i tusental eller mer
-* Antal samtidiga användare: på hundratals eller fler
-* Volym för tillgångsinmatningar per dag: på hundratusentals eller fler
-* Antal sidredigeringar per dag: på hundratusentals eller fler
+* Antal namngivna användare som är anslutna under en dag: i tusental eller mer
+* Antal samtidiga användare: i hundratals eller fler
+* Volym för tillgångsförslag per dag: i hundratusentals eller fler
+* Antal sidredigeringar per dag: hundratusentals eller fler
 * Antal sökningar per dag: tiotusentals eller fler
 
 ### Benchmarks för tarMK jämfört med MongoMK {#tarmk-vs-mongomk-benchmarks}
 
 >[!NOTE]
-Siffrorna nedan har normaliserats till 1 som baslinje och är inte faktiska flödesnummer.
+>
+>Siffrorna nedan har normaliserats till 1 som baslinje och är inte faktiska flödesnummer.
 
 ### Tekniska specifikationer för scenario 1 {#scenario-technical-specifications}
 
@@ -660,8 +668,8 @@ Siffrorna nedan har normaliserats till 1 som baslinje och är inte faktiska flö
   </tr>
   <tr>
    <td>Server</td>
-   <td>Maskinvara av oädel metall (HP)</td>
-   <td>Maskinvara av oädel metall (HP)</td>
+   <td>Maskinvara av barrmetall (HP)</td>
+   <td>Maskinvara av barrmetall (HP)</td>
    <td> </td>
   </tr>
   <tr>
@@ -734,7 +742,8 @@ Siffrorna nedan har normaliserats till 1 som baslinje och är inte faktiska flö
 ### Tekniska specifikationer för scenario 2 {#scenario-technical-specifications-1}
 
 >[!NOTE]
-Om du vill aktivera samma antal författare med MongoDB som med ett tarMK-system behöver du ett kluster med två AEM noder. Ett mongoDB-kluster med fyra noder kan hantera 1,8 gånger så många författare som en tarMK-instans. Ett åtta-nods MongoDB-kluster kan hantera 2,3 gånger så många författare som en tarMK-instans.
+>
+>Om du vill aktivera samma antal författare med MongoDB som med ett tarMK-system behöver du ett kluster med två AEM noder. Ett mongoDB-kluster med fyra noder kan hantera 1,8 gånger så många författare som en tarMK-instans. Ett åtta-nods MongoDB-kluster kan hantera 2,3 gånger så många författare som en tarMK-instans.
 
 <table>
  <tbody>
@@ -827,12 +836,12 @@ Riktlinjerna på denna sida kan sammanfattas enligt följande:
 
 * **tarMK med fildatastore** - Rekommenderad arkitektur för de flesta kunder:
 
-   * Minimitopologi: en Author-instans, två Publish-instanser, två Dispatcher
+   * Minimitopologi: en författarinstans, två publiceringsinstanser, två utskickare
    * Binärfri replikering aktiveras om fildatalagret delas
 
 * **MongoMK med File DataStore** - Rekommenderad arkitektur för vågrät skalbarhet för Author-nivån:
 
-   * Minimitopologi: tre Author-instanser, tre MongoDB-instanser, två Publish-instanser, två Dispatcher
+   * Minimitopologi: tre författarinstanser, tre MongoDB-instanser, två publiceringsinstanser, två utskickare
    * Binärfri replikering aktiveras om fildatalagret delas
 
 * **Nodestore** - Lagras på den lokala disken, inte på en nätverksansluten lagring (NAS)

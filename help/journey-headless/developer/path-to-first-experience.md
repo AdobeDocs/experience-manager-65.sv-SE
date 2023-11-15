@@ -2,9 +2,9 @@
 title: Vägen till din första upplevelse med AEM utan headless
 description: I den här delen av den AEM Headless Developer Journey kommer du att förstå hur du implementerar din första headless-upplevelse i AEM, inklusive planeringsöverväganden, och också lära dig bästa praxis för att göra din väg så smidig som möjligt.
 exl-id: 64a87b6b-67ff-4d88-9dfb-c3e5de65bbe6
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
 workflow-type: tm+mt
-source-wordcount: '1988'
+source-wordcount: '1990'
 ht-degree: 0%
 
 ---

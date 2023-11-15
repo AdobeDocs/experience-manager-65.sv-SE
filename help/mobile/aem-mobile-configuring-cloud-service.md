@@ -6,7 +6,7 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-adobe-phonegap-enterprise
 exl-id: d370d772-ef4d-4f38-826c-e90d07735822
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
 workflow-type: tm+mt
 source-wordcount: '1274'
 ht-degree: 0%
@@ -69,7 +69,7 @@ När nu klientkoden har kopplats till mobilprogrammet levereras inställningarna
 
 ### Adobe Mobile Service Could Service {#adobe-mobile-service-could-service}
 
-Nu när AMS har konfigurerats är det dags att associera mobilappen i Adobe Mobile Dashboard. Gå till Cloud Servicen Hantera på AEM Mobile Dashboard och klicka på plusknappen (+).
+Nu när AMS har konfigurerats är det dags att associera mobilappen i kontrollpanelen för mobiler i Adobe. Gå till Cloud Servicen Hantera på AEM Mobile Dashboard och klicka på plusknappen (+).
 
 ![chlimage_1-12](assets/chlimage_1-12.png)
 

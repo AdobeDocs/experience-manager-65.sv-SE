@@ -7,9 +7,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 docset: aem65
 feature: Correspondence Management
 exl-id: 9e1b0067-c7dc-4bbb-a209-d674592be858
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
 workflow-type: tm+mt
-source-wordcount: '2171'
+source-wordcount: '2170'
 ht-degree: 0%
 
 ---
@@ -83,7 +83,7 @@ Utför följande steg för att använda delformulär i en XDP-mall:
    1. Ange ett namn för delformuläret i dialogrutan **Namn** fält.
    1. Välj **Ingen databindning** från **Databindning** listruta.
 
-   Upprepa steg 2 till 5 om du vill lägga till fler delformulär i XDP-mallen. Lägg till [text, dokumentfragment, bilder och diagram](create-interactive-communication.md#step2) till målområdena endast när du skapar interaktiv kommunikation.
+   Upprepa steg 2-5 för att lägga till fler delformulär i XDP-mallen. Lägg till [text, dokumentfragment, bilder och diagram](create-interactive-communication.md#step2) till målområdena endast när du skapar interaktiv kommunikation.
 
 1. Välj **Fil** > **Spara som** så här sparar du filen i det lokala filsystemet:
 

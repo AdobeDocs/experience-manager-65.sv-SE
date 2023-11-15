@@ -7,9 +7,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: page-authoring
 content-type: reference
 exl-id: 01c69aa9-2623-42dc-9e2d-62bc5e01cf0e
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
 workflow-type: tm+mt
-source-wordcount: '9151'
+source-wordcount: '9152'
 ht-degree: 6%
 
 ---
@@ -804,7 +804,7 @@ John Smith's publications
 >
 Ovanstående kodutdrag är en illustration, du bör använda **Bild** -komponenten.
 
-Även om det är tillrådligt att ange länktext som identifierar länkens syfte utan att behöva ytterligare kontext, är det inte alltid möjligt. Kontextfria länkar kan användas i följande fall, där HTML finns som exempel i [Hur man uppfyller kriterierna för framgång 2.4.4](https://www.w3.org/WAI/WCAG21/quickref/?versions=2.0#qr-navigation-mechanisms-refs).
+Även om det är tillrådligt att ange länktext som identifierar länkens syfte utan att behöva ha ytterligare kontext, är det inte alltid möjligt. Kontextfria länkar kan användas i följande fall, där HTML finns som exempel i [Hur man uppfyller kriterierna för framgång 2.4.4](https://www.w3.org/WAI/WCAG21/quickref/?versions=2.0#qr-navigation-mechanisms-refs).
 
 * Där länktexten är en del av en lista med närbesläktade länkar och när listobjektet som omger länken ger tillräckligt med kontext.
 * Om syftet med en länk tydligt framgår av *föregående* (inte följande) stycketext.

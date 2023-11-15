@@ -5,7 +5,7 @@ contentOwner: AG
 role: Architect, Admin
 feature: Developer Tools
 exl-id: 1313842c-18b1-4727-ba63-b454d0f5a2cc
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
 workflow-type: tm+mt
 source-wordcount: '992'
 ht-degree: 0%
@@ -71,9 +71,9 @@ Utforma topologin för [!DNL Experience Manager] miljö kräver detaljerade kuns
 
 Exempelscenariot innehåller en publiceringsgrupp med fem servrar, en binär S3-butik och Dynamic Media-konfigurerad.
 
-Avsändaren delar med sig av sin 100 Mbit/s-anslutning med två enheter, världen utanför och [!DNL Experience Manager] distribution. För samtidiga överförings- och nedladdningsåtgärder bör du dividera numret med två. Den anslutna externa lagringsplatsen använder en separat anslutning.
+Avsändaren delar sin 100 Mbit/s-anslutning med två enheter, utsidan av världen och [!DNL Experience Manager] distribution. För samtidiga överförings- och nedladdningsåtgärder bör du dividera numret med två. Den anslutna externa lagringsplatsen använder en separat anslutning.
 
-The [!DNL Experience Manager] distributionen delar med sig av en 1 Gbit/s-anslutning med flera tjänster. Från ett nätverkstopologiperspektiv motsvarar det att dela en kanal med olika tjänster.
+The [!DNL Experience Manager] distributionen delar sin 1 Gbit/s-anslutning med flera tjänster. Från ett nätverkstopologiperspektiv motsvarar det att dela en kanal med olika tjänster.
 
 Granska nätverket från klientenheten till [!DNL Experience Manager] driftsättning, verkar den minsta chokpunkten vara begränsningen för företagets brandvägg på 10 Mbit. Du kan använda dessa värden i storleksräknaren i dialogrutan [Handbok för resursstorlek](assets-sizing-guide.md) för att fastställa användarupplevelsen.
 

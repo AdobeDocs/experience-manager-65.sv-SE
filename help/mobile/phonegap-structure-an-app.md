@@ -6,7 +6,7 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-adobe-phonegap-enterprise
 exl-id: f37f239f-065b-44f8-acb1-93485b713b49
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
 workflow-type: tm+mt
 source-wordcount: '885'
 ht-degree: 0%
@@ -27,7 +27,7 @@ Sidorna för ditt program ska alla finnas under /content/mobileapps för att de 
 
 ![chlimage_1-52](assets/chlimage_1-52.png)
 
-Som AEM bör den första sidan i appen vara en omdirigering till ett av programmets underordnade som fungerar som standardspråk för appen (en i både Geometrixx- och Starter Kit-fall). Språksidan på den översta nivån ärver vanligtvis från startsidans grundkomponent (/libs/mobileapps/components/splash-page), som tar hand om den initiering som krävs för installation av innehållssynkroniseringsuppdateringar (contentInit-koden finns på /etc/clientlibs/mobile/content-sync/js/contentInit.js).
+Som AEM bör den första sidan i appen vara en omdirigering till ett av dess underordnade objekt, som fungerar som standardspråk för appen (en i både Geometrixx- och Starter Kit-fall). Språksidan på den översta nivån ärver vanligtvis från startsidans grundkomponent (/libs/mobileapps/components/splash-page), som tar hand om den initiering som krävs för installation av innehållssynkroniseringsuppdateringar (contentInit-koden finns på /etc/clientlibs/mobile/content-sync/js/contentInit.js).
 
 ## Mallar och komponenter {#templates-and-components}
 
@@ -45,7 +45,7 @@ I klientbibliotek finns det ett fåtal alternativ som utvecklaren kan välja var
 
 Om din klientsidkod kan stå för sig själv och inte gäller en viss komponent i programmet, vilket innebär att den kan återanvändas i andra program, rekommenderar Adobe att du lagrar den i /etc/clientlibs/&lt;brand name=&quot;&quot;>/&lt;lib name=&quot;&quot;>. Om däremot clientlib är specifikt för ett fristående program kan du kapsla det som ett underordnat objekt till programdesignnoden, /etc/designs/phonegap/&lt;brand name=&quot;&quot;>/&lt;app name=&quot;&quot;>/clientlibs. Använd inte denna clientlibs kategori med andra libs, utan bädda in andra libs efter behov. Med det här mönstret slipper utvecklaren lägga till nya konfigurationer för innehållssynkronisering varje gång ett klientbibliotek läggs till i appen. I stället behöver utvecklaren bara uppdatera egenskapen&quot;embed&quot; för appens designklipp. Titta till exempel på konfigurationsnoden Geometrixx clientlibs-all Content Sync på /content/phonegap/geometrixx-outdoor/en/jcr:content/page-app/app-config/clientlibs-all.
 
-Om klientsidans kod är nära kopplad till en viss komponent, placerar du den koden i ett klientbibliotek som är kapslat under komponentens plats i /apps/ och bäddar in dess kategori i programklienten &#39;design&#39;.
+Om klientsidans kod är nära kopplad till en viss komponent placerar du den koden i ett klientbibliotek som är kapslat under komponentens plats i /apps/ och bäddar in dess kategori i appens &#39;design&#39;-klientlib.
 
 ## PhoneGap-konfiguration {#phonegap-configuration}
 

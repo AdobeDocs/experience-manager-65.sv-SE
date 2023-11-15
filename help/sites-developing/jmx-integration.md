@@ -1,12 +1,10 @@
 ---
 title: Integrera tjänster med JMX-konsolen
-seo-title: Integrating Services with the JMX Console
 description: Visa tjänstattribut och åtgärder så att administrationsåtgärder kan utföras genom att skapa och distribuera MBeans för att hantera tjänster med JMX Console
-seo-description: Expose service attributes and operations to enable administration tasks to be performed by creating and deploying MBeans to manage services using the JMX Console
 topic-tags: extending-aem
 content-type: reference
 exl-id: fe727406-09cb-4516-8278-806fd78cfc12
-source-git-commit: a2e5a5ae7585299de869dbf8744d7be4b86c5bf8
+source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
 workflow-type: tm+mt
 source-wordcount: '1659'
 ht-degree: 0%
@@ -27,7 +25,7 @@ På Apache Felix-plattformen driftsätter du MBeans som OSGi-tjänster. När en 
 
 ## Skapa MBeans för CQ5 och CRX {#creating-mbeans-for-cq-and-crx}
 
-De MBeans du skapar för CQ5- eller CRX-resurser baseras på gränssnittet javax.management.DynamicMBean. För att skapa dem följer du de vanliga designmönstren i JMX-specifikationen:
+De MBeans du skapar för CQ5- eller CRX-resurser baseras på gränssnittet javax.management.DynamicMBean. För att skapa dem följer du de vanliga designmönstren som beskrivs i JMX-specifikationen:
 
 * Skapa hanteringsgränssnittet, inklusive get, set och är metoder för att definiera attribut och andra metoder för att definiera åtgärder.
 * Skapa implementeringsklassen. Klassen måste implementera DynamicMBean eller utöka en implementeringsklass för DynamicMBean.
@@ -43,7 +41,7 @@ The [com.adobe.granite.jmx.annotation](https://helpx.adobe.com/experience-manage
 
 Lägg till anteckningar i hanteringsgränssnittet för att ange MBean-metadata. Informationen visas i JMX-konsolen för varje implementeringsklass som distribueras. Följande anteckningar är tillgängliga (för fullständig information, se [com.adobe.granite.jmx.annotation JavaDocs](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/jmx/annotation/package-summary.html)):
 
-* **Beskrivning:** Innehåller en beskrivning av klassen eller metoden MBean. När det används i klassdeklarationen visas beskrivningen på JMX-konsolsidan för MBean. När den används på en metod visas beskrivningen som hovringstext för motsvarande attribut eller åtgärd.
+* **Beskrivning:** Beskriver klassen eller metoden MBean. När det används i klassdeklarationen visas beskrivningen på JMX-konsolsidan för MBean. När den används på en metod visas beskrivningen som hovringstext för motsvarande attribut eller åtgärd.
 * **Effekt:** En metods påverkan. Giltiga parametervärden är de fält som definieras av [javax.management.MBeanOperationInfo](https://docs.oracle.com/javase/1.5.0/docs/api/javax/management/MBeanOperationInfo.html).
 
 * **Namn:** Anger namnet som ska visas för en åtgärdsparameter. Använd den här anteckningen för att åsidosätta det faktiska namnet på metodparametern som används i gränssnittet.
@@ -61,8 +59,8 @@ Klasser finns för att skapa dynamiska MBeans som använder de anteckningar du l
 
 Vanligtvis är din MBean en spegling av den OSGi-tjänst som du vill hantera. På Felix-plattformen skapar du MBean på samma sätt som du gör för andra Java-serverplattformar. En viktig skillnad är att du kan använda anteckningar för att ange MBean-information:
 
-* Hanteringsgränssnitt: Definierar attribut med get-, set- och is-metoder. Definierar åtgärder med någon annan offentlig metod. Använder anteckningar för att ange metadata för BeanInfo-objektet.
-* Klassen MBean: Implementerar hanteringsgränssnittet. Utökar klassen AnnotatedStandardMBean så att den bearbetar anteckningarna i gränssnittet.
+* Hanteringsgränssnitt: Definierar attribut med get, set och is-metoder. Definierar åtgärder med någon annan offentlig metod. Använder anteckningar för att ange metadata för BeanInfo-objektet.
+* Klassen MBean: implementerar hanteringsgränssnittet. Utökar klassen AnnotatedStandardMBean så att den bearbetar anteckningarna i gränssnittet.
 
 I följande exempel innehåller MBean information om CRX-databasen. Gränssnittet använder beskrivningsanteckningen för att ge information till JMX-konsolen.
 
@@ -142,7 +140,7 @@ När din MBean är en spegling av en enskild tjänst behövs bara en instans av 
 
 **Enkelt MBean**
 
-MBeans som du kan definiera alla attribut och åtgärder för i designläge kan distribueras med SCR-anteckningar i implementeringsklassen MBean. I följande exempel `value` attributet för `Service` anteckningen anger att tjänsten implementerar `DynamicMBean` gränssnitt. The `name` attributet för `Property` -anteckningen anger JMX-domänen och nyckelegenskaper.
+MBeans som du kan definiera alla attribut och åtgärder för i designläge kan distribueras med SCR-anteckningar i implementeringsklassen MBean. I följande exempel `value` attributet för `Service` anteckningen deklarerar att tjänsten implementerar `DynamicMBean` gränssnitt. The `name` attributet för `Property` -anteckningen anger JMX-domänen och nyckelegenskaper.
 
 #### MBean-implementeringsklass med SCR-anteckningar {#mbean-implementation-class-with-scr-annotations}
 
@@ -209,7 +207,7 @@ En MBean-tjänsthanterare är användbar när tjänstkonfigurationer lagras i da
 MBean i det här exemplet innehåller information om CQ5-arbetsflödesmodellerna som lagras i databasen. En MBean-hanterarklass skapar MBeans baserat på arbetsflödesmodeller som lagras i databasen och registrerar sin OSGi-tjänst vid körning. Det här exemplet består av ett enda paket som innehåller följande medlemmar:
 
 * WorkflowMBean: Hanteringsgränssnittet.
-* WorkflowMBeanImpl: Implementeringsklassen MBean.
+* WorkflowMBeanImpl: implementeringsklassen MBean.
 * WorkflowMBeanManager: Gränssnittet för klassen MBean-hanterare.
 * WorkflowMBeanManagerImpl: Implementeringsklassen för MBean-hanteraren.
 
@@ -276,13 +274,14 @@ public class WorkflowMBeanImpl extends AnnotatedStandardMBean implements Workflo
 
 WorkflowMBeanManager-tjänsten innehåller komponentaktiveringsmetoden som skapar WorkflowMBean-tjänster. Tjänstimplementeringen innehåller följande metoder:
 
-* aktivera: Komponentaktiveraren. Skapar JCR-sessionen för läsning av WorkflowModel-konfigurationsnoder. Rotnoden där modellkonfigurationer lagras definieras i ett statiskt fält. Namnet på konfigurationsnoden definieras också i ett statiskt fält. Den här metoden anropar andra metoder som hämtar nodmodellsökvägarna och skapar modellen WorkflowMBeans.
+* activate: Komponentaktiveraren. Skapar JCR-sessionen för läsning av WorkflowModel-konfigurationsnoder. Rotnoden där modellkonfigurationer lagras definieras i ett statiskt fält. Namnet på konfigurationsnoden definieras också i ett statiskt fält. Den här metoden anropar andra metoder som hämtar nodmodellsökvägarna och skapar modellen WorkflowMBeans.
 * getModelIds: Går igenom databasen under rotnoden och hämtar sökvägen för varje modellnod.
 * makeMBean: Använder modellsökvägen för att skapa ett WorkflowModel-objekt, skapar ett WorkflowMBean för det och registrerar dess OSGi-tjänst.
 
 >[!NOTE]
 >
 >Implementeringen av WorkflowMBeanManager skapar bara MBean-tjänster för modellkonfigurationer som finns när komponenten aktiveras. En mer robust implementering lyssnar efter databashändelser för nya modellkonfigurationer och ändringar eller borttagningar av befintlig modellkonfiguration. När en ändring inträffar kan hanteraren skapa, ändra eller ta bort motsvarande WorkflowMBean-tjänst.
+>
 
 #### WorkflowMBeanManager-gränssnitt {#workflowmbeanmanager-interface}
 
@@ -425,7 +424,7 @@ För enkelhetens skull kan du kopiera och klistra in följande XML-kod i din pom
 
 **Plugins:**
 
-* Apache Maven Compiler Plugin: Kompilerar Java-klasser från källkoden.
+* Apache Maven Compiler Plugin: Kompilerar Java-klasser från källkod.
 * Apache Felix Maven Bundle Plugin: Skapar paketet och manifestet
 * Apache Felix Maven SCR Plugin: Skapar komponentbeskrivningsfilen och konfigurerar tjänstkomponentens manifesthuvud.
 

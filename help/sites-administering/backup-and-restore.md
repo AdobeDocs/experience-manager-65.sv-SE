@@ -6,7 +6,7 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: operations
 content-type: reference
 exl-id: dd26dade-b769-483e-bc11-dcfa5ed1f87e
-source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
+source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
 workflow-type: tm+mt
 source-wordcount: '2282'
 ht-degree: 0%
@@ -217,7 +217,7 @@ I onlinesäkerhetskopieringen används följande algoritm:
 
      En tom fil med namnet `backupInProgress.txt` skapas i målkatalogen när säkerhetskopieringen startar. Den här filen tas bort när säkerhetskopieringen är klar.
 
-1. Filerna kopieras från källkatalogen till målkatalogen (eller den tillfälliga katalogen när en zip-fil skapas). Segmentlagret kopieras före datalagret för att undvika att databasen skadas. Index- och cachedata utelämnas när säkerhetskopian skapas. Detta resulterar i data från `crx-quickstart/repository/cache` och `crx-quickstart/repository/index` ingår inte i säkerhetskopian. Förloppsindikatorn för processen ligger mellan 0 % och 70 % när en zip-fil skapas, eller 0 % - 100 % om ingen zip-fil skapas.
+1. Filerna kopieras från källkatalogen till målkatalogen (eller den tillfälliga katalogen när en zip-fil skapas). Segmentlagret kopieras före datalagret för att undvika att databasen skadas. Index- och cachedata utelämnas när säkerhetskopian skapas. Detta resulterar i data från `crx-quickstart/repository/cache` och `crx-quickstart/repository/index` ingår inte i säkerhetskopian. Förloppsindikatorn för processen ligger mellan 0 % och 70 % när en zip-fil skapas, eller 0 %-100 % om ingen zip-fil skapas.
 
 1. Om säkerhetskopian görs till en befintlig katalog tas&quot;gamla&quot; filer i målkatalogen bort. Gamla filer är filer som inte finns i källkatalogen.
 

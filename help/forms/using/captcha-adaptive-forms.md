@@ -7,9 +7,9 @@ topic-tags: adaptive_forms, author
 docset: aem65
 feature: Adaptive Forms
 exl-id: 9b4219b8-d5eb-4099-b205-d98d84e0c249
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
 workflow-type: tm+mt
-source-wordcount: '1910'
+source-wordcount: '1909'
 ht-degree: 0%
 
 ---
@@ -64,7 +64,7 @@ AEM Forms-användare kan använda tjänsten reCAPTCHA från Google för att impl
    1. Tryck på **[!UICONTROL reCAPTCHA]**. Sidan Konfigurationer öppnas. Välj den konfigurationsbehållare som skapades i föregående steg och tryck på **[!UICONTROL Create]**.
    1. Välj version som reCAPTCHA Enterprise och ange Namn; Projekt-ID, Webbplatsnyckel och API-nyckel (hämtas i steg 2 och 3) för reCAPTCHA Enterprise-tjänsten.
    1. Välj nyckeltyp. Nyckeltypen ska vara densamma som den platsnyckel som konfigurerats i Google Cloud-projektet, till exempel **Platsnyckel för kryssruta** eller **Poängbaserad webbplatsnyckel**.
-   1. Ange ett tröskelvärde i intervallet 0 till 1 ([Klicka för mer information om bakgrundsmusik](https://cloud.google.com/recaptcha-enterprise/docs/interpret-assessment#interpret_scores)). Poängvärden som är större än eller lika med tröskelvärdena identifierar mänsklig interaktion, vilket i annat fall omfattar båda interaktioner.
+   1. Ange ett tröskelvärde i intervallet 0-1 ([Klicka för mer information om bakgrundsmusik](https://cloud.google.com/recaptcha-enterprise/docs/interpret-assessment#interpret_scores)). Poängvärden som är större än eller lika med tröskelvärdena identifierar mänsklig interaktion, vilket i annat fall omfattar båda interaktioner.
 
       > Obs!
       >

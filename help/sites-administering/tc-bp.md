@@ -3,9 +3,9 @@ title: Bästa praxis för översättning
 description: Här hittar du de bästa arbetssätten som skapats av Adobe tekniker och konsultteam så att du kan komma igång med översättningsprojekt.
 feature: Language Copy
 exl-id: 01a81c4b-cb30-4f7e-b281-7194ebb5fc70
-source-git-commit: e2a3470784beb04c2179958ac6cb98861acfaa71
+source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
 workflow-type: tm+mt
-source-wordcount: '836'
+source-wordcount: '837'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ Att skapa eller utöka en global webbnärvaro kan vara en komplex process, men m
 
 * **Plan för global expansion** innan du implementerar din första webbplats. Att anpassa en befintlig webbplats för global täckning när webbplatsen implementerades med kort varsel är vanligtvis svårare än att planera för global expansion i början:
 
-   * Utvärdera det aktuella läget för organisationens lokaliseringslösning. Kontrollera om du har **verktyg**, **processer** och **resurser** på plats för att stödja global expansion.
+   * Utvärdera det aktuella läget för organisationens mognad för lokalisering. Kontrollera om du har **verktyg**, **processer** och **resurser** på plats för att stödja global expansion.
    * Var medveten om **global reglering** och **regional språkinställning**. Designa flexibla innehållsstrukturer och processer som kan hantera en föränderlig global affärsmiljö.
 
 * Bestämma en **styrning** modell som stöder er globala verksamhet och använder AEM som MSM och användarbehörigheter för att tillämpa den valda modellen. Du kan till exempel avgöra om innehållet ska redigeras centralt och&quot;pushas&quot; eller&quot;hämtas&quot; till regioner/länder. Bestäm vilket innehåll som kan låsas upp och ändras i olika geografiska områden. Bestäm vem som ansvarar för att initiera och hantera översättningar.
@@ -33,7 +33,7 @@ Att skapa eller utöka en global webbnärvaro kan vara en komplex process, men m
 * Bestäm hur innehållet ska distribueras mellan regioner och länder. Tänk på vilka länder som delar språk. Vi rekommenderar att du skapar språkmallsidor, ett lager med oaktiverade sidor, där översatt innehåll kan granskas och ändras och sedan pushas eller dras till en landsplats där det språket delas.
 * Det finns två sätt att skapa språkmallar: använda språkkopior och använda MSM/live-kopior.
 
-   * Språkkopieringsmetoden är den som används i AEM körklara ramverk för översättningsintegrering, och därför är det enklaste sättet att komma igång. Ramverket har ett användargränssnitt som gör det till att börja med enkelt att sprida och översätta innehållsändringar från huvudspråket (till exempel engelska) till språkmallsidor. I takt med att projektet växer blir det dock allt viktigare att automatisera arbetsflödet för att hantera översättningen av det ökade antalet sidor och/eller språk.
+   * Språkkopieringsmetoden är den som används i AEM körklara ramverk för översättningsintegrering, och därför är den det enklaste sättet att komma igång. Ramverket har ett användargränssnitt som gör det till att börja med enkelt att sprida och översätta innehållsändringar från huvudspråket (till exempel engelska) till språkmallsidor. I takt med att projektet växer blir det dock allt viktigare att automatisera arbetsflödet för att hantera översättningen av det ökade antalet sidor och/eller språk.
    * Metoden med MSM/live-kopia kan vara ett alternativ för avancerade användningsområden, där webbplatser är större och mer komplexa. Stabil styrning och automatisering av arbetsflöden krävs från början för att hantera komplexa arvsrelationer mellan engelska och språkmallsidor och för att minska risken för att skriva över befintliga översättningar. Den här hanteringen kan utföras med hjälp av vissa översättningskontakter. Se [MSM och flerspråkiga webbplatser](/help/sites-administering/msm-best-practices.md#msm-and-multilingual-websites) för mer information.
 
 * Om huvudspråket har globala variationer är ett alternativ att använda MSM för att skapa en live-kopia från den globala mallsidan för översättning. Om global redigering till exempel utförs i en amerikansk engelsk master skapar du en internationell engelsk master som en live-kopia och bas för översättning till andra språk.
