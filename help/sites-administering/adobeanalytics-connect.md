@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 6b545a51-3677-4ea1-ac7e-2d01ba19283e
 docset: aem65
 exl-id: 8262bbf9-a982-479b-a2b5-f8782dd4182d
-source-git-commit: e3a3511a5854432b9c01748f7f5ffaf9182180f8
+source-git-commit: f525c8d159b8312184fc015b1151e93c9d46b3eb
 workflow-type: tm+mt
-source-wordcount: '1523'
+source-wordcount: '1497'
 ht-degree: 0%
 
 ---
@@ -193,20 +193,36 @@ När en sida är kopplad till ett Adobe Analytics-ramverk kan antalet sidvyer vi
 
 Se [Visa sidanalysdata](/help/sites-authoring/page-analytics-using.md) för mer information.
 
+<!-- SP19
+### Configuring the Import Interval {#configuring-the-import-interval}
+
+Configure the appropriate instance of the **Adobe AEM Analytics Report Sling Importer** service:
+
+* **Fetch attempts**:
+  Number of attempts to fetch a queued report. 
+  The default is `6`.
+
+* **Fetch delay**:
+  The number of milliseconds between attempts to fetch a queued report. 
+  The default is `10000`. As this is in milliseconds it corresponds to 10 seconds.
+
+* **Fetch frequency**:
+  A `cron` expression to determine the frequency for fetching the Analytics Report. 
+  The default is `0 0 0/12 * * ?`; this corresponds to 12 fetches every hour.
+
+To configure this OSGi service, you can either use the [Web Console](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console) or an [osgiConfig node in the repository](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository) (the service PID is `com.day.cq.analytics.sitecatalyst.impl.importer.ReportImporterScheduler`).
+-->
+
 ### Konfigurera importintervallet {#configuring-the-import-interval}
 
-Konfigurera lämplig instans av **Sling-importeraren för Adobe AEM Analytics-rapport** tjänst:
+Konfigurera lämplig instans av **Konfiguration AEM hanterad avsökning för Adobe** tjänst:
 
-* **Hämtningsförsök**: Antal försök att hämta en rapport i kö.
-Standardvärdet är `6`.
+* **Avfrågningsintervall**: Intervallet i sekunder som tjänsten hämtar sidvisningsdata från Adobe Analytics.
+Standardintervallet är 43 200 000 ms (12 timmar).
 
-* **Hämtningsfördröjning**: Antalet millisekunder mellan försök att hämta en rapport i kö.
-Standardvärdet är `10000`. Eftersom detta är i millisekunder motsvarar det 10 sekunder.
+* **Aktivera**: Aktivera eller inaktivera tjänsten. Som standard är tjänsten aktiverad.
 
-* **Hämtningsfrekvens**: A `cron` -uttryck för att bestämma frekvensen för hämtning av Analytics-rapporten.
-Standardvärdet är `0 0 0/12 * * ?`; detta motsvarar 12 tagningar varje timme.
-
-Om du vill konfigurera OSGi-tjänsten kan du antingen använda [Webbkonsol](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console) eller en [osgiConfig-nod i databasen](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository) (tjänstens PID är `com.day.cq.analytics.sitecatalyst.impl.importer.ReportImporterScheduler`).
+Om du vill konfigurera OSGi-tjänsten kan du antingen använda [Webbkonsol](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console) eller en [osgiConfig-nod i databasen](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository) (tjänstens PID är `com.day.cq.polling.importer.impl.ManagedPollConfigImpl`).
 
 ## Redigera Adobe Analytics-konfigurationer och/eller ramverk {#editing-adobe-analytics-configurations-and-or-frameworks}
 
