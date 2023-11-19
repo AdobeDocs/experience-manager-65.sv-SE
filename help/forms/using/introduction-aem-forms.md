@@ -11,9 +11,9 @@ discoiquuid: a20383f2-f86a-45bf-a39e-725ee764503b
 docset: aem65
 feature: Adaptive Forms
 exl-id: e5533b4f-93b7-4ea9-a01d-fdf9528652c8
-source-git-commit: 41ef1b05e4082bb50b93ff6511542ed56a77497c
+source-git-commit: 31131af52ecb4f9c4caaf8e75e0a9213874b3a1e
 workflow-type: tm+mt
-source-wordcount: '953'
+source-wordcount: '963'
 ht-degree: 0%
 
 ---
@@ -39,8 +39,7 @@ AEM Forms har verktyg för blanketthantering som inte bara gör det möjligt att
 
 >[!NOTE]
 >
->AEM Forms-funktionen, som Adaptive Forms, finns i [AEM 6.5 QuickStart](/help/sites-deploying/deploy.md), är endast avsedda för prospektering och utvärdering. För produktion krävs en giltig licens för AEM Forms.
-
+>Funktionen Adaptive Forms, som finns i [AEM 6.5 QuickStart](https://experienceleague.corp.adobe.com/docs/experience-manager-65/deploying/deploying/deploy.html), är endast avsedd för prospektering och utvärdering. För produktion krävs en giltig licens för AEM Forms, eftersom Adaptive Forms-funktionaliteten kräver rätt licensiering.
 
 ![AEM](do-not-localize/4th-draft.gif)
 
