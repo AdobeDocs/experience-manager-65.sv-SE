@@ -2,9 +2,9 @@
 title: Versionsinformation för [!DNL Adobe Experience Manager] 6.5
 description: Hitta versionsinformation, nyheter, installationsanvisningar och en detaljerad ändringslista för [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 4
-source-git-commit: 31131af52ecb4f9c4caaf8e75e0a9213874b3a1e
+source-git-commit: c78d5f1d94ffb92a1e034b0ccb6131ac811d708f
 workflow-type: tm+mt
-source-wordcount: '3535'
+source-wordcount: '3506'
 ht-degree: 0%
 
 ---
@@ -462,17 +462,13 @@ Du löser problemet genom att leta reda på `<AEM_Forms_Installation_dir>\jboss\
 
 * När ett adaptivt formulär publiceras kommer alla dess beroenden, inklusive profiler, att publiceras på nytt, även om inga ändringar har gjorts i dem. (FORMS-10454)
 * När en användare väljer att konfigurera ett fält för första gången i ett adaptivt formulär visas inte alternativet att spara en konfiguration i egenskapsläsaren. Problemet åtgärdas genom att ett annat fält i det adaptiva formuläret konfigureras i samma redigerare.
-* När en omdirigerings-URL anges i stödlinjebehållaren för ett adaptivt formulär slutar den infogade signeringen att fungera. (FORMS-10493)
-* Alla DoR-mallar (Document of Record) kan inte publiceras. Endast engelska språkbaserade DoR-mallar och tillhörande Forms-baserade DoR-mallar publiceras. (FORMS-10535)
+* När en omdirigerings-URL anges i stödlinjebehållaren för ett adaptivt formulär slutar den infogade signeringen att fungera. (FORMS-10493) Lös problemet genom att hämta och installera [programfix för 6.5.18.0](/help/release-notes/aem-forms-hotfix.md).
+* Alla DoR-mallar (Document of Record) kan inte publiceras. Endast engelska språkbaserade DoR-mallar och tillhörande Forms-baserade DoR-mallar publiceras. (FORMS-10535) Lös problemet genom att hämta och installera [programfix för 6.5.18.0](/help/release-notes/aem-forms-hotfix.md).
+
 
 #### Interaktiv kommunikation
 
-* När du har uppgraderat till AEM Service Pack 18 går det inte att öppna den interaktiva kommunikationen med stora textbundna bilder i redigeringsläget. (FORMS-10578) Åtgärda problemet genom att utföra följande steg:
-
-   1. Ladda ned [Programfix-FORMS-10578](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html) från SD-länk.
-   1. Extrahera Hotfix-arkivfilen så att du kan hämta Experience Manager-paketfiler (.zip) och paketfiler (.jar).
-   1. Överför och installera paketet (.zip) via Package Manager.
-   1. Öppna konfigurationshanterarpaketen `https://server:host/system/console/bundles`, ladda upp och installera paketet (.jar).
+* När du har uppgraderat till AEM Service Pack 18 går det inte att öppna den interaktiva kommunikationen med stora textbundna bilder i redigeringsläget. (FORMS-10578) Lös problemet genom att hämta och installera [programfix för 6.5.18.0](/help/release-notes/aem-forms-hotfix.md).
 
 ## OSGi-paket och innehållspaket som ingår{#osgi-bundles-and-content-packages-included}
 

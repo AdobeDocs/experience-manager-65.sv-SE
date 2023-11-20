@@ -7,10 +7,10 @@ breadcrumb-title: Versionsinformation
 user-guide-description: Läs om de senaste nya funktionerna i AEM 6.5 i versionsinformationen.
 feature: Release Information
 role: Leader, Architect, Developer, Data Architect, Data Engineer, Admin, User
-source-git-commit: f618dbaafbbcd1511ea2a678db398b4bcbfda366
+source-git-commit: f6069758853181f96376a77da8d46cc5228b9605
 workflow-type: tm+mt
-source-wordcount: '71'
-ht-degree: 26%
+source-wordcount: '76'
+ht-degree: 25%
 
 ---
 
@@ -41,5 +41,6 @@ ht-degree: 26%
    + [6.5.0](previous/ga.md)
 + [Installationsanvisningar för AEM Forms Service Pack](aem-forms-current-service-pack-installation-instructions.md)
 + [AEM Forms JEE patch installer](jee-patch-installer-65.md)
++ [AEM Forms Service Pack Hotfix](/help/release-notes/aem-forms-hotfix.md)
 + [Föråldrade och borttagna funktioner](deprecated-removed-features.md)
 + [Funktionsstatus för Touch UI](touch-ui-features-status.md)
