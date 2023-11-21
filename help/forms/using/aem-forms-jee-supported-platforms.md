@@ -7,9 +7,9 @@ geptopics: SG_AEMFORMS/categories/jee
 docset: aem65
 role: Admin
 exl-id: 74d22cf4-56b2-48f5-92d9-928eaa134866
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: b886336b5a66f16eb7b076aefc2ae326dedb2f52
 workflow-type: tm+mt
-source-wordcount: '3691'
+source-wordcount: '3695'
 ht-degree: 0%
 
 ---
@@ -727,6 +727,7 @@ Följande plattformar är markerade som borttagna i AEM Forms 6.5.10.0 den 7 sep
 
 - Adobe Acrobat 2017 - [Stöd för Adobe Acrobat 2017 upphör 6 juni 2022](https://helpx.adobe.com/support/programs/eol-matrix.html).
 - Red Hat® Enterprise Linux® 7 (Kernel 3.x) (64-bitars)
+- Microsoft® Windows Server 2016 (64-bitars)
 - Microsoft® Office 2016
 - OpenOffice 4.1.2
 
