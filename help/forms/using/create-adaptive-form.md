@@ -1,16 +1,11 @@
 ---
-title: '''Självstudiekurs: Skapa ett anpassat formulär'
-seo-title: Create an adaptive form
+title: 'Självstudiekurs: Skapa ett adaptivt formulär'
 description: Lär dig skapa, layouta och förhandsgranska ett anpassat formulär. Lär dig även att konfigurera skicka-åtgärder.
-seo-description: Learn to create, layout, and preview an adaptive form. Also, learn to configure submit actions.
-page-status-flag: de-activated
-uuid: 0010d274-a683-499e-9fa6-ce355d7898a0
-discoiquuid: 55c08940-8c25-4938-8e49-25bce20aaf22
 feature: Adaptive Forms
 exl-id: c0a2adcd-528a-41af-99b5-d8b423cd6605
-source-git-commit: e9f64722ba7df0a7f43aaf1005161483e04142f5
+source-git-commit: 7d46ba0eaa73d9f7a67034ba81d7fa379aa0112c
 workflow-type: tm+mt
-source-wordcount: '1324'
+source-wordcount: '1328'
 ht-degree: 0%
 
 ---
@@ -19,7 +14,7 @@ ht-degree: 0%
 
 ![02-create-adaptive-form-main-image](assets/02-create-adaptive-form-main-image.png)
 
-Den här självstudiekursen är ett steg i [Skapa ditt första adaptiva formulär](/help/forms/using/create-your-first-adaptive-form.md) serie. Vi rekommenderar att du följer serien i kronologisk ordning för att förstå, utföra och demonstrera det fullständiga exemplet på självstudiekurser.
+Den här självstudiekursen är ett steg i [Skapa ditt första adaptiva formulär](/help/forms/using/create-your-first-adaptive-form.md) serie. Vi rekommenderar att du följer serien i kronologisk ordning för att förstå, utföra och demonstrera det fullständiga självstudiekurserna.
 
 ## Om självstudiekursen {#about-the-tutorial}
 
@@ -51,7 +46,7 @@ Du kommer att ha ett formulär som liknar följande i slutet av artikeln:\
 
    Mer information om gränssnittet för att skapa adaptiva formulär och tillgängliga komponenter finns i [Introduktion till utveckling av anpassningsbara formulär](/help/forms/using/creating-adaptive-form.md).
 
-   ![nyskapad-adaptiv form](assets/newly-created-adaptive-form.png)
+   ![Ett nytt anpassat formulär.](assets/newly-created-adaptive-form.png)
 
 ## Steg 2: Lägg till sidhuvud och sidfot {#step-add-header-and-footer}
 
@@ -112,7 +107,7 @@ Komponenter är byggstenar i en adaptiv form. AEM [!DNL Forms] innehåller mång
     </tbody> 
    </table>
 
-1. Dra en **[!UICONTROL Numeric Box]** före sidfotskomponenten. Öppna komponentens egenskaper, ange värden i tabellen nedan, tryck ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png).
+1. Dra en **[!UICONTROL Numeric Box]** före sidfotskomponenten. Öppna komponentens egenskaper, ange värden i tabellen nedan, tryck på ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png).
 
    | Egenskap | Värde |
    |---|---|
@@ -140,7 +135,7 @@ Komponenter är byggstenar i en adaptiv form. AEM [!DNL Forms] innehåller mång
      </tr> 
      <tr> 
       <td>Titel</td> 
-      <td>Myndighetens adressbevis har godkänts<br /> </td> 
+      <td>Myndigheter godkänd adresskontroll<br /> </td> 
      </tr> 
      <tr> 
       <td>Elementnamn</td> 
@@ -157,9 +152,9 @@ Komponenter är byggstenar i en adaptiv form. AEM [!DNL Forms] innehåller mång
 
    ![adaptive-form-with-all-the-components](assets/adaptive-form-with-all-the-components.png)
 
-## Steg 4: Konfigurera skicka-åtgärd för anpassat formulär {#step-configure-submit-action-for-the-adaptive-form}
+## Steg 4: Konfigurera skicka-åtgärd för det adaptiva formuläret {#step-configure-submit-action-for-the-adaptive-form}
 
-En skicka-åtgärd aktiveras när en användare trycker på Skicka-knappen på ett anpassat formulär. Du kan använda en skicka-åtgärd för att spara formulärdata i den lokala databasen, skicka formulärdata till en REST-slutpunkt, skicka formulärdata som e-post med mera. Adaptiva formulär innehåller några fler färdiga åtgärder för att skicka. Mer information finns i [Konfigurera åtgärden Skicka](/help/forms/using/configuring-submit-actions.md).
+En skicka-åtgärd aktiveras när en användare trycker på Skicka-knappen på ett anpassat formulär. Du kan använda en skicka-åtgärd för att spara formulärdata i den lokala databasen, skicka formulärdata till en REST-slutpunkt, skicka formulärdata som e-post och mycket mer. Adaptiva formulär innehåller några fler färdiga åtgärder för att skicka. Mer information finns i [Konfigurera åtgärden Skicka](/help/forms/using/configuring-submit-actions.md).
 
 Med hjälp av följande steg kan du konfigurera e-poståtgärd för att skicka och demo för formuläret:
 
@@ -175,7 +170,7 @@ Med hjälp av följande steg kan du konfigurera e-poståtgärd för att skicka o
    | Till | `${customer_Email}` |
    | Ämne | Bekräftelse: Du har lagt till leveransadress på webbplatsen We.Retail. |
    | E-postmall | Hej `${customer_Name}`, läggs följande adress till som leveransadress för ditt konto: <br>`${customer_Name}`, `${customer_Shipping_Address}`, `${customer_State}`, `${customer_ZIPCode}`<br> Med vänlig hälsning, vi.detaljhandel |
-   | Inkludera bilagor | Aktiverad |
+   | Inkludera bifogade filer | Aktiverad |
 
    Formuläret är klart. Nu kan du förhandsgranska formuläret och testa funktionen. Om du har använt namnet som nämns i självstudiekursen och har åtkomst till formuläret på den dator där AEM körs [!DNL Forms] server, finns formuläret tillgängligt på [http://localhost:4502/editor.html/content/forms/af/shipping-address-add-update-form.html](http://localhost:4502/editor.html/content/forms/af/shipping-address-add-update-form.html).
 

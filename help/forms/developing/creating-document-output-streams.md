@@ -7,7 +7,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 role: Developer
 exl-id: a521bfac-f417-4002-9c5c-8d7794d3eec7
-source-git-commit: e2a3470784beb04c2179958ac6cb98861acfaa71
+source-git-commit: 7d46ba0eaa73d9f7a67034ba81d7fa379aa0112c
 workflow-type: tm+mt
 source-wordcount: '18956'
 ht-degree: 0%
@@ -1806,7 +1806,7 @@ Skapa flera PDF-filer med hjälp av utdata-API (Java):
 
 1. Inkludera projektfiler&quot;
 
-   Inkludera JAR-klientfiler, t.ex. adobe-output-client.jar, i Java-projektets klassökväg. .
+   Inkludera JAR-klientfiler, t.ex. adobe-output-client.jar, i Java-projektets klassökväg.
 
 1. Skapa ett Output Client-objekt
 

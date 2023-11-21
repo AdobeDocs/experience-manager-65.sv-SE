@@ -7,9 +7,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: page-authoring
 content-type: reference
 exl-id: 01c69aa9-2623-42dc-9e2d-62bc5e01cf0e
-source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
+source-git-commit: 7d46ba0eaa73d9f7a67034ba81d7fa379aa0112c
 workflow-type: tm+mt
-source-wordcount: '9152'
+source-wordcount: '9151'
 ht-degree: 6%
 
 ---
@@ -606,7 +606,7 @@ Om färg används som en referenspunkt för att ge information bör du ange en e
 * Kontrast (minimal): Den visuella presentationen av text och bilder av text har ett kontrastförhållande på minst 4,5:1, utom följande:
 
    * Stor text: Storskalig text och bilder av storskalig text har ett kontrastförhållande på minst 3:1.
-   * Incidentellt: Text eller bilder av text som är en del av ett inaktivt användargränssnitt, som är rena dekorationer, som inte är synliga för någon eller som är en del av en bild som innehåller annat visuellt innehåll, har inget kontrastkrav.
+   * Incidental: Text eller bilder av text som är en del av en inaktiv användargränssnittskomponent som är ren dekoration eller inte synlig för någon, eller som är en del av en bild som innehåller annat visuellt innehåll, har inget kontrastkrav.
    * Logotyper: Text som ingår i en logotyp eller ett varumärkesnamn har inget minimikrav på kontrast.
 
 #### Syfte - Kontrast (minimum) (1.4.3) {#purpose-contrast-minimum}

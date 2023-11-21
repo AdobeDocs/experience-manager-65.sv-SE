@@ -5,9 +5,9 @@ contentOwner: AG
 role: User, Admin
 feature: Projects
 exl-id: eee768e3-3eb4-46fa-b9ae-9ef8764a3a94
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: 7d46ba0eaa73d9f7a67034ba81d7fa379aa0112c
 workflow-type: tm+mt
-source-wordcount: '429'
+source-wordcount: '430'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ Flerspråkiga resurser innebär resurser med binärfiler, metadata och taggar p�
 
 I [!DNL Adobe Experience Manager Assets], inkluderas flerspråkiga resurser i mappar där varje mapp innehåller resurserna på ett annat språk.
 
-Varje språkmapp kallas för en språkkopia. Rotmappen för en språkkopia, som kallas språkrot, identifierar språket för innehållet i språkkopian. Till exempel: */content/dam/it* är den italienska språkroten för den italienska språkversionen. Språkkopior måste använda [korrekt konfigurerad språkrot](preparing-assets-for-translation.md#creating-a-language-root) så att rätt språk anges som mål när översättningar av källresurser utförs.
+Varje språkmapp kallas för en språkkopia. Rotmappen för en språkkopia, som kallas språkrot, identifierar språket för innehållet i språkkopian. Till exempel: */content/dam/it* är den italienska språkroten för den italienska språkversionen. Språkkopior måste använda en [korrekt konfigurerad språkrot](preparing-assets-for-translation.md#creating-a-language-root) så att rätt språk anges som mål när översättningar av källresurser utförs.
 
 Språkkopian som du ursprungligen lade till resurser för är det primära språket. Språkets primära språk är källan som översätts till andra språk. En exempelmapphierarki innehåller flera språkrötter:
 
@@ -36,7 +36,7 @@ Språkkopian som du ursprungligen lade till resurser för är det primära språ
 
 Utför följande steg för att förbereda dina resurser för översättning:
 
-1. Skapa språkroten för det primära språket. Språkroten för den engelska språkkopian i exempelmapphierarkin är till exempel `/content/dam/en`. Kontrollera att språkroten är korrekt konfigurerad enligt informationen i [Skapa en språkrot](preparing-assets-for-translation.md#creating-a-language-root).
+1. Skapa språkroten för din primära språkversion. Språkroten för den engelska språkkopian i exempelmapphierarkin är till exempel `/content/dam/en`. Kontrollera att språkroten är korrekt konfigurerad enligt informationen i [Skapa en språkrot](preparing-assets-for-translation.md#creating-a-language-root).
 
 1. Lägg till resurser i ditt primära språk.
 1. Skapa språkroten för varje målspråk som du behöver en språkkopia för.

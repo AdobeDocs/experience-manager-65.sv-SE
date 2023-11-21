@@ -7,7 +7,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 role: Developer
 exl-id: b94dcca2-136b-4b7d-b5ce-544804575876
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 7d46ba0eaa73d9f7a67034ba81d7fa379aa0112c
 workflow-type: tm+mt
 source-wordcount: '10791'
 ht-degree: 0%
@@ -1235,7 +1235,7 @@ När du har angett anslutningstypen kan du hämta information om kopplingen, t.e
 
 Hämta information om slutpunktsanslutning med Java API:
 
-1. Inkludera projektfiler. .
+1. Inkludera projektfiler.
 
    Inkludera JAR-klientfiler, t.ex. adobe-livecycle-client.jar, i Java-projektets klassökväg.
 
