@@ -7,9 +7,9 @@ geptopics: SG_AEMFORMS/categories/jee
 docset: aem65
 role: Admin
 exl-id: 74d22cf4-56b2-48f5-92d9-928eaa134866
-source-git-commit: b886336b5a66f16eb7b076aefc2ae326dedb2f52
+source-git-commit: 7ac81860e127f47aecfd948ddda34241627f457c
 workflow-type: tm+mt
-source-wordcount: '3695'
+source-wordcount: '3973'
 ht-degree: 0%
 
 ---
@@ -36,6 +36,22 @@ I det här dokumentet visas vilka klient- och serverplattformar som stöds för 
 >
 >- En fullständig lista över undantag för serverplattformar som stöds finns i [Undantag för serverplattformar som stöds](../../forms/using/aem-forms-jee-supported-platforms.md#p-exceptions-to-supported-server-platforms-p).
 >- AEM Forms på JEE har endast stöd för engelska, franska, tyska och japanska versioner av de operativsystem och program som stöds.
+
+### Policy för uppgradering och support
+
+#### Full Installer
+
+- **Uppgraderingssupport för fullständiga installationsprogram**: Ett fullständigt installationsprogram släpps med varje sjätte AEM Service Pack-version. Ett fullständigt installationsprogram släpptes med version 6.5.12.0 och 6.5.18.0 SP. AEM Forms tillåter endast direktuppgraderingar från de två sista fullständiga installationsprogrammen. AEM Forms underlättar till exempel direktuppgradering till version 6.5.18.0 endast från de två sista fullständiga installationsprogrammen, nämligen 6.5.12.0 och 6.5.6.0. Om du behöver uppgradera från en tidigare uppgradering kan du använda en multi-hop-uppgradering för att först gå till en fullständig version som stöds och sedan till den senaste versionen.
+
+- **Borttagning och borttagning**: Stödet för plattformen uppdateras för varje fullständig installationsversion. Alla program som markerats som borttagna i plattformsmatrisen under en fullständig installationsversion har rätt att tas bort från den plattformsmatris som stöds i en efterföljande fullständig installationsversion, vilket anger att stödet för programmet har upphört.
+
+#### Service Pack
+
+- **Service Pack-täckning**: Adobe ger teknisk support för AEM Forms-miljöer med hjälp av något av de senaste sex servicepaketen. Om din nuvarande version är äldre än de senaste sex servicepaketen rekommenderar Adobe starkt att du uppgraderar till den senaste versionen för optimala prestanda, säkerhet och kontinuerlig support.
+
+- **Riktlinjer för installation av korrigeringsfiler**: När du uppdaterar med hjälp av patch-installationsprogram är det viktigt att verifiera att den underliggande fullständiga installationsversionen inte är mer än två versioner gammal. Under installationen av Service Pack 6.5.19.0 ska du till exempel kontrollera att den underliggande fullständiga installationsversionen är antingen 6.5.18.0 eller 6.5.12.0.
+
+- **Stöd för patchuppgradering**: Du kan fortsätta uppgradera till det senaste Service Pack-versionen tills du uppgraderar till de senaste plattformarna som stöds. Du kan till exempel uppgradera från Service Pack 6.5.12.0 till 6.5.19.0, förutsatt att du går över till en plattformskombination som stöds för 6.5.19.0.
 
 ### Rekommenderade konfigurationer {#recommendedconfigurations}
 
