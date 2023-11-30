@@ -2,7 +2,7 @@
 title: Installationsanvisningar för AEM Forms Patch för AEM Forms
 description: Installationsanvisningar för AEM Forms Service Pack för OSGi- och JEE-miljö
 exl-id: ae4c7e9d-9af8-4288-a6f9-e3bcbe7d153d
-source-git-commit: 41ef1b05e4082bb50b93ff6511542ed56a77497c
+source-git-commit: 74b4346c77a884878fb8409a773ef7651fb6348c
 workflow-type: tm+mt
 source-wordcount: '1747'
 ht-degree: 0%
@@ -35,7 +35,7 @@ Adobe Experience Manager (AEM) Forms Service Pack innehåller nya och uppgradera
 >
 > * Adobe släpper ett fullständigt installationsprogram var sjätte service pack. AEM 6.5 Forms Service Pack 18 (6.5.18.0) är det senaste fullständiga JEE-installationsprogrammet. Det fullständiga installationsprogrammet har stöd för nya plattformar medan det vanliga installationsprogrammet för Service Pack innehåller nya funktioner, felkorrigerade och allmänna förbättringar. Om du gör en ny installation eller planerar att använda den senaste programvaran för din AEM 6.5 Forms i JEE-miljö rekommenderar Adobe att du använder AEM 6.5.18.0 Forms i JEE-fullversionen som släpptes den 31 augusti 2023 i stället för det AEM 6.5 Forms-installationsprogrammet som släpptes den 8 april 2019 eller AEM 6.5.12 Forms Installationsprogrammet som släpptes den 3 Mars 2022. Installera det senaste Service Pack-paketet när du har använt det fullständiga installationsprogrammet.
 > 
-> * AEM Forms-funktionen, som Adaptive Forms, finns i [AEM 6.5 QuickStart](https://experienceleague.corp.adobe.com/docs/experience-manager-65/deploying/deploying/deploy.html), är endast avsedda för prospektering och utvärdering. För produktion krävs en giltig licens för AEM Forms.
+> * AEM Forms-funktionen, som Adaptive Forms, finns i [AEM 6.5 QuickStart](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/deploy.html), är endast avsedda för prospektering och utvärdering. För produktion krävs en giltig licens för AEM Forms.
 
 
 

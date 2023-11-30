@@ -2,9 +2,9 @@
 title: Borttagna funktioner i Adobe Experience Manager 6.5.
 description: Versionsinformation om borttagna funktioner i Adobe Experience Manager 6.5.
 exl-id: d9b6140a-c37d-4b90-a60c-01f471d65621
-source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
+source-git-commit: bbd18486a77d7b46454aacff23147b38860bd895
 workflow-type: tm+mt
-source-wordcount: '1707'
+source-wordcount: '1736'
 ht-degree: 2%
 
 ---
@@ -31,6 +31,7 @@ Kunderna rekommenderas att granska om de använder funktionen/funktionen i den a
 
 | Område | Funktion | Ersättning | Version (SP) |
 |---|---|---|---|
+| Sites | The **Konfiguration AEM hanterad avsökning för Adobe** tjänst: `com.day.cq.polling.importer.impl.ManagedPollConfigImpl` | The **Sling-importeraren för Adobe AEM Analytics-rapport** service. Se Ansluta till Adobe Analytics och Skapa ramverk - [Konfigurera importintervallet](/help/sites-administering/adobeanalytics-connect.md#configuring-the-import-interval) | 6.5.19.0 |
 | Skärmar | ActiveMQ i AEM. ActiveMQ användes för kommunikation mellan två AEM publiceringsinstanser. | Adobe rekommenderar att kunderna använder belastningsutjämnare. |  |
 | [!DNL Sites] | Upplev fragmentegenskaper för **Status för sociala medier**. |   | 6.5.11.0 |
 | [!DNL Sites] | Mallar för innehållsfragment, för att skapa enkla innehållsfragment. | [Modellbaserade strukturerade innehållsfragment](/help/assets/content-fragments/content-fragments-models.md) nu. | 6.5.11.0 |

@@ -2,9 +2,10 @@
 title: Versionsinformation för [!DNL Adobe Experience Manager] 6.5
 description: Hitta versionsinformation, nyheter, installationsanvisningar och en detaljerad ändringslista för [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 4
-source-git-commit: c78d5f1d94ffb92a1e034b0ccb6131ac811d708f
+exl-id: cac14ac1-9cda-46ae-8aa3-94674bb79157
+source-git-commit: 8d06457241919095fd9802f69df426a1cc6851da
 workflow-type: tm+mt
-source-wordcount: '3506'
+source-wordcount: '3647'
 ht-degree: 0%
 
 ---
@@ -22,14 +23,14 @@ ht-degree: 0%
 
 | Produkt | [!DNL Adobe Experience Manager] 6.5 |
 | -------- | ---------------------------- |
-| Version | 6.5.18.0 <!-- UPDATE FOR EACH NEW RELEASE --> |
+| Version | 6.5.19.0 <!-- UPDATE FOR EACH NEW RELEASE --> |
 | Typ | Service Pack-version |
-| Datum | Torsdag den 24 augusti 2023 <!-- UPDATE FOR EACH NEW RELEASE --> |
-| Hämta URL | [Programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.18.0.zip) <!-- UPDATE FOR EACH NEW RELEASE --> |
+| Datum | Torsdag 30 november 2023 <!-- UPDATE FOR EACH NEW RELEASE --> |
+| Hämta URL | [Programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.19.0.zip) <!-- UPDATE FOR EACH NEW RELEASE --> |
 
-## Vad ingår i [!DNL Experience Manager] 6.5.18.0 {#what-is-included-in-aem-6519}
+## Vad ingår i [!DNL Experience Manager] 6.5.19.0 {#what-is-included-in-aem-6519}
 
-[!DNL Experience Manager] 6.5.18.0 innehåller nya funktioner, viktiga förbättringar som kunderna efterfrågat, felkorrigeringar, prestanda, stabilitet och säkerhetsförbättringar som har släppts sedan den första tillgängligheten av 6.5 i april 2019. [Installera detta Service Pack](#install) på [!DNL Experience Manager] 6.5.
+[!DNL Experience Manager] 6.5.19.0 innehåller nya funktioner, viktiga förbättringar som kunderna efterfrågat, felkorrigeringar, prestanda, stabilitet och säkerhetsförbättringar som har släppts sedan den första tillgängligheten av 6.5 i april 2019. [Installera detta Service Pack](#install) på [!DNL Experience Manager] 6.5.
 
 <!-- UPDATE FOR EACH NEW RELEASE -->
 
@@ -53,7 +54,7 @@ Några av de viktigaste funktionerna och förbättringarna i den här versionen 
 
 * För att snabbt hitta ett projekt i listvyn, där du kan ha många projekt i systemet, har Adobe nu stöd för sortering på serversidan. Projektnoder sorteras på serverdelen baserat på den kolumn som valts av användaren innan de återges i användargränssnittet. (NPR-41027)
 
-* AEM 6.5.18.0 stöder MongoDB 5.0 till 6.0.
+* AEM 6.5.19.0 stöder MongoDB 5.0 till 6.0.
 
 **Inaktuell funktion**
 
@@ -61,10 +62,9 @@ Några av de viktigaste funktionerna och förbättringarna i den här versionen 
 
 <!-- UPDATE BELOW FOR EACH NEW RELEASE -->
 
-## Åtgärdade problem i Service Pack 18 {#fixed-issues}
+## Åtgärdade problem i Service Pack 19 {#fixed-issues}
 
 ### [!DNL Sites]{#sites-6519}
-
 
 #### Tillgänglighet{#sites-accessibility-6519}
 
@@ -99,6 +99,7 @@ till
 #### Core Backend{#sites-core-backend-6519}
 
 * Förbättra `StyleImpl`. (SITES-15164)
+* Förbättra releasen/650-grenen av WCM-pipeline för att kunna köra integreringstester för dess moduler. (SITES-12938)
 
 <!--#### Core Components{#sites-core-components-6519}
 
@@ -128,12 +129,13 @@ till
 #### MSM - Live-kopior{#sites-msm-live-copies-6519}
 
 * MSM Rollout Button fungerar inte i det grafiska användargränssnittet för pekfunktioner. (SITES-16991)
-* Länkreferens uppdateras inte i Experience Fragment när en live-kopia skapas eller när en Experience Fragment lanseras. (SITES-15460)
+* Länkreferens uppdateras inte i Experience Fragment när en live-kopia skapas eller när ett Experience Fragment distribueras. (SITES-15460)
 
 #### Page Editor{#sites-pageeditor-6519}
 
+* Om du öppnade ett tema i temoredigeraren i Forms > Teman och gjorde några ändringar och sparade, och sedan klickade på Förhandsgranska, visas en inläsningsikon, men förhandsvisningen läses inte in. (SITES-17164)
 * Markering av flera dokumentfiltyper i filtret för resurstyp fungerar inte på sidkonsolen. Inga resultat hittas även om resultaten för en viss filtyp är tillgängliga. Därför kan man inte filtrera flera dokument. De måste använda flera dokumenttyper och måste filtrera en åt gången. (SITES-14047)
-* När du har uppgraderat en instans från AEM 6.5.17 och AEM 6.5.18, inifrån sidredigeraren, om du väljer **[!UICONTROL Publish Page]**, omdirigeras du till en URL som inte finns. Användaren bör omdirigeras till publiceringsguiden. (SITES-15856)
+* När du har uppgraderat en instans från AEM 6.5.17 och AEM 6.5.18, inifrån sidredigeraren, om du har valt **[!UICONTROL Publish Page]**, omdirigeras du till en URL som inte finns. Användaren bör omdirigeras till publiceringsguiden. (SITES-15856)
 * Överflödig kopiering från AEM Urklipp under en inklistring från operativsystemets Urklipp. (SITES-15704)
 * I Resurser, välja **[!UICONTROL Documents]**, sedan under **[!UICONTROL Filtertype]**, markera **[!UICONTROL Microsoft® Word]** eller **[!UICONTROL Microsoft® Excel]** visar inga resultat trots att det finns filer av båda typerna. (SITES-14837)
 
@@ -145,7 +147,7 @@ till
 
 #### [!DNL Dynamic Media]{#assets-dm-6519}
 
-* När en resurs har överförts till AEM `update_asset` arbetsflödet aktiveras. Arbetsflödet avslutas aldrig. Om du tittar på arbetsflödesinstanserna avslutas arbetsflödet upp till produktöverföringssteget. Nästa steg är gruppöverföring av scen7. Användaren kan se att resursen finns i Scene7 från Dynamic Media Classic-appen. (ASSETS-30443)
+* När en resurs har överförts till AEM `update_asset` arbetsflödet aktiveras. Arbetsflödet avslutas aldrig. Om du tittar på arbetsflödesinstanserna avslutas arbetsflödet upp till produktöverföringssteget. Nästa steg är batchöverföring från Scene7. Användaren kan se att resursen finns i Scene7 från Dynamic Media Classic-appen. (ASSETS-30443)
 * En anpassad serverdel (API-slutpunkt) returnerar ett felaktigt Dynamic Media-filnamn (Scene7). Det inträffar när en resurs tas bort och ersätts med en tillgång med samma namn. Den anpassade servern returnerar det gamla Dynamic Media-filnamnet (Scene7), medan ett jcr-API-anrop returnerar rätt filnamn. (ASSETS-29476)
 * Även efter att Synkronisering har inaktiverats på mappnivå visar loggarna utlösaren Scene7 ReplicateOnModifyListener. The `ReplicateOnModifyListener/Worker` bör inte bearbeta mappresurser och innehållsfragment som inte finns i Dynamic Media. (ASSETS-26705)
 * Personer med nedsatt syn påverkas om fokus inte syns i listruteelement (Endast innehåll, Visa, Fler alternativ) i svart- och vitt-läge med hög kontrast. (ASSETS-25759)
@@ -227,22 +229,21 @@ Korrigeringar i [!DNL Experience Manager] Forms levereras via ett separat tillä
 
 #### Arbetsflöde{#foundation-workflow-6519}
 
-* Det går inte att slutföra en åtgärd i Inkorgen. Endast ett odefinierat värde visas i listrutan när du försöker slutföra uppgiften och välja en åtgärd. Det innebär att användare inte kan använda AEM 6.5.18-Service Pack. (NPR-41402)
+* Det går inte att slutföra en åtgärd i Inkorgen. Endast ett odefinierat värde visas i listrutan när du försöker slutföra uppgiften och välja en åtgärd. Det innebär att användare inte kan använda AEM 6.5.18-Service Pack. (NPR-41402 och NPR-41473)
 * Det går inte att slutföra uppgifter i Inkorgen. Det finns inget värde (endast&quot;undefined&quot;) i listrutan när du försöker slutföra åtgärden för zip-filer, tillgångsrapporter, flytt (om åtgärden lyckades eller misslyckades) eller när resursen förfaller. (NPR-41305)
 * När en användare väljer **[!UICONTROL Tools]** > **[!UICONTROL Workflow]** > instanser, väljer arbetsflödet som körs och väljer **[!UICONTROL View Payload]** resulterar det i en felsida på 500. (NPR-41325)
 
-
-## Installera [!DNL Experience Manager] 6.5.18.0{#install}
+## Installera [!DNL Experience Manager] 6.5.19.0{#install}
 
 <!-- Remaining content from here to bottom stays the same except for version updating as needed as per update team feedback. -->
 
-* [!DNL Experience Manager] 6.5.18.0 kräver [!DNL Experience Manager] 6.5. Se [uppgraderingsdokumentation](/help/sites-deploying/upgrade.md) för detaljerade anvisningar. <!-- UPDATE FOR EACH NEW RELEASE -->
-* Service Pack-nedladdning finns på Adobe [Programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.18.0.zip).
-* På en distribution med MongoDB och flera instanser installerar du [!DNL Experience Manager] 6.5.18.0 på en av författarinstanserna med hjälp av Package Manager.<!-- UPDATE FOR EACH NEW RELEASE -->
+* [!DNL Experience Manager] 6.5.19.0 kräver [!DNL Experience Manager] 6.5. Se [uppgraderingsdokumentation](/help/sites-deploying/upgrade.md) för detaljerade anvisningar. <!-- UPDATE FOR EACH NEW RELEASE -->
+* Service Pack-nedladdning finns på Adobe [Programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.19.0.zip).
+* På en distribution med MongoDB och flera instanser installerar du [!DNL Experience Manager] 6.5.19.0 på en av författarinstanserna med hjälp av Package Manager.<!-- UPDATE FOR EACH NEW RELEASE -->
 
 >[!IMPORTANT]
 >
-> Adobe rekommenderar inte att du tar bort eller avinstallerar [!DNL Experience Manager] 6.5.18.0-paket. Innan du installerar paketet bör du skapa en säkerhetskopia av `crx-repository` om du måste rulla tillbaka den. <!-- UPDATE FOR EACH NEW RELEASE -->
+> Adobe rekommenderar inte att du tar bort eller avinstallerar [!DNL Experience Manager] 6.5.19.0-paket. Innan du installerar paketet bör du skapa en säkerhetskopia av `crx-repository` om du måste rulla tillbaka den. <!-- UPDATE FOR EACH NEW RELEASE -->
 <!-- For instructions to install Service Pack for Experience Manager Forms, see [Experience Manager Forms Service Pack installation instructions](/help/release-notes/aem-forms-current-service-pack-installation-instructions.md). -->
 
 
@@ -252,7 +253,7 @@ Korrigeringar i [!DNL Experience Manager] Forms levereras via ett separat tillä
 
 1. Ta en ögonblicksbild eller en ny säkerhetskopia av din [!DNL Experience Manager] -instans.
 
-1. Hämta Service Pack från [Programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.18.0.zip). <!-- UPDATE FOR EACH NEW RELEASE -->
+1. Hämta Service Pack från [Programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.19.0.zip). <!-- UPDATE FOR EACH NEW RELEASE -->
 
 1. Öppna Pakethanteraren och välj **[!UICONTROL Upload Package]** för att överföra paketet. Mer information finns på [Pakethanteraren](/help/sites-administering/package-manager.md).
 
@@ -266,24 +267,24 @@ Korrigeringar i [!DNL Experience Manager] Forms levereras via ett separat tillä
 
 **Automatisk installation**
 
-Det finns två olika metoder som du kan använda för att installera automatiskt [!DNL Experience Manager] 6.5.18.0<!-- UPDATE FOR EACH NEW RELEASE -->
+Det finns två olika metoder som du kan använda för att installera automatiskt [!DNL Experience Manager] 6.5.19.0<!-- UPDATE FOR EACH NEW RELEASE -->
 
 * Placera paketet i `../crx-quickstart/install` när servern är tillgänglig online. Paketet installeras automatiskt.
 * Använd [HTTP-API från Package Manager](/help/sites-administering/package-manager.md#package-share). Använd `cmd=install&recursive=true` så att de kapslade paketen installeras.
 
 >[!NOTE]
 >
->Experience Manager 6.5.18.0 stöder inte installation av Bootstrap. <!-- UPDATE FOR EACH NEW RELEASE -->
+>Experience Manager 6.5.19.0 stöder inte installation av Bootstrap. <!-- UPDATE FOR EACH NEW RELEASE -->
 
 **Validera installationen**
 
 Om du vill veta vilka plattformar som är certifierade för att fungera med den här versionen kan du läsa [tekniska krav](/help/sites-deploying/technical-requirements.md).
 
-1. Produktinformationssidan (`/system/console/productinfo`) visar den uppdaterade versionssträngen `Adobe Experience Manager (6.5.18.0)` under [!UICONTROL Installed Products]. <!-- UPDATE FOR EACH NEW RELEASE -->
+1. Produktinformationssidan (`/system/console/productinfo`) visar den uppdaterade versionssträngen `Adobe Experience Manager (6.5.19.0)` under [!UICONTROL Installed Products]. <!-- UPDATE FOR EACH NEW RELEASE -->
 
 1. Alla OSGi-paket är **[!UICONTROL ACTIVE]** eller **[!UICONTROL FRAGMENT]** i OSGi Console (Use Web Console: `/system/console/bundles`).
 
-1. OSGi-paketet `org.apache.jackrabbit.oak-core` är version 1.2.2.16 eller senare (Använd webbkonsol: `/system/console/bundles`). <!-- NPR-41010 for 6.5.18.0 --> <!-- OAK Oak oak VERSION -MAY- NEED TO BE UPDATED FOR EACH NEW RELEASE -->
+1. OSGi-paketet `org.apache.jackrabbit.oak-core` är version 1.2.2.17 eller senare (Använd webbkonsol: `/system/console/bundles`). <!-- NPR-41292 for 6.5.19.0 --> <!-- OAK Oak oak VERSION -MAY- NEED TO BE UPDATED FOR EACH NEW RELEASE -->
 
 ### Installera Service Pack för [!DNL Experience Manager] Forms{#install-aem-forms-add-on-package}
 
@@ -307,7 +308,7 @@ Om du inte installerar det här paketet kan GraphQL-frågor bli långsamma eller
 
 ### UberJar{#uber-jar}
 
-UberJar för [!DNL Experience Manager] 6.5.18.0 finns i [Maven Central-arkivet](https://repo.maven.apache.org/maven2/com/adobe/aem/uber-jar/6.5.18/). <!-- CHECK FOR UPDATE EACH NEW RELEASE -->
+UberJar för [!DNL Experience Manager] 6.5.19.0 finns i [Maven Central-arkivet](https://repo.maven.apache.org/maven2/com/adobe/aem/uber-jar/6.5.19/). <!-- CHECK FOR UPDATE EACH NEW RELEASE -->
 
 Information om hur du använder UberJar i ett Maven-projekt finns i [använda UberJar](/help/sites-developing/ht-projects-maven.md) och inkludera följande beroende i projektens POM: <!-- CHECK FOR UPDATE EACH NEW RELEASE -->
 
@@ -315,7 +316,7 @@ Information om hur du använder UberJar i ett Maven-projekt finns i [använda Ub
 <dependency>
      <groupId>com.adobe.aem</groupId>
      <artifactId>uber-jar</artifactId>
-     <version>6.5.18</version>
+     <version>6.5.19</version>
      <scope>provided</scope>
 </dependency>
 ```
@@ -330,25 +331,22 @@ Se [Föråldrade och borttagna funktioner](/help/release-notes/deprecated-remove
 
 ## Kända fel{#known-issues}
 
-<!-- THESE KNOWN ISSUES CARRY OVER EACH RELEASE. THE "PRODUCT UPDATES TEAM" IS SUPPOSED TO VERIFY EACH ISSUE AND LET YOU KNOW IF ANYTHING NEEDS TO BE ADDED, DELETED, OR CHANGED IN THIS LIST.
- -->
-<!-- REMOVED AS PER CQDOC-20022, JANUARY 23, 2023 * If you install [!DNL Experience Manager] 6.5 Service Pack 10 or a previous service pack on [!DNL Experience Manager] 6.5, the runtime copy of your assets custom workflow model (created in `/var/workflow/models/dam`) is deleted.
-To retrieve your runtime copy, Adobe recommends to synchronize the design-time copy of the custom workflow model with its runtime copy using the HTTP API:
-`<designModelPath>/jcr:content.generate.json`. -->
+<!-- THESE KNOWN ISSUES CARRY OVER EACH RELEASE. THE "PRODUCT UPDATES TEAM" IS SUPPOSED TO VERIFY EACH ISSUE AND LET YOU KNOW IF ANYTHING NEEDS TO BE ADDED, DELETED, OR CHANGED IN THIS LIST.-->
 
-* **Sidpublicering fungerar inte i Page Editor efter uppgradering till Service Pack 18 (6.5.18.0)**
+<!-- * **Page publishing not working in Page Editor after upgrading to Service Pack 18 (6.5.18.0)** -->
 
-  <!-- https://jira.corp.adobe.com/browse/SITES-15856 REMOVE FOR 6.5.19.0--> När du har uppgraderat en instans av AEM 6.5.0.0-6.5.17.0 till AEM 6.5.19.0 klickar du **Publicera sida** i sidredigeraren omdirigeras du till en URL som inte finns.
+<!-- https://jira.corp.adobe.com/browse/SITES-15856 REMOVE FOR 6.5.19.0 -->
+<!-- After you upgrade an instance of AEM 6.5.0.0&mdash;6.5.17.0 to AEM 6.5.19.0, when you click **Publish Page** inside the Page Editor, you are redirected to a URL that does not exist.
 
-  Gör något av följande om du vill undvika problemet:
+  To work around this issue, do one of the following:
 
-   * Ta bort följande sökvägsegenskap.
+  * Remove the following "path" property.
 
-     `/libs/wcm/core/content/editor/jcr:content/content/items/content/header/items/headerbar/items/pageinfopopover/items/list/items/publish/granite:data`
+       `/libs/wcm/core/content/editor/jcr:content/content/items/content/header/items/headerbar/items/pageinfopopover/items/list/items/publish/granite:data`
 
-   * Klistra in rätt URL direkt i webbläsaren.
+  * Paste the correct URL directly into the browser.
 
-     `http://localhost:4504/editor.html/libs/wcm/core/content/sites/publishpagewizard.html?item=/content/we-retail/language-masters/en/about-us.html`
+       `http://localhost:4504/editor.html/libs/wcm/core/content/sites/publishpagewizard.html?item=/content/we-retail/language-masters/en/about-us.html` -->
 
 
 
@@ -458,6 +456,24 @@ Du måste lägga till följande egenskaper i indexdefinitionsnoden för att få 
 * När du har installerat AEM Service Pack 6.5.19.0 med fullständigt installationsprogram misslyckas EAR-distributionen på JEE med JBoss® Turnkey.
 Du löser problemet genom att leta reda på `<AEM_Forms_Installation_dir>\jboss\bin\standalone.bat` fil och uppdatera `Adobe_Adobe_JAVA_HOME` till `Adobe_JAVA_HOME` för alla förekomster innan konfigurationshanteraren körs. (CQDOC-20803)
 
+#### Installera serverdelen (AEM Service Pack 6.5.14.0 eller tidigare)
+
+* Om du uppgraderar till AEM Service Pack 6.5.15.0 eller en senare version och din AEM körs på Tomcat 8.5.88 måste du installera serverfragmentet *före* du fortsätter med installationen av Service Pack 6.5.15.0 eller senare.
+* Det är obligatoriskt att installera serverdelen för alla programservrar utom de som körs på JBoss® EAP 7.4.0.
+
+**Så här installerar du serletfragmentet:**
+
+1. Hämta serverfragmentet från [Programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/featurepack/org.apache.felix.http.servlet-api-1.2.0_fragment_full.jar).
+1. Starta programservern.
+1. Vänta tills loggarna har stabiliserats och kontrollera pakettillståndet.
+1. Öppna Web Console Bundles. Standardwebbadressen är `http://[Server]:[Port]/system/console/bundles`.
+1. Välj **[!UICONTROL Install]** eller **[!UICONTROL Update]**.
+1. Välj det hämtade fragmentet
+   `org.apache.felix.http.servlet-api-1.2.0_fragment_full.jar`
+1. Välj **[!UICONTROL Install]** eller **[!UICONTROL Update]**.
+1. Vänta tills programservern har stabiliserats.
+1. Stoppa programservern.
+
 #### Adaptiv Forms
 
 * När ett adaptivt formulär publiceras kommer alla dess beroenden, inklusive profiler, att publiceras på nytt, även om inga ändringar har gjorts i dem. (FORMS-10454)
@@ -472,10 +488,10 @@ Du löser problemet genom att leta reda på `<AEM_Forms_Installation_dir>\jboss\
 
 ## OSGi-paket och innehållspaket som ingår{#osgi-bundles-and-content-packages-included}
 
-Följande textdokument listar de OSGi-paket och innehållspaket som ingår i [!DNL Experience Manager] 6.5.18.0: <!-- UPDATE FOR EACH NEW RELEASE -->
+Följande textdokument listar de OSGi-paket och innehållspaket som ingår i [!DNL Experience Manager] 6.5.19.0: <!-- UPDATE FOR EACH NEW RELEASE -->
 
-* [Förteckning över OSGi-paket i Experience Manager 6.5.18.0](/help/release-notes/assets/65180_bundles.txt) <!-- UPDATE FOR EACH NEW RELEASE -->
-* [Förteckning över innehållspaket som ingår i Experience Manager 6.5.18.0](/help/release-notes/assets/65180_packages.txt) <!-- UPDATE FOR EACH NEW RELEASE -->
+* [Förteckning över OSGi-paket i Experience Manager 6.5.19.0](/help/release-notes/assets/65190_bundles.txt) <!-- UPDATE FOR EACH NEW RELEASE -->
+* [Förteckning över innehållspaket i Experience Manager 6.5.19.0](/help/release-notes/assets/65190_packages.txt) <!-- UPDATE FOR EACH NEW RELEASE -->
 
 ## Begränsade webbplatser{#restricted-sites}
 
