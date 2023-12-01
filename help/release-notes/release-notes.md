@@ -3,9 +3,9 @@ title: Versionsinformation för [!DNL Adobe Experience Manager] 6.5
 description: Hitta versionsinformation, nyheter, installationsanvisningar och en detaljerad ändringslista för [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 4
 exl-id: cac14ac1-9cda-46ae-8aa3-94674bb79157
-source-git-commit: 8d06457241919095fd9802f69df426a1cc6851da
+source-git-commit: f8f82ad5805095f331432471b614225f761e645c
 workflow-type: tm+mt
-source-wordcount: '3647'
+source-wordcount: '3502'
 ht-degree: 0%
 
 ---
@@ -38,23 +38,12 @@ ht-degree: 0%
 
 * _REVIEWERS: WHAT ARE THE KEY FEATURES AND ENHANCEMENTS YOU WANT TO HIGHLIGHT IN THIS RELEASE?_ -->
 
+**Viktiga funktioner och förbättringar**
+
 Några av de viktigaste funktionerna och förbättringarna i den här versionen är följande:
 
-**Viktiga funktioner**
-
-* Assets, Dynamic Media - [Stöd för flera undertexter och flerljudspår för videor i Dynamic Media](/help/assets/video.md#about-msma)—Nu kan du enkelt lägga till flera undertexter och flera ljudspår i en primär video. Detta innebär att videoklippen är tillgängliga för alla mottagare världen över. Du kan anpassa en enda publicerad primär video till en global publik på flera språk och följa riktlinjer för tillgänglighet för olika geografiska regioner. Författare kan också hantera undertexter och ljudspår från en enda flik i användargränssnittet.
-
-* Resurser - Från sökresultaten kan du nu navigera till den mapplats som innehåller en resurs så att du kan utföra olika resurshanteringsåtgärder. (ASSETS-23182)
-
-**Viktiga förbättringar**
-
-* Sites Polaris Picker i Content Fragments har förbättrat prestandan. (SITES-14092)
-
 * Användare av sidredigeraren/bildkomponenten har aktiverat platser för att referera till resurser från Cloud Servicen Fjärrresurser. (SITES-13448, SITES-13433)
-
-* För att snabbt hitta ett projekt i listvyn, där du kan ha många projekt i systemet, har Adobe nu stöd för sortering på serversidan. Projektnoder sorteras på serverdelen baserat på den kolumn som valts av användaren innan de återges i användargränssnittet. (NPR-41027)
-
-* AEM 6.5.19.0 stöder MongoDB 5.0 till 6.0.
+* AEM har nu stöd för sortering på serversidan för snabbare projektnavigering i listvyn. Projektnoder sorteras baserat på den användarvalda kolumnen innan de visas i gränssnittet.
 
 **Inaktuell funktion**
 
@@ -292,7 +281,7 @@ Anvisningar om hur du installerar Service Pack på Experience Manager Forms finn
 
 >[!NOTE]
 >
->Funktionen Adaptive Forms, som finns i [AEM 6.5 QuickStart](https://experienceleague.corp.adobe.com/docs/experience-manager-65/deploying/deploying/deploy.html), är endast avsedd för prospektering och utvärdering. För produktion krävs en giltig licens för AEM Forms, eftersom Adaptive Forms-funktionaliteten kräver rätt licensiering.
+>Funktionen Adaptive Forms, som finns i [AEM 6.5 QuickStart](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/deploy.html), är endast avsedd för prospektering och utvärdering. För produktion krävs en giltig licens för AEM Forms, eftersom Adaptive Forms-funktionaliteten kräver rätt licensiering.
 
 ### Installera GraphQL Index Package för Experience Manager Content Fragments{#install-aem-graphql-index-add-on-package}
 
@@ -458,7 +447,7 @@ Du löser problemet genom att leta reda på `<AEM_Forms_Installation_dir>\jboss\
 
 #### Installera serverdelen (AEM Service Pack 6.5.14.0 eller tidigare)
 
-* Om du uppgraderar till AEM Service Pack 6.5.15.0 eller en senare version och din AEM körs på Tomcat 8.5.88 måste du installera serverfragmentet *före* du fortsätter med installationen av Service Pack 6.5.15.0 eller senare.
+* Om du uppgraderar till AEM Service Pack 6.5.15.0 eller senare, och din AEM körs på Tomcat 8.5.88, är det obligatoriskt att installera serverfragmentet *före* du fortsätter med installationen av Service Pack 6.5.15.0 eller senare.
 * Det är obligatoriskt att installera serverdelen för alla programservrar utom de som körs på JBoss® EAP 7.4.0.
 
 **Så här installerar du serletfragmentet:**
@@ -484,7 +473,7 @@ Du löser problemet genom att leta reda på `<AEM_Forms_Installation_dir>\jboss\
 
 #### Interaktiv kommunikation
 
-* När du har uppgraderat till AEM Service Pack 18 går det inte att öppna den interaktiva kommunikationen med stora textbundna bilder i redigeringsläget. (FORMS-10578) Lös problemet genom att hämta och installera [programfix för 6.5.18.0](/help/release-notes/aem-forms-hotfix.md).
+* När du har uppgraderat till AEM Service Pack 18 går det inte att öppna den interaktiva kommunikationen med stora textbundna bilder i redigeringsläget. (FORMS-10578) Du löser problemet genom att installera [programfix för 6.5.18.0](/help/release-notes/aem-forms-hotfix.md).
 
 ## OSGi-paket och innehållspaket som ingår{#osgi-bundles-and-content-packages-included}
 
