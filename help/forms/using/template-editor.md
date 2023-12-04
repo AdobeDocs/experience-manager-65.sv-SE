@@ -7,9 +7,9 @@ topic-tags: develop
 docset: aem65
 feature: Adaptive Forms
 exl-id: d7287ee7-fb4e-4d47-b37e-0a9260344070
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '2040'
+source-wordcount: '2029'
 ht-degree: 0%
 
 ---
@@ -37,19 +37,19 @@ Du vill till exempel att alla formulärförfattare ska ha vissa textrutor, navig
 
 Du kommer åt mallredigeraren på Verktyg-menyn genom att gå till **Adobe Experience Manager > Verktyg > Mallar**. Här är mallarna ordnade i mappar som är aktiverade för redigerbara mallar. AEM innehåller en global mapp för att ordna mallar. Den är dock inte aktiverad som standard. Du kan begära att administratören aktiverar den globala mappen eller skapar en mapp för mallar. Mer information om hur du skapar mappar finns i [Mallmappar](/help/sites-developing/page-templates-editable.md).
 
-När du trycker för att öppna en mapp visas en Skapa-knapp där du kan skapa en mall för adaptiva formulär.
+När du har valt att öppna en mapp visas en Skapa-knapp där du kan skapa en mall för adaptiva formulär.
 
 ### Skapa en mall {#create-template}
 
 När du har skapat en mapp öppnar du mappen och utför följande steg för att skapa en mall:
 
-1. Tryck på **Skapa** i den mapp du har skapat.
-1. I avsnittet Välj en malltyp väljer du **Adaptiv formulärmall** och knacka **Nästa**.
+1. Välj i mallkonsolen **Skapa** i den mapp du har skapat.
+1. I avsnittet Välj en malltyp väljer du **Adaptiv formulärmall** och markera **Nästa**.
 
-1. Ange en malltitel i avsnittet Mallinformation och tryck på **Skapa**.
+1. Ange en malltitel i avsnittet Mallinformation och välj **Skapa**.
 Du kan ange en beskrivning och miniatyrbild som du kan se när du kan välja den skapade mallen när du redigerar formuläret.
 
-1. Tryck **Klar** för att gå tillbaka till konsolen, eller tryck **Öppna** om du vill öppna mallen i redigeraren.
+1. Välj **Klar** för att gå tillbaka till konsolen, eller välj **Öppna** om du vill öppna mallen i redigeraren.
 
 ### Mallredigeringsgränssnitt {#template-editor-ui}
 
@@ -113,7 +113,7 @@ Du kan till exempel lägga till rubrikkomponenten i mallen. När du markerar kom
 
 När alternativet Ursprungligt innehåll är markerat öppnas mallens adaptiva formulärbehållare som ett adaptivt formulär för redigering. Precis som när du skapar ett anpassat formulär kan du ange inledande inställningar, som att välja ett tema och skicka åtgärder.
 
-Formulärförfattare använder det som bas för att skapa ett formulär. Innehållsflödesstrukturen anges i lagret Ursprungligt innehåll i mallen. Om du vill växla till att redigera det ursprungliga innehållet i formulärmallen innan du förhandsgranskar i sidverktygsfältet trycker du på ![canvas-drop-down](assets/canvas-drop-down.png) **> Inledande innehåll**.
+Formulärförfattare använder det som bas för att skapa ett formulär. Innehållsflödesstrukturen anges i lagret Ursprungligt innehåll i mallen. Om du vill växla till att redigera det ursprungliga innehållet i formulärmallen innan du förhandsgranskar i sidverktygsfältet väljer du ![canvas-drop-down](assets/canvas-drop-down.png) **> Inledande innehåll**.
 ![Ursprungligt innehållslager i mallredigeraren](assets/initial-content-layer.png)
 
 Ursprungligt innehållslager i mallredigeraren med adaptiv formulärbehållare markerad för att ange egenskaper.
@@ -144,7 +144,7 @@ Du har lagt till en logotyp, angett en rubrik och lagt till en sidfot i struktur
 * Du kan dra och släppa panelkomponenten från komponentwebbläsaren i sidofältet.
 * Du kan lägga till en underordnad panel till `guideRootPanel` i komponentens verktygsfält.
 
-Om du vill skapa flikarna Allmän information och Professional Information lägger du till två paneler i den underordnade panelen i `guideRootPanel`. Markera panelerna och tryck på ![cmppr](assets/cmppr.png) för att öppna egenskaperna i sidofältet. Ändra elementnamnen som `general-info` och `professional-info`och titlar som General Information respektive Professional Information. I sidlisten: tryck på innehåll för att öppna innehållsläsaren. På fliken Formulärobjekt väljer du `guideRootPanel`. I redigeraren markeras guideRootPanel. Tryck ![cmppr](assets/cmppr.png) i komponentens verktygsfält för att öppna dess egenskaper. I fältet Panellayout väljer du **Flikar överst** och knacka **Klar**. Flikmallstrukturen används.
+Om du vill skapa flikarna Allmän information och Professional Information lägger du till två paneler i den underordnade panelen i `guideRootPanel`. Markera panelerna och markera ![cmppr](assets/cmppr.png) för att öppna egenskaperna i sidofältet. Ändra elementnamnen som `general-info` och `professional-info`och titlar som General Information respektive Professional Information. I sidlisten väljer du innehåll för att öppna innehållsläsaren. På fliken Formulärobjekt väljer du `guideRootPanel`. I redigeraren markeras guideRootPanel. Välj ![cmppr](assets/cmppr.png) i komponentens verktygsfält för att öppna dess egenskaper. I fältet Panellayout väljer du **Flikar överst** och markera **Klar**. Flikmallstrukturen används.
 
 #### Lägga till innehåll på flikar {#adding-content-in-tabs}
 
@@ -165,7 +165,7 @@ När du skapar en mall läggs den till som ett utkast. Aktivera mallen för att 
 1. Navigera till **Adobe Experience Manager > Verktyg > Mallar** och öppna mappen där du har skapat mallen.
 
 1. Mallen som du har skapat markeras som Utkast.
-1. Markera mallen och tryck på **Aktivera** i verktygsfältet.
+1. Markera mallen och välj **Aktivera** i verktygsfältet.
 När du skapar ett anpassat formulär kan du se mallen som visas när du ombeds att välja en mall.
 
 ## Importera eller exportera en mall {#importing-or-exporting-a-template}

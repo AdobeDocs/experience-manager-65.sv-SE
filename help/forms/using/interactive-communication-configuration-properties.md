@@ -12,10 +12,10 @@ discoiquuid: acb61d37-cd22-422e-bbf3-a2979b13ad41
 docset: aem65
 feature: Interactive Communication
 exl-id: 09eeade6-e16d-4159-b26a-803c7201097a
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '614'
-ht-degree: 1%
+source-wordcount: '610'
+ht-degree: 0%
 
 ---
 
@@ -36,7 +36,7 @@ Konfigurationsegenskaperna omfattar:
 
 ## Konfiguration av dokumentfragment {#document-fragments-configuration}
 
-Tryck **Konfiguration av dokumentfragment** på **Konfiguration av Adobe Experience Manager Web Console** för att visa konfigurationsegenskaperna för dokumentfragment.
+Välj **Konfiguration av dokumentfragment** på **Konfiguration av Adobe Experience Manager Web Console** för att visa konfigurationsegenskaperna för dokumentfragment.
 
 <table>
  <tbody> 
@@ -48,7 +48,7 @@ Tryck **Konfiguration av dokumentfragment** på **Konfiguration av Adobe Experie
   </tr> 
   <tr> 
    <td>Datavisningsformat</td> 
-   <td>Språkspecifikt visningsformat för fält, variabler och formulärdatamodellelement som är tillgängliga när du skapar en interaktiv kommunikation för tryck- och webbkanaler.</td> 
+   <td>Språkområdesspecifikt visningsformat för fält, variabler och formulärdatamodellelement som är tillgängliga när du skapar en interaktiv kommunikation för tryck- och webbkanaler.</td> 
    <td> 
     <ul> 
      <li>locale = en_US, de_DE, fr_FR och ja_JP</li> 
@@ -62,27 +62,27 @@ Tryck **Konfiguration av dokumentfragment** på **Konfiguration av Adobe Experie
   <tr> 
    <td>Indrag</td> 
    <td>Bredden på en enskild indragsenhet som används för text i listdokumentfragment.</td> 
-   <td>12.7mm</td> 
-   <td>Siffra</td> 
+   <td>12,7 mm</td> 
+   <td>Nummer</td> 
   </tr> 
   <tr> 
    <td>Minsta bredd för romerska siffror</td> 
    <td>Minsta bredd som ska användas på punkt- eller nummerfältet när latinska nummer används i listdokumentfragment. </td> 
-   <td>12.7mm</td> 
-   <td>Siffra</td> 
+   <td>12,7 mm</td> 
+   <td>Nummer</td> 
   </tr> 
   <tr> 
    <td>Minsta numerisk bredd</td> 
    <td>Minsta bredd som ska användas på punkt- eller nummerfältet när numrerade listor används, förutom latinska nummer i listdokumentfragment.</td> 
-   <td>8.0mm</td> 
-   <td>Siffra</td> 
+   <td>8,0 mm</td> 
+   <td>Nummer</td> 
   </tr> 
  </tbody> 
 </table>
 
 ## Skapa korrespondenskonfiguration {#create-correspondence-configuration}
 
-Tryck **Skapa korrespondenskonfiguration** på **Konfiguration av Adobe Experience Manager Web Console** för att visa konfigurationsegenskaperna för agentens användargränssnitt.
+Välj **Skapa korrespondenskonfiguration** på **Konfiguration av Adobe Experience Manager Web Console** för att visa konfigurationsegenskaperna för agentens användargränssnitt.
 
 <table>
  <tbody> 
@@ -115,17 +115,17 @@ Tryck **Skapa korrespondenskonfiguration** på **Konfiguration av Adobe Experien
 
 ## Konfiguration av webbkanal för adaptiv form och interaktiv kommunikation {#adaptive-form-and-interactive-communication-web-channel-configuration}
 
-Tryck **Konfiguration av webbkanal för adaptiv form och interaktiv kommunikation** på **Konfiguration av Adobe Experience Manager Web Console** för att visa konfigurationsegenskaperna för webbkanalen Adaptive Forms och Interactive Communications. I följande tabell beskrivs egenskaperna för interaktiv kommunikation:
+Välj **Konfiguration av webbkanal för adaptiv form och interaktiv kommunikation** på **Konfiguration av Adobe Experience Manager Web Console** för att visa konfigurationsegenskaperna för webbkanalen Adaptive Forms och Interactive Communications. I följande tabell beskrivs egenskaperna för interaktiv kommunikation:
 
 | Egenskap | Beskrivning | Standard | Godtagbara värden |
 |---|---|---|---|
 | Visa platshållare | Markera kryssrutan för att aktivera visning av platshållare för fält som ingår i adaptiva formulär och interaktiv kommunikation. | Markerad | Ej tillämpligt |
-| Maximalt antal cacheposter | Ange det maximala antalet adaptiva formulär och interaktiv kommunikation som kan hämtas med cacheminnet. | 100 | Siffra |
+| Maximalt antal cacheposter | Ange det maximala antalet adaptiva formulär och interaktiv kommunikation som kan hämtas med cacheminnet. | 100 | Nummer |
 | Gör filnamnet unikt | Markera kryssrutan om du vill ha unika namn för filer inkluderade som bilagor i Adaptive Forms och Interactive Communications. | Inte markerad | Ej tillämpligt |
 
 ## Konfiguration av tema för adaptiv form och interaktiv kommunikation - webbkanal {#adaptive-form-and-interactive-communication-web-channel-theme-configuration}
 
-Tryck **Konfiguration av tema för adaptiv form och interaktiv kommunikation - webbkanal** på **Konfiguration av Adobe Experience Manager Web Console** för att visa konfigurationsegenskaperna för teman för adaptiva Forms- och interaktiva kommunikationskanaler.
+Välj **Konfiguration av tema för adaptiv form och interaktiv kommunikation - webbkanal** på **Konfiguration av Adobe Experience Manager Web Console** för att visa konfigurationsegenskaperna för teman för adaptiva Forms- och interaktiva kommunikationskanaler.
 
 <table>
  <tbody> 

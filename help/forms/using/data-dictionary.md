@@ -10,9 +10,9 @@ discoiquuid: a1a0ad6b-023a-4822-9cce-0618657c3f9d
 docset: aem65
 feature: Correspondence Management
 exl-id: aaed75e6-8849-46a8-b986-896ad729adda
-source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '3840'
+source-wordcount: '3842'
 ht-degree: 0%
 
 ---
@@ -51,7 +51,7 @@ Du använder Data Dictionary Editor för att skapa ett datalexikon eller du kan 
 >Om du har flera bokstäver som kräver liknande element kan du skapa en gemensam dataordlista. En stor dataordlista med ett stort antal element kan dock medföra prestandaproblem när dataordlistan används och elementen läses in, t.ex. bokstäver och dokumentfragment. Om du stöter på prestandaproblem kan du skapa separata dataordlistor för olika bokstäver.
 
 1. Välj **Forms** > **Dataordlistor**.
-1. Tryck **Skapa dataordlista**.
+1. Välj **Skapa dataordlista**.
 1. Lägg till följande på skärmen Egenskaper:
 
    * **Titel:** (Valfritt) Ange dataordlistans rubrik. Titeln behöver inte vara unik och kan innehålla specialtecken och tecken som inte är engelska. Bokstäver och andra dokumentfragment refereras till med sin titel (när de är tillgängliga), t.ex. i miniatyrbilder och resursegenskaper. Dataordlistor refereras med sina namn och inte till titlar.
@@ -59,11 +59,11 @@ Du använder Data Dictionary Editor för att skapa ett datalexikon eller du kan 
 
    * **Beskrivning**: (Valfritt) Beskrivning av dataordlistan.
    * **Taggar:** (Valfritt) Om du vill skapa en egen tagg anger du ett värde i textfältet och trycker på Retur. Taggen visas under textfältet med taggar. När du sparar den här texten skapas även de nya taggarna.
-   * **Utökade egenskaper**: (Valfritt) Tryck **Lägg till fält** om du vill ange metadataattribut för dataordlistan. Ange ett unikt egenskapsnamn i kolumnen Egenskapsnamn. Ange ett värde som ska associeras med egenskapen i kolumnen Värde.
+   * **Utökade egenskaper**: (Valfritt) Välj **Lägg till fält** om du vill ange metadataattribut för dataordlistan. Ange ett unikt egenskapsnamn i kolumnen Egenskapsnamn. Ange ett värde som ska associeras med egenskapen i kolumnen Värde.
 
    ![Dataordlistegenskaper som anges på tyska](do-not-localize/1_ddproperties.png)
 
-1. (Valfritt) Om du vill överföra en XSD-schemadefinition för din dataordlista trycker du på **Överför XML-schema**. Bläddra till XSD-fil, markera den och tryck på **Öppna**. En Data Dictionary skapas baserat på det överförda XML-schemat. Du måste ändra visningsnamn och beskrivningar för elementen i dataordlistan. Om du vill göra det markerar du namnen på elementen genom att trycka på dem och redigerar deras beskrivningar, visningsnamn och annan information i fälten i den högra rutan.
+1. (Valfritt) Om du vill överföra en XSD-schemadefinition för ditt datalexikon väljer du under strukturpanelen för dataordlista **Överför XML-schema**. Bläddra till XSD-filen, markera den och markera den **Öppna**. En Data Dictionary skapas baserat på det överförda XML-schemat. Du måste ändra visningsnamn och beskrivningar för elementen i dataordlistan. Om du vill göra det markerar du namnen på elementen genom att trycka på dem och redigerar deras beskrivningar, visningsnamn och annan information i fälten i den högra rutan.
 
    Mer information om beräknade element finns i [Beräknade dataordlisteelement](#computedddelements).
 
@@ -71,10 +71,10 @@ Du använder Data Dictionary Editor för att skapa ett datalexikon eller du kan 
    >
    >Du kan hoppa över att överföra schemafilen och skapa din dataordlista från grunden med användargränssnittet. Om du vill göra det hoppar du över det här steget och fortsätter med nästa steg.
 
-1. Tryck **Nästa**.
+1. Välj **Nästa**.
 1. Lägg till elementen i dataordlistan på skärmen Lägg till egenskaper. Du kan också lägga till/ta bort element och redigera deras information om du har överfört ett schema för att få en grundläggande struktur i dataordlistan.
 
-   Du kan trycka på de tre punkterna till höger om ett element och lägga till ett element i dataordlistestrukturen.
+   Du kan markera de tre punkterna till höger om ett element och lägga till ett element i dataordlistestrukturen.
 
    ![1_2_createAnelement](assets/1_2_createanelement.png)
 
@@ -98,7 +98,7 @@ Du använder Data Dictionary Editor för att skapa ett datalexikon eller du kan 
 
    ![2_addPropertiesBasic](assets/2_addddpropertiesbasic.png)
 
-1. (Valfritt) När du har markerat ett element kan du lägga till egenskaper (attribut) på fliken Avancerat. Du kan också trycka **Lägg till fält** och utöka egenskaperna för ett DD-element.
+1. (Valfritt) När du har markerat ett element kan du lägga till egenskaper (attribut) på fliken Avancerat. Du kan också välja **Lägg till fält** och utöka egenskaperna för ett DD-element.
 
    ![3_addPropertiesAdvanced](assets/3_addddpropertiesadvanced.png)
 
@@ -111,17 +111,17 @@ Du använder Data Dictionary Editor för att skapa ett datalexikon eller du kan 
    >Om du tar bort ett sammansatt element/samlingselement med underordnade noder tas även dess underordnade noder bort.
 
 1. (Valfritt) Markera ett element på strukturpanelen för datamordlistan och på panelerna Fält och Variabellista. Ändra eller lägg till nödvändiga attribut som är kopplade till elementet.
-1. Tryck **Spara**.
+1. Välj **Spara**.
 
 ### Skapa kopior av en eller flera dataordlistor {#create-copies-of-one-or-more-data-dictionary}
 
 Om du snabbt vill skapa en eller flera dataordlistor med egenskaper och element som liknar befintliga dataordlistor kan du kopiera och klistra in dem.
 
 1. Välj lämpliga dataordlistor i listan med dataordlistor. Gränssnittet visar ikonen Kopiera.
-1. Tryck på Kopiera. Gränssnittet visar ikonen Klistra in.
-1. Tryck på Klistra in. Dialogrutan Klistra in visas. Systemet tilldelar automatiskt namn och titlar till de nya dataordlistorna.
+1. Välj Kopiera. Gränssnittet visar ikonen Klistra in.
+1. Välj Klistra in. Dialogrutan Klistra in visas. Systemet tilldelar automatiskt namn och titlar till de nya dataordlistorna.
 1. Om det behövs redigerar du den titel och det namn som du vill spara kopian av dataordlistan med.
-1. Tryck på Klistra in. Kopian av dataordlistan skapas. Nu kan du göra de ändringar som behövs i din nya dataordlista.
+1. Välj Klistra in. Kopian av dataordlistan skapas. Nu kan du göra de ändringar som behövs i din nya dataordlista.
 
 ## Se de dokumentfragment eller dokument som refererar till ett Data Dictionary-element {#see-the-document-fragments-or-documents-that-refer-to-a-data-dictionary-element}
 
@@ -129,32 +129,32 @@ När du redigerar eller visar ett datalexikon kan du se vilka element i dataordl
 
 1. Redigera dataordlistan genom att göra något av följande:
 
-   * Håll muspekaren över ett datalexikon och tryck på Redigera.
-   * Markera ett datalexikon och tryck sedan på Redigera i sidhuvudet.
-   * Håll muspekaren över ett datalexikon och tryck på Välj. Tryck sedan på Redigera i sidhuvudet.
+   * Håll muspekaren över ett datalexikon och välj Redigera.
+   * Markera ett datalexikon och välj sedan Redigera i sidhuvudet.
+   * Håll muspekaren över ett datalexikon och välj Välj. Välj sedan Redigera i sidhuvudet.
 
-   Eller tryck på en dataordlista för att visa den.
+   Eller välj ett datalexikon för att visa det.
 
-1. Markera ett enkelt element genom att trycka på det i dataordlistan. Sammansatta element och samlingselement har inga referenser.
+1. Markera ett enkelt element i dataordlistan. Sammansatta element och samlingselement har inga referenser.
 
    Tillsammans med elementets grundläggande och avancerade egenskaper visas även lånat innehåll.
 
-1. Tryck på Skickat innehåll.
+1. Välj lånat innehåll.
 
    Fliken för innehåll som har lånats ut visas med följande: Text, Villkor, Bokstäver och Interaktiv kommunikation. Var och en av dessa rubriker visar också antalet referenser till det markerade elementet.
 
-1. Tryck på en rubrik för att se namnet på resurserna som refererar till elementet.
+1. Välj en rubrik om du vill se namnet på resurserna som refererar till elementet.
 
    ![lentcontent](assets/lentcontent.png)
 
-1. Om du vill visa utlånat innehåll för ett annat element trycker du på elementet.
-1. Visa en resurs som refererar till elementet genom att trycka på dess namn. Webbläsaren visar resursen, bokstaven eller interaktiv kommunikation.
+1. Om du vill visa utlånat innehåll för ett annat element markerar du elementet.
+1. Om du vill visa en resurs som refererar till elementet väljer du dess namn. Webbläsaren visar resursen, bokstaven eller interaktiv kommunikation.
 
 ## Arbeta med testdata {#working-with-test-data}
 
-1. Tryck på **Välj**.
-1. Tryck på en dataordlista som du vill hämta testdata för och tryck sedan på **Hämta XML-exempeldata**.
-1. Tryck **OK** i varningsmeddelandet. En XML-fil hämtas.
+1. På sidan Dataordlistor väljer du **Välj**.
+1. Välj en dataordlista som du vill hämta testdata för och välj sedan **Hämta XML-exempeldata**.
+1. Välj **OK** i varningsmeddelandet. En XML-fil hämtas.
 1. Öppna XML-filen med Anteckningar eller en annan XML-redigerare. XML-filen har samma struktur som dataordlistan och platshållarsträngarna i elementen. Ersätt platshållarsträngarna med de data som du vill testa en bokstav med.
 
    ```xml
@@ -200,7 +200,7 @@ När du redigerar eller visar ett datalexikon kan du se vilka element i dataordl
 
 1. När du har gjort dataposterna kan du använda den här XML-filen när du förhandsgranskar en bokstav med testdata.
 
-   Du kan lägga till dessa testdata med DD (Välj DD och tryck på Överför testdata och överför den här xml-filen). När du sedan förhandsgranskar bokstaven normalt (inte anpassat) används dessa XML-data som en bokstav. Du kan också trycka på Anpassad och sedan överföra XML-koden.
+   Du kan lägga till dessa testdata med DD (Välj DD och välj Överför testdata och överför den här xml-filen). När du sedan förhandsgranskar bokstaven normalt (inte anpassat) används dessa XML-data som en bokstav. Du kan också välja Anpassad och sedan överföra XML-koden.
 
 ## Exempel {#samples}
 
@@ -413,9 +413,9 @@ För export av en XSD krävs en specifik datamappning, vilket beskrivs i följan
 
 När du har skapat ett datalexikon kan du hämta det som en XML-exempeldatafil och skriva text i den.
 
-1. Tryck på **Välj** och sedan trycka på ett datalexikon för att markera det.
+1. Välj på sidan Dataordlistor **Välj** och markera sedan ett datalexikon.
 1. Välj **Hämta XML-exempeldata**.
-1. Tryck **OK** i varningsmeddelandet.
+1. Välj **OK** i varningsmeddelandet.
 
    Correspondence Management skapar en XML-fil baserad på den valda dataordlistestrukturen och hämtar den till datorn med namnet &lt;data-dictionary-name>-SampleData. Nu kan du redigera filen i en XML- eller textredigerare och skriva in data medan [skapa ett brev](../../forms/using/create-letter.md).
 
@@ -425,9 +425,9 @@ När du vill skicka samma bokstav på olika språk till dina kunder kan du lokal
 
 ### Lokalisera dataordlista {#localize-data-dictionary}
 
-1. Tryck på **Välj** och sedan trycka på ett datalexikon för att markera det.
-1. Tryck **Hämta lokaliseringsdata**.
-1. Tryck **OK** i varningen. Correspondence Management hämtar en zip-fil till datorn med namnet DataDictionary-&lt;ddname>.zip.
+1. På sidan Dataordlistor väljer du **Välj** och markera sedan ett datalexikon.
+1. Välj **Hämta lokaliseringsdata**.
+1. Välj **OK** i varningen. Correspondence Management hämtar en zip-fil till datorn med namnet DataDictionary-&lt;ddname>.zip.
 1. Zip-filen innehåller en .properties-fil. Den här filen definierar det hämtade dataordlistan. Innehållet i egenskapsfilen liknar följande:
 
    ```ini

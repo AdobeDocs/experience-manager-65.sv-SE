@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-app
 discoiquuid: 8a5e038e-b39a-41de-88a0-47642e5bd5bf
 exl-id: adff5339-e026-4924-a401-f249f37fc6e6
-source-git-commit: eb71119474f03a969a721c792b6f1ac330f9dbf3
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
 source-wordcount: '399'
 ht-degree: 0%
@@ -24,11 +24,11 @@ Formulären hämtas till din app och är tillgängliga offline. Du driver t.ex. 
 
 Så här synkroniserar du formuläret i AEM Forms-appen:
 
-1. Markera ett formulär och klicka på **Visa egenskaper**.
+1. Markera ett formulär i författarinstansen och klicka på **Visa egenskaper**.
 1. På egenskapssidan klickar du på **Avancerat.**
-1. Aktivera alternativet under Avancerat: **Synkronisera med AEM Forms App** och trycka **Spara**.
+1. Aktivera alternativet under Avancerat: **Synkronisera med AEM Forms App** och markera **Spara**.
 
-Om du vill synkronisera flera formulär väljer du flera formulär i formulärhanteraren och trycker på **Synkronisera med AEM Forms App**. När formuläret publiceras kan AEM Forms-appen ansluta till publiceringsservern och hämta formulären.
+Om du vill synkronisera flera formulär i författarinstansen markerar du flera formulär i formulärhanteraren och väljer **Synkronisera med AEM Forms App**. När formuläret publiceras kan AEM Forms-appen ansluta till publiceringsservern och hämta formulären.
 
 Om ditt AFA-program (AEM Form Application) inte kan synkroniseras utför du följande steg för att åtgärda synkroniseringsproblemet:
 
@@ -51,5 +51,5 @@ Om ditt AFA-program (AEM Form Application) inte kan synkroniseras utför du föl
 
 **Öppna och uppdatera ett formulär**
 
-1. Öppna ett formulär genom att trycka på **[!UICONTROL Form]** på hemskärmen.
+1. Om du vill öppna ett formulär väljer du **[!UICONTROL Form]** på hemskärmen.
 1. Du kan uppdatera fälten i formuläret, lägga till bilagor, spara som utkast och skicka det.

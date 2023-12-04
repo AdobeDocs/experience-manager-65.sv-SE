@@ -1,7 +1,7 @@
 ---
 title: Installera och konfigurera interaktiv kommunikation
 seo-title: Install and configure Interactive Communications
-description: Installera och konfigurera AEM Forms Interactive Communications för att skapa affärskorrespondenser, dokument, utdrag, förmånsmeddelanden, marknadsföringsmeddelanden, fakturor och välkomstpaket.
+description: Installera och konfigurera AEM Forms Interactive Communications för att skapa affärskorrespondens, dokument, utdrag, förmånsmeddelanden, marknadsföringsmeddelanden, räkningar och välkomstpaket.
 seo-description: Install and configure AEM Forms Interactive Communications to create business correspondences, documents, statements, benefit notices, marketing mails, bills, and welcome kits.
 uuid: 8acb7f68-0b52-4acd-97e2-af31c9408e8d
 topic-tags: installing
@@ -9,9 +9,9 @@ discoiquuid: 225f2bc1-6842-4c79-a66d-8024a29325c0
 docset: aem65
 role: Admin
 exl-id: 37fcfad9-2f84-4f0c-aed8-e4a5a3303a06
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '1366'
+source-wordcount: '1334'
 ht-degree: 0%
 
 ---
@@ -48,7 +48,7 @@ Innan du börjar installera och konfigurera interaktiva kommunikations- och korr
    * **Upphovsman**: En AEM som används för att skapa, överföra och redigera innehåll och för att administrera webbplatsen. När innehållet är klart att publiceras replikeras det till publiceringsinstansen.
    * **Bearbetar:** En bearbetningsinstans är en [härdad AEM](/help/forms/using/hardening-securing-aem-forms-environment.md) -instans. Du kan ställa in en Author-instans och göra den oskarp efter att du har utfört installationen.
 
-   * **Publicera**: En AEM som visar det publicerade innehållet för allmänheten via Internet eller ett internt nätverk.
+   * **Publicera**: En AEM som skickar det publicerade innehållet till allmänheten via Internet eller ett internt nätverk.
 
 * Minneskraven är uppfyllda. AEM Forms tilläggspaket kräver:
 
@@ -91,17 +91,17 @@ Innan du börjar installera och konfigurera interaktiva kommunikations- och korr
 AEM Forms tilläggspaket är ett program som distribueras till AEM. Paketet innehåller interaktiv kommunikation med AEM Forms, korrespondenshantering och andra funktioner. Så här installerar du tilläggspaketet:
 
 1. Öppna [Programvarudistribution](https://experience.adobe.com/downloads). Du behöver en Adobe ID för att logga in på Software Distribution.
-1. Tryck på **[!UICONTROL Adobe Experience Manager]** tillgänglig i rubrikmenyn.
+1. Välj **[!UICONTROL Adobe Experience Manager]** tillgänglig i rubrikmenyn.
 1. I avsnittet **[!UICONTROL Filters]** :
-   1. Välj **[!UICONTROL Forms]** i **[!UICONTROL Solution]** listrutan.
+   1. Välj **[!UICONTROL Forms]** från **[!UICONTROL Solution]** listruta.
    2. Välj version och typ för paketet. Du kan också använda **[!UICONTROL Search Downloads]** för att filtrera resultaten.
-1. Tryck på det paketnamn som gäller för ditt operativsystem och välj **[!UICONTROL Accept EULA Terms]** och trycka **[!UICONTROL Download]**.
+1. Välj det paketnamn som gäller för operativsystemet och välj **[!UICONTROL Accept EULA Terms]** och markera **[!UICONTROL Download]**.
 1. Öppna [Package Manager](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html)  och klicka för **[!UICONTROL Upload Package]** att ladda upp paketet.
 1. Markera paketet och klicka på **[!UICONTROL Install]**.
 
-   Du kan också hämta paketet via direktlänken som anges i [AEM Forms versionsartikel](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=en) .
+   Du kan också hämta paketet via direktlänken i [AEM Forms-artiklarna](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=en) .
 
-1. När paketet har installerats uppmanas du att starta om AEM. **Starta inte omedelbart om servern.** Innan du stoppar AEM Forms Server väntar du tills meddelandena ServiceEvent REGISTERED och ServiceEvent UNREGISTERED slutar visas i [filen AEM-Installation-Directory]/crx-quickstart/logs/error.log och loggen är stabil.
+1. När paketet har installerats uppmanas du att starta om AEM. **Starta inte om servern omedelbart.** Innan du stoppar AEM Forms Server väntar du tills meddelandena ServiceEvent REGISTERED och ServiceEvent UNREGISTERED slutar visas i [filen AEM-Installation-Directory]/crx-quickstart/logs/error.log och loggen är stabil.
 1. Upprepa steg 1-7 för alla författare- och publiceringsinstanser.
 
 ## Konfiguration efter installation {#post-installation-configurations}
@@ -143,9 +143,9 @@ Utför följande steg på alla Author- och Publish-instanser för att lägga til
 
 Interaktiv kommunikation är standardmetoden och rekommenderas för att skapa kundkommunikation i AEM 6.5 Forms. Om du har uppgraderat eller migrerat från en tidigare version och tänker fortsätta använda brev (Correspondence Management) installerar du [AEMFD-kompatibilitetspaket](https://experienceleague.adobe.com/docs/experience-manager-65/forms/upgrade-aem-forms/aem-forms-osgi-upgrade/compatibility-package.html?lang=en).
 
-Med AEMFD-kompatibilitetspaketet kan du använda följande resurser från AEM 6.4 Forms, AEM 6.3 Forms och AEM 6.2 Forms på AEM 6.5 Forms:
+Med AEM fd-kompatibilitetspaketet kan du använda följande resurser från AEM 6.4 Forms, AEM 6.3 Forms och AEM 6.2 Forms på AEM 6.5 Forms:
 
-* Dokumentfragment
+* Fragment av dokument
 * Bokstäver
 * Dataordlistor
 * Mallar och sidor för anpassade formulär har tagits bort

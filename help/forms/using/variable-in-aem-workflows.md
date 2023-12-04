@@ -10,9 +10,9 @@ topic-tags: publish
 discoiquuid: cbf4e35a-7905-44ab-ab68-fb443443f02d
 docset: aem65
 exl-id: beb2b83e-e8db-40bb-915f-cb6ba3140947
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '2216'
+source-wordcount: '2068'
 ht-degree: 0%
 
 ---
@@ -56,8 +56,8 @@ Du behöver [AEM Forms tilläggspaket](https://helpx.adobe.com/aem-forms/kb/aem-
 Så här skapar du en variabel:
 
 1. Navigera AEM till Verktyg ![verktyg](/help/forms/using/assets/hammer.png) > Arbetsflöde > Modeller.
-1. Tryck **[!UICONTROL Create]** och ange arbetsflödesmodellens titel och valfria namn. Markera modellen och tryck på **[!UICONTROL Edit]**.
-1. Tryck på variabelikonen som är tillgänglig i sidokanten av arbetsflödesmodellen och tryck på **[!UICONTROL Add Variable]**.
+1. Välj **[!UICONTROL Create]** och ange arbetsflödesmodellens titel och valfria namn. Markera modellen och välj **[!UICONTROL Edit]**.
+1. Välj variabelikonen som är tillgänglig i sidokanten av arbetsflödesmodellen och välj **[!UICONTROL Add Variable]**.
 
    ![Lägg till variabel](assets/variables_add_variable_new.png)
 
@@ -69,7 +69,7 @@ Så här skapar du en variabel:
    * Formulärdatamodell - Ange en formulärdatamodell.
    * ArrayList - Ange en undertyp för samlingen.
 
-1. Ange en valfri beskrivning för variabeln och tryck på ![ready_icon](assets/done_icon.png) för att spara ändringarna. Variabeln visas i listan som är tillgänglig i den vänstra rutan.
+1. Ange en valfri beskrivning av variabeln och välj ![ready_icon](assets/done_icon.png) för att spara ändringarna. Variabeln visas i listan som är tillgänglig i den vänstra rutan.
 
 Tänk på följande när du skapar variabler:
 
@@ -102,11 +102,11 @@ Du kan också uppdatera specifika element i en JSON- eller XML-typvariabel med J
 
 Utför följande steg för att lägga till mappning mellan variabler:
 
-1. Tryck på ikonen Steg i arbetsflödesmodellens sidokicka på arbetsflödets redigeringssida.
-1. Dra och släpp **Ange variabel** steg till arbetsflödesredigeraren, tryck på steget och välj ![configure_icon](assets/configure_icon.png) (Konfigurera).
+1. På arbetsflödets redigeringssida väljer du ikonen Steg som är tillgänglig i arbetsflödesmodellens sidospark.
+1. Dra och släpp **Ange variabel** gå till arbetsflödets redigerare, markera steget och välj ![configure_icon](assets/configure_icon.png) (Konfigurera).
 1. I dialogrutan Ange variabel väljer du **[!UICONTROL Mapping]** > **[!UICONTROL Add Mapping]**.
 1. I **Kartvariabel** markerar du variabeln där data ska lagras, väljer mappningsläge och anger ett värde som ska lagras i variabeln. Mappningslägena varierar beroende på variabeltypen.
-1. Mappa fler variabler för att skapa ett meningsfullt uttryck. Tryck ![ready_icon](assets/done_icon.png) för att spara ändringarna.
+1. Mappa fler variabler för att skapa ett meningsfullt uttryck. Välj ![ready_icon](assets/done_icon.png) för att spara ändringarna.
 
 ### Exempel 1: Fråga en XML-variabel för att ange ett värde för en strängvariabel {#example-query-an-xml-variable-to-set-value-for-a-string-variable}
 
@@ -175,7 +175,7 @@ I det här exemplet ska du använda [exempel 2](../../forms/using/variable-in-ae
 
 >[!VIDEO](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/using/variables_orsplit_example.mp4)
 
-Välj på liknande sätt en extern skriptsökväg eller ange ECMA-skriptet för routningsuttryck för att utvärdera den aktiva grenen. Tryck **[!UICONTROL Rename Branch]** om du vill ange ett alternativt namn för grenen.
+Välj på liknande sätt en extern skriptsökväg eller ange ECMA-skriptet för routningsuttryck för att utvärdera den aktiva grenen. Välj **[!UICONTROL Rename Branch]** om du vill ange ett alternativt namn för grenen.
 
 Fler exempel finns i [Skapa en arbetsflödesmodell](../../forms/using/aem-forms-workflow.md#create-a-workflow-model).
 
@@ -287,9 +287,9 @@ Data som behandlas med Forms Workflow kan innehålla känsliga användardata, t.
 
 ## Redigera en variabel {#edit-a-variable}
 
-1. Tryck på ikonen Variabler i sidledaren i arbetsflödesmodellen på sidan Redigera arbetsflöde. I avsnittet Variabler i den vänstra rutan visas alla befintliga variabler.
-1. Tryck på ![redigera](assets/edit.png) (Redigera) bredvid variabelnamnet som du vill redigera.
-1. Redigera variabelinformationen och tryck på ![ready_icon](assets/done_icon.png) för att spara ändringarna. Du kan inte redigera **[!UICONTROL Name]** och **[!UICONTROL Type]** fält för en variabel.
+1. På sidan Redigera arbetsflöde väljer du ikonen Variabler som är tillgänglig i arbetsflödesmodellens sidokikon. I avsnittet Variabler i den vänstra rutan visas alla befintliga variabler.
+1. Välj ![redigera](assets/edit.png) (Redigera) bredvid variabelnamnet som du vill redigera.
+1. Redigera variabelinformationen och markera ![ready_icon](assets/done_icon.png) för att spara ändringarna. Du kan inte redigera **[!UICONTROL Name]** och **[!UICONTROL Type]** fält för en variabel.
 
 ## Ta bort en variabel {#delete-a-variable}
 
@@ -297,9 +297,9 @@ Ta bort alla referenser till variabeln från arbetsflödet innan du tar bort var
 
 Så här tar du bort en variabel:
 
-1. Tryck på ikonen Variabler i sidledaren i arbetsflödesmodellen på sidan Redigera arbetsflöde. I avsnittet Variabler i den vänstra rutan visas alla befintliga variabler.
-1. Tryck på ikonen Ta bort bredvid variabelnamnet som du vill ta bort.
-1. Tryck ![ready_icon](assets/done_icon.png) för att bekräfta och ta bort variabeln.
+1. På sidan Redigera arbetsflöde väljer du ikonen Variabler som är tillgänglig i arbetsflödesmodellens sidokikon. I avsnittet Variabler i den vänstra rutan visas alla befintliga variabler.
+1. Välj ikonen Ta bort bredvid variabelnamnet som du vill ta bort.
+1. Välj ![ready_icon](assets/done_icon.png) för att bekräfta och ta bort variabeln.
 
 ## Referenser {#references}
 

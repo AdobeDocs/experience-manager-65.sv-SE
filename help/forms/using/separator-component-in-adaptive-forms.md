@@ -6,9 +6,9 @@ topic-tags: author
 docset: aem65
 feature: Adaptive Forms
 exl-id: 11cbf865-c8e2-4833-b0b8-a3cb5e42f5cd
-source-git-commit: 99808cb38c5d376ccb7fb550c5212138890cec11
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '367'
+source-wordcount: '361'
 ht-degree: 0%
 
 ---
@@ -30,7 +30,7 @@ Du kan använda layoutläget för att definiera antalet kolumner som avgränsnin
 
 Så här anger du egenskaper för en avgränsningskomponent:
 
-1. Markera en separationskomponent och tryck på ![cmppr](assets/cmppr.png). Egenskaperna öppnas i sidofältet.
+1. Markera en avgränsningskomponent och markera ![cmppr](assets/cmppr.png). Egenskaperna öppnas i sidofältet.
 1. Klicka på en flik i avsnittet Infoga CSS-egenskaper så att du kan ange CSS-egenskaper. Till exempel: a. Klicka på fliken Fält **Lägg till objekt**. En rad med två fält läggs till.
 1. I det första fältet från vänster anger du den CSS3-egenskap som du vill använda. Till exempel: **border**. Du kan också välja en egenskap genom att klicka på nedpilsknappen. Listrutan är inte fullständig och du kan ange ett CSS3-egenskapsnamn som stöds i det här fältet.
 1. Ange ett giltigt värde för den angivna CSS3-egenskapen i det intilliggande fältet. Till exempel: **3-pixlars solid black**.

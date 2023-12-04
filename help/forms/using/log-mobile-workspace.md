@@ -6,7 +6,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-app
 docset: aem65
 exl-id: d19cba33-0646-40d4-b4a3-b28d6db4a1f3
-source-git-commit: 60924e7ee204e43a2ff833fbc394beca8db9c9d9
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
 source-wordcount: '157'
 ht-degree: 0%
@@ -19,7 +19,7 @@ När du startar ditt Adobe Experience Manager (AEM) Forms-program måste du för
 
 ## Starta programmet {#to-start-the-app}
 
-1. Tryck på ikonen för AEM Forms-appen på din mobila enhet.
+1. Välj ikonen för AEM Forms-appen på din mobila enhet.
 1. Om du vill logga in på appen anger du användarnamn, lösenord och AEM Forms Server-URL.
 
    >[!NOTE]

@@ -1,7 +1,7 @@
 ---
 title: Bädda in länkkomponent på en sida
 seo-title: Embedding link component in a page
-description: Du kan använda länkkomponenten för att länka ett adaptivt dokument eller ett adaptivt formulär från vilken sida som helst.
+description: Du kan använda länkkomponenten för att länka ett adaptivt dokument eller ett adaptivt formulär från en sida.
 seo-description: You can use the link component to link an adaptive document or an adaptive form from any page.
 uuid: 22f488fc-bb1a-40aa-a5f4-6d04d7250f29
 content-type: reference
@@ -10,7 +10,7 @@ topic-tags: publish
 discoiquuid: 9d63152d-41ca-4c7c-bb20-af16c7bdec13
 docset: aem65
 exl-id: eb45adf2-d0f3-4de6-92ac-fb146953e989
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
 source-wordcount: '408'
 ht-degree: 0%
@@ -29,7 +29,7 @@ Med länkkomponenten kan formulärportalförfattare skapa en länk till ett anpa
 
 Utför följande steg för att lägga till en länkkomponent på sidan:
 
-1. Dra **Länk** på sidan. Markera komponenten och tryck på ![cmppr](assets/cmppr.png). Dialogrutan Redigera länkkomponent öppnas.
+1. Dra **Länk** på sidan. Markera komponenten och markera ![cmppr](assets/cmppr.png). Dialogrutan Redigera länkkomponent öppnas.
 
    ![edit-link-component](assets/edit-link-component.png)
 
@@ -45,12 +45,12 @@ Utför följande steg för att lägga till en länkkomponent på sidan:
 
    * **Återgivningstyp**: Återgivningsformatet PDF, HTML eller Auto. Återgivningstypen Auto identifierar användarmiljön och återger formuläret som HTML eller PDF. Om formuläret till exempel nås från en mobil enhet återges formuläret i HTML av återgivningstypen Auto.
    * **Skicka URL:**  URL till den server där formulärdata skickas.
-   * **HTML-profil**: Profil för att återge formuläret som HTML.
+   * **HTML-profil**: Profil för återgivning av formuläret som HTML.
    * **PDF-profil**: Profil för återgivning av formuläret som PDF-dokument.
 
 1. Öppna **Avancerat** -fliken. Du kan ange ytterligare parametrar i nyckelvärdepar-formatet. När användaren klickar på länken skickas dessa ytterligare parametrar tillsammans med formuläret.
 
-   Tryck **Klar** för att spara konfigurationen.
+   Välj **Klar** för att spara konfigurationen.
 
 ## Bästa tillvägagångssätt för att använda länkkomponenten {#best-practices-for-using-link-component-br}
 

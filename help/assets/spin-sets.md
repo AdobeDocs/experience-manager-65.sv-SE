@@ -1,5 +1,5 @@
 ---
-title: Snurrande uppsättningar
+title: Snurra uppsättningar
 description: Lär dig hur du skapar en snurrfunktion i Dynamic Media för att simulera hur ett objekt ser ut i verkligheten, så att du kan se detaljerna.
 uuid: 379a20a3-6a17-499a-b0f1-3a835b97aa7b
 contentOwner: Rick Brough
@@ -11,14 +11,14 @@ docset: aem65
 feature: Spin Sets,Asset Management
 role: User, Admin
 exl-id: 758ad754-15de-4e72-9b7d-ab49c51d7d4f
-source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '1911'
+source-wordcount: '1940'
 ht-degree: 8%
 
 ---
 
-# Snurrande uppsättningar{#spin-sets}
+# Snurra uppsättningar{#spin-sets}
 
 Med en snurra uppsättning kan du simulera hur det ser ut när du vrider ett objekt för att undersöka det. Med snurra uppsättningar kan du visa objekt från vilken vinkel som helst och få fram viktiga visuella detaljer från vilken vinkel som helst.
 
@@ -149,9 +149,9 @@ Se även [Dynamic Media begränsningar](/help/assets/limitations.md).
 
    * I närheten av det övre vänstra hörnet på sidan för redigeraren för sned uppsättning väljer du **[!UICONTROL Add Asset]**.
 
-   * I mitten av sidan för redigeraren för sned uppsättning väljer du **[!UICONTROL Tap to open Asset Selector]**.
+   * I mitten av sidan för redigeraren för sned uppsättning väljer du **[!UICONTROL Select to open Asset Selector]**.
 
-   Tryck för att välja resurser som du vill inkludera i din snurruppsättning. De markerade resurserna visas med en bock. När du är klar väljer du **[!UICONTROL Select]**.
+   Välj det här alternativet om du vill välja resurser som ska ingå i din snurruppsättning. De markerade resurserna visas med en bock. När du är klar väljer du **[!UICONTROL Select]**.
 
    Med resursväljaren kan du söka efter resurser genom att skriva ett nyckelord och trycka på **[!UICONTROL Return]**. Du kan också använda filter för att förfina sökresultatet. Du kan filtrera efter sökväg, samling, filtyp och tagg. Markera filtret och välj sedan **[!UICONTROL Filter]** -ikonen i verktygsfältet. Ändra vyn genom att trycka på ikonen Visa och sedan välja **[!UICONTROL Column View]**, **[!UICONTROL Card View]** eller **[!UICONTROL List View]**.
 

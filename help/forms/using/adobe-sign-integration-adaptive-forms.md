@@ -10,9 +10,9 @@ discoiquuid: 1f28b257-5419-4a21-a54a-b20bf35530ac
 docset: aem65
 feature: Adaptive Forms, Acrobat Sign
 exl-id: 52146038-1582-41b8-aee0-215d04bb91d7
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '1917'
+source-wordcount: '1825'
 ht-degree: 0%
 
 ---
@@ -53,9 +53,9 @@ Du behöver följande för att kunna integrera [!DNL Adobe Sign] med AEM [!DNL F
 Utför följande steg för att konfigurera [!DNL Adobe Sign] med AEM [!DNL Forms] på Author-instansen:
 
 1. På AEM [!DNL Forms] författarinstans, navigera till **verktyg** ![hammare](assets/hammer.png) > **[!UICONTROL General]** > **[!UICONTROL Configuration Browser]**.
-1. På **[!UICONTROL Configuration Browser]** sida, tryck **[!UICONTROL Create]**.
+1. På **[!UICONTROL Configuration Browser]** sida, markera **[!UICONTROL Create]**.
    * Se [Konfigurationsläsaren](/help/sites-administering/configurations.md) mer information.
-1. I **[!UICONTROL Create Configuration]** dialogruta, ange **[!UICONTROL Title]** för konfigurationen, aktivera **[!UICONTROL Cloud Configurations]** och trycka **[!UICONTROL Create]**. En konfigurationsbehållare skapas.
+1. I **[!UICONTROL Create Configuration]** dialogruta, ange **[!UICONTROL Title]** för konfigurationen, aktivera **[!UICONTROL Cloud Configurations]** och markera **[!UICONTROL Create]**. En konfigurationsbehållare skapas.
 1. Navigera till **verktyg** ![hammare](assets/hammer.png) > **[!UICONTROL Cloud Services]** > **[!UICONTROL Adobe Sign]** och välj den konfigurationsbehållare som du skapade i steget ovan.
 
    >[!NOTE]
@@ -66,8 +66,8 @@ Utför följande steg för att konfigurera [!DNL Adobe Sign] med AEM [!DNL Forms
    >
    Kontrollera att URL:en för konfigurationssidan för Cloud Service börjar med **HTTPS**. Om inte, [aktivera SSL](/help/sites-administering/ssl-by-default.md) för AEM [!DNL Forms] server.
 
-1. Tryck på på konfigurationssidan **[!UICONTROL Create]** att skapa [!DNL Adobe Sign] AEM [!DNL Forms].
-1. I **[!UICONTROL General]** -fliken i **[!UICONTROL Create Adobe Sign Configuration]** sida, ange en **[!UICONTROL Name]** för konfigurationen och tryck **[!UICONTROL Next]**. Du kan också ange en titel och bläddra för att välja en miniatyrbild för konfigurationen.
+1. Välj på konfigurationssidan **[!UICONTROL Create]** att skapa [!DNL Adobe Sign] AEM [!DNL Forms].
+1. I **[!UICONTROL General]** -fliken i **[!UICONTROL Create Adobe Sign Configuration]** sida, ange en **[!UICONTROL Name]** för konfigurationen och välj **[!UICONTROL Next]**. Du kan också ange en titel och bläddra för att välja en miniatyrbild för konfigurationen.
 
 1. Kopiera URL-adressen i det aktuella webbläsarfönstret till en anteckningsruta. Du måste konfigurera [!DNL Adobe Sign] program med AEM[!DNL Forms].
 
@@ -92,7 +92,7 @@ Utför följande steg för att konfigurera [!DNL Adobe Sign] med AEM [!DNL Forms
 1. Konfigurera OAuth-inställningar för [!DNL Adobe Sign] program:
 
    1. Öppna ett webbläsarfönster och logga in på [!DNL Adobe Sign] utvecklarkonto.
-   1. Välj det program som konfigurerats för AEM [!DNL Forms]och trycka **[!UICONTROL Configure OAuth for Application]**.
+   1. Välj det program som konfigurerats för AEM [!DNL Forms]och markera **[!UICONTROL Configure OAuth for Application]**.
    1. Kopiera **[!UICONTROL Client ID]** och **[!UICONTROL Client Secret]** till en anteckningsruta.
    1. I **[!UICONTROL Redirect URL]** lägger du till HTTPS-URL:en som kopierades i föregående steg.
    1. Aktivera följande OAuth-inställningar för [!DNL Adobe Sign] program och klickar på **[!UICONTROL Save]**.
@@ -128,9 +128,9 @@ Utför följande steg för att konfigurera [!DNL Adobe Sign] med AEM [!DNL Forms
 
 1. Välj **[!UICONTROL Enable Adobe Sign for attachments also]** möjlighet att lägga till filer som är kopplade till ett adaptivt formulär i motsvarande [!DNL Adobe Sign] dokumentet har skickats för signering.
 
-1. Tryck på **[!UICONTROL Connect to Adobe Sign]**. Ange användarnamn och lösenord för kontot som används när du skapar inloggningsuppgifter [!DNL Adobe Sign] program.
+1. Välj **[!UICONTROL Connect to Adobe Sign]**. Ange användarnamn och lösenord för kontot som används när du skapar inloggningsuppgifter [!DNL Adobe Sign] program.
 
-1. Tryck **[!UICONTROL Create]** för att skapa [!DNL Adobe Sign] konfiguration.
+1. Välj **[!UICONTROL Create]** för att skapa [!DNL Adobe Sign] konfiguration.
 
 1. Öppna AEM webbkonsol. URL:en är `https://'[server]:[port]'/system/console/configMgr`
 1. Öppna **[!UICONTROL Forms Common Configuration Service].**
@@ -164,18 +164,18 @@ Innan du börjar ansluta AEM Forms med Adobe Acrobat Sign Solution,
 #### Skapa en omdirigerings-URL för AEM
 
 1. I AEM Forms går du till **[!UICONTROL Tools]** ![hammare](assets/hammer.png) > **[!UICONTROL General]** > **[!UICONTROL Configuration Browser]**.
-1. På **[!UICONTROL Configuration Browser]** sida, tryck **[!UICONTROL Create]**.
-1. I **[!UICONTROL Create Configuration]** dialogruta, ange **[!UICONTROL Title]** för konfigurationen, aktivera **[!UICONTROL Cloud Configurations]** och trycka **[!UICONTROL Create]**. En konfigurationsbehållare skapas. Kontrollera att behållar-/mappnamnet inte innehåller något utrymme.
+1. På **[!UICONTROL Configuration Browser]** sida, markera **[!UICONTROL Create]**.
+1. I **[!UICONTROL Create Configuration]** dialogruta, ange **[!UICONTROL Title]** för konfigurationen, aktivera **[!UICONTROL Cloud Configurations]** och markera **[!UICONTROL Create]**. En konfigurationsbehållare skapas. Kontrollera att behållar-/mappnamnet inte innehåller något utrymme.
 
 1. Navigera till **[!UICONTROL Tools]** ![hammare](assets/hammer.png) > **[!UICONTROL Cloud Services]** > **[!UICONTROL Adobe Acrobat Sign]** och öppna konfigurationsbehållaren som du skapade i föregående steg. När du skapar ett adaptivt formulär anger du behållarnamnet i dialogrutan **[!UICONTROL Configuration Container]** fält.
-1. Tryck på på konfigurationssidan **[!UICONTROL Create]** att skapa [!DNL Adobe Acrobat Sign] i AEM Forms.
+1. Välj på konfigurationssidan **[!UICONTROL Create]** att skapa [!DNL Adobe Acrobat Sign] i AEM Forms.
 1. Kopiera URL-adressen för det aktuella webbläsarfönstret till en anteckningsruta från URL-adressen. Denna URL kallas `re-direct URL`. I nästa avsnitt delar du `re-direct URL` och `Scopes` med Adobe Sign team och begära inloggningsuppgifter (klient-ID och klienthemlighet).
 
 >[!NOTE]
 >
 >
-* A `re-direct URL` måste innehålla [Översta nivån](https://en.wikipedia.org/wiki/Top-level_domain) domän. Till exempel, `https://adobe.com/libs/adobesign/cloudservices/adobesign/createcloudconfigwizard/cloudservices.html/conf/global`
-* Använd inte en lokal URL som `re-direct URL`. Till exempel, `https://localhost:4502/libs/adobesign/cloudservices/adobesign/createcloudconfigwizard/cloudservices.html/conf/global`.
+* A `re-direct URL` måste innehålla [Översta nivån](https://en.wikipedia.org/wiki/Top-level_domain) domän. Exempel: `https://adobe.com/libs/adobesign/cloudservices/adobesign/createcloudconfigwizard/cloudservices.html/conf/global`
+* Använd inte en lokal URL som `re-direct URL`. Till exempel: `https://localhost:4502/libs/adobesign/cloudservices/adobesign/createcloudconfigwizard/cloudservices.html/conf/global`.
 
 
 #### Dela omdirigerings-URL:en och omfattningarna med Adobe Sign team och få inloggningsuppgifter
@@ -200,7 +200,7 @@ Representanten genererar och delar uppgifter med dig. I nästa avsnitt använder
 
 1. Öppna `re-direct URL` i webbläsaren. Du skapade och antecknade i `re-direct URL` i det sista steget i [skapa en omdirigerings-URL för din AEM](#create-redirect-url) -avsnitt.
 
-1. I **[!UICONTROL General]** -fliken i **[!UICONTROL Create Adobe Sign Configuration]** sida, ange en **[!UICONTROL Name]** för konfigurationen och tryck på **[!UICONTROL Next]**. Du kan också ange en **[!UICONTROL Title]** och bläddra för att välja **[!UICONTROL Thumbnail]** för konfigurationen. Klicka på **[!UICONTROL Next]**.
+1. I **[!UICONTROL General]** -fliken i **[!UICONTROL Create Adobe Sign Configuration]** sida, ange en **[!UICONTROL Name]** för konfigurationen och välj **[!UICONTROL Next]**. Du kan också ange en **[!UICONTROL Title]** och bläddra för att välja **[!UICONTROL Thumbnail]** för konfigurationen. Klicka på **[!UICONTROL Next]**.
 
 1. I **[!UICONTROL Settings]** -fliken i **[!UICONTROL Create Adobe Sign Configuration]** sida, för **[!UICONTROL Select solution]** alternativ, markera [!DNL Adobe Acrobat Sign Solutions for Government].
 
@@ -214,13 +214,13 @@ Representanten genererar och delar uppgifter med dig. I nästa avsnitt använder
 
 1. Välj **[!UICONTROL Enable Adobe Acrobat Sign for attachments]** möjlighet att lägga till filer som är kopplade till ett adaptivt formulär i motsvarande [!DNL Adobe Acrobat Sign] dokumentet har skickats för signering.
 
-1. Tryck på **[!UICONTROL Connect to Adobe Sign]**. Ange användarnamn och lösenord för kontot som används när du skapar inloggningsuppgifter [!DNL Adobe Acrobat Sign] program. När du ombeds att bekräfta åtkomsten för `Adobe Acrobat Sign for Government Solutions` och klickar **[!UICONTROL Allow Access]**. Om autentiseringsuppgifterna är korrekta och du tillåter [!DNL AEM Forms] för att få tillgång till [!DNL Adobe Acrobat Sign] utvecklarkontot visas ett meddelande om att åtgärden lyckades.
+1. Välj **[!UICONTROL Connect to Adobe Sign]**. Ange användarnamn och lösenord för kontot som används när du skapar inloggningsuppgifter [!DNL Adobe Acrobat Sign] program. När du ombeds att bekräfta åtkomsten för `Adobe Acrobat Sign for Government Solutions` och klickar **[!UICONTROL Allow Access]**. Om autentiseringsuppgifterna är korrekta och du tillåter [!DNL AEM Forms] för att få tillgång till [!DNL Adobe Acrobat Sign] utvecklarkontot visas ett meddelande om att åtgärden lyckades.
 
    ![Konfigurationen av Adobe Acrobat Sign Cloud lyckades](/help/forms/using/assets/adobe-sign-cloud-configuration-success.png)
 
    Ange användarnamn och lösenord för kontot som används när du skapar inloggningsuppgifter [!DNL Adobe Acrobat Sign] program. När du ombeds att bekräfta åtkomsten för `your account`och klicka **[!UICONTROL Allow Access]**.
 
-1. Tryck **[!UICONTROL Create]** för att skapa konfigurationen.
+1. Välj **[!UICONTROL Create]** för att skapa konfigurationen.
 1. Öppna AEM webbkonsol. URL:en är `https://'[server]:[port]'/system/console/configMgr`
 1. Öppna **[!UICONTROL Forms Common Configuration Service].**
 1. I **[!UICONTROL Allow]** fält, **välj** Alla användare - Alla användare, anonyma eller inloggade, kan förhandsgranska bilagor, verifiera och signera formulär och klicka på **[!UICONTROL Save].** Författarinstansen är konfigurerad att använda [!DNL Adobe Sign].

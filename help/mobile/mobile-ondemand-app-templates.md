@@ -5,7 +5,7 @@ contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 exl-id: 5f050baa-fe10-4acc-ad32-de20793edc13
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
 source-wordcount: '1151'
 ht-degree: 0%
@@ -141,7 +141,7 @@ När komponenten redan har inkluderats på en AEM sida, tillsammans med några a
 **Redigera en befintlig komponent:**
 
 1. Välj den sidan och kontrollera att du är **Redigera** och markera komponenten
-1. Tryck på skiftnyckelsikonen för att konfigurera komponenten
+1. Välj skiftnyckelsikonen för att konfigurera komponenten
 
 >[!NOTE]
 >

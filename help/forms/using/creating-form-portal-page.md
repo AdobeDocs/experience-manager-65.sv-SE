@@ -11,9 +11,9 @@ discoiquuid: 8fff78cb-9ef9-426e-8b30-d70b4f26887f
 docset: aem65
 feature: Forms Portal
 exl-id: 22d7c24e-7a77-4324-afdf-74c1fbf15773
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '1655'
 ht-degree: 0%
 
 ---
@@ -58,13 +58,13 @@ Sök efter och visa komponent på en sida med stödrasterlayout
 
 Listrutan är ett område där formulären listas. Komponenten Sök och lista innehåller olika konfigurationsalternativ som du kan använda för att styra visningen av formulär i rutan Lista.
 
-Konfigurera listfönstret genom att trycka på komponenten Sök och Lister och sedan trycka på ![settings_icon](assets/settings_icon.png). The **[!UICONTROL  Edit Component]** öppnas.
+Om du vill konfigurera listrutan markerar du komponenten Sök och Lister och väljer sedan ![settings_icon](assets/settings_icon.png). The **[!UICONTROL  Edit Component]** öppnas.
 
 ![Listruta i redigeringsläge](assets/edit-list.png)
 
 Listruta i redigeringsläge
 
-The **Redigera** innehåller flera flikar med konfigurationsalternativ som beskrivs i tabellen nedan. Tryck **OK** för att spara konfigurationen när du är klar.
+The **Redigera** innehåller flera flikar med konfigurationsalternativ som beskrivs i tabellen nedan. Välj **OK** för att spara konfigurationen när du är klar.
 
 <table>
  <tbody>
@@ -177,7 +177,7 @@ När du lägger till komponenten Date Predicate kan du söka i de listade formul
 
 Så här konfigurerar du komponenten Date Predicate:
 
-1. Tryck på komponenten och tryck sedan på ![settings_icon](assets/settings_icon.png). Dialogrutan Redigera öppnas.
+1. Markera komponenten och markera sedan ![settings_icon](assets/settings_icon.png). Dialogrutan Redigera öppnas.
 1. Ange följande:
 
    * **Typ:** Det enda tillgängliga alternativet är **Senast ändrat den**
@@ -188,7 +188,7 @@ Så här konfigurerar du komponenten Date Predicate:
    * **Slutdatum - etikett:** Etikett eller bildtext för slutdatumfält
    * **Dölj:** Använda standarddatumfilter för att lista formulär
 
-1. Tryck **OK**
+1. Välj **OK**
 
 #### Fullständig textpredikat {#full-text-predicate}
 
@@ -196,9 +196,9 @@ Komponenten Full Text Predicate implementerar fullständig textsökning i formul
 
 Så här konfigurerar du komponenten Full Text Predicate:
 
-1. Tryck på komponenten och tryck sedan på ![settings_icon](assets/settings_icon.png). Dialogrutan Redigera öppnas.
+1. Markera komponenten och markera sedan ![settings_icon](assets/settings_icon.png). Dialogrutan Redigera öppnas.
 1. Ange rubriken i dialogrutan **Huvudrubrik** fält.
-1. Tryck **OK**
+1. Välj **OK**
 
 #### Egenskapspredikat {#properties-predicate}
 
@@ -206,15 +206,15 @@ Komponenten Predicate för egenskaper implementerar sökning i formulär baserat
 
 Så här konfigurerar du komponenten Predicate för egenskaper:
 
-1. Tryck på komponenten och tryck sedan på ![settings_icon](assets/settings_icon.png). Dialogrutan Redigera öppnas.
+1. Markera komponenten och markera sedan ![settings_icon](assets/settings_icon.png). Dialogrutan Redigera öppnas.
 1. På fliken Allmänt anger du söketiketten. Standardvärdet är **Egenskaper**
 
-1. Tryck på **Lägg till objekt.**
+1. Välj **Lägg till objekt.**
 1. Välj en egenskap i listrutan och ange en söketikett för den i fältet nedanför listrutan.
 1. Upprepa steg 4 om du vill lägga till fler egenskaper. Du kan också ange ett standardfiltervärde för att lista formulär baserat på de angivna villkoren och dölja egenskapen för sökning av slutanvändare. Markera kryssrutan Dölj för en egenskap och ange standardfiltervärdet.
 Om du till exempel vill visa formulär som innehåller&quot;Resa&quot; i sina titlar väljer du Dölj bredvid egenskapen Titel. Ange dessutom Travel i standardtextrutan för filtervärde.
 
-1. Tryck **OK**
+1. Välj **OK**
 
 #### Taggar - predikat {#tags-predicate}
 
@@ -222,10 +222,10 @@ Komponenten för taggprediktion implementerar sökning i formulär baserat på t
 
 Så här konfigurerar du komponenten Tagg Predicate:
 
-1. Tryck på komponenten och tryck sedan på ![settings_icon](assets/settings_icon.png). Dialogrutan Redigera öppnas.
-1. Tryck på nedpilsknappen bredvid fältet Taggar.
+1. Markera komponenten och markera sedan ![settings_icon](assets/settings_icon.png). Dialogrutan Redigera öppnas.
+1. Välj nedpilsknappen bredvid fältet Taggar.
 1. Välj lämpliga taggar
-1. Tryck **OK**
+1. Välj **OK**
 
 De markerade taggarna visas i sökrutan tillsammans med kryssrutorna för markering. Användarna kan nu begränsa sökningen baserat på taggarna.
 

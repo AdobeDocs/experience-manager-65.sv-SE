@@ -7,9 +7,9 @@ feature: Asset Management,Search
 mini-toc-levels: 4
 exl-id: 158607e6-b4e9-4a3f-b023-4023d60c97d2
 hide: true
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '9826'
+source-wordcount: '9797'
 ht-degree: 2%
 
 ---
@@ -645,7 +645,7 @@ CUG är ett extra sätt att begränsa åtkomsten till dina resurser. Du kan ocks
 1. Publicera mappen och försök sedan komma åt den från publiceringsinstansen. En inloggningsskärm visas.
 1. Om du är CUG-medlem anger du dina säkerhetsuppgifter. Mappen visas efter [!DNL Experience Manager] autentiserar dig.
 
-## Söka efter resurser {#assetsearch}
+## Sök resurser {#assetsearch}
 
 Att söka efter resurser är centralt för användningen av ett digitalt resurshanteringssystem. Den här funktionaliteten är viktig för kreatörerna, för effektiv hantering av resurser av företagsanvändare och marknadsförare eller för administration av DAM-administratörer.
 
@@ -655,7 +655,7 @@ Mer information om enkla, avancerade och anpassade sökningar för att hitta och
 
 Snabbåtgärdsikoner är tillgängliga för en enskild resurs i taget. Beroende på vilken enhet du använder utför du följande åtgärder för att visa snabbåtgärdsikonerna:
 
-* Pekskärmar: Tryck och håll. På en iPad kan du till exempel trycka och hålla ned en resurs så att snabbåtgärderna visas.
+* Pekskärmar: Tryck och håll. På en iPad kan du till exempel markera och hålla kvar en resurs så att snabbåtgärderna visas.
 * Ej pekskärmar: pekare. På en stationär enhet visas t.ex. snabbåtgärdsfältet om du håller pekaren över miniatyrbilden för resursen.
 
 ### Navigera och markera resurser {#navigating-and-selecting-assets}

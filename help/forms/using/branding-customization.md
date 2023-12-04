@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-app
 discoiquuid: f6440a36-719a-4f89-b7db-1af918a3469a
 exl-id: 9333705b-9944-4a74-a30f-7d9ec85fd824
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '872'
+source-wordcount: '876'
 ht-degree: 0%
 
 ---
@@ -39,7 +39,7 @@ Följ de här stegen för att anpassa standardprogramikonen och startbilden för
 #### För iOS {#for-ios}
 
 1. Öppna `Capture.xcodeproj` projekt i Xcode.
-1. (***Ikon för anpassning***) I navigeringsvyn i Capture navigerar du till **[!UICONTROL Capture > Capture > Supporting Files > Capture-info.plist]**. Klicka på listrutan bredvid ikonfilerna. Ange namnet på ikonfilen (.png) och överför filen på **[!UICONTROL Capture > Capture > Resources > icons]**. De dimensioner som stöds för närvarande är: 29x29, 50x50, 58x58, 72x72, 100x100 och 144x144.
+1. (***Ikon för anpassning***) I navigeringsvyn i Capture navigerar du till **[!UICONTROL Capture > Capture > Supporting Files > Capture-info.plist]**. Klicka på listrutan bredvid ikonfilerna. Ange namnet på ikonfilen (.png) och överför filen på **[!UICONTROL Capture > Capture > Resources > icons]**. De dimensioner som stöds för närvarande är: 29 × 29, 50 × 50, 58 × 58, 72 × 72, 100 × 100 och 144 × 144.
 1. (***För anpassning av startbilder***) Kontrollera att filnamnen för bilderna är:
 
    * För stående: `Default-Portrait~ipad.png` och `Default-Portrait@2x~ipad.png`
@@ -181,7 +181,7 @@ Kontrollera att du har följande bilder:
 
 ## Anpassa logotypen på appmenyn {#customizing_images_on_the_login_page-1}
 
-När du har loggat in på AEM Forms-appen och tryckt på menyknappen visas logotypen ovanför menyn. Följ de här stegen för att anpassa standardlogotypen:
+När du har loggat in på AEM Forms-appen och valt menyknappen visas logotypen ovanför menyn. Följ de här stegen för att anpassa standardlogotypen:
 
 **Innan du börjar**
 

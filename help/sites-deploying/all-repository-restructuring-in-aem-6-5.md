@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: repo_restructuring
 exl-id: 2d852d9d-9be3-487a-966a-4902bd7df7f9
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '2688'
+source-wordcount: '2694'
 ht-degree: 0%
 
 ---
@@ -90,7 +90,7 @@ I.e. the `sling:resourceType` för ContextHub-konfigurationen måste vara relati
         </ul> </li>
       </ol> </li>
      <li>Aktivera redigeringsläget i arbetsflödesmodellredigeraren, som kopierar arbetsflödesmodelldefinitionen till /conf/global/workflow/models.</li>
-     <li>Tryck på knappen Synkronisera för att synkronisera ändringarna till arbetsflödesmodellen för körning under /var/workflow/models.</li>
+     <li>Markera knappen Synkronisera om du vill synkronisera ändringarna till arbetsflödesmodellen för körning under /var/workflow/models.</li>
      <li>Exportera båda arbetsflödesmodellerna (/conf/global/workflow/models/&lt;workflow-model&gt;) och Runtime Workflow Model (/var/workflow/models/&lt;workflow-model&gt;) och integrera i AEM.
       <ol>
        <li>Exempel:

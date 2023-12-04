@@ -6,7 +6,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: customization
 docset: aem65
 exl-id: 5cb3ee55-f411-4692-84f7-89bf6ade729d
-source-git-commit: ab3d016c7c9c622be361596137b150d8719630bd
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
 source-wordcount: '521'
 ht-degree: 0%
@@ -30,8 +30,8 @@ Så här använder du en anpassad layout för ett fält:
 
 ### Anpassa layouten för ett enskilt fält {#customize-layout-of-a-single-field}
 
-1. Öppna formuläret i **Stil** läge. Om du vill öppna formuläret i formatläge trycker du på i sidverktygsfältet ![canvas-drop-down](assets/canvas-drop-down.png) > **Stil**.
-1. I sidlisten, under **Formulärobjekt** markerar du fältet och trycker på redigeringsknappen ![edit-button](assets/edit-button.png).
+1. Öppna formuläret i **Stil** läge. Om du vill öppna formuläret i formatläge väljer du ![canvas-drop-down](assets/canvas-drop-down.png) > **Stil**.
+1. I sidlisten, under **Formulärobjekt** markerar du fältet och väljer redigeringsknappen ![edit-button](assets/edit-button.png).
 1. Markera läget för det fält som du vill anpassa och ange formatet för det läget.
 
    ![Ange infogad formatering för ett fält](assets/edit-error-state.png)
@@ -43,7 +43,7 @@ Med AEM Forms kan du nu skapa ett tema och använda det i ditt formulär. Med te
 Skapa ett tema med hjälp av temaredigeraren för att anpassa layouten för alla fält i formuläret. När du har skapat ett tema utför du följande steg för att tillämpa det på ett formulär:
 
 1. Öppna formuläret i redigeringsläge.
-1. Markera en komponent i redigeringsläget och tryck sedan på ![fältnivå](assets/field-level.png) > **Adaptiv formulärbehållare** och sedan trycka ![cmppr](assets/cmppr.png).
+1. Markera en komponent i redigeringsläget och välj sedan ![fältnivå](assets/field-level.png) > **Adaptiv formulärbehållare** och sedan markera ![cmppr](assets/cmppr.png).
 1. I sidlisten, under Adaptivt formulärtema, väljer du det tema du har skapat med hjälp av Theme Editor.
 
 ## Skapa en anpassad fältlayout {#create-a-custom-field-layout}

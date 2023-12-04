@@ -6,7 +6,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-app
 docset: aem65
 exl-id: 6c6fb516-1b11-4da4-b638-4388a070e397
-source-git-commit: 65c5a4442f17e6bc52deaa1588f535a05698083f
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
 source-wordcount: '339'
 ht-degree: 0%
@@ -29,10 +29,10 @@ Följande bild är kommenterad med utanrop till de viktigaste komponenterna på 
 
 ![home-screen-1-1](assets/home-screen-1-1.png)-->
 
-1. **Menyknapp**: Tryck på **Meny** för att navigera till Uppgifter, Forms, Utkorgen och Inställningar. Om din AEM Forms-app är ansluten till en AEM Forms JEE-server kan du se alternativet Åtgärder. Alternativet Uppgifter lagrar även utkast som skapats från uppgifter i en process. För AEM Forms OSGi-servrar är alternativet Åtgärder dolt. I Outbox lagras de sparade formulären och utkasten innan de synkroniseras med servern. Alla sparade formulär och utkast i Utkorgen överförs till AEM Forms Server när appen [synkroniserad med servern](../../forms/using/sync-app.md). Mer information om inställningar finns i [Uppdatera allmänna inställningar](../../forms/using/update-general-settings.md).
-1. **Uppgift eller formulär**: Tryck på uppgiften eller formuläret som du vill arbeta med.
-1. **Vågrät ellips**: Anger att åtgärder är tillgängliga för formuläret. När du trycker på ellipsen visas de åtgärder och den beskrivning som författaren har angett. The **Ta bort utkast** och **Complete** är synligt när du trycker på ellipsen.
-1. **Ikonen Uppdatera**: Tryck på uppdateringsikonen så att du kan synkronisera appen med AEM Forms Server.
+1. **Menyknapp**: Välj **Meny** för att navigera till Uppgifter, Forms, Utkorgen och Inställningar. Om din AEM Forms-app är ansluten till en AEM Forms JEE-server kan du se alternativet Åtgärder. Alternativet Uppgifter lagrar även utkast som skapats från uppgifter i en process. För AEM Forms OSGi-servrar är alternativet Åtgärder dolt. I Outbox lagras de sparade formulären och utkasten innan de synkroniseras med servern. Alla sparade formulär och utkast i Utkorgen överförs till AEM Forms Server när appen [synkroniserad med servern](../../forms/using/sync-app.md). Mer information om inställningar finns i [Uppdatera allmänna inställningar](../../forms/using/update-general-settings.md).
+1. **Uppgift eller formulär**: Välj den uppgift eller det formulär som du vill arbeta med.
+1. **Vågrät ellips**: Anger att åtgärder är tillgängliga för formuläret. När du trycker på ellipsen visas de åtgärder och den beskrivning som författaren har angett. The **Ta bort utkast** och **Complete** är synligt när du markerar ellipsen.
+1. **Ikonen Uppdatera**: Välj uppdateringsikonen så att du kan synkronisera appen med AEM Forms Server.
 
 ### Anpassa hemskärmen {#customizing-the-home-screen}
 

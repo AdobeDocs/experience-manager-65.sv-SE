@@ -4,9 +4,9 @@ description: Installera, konfigurera och anpassa ett AEM Forms-demopaket.
 contentOwner: anujkapo
 docset: aem65
 exl-id: 1fee474e-7da5-4ab2-881a-34b8e055aa29
-source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '4588'
+source-wordcount: '4486'
 ht-degree: 0%
 
 ---
@@ -21,8 +21,8 @@ Det här paketet skapades för **AEM Forms 6.4 OSGI Author**, har testats och st
 
 | AEM | AEM FORMS PACKAGE VERSION | STATUS |
 |---|---|---|
-| 6.4 | 5.0.86 | **Stöds** |
-| 6.5 | 6.0.80 | **Stöds** |
+| 6,4 | 5.0.86 | **Stöds** |
+| 6,5 | 6.0.80 | **Stöds** |
 | 6.5.3 | 6.0.122 | **Stöds** |
 
 Paketet innehåller en molnkonfiguration som stöder följande plattformsversioner:
@@ -79,11 +79,11 @@ Det här avsnittet innehåller information om hur du installerar demopaketet.
 ### Från programvarudistribution {#from-software-distribution}
 
 1. Öppna [Programvarudistribution](https://experience.adobe.com/downloads). Du behöver en Adobe ID för att logga in på Software Distribution.
-1. Tryck **[!UICONTROL Adobe Experience Manager]** finns i rubrikmenyn.
+1. Välj **[!UICONTROL Adobe Experience Manager]** finns i rubrikmenyn.
 1. I **[!UICONTROL Filters]** avsnitt:
    1. Välj **[!UICONTROL Forms]** från **[!UICONTROL Solution]** listruta.
    2. Välj version och typ för paketet. Du kan också använda **[!UICONTROL Search Downloads]** för att filtrera resultaten.
-1. Tryck på **we-gov-forms.pkg.all-&lt;version>.zip** paketnamn, markera **[!UICONTROL Accept EULA Terms]** och trycka **[!UICONTROL Download]**.
+1. Välj **we-gov-forms.pkg.all-&lt;version>.zip** paketnamn, markera **[!UICONTROL Accept EULA Terms]** och markera **[!UICONTROL Download]**.
 1. Öppna [Pakethanteraren](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html)  och klicka **[!UICONTROL Upload Package]** för att överföra paketet.
 1. Markera paketet och klicka på **[!UICONTROL Install]**.
 

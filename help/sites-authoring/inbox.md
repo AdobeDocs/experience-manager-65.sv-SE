@@ -2,7 +2,7 @@
 title: Inkorgen för att hantera uppgifter
 description: Hantera dina uppgifter med inkorgen i Adobe Experience Manager 6.5.
 exl-id: 80b7f179-b011-4f90-b5ab-9ef8a669d271
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
 source-wordcount: '1155'
 ht-degree: 6%
@@ -138,8 +138,8 @@ Alternativet Admin Control är bara synligt för medlemmarna i `administrators` 
 
 * **Kolumnanpassning**: Anpassa en AEM Inkorg om du vill ändra standardrubriken för en kolumn, ändra ordning på positionen för en kolumn och visa ytterligare kolumner baserat på data i ett arbetsflöde.
    * **Lägg till kolumn**: Välj en kolumn som ska läggas till AEM Inkorgen.
-   * **Redigera kolumn**: Håll muspekaren över kolumnrubriken och tryck på ![redigera](assets/edit.svg) om du vill ange ett kolumnvisningsnamn.
-   * **Ta bort kolumn**: Tryck på ![delete](assets/delete_updated.svg) om du vill ta bort kolumnen från AEM.
+   * **Redigera kolumn**: Håll muspekaren över kolumnrubriken och markera ![redigera](assets/edit.svg) om du vill ange ett kolumnvisningsnamn.
+   * **Ta bort kolumn**: Välj ![delete](assets/delete_updated.svg) om du vill ta bort kolumnen från AEM.
    * **Flytta kolumn**: Dra ![move](assets/move_updated.svg) om du vill flytta en kolumn till en ny plats i AEM Inkorg.
 
   ![admin-control](assets/admin-control-column-customize.png)

@@ -7,9 +7,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 docset: aem65
 feature: Adaptive Forms
 exl-id: 7240897f-6b3a-427a-abc6-66310c2998f3
-source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '3415'
+source-wordcount: '3404'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 0%
 | AEM 6.5 | Den här artikeln |
 
 
-## Översikt {#overview}
+## Ökning {#overview}
 
 Efter att ha skickat in ett formulär vill era kunder vanligtvis registrera, i utskrift eller i dokumentformat, den information de har fyllt i formuläret för framtida referens. Detta kallas för ett urkunder.
 
@@ -266,7 +266,7 @@ Utför följande steg för att konfigurera ett postdokument för adaptiva formul
 
 1. I AEM författarinstans klickar du på **Forms > Forms och dokument.**
 1. Markera ett formulär och klicka på **Visa egenskaper**.
-1. I fönstret Egenskaper trycker du på **Formulärmodell**.
+1. Välj **Formulärmodell**.
 Du kan också välja en formulärmodell när du skapar ett formulär.
 
    >[!NOTE]
@@ -302,8 +302,8 @@ När du genererar ett postdokument kan du ändra profileringsinformationen för 
 
 Om du vill lokalisera den varumärkesinformation som du anger på fliken Dokument av post måste du se till att webbläsarens språkområde är korrekt inställt. Följ de här stegen för att anpassa profileringsinformationen för urkunder:
 
-1. Markera en panel (rotpanelen) i postdokumentet och tryck sedan på ![konfigurera](assets/configure.png).
-1. Tryck ![dortab](/help/forms/using/assets/dortab.png). Fliken Dokument för post visas.
+1. Markera en panel (rotpanelen) i postdokumentet och markera sedan ![konfigurera](assets/configure.png).
+1. Välj ![dortab](/help/forms/using/assets/dortab.png). Fliken Dokument för post visas.
 1. Välj antingen standardmallen eller en anpassad mall för återgivning av postdokumentet. Om du väljer standardmallen visas en miniatyrförhandsvisning av postdokumentet under listrutan Mall.
 
    ![brandingtemplate](/help/forms/using/assets/brandingtemplate.png)
@@ -348,7 +348,7 @@ Om du vill lokalisera den varumärkesinformation som du anger på fliken Dokumen
    </proto>
    ```
 
-1. Om du vill spara varumärkeändringen trycker du på Klar.
+1. Om du vill spara ändringarna väljer du Klart.
 
 ## Tabell- och kolumnlayouter för paneler i dokumentformat {#table-and-column-layouts-for-panels-in-document-of-record}
 
@@ -409,12 +409,12 @@ Du kan använda flera metoder för att tillämpa sidbrytningar i ett postdokumen
 
 Så här använder du en sidbrytning på ett postdokument:
 
-1. Tryck på panelen och välj ![Konfigurera](/help/forms/using/assets/configure.png)
+1. Markera panelen och markera ![Konfigurera](/help/forms/using/assets/configure.png)
 1. Expandera **[!UICONTROL Document of Record]** för att visa egenskaperna.
 
-1. I **[!UICONTROL Pagination]** sektion, trycka ![Mapp](/help/forms/using/assets/folder-icon.png) i **[!UICONTROL Place]** fält.
-1. Tryck **[!UICONTROL Top of Next page]** och knacka **[!UICONTROL Select]**. Du kan också trycka **[!UICONTROL Top of Page]**, markerar mallsidan och trycker på **[!UICONTROL Select]** om du vill använda sidbrytningen.
-1. Tryck ![Spara](/help/forms/using/assets/save_icon.png) för att spara egenskaperna.
+1. I **[!UICONTROL Pagination]** avsnitt, markera ![Mapp](/help/forms/using/assets/folder-icon.png) i **[!UICONTROL Place]** fält.
+1. Välj **[!UICONTROL Top of Next page]** och markera **[!UICONTROL Select]**. Du kan också välja **[!UICONTROL Top of Page]**, markera mallsidan och markera **[!UICONTROL Select]** om du vill använda sidbrytningen.
+1. Välj ![Spara](/help/forms/using/assets/save_icon.png) för att spara egenskaperna.
 
 Den valda panelen flyttas till nästa sida.
 
@@ -428,13 +428,13 @@ Följande är ett exempel på hur du använder flera mallsidor i ett postdokumen
 
 Om du vill använda den andra mallsidans egenskaper på en panel och den tredje mallsidans egenskaper på de paneler som följer, ska du utföra följande steg:
 
-1. Tryck på panelen för att använda den andra mallsidan och markera ![Konfigurera](assets/cmppr.png).
-1. I **[!UICONTROL Pagination]** sektion, trycka ![Mapp](/help/forms/using/assets/folder-icon.png) i **[!UICONTROL Place]** fält.
-1. Tryck **[!UICONTROL On page]** markerar du den andra mallsidan och trycker på **[!UICONTROL Select]**.
+1. Markera panelen för att använda den andra mallsidan och markera ![Konfigurera](assets/cmppr.png).
+1. I **[!UICONTROL Pagination]** avsnitt, markera ![Mapp](/help/forms/using/assets/folder-icon.png) i **[!UICONTROL Place]** fält.
+1. Välj **[!UICONTROL On page]** markerar du den andra mallsidan och väljer **[!UICONTROL Select]**.
 AEM Forms lägger till en andra mallsida på panelen och alla efterföljande paneler i det anpassade formuläret.
-1. I **[!UICONTROL Pagination]** sektion, trycka ![Mapp](/help/forms/using/assets/folder-icon.png) i **[!UICONTROL After]** fält.
-1. Tryck **[!UICONTROL Go To page]**, markerar den tredje mallsidan och trycker på **[!UICONTROL Select]**.
-1. Tryck ![Spara](/help/forms/using/assets/save_icon.png) för att spara egenskaperna.
+1. I **[!UICONTROL Pagination]** avsnitt, markera ![Mapp](/help/forms/using/assets/folder-icon.png) i **[!UICONTROL After]** fält.
+1. Välj **[!UICONTROL Go To page]** markerar du den tredje mallsidan och väljer **[!UICONTROL Select]**.
+1. Välj ![Spara](/help/forms/using/assets/save_icon.png) för att spara egenskaperna.
 AEM Forms använder den tredje mallsidan på panelen och alla efterföljande paneler i det anpassade formuläret.
 
 

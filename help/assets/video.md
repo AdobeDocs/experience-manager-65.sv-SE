@@ -10,7 +10,7 @@ docset: aem65
 feature: Asset Management
 role: User, Admin
 exl-id: 28cf9e39-cab4-4278-b6c9-e84cc31964db
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
 source-wordcount: '11138'
 ht-degree: 1%
@@ -496,7 +496,7 @@ Videorapporter visar flera aggregerade mått över en viss tid, så att du kan �
 
 En tabell med alla *publicerad* videofilmer visas också i en lista så att du kan spåra de mest visade videofilmerna på webbplatsen baserat på hur många videostarter som har gjorts.
 
-När du trycker på ett videonamn i listan visas videons rapport om målgruppsinnehållande (bortfall) i form av ett linjediagram. Diagrammet visar antalet vyer för en given tidpunkt under videouppspelning. När du spelar upp videon synkroniseras det lodräta strecket med tidsindikatorn i spelaren. Släppningar i linjediagramdata indikerar var publiken slutar intressera sig.
+När du väljer ett videonamn i listan visas videons rapport om målgruppsinnehållande (bortfall) i form av ett linjediagram. Diagrammet visar antalet vyer för en given tidpunkt under videouppspelning. När du spelar upp videon synkroniseras det lodräta strecket med tidsindikatorn i spelaren. Släppningar i linjediagramdata indikerar var publiken slutar intressera sig.
 
 Om videon kodades utanför Adobe Experience Manager Dynamic Media är inte data för målgruppsinnehållande (bortfall) och uppspelningsprocent tillgängliga i tabellen.
 
@@ -508,22 +508,22 @@ Se även [Konfigurera Dynamic Media-Cloud Service](/help/assets/config-dynamic.m
 
 Första gången du anger Videorapporter visas som standard videodata från och med den första i den aktuella månaden och till och med den aktuella månadens datum. Du kan dock åsidosätta standarddatumintervallet genom att ange ett eget datumintervall. Nästa gång du anger Videorapporter används det datumintervall du har angett.
 
-För att videorapporter ska fungera korrekt skapas ett Report Suite-ID automatiskt när Dynamic Media-Cloud Service konfigureras. Samtidigt skickas Report Suite-ID:t till publiceringsservern så att det är tillgängligt för funktionen Kopiera URL när du förhandsgranskar resurser. Den här funktionen kräver dock att publiceringsservern redan har konfigurerats. Om publiceringsservern inte är konfigurerad kan du fortfarande publicera för att se videorapporten. Du måste dock gå tillbaka till Dynamic Media Cloud Configuration och trycka på **[!UICONTROL OK]**.
+För att videorapporter ska fungera korrekt skapas ett Report Suite-ID automatiskt när Dynamic Media-Cloud Service konfigureras. Samtidigt skickas Report Suite-ID:t till publiceringsservern så att det är tillgängligt för funktionen Kopiera URL när du förhandsgranskar resurser. Den här funktionen kräver dock att publiceringsservern redan har konfigurerats. Om publiceringsservern inte är konfigurerad kan du fortfarande publicera för att se videorapporten. Du måste dock gå tillbaka till Dynamic Media Cloud-konfigurationen och välja **[!UICONTROL OK]**.
 
 **Så här visar du videorapporter:**
 
-1. Tryck på logotypen Experience Manager i det övre vänstra hörnet av Experience Manager och tryck sedan på **[!UICONTROL Tools]** (hammarikon) > **[!UICONTROL Assets]** > **[!UICONTROL Video Reports]**.
+1. I det övre vänstra hörnet av Experience Manager väljer du logotypen Experience Manager och sedan i den vänstra listen väljer du **[!UICONTROL Tools]** (hammarikon) > **[!UICONTROL Assets]** > **[!UICONTROL Video Reports]**.
 1. Gör något av följande på sidan Videorapporter:
 
-   * I det övre högra hörnet trycker du på **Uppdatera videorapport** -ikon.
+   * I närheten av det övre högra hörnet väljer du **Uppdatera videorapport** -ikon.
 Använd bara Uppdatera om rapportens slutdatum är den aktuella dagen. Om du gör det ser du till att du ser videospårningen som har utförts sedan du senast körde rapporten.
 
-   * I det övre högra hörnet trycker du på **Datumväljaren** -ikon.
-Ange start- och slutdatumintervallet som du vill ha videodata för och tryck sedan på **[!UICONTROL Run Report]**.
+   * I närheten av det övre högra hörnet väljer du **Datumväljaren** -ikon.
+Ange start- och slutdatumintervallet som du vill ha videodata för och välj sedan **[!UICONTROL Run Report]**.
 
    Grupprutan Övre mått identifierar olika aggregerade mått för alla *publicerad* videor på hela webbplatsen.
 
-1. I tabellen som visar de publicerade videoklippen trycker du på ett videonamn för att spela upp videon och ser även videons återgivningsrapport.
+1. I tabellen som listar de publicerade videoklippen väljer du ett videonamn för att spela upp videon och ser även videons återgivningsrapport.
 
 ### Visa videorapporter baserade på ett videovisningsprogram som du har skapat med Dynamic Media HTML5 Viewer SDK {#viewing-video-reports-based-on-a-video-viewer-that-you-created-using-the-scene-hmtl-viewer-sdk}
 
@@ -901,13 +901,13 @@ Se [Hantera statiskt innehåll (inte bildinnehåll)](https://experienceleague.ad
 
 1. Gör något av följande:
 
-   * Tryck på **[!UICONTROL URL]**. I dialogrutan URL-adress markerar och kopierar du URL-adressen till Urklipp och sedan förbi URL-adressen till en enkel textredigerare. Lägg till den kopierade URL:en för videon med följande syntax:
+   * Om du vill visa en popup-video väljer du **[!UICONTROL URL]**. I dialogrutan URL-adress markerar och kopierar du URL-adressen till Urklipp och sedan förbi URL-adressen till en enkel textredigerare. Lägg till den kopierade URL:en för videon med följande syntax:
 
      `&caption=<server_path>/is/content/<path_to_caption.vtt_file,1>`
 
      Anteckna `,1` i slutet av bildtextbanan. Omedelbart efter `.vtt` filnamnstillägget i sökvägen kan du aktivera (aktivera) eller inaktivera (inaktivera) den stängda bildtextknappen i videospelarfältet genom att ange `,1` eller `,0`, respektive
 
-   * Om du vill visa en inbäddad video trycker du **[!UICONTROL Embed Code]**. I dialogrutan Bädda in kod markerar och kopierar du den inbäddade koden till Urklipp och klistrar sedan in koden i en enkel textredigerare. Lägg till den kopierade inbäddningskoden med följande syntax:
+   * Om du vill visa en inbäddad video väljer du **[!UICONTROL Embed Code]**. I dialogrutan Bädda in kod markerar och kopierar du den inbäddade koden till Urklipp och klistrar sedan in koden i en enkel textredigerare. Lägg till den kopierade inbäddningskoden med följande syntax:
 
      `videoViewer.setParam("caption","<path_to_caption.vtt_file,1>");`
 
@@ -1021,25 +1021,25 @@ De här stegen gäller endast för Dynamic Media som körs i läget&quot;Dynamic
    * [Dina videoklipp har överförts till mappen](/help/assets/managing-video-assets.md#upload-and-preview-video-assets).
 
 1. Navigera till en överförd videoresurs vars miniatyrbild du vill ändra.
-1. I resursurvalsläget antingen från **[!UICONTROL List View]** eller **[!UICONTROL Card View]**, trycker du på videoresursen.
-1. Tryck på **[!UICONTROL Properties]** (en cirkel med&quot;i&quot;).
-1. Tryck på på egenskapssidan för videon **[!UICONTROL Change Thumbnail]**.
+1. I resursurvalsläget antingen från **[!UICONTROL List View]** eller **[!UICONTROL Card View]** väljer du videoresursen.
+1. Välj **[!UICONTROL Properties]** (en cirkel med&quot;i&quot;).
+1. På videons egenskapssida väljer du **[!UICONTROL Change Thumbnail]**.
 1. Gör något av följande på sidan Ändra miniatyrbild:
 
    * Så här använder du en bildruta från videon som ny miniatyrbild:
 
-      * Tryck på i verktygsfältet **[!UICONTROL Select Frame from video]**.
-      * Tryck på uppspelningsknappen och tryck sedan på pausknappen på bildrutan som du vill spela in som videons nya miniatyrbild.
+      * I verktygsfältet väljer du **[!UICONTROL Select Frame from video]**.
+      * Välj uppspelningsknappen och sedan pausknappen för bildrutan som du vill spela in som videons nya miniatyrbild.
 
    * Så här använder du en bildresurs som ny miniatyrbild:
 
-      * Tryck på i verktygsfältet **[!UICONTROL Select Thumbnail from Assets]**.
-      * Tryck **[!UICONTROL Select Thumbnail]**.
+      * I verktygsfältet väljer du **[!UICONTROL Select Thumbnail from Assets]**.
+      * Välj **[!UICONTROL Select Thumbnail]**.
       * Navigera till en tidigare överförd och publicerad bildresurs som du vill använda. Storleken på resursen ändras automatiskt så att den fungerar som en miniatyrbild för videon.
-      * Markera bildresursen och tryck sedan på **[!UICONTROL Select]**.
+      * Markera bildresursen och välj sedan **[!UICONTROL Select]**.
 
-1. Tryck på Ändra miniatyrbild **[!UICONTROL Save Change]**.
-1. Tryck på egenskapssidan för videon i det övre högra hörnet **[!UICONTROL Save & Close]**.
+1. På sidan Ändra miniatyrbild väljer du **[!UICONTROL Save Change]**.
+1. På videons egenskapssida, i det övre högra hörnet, väljer du **[!UICONTROL Save & Close]**.
 
 ## Om videominiatyrer i Dynamic Media - hybrid-läge {#about-video-thumbnails-in-dynamic-media-hybrid-mode}
 
@@ -1060,15 +1060,15 @@ De här stegen gäller endast för Dynamic Media som körs i hybridläge.
 **Så här lägger du till en videominiatyr:**
 
 1. Navigera till en överförd videoresurs som du vill lägga till en videominiatyr.
-1. I resursurvalsläget, antingen från listvyn eller kortvyn, trycker du på videoresursen.
-1. Tryck på **[!UICONTROL View Properties]** (en cirkel med&quot;i&quot;).
-1. Tryck på på egenskapssidan för videon **[!UICONTROL Change Thumbnail]**.
-1. På sidan Ändra miniatyrbild trycker du på **[!UICONTROL Select Frame]**.
+1. Välj videoresursen i resursurvalsläget, antingen i listvyn eller kortvyn.
+1. Välj **[!UICONTROL View Properties]** (en cirkel med&quot;i&quot;).
+1. På videons egenskapssida väljer du **[!UICONTROL Change Thumbnail]**.
+1. På sidan Ändra miniatyrbild väljer du **[!UICONTROL Select Frame]**.
 
    Dynamic Media genererar en serie miniatyrbilder från videon baserat på det standardtidsintervall eller tidsintervall som du har anpassat.
 
 1. Förhandsgranska de genererade miniatyrbilderna och välj sedan den som du vill lägga till i videon.
-1. Tryck **[!UICONTROL Save Change]**.
+1. Välj **[!UICONTROL Save Change]**.
 
    Videons miniatyrbild uppdateras till att använda den miniatyrbild du valde. Om du senare bestämmer dig för att ändra miniatyrbilden kan du gå tillbaka till **[!UICONTROL Change Thumbnail]** och välj en ny sida.
 
@@ -1084,21 +1084,21 @@ Se [Lägga till en videominiatyr](#adding-a-video-thumbnail).
 
 **Så här konfigurerar du det standardtidsintervall som videominiatyrbilder genereras:**
 
-1. I Experience Manager: tryck **[!UICONTROL Tools]** > **[!UICONTROL General]** > **[!UICONTROL CRXDE Lite]**.
+1. I Experience Manager väljer du **[!UICONTROL Tools]** > **[!UICONTROL General]** > **[!UICONTROL CRXDE Lite]**.
 
 1. På CRXDE Lite-sidan navigerar du till `o etc/dam/imageserver/configuration/jcr:content/settings.`
 
-   om katalogpanelen inte visas trycker du på ikonen >> till vänster om fliken Hem.
+   Om katalogpanelen inte visas väljer du ikonen >> till vänster om fliken Hem.
 
-1. Dubbeltryck på den nedre högra panelen på fliken Egenskaper `thumbnailtime`.
+1. Dubbelmarkera på den nedre högra panelen på fliken Egenskaper `thumbnailtime`.
 1. I **[!UICONTROL Edit thumbnailtime]** använder du textfälten för att ange intervallvärden som procentvärden.
 
-   * Tryck på plustecknet (+) om du vill lägga till ett eller flera intervallvärdesfält. Om det behövs bläddrar du till dialogrutans nedre del för att se ikonen.
-   * Tryck på minustecknet (-) till höger om ett intervallvärdesfält om du vill ta bort det från listan.
-   * Tryck på uppilsikonen och nedpilsikonen om du vill ändra ordningen på intervallvärdena.
+   * Markera plustecknet (+) om du vill lägga till ett eller flera intervallvärdesfält. Om det behövs bläddrar du till dialogrutans nedre del för att se ikonen.
+   * Markera minustecknet (-) till höger om ett intervallvärdesfält om du vill ta bort det från listan.
+   * Välj uppilsikonen och nedpilsikonen om du vill ändra ordningen på intervallvärdena.
 
-1. Tryck **[!UICONTROL OK]** och återgå till fliken Egenskaper.
-1. I närheten av det övre vänstra hörnet på CRXDE Lite-sidan trycker du på **[!UICONTROL Save All]** och sedan trycka på ikonen Bakåt i det övre vänstra hörnet för att gå tillbaka till Experience Manager.
+1. Välj **[!UICONTROL OK]** och återgå till fliken Egenskaper.
+1. I närheten av det övre vänstra hörnet på CRXDE Lite-sidan väljer du **[!UICONTROL Save All]** och sedan klickar du på ikonen Bakåt i det övre vänstra hörnet för att gå tillbaka till Experience Manager.
 
    Se [Lägga till en videominiatyr](#adding-a-video-thumbnail).
 
@@ -1109,12 +1109,12 @@ De här stegen gäller endast för Dynamic Media som körs i hybridläge.
 **Så här lägger du till en anpassad videominiatyr:**
 
 1. Navigera till en överförd videoresurs som du vill lägga till en anpassad videominiatyr.
-1. I resursurvalsläget, antingen från listvyn eller kortvyn, trycker du på videoresursen.
-1. Tryck på **[!UICONTROL View Properties]** (en cirkel med&quot;i&quot;).
-1. Tryck på på egenskapssidan för videon **[!UICONTROL Change Thumbnail]**.
-1. På sidan Ändra miniatyrbild trycker du på **[!UICONTROL Upload New Thumbnail]**.
-1. Navigera till en miniatyrbild som du vill använda, markera den och tryck sedan på **[!UICONTROL Open]** för att börja överföra bilden till Experience Manager. Efter överföringen måste du publicera bilden.
-1. När du har överfört och publicerat bilden trycker du på **[!UICONTROL Save Changes]**.
+1. Välj videoresursen i resursurvalsläget, antingen i listvyn eller kortvyn.
+1. Välj **[!UICONTROL View Properties]** (en cirkel med&quot;i&quot;).
+1. På videons egenskapssida väljer du **[!UICONTROL Change Thumbnail]**.
+1. På sidan Ändra miniatyrbild väljer du **[!UICONTROL Upload New Thumbnail]**.
+1. Navigera till en miniatyrbild som du vill använda, markera den och markera den **[!UICONTROL Open]** för att börja överföra bilden till Experience Manager. Efter överföringen måste du publicera bilden.
+1. När du har överfört och publicerat bilden väljer du Ändra miniatyrbild på sidan Ändra miniatyrbild **[!UICONTROL Save Changes]**.
 
    Den anpassade miniatyrbilden läggs till i videon.
 

@@ -5,9 +5,9 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: publish
 exl-id: b15d8d3b-5e47-4c33-95fe-440fcf96be83
-source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '1819'
+source-wordcount: '1829'
 ht-degree: 0%
 
 ---
@@ -33,9 +33,9 @@ Innan du konfigurerar en bevakad mapp bör du kontrollera följande:
 
 Så här skapar du en bevakad mapp:
 
-1. Tryck **Adobe Experience Manager** ikonen längst upp till vänster på skärmen.
-1. Tryck **verktyg** > **Forms** > **Konfigurera bevakad mapp.** En lista över redan konfigurerade bevakade mappar visas.
-1. Tryck **Nytt**. En lista över fält som krävs för att skapa den bevakade mappen visas:
+1. Välj **Adobe Experience Manager** ikonen längst upp till vänster på skärmen.
+1. Välj **verktyg** > **Forms** > **Konfigurera bevakad mapp.** En lista över redan konfigurerade bevakade mappar visas.
+1. Välj **Nytt**. En lista över fält som krävs för att skapa den bevakade mappen visas:
 
    * **Namn**: Identifierar den bevakade mappen. Använd bara alfanumeriska tecken som namn.
    * **Bana**: Anger platsen för bevakad mapp. I en klustrad miljö måste den här inställningen peka på en delad nätverksmapp som är tillgänglig för alla användare som kör AEM på olika noder i ett kluster.
@@ -59,7 +59,7 @@ Så här skapar du en bevakad mapp:
 
    * **Mönster för utdatafil**: Ange en semikolonavgränsad lista (;) med mönster som en bevakad mapp använder för att bestämma namn och plats för utdatafiler och -mappar. Mer information om filmönster finns i [Om filmönster](/help/forms/using/admin-help/configuring-watched-folder-endpoints.md#about-file-patterns).
 
-1. Tryck **Avancerat**. Fliken Avancerat innehåller fler fält. De flesta av dessa fält innehåller ett standardvärde.
+1. Välj **Avancerat**. Fliken Avancerat innehåller fler fält. De flesta av dessa fält innehåller ett standardvärde.
 
    * **Nyttolastmappningsfilter:** När du skapar en bevakad mapp skapas en mappstruktur i den mapp som bevakas. Mappstrukturen har mapparna stage, result, preserve, input och error. Mappstrukturen kan fungera som indatanyttolast för arbetsflödet och acceptera utdata från ett arbetsflöde. Den kan även visa eventuella felpunkter. Strukturen för en nyttolast skiljer sig från strukturen för en bevakad mapp. Du kan skriva egna skript för att mappa strukturen för en bevakad mapp till nyttolasten. Ett sådant skript kallas nyttolastmappningsfilter. Det finns två körklara implementeringar av nyttolastmappare. Om du inte har [anpassad implementering](/help/forms/using/watched-folder-in-aem-forms.md#creating-a-custom-payload-mapper-filter)använder du en körklar implementering:
 
@@ -113,7 +113,7 @@ Så här skapar du en bevakad mapp:
 
 Förutom att ändra namnet på den bevakade mappen kan du ändra alla egenskaper i en befintlig bevakad mapp. Gör så här för att ändra egenskaper för en befintlig bevakad mapp:
 
-1. Tryck på **Adobe Experience Manager** ikonen längst upp till vänster på skärmen.
-1. Tryck **verktyg** > **Forms** > **Konfigurera bevakad mapp.** En lista över redan konfigurerade bevakade mappar visas.
-1. Till vänster på skärmen Bevakade mappar markerar du bevakningsmappen och trycker på **Redigera.** En lista över fält som krävs för att skapa den bevakade mappen visas. Fälten som visas i **Grundläggande** Fliken är obligatorisk. Fliken Avancerat innehåller fler fält. De flesta av dessa fält innehåller ett standardvärde. Du kan ändra de här egenskaperna efter dina behov.
-1. När du har ändrat egenskaperna trycker du **Uppdatera**. De ändrade egenskaperna sparas.
+1. Välj **Adobe Experience Manager** ikonen längst upp till vänster på skärmen.
+1. Välj **verktyg** > **Forms** > **Konfigurera bevakad mapp.** En lista över redan konfigurerade bevakade mappar visas.
+1. Till vänster på skärmen Bevakade mappar markerar du bevakningsmappen och väljer **Redigera.** En lista över fält som krävs för att skapa den bevakade mappen visas. Fälten som visas i **Grundläggande** Fliken är obligatorisk. Fliken Avancerat innehåller fler fält. De flesta av dessa fält innehåller ett standardvärde. Du kan ändra de här egenskaperna efter dina behov.
+1. När du har ändrat egenskaperna väljer du **Uppdatera**. De ändrade egenskaperna sparas.

@@ -10,9 +10,9 @@ discoiquuid: 1e95c66b-d132-4c44-a1dc-31fd09af8113
 docset: aem65
 feature: Adaptive Forms
 exl-id: e755159f-374f-42b8-b28b-e8864df44f9d
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '2088'
+source-wordcount: '2078'
 ht-degree: 0%
 
 ---
@@ -54,7 +54,7 @@ Temat Ultramarine-Accessible är ett referenstema. Det visar hur du åtgärdar f
 
 1. Hämta temapaketet.
 1. Navigera till **[!UICONTROL Experience Manager]** > **[!UICONTROL Navigation]** ![Navigering](assets/Smock_Compass_18_N.svg) > **[!UICONTROL Forms]** på din AEM.
-1. Tryck på **[!UICONTROL Create]** > **[!UICONTROL File Upload]**. Markera och överför filen x Ultramarine-Accessible-Theme.zip. Temat överförs till din AEM.
+1. Välj **[!UICONTROL Create]** > **[!UICONTROL File Upload]**. Markera och överför filen x Ultramarine-Accessible-Theme.zip. Temat överförs till din AEM.
 
 ## Göra ett anpassat formulär tillgängligt
 
@@ -65,8 +65,8 @@ Du bör fokusera på fyra nyckelaspekter: tangentbordsnavigering, färgkontrast,
 Använd temat Ultramarine-Accessible i din befintliga adaptiva form. Så här använder du temat:
 
 1. Öppna det adaptiva formuläret för redigering.
-1. Markera en komponent och tryck på den överordnade ikonen. Tryck på **[!UICONTROL Adaptive Form Container]** och tryck sedan på konfigurationsikonen.
-1. Välj temat Ultramarine-Accessible i egenskapswebbläsaren och tryck **[!UICONTROL Save]** -ikon.
+1. Markera en komponent och välj den överordnade ikonen. Välj **[!UICONTROL Adaptive Form Container]** och välj sedan konfigurationsikonen.
+1. Välj temat Ultramarine-Accessible i egenskapsläsaren och välj **[!UICONTROL Save]** -ikon.
 1. Uppdatera webbläsarfönstret. Temat används på det anpassningsbara formuläret.
 
 När du har tillämpat ett tillgängligt tema utför du följande korrigeringar. Förutom tillgänglighetskorrigeringar som ingår i det tillgängliga temat finns det korrigeringar:
@@ -107,7 +107,7 @@ Etiketten som upplevs av skärmläsare behöver inte nödvändigtvis vara samma 
 
 Så här använder du alternativet Hjälpmedel:
 
-1. Markera en komponent och tryck på ![cmppr](assets/cmppr.png).
+1. Markera en komponent och markera ![cmppr](assets/cmppr.png).
 1. Klicka **[!UICONTROL Accessibility]** i sidlisten för att välja önskat hjälpmedelsalternativ.
 
 ### Tillgänglighetsalternativ i formulärkomponenter {#accessibility-options-in-form-components}
@@ -135,7 +135,7 @@ Bilder kan förbättra förståelsen för vissa användare. För användare som 
 
 Kontrollera att texten beskriver objektet och dess syfte i formuläret. En skärmläsare läser upp den här alternativa texten när en bild påträffas. En bild måste alltid ha en alternativ text angiven.
 
-Markera en bildkomponent och tryck ![cmppr](assets/cmppr.png). Ange alternativ text för en bild under Egenskaper i sidlisten.
+Markera en bildkomponent och markera ![cmppr](assets/cmppr.png). Ange alternativ text för en bild under Egenskaper i sidlisten.
 
 ![Alternativ text för en bild](assets/image-properties.png)
 
@@ -164,7 +164,7 @@ Följande kortkommandon finns i AEM Forms.
 | Återställ ifyllda data i ett formulär | Alt+R |
 | Skicka ett formulär | Alt+S |
 
-Dessutom finns det olika kortkommandon för **[!UICONTROL Date Picker]** i Adaptive Forms. Aktivera kortkommandona genom att trycka på **[!UICONTROL Date Picker]** och knacka ![Konfigurera](assets/configure-icon.svg) för att öppna egenskaperna. I **[!UICONTROL Patterns]** väljer du ett visningsmönster med **[!UICONTROL Type]** och **[!UICONTROL Pattern]** listrutor. Spara egenskaperna för att aktivera användning av kortkommandon för **[!UICONTROL Date Picker]** -komponenten.
+Dessutom finns det olika kortkommandon för **[!UICONTROL Date Picker]** i Adaptive Forms. Om du vill aktivera kortkommandona väljer du **[!UICONTROL Date Picker]** -komponent och markera ![Konfigurera](assets/configure-icon.svg) för att öppna egenskaperna. I **[!UICONTROL Patterns]** väljer du ett visningsmönster med **[!UICONTROL Type]** och **[!UICONTROL Pattern]** listrutor. Spara egenskaperna för att aktivera användning av kortkommandon för **[!UICONTROL Date Picker]** -komponenten.
 
 Följande kortkommandon är tillgängliga för datumväljarkomponenten i Adaptiv Forms:
 

@@ -9,9 +9,9 @@ content-strategy: max-2018
 docset: aem65
 role: Admin
 exl-id: 0f9aab7d-8e41-449a-804b-7e1bfa90befd
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '1734'
+source-wordcount: '1736'
 ht-degree: 0%
 
 ---
@@ -91,7 +91,7 @@ När du kör migreringsverktyget för första gången skapas en logg med följan
 
 1. Gör följande för att utföra migreringen:
 
-   * Migrera **resurser**, tryck på AEM Forms Assets Migration (migrering av-resurser) och tryck på **Starta migrering**. Följande migreras:
+   * Migrera **resurser**, väljer AEM Forms Assets Migration (migrering av-resurser) och väljer **Starta migrering**. Följande migreras:
 
       * Anpassningsbara formulär
       * Dokumentfragment
@@ -103,18 +103,18 @@ När du kör migreringsverktyget för första gången skapas en logg med följan
    >
    >Vid resursmigrering kan du hitta varningsmeddelanden som &quot;Konflikt hittad för...&quot;. Sådana meddelanden visar att reglerna för vissa komponenter i anpassade formulär inte kan migreras. Om komponenten till exempel har en händelse som har både regler och skript, kommer inga regler för komponenten att migreras om regler inträffar efter skript. Du kan [migrera sådana regler genom att öppna regelredigeraren](#migrate-rules) i anpassningsbara formulär.
 
-   * Om du vill migrera anpassade formulärkomponenter trycker du **Adaptiv migrering av anpassade Forms-komponenter** och på sidan för migrering av anpassade komponenter trycker du på **Starta migrering**. Följande migreras:
+   * Om du vill migrera anpassade formulärkomponenter väljer du **Adaptiv migrering av anpassade Forms-komponenter** och på sidan för migrering av anpassade komponenter väljer du **Starta migrering**. Följande migreras:
 
       * Anpassade komponenter skrivna för Adaptive Forms
       * Komponentövertäckningar, om sådana finns.
 
-   * Om du vill migrera adaptiva formulärmallar trycker du **Adaptiv migrering av Forms-mallar** och på sidan för migrering av anpassade komponenter trycker du på **Starta migrering**. Följande migreras:
+   * Om du vill migrera adaptiva formulärmallar väljer du **Adaptiv migrering av Forms-mallar** och på sidan för migrering av anpassade komponenter väljer du **Starta migrering**. Följande migreras:
 
       * Anpassningsbara blankettmallar som skapats i `/apps` eller `/conf` med AEM mallredigerare.
 
    * Migrera konfigurationstjänsterna i AEM Forms Cloud till att använda det nya kontextmedvetna molntjänstparadigmet, som innehåller det beröringsaktiverade användargränssnittet (under `/conf`). När du migrerar AEM Forms Cloud Configuration Services är molntjänsterna i `/etc` flyttas till `/conf`. Om du inte har några anpassningar av molntjänster som är beroende av de äldre sökvägarna (`/etc`) rekommenderar Adobe att du kör migreringsverktyget efter att du uppgraderat till 6.5. Använd molnkonfigurationen Touch UI för ytterligare arbete. Om du har befintliga anpassningar av molntjänster kan du fortsätta använda det klassiska användargränssnittet i uppgraderad konfiguration tills anpassningarna har uppdaterats för att passa de migrerade sökvägarna (`/conf`) och kör sedan migreringsverktyget.
 
-   Migrera **AEM Forms molntjänster**, som innehåller följande, trycker du på AEM Forms Cloud Configuration Migration (migrering av molnkonfigurationer är oberoende av AEMFD-kompatibilitetspaketet). Tryck på migrering av AEM Forms Cloud-konfigurationer och tryck sedan på sidan Konfigurationsmigrering **Starta migrering**:
+   Migrera **AEM Forms molntjänster**, som innehåller följande, väljer du migrering av AEM Forms Cloud-konfiguration (migreringen av molnkonfigurationen är oberoende av AEMFD-kompatibilitetspaketet). Välj migrering av AEM Forms Cloud-konfigurationer och välj sedan på sidan Konfigurationsmigrering **Starta migrering**:
 
    * Molntjänster för formulärdatamodell
 
@@ -152,13 +152,13 @@ När du kör migreringsverktyget för första gången skapas en logg med följan
 
 Dessa komponenter kan migreras genom att de öppnas i regelredigeraren i den adaptiva Forms-redigeraren.
 
-* Om du vill migrera regler och skript (krävs inte om du uppgraderar från 6.3) i anpassade komponenter trycker du på Adaptive Forms Custom Components Migration (migrering av anpassade-komponenter) och trycker på Start Migration (Starta migrering) på nästa skärm. Följande migreras:
+* Om du vill migrera regler och skript (krävs inte om du uppgraderar från 6.3) i anpassade komponenter väljer du Anpassad migrering för Forms och väljer Starta migrering på nästa skärm. Följande migreras:
 
    * Regler och skript skapade med regelredigeraren (6.1 FP1 och senare)
 
    * Skript som skapats med fliken Skript i användargränssnittet i 6.1 och tidigare versioner
 
-* Om du vill migrera mallar (krävs inte om du uppgraderar från 6.3 och 6.4) trycker du på Adaptiv migrering av Forms-mallar och trycker på Starta migrering på nästa skärm. Följande migreras:
+* Om du vill migrera mallar (krävs inte om du uppgraderar från 6.3 och 6.4) väljer du Adaptiv migrering av Forms-mallar och väljer Starta migrering på nästa skärm. Följande migreras:
 
    * Gamla mallar - de adaptiva formulärmallarna som skapats under /apps med AEM 6.1 Forms eller tidigare. Detta inkluderar de skript som definierades i mallkomponenterna.
 

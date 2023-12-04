@@ -11,9 +11,9 @@ docset: aem65
 feature: Asset Management
 role: User, Admin
 exl-id: 84f0c406-4ab6-48c7-8223-61a8c3ade363
-source-git-commit: 7f8cfe155af3b8831e746ced89c11c971e429f69
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '1368'
+source-wordcount: '1369'
 ht-degree: 0%
 
 ---
@@ -67,7 +67,7 @@ Information om hur du aktiverar eller inaktiverar visningsförinställningar i a
       <li><p><strong>Vrid din 3D-kamera</strong> - Rotera vyn runt 3D-motivet och objekten.</p> Mus: vänsterklicka + dra </p> Touch-screen: Tryck på + dra</p></li>
       <li><p><strong>Panorera kameran</strong> - Panorera vyn åt vänster, åt höger, uppåt och nedåt.</p> Mus: högerklicka + dra </p> Pekskärm: Tryck med två fingrar och dra</p></li>
       <li><p><strong>Zooma kameran</strong> - Zooma kameran så att du kan flytta in och ut från områden i 3D-scenen.</p> Mus: Rullhjul </p> Pekskärm: Fingernypa</p></li>
-      <li><p><strong>Ange kameran igen</strong> - Rotera vyn runt 3D-motivet och objekten.</p> Mus: Dubbelklicka </p> Pekskärm: Dubbeltryck</li></ul></td>
+      <li><p><strong>Ange kameran igen</strong> - Rotera vyn runt 3D-motivet och objekten.</p> Mus: Dubbelklicka </p> Pekskärm: Dubbelmarkera</li></ul></td>
       </tr>
       <tr>
       <td><p>Bild</p> </td>
@@ -79,7 +79,7 @@ Information om hur du aktiverar eller inaktiverar visningsförinställningar i a
       </ul> <p><strong>Så här förhandsgranskar du en resurs i ett visst visningsprogram</strong></p>
       <ul>
       <li>Klicka på ikonen i det övre vänstra hörnet av sidan så att listrutan visas. Välj <strong>Tittare</strong> i listan väljer du sedan ett visningsprogram som du vill använda för resursen.</li>
-      </ul> <p>Använd <strong>+</strong> och <strong>-</strong> ikoner för att öka respektive minska zoomningen i den markerade bilden. Välj <strong>Återställ</strong> om du vill återställa bilden till den ursprungliga zoomningen.<br /> Om du använder en pekskärm kan du zooma in steg för att dubbeltrycka på bilden. När du har uppnått maximal zoom dubbeltrycker du på bilden igen för att återställa zoomläget. Dra över bilden för att panorera.</p> </td>
+      </ul> <p>Använd <strong>+</strong> och <strong>-</strong> ikoner för att öka respektive minska zoomningen i den markerade bilden. Välj <strong>Återställ</strong> om du vill återställa bilden till den ursprungliga zoomningen.<br /> Om du använder en pekskärm dubbelmarkerar du bilden för att zooma in steg. När du har uppnått maximal zoom dubbelmarkerar du bilden igen för att återställa zoomläget. Dra över bilden för att panorera.</p> </td>
       </tr>
       <tr>
       <td>Multimedia</td>
@@ -100,7 +100,7 @@ Information om hur du aktiverar eller inaktiverar visningsförinställningar i a
       <td><p><strong>Förhandsgranska en resurs i ett visst visningsprogram</strong></p>
       <ul>
       <li>Klicka på ikonen i det övre vänstra hörnet av sidan så att listrutan visas. Välj <strong>Tittare</strong> i listan väljer du sedan ett visningsprogram som du vill använda för resursen.</li>
-      </ul> <p>Använd <strong>+</strong> och <strong>-</strong> ikoner så att du kan öka eller minska zoomningen för den markerade bilden. Välj <strong>Återställ</strong> om du vill återställa bilden till den ursprungliga zoomningen.<br /> Om du använder en pekskärm kan du zooma in steg för att dubbeltrycka på bilden. När du har uppnått maximal zoom dubbeltrycker du på bilden igen för att återställa zoomläget. Dra över bilden för att panorera.</p> </td>
+      </ul> <p>Använd <strong>+</strong> och <strong>-</strong> ikoner så att du kan öka eller minska zoomningen för den markerade bilden. Välj <strong>Återställ</strong> om du vill återställa bilden till den ursprungliga zoomningen.<br /> Om du använder en pekskärm dubbelmarkerar du bilden för att zooma in steg. När du har uppnått maximal zoom dubbelmarkerar du bilden igen för att återställa zoomläget. Dra över bilden för att panorera.</p> </td>
       </tr>
       <tr>
       <td>Rotation</td>
@@ -109,7 +109,7 @@ Information om hur du aktiverar eller inaktiverar visningsförinställningar i a
       <td><p><strong>Förhandsgranska en resurs i ett visst visningsprogram</strong></p>
       <ul>
       <li>Klicka på ikonen i det övre vänstra hörnet av sidan så att listrutan visas. Välj <strong>Tittare</strong> i listan väljer du sedan ett visningsprogram som du vill använda för resursen.</li>
-      </ul> <p>Använd <strong>+</strong> och <strong>-</strong> ikoner för att öka respektive minska zoomningen i den markerade bilden. Välj <strong>Återställ</strong> om du vill återställa bilden till den ursprungliga zoomningen.<br /> Om du använder en pekskärm kan du zooma in steg för att dubbeltrycka på bilden. När du har uppnått maximal zoom dubbeltrycker du på bilden igen för att återställa zoomläget. Dra över bilden för att panorera.</p> </td>
+      </ul> <p>Använd <strong>+</strong> och <strong>-</strong> ikoner för att öka respektive minska zoomningen i den markerade bilden. Välj <strong>Återställ</strong> om du vill återställa bilden till den ursprungliga zoomningen.<br /> Om du använder en pekskärm dubbelmarkerar du bilden för att zooma in steg. När du har uppnått maximal zoom dubbelmarkerar du bilden igen för att återställa zoomläget. Dra över bilden för att panorera.</p> </td>
       </tr>
       <tr>
       <td>Blandad medieuppsättning</td>
@@ -118,7 +118,7 @@ Information om hur du aktiverar eller inaktiverar visningsförinställningar i a
       <td><p><strong>Förhandsgranska en resurs i ett visst visningsprogram</strong></p>
       <ul>
       <li>Klicka på ikonen i det övre vänstra hörnet av sidan så att listrutan visas. Välj <strong>Tittare</strong> i listan väljer du sedan ett visningsprogram som du vill använda för resursen.</li>
-      </ul> <p>Använd <strong>+</strong> och <strong>-</strong> ikoner för att öka respektive minska zoomningen i den markerade bilden. Välj <strong>Återställ</strong> om du vill återställa bilden till den ursprungliga zoomningen.<br /> Om du använder en pekskärm kan du zooma in steg för att dubbeltrycka på bilden. När du har uppnått maximal zoom dubbeltrycker du på bilden igen för att återställa zoomläget. Dra över bilden för att panorera.</p> </td>
+      </ul> <p>Använd <strong>+</strong> och <strong>-</strong> ikoner för att öka respektive minska zoomningen i den markerade bilden. Välj <strong>Återställ</strong> om du vill återställa bilden till den ursprungliga zoomningen.<br /> Om du använder en pekskärm dubbelmarkerar du bilden för att zooma in steg. När du har uppnått maximal zoom dubbelmarkerar du bilden igen för att återställa zoomläget. Dra över bilden för att panorera.</p> </td>
       </tr>
       <tr>
       <td>Carousel set</td>
@@ -139,7 +139,7 @@ Information om hur du aktiverar eller inaktiverar visningsförinställningar i a
       </ul> <p><strong>Så här förhandsgranskar du en resurs i ett visst visningsprogram</strong></p>
       <ul>
       <li>I närheten av sidans övre vänstra hörn markerar du ikonen så att listrutan visas. Välj <strong>Tittare</strong>väljer du sedan ett visningsprogram som du vill använda på resursen.</li>
-      </ul> <p>Använd <strong>+</strong> och <strong>-</strong> ikoner för att öka respektive minska zoomningen i den markerade bilden. Välj <strong>Återställ</strong> om du vill återställa bilden till den ursprungliga zoomningen.<br /> Om du använder en pekskärm kan du zooma in steg för att dubbeltrycka på bilden. När du har uppnått maximal zoom dubbeltrycker du på bilden igen för att återställa zoomläget. Dra över bilden för att panorera.</p> </td>
+      </ul> <p>Använd <strong>+</strong> och <strong>-</strong> ikoner för att öka respektive minska zoomningen i den markerade bilden. Välj <strong>Återställ</strong> om du vill återställa bilden till den ursprungliga zoomningen.<br /> Om du använder en pekskärm dubbelmarkerar du bilden för att zooma in steg. När du har uppnått maximal zoom dubbelmarkerar du bilden igen för att återställa zoomläget. Dra över bilden för att panorera.</p> </td>
       </tr>
     </tbody>
     </table>

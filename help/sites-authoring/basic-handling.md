@@ -7,7 +7,7 @@ topic-tags: introduction
 content-type: reference
 docset: aem65
 exl-id: ef1a3997-feb4-4cb0-9396-c8335b69bb10
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
 source-wordcount: '2963'
 ht-degree: 1%
@@ -28,7 +28,7 @@ ht-degree: 1%
 
 ### Ett pekaktiverat användargränssnitt {#a-touch-enabled-ui}
 
-AEM användargränssnitt har aktiverats för beröring. Med ett pekaktiverat gränssnitt kan du använda touchfunktioner för att interagera med programmet med gester som att trycka, hålla ned och dra. Detta står i kontrast till hur ett vanligt skrivbordsgränssnitt fungerar med musåtgärder som att klicka, dubbelklicka, högerklicka och föra musen över.
+AEM användargränssnitt har aktiverats för beröring. Med ett pekaktiverat gränssnitt kan du använda touchfunktioner för att interagera med programvaran med gester som att markera, hålla ned och dra. Detta står i kontrast till hur ett vanligt skrivbordsgränssnitt fungerar med musåtgärder som att klicka, dubbelklicka, högerklicka och föra musen över.
 
 När användargränssnittet för AEM är pekaktiverat kan du använda pekgester på dina touchenheter (till exempel mobilenheter eller surfplattor) och musåtgärder på en vanlig stationär dator.
 
@@ -324,12 +324,12 @@ Välja en specifik resurs beror på en kombination av vyn och enheten:
    <td>
     <ul>
      <li>Skrivbord:<br /> Klicka på miniatyrbilden</li>
-     <li>Mobila enheter:<br /> Tryck på miniatyrbilden</li>
+     <li>Mobila enheter:<br /> Markera miniatyrbilden</li>
     </ul> </td>
    <td>
     <ul>
      <li>Skrivbord:<br /> Klicka på miniatyrbilden</li>
-     <li>Mobila enheter:<br /> Tryck på miniatyrbilden</li>
+     <li>Mobila enheter:<br /> Markera miniatyrbilden</li>
     </ul> </td>
   </tr>
   <tr>
@@ -337,12 +337,12 @@ Välja en specifik resurs beror på en kombination av vyn och enheten:
    <td>
     <ul>
      <li>Skrivbord:<br /> För musen över och använd sedan snabbåtgärden bock</li>
-     <li>Mobila enheter:<br /> Tryck och håll på kortet</li>
+     <li>Mobila enheter:<br /> Markera och håll ned kortet</li>
     </ul> </td>
    <td>
     <ul>
      <li>Skrivbord:<br /> Klicka på kortet</li>
-     <li>Mobila enheter:<br /> Tryck på kortet</li>
+     <li>Mobila enheter:<br /> Välj kort</li>
     </ul> </td>
   </tr>
   <tr>
@@ -350,12 +350,12 @@ Välja en specifik resurs beror på en kombination av vyn och enheten:
    <td>
     <ul>
      <li>Skrivbord:<br /> Klicka på miniatyrbilden</li>
-     <li>Mobila enheter:<br /> Tryck på miniatyrbilden</li>
+     <li>Mobila enheter:<br /> Markera miniatyrbilden</li>
     </ul> </td>
    <td>
     <ul>
      <li>Skrivbord:<br /> Klicka på miniatyrbilden</li>
-     <li>Mobila enheter:<br /> Tryck på miniatyrbilden</li>
+     <li>Mobila enheter:<br /> Markera miniatyrbilden</li>
     </ul> </td>
   </tr>
  </tbody>

@@ -7,9 +7,9 @@ topic-tags: interactive-communications
 docset: aem65
 feature: Interactive Communication
 exl-id: 3d15a723-df6c-4b4a-992e-a6636f4cf3dc
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '1308'
+source-wordcount: '1318'
 ht-degree: 0%
 
 ---
@@ -53,7 +53,7 @@ I innehållsläsaren kan du se dokumentets objekthierarki för den valda kanalen
 
 * **Egenskapswebbläsaren**
 
-  Gör att du kan redigera egenskaperna för en komponent. Egenskaperna ändras beroende på komponenten. Om du till exempel vill visa egenskaper för dokumentbehållaren markerar du en komponent och trycker sedan ![fältnivå](assets/field-level.png) > **Dokumentbehållare** och sedan trycka ![cmppr](assets/cmppr.png).
+  Gör att du kan redigera egenskaperna för en komponent. Egenskaperna ändras beroende på komponenten. Om du till exempel vill visa egenskaper för dokumentbehållaren markerar du en komponent och väljer ![fältnivå](assets/field-level.png) > **Dokumentbehållare** och sedan markera ![cmppr](assets/cmppr.png).
 
 * **Resursläsaren**
 Segmenterar olika typer av innehåll, t.ex. layoutfragment, bilder, dokument, sidor, videor. Författaren kan dra och släppa material i den interaktiva kommunikationen.
@@ -82,14 +82,14 @@ I Datakälläsaren visas de tillgängliga datakällorna i den formulärdatamodel
 
 De viktigaste punkterna när du arbetar med interaktiva kommunikationskomponenter är följande:
 
-* Varje komponent har tillhörande egenskaper som styr dess utseende och funktion. Konfigurera egenskaperna för en komponent genom att trycka på komponenten och trycka på ![cmppr](assets/cmppr.png) om du vill öppna komponentegenskaperna i egenskapsgranskaren.
-* En komponent identifieras med sitt elementnamn. När du trycker ![cmppr](assets/cmppr.png)kan du ändra namnet på komponenten genom att ändra fältvärdet för elementnamn i egenskapsläsaren. Endast bokstäver, siffror, bindestreck (-) och understreck (_) godkänns i fältet Elementnamn. Andra specialtecken tillåts inte och elementnamnet måste börja med en bokstav.
+* Varje komponent har tillhörande egenskaper som styr dess utseende och funktion. Om du vill konfigurera egenskaperna för en komponent markerar du komponenten och väljer ![cmppr](assets/cmppr.png) om du vill öppna komponentegenskaperna i egenskapsgranskaren.
+* En komponent identifieras med sitt elementnamn. När du väljer ![cmppr](assets/cmppr.png)kan du ändra namnet på komponenten genom att ändra fältvärdet för elementnamn i egenskapsläsaren. Endast bokstäver, siffror, bindestreck (-) och understreck (_) godkänns i fältet Elementnamn. Andra specialtecken tillåts inte och elementnamnet måste börja med en bokstav.
 * Du kan ändra egenskapen Title för en interaktiv kommunikationskomponent infogad i redigeraren utan att öppna egenskapsläsaren så länge titeln visas i den interaktiva kommunikationen. Så här gör du:
 
-   1. Tryck för att markera en komponent som har en Title-egenskap och vars Hide title-egenskap är inaktiverad.
-   1. Tryck ![aem_6_3_edit](assets/aem_6_3_edit.png) för att göra titeln redigerbar.
+   1. Markera om du vill markera en komponent som har en Title-egenskap och vars Hide title-egenskap är inaktiverad.
+   1. Välj ![aem_6_3_edit](assets/aem_6_3_edit.png) för att göra titeln redigerbar.
 
-   1. Ändra titeln och tryck på Retur-tangenten eller var som helst utanför komponenten för att spara ändringarna. Tryck på Esc för att ignorera ändringarna.
+   1. Ändra titeln och välj returtangenten eller markera var som helst utanför komponenten för att spara ändringarna. Markera Esc om du vill ignorera ändringarna.
 
 ## Komponentverktygsfältet {#component-toolbar}
 
@@ -97,9 +97,9 @@ De viktigaste punkterna när du arbetar med interaktiva kommunikationskomponente
 
 När du markerar en komponent visas ett verktygsfält där du kan arbeta med den. Du får alternativ för att klippa ut, klistra in, flytta och ange egenskaper för komponenterna. Dina alternativ är:
 
-S.**Konfigurera**: När du trycker **Konfigurera** visas komponentegenskaperna i sidlisten.
+S.**Konfigurera**: När du väljer **Konfigurera** visas komponentegenskaperna i sidlisten.
 
-B.**Redigera regler**: När du trycker på Redigera regler visas Regelredigeraren där du kan redigera och skapa regler för den valda komponenten. I Regelredigeraren kan du även markera andra formulärobjekt (komponenter) och redigera/skapa regler för dessa formulärobjekt.
+B.**Redigera regler**: När du väljer Redigera regler visas Regelredigeraren där du kan redigera och skapa regler för den markerade komponenten. I Regelredigeraren kan du även markera andra formulärobjekt (komponenter) och redigera/skapa regler för dessa formulärobjekt.
 
 C.**Kopiera**: Du kan använda kopieringsalternativet för att kopiera en komponent och klistra in den på andra platser i den interaktiva kommunikationen.
 

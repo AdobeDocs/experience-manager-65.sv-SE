@@ -10,7 +10,7 @@ topic-tags: publish
 discoiquuid: 574de3d5-69ba-4e2f-a8ab-c59f357e4386
 docset: aem65
 exl-id: bca4044a-18a9-4b97-92de-eff1e9a840f9
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
 source-wordcount: '499'
 ht-degree: 0%
@@ -43,7 +43,7 @@ Med åtgärden Skicka e-post kan en författare automatiskt skicka e-post till e
 
 1. Öppna ett anpassat formulär i **[!UICONTROL edit]** läge.
 
-1. I **[!UICONTROL Content]** tabbtangent, tryck **[!UICONTROL Form Container]** och knacka ![konfigurera](assets/configure-icon.svg) för att visa anpassade formuläregenskaper.
+1. I **[!UICONTROL Content]** flik, välja **[!UICONTROL Form Container]** och markera ![konfigurera](assets/configure-icon.svg) för att visa anpassade formuläregenskaper.
 
 1. I **[!UICONTROL Submission]** avsnitt, markera **[!UICONTROL Send email]** från **[!UICONTROL Submit Action]** listruta.
 

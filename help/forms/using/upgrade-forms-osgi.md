@@ -9,9 +9,9 @@ geptopics: SG_AEMFORMS/categories/jee
 discoiquuid: e745033f-8015-4fae-9d82-99d35802c0a6
 role: Admin
 exl-id: 1e39455e-f588-42a2-91f5-daefcfed82a0
-source-git-commit: a2fd3c0c1892ac648c87ca0dec440e22144c37a2
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '918'
+source-wordcount: '931'
 ht-degree: 0%
 
 ---
@@ -39,20 +39,20 @@ Gör följande för att uppgradera från AEM 6.3 Forms eller AEM 6.4 Forms till 
 
       >[!NOTE]
       >
-      >När servern är igång är några AEM Forms-paket fortfarande i installationstillstånd. Antalet paket kan variera för varje installation. Du kan ignorera läget för dessa paket. Paketen listas på https://&#39;[server]:[port]/system/console/.
+      >När servern är igång är några AEM Forms-paket fortfarande i installationstillstånd. Antalet paket kan variera för varje installation. Du kan ignorera läget för de här paketen. Paketen listas på https://&#39;[server]:[port]/system/console/.
 
 1. Installera AEM Forms tilläggspaket. Stegen listas nedan:
 
    1. Öppna [Programvarudistribution](https://experience.adobe.com/downloads). Du behöver en Adobe ID för att logga in på Software Distribution.
-   1. Tryck **[!UICONTROL Adobe Experience Manager]** finns i rubrikmenyn.
+   1. Välj **[!UICONTROL Adobe Experience Manager]** finns i rubrikmenyn.
    1. I **[!UICONTROL Filters]** avsnitt:
-      1. Välj **[!UICONTROL Forms]** från **[!UICONTROL Solution]** nedrullningsbar lista.
+      1. Välj **[!UICONTROL Forms]** från **[!UICONTROL Solution]** listruta.
       1. Välj version och typ för paketet. Du kan också använda **[!UICONTROL Search Downloads]** för att filtrera resultaten.
-   1. Tryck på det paketnamn som gäller för operativsystemet och välj **[!UICONTROL Accept EULA Terms]** och trycka **[!UICONTROL Download]**.
+   1. Välj det paketnamn som gäller för operativsystemet och välj **[!UICONTROL Accept EULA Terms]** och markera **[!UICONTROL Download]**.
    1. Öppna [Pakethanteraren](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html)  och klicka **[!UICONTROL Upload Package]** för att överföra paketet.
    1. Markera paketet och klicka på **[!UICONTROL Install]**.
 
-      Du kan även hämta paketet via länken direkt i [AEM Forms](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) artikel.
+      Du kan även hämta paketet via länken direkt i [AEM Forms-versioner](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) artikel.
 
       >[!NOTE]
       >
@@ -64,36 +64,36 @@ Gör följande för att uppgradera från AEM 6.3 Forms eller AEM 6.4 Forms till 
 
    * **Kör migreringsverktyg**
 
-      Migreringsverktyget gör att anpassningsbara formulär och korrespondenshanteringsresurser i tidigare versioner blir kompatibla med AEM 6.5-formulär. Du kan hämta verktyget från AEM Software Distribution. Stegvisa instruktioner för hur du konfigurerar och använder migreringsverktyget finns i [migreringsverktyg](../../forms/using/migration-utility.md).
+     Migreringsverktyget gör att anpassningsbara formulär och korrespondenshanteringsresurser i tidigare versioner blir kompatibla med AEM 6.5-formulär. Du kan hämta verktyget från AEM Software Distribution. Stegvisa instruktioner för hur du konfigurerar och använder migreringsverktyget finns i [migreringsverktyg](../../forms/using/migration-utility.md).
 
-      Om du använder [Exempel för att integrera komponent för utkast och inskickat material](https://helpx.adobe.com/experience-manager/6-3/forms/using/integrate-draft-submission-database.html) När du har uppdaterat databasen och uppgraderar från en tidigare version kör du följande SQL-frågor när du har uppgraderat:
+     Om du använder [Exempel för att integrera komponent för utkast och inskickat material](https://helpx.adobe.com/experience-manager/6-3/forms/using/integrate-draft-submission-database.html) När du har uppdaterat databasen och uppgraderar från en tidigare version kör du följande SQL-frågor när du har uppgraderat:
 
-      ```sql
-      UPDATE metadata m, additionalmetadatatable am
-      SET m.dataType = am.value
-      WHERE m.id = am.id
-      AND am.key = 'dataType'
-      ```
+     ```sql
+     UPDATE metadata m, additionalmetadatatable am
+     SET m.dataType = am.value
+     WHERE m.id = am.id
+     AND am.key = 'dataType'
+     ```
 
-      ```sql
-      DELETE from additionalmetadatatable
-      WHERE `key` = 'dataType'
-      ```
+     ```sql
+     DELETE from additionalmetadatatable
+     WHERE `key` = 'dataType'
+     ```
 
    * **(Endast vid uppgradering från AEM 6.2 Forms eller tidigare versioner) Konfigurera om Adobe Sign**
 
-      Om du hade konfigurerat Adobe Sign i den tidigare versionen av AEM Forms konfigurerar du om Adobe Sign från AEM Cloud-tjänsterna. Mer information finns i [Integrera Adobe Sign med AEM Forms](../../forms/using/adobe-sign-integration-adaptive-forms.md).
+     Om du hade konfigurerat Adobe Sign i den tidigare versionen av AEM Forms konfigurerar du om Adobe Sign från AEM Cloud-tjänster. Mer information finns i [Integrera Adobe Sign med AEM Forms](../../forms/using/adobe-sign-integration-adaptive-forms.md).
 
    * **Stöd för jQuery**
 
-      I AEM 6.5 Forms uppdateras jQuery till 3.2.1 och jQuery UI-versionen uppdateras till 1.12.1. AEM Form använder JQuery i **noConflict** läge. Om du använder någon annan jQuery-version visas inga problem när du uppgraderar. När du uppgraderar till AEM 6.5 Forms:
+     I AEM 6.5 Forms uppdateras jQuery till 3.2.1 och jQuery UI-versionen uppdateras till 1.12.1. AEM Form använder JQuery i **noConflict** läge. Om du använder någon annan jQuery-version visas inga problem när du uppgraderar. När du uppgraderar till AEM 6.5 Forms:
 
       * Kontrollera att eventuella anpassade komponenter är kompatibla med jQuery-versioner som stöds.
-      * Ta bort API:er som inte stöds från de anpassade komponenterna. Se [uppgraderingsguide](https://jquery.com/upgrade-guide/3.0/) för listan över borttagna API:er. Stöd för API:erna load(), .unload() och .error() har tagits bort. Använd metoden .on() i stället för tidigare nämnda API:er. Ändra till exempel $(&quot;img&quot;).load(fn) till $(&quot;img&quot;).on(&quot;load&quot;, fn).
+      * Ta bort API:er som inte stöds från anpassade komponenter. Se [uppgraderingsguide](https://jquery.com/upgrade-guide/3.0/) för listan över borttagna API:er. Stöd för API:erna load(), .unload() och .error() har tagits bort. Använd metoden .on() i stället för tidigare nämnda API:er. Ändra till exempel $(&quot;img&quot;).load(fn) till $(&quot;img&quot;).on(&quot;load&quot;, fn).
+
    * **(Endast vid uppgradering från AEM 6.2 Forms eller tidigare versioner) Konfigurera om analyser och rapporter**
 
-      I AEM 6.4 Forms är inte trafikvariabeln source och success event för intryckt tillgänglig. Så när du uppgraderar från AEM 6.2 Forms eller tidigare, slutar AEM Forms skicka data till Adobe Analytics server och analysrapporter för adaptiva formulär är inte tillgängliga. Dessutom introducerar AEM 6.4 Forms trafikvariabler för den version av formuläranalysen och händelsen success för den tid som läggs på ett fält. Så konfigurera om analyser och rapporter för er AEM Forms-miljö. Detaljerade anvisningar finns i [Konfigurera analyser och rapporter](../../forms/using/configure-analytics-forms-documents.md).
-
+     I AEM 6.4 Forms är inte trafikvariabeln source och success event för intryckt tillgänglig. Så när du uppgraderar från AEM 6.2 Forms eller tidigare, slutar AEM Forms skicka data till Adobe Analytics server och analysrapporter för adaptiva formulär är inte tillgängliga. Dessutom introducerar AEM 6.4 Forms trafikvariabler för den version av formuläranalysen och händelsen success för den tid som läggs på ett fält. Så konfigurera om analyser och rapporter för er AEM Forms-miljö. Detaljerade anvisningar finns i [Konfigurera analyser och rapporter](../../forms/using/configure-analytics-forms-documents.md).
 
 1. Kontrollera att servern har uppgraderats, att alla data har migrerats och att den fungerar som vanligt.
 
@@ -106,4 +106,5 @@ Gör följande för att uppgradera från AEM 6.3 Forms eller AEM 6.4 Forms till 
       * `https://'[server]:[port]'/aem/forms.html/content/dam/formsanddocuments`
 
    >[!NOTE]
+   >
    I AEM 6.4 Forms har strukturen för crx-database ändrats. Om du uppgraderar från 6.3 Forms till AEM 6.5 Forms kan du använda de nya anpassningsmöjligheterna som du skapar på nytt. En fullständig lista över ändrade sökvägar finns på [Forms Repository-omstrukturering i AEM](/help/sites-deploying/forms-repository-restructuring-in-aem-6-5.md).

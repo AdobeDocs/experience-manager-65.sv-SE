@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 docset: aem65
 feature: Adaptive Forms
 exl-id: 1a139530-27bd-44da-8bf4-5b375e75cf32
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '2469'
+source-wordcount: '2453'
 ht-degree: 0%
 
 ---
@@ -77,7 +77,7 @@ I den nedrullningsbara menyn för raden finns även redigeringsåtgärden för a
 
 Du kan lägga till en beskrivning av tabellen för att förklara hur informationen är organiserad och att skärmläsare kan tolka och läsa upp den. Så här lägger du till beskrivningen:
 
-1. Markera tabellen och tryck på ![cmppr](assets/cmppr.png) om du vill visa dess egenskaper i sidofältet.
+1. Markera tabellen och välj ![cmppr](assets/cmppr.png) om du vill visa dess egenskaper i sidofältet.
 1. Ange en sammanfattning på fliken Tillgänglighet.
 1. Klicka **Klar**.
 
@@ -95,9 +95,9 @@ Om du vill använda sortering på tabellkolumner måste tabellkolumncellerna inn
 
 Så här aktiverar du sortering:
 
-1. Markera tabellen och tryck på ![configure_icon](assets/configure_icon.png) (Konfigurera). Du kan också markera tabellen med **Innehåll** webbläsaren i sidospåret av Interactive Communication.
+1. Markera tabellen och välj ![configure_icon](assets/configure_icon.png) (Konfigurera). Du kan också markera tabellen med **Innehåll** webbläsaren i sidospåret av Interactive Communication.
 1. Välj **Aktivera sortering**.
-1. Tryck ![ready_icon](assets/done_icon.png) om du vill spara tabellegenskaperna. Sorteringsikonerna, uppåt- och nedåtpilarna, i kolumnrubriker representerar att sorteringen har aktiverats.
+1. Välj ![ready_icon](assets/done_icon.png) om du vill spara tabellegenskaperna. Sorteringsikonerna, uppåt- och nedåtpilarna, i kolumnrubriker representerar att sorteringen har aktiverats.
 
    ![Aktivera sortering](assets/enable_sorting_new.png)
 
@@ -116,7 +116,7 @@ Så här aktiverar du sortering:
 
 Gör så här för att ange kolumnbredd för en tabell:
 
-1. I **[!UICONTROL Content]** trycker du på **[!UICONTROL Table]** och tryck på Konfigurera (![Konfigurera](assets/configure-icon.svg)).
+1. I **[!UICONTROL Content]** väljer du **[!UICONTROL Table]** och väljer Konfigurera (![Konfigurera](assets/configure-icon.svg)).
 
 1. Ange en kommaavgränsad lista med värden i **[!UICONTROL Column Width]** -fält för att ange den proportionella bredden för varje kolumn i tabellen. För en tabell som innehåller 3 kolumner anger du till exempel 2,4,6 som värde i **[!UICONTROL Column Width]** resulterar i att kolumnbredden ställs in som 2/12 för den första kolumnen, 4/12 för den andra kolumnen och 6/12 för den tredje kolumnen. 2/12 som bredd för den första kolumnen avser en sjättedel av tabellbredden. På samma sätt anger 4/12 den andra kolumnbredden som en tredjedel av tabellbredden och 6/12 den tredje kolumnbredden som halva tabellbredden.
 
@@ -124,9 +124,9 @@ Gör så här för att ange kolumnbredd för en tabell:
 
 Du kan definiera formatet för en tabell med hjälp av stilläget i verktygsfältet på sidan. Utför följande steg för att växla till formateringsläge och redigera tabellformatet
 
-1. Tryck på innan du förhandsgranskar i sidverktygsfältet ![canvas-drop-down](assets/canvas-drop-down.png) > **Stil**.
+1. I verktygsfältet för sidan, före förhandsvisning, väljer du ![canvas-drop-down](assets/canvas-drop-down.png) > **Stil**.
 
-1. Markera en tabell i sidlisten och tryck på redigeringsknappen ![edit-button](assets/edit-button.png).
+1. Markera en tabell i sidlisten och välj knappen Redigera ![edit-button](assets/edit-button.png).
 Du kan se formategenskaperna i sidofältet.
 
 ![Formategenskaper för en tabell](assets/style-table.png)
@@ -139,7 +139,7 @@ Du kan se formategenskaperna i sidofältet.
 
 Tabeller har färdiga funktioner för att dynamiskt lägga till eller ta bort rader vid körning.
 
-1. Markera en tabellrad och tryck på ![cmppr](assets/cmppr.png).
+1. Markera en tabellrad och markera ![cmppr](assets/cmppr.png).
 1. På fliken Upprepa inställningar anger du minsta och högsta antal rader för att begränsa antalet rader i tabellen.
 1. Klicka **Klar**.
 

@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 2d35a2a4-0c8c-4b16-99a6-c6e6d66446dc
 docset: aem65
 exl-id: a7e16555-9bbe-4da2-817c-4495a0193f3f
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
 source-wordcount: '1540'
 ht-degree: 4%
@@ -112,7 +112,7 @@ Hur du väljer en sida beror på vilken vy du använder i konsolen:
 
    * Ange markeringsläge med [välja den resurs som krävs](/help/sites-authoring/basic-handling.md#viewingandselectingyourresources) med:
 
-      * Mobil enhet: tryck och håll
+      * Mobil enhet: markera och hålla kvar
       * Skrivbord: [snabbåtgärd](/help/sites-authoring/basic-handling.md#quick-actions) - ikon:
 
    ![screen_shot_2018-03-21at160503](assets/screen_shot_2018-03-21at160503.png)
@@ -159,7 +159,7 @@ Hur du väljer en sida beror på vilken vy du använder i konsolen:
    * [Redigera innehållet i en befintlig komponent](/help/sites-authoring/editing-content.md#edit-configure-copy-cut-delete-paste) på sidan:
 
       * Öppna komponentens verktygsfält med ett klick. Använd **Redigera** (penna) för att öppna dialogrutan.
-      * Öppna komponentens direktredigerare genom att trycka och hålla ned eller dubbelklicka. De tillgängliga åtgärderna visas (för vissa komponenter är det ett begränsat urval).
+      * Öppna komponentens in-place-redigerare genom att markera och hålla ned eller dubbelklicka. De tillgängliga åtgärderna visas (för vissa komponenter är det ett begränsat urval).
       * Om du vill visa alla tillgängliga åtgärder går du till helskärmsläge med:
 
      ![Helskärmsläge](do-not-localize/screen_shot_2018-03-21at160706.png)

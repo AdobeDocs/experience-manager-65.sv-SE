@@ -11,7 +11,7 @@ discoiquuid: 69210727-dde3-495a-87b7-2e8173e6b664
 docset: aem65
 role: Admin
 exl-id: b5f6a54e-92d1-4631-a1d1-184f37d174b6
-source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
 source-wordcount: '2493'
 ht-degree: 0%
@@ -40,9 +40,9 @@ För dessa resurstyper måste du använda AEM Package Manager för att skapa ett
 Så här hämtar du Forms- och dokumentresurser:
 
 1. Logga in på AEM Forms-instansen.
-1. Tryck Experience Manager ![adobeexperienceManager](assets/adobeexperiencemanager.png) icon > navigation ![kompass](assets/compass.png) ikon > Forms > Forms &amp; Documents.
-1. Välj formulärresurser och tryck på **Ladda ned** -ikon.
-1. Välj något av följande alternativ i Hämta resurser och tryck sedan på **Ladda ned**.
+1. Markera Experience Manager ![adobeexperienceManager](assets/adobeexperiencemanager.png) icon > navigation ![kompass](assets/compass.png) ikon > Forms > Forms &amp; Documents.
+1. Välj formulärresurserna och välj **Ladda ned** -ikon.
+1. Välj något av följande alternativ i Hämta resurser och välj sedan **Ladda ned**.
 
    * **Hämta som CRX-paket:** Använd alternativet för att hämta och flytta alla markerade resurser och relaterade beroenden från en AEM Forms-instans till en annan. Alla resurser och mappar hämtas som crx-paket. Alla formulärresurser, inklusive de formulär som skapats i AEM (adaptiva formulär, interaktiv kommunikation och adaptiva formulärfragment), formuläruppsättningar, formulärmallar, PDF-dokument och resurser (XSD, XFS, bilder) kan hämtas som paket från AEM Forms UI.
 Fördelen med att hämta resurser som paket är att det även hämtar resurser som har använts av den resurs som valts för hämtning. Om du till exempel har ett adaptivt formulär som använder en formulärmall, XSD och en bild. När du väljer det här adaptiva formuläret och hämtar det som paket innehåller det hämtade paketet även formulärmallen, XSD och bilden. Alla metadataegenskaper (inklusive anpassade egenskaper) som är kopplade till resursen hämtas också.
@@ -63,11 +63,11 @@ Så här överför du Forms- och dokumentresurser:
 >[!VIDEO](https://vimeo.com/)
 
 1. Logga in på AEM Forms-instansen.
-1. Tryck Experience Manager ![adobeexperienceManager](assets/adobeexperiencemanager.png) icon > navigation ![kompass](assets/compass.png) ikon > Forms > Forms &amp; Documents.
-1. Tryck **Skapa** >**Filöverföring**. En dialogruta för att överföra formulär eller paket visas.
-1. I dialogrutan bläddrar du till och väljer paketet eller arkivet som ska importeras. Du kan också välja PDF-dokument, XSD, bilder, formatmallar och XDP-formulär. Tryck **Öppna**. Mappen eller filnamnet som du väljer får inte innehålla några specialtecken.
+1. Markera Experience Manager ![adobeexperienceManager](assets/adobeexperiencemanager.png) icon > navigation ![kompass](assets/compass.png) ikon > Forms > Forms &amp; Documents.
+1. Välj **Skapa** >**Filöverföring**. En dialogruta för att överföra formulär eller paket visas.
+1. I dialogrutan bläddrar du till och väljer paketet eller arkivet som ska importeras. Du kan också välja PDF-dokument, XSD, bilder, formatmallar och XDP-formulär. Välj **Öppna**. Mappen eller filnamnet som du väljer får inte innehålla några specialtecken.
 
-   Verifiera i dialogrutan informationen om de resurser som överförs och tryck på **Överför**.
+   Verifiera i dialogrutan informationen om de resurser som överförs och välj **Överför**.
 
    Om du överför en befintlig formulärresurs uppdateras resursen.
 
@@ -86,8 +86,8 @@ Du kan exportera teman i AEM Forms som du kan använda i andra projekt eller ins
 Så här hämtar du ett tema:
 
 1. Logga in på AEM Forms-instansen.
-1. Tryck Experience Manager ![adobeexperienceManager](assets/adobeexperiencemanager.png) icon > navigation ![kompass](assets/compass.png) icon> Forms> Teman.
-1. Välj temat och tryck på **Ladda ned**. Temat laddas ned som ett arkiv (.zip-fil).
+1. Markera Experience Manager ![adobeexperienceManager](assets/adobeexperiencemanager.png) icon > navigation ![kompass](assets/compass.png) icon> Forms> Teman.
+1. Välj temat och välj **Ladda ned**. Temat laddas ned som ett arkiv (.zip-fil).
 
 ### Överföra ett tema {#uploading-a-theme}
 
@@ -101,7 +101,7 @@ Så här överför du ett tema:
 Det överförda temat är tillgängligt på temasidan.
 
 1. Logga in på AEM Forms-instansen.
-1. Tryck Experience Manager ![adobeexperienceManager](assets/adobeexperiencemanager.png) icon > navigation ![kompass](assets/compass.png) icon> Forms> Teman.
+1. Markera Experience Manager ![adobeexperienceManager](assets/adobeexperiencemanager.png) icon > navigation ![kompass](assets/compass.png) icon> Forms> Teman.
 1. klicka **Skapa** > **Filöverföring**. Bläddra och välj ett temapaket på datorn i filöverföringsprompten och klicka på **Överför**. Temat överförs.
 
 ## Importera och exportera resurser i korrespondenshantering {#import-and-export-assets-in-correspondence-management}
@@ -110,15 +110,15 @@ Om du vill dela resurser, t.ex. dataordlistor, bokstäver och dokumentfragment, 
 
 ### Exportera dokumentfragment, bokstäver och/eller dataordlistor {#export-document-fragments-letters-and-or-data-dictionaries}
 
-1. På bokstäverna, dokumentfragmenten eller dataordlistesidorna trycker du på och markerar de resurser du vill exportera till ett enskilt paket och trycker sedan på Kö för hämtning. Resurserna är anpassade för export.
+1. På bokstäverna, dokumentfragmenten eller dataordlistesidorna markerar och markerar du de resurser som du vill exportera till ett enskilt paket och väljer sedan Kö för hämtning. Resurserna är anpassade för export.
 1. Om det behövs upprepar du ovanstående steg för att lägga till bokstäver, dokumentfragment och dataordlistor.
-1. Tryck **Ladda ned**.
+1. Välj **Ladda ned**.
 1. Korrespondenshantering visar dialogrutan Hämta resurser med en lista över resurser i exportlistan.
 
    ![export](assets/export.png)
 
-1. Om du vill visa beroenden som exporteras trycker du på Lös. Eller gå vidare till nästa steg. Även om du inte trycker på Lös exporteras beroendena fortfarande.
-1. Hämta .cmp-filen genom att trycka på **OK**.
+1. Om du vill visa beroenden som exporteras väljer du Lös. Eller gå vidare till nästa steg. Även om du inte väljer Lös exporteras beroendena fortfarande.
+1. Om du vill hämta .cmp-filen väljer du **OK**.
 1. Correspondence Management hämtar en .cmp-fil till datorn.
 
    Cmp-filen innehåller de exporterade resurserna. Du kan dela .cmp-filen med andra. Andra användare kan importera .cmp-filen till en annan server för att hämta alla resurser på den nya servern.
@@ -132,9 +132,9 @@ Om till exempel Correspondence Management har en bokstav som använder en bild o
 Så här hämtar du alla Correspondence Management-resurser och relaterade beroenden som ett paket:
 
 1. Logga in på AEM Forms server som formuläranvändare.
-1. Tryck **Adobe Experience Manager** i fältet Global navigering.
-1. Tryck på verktyg ( ![verktyg](assets/tools.png)) och sedan trycka **Forms**.
-1. Tryck **Exportera Correspondence Management-resurser**.
+1. Välj **Adobe Experience Manager** i fältet Global navigering.
+1. Välja verktyg ( ![verktyg](assets/tools.png)) och sedan markera **Forms**.
+1. Välj **Exportera Correspondence Management-resurser**.
 
    ![publish-cmp-assets-1](assets/publish-cmp-assets-1.png)
 
@@ -142,7 +142,7 @@ Så här hämtar du alla Correspondence Management-resurser och relaterade beroe
 
    ![export-last-run-details](assets/export-last-run-details.png)
 
-1. Tryck **Exportera** och, i bekräftelsemeddelandet, tryck **OK**.
+1. Välj **Exportera** och i bekräftelsemeddelandet väljer du **OK**.
 
    När en gruppbearbetning har slutförts uppdateras den senaste körningsinformationen och länken för hämtning av paketet. Detta inkluderar information som administratörsinloggning och om batchkörningen lyckades eller misslyckades. Resurserna exporteras till ett paket och länken Hämta exporterat paket visas.
 
@@ -150,7 +150,7 @@ Så här hämtar du alla Correspondence Management-resurser och relaterade beroe
    >
    >Processen Exportera alla resurser kan inte avbrytas när den har initierats. När exportåtgärden pågår ska du inte skapa, ta bort, ändra eller publicera några resurser eller initiera processen Publicera alla resurser.a
 
-1. Tryck på **Hämta exporterat paket** för att ladda ned paketfilen.
+1. Välj **Hämta exporterat paket** för att ladda ned paketfilen.
 
    Om du vill lägga till resurserna i paketet i en annan instans av Correspondence Management, [importera paketet till en AEM Forms-instans](../../forms/using/import-export-forms-templates.md#p-upload-forms-documents-assets-p).
 
@@ -162,8 +162,8 @@ Du kan importera resurser som har exporterats till en .cmp-fil. En .cmp-fil kan 
 >
 >Logga in med ett administratörskonto när du importerar gamla Correspondence Management-resurser för migrering. Mer information om hur du migrerar gamla Correspondence Management-resurser finns i [Migrera Correspondence Management-resurser till AEM 6.1-formulär](/help/forms/using/migration-utility.md).
 
-1. Tryck på dataordlistan, bokstäverna eller dokumentfragmentsidan **Skapa > Filöverföring** och välj .cmp-filen.
-1. Korrespondenshantering visar dialogrutan Importera resurser med listan över resurser som importeras. Tryck **Importera**.
+1. På dataordlistan, bokstäverna eller dokumentfragmentsidan väljer du **Skapa > Filöverföring** och välj .cmp-filen.
+1. Korrespondenshantering visar dialogrutan Importera resurser med listan över resurser som importeras. Välj **Importera**.
 
    När du har importerat resurserna uppdateras följande egenskaper för resurserna medan de andra egenskaperna är desamma:
 
@@ -202,7 +202,7 @@ Så här skapar du en mapp:
 
 1. Logga in på AEM Forms användargränssnitt på `https://<server>:<port>/aem/forms.html`.
 1. Navigera till den plats där du vill skapa en mapp.
-1. Tryck på Skapa > Mapp.
+1. Välj Skapa > Mapp.
 1. Ange följande information:
 
    * **Titel:** Visningsnamn för mappen
@@ -216,7 +216,7 @@ Så här skapar du en mapp:
 
    Om det finns en mapp med det angivna namnet misslyckas överföringen. Du kan visa felmeddelandet genom att hovra över felet ![aem6forms_error_alert](assets/aem6forms_error_alert.png) -ikonen som visas bredvid namnfältet.
 
-   Du kan trycka på den nyligen skapade mappen för att gå in i mappen och skapa resurser eller mappar i mappen. Du kan också markera en mapp och välja att placera den i kö för hämtning, ta bort den eller redigera namnet på den.
+   Du kan markera den nyligen skapade mappen så att den hamnar i mappen och skapa resurser eller mappar i mappen. Du kan också markera en mapp och välja att placera den i kö för hämtning, ta bort den eller redigera namnet på den.
 
    ![editdeletedownloadafolder](assets/editdeletedownloadafolder.png)
 
@@ -227,19 +227,19 @@ Du kan använda befintliga resurser och bokstäver för att snabbt skapa resurse
 Följ de här stegen för att skapa kopior av resurser och brev:
 
 1. Markera en eller flera resurser/bokstäver på den relevanta sidan Resurser eller Bokstäver. Gränssnittet visar ikonen Kopiera.
-1. Tryck på Kopiera. Gränssnittet visar ikonen Klistra in. Du kan också välja att gå/navigera i en mapp innan du klistrar in. Olika mappar kan innehålla resurser med samma namn. Mer information om mappar finns i [Mappar och ordna resurser](#folders-and-organizing-assets).
-1. Tryck på Klistra in. Dialogrutan Klistra in visas. Systemet genererar automatiskt namn och titlar på de nya kopiorna av resurser/bokstäver, men du kan redigera namn och namn på resurserna/bokstäverna.
+1. Välj Kopiera. Gränssnittet visar ikonen Klistra in. Du kan också välja att gå/navigera i en mapp innan du klistrar in. Olika mappar kan innehålla resurser med samma namn. Mer information om mappar finns i [Mappar och ordna resurser](#folders-and-organizing-assets).
+1. Välj Klistra in. Dialogrutan Klistra in visas. Systemet genererar automatiskt namn och titlar på de nya kopiorna av resurser/bokstäver, men du kan redigera namn och namn på resurserna/bokstäverna.
 
    Om du kopierar och klistrar in resurserna/bokstäverna på samma plats läggs suffixet&quot;-CopyXX&quot; till i det befintliga namnet på resursen/bokstaven. Om det inte finns någon titel för den kopierade resursen/bokstaven förblir det automatiskt genererade titelfältet tomt.
 
 1. Om det behövs redigerar du titeln och namnet som du vill spara kopian av resursen/bokstaven med.
-1. Tryck på Klistra in. Nya kopior av de kopierade resurserna skapas.
+1. Välj Klistra in. Nya kopior av de kopierade resurserna skapas.
 
-## Sökning {#search-forms}
+## Sök {#search-forms}
 
-Med AEM Forms UI kan du söka efter ditt innehåll. Använd det övre fältet och tryck på Sök **[A]** om du vill söka efter resurser och dokument i ditt innehåll.
+Med AEM Forms UI kan du söka efter ditt innehåll. Med hjälp av det övre fältet kan du välja Sök **[A]** om du vill söka efter resurser och dokument i ditt innehåll.
 
-När du söker efter resurser visas sidopanelen i AEM Forms. Du kan också trycka ![assets-browser-content-only](assets/assets-browser-content-only.png) > Filter **[B]** för att anropa sidopanelen. Du kan begränsa sökningen med hjälp av de olika filtren på sidopanelen. På sidopanelen kan du också spara dina sökningar.
+När du söker efter resurser visas sidopanelen i AEM Forms. Du kan också välja ![assets-browser-content-only](assets/assets-browser-content-only.png) > Filter **[B]** för att anropa sidopanelen. Du kan begränsa sökningen med hjälp av de olika filtren på sidopanelen. På sidopanelen kan du också spara dina sökningar.
 
 ![search_topbar](assets/search_topbar.png)
 

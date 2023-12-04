@@ -9,9 +9,9 @@ docset: aem65
 feature: Interactive Images
 role: User, Admin
 exl-id: 8a609024-e9e6-4805-8306-48d095110eb6
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '4240'
+source-wordcount: '4096'
 ht-degree: 0%
 
 ---
@@ -265,7 +265,7 @@ Om du redigerar interaktiva bilder med aktiveringspunkter och beskär bilden tas
 
    * Markera bilden så att du kan öppna den på sidan Detaljvy. I verktygsfältet väljer du **[!UICONTROL Edit]**.
 
-1. I närheten av sidans övre vänstra hörn väljer du **[!UICONTROL Add Hotspot]** (pekare) för att öppna sidan för hantering av hotspot-områden.
+1. I närheten av sidans övre vänstra hörn väljer du **[!UICONTROL Add Hotspot]** (välj ikon med fingret) för att öppna sidan för hantering av aktiveringspunkter.
 1. I närheten av sidans övre vänstra hörn väljer du **[!UICONTROL Hotspot]**.
 
    1. I närheten av det övre vänstra hörnet på sidan Hantering av aktiveringspunkter väljer du **[!UICONTROL Hotspot]**.

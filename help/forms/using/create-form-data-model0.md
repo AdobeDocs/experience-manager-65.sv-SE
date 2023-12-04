@@ -8,9 +8,9 @@ discoiquuid: e5413fb3-9d50-4f4f-9db8-7e53cd5145d5
 docset: aem65
 feature: Interactive Communication
 exl-id: c8a6037c-46bd-4058-8314-61cb925ba5a8
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '2737'
+source-wordcount: '2684'
 ht-degree: 0%
 
 ---
@@ -120,14 +120,14 @@ Gör följande för att konfigurera MySQL-databasen:
 1. Installera JDBC-drivrutin för MySQL-databas som ett OSGi-paket:
 
    1. Logga in på AEM Forms Author Instance som administratör och gå till AEM webbkonsolpaket. Standardwebbadressen är [https://localhost:4502/system/console/bundles](https://localhost:4502/system/console/bundles).
-   1. Tryck **Installera/uppdatera**. An **Ladda upp/installera programpaket** visas.
+   1. Välj **Installera/uppdatera**. An **Ladda upp/installera programpaket** visas.
 
-   1. Tryck **Välj fil** för att bläddra och välja paketet MySQL JDBC driver OSGi. Välj **Startpaket** och **Uppdatera paket** och trycka **Installera** eller **Uppdatera**. Kontrollera att Oraclets JDBC-drivrutin för MySQL är aktiv. Drivrutinen är installerad.
+   1. Välj **Välj fil** för att bläddra och välja paketet MySQL JDBC driver OSGi. Välj **Startpaket** och **Uppdatera paket** och markera **Installera** eller **Uppdatera**. Kontrollera att Oraclets JDBC-drivrutin för MySQL är aktiv. Drivrutinen är installerad.
 
 1. Konfigurera MySQL-databasen som en datakälla:
 
    1. Gå till AEM webbkonsol på [https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr).
-   1. Sök **Poolad datakälla för Apache Sling-anslutning** konfiguration. Tryck för att öppna konfigurationen i redigeringsläge.
+   1. Sök **Poolad datakälla för Apache Sling-anslutning** konfiguration. Välj det här alternativet om du vill öppna konfigurationen i redigeringsläge.
    1. Ange följande information i konfigurationsdialogrutan:
 
       * **Datakällans namn:** Du kan ange vilket namn som helst. Ange till exempel **MySQL**.
@@ -147,7 +147,7 @@ Gör följande för att konfigurera MySQL-databasen:
 
       * **Transaktionsisolering**: Ange värdet till **READ_COMMTED**.
 
-   Lämna övriga egenskaper som standard [values](https://tomcat.apache.org/tomcat-7.0-doc/jdbc-pool.html) och knacka **Spara**.
+   Lämna övriga egenskaper som standard [values](https://tomcat.apache.org/tomcat-7.0-doc/jdbc-pool.html) och markera **Spara**.
 
    En konfiguration som liknar följande skapas.
 
@@ -160,9 +160,9 @@ AEM Forms har ett intuitivt användargränssnitt för [skapa ett formulärdatal�
 Gör följande för att skapa formulärdatamodell:
 
 1. I AEM författarinstans går du till **Forms** > **Dataintegrering**.
-1. Tryck **Skapa** > **Formulärdatamodell**.
-1. I guiden Skapa formulärdatamodell anger du **name** för formulärdatamodellen. Till exempel: **FDM_Create_First_IC**. Tryck **Nästa**.
-1. På skärmen Välj datakälla visas alla konfigurerade datakällor. Välj **MySQL** datakälla och knacka **Skapa**.
+1. Välj **Skapa** > **Formulärdatamodell**.
+1. I guiden Skapa formulärdatamodell anger du **name** för formulärdatamodellen. Till exempel: **FDM_Create_First_IC**. Välj **Nästa**.
+1. På skärmen Välj datakälla visas alla konfigurerade datakällor. Välj **MySQL** datakälla och markera **Skapa**.
 
    ![MYSQL-datakälla](assets/fdm_mysql_data_source_new.png)
 
@@ -181,7 +181,7 @@ I konfigurationen av formulärdatamodellen ingår:
 ### Lägga till datamodellsobjekt och -tjänster {#add-data-model-objects-and-services}
 
 1. Navigera AEM författarinstansen till **Forms** > **Dataintegrering**. Standardwebbadressen är [https://localhost:4502/aem/forms.html/content/dam/formsanddocuments-fdm](https://localhost:4502/aem/forms.html/content/dam/formsanddocuments-fdm).
-1. The **FDM_Create_First_IC** formulärdatamodellen som du skapade tidigare visas här. Markera den och tryck **Redigera**.
+1. The **FDM_Create_First_IC** formulärdatamodellen som du skapade tidigare visas här. Markera den och markera **Redigera**.
 
    Den valda datakällan **MySQL** visas i **Datakällor** fönster.
 
@@ -200,7 +200,7 @@ I konfigurationen av formulärdatamodellen ingår:
       * get
       * uppdatera
 
-   Tryck **Lägg till markerade** om du vill lägga till markerade datamodellsobjekt och tjänster i formulärdatamodellen.
+   Välj **Lägg till markerade** om du vill lägga till markerade datamodellsobjekt och tjänster i formulärdatamodellen.
 
    ![Markera datamodellsobjektstjänster](assets/select_data_model_object_services_new.png)
 
@@ -218,29 +218,29 @@ Baserat på användningsfallet skapar du **usagecharges** underordnad beräknad 
 
 Utför följande steg för att skapa beräknade underordnade egenskaper för datamodellobjektet för räkningar:
 
-1. Markera kryssrutan högst upp i **växlar** datamodellsobjekt för att markera det och trycka **Skapa underordnad egenskap**.
+1. Markera kryssrutan högst upp i **växlar** datamodellsobjekt för att markera det och markera **Skapa underordnad egenskap**.
 1. I **Skapa underordnad egenskap** ruta:
 
    1. Retur **usagecharges** som namnet på den underordnade egenskapen.
    1. Aktivera **Beräknad**.
-   1. Välj **Float** som typ och tryck **Klar** för att lägga till den underordnade egenskapen i **växlar** datamodellsobjekt.
+   1. Välj **Float** som typ och välj **Klar** för att lägga till den underordnade egenskapen i **växlar** datamodellsobjekt.
 
    ![Skapa underordnad egenskap](assets/create_child_property_new.png)
 
-1. Tryck **Redigera regel** för att öppna regelredigeraren.
-1. Tryck **Skapa**. The **Ange värde** regelfönstret öppnas.
+1. Välj **Redigera regel** för att öppna regelredigeraren.
+1. Välj **Skapa**. The **Ange värde** regelfönstret öppnas.
 1. Välj i listrutan Välj alternativ **Matematiskt uttryck**.
 
    ![Regelredigerare för användningsavgifter](assets/usage_charges_rule_editor_new.png)
 
-1. I det matematiska uttrycket väljer du **callCharts** och **sammandragande** som första respektive andra objekt. Välj **plus** som -operatorn. Tryck inom det matematiska uttrycket och tryck **Utöka uttryck** att lägga till **smscharges**, **internetavgifter**, **roamingnationell**, **roamingInl** och **arbetsyta** -objekt till uttrycket.
+1. I det matematiska uttrycket väljer du **callCharts** och **sammandragande** som första respektive andra objekt. Välj **plus** som -operatorn. Markera i det matematiska uttrycket och välj **Utöka uttryck** att lägga till **smscharges**, **internetavgifter**, **roamingnationell**, **roamingInl** och **arbetsyta** -objekt till uttrycket.
 
    Följande bild visar det matematiska uttrycket i regelredigeraren:
 
    ![Användningsavgiftsregel](assets/usage_charges_rule_all_new.png)
 
-1. Tryck **Klar**. Regeln skapas i regelredigeraren.
-1. Tryck **Stäng** för att stänga fönstret Regelredigerare.
+1. Välj **Klar**. Regeln skapas i regelredigeraren.
+1. Välj **Stäng** för att stänga fönstret Regelredigerare.
 
 ### Lägga till associationer mellan datamodellsobjekt {#add-associations-between-data-model-objects}
 
@@ -257,7 +257,7 @@ Baserat på användningsfallet skapar du följande associationer mellan datamode
 
 Utför följande steg för att skapa associationer mellan datamodellsobjekt:
 
-1. Markera kryssrutan högst upp i **kund** datamodellsobjekt för att markera det och trycka **Lägg till association**. The **Lägg till association** egenskapspanelen öppnas.
+1. Markera kryssrutan högst upp i **kund** datamodellsobjekt för att markera det och markera **Lägg till association**. The **Lägg till association** egenskapspanelen öppnas.
 1. I **Lägg till association** ruta:
 
    * Ange en titel för associationen. Det är ett valfritt fält.
@@ -267,7 +267,7 @@ Utför följande steg för att skapa associationer mellan datamodellsobjekt:
 
    * Välj **get** från **Tjänst** listruta.
 
-   * Tryck **Lägg till** för att länka **kund** datamodellobjekt till **samtal** datamodellsobjekt som använder en egenskap. Baserat på användningsfallet måste anropsdatamodellsobjektet länkas till mobilnummeregenskapen i kunddatamodellsobjektet. The **Lägg till argument** öppnas.
+   * Välj **Lägg till** för att länka **kund** datamodellobjekt till **samtal** datamodellsobjekt som använder en egenskap. Baserat på användningsfallet måste anropsdatamodellsobjektet länkas till mobilnummeregenskapen i kunddatamodellsobjektet. The **Lägg till argument** öppnas.
 
    ![Lägg till association](assets/add_association_new.png)
 
@@ -281,7 +281,7 @@ För varje mobilnummer som är tillgängligt i kunddatamodellobjektet finns det 
 
    * Välj **mobilenum** från **Bindningsvärde** listruta.
 
-   * Tryck **Lägg till**.
+   * Välj **Lägg till**.
 
    ![Lägg till association för ett argument](assets/add_association_argument_new.png)
 
@@ -289,11 +289,11 @@ För varje mobilnummer som är tillgängligt i kunddatamodellobjektet finns det 
 
    ![Lägg till argumentassociation](assets/add_argument_association_new.png)
 
-1. Tryck **Klar** för att skapa en 1:n-association mellan kund och anropar datamodellsobjekt.
+1. Välj **Klar** för att skapa en 1:n-association mellan kund och anropar datamodellsobjekt.
 
    När du har skapat en association mellan kund- och anropsdatamodellsobjekt skapar du en 1:1-association mellan kunden och faktureringsdatamodellsobjekten.
 
-1. Markera kryssrutan högst upp i **kund** datamodellsobjekt för att markera det och trycka **Lägg till association**. The **Lägg till association** egenskapspanelen öppnas.
+1. Markera kryssrutan högst upp i **kund** datamodellsobjekt för att markera det och markera **Lägg till association**. The **Lägg till association** egenskapspanelen öppnas.
 1. I **Lägg till association** ruta:
 
    * Ange en titel för associationen. Det är ett valfritt fält.
@@ -308,7 +308,7 @@ Fakturorna och modellobjekten för kunddata länkas med egenskaperna för faktur
 
    * Välj **kundplan** från **Bindningsvärde** listruta.
 
-   * Tryck **Klar** för att skapa en bindning mellan egenskaperna för faktureringsplanen och kundplanen.
+   * Välj **Klar** för att skapa en bindning mellan egenskaperna för faktureringsplanen och kundplanen.
 
    ![Lägg till association för kundfaktura](assets/add_association_customer_bills_new.png)
 
@@ -320,7 +320,7 @@ Fakturorna och modellobjekten för kunddata länkas med egenskaperna för faktur
 
 När du har skapat associationer mellan kunden och andra datamodellsobjekt kan du redigera kundegenskaperna för att definiera den egenskap som data hämtas från datamodellsobjektet. Baserat på användningsfallet används mobilnummer som egenskap för att hämta data från kunddatamodellsobjektet.
 
-1. Markera kryssrutan högst upp i **kund** datamodellsobjekt för att markera det och trycka **Redigera egenskaper**. The **Redigera egenskaper** öppnas.
+1. Markera kryssrutan högst upp i **kund** datamodellsobjekt för att markera det och markera **Redigera egenskaper**. The **Redigera egenskaper** öppnas.
 1. Ange **kund** som **Modellobjekt på översta nivån**.
 1. Välj **get** från **Läs tjänsten** listruta.
 1. I **Argument** avsnitt:
@@ -336,37 +336,37 @@ När du har skapat associationer mellan kunden och andra datamodellsobjekt kan d
 
    * Välj **mobilenum** från **Bindningsvärde** listruta.
 
-1. Tryck **Klar** för att spara egenskaperna.
+1. Välj **Klar** för att spara egenskaperna.
 
    ![Konfigurera tjänster](assets/configure_services_customer_new.png)
 
-1. Markera kryssrutan högst upp i **samtal** datamodellsobjekt för att markera det och trycka **Redigera egenskaper**. The **Redigera egenskaper** öppnas.
+1. Markera kryssrutan högst upp i **samtal** datamodellsobjekt för att markera det och markera **Redigera egenskaper**. The **Redigera egenskaper** öppnas.
 1. Inaktivera **Modellobjekt på översta nivån** for **samtal** datamodellsobjekt.
-1. Tryck **Klar**.
+1. Välj **Klar**.
 
    Upprepa steg 8-10 för att konfigurera egenskaperna för **växlar** datamodellsobjekt.
 
 ### Konfigurera tjänster {#configure-services}
 
 1. Gå till **Tjänster** -fliken.
-1. Välj **get** service och knacka **Redigera egenskaper**. The **Redigera egenskaper** öppnas.
+1. Välj **get** service och välj **Redigera egenskaper**. The **Redigera egenskaper** öppnas.
 1. I **Redigera egenskaper** ruta:
 
    * Ange en valfri titel och beskrivning.
    * Välj **kund** från **Objekt för utdatamodell** listruta.
 
-   * Tryck **Klar** för att spara egenskaperna.
+   * Välj **Klar** för att spara egenskaperna.
 
    ![Redigera egenskaper](assets/edit_properties_get_details_new.png)
 
-1. Välj **uppdatera** service och knacka **Redigera egenskaper**. The **Redigera egenskaper** öppnas.
+1. Välj **uppdatera** service och välj **Redigera egenskaper**. The **Redigera egenskaper** öppnas.
 1. I **Redigera egenskaper** ruta:
 
    * Ange en valfri titel och beskrivning.
    * Välj **kund** från **Indatamodellsobjekt** listruta.
 
-   * Tryck **Klar**.
-   * Tryck **Spara** för att spara formulärdatamodellen.
+   * Välj **Klar**.
+   * Välj **Spara** för att spara formulärdatamodellen.
 
    ![Uppdatera tjänstegenskaper](assets/update_service_properties_new.png)
 
@@ -376,17 +376,17 @@ Du kan testa datamodellsobjektet och datatjänsterna för att verifiera att form
 
 Gör följande för att köra testet:
 
-1. Gå till **Modell** väljer du **kund** datamodellsobjekt, och tryck **Testmodellobjekt**.
+1. Gå till **Modell** väljer du **kund** datamodellsobjekt, och markera **Testmodellobjekt**.
 1. I **Testa formulärdatamodell** fönster, markera **Läs modellobjekt** från **Välj modell/tjänst** listruta.
-1. I **Indata** anger du ett värde för **mobilenum** egenskap som finns i den konfigurerade MySQL-databasen och tryck på **Testa**.
+1. I **Indata** anger du ett värde för **mobilenum** som finns i den konfigurerade MySQL-databasen och väljer **Testa**.
 
    Kundinformationen som är associerad med den angivna mobilegenskapen hämtas och visas i utdataavsnittet enligt nedan. Stäng dialogrutan.
 
    ![Testa datamodell](assets/test_data_model_new.png)
 
 1. Gå till **Tjänster** -fliken.
-1. Välj **get** service och knacka **Testtjänst.**
-1. I **Indata** anger du ett värde för **mobilenum** egenskap som finns i den konfigurerade MySQL-databasen och tryck på **Testa**.
+1. Välj **get** service och välj **Testtjänst.**
+1. I **Indata** anger du ett värde för **mobilenum** som finns i den konfigurerade MySQL-databasen och väljer **Testa**.
 
    Kundinformationen som är associerad med den angivna mobilegenskapen hämtas och visas i utdataavsnittet enligt nedan. Stäng dialogrutan.
 
@@ -398,8 +398,8 @@ Med formulärdatamodellredigeraren kan du generera exempeldata för alla datamod
 
 Gör följande för att generera, redigera och spara exempeldata:
 
-1. Tryck på **Redigera exempeldata**. Den genererar och visar exempeldata i fönstret Redigera exempeldata.
+1. På formulärdatamodellsidan väljer du **Redigera exempeldata**. Den genererar och visar exempeldata i fönstret Redigera exempeldata.
 
    ![Redigera exempeldata](assets/edit_sample_data_new.png)
 
-1. I **Redigera exempeldata** fönster, redigera data efter behov och trycka **Spara**. Stäng fönstret.
+1. I **Redigera exempeldata** fönster, redigera data efter behov och markera **Spara**. Stäng fönstret.

@@ -10,7 +10,7 @@ discoiquuid: 87f5f9f5-2d03-4565-830e-eacc3757e542
 docset: aem65
 feature: Form Data Model
 exl-id: 9a73a643-7ad4-49aa-a971-08d52679158d
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
 source-wordcount: '1207'
 ht-degree: 0%
@@ -51,7 +51,7 @@ Du kan [anpassningsbara formulär](../../forms/using/creating-adaptive-form.md) 
 
    ![create-af-1-1](assets/create-af-1-1.png)
 
-1. Tryck för att expandera **[!UICONTROL Select Form Data Model]**. Alla tillgängliga formulärdatamodeller visas.
+1. Markera för att expandera **[!UICONTROL Select Form Data Model]**. Alla tillgängliga formulärdatamodeller visas.
 
    Välj en från datamodell.
 
@@ -98,14 +98,14 @@ Med formulärdatamodellens redigerare kan du generera och redigera exempeldata f
 Så här förhandsgranskar du en interaktiv kommunikation med exempelformulärdata:
 
 1. Navigera AEM författarinstansen till **[!UICONTROL Forms > Forms & Documents]**.
-1. Välj en interaktiv kommunikation och tryck **[!UICONTROL Preview]** i verktygsfältet för att markera **[!UICONTROL Web Channel]**, **[!UICONTROL Print Channel]**, eller **[!UICONTROL Both Channels]** för att förhandsgranska interaktiv kommunikation.
-1. I förhandsgranskningen [*kanal*] se till att **[!UICONTROL Test Data of Form Data Model]** är markerat och tryck **[!UICONTROL Preview]**.
+1. Välj en interaktiv kommunikation och välj **[!UICONTROL Preview]** i verktygsfältet för att markera **[!UICONTROL Web Channel]**, **[!UICONTROL Print Channel]**, eller **[!UICONTROL Both Channels]** för att förhandsgranska interaktiv kommunikation.
+1. I förhandsgranskningen [*kanal*] se till att **[!UICONTROL Test Data of Form Data Model]** är markerat och markerat **[!UICONTROL Preview]**.
 
 Den interaktiva kommunikationen öppnas med förfyllda exempeldata.
 
 ![webbförhandsvisning](assets/web-preview.png)
 
-Om du vill förhandsgranska ett adaptivt formulär med exempeldata öppnar du det adaptiva adaptiva formuläret i redigeringsläge och trycker på **[!UICONTROL Preview]**.
+Om du vill förhandsgranska ett adaptivt formulär med exempeldata öppnar du det adaptiva adaptiva formuläret i redigeringsläge och väljer **[!UICONTROL Preview]**.
 
 ## Förifyll med formulärdatamodelltjänst {#prefill}
 
@@ -135,10 +135,10 @@ Du kan också skicka formulärbilagor till en datakälla med hjälp av objektege
 
 1. Lägg till ett datamodellsobjekt som innehåller en binär egenskap i formulärdatamodellen.
 1. Dra-och-släpp **[!UICONTROL File Attachment]** från komponentwebbläsaren till det adaptiva formuläret.
-1. Tryck för att markera den tillagda komponenten och tryck på ![settings_icon](assets/settings_icon.png) om du vill öppna egenskapsgranskaren för komponenten.
-1. I fältet Bindningsreferens trycker du på ![foldersearch_18](assets/foldersearch_18.png) och navigera till den binära egenskap som du lade till i formulärdatamodellen. Konfigurera andra egenskaper efter behov.
+1. Markera den tillagda komponenten och välj ![settings_icon](assets/settings_icon.png) om du vill öppna egenskapsgranskaren för komponenten.
+1. I fältet Bindningsreferens väljer du ![foldersearch_18](assets/foldersearch_18.png) och navigera till den binära egenskap som du lade till i formulärdatamodellen. Konfigurera andra egenskaper efter behov.
 
-   Tryck ![check-button](assets/check-button.png) för att spara egenskaperna. Bilagefältet är nu bundet till den binära egenskapen för formulärdatamodellen.
+   Välj ![check-button](assets/check-button.png) för att spara egenskaperna. Bilagefältet är nu bundet till den binära egenskapen för formulärdatamodellen.
 
 1. Aktivera i delen Skicka i egenskaperna för den adaptiva formulärbehållaren **[!UICONTROL Submit Form Attachments]**. Den bifogade filen i fältet för binära egenskaper skickas till datakällan när formuläret skickas.
 

@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 docset: aem65
 feature: Interactive Communication
 exl-id: 81429735-cd52-4621-8dc2-10dd89df3052
-source-git-commit: ab3d016c7c9c622be361596137b150d8719630bd
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '1662'
+source-wordcount: '1641'
 ht-degree: 0%
 
 ---
@@ -68,16 +68,16 @@ Så här skapar du variabler för fält med agentanvändargränssnittet som data
 
    1. Välj **Formulärdatamodell** från **Datamodell** -avsnitt.
 
-   1. Välj **FDM_Create_First_IC** som formulärdatamodell och tryck **Välj**.
+   1. Välj **FDM_Create_First_IC** som formulärdatamodell och välj **Välj**.
 
-   1. Tryck **Nästa**.
+   1. Välj **Nästa**.
 
-1. Välj **Variabel** i den vänstra rutan och tryck på **Skapa**.
+1. Välj **Variabel** i den vänstra rutan och väljer **Skapa**.
 1. I **Skapa variabel** avsnitt:
 
    1. Retur **Fakturanummer** som namnet på variabeln.
    1. Välj **Sträng** som typ.
-   1. Tryck **Skapa**.
+   1. Välj **Skapa**.
 
    ![Skapa en variabel av typen String](assets/variable_create_string_new.png)
 
@@ -132,16 +132,16 @@ Så här skapar du variabler för fält med agentanvändargränssnittet som data
 
    1. Välj **Formulärdatamodell** från **Datamodell** -avsnitt.
 
-   1. Välj **FDM_Create_First_IC** som formulärdatamodell och tryck **Välj**.
+   1. Välj **FDM_Create_First_IC** som formulärdatamodell och välj **Välj**.
 
-   1. Tryck **Nästa**.
+   1. Välj **Nästa**.
 
-1. Välj **Variabel** i den vänstra rutan och tryck på **Skapa**.
+1. Välj **Variabel** i den vänstra rutan och väljer **Skapa**.
 1. I **Skapa variabel** avsnitt:
 
    1. Retur **Placesupply** som namnet på variabeln.
    1. Välj **Sträng** som typ.
-   1. Tryck **Skapa**.
+   1. Välj **Skapa**.
 
    Upprepa steg 4 och 5 för att skapa följande variabler:
 
@@ -195,16 +195,16 @@ Så här skapar du variabler för fält med agentanvändargränssnittet som data
 
    1. Välj **Formulärdatamodell** från **Datamodell** -avsnitt.
 
-   1. Välj **FDM_Create_First_IC** som formulärdatamodell och tryck **Välj**.
+   1. Välj **FDM_Create_First_IC** som formulärdatamodell och välj **Välj**.
 
-   1. Tryck **Nästa**.
+   1. Välj **Nästa**.
 
-1. Välj **Variabel** i den vänstra rutan och tryck på **Skapa**.
+1. Välj **Variabel** i den vänstra rutan och väljer **Skapa**.
 1. I **Skapa variabel** avsnitt:
 
    1. Retur **Föregående balans** som namnet på variabeln.
    1. Välj **Nummer** som typ.
-   1. Tryck **Skapa**.
+   1. Välj **Skapa**.
 
    Upprepa steg 4 och 5 för att skapa följande variabler:
 
@@ -262,9 +262,9 @@ Så här skapar du statisk text och använder formulärdatamodellelement i dokum
 
    1. Välj **Formulärdatamodell** från **Datamodell** -avsnitt.
 
-   1. Välj **FDM_Create_First_IC** som formulärdatamodell och tryck **Välj**.
+   1. Välj **FDM_Create_First_IC** som formulärdatamodell och välj **Välj**.
 
-   1. Tryck **Nästa**.
+   1. Välj **Nästa**.
 
 1. Skapa statisk text för följande fält med den högra rutan:
 
@@ -293,7 +293,7 @@ Så här skapar du statisk text och använder formulärdatamodellelement i dokum
 
    ![Sammanfattning av avgifter](assets/summary_charges_static_fdm_new.png)
 
-1. Markera texten i **Avgifter för värdeökade tjänster** rad och knacka **Skapa regel** om du vill skapa ett villkor baserat på vilket raden visas i det interaktiva meddelandet:
+1. Markera texten i **Avgifter för värdeökade tjänster** rad och markera **Skapa regel** om du vill skapa ett villkor baserat på vilket raden visas i det interaktiva meddelandet:
 1. På **Skapa regel** popup-fönster:
 
    1. Välj **Datamodeller och variabler** och sedan **växlar** > **callCharts**.

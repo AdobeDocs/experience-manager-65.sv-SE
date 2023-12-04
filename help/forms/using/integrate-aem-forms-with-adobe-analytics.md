@@ -3,9 +3,9 @@ title: Hur integrerar man AEM Forms med Adobe Analytics?
 description: AEM Forms kan integreras med Adobe Analytics för att inhämta och spåra prestandamått för era publicerade formulär.
 docset: aem65
 exl-id: 030fe9f2-cd41-4290-b8a6-2f9ade6b5789
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '1604'
+source-wordcount: '1561'
 ht-degree: 0%
 
 ---
@@ -56,20 +56,20 @@ Så här konfigurerar du AEM Forms och [Adobe Analytics](https://experienceleagu
 
 1. Logga in på Adobe Experience Cloud och välj ett namn för företaget.
 
-1. Tryck **[!UICONTROL Launch/Data Collection]** och knacka **[!UICONTROL Go to Launch/Data Collection]**.
+1. Välj **[!UICONTROL Launch/Data Collection]** och markera **[!UICONTROL Go to Launch/Data Collection]**.
 
-1. Tryck **[!UICONTROL New property]** och ange ett namn för konfigurationen.
+1. Välj **[!UICONTROL New property]** och ange ett namn för konfigurationen.
 
-1. Ange ett domännamn och tryck på **[!UICONTROL Save]** för att spara egenskapen.
+1. Ange ett domännamn och välj **[!UICONTROL Save]** för att spara egenskapen.
 
-1. Tryck på konfigurationsnamnet som finns i listan Taggegenskaper.
+1. Välj det konfigurationsnamn som finns i listan Taggegenskaper.
 
-1. I **[!UICONTROL Authoring]** sektion, trycka **[!UICONTROL Extensions]**.
+1. I **[!UICONTROL Authoring]** avsnitt, markera **[!UICONTROL Extensions]**.
 
-1. Tryck **[!UICONTROL Catalog]** och knacka **[!UICONTROL Install]** för **[!UICONTROL Adobe Experience Manager Forms]** tillägg. **[!UICONTROL Adobe Experience Manager Forms]** visas i listan över installerade tillägg som är tillgängliga i **Installerad** -fliken.
+1. Välj **[!UICONTROL Catalog]** och markera **[!UICONTROL Install]** för **[!UICONTROL Adobe Experience Manager Forms]** tillägg. **[!UICONTROL Adobe Experience Manager Forms]** visas i listan över installerade tillägg som är tillgängliga i **Installerad** -fliken.
 
-1. Tryck **[!UICONTROL Install]** för **[!UICONTROL Adobe Analytics]** tillägg.
-1. Välj rapportsvitens namn i dialogrutan **[!UICONTROL Development Report Suites]**, **[!UICONTROL Staging Report Suites]** och **[!UICONTROL Product Report Suites]** nedrullningsbara listor och trycka **[!UICONTROL Save]** för att spara tillägget.
+1. Välj **[!UICONTROL Install]** för **[!UICONTROL Adobe Analytics]** tillägg.
+1. Välj rapportsvitens namn i dialogrutan **[!UICONTROL Development Report Suites]**, **[!UICONTROL Staging Report Suites]** och **[!UICONTROL Product Report Suites]** nedrullningsbara listor och välj **[!UICONTROL Save]** för att spara tillägget.
 
 ### Konfigurera dataelement {#configure-data-elements}
 
@@ -99,9 +99,9 @@ När du har installerat **[!UICONTROL Adobe Experience Manager Forms]** kan du s
 
 Utför följande steg för att konfigurera dataelement:
 
-1. I **[!UICONTROL Authoring]** sektion, trycka **[!UICONTROL Data Elements]**.
+1. I **[!UICONTROL Authoring]** avsnitt, markera **[!UICONTROL Data Elements]**.
 
-1. Tryck på **[!UICONTROL Create New Data Element]**.
+1. Välj **[!UICONTROL Create New Data Element]**.
 
 1. Ange ett namn för dataelementet. Exempel: Formulärtitel för dataelementtypen FormTitle.
 
@@ -109,7 +109,7 @@ Utför följande steg för att konfigurera dataelement:
 
 1. Välj **[!UICONTROL Data Element Type]**.
 
-1. Tryck **[!UICONTROL Save]** för att spara dataelementet.
+1. Välj **[!UICONTROL Save]** för att spara dataelementet.
 
    >[!VIDEO](https://video.tv.adobe.com/v/337472)
 
@@ -117,21 +117,21 @@ Utför följande steg för att konfigurera dataelement:
 
 Utför följande steg för att skapa regler baserade på **[!UICONTROL Adobe Experience Manager Forms]** tillägg:
 
-1. I **[!UICONTROL Authoring]** sektion, trycka **[!UICONTROL Rules]**.
+1. I **[!UICONTROL Authoring]** avsnitt, markera **[!UICONTROL Rules]**.
 
-1. Tryck på **[!UICONTROL Create New Rule]**.
+1. Välj **[!UICONTROL Create New Rule]**.
 
 1. Ange ett namn för regeln. Till exempel Skicka formulär för att registrera formulärinskickade formulär.
 
-1. I **[!UICONTROL Events]** sektion, trycka **[!UICONTROL Add]**.
+1. I **[!UICONTROL Events]** avsnitt, markera **[!UICONTROL Add]**.
 
 1. Ange **[!UICONTROL Adobe Experience Manager Forms]** som tilläggsnamn.
 
 1. Välj händelsetyp. Indata för **[!UICONTROL Name]** fylls i automatiskt baserat på den valda händelsetypen.
 
-1. Tryck **[!UICONTROL Keep Changes]** för att spara händelsen.
+1. Välj **[!UICONTROL Keep Changes]** för att spara händelsen.
 
-1. I **[!UICONTROL Actions]** sektion, trycka **[!UICONTROL Add]**.
+1. I **[!UICONTROL Actions]** avsnitt, markera **[!UICONTROL Add]**.
 
 1. Ange **[!UICONTROL Adobe Analytics]** som tilläggsnamn.
 
@@ -148,28 +148,28 @@ Utför följande steg för att skapa regler baserade på **[!UICONTROL Adobe Exp
 1. I **[!UICONTROL Props]** mappa de alternativ för rapportsviten som finns i listrutan med dataelementen som definieras med [Konfigurera dataelement](#configure-data-elements).
 
    Till exempel att skicka **Formulärtitel** dataelement från AEM Forms [!DNL Adobe Analytics] när du skickar in ett formulär:
-   1. I **[!UICONTROL Props]** väljer du ett utkast för Formulärtitel i rapportsviten och trycker sedan på ![Databasikon](/help/forms/using/assets/database-icon.svg) för att mappa det till en formulärtitel som skapats i [Konfigurera dataelement](#configure-data-elements).
+   1. I **[!UICONTROL Props]** väljer du ett utkast för Formulärtitel i rapportsviten och väljer sedan ![Databasikon](/help/forms/using/assets/database-icon.svg) för att mappa det till en formulärtitel som skapats i [Konfigurera dataelement](#configure-data-elements).
 
       ![define-props](/help/forms/using/assets/define-props.png)
 
-   1. Tryck **[!UICONTROL Add Another]** om du vill lägga till fler dataelement i listan.
+   1. Välj **[!UICONTROL Add Another]** om du vill lägga till fler dataelement i listan.
 
-1. I **[!UICONTROL Events]** väljer du en händelse bland de tillgängliga alternativen i rapportsviten och trycker på **[!UICONTROL Keep Changes]**.
+1. I **[!UICONTROL Events]** väljer du en händelse bland de tillgängliga alternativen i rapportsviten och väljer **[!UICONTROL Keep Changes]**.
 
-1. I **[!UICONTROL Actions]** -sektion, tryck på + och ange **[!UICONTROL Adobe Analytics]** som tilläggsnamn.
+1. I **[!UICONTROL Actions]** väljer du + och anger **[!UICONTROL Adobe Analytics]** som tilläggsnamn.
 
-1. Välj **[!UICONTROL Send Beacon]** som åtgärdstyp. Välj i den högra rutan **[!UICONTROL s.t()]** skicka data till [!DNL Adobe Analytics] och hantera det som en sidvy eller **[!UICONTROL s.tl()]** skicka data till [!DNL Adobe Analytics] och behandla det inte som en sidvy. Tryck på **[!UICONTROL Keep Changes]**.
+1. Välj **[!UICONTROL Send Beacon]** som åtgärdstyp. Välj i den högra rutan **[!UICONTROL s.t()]** skicka data till [!DNL Adobe Analytics] och hantera det som en sidvy eller **[!UICONTROL s.tl()]** skicka data till [!DNL Adobe Analytics] och behandla det inte som en sidvy. Välj **[!UICONTROL Keep Changes]**.
 
-1. I **[!UICONTROL Actions]** -sektion, tryck på + och ange **[!UICONTROL Adobe Analytics]** som tilläggsnamn.
+1. I **[!UICONTROL Actions]** väljer du + och anger **[!UICONTROL Adobe Analytics]** som tilläggsnamn.
 
-1. Välj **[!UICONTROL Clear Variables]** som åtgärdstyp. Tryck på **[!UICONTROL Keep Changes]**. När du har utfört dessa steg **[!UICONTROL Actions]** visas som:
+1. Välj **[!UICONTROL Clear Variables]** som åtgärdstyp. Välj **[!UICONTROL Keep Changes]**. När du har utfört dessa steg **[!UICONTROL Actions]** visas som:
    ![Åtgärdskonfiguration](/help/forms/using/assets/actions-config.png)
 
    Anpassa **[!UICONTROL Actions]** enligt dina krav. Du kan till exempel definiera två **Skicka Beacon** steg i ett åtgärdsflöde för att skicka data till [!DNL Adobe Analytics] och behandla det som en sidvy i ett enda steg och skicka data till [!DNL Adobe Analytics] och behandla det inte som en sidvy i det andra steget.
 
    ![Åtgärdskonfiguration](/help/forms/using/assets/actions-config-2.png)
 
-1. Tryck **[!UICONTROL Save]** för att spara regeln.
+1. Välj **[!UICONTROL Save]** för att spara regeln.
 
    Du kan skapa regler för alla händelsetyper, till exempel överge, Fel, fältbesök, Hjälp, Återge, Spara och Skicka.
 
@@ -182,13 +182,13 @@ När du har skapat dataelementen och använt dem i regler publicerar du konfigur
 
 Utför följande steg för att publicera konfigurationen:
 
-1. I **[!UICONTROL Publishing]** sektion, trycka **[!UICONTROL Publishing Flow]**.
+1. I **[!UICONTROL Publishing]** avsnitt, markera **[!UICONTROL Publishing Flow]**.
 
-1. Tryck **[!UICONTROL Add Library]** och ange ett namn och välj miljö för biblioteket.
+1. Välj **[!UICONTROL Add Library]** och ange ett namn och välj miljö för biblioteket.
 
-1. Tryck **[!UICONTROL Add All Changed Resources]** och sedan trycka **[!UICONTROL Save & Build to Development]**.
+1. Välj **[!UICONTROL Add All Changed Resources]** och sedan **[!UICONTROL Save & Build to Development]**.
 
-1. I **[!UICONTROL Development]** sektion, trycka ![Fler alternativ](/help/forms/using/assets/more-options-icon.svg) och sedan trycka **[!UICONTROL Approve & Publish to Production]**.
+1. I **[!UICONTROL Development]** avsnitt, markera ![Fler alternativ](/help/forms/using/assets/more-options-icon.svg) och sedan **[!UICONTROL Approve & Publish to Production]**.
 
 1. Bekräfta ändringarna och publiceringsflödet visas snart i **[!UICONTROL Published]** -avsnitt.
 
@@ -204,7 +204,7 @@ Så här skapar du en konfiguration för Adobe Launch:
 
 1. I AEM Forms Author går du till **[!UICONTROL Tools]** > **[!UICONTROL Cloud Services]** > **[!UICONTROL Adobe Launch Configurations]**.
 
-1. Välj en mapp för att skapa konfigurationen och tryck på **[!UICONTROL Create]**.
+1. Välj en mapp för att skapa konfigurationen och välj **[!UICONTROL Create]**.
 
 1. Ange en rubrik för konfigurationen i dialogrutan **[!UICONTROL Title]** fält.
 
@@ -214,7 +214,7 @@ Så här skapar du en konfiguration för Adobe Launch:
 
 1. Markera namnet på den egenskap som skapades när [konfigurera Adobe Analytics](#install-extensions).
 
-1. Tryck på **[!UICONTROL Save & Close]**.
+1. Välj **[!UICONTROL Save & Close]**.
 
 1. Publicera konfigurationen.
 
@@ -223,9 +223,9 @@ Så här skapar du en konfiguration för Adobe Launch:
 Används [!DNL Adobe Launch] i en befintlig adaptiv form:
 
 1. I AEM Forms Author går du till **[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL Forms]** > **[!UICONTROL Forms & Documents]**.
-1. Markera det adaptiva formuläret och tryck på **[!UICONTROL Properties]**.
+1. Markera det adaptiva formuläret och välj **[!UICONTROL Properties]**.
 1. I **[!UICONTROL Basic]** väljer du [konfigurationsbehållare](#create-adobe-launch-configuration) används när konfigurationen för Adobe Launch skapas.
-1. Tryck på **[!UICONTROL Save & Close]**. Det adaptiva formuläret är aktiverat för [!DNL Adobe Analytics].
+1. Välj **[!UICONTROL Save & Close]**. Det adaptiva formuläret är aktiverat för [!DNL Adobe Analytics].
 1. Publicera formuläret.
 
 När du har aktiverat [!DNL Adobe Analytics] för ett anpassningsbart formulär kan du [validera](https://experienceleague.adobe.com/docs/launch-learn/implementing-in-websites-with-launch/implement-solutions/analytics.html?lang=en#validate-the-page-view-beacon) om ett datahändelseflöde finns mellan AEM Forms och [!DNL Adobe Analytics]. Integreringen av AEM Forms med Adobe Analytics är klar. Nu kan du [konfigurera och visa rapporter i Adobe Analytics](#view-reports-adobe-analytics).
@@ -242,7 +242,7 @@ I en tvåstegsprocess definierar du en regel för ett fält i ett anpassningsbar
 
 Så här skapar du regler med hjälp av regelredigeraren i ett anpassat format:
 
-1. Tryck på fältet och välj ![Regelredigeraren](/help/forms/using/assets/rule-editor-icon.svg) för att öppna sidan för regelredigeraren.
+1. Markera fältet och välj ![Regelredigeraren](/help/forms/using/assets/rule-editor-icon.svg) för att öppna sidan för regelredigeraren.
 1. Definiera ett villkor i [!UICONTROL When] -delen av regeln.
 1. I [!UICONTROL Then] regelavsnitt, markera **[!UICONTROL Dispatch Event]** från **[!UICONTROL Select Action]** listruta.
 1. Ange namnet på händelsen i **[!UICONTROL Type Event Name]** fält.
@@ -255,7 +255,7 @@ Mappa händelsen till en anpassad hämtningshändelse i [!DNL Adobe Analytics]:
 
 1. [Skapa en regel](#configure-rules).
 
-1. I **[!UICONTROL Events]** sektion, trycka **[!UICONTROL Add]**.
+1. I **[!UICONTROL Events]** avsnitt, markera **[!UICONTROL Add]**.
 
 1. Ange **[!UICONTROL Adobe Experience Manager Forms]** som tilläggsnamn.
 
@@ -263,15 +263,15 @@ Mappa händelsen till en anpassad hämtningshändelse i [!DNL Adobe Analytics]:
 
 1. Ange namnet på händelsen som du angav i steg 4 när du skapade en regel med regelredigeraren.
 
-1. Tryck **Behåll ändringar** och utför resten av åtgärderna som anges i [Konfigurera regler](#configure-rules).
+1. Välj **Behåll ändringar** och utför resten av åtgärderna som anges i [Konfigurera regler](#configure-rules).
 
 ## 3. Konfigurera och visa rapporter i [!DNL Adobe Analytics] {#view-reports-adobe-analytics}
 
 När ett adaptivt formulär har konfigurerats för att skicka händelsedata till [!DNL Adobe Analytics]kan du börja visa rapporter i [!DNL Adobe Analytics]:
 
-1. Tryck ![Välj produkt](/help/forms/using/assets/select-analytics.png) och markera **[!UICONTROL Analytics]**.
+1. Välj ![Välj produkt](/help/forms/using/assets/select-analytics.png) och markera **[!UICONTROL Analytics]**.
 
-1. Tryck **[!UICONTROL Create Project]** och markera **[!UICONTROL Blank project]**.
+1. Välj **[!UICONTROL Create Project]** och markera **[!UICONTROL Blank project]**.
 
 1. Välj rapportsvitens namn i listrutan högst upp till höger på frihandsformuläret.
 
@@ -281,8 +281,8 @@ När ett adaptivt formulär har konfigurerats för att skicka händelsedata till
 
 1. Från **[!UICONTROL Metrics]** -avsnitt, släppa händelser att spåra till **[!UICONTROL Drop a metric here (or any other component)]** textruta.
 
-1. Tryck ![Visualiseringar](/help/forms/using/assets/visualization-icon.svg) och släpp en diagramtyp i avsnittet Frihand. På samma sätt kan du lägga till flera diagramtyper i avsnittet Frihand.
+1. Välj ![Visualiseringar](/help/forms/using/assets/visualization-icon.svg) och släpp en diagramtyp i avsnittet Frihand. På samma sätt kan du lägga till flera diagramtyper i avsnittet Frihand.
 
-1. Tryck på Ctrl + S och ange ett namn för att spara projektet.
+1. Välj Ctrl + S och ange ett namn för att spara projektet.
 
 Detaljerad information om hur du visar analysrapporter för formulär finns i [Visa och förstå AEM Forms analysrapporter](../../forms/using/view-understand-aem-forms-analytics-reports.md).

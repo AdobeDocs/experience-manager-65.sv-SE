@@ -7,9 +7,9 @@ topic-tags: Adaptive Forms
 docset: aem65
 role: Admin, Developer
 exl-id: 9f9b35a3-0479-4179-9fad-994a482c96b6
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '1965'
+source-wordcount: '1927'
 ht-degree: 0%
 
 ---
@@ -146,7 +146,7 @@ Du kan anpassa enskilda komponenter eller göra ändringar på temanivå med hj�
 The `variable.scss` filen innehåller temats globala variabler. Genom att uppdatera dessa variabler kan du göra formatrelaterade ändringar på temanivå. Så här använder du format på temanivå:
 
 1. Öppna `<your-theme-sources>/src/site/_variables.scss` fil för redigering.
-1. Ändra värdet för alla egenskaper. Standardfelfärgen är t.ex. röd. Om du vill ändra felfärgen från rött till blått ändrar du färghexkoden för `$error`variabel. Till exempel, `$error: #196ee5`.
+1. Ändra värdet för alla egenskaper. Standardfelfärgen är t.ex. röd. Om du vill ändra felfärgen från rött till blått ändrar du färghexkoden för `$error`variabel. Till exempel: `$error: #196ee5`.
 
    ![Exempel: Felfärgen är blå](/help/forms/using/assets/theme-level-changes.png)
 
@@ -187,7 +187,7 @@ Du kan också anpassa teckensnitt, färg, storlek och andra CSS-egenskaper för 
 Om du vill distribuera ett tema till en AEM måste det konverteras till ett klientbibliotek. Så här konverterar du temat till ett klientbibliotek:
 
 1. Öppna kommandotolken eller terminalfönstret.
-1. Navigera till `<your-theme-sources>` mapp. Till exempel, `C:\aem-forms-theme-canvas`
+1. Navigera till `<your-theme-sources>` mapp. Exempel: `C:\aem-forms-theme-canvas`
 1. Kör följande kommando:
 
    ```
@@ -233,7 +233,7 @@ To apply and test the customized theme with an Adaptive Form:
 
 1. Log in to your AEM Forms author instance. 
 
-1. Tap **Adobe Experience Manager** > **Forms** > **Forms & Documents**.
+1. Select **Adobe Experience Manager** > **Forms** > **Forms & Documents**.
 
 1. Click **Create** > **Adaptive Forms**. The wizard for creating Adaptive Form opens.
 
@@ -247,7 +247,7 @@ An Adaptive Form with the selected theme is created.
 
 1. Log in to your AEM Forms author instance. 
 
-1. Tap **Adobe Experience Manager** > **Forms** > **Forms & Documents**.
+1. Select **Adobe Experience Manager** > **Forms** > **Forms & Documents**.
 
 1. Select an Adaptive Form and click Properties. 
 
@@ -283,7 +283,7 @@ När paketet har installerats är temat tillgängligt för val.
 Steg för att tillämpa ett tema på ett adaptivt formulär är:
 
 1. Logga in på den lokala AEM författarinstansen.
-1. Ange dina uppgifter på inloggningssidan för Experience Manager. Tryck **Adobe Experience Manager** > **Forms** > **Forms och dokument**.
+1. Ange dina uppgifter på inloggningssidan för Experience Manager. Välj **Adobe Experience Manager** > **Forms** > **Forms och dokument**.
 1. Klicka **Skapa** > **Adaptiv Forms**.
 1. Välj en adaptiv Forms Core Components-mall och klicka på **Nästa**. The **Lägg till egenskaper** visas
 1. Ange **Namn** för din adaptiva form.

@@ -11,7 +11,7 @@ topic-tags: site-features
 discoiquuid: 57cd61d5-78f2-4f8c-99ee-75e100c052ef
 docset: aem65
 exl-id: 14484a90-4e44-4c85-9411-b78ed11dc70d
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
 source-wordcount: '661'
 ht-degree: 1%
@@ -98,7 +98,7 @@ Använd följande procedur för att skapa en uppgift för en SEO-rekommendation.
 
    ![chlimage_1-131](assets/chlimage_1-131.png)
 
-1. Fyll i formulärfälten som visas och tryck sedan på Skapa:
+1. Fyll i formulärfälten som visas och välj Skapa:
 
    * Projekt: Välj i vilket projekt uppgiften ska skapas.
    * Namn: Namnet som identifierar uppgiften. Standardnamnet är titeln på SEO-rekommendationen.

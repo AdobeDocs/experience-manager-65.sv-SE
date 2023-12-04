@@ -10,16 +10,16 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-app
 discoiquuid: e18aa345-034c-473b-b4c2-01678bb10616
 exl-id: 171754a2-1ba5-42dc-b6d2-3d730807cc31
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '2418'
+source-wordcount: '2380'
 ht-degree: 0%
 
 ---
 
 # Introduktion till AEM Forms {#aem-forms-app}
 
-## Översikt {#overview}
+## Ökning {#overview}
 
 Med AEM Forms-appen kan du synkronisera adaptiva formulär, mobilformulär och formuläruppsättningar på mobila enheter, baserat på din server. Du kan definiera arbetsflöden som [Forms-centrerade arbetsflöden på OSGi](/help/forms/using/aem-forms-workflow.md) eller Forms arbetsflöden på JEE. Du ansvarar t.ex. för ett bankföretag och använder AEM Forms för att hantera kundtillämpningar och kommunikation. Era kunder fyller i en blankett och skickar in den för verifiering. Om du aktiverar formuläret på mobila enheter kan dina kunder fylla i formuläret i AEM Forms-appen. Du kan också hantera verifieringsarbetsflödet genom att aktivera verifieringsformuläret på mobila enheter. Din fältarbetare kan bära en mobil enhet med sig till kunden, verifiera informationen och skicka formuläret. AEM Forms-appen synkroniseras med AEM Forms-servern och hämtar de formulär som är aktiverade för mobila enheter. Om programmet är offline lagras data lokalt.
 
@@ -58,9 +58,9 @@ Så här synkroniserar du formuläret i AEM Forms-appen:
 1. Markera ett formulär i författarinstansen och klicka på **[!UICONTROL View Properties]**.
 
 1. På egenskapssidan klickar du på **[!UICONTROL Advanced]**.
-1. Aktivera alternativet under Avancerat: **[!UICONTROL Sync with AEM Forms App]** och knacka **[!UICONTROL Save]**.
+1. Aktivera alternativet under Avancerat: **[!UICONTROL Sync with AEM Forms App]** och markera **[!UICONTROL Save]**.
 
-När formuläret publiceras synkroniseras programmet med servern och formuläret hämtas. Om du vill synkronisera flera formulär väljer du flera formulär i formulärhanteraren i författarinstansen och trycker på **[!UICONTROL Sync with AEM Forms App]**.
+När formuläret publiceras synkroniseras programmet med servern och formuläret hämtas. Om du vill synkronisera flera formulär i författarinstansen markerar du flera formulär i formulärhanteraren och väljer **[!UICONTROL Sync with AEM Forms App]**.
 
 ## Stöd för mobila enheter {#mobile-device-support}
 
@@ -183,11 +183,11 @@ Källkoden för AEM Forms-appen kan extraheras från `adobe-lc-mobileworkspace-s
 Så här hämtar du programkällan för AEM Forms:
 
 1. Öppna [Programvarudistribution](https://experience.adobe.com/downloads). Du behöver en Adobe ID för att logga in på Software Distribution.
-1. Tryck **[!UICONTROL Adobe Experience Manager]** finns i rubrikmenyn.
+1. Välj **[!UICONTROL Adobe Experience Manager]** finns i rubrikmenyn.
 1. I **[!UICONTROL Filters]** avsnitt:
    1. Välj **[!UICONTROL Forms]** från **[!UICONTROL Solution]** listruta.
    2. Välj version och typ för paketet. Du kan också använda **[!UICONTROL Search Downloads]** för att filtrera resultaten.
-1. Tryck på det paketnamn som gäller för ditt operativsystem och välj **[!UICONTROL Accept EULA Terms]** och trycka **[!UICONTROL Download]**.
+1. Välj det paketnamn som gäller för operativsystemet och välj **[!UICONTROL Accept EULA Terms]** och markera **[!UICONTROL Download]**.
 1. Öppna [Pakethanteraren](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html)  och klicka **[!UICONTROL Upload Package]** för att överföra paketet.
 1. Markera paketet och klicka på **[!UICONTROL Install]**.
 

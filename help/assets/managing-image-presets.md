@@ -13,10 +13,10 @@ legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/image-
 feature: Image Presets
 role: User, Admin
 exl-id: 556b99fe-91c3-441f-ba81-22cb8c10ef7f
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '3651'
-ht-degree: 7%
+source-wordcount: '3650'
+ht-degree: 6%
 
 ---
 
@@ -81,11 +81,11 @@ Adobe Illustrator filformat är en variant av PDF. De största skillnaderna i Ex
 * Adobe Illustrator-dokument består av en sida med flera lager. Varje lager extraheras som en PNG-delresurs under Illustrator huvudresurs.
 * PDF-dokument består av en eller flera sidor. Varje sida extraheras som en enda PDF-delresurs under det huvudsakliga flersidiga PDF-dokumentet.
 
-Delresurserna skapas av `Create Sub Asset process` -komponenten inom det övergripande `DAM Update Asset` arbetsflöde. Om du vill visa den här processkomponenten i arbetsflödet trycker du på **[!UICONTROL Tools]** > **[!UICONTROL Workflow]** > **[!UICONTROL Models]** > **[!UICONTROL DAM Update Asset]** > **[!UICONTROL Edit]**.
+Delresurserna skapas av `Create Sub Asset process` -komponenten inom det övergripande `DAM Update Asset` arbetsflöde. Om du vill visa den här processkomponenten i arbetsflödet väljer du **[!UICONTROL Tools]** > **[!UICONTROL Workflow]** > **[!UICONTROL Models]** > **[!UICONTROL DAM Update Asset]** > **[!UICONTROL Edit]**.
 
 Se även [Visa sidor i en flersidig fil](/help/assets/managing-linked-subassets.md#view-pages-of-a-multi-page-file).
 
-Du kan visa delresurserna eller sidorna när du öppnar resursen, trycka på Innehåll-menyn och välja **[!UICONTROL Subassets]** eller **[!UICONTROL Pages]**. Deltillgångarna är verkliga tillgångar. PDF sidor extraheras med andra ord av `Create Sub Asset` arbetsflödeskomponent. De lagras sedan som `page1.pdf`, `page2.pdf`och så vidare, under huvudtillgången. När de är lagrade `DAM Update Asset` de behandlas i arbetsflödet.
+Du kan visa delresurserna eller sidorna när du öppnar resursen, välja Innehåll-menyn och välja **[!UICONTROL Subassets]** eller **[!UICONTROL Pages]**. Deltillgångarna är verkliga tillgångar. PDF sidor extraheras med andra ord av `Create Sub Asset` arbetsflödeskomponent. De lagras sedan som `page1.pdf`, `page2.pdf`och så vidare, under huvudtillgången. När de är lagrade `DAM Update Asset` de behandlas i arbetsflödet.
 
 Om du vill använda Dynamic Media för att förhandsgranska och generera dynamiska renderingar för AI-, EPS- eller PDF-filer måste du utföra följande åtgärder:
 
@@ -106,7 +106,7 @@ Om du vill använda Dynamic Media för att förhandsgranska och generera dynamis
 
 Du har åtkomst `Rasterize PDF/AI Image Preview Rendition` bearbeta komponentalternativ via `DAM Update Asset` arbetsflöde.
 
-Tryck på Adobe Experience Manager i det övre vänstra hörnet, navigera till **[!UICONTROL Tools]** > **[!UICONTROL Workflow]** > **[!UICONTROL Models]**. Välj på sidan Arbetsflödesmodeller **[!UICONTROL DAM Update Asset]** och sedan trycker du på **[!UICONTROL Edit]**. På [!UICONTROL DAM Update Asset] arbetsflödessida, dubbeltrycka på `Rasterize PDF/AI Image Preview Rendition` bearbetningskomponent för att öppna dialogrutan Stegegenskaper.
+I det övre vänstra hörnet väljer du Adobe Experience Manager och navigerar till **[!UICONTROL Tools]** > **[!UICONTROL Workflow]** > **[!UICONTROL Models]**. Välj på sidan Arbetsflödesmodeller **[!UICONTROL DAM Update Asset]** väljer du **[!UICONTROL Edit]**. På [!UICONTROL DAM Update Asset] arbetsflödessida, dubbelmarkera `Rasterize PDF/AI Image Preview Rendition` bearbetningskomponent för att öppna dialogrutan Stegegenskaper.
 
 #### Rastrera återgivningsalternativen PDF/AI Image Preview {#rasterize-pdf-ai-image-preview-rendition-options}
 
@@ -208,18 +208,18 @@ Storleksändring för miniatyrbilder definieras i följande format: **[!UICONTRO
 
 **Så här konfigurerar du miniatyrbildens storlek:**
 
-1. Tryck **[!UICONTROL Tools]** > **[!UICONTROL Workflow]** > **[!UICONTROL Models]** > **[!UICONTROL DAM Update Asset]** > **[!UICONTROL Edit]**.
-1. Tryck på **[!UICONTROL Dynamic Media Process Image Assets]** och klicka på **[!UICONTROL Thumbnails]** -fliken. Ändra miniatyrstorleken efter behov och tryck sedan på **[!UICONTROL OK]**.
+1. Välj **[!UICONTROL Tools]** > **[!UICONTROL Workflow]** > **[!UICONTROL Models]** > **[!UICONTROL DAM Update Asset]** > **[!UICONTROL Edit]**.
+1. Välj **[!UICONTROL Dynamic Media Process Image Assets]** och klicka på **[!UICONTROL Thumbnails]** -fliken. Ändra miniatyrbildens storlek efter behov och välj sedan **[!UICONTROL OK]**.
 
    ![6_5_dynamicmediaprocessimageassets-thumbnailstab](assets/6_5_dynamicmediaprocessimageassets-thumbnailstab.png)
 
-1. Tryck på steget **[!UICONTROL Process Thumbnails]** och sedan på fliken **[!UICONTROL Thumbnails]**. Ändra miniatyrstorleken efter behov och tryck sedan på **[!UICONTROL OK]**.
+1. Välj **[!UICONTROL Process Thumbnails]** väljer du **[!UICONTROL Thumbnails]** -fliken. Ändra miniatyrbildens storlek efter behov och välj sedan **[!UICONTROL OK]**.
 
    >[!NOTE]
    >
    >Värdena i thumbnails-argumentet i steget **[!UICONTROL Process Thumbnails]** måste matcha thumbnails-argumentet i steget **[!UICONTROL Dynamic Media Process Image Assets]**.
 
-1. Tryck **[!UICONTROL Save]** för att spara ändringarna i arbetsflödet.
+1. Välj **[!UICONTROL Save]** för att spara ändringarna i arbetsflödet.
 
 ### Öka eller minska antalet förinställningar för Dynamic Media-bilder som visas {#increasing-or-decreasing-the-number-of-image-presets-that-display}
 
@@ -238,7 +238,7 @@ De bildförinställningar du skapar är tillgängliga som dynamiska återgivning
    ![chlimage_1-495](assets/chlimage_1-495.png)
 
 1. I egenskapen limit ändrar du talet till önskat tal, till exempel `{empty requestPathInfo.selectors[1] ? "20" : requestPathInfo.selectors[1]}`
-1. Tryck **[!UICONTROL Save All]**.
+1. Välj **[!UICONTROL Save All]**.
 
 ## Skapa en bildförinställning för Dynamic Media {#creating-image-presets}
 
@@ -260,7 +260,7 @@ Se [Filformatet InDesign (INDD)](#indesign-indd-file-format).
 
 **Så här skapar du en bildförinställning för Dynamic Media:**
 
-1. I Experience Manager trycker du på Experience Manager-logotypen för att komma åt den globala navigeringskonsolen och sedan trycker du **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Image Presets]**.
+1. I Experience Manager väljer du Experience Manager logotypen för att komma åt den globala navigeringskonsolen och väljer sedan **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Image Presets]**.
 1. Klicka på **[!UICONTROL Create]**. The **[!UICONTROL Edit Image Preset]** öppnas.
 
    ![chlimage_1-496](assets/chlimage_1-496.png)
@@ -395,7 +395,7 @@ När du skapar eller redigerar bildförinställningar finns alternativen som bes
     <ul>
      <li>Välj <strong>Ingen</strong> om du vill inaktivera skärpa.</li>
      <li>Välj <strong>Skärpa</strong> om du vill använda ett grundläggande skärpefilter på bilden efter att all skalförändring har gjorts. Skärpa kan kompensera för oskärpa som kan uppstå när du visar en bild i en annan storlek. </li>
-     <li>Välj<strong> Oskarp mask</strong> om du vill finjustera en skärpefiltereffekt på den slutliga nedsamplade bilden. Du kan styra intensiteten för effekten, radien för effekten (mätt i pixlar) och ett tröskelvärde för kontrast som ignoreras. Effekten har samma alternativ som Photoshop"Oskarp mask"-filter.</li>
+     <li>Välj<strong> Oskarp mask</strong> om du vill finjustera en skärpefiltereffekt på den slutliga nedsamplade bilden. Du kan styra intensiteten för effekten, radien för effekten (mätt i pixlar) och ett tröskelvärde för kontrast som ignoreras. Den här effekten använder samma alternativ som Photoshop Oskarp mask-filter.</li>
     </ul> <p>I <strong>Oskarp mask</strong>har du följande alternativ:</p>
     <ul>
      <li><strong>Belopp</strong> - Styr mängden kontrast som används på kantpixlar. Standardvärdet för reella tal är 1,0. För högupplösta bilder kan du öka den till upp till 5.0. Tänk på Mängd som ett mått på filterintensiteten.</li>
@@ -492,7 +492,7 @@ Nedan följer några grundläggande exempel på vad du kan göra med bildmodifie
 
 ## Redigera bildförinställningar {#modifying-image-presets}
 
-1. I Experience Manager trycker du på Experience Manager-logotypen för att komma åt den globala navigeringskonsolen och sedan trycker du **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Image Presets]**.
+1. I Experience Manager väljer du Experience Manager logotypen för att komma åt den globala navigeringskonsolen och väljer sedan **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Image Presets]**.
 
    ![6_5_imagepreset-editpreset](assets/6_5_imagepreset-editpreset.png)
 
@@ -516,5 +516,5 @@ Om du kör Dynamic Media - hybrid-läge måste du publicera bildförinställning
 ## Ta bort Dynamic Media-bildförinställningar {#deleting-image-presets}
 
 1. Klicka på Experience Manager-logotypen i Experience Manager för att öppna den globala navigeringskonsolen.
-1. Tryck på **[!UICONTROL Tools]** ikonen, navigera sedan till **[!UICONTROL Assets]** > **[!UICONTROL Image Presets]**.
-1. Välj en förinställning och klicka sedan på **[!UICONTROL Delete]**. Dynamic Media bekräftar att du vill ta bort den. Tryck **[!UICONTROL Delete]** för att ta bort eller trycka **[!UICONTROL Cancel]** för att avbryta.
+1. Välj **[!UICONTROL Tools]** ikonen, navigera sedan till **[!UICONTROL Assets]** > **[!UICONTROL Image Presets]**.
+1. Välj en förinställning och klicka sedan på **[!UICONTROL Delete]**. Dynamic Media bekräftar att du vill ta bort den. Välj **[!UICONTROL Delete]** ta bort eller markera **[!UICONTROL Cancel]** för att avbryta.

@@ -12,10 +12,10 @@ legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/viewer
 feature: Viewer Presets
 role: User, Admin
 exl-id: 0899e497-88e9-4fc3-a6be-b3a149fb5b32
-source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '4403'
-ht-degree: 7%
+source-wordcount: '4305'
+ht-degree: 6%
 
 ---
 
@@ -354,7 +354,7 @@ Följande tabell visar vilka mobilvisningsgester som stöds på enheter med iOS,
    <td><p>Visar eller döljer användargränssnittet</p> </td>
   </tr>
   <tr>
-   <td><p><strong>Dubbelknacka</strong></p> </td>
+   <td><p><strong>Dubbelmarkera</strong></p> </td>
    <td><p>Gäller inte</p> </td>
    <td><p>Zoomar in eller återställer</p> </td>
    <td><p>Zoomar in eller återställer</p> </td>
@@ -555,7 +555,7 @@ När du skapar visningsförinställningar för Carousel Banner kan du ändra for
 
 | | **Beskrivning** | **Åtgärder** |
 |---|---|---|
-| **[!UICONTROL Hotspot Icon]** | Ändra den ikon som används för aktiveringspunkten | Om du vill ändra hotspot-ikonens bild går du till **[!UICONTROL Appearance]** flik, in **[!UICONTROL Selected Component]**, markera **[!UICONTROL ImageMapEffect]**. Under **[!UICONTROL Icon]** markerar du **[!UICONTROL Background]** och i fältet **[!UICONTROL Image]** navigerar du till den bakgrundsbild du vill ha. |
+| **[!UICONTROL Hotspot Icon]** | Ändra den ikon som används för aktiveringspunkten | Om du vill ändra hotspot-ikonens bild går du till **[!UICONTROL Appearance]** flik, in **[!UICONTROL Selected Component]**, markera **[!UICONTROL ImageMapEffect]**. Under **[!UICONTROL Icon]**, markera **[!UICONTROL Background]** och i **[!UICONTROL Image]** navigera till bakgrundsbilden som du vill använda. |
 
 ## Aktivera eller inaktivera visningsprogramförinställningar {#activating-or-deactivating-viewer-presets}
 

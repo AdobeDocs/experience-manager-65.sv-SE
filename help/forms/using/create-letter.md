@@ -9,9 +9,9 @@ topic-tags: correspondence-management
 discoiquuid: 6cef0bcf-e2f0-4a5a-85a1-6d8a5dd9bd01
 feature: Correspondence Management
 exl-id: 2f996a50-7c7d-41b6-84b2-523b6609254b
-source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '3976'
+source-wordcount: '3979'
 ht-degree: 0%
 
 ---
@@ -245,11 +245,11 @@ Du måste ha följande på plats innan du kan skapa en korrespondens:
 
    ![create-letter](assets/create-letter.png)
 
-1. Välj en layout genom att trycka på den och trycka **Nästa**.
+1. Markera en layout genom att trycka på den och markera **Nästa**.
 
    ![Välj layout för att skapa en bokstav](assets/selectlayout.png)
 
-1. Ange egenskaperna för korrespondensen och tryck på **Spara:**
+1. Ange egenskaperna för korrespondensen och välj **Spara:**
 
    * **Titel (valfritt):** Ange brevets titel. Titeln behöver inte vara unik och kan innehålla specialtecken och tecken som inte är engelska.
    * **Namn:** Brevets unika namn. Det får inte finnas två bokstäver i något läge med samma namn. I fältet Namn kan du bara ange engelska tecken, siffror och bindestreck. Fältet Namn fylls i automatiskt baserat på fältet Titel. De specialtecken, blanksteg, siffror och icke-engelska tecken som anges i fältet Titel ersätts med bindestreck i fältet Namn. Även om värdet i fältet Titel automatiskt kopieras till namnet kan du redigera värdet.
@@ -260,21 +260,21 @@ Du måste ha följande på plats innan du kan skapa en korrespondens:
 
    ![Korrespondensegenskaper](assets/createcorrespondenceproperties.png)
 
-1. Systemet visar meddelandet&quot;Brev har skapats&quot;. (i varningsmeddelandet) Tryck på **Öppna** för att konfigurera datamoduler och layoutfragment i den. Eller tryck **Klar** för att gå tillbaka till föregående sida.
+1. Systemet visar meddelandet&quot;Brev har skapats&quot;. (i varningsmeddelandet) Välj **Öppna** för att konfigurera datamoduler och layoutfragment i den. Eller markera **Klar** för att gå tillbaka till föregående sida.
 
    ![Varningsmeddelande: brevet har skapats](assets/createcorrespondencecreated.png)
 
-   **Nästa**: När du trycker **Öppna** visas en representation av layouten med alla komponenter i layouten (XDP). Sätt igång med att infoga [Datamoduler och layoutfragment och konfigurera dem](/help/forms/using/create-letter.md#p-insert-data-modules-and-layout-fragments-in-a-letter-and-configure-them-p).
+   **Nästa**: När du väljer **Öppna** visas en representation av layouten med alla komponenter i layouten (XDP). Sätt igång med att infoga [Datamoduler och layoutfragment och konfigurera dem](/help/forms/using/create-letter.md#p-insert-data-modules-and-layout-fragments-in-a-letter-and-configure-them-p).
 
 ### Infoga datamoduler och layoutfragment i en bokstav och konfigurera dem {#insert-data-modules-and-layout-fragments-in-a-letter-and-configure-them}
 
-När du har skapat en korrespondens när du trycker på Öppna, visar Korrespondence Management en representation av layouten med alla delformulär/målområden i layouten (XDP) som visas. I vart och ett av målområdena kan du välja att infoga antingen en datamodul eller ett layoutfragment (och sedan datamoduler i layoutfragmentet).
+När du har skapat en korrespondens visas en representation av layouten med alla delformulär/målområden i den angivna layouten (XDP) när du väljer Öppna. I vart och ett av målområdena kan du välja att infoga antingen en datamodul eller ett layoutfragment (och sedan datamoduler i layoutfragmentet).
 
 >[!NOTE]
 >
->Du kan också välja att trycka på ikonen Redigera för en bokstav på sidan Bokstäver för att infoga datamoduler och layoutfragment i en bokstav och konfigurera dem.
+>Du kan också välja Redigera ikon för en bokstav på sidan Bokstäver för att infoga datamoduler och layoutfragment i en bokstav och konfigurera dem.
 
-1. Tryck **Infoga** för varje delformulär och välj Datamoduler eller ett Layoutfragment som ska infogas i varje delformulär.
+1. Välj **Infoga** för varje delformulär och välj Datamoduler eller ett Layoutfragment som ska infogas i varje delformulär.
 
    ![Infoga datamoduler och layoutfragment](assets/insertdmandlf.png)
 
@@ -283,7 +283,7 @@ När du har skapat en korrespondens när du trycker på Öppna, visar Korrespond
    ![nestedlf](assets/nestedlf.png)
 
 1. Om du infogar ett layoutfragment visas namnet på layoutfragmentet i delformuläret. Och enligt det valda fragmentet visas kapslade delformulär i delformuläret.
-1. När de valda datamodulerna har infogats i layouten kan du trycka på konfigurationsläget och ange följande när du har tryckt på redigeringsikonen för varje modul:
+1. När du har infogat de valda datamodulerna i layouten kan du välja konfigurationsläget och ange följande när du har tryckt på redigeringsikonen för varje modul:
 
    1. **Redigerbar**: När det här alternativet är markerat kan innehållet redigeras i användargränssnittet Skapa korrespondens. Markera innehåll som redigerbart endast om det kräver att företagsanvändaren (till exempel en anspråksjustering) ändrar det.
    1. **Obligatoriskt**: När det här alternativet är markerat krävs innehållet i användargränssnittet Skapa korrespondens.
@@ -294,20 +294,20 @@ När du har skapat en korrespondens när du trycker på Öppna, visar Korrespond
 
    ![Infogade datamoduler och layoutfragment](assets/insertdmandlf2.png)
 
-1. Om du vill redigera en modul trycker du på ikonen Redigera bredvid den. När du har redigerat modulerna trycker du **Spara**.
+1. Om du vill redigera en modul väljer du redigeringsikonen bredvid den. När du har redigerat modulerna väljer du **Spara**.
 
    På den här sidan kan du även göra följande för delformulären:
 
-   1. **Tillåt fri text**: Om Tillåt fri text är aktiverat kan användaren lägga till textbunden text i CCR-vyn. I CCR-vyn är en T-åtgärd aktiverad för de målområden där Tillåt fri text är aktiverat och när användaren trycker på den efterfrågas namn och beskrivning av texten och när användaren trycker på OK öppnas texten i redigeringsläge där användaren kan lägga till text. Detta fungerar som andra textmoduler
+   1. **Tillåt fri text**: Om Tillåt fri text är aktiverat kan användaren lägga till textbunden text i CCR-vyn. I CCR-vyn är en T-åtgärd aktiverad för de målområden där Tillåt fri text är aktiverat. När användaren markerar den efterfrågas namn och beskrivning av texten och när användaren trycker på OK öppnas texten i redigeringsläge där användaren kan lägga till text. Detta fungerar som andra textmoduler
    1. **Lås ordning**: Låser delformulärens ordning i bokstaven. Författaren får inte ändra ordning på delformulären/komponenterna när brevet skapas.
 
    På den här sidan kan du även göra följande för varje resurs i delformulären:
 
    1. **Ändra ordningen på resurserna**: dra och släpp en resurs som innehåller en sorteringsikon för en tillgång ( ![dragndrop](assets/dragndrop.png)).
-   1. **Ta bort resurser**: Tryck på ikonen Ta bort bredvid en resurs för att ta bort den.
-   1. **Förhandsgranska resurser**: Tryck på förhandsvisningsikonen ( ![showpreview](assets/showpreview.png)) bredvid en resurs.
+   1. **Ta bort resurser**: Välj ikonen Ta bort bredvid en resurs för att ta bort den.
+   1. **Förhandsgranska resurser**: Välj förhandsgranskningsikonen ( ![showpreview](assets/showpreview.png)) bredvid en resurs.
 
-1. Tryck **Nästa**.
+1. Välj **Nästa**.
 1. På sidan Data visas hur datafält och variabler används i mallen. Data kan länkas till datakällor som t.ex. ett datalexikon eller användarindata. Varje fält definierar egenskaper från vilka dataordlistan mappar data eller vilken bildtext som visas för användarinmatningsfält.
 
    Länkning:
@@ -337,19 +337,19 @@ När du har skapat en korrespondens när du trycker på Öppna, visar Korrespond
 
    ![länkar](assets/linkages.png)
 
-1. När du har angett länkning trycker du **Nästa**. Korrespondenshanteringen visar skärmen Bifogade filer.
+1. När du har angett länkning väljer du **Nästa**. Korrespondenshanteringen visar skärmen Bifogade filer.
 
 ### Ställ in bilagor {#set-up-the-attachments}
 
 1. Välj **Lägg till resurs**.
-1. På skärmen Välj resurs trycker du på de resurser som ska bifogas med brevet och trycker sedan **Klar**. Du måste först överföra resurserna till Assets. Vi rekommenderar att du bara bifogar PDF- och Microsoft Office-dokument, men du kan även bifoga bilder. Mer information om hur du överför resurser i DAM finns i [Överför resurser](/help/assets/manage-assets.md).
-1. Om du vill låsa ordningen för resurserna i listan så att anspråksjusteraren inte kan ändra ordningen trycker du **Lås ordning**. Om du inte markerar det här alternativet kan du ändra ordningen på listobjekten med Anspråksjustering.
+1. På skärmen Välj resurs markerar du de resurser som ska bifogas med bokstaven och väljer **Klar**. Du måste först överföra resurserna till Assets. Vi rekommenderar att du bara bifogar PDF- och Microsoft Office-dokument, men du kan även bifoga bilder. Mer information om hur du överför resurser i DAM finns i [Överför resurser](/help/assets/manage-assets.md).
+1. Om du vill låsa ordningen för resurserna i listan så att anspråksjusteraren inte kan ändra ordningen väljer du **Lås ordning**. Om du inte markerar det här alternativet kan du ändra ordningen på listobjekten med Anspråksjustering.
 1. Om du vill ändra ordningen på resurserna drar och släpper du en resurs som har en omsorteringsikon för en tillgång ( ![dragndrop](assets/dragndrop.png)).
-1. Tryck **Redigera** framför en bifogad fil och ange en bifogad fil som obligatorisk om du inte vill att författaren ska kunna ta bort den. Ange en bifogad fil som markerad om du vill att den ska vara förmarkerad i CCR-gränssnittet.
+1. Välj **Redigera** framför en bifogad fil och ange en bifogad fil som obligatorisk om du inte vill att författaren ska kunna ta bort den. Ange en bifogad fil som markerad om du vill att den ska vara förmarkerad i CCR-gränssnittet.
 1. Välj **Bibliotekåtkomst** för att ge åtkomst till biblioteket. Om biblioteksåtkomst är aktiverad kan anspråksjusteraren komma åt innehållsbiblioteket när ett brev skapas och bilagor infogas.
 1. Välj **Konfiguration av bifogade filer** och ange maximalt antal bilagor.
 
-1. Tryck **Spara**. Din korrespondens skapas och visas på sidan Bokstäver.
+1. Välj **Spara**. Din korrespondens skapas och visas på sidan Bokstäver.
 
 När en brevmall har skapats i Correspondence Management kan slutanvändaren/agenten/anspråksjusteraren öppna brevet i användargränssnittet för CCR och skapa en korrespondens genom att ange data, konfigurera innehåll och hantera bilagor. Mer information finns i [Skapa korrespondens](/help/forms/using/create-correspondence.md).
 
@@ -446,7 +446,7 @@ Följande värden i tabellen
    <td>Ej tillämpligt</td> 
   </tr> 
   <tr> 
-   <td><strong>bild</strong></td> 
+   <td><strong>image</strong></td> 
    <td>Nej</td> 
    <td>endast bild</td> 
    <td>Nej</td> 
@@ -473,7 +473,7 @@ Följande värden i tabellen
 Du kan använda en befintlig brevmall för att snabbt skapa en brevmall med liknande egenskaper, innehåll och ärvda resurser, som dokumentfragment och dataordlista. Det gör du genom att kopiera och klistra in en bokstav.
 
 1. Markera en eller flera bokstäver på sidan Bokstäver. Gränssnittet visar ikonen Kopiera.
-1. Tryck på Kopiera. Gränssnittet visar ikonen Klistra in. Du kan också välja att gå in i en mapp innan du klistrar in. Olika mappar kan innehålla resurser med samma namn. Mer information om mappar finns i [Mappar och ordna resurser](/help/forms/using/import-export-forms-templates.md#folders-and-organizing-assets).
-1. Tryck på Klistra in. Dialogrutan Klistra in visas. Om du kopierar och klistrar in bokstäverna på samma plats tilldelas namn och titlar automatiskt till de nya kopiorna av bokstäverna, men du kan redigera bokstävernas titlar och namn.
+1. Välj Kopiera. Gränssnittet visar ikonen Klistra in. Du kan också välja att gå in i en mapp innan du klistrar in. Olika mappar kan innehålla resurser med samma namn. Mer information om mappar finns i [Mappar och ordna resurser](/help/forms/using/import-export-forms-templates.md#folders-and-organizing-assets).
+1. Välj Klistra in. Dialogrutan Klistra in visas. Om du kopierar och klistrar in bokstäverna på samma plats tilldelas namn och titlar automatiskt till de nya kopiorna av bokstäverna, men du kan redigera bokstävernas titlar och namn.
 1. Om det behövs redigerar du titeln och namnet som du vill spara kopian av brevet med.
-1. Tryck på Klistra in. En kopia av brevet skapas. Nu kan du göra nödvändiga ändringar i det nya brevet.
+1. Välj Klistra in. En kopia av brevet skapas. Nu kan du göra nödvändiga ändringar i det nya brevet.

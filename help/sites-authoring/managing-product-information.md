@@ -10,7 +10,7 @@ topic-tags: projects
 content-type: reference
 discoiquuid: 0e5d0a45-c663-4d91-b793-03d39119d103
 exl-id: c4eff50e-0d55-4a61-98fd-cc42138656cb
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
 source-wordcount: '2887'
 ht-degree: 0%
@@ -121,8 +121,8 @@ Den här uppgiften innebär att tilldela användare arbetsflödessteg baserat p�
 
 Konfigurera **Fotofotografering** arbetsflöde:
 
-1. Navigera till **verktyg** > **Arbetsflöden** och sedan på **Models** för att öppna **Arbetsflödesmodeller** sida.
-1. Välj **Fotofotografering** arbetsflöde och tryck på **Redigera** i verktygsfältet för att öppna det i redigeringsläge.
+1. Navigera till **verktyg** > **Arbetsflöden** och sedan väljer **Models** för att öppna **Arbetsflödesmodeller** sida.
+1. Välj **Fotofotografering** arbetsflöde och välj **Redigera** i verktygsfältet för att öppna det i redigeringsläge.
 
    ![Produktfoto - fotograferingsmodell](assets/chlimage_1-138a.png)
 

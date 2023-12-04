@@ -10,18 +10,18 @@ discoiquuid: a74ed6c1-3006-4baf-bd77-ad4045e23c22
 docset: aem65
 feature: Adaptive Forms
 exl-id: b549f176-409a-4d81-8c2b-73d0dd0c6649
-source-git-commit: e7a3558ae04cd6816ed73589c67b0297f05adce2
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '1145'
+source-wordcount: '1107'
 ht-degree: 0%
 
 ---
 
 # Bädda in ett anpassningsbart formulär eller interaktiv kommunikation i AEM Sites Single Page Application{#embed-an-adaptive-form-or-interactive-communication-in-aem-sites-single-page-application}
 
-<span class="preview"> Adobe rekommenderar att man använder modern och utbyggbar datainhämtning [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) for [skapa ny Adaptive Forms](/help/forms/using/create-an-adaptive-form-core-components.md) eller [lägga till adaptiv Forms på AEM Sites-sidor](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-program, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptive Forms med grundläggande komponenter. </span>
+<span class="preview"> Adobe rekommenderar att man använder modern och utbyggbar datainhämtning [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) for [skapa ny Adaptive Forms](/help/forms/using/create-an-adaptive-form-core-components.md) eller [lägga till adaptiv Forms på AEM Sites-sidor](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-filer, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptiv Forms med baskomponenter. </span>
 
-## Översikt {#overview}
+## Ökning {#overview}
 
 Med AEM Forms kan formulärutvecklare smidigt bädda in adaptiva formulär och interaktiv kommunikation i ett AEM Sites Single Page Application (SPA). Det inbäddade adaptiva formuläret och den interaktiva kommunikationen fungerar fullt ut och användarna kan fylla i och skicka formuläret utan att behöva lämna sidan. Det hjälper användaren att hålla sig i rätt kontext för andra element på webbsidan och interagera samtidigt med det adaptiva formuläret eller den interaktiva kommunikationen.
 
@@ -57,18 +57,18 @@ Så här installerar du AEM Forms SPA Container-komponenten:
 Så här bäddar du in ett adaptivt formulär eller interaktiv kommunikation med AEM Forms för SPA Container-komponenten:
 
 1. Öppna sidan AEM webbplatser i redigeringsläge där du vill bädda in ett adaptivt formulär eller interaktiv kommunikation.
-1. Infoga **AEM för SPA** på sidan med något av följande alternativ:
+1. Infoga **AEM formulär för SPA** på sidan med något av följande alternativ:
 
-   * Tryck på layoutbehållaren på sidan Platser och tryck på **+** och väljer **AEM för SPA** -komponenten.
+   * Välj layoutbehållaren på sidan Platser och välj **+** och väljer **AEM formulär för SPA** -komponenten.
 
-   * Dra och släpp komponentens **AEM för SPA** på sidan.
+   * Dra och släpp komponentens **AEM formulär för SPA** på sidan.
    * Sök efter ett adaptivt formulär eller interaktiv kommunikation i Assets-webbläsaren och dra och släpp det på Sites-sidan. Formuläret bäddas in i en AEM Forms för SPA.
 
    >[!NOTE]
    >
    >Återgivning av flera AEM Forms SPA Container-komponenter på en sida stöds inte. Du kan ha flera AEM Forms SPA Container på en sida, men bara en komponent i taget återges. Se till att endast en komponent är synlig på en sida för att undvika avvikelser.
 
-1. Tryck på den inbäddade AEM Forms SPA Container-komponenten på webbplatssidan och tryck sedan på ![settings_icon](assets/settings_icon.png) i åtgärdsfältet. The **Redigera AEM Forms SPA Container** öppnas.
+1. Markera den inbäddade AEM Forms SPA Container-komponenten på webbplatssidan och markera sedan ![settings_icon](assets/settings_icon.png) i åtgärdsfältet. The **Redigera AEM Forms SPA Container** öppnas.
 1. I **Redigera AEM Forms-behållare** anger du följande:
 
    * **Resurstyp:** Välj vilken typ av resurs som ska bäddas in. Alternativen är **Adaptiv form** och **Interaktiv kommunikation**
@@ -76,9 +76,9 @@ Så här bäddar du in ett adaptivt formulär eller interaktiv kommunikation med
    * **Resurssökväg**: Bläddra och välj det adaptiva formulär eller den interaktiva kommunikation som ska bäddas in. Fältet fylls i automatiskt om ett anpassningsbart formulär eller interaktiv kommunikation infogas med hjälp av Resursläsaren.
    * **Kanal** (Endast interaktiv kommunikation): Välj vilken typ av interaktiv kanal som ska bäddas in. Alternativen är **Webbkanal** och **Utskriftskanal**.
 
-   * **Tema**: Välj ett tema som definierar formatering för komponenter i ditt adaptiva formulär eller Interaktiv kommunikation. Formateringen innehåller utseendeegenskaper som teckensnittsstil, bakgrundsfärg, dimensioner och justering.
+   * **Tema**: Välj ett tema som definierar formatering för komponenter i ditt adaptiva formulär eller interaktiva kommunikation. Formateringen innehåller utseendeegenskaper som teckensnittsstil, bakgrundsfärg, dimensioner och justering.
 
-1. Tryck ![ready_icon](assets/done_icon.png) för att spara inställningarna. Det adaptiva formuläret eller den interaktiva kommunikationen är nu inbäddat på sidan.
+1. Välj ![ready_icon](assets/done_icon.png) för att spara inställningarna. Det adaptiva formuläret eller den interaktiva kommunikationen är nu inbäddat på sidan.
 
 ## Publicera inbäddade adaptiva formulär och interaktiv kommunikation {#publish-embedded-adaptive-form-and-interactive-communication}
 
@@ -95,7 +95,7 @@ AEM webbplatssida innehåller en referens till det adaptiva formuläret och inte
 Om du vill ändra någon konfiguration eller egenskap för det inbäddade adaptiva formuläret och interaktiv kommunikation gör du något av följande.
 
 * Öppna originalformuläret i adaptiva formulär eller interaktiv kommunikation i respektive redigerare och ändra dem.
-* Tryck på det adaptiva formuläret eller den interaktiva kommunikationen från sidan Webbplatser i redigeringsläget och tryck sedan på **Redigera i ett nytt fönster**. Det ursprungliga formuläret öppnas i redigeringsläge.
+* Välj det adaptiva formuläret eller den interaktiva kommunikationen från sidan Webbplatser i redigeringsläge och välj sedan **Redigera i ett nytt fönster**. Det ursprungliga formuläret öppnas i redigeringsläge.
 
 ## Överväganden och bästa praxis {#considerations-and-best-practices}
 

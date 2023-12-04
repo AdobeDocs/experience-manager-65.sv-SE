@@ -8,9 +8,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 9f400560-8152-4d07-a946-e514e9b9cedf
 role: Admin
 exl-id: fd0e17d7-c3e9-4dec-ad26-ed96a1881f42
-source-git-commit: fb9363a39ffc9d3929a31a3a19a124b806607ef4
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '997'
+source-wordcount: '978'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 Med Forms-centrerade AEM kan ni automatisera Forms-centrerade affärsprocesser. Arbetsflöden består av en serie steg som körs i en ordning som anges i den associerade arbetsflödesmodellen. Varje steg utför en specifik åtgärd, till exempel att tilldela en uppgift till en användare eller skicka ett e-postmeddelande. Arbetsflöden kan samverka med resurser i databasen, användarkonton och tjänster. Därför kan arbetsflöden samordna komplicerade aktiviteter som berör någon aspekt av Experience Manager.
 
-Ett formulärbaserat arbetsflöde kan aktiveras eller startas på något av följande sätt:
+Ett formulärcentrerat arbetsflöde kan aktiveras eller startas på något av följande sätt:
 
 * Skicka ett program från AEM Inbox
 * Skicka en ansökan från AEM [!DNL Forms] App
@@ -75,14 +75,14 @@ Du kan komma åt och ta bort användardata från en arbetsflödesinstans i datab
 
 Du kan dock inte identifiera eller så kan resultatet vara tvetydigt när du identifierar arbetsflöden som är kopplade till en initierare i följande scenarier:
 
-* **Arbetsflöde som aktiveras via en bevakad mapp**: Det går inte att identifiera en arbetsflödesinstans med dess initierare om arbetsflödet aktiveras av en bevakad mapp. I det här fallet kodas användarinformationen i de lagrade data.
+* **Arbetsflöde som aktiveras via en bevakad mapp**: En arbetsflödesinstans kan inte identifieras med sin initierare om arbetsflödet utlöses av en bevakad mapp. I det här fallet kodas användarinformationen i de lagrade data.
 * **Arbetsflöde initierat från publiceringens AEM**: Alla arbetsflödesinstanser skapas med en tjänstanvändare när adaptiva formulär, interaktiv kommunikation eller brev skickas från AEM publiceringsinstans. I dessa fall hämtas inte användarnamnet för den inloggade användaren i arbetsflödets instansdata.
 
 ### Åtkomst till användardata {#access}
 
 Så här identifierar och får du åtkomst till användardata som lagras för en arbetsflödesinstans:
 
-1. AEM författarinstans går du till `https://'[server]:[port]'/crx/de` och navigera till **[!UICONTROL Tools > Query]**.
+1. AEM författarinstansen går du till `https://'[server]:[port]'/crx/de` och navigera till **[!UICONTROL Tools > Query]**.
 
    Välj **[!UICONTROL SQL2]** från **[!UICONTROL Type]** nedrullningsbar meny.
 
@@ -106,11 +106,11 @@ Så här identifierar och får du åtkomst till användardata som lagras för en
 
    ![status](assets/status.png)
 
-1. I arbetsflödesinstansnoden navigerar du till `data/payload/`. The `path` egenskapen lagrar sökvägen till arbetsflödesinstansens nyttolast. Du kan navigera till sökvägen för att komma åt data som lagras i nyttolasten.
+1. Navigera till arbetsflödesinstansnoden `data/payload/`. The `path` -egenskapen lagrar sökvägen till arbetsflödesinstansens nyttolast. Du kan navigera till sökvägen för att komma åt data som lagras i nyttolasten.
 
    ![nyttload-path](assets/payload-path.png)
 
-1. Navigera till platserna för utkast och historik för arbetsflödesinstansen.
+1. Navigera till utkastplatser och historik för arbetsflödesinstansen.
 
    Till exempel:
 
@@ -131,15 +131,15 @@ Du måste vara AEM administratör för att kunna ta bort användardata från arb
 1. Följ instruktionerna i [Åtkomst till användardata](/help/forms/using/forms-workflow-osgi-handling-user-data.md#access) och notera följande:
 
    * Sökvägar till arbetsflödesinstanser som är associerade med användaren
-   * Status för arbetsflödesinstanserna
+   * Status för arbetsflödesinstanser
    * Sökvägar till nyttolaster för arbetsflödesinstanser
    * Banor till utkast och historik för arbetsflödesinstanser
 
 1. Utför det här steget för arbetsflödesinstanser i **KÖRS**, **UPPHÄVD**, eller **STAL** status:
 
-   1. Gå till `https://'[server]:[port]'/aem/start.html` och logga in med administratörsautentiseringsuppgifter.
+   1. Gå till `https://'[server]:[port]'/aem/start.html` och logga in med administratörsuppgifter.
    1. Navigera till **[!UICONTROL Tools > Workflow> Instances]**.
-   1. Välj relevanta arbetsflödesinstanser för användaren och tryck på **[!UICONTROL Terminate]** för att avsluta instanser som körs.
+   1. Välj relevanta arbetsflödesinstanser för användaren och välj **[!UICONTROL Terminate]** för att avsluta instanser som körs.
 
       Mer information om hur du arbetar med arbetsflödesinstanser finns i [Administrera arbetsflödesinstanser](/help/sites-administering/workflows-administering.md).
 

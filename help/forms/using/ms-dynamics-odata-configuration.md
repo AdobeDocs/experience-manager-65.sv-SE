@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 docset: aem65
 feature: Form Data Model
 exl-id: 90cc9452-e107-4e57-80a3-f44f0bde132e
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '1218'
+source-wordcount: '1195'
 ht-degree: 0%
 
 ---
@@ -117,8 +117,8 @@ Gör följande för att registrera en OAuth-klient på AD FS-datorn (Active Dire
 
 The **MS Dynamics OData-Cloud Service (OData-tjänst)** konfigurationen levereras med OData-standardkonfiguration. Så här konfigurerar du den för att ansluta till din Microsoft Dynamics-tjänst.
 
-1. Navigera till **[!UICONTROL Tools > Cloud Services > Data Sources]** och trycker på `global` konfigurationsmapp.
-1. Välj **MS Dynamics OData-Cloud Service (OData-tjänst)** konfiguration och knacka **[!UICONTROL Properties]**. Dialogrutan för konfigurationsegenskapen för molntjänster öppnas.
+1. Navigera till **[!UICONTROL Tools > Cloud Services > Data Sources]** och väljer `global` konfigurationsmapp.
+1. Välj **MS Dynamics OData-Cloud Service (OData-tjänst)** konfigurera och välja **[!UICONTROL Properties]**. Dialogrutan för konfigurationsegenskapen för molntjänster öppnas.
 
    I **Autentiseringsinställningar** tab:
 

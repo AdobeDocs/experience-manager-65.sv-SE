@@ -10,9 +10,9 @@ topic-tags: publish
 discoiquuid: 4d318908-c724-4582-a82b-6e9b1c55705b
 feature: Forms Portal
 exl-id: 572194b7-063b-4c38-af43-aba78e9c51c6
-source-git-commit: 1683338f02d01d5d9843368955fa42f309718f26
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '334'
+source-wordcount: '324'
 ht-degree: 1%
 
 ---
@@ -30,15 +30,15 @@ Komponenterna i formulärportalen är inte tillgängliga för användning. Gör 
 
 1. Utför följande steg för de sidor som använder en statisk mall:
 
-   1. Tryck på i sidhuvudet ![canvas-drop-down](assets/canvas-drop-down.png) > **Design** för att öppna sidan i designläge.
-   1. Tryck på en komponent (med en blå kant) och tryck sedan på ![fältnivå](assets/field-level.png) för att markera det styckesystem som innehåller den aktuella komponenten.
-   1. Tryck på i styckesystemet ![settings_icon](assets/settings_icon.png) för att öppna dialogrutan Redigera för styckesystemet.
-   1. I listan över **[!UICONTROL Allowed Components]**, aktivera kryssrutor för **[!UICONTROL Document Services]** och **[!UICONTROL Document Services Predicates]** -komponenter. Tryck på **[!UICONTROL OK]**.
+   1. I sidhuvudet väljer du ![canvas-drop-down](assets/canvas-drop-down.png) > **Design** för att öppna sidan i designläge.
+   1. Markera en komponent (med en blå ram) och markera sedan ![fältnivå](assets/field-level.png) för att markera det styckesystem som innehåller den aktuella komponenten.
+   1. Välj ![settings_icon](assets/settings_icon.png) för att öppna dialogrutan Redigera för styckesystemet.
+   1. I listan över **[!UICONTROL Allowed Components]**, aktivera kryssrutor för **[!UICONTROL Document Services]** och **[!UICONTROL Document Services Predicates]** -komponenter. Välj **[!UICONTROL OK]**.
 
 1. Utför följande steg för de sidor som använder en dynamisk mall:
 
-   1. Tryck på i sidhuvudet ![egenskaper](assets/properties.png) > **Redigera mall** för att öppna sidans mall.
-   1. Tryck **Layoutbehållare** och trycka ![FeedManagement](/help/forms/using/assets/feedmanagement.png). I **Tillåtna komponenter** -fliken, aktivera **Document Services och Document Services - predikat** och trycka ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png).
+   1. I sidhuvudet väljer du ![egenskaper](assets/properties.png) > **Redigera mall** för att öppna sidans mall.
+   1. Välj **Layoutbehållare** och markera ![FeedManagement](/help/forms/using/assets/feedmanagement.png). I **Tillåtna komponenter** -fliken, aktivera **Document Services och Document Services - predikat** och markera ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png).
 
 >[!NOTE]
 >

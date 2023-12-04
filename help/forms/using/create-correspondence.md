@@ -6,9 +6,9 @@ topic-tags: correspondence-management
 docset: aem65
 feature: Correspondence Management
 exl-id: da966787-a3b9-420f-8b7c-f00d05c61d43
-source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '3807'
+source-wordcount: '3790'
 ht-degree: 0%
 
 ---
@@ -23,14 +23,14 @@ Efter [brevmall skapad i korrespondenshantering](../../forms/using/create-letter
 
 Markera den bokstav du vill förhandsgranska genom att följa följande steg:
 
-1. Tryck på **Välj**.
+1. På sidan Bokstäver väljer du **Välj**.
 1. Välj lämplig bokstav genom att trycka på den.
 
    ![Markera brev](assets/1_selectletter.png)
 
    Markera brev
 
-1. För en ordlistebaserad bokstav väljer du **Förhandsgranska** > **Förhandsgranska**. Om du vill använda en annan bokstav än en ordlista väljer du **Förhandsgranska**. Du kan också hålla pekaren över en bokstav (utan att markera den) och förhandsgranska den genom att trycka på ikonen Förhandsgranska brev.
+1. För en ordlistebaserad bokstav väljer du **Förhandsgranska** > **Förhandsgranska**. Om du vill använda en annan bokstav än en ordlista väljer du **Förhandsgranska**. Du kan också hålla pekaren över en bokstav (utan att markera den) och förhandsgranska den genom att markera ikonen Förhandsgranska brev.
 
    >[!NOTE]
    >
@@ -63,7 +63,7 @@ Fyll i de tillgängliga layoutfälten och platshållarna på fliken Data.
 
 1. Ange data- och innehållsvariablerna i fälten efter behov. Fyll i alla obligatoriska fält markerade med en asterisk (&#42;) för att aktivera **Skicka** -knappen.
 
-   Tryck på ett datafältvärde i förhandsvisningen av HTML för att markera motsvarande datafält på fliken Data.
+   Markera ett datafältvärde i förhandsvisningen av HTML för att markera motsvarande datafält på fliken Data.
 
    ![Ange data i brevet](assets/2_enterdata.png) ![2_1_enterdata](assets/2_1_enterdata.png)
 
@@ -75,7 +75,7 @@ På fliken Innehåll hanterar du innehåll som dokumentfragment och innehållsva
 
    ![Fliken Innehåll - markera modul i innehåll](assets/3_content.png)
 
-1. Redigera innehållsmodulerna efter behov på fliken Innehåll. Om du vill fokusera på den relevanta innehållsmodulen i innehållshierarkin kan du antingen trycka på den relevanta raden eller det relevanta stycket i förhandsgranskningen av bokstaven eller trycka på innehållsmodulen direkt i innehållshierarkin.
+1. Redigera innehållsmodulerna efter behov på fliken Innehåll. Om du vill fokusera på den relevanta innehållsmodulen i innehållshierarkin kan du antingen markera den relevanta raden eller det relevanta stycket i förhandsgranskningen av bokstaven eller välja innehållsmodulen direkt i innehållshierarkin.
 
    Till exempel markeras raden&quot;Vi har granskat..&quot; i bilden nedan och den relevanta innehållsmodulen markeras på fliken Innehåll.
 
@@ -86,8 +86,8 @@ På fliken Innehåll hanterar du innehåll som dokumentfragment och innehållsva
    Mer information om åtgärder som är tillgängliga för olika moduler i användargränssnittet Skapa korrespondens finns i [Åtgärder och information som finns i användargränssnittet Create Correspondence](#actions-and-info-available-in-the-create-correspondence-content-tab).
 
 1. Om du vill söka efter innehållsmoduler använder du fältet Sök. Ange det fullständiga eller delvisa namnet eller titeln på innehållsmodulen för att söka efter den i korrespondensen.
-1. Tryck på ikonen Visa ( ![visa](assets/display.png)) framför en lista, text, villkor eller målområde för att visa eller dölja den i bokstaven.
-1. Om du vill redigera en textbunden eller redigerbar textmodul trycker du på motsvarande **Redigera** ikon ( ![edittextmodule](assets/edittextmodule.png)) eller dubbelklicka på den relevanta textmodulen i förhandsgranskningen av bokstaven.
+1. Välj ikonen Visa ( ![visa](assets/display.png)) framför en lista, text, villkor eller målområde för att visa eller dölja den i bokstaven.
+1. Om du vill redigera en textbunden eller redigerbar textmodul markerar du den relevanta **Redigera** ikon ( ![edittextmodule](assets/edittextmodule.png)) eller dubbelklicka på den relevanta textmodulen i förhandsgranskningen av bokstaven.
 
    Systemet visar en textredigerare för att redigera och formatera texten.
 
@@ -131,22 +131,22 @@ På fliken Innehåll hanterar du innehåll som dokumentfragment och innehållsva
 
    Correspondence Management har inbyggt stöd för 210 specialtecken. Administratören kan [lägg till stöd för fler/anpassade specialtecken genom anpassning](../../forms/using/custom-special-characters.md).
 
-1. Markera texten och tryck på Markera färg om du vill framhäva delar av texten i en redigerbar textbunden modul.
+1. Markera texten och välj Markera färg om du vill framhäva delar av texten i en redigerbar textbunden modul.
 
    ![letterbakgrundsfärg](assets/letterbackgroundcolor.png)
 
-   Du kan antingen trycka direkt på en grundfärg `**[A]**` finns på paletten Grundläggande färger eller trycker **Välj** efter användning av skjutreglaget `**[B]**` för att välja lämplig ton för färgen.
+   Du kan antingen välja en grundfärg direkt `**[A]**` finns på paletten Grundfärger eller väljer **Välj** efter användning av skjutreglaget `**[B]**` för att välja lämplig ton för färgen.
 
-   Du kan också gå till fliken Avancerat och välja lämplig nyans, ljushet och mättnad `**[C]**` för att skapa en exakt färg och sedan trycka på Välj `**[D]**` om du vill använda färgen för att markera texten.
+   Du kan också gå till fliken Avancerat och välja lämplig nyans, ljushet och mättnad `**[C]**` för att skapa en exakt färg och sedan välja Markera `**[D]**` om du vill använda färgen för att markera texten.
 
    ![textbakgrundsfärg](assets/textbackgroundcolor.png)
 
-1. Ändra innehåll och format och tryck **Spara**. Tryck på ( ![editnextmoduleccr](assets/editnextmoduleccr.png)) för att gå mellan redigerbara textmoduler eller trycka **Spara och nästa** om du vill spara ändringarna och gå till nästa redigerbara textmodul.
-1. Systemet visar också de ofyllda variablerna för var och en av grenarna. Om det inte finns några ofyllda variabler visas ofyllda variabler som 0. Om det finns en ofylld variabel kan du trycka på en gren för att expandera den och leta reda på den ofyllda variabeln. Använd verktygsfältet Innehåll för att ta bort innehåll, öka/minska indrag för innehållet och infoga sidbrytningar före/efter innehållet.
+1. Ändra innehåll och format och välj **Spara**. Markera ( ![editnextmoduleccr](assets/editnextmoduleccr.png)) för att gå mellan redigerbara textmoduler, eller markera **Spara och nästa** om du vill spara ändringarna och gå till nästa redigerbara textmodul.
+1. Systemet visar också de ofyllda variablerna för var och en av grenarna. Om det inte finns några ofyllda variabler visas ofyllda variabler som 0. Om det finns en ofylld variabel kan du markera en gren för att expandera den och leta reda på den ofyllda variabeln. Använd verktygsfältet Innehåll för att ta bort innehåll, öka/minska indrag för innehållet och infoga sidbrytningar före/efter innehållet.
 
    Du kan infoga sidbrytningar ovanför och under datamoduler även när de ingår i listor och villkor.
 
-1. Tryck på Öppna/Stäng innehållsvariabel ( ![opencontentvariables](assets/opencontentvariables.png)) för att öppna innehållsvariablerna och fylla i dem på rätt sätt.
+1. Välj Öppna/stäng innehållsvariabel ( ![opencontentvariables](assets/opencontentvariables.png)) för att öppna innehållsvariablerna och fylla i dem på rätt sätt.
 1. När du har fyllt i den ofyllda variabeln korrekt anges antalet ofyllda variabler till 0.
 
    I användargränssnittet Skapa korrespondens visas antalet ofyllda variabler på varje nivå i hierarkin för en modul som innehåller minst en variabel. Om en modul innehåller ofyllda variabler visas antalet på variabel-, modul-, målområdes- och brevmallsnivå.
@@ -204,8 +204,8 @@ På fliken Innehåll hanterar du innehåll som dokumentfragment och innehållsva
 ### Hantera bilagor {#manage-attachments}
 
 1. Välj **Bifogade filer**. Korrespondenshanteringen visar de tillgängliga bifogade filerna, enligt inställningarna när brevmallen skapas.
-1. Du kan välja att inte skicka en bifogad fil tillsammans med bokstaven genom att trycka på visningsikonen och du kan trycka på krysset i den bifogade filen för att ta bort den från bokstaven. För de bifogade filer som anges inaktiveras ikonerna Visa och Ta bort när du skapar en brevmall som Obligatorisk.
-1. Tryck på Library Access ( ![libraryaccess](assets/libraryaccess.png)) för att komma åt innehållsbiblioteket och infoga DAM-resurser som bilagor.
+1. Du kan välja att inte skicka en bifogad fil tillsammans med bokstaven genom att trycka på visningsikonen, och du kan markera krysset i den bifogade filen för att ta bort det från bokstaven. För de bifogade filer som anges inaktiveras ikonerna Visa och Ta bort när du skapar en brevmall som Obligatorisk.
+1. Välj biblioteksåtkomst ( ![libraryaccess](assets/libraryaccess.png)) för att komma åt innehållsbiblioteket och infoga DAM-resurser som bilagor.
 
    >[!NOTE]
    >
@@ -219,13 +219,13 @@ På fliken Innehåll hanterar du innehåll som dokumentfragment och innehållsva
 
 Du kan göra layout- och innehållsrelaterade ändringar för att se till att brevet ser ut som du tänkt dig och skicka det till olika postprocesser.
 
-1. Om du vill markera allt redigerbart innehåll i brevet trycker du **Markera redigerbara avsnitt**.
+1. Markera allt redigerbart innehåll i brevet genom att markera **Markera redigerbara avsnitt**.
 
    Det redigerbara innehållet i bokstaven markeras med grå bakgrund.
 
    ![Markera redigerbart innehåll](assets/4_highlightmoduleincontent-1.png)
 
-1. Redigera innehållsmodulerna efter behov på fliken Innehåll. Om du vill fokusera på den relevanta innehållsmodulen i innehållshierarkin kan du antingen trycka på den relevanta raden eller det relevanta stycket i förhandsgranskningen av bokstaven eller trycka på innehållsmodulen direkt i innehållshierarkin.
+1. Redigera innehållsmodulerna efter behov på fliken Innehåll. Om du vill fokusera på den relevanta innehållsmodulen i innehållshierarkin kan du antingen markera den relevanta raden eller det relevanta stycket i förhandsgranskningen av bokstaven eller välja innehållsmodulen direkt i innehållshierarkin.
 
    Till exempel markeras raden &quot;Att ge oss åtkomst..&quot; i bilden nedan och motsvarande innehållsmodul markeras på fliken Innehåll.
 
@@ -233,7 +233,7 @@ Du kan göra layout- och innehållsrelaterade ändringar för att se till att br
 
    Mer information om åtgärder som är tillgängliga för olika moduler i användargränssnittet Skapa korrespondens finns i [Åtgärder och information som finns i användargränssnittet Create Correspondence](#actions-and-info-available-in-the-create-correspondence-content-tab).
 
-1. Om du vill lägga till en sidbrytning i brevet trycker du där du vill infoga en sidbrytning och väljer Sidbrytning före eller Sidbrytning efter ( ![pagebreakbefore efter](assets/pagebreakbeforeafter.png)).
+1. Om du vill lägga till en sidbrytning till brevet markerar du var du vill infoga en sidbrytning och väljer Sidbrytning före eller Sidbrytning efter ( ![pagebreakbefore efter](assets/pagebreakbeforeafter.png)).
 
    En explicit sidbrytningsplatshållare infogas i brevet. Om du vill se hur en explicit sidbrytning påverkar bokstaven läser du i den förenklade PDF-förhandsvisningen.
 
@@ -243,13 +243,13 @@ Du kan göra layout- och innehållsrelaterade ändringar för att se till att br
 
    ![Explicit sidbrytning](assets/8_pagebreak.png)
 
-1. Om du vill spara brevet som ett utkast, som du kan fortsätta att arbeta med senare, trycker du på Spara som utkast. Om du vill använda det här alternativet måste ditt brev vara [publicerad](../../forms/using/publishing-unpublishing-forms.md#publishanasset). Mer information finns i Utkastinstans under [Spara utkast och skicka brev](#savingdrafts).
+1. Om du vill spara brevet som ett utkast, som du kan fortsätta att arbeta med senare, väljer du Spara som utkast. Om du vill använda det här alternativet måste ditt brev vara [publicerad](../../forms/using/publishing-unpublishing-forms.md#publishanasset). Mer information finns i Utkastinstans under [Spara utkast och skicka brev](#savingdrafts).
 
    ![saveasdraft](assets/saveasdraft.png)
 
-   Dialogrutan Utkastbokstavsnamn visas med bokstavskod-ID:t. Du kan också redigera detta ID. Anteckna brev-ID:t och tryck sedan på **Klar**. Du kan senare använda detta ID för att [läsa in utkastet igen](submit-letter-topostprocess.md#reloaddraft).
+   Dialogrutan Utkastbokstavsnamn visas med bokstavskod-ID:t. Du kan också redigera detta ID. Anteckna brev-ID:t och välj sedan **Klar**. Du kan senare använda detta ID för att [läsa in utkastet igen](submit-letter-topostprocess.md#reloaddraft).
 
-1. Om du vill förhandsgranska bokstaven som ett förenklat PDF med exakt layout och sidbrytningar när den skickas trycker du på ( ![förhandsgranska](assets/preview.png)) Förhandsgranska.
+1. Om du vill förhandsgranska bokstaven som ett förenklat PDF med exakt layout och sidbrytningar som de ska skickas, väljer du ( ![förhandsgranska](assets/preview.png)) Förhandsgranska.
 
    Bokstaven visas som ett förenklat PDF. Det förenklade PDF är den exakta representationen av brevet så som det kommer att skickas med rätt teckensnitt, brytningar och layout för brevet.
 
@@ -257,13 +257,13 @@ Du kan göra layout- och innehållsrelaterade ändringar för att se till att br
    >
    >Om du använder återgivningstypen Mozilla Firefox och HTML måste du använda insticksprogrammet för webbläsaren och inte Acrobat för att förhandsgranska bokstaven som separerad PDF. Om du vill välja insticksprogrammet för webbläsaren går du till Mozilla Firefox-inställningarna och för innehållstypen PDF väljer du Förhandsgranska i Firefox.
 
-1. Om du tycker att den förenklade förhandsvisningen av PDF är tillfredsställande trycker du **Skicka** skicka brevet. Eller, om du vill ändra bokstaven, tryck **Avsluta förhandsgranskning** om du vill gå tillbaka till förhandsgranskningen av gränssnittet Skapa korrespondens för brevet för att göra ändringar i brevet. När du trycker på Submit (Skicka), om konfigurationen Hantera bokstavsinstans är aktiverad på Publish-instansen, genereras instansen för att skicka brev.
+1. Om du tycker att den förenklade förhandsvisningen av PDF är tillfredsställande väljer du **Skicka** skicka brevet. Du kan också ändra bokstaven genom att markera **Avsluta förhandsgranskning** om du vill gå tillbaka till förhandsgranskningen av gränssnittet Skapa korrespondens för brevet för att göra ändringar i brevet. Om konfigurationen Hantera bokstavsinstans är aktiverad i publiceringsinstansen när du väljer Skicka, genereras instansen av skicka-brev.
 
    Mer information finns i Utkastinstans under Spara utkast och skicka brevinstanser.
 
    Du kan också spara brevet som ett utkast om du vill ändra bokstaven senare.
 
-   När du har gjort de ändringar du vill kan du antingen skicka brevet från HTML5-förhandsvisningen eller trycka på Förhandsgranska igen för att granska den förenklade utskriften för PDF.
+   När du har gjort de ändringar du vill kan du antingen skicka brevet från HTML5-förhandsvisningen eller välja Förhandsgranska igen om du vill granska den förenklade PDF.
 
    Mer information om skillnaderna mellan HTML5-formulär och PDF forms finns i [Skillnaden mellan HTML5-formulär och PDF forms](../../forms/using/feature-differentiation-html5-forms-pdf-forms.md).
 
@@ -354,10 +354,10 @@ Nedan följer de fördelar och funktioner som finns i HTML och PDF Preview.
 
 **Fördelar med mobilformulär/förhandsgranskning i HTML**
 
-* **Tryck på ett datafältvärde för att markera motsvarande datafält**: I användargränssnittet Skapa korrespondens kan du trycka på ett datafältvärde i brevet för att markera motsvarande datafält på fliken Data. Mer information finns i [Ange data](#enterdata).
+* **Markera ett datafältvärde för att markera motsvarande datafält**: I användargränssnittet Skapa korrespondens kan du markera ett datafältvärde i brevet för att markera motsvarande datafält på fliken Data. Mer information finns i [Ange data](#enterdata).
 
 * **Stöd för webbläsare**: Webbläsare har stegvis stöd för NPAPI som påverkar förhandsgranskningen av brevet i PDF. Förhandsgranskning av brev i HTML/mobilformulär påverkas inte av detta.
-* **Markera redigerbart innehåll i en bokstav**: I användargränssnittet Skapa korrespondens kan du trycka på Markera redigerbart innehåll för att markera allt redigerbart innehåll i brevet i grått. Mer information finns i [Hantera innehåll](#managecontent).
+* **Markera redigerbart innehåll i en bokstav**: I användargränssnittet Skapa korrespondens kan du markera Markera redigerbart innehåll för att markera allt redigerbart innehåll i bokstaven i grått. Mer information finns i [Hantera innehåll](#managecontent).
 
 `<li>` `<li>Benefits of HTML preview  <ul>   <li>Right to left</li>   <li>NPAPI</li>   <li>Highlight Editable Content</li>  </ul> </li>` `<li>Benefits of PDF preview  <ul>   <li>Page Break</li>   <li>Final Preview</li>  </ul> </li>`
 `<li>` `<li>Benefits of HTML preview  <ul>   <li>Right to left</li>   <li>NPAPI</li>   <li>Highlight Editable Content</li>  </ul> </li>` `<li>Benefits of PDF preview  <ul>   <li>Page Break</li>   <li>Final Preview</li>  </ul> </li>`  **Fördelar med PDF Preview**

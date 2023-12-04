@@ -8,7 +8,7 @@ topic-tags: page-authoring
 content-type: reference
 discoiquuid: 668d1a8a-c757-4c9f-833f-e5dada4d0384
 exl-id: 760b8419-5cf8-49c5-8d4f-6691f5256c53
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
 source-wordcount: '1798'
 ht-degree: 5%
@@ -164,7 +164,7 @@ Precis som med andra komponenter kan du markera och sedan vidta åtgärder för 
 >
 >När en layoutbehållare är ett styckesystem tas både layoutstödrastret och alla komponenter (och deras innehåll) som finns i behållaren bort om komponenten tas bort.
 
-1. Om du för musen över eller trycker på platshållaren för stödrastret visas åtgärdsmenyn.
+1. Om du för musen över eller väljer platshållaren för stödrastret visas åtgärdsmenyn.
 
    ![screen_shot_2018-03-23at085357](assets/screen_shot_2018-03-23at085357.png)
 

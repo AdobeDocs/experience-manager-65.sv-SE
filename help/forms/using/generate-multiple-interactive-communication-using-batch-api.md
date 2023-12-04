@@ -7,9 +7,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: interactive-communication
 feature: Interactive Communication
 exl-id: f65d8eb9-4d2c-4a6e-825f-45bcfaa7ca75
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '2166'
+source-wordcount: '2096'
 ht-degree: 0%
 
 ---
@@ -81,8 +81,8 @@ Så här skapar du interaktiv kommunikation från poster som sparats i en JSON-f
 
 1. Skapa en [Bevakad mapp](/help/forms/using/creating-configure-watched-folder.md) och konfigurera den så att den använder batch-API:t:
    1. Logga in på AEM Forms författarinstans.
-   1. Navigera till **[!UICONTROL Tools]** > **[!UICONTROL Forms]** > **[!UICONTROL Configure Watched Folder]**. Tryck på **[!UICONTROL New]**.
-   1. Ange **[!UICONTROL Name]** och fysisk **[!UICONTROL Path]** i mappen. Till exempel, `c:\batchprocessing`.
+   1. Navigera till **[!UICONTROL Tools]** > **[!UICONTROL Forms]** > **[!UICONTROL Configure Watched Folder]**. Välj **[!UICONTROL New]**.
+   1. Ange **[!UICONTROL Name]** och fysisk **[!UICONTROL Path]** i mappen. Till exempel: `c:\batchprocessing`.
    1. Välj **[!UICONTROL Service]** i **[!UICONTROL Process File Using]** fält.
    1. Välj **[!UICONTROL com.adobe.fd.ccm.multichannel.batch.impl.service.InteractiveCommunicationBatchServiceImpl]** i **[!UICONTROL Service Name]** fält.
    1. Ange en **[!UICONTROL Output File Pattern]**. Exempel: %F/ [mönster](https://helpx.adobe.com/experience-manager/6-5/forms/using/admin-help/configuring-watched-folder-endpoints.html#about_file_patterns) anger att den bevakade mappen kan hitta indatafiler i en undermapp till mappen Bevakade mappar\indatamapp.
@@ -97,7 +97,7 @@ Så här skapar du interaktiv kommunikation från poster som sparats i en JSON-f
       | batchType | Sträng | Ange värdet PRINT, WEB eller WEB_AND_PRINT. Standardvärdet är WEB_AND_PRINT. |
       | locale | Sträng | Ange språkinställningen för interaktiv kommunikation vid utdata. Körklara tjänster använder inte språkområdesalternativet, men du kan skapa en anpassad tjänst för att generera lokaliserad interaktiv kommunikation. Standardvärdet är en_US |
 
-   1. Tryck **[!UICONTROL Create]** Den bevakade mappen skapas.
+   1. Välj **[!UICONTROL Create]** Den bevakade mappen skapas.
 1. Använd bevakad mapp för att generera interaktiv kommunikation:
    1. Öppna den bevakade mappen. Navigera till indatamappen.
    1. Skapa en mapp i indatamappen och placera JSON-filen i den nya mappen.
@@ -113,9 +113,9 @@ Du kombinerar data (poster) som sparats i en extern datakälla med en interaktiv
 
 1. Konfigurera mallens formulärdatamodell:
    1. Öppna formulärdatamodellen som är kopplad till en interaktiv kommunikationsmall.
-   1. Markera MODELLOBJEKTET PÅ ÖVERSTA NIVÅ och tryck på Redigera egenskaper.
+   1. Markera MODELLOBJEKTET PÅ ÖVERSTA NIVÅ och välj Redigera egenskaper.
    1. Välj din hämtning eller få en tjänst från fältet Läs tjänst i rutan Redigera egenskaper.
-   1. Tryck på pennikonen för lästjänstargumentet för att binda argumentet till ett Request Attribute (Begär attribut) och ange bindningsvärdet. Det binder tjänstargumentet till det angivna bindningsattributet eller det literala värdet, som skickas till tjänsten som ett argument för att hämta information som är associerad med det angivna värdet från datakällan.
+   1. Välj pennikonen för lästjänstargumentet om du vill binda argumentet till ett Request Attribute och ange bindningsvärdet. Det binder tjänstargumentet till det angivna bindningsattributet eller det literala värdet, som skickas till tjänsten som ett argument för att hämta information som är associerad med det angivna värdet från datakällan.
 
       <br>
         I det här exemplet tar id-argumentet värdet för användarprofilens id-attribut och skickar det som ett argument till lästjänsten. Den läser och returnerar värden för associerade egenskaper från medarbetardatamodellobjektet för det angivna ID:t. Om du anger 00250 i id-fältet i formuläret läser lästjänsten information om medarbetaren med 00250 employee-id.
@@ -143,8 +143,8 @@ Du kombinerar data (poster) som sparats i en extern datakälla med en interaktiv
 
 1. Skapa en [Bevakad mapp](/help/forms/using/creating-configure-watched-folder.md) och konfigurera den så att den använder tjänsten Batch API:
    1. Logga in på AEM Forms författarinstans.
-   1. Navigera till **[!UICONTROL Tools]** > **[!UICONTROL Forms]** > **[!UICONTROL Configure Watched Folder]**. Tryck på **[!UICONTROL New]**.
-   1. Ange **[!UICONTROL Name]** och fysisk **[!UICONTROL Path]** i mappen. Till exempel, `c:\batchprocessing`.
+   1. Navigera till **[!UICONTROL Tools]** > **[!UICONTROL Forms]** > **[!UICONTROL Configure Watched Folder]**. Välj **[!UICONTROL New]**.
+   1. Ange **[!UICONTROL Name]** och fysisk **[!UICONTROL Path]** i mappen. Till exempel: `c:\batchprocessing`.
    1. Välj **[!UICONTROL Service]** i **[!UICONTROL Process File Using]** fält.
    1. Välj **[!UICONTROL com.adobe.fd.ccm.multichannel.batch.impl.service.InteractiveCommunicationBatchServiceImpl]** i **[!UICONTROL Service Name]** fält.
    1. Ange en **[!UICONTROL Output File Pattern]**. Exempel: %F/ [mönster](https://helpx.adobe.com/experience-manager/6-5/forms/using/admin-help/configuring-watched-folder-endpoints.html#about_file_patterns) anger att den bevakade mappen kan hitta indatafiler i en undermapp till mappen Bevakade mappar\indatamapp.
@@ -159,7 +159,7 @@ Du kombinerar data (poster) som sparats i en extern datakälla med en interaktiv
       | batchType | Sträng | Ange värdet PRINT, WEB eller WEB_AND_PRINT. Standardvärdet är WEB_AND_PRINT. |
       | locale | Sträng | Ange språkinställningen för interaktiv kommunikation vid utdata. Körklara tjänster använder inte språkområdesalternativet, men du kan skapa en anpassad tjänst för att generera lokaliserad interaktiv kommunikation. Standardvärdet är en_US. |
 
-   1. Tryck **[!UICONTROL Create]** Den bevakade mappen skapas.
+   1. Välj **[!UICONTROL Create]** Den bevakade mappen skapas.
 1. Använd bevakad mapp för att generera interaktiv kommunikation:
    1. Öppna den bevakade mappen. Navigera till indatamappen.
    1. Skapa en mapp i indatamappen. Placera JSON-filen som skapades i steg 2 i den nya mappen.
@@ -177,7 +177,7 @@ Innan du distribuerar Java-servern måste du se till att du har en interaktiv ko
 
 1. Logga in i AEM och skapa en interaktiv kommunikation. För att använda den interaktiva kommunikation som anges i exempelkoden nedan [klicka här](assets/SimpleMediumIC.zip).
 1. [Bygg och driftsätt ett AEM med Apache Maven](https://helpx.adobe.com/experience-manager/using/maven_arch13.html) på din AEM.
-1. Lägg till [AEM Forms Client SDK version 6.0.12](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html) eller senare i beroendelistan över POM-filer för ditt AEM. Till exempel,
+1. Lägg till [AEM Forms Client SDK version 6.0.12](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html) eller senare i beroendelistan över POM-filer för ditt AEM. Exempel:
 
    ```xml
        <dependency>

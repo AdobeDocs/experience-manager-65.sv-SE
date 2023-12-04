@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author, interactive-communications
 feature: Adaptive Forms
 exl-id: 00ee7929-649f-4cbb-be79-ba13ac73a16d
-source-git-commit: 451fb472e170a79f9854efadf9be1d4fe0628b94
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '1155'
+source-wordcount: '1141'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 0%
 | AEM 6.5 | Den här artikeln |
 
 
-## Översikt {#overview}
+## Ökning {#overview}
 
 Med AEM Forms kan formulärutvecklare smidigt bädda in adaptiva formulär och interaktiv kommunikation på en AEM Sites-sida eller en webbsida som ligger utanför AEM. Det inbäddade adaptiva formuläret och den interaktiva kommunikationen fungerar fullt ut och användarna kan fylla i och skicka formuläret utan att behöva lämna sidan. Det hjälper användaren att hålla sig i rätt sammanhang för andra element på webbsidan och interagera samtidigt med formuläret eller interaktiv kommunikation.
 
@@ -56,7 +56,7 @@ Så här bäddar du in ett adaptivt formulär eller interaktiv kommunikation med
    >
    >Flera AEM Forms Container-komponenter på en sida stöds inte.
 
-1. Tryck på den inbäddade AEM Forms Container-komponenten på webbplatssidan och tryck sedan på ![settings_icon](assets/settings_icon.png) i åtgärdsfältet. The **[!UICONTROL Edit AEM Forms Container]** öppnas.
+1. Markera den inbäddade AEM Forms Container-komponenten på webbplatssidan och markera sedan ![settings_icon](assets/settings_icon.png) i åtgärdsfältet. The **[!UICONTROL Edit AEM Forms Container]** öppnas.
 1. Ange följande i dialogrutan Redigera AEM Forms-behållare.
 
    * **Resurstyp:** Välj vilken typ av resurs som ska bäddas in. Alternativen är anpassningsbar form och interaktiv kommunikation
@@ -88,7 +88,7 @@ AEM webbplatssida innehåller en referens till det adaptiva formuläret och den 
 Gör något av följande om du vill ändra någon konfiguration eller egenskap för det inbäddade adaptiva formuläret och den interaktiva kommunikationen.
 
 * Öppna originalformuläret i anpassningsbara formulär eller i interaktiv kommunikation i respektive redigerare och ändra dem.
-* Tryck på det adaptiva formuläret eller den interaktiva kommunikationen inifrån webbplatssidan i redigeringsläge och tryck sedan på **[!UICONTROL Edit in a new window]**. Det ursprungliga formuläret öppnas i redigeringsläge som du kan ändra.
+* Välj det adaptiva formuläret eller den interaktiva kommunikationen från webbplatssidan i redigeringsläge och välj sedan **[!UICONTROL Edit in a new window]**. Det ursprungliga formuläret öppnas i redigeringsläge som du kan ändra.
 
 >[!NOTE]
 >

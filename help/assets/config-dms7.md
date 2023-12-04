@@ -10,7 +10,7 @@ role: User, Admin
 mini-toc-levels: 4
 exl-id: badd0f5c-2eb7-430d-ad77-fa79c4ff025a
 feature: Configuration,Scene7 Mode
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
 source-wordcount: '6121'
 ht-degree: 1%
@@ -388,7 +388,7 @@ Se [Överför resurser](/help/assets/manage-assets.md#uploading-assets).
 
    * Dubbelklicka på **[!UICONTROL enabled]** fält. Som standard är alla resursens MIME-typer aktiverade (inställda på **[!UICONTROL true]**), vilket innebär att resurserna synkroniseras till Dynamic Media för bearbetning. Om du vill utesluta den här resursens MIME-typ från bearbetningen ändrar du den här inställningen till **[!UICONTROL false]**.
 
-   * Dubbelknacka **[!UICONTROL jobParam]** för att öppna det tillhörande textfältet. Se [MIME-typer som stöds](/help/assets/assets-formats.md#supported-mime-types) för en lista över tillåtna värden för bearbetningsparametrar som du kan använda för en viss MIME-typ.
+   * Dubbelmarkera **[!UICONTROL jobParam]** för att öppna det tillhörande textfältet. Se [MIME-typer som stöds](/help/assets/assets-formats.md#supported-mime-types) för en lista över tillåtna värden för bearbetningsparametrar som du kan använda för en viss MIME-typ.
 
 1. Gör något av följande:
 
@@ -442,7 +442,7 @@ Du kan lägga till anpassade MIME-typer för format som inte stöds i Experience
 
    ![crxdelite_cqdoc-14627](assets/crxdelite_cqdoc-14627.png)
 
-1. Med mime-typen `image_vnd.dwg` fortfarande markerad, från **[!UICONTROL Properties]** -fliken, i **[!UICONTROL enabled]** rad, under **[!UICONTROL Value]** kolumnrubrik, dubbeltryck på värdet för att öppna **[!UICONTROL Value]** listruta.
+1. Med mime-typen `image_vnd.dwg` fortfarande markerad, från **[!UICONTROL Properties]** -fliken, i **[!UICONTROL enabled]** rad, under **[!UICONTROL Value]** kolumnrubrik, dubbelmarkera värdet för att öppna **[!UICONTROL Value]** listruta.
 1. Typ `false` i fältet (eller markera **[!UICONTROL false]** från listrutan).
 
    ![2019-08-02_16-60-30](assets/2019-08-02_16-60-30.png)

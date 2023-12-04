@@ -6,7 +6,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-app
 docset: aem65
 exl-id: 82282e2d-63a1-47e9-b2ec-f50a4bd32bd3
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
 source-wordcount: '562'
 ht-degree: 0%
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 ## Lägga till bilagor i formulär som har synkroniserats med AEM Forms Workflow Server (AEM Forms on JEE) {#adding-annotations}
 
-Med AEM Forms-appen kan du bifoga bilder, anteckningar och textanteckningar i ditt formulär som synkroniseras med AEM Forms JEE-servern. Om formuläret läses in från en AEM Forms Workflow-server läggs dina bilagor till i formuläret. Du kan trycka på knappen för bifogade filer ![attachments-app](assets/attachments-app.png) om du vill se alla bilagor i ett formulär tillsammans. Det röda meddelandet anger antalet bilagor i formuläret. Om det inte finns några bifogade filer i formuläret kan du inte se knappen med röda meddelanden. Om det inte finns några bifogade filer i formuläret när du trycker på knappen för bifogade filer ![bifoga](assets/attch.png), får du alternativ för att bifoga foton eller klotter.
+Med AEM Forms-appen kan du bifoga bilder, anteckningar och textanteckningar i ditt formulär som synkroniseras med AEM Forms JEE-servern. Om formuläret läses in från en AEM Forms Workflow-server läggs dina bilagor till i formuläret. Du kan välja knappen för bifogade filer ![attachments-app](assets/attachments-app.png) om du vill se alla bilagor i ett formulär tillsammans. Det röda meddelandet anger antalet bilagor i formuläret. Om det inte finns några bifogade filer i formuläret kan du inte se knappen med röda meddelanden. Om det inte finns några bilagor i formuläret, när du markerar knappen för bilagor ![bifoga](assets/attch.png), får du alternativ för att bifoga foton eller klotter.
 
 Dina alternativ är:
 
@@ -34,7 +34,7 @@ Dina alternativ är:
 
 ### Skärmen Bifogade filer {#the-attachments-screen}
 
-Om du vill visa alla bifogade filer på en plats trycker du på ![attachments-app](assets/attachments-app.png). Du kan lägga till, byta namn på och ta bort bifogade filer här.
+Om du vill se alla bilagor på en plats väljer du ![attachments-app](assets/attachments-app.png). Du kan lägga till, byta namn på och ta bort bifogade filer här.
 
 ![Alla bilagor på en plats](assets/attachments-screen.png)
 
@@ -44,26 +44,26 @@ Du kan använda **+** på skärmen Bifogade filer om du vill bifoga ytterligare 
 
 Du kan använda kameran på din mobila enhet eller sparade bilder på enheten för att bifoga en bild i formuläret.
 
-1. Tryck på knappen Bifogad fil ![bifoga](assets/attch.png) längst ned i fönstret.
-1. Tryck **Galleri** eller **Kamera** i popup-fönstret som visas.
+1. Markera knappen för bifogade filer ![bifoga](assets/attch.png) längst ned i fönstret.
+1. Välj **Galleri** eller **Kamera** i popup-fönstret som visas.
 1. Utför följande beroende på vilket alternativ du väljer:
 
    1. Om du väljer **Kamera**.
 
-      Ta ett foto. Tryck sedan på **Använd** ![use-pic](assets/use-pic.png) -knappen.
+      Ta ett foto. Välj sedan **Använd** ![use-pic](assets/use-pic.png) -knappen.
 
-      Eller tryck på **Återuppta** ![återta](assets/retake.png) för att ta om fotot.
+      Eller välj **Återuppta** ![återta](assets/retake.png) för att ta om fotot.
 
    1. Om du väljer **Galleri**.
 
-      Enhetens bildläsare visas. Tryck på den bild du vill bifoga i bildwebbläsaren på enheten.
+      Enhetens bildläsare visas. Markera den bild som du vill bifoga i bildwebbläsaren på enheten.
 
 ### Lägga till en anteckning {#adding-a-note}
 
 The **Anteckningar** kan du lägga till frihandsskript och textbilagor i formuläret.
 
-1. Tryck på knappen Bifogad fil ![bifoga](assets/attch.png) längst ned i fönstret.
-1. Tryck **Anteckningar** i popup-fönstret som visas.
+1. Markera knappen för bifogade filer ![bifoga](assets/attch.png) längst ned i fönstret.
+1. Välj **Anteckningar** i popup-fönstret som visas.
 1. Hämta ett frihandsskript i det användargränssnitt som startas.
 
    ![Klottra](assets/scribble-ui.png)

@@ -4,9 +4,9 @@ description: Se genomgången av webbsajten We.Gov så att du kan förstå hur AE
 topic-tags: introduction
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 exl-id: 57b5ce89-6b01-4087-a485-6d9696f06378
-source-git-commit: 65c5a4442f17e6bc52deaa1588f535a05698083f
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '835'
+source-wordcount: '842'
 ht-degree: 0%
 
 ---
@@ -39,7 +39,7 @@ Enligt lagen om informationsfrihet begär Sarah en kopia av Handboken Administra
 
 ### Se det själv {#see-it-yourself}
 
-Öppna i webbläsaren `https://<hostname>:<PublishPort>/wegov`. Tryck på Program > Alla program på webbplatsen Web.Gov. På sidan Alla program trycker du på Apply under Application for FOIA Request.
+Öppna i webbläsaren `https://<hostname>:<PublishPort>/wegov`. Välj Program > Alla program på webbplatsen Web.Gov. På sidan Alla program väljer du Använd under Program för FOIA-begäran.
 
 ## Sarah börjar sin ansökan om information under FOIA {#sarah-starts-her-application-for-information-under-foia}
 
@@ -54,7 +54,7 @@ Sarah klickade **Använd** På sidan&quot;Freedom of Information Act Request For
 
 Begär kopia av ärendeloggen Administration for Children and Families för räkenskapsåren 2013 till 2016
 
-Sarah kan när som helst trycka på **Spara** om du vill spara ett utkast av formuläret och komma tillbaka till det senare för att fylla i formuläret och skicka det. Sarah skickar formuläret.
+Sarah kan när som helst välja **Spara** om du vill spara ett utkast av formuläret och komma tillbaka till det senare för att fylla i formuläret och skicka det. Sarah skickar formuläret.
 
 >[!NOTE]
 >

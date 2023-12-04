@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: integrations
 docset: aem65
 exl-id: be2444df-c772-4a8e-83f9-0f565c15a44e
-source-git-commit: ab3d016c7c9c622be361596137b150d8719630bd
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '1552'
+source-wordcount: '1556'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 <div class="preview"> A/B-testningen för adaptiva formulär har nått slutet av livscykeln och stöds inte längre. </div>
 
-## Översikt {#overview-br}
+## Ökning {#overview-br}
 
 Kunderna överger troligtvis ett formulär om upplevelsen inte är engagerande. Även om det är frustrerande för kunderna kan det också öka supportvolymen och kostnaderna för organisationen. Det är viktigt och utmanande att identifiera och tillhandahålla rätt kundupplevelse som ökar konverteringsgraden. Adobe Experience Manager Forms har nyckeln till det här problemet.
 
@@ -84,9 +84,9 @@ Förutom JBoss®-servern kan du lägga till argumentet -Dabtesting.enabled=true 
 
 Med AEM kan du skapa en målgrupp och använda den för ett A/B-test. Den målgrupp du skapar i AEM är tillgänglig i AEM Forms. Så här skapar du målgrupper i AEM:
 
-1. Tryck på i redigeringsinstansen **Adobe Experience Manager** > **Personalisering** > **Målgrupper**.
+1. I redigeringsinstansen väljer du **Adobe Experience Manager** > **Personalisering** > **Målgrupper**.
 
-1. Tryck på **Skapa publik > Skapa målgrupp**.
+1. På sidan Publiker väljer du **Skapa publik > Skapa målgrupp**.
 1. I dialogrutan Adobe Target-konfiguration väljer du en målkonfiguration och klickar på **OK**.
 1. Skapa regler på sidan Skapa ny publik. Med regler kan ni kategorisera målgruppen. Du vill till exempel kategorisera målgrupper baserat på operativsystem. Din målgrupp A kommer från Windows, och målgrupp B kommer från Linux®.
 

@@ -11,9 +11,9 @@ discoiquuid: bbaba39b-e15a-4143-b6fc-7789fa2917b4
 docset: aem65
 feature: Correspondence Management
 exl-id: bc5d6c5b-c833-4849-aace-e07f8a522b32
-source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '1657'
+source-wordcount: '1660'
 ht-degree: 0%
 
 ---
@@ -48,7 +48,7 @@ Du kan infoga ett textbundet villkor i en bokstav genom att infoga det textbundn
 >
 >Om dina befintliga resurser innehåller gamla villkor/repeteringsuttryck (före 6.2 SP1 CFP 4) visar resurserna gammal syntax för villkor och repetering. Det gamla villkoret/upprepningen fungerar dock. De nya och gamla villkors-/upprepningsuttrycken är kompatibla med varandra för att skapa en kapslad blandning av gamla och nya villkor-/upprepningsuttryck.
 
-1. Markera i den relevanta textmodulen den del av texten som du vill göra villkorsstyrd och tryck **Villkor**.
+1. Markera i den relevanta textmodulen den del av texten som du vill göra villkorsstyrd och markera **Villkor**.
 
    ![1_selectext](assets/1_selecttext.png)
 
@@ -60,9 +60,9 @@ Du kan infoga ett textbundet villkor i en bokstav genom att infoga det textbundn
    >
    >Ett tomt eller ogiltigt villkorsuttryck kan inte sparas. Det måste finnas ett giltigt villkorsuttryck inuti `${}` för att spara uttrycket.
 
-1. Gör följande för att skapa ett villkor för att utvärdera om den markerade/villkorade texten visas i bokstaven och tryck sedan på bockmarkeringen för att spara uttrycket:
+1. Gör följande för att skapa ett villkor för att utvärdera om den markerade/villkorade texten visas i bokstaven och markera sedan bockmarkeringen för att spara uttrycket:
 
-   Dubbeltryck på ett DD-element om du vill infoga det i villkoret. Infoga lämplig operator och konstruera följande villkor i dialogrutan.
+   Dubbelmarkera ett DD-element om du vill infoga det i villkoret. Infoga lämplig operator och konstruera följande villkor i dialogrutan.
 
    ```javascript
    ${DD_creditcard_Gender=="Male"}
@@ -70,7 +70,7 @@ Du kan infoga ett textbundet villkor i en bokstav genom att infoga det textbundn
 
    Mer information om hur du skapar uttrycket finns i **Skapa uttryck och fjärrfunktioner med uttrycksverktyget** in [Expression Builder](../../forms/using/expression-builder.md). Värdet som anges i uttrycket måste ha stöd för elementet i dataordlistan. Mer information finns i [Dataordlista](../../forms/using/data-dictionary.md).
 
-   När villkoret har infogats kan du hålla muspekaren över handtaget till vänster om villkoret för att visa det. Du kan trycka på handtaget för att visa snabbmenyn för villkoret, som du kan använda för att redigera eller ta bort villkoret.
+   När villkoret har infogats kan du hålla muspekaren över handtaget till vänster om villkoret för att visa det. Du kan markera handtaget om du vill visa snabbmenyn för villkoret, så att du kan redigera eller ta bort villkoret.
 
    ![3_hoverhandle](assets/3_hoverhandle.png) ![4_editConditionremoveconderpopup](assets/4_editconditionremoveconditionpopup.png)
 
@@ -111,13 +111,13 @@ I följande exempel visas hur du använder upprepning för att strukturera och �
 
    ![2_markering](assets/2_selection.png)
 
-1. Tryck på Upprepa.
+1. Välj Upprepa.
 
    Dialogrutan Upprepa visas.
 
    ![3_repetera dialogruta](assets/3_repeatdialog.png)
 
-1. Välj Radbrytning som avgränsare och tryck vid behov på Lägg till villkor för att skapa en regel. Du kan också använda text som avgränsare och ange vilka tecken som ska användas som avgränsare.
+1. Välj Radbrytning som avgränsare och välj vid behov Lägg till villkor för att skapa en regel. Du kan också använda text som avgränsare och ange vilka tecken som ska användas som avgränsare.
 
    Dialogrutan Skapa regel visas.
 
@@ -172,7 +172,7 @@ I följande exempel visas hur du använder upprepning för att strukturera och �
 
    ![2_repeat_selectText](assets/2_repeat_selecttext.png)
 
-1. Tryck **Upprepa**. Dialogrutan Upprepa visas med ett tomt infogat villkor.
+1. Välj **Upprepa**. Dialogrutan Upprepa visas med ett tomt infogat villkor.
 
    ![3_repeat_dialog](assets/3_repeat_dialog.png)
 
@@ -184,7 +184,7 @@ I följande exempel visas hur du använder upprepning för att strukturera och �
 
    Om du inte behöver återge informationen (här transaktioner) selektivt, ska du annars låta villkoret vara tomt genom att ta bort följande i dialogrutan: `${}`. Att spara ett upprepningsuttryck aktiveras antingen när fönstret för upprepningsuttrycket är tomt (utan ${} när ingen upprepning behövs) eller när den innehåller ett giltigt villkor för upprepning.
 
-1. Välj en avgränsare för formatering av den dynamiska texten och tryck på bockmarkeringen för att spara:
+1. Välj en avgränsare för formatering av den dynamiska texten och markera bockmarkeringen som ska sparas:
 
    * **Radbrytning**: Infogar radbrytning efter varje transaktionspost i utdatabokstaven.
    * **Text**: Infogar det angivna texttecknet efter varje transaktionspost i utdatabokstaven.
@@ -193,7 +193,7 @@ I följande exempel visas hur du använder upprepning för att strukturera och �
 
    ![4_repeat_hoverdetail](assets/4_repeat_hoverdetail.png)
 
-   Du kan trycka på handtaget för att visa snabbmenyn för upprepningen, där du kan redigera eller ta bort den upprepade konstruktionen.
+   Du kan markera handtaget för att visa snabbmenyn för upprepningen, där du kan redigera eller ta bort den upprepade konstruktionen.
 
    ![5_repeatEditTa bort](assets/5_repeateditremove.png)
 

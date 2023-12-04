@@ -10,7 +10,7 @@ discoiquuid: 96d2b1cc-3252-4cc7-8b06-a897cbef8599
 docset: aem65
 feature: Interactive Communication
 exl-id: cd7dbdac-dc76-4a1f-b850-0a9f47ae08de
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
 source-wordcount: '668'
 ht-degree: 0%
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 # Skriva ut kanal och webbkanal{#print-channel-and-web-channel}
 
-Interaktiv kommunikation kan levereras via två kanaler: tryck och webb. Tryckkanalen används för att skapa PDF- och pappersdokument, t.ex. ett tryckt brev som påminnelse om betalning av försäkringspremier, medan webbkanalen används för att leverera onlineupplevelser, t.ex. kreditkortsutdrag på en webbplats.
+Interaktiv kommunikation kan distribueras via två kanaler: tryck och webb. Tryckkanalen används för att skapa PDF- och pappersdokument, t.ex. ett tryckt brev som påminnelse om betalning av försäkringspremier, medan webbkanalen används för att leverera onlineupplevelser, t.ex. kreditkortsutdrag på en webbplats.
 
 Författare av interaktiv kommunikation kan återanvända resurser som dokumentfragment och bilder för att skapa både utskrifts- och webbversioner av interaktiv kommunikation.
 
@@ -35,9 +35,9 @@ Om du vill överföra mallen måste du vara medlem i gruppen formulär-användar
 
 1. Välj **[!UICONTROL Forms]** > **[!UICONTROL Forms & Documents]**.
 
-1. Tryck på **[!UICONTROL Create]** > **[!UICONTROL File Upload]**.
+1. Välj **[!UICONTROL Create]** > **[!UICONTROL File Upload]**.
 
-   Navigera och välj lämplig utskriftskanalmall (XDP) och tryck på **[!UICONTROL Open]**.
+   Navigera och välj lämplig utskriftskanalmall (XDP) och välj **[!UICONTROL Open]**.
 
 ## Webbkanal {#web-channel}
 
@@ -51,23 +51,23 @@ Så här skapar du en webbkanalsmall:
 
 1. Skapa en mallmapp om du vill behålla dina webbmallar för interaktiv kommunikation, om du inte redan har en. Mer information finns i Mallmappar i [Sidmallar - redigerbara](/help/sites-developing/page-templates-editable.md).
 
-   1. Tryck **[!UICONTROL Tools]** ![verktyg](assets/tools.png) > **[!UICONTROL Configuration Browser]**.
+   1. Välj **[!UICONTROL Tools]** ![verktyg](assets/tools.png) > **[!UICONTROL Configuration Browser]**.
       * Se [Konfigurationsläsaren](/help/sites-administering/configurations.md) mer information.
-   1. Tryck på **[!UICONTROL Create]**.
-   1. I dialogrutan Skapa konfiguration anger du en rubrik för mappen och markerar **[!UICONTROL Editable Templates]** och trycka **[!UICONTROL Create]**.
+   1. På sidan Configuration Browser väljer du **[!UICONTROL Create]**.
+   1. I dialogrutan Skapa konfiguration anger du en rubrik för mappen och markerar **[!UICONTROL Editable Templates]** och markera **[!UICONTROL Create]**.
 
       Mappen skapas och visas på sidan Konfigurationsläsare.
 
 1. Navigera till rätt mallmapp och skapa en webbmall.
 
    1. Navigera till rätt mallmapp genom att välja **[!UICONTROL Tools]** > **[!UICONTROL Templates]** > **`[Folder]`**.
-   1. Tryck på **[!UICONTROL Create]**.
-   1. Välj **[!UICONTROL Interactive Communication - Web Channel]** och trycka **[!UICONTROL Next]**.
-   1. Ange en malltitel och beskrivning och tryck sedan på **[!UICONTROL Create]**.
+   1. Välj **[!UICONTROL Create]**.
+   1. Välj **[!UICONTROL Interactive Communication - Web Channel]** och markera **[!UICONTROL Next]**.
+   1. Ange en malltitel och beskrivning och välj sedan **[!UICONTROL Create]**.
 
       Mallen skapas och en dialogruta visas.
 
-   1. Tryck **[!UICONTROL Open]** för att öppna mallen som du har skapat i mallredigeraren.
+   1. Välj **[!UICONTROL Open]** för att öppna mallen som du har skapat i mallredigeraren.
 
       Mallredigeraren visas.
 
@@ -77,13 +77,13 @@ Så här skapar du en webbkanalsmall:
 
 1. Aktivera mallen om du vill tillåta att den här mallen används för att skapa interaktiv kommunikation.
 
-   1. Tryck **[!UICONTROL Tools]** ![verktyg](assets/tools.png) > **[!UICONTROL Templates]**.
-   1. Navigera till rätt mall, markera den och tryck på **[!UICONTROL Enable]** och i varningsmeddelandet trycker du på **[!UICONTROL Enable]**.
+   1. Välj **[!UICONTROL Tools]** ![verktyg](assets/tools.png) > **[!UICONTROL Templates]**.
+   1. Navigera till rätt mall, markera den och markera **[!UICONTROL Enable]** och i varningsmeddelandet väljer du **[!UICONTROL Enable]**.
 
       Mallen är aktiverad och dess status visas som Aktiverad. Nu kan du skapa en interaktiv kommunikation där du kan använda den nya webbkanalsmallen.
 
-### Skriv ut kanal som överordnad för webbkanal {#print-channel-as-master-for-web-channel}
+### Skriva ut kanal som master för webbkanal {#print-channel-as-master-for-web-channel}
 
-När du skapar en interaktiv kommunikation kan författare välja det här alternativet för att skapa webbkanalen synkroniserat med utskriftskanalen. Om du använder en tryckkanal som överordnad för en webbkanal kan du säkerställa att innehållet, arvet och databindningen för webbkanalen hämtas från tryckkanalen och att ändringarna som görs i den kan återspeglas i webbkanalen. De som skapar interaktiv kommunikation får dock bryta arvet för specifika komponenter i webbkanalen efter behov.
+När du skapar en interaktiv kommunikation kan författare välja det här alternativet för att skapa webbkanalen synkroniserat med utskriftskanalen. Om du använder en tryckkanal som huvudkanal för webbkanalen kan du säkerställa att innehållet, arvet och databindningen för webbkanalen hämtas från tryckkanalen och att ändringarna som görs i den kan återspeglas i webbkanalen. De som skapar interaktiv kommunikation får dock bryta arvet för specifika komponenter i webbkanalen efter behov.
 
-![Skriv ut kanal som överordnad](assets/create_ic_print_master_new.png) ![Webbkanal med utskriftskanal som överordnad](assets/create_ic_print_master_web_new.png)
+![Skriva ut kanal som master](assets/create_ic_print_master_new.png) ![Webbkanal med utskriftskanal som master](assets/create_ic_print_master_web_new.png)

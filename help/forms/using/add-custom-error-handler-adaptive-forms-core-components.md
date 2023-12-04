@@ -6,9 +6,9 @@ contentOwner: Ruchita Srivastav
 content-type: reference
 feature: Adaptive Forms
 exl-id: 2118d77f-1314-48f1-88e3-e27dd8e9f17b
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '2304'
+source-wordcount: '2251'
 ht-degree: 0%
 
 ---
@@ -191,8 +191,8 @@ Med regelredigeraren kan du:
 En standardfelhanterare stöds för att visa felmeddelanden i fält om felsvaret är i standardschema eller i valideringsfel på serversidan.
 Så här använder du en standardfelhanterare med [Regelredigerarens anropstjänst](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/rule-editor.html?lang=en#invoke) åtgärd, ta ett exempel på ett enkelt adaptivt formulär med två fält, **Djurs-ID** och **Djurnamn** och använder en standardfelhanterare på **Djurs-ID** fält för att kontrollera olika fel som returneras av REST-slutpunkten som konfigurerats för att anropa en extern tjänst, till exempel `200 - OK`,`404 - Not Found`, `400 - Bad Request`. Så här lägger du till en standardfelhanterare med hjälp av åtgärden Anropa tjänst i regelredigeraren:
 
-1. Öppna ett adaptivt formulär i redigeringsläge, markera en formulärkomponent och tryck på **[!UICONTROL Rule Editor]** för att öppna regelredigeraren.
-1. Tryck på **[!UICONTROL Create]**.
+1. Öppna ett adaptivt formulär i redigeringsläge, markera en formulärkomponent och markera **[!UICONTROL Rule Editor]** för att öppna regelredigeraren.
+1. Välj **[!UICONTROL Create]**.
 1. Skapa ett villkor i **När** -delen av regeln. Till exempel: **När[Namn på Pet ID-fält]** ändras. Markeringen ändras från **Välj läge** listruta.
 1. I **Sedan** avsnitt, markera **[!UICONTROL Invoke Service]** från **Välj åtgärd** listruta.
 1. Välj en **Bokför tjänst** och dess motsvarande databindningar från **Indata** -avsnitt. Validera till exempel **Djurs-ID** väljer du en **Bokför tjänst** as **GET /husdjur/{petId}** och markera **Djurs-ID** i **Indata** -avsnitt.
@@ -295,8 +295,8 @@ I det här fallet anges klientbiblioteksnamnet som `customfunctionsdemo` i `.con
 
 Använda en anpassad felhanterare med **[!UICONTROL Rule Editor's Invoke Service]** åtgärd:
 
-1. Öppna ett adaptivt formulär i redigeringsläge, markera en formulärkomponent och tryck på **[!UICONTROL Rule Editor]** för att öppna regelredigeraren.
-1. Tryck på **[!UICONTROL Create]**.
+1. Öppna ett adaptivt formulär i redigeringsläge, markera en formulärkomponent och markera **[!UICONTROL Rule Editor]** för att öppna regelredigeraren.
+1. Välj **[!UICONTROL Create]**.
 1. Skapa ett villkor i **När** -delen av regeln. Till exempel När **[Namn på Pet ID-fält]** ändras, välj **ändras** från **Välj läge** listruta.
 1. I **Sedan** avsnitt, markera **[!UICONTROL Invoke Service]** från **Välj åtgärd** listruta.
 1. Välj en **Bokför tjänst** och dess motsvarande databindningar från **Indata** -avsnitt. Validera till exempel **Djurs-ID** väljer du en **Bokför tjänst** as **GET /husdjur/{petId}** och markera **Djurs-ID** i **Indata** -avsnitt.

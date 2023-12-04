@@ -11,7 +11,7 @@ discoiquuid: 9b06c394-8e26-429c-b78f-22afa271aeb3
 docset: aem65
 feature: Correspondence Management
 exl-id: 91ee4422-99c1-4907-a507-5968c6984f28
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
 source-wordcount: '825'
 ht-degree: 0%
@@ -41,7 +41,7 @@ Om du vill associera postprocesser med brev eller interaktiv kommunikation måst
 1. På den här sidan letar du upp AEM Forms Client SDK Configuration och expanderar den genom att klicka på den.
 1. Ange namnet på din AEM Forms på JEE-server i URL-adressen för servern, inloggningsinformation och klicka sedan på **Spara**.
 
-   ![Ange namnet på LiveCycle-servern](assets/1cofigmanager.png)
+   ![Ange LiveCyclets namn](assets/1cofigmanager.png)
 
 1. Ange användarnamn och lösenord.
 1. Kontrollera att sun.util.calendar har lagts till i Brandväggskonfiguration för deserialisering.
@@ -60,8 +60,8 @@ Om du vill associera postprocesser med brev eller interaktiv kommunikation måst
 
    Gå till Adobe Experience Manager Web Console Console Configurations > **[!UICONTROL Correspondence Management Configurations]** och ange följande parametrar:
 
-   1. **inPDFDoc (dokumentparameter i PDF):** Ett PDF-dokument som indata. Indata innehåller den återgivna bokstaven som indata. De angivna parameternamnen kan konfigureras. De kan konfigureras från Correspondence Management-konfigurationer från konfigurationen.
-   1. **inXMLDoc (XML-dataparameter):** Ett XML-dokument som indata. Indata innehåller data som användaren anger i form av XML.
+   1. **inPDFDoc (dokumentparameter i PDF):** Ett PDF-dokument som indata. Den här inmatningen innehåller den återgivna bokstaven som indata. De angivna parameternamnen kan konfigureras. De kan konfigureras från Correspondence Management-konfigurationer från konfigurationen.
+   1. **inXMLDoc (parametern XML-data):** Ett XML-dokument som indata. Dessa indata innehåller data som användaren anger i form av XML.
    1. **inXDPDoc (XDP-dokumentparameter):** Ett XML-dokument som indata. Indata innehåller underliggande layout (XDP).
    1. **inAttachmentDocs (parametern Bifogade dokument):** En listindataparameter. Indata innehåller alla bilagor som indata.
    1. **redirectURL (Redirect URL Output):** En utdatatyp som anger den URL som ska omdirigeras till.
@@ -76,7 +76,7 @@ Om du vill associera postprocesser med brev eller interaktiv kommunikation måst
 
 >[!NOTE]
 >
->När du använder arbetsflödena Forms eller AEM måste du konfigurera tjänsten DS-inställningar innan du skickar något från publiceringsservern. I annat fall ska inlämningen av formuläret misslyckas.
+>När du använder arbetsflödena Forms eller AEM måste du konfigurera tjänsten DS-inställningar innan du skickar något från publiceringsservern. I annat fall ska inlämningen av blanketten misslyckas.
 
 ## Hämtning av bokstavsinstanser {#letter-instances-retrieval}
 
@@ -92,7 +92,7 @@ Sparade bokstavsinstanser kan hanteras ytterligare, t.ex. hämtning av bokstavsi
   <tr>
    <td><p>Public LetterInstanceVO</p> <p>getLetterInstance(String letterInstanceId)</p> <p>Aktiverar ICCException; </p> </td>
    <td>getLetterInstance</td>
-   <td>Hämta den angivna bokstavsinstansen </td>
+   <td>Hämta angiven bokstavsinstans </td>
   </tr>
   <tr>
    <td>Public void deleteLetterInstance(String letterInstanceId) returnerar ICCException; </td>
@@ -116,10 +116,10 @@ Sparade bokstavsinstanser kan hanteras ytterligare, t.ex. hämtning av bokstavsi
 
 I användargränssnittet för CCR utför du följande steg för att associera en postprocess med en bokstav:
 
-1. Håll pekaren över ett brev och tryck **Visa egenskaper**.
+1. Håll pekaren över en bokstav och välj **Visa egenskaper**.
 1. Välj **Redigera**.
 1. Välj den inläggsprocess som ska associeras med bokstaven i Grundläggande egenskaper med hjälp av listrutan Bokför process. Både AEM och Forms-relaterade efterbehandlingsprocesser listas i listrutan.
-1. Tryck **Spara**.
+1. Välj **Spara**.
 1. När du har konfigurerat brevet med Post Process, publicerar du brevet och kan även göra det på publiceringsinstansen. Ange behandlings-URL:en AEM tjänsten DS Settings. Detta garanterar att efterbearbetningen körs på bearbetningsinstansen.
 
 ## Läsa in ett utkast  {#reloaddraft}

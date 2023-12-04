@@ -6,9 +6,9 @@ topic-tags: develop
 docset: aem65
 feature: Adaptive Forms
 exl-id: f7e3e2cd-0cbe-4b26-9e55-7afc6dc3af63
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '1074'
+source-wordcount: '1060'
 ht-degree: 0%
 
 ---
@@ -52,8 +52,8 @@ Forms innehåller fält och avsnitt som inte är tillämpliga för alla använda
 Utför följande steg för att aktivera lazy loading på ett adaptivt formulärfragment:
 
 1. Öppna det adaptiva formuläret i redigeringsläget som innehåller det fragment som du vill aktivera för lazy loading.
-1. Markera det adaptiva formulärfragmentet och tryck på ![cmppr](assets/cmppr.png).
-1. Aktivera **[!UICONTROL Load fragment lazily]** och knacka **Klar**.
+1. Markera det adaptiva formulärfragmentet och välj ![cmppr](assets/cmppr.png).
+1. Aktivera **[!UICONTROL Load fragment lazily]** och markera **Klar**.
 
    ![Aktivera lazy loading för det adaptiva formulärfragmentet](assets/lazy-loading-fragment.png)
 
@@ -62,7 +62,7 @@ Utför följande steg för att aktivera lazy loading på ett adaptivt formulärf
 Du kan markera objektvärden i det lagerinlästa fragmentet som globala så att de är tillgängliga för användning i skript när det innehållande fragmentet inte läses in. Gör följande:
 
 1. Öppna det adaptiva formulärfragmentet i redigeringsläge.
-1. Tryck på fältet vars värde du vill markera som globalt och tryck sedan på ![cmppr](assets/cmppr.png).
+1. Markera det fält vars värde du vill markera som globalt och välj sedan ![cmppr](assets/cmppr.png).
 1. Aktivera **Använd värde vid lazy loading**.
 
    ![Lazy loading field in sidebar](assets/enable-lazy-loading.png)

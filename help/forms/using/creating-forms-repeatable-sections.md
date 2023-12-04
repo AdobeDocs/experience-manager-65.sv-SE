@@ -9,9 +9,9 @@ topic-tags: author
 discoiquuid: 01724ca0-6901-45e7-b045-f44814ed574e
 feature: Adaptive Forms
 exl-id: f2abae0a-f7fd-4a39-bd8c-03492ce06fe9
-source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '1172'
+source-wordcount: '1137'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ Du kan använda någon av följande metoder för att skapa repeterbara paneler:
 
 ## Använda Instanshanteraren via skript  {#using-instance-manager-via-scripts-nbsp}
 
-1. Välj en panel i redigeringsläget och tryck sedan på ![cmppr](assets/cmppr.png). Aktivera under Egenskaper i sidofältet **Gör panelen upprepningsbar**. Ange värden för **[!UICONTROL Maximum]** och **[!UICONTROL Minimum]** fält.
+1. Markera en panel i redigeringsläget och välj sedan ![cmppr](assets/cmppr.png). Aktivera under Egenskaper i sidofältet **Gör panelen upprepningsbar**. Ange värden för **[!UICONTROL Maximum]** och **[!UICONTROL Minimum]** fält.
 
    Fältet Maximum anger det maximala antalet gånger en panel kan visas på sidan. Du kan ange -1 i fältet Maximalt antal om du vill att panelen ska visas ett obegränsat antal gånger.
 
@@ -40,7 +40,7 @@ Du kan använda någon av följande metoder för att skapa repeterbara paneler:
 
 1. Panelens överordnade panel, som ska upprepas, bör innehålla knappar för att lägga till och ta bort för att hantera instanser av de repeterbara panelerna. Följ de här stegen för att infoga knappar i det överordnade objektet och aktivera skript på knapparna:
 
-   1. Dra och släpp en knappkomponent från sidofältet till panelens överordnade. Markera komponenten och tryck på ![edit-rules](assets/edit-rules.png). Reglerna för knappen öppnas i regelredigeraren.
+   1. Dra och släpp en knappkomponent från sidofältet till panelens överordnade. Markera komponenten och markera ![edit-rules](assets/edit-rules.png). Reglerna för knappen öppnas i regelredigeraren.
    1. Klicka på **Skapa**.
 
       Välj **Visual Editor** på raden Formulärobjekt och -funktioner.
@@ -100,8 +100,8 @@ Du kan använda någon av följande metoder för att skapa repeterbara paneler:
 
 På en panel finns olika layoutalternativ. Alternativet Layout för dragspelsdesign har stöd för upprepningsbara paneler. Utför följande steg på en repeterbar panel med alternativet Layout för dragspelsdesign:
 
-1. Tryck på den överordnade panelen för den panel som ska upprepas ![cmppr](assets/cmppr.png). Du kan se egenskaperna i sidlisten. I **Layout** nedrullningsbar meny, välja **Dragspel**.
-1. Tryck på en panel som ska upprepas ![cmppr](assets/cmppr.png). Panelegenskaperna visas i sidofältet. Aktivera **Gör panelen upprepningsbar** och ange ett värde för **Maximal** och **Minimum** fält.
+1. På den överordnade panelen för panelen som ska upprepas väljer du ![cmppr](assets/cmppr.png). Du kan se egenskaperna i sidlisten. I **Layout** nedrullningsbar meny, välja **Dragspel**.
+1. På en panel som ska upprepas väljer du ![cmppr](assets/cmppr.png). Panelegenskaperna visas i sidofältet. Aktivera **Gör panelen upprepningsbar** och ange ett värde för **Maximal** och **Minimum** fält.
 
    Nu kan du använda plustecknet (+) och ta bort ( ![delete-panel](assets/delete-panel.png)) för att lägga till och ta bort paneler.
 

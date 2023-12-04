@@ -11,9 +11,9 @@ discoiquuid: e21714ad-d445-4aff-b0db-d577061e0907
 docset: aem65
 feature: Interactive Communication
 exl-id: 0f877a15-a17f-427f-8d89-62ada4d20918
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '2575'
+source-wordcount: '2588'
 ht-degree: 0%
 
 ---
@@ -28,13 +28,13 @@ När du skapar en interaktiv kommunikation kan du lägga till diagram som visuel
 
 Utför följande steg för att lägga till och konfigurera ett diagram i en interaktiv kommunikation:
 
-1. Tryck **Komponenter** från sidan med den interaktiva kommunikationslösningen.
+1. Välj **Komponenter** från sidan med den interaktiva kommunikationslösningen.
 1. Dra och släpp **Diagram** till någon av följande komponenter:
 
    * Utskriftskanal: Målområde eller bildfält
    * Webbkanal: Panel- eller målområde
 
-1. Tryck på diagramkomponenten i redigeraren för interaktiv kommunikation och välj **[!UICONTROL Configure (]** ![configure_icon](assets/configure_icon.png)) i komponentverktygsfältet.
+1. Markera diagramkomponenten i redigeraren för interaktiv kommunikation och välj **[!UICONTROL Configure (]** ![configure_icon](assets/configure_icon.png)) i komponentverktygsfältet.
 
    Diagramegenskaperna visas i den vänstra rutan.
 
@@ -47,13 +47,13 @@ Utför följande steg för att lägga till och konfigurera ett diagram i en inte
    Grundläggande egenskaper för ett linjediagram i en webbkanal
 
 1. Konfigurera [diagramegenskaper](../../forms/using/chart-component-interactive-communications.md#configure-chart-properties) baserat på kanaltypen.
-1. (Endast utskriftskanal) I dialogrutan **[!UICONTROL Agent Settings]** anger du om agenten måste använda det här diagrammet. Om i **[!UICONTROL t Is Mandatory For the Agent To Use This Chart]** om alternativet inte är markerat kan agenten trycka på ögonikonen för diagrammet i **[!UICONTROL Content]** för att visa eller dölja diagrammet.
+1. (Endast utskriftskanal) I dialogrutan **[!UICONTROL Agent Settings]** anger du om agenten måste använda det här diagrammet. Om i **[!UICONTROL t Is Mandatory For the Agent To Use This Chart]** om alternativet inte är markerat kan agenten välja ögonikonen för diagrammet i **[!UICONTROL Content]** för att visa eller dölja diagrammet.
 
    ![chart_agentproperties](assets/chart_agentproperties.png)
 
-1. Tryck ![ready_icon](assets/done_icon.png) om du vill spara diagramegenskaperna.
+1. Välj ![ready_icon](assets/done_icon.png) om du vill spara diagramegenskaperna.
 
-   Tryck **[!UICONTROL Preview]** för att visa utseendet och data som är kopplade till diagrammet. Tryck **[!UICONTROL Edit]** om du vill konfigurera om diagrammets egenskaper.
+   Välj **[!UICONTROL Preview]** för att visa utseendet och data som är kopplade till diagrammet. Välj **[!UICONTROL Edit]** om du vill konfigurera om diagrammets egenskaper.
 
 ## Konfigurera diagramegenskaper {#configure-chart-properties}
 

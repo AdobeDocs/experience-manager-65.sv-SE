@@ -4,10 +4,10 @@ description: Lär dig att skapa ett anpassat tema, formatera enskilda komponente
 topic-tags: introduction
 feature: Adaptive Forms
 exl-id: 7742c3ca-1755-44c5-b70f-61309f09d1b8
-source-git-commit: 99808cb38c5d376ccb7fb550c5212138890cec11
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '1944'
-ht-degree: 1%
+source-wordcount: '1872'
+ht-degree: 0%
 
 ---
 
@@ -53,7 +53,7 @@ Adaptiv formulärredigerare har flera färdiga teman. Om du inte tänker använd
    [http://localhost:4502/editor.html/content/forms/af/shipping-address-add-update-form.html](http://localhost:4502/editor.html/content/forms/af/shipping-address-add-update-form.html)
 
 1. Öppna egenskaper för **[!UICONTROL Adaptive Form container]**. I egenskapswebbläsaren går du till **[!UICONTROL Basic]** > **[!UICONTROL Adaptive Form Theme]**. The **[!UICONTROL Adaptive Form Theme]** I visas alla färdiga och anpassade teman. Som standard används Canvas-temat.
-1. Välj ett tema på menyn **[!UICONTROL Adaptive Form Theme]** fält. Till exempel: **Undersökningstema**. Tryck ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png) så att du kan använda det valda temat.
+1. Välj ett tema på menyn **[!UICONTROL Adaptive Form Theme]** fält. Till exempel: **Undersökningstema**. Välj ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png) så att du kan använda det valda temat.
 
    ![Adaptiv form med standardtemat](assets/default-adaptive-form.png)
 
@@ -75,17 +75,17 @@ Den design som visas ovan kräver ändringar i platshållartext och logotyp i di
 
       [http://localhost:4502/editor.html/content/forms/af/shipping-address-add-update-form.html](http://localhost:4502/editor.html/content/forms/af/shipping-address-add-update-form.html)
 
-   1. Tryck på logotypbilden i [!UICONTROL header] och knacka ![cmppr](assets/cmppr.png) **[!UICONTROL properties]**. I [!UICONTROL image] trycker du på X för att ta bort den befintliga logotypbilden.
-   1. Tryck **[!UICONTROL upload]**, väljer logo.png och trycker ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png) för att spara ändringarna. Bilden hämtades i [Innan du börjar](/help/forms/using/style-your-adaptive-form.md#before-you-start) -avsnitt.
-   1. Tryck på rubriktext, `We.Retail`och trycka ![aem_6_3_edit](assets/aem_6_3_edit.png) **[!UICONTROL edit]**. Ändra rubriktext till `we retail`. Använd endast fet stil på `we`in `we retail`.
+   1. Välj logotypbild i [!UICONTROL header] -komponent och markera ![cmppr](assets/cmppr.png) **[!UICONTROL properties]**. I [!UICONTROL image] väljer du X för att ta bort den befintliga logotypbilden.
+   1. Välj **[!UICONTROL upload]**, markerar logo.png och väljer ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png) för att spara ändringarna. Bilden hämtades i [Innan du börjar](/help/forms/using/style-your-adaptive-form.md#before-you-start) -avsnitt.
+   1. Markera rubriktext, `We.Retail`och markera ![aem_6_3_edit](assets/aem_6_3_edit.png) **[!UICONTROL edit]**. Ändra rubriktext till `we retail`. Använd endast fet stil på `we`in `we retail`.
 
       ![we-retail-logo-text](assets/we-retail-logo-text.png)
 
 1. Ta bort rubrik och lägg till platshållartext:
 
-   1. Tryck på fältet Kund-ID och tryck på ![cmppr](assets/cmppr.png) egenskaper.
+   1. Markera fältet Kund-ID och välj ![cmppr](assets/cmppr.png) egenskaper.
    1. Kopiera innehållet i **[!UICONTROL Title]** fält till **[!UICONTROL Placeholder Text]** fält.
-   1. Ta bort innehållet i **[!UICONTROL Title]** fält och knacka ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png).
+   1. Ta bort innehållet i **[!UICONTROL Title]** fält och markera ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png).
    1. Upprepa de tre föregående stegen för alla textrutor, numeriska rutor och e-postfält i formuläret.
 
       ![updated-adaptive-form](assets/updated-adaptive-form.png)
@@ -101,16 +101,16 @@ I den här självstudiekursen formaterar du sidhuvud och sidfot, text och numeri
 ### Skapa ett tema {#create-a-theme}
 
 1. Logga in på AEM författarinstans och navigera till **[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL Forms]** > **[!UICONTROL Themes]**. Standardwebbadressen är [http://localhost:4502/aem/forms.html/content/dam/formsanddocuments-themes](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments-themes).
-1. Tryck **[!UICONTROL Create]** och markera **[!UICONTROL Theme]**. The [!UICONTROL Create Theme] visas en sida med de fält som krävs för att skapa ett tema. The **[!UICONTROL Title]** och **[!UICONTROL Name]** fält är obligatoriska:
+1. Välj **[!UICONTROL Create]** och markera **[!UICONTROL Theme]**. The [!UICONTROL Create Theme] visas en sida med de fält som krävs för att skapa ett tema. The **[!UICONTROL Title]** och **[!UICONTROL Name]** fält är obligatoriska:
 
    * **Titel:** Ange en titel på temat. Till exempel: **Global Theme.** Titeln hjälper dig att identifiera temat från listan med teman.
    * **Namn:** Ange namnet på temat. Till exempel: **Global-Theme.** En nod med det angivna namnet skapas i databasen. När du börjar skriva en titel genereras namnfältets värde automatiskt. Du kan ändra det föreslagna värdet. Namnfältet får endast innehålla alfanumeriska tecken, bindestreck och understreck. Alla ogiltiga indata ersätts med ett bindestreck.
 
-1. Tryck på **[!UICONTROL Create]**. Ett tema skapas och en dialogruta visas där du kan öppna formuläret för redigering. Tryck **[!UICONTROL Open]** om du vill öppna det nya temat på en ny flik. Temat öppnas i temaredigeraren. För formatering används ett anpassat formulär som levereras med AEM [!DNL Forms].
+1. Välj **[!UICONTROL Create]**. Ett tema skapas och en dialogruta visas där du kan öppna formuläret för redigering. Välj **[!UICONTROL Open]** om du vill öppna det nya temat på en ny flik. Temat öppnas i temaredigeraren. För formatering används ett anpassat formulär som levereras med AEM [!DNL Forms].
 
    Mer information om hur du använder gränssnittet för temaredigeraren finns i [Om temaredigeraren](/help/forms/using/themes.md#aboutthethemeeditor).
 
-1. Tryck **[!UICONTROL Theme Options]** ![temaalternativ](assets/theme-options.png) > **[!UICONTROL Configure]**. I **[!UICONTROL Preview Form]** fält, välj **shipping-address-add-update-form** adaptiv form, knacka ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png), trycka **[!UICONTROL Save]**. Nu är temaredigeraren konfigurerad att använda ditt eget adaptiva formulär i stället för det adaptiva standardformatet. Tryck **[!UICONTROL Cancel]** för att gå tillbaka till temaredigeraren.
+1. Välj **[!UICONTROL Theme Options]** ![temaalternativ](assets/theme-options.png) > **[!UICONTROL Configure]**. I **[!UICONTROL Preview Form]** fält, välj **shipping-address-add-update-form** adaptiv form, välj ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png), markera **[!UICONTROL Save]**. Nu är temaredigeraren konfigurerad att använda ditt eget adaptiva formulär i stället för det adaptiva standardformatet. Välj **[!UICONTROL Cancel]** för att gå tillbaka till temaredigeraren.
 
    ![anpassat tema](assets/custom-theme.png)
 
@@ -124,9 +124,9 @@ I den här självstudiekursen formaterar du sidhuvud och sidfot, text och numeri
 
 Sidhuvud och sidfot ger ett konsekvent och distinkt utseende i en adaptiv form. I allmänhet innehåller sidhuvudet organisationens logotyp och namn, sidfoten innehåller copyrightinformation och dessa är identiska i flera former i en organisation. Så här formaterar du sidhuvud och sidfot i anpassat formulär för leverans-address-add-update-form:
 
-1. Navigera i **[!UICONTROL Header]** > **[!UICONTROL Text]** på panelen Väljare. Väljarpanelen är till vänster om temaredigeraren. Om panelen inte visas trycker du på ![växlingspanel](assets/toggle-side-panel.png) Växla sidopanel.
+1. Navigera i **[!UICONTROL Header]** > **[!UICONTROL Text]** på panelen Väljare. Väljarpanelen är till vänster om temaredigeraren. Om panelen inte visas väljer du ![växlingspanel](assets/toggle-side-panel.png) Växla sidopanel.
 
-1. Ange följande egenskaper i dialogrutan **[!UICONTROL Text]** dragspelspanel och tryck ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png).
+1. Ange följande egenskaper i dialogrutan **[!UICONTROL Text]** dragspelspanel och markera ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png).
 
    | Egenskap | Värde |
    |---|---|
@@ -134,18 +134,18 @@ Sidhuvud och sidfot ger ett konsekvent och distinkt utseende i en adaptiv form. 
    | Teckenfärg | FFFFFF |
    | Teckenstorlek | 54 px |
 
-1. Tryck på [!UICONTROL header] widget och knacka **[!UICONTROL Header]**. Alternativen för att formatera sidhuvudswidgeten visas till vänster. Expandera **[!UICONTROL Dimensions & Position]** dragspelspanel, ange **[!UICONTROL Height]** till `120px`och trycka ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png).
+1. Välj [!UICONTROL header] widget och markera **[!UICONTROL Header]**. Alternativen för att formatera sidhuvudswidgeten visas till vänster. Expandera **[!UICONTROL Dimensions & Position]** dragspelspanel, ange **[!UICONTROL Height]** till `120px`och markera ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png).
 1. Expandera **[!UICONTROL Background]** dragspelspanel för sidhuvudswidgeten, ange **[!UICONTROL Background Color]** till `F6921E.`
 
-   Hovring **[!UICONTROL Image & Gradient]** > **[!UICONTROL + Add]**, trycka **[!UICONTROL Image]**. Ange följande egenskaper och tryck ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png).
+   Hovring **[!UICONTROL Image & Gradient]** > **[!UICONTROL + Add]**, markera **[!UICONTROL Image]**. Ange följande egenskaper och markera ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png).
 
    | Egenskap | Värde |
    |---|---|
-   | bild | Överför header-style.png. Bilden hämtades i [Innan du börjar](/help/forms/using/style-your-adaptive-form.md#before-you-start) -avsnitt. |
+   | image | Överför header-style.png. Bilden hämtades i [Innan du börjar](/help/forms/using/style-your-adaptive-form.md#before-you-start) -avsnitt. |
    | Position | Höger nerifrån |
    | Passram | Ingen upprepning |
 
-1. Tryck på logotypen i sidhuvudet i temaredigeraren och tryck på **[!UICONTROL Header Logo]**. Expandera dragspelet Dimensioner och position, ange följande egenskaper och tryck ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png).
+1. Välj logotypen i rubriken i temaredigeraren och välj **[!UICONTROL Header Logo]**. Expandera dragspelet Dimensioner och position, ange följande egenskaper och markera ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png).
 
    <table> 
     <tbody> 
@@ -160,22 +160,22 @@ Sidhuvud och sidfot ger ett konsekvent och distinkt utseende i en adaptiv form. 
         <li>Överkant: 1,5 rem</li> 
         <li>Nederkant: -35px</li> 
         <li>Vänster: 1 rem<strong><br /> </strong></li> 
-       </ul> <p><strong>Tips:</strong> Tryck på <img src="assets/link.png"> länkikon för att ange olika värden för varje fält.<br /> </p> </td> 
+       </ul> <p><strong>Tips:</strong> Välj <img src="assets/link.png"> länkikon för att ange olika värden för varje fält.<br /> </p> </td> 
      </tr> 
      <tr> 
       <td>Höjd</td> 
-      <td>4.75rem</td> 
+      <td>4,75rem</td> 
      </tr> 
     </tbody> 
    </table>
 
-1. Tryck på sidfotswidgeten och tryck på **[!UICONTROL Footer]**. Expandera **[!UICONTROL Background]** dragspelspanel, ange **[!UICONTROL Background Color]** till `F6921E`och trycka ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png).
+1. Välj sidfotswidgeten och välj **[!UICONTROL Footer]**. Expandera **[!UICONTROL Background]** dragspelspanel, ange **[!UICONTROL Background Color]** till `F6921E`och markera ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png).
 
 ### Formatera datainhämtningskomponenten och använd en bakgrund i det anpassade formuläret {#style-the-data-capture-component-and-apply-a-background-to-the-adaptive-form}
 
 Du kan använda flera komponenter i ett adaptivt formulär för att hämta data. Till exempel textruta och numerisk ruta. Du kan ange ett identiskt format för alla datainhämtningskomponenter eller ett separat format för varje komponent. I den här självstudiekursen används ett identiskt format för numeriska rutor (Kund-ID, Postnummer) och textrutor (Kund-ID, Namn, Leveransadress, Tillstånd, E-post). Så här formaterar du komponenter för datainhämtning:
 
-1. Tryck på **[!UICONTROL Customer ID]** och tryck på **[!UICONTROL Field Widget]** alternativ. Ange följande egenskaper och tryck ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png).
+1. Välj **[!UICONTROL Customer ID]** och välj **[!UICONTROL Field Widget]** alternativ. Ange följande egenskaper och markera ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png).
 
    <table> 
     <tbody> 
@@ -218,7 +218,7 @@ Du kan använda flera komponenter i ett adaptivt formulär för att hämta data.
      <tr> 
       <td>Dimensioner och position</td> 
       <td>Bredd</td> 
-      <td>60%</td> 
+      <td>60 %</td> 
      </tr> 
      <tr> 
       <td>Dimensioner och position</td> 
@@ -231,7 +231,7 @@ Du kan använda flera komponenter i ett adaptivt formulär för att hämta data.
     </tbody> 
     </table>
 
-1. Tryck på det tomma området ovanför **[!UICONTROL Customer ID]** fält och knacka **[!UICONTROL Responsive Panel Container]**. Ange **[!UICONTROL Background]** > **[!UICONTROL Background Color]** till F1F2F2. Tryck ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png).
+1. Markera det tomma området ovanför **[!UICONTROL Customer ID]** fält och markera **[!UICONTROL Responsive Panel Container]**. Ange **[!UICONTROL Background]** > **[!UICONTROL Background Color]** till F1F2F2. Välj ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png).
 
    ![Behållare för responsiv panel](do-not-localize/responsive-panel-container.png)
 
@@ -239,7 +239,7 @@ Du kan använda flera komponenter i ett adaptivt formulär för att hämta data.
 
 Du kan använda ett anpassat tema för att tillämpa en identisk stil på alla knappar i det adaptiva formuläret och [infogad formatering](/help/forms/using/inline-style-adaptive-forms.md) om du vill använda ett format på en viss knapp. Så här formaterar du knapparna:
 
-1. Tryck på **[!UICONTROL Submit]** och tryck på **[!UICONTROL Button]** alternativ. Ange följande egenskaper och tryck ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png).
+1. Välj **[!UICONTROL Submit]** och väljer **[!UICONTROL Button]** alternativ. Ange följande egenskaper och markera ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png).
 
    <table> 
     <tbody> 
@@ -300,14 +300,14 @@ Vissa format gäller bara för en viss komponent. Sådana komponenter är format
 
    ![style-option](assets/style-option.png)
 
-1. Tryck på **[!UICONTROL Attach]** och tryck på ![aem_6_3_edit](assets/aem_6_3_edit.png)-ikon. Ange följande egenskaper i dialogrutan **[!UICONTROL Dimensions and Position]** dragspelspanel:
+1. Välj **[!UICONTROL Attach]** och väljer ![aem_6_3_edit](assets/aem_6_3_edit.png)-ikon. Ange följande egenskaper i dialogrutan **[!UICONTROL Dimensions and Position]** dragspelspanel:
 
    | Egenskap | Värde |
    |---|---|
    | Float | Vänster |
-   | Bredd | 10% |
+   | Bredd | 10 % |
 
-1. Tryck på **[!UICONTROL Government approved address proof]** och tryck på ![aem_6_3_edit](assets/aem_6_3_edit.png)-ikon. Ange följande egenskaper:
+1. Välj **[!UICONTROL Government approved address proof]** och väljer ![aem_6_3_edit](assets/aem_6_3_edit.png)-ikon. Ange följande egenskaper:
 
    <table> 
     <tbody> 
@@ -324,7 +324,7 @@ Vissa format gäller bara för en viss komponent. Sådana komponenter är format
      <tr> 
       <td>Dimensioner och position</td> 
       <td>Bredd</td> 
-      <td>73%</td> 
+      <td>73 %</td> 
      </tr> 
      <tr> 
       <td>Dimensioner och position</td> 
@@ -397,7 +397,7 @@ Vissa format gäller bara för en viss komponent. Sådana komponenter är format
     </tbody> 
    </table>
 
-1. Tryck på **[!UICONTROL Submit]** och tryck på ![aem_6_3_edit](assets/aem_6_3_edit.png) -ikon. Ange följande egenskaper:
+1. Välj **[!UICONTROL Submit]** och väljer ![aem_6_3_edit](assets/aem_6_3_edit.png) -ikon. Ange följande egenskaper:
 
    <table> 
     <tbody> 

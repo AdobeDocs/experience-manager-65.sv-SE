@@ -6,7 +6,7 @@ role: User
 feature: Asset Management
 exl-id: 21d3e0bd-5955-470a-8ca2-4d995c17eb4c
 hide: true
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
 source-wordcount: '5000'
 ht-degree: 7%
@@ -125,7 +125,7 @@ Så här konfigurerar du inställningarna för Google Cloud:
    Vid behov, **[!UICONTROL Sign in]** med ditt Google-konto för att se **[!UICONTROL Console]** alternativ.
 
 1. På sidan Kontrollpanel, till höger om **[!UICONTROL Google Cloud Platform]** klickar du på listrutan Projekt för att öppna dialogrutan Välj ett projekt.
-1. Tryck på i dialogrutan Välj ett projekt **[!UICONTROL New Project]**.
+1. I dialogrutan Välj projekt väljer du **[!UICONTROL New Project]**.
 
    ![6_5_googleaccount-newproject](assets/6_5_googleaccount-newproject.png)
 
@@ -137,14 +137,14 @@ Så här konfigurerar du inställningarna för Google Cloud:
 
 1. Gör något av följande:
 
-   * Tryck på Komma igång-kortet på Dashboard i ditt projekt **[!UICONTROL Explore and enable APIs]**.
-   * I Dashboard för ditt projekt trycker du på **[!UICONTROL Go to APIs overview]**.
+   * På ditt projekts Dashboard väljer du Komma igång-kort **[!UICONTROL Explore and enable APIs]**.
+   * I Dashboard för projektet väljer du **[!UICONTROL Go to APIs overview]**.
 
    ![6_5_googleaccount-apis-enable2](assets/6_5_googleaccount-apis-enable2.png)
 
-1. I början av sidan API:er och tjänster trycker du på **[!UICONTROL Enable APIs and Services]**.
-1. På API-bibliotekssidan, till vänster, under **[!UICONTROL Category]**, trycka **[!UICONTROL YouTube]**. Tryck på till höger på sidan **[!UICONTROL YouTube Data API]**.
-1. Tryck på YouTube Data API v3 **[!UICONTROL Enable]**.
+1. I början av sidan API:er och tjänster väljer du **[!UICONTROL Enable APIs and Services]**.
+1. På API-bibliotekssidan, till vänster, under **[!UICONTROL Category]**, markera **[!UICONTROL YouTube]**. Till höger på sidan väljer du **[!UICONTROL YouTube Data API]**.
+1. På sidan YouTube Data API v3 väljer du **[!UICONTROL Enable]**.
 
    ![6_5_googleaccount-apis-enable3](assets/6_5_googleaccount-apis-enable3.png)
 
@@ -158,11 +158,11 @@ Så här konfigurerar du inställningarna för Google Cloud:
 
    * Från **[!UICONTROL Where are you calling the API from?]** nedrullningsbar lista, välja **[!UICONTROL Web Server (for example, node.js, Tomcat)]**
 
-   * Från **[!UICONTROL What data are you accessing?]** nedrullningsbar lista, tryck **[!UICONTROL User data]**.
+   * I listrutan **[!UICONTROL What data are you accessing?]** väljer du **[!UICONTROL User data]**.
 
    ![6_5_googleaccount-apis-createcredentials2](assets/6_5_googleaccount-apis-createcredentials2.png)
 
-1. Tryck **[!UICONTROL What credentials do I need?]**
+1. Välj **[!UICONTROL What credentials do I need?]**
 1. I steg 2 på sidan **[!UICONTROL Add credentials to your project]** anger du ett unikt namn i fältet Namn under rubriken **[!UICONTROL Create an OAuth 2.0 client ID]**. Du kan också använda standardnamnet som anges av Google.
 1. Under **[!UICONTROL Authorized JavaScript origins]** i textfältet anger du följande sökväg och ersätter din egen domän och portnummer i sökvägen. Tryck sedan på **[!UICONTROL Enter]** så här lägger du till sökvägen i listan:
 
@@ -192,7 +192,7 @@ Så här konfigurerar du inställningarna för Google Cloud:
    Medgivandeskärmen visas för Experience Manager-administratören när de autentiserar sig för YouTube. Experience Manager kontaktar YouTube för tillstånd.
 
 1. Klicka på **[!UICONTROL Continue]**.
-1. Gå till sidan Lägg till inloggningsuppgifter för projektet och i steg 4, under rubriken **[!UICONTROL Download credentials]**, trycker du på **[!UICONTROL Download]**.
+1. På sidan Add credentials to your project (Lägg till inloggningsuppgifter), steg 4, under **[!UICONTROL Download credentials]** rubrik, markera **[!UICONTROL Download]**.
 
    ![6_5_googleaccount-apis-createcredentials-downloadcredentials](assets/6_5_googleaccount-apis-createcredentials-downloadcredentials.png)
 
@@ -234,7 +234,7 @@ Om du tänker använda standardtaggarna i Experience Manager kan du hoppa över 
 
 ### Aktivera YouTube Publish-replikeringsagenten {#enabling-the-youtube-publish-replication-agent}
 
-Om du vill testa anslutningen till Google Cloud-kontot när du har aktiverat YouTube Publish-replikeringsagenten trycker du på **[!UICONTROL Test Connection]**. Anslutningsresultaten visas på en flik i webbläsaren. Om du har lagt till YouTube-kanaler visas en lista över dem som en del av testet.
+När du har aktiverat YouTube Publish-replikeringsagenten och vill testa anslutningen till Google Cloud-kontot väljer du **[!UICONTROL Test Connection]**. Anslutningsresultaten visas på en flik i webbläsaren. Om du har lagt till YouTube-kanaler visas en lista över dem som en del av testet.
 
 1. Klicka på logotypen Experience Manager i det övre vänstra hörnet av Experience Manager och klicka sedan i det vänstra hörnet på **[!UICONTROL Tools]** > **[!UICONTROL Deployment]** > **[!UICONTROL Replication]** > **[!UICONTROL Agents on Author]**.
 1. Klicka på Agents of Author **[!UICONTROL YouTube Publish]**.
@@ -254,10 +254,10 @@ Från och med Experience Manager 6.4 introducerades en ny pekgränssnittsmetod f
 #### Konfigurera YouTube i Experience Manager 6.4 och senare {#setting-up-youtube-in-aem-and-later}
 
 1. Se till att du loggar in på din instans av Dynamic Media som administratör.
-1. Tryck på logotypen för Experience Manager i det övre vänstra hörnet och tryck sedan på **[!UICONTROL Tools]**(hammarikon) > **[!UICONTROL Cloud Services]** > **[!UICONTROL YouTube Publishing Configuration]**.
-1. Tryck **[!UICONTROL global]** (markera det inte).
+1. I det övre vänstra hörnet väljer du logotypen för Experience Manager och sedan i den vänstra listen väljer du **[!UICONTROL Tools]**(hammarikon) > **[!UICONTROL Cloud Services]** > **[!UICONTROL YouTube Publishing Configuration]**.
+1. Välj **[!UICONTROL global]** (markera det inte).
 
-1. Knacka i det övre högra hörnet av den globala sidan **[!UICONTROL Create]**.
+1. I det övre högra hörnet av den globala sidan väljer du **[!UICONTROL Create]**.
 1. På sidan Skapa YouTube-konfiguration anger du Googles projekt-ID under Inställningar för Google Cloud-plattform i fältet **[!UICONTROL Application Name]**.
 
    Du angav projekt-ID:t när du konfigurerade Google Cloud-inställningarna tidigare.
@@ -268,33 +268,33 @@ Lämna sidan Skapa YouTube-konfiguration öppen. Om en stund kommer du tillbaka 
 1. Öppna JSON-filen som du hämtade och sparade tidigare i uppgiften med en vanlig textredigerare [Konfigurera inställningar för Google Cloud](/help/assets/video.md#configuring-google-cloud-settings).
 1. Markera och kopiera hela JSON-texten.
 1. Återgå till dialogrutan YouTube-kontoinställningar Klistra in JSON-texten i fältet **[!UICONTROL JSON Config]**.
-1. I sidans övre högra hörn trycker du **[!UICONTROL Save]**.
+1. I sidans övre högra hörn väljer du **[!UICONTROL Save]**.
 
    Konfigurera nu YouTube-kanaler i Experience Manager.
 
-1. Tryck **[!UICONTROL Add Channel]**.
+1. Välj **[!UICONTROL Add Channel]**.
 1. I fältet Kanalnamn anger du namnet på kanalen som du skapade i uppgiften **[!UICONTROL Adding one or more channels to YouTube]** tidigare.
 
    Om du vill kan du lägga till en beskrivning.
 
-1. Tryck **[!UICONTROL Add]**.
+1. Välj **[!UICONTROL Add]**.
 1. YouTube/Google-autentisering visas. Om du inte redan är inloggad på Google Cloud-kontot hoppar du över det här steget.
 
    * Ange det användarnamn och lösenord för Google som är kopplat till Google projekt-ID och JSON-texten ovan.
    * Beroende på hur många kanaler ditt konto har visas två eller flera objekt. Välj en kanal. Markera inte e-postadressen, den är inte en kanal.
-   * Tryck på **[!UICONTROL Accept]** för att ge åtkomst till den här kanalen.
+   * På nästa sida väljer du **[!UICONTROL Accept]** för att ge åtkomst till den här kanalen.
 
-1. Tryck **[!UICONTROL Allow]**.
+1. Välj **[!UICONTROL Allow]**.
 
    Konfigurera taggar för publicering.
 
-1. **[!UICONTROL Setting up tags for publishing]** - Tryck på pennikonen på Cloud Service > YouTube för att redigera listan med taggar som du vill använda.
-1. Tryck på ikonen för listrutan (upp-och-ned-cirkumflex) så att du kan visa listan med tillgängliga taggar i Experience Manager.
-1. Tryck på en eller flera taggar så att du kan lägga till dem.
+1. **[!UICONTROL Setting up tags for publishing]** - På sidan Cloud Service > YouTube väljer du pennikonen för att redigera listan med taggar som du vill använda.
+1. Markera listruteikonen (cirkumflex upp och ned) så att du kan visa listan med tillgängliga taggar i Experience Manager.
+1. Markera en eller flera taggar så att du kan lägga till dem.
 
-   Om du vill ta bort en tagg som du har lagt till markerar du den och trycker på **[!UICONTROL X]**.
+   Om du vill ta bort en tagg som du har lagt till markerar du den och väljer **[!UICONTROL X]**.
 
-1. När du är klar med att lägga till de taggar du vill ha trycker du **[!UICONTROL Save]**.
+1. När du är klar med att lägga till de taggar du vill ha väljer du **[!UICONTROL Save]**.
 
    Nu kan du publicera videor i din YouTube-kanal.
 
@@ -302,10 +302,10 @@ Lämna sidan Skapa YouTube-konfiguration öppen. Om en stund kommer du tillbaka 
 
 1. Se till att du loggar in på din instans av Dynamic Media som administratör.
 
-1. Tryck på logotypen för Experience Manager i det övre vänstra hörnet och tryck sedan på **[!UICONTROL Tools]** (hammarikon) > **[!UICONTROL Deployment]** > **[!UICONTROL Cloud Services]**.
-1. Under rubriken Tredjepartstjänster, under YouTube, trycker du **[!UICONTROL Configure now]**.
+1. I det övre vänstra hörnet väljer du logotypen för Experience Manager och sedan i den vänstra listen väljer du **[!UICONTROL Tools]** (hammarikon) > **[!UICONTROL Deployment]** > **[!UICONTROL Cloud Services]**.
+1. Under rubriken Tredjepartstjänster under YouTube väljer du **[!UICONTROL Configure now]**.
 1. I dialogrutan Skapa konfiguration anger du en rubrik (obligatoriskt) och ett namn (valfritt) i respektive fält.
-1. Tryck **[!UICONTROL Create]**.
+1. Välj **[!UICONTROL Create]**.
 1. I dialogrutan YouTube-kontoinställningar anger du Googles projekt-ID i fältet **[!UICONTROL Application Name]**.
 
    Du angav projekt-ID:t när du först angav [konfigurerade inställningar för Google Cloud](/help/assets/video.md#configuring-google-cloud-settings) tidigare.
@@ -314,33 +314,33 @@ Lämna dialogrutan YouTube Kontoinställning öppen. Du kommer att gå tillbaka 
 1. Använd en vanlig textredigerare för att öppna JSON-filen som du hämtade och sparade tidigare i uppgiften Konfigurera inställningar för Google Cloud.
 1. Markera och kopiera hela JSON-texten.
 1. Återgå till dialogrutan YouTube-kontoinställningar Klistra in JSON-texten i fältet **[!UICONTROL JSON Config]**.
-1. Tryck **[!UICONTROL OK]**.
+1. Välj **[!UICONTROL OK]**.
 
    Konfigurera nu YouTube-kanaler i Experience Manager.
 
-1. Till höger om **[!UICONTROL Available Channels]** trycker du på **+** (plustecknet).
+1. Till höger om **[!UICONTROL Available Channels]**, markera **+** (plustecken).
 1. I dialogrutan YouTube-kanalinställningar, i fältet Titel, anger du namnet på kanalen som du skapade i uppgiften **[!UICONTROL Adding one or more channels to YouTube]** tidigare.
 
    Om du vill kan du lägga till en beskrivning.
 
-1. Tryck **[!UICONTROL OK]**.
+1. Välj **[!UICONTROL OK]**.
 1. YouTube/Google-autentisering visas. Om du inte redan är inloggad på Google Cloud-kontot hoppar du över det här steget.
 
    * Ange det användarnamn och lösenord för Google som är kopplat till Google projekt-ID och JSON-texten ovan.
    * Beroende på hur många kanaler ditt konto har visas två eller flera objekt. Välj en kanal. Markera inte e-postadressen, den är inte en kanal.
-   * Tryck på **[!UICONTROL Accept]** för att ge åtkomst till den här kanalen.
+   * På nästa sida väljer du **[!UICONTROL Accept]** för att ge åtkomst till den här kanalen.
 
-1. Tryck **[!UICONTROL Allow]**.
+1. Välj **[!UICONTROL Allow]**.
 
    Konfigurera taggar för publicering.
 
-1. **[!UICONTROL Setting up tags for publishing]** - Tryck på pennikonen på Cloud Service > YouTube för att redigera listan med taggar som du vill använda.
-1. Tryck på ikonen för listrutan (upp-och-ned-cirkumflex) så att du kan visa listan med tillgängliga taggar i Experience Manager.
-1. Tryck på en eller flera taggar så att du kan lägga till dem.
+1. **[!UICONTROL Setting up tags for publishing]** - På sidan Cloud Service > YouTube väljer du pennikonen för att redigera listan med taggar som du vill använda.
+1. Markera listruteikonen (cirkumflex upp och ned) så att du kan visa listan med tillgängliga taggar i Experience Manager.
+1. Markera en eller flera taggar så att du kan lägga till dem.
 
-   Om du vill ta bort en tagg som du har lagt till markerar du den och trycker på **X**.
+   Om du vill ta bort en tagg som du har lagt till markerar du den och väljer **X**.
 
-1. När du är klar med att lägga till de taggar du vill ha trycker du **[!UICONTROL OK]**.
+1. När du är klar med att lägga till de taggar du vill ha väljer du **[!UICONTROL OK]**.
 
    Nu kan du publicera videor i din YouTube-kanal.
 
@@ -352,10 +352,10 @@ Om du vill skapa en profil för metadatabearbetning kopierar du först värden f
 
 Så här automatiserar du inställningen av YouTube standardegenskaper för överförda videofilmer:
 
-1. Tryck på logotypen för Experience Manager i det övre vänstra hörnet och klicka sedan i den vänstra listen **[!UICONTROL Tools]** (hammarikon) > **[!UICONTROL Assets]** > **[!UICONTROL Metadata Schemas]**.
+1. I det övre vänstra hörnet väljer du logotypen för Experience Manager och klickar sedan på **[!UICONTROL Tools]** (hammarikon) > **[!UICONTROL Assets]** > **[!UICONTROL Metadata Schemas]**.
 1. Klicka på **[!UICONTROL default]**. (Lägg inte till en bockmarkering i markeringsrutan till vänster om &quot;standard&quot;.)
-1. På **[!UICONTROL default]** markerar du kryssrutan till vänster om **[!UICONTROL video]** och sedan trycka **[!UICONTROL Edit]**.
-1. Tryck på knappen **[!UICONTROL Advanced]** -fliken.
+1. På **[!UICONTROL default]** markerar du kryssrutan till vänster om **[!UICONTROL video]** väljer **[!UICONTROL Edit]**.
+1. På sidan för redigering av metadataschema väljer du **[!UICONTROL Advanced]** -fliken.
 1. Under rubriken YouTube-publicering klickar du på **[!UICONTROL YouTube Category]**.
 1. Till höger på sidan, under **[!UICONTROL Settings]** gör du så här:
 
@@ -365,7 +365,7 @@ Klistra in det kopierade värdet i textredigeraren. Du kommer att behöva det h�
    * Under **[!UICONTROL Choices]**, markerar och kopierar det standardvärde som du vill använda (till exempel Folk &amp; bloggar eller Vetenskap och teknik).
 Klistra in det kopierade värdet i textredigeraren. Du kommer att behöva det här värdet senare när du skapar din metadatabearbetningsprofil. Låt textredigeraren vara öppen.
 
-1. Under rubriken YouTube Publishing trycker du **[!UICONTROL YouTube Privacy]**.
+1. Under rubriken YouTube Publishing väljer du **[!UICONTROL YouTube Privacy]**.
 1. Till höger på sidan, under **[!UICONTROL Settings]** gör du så här:
 
    * I **[!UICONTROL Map to property]** markerar och kopierar värdet i textfältet.
@@ -375,7 +375,7 @@ Klistra in det kopierade värdet i textredigeraren. Du kommer att behöva det h�
 Klistra in det kopierade värdet i textredigeraren. Du kommer att behöva det här värdet senare när du skapar din metadatabearbetningsprofil. Låt textredigeraren vara öppen.
 
 1. Klicka på i det övre högra hörnet på sidan för redigering av metadatamodeller **[!UICONTROL Cancel]**.
-1. Tryck på logotypen Experience Manager i det övre vänstra hörnet av Experience Manager och klicka sedan i det vänstra hörnet på **[!UICONTROL Tools]** (hammarikon) > **[!UICONTROL Assets]** > **[!UICONTROL Metadata Profiles]**.
+1. I det övre vänstra hörnet av Experience Manager väljer du logotypen för Experience Manager och klickar sedan i den vänstra listen **[!UICONTROL Tools]** (hammarikon) > **[!UICONTROL Assets]** > **[!UICONTROL Metadata Profiles]**.
 
 1. Klicka på på sidan Metadataprofiler, i det övre högra hörnet av sidan **[!UICONTROL Create]**.
 1. I dialogrutan Lägg till metadataprofil i textfältet **[!UICONTROL Profile title]** anger du namnet `YouTube Video` och sedan klickar du på **[!UICONTROL Create]**.
@@ -489,10 +489,10 @@ När du avpublicerar en videoresurs i Experience Manager tas videon bort från Y
 
 1. Navigera till de videoresurser som du vill avpublicera från din YouTube-kanal.
 1. Välj en eller flera publicerade videoresurser i ett resursurvalsläge.
-1. I verktygsfältet klickar du på **[!UICONTROL Manage Publication]**. Tryck på ikonen med tre punkter (. . .) i verktygsfältet så **[!UICONTROL Manage Publication]** öppnas.
-1. Tryck på Hantera publikation **[!UICONTROL Unpublish]**.
-1. Tryck på längst upp till höger på sidan **[!UICONTROL Next]**.
-1. Tryck på längst upp till höger på sidan **[!UICONTROL Unpublish]**.
+1. I verktygsfältet klickar du på **[!UICONTROL Manage Publication]**. Välj ikonen med tre punkter (. . .) i verktygsfältet så **[!UICONTROL Manage Publication]** öppnas.
+1. På sidan Hantera publikation väljer du **[!UICONTROL Unpublish]**.
+1. I det övre högra hörnet på sidan väljer du **[!UICONTROL Next]**.
+1. I det övre högra hörnet på sidan väljer du **[!UICONTROL Unpublish]**.
 
 ## Övervaka videokodning och YouTube publiceringsförlopp {#monitoring-video-encoding-and-youtube-publishing-progress}
 
@@ -538,7 +538,7 @@ När du överför en ny video till en mapp där videokodning används, eller pub
 
    ![chlimage_1-433](assets/chlimage_1-433.png)
 
-   Markera instansen och tryck på **[!UICONTROL Open History]**.
+   Markera instansen och markera **[!UICONTROL Open History]**.
 
    ![chlimage_1-434](assets/chlimage_1-434.png)
 
@@ -584,18 +584,18 @@ Hur du konfigurerar meddelanden beror på om du vill ha meddelanden för kodning
 
 * Gör följande för publiceringsjobb i YouTube:
 
-1. I Experience Manager: tryck **[!UICONTROL Tools]** > **[!UICONTROL Workflow]** > **[!UICONTROL Models]**.
-1. Välj på sidan Arbetsflödesmodeller **[!UICONTROL Publish to YouTube]** och sedan trycka **[!UICONTROL Edit]** i verktygsfältet.
-1. Tryck på i det övre högra hörnet av arbetsflödessidan Publicera till YouTube **[!UICONTROL Edit]**.
-1. Håll muspekaren över YouTube Upload-komponenten och tryck sedan en gång för att visa det textbundna verktygsfältet.
+1. I Experience Manager väljer du **[!UICONTROL Tools]** > **[!UICONTROL Workflow]** > **[!UICONTROL Models]**.
+1. Välj på sidan Arbetsflödesmodeller **[!UICONTROL Publish to YouTube]** väljer **[!UICONTROL Edit]** i verktygsfältet.
+1. I det övre högra hörnet av arbetsflödessidan Publicera till YouTube väljer du **[!UICONTROL Edit]**.
+1. Håll muspekaren över YouTube Upload-komponenten och välj sedan en gång för att visa det textbundna verktygsfältet.
 
    ![6_5_publishingUtubeworkflow](assets/6_5_publishtoyoutubeworkflow.png)
 
-1. Tryck på ikonen Konfiguration (skiftnyckel) i det textbundna verktygsfältet. Klicka på **[!UICONTROL Arguments]** -fliken.
+1. I det textbundna verktygsfältet väljer du ikonen Konfiguration (skiftnyckel). Klicka på **[!UICONTROL Arguments]** -fliken.
 
    ![6_5_publishtoyoutubeworkflow-configurationicon](assets/6_5_publishtoyoutubeworkflow-configurationicon.png)
 
-1. I dialogrutan YouTube Upload Process - Step Properties (Överföringsprocess - stegegenskaper) trycker du på **[!UICONTROL Arguments]** -fliken.
+1. I dialogrutan YouTube Upload Process - Step Properties väljer du **[!UICONTROL Arguments]** -fliken.
 
    ![6_5_publishtoyoutubeworkflow-arguments-tab](assets/6_5_publishtoyoutubeworkflow-arguments-tab.png)
 
@@ -611,8 +611,8 @@ Hur du konfigurerar meddelanden beror på om du vill ha meddelanden för kodning
    >
    >Dessa e-postmeddelanden är specifika för YouTube och är utöver de allmänna e-postmeddelandena för arbetsflöden. Du kan därför få två uppsättningar e-postmeddelanden - det allmänna meddelandet i **[!UICONTROL Day CQ Workflow Email Notification Service]** och en specifik för YouTube beroende på dina konfigurationsinställningar.
 
-1. När du är klar trycker du på **[!UICONTROL Done]** ikon (bock).
-1. Tryck på knappen Publicera till YouTube i det övre högra hörnet på arbetsflödessidan. **[!UICONTROL Sync]**.
+1. När du är klar väljer du **[!UICONTROL Done]** ikon (bock).
+1. På arbetsflödessidan Publicera till YouTube, i det övre högra hörnet, väljer du **[!UICONTROL Sync]**.
 
 ## Kommentera videomaterial {#annotate-video-assets}
 

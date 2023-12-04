@@ -7,9 +7,9 @@ content-strategy: max-2018
 docset: aem65
 feature: Adaptive Forms
 exl-id: 93c360a8-a9d9-4c4b-b7e2-2c44eaf4604c
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '6106'
+source-wordcount: '6084'
 ht-degree: 0%
 
 ---
@@ -365,7 +365,7 @@ När du markerar en komponent på arbetsytan visas komponentens verktygsfält ov
 * **Widget för Numerisk ruta**: Gör att du kan markera komponenten för att anpassa dess utseende i sidofältet.
 * **Fältwidget**: Gör att du kan välja den generiska komponenten för formatering. I det här exemplet markeras alla textindatakomponenter (textruta/numerisk ruta/numerisk nummerlista/datumindata) för formatering.
 
-* ![fältnivå](assets/field-level.png): Gör att du kan växla till en allmän komponent för formatering. Om du markerar en numerisk ruta och trycker på den här ikonen markeras fältkomponenten. Om du markerar en fältkomponent och trycker på den här ikonen markeras panelen. Om du fortsätter att trycka på den här ikonen för markering, kommer du att välja layouten för formatering.
+* ![fältnivå](assets/field-level.png): Gör att du kan växla till en allmän komponent för formatering. Om du markerar en numerisk ruta och väljer den här ikonen markeras fältkomponenten. Om du markerar en fältkomponent och väljer den här ikonen markeras panelen. Om du fortsätter att trycka på den här ikonen för markering, kommer du att välja layouten för formatering.
 
 >[!NOTE]
 >
@@ -590,7 +590,7 @@ Så här kopierar du ett tema:
 
 1. I redigeringsinstansen navigerar du till **Adobe Experience Manager > Forms > Teman**.
 1. Öppna mappen Temabibliotek.
-1. I temabiblioteksmappen håller du pekaren över motsvarande färdiga tema och trycker **Kopiera**.
+1. I temabiblioteksmappen håller du pekaren över motsvarande färdiga tema och väljer **Kopiera**.
 1. Klistra in det kopierade temat utanför temabiblioteksmappen.
 1. Anpassa det kopierade temat.
 

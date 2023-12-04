@@ -5,9 +5,9 @@ topic-tags: interactive-communications
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 feature: Interactive Communication
 exl-id: 4fb82e9b-f870-47db-ac92-2d7510acace8
-source-git-commit: 451fb472e170a79f9854efadf9be1d4fe0628b94
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '1992'
+source-wordcount: '1981'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 Agentgränssnittet gör att agenterna kan förbereda och skicka interaktiv kommunikation till postprocessen. Agenten gör de ändringar som behövs och skickar den interaktiva kommunikationen till en postprocess, som e-post eller utskrift.
 
-## Översikt {#overview}
+## Ökning {#overview}
 
 När en interaktiv kommunikation har skapats kan agenten öppna den interaktiva kommunikationen i agentgränssnittet och förbereda en mottagarspecifik kopia genom att ange data och hantera innehåll och bilagor. Slutligen kan agenten skicka den interaktiva kommunikationen till en postprocess.
 
@@ -29,7 +29,7 @@ När agenten förbereder den interaktiva kommunikationen med hjälp av agentgrä
 ## Förbereda interaktiv kommunikation med hjälp av agentgränssnittet {#prepare-interactive-communication-using-the-agent-ui}
 
 1. Välj **[!UICONTROL Forms]** > **[!UICONTROL Forms & Documents]**.
-1. Välj lämplig interaktiv kommunikation och tryck **[!UICONTROL Open Agent UI]**.
+1. Välj lämplig interaktiv kommunikation och välj **[!UICONTROL Open Agent UI]**.
 
    >[!NOTE]
    >
@@ -47,7 +47,7 @@ När agenten förbereder den interaktiva kommunikationen med hjälp av agentgrä
 
 1. På fliken Data anger du data för variabler, formulärdatamodegenskaper och utskriftsmallfält (XDP) efter behov. Fyll i alla obligatoriska fält markerade med en asterisk (&amp;ast;) för att aktivera **Skicka** -knappen.
 
-   Tryck på ett datafältvärde i förhandsvisningen av interaktiv kommunikation för att markera motsvarande datafält på fliken Data eller omvänt.
+   Markera ett datafältvärde i förhandsvisningen av interaktiv kommunikation om du vill markera motsvarande datafält på fliken Data eller omvänt.
 
 ### Hantera innehåll {#manage-content}
 
@@ -57,7 +57,7 @@ På fliken Innehåll hanterar du innehåll som dokumentfragment och innehållsva
 
    ![agentuicontenttab](assets/agentuicontenttab.png)
 
-1. Redigera dokumentfragmenten efter behov på fliken Innehåll. Om du vill fokusera på det relevanta avsnittet i innehållshierarkin kan du antingen trycka på den relevanta raden eller det relevanta stycket i förhandsvisningen av interaktiv kommunikation eller trycka på avsnittet direkt i innehållshierarkin.
+1. Redigera dokumentfragmenten efter behov på fliken Innehåll. Om du vill fokusera på det relevanta avsnittet i innehållshierarkin kan du antingen markera den relevanta raden eller det relevanta stycket i förhandsvisningen av interaktiv kommunikation eller välja avsnittet direkt i innehållshierarkin.
 
    Dokumentfragmentet med raden &quot;Gör en betalning online nu ...&quot; markeras i förhandsvisningen i bilden nedan och samma dokumentfragment har markerats på fliken Innehåll.
 
@@ -65,7 +65,7 @@ På fliken Innehåll hanterar du innehåll som dokumentfragment och innehållsva
 
    Genom att trycka på Markera valda moduler i innehållet på fliken Innehåll eller Data ( ![highlightselectedmodulesincontentccr](assets/highlightselectedmodulesincontentccr.png)) i det övre vänstra hörnet av förhandsgranskningen kan du inaktivera eller aktivera funktioner för att gå till dokumentfragmentet när användaren knackar på eller markerar den relevanta texten, stycket eller datafältet i förhandsvisningen.
 
-   Fragmenten som kan redigeras av agenten när interaktiv kommunikation skapas har Redigera markerat innehåll ( ![iconeditselectedContent](assets/iconeditselectedcontent.png)). Tryck på ikonen Redigera markerat innehåll för att starta fragmentet i redigeringsläge och göra ändringar i det. Använd följande alternativ för att formatera och hantera text:
+   Fragmenten som kan redigeras av agenten när interaktiv kommunikation skapas har Redigera markerat innehåll ( ![iconeditselectedContent](assets/iconeditselectedcontent.png)). Välj ikonen Redigera markerat innehåll om du vill starta fragmentet i redigeringsläge och göra ändringar i det. Använd följande alternativ för att formatera och hantera text:
 
    * [Formateringsalternativ](#formattingtext)
 
@@ -89,11 +89,11 @@ På fliken Innehåll hanterar du innehåll som dokumentfragment och innehållsva
 
 1. Välj **[!UICONTROL Attachment]**. Agentgränssnittet visar de tillgängliga bifogade filerna som de har konfigurerats när interaktiv kommunikation skapas.
 
-   Du kan välja att inte skicka en bifogad fil tillsammans med den interaktiva kommunikationen genom att trycka på visningsikonen och du kan trycka på krysset i den bifogade filen för att ta bort den (om agenten får ta bort eller dölja den bifogade filen) från den interaktiva kommunikationen. Ikonerna Visa och Ta bort är inaktiverade för bilagor som anges som obligatoriska när interaktiv kommunikation skapas.
+   Du kan välja att inte skicka en bifogad fil tillsammans med den interaktiva kommunikationen genom att trycka på visningsikonen och du kan markera krysset i den bifogade filen för att ta bort den (om agenten får ta bort eller dölja den bifogade filen) från den interaktiva kommunikationen. Ikonerna Visa och Ta bort är inaktiverade för bilagor som anges som obligatoriska när interaktiv kommunikation skapas.
 
    ![attachmentsagentui](assets/attachmentsagentui.png)
 
-1. Tryck på Library Access ( ![libraryaccess](assets/libraryaccess.png)) för att komma åt innehållsbiblioteket och infoga DAM-resurser som bilagor.
+1. Välj biblioteksåtkomst ( ![libraryaccess](assets/libraryaccess.png)) för att komma åt innehållsbiblioteket och infoga DAM-resurser som bilagor.
 
    >[!NOTE]
    >
@@ -102,7 +102,7 @@ På fliken Innehåll hanterar du innehåll som dokumentfragment och innehållsva
 1. Om ordningen på de bifogade filerna inte var låst när du skapade den interaktiva kommunikationen kan du ändra ordningen på de bifogade filerna genom att markera en bifogad fil och trycka på nedåtpilen och uppåtpilen.
 1. Använd Förhandsgranska via webben och Förhandsgranska för att se om de två utdatafilerna är som du vill ha dem.
 
-   Om du tycker att förhandsvisningarna är tillräckliga trycker du **[!UICONTROL Submit]** för att skicka/skicka interaktiv kommunikation till en postprocess. Om du vill göra ändringar avslutar du förhandsgranskningen och går tillbaka till ändringarna.
+   Om du tycker att förhandsvisningarna är tillräckliga väljer du **[!UICONTROL Submit]** för att skicka/skicka interaktiv kommunikation till en postprocess. Om du vill göra ändringar avslutar du förhandsgranskningen och går tillbaka till ändringarna.
 
 ## Formatera text {#formattingtext}
 
@@ -122,7 +122,7 @@ Verktygsfältet Lista
 
 ### Markera/framhäv delar av text {#highlightemphasize}
 
-Markera texten och tryck på Markera färg om du vill framhäva delar av texten i ett redigerbart fragment.
+Markera texten och välj Markera färg om du vill framhäva delar av texten i ett redigerbart fragment.
 
 ![highlighttextagentui](assets/highlighttextagentui.png)
 
@@ -183,22 +183,22 @@ Funktionen Spara som utkast är inte aktiverad som standard. Gör så här för 
    Med SPI kan du spara utkastet till version av den interaktiva kommunikationen i databasen med ett utkast-ID som unik identifierare. Dessa instruktioner förutsätter att du har kunskap om hur du bygger ett OSGi-paket med ett Maven-projekt.
 
    Exempel på SPI-implementering finns i [Exempel på SPI-implementering av ccrDocumentInstance](#sample-ccrDocumentInstance-spi).
-1. Öppna `http://<hostname>:<port>/ system/console/bundles` och knacka **[!UICONTROL Install/Update]** för att ladda upp OSGi-paketet. Kontrollera att det överförda paketets status visas som **Aktiv**. Starta om servern om paketets status inte visas som **Aktiv**.
+1. Öppna `http://<hostname>:<port>/ system/console/bundles` och markera **[!UICONTROL Install/Update]** för att ladda upp OSGi-paketet. Kontrollera att det överförda paketets status visas som **Aktiv**. Starta om servern om paketets status inte visas som **Aktiv**.
 1. Gå till `https://'[server]:[port]'/system/console/configMgr`.
-1. Tryck på **[!UICONTROL Create Correspondence Configuration]**.
-1. Välj **[!UICONTROL Enable Save Using CCRDocumentInstanceService]** och knacka **[!UICONTROL Save]**.
+1. Välj **[!UICONTROL Create Correspondence Configuration]**.
+1. Välj **[!UICONTROL Enable Save Using CCRDocumentInstanceService]** och markera **[!UICONTROL Save]**.
 
 ### Spara interaktiv kommunikation som utkast {#save-as-draft-agent-ui}
 
 Så här sparar du en interaktiv kommunikation som ett utkast:
 
-1. Välj en interaktiv kommunikation i Forms Manager och tryck på **[!UICONTROL Open Agent UI]**.
+1. Välj en interaktiv kommunikation i Forms Manager och välj **[!UICONTROL Open Agent UI]**.
 
-1. Gör lämpliga ändringar i agentens användargränssnitt och tryck på **[!UICONTROL Save as Draft]**.
+1. Gör lämpliga ändringar i agentens användargränssnitt och välj **[!UICONTROL Save as Draft]**.
 
-1. Ange namnet på utkastet i dialogrutan **[!UICONTROL Name]** fält och knacka **[!UICONTROL Done]**.
+1. Ange namnet på utkastet i dialogrutan **[!UICONTROL Name]** fält och markera **[!UICONTROL Done]**.
 
-När du har sparat interaktiv kommunikation som ett utkast trycker du på **[!UICONTROL Save Changes]** om du vill spara ytterligare ändringar i utkastet.
+När du har sparat det interaktiva meddelandet som ett utkast väljer du **[!UICONTROL Save Changes]** om du vill spara ytterligare ändringar i utkastet.
 
 ### Hämta utkastet till interaktiv kommunikation {#retrieve-draft}
 

@@ -6,7 +6,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 docset: aem65
 feature: Form Data Model
 exl-id: 7a1d9d57-66f4-4f20-91c2-ace5a71a52f2
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
 source-wordcount: '1896'
 ht-degree: 0%
@@ -38,7 +38,7 @@ Dataintegrering stöder OAuth2.0([Auktoriseringskod](https://oauth.net/2/grant-t
 Du kan konfigurera relationsdatabaser med hjälp AEM Konfiguration av webbkonsol. Gör följande:
 
 1. Gå till AEM webbkonsol på `https://server:host/system/console/configMgr`.
-1. Leta efter **[!UICONTROL Apache Sling Connection Pooled DataSource]** konfiguration. Tryck för att öppna konfigurationen i redigeringsläge.
+1. Leta efter **[!UICONTROL Apache Sling Connection Pooled DataSource]** konfiguration. Välj det här alternativet om du vill öppna konfigurationen i redigeringsläge.
 1. I konfigurationsdialogrutan anger du information för den databas som du vill konfigurera, till exempel:
 
    * Datakällans namn
@@ -52,7 +52,7 @@ Du kan konfigurera relationsdatabaser med hjälp AEM Konfiguration av webbkonsol
    >Kontrollera att du krypterar känslig information, t.ex. lösenord, innan du konfigurerar datakällan. Kryptera:
    >
    > 1. Gå till https://&#39;[server]:[port]/system/console/crypto.
-   > 1. I **[!UICONTROL Plain Text]** anger du lösenordet eller en sträng som ska krypteras och trycker på **[!UICONTROL Protect]**.
+   > 1. I **[!UICONTROL Plain Text]** anger du lösenordet eller en sträng som ska krypteras och väljer **[!UICONTROL Protect]**.
    >
    >Den krypterade texten visas i fältet Skyddad text som du kan ange i konfigurationen.
 
@@ -62,7 +62,7 @@ Du kan konfigurera relationsdatabaser med hjälp AEM Konfiguration av webbkonsol
    * SELECT 1 (MySQL och MS SQL)
    * VÄLJ 1 från dubbla (Oracle)
 
-1. Tryck **[!UICONTROL Save]** för att spara konfigurationen.
+1. Välj **[!UICONTROL Save]** för att spara konfigurationen.
 
    >[!NOTE]
    >
@@ -73,7 +73,7 @@ Du kan konfigurera relationsdatabaser med hjälp AEM Konfiguration av webbkonsol
 Du kan konfigurera AEM användarprofil med hjälp av konfigurationen för anslutning av användarprofil i AEM webbkonsol. Gör följande:
 
 1. Gå till AEM webbkonsol på https://&#39;[server]:[port]system/console/configMgr.
-1. Leta efter **[!UICONTROL AEM Forms Data Integrations - User Profile Connector Configuration]** och tryck för att öppna konfigurationen i redigeringsläge.
+1. Leta efter **[!UICONTROL AEM Forms Data Integrations - User Profile Connector Configuration]** och väljer att öppna konfigurationen i redigeringsläge.
 1. I dialogrutan Konfiguration av anslutning till användarprofil kan du lägga till, ta bort eller uppdatera egenskaper för användarprofiler. De angivna egenskaperna är tillgängliga för användning i formulärdatamodellen. Använd följande format för att ange egenskaper för användarprofiler:
 
    `name=[property_name_with_location_in_user_profile],type=[property_type]`
@@ -87,7 +87,7 @@ Du kan konfigurera AEM användarprofil med hjälp av konfigurationen för anslut
    >
    >The **&#42;** i ovanstående exempel betecknar alla noder under `profile/empLocation/` i AEM användarprofil i CRXDE-struktur. Det innebär att formulärdatamodellen har åtkomst till `city` type-egenskap `string` finns i en nod under `profile/empLocation/` nod. Noderna som innehåller den angivna egenskapen måste dock följa en konsekvent struktur.
 
-1. Tryck **[!UICONTROL Save]** för att spara konfigurationen.
+1. Välj **[!UICONTROL Save]** för att spara konfigurationen.
 
 ## Konfigurera mapp för molntjänstkonfigurationer {#cloud-folder}
 
@@ -103,15 +103,15 @@ Så här konfigurerar du mappen för molntjänstkonfigurationer:
    * Se [Konfigurationsläsaren](/help/sites-administering/configurations.md) mer information.
 1. Gör följande för att aktivera den globala mappen för molnkonfigurationer eller hoppa över det här steget för att skapa och konfigurera en annan mapp för molntjänstkonfigurationer.
 
-   1. I **[!UICONTROL Configuration Browser]** väljer du `global` mapp och tryck **[!UICONTROL Properties]**.
+   1. I **[!UICONTROL Configuration Browser]** väljer du `global` mapp och markera **[!UICONTROL Properties]**.
 
    1. I **[!UICONTROL Configuration Properties]** dialogruta, aktivera **[!UICONTROL Cloud Configurations]**.
 
-   1. Tryck **[!UICONTROL Save & Close]** för att spara konfigurationen och stänga dialogrutan.
+   1. Välj **[!UICONTROL Save & Close]** för att spara konfigurationen och stänga dialogrutan.
 
-1. I **[!UICONTROL Configuration Browser]**, trycka **[!UICONTROL Create]**.
+1. I **[!UICONTROL Configuration Browser]**, markera **[!UICONTROL Create]**.
 1. I **[!UICONTROL Create Configuration]** dialogruta, ange en rubrik för mappen och aktivera **[!UICONTROL Cloud Configurations]**.
-1. Tryck **[!UICONTROL Create]** för att skapa en mapp som är aktiverad för molntjänstkonfigurationer.
+1. Välj **[!UICONTROL Create]** för att skapa en mapp som är aktiverad för molntjänstkonfigurationer.
 
 ## Konfigurera RESTful-webbtjänster {#configure-restful-web-services}
 
@@ -119,11 +119,11 @@ RESTful-webbtjänsten kan beskrivas med [Swagger-specifikationer](https://swagge
 
 Gör följande för att konfigurera RESTful-tjänster:
 
-1. Gå till **[!UICONTROL Tools > Cloud Services > Data Sources]**. Tryck för att välja den mapp där du vill skapa en molnkonfiguration.
+1. Gå till **[!UICONTROL Tools > Cloud Services > Data Sources]**. Välj den mapp där du vill skapa en molnkonfiguration.
 
    Se [Konfigurera mapp för molntjänstkonfigurationer](../../forms/using/configure-data-sources.md#cloud-folder) för information om hur du skapar och konfigurerar en mapp för molntjänstkonfigurationer.
 
-1. Tryck **[!UICONTROL Create]** för att öppna **[!UICONTROL Create Data Source Configuration wizard]**. Ange ett namn och eventuellt en rubrik för konfigurationen, välj **[!UICONTROL RESTful Service]** från **[!UICONTROL Service Type]** nedrullningsbar meny, där du kan bläddra och välja en miniatyrbild för konfigurationen, och trycka på **[!UICONTROL Next]**.
+1. Välj **[!UICONTROL Create]** för att öppna **[!UICONTROL Create Data Source Configuration wizard]**. Ange ett namn och eventuellt en rubrik för konfigurationen, välj **[!UICONTROL RESTful Service]** från **[!UICONTROL Service Type]** nedrullningsbar meny där du kan bläddra och välja en miniatyrbild för konfigurationen och välja **[!UICONTROL Next]**.
 1. Ange följande information för RESTful-tjänsten:
 
    * Välj URL eller Fil i listrutan Växlingskälla och ange därför SWAGGER-URL:en till Swagger-definitionsfilen eller överför Swagger-filen från det lokala filsystemet.
@@ -140,7 +140,7 @@ Gör följande för att konfigurera RESTful-tjänster:
 
    Om du väljer **[!UICONTROL Mutual Authentication]** som autentiseringstyp, se [Certifikatbaserad ömsesidig autentisering för RESTful- och SOAP-webbtjänster](#mutual-authentication).
 
-1. Tryck **[!UICONTROL Create]** för att skapa molnkonfigurationen för RESTful-tjänsten.
+1. Välj **[!UICONTROL Create]** för att skapa molnkonfigurationen för RESTful-tjänsten.
 
 ### HTTP-klientkonfiguration för formulärdatamodell för optimering av prestanda {#fdm-http-client-configuration}
 
@@ -149,7 +149,7 @@ Utför följande steg för att konfigurera HTTP-klientmodellen för formulärdat
 
 1. Logga in på [!DNL Experience Manager Forms] Skapa instans som administratör och gå till [!DNL Experience Manager] webbkonsolpaket. Standardwebbadressen är [https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr).
 
-1. Tryck **[!UICONTROL Form Data Model Http Client Configuration for REST data source]**.
+1. Välj **[!UICONTROL Form Data Model Http Client Configuration for REST data source]**.
 
 1. I [!UICONTROL Form Data Model Http Client Configuration for REST data source] dialog:
 
@@ -167,11 +167,11 @@ Utför följande steg för att konfigurera HTTP-klientmodellen för formulärdat
 
 SOAP-baserade webbtjänster beskrivs med [WSDL-specifikationer (Web Services Description Language)](https://www.w3.org/TR/wsdl). Om du vill konfigurera en SOAP-baserad webbtjänst i AEM molntjänster kontrollerar du att du har WSDL-webbadressen för webbtjänsten och gör följande:
 
-1. Gå till **[!UICONTROL Tools > Cloud Services > Data Sources]**. Tryck för att välja den mapp där du vill skapa en molnkonfiguration.
+1. Gå till **[!UICONTROL Tools > Cloud Services > Data Sources]**. Välj den mapp där du vill skapa en molnkonfiguration.
 
    Se [Konfigurera mapp för molntjänstkonfigurationer](../../forms/using/configure-data-sources.md#cloud-folder) för information om hur du skapar och konfigurerar en mapp för molntjänstkonfigurationer.
 
-1. Tryck **[!UICONTROL Create]** för att öppna **[!UICONTROL Create Data Source Configuration wizard]**. Ange ett namn och eventuellt en rubrik för konfigurationen, välj **[!UICONTROL SOAP Web Service]** från **[!UICONTROL Service Type]** nedrullningsbar meny, där du kan bläddra och välja en miniatyrbild för konfigurationen, och trycka på **[!UICONTROL Next]**.
+1. Välj **[!UICONTROL Create]** för att öppna **[!UICONTROL Create Data Source Configuration wizard]**. Ange ett namn och eventuellt en rubrik för konfigurationen, välj **[!UICONTROL SOAP Web Service]** från **[!UICONTROL Service Type]** nedrullningsbar meny där du kan bläddra och välja en miniatyrbild för konfigurationen och välja **[!UICONTROL Next]**.
 1. Ange följande för SOAP-webbtjänsten:
 
    * WSDL-URL för webbtjänsten.
@@ -183,7 +183,7 @@ Ange KeyStore-alias för X509-certifikatet i **[!UICONTROL Key Alias]** fält. A
 
      Om du väljer **[!UICONTROL Mutual Authentication]** som autentiseringstyp, se [Certifikatbaserad ömsesidig autentisering för RESTful- och SOAP-webbtjänster](#mutual-authentication).
 
-1. Tryck **[!UICONTROL Create]** för att skapa molnkonfigurationen för SOAP-webbtjänsten.
+1. Välj **[!UICONTROL Create]** för att skapa molnkonfigurationen för SOAP-webbtjänsten.
 
 ## Konfigurera OData-tjänster {#config-odata}
 
@@ -194,11 +194,11 @@ En OData-tjänst identifieras av tjänstens rot-URL. Om du vill konfigurera en O
 >Formulärdatamodellen stöder [OData version 4](https://www.odata.org/documentation/).
 >Stegvisa anvisningar om hur du konfigurerar Microsoft Dynamics 365, online eller lokalt, finns i [Konfiguration av Microsoft Dynamics OData](/help/forms/using/ms-dynamics-odata-configuration.md).
 
-1. Gå till **[!UICONTROL Tools > Cloud Services > Data Sources]**. Tryck för att välja den mapp där du vill skapa en molnkonfiguration.
+1. Gå till **[!UICONTROL Tools > Cloud Services > Data Sources]**. Välj den mapp där du vill skapa en molnkonfiguration.
 
    Se [Konfigurera mapp för molntjänstkonfigurationer](../../forms/using/configure-data-sources.md#cloud-folder) för information om hur du skapar och konfigurerar en mapp för molntjänstkonfigurationer.
 
-1. Tryck **[!UICONTROL Create]** för att öppna **[!UICONTROL Create Data Source Configuration wizard]**. Ange ett namn och eventuellt en rubrik för konfigurationen, välj **[!UICONTROL OData Service]** från **[!UICONTROL Service Type]** nedrullningsbar meny, där du kan bläddra och välja en miniatyrbild för konfigurationen, och trycka på **[!UICONTROL Next]**.
+1. Välj **[!UICONTROL Create]** för att öppna **[!UICONTROL Create Data Source Configuration wizard]**. Ange ett namn och eventuellt en rubrik för konfigurationen, välj **[!UICONTROL OData Service]** från **[!UICONTROL Service Type]** nedrullningsbar meny där du kan bläddra och välja en miniatyrbild för konfigurationen och välja **[!UICONTROL Next]**.
 1. Ange följande information för OData-tjänsten:
 
    * Tjänstens rot-URL för OData-tjänsten som ska konfigureras.
@@ -208,7 +208,7 @@ En OData-tjänst identifieras av tjänstens rot-URL. Om du vill konfigurera en O
    >
    >Välj autentiseringstypen OAuth 2.0 om du vill ansluta till Microsoft Dynamics-tjänster med OData-slutpunkten som tjänstrot.
 
-1. Tryck **Skapa** för att skapa molnkonfigurationen för OData-tjänsten.
+1. Välj **Skapa** för att skapa molnkonfigurationen för OData-tjänsten.
 
 ## Certifikatbaserad ömsesidig autentisering för RESTful- och SOAP-webbtjänster {#mutual-authentication}
 
@@ -216,11 +216,11 @@ När du aktiverar ömsesidig autentisering för formulärdatamodell autentiserar
 
 1. Överför den privata nyckeln (certifikatet) till [!DNL AEM Forms] server. Så här överför du den privata nyckeln:
    1. Logga in på [!DNL AEM Forms] server som administratör.
-   1. Navigera till **[!UICONTROL Tools]** > **[!UICONTROL Security]** > **[!UICONTROL Users]**. Välj `fd-cloudservice` användare och knacka **[!UICONTROL Properties]**.
-   1. Öppna **[!UICONTROL Keystore]** -fliken, expandera **[!UICONTROL Add Private Key from KeyStore file]** , ladda upp KeyStore-filen, ange alias, lösenord och tryck **[!UICONTROL Submit]**. Certifikatet överförs.  Aliaset för den privata nyckeln anges i certifikatet och anges när certifikatet skapas.
+   1. Navigera till **[!UICONTROL Tools]** > **[!UICONTROL Security]** > **[!UICONTROL Users]**. Välj `fd-cloudservice` användare och markera **[!UICONTROL Properties]**.
+   1. Öppna **[!UICONTROL Keystore]** -fliken, expandera **[!UICONTROL Add Private Key from KeyStore file]** , ladda upp KeyStore-filen, ange alias, lösenord och markera **[!UICONTROL Submit]**. Certifikatet överförs.  Aliaset för den privata nyckeln anges i certifikatet och anges när certifikatet skapas.
 1. Överför förtroendecertifikat till Global Trust Store. Så här överför du certifikatet:
    1. Navigera till **[!UICONTROL Tools]** > **[!UICONTROL Security]** > **[!UICONTROL Trust Store]**.
-   1. Expandera **[!UICONTROL Add Certificate from CER file]** alternativ, tryck **[!UICONTROL Select Certificate File]**, ladda upp certifikatet och tryck på **[!UICONTROL Submit]**.
+   1. Expandera **[!UICONTROL Add Certificate from CER file]** alternativ, markera **[!UICONTROL Select Certificate File]**, överför certifikatet och välj **[!UICONTROL Submit]**.
 1. Konfigurera [SOAP](#configure-soap-web-services) eller [RESTful](#configure-restful-web-services) webbtjänster som datakälla och välj **[!UICONTROL Mutual authentication]** som autentiseringstyp. Om du konfigurerar flera självsignerade certifikat för `fd-cloudservice` anger du namnet på certifikatets nyckelalias.
 
 ## Nästa steg {#next-steps}

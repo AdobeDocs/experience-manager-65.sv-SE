@@ -7,7 +7,7 @@ topic-tags: page-authoring
 content-type: reference
 docset: aem65
 exl-id: d5cf4478-51e4-4ca8-b3f8-6d7caed7d515
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
 source-wordcount: '3015'
 ht-degree: 2%
@@ -368,7 +368,7 @@ Till exempel **Text** komponent:
 
 Så här flyttar du en styckekomponent:
 
-1. Markera det stycke som ska flyttas genom att trycka och hålla ned eller klicka och hålla ned.
+1. Markera det stycke som ska flyttas genom att markera och hålla ned eller klicka och hålla ned.
 1. Dra stycket till den nya platsen. AEM anger var stycket kan placeras. Släpp den där du vill.
 
    ![rörlig styckekomponent](assets/screen_shot_2018-03-22at121821.png)

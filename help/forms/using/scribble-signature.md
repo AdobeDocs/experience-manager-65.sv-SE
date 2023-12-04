@@ -12,7 +12,7 @@ discoiquuid: ecd7f538-9c24-48e7-8450-596851e99cff
 docset: aem65
 feature: Designer
 exl-id: 2025182f-195b-40d0-aee7-67669f55b964
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
 source-wordcount: '655'
 ht-degree: 0%
@@ -103,5 +103,5 @@ Klicka på **Penslar** om du vill visa en lista med tillgängliga ritstiftsstorl
 
 Så här tar du bort signaturer från formuläret:
 
-* (Mobila enheter) Tryck länge på signaturfältet och tryck på **Ja**.
+* (Mobila enheter) Tryck länge på signaturfältet och välj **Ja**.
 * (Skrivbord) Håll markören över signaturfältet och klicka på knappen **Avbryt** och klickar på **Ja**.

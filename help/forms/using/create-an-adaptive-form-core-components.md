@@ -10,9 +10,9 @@ topic-tags: Adaptive Forms
 docset: aem65
 role: Admin, Developer
 exl-id: ee596672-b0b5-42e9-a139-72f90287bf3b
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '1729'
+source-wordcount: '1678'
 ht-degree: 0%
 
 ---
@@ -64,9 +64,9 @@ Du behöver följande för att skapa ett adaptivt formulär:
 
 1. Logga in lokalt [AEM författarinstans](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/deploy.html?lang=en#author-and-publish-installs).
 
-1. Ange dina uppgifter på inloggningssidan för Experience Manager. När du är inloggad trycker du på **[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL Forms]** > **[!UICONTROL Forms & Documents]**.
+1. Ange dina uppgifter på inloggningssidan för Experience Manager. När du är inloggad väljer du **[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL Forms]** > **[!UICONTROL Forms & Documents]**.
 
-1. Tryck på **[!UICONTROL Create]**  > **[!UICONTROL Create Adaptive Forms]**.
+1. Välj **[!UICONTROL Create]**  > **[!UICONTROL Create Adaptive Forms]**.
 
 1. Välj en adaptiv Forms Core Components-mall och klicka på **[!UICONTROL Next]**.
 
@@ -78,10 +78,10 @@ Du behöver följande för att skapa ett adaptivt formulär:
    * **[!UICONTROL Theme Client Library]:** Anger temat för ett adaptivt formulär. Som standard är `adaptiveform.theme.canvas3` -temat är valt. Du kan också välja ett annat tema från **[!UICONTROL Theme Client Library]** listruta.
    * **[!UICONTROL Configuration Container:]**  Definierar en plats där konfigurationsfiler för Adaptive Forms lagras. Dessa konfigurationsfiler innehåller inställningar och egenskaper som är relaterade till beteendet och utseendet för Adaptive Forms.
    * **[!UICONTROL Tags:]** Anger taggar som unikt identifierar den adaptiva formen. Taggar hjälper dig att söka i formuläret. Om du vill skapa taggar skriver du nya taggnamn i **[!UICONTROL Tags]** box.
-1. Tryck på **[!UICONTROL Create]**. Ett anpassat formulär skapas och en dialogruta öppnas där du kan öppna formuläret för redigering.
+1. Välj **[!UICONTROL Create]**. Ett anpassat formulär skapas och en dialogruta öppnas där du kan öppna formuläret för redigering.
 
 
-1. Tryck **[!UICONTROL Edit]** om du vill öppna det nya formuläret på en ny flik. Formuläret öppnas för redigering och visar det innehåll som är tillgängligt i mallen. Här visas också sidofältet för att anpassa det nya formuläret.
+1. Välj **[!UICONTROL Edit]** om du vill öppna det nya formuläret på en ny flik. Formuläret öppnas för redigering och visar det innehåll som är tillgängligt i mallen. Här visas också sidofältet för att anpassa det nya formuläret.
 
 
 ## Använd adaptiva Forms Core-komponenter för att skapa ditt formulär
@@ -170,11 +170,11 @@ Du kan använda förifyllningstjänsten för formulärdatamodell för att fylla 
 <!--
 ## Edit Form Model properties of an Adaptive Form {#edit-form-model}
 
-1. Select the Adaptive Form and tap ![Page information](/help/forms/using/assets/configure-icon.svg) > **[!UICONTROL Open Properties]**. The Form Properties page opens. 
+1. Select the Adaptive Form and select ![Page information](/help/forms/using/assets/configure-icon.svg) > **[!UICONTROL Open Properties]**. The Form Properties page opens. 
 
 1. Go to the **[!UICONTROL Form Model]** tab and choose a form model. If the Adaptive Form is without a form model, you have the freedom to choose either a JSON schema or a form data model. On the other hand, if the Adaptive Form is already based on a form model, you have the option to switch to another form model of the same type. For instance, if the form is using a JSON schema, you can easily switch to another JSON schema, and similarly if the form is using a Form Data Model, you can switch to another Form Data Model. 
 
-1. Tap **[!UICONTROL Save]** to save the properties.
+1. Select **[!UICONTROL Save]** to save the properties.
 -->
 
 ## What&#39;s Next

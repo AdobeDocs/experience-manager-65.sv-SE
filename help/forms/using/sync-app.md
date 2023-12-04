@@ -11,9 +11,9 @@ topic-tags: forms-app
 discoiquuid: 393e4332-a2cc-42c8-a18f-3035addbcfaa
 docset: aem65
 exl-id: 6bb1d6df-b322-4112-bc25-6300877ee146
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '369'
+source-wordcount: '370'
 ht-degree: 0%
 
 ---
@@ -30,16 +30,16 @@ När du är online med AEM Forms-servern synkroniseras ditt program som standard
 
 **Synkronisera appen manuellt**
 
-Tryck på knappen Synkronisera ![sync-app](assets/sync-app.png) längst ned till höger på startskärmen.
+Markera knappen Synkronisera ![sync-app](assets/sync-app.png) längst ned till höger på startskärmen.
 
 **Ändra synkroniseringsfrekvensen**
 
-1. Om du vill gå till inställningsskärmen trycker du på menyknappen längst upp till vänster på hemskärmen och sedan på **Inställningar**.
-1. Tryck på fliken Allmänt på skärmen Inställningar.
+1. Om du vill gå till inställningsskärmen väljer du menyknappen längst upp till vänster på startskärmen och väljer sedan **Inställningar**.
+1. Välj fliken Allmänt på skärmen Inställningar.
 
    ![Inställningen för synkroniseringsfrekvens i fönstret Allmänna inställningar](assets/gen-settings-2.png)
 
-1. Tryck på värdet till höger om synkroniseringsfrekvensen i alternativet Synkroniseringsfrekvens.
+1. Välj värdet till höger om synkroniseringsfrekvensen i alternativet Synkroniseringsfrekvens.
 1. Välj den nya synkroniseringsfrekvensen i listrutan.
 
 ### Tekniska specifikationer {#technical-specifications}

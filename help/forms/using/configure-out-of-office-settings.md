@@ -2,10 +2,10 @@
 title: Konfigurera inställningar för frånvaro
 description: Lär dig hur du konfigurerar frånvaroinställningar till din Adobe Experience Manager Forms-instans.
 exl-id: e4c9d74c-e08d-4675-91f2-4f9fc2f1bcea
-source-git-commit: 000c22028259eb05a61625d43526a2e8314a1d60
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '799'
-ht-degree: 1%
+source-wordcount: '793'
+ht-degree: 0%
 
 ---
 
@@ -36,17 +36,17 @@ Du kan dela upp objektdelegering baserat på arbetsflödesmodellerna. Du kan til
 
 Utför följande steg för att aktivera inställningen Frånvarande för ditt konto och delegera dina inkorgsobjekt till en annan användare:
 
-1. Logga in på din AEM. Tryck på ![Inkorg](assets/bell.svg) ikon och tryck **[!UICONTROL View All]**. En lista över dina inkorgsobjekt visas.
-1. Tryck på ![Visa väljare](assets/viewlist.svg) eller ![Visa väljare](assets/calendar.svg) -ikonen bredvid **[!UICONTROL Create]** knapp och knacka **[!UICONTROL Settings]**. Dialogrutan Inställningar visas.
+1. Logga in på din AEM. Välj ![Inkorg](assets/bell.svg) ikon och markera **[!UICONTROL View All]**. En lista över dina inkorgsobjekt visas.
+1. Välj ![Visa väljare](assets/viewlist.svg) eller ![Visa väljare](assets/calendar.svg) -ikonen bredvid **[!UICONTROL Create]** knapp och markera **[!UICONTROL Settings]**. Dialogrutan Inställningar visas.
 1. Öppna **[!UICONTROL Out of Office]** i inställningsdialogrutan.
-1. Tryck på **[!UICONTROL Enable/Disable]** om du vill aktivera inställningen Frånvarande.
+1. Välj **[!UICONTROL Enable/Disable]** om du vill aktivera inställningen Frånvarande.
 1. Ange **[!UICONTROL Start Time]**  och **[!UICONTROL End Time]** för inställningen. Objekten delegeras endast under den angivna perioden. Lämna **[!UICONTROL End Time]** fältet är tomt för att delegera objekt för en obestämd tidsperiod.
 1. Välj **[!UICONTROL Forward my items during this period]** kryssrutan. Om du inte markerar alternativet och inte anger en tilldelad användare vidarebefordras inte objekten till någon användare. Även om du är borta och inställningen är aktiverad finns objekten kvar i Inkorgen.
-1. Tryck på **[!UICONTROL Add Assignee]**. Ange en användare i **[!UICONTROL Assignee]** så att du kan delegera objekten. Ange **[!UICONTROL Workflow Model]** så att du kan delegera till den angivna användaren. Du kan välja mer än en arbetsflödesmodell.
+1. Välj **[!UICONTROL Add Assignee]**. Ange en användare i **[!UICONTROL Assignee]** så att du kan delegera objekten. Ange **[!UICONTROL Workflow Model]** så att du kan delegera till den angivna användaren. Du kan välja mer än en arbetsflödesmodell.
 
    Om du dessutom vill tilldela alla objekt, oavsett arbetsflödesmodell, till en viss användare väljer du **[!UICONTROL All Workflows]** i listrutan Arbetsflödesmodell. <br>
 
-   Om du vill tilldela objekt till en viss användare för alla arbetsflödesmodeller utom ett fåtal, väljer du **[!UICONTROL All Workflows]** i listrutan Arbetsflödesmodell: tryck **[!UICONTROL + Add Exceptions]**och ange vilka arbetsflödesmodeller som ska utelämnas.
+   Om du vill tilldela objekt till en viss användare för alla arbetsflödesmodeller utom ett fåtal, väljer du **[!UICONTROL All Workflows]** i listrutan Arbetsflödesmodell väljer du **[!UICONTROL + Add Exceptions]**och ange vilka arbetsflödesmodeller som ska utelämnas.
    <br>
 
    Upprepa steget så att du kan lägga till fler tilldelningar. <br>
@@ -55,7 +55,7 @@ Utför följande steg för att aktivera inställningen Frånvarande för ditt ko
    >
    >Tilldelningsordningen är viktig. När ett objekt tilldelas till en användare som har aktiverat inställningen för frånvaro utvärderas objektet mot den angivna listan över tilldelningar i ordningen som tilldelningarna läggs till. När ett objekt matchar villkoren tilldelas det till den som tilldelats objektet och nästa som tilldelats kontrolleras inte.
 
-1. Tryck på **[!UICONTROL Save]**. Inställningen börjar gälla vid angivet startdatum och angiven starttid. Om du loggar in när du inte är på kontoret beaktas du inte på kontoret förrän du ändrar dina inställningar.
+1. Välj **[!UICONTROL Save]**. Inställningen börjar gälla vid angivet startdatum och angiven starttid. Om du loggar in när du inte är på kontoret beaktas du inte på kontoret förrän du ändrar dina inställningar.
 
 Nu tilldelas objekt som du har tilldelats under frånvaroperioden automatiskt till den angivna tilldelade personen.
 ![Utanför kontoret](assets/out-of-office.png)

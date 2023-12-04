@@ -7,9 +7,9 @@ topic-tags: hTML5_forms
 docset: aem65
 feature: Mobile Forms
 exl-id: 7c8d501f-c953-495e-8bac-1f66fd99c783
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '478'
+source-wordcount: '473'
 ht-degree: 0%
 
 ---
@@ -40,4 +40,4 @@ Det främsta målet för HTML5-formulär är pekenheter. Därför har en ny kont
 
 #### RTF-format {#rich-text-format}
 
-Du kan konvertera ett textfält till ett RTF-fält. En lista med formateringsalternativ läggs till i textfältet. Om du vill konvertera öppnar du Forms Designer och trycker på textfältet i **[!UICONTROL Design View]**. I **[!UICONTROL Field]** flik, välja **[!UICONTROL Rich Text]** från **[!UICONTROL Field Format]** listruta. När XFA-formuläret återges som ett HTML5-formulär återges nu fältet som ett RTF-fält. Tryck ![Maximera](assets/maximize_icon.svg) om du vill visa ytterligare formateringsalternativ.
+Du kan konvertera ett textfält till ett RTF-fält. En lista med formateringsalternativ läggs till i textfältet. Om du vill konvertera öppnar du Forms Designer och markerar textfältet i **[!UICONTROL Design View]**. I **[!UICONTROL Field]** flik, välja **[!UICONTROL Rich Text]** från **[!UICONTROL Field Format]** listruta. När XFA-formuläret återges som ett HTML5-formulär återges nu fältet som ett RTF-fält. Välj ![Maximera](assets/maximize_icon.svg) om du vill visa ytterligare formateringsalternativ.

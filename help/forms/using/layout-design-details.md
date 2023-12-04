@@ -7,9 +7,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 docset: aem65
 feature: Correspondence Management
 exl-id: 9e1b0067-c7dc-4bbb-a209-d674592be858
-source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '2170'
+source-wordcount: '2171'
 ht-degree: 0%
 
 ---
@@ -56,7 +56,7 @@ När du har analyserat layouten som krävs för att skapa interaktiv kommunikati
 
 Utför följande steg för att använda delformulär i en XDP-mall:
 
-1. Öppna Forms Designer och välj **Fil** > **Nytt** > **Använd ett tomt formulär**, trycka **Nästa** och sedan trycka **Slutför** om du vill öppna formuläret för att skapa en mall.
+1. Öppna Forms Designer och välj **Fil** > **Nytt** > **Använd ett tomt formulär**, markera **Nästa** och sedan markera **Slutför** om du vill öppna formuläret för att skapa en mall.
 
    Se till att **Objektbibliotek** och **Objekt** alternativen är markerade på menyn **Fönster** -menyn.
 
@@ -90,7 +90,7 @@ Utför följande steg för att använda delformulär i en XDP-mall:
    1. Navigera till platsen där du vill spara filen och ange ett namn för XDP-mallen.
    1. Välj **.xdp** från **Spara som typ** listruta.
 
-   1. Tryck **Spara**.
+   1. Välj **Spara**.
 
 ### Använda bildfältskomponenten i en XDP-mall {#use-image-field-component-in-an-xdp-template}
 
@@ -124,9 +124,9 @@ Utför följande steg för att använda tabellkomponenten i XDP-mallen med Forms
 
    1. Ange antalet rader och kolumner för tabellen.
    1. Välj **Inkludera rubrikrad i tabell** om du vill ta med en rad för tabellrubriken.
-   1. Tryck **OK**.
+   1. Välj **OK**.
 
-1. Tryck **+** i den vänstra rutan bredvid tabellens namn högerklickar du på cellnamnen i rubriken och andra rader och väljer **Byt namn på objekt** om du vill byta namn på tabellcellerna.
+1. Välj **+** i den vänstra rutan bredvid tabellens namn högerklickar du på cellnamnen i rubriken och andra rader och väljer **Byt namn på objekt** om du vill byta namn på tabellcellerna.
 1. Klicka på tabellrubrikens textfält i dialogrutan **Designvy** och döp om dem.
 1. Dra och släpp **Textfält** -komponenten från **Objektbibliotek** till varje tabellcell i **Designvy**. Utför det här steget om du vill kunna binda tabellceller till formulärdatamodellsobjekten när du redigerar interaktiv kommunikation.
 
@@ -141,15 +141,15 @@ Utför följande steg för att använda tabellkomponenten i XDP-mallen med Forms
    1. Navigera till platsen där du vill spara filen och ange namnet på XDP-mallen.
    1. Välj **.xdp** från **Spara som typ** listruta.
 
-   1. Tryck **Spara**.
+   1. Välj **Spara**.
 
 ### Överför XDP-mall till AEM Forms-servern {#uploadxdptemplate}
 
 När du har skapat en XDP-mall med Forms Designer måste du överföra den till AEM Forms-servern så att mallen kan användas när du skapar den interaktiva kommunikationen.
 
 1. Välj **Forms** > **Forms och dokument**.
-1. Tryck **Skapa** > **Filöverföring**.
-1. Navigera till XDP-mallens plats i det lokala filsystemet och tryck på **Öppna** om du vill importera XDP-mallen till AEM Forms-servern.
+1. Välj **Skapa** > **Filöverföring**.
+1. Navigera till XDP-mallens plats i det lokala filsystemet och välj **Öppna** om du vill importera XDP-mallen till AEM Forms-servern.
 
 ## Använda schema {#using-schema}
 

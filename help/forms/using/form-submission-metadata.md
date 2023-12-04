@@ -10,9 +10,9 @@ discoiquuid: 2c971da0-5bd5-40d1-820d-4efc2a44b49d
 docset: aem65
 feature: Adaptive Forms
 exl-id: 5ca850e3-30f0-4384-b615-356dc3c2ad0d
-source-git-commit: e2a3470784beb04c2179958ac6cb98861acfaa71
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '738'
+source-wordcount: '740'
 ht-degree: 0%
 
 ---
@@ -34,8 +34,8 @@ Ta ett exempel på ett formulär som innehåller e-post-ID och telefonnummer. N�
 Gör så här för att lägga till ett element i metadata:
 
 1. Öppna det anpassningsbara formuläret i redigeringsläge.\
-   Om du vill öppna formuläret i redigeringsläge markerar du formuläret i formulärhanteraren och trycker på **Öppna**.
-1. Markera en komponent i redigeringsläget och tryck på ![fältnivå](assets/field-level.png) > **Adaptiv formulärbehållare** och sedan trycka ![cmppr](assets/cmppr.png).
+   Om du vill öppna formuläret i redigeringsläge markerar du formuläret i formulärhanteraren och väljer **Öppna**.
+1. Markera en komponent i redigeringsläget och välj ![fältnivå](assets/field-level.png) > **Adaptiv formulärbehållare** och sedan markera ![cmppr](assets/cmppr.png).
 1. Klicka på **Metadata**.
 1. Klicka på i avsnittet Metadata **Lägg till**.
 1. Använd fältet Värde på fliken Metadata för att lägga till skript. De skript du lägger till samlar in data från element i formuläret och beräknar värden som matas in i metadata.

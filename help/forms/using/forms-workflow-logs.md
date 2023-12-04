@@ -6,10 +6,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: publish
 docset: aem65
 exl-id: 601c8d95-0d1a-4945-a522-e85d3e9fc4ae
-source-git-commit: 000c22028259eb05a61625d43526a2e8314a1d60
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
 source-wordcount: '282'
-ht-degree: 6%
+ht-degree: 5%
 
 ---
 
@@ -81,12 +81,12 @@ Gör så här för att aktivera felsökningsloggning för AEM Forms-arbetsflöde
    https://&#39;[server]:[port]&#39;/system/console/configMgr
 
 1. Välj **[!UICONTROL Sling]** > **[!UICONTROL Log Support]**.
-1. Tryck på **[!UICONTROL Add new Logger.]**
+1. Välj **[!UICONTROL Add new Logger.]**
 1. Välj **[!UICONTROL Debug]** som **[!UICONTROL Log Level]**.
 1. Ange platsen för loggfilen. Standardplatsen för loggfilen är: *loggar\error.log*
 1. Ange paketets namn som **com.adobe.granite.workflow.core** i **[!UICONTROL Logger]** kolumn.
 
-   Om du utför dessa steg kan du lagra felsökningsloggarna för **com.adobe.granite.workflow.core** paket. Tryck **[!UICONTROL +]** och lägg till följande paketnamn i listan:
+   Om du utför dessa steg kan du lagra felsökningsloggarna för **com.adobe.granite.workflow.core** paket. Välj **[!UICONTROL +]** och lägg till följande paketnamn i listan:
 
    * com.adobe.fd.workflow
    * com.adobe.fd.workspace
