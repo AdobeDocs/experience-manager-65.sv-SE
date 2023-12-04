@@ -4,9 +4,9 @@ description: Installera AEM Forms Document Services för att skapa, sammanställ
 topic-tags: installing
 role: Admin
 exl-id: 5d48e987-16c2-434b-8039-c82181d2e028
-source-git-commit: 03ed3606e89d87bf2f95b56a1eeb6b7dc4bec13a
+source-git-commit: 2ad9cea10bcd152f4d2d874553bdbd3133dbe847
 workflow-type: tm+mt
-source-wordcount: '5364'
+source-wordcount: '5342'
 ht-degree: 0%
 
 ---
@@ -42,7 +42,7 @@ AEM Forms tillhandahåller en uppsättning OSGi-tjänster för att utföra olika
 
   Signaturtjänsten får åtkomst till certifikat och autentiseringsuppgifter som lagras i förtroendearkivet. Mer information finns i [Signaturtjänst](/help/forms/using/aem-document-services-programmatically.md).
 
-AEM Forms är en kraftfull plattform för större företag och dokumenttjänster är bara en av AEM Forms funktioner. En fullständig lista över funktioner finns på [Introduktion till AEM Forms](/help/forms/using/introduction-aem-forms.md).
+AEM Forms är en kraftfull plattform för större företag och dokumenttjänsterna är bara en av AEM Forms funktioner. En fullständig lista över funktioner finns på [Introduktion till AEM Forms](/help/forms/using/introduction-aem-forms.md).
 
 ## Distributionstopologi {#deployment-topology}
 
@@ -669,10 +669,6 @@ Innan du utför följande kontroller bör du kontrollera att [Systemberedskap](#
 
 +++
 
-+++Microsoft Office 2019 körs inte på Microsoft Windows Server 2019
-
-* Kontrollera att du inte har någon aktiv fjärranslutning till AEM.
-
 +++HTML till konverteringsproblem i PDF
 
 * Se till att teckensnittskataloger läggs till i användargränssnittet för PDF Generator config.
@@ -791,7 +787,9 @@ När en användare försöker konvertera Word- eller Excel-filer till PDF på Mi
 
 *Felmeddelande från den primära konverteraren: ALC-PDG-015-003-Systemet kan inte öppna indatafilen. Skicka filen igen eller kontakta systemadministratören.*
 
-Information om hur du löser problemen finns i [Det går inte att konvertera Word- eller Excel-filen till PDF på Windows Server](/help/forms/using/disable-uac-for-pdfgconfiguration.md).
+Information om hur du löser problemet finns i [Det går inte att konvertera Word- eller Excel-filen till PDF på Windows Server](/help/forms/using/disable-uac-for-pdfgconfiguration.md).
+
++++
 
 +++ Det går inte att konvertera Excel-filer till PDF på Windows Server 2019
 
@@ -800,14 +798,17 @@ När du konverterar Microsoft Excel 2019 till PDF på Microsoft Windows Server 2
 * När du använder tjänsten PDF Generator bör din Windows-dator inte ha någon aktiv fjärranslutning till AEM (Windows RDP-session).
 * Standardskrivaren måste ställas in på Adobe PDF.
 
->[!NOTE]
-* För Apple macOS och Ubuntu OS behöver du inte konfigurera de ovannämnda inställningarna.
+  >[!NOTE]
+  * För Apple macOS och Ubuntu OS behöver du inte konfigurera de ovannämnda inställningarna.
+
++++
 
 +++ Det går inte att konvertera XPS-filer till PDF
 
 För att lösa problemet [skapa en funktionsspecifik registernyckel i Windows](https://helpx.adobe.com/in/acrobat/kb/unable-convert-xps-to-pdfs.html).
 
 +++
+
 
 ## Nästa steg {#next-steps}
 
