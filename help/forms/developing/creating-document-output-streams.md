@@ -9,7 +9,7 @@ role: Developer
 exl-id: a521bfac-f417-4002-9c5c-8d7794d3eec7
 source-git-commit: 5e56441d2dc9b280547c91def8d971e7b1dfcfe3
 workflow-type: tm+mt
-source-wordcount: '18956'
+source-wordcount: '18860'
 ht-degree: 0%
 
 ---
@@ -903,14 +903,14 @@ Skicka ett dokument som hämtats från databasen med hjälp av utdatatjänsten o
 
 1. Hämta formulärdesignen från AEM Forms Repository.
 
-   Anropa `ResourceRepositoryClient` objektets `readResourceContent` och skicka ett strängvärde som anger URI-platsen till XDP-filen. Till exempel, `/Applications/FormsApplication/1.0/FormsFolder/Loan.xdp`. Detta värde är obligatoriskt. Den här metoden returnerar en `com.adobe.idp.Document` -instans som representerar XDP-filen.
+   Anropa `ResourceRepositoryClient` objektets `readResourceContent` och skicka ett strängvärde som anger URI-platsen till XDP-filen. Till exempel: `/Applications/FormsApplication/1.0/FormsFolder/Loan.xdp`. Detta värde är obligatoriskt. Den här metoden returnerar en `com.adobe.idp.Document` -instans som representerar XDP-filen.
 
 1. Rendera det icke-interaktiva PDF-formuläret.
 
    Anropa `OutputClient` objektets `generatePDFOutput2` och skicka följande värden:
 
    * A `TransformationFormat` uppräkningsvärde. Om du vill generera ett dokument i PDF anger du `TransformationFormat.PDF`.
-   * Ett strängvärde som anger innehållsroten där de ytterligare resurserna, t.ex. bilderna, finns. Till exempel, `repository:///Applications/FormsApplication/1.0/FormsFolder/`.
+   * Ett strängvärde som anger innehållsroten där de ytterligare resurserna, t.ex. bilderna, finns. Till exempel: `repository:///Applications/FormsApplication/1.0/FormsFolder/`.
    * A `com.adobe.idp.Document` objektet som representerar formulärdesignen (använd instansen som returneras av `ResourceRepositoryClient` objektets `readResourceContent` metod).
    * A `PDFOutputOptionsSpec` objekt som innehåller körningsalternativ för PDF.
    * A `RenderOptionsSpec` objekt som innehåller alternativ för återgivning vid körning.

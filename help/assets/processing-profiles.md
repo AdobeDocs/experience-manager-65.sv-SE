@@ -11,7 +11,7 @@ feature: Workflow,Asset Management,Renditions
 exl-id: 3d9367ed-5a02-43aa-abd9-24fae457d4c5
 source-git-commit: 5e56441d2dc9b280547c91def8d971e7b1dfcfe3
 workflow-type: tm+mt
-source-wordcount: '1320'
+source-wordcount: '1338'
 ht-degree: 0%
 
 ---

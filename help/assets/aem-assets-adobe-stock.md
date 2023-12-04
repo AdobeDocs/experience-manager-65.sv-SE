@@ -8,8 +8,8 @@ exl-id: 8ec597df-bb64-4768-bf9c-e8cca4fea25b
 hide: true
 source-git-commit: 5e56441d2dc9b280547c91def8d971e7b1dfcfe3
 workflow-type: tm+mt
-source-wordcount: '2328'
-ht-degree: 3%
+source-wordcount: '2293'
+ht-degree: 2%
 
 ---
 
@@ -83,7 +83,7 @@ To allow communication between [!DNL Experience Manager] and [!DNL Adobe Stock],
 
 Integrera [!DNL Experience Manager] och [!DNL Adobe Stock]utför du följande steg i den listade sekvensen:
 
-1. [Hämta ett offentligt certifikat](#public-certificate)
+1. [Hämta offentligt certifikat](#public-certificate)
 
    I [!DNL Experience Manager], skapa ett IMS-konto och generera ett offentligt certifikat (offentlig nyckel).
 
@@ -95,7 +95,7 @@ Integrera [!DNL Experience Manager] och [!DNL Adobe Stock]utför du följande st
 
    I [!DNL Experience Manager]konfigurerar du IMS-kontot med hjälp av tjänstkontots autentiseringsuppgifter och JWT-nyttolast.
 
-1. [Konfigurera molntjänsten](#configure-the-cloud-service)
+1. [Konfigurera molntjänst](#configure-the-cloud-service)
 
    I [!DNL Experience Manager], konfigurera och [!DNL Adobe Stock] molntjänst som använder IMS-kontot.
 
@@ -109,7 +109,7 @@ IMS-konfigurationen har två steg:
 * [Hämta ett offentligt certifikat](#public-certificate)
 * [Konfigurera IMS-konto](#create-ims-account-configuration)
 
-### Hämta ett offentligt certifikat {#public-certificate}
+### Hämta offentligt certifikat {#public-certificate}
 
 Den offentliga nyckeln (certifikatet) autentiserar din produktprofil i Adobe Developer Console.
 
@@ -203,7 +203,7 @@ Så här konfigurerar du IMS-kontot:
    ![hälsokontroll](assets/aem-stock-healthcheck.png)
 
 
-### Konfigurera molntjänsten {#configure-the-cloud-service}
+### Konfigurera molntjänst {#configure-the-cloud-service}
 
 Konfigurera [!DNL Adobe Stock] molntjänst:
 
@@ -327,7 +327,7 @@ En gång en [!DNL Adobe Stock] mediefilen är licensierad i [!DNL Experience Man
 
 ![Sök efter [!DNL Adobe Stock] resurser och filtrera resultat från [!DNL Adobe Experience Manager] arbetsyta](assets/adobe-stock-search-results-workspace.png)
 
-**A.**[!DNL Adobe Stock] Sök efter resurser som liknar de resurser vars ID har angetts. **B.** Sök efter resurser som matchar ditt val av form eller orientering. **C.** Sök efter en eller flera resurstyper som stöds **D.** Öppna eller komprimera filterrutan **E.** Licensiera och spara den valda resursen i [!DNL Experience Manager] **F.** Spara resursen i [!DNL Experience Manager] med vattenstämpel **G.** Utforska resurser på [!DNL Adobe Stock] webbplatsen som liknar den valda resursen **H.** Visa markerade resurser på [!DNL Adobe Stock] webbplats **Jag.** Antal valda resurser från sökresultaten **J.** Växla mellan kortvyn och listvyn
+**S.** Sök efter resurser som liknar de resurser vars [!DNL Adobe Stock] ID anges. **B.** Sök efter resurser som matchar ditt val av form eller orientering. **C.** Sök efter en eller flera resurstyper som stöds **D.** Öppna eller komprimera filterrutan **E.** Licensiera och spara den valda resursen i [!DNL Experience Manager] **F.** Spara resursen i [!DNL Experience Manager] med vattenstämpel **G.** Utforska resurser på [!DNL Adobe Stock] webbplatsen som liknar den valda resursen **H.** Visa markerade resurser på [!DNL Adobe Stock] webbplats **Jag.** Antal valda resurser från sökresultaten **J.** Växla mellan kortvyn och listvyn
 
 ### Hitta resurser {#find-assets}
 

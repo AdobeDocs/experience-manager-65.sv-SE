@@ -5,7 +5,7 @@ feature: Content Fragments,GraphQL API
 exl-id: beae1f1f-0a76-4186-9e58-9cab8de4236d
 source-git-commit: 5e56441d2dc9b280547c91def8d971e7b1dfcfe3
 workflow-type: tm+mt
-source-wordcount: '4847'
+source-wordcount: '4781'
 ht-degree: 0%
 
 ---
@@ -63,7 +63,7 @@ Mer information om GraphQL API finns i följande avsnitt (bland annat):
 
 * At [graphql.com](https://graphql.com):
 
-   * [Självstudiekurser](https://graphql.com/tutorials/)
+   * [Tutorials](https://graphql.com/tutorials/)
 
 
 Implementeringen av GraphQL för AEM baseras på GraphQL Java™-standardbibliotek. Se:
@@ -253,7 +253,7 @@ GraphQL för AEM har stöd för en lista med typer. Alla Content Fragment Model-
 |--- |--- |--- |
 | Enkelradig text | `String`, `[String]` |  Används för enkla strängar som författarnamn och platsnamn. |
 | Flerradstext | `String` |  Används för att skriva ut text, t.ex. brödtexten i en artikel |
-| Siffra |  `Float`, `[Float]` | Används för att visa flyttal och reguljära tal |
+| Nummer |  `Float`, `[Float]` | Används för att visa flyttal och reguljära tal |
 | Boolean |  `Boolean` |  Används för att visa kryssrutor → enkla sant/falskt-satser |
 | Datum och tid | `Calendar` |  Används för att visa datum och tid i ett ISO 8086-format. Beroende på vilken typ som valts finns det tre aromer som kan användas i AEM GraphQL: `onlyDate`, `onlyTime`, `dateTime` |
 | Uppräkning |  `String` |  Används för att visa ett alternativ från en lista med alternativ som definieras när modellen skapas |

@@ -1,6 +1,6 @@
 ---
-title: Skapa tillgängligt innehåll (WCAG 2.0-överensstämmelse)
-description: WCAG 2.0 består av en uppsättning teknikoberoende riktlinjer och framgångskriterier för att göra webbinnehåll tillgängligt för och användbart för personer med funktionshinder.
+title: Skapa hjälpmedelsanpassat innehåll (WCAG 2.0-överensstämmelse)
+description: WCAG 2.0 består av en uppsättning teknikoberoende riktlinjer och framgångskriterier som gör webbinnehåll tillgängligt för och användbart för personer med funktionshinder.
 page-status-flag: de-activated
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -9,12 +9,12 @@ content-type: reference
 exl-id: 01c69aa9-2623-42dc-9e2d-62bc5e01cf0e
 source-git-commit: 5e56441d2dc9b280547c91def8d971e7b1dfcfe3
 workflow-type: tm+mt
-source-wordcount: '9148'
-ht-degree: 6%
+source-wordcount: '9100'
+ht-degree: 4%
 
 ---
 
-# Skapa tillgängligt innehåll (WCAG 2.0-överensstämmelse){#creating-accessible-content-wcag-conformance}
+# Skapa hjälpmedelsanpassat innehåll (WCAG 2.0-överensstämmelse){#creating-accessible-content-wcag-conformance}
 
 >[!CAUTION]
 >
@@ -26,7 +26,7 @@ ht-degree: 6%
 >* [En snabbguide till WCAG 2.1](/help/managing/qg-wcag.md)
 >* [Skapa tillgängligt innehåll (WCAG 2.1-överensstämmelse)](/help/sites-authoring/creating-accessible-content.md)
 
-WCAG 2.0 består av en uppsättning teknikoberoende riktlinjer och framgångskriterier för att göra webbinnehåll tillgängligt för och användbart för personer med funktionshinder.
+WCAG 2.0 består av en uppsättning teknikoberoende riktlinjer och framgångskriterier som gör webbinnehåll tillgängligt för och användbart för personer med funktionshinder.
 
 >[!NOTE]
 >
@@ -447,7 +447,7 @@ Tillgängliga tabeller använder dessutom följande element och attribut:
 
 >[!NOTE]
 >
-Som standard är dessa element och attribut inte direkt tillgängliga, men systemadministratören kan lägga till stöd för dessa värden i dialogrutan **Tabellegenskaper**[ (se Lägga till stöd för ytterligare HTML-element och attribut](/help/sites-administering/rte-accessible-content.md#add-support-for-more-html-elements-and-attributes)).
+Som standard är dessa element och attribut inte direkt tillgängliga, men det är möjligt för systemadministratören att lägga till stöd för dessa värden i **Tabellegenskaper** (se [Stöd för ytterligare element och attribut i HTML](/help/sites-administering/rte-accessible-content.md#add-support-for-more-html-elements-and-attributes)).
 
 När en **Tabell** kan du konfigurera **Tabellegenskaper** genom att använda dialogrutan.
 
@@ -941,7 +941,7 @@ Om det finns en grupp av relaterade kontroller, till exempel **Alternativgrupp**
 
 ![Lägger till objekt i alternativgruppen. Grupptiteln är &#39;Kontakta mig via&#39; - definieras i fältet Titel.](assets/chlimage_1-24a.png)
 
-Det finns dock ingen programmatisk koppling mellan grupptiteln och alternativknapparna själva. Mallredigerare måste omsluta titeln i `fieldset` och `legend` -taggar för att skapa den här associationen och detta kan bara göras genom att redigera sidans källkod. En systemadministratör kan också lägga till stöd för dessa element så att de visas i dialogrutan **Fältegenskaper**[ (se Lägga till stöd för ytterligare HTML-element och attribut](/help/sites-administering/rte-accessible-content.md#add-support-for-more-html-elements-and-attributes)).
+Det finns dock ingen programmatisk koppling mellan grupptiteln och alternativknapparna själva. Mallredigerare måste omsluta titeln i `fieldset` och `legend` -taggar för att skapa den här associationen och detta kan bara göras genom att redigera sidans källkod. En systemadministratör kan också lägga till stöd för dessa element så att de visas i **Fältegenskaper** dialogruta (se [Stöd för ytterligare element och attribut i HTML](/help/sites-administering/rte-accessible-content.md#add-support-for-more-html-elements-and-attributes)).
 
 #### Ytterligare överväganden för Forms {#additional-considerations-for-forms}
 

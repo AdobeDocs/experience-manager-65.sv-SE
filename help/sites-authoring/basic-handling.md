@@ -9,8 +9,8 @@ docset: aem65
 exl-id: ef1a3997-feb4-4cb0-9396-c8335b69bb10
 source-git-commit: 5e56441d2dc9b280547c91def8d971e7b1dfcfe3
 workflow-type: tm+mt
-source-wordcount: '2987'
-ht-degree: 2%
+source-wordcount: '2985'
+ht-degree: 1%
 
 ---
 
@@ -90,7 +90,7 @@ Följande konsoler finns i Navigation:
    <td><strong>Syfte</strong></td>
   </tr>
   <tr>
-   <td>Assets<br /> </td>
+   <td>Resurser<br /> </td>
    <td>Med dessa konsoler kan du importera och <a href="/help/assets/home.md">hantera digitala resurser</a> som bilder, videor, dokument och ljudfiler. Dessa resurser kan sedan användas av alla webbplatser som körs på samma AEM. </td>
   </tr>
   <tr>
@@ -102,7 +102,7 @@ Följande konsoler finns i Navigation:
    <td>På så sätt kan du hantera produkter, produktkataloger och beställningar som är kopplade till dina <a href="/help/commerce/cif-classic/administering/ecommerce.md">Handel</a> webbplatser.</td>
   </tr>
   <tr>
-   <td>Experience Fragments</td>
+   <td>Upplevelsefragment</td>
    <td>An <a href="/help/sites-authoring/experience-fragments.md">Experience Fragment</a> är en fristående upplevelse som kan återanvändas i olika kanaler och som har variationer, vilket besparar problem med att kopiera och klistra in upplevelser eller delar av upplevelser upprepade gånger.</td>
   </tr>
   <tr>
@@ -110,7 +110,7 @@ Följande konsoler finns i Navigation:
    <td>Med konsolen kan du skapa, hantera och bearbeta <a href="/help/forms/home.md">formulär och dokument</a>.</td>
   </tr>
   <tr>
-   <td>Personanpassning</td>
+   <td>Personalisering</td>
    <td>Den här konsolen tillhandahåller en <a href="/help/sites-authoring/personalization.md">ramverk med verktyg för att skapa riktat innehåll och presentera personaliserade upplevelser</a>.</td>
   </tr>
   <tr>
@@ -146,7 +146,7 @@ Rubriken visas alltid längst upp på skärmen. De flesta alternativen i huvudet
 
   ![länken Adobe Experience Manager](assets/screen_shot_2018-03-23at103615.png)
 
-* [Sökning](/help/sites-authoring/search.md)
+* [Sök](/help/sites-authoring/search.md)
 
   ![Sökning](do-not-localize/screen_shot_2018-03-23at103542.png)
 
@@ -552,7 +552,7 @@ Med tidslinjekolumnen kan du:
 
       * och Visa alla
 
-* [Lägg till/visa kommentarer om det markerade objektet. ](#timelineaddingandviewingcomments) Rutan **Kommentar** visas längst ned i händelselistan. Om du skriver en kommentar följt av Retur registreras kommentaren. Den visas när **Kommentarer** eller **Visa alla** markeras.
+* [Lägga till/visa kommentarer](#timelineaddingandviewingcomments) om det markerade objektet. Rutan **Kommentar** visas längst ned i händelselistan. Om du skriver en kommentar följt av Retur registreras kommentaren. Den visas när **Kommentarer** eller **Visa alla** markeras.
 
 * Specifika konsoler har ytterligare funktioner. I Sites-konsolen kan du till exempel göra följande:
 

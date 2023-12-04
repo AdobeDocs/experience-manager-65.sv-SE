@@ -7,7 +7,7 @@ feature: Adaptive Forms
 exl-id: 5c75ce70-983e-4431-a13f-2c4c219e8dde
 source-git-commit: 5e56441d2dc9b280547c91def8d971e7b1dfcfe3
 workflow-type: tm+mt
-source-wordcount: '4725'
+source-wordcount: '4666'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 <span class="preview"> Adobe rekommenderar att man använder modern och utbyggbar datainhämtning [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) for [skapa ny Adaptive Forms](/help/forms/using/create-an-adaptive-form-core-components.md) eller [lägga till adaptiv Forms på AEM Sites-sidor](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-filer, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptiv Forms med baskomponenter. </span>
 
-## Översikt {#overview}
+## Ökning {#overview}
 
 Adobe Experience Manager (AEM)-formulär kan hjälpa er att omvandla komplexa transaktioner till enkla, roliga digitala upplevelser. Det kräver dock samordnade insatser för att implementera, bygga, genomföra och underhålla ett effektivt och produktivt AEM Forms-ekosystem.
 
@@ -127,11 +127,11 @@ AEM Forms erbjuder [regelredigerare](/help/forms/using/rule-editor.md) som gör 
 Regelredigeraren innehåller en visuell redigerare och en kodredigerare för att skriva regler. Tänk på följande när du skriver regler i kodredigeringsläget:
 
 * Använd meningsfulla och unika namn för formulärfält och komponenter för att undvika eventuella konflikter när du skriver regler.
-* Använd `this` för en komponent att referera till sig själv i ett regeluttryck. Det ser till att regeln förblir giltig även om komponentnamnet ändras. Till exempel, `field1.valueCommit script: this.value > 10`.
+* Använd `this` för en komponent att referera till sig själv i ett regeluttryck. Det ser till att regeln förblir giltig även om komponentnamnet ändras. Till exempel: `field1.valueCommit script: this.value > 10`.
 
-* Använd komponentnamn när du refererar till andra formulärkomponenter. Använd `value` för att hämta värdet för ett fält eller en komponent. Till exempel, `field1.value`.
+* Använd komponentnamn när du refererar till andra formulärkomponenter. Använd `value` för att hämta värdet för ett fält eller en komponent. Till exempel: `field1.value`.
 
-* Referera komponenter efter en relativ unik hierarki för att undvika konflikter. Till exempel, `parentName.fieldName`.
+* Referera komponenter efter en relativ unik hierarki för att undvika konflikter. Till exempel: `parentName.fieldName`.
 
 * När du hanterar komplexa eller ofta använda regler bör du överväga att skriva affärslogik som funktioner i ett separat klientbibliotek som du kan ange och återanvända i adaptiva formulär. Klientbiblioteket ska vara ett självständigt bibliotek och inte ha några externa beroenden, förutom jQuery och Underscore.js. Du kan också använda klientbiblioteket för att framtvinga [omvalidering på serversidan](/help/forms/using/configuring-submit-actions.md#server-side-revalidation-in-adaptive-form) av inlämnade formulärdata.
 * Adaptiva formulär innehåller en uppsättning API:er som du kan använda för att kommunicera med och utföra åtgärder på adaptiva formulär. Några av de viktigaste API:erna är följande. Mer information finns i [API-referens för JavaScript-bibliotek för Adaptiv Forms](https://adobe.com/go/learn_aemforms_documentation_63).

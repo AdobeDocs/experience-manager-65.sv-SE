@@ -4,7 +4,7 @@ description: Lär dig hur du optimerar dina GraphQL-frågor när du filtrerar, s
 exl-id: 47d0570b-224e-4109-b94e-ccc369d7ac5f
 source-git-commit: 5e56441d2dc9b280547c91def8d971e7b1dfcfe3
 workflow-type: tm+mt
-source-wordcount: '1965'
+source-wordcount: '1949'
 ht-degree: 0%
 
 ---

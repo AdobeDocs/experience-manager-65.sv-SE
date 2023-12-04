@@ -9,7 +9,7 @@ docset: aem65
 exl-id: baec7fc8-d48c-4bc6-b12b-4bf4eff695ea
 source-git-commit: 5e56441d2dc9b280547c91def8d971e7b1dfcfe3
 workflow-type: tm+mt
-source-wordcount: '1778'
+source-wordcount: '1761'
 ht-degree: 0%
 
 ---
@@ -111,7 +111,7 @@ Nackdelar:
 
 Detta innebär att flera Oak-instanser använder en MongoDB-replikuppsättning över flera datacenter, vilket skapar ett aktivt kluster för AEM. Med flera datacenter ger MongoDB-replikering samma höga tillgänglighet och redundans, men nu även möjligheten att hantera ett datacenteravbrott.
 
-![oakclustermongofailover2datacenters](assets/oakclustermongofailover2datacenters.png)
+![oaklustermongofailover2datacenter](assets/oakclustermongofailover2datacenters.png)
 
 Fördelarna:
 

@@ -8,7 +8,7 @@ topic-tags: platform
 exl-id: b3de1a4a-f334-44bd-addc-463433204c99
 source-git-commit: 5e56441d2dc9b280547c91def8d971e7b1dfcfe3
 workflow-type: tm+mt
-source-wordcount: '2288'
+source-wordcount: '2303'
 ht-degree: 0%
 
 ---
@@ -428,7 +428,7 @@ public class AxisFilter implements VariantFilter {
    * I hybris-fallet äger hybris-servern kundvagnen.
    * I det AEM generiska fallet lagras varukorgar i [ClientContext](/help/sites-administering/client-context.md).
 
-**Personanpassning**
+**Personalisering**
 
 * Driv alltid personaliseringen genom [ClientContext](/help/sites-administering/client-context.md).
 * En ClientContext `/version/` av kundvagnen skapas i samtliga fall:

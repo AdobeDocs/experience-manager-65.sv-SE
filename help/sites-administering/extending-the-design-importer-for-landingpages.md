@@ -9,7 +9,7 @@ docset: aem65
 exl-id: 1b8c6075-13c6-4277-b726-8dea7991efec
 source-git-commit: 5e56441d2dc9b280547c91def8d971e7b1dfcfe3
 workflow-type: tm+mt
-source-wordcount: '3495'
+source-wordcount: '3443'
 ht-degree: 0%
 
 ---
@@ -156,8 +156,8 @@ Om du tar med ovanstående kod i HTML görs följande:
 
 Så här lägger du till en text med en lista:
 
-* 1st
-* 2nd
+* 1:a
+* 2:a
 
 som kan redigeras i RTE-redigeraren:
 
@@ -300,7 +300,7 @@ Taggen HTML om du vill ta med en grafisk länkkomponent i det importerade postnu
 >
 >Om du vill skapa en klickbar grafisk länk måste du kapsla in en ankartagg och bildtaggen inuti en div med `data-cq-component="clickthroughgraphicallink"` -attribut.
 >
->Till exempel, `<div data-cq-component="clickthroughlink"> <a href="https://myURLhere/"><img src="image source here"></a> </div>`
+>Exempel: `<div data-cq-component="clickthroughlink"> <a href="https://myURLhere/"><img src="image source here"></a> </div>`
 >
 >Andra sätt att associera en bild med en ankartagg med CSS stöds inte. Följande kod fungerar till exempel inte:
 >

@@ -7,7 +7,7 @@ feature: Search
 exl-id: 9e33d1c0-232b-458a-ad6a-f595aa541a5a
 source-git-commit: 5e56441d2dc9b280547c91def8d971e7b1dfcfe3
 workflow-type: tm+mt
-source-wordcount: '822'
+source-wordcount: '814'
 ht-degree: 12%
 
 ---
@@ -256,7 +256,7 @@ Följande predikat är tillgängliga som förkonfigurerade ExtJS-widgetar.
 | Egenskap | Typ | Beskrivning |
 |---|---|---|
 | predikateName | Sträng | Predikatets namn. Standardvärdet är `fulltext` |
-| searchCallback |  -funktion | Återanrop för att utlösa sökning vid händelse `keyup`. Standardvärdet är `CQ.wcm.SiteAdmin.doSearch` |
+| searchCallback | Funktion | Återanrop för att utlösa sökning vid händelse `keyup`. Standardvärdet är `CQ.wcm.SiteAdmin.doSearch` |
 
 ### PropertyPredicate {#propertypredicate}
 
@@ -292,8 +292,8 @@ Följande predikat är tillgängliga som förkonfigurerade ExtJS-widgetar.
 | egenskapsnamn | Sträng | Namn på JCR-egenskapen. Standardvärdet är `jcr:content/metadata/cq:tags` |
 | komprimera | Sträng | Komprimera nivå. Standardvärdet är `level1` |
 | triggerSearch | Boolean | Flagga för att utlösa sökning vid kontroll. Standardvärdet är false |
-| searchCallback |  -funktion | Återanrop för att utlösa sökning. Standardvärdet är `CQ.wcm.SiteAdmin.doSearch` |
-| searchTimeoutTime | Siffra | Timeout innan searchCallback aktiveras. Standardvärdet är 800 ms |
+| searchCallback | Funktion | Återanrop för att utlösa sökning. Standardvärdet är `CQ.wcm.SiteAdmin.doSearch` |
+| searchTimeoutTime | Nummer | Timeout innan searchCallback aktiveras. Standardvärdet är 800 ms |
 
 ## Anpassa sökresultat {#customizing-search-results}
 

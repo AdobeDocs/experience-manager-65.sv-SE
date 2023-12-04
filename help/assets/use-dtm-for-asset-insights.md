@@ -7,7 +7,7 @@ feature: Asset Insights,Asset Reports
 exl-id: 80e8f84e-3235-4212-9dcd-6acdb9067893
 source-git-commit: 5e56441d2dc9b280547c91def8d971e7b1dfcfe3
 workflow-type: tm+mt
-source-wordcount: '586'
+source-wordcount: '570'
 ht-degree: 1%
 
 ---
@@ -54,7 +54,7 @@ Utför dessa steg för att aktivera Assets Insights via DTM.
    >* Beroende på var Assets Insights Page Tracker finns (till exempel Experience Manager, CDN och så vidare) kan skriptkällans ursprung kräva ändringar.
    >* För sidspåraren som är värd för Experience Manager ska källan peka på en publiceringsinstans med hjälp av värdnamnet för dispatcher-instansen.
 
-1. Öppna `https://dtm.adobe.com`. Klicka **[!UICONTROL Overview]** i webbegenskapen och klicka **[!UICONTROL Add Tool]** eller öppna ett befintligt Adobe Analytics-verktyg. När du skapar verktyget kan du ange **[!UICONTROL Configuration Method]** till **[!UICONTROL Automatic]**.
+1. Åtkomst `https://dtm.adobe.com`. Klicka **[!UICONTROL Overview]** i webbegenskapen och klicka **[!UICONTROL Add Tool]** eller öppna ett befintligt Adobe Analytics-verktyg. När du skapar verktyget kan du ange **[!UICONTROL Configuration Method]** till **[!UICONTROL Automatic]**.
 
    ![Verktyget Lägg till Adobe Analytics](assets/Add-Adobe-Analytics-Tool.png)
 
