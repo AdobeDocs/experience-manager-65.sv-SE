@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/setting_up_and_managing_domains
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 1f15f028-aa81-478e-97eb-f83a4dc0418c
 exl-id: 30edcef2-e8fa-403a-9850-b8dfeeb9ac65
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 5e56441d2dc9b280547c91def8d971e7b1dfcfe3
 workflow-type: tm+mt
 source-wordcount: '3226'
 ht-degree: 0%
@@ -140,7 +140,7 @@ Om du valde alternativet Aktivera referens i kataloginställningarna anger du ba
 
 Om du använder en företagsdomän kan du mappa inställningen för Business Calendar till ett fält i LDAP-katalogen. Om till exempel varje användarpost i katalogen innehåller en *land* och du vill tilldela affärskalendrar baserat på det land där användaren befinner sig, anger du *land* fältnamn som värde för inställningen för affärskalender. Du kan sedan mappa affärskalendernycklarna (de värden som definierats för *land* i LDAP-katalogen) till affärskalendrar i formulärarbetsflödet.
 
-Mängden utrymme som används för att visa namnet på affärskalendernyckeln på arbetsflödessidorna för formulär är begränsad. Begränsa namnet på affärskalendernyckeln till mindre än 53 tecken så att det inte trunkeras på dessa sidor.
+Mängden utrymme som används för att visa namnet på affärskalendernyckeln på arbetsflödessidorna för formulär är begränsad. Begränsa namnet på affärskalendernyckeln till färre än 53 tecken så att det inte trunkeras på dessa sidor.
 
 **Ändra tidsstämpel:** Om du vill aktivera deltakatalogsynkronisering anger du det här värdet till att ändra TimeStamp. (Se Aktivera katalogsynkronisering av ändringar.)
 
@@ -188,7 +188,7 @@ Mängden utrymme som används för att visa namnet på affärskalendernyckeln p�
 
 **Unik medlemsidentifierare:** Unik identifierare för en användare eller grupp som är medlem i den valda gruppen. Värdet beror på katalogservern. Värdet är objectSID för AD2003, nsuniqueID för Sun One och guid för eDirectory.
 
-Om medlems-DN har angetts med ett icke-DN-attribut använder Hantering av användare Unik identifierare för att fråga LDAP om användarens unika namn så som det motsvarar ett unikt identifierarvärde.
+Om medlems-DN anges med ett icke-DN-attribut använder Hantering av användare Unik identifierare för att fråga LDAP om användarens unika namn så som det motsvarar ett unikt identifierarvärde.
 
 Om DN anges som en unik identifierare behöver du inte konfigurera Unik identifierare för medlem.
 

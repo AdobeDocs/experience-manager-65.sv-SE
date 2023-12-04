@@ -7,7 +7,7 @@ topic-tags: page-authoring
 content-type: reference
 docset: aem65
 exl-id: 4eb0de5e-0306-4166-9cee-1297a5cd14ce
-source-git-commit: 3400df1ecd545aa0fb0e3fcdcc24f629ce4c99ba
+source-git-commit: 5e56441d2dc9b280547c91def8d971e7b1dfcfe3
 workflow-type: tm+mt
 source-wordcount: '1348'
 ht-degree: 0%
@@ -167,7 +167,7 @@ Om du vill visa tidslinjen i dokumentet:
 
    * Alla rader visar publicerade versioner.
 När en sida är aktiverad börjar en ny rad. Varje gång dokumentet redigeras visas en ny färg.
-I exemplet nedan anger den röda linjen att sidan redigerades under tidsramen för den ursprungliga gröna versionen. Den gula raden anger att sidan redigerades någon gång under den röda versionen och så vidare.
+I exemplet nedan anger den röda linjen att sidan redigerades under tidsramen för den ursprungliga gröna versionen. Den gula raden anger att sidan har redigerats någon gång under den röda versionen, och så vidare.
 
    ![chlimage_1-79](assets/chlimage_1-79.png)
 

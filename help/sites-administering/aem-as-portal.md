@@ -7,7 +7,7 @@ topic-tags: integration
 content-type: reference
 docset: aem65
 exl-id: b5f3d3a6-39c0-4aa5-8562-3cc6fa2b9e46
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 5e56441d2dc9b280547c91def8d971e7b1dfcfe3
 workflow-type: tm+mt
 source-wordcount: '6087'
 ht-degree: 0%
@@ -501,7 +501,7 @@ I HTML kan du använda följande platshållare, som ersätts av portleten med re
 
 | Platshållarsträng | Beskrivning |
 |---|---|
-| {name} | Namnet på knappen, till exempel** författare, bakåt, uppdatera** och så vidare. |
+| {name} | Knappens namn, till exempel **författare, tillbaka, uppdatera** och så vidare. |
 | {id} | CSS-id för knappen. |
 | {url} | URL för knappens mål. |
 | {text} | Knappens etikett. |
@@ -762,7 +762,7 @@ Så här konfigurerar du portlet:
 
    >[!NOTE]
    >
-   >Om portleten är konfigurerad för att ansluta till AEM författare och publicera instanser som körs på en annan kontextsökväg än** /** måste du aktivera kraften **CQUrlInfo** i HTML-bibliotekshanterarkonfigurationen för dessa AEM (till exempel via Felix Webconsole) fungerar inte redigering och dialogrutan med inställningar visas inte.
+   >Om portleten är konfigurerad för att ansluta till AEM författare och publicera instanser som körs på en annan kontextsökväg än **/** måste du aktivera kraften **CQUrlInfo** i HTML-bibliotekshanterarkonfigurationen för dessa AEM (till exempel via Felix Webconsole) fungerar inte redigering och dialogrutan med inställningar visas inte.
 
 1. Spara konfigurationsändringarna i programservern.
 

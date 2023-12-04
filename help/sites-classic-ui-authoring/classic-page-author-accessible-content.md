@@ -7,9 +7,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: page-authoring
 content-type: reference
 exl-id: 01c69aa9-2623-42dc-9e2d-62bc5e01cf0e
-source-git-commit: 7d46ba0eaa73d9f7a67034ba81d7fa379aa0112c
+source-git-commit: 5e56441d2dc9b280547c91def8d971e7b1dfcfe3
 workflow-type: tm+mt
-source-wordcount: '9151'
+source-wordcount: '9148'
 ht-degree: 6%
 
 ---
@@ -577,15 +577,15 @@ Kontrollera till exempel att information som anges av färg också finns explici
    <td><p><strong>Tillgänglighet</strong></p> </td>
   </tr>
   <tr>
-   <td><p>Tisdag 16 mars<sup>th</sup></p> </td>
+   <td><p>Tisdag 16 mars</p> </td>
    <td><p>TILLGÄNGLIGA LICENSER</p> </td>
   </tr>
   <tr>
-   <td><p>Onsdag 17 mars<sup>th</p> </td>
+   <td><p>Onsdag 17 mars</p> </td>
    <td><p>TILLGÄNGLIGA LICENSER</p> </td>
   </tr>
   <tr>
-   <td><p>Torsdag 18 mars<sup>th</sup></p> </td>
+   <td><p>Torsdag 18 mars</p> </td>
    <td><p>LÅT UT</p> </td>
   </tr>
  </tbody>

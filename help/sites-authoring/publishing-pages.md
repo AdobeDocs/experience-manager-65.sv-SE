@@ -2,9 +2,9 @@
 title: Publicera innehållssidor
 description: Lär dig publicera innehållssidor i Adobe Experience Manager 6.5.
 exl-id: 61144bbe-6710-4cae-a63e-e708936ff360
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 5e56441d2dc9b280547c91def8d971e7b1dfcfe3
 workflow-type: tm+mt
-source-wordcount: '1662'
+source-wordcount: '1660'
 ht-degree: 6%
 
 ---
@@ -60,7 +60,7 @@ Om du redigerar en sida kan den publiceras direkt från redigeraren.
    * Sidan publiceras direkt om det inte finns några referenser att publicera.
    * Om sidan innehåller referenser som behöver publiceras visas dessa i **Publicera** guide, där du kan
 
-      * Ange vilket av resurserna/taggarna du vill publicera tillsammans med sidan och använd sedan **Publicera** för att slutföra processen.
+      * Ange vilka resurser eller taggar du vill publicera tillsammans med sidan och använd sedan **Publicera** för att slutföra processen.
 
       * Använd **Avbryt** om du vill avbryta åtgärden.
 

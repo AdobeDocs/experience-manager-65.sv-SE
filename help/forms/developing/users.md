@@ -7,7 +7,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 role: Developer
 exl-id: d7c5bb84-a988-4b2e-a587-f4e5b50fea58
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 5e56441d2dc9b280547c91def8d971e7b1dfcfe3
 workflow-type: tm+mt
 source-wordcount: '6218'
 ht-degree: 0%
@@ -101,7 +101,7 @@ I den konfigurations-XML som användarhantering exporterar är rotnoden som har 
 
 När du använder Active Directory är det viktigt att du förstår att `objectSID` värdet är inte ett unikt attribut i flera domäner. Det här värdet lagrar ett objekts säkerhetsidentifierare. I en miljö med flera domäner (till exempel ett träd med domäner) `objectSID` värdet kan vara ett annat.
 
-An `objectSID` värdet ändras om ett objekt flyttas från en Active Directory-domän till en annan. Vissa objekt har samma `objectSID` var som helst i domänen. Grupper som BUILTIN\Administrators, BUILTIN\Power Users osv. har samma `objectSID` värde oavsett domäner. Dessa `objectSID` är välkända.
+An `objectSID` värdet ändras om ett objekt flyttas från en Active Directory-domän till en annan. Vissa objekt har samma `objectSID` var som helst i domänen. Till exempel har grupper som BUILTIN\Administrators, BUILTIN\Power Users o.s.v. samma `objectSID` värde oavsett domäner. Dessa `objectSID` är välkända.
 
 ## Lägga till användare {#adding-users}
 

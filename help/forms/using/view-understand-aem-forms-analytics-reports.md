@@ -1,16 +1,12 @@
 ---
 title: Visa och förstå AEM Forms analysrapporter
-seo-title: View and understand AEM Forms analytics reports
 description: AEM Forms kan integreras med Adobe Analytics och ger er en sammanfattning och detaljerad analys av era publicerade adaptiva formulär.
-seo-description: AEM Forms integrates with Adobe Analytics and provides you summary and detailed analytics about your published adaptive forms.
-uuid: b15ba5f3-aea7-40f5-893e-aaf3834cbc33
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: integrations
-discoiquuid: 3690fa80-6332-4df8-afea-77b5490fe0d1
 docset: aem65
 exl-id: c5a4e6f6-f331-41e9-a0a9-51a30df6e2cd
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 5e56441d2dc9b280547c91def8d971e7b1dfcfe3
 workflow-type: tm+mt
 source-wordcount: '1049'
 ht-degree: 0%
@@ -40,7 +36,7 @@ När en användare interagerar med formuläret registreras interaktionerna och s
 * 2 för att spara
 * 1 för hjälp
 * 1 för varje valideringsfel
-* 1 för formuläråtergivning + 1 för standardpanel besök + 1 för standardfältet 1st
+* 1 för Formuläråtergivning + 1 för standardpaneler går du till + 1 för standardfältet
 * 2 för att överge formuläret
 
 >[!NOTE]
