@@ -2,9 +2,9 @@
 title: Kom igång med AEM Headless
 description: I den här delen av AEM Headless Developer Journey kan du läsa om AEM Headless-krav.
 exl-id: a94794a4-bf8b-4f3b-a761-3f02feedd5c0
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '3032'
+source-wordcount: '2998'
 ht-degree: 0%
 
 ---
@@ -240,7 +240,7 @@ För [typisk headless-implementering med AEM,](#level-1) utvecklaren inte behöv
 
 För att ett projekt ska lyckas måste prestanda beaktas innan något innehåll skapas.
 
-Ni måste förstå era kunders/besökares förväntningar och design för dem. Ange servicenivåmål (SLO) och mät dem för att förstå om du uppfyller användarens förväntningar.
+Se till att ni förstår vad era användare/besökare förväntar sig och hur ni utformar dem. Ange servicenivåmål (SLO) och mät dem för att förstå om du uppfyller användarens förväntningar.
 
 #### Trafikmönster {#traffic-patterns}
 

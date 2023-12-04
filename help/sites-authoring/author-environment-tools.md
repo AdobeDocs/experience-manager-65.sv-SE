@@ -7,10 +7,10 @@ topic-tags: page-authoring
 content-type: reference
 docset: aem65
 exl-id: 3b3c118b-ca35-484b-a62e-7bec98953123
-source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '2227'
-ht-degree: 5%
+source-wordcount: '2246'
+ht-degree: 3%
 
 ---
 
@@ -95,7 +95,7 @@ Det faktiska utseendet och hanteringen beror på vilken enhetstyp du använder:
    * Filtrera komponenter efter namn.
    * Begränsa visningen till en viss grupp med listrutan.
 
-  Om du vill ha en mer detaljerad beskrivning av komponenten kan du klicka eller trycka på informationsikonen bredvid komponenten i **komponentläsaren** (om den är tillgänglig). För **layoutbehållaren**:
+  Om du vill ha en mer detaljerad beskrivning av komponenten kan du klicka på informationsikonen bredvid komponenten i **Komponenter** webbläsare (om tillgängligt). För **layoutbehållaren**:
 
   ![ateat-06](assets/ateat-06.png)
 
@@ -344,7 +344,7 @@ Sökvägsläsaren är ordnad som [kolumnvy](/help/sites-authoring/basic-handling
 
 ![screen_shot_2018-03-22at154521](assets/screen_shot_2018-03-22at154521.png)
 
-* När en resurs har valts **Välj** knappen längst upp till höger i dialogrutan aktiveras. Klicka eller tryck för att bekräfta markeringen eller **Avbryt** för att avbryta.
+* När en resurs har valts **Välj** knappen längst upp till höger i dialogrutan aktiveras. Klicka för att bekräfta markeringen eller **Avbryt** för att avbryta.
 * Om det går att välja flera resurser aktiveras även knappen **Välj** när du väljer en resurs och antalet valda resurser läggs till i det övre högra hörnet fönstret. Klicka **X** bredvid talet för att avmarkera alla.
 * När du navigerar genom trädet visas platsen i de synliga kolumnerna högst upp i dialogrutan. Dessa vägbeskrivningar kan också användas för att snabbt hoppa in i resurshierarkin.
 * Du kan när som helst använda sökfältet högst upp i dialogrutan. Klicka på **X** i sökfältet för att rensa sökningen.

@@ -7,9 +7,9 @@ topic-tags: extending-aem
 content-type: reference
 docset: aem65
 exl-id: bba64ce6-8b74-4be1-bf14-cfdf3b9b60e1
-source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '2582'
+source-wordcount: '2444'
 ht-degree: 0%
 
 ---
@@ -191,7 +191,7 @@ Den nya utrullningskonfigurationen är sedan tillgänglig för dig när du stäl
 
    >[!NOTE]
    >
-   >Du får inte ändra något i `/libs` bana.
+   >Ändra ingenting i dialogrutan `/libs` bana.
    >Detta beror på innehållet i `/libs` skrivs över nästa gång du uppgraderar din instans (och kan mycket väl skrivas över när du installerar en snabbkorrigering eller ett funktionspaket).
    >Den rekommenderade metoden för konfiguration och andra ändringar är:
    >
@@ -212,7 +212,7 @@ Den nya utrullningskonfigurationen är sedan tillgänglig för dig när du stäl
      **Värde**: En valfri beskrivning.
    * **Namn**: `cq:trigger`
      **Typ**: `String`
-     **Värde**: [Utlösare för utrullning](/help/sites-administering/msm-sync.md#rollout-triggers) som ska användas. Välj  från:
+     **Värde**: [Utlösare för utrullning](/help/sites-administering/msm-sync.md#rollout-triggers) som ska användas. Välj bland:
       * `rollout`
       * `modification`
       * `publish`

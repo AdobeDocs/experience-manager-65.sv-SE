@@ -10,9 +10,9 @@ topic-tags: hTML5_forms
 discoiquuid: 3504afe1-abf5-4fbf-a0d2-e093361764bd
 feature: Mobile Forms
 exl-id: 3b8e3323-9ac4-4f5c-8c52-e2186e9169ea
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '267'
+source-wordcount: '265'
 ht-degree: 0%
 
 ---
@@ -42,7 +42,7 @@ Tabellerna som är markerade som *complexTable* följer den inbyggda HTML-render
 
 Om du vill markera en rad som en radrubrik markerar du alla celler i raden, högerklickar på markeringen och klickar sedan på **[!UICONTROL Mark Header]**.
 
-Om du vill markera en cell som kolumnrubrik markerar du en cell i kolumnen, högerklickar på markeringen och klickar sedan på **[!UICONTROL Mark Header]**.
+Markera en cell som kolumnrubrik genom att markera en cell i kolumnen, högerklicka på markeringen och sedan klicka **[!UICONTROL Mark Header]**.
 
 Begränsningar i nya *AccessibleTable* format:
 

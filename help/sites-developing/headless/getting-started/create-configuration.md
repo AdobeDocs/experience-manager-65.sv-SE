@@ -2,7 +2,7 @@
 title: Skapa en guide till Headless-konfiguration
 description: Skapa en konfiguration som ett första steg för att komma igång med headless i AEM 6.5.
 exl-id: f1df97a1-164f-4ed4-bb63-34caf35ae27c
-source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
 source-wordcount: '295'
 ht-degree: 1%
@@ -27,7 +27,7 @@ När det gäller headless content management i AEM kan du tänka på en konfigur
 
 En administratör behöver bara skapa en konfiguration en gång, eller mycket sällan, när det krävs en ny arbetsyta för att kunna ordna dina innehållsmodeller. I den här guiden behöver vi bara skapa en konfiguration.
 
-1. Logga in AEM och välj **Verktyg -> Allmänt -> Konfigurationsläsaren**.
+1. Logga in AEM och välj **Verktyg > Allmänt > Konfigurationsläsaren**.
 1. Ange en **Titel** för din konfiguration.
    * Ett namn genereras automatiskt baserat på titeln och justeras enligt [AEM namnkonventioner.](/help/sites-developing/naming-conventions.md). Det blir nodnamnet i databasen.
 1. Markera följande alternativ:
@@ -36,7 +36,7 @@ En administratör behöver bara skapa en konfiguration en gång, eller mycket s�
 
    ![Skapa konfiguration](assets/create-configuration.png)
 
-1. Tryck eller klicka **Skapa**
+1. Klicka **Skapa**
 
 Du kan skapa flera konfigurationer om det behövs. Konfigurationer kan också kapslas.
 

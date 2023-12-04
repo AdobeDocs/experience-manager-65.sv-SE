@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: spa
 content-type: reference
 exl-id: 5b2ccac0-bf1d-4f06-8743-7fce6fb68378
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '344'
+source-wordcount: '333'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ I det här dokumentet beskrivs hur den dynamiska mappningen av modell till kompo
 
 >[!NOTE]
 >
->SPA Editor är den rekommenderade lösningen för projekt som kräver SPA ramverksbaserad rendering på klientsidan (till exempel React eller Angular).
+>SPA Editor är den rekommenderade lösningen för projekt som kräver SPA ramverksbaserad klientåtergivning (till exempel React eller Angular).
 
 ## ComponentMapping-modul {#componentmapping-module}
 

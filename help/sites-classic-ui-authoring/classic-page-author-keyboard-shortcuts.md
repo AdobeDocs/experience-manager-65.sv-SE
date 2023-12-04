@@ -1,16 +1,14 @@
 ---
 title: Kortkommandon när du redigerar sidor
 description: Olika kortkommandon finns i hela AEM. En del gäller när du redigerar sidor, andra när du använder konsoler.
-uuid: a1753e0b-5701-426c-b974-2e8b8d81a30d
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: page-authoring
 content-type: reference
-discoiquuid: 68fa88c5-a759-49fa-ab9b-8dc63c049d5f
 exl-id: 1c761aa7-a72f-46f0-8717-0b6e0d1cff55
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '308'
+source-wordcount: '307'
 ht-degree: 0%
 
 ---
@@ -28,7 +26,7 @@ Olika kortkommandon finns i hela AEM. Vissa gäller när du redigerar sidor, and
 >Flera val på en stationär enhet:
 >
 >* Windows: Ctrl-klicka på nödvändiga komponenter.
->* Mac: Cmd+klicka på de nödvändiga komponenterna.
+>* Mac: Cmd-klicka på de komponenter som behövs.
 >
 
 ## Redigera kortkommandon {#editing-keyboard-shortcuts}
@@ -143,7 +141,7 @@ Olika kortkommandon finns i hela AEM. Vissa gäller när du redigerar sidor, and
   <tr>
    <td>Content Finder<br /> </td>
    <td><strong><code>Alt+drag</code></strong></td>
-   <td><p>Dra resurser, släpp på målet.</p> <p>Släppåtgärden skapar ett nytt stycke. i stället för att ersätta resursen i målet.</p> </td>
+   <td><p>Dra resurser, släpp på målet.</p> <p>När du släpper skapas ett nytt stycke, i stället för att resursen ersätts i målet.</p> </td>
   </tr>
  </tbody>
 </table>

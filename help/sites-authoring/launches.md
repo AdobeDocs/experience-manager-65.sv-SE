@@ -7,10 +7,10 @@ content-type: reference
 topic-tags: site-features
 docset: aem65
 exl-id: b25d3f8e-5687-49ab-95e1-19ec75c87f6e
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '843'
-ht-degree: 6%
+source-wordcount: '831'
+ht-degree: 4%
 
 ---
 
@@ -34,9 +34,9 @@ Startar kan också vara:
 
 I det här avsnittet beskrivs hur du skapar, redigerar och befordrar (och om det behövs) [delete](/help/sites-authoring/launches-creating.md#deleting-a-launch)) starta sidor från Sites-konsolen eller [startkonsolen](#the-launches-console):
 
-* [Skapa Launches](/help/sites-authoring/launches-creating.md)
-* [Redigera Launches](/help/sites-authoring/launches-editing.md)
-* [Marknadsföra Launches](/help/sites-authoring/launches-promoting.md)
+* [Skapa startprogram](/help/sites-authoring/launches-creating.md)
+* [Redigeringsövningar](/help/sites-authoring/launches-editing.md)
+* [Befordra lanseringar](/help/sites-authoring/launches-promoting.md)
 
 ## Startar - ordningen för händelser {#launches-the-order-of-events}
 
@@ -121,6 +121,6 @@ På startkonsolen får du en översikt över dina starter och kan vidta åtgärd
 
    ![Fliken Referens - Starta](assets/screen-shot_2019-03-05at121901-1.png)
 
-1. Tryck/klicka på lämplig start så visas listan med möjliga åtgärder:
+1. Klicka på lämplig start så visas en lista med möjliga åtgärder:
 
    ![Välj start för att visa möjliga åtgärder](assets/screen-shot_2019-03-05at121952-1.png)

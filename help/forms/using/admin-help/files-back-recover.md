@@ -6,9 +6,9 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/aem_forms_backup_and_recovery
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 exl-id: d2dd381d-a7d2-4fec-a8ba-7ca037fd9dc1
-source-git-commit: c4cd9a61a226ace2a72d60b5b7b7432de12cb873
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '2065'
+source-wordcount: '2017'
 ht-degree: 0%
 
 ---
@@ -33,7 +33,7 @@ Platsen för GDS bestäms under installationen av AEM formulär eller senare med
 
 ### GDS-plats {#gds-location}
 
-Om du lämnar platsinställningen tom under installationen blir platsen som standard en katalog under programserverinstallationen. Du måste säkerhetskopiera följande katalog för programservern:
+Om du lämnar platsinställningen tom under installationen blir platsen som standard en katalog under programserverinstallationen. Säkerhetskopiera följande katalog för programservern:
 
 * (JBoss) `[appserver root]/server/'server'/svcnative/DocumentStorage`
 * (WebLogic) `[appserverdomain]/'server'/adobe/AEMformsserver/DocumentStorage`

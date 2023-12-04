@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: personalization
 exl-id: fc6fccba-41c5-4c13-aac0-b4ef67767abe
-source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '806'
+source-wordcount: '801'
 ht-degree: 0%
 
 ---
@@ -74,7 +74,7 @@ När ni har skapat segment, varumärken, kampanjer och upplevelser kan ni skapa 
 
 Så här skapar du ett nyhetsbrev med riktat innehåll:
 
-1. Skapa ett nyhetsbrev med riktat innehåll: Klicka eller peka nedan på e-postkampanjer i Geometrixx Outdoors **Skapa** > **Sida** och välj en av Adobe Campaign Mail-mallarna.
+1. Skapa ett nyhetsbrev med riktat innehåll: Klicka nedan på E-postkampanjer i Geometrixx Outdoors **Skapa** > **Sida** och välj en av Adobe Campaign Mail-mallarna.
 
    ![chlimage_1-188](assets/chlimage_1-188.png)
 
@@ -86,7 +86,7 @@ Så här skapar du ett nyhetsbrev med riktat innehåll:
 
    >[!NOTE]
    >
-   >Som standard använder de e-postexempel som ingår i AEM Adobe Campaign som målmotor. För anpassade nyhetsbrev kan du behöva välja Adobe Campaign som målmotor. När du väljer mål trycker eller klickar du på + i verktygsfältet, anger en titel för den nya aktiviteten och väljer **Adobe Campaign** som målinriktningsmotor.
+   >Som standard använder de e-postexempel som ingår i AEM Adobe Campaign som målmotor. För anpassade nyhetsbrev kan du behöva välja Adobe Campaign som målmotor. När du väljer mål klickar du på + i verktygsfältet, anger en rubrik för den nya aktiviteten och väljer **Adobe Campaign** som målinriktningsmotor.
 
 1. Klicka **Standard** och sedan komponenten Text och Personalization som du har lagt till så ser du Bullseye med en pil. Klicka på ikonen om du vill ange komponenten som mål.
 

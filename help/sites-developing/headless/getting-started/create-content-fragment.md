@@ -2,9 +2,9 @@
 title: Skapa innehållsfragment Headless Quick Start Guide
 description: Lär dig använda AEM innehållsfragment för att utforma, skapa, strukturera och använda sidoberoende innehåll för rubrikfri leverans.
 exl-id: 5787204d-bcce-447e-b98c-2bc1c0d744c3
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '385'
+source-wordcount: '375'
 ht-degree: 0%
 
 ---
@@ -25,24 +25,24 @@ Innehållsfragment innehåller strukturerat innehåll och kan levereras i JSON-f
 
 Innehållsförfattare skapar valfritt antal innehållsfragment som representerar det innehåll de skapar. Detta kommer att vara deras huvuduppgift i AEM. I den här guiden behöver vi bara skapa en.
 
-1. Logga in AEM och välj **Navigering -> Resurser**.
+1. Logga in AEM och välj **Navigering > Resurser**.
 1. Navigera till [mapp som du skapade tidigare.](create-assets-folder.md)
-1. Tryck eller klicka **Skapa -> Innehållsfragment**.
-1. Skapandet av ett innehållsfragment presenteras som en guide i två steg. Välj först vilken modell som du vill använda för att skapa ditt innehållsfragment och tryck eller klicka på **Nästa**.
+1. Klicka **Skapa > Innehållsfragment**.
+1. Skapandet av ett innehållsfragment presenteras som en guide i två steg. Välj först vilken modell som du vill använda för att skapa ditt innehållsfragment och klicka sedan på **Nästa**.
    * Vilka modeller som är tillgängliga beror på [**Molnkonfiguration** du har definierat för resursmappen](create-assets-folder.md) där du skapar innehållsfragmentet.
    * Om du får meddelandet `We could not find any models`kontrollerar du konfigurationen för din resursmapp.
 
    ![Välj innehållsfragmentmodell](assets/content-fragment-model-select.png)
-1. Ange en **Titel**, **Beskrivning** och **Taggar** vid behov och tryck eller klicka **Skapa**.
+1. Ange en **Titel**, **Beskrivning** och **Taggar** vid behov och klicka **Skapa**.
 
    ![Skapa innehållsfragment](assets/content-fragment-create.png)
-1. Tryck eller klicka **Öppna** i bekräftelsefönstret.
+1. Klicka **Öppna** i bekräftelsefönstret.
 
    ![Bekräftelse på att innehållsfragment har skapats](assets/content-fragment-confirmation.png)
 1. Ange information om innehållsfragmentet i Content Fragment Editor.
 
    ![Innehållsfragmentsredigerare](assets/content-fragment-edit.png)
-1. Tryck eller klicka **Spara** eller  **Spara och stäng**.
+1. Klicka **Spara** eller  **Spara och stäng**.
 
 Innehållsfragment kan referera till andra innehållsfragment, vilket möjliggör en kapslad innehållsstruktur om det behövs.
 

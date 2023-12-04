@@ -6,10 +6,10 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: personalization
 content-type: reference
 exl-id: a4717cb8-b70c-4150-b816-35e9b871e792
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '1163'
-ht-degree: 1%
+source-wordcount: '1185'
+ht-degree: 2%
 
 ---
 
@@ -81,7 +81,7 @@ Dessutom kan du behöva välja Adobe Campaign-mallen, ändra ämnet och lägga t
 
    >[!NOTE]
    >
-   >Tryck/klicka **OK** eller **Använd** efter att du lagt till molntjänsten. Detta aktiverar **Adobe Campaign** för att fungera.
+   >Var noga med att klicka **OK** eller **Använd** efter att du lagt till molntjänsten. Detta aktiverar **Adobe Campaign** för att fungera.
 
 1. Om du vill använda en särskild e-postleveransmall (från Adobe Campaign), annan än standardmallen **mail** mall, välja **Sidegenskaper** igen. I **Adobe Campaign** anger du e-postleveransmallens interna namn i den relaterade Adobe Campaign-instansen.
 

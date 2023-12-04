@@ -10,7 +10,7 @@ docset: aem65
 feature: Asset Management
 role: User, Admin
 exl-id: 28cf9e39-cab4-4278-b6c9-e84cc31964db
-source-git-commit: 0738f53564cb2e2607d739d97bdd1bb2fc64ac6e
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
 source-wordcount: '11138'
 ht-degree: 1%
@@ -329,10 +329,10 @@ I följande tabell beskrivs hur formelresultaten översätts till vanliga altern
 
 | Formelresultat | Proportioner |
 |--- |--- |
-| 1.33 | 4:3 |
-| 0.75 | 3:4 |
-| 1.78 | 16:9 |
-| 0.56 | 9:16 |
+| 1,33 | 4:3 |
+| 0,75 | 3:4 |
+| 1,78 | 16:9 |
+| 0,56 | 9:16 |
 
 En video som till exempel är 1440 bredd x 1080 höjd har proportionerna 1440/1080 eller 1,33. I det här fallet väljer du en förinställning för videokodning med 4:3-proportioner för att koda videofilen.
 
@@ -374,8 +374,8 @@ Upplösning och datahastighet är två sammankopplade faktorer som avgör videok
 
 | Upplösning | Pixlar per bildruta |
 |--- |--- |
-| 320 x 240 | 76,800 |
-| 640 x 480 | 307,200 |
+| 320 x 240 | 76 800 |
+| 640 x 480 | 307 200 |
 
 Filen på 640 x 480 har fyra gånger fler pixlar per bildruta. För att uppnå samma datahastighet för dessa två exempelupplösningar tillämpar du fyra gånger komprimeringen på 640 x 480-filen, vilket kan minska videons kvalitet. En videodatahastighet på 250 kbit/s ger därför en högkvalitativ bild med upplösningen 320 x 240, men inte med upplösningen 640 x 480.
 
@@ -542,7 +542,7 @@ Använd [Referenshandbok för Adobe Dynamic Media-visningsprogram](https://exper
 
    The `config2` -parametern aktiverar spårning i visningsprogram för HTML5. Det är också en företagsspecifik förinställning som innehåller konfigurationsinformationen för Videorapportering och för kundspecifika Adobe Analytics-konfigurationer.
 
-   Det korrekta värdet för parametern config2 finns både i **[!UICONTROL Embed Code]** och i kopieringsfunktionen **[!UICONTROL URL]**. I URL:en från kopieringskommandot **[!UICONTROL URL]** letar du efter parametern `&config2=<value>`. Värdet är nästan alltid `companypreset`, men i vissa fall kan det också vara `companypreset-1`, `companypreset-2` osv.
+   Det korrekta värdet för parametern config2 finns i båda **[!UICONTROL Embed Code]** och i kopian **[!UICONTROL URL]** funktion. I URL:en från kopian **[!UICONTROL URL]** kommando, parametern som ska sökas efter är `&config2=<value>` . Värdet är nästan alltid `companypreset`, men i vissa fall kan det också vara `companypreset-1`, `companypreset-2` osv.
 
 1. Lägg till AppMeasurementBridge .jsp på visningsprogramsidan i din anpassade videovisningsprogramkod genom att göra följande:
 
@@ -655,7 +655,7 @@ Undertexter och bildtexter som lagts till stöds i formaten WebVTT och Adobe VTT
      | Filnamn | Standardfilnamnet härleds från det ursprungliga filnamnet. Filnamnet kan bara ändras under överföring och kan inte ändras senare. Teckenkraven för filnamn är desamma som för AEM Assets.<br>Samma filnamn kan inte användas för ytterligare undertextningsfiler och ljudspårsfiler. |
      | Språk | Välj språk för underrubriken. |
      | Typ | Välj den typ av underrubrik som du använder.<br>**Underrubrik** - Undertexten som visas med videon som översätter eller transkriberar dialogrutan.<br>**Bildtext** - Bildtexten innehåller även bakgrundsljud, talardifferentiering och annan relevant information, tillsammans med översättningen eller transkriberingen av dialogen, som gör innehållet mer tillgängligt för personer som är döva eller hörselskadade. |
-     | Etikett | Den text som visas för undertextens namn i **[!UICONTROL Select audio or caption]** popup-lista i mediespelaren. Etiketten är det som kunden ser och som motsvarar ett underrubrik- eller bildtextspår. Till exempel, `English (CC)`. |
+     | Etikett | Den text som visas för undertextens namn i **[!UICONTROL Select audio or caption]** popup-lista i mediespelaren. Etiketten är det som kunden ser och som motsvarar ett underrubrik- eller bildtextspår. Till exempel: `English (CC)`. |
 
      Om det behövs kan du ändra eller redigera metadata för underrubriken senare. När videon publiceras återspeglas dessa uppgifter på offentliga URL:er i publicerade videor.
 
@@ -669,7 +669,7 @@ Undertexter och bildtexter som lagts till stöds i formaten WebVTT och Adobe VTT
      | Filnamn | Standardfilnamnet härleds från det ursprungliga filnamnet. Filnamnet kan bara ändras under överföring och kan inte ändras senare. Teckenkraven för filnamn är desamma som för AEM Assets.<br>Samma filnamn kan inte användas för ytterligare ljudspårfiler eller undertextfiler. |
      | Språk | Välj språk för ljudspåret. |
      | Typ | Välj vilken typ av ljudspår du använder.<br>**Original** - Ljudspåret som ursprungligen var kopplat till videon och representeras som `[Original]` i etiketten med `English` som är valt som standard. while **[!UICONTROL Label]** och **[!UICONTROL Language]** kan ändras i **[!UICONTROL Edit Audio Track]** används de ursprungliga värdena om den primära videon bearbetas om.<br>**Standard** - Ett tilläggsljudspår för ett annat språk än originalspråket.<br>**Ljudbeskrivning** - Ett ljudspår som även innehåller en beskrivande berättarröst för icke-verbala händelser och gester i videon, vilket gör innehållet mer tillgängligt för personer med nedsatt syn. |
-     | Etikett | Texten som visas som ljudspårets namn i **[!UICONTROL Select audio or caption]** popup-lista i mediespelaren. Etiketten är det kunden ser och motsvarar ett ljudspår. Till exempel, `English [Original]`. Etiketten för ljud som är kopplat till en video är inställd på `[Original|` som standard. |
+     | Etikett | Texten som visas som ljudspårets namn i **[!UICONTROL Select audio or caption]** popup-lista i mediespelaren. Etiketten är det kunden ser och motsvarar ett ljudspår. Till exempel: `English [Original]`. Etiketten för ljud som är kopplat till en video är inställd på `[Original|` som standard. |
 
      Om det behövs kan du ändra eller redigera metadata för ljudspåret senare. När videon publiceras återspeglas dessa uppgifter på offentliga URL:er i publicerade videor.
 
@@ -971,8 +971,8 @@ Se [WebVTT: Textspår för webbvideo](https://w3c.github.io/webvtt/)
        <td>
        <ol>
        <li>Navigera till <i>publicerad </i>videoresurs som du vill associera med den kapitelfil som du har överfört. Kom ihåg att URL:er endast går att kopiera <i>efter</i> att du har <i>publicerat</i> resurserna. Se <a href="/help/assets/publishing-dynamicmedia-assets.md">Publicera resurser.</a></li>
-       <li>Klicka eller tryck på i listrutan <strong>Tittare</strong>.</li>
-       <li>Tryck eller klicka på förinställningsnamnet för videovisningsprogrammet i den vänstra listen. En förhandsgranskning av videon öppnas på en separat sida.</li>
+       <li>I listrutan klickar du på <strong>Tittare</strong>.</li>
+       <li>Klicka på förinställningsnamnet för videovisningsprogrammet i den vänstra listen. En förhandsgranskning av videon öppnas på en separat sida.</li>
        <li>Klicka på längst ned i den vänstra listen <strong>URL</strong>.</li>
        <li>I dialogrutan URL-adress markerar och kopierar du URL-adressen till Urklipp och sedan förbi URL-adressen till en enkel textredigerare.</li>
        <li>Lägg till den kopierade URL:en för videon med följande syntax så att du kan koppla den till den kopierade URL:en till din kapitelfil:<br /> <br /> <code>&navigation=<<i>full_copied_URL_path_to_chapter_file</i>.vtt></code><br /> </li>
@@ -983,8 +983,8 @@ Se [WebVTT: Textspår för webbvideo](https://w3c.github.io/webvtt/)
        <td>
        <ol>
        <li>Navigera till <i>publicerad </i>videoresurs som du vill associera med den kapitelfil som du har överfört. Kom ihåg att URL:er endast går att kopiera <i>efter</i> att du har <i>publicerat</i> resurserna. Se <a href="/help/assets/publishing-dynamicmedia-assets.md">Publicera resurser.</a></li>
-       <li>Klicka eller tryck på i listrutan <strong>Tittare</strong>.</li>
-       <li>Tryck eller klicka på förinställningsnamnet för videovisningsprogrammet i den vänstra listen. En förhandsgranskning av videon öppnas på en separat sida.</li>
+       <li>I listrutan klickar du på <strong>Tittare</strong>.</li>
+       <li>Klicka på förinställningsnamnet för videovisningsprogrammet i den vänstra listen. En förhandsgranskning av videon öppnas på en separat sida.</li>
        <li>Klicka på längst ned i den vänstra listen <strong>Bädda in</strong>.</li>
        <li>I dialogrutan Bädda in kod markerar och kopierar du hela koden till Urklipp och klistrar sedan in den i en enkel textredigerare.</li>
        <li>Lägg till videofilens inbäddningskod med följande syntax så att du kan koppla den till den kopierade URL:en till din kapitelfil:<br /> <br /> <code>videoViewer.setParam("navigation","&lt;<i>full_copied_URL_path_to_chapter_file</i>.vtt&gt;"</code></li>
@@ -1034,7 +1034,7 @@ De här stegen gäller endast för Dynamic Media som körs i läget&quot;Dynamic
    * Så här använder du en bildresurs som ny miniatyrbild:
 
       * Tryck på i verktygsfältet **[!UICONTROL Select Thumbnail from Assets]**.
-      * Tryck på **[!UICONTROL Select Thumbnail]**.
+      * Tryck **[!UICONTROL Select Thumbnail]**.
       * Navigera till en tidigare överförd och publicerad bildresurs som du vill använda. Storleken på resursen ändras automatiskt så att den fungerar som en miniatyrbild för videon.
       * Markera bildresursen och tryck sedan på **[!UICONTROL Select]**.
 
@@ -1068,7 +1068,7 @@ De här stegen gäller endast för Dynamic Media som körs i hybridläge.
    Dynamic Media genererar en serie miniatyrbilder från videon baserat på det standardtidsintervall eller tidsintervall som du har anpassat.
 
 1. Förhandsgranska de genererade miniatyrbilderna och välj sedan den som du vill lägga till i videon.
-1. Tryck på **[!UICONTROL Save Change]**.
+1. Tryck **[!UICONTROL Save Change]**.
 
    Videons miniatyrbild uppdateras till att använda den miniatyrbild du valde. Om du senare bestämmer dig för att ändra miniatyrbilden kan du gå tillbaka till **[!UICONTROL Change Thumbnail]** och välj en ny sida.
 

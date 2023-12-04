@@ -12,9 +12,9 @@ topic-tags: operations
 discoiquuid: 669ede46-ea55-444b-a23f-23a86e5aff8e
 role: Developer
 exl-id: e6887e45-a472-41d4-9620-c56fd5b72b4c
-source-git-commit: 5e56441d2dc9b280547c91def8d971e7b1dfcfe3
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '4110'
+source-wordcount: '4102'
 ht-degree: 0%
 
 ---
@@ -99,7 +99,7 @@ På ett flersidigt formulär behålls inte ändringar som JavaScript gjort på e
 
 Du kan anropa egna skript innan du skickar in ett formulär. Den här funktionen fungerar i alla tillgängliga webbläsare. Den kan dock bara användas när användare återger det HTML-formulär som har dess `Output Type` egenskap inställd på `Form Body`. Det fungerar inte när `Output Type` är `Full HTML`. Mer information om hur du konfigurerar den här funktionen finns i Konfigurera formulär i administrationshjälpen.
 
-Du måste definiera en callback-funktion som anropas innan formuläret skickas, där funktionens namn är `_user_onsubmit`. Det antas att funktionen inte genererar något undantag, eller att undantaget ignoreras om det gör det. Vi rekommenderar att du placerar JavaScript-funktionen i head-avsnittet i html, men du kan deklarera den var som helst före slutet av script-taggarna som innehåller `xfasubset.js`.
+Definiera först en callback-funktion som anropas innan formuläret skickas, där funktionens namn är `_user_onsubmit`. Det antas att funktionen inte genererar något undantag, eller att undantaget ignoreras om det gör det. Vi rekommenderar att du placerar JavaScript-funktionen i head-avsnittet i html, men du kan deklarera den var som helst före slutet av script-taggarna som innehåller `xfasubset.js`.
 
 När formserver återger en XDP-fil som innehåller en nedrullningsbar lista skapas även två dolda textfält förutom att listrutan skapas. Dessa textfält lagrar data i den nedrullningsbara listan (ett lagrar alternativens visningsnamn och andra lagrar alternativens värden). Därför skickas alla data i den nedrullningsbara listan varje gång en användare skickar formuläret. Om du inte vill skicka så mycket data varje gång kan du skriva ett eget skript som inaktiverar det. Till exempel: Listrutan har namnet `drpOrderedByStateProv` och är omsluten under delformulärsrubriken. HTML-indataelementets namn blir `header[0].drpOrderedByStateProv[0]`. Namnet på de dolda fält som lagrar och skickar data i listrutan har följande namn: `header[0].drpOrderedByStateProv_DISPLAYITEMS_[0] header[0].drpOrderedByStateProv_VALUEITEMS_[0]`
 
@@ -127,7 +127,7 @@ Skript som körs på klienten eller körs både på klienten och servern måste 
 
 När du kör skript på klienten kan bara den aktuella panelen som visas använda skript. Du kan till exempel inte skriva skript mot fält som finns på panel A när panel B visas. När du kör skript på servern är alla paneler tillgängliga.
 
-Du måste också vara försiktig när du använder SOM-uttryck (Scripting Object Model) i skript som körs på klienten. Endast en förenklad delmängd av SOM-uttryck stöds av skript som körs på klienten.
+Var försiktig när du använder SOM-uttryck (Scripting Object Model) i skript som körs på klienten. Endast en förenklad delmängd av SOM-uttryck stöds av skript som körs på klienten.
 
 ## Tidsinställning för händelser {#event-timing}
 
@@ -236,7 +236,7 @@ Om du återger ett AHTML-formulär bör du inte lägga till ett verktygsfält i 
 
 **Återge ett HTML-formulär**
 
-Om du vill återge ett HTML-formulär måste du ange en formulärdesign som har skapats i Designer och sparats som en XDP-fil. Du måste också välja en omformningstyp för HTML. Du kan till exempel ange HTML-omformningstypen som återger ett dynamiskt HTML för Internet Explorer 5.0 eller senare.
+Om du vill återge ett HTML-formulär anger du en formulärdesign som har skapats i Designer och sparats som en XDP-fil. Markera en omformningstyp för HTML. Du kan till exempel ange HTML-omformningstypen som återger ett dynamiskt HTML för Internet Explorer 5.0 eller senare.
 
 Återgivning av ett HTML-formulär kräver också värden, t.ex. URI-värden som krävs för att återge andra formulärtyper.
 

@@ -8,9 +8,9 @@ content-type: reference
 pagetitle: Query Builder API
 tagskeywords: querybuilder
 exl-id: b2288442-d055-4966-8057-8b7b7b6bff28
-source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '2285'
+source-wordcount: '2033'
 ht-degree: 0%
 
 ---
@@ -43,7 +43,7 @@ REST API ger åtkomst till samma funktioner via HTTP med svar som skickas i JSON
 
 Dessa exempel anges i Java™-egenskapsformatsnotation. Om du vill använda dem med Java™ API:n använder du en Java™ `HashMap` som i följande API-exempel.
 
-För `QueryBuilder` JSON Servlet innehåller varje exempel en länk till din lokala CQ-installation (på standardplatsen, `http://localhost:4502`). Du måste logga in på CQ-instansen innan du använder länkarna.
+För `QueryBuilder` JSON Servlet innehåller varje exempel en länk till din lokala CQ-installation (på standardplatsen, `http://localhost:4502`). Logga in på CQ-instansen innan du använder länkarna.
 
 >[!CAUTION]
 >

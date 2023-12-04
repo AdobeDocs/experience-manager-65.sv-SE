@@ -8,9 +8,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 role: Developer
 exl-id: 5fa385a7-f030-4c0c-8938-0991d02ef361
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '1687'
+source-wordcount: '1682'
 ht-degree: 0%
 
 ---
@@ -65,7 +65,7 @@ Om du vill återge ett HTML-formulär som använder en anpassad CSS-fil måste d
 
 **Återge ett HTML-formulär**
 
-Om du vill återge ett HTML-formulär måste du ange en formulärdesign som har skapats i Designer och sparats som en XDP-fil. Du måste också välja en omformningstyp för HTML. Du kan till exempel ange HTML-omformningstypen som återger ett dynamiskt HTML för Internet Explorer 5.0 eller senare.
+Om du vill återge ett HTML-formulär anger du en formulärdesign som har skapats i Designer och sparats som en XDP-fil. Markera en omformningstyp för HTML. Du kan till exempel ange HTML-omformningstypen som återger ett dynamiskt HTML för Internet Explorer 5.0 eller senare.
 
 Återgivning av ett HTML-formulär kräver också värden, t.ex. URI-värden som behövs för att återge andra formulärtyper.
 

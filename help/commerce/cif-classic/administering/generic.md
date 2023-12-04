@@ -6,9 +6,9 @@ topic-tags: e-commerce
 content-type: reference
 docset: aem65
 exl-id: c29f6213-1df6-45af-91c8-14b255276d82
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '2929'
+source-wordcount: '2907'
 ht-degree: 0%
 
 ---
@@ -194,7 +194,7 @@ Det behövs ett ställningar för varje enskild produkttyp. Den lämpliga strukt
 
    ![produktkonsol med öppna referenser](/help/sites-administering/assets/chlimage_1-88.png)
 
-1. Klicka/tryck på referenstypen (till exempel Produktsidor) för att utöka listan.
+1. Klicka på referenstypen (till exempel Produktsidor) för att utöka listan.
 1. Välj en specifik referens så att du kan visa alternativen:
 
    * Navigera till produktsidan
@@ -463,7 +463,7 @@ Så här skapar du en katalog:
    ![guiden skapa katalog](/help/sites-administering/assets/chlimage_1-99.png)
 
 1. Navigera till önskad katalogutkast.
-1. Välj **Välj** och tryck/klicka på den önskade katalogdesignen.
+1. Välj **Välj** och klicka på önskad katalogutkast.
 1. Välj **Nästa**.
 
    ![guide för katalogegenskaper](/help/sites-administering/assets/chlimage_1-100.png)
@@ -491,7 +491,7 @@ Så här skapar du en katalog:
 
 1. Skapa en sida med **Avsnittsutkast** mall.
 
-   Till exempel, `Swimwear`.
+   Till exempel: `Swimwear`.
 
 1. Öppna den nya `Swimwear` sida och klicka sedan på **Redigera utkast**. The **Egenskaper** öppnas så att du kan ställa in **Produkter** markering.
 
@@ -524,7 +524,7 @@ Så här distribuerar du en katalog:
 
    ![utrullning](/help/sites-administering/do-not-localize/chlimage_1-24.png)
 
-1. I guiden ställer du in utrullningen efter behov och trycker/klickar sedan **Ändringar av utrullning**.
+1. I guiden ställer du in utrullningen efter behov och klickar sedan på **Ändringar av utrullning**.
 1. En dialogruta öppnas. Välj **Klar** när processen är klar.
 
 #### Öppnar en katalog - Classic UI {#rolling-out-a-catalog-classic-ui}
@@ -549,7 +549,7 @@ Så här distribuerar du en katalog:
 
    ![Importera ritningar, ikon](/help/sites-administering/do-not-localize/chlimage_1-13.png)
 
-1. Välj källa i guiden efter behov och tryck/klicka **Nästa**.
+1. I guiden väljer du källa efter behov och klickar på **Nästa**.
 
    ![guide för utkast](/help/sites-administering/assets/chlimage_1-102.png)
 

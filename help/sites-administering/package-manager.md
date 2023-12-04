@@ -8,9 +8,9 @@ topic-tags: content
 content-type: reference
 docset: aem65
 exl-id: e8929d7c-9920-4c02-95a9-6f7f7a365203
-source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '3574'
+source-wordcount: '3565'
 ht-degree: 0%
 
 ---
@@ -53,7 +53,7 @@ För att kunna skapa, ändra, överföra och installera paket måste användarna
 
 Du kommer åt Package Manager på tre sätt:
 
-1. Från AEM huvudmeny -> **verktyg** -> **Distribution** -> **Paket**
+1. Från AEM huvudmeny > **verktyg** > **Distribution** > **Paket**
 1. Från [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md) med hjälp av det övre växlingsfältet
 1. Direkt via åtkomst `http://<host>:<port>/crx/packmgr/`
 
@@ -106,7 +106,7 @@ Om paketet har ändrats eller aldrig byggts visas statusen som en länk för att
 
 ## Paketinställningar {#package-settings}
 
-Ett paket är i princip en uppsättning filter och databasdata som baseras på dessa filter. Med hjälp av gränssnittet för pakethanteraren kan du klicka på ett paket och sedan på knappen **Redigera** om du vill visa information om ett paket med följande inställningar.
+Ett paket är i princip en uppsättning filter och databasdata som baseras på dessa filter. Med hjälp av gränssnittet för pakethanteraren kan du klicka på ett paket och sedan på **Redigera** om du vill visa information om ett paket med följande inställningar.
 
 * [Allmänna inställningar](#general-settings)
 * [Paketfilter](#package-filters)
@@ -283,7 +283,7 @@ När ett paket har byggts kan det paketeras om. När du gör om en paketering ä
 
 1. Klicka **Spara** att spara.
 
-1. Klicka **Mer** -> **Radbryt** och en dialogruta med en fråga om bekräftelse.
+1. Klicka **Mer** > **Radbryt** och en dialogruta med en fråga om bekräftelse.
 
 ### Visa andra paketversioner {#other-versions}
 
@@ -293,7 +293,7 @@ Eftersom alla versioner av ett paket visas i listan som alla andra paket, kan pa
 
 1. Öppna paketinformationen från paketlistan genom att klicka på paketnamnet.
 
-1. Klicka **Mer** -> **Andra versioner** och en dialogruta öppnas med en lista över andra versioner av samma paket med statusinformation.
+1. Klicka **Mer** > **Andra versioner** och en dialogruta öppnas med en lista över andra versioner av samma paket med statusinformation.
 
 ### Innehåll och testinstallation för visning av paket {#viewing-package-contents-and-testing-installation}
 
@@ -303,11 +303,11 @@ När du har skapat ett paket kan du visa innehållet.
 
 1. Öppna paketinformationen från paketlistan genom att klicka på paketnamnet.
 
-1. Om du vill visa innehållet klickar du **Mer** -> **Innehåll** och Package Manager visar hela innehållet i paketet i aktivitetsloggen.
+1. Om du vill visa innehållet klickar du **Mer** > **Innehåll** och Package Manager visar hela innehållet i paketet i aktivitetsloggen.
 
    ![Paketet innehåller](assets/package-contents.png)
 
-1. Om du vill göra en torr installation klickar du **Mer** -> **Testa installationen** och Package Manager rapporterar i aktivitetsloggen resultatet som om installationen utfördes.
+1. Om du vill göra en torr installation klickar du **Mer** > **Testa installationen** och Package Manager rapporterar i aktivitetsloggen resultatet som om installationen utfördes.
 
    ![Testinstallation](assets/test-install.png)
 
@@ -435,7 +435,7 @@ Validering ska alltid ske efter att paketet har överförts, men innan det insta
 
 1. Öppna paketinformationen från paketlistan genom att klicka på paketnamnet.
 
-1. Validera paketet genom att klicka **Mer** -> **Validera**,
+1. Validera paketet genom att klicka **Mer** > **Validera**,
 
 1. I den modala dialogrutan som visas använder du kryssrutorna för att välja valideringstyp(er) och börja valideringen genom att klicka **Validera**.
 
@@ -473,13 +473,13 @@ Paket definieras av sina filter. Du kan låta Pakethanteraren tillämpa filter f
 
 1. Öppna paketinformationen från paketlistan genom att klicka på paketnamnet.
 
-1. Klicka **Mer** -> **Täckning**.
+1. Klicka **Mer** > **Täckning**.
 
 1. Täckningsinformationen visas i aktivitetsloggen.
 
 ### Installerar paket {#installing-packages}
 
-När du överför ett paket läggs bara paketinnehållet till i databasen, men det är inte tillgängligt. Du måste installera det överförda paketet för att kunna använda paketets innehåll.
+När du överför ett paket läggs bara paketinnehållet till i databasen, men det är inte tillgängligt. Installera det överförda paketet för att använda paketets innehåll.
 
 >[!CAUTION]
 >
@@ -543,7 +543,7 @@ När du avinstallerar paketet återställs innehållet i databasen till ögonbli
 
 1. Öppna paketinformationen för det paket som du vill avinstallera från paketlistan genom att klicka på paketnamnet.
 
-1. Klicka **Mer** -> **Avinstallera**, för att ta bort innehållet i det här paketet från databasen.
+1. Klicka **Mer** > **Avinstallera**, för att ta bort innehållet i det här paketet från databasen.
 
 1. En dialogruta begär bekräftelse och visar alla ändringar som görs.
 
@@ -569,7 +569,7 @@ Replikera innehållet i ett paket för att installera det på publiceringsinstan
 
 1. Öppna paketinformationen för det paket som du vill replikera från paketlistan genom att klicka på paketnamnet.
 
-1. Klicka **Mer** -> **Replikera**.
+1. Klicka **Mer** > **Replikera**.
 
 1. Paketet replikeras och information rapporteras i aktivitetsloggen.
 

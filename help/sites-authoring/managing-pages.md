@@ -2,10 +2,10 @@
 title: Skapa och ordna sidor med AEM
 description: Lär dig hur du skapar och hanterar sidor med Adobe Experience Manager.
 exl-id: 74576e51-4b4e-464e-a0b8-0fae748a505d
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '2412'
-ht-degree: 2%
+source-wordcount: '2417'
+ht-degree: 1%
 
 ---
 
@@ -192,7 +192,7 @@ Om du inte har skapat alla sidor åt dig i förväg måste du skapa en sida inna
 
 1. Från det första steget i guiden kan du antingen:
 
-   * Välj den mall som du vill använda för att skapa den nya sidan och klicka/tryck sedan på **Nästa** för att fortsätta.
+   * Välj den mall som du vill använda för att skapa den nya sidan och klicka sedan på **Nästa** för att fortsätta.
 
    * **Avbryt** om du vill avbryta processen.
 
@@ -200,7 +200,7 @@ Om du inte har skapat alla sidor åt dig i förväg måste du skapa en sida inna
 
 1. Från det sista steget i guiden kan du antingen:
 
-   * Använd de tre flikarna för att ange [sidegenskaper](/help/sites-authoring/editing-page-properties.md) du vill tilldela till den nya sidan och sedan klicka/tryck **Skapa** för att skapa sidan.
+   * Använd de tre flikarna för att ange [sidegenskaper](/help/sites-authoring/editing-page-properties.md) du vill tilldela till den nya sidan, klicka sedan på **Skapa** för att skapa sidan.
 
    * Använd **Bakåt** för att återgå till mallval.
 
@@ -325,7 +325,7 @@ I AEM finns funktioner för att uppdatera interna länkar som refererar till sid
 
 1. Från **Byt namn** steg i guiden som du kan antingen:
 
-   * Ange det namn du vill att sidan ska ha efter att den har flyttats och klicka/tryck sedan på **Nästa** för att fortsätta.
+   * Ange namnet som du vill att sidan ska ha efter att den har flyttats och klicka sedan på **Nästa** för att fortsätta.
 
    * **Avbryt** om du vill avbryta processen.
 
@@ -386,7 +386,7 @@ I AEM finns funktioner för att uppdatera interna länkar som refererar till sid
 
   ![Asynkron flyttning av sida](assets/asynchronous-page-move.png)
 
-Status för asynkrona jobb kan kontrolleras i [**Status för asynkrona jobb** kontrollpanel](/help/sites-administering/asynchronous-jobs.md#monitor-the-status-of-asynchronous-operations) på **Global navigering** -> **verktyg** -> **Operationer** -> **Jobb**
+Status för asynkrona jobb kan kontrolleras i [**Status för asynkrona jobb** kontrollpanel](/help/sites-administering/asynchronous-jobs.md#monitor-the-status-of-asynchronous-operations) på **Global navigering** > **verktyg** > **Operationer** > **Jobb**
 
 >[!NOTE]
 >

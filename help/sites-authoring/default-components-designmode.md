@@ -2,9 +2,9 @@
 title: Konfigurera standardkomponenter i designläge
 description: Konfigurera Adobe Experience Manager-komponenter i designläge.
 exl-id: 5e232886-75c1-4f0f-b359-4739ae035fd3
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '914'
+source-wordcount: '905'
 ht-degree: 0%
 
 ---
@@ -56,11 +56,11 @@ Så här aktiverar eller inaktiverar du en komponent:
 
    ![screen_shot_2018-03-22at103113](assets/screen_shot_2018-03-22at103113.png)
 
-1. Tryck eller klicka på en komponent. Komponenten får en blå kantlinje när den markeras.
+1. Klicka på en komponent. Komponenten har en blå kantlinje när den är markerad.
 
    ![screen_shot_2018-03-22at103204](assets/screen_shot_2018-03-22at103204.png)
 
-1. Klicka eller tryck på **Överordnad** -ikon.
+1. Klicka på **Överordnad** -ikon.
 
    ![Överordnad](do-not-localize/screen_shot_2018-03-22at103204.png)
 
@@ -109,7 +109,7 @@ Så här aktiverar eller inaktiverar du en komponent:
 
    ![screen_shot_2018-03-22at103113-1](assets/screen_shot_2018-03-22at103113-1.png)
 
-1. Tryck eller klicka på en komponent med en blå ram. I det här exemplet markeras en hjältebildkomponent.
+1. Klicka på en komponent med en blå ram. I det här exemplet markeras en hjältebildkomponent.
 
    ![screen_shot_2018-03-22at103434](assets/screen_shot_2018-03-22at103434.png)
 
@@ -153,4 +153,4 @@ Så här aktiverar eller inaktiverar du en komponent:
 
    ![Flytta](do-not-localize/screen_shot_2018-03-22at103816.png)
 
-1. Klicka eller tryck på **Klar** -ikonen för att spara och stänga dialogrutan.
+1. Klicka på **Klar** -ikonen för att spara och stänga dialogrutan.

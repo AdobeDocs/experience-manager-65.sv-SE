@@ -2,9 +2,9 @@
 title: Så här modellerar du ditt innehåll
 description: I den här delen av AEM Headless Developer Journey lär du dig att modellera ditt innehåll för AEM Headless-leverans med hjälp av Content Modeling med Content Fragment Models och Content Fragments.
 exl-id: f75b433f-5a81-4259-a9f5-b58954b87970
-source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '1810'
+source-wordcount: '1795'
 ht-degree: 0%
 
 ---
@@ -158,7 +158,7 @@ I Content Fragment Models finns olika mekanismer som gör att du kan definiera i
 En innehållsfragmentmodell beskriver en enhet.
 
 >[!NOTE]
->Du måste aktivera funktionen för innehållsfragment i konfigurationsläsaren så att du kan skapa modeller.
+>Aktivera funktionen för innehållsfragment i Configuration Browser så att du kan skapa modeller.
 
 >[!TIP]
 >
@@ -180,7 +180,7 @@ AEM innehåller följande datatyper som du kan använda för att modellera ditt 
 
 * Enkelradig text
 * Flerradstext
-* Siffra
+* Nummer
 * Boolean
 * Datum och tid
 * Uppräkning

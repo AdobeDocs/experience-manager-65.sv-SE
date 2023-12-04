@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 docset: aem65
 feature: Form Data Model
 exl-id: 7a1d9d57-66f4-4f20-91c2-ace5a71a52f2
-source-git-commit: d39b4b1d921fc93a4871b74469953f2dfc5c470b
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '1935'
+source-wordcount: '1896'
 ht-degree: 0%
 
 ---
@@ -149,7 +149,7 @@ Utför följande steg för att konfigurera HTTP-klientmodellen för formulärdat
 
 1. Logga in på [!DNL Experience Manager Forms] Skapa instans som administratör och gå till [!DNL Experience Manager] webbkonsolpaket. Standardwebbadressen är [https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr).
 
-1. Tryck på **[!UICONTROL Form Data Model Http Client Configuration for REST data source]**.
+1. Tryck **[!UICONTROL Form Data Model Http Client Configuration for REST data source]**.
 
 1. I [!UICONTROL Form Data Model Http Client Configuration for REST data source] dialog:
 
@@ -206,7 +206,7 @@ En OData-tjänst identifieras av tjänstens rot-URL. Om du vill konfigurera en O
 
    >[!NOTE]
    >
-   >Du måste välja autentiseringstypen OAuth 2.0 om du vill ansluta till Microsoft Dynamics-tjänster med OData-slutpunkten som tjänstrot.
+   >Välj autentiseringstypen OAuth 2.0 om du vill ansluta till Microsoft Dynamics-tjänster med OData-slutpunkten som tjänstrot.
 
 1. Tryck **Skapa** för att skapa molnkonfigurationen för OData-tjänsten.
 

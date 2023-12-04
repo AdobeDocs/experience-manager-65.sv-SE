@@ -11,10 +11,10 @@ topic-tags: personalization
 discoiquuid: 81102d77-e856-4c85-b932-f22de8ca6462
 docset: aem65
 exl-id: 34293432-cfdc-466b-96bd-2c43b566a420
-source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '865'
-ht-degree: 2%
+source-wordcount: '834'
+ht-degree: 0%
 
 ---
 
@@ -33,21 +33,21 @@ Skapa ett varumärke som era erbjudanden är kopplade till. Öppna ett varumärk
 
 När du skapar ett varumärke med hjälp av Erbjudandekonsolen visas det också i [Aktivitetskonsol](/help/sites-authoring/activitylib.md) där ni kan lägga till och administrera aktiviteter för varumärket.
 
-1. Klicka eller tryck på **Personalisering** > **Erbjudanden** i navigeringskonsolen.
+1. I navigeringskonsolen klickar du på **Personalisering** > **Erbjudanden**.
 
    ![screen-shot_2019-03-05at124139-1](assets/screen-shot_2019-03-05at124139-1.png)
 
-1. Klicka eller tryck **Skapa** och sedan **Skapa** **Varumärke**.
-1. Välj varumärkesmallen och klicka eller peka **Nästa**.
+1. Klicka **Skapa** och sedan **Skapa** **Varumärke**.
+1. Välj varumärkesmallen och klicka på **Nästa**.
 1. Skriv en rubrik för varumärket som du vill att det ska visas i konsolerna för erbjudanden och aktiviteter. Du kan också ange eller markera en eller flera taggar som ska kopplas till varumärket.
-1. Klicka eller tryck **Skapa**.
+1. Klicka **Skapa**.
 
 ## Lägg till en mapp i ett offertbibliotek {#add-a-folder-to-an-offer-library}
 
 Lägg till en mapp i erbjudandebiblioteket för ett varumärke för att ordna och lagra erbjudanden. Du kan skapa en mapp under varumärket eller under andra mappar.
 
 1. Öppna den plats där du vill skapa mappen i konsolen Erbjudanden. Öppna till exempel varumärket för att skapa en mapp på den översta nivån eller öppna en annan mapp i biblioteket.
-1. Klicka eller tryck **Skapa** > **Skapa mapp eller erbjudande**.
+1. Klicka **Skapa** > **Skapa mapp eller erbjudande**.
 
    ![screen-shot_2019-03-05at124557](assets/screen-shot_2019-03-05at124557.png)
 
@@ -56,7 +56,7 @@ Lägg till en mapp i erbjudandebiblioteket för ett varumärke för att ordna oc
 
    ![chlimage_1-172](assets/chlimage_1-172.png)
 
-1. Klicka eller tryck **Skapa**.
+1. Klicka **Skapa**.
 
 ## Lägg till ett erbjudande i ett erbjudandebibliotek {#add-an-offer-to-an-offer-library}
 
@@ -65,13 +65,13 @@ Lägg till ett erbjudande i ett varumärkes erbjudandebibliotek så att det kan 
 När du har skapat erbjudandet kan du öppna det och redigera innehållet.
 
 1. I konsolen Erbjudanden öppnar du den plats där du vill skapa erbjudandet. Öppna till exempel varumärket för att skapa ett erbjudande på högsta nivå eller öppna en mapp i biblioteket.
-1. Klicka eller tryck **Skapa** > **Skapa mapp eller erbjudande**.
+1. Klicka **Skapa** > **Skapa mapp eller erbjudande**.
 
    ![screen-shot_2019-03-05at124557-1](assets/screen-shot_2019-03-05at124557-1.png)
 
-1. Välj **Erbjudandesida** mall och sedan klicka eller peka **Nästa**.
-1. Skriv en titel för erbjudandet och välj eller skriv in en eller flera taggar som ska kopplas till erbjudandet. Klicka eller tryck sedan **Skapa**.
-1. Öppna erbjudandet för redigering genom att klicka eller trycka på **Öppna sida**.
+1. Välj **Erbjudandesida** mall och klicka sedan på **Nästa**.
+1. Skriv en titel för erbjudandet och välj eller ange en eller flera taggar som ska kopplas till erbjudandet. Klicka sedan på **Skapa**.
+1. Öppna erbjudandet för redigering i bekräftelsedialogrutan genom att klicka på **Öppna sida**.
 
 ## Redigera ett erbjudande {#editing-an-offer}
 
@@ -79,7 +79,7 @@ När du har skapat erbjudandet kan du öppna det och redigera innehållet.
 
 Du kan öppna ett erbjudande från en mapp i ett erbjudandebibliotek eller från sökresultat. Du kan också öppna ett erbjudande från en upplevelse som använder erbjudandet.
 
-1. Tryck eller klicka på ikonen bredvid erbjudandet i konsolen Erbjudanden och klicka eller tryck på **Redigera**.
+1. Klicka på ikonen bredvid erbjudandet i konsolen Erbjudanden och klicka på **Redigera**.
 1. Lägg till komponenter i erbjudandet och redigera komponentinnehållet som vanligt.
 
 ## Ta bort ett erbjudande {#deleting-an-offer}
@@ -88,15 +88,15 @@ Ta bort ett erbjudande när det inte längre behövs. När du försöker ta bort
 
 Du kan ta bort ett erbjudande när du visar antingen mappinnehåll i ett erbjudandebibliotek eller sökresultat.
 
-1. Tryck eller klicka på ikonen bredvid erbjudandet i konsolen Erbjudanden och klicka eller tryck på **Ta bort**.
+1. Klicka på ikonen bredvid erbjudandet i konsolen Erbjudanden och klicka på **Ta bort**.
 
-   Välj erbjudandet och klicka eller tryck **Ta bort**.
+   Välj erbjudandet och klicka på **Ta bort**.
 
-1. Klicka på eller tryck i dialogrutan som visas **Ta bort** för att bekräfta borttagningen.
+1. Klicka på **Ta bort** för att bekräfta borttagningen.
 1. Om erbjudandet används i en eller flera upplevelser visas en dialogruta som anger att det hänvisas till erbjudandet:
 
-   * Om du vill ta bort erbjudandet och ta bort det från upplevelserna klickar eller trycker du på **Tvinga borttagning**.
-   * Klicka eller tryck för att behålla erbjudandet **Avbryt**.
+   * Om du vill ta bort erbjudandet och ta bort det från upplevelserna klickar du på **Tvinga borttagning**.
+   * Om du vill behålla erbjudandet klickar du **Avbryt**.
 
 ## Söker efter erbjudanden {#searching-for-offers}
 
@@ -108,5 +108,5 @@ De aktuella sökvillkoren visas bredvid sökresultaten. Du kan också sortera re
 
 Så här söker du efter erbjudanden:
 
-1. Klicka på eller tryck på förstoringsglaset längst upp på Offers-konsolen. Som standard är sökningen begränsad till erbjudanden.
+1. Klicka på förstoringsglasikonen längst upp på Offers-konsolen. Som standard är sökningen begränsad till erbjudanden.
 1. Ange ditt nyckelord om du vill söka efter erbjudanden. Välj bland resultaten.

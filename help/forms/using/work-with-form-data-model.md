@@ -10,9 +10,9 @@ discoiquuid: c47ef627-261e-4b4b-8846-873d3d84234b
 docset: aem65
 feature: Form Data Model
 exl-id: 16b76265-9ec4-4993-9ac0-b7aef1b1e5f1
-source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '4067'
+source-wordcount: '4045'
 ht-degree: 0%
 
 ---
@@ -95,7 +95,7 @@ Du kan lägga till datamodellsobjekt från konfigurerade datakällor, men du kan
 Så här skapar du ett datamodellsobjekt utan datakällor:
 
 1. Logga in på AEM författarinstans, navigera till **[!UICONTROL Forms > Data Integrations]** och öppna den formulärdatamodell i vilken du vill skapa ett datamodellsobjekt eller en datamodell.
-1. Tryck på **[!UICONTROL Create Entity]**.
+1. Tryck **[!UICONTROL Create Entity]**.
 1. I dialogrutan Skapa datamodell anger du ett namn för datamodellobjektet och trycker på **[!UICONTROL Add]**. Ett datamodellsobjekt läggs till i formulärdatamodellen. Det nya datamodellsobjektet är inte bundet till en datakälla och har inga egenskaper som visas i följande bild.
 
    ![new-entity](assets/new-entity.png)
@@ -124,7 +124,7 @@ När du har skapat datamodellsobjekt och -egenskaper kan du fortsätta att skapa
 När datakällorna som du vill integrera med formulärdatamodellen är tillgängliga kan du lägga till dem i formulärdatamodellen enligt beskrivningen i [Uppdatera datakällor](/help/forms/using/create-form-data-models.md#update). Gör sedan följande för att binda obundna datamodellsobjekt och egenskaper:
 
 1. Välj den obundna datakälla som du vill binda till en datakälla i formulärdatamodellen.
-1. Tryck på **[!UICONTROL Edit Properties]**.
+1. Tryck **[!UICONTROL Edit Properties]**.
 1. I **[!UICONTROL Edit Properties]** trycker du på bläddringsikonen bredvid **[!UICONTROL Binding]** fält. Den öppnar **[!UICONTROL Select Object]** som visar datakällor som lagts till i formulärdatamodellen.
 
    ![select-object](assets/select-object.png)
@@ -242,7 +242,7 @@ När du lägger till associerade datamodellobjekt i en datakälla i en formulär
 
 >[!NOTE]
 >
->Fördefinierade associationer i en JDBC-datakälla sparas inte i formulärdatamodellen. Du måste skapa dem manuellt.
+>Fördefinierade associationer i en JDBC-datakälla sparas inte i formulärdatamodellen. Skapa dem manuellt.
 
 Så här lägger du till en association:
 
@@ -433,7 +433,7 @@ Flaggan kan anges med något av följande värden:
 
 * **HELT**: FDM utför valideringen baserat på alla begränsningar
 * **AV**: Ingen validering
-* **GRUNDLÄGGANDE**: FDM utför valideringen baserat på begränsningarna&quot;required&quot; och&quot;nullable&quot;
+* **GRUNDLÄGGANDE**: FDM utför valideringen baserat på begränsningarna required och null
 
 Om inget värde har angetts för `ValidationOptions`flagga, **GRUNDLÄGGANDE** validering utförs på indata.
 
@@ -549,7 +549,7 @@ I det här exemplet valideras indata baserat på maximala, minimala och obligato
    ]
 ```
 
-Ett undantag visas om indata inte uppfyller valideringskriterierna. Om loggnivån är inställd på **Felsök**, loggas ett fel på **error.log** -fil. Till exempel,
+Ett undantag visas om indata inte uppfyller valideringskriterierna. Om loggnivån är inställd på **Felsök**, loggas ett fel på **error.log** -fil. Exempel:
 
 ```verilog
 21.01.2019 17:26:37.411 *ERROR* com.adobe.aem.dermis.core.validation.JsonSchemaValidator {"errorCode":"AEM-FDM-001-044","errorMessage":"Input validations failed during operation execution.","violations":{"/orderId":["numeric instance is greater than the required maximum (maximum: 10, found: 16)"]}}

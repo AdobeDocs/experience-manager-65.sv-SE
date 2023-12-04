@@ -1,8 +1,8 @@
 ---
 title: Registrera som användare
 seo-title: Registering as a User
-description: Lär dig hur du kan använda policyskyddade dokument som du får från en dokumentsäkerhetsanvändare, även om du inte är en användare i användarens organisation.
-seo-description: Learn how you can use policy-protected documents that you receive from an document security user, even if you are external to the user’s organization.
+description: Lär dig hur du kan använda policyskyddade dokument som du får från en dokumentsäkerhetsanvändare, även om du är extern i förhållande till användarens organisation.
+seo-description: Learn how you can use policy-protected documents that you receive from an document security user, even if you are external to the user's organization.
 uuid: 4648b358-f545-434f-a3b2-2937e961dc64
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 content-type: reference
@@ -10,9 +10,9 @@ geptopics: SG_AEMFORMS/categories/working_with_document_security
 discoiquuid: 26e11ef4-9f8f-4b0b-b035-a498fd7d65ef
 feature: Document Security
 exl-id: 320d8fa4-e200-4993-b018-a9718cddc5c1
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '699'
+source-wordcount: '695'
 ht-degree: 0%
 
 ---
@@ -43,11 +43,11 @@ Om du är en inbjuden användare och får ett e-postregistreringsmeddelande frå
 1. Öppna e-postmeddelandet om dokumentsäkerhetsregistrering. Den URL som meddelandet innehåller är en länk till registreringssidan för externa användare i dokumentsäkerhet.
 1. Klicka på URL:en eller kopiera den och klistra in den i webbläsaren. Sidan External Users Registration (Registrering av externa användare) visas.
 1. Skriv ditt namn, telefonnummer, adress, organisation och lösenord i rutorna och skriv sedan in lösenordet igen i rutan Bekräfta lösenord. Lösenordet kan bestå av en kombination av åtta tecken.
-1. Klicka på Spara. Ett tack-meddelande visas som informerar dig om att du behöver ett aktiveringsmeddelande via e-post. Du måste nu aktivera ditt konto för att slutföra registreringsprocessen.
+1. Klicka på Spara. Ett tack-meddelande visas som informerar dig om att du behöver ett aktiveringsmeddelande via e-post. Aktivera ditt konto för att slutföra registreringsprocessen.
 
 ## Aktivera ditt inbjudna användarkonto {#activate-your-invited-user-account}
 
-När du har registrerat dig får du ett aktiveringsmejl. Du måste aktivera ditt konto med hjälp av URL:en i meddelandet. Du kan sedan logga in på dokumentsäkerhet för att använda profilskyddade dokument som du har tillgång till. Beroende på vilka funktioner administratören aktiverar för externa användare kan du ha behörighet att skapa profiler, tillämpa profiler på dokument och lägga till andra externa användare till dina profiler.
+När du har registrerat dig får du ett aktiveringsmejl. Aktivera ditt konto med hjälp av URL:en i meddelandet. Du kan sedan logga in på dokumentsäkerhet för att använda profilskyddade dokument som du har tillgång till. Beroende på vilka funktioner administratören aktiverar för externa användare kan du ha behörighet att skapa profiler, tillämpa profiler på dokument och lägga till andra externa användare till dina profiler.
 
 Ditt konto är aktivt tills administratören inaktiverar eller tar bort det.
 

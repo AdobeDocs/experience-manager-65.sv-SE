@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: operations
 content-type: reference
 exl-id: 918fcbbc-a78a-4fab-a933-f183ce6a907f
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '2067'
+source-wordcount: '2037'
 ht-degree: 0%
 
 ---
@@ -341,7 +341,7 @@ Bekräfta slutligen konfigurationen genom att:
 
    ![Den nya registreringsknappen när du konfigurerar Microsoft Outlook](assets/oauth-outlook1.png)
 
-1. Fyll i informationen enligt dina krav och klicka sedan på **Registrera**
+1. Fyll i informationen enligt dina krav och klicka sedan **Registrera**
 1. Gå till den nya appen och välj **API-behörigheter**
 1. Gå till **Lägg till behörighet** - **Diagrambehörighet** - **Delegerade behörigheter**
 1. Välj behörigheter nedan för din app och klicka sedan på **Lägg till behörighet**:
@@ -354,7 +354,7 @@ Bekräfta slutligen konfigurationen genom att:
    * `http://localhost:4503/services/mailer/oauth2/token`
 1. Upprepa ovanstående för varje publiceringsinstans
 1. Konfigurera inställningarna enligt dina krav
-1. Nästa, gå till **Certifikat och hemligheter**, klicka på **Ny klienthemlighet** och följ stegen på skärmen för att skapa en hemlighet. Observera denna hemlighet för senare bruk
+1. Nästa, gå till **Certifikat och hemligheter**, klicka **Ny klienthemlighet** och följ stegen på skärmen för att skapa en hemlighet. Observera denna hemlighet för senare bruk
 1. Tryck **Ökning** i den vänstra rutan och kopiera värdena för **Program-ID (klient)** och **Katalog-ID (klientorganisation)** för senare användning
 
 För att kunna göra en sammanfattning måste du ha följande information för att konfigurera OAuth2 för tjänsten Mailer på AEM sida:
@@ -370,7 +370,7 @@ För att kunna göra en sammanfattning måste du ha följande information för a
 Integrera sedan dina OAuth2-inställningar med AEM:
 
 1. Gå till webbkonsolen för den lokala instansen genom att gå till `http://serveraddress:serverport/system/console/configMgr`
-1. Leta efter och klicka på **Dagens CQ-tjänst för e-post**
+1. Leta efter och klicka **Dagens CQ-tjänst för e-post**
 1. Lägg till följande inställningar:
    * Värdnamn för SMTP-server: `smtp.office365.com`
    * SMTP-användare: ditt användarnamn i e-postformat

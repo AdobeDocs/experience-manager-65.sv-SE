@@ -7,10 +7,10 @@ topic-tags: integration
 content-type: reference
 docset: aem65
 exl-id: 0f3aaa0a-ccfb-4162-97a6-ee5485595d28
-source-git-commit: c7c32130a3257c14c98b52f9db31d80587d7993a
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '1553'
-ht-degree: 1%
+source-wordcount: '1530'
+ht-degree: 3%
 
 ---
 
@@ -107,7 +107,7 @@ Så här exporterar du AEM användare som Salesforce-leads:
 
    ![chlimage_1-76](assets/chlimage_1-76.png)
 
-1. Välj den AEM användare som du vill skapa som lead som **Nyttolast** för det här arbetsflödet (home -> användare). Se till att du väljer profilnoden för användaren eftersom den innehåller information som **givenName** och  **familyName** som är mappade till Salesforce-leads **FirstName** och **LastName** fält.
+1. Välj den AEM användare som du vill skapa som lead som **Nyttolast** för det här arbetsflödet (hem > användare). Se till att du väljer profilnoden för användaren eftersom den innehåller information som **givenName** och  **familyName** som är mappade till Salesforce-leads **FirstName** och **LastName** fält.
 
    ![chlimage_1-77](assets/chlimage_1-77.png)
 

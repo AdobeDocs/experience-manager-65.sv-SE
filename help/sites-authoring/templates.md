@@ -7,9 +7,9 @@ content-type: reference
 topic-tags: site-features
 docset: aem65
 exl-id: 363b8fab-6ce7-4338-8478-3f25f2a1f117
-source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '4834'
+source-wordcount: '4825'
 ht-degree: 7%
 
 ---
@@ -65,7 +65,7 @@ Skapa en mall med **Mallkonsol** och **Mallredigerare** kräver samarbete mellan
 
    * Sådana uppgifter kan ofta även utföras av en utvecklare
 
-* **Developer**:
+* **Utvecklare**:
 
    * Koncentrerar sig på tekniska/interna detaljer
    * Kräver erfarenhet av utvecklingsmiljön.
@@ -151,7 +151,7 @@ Du bör skapa en mallmapp för ditt projekt för dina projektspecifika mallar. D
 
 ### Skapa en ny mall - mallskapare {#creating-a-new-template-template-author}
 
-1. Öppna **mallkonsolen** (via **Verktyg ->** **Allmänt**) och navigera sedan till önskad mapp.
+1. Öppna **Mallkonsol** (via **Verktyg >** **Allmänt**) navigera sedan till önskad mapp.
 
    >[!NOTE]
    >
@@ -221,14 +221,14 @@ Så här definierar du mallminiatyrbilden:
 1. Redigera mallegenskaperna.
 1. Välj om du vill överföra en miniatyrbild eller låta den genereras från mallinnehållet.
 
-   * Om du vill överföra en miniatyrbild klickar du på eller trycker **Överför bild**
-   * Om du vill generera en miniatyrbild klickar eller trycker du på **Generera förhandsgranskning**
+   * Om du vill överföra en miniatyrbild klickar du på **Överför bild**
+   * Om du vill skapa en miniatyrbild klickar du på **Generera förhandsgranskning**
 
 1. För båda metoderna visas en förhandsvisning av miniatyrbilden.
 
-   Om det inte är tillfredsställande klickar du på **Rensa** om du vill överföra en annan bild eller återskapa miniatyrbilden.
+   Om den inte är tillfredsställande klickar du på **Rensa** om du vill överföra en annan bild eller återskapa miniatyrbilden.
 
-1. När du är nöjd med miniatyrbilden klickar eller trycker du **Spara och stäng**.
+1. När du är nöjd med miniatyrbilden klickar du **Spara och stäng**.
 
 ### Aktivera och tillåta en mall - mallförfattare {#enabling-and-allowing-a-template-template-author}
 
@@ -463,13 +463,13 @@ I **Struktur** mallredigerarens läge:
 
   För en bildkomponent kan till exempel tillåtna bredder definieras tillsammans med aktivering av lazy loading.
 
-  Om en inställning tillåter flera konfigurationer klickar du på eller trycker på **Lägg till** om du vill lägga till en annan konfiguration.
+  Om en inställning tillåter flera konfigurationer klickar du på **Lägg till** om du vill lägga till en annan konfiguration.
 
   ![chlimage_1-141](assets/chlimage_1-141.png)
 
-  Om du vill ta bort en konfiguration klickar eller trycker du på **Ta bort** till höger om konfigurationen.
+  Om du vill ta bort en konfiguration klickar du på **Ta bort** till höger om konfigurationen.
 
-  Om du vill ta bort en konfiguration klickar eller trycker du på knappen** Delete**.
+  Om du vill ta bort en konfiguration klickar du på knappen* Ta bort**.
 
   ![chlimage_1-142](assets/chlimage_1-142.png)
 
@@ -529,9 +529,9 @@ I **Struktur** mallredigerarens läge:
 
   På **Standardkomponenter** definierar du vilka komponenter som automatiskt kopplas till vissa medietyper så att AEM vet vilken komponent som ska kopplas när en författare drar en resurs från resursläsaren. Observera att endast komponenter med släppzoner är tillgängliga för sådan konfiguration.
 
-  Klicka eller tryck **Lägg till mappning** för att lägga till en helt ny komponent och MIME-typmappning.
+  Klicka **Lägg till mappning** för att lägga till en helt ny komponent och MIME-typmappning.
 
-  Markera en komponent i listan och klicka eller tryck på **Lägg till typ** för att lägga till ytterligare en MIME-typ i en redan mappad komponent. Klicka på ikonen **Ta bort** för att ta bort en MIME-typ.
+  Markera en komponent i listan och klicka på **Lägg till typ** om du vill lägga till ytterligare en MIME-typ i en redan mappad komponent. Klicka på ikonen **Ta bort** för att ta bort en MIME-typ.
 
   ![chlimage_1-145](assets/chlimage_1-145.png)
 

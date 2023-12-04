@@ -8,25 +8,25 @@ topic-tags: forms-app
 discoiquuid: c71c2a17-54f9-4c95-a90a-3c89d6d45721
 docset: aem65
 exl-id: ae7340c8-38cc-4b2b-ba17-22011471fd7d
-source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '894'
+source-wordcount: '881'
 ht-degree: 0%
 
 ---
 
 # Konfigurera Visual Studio-projektet och bygg Windows-appen{#set-up-the-visual-studio-project-and-build-the-windows-app}
 
-AEM Forms tillhandahåller den fullständiga källkoden för AEM Forms-appen. Källan innehåller alla komponenter för att skapa ett anpassat arbetsyteprogram. Källkodsarkivet `adobe-lc-mobileworkspace-src-<version>.zip`är en del av `adobe-aemfd-forms-app-src-pkg-<version>.zip` paket om programvarudistribution.
+AEM Forms tillhandahåller den fullständiga källkoden för AEM Forms-appen. Källan innehåller alla komponenter för att skapa ett anpassat arbetsyteprogram. Källkodsarkivet, `adobe-lc-mobileworkspace-src-<version>.zip`är en del av `adobe-aemfd-forms-app-src-pkg-<version>.zip` paket om programvarudistribution.
 
 Så här hämtar du programkällan för AEM Forms:
 
 1. Öppna [Programvarudistribution](https://experience.adobe.com/downloads). Du behöver en Adobe ID för att logga in på Software Distribution.
 1. Tryck **[!UICONTROL Adobe Experience Manager]** finns i rubrikmenyn.
 1. I **[!UICONTROL Filters]** avsnitt:
-   1. Välj **[!UICONTROL Forms]** från **[!UICONTROL Solution]** nedrullningsbar lista.
+   1. Välj **[!UICONTROL Forms]** från **[!UICONTROL Solution]** listruta.
    2. Välj version och typ för paketet. Du kan också använda **[!UICONTROL Search Downloads]** för att filtrera resultaten.
-1. Tryck på det paketnamn som gäller för operativsystemet och välj **[!UICONTROL Accept EULA Terms]** och trycka **[!UICONTROL Download]**.
+1. Tryck på det paketnamn som gäller för ditt operativsystem och välj **[!UICONTROL Accept EULA Terms]** och trycka **[!UICONTROL Download]**.
 1. Öppna [Pakethanteraren](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html)  och klicka **[!UICONTROL Upload Package]** för att överföra paketet.
 1. Markera paketet och klicka på **[!UICONTROL Install]**.
 
@@ -66,7 +66,7 @@ Utför följande steg för att skapa och distribuera AEM Forms-program.
 >
 >Data som lagras i Windows-filsystem för AEM Forms-program krypteras inte. Vi rekommenderar att du använder ett tredjepartsverktyg som Windows BitLocker-diskkryptering för att kryptera diskdata.
 
-1. I verktygsfältet Visual Studio Standard väljer du **Frigör** från listrutan för byggläge.
+1. Välj i verktygsfältet Visual Studio Standard **Frigör** från listrutan för byggläge.
 
 1. Välj Windows-AnyCPU, Windows-x64 eller Windows-x86 baserat på din plattform. Windows-AnyCPU rekommenderas.
 1. Högerklicka på projektet i Visual Studio Solution Explorer **CordovaApp.Windows** och markera **Store > Create AppPackages**.
@@ -83,11 +83,11 @@ Utför följande steg för att skapa och distribuera AEM Forms-program.
 
 1. I guiden Skapa appaket väljer du väder eller inte det väder som du vill överföra din app till Windows Store och klickar sedan på **Nästa**.
 
-   ![createapppackageswizard1](assets/createapppackageswizard1.png)
+   ![createapppackagesguide1](assets/createapppackageswizard1.png)
 
 1. Gör önskade ändringar i parametrarna, till exempel version och utdataplats för appbygget.
 
-   ![createapppackageswizard2](assets/createapppackageswizard2.png)
+   ![createapppackagesguide2](assets/createapppackageswizard2.png)
 
 1. När projektet har byggts kan du installera programmet med:
 
@@ -106,8 +106,6 @@ Utför följande steg för att skapa och distribuera AEM Forms-program.
    1. Certifikat (för närvarande är det ett självsignerat certifikat av Apache Cordova)
    1. Beroendemapp
    1. PowerShell-fil (.ps1-tillägg)
-
-
 
 ## Distribuera ett program med Windows PowerShell {#deploying-an-app-using-windows-powershell}
 
@@ -138,7 +136,7 @@ Så här distribuerar du programmet:
 
 1. Kör `gpedit.msc`.
 1. Navigera till **Datorkonfiguration > Administrativa mallar > Windows-komponent > App Package Deployment**.
-1. Högerklicka på **Tillåt installation av alla betrodda appar**.
+1. Högerklicka **Tillåt installation av alla betrodda appar**.
 1. Klicka **Redigera** och markera **Aktiverad**.
 
 1. Klicka **OK**.

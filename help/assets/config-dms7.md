@@ -10,10 +10,10 @@ role: User, Admin
 mini-toc-levels: 4
 exl-id: badd0f5c-2eb7-430d-ad77-fa79c4ff025a
 feature: Configuration,Scene7 Mode
-source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '6102'
-ht-degree: 2%
+source-wordcount: '6121'
+ht-degree: 1%
 
 ---
 
@@ -101,7 +101,7 @@ Se [Installera funktionspaket 18912 för migrering av gruppresurser](/help/asset
 
    * Versaler
    * Gemener
-   * Siffra
+   * Nummer
    * Specialtecken: `# $ & . - _ : { }`
 
    The **[!UICONTROL Current Password]** fältet är avsiktligt ifyllt och dolt för interaktion.
@@ -179,7 +179,7 @@ Lösenordet måste innehålla minst ett av följande:
 
 * Versaler
 * Gemener
-* Siffra
+* Nummer
 * Specialtecken: `# $ & . - _ : { }`
 
 Om det behövs kan du kontrollera stavningen av ett lösenord som du har skrivit eller skrivit in igen genom att markera lösenordsikonen för att visa lösenordet. Klicka på ikonen igen om du vill dölja lösenordet.
@@ -276,7 +276,7 @@ Om du tänker använda den här funktionen bör du vara medveten om följande kr
 
    * Kopiera och klistra in banan ovanför i fältet CRXDE Lite under verktygsfältet och tryck sedan på `Enter`.
 
-1. Högerklicka på `fileupload`väljer du **[!UICONTROL Overlay Node]**.
+1. Högerklicka i den vänstra listen `fileupload`väljer du **[!UICONTROL Overlay Node]**.
 
    ![Alternativet Täcka över nod](/help/assets/assets-dm/uploadassets15gb_a.png)
 

@@ -6,9 +6,9 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/managing_services
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 exl-id: a6a10ff0-6f4d-42df-9b4e-f98a53cf1806
-source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '10692'
+source-wordcount: '10702'
 ht-degree: 0%
 
 ---
@@ -147,7 +147,7 @@ Följande inställningar är tillgängliga för tjänsten Distiller.
 
 Nya inställningar kan skapas via användargränssnittet i PDF Generator.
 
-**Skyddsinställningar:** Förkonfigurerade säkerhetsinställningar som används för genererade PDF-dokument. Standardvärdet är Ingen säkerhet. Du måste skapa skyddsinställningar med PDF Generator och sedan ange inställningen här.
+**Skyddsinställningar:** Förkonfigurerade säkerhetsinställningar som används för genererade PDF-dokument. Standardvärdet är Ingen säkerhet. Skapa skyddsinställningar med PDF Generator och ange sedan inställningen här.
 
 **Poolstorlek:** Poolens ursprungliga storlek. När Distiller-tjänsten distribueras används det här numret för att avgöra hur många instanser av tjänstimplementering som skapas och tilldelas den kostnadsfria poolen som väntar på anrop. Tjänstbehållaren kan sedan svara direkt på anropsbegäranden utan att först initiera en tjänstinstans.
 
@@ -332,7 +332,7 @@ Värdet macKeySeed är startvärdet för den slumpmässiga talgeneratorn som anv
 
 Ändra värdet för macKeySeed när du behöver uppdatera säkra URL:er. Uppdatering av säkra URL:er beror på din säkerhetsprincip och liknar uppdateringsprincipen för ändring av huvudrotlösenordet för servern. macSeedValue är detsamma som huvudlösenordet för säkra URL:er, eftersom det används för att generera ett nytt unikt slumpmässigt nummer som kan användas för säker URL-generering och hämtning.
 
-Du måste starta om klustret eftersom macSeedValue är skrivskyddat när datorn startas. Alla noder måste startas om för att kunna läsa värdet, eftersom de använder det oberoende av varandra för att initiera sina interna slumptal med startvärdet.
+Starta om klustret eftersom macSeedValue är skrivskyddat när systemet startas. Alla noder måste startas om för att kunna läsa värdet, eftersom de använder det oberoende av varandra för att initiera sina interna slumptal med startvärdet.
 
 ## JDBC-tjänstinställningar {#jdbc-service-settings}
 

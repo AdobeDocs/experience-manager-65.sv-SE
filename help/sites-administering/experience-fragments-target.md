@@ -7,9 +7,9 @@ topic-tags: integration
 content-type: reference
 docset: aem65
 exl-id: f2921349-de8f-4bc1-afa2-aeace99cfc5c
-source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '1539'
+source-wordcount: '1513'
 ht-degree: 0%
 
 ---
@@ -152,19 +152,19 @@ Så här exporterar du ett Experience Fragment från AEM till Target (efter att 
    >
    >Det måste vara en webbvariant för Experience Fragment.
 
-1. Tryck/klicka **Exportera till Adobe Target**.
+1. Klicka **Exportera till Adobe Target**.
 
    >[!NOTE]
    >
    >Om Experience Fragment redan har exporterats väljer du **Uppdatera i Adobe Target**.
 
-1. Tryck/klicka **Exportera utan publicering** eller **Publicera** efter behov.
+1. Klicka **Exportera utan publicering** eller **Publicera** efter behov.
 
    >[!NOTE]
    >
    >Markera **Publicera** publicerar Experience Fragment direkt och skickar det till Target.
 
-1. Tryck/klicka **OK** i bekräftelsedialogrutan.
+1. Klicka **OK** i bekräftelsedialogrutan.
 
    Din Experience Fragment bör nu vara i Target.
 

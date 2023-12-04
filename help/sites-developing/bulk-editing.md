@@ -10,9 +10,9 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: fe61ee4b-51b6-4a6f-91d8-1c02b29cc1db
 exl-id: 1787e643-fc8e-40e0-8e14-97b222a7c320
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '414'
+source-wordcount: '407'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 På grund av möjligheten att det finns olika värden är sidegenskaperna inte aktiverade för massredigering som standard. De måste vara uttryckligen tillåtna (aktiverade). När du definierar vilka sidegenskaper som ska vara tillgängliga för massredigering måste du ta hänsyn till vissa konsekvenser, till exempel:
 
-* Vissa fält är vanligtvis unika, till exempel en sidtitel. Du måste bestämma om det är meningsfullt att aktivera sådana fält för massredigering, när ett värde ska användas.
+* Vissa fält är vanligtvis unika, till exempel en sidtitel. Bestäm om det är meningsfullt att aktivera sådana fält för massredigering, när ett värde ska användas.
 * Vissa fält kan ha flera värden - detta kräver en meningsfull representation vid återgivningen.
 
   Till exempel en kryssruta som anger&quot;Klart för publikation&quot;. Detta kan ha flera värden före gruppredigering (t.ex. ready, in-review, in-progress).

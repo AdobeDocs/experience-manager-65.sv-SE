@@ -10,9 +10,9 @@ topic-tags: integration
 content-type: reference
 discoiquuid: b8c7a20a-7694-4a49-b66a-060720f17dad
 exl-id: 1e0821f5-627f-4262-ba76-62303890e112
-source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '2205'
+source-wordcount: '2148'
 ht-degree: 0%
 
 ---
@@ -58,7 +58,7 @@ Om du vill kan du använda produktionsbiblioteken i din författarinstans. Webbl
 
 När AEM är värd för de dynamiska Tag Management-biblioteken kan du använda Dynamic Tag Management-tjänsten för att automatiskt överföra biblioteksuppdateringar till AEM. Biblioteksuppdateringar överförs när ändringar görs i biblioteken, till exempel när egenskaperna för den dynamiska Tag Management-webbegenskapen redigeras.
 
-Dynamic Tag Management måste kunna ansluta till den AEM instansen som är värd för biblioteken för att kunna använda distributionspaken. Du måste [aktivera åtkomst till AEM](/help/sites-administering/dtm.md#enabling-access-for-the-deployment-hook-service) för dynamiska Tag Management-servrar.
+Dynamic Tag Management måste kunna ansluta till den AEM instansen som är värd för biblioteken för att kunna använda distributionspaken. [Aktivera åtkomst till AEM](/help/sites-administering/dtm.md#enabling-access-for-the-deployment-hook-service) för dynamiska Tag Management-servrar.
 
 I vissa fall kan AEM vara oåtkomliga, till exempel när AEM ligger bakom en brandvägg. I dessa fall kan du använda alternativet AEM avsökningsimporteraren för att regelbundet hämta biblioteken. Ett cron-jobbuttryck bestämmer schemat för bibliotekshämtning.
 

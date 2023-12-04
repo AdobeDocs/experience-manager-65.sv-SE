@@ -1,7 +1,7 @@
 ---
 title: Komma igång med arbetsytan i AEM Forms
 seo-title: Getting started with AEM Forms workspace
-description: Så här kommer du igång med att använda arbetsytan i LiveCycle AEM Forms för att hantera era automatiserade affärsprocesser.
+description: Så här kommer du igång med att använda arbetsytan i LiveCycle AEM Forms för att hantera era affärsautomatiseringsprocesser.
 seo-description: How to get started with using the LiveCycle AEM Forms workspace to manage your business automation processes.
 uuid: 35ca1a51-92c3-40d8-8de3-604be8704752
 contentOwner: robhagat
@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: fa6e0246-6bd2-4ffb-b54c-15eda605f213
 exl-id: d2a962b6-16be-4866-a856-5064f81c9610
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
 source-wordcount: '993'
 ht-degree: 0%
@@ -22,7 +22,7 @@ ht-degree: 0%
 Du kan använda AEM Forms arbetsyta för att utföra följande uppgifter:
 
 * Påbörja en affärsprocess
-* Visa och agera på uppgifter som har tilldelats dig eller andra Att göra-listor som du har tillgång till
+* Visa och agera på uppgifter som är tilldelade dig eller på andra Att göra-listor som du har tillgång till
 * Spåra uppgifter som ingår i de processer du påbörjade eller deltog i
 
 ## Navigera på arbetsytan i AEM Forms {#navigating-html-workspace}
@@ -51,13 +51,13 @@ Om du vill använda AEM Forms-arbetsytan med en skärmläsare bör du tänka på
 
 ## Navigera på arbetsytan i AEM Forms med ett tangentbord {#navigating-html-workspace-using-a-keyboard}
 
-När du navigerar på arbetsytan i AEM Forms med ett tangentbord följer navigeringen HTML tillgänglighetskonventionerna. I vissa situationer följer tabbordningen inte den vanliga vanliga ordningen. Följande tips hjälper dig att navigera i gränssnittet:
+När du navigerar på arbetsytan i AEM Forms med hjälp av ett tangentbord följer navigeringen HTML tillgänglighetskonventionerna. I vissa situationer följer tabbordningen inte den vanliga vanliga ordningen. Följande tips hjälper dig att navigera i gränssnittet:
 
 * Om du har problem med att tabba ut från verktygsfälten längst upp i webbläsaren trycker du på Ctrl+Tabb för att tabba in innehållet i webbläsarfönstret.
 * Hjälp om arbetsytan i AEM Forms öppnas i ett separat webbläsarfönster. När du har visat hjälpen återgår fokus till webbläsarfönstret som innehåller AEM Forms-arbetsytan. Hjälpmenyn förblir fokuserad när fokus återgår.
 * När du öppnar ett formulär för att starta en process eller slutföra en åtgärd behåller fokus det befintliga elementet och ändras inte till formuläret. Använd fliken för att flytta fokus till formuläret och bläddra igenom det. Tabbordningen i formuläret beror på formulärets typ och design.
 
-   För PDF forms går markören till adressfältet i webbläsaren när du bläddrar fram till formulärets slut eller skickar formuläret. Du måste gå igenom menyerna en gång till (men inte hela formuläret) för att gå till formuläråtgärdsknapparna, till exempel Spara som utkast och Fullständigt. Om formuläret fortfarande är öppet kan du även tabba förbi knapparna och tillbaka till formuläret.
+  För PDF forms går markören till adressfältet i webbläsaren när du bläddrar fram till formulärets slut eller skickar formuläret. Gå igenom menyerna igen (men inte hela formuläret) för att gå till formuläråtgärdsknapparna, till exempel Spara som utkast och Fullständigt. Om formuläret fortfarande är öppet kan du även tabba förbi knapparna och tillbaka till formuläret.
 
 ## Hantera inställningar {#managing-preferences}
 
@@ -65,7 +65,7 @@ Du kan ange olika inställningar för AEM Forms-arbetsytan i följande kategorie
 
 **Frånvarande:** Ange inställningar för att styra hur uppgifter tilldelas andra personer när du inte är på kontoret. Se [Ange inställningar utanför kontoret](todo-lists.md#setting-out-of-office-preferences).
 
-**Köer:** Ange inställningar för att dela din Att göra-lista med andra användare eller för att begära åtkomst till en annan användares lista. Se [Arbeta med uppgifter från gruppköer och delade köer](todo-lists.md#working-with-tasks-from-group-and-shared-queues).
+**Köer:** Ange inställningar för att dela din Att göra-lista med andra användare eller för att begära åtkomst till en annan användares lista. Se [Arbeta med uppgifter från grupper och delade köer](todo-lists.md#working-with-tasks-from-group-and-shared-queues).
 
 **Gränssnittsinställningar:** Ange inställningar för hur du interagerar med arbetsytan i AEM Forms. Se [Ange inställningar för användargränssnitt](#set-user-interface-preferences).
 
@@ -75,8 +75,8 @@ Ange gränssnittsinställningarna på fliken Inställningar > Användargränssni
 
 * **Startplats:** Anger den sida som visas när du loggar in på arbetsytan i AEM Forms. De fyra tillgängliga alternativen är Starta process, Att göra, Spårning och Favoriter.
 * **Utloggningsfråga:** Anger om du uppmanas att bekräfta att du vill logga ut när du klickar på Logga ut.
-* **Datumformat:** Anger vilket datumvisningsformat som används på AEM Forms arbetsyta.
-* **Tidsformat**: Anger vilket tidsvisningsformat som används på AEM Forms arbetsyta.
+* **Datum:** Anger vilket datumvisningsformat som används på AEM Forms arbetsyta.
+* **Tidsformat**: Anger vilket tidsvisningsformat som ska användas på AEM Forms arbetsyta.
 * **Meddela aktivitetshändelser via e-post:** Anger om du får e-postmeddelanden för aktivitetshändelser, inklusive aktivitetstilldelningar, påminnelser och deadlines för uppgifter i din Att göra-lista och i gruppAtt göra-listor som du tillhör.
-* **Bifoga Forms i e-post:** Anger om en kopia av formuläret bifogas e-postmeddelanden. Bifogade filer stöds bara för PDF- och XDP-formulär.
-* **Spara utkast periodiskt:** Anger om dina formulärutkast sparas automatiskt regelbundet eller inte. Om du vill spara dina utkast regelbundet aktiverar du det här alternativet och anger hur länge du vill spara automatiskt från 1 till 30 minuter. När Spara automatiskt är aktiverat och en användare arbetar med ett utkast, sparas utkastet regelbundet efter det angivna antalet minuter. Utkastet sparas bara automatiskt när det finns en ändring i utkastet sedan det senast sparades eller sparades automatiskt. När utkastet sparas visas ett varningsmeddelande på skärmen.
+* **Bifoga Forms i e-post:** Anger om en kopia av formuläret är bifogad till e-postmeddelanden. Bifogade filer stöds bara för PDF- och XDP-formulär.
+* **Spara utkast regelbundet:** Anger om dina formulärutkast sparas automatiskt regelbundet eller inte. Om du vill spara dina utkast regelbundet aktiverar du det här alternativet och anger hur länge du vill spara automatiskt från 1 till 30 minuter. När Spara automatiskt är aktiverat och en användare arbetar med ett utkast, sparas utkastet regelbundet efter det angivna antalet minuter. Utkastet sparas bara automatiskt när det har ändrats sedan du senast sparade eller sparade det automatiskt. När utkastet sparas visas ett varningsmeddelande på skärmen.

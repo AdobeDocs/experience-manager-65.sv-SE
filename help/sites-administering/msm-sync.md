@@ -12,9 +12,9 @@ discoiquuid: 6bcf0fcc-481a-4283-b30d-80b517701280
 docset: aem65
 feature: Multi Site Manager
 exl-id: ac24b8b4-b3ed-47fa-9a73-03f0c9e68ac8
-source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '2694'
+source-wordcount: '2672'
 ht-degree: 0%
 
 ---
@@ -394,7 +394,7 @@ Du kan också konfigurera utrullningskonfigurationerna för en live-kopia-sida n
 
    ![Markerade utrullningskonfigurationer](assets/chlimage_1-2.png)
 
-1. Klicka eller tryck **Spara**.
+1. Klicka **Spara**.
 
 ### Ställa in utrullningskonfiguration för en blåtryckssida {#setting-the-rollout-configuration-for-a-blueprint-page}
 

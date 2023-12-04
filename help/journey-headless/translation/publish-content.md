@@ -2,9 +2,9 @@
 title: Publicera översatt innehåll
 description: Lär dig hur du publicerar översatt innehåll och uppdaterar översättningarna när innehållet uppdateras.
 exl-id: 32c387fe-fa1b-499b-861f-b4822f5e139e
-source-git-commit: 29fb61f9fdcb72864068662d935bc01779b9e451
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '1364'
+source-wordcount: '1336'
 ht-degree: 0%
 
 ---
@@ -63,13 +63,13 @@ Det enklaste sättet att publicera översättningarna är att navigera till proj
 
 Under den här sökvägen har du undermappar för varje översättningsspråk och kan välja vilka som ska publiceras.
 
-1. Gå till **Navigering** -> **Resurser** -> **Filer** och öppna projektmappen.
+1. Gå till **Navigering** > **Resurser** > **Filer** och öppna projektmappen.
 1. Här visas språkrotmappen och alla andra språkmappar. Välj det eller de lokaliserade språk som du vill publicera.
    ![Välj språkmapp](assets/select-language-folder.png)
-1. Tryck eller klicka **Hantera publikation**.
-1. I **Hantera publikation** se till att **Publicera** markeras automatiskt under **Åtgärd** och **Nu** är markerat under **Schemaläggning**. Tryck eller klicka **Nästa**.
+1. Klicka **Hantera publikation**.
+1. I **Hantera publikation** se till att **Publicera** markeras automatiskt under **Åtgärd** och **Nu** är markerat under **Schemaläggning**. Klicka på **Nästa**.
    ![Hantera publiceringsalternativ](assets/manage-publication-options.png)
-1. I nästa **Hantera publikation** bekräftar du att rätt sökväg är markerad. Tryck eller klicka **Publicera**.
+1. I nästa **Hantera publikation** bekräftar du att rätt sökväg är markerad. Klicka **Publicera**.
    ![Hantera publikationsomfång](assets/manage-publication-scope.png)
 1. AEM bekräftar publiceringsåtgärden med ett popup-meddelande högst upp på skärmen.
    ![Publicerad banner](assets/resources-published-message.png)
@@ -92,23 +92,23 @@ Som tidigare skiljer sig dock processen något om du väljer att automatiskt ska
 
 ### Uppdatera ett automatiskt skapat översättningsprojekt {#updating-automatic-project}
 
-1. Navigera till **Navigering** -> **Resurser** -> **Filer**. Kom ihåg att innehåll utan rubrik i AEM lagras som resurser som kallas för innehållsfragment.
+1. Navigera till **Navigering** > **Resurser** > **Filer**. Kom ihåg att innehåll utan rubrik i AEM lagras som resurser som kallas för innehållsfragment.
 1. Välj språkroten för projektet. I detta fall `/content/dam/wknd/en` är markerat.
-1. Tryck eller klicka på rälsväljaren och visa **Referenser** -panelen.
-1. Tryck eller klicka **Språkkopior**.
+1. Klicka på spårväljaren och visa **Referenser** -panelen.
+1. Klicka **Språkkopior**.
 1. Kontrollera **Språkkopior** kryssrutan.
 1. Expandera avsnittet **Uppdatera språkkopior** längst ned på referenspanelen.
 1. I **Projekt** listruta, välja **Lägg till i ett befintligt översättningsprojekt**.
 1. I **Befintligt översättningsprojekt** väljer du det projekt som skapats för den inledande översättningen.
-1. Tryck eller klicka **Starta**.
+1. Klicka **Starta**.
 
 ![Lägg till artiklar i befintligt översättningsprojekt](assets/add-to-existing-project.png)
 
 Innehållet läggs till i det befintliga översättningsprojektet. Så här visar du översättningsprojektet:
 
-1. Navigera till **Navigering** -> **Projekt**.
-1. Tryck eller klicka på det projekt som du just har uppdaterat.
-1. Tryck eller klicka på språket eller något av språken som du uppdaterade.
+1. Navigera till **Navigering** > **Projekt**.
+1. Klicka på det projekt som du just har uppdaterat.
+1. Klicka på språket eller något av språken som du uppdaterade.
 
 Du ser att nya jobbkort läggs till i projektet efter behov.
 
@@ -126,22 +126,22 @@ Från och med nu [starta och hantera översättningsjobbet på samma sätt som d
 
 Om du vill uppdatera en översättning kan du lägga till ett nytt jobb i ditt befintliga projekt som ansvarar för översättning av det uppdaterade innehållet.
 
-1. Navigera till **Navigering** -> **Projekt**.
-1. Tryck eller klicka på det projekt som du måste uppdatera.
-1. Tryck eller klicka på **Lägg till** längst upp i fönstret.
-1. I **Lägg till platta** fönster, trycka eller klicka **Översättningsjobb** och sedan **Skicka**.
+1. Navigera till **Navigering** > **Projekt**.
+1. Klicka på det projekt som du måste uppdatera.
+1. Klicka på **Lägg till** längst upp i fönstret.
+1. I **Lägg till platta** fönster, klicka **Översättningsjobb** och sedan **Skicka**.
 
    ![Lägg till platta](assets/add-translation-job-tile.png)
 
-1. På kortet för det nya översättningsjobbet trycker eller klickar du på knappen för att markera och väljer **Uppdatera mål** för att definiera målspråket för det nya jobbet.
+1. På kortet för det nya översättningsjobbet klickar du på knappen för att avmarkera och väljer **Uppdatera mål** för att definiera målspråket för det nya jobbet.
 
    ![Uppdatera mål](assets/update-target.png)
 
-1. I **Välj målspråk** väljer du språk i listrutan och trycker på eller klickar på **Klar**.
+1. I **Välj målspråk** väljer du språk i listrutan och klickar på **Klar**.
 
    ![Välj målspråk](assets/select-target-language.png)
 
-1. När det nya översättningsjobbets målspråk är inställt trycker eller klickar du på ellipsknappen längst ned på jobbkortet för att visa information om jobbet.
+1. När det nya översättningsjobbets målspråk är inställt klickar du på ellipsknappen längst ned på jobbkortet för att visa information om jobbet.
 1. Jobbet är tomt när det skapas. Lägg till innehåll i jobbet genom att trycka på eller klicka på **Lägg till** och använda sökvägsläsaren [som du gjorde tidigare när du ursprungligen skapade översättningsprojektet.](translate-content.md#manually-creating)
 
 >[!TIP]

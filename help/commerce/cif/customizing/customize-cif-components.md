@@ -11,9 +11,9 @@ feature: Commerce Integration Framework
 kt: 4279
 thumbnail: customize-aem-cif-core-component.jpg
 exl-id: 8933942e-be49-49d3-bf0a-7225257e2803
-source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '2567'
+source-wordcount: '2306'
 ht-degree: 0%
 
 ---
@@ -490,7 +490,7 @@ Du anpassade den första AEM CIF komponenten! Ladda ned [färdiga lösningsfiler
 
 ## Bonus Challenge {#bonus-challenge}
 
-Granska funktionaliteten i **Nytt** emblem som redan har implementerats i Product Teaser. Försök lägga till en extra kryssruta där författarna kan styra när **Miljövänlig** emblem ska visas. Du måste uppdatera komponentdialogrutan på `ui.apps/src/main/content/jcr_root/apps/venia/components/commerce/productteaser/_cq_dialog/.content.xml`.
+Granska funktionaliteten i **Nytt** emblem som redan har implementerats i Product Teaser. Försök lägga till en extra kryssruta där författarna kan styra när **Miljövänlig** emblem ska visas. Uppdatera komponentdialogrutan på `ui.apps/src/main/content/jcr_root/apps/venia/components/commerce/productteaser/_cq_dialog/.content.xml`.
 
 ![Utmaning vid implementering av nya märken](../assets/customize-cif-components/new-badge-implementation-challenge.png)
 

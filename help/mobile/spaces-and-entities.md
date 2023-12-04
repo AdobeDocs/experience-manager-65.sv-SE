@@ -1,18 +1,14 @@
 ---
 title: Blanksteg och entiteter
-seo-title: Developing AEM Mobile Content Services
 description: Den här sidan är en landningssida för utveckling av AEM Mobile Content Services.
-seo-description: This page serves a landing page for developing AEM Mobile Content Services.
-uuid: eab5a61b-a9e8-4863-90a3-df1f18510cd8
 contentOwner: Jyotika Syal
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
-discoiquuid: ef568577-c74e-4fc2-b66e-eedac2948310
 exl-id: 44591900-b01b-4a33-9910-839564477e7d
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '1191'
-ht-degree: 2%
+source-wordcount: '1206'
+ht-degree: 3%
 
 ---
 
@@ -56,7 +52,7 @@ När du har konfigurerat Spaces på kontrollpanelen gör du så här för att sk
 
 ## Hantera blanksteg {#managing-a-space}
 
-När du har skapat ett blanksteg klickar du till vänster för att hantera det i listan.
+När du har skapat ett blanksteg klickar du till vänster för att hantera utrymmet i listan.
 
 Du kan visa egenskaper för utrymmet, ta bort det eller publicera utrymmet och dess innehåll till en AEM publiceringsinstans.
 
@@ -111,7 +107,7 @@ The **Språkkopia** kan författare kopiera sin huvudspråkkopia och sedan skapa
 
 ### Lägga till språkkopia {#adding-language-copy}
 
-1. När du har skapat utrymme klickar du på det utrymmet för att skapa en språkkopia.
+1. När du har skapat utrymme klickar du på det för att skapa en språkkopia.
 
    Klicka **Skapa** och välja **Språkkopia**.
 
@@ -142,7 +138,7 @@ The **Språkkopia** kan författare kopiera sin huvudspråkkopia och sedan skapa
 
    >[!NOTE]
    >
-   >Om du vill navigera till en mapp och visa dess innehåll eller lägga till en undermapp eller enhet, klickar du på mappens namn i utrymmets innehållslista.
+   >Om du vill navigera till en mapp och visa dess innehåll eller lägga till en undermapp eller enhet klickar du på mappens namn i utrymmets innehållslista.
 
 ## Arbeta med entiteter i ett blanksteg {#working-with-entities-in-a-space}
 
@@ -198,7 +194,7 @@ Om underordnade entiteter, som är andra entiteter, samlas in för datamodelleri
 
    ![chlimage_1-97](assets/chlimage_1-97.png)
 
-   Du kan även klicka på **Förhandsgranska** för att visa json-länken.
+   Du kan också klicka **Förhandsgranska** för att visa json-länken.
 
    ![chlimage_1-98](assets/chlimage_1-98.png)
 

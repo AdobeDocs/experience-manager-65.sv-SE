@@ -10,9 +10,9 @@ geptopics: SG_AEMFORMS/categories/maintaining_aem_forms
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 94047c12-ba3d-457a-954f-e035c7cc3ecd
 exl-id: 6f5ce18b-26b4-4c31-b48a-43ccbb3912f6
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '259'
+source-wordcount: '256'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ Undvik att anropa processer när servern är i underhållsläge. Detta är vad s
 * Om processen är långvarig läggs den till i jobbdatabasen, men startas inte. När du avslutar underhållsläget bearbetar AEM de långvariga jobben i kön, även om servern startades om i underhållsläge.
 * Om processen är kort, behandlas den direkt.
 
-**AEM formulär i underhållsläge**
+**Skicka AEM formulär i underhållsläge**
 
 1. I en webbläsare anger du:
 
@@ -36,7 +36,7 @@ Undvik att anropa processer när servern är i underhållsläge. Detta är vad s
 
    >[!NOTE]
    >
-   >Om du stänger av servern medan den är i underhållsläge är den fortfarande i underhållsläge när den startas om. Du måste stänga av underhållsläget när du är klar med underhållsåtgärderna.
+   >Om du stänger av servern medan den är i underhållsläge är den fortfarande i underhållsläge när den startas om. Stäng av underhållsläget när du är klar med underhållsåtgärderna.
 
 **Kontrollera om AEM körs i underhållsläge**
 

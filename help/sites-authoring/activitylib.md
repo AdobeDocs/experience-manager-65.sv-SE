@@ -11,10 +11,10 @@ topic-tags: personalization
 discoiquuid: ef2321a3-cd51-4298-8782-e1a2ca721868
 docset: aem65
 exl-id: f510ca08-977d-45d5-86af-c4b7634b01ba
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '1999'
-ht-degree: 12%
+source-wordcount: '1937'
+ht-degree: 10%
 
 ---
 
@@ -54,7 +54,7 @@ Aktiviteter visas med en etikett som beskriver vilken typ av aktivitet som defin
 
 >[!CAUTION]
 >
->Du måste skydda noden för aktivitetsinställningar **cq:ActivitySettings** på publiceringsinstansen så att den inte är tillgänglig för vanliga användare. Noden för aktivitetsinställningar ska bara vara tillgänglig för tjänsten som hanterar aktivitetssynkroniseringen till Adobe Target.
+>Skydda noden för aktivitetsinställningar **cq:ActivitySettings** på publiceringsinstansen så att den inte är tillgänglig för vanliga användare. Noden för aktivitetsinställningar ska bara vara tillgänglig för tjänsten som hanterar aktivitetssynkroniseringen till Adobe Target.
 >
 >Se [Krav för integrering med Adobe Target](/help/sites-administering/target-requirements.md#securingtheactivitysettings) för detaljerad information.
 
@@ -64,14 +64,14 @@ Skapa ett varumärke som ni vill hantera marknadsföringsaktiviteter för.
 
 När du skapar ett varumärke med hjälp av aktivitetskonsolen visas det också i [Erbjuder konsol](/help/sites-authoring/offerlib.md) där ni kan skapa erbjudanden för upplevelserna av era aktiviteter.
 
-1. Klicka eller tryck på navigeringskonsolen **Personalisering**. Klicka eller tryck **Verksamhet**.
+1. I navigeringskonsolen klickar du på **Personalisering**. Klicka **Verksamhet**.
 
    ![screen_shot_2018-03-21at151821](assets/screen_shot_2018-03-21at151821.png)
 
-1. Klicka eller tryck på aktivitetskonsolen **Skapa** sedan **Skapa varumärke**.
-1. Välj varumärkesmallen och klicka eller peka **Nästa**.
+1. I aktivitetskonsolen klickar du på **Skapa** sedan **Skapa varumärke**.
+1. Välj varumärkesmallen och klicka på **Nästa**.
 1. Skriv en rubrik för varumärket som du vill att det ska visas i aktivitets- och offertkonsolerna. Du kan också ange eller markera en eller flera taggar som ska kopplas till varumärket.
-1. Klicka eller tryck **Skapa**. Ditt varumärke visas i aktivitetskonsolen.
+1. Klicka **Skapa**. Ditt varumärke visas i aktivitetskonsolen.
 
 ## Lägga till/redigera en aktivitet med aktivitetskonsolen {#adding-editing-an-activity-using-the-activities-console}
 
@@ -97,8 +97,8 @@ Lägg till en aktivitet eller redigera en befintlig aktivitet för att fokusera 
 
 Så här lägger du till en aktivitet:
 
-1. Klicka på eller tryck på det varumärke som du skapar aktiviteten för, klicka eller tryck **Skapa** och sedan **Skapa aktivitet**. Om du redigerar markerar du aktiviteten och klickar eller trycker på **Redigera**.
-1. Ange följande information och klicka eller tryck sedan på **Nästa**:
+1. Klicka på varumärket som du skapar aktiviteten för och klicka på **Skapa** och sedan **Skapa aktivitet**. Om du redigerar markerar du aktiviteten och klickar sedan på **Redigera**.
+1. Ange följande information och klicka sedan på **Nästa**:
 
    * Ett namn för aktiviteten.
    * Målmotorn som ska användas. ContextHub (AEM) är markerat som standard. Om du behöver använda Adobe Target skapar du aktiviteten i den aktiva innehållsredigeraren.
@@ -106,35 +106,35 @@ Så här lägger du till en aktivitet:
    * (Valfritt) Syftet med eller en beskrivning av aktiviteten.
    * Välj aktivitetstyp.
 
-1. Lägg till en eller flera upplevelser till aktiviteten. Klicka eller tryck på **Lägg till upplevelse**.
+1. Lägg till en eller flera upplevelser till aktiviteten. Klicka **Lägg till upplevelse**.
 1. Om ni använder AEM målinriktning eller Adobe Target upplevelseanpassning:
 
-   1. Klicka eller tryck på **Välj publik **och välj det segment som upplevelsen ska rikta in sig på.
-   1. Klicka eller tryck **Lägg till upplevelse**, skriv ett namn och klicka eller tryck **OK**.
+   1. Klicka på **Välj publik **och välj det segment som upplevelsen ska rikta in sig på.
+   1. Klicka **Lägg till upplevelse**, skriver ett namn och klickar på **OK**.
 
-   1. Klicka eller tryck **Nästa**.
+   1. Klicka på **Nästa**.
 
    Om du använder Adobe Target A/B-testning:
 
-   1. Klicka på eller tryck på pennan i rutan Målgrupper för att välja en målgrupp.
-   1. Klicka eller tryck **Lägg till upplevelse**, skriv ett namn och klicka eller tryck **OK**.
+   1. Klicka på pennan i målgruppsrutan för att välja en målgrupp.
+   1. Klicka **Lägg till upplevelse**, skriver ett namn och klickar på **OK**.
 
    1. Ange den procentandel av trafiken som visar varje upplevelse.
-   1. Klicka eller tryck **Nästa**.
+   1. Klicka på **Nästa**.
 
 1. Om du vill ange när aktiviteten ska starta använder du **Starta** i den nedrullningsbara menyn för att välja något av följande värden:
 
    * **Vid aktivering:** Aktiviteten startar när sidan som innehåller målinnehållet aktiveras.
-   * **Angivet datum och tid:** En viss tid. När du väljer det här alternativet klickar eller trycker du på kalenderikonen, väljer ett datum och anger vilken tid aktiviteten ska starta.
+   * **Angivet datum och tid:** En viss tid. När du väljer det här alternativet klickar du på kalenderikonen, väljer ett datum och anger vilken tid aktiviteten ska starta.
 
 1. Om du vill ange när aktiviteten slutar använder du den nedrullningsbara menyn Slut och väljer något av följande värden:
 
    * **Vid inaktivering**: Aktiviteten avslutas när sidan som innehåller målinnehållet inaktiveras.
-   * **Angivet datum och tid**: En viss tid. När du väljer det här alternativet klickar eller trycker du på kalenderikonen, väljer ett datum och anger tidpunkten för att avsluta aktiviteten.
+   * **Angivet datum och tid**: En viss tid. När du väljer det här alternativet klickar du på kalenderikonen, väljer ett datum och anger vilken tid aktiviteten ska avslutas.
 
 1. Om du vill ange en prioritet för aktiviteten använder du skjutreglaget och väljer antingen **Låg**, **Normal**, eller **Hög**.
-1. Om du använder Adobe Target som målmotor väljer du vad du vill mäta med den här aktiviteten. Se [Konfigurera aktivitets- och inställningsmål](/help/sites-authoring/content-targeting-touch.md) om du vill ha mer information om tillgängliga framgångsvärden. Du måste välja minst ett mål.
-1. Klicka eller tryck **Spara**.
+1. Om du använder Adobe Target som målmotor väljer du vad du vill mäta med den här aktiviteten. Se [Konfigurera aktivitets- och inställningsmål](/help/sites-authoring/content-targeting-touch.md) om du vill ha mer information om tillgängliga framgångsvärden. Välj minst ett mål.
+1. Klicka **Spara**.
 
    >[!NOTE]
    >
@@ -150,12 +150,12 @@ Du måste publicera aktiviteter för att göra dem tillgängliga. Omvänt kanske
 
 Så här publicerar eller avpublicerar du aktiviteter:
 
-1. Klicka på eller tryck på varumärket och sedan det område som innehåller aktiviteten som du vill publicera eller avpublicera.
-1. Tryck eller klicka på ikonen bredvid aktiviteten eller aktiviteterna som du vill publicera eller avpublicera.
+1. Klicka på varumärket och sedan på det område som innehåller aktiviteten som du vill publicera eller avpublicera.
+1. Klicka på ikonen bredvid aktiviteten eller aktiviteterna som du vill publicera eller avpublicera.
 
    ![screen-shot_2019-03-05at123846](assets/screen-shot_2019-03-05at123846.png)
 
-1. Publicera genom att trycka eller klicka **Publicera**. Avpublicera genom att trycka eller klicka **Avpublicera**. Dina aktiviteter publiceras eller avpubliceras och deras status ändras i aktivitetskonsolen (kan kräva en uppdatering).
+1. Om du vill publicera klickar du **Publicera**. Klicka på för att avpublicera **Avpublicera**. Dina aktiviteter publiceras eller avpubliceras och deras status ändras i aktivitetskonsolen (kan kräva en uppdatering).
 
 ## Aktiviteter för författare och publiceringsinstanser {#activities-on-author-and-publish-instances}
 
@@ -170,13 +170,13 @@ Du kan se prestanda för alla Adobe Target-aktiviteter (XT eller A/B). Om du anv
 
 Så här visar du aktivitetsprestanda och konverterar vinnande upplevelser:
 
-1. I **Personalisering**, klicka eller trycka **Verksamhet** navigera till **Verksamhet** konsol.
-1. Klicka på eller peka på det varumärke som du vill se aktiviteter för.
-1. Markera aktiviteten och klicka eller tryck på **Visa egenskaper**. Klicka sedan på fliken **Rapporter** och välj den aktivitet för vilken du vill visa resultatet eller konvertera vinnande upplevelser. Resultatdata visas.
+1. I **Personalisering**, klicka **Verksamhet** navigera till **Verksamhet** konsol.
+1. Klicka på det varumärke som du vill se aktiviteter för.
+1. Markera aktiviteten och klicka på **Visa egenskaper** och klicka på **Rapporter** och välj den aktivitet du vill visa för/konvertera vinnande upplevelser. Resultatdata visas.
 
    ![chlimage_1-115](assets/chlimage_1-115.png)
 
-1. Klicka eller tryck på **Push-pristagare** för att göra den upplevelsen till standardupplevelse.
+1. Klicka på **Push-pristagare** för att göra den upplevelsen till standardupplevelse.
 
    Att konvertera vinnaren gör följande:
 
@@ -187,7 +187,7 @@ Så här visar du aktivitetsprestanda och konverterar vinnande upplevelser:
 
    En vinnande upplevelse är den upplevelse som genererar mer Lyft i rapporterna, som baseras på konverteringsgraden.
 
-1. Klicka eller tryck **Ja** för att bekräfta att du vill konvertera vinnaren, inaktivera den aktuella upplevelsen och ersätta den med innehållet i den vinnande upplevelsen.
+1. Klicka **Ja** för att bekräfta att du vill konvertera vinnaren, inaktivera den aktuella upplevelsen och ersätta den med innehållet i den vinnande upplevelsen.
 
 ## Synkronisera aktiviteter med Adobe Target {#synchronizing-activities-with-adobe-target}
 

@@ -12,9 +12,9 @@ topic-tags: operations
 discoiquuid: 9f4711a8-033c-4051-ab41-65a26838899b
 role: Developer
 exl-id: 2b938410-f51b-420b-b5d4-2ed13ec29c5a
-source-git-commit: 10227bcfcfd5a9b0f126fee74dce6ec7842f5e95
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '2558'
+source-wordcount: '2519'
 ht-degree: 0%
 
 ---
@@ -152,7 +152,7 @@ Om du vill montera ett PDF som innehåller nya bokmärken måste du referera til
 
 **Lägg till PDF-dokumentet och bokmärkets XML-dokument i en kartsamling**
 
-Du måste lägga till både det PDF-dokument som bokmärken läggs till i och bokmärkets XML-dokument i kartsamlingen. Samlingsobjektet Map innehåller därför två element: ett PDF-dokument och ett bokmärkes-XML-dokument.
+Lägg till både PDF-dokumentet som bokmärken läggs till i och bokmärkets XML-dokument i samlingen Karta. Samlingsobjektet Map innehåller därför två element: ett PDF-dokument och ett bokmärkes-XML-dokument.
 
 **Ange körningsalternativ**
 
@@ -164,7 +164,7 @@ Om du vill montera ett PDF-dokument som innehåller nya bokmärken använder du 
 
 **Spara PDF-dokumentet som innehåller bokmärken**
 
-Du måste extrahera resultaten från det returnerade mappningsobjektet och spara motsvarande PDF-dokument. (Se&quot;Extrahera resultat&quot; i [Programmisk sammanställning av PDF-dokument](/help/forms/developing/programmatically-assembling-pdf-documents.md).)
+Extrahera resultaten från det returnerade mappningsobjektet och spara motsvarande PDF-dokument. (Se&quot;Extrahera resultat&quot; i [Programmisk sammanställning av PDF-dokument](/help/forms/developing/programmatically-assembling-pdf-documents.md).)
 
 **Se även**
 

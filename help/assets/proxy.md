@@ -4,9 +4,9 @@ description: En proxy är en [!DNL Experience Manager] -instans som använder pr
 contentOwner: AG
 role: Admin, Architect
 exl-id: 42fff236-b4e1-4f42-922c-97da32a933cf
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '842'
+source-wordcount: '824'
 ht-degree: 0%
 
 ---
@@ -164,7 +164,7 @@ Följande diagram och steg visar hur du fortsätter:
 
    Ett exempel finns i `IDSJob.IDS_EXTENDSCRIPT_JOB` för IDS-proxyarbetaren.
 
-1. Det externa steget används för att utlösa händelsen och sedan vänta tills det är klart. Detta görs genom att avfråga ID:t. Du måste utveckla ett eget steg för att implementera nya funktioner.
+1. Det externa steget används för att utlösa händelsen och sedan vänta tills det är klart. Detta görs genom att avfråga ID:t. Utveckla egna steg för att implementera nya funktioner.
 
    Implementera en `WorkflowExternalProcess`använder du sedan JobService API och ditt jobbämne för att förbereda en jobbhändelse och skicka den till JobService (en OSGi-tjänst).
 

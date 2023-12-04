@@ -7,9 +7,9 @@ topic-tags: personalization
 content-type: reference
 docset: aem65
 exl-id: 6d759907-8796-4749-bd80-306ec7f2c819
-source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '1129'
+source-wordcount: '1128'
 ht-degree: 0%
 
 ---
@@ -110,7 +110,7 @@ När hela programsatsen utvärderas till true är det här segmentet löst. Om d
 
 >[!CAUTION]
 >
->Segmentredigeraren söker inte efter några cirkelreferenser. Segment A refererar till exempel till ett annat segment B, som i sin tur refererar till segment A. Du måste se till att dina segment inte innehåller några cirkelreferenser.
+>Segmentredigeraren söker inte efter några cirkelreferenser. Segmentet A refererar till exempel till ett annat segment B, som i sin tur refererar till segment A. Se till att dina segment inte innehåller några cirkelreferenser.
 
 >[!NOTE]
 >

@@ -7,9 +7,9 @@ geptopics: SG_AEMFORMS/categories/working_with_document_security
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 feature: Document Security
 exl-id: fe132f13-5f9a-4c86-a385-0a0026c812e2
-source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '10221'
+source-wordcount: '10266'
 ht-degree: 0%
 
 ---
@@ -730,7 +730,7 @@ Du kan göra följande ändringar med hjälp av konfigurationsfilen:
 
 >[!NOTE]
 >
->Om du importerar konfigurationsfilen konfigureras systemet om baserat på informationen i filen. Undantagen är dynamisk vattenstämpelkonfiguration och anpassad händelseinformation, som inte sparas med den exporterade konfigurationsfilen. Du måste konfigurera den här informationen manuellt i det nya systemet. Endast systemadministratörer eller konsulter som är vana vid dokumentsäkerhet och XML bör ändra innehållet i en konfigurationsfil, t.ex. för att konfigurera om en skadad inställning eller för att justera parametrar för ett visst företagsscenario.
+>Om du importerar konfigurationsfilen konfigureras systemet om baserat på informationen i filen. Undantagen är dynamisk vattenstämpelkonfiguration och anpassad händelseinformation, som inte sparas med den exporterade konfigurationsfilen. Konfigurera informationen manuellt i det nya systemet. Endast systemadministratörer eller konsulter som är vana vid dokumentsäkerhet och XML bör ändra innehållet i en konfigurationsfil, t.ex. för att konfigurera om en skadad inställning eller för att justera parametrar för ett visst företagsscenario.
 
 **Exportera en konfigurationsfil**
 
@@ -856,7 +856,7 @@ Acrobat Reader DC-tillägg för Microsoft Office är en plugin som används med 
    * Sun Solaris
    * HP-UX
 
-   `SDKVersions` Anger vilken version av dokumentsäkerhets-API:t för C++-klient som används av klientprogrammet. Till exempel, `"8.2"`.
+   `SDKVersions` Anger vilken version av dokumentsäkerhets-API:t för C++-klient som används av klientprogrammet. Till exempel: `"8.2"`.
 
    `APPFamilies` definieras av klient-API:t.
 

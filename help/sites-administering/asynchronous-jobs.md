@@ -2,10 +2,10 @@
 title: Asynkrona jobb
 description: Adobe Experience Manager optimerar prestandan genom att asynkront slutföra vissa resurskrävande uppgifter.
 exl-id: 4af1bcfe-9f2e-44a4-8666-881f2dccc3bc
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '722'
-ht-degree: 89%
+source-wordcount: '715'
+ht-degree: 83%
 
 ---
 
@@ -21,7 +21,7 @@ Dessa åtgärder omfattar:
 * Att hämta resurser som ligger över det angivna gränsvärdet från en fjärrdistribution av Experience Manager.
 * Att öppna Live-kopior.
 
-Du kan se statusen för asynkrona jobb på **[!UICONTROL Async Job Status]** instrumentpanelen via **Global Navigation** -> **Tools** -> **Operations** -> **Jobs**.
+Du kan visa status för asynkrona jobb från **[!UICONTROL Async Job Status]** instrumentpanel på **Global navigering** > **verktyg** > **Operationer** > **Jobb**.
 
 >[!NOTE]
 >
@@ -29,7 +29,7 @@ Du kan se statusen för asynkrona jobb på **[!UICONTROL Async Job Status]** ins
 >
 >Mer information finns i [konfigurationer av kön](https://sling.apache.org/documentation/bundles/apache-sling-eventing-and-job-handling.html#queue-configurations).
 
-## Övervaka statusen för asynkrona åtgärder {#monitor-the-status-of-asynchronous-operations}
+## Övervaka status för asynkrona åtgärder {#monitor-the-status-of-asynchronous-operations}
 
 När AEM bearbetar en åtgärd asynkront får du ett meddelande i din [inkorg](/help/sites-authoring/inbox.md) och via e-post (om den är aktiverad).
 
@@ -69,7 +69,7 @@ Gå till sidan **[!UICONTROL Async Job Status]** för att se detaljerad status g
    >
    >Om ett jobbs status är **Active** eller **Queued** kan det inte tas bort.
 
-## Rensa slutförda jobb {#purging-completed-jobs}
+## Töm slutförda jobb {#purging-completed-jobs}
 
 AEM utför en rensning varje dag klockan 01:00 för att ta bort slutförda asynkrona jobb som är mer än en dag gamla.
 
@@ -103,7 +103,7 @@ Om antalet resurser eller mappar som ska tas bort överstiger gränsvärdet utf�
 1. Markera alternativet **Enable email notification** för att få e-postmeddelanden för den här jobbstatusen. till exempel om det lyckades, misslyckades.
 1. Spara ändringarna.
 
-### Konfigurera asynkrona åtgärder för att flytta resurser {#configuring-asynchronous-move-operations}
+### Konfigurera asynkrona åtgärder för flyttning av tillgångar {#configuring-asynchronous-move-operations}
 
 Om antalet resurser/mappar eller referenser som ska flyttas överstiger gränsvärdet utförs flytten asynkront.
 

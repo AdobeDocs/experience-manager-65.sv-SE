@@ -2,9 +2,9 @@
 title: Arbeta med innehållssidversioner
 description: Skapa, jämföra och återställa versioner av en sida i Adobe Experience Manager.
 exl-id: cb7a9da2-7112-4ef0-b1cf-211a7df93625
-source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '1501'
+source-wordcount: '1510'
 ht-degree: 2%
 
 ---
@@ -31,7 +31,7 @@ Du kan skapa en version av resursen från:
 1. Navigera till sidan som du vill skapa en version för.
 1. Markera sidan i [markeringsläge](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources).
 1. Öppna **Tidslinje** kolumn.
-1. Klicka/tryck på pilen vid kommentarfältet för att visa alternativen:
+1. Klicka på pilen i kommentarfältet för att visa alternativen:
 
    ![Tidslinje - Spara som version](assets/screen-shot_2019-03-05at112335.png)
 
@@ -210,7 +210,7 @@ Timewarp är en [läge](/help/sites-authoring/author-environment-tools.md#page-m
 
    ![Välj Timewarp i lägesmarkeringen](assets/wwpv-01.png)
 
-1. Ange ett måldatum och en måltid i dialogrutan och klicka eller tryck på **Ange datum**. Om du inte väljer någon tid används den aktuella tiden som standard.
+1. Ange ett måldatum och en måltid i dialogrutan och klicka på **Ange datum**. Om du inte väljer någon tid används den aktuella tiden som standard.
 
    ![Ange datum](assets/wwpv-02.png)
 

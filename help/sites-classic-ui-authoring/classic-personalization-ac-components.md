@@ -7,10 +7,10 @@ topic-tags: personalization
 content-type: reference
 docset: aem65
 exl-id: eeff89c1-41b3-403d-b4bf-c79b09b24d4a
-source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '2529'
-ht-degree: 0%
+source-wordcount: '2548'
+ht-degree: 1%
 
 ---
 
@@ -107,7 +107,7 @@ Anger bildens höjd och bredd.
 
 >[!NOTE]
 >
->Du måste ange information i **Alt-text** fältet i **Avancerat** eller så kan bilden inte sparas och följande felmeddelande visas:
+>Ange information i dialogrutan **Alt-text** fältet i **Avancerat** eller så kan bilden inte sparas och följande felmeddelande visas:
 >
 >`Validation failed. Verify the values of the marked fields.`
 >
@@ -138,7 +138,7 @@ Lägg till eventuella ytterligare URL-parametrar. Klicka på Lägg till objekt o
 
 >[!NOTE]
 >
->Du måste ange information i **Länktyp** fältet i **URL-information** eller så kan komponenten inte spara och följande felmeddelande visas:
+>Ange information i dialogrutan **Länktyp** fältet i **URL-information** eller så kan komponenten inte spara och följande felmeddelande visas:
 >
 >`Validation failed. Verify the values of the marked fields.`
 >

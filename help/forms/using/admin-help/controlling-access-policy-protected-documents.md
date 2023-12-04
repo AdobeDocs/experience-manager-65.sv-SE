@@ -11,9 +11,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: f34058c3-384a-4b73-a386-5bc9125acbf8
 feature: Document Security
 exl-id: 0eb6e769-97c1-41ee-8d12-91bece984947
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '2168'
+source-wordcount: '2167'
 ht-degree: 0%
 
 ---
@@ -42,7 +42,7 @@ Du kan även visa mer information, som beskrivs nedan, om ett visst dokument på
 
 >[!NOTE]
 >
->Du måste använda länken Principnamn på sidan Dokumentinformation för att komma åt profiler som genereras automatiskt i Microsoft Outlook för mottagare av ett dokument som bifogas till ett e-postmeddelande. Dessa profiler visas inte på profilsidan.
+>Använd länken Principnamn på sidan Dokumentinformation för att komma åt profiler som genereras automatiskt i Microsoft Outlook för mottagare av ett dokument som bifogas till ett e-postmeddelande. Dessa profiler visas inte på profilsidan.
 
 **Dokumentnamn:** Namnet på det markerade dokumentet.
 
@@ -52,7 +52,7 @@ Du kan även visa mer information, som beskrivs nedan, om ett visst dokument på
 
 **Utgivare:** Namnet på den användare som bifogade profilen till dokumentet.
 
-**Principnamn:** Namnet på den profil som används för att skydda dokumentet. Du kan klicka på namnet för att öppna profilen. Du måste använda den här länken för att komma åt profiler som Acrobat genererar för mottagare av ett dokument som är kopplat till ett e-postmeddelande i Outlook. Dessa profiler visas inte på sidan Profiler.
+**Principnamn:** Namnet på den profil som används för att skydda dokumentet. Du kan klicka på namnet för att öppna profilen. Använd den här länken för att komma åt profiler som Acrobat genererar för mottagare av ett dokument som är kopplat till ett e-postmeddelande i Outlook. Dessa profiler visas inte på sidan Profiler.
 
 **Principtyp:** Typen av profil som tillämpades på dokumentet.
 
@@ -121,7 +121,7 @@ När du återkallar eller återställer behörigheter för dokumentåtkomst gäl
 
 ## Växla en profil som tillämpas på ett dokument {#switch-a-policy-that-is-applied-to-a-document}
 
-Användare, principuppsättningskoordinatorer och administratörer kan växla den profil som används för ett principskyddat dokument (du kan bara tillämpa en princip åt gången för ett dokument). Användare kan växla principer som tillämpas på egna policyskyddade dokument om de har skapat profilen eller om profilen är en delad profil som har den funktionen aktiverad. I annat fall måste administratören eller koordinatorn för principuppsättningen ändra principen. Administratörer kan ändra profiler för alla användares profilskyddade dokument. Koordinatorer för principuppsättningar kan växla principer från sina principuppsättningar.
+Användare, principuppsättningskoordinatorer och administratörer kan växla den profil som används för ett principskyddat dokument (du kan bara tillämpa en princip åt gången för ett dokument). Användare kan växla principer som tillämpas på egna policyskyddade dokument om de har skapat profilen eller om profilen är en delad profil som har den funktionen aktiverad. I annat fall måste administratören eller koordinatorn för principuppsättningen ändra principen. Administratörer kan växla principer för alla användares profilskyddade dokument. Koordinatorer för principuppsättningar kan växla principer från sina principuppsättningar.
 
 När du byter ut en profil tillämpas den nya principen på följande sätt:
 

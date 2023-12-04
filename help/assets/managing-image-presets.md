@@ -13,10 +13,10 @@ legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/image-
 feature: Image Presets
 role: User, Admin
 exl-id: 556b99fe-91c3-441f-ba81-22cb8c10ef7f
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '3693'
-ht-degree: 6%
+source-wordcount: '3651'
+ht-degree: 7%
 
 ---
 
@@ -209,7 +209,7 @@ Storleksändring för miniatyrbilder definieras i följande format: **[!UICONTRO
 **Så här konfigurerar du miniatyrbildens storlek:**
 
 1. Tryck **[!UICONTROL Tools]** > **[!UICONTROL Workflow]** > **[!UICONTROL Models]** > **[!UICONTROL DAM Update Asset]** > **[!UICONTROL Edit]**.
-1. Tryck på **[!UICONTROL Dynamic Media Process Image Assets]** steg och tryck eller klicka på **[!UICONTROL Thumbnails]** -fliken. Ändra miniatyrstorleken efter behov och tryck sedan på **[!UICONTROL OK]**.
+1. Tryck på **[!UICONTROL Dynamic Media Process Image Assets]** och klicka på **[!UICONTROL Thumbnails]** -fliken. Ändra miniatyrstorleken efter behov och tryck sedan på **[!UICONTROL OK]**.
 
    ![6_5_dynamicmediaprocessimageassets-thumbnailstab](assets/6_5_dynamicmediaprocessimageassets-thumbnailstab.png)
 
@@ -238,7 +238,7 @@ De bildförinställningar du skapar är tillgängliga som dynamiska återgivning
    ![chlimage_1-495](assets/chlimage_1-495.png)
 
 1. I egenskapen limit ändrar du talet till önskat tal, till exempel `{empty requestPathInfo.selectors[1] ? "20" : requestPathInfo.selectors[1]}`
-1. Tryck på **[!UICONTROL Save All]**.
+1. Tryck **[!UICONTROL Save All]**.
 
 ## Skapa en bildförinställning för Dynamic Media {#creating-image-presets}
 
@@ -507,14 +507,14 @@ Om du kör Dynamic Media - hybrid-läge måste du publicera bildförinställning
 
 **Så här publicerar du bildförinställningar i Dynamic Media - hybrid-läge:**
 
-1. I Experience Manager: tryck eller klicka på Experience Manager-logotypen för att komma åt den globala navigeringskonsolen och tryck eller klicka på verktygsikonen och navigera till **[!UICONTROL Assets]** > **[!UICONTROL Image Presets]**.
-1. Välj bildförinställningen eller flera bildförinställningar i listan med bildförinställningar och klicka eller tryck på **[!UICONTROL Publish]**.
+1. Klicka på Experience Manager-logotypen i Experience Manager för att öppna den globala navigeringskonsolen och klicka på verktygsikonen och navigera till **[!UICONTROL Assets]** > **[!UICONTROL Image Presets]**.
+1. Välj bildförinställningen eller flera bildförinställningar i listan med bildförinställningar och klicka på **[!UICONTROL Publish]**.
 1. När bildförinställningen har publicerats ändras statusen från opublicerad till publicerad.
 
    ![chlimage_1-81](assets/chlimage_1-505.png)
 
 ## Ta bort Dynamic Media-bildförinställningar {#deleting-image-presets}
 
-1. I Experience Manager: tryck eller klicka på Experience Manager-logotypen för att komma åt den globala navigeringskonsolen.
+1. Klicka på Experience Manager-logotypen i Experience Manager för att öppna den globala navigeringskonsolen.
 1. Tryck på **[!UICONTROL Tools]** ikonen, navigera sedan till **[!UICONTROL Assets]** > **[!UICONTROL Image Presets]**.
 1. Välj en förinställning och klicka sedan på **[!UICONTROL Delete]**. Dynamic Media bekräftar att du vill ta bort den. Tryck **[!UICONTROL Delete]** för att ta bort eller trycka **[!UICONTROL Cancel]** för att avbryta.

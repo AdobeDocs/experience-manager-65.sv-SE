@@ -6,10 +6,10 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: best-practices
 exl-id: b5f2be67-c93c-4dbc-acc0-3edd8f1a282f
-source-git-commit: b703f356f9475eeeafb1d5408c650d9c6971a804
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '540'
-ht-degree: 2%
+source-wordcount: '538'
+ht-degree: 4%
 
 ---
 
@@ -21,7 +21,7 @@ De centrala komponenterna är moderna, flexibla komponenter som är enkla att ut
 
 1. Starta Adobe Experience Manager (AEM) med exempelinnehållet We.Retail och öppna [Komponentkonsol](/help/sites-authoring/default-components-console.md).
 
-   **Global navigering -> Verktyg -> Komponenter**
+   **Global Navigation > Tools > Components**
 
 1. När du öppnar rälen i komponentkonsolen kan du filtrera efter en viss komponentgrupp. Kärnkomponenterna finns i
 

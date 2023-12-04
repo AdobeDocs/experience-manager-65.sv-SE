@@ -1,17 +1,17 @@
 ---
-title: Variationer – redigera innehållsfragment
+title: Variationer - innehåll för redigeringsfragment
 description: Förstå hur variationer kan göra ert headless-innehåll i AEM ännu mer flexibelt genom att du kan skapa innehåll för fragmentet och sedan skapa variationer av innehållet utifrån syfte.
 feature: Content Fragments
 role: User
 exl-id: 50982ede-7ccf-45b2-b0dd-a49d23e0f971
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '2388'
+source-wordcount: '2309'
 ht-degree: 4%
 
 ---
 
-# Variationer – redigera innehållsfragment{#variations-authoring-fragment-content}
+# Variationer - innehåll för redigeringsfragment{#variations-authoring-fragment-content}
 
 [Variationer](/help/assets/content-fragments/content-fragments.md#constituent-parts-of-a-content-fragment) är en viktig egenskap hos AEM innehållsfragment, eftersom de gör det möjligt att skapa och redigera kopior av huvudinnehållet för användning i specifika kanaler och/eller scenarier, vilket gör headless content delivery ännu flexiblare.
 
@@ -75,7 +75,7 @@ Du kan:
 
 ### Helskärmsredigerare {#full-screen-editor}
 
-När du redigerar ett textfält med flera rader kan du öppna redigeraren i helskärmsläge, trycka eller klicka i själva texten och sedan välja följande åtgärdsikon:
+När du redigerar ett textfält med flera rader kan du öppna redigeraren i helskärmsläge. Klicka i själva texten och välj sedan följande åtgärdsikon:
 
 ![redigeringsikon för helskärm](assets/cfm-variations-03.png)
 
@@ -108,7 +108,7 @@ Vilka alternativ du kan använda för att redigera text med flera rader beror p�
 
 * [RTF](#rich-text)
 * [Oformaterad text](#plain-text)
-* [Markdown](#markdown)
+* [Markering](#markdown)
 
 Formatet kan väljas när helskärmsredigeraren används.
 
@@ -129,7 +129,7 @@ Med textredigering kan du formatera:
 * Styckeformat: Stycke, Rubrik 1/2/3
 * [Infoga resurs](#inserting-assets-into-your-fragment)
 * Öppna helskärmsredigeraren, där följande formateringsalternativ är tillgängliga:
-   * Sökning
+   * Sök
    * Sök/ersätt
    * Stavningskontroll
    * [Anteckningar](/help/assets/content-fragments/content-fragments-variations.md#annotating-a-content-fragment)
@@ -145,7 +145,7 @@ Med oformaterad text kan du snabbt lägga in innehåll utan formaterings- eller 
 >
 >Om du väljer **Oformaterad text** kan du förlora formatering, markeringar och/eller resurser som du har infogat i antingen **RTF** eller **Markering**.
 
-### Markdown {#markdown}
+### Markering {#markdown}
 
 >[!NOTE]
 >

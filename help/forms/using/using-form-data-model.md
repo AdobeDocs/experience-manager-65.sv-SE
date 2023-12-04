@@ -10,9 +10,9 @@ discoiquuid: 87f5f9f5-2d03-4565-830e-eacc3757e542
 docset: aem65
 feature: Form Data Model
 exl-id: 9a73a643-7ad4-49aa-a971-08d52679158d
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '1212'
+source-wordcount: '1207'
 ht-degree: 0%
 
 ---
@@ -93,7 +93,7 @@ Mer information finns i:
 
 ## Förhandsgranska med exempeldata {#preview-ic}
 
-Med formulärdatamodellens redigerare kan du generera och redigera exempeldata för datamodellsobjekt i formulärdatamodellen. Du kan använda dessa data för att förhandsgranska och testa interaktiv kommunikation och anpassningsbara formulär. Du måste generera exempeldata innan du förhandsgranskar enligt beskrivningen i [Arbeta med formulärdatamodell](../../forms/using/work-with-form-data-model.md#sample).
+Med formulärdatamodellens redigerare kan du generera och redigera exempeldata för datamodellsobjekt i formulärdatamodellen. Du kan använda dessa data för att förhandsgranska och testa interaktiv kommunikation och anpassningsbara formulär. Generera exempeldata innan du förhandsgranskar enligt beskrivningen i [Arbeta med formulärdatamodell](../../forms/using/work-with-form-data-model.md#sample).
 
 Så här förhandsgranskar du en interaktiv kommunikation med exempelformulärdata:
 

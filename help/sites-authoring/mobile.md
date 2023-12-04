@@ -8,7 +8,7 @@ content-type: reference
 topic-tags: site-features
 discoiquuid: 9554cdb3-b604-4d50-9760-89b9e7a7755f
 exl-id: 9c6c6386-5ffd-4fa6-9aa1-f5b0e31d1046
-source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
 source-wordcount: '226'
 ht-degree: 0%
@@ -25,12 +25,12 @@ Enheterna grupperas i kategorierna, funktion, smart och touchfunktion enligt enh
 >
 >Om du vill skapa en mobilwebbplats baserad på en befintlig standardwebbplats skapar du en live-kopia av standardwebbplatsen. (Se [Skapa en Live-kopia för olika kanaler](/help/sites-administering/msm-livecopy.md).)
 >
->AEM utvecklare kan skapa nya enhetsgrupper. (Se [Skapa enhetsgruppsfilter](/help/sites-developing/groupfilters.md).)
+>AEM kan skapa nya enhetsgrupper. (Se [Skapa enhetsgruppsfilter](/help/sites-developing/groupfilters.md).)
 
 Använd följande procedur för att skapa en mobilsida:
 
-1. Från global navigering öppnar du **Webbplatser** konsol.
-1. Öppna sidan **Vi.butik** -> **Amerikas förenta stater** -> **Engelska**.
+1. Öppna **Webbplatser** konsol.
+1. Öppna sidan **Vi.butik** > **Amerikas förenta stater** > **Engelska**.
 
 1. Växla till **Förhandsgranska** läge.
 1. Växla till önskad emulator genom att klicka på enhetsikonen högst upp på sidan.

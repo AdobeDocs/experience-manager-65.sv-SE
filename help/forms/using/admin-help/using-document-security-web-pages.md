@@ -11,9 +11,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 2878b145-e6c0-48d3-810c-3540de13c826
 feature: Document Security
 exl-id: caa31752-a02d-4d20-b7d9-c4aad5d0fae6
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '923'
+source-wordcount: '921'
 ht-degree: 0%
 
 ---
@@ -57,7 +57,7 @@ För administratörer skapas ett superadministratörskonto som standard under in
 
 >[!NOTE]
 >
->När du arbetar med webbsidor bör du undvika att använda webbläsarknapparna, t.ex. bakåtknappen, uppdateringsknappen och bakåt- och framåtpilarna eftersom den här åtgärden kan orsaka oönskad datainhämtning och problem med visningen av data.
+>När du arbetar med webbsidor bör du undvika att använda webbläsarknapparna, som bakåtknappen, uppdateringsknappen samt bakåt- och framåtpilarna, eftersom den här åtgärden kan orsaka oönskade problem med datainhämtning och datavisning.
 
 ## Navigera på webbsidorna {#navigating-the-web-pages}
 
@@ -69,11 +69,11 @@ Använd de här länkarna för att komma åt de olika sidorna, där du skapar oc
 
 **Visa en sida**
 
-1. Klicka på sidans namn; till exempel klicka på Profiler.
+1. Klicka på sidans namn, t.ex. på Profiler.
 
 **Gå tillbaka till föregående sida**
 
-1. Klicka på navigeringslänken högst upp på sidan för den sida som du vill gå tillbaka till.
+1. Klicka på navigeringslänken längst upp på sidan för den sida som du vill gå tillbaka till.
 
 **Uppdatera datalistan på en sida**
 
@@ -87,15 +87,15 @@ Använd de här länkarna för att komma åt de olika sidorna, där du skapar oc
 
 Klientprogram måste vara konfigurerade för att kunna ansluta till dokumentsäkerhet för att skydda dokument, öppna principskyddade dokument och ansluta till dokumentets säkerhetswebbsidor. Se *Hjälp om Acrobat* eller *RightsManagementExtension - hjälp* om du vill ha information om hur du konfigurerar anslutningen i klientprogrammet.
 
-Dokumentsäkerhet nås via SSL (Secure Sockets Layer). Du måste installera webbplatsens certifikat i certifikatarkivet så att du kan komma åt dokumentsäkerhet via klientprogrammen.
+Dokumentsäkerhet nås via SSL (Secure Sockets Layer). Installera webbplatsens certifikat i certifikatarkivet så att du får åtkomst till dokumentsäkerhet via klientprogrammen.
 
 <!-- Fix broken link See Configuring SSL for information on SSL.-->
 
-De här instruktionerna är specifika för Internet Explorer, men du kan installera certifikatet med en webbläsare som stöds. Mer information finns i hjälpen till webbläsaren.
+De här instruktionerna är specifika för Internet Explorer, men du kan installera certifikatet med en webbläsare som stöds. Mer information finns i hjälpen för webbläsaren.
 
 **Installera servercertifikatet med Internet Explorer**
 
-1. Öppna webbläsaren och skriv bas-URL:en för dokumentsäkerhet i rutan Adress. Skriv till exempel `https://[host]:[port]`. Dialogrutan Säkerhetsvarning visas.
+1. Öppna webbläsaren och skriv bas-URL:en för dokumentsäkerhet i rutan Adress. Skriv till exempel `https://[host]:[port]`. En dialogruta med en säkerhetsvarning visas.
 1. Klicka på Visa certifikat och sedan på Installera certifikat och välj standardinställningar för installationen. Certifikatet måste installeras i de betrodda rotcertifikatutfärdarna.
 1. Stäng webbläsarsessionen.
 1. Öppna ett annat webbläsarfönster och skriv samma URL i rutan Adress. En dialogruta för säkerhetsvarning ska inte visas. Det här testet bekräftar att certifikatet är korrekt installerat.
@@ -104,5 +104,5 @@ De här instruktionerna är specifika för Internet Explorer, men du kan install
 
 Logga ut när du är klar med webbsidorna så att du kan använda webbläsaren i andra syften. Beroende på hur dokumentsäkerheten är konfigurerad kan du behöva stänga webbläsaren för att logga ut helt.
 
-1. Klicka på Logga ut i det övre högra hörnet på sidan.
+1. Klicka på Logout (Logga ut) längst upp till höger på sidan.
 1. Om ett meddelande visas på utloggningssidan stänger du webbläsarfönstret för att logga ut helt. I annat fall kan du fortsätta att använda webbläsaren för andra syften.

@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
 content-type: reference
 exl-id: a7281ca0-461f-4762-a631-6bb539596200
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '1573'
+source-wordcount: '1552'
 ht-degree: 0%
 
 ---
@@ -70,11 +70,11 @@ Integrationspaketet är nu installerat.
 
 ## Skapa operatorn för AEM i Campaign {#create-operator}
 
-Integrationspaketet skapar automatiskt `aemserver` som AEM använder för att ansluta till Adobe Campaign. Du måste definiera en säkerhetszon för den här operatorn och ange dess lösenord.
+Integrationspaketet skapar automatiskt `aemserver` som AEM använder för att ansluta till Adobe Campaign. Definiera en säkerhetszon för den här operatorn och ange dess lösenord.
 
 1. Logga in på Adobe Campaign som administratör med klientkonsolen.
 
-1. Välj **verktyg** -> **Explorer** på menyraden.
+1. Välj **verktyg** > **Explorer** på menyraden.
 
 1. I Utforskaren går du till **Administration** > **Åtkomsthantering** > **Operatorer** nod.
 
@@ -162,17 +162,17 @@ Så här konfigurerar du replikering från AEM författarinstans till publicerin
 
 1. Logga in som administratör i AEM redigeringsinstans.
 
-1. Välj **verktyg** > **Distribution** > **Replikering** > **Agenter på författare** och sedan trycka eller klicka **Standardagent (publicera)**.
+1. Välj **verktyg** > **Distribution** > **Replikering** > **Agenter på författare** och sedan klicka **Standardagent (publicera)**.
 
    ![Konfigurera replikeringsagent](assets/acc-replication-config.png)
 
-1. Tryck eller klicka **Redigera** väljer du **Transport** -fliken.
+1. Klicka **Redigera** väljer du **Transport** -fliken.
 
 1. Konfigurera **URI** fält genom att ersätta standardvärdet `localhost` värde med IP-adressen för den AEM publiceringsinstansen.
 
    ![Fliken Transport](assets/acc-transport-tab.png)
 
-1. Tryck eller klicka **OK** för att spara ändringarna i agentinställningarna.
+1. Klicka **OK** för att spara ändringarna i agentinställningarna.
 
 Du har konfigurerat replikering till AEM publiceringsinstans så att kampanjmottagarna kan komma åt ditt innehåll.
 
@@ -184,7 +184,7 @@ Du har konfigurerat replikering till AEM publiceringsinstans så att kampanjmott
 
 ## Konfigurera AEM {#externalizer}
 
-[Externalizer](/help/sites-developing/externalizer.md) är en OSGi-tjänst i AEM som omvandlar en resurssökväg till en extern och absolut URL-adress, vilket krävs för att AEM ska kunna hantera innehåll som Campaign kan använda. Du måste konfigurera det för att Campaign-integreringen ska fungera.
+[Externalizer](/help/sites-developing/externalizer.md) är en OSGi-tjänst i AEM som omvandlar en resurssökväg till en extern och absolut URL-adress, vilket krävs för att AEM ska kunna hantera innehåll som Campaign kan använda. Konfigurera så att Campaign-integreringen fungerar.
 
 1. Logga in som administratör i AEM.
 1. Välj **verktyg** > **Operationer** > **Webbkonsol** > **OSGi-konfiguration** och söka efter **Day CQ link Externalizer**.
@@ -192,7 +192,7 @@ Du har konfigurerat replikering till AEM publiceringsinstans så att kampanjmott
 
    ![Konfigurera Externalizer](assets/acc-externalizer-config.png)
 
-1. Tryck eller klicka **Spara**.
+1. Klicka **Spara**.
 
 Du har konfigurerat Externalizer och Adobe Campaign kan nu komma åt ditt innehåll.
 
@@ -206,7 +206,7 @@ För att Campaign ska kunna kommunicera med AEM måste du ange ett lösenord fö
 
 1. Logga in AEM som administratör.
 1. På huvudnavigeringskonsolen klickar du på **verktyg** till vänster.
-1. Klicka sedan på **Säkerhet** -> **Användare** för att öppna användaradministrationskonsolen.
+1. Klicka sedan på **Säkerhet** > **Användare** för att öppna användaradministrationskonsolen.
 1. Leta reda på `campaign-remote` användare.
 1. Välj `campaign-remote` användare och klicka **Egenskaper** för att redigera användaren.
 1. I **Redigera användarinställningar** fönster, klicka **Ändra lösenord**.
@@ -220,7 +220,7 @@ När [installera **AEM** paket i Campaign,](#install-package) ett externt konto 
 
 1. Logga in på Adobe Campaign som administratör med klientkonsolen.
 
-1. Välj **verktyg** -> **Explorer** på menyraden.
+1. Välj **verktyg** > **Explorer** på menyraden.
 
 1. I Utforskaren går du till **Administration** > **Plattform** > **Externa konton** nod.
 

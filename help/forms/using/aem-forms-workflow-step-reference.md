@@ -5,9 +5,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: publish
 docset: aem65
 exl-id: 470fcfda-dfde-437c-b539-d5af1e13a7d6
-source-git-commit: e2a3470784beb04c2179958ac6cb98861acfaa71
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '7562'
+source-wordcount: '7512'
 ht-degree: 0%
 
 ---
@@ -186,7 +186,7 @@ Om du anger sökvägen till en mapp, till exempel bilagor, bifogas alla filer so
 
 **Spara genererat postdokument med följande alternativ:** Ange platsen där ett dokument med en postfil ska sparas. Du kan välja att skriva över nyttolastmappen, placera postdokumentet på en plats i nyttolastkatalogen eller lagra postdokumentet i en variabel av dokumentdatatypen.
 
-**Språk**: Ange språk för postdokumentet. Välj **Literal** om du vill välja språkinställning i en nedrullningsbar lista eller välja **Variabel** för att hämta språkinställningen från värdet som lagras i en variabel av strängdatatyp. Du måste definiera språkkoden medan du lagrar värdet för språkinställningen i en variabel. Ange till exempel **sv_SE** för engelska och **fr_FR** för franska.
+**Språk**: Ange språk för postdokumentet. Välj **Literal** om du vill välja språkinställning i en nedrullningsbar lista eller välja **Variabel** för att hämta språkinställningen från värdet som lagras i en variabel av strängdatatyp. Definiera språkkoden medan värdet för språkinställningen lagras i en variabel. Ange till exempel **sv_SE** för engelska och **fr_FR** för franska.
 
 ## Anropa tjänststeg för formulärdatamodell {#invoke-form-data-model-service-step}
 
@@ -279,7 +279,7 @@ Med steget Signera dokument kan du använda Adobe Sign för att signera dokument
 
 * **Avtalsnamn:** Ange avtalets namn. Avtalsnamnet blir en del av ämnet och brödtexten i det e-postmeddelande som skickas till mottagarna. Du kan antingen lagra namnet i en variabel av datatypen String eller välja **Literal** om du vill lägga till namnet manuellt.
 
-* **Språk:** Ange språk för alternativen för e-post och verifiering. Du kan antingen lagra språkinställningen i en variabel av datatypen String eller välja **Literal** om du vill välja språkområde i listan med tillgängliga alternativ. Du måste definiera språkkoden medan du lagrar värdet för språkinställningen i en variabel. Ange till exempel **sv_SE** för engelska och **fr_FR** för franska.
+* **Språk:** Ange språk för alternativen för e-post och verifiering. Du kan antingen lagra språkinställningen i en variabel av datatypen String eller välja **Literal** om du vill välja språkområde i listan med tillgängliga alternativ. Definiera språkkoden medan värdet för språkinställningen lagras i en variabel. Ange till exempel **sv_SE** för engelska och **fr_FR** för franska.
 
 * **Konfiguration av Adobe Sign Cloud**: Välj en Adobe Sign Cloud-konfiguration. Om du inte har konfigurerat Adobe Sign för AEM Forms går du till [Integrera Adobe Sign med AEM Forms](../../forms/using/adobe-sign-integration-adaptive-forms.md).
 

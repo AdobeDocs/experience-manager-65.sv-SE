@@ -11,10 +11,10 @@ topic-tags: personalization
 discoiquuid: 9a7a31f9-aeb8-455f-a07e-7b1d1f0a88b6
 docset: aem65
 exl-id: 97e02986-049f-4747-a67a-6aa0677b281e
-source-git-commit: 4fa868f3ae4778d3a637e90b91f7c5909fe5f8aa
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '979'
-ht-degree: 7%
+source-wordcount: '903'
+ht-degree: 8%
 
 ---
 
@@ -35,7 +35,7 @@ Publiken visas med en etikett som beskriver vilken typ av publik som definieras:
 
 * CH - ContextHub-segment
 * CC - kontextsegment
-* AT - Adobe Target
+* AT - ADOBE TARGET
 
 ## Skapa ett ContextHub-segment i publikkonsolen {#creating-a-contexthub-segment-in-the-audiences-console}
 
@@ -43,8 +43,8 @@ Du kan skapa ett ContextHub-segment antingen i publikkonsolen eller under målin
 
 Så här skapar du ett ContextHub-segment i publikkonsolen:
 
-1. Klicka eller tryck på navigeringskonsolen **Personalisering**. Klicka eller tryck **Målgrupper**.
-1. Tryck eller klicka **Skapa ContextHub-segment**.
+1. I navigeringskonsolen klickar du på **Personalisering**. Klicka **Målgrupper**.
+1. Klicka **Skapa ContextHub-segment**.
 
    ![screen-shot_2019-03-05at124034](assets/screen-shot_2019-03-05at124034.png)
 
@@ -70,20 +70,20 @@ När du använder mer än en regel kombineras dessa regler av operatorn AND, vil
 
 Så här skapar du en Adobe Target-publik:
 
-1. Klicka eller tryck på navigeringskonsolen **Personalisering**. Klicka eller tryck **Målgrupper**.
+1. I navigeringskonsolen klickar du på **Personalisering**. Klicka **Målgrupper**.
 
    ![screen-shot_2019-03-05at124139](assets/screen-shot_2019-03-05at124139.png)
 
-1. Tryck eller klicka på i publikkonsolen **Skapa** och sedan** Skapa målgrupp**.
+1. I publikkonsolen klickar du på **Skapa** och sedan** Skapa målgrupp**.
 
    ![chlimage_1-168](assets/chlimage_1-168.png)
 
-1. I **Adobe Target Configuration** väljer du målkonfiguration och trycker eller klickar på **OK**.
-1. I området Regel#1 trycker eller klickar du på attributtypen och anger eventuell attributinformation i fälten som är tillgängliga. När du är klar markerar du kryssrutan till höger om attributet för att spara det. Se [Attribut och deras alternativ](#attributes-and-their-options) om du vill ha information om alla attribut.
+1. I **Adobe Target Configuration** väljer du målkonfiguration och klickar på **OK**.
+1. Klicka på attributtypen i området Regel 1 och ange eventuell attributinformation i de tillgängliga fälten. När du är klar markerar du kryssrutan till höger om attributet för att spara det. Se [Attribut och deras alternativ](#attributes-and-their-options) om du vill ha information om alla attribut.
 1. Klicka på **Lägg till regel** för att lägga till en regel. Ange så många regler som behövs. Reglerna kombineras med den booleska operatorn AND, vilket innebär att målgruppen måste uppfylla alla krav i alla regler för att kunna delta i en aktivitet.
-1. Tryck eller klicka **Nästa**.
-1. Ange ett namn för publiken och tryck eller klicka **Spara**.
-1. Tryck eller klicka **Spara**. Din publik listas i målgruppslistan.
+1. Klicka på **Nästa**.
+1. Ange ett namn för publiken och klicka på **Spara**.
+1. Klicka **Spara**. Din publik listas i målgruppslistan.
 
 ### Attribut och deras alternativ {#attributes-and-their-options}
 
@@ -107,6 +107,6 @@ Du kan skapa målregler för följande attribut:
 
 Du kan redigera alla ContextHub- och Client Context-målgrupper från publikkonsolen. Du kan också redigera Adobe Target-målgrupper, men bara de målgrupper som har skapats i AEM:
 
-1. Klicka eller tryck på navigeringskonsolen **Personalisering**. Klicka eller tryck **Målgrupper**.
-1. Tryck eller klicka på ikonen bredvid det ContextHub- eller Client Context-segment som du vill redigera och tryck eller klicka på **Redigera**.
+1. I navigeringskonsolen klickar du på **Personalisering**. Klicka **Målgrupper**.
+1. Klicka på ikonen bredvid det ContextHub- eller Client Context-segment som du vill redigera och klicka sedan på **Redigera**.
 1. Gör eventuella redigeringar i segmentredigeraren. Se [Klientkontext](/help/sites-administering/campaign-segmentation.md) eller [ContextHub](/help/sites-developing/ch-configuring.md) dokumentation.

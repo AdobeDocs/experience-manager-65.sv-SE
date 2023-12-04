@@ -7,9 +7,9 @@ topic-tags: extending-aem
 content-type: reference
 docset: aem65
 exl-id: 6790202f-0542-4779-b3ce-d394cdba77b4
-source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '2414'
+source-wordcount: '2425'
 ht-degree: 0%
 
 ---
@@ -48,7 +48,7 @@ Så här skapar du ett arbetsflöde med redigeraren:
 >
 >`/var/workflow/models`
 >
->Till exempel, `/var/workflow/models/prototypes`
+>Exempel: `/var/workflow/models/prototypes`
 >
 >Den här mappen kan sedan användas för [hantera åtkomst till modellerna i den mappen](/help/sites-administering/workflows-managing.md#create-a-subfolder-in-var-workflow-models-and-apply-the-acl-to-that).
 
@@ -97,7 +97,7 @@ Markera **Redigera** kommer att
 
 ### Lägga till ett steg i en modell {#adding-a-step-to-a-model}
 
-Du måste lägga till steg i modellen för att representera aktiviteten som ska utföras - varje steg utför en specifik aktivitet. Ett urval stegkomponenter är tillgängliga i en AEM.
+Lägg till steg i modellen för att representera aktiviteten som ska utföras - varje steg utför en specifik aktivitet. Ett urval stegkomponenter är tillgängliga i en AEM.
 
 När du redigerar en modell visas de tillgängliga stegen i de olika grupperna i **Steg, webbläsare**. Till exempel:
 
@@ -144,7 +144,7 @@ Du kan **Konfigurera** och anpassa ett arbetsflödesstegs beteende med **Stegege
 
 1. Öppna **Stegegenskaper** för ett steg:
 
-   * Klicka/tryck på steget* *i arbetsflödesmodellen och välj **Konfigurera** i komponentens verktygsfält.
+   * Klicka på steget* *i arbetsflödesmodellen och välj **Konfigurera** i komponentens verktygsfält.
 
    * Dubbelklicka på steget.
 

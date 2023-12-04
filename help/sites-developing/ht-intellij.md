@@ -8,16 +8,16 @@ topic-tags: development-tools
 content-type: reference
 discoiquuid: df6410a2-794e-4fa2-ae8d-37271274d537
 exl-id: 5a79c79b-df65-4cb2-b9d4-eda994c992ec
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '638'
+source-wordcount: '639'
 ht-degree: 1%
 
 ---
 
 # Utveckla AEM projekt med IntelliJ IDEA{#how-to-develop-aem-projects-using-intellij-idea}
 
-## Översikt {#overview}
+## Ökning {#overview}
 
 För att komma igång med utvecklingen AEM IntelliJ krävs följande steg.
 
@@ -58,7 +58,7 @@ För att det ska fungera, följ instruktionerna på [Så här arbetar du med JSP
 1. Öppna **Importera** i IntelliJ IDEA genom att
 
    * markera **Importera projekt** på välkomstskärmen om du inte har något projekt öppet än
-   * markera **Arkiv -> Importera projekt** på huvudmenyn
+   * markera **Arkiv > Importera projekt** på huvudmenyn
 
 1. Välj POM-filen för projektet i dialogrutan Importera.
 
@@ -86,7 +86,7 @@ Följande steg är nödvändiga för att felsöka JSP:er med IntelliJ IDEA
 
 IntelliJ IDEA måste förstå var JSP:er för felsökning ska hittas. Eftersom IDEA inte kan tolka `content-package-maven-plugin` -inställningar måste den konfigureras manuellt.
 
-1. Gå till **Arkiv -> Projektstruktur**
+1. Gå till **Arkiv > Projektstruktur**
 1. Välj **Innehåll** modul
 1. Klicka **+** ovanför listan med moduler och välj **Webb**
 1. Som webbresurskatalog väljer du `content/src/main/content/jcr_root subdirectory` av ditt projekt enligt skärmbilden nedan.
@@ -104,7 +104,7 @@ IntelliJ IDEA måste förstå var JSP:er för felsökning ska hittas. Eftersom I
 
 #### Konfigurera en felsökningsprofil {#configure-a-debug-profile}
 
-1. Gå till **Kör -> Redigera konfigurationer**
+1. Gå till **Kör > Redigera konfigurationer**
 1. Träffa **+** och markera **JSR45-fjärr**
 1. Välj **Konfigurera** nästa **Programserver** och konfigurera en allmän server
 1. Ange en lämplig URL för startsidan om du vill öppna en webbläsare när du startar felsökningen
@@ -141,7 +141,7 @@ CQ_JVM_OPTS="$CQ_JVM_OPTS -Xdebug -Xrunjdwp:transport=dt_socket,address=58242,su
 
 Du är nu redo att felsöka JSP:er i AEM.
 
-1. Välj **Kör -> Felsök -> Din felsökningsprofil**
+1. Välj **Kör > Felsök > Din felsökningsprofil**
 1. Ange brytpunkter i komponentkoden
 1. Öppna en sida i webbläsaren
 

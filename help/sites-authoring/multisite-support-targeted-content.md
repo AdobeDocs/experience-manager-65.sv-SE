@@ -10,9 +10,9 @@ content-type: reference
 topic-tags: personalization
 discoiquuid: 4dda6a03-d3ad-4e65-8b37-cee030fa4f7f
 exl-id: 5e345ffd-4e9c-467f-8ebb-c798eeb61dea
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '2855'
+source-wordcount: '2837'
 ht-degree: 5%
 
 ---
@@ -157,18 +157,18 @@ Områden kan omfatta aktiviteter och erbjudanden. När du har skapat ett område
 
 >[!NOTE]
 >
->Standardområdet som kallas masterområde komprimeras som standard när du trycker eller klickar på namnet på ett varumärke **tills** du skapar ett annat område. När du sedan väljer ett varumärke på konsolen **Aktivitet** eller **Erbjudanden** visas konsolen **Område**.
+>Standardområdet som kallas mallområde är komprimerat som standard när du klickar på namnet på ett varumärke **tills** du skapar ett annat område. När du sedan väljer ett varumärke på konsolen **Aktivitet** eller **Erbjudanden** visas konsolen **Område**.
 
 Så här skapar du ett område:
 
 1. Navigera till **Personalisering** > **Aktiviteter** eller **Erbjudanden** och sedan till ert varumärke.
-1. Tryck eller klicka **Skapa område**.
+1. Klicka **Skapa område**.
 
    ![chlimage_1-277](assets/chlimage_1-277.png)
 
 1. Klicka på **Område** ikon och klicka **Nästa**.
 1. I **Titel** anger du ett namn för det nya området. Du kan också välja taggar.
-1. Tryck eller klicka **Skapa**.
+1. Klicka **Skapa**.
 
    AEM omdirigeras till varumärkesfönstret, där alla områden som skapas listas. Om det finns ett annat område förutom mallområdet kan du skapa områden direkt i varumärkeskonsolen.
 
@@ -181,7 +181,7 @@ Du skapar ett område som en live-kopia för att ärva målinnehållet i olika w
 Så här skapar du ett område som en livecopy:
 
 1. Navigera till **Personalisering** > **Aktiviteter** eller **Erbjudanden** och sedan till ert varumärke.
-1. Tryck eller klicka **Skapa område som Live Copy**.
+1. Klicka **Skapa område som Live Copy**.
 
    ![chlimage_1-279](assets/chlimage_1-279.png)
 
@@ -203,7 +203,7 @@ Så här skapar du ett område som en livecopy:
    >
    >När en sida förs ut till en Live-kopia och området som är konfigurerat för sidan Blå utskrift också är skissen för området som är konfigurerat för sidans Live-kopia, är LiveAction **personalizationContentRollout** utlöser en synkron subRollout, som är en del av **Standardkonfiguration för utrullning**.
 
-1. Tryck eller klicka **Skapa**.
+1. Klicka **Skapa**.
 
    AEM omdirigeras till varumärkesfönstret, där alla områden som skapas listas. Om det finns ett annat område förutom mallområdet kan du skapa områden direkt från varumärkesfönstret.
 
@@ -222,13 +222,13 @@ När du länkar är bara de aktiviteter, upplevelser och erbjudanden från det v
 Så här länkar du en plats till ett område:
 
 1. Navigera till den webbplats (eller sida) som du vill länka till ett område.
-1. Markera webbplatsen eller sidan och tryck eller klicka på **Visa egenskaper**.
-1. Tryck eller klicka på **Personalisering** -fliken.
+1. Markera webbplatsen eller sidan och klicka på **Visa egenskaper**.
+1. Klicka på **Personalisering** -fliken.
 1. I **Varumärke** väljer du det varumärke som du vill länka området till. När du har valt varumärket finns tillgängliga områden på **Områdesreferens** -menyn.
 
    ![chlimage_1-283](assets/chlimage_1-283.png)
 
-1. Markera området på menyn **Områdesreferens** nedrullningsbar meny och tryck eller klicka **Spara**.
+1. Markera området på menyn **Områdesreferens** nedrullningsbar meny och klicka **Spara**.
 
    ![chlimage_1-284](assets/chlimage_1-284.png)
 
@@ -252,8 +252,8 @@ En aktivitet som ärver från en annan plats markeras som grön bredvid aktivite
 
 Så här gör du uppehåll i eller frånkoppling av arv av riktat innehåll i en aktivitet:
 
-1. Navigera till sidan där du vill koppla loss eller göra uppehåll i arv och tryck eller klicka **Målinriktning** i listrutan Läge.
-1. Om sidan är länkad till ett område som är en live-kopia ser du arvsstatusen. Tryck eller klicka **Börja målinrikta**.
+1. Navigera till sidan där du vill koppla loss eller göra uppehåll i arv och klicka på **Målinriktning** i listrutan Läge.
+1. Om sidan är länkad till ett område som är en live-kopia ser du arvsstatusen. Klicka **Börja målinrikta**.
 1. Gör något av följande om du vill göra uppehåll i en aktivitet:
 
    1. Välj ett element i aktiviteten, t.ex. målgruppen. AEM visar automatiskt en bekräftelseruta för att pausa Live Copy. (Du kan göra uppehåll i live-kopieringen genom att trycka eller klicka på ett element under målprocessen.)
@@ -261,7 +261,7 @@ Så här gör du uppehåll i eller frånkoppling av arv av riktat innehåll i en
 
    ![chlimage_1-285](assets/chlimage_1-285.png)
 
-1. Tryck eller klicka **Gör uppehåll** för att pausa aktiviteten. Avbrutna aktiviteter markeras med rött.
+1. Klicka **Gör uppehåll** för att pausa aktiviteten. Avbrutna aktiviteter markeras med rött.
 
    ![chlimage_1-286](assets/chlimage_1-286.png)
 
@@ -269,10 +269,10 @@ Så här gör du uppehåll i eller frånkoppling av arv av riktat innehåll i en
 
 Så här bryter du arv av riktat innehåll i en aktivitet:
 
-1. Navigera till sidan där du vill koppla loss live-kopian från mallen och tryck eller klicka **Målinriktning** i listrutan Läge.
-1. Om sidan är länkad till ett område som är en live-kopia ser du arvsstatusen. Tryck eller klicka **Börja målinrikta**.
+1. Navigera till sidan där du vill koppla loss den aktiva kopian från mallen och klicka på **Målinriktning** i listrutan Läge.
+1. Om sidan är länkad till ett område som är en live-kopia ser du arvsstatusen. Klicka **Börja målinrikta**.
 1. Välj **Koppla loss live-kopia** i listrutan i verktygsfältet. AEM bekräftar att du vill koppla loss live-kopian.
-1. Tryck eller klicka **Koppla loss** för att frigöra den aktiva kopian från aktiviteten. När den har kopplats loss visas inte längre listrutan för arv. Aktiviteten är nu en lokal aktivitet.
+1. Klicka **Koppla loss** för att frigöra den aktiva kopian från aktiviteten. När den har kopplats loss visas inte längre listrutan för arv. Aktiviteten är nu en lokal aktivitet.
 
    ![chlimage_1-287](assets/chlimage_1-287.png)
 
@@ -282,13 +282,13 @@ Om du har inaktiverat arv av riktat innehåll i en aktivitet kan du återställa
 
 Så här återställer du arv av riktat innehåll i en aktivitet:
 
-1. Navigera till sidan där du vill återställa arv och tryck eller klicka **Målinriktning** i listrutan Läge.
-1. Tryck eller klicka **Börja målinrikta**.
+1. Navigera till sidan där du vill återställa arv och klicka på **Målinriktning** i listrutan Läge.
+1. Klicka **Börja målinrikta**.
 1. Välj **Återuppta live-kopia** i listrutan i verktygsfältet.
 
    ![chlimage_1-288](assets/chlimage_1-288.png)
 
-1. Tryck eller klicka **Återuppta** för att bekräfta att du vill återuppta arv av live-kopior. Alla ändringar som gjorts i den aktuella aktiviteten går förlorade om du återupptar arvet.
+1. Klicka **Återuppta** för att bekräfta att du vill återuppta arv av live-kopior. Alla ändringar som gjorts i den aktuella aktiviteten går förlorade om du återupptar arvet.
 
 ## Ta bort områden {#deleting-areas}
 
@@ -297,5 +297,5 @@ När du tar bort ett område tar du bort alla aktiviteter i det området. AEM va
 Så här tar du bort ett område:
 
 1. Navigera till **Personalisering** > **Verksamhet** eller **Erbjudanden** och därefter ert varumärke.
-1. Tryck eller klicka på ikonen bredvid det område du vill ta bort.
-1. Tryck eller klicka **Ta bort** och bekräfta att du vill ta bort området.
+1. Klicka på ikonen bredvid det område du vill ta bort.
+1. Klicka **Ta bort** och bekräfta att du vill ta bort området.

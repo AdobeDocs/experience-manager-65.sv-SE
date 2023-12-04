@@ -8,9 +8,9 @@ topic-tags: page-authoring
 content-type: reference
 discoiquuid: aa89326a-ad33-4b0b-8d09-c68c5a5c790a
 exl-id: de1ae7e3-db3a-4b5e-8a4f-ae111227181f
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '639'
+source-wordcount: '632'
 ht-degree: 0%
 
 ---
@@ -65,15 +65,15 @@ I anteckningsläget kan du skapa, redigera, flytta eller ta bort anteckningar i 
 
    >[!NOTE]
    >
-   >Om du vill avsluta anteckningsläget trycker/klickar du på ikonen Anteckning (x-symbolen) till höger om det övre verktygsfältet.
+   >Om du vill avsluta anteckningsläget klickar du på ikonen Anteckning (x-symbolen) till höger om det övre verktygsfältet.
 
-1. Klicka/tryck på ikonen Lägg till anteckning (plus symbol till vänster i verktygsfältet) för att börja lägga till anteckningar.
+1. Klicka på ikonen Lägg till anteckning (plus symbol till vänster i verktygsfältet) för att börja lägga till anteckningar.
 
    >[!NOTE]
    >
-   >Om du vill sluta lägga till anteckningar (och återgå till att visa) trycker/klickar du på ikonen Avbryt (x-symbolen i en vit cirkel) till vänster om det övre verktygsfältet.
+   >Om du vill sluta lägga till anteckningar (och återgå till att visa) klickar du på ikonen Avbryt (x-symbolen i en vit cirkel) till vänster om det övre verktygsfältet.
 
-1. Klicka/tryck på den nödvändiga komponenten (komponenter som kan kommenteras markeras med en blå ram) för att lägga till anteckningen och öppna dialogrutan:
+1. Klicka på den önskade komponenten (komponenter som kan kommenteras markeras med en blå ram) för att lägga till anteckningen och öppna dialogrutan:
 
    ![screen_shot_2018-03-22at110606](assets/screen_shot_2018-03-22at110606.png)
 
@@ -100,17 +100,17 @@ I anteckningsläget kan du skapa, redigera, flytta eller ta bort anteckningar i 
 
 1. När du är klar med redigeringen av en viss anteckning kan du:
 
-   * Klicka/tryck på textmarkören för att öppna anteckningen. När du har öppnat den fullständiga texten kan du göra ändringar eller ta bort anteckningen.
+   * Klicka på textmarkören för att öppna anteckningen. När du har öppnat den fullständiga texten kan du göra ändringar eller ta bort anteckningen.
 
       * Skisser kan inte tas bort oberoende av anteckningen.
 
    * Flytta textmarkören.
-   * Klicka/tryck på en skisslinje för att markera skissen och dra den till önskad plats.
+   * Klicka på en skisslinje för att markera skissen och dra den till önskad plats.
    * Flytta, eller kopiera, en komponent
 
       * Alla relaterade anteckningar och skisser av dem flyttas eller kopieras också, och deras placering i förhållande till stycket förblir densamma.
 
-1. Om du vill avsluta anteckningsläget och återgå till det tidigare använda läget trycker/klickar du på ikonen Anteckning (x-symbol) till höger i det övre verktygsfältet.
+1. Om du vill avsluta anteckningsläget och återgå till det tidigare använda läget klickar du på ikonen Anteckning (x-symbol) till höger om det övre verktygsfältet.
 
 >[!NOTE]
 >

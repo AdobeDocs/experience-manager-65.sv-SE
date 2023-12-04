@@ -11,9 +11,9 @@ topic-tags: operations
 discoiquuid: 30a12fc6-07b8-4c7c-b9e2-caa2bec0ac48
 role: Developer
 exl-id: ff087084-fb1c-43a4-ae54-cc77eb862493
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '3501'
+source-wordcount: '3478'
 ht-degree: 0%
 
 ---
@@ -176,7 +176,7 @@ Observera att varje datagrupp innehåller fyra XML-element som motsvarar denna i
 * Antal artiklar
 * Enhetspris
 
-Namnet på en undergrupps överordnade XML-element måste matcha namnet på delformuläret som finns i formulärdesignen. I föregående diagram kan du till exempel observera att namnet på undergruppens överordnade XML-element är `detail`. Detta motsvarar namnet på delformuläret som är i den formulärdesign som inköpsorderformuläret baseras på. Om namnet på undergruppens överordnade XML-element och delformuläret inte matchar, fylls inte formuläret på serversidan i i förväg.
+Namnet på en undergrupps överordnade XML-element måste matcha namnet på delformuläret som finns i formulärdesignen. I föregående diagram kan du till exempel observera att namnet på den överordnade XML-elementet för dataundergruppen är `detail`. Detta motsvarar namnet på delformuläret som är i den formulärdesign som inköpsorderformuläret baseras på. Om namnet på undergruppens överordnade XML-element och delformuläret inte matchar, fylls inte formuläret på serversidan i i förväg.
 
 Varje dataundergrupp måste innehålla XML-element som matchar fältnamnen i delformuläret. The `detail` delformuläret i formulärdesignen innehåller följande fält:
 
@@ -212,7 +212,7 @@ Inkludera nödvändiga filer i utvecklingsprojektet. Om du skapar ett klientprog
 
 **Skapa en XML-datakälla i minnet**
 
-Du kan använda `org.w3c.dom` klasser för att skapa en XML-datakälla i minnet för att fylla i ett formulär med flödeslayout i förväg. Du måste placera data i en XML-datakälla som överensstämmer med formuläret. Mer information om relationen mellan ett formulär med flödeslayout och XML-datakällan finns i [Förstå undergrupper av data](#understanding-data-subgroups).
+Du kan använda `org.w3c.dom` klasser för att skapa en XML-datakälla i minnet för att fylla i ett formulär med flödeslayout i förväg. Placera data i en XML-datakälla som överensstämmer med formuläret. Mer information om relationen mellan ett formulär med flödeslayout och XML-datakällan finns i [Förstå undergrupper av data](#understanding-data-subgroups).
 
 **Konvertera XML-datakällan**
 
@@ -220,7 +220,7 @@ En XML-datakälla i minnet som skapas med `org.w3c.dom` kan konverteras till `co
 
 >[!NOTE]
 >
->Om du använder Forms-tjänstens WSDL för att fylla i ett formulär i förväg måste du konvertera en `org.w3c.dom.Document` objekt till `BLOB` -objekt.
+>Om du använder WSDL för Forms-tjänsten för att fylla i ett formulär i förväg måste du konvertera en `org.w3c.dom.Document` objekt till `BLOB` -objekt.
 
 **Återge ett förifyllt formulär**
 
@@ -248,7 +248,7 @@ Så här fyller du i ett formulär med flödeslayout med Forms API (Java) i för
 
 1. Skapa en XML-datakälla i minnet
 
-   * Skapa ett Java `DocumentBuilderFactory` genom att anropa `DocumentBuilderFactory` klass&quot; `newInstance` -metod.
+   * Skapa ett Java `DocumentBuilderFactory` genom att anropa `DocumentBuilderFactory` class&#39; `newInstance` -metod.
    * Skapa ett Java `DocumentBuilder` genom att anropa `DocumentBuilderFactory` objektets `newDocumentBuilder` -metod.
    * Ring `DocumentBuilder` objektets `newDocument` metod för att instansiera en `org.w3c.dom.Document` -objekt.
    * Skapa XML-datakällans rotelement genom att anropa `org.w3c.dom.Document` objektets `createElement` -metod. Detta skapar en `Element` som representerar rotelementet. Skicka ett strängvärde som representerar elementets namn till `createElement` -metod. Skicka returvärdet till `Element`. Lägg sedan till rotelementet i dokumentet genom att anropa `Document` objektets `appendChild` och skicka rotelementobjektet som ett argument. Följande kodrader visar den här programlogiken:
@@ -301,7 +301,7 @@ Så här fyller du i ett formulär med flödeslayout med Forms API (Java) i för
    The `renderPDFForm` returnerar en `FormsResult` objekt som innehåller en formulärdataström som måste skrivas till klientens webbläsare.
 
    * Skapa en `javax.servlet.ServletOutputStream` som används för att skicka en formulärdataström till klientens webbläsare.
-   * Skapa en `com.adobe.idp.Document` genom att anropa `FormsResult` objekt&quot;s `getOutputContent` -metod.
+   * Skapa en `com.adobe.idp.Document` genom att anropa `FormsResult` objekt `getOutputContent` -metod.
    * Skapa en `java.io.InputStream` genom att anropa `com.adobe.idp.Document` objektets `getInputStream` -metod.
    * Skapa en bytearray som fyller i den med formulärdataströmmen genom att anropa `InputStream` objektets `read` och skicka bytearrayen som ett argument.
    * Anropa `javax.servlet.ServletOutputStream` objektets `write` metod för att skicka formulärdataströmmen till klientens webbläsare. Skicka bytearrayen till `write` -metod.
@@ -325,7 +325,7 @@ Så här fyller du i ett formulär med flödeslayout med Forms API (webbtjänste
 
 1. Skapa en XML-datakälla i minnet
 
-   * Skapa ett Java `DocumentBuilderFactory` genom att anropa `DocumentBuilderFactory` klass&quot; `newInstance` -metod.
+   * Skapa ett Java `DocumentBuilderFactory` genom att anropa `DocumentBuilderFactory` class&#39; `newInstance` -metod.
    * Skapa ett Java `DocumentBuilder` genom att anropa `DocumentBuilderFactory` objektets `newDocumentBuilder` -metod.
    * Ring `DocumentBuilder` objektets `newDocument` metod för att instansiera en `org.w3c.dom.Document` -objekt.
    * Skapa XML-datakällans rotelement genom att anropa `org.w3c.dom.Document` objektets `createElement` -metod. Detta skapar en `Element` som representerar rotelementet. Skicka ett strängvärde som representerar elementets namn till `createElement` -metod. Skicka returvärdet till `Element`. Lägg sedan till rotelementet i dokumentet genom att anropa `Document` objektets `appendChild` och skicka rotelementobjektet som ett argument. Följande kodrader visar den här programlogiken:

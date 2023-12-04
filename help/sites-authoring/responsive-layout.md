@@ -8,10 +8,10 @@ topic-tags: page-authoring
 content-type: reference
 discoiquuid: 668d1a8a-c757-4c9f-833f-e5dada4d0384
 exl-id: 760b8419-5cf8-49c5-8d4f-6691f5256c53
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '1797'
-ht-degree: 6%
+source-wordcount: '1798'
+ht-degree: 5%
 
 ---
 
@@ -120,7 +120,7 @@ När du t.ex. väljer enheten **iPhone 6 Plus** (definierat med en bredd på 540
 1. Om du vill välja en specifik enhet som ska emuleras kan du antingen:
 
    * Använd ikonen Välj enhet och välj i en nedrullningsbar väljare.
-   * Tryck/klicka på enhetsindikatorn i emulatorns verktygsfält.
+   * Klicka på enhetsindikatorn i emulatorns verktygsfält.
 
    ![screen_shot_2018-03-23at084818](assets/screen_shot_2018-03-23at084818.png)
 
@@ -139,7 +139,7 @@ När du t.ex. väljer enheten **iPhone 6 Plus** (definierat med en bredd på 540
    * Flödets linje visas inte om höjden på den enhet som emuleras är högre än skärmstorleken.
    * Flödet visas för författarens bekvämlighet och visas inte på den publicerade sidan.
 
-## Lägga till en layoutbehållare och dess innehåll (redigeringsläge) {#adding-a-layout-container-and-its-content-edit-mode}
+## Lägga till en layoutbehållare och dess innehåll (redigeringsläget) {#adding-a-layout-container-and-its-content-edit-mode}
 
 A **Layoutbehållare** är ett styckesystem som
 
@@ -216,7 +216,7 @@ I layoutläget kan du utföra olika åtgärder på ett rutnät:
   >
   >Proportionerna och proportionerna bevaras när komponenter som **Bilder** storleksändras.
 
-* Klicka/peka på en innehållskomponent så kan du göra följande i verktygsfältet:
+* Klicka på en innehållskomponent så kan du göra följande i verktygsfältet:
 
    * **Överordnad**
 
@@ -232,7 +232,7 @@ I layoutläget kan du utföra olika åtgärder på ett rutnät:
 
   ![screen_shot_2018-03-23at090246](assets/screen_shot_2018-03-23at090246.png)
 
-* I **Layout** läge där du kan trycka/klicka på **Dra komponenter hit** om du vill markera hela komponenten. Då visas verktygsfältet för det här läget.
+* I **Layout** du kan klicka på **Dra komponenter hit** om du vill markera hela komponenten. Då visas verktygsfältet för det här läget.
 
   Verktygsfältet har olika alternativ beroende på layoutkomponentens läge och vilka komponenter som hör till det. Till exempel:
 

@@ -2,9 +2,9 @@
 title: Kom igång med AEM headless translation
 description: Lär dig hur du ordnar ditt headless-innehåll och hur AEM översättningsverktyg fungerar.
 exl-id: 764f78a7-1d3d-4406-85b1-b80dffae2350
-source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '1489'
+source-wordcount: '1472'
 ht-degree: 0%
 
 ---
@@ -78,15 +78,15 @@ Innehållsarkitekten arbetar tidigt i projektet för att definiera den här stru
 
 Eftersom innehållsmodellerna definierar innehållsstrukturen måste du veta vilka fält i modellerna som måste översättas. I allmänhet arbetar du med innehållsarkitekten för att definiera detta. Följ stegen nedan för att bläddra bland fälten i dina innehållsmodeller.
 
-1. Navigera till **verktyg** -> **Resurser** -> **Modeller för innehållsfragment**.
-1. Modeller för innehållsfragment lagras vanligtvis i en mappstruktur. Tryck eller klicka på mappen för ditt projekt.
-1. Modellerna listas. Tryck eller klicka på modellen för att visa informationen.
+1. Navigera till **verktyg** > **Resurser** > **Modeller för innehållsfragment**.
+1. Modeller för innehållsfragment lagras vanligtvis i en mappstruktur. Klicka på projektmappen.
+1. Modellerna listas. Klicka på modellen för att se informationen.
    ![Modeller för innehållsfragment](assets/content-fragment-models.png)
 1. The **Modellredigerare för innehållsfragment** öppnas.
    1. Den vänstra kolumnen innehåller modellens fält. Den här kolumnen intresserar oss.
    1. Den högra kolumnen innehåller de fält som kan läggas till i modellen. Den här kolumnen kan vi ignorera.
       ![Modellredigerare för innehållsfragment](assets/content-fragment-model-editor.png)
-1. Tryck eller klicka på ett av modellens fält. AEM markerar det och detaljerna för det fältet visas i den högra kolumnen.
+1. Klicka på ett av modellens fält. AEM markerar det och detaljerna för det fältet visas i den högra kolumnen.
    ![Information om Modellredigerare för innehållsfragment](assets/content-fragment-model-editor-detail.png)
 
 Notera fältet **Egenskapsnamn** för alla fält som måste översättas. Du kommer att behöva den här informationen senare under resan. Dessa **Egenskapsnamn** måste du informera AEM vilka fält i ditt innehåll som måste översättas.

@@ -1,20 +1,20 @@
 ---
-title: Konfigurera sökformulär
+title: Konfigurera Sök i Forms
 description: Lär dig hur du använder Search Forms för att anpassa urvalet av sökpredikt som används i de sökpaneler som finns i AEM konsoler och paneler i författarmiljön.
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: operations
 content-type: reference
 exl-id: f82391d7-e30d-48d2-8f66-88fcae3dfb5f
-source-git-commit: 06a6d4e0ba2aeaefcfb238233dd98e8bbd6731da
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '2073'
+source-wordcount: '2072'
 ht-degree: 1%
 
 ---
 
 
-# Konfigurera sökformulär{#configuring-search-forms}
+# Konfigurera Sök i Forms{#configuring-search-forms}
 
 Använd **Sök i Forms** om du vill anpassa urvalet av sökpredikat som används i de sökpaneler som finns i olika AEM och/eller paneler i redigeringsmiljön. När du anpassar panelerna blir sökfunktionen mångsidig efter dina specifika behov.
 
@@ -26,7 +26,7 @@ Du kan [konfigurera sökformulären](#configuring-your-search-forms) används i 
 
    * **Allmänt**
 
-      * **Sökformulär**
+      * **Sök i Forms**
 
 När du först öppnar den här konsolen ser du att alla konfigurationer har en hänglåssymbol. Det här anger att rätt konfiguration är standardkonfigurationen (färdig) och kan inte tas bort. När du har anpassat konfigurationen försvinner låset såvida du inte [ta bort din anpassade konfiguration](#deleting-a-configuration-to-reinstate-the-default). I så fall återställs standardinställningen (och hänglåsindikatorn).
 
@@ -506,7 +506,7 @@ I följande exempel (som används för att söka efter mallen som används för 
 
 1. Öppna **Sök i Forms** och välj den konfiguration som du vill uppdatera. Till exempel: **Webbplatsadministratörens sökväg**.
 
-   Klicka/tryck sedan på **Redigera sökformulär** -ikon.
+   Klicka sedan på **Redigera sökformulär** -ikon.
 
 1. Beroende på konfigurationen lägger du till en **Alternativ** eller **Alternativ, egenskap** till konfigurationen.
 1. Uppdatera fälten, särskilt:

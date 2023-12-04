@@ -2,10 +2,10 @@
 title: Allmän versionsinformation för [!DNL Adobe Experience Manager] 6.5
 description: "[!DNL Adobe Experience Manager] 6.5 som beskriver versionsinformation, nyheter, hur man installerar och detaljerade ändringslistor."
 exl-id: b3d4a527-44ca-4eb6-b393-f3e8117cf1a6
-source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '4676'
-ht-degree: 1%
+source-wordcount: '4484'
+ht-degree: 0%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 1%
 
 | Produkt | [!DNL Adobe Experience Manager] |
 |---|---|
-| Version | 6.5 |
+| Version | 6,5 |
 | Typ | Större release |
 | Allmänt tillgänglighetsdatum | 8 april 2019 |
 | Rekommenderade uppdateringar | Se [AEM senaste uppdateringarna](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/aem-releases-updates.html?lang=en). |
@@ -102,7 +102,7 @@ Ett antal förbättringar har gjorts i användargränssnittet för att göra det
 
 * Vid QuickStart-distributionen används Eclipse Jetty 9.4.15 som serverkomponent (AEM 6.4 levererades med 9.3.22).
 
-### [!DNL Experience Manager] Sites {#experience-manager-sites}
+### [!DNL Experience Manager] Webbplatser {#experience-manager-sites}
 
 #### Hanterade single-page-appar {#managed-single-page-apps}
 
@@ -203,7 +203,7 @@ Mer information om ändringar i AEM Screens finns i versionsinformationen i [AEM
 * Resurserna i hämtningsrapporten visar nu innehållsfragment utifrån detta
 * Lägg till [Stöd för innehållsfragment i Assets HTTP API](/help/assets/assets-api-content-fragments.md) via /api.json. Det finns API:er för att skapa, uppdatera, läsa och ta bort innehållsfragment.
 
-#### Experience Fragments {#experience-fragments}
+#### Upplevelsefragment {#experience-fragments}
 
 * Förbättrad indexering av [Upplevelsefragment](/help/sites-authoring/experience-fragments.md)så deras innehåll hittas i sökningen efter sidor där de används.
 * The [Exportera till mål](/help/sites-administering/experience-fragments-target.md) kan du nu skicka Experience Fragment som JSON (standard är HTML) eller båda.
@@ -363,7 +363,7 @@ Mer information finns i [Nyheter i Brand Portal](https://experienceleague.adobe.
 
 I stora företag kan den infrastruktur som krävs för att skapa webbplatser distribueras. Ibland finns funktionerna för att skapa webbplatser och de digitala resurser som behövs i olika vattentäta skott.
 
-[!DNL Experience Manager Sites] erbjuder funktioner för att skapa webbsidor och är det DAM-system (Digital Asset Management) som tillhandahåller de resurser som krävs för webbplatserna. [!DNL Experience Manager Assets] [!DNL Experience Manager] har nu stöd för ovanstående användningsexempel genom att integrera [!DNL Sites] och [!DNL Assets]. Se [konfigurera och använda funktionen för anslutna resurser](/help/assets/use-assets-across-connected-assets-instances.md).
+[!DNL Experience Manager Sites] erbjuder funktioner för att skapa webbsidor och [!DNL Experience Manager Assets] är det DAM-system (Digital Asset Management) som tillhandahåller de resurser som krävs för webbplatser. [!DNL Experience Manager] har nu stöd för ovanstående användningsexempel genom att integrera [!DNL Sites] och [!DNL Assets]. Se [konfigurera och använda funktionen för anslutna resurser](/help/assets/use-assets-across-connected-assets-instances.md).
 
 ![Dra en resurs från en [!DNL Experience Manager] driftsättning på [!DNL Sites] sida med en annan [!DNL Experience Manager] distribution](/help/release-notes/assets/connected-assets-drag-and-drop-only.gif)
 
@@ -428,7 +428,7 @@ AEM 6.5 Forms har flera nya funktioner och förbättringar. Högdagrarna är fö
 
 Se [Sammanfattning av nya funktioner och förbättringar i AEM 6.5 Forms](/help/forms/using/whats-new.md) för information om nya och förbättrade funktioner och dokumentationsresurser.
 
-### Använd kundfokuserad utveckling {#leverage-customer-focused-development}
+### Använd kundfokuserad utveckling {#use-customer-focused-development}
 
 Adobe använder en kundfokuserad utvecklingsmodell som gör det möjligt för kunderna att bidra till alla faser i utvecklingsprocessen, under specifikation, utveckling och testning. Tack till alla kunder och partners som deltar i den här processen.
 
@@ -448,7 +448,7 @@ Denna prioriteringsprocess har resulterat i över 750 kundfokuserade förändrin
 * Tillägg för Brackets Code Editor ([läs mer och ladda ned](/help/sites-developing/aem-brackets.md))
 * Maven/Gradle-beroenden ([ladda ned länk](https://repo1.maven.org/maven2/com/adobe/aem/uber-jar/6.5.0/))
 
-**Sites**
+**Webbplatser**
 
 * Kärnkomponenter ([GitHub-projekt](https://github.com/adobe/aem-core-wcm-components))
 * Implementering av referens för butik ([läs mer](/help/sites-developing/we-retail.md))
@@ -468,7 +468,7 @@ Denna prioriteringsprocess har resulterat i över 750 kundfokuserade förändrin
 
 * AEM Modernize Tools Suite, till exempel Dialog Conversion Tool. ([GitHub-projekt](https://github.com/adobe/aem-modernize-tools))
 
-**Assets**
+**Resurser**
 
 * Paket för att lägga till utökad PDF rastrerare ([läs mer](/help/assets/aem-pdf-rasterizer.md))
 * Paket för att lägga till utökat stöd för RAW-bilder ([läs mer](/help/assets/camera-raw.md))

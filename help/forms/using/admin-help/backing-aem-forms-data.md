@@ -6,9 +6,9 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/aem_forms_backup_and_recovery
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 exl-id: 536615a4-ab42-4b72-83b1-fad110b011ee
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '1533'
+source-wordcount: '1515'
 ht-degree: 0%
 
 ---
@@ -37,7 +37,7 @@ Om databasen körs i ett loggningsläge, vilket beskrivs i föregående avsnitt,
 
 ## Säkerhetskopiera katalogerna databas, GDS, AEM och Content Storage Root. {#back-up-the-database-gds-aem-repository-and-content-storage-root-directories}
 
-Du måste placera AEM Forms i läget för säker säkerhetskopiering (ögonblicksbild) eller rullande säkerhetskopiering (kontinuerlig täckning). Innan du anger att AEM Forms ska ange något av säkerhetskopieringslägena bör du kontrollera följande:
+Placera AEM Forms i läget för säker säkerhetskopiering (ögonblicksbild) eller rullande säkerhetskopiering (kontinuerlig täckning). Innan du anger att AEM Forms ska ange något av säkerhetskopieringslägena bör du kontrollera följande:
 
 * Verifiera systemversionen och registrera de korrigeringar eller uppdateringar som tillämpats sedan den senaste fullständiga säkerhetskopieringen av systemavbildningen.
 * Om du använder säkerhetskopiering i rullnings- eller ögonblicksbildläge måste databasen vara konfigurerad med rätt logginställningar för att tillåta säkerhetskopiering av databasen. (Se [AEM Forms databas](/help/forms/using/admin-help/files-back-recover.md#aem-forms-database).)

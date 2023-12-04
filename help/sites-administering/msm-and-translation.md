@@ -10,7 +10,7 @@ topic-tags: site-features
 content-type: reference
 discoiquuid: fabaa3e8-1657-4ed4-abb2-990117bec39c
 exl-id: 8f11f5de-f5af-4ce7-a448-2b4299de2930
-source-git-commit: b703f356f9475eeeafb1d5408c650d9c6971a804
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
 source-wordcount: '352'
 ht-degree: 0%
@@ -40,7 +40,7 @@ Ni kan effektivt skapa innehåll för multinationella och flerspråkiga webbplat
 * Använd [Multi Site Manager](/help/sites-administering/msm.md) till:
 
    * Återanvänd innehåll från huvudwebbplatsen och översättningarna för att skapa webbplatser för andra länder och kulturer.
-   * Se till att begränsa användningen av Multi Site Manager till innehåll på ett språk, till exempel engelsk master -> Engelsk språkgren på landsplatser, fransk master -> Franska språkgrenar på landsplatser.
+   * Se till att begränsa användningen av Multi Site Manager till innehåll på ett språk, till exempel engelsk master > engelska språkgrenar på landsplatser, fransk master > franska språkgrenar på landsplatser.
    * Om det behövs frigör du element från live-kopiorna för att lägga till lokaliseringsinformation.
 
 I följande diagram visas hur huvudbegreppen överlappar (men inte alla nivåer/element som berörs):

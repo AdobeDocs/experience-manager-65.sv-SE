@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 10940000-808a-48ae-8e46-61eccef71eab
 legacypath: /content/docs/en/aem/6-2/administer/operations/page-authoring/configuring-responsive-layouting
 exl-id: 61152b2d-4c0b-4cfd-9669-cf03d32cb7c7
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '1283'
+source-wordcount: '1275'
 ht-degree: 0%
 
 ---
@@ -63,7 +63,7 @@ Med dessa responsiva rutnätsmekanismer kan du:
 
 >[!NOTE]
 >
->I en körklar installation har responsiv layout konfigurerats för [Referensplats för Vi.butik](/help/sites-developing/we-retail.md). Du måste fortfarande [aktivera komponenten Layoutbehållare](#enable-the-layout-container-component-for-page) för andra sidor.
+>I en körklar installation har responsiv layout konfigurerats för [Referensplats för Vi.butik](/help/sites-developing/we-retail.md). [Aktivera komponenten Layoutbehållare](#enable-the-layout-container-component-for-page) för andra sidor.
 
 ## Konfigurera den responsiva emulatorn {#configuring-the-responsive-emulator}
 

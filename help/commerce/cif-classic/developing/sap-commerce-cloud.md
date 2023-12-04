@@ -6,7 +6,7 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: platform
 exl-id: b3de1a4a-f334-44bd-addc-463433204c99
-source-git-commit: 5e56441d2dc9b280547c91def8d971e7b1dfcfe3
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
 source-wordcount: '2303'
 ht-degree: 0%
@@ -562,7 +562,7 @@ Integrering sker mellan AEM och olika e-handelssystem. Detta kräver en strategi
 
 En AEM framände kan placeras framför en befintlig hybris-implementering. En hybris-motor kan också läggas till i en befintlig AEM. För att göra detta måste systemen kunna hantera befintliga användare på ett effektivt sätt i båda systemen:
 
-* AEM -> hybris
+* AEM > hybris
 
    * När du loggar in på hybris, om den AEM användaren inte finns:
 
@@ -571,7 +571,7 @@ En AEM framände kan placeras framför en befintlig hybris-implementering. En hy
 
    * Se: `com.adobe.cq.commerce.hybris.impl.HybrisSessionImpl#login()`
 
-* hybris -> AEM
+* hybris > AEM
 
    * När du loggar in på AEM, om systemet känner igen användaren:
 

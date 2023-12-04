@@ -1,7 +1,7 @@
 ---
 title: Replikering med ömsesidig SSL
 seo-title: Replicating Using Mutual SSL
-description: Lär dig konfigurera AEM så att en replikeringsagent på författarinstansen använder gemensam SSL (MSSL) för att ansluta till publiceringsinstansen. Med MSSL använder replikeringsagenten och HTTP-tjänsten på publiceringsinstansen certifikat för att autentisera varandra.
+description: Lär dig hur du konfigurerar AEM så att en replikeringsagent på författarinstansen använder gemensam SSL (MSSL) för att ansluta till publiceringsinstansen. Med MSSL använder replikeringsagenten och HTTP-tjänsten på publiceringsinstansen certifikat för att autentisera varandra.
 seo-description: Learn how to configure AEM so that a replication agent on the author instance uses mutual SSL (MSSL) to connect with the publish instance. Using MSSL, the replication agent and the HTTP service on the publish instance use certificates to authenticate each other.
 uuid: f4bc5e61-a58c-4fd2-9a24-b31e0c032c15
 contentOwner: User
@@ -11,9 +11,9 @@ topic-tags: configuring
 discoiquuid: 8bc307d9-fa5c-44c0-bff9-2d68d32a253b
 feature: Configuring
 exl-id: 0a8d7831-d076-45cf-835c-8063ee13d6ba
-source-git-commit: b8027a8564f2dce408e7cd5b01f3b86c703c9e3a
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '1392'
+source-wordcount: '1319'
 ht-degree: 2%
 
 ---
@@ -28,21 +28,21 @@ När du konfigurerar MSSL för replikering utför du följande steg:
 1. Installera nycklarna och certifikaten på författaren och publicera instanserna:
 
    * Författare: Författarens privata nyckel och Publiceringens certifikat.
-   * Publicera: Publiceringens privata nyckel och författarens certifikat. Certifikatet är kopplat till det användarkonto som autentiseras med replikeringsagenten.
+   * Publicera: Publicera den privata nyckeln och författarens certifikat. Certifikatet är associerat med det användarkonto som autentiseras med replikeringsagenten.
 
 1. Konfigurera den Jetty-baserade HTTP-tjänsten på Publish-instansen.
 1. Konfigurera transport- och SSL-egenskaperna för replikeringsagenten.
 
 ![chlimage_1-64](assets/chlimage_1-64.png)
 
-Du måste avgöra vilket användarkonto som utför replikeringen. När du installerar det betrodda författarcertifikatet på publiceringsinstansen kopplas certifikatet till det här användarkontot.
+Avgör vilket användarkonto som utför replikeringen. När du installerar det betrodda författarcertifikatet på publiceringsinstansen kopplas certifikatet till det här användarkontot.
 
 ## Hämta eller skapa autentiseringsuppgifter för MSSL {#obtaining-or-creating-credentials-for-mssl}
 
 Du behöver en privat nyckel och ett offentligt certifikat för författaren och publiceringsinstanserna:
 
 * Privata nycklar måste finnas i pkcs#12- eller JKS-format.
-* Certifikat måste finnas i pkcs#12- eller JKS-format. Dessutom kan certifikat i CER-format läggas till i Granite Truststore.
+* Certifikat måste finnas i pkcs#12- eller JKS-format. Certifikatet i CER-format kan också läggas till i Granite Truststore.
 * Certifikat kan vara självsignerade eller signerade av en erkänd certifikatutfärdare.
 
 ### JKS-format {#jks-format}
@@ -55,7 +55,7 @@ Utför följande steg med Java `keytool` så här skapar du den privata nyckeln 
 1. Skapa eller hämta certifikatet:
 
    * Självsignerad: Exportera certifikatet från KeyStore.
-   * CA-signerad: Generera en certifikatbegäran och skicka den till certifikatutfärdaren.
+   * Certifikatsignerad: Generera en certifikatbegäran och skicka den till certifikatutfärdaren.
 
 1. Importera certifikatet till en TrustStore.
 
@@ -109,7 +109,7 @@ Generera en privat nyckel och ett certifikat i formatet pkcs#12. Använd [openSS
    | -key | author.key | publish.key |
    | -out | author_request.csr | publish_request.csr |
 
-   Signera certifikatbegäran eller skicka begäran till en certifikatutfärdare.
+   Signera certifikatbegäran eller skicka begäran till en CA.
 
 1. Om du vill signera certifikatbegäran anger du följande kommando med alternativvärden från tabellen nedan:
 
@@ -141,14 +141,14 @@ Generera en privat nyckel och ett certifikat i formatet pkcs#12. Använd [openSS
 Installera följande objekt på författarinstansen:
 
 * Den privata nyckeln för författarinstansen.
-* Certifikatet för publiceringsinstansen.
+* Publiceringsinstansens certifikat.
 
 Om du vill utföra följande procedur måste du vara inloggad som administratör för författarinstansen.
 
 ### Installera den privata nyckeln för författaren {#install-the-author-private-key}
 
 1. Öppna sidan Användarhantering för författarinstansen. ([http://localhost:4502/libs/granite/security/content/useradmin.html](http://localhost:4502/libs/granite/security/content/useradmin.html))
-1. Klicka eller tryck på ditt användarnamn för att öppna egenskaperna för ditt användarkonto.
+1. Klicka på ditt användarnamn för att öppna egenskaperna för ditt användarkonto.
 1. Om länken Skapa KeyStore visas i området Kontoinställningar klickar du på länken. Konfigurera ett lösenord och klicka på OK.
 1. Klicka på Hantera nyckelbehållare i området Kontoinställningar.
 
@@ -167,7 +167,7 @@ Om du vill utföra följande procedur måste du vara inloggad som administratör
 ### Installera publiceringscertifikatet {#install-the-publish-certificate}
 
 1. Öppna sidan Användarhantering för författarinstansen. ([http://localhost:4502/libs/granite/security/content/useradmin.html](http://localhost:4502/libs/granite/security/content/useradmin.html))
-1. Klicka eller tryck på ditt användarnamn för att öppna egenskaperna för ditt användarkonto.
+1. Klicka på ditt användarnamn för att öppna egenskaperna för ditt användarkonto.
 1. Om länken Skapa TrustStore visas i området Kontoinställningar klickar du på länken, skapar ett lösenord för TrustStore och klickar på OK.
 1. Klicka på Hantera TrustStore i området Kontoinställningar.
 1. Klicka på Lägg till certifikat från CER-fil.
@@ -191,7 +191,7 @@ Om du vill utföra följande procedur måste du vara inloggad som administratör
 ### Installera den privata nyckeln för publicering {#install-the-publish-private-key}
 
 1. Öppna sidan Användarhantering för publiceringsinstansen. ([http://localhost:4503/libs/granite/security/content/useradmin.html](http://localhost:4503/libs/granite/security/content/useradmin.html))
-1. Klicka eller tryck på ditt användarnamn för att öppna egenskaperna för ditt användarkonto.
+1. Klicka på ditt användarnamn för att öppna egenskaperna för ditt användarkonto.
 1. Om länken Skapa KeyStore visas i området Kontoinställningar klickar du på länken. Konfigurera ett lösenord och klicka på OK.
 1. Klicka på Hantera nyckelbehållare i området Kontoinställningar.
 1. Klicka på Lägg till privat nyckel från nyckelarkivfilen.

@@ -3,9 +3,9 @@ title: Konfigurera plugin-programmen för RTF-redigeraren
 description: Lär dig konfigurera plugin-programmen för Adobe Experience Manager Rich Text Editor så att enskilda funktioner aktiveras.
 contentOwner: AG
 exl-id: 6bfd6caa-a68a-40ba-9826-4ba02cd1dbfb
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '4380'
+source-wordcount: '4376'
 ht-degree: 0%
 
 ---
@@ -191,7 +191,7 @@ Ett exempel på en giltig `htmlPasteRules` strukturen är nedan.
 
 ## Konfigurera textformat {#textstyles}
 
-Författare kan använda format för att ändra utseendet på en del av texten. Formaten baseras på CSS-klasser som du fördefinierar i din CSS-formatmall. Stiliserat innehåll omsluts av `span` taggar med `class` -attribut som refererar till CSS-klassen. Till exempel, `<span class=monospaced>Monospaced Text Here</span>`.
+Författare kan använda format för att ändra utseendet på en del av texten. Formaten baseras på CSS-klasser som du fördefinierar i din CSS-formatmall. Stiliserat innehåll omsluts av `span` taggar med `class` -attribut som refererar till CSS-klassen. Till exempel: `<span class=monospaced>Monospaced Text Here</span>`.
 
 När plugin-programmet Styles är aktiverat för första gången finns det inga standardformat. Popup-listan är tom. Så här ger du författarna formatmallar:
 
@@ -587,7 +587,7 @@ En standardinstallation AEM innehåller ordlistorna för amerikansk engelska (`e
 >
 Stavningskontrollen för textredigering är tillgänglig på begäran. Den körs inte automatiskt när du börjar skriva text. Om du vill stavningskontrollera klickar du [!UICONTROL Spellchecker] i verktygsfältet. RTE kontrollerar stavningen av ord och markerar de felstavade orden.
 >
-Om du infogar någon ändring som stavningskontrollen föreslår markeras inte längre textens status och felstavade ord. Om du vill köra stavningskontrollen trycker/klickar du på stavningskontrollknappen igen.
+Om du infogar någon ändring som stavningskontrollen föreslår markeras inte längre textens status och felstavade ord. Om du vill stavningskontrollera klickar du på stavningskontrollknappen igen.
 
 ## Konfigurera historikstorlek för ångra- och gör om-åtgärder {#undohistory}
 

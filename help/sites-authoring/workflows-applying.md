@@ -7,10 +7,10 @@ content-type: reference
 topic-tags: site-features
 docset: aem65
 exl-id: e00da2b3-046a-4d93-aed0-07dd8c66899f
-source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '645'
-ht-degree: 11%
+source-wordcount: '647'
+ht-degree: 5%
 
 ---
 
@@ -20,7 +20,7 @@ När du redigerar kan du anropa arbetsflöden för att utföra åtgärder på di
 
 När du använder arbetsflödet anger du följande information:
 
-* Det arbetsflöde som ska användas.
+* Arbetsflödet som ska användas.
 Du kan använda vilket arbetsflöde som helst (som du fått tillgång till av AEM-administratören).
 * Alternativt kan du använda en titel som hjälper till att identifiera arbetsflödesinstansen i en användares inkorg.
 * Arbetsflödets nyttolast. Det kan vara en eller flera sidor.
@@ -103,7 +103,7 @@ Du kan ange information:
 
    >[!NOTE]
    >
-   >Alternativet **Behåll arbetsflödespaket** är tillgängligt när arbetsflödet har konfigurerats med stöd för flera resurser och flera resurser har valts.[](/help/sites-developing/workflows-models.md#configuring-a-workflow-for-multi-resource-support)
+   >The **Behåll arbetsflödespaket** är tillgängligt när arbetsflödet har konfigurerats för [Stöd för flera resurser](/help/sites-developing/workflows-models.md#configuring-a-workflow-for-multi-resource-support) och flera resurser har valts.
 
    När det är klart, använd **Nästa** för att fortsätta.
 
@@ -111,7 +111,7 @@ Du kan ange information:
 
 1. I **Omfång** steg du kan välja:
 
-   * **Lägg till innehåll** för att öppna [sökvägsläsare](/help/sites-authoring/author-environment-tools.md#path-browser) och välj ytterligare resurser. När du är i webbläsaren klickar/trycker du **Välj** för att lägga till innehållet i arbetsflödesinstansen.
+   * **Lägg till innehåll** för att öppna [sökvägsläsare](/help/sites-authoring/author-environment-tools.md#path-browser) och välj ytterligare resurser. När du är i webbläsaren klickar du på **Välj** för att lägga till innehållet i arbetsflödesinstansen.
 
    * En befintlig resurs som visar ytterligare åtgärder:
 

@@ -1,19 +1,15 @@
 ---
 title: Konvertera mellan filformat och PDF
-seo-title: Converting Between File Formats and PDF
 description: Använd tjänsten Generate PDF för att konvertera inbyggda filformat till PDF. Tjänsten Generate PDF konverterar också PDF till andra filformat och optimerar storleken på PDF-dokument.
-seo-description: Use the Generate PDF service to convert native file formats to PDF. Generate PDF service also converts PDF to other file formats and optimizes the size of PDF documents.
-uuid: f72ad603-c996-4d48-9bfc-bed7bf776af6
 contentOwner: admin
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
-discoiquuid: 180cac3f-6378-42bc-9a47-60f9f08a7103
 role: Developer
 exl-id: 10535740-e3c2-4347-a88f-86706ad699b4
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '7847'
+source-wordcount: '7812'
 ht-degree: 0%
 
 ---
@@ -634,7 +630,7 @@ I den här tabellen visas vilken typ av information som används vid utskrift av
   <tr>
    <td><p>Ytterligare programspecifika dialogruteinstruktioner </p></td>
    <td><p>Anger åsidosättningar och tillägg till programspecifika dialogruteinstruktioner. I avsnittet visas ett exempel på sådan information. </p><p>Filen som innehåller den här informationen är giltig.<i>`[appname]`</i>.addition.<i>`[locale]`</i>.xml Ett exempel är appmon.addition.en_US.xml.</p></td>
-   <td><p>Filer av den här typen kan skapas och ändras med ett XML-redigeringsprogram. (Se <a href="converting-file-formats-pdf.md#creating-or-modifying-an-additional-dialog-xml-file-for-a-native-application">Skapa eller ändra ytterligare en dialogrute-XML-fil för ett ursprungligt program</a>.) </p><p><strong>Viktigt</strong>: Du måste skapa ytterligare programspecifika dialogruteinstruktioner för varje systemspecifikt program som servern stöder. </p></td>
+   <td><p>Filer av den här typen kan skapas och ändras med ett XML-redigeringsprogram. (Se <a href="converting-file-formats-pdf.md#creating-or-modifying-an-additional-dialog-xml-file-for-a-native-application">Skapa eller ändra ytterligare en dialogrute-XML-fil för ett ursprungligt program</a>.) </p><p><strong>Viktigt</strong>: Skapa ytterligare programspecifika dialogruteinstruktioner för varje systemspecifikt program som servern stöder. </p></td>
   </tr>
  </tbody>
 </table>
@@ -673,7 +669,7 @@ Avsikten med Generate PDF-tjänstens stöd för skript-XML-filer är att instrue
 
 Stegen i en skript-XML-fil körs i ordning, utan möjlighet till förgreningar. Det enda villkorstest som stöds är timeout/retry, vilket gör att ett skript avslutas om ett steg inte slutförs korrekt inom en viss tidsperiod och efter ett visst antal försök.
 
-Förutom att steg är sekventiella utförs även instruktionerna i ett steg i ordning. Du måste se till att stegen och instruktionerna återspeglar den ordning i vilken användaren utför samma steg.
+Förutom att steg är sekventiella utförs även instruktionerna i ett steg i ordning. Se till att stegen och instruktionerna återspeglar den ordning i vilken en användare utför samma steg.
 
 Varje steg i en skript-XML-fil identifierar det window-element som förväntas visas om instruktionerna för steget har utförts. Om en oväntad dialogruta visas när du kör ett skriptsteg söker tjänsten Generate PDF igenom XML-filer i dialogrutan enligt beskrivningen i nästa avsnitt.
 
@@ -796,7 +792,7 @@ Du kan använda reguljära uttryck i beskrivningsspecifikationer. Tjänsten Gene
 
 #### Ordna elementen window och windowList {#ordering-the-window-and-windowlist-elements}
 
-Du måste beställa `window` och `windowList` element enligt följande:
+Beställning `window` och `windowList` element enligt följande:
 
 * Vid flera `window` -element visas som underordnade i `windowList` eller `dialog` element, beställa dessa `window` i fallande ordning, med längden på `caption` namn som anger positionen i ordningen.
 * Vid flera `windowList` elementen visas i en `window` element, beställa dessa `windowList` i fallande ordning, med längden på `caption` den första `indexes/`-element som anger positionen i ordningen.
@@ -864,7 +860,7 @@ Namnet på XML-filen för ytterligare dialogrutor måste ha formatet `appmon.[ap
 >
 Inget av de allmänna program som anges i konfigurationsfilen native2pdfconfig.xml har en primär dialogrute-XML-fil. Avsnittet [Lägga till eller ändra stöd för ett ursprungligt filformat](converting-file-formats-pdf.md#adding-or-modifying-support-for-a-native-file-format) beskriver sådana specifikationer.
 
-Du måste beställa `windowList` element som visas som underordnade i `window` -element. (Se [Ordna elementen window och windowList](converting-file-formats-pdf.md#ordering-the-window-and-windowlist-elements).)
+Beställning `windowList` element som visas som underordnade i `window` -element. (Se [Ordna elementen window och windowList](converting-file-formats-pdf.md#ordering-the-window-and-windowlist-elements).)
 
 ### Ändra den allmänna XML-filen i dialogrutan {#modifying-the-general-dialog-xml-file}
 
@@ -1062,7 +1058,7 @@ I det här exemplet anges hur tjänsten Generate PDF ska samverka med Anteckning
         </expectedWindow>
     </step>
 
-    <!-- In this step, we acquire the Print dialog and click on the 'Preferences' button and the expected window in this case is the dialog with the caption '"Printing Preferences' -->
+    <!-- In this step, we acquire the Print dialog and click the 'Preferences' button and the expected window in this case is the dialog with the caption '"Printing Preferences' -->
     <step>
         <acquiredWindow>
             <window caption="Print">
@@ -1080,7 +1076,7 @@ I det här exemplet anges hur tjänsten Generate PDF ska samverka med Anteckning
         </expectedWindow>
     </step>
 
-    <!-- In this step, we acquire the dialog "Printing Preferences' and select the combo box which is the 10th child of window with caption '"Adobe PDF Settings' and select the first index. (Note: All indeces start with 0.) Besides this we uncheck the box which  has the caption '"View Adobe PDF results' and we click on the button OK. The expectation is that 'Printing Preferences' dialog disappears. -->
+    <!-- In this step, we acquire the dialog "Printing Preferences' and select the combo box which is the 10th child of window with caption '"Adobe PDF Settings' and select the first index. (Note: All indeces start with 0.) Besides this we uncheck the box which has the caption '"View Adobe PDF results' and we click the button OK. The expectation is that 'Printing Preferences' dialog disappears. -->
     <step>
         <acquiredWindow>
             <window caption="Printing Preferences">
@@ -1104,7 +1100,7 @@ I det här exemplet anges hur tjänsten Generate PDF ska samverka med Anteckning
         </expectedWindow>
     </step>
 
-    <!-- In this step, we acquire the 'Print' dialog and click on the Print button. The expectation is that the dialog with caption 'Print' disappears. In this case we use the regular expression '^Print$' for specifying the caption given there could be multiple dialogs with caption that includes the word Print. -->
+    <!-- In this step, we acquire the 'Print' dialog and click the Print button. The expectation is that the dialog with caption 'Print' disappears. In this case we use the regular expression '^Print$' for specifying the caption given there could be multiple dialogs with caption that includes the word Print. -->
     <step>
         <acquiredWindow>
             <window caption="Print">
@@ -1123,7 +1119,7 @@ I det här exemplet anges hur tjänsten Generate PDF ska samverka med Anteckning
             <window caption="Save PDF File As"/>
         </expectedWindow>
     </step>
-    <!-- Finally in this step, we acquire the dialog with caption "Save PDF File As" and in the Edit widget type the destination path for the output PDF file and click on the Save button. The expectation is that the dialog disappears-->
+    <!-- Finally in this step, we acquire the dialog with caption "Save PDF File As" and in the Edit widget type the destination path for the output PDF file and click the Save button. The expectation is that the dialog disappears-->
     <step>
         <acquiredWindow>
             <window caption="Save PDF File As">

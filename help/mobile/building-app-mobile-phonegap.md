@@ -8,9 +8,9 @@ products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-adobe-phonegap-enterprise
 discoiquuid: b2778086-8280-4306-bf3a-f6ec2a0e04df
 exl-id: 7c2e5ed8-9f8e-4a81-b736-589ef4089f29
-source-git-commit: 4fd5e9a1bc603202ee52e85a1c09125b13cec315
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '1058'
+source-wordcount: '1028'
 ht-degree: 0%
 
 ---
@@ -85,7 +85,7 @@ Om du vill bygga med PhoneGap CLI måste du installera Node.js och PhoneGap-klie
 
 1. (Valfritt) Skaffa SDK för den mobila plattform som ni riktar er mot:
 
-   * Installera den senaste versionen av [Xcode](https://developer.apple.com/xcode/).
+   * Installera den senaste versionen av iOS för att skapa appar för [Xcode](https://developer.apple.com/xcode/).
    * Installera [Android™ SDK](https://developer.android.com/).
 
 ### Laddar ned innehålls-ZIP-filen {#downloading-the-content-zip-file}
@@ -101,9 +101,9 @@ Flytta innehållet i mobilprogrammet till filsystemet.
    >
    >Cachen innehåller innehållsuppdateringar för installerade program. Om du rensar cachen försvinner alla cachelagrade uppdateringar.
 
-1. Klicka eller tryck på ikonen Hämta CLI-resurser i verktygsfältet.
+1. Klicka på ikonen Hämta CLI-resurser i verktygsfältet.
 
-   ![Ikonen Hämta CLI-resurser indikeras av en överlappande surfplattesymbol.](do-not-localize/chlimage_1-1.png)
+   ![Ikonen Hämta CLI-resurser indikeras av en överlappande tablet-symbol.](do-not-localize/chlimage_1-1.png)
 
 1. När du har sparat ZIP-filen klickar du på Stäng i dialogrutan Slutfört.
 1. Extrahera innehållet i ZIP-filen.
@@ -126,20 +126,20 @@ Använd PhoneGap CLI för att kompilera och installera programmet. Mer informati
 
 ## Bygger med PhoneGap Build {#building-using-phonegap-build}
 
-Använd PhoneGap-molntjänsten för att bygga din app. Om du vill utföra den här proceduren måste du först skapa en PhoneGap Build-konfiguration.
+Använd PhoneGap-molntjänsten för att bygga din app. För att kunna utföra den här proceduren måste du först skapa en PhoneGap Build-konfiguration.
 
 ### Ansluter till PhoneGap Build {#connecting-to-phonegap-build}
 
-Skapa en PhoneGap Build-konfiguration så att du kan använda PhoneGap Build inifrån AEM. Ange användarnamn och lösenord för det PhoneGap Build-konto som du ska använda för att skapa dina mobilprogram.
+Skapa en PhoneGap Build-konfiguration så att du kan använda PhoneGap Build-tjänsterna inifrån AEM. Ange användarnamn och lösenord för det PhoneGap Build-konto som du ska använda för att skapa dina mobilprogram.
 
 1. Öppna sidan Verktyg. ([http://localhost:4502/tools.html](http://localhost:4502/tools.html)).
-1. Klicka på Cloud Services i området CQ-åtgärder.
+1. Klicka på Cloud Service i området CQ-åtgärder.
 1. Klicka på länken Konfigurera nu för PhoneGap Build.
 
    ![chlimage_1-17](assets/chlimage_1-17.png)
 
 1. I dialogrutan Skapa konfiguration anger du ett värde för egenskapen Titel. Som standard hämtas värdet för egenskapen Namn från titeln, men du kan ange ett namn. Klicka på Skapa.
-1. Ange användarnamn och lösenord för PhoneGap Build i dialogrutan Konfigurera PhoneGap Build och klicka sedan på OK.
+1. I dialogrutan PhoneGap Build Configuration skriver du ditt användarnamn och lösenord för PhoneGap Build och klickar sedan på OK.
 
 ### Använda PhoneGap Build {#using-phonegap-build}
 
@@ -160,13 +160,13 @@ Skicka programresurserna till PhoneGap Build för kompilering för olika mobilpl
 
    **Obs!** Betaversionen av AEM Beta skapar inte något inkorgsmeddelande när bygget är klart.
 
-1. I dialogrutan Slutfört klickar du på PhoneGap Build för att öppna Adobe PhoneGap Build-sidan på `https://build.phonegap.com/apps`. Om du väntar på att appen ska visas kan du kontrollera PhoneGap Build status på `https://status.build.phonegap.com/`.
+1. I dialogrutan Slutfört klickar du på PhoneGap Build för att öppna Adobe PhoneGap Build-sidan på `https://build.phonegap.com/apps`. Om du väntar på att appen ska visas kan du kontrollera PhoneGapet Build-statusen på `https://status.build.phonegap.com/`.
 
-   Mer information om hur du installerar bygget finns i [Dokumentation om PhoneGap Build](https://github.com/phonegap/phonegap-docs/tree/master/docs/4-phonegap-build).
+   Mer information om hur du installerar bygget finns i [PhoneGap Build Documentation](https://github.com/phonegap/phonegap-docs/tree/master/docs/4-phonegap-build).
 
    >[!NOTE]
    >
-   >Konton med kostnadsfria PhoneGap Build tillåts ett privat program. PhoneGap-byggen misslyckas om du skapar ytterligare ett privat program.
+   >Kostnadsfria PhoneGap Build-konton kan användas med ett privat program. PhoneGap-byggen misslyckas om du skapar ytterligare ett privat program.
 
 ### Nästa steg {#the-next-steps}
 

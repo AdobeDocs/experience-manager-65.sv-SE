@@ -2,9 +2,9 @@
 title: Konfigurationer och Configuration Browser
 description: Förstå AEM konfigurationer och hur de hanterar arbetsyteinställningar i AEM.
 exl-id: 1be5849b-748c-48e8-afa8-35a9026c27b3
-source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '1483'
+source-wordcount: '1472'
 ht-degree: 0%
 
 ---
@@ -68,11 +68,11 @@ Med Configuration Browser kan en administratör enkelt skapa, hantera och konfig
 
 Det är enkelt att skapa en konfiguration i AEM med hjälp av Configuration Browser.
 
-1. Logga in AEM as a Cloud Service och välj **verktyg** -> **Allmänt** -> **Konfigurationsläsaren**.
-1. Tryck eller klicka **Skapa**.
+1. Logga in AEM as a Cloud Service och välj **verktyg** > **Allmänt** > **Konfigurationsläsaren**.
+1. Klicka **Skapa**.
 1. Ange en **Titel** och **Namn** för din konfiguration.
 
-   ![Skapa en konfiguration](assets/configuration-create.png)
+   ![Skapa konfiguration](assets/configuration-create.png)
 
    * The **Titel** ska vara beskrivande.
    * The **Namn** blir nodnamnet i databasen.
@@ -83,7 +83,7 @@ Det är enkelt att skapa en konfiguration i AEM med hjälp av Configuration Brow
    * [Kontextnavsegment](/help/sites-administering/segmentation.md)
    * [Modeller för innehållsfragment](/help/assets/content-fragments/content-fragments-models.md)
    * [Redigerbara mallar](/help/sites-authoring/templates.md)
-1. Tryck eller klicka **Skapa**.
+1. Klicka **Skapa**.
 
 >[!TIP]
 >
@@ -93,8 +93,8 @@ Det är enkelt att skapa en konfiguration i AEM med hjälp av Configuration Brow
 
 Om du tänker på konfigurationer som arbetsytor kan åtkomsträttigheter anges för dessa konfigurationer för att framtvinga vem som får och inte får tillgång till dessa arbetsytor.
 
-1. Logga in AEM as a Cloud Service och välj **verktyg** -> **Allmänt** -> **Konfigurationsläsaren**.
-1. Välj den konfiguration som du vill ändra och tryck eller klicka sedan på **Egenskaper** i verktygsfältet.
+1. Logga in AEM as a Cloud Service och välj **verktyg** > **Allmänt** > **Konfigurationsläsaren**.
+1. Markera konfigurationen som du vill ändra och klicka sedan på **Egenskaper** i verktygsfältet.
 1. Välj eventuella ytterligare funktioner som du vill lägga till i konfigurationen.
 
    >[!NOTE]

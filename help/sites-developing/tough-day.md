@@ -4,9 +4,9 @@ description: Tough Day-testet simulerar den dagliga belastningen för cirka 1 00
 topic-tags: testing
 content-type: reference
 exl-id: ceb9671c-57f9-4d81-94c0-0dbccd4d90a2
-source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '1822'
+source-wordcount: '1824'
 ht-degree: 0%
 
 ---
@@ -238,7 +238,7 @@ tests:
   - add : CreatePageTreeTest
 ```
 
-Befintliga tester i en viss programsvit kan även konfigureras om med `config`* *parameter. Du måste också ange namnet på sviten och det faktiska namnet på testet (inte testklassens namn). Testnamnet finns i `name` egenskapen för klassen Test. Mer information om hur du söker efter testegenskaper finns i [Ändra testegenskaper](/help/sites-developing/tough-day.md#changing-the-test-properties) -avsnitt.
+Befintliga tester i en viss programsvit kan även konfigureras om med `config`* *parameter. Ange också Suite-namnet och testets faktiska namn (inte testklassens namn). Testnamnet finns i `name` egenskapen för klassen Test. Mer information om hur du söker efter testegenskaper finns i [Ändra testegenskaper](/help/sites-developing/tough-day.md#changing-the-test-properties) -avsnitt.
 
 I exemplet nedan visas standardresursens namn för `CreatePageTreeTest` (namngiven `UploadAsset`) ändras till&quot;NewAsset&quot;.
 
@@ -260,7 +260,7 @@ tests:
       title : NewAsset
 ```
 
-Du kan också ta bort tester från fördefinierade sviter eller utgivare från standardkonfigurationen med hjälp av `exclude` parameter. Du måste också ange namnet på sviten och det faktiska namnet på testet (inte test C) `lass` namn). Testnamnet finns i `name` egenskapen för klassen test. I exemplet nedan är `CreatePageTreeTest` (namngiven `UploadAsset`)-testet tas bort från den tuffa sviten.
+Du kan också ta bort tester från fördefinierade sviter eller utgivare från standardkonfigurationen med hjälp av `exclude` parameter. Ange också Suite-namnet och testets faktiska namn (inte Test C) `lass` namn). Testnamnet finns i `name` egenskapen för klassen test. I exemplet nedan är `CreatePageTreeTest` (namngiven `UploadAsset`)-testet tas bort från den tuffa sviten.
 
 Genom att använda kommandoradsparametrar:
 

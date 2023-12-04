@@ -7,9 +7,9 @@ content-type: reference
 topic-tags: deploying
 docset: aem65
 exl-id: baec7fc8-d48c-4bc6-b12b-4bf4eff695ea
-source-git-commit: 5e56441d2dc9b280547c91def8d971e7b1dfcfe3
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '1761'
+source-wordcount: '1759'
 ht-degree: 0%
 
 ---
@@ -177,7 +177,7 @@ En uppsättning förutsättningar och rekommendationer är tillgängliga om du �
 1. MongoDB-expertis måste finnas i partner- eller kundteamet för att man ska kunna upprätthålla och underhålla en befintlig eller ny MongoDB-miljö.
 1. Du kan välja att driftsätta den kommersiella versionen eller versionen med öppen källkod av MongoDB (AEM stöder båda), men du måste köpa ett MongoDB Maintenance and Support-avtal direkt från MongoDB Inc.
 1. De övergripande arkitekturerna och infrastrukturerna för AEM och MongoDB bör vara väl definierade och validerade av en Adobe AEM Architect.
-1. Du måste granska supportmodellen för AEM distributioner som innehåller MongoDB.
+1. Granska supportmodellen för AEM distributioner som inkluderar MongoDB.
 
 **Starka rekommendationer för MongoDB-distributioner:**
 

@@ -7,9 +7,9 @@ topic-tags: integration
 content-type: reference
 docset: aem65
 exl-id: b5f3d3a6-39c0-4aa5-8562-3cc6fa2b9e46
-source-git-commit: 5e56441d2dc9b280547c91def8d971e7b1dfcfe3
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '6078'
+source-wordcount: '6076'
 ht-degree: 0%
 
 ---
@@ -727,7 +727,7 @@ Använd portalkomponenten för att lägga till ett portletfönster på webbsidan
 
 För att få åtkomst till innehåll som tillhandahålls av AEM WCM måste portalservern vara utrustad med den AEM portalen Director Portlet. Det gör du genom att installera, konfigurera och lägga till portleten på portalsidan med hjälp av stegen i det här avsnittet.
 
-Portleten ansluter som standard till publiceringsinstansen vid localhost:4503 och till författarinstansen vid localhost:4502. Dessa värden kan ändras under distributionen av portleten. Portaldirektören är tillgänglig som innehåll i databasen under /libs/portal/directory. Du måste hämta programmets krigsfil innan du kan använda den.
+Portleten ansluter som standard till publiceringsinstansen vid localhost:4503 och till författarinstansen vid localhost:4502. Dessa värden kan ändras under distributionen av portleten. Portaldirektören är tillgänglig som innehåll i databasen under /libs/portal/directory. Ladda ned programmets krigsfil innan du använder den.
 
 ### Laddar ned krigsfilen {#downloading-the-war-file}
 

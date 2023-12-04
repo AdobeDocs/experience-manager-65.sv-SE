@@ -4,9 +4,9 @@ description: Lär dig hur du kan koppla AEM till Microsoft Translator körklart 
 feature: Language Copy
 role: Admin
 exl-id: ca575a30-fc3e-4f38-9aa7-dbecbc089f87
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '477'
+source-wordcount: '452'
 ht-degree: 0%
 
 ---
@@ -30,9 +30,9 @@ När du har skapat konfigurationen måste du [aktivera den](#activating-the-tran
 
 Följande procedur skapar en Microsoft Translator-konfiguration.
 
-1. I [navigeringspanelen,](/help/sites-authoring/basic-handling.md#first-steps) klicka eller trycka **verktyg** -> **Cloud Service** -> **Cloud Service för översättning**.
+1. I [navigeringspanelen,](/help/sites-authoring/basic-handling.md#first-steps) klicka **verktyg** > **Cloud Service** > **Cloud Service för översättning**.
 1. Navigera till den plats där du vill skapa konfigurationen. Normalt finns det i platsroten eller så kan det vara en global standardkonfiguration.
-1. Tryck eller klicka på **Skapa** -knappen.
+1. Klicka på **Skapa** -knappen.
 1. Definiera konfigurationen.
    1. Välj **Microsoft Translator** i listrutan.
    1. Ange en rubrik för konfigurationen. Titeln identifierar konfigurationen i konsolen Cloud Service och i listrutor för sidegenskaper.
@@ -45,26 +45,26 @@ Följande procedur skapar en Microsoft Translator-konfiguration.
 
    ![Redigera översättningskonfiguration](assets/edit-translation-config.png)
 
-1. Tryck eller klicka **Anslut** för att verifiera anslutningen.
-1. Tryck eller klicka **Spara och stäng**.
+1. Klicka **Anslut** för att verifiera anslutningen.
+1. Klicka **Spara och stäng**.
 
 ## Uppgraderar Microsoft Translator Trial License Configuration {#upgrading-the-microsoft-translator-trial-license-configuration}
 
 Konfigurationssidorna för Microsoft Translation är en praktisk länk till Microsoft webbplats där man kan få en kontoprenumeration som passar för produktionssystem.
 
-1. I [navigeringspanelen,](/help/sites-authoring/basic-handling.md#first-steps) tryck eller klicka **verktyg** -> **Cloud Service** -> **Cloud Service för översättning**.
-1. Tryck eller klicka på den befintliga Microsoft Translator-konfigurationen.
-1. Tryck eller klicka **Redigera**.
-1. I **Redigera konfiguration** fönster, trycka eller klicka **Uppgradera prenumeration**. En Microsoft-webbsida med mer information om tjänsten öppnas.
+1. I [navigeringspanelen,](/help/sites-authoring/basic-handling.md#first-steps) klicka **verktyg** > **Cloud Service** > **Cloud Service för översättning**.
+1. Klicka på den befintliga Microsoft Translator-konfigurationen.
+1. Klicka **Redigera**.
+1. I **Redigera konfiguration** fönster, klicka **Uppgradera prenumeration**. En Microsoft-webbsida med mer information om tjänsten öppnas.
 
 ## Anpassa Microsoft Translator Engine {#customizing-your-microsoft-translator-engine}
 
 Konfigurationssidorna för Microsoft Translation är en praktisk länk till Microsoft webbplats där du kan anpassa Microsoft Translator-motorn.
 
-1. I [navigeringspanelen,](/help/sites-authoring/basic-handling.md#first-steps) tryck eller klicka **verktyg** -> **Cloud Service** -> **Cloud Service för översättning**.
-1. Tryck eller klicka på den befintliga Microsoft Translator-konfigurationen.
-1. Tryck eller klicka **Redigera**.
-1. I **Redigera konfiguration** fönster, trycka eller klicka **Anpassa översättare**. Använd Microsoft webbsida som öppnas för att anpassa tjänsten.
+1. I [navigeringspanelen,](/help/sites-authoring/basic-handling.md#first-steps) klicka **verktyg** > **Cloud Service** > **Cloud Service för översättning**.
+1. Klicka på den befintliga Microsoft Translator-konfigurationen.
+1. Klicka **Redigera**.
+1. I **Redigera konfiguration** fönster, klicka **Anpassa översättare**. Använd Microsoft webbsida som öppnas för att anpassa tjänsten.
 
 ## Aktivera tjänstkonfigurationer för översättare {#activating-the-translator-service-configurations}
 

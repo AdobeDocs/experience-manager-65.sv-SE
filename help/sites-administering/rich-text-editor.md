@@ -3,9 +3,9 @@ title: Konfigurera RTF-redigeraren för att skapa innehåll i Adobe Experience M
 description: Lär dig konfigurera Adobe Experience Manager RTF-redigeraren så att du kan skapa innehåll i Adobe Experience Manager.
 contentOwner: AG
 exl-id: 2e7ec22f-0856-44c4-bb15-1086dae0b85a
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '2921'
+source-wordcount: '2883'
 ht-degree: 0%
 
 ---
@@ -56,13 +56,13 @@ Författare kan skapa och redigera textinnehåll i Experience Manager med hjälp
 
 ### Redigering direkt {#inline-editing}
 
-När innehållet öppnas (med en långsam dubbeltryckning/klick) kan det redigeras på sidan. Ett kompakt verktygsfält med mycket grundläggande alternativ visas.
+När innehållet öppnas (med ett långsamt dubbelklick) kan det redigeras på sidan. Ett kompakt verktygsfält med mycket grundläggande alternativ visas.
 
 ![Inline-redigering med grundläggande verktygsfält i Touch-aktiverat användargränssnitt](assets/chlimage_1-36.png)
 
 *Bild: Inline-redigering med grundläggande verktygsfält i användargränssnittet med pekfunktioner*
 
-I det klassiska användargränssnittet kan du med en långsam dubbelklickning på komponenten redigera textbundet och med en orange kontur markeras innehållet. Om Innehållssökning är öppet visas ett verktygsfält med tillgängliga alternativ för RTF-formatering högst upp i fönstret. Om Innehållssökning inte är öppet visas inte formateringsalternativen och du kan bara göra grundläggande textredigeringar.
+I det klassiska användargränssnittet går det att redigera textbundet material med en långsam dubbelklickning och en orange kontur markerar innehållet. Om Innehållssökning är öppet visas ett verktygsfält med tillgängliga alternativ för RTF-formatering högst upp i fönstret. Om Innehållssökning inte är öppet visas inte formateringsalternativen och du kan bara göra grundläggande textredigeringar.
 
 ### Helskärmsredigering {#full-screen-editing}
 
@@ -110,7 +110,7 @@ I följande tabell visas de aktuella plugin-programmen:
 | redigera | cut copy paste-default paste-plaintext paste-wordhtml | [Klipp ut, kopiera och, de tre inklistringslägena](/help/sites-administering/configure-rich-text-editor-plug-ins.md#textstyles). |
 | findreplace | sök och ersätt | Sök och ersätt. |
 | format | fet kursiv understrykning | [Grundläggande textformatering](/help/sites-administering/configure-rich-text-editor-plug-ins.md#textstyles). |
-| bild | bild | Grundläggande bildstöd (dra från innehåll eller Innehållssökning). Beroende på webbläsaren har stödet olika beteenden för författare |
+| image | image | Grundläggande bildstöd (dra från innehåll eller Innehållssökning). Beroende på webbläsaren har stödet olika beteenden för författare |
 | tangenter |  | Information om hur du definierar det här värdet finns i [tabbstorlek](/help/sites-administering/configure-rich-text-editor-plug-ins.md#tabsize). |
 | justera | justera vänsterjustera centrera högerjustera | Styckejustering. |
 | länkar | ändra länkavlänkningsankarpunkt | [Hyperlänkar och ankarpunkter](/help/sites-administering/configure-rich-text-editor-plug-ins.md#linkstyles). |

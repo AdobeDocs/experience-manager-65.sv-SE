@@ -3,9 +3,9 @@ title: Skapa en hanterare för att bjuda in externa användare
 description: Lär dig hur du skapar en hanterare för att bjuda in externa användare. Tjänsten Rights Management gör det möjligt att bjuda in externa användare till Rights Management.
 role: Developer
 exl-id: b0416716-dcc9-4f80-986a-b9660a7c8f6b
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '1090'
+source-wordcount: '1084'
 ht-degree: 0%
 
 ---
@@ -34,9 +34,9 @@ Om du vill utveckla en hanterare för att bjuda in externa användare måste du 
 
 Om du vill konfigurera utvecklingsmiljön måste du skapa ett Java-projekt, till exempel ett Eclipse-projekt. Den version av Eclipse som stöds är `3.2.1` eller senare.
 
-SPI för Rights Management kräver `edc-server-spi.jar` filen som ska anges i projektets klassökväg. Om du inte refererar till den här JAR-filen kan du inte använda Rights Management SPI i ditt Java-projekt. Den här JAR-filen installeras med AEM Forms SDK i `[install directory]\Adobe\Adobe_Experience_Manager_forms\sdk\spi` mapp.
+SPI för Rights Management kräver `edc-server-spi.jar` fil som ska anges i projektets klassökväg. Om du inte refererar till den här JAR-filen kan du inte använda Rights Management SPI i ditt Java-projekt. Den här JAR-filen installeras med AEM Forms SDK i `[install directory]\Adobe\Adobe_Experience_Manager_forms\sdk\spi` mapp.
 
-Förutom att lägga till `edc-server-spi.jar` till klassökvägen för ditt projekt måste du även lägga till de JAR-filer som krävs för att använda API:t för tjänsten Rights Management. De här filerna behövs för att du ska kunna använda API:t för tjänsten Rights Management i hanteraren för att bjuda in externa användare.
+Förutom att lägga till `edc-server-spi.jar` till klassökvägen för ditt projekt måste du också lägga till de JAR-filer som krävs för att använda API:t för tjänsten Rights Management. De här filerna behövs för att du ska kunna använda API:t för tjänsten Rights Management i hanteraren för att bjuda in externa användare.
 
 ## Definiera implementering av inbjuden extern användarhanterare {#define-invite-external-users-handler}
 
@@ -170,7 +170,7 @@ public class InviteExternalUsersSample implements InvitedUserProvider
 
 ## Definiera komponentens XML-fil för behörighetshanteraren {#define-component-xml-authorization-handler}
 
-Du måste definiera en komponent-XML-fil för att distribuera den externa användarhanterarkomponenten. En komponent-XML-fil finns för varje komponent och innehåller metadata om komponenten.
+Definiera en komponent-XML-fil för att distribuera komponenten för att bjuda in externa användare. En komponent-XML-fil finns för varje komponent och innehåller metadata om komponenten.
 
 Följande `component.xml` filen används för att bjuda in externa användarhanterare. Observera att tjänstnamnet är `InviteExternalUsersSample` och åtgärden som den här tjänsten visar har ett namn `invitedUser`. Indataparametern är en `java.util.List` -instans och utdatavärdet är en array med `com.adobe.edc.server.spi.esrp.InvitedUserProviderResult` -instanser.
 
@@ -203,7 +203,7 @@ Följande `component.xml` filen används för att bjuda in externa användarhant
 
 ## Paketera hanteraren för inbjudan till externa användare {#packaging-invite-external-users-handler}
 
-Om du vill distribuera hanteraren för att bjuda in externa användare till AEM Forms måste du paketera ditt Java-projekt i en JAR-fil. Du måste se till att de externa JAR-filer som hanteraren för inbjudna externa användare är beroende av, t.ex. `edc-server-spi.jar` och `adobe-rightsmanagement-client.jar` JAR-filen ingår också. Komponentens XML-fil måste också finnas. The `component.xml` -filen och externa JAR-filer måste finnas i JAR-filens rot.
+Om du vill distribuera hanteraren för att bjuda in externa användare till AEM Forms måste du paketera ditt Java-projekt i en JAR-fil. Kontrollera att de externa JAR-filer som den externa användarhanterarens affärslogik är beroende av, till exempel `edc-server-spi.jar` och `adobe-rightsmanagement-client.jar` JAR-filen ingår också. Komponentens XML-fil måste också finnas. The `component.xml` -filen och externa JAR-filer måste finnas i JAR-filens rot.
 
 >[!NOTE]
 >
@@ -215,7 +215,7 @@ Följande bild visar Java-projektets innehåll som paketeras i JAR-filen för de
 
 A. Externa JAR-filer som krävs för komponenten B. JAVA-fil
 
-Du måste paketera hanteraren för att bjuda in externa användare i en JAR-fil. Observera att .JAVA-filer visas i listan i föregående diagram. När de paketerats i en JAR-fil måste även motsvarande CLASS-filer anges. Utan CLASS-filerna fungerar inte behörighetshanteraren.
+Paketera hanteraren för inbjudan till externa användare i en JAR-fil. Observera att .JAVA-filer visas i listan i föregående diagram. När de paketerats i en JAR-fil måste även motsvarande CLASS-filer anges. Utan CLASS-filerna fungerar inte behörighetshanteraren.
 
 >[!NOTE]
 >

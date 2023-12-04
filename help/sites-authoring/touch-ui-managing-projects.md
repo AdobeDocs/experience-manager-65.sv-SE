@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: projects
 content-type: reference
 exl-id: 62586c8e-dab4-4be9-a44a-2c072effe3c0
-source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '981'
+source-wordcount: '964'
 ht-degree: 0%
 
 ---
@@ -34,7 +34,7 @@ Det enklaste sättet är att ge **projekt-användare** gruppläsåtkomst till `/
 
 Följ de här stegen för att skapa ett projekt.
 
-1. I **Projekt** konsol, tryck eller klicka **Skapa** för att öppna **Skapa projekt** guide.
+1. I **Projekt** konsol, klicka **Skapa** för att öppna **Skapa projekt** guide.
 1. Välj en mall och klicka på **Nästa**. Du kan läsa mer om standardprojektmallarna [här.](/help/sites-authoring/projects.md#project-templates)
 
    ![Guiden Skapa projekt](assets/create-project-wizard.png)
@@ -43,7 +43,7 @@ Följ de här stegen för att skapa ett projekt.
 
    ![Egenskapssteget i guiden](assets/create-project-wizard-properties.png)
 
-1. Tryck/klicka **Skapa**. Bekräftelsen frågar om du vill öppna det nya projektet eller gå tillbaka till konsolen.
+1. Klicka **Skapa**. Bekräftelsen frågar om du vill öppna det nya projektet eller gå tillbaka till konsolen.
 
 Du skapar ett projekt på samma sätt för alla projektmallar. Skillnaden mellan de olika typerna av projekt relaterar till tillgängliga [användarroller](/help/sites-authoring/projects.md) och [arbetsflöden.](/help/sites-authoring/projects-with-workflows.md)
 
@@ -54,11 +54,11 @@ Med projekt kan du gruppera resurser i en enhet för att hantera dem som helhet.
 Så här associerar du resurser med ditt projekt:
 
 1. Öppna ditt projekt från **Projekt** konsol.
-1. Tryck/klicka **Lägg till platta** och välj den platta som du vill länka till projektet. Du kan markera flera typer av rutor.
+1. Klicka **Lägg till platta** och välj den platta som du vill länka till projektet. Du kan markera flera typer av rutor.
 
    ![Lägg till platta](assets/project-add-tile.png)
 
-1. Tryck/klicka **Skapa**. Resursen är länkad till ditt projekt och från och med nu kan du komma åt den från ditt projekt.
+1. Klicka **Skapa**. Resursen är länkad till ditt projekt och från och med nu kan du komma åt den från ditt projekt.
 
 ### Lägga till objekt i en platta {#adding-items-to-a-tile}
 
@@ -84,7 +84,7 @@ Du kanske vill se vilka objekt som ingår i en aktuell platta eller ändra eller
 
 Så här öppnar du en platta så att du kan visa eller ändra objekt:
 
-1. Tryck eller klicka på ellipsikonen längst ned till höger på plattan.
+1. Klicka på ellipsikonen längst ned till höger i rutan.
 
    ![Aktivitetspanelen](assets/project-tile-tasks.png)
 
@@ -96,7 +96,7 @@ Så här öppnar du en platta så att du kan visa eller ändra objekt:
 
 Projektets tidslinje innehåller information om när resurser i projektet senast användes. Följ de här stegen för att visa projekttidslinjen.
 
-1. I **Projekt** konsol, klicka eller peka **Tidslinje** i spårväljaren längst upp till vänster i konsolen.
+1. I **Projekt** konsol, klicka **Tidslinje** i spårväljaren längst upp till vänster i konsolen.
    ![Välja tidslinjeläge](assets/projects-timeline-rail.png)
 2. I konsolen väljer du det projekt som du vill visa tidslinjen för.
    ![Projektets tidslinjevy](assets/project-timeline-view.png)
@@ -119,7 +119,7 @@ Det finns flera alternativ som hjälper dig att ordna dina projekt så att du ka
 
 Du kan skapa mappar i **Projekt** för att gruppera och organisera liknande projekt.
 
-1. I **Projekt** tryck på konsolen eller klicka **Skapa** och sedan **Skapa mapp**.
+1. I **Projekt** konsolklickning **Skapa** och sedan **Skapa mapp**.
 
    ![Skapa mapp](assets/project-create-folder.png)
 
@@ -141,7 +141,7 @@ Följ de här stegen för att göra ett projekt inaktivt.
 
    ![Projektstatusväljare i egenskapsfönstret](assets/project-status.png)
 
-1. Tryck eller klicka **Spara och stäng** för att spara ändringarna.
+1. Klicka **Spara och stäng** för att spara ändringarna.
 
 ### Tar bort projekt {#deleting-a-project}
 
@@ -149,13 +149,13 @@ Så här tar du bort ett projekt.
 
 1. Navigera till den översta nivån i **Projekt** konsol.
 1. Välj projektet i konsolen.
-1. Tryck eller klicka **Ta bort** i verktygsfältet.
+1. Klicka **Ta bort** i verktygsfältet.
 1. AEM kan ta bort/ändra associerade projektdata när projektet tas bort. Välj vilka alternativ du behöver i dialogrutan **Ta bort projekt** -dialogrutan.
    * Ta bort projektgrupper och roller
    * Ta bort projektresursmapp
    * Avsluta projektarbetsflöden
 
    ![Alternativ för borttagning av projekt](assets/project-delete-options.png)
-1. Tryck eller klicka **Ta bort** om du vill ta bort projektet med de valda alternativen.
+1. Klicka **Ta bort** om du vill ta bort projektet med de valda alternativen.
 
 Mer information om grupper som skapats automatiskt av projekt finns i [Skapa grupp automatiskt](/help/sites-authoring/projects.md#auto-group-creation) för mer information.

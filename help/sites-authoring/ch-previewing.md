@@ -10,10 +10,10 @@ content-type: reference
 topic-tags: personalization
 discoiquuid: f281ef8c-0831-470c-acb7-189f20452a50
 exl-id: 78673609-8cbc-4b4b-953e-56c31ea1b4ea
-source-git-commit: 75c6bb87bb06c5ac9378ccebf193b5416c080bb1
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '369'
-ht-degree: 2%
+source-wordcount: '362'
+ht-degree: 0%
 
 ---
 
@@ -21,9 +21,9 @@ ht-degree: 2%
 
 The [ContextHub](/help/sites-developing/contexthub.md) I verktygsfältet visas data från ContextHub-arkiv och du kan ändra lagringsdata. Verktygsfältet ContextHub är användbart när du vill förhandsgranska innehåll som bestäms av data i ett ContextHub-lager.
 
-Verktygsfältet består av en serie användargränssnittslägen som innehåller en eller flera användargränssnittsmoduler.
+Verktygsfältet består av en serie gränssnittslägen som innehåller en eller flera gränssnittsmoduler.
 
-* Gränssnittslägen är ikoner som visas till vänster i verktygsfältet. När du klickar på eller trycker på en ikon visas de gränssnittsmoduler som finns i verktygsfältet.
+* Gränssnittslägen är ikoner som visas till vänster i verktygsfältet. När du klickar på en ikon visas de gränssnittsmoduler som den innehåller i verktygsfältet.
 * Gränssnittsmoduler visar data från en eller flera ContextHub-butiker. Vissa gränssnittsmoduler gör det även möjligt för dig att ändra lagrade data.
 
 ContextHub installerar flera gränssnittslägen och gränssnittsmoduler. Administratören kan ha [konfigurerad ContextHub](/help/sites-developing/ch-configuring.md) för att visa olika.
@@ -36,11 +36,11 @@ Verktygsfältet ContextHub är tillgängligt i förhandsgranskningsläget. Verkt
 
 ![screen_shot_2018-03-23at093730](assets/screen_shot_2018-03-23at093730.png)
 
-1. Öppna sidan för redigering, klicka eller tryck på Förhandsgranska i verktygsfältet.
+1. Klicka på Förhandsgranska i verktygsfältet när sidan är öppen för redigering.
 
    ![chlimage_1-219](assets/chlimage_1-219.png)
 
-1. Visa verktygsfältet genom att klicka på eller trycka på ikonen ContextHub.
+1. Visa verktygsfältet genom att klicka på ikonen ContextHub.
 
    ![Kontextnav](do-not-localize/screen_shot_2018-03-23at093621.png)
 
@@ -66,6 +66,6 @@ Popup-överlägget för en modul kan innehålla formulärelement som gör att du
 
 ### Helskärmsläge {#fullscreen-mode}
 
-Popup-övertäckningar kan innehålla en ikon som du klickar på eller trycker på för att expandera popup-innehållet så att det täcker hela webbläsarfönstret eller skärmen.
+Popup-övertäckningar kan innehålla en ikon som du klickar på för att expandera popup-innehållet så att det täcker hela webbläsarfönstret eller skärmen.
 
 ![Helskärm](do-not-localize/chlimage_1-18.png)

@@ -7,9 +7,9 @@ topic-tags: spa
 content-type: reference
 docset: aem65
 exl-id: 7b34be66-bb61-4697-8cc8-428f7c63a887
-source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '1652'
+source-wordcount: '1644'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ SPA Editor erbjuder en omfattande lösning för SPA inom AEM. På den här sidan
 
 >[!NOTE]
 >
->SPA Editor är den rekommenderade lösningen för projekt som kräver SPA ramverksbaserad rendering på klientsidan (till exempel React eller Angular).
+>SPA Editor är den rekommenderade lösningen för projekt som kräver SPA ramverksbaserad klientåtergivning (till exempel React eller Angular).
 
 ## Introduktion {#introduction}
 
@@ -78,7 +78,7 @@ Du kan förstå interaktionsflödet mellan SPA och AEM genom att tänka på SPA 
 
 Med tanke på de viktigaste elementen i SPA Editor visas arbetsflödet på hög nivå för redigering av en SPA i AEM för författaren enligt följande.
 
-![untitled1](assets/untitled1.gif)
+![namnlös1](assets/untitled1.gif)
 
 1. SPA Editor läses in.
 1. SPA läses in i en separat ram.

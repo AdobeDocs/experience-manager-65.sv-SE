@@ -10,9 +10,9 @@ topic-tags: integration
 content-type: reference
 discoiquuid: 20c8eb1d-5847-4902-b7d3-4c3286423b46
 exl-id: 0f710685-dc4f-4333-9847-d002b2637d08
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '2199'
+source-wordcount: '2122'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ The [Guiden Anmäl dig](/help/sites-administering/opt-in.md) att [integrerar AEM
 
 Du kan också konfigurera Adobe Target att använda Adobe Target som rapportkälla när du riktar in innehåll genom att konfigurera A4T Analytics Cloud-konfigurationen.
 
-Leta reda på molnkonfigurationen och ramverket genom att navigera till **Cloud Service** via **verktyg** > **Distribution** > **Cloud**. ([http://localhost:4502/libs/cq/core/content/tools/cloudservices.html](http://localhost:4502/libs/cq/core/content/tools/cloudservices.html)) Klicka eller tryck nedan på Adobe Target **Visa konfigurationer**.
+Leta reda på molnkonfigurationen och ramverket genom att navigera till **Cloud Service** via **verktyg** > **Distribution** > **Cloud**. ([http://localhost:4502/libs/cq/core/content/tools/cloudservices.html](http://localhost:4502/libs/cq/core/content/tools/cloudservices.html)) Under Adobe Target klickar du på **Visa konfigurationer**.
 
 ### Etablerade egenskaper för målkonfiguration {#provisioned-target-configuration-properties}
 
@@ -90,7 +90,7 @@ För att göra det anger du vilken A4T-molnkonfiguration som ska ansluta din Ado
    >1. Navigera till **verktyg** > **Allmänt** > **CRXDE Lite**.
    1. Navigera till [Dialogrutan Konfiguration av A4T Analytics](#a4t-analytics-config-dialog) (se nedan)
    1. Ange egenskapen **disable** till **false**.
-   1. Tryck eller klicka **Spara alla**.
+   1. Klicka **Spara alla**.
 
 #### Dialogrutan Konfiguration av A4T Analytics {#a4t-analytics-config-dialog}
 
@@ -153,7 +153,7 @@ Använd följande procedur för att skapa en Target-molnkonfiguration i AEM:
    1. Navigera till **verktyg** > **Allmänt** > **CRXDE Lite**.
    1. Navigera till **/libs/cq/analytics/components/testandtarget page/dialog/items/tabs/items/tab1_general/items/a4tAnalyticsConfig**
    1. Ange egenskapen **disable** till **false**.
-   1. Tryck eller klicka **Spara alla**.
+   1. Klicka **Spara alla**.
 
 1. Ange värden för de här egenskaperna i dialogrutan.
 
@@ -243,8 +243,8 @@ När du associerar en sida med ramverket ärver de underordnade sidorna associat
 1. I **Webbplatser** navigera till platsen som du vill konfigurera.
 1. Använda antingen [snabbåtgärder](/help/sites-authoring/basic-handling.md#quick-actions) eller [markeringsläge](/help/sites-authoring/basic-handling.md), markera **Visa egenskaper.**
 1. Välj **Cloud Service** -fliken.
-1. Tryck/klicka **Redigera**.
-1. Tryck/klicka **Lägg till konfiguration** under **Cloud Service Configurations** och markera **Adobe Target**.
+1. Klicka **Redigera**.
+1. Klicka **Lägg till konfiguration** under **Cloud Service Configurations** och markera **Adobe Target**.
 
    ![Lägg till konfiguration](assets/chlimage_1-165.png)
 
@@ -254,7 +254,7 @@ När du associerar en sida med ramverket ärver de underordnade sidorna associat
    >
    Se till att du väljer den specifika **ramverk** som du skapade och inte målmolnkonfigurationen som den skapades med.
 
-1. Tryck/klicka **Klar**.
+1. Klicka **Klar**.
 1. Aktivera webbplatsens rotsida så att du replikerar den till publiceringsservern. (Se [Publicera sidor](/help/sites-authoring/publishing-pages.md).)
 
    >[!NOTE]

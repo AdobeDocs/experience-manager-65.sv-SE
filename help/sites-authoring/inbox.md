@@ -2,10 +2,10 @@
 title: Inkorgen för att hantera uppgifter
 description: Hantera dina uppgifter med inkorgen i Adobe Experience Manager 6.5.
 exl-id: 80b7f179-b011-4f90-b5ab-9ef8a669d271
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '1143'
-ht-degree: 7%
+source-wordcount: '1155'
+ht-degree: 6%
 
 ---
 
@@ -65,7 +65,7 @@ Färdiga AEM levereras förinläst med fyra uppgifter tilldelade till administra
 
 Så här öppnar du AEM inkorg:
 
-1. Klicka/tryck på indikatorn i verktygsfältet.
+1. Klicka på indikatorn i verktygsfältet.
 
 1. Välj **Visa alla**. The **AEM** öppnas. I inkorgen visas objekt från arbetsflöden, projekt och uppgifter.
 1. Standardvyn är [Listvy](#inbox-list-view), men du kan även växla till [Kalendervy](#inbox-calendar-view). Detta görs med vyväljaren (verktygsfält, överst till höger).
@@ -152,7 +152,7 @@ Alternativet Admin Control är bara synligt för medlemmarna i `administrators` 
 
 * **Användarnavigering**
    * **Dölj navigeringsalternativ:** Välj det här alternativet om du vill dölja navigeringsalternativ som är tillgängliga i sidhuvudet. Navigeringsalternativen inkluderar länkar till andra lösningar, hjälplänkar och de redigeringsalternativ som finns när man trycker på Adobe Experience Manager logotyp eller text.
-* **Spara:** Tryck/klicka på det här alternativet om du vill spara inställningarna.
+* **Spara:** Klicka på det här alternativet om du vill spara inställningarna.
 
 ## Vidta åtgärder för ett objekt {#taking-action-on-an-item}
 

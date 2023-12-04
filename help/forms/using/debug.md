@@ -11,9 +11,9 @@ topic-tags: hTML5_forms
 discoiquuid: 5260d981-da40-40ab-834e-88e091840813
 feature: Mobile Forms
 exl-id: 7330c03f-7102-43c0-aac6-825cce8a113d
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '818'
+source-wordcount: '811'
 ht-degree: 0%
 
 ---
@@ -106,10 +106,10 @@ Kontrollera följande parametrar:
 
 ### Problem: Ett oväntat fel påträffades {#problem-unexpected-error-encountered}
 
-1. I formulärets URL lägger du till en frågeparameter, debugClientLibs, och anger värdet till true (till exempel: https://&lt;server>:&lt;port>/content/xfaforms/profiles/test.html?contentRoot=&lt;some path=&quot;&quot;>&amp;template=&lt;name of=&quot;&quot; xdp=&quot;&quot; file=&quot;&quot;>&amp;log=1-a9-b9-c9&amp;debugClientLibs=true)
-1. Gå till Utvecklarverktyg -> Konsol i webbläsaren som Chrome.
+1. Lägg till en frågeparameter, debugClientLibs, i formulärets URL och ange dess värde till true (till exempel: https://&lt;server>:&lt;port>/content/xfaforms/profiles/test.html?contentRoot=&lt;some path=&quot;&quot;>&amp;template=&lt;name of=&quot;&quot; xdp=&quot;&quot; file=&quot;&quot;>&amp;log=1-a9-b9-c9&amp;debugClientLibs=true)
+1. Gå till Utvecklarverktyg > Konsol i webbläsaren som Chrome.
 1. Öppna loggarna för att identifiera feltypen. Detaljerad information om loggar finns i [loggar för HTML5-formulär](/help/forms/using/enable-logs.md).
-1. Gå till Developer Tools -> Console. Använd stackspårning för att hitta koden som orsakar felet. Felsök felet för att lösa problemet.
+1. Gå till Utvecklarverktyg > Konsol. Använd stackspårning för att hitta koden som orsakar felet. Felsök felet för att lösa problemet.
 
    >[!NOTE]
    >
@@ -124,7 +124,7 @@ Kontrollera följande parametrar:
 
 ## Problem: Lokaliserade felmeddelanden visas inte {#problem-localized-error-messages-do-not-display}
 
-1. Återge formuläret med ytterligare frågeparameter **debugClientLibs=true** i datorns webbläsare, och sedan gå till Utvecklarverktyg -> Resurser och leta efter filen I18N.css.
+1. Återge formuläret med ytterligare frågeparameter **debugClientLibs=true** i datorns webbläsare, gå till Utvecklarverktyg > Resurser och leta efter filen I18N.css.
 1. Om filen inte är tillgänglig loggar du in på CRX DE på https://&lt;server>:&lt;port>/crx/de.
 1. I mapphierarkin till vänster går du till /libs/fd/xfaforms/clientlibs/I18N och kontrollerar att följande filer och mappar finns:
 
@@ -154,7 +154,7 @@ Kontrollera följande parametrar:
 
    Den troliga orsaken är att en eller flera parametrar i URL:en är felaktiga.
 
-   Kontrollera följande parametrar: Stega text
+   Kontrollera följande parametrar: Stegtext
 
 <table>
  <tbody>
@@ -181,6 +181,6 @@ Kontrollera följande parametrar:
  </tbody>
 </table>
 
-1. I webbläsaren går du till Utvecklarverktyg -> Resurser.
+1. Gå till Utvecklarverktyg > Resurser i datorns webbläsare.
 
    Markera till vänster i Bildrutor om bilden visas.

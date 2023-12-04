@@ -10,10 +10,10 @@ topic-tags: projects
 content-type: reference
 discoiquuid: 9d2bf30c-5190-4924-82cd-bcdfde24eb39
 exl-id: 407fc164-291d-42f6-8c46-c1df9ba3d454
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '795'
-ht-degree: 1%
+source-wordcount: '783'
+ht-degree: 0%
 
 ---
 
@@ -63,7 +63,7 @@ I det här avsnittet beskrivs de arbetsflöden som är tillgängliga för projek
 
 Med det här arbetsflödet kan du begära ett manuskript från en användare och sedan godkänna det. Så här startar du arbetsflödet för begärandekopia:
 
-1. I ett medieprojekt trycker eller klickar du på nedåtpilen längst upp till höger på **Arbetsflöden** sida vid sida och markera **Starta arbetsflöde**.
+1. I ett medieprojekt klickar du på nedåtpilen längst upp till höger på **Arbetsflöden** sida vid sida och markera **Starta arbetsflöde**.
 1. Välj **Begär kopia** och klicka **Nästa**.
 1. Ange ett manuskriptnamn och en kort sammanfattning av vad du begär. Ange ett målordsantal, uppgiftsprioritet och ett förfallodatum om tillämpligt.
 
@@ -81,7 +81,7 @@ The **Fotofotografering** arbetsflöden (både handel och utan handel) beskrivs 
 
 I **Projektgodkännande** arbetsflöde kan du tilldela innehåll till en användare, granska och sedan godkänna innehållet.
 
-1. I ett enkelt projekt: tryck eller klicka på nedåtpilen längst upp till höger i **Arbetsflöden** sida vid sida och markera **Starta arbetsflöde**.
+1. I ett enkelt projekt klickar du på nedåtpilen längst upp till höger på **Arbetsflöden** sida vid sida och markera **Starta arbetsflöde**.
 1. Välj **Arbetsflöde för projektgodkännande** och klicka **Nästa**.
 1. Ange en titel och välj vem du vill tilldela den till. Ange en beskrivning, innehållssökväg, uppgiftsprioritet och ett förfallodatum om tillämpligt.
 
@@ -95,7 +95,7 @@ Arbetsflödet startar. Uppgiften visas på **Uppgifter** kort.
 
 Med det här arbetsflödet kan du begära en start.
 
-1. I ett enkelt projekt: tryck eller klicka på nedåtpilen längst upp till höger i **Arbetsflöden** sida vid sida och markera **Starta arbetsflöde**.
+1. I ett enkelt projekt klickar du på nedåtpilen längst upp till höger på **Arbetsflöden** sida vid sida och markera **Starta arbetsflöde**.
 1. Välj **Begär startarbetsflöde** och klicka **Nästa**.
 1. Ange en rubrik för startprogrammet och ange startkällans sökväg. Du kan också lägga till en beskrivning och ett live-datum, om du vill. Välj Ärv källsidans livedata eller exkludera undersidor beroende på hur du vill att startsidan ska fungera.
 
@@ -109,7 +109,7 @@ Arbetsflödet startar. Arbetsflödet visas i **Arbetsflöden** lista.
 
 Med det här arbetsflödet kan du begära en landningssida.
 
-1. I ett enkelt projekt: tryck eller klicka på nedåtpilen längst upp till höger i **Arbetsflöden** sida vid sida och markera **Starta arbetsflöde**.
+1. I ett enkelt projekt klickar du på nedåtpilen längst upp till höger på **Arbetsflöden** sida vid sida och markera **Starta arbetsflöde**.
 1. Välj **Begär landningssida** och klicka **Nästa**.
 1. Ange en rubrik för landningssidan och den överordnade sökvägen. Ange eventuellt ett live-datum eller välj en fil för landningssidan.
 
@@ -123,7 +123,7 @@ Arbetsflödet startar. Uppgiften visas på **Uppgifter** kort.
 
 Med det här arbetsflödet kan du begära ett e-postmeddelande. Det är samma arbetsflöde som visas i **E-post** platta.
 
-1. I ett enkelt projekt: tryck eller klicka på nedåtpilen längst upp till höger i **Arbetsflöden** sida vid sida och markera **Starta arbetsflöde**.
+1. I ett enkelt projekt klickar du på nedåtpilen längst upp till höger på **Arbetsflöden** sida vid sida och markera **Starta arbetsflöde**.
 1. Välj **Begär e-post** och klicka **Nästa**.
 1. Ange en e-posttitel samt kampanj- och mallsökvägar. Dessutom kan du ange namn, beskrivning och live-datum.
 

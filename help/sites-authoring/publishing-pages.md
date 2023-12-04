@@ -2,9 +2,9 @@
 title: Publicera innehållssidor
 description: Lär dig publicera innehållssidor i Adobe Experience Manager 6.5.
 exl-id: 61144bbe-6710-4cae-a63e-e708936ff360
-source-git-commit: 5e56441d2dc9b280547c91def8d971e7b1dfcfe3
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '1676'
+source-wordcount: '1673'
 ht-degree: 5%
 
 ---

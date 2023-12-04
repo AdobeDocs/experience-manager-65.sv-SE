@@ -7,9 +7,9 @@ topic-tags: managing-checklist
 content-type: reference
 docset: aem65
 exl-id: 9672f7a4-82b7-4175-874d-181846115442
-source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '6945'
+source-wordcount: '6922'
 ht-degree: 0%
 
 ---
@@ -553,7 +553,7 @@ Definition av innehållsstrukturen i det äldre systemet. Detta används som ref
 
 ### Historiska nyckeltal för prestanda och historik {#historical-performance-and-historical-performance-kpis}
 
-Du måste samla in och dokumentera prestandastatistik och nyckeltal för prestanda från det äldre systemet. Dessa används sedan som referenspunkt och för att testa den nya lösningen.
+Samla in och dokumentera statistik om prestanda och KPI:er från det gamla systemet. Dessa används sedan som referenspunkt och för att testa den nya lösningen.
 
 ### Identifiera viktiga lösningar/funktioner {#identify-critical-key-solutions-functionalities}
 

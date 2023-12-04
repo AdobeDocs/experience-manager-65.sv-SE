@@ -10,10 +10,10 @@ discoiquuid: a8063d43-923a-42ac-9a16-0c7fadd8f73f
 role: User, Admin
 exl-id: f8a80b22-b1a6-475f-b3f1-b2f47822f21d
 feature: Collaboration,Asset Management
-source-git-commit: f4b7566abfa0a8dbb490baa0e849de6c355a3f06
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '418'
-ht-degree: 5%
+source-wordcount: '417'
+ht-degree: 2%
 
 ---
 
@@ -29,18 +29,18 @@ Dynamic Media visar interaktivt material, som zoomning, 360-graders rotation och
 
 ## Vad du kan göra med Dynamic Media {#what-you-can-do-with-dynamic-media}
 
-Med Dynamic Media kan du hantera dina resurser innan du publicerar dem. Hur du arbetar med resurser i allmänhet beskrivs i detalj [Arbeta med digitala resurser](manage-assets.md). Allmänna ämnen är bland annat att ladda upp, ladda ned, redigera och publicera material. visa och redigera egenskaper och söka efter resurser.
+Med Dynamic Media kan du hantera dina resurser innan du publicerar dem. Hur du arbetar med resurser i allmänhet beskrivs i detalj i [Arbeta med digitala resurser](manage-assets.md). Allmänna ämnen är bland annat att ladda upp, ladda ned, redigera och publicera resurser, visa och redigera egenskaper och söka efter resurser.
 
 Dynamic Media har följande funktioner:
 
-* [Karusellbanner](carousel-banners.md)
+* [Carousel Banners](carousel-banners.md)
 * [Bilduppsättningar](image-sets.md)
 * [Interaktiva bilder](interactive-images.md)
 * [Interaktiva videoklipp](interactive-videos.md)
 * [Blandade medieuppsättningar](mixed-media-sets.md)
-* [Panoramabilder](panoramic-images.md)
+* [Panorambilder](panoramic-images.md)
 
-* [Snurrande uppsättningar](spin-sets.md)
+* [Snurra uppsättningar](spin-sets.md)
 * [Video](video.md)
 * [Leverera Dynamic Media-material](delivering-dynamic-media-assets.md)
 * [Hantera resurser](managing-assets.md)
@@ -82,7 +82,7 @@ Dynamic Media-aktiverade resurser innehåller `pyramid.tiffs`.
 
 ### Ändra resursvyer {#asset-views-change}
 
-När Dynamic Media är aktiverat kan du zooma in och ut genom att klicka på `+` och `-` knappar. Du kan också klicka/trycka för att zooma in i ett visst område. Med Återställ återgår du till den ursprungliga versionen och du kan göra bilden i helskärmsläge genom att klicka på de diagonala pilarna. Dynamic Media-aktiverad ser ut så här:
+När Dynamic Media är aktiverat kan du zooma in och ut genom att klicka på `+` och `-` knappar. Du kan också klicka för att zooma in i ett visst område. Med Återställ återgår du till den ursprungliga versionen och du kan göra bilden i helskärmsläge genom att klicka på de diagonala pilarna. Dynamic Media-aktiverad ser ut så här:
 
 ![chlimage_1-361](assets/chlimage_1-361.png)
 

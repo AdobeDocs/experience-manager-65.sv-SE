@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: development-tools
 content-type: reference
 exl-id: efbba312-9fc8-4670-b8f1-d2a86162d075
-source-git-commit: 69a249e63e2e6b96ba08f9846baa3e91d42b865f
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '2709'
+source-wordcount: '2687'
 ht-degree: 0%
 
 ---
@@ -313,7 +313,7 @@ I följande tabell beskrivs alla tillgängliga VLT-kommandon. I de enskilda komm
 | Kommando | Förkortat kommando | Beskrivning |
 | `export` |  | Exporterar från en JCR-databas (valv) till det lokala filsystemet utan kontrollfiler. |
 | `import` |  | Importerar ett lokalt filsystem till en JCR-databas (valvfilsystem). |
-| `checkout` | `co` | Checkar ut ett valvfilsystem. Använd detta för en inledande JCR-databas till det lokala filsystemet. (Obs! Du måste först checka ut databasen i subversion.) |
+| `checkout` | `co` | Checkar ut ett valvfilsystem. Använd detta för en inledande JCR-databas till det lokala filsystemet. (Obs! Checka först ut databasen i subversion.) |
 | `analyze` |  | Analyserar paket. |
 | `status` | `st` | Skriver ut status för arbetskopia av filer och kataloger. |
 | `update` | `up` | Importerar ändringar från databasen till arbetskopian. |

@@ -6,10 +6,10 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: personalization
 exl-id: d7e4d424-0ca7-449f-95fb-c4fe19dd195d
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '2749'
-ht-degree: 1%
+source-wordcount: '2770'
+ht-degree: 2%
 
 ---
 
@@ -102,7 +102,7 @@ I det nyhetsbrev/e-postmeddelande som du skriver kanske du inte kan välja Adobe
 
    ![chlimage_1-19](assets/chlimage_1-19a.png)
 
-1. Välj **Molntjänster** och klicka **+** för att lägga till en konfiguration. Välj en synlig konfiguration (spelar ingen roll vilken). Klicka eller tryck på **+** signera för att lägga till en annan konfiguration och sedan välja **Adobe Campaign**.
+1. Välj **Molntjänster** och klicka **+** för att lägga till en konfiguration. Välj en synlig konfiguration (spelar ingen roll vilken). Klicka på **+** signera för att lägga till en annan konfiguration och sedan välja **Adobe Campaign**.
 
    >[!NOTE]
    >
@@ -201,7 +201,7 @@ Du kan förhandsgranska hur nyhetsbrevet kommer att se ut och förhandsgranska p
 
    ![chlimage_1-29](assets/chlimage_1-29a.png)
 
-1. Du kan visa startdata från Adobe Campaign som är associerade med den valda personen. Det gör du genom att klicka/trycka på Adobe Campaign-modulen i fältet ContextHub. Då öppnas en dialogruta med alla startvärdesdata för den aktuella profilen. Återigen anpassas data när du byter till en annan person.
+1. Du kan visa startdata från Adobe Campaign som är associerade med den valda personen. Det gör du genom att klicka på Adobe Campaign-modulen i ContextHub-fältet. Då öppnas en dialogruta med alla startvärdesdata för den aktuella profilen. Återigen anpassas data när du byter till en annan person.
 
    ![chlimage_1-30](assets/chlimage_1-30a.png)
 

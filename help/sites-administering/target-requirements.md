@@ -7,9 +7,9 @@ topic-tags: integration
 content-type: reference
 docset: aem65
 exl-id: 30813c44-51ac-4e6e-8ee6-4e8baacb1ff9
-source-git-commit: 7d46ba0eaa73d9f7a67034ba81d7fa379aa0112c
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '548'
+source-wordcount: '528'
 ht-degree: 0%
 
 ---
@@ -34,10 +34,10 @@ Klientkoden identifierar Adobe Target-kundkontot när Adobe Target-servern anrop
 
 Test och Target [replikeringsagent](/help/sites-deploying/replication.md) måste vara aktiverat på författarinstansen. Observera att den här replikeringsagenten inte är aktiverad som standard om du använde [nosamplingContent](/help/sites-deploying/configure-runmodes.md#using-samplecontent-and-nosamplecontent) körningsläge för AEM. Mer information om hur du skyddar din produktionsmiljö finns i [Säkerhetschecklista](/help/sites-administering/security-checklist.md).
 
-1. På AEM startsida klickar du på eller trycker **verktyg** > **Distribution** > **Replikering**.
-1. Klicka eller tryck **Agenter på författare**.
-1. Klicka eller tryck på **Test och Target (test och target)** replikeringsagent och klicka eller tryck sedan på **Redigera**.
-1. Välj alternativet Aktiverad och klicka eller tryck sedan på **OK**.
+1. På AEM startsida klickar du på **verktyg** > **Distribution** > **Replikering**.
+1. Klicka **Agenter på författare**.
+1. Klicka på **Test och Target (test och target)** replikeringsagent och klicka sedan på **Redigera**.
+1. Välj alternativet Aktiverad och klicka sedan på **OK**.
 
    >[!NOTE]
    >
@@ -47,7 +47,7 @@ Test och Target [replikeringsagent](/help/sites-deploying/replication.md) måste
 
 ## Skydda noden Aktivitetsinställningar {#securing-the-activity-settings-node}
 
-Du måste skydda noden för aktivitetsinställningar **cq:ActivitySettings** på publiceringsinstansen så att den inte är tillgänglig för vanliga användare. Noden för aktivitetsinställningar ska bara vara tillgänglig för tjänsten som hanterar aktivitetssynkroniseringen till Adobe Target.
+Skydda noden för aktivitetsinställningar **cq:ActivitySettings** på publiceringsinstansen så att den inte är tillgänglig för vanliga användare. Noden för aktivitetsinställningar ska bara vara tillgänglig för tjänsten som hanterar aktivitetssynkroniseringen till Adobe Target.
 
 The **cq:ActivitySettings** noden är tillgänglig i CRXDE lite under `/content/campaigns/*nameofbrand*`* *under aktiviteterna jcr:innehållsnod;* *till exempel `/content/campaign/we-retail/master/myactivity/jcr:content/cq:ActivitySettings`. Den här noden skapas bara efter att du har angett en komponent som mål.
 

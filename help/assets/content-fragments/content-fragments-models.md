@@ -4,10 +4,10 @@ description: Lär dig hur Content Fragment Models fungerar som grund för ditt h
 feature: Content Fragments
 role: User
 exl-id: 6fd1fdb2-d1d3-4f97-b119-ecfddcccec9e
-source-git-commit: b00ed4ed146b89aece9af1d267c890a360a236e9
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '2305'
-ht-degree: 2%
+source-wordcount: '2310'
+ht-degree: 1%
 
 ---
 
@@ -86,7 +86,7 @@ Modellen för innehållsfragment definierar effektivt strukturen för de resulte
 
 1. **Ta bort ett fält**
 
-   Markera det obligatoriska fältet och klicka/tryck sedan på papperskorgsikonen. Du ombeds bekräfta åtgärden.
+   Markera önskat fält och klicka sedan på papperskorgsikonen. Du ombeds bekräfta åtgärden.
 
    ![ta bort](assets/cfm-models-06.png)
 
@@ -104,7 +104,7 @@ Det finns ett urval datatyper som du kan använda för att definiera din modell:
    * Lägg till ett eller flera fält med en enda textrad. Den maximala längden kan definieras
 * **Flerradstext**
    * Ett textområde som kan vara RTF, Oformaterad text eller Markering
-* **Siffra**
+* **Nummer**
    * Lägg till ett eller flera numeriska fält
 * **Boolean**
    * Lägg till en boolesk kryssruta
@@ -201,7 +201,7 @@ Olika datatyper kan nu definiera valideringskrav för när innehåll anges i det
 
 * **Enkelradig text**
    * Jämför med ett fördefinierat regex.
-* **Siffra**
+* **Nummer**
    * Sök efter specifika värden.
 * **Innehållsreferens**
    * Testa om det finns specifika typer av innehåll.

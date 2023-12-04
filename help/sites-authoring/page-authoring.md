@@ -2,7 +2,7 @@
 title: Skapa innehållssidor i AEM
 description: Vilka uppgifter som ska utföras när en innehållssida redigeras i Adobe Experience Manager 6.5.
 exl-id: 07528cf0-e67a-46b5-a3b2-d1b74ad2228f
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
 source-wordcount: '317'
 ht-degree: 0%
@@ -41,7 +41,7 @@ Till vänster på en redigerbar sida kan en skjutbar webbläsare öppnas. Därif
 Till vänster på en redigerbar sida kan en skjutbar webbläsare öppnas. Här kan resurser dras till sidan, t.ex. för att placera resurser eller skapa länkar till andra sidor.
 
 * **Komponentverktygsfältet**
-Både en enkel eller en långsam dubbelklickning/tryckning visar rätt verktygsfält (en för verktygsfältet för redigering på plats och sedan långsam dubbelklickning för hela verktygsfältet).
+Både en enkel eller en långsam dubbelklickning visar rätt verktygsfält (en för verktygsfältet för redigering på plats och sedan en långsam dubbelklickning för hela verktygsfältet).
 
 * **[Responsiv layout](/help/sites-authoring/responsive-layout.md)**
 Detta ger ett styckesystem där du kan placera komponenter i ett responsivt rutnät.

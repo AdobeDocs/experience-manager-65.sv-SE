@@ -6,10 +6,10 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: best-practices
 exl-id: e1de20b0-6d7a-4bda-b62f-c2808fd0af28
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '419'
-ht-degree: 2%
+source-wordcount: '428'
+ht-degree: 4%
 
 ---
 
@@ -19,7 +19,7 @@ Vi. Detaljhandeln har byggts med en global webbplatsstruktur som erbjuder en spr
 
 ## Prova {#trying-it-out}
 
-1. Öppna webbplatskonsolen från **Global navigering -> Webbplatser**.
+1. Öppna webbplatskonsolen från **Global Navigation > Sites**.
 1. Växla till kolumnvyn (om den inte redan är aktiv) och välj We.Retail. Lägg märke till landstrukturen med Schweiz, USA, Frankrike och så vidare, tillsammans med Language Master.
 
    ![chlimage_1-87](assets/chlimage_1-87a.png)
@@ -46,7 +46,7 @@ Vi. Detaljhandeln har byggts med en global webbplatsstruktur som erbjuder en spr
 
    ![chlimage_1-92](assets/chlimage_1-92.png)
 
-1. Ett projekt skapas för varje språköversättning. Visa dem under **Navigering -> Projekt**.
+1. Ett projekt skapas för varje språköversättning. Visa dem under **Navigering > Projekt**.
 
    ![chlimage_1-93](assets/chlimage_1-93.png)
 

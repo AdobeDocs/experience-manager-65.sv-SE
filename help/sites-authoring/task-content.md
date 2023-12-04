@@ -6,10 +6,10 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: projects
 content-type: reference
 exl-id: a0719745-8d67-44bc-92ba-9ab07f31f8d2
-source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '594'
-ht-degree: 3%
+source-wordcount: '586'
+ht-degree: 2%
 
 ---
 
@@ -52,7 +52,7 @@ Klicka på ellipsknappen längst ned till höger i aktivitetspanelen för att vi
 
 #### Uppgiftsinformation {#task-details}
 
-Mer information om en viss uppgift får du om du trycker eller klickar på uppgiften i inkorgen för att markera den. Tryck sedan på eller klicka på **Öppna** i verktygsfältet.
+Om du vill ha mer information om en viss uppgift klickar du i inkorgen på uppgiften för att markera den och sedan på **Öppna** i verktygsfältet.
 
 ![Uppgiftsinformation](assets/project-task-detail.png)
 
@@ -70,12 +70,12 @@ Du kan lägga till nya uppgifter i projekt. Dessa uppgifter visas sedan i aktivi
 Så här lägger du till en uppgift:
 
 1. Leta reda på **Uppgifter** panel
-1. Tryck eller klicka på nedåtvinklingen längst upp till höger på plattan och välj **Skapa uppgift**.
+1. Klicka på nedåtvinklingen längst upp till höger på plattan och välj **Skapa uppgift**.
 1. I **Lägg till uppgift** -fönstret, ange uppgiftsinformation som prioritet, tilldelad och förfallodatum.
 
    ![Lägga till en uppgift](assets/project-add-task.png)
 
-1. Tryck eller klicka **Skicka**.
+1. Klicka **Skicka**.
 
 ## Arbeta med uppgifter i Inkorgen {#working-with-tasks-in-the-inbox}
 

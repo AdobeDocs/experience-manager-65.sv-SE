@@ -10,9 +10,9 @@ content-type: reference
 discoiquuid: 90e36522-3af1-4a8a-b044-1c828c52974e
 description: Katalogproducent
 exl-id: 76a46c62-d47d-4970-8a3a-d56015639548
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '881'
+source-wordcount: '847'
 ht-degree: 0%
 
 ---
@@ -41,28 +41,28 @@ Som en del av integrationsprocessen konfigurerar du **DAM-uppdateringsresurs** a
 
 I Catalog Producer används PIM-data (Product Information Management) för att mappa produktegenskaper med de XML-egenskaper som visas i mallen. Så här skapar du en katalog:
 
-1. I Assets-användargränssnittet: tryck/klicka på **AEM** och går till **Resurser > Kataloger**.
-1. I **Kataloger** sida, tryck/klicka **Skapa** i verktygsfältet och välj **Katalog** från listan.
+1. Klicka på **AEM** och går till **Resurser > Kataloger**.
+1. I **Kataloger** sida, klicka **Skapa** i verktygsfältet och välj **Katalog** från listan.
 1. I **Skapa katalog** anger du ett namn och en beskrivning (valfritt) för katalogen och anger eventuella taggar. Du kan också lägga till en miniatyrbild för katalogen.
 
    ![create_catalog](assets/create_catalog.png)
 
-1. Tryck/klicka **Spara**. En bekräftelsedialogruta meddelar att katalogen har skapats. Tryck/klicka **Klar** för att stänga dialogrutan.
-1. Om du vill öppna den katalog du skapade trycker du på/klickar på den i dialogrutan **Kataloger** sida.
+1. Klicka **Spara**. En bekräftelsedialogruta meddelar att katalogen har skapats. Klicka **Klar** för att stänga dialogrutan.
+1. Om du vill öppna den katalog du skapade klickar du på den i dialogrutan **Kataloger** sida.
 
    >[!NOTE]
    >
-   >Om du vill öppna katalogen kan du även trycka/klicka **Öppna** i bekräftelsedialogrutan som nämns i föregående steg.
+   >Om du vill öppna katalogen kan du även klicka på **Öppna** i bekräftelsedialogrutan som nämns i föregående steg.
 
-1. Tryck/klicka för att lägga till sidor i katalogen **Skapa** i verktygsfältet och välj sedan **Ny sida** alternativ.
-1. I guiden väljer du en sidmall för InDesignen. Tryck/klicka sedan **Nästa**.
+1. Om du vill lägga till sidor i katalogen klickar du på **Skapa** i verktygsfältet och välj sedan **Ny sida** alternativ.
+1. I guiden väljer du en sidmall för InDesignen. Klicka sedan på **Nästa**.
 1. Ange ett namn för sidan och en valfri beskrivning. Ange eventuella taggar.
-1. Tryck/klicka på **Skapa** i verktygsfältet. Tryck/klicka sedan **Öppna** i dialogrutan. Egenskaperna för produkten visas i den vänstra rutan. De fördefinierade egenskaperna för mallen InDesign visas i den högra rutan.
+1. Klicka på **Skapa** i verktygsfältet. Klicka sedan på **Öppna** i dialogrutan. Egenskaperna för produkten visas i den vänstra rutan. De fördefinierade egenskaperna för mallen InDesign visas i den högra rutan.
 1. Dra produktegenskaperna från den vänstra rutan till InDesignens mallegenskaper och skapa en mappning mellan dem.
 
-   Om du vill visa hur sidan ser ut i realtid trycker du/klickar på knappen **Förhandsgranska** till höger.
+   Om du vill visa hur sidan ser ut i realtid klickar du på **Förhandsgranska** till höger.
 
-1. Om du vill skapa fler sidor upprepar du steg 6-9. Om du vill skapa liknande sidor för andra produkter markerar du sidan och trycker/klickar på **Skapa liknande sidor** -ikonen i verktygsfältet.
+1. Om du vill skapa fler sidor upprepar du steg 6-9. Om du vill skapa liknande sidor för andra produkter markerar du sidan och klickar på **Skapa liknande sidor** -ikonen i verktygsfältet.
 
    ![create_similar_pages](assets/create_similar_pages.png)
 
@@ -70,30 +70,30 @@ I Catalog Producer används PIM-data (Product Information Management) för att m
    >
    >Du kan bara skapa liknande sidor för produkter med liknande struktur.
 
-   Tryck/klicka på ikonen Lägg till, välj produkter i produktväljaren och tryck/klicka sedan på **Välj** i verktygsfältet.
+   Klicka på ikonen Lägg till, välj produkter i produktväljaren och klicka sedan på **Välj** i verktygsfältet.
 
    ![select_product](assets/select_product.png)
 
-1. Klicka/tryck på verktygsfältet **Skapa**. Tryck/klicka **Klar** för att stänga dialogrutan. Liknande sidor tas med i katalogen.
-1. Om du vill lägga till en InDesign i katalogen trycker du/klickar **Skapa** i verktygsfältet och väljer **Lägg till på befintlig sida** alternativ.
-1. Markera InDesignen och tryck/klicka **Lägg till** i verktygsfältet. Tryck/klicka sedan **OK** för att stänga dialogrutan.
+1. I verktygsfältet klickar du på **Skapa**. Klicka **Klar** för att stänga dialogrutan. Liknande sidor tas med i katalogen.
+1. Om du vill lägga till en InDesign i katalogen klickar du på **Skapa** i verktygsfältet och väljer **Lägg till på befintlig sida** alternativ.
+1. Markera InDesignen och klicka på **Lägg till** i verktygsfältet. Klicka sedan på **OK** för att stänga dialogrutan.
 
    Om metadata för produkterna som du refererar till på katalogsidorna ändras, återspeglas inte ändringarna automatiskt på katalogsidorna. En banderoll med etiketten **Inaktuell** visas på produktbilderna på de refererande katalogsidorna, vilket anger att metadata för de refererade produkterna inte är aktuella.
 
    ![chlimage_1-117](assets/chlimage_1-117a.png)
 
-   För att produktbilderna ska återspegla de senaste metadataändringarna väljer du sidan i katalogkonsolen och klickar/trycker på **Uppdatera sida** -ikonen i verktygsfältet.
+   För att produktbilderna ska återspegla de senaste metadataändringarna väljer du sidan i katalogkonsolen och klickar på knappen **Uppdatera sida** -ikonen i verktygsfältet.
 
    ![chlimage_1-118](assets/chlimage_1-118a.png)
 
    >[!NOTE]
    >
-   >Om du vill ändra metadata för en refererad produkt går du till produktkonsolen (**AEM logotyp** > **Handel** > **Produkter**) och välj produkt. Klicka/tryck sedan på **Visa egenskaper** -ikonen i verktygsfältet och redigera metadata på egenskapssidan för resursen.
+   >Om du vill ändra metadata för en refererad produkt går du till produktkonsolen (**AEM logotyp** > **Handel** > **Produkter**) och välj produkt. Klicka sedan på **Visa egenskaper** -ikonen i verktygsfältet och redigera metadata på egenskapssidan för resursen.
 
-1. Om du vill ordna om sidorna i katalogen trycker/klickar du på **Skapa** ikonen i verktygsfältet och välj **Sammanfoga** på menyn. I guiden kan du ändra ordningen på sidorna genom att dra dem med karusellen överst. Du kan också ta bort sidor.
+1. Om du vill ordna om sidorna i katalogen klickar du på **Skapa** ikonen i verktygsfältet och välj **Sammanfoga** på menyn. I guiden kan du ändra ordningen på sidorna genom att dra dem med karusellen överst. Du kan också ta bort sidor.
 
-1. Tryck/klicka **Nästa**. Om du vill lägga till en InDesign som försättsblad trycker du/klickar **Bläddra** bredvid **Välj försättsblad** och ange sökvägen för försättsbladet.
-1. Tryck/klicka **Spara** och sedan trycka/klicka **Klar** för att stänga bekräftelsedialogrutan.
+1. Klicka **Nästa**. Om du vill lägga till en InDesign som försättsblad klickar du på **Bläddra** bredvid **Välj försättsblad** och ange sökvägen för försättsbladet.
+1. Klicka **Spara** och klicka sedan på **Klar** för att stänga bekräftelsedialogrutan.
 Vid val av **Klar** öppnas en dialogruta där du kan välja om du vill ha en PDF-rendering.
    ![exportera till PDF](assets/CatalogPDF.png)
 Om alternativet Acrobat(PDF) är markerat skapas en PDF-återgivning i  **/jcr:content/renditions** förutom indesign-rendering. Du kan hämta alla återgivningar genom att markera kryssrutan Återgivningar i hämtningsdialogrutan.
@@ -102,4 +102,4 @@ Om alternativet Acrobat(PDF) är markerat skapas en PDF-återgivning i  **/jcr:c
 
    ![chlimage_1-119](assets/chlimage_1-119a.png)
 
-   Granska sidorna i katalogen i förhandsgranskningen. Tryck/klicka **Stäng** för att stänga förhandsgranskningen.
+   Granska sidorna i katalogen i förhandsgranskningen. Klicka **Stäng** för att stänga förhandsgranskningen.

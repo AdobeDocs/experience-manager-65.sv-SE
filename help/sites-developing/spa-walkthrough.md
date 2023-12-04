@@ -4,9 +4,9 @@ description: I den här artikeln beskrivs begreppen för en SPA och du kan gå i
 topic-tags: spa
 content-type: reference
 exl-id: 95990112-2afc-420a-a7c7-9613f40d4c4a
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '1950'
+source-wordcount: '1945'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ SPA Editor erbjuder en omfattande lösning för SPA inom AEM. I den här artikel
 
 >[!NOTE]
 >
->SPA Editor är den rekommenderade lösningen för projekt som kräver SPA ramverksbaserad rendering på klientsidan (till exempel React eller Angular).
+>SPA Editor är den rekommenderade lösningen för projekt som kräver SPA ramverksbaserad klientåtergivning (till exempel React eller Angular).
 
 ## Introduktion {#introduction}
 

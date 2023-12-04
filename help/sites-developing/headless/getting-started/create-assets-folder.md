@@ -2,9 +2,9 @@
 title: Skapa en startguide för en resursmapp utan rubrik
 description: Använd AEM Content Fragment Models för att definiera strukturen för Content Fragments, som är grunden för ditt headless-innehåll.
 exl-id: 8d913056-fcfa-4cdd-b40a-771f13dfd0f4
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '375'
+source-wordcount: '369'
 ht-degree: 0%
 
 ---
@@ -25,8 +25,8 @@ Resursmappar används för [ordna traditionellt innehåll](/help/assets/manage-a
 
 En administratör behöver bara skapa mappar då och då för att ordna innehållet när det skapas. I den här guiden behöver vi bara skapa en mapp.
 
-1. Logga in AEM och välj **Navigation -> Assets -> Files**.
-1. Tryck eller klicka **Skapa -> Mapp**.
+1. Logga in AEM och välj **Navigation > Assets > Files**.
+1. Klicka **Skapa > Mapp**.
 1. Ange en **Titel** och **Namn** för din mapp.
    * The **Titel** ska vara beskrivande.
    * The **Namn** blir nodnamnet i databasen.
@@ -38,8 +38,8 @@ En administratör behöver bara skapa mappar då och då för att ordna innehål
 1. I **Egenskaper** väljer du **Cloud Service** -fliken.
 1. För **Molnkonfiguration** Välj [konfiguration som du skapade tidigare.](create-configuration.md)
    ![Konfigurera resursmapp](assets/assets-folder-configure.png)
-1. Tryck eller klicka **Spara och stäng**.
-1. Tryck eller klicka **OK** i bekräftelsefönstret.
+1. Klicka **Spara och stäng**.
+1. Klicka **OK** i bekräftelsefönstret.
 
    ![Bekräftelsefönstret](assets/assets-folder-confirmation.png)
 

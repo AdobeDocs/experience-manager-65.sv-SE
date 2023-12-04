@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: 1099cc44-de6d-499e-8b52-f2f5811ae086
 docset: aem65
 exl-id: dcb66b6d-d731-493e-8936-12d529f6cbde
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '3219'
+source-wordcount: '3186'
 ht-degree: 0%
 
 ---
@@ -216,7 +216,7 @@ Så här skapar du en mapp:
 
 ### Använda Konfigurationsläsaren {#using-the-configuration-browser}
 
-1. Gå till **Global navigering** -> **verktyg** > **Konfigurationsläsaren**.
+1. Gå till **Global navigering** > **verktyg** > **Konfigurationsläsaren**.
 
    De befintliga mapparna visas till vänster, inklusive **global** mapp.
 

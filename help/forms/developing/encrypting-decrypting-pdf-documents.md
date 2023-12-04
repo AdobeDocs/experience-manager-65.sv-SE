@@ -11,9 +11,9 @@ topic-tags: operations
 discoiquuid: 5e4bda3a-5648-4c0f-b2f8-bdbebb88f537
 role: Developer
 exl-id: d3cbca7f-9277-4d61-b198-abf4bb008f15
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '8184'
+source-wordcount: '8133'
 ht-degree: 0%
 
 ---
@@ -80,7 +80,7 @@ Om du vill utföra en krypteringstjänståtgärd programmatiskt måste du skapa 
 
 **Få ett PDF-dokument att kryptera**
 
-Du måste skaffa ett okrypterat PDF-dokument för att kunna kryptera dokumentet med ett lösenord. Om du försöker skydda ett PDF-dokument som redan är krypterat orsakar du ett undantag.
+Hämta ett okrypterat PDF-dokument för att kryptera dokumentet med ett lösenord. Om du försöker skydda ett PDF-dokument som redan är krypterat orsakar du ett undantag.
 
 **Ange alternativ för kryptering vid körning**
 
@@ -289,7 +289,7 @@ Om du vill utföra en krypteringstjänståtgärd programmatiskt måste du skapa 
 
 **Få ett PDF-dokument att kryptera**
 
-Du måste få ett okrypterat PDF-dokument för att kunna kryptera. Om du försöker skydda ett PDF-dokument som redan är krypterat genereras ett undantag.
+Hämta ett okrypterat PDF-dokument som ska krypteras. Om du försöker skydda ett PDF-dokument som redan är krypterat genereras ett undantag.
 
 **Referera till certifikatet**
 
@@ -499,7 +499,7 @@ Om du vill utföra en krypteringstjänståtgärd programmatiskt måste du skapa 
 
 **Hämta det krypterade PDF-dokumentet**
 
-Du måste skaffa ett krypterat PDF-dokument för att kunna ta bort certifikatbaserad kryptering. Om du försöker ta bort kryptering från ett PDF-dokument som inte är krypterat genereras ett undantag. På samma sätt inträffar ett undantag om du försöker ta bort certifikatbaserad kryptering från ett lösenordskrypterat dokument.
+Hämta ett krypterat PDF-dokument för att ta bort certifikatbaserad kryptering. Om du försöker ta bort kryptering från ett PDF-dokument som inte är krypterat genereras ett undantag. På samma sätt inträffar ett undantag om du försöker ta bort certifikatbaserad kryptering från ett lösenordskrypterat dokument.
 
 **Ta bort kryptering**
 
@@ -660,7 +660,7 @@ Om du vill utföra en krypteringstjänståtgärd programmatiskt måste du skapa 
 
 **Hämta det krypterade PDF-dokumentet**
 
-Du måste få ett krypterat PDF-dokument för att kunna ta bort lösenordsbaserad kryptering. Om du försöker ta bort kryptering från ett PDF-dokument som inte är krypterat genereras ett undantag.
+Hämta ett krypterat PDF-dokument för att ta bort lösenordsbaserad kryptering. Om du försöker ta bort kryptering från ett PDF-dokument som inte är krypterat genereras ett undantag.
 
 **Ta bort lösenordet**
 
@@ -807,7 +807,7 @@ Om du vill utföra en krypteringstjänståtgärd programmatiskt måste du skapa 
 
 **Hämta det krypterade PDF-dokumentet**
 
-Du måste skaffa ett krypterat PDF-dokument för att kunna låsa upp det. Om du försöker låsa upp ett PDF-dokument som inte är krypterat genereras ett undantag.
+Hämta ett krypterat PDF-dokument för att låsa upp det. Om du försöker låsa upp ett PDF-dokument som inte är krypterat genereras ett undantag.
 
 **Lås upp dokumentet**
 
@@ -984,7 +984,7 @@ Om du vill utföra en krypteringstjänståtgärd programmatiskt måste du skapa 
 
 **Hämta det krypterade PDF-dokumentet**
 
-Du måste skaffa ett PDF-dokument för att kunna avgöra vilken typ av kryptering som skyddar det.
+Hämta ett PDF-dokument för att avgöra vilken typ av kryptering som skyddar det.
 
 **Bestämma krypteringstypen**
 

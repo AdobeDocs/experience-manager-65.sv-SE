@@ -12,9 +12,9 @@ discoiquuid: ecd7f538-9c24-48e7-8450-596851e99cff
 docset: aem65
 feature: Designer
 exl-id: 2025182f-195b-40d0-aee7-67669f55b964
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '658'
+source-wordcount: '655'
 ht-degree: 0%
 
 ---
@@ -32,7 +32,7 @@ HTML5-formulär används i allt större utsträckning på enheter med pekskärm,
 
    >[!NOTE]
    >
-   >Dimensioner av fältet som är markerat i Forms Designer visas när fältet återges. Dimensionen för den återgivna signaturrutan beräknas dock baserat på fältets proportioner, inte på dimensionen som anges i Forms Designer.
+   >Dimensioner av det fält som är markerat i Forms Designer visas när fältet återges. Dimensionen för den återgivna signaturrutan beräknas dock baserat på fältets proportioner, inte på dimensionen som anges i Forms Designer.
 
 1. Konfigurera signaturskriptfältet.
 
@@ -45,7 +45,7 @@ HTML5-formulär används i allt större utsträckning på enheter med pekskärm,
       >
       >Öppna fliken XML-källa genom att klicka på **Visa** > **XML-källa**.
 
-   1. Leta reda på `<ui>` -taggen i `<field>` tagga och ändra källkoden så att den ser ut så här:
+   1. Leta reda på `<ui>` i `<field>` tagga och ändra källkoden så att den ser ut så här:
 
       ```xml
       <extras name="x-scribble-add-on">
@@ -53,7 +53,7 @@ HTML5-formulär används i allt större utsträckning på enheter med pekskärm,
       </extras>
       ```
 
-   1. Välj **Designvy** -fliken. Klicka på **Ja**.
+   1. Välj **Designvy** -fliken. I bekräftelserutan klickar du på **Ja**.
    1. Spara formuläret.
 
 1. Återge formuläret i en enhet/webbläsare som stöds.
@@ -73,6 +73,7 @@ När ett signaturskriptfält har lagts till i formuläret och återgetts öppnas
 När du klickar på ikonen för geopositionering när du skapar klottret bäddas geografisk plats och tidsinformation in i fältet.
 
 >[!NOTE]
+>
 I iPad är det som standard obligatoriskt att bädda in geolokaliseringsinformation.
 
 I iPad visas inte geopositioneringsikonen som standard och geopositioneringsinformationen bäddas in automatiskt när du klickar på **OK**.
@@ -96,7 +97,7 @@ Om du trycker eller klickar på fältet Klottra öppnas dialogrutan i skrivskydd
 
 ### Välja ritstiftsstorlek {#selecting-pen-size}
 
-Klicka på **Penslar** om du vill visa en lista med tillgängliga ritstiftsstorlekar. Klicka eller tryck på en ritstiftsstorlek om du vill använda motsvarande penna.
+Klicka på **Penslar** om du vill visa en lista med tillgängliga ritstiftsstorlekar. Klicka på en ritstiftsstorlek om du vill använda motsvarande penna.
 
 ### Ta bort signaturer från formuläret {#delete-signatures-from-the-form}
 

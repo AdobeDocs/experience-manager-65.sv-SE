@@ -3,9 +3,9 @@ title: Skapa och synkronisera Live-kopior
 description: Lär dig hur du skapar och synkroniserar Live-kopior i Adobe Experience Manager.
 feature: Multi Site Manager
 exl-id: 896b35dd-4510-4c94-8615-03d9649c2f64
-source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '4227'
+source-wordcount: '4194'
 ht-degree: 0%
 
 ---
@@ -99,11 +99,11 @@ Så här skapar du en live-kopia:
 
    ![Skapa Live Copy](assets/chlimage_1-212.png)
 
-1. Välj källsida och klicka eller tryck sedan **Nästa**. Till exempel:
+1. Välj källsidan och klicka sedan på **Nästa**. Till exempel:
 
    ![Välj källsida](assets/chlimage_1-213.png)
 
-1. Ange målsökvägen för live-kopian (öppna den överordnade mappen/sidan för live-kopian) och klicka eller tryck sedan på **Nästa**.
+1. Ange målsökvägen för live-kopian (öppna den överordnade mappen/sidan för live-kopian) och klicka sedan på **Nästa**.
 
    ![Ange mål](assets/chlimage_1-214.png)
 
@@ -124,7 +124,7 @@ Så här skapar du en live-kopia:
    * Inte markerad: skapa en live-kopia som innehåller alla underordnade till den markerade sidan (djup live-kopia)
 
 1. (Valfritt) Använd kommandot **Utrullningskonfigurationer** för att markera dem. Markerade konfigurationer visas under den nedrullningsbara väljaren.
-1. Klicka eller tryck **Skapa**. Ett bekräftelsemeddelande visas. Här kan du välja antingen **Öppna** eller **Klar**.
+1. Klicka **Skapa**. Ett bekräftelsemeddelande visas. Här kan du välja antingen **Öppna** eller **Klar**.
 
 ### Skapa en Live-kopia av en plats från en designkonfiguration {#creating-a-live-copy-of-a-site-from-a-blueprint-configuration}
 
@@ -156,7 +156,7 @@ Så här skapar du en live-kopia av en webbplats från en planeringskonfiguratio
 
 1. Använd **Ursprungliga språk** för att ange vilka språk som ska användas för den publicerade kopian.
 
-   Alla tillgängliga språk är markerade som standard. Om du vill ta bort ett språk klickar eller trycker du på **X** som visas bredvid språket.
+   Alla tillgängliga språk är markerade som standard. Om du vill ta bort ett språk klickar du på **X** som visas bredvid språket.
 
    Till exempel:
 
@@ -231,7 +231,7 @@ Rulla ut en ritningssida för att överföra innehållsändringar till live-kopi
 
    ![Rityta](assets/rollout-blueprint.png)
 
-Utrullningar bearbetas som asynkrona jobb och kan kontrolleras i [**Status för asynkrona jobb** kontrollpanel](asynchronous-jobs.md#monitor-the-status-of-asynchronous-operations) på **Global navigering** -> **verktyg** -> **Operationer** -> **Jobb**
+Utrullningar bearbetas som asynkrona jobb och kan kontrolleras i [**Status för asynkrona jobb** kontrollpanel](asynchronous-jobs.md#monitor-the-status-of-asynchronous-operations) på **Global navigering** > **verktyg** > **Operationer** > **Jobb**
 
 >[!NOTE]
 >
@@ -242,7 +242,7 @@ Utrullningar bearbetas som asynkrona jobb och kan kontrolleras i [**Status för 
 1. I **Webbplatser** markerar du sidan i live-kopian och öppnar **[Referenser](/help/sites-authoring/basic-handling.md#references)** (från verktygsfältet).
 1. Välj **Blueprint** i listan för att visa de utkast som är kopplade till den här sidan.
 1. Välj önskad rityta i listan.
-1. Klicka eller tryck **Utrullning**.
+1. Klicka **Utrullning**.
 1. Du ombeds bekräfta informationen om utrullningen:
 
    * **Rullningsomfång**:
@@ -257,7 +257,7 @@ Utrullningar bearbetas som asynkrona jobb och kan kontrolleras i [**Status för 
 
 1. När du har bekräftat dessa uppgifter väljer du **Utrullning** för att utföra åtgärden.
 
-Utrullningar bearbetas som asynkrona jobb och kan kontrolleras i [**Status för asynkrona jobb** kontrollpanel](asynchronous-jobs.md#monitor-the-status-of-asynchronous-operations) på **Global navigering** -> **verktyg** -> **Operationer** -> **Jobb**
+Utrullningar bearbetas som asynkrona jobb och kan kontrolleras i [**Status för asynkrona jobb** kontrollpanel](asynchronous-jobs.md#monitor-the-status-of-asynchronous-operations) på **Global navigering** > **verktyg** > **Operationer** > **Jobb**
 
 >[!NOTE]
 >
@@ -277,7 +277,7 @@ The [Utrullningsåtgärden är också tillgänglig från Live-kopieringsöversik
 
    ![Rityta](assets/rollout-blueprint.png)
 
-Utrullningar bearbetas som asynkrona jobb och kan kontrolleras i [**Status för asynkrona jobb** kontrollpanel](asynchronous-jobs.md#monitor-the-status-of-asynchronous-operations) på **Global navigering** -> **verktyg** -> **Operationer** -> **Jobb**
+Utrullningar bearbetas som asynkrona jobb och kan kontrolleras i [**Status för asynkrona jobb** kontrollpanel](asynchronous-jobs.md#monitor-the-status-of-asynchronous-operations) på **Global navigering** > **verktyg** > **Operationer** > **Jobb**
 
 >[!NOTE]
 >
@@ -297,7 +297,7 @@ Synkronisera en live-kopia för att dra ändringar från källan till livecopy.
 
 1. I **Webbplatser** markerar du live copy-sidan och öppnar egenskaperna.
 1. Öppna **Live Copy** -fliken.
-1. Klicka eller tryck **Synkronisera**.
+1. Klicka **Synkronisera**.
 
    ![Synkronisera](assets/chlimage_1-224.png)
 
@@ -365,7 +365,7 @@ Du kan göra uppehåll i arvet av live-kopior för en live-kopieringssida så at
 Så här gör du uppehåll i arv på en sida:
 
 1. Öppna egenskaperna för live-kopieringssidan med **Visa egenskaper** kommando **Webbplatser** konsol eller med **Sidinformation** på sidans verktygsfält.
-1. Klicka eller tryck på **Live Copy** -fliken.
+1. Klicka på **Live Copy** -fliken.
 1. Välj **Gör uppehåll** i verktygsfältet. Du kan sedan välja något av följande:
 
    * **Gör uppehåll**: endast aktuell sida
@@ -446,7 +446,7 @@ På en befintlig live-kopia kan du ändra siddjupet, det vill säga om underordn
 Så här anger eller ändrar du djup:
 
 1. Öppna egenskaperna för live-kopieringssidan med **Visa egenskaper** kommando **Webbplatser** konsol eller med **Sidinformation** på sidans verktygsfält.
-1. Klicka eller tryck på **Live Copy** -fliken.
+1. Klicka på **Live Copy** -fliken.
 1. I **Konfiguration** -sektion, ange eller rensa **Live Copy-arv** beroende på om underordnade sidor inkluderas:
 
    * checked - a deep copy (the child pages are included)
@@ -458,7 +458,7 @@ Så här anger eller ändrar du djup:
    >
    >Se [Live-kopior - komposition](/help/sites-administering/msm.md#live-copies-composition) för mer information.
 
-1. Klicka eller tryck **Spara** för att behålla uppdateringarna.
+1. Klicka **Spara** för att behålla uppdateringarna.
 
 ### Avbryta arv för en komponent {#cancelling-inheritance-for-a-component}
 
@@ -474,11 +474,11 @@ Avbryt arvet av live-kopia för en komponent så att komponenten inte längre ä
 
 Avbryt arv för att ändra komponentinnehållet eller ta bort komponenten:
 
-1. Klicka på eller tryck på den komponent som du vill avbryta arvet för.
+1. Klicka på den komponent som du vill avbryta arvet för.
 
    ![Välj komponent för åtgärden Avbryt arv](assets/chlimage_1-230.png)
 
-1. Klicka eller tryck på knappen **Avbryt arv** -ikon.
+1. I komponentverktygsfältet klickar du på **Avbryt arv** -ikon.
 
    ![Avbryt arv](do-not-localize/chlimage_1-8.png)
 
@@ -488,7 +488,7 @@ Avbryt arv för att ändra komponentinnehållet eller ta bort komponenten:
 
 ### Återaktivera arv för en komponent {#re-enabling-inheritance-for-a-component}
 
-Om du vill aktivera arv för en komponent klickar eller trycker du på **Återaktivera arv** -ikonen i komponentens verktygsfält.
+Om du vill aktivera arv för en komponent klickar du på **Återaktivera arv** -ikonen i komponentens verktygsfält.
 
 ![Återaktivera arv](do-not-localize/chlimage_1-9.png)
 
@@ -529,15 +529,15 @@ Du kan senare återaktivera arv för en egenskap om det behövs.
 >När du återaktiverar arv synkroniseras inte egenskapen för live-kopieringssidan automatiskt med egenskapen source. Du kan begära en synkronisering manuellt om det behövs.
 
 1. Öppna egenskaperna för den aktiva kopieringssidan med hjälp av **Visa egenskaper** alternativ för **Webbplatser** konsol eller **Sidinformation** ikonen i sidans verktygsfält.
-1. Om du vill avbryta arvet av en egenskap klickar eller trycker du på länkikonen som visas till höger om egenskapen.
+1. Om du vill avbryta arvet av en egenskap klickar du på länkikonen som visas till höger om egenskapen.
 
    ![Avbryt arv av egenskap](do-not-localize/chlimage_1-10.png)
 
-1. I **Avbryt arv** bekräftelsedialogruta, klicka eller tryck **Ja**.
+1. I **Avbryt arv** bekräftelsedialogruta, klicka på **Ja**.
 
 ### Återställa egenskaper för en Live Copy-sida {#revert-properties-of-a-live-copy-page}
 
-Om du vill aktivera arv för en egenskap klickar eller trycker du på **Återställ arv** -ikonen som visas bredvid egenskapen.
+Om du vill aktivera arv för en egenskap klickar du på **Återställ arv** -ikonen som visas bredvid egenskapen.
 
 ![Återställ arv](do-not-localize/chlimage_1-11.png)
 
@@ -634,7 +634,7 @@ Det påverkar var i trädet du använder **Koppla loss**:
 
 Så här frigör du en live-kopia:
 
-1. I **Webbplatser** markera live copy-sidan och klicka eller tryck **Visa egenskaper**.
+1. I **Webbplatser** markerar du live copy-sidan och klickar på **Visa egenskaper**.
 1. Öppna **Live Copy** -fliken.
 1. I verktygsfältet väljer du **Koppla loss**.
 

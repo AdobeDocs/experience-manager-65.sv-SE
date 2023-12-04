@@ -2,9 +2,9 @@
 title: AEM frågor och svar
 description: Använd de här vanliga frågorna för att förstå, konfigurera och felsöka vanliga arbetsflöden och problem i AEM.
 exl-id: 182c464a-ff7a-467b-9eb5-8ffac335a87a
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '1085'
+source-wordcount: '1011'
 ht-degree: 0%
 
 ---
@@ -88,7 +88,7 @@ Om användaren inte har borttagningsbehörighet under objektnoden när de överf
 
 #### Vilka är standardinställningarna för OTB-konfigurationer när du skapar en språkkopia? {#what-are-the-default-settings-for-ootb-configurations-while-creating-language-copy}
 
-När du skapar en språkkopia via Touch-gränssnittet (**Referenser** -> **Uppdatera språkkopia**) skapas en ny DAM-mapp under det nya språket och resurserna refereras därifrån.
+När du skapar en språkkopia via Touch-gränssnittet (**Referenser** > **Uppdatera språkkopia**) skapas en ny DAM-mapp under det nya språket och resurserna refereras därifrån.
 
 Det här är standardinställningen för OTB-konfigurationer. Du kan ange **Översätt sidresurser** = **Översätt inte** i översättningskonfigurationer.
 AEM 6.4 **verktyg** > **Cloud Service** > **Översättningsmolntjänster**.

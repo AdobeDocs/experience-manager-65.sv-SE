@@ -9,10 +9,10 @@ topic-tags: components, testing
 discoiquuid: 938100ad-94f9-408a-819d-72657dc115f7
 docset: aem65
 exl-id: 2d28cee6-31b0-4288-bad3-4d2ecad7b626
-source-git-commit: 4fd5e9a1bc603202ee52e85a1c09125b13cec315
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '771'
-ht-degree: 1%
+source-wordcount: '759'
+ht-degree: 2%
 
 ---
 
@@ -47,7 +47,7 @@ När du använder automatiska tester i AEM är följande termer viktiga att för
 
 Öppna testkonsolen för att se de registrerade testsviterna. Testpanelen innehåller en lista med testsviter och deras testfall.
 
-Navigera till verktygskonsolen via **Global navigering -> Verktyg > Åtgärder -> Testning**.
+Navigera till verktygskonsolen via **Global Navigation > Tools > Operations > Testing**.
 
 ![chlimage_1-63](assets/chlimage_1-63.png)
 
@@ -69,7 +69,7 @@ En X-ikon anger att testet misslyckades:
 
 Så här kör du en testsvit:
 
-1. Klicka på eller tryck på namnet på det testfall som du vill köra på testpanelen för att visa information om åtgärderna.
+1. Klicka på namnet på det testfall som du vill köra på panelen Testa för att visa information om åtgärderna.
 
    ![chlimage_1-65](assets/chlimage_1-65.png)
 
@@ -91,7 +91,7 @@ Testsviter körs sekventiellt i den ordning som de visas i konsolen. Du kan för
 
 ![chlimage_1-68](assets/chlimage_1-68.png)
 
-1. På testpanelen trycker eller klickar du på **Kör alla tester** eller **Kör tester** under namnet på testsviten som du vill köra.
+1. På testpanelen klickar du på **Kör alla tester** eller **Kör tester** under namnet på testsviten som du vill köra.
 
    ![En bild av knappen Kör alla tester och knappen Kör test, som indikeras av en högerriktad pekare inuti en cirkel.](do-not-localize/chlimage_1-5.png)
 
@@ -99,9 +99,9 @@ Testsviter körs sekventiellt i den ordning som de visas i konsolen. Du kan för
 
    ![chlimage_1-69](assets/chlimage_1-69.png)
 
-## Skapa och använda en enkel testsvit {#creating-and-using-a-simple-test-suite}
+## Skapa och använda en enkel testprogramsvit {#creating-and-using-a-simple-test-suite}
 
-I proceduren nedan beskrivs hur du skapar och kör en Test Suite med [Innehåll för webb.butik](/help/sites-developing/we-retail.md)men du kan enkelt ändra testet så att det använder en annan webbsida.
+I proceduren nedan beskrivs hur du skapar och kör en Test Suite med [Innehåll för webb.butik](/help/sites-developing/we-retail.md), men du kan enkelt ändra testet så att det använder en annan webbsida.
 
 Mer information om hur du skapar egna testsviter finns i [Hobbes.js API-dokumentation](https://developer.adobe.com/experience-manager/reference-materials/6-5/test-api/index.html).
 
@@ -133,7 +133,7 @@ Mer information om hur du skapar egna testsviter finns i [Hobbes.js API-dokument
    >**beroenden**: `granite.testing.hobbes.testrunner, granite.testing.hobbes.af`
 
 1. Klicka **Spara alla**.
-1. Högerklicka på `myFirstTest` nod och klicka **Skapa > Skapa fil**. Namnge filen `js.txt` och klicka **OK**.
+1. Högerklicka på `myFirstTest` och klicka på **Skapa > Skapa fil**. Namnge filen `js.txt` och klicka **OK**.
 1. I `js.txt` anger du följande text:
 
    ```
@@ -142,7 +142,7 @@ Mer information om hur du skapar egna testsviter finns i [Hobbes.js API-dokument
    ```
 
 1. Klicka **Spara alla** och stäng sedan `js.txt` -fil.
-1. Högerklicka på `myFirstTest` nod och klicka **Skapa > Skapa fil**. Namnge filen `myTestSuite.js` och klicka **OK**.
+1. Högerklicka på `myFirstTest` och klicka på **Skapa > Skapa fil**. Namnge filen `myTestSuite.js` och klicka **OK**.
 1. Kopiera följande kod till `myTestSuite.js` och sedan spara filen:
 
    ```

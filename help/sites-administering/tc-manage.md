@@ -2,10 +2,10 @@
 title: Hantera översättningsprojekt
 description: Lär dig hantera översättningsprojekt i Adobe Experience Manager.
 exl-id: 968bba02-98fe-4eaf-9937-ce5cfdf5b413
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '3578'
-ht-degree: 1%
+source-wordcount: '3504'
+ht-degree: 2%
 
 ---
 
@@ -80,12 +80,12 @@ Efter översättning kan du [granska översättningen](#reviewing-and-promoting-
 
    Om du till exempel vill översätta de engelska sidorna på demowebbplatsen väljer du Geometrixx Demo Site > English.
 
-1. Klicka på eller tryck på Referenser i verktygsfältet.
+1. Klicka på Referenser i verktygsfältet.
 
    ![chlimage_1-241](assets/chlimage_1-241.png)
 
 1. Välj Språkkopior och sedan de språkkopior som du översätter källsidorna för.
-1. Klicka eller tryck på Skapa och översätt och konfigurera sedan översättningsjobbet:
+1. Klicka på Skapa och översätt och konfigurera översättningsjobbet:
 
    * Använd listrutan Språk för att välja en språkkopia som du vill översätta för. Välj ytterligare språk efter behov. De språk som visas i listan motsvarar [språktrötter som du har skapat](/help/sites-administering/tc-prep.md#creating-a-language-root).
    * Om du vill översätta den markerade sidan och alla underordnade sidor väljer du Markera alla underordnade sidor. Om du bara vill översätta den markerade sidan avmarkerar du alternativet.
@@ -94,7 +94,7 @@ Efter översättning kan du [granska översättningen](#reviewing-and-promoting-
 
    ![chlimage_1-242](assets/chlimage_1-242.png)
 
-1. Klicka eller tryck på Skapa.
+1. Klicka på Skapa.
 
 ### Skapa översättningsprojekt för en befintlig språkkopia {#create-translation-projects-for-an-existing-language-copy}
 
@@ -102,12 +102,12 @@ Efter översättning kan du [granska översättningen](#reviewing-and-promoting-
 
    Om du till exempel vill översätta de engelska sidorna på demowebbplatsen väljer du Geometrixx Demo Site > English.
 
-1. Klicka på eller tryck på Referenser i verktygsfältet.
+1. Klicka på Referenser i verktygsfältet.
 
    ![chlimage_1-243](assets/chlimage_1-243.png)
 
 1. Välj Språkkopior och sedan de språkkopior som du översätter källsidorna för.
-1. Klicka eller tryck på Uppdatera språkkopior och konfigurera sedan översättningsjobbet:
+1. Klicka på Uppdatera språkkopior och konfigurera översättningsjobbet:
 
    * Om du vill översätta den markerade sidan och alla underordnade sidor väljer du Markera alla underordnade sidor. Om du bara vill översätta den markerade sidan avmarkerar du alternativet.
    * För Projekt väljer du Skapa nytt översättningsprojekt.
@@ -115,7 +115,7 @@ Efter översättning kan du [granska översättningen](#reviewing-and-promoting-
 
    ![chlimage_1-244](assets/chlimage_1-244.png)
 
-1. Klicka eller tryck på Start.
+1. Klicka på Start.
 
 ## Lägga till sidor i ett översättningsprojekt {#adding-pages-to-a-translation-project}
 
@@ -129,7 +129,7 @@ När du lägger till sidor i ett projekt läggs kopior av sidorna till i en prog
 
    Om du till exempel vill översätta de engelska sidorna på demowebbplatsen väljer du Geometrixx Demo Site > English.
 
-1. Klicka på eller tryck på Referenser i verktygsfältet.
+1. Klicka på Referenser i verktygsfältet.
 
    ![chlimage_1-245](assets/chlimage_1-245.png)
 
@@ -137,7 +137,7 @@ När du lägger till sidor i ett projekt läggs kopior av sidorna till i en prog
 
    ![chlimage_1-35](assets/chlimage_1-35.jpeg)
 
-1. Klicka eller tryck på Uppdatera språkkopior och konfigurera sedan egenskaperna:
+1. Klicka på Uppdatera språkkopior och konfigurera sedan egenskaperna:
 
    * Om du vill översätta den markerade sidan och alla underordnade sidor väljer du Markera alla underordnade sidor. Om du bara vill översätta den markerade sidan avmarkerar du alternativet.
    * För Projekt väljer du Lägg till i befintligt översättningsprojekt.
@@ -149,21 +149,21 @@ När du lägger till sidor i ett projekt läggs kopior av sidorna till i en prog
 
    ![chlimage_1-36](assets/chlimage_1-36.jpeg)
 
-1. Klicka eller tryck på Start.
+1. Klicka på Start.
 
 ## Lägga till sidor/resurser i ett översättningsjobb {#adding-pages-assets-to-a-translation-job}
 
 Du kan lägga till sidor, resurser, taggar eller i18n-ordlistor i översättningsjobbet för översättningsprojektet. Så här lägger du till sidor eller resurser:
 
-1. Klicka eller tryck på ellipsen längst ned i översättningsjobbpanelen i översättningsprojektet.
+1. Klicka på ellipsen längst ned i översättningsjobbpanelen i översättningsprojektet.
 
    ![chlimage_1-246](assets/chlimage_1-246.png)
 
-1. Klicka eller tryck på Lägg till och Sidor/resurser.
+1. Klicka på Lägg till och Sidor/resurser.
 
    ![chlimage_1-247](assets/chlimage_1-247.png)
 
-1. Markera det översta objektet i grenen som du vill lägga till och klicka eller tryck sedan på bockmarkeringsikonen. Du kan markera flera.
+1. Markera det översta objektet i grenen som du vill lägga till och klicka sedan på bockmarkeringsikonen. Du kan markera flera.
 
    ![chlimage_1-248](assets/chlimage_1-248.png)
 
@@ -177,15 +177,15 @@ Dina sidor och/eller resurser läggs till i ditt översättningsjobb.
 
 Du kan lägga till sidor, resurser, taggar eller i18n-ordlistor i översättningsjobbet för översättningsprojektet. Så här lägger du till en i18n-ordlista:
 
-1. Klicka eller tryck på ellipsen längst ned i översättningsjobbpanelen i översättningsprojektet.
+1. Klicka på ellipsen längst ned i översättningsjobbpanelen i översättningsprojektet.
 
    ![chlimage_1-250](assets/chlimage_1-250.png)
 
-1. Klicka på eller tryck på Lägg till och I18N-ordlista.
+1. Klicka på Lägg till och I18N-ordlista.
 
    ![chlimage_1-251](assets/chlimage_1-251.png)
 
-1. Markera det lexikon du vill lägga till och klicka eller tryck sedan på knappen Lägg till.
+1. Markera det lexikon du vill lägga till och klicka sedan på knappen Lägg till.
 
    ![chlimage_1-252](assets/chlimage_1-252.png)
 
@@ -201,15 +201,15 @@ Din ordbok är nu i ditt översättningsjobb.
 
 Du kan lägga till sidor, resurser, taggar eller i18n-ordlistor i översättningsjobbet för översättningsprojektet. Så här lägger du till taggar:
 
-1. Klicka eller tryck på ellipsen längst ned i översättningsjobbpanelen i översättningsprojektet.
+1. Klicka på ellipsen längst ned i översättningsjobbpanelen i översättningsprojektet.
 
    ![chlimage_1-254](assets/chlimage_1-254.png)
 
-1. Klicka på eller tryck på Lägg till och sedan på Taggar.
+1. Klicka på Lägg till och sedan på Taggar.
 
    ![chlimage_1-255](assets/chlimage_1-255.png)
 
-1. Markera de taggar som du vill lägga till och klicka eller tryck sedan på bockmarkeringsikonen. Du kan markera flera.
+1. Markera de taggar som du vill lägga till och klicka sedan på bockmarkeringsikonen. Du kan markera flera.
 
    ![chlimage_1-256](assets/chlimage_1-256.png)
 
@@ -255,7 +255,7 @@ I följande tabell beskrivs varje status som ett jobb eller ett objekt i jobbet 
 | Feluppdatering | Ett fel uppstod när filer överfördes mellan AEM och översättningstjänsten. |
 | Okänt läge | Ett okänt fel har inträffat. |
 
-Om du vill visa status för varje fil i jobbet klickar eller trycker du på ellipsen längst ned i rutan.
+Klicka på ellipsen längst ned på panelen för att se status för varje fil i jobbet.
 
 ## Ange förfallodatum för översättningsjobb {#setting-the-due-date-of-translation-jobs}
 
@@ -268,7 +268,7 @@ Inställningen av förfallodatumet fungerar bara korrekt när översättningslev
 
 Följande procedur anger förfallodatumet för ett projekt.
 
-1. Klicka eller tryck på ellipsen längst ned i rutan Översättningssammanfattning.
+1. Klicka på ellipsen längst ned i rutan Översättningssammanfattning.
 
    ![chlimage_1-260](assets/chlimage_1-260.png)
 
@@ -276,15 +276,15 @@ Följande procedur anger förfallodatumet för ett projekt.
 
    ![chlimage_1-261](assets/chlimage_1-261.png)
 
-1. Klicka eller tryck på Klar.
+1. Klicka på Klar.
 
 Följande procedur anger förfallodatumet för ett översättningsjobb.
 
-1. Klicka eller tryck på kommandomenyn på panelen Översättningsjobb och sedan på eller på Förfallodatum.
+1. Klicka på kommandomenyn på panelen Översättningsjobb och sedan på Förfallodatum.
 
    ![chlimage_1-262](assets/chlimage_1-262.png)
 
-1. Klicka eller tryck på kalenderikonen i dialogrutan, välj datum och tid som ska användas som förfallodatum och klicka sedan på Spara.
+1. Klicka på kalenderikonen i dialogrutan, välj datum och tid som ska användas som förfallodatum och klicka sedan på Spara.
 
    ![chlimage_1-263](assets/chlimage_1-263.png)
 
@@ -303,11 +303,11 @@ När du omsluter ett översättningsjobb är jobbets status `Scope Requested`. N
 Omfånget fungerar bara korrekt när den översättningsleverantör som du använder har stöd för den här funktionen.
 
 1. Öppna översättningsprojektet i projektkonsolen.
-1. Klicka eller tryck på kommandomenyn på panelen Översättningsjobb och klicka eller tryck sedan på Begär omfång.
+1. Klicka på kommandomenyn på panelen Översättningsjobb och sedan på Begär omfång.
 
    ![chlimage_1-264](assets/chlimage_1-264.png)
 
-1. När jobbstatusen ändras till SCOPE_COMPLETED klickar du på eller trycker på kommandomenyn på panelen Översättningsjobb och sedan på Visa omfång.
+1. När jobbstatusen ändras till SCOPE_COMPLETED klickar du på kommandomenyn på panelen Översättningsjobb och sedan på Visa omfång.
 
 ## Starta ett översättningsjobb {#starting-a-translation-job}
 
@@ -318,19 +318,19 @@ När du har startat översättningsjobbet visas statusen Översättning pågår 
 ![chlimage_1-265](assets/chlimage_1-265.png)
 
 1. Öppna översättningsprojektet i projektkonsolen.
-1. Klicka eller tryck på kommandomenyn på panelen Översättningsjobb och klicka eller tryck sedan på Start.
+1. Klicka på kommandomenyn på panelen Översättningsjobb och sedan på Start.
 
    ![chlimage_1-266](assets/chlimage_1-266.png)
 
-1. Klicka på eller tryck på Stäng i dialogrutan Åtgärd som bekräftar början av översättningen.
+1. Klicka på Stäng i åtgärdsdialogrutan som bekräftar översättningens början.
 
 ## Avbryta ett översättningsjobb {#canceling-a-translation-job}
 
 Avbryt ett översättningsjobb om du vill stoppa översättningsprocessen och förhindra att översättningsleverantören utför fler översättningar. Du kan avbryta ett jobb när jobbet har `Committed For Translation` eller `Translation In Progress` status.
 
 1. Öppna översättningsprojektet i projektkonsolen.
-1. Klicka eller tryck på kommandomenyn på panelen Översättningsjobb och sedan på Avbryt.
-1. Klicka eller tryck på OK i åtgärdsdialogrutan som bekräftar att översättningen har avbrutits.
+1. Klicka på kommandomenyn på panelen Översättningsjobb och klicka sedan på Avbryt.
+1. Klicka på OK i åtgärdsdialogrutan som bekräftar att översättningen har avbrutits.
 
 ## Acceptera/avvisa arbetsflöde {#accept-reject-workflow}
 
@@ -350,18 +350,18 @@ När innehåll översätts för en befintlig språkkopia granskar du översättn
 
 ![chlimage_1-269](assets/chlimage_1-269.png)
 
-1. Markera sidan i språkinställningen, klicka eller tryck på Referenser och sedan på eller klicka på Språkkopior.
-1. Klicka på eller tryck på den språkkopia som du vill granska.
+1. Markera sidan i mallsidan för språk, klicka på Referenser och sedan på Språkkopior.
+1. Klicka på den språkkopia som ska granskas.
 
    ![chlimage_1-270](assets/chlimage_1-270.png)
 
-1. Klicka eller tryck på Launch för att visa startrelaterade kommandon.
+1. Klicka på Starta för att visa startrelaterade kommandon.
 
    ![chlimage_1-271](assets/chlimage_1-271.png)
 
 1. Klicka på Öppna sida för att öppna startkopian av sidan för att granska och redigera innehållet.
 1. När du har granskat innehållet och gjort de ändringar du behöver kan du befordra startkopian genom att klicka på Befordra.
-1. På sidan Befordra start anger du vilka sidor som ska befordras och klickar eller trycker sedan på Befordra.
+1. På sidan Befordra start anger du vilka sidor som ska befordras och klickar sedan på Befordra.
 
 ## Jämför språkkopior {#comparing-language-copies}
 
@@ -393,7 +393,7 @@ Arkivera ett översättningsjobb när det är klart och du behöver inte längre
 Fyll i din språkkopia så att den innehåller innehåll från huvudspråket som du översätter. Innan du fyller i din språkkopia måste du ha [skapade språkroten](/help/sites-administering/tc-prep.md#creating-a-language-root) av språkversionen.
 
 1. Använd webbplatskonsolen för att välja språkroten för huvudspråket som du använder som källa. Om du till exempel vill översätta de engelska sidorna på demowebbplatsen väljer du Innehåll > Demonsplats för Geometrixx > Engelska.
-1. Klicka på eller tryck på Referenser i verktygsfältet.
+1. Klicka på Referenser i verktygsfältet.
 
    ![chlimage_1-273](assets/chlimage_1-273.png)
 
@@ -401,14 +401,14 @@ Fyll i din språkkopia så att den innehåller innehåll från huvudspråket som
 
    ![chlimage_1-38](assets/chlimage_1-38.jpeg)
 
-1. Klicka eller tryck på Uppdatera språkkopior för att visa översättningsverktygen och konfigurera egenskaperna:
+1. Klicka på Uppdatera språkkopior för att visa översättningsverktygen och konfigurera egenskaperna:
 
    * Markera alternativet Markera alla undersidor.
    * För Projekt väljer du Skapa endast struktur.
 
    ![chlimage_1-39](assets/chlimage_1-39.jpeg)
 
-1. Klicka eller tryck på Start.
+1. Klicka på Start.
 
 ## Flytta eller byta namn på en källsida {#move-source}
 
@@ -442,24 +442,24 @@ När du skapar ett översättningsprojekt manuellt måste du ange värden för f
 * **Målspråk:** Språket som innehållet översätts till.
 * **Översättningsmetod:** Välj Human Translation för att ange att översättningen ska utföras manuellt.
 
-1. Klicka eller tryck på Skapa i verktygsfältet i projektkonsolen.
-1. Välj mallen Översättningsprojekt och klicka eller tryck sedan på Nästa.
+1. Klicka på Skapa i verktygsfältet i projektkonsolen.
+1. Välj mallen Översättningsprojekt och klicka sedan på Nästa.
 1. Ange värden för de grundläggande egenskaperna.
-1. Klicka eller tryck på Avancerat och ange värden för översättningsrelaterade egenskaper.
-1. Klicka eller tryck på Skapa. Klicka eller tryck på Klar i bekräftelserutan för att gå tillbaka till projektkonsolen, eller klicka eller tryck på Öppna projekt för att öppna och börja hantera projektet.
+1. Klicka på Avancerat och ange värden för översättningsrelaterade egenskaper.
+1. Klicka på Skapa. Klicka på Klar i bekräftelserutan för att återgå till projektkonsolen eller klicka på Öppna projekt för att öppna och börja hantera projektet.
 
 ## Exportera ett översättningsjobb {#exporting-a-translation-job}
 
 Du kan hämta innehållet i ett översättningsjobb, till exempel för att skicka till en översättningsleverantör som inte är integrerad med AEM via en koppling, eller för att granska innehållet.
 
-1. Klicka på eller tryck på Exportera i listrutan i rutan Översättningsjobb.
-1. Klicka eller tryck på Hämta exporterad fil i dialogrutan Exportera och använd vid behov webbläsardialogrutan för att spara filen.
-1. Klicka eller tryck på Stäng i dialogrutan Exportera.
+1. Klicka på Exportera i listrutan i rutan Översättningsjobb.
+1. Klicka på Hämta exporterad fil i dialogrutan Exportera och använd vid behov webbläsardialogrutan för att spara filen.
+1. Klicka på Stäng i dialogrutan Exportera.
 
 ## Importera ett översättningsjobb {#importing-a-translation-job}
 
 Du kan importera översatt innehåll till AEM när översättningsleverantören skickar det till dig eftersom det inte är integrerat med AEM via en koppling.
 
-1. Klicka på eller tryck på Importera i listrutan i rutan Översättningsjobb.
+1. Klicka på Importera i listrutan i rutan Översättningsjobb.
 1. Använd webbläsarens dialogruta för att markera filen som ska importeras.
-1. Klicka eller tryck på Stäng i dialogrutan Importera.
+1. Klicka på Stäng i dialogrutan Importera.

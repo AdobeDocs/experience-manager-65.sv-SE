@@ -8,9 +8,9 @@ discoiquuid: 0d5436c6-1976-496c-b9a7-7dc6e830bb5d
 docset: aem65
 feature: Correspondence Management
 exl-id: 71754e41-45d7-4cc5-ba49-0748bd51c0cf
-source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '6908'
+source-wordcount: '6901'
 ht-degree: 0%
 
 ---
@@ -388,7 +388,7 @@ Tänk på följande när du utformar tabeller:
    * sidhuvud och sidfot för ytterligare kolumner
    * breddförhållande för varje kolumn
 
-Du kan kapsla fragment i en bokstav. Det innebär att du kan lägga till ett fragment i ett fragment. Correspondence Management-lösningen stöder upp till fyra kapslingsnivåer i en bokstav: **Bokstaven**->**Fragment**->**Fragment**->**Fragment**->**Fragment.**
+Du kan kapsla fragment i en bokstav. Det innebär att du kan lägga till ett fragment i ett fragment. Correspondence Management-lösningen stöder upp till fyra kapslingsnivåer i en bokstav: **Bokstaven *>*Fragment *>*Fragment *>*Fragment *>*Fragment.**
 
 Ett detaljerat exempel på hur du använder statiska och dynamiska tabeller i layoutfragment finns i [Exempel med exempelfiler: använda statiska och dynamiska tabeller i en bokstav](#examplewithsamplefiles).
 

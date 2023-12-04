@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 2d35a2a4-0c8c-4b16-99a6-c6e6d66446dc
 docset: aem65
 exl-id: a7e16555-9bbe-4da2-817c-4495a0193f3f
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '1553'
+source-wordcount: '1540'
 ht-degree: 4%
 
 ---
@@ -102,11 +102,11 @@ Hur du väljer en sida beror på vilken vy du använder i konsolen:
 
 1. Kolumnvy:
 
-   * Tryck/klicka på miniatyrbilden för resursen - miniatyrbilden kommer att överlappas med en bock för att visa att den har markerats.
+   * Klicka på miniatyrbilden för resursen - miniatyrbilden visas med en bock som visar att den har markerats.
 
 1. Listvy:
 
-   * Tryck/klicka på miniatyrbilden för resursen - miniatyrbilden kommer att överlappas med en bock för att visa att den har markerats.
+   * Klicka på miniatyrbilden för resursen - miniatyrbilden visas med en bock som visar att den har markerats.
 
 1. Kortvy:
 
@@ -158,7 +158,7 @@ Hur du väljer en sida beror på vilken vy du använder i konsolen:
 
    * [Redigera innehållet i en befintlig komponent](/help/sites-authoring/editing-content.md#edit-configure-copy-cut-delete-paste) på sidan:
 
-      * Öppna komponentens verktygsfält genom att trycka eller klicka. Använd **Redigera** (penna) för att öppna dialogrutan.
+      * Öppna komponentens verktygsfält med ett klick. Använd **Redigera** (penna) för att öppna dialogrutan.
       * Öppna komponentens direktredigerare genom att trycka och hålla ned eller dubbelklicka. De tillgängliga åtgärderna visas (för vissa komponenter är det ett begränsat urval).
       * Om du vill visa alla tillgängliga åtgärder går du till helskärmsläge med:
 
@@ -166,16 +166,16 @@ Hur du väljer en sida beror på vilken vy du använder i konsolen:
 
    * [Konfigurera egenskaperna för en befintlig komponent](/help/sites-authoring/editing-content.md#component-edit-dialog)
 
-      * Öppna komponentens verktygsfält genom att trycka eller klicka. Använd **Konfigurera** (skiftnyckel) för att öppna dialogrutan.
+      * Öppna komponentens verktygsfält med ett klick. Använd **Konfigurera** (skiftnyckel) för att öppna dialogrutan.
 
    * [Flytta en komponent](/help/sites-authoring/editing-content.md#moving-a-component) antingen:
 
       * Dra den önskade komponenten till dess nya plats.
-      * Öppna komponentens verktygsfält genom att trycka eller klicka. Använd **Klipp ut** sedan **Klistra in** ikoner där det behövs.
+      * Öppna komponentens verktygsfält med ett klick. Använd **Klipp ut** sedan **Klistra in** ikoner där det behövs.
 
    * [Kopiera (och klistra in)](/help/sites-authoring/editing-content.md#edit-configure-copy-cut-delete-paste) en komponent:
 
-      * Öppna komponentens verktygsfält genom att trycka eller klicka. Använd **Kopiera** sedan **Klistra in** vid behov.
+      * Öppna komponentens verktygsfält med ett klick. Använd **Kopiera** sedan **Klistra in** vid behov.
 
    >[!NOTE]
    >
@@ -183,7 +183,7 @@ Hur du väljer en sida beror på vilken vy du använder i konsolen:
 
    * [Ta bort](/help/sites-authoring/editing-content.md#edit-configure-copy-cut-delete-paste) en komponent:
 
-      * Öppna komponentens verktygsfält genom att trycka eller klicka och sedan använda **Ta bort** -ikon.
+      * Öppna komponentverktygsfältet med ett klick och använd sedan kommandot **Ta bort** -ikon.
 
    * [Lägg till anteckningar](/help/sites-authoring/annotations.md#annotations) till sidan:
 
@@ -305,7 +305,7 @@ Låsikonen ser till exempel ut så här:
 
    ![screen-shot_2019-03-05at114412](assets/screen-shot_2019-03-05at114412.png)
 
-1. Tryck/klicka på den typ av referens som krävs för att visa mer information och (när det är lämpligt) vidta ytterligare åtgärder.
+1. Klicka på önskad referenstyp för att visa mer information och (vid behov) vidta ytterligare åtgärder.
 
 ### Skapa en version av din sida {#creating-a-version-of-your-page}
 
@@ -315,7 +315,7 @@ Skapa en [version](/help/sites-authoring/working-with-page-versions.md) på sida
 
    ![screen_shot_2018-03-21at16135](assets/screen_shot_2018-03-21at161355.png)
 
-1. Tryck/klicka på uppilen längst ned till höger i kolumnen Tidslinje för att visa extra knappar, inklusive **Spara som version**.
+1. Klicka på uppilen längst ned till höger i tidslinjen för att visa extra knappar, inklusive **Spara som version**.
 
    ![screen-shot_2019-03-05at114600](assets/screen-shot_2019-03-05at114600.png)
 
@@ -331,7 +331,7 @@ Samma grundläggande funktion används när du återställer och/eller jämför 
 
    Om en version av sidan redan har sparats visas den på tidslinjen.
 
-1. Tryck/klicka på den version som du vill återställa - då visas ytterligare åtgärdsknappar:
+1. Klicka på den version som du vill återställa. Då visas ytterligare åtgärdsknappar:
 
    * **Återgå till den här versionen**
 

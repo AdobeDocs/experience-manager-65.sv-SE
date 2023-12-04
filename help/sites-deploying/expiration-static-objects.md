@@ -7,9 +7,9 @@ topic-tags: configuring
 content-type: reference
 feature: Configuring
 exl-id: bfd5441c-19cc-4fa8-b597-b1221465f75d
-source-git-commit: 3885cc51f7e821cdb352737336a29f9c4f0c2f41
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '419'
+source-wordcount: '416'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ Detta har följande effekt:
 * Avlastar begäranden från serverinfrastrukturen.
 * Förbättrar sidinläsningens prestanda när webbläsaren cachelagrar objekt i webbläsarens cache.
 
-Förfallodatum anges av HTTP-standarden med avseende på &quot;förfallodatum&quot; för filer (se t.ex. kapitel 14.21 i [RFC 2616](https://www.ietf.org/rfc/rfc2616.txt) &quot; Hypertext Transfer Protocol - HTTP 1.1&quot;). I den här standarden används rubriken för att tillåta klienter att cachelagra objekt tills de betraktas som inaktuella. sådana objekt cachelagras under den angivna tiden utan att någon statuskontroll görs på den ursprungliga servern.
+Förfallotider anges av HTTP-standarden med avseende på &quot;filernas förfallodatum&quot; (se t.ex. kapitel 14.21 i [RFC 2616](https://www.ietf.org/rfc/rfc2616.txt) &quot; Hypertext Transfer Protocol - HTTP 1.1&quot;). I den här standarden används rubriken för att tillåta klienter att cachelagra objekt tills de betraktas som inaktuella. Sådana objekt cachelagras under den angivna tiden utan att någon statuskontroll görs på den ursprungliga servern.
 
 >[!NOTE]
 >
@@ -31,11 +31,11 @@ Förfallodatum anges av HTTP-standarden med avseende på &quot;förfallodatum&qu
 >
 >Syftet med Dispatcher är att cachelagra data framför Adobe Experience Manager (AEM).
 
-Alla filer som inte är dynamiska och som inte ändras över tid kan och bör cachas. Konfigurationen för Apache HTTPD-servern kan se ut som något av följande, beroende på miljön:
+Alla filer, som inte är dynamiska och som inte ändras över tid, kan och bör cachas. Konfigurationen för Apache HTTPD-servern kan se ut som något av följande, beroende på miljön:
 
 >[!CAUTION]
 >
->Du måste vara försiktig när du definierar den tidsperiod under vilken ett objekt anses vara uppdaterat. Som det finns *ingen kontroll förrän den angivna tidsperioden har gått ut* kan klienten presentera gammalt innehåll från cachen.
+>Var försiktig när du definierar den tidsperiod under vilken ett objekt anses vara uppdaterat. Som det finns *ingen kontroll förrän den angivna tidsperioden har gått ut* kan klienten presentera gammalt innehåll från cachen.
 
 1. **För en Author-instans:**
 

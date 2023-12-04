@@ -8,9 +8,9 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: operations
 role: Developer
 exl-id: 28abf044-6c8e-4578-ae2e-54cdbd694c5f
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '1876'
+source-wordcount: '1858'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 Forms-tjänsten kan beräkna de värden som en användare anger i ett formulär och visa resultaten. Om du vill beräkna formulärdata måste du utföra två uppgifter. Först skapar du ett formulärdesignskript som beräknar formulärdata. En formulärdesign har stöd för tre typer av skript. En skripttyp körs på klienten, en annan på servern och den tredje typen körs på både servern och klienten. Skripttypen som beskrivs i det här avsnittet körs på servern. Serverberäkningar stöds för omformningar av HTML, PDF och formulärguiden (utgått).
 
-Som en del av formulärdesignprocessen kan du använda beräkningar och skript för att ge en bättre användarupplevelse. Beräkningar och skript kan läggas till i de flesta formulärfält och objekt. Du måste skapa ett formulärdesignskript för att kunna utföra beräkningsåtgärder på data som användaren matar in i ett interaktivt formulär.
+Som en del av formulärdesignprocessen kan du använda beräkningar och skript för att ge en bättre användarupplevelse. Beräkningar och skript kan läggas till i de flesta formulärfält och objekt. Skapa ett formulärdesignskript för att utföra beräkningsåtgärder på data som användaren matar in i ett interaktivt formulär.
 
 Användaren anger värden i formuläret och klickar på knappen Beräkna för att visa resultatet. I följande process beskrivs ett exempelprogram som gör att en användare kan beräkna data:
 

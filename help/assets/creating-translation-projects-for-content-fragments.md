@@ -8,10 +8,10 @@ content-type: reference
 feature: Content Fragments
 role: User, Admin
 exl-id: 19bb58da-8220-404e-bddb-34be94a3a7d7
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '917'
-ht-degree: 3%
+source-wordcount: '926'
+ht-degree: 5%
 
 ---
 
@@ -56,12 +56,12 @@ Om innehållsfragmentet innehåller en samling, översätts resurserna i samling
 
 Om du vill kunna översätta innehållsfragment som innehåller blandade media måste du först redigera standardöversättningsramverket för att aktivera översättning av textbundna resurser och samlingar som är kopplade till innehållsfragment.
 
-1. Klicka/tryck på AEM logotyp och navigera till **[!UICONTROL Tools > Deployment > Cloud Services]**.
-1. Sök **[!UICONTROL Translation Integration]** under **[!UICONTROL Adobe Marketing Cloud]** och klicka/peka **[!UICONTROL Show Configurations]**.
+1. Klicka på AEM logotyp och navigera till **[!UICONTROL Tools > Deployment > Cloud Services]**.
+1. Sök **[!UICONTROL Translation Integration]** under **[!UICONTROL Adobe Marketing Cloud]** och klicka **[!UICONTROL Show Configurations]**.
 
    ![chlimage_1-444](assets/chlimage_1-444.png)
 
-1. Klicka/tryck i listan över tillgängliga konfigurationer **[!UICONTROL Default configuration (Translation Integration configuration)]** för att öppna **[!UICONTROL Default configuration]** sida.
+1. Klicka på i listan över tillgängliga konfigurationer **[!UICONTROL Default configuration (Translation Integration configuration)]** för att öppna **[!UICONTROL Default configuration]** sida.
 
    ![chlimage_1-445](assets/chlimage_1-445.png)
 
@@ -69,7 +69,7 @@ Om du vill kunna översätta innehållsfragment som innehåller blandade media m
 
    ![chlimage_1-446](assets/chlimage_1-446.png)
 
-1. Navigera till **[!UICONTROL Assets]** och välja **[!UICONTROL Inline Media Assets and Associated Collections]** från **[!UICONTROL Translate Content Fragment Assets]** lista. Klicka/tryck på **[!UICONTROL OK]** för att spara ändringarna.
+1. Navigera till **[!UICONTROL Assets]** och välja **[!UICONTROL Inline Media Assets and Associated Collections]** från **[!UICONTROL Translate Content Fragment Assets]** lista. Klicka **[!UICONTROL OK]** för att spara ändringarna.
 
    ![chlimage_1-447](assets/chlimage_1-447.png)
 
@@ -77,7 +77,7 @@ Om du vill kunna översätta innehållsfragment som innehåller blandade media m
 
    ![chlimage_1-448](assets/chlimage_1-448.png)
 
-1. Klicka/tryck på **[!UICONTROL Insert Asset]** -ikon.
+1. Klicka på **[!UICONTROL Insert Asset]** -ikon.
 
    ![chlimage_1-449](assets/chlimage_1-449.png)
 
@@ -85,28 +85,28 @@ Om du vill kunna översätta innehållsfragment som innehåller blandade media m
 
    ![infoga resurs i innehållsfragment](assets/column-view.png)
 
-1. Klicka/tryck på **[!UICONTROL Associate Content]** -ikon.
+1. Klicka på **[!UICONTROL Associate Content]** -ikon.
 
    ![chlimage_1-451](assets/chlimage_1-451.png)
 
-1. Klicka/tryck på **[!UICONTROL Associate Content]**.
+1. Klicka på **[!UICONTROL Associate Content]**.
 
    ![chlimage_1-452](assets/chlimage_1-452.png)
 
-1. Markera en samling och ta med den i innehållsfragmentet. Klicka/tryck på **[!UICONTROL Save]**.
+1. Markera en samling och ta med den i innehållsfragmentet. Klicka på **[!UICONTROL Save]**.
 
    ![chlimage_1-453](assets/chlimage_1-453.png)
 
-1. Markera innehållsfragmentet och klicka/tryck på **[!UICONTROL GlobalNav]** -ikon.
+1. Markera innehållsfragmentet och klicka på **[!UICONTROL GlobalNav]** -ikon.
 1. Välj **[!UICONTROL References]** från menyn för att visa **[!UICONTROL References]** fönster.
 
    ![chlimage_1-454](assets/chlimage_1-454.png)
 
-1. Klicka/tryck **[!UICONTROL Language Copies]** under **[!UICONTROL Copies]** för att visa språkkopiorna.
+1. Klicka **[!UICONTROL Language Copies]** under **[!UICONTROL Copies]** för att visa språkkopiorna.
 
    ![chlimage_1-455](assets/chlimage_1-455.png)
 
-1. Klicka/tryck **[!UICONTROL Create & Translate]** längst ned på panelen för att visa **[!UICONTROL Create & Translate]** -dialogrutan.
+1. Klicka **[!UICONTROL Create & Translate]** längst ned på panelen för att visa **[!UICONTROL Create & Translate]** -dialogrutan.
 
    ![chlimage_1-456](assets/chlimage_1-456.png)
 
@@ -118,7 +118,7 @@ Om du vill kunna översätta innehållsfragment som innehåller blandade media m
 
    ![chlimage_1-458](assets/chlimage_1-458.png)
 
-1. Ange projektets namn i **[!UICONTROL Project Title]** och sedan klicka/peka **Skapa**.
+1. Ange projektets namn i **[!UICONTROL Project Title]** och klicka sedan på **Skapa**.
 
    ![chlimage_1-459](assets/chlimage_1-459.png)
 
@@ -126,7 +126,7 @@ Om du vill kunna översätta innehållsfragment som innehåller blandade media m
 
    ![chlimage_1-460](assets/chlimage_1-460.png)
 
-1. Klicka på/tryck på projektpanelen för att öppna sidan med projektinformation.
+1. Klicka på projektpanelen för att öppna sidan med projektinformation.
 
    ![chlimage_1-461](assets/chlimage_1-461.png)
 
@@ -139,7 +139,7 @@ Om du vill kunna översätta innehållsfragment som innehåller blandade media m
 
    ![chlimage_1-463](assets/chlimage_1-463.png)
 
-1. Klicka på/tryck på innehållsfragmentet för att kontrollera sökvägen för de översatta associerade resurserna.
+1. Klicka på innehållsfragmentet för att kontrollera sökvägen till de översatta associerade resurserna.
 
    ![chlimage_1-464](assets/chlimage_1-464.png)
 

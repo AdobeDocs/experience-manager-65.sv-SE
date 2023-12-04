@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: d701e4ba-417f-4b57-b103-27fd25290736
 feature: Configuring
 exl-id: 5ecd09a3-c4be-4361-9816-03106435346f
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '1971'
+source-wordcount: '1954'
 ht-degree: 0%
 
 ---
@@ -84,7 +84,7 @@ Så här uppdaterar du en konfiguration med webbkonsolen:
 
 1. Öppna **Konfiguration** fliken Web Console av antingen:
 
-   * Öppna webbkonsolen från länken på panelen **Verktyg -> Åtgärder** -menyn. När du har loggat in på konsolen kan du använda den nedrullningsbara menyn i:
+   * Öppna webbkonsolen från länken på panelen **Verktyg > Åtgärder** -menyn. När du har loggat in på konsolen kan du använda den nedrullningsbara menyn i:
 
      **OSGi >**
 

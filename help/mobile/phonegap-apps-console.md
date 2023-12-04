@@ -6,9 +6,9 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-adobe-phonegap-enterprise
 exl-id: 49e0b3f6-7ac7-4417-9c31-cc3d3c2305f3
-source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '2685'
+source-wordcount: '2675'
 ht-degree: 0%
 
 ---
@@ -107,16 +107,16 @@ När du har skapat ett mobilprogram kan du ändra egenskaperna.
 
 #### Ändra titel, beskrivning och ikon {#change-the-title-description-and-icon}
 
-1. Klicka på eller tryck på Appar på listen.
+1. Klicka på Appar på listen.
 1. Välj det program som ska konfigureras och klicka på ikonen Visa sidegenskaper.
 
    ![Ikonen Visa sidegenskaper, som indikeras av bokstaven I inuti en cirkel.](do-not-localize/chlimage_1-8.png)
 
-1. Om du vill ändra egenskapsvärden klickar eller trycker du på ikonen Redigera.
+1. Om du vill ändra egenskapsvärden klickar du på ikonen Redigera.
 
    ![Ikonen Redigera visas med en penna.](do-not-localize/chlimage_1-9.png)
 
-1. Konfigurera de grundläggande och avancerade egenskaperna och klicka eller tryck sedan på ikonen Klar.
+1. Konfigurera de grundläggande och avancerade egenskaperna och klicka sedan på ikonen Klar.
 
    ![Klar-ikonen visas med en bockmarkeringssymbol.](do-not-localize/chlimage_1-10.png)
 
@@ -127,11 +127,11 @@ När du har skapat ett mobilprogram kan du ändra egenskaperna.
 
    ![Ikonen Visa programegenskaper som indikeras av bokstaven I inuti en cirkel.](do-not-localize/chlimage_1-11.png)
 
-1. Om du vill ändra egenskapsvärden klickar eller trycker du på ikonen Redigera.
+1. Om du vill ändra egenskapsvärden klickar du på ikonen Redigera.
 
    ![Ikonen Redigera visas med en penna.](do-not-localize/chlimage_1-12.png)
 
-1. Konfigurera egenskaperna på flikarna Grundläggande, Avancerat, Version och Analytics och klicka eller tryck sedan på ikonen Done (Klar).
+1. Konfigurera egenskaperna på flikarna Grundläggande, Avancerat, Version och Analytics och klicka sedan på ikonen Done (Klar).
 
    ![Klar-ikonen visas med en bockmarkeringssymbol.](do-not-localize/chlimage_1-13.png)
 
@@ -139,8 +139,8 @@ När du har skapat ett mobilprogram kan du ändra egenskaperna.
 
 När du har skapat mobilprogrammet lägger du till innehåll som används som programgränssnitt.
 
-1. Klicka på eller tryck på Appar på listen.
-1. Klicka eller tryck på programmet och sedan på engelska.
+1. Klicka på Appar på listen.
+1. Klicka på programmet och sedan på engelska.
 1. Redigera hemsidan eller lägg till underordnade sidor efter behov.
 
 ### Flytta innehåll till mobilprogram {#moving-content-to-mobile-applications}
@@ -160,8 +160,8 @@ Innehållssynkronisering spårar även när uppdateringarna utförs. Med den hä
 
 Utför följande procedur på instansen där du vill uppdatera cachen. Om ditt program till exempel begär uppdateringar från publiceringsinstansen utför du proceduren på publiceringsinstansen.
 
-1. Klicka eller tryck på Appar på listen och sedan på eller på ditt program.
-1. Markera välkomstsidan och klicka eller tryck sedan på ikonen Uppdatera cache.
+1. Klicka på Appar på listen och klicka sedan på programmet.
+1. Markera välkomstsidan och klicka sedan på ikonen Uppdatera cache.
 
    ![Ikonen Uppdatera cache indikeras av en randig rad med en återvinningssymbol över den.](do-not-localize/chlimage_1-14.png)
 
@@ -344,7 +344,7 @@ Lägg till formaterad text i programinnehållet.
 
 Komponenten Store Locations ger användarna verktyg för att hitta affärskommunikation:
 
-* Sökning
+* Sök
 * Listor över platser som ligger nära eller långt från enhetens GPS-koordinater.
 
 Komponenten kräver att databasen innehåller platsinformation för varje butik. Exempelplatser installeras på noden /etc/commerce/locations/adobe. ![chlimage_1-152](assets/chlimage_1-152.png)

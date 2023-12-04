@@ -8,9 +8,9 @@ content-type: reference
 topic-tags: personalization
 discoiquuid: d53ef3e2-14ca-4444-b563-be67be15c040
 exl-id: 7d60673e-484a-4447-83cf-d62a0d7ad745
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '1286'
+source-wordcount: '1281'
 ht-degree: 0%
 
 ---
@@ -96,7 +96,7 @@ I det här avsnittet beskrivs endast specifika länkar till Adobe Campaign. Mer 
    * **Adobe Campaign: Avbeställ tjänsterna**: gör att du kan avbryta prenumerationen på en mottagare i Adobe Campaign.
 
 1. Du måste ha en **Krypterad primärnyckel** -komponenten i varje formulär. Den här komponenten definierar vilken URL-parameter som används för att acceptera den krypterade primärnyckeln för en Adobe Campaign-profil. I Komponenter väljer du Adobe Campaign så att bara de komponenterna visas.
-1. Dra komponenten **Krypterad primärnyckel** till formuläret (var som helst) och klicka eller tryck på **Konfiguration** -ikon. I **Adobe Campaign** anger du ett namn för URL-parametern. Klicka eller tryck på bockmarkeringen för att spara ändringarna.
+1. Dra komponenten **Krypterad primärnyckel** till formuläret (var som helst) och klicka på **Konfiguration** -ikon. I **Adobe Campaign** anger du ett namn för URL-parametern. Klicka på bockmarkeringen för att spara ändringarna.
 
    Genererade länkar till det här formuläret måste använda den här URL-parametern och tilldela den krypterade primärnyckeln till en Adobe Campaign-profil. Den krypterade primärnyckeln måste vara rätt URL-kodad (procent).
 

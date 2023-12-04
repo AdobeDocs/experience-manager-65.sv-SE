@@ -2,9 +2,9 @@
 title: Använda RTF-redigeraren för att skapa innehåll
 description: Använda RTF-redigeraren för att skapa innehåll i Adobe Experience Manager 6.5.
 exl-id: 90cb8893-65f3-4d82-9880-ce8dd80891b1
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '266'
+source-wordcount: '264'
 ht-degree: 0%
 
 ---
@@ -19,11 +19,11 @@ RTE (Rich Text Editor) är en grundläggande byggsten för att infoga textinneh�
 
 ## Direktredigering {#in-place-editing}
 
-Om du markerar en textbaserad komponent med ett enda tryck eller klick visas [komponentverktygsfältet](/help/sites-authoring/editing-content.md#edit-configure-copy-cut-delete-paste) som med alla komponenter.
+Om du markerar en textbaserad komponent med ett enda klick visas [komponentverktygsfältet](/help/sites-authoring/editing-content.md#edit-configure-copy-cut-delete-paste) som med alla komponenter.
 
 ![screen_shot_2018-03-2163054](assets/screen_shot_2018-03-21at163054.png)
 
-Om du trycker/klickar igen eller först markerar komponenten med en långsam dubbelknacka/klick öppnas redigering på plats, som har ett eget verktygsfält. Här kan du redigera innehållet och göra grundläggande formateringsändringar.
+Om du trycker/klickar igen eller först markerar komponenten med ett långsamt dubbelklick öppnas redigering på plats, som har ett eget verktygsfält. Här kan du redigera innehållet och göra grundläggande formateringsändringar.
 
 ![screen_shot_2018-03-21at163214](assets/screen_shot_2018-03-21at163214.png)
 

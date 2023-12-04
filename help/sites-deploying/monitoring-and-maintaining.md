@@ -1,6 +1,6 @@
 ---
-title: Övervaka och underhålla Adobe Experience Manager-instansen
-description: Lär dig övervaka och underhålla din Adobe Experience Manager-instans.
+title: Övervaka och underhålla din Adobe Experience Manager-instans
+description: Lär dig hur du övervakar och underhåller din Adobe Experience Manager-instans.
 uuid: 14466552-5c92-4730-a427-85675a2b121c
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,14 +10,14 @@ discoiquuid: 5d2364b7-4497-4f8b-85ef-6e780bfb8c36
 docset: aem65
 feature: Configuring
 exl-id: d3375935-090d-4052-8234-68ef4ddbab6a
-source-git-commit: c7c32130a3257c14c98b52f9db31d80587d7993a
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '5939'
+source-wordcount: '5793'
 ht-degree: 0%
 
 ---
 
-# Övervaka och underhålla Adobe Experience Manager-instansen{#monitoring-and-maintaining-your-aem-instance}
+# Övervaka och underhålla din Adobe Experience Manager-instans{#monitoring-and-maintaining-your-aem-instance}
 
 När AEM har distribuerats måste du övervaka och underhålla deras åtgärder, prestanda och integritet.
 
@@ -69,7 +69,7 @@ Efter installationen, eller betydande ändringar i konfigurationen, skapar du en
 
 För att utföra den här uppgiften, [säkerhetskopiera hela lagringsplatsen](#backing-up-your-repository) och sedan:
 
-1. Sluta AEM.
+1. Stoppa AEM.
 1. Säkerhetskopiera hela `<cq-installation-dir>` från filsystemet.
 
 >[!CAUTION]
@@ -84,7 +84,7 @@ För att utföra den här uppgiften, [säkerhetskopiera hela lagringsplatsen](#b
 >
 >Diskspegling kan också användas som en säkerhetskopieringsmekanism.
 
-### Säkerhetskopiera databasen {#backing-up-your-repository}
+### Säkerhetskopiera din lagringsplats {#backing-up-your-repository}
 
 The [Säkerhetskopiering och återställning](/help/sites-administering/backup-and-restore.md) i CRX-dokumentationen täcker alla problem som rör säkerhetskopiering av CRX-databasen.
 
@@ -94,11 +94,11 @@ Mer information om hur du gör en &quot;hot&quot;-säkerhetskopiering online fin
 
 The **Rensa versioner** är avsett för att rensa versioner av en nod eller en hierarki av noder i din databas. Dess främsta syfte är att hjälpa dig att minska storleken på databasen genom att ta bort tidigare versioner av dina noder.
 
-I det här avsnittet behandlas underhållsåtgärder som rör versionsfunktionen i AEM. The **Rensa version** är avsett för att rensa versioner av en nod eller en hierarki av noder i din databas. Dess främsta syfte är att hjälpa dig att minska storleken på databasen genom att ta bort tidigare versioner av dina noder.
+I det här avsnittet behandlas underhållsåtgärder som rör versionsfunktionen i AEM. The **Rensa version** är avsett för att rensa versioner av en nod eller en hierarki av noder i din databas. Dess primära syfte är att hjälpa dig att minska storleken på din lagringsplats genom att ta bort gamla versioner av dina noder.
 
-### Översikt {#overview}
+### Överblick {#overview}
 
-The **Rensa versioner** finns som en underhållsåtgärd varje vecka. Innan den används för första gången måste den läggas till och sedan konfigureras. Därefter kan det köras på begäran eller varje vecka.
+The **Rensa versioner** finns som en underhållsåtgärd varje vecka. Innan du använder den för första gången måste den läggas till och sedan konfigureras. Därefter kan det köras på begäran eller varje vecka.
 
 ### Rensa versioner av en webbplats {#purging-versions-of-a-web-site}
 
@@ -184,7 +184,7 @@ Konsolen ger dessutom användbar information om versionerna:
 
 I nästa exempel:
 
-* The **[!DNL Shirts]** versionerna rensas eftersom versionsåldern är större än två dagar.
+* Versionerna **[!DNL Shirts]** rensas eftersom deras versionsålder är högre än två dagar.
 * The **[!DNL Tonga Fashions!]** versionerna rensas eftersom deras antal versioner är större än 5.
 
 ![global_version_screenshot](assets/global_version_screenshot.png)
@@ -207,7 +207,7 @@ Rotation av loggfiler avser den process som begränsar filens tillväxt genom at
 
 * The `error.log` filen får ett nytt namn enligt mönstret {original_filename} `.yyyy-MM-dd`. Den aktuella loggfilen får till exempel ett nytt namn den 11 juli 2010 `error.log-2010-07-10`, sedan en ny `error.og` skapas.
 
-* Tidigare loggfiler tas inte bort, så det är ditt ansvar att regelbundet rensa gamla loggfiler för att begränsa diskanvändningen.
+* Tidigare loggfiler tas inte bort, så det är ditt ansvar att rensa gamla loggfiler med jämna mellanrum för att begränsa diskanvändningen.
 
 >[!NOTE]
 >
@@ -294,7 +294,7 @@ I vissa fall kanske du vill skapa en anpassad loggfil med en annan loggnivå. G�
 
      Där `<identifier>` ersätts med fritext som du (måste) ange för att identifiera instansen (du kan inte utelämna den här informationen).
 
-     Till exempel, `org.apache.sling.commons.log.LogManager.factory.config-MINE`
+     Exempel: `org.apache.sling.commons.log.LogManager.factory.config-MINE`
 
    * Typ: `sling:OsgiConfig`
 
@@ -332,7 +332,7 @@ I vissa fall kanske du vill skapa en anpassad loggfil med en annan loggnivå. G�
 
         Typ: `String`
 
-        Värde: ange loggmeddelandets mönster efter behov, till exempel
+        Värde: ange mönstret för loggmeddelandet efter behov. till exempel
 
         `{0,date,dd.MM.yyyy HH:mm:ss.SSS} *{4}* [{2}] {3} {5}`
 
@@ -391,7 +391,7 @@ I vissa fall kanske du vill skapa en anpassad loggfil med en annan loggnivå. G�
 
    * Namn: `org.apache.sling.commons.log.LogManager.factory.writer-<identifier>` (skrivprogram)
 
-     Precis som med Logger, `<identifier>` ersätts med fri text som du (måste) anger för att identifiera instansen (du kan inte utelämna den här informationen). Till exempel, `org.apache.sling.commons.log.LogManager.factory.writer-MINE`
+     Precis som med Logger, `<identifier>` ersätts med fri text som du (måste) anger för att identifiera instansen (du kan inte utelämna den här informationen). Exempel: `org.apache.sling.commons.log.LogManager.factory.writer-MINE`
 
    * Typ: `sling:OsgiConfig`
 
@@ -483,7 +483,7 @@ Dessa poster innehåller samma information som den som visas när du redigerar e
 
 #### OSGi Granskningsposter från webbkonsolen {#osgi-audit-records-from-the-web-console}
 
-OSGi-händelser genererar också granskningsposter som kan ses av **Konfigurationsstatus** tab -> **Loggfiler** i AEM webbkonsol:
+OSGi-händelser genererar också granskningsposter som kan ses av **Konfigurationsstatus** tab > **Loggfiler** i AEM webbkonsol:
 
 ![screen_shot_2012-02-13at50346pm](assets/screen_shot_2012-02-13at50346pm.png)
 
@@ -923,9 +923,9 @@ Verktygskommandot `jconsole` är tillgängligt med JDK.
 
    Nu kan du välja andra alternativ.
 
-### Övervakningsprestanda med (J)VisualVM {#monitoring-performance-using-j-visualvm}
+### Övervaka prestanda med hjälp av (J)VisualVM {#monitoring-performance-using-j-visualvm}
 
-För JDK 6-8, kommandot tool `visualvm` är tillgängligt. När du har installerat en JDK kan du göra följande:
+För JDK 6-8 är verktygskommandot `visualvm` tillgängligt. När du har installerat en JDK kan du göra följande:
 
 1. Starta AEM.
 
@@ -1037,7 +1037,7 @@ Använd en databasfråga, via CRXDE - Verktyg - Fråga, om du vill se hur många
 
 #### Vilken är den genomsnittliga storleken på resurserna? {#what-is-the-average-size-of-the-assets}
 
-Så här avgör du den totala storleken på `/var/dam` mapp:
+Så här fastställer du mappens `/var/dam` totala storlek:
 
 1. Använd WebDAV för att mappa databasen till det lokala filsystemet.
 
@@ -1140,7 +1140,7 @@ Om det inte finns tillräckligt med diskutrymme på datorn eller om det uppstår
    * [Felsökningsfilter för CQ WCM](/help/sites-deploying/osgi-configuration-settings.md#daycqwcmdebugfilter)
    * [Loggers](/help/sites-deploying/monitoring-and-maintaining.md#activating-the-debug-log-level)
 
-* Om och hur du har konfigurerat [Rensning av version](/help/sites-deploying/version-purging.md)
+* Om och hur du har konfigurerat [versionsrensning](/help/sites-deploying/version-purging.md)
 * Kunskapsbasen:
 
    * [För många öppna filer](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17470.html?lang=en)
@@ -1159,7 +1159,7 @@ Om du ser att instansens prestanda försämras efter varje omstart (ibland en ve
 
 Java™ Virtual Machine (JVM) har förbättrats när det gäller justering (särskilt sedan Java™ 7). Därför är det ofta lämpligt att ange en rimlig fast JVM-storlek och att använda standardvärdena.
 
-Om standardinställningarna inte är lämpliga är det viktigt att du skapar en metod för att övervaka och utvärdera GC-prestanda. Gör det innan du försöker justera JVM. Den här processen kan omfatta övervakningsfaktorer som stackstorlek, algoritm och andra aspekter.
+Om standardinställningarna inte är lämpliga är det viktigt att upprätta en metod för att övervaka och utvärdera GC-prestanda. Gör det innan du försöker justera JVM. Den här processen kan omfatta övervakningsfaktorer, inklusive heapstorlek, algoritm och andra aspekter.
 
 Några vanliga alternativ är:
 

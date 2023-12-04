@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 873ce073-0055-4e1b-b3c6-ae7967700894
 docset: aem65
 exl-id: eabd8335-6140-4c15-8cff-21608719aa5f
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '4963'
+source-wordcount: '4830'
 ht-degree: 0%
 
 ---
@@ -602,7 +602,7 @@ Skrivskyddad.
 * Argument: none
 * Returnerat värde: ingen
 
-**joinCluster** Lägger till den här databasen i ett kluster som en nod som styrs av klusterhanteraren. Du måste ange ett användarnamn och lösenord för autentisering. Anslutningen använder grundläggande autentisering. Säkerhetsuppgifterna är base-64-kodade innan de skickas till servern.
+**joinCluster** Lägger till den här databasen i ett kluster som en nod som styrs av klusterhanteraren. Ange ett användarnamn och lösenord för autentisering. Anslutningen använder grundläggande autentisering. Säkerhetsuppgifterna är base-64-kodade innan de skickas till servern.
 
 * Argument:
 

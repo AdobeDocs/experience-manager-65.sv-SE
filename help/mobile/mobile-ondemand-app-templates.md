@@ -1,17 +1,13 @@
 ---
 title: Skapa och lägga till mallar och komponenter
-seo-title: Creating and Adding Templates and Components
 description: Följ den här sidan om du vill veta mer om hur du skapar och lägger till mallar och komponenter i programmet. På sidan används Geometrixx Unlimited App som ett program som innehåller en exempelprogrammall och sidmallar.
-seo-description: Follow this page to learn about creating and adding templates and components to your app. The page uses Geometrixx Unlimited App as the app that contains a sample app template and page templates.
-uuid: 3a93017c-8094-413f-a01c-9b72025a2b20
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
-discoiquuid: ec4ada04-e429-4ad4-a060-2dccac847cf0
 exl-id: 5f050baa-fe10-4acc-ad32-de20793edc13
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '1154'
+source-wordcount: '1151'
 ht-degree: 0%
 
 ---
@@ -45,7 +41,7 @@ När du skapar ett program baserat på en mall för ett annat program får du et
 Steg för att skapa ett program baserat på en appmall:
 
 1. Gå till AEM Mobile programkatalog: *&lt;server-url>/aem/apps.html/content/mobile/apps*
-1. Välj **Skapa** —> **App** som visas nedan
+1. Välj **Skapa** -> **App** som visas nedan
 
 När du har skapat ett program med den här mallen kan du lägga till artiklar, banners och samlingar i programmet. Mer information om hur du återbesöker, skapar artiklar, banners och samlingar finns i [Innehållshanteringsåtgärder](/help/mobile/mobile-apps-ondemand-manage-content-ondemand.md).
 
@@ -90,7 +86,7 @@ Obegränsad artikel är en exempelmall som representerar en typisk AEM Mobile On
 
 När en författare har skapat en artikel kan han eller hon redigera dess innehåll genom att lägga till komponenter som text och bilder. Artiklar är ett tillägg till AEM sidmallar.
 
-Markera en artikel som du vill redigera och klicka på **Redigera** för att lägga till komponenter i artikeln.
+Markera en artikel som du vill redigera och klicka sedan på **Redigera** för att lägga till komponenter i artikeln.
 
 ![chlimage_1-72](assets/chlimage_1-72.png) ![chlimage_1-73](assets/chlimage_1-73.png)
 

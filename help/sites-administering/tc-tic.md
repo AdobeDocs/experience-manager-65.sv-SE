@@ -4,9 +4,9 @@ description: Lär dig hur du konfigurerar översättningsintegreringsramverket i
 contentOwner: Guillaume Carlino
 feature: Language Copy
 exl-id: 7562754b-d9fd-441b-8ae5-c7eebe458cef
-source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '1571'
+source-wordcount: '1497'
 ht-degree: 0%
 
 ---
@@ -180,13 +180,13 @@ Resursegenskaperna styr hur resurser konfigureras. Mer information om översätt
  </tbody>
 </table>
 
-1. Klicka på eller tryck på Verktyg > Åtgärder > Moln > Cloud Service i sidofältet.
+1. Klicka på Verktyg > Åtgärder > Moln > Cloud Service i sidlisten.
 1. I området Översättningsintegrering avgör om några konfigurationer har skapats vilken länk som visas:
 
-   * Om inga konfigurationer har skapats klickar du på eller trycker på Konfigurera nu.
-   * Om det redan finns konfigurationer klickar eller trycker du på Visa konfigurationer och sedan på länken + som visas bredvid Tillgängliga konfigurationer.
+   * Om inga konfigurationer har skapats klickar du på Konfigurera nu.
+   * Om det redan finns konfigurationer klickar du på Visa konfigurationer och sedan på länken + som visas bredvid Tillgängliga konfigurationer.
 
-1. Ange ett namn för konfigurationen och klicka eller tryck sedan på Skapa.
+1. Ange ett namn för konfigurationen och klicka sedan på Skapa.
 1. Konfigurera egenskaperna på fliken Platser, Communities och Assets och klicka sedan på OK.
 
 ## Konfigurera sidor för översättning {#configuring-pages-for-translation}
@@ -208,16 +208,16 @@ Dessutom, för alla communities [SCF-komponenter](/help/communities/scf.md) på 
 
 Koppla en sida till översättningsleverantören som du använder för att översätta sidan och underordnade sidor.
 
-1. På webbplatskonsolen markerar du sidan som du vill konfigurera och klickar eller trycker på Visa egenskaper.
-1. Klicka eller tryck på Redigera och sedan på fliken Cloud Service.
-1. Klicka eller tryck på Add Configuration (Lägg till konfiguration) > Translation Integration (Översättningsintegrering).
-1. Välj den översättningsleverantör som ska användas och klicka eller tryck sedan på Klar.
+1. På webbplatskonsolen markerar du sidan som ska konfigureras och klickar på Visa egenskaper.
+1. Klicka på Redigera och sedan på fliken Cloud Service.
+1. Klicka på Lägg till konfiguration > Översättningsintegrering.
+1. Markera översättningsprovidern som ska användas och klicka sedan på Klar.
 
 ### Associera sidor med ett översättningsintegreringsramverk {#associating-pages-with-a-translation-integration-framework}
 
 Koppla en sida till översättningsintegreringsramverket som definierar hur du vill översätta sidan och underordnade sidor.
 
-1. På webbplatskonsolen markerar du sidan som du vill konfigurera och klickar eller trycker på Visa egenskaper.
-1. Klicka eller tryck på Redigera och sedan på fliken Cloud Service.
-1. Klicka eller tryck på Add Configuration (Lägg till konfiguration) > Translation Integration (Översättningsintegrering).
-1. Markera det översättningsintegreringsramverk som ska användas och klicka eller tryck sedan på Klar.
+1. På webbplatskonsolen markerar du sidan som ska konfigureras och klickar på Visa egenskaper.
+1. Klicka på Redigera och sedan på fliken Cloud Service.
+1. Klicka på Lägg till konfiguration > Översättningsintegrering.
+1. Välj det ramverk för översättningsintegrering som ska användas och klicka sedan på Klar.

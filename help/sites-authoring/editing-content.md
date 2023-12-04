@@ -7,10 +7,10 @@ topic-tags: page-authoring
 content-type: reference
 docset: aem65
 exl-id: d5cf4478-51e4-4ca8-b3f8-6d7caed7d515
-source-git-commit: 474a726058b141985f52a0faec6161a34be1e9dc
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '3016'
-ht-degree: 3%
+source-wordcount: '3015'
+ht-degree: 2%
 
 ---
 
@@ -387,7 +387,7 @@ I stället för att växla från redigering till [layoutläge](/help/sites-autho
 
    ![Redigeringsläge i formulär](assets/screen_shot_2018-03-22at133756.png)
 
-   Klicka eller tryck på **Layout** så att du kan justera komponentens layout.
+   Klicka på **Layout** så att du kan justera komponentens layout.
 
    ![Komponentverktygsfältet](do-not-localize/chlimage_1-21.png)
 

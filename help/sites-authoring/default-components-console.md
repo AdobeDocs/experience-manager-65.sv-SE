@@ -2,10 +2,10 @@
 title: Komponentkonsol
 description: Med komponentkonsolen kan du bläddra igenom alla komponenter som definierats för instansen och visa nyckelinformation för varje komponent.
 exl-id: d79107b9-dfa4-4e80-870e-0b7ea72f0bc7
-source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
 source-wordcount: '280'
-ht-degree: 20%
+ht-degree: 15%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 20%
 
 Med komponentkonsolen kan du bläddra igenom alla komponenter som definierats för instansen och visa nyckelinformation för varje komponent.
 
-Den finns under **Verktyg ->** **Allmänt ->** **Komponenter**. I konsolen finns kortvyn och listvyn. Eftersom det inte finns någon trädstruktur för komponenter är kolumnvyn inte tillgänglig.
+Den kan nås från **Verktyg >** **Allmänt >** **Komponenter**. I konsolen finns kortvyn och listvyn. Eftersom det inte finns någon trädstruktur för komponenter är kolumnvyn inte tillgänglig.
 
 ![screen-shot_2019-03-05at113145](assets/screen-shot_2019-03-05at113145.png)
 
@@ -21,7 +21,7 @@ Den finns under **Verktyg ->** **Allmänt ->** **Komponenter**. I konsolen finns
 >
 >Komponentkonsolen visar alla komponenter i systemet. The [Komponentbläddraren](/help/sites-authoring/author-environment-tools.md#components-browser) visar komponenter som är tillgängliga för författare och döljer komponentgrupper som börjar med en punkt ( `.`).
 
-## Sökning {#searching}
+## Sök {#searching}
 
 Med ikonen **Endast innehåll** (överst till vänster) kan du öppna **sökpanelen** och söka efter och/eller filtrera komponenterna:
 
@@ -29,7 +29,7 @@ Med ikonen **Endast innehåll** (överst till vänster) kan du öppna **sökpane
 
 ### Komponentinformation {#component-details}
 
-Om du vill visa information om en viss komponent trycker/klickar du på den nödvändiga resursen. Tre flikar innehåller:
+Om du vill visa information om en viss komponent klickar du på den önskade resursen. Tre flikar innehåller:
 
 * **Egenskaper**
 

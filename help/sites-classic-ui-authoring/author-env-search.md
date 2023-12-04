@@ -1,5 +1,5 @@
 ---
-title: Sökning
+title: Sök
 description: I författarmiljön i AEM finns olika sätt att söka efter innehåll, beroende på resurstypen.
 uuid: 6dd3df4d-6040-4230-8373-fc028687b675
 contentOwner: Chris Bohnert
@@ -9,14 +9,14 @@ content-type: reference
 discoiquuid: 8d32960c-47c3-4e92-b02e-ad4d8fea7b2d
 docset: aem65
 exl-id: 1f46a57f-4966-4dd1-8c99-c0740718ae76
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '469'
+source-wordcount: '412'
 ht-degree: 0%
 
 ---
 
-# Sökning{#searching}
+# Sök{#searching}
 
 I författarmiljön i AEM finns olika sätt att söka efter innehåll, beroende på resurstypen.
 

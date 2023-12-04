@@ -9,9 +9,9 @@ content-type: reference
 topic-tags: site-features
 discoiquuid: e3ccddb6-be5e-4e5f-a017-0eed263555ce
 exl-id: 1772368a-f5c9-440c-a92a-0f1d34cc4bf8
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '1304'
+source-wordcount: '1293'
 ht-degree: 1%
 
 ---
@@ -35,7 +35,7 @@ Style System ger en enhetlig lösning för både mallskaparens och innehållsfö
 
 Klassen style infogas sedan i elementet dekoration wrapper i komponenten så att komponentutvecklaren inte behöver bekymra sig om att hantera formaten utöver att tillhandahålla sina CSS-regler.
 
-## Översikt {#overview}
+## Ökning {#overview}
 
 Vanligtvis har du följande format när du använder Style System.
 
@@ -80,7 +80,7 @@ Om du vill använda Style System för dina egna komponenter gör du följande:
 
    ![Formatsystem för författaren](assets/style-system-author.png)
 
-1. Tryck eller klicka på **Stilar** i verktygsfältet i **Lista** om du vill öppna stilmenyn och ändra komponentens utseende.
+1. Klicka på **Stilar** i verktygsfältet i **Lista** om du vill öppna stilmenyn och ändra komponentens utseende.
 
    ![Välja format](assets/style-system-author2.png)
 
@@ -90,7 +90,7 @@ Om du vill använda Style System för dina egna komponenter gör du följande:
 
 ### Som mallskapare {#as-a-template-author}
 
-1. Under redigeringen av WKND:s engelska huvudsida på `http://<host>:<port>/sites.html/content/wknd/language-masters/en`, redigera sidans mall via **Sidinformation -> Redigera mall**.
+1. Under redigeringen av WKND:s engelska huvudsida på `http://<host>:<port>/sites.html/content/wknd/language-masters/en`, redigera sidans mall via **Sidinformation > Redigera mall**.
 
    ![Redigera mall](assets/style-system-edit-template.png)
 

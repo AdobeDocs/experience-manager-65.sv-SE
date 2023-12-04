@@ -10,10 +10,10 @@ topic-tags: integration
 content-type: reference
 discoiquuid: cf25c9a8-0555-4c67-8aa5-55984fd8d301
 exl-id: f14cc5fd-aeab-4619-b926-b6f1df7e50e5
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '495'
-ht-degree: 1%
+source-wordcount: '490'
+ht-degree: 2%
 
 ---
 
@@ -23,11 +23,11 @@ Skapa en BrightEdge-molnkonfiguration så att AEM kan ansluta med autentiserings
 
 När du skapar konfigurationen anger du en titel. Titeln bör vara beskrivande så att användarna kan korrelera konfigurationen med BrightEdge-kontot. När en sidförfattare eller administratör associerar en webbsida med BrightEdge-kontot visas den här titeln i en listruta.
 
-1. Klicka på Verktyg > Åtgärder > Moln > Cloud Services på listen.
+1. Klicka på Verktyg > Åtgärder > Moln > Cloud Service på listen.
 1. Klicka på länken som visas i avsnittet BrightStor Content Optimizer. Om en BrightEdge-konfiguration har skapats avgör länktexten:
 
-   * Konfigurera nu: Länken visas när ingen konfiguration har skapats.
-   * Visa konfigurationer: Länken visas när en eller flera konfigurationer har skapats.
+   * Konfigurera nu: Den här länken visas när ingen konfiguration har skapats.
+   * Visa konfigurationer: Den här länken visas när en eller flera konfigurationer har skapats.
 
    ![chlimage_1-4](assets/chlimage_1-4a.png)
 
@@ -39,7 +39,7 @@ När du skapar konfigurationen anger du en titel. Titeln bör vara beskrivande s
 
 Ändra användarnamn och lösenord för en BrightEdge-konfiguration vid behov. Ändringarna påverkar alla sidor som använder konfigurationen.
 
-1. Klicka på Verktyg > Åtgärder > Moln > Cloud Services på listen.
+1. Klicka på Verktyg > Åtgärder > Moln > Cloud Service på listen.
 1. Klicka på Visa konfigurationer i delen för BrightStor Content Optimizer.
 
    ![chlimage_1-5](assets/chlimage_1-5a.png)
@@ -54,7 +54,7 @@ Associera sidor med en BrightEdge-konfiguration för att skicka siddata till Bri
 1. Öppna konsolen för klassiska webbplatser. ([http://localhost:4502/siteadmin#/content](http://localhost:4502/siteadmin#/content))
 1. I trädet Webbplatser väljer du den mapp eller sida som innehåller den sida som du vill associera med BrightEdge-konfigurationen.
 1. Högerklicka på sidan i listan över sidor för att konfigurera och klicka på Egenskaper.
-1. På fliken Cloud Services klickar du på knappen Lägg till tjänst och sedan på OK i dialogrutan Cloud Services.
+1. På fliken Cloud Service klickar du på knappen Lägg till tjänst och i dialogrutan Cloud Service väljer du BrightStor Content Optimizer och klickar sedan på OK.
 1. Välj den BrightEdge-konfiguration som ska kopplas till sidan i listan BrightStor Content Optimizer och klicka sedan på OK.
 
    ![chlimage_1-6](assets/chlimage_1-6a.png)
@@ -64,7 +64,7 @@ Associera sidor med en BrightEdge-konfiguration för att skicka siddata till Bri
 Aktivera en BrightEdge-konfiguration för att replikera den på publiceringsinstansen och aktivera publicerade sidor för interaktion med BrightEdge-tjänsten.
 
 1. Klicka på Webbplatser på listen och bläddra sedan till och markera sidan som du har associerat med BrightEdge-konfigurationen.
-1. Klicka på eller tryck på ikonen Publicera och sedan på eller på Publicera.
+1. Klicka på ikonen Publicera och sedan på Publicera.
 
    ![chlimage_1-7](assets/chlimage_1-7a.png)
 

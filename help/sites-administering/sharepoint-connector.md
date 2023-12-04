@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 907316d1-3d23-4c46-bccb-bad6fe1bd1bb
 docset: aem65
 exl-id: 10ea7d2e-6e44-4d5c-a2b2-63c73b18f172
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '1563'
+source-wordcount: '1482'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 Den här artikeln innehåller information om Adobe JCR Connector för Microsoft SharePoint 2010 och Microsoft SharePoint 2013, version 4.0.
 
-SharePoint-anslutningen stöder följande grundläggande funktioner:
+SharePoint-kontakten stöder följande grundläggande funktioner:
 
 * Läsa innehåll och metadata från SharePoint.
 * Bekräfta SharePoint säkerhetsinställningar för åtkomst av innehåll genom att använda SharePoint autentisering och behörighet
@@ -47,7 +47,7 @@ Så här kommer du igång med anslutningen:
 * Ladda ned distributionsfilen för kopplingspaketet från Software Distribution.
 * Kopiera en giltig *license.properties* till katalogen som innehåller *cq-quickstart-6.4.0.jar* -fil.
 
-* Dubbelklicka/tryck på .jar-filen för att starta AEM eller starta den från kommandoraden.
+* Dubbelklicka på .jar-filen för att starta AEM eller starta den från kommandoraden.
 * Installera kopplingspaketet från Package Manager.
 * Konfigurera anslutningsalternativen.
 
@@ -75,7 +75,7 @@ Kopplingen stöder följande:
 
    * AEM 6.4, 6.3
 
-* Microsoft SharePoint:
+* Microsoft SharePoint-versioner:
 
    * Microsoft Office SharePoint Server (MOSS) 2010
    * Microsoft Office SharePoint Server (MOSS) 2013
@@ -88,21 +88,21 @@ Kopplingen stöder följande:
 
 ### Standardinstallation {#standard-installation}
 
-Distribution av programvara används för att distribuera produktfunktioner, exempel och snabbkorrigeringar. Mer information finns i [Dokumentation om programdistribution](https://experienceleague.adobe.com/docs/experience-cloud/software-distribution/home.html#software-distribution).
+Distribution av programvara används för att distribuera produktfunktioner, exempel och snabbkorrigeringar. Mer information finns i [Dokumentation om programvarudistribution](https://experienceleague.adobe.com/docs/experience-cloud/software-distribution/home.html#software-distribution).
 
 
 #### Integrera med AEM {#integrating-with-aem}
 
-Så här installerar du innehållspaketet för anslutningsprogrammet.
+Installera innehållspaketet för anslutningsprogrammet.
 
 1. Öppna en Adobe Support-biljett och begär anslutningsfunktionen.
 1. Hämta paketet när det är tillgängligt och öppna sedan Package Manager för AEM.
-1. Tryck/klicka **Installera** från paketbeskrivningssidan.
-1. Från **Installera paket** dialogruta, trycka/klicka **Installera**.
+1. Klicka **Installera** från paketbeskrivningssidan.
+1. Från **Installera paket** dialogruta, klicka **Installera**.
 
    **Anteckning**: Kontrollera att du är inloggad som administratör.
 
-1. Tryck/klicka på paketet när det är installerat **Stäng**.
+1. När paketet är installerat klickar du på **Stäng**.
 
 ## Konfigurerar SharePoint Connector {#configuring-sharepoint-connector}
 
@@ -118,7 +118,7 @@ Så här anger du URL-adressen för SharePoint-servern och avancerade alternativ
 1. Sök efter **JCR Connector för Microsoft Sharepoint** paket.
 1. Redigera konfigurationsvärdena.
 1. Ange SharePoint Server-URL som värdet för **Arbetsytor**.
-1. Tryck/klicka **Spara**.
+1. Klicka **Spara**.
 
 ![chlimage_1-62](assets/chlimage_1-62.png)
 
@@ -131,7 +131,7 @@ Kopplingen kan även konfigureras för flera arbetsytor. I det här fallet är v
 `<name>` är namnet på JCR-arbetsytan och
 `<url>` är webbadressen till SharePoint-servern för den arbetsytan.
 
-I AEM utför du ett steg till utöver konfigurationsstegen ovan. Tillåtelselista the &#39;**com.day.cq.dam.cq-dam-jcr-connectors**&#39; bundle.
+I AEM utför du ett steg till utöver de ovanstående konfigurationsstegen. Tillåtelselista the &#39;**com.day.cq.dam.cq-dam-jcr-connectors**&#39; bundle.
 
 Gör så här för att tillåtelselista-paket i AEM:
 
@@ -195,16 +195,16 @@ Bland annat finns följande typer av autentisering:
 * Claims-Basic
 * Claims-Forms-based
 
-AEM JCR Connector för Microsoft SharePoint 2010 och Microsoft SharePoint 2013, version 4.0. har stöd för anspråksbaserad autentisering (som föreslås av Microsoft) som fungerar i följande lägen:
+AEM JCR Connector för Microsoft SharePoint 2010 och Microsoft SharePoint 2013, version 4.0. har stöd för anspråksbaserad autentisering (som Microsoft föreslår), som fungerar i följande lägen:
 
 * **Grundläggande/NTLM-autentisering**: Kopplingen försöker först ansluta med grundläggande autentisering. Om den inte är tillgänglig växlar den till NTLM-baserad autentisering.
-* **Forms-baserad autentisering**: SharePoint validerar användare baserat på inloggningsuppgifter som användare skriver i ett inloggningsformulär (vanligtvis en webbsida). Systemet utfärdar en token för autentiserade begäranden som innehåller en nyckel för att återupprätta identiteten för efterföljande begäranden.
+* **Forms-baserad autentisering**: Sharepoint validerar användare baserat på inloggningsuppgifter som användare skriver i ett inloggningsformulär (vanligtvis en webbsida). Systemet utfärdar en token för autentiserade begäranden som innehåller en nyckel för att återupprätta identiteten för efterföljande begäranden.
 
 **Konfigurerar Forms-baserad autentisering**
 
 Gå till: [http://localhost:4502/system/console/bundles](http://localhost:4502/system/console/bundles)
 
-1. Klicka på OSGI -> Konfiguration
+1. Klicka på OSGI > Konfiguration
 1. Sök efter&quot;Day JCR Connector for Microsoft Sharepoint&quot;
 1. Klicka på&quot;Redigera konfigurationsvärden&quot;
 1. Ange värdet för Sharepoint Connection Factory som com.day.crx.spi.sharepoint.security.FormsBasedAuthenticationConnectionFactory
@@ -224,7 +224,7 @@ Endast användare som är autentiserade på både AEM och SharePoint har åtkoms
 
 Du kan också använda anslutningstillägget för autentisering för att skapa en anpassad autentiseringsmodul, som t.ex. mappar åtkomst AEM användare till specifika SharePoint-användare. Skapa AEM användare som motsvarar SharePoint-användare (användarnamn och lösenord måste matcha) för att kunna se SharePoint-innehåll mappat till anslutningsinstansen.
 
-Så här skapar du en användare i AEM:
+Så här skapar du en användare AEM:
 
 1. Logga in på http://localhost:9502/with administratörsanvändaren.
 1. Klicka på Verktyg.
@@ -238,14 +238,14 @@ Så här skapar du en användare i AEM:
 Så här lägger du till användaren i administratörsgruppen:
 
 1. Gå till Gruppadministration.
-1. Klicka på noden&quot;a&quot;.
-1. Klicka på&quot;administratörer&quot;.
+1. Klicka på noden a.
+1. Klicka på Administratörer.
 1. Skriv det användar-ID som skapades ovan i textrutan före **Bläddra** -knappen.
 1. Klicka på den gröna markeringssymbolen för att lägga till användaren i administratörsgruppen.
 
 ### Inaktivera tokenautentisering {#disable-token-authentication}
 
-1. Hämta och installera paketet `basic auth`. `zip` från Software Distribution.
+1. Hämta och installera paketet `basic auth`. `zip` från programvarudistribution.
 
 1. Stäng QuickStart.
 1. Öppna filen *\crx-quickstart\repository\repository.xml*.

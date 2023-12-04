@@ -3,10 +3,10 @@ title: Guiden Kopiera språk
 description: Läs om hur du använder guiden för språkkopiering i Adobe Experience Manager.
 feature: Language Copy
 exl-id: 99f9929f-26de-4e95-9ee3-d70512d53bb7
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '214'
-ht-degree: 2%
+source-wordcount: '219'
+ht-degree: 5%
 
 ---
 
@@ -20,7 +20,7 @@ Guiden för språkkopiering är en guidad upplevelse när du skapar och instrume
 
 Så här öppnar du guiden:
 
-1. Välj en sida i Platser och tryck/klicka på Skapa.
+1. Markera en sida i Platser och klicka på Skapa.
 
    ![chlimage_1-9](assets/chlimage_1-9.jpeg)
 

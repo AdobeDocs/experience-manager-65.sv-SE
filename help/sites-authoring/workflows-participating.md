@@ -7,9 +7,9 @@ content-type: reference
 topic-tags: site-features
 docset: aem65
 exl-id: e47270e8-bace-4d0f-a088-7269b6356315
-source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '1519'
+source-wordcount: '1521'
 ht-degree: 1%
 
 ---
@@ -44,7 +44,7 @@ När du tilldelas en arbetsuppgift (till exempel **Godkänn innehåll**) visas o
    * Antalet arbetsflöden som sidan är underställd. Du kan:
 
       * Använd vänster-/högerpilarna för att navigera i statusinformationen för de olika arbetsflödena.
-      * klicka/tryck på det faktiska numret för att öppna en listruta med alla tillämpliga arbetsflöden och välj sedan det arbetsflöde som du vill visa i statusfältet.
+      * klicka på det faktiska numret för att öppna en listruta med alla tillämpliga arbetsflöden och välj sedan det arbetsflöde som du vill visa i statusfältet.
 
   ![wf-59](assets/wf-59.png)
 
@@ -55,7 +55,7 @@ När du tilldelas en arbetsuppgift (till exempel **Godkänn innehåll**) visas o
   >
   >Åtgärder visas när den aktuella användaren är direkt involverad i det aktuella steget i arbetsflödet.
 
-* När **Tidslinje** är öppet för resursen visas arbetsflödessteget. När du klickar/trycker på varningsbanderollen visas även de tillgängliga åtgärderna:
+* När **Tidslinje** är öppet för resursen visas arbetsflödessteget. När du klickar på varningsbanderollen visas även de tillgängliga åtgärderna:
 
   ![screen-shot_2019-03-05at120453](assets/screen-shot_2019-03-05at120453.png)
 
@@ -80,7 +80,7 @@ Du kan slutföra ett deltagarsteg från:
 Gör så här för att slutföra arbetsuppgiften:
 
 1. Öppna **[AEM](/help/sites-authoring/inbox.md)**.
-1. Markera det arbetsflödesobjekt som du vill utföra åtgärden på (tryck/klicka på miniatyrbilden).
+1. Markera det arbetsflödesobjekt som du vill utföra åtgärden på (klicka på miniatyrbilden).
 1. Välj **Complete** i verktygsfältet.
 1. The **Slutför arbetsuppgift** öppnas. Välj **Nästa steg** i listrutan och lägg till en **Kommentar** vid behov.
 1. Använd **OK** för att slutföra steget (eller **Avbryt** för att avbryta åtgärden).
@@ -102,7 +102,7 @@ Du kan också använda tidslinjen för att slutföra och gå vidare ett steg:
 
    ![screen-shot_2019-03-05at120744](assets/screen-shot_2019-03-05at120744.png)
 
-1. Klicka/tryck på varningsbanderollen för att visa tillgängliga åtgärder. Välj **Förskott**:
+1. Klicka på varningsbanderollen för att visa tillgängliga åtgärder. Välj **Förskott**:
 
    ![screen-shot_2019-03-05at120453-1](assets/screen-shot_2019-03-05at120453-1.png)
 
@@ -139,7 +139,7 @@ Du kan delegera ett deltagarsteg från antingen:
 Använd följande procedur för att delegera en arbetsuppgift:
 
 1. Öppna **[AEM](/help/sites-authoring/inbox.md)**.
-1. Markera det arbetsflödesobjekt som du vill utföra åtgärden på (tryck/klicka på miniatyrbilden).
+1. Markera det arbetsflödesobjekt som du vill utföra åtgärden på (klicka på miniatyrbilden).
 1. Välj **Delegera** i verktygsfältet.
 1. Dialogrutan öppnas. Ange **Användare** i den nedrullningsbara väljaren (detta kan också vara en grupp) och lägga till en **Kommentar** vid behov.
 1. Använd **OK** för att slutföra steget (eller **Avbryt** för att avbryta åtgärden).
@@ -158,7 +158,7 @@ Använd följande procedur för att delegera en arbetsuppgift:
 Du kan också använda tidslinjen för att delegera och/eller tilldela ett steg:
 
 1. Välj önskad sida och öppna **Tidslinje** (eller öppna **Tidslinje** och markera sidan).
-1. Klicka/tryck på varningsbanderollen för att visa tillgängliga åtgärder. Välj **Ändra tilldelad**:
+1. Klicka på varningsbanderollen för att visa tillgängliga åtgärder. Välj **Ändra tilldelad**:
 
    ![screen-shot_2019-03-05at120453-2](assets/screen-shot_2019-03-05at120453-2.png)
 
@@ -189,7 +189,7 @@ Du kan utföra steg tillbaka för ett deltagarsteg från antingen:
 Använd följande procedur för att stega bakåt:
 
 1. Öppna **[AEM](/help/sites-authoring/inbox.md)**.
-1. Markera det arbetsflödesobjekt som du vill utföra åtgärden på (tryck/klicka på miniatyrbilden).
+1. Markera det arbetsflödesobjekt som du vill utföra åtgärden på (klicka på miniatyrbilden).
 1. Välj **Gå bakåt** för att öppna dialogrutan.
 
 1. Ange **Tidigare steg** och lägga till en **Kommentar** vid behov.
@@ -209,7 +209,7 @@ Använd följande procedur för att stega bakåt:
 Du kan också använda tidslinjen för att återställa (steg) till ett tidigare steg:
 
 1. Välj önskad sida och öppna **Tidslinje** (eller öppna **Tidslinje** och markera sidan).
-1. Klicka/tryck på varningsbanderollen för att visa tillgängliga åtgärder. Välj **Återställ**:
+1. Klicka på varningsbanderollen för att visa tillgängliga åtgärder. Välj **Återställ**:
 
    ![screen-shot_2019-03-05at121131](assets/screen-shot_2019-03-05at121131.png)
 
@@ -251,7 +251,7 @@ Du kan öppna information om arbetsobjekt från:
 Så här öppnar du ett arbetsflödesobjekt och visar information:
 
 1. Öppna **[AEM](/help/sites-authoring/inbox.md)**.
-1. Markera det arbetsflödesobjekt som du vill utföra åtgärden på (tryck/klicka på miniatyrbilden).
+1. Markera det arbetsflödesobjekt som du vill utföra åtgärden på (klicka på miniatyrbilden).
 1. Välj **Öppna** för att öppna informationsflikarna.
 
 1. Välj vid behov lämplig åtgärd, ange eventuella detaljer och bekräfta med **OK** (eller **Avbryt**).
@@ -274,7 +274,7 @@ Du kan visa information om nyttolasten som är kopplad till arbetsflödesinstans
 Så här visar du arbetsflödesinstansens nyttolast och resurser:
 
 1. Öppna **[AEM](/help/sites-authoring/inbox.md)**.
-1. Markera det arbetsflödesobjekt som du vill utföra åtgärden på (tryck/klicka på miniatyrbilden).
+1. Markera det arbetsflödesobjekt som du vill utföra åtgärden på (klicka på miniatyrbilden).
 1. Välj **Visa nyttolast** i verktygsfältet för att öppna dialogrutan.
 
    Eftersom ett arbetsflödespaket är en samling pekare till sökvägar i databasen, kan du lägga till/ta bort/ändra posterna här för att justera vad som refereras av arbetsflödespaketet. Använd **Resursdefinition** för att lägga till nya poster.

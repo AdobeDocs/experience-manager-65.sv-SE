@@ -7,10 +7,10 @@ content-type: reference
 topic-tags: personalization
 docset: aem65
 exl-id: d1132fcd-e6a0-44a2-8753-d250f68fbd78
-source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '2832'
-ht-degree: 0%
+source-wordcount: '2857'
+ht-degree: 1%
 
 ---
 
@@ -79,7 +79,7 @@ Du kan antingen dra och släppa en bild från [Resursläsaren](/help/sites-autho
 
 >[!NOTE]
 >
->Du måste ange information i **Alt-text** eller så kan bilden inte sparas.
+>Ange information i dialogrutan **Alt-text** eller så kan bilden inte sparas.
 
 När bilden har överförts (och inte tidigare) kan du använda [redigering på plats](/help/sites-authoring/editing-content.md#editcontenttouchoptimizedui) beskära/rotera bilden efter behov:
 
@@ -127,7 +127,7 @@ Anger bildens höjd och bredd.
 
 >[!NOTE]
 >
->Du måste ange information i **Alt-text** fältet i **Avancerat** eller så kan bilden inte sparas och följande felmeddelande visas:
+>Ange information i dialogrutan **Alt-text** fältet i **Avancerat** eller så kan bilden inte sparas och följande felmeddelande visas:
 >
 >`Validation failed. Verify the values of the marked fields.`
 >
@@ -156,7 +156,7 @@ Lägg till eventuella ytterligare URL-parametrar. Klicka på Lägg till objekt o
 
 >[!NOTE]
 >
->Du måste ange information i **Länktyp** fältet i **URL-information** eller så kan komponenten inte spara och följande felmeddelande visas:
+>Ange information i dialogrutan **Länktyp** fältet i **URL-information** eller så kan komponenten inte spara och följande felmeddelande visas:
 >
 >`Validation failed. Verify the values of the marked fields.`
 >

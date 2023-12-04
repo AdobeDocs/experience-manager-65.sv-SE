@@ -8,9 +8,9 @@ topic-tags: site-features
 docset: aem65
 legacypath: /content/help/en/experience-manager/6-4/help/sites-authoring/pa-using.html
 exl-id: 2e406512-47fb-451d-b837-0a3898ae1f08
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '445'
+source-wordcount: '435'
 ht-degree: 0%
 
 ---
@@ -36,9 +36,9 @@ Varje kolumn visar ett värde för den aktuella rapporteringsperioden och anger 
 >Om du vill ändra uppdateringsperioden [konfigurera importintervallet](/help/sites-administering/adobeanalytics-connect.md#configuring-the-import-interval).
 
 1. Öppna **Webbplatser** konsol, till exempel [https://localhost:4502/sites.html/content](https://localhost:4502/sites.html/content)
-1. Klicka eller tryck på ikonen längst till höger i verktygsfältet (övre högra hörnet) för att välja **Listvy** (ikonen som visas beror på [aktuell vy](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)).
+1. Klicka på ikonen längst till höger i verktygsfältet (övre högra hörnet) för att markera den **Listvy** (ikonen som visas beror på [aktuell vy](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)).
 
-1. Återigen, längst till höger i verktygsfältet (övre högra hörnet), klicka eller tryck på ikonen och välj sedan **Visa inställningar**. The **Konfigurera kolumner** öppnas. Gör de ändringar som behövs och bekräfta med **Uppdatera**.
+1. Klicka på ikonen längst till höger i verktygsfältet (övre högra hörnet) och välj sedan **Visa inställningar**. The **Konfigurera kolumner** öppnas. Gör de ändringar som behövs och bekräfta med **Uppdatera**.
 
    ![spad-02](assets/spad-02.png)
 

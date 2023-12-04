@@ -7,7 +7,7 @@ topic-tags: personalization
 content-type: reference
 docset: aem65
 exl-id: 1b8c6075-13c6-4277-b726-8dea7991efec
-source-git-commit: 5e56441d2dc9b280547c91def8d971e7b1dfcfe3
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
 source-wordcount: '3443'
 ht-degree: 0%
@@ -58,10 +58,10 @@ Landing page Cheat Sheet
 
 En exempellayout för zip är följande:
 
-* /index.html -> HTML fil för landningssida
-* /css -> för att lägga till i CSS-klientlib
-* /img -> alla bilder och resurser
-* /js -> för att lägga till i JS-klientlib
+* /index.html > HTML fil för landningssida
+* /css > för att lägga till i CSS-klientlib
+* /img > alla bilder och resurser
+* /js > för att lägga till i JS-klientlib
 
 Layouten baseras på HTML5-mallens bästa praxis-layout. Läs mer på [https://html5boilerplate.com/](https://html5boilerplate.com/)
 

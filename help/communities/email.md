@@ -8,9 +8,9 @@ content-type: reference
 pagetitle: Configuring Email
 role: Admin
 exl-id: bf97d388-f8ca-4e37-88e2-0c536834311e
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '752'
+source-wordcount: '724'
 ht-degree: 0%
 
 ---
@@ -41,7 +41,7 @@ Standardtjänsten för e-post krävs för både meddelanden och prenumerationer.
 
 Detta baseras på dokumentationen till [Konfigurerar e-postmeddelande](../../help/sites-administering/notification.md), men med en skillnad i det fältet `"From" address` är *not* krävs och ska lämnas tom.
 
-Exempel (ifylld med värden endast för illustrativa syften):
+Till exempel (ifylld med värden endast för illustrativa syften):
 
 ![email-config](assets/email-config.png)
 
@@ -180,7 +180,7 @@ För att e-postmeddelandet ska kunna hämtas till databasen måste du konfigurer
 
 * **[!UICONTROL URL]**
 
-  *(Obligatoriskt)* Servern för utgående e-post. Till exempel, `pop.gmail.com:995/INBOX?username=community-emailgmail.com&password=****`.
+  *(Obligatoriskt)* Servern för utgående e-post. Till exempel: `pop.gmail.com:995/INBOX?username=community-emailgmail.com&password=****`.
 
 * **[!UICONTROL Import to Path]**&amp;ast;
 

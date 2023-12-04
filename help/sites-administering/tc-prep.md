@@ -4,10 +4,10 @@ description: Lär dig förbereda innehåll för översättning i Adobe Experienc
 contentOwner: Guillaume Carlino
 feature: Language Copy
 exl-id: 81978733-89a6-4436-bcf1-4bde962ed54f
-source-git-commit: 7d46ba0eaa73d9f7a67034ba81d7fa379aa0112c
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '684'
-ht-degree: 0%
+source-wordcount: '669'
+ht-degree: 1%
 
 ---
 
@@ -56,20 +56,20 @@ Du kan använda båda formaten enligt den struktur som du har valt för den glob
 I följande procedur används det pekoptimerade användargränssnittet för att skapa en språkkopia av en webbplats. Instruktioner om hur du använder det klassiska användargränssnittet finns i [Skapa en språkrot med det klassiska användargränssnittet](/help/sites-administering/tc-lroot-classic.md).
 
 1. Navigera till Webbplatser.
-1. Klicka på eller tryck på den webbplats som du vill skapa en språkkopia för.
+1. Klicka på den webbplats som du vill skapa en språkkopia för.
 
-   Om du till exempel vill skapa en språkkopia av Geometrixx Outdoors-webbplatsen klickar du på eller trycker på Geometrixx Outdoors webbplats.
+   Om du till exempel vill skapa en språkkopia av Geometrixx Outdoors-webbplatsen klickar du på Geometrixx Outdoors-plats.
 
-1. Klicka eller tryck på Skapa och sedan på eller på Skapa sida.
+1. Klicka på Skapa och sedan på Skapa sida.
 
    ![chlimage_1-21](assets/chlimage_1-21a.png)
 
-1. Välj sidmallen och klicka eller tryck sedan på Nästa.
+1. Markera sidmallen och klicka sedan på Nästa.
 1. I fältet Namn skriver du landskoden i formatet `<language-code>` eller `<language-code>_<country-code>`, till exempel `en`, `en_US`, `en_us`, `en_GB`, `en_gb`. Skriv en rubrik för sidan.
 
    ![chlimage_1-22](assets/chlimage_1-22a.png)
 
-1. Klicka eller tryck på Skapa. I bekräftelsedialogrutan klickar du på eller trycker på **Klar** för att gå tillbaka till Sites-konsolen, eller **Öppna** för att öppna språkkopian.
+1. Klicka på Skapa. I bekräftelsedialogrutan klickar du på **Klar** för att gå tillbaka till Sites-konsolen, eller **Öppna** för att öppna språkkopian.
 
 ## Se status för språkrötter {#seeing-the-status-of-language-roots}
 
@@ -79,8 +79,8 @@ Det pekoptimerade användargränssnittet innehåller en referenspanel som visar 
 
 I följande procedur används det pekoptimerade användargränssnittet för att öppna referenspanelen för en sida.
 
-1. Välj en sida på platsen i konsolen Platser och klicka eller tryck sedan på **Referenser**.
+1. Välj en sida på platsen i konsolen Platser och klicka sedan på **Referenser**.
 
    ![chlimage_1-24](assets/chlimage_1-24a.png)
 
-1. Klicka eller tryck på panelen Inställningar **Språkkopior**. På panelen Språkkopior visas språkkopiorna för webbplatsen.
+1. På referenspanelen klickar du på **Språkkopior**. På panelen Språkkopior visas språkkopiorna för webbplatsen.

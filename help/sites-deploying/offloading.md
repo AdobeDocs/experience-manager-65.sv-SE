@@ -7,9 +7,9 @@ topic-tags: configuring
 content-type: reference
 feature: Configuring
 exl-id: 429c96ff-4185-4215-97e8-9bd2c130a9b1
-source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '2359'
+source-wordcount: '2316'
 ht-degree: 0%
 
 ---
@@ -229,7 +229,7 @@ Använd webbkonsol eller en `sling:OsgiConfig` -nod för att konfigurera följan
 
 ## Skapar replikeringsagenter för avlastning {#creating-replication-agents-for-offloading}
 
-Avlastningsramverket använder replikering för att transportera resurser mellan författare och arbetare. Ramverket för avlastning skapar automatiskt replikeringsagenter när instanser ansluts till topologin. Agenterna skapas med standardvärden. Du måste ändra lösenordet som agenterna använder för autentisering manuellt.
+Avlastningsramverket använder replikering för att transportera resurser mellan författare och arbetare. Ramverket för avlastning skapar automatiskt replikeringsagenter när instanser ansluts till topologin. Agenterna skapas med standardvärden. Ändra lösenordet som agenterna använder för autentisering manuellt.
 
 >[!CAUTION]
 >

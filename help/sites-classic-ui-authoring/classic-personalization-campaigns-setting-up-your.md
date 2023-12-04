@@ -7,9 +7,9 @@ topic-tags: personalization
 content-type: reference
 docset: aem65
 exl-id: 1b607a52-f065-4e35-8215-d54df7c8403d
-source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '2223'
+source-wordcount: '2194'
 ht-degree: 0%
 
 ---
@@ -231,11 +231,11 @@ Så här importerar du leads från en kommaavgränsad lista:
 
    ![screen_shot_2012-02-21at123055pm](assets/screen_shot_2012-02-21at123055pm.png)
 
-1. Klicka på **Nästa**. Här förhandsgranskar du leads för att försäkra dig om att de är korrekta.
+1. Klicka **Nästa**. Här förhandsgranskar du leads för att försäkra dig om att de är korrekta.
 
    ![screen_shot_2012-02-21at123104pm](assets/screen_shot_2012-02-21at123104pm.png)
 
-1. Klicka på **Nästa**. Välj den lista som du vill att leads ska tillhöra. Om du inte vill att de ska tillhöra en lista tar du bort informationen i fältet. Som standard skapar AEM ett listnamn som innehåller datum och tid. Klicka **Importera**.
+1. Klicka **Nästa**. Välj den lista som du vill att leads ska tillhöra. Om du inte vill att de ska tillhöra en lista tar du bort informationen i fältet. Som standard skapar AEM ett listnamn som innehåller datum och tid. Klicka **Importera**.
 
    ![screen_shot_2012-02-21at123123pm](assets/screen_shot_2012-02-21at123123pm.png)
 

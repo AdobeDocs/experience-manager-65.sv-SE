@@ -1,7 +1,7 @@
 ---
 title: Reader utökar policyskyddade PDF-dokument med hjälp av Portable Protection Library
 seo-title: Reader extending policy-protected PDF documents using Portable Protection Library
-description: Reader-tillägg möjliggör interaktiva funktioner i Adobe PDF-dokument via Acrobat Reader. Du kan använda PPL (Portable Protection Library) för att utöka DRM-skyddade PDF-dokument.
+description: Reader-tillägg möjliggör interaktiva funktioner i Adobe PDF-dokument via Acrobat Reader. Du kan använda PPL-biblioteket (Portable Protection Library) för att utöka DRM-skyddade PDF-dokument.
 seo-description: Reader extensions enable interactive features in Adobe PDF documents through Acrobat Reader. You can use the Portable Protection Library (PPL) to reader extend the DRM protected PDF documents.
 uuid: 0da17641-d24c-43c2-b918-8b5abe1e5473
 contentOwner: khsingh
@@ -11,16 +11,16 @@ topic-tags: document_services
 discoiquuid: 83ca522e-d16e-4196-9aa7-84f85de8dee2
 feature: Document Security
 exl-id: fe5d83e8-5e36-4146-a20a-dab2213055e2
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '796'
+source-wordcount: '783'
 ht-degree: 0%
 
 ---
 
 # Reader utökar policyskyddade PDF-dokument med hjälp av Portable Protection Library {#reader-extending-policy-protected-pdf-documents-using-portable-protection-library}
 
-Du måste känna till begrepp som dokumentsäkerhet, lästillägg och Java Programming Language för att kunna utöka dokumentskyddet i PDF.
+Lär dig mer om dokumentsäkerhet, lästillägg och Java Programming Language för att utöka dokumentskyddet i PDF.
 
 Du kan använda dokumentskydd för att begränsa åtkomsten till specifika PDF-dokument till endast behöriga användare. Du kan också bestämma hur en mottagare ska kunna använda ett skyddat dokument. Du kan till exempel ange om mottagarna ska kunna skriva ut, kopiera eller redigera text i ett dokument som skyddas av dokumentsäkerhetsregler. Mer information om dokumentsäkerhet finns i [om dokumentsäkerhet](/help/forms/using/admin-help/document-security.md).
 
@@ -58,7 +58,7 @@ Du kan använda `applyUsageRights`Java API för att lägga in användarrättighe
   </tr>
   <tr>
    <td><p>inputFile</p> </td>
-   <td><p>Ange InputStream som representerar det PDF-dokument som användningsrättigheterna ska tillämpas på. Du kan använda LiveCycle Rights Management eller AEM Forms dokumentsäkerhetsskyddade dokument.</p> </td>
+   <td><p>Ange InputStream som representerar det PDF-dokument som användningsrättigheterna ska tillämpas på. Du kan använda LiveCycle Rights Management eller AEM Forms dokumentskyddsskyddade dokument.</p> </td>
   </tr>
   <tr>
    <td><p>certFile</p> </td>
@@ -89,7 +89,7 @@ Du kan använda `getDocumentUsageRights`Java API för att hämta läsartillägge
   </tr>
   <tr>
    <td><p>inDoc</p> </td>
-   <td><p>Ange InputStream som representerar det PDF-dokument som användningsrättigheterna ska hämtas från. Du kan använda LiveCycle Rights Management eller AEM Forms dokumentsäkerhetsskyddade dokument.</p> </td>
+   <td><p>Ange InputStream som representerar det PDF-dokument som användningsrättigheterna ska hämtas från. Du kan använda LiveCycle Rights Management eller AEM Forms dokumentskyddsskyddade dokument.</p> </td>
   </tr>
  </tbody>
 </table>
@@ -154,7 +154,7 @@ Du kan använda `removeUsageRights`Java API för att ta bort användarrättighet
   </tr>
   <tr>
    <td><p> </p> <p>inputFile</p> </td>
-   <td>Ange InputStream som representerar det PDF-dokument som används för<br /> rättigheter skall tas bort. Du kan använda LiveCycle Rights Management eller AEM Forms dokumentsäkerhetsskyddade dokument.</td>
+   <td>Ange InputStream som representerar det PDF-dokument som används för<br /> rättigheter skall tas bort. Du kan använda LiveCycle Rights Management eller AEM Forms dokumentskyddsskyddade dokument.</td>
   </tr>
  </tbody>
 </table>

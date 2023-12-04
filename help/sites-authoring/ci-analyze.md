@@ -11,10 +11,10 @@ topic-tags: site-features
 discoiquuid: 57cd61d5-78f2-4f8c-99ee-75e100c052ef
 docset: aem65
 exl-id: 14484a90-4e44-4c85-9411-b78ed11dc70d
-source-git-commit: 75c6bb87bb06c5ac9378ccebf193b5416c080bb1
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '666'
-ht-degree: 0%
+source-wordcount: '661'
+ht-degree: 1%
 
 ---
 
@@ -27,7 +27,7 @@ ht-degree: 0%
 Använd följande procedur för att visa Analytics och Recommendations för en sida:
 
 1. Navigera till sidan som du vill analysera.
-1. Klicka eller tryck i verktygsfältet **Analyser och Recommendations**.
+1. Klicka på i verktygsfältet **Analyser och Recommendations**.
 
    >[!NOTE]
    >
@@ -52,7 +52,7 @@ Verktygen för att ändra de tidsrelaterade aspekterna av rapporterna visas hög
 
 Så här ändrar du rapporteringsperioden för en Content Insight-sida:
 
-1. Om tidsramen inte visas överst på sidan klickar du på eller trycker på ikonen för att växla tidsram.
+1. Om tidsramen inte visas överst på sidan klickar du på ikonen Växla tidsram.
 
    ![Växla tidsram](do-not-localize/chlimage_1-22.png)
 
@@ -70,11 +70,11 @@ Så här ändrar du rapporteringsperioden för en Content Insight-sida:
 
 Granulariteten påverkar rapporter som anger data i förhållande till tid, t.ex. rapporter om Vyer och Genomsnittligt engagerade sidminuter. Kornigheten påverkar också skalan för tidsramen.
 
-1. Om granularitetskontrollen inte visas klickar eller trycker du på ikonen för att växla granularitet.
+1. Om granularitetskontrollen inte visas klickar du på ikonen Växla granularitet.
 
    ![chlimage_1-128](assets/chlimage_1-128.png)
 
-1. Klicka eller tryck på önskad granularitet. När du har valt det här alternativet uppdateras rapporten automatiskt med granulariteten.
+1. Klicka på önskad granularitet. När du har valt det här alternativet uppdateras rapporten automatiskt så att den avspeglar granulariteten.
 
 ### Tilldela uppgifter för SEO Recommendations {#assigning-tasks-for-seo-recommendations}
 
@@ -90,7 +90,7 @@ När uppgiften skapas visas den i användarens uppgiftslista. Mer information om
 
 Använd följande procedur för att skapa en uppgift för en SEO-rekommendation.
 
-1. Klicka på eller tryck på informationsikonen för SEO-rekommendationen.
+1. Klicka på informationsikonen för SEO-rekommendationen.
 
    ![Informationsikon](do-not-localize/chlimage_1-23.png)
 
@@ -105,8 +105,8 @@ Använd följande procedur för att skapa en uppgift för en SEO-rekommendation.
    * Tilldela till: Välj den användare som ska tilldelas uppgiften. Börja skriva användarens namn för att filtrera listan.
    * Beskrivning: En beskrivning av aktiviteten som krävs för att slutföra uppgiften. Standardbeskrivningen är den information som medföljer SEO-rekommendationen.
    * Aktivitetsprioritet: Uppgiftens prioritet.
-   * Förfallodatum: Datumet då uppgiften ska vara slutförd.
+   * Förfallodatum: Det datum då uppgiften ska vara slutförd.
 
    **Obs!** Uppgiften som skapas innehåller även sökvägen till sidan som SEO-rekommendationen gäller för.
 
-1. Klicka eller tryck på Klar för att stänga meddelandet Aktivitet skapad.
+1. Klicka på Klar för att stänga meddelandet Aktiviteten har skapats.

@@ -7,9 +7,9 @@ topic-tags: introduction
 content-type: reference
 docset: aem65
 exl-id: ef1a3997-feb4-4cb0-9396-c8335b69bb10
-source-git-commit: 5e56441d2dc9b280547c91def8d971e7b1dfcfe3
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '2985'
+source-wordcount: '2963'
 ht-degree: 1%
 
 ---
@@ -42,21 +42,21 @@ Omedelbart efter att du loggat in kommer du till [Navigeringspanelen](#navigatio
 >
 >För att få en bättre förståelse för AEM basanvändning är det här dokumentet baserat på **Webbplatser** konsol.
 >
->Kom igång genom att klicka eller trycka på **Webbplatser**.
+>Kom igång genom att klicka på **Webbplatser**.
 
 ### Produktnavigering {#product-navigation}
 
-När en användare först kommer åt en konsol startas en produktnavigeringssjälvstudie. Klicka eller tryck igenom för att få en bra översikt över den grundläggande AEM.
+När en användare först kommer åt en konsol startas en produktnavigeringssjälvstudie. Klicka igenom så får du en bra översikt över den grundläggande hanteringen av AEM.
 
 ![Produktnavigering](assets/bh-02.png)
 
-Klicka eller tryck **Nästa** för att gå vidare till nästa sida i översikten. Klicka eller tryck **Stäng** eller klicka eller tryck utanför översiktsdialogrutan för att stänga.
+Klicka **Nästa** för att gå vidare till nästa sida i översikten. Klicka **Stäng** eller klicka utanför översiktsdialogrutan för att stänga.
 
 Översikten startas om nästa gång du öppnar en konsol, såvida du inte antingen visar alla bilder eller markerar alternativet **Visa inte det här igen**.
 
 ## Global navigering {#global-navigation}
 
-Du kan navigera mellan konsolerna med den globala navigeringspanelen. Detta aktiveras som en listruta i helskärmsläge när du klickar på eller trycker på länken Adobe Experience Manager längst upp till vänster på skärmen.
+Du kan navigera mellan konsolerna med den globala navigeringspanelen. Detta aktiveras som en listruta i helskärmsläge när du klickar på länken Adobe Experience Manager längst upp till vänster på skärmen.
 
 Du kan stänga den globala navigeringspanelen genom att klicka eller trycka på **Stäng** för att återgå till din tidigare plats.
 
@@ -410,7 +410,7 @@ Om du väljer en resurs i kolumnen längst till vänster visas de underordnade r
      ![Kolumnvy](assets/bh-17.png)
 
    * De underordnade resurserna för den resurs som användaren klickar på/trycker på visas i kolumnen till höger om den resurs som användaren klickar på/trycker på.
-   * Om du trycker eller klickar på ett resursnamn som inte har några underordnade objekt visas informationen i den sista kolumnen.
+   * Om du klickar på ett resursnamn som inte har några underordnade objekt visas informationen i den sista kolumnen.
 
 * Om du trycker eller klickar på miniatyrbilden markeras resursen.
 
@@ -462,12 +462,12 @@ Om du väljer en resurs i kolumnen längst till vänster visas de underordnade r
 
    * När alla objekt i listan är markerade visas den här kryssrutan markerad.
 
-      * Om du vill avmarkera alla klickar eller trycker du på kryssrutan.
+      * Om du vill avmarkera alla klickar du i kryssrutan.
 
    * När bara vissa objekt är markerade visas det med ett minustecken.
 
-      * Markera alla genom att klicka eller trycka på kryssrutan.
-      * Om du vill avmarkera alla klickar eller trycker du på kryssrutan igen.
+      * Markera alla genom att klicka i kryssrutan.
+      * Om du vill avmarkera alla klickar du i kryssrutan igen.
 
 * Markera de kolumner som ska visas med **Visa inställningar** som finns under knappen Vyer. Följande kolumner är tillgängliga för visning:
 
@@ -493,7 +493,7 @@ Om du väljer en resurs i kolumnen längst till vänster visas de underordnade r
 
   ![Ändra ordning](assets/bh-22.png)
 
-  Klicka eller tryck på det lodräta markeringsfältet och dra objektet till en ny plats i listan.
+  Klicka på det lodräta markeringsfältet och dra objektet till en ny plats i listan.
 
   ![Ändra ordning - dra](assets/bh-23.png)
 

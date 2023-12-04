@@ -5,9 +5,9 @@ topic-tags: site-features
 content-type: reference
 feature: Language Copy
 exl-id: 2011a976-d506-4c0b-9980-b8837bdcf5ad
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '686'
+source-wordcount: '669'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ Den här sidan innehåller stegvisa förbättringar och förbättringar av AEM �
 
 Alternativ för att förbättra produktiviteten när du arbetar med översättningsprojekt har lagts till, t.ex. automatiskt för att befordra och ta bort starter för översättningar och schemalägga återkommande körningar av ett översättningsprojekt.
 
-1. Klicka eller tryck på ellipsen längst ned i översättningsprojektet **Översättningssammanfattning** platta.
+1. Klicka på ellipsen längst ned i översättningsprojektet **Översättningssammanfattning** platta.
 
    ![screen_shot_2018-04-19at22622](assets/screen_shot_2018-04-19at222622.jpg)
 
@@ -40,7 +40,7 @@ Alternativ för att förbättra produktiviteten när du arbetar med översättni
 
 Det går att konfigurera flera målspråk i ett översättningsprojekt, vilket minskar det totala antalet översättningsprojekt som skapas.
 
-1. Klicka eller tryck på punkterna längst ned i översättningsprojektet **Översättningssammanfattning** platta.
+1. Klicka på punkterna längst ned i översättningsprojektet **Översättningssammanfattning** platta.
 
    ![screen_shot_2018-04-19at22622](assets/screen_shot_2018-04-19at222622.jpg)
 
@@ -110,11 +110,11 @@ En egenskap kan nu markeras i platslistevyn som visar om en sida har översatts,
 
    ![screen_shot_2018-04-23at130646](assets/screen_shot_2018-04-23at130646.jpg)
 
-1. Klicka eller tryck **Visa inställningar**.
+1. Klicka **Visa inställningar**.
 
    ![screen_shot_2018-04-23at130844](assets/screen_shot_2018-04-23at130844.jpg)
 
-1. Kontrollera **Översatt** kryssruta under **Översättning** och trycka/klicka **Uppdatera**.
+1. Kontrollera **Översatt** kryssruta under **Översättning** och klicka **Uppdatera**.
 
    ![screen_shot_2018-04-23at130955](assets/screen_shot_2018-04-23at130955.jpg)
 
