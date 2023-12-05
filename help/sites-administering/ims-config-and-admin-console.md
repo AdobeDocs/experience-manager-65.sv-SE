@@ -7,10 +7,10 @@ topic-tags: Security
 content-type: reference
 exl-id: 95eae97c-01c2-4f5c-8068-f504eab7c49e
 feature: Security
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 8c0c2d89fca7a5ba1a834108ae54fed524b3cbab
 workflow-type: tm+mt
-source-wordcount: '1668'
-ht-degree: 10%
+source-wordcount: '1604'
+ht-degree: 6%
 
 ---
 
@@ -20,17 +20,13 @@ ht-degree: 10%
 >
 >Den här funktionen är endast tillgänglig för Adobe Managed Services-kunder.
 
->[!NOTE]
->
->Adobe Experience Manager (AEM) stöder för närvarande inte tilldelning av grupper till profiler. Användare bör läggas till individuellt i stället.
-
 ## Introduktion {#introduction}
 
 AEM 6.4.3.0 introducerar [!DNL Admin Console] stöd för AEM och Adobe IMS-baserad autentisering (Identity Management System) för **AEM Managed Services** kunder.
 
 AEM på [!DNL Admin Console] gör det möjligt för AEM Managed Services-kunder att hantera alla Experience Cloud-användare i en konsol. Användare kan tilldelas till produktprofiler som är kopplade till AEM instanser, så att de kan logga in på en viss instans.
 
-## Viktiga funktioner {#key-highlights}
+## Viktiga högdagrar {#key-highlights}
 
 * Stöd för AEM IMS-autentisering gäller endast AEM författare, administratörer och utvecklare, inte för externa slutanvändare på kundens webbplats, som webbplatsbesökare
 * The [!DNL Admin Console] kommer att representera AEM Managed Services-kunder som IMS-organisationer och deras instanser som produktkontexter. Kundsystem- och produktadministratörer kan hantera åtkomst till instanser
@@ -98,7 +94,7 @@ En CSV-fil kan laddas upp för att användarna ska kunna lägga till flera anvä
 
 ![image2018-9-23_18-59-57](assets/image2018-9-23_18-59-57.png)
 
-#### Verktyg för användarsynkronisering {#user-sync-tool}
+#### Verktyget för användarsynkronisering {#user-sync-tool}
 
 Med verktyget för användarsynkronisering (UST i korthet) kan företagskunder skapa eller hantera Adobe-användare som använder Active Directory eller andra testade OpenLDAP-katalogtjänster. Målanvändarna är IT-identitetsadministratörer (Enterprise Directory och System Admins) som kan installera och konfigurera verktyget. Verktyget med öppen källkod är anpassbart så att kunderna kan låta en utvecklare ändra det efter sina egna behov.
 
@@ -106,7 +102,7 @@ När användarsynkroniseringen körs hämtar den en lista över användare från
 
 Verktyget gör att systemadministratören kan mappa användargrupper i kundens katalog med produktkonfiguration och användargrupper i [!DNL Admin Console]kan den nya UST-versionen även skapa användargrupper dynamiskt i [!DNL Admin Console].
 
-För att användarsynkronisering ska kunna konfigureras måste organisationen skapa en uppsättning inloggningsuppgifter på samma sätt som [[!DNL User Management] API:t för ](https://www.adobe.io/apis/cloudplatform/usermanagement/docs/setup.html) används.
+För att konfigurera användarsynkronisering måste organisationen skapa en uppsättning autentiseringsuppgifter på samma sätt som de använder [[!DNL User Management] API](https://www.adobe.io/apis/cloudplatform/usermanagement/docs/setup.html).
 
 ![image2018-9-23_13-36-56](assets/image2018-9-23_13-36-56.png)
 
@@ -138,7 +134,7 @@ Mer information om de nya gruppfunktionerna finns här:
 >
 >Den AEM IMS-konfigurationen hanteras av Adobe Managed Services team. Kundadministratören kan dock ändra det efter behov (t.ex. Automatiskt gruppmedlemskap eller Gruppmappning). IMS-klienten registreras också av ditt Managed Services-team.
 
-## Användning {#how-to-use}
+## Använda {#how-to-use}
 
 ### Hantera produkter och användaråtkomst i [!DNL Admin Console] {#managing-products-and-user-access-in-admin-console}
 
