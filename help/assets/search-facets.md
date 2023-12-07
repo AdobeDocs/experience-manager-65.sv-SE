@@ -6,14 +6,14 @@ role: Admin, Developer
 feature: Search
 exl-id: acaf46e6-ff70-4825-8922-ce8f82905a92
 hide: true
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 04050f31742c926b45235595f6318929d3767bd8
 workflow-type: tm+mt
-source-wordcount: '2264'
-ht-degree: 13%
+source-wordcount: '2259'
+ht-degree: 11%
 
 ---
 
-# Söka efter fasetter {#search-facets}
+# Sök efter ansikten {#search-facets}
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
@@ -113,7 +113,7 @@ Om du vill använda en befintlig nod anger du den i valdialogrutan.
 1. Klicka på [!DNL Experience Manager] logotyp och sedan gå till **[!UICONTROL Tools]** > **[!UICONTROL General]** > **[!UICONTROL Search Forms]**.
 1. Från **[!UICONTROL Search Forms]** sida, markera **[!UICONTROL Assets Admin Search Rail]** och sedan klicka **[!UICONTROL Edit]**.
 1. På sidan **[!UICONTROL Edit Search Form]** drar du **[!UICONTROL Options Predicate]** från fliken **[!UICONTROL Select Predicate]** till huvudrutan.
-1. Ange en etikett och ett namn för egenskapen på fliken **[!UICONTROL Settings]**. Om du till exempel vill söka efter resurser baserat på deras format anger du ett användarvänligt namn på etiketten, till exempel, **[!UICONTROL File Type]**. Ange egenskapen som ska användas för sökningen i egenskapsfältet, till exempel, `jcr:content/metadata/dc:format.`
+1. Ange en etikett och ett namn för egenskapen på fliken **[!UICONTROL Settings]**. Om du till exempel vill söka efter resurser baserat på deras format anger du ett användarvänligt namn för etiketten, till exempel: **[!UICONTROL File Type]**. Ange egenskapen som ska användas för att utföra sökningen i egenskapsfältet, till exempel `jcr:content/metadata/dc:format.`
 1. Gör något av följande:
 
    * I **[!UICONTROL Property Name]** anger du sökvägen till JSON-filen där du definierar noderna för alternativen och anger motsvarande nyckelvärdepar.

@@ -1,16 +1,14 @@
 ---
 title: Konfigurera Dynamic Media
 description: Om du vill konfigurera Dynamic Media måste du konfigurera Dynamic Media och hantera bild- och visningsförinställningar.
-uuid: bcd1f9ab-4201-4222-9e4a-ba82b3c7cd6c
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
-discoiquuid: 36a4a4e7-8bb2-4853-b335-cf9148be410c
 role: User, Admin
 exl-id: 85fa0414-354e-4530-81f9-a5659bb7f2fd
 feature: Configuration
-source-git-commit: 8353e6fcc76dd63a0816babbe593f474abbc4508
+source-git-commit: 04050f31742c926b45235595f6318929d3767bd8
 workflow-type: tm+mt
-source-wordcount: '260'
+source-wordcount: '255'
 ht-degree: 0%
 
 ---
@@ -27,7 +25,7 @@ ht-degree: 0%
 
 Om du administrerar Dynamic Media är följande ämnen av intresse:
 
-* [Konfigurera Dynamic Media - Scene7-läge](config-dms7.md) - Använd den här konfigurationen om du är ny Dynamic Media-kund.
+* [Konfigurera Dynamic Media - Scene7 läge](config-dms7.md) - Använd den här konfigurationen om du är ny Dynamic Media-kund.
 * [Konfigurera Dynamic Media - hybridläge](config-dynamic.md) - Använd den här konfigurationen om du redan är en Dynamic Media-kund som uppgraderar Experience Manager.
 * [Hantera bildförinställningar](managing-image-presets.md)
 * [Hantera förinställningar för visningsprogram](managing-viewer-presets.md)
@@ -43,6 +41,5 @@ Se även följande avsnitt:
 >**Om du uppgraderar:**
 >
 >* När du har installerat och kört Experience Manager aktiveras Dynamic Media automatiskt för alla resurser som du överför (såvida det inte uttryckligen inaktiverats av systemadministratören). Om du är i en uppgraderad instans av Experience Manager och inte har använt Dynamic Media tidigare måste du bearbeta dina resurser på nytt för att aktivera dem för Dynamic Media.
-
 
 

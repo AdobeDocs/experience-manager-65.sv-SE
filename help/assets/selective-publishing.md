@@ -9,7 +9,7 @@ docset: aem65
 role: User, Admin
 exl-id: cd025e9d-6fb1-436c-9e78-795f2daaf345
 feature: Publishing
-source-git-commit: 664e22cc4c6acd74f285a4ec1a0dbd7d301240b7
+source-git-commit: 04050f31742c926b45235595f6318929d3767bd8
 workflow-type: tm+mt
 source-wordcount: '2598'
 ht-degree: 0%
@@ -39,7 +39,7 @@ Oavsett om du är beroende av något av följande:
 * **[!UICONTROL Publish Assets]** värde angivet i **[!UICONTROL Dynamic Media Configuration]**.
 * **[!UICONTROL Dynamic Media Publish mode]** värdet anges i egenskaper på mappnivå.
 
-Du kan välja **[!UICONTROL Immediately]**, **[!UICONTROL On Activation]**, eller **[!UICONTROL Selective Publish]**. Du kan till exempel ange **[!UICONTROL Publish Assets]** på **[!UICONTROL Dynamic Media Configuration]** till **[!UICONTROL On Activation]**, men ange **[!UICONTROL Dynamic Media Publish]** lägesvärde på mappnivå till **[!UICONTROL Selective Publish]** och omvänt.
+Du kan **[!UICONTROL Immediately]**, **[!UICONTROL On Activation]**, eller **[!UICONTROL Selective Publish]**. Du kan till exempel ställa in **[!UICONTROL Publish Assets]** på din **[!UICONTROL Dynamic Media Configuration]** till **[!UICONTROL On Activation]**, men ange **[!UICONTROL Dynamic Media Publish]** lägesvärde på mappnivå till **[!UICONTROL Selective Publish]** och omvänt.
 
 När du har konfigurerat selektiv publicering i en mapp kan du göra något av följande:
 
@@ -59,13 +59,13 @@ När du har konfigurerat selektiv publicering i en mapp kan du göra något av f
 
    | Synkroniseringsläge | Beskrivning |
    | --- | --- |
-   | **[!UICONTROL Inherited]** | Det finns inget explicit synkroniseringsvärde för mappen; i stället ärver mappen synkroniseringsvärdet från någon av dess överordnade mappar eller det standardläge som angetts i **[!UICONTROL Dynamic Media Configuration]**. Detaljerad status för **[!UICONTROL Inherited]** visas som ett verktygstips. |
+   | **[!UICONTROL Inherited]** | Det finns inget explicit synkroniseringsvärde i mappen. I stället ärver mappen synkroniseringsvärdet från någon av dess överordnade mappar eller det standardläge som angetts i din **[!UICONTROL Dynamic Media Configuration]**. Detaljerad status för **[!UICONTROL Inherited]** visas som ett verktygstips. |
    | **[!UICONTROL Sync everything in this folder subtree to Dynamic Media]** | För att publiceringen till Dynamic Media ska lyckas måste materialet synkroniseras med Dynamic Media. Om du väljer det här alternativet inkluderas alla resurser i det här underträdet för synkronisering till Dynamic Media. De mappspecifika inställningarna åsidosätter standardinställningen i **[!UICONTROL Dynamic Media Configuration]**. |
    | **[!UICONTROL Exclude everything in this folder subtree from Dynamic Media sync]** | Uteslut alla resurser i det här underträdet från synkronisering till Dynamic Media. |
 
    ![Selektiv publicering på mappnivå](/help/assets/assets-dm/createfolder-properties-selectivepublish.png)
 
-1. I **[!UICONTROL Dynamic Media Publish mode]** väljer du ett alternativ. The **[!UICONTROL Dynamic Media Publish mode]** som standard är det värde som anges i **[!UICONTROL Dynamic Media Configuration]**. Du kan dock manuellt åsidosätta den här standardinställningen **[!UICONTROL Dynamic Media Configuration]** genom att använda något av följande alternativ.
+1. I **[!UICONTROL Dynamic Media Publish mode]** väljer du ett alternativ. The **[!UICONTROL Dynamic Media Publish mode]** är alltid standardvärdet för det värde som anges i **[!UICONTROL Dynamic Media Configuration]**. Du kan dock manuellt åsidosätta denna standard **[!UICONTROL Dynamic Media Configuration]** genom att använda något av följande alternativ.
 
    >[!IMPORTANT]
    >
@@ -77,7 +77,7 @@ När du har konfigurerat selektiv publicering i en mapp kan du göra något av f
    | --- | --- |
    | **[!UICONTROL Immediately]** | När resurser överförs till den här mappen, importeras resurserna till Experience Manager och URL:en/inbäddningen anges omedelbart. Det här alternativet är knutet till publicering i Experience Manager och det behövs inga användaråtgärder för att publicera resurser.<br>Det här alternativet är *not* tillgänglig om du har valt **[!UICONTROL Exclude everything in this folder subtree from Dynamic Media sync]** in **[!UICONTROL Sync mode]** i föregående steg. |
    | **[!UICONTROL Upon Activation]** | När resurser överförs till den här mappen måste du uttryckligen publicera resursen innan en URL/Embed-länk anges. Det här alternativet är endast knutet till Experience Manager-publicering.<br>Det här alternativet är *not* tillgänglig om du har valt **[!UICONTROL Exclude everything in this folder subtree from Dynamic Media sync]** in **[!UICONTROL Sync mode]** i föregående steg. |
-   | **[!UICONTROL Selective Publish]** | Resurser publiceras till Experience Manager eller till Dynamic Media för att distribueras offentligt. Båda publiceringsmetoderna utesluter varandra. Det innebär att du kan publicera resurser på DMS7 så att du kan använda funktioner som Smart beskärning eller dynamiska återgivningar. Eller så kan du publicera resurser exklusivt på Experience Manager för säker förhandsgranskning. samma tillgångar *not* publiceras på DMS7 för att levereras offentligt. Det här alternativet är inte tillgängligt om du har valt **[!UICONTROL Exclude everything in this folder subtree from Dynamic Media sync]** in **[!UICONTROL Sync mode]** i föregående steg. |
+   | **[!UICONTROL Selective Publish]** | Resurser publiceras till Experience Manager eller till Dynamic Media för att distribueras offentligt. Båda publiceringsmetoderna utesluter varandra. Det innebär att du kan publicera resurser på DMS7 så att du kan använda funktioner som Smart beskärning eller dynamiska återgivningar. Eller så kan du publicera resurser exklusivt på Experience Manager för säker förhandsgranskning. Samma resurser är *not* publiceras på DMS7 för att levereras offentligt. Det här alternativet är inte tillgängligt om du har valt **[!UICONTROL Exclude everything in this folder subtree from Dynamic Media sync]** in **[!UICONTROL Sync mode]** i föregående steg. |
 
 1. I det övre högra hörnet på sidan väljer du **[!UICONTROL Save & Close]** väljer **[!UICONTROL OK]** för att återvända till Experience Manager Assets.
 
@@ -102,12 +102,12 @@ Se [Skapa en Dynamic Media-konfiguration](#configuring-dynamic-media-cloud-servi
 
 1. I Experience Manager väljer du Experience Manager logotypen för att komma åt den globala navigeringskonsolen. Till vänster väljer du navigeringsikonen (alldeles ovanför verktygsikonen) och sedan väljer du **[!UICONTROL Assets]** > **[!UICONTROL Files]**.
 1. I **[!UICONTROL Card View]**, **[!UICONTROL Column View]**, eller **[!UICONTROL List View]** gör du något av följande:
-   * Navigera till en mapp vars resurser du vill publicera. Markera mappen och välj sedan **[!UICONTROL Manage Publication]**. Använd **[!UICONTROL List View]** så att du enklare kan kontrollera publiceringsstatusen för en viss mapp.
-   * Navigera till en mapp vars resurser du vill publicera. Öppna mappen och välj sedan en eller flera resurser. I verktygsfältet väljer du **[!UICONTROL Manage Publication]**. Använd **[!UICONTROL List View]** så att du enklare kan kontrollera publiceringsstatusen för en viss resurs.
+   * Navigera till en mapp vars resurser du vill publicera. Markera mappen och välj sedan **[!UICONTROL Manage Publication]**. Använd **[!UICONTROL List View]** så att du enklare kan kontrollera publiceringsstatus för en viss mapp.
+   * Navigera till en mapp vars resurser du vill publicera. Öppna mappen och välj sedan en eller flera resurser. I verktygsfältet väljer du **[!UICONTROL Manage Publication]**. Använd **[!UICONTROL List View]** så att du enklare kan kontrollera publiceringsstatus för en viss resurs.
 
-      >[!NOTE]
-      >
-      >If **[!UICONTROL Manage Publication]** visas inte i verktygsfältet. Välj i stället ellipsknappen och markera sedan **[!UICONTROL Manage Publication]** på listmenyn.
+     >[!NOTE]
+     >
+     >If **[!UICONTROL Manage Publication]** visas inte i verktygsfältet. Välj i stället ellipsknappen och markera sedan **[!UICONTROL Manage Publication]** på listmenyn.
 
 1. I **[!UICONTROL Manage Publication - Options]** sida, under **[!UICONTROL Action]** väljer du den typ av aktivering du vill använda.
 
@@ -134,12 +134,12 @@ Se [Skapa en Dynamic Media-konfiguration](#configuring-dynamic-media-cloud-servi
 
 1. I Experience Manager väljer du Experience Manager logotypen för att komma åt den globala navigeringskonsolen. Till vänster väljer du navigeringsikonen (alldeles ovanför verktygsikonen) och sedan väljer du **[!UICONTROL Assets]** > **[!UICONTROL Files]**.
 1. I **[!UICONTROL Card View]**, **[!UICONTROL Column View]**, eller **[!UICONTROL List View]** gör du något av följande:
-   * Navigera till en mapp vars resurser du vill avpublicera. Markera mappen och välj sedan **[!UICONTROL Manage Publication]**. Använd **[!UICONTROL List View]** så att du enklare kan kontrollera publiceringsstatusen för en viss mapp.
-   * Navigera till en mapp vars resurser du vill avpublicera. Öppna mappen och välj sedan en eller flera resurser. I verktygsfältet väljer du **[!UICONTROL Manage Publication]**. Använd **[!UICONTROL List View]** så att du enklare kan kontrollera publiceringsstatusen för en viss resurs.
+   * Navigera till en mapp vars resurser du vill avpublicera. Markera mappen och välj sedan **[!UICONTROL Manage Publication]**. Använd **[!UICONTROL List View]** så att du enklare kan kontrollera publiceringsstatus för en viss mapp.
+   * Navigera till en mapp vars resurser du vill avpublicera. Öppna mappen och välj sedan en eller flera resurser. I verktygsfältet väljer du **[!UICONTROL Manage Publication]**. Använd **[!UICONTROL List View]** så att du enklare kan kontrollera publiceringsstatus för en viss resurs.
 
-      >[!NOTE]
-      >
-      >If **[!UICONTROL Manage Publication]** visas inte i verktygsfältet. Välj i stället ellipsknappen och markera sedan **[!UICONTROL Manage Publication]** på listmenyn.
+     >[!NOTE]
+     >
+     >If **[!UICONTROL Manage Publication]** visas inte i verktygsfältet. Välj i stället ellipsknappen och markera sedan **[!UICONTROL Manage Publication]** på listmenyn.
 
 1. I **[!UICONTROL Manage Publication - Options]** sida, under **[!UICONTROL Action]** väljer du vilken typ av avaktivering du vill ha.
 
@@ -152,7 +152,7 @@ Se [Skapa en Dynamic Media-konfiguration](#configuring-dynamic-media-cloud-servi
 
    | Schema | Beskrivning |
    | --- | --- |
-   | **[!UICONTROL Now]** | Välj att avpublicera resurserna direkt. |
+   | **[!UICONTROL Now]** | Välj det här alternativet om du vill avpublicera resurserna direkt. |
    | **[!UICONTROL Later]** | Välj det här alternativet om du vill avpublicera resurserna ett visst datum och en viss tid. |
 
 1. I det övre högra hörnet av **[!UICONTROL Manage Publication]** sida, markera **[!UICONTROL Next]**.
@@ -173,14 +173,14 @@ Du kan använda **[!UICONTROL Quick Publish]** för enkel tillgångsaktivering. 
 
 1. I Experience Manager väljer du Experience Manager logotypen för att komma åt den globala navigeringskonsolen. Till vänster på sidan väljer du navigeringsikonen (precis ovanför verktygsikonen) och till höger på sidan väljer **[!UICONTROL Assets]** > **[!UICONTROL Files]**.
 1. I **[!UICONTROL Card View]**, **[!UICONTROL Column View]**, eller **[!UICONTROL List View]** gör du något av följande:
-   * Navigera till en mapp vars resurser du vill publicera. Markera mappen och välj sedan **[!UICONTROL Quick Publish]**. Använd **[!UICONTROL List View]** så att du enklare kan kontrollera publiceringsstatusen för en viss mapp.
-   * Navigera till en mapp vars resurser du vill publicera. Öppna mappen och välj sedan en eller flera resurser. I verktygsfältet väljer du **[!UICONTROL Quick Publish]**. Använd **[!UICONTROL List View]** så att du enklare kan kontrollera publiceringsstatusen för en viss resurs.
+   * Navigera till en mapp vars resurser du vill publicera. Markera mappen och välj sedan **[!UICONTROL Quick Publish]**. Använd **[!UICONTROL List View]** så att du enklare kan kontrollera publiceringsstatus för en viss mapp.
+   * Navigera till en mapp vars resurser du vill publicera. Öppna mappen och välj sedan en eller flera resurser. I verktygsfältet väljer du **[!UICONTROL Quick Publish]**. Använd **[!UICONTROL List View]** så att du enklare kan kontrollera publiceringsstatus för en viss resurs.
 
-      >[!NOTE]
-      >
-      >If **[!UICONTROL Quick Publish]** visas inte i verktygsfältet. Välj i stället ellipsknappen och markera sedan **[!UICONTROL Quick Publish]** på listmenyn.
+     >[!NOTE]
+     >
+     >If **[!UICONTROL Quick Publish]** visas inte i verktygsfältet. Välj i stället ellipsknappen och markera sedan **[!UICONTROL Quick Publish]** på listmenyn.
 
-      ![Snabbpublicering på mappnivå till Dynamic Media](/help/assets/assets-dm/selective-publish-folder-quick-publish-to-dm.png)
+     ![Snabbpublicering på mappnivå till Dynamic Media](/help/assets/assets-dm/selective-publish-folder-quick-publish-to-dm.png)
 
 1. Välj något av följande alternativ från **[!UICONTROL Quick Publish]** menylista.
 
@@ -200,11 +200,11 @@ Se även [Söka efter resurser i Experience Manager](/help/assets/search-assets.
 
 **Så här publicerar eller avpublicerar du resurser selektivt via sökresultat:**
 
-1. I Experience Manager, i det övre vänstra hörnet av sidan, väljer du Experience Manager logotypen för att komma åt den globala navigeringskonsolen. Till vänster på sidan väljer du navigeringsikonen (alldeles ovanför verktygsikonen) och väljer sedan **[!UICONTROL Assets]** > **[!UICONTROL Files]**.
+1. I Experience Manager i det övre vänstra hörnet av sidan väljer du Experience Manager logotypen för att komma åt den globala navigeringskonsolen. Till vänster på sidan väljer du navigeringsikonen (alldeles ovanför verktygsikonen) och väljer sedan **[!UICONTROL Assets]** > **[!UICONTROL Files]**.
 1. I verktygsfältet, i det övre högra hörnet på sidan, väljer du ikonen Sök (förstoringsglas).
 1. I **[!UICONTROL Type to search]** textfält, ange ett nyckelord och tryck sedan på **[!UICONTROL Enter]**.
-1. I det övre högra hörnet av sidan väljer du **[!UICONTROL List View]** ikon.
-1. I närheten av det övre vänstra hörnet av sidan väljer du **[!UICONTROL Filters]** ikon.
+1. I det övre högra hörnet av sidan väljer du **[!UICONTROL List View]** -ikon.
+1. I närheten av det övre vänstra hörnet av sidan väljer du **[!UICONTROL Filters]** -ikon.
 
    ![Listvy och filter i sökresultat](/help/assets/assets-dm/select-publish-search-result.png)
 
@@ -258,16 +258,16 @@ Du kan också använda de här kryssrutorna med **[!UICONTROL Publish]** sökpre
 
 Du kan använda **[!UICONTROL Timeline]** med **[!UICONTROL Card view]**, **[!UICONTROL Column View]**, eller **[!UICONTROL List View]** i Experience Manager för att snabbt kontrollera publiceringsstatus för en resurs.
 
-**Så här kontrollerar du publiceringsstatusen för en resurs:**
+**Så här kontrollerar du publiceringsstatus för en resurs:**
 
-1. I Experience Manager, i det övre vänstra hörnet av sidan, väljer du Experience Manager logotypen för att komma åt den globala navigeringskonsolen. Till vänster på sidan väljer du navigeringsikonen (alldeles ovanför verktygsikonen) och väljer sedan **[!UICONTROL Assets]** > **[!UICONTROL Files]**.
+1. I Experience Manager i det övre vänstra hörnet av sidan väljer du Experience Manager logotypen för att komma åt den globala navigeringskonsolen. Till vänster på sidan väljer du navigeringsikonen (alldeles ovanför verktygsikonen) och väljer sedan **[!UICONTROL Assets]** > **[!UICONTROL Files]**.
 1. I **[!UICONTROL Card View]**, **[!UICONTROL Column View]**, eller **[!UICONTROL List View]** (skärmbilden nedan visar **[!UICONTROL List View]**) öppnar du en mapp som innehåller resurser som du har publicerat eller opublicerat.
 1. Markera en resurs så att den visas med en bock. Se skärmbilden nedan.
-1. I den nedrullningsbara menyn nära sidans övre vänstra hörn väljer du **[!UICONTROL Timeline]**. The **[!UICONTROL Status]** i den vänstra panelen visas den valda resursens publiceringstillstånd.
+1. I den nedrullningsbara menyn i det övre vänstra hörnet av sidan väljer du **[!UICONTROL Timeline]**. The **[!UICONTROL Status]** i den vänstra panelen visas den valda resursens publiceringstillstånd.
 När du använder **[!UICONTROL List View]**, en extra kolumn för **[!UICONTROL Dynamic Media]** publiceringsstatus visas.
    * En mapp som är konfigurerad att synkroniseras till Dynamic Media visar **[!UICONTROL Dynamic Media]** kolumn som standard.
    * En mapp som *not* Dynamic Media-kolumnen visas inte om du har konfigurerat att synkronisera med Dynamic Media.
-      ![Listvy och tidslinje](/help/assets/assets-dm/selective-publish-status-timeline.png)
+     ![Listvy och tidslinje](/help/assets/assets-dm/selective-publish-status-timeline.png)
 
 ## Felsök selektiv publicering {#selective-publish-troubleshoot}
 

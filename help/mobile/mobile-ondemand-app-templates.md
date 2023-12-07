@@ -5,7 +5,7 @@ contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 exl-id: 5f050baa-fe10-4acc-ad32-de20793edc13
-source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
+source-git-commit: 04050f31742c926b45235595f6318929d3767bd8
 workflow-type: tm+mt
 source-wordcount: '1151'
 ht-degree: 0%
@@ -41,7 +41,7 @@ När du skapar ett program baserat på en mall för ett annat program får du et
 Steg för att skapa ett program baserat på en appmall:
 
 1. Gå till AEM Mobile programkatalog: *&lt;server-url>/aem/apps.html/content/mobile/apps*
-1. Välj **Skapa** -> **App** som visas nedan
+1. Välj **Skapa** > **App** som visas nedan
 
 När du har skapat ett program med den här mallen kan du lägga till artiklar, banners och samlingar i programmet. Mer information om hur du återbesöker, skapar artiklar, banners och samlingar finns i [Innehållshanteringsåtgärder](/help/mobile/mobile-apps-ondemand-manage-content-ondemand.md).
 

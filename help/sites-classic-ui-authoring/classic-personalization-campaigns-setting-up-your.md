@@ -7,7 +7,7 @@ topic-tags: personalization
 content-type: reference
 docset: aem65
 exl-id: 1b607a52-f065-4e35-8215-d54df7c8403d
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+source-git-commit: 04050f31742c926b45235595f6318929d3767bd8
 workflow-type: tm+mt
 source-wordcount: '2194'
 ht-degree: 0%
@@ -197,7 +197,7 @@ Till aktiva eller inaktiverade leads:
 
    ![screen_shot_2012-02-21at120620pm](assets/screen_shot_2012-02-21at120620pm.png)
 
-   Precis som för AEM sidor anges publiceringsstatusen i **Publicerad** kolumn.
+   Publiceringsstatusen anges på samma sätt som för AEM sidor i **Publicerad** kolumn.
 
    ![screen_shot_2012-02-21at122901pm](assets/screen_shot_2012-02-21at122901pm.png)
 

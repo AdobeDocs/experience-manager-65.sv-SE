@@ -2,20 +2,18 @@
 title: Konfigurera Dynamic Media - hybridläge
 description: Lär dig hur du konfigurerar Dynamic Media - hybrid-läge.
 mini-toc-levels: 3
-uuid: 39ad7d83-d310-4baf-9d85-5532c2f201f3
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: dynamic-media
 content-type: reference
-discoiquuid: 7d8e7273-29f3-4a45-ae94-aad660d2c71d
 docset: aem65
 legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/config-dynamic
 role: User, Admin
 exl-id: 5719d32c-4f19-47c1-bea9-8fd0bc8439ed
 feature: Configuration,Hybrid Mode
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 04050f31742c926b45235595f6318929d3767bd8
 workflow-type: tm+mt
-source-wordcount: '7557'
+source-wordcount: '7449'
 ht-degree: 0%
 
 ---
@@ -63,7 +61,7 @@ Om du använder Dynamic Media måste du använda hybridleverans som leveransmeka
 
 Konfigurationsåtgärderna som följer refererar till följande termer:
 
-| **Term** | **Dynamic Media Enabled** | **Beskrivning** |
+| **Villkor** | **Dynamic Media Enabled** | **Beskrivning** |
 |---|---|---|
 | Experience Manager Author node | Vit bock i en grön cirkel | Författarnoden som du distribuerar till On-Premise eller via Managed Services. |
 | Experience Manager Publish-nod | Vitt &quot;X&quot; i en röd kvadrat. | Den publiceringsnod som du distribuerar till On-Premise eller via Managed Services. |
@@ -80,7 +78,7 @@ Du kan välja att implementera Dynamic Media endast för bildåtergivning, endas
   </tr>
   <tr>
    <td>Leverera ENDAST bilder i produktion</td>
-   <td>Bilderna levereras via servrar i Adobe globala datacenter och cachas sedan av ett CDN för skalbara prestanda och global räckvidd.</td>
+   <td>Bilderna levereras via servrar i Adobe datacenter över hela världen och cachas sedan av ett CDN för skalbara prestanda och global räckvidd.</td>
    <td>
     <ol>
      <li>På Experience Manager <strong>författare</strong> nod, <a href="#enabling-dynamic-media">aktivera Dynamic Media</a>.</li>
@@ -121,7 +119,7 @@ Du kan välja att implementera Dynamic Media endast för bildåtergivning, endas
   </tr>
   <tr>
    <td>Leverera både bilder och video i produktion</td>
-   <td><p>Videor levereras och cachas av ett CDN för skalbara prestanda och global räckvidd. Bilder och filmminiatyrbilder levereras via servrar i Adobe globala datacenter och cachas sedan av ett CDN för skalbara prestanda och global räckvidd.</p> <p>Se föregående avsnitt för att ställa in bild eller video i förproduktion. </p> </td>
+   <td><p>Videor levereras och cachas av ett CDN för skalbara prestanda och global räckvidd. Bilder och filmminiatyrbilder levereras via servrar i Adobe över hela världen och cachas sedan av en CDN för skalbara prestanda och global räckvidd.</p> <p>Se föregående avsnitt för att ställa in bild eller video i förproduktion. </p> </td>
    <td>
     <ol>
      <li>På Experience Manager <strong>författare</strong> nod, <a href="#enabling-dynamic-media">aktivera Dynamic Media</a>.</li>
@@ -301,7 +299,7 @@ Konfigurera replikeringsautentisering för författaren så att du kan replikera
    * Välj **[!UICONTROL KeyStore File]**. Navigera till KeyStore-filen som du får från Adobe, markera den och markera sedan **[!UICONTROL Open]**.
    * I **[!UICONTROL KeyStore File Password]** anger du KeyStore-filens lösenord. Det här lösenordet är **not** det KeyStore-lösenord som du skapade i steg 5, men som är KeyStore-fillösenordet som Adobe tillhandahåller i det välkomstmeddelande som skickas till dig under etableringen. Kontakta Adobe kundsupport om du inte har fått något lösenord för KeyStore-filen.
    * I **[!UICONTROL Private Key Password]** anger du lösenordet för den privata nyckeln (kan vara samma lösenord för den privata nyckeln som angavs i föregående steg). Adobe anger lösenordet för den privata nyckeln i det välkomstmeddelande som skickas till dig under etableringen. Kontakta Adobe kundsupport om du inte har fått något lösenord för den privata nyckeln.
-   * I **[!UICONTROL Private Key Alias]** anger du alias för den privata nyckeln. Till exempel, `*companyname*-alias`. Adobe tillhandahåller det privata nyckelaliaset i välkomstmeddelandet som skickas till dig under etableringen. Kontakta Adobe kundsupport om du inte har fått något alias för privat nyckel.
+   * I **[!UICONTROL Private Key Alias]** anger du alias för den privata nyckeln. Till exempel: `*companyname*-alias`. Adobe tillhandahåller det privata nyckelaliaset i välkomstmeddelandet som skickas till dig under etableringen. Kontakta Adobe kundsupport om du inte har fått något alias för privat nyckel.
 
    ![edit_settings_for dynamic-media-replication2](assets/edit_settings_fordynamic-media-replication2.png)
 
@@ -1126,7 +1124,7 @@ Följande färgprofiler är installerade:
    <td>Photoshop 4 - standard-CMYK</td>
   </tr>
   <tr>
-   <td>PS5Default</td>
+   <td>PS5Standard</td>
    <td>CMYK</td>
    <td>Photoshop 5 - standard-CMYK</td>
   </tr>
@@ -1190,7 +1188,7 @@ Följande färgprofiler är installerade:
 
 1. Välj **[!UICONTROL Save All]**.
 
-Du kan till exempel ställa in **[!UICONTROL iccprofilergb]** på `sRGB` och **[!UICONTROL iccprofilecmyk]** på **[!UICONTROL WebCoated]**.
+Du kan till exempel ställa in **[!UICONTROL iccprofilergb]** till `sRGB`och **[!UICONTROL iccprofilecmyk]** till **[!UICONTROL WebCoated]**.
 
 Om du gör det gör du så här:
 

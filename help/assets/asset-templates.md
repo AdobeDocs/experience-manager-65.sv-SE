@@ -5,10 +5,10 @@ contentOwner: AG
 role: User
 feature: Asset Management,Developer Tools
 exl-id: 12c92aad-3a1d-486e-a830-31de2fc6d07b
-source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
+source-git-commit: 04050f31742c926b45235595f6318929d3767bd8
 workflow-type: tm+mt
-source-wordcount: '1503'
-ht-degree: 1%
+source-wordcount: '1511'
+ht-degree: 2%
 
 ---
 
@@ -105,7 +105,7 @@ Du kan redigera en sammanställning direkt när du har skapat den. Du kan även 
 
    ![chlimage_1-114](assets/chlimage_1-319.png)
 
-   Du kan också söka efter bilder med nyckelord, taggar och baserat på deras publiceringsstatus. Du kan bläddra genom [!DNL Experience Manager Assets] och navigera till den önskade bildens plats.
+   Du kan också söka efter bilder med hjälp av nyckelord, taggar och baserat på deras publiceringsstatus. Du kan bläddra genom [!DNL Experience Manager Assets] och navigera till den önskade bildens plats.
 
    ![chlimage_1-115](assets/chlimage_1-320.png)
 

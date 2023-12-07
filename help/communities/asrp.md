@@ -1,20 +1,16 @@
 ---
 title: ASRP - Adobe lagringsresursleverantör
-seo-title: ASRP - Adobe Storage Resource Provider
 description: Konfigurera AEM Communities för att använda en relationsdatabas som gemensam lagringsplats
-seo-description: Set up AEM Communities to use a relational database as its common store
-uuid: abe47ad9-9f72-4dad-a5e9-6d621a9722d4
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: administering
 content-type: reference
-discoiquuid: 3e81b519-57ca-4ee1-94bd-7adac4605407
 docset: aem65
 role: Admin
 exl-id: 6430ed96-5d96-41b6-866f-90b34ff84f7a
-source-git-commit: 42feafa381c129117dae5345255702f0b0951a17
+source-git-commit: 04050f31742c926b45235595f6318929d3767bd8
 workflow-type: tm+mt
-source-wordcount: '803'
+source-wordcount: '780'
 ht-degree: 0%
 
 ---
@@ -46,7 +42,7 @@ Konsumentnycklarna och de hemliga nycklarna delas över alla rapporteringsprogra
 
 The [Konsol för lagringskonfiguration](/help/communities/srp-config.md) gör det möjligt att välja standardlagringskonfiguration, som identifierar vilken implementering av SRP som ska användas.
 
-**I AEM Author-instans:**
+**AEM författarinstans:**
 
 * Navigera från global navigering till **[!UICONTROL Tools > Communities > Storage Configuration]** och markera **[!UICONTROL Adobe Storage Resource Provider (ASRP)]**.
 
@@ -54,7 +50,7 @@ The [Konsol för lagringskonfiguration](/help/communities/srp-config.md) gör de
 
 Följande information kommer från provisioneringsprocessen:
 
-* **URL för datacenter**: Nedrullningsbar meny för att välja det produktionsdatacenter som din kontorepresentant har identifierat.
+* **URL för datacenter**: Dra ned för att välja det produktionsdatacenter som din kontorepresentant har identifierat.
 * **Standard Report Suite**: Ange namnet på standardrapportsviten.
 * **Konsumentnyckel**: Ange konsumentnyckeln.
 * **Hemlighet**: Ange hemligheten.
@@ -69,7 +65,7 @@ Testa anslutningen när konfigurationen har skickats:
 
 * Välj **Test Config**.
 
-   Testa anslutningen till datacentret från lagringskonsolen för varje författare och publiceringsinstans.
+  Testa anslutningen till datacentret från konsolen Lagringskonfiguration för varje författare och publiceringsinstans.
 
 * Se till att URL:er för webbplatsen för profildata kan dirigeras från datacentret av [externalisera länkar](#externalize-links).
 
@@ -95,7 +91,7 @@ ASRP måste identifieras som det gemensamma arkivet för alla författar- och pu
 
 Så här gör du den identiska konfigurationen tillgänglig i publiceringsmiljön:
 
-I AEM Author-instans:
+AEM författarinstans:
 
 * Navigera från huvudmenyn till **[!UICONTROL Tools]** > **[!UICONTROL Deployment]** > **[!UICONTROL Replication]**
 * Välj **Aktivera träd**
@@ -111,7 +107,7 @@ I AEM Author-instans:
 
 **`AEM Communities Extension`** introducerades tidigare i AEM 6.0 sociala communities som en molntjänst. Från och med AEM 6.1 Communities behövs ingen molnkonfiguration. Välj bara ASRP från [lagringskonfigurationskonsol](/help/communities/srp-config.md).
 
-På grund av den nya lagringsstrukturen är det nödvändigt att följa [uppgradera](/help/communities/upgrade.md#adobe-cloud-storage) Instruktioner när du uppgraderar från sociala communityn till Communities.
+På grund av den nya lagringsstrukturen måste du följa [uppgradera](/help/communities/upgrade.md#adobe-cloud-storage) Instruktioner när du uppgraderar från sociala communityn till Communities.
 
 ## Hantera användardata {#managing-user-data}
 

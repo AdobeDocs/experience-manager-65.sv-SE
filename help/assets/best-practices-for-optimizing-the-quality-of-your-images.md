@@ -1,18 +1,16 @@
 ---
 title: Bästa tillvägagångssätt för att optimera kvaliteten på dina bilder i Dynamic Media
 description: Lär dig de bästa sätten att optimera bildkvaliteten i Dynamic Media
-uuid: b73f0918-c723-4a0d-a63f-4242223c2d47
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: dynamic-media
 content-type: reference
-discoiquuid: 12baf001-dfc9-410a-9821-a3bae1324392
 feature: Asset Management
 role: User, Admin
 exl-id: 7a568cae-e505-4b3a-abc5-8aae723460c3
-source-git-commit: 471f9e99078a1e0af60024d439afd42ae77cba8c
+source-git-commit: 04050f31742c926b45235595f6318929d3767bd8
 workflow-type: tm+mt
-source-wordcount: '1438'
+source-wordcount: '1481'
 ht-degree: 3%
 
 ---
@@ -26,7 +24,7 @@ Adobe Experience Manager innehåller över 100 Dynamic Media-kommandon för att 
 ## Bästa tillvägagångssätt för bildformat (`&fmt=`) {#best-practices-for-image-format-fmt}
 
 * JPG eller PNG är de bästa alternativen för att leverera bilder med god kvalitet och hanterbar storlek och vikt.
-* Om inget formatkommando anges i URL:en är Dynamic Media Image Delivery standard JPG för leverans.
+* Om inget formatkommando anges i URL:en används som standard JPG för leverans.
 * JPG komprimerar 10:1 och ger vanligtvis mindre bildfilsstorlekar. PNG komprimeras med ett förhållande på cirka 2:1, förutom ibland när bilder innehåller en vit bakgrund. Vanligtvis är PNG-filernas storlek större än JPG-filer.
 * JPG använder förstörande komprimering, vilket innebär att bildelement (pixlar) tas bort under komprimeringen. PNG använder däremot förlustfri komprimering.
 * JPG komprimerar ofta fotografiska bilder med bättre återgivning än syntetiska bilder med skarpa kanter och kontrast.
@@ -41,7 +39,7 @@ Att minska bildstorleken dynamiskt är en av de vanligaste uppgifterna. Det hand
 * För bildstorlek är det bästa och enklaste sättet att använda `&wid=<value>` och `&hei=<value>,`eller bara `&hei=<value>`. Dessa parametrar ställer automatiskt in bildbredden i enlighet med proportionerna.
 * `&resMode=<value>`styr den algoritm som används för nedsampling. Börja med `&resMode=sharp2`. Det här värdet ger den bästa bildkvaliteten. När nedsampling används `value =bilin` är snabbare, leder det ofta till aliasing av artefakter.
 
-Ett tips om hur du kan ändra storlek på bilder är att använda `&wid=<value>&hei=<value>&resMode=sharp2` eller `&hei=<value>&resMode=sharp2`
+Ett tips om hur du kan ändra bildstorlek är att använda `&wid=<value>&hei=<value>&resMode=sharp2` eller `&hei=<value>&resMode=sharp2`
 
 ## Bästa tillvägagångssätt för bildskärpa {#best-practices-for-image-sharpening}
 
@@ -64,22 +62,21 @@ Det finns två metoder för bildskärpa:
       * **[!UICONTROL *belopp *]**(0-5, effektens styrka.)
       * **[!UICONTROL *radie *]**(0-250, bredden på de&quot;skärpelinjer&quot; som ritas runt objektet med skärpa, mätt i pixlar.)
 
-      Tänk på att parametrarnas radie och mängd fungerar mot varandra. Reducerad radie kan kompenseras genom ett ökat belopp. Med radie får du bättre kontroll eftersom ett lägre värde ökar skärpan endast för kantpixlarna, medan ett högre värde ökar skärpan för ett större antal pixlar.
+     Tänk på att parametrarnas radie och mängd fungerar mot varandra. Reducerad radie kan kompenseras genom ett ökat belopp. Med radie får du bättre kontroll eftersom ett lägre värde ökar skärpan endast för kantpixlarna, medan ett högre värde ökar skärpan för ett större antal pixlar.
 
       * **[!UICONTROL *tröskelvärde *]**(0-255, effektkänslighet.)
 
-             Den här parametern avgör hur annorlunda de pixlar som ska göras skarpare måste vara jämfört med det omgivande området innan de betraktas som kantpixlar och filtret gör dem skarpare. The **[!UICONTROL threshold]**-parametern hjälper till att undvika att göra områden med liknande färger skarpare, som hudtoner, för mycket. Ett tröskelvärde på 12 ignorerar till exempel små variationer i hudtonens ljusstyrka för att undvika att lägga till ”brus”, men lägger ändå till kantkontrast i områden med hög kontrast, till exempel där ögonfransarna möter huden.
-         
-         Mer information om hur du ställer in de här tre parametrarna, inklusive de bästa sätten att använda med filtret, finns i följande resurser:
+            Den här parametern avgör hur annorlunda de pixlar som ska göras skarpare måste vara jämfört med det omgivande området innan de betraktas som kantpixlar och filtret gör dem skarpare. The **[!UICONTROL threshold]**-parametern hjälper till att undvika att göra områden med liknande färger skarpare, som hudtoner, för mycket. Ett tröskelvärde på 12 ignorerar till exempel små variationer i hudtonens ljusstyrka för att undvika att lägga till ”brus”, men lägger ändå till kantkontrast i områden med hög kontrast, till exempel där ögonfransarna möter huden.
+        
+        Mer information om hur du ställer in de här tre parametrarna, inklusive de bästa sätten att använda med filtret, finns i följande resurser:
 
-         Hjälpavsnittet Experience Manager om skärpa i en bild.
+        Hjälpavsnittet Experience Manager om skärpa i en bild.
 
-         Rapport om bästa praxis [Öka skärpan i bilder i Adobe Dynamic Media Classic](/help/assets/assets/sharpening_images.pdf).
+        Rapport om bästa praxis [Öka skärpan i bilder i Adobe Dynamic Media Classic](/help/assets/assets/sharpening_images.pdf).
 
       * Med Experience Manager kan du även styra en fjärde parameter: monokrom (0,1). Den här parametern avgör om oskarp maskning används separat på varje färgkomponent med värdet 0 eller på bildens intensitet/intensitet med värdet 1.
 
-
-Det bästa sättet är att börja med parametern oskarp maskradie. Radie-inställningar som du kan börja med är följande:
+Ett tips är att börja med parametern unsharp mask radius. Radie-inställningar som du kan börja med är följande:
 
 * **[!UICONTROL Website]** - 0,2-0,3 pixlar
 * **[!UICONTROL Photographic printing (250-300 ppi)]** - 0,3-0,5 pixlar
@@ -92,16 +89,16 @@ Lämna den monokroma parameterinställningen på 0.
 
 ### Bästa tillvägagångssätt för komprimering av JPEG (`&qlt=`) {#best-practices-for-jpeg-compression-qlt}
 
-* Den här parametern styr kodningskvaliteten för JPG. Ett högre värde innebär en bild av högre kvalitet men en stor filstorlek. Ett lägre värde innebär en bild med lägre kvalitet men mindre filstorlek. Intervallet för den här parametern är 0-100.
-* Om du vill optimera kvaliteten ska du inte ställa in parametervärdet på 100. Skillnaden mellan en inställning på 90 eller 95 och 100 är nästan otydlig, men 100 ökar storleken på bildfilen i onödan. Om du vill optimera kvaliteten men undvika att bildfilerna blir för stora anger du `qlt= value` till 90 eller 95.
-* Om du vill optimera för en liten bildfilsstorlek men behålla bildkvaliteten på en acceptabel nivå anger du `qlt= value` till 80. Värden under 70 till 75 ger en signifikant försämring av bildkvaliteten.
+* Den här parametern styr kodningskvaliteten för JPG. Ett högre värde innebär en bild med högre kvalitet men en stor filstorlek. Ett lägre värde innebär en bild med lägre kvalitet men mindre filstorlek. Intervallet för parametern är 0-100.
+* Om du vill optimera kvaliteten ska du inte ange parametervärdet 100. Skillnaden mellan en inställning på 90 eller 95 och 100 är nästan otydlig, men 100 ökar storleken på bildfilen i onödan. Om du vill optimera kvaliteten men undvika att bildfilerna blir för stora anger du `qlt= value` till 90 eller 95.
+* Om du vill optimera för en liten bildfilsstorlek men behålla bildkvaliteten på en godtagbar nivå anger du `qlt= value` till 80. Värden under 70 till 75 ger en signifikant försämring av bildkvaliteten.
 * Det bästa sättet att vara i mitten är att ställa in `qlt= value` till 85 om du vill stanna i mitten.
 * Använda chroma-flaggan i `qlt=`
 
    * The `qlt=` parametern har en andra inställning som gör att du kan aktivera nedsampling av färgvärden i RGB `,1` eller avaktivera med hjälp av värdet `,0`.
    * Börja med att stänga av nedsampling av kromaticitet i RGB (`,0`). Den här inställningen ger vanligtvis bättre bildkvalitet, särskilt för syntetiska bilder med många skarpa kanter och kontrast.
 
-Ett tips för komprimering i JPG `&qlt=85,0`.
+Ett tips för komprimering med JPG är att använda `&qlt=85,0`.
 
 ## Bästa tillvägagångssätt för storleksändring av JPEG (`&jpegSize=`) {#best-practices-for-jpeg-sizing-jpegsize}
 
@@ -110,7 +107,7 @@ jpegSize är en användbar parameter om du vill försäkra dig om att en bild in
 * Den här parametern anges i kilobyte (`jpegSize=&lt;size_in_kilobytes&gt;`). Det definierar den största tillåtna storleken för bildleverans.
 * `&jpegSize=` interagerar med komprimeringsparametern JPG `&qlt=`. Om JPG svarar med den angivna komprimeringsparametern JPG (`&qlt=`) överstiger inte jpegSize-värdet, bilden returneras med `&qlt=` enligt definition. I annat fall `&qlt=` minskas gradvis tills bilden får plats i den tillåtna maxstorleken eller tills systemet fastställer att den inte får plats och returnerar ett fel.
 
-Som bästa praxis `&jpegSize=` och lägg till parametern `&qlt=` om du levererar JPG-bilder till enheter med begränsat minne.
+Som bästa praxis bör du ange `&jpegSize=` och lägg till parametern `&qlt=` om du levererar JPG-bilder till enheter med begränsat minne.
 
 ## Sammanfattning av bästa praxis {#best-practices-summary}
 

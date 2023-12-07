@@ -1,14 +1,12 @@
 ---
 title: Använda elektroniska signaturer i ett formulär med hjälp av klottersignaturer
 description: Lär dig hur du signerar AEM Adaptive Forms med hjälp av en signatur. Du kan använda steget för att skriva signatur och signatur för att rita signaturen i ett formulär.
-uuid: ffeba886-9b24-4ed1-95c0-e19356ff2f23
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
-discoiquuid: 76d178d1-8e40-41b3-80d4-66b2f8d04211
 docset: aem65
 feature: Adaptive Forms
 exl-id: 096f61b0-59f4-4699-9093-8fb1ed81fded
-source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
+source-git-commit: 04050f31742c926b45235595f6318929d3767bd8
 workflow-type: tm+mt
 source-wordcount: '717'
 ht-degree: 0%

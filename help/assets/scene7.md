@@ -1,19 +1,17 @@
 ---
 title: Lägga till Dynamic Media Classic-funktioner på sidor
 description: Så här lägger du till Dynamic Media Classic-funktioner och -komponenter på en sida i Adobe Experience Manager.
-uuid: aa5a4735-bfec-43b8-aec0-a0c32bff134f
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 content-type: reference
 topic-tags: managing-assets
-discoiquuid: e7b95732-a571-48e8-afad-612059cdbde7
 feature: Dynamic Media Classic
 role: User, Admin
 mini-toc-levels: 3
 exl-id: 815f577d-4774-4830-8baf-0294bd085b83
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 04050f31742c926b45235595f6318929d3767bd8
 workflow-type: tm+mt
-source-wordcount: '2707'
+source-wordcount: '2713'
 ht-degree: 1%
 
 ---
@@ -75,7 +73,7 @@ När de är tillgängliga i **[!UICONTROL Design]** I kan du lägga till kompone
 >
 >Om du skapar och utvecklar anpassade visningsprogram och använder Content Finder måste du lägga till `allowfullscreen` parameter.
 
-### Meddelande om att Flash Viewer har upphört {#flash-viewers-end-of-life-notice}
+### Flash Viewers End-of-Life Notice {#flash-viewers-end-of-life-notice}
 
 Från och med den 31 januari 2017 upphörde Adobe Dynamic Media Classic stödet för visningsprogramplattformen för Flash.
 

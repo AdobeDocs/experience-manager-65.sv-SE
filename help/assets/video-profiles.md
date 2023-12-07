@@ -1,21 +1,19 @@
 ---
 title: Videoprofiler
 description: Dynamic Media har redan en fördefinierad adaptiv videokodningsprofil. Inställningarna i den här färdiga profilen är optimerade för att ge kunderna bästa möjliga visningsupplevelse. Du kan också lägga till smart beskärning i videoklipp.
-uuid: 26a20984-db63-41e9-b16c-6e164b7596a0
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: administering
 content-type: reference
-discoiquuid: 3b8791c8-2c97-42b7-b4a9-e1157ac9ea02
 docset: aem65
 feature: Video Profiles
 role: User, Admin
 mini-toc-levels: 3
 exl-id: b290fac2-7259-45d7-b733-70419d632b07
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: 04050f31742c926b45235595f6318929d3767bd8
 workflow-type: tm+mt
-source-wordcount: '3550'
-ht-degree: 7%
+source-wordcount: '3588'
+ht-degree: 6%
 
 ---
 
@@ -333,7 +331,7 @@ Mer information om hur du definierar avancerade bearbetningsparametrar för andr
 1. Markera ett videoprofilnamn på sidan Videoprofiler.
 1. I verktygsfältet väljer du **[!UICONTROL Edit]**.
 1. Redigera namn och beskrivning på sidan Video Encoding Profile.
-1. Det är en god idé att se till att kryssrutan **[!UICONTROL Encode for adaptive bitrate streaming]** är markerad.
+1. Det bästa sättet är att se till att **[!UICONTROL Encode for adaptive bitrate streaming]** är markerad.
 Välj informationsikonen för en beskrivning av strömning med adaptiv bithastighet. (Om du redigerar en progressiv videoprofil ska du inte markera den här kryssrutan.)
 1. Under rubriken Förinställningar för videokodning lägger du till, redigerar eller tar bort förinställningar för videokodning som utgör profilen.
 
@@ -389,7 +387,7 @@ Se även [Bearbeta resurser i en mapp igen när du har redigerat dess bearbetnin
 
 1. Markera logotypen för Experience Manager och navigera till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Video Profiles]**.
 1. Välj den videoprofil som du vill använda för en eller flera mappar.
-1. Välj **[!UICONTROL Apply Profile to Folders]** och markera den eller de mappar som du vill använda för att ta emot de nyligen överförda resurserna och markera **[!UICONTROL Apply]**. För mappar som redan har tilldelats en profil visas profilens namn direkt under mappnamnet i **[!UICONTROL Card View]**.
+1. Välj **[!UICONTROL Apply Profile to Folders]** och markera den eller de mappar som du vill använda för att ta emot de nyligen överförda resurserna och markera **[!UICONTROL Apply]**. Mappar som redan har tilldelats en profil visas genom att profilens namn visas direkt under mappnamnet i **[!UICONTROL Card View]**.
 Du kan [övervaka förloppet för ett videoprofilbearbetningsjobb](#monitoring-the-progress-of-an-encoding-job).
 
 #### Använda en videoprofil på mappar från Egenskaper {#applying-video-profiles-to-folders-from-properties}

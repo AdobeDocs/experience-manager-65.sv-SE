@@ -1,18 +1,16 @@
 ---
 title: Leverera optimerade bilder för en responsiv webbplats
 description: Så här använder du funktionen för responsiv kod för att leverera optimerade bilder
-uuid: 7c6baef5-7513-4644-94ed-2383e8724c17
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: dynamic-media
 content-type: reference
-discoiquuid: 5edcc765-c374-4368-a0d9-e02a713a24f2
 feature: Asset Management
 role: User, Admin
 exl-id: 753d806f-5f44-4d73-a3a3-a2a0fc3e154b
-source-git-commit: 77687a0674b939460bd34011ee1b94bd4db50ba4
+source-git-commit: 04050f31742c926b45235595f6318929d3767bd8
 workflow-type: tm+mt
-source-wordcount: '324'
+source-wordcount: '330'
 ht-degree: 10%
 
 ---
@@ -41,7 +39,7 @@ Se även [Länka URL:er till ditt webbprogram](linking-urls-to-yourwebapplicatio
    >
    >Den valda resursen *och* den valda bildförinställningen eller visningsförinställningen måste publiceras för att knappen **[!UICONTROL URL]** eller **[!UICONTROL RESS]** ska vara tillgänglig.
    >
-   >Dynamic Media - Hybrid-läget kräver att du publicerar bildförinställningar; Dynamic Media - Scene7-läget publicerar automatiskt bildförinställningar.
+   >Dynamic Media - I hybridläget måste du publicera bildförinställningar. I Dynamic Media - Scene7 publiceras bildförinställningar automatiskt.
 
 1. Välj **[!UICONTROL RESS]**.
 

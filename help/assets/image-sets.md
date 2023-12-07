@@ -1,20 +1,18 @@
 ---
 title: Bilduppsättningar
 description: Lär dig hur du arbetar med bilduppsättningar i Dynamic Media
-uuid: ca2fd5b0-656e-4960-b10c-f0ec3d418760
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: dynamic-media
 content-type: reference
-discoiquuid: ccc4eb23-934c-4e67-860b-a6faa2bcaafc
 docset: aem65
 feature: Image Sets,Asset Management
 role: User, Admin
 exl-id: 2a536745-fa13-4158-8761-2ac5b6e1893e
-source-git-commit: d83a647d8ac5466ba09230c584d5d501aab55274
+source-git-commit: 04050f31742c926b45235595f6318929d3767bd8
 workflow-type: tm+mt
-source-wordcount: '2117'
-ht-degree: 6%
+source-wordcount: '2129'
+ht-degree: 5%
 
 ---
 
@@ -30,7 +28,7 @@ I bilduppsättningen kan du även skapa färgrutor genom att skapa en bilduppsä
 
 Det här programmet är användbart när du vill visa ett objekt i en annan färg, ett annat mönster eller en annan avslutning. Om du vill skapa en bilduppsättning med färgrutor behöver du en bild för varje färg, mönster eller slut som du vill presentera för användarna. Du behöver också en färg-, mönster- eller slutfärgruta för varje färg, mönster eller slut.
 
-Anta till exempel att du vill visa bilder med olika färgskalor; räkningarna är röda, gröna och blå. I så fall behöver du tre bilder med samma lock. Du behöver en bild med rött, en med grönt och en med blå räkning. Du behöver också en röd, grön och blå färgruta. Färgrutorna fungerar som miniatyrbilder som användarna väljer i Visningsprogrammet för färgrutor för att se den röda, gröna eller blå hatten.
+Anta till exempel att du vill visa bilder av ändpunkter med olika färgskalor. Bilderna är röda, gröna och blå. I så fall behöver du tre bilder med samma lock. Du behöver en bild med rött, en med grönt och en med blå räkning. Du behöver också en röd, grön och blå färgruta. Färgrutorna fungerar som miniatyrbilder som användarna väljer i Visningsprogrammet för färgrutor för att se den röda, gröna eller blå hatten.
 
 >[!NOTE]
 >
@@ -61,7 +59,7 @@ Se även [Dynamic Media begränsningar](/help/assets/limitations.md).
 
    I Bilduppsättningar väljer användare miniatyrbilder i Bilduppsättningsvisningsprogrammet.
 
-   Om du vill skapa en bilduppsättning i Assets går du till **[!UICONTROL Create]** > **[!UICONTROL Image Sets]**. Lägg sedan till bilder och markera **[!UICONTROL Save]**.
+   Om du vill skapa en bilduppsättning i resurser går du till **[!UICONTROL Create]** > **[!UICONTROL Image Sets]**. Lägg sedan till bilder och markera **[!UICONTROL Save]**.
 
    Du kan också skapa bilduppsättningar automatiskt med [gruppuppsättningsförinställningar](/help/assets/config-dms7.md).
    >[!IMPORTANT]
@@ -97,7 +95,7 @@ Se även [Dynamic Media begränsningar](/help/assets/limitations.md).
 
 Information om hur du redigerar bilduppsättningar finns i [Redigera bilduppsättningar](#editing-image-sets). Dessutom kan du visa och redigera [Egenskaper för bilduppsättning](/help/assets/manage-assets.md#editing-properties).
 
-Om du har problem med att skapa uppsättningar läser du Bilder och uppsättningar i [Felsökning av Dynamic Media - Scene7-läge](/help/assets/troubleshoot-dms7.md#images-and-sets).
+Om du har problem med att skapa uppsättningar kan du läsa Bilder och uppsättningar i [Felsökning av Dynamic Media - Scene7-läge](/help/assets/troubleshoot-dms7.md#images-and-sets).
 
 ## Överför resurser i bilduppsättningar {#uploading-assets-in-image-sets}
 
@@ -117,13 +115,12 @@ Eftersom användare kan zooma bilder i bilduppsättningar bör du se till att bi
 
 >[!NOTE]
 >
->Om du använder miniatyrbilder för att ange färgrutor för produkten måste du dessutom göra följande:
+>Om du använder miniatyrbilder för att ange färgrutor för en produkt måste du dessutom göra följande:
 >
 >Du behöver vinjetter eller olika bilder av samma bild som visar den i olika färger, mönster eller färger. Du behöver också miniatyrbilder som motsvarar de olika färgerna, mönstren eller ytorna. Om du till exempel vill visa miniatyrbilder med en bilduppsättning med samma jacka i svart, brunt och grönt behöver du:
 >
 >* En svart, brun och grön tagning av samma jacka.
 >* En svart, brun och grön färgminiatyrbild.
-
 
 ## Skapa en bilduppsättning {#creating-image-sets}
 
@@ -153,7 +150,7 @@ Se även [Dynamic Media begränsningar](/help/assets/limitations.md).
 
 1. I Experience Manager väljer du Experience Manager logotypen för att komma åt den globala navigeringskonsolen och går sedan till **[!UICONTROL Navigation]** > **[!UICONTROL Assets]**. Navigera till den plats där du vill skapa en bilduppsättning och gå sedan till **[!UICONTROL Create]** > **[!UICONTROL Image Set]** för att öppna sidan Bilduppsättningsredigerare.
 
-   Du kan också skapa uppsättningen inifrån en mapp som innehåller resurserna.
+   Du kan också skapa uppsättningen inifrån en mapp som innehåller dina resurser.
 
    ![6_5_imagesets-createpulldown](assets/6_5_imagesets-createpulldown.png)
 
@@ -166,6 +163,7 @@ Se även [Dynamic Media begränsningar](/help/assets/limitations.md).
    * I närheten av det övre vänstra hörnet på sidan Bilduppsättningsredigerare väljer du **[!UICONTROL Add Asset]**.
 
    * I mitten av bilduppsättningens redigeringssida väljer du **[!UICONTROL Tap to open Asset Selector]**.
+
    Välj de resurser som du vill inkludera i din bilduppsättning. De markerade resurserna visas med en bock. När du är klar väljer du **[!UICONTROL Select]**.
 
    Med resursväljaren kan du söka efter resurser genom att skriva ett nyckelord och trycka eller klicka på **[!UICONTROL Return]**. Du kan också använda filter för att förfina sökresultatet. Du kan filtrera efter sökväg, samling, filtyp och tagg. Markera filtret och välj sedan **[!UICONTROL Filter]** -ikonen i verktygsfältet. Ändra vyn genom att trycka på ikonen Visa och sedan välja **[!UICONTROL Column View]**, **[!UICONTROL Card View]** eller **[!UICONTROL List View]**.
@@ -187,6 +185,7 @@ Se även [Dynamic Media begränsningar](/help/assets/limitations.md).
    * Om du vill ta bort en bild markerar du bilden och väljer **[!UICONTROL Delete Asset]**.
 
    * Om du vill använda en förinställning väljer du **[!UICONTROL Preset]** väljer du sedan en förinställning som ska användas på alla resurser samtidigt.
+
    >[!NOTE]
    >
    >När du skapar bilduppsättningen kan du ändra miniatyrbilden för bilduppsättningen eller låta Experience Manager välja miniatyrbilden automatiskt baserat på resurserna i bilduppsättningen. Om du vill välja en miniatyrbild väljer du **[!UICONTROL Change thumbnail]** ovanför fältet Titel på sidan Bilduppsättningsredigerare och välj sedan en bild (du kan navigera till andra mappar för att även hitta bilder). Om du har markerat en miniatyrbild och sedan vill att Experience Manager ska generera en från bilduppsättningen väljer du **[!UICONTROL Switch to]** > **[!UICONTROL Automatic thumbnail]**.
@@ -199,23 +198,23 @@ Du kan skapa bilduppsättningar antingen i användargränssnittet eller automati
 
 >[!IMPORTANT]
 >
->Batchuppsättningar skapas av IPS [Bildproduktionssystem] som en del av tillgångsintag och är endast tillgängliga i Dynamic Media - Scene7-läge.)
+>Batchuppsättningar skapas av IPS [Bildproduktionssystem] som en del av tillgångsintag och endast i Dynamic Media - Scene7-läge.)
 
 Men uppsättningar som skapats med gruppuppsättningsförinställningar gör *not* visas i användargränssnittet. Du kan visa uppsättningarna på tre olika sätt. (Dessa metoder är tillgängliga även om du har skapat bilduppsättningarna i användargränssnittet).
 
 * Öppna egenskaperna för en enskild resurs. Egenskaper anger vad som ställer in den valda resursen eller en medlem i. Markera uppsättningens namn om du vill se hela uppsättningen.
 
-   ![6_5_imageset-assetproperties](assets/6_5_imageset-assetproperties2.png)
+  ![6_5_imageset-assetproperties](assets/6_5_imageset-assetproperties2.png)
 
 * Från en medlemsbild i en uppsättning. Välj **[!UICONTROL Sets]** för att visa de uppsättningar som resursen är medlem i.
 
-   ![6_5_imageset-setspulldownmenu](assets/6_5_imageset-setspulldownmenu.png)
+  ![6_5_imageset-setspulldownmenu](assets/6_5_imageset-setspulldownmenu.png)
 
-* Du kan välja **[!UICONTROL Filter]** och sedan expandera **[!UICONTROL Dynamic Media]** och markera **[!UICONTROL Sets]**.
+* Från sökningen kan du välja **[!UICONTROL Filter]** och sedan expandera **[!UICONTROL Dynamic Media]** och markera **[!UICONTROL Sets]**.
 
-   Sökningen returnerar matchande uppsättningar som skapats manuellt i användargränssnittet eller automatiskt skapats med gruppuppsättningsförinställningar. För automatiserade uppsättningar utförs sökfrågan med sökvillkoren &quot;Börjar med&quot;, som skiljer sig från sökvillkoren i Experience Manager, som baseras på sökvillkoren &quot;Innehåller&quot;. Ange att filtret ska **[!UICONTROL Sets]** är det enda sättet att söka i automatiska uppsättningar.
+  Sökningen returnerar matchande uppsättningar som skapats manuellt i användargränssnittet eller automatiskt skapats med gruppuppsättningsförinställningar. För automatiserade uppsättningar utförs sökfrågan med sökvillkoren &quot;Börjar med&quot;, som skiljer sig från sökvillkoren i Experience Manager, som baseras på sökvillkoren &quot;Innehåller&quot;. Ange att filtret ska **[!UICONTROL Sets]** är det enda sättet att söka i automatiska uppsättningar.
 
-   ![chlimage_1-134](assets/chlimage_1-134.png)
+  ![chlimage_1-134](assets/chlimage_1-134.png)
 
 >[!NOTE]
 >
@@ -223,7 +222,7 @@ Men uppsättningar som skapats med gruppuppsättningsförinställningar gör *no
 
 ## Redigera en bilduppsättning {#editing-image-sets}
 
-Du kan utföra olika redigeringsåtgärder på bilduppsättningar, till exempel:
+Du kan utföra olika redigeringsåtgärder på bilduppsättningar, till exempel följande:
 
 * Lägg till bilder i bilduppsättningen.
 * Ändra ordning på bilderna i bilduppsättningen.
@@ -244,10 +243,9 @@ Du kan utföra olika redigeringsåtgärder på bilduppsättningar, till exempel:
    * Om du vill ändra ordning på resurser drar du en bild till en ny plats (markera sorteringsikonen för att flytta objekt).
    * Om du vill sortera objekt i stigande eller fallande ordning markerar du kolumnrubriken.
    * Om du vill lägga till en resurs eller uppdatera en befintlig resurs väljer du **[!UICONTROL Add Asset]**. Navigera till en resurs, markera den och välj **[!UICONTROL Select]** nära sidans övre högra hörn.
-
-      >[!NOTE]
-      >
-      >Om du tar bort den bild som Experience Manager använder som miniatyrbild genom att ersätta den med en annan bild, visas fortfarande originalresursen.
+     >[!NOTE]
+     >
+     >Om du tar bort den bild som Experience Manager använder som miniatyrbild genom att ersätta den med en annan bild, visas fortfarande originalresursen.
    * Om du vill ta bort en resurs markerar du den och väljer **[!UICONTROL Delete Asset]**.
    * Om du vill använda en förinställning väljer du **[!UICONTROL Preset]** väljer du sedan en visningsförinställning.
    * Om du vill lägga till eller ändra en miniatyrbild markerar du miniatyrbildikonen bredvid resursens högra sida. Navigera till den nya miniatyrbilden eller färgruteresursen, markera den och markera sedan **[!UICONTROL Select]**.

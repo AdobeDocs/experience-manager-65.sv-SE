@@ -1,19 +1,17 @@
 ---
 title: Arbeta med väljare
 description: Välja resurser för interaktiva bilder, interaktiv video och karusellbanderoller
-uuid: 6231739c-bf49-4069-90a4-57848cc68d9a
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: dynamic-media
 content-type: reference
-discoiquuid: 262eb911-3dcb-475d-b410-8bcac1347905
 role: User, Admin
 exl-id: 6d165b0d-e3e7-4115-8f2a-827679754b3b
 feature: Selectors
-source-git-commit: 77687a0674b939460bd34011ee1b94bd4db50ba4
+source-git-commit: 04050f31742c926b45235595f6318929d3767bd8
 workflow-type: tm+mt
-source-wordcount: '686'
-ht-degree: 3%
+source-wordcount: '703'
+ht-degree: 5%
 
 ---
 
@@ -25,7 +23,7 @@ Det här avsnittet handlar om hur du använder väljarna Produkt, Plats och Resu
 
 Du kommer åt väljarna när du skapar karuselluppsättningar, lägger till aktiveringspunkter och bildscheman, skapar interaktiva videor och bilder.
 
-I den här Carousel-banderollen använder du produktväljaren om du länkar en hotspot eller bildschema till en QuickView-sida. Använd webbplatsväljaren om du länkar en hotspot eller ett bildschema till en hyperlänk. använder du resursväljaren när du skapar en bildruta.
+I den här Carousel-banderollen använder du produktväljaren om du länkar en hotspot eller bildschema till en QuickView-sida. Använd platsväljaren om du länkar en aktiveringspunkt eller ett bildschema till en hyperlänk. Använd resursväljaren när du skapar en bildruta.
 
 ![chlimage_1-520](assets/chlimage_1-520.png)
 
@@ -53,7 +51,7 @@ Använd produktväljaren för att välja en produkt när du vill ha en aktiverin
 
    ![chlimage_1-524](assets/chlimage_1-524.png)
 
-   Välj **[!UICONTROL Sort]** om du vill ändra om Experience Manager ska sortera efter nyaste till äldsta eller äldsta till nyaste.
+   Välj **[!UICONTROL Sort]** genom att ändra om Experience Manager sorterar efter senaste till äldsta eller äldsta till nyaste.
 
    ![chlimage_1-525](assets/chlimage_1-525.png)
 

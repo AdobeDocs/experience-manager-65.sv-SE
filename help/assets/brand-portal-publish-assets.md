@@ -1,27 +1,23 @@
 ---
-title: Publicera resurser på varumärkesportalen
-seo-title: Publish assets to Brand Portal
+title: Publicera material i Brand Portal
 description: Lär dig hur du publicerar och avpublicerar resurser på Brand Portal.
-seo-description: Learn how to publish and unpublish assets to Brand Portal.
-uuid: 350beb85-c0fb-4a1c-8597-c03592c02d3d
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: brand-portal
 content-type: reference
-discoiquuid: 39b8cf9b-afec-4c9a-8a5d-7fc87e643f26
 docset: aem65
 feature: Brand Portal
 role: User
 exl-id: 76652a16-cad6-4e95-9e66-41efec452b03
 hide: true
-source-git-commit: 3d5e9ad8ee19756b05e5a77a3f748bc647fcf734
+source-git-commit: 04050f31742c926b45235595f6318929d3767bd8
 workflow-type: tm+mt
-source-wordcount: '336'
-ht-degree: 43%
+source-wordcount: '328'
+ht-degree: 39%
 
 ---
 
-# Publicera resurser på varumärkesportalen {#publish-assets-to-brand-portal}
+# Publicera material i Brand Portal {#publish-assets-to-brand-portal}
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
@@ -54,7 +50,7 @@ Gör något av följande för att publicera de markerade resurserna på varumär
 
 * Välj **[!UICONTROL Manage Publication]** i verktygsfältet.
 
-   1. Från **[!UICONTROL Action]** välj **[!UICONTROL Publish to Brand Portal]** och från **[!UICONTROL Scheduling]** välj **[!UICONTROL Now]**. Klicka på **[!UICONTROL Next]**.
+   1. Sedan från **[!UICONTROL Action]** välj **[!UICONTROL Publish to Brand Portal]** och från **[!UICONTROL Scheduling]** välj **[!UICONTROL Now]**. Klicka på **[!UICONTROL Next]**.
 
    2. Inom **[!UICONTROL Scope]**, bekräfta ditt val och klicka på **[!UICONTROL Publish to Brand Portal]**.
 
