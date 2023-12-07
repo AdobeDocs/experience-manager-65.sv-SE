@@ -6,9 +6,9 @@ topic-tags: author
 docset: aem65
 feature: Adaptive Forms
 exl-id: 04efb4ad-cff6-4e05-bcd2-98102f052452
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: ab40115c373cc06a7600494288b2670deb914e1a
 workflow-type: tm+mt
-source-wordcount: '2121'
+source-wordcount: '2554'
 ht-degree: 0%
 
 ---
@@ -166,6 +166,64 @@ Du kan konfigurera ett adaptivt formulär så att det kör ett Microsoft® Power
 Adaptive Forms editor har **Anropa ett Microsoft® Power Automate-flöde** skicka en åtgärd för att skicka adaptiva formulärdata, bilagor och arkivdokument till Power Automate Cloud Flow. Om du vill skicka inhämtade data till Microsoft® Power Automate med åtgärden Skicka [Koppla samman din AEM Forms-instans med Microsoft® Power Automate](/help/forms/using/forms-microsoft-power-automate-integration.md)
 
 När konfigurationen är klar använder du [Anropa ett Microsoft® Power Automate-flöde](/help/forms/using/forms-microsoft-power-automate-integration.md#use-the-invoke-a-microsoft&reg;-power-automate-flow-submit-action-to-send-data-to-a-power-automate-flow-use-the-invoke-microsoft-power-automate-flow-submit-action) skicka-åtgärd för att skicka data till ett Power Automate-flöde.
+
+## Skicka till Microsoft® SharePoint List{#submit-to-sharedrive}
+
+<span class="preview"> Det här är en förhandsversion som du kommer åt via vår [kanal för förhandsversion](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html#new-features). </span>
+
+The **[!UICONTROL Submit to SharePoint]** Skicka åtgärd kopplar ett adaptivt formulär till en Microsoft® SharePoint-lagring. Du kan skicka formulärdatafilen, bifogade filer eller arkivdokument till den anslutna Microsoft® Sharepoint-lagringsplatsen.
+
+### Ansluta ett anpassat formulär till Microsoft® SharePoint List {#connect-af-sharepoint-list}
+
+Använd [!UICONTROL Submit to SharePoint List] Skicka åtgärd i anpassad form:
+
+1. [Skapa en listkonfiguration för SharePoint](#create-sharepoint-list-configuration): Den ansluter AEM Forms till Microsoft® Sharepoint List Storage.
+1. [Använda Skicka med formulärdatamodellen i ett anpassat formulär](#use-submit-using-fdm): Det kopplar ditt adaptiva formulär till konfigurerade Microsoft® SharePoint.
+
+#### Skapa en listkonfiguration för SharePoint {#create-sharepoint-list-configuration}
+
+Så här ansluter du AEM Forms till din Microsoft® Sharepoint-lista:
+
+1. Gå till **[!UICONTROL Tools]** > **[!UICONTROL Cloud Services]** >  **[!UICONTROL Microsoft® SharePoint]**.
+1. Välj en **Konfigurationsbehållare**. Konfigurationen lagras i den valda konfigurationsbehållaren.
+1. Klicka **[!UICONTROL Create]** > **[!UICONTROL SharePoint List]** i listrutan. Konfigurationsguiden för SharePoint visas.
+1. Ange **[!UICONTROL Title]**, **[!UICONTROL Client ID]**, **[!UICONTROL Client Secret]** och **[!UICONTROL OAuth URL]**. Mer information om hur du hämtar klient-ID, klienthemlighet, klient-ID för OAuth-URL finns i [Microsoft® Documentation](https://learn.microsoft.com/en-us/graph/auth-register-app-v2).
+   * Du kan hämta `Client ID` och `Client Secret` från Microsoft® Azure-portalen.
+   * Lägg till omdirigerings-URI som i Microsoft® Azure-portalen som `https://[author-instance]/libs/cq/sharepointlist/content/configurations/wizard.html`. Ersätt `[author-instance]` med webbadressen till din Author-instans.
+   * Lägg till API-behörigheter `offline_access` och `Sites.Manage.All` i **Microsoft® Graph** för att ange läs-/skrivbehörigheter. Lägg till `AllSites.Manage` behörighet i **Sharepoint** för att fjärrinteragera med data från SharePoint.
+   * Använd OAuth-URL: `https://login.microsoftonline.com/tenant-id/oauth2/v2.0/authorize`. Ersätt `<tenant-id>` med `tenant-id` från Microsoft® Azure-portalen.
+
+     >[!NOTE]
+     >
+     The **klienthemlighet** fältet är obligatoriskt eller valfritt beroende på din Azure Active Directory-programkonfiguration. Om ditt program är konfigurerat att använda en klienthemlighet är det obligatoriskt att ange klienthemligheten.
+
+1. Klicka på **[!UICONTROL Connect]**. Vid en lyckad anslutning `Connection Successful` visas.
+1. Välj **[!UICONTROL SharePoint Site]** och **[!UICONTROL SharePoint List]** i listrutan.
+1. Tryck **[!UICONTROL Create]** för att skapa molnkonfigurationen för Microsoft® SharePointList.
+
+#### Använda Skicka med formulärdatamodellen i ett anpassat formulär {#use-submit-using-fdm}
+
+Du kan använda den skapade SharePoint List-konfigurationen i ett adaptivt formulär för att spara data eller skapa ett postdokument i en SharePoint List. Utför följande steg om du vill använda en lagringskonfiguration i SharePoint List i en anpassad form:
+
+1. [Skapa en formulärdatamodell med Microsoft® SharePoint List-konfiguration](/help/forms/using/create-form-data-model.md)
+1. [Konfigurera formulärdatamodellen för att hämta och skicka data](/help/forms/using/work-with-form-data-model.md#configure-services)
+1. [Skapa ett adaptivt formulär](/help/forms/using/create-adaptive-form.md).
+1. [Konfigurera åtgärden Skicka med en formulärdatamodell](/help/forms/using/configuring-submit-actions.md#submit-using-form-data-model-submit)
+
+När du skickar formuläret sparas data i det angivna lagringsutrymmet för Microsoft® Sharepoint-listan.
+
+>[!NOTE]
+>
+I Microsoft® SharePoint List stöds inte följande kolumntyper:
+* bildkolumn
+* metadatakolumn
+* personkolumn
+* extern datakolumn
+
+
+>[!NOTE]
+>
+Så här anger du värden för en konfiguration: [Generera OSGi-konfigurationer med AEM SDK](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html?lang=en#generating-osgi-configurations-using-the-aem-sdk-quickstart)och [distribuera konfigurationen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/deploy-code.html?lang=en#deployment-process) till din Cloud Service.
 
 ## Förtroende på serversidan i adaptiv form {#server-side-revalidation-in-adaptive-form}
 

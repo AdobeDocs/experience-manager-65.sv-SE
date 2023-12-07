@@ -5,9 +5,9 @@ contentOwner: khsingh
 products: SG_EXPERIENCEMANAGER/6.3/FORMS
 docset: aem65
 exl-id: 40bc5af6-9023-437e-95b0-f85d3df7d8aa
-source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
+source-git-commit: 4158315c28412bb9498c7d49d21b3f4d72681fc6
 workflow-type: tm+mt
-source-wordcount: '1421'
+source-wordcount: '1463'
 ht-degree: 0%
 
 ---
@@ -236,3 +236,8 @@ Gör följande för att köra testet:
    Om du testar läsmodelltjänsten igen för ID 7107215 hämtas och visas den uppdaterade kundinformationen enligt nedan.
 
    ![läsuppdaterad](assets/read-updated.png)
+
+
+>[!NOTE]
+>
+> Du kan skapa och använda SharePoint List-konfigurationen med hjälp av formulärdatamodellen i ett adaptivt formulär för att spara data eller skapa ett postdokument i en SharePoint-lista. Se [Ansluta ett anpassat formulär till Microsoft® SharePoint List](/help/forms/using/configuring-submit-actions.md#create-a-sharepoint-list-configuration), för detaljerade steg.
