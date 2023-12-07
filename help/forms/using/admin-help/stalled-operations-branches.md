@@ -1,16 +1,12 @@
 ---
 title: Arbeta med fasta operationer och grenar
-seo-title: Working with stalled operations and branches
 description: Sidan Installerade åtgärder och sidan Installerade grenar visar de processer som har avstannat.
-seo-description: The Stalled Operations page and the Stalled Branches page show the processes that have stalled.
-uuid: 5f6202b0-79c2-4c3c-847a-236c0366e60b
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/configuring_forms_workflow
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: 8c2567f3-7220-436a-b9f2-2824a98c1ccc
 exl-id: c96faae0-2b0f-4334-b61c-f13b2d1ec179
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '707'
 ht-degree: 0%
@@ -21,7 +17,7 @@ ht-degree: 0%
 
 Sidan Installerade åtgärder och sidan Installerade grenar visar de processer som har avstannat. En process kan hänga sig när ett fel inträffar under eller efter en åtgärd eller på grund av en avsiktlig avbrottsåtgärd i processen:
 
-* Åtgärderna kan stanna på grund av ett oförutsett fel. En Stall Branch-åtgärd i en process stoppar avsiktligt en process från att köras ytterligare och kräver att administratören gör något.
+* Åtgärderna kan stanna på grund av ett oförutsett fel. En Stall Branch-åtgärd i en process stoppar avsiktligt en process från att köras ytterligare och kräver att administratören gör ett ingripande.
 * Förgreningar kan hänga mellan åtgärder under en regelutvärdering.
 
 När en process avbryts körs inga fler åtgärder förrän problemet har åtgärdats och åtgärden eller grenen har startats om.

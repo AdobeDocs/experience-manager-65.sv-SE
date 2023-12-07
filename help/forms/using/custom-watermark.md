@@ -1,26 +1,22 @@
 ---
 title: Egen vattenstämpel i PDF förhandsvisning
-seo-title: Custom watermark in letter PDF preview
 description: Lär dig hur du skapar en anpassad vattenstämpel i PDF-förhandsvisningen.
-seo-description: Learn how to create custom watermark in letter PDF preview.
-uuid: 5adfede3-9b38-4a12-bf14-6d80cfb0a05a
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: correspondence-management
-discoiquuid: adc7ec13-0675-4071-9c4c-e238202d9d85
 docset: aem65
 feature: Correspondence Management
 exl-id: 7d90fade-1ca4-41d8-bbf9-45490465784a
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '332'
+source-wordcount: '327'
 ht-degree: 0%
 
 ---
 
 # Egen vattenstämpel i PDF förhandsvisning{#custom-watermark-in-letter-pdf-preview}
 
-## Översikt {#overview}
+## Ökning {#overview}
 
 I användargränssnittet Skapa korrespondens förhandsgranskar agentanvändare korrespondensen i den slutliga form som den skickas till efterbearbetning, till exempel för e-post eller utskrift.
 
@@ -58,7 +54,8 @@ Följ de här stegen för att anpassa texten och utseendet på vattenstämpeln:
       >    * Uppgradera till din instans
       >    * Använd en snabbkorrigering
       >    * Installera ett funktionspaket
-
+      >    
+      >
 
    1. Klicka **OK** och sedan klicka **Spara alla**. The **[!UICONTROL previewwatermark]** mappen skapas i den angivna sökvägen.
 

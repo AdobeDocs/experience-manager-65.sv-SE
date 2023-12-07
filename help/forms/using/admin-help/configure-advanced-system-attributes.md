@@ -1,18 +1,14 @@
 ---
 title: Konfigurera avancerade systemattribut
-seo-title: Configure advanced system attributes
 description: Använd sidan Konfigurera avancerade systemattribut om du vill ändra vissa inställningar i konfigurationsfilen utan att behöva exportera, redigera och importera filen.
-seo-description: Use the Configure Advanced System Attributes page to modify certain settings in the configuration file without the need to export, edit, and import the file.
-uuid: 6bcfbaa9-f492-46aa-97d2-00fc3e67d0d7
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/configuring_user_management
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: 533ad3f7-3905-420d-8bb9-8ae8f14fb28e
 exl-id: 809af2c0-6f5c-4dd4-af48-dbf476c9ea45
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '466'
+source-wordcount: '471'
 ht-degree: 0%
 
 ---
@@ -30,7 +26,7 @@ Använd sidan Konfigurera avancerade systemattribut om du vill ändra vissa inst
    >
    >Du bör inte ange en tidsgräns för sessioner under 10 minuter eftersom systemet kanske inte fungerar som det ska. Det rekommenderade värdet är 10-120 (minuter).
 
-   **Tröskelvärde för försäkran (sekunder):** En bufferttid för att kompensera fördröjningar på grund av systemtidsskillnader mellan AEM formulärprogramservrar i ett kluster. AEM blanketterar användarens inloggningstid med den tid (i sekunder) som anges i den här egenskapen. Giltiga värden är `0` till `3600`. Standardvärdet är `60`. Den här inställningen uppdaterar `SAML/Producer/assertionThresholdInSeconds` -postnyckel i konfigurationsfilen.
+   **Kontrolltröskel (sekunder):** En bufferttid för att kompensera fördröjningar på grund av systemtidsskillnader mellan AEM formulärprogramservrar i ett kluster. AEM blanketterar användarens inloggningstid med den tid (i sekunder) som anges i den här egenskapen. Giltiga värden är `0` till `3600`. Standardvärdet är `60`. Den här inställningen uppdaterar `SAML/Producer/assertionThresholdInSeconds` -postnyckel i konfigurationsfilen.
 
    **Högsta tillåtna förnyelser av en försäkran:** Det maximala antalet gånger som en användarsession kan förnyas utan att användaren behöver logga in. Giltiga värden är `0` till `9999`. Värdet för `0` innebär att påståendena inte förnyas. Standardvärdet är 10. Den här inställningen uppdaterar `SAML/Producer/maxAssertionRenewalCount` -postnyckel i konfigurationsfilen.
 
@@ -38,7 +34,7 @@ Använd sidan Konfigurera avancerade systemattribut om du vill ändra vissa inst
 
    **Loggning av synkroniseringsstatistik:** Anger om användarhantering loggar detaljerad statistik under synkroniseringsprocessen. (Se [Aktivera eller inaktivera detaljerad loggning under synkronisering](/help/forms/using/admin-help/synchronizing-directories.md#enable-or-disable-detailed-logging-during-synchronization).)
 
-   **Synch Finisher Cron-uttryck:** Intervallet där användarhanteringen försöker synkronisera igen. (Se [Konfigurera alternativet för nytt försök med katalogsynkronisering](/help/forms/using/admin-help/synchronizing-directories.md#configure-the-directory-synchronization-retry-option).)
+   **Synch Finisher Cron-uttryck:** Det intervall med vilket användarhanteringsförsök misslyckades med synkroniseringar. (Se [Konfigurera alternativet för nytt försök med katalogsynkronisering](/help/forms/using/admin-help/synchronizing-directories.md#configure-the-directory-synchronization-retry-option).)
 
    **Timeout för klusterjobblåsning i minuter:** Används i klustrade miljöer. Om synkroniseringen på en nod misslyckas och klusterlåset inte frisläpps, anger det här värdet antalet minuter som en annan nod väntar innan låset tvångsförvärvas. Standardvärdet är `15` minuter. Giltiga värden är `1` till `1440` minuter.
 

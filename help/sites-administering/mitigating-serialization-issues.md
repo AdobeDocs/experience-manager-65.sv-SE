@@ -1,25 +1,21 @@
 ---
 title: Åtgärda serialiseringsproblem i AEM
-seo-title: Mitigating serialization issues in AEM
 description: Lär dig hur du minskar serialiseringsproblem i AEM.
-seo-description: Learn how to mitigate serialization issues in AEM.
-uuid: c3989dc6-c728-40fd-bc47-f8427ed71a49
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: Security
 content-type: reference
-discoiquuid: f3781d9a-421a-446e-8b49-40744b9ef58e
 exl-id: 01e9ab67-15e2-4bc4-9b8f-0c84bcd56862
-source-git-commit: 614c4c88f3f09feb5a400ade9f45f634ac4fbcd5
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '910'
+source-wordcount: '904'
 ht-degree: 0%
 
 ---
 
 # Åtgärda serialiseringsproblem i AEM{#mitigating-serialization-issues-in-aem}
 
-## Översikt {#overview}
+## Ökning {#overview}
 
 AEM på Adobe hade ett nära samarbete med öppen källkodsprojektet [NotSoSerial](https://github.com/kantega/notsoserial) för att bidra till att minska de säkerhetsluckor som beskrivs i **CVE-2015-7501**. NotSoSerial licensieras under [Apache 2-licens](https://www.apache.org/licenses/LICENSE-2.0) och innehåller ASM-kod som licensierats separat [BSD-liknande licens](https://asm.ow2.io/).
 
@@ -33,7 +29,7 @@ Du kan konfigurera blockeringslista och tillåtelselista genom att följa instru
 
 Medlet är avsett att bidra till att minska de senaste kända sårbara klasserna. Om ditt projekt avserialiserar otillförlitliga data kan det fortfarande vara känsligt för denial of service-attacker, slut på minnesattacker och okända framtida avserialiseringsattacker.
 
-Adobe har officiellt stöd för Java™ 6, 7 och 8. Adobe förstår dock att NotSoSerial även stöder Java™ 5.
+Adobe stöder officiellt Java™ 6, 7 och 8. Adobe förstår dock att NotSoSerial även stöder Java™ 5.
 
 ## Installera agenten {#installing-the-agent}
 
@@ -41,7 +37,7 @@ Adobe har officiellt stöd för Java™ 6, 7 och 8. Adobe förstår dock att Not
 >
 >Om du tidigare har installerat serialiseringssnabbkorrigeringen för AEM 6.1 tar du bort agentens startkommandon från Java™-körningsraden.
 
-1. Installera **com.adobe.cq.cq** paket.
+1. Installera **com.adobe.cq.cq-serialization-testare** paket.
 
 1. Gå till webbkonsolen Bundle på `https://server:port/system/console/bundles`
 1. Leta efter serialiseringspaketet och starta det. När du gör det laddas NotSoSerial-agenten automatiskt.
@@ -50,13 +46,13 @@ Adobe har officiellt stöd för Java™ 6, 7 och 8. Adobe förstår dock att Not
 
 NotSoSerial-agenten ingår inte i standarddistributionen av AEM för programservrar. Du kan dock extrahera den från AEM jar-distributionen och använda den med programserverkonfigurationen:
 
-1. Ladda först ned AEM snabbstartfil och extrahera den:
+1. Ladda först ned AEM snabbstartsfil och extrahera den:
 
    ```shell
    java -jar aem-quickstart-6.2.0.jar -unpack
    ```
 
-1. Gå till platsen för den uppzippade AEM snabbstarten och kopiera `crx-quickstart/opt/notsoserial/` mapp till `crx-quickstart` mapp för AEM programserverinstallation.
+1. Gå till platsen för den uppzippade AEM snabbstarten och kopiera `crx-quickstart/opt/notsoserial/` mapp till `crx-quickstart` mapp för AEM.
 
 1. Ändra ägarskap för `/opt` till användaren som kör servern:
 
@@ -76,9 +72,10 @@ Brandväggskonfigurationen är dynamisk och kan ändras när som helst genom att
 1. Söka efter och klicka **Konfiguration av brandvägg för deserialisering.**
 
    >[!NOTE]
+   >
    Du kan även nå konfigurationssidan direkt genom att gå till URL:en på:
+   >
    * `https://server:port/system/console/configMgr/com.adobe.cq.deserfw.impl.DeserializationFirewallImpl`
-
 
 Den här konfigurationen innehåller loggning av tillåtelselista, blockeringslista och deserialisering.
 
@@ -96,7 +93,7 @@ I avsnittet för diagnostikloggning kan du välja flera alternativ för loggning
 
 Standardvärdet för **class-name-only** informerar dig om de klasser som avserialiseras.
 
-Du kan också ange **fullhög** som loggar en Java™-stack om det första deserialiseringsförsöket för att informera dig om var deserialiseringen sker. Det här alternativet är användbart när du vill hitta och ta bort deserialisering från din användning.
+Du kan också ange **fullhög** som loggar en Java™-stack om det första deserialiseringsförsöket för att informera dig om var deserialiseringen äger rum. Det här alternativet är användbart när du vill hitta och ta bort deserialisering från din användning.
 
 ## Verifiera agentens aktivering {#verifying-the-agent-s-activation}
 
@@ -109,6 +106,7 @@ När du har öppnat URL-adressen visas en lista med hälsokontroller som är rel
 Mer information om felsökning av problem med agenten finns i [Hantera fel med dynamisk agentinläsning](#handling-errors-with-dynamic-agent-loading) nedan.
 
 >[!NOTE]
+>
 Om du lägger till `org.apache.commons.collections.functors` hälsokontrollen misslyckas alltid till tillåtelselista.
 
 ## Hantera fel med dynamisk agentinläsning {#handling-errors-with-dynamic-agent-loading}
@@ -124,14 +122,16 @@ Så här läser du in agenten manuellt:
    ```
 
    >[!NOTE]
+   >
    Kräver att du även använder alternativet -nofork CQ/AEM, tillsammans med lämpliga JVM-minnesinställningar, eftersom agenten inte är aktiverad på en forked JVM.
 
    >[!NOTE]
+   >
    Adobe-distributionen av NotSoSerial Agent burk finns på `crx-quickstart/opt/notsoserial/` mapp för AEM.
 
 1. Stoppa och starta om JVM,
 
-1. Verifiera agentens aktivering igen genom att följa stegen som beskrivs ovan [Verifierar agentens aktivering](/help/sites-administering/mitigating-serialization-issues.md#verifying-the-agent-s-activation).
+1. Verifiera agentens aktivering igen genom att följa stegen ovan [Verifierar agentens aktivering](/help/sites-administering/mitigating-serialization-issues.md#verifying-the-agent-s-activation).
 
 ## Andra överväganden {#other-considerations}
 

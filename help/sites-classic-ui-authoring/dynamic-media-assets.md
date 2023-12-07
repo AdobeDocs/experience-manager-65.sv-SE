@@ -1,16 +1,14 @@
 ---
 title: Arbeta med Dynamic Media i Sites Classic Authoring
 description: Dynamic Media hjälper er att leverera visuella marknadsförings- och marknadsföringsresurser on demand, som automatiskt skalas för konsumtion på webben, mobiler och sociala medier. Med en uppsättning primära källresurser genererar och levererar Dynamic Media flera varianter av multimedieinnehåll i realtid via sitt globala, skalbara, prestandaoptimerade nätverk.
-uuid: 201d7ff5-0ebc-4680-9ac4-00c229be5f04
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: authoring
 content-type: reference
-discoiquuid: 2a60cacf-0551-44d4-9965-705a715d44c5
 exl-id: b00d83ab-aeec-4199-bfe4-4f928fb49930
-source-git-commit: 59e182c165f6fd4b822eaf0e34f6e4b3bb18eb14
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '205'
+source-wordcount: '200'
 ht-degree: 0%
 
 ---
@@ -21,7 +19,7 @@ ht-degree: 0%
 
 Dynamic Media visar interaktivt material, som zoomning, 360-graders rotation och video. Dynamic Media införlivar smidigt arbetsflödena i Adobe Experience Manager Digital Asset Management (Assets) för att förenkla och effektivisera hanteringen av digitala kampanjer.
 
-Arbetet med Dynamic Media är inte tillgängligt i det klassiska användargränssnittet. Se [Arbeta med Dynamic Media,](/help/assets/dynamic-media.md) som täcker det beröringskänsliga användargränssnittet.
+Arbetet med Dynamic Media är inte tillgängligt i det klassiska användargränssnittet. Se [Arbeta med Dynamic Media,](/help/assets/dynamic-media.md) som täcker användargränssnittet med pekfunktion.
 
 >[!NOTE]
 >

@@ -1,16 +1,12 @@
 ---
 title: Komponentsidladdning
-seo-title: Component Sideloading
 description: Webbgruppskomponentsideloading är användbart när en webbsida är utformad som en enkel enkelsidig app som dynamiskt ändrar vad som visas beroende på vad som valts av webbplatsbesökaren
-seo-description: Communities component sideloading is useful when a web page is designed as a simple, single page app that dynamically alters what is displayed depending on what is selected by the site visitor
-uuid: 8c9a5fde-26a3-4610-bc14-f8b665059015
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
-discoiquuid: a9cb5294-e5ab-445b-b7c2-ffeecda91c50
 exl-id: 960e132c-b370-43d1-bd8f-e7d0ded7c0b3
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '396'
 ht-degree: 0%
@@ -19,7 +15,7 @@ ht-degree: 0%
 
 # Komponentsidladdning {#component-sideloading}
 
-## Översikt {#overview}
+## Ökning {#overview}
 
 Webbgruppskomponentsideloading är användbart när en webbsida är utformad som en enkel app för en sida som dynamiskt ändrar vad som visas beroende på vad besökaren väljer.
 
@@ -54,11 +50,11 @@ Oavsett vilken tagg som används måste elementet åtminstone överensstämma me
 
 * **data-component-id**
 
-   Den effektiva sökvägen till den tillagda komponenten.
+  Den effektiva sökvägen till den tillagda komponenten.
 
 * **data-scf-component**
 
-   Komponentens resourceType.
+  Komponentens resourceType.
 
 Här följer ett exempel på en kommenteringskomponent:
 

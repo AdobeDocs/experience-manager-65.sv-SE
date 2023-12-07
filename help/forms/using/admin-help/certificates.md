@@ -1,18 +1,14 @@
 ---
 title: Hantera certifikat
-seo-title: Managing certificates
 description: Lär dig hur du importerar och exporterar ett certifikat och redigerar dess pålitlighetsinställningar.
-seo-description: Learn how to import and export a certificate and edit its trust settings.
-uuid: 46b1dbe5-517c-4294-bb52-cc6700a768e8
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/managing_certificates_and_credentials
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: 9fd531c0-5206-4be0-a450-13e0dc806068
 exl-id: 1fe0e7b4-6109-4f7a-8858-8237a1c5c93b
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '610'
+source-wordcount: '603'
 ht-degree: 0%
 
 ---
@@ -39,7 +35,7 @@ Du kan också importera och ta bort certifikat med Trust Manager API. Mer inform
 
    * **Lita på SSL-anslutningar:** Anger att AEM kan använda certifikat för att ansluta till externa system via SSL.
    * **Lita på att certifiera signatur:** Anger att certifikat är pålitliga i dokumentsigneringsåtgärder för certifikatförfattare som har digitala signaturer.
-   * **Lita på signatur:** Anger att certifikat är betrodda i dokumentsigneringsåtgärder för digitala signaturer som inte är författare.
+   * **Förtroende för signatur:** Anger att certifikat är betrodda i dokumentsigneringsåtgärder för digitala signaturer som inte är författare.
    * **Förtroende för certifikatautentisering:** Anger AEM formulär använder certifikat för autentisering av användare med certifikat eller smartkortsautentisering.
    * **Förtroende för OCSP Server:** Anger att AEM kan använda certifikat för att ansluta till externa OCSP-svarare
    * **Lita på identitet:** Anger att certifikat kan användas för att lita på annan information än de som anges ovan.

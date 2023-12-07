@@ -1,15 +1,11 @@
 ---
 title: "Självstudie: Planera interaktiv kommunikation"
-seo-title: Plan your Interactive Communication
 description: Planera anatomin för interaktiv kommunikation
-seo-description: Plan the anatomy for your Interactive Communication
-uuid: 1c2b5c5b-c655-4559-8748-3e0b343779c2
 contentOwner: anujkapo
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: 75b2d424-91d3-45b4-a5d7-fb49ab558582
 feature: Interactive Communication
 exl-id: ea0c8971-56f4-4094-87e4-1b222b73951f
-source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '652'
 ht-degree: 0%
@@ -94,7 +90,7 @@ Följande tabell visar datakällan för varje fält i anatomin Interactive Commu
      <li>Statuskod</li>
      <li>Antal anslutningar</li>
     </ul> </td>
-   <td>--</td>
+   <td>—</td>
   </tr>
   <tr>
    <td>Fakturasammanfattning</td>
@@ -108,7 +104,7 @@ Följande tabell visar datakällan för varje fält i anatomin Interactive Commu
      <li>Belopp att betala</li>
      <li>Förfallodatum</li>
     </ul> </td>
-   <td>--</td>
+   <td>—</td>
   </tr>
   <tr>
    <td>Sammanfattning av avgifter</td>
@@ -126,7 +122,7 @@ Följande tabell visar datakällan för varje fält i anatomin Interactive Commu
      <li>TOTALT BETALNINGSBART (använd debiterat fält)</li>
     </ul> <p>Tabell - växlar</p> </td>
    <td>Inga fält</td>
-   <td>--</td>
+   <td>—</td>
   </tr>
   <tr>
    <td>Specificerade samtal - utgående</td>
@@ -134,26 +130,26 @@ Följande tabell visar datakällan för varje fält i anatomin Interactive Commu
     <ul>
      <li>Datum</li>
      <li>Tid</li>
-     <li>Siffra</li>
+     <li>Nummer</li>
      <li>Varaktighet</li>
      <li>Avgifter</li>
     </ul> </td>
    <td><p>Alla värden</p> <p>Tabell - anrop</p> </td>
    <td>Inga fält</td>
-   <td>--</td>
+   <td>—</td>
   </tr>
   <tr>
    <td>Betala nu</td>
-   <td>--</td>
-   <td>--</td>
-   <td>--</td>
+   <td>—</td>
+   <td>—</td>
+   <td>—</td>
    <td>PayNow</td>
   </tr>
   <tr>
    <td>Mervärdestjänster</td>
-   <td>--</td>
-   <td>--</td>
-   <td>--</td>
+   <td>—</td>
+   <td>—</td>
+   <td>—</td>
    <td>ValueAddedServices</td>
   </tr>
  </tbody>

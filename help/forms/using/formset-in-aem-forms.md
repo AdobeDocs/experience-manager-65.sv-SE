@@ -1,26 +1,22 @@
 ---
 title: Formuläruppsättning i AEM Forms
-seo-title: Form set in AEM Forms
 description: I den här artikeln introduceras formuläruppsättningar och beskrivs hur du skapar formuläruppsättningar genom att sammanfoga HTML5-formulär. I den här artikeln beskrivs också hur du kan förifylla xml-data i en formuläruppsättning och hur du kan använda formuläruppsättningar i processhanteringen.
-seo-description: This article introduces form set and explains how to create form sets by stitching together HTML5 forms. This article also explains how you can prefill xml data to a form set and how you can use form sets in process management.
-uuid: a1a2f267-26a9-4f45-bcfc-dbdedad95973
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
-discoiquuid: 80e3eec4-95e0-4731-a0e5-a617e9bcb069
 docset: aem65
 feature: Mobile Forms
 exl-id: 039afdf3-013b-41b2-8821-664d28617f61
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '2813'
+source-wordcount: '2804'
 ht-degree: 0%
 
 ---
 
 # Formuläruppsättning i AEM Forms{#form-set-in-aem-forms}
 
-## Översikt {#overview}
+## Ökning {#overview}
 
 Kunderna måste ofta skicka in flera formulär för att ansöka om en tjänst eller förmån. Det handlar om att hitta alla relevanta formulär och fylla i, skicka och spåra dem separat. De måste också fylla i gemensamma uppgifter flera gånger i formulär. Hela processen blir krånglig och felbenägen om den innehåller ett stort antal formulär. Funktionen för formuläruppsättning i AEM Forms kan förenkla användarupplevelsen i sådana scenarier.
 
@@ -169,11 +165,11 @@ XML-filen för förifyllnad anges med parametern dataRef för formulärets URL. 
 
 Du har till exempel tre formulär (formulär1, formulär2 och formulär3) i formuläruppsättningen med följande struktur:
 
-form1
+formulär1
 
 fält formulär1fält
 
-form2
+formulär2
 
 fält formulär2fält
 

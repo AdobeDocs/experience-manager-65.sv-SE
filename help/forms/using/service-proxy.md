@@ -1,17 +1,13 @@
 ---
 title: HTML 5-formulärtjänstproxy
-seo-title: HTML5 forms service proxy
 description: HTML5-formulärtjänstens proxy är en konfiguration som registrerar en proxy för överföringstjänsten. Om du vill konfigurera tjänstproxy anger du URL:en för överföringstjänsten via parametern submitServiceProxy för begäran.
-seo-description: HTML5 forms Service Proxy is a configuration to register a proxy for the submission service. To configure Service Proxy, specify the URL of submission service through request parameter submissionServiceProxy.
-uuid: 42d6c1da-3945-469d-b429-c33e563ed70c
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
-discoiquuid: 081f7c17-4e5d-4c7e-a5c3-5541a29b9d55
 docset: aem65
 feature: Mobile Forms
 exl-id: 8f9b10ae-1600-49c2-a061-153a2a89c67e
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '697'
 ht-degree: 0%
@@ -135,4 +131,4 @@ Skicka-tjänstproxyn väljer en topologi om den skicka-URL:en finns i request-pa
 * Om AEM skickar data fungerar proxytjänsten som en vidarekoppling. Begäran skickas till slutpunkten för /bin/xfaforms/submit och svaret skickas till XFA-miljön.
 * Om proxyn skickar data, skickas alla parametrar utom submitUrl till */bin/xfaforms/submitAction* slutpunkt och tar emot xml-byte i svarsström. Sedan skickar proxytjänsten data-xml-byte till submitUrl för bearbetning.
 
-* Innan data skickas (begäran om POST) till en server kontrollerar HTML5-formulär serverns anslutning och tillgänglighet. För att verifiera anslutning och tillgänglighet skickar HTML-formulär en tom huvudbegäran till servern. Om servern är tillgänglig skickar HTML5-formuläret data (POST request) till servern. Om servern inte är tillgänglig visas ett felmeddelande *Det gick inte att ansluta till servern,* visas. Avancerad identifiering förhindrar att användarna behöver fylla i formuläret på ett enkelt sätt. Proxyservern hanterar huvudbegäran och genererar inget undantag.
+* Innan data skickas (begäran om POST) till en server kontrollerar HTML5-formulär serverns anslutning och tillgänglighet. För att verifiera anslutning och tillgänglighet skickar HTML-formulär en tom huvudbegäran till servern. Om servern är tillgänglig skickar HTML5-formuläret data (POST request) till servern. Om servern inte är tillgänglig visas ett felmeddelande *Det gick inte att ansluta till servern* visas. Avancerad identifiering förhindrar att användarna behöver fylla i formuläret på ett enkelt sätt. Proxyservern hanterar huvudbegäran och genererar inget undantag.

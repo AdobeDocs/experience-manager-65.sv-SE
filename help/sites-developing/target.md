@@ -1,19 +1,15 @@
 ---
 title: Utveckla för riktat innehåll
-seo-title: Developing for Targeted Content
 description: Ämnen om utveckling av komponenter för användning med målinriktning mot innehåll
-seo-description: Topics about developing components for use with content targeting
-uuid: 2449347e-7e1c-427b-a5b0-561055186934
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: personalization
 content-type: reference
-discoiquuid: bff078cd-c390-4870-ad1d-192807c67ca4
 docset: aem65
 exl-id: 92b62532-4f79-410d-903e-d2bca6d0fd1c
-source-git-commit: fb9363a39ffc9d3929a31a3a19a124b806607ef4
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '1275'
+source-wordcount: '1223'
 ht-degree: 0%
 
 ---
@@ -27,7 +23,7 @@ I det här avsnittet beskrivs ämnen om utveckling av komponenter för användni
 
 >[!NOTE]
 >
->När du riktar in dig på en komponent i AEM författare gör komponenten ett antal serveranrop till Adobe Target för att registrera kampanjen, konfigurera erbjudanden och hämta Adobe Target-segment (om de är konfigurerade). Inga serversamtal görs från AEM publicera till Adobe Target.
+>När du riktar in dig på en komponent i AEM författare gör komponenten ett antal serveranrop till Adobe Target för att registrera kampanjen, konfigurera erbjudanden och hämta Adobe Target-segment (om de är konfigurerade). Inga anrop på serversidan görs från AEM publicera till Adobe Target.
 
 ## Aktivera anpassning med Adobe Target på dina sidor {#enabling-targeting-with-adobe-target-on-your-pages}
 
@@ -195,7 +191,7 @@ JSP-skriptet för den här komponenten genererar anrop till Target javascript AP
 
 >[!NOTE]
 >
->Som standard är rutor dolda - klassen mboxDefault bestämmer detta beteende. Genom att dölja kryssrutor kan besökarna inte se standardinnehållet innan det byts ut. Men om du döljer lådor påverkas upplevda prestanda.
+>Som standard är rutor dolda - klassen mboxDefault bestämmer detta beteende. Genom att dölja kryssrutor kan besökare inte se standardinnehållet innan det byts ut, men om du döljer kryssrutor påverkas den upplevda prestandan.
 
 Standardfilen mbox.js som används för att skapa mbox finns på /etc/clientlibs/foundation/testandtarget/mbox/source/mbox.js. Om du vill använda filen mbox.js för en kund lägger du till filen i molnkonfigurationen för Target. Om du vill lägga till filen måste filen mbox.js vara tillgänglig i filsystemet.
 
@@ -205,7 +201,7 @@ Om du till exempel vill använda [Marketing Cloud ID-tjänst](https://experience
 >
 >Om en anpassad mbox definieras i en målkonfiguration måste alla ha läsåtkomst till **/etc/cloudServices** på publiceringsservrar. Utan den här åtkomsten uppstår ett 404-fel när mbox.js-filer läses in på publiceringswebbplatsen.
 
-1. Gå till CQ **verktyg** sida och markera **Cloud Services**. ([https://localhost:4502/libs/cq/core/content/tools/cloudservices.html](https://localhost:4502/libs/cq/core/content/tools/cloudservices.html))
+1. Gå till CQ **verktyg** sida och markera **Cloud Service**. ([https://localhost:4502/libs/cq/core/content/tools/cloudservices.html](https://localhost:4502/libs/cq/core/content/tools/cloudservices.html))
 1. Välj Adobe Target i trädet och dubbelklicka på målkonfigurationen i listan över konfigurationer.
 1. Klicka på Redigera på konfigurationssidan.
 1. För egenskapen Custom mbox.js klickar du på Browse och väljer filen.
@@ -223,7 +219,7 @@ Om du vill ta bort kommandot Target från snabbmenyn lägger du till följande e
 
 * Namn: cq:disableTargeting
 * Typ: Boolean
-* Värde: True
+* Värde: Sant
 
 Om du till exempel vill inaktivera mål för titelkomponenterna på Geometrixx demowebbplatssidor lägger du till egenskapen i noden /apps/geometrixx/components/title/cq:editConfig.
 
@@ -239,7 +235,7 @@ Om du vill följa upp hur webbplatsen fungerar skickar du inköpsinformation fr�
 
 * productPurchasedId: En lista med ID:n som identifierar de köpta produkterna.
 * orderId: Orderns ID.
-* orderTotal: Det totala beloppet för köpet.
+* orderTotal: Det totala beloppet för inköpet.
 
 Koden på den återgivna HTML-sidan som skapar mbox liknar följande exempel:
 
@@ -319,20 +315,20 @@ När komponenten inkluderas på utcheckningssidan i föregående exempel innehå
 
 ## Förstå målkomponenten {#understanding-the-target-component}
 
-Med Target-komponenten kan författare skapa dynamiska rutor från CQ-innehållskomponenter. (Se [Målinriktat innehåll](/help/sites-authoring/content-targeting-touch.md).) Målkomponenten finns på /libs/cq/personalization/components/target.
+Med Target-komponenten kan författare skapa dynamiska rutor från CQ-innehållskomponenter. (Se [Målgruppsanpassning](/help/sites-authoring/content-targeting-touch.md).) Målkomponenten finns på /libs/cq/personalization/components/target.
 
 Skriptet target.jsp får åtkomst till sidegenskaperna för att avgöra vilken målmotor som ska användas för komponenten och kör sedan rätt skript:
 
 * Adobe Target: /libs/cq/personalization/components/target/engine_tnt.jsp
 * [Adobe Target med AT.JS](/help/sites-administering/target.md): /libs/cq/personalization/components/target/engine_atjs.jsp
 * [Adobe Campaign](/help/sites-authoring/target-adobe-campaign.md): /libs/cq/personalization/components/target/engine_cq_campaign.jsp
-* Regler/ContextHub på klientsidan: /libs/cq/personalization/components/target/engine_cq.jsp
+* Regler för klientsidan/ContextHub: /libs/cq/personalization/components/target/engine_cq.jsp
 
 ### Skapa Mboxes {#the-creation-of-mboxes}
 
 >[!NOTE]
 >
->Som standard är rutor dolda - klassen mboxDefault bestämmer detta beteende. Genom att dölja kryssrutor kan besökarna inte se standardinnehållet innan det byts ut. Men om du döljer lådor påverkas upplevda prestanda.
+>Som standard är rutor dolda - klassen mboxDefault bestämmer detta beteende. Genom att dölja kryssrutor kan besökare inte se standardinnehållet innan det byts ut, men om du döljer kryssrutor påverkas den upplevda prestandan.
 
 När Adobe Target skapar innehåll för målinriktning skapar skriptet engine_tnt.jsp mbox som innehåller innehållet i målupplevelsen:
 
@@ -343,7 +339,7 @@ När Adobe Target skapar innehåll för målinriktning skapar skriptet engine_tn
 Efter `mboxDefault` div-element infogas det javascript som skapar mbox:
 
 * Rutans namn, ID och plats baseras på komponentens databassökväg.
-* Skriptet hämtar parameternamn och värden för klientkontextparametrar.
+* Skriptet hämtar namn och värden för klientkontextparametrar.
 * Anrop görs till de funktioner som mbox.js och andra klientbibliotek definierar för att skapa mbox-filer.
 
 #### Klientbibliotek för målanpassning av innehåll {#client-libraries-for-content-targeting}

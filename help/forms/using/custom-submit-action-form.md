@@ -1,18 +1,14 @@
 ---
 title: Skriva anpassad skickaåtgärd för anpassningsbara formulär
-seo-title: Writing custom Submit action for adaptive forms
 description: Med AEM Forms kan du skapa anpassade Skicka-åtgärder för adaptiva formulär. I den här artikeln beskrivs hur du lägger till anpassad skickaåtgärd för adaptiva formulär.
-seo-description: AEM Forms lets you create custom Submit action for Adaptive forms. This article describes the procedure to add custom Submit action for Adaptive forms.
-uuid: fd8e1dac-b997-4e86-aaf6-3507edcb3070
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: customization
-discoiquuid: 2a2e1156-4a54-4b0a-981c-d527fe22a27e
 docset: aem65
 exl-id: 7c3d0dac-4e19-4eb3-a43d-909d526acd55
-source-git-commit: 1683338f02d01d5d9843368955fa42f309718f26
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '1638'
+source-wordcount: '1539'
 ht-degree: 0%
 
 ---
@@ -28,13 +24,13 @@ Adaptiva formulär kräver att skicka-åtgärder utförs för att bearbeta anvä
 
 ## Arbetsflöde för en Skicka-åtgärd {#workflow-for-a-submit-action}
 
-Flödesdiagrammet visar arbetsflödet för en Skicka-åtgärd som utlöses när du klickar på **[!UICONTROL Submit]** i en adaptiv form. Filerna i komponenten Bifogad fil överförs till servern och formulärdata uppdateras med URL:erna för de överförda filerna. I klienten lagras data i JSON-format. Klienten skickar en Ajax-begäran till en intern server som masserar de data du har angett och returnerar dem i XML-format. Klienten samlar in dessa data med åtgärdsfält. Den skickar data till den sista servern (Guide Submit servlet) via en åtgärd för att skicka formulär. Sedan vidarebefordrar servern kontrollen till åtgärden Skicka. Åtgärden Skicka kan vidarebefordra begäran till en annan försäljningsresurs eller dirigera om webbläsaren till en annan URL.
+Flödesdiagrammet visar arbetsflödet för en Skicka-åtgärd som aktiveras när du klickar på **[!UICONTROL Submit]** i en adaptiv form. Filerna i komponenten Bifogad fil överförs till servern och formulärdata uppdateras med URL:erna för de överförda filerna. I klienten lagras data i JSON-format. Klienten skickar en Ajax-begäran till en intern server som masserar de data du har angett och returnerar dem i XML-format. Klienten samlar in dessa data med åtgärdsfält. Den skickar data till den sista servern (Guide Submit servlet) via en åtgärd för att skicka formulär. Sedan vidarebefordrar servern kontrollen till åtgärden Skicka. Åtgärden Skicka kan vidarebefordra begäran till en annan försäljningsresurs eller dirigera om webbläsaren till en annan URL.
 
 ![Flödesschema som visar arbetsflödet för åtgärden Skicka](assets/diagram1.png)
 
 ### XML-dataformat {#xml-data-format}
 
-XML-data skickas till servern med **`jcr:data`** request-parameter. Skicka-åtgärder kan komma åt parametern för att bearbeta data. I följande kod beskrivs formatet för XML-data. Fälten som är bundna till formulärmodellen visas i **`afBoundData`** -avsnitt. Obundna fält visas i `afUnoundData`-avsnitt. Mer information om formatet för `data.xml` -fil, se [Introduktion till förifyllda anpassade formulärfält](../../forms/using/prepopulate-adaptive-form-fields.md).
+XML-data skickas till servern med **`jcr:data`** request-parameter. Skicka-åtgärder kan komma åt parametern för att bearbeta data. I följande kod beskrivs formatet för XML-data. Fälten som är bundna till formulärmodellen visas i dialogrutan **`afBoundData`** -avsnitt. Obundna fält visas i `afUnoundData`-avsnitt. Mer information om formatet för `data.xml` -fil, se [Introduktion till förifyllda anpassade formulärfält](../../forms/using/prepopulate-adaptive-form-fields.md).
 
 ```xml
 <?xml ?>
@@ -60,9 +56,9 @@ XML-data skickas till servern med **`jcr:data`** request-parameter. Skicka-åtg�
 
 En Skicka-åtgärd kan lägga till dolda inmatningsfält (med HTML) [input](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Input) -tagg) till det återgivna formuläret HTML. Dessa dolda fält kan innehålla värden som behövs när formulärinlämningen behandlas. När formuläret skickas bokförs dessa fältvärden som begärandeparametrar som åtgärden Skicka kan använda vid överföringshantering. Indatafälten kallas åtgärdsfält.
 
-En Skicka-åtgärd som även fångar upp den tid det tar att fylla i ett formulär kan t.ex. lägga till dolda indatafält `startTime` och `endTime`.
+En Skicka-åtgärd som även fångar upp den tid det tar att fylla i ett formulär kan t.ex. lägga till dolda inmatningsfält `startTime` och `endTime`.
 
-Ett skript kan ange värdena för `startTime` och `endTime` fält när formuläret återges och innan formuläret skickas. Skicka ActionScript `post.jsp` kan sedan komma åt dessa fält med hjälp av frågeparametrar och beräkna den totala tid som krävs för att fylla i formuläret.
+Ett skript kan ange värdena för `startTime` och `endTime` fält när formuläret återges och innan formuläret skickas. ActionScriptet Skicka `post.jsp` kan sedan komma åt dessa fält med hjälp av frågeparametrar och beräkna den totala tid som krävs för att fylla i formuläret.
 
 ### Bifogade filer {#file-attachments}
 
@@ -80,7 +76,7 @@ for (Map.Entry<String, RequestParameter[]> param : requestParameterMap.entrySet(
 }
 ```
 
-### Vidarebefordra sökväg och omdirigerings-URL {#forward-path-and-redirect-url}
+### Framåtsökväg och omdirigerings-URL {#forward-path-and-redirect-url}
 
 När du har utfört den nödvändiga åtgärden vidarebefordrar servern Skicka begäran till sökvägen framåt. En åtgärd använder API:t setForwardPath för att ställa in framåtsökvägen på tjänsten Skicka stödlinje.
 
@@ -96,9 +92,9 @@ Om åtgärden inte har någon framåtriktad sökväg dirigeras webbläsaren om m
 
 En Skicka-åtgärd är en sling:Mapp som innehåller följande:
 
-* **addfields.jsp**: Skriptet innehåller de åtgärdsfält som läggs till i filen HTML under återgivningen. Använd det här skriptet för att lägga till dolda indataparametrar som krävs vid överföring i skriptet post.POST.jsp.
-* **dialog.xml**: Det här skriptet liknar dialogrutan CQ Component. Det innehåller konfigurationsinformation som författaren anpassar. Fälten visas på fliken Skicka åtgärder i dialogrutan Redigera anpassat formulär när du väljer åtgärden Skicka.
-* **post.POST.jsp**: Submit-servern anropar det här skriptet med data som du skickar och ytterligare data i föregående avsnitt. Om du kör en åtgärd på den här sidan måste du köra skriptet post.POST.jsp. Om du vill registrera åtgärden Skicka med de adaptiva formulär som ska visas i dialogrutan Redigera anpassat formulär lägger du till dessa egenskaper i slingan:Folder:
+* **addfields.jsp**: Det här skriptet innehåller de åtgärdsfält som läggs till i filen HTML under återgivningen. Använd det här skriptet för att lägga till dolda indataparametrar som krävs vid överföring i skriptet post.POST.jsp.
+* **dialog.xml**: Det här skriptet liknar CQ Component dialog. Det innehåller konfigurationsinformation som författaren anpassar. Fälten visas på fliken Skicka åtgärder i dialogrutan Redigera anpassat formulär när du väljer åtgärden Skicka.
+* **post.POST.jsp**: Sändningsservern anropar det här skriptet med de data som du skickar och de ytterligare data som finns i föregående avsnitt. Om du kör en åtgärd på den här sidan måste du köra skriptet post.POST.jsp. Om du vill registrera åtgärden Skicka med de adaptiva formulär som ska visas i dialogrutan Redigera anpassat formulär lägger du till dessa egenskaper i slingan:Folder:
 
    * **guideComponentType** av typen String och value **fd/af/components/guidepittype**
    * **guideDataModel** av typen String som anger vilken typ av anpassat formulär som åtgärden Skicka gäller för. **xfa** stöds för XFA-baserade adaptiva formulär medan **xsd** stöds för XSD-baserade adaptiva formulär. **grundläggande** stöds för adaptiva formulär som inte använder XDP eller XSD. Om du vill visa åtgärden på flera typer av adaptiva formulär lägger du till motsvarande strängar. Avgränsa varje sträng med kommatecken. Om du till exempel vill göra en åtgärd synlig i XFA- och XSD-baserade adaptiva formulär anger du värdena **xfa** och **xsd** respektive.
@@ -109,11 +105,11 @@ En Skicka-åtgärd är en sling:Mapp som innehåller följande:
 
 Utför följande steg för att skapa en anpassad Skicka-åtgärd som sparar data i CRX-databasen och sedan skickar ett e-postmeddelande till dig. Det adaptiva formuläret innehåller innehållet i OTB-sändningsåtgärden i Store (föråldrat) som sparar data i CRX-databasen. CQ erbjuder dessutom en [E-post](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=en) API som kan användas för att skicka e-post. Innan du använder e-post-API:t [konfigurera](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=en&amp;wcmmode=disabled) Dag CQ Mail-tjänsten via systemkonsolen. Du kan återanvända åtgärden Lagra innehåll (föråldrat) för att lagra data i databasen. Åtgärden Lagra innehåll (borttaget) finns på platsen /libs/fd/af/components/guideSubittype/store i CRX-databasen.
 
-1. Logga in på CRXDE Lite på https://&lt;server>:&lt;port>/crx/de/index.jsp. Skapa en nod med egenskapen sling:Folder och name store_and_mail i mappen /apps/custom_submit_action. Skapa mappen custom_submit_action om den inte redan finns.
+1. Logga in på CRXDE Lite på URL:en https://&lt;server>:&lt;port>/crx/de/index.jsp. Skapa en nod med egenskapen sling:Folder och name store_and_mail i mappen /apps/custom_submit_action. Skapa mappen custom_submit_action om den inte redan finns.
 
    ![Skärmbild som visar hur en nod skapas med egenskapen sling:Folder](assets/step1.png)
 
-1. **Ange de obligatoriska konfigurationsfälten.**
+1. **Ange obligatoriska konfigurationsfält.**
 
    Lägg till den konfiguration som krävs för Store-åtgärden. Kopiera **cq:dialog** noden i Store-åtgärden från /libs/fd/af/components/guideSubittype/store till åtgärdsmappen på /apps/custom_submit_action/store_and_email.
 

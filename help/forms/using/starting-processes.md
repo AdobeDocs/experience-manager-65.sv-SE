@@ -1,23 +1,19 @@
 ---
-title: Starta processer
-seo-title: Starting processes
-description: Använda arbetsytan i LiveCycle AEM Forms - välj processer, lägg till anteckningar och bilagor, spara utkast och lägg till i favoriter.
-seo-description: How to use LiveCycle AEM Forms workspace--select processes, add notes and attachments, save draft copies, and add to favorites.
-uuid: a61da785-25b4-4482-bd72-02e250d35dc7
+title: Startar processer
+description: Så här använder du arbetsytan i LiveCycle AEM Forms - markera processer, lägg till anteckningar och bilagor, spara utkast och lägg till i favoriter.
 contentOwner: robhagat
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
-discoiquuid: c9d3f369-3744-41d5-b340-390ab7e03f36
 exl-id: b2a6ba3a-0f4c-44b1-8f9a-c15c6fb8c305
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '1343'
+source-wordcount: '1334'
 ht-degree: 0%
 
 ---
 
-# Starta processer {#starting-processes}
+# Startar processer {#starting-processes}
 
 AEM Forms arbetsyta organiserar processerna enligt de kategorier som administratören eller processdesignern ställer in. Du kan också placera processer som du använder ofta i kategorin Favoriter så att du snabbt kan hitta dem.
 
@@ -49,7 +45,7 @@ När du väljer en process visas fliken Formulär och fliken Detaljer. Om proces
 
    Alla formulär i en process har en unik URL. Du kan använda den unika URL-adressen för att starta arbetsytan i HTML direkt med den specifika processen och formuläret. URL-adressen har formatet https://&lt;server>:&lt;port>/lc/libs/ws/index.html#/startprocess/&lt;applicationname>%2F&lt;processname>. The &lt;applicationname>%2F&lt;processname> strängen är alltid URL-kodad. Ett exempel-URL är http://localhost:8080/lc/libs/ws/index.html#/startprocess/MyApplication%2FNewProcess. Strängen ApplicationName%2FPProcessName i exemplet är URL-kodad.
 
-1. Fyll i formuläret enligt instruktionerna som medföljer det. Om det behövs klickar du på **Maximera** för att öka formulärets synliga område.
+1. Fyll i formuläret enligt instruktionerna som medföljer det. Klicka vid behov på **Maximera** för att öka formulärets synliga område.
 1. Om fliken Bifogade filer är tillgänglig lägger du till bifogade filer efter behov.
 1. Om fliken Anteckningar är tillgänglig kan du göra nödvändiga anteckningar.
 1. Gör något av följande:
@@ -69,7 +65,7 @@ När du väljer en process visas fliken Formulär och fliken Detaljer. Om proces
 
 Du kan lägga till anteckningar och bifogade filer i en process om processen tillåter det. Du kan ge andra användare behörighet att visa, uppdatera och ta bort anteckningar och bilagor.
 
-### Lägg till en anteckning {#add-a-note}
+### Lägga till en anteckning {#add-a-note}
 
 Du kan lägga till flera anteckningar, redigera de skrivna anteckningarna och ta bort dem. Varje anteckning har en titel, en beskrivning och en åtkomstbehörighet. Du kan ange någon av följande åtkomstbehörigheter för en anteckning:
 
@@ -80,7 +76,7 @@ Du kan lägga till flera anteckningar, redigera de skrivna anteckningarna och ta
 * Ingen åtkomst
 
 1. Öppna en uppgift och klicka på **Anteckningar** om processen tillåter det.
-1. Skriv en rubrik för anteckningen i **Titel** och skriver texten i anteckningen i **Anteckning** box.
+1. Ange en rubrik för anteckningen i dialogrutan **Titel** och skriver texten i anteckningen i **Anteckning** box.
 1. Välj **Behörigheter** nivå för anteckningen för andra användare som deltar i processen.
 1. Klicka **OK**. En textfil som innehåller din anteckning bifogas till formuläret. Du kan uppdatera en anteckning genom att klicka på den och direkt ändra texten. Du kan ta bort en anteckning genom att klicka på **Ta bort** knapp ![Bild av en papperskorgen](assets/icondelete.png) bredvid anteckningen.
 
@@ -94,7 +90,7 @@ Du kan också lägga till dina kommentarer om den bifogade filen. Du kan ange n�
 * Läs/ta bort
 * Ingen åtkomst
 
-1. Klicka på **Bifogade filer** och markera **Bifogad fil**.
+1. Klicka på **Bifogade filer** och markera **Bilaga**.
 1. Klicka **Bläddra** för att markera filen som ska bifogas.
 1. Välj **Behörigheter** nivå för bilagan för andra användare som deltar i processen. Om du väljer **Läs** kan andra användare spara filen lokalt. Om du väljer någon av redigeringsbehörigheterna kan andra användare även överföra en ny fil som ersätter den bifogade filen.
 1. Klicka **OK**. Filen bifogas till formuläret. Du kan ta bort en fil genom att klicka på **Ta bort** knapp ![Bild av en papperskorgen](assets/icondelete.png) bredvid bilagan.

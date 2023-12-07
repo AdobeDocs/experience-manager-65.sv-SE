@@ -1,16 +1,12 @@
 ---
 title: Skapa anpassade layoutkomponenter för anpassade formulär
-seo-title: Creating custom layout components for adaptive forms
 description: Procedur för att skapa anpassade layoutkomponenter för anpassade formulär.
-seo-description: Procedure to create custom layout components for adaptive forms.
-uuid: f0bb5fcd-3938-4804-ad0c-d96d3083fd01
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: customization
-discoiquuid: d4ae432d-557d-4e89-92b8-dca5f37cb6f8
 docset: aem65
 exl-id: 544b06f9-2456-4c05-88c2-b5349947742d
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '270'
 ht-degree: 0%
@@ -30,7 +26,7 @@ Komponenten Layout på den adaptiva formulärpanelen styr hur adaptiva formulär
 ## Skapa en anpassad panellayout {#creating-a-custom-panel-layout}
 
 1. Navigera till platsen `/crx/de`.
-1. Kopiera en panellayout från platsen `/libs/fd/af/layouts/panel` (t.ex. `tabbedPanelLayout`) till `/apps` (t.ex. `/apps/af-custom-layout`).
+1. Kopiera en panellayout från platsen `/libs/fd/af/layouts/panel` (till exempel `tabbedPanelLayout`) till `/apps` (till exempel `/apps/af-custom-layout`).
 1. Byt namn på layouten som du kopierade till `customPanelLayout`. Ändra egenskaperna för noderna `qtip` och `jcr:description`. Ändra dem till exempel till `Custom layout - Toggle tabs`.
 
 qtip
@@ -116,7 +112,7 @@ qtip
 
 1. Om du vill förbättra utseendet och beteendet kan du ta med en `client library`.
 
-   Uppdatera dessutom sökvägarna för inkluderade skript i .jsp-filer. Du kan till exempel uppdatera `customPanelLayout.jsp` på följande sätt:
+   Uppdatera dessutom sökvägarna för inkluderade skript i .jsp-filer. Uppdatera till exempel `customPanelLayout.jsp` på följande sätt:
 
    ```html
    <%-- jsp encapsulating navigator container and panel container divs --%>

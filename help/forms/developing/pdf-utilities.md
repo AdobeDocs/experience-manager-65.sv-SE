@@ -1,19 +1,15 @@
 ---
 title: Arbeta med verktygen i PDF
-seo-title: Working with PDF Utilities
 description: Använd PDF Utilities för att konvertera mellan filformaten PDF och XDP, ange och hämta dokumentegenskaper för PDF samt ändra XMP metadata.
-seo-description: Use the PDF Utilities service to convert between PDF and XDP file formats, set and retrieve PDF document properties, and manipulate XMP metadata.
-uuid: a2ea2359-c547-4f1b-b6ca-f276f816e36a
 contentOwner: admin
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
-discoiquuid: d816bf2e-5236-4084-b7c4-c32b72cdff97
 role: Developer
 exl-id: e4b204ee-7261-42b8-8db8-a92aa9fd0a28
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '2579'
+source-wordcount: '2549'
 ht-degree: 0%
 
 ---
@@ -59,7 +55,7 @@ Inkludera nödvändiga filer i utvecklingsprojektet. Om du skapar ett klientprog
 
 **Skapa en PDFUtilityService-klient**
 
-Innan du kan utföra en PDF Utilities-åtgärd programmatiskt måste du skapa en PDFUtilityService-klient. Med Java API kan du uppnå detta genom att skapa en `PDFUtilityServiceClient` -objekt. Med webbtjänstens API:er uppnås detta genom att använda en `PDFUtilityServiceService` -objekt.
+Innan du kan utföra en PDF Utilities-åtgärd programmatiskt måste du skapa en PDFUtilityService-klient. Med Java API kan du uppnå detta genom att skapa en `PDFUtilityServiceClient` -objekt. Med webbtjänstens API:er uppnås detta med en `PDFUtilityServiceService` -objekt.
 
 **Anropa konverteringsåtgärden PDF till XDP**
 
@@ -146,7 +142,7 @@ Inkludera nödvändiga filer i utvecklingsprojektet. Om du skapar ett klientprog
 
 **Skapa en PDFUtilityService-klient**
 
-Innan du kan utföra en PDF Utilities-åtgärd programmatiskt måste du skapa en PDFUtilityService-klient. Med Java API kan du uppnå detta genom att skapa en `PDFUtilityServiceClient` -objekt. Med webbtjänstens API:er uppnås detta genom att använda en `PDFUtilityServiceService` -objekt.
+Innan du kan utföra en PDF Utilities-åtgärd programmatiskt måste du skapa en PDFUtilityService-klient. Med Java API kan du uppnå detta genom att skapa en `PDFUtilityServiceClient` -objekt. Med webbtjänstens API:er uppnås detta med en `PDFUtilityServiceService` -objekt.
 
 **Anropa konverteringsåtgärden XDP till PDF**
 
@@ -338,7 +334,7 @@ Innan du kan utföra en PDF Utilities-åtgärd programmatiskt måste du skapa en
 
 Du kan välja något av följande alternativ för att spara:
 
-* `INCREMENTAL`: Spara stegvis för att minska tidsåtgången
+* `INCREMENTAL`: Om du vill spara stegvis och minska tiden som krävs för att spara
 * `FAST_WEB_VIEW`: spara för snabb webbvisning
 * `FULL`: Spara med fullständig sparning (utan optimeringar)
 
@@ -348,7 +344,7 @@ När du har skapat tjänstklienten kan du anropa hämtningsåtgärden för egens
 
 **Skicka PDF-dokumentet till en annan AEM Forms-åtgärd**
 
-När PDF Utilities-tjänsten har angett sparningsläget skickar du PDF-dokumentet till en annan AEM Forms-åtgärd. När PDF-dokumentet har returnerats från den åtgärden sparas det i det angivna läget. Om du till exempel använder tjänsten PDF Utilities för att ange `FAST_WEB_VIEW` och sedan skicka PDF-dokumentet till krypteringstjänstens `encryptUsingPassword` åtgärden, krypteras det returnerade PDF-dokumentet med ett lösenord och sparas i `FAST_WEB_VIEW` läge.
+När PDF Utilities-tjänsten har angett sparningsläget skickar du PDF-dokumentet till en annan AEM Forms-åtgärd. När PDF-dokumentet har returnerats från den åtgärden sparas det i det angivna läget. Om du till exempel använder tjänsten PDF Utilities för att ställa in `FAST_WEB_VIEW` och sedan skicka PDF-dokumentet till krypteringstjänstens `encryptUsingPassword` åtgärden, krypteras det returnerade PDF-dokumentet med ett lösenord och sparas i `FAST_WEB_VIEW` läge.
 
 >[!NOTE]
 >

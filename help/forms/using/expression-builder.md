@@ -1,19 +1,15 @@
 ---
 title: Fjärrfunktioner i Expression Builder
-seo-title: Expression Builder
 description: Med Expression Builder i Correspondence Management kan du skapa uttryck och fjärrfunktioner.
-seo-description: Expression Builder in Correspondence Management lets you create expressions and remote functions.
-uuid: 6afb84c0-ad03-4bb1-a154-d46cc47650ae
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: correspondence-management
-discoiquuid: 68e3071e-7ce6-4bdc-8561-14bcaeae2b6c
 docset: aem65
 feature: Correspondence Management
 exl-id: b41af9fe-c698-44b3-9ac6-97d42cdc02d4
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '786'
+source-wordcount: '783'
 ht-degree: 0%
 
 ---
@@ -24,7 +20,7 @@ Med Expression Builder kan du skapa uttryck eller villkor som utför beräkninga
 
 ## Skapa uttryck och fjärrfunktioner med uttrycksverktyget {#creating-expressions-and-remote-functions-with-expression-builder}
 
-I Expression Builder används JSP EL-bibliotek internt, vilket innebär att uttrycket följer JSPEL-syntaxen. Mer information finns i [Exempeluttryck](#exampleexpressions).
+I Expression Builder används JSP EL-bibliotek internt, så uttrycket följer JSPEL-syntaxen. Mer information finns i [Exempeluttryck](#exampleexpressions).
 
 ![Expression Builder](assets/expressionbuilder.png)
 
@@ -38,7 +34,7 @@ Här är några vanliga JSP EL-exempel som du kan använda i din Correspondence 
 
 * Så här lägger du till två tal: ${number1 + number2}
 * Så här sammanfogar du två strängar: ${str1} ${str2}
-* Så här jämför du två tal: ${age &lt; 18}
+* Jämför två tal: ${age &lt; 18}
 
 Mer information finns i [JSP EL-specifikation](https://download.oracle.com/otn-pub/jcp/jsp-2.1-fr-spec-oth-JSpec/jsp-2_1-fr-spec-el.pdf). Uttryckshanteraren på klientsidan stöder inte vissa variabler och funktioner i JSP EL-specifikationen, närmare bestämt:
 
@@ -82,8 +78,8 @@ Du kan skapa ett anpassat paket för att exportera dina egna fjärrfunktioner f�
 
    1. **Aktiverad**: Avgör om den här metoden är aktiverad. Uttryckshanteraren ignorerar inaktiverade metoder.
    1. **familyId**: Anger metodens familj (grupp). Om den är tom antar Expression Manager att metoden tillhör standardfamiljen. Det finns inget register över familjer (utom standardvalet) som funktioner väljs från. Med Expression Manager skapas registret dynamiskt genom en union av alla familj-ID:n som anges av alla funktioner som exporteras av de olika paketen. Se till att det ID som de anger här är läsbart eftersom det även visas i uttrycksredigeringsgränssnittet.
-   1. **displayName**: Ett namn som kan läsas av människor för funktionen. Det här namnet används för visning i redigeringsgränssnittet. Om det är tomt skapar Expression Manager ett standardnamn med funktionens prefix och local-name.
-   1. **Beskrivning**: En detaljerad beskrivning av funktionen. Den här beskrivningen används för visning i redigeringsgränssnittet. Om det är tomt skapar Expression Manager en standardbeskrivning med funktionens prefix och local-name.
+   1. **displayName**: Ett läsbart namn för funktionen. Det här namnet används för visning i redigeringsgränssnittet. Om det är tomt skapar Expression Manager ett standardnamn med funktionens prefix och local-name.
+   1. **Beskrivning**: En detaljerad beskrivning av funktionen. Den här beskrivningen används för visning i redigeringsgränssnittet. Om den är tom konstruerar Expression Manager en standardbeskrivning med funktionens prefix och local-name.
 
    ```java
    package mergeandfuse.com;
@@ -118,7 +114,6 @@ Du kan skapa ett anpassat paket för att exportera dina egna fjärrfunktioner f�
    * java.util.Calendar
    * java.util.Date
    * java.util.List
-
 
 1. Definiera implementeringen av gränssnittet, konfigurera det som en OSGI-tjänst och definiera följande egenskaper:
 

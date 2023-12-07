@@ -1,26 +1,24 @@
 ---
 title: AEM Modernization Tools
-seo-title: AEM Modernization Tools
-description: AEM Modernization Tools hjälper dig att konvertera dina gamla AEM till den senaste tekniken
-seo-description: AEM Modernization Tools help you easily convert your legacy AEM features to the latest technology
+description: Med AEM Moderniseringsverktyg kan du konvertera dina gamla AEM till den senaste tekniken
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 exl-id: 8865a641-fdac-43ab-b1c3-722f120cd749
-source-git-commit: b886844dc80482ae4aae5fc7ce09e466efecc3bd
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '87'
-ht-degree: 66%
+source-wordcount: '78'
+ht-degree: 29%
 
 ---
 
 # AEM Modernization Tools {#modernization-tools}
 
-[Med AEM Modernization Tools blir det enkelt att konvertera:](https://opensource.adobe.com/aem-modernize-tools/)
+[Verktyg för AEM](https://opensource.adobe.com/aem-modernize-tools/) möjliggöra enkel konvertering av
 
-* [](page-templates-static.md)Statiska mallar till redigerbara mallar[](page-templates-editable.md)
-* [](page-templates-static.md)Designkonfigurationer till policyer[](page-templates-editable.md)
-* [](/help/sites-authoring/default-components-foundation.md)Foundation-komponenter till Core-komponenter[](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
-* [](website.md)Klassiskt användargränssnitt till pekaktiverat användargränssnitt [](touch-ui-concepts.md)
+* [Statiska mallar](page-templates-static.md) till [redigerbara mallar](page-templates-editable.md)
+* [Designkonfigurationer](page-templates-static.md) till [policyer](page-templates-editable.md)
+* [Foundation Components](/help/sites-authoring/default-components-foundation.md) till [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
+* [Klassiskt användargränssnitt](website.md) till [Pekaktiverat användargränssnitt](touch-ui-concepts.md)
 
 Mer information om användningen av dessa verktyg finns i [se deras dokumentation](https://opensource.adobe.com/aem-modernize-tools/).
 

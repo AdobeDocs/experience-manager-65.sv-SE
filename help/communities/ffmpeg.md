@@ -1,26 +1,22 @@
 ---
 title: FFmpeg for Communities
-seo-title: FFmpeg for Communities
 description: Installera och konfigurera MPEG för Communities
-seo-description: How to install and configure FFmpeg for Communities
-uuid: ef2f821c-70e9-4889-a8d7-a93b10a1d428
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: administering
 content-type: reference
-discoiquuid: 739ec991-552b-42cd-85cd-984d1c9fe8fd
 role: Admin
 exl-id: dbe28334-3b38-4362-b4f8-e0630e634503
-source-git-commit: 942db8fe3dad16be53dc6abe0e519d97a659e480
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '251'
-ht-degree: 1%
+source-wordcount: '233'
+ht-degree: 0%
 
 ---
 
 # FFmpeg for Communities {#ffmpeg-for-communities}
 
-## Översikt {#overview}
+## Ökning {#overview}
 
 FFmpeg är en lösning för konvertering och direktuppspelning av ljud och video och används, när den är installerad, för korrekt transkodning av [videomaterial](../../help/sites-authoring/default-components-foundation.md#video).
 
@@ -29,7 +25,7 @@ FFmpeg är en lösning för konvertering och direktuppspelning av ljud och video
 FFmpeg ska vara installerat på de servrar där AEM finns *författare* instans(er).
 
 1. Gå till [https://www.ffmpeg.org](https://www.ffmpeg.org/).
-1. Ladda ned den senaste versionen av MPEG för just din miljö (Macintosh, Windows eller Linux).
+1. Hämta den senaste versionen av MPEG för just din miljö (Macintosh, Windows eller Linux).
 
    * Det är viktigt att hålla MPEG uppdaterad på grund av säkerhetsluckor i äldre versioner.
 
@@ -39,7 +35,7 @@ FFmpeg ska vara installerat på de servrar där AEM finns *författare* instans(
 
    Du bör kunna köra MPEG från vilken katalog som helst i systemet.
 
-   * Till exempel, `ffmpeg -version`.
+   * Till exempel: `ffmpeg -version`.
 
 ## Konfigurera MPEG-omkodningstjänsten {#configure-ffmpeg-transcoding-service}
 
@@ -54,14 +50,14 @@ Eftersom omkodningarna är processorintensiva bör du ändra listan över målå
 * Sök **[!UICONTROL DAM Update Asset]**.
 * Dubbelklicka för att öppna arbetsflödet för redigering i det klassiska användargränssnittet.
 
-   Resultatplats: [http://localhost:4502/cf#/etc/workflow/models/dam/update_asset.html](http://localhost:4502/cf#/etc/workflow/models/dam/update_asset.html)
+  Resultatplats: [http://localhost:4502/cf#/etc/workflow/models/dam/update_asset.html](http://localhost:4502/cf#/etc/workflow/models/dam/update_asset.html)
 
 * Dubbelklicka på **[!UICONTROL FFmpeg transcoding]** för att öppna dialogrutan Stegegenskaper.
 * Under **[!UICONTROL Process]** tab:
 
    * **[!UICONTROL Arugments]**: Rensa alla poster för att inaktivera omkodning Standardvärden: `profile:format_ogg,profile:format_aac,profile:format_flv,profile:format_aac_ie`
 
-   ![configure-ffmpeg](assets/configure-ffmpeg.png)
+  ![configure-ffmpeg](assets/configure-ffmpeg.png)
 
 * Välj **[!UICONTROL OK]** för att stänga `Step Properties` -dialogrutan.
 

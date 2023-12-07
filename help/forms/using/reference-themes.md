@@ -1,17 +1,13 @@
 ---
 title: Referensteman
-seo-title: Reference Themes
 description: AEM Forms tillhandahåller adaptiva formulärteman som du kan hämta från Software Distribution och använda för att utforma ett formulär.
-seo-description: AEM Forms provides adaptive forms themes that you can get from Software Distribution and use to style a form.
-uuid: 3c6bd309-aa5a-4953-91ed-25ed5ba5671a
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
-discoiquuid: a69d3787-8149-4bca-835d-aeecfb11702b
 docset: aem65
 exl-id: f6c24894-c322-4c44-b001-8978954d6e53
-source-git-commit: 1def8ff7bc90e2ab82ce8b50277a97da9709c78c
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '533'
+source-wordcount: '525'
 ht-degree: 0%
 
 ---
@@ -21,7 +17,7 @@ ht-degree: 0%
 [Teman](../../forms/using/themes.md) gör att du kan formatera formulär utan djupare kunskaper om CSS. Förutom standardtemat kan du hämta följande teman genom att installera [AEM Forms tilläggspaket](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=en):
 
 * Beryl
-* Kör
+* Exec
 * Exec-Light
 * Frihet
 * Ultramarin
@@ -33,7 +29,7 @@ Varje tema innehåller en unik och elegant stil som du kan använda för att ska
 
 ![Referensteman](assets/ref-themes.png)
 
-Teman som ingår i det här paketet är responsiva, och stilen i dessa teman definieras för mobila och stationära skärmar. De flesta moderna webbläsare på en mängd olika enheter kan återge formulär som används med något av dessa teman utan krångel.
+Teman som ingår i det här paketet är responsiva, och stilen i dessa teman definieras för mobilskärmar och datorskärmar. De flesta moderna webbläsare på en mängd olika enheter kan återge formulär som används med något av dessa teman utan krångel.
 
 Mer information om hur du installerar paketet finns i [Så här arbetar du med paket](/help/sites-administering/package-manager.md).
 
@@ -47,7 +43,7 @@ Beryltemat används av den anpassade formen We.Gov och betonar användningen av 
 
 ](assets/beryl-1.png)-->
 
-## Kör {#exec}
+## Exec {#exec}
 
 Exec-temat undviker heltäckande bakgrundsfyllningar för att framhäva formulärkomponenter. Om du markerar och klickar på komponenter ändras teckenfärgerna. Jämfört med standardtemat för arbetsytan ändras teckenfärgen för texten på den valda fliken till mörkblå. Lägg märke till hur navigerings- och skickaknapparna skiljer sig från Beryl-temat.
 

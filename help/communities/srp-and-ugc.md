@@ -1,18 +1,14 @@
 ---
 title: SRP och UGC Essentials
-seo-title: SRP and UGC Essentials
 description: Lagringsresursleverantör och användargenererat innehåll - översikt
-seo-description: Storage resource provider and user-generated content overview
-uuid: a4ee8725-f554-4fcf-ac1e-34878d6c02f8
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
-discoiquuid: 0763f236-5648-49e9-8a24-dbc8f4c77ee3
 exl-id: 8279684f-23dd-4234-bf01-fd2ce74bcb4e
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '686'
+source-wordcount: '683'
 ht-degree: 0%
 
 ---
@@ -23,17 +19,17 @@ ht-degree: 0%
 
 Om du inte känner till lagringsresursens leverantör (SRP) och dess relation till användargenererat innehåll (UGC) går du till [Community-innehåll](working-with-srp.md) och [Översikt över lagringsresursprovider](srp.md).
 
-I det här avsnittet av dokumentationen finns viktig information om SRP och UGC.
+Detta avsnitt i dokumentationen innehåller viktig information om SRP och UGC.
 
 ## StorageResourceProvider API {#storageresourceprovider-api}
 
-SocialResourceProvider API (SRP API) är ett tillägg till olika Sling Resource Provider API:er. Den har stöd för sidnumrering och atomisk ökning (användbart för tally och scoring).
+API:t för SocialResourceProvider (SRP API) är ett tillägg till olika API:er för Sling Resource Provider. Den har stöd för sidnumrering och atomisk ökning (användbart för tally och scoring).
 
 Frågor är nödvändiga för SCF-komponenter eftersom det behövs sortering efter datum, hjälpmedel, antal röster och så vidare. Alla SRP-alternativ har flexibla frågemekanismer som inte är beroende av bucketing.
 
 SRP-lagringsplatsen innehåller komponentsökvägen. SRP-API:t ska alltid användas för att komma åt UGC eftersom rotsökvägen beror på vilket SRP-alternativ som har valts, till exempel ASRP, MSRP eller JSRP.
 
-SRP API är inte en abstrakt klass, utan ett gränssnitt. En anpassad implementering bör inte utföras lätt, eftersom fördelarna med framtida förbättringar av interna implementeringar skulle gå förlorade när du uppgraderar till en ny version.
+SRP API är inte en abstrakt klass, utan ett gränssnitt. En anpassad implementering bör inte utföras lätt, eftersom fördelarna med framtida förbättringar av interna implementeringar skulle missas vid uppgradering till en ny version.
 
 Sättet att använda SRP API är via tillhandahållna verktyg, t.ex. de som finns i paketet SocialResourceUtilities.
 
@@ -107,16 +103,16 @@ Följande beskrivningar av lagringsplats kan vara till hjälp när du utvecklar 
 
 När en medlem går in i UGC i publiceringsmiljön interagerar de med en komponent som en del av en AEM.
 
-Ett exempel på en sådan komponent är [kommentarkomponent](http://localhost:4502/content/community-components/en/comments.html) som finns i [Community Components Guide](components-guide.md) webbplats. Sökvägen till kommentarnoden i den lokala databasen är:
+Ett exempel på en sådan komponent är [kommentarkomponent](http://localhost:4502/content/community-components/en/comments.html) som finns i [Guide för communitykomponenter](components-guide.md) webbplats. Sökvägen till kommentarnoden i den lokala databasen är:
 
 * Komponentsökväg = `/content/community-components/en/comments/jcr:content/content/includable/comments`
 
 **Skuggnodplats**
 
-När UGC skapas skapas också en [skuggnod](srp.md#about-shadow-nodes-in-jcr) som de nödvändiga åtkomstkontrollistorna tillämpas på. Sökvägen till motsvarande skuggnod i den lokala databasen är resultatet av att skuggnodens rotsökväg har försatts i komponentsökvägen:
+När du skapar UGC skapas också en [skuggnod](srp.md#about-shadow-nodes-in-jcr) som de nödvändiga åtkomstkontrollistorna tillämpas på. Sökvägen till motsvarande skuggnod i den lokala databasen är resultatet av att skuggnodens rotsökväg har försatts i komponentsökvägen:
 
 * Rotsökväg = `/content/usergenerated`
-* Kommentarskuggnod = `/content/usergenerated/content/community-components/en/comments/jcr:content/content/includable/comments`
+* Kommentarens skuggnod = `/content/usergenerated/content/community-components/en/comments/jcr:content/content/includable/comments`
 
 **UGC-plats**
 
@@ -125,7 +121,7 @@ Den användargenererade koden skapas inte på någon av dessa platser och ska ba
 * Rotsökväg = `/content/usergenerated/asi/srp-choice`
 * UGC-nod för JSRP = `/content/usergenerated/asi/jcr/content/community-components/en/comments/jcr:content/content/includable/comments/srzd-let_it_be_`
 
-*Var medveten*, för JSRP, kommer UGC-noden att *endast* finnas på den AEM instansen (antingen författaren eller publiceringen) som den angavs för. Om det anges i en publiceringsinstans går det inte att moderera från modereringskonsolen på författaren.
+*Var medveten* för JSRP kommer UGC-noden att *endast* vara närvarande på den AEM instansen (antingen författaren eller publiceringen) som den angavs för. Om det anges i en publiceringsinstans går det inte att moderera från modereringskonsolen på författaren.
 
 ## Relaterad information {#related-information}
 

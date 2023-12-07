@@ -1,18 +1,14 @@
 ---
 title: Bästa praxis
-seo-title: Best Practices
 description: De effektivaste sätten att skapa beskriver hur du använder AEM på det mest effektiva och mest effektiva sättet. Den här växande listan med ämnen innehåller en mängd olika områden i AEM.
-seo-description: Authoring best practices describe how to use AEM in the most efficient and most effective way possible. This growing list of topics includes a variety of areas in AEM.
-uuid: d1f58335-0aa6-4b35-bdcd-cf6051bd1439
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: page-authoring
 content-type: reference
-discoiquuid: a715c372-3d05-4119-9d2b-41bca0b16b19
-source-git-commit: 22cdd6a7b343749b8ce85d8c1b230d094732f44a
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '282'
-ht-degree: 2%
+ht-degree: 1%
 
 ---
 
@@ -31,7 +27,7 @@ De bästa sätten att administrera, distribuera och underhålla, eller utveckla 
 
 * [Administrera metodtips](/help/sites-administering/administer-best-practices.md)
 * [Utveckla bästa praxis](/help/sites-developing/best-practices.md)
-* [Effektiva rutiner](/help/sites-deploying/best-practices.md)
+* [Använda vedertagna rutiner](/help/sites-deploying/best-practices.md)
 
 Specifika dokument beskrivs och länkas till i de tabeller som följer.
 

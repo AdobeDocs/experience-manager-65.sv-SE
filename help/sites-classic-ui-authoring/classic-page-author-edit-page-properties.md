@@ -1,17 +1,15 @@
 ---
 title: Redigera sidegenskaper
 description: En sidas egenskaper kan variera beroende på sidans beskaffenhet. Vissa sidor kan t.ex. vara kopplade till en live-kopia medan andra inte är det och live-kopieringsinformationen är tillgänglig om det är lämpligt.
-uuid: 63d37d1b-52da-489d-b02b-e8b3d17571d1
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: page-authoring
 content-type: reference
-discoiquuid: 23768c73-ac64-4727-8313-160c8c131b05
 exl-id: 1a77e4cd-bbf8-4d05-bb35-fd43c02eaf30
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '760'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -83,7 +81,7 @@ Egenskaperna fördelas på flera flikar:
 
   >[!CAUTION]
   >
-  >Alternativa URL:er:
+  >Vanity URL:er:
   >
   >* måste vara unik så du bör vara försiktig med att värdet inte redan används av en annan sida.
   >* saknar stöd för regex-mönster.
@@ -144,15 +142,15 @@ Egenskaperna fördelas på flera flikar:
 
      Överför en bild som ska användas som miniatyrbild.
 
-### Cloud Services {#cloud-services}
+### Cloud Service {#cloud-services}
 
-* **Cloud Services**
+* **Cloud Service**
 
   Definiera egenskaper för [molntjänster](/help/sites-developing/extending-cloud-config.md).
 
-### Personanpassning {#personalization}
+### Personalisering {#personalization}
 
-* **Personanpassning**
+* **Personalisering**
 
   Välj en [Varumärke som anger ett omfång för målanpassning](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md).
 

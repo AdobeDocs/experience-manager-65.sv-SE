@@ -1,19 +1,15 @@
 ---
 title: Komponenter för sidredigering
-seo-title: Components for Page Authoring
 description: Komponenterna är tillgängliga när du redigerar en sida på fliken Komponenter i sidosparken och i Infoga ny komponentväljare (när du dubbelklickar i området Dra komponenter eller resurser här).
-seo-description: The components are available when editing a page from the Components tab of the sidekick and the Insert New Component selector (when you double-click in the Drag components or assets here area).
-uuid: c353073d-d4d1-4529-b8bd-d0ca302cc9a0
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: page-authoring
 content-type: reference
-discoiquuid: 9aa0521f-f321-42e9-b022-7ff968a36212
 docset: aem65
 exl-id: 88af99df-846b-47b3-9b1f-68bfdfc40eb8
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '6026'
+source-wordcount: '5991'
 ht-degree: 0%
 
 ---
@@ -544,13 +540,13 @@ Efter konfigurationen visas innehållet exakt som på källsidan. Det faktum att
 
 ![chlimage_1-11](assets/chlimage_1-11.png)
 
-### Sökning {#searching}
+### Sök {#searching}
 
 Sökkomponenten lägger till sökfunktioner på sidan.
 
 Du kan konfigurera
 
-* Sökning
+* Sök
 
    * **Nodtyper**
 

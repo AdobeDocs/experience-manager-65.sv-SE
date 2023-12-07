@@ -1,15 +1,13 @@
 ---
 title: Konfigurera AEM Forms för att skicka data till en AEM Forms om JEE-process
 description: Integrera adaptiva blanketter med AEM Forms i JEE-processer för bearbetning av blankettdata.
-uuid: 71a894d7-7c0a-43a6-afe5-40c4a15c66d6
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: Configuration
-discoiquuid: ff97424d-b384-4149-9a3c-b4f00aaa1def
 docset: aem65
 role: Admin
 exl-id: 025a3314-8b9d-48e1-a74f-ea0c933e21e3
-source-git-commit: 78c584db8c35ea809048580fe5b440a0b73c8eea
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '318'
 ht-degree: 0%
@@ -26,11 +24,11 @@ Så här gör du för att AEM Forms Server ska kunna skicka data till en AEM For
 
 1. Gå till AEM webbkonfigurationskonsol på https://[*värd*]:[*port*]/system/console/configMgr.
 
-1. Leta reda på och klicka på **SDK-konfiguration för Adobe LiveCycle-klient** -komponenten.
+1. Leta reda på och klicka på **SDK-konfiguration för Adobe-klient** -komponenten.
 1. Klicka för att redigera konfigurationsserverns URL, användarnamn och lösenord för AEM Forms på JEE-servern.
 1. Granska inställningarna och klicka på **Spara**.
 
-![SDK-konfiguration för Adobe-klient](assets/clientsdkconfiguration.jpg)
+![SDK-konfiguration för LiveCyclet Adobe](assets/clientsdkconfiguration.jpg)
 
 ## Mappa data med processfält {#map-data-with-process-fields}
 
@@ -39,9 +37,9 @@ När du har konfigurerat AEM Forms mappar du XML-data och bilagor från det skic
 1. I den AEM webbkonfigurationskonsolen klickar du för att redigera **Guide LiveCycle Process Locator och Invoker** konfiguration.
 1. Ange följande parametrar:
 
-   * **Namn på xml-parametern data** (obligatoriskt): Ange XML-egenskapsfilen för den AEM Forms on JEE-process som måste bearbeta skickade data. Standardvärdet är **dataxml**.
+   * **Namn på xml-parametern data** (obligatoriskt): Ange den XML-egenskapsfil för AEM Forms on JEE-processen som måste bearbeta skickade data. Standardvärdet är **dataxml**.
 
-   * **Namn på parametern för bifogade filer** (valfritt): Ange listan med dokumentobjekt som AEM Forms on JEE-processen måste bearbeta. Standardvärdet är **fileAttachmentsList**.
+   * **Namn på parametern för bifogade filer** (valfritt): Ange listan med dokumentobjekt som AEM Forms on JEE-processen måste behandla. Standardvärdet är **fileAttachmentsList**.
 
 1. Granska inställningarna och klicka på **Spara**.
 

@@ -1,18 +1,14 @@
 ---
 title: Strategi för säkerhetskopiering och återställning i en klustrad miljö
-seo-title: Strategy for backup and restore in a clustered environment
 description: Om implementeringen av AEM sparar ytterligare anpassade data i en annan databas måste du implementera en strategi för att säkerhetskopiera dessa data, så att de är synkroniserade med de AEM formulärdata.
-seo-description: If your AEM forms implementation stores additional custom data in a different database, you must implement a strategy to back up this data ensuring that it remains in sync with the AEM forms data.
-uuid: c29b989c-30ed-4a8e-bab8-9b7746291a33
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/aem_forms_backup_and_recovery
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: c332985b-4556-4056-961a-fce2356da88d
 exl-id: 98c96349-f253-475f-b646-352269814a38
-source-git-commit: 4fa868f3ae4778d3a637e90b91f7c5909fe5f8aa
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '1416'
+source-wordcount: '1396'
 ht-degree: 0%
 
 ---
@@ -23,7 +19,7 @@ ht-degree: 0%
 >
 >Om implementeringen av AEM sparar ytterligare anpassade data i en annan databas måste du implementera en strategi för att säkerhetskopiera dessa data, så att de är synkroniserade med de AEM formulärdata. Dessutom måste programmet vara utformat så att det är tillräckligt robust för att hantera ett scenario där ytterligare databaser inte är synkroniserade. Vi rekommenderar starkt att alla databasåtgärder som utförs utförs i samband med en transaktion för att upprätthålla ett konsekvent tillstånd.
 
-Du behöver säkerhetskopiera följande delar av AEM formulärsystem för att kunna återställa efter eventuella fel:
+Du behöver säkerhetskopiera följande delar av AEM formulärsystem för att kunna återskapa eventuella fel:
 
 * Databas som används av AEM formulär
 * GDS som har långlivade data och andra beständiga dokument
@@ -57,13 +53,13 @@ I det här avsnittet beskrivs följande strategier för att säkerhetskopiera AE
 1. Säkerhetskopiera alla andra data, till exempel kundens typsnitt.
 1. Starta klustret igen.
 
-### Säkerhetskopiering offline utan driftstopp {#offline-backup-with-no-downtime}
+### Offlinesäkerhetskopiering utan driftstopp {#offline-backup-with-no-downtime}
 
 1. Ange läget för rullande säkerhetskopiering. (se [Ange lägen för säkerhetskopiering](/help/forms/using/admin-help/backing-aem-forms-data.md#entering-the-backup-modes))
 
    Lämna läget för rullande säkerhetskopiering efter en återställning.
 
-1. Stäng någon av de sekundära noderna i klustret med avseende på AEM. (se [Starta och stoppa tjänster](/help/forms/using/admin-help/starting-stopping-services.md#starting-and-stopping-services))
+1. Stäng någon av de sekundära noderna i klustret angående AEM. (se [Starta och stoppa tjänster](/help/forms/using/admin-help/starting-stopping-services.md#starting-and-stopping-services))
 1. Säkerhetskopiera databasen, GDS och Connectors på alla noder. (se [Filer som ska säkerhetskopieras och återställas](/help/forms/using/admin-help/files-back-recover.md#files-to-back-up-and-recover))
 1. Så här säkerhetskopierar du AEM databasen offline:
 
@@ -82,7 +78,7 @@ I det här avsnittet beskrivs följande strategier för att säkerhetskopiera AE
 
    Lämna läget för rullande säkerhetskopiering efter en återställning.
 
-1. Stäng någon av de sekundära noderna i klustret med avseende på AEM. (se [Starta och stoppa tjänster](/help/forms/using/admin-help/starting-stopping-services.md#starting-and-stopping-services))
+1. Stäng någon av de sekundära noderna i klustret angående AEM. (se [Starta och stoppa tjänster](/help/forms/using/admin-help/starting-stopping-services.md#starting-and-stopping-services))
 1. Säkerhetskopiera databasen, GDS och Connectors på alla noder. (se [Filer som ska säkerhetskopieras och återställas](/help/forms/using/admin-help/files-back-recover.md#files-to-back-up-and-recover))
 1. Så här säkerhetskopierar du AEM databas online:
 
@@ -97,7 +93,7 @@ I det här avsnittet beskrivs följande strategier för att säkerhetskopiera AE
 
 När vi skapar ett AEM skapas en egenskapsfil i programservern för alla sekundära noder. Vi rekommenderar att du säkerhetskopierar egenskapsfilen för Bootstrap. Du kan hitta filen på följande plats på programservern:
 
-* JBoss®: i BIN-katalogen
+* JBoss®: i katalogen BIN
 * WebLogic: i domänkatalogen
 * WebSphere®: i profilkatalogen
 
@@ -107,7 +103,7 @@ Säkerhetskopiera filen för ett återställningsscenario AEM sekundär nod och 
 
 Om fel uppstår i hela klustret eller en enda nod återställer du det med hjälp av säkerhetskopian.
 
-Om du vill återställa en enskild nod stänger du den enskilda noden och kör återställningsproceduren för en nod.
+Om du vill återställa en enskild nod stänger du den enskilda noden och kör återställningsproceduren för en enda nod.
 
 Om hela klustret inte fungerar på grund av fel som t.ex. databaskrascher utför du följande steg. Återställning beror på vilken säkerhetskopieringsmetod som används.
 

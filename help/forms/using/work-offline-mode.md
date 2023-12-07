@@ -1,32 +1,28 @@
 ---
-title: Arbeta i offlineläge
-seo-title: Working in the offline mode
+title: Arbeta i offline-läge
 description: Ta din mobila enhet offline utanför AEM Forms nätverksområde eller i offlineläge och arbeta med AEM Forms-appen
-seo-description: Take your mobile device offline outside your AEM Forms network range or in a completely offline mode and work on the AEM Forms app
-uuid: b900a0f8-90ce-486a-bde6-6cdf11bd2801
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-app
-discoiquuid: 9a3c6ab4-8bb9-40c7-8c56-59153b364887
 exl-id: ba4ceef1-510d-41ef-94b8-4834fb7de804
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '532'
 ht-degree: 0%
 
 ---
 
-# Arbeta i offlineläge {#working-in-the-offline-mode}
+# Arbeta i offline-läge {#working-in-the-offline-mode}
 
 Med offline-läget i AEM Forms-appen kan du arbeta smidigt även om appen är offline. Du kan öppna, uppdatera och skicka ett formulär utan att behöva ansluta till nätverket.
 
-Du börjar arbeta med AEM Forms-appen genom att synkronisera appen med AEM Forms-servern. Alla formulär som du har tilldelats hämtas i appen. För AEM Forms i JEE hämtas uppgifter på fliken Åtgärder och startpunkter som är kopplade till formulär och andra formulär på fliken Forms. För AEM Forms i OSGi läses endast Forms in på fliken Forms.
+Du börjar arbeta med AEM Forms genom att synkronisera appen med AEM Forms-servern. Alla formulär som du har tilldelats hämtas i appen. För AEM Forms i JEE hämtas uppgifter på fliken Åtgärder och startpunkter som är kopplade till formulär och andra formulär på fliken Forms. För AEM Forms i OSGi läses endast Forms in på fliken Forms.
 
 Mer information om hur du synkroniserar appen finns i [Synkroniserar appen](/help/forms/using/sync-app.md).
 
 ## Göra Forms tillgängligt offline {#making-forms-available-offline}
 
-När du synkroniserar din app med AEM Forms-servern hämtas formulären till din mobila enhet. Som standard hämtas dock inte de bilagor som är kopplade till formuläret. Det innebär att om du är online kan du visa de bifogade filerna. Om du vill se den bifogade filen i offlineläge kan du dock ändra standardinställningarna i programmet.
+När du synkroniserar din app med AEM Forms-servern hämtas formulären till din mobila enhet. Som standard hämtas dock inte de bilagor som är kopplade till formuläret. Det innebär att om du är online kan du visa de bifogade filerna. För att du ska kunna se den bifogade filen i offlineläge måste du dock ändra standardinställningarna i programmet.
 
 Om du vill vara säker på att de associerade bilagorna hämtas med varje formulär anger du ON för Hämta bilagor. Mer information finns i [Uppdaterar allmänna inställningar](/help/forms/using/update-general-settings.md).
 
@@ -44,9 +40,9 @@ Så här konfigurerar du offlinekomponenten på serversidan i AEM Forms-programm
 
 1. Under Allmänna inställningar kan du göra följande:
 
-   * **Rensa cache**: Rensar serversidans cache för formulärberoenden.
+   * **Rensa cache**: Rensar cacheminnet på serversidan för formulärberoenden.
    * **Återställ konfiguration**: Återställer offlinekonfigurationen för AEM Forms-programmet.
    * **Cachenivåer**: Anger giltighetsperioden för offlinecachen på serversidan.
-   * **Resursobjektssökvägar**: Anger sökvägar där offlinetjänsten övervakar resursändringar. Om några ändringar görs i de angivna sökvägarna uppdateras offlinecachen för alla beroende formulär. Till exempel, `/etc/clientlibs/fd,/content/dam/images`.
+   * **Resursobjektssökvägar**: Anger sökvägar där offlinetjänsten övervakar resursändringar. Om några ändringar görs i de angivna sökvägarna uppdateras offlinecachen för alla beroende formulär. Till exempel: `/etc/clientlibs/fd,/content/dam/images`.
 
 1. I **Manuell resurscache** anger du att formulärberoenden inte kan identifieras av offlinetjänsten. Du kan ange resurser, till exempel bilder som läses in från JavaScript. AEM Forms laddar också ned dessa resurser för offlineläget.

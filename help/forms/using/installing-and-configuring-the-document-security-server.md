@@ -1,16 +1,12 @@
 ---
 title: Installera och konfigurera dokumentsäkerhetsservern
-seo-title: Installing and configuring the document security server
 description: Använd dokumentskydd för att på ett säkert sätt distribuera information som du har sparat i ett format som stöds. Endast behöriga användare har åtkomst till skyddade dokument.
-seo-description: Use document security to safely distribute any information that you have saved in a supported format. Only authorized users can access protected documents.
-uuid: 04c67a84-01ad-45b7-a590-822b1c067d52
 contentOwner: khsingh
-discoiquuid: 600d13e7-6655-41c5-aab4-c8e9e2a8d14f
 role: Admin
 exl-id: 4a4bad4a-3e68-43cb-b55c-03b509a5d304
-source-git-commit: 762e918a2c65898fc518f131d44421fb82ce4d6f
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '614'
+source-wordcount: '569'
 ht-degree: 0%
 
 ---
@@ -23,7 +19,7 @@ Adobe Experience Manager Forms dokumentsäkerhet säkerställer att endast behö
 
 Du kan skydda dokument med hjälp av profiler. De sekretessinställningar du anger i en profil avgör hur en mottagare kan använda ett dokument som du tillämpar profilen på. Du kan till exempel ange om mottagarna ska kunna skriva ut eller kopiera text, redigera text eller lägga till signaturer och kommentarer i skyddade dokument.
 
-Profilerna lagras på dokumentsäkerhetsservern. du tillämpar profilerna på dokument via ditt klientprogram. När du tillämpar en profil på ett dokument skyddar sekretessinställningarna som anges i profilen den information som dokumentet innehåller. Du kan distribuera det profilskyddade dokumentet till mottagare som har behörighet enligt profilen.
+Profilerna lagras på dokumentsäkerhetsservern. Du tillämpar profilerna på dokument via ditt klientprogram. När du tillämpar en profil på ett dokument skyddar sekretessinställningarna som anges i profilen den information som dokumentet innehåller. Du kan distribuera det profilskyddade dokumentet till mottagare som har behörighet enligt profilen.
 
 Dokumentsäkerhet ger även klienter, tittare och indexerare möjlighet att skydda dokument, visa skyddade dokument och indexera skyddade dokument. Mer information om dokumentsäkerhet finns i [om dokumentsäkerhet](/help/forms/using/admin-help/document-security.md).
 
@@ -45,7 +41,7 @@ Så här installerar och konfigurerar du AEM Forms på JEE:
 
 1. Ladda ned installationsprogrammet för AEM 6.5 Forms on JEE från [Adobe licenswebbplats (LWS)](https://licensing.adobe.com/). Du behöver ett giltigt Maintenance &amp; Support-avtal för att ladda ned installationsprogrammet.
 1. Läs [AEM Forms on JEE Supported Platforms document](/help/forms/using/aem-forms-jee-supported-platforms.md) och se till att ha programvaran, maskinvaran, operativsystemen, programservern, databaserna, JDK:erna och annan infrastruktur redo att installera AEM Forms på JEE.
-1. (Endast icke-nyckelinstallation) Läs [Installationen av AEM Forms single server förbereds](https://www.adobe.com/go/learn_aemforms_prepareInstallsingle_64) eller [Installation av AEM Forms-serverkluster förbereds](https://www.adobe.com/go/learn_aemforms_prepareInstallcluster_64) och gör din miljö redo att installera och konfigurera AEM Forms på JEE.
+1. (Endast icke-nyckelinstallationer) Läs [Installationen av AEM Forms single server förbereds](https://www.adobe.com/go/learn_aemforms_prepareInstallsingle_64) eller [Installation av AEM Forms-serverkluster förbereds](https://www.adobe.com/go/learn_aemforms_prepareInstallcluster_64) och gör din miljö redo att installera och konfigurera AEM Forms på JEE.
 1. Beroende på din miljö och programserver väljer du något av följande dokument och följer instruktionerna för att slutföra installationen
 
    * [Installera och distribuera AEM Forms på JEE med nyckelkörning i JBoss](https://www.adobe.com/go/learn_aemforms_installTurnkey_64)

@@ -1,17 +1,13 @@
 ---
 title: Skapa CSS-format för HTML5-formulär
-seo-title: Creating CSS styles for HTML5 forms
 description: Lär dig hur du ändrar utseendet på HTML5-formulär genom att ändra CSS-klassen som är associerad med formulärelementet HTML.
-seo-description: Learn how to change the appearance of HTML5 forms by modifying the CSS class associated with the HTML form element.
-uuid: 43c689b4-243c-43de-a8be-1eef10d75295
 contentOwner: robhagat
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
-discoiquuid: a8d986ab-2a4c-488b-957e-4606f7391bd3
 feature: Mobile Forms
 exl-id: 8cc90ff7-284e-41cd-bfda-7fa09371e270
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '812'
 ht-degree: 0%
@@ -38,7 +34,7 @@ Alla element innehåller väldefinierade CSS-klasser. Du kan ändra dessa klasse
 >
 >Vissa XFA-element har inget namn. Om du vill ändra formaten för sådana komponenter ändrar du alla komponenter av den typen.
 
-För sidor som inte är namngivna i AEM Forms Designer får sidorna i ett HTML 5-formulär ett namn i stigande ordning. För ett HTML5-formulär med två sidor heter till exempel sidorna Page1, Page2.
+För sidor som inte är namngivna i AEM Forms Designer får sidorna i ett HTML 5-formulär ett namn i stigande ordning. För ett HTML5-formulär med två sidor heter sidorna t.ex. Page1, Page2.
 
 ## Fältelement {#field-element}
 
@@ -143,13 +139,13 @@ Varje fält har en tillhörande widget som representerar gränssnittselementet. 
    <td>NA</td>
    <td>xfaButton<br type="_moz" /> </td>
    <td>buttonfieldwidget<br type="_moz" /> </td>
-   <td>indatatyp=knapp<br type="_moz" /> </td>
+   <td>input type=button<br type="_moz" /> </td>
   </tr>
   <tr>
    <td>CheckButton<br type="_moz" /> </td>
    <td>kryssrutefält<br /> </td>
    <td>XfaCheckBox<br type="_moz" /> </td>
-   <td>kryssrutfältwidget<br type="_moz" /> </td>
+   <td>kryssrutefältwidget<br type="_moz" /> </td>
    <td>indatatyp=kryssruta<br type="_moz" /> </td>
   </tr>
   <tr>
@@ -205,7 +201,7 @@ Varje fält har en tillhörande widget som representerar gränssnittselementet. 
    <td>RadioButton<br type="_moz" /> </td>
    <td>radiofält<br type="_moz" /> </td>
    <td>XfaCheckBox<br type="_moz" /> </td>
-   <td>radiofältwidget<br type="_moz" /> </td>
+   <td>radiofieldwidget<br type="_moz" /> </td>
    <td>indatatyp=radio<br type="_moz" /> </td>
   </tr>
   <tr>
@@ -232,7 +228,7 @@ Du kan infoga statiska ritelement som text och bilder med AEM Forms Designer. F�
 | **Rita typ** | **CSS, klass** |
 |---|---|
 | Text | text |
-| Bild | bild |
+| Bild | image |
 | Rektangel | rektangel |
 | Linje | line |
 

@@ -1,18 +1,14 @@
 ---
 title: Förbättra programserverns prestanda
-seo-title: Enhancing application server performance
 description: I det här dokumentet beskrivs valfria inställningar som du kan konfigurera för att förbättra prestandan på AEM formulärprogramserver.
-seo-description: This document describes optional settings that you can configure to improve the performance of your AEM forms application server.
-uuid: 88d2f96a-3b59-410d-8160-20581d27acad
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/maintaining_the_application_server
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: fad65765-d56d-4a9f-82d5-bcceb1758953
 exl-id: 6e2f3d4c-2ead-45b3-98e7-32cacc7e2985
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '1863'
+source-wordcount: '1870'
 ht-degree: 0%
 
 ---
@@ -64,24 +60,24 @@ När programserveradministratören fastställer rätt inställningar för anslut
 
 ### Konfigurera inställningar för anslutningspool för WebSphere för DB2 {#configure-connection-pool-settings-for-websphere-for-db2}
 
-1. Klicka på Resurser > JDBC > JDBC Providers i navigeringsträdet. I den högra rutan klickar du på datakällan som du skapade, antingen DB2 Universal JDBC Driver Provider eller LiveCycle - db2 - IDP_DS.
+1. Klicka på Resurser > JDBC > JDBC Providers i navigeringsträdet. I den högra rutan klickar du på datakällan som du skapade, antingen DB2 Universal JDBC Driver Provider eller LiveCyclet - db2 - IDP_DS.
 1. Klicka på Datakällor under Ytterligare egenskaper och välj IDP_DS.
 1. På nästa skärm, under Ytterligare egenskaper, klickar du på Egenskaper för anslutningspool och anger ett värde i rutan Maximalt antal anslutningar och rutan Minimalt antal anslutningar.
-1. Klicka på OK eller Använd och sedan på Spara direkt till Överordnad konfiguration.
+1. Klicka på OK eller Använd och sedan på Spara direkt till huvudkonfiguration.
 
 ### Konfigurera inställningar för anslutningspool för WebSphere för Oracle {#configure-connection-pool-settings-for-websphere-for-oracle}
 
 1. Klicka på Resurser > JDBC > JDBC Providers i navigeringsträdet. Klicka på Oraclets datakälla för JDBC-drivrutin som du skapade i den högra rutan.
 1. Klicka på Datakällor under Ytterligare egenskaper och välj IDP_DS.
 1. På nästa skärm, under Ytterligare egenskaper, klickar du på Egenskaper för anslutningspool och anger ett värde i rutan Maximalt antal anslutningar och rutan Minimalt antal anslutningar.
-1. Klicka på OK eller Använd och sedan på Spara direkt till Överordnad konfiguration.
+1. Klicka på OK eller Använd och sedan på Spara direkt till huvudkonfiguration.
 
 ### Konfigurera inställningar för anslutningspool för WebSphere för SqlServer {#configure-connection-pool-settings-for-websphere-for-sqlserver}
 
 1. Klicka på Resurser > JDBC > JDBC Providers i navigeringsträdet och klicka i den högra rutan på den användardefinierade datakällan för JDBC-drivrutin som du skapade.
 1. Klicka på Datakällor under Ytterligare egenskaper och välj IDP_DS.
 1. På nästa skärm, under Ytterligare egenskaper, klickar du på Egenskaper för anslutningspool och anger ett värde i rutan Maximalt antal anslutningar och rutan Minimalt antal anslutningar:
-1. Klicka på OK eller Använd och sedan på Spara direkt till Överordnad konfiguration.
+1. Klicka på OK eller Använd och sedan på Spara direkt till huvudkonfiguration.
 
 ## Optimera textbundna dokument och påverka JVM-minnet {#optimizing-inline-documents-and-impact-on-jvm-memory}
 
@@ -162,7 +158,7 @@ Om du kör Configuration Manager eller försöker generera Enterprise JavaBeans 
    * (Windows) `ejbdeploy.bat`
    * (Linux och UNIX) `ejbdeploy.sh`
 
-1. Hitta `-Xmx256M` och ändra det till ett högre värde, som `-Xmx1024M`.
+1. Hitta `-Xmx256M` och ändra det till ett högre värde, till exempel `-Xmx1024M`.
 1. Spara filen.
 1. Kör `ejbdeploy` eller omdistribuera med Configuration Manager.
 

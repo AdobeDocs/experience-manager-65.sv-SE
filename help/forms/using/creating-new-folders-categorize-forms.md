@@ -1,18 +1,14 @@
 ---
 title: Skapa nya mappar för att kategorisera formulär
-seo-title: Create new folders to categorize forms
 description: Använd mappar för att ordna formulärmallar, PDF, resurser och anpassningsbara formulär.
-seo-description: Use folders to organize your form templates, PDFs, resources, and adaptive forms.
-uuid: 63fcb807-c9cf-49ae-ad69-6b1187543470
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-manager
-discoiquuid: 2a8f4380-8d0f-4354-b2da-4e0c02a545e3
 role: Admin
 exl-id: f8af1ac3-6a95-4f91-8979-6b41a7e02ca4
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '388'
+source-wordcount: '382'
 ht-degree: 0%
 
 ---
@@ -44,7 +40,7 @@ Du kan skapa en mapp i AEM Forms på något av följande sätt:
    >
    >Som standard fylls värdet för namnfältet automatiskt i från titeln. Namnet får bara innehålla alfanumeriska tecken eller bindestreck (-) och understreck (_). Alla andra specialtecken som anges i titeln ersätts automatiskt med ett bindestreck och du uppmanas att bekräfta det nya namnet. Du kan välja att fortsätta med det föreslagna namnet eller redigera det ytterligare.
 
-1. Klicka på **[!UICONTROL Submit].**
+1. Klicka **[!UICONTROL Submit].**
 
    En ny mapp med den titel du har definierat visas på den aktuella platsen i resurslistan.
 
@@ -55,4 +51,4 @@ Du kan skapa en mapp i AEM Forms på något av följande sätt:
 1. Markera den mapp vars titel du vill redigera.
 1. Klicka på redigeringen ![aem6forms_edit](assets/aem6forms_edit.png) i verktygsfältet.
 1. Ange den nya titeln. Textfältet är förifyllt med det aktuella värdet för mapptiteln. Du kan ändra det till ett nytt värde.
-1. Klicka på **[!UICONTROL Submit].**
+1. Klicka **[!UICONTROL Submit].**

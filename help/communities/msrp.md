@@ -1,19 +1,15 @@
 ---
 title: MSRP - lagringsresursprovider för MongoDB
-seo-title: MSRP - MongoDB Storage Resource Provider
 description: Konfigurera AEM Communities för att använda en relationsdatabas som gemensam lagringsplats
-seo-description: Set up AEM Communities to use a relational database as its common store
-uuid: 9fc06d4f-a60f-4ce3-8586-bcc836aa7de6
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: administering
 content-type: reference
-discoiquuid: 048f7b30-20c3-4567-bd32-38cf2643cf39
 role: Admin
 exl-id: 799d5ae1-caac-4c92-8835-696ad25de553
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '1155'
+source-wordcount: '1107'
 ht-degree: 0%
 
 ---
@@ -55,7 +51,7 @@ The [Konsol för lagringskonfiguration](srp-config.md) gör det möjligt att vä
 
 På författaren, för att komma åt lagringskonsolen:
 
-* Från global navigering väljer du **[!UICONTROL Tools]** > **[!UICONTROL Communities]** > **[!UICONTROL Storage Configuration]**.
+* Välj **[!UICONTROL Tools]** > **[!UICONTROL Communities]** > **[!UICONTROL Storage Configuration]**.
 
 ![msrp](assets/msrp.png)
 
@@ -163,9 +159,9 @@ För information om *användare*, *användarprofiler* och *användargrupper*, so
 
 ## MSRP Reindex Tool {#msrp-reindex-tool}
 
-Det finns en HTTP-slutpunkt för omindexering av Solr för MSRP när nya konfigurationsfiler installeras eller ett skadat Solr-index repareras.
+Det finns en HTTP-slutpunkt för omindexering av Solr för MSRP när nya konfigurationsfiler installeras eller när ett skadat Solr-index repareras.
 
-Med det här verktyget är MongoDB källan till *sanning* för MSRP, säkerhetskopior behöver bara tas från MongoDB.
+Med det här verktyget är MongoDB källan till *sanning* för MSRP; säkerhetskopior behöver bara göras av MongoDB.
 
 Hela UGC-trädet kan indexeras om, eller endast ett visst underträd, enligt parametern *path *data.
 
@@ -186,7 +182,7 @@ Grundformatet är:
 
 cURL -u *signera* -d *data* *reindex-url*
 
-*signera* = administrator-id:password Exempel: admin:admin
+*signera* = administrator-id:password Till exempel: admin:admin
 
 *data* = &quot;batchSize=*size*&amp;path=*sökväg&quot;*
 
@@ -197,7 +193,7 @@ cURL -u *signera* -d *data* *reindex-url*
 
 * Om du vill indexera om all UGC anger du värdet för `asipath`egenskap för
   `/etc/socialconfig/srpc/defaultconfiguration`
-* Om du vill begränsa indexvärdet till viss UGC anger du ett underträd till `asipath`
+* Om du vill begränsa indexvärdet till en del UGC anger du ett underträd till `asipath`
 
 *reindex-url* = slutpunkten för omindexering av SRP
 `http://localhost:4503/services/social/datastore/mongo/reindex`
@@ -243,7 +239,7 @@ Migreringsverktyget kan anpassas för att exportera UGC från tidigare versioner
 
 Om följande fel visas i loggarna anger det att Solr-schemafilen inte är korrekt konfigurerad.
 
-#### JsonMappingException: undefined field provider_id {#jsonmappingexception-undefined-field-provider-id}
+#### JsonMappingException: odefinierad fältprovider_id {#jsonmappingexception-undefined-field-provider-id}
 
 ```xml
 Caused by: com.fasterxml.jackson.databind.JsonMappingException: undefined field provider_id

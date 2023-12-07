@@ -1,18 +1,14 @@
 ---
 title: Anpassade rapporter i processrapportering
-seo-title: Custom Reports in Process Reporting
 description: Du kan skapa anpassade rapporter och lägga till de här rapporterna i användargränssnittet för JEE-processrapportering.
-seo-description: You can create custom reports and add these reports to the AEM Forms on JEE Process Reporting UI.
-uuid: 81039fe8-d757-4c85-a1eb-88e4e6aa8500
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: process-reporting
-discoiquuid: 222daab8-4514-44a5-b5c9-c5510809c74e
 docset: aem65
 exl-id: 30720061-d0e5-453b-a334-6a3aa9ca4c87
-source-git-commit: bd33c0884be55b76ef526c8c938236e743dc3dc6
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '953'
+source-wordcount: '837'
 ht-degree: 0%
 
 ---
@@ -340,7 +336,7 @@ public class PeriodicProcessVolume {
 }
 ```
 
-Provet `pom.xml`filen som ska skapas ovanför tjänsten är:
+Exemplet `pom.xml`filen som ska skapas ovanför tjänsten är:
 
 ```xml
 <project xmlns="https://maven.apache.org/POM/4.0.0" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/POM/4.0.0 https://maven.apache.org/maven-v4_0_0.xsd">
@@ -422,11 +418,11 @@ Provet `pom.xml`filen som ska skapas ovanför tjänsten är:
 </project>
 ```
 
-## Skapa ett separat gränssnitt  {#creating-a-separate-ui-nbsp}
+## Skapa ett separat användargränssnitt  {#creating-a-separate-ui-nbsp}
 
 Förutsättningarna för att skapa ett separat användargränssnitt för att visa resultat är [Grundläggande om att sälja in 5.6.1](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=en), [Skapa en CRX-nod](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=en) och tillhandahålla lämpliga [behörighet](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=en).
 
-1. Skapa en CRX-nod på `/apps` nod och tilldela behörigheter. (PERM_PROCESS_REPORTING_USER)
+1. Skapa en CRX-nod på `/apps` nod och tilldela lämpliga behörigheter. (PERM_PROCESS_REPORTING_USER)
 1. Definiera renderaren på `/content` nod.
 1. Lägg till JSP- eller HTML-filer i noden som skapades i steg 1. Du kan också lägga till CSS-filer.
 
@@ -640,7 +636,7 @@ Förutsättningarna för att skapa ett separat användargränssnitt för att vis
    * **id**- Anger rapportens unika ID-nummer.
    * **name**- Anger rapportens namn. Namnet visas i användargränssnittet.
    * **link**- Anger relativ länk till renderaren för det separata användargränssnittet. Länken skapas i steg 1.
-   * **description**- Anger rapportens radbeskrivning. Du kan lämna beskrivningsfältet tomt.
+   * **description**- Anger rapportens beskrivning på en rad. Du kan lämna beskrivningsfältet tomt.
    * **icon**- Anger bilden som ska representera rapporten i pictorial. Du kan lämna ikonfältet tomt.
 
    ![Egenskaper för nod ](assets/node_properties_new.png)

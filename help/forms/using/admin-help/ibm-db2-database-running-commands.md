@@ -1,18 +1,14 @@
 ---
 title: "IBM DB2-databas: Kör kommandon för regelbundet underhåll"
-seo-title: "IBM DB2 database: Running commands for regular maintenance"
 description: I det här dokumentet visas IBM DB2-kommandon som rekommenderas för regelbundet underhåll av AEM formulärdatabas.
-seo-description: This document lists IBM DB2 commands that are recommended for regular maintenance of your AEM forms database.
-uuid: 235d59df-b9b9-4770-8b7d-00713701c3c2
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/maintaining_the_aem_forms_database
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: a62b68b4-7735-49b1-8938-f0d9e4c4a051
 exl-id: 7a4281e7-1544-473a-a471-e9a4c2819a58
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '388'
+source-wordcount: '391'
 ht-degree: 0%
 
 ---
@@ -25,7 +21,7 @@ Följande IBM DB2-kommandon rekommenderas för regelbundet underhåll av AEM for
 * **db2rbind:** Det här kommandot binder om alla paket i databasen. Använd det här kommandot när du har kört `runstats` för att validera alla paket i databasen.
 * **omordningstabell eller index:** Det här kommandot kontrollerar om det krävs en omorganisering av vissa tabeller och index.
 
-   I takt med att databaserna växer och förändras är det viktigt att tabellstatistiken beräknas om för att förbättra databasens prestanda och bör göras regelbundet. Dessa kommandon kan köras antingen manuellt med skript eller med ett cron-jobb.
+  I takt med att databaserna växer och förändras är det viktigt att tabellstatistiken beräknas om för att förbättra databasens prestanda och bör göras regelbundet. Dessa kommandon kan köras antingen manuellt med skript eller med ett cron-jobb.
 
 >[!NOTE]
 >

@@ -1,18 +1,14 @@
 ---
 title: Konfigurera analyser och rapporter
-seo-title: Configuring analytics and reports
 description: Lär dig hur du konfigurerar Adobe Analytics för att upptäcka interaktionsmönster och problem som användare ställs inför när de använder adaptiva formulär, adaptiva dokument och HTML5-formulär.
-seo-description: Learn how to configure Adobe Analytics to discover interaction patterns and problems users face while using adaptive forms, adaptive documents, and HTML5 forms.
-uuid: ac5d1300-f303-40e8-a33e-4859a54ac10d
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: integrations
-discoiquuid: 96a77980-4213-4779-a540-00905ea8f7e3
 docset: aem65
 exl-id: 72f0f8e3-e70b-4f78-aa0e-b31768b536f7
-source-git-commit: 62d4a8b3af5031ccc539d78f7d06a8cd1fec7af1
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '1532'
+source-wordcount: '1531'
 ht-degree: 0%
 
 ---
@@ -29,7 +25,7 @@ AEM Forms kan integreras med Analytics så att ni kan hämta in och spåra prest
 
 Du kan också utföra analyser med Adobe Launch. Mer information om hur du integrerar AEM Forms med Adobe Launch finns i [Analyser med Adobe Launch](/help/forms/using/integrate-aem-forms-with-adobe-analytics.md).
 
-## Översikt {#overview}
+## Ökning {#overview}
 
 Du kan använda Adobe Analytics för att upptäcka interaktionsmönster och problem som användare ställs inför när de använder adaptiva formulär, HTML5-formulär och interaktiv kommunikation. Med Adobe kan man spåra och lagra information om följande parametrar:
 

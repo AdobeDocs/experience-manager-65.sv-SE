@@ -1,18 +1,14 @@
 ---
 title: Anpassa välkomstkonsolen (Classic UI)
-seo-title: Customizing the Welcome Console (Classic UI)
 description: Välkomstkonsolen innehåller en lista med länkar till de olika konsolerna och funktionerna i AEM
-seo-description: The Welcome console provides a list of links to the various consoles and functionality within AEM
-uuid: 4ef20cef-2d7a-417d-b36b-ed4fa56cd511
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: extending-aem
 content-type: reference
-discoiquuid: 2e408acb-3802-4837-8619-688cfc3abfa7
 exl-id: 9e171b62-8efb-4143-a202-ba6555658d4b
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '464'
+source-wordcount: '449'
 ht-degree: 4%
 
 ---
@@ -64,7 +60,7 @@ Till exempel:
 
 * Begränsa åtkomsten till **verktyg**, ta bort läsåtkomst från
 
-   `/libs/wcm/core/content/misc`
+  `/libs/wcm/core/content/misc`
 
 Se [Security section](/help/sites-administering/security.md) om du vill ha mer information om hur du anger behörigheter.
 
@@ -85,7 +81,7 @@ Det finns tre avsnitt (med ett mellanrum) som standard:
    <td> </td>
   </tr>
   <tr>
-   <td> Cloud Services</td>
+   <td> Cloud Service</td>
    <td><code>/libs/cq/core/content/welcome/resources/cloudservices</code></td>
   </tr>
   <tr>
@@ -165,25 +161,25 @@ Du kan dölja en länk för specifika användare eller grupper genom att ta bort
 
 * Resurser - ta bort åtkomst till:
 
-   `/libs/cq/core/content/welcome/resources/<link-target>`
+  `/libs/cq/core/content/welcome/resources/<link-target>`
 
 * Dokument - ta bort åtkomst till:
 
-   `/libs/cq/core/content/welcome/docs/<link-target>`
+  `/libs/cq/core/content/welcome/docs/<link-target>`
 
 * Funktioner - ta bort åtkomst till:
 
-   `/libs/cq/core/content/welcome/features/<link-target>`
+  `/libs/cq/core/content/welcome/features/<link-target>`
 
 Till exempel:
 
 * Ta bort länken till **Rapporter**, ta bort läsåtkomst från
 
-   `/libs/cq/core/content/welcome/resources/reports`
+  `/libs/cq/core/content/welcome/resources/reports`
 
 * Ta bort länken till **Paket**, ta bort läsåtkomst från
 
-   `/libs/cq/core/content/welcome/features/packages`
+  `/libs/cq/core/content/welcome/features/packages`
 
 Se [Security section](/help/sites-administering/security.md) om du vill ha mer information om hur du anger behörigheter.
 
@@ -199,7 +195,6 @@ I `/libs/cq/core/components/welcome/welcome.jsp` används [ConsoleUtil](https://
 >
 >* `select * from cq:Console`
 >
-
 
 När en användare eller grupp inte har läsbehörighet för en nod med `cq:Console`, den noden hämtas inte av `ConsoleUtil` sökning, därför visas den inte på konsolen.
 

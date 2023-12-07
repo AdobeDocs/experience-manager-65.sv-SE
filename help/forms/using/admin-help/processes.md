@@ -1,16 +1,12 @@
 ---
 title: Hantera processer
-seo-title: Managing Processes
 description: På sidan Processlista visas de processer som en användare har initierat eller som startades automatiskt. Läs mer om hur du hanterar processerna.
-seo-description: The Process List page shows the processes that a user has initiated or that were started automatically. Learn more about managing the processes.
-uuid: 4cd17400-681a-4e40-996c-7dda57ce449a
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/configuring_forms_workflow
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: 37e702c2-8716-4360-a3eb-d9877b28cc86
 exl-id: 21a2317d-3542-4ccb-98db-3cedf20c89ea
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '1631'
 ht-degree: 0%
@@ -127,7 +123,7 @@ På fliken Åtgärder visas varje åtgärd för processinstansen i den ordning s
 
 **Slutförd den:** Datum och tid då åtgärden slutfördes.
 
-En underprocess är en processinstans som startas av en annan process och som körs oberoende av den andra processen. Underprocesser visas bara om de har utformats som en del av processen i Workbench. På fliken Underprocesser visas varje underprocess med följande information:
+En underprocess är en processinstans som startas av en annan process och som körs oberoende av den andra processen. Underprocesser visas bara om de har designats som en del av processen i Workbench. På fliken Underprocesser visas varje underprocess med följande information:
 
 **Process-ID:** Detta positiva heltal som formulärarbetsflödet tilldelar när processen initieras (det vill säga när en användare eller ett automatiskt steg initierar processen). Du kan använda den här identifieraren för att spåra processinstansen genom dess livscykel.
 
@@ -157,7 +153,7 @@ En åtgärd (ett steg i en process) kan ha följande status:
 
 **AVSLUTAD:** Åtgärden avbröts av en administratör.
 
-### Avsluta åtgärder eller underprocesser {#terminate-operations-or-subprocesses}
+### Avsluta operationer eller underprocesser {#terminate-operations-or-subprocesses}
 
 Om en åtgärd eller en underprocess har avstannat eller påträffat något annat feltillstånd, eller om du behöver tvinga en åtgärd eller en underprocess att sluta köras, kan du avsluta den.
 

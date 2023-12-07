@@ -1,16 +1,12 @@
 ---
 title: Beskrivning av återanvändbara komponenter
-seo-title: Description of reusable components
 description: En fullständig lista över återanvändbara komponenter med filnamn och beroenden som hjälper dig att integrera arbetsytekomponenten i AEM Forms i dina webbprogram.
-seo-description: A complete list of reusable components with filenames and dependencies, to help you integrate AEM Forms workspace component in your web applications.
-uuid: 8e6accc7-0935-4d7b-b838-d23676df5cda
 contentOwner: robhagat
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
-discoiquuid: d3facd17-ceb0-4799-8cd9-ff9e81e09793
 exl-id: b8cb7233-3d9e-41d4-85c5-8e8c2481f89c
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '1231'
 ht-degree: 0%
@@ -95,7 +91,7 @@ AEM Forms arbetsyta består av [återanvändbar](/help/forms/using/integrating-h
    <td>
     <ul>
      <li><p>aktivitetslistmodell</p></li>
-     <li><p>aktivitetsverktyg</p></li>
+     <li><p>uppgifterfunktionsmakron</p></li>
     </ul></td>
   </tr>
   <tr>
@@ -172,8 +168,8 @@ AEM Forms arbetsyta består av [återanvändbar](/help/forms/using/integrating-h
    <td>
     <ul>
      <li><p>Fält: kö: { name, qid, isDefault, type}</p> </li>
-     <li><p>Fält: fråga: string</p> </li>
-     <li><p>Fält: parentView: filterlistevy</p> </li>
+     <li><p>Fält: fråga: sträng</p> </li>
+     <li><p>Fält: parentView: filterlistvy</p> </li>
      <li><p>Fält: parentModel: aktivitetslistmodell</p> </li>
      <li><p>Fält: utility</p> </li>
     </ul> </td>
@@ -247,11 +243,11 @@ AEM Forms arbetsyta består av [återanvändbar](/help/forms/using/integrating-h
    <td>
     <ul>
      <li><p>Utökar: filtervy</p> </li>
-     <li><p>Fält: queue :{ name, qid, isDefault, type }</p> </li>
-     <li><p>Fält: fråga: string</p> </li>
-     <li><p>Fält: parentView: filterlistevy</p> </li>
-     <li><p>Fält: parentModel : aktivitetslistmodell</p> </li>
-     <li><p>Fält: utility</p> </li>
+     <li><p>Fält : queue :{ name, qid, isDefault, type }</p> </li>
+     <li><p>Field : query : string</p> </li>
+     <li><p>Field : parentView : filterlist view</p> </li>
+     <li><p>Fält : parentModel : aktivitetslistmodell</p> </li>
+     <li><p>Field : utility</p> </li>
     </ul> </td>
   </tr>
   <tr>
@@ -265,7 +261,7 @@ AEM Forms arbetsyta består av [återanvändbar](/help/forms/using/integrating-h
 >
 >TeamFilter hämtar händelsen som anger vilken aktivitet som har valts från TaskList-komponenten. Även om dessa komponenter delar modellklassen finns det inget annat beroende.
 
-## AktivitetDetaljer {#taskdetails}
+## AktivitetInformation {#taskdetails}
 
 <table>
  <tbody>
@@ -293,7 +289,7 @@ AEM Forms arbetsyta består av [återanvändbar](/help/forms/using/integrating-h
      <li><p>formgivningsverktyg</p> </li>
      <li><p>anteckningsverktyg</p> </li>
      <li><p>verktyg för bilagor</p> </li>
-     <li><p>aktivitetsverktyg</p> </li>
+     <li><p>uppgifterfunktionsmakron</p> </li>
      <li><p>historikverktyg</p> </li>
     </ul> </td>
   </tr>
@@ -301,7 +297,7 @@ AEM Forms arbetsyta består av [återanvändbar](/help/forms/using/integrating-h
    <td><p>Lyssnade händelser (händelsenamn - utlösare)</p> </td>
    <td>
     <ul>
-     <li><p>vidarebefordrad - uppgiftsmodell</p> </li>
+     <li><p>vidarebefordrad - aktivitetsmodell</p> </li>
      <li><p>delad - aktivitetsmodell</p> </li>
      <li><p>konsulteras - aktivitetsmodell</p> </li>
      <li><p>avvisad - aktivitetsmodell</p> </li>
@@ -522,7 +518,7 @@ AEM Forms arbetsyta består av [återanvändbar](/help/forms/using/integrating-h
      <li><p>formgivningsverktyg</p> </li>
      <li><p>anteckningsverktyg</p> </li>
      <li><p>verktyg för bilagor</p> </li>
-     <li><p>aktivitetsverktyg</p> </li>
+     <li><p>uppgifterfunktionsmakron</p> </li>
     </ul> </td>
   </tr>
   <tr>
@@ -533,7 +529,7 @@ AEM Forms arbetsyta består av [återanvändbar](/help/forms/using/integrating-h
      <li><p>change:invokedTask - startpunktslistmodell</p> </li>
      <li><p>change:formUrl - aktivitetsmodell</p> </li>
      <li><p>startpunkt:markerad - startpunktslistmodell</p> </li>
-     <li><p>vidarebefordrad - uppgiftsmodell</p> </li>
+     <li><p>vidarebefordrad - aktivitetsmodell</p> </li>
      <li><p>övergiven - aktivitetsmodell</p> </li>
      <li><p>olåst - aktivitetsmodell</p> </li>
      <li><p>låst - aktivitetsmodell</p> </li>
@@ -849,7 +845,7 @@ AEM Forms arbetsyta består av [återanvändbar](/help/forms/using/integrating-h
    <td><p>Lyssnade händelser (händelsenamn - utlösare)</p></td>
    <td>
     <ul>
-     <li><p>inställningarHämtade - användarmodell </p></li>
+     <li><p>preferencesFetched - Usettings model </p></li>
      <li><p>settingUpdated - uissettings model </p></li>
     </ul></td>
   </tr>

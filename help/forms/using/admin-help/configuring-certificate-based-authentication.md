@@ -1,18 +1,14 @@
 ---
 title: Konfigurera certifikatbaserad autentisering
-seo-title: Configuring certificate-based authentication
 description: Importera ett certifikatutfärdarcertifikat (CA) till förtroendearkivet och skapa en certifikatsmappning för certifikatbaserad autentisering.
-seo-description: Import a Certificate Authority (CA) certificate into the Trust Store and create a certificate mapping for certificate-based authentication.
-uuid: 9802a969-6d29-4b80-a4ed-06eb6e66e046
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/configuring_user_management
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: d958ae65-3008-4d68-9e11-4346e149827f
 exl-id: 9cbea8c8-4d42-446b-b98d-c090709624d7
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '726'
+source-wordcount: '718'
 ht-degree: 0%
 
 ---
@@ -58,7 +54,7 @@ När du testar ett certifikat överför Hantering av användare certifikaten fö
 
    * . (valfritt tecken)
    * &amp;ast; (0 eller fler förekomster)
-   * () (ange gruppen inom hakparenteser)
+   * () (ange gruppen inom parentes)
    * \ (används för att kringgå ett regex-tecken till ett vanligt tecken)
    * $n (används för att referera till den n:te gruppen)
 
@@ -66,21 +62,22 @@ När du testar ett certifikat överför Hantering av användare certifikaten fö
 
    * Extrahera &quot;Alex Pink&quot; från &quot;Alex Pink (Authentication)&quot;
 
-      **Regex:** (.&amp;ast;) \(Autentisering\)
+     **Regex:** (.&amp;ast;) \(autentisering\)
 
    * Extrahera &quot;Alex Pink&quot; från &quot;Alex (Authentication) Pink&quot;
 
-      **Regex:** (.&amp;ast;)\(Autentisering\) (.&amp;ast;)
+     **Regex:** (.&amp;ast;)\(Autentisering\) (.&amp;ast;)
 
    * Extrahera &quot;Rosa Alex&quot; från &quot;Alex (Authentication) Pink&quot;
 
-      **Regex:** (.&amp;ast;)\(Autentisering\) (.&amp;ast;)
+     **Regex:** (.&amp;ast;)\(Autentisering\) (.&amp;ast;)
 
-      Egen ordning: $2 $1 (returnera den andra gruppen, sammanfogad till den första gruppen, hämtad med blankstegstecken)
+     Anpassad ordning: $2 $1 (returnera den andra gruppen, sammanfogad till den första gruppen, fångad med blankstegstecken)
 
    * Extrahera &quot;apink@sampleorg.com&quot; från &quot;smtp:apink@sampleorg.com&quot;
 
-      **Regex:** smtp:(.&amp;ast;)
+     **Regex:** smtp:(.&amp;ast;)
+
    Mer information om hur du använder reguljära uttryck finns i [Java-självstudiekurs om reguljära uttryck](https://java.sun.com/docs/books/tutorial/essential/regex/).
 
 1. Välj användarens domän i listan För domän.

@@ -1,19 +1,15 @@
 ---
 title: Bygga taggar i ett AEM
-seo-title: Building Tagging into an AEM Application
-description: Arbeta programmatiskt med taggar eller utöka taggar i ett anpassat AEM
-seo-description: Programmatically work with tags or extending tags within a custom AEM application
-uuid: 0549552e-0d51-4162-b418-babf4ceee046
+description: Arbeta med taggar eller utöka taggar i ett anpassat AEM
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: platform
 content-type: reference
-discoiquuid: 032aea1f-0105-4299-8d32-ba6bee78437f
 feature: Tagging
 exl-id: d885520d-d0ed-45fa-8511-faa2495d667a
-source-git-commit: 325af649564d93beedfc762a8f5beacec47b1641
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '887'
+source-wordcount: '849'
 ht-degree: 0%
 
 ---
@@ -33,7 +29,7 @@ Mer information om taggning finns i:
 * [Administrera taggar](/help/sites-administering/tags.md) om du vill ha information om hur du skapar och hanterar taggar och till vilka innehållstaggar har tillämpats.
 * [Använda taggar](/help/sites-authoring/tags.md) om du vill ha information om hur du taggar innehåll.
 
-## Översikt över taggnings-API:t {#overview-of-the-tagging-api}
+## Översikt över taggnings-API {#overview-of-the-tagging-api}
 
 Genomförandet av [taggningsramverk](/help/sites-developing/framework.md) i AEM kan hantera taggar och tagginnehåll med JCR-API:t . TagManager ser till att taggar som anges som värden i `cq:tags` strängmatrisegenskapen dupliceras inte, den tar bort tagg-ID:n som pekar på taggar som inte finns och uppdaterar tagg-ID:n för flyttade eller sammanfogade taggar. TagManager använder en JCR-observationslyssnare som återställer felaktiga ändringar. Huvudklasserna finns i [com.day.cq.tagging](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/index.html?com/day/cq/tagging/package-summary.html) paket:
 
@@ -154,7 +150,7 @@ Sökningen efter taggar och tagglistan fungerar enligt följande:
 
 Se beskrivningen i dokumentationen för att administrera taggar i avsnittet [Hantera taggar på olika språk](/help/sites-administering/tags.md#managing-tags-in-different-languages), en tagg `title`kan definieras på olika språk. Sedan läggs en språkkänslig egenskap till i taggnoden. Den här egenskapen har formatet `jcr:title.<locale>`, till exempel `jcr:title.fr` för den franska översättningen. The `<locale>` måste vara en ISO-språksträng med gemener och använda &quot;_&quot; i stället för &quot;-&quot;, till exempel: `de_ch`.
 
-När **Djur** -taggen läggs till i **Produkter** sida, värdet `stockphotography:animals` läggs till i egenskapen `cq:tags` för noden /content/geometrixx/en/products/jcr:content. Översättningen refereras från taggnoden.
+När **Djur** -taggen läggs till **Produkter** sida, värdet `stockphotography:animals` läggs till i egenskapen `cq:tags` för noden /content/geometrixx/en/products/jcr:content. Översättningen refereras från taggnoden.
 
 API:t på serversidan har lokaliserats `title`-relaterade metoder:
 
@@ -192,7 +188,7 @@ I proceduren nedan beskrivs hur du lägger till ett språk (finska) i **Redigera
 
 1. I **CRXDE**, redigera egenskapen för flera värden `languages` av noden `/content/cq:tags`.
 
-1. Lägg till `fi_fi` - som representerar den finska språkinställningen - och spara ändringarna.
+1. Lägg till `fi_fi` - som representerar det finska språket - och spara ändringarna.
 
 Det nya språket (finska) är nu tillgängligt i taggdialogrutan för sidegenskaperna och i **Redigera tagg** när du redigerar en tagg i **Taggning** konsol.
 

@@ -1,15 +1,11 @@
 ---
 title: Konfigurera lagringstjänster för utkast och överföringar
-seo-title: Configuring storage services for drafts and submissions
 description: Lär dig hur du konfigurerar lagring för utkast och överföringar
-seo-description: Learn how to configure storage for drafts and submissions
-uuid: 2f4efc07-312c-4908-8c91-84f4e6c5ad25
 topic-tags: publish
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: 6ebb6420-68b6-4abc-b298-c252db038416
 exl-id: 51ca2844-91f0-453a-9b39-b876399ebecb
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '531'
 ht-degree: 0%
@@ -18,7 +14,7 @@ ht-degree: 0%
 
 # Konfigurera lagringstjänster för utkast och överföringar {#configuring-storage-services-for-drafts-and-submissions}
 
-## Översikt {#overview}
+## Ökning {#overview}
 
 Med AEM Forms kan du lagra:
 
@@ -40,7 +36,7 @@ Utöver det ovan nämnda standardtillvägagångssättet finns det även en alter
 
 ## Konfigurera Forms Portal-utkast och inskickningstjänster {#configuring-forms-portal-drafts-and-submissions-services}
 
-I AEM webbkonsolkonfiguration ( `https://[host]:'port'/system/console/configMgr`), klicka för att öppna **Utkastskonfiguration för Forms Portal** i redigeringsläge.
+I AEM Web Console-konfiguration ( `https://[host]:'port'/system/console/configMgr`), klicka för att öppna **Utkastskonfiguration för Forms Portal** i redigeringsläge.
 
 Ange värden för egenskaper baserat på dina krav enligt beskrivningen nedan:
 
@@ -75,7 +71,7 @@ Data replikeras omvänt till den konfigurerade författarinstansen.
 
 ### Utgångstjänster för lagring av data på fjärrbearbetningsinstansen {#out-of-the-box-services-to-store-data-on-remote-processing-instance}
 
-Data skickas direkt till den konfigurerade fjärrinstansen
+Data skickas direkt till konfigurerad fjärrinstans
 
 <table>
  <tbody>
@@ -104,7 +100,7 @@ Data skickas direkt till den konfigurerade fjärrinstansen
 
 Förutom konfigurationen ovan anger du information om den konfigurerade fjärrbearbetningsinstansen.
 
-I AEM webbkonsolkonfiguration ( `https://[host]:'port'/system/console/configMgr`), klicka för att öppna **Tjänsten AEM DS-inställningar** i redigeringsläge. I dialogrutan AEM DS-inställningstjänst anger du information om bearbetning av server-URL, användarnamn för bearbetning av server och lösenord.
+I AEM Web Console-konfiguration ( `https://[host]:'port'/system/console/configMgr`), klicka för att öppna **Tjänsten AEM DS-inställningar** i redigeringsläge. I dialogrutan AEM DS-inställningstjänst anger du information om bearbetning av server-URL, användarnamn för bearbetning av server och lösenord.
 
 >[!NOTE]
 >

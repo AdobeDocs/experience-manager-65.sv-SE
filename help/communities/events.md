@@ -1,25 +1,21 @@
 ---
 title: OSGi Events for Communities-komponenter
-seo-title: OSGi Events for Communities Components
 description: OSGi-händelser skickas som kan utlösa asynkrona avlyssnare
-seo-description: OSGi events are sent that can trigger asynchronous listeners
-uuid: 317e2add-689d-4c99-ae38-0703b6649cb7
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
-discoiquuid: 25b7ac08-6cdc-4dd5-a756-d6169b86f9ab
 exl-id: 8049d797-e758-44c2-a89b-51d2b2fca8dc
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '665'
-ht-degree: 1%
+source-wordcount: '592'
+ht-degree: 0%
 
 ---
 
 # OSGi Events for Communities-komponenter  {#osgi-events-for-communities-components}
 
-## Översikt {#overview}
+## Ökning {#overview}
 
 När medlemmar interagerar med communityfunktioner skickas OSGi-händelser som kan utlösa asynkrona avlyssnare, som meddelanden eller spel (poängsättning och märkning).
 
@@ -39,7 +35,7 @@ SocialEvent `topic`= com/adobe/cq/social/calendar
 | UPPDATERA | Medlemmens kalenderhändelse eller kommentar har redigerats |
 | DELETE | Medlemmens kalenderhändelse eller kommentar tas bort |
 
-[Komponenten Kommentarer](essentials-comments.md)
+[Kommentarskomponent](essentials-comments.md)
 SocialEvent `topic`= com/adobe/cq/social/comment
 
 | **Verb** | **Beskrivning** |
@@ -66,7 +62,7 @@ SocialEvent `topic`= com/adobe/cq/social/forum
 |---|---|
 | POST | Medlem skapar forumämne |
 | LÄGG TILL | Medlemmens svar på forumämnet |
-| UPPDATERA | Ämnet eller svaret för en medlem redigeras |
+| UPPDATERA | Ämnet eller svaret på en medlems forum redigeras |
 | DELETE | Ämnet eller svaret för en medlem tas bort |
 
 [Journalkomponent](blog-developer-basics.md)
@@ -86,7 +82,7 @@ SocialEvent `topic` = com/adobe/cq/social/qna
 |---|---|
 | POST | Medlemmen skapar en QnA-fråga |
 | LÄGG TILL | Medlem skapar ett QnA-svar |
-| UPPDATERA | Ledamotens fråga eller svar har redigerats |
+| UPPDATERA | Medlemsens fråga eller svar har redigerats |
 | MARKERA | Medlemmens svar har valts |
 | AVMARKERA | Medlemmens svar har avmarkerats |
 | DELETE | Medlemsens fråga eller svar tas bort |
@@ -100,7 +96,7 @@ SocialEvent `topic`= com/adobe/cq/social/review
 | UPPDATERA | Medlemmens granskning har redigerats |
 | DELETE | Medlemmens granskning har tagits bort |
 
-[Klassificeringskomponent](rating-basics.md)
+[Värderingskomponent](rating-basics.md)
 SocialEvent `topic`= com/adobe/cq/social/tally
 
 | **Verb** | **Beskrivning** |
@@ -124,7 +120,7 @@ SocialEvent `topic`= com/adobe/cq/social/moderation
 | NEKA | Medlemmens innehåll nekas |
 | FLAGGA-SOM-OLÄMPLIGT | Medlemmens innehåll är flaggat |
 | OLÄMPLIG FLAGNING SOM | Medlemmens innehåll är oflaggat |
-| ACCEPTERA | Medlemmens innehåll godkänns av moderatorn |
+| GODKÄNN | Medlemmens innehåll godkänns av moderatorn |
 | STÄNG | Medlemmen stänger kommentarer till redigeringar och svar |
 | ÖPPNA | Kommentar för att öppna igen |
 

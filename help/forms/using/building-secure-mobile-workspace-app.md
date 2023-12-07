@@ -1,13 +1,11 @@
 ---
 title: Bygga en säker AEM Forms-app för iOS
 description: Lär dig hur du skapar en säker AEM Forms-app för iOS genom att arkivera Xcode-projektet. Detta skapar en installationsfil (en .ipa-fil) och en egenskapslista (en .plist-fil).
-uuid: 6c4b160f-4d0c-4976-9609-9196795b6c8e
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-app
-discoiquuid: 90cd8ba5-4f47-4074-bc54-6a7bb8afe256
 exl-id: 12cc2027-ae94-40c3-a7d1-553469426114
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '314'
 ht-degree: 0%

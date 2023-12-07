@@ -1,18 +1,16 @@
 ---
 title: Är din hybridapp redo för AEM Mobile?
 description: Lär dig mer om hybridappar. En app i Experience Manager är vanligtvis uppdelad i två delar. "shell" och "content" och den här sidan ger mer information om dessa ämnen.
-uuid: cbcce3fa-9100-46ea-9f24-931b42666709
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-adobe-phonegap-enterprise
-discoiquuid: b7fd7954-f2a5-402d-b259-e18b5a618be9
 pagetitle: Is your hybrid app ready for AEM Mobile?
 exl-id: 4625890c-2b76-4c78-88e8-23741bc09f5b
-source-git-commit: 78c584db8c35ea809048580fe5b440a0b73c8eea
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '733'
-ht-degree: 0%
+source-wordcount: '718'
+ht-degree: 1%
 
 ---
 
@@ -22,13 +20,13 @@ ht-degree: 0%
 >
 >Adobe rekommenderar att du använder SPA Editor för projekt som kräver ramverksbaserad klientåtergivning för en sida (till exempel React). [Läs mer](/help/sites-developing/spa-overview.md).
 
-Så du har importerat din Hybrid PhoneGap- eller Cordova-app till AEM, vad gör du nu? Du kanske vill lägga till innehåll som är redigerbart i appen. För att kunna utföra den här uppgiften behöver du en allmän förståelse för strukturen i en AEM. En app i AEM delas vanligtvis in i två delar. Gränssnittet och innehållet. &quot;shell&quot; består av de statiska delarna av appen; som konfigurationsfilerna för PhoneGap, appramverket och navigeringskontrollerna. Innehållet i det importerade arkivet lagras som en del av skalet. I det här dokumentet är gränssnittet allt icke-AEM innehåll i din Hybrid PhoneGap-app som skapats av apputvecklaren.
+Så du har importerat din Hybrid PhoneGap- eller Cordova-app till AEM, nu vad? Du kanske vill lägga till innehåll som är redigerbart i appen. För att kunna utföra den här uppgiften behöver du en allmän förståelse för strukturen i en AEM. En app i AEM delas vanligtvis in i två delar. Gränssnittet och innehållet. Gränssnittet innehåller statiska delar av programmet, t.ex. konfigurationsfilerna för PhoneGap, appramverket och navigeringskontrollerna. Innehållet i det importerade arkivet lagras som en del av skalet. I det här dokumentet är gränssnittet allt icke-AEM innehåll i din Hybrid PhoneGap-app som skapats av apputvecklaren.
 
 Innehåll avser de komponenter, mallar och redigerade sidor som skapas i AEM som skapats av AEM. Innehåll kategoriseras antingen som utvecklarinnehåll eller som redigerat innehåll. Komponenter, designer och sidmallar betraktas som designinnehåll eftersom de har skapats av en utvecklare. Författare är sidor som har byggts med hjälp av komponenter och mallar. Dessa sidor görs vanligtvis av en Designer eller en Marketer.
 
 Om du vill lägga till skapade AEM-sidor i Hybrid-appen måste det finnas en samordning mellan apputvecklaren och AEM. Var som helst i appen där du vill lägga till redigerat innehåll måste apputvecklaren ordna dessa sidor i en struktur som kan läggas över i Experience Manager. Apputvecklaren måste kunna ge utvecklaren av Experience Manager sökvägen till den plats där det Experience Manager-skapade innehållet läggs till. Ange sedan en platshållarsida i Hybrid-appen som ersätts efter att Experience Manager-utvecklaren har skrivit sidinnehållet.
 
-För att göra förklaringen enklare att följa används AEM Experience Cloud: AEM Mobile Hybrid Reference för att förklara koncepten. Hybridreferensappen består av en välkomstsida med en sidomeny.
+För att göra förklaringen enklare att följa används AEM Experience Cloud: AEM Mobile Hybrid Reference för att förklara begreppen. Hybridreferensappen består av en välkomstsida med en sidomeny.
 
 ![chlimage_1-76](assets/chlimage_1-76.png)
 

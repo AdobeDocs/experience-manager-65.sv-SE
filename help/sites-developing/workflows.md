@@ -1,18 +1,14 @@
 ---
 title: Utveckla och utöka arbetsflöden
-seo-title: Developing and Extending Workflows
 description: AEM innehåller flera verktyg och resurser för att skapa arbetsflödesmodeller, utveckla arbetsflödessteg och för att interagera programmatiskt med arbetsflöden
-seo-description: AEM provides several tools and resources for creating workflow models, developing workflow steps, and for programmatically interacting with workflows
-uuid: 5a857589-3b13-4519-bda2-b1dab6005550
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: extending-aem
 content-type: reference
-discoiquuid: 8954e3df-3afa-4d53-a7e1-255f3b8f499f
 exl-id: 041b1767-8b6c-4887-a70d-abc96a116976
-source-git-commit: 768576e300b655962adc3e1db20fc5ec06a5ba6c
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '1473'
+source-wordcount: '1460'
 ht-degree: 0%
 
 ---
@@ -46,7 +42,6 @@ Nedan beskrivs de viktigaste aspekterna, medan följande sidor innehåller mer i
 >* Ändringar av informationsplatserna finns i [Omstrukturering av lager i AEM 6.5](/help/sites-deploying/repository-restructuring.md) och [Bästa praxis för arbetsflöden - platser](/help/sites-developing/workflows-best-practices.md#locations).
 >
 
-
 ## Modell {#model}
 
 A `WorkflowModel` representerar en definition (modell) av ett arbetsflöde. Den är gjord av `WorkflowNodes` och `WorkflowTransitions`. Övergångarna ansluter noderna och definierar *flöde*. Modellen har alltid en startnod och en slutnod.
@@ -69,11 +64,11 @@ Redigeringar av arbetsflödesmodellen som inträffar, eller körningsmodeller so
 
 Varje steg ger en diskret uppgift. Det finns olika typer av arbetsflödessteg:
 
-* Deltagare (användare/grupp): Dessa steg genererar ett arbetsobjekt och tilldelar det till en användare eller grupp. En användare måste slutföra arbetsuppgiften för att kunna gå vidare i arbetsflödet.
+* Deltagare (Användare/grupp): Med de här stegen genereras en arbetsuppgift och tilldelas en användare eller grupp. En användare måste slutföra arbetsuppgiften för att kunna gå vidare i arbetsflödet.
 * Process (Script, Java™-metodanrop): Dessa steg utförs automatiskt av systemet. Ett ECMA-skript eller en Java™-klass implementerar steget. Tjänsterna kan utvecklas för att avlyssna särskilda arbetsflödeshändelser och utföra uppgifter enligt affärslogiken.
-* Behållare (delarbetsflöde): Den här typen av steg startar en annan arbetsflödesmodell.
+* Behållare (underarbetsflöde): Den här typen av steg startar en annan arbetsflödesmodell.
 * ELLER Dela/förena: Använd logik för att bestämma vilket steg som ska köras härnäst i arbetsflödet.
-* OCH Dela/förena: Tillåter att flera steg körs samtidigt.
+* AND Split/Join: Tillåter att flera steg körs samtidigt.
 
 Alla steg har följande gemensamma egenskaper: `Autoadvance` och `Timeout` varningar (skriptbara).
 
@@ -101,7 +96,7 @@ Nyttolastimplementeringen refererar till en resurs i databasen (via sökväg, UU
 
 ### Livscykel {#lifecycle}
 
-Skapas när ett nytt arbetsflöde startas (genom att respektive arbetsflödesmodell väljs och nyttolasten definieras) och avslutas när slutnoden bearbetas.
+Skapas när ett nytt arbetsflöde startas (genom att man väljer respektive arbetsflödesmodell och definierar nyttolasten) och avslutas när slutnoden bearbetas.
 
 Följande åtgärder är möjliga för en arbetsflödesinstans:
 
@@ -126,15 +121,15 @@ Det finns olika typer av arbetsflöden som anges i konsolen Arbetsflödesmodelle
 
 * **Standard**
 
-   De här typerna är färdiga arbetsflöden som ingår i en AEM.
+  De här typerna är färdiga arbetsflöden som ingår i en AEM.
 
 * Anpassade arbetsflöden (ingen indikator i konsolen)
 
-   Dessa arbetsflöden har skapats som nya eller från färdiga arbetsflöden som har överlagrats med anpassningar.
+  Dessa arbetsflöden har skapats som nya eller från färdiga arbetsflöden som har överlagrats med anpassningar.
 
 * **Äldre**
 
-   Arbetsflöden som skapats i en tidigare version av AEM. Dessa arbetsflöden kan behållas under en uppgradering eller exporteras som ett arbetsflödespaket från den tidigare versionen och sedan importeras till den nya versionen.
+  Arbetsflöden som skapats i en tidigare version av AEM. Dessa arbetsflöden kan behållas under en uppgradering eller exporteras som ett arbetsflödespaket från den tidigare versionen och sedan importeras till den nya versionen.
 
 ### Övergående arbetsflöden {#transient-workflows}
 
@@ -155,11 +150,10 @@ Standardarbetsflöden sparar körningsinformation (historik) under körningen. D
 >
 >När en arbetsflödesmodell markeras som Transient finns det några scenarier när körningsinformationen fortfarande måste bevaras:
 >
->* Nyttolasttypen (till exempel video) kräver externa steg för bearbetning. I sådana fall krävs körtidshistoriken för statusbekräftelse.
+>* Nyttolasttypen (till exempel video) kräver externa steg för bearbetning. I sådana fall behövs körtidshistoriken för statusbekräftelse.
 >* Arbetsflödet anger en **OCH dela**. I sådana fall krävs körtidshistoriken för statusbekräftelse.
 >* När det tillfälliga arbetsflödet går in i ett deltagarsteg ändras läget, vid körning, till icke-tillfälligt. När aktiviteten skickas till en person måste historiken sparas.
 >
-
 
 >[!CAUTION]
 >
@@ -175,7 +169,7 @@ Standardarbetsflöden sparar körningsinformation (historik) under körningen. D
 
 ### Stöd för flera resurser {#multi-resource-support}
 
-Aktiverar **Stöd för flera resurser** för arbetsflödesmodellen innebär att en arbetsflödesinstans startas även när du väljer flera resurser. Varje paket bifogas som ett paket.
+Aktivera **Stöd för flera resurser** för arbetsflödesmodellen innebär att en arbetsflödesinstans startas även när du väljer flera resurser. Varje paket bifogas som ett paket.
 
 If **Stöd för flera resurser** är inte aktiverat för arbetsflödesmodellen och flera resurser har valts. En enskild arbetsflödesinstans startas för varje resurs.
 
@@ -202,8 +196,8 @@ För ett arbetsflöde med sex steg och fyra steg:
    | Steg 2 | Skapa |
    | Steg 3 | Granska |
    | Steg 4 | Godkänn |
-   | Steg 5 | Slutförd |
-   | Steg 6 | Slutförd |
+   | Steg 5 | Complete |
+   | Steg 6 | Complete |
 
 1. När arbetsflödet körs kan användaren visa förloppet enligt scennamnen (i stället för stegnamnen). Arbetsflödets förlopp visas i [Fliken INFO FÖR ARBETSFLÖDE i fönstret med uppgiftsinformation för arbetsflödesobjektet](/help/sites-authoring/workflows-participating.md#opening-a-workflow-item-to-view-details-and-take-actions) som anges i [Inkorg](/help/sites-authoring/inbox.md).
 
@@ -215,4 +209,4 @@ När du skapar ett formulär kan du enkelt koppla formuläröverföringen till e
 
 ### Arbetsflöden och översättning {#workflows-and-translation}
 
-Arbetsflöden ingår också i [Översättning](/help/sites-administering/translation.md) -processen.
+Arbetsflödena ingår också i [Översättning](/help/sites-administering/translation.md) -processen.

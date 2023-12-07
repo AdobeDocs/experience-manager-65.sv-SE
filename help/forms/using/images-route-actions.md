@@ -1,17 +1,13 @@
 ---
 title: Anpassa bilder som används i flödesåtgärder
-seo-title: Customize images used in route actions
-description: Hur man anpassar bilderna som används i vägåtgärder på arbetsytan i LiveCycle AEM Forms.
-seo-description: How-to customize the images used in route actions in LiveCycle AEM Forms workspace.
-uuid: 42608376-587e-4b57-a9d5-8f9ebd981426
+description: Anpassa bilderna som används i vägåtgärder i arbetsytan i LiveCycle AEM Forms.
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
-discoiquuid: 10158c13-47b4-43e3-ac47-690f3cbab158
 exl-id: 687c6569-7189-4039-9c7a-bc29658a7756
-source-git-commit: 30327950779337ce869b6ca376120bc09826be21
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '307'
+source-wordcount: '290'
 ht-degree: 0%
 
 ---
@@ -26,7 +22,7 @@ Utför stegen som beskrivs i för att anpassa bilderna som används i flödesåt
 
    `/apps/ws/css/newStyle.css`
 
-   Till exempel: Lägga till ett nytt format med namnet `myStyle1`som visas nedan och överför bildfilen `myStyleIcon1.png` till `/apps/ws/image`som använder en WebDAV-klient.
+   Till exempel: Lägg till ett nytt format med namnet `myStyle1`som visas nedan och överför bildfilen `myStyleIcon1.png` till `/apps/ws/image`som använder en WebDAV-klient.
 
    >[!NOTE]
    >
@@ -140,7 +136,7 @@ To
                        <%}%>
    ```
 
-1. Om namnet på CSS-formatet skiljer sig från namnet på vägåtgärden som kommer från servern ändrar du följande kod i `/apps/ws/js/runtime/templates/taskdetails.html`. Den lägger till en hög med `if-else` serletvillkor för att mappa formatet med vägåtgärdens namn.
+1. Om namnet på CSS-formatet skiljer sig från namnet på vägåtgärden som kommer från servern ändrar du följande kod i `/apps/ws/js/runtime/templates/taskdetails.html`. En hög med `if-else` serletvillkor för att mappa formatet med vägåtgärdens namn.
 
    ```jsp
    <%for (var i = 0; i < availableCommands.directCommands.length; i++) {%>

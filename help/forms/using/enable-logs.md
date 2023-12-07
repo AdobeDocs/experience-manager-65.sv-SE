@@ -1,21 +1,17 @@
 ---
 title: Aktivera loggning för HTML5-formulär
-seo-title: Enable logging for HTML5 forms
 description: Med loggningsverktyget kan du logga ett formulär och felsöka formulärrelaterade problem.
-seo-description: The logger utility enables logging for a form and helps you debug form-related issues.
-uuid: 322306ba-8ad7-463d-8a9d-4cea5a0c4b55
 contentOwner: robhagat
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
-discoiquuid: 973806f8-fb44-4d52-ad3f-bfbf335f60a1
 docset: aem65
 feature: Mobile Forms
 exl-id: 2f574c98-550c-4b84-be1e-46a2700e7277
-source-git-commit: d1fc2ff44378276522c2ff3208f5b3bdc4484bba
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '626'
-ht-degree: 4%
+source-wordcount: '629'
+ht-degree: 3%
 
 ---
 
@@ -27,7 +23,7 @@ Du kan konfigurera loggningsverktyget så att loggar för HTML5-formulär skapas
 
 Utför följande steg för att konfigurera serversidesloggar:
 
-1. Gå till `https://'[server]:[port]'/system/console/configMgr`. Leta reda på och öppna *Loggningskonfiguration för Apace Sling* alternativ. En dialogruta visas:
+1. Gå till `https://'[server]:[port]'/system/console/configMgr`. Leta reda på och öppna *Loggningsloggningskonfiguration för Apace Sling* alternativ. En dialogruta visas:
 
    ![ Dialogrutan Konfiguration av loggningslogg för Apace Sling](assets/logconfig.png)
 
@@ -107,7 +103,7 @@ Loggkonfigurationen består av loggnivån och loggkategorin.
   </tr>
   <tr>
    <td>4</td>
-   <td>INFO<br type="_moz" /> </td>
+   <td>INFORMATION<br type="_moz" /> </td>
   </tr>
   <tr>
    <td>5</td>
@@ -163,14 +159,14 @@ Till exempel:
   </tr>
   <tr>
    <td>2-a4-b5-c6<br type="_moz" /> </td>
-   <td>Mål: Server<br /> xfa-nivå: INFORMATION<br /> xfaView-nivå: FELSÖKNING<br /> xfaPerf-nivå: TRACE</td>
+   <td>Mål: Server<br /> xfa-nivå: INFO<br /> xfaView-nivå: DEBUG<br /> xfaPerf-nivå: TRACE</td>
   </tr>
  </tbody>
 </table>
 
 >[!NOTE]
 >
->Standardloggnivån för varje loggkategori a (xfa), b (xfaView) och c (xfaPerf) är 2 (ERROR). För loggkonfiguration gäller följande: 2-b6 är loggnivåerna för olika kategorier:
+>Standardloggnivån för varje loggkategori a (xfa), b (xfaView) och c (xfaPerf) är 2 (ERROR). För loggkonfigurationen 2-b6 är loggnivåerna för olika kategorier därför följande:
 >a (xfa): 2 (standardnivåfel)
 >b (xfaView): 6 (användarspecificerad TRACE)
 >a (xfaPerf): 2 (standardnivåfel)

@@ -1,18 +1,14 @@
 ---
 title: AEM Mobile Application Dashboard
-seo-title: AEM Mobile Application Dashboard
 description: Du kan hantera program- och mobilappsinnehåll från AEM Mobile Application Dashboard eller Control Center. Följ den här sidan om du vill veta mer.
-seo-description: You can manage your application and mobile app content from AEM Mobile Application Dashboard or the Control Center. Follow this page to learn more.
-uuid: 0d182989-eb83-4207-a8e0-050edbf98ff9
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: authoring-on-demand-services-app
-discoiquuid: 42a38399-f5a7-4d2f-aa6a-d409a7ec60f7
 exl-id: daafc8b8-3c01-4c97-a14b-f1b706600249
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '595'
+source-wordcount: '603'
 ht-degree: 2%
 
 ---
@@ -79,7 +75,7 @@ Du kan expandera varje ruta för att få en mer detaljerad listvy genom att klic
 
 The **Hantera banderoller** kan du hantera innehållet för en banderoll. Följande information visas för en banderoll:
 
-* bild
+* image
 * **RUBRIK**: bannerns namn
 * **ÄNDRAD**: senast ändrad i AEM
 * **ÖVERFÖRD**: senast överförd från AEM
@@ -98,7 +94,7 @@ Följande bild visar **Hantera banderoller** i AEM Mobile Application Dashboard:
 
 The **Hantera artiklar** kan du hantera innehållet i en artikel. Följande information visas för en artikel:
 
-* bild
+* image
 * **RUBRIK**: artikelns namn
 * **ÄNDRAD**: senast ändrad i AEM
 * **ÖVERFÖRD**: senast överförd från AEM
@@ -117,7 +113,7 @@ Följande bild visar **Hantera artiklar** i AEM Mobile Application Dashboard:
 
 The **Hantera samlingar** kan du hantera innehållet i en samling. Följande information visas för en samling:
 
-* bild
+* image
 * **RUBRIK**: samlingens namn
 * **ÄNDRAD**: senast ändrad i AEM
 * **ÖVERFÖRD**: senast överförd från AEM

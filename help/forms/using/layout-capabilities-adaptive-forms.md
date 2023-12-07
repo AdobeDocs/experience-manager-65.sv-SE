@@ -1,25 +1,21 @@
 ---
 title: Layoutfunktioner i anpassningsbara formulär
-seo-title: Layout capabilities of adaptive forms
 description: Layout och utseende för anpassningsbara formulär på olika enheter styrs av layoutinställningarna. Förstå de olika layouterna och hur de ska användas.
-seo-description: Layout and appearances of adaptive forms on various devices are governed by the layout settings. Understand the various layouts and how to apply them.
-uuid: 79022ac2-1aa3-47c5-b094-cbe83334ea62
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
-discoiquuid: 9459c414-eac9-4bd9-a773-cceaeb736c56
 docset: aem65
 feature: Adaptive Forms
 exl-id: 3db623a4-f1ad-4b7f-97e8-0be138aa8b26
-source-git-commit: 498fb5f6f923710a907e1cf525f56f49850e16b2
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '1206'
+source-wordcount: '1190'
 ht-degree: 0%
 
 ---
 
 # Layoutfunktioner i anpassningsbara formulär{#layout-capabilities-of-adaptive-forms}
 
-<span class="preview"> Adobe rekommenderar att man använder modern och utbyggbar datainhämtning [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) for [skapa ny Adaptive Forms](/help/forms/using/create-an-adaptive-form-core-components.md) eller [lägga till adaptiv Forms på AEM Sites-sidor](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-program, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptive Forms med grundläggande komponenter. </span>
+<span class="preview"> Adobe rekommenderar att man använder modern och utbyggbar datainhämtning [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) for [skapa ny Adaptive Forms](/help/forms/using/create-an-adaptive-form-core-components.md) eller [lägga till adaptiv Forms på AEM Sites-sidor](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-filer, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptiv Forms med baskomponenter. </span>
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
@@ -37,7 +33,7 @@ Innan du får veta mer om de olika layoutfunktionerna i adaptiva formulär kan d
 
 [Introduktion till att skapa formulär](../../forms/using/introduction-forms-authoring.md)
 
-## Typer av layouter {#types-of-layouts}
+## Typ av layout {#types-of-layouts}
 
 Ett anpassningsbart formulär ger dig följande typer av layouter:
 
@@ -69,7 +65,7 @@ Lista över panellayouter i anpassningsbara formulär
 
 ### Responsiv - allt på en sida utan navigering {#responsive-everything-on-one-page-without-navigation-br}
 
-Använd den här panellayouten för att skapa en responsiv layout som anpassar sig efter enhetens skärmstorlek utan att behöva använda någon särskild navigering.
+Använd den här panellayouten för att skapa en responsiv layout som anpassar sig till enhetens skärmstorlek utan att behöva använda någon särskild navigering.
 
 Med den här layouten kan du montera flera **[!UICONTROL Panel adaptive form]** -komponenter efter varandra i panelen.
 
@@ -85,7 +81,7 @@ Ett formulär med responsiv layout som det visas på en stor skärm
 
 Använd den här panellayouten för guidad navigering i ett formulär. Använd till exempel den här layouten när du vill hämta in obligatorisk information i ett formulär och vägleda användarna steg för steg.
 
-Använd `Panel adaptive form` för stegvis navigering i en panel. När du använder den här layouten flyttas användaren till nästa steg först när det aktuella steget är klart
+Använd `Panel adaptive form` -komponent för stegvis navigering i en panel. När du använder den här layouten flyttas användaren till nästa steg först när det aktuella steget är klart
 
 ```javascript
 window.guideBridge.validate([], this.panel.navigationContext.currentItem.somExpression)
@@ -115,7 +111,7 @@ Med den här layouten kan du montera `Panel adaptive form` i en panel med tabbna
 
 ![I fliklayouten visas flikarna till vänster](assets/tabbed_layout_left.png)
 
-Tabbar som visas till vänster på en panel
+Tabbar till vänster om en panel
 
 ### Fliklayout - flikarna visas högst upp {#tabbed-layout-tabs-appear-on-the-top}
 
@@ -137,7 +133,7 @@ Mobillayouterna finns på `/libs/fd/af/layouts/mobile/` plats. Följande mobila 
 
 Lista över mobila layouter i adaptiva formulär
 
-När du använder en mobil layout är formulärmenyn, för att få åtkomst till olika formulärpaneler, tillgänglig genom att trycka på ![aem6forms_form_menu](assets/aem6forms_form_menu.png) ikon.
+När du använder en mobil layout är formulärmenyn tillgänglig genom att trycka på ![aem6forms_form_menu](assets/aem6forms_form_menu.png) -ikon.
 
 ### Layout med panelrubriker i formulärrubriken {#layout-with-panel-titles-in-the-form-header}
 
@@ -151,9 +147,9 @@ Mobila layouter med paneltitlar i formulärrubriker
 
 Den här layouten, som namnet föreslår, visar bara navigeringsmenyn och navigeringsfältet utan panelrubriker. Den här layouten innehåller även ikoner för Nästa och Föregående för navigering.
 
-![Mobila layouter utan panelrubriker i formulärrubriker](assets/mobile_layout_without.png)
+![Mobila layouter utan panelrubriker i formulärrubrikerna](assets/mobile_layout_without.png)
 
-Mobila layouter utan panelrubriker i formulärrubriker
+Mobila layouter utan panelrubriker i formulärrubrikerna
 
 ## Verktygsfältslayouter {#toolbar-layouts}
 

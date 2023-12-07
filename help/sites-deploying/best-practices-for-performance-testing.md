@@ -1,16 +1,14 @@
 ---
 title: Bästa metoder för prestandatestning
 description: Läs om de övergripande strategier och metoder som används för prestandatestning och några av de verktyg som finns tillgängliga för att hjälpa processen.
-uuid: ab8720d6-b864-4d00-9e07-2e1699cfe7db
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: best-practices
-discoiquuid: 669018a0-f6ef-42b2-9c6f-83d7dd5a7095
 exl-id: fcac75e1-15c1-4a37-8d43-93c95267b903
-source-git-commit: 18f843ed3ffb719d168b67826baaffd926ffd2dd
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '1831'
+source-wordcount: '1790'
 ht-degree: 0%
 
 ---
@@ -39,7 +37,7 @@ De AEM versionerna och snabbkorrigeringarna som används i produktionen bör var
 
 Testerna är meningslösa utan en miljö som liknar produktionen så nära som möjligt. I idealfallet bör maskinvaruspecifikationerna, nätverksgränssnitten, belastningsutjämnarna och CDN vara identiska med produktionen i testmiljön.
 
-* Produktionsbelastning
+* Produktionslast
 
 Många prestandaproblem uppstår inte förrän systemet är hårt belastat. Goda prestandatester bör simulera den belastning som produktionssystemen är under vid toppen.
 
@@ -55,12 +53,12 @@ Det finns många kommersiellt tillgängliga verktyg för prestandatestning på m
 
 * Adobe **Tålig dag** kan användas för att generera inläsning AEM instanser och samla in prestandadata. Adobe AEM tekniker använder faktiskt verktyget för att ladda ned testning av själva AEM. Skript som körs under Tough Day konfigureras via egenskapsfiler och JMX XML-filer. Mer information finns i [Dokumentation om tuffa dagar](/help/sites-developing/tough-day.md).
 
-* AEM innehåller färdiga verktyg för att snabbt se problematiska frågor, förfrågningar och felmeddelanden. Mer information finns i [Diagnosverktyg](/help/sites-administering/operations-dashboard.md#diagnosis-tools) i dokumentationen för kontrollpanelen för åtgärder.
+* AEM innehåller färdiga verktyg för att snabbt se problematiska frågor, förfrågningar och felmeddelanden. Mer information finns i [Diagnostikverktyg](/help/sites-administering/operations-dashboard.md#diagnosis-tools) i dokumentationen för kontrollpanelen för åtgärder.
 * Apache tillhandahåller en produkt som kallas **JMeter** som kan användas för prestanda- och belastningstestning samt funktionsbeteenden. Det är programvara med öppen källkod och kan användas utan extra kostnad, men har en mindre funktionsuppsättning än företagsprodukter och en brantare inlärningskurva. JMeter finns på Apache webbplats på [https://jmeter.apache.org/](https://jmeter.apache.org/)
 
 * **Load Runner** är en lasttestningsprodukt i enterpriseklass. Det finns en kostnadsfri utvärderingsversion. Mer information finns på [https://www.microfocus.com/en-us/portfolio/performance-engineering/overview](https://www.microfocus.com/en-us/portfolio/performance-engineering/overview)
 
-* Inläsningstestverktyg för webbplatser som [Vercara](https://vercara.com/website-performance-management) kan också användas.
+* Inläsningstestverktyg för webbplatser [Vercara](https://vercara.com/website-performance-management) kan också användas.
 * När du testar mobila eller responsiva webbplatser måste du använda en separat uppsättning verktyg. De fungerar genom att begränsa nätverksbandbredden och simulera långsammare mobilanslutningar som 3G eller EDGE. Bland de verktyg som används mest finns följande:
 
    * **[Nätverkslänkvillkor](https://nshipster.com/network-link-conditioner/)** - det ger ett användarvänligt gränssnitt och fungerar på en ganska låg nivå i nätverksstacken. Den innehåller versioner för OS X och iOS.
@@ -70,7 +68,7 @@ Det finns många kommersiellt tillgängliga verktyg för prestandatestning på m
 
 **Övervakning**
 
-The [Övervakningsprestanda](/help/sites-deploying/monitoring-and-maintaining.md#monitoring-performance) dokumentation är en bra resurs för verktyg och metoder som kan användas för att diagnostisera problem och identifiera områden för justering.
+The [Övervakningsprestanda](/help/sites-deploying/monitoring-and-maintaining.md#monitoring-performance) dokumentation är en bra resurs för verktyg och metoder som kan användas för att diagnostisera problem och identifiera områden som ska justeras.
 
 **Utvecklarläge i Touch UI**
 
@@ -78,11 +76,11 @@ En av de nya funktionerna i pekgränssnittet AEM 6 är utvecklarläget. Precis s
 
 **Läs begärandeloggarna med rlog.jar**
 
-För en mer omfattande analys av begärandeloggarna i ett AEM. `rlog.jar` kan användas för att söka igenom och sortera `request.log` filer som AEM genererar. Denna jar-fil ingår i en AEM installation i `/crx-quickstart/opt/helpers` mapp. Mer information om loggverktyget och den allmänna inloggningen finns i [Övervakning och underhåll](/help/sites-deploying/monitoring-and-maintaining.md) dokumentation.
+För en mer omfattande analys av begärandeloggarna i ett AEM. `rlog.jar` kan användas för att söka igenom och sortera `request.log` filer som AEM genererar. Denna jar-fil ingår i en AEM i `/crx-quickstart/opt/helpers` mapp. Mer information om loggverktyget och den allmänna inloggningen finns i [Övervakning och underhåll](/help/sites-deploying/monitoring-and-maintaining.md) dokumentation.
 
 **Verktyget Förklara fråga**
 
-The [Förklara fråga](/help/sites-administering/operations-dashboard.md#explain-query) i ACS AEM Verktyg kan användas för att visa index som används när en fråga körs. Det här verktyget är användbart när du optimerar frågor som körs långsamt.
+The [Förklara fråga, verktyg](/help/sites-administering/operations-dashboard.md#explain-query) i ACS AEM Verktyg kan användas för att visa index som används när en fråga körs. Det här verktyget är användbart när du optimerar frågor som körs långsamt.
 
 **PageSpeed-verktyg**
 
@@ -107,7 +105,7 @@ På system med MongoDB-backendar har AEM flera [JMX](/help/sites-administering/j
 
 `https://server:port/system/console/jmx/org.apache.jackrabbit.oak%3Aid%3D6%2Cname%3D%22Consolidated+Cache+statistics%22%2Ctype%3D%22ConsolidatedCacheStats%22`
 
-För namngiven cache **Document-Diff** bör träfffrekvensen vara över `.90`. Om träfffrekvensen är under 90 % är det troligt att du måste redigera `DocumentNodeStoreService` konfiguration. Adobe produktsupport kan rekommendera optimala inställningar för din miljö.
+För namngiven cache **Document-Diff** bör träfffrekvensen vara över `.90`. Om träfffrekvensen är under 90 % är det troligt att du måste redigera din `DocumentNodeStoreService` konfiguration. Adobe produktsupport kan rekommendera optimala inställningar för din miljö.
 
 * The **Oak-databasstatistik** Mbean. Du kommer åt den direkt genom att gå till:
 

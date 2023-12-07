@@ -1,18 +1,14 @@
 ---
 title: Extraherar strängar för översättning
-seo-title: Extracting Strings for Translating
 description: Använd xgettext-maven-plugin för att extrahera strängar från källkoden som behöver översättas
-seo-description: Use xgettext-maven-plugin to extract strings from your source code that need translating
-uuid: 2c586ecb-8494-4f8f-b31a-1ed73644d611
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: components
-discoiquuid: 034f70f1-fbd2-4f6b-b07a-5758f0461a5b
 exl-id: 4acc5f7f-0bcb-4b5a-8531-52e146cffeae
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '477'
+source-wordcount: '475'
 ht-degree: 0%
 
 ---
@@ -70,7 +66,7 @@ Mönsterdelen av en regel används för att matcha namnen på de filer som ska i
 | &amp;ast; | Anger en vanlig fil i filsystemet. |
 | ingen | Inget prefix, eller ett mönster som börjar med en mapp eller ett filnamn, anger att filen är en vanlig fil i filsystemet. |
 
-Vid användning i ett mönster anger tecknet / en underkatalog och det &amp;sista; tecken matchar alla. I följande tabell visas flera exempelregler.
+När det används i ett mönster anger tecknet / en underkatalog och det sista tecknet i matchar alla. I följande tabell visas flera exempelregler.
 
 <table>
  <tbody>
@@ -136,9 +132,9 @@ mvn xgettext:extract
 ### Utdatafiler {#output-files}
 
 * `raw.xliff`: extraherade strängar
-* `warn.log`: varningar (om sådana finns), om `CQ.I18n.getMessage()` API används felaktigt. De behöver alltid en fix och sedan en omstart.
+* `warn.log`: varningar (om sådana finns) `CQ.I18n.getMessage()` API används felaktigt. De behöver alltid en fix och sedan en omstart.
 
-* `parserwarn.log`: parservarningar (om sådana finns), t.ex. problem med JS-parsern
-* `potentials.xliff`: &quot;potentiella&quot; kandidater som inte extraheras, men som kan vara läsbara strängar som behöver översättas (kan ignoreras, men ändå skapa en enorm mängd falskt positiva resultat)
+* `parserwarn.log`: parservarningar (om sådana finns), till exempel problem med JS-parsern
+* `potentials.xliff`:&quot;potentiella&quot; kandidater som inte extraheras, men som kan vara läsbara strängar som behöver översättas (kan ignoreras, men ändå skapa en enorm mängd falskt positiva resultat)
 * `strings.xliff`: förenklad xliff-fil, som ska importeras till ALF
-* `backrefs.txt`: möjliggör snabb sökning av källkodsplatser för en given sträng
+* `backrefs.txt`: tillåter snabb sökning av källkodsplatser för en given sträng

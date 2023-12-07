@@ -1,18 +1,14 @@
 ---
 title: Optimera HTML5-formulär
-seo-title: Optimizing HTML5 forms
 description: Du kan optimera utdatastorleken för HTML5-formulär.
-seo-description: You can optimize the output size of the HTML5 forms.
-uuid: 959f0b6a-9e4d-478a-afa8-4c39011fdf7a
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
-discoiquuid: bdb9edc2-6a37-4d3f-97d5-0fc5664316be
 feature: Mobile Forms
 exl-id: 14309ebd-8d00-4ca5-b4ab-44d80d97d066
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '283'
+source-wordcount: '285'
 ht-degree: 0%
 
 ---
@@ -63,7 +59,6 @@ Apache kan kommunicera med JBoss med HTTP eller AJP-protokollet.
    >* Åtkomst: *https://&lt;server>:&lt;port>/system/console/configMgr*
    * Redigera konfigurationen för referensfiltret för Apache Sling
    * Lägg till posten för proxyservern i Tillåt värdar
-
 
 1. Aktivera komprimering.
 

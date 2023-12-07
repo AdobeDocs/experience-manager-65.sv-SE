@@ -1,13 +1,11 @@
 ---
 title: Anpassa datatjänster för utkast och överföring
 description: AEM Forms lagrar som standard utkast och skickade adaptiva formulär i en standardnod på Publish-instansen. Du kan dock konfigurera AEM Forms tjänster för utkast och inskickning av data för att anpassa lagringen av utkast och inskickade adaptiva formulär.
-uuid: c3ec1708-3b11-4142-93f0-1cffb6643f34
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: customization
-discoiquuid: 602fd6a9-9a65-411c-8475-a4082a3fdee0
 exl-id: ed10ef8c-7b9c-43cf-bea8-7cf9742a8cac
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '270'
 ht-degree: 0%
@@ -16,7 +14,7 @@ ht-degree: 0%
 
 # Anpassa datatjänster för utkast och överföring {#customizing-draft-and-submission-data-services}
 
-## Översikt {#overview}
+## Ökning {#overview}
 
 Med AEM Forms kan användare spara ett anpassat formulär som ett utkast. Utkastfunktionen ger användarna möjlighet att behålla ett pågående formulär. Användaren kan sedan fylla i och skicka formuläret när som helst från vilken enhet som helst.
 

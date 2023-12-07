@@ -1,16 +1,12 @@
 ---
 title: Skapa en anpassad verktygsfältsåtgärd
-seo-title: Creating a custom toolbar action
 description: Formulärutvecklare kan skapa anpassade verktygsfältsåtgärder för anpassningsbara formulär i AEM Forms. Med anpassade åtgärder kan formulärförfattare tillhandahålla fler arbetsflöden och alternativ till sina slutanvändare.
-seo-description: Form developers can create custom toolbar actions for adaptive forms in AEM Forms. Using custom actions form authors can provide more workflows and options to their end users.
-uuid: cd785cfb-e1bb-4158-be9b-d99e04eccc02
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: customization
-discoiquuid: 4beca23f-dbb0-4e56-8047-93e4f1775418
 docset: aem65
 exl-id: 17f7f0e1-09d8-45cd-a4f6-0846bdb079b6
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '496'
 ht-degree: 0%
@@ -35,7 +31,7 @@ Förutom den uppsättning åtgärder som finns som standard kan du skapa anpassa
 
 Följande steg visar hur du skapar en anpassad verktygsfältåtgärd och hur du skapar en knapp där slutanvändare kan granska alla anpassningsbara formulärfält innan de skickar in ett ifyllt formulär.
 
-1. Alla standardåtgärder som stöds av adaptiva formulär finns i `/libs/fd/af/components/actions` mapp. I CRXDE kopierar du `fileattachmentlisting` nod från `/libs/fd/af/components/actions/fileattachmentlisting` till `/apps/customaction`.
+1. Alla standardåtgärder som stöds av adaptiva formulär finns i `/libs/fd/af/components/actions` mapp. Kopiera `fileattachmentlisting` från `/libs/fd/af/components/actions/fileattachmentlisting` till `/apps/customaction`.
 
 1. Efter kopiering av noden till `apps/customaction` mapp, ändra namn på noden till `reviewbeforesubmit`. Ändra även `jcr:title` och `jcr:description` egenskaper för noden.
 

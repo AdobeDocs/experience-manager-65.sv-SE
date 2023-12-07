@@ -1,19 +1,15 @@
 ---
 title: Strategier för säkerhetskopiering av bevakade mappar
-seo-title: Backup strategies for watched folders
 description: I det här dokumentet beskrivs hur bevakade mappar påverkas av olika scenarier för säkerhetskopiering och återställning, begränsningar och resultat för dessa scenarier och hur du minimerar dataförluster.
-seo-description: This document describes how watched folders are affected by different backup and recovery scenarios, the limitations and outcomes of these scenarios, and how to minimize data loss.
-uuid: c61997b8-6c36-4bd9-90e5-411841a6c176
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/aem_forms_backup_and_recovery
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: 6f775933-e989-4456-ad01-9bdf5dee3dad
 exl-id: 0d36160a-29fa-4cc4-a0ff-fc681d3e040e
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '1089'
-ht-degree: 1%
+source-wordcount: '1080'
+ht-degree: 0%
 
 ---
 
@@ -70,8 +66,8 @@ I följande tabell beskrivs filhanteringen för fem exempelfiler (fil1, fil2, fi
   <tr>
    <td><p>Scen</p></td>
    <td><p>tom</p></td>
-   <td><p>file1</p></td>
-   <td><p>file2</p></td>
+   <td><p>fil1</p></td>
+   <td><p>fil2</p></td>
    <td><p>file3</p></td>
    <td><p>file4</p></td>
    <td><p>tom</p></td>
@@ -101,7 +97,7 @@ I följande tabell beskrivs filhanteringen för fem exempelfiler (fil1, fil2, fi
    <td><p>Bevara</p></td>
    <td><p>tom</p></td>
    <td><p>tom</p></td>
-   <td><p>file1 </p></td>
+   <td><p>fil1 </p></td>
    <td><p>fil1, fil2 </p></td>
    <td><p>fil1, fil2 </p></td>
    <td><p>file1, file2, file4 </p></td>

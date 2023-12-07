@@ -1,20 +1,16 @@
 ---
 title: Skapa PDF-dokument med SubmitXML-data
-seo-title: Creating PDF Documents with SubmittedXML Data
 description: Använd tjänsten Forms för att hämta formulärdata som användaren har angett i ett interaktivt formulär. Skicka formulärdata till en annan AEM Forms-tjänståtgärd och skapa ett PDF-dokument med hjälp av data.
-seo-description: Use the Forms service to retrieve the form data that the user entered into an interactive form. Pass the form data to another AEM Forms service operation and create a PDF document using the data.
-uuid: 2676c614-8988-451b-ac7c-bd07731a3f5f
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/rendering_forms
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
-discoiquuid: 62490230-a24e-419d-95bb-c0bb04a03f96
 role: Developer
 exl-id: d9d5b94a-9d10-4d90-9e10-5142f30ba4a3
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '1320'
+source-wordcount: '1312'
 ht-degree: 0%
 
 ---
@@ -72,7 +68,7 @@ Hämta formulärdata som skickats till Forms-tjänsten. Du kan bearbeta inskicka
 
 Använd utdatatjänsten för att skapa ett icke-interaktivt PDF-dokument som är baserat på en formulärdesign och XML-formulärdata. I arbetsflödet hämtas formulärdata från Forms-tjänsten.
 
-**Lagra PDF-formuläret i innehållstjänster (borttaget) med hjälp av tjänsten Dokumenthantering**
+**Lagra PDF-formuläret i Content Services (utgått) med hjälp av tjänsten Document Management**
 
 Använd API:t för dokumenthanteringstjänsten för att lagra ett PDF-dokument i innehållstjänster (borttaget).
 
@@ -108,16 +104,15 @@ Skapa ett PDF-dokument med inskickade XML-data med hjälp av Forms, Output och D
       * Ett strängvärde som anger `HTTP_USER_AGENT` rubrikvärde, som `Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322)`.
       * A `RenderOptionsSpec` objekt som lagrar körningsalternativ.
 
-      The `processFormSubmission` returnerar en `FormsResult` objekt som innehåller resultaten av formuläröverföringen.
+     The `processFormSubmission` returnerar en `FormsResult` objekt som innehåller resultaten av formuläröverföringen.
 
-   * Avgör om Forms-tjänsten har slutfört bearbetningen av formulärdata genom att anropa `FormsResult` objektets `getAction` -metod. Om den här metoden returnerar värdet `0`är data färdiga att bearbetas.
+   * Kontrollera om Forms-tjänsten har bearbetat formulärdata genom att anropa `FormsResult` objektets `getAction` -metod. Om den här metoden returnerar värdet `0`är data färdiga att bearbetas.
    * Hämta formulärdata genom att skapa en `com.adobe.idp.Document` genom att anropa `FormsResult` objektets `getOutputContent` -metod. (Det här objektet innehåller formulärdata som kan skickas till utdatatjänsten.)
    * Skapa en `java.io.InputStream` genom att anropa `java.io.DataInputStream` konstruktorn och skickar `com.adobe.idp.Document` -objekt.
    * Skapa en `org.w3c.dom.DocumentBuilderFactory` genom att anropa det statiska `org.w3c.dom.DocumentBuilderFactory` objektets `newInstance` -metod.
    * Skapa en `org.w3c.dom.DocumentBuilder` genom att anropa `org.w3c.dom.DocumentBuilderFactory` objektets `newDocumentBuilder` -metod.
    * Skapa en `org.w3c.dom.Document` genom att anropa `org.w3c.dom.DocumentBuilder` objektets `parse` metoden och skicka `java.io.InputStream` -objekt.
-   * Hämta värdet för varje nod i XML-dokumentet. Ett sätt att utföra den här uppgiften är att skapa en anpassad metod som accepterar två parametrar: den `org.w3c.dom.Document` och namnet på noden vars värde du vill hämta. Den här metoden returnerar ett strängvärde som representerar nodens värde. I kodexemplet som följer den här processen anropas den här anpassade metoden `getNodeText`. Innehållet i den här metoden visas.
-
+   * Hämta värdet för varje nod i XML-dokumentet. Ett sätt att utföra den här uppgiften är att skapa en anpassad metod som accepterar två parametrar: `org.w3c.dom.Document` och namnet på noden vars värde du vill hämta. Den här metoden returnerar ett strängvärde som representerar nodens värde. I kodexemplet som följer den här processen anropas den här anpassade metoden `getNodeText`. Innehållet i den här metoden visas.
 
 1. Skapa ett icke-interaktivt PDF-dokument med hjälp av utdatatjänsten.
 
@@ -146,7 +141,7 @@ Skapa ett PDF-dokument med inskickade XML-data med hjälp av Forms, Output och D
    * A `java.util.List` -instans som anger aspekter som är relaterade till innehållet. Det här värdet är en valfri parameter och du kan ange `null`.
    * A `java.util.Map` objekt som lagrar innehållsattribut.
 
-   The `storeContent` returnerar en `CRCResult` -objekt som beskriver innehållet. Använda en `CRCResult` kan du till exempel hämta innehållets unika identifierarvärde. Om du vill utföra den här åtgärden anropar du `CRCResult` objektets `getNodeUuid` -metod.
+   The `storeContent` returnerar en `CRCResult` -objekt som beskriver innehållet. Använda `CRCResult` kan du till exempel hämta innehållets unika identifierarvärde. Om du vill utföra den här åtgärden anropar du `CRCResult` objektets `getNodeUuid` -metod.
 
 **Se även**
 

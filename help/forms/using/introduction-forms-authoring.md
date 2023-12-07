@@ -1,17 +1,13 @@
 ---
 title: Introduktion till utveckling av anpassningsbara formulär
-seo-title: Introduction to authoring adaptive forms
 description: AEM Forms har ett lättanvänt men ändå kraftfullt gränssnitt för framtagning av adaptiva blanketter. Den innehåller en mängd komponenter och verktyg som du kan använda för att skapa formulär.
-seo-description: AEM Forms provide easy-to-use yet powerful interface for authoring adaptive forms. It provides a host of components and tools that you can use to build forms.
-uuid: 3b150507-41b9-47c2-a94c-f85b903b2274
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: introduction, author
-discoiquuid: ba70921e-db7e-43f6-902c-1065d3b13aef
 docset: aem65
 feature: Adaptive Forms
 exl-id: 935b734c-6fb1-45e8-8515-e98c8b85286c
-source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '3085'
 ht-degree: 0%

@@ -1,17 +1,15 @@
 ---
 title: Prestandaoptimering
 description: Lär dig hur du konfigurerar vissa aspekter av AEM för att optimera prestanda.
-uuid: a4d9fde4-a4c7-4ee5-99b6-29b0ee7dc35b
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: configuring
-discoiquuid: 80118cd1-73e1-4675-bbdf-85d66d150abc
 feature: Configuring
 exl-id: 5b0c9a8c-0f5f-46ee-a455-adb9b9d27270
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '6503'
+source-wordcount: '6469'
 ht-degree: 1%
 
 ---
@@ -397,12 +395,12 @@ Genom att testa komponenterna i kombination får du en närmare bild av hur prog
 | Scenario | Komponent | Nej. Användare | Tx/sek (förväntas) | Tx/sek (testad) | Beskrivning |
 |---|---|---|---|---|---|
 | Blandat genomsnitt | Hemsida | 10 | 1 |  |  |
-|   | Sökning | 10 | 1 |  |  |
+|   | Sök | 10 | 1 |  |  |
 |   | Nyheter | 10 | 2 |  |  |
 |   | Händelser | 10 | 1 |  |  |
 |   | Aktiveringar | 10 | 3 |  | Simulering av författarbeteende. |
 | Blandad topp | Hemsida | 100 | 5 |  |  |
-|   | Sökning | 50 | 5 |  |  |
+|   | Sök | 50 | 5 |  |  |
 |   | Nyheter | 100 | 10 |  |  |
 |   | Händelser | 100 | 10 |  |  |
 |   | Aktiveringar | 20 | 20 |  | Simulering av författarbeteende. |
@@ -414,7 +412,7 @@ Under de första dagarna efter det att webbplatsen har tillgängliggjorts kan du
 | Scenario | Testtyp | Nej. Användare | Tx/sek (förväntas) | Tx/sek (testad) | Beskrivning |
 |---|---|---|---|---|---|
 | Live-topp på väg | Hemsida | 200 | 20 |  |  |
-|   | Sökning | 100 | 10 |  |  |
+|   | Sök | 100 | 10 |  |  |
 |   | Nyheter | 200 | 20 |  |  |
 |   | Händelser | 200 | 20 |  |  |
 |   | Aktiveringar | 20 | 20 |  | Simulering av författarbeteende. |
@@ -442,7 +440,7 @@ Vissa problem uppstår bara efter att systemet har körts kontinuerligt, antinge
 | Scenario | Testtyp | Nej. Användare | Tx/sek (förväntas) | Tx/sek (testad) | Beskrivning |
 |---|---|---|---|---|---|
 | Varaktighetsprovning (72 timmar) | Hemsida | 10 | 1 |  |  |
-|   | Sökning | 10 | 1 |  |  |
+|   | Sök | 10 | 1 |  |  |
 |   | Nyheter | 20 | 2 |  |  |
 |   | Händelser | 10 | 1 |  |  |
 |   | Aktiveringar | 1 | 3 |  | Simulering av författarbeteende. |
@@ -595,7 +593,7 @@ Det är viktigt att du skapar dessa bilder med samma namngivningshandtag som sid
 
 För sidor som inte ändras finns bilderna kvar i cacheminnet, även om själva sidorna är automatiskt ogiltiga.
 
-#### Personanpassning {#personalization}
+#### Personalisering {#personalization}
 
 Vi rekommenderar att du begränsar personaliseringen till där det är nödvändigt. Så här visar du varför:
 

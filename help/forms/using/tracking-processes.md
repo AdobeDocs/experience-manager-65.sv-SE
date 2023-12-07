@@ -1,16 +1,12 @@
 ---
 title: Spåra processer
-seo-title: Tracking processes
 description: Spåra era processer genom att söka efter dem och visa deras information.
-seo-description: How to track your processes by searching for them and viewing their details.
-uuid: 7bda9b61-0a40-4349-9aee-dc6636e5e692
 contentOwner: robhagat
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
-discoiquuid: 2228dcdd-5c9c-46b3-9888-489756c04887
 exl-id: 381a46c6-c73c-476a-a1a0-20d921069c37
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '406'
 ht-degree: 0%
@@ -39,7 +35,7 @@ Du kan ange vilka kolumner som ska visas i sökresultaten.
 ### Söka efter en uppgift med en sökmall {#search-for-a-task-using-a-search-template}
 
 1. På sidan Spärra/knip i listan till vänster väljer du **Sökmallar** och välj en sökmall.
-1. Om mallen har stöd för sökparametrar kan du begränsa sökparametrarna genom att fylla i mallfälten och sedan klicka på **Sök**. Visar en lista med alla aktiviteter som du har deltagit i, som matchar sökvillkoren.
+1. Om mallen stöder sökparametrar kan du begränsa sökparametrarna genom att fylla i mallfälten och sedan klicka på **Sök**. Visar en lista med alla aktiviteter som du har deltagit i, som matchar sökvillkoren.
 
 ## Visa processinformation {#view-process-details}
 
@@ -48,7 +44,7 @@ På spårningssidan kan du välja en process och visa information om den. Du kan
 **Status:** Statusen för uppgifter i en process visas i kolumnen Markerad åtgärd när du klickar på en uppgift. Processens status är dock inte tillgänglig.
 
 1. Välj processinstansen i sökresultatlistan om du vill visa information om de uppgifter som är en del av processinstansen.
-1. Gör något av följande om du vill visa mer information om en uppgift:
+1. Om du vill visa mer information om en uppgift utför du en eller flera av dessa åtgärder:
 
    * Om du vill visa anteckningar och bilagor för en uppgift klickar du på fliken Bifogade filer.
    * Om du vill visa information om uppgiftstilldelningen klickar du på fliken Uppdrag.

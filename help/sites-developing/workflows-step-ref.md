@@ -1,19 +1,15 @@
 ---
 title: Referens för arbetsflödessteg
-seo-title: Workflow Step Reference
 description: Se den här stegreferensen för arbetsflöden i Adobe Experience Manager.
-seo-description: null
-uuid: 88bf6997-73a1-4639-82aa-5dff08d3ef86
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: extending-aem
 content-type: reference
-discoiquuid: e3afffd0-d90c-4bd0-b814-f7aeac6ceb6d
 docset: aem65
 exl-id: 8de78bde-2fcb-4221-873e-59e347ff2d74
-source-git-commit: b703f356f9475eeeafb1d5408c650d9c6971a804
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '3250'
+source-wordcount: '3229'
 ht-degree: 0%
 
 ---
@@ -57,7 +53,7 @@ Du kan välja mellan: **Av**, **Omedelbar**, **1h**, **6 tim**, **12h**, **24h**
 
 * **Timeout-hanterare**
 
-  Hanteraren som styr arbetsflödet när steget avbryts. Till exempel, `Auto Advancer`
+  Hanteraren som styr arbetsflödet när steget avbryts. Exempel: `Auto Advancer`
 
 * **Avancerad hanterare**
 

@@ -1,18 +1,15 @@
 ---
 title: Prestandaträd
-seo-title: Performance Tree
 description: Lär dig mer om hur du felsöker prestandaproblem i AEM.
-uuid: ab0624f7-6b39-4255-89e0-54c74b54cd98
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: best-practices
-discoiquuid: 5febbb1e-795c-49cd-a8f4-c6b4b540673d
 exl-id: f2f968b8-b21c-487d-bc0d-ed60903bc4bf
-source-git-commit: 9defa6d1843007e9375d839f72f6993c691a37c0
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '1178'
-ht-degree: 0%
+source-wordcount: '1088'
+ht-degree: 1%
 
 ---
 
@@ -24,7 +21,7 @@ Följande diagram ger vägledning om hur du felsöker prestandaproblem. Den är 
 
 Varje steg i diagrammet är länkat till en dokumentationsresurs eller en rekommendation.
 
-## Förutsättningar och antaganden {#prerequisites-and-assumptions}
+## Krav och antaganden {#prerequisites-and-assumptions}
 
 Antagandet är att ett prestandaproblem observeras på en viss sida (antingen en AEM konsol eller en webbsida) och kan återges på ett enhetligt sätt. Att kunna testa eller övervaka prestanda är en förutsättning innan undersökningen inleds.
 
@@ -67,7 +64,7 @@ Analysen börjar med steg 0. Målet är att avgöra vilken enhet (Dispatcher, ex
   <tr>
    <td><strong>Steg 2</strong></td>
    <td>Kommer förfrågningar från externa värdar?</td>
-   <td>Du kan använda standardanalys av HTTP-begäran i webbläsaren för att analysera förfrågningsflödet. Se länkarna ovan om hur du gör den här analysen i Chrome.<br /> </td>
+   <td>Du kan använda standardanalys av HTTP-begäran i webbläsaren för att analysera förfrågningsflödet. Se länkarna ovan om hur du gör analysen i Chrome.<br /> </td>
   </tr>
   <tr>
    <td><strong>Steg 3</strong></td>
@@ -82,7 +79,7 @@ Analysen börjar med steg 0. Målet är att avgöra vilken enhet (Dispatcher, ex
   <tr>
    <td><strong>Steg 5</strong></td>
    <td>Försöker Dispatcher autentisera varje begäran via AEM?</td>
-   <td>Kontrollera om Dispatcher skickar <code>HEAD</code> begäranden om AEM för autentisering innan den cachelagrade resursen levereras. Sök efter <code>HEAD</code> begäranden i AEM <code>access.log</code>. Mer information finns i <a href="/help/sites-deploying/configure-logging.md">Loggning</a>.<br /> </td>
+   <td>Kontrollera om Dispatcher skickar <code>HEAD</code> begäranden om AEM för autentisering innan den cachelagrade resursen levereras. Leta efter <code>HEAD</code> begäranden i AEM <code>access.log</code>. Mer information finns i <a href="/help/sites-deploying/configure-logging.md">Loggning</a>.<br /> </td>
   </tr>
   <tr>
    <td><strong>Steg 6</strong></td>
@@ -172,7 +169,7 @@ Analysen börjar med steg 0. Målet är att avgöra vilken enhet (Dispatcher, ex
   <tr>
    <td><strong>Steg 22 och 22.1</strong></td>
    <td>Cachenivåer</td>
-   <td>Se <a href="/help/sites-deploying/configuring-performance.md#calculating-the-dispatcher-cache-ratio">Beräkna Dispatcher-cachens proportioner</a>.<br /> <br /> </td>
+   <td>Se <a href="/help/sites-deploying/configuring-performance.md#calculating-the-dispatcher-cache-ratio">Beräkna Dispatcher-cachens förhållande</a>.<br /> <br /> </td>
   </tr>
   <tr>
    <td><strong>Steg 23</strong></td>
@@ -232,7 +229,7 @@ Analysen börjar med steg 0. Målet är att avgöra vilken enhet (Dispatcher, ex
   </tr>
   <tr>
    <td><strong>Steg 32</strong></td>
-   <td>Om du vill avlasta AEM server använder du sessionshantering på Dispatcher-nivå</td>
+   <td>Avlasta AEM server med sessionshantering på Dispatcher-nivå</td>
    <td><p><a href="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#enabling-secure-sessions-sessionmanagement">Aktivera säkra sessioner</a></p> </td>
   </tr>
   <tr>
@@ -242,7 +239,7 @@ Analysen börjar med steg 0. Målet är att avgöra vilken enhet (Dispatcher, ex
     <ol>
      <li><a href="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=en">Allmän Dispatcher-konfiguration</a></li>
      <li><a href="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#configuring-the-dispatcher-cache-cache">Konfigurera Dispatcher Cache</a></li>
-    </ol> <p>Hur man förbättrar cachekvoten, gör förfrågningar cachelagrade (god praxis vid utsändning)</p> <p>Titta också på inställningarna nedan för att optimera dina cachelagringskonfigurationer<br /> </p>
+    </ol> <p>Så här förbättrar du cacheförhållandet: gör förfrågningar cachelagrade (Bästa tillvägagångssätt för Dispatcher)</p> <p>Titta också på inställningarna nedan för att optimera dina cachelagringskonfigurationer<br /> </p>
     <ol>
      <li>Ange en regel utan cache för HTTP-begäran som inte är GET</li>
      <li>Konfigurera frågesträngar som inte ska kunna cachelagras</li>
@@ -296,7 +293,7 @@ Analysen börjar med steg 0. Målet är att avgöra vilken enhet (Dispatcher, ex
   </tr>
   <tr>
    <td><strong>Steg 42 och 43</strong></td>
-   <td>Behåll</td>
+   <td>Håll dig uppdaterad</td>
    <td><p>Är <code>Keep-Alive</code> finns det en rubrik i de olika begärandena att återanvända anslutningar? I annat fall innebär det att varje begäran leder till en annan anslutningsanläggning, vilket medför onödiga kostnader. (Standardanalys av HTTP-begäran i webbläsaren)</p> <p>Du kan kontrollera <a href="/help/sites-administering/proxy-jar.md">Proxyserververktyget</a> om du vill kontrollera om det finns anslutningar som inte fungerar.<br /> </p> </td>
   </tr>
   <tr>

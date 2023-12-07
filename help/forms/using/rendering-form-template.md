@@ -1,16 +1,12 @@
 ---
 title: Återger formulärmall för HTML5-formulär
-seo-title: Rendering form template for HTML5 forms
 description: HTML5-formulärprofiler är kopplade till profilåtergivningar. Profilåtergivningar är JSP-sidor som ansvarar för att skapa HTML-representation av formuläret genom att anropa tjänsten Forms OSGi.
-seo-description: HTML5 forms profiles are associated with profile renders. Profile Renders are JSP pages responsible for generating HTML representation of the form by calling the Forms OSGi service.
-uuid: 34daed78-0611-4355-9698-0d7f758e6b61
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
-discoiquuid: cb75b826-d044-44be-b364-790c046513e0
 feature: Mobile Forms
 exl-id: 022b9953-2d64-473f-87b7-aac1602f6a7e
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '535'
 ht-degree: 0%
@@ -23,11 +19,11 @@ ht-degree: 0%
 
 HTML5-blanketter har samma innebörd som **Profiler** som visas som REST-slutpunkter för att aktivera mobil återgivning av formulärmallar. Dessa profiler har associerats **Profilåtergivning**. De är JSP-sidor som ansvarar för att generera HTML-representation av formuläret genom att anropa tjänsten Forms OSGi. JCR-sökvägen för profilnoden avgör URL:en för återgivningens slutpunkt. Standardslutpunkten för återgivningen som pekar på standardprofilen ser ut så här:
 
-https://&lt;*värd*>:&lt;*port*>/content/xfaforms/profiles/default.html?contentRoot=&lt;*sökväg till mappen som innehåller xdp-formuläret*>&amp;template=&lt;*xdp-filens namn*>
+https://&lt;*värd*>:&lt;*port*>/content/xfaforms/profiles/default.html?contentRoot=&lt;*sökväg till mappen som innehåller xdp-formuläret*>&amp;template=&lt;*xdp-namnet*>
 
-Till exempel, `http://localhost:4502/content/xfaforms/profiles/default.html?contentRoot=c:/xdps&template=sampleForm.xdp`
+Exempel: `http://localhost:4502/content/xfaforms/profiles/default.html?contentRoot=c:/xdps&template=sampleForm.xdp`
 
-För en anpassad profil ändras slutpunkten därefter. Slutpunkten för den anpassade profilen med namnet &quot;formulär&quot; är till exempel:
+För en anpassad profil ändras slutpunkten därefter. Slutpunkten för den anpassade profilen med namnet &quot;hrforms&quot; är till exempel:
 
 `http://localhost:4502/content/xfaforms/profiles/hrforms.html?contentRoot=c:/xdps&template=sampleForm.xdp`
 
@@ -41,7 +37,7 @@ http://localhost:4502/content/xfaforms/profiles/default.html?
 
 ## Återgivningsparametrar {#render-parameters}
 
-Begärandeparametrar som stöds vid återgivning av formulär som HTML är:
+Begärandeparametrarna som stöds vid återgivning av formulär som HTML är:
 
 <table>
  <tbody>
@@ -75,7 +71,7 @@ Begärandeparametrar som stöds vid återgivning av formulär som HTML är:
 
 HTML5-formulär har stöd för tre metoder för att skicka återgivningsparametrarna. Du kan skicka parametrar via URL:er, nyckelvärdepar och profilnod. I återgivningsparametern har nyckelvärdepar högsta prioritet följt av profilnod. Parametern URL-begäran har lägst prioritet.
 
-* **Parametrar för URL-begäran**: Du kan ange återgivningsparametrarna i URL:en. I parametrarna för URL-begäran är parametrarna synliga för slutanvändaren. Följande Skicka-URL innehåller mallparameter i URL:en: `http://localhost:4502/content/xfaforms/profiles/default.html?contentRoot=/Applications/FormSubmission/1.0&template=sampleForm.xdp`
+* **Parametrar för URL-begäran**: Du kan ange återgivningsparametrar i URL:en. I parametrarna för URL-begäran är parametrarna synliga för slutanvändaren. Följande Skicka-URL innehåller mallparameter i URL:en: `http://localhost:4502/content/xfaforms/profiles/default.html?contentRoot=/Applications/FormSubmission/1.0&template=sampleForm.xdp`
 
 * **Parametrar för SetAttribute-begäran**: Du kan ange återgivningsparametrarna som ett nyckelvärdepar. I parametrarna för SetAttribute-begäran är parametrarna inte synliga för slutanvändaren. Du kan vidarebefordra en begäran från en annan JSP till HTML5-formulärprofilsåtergivning för JSP och använda *setAttribute* på begäranobjekt för att skicka alla återgivningsparametrar. Den här metoden har högsta prioritet.
 
@@ -83,4 +79,4 @@ HTML5-formulär har stöd för tre metoder för att skicka återgivningsparametr
 
 ### Skicka parametrar {#submit-parameters}
 
-HTML5-blanketterna skickar in uppgifter; köra serverbaserade skript och webbtjänster på AEM servrar. Detaljerad information om parametrar som används för att köra serverbaserade skript och webbtjänster på AEM servrar finns i [HTML5 forms Service Proxy](/help/forms/using/service-proxy.md).
+HTML5-formulär skickar data; kör serverbaserade skript och webbtjänster på AEM servrar. Detaljerad information om parametrar som används för att köra serverbaserade skript och webbtjänster på AEM servrar finns i [HTML5 forms Service Proxy](/help/forms/using/service-proxy.md).

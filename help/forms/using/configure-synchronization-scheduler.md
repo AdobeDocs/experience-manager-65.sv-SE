@@ -1,26 +1,22 @@
 ---
 title: Konfigurera synkroniseringsplaneraren
-seo-title: Configuring the synchronization scheduler
 description: Lär dig hur du migrerar och synkroniserar resurser, konfigurerar schemaläggaren för synkronisering och använder mappar för att ordna resurser.
-seo-description: Learn how to migrate and sync assets, configure sync scheduler, and use folders to arrange assets.
-uuid: b2c89feb-2947-418a-b343-4c01e453602b
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: Configuration
-discoiquuid: 8c8b1998-eab4-4230-b24f-5e96883ba599
 docset: aem65
 role: Admin
 exl-id: 34db1f76-ee40-4612-85da-22041e7560fb
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '286'
+source-wordcount: '288'
 ht-degree: 0%
 
 ---
 
 # Konfigurera synkroniseringsplaneraren {#configuring-the-synchronization-scheduler}
 
-Som standard körs synkroniseringsschemaläggaren efter var tredje minut för att synkronisera alla resurser som ändrats och uppdaterats i databasen via LiveCycle Workbench 11. Program som innehåller formulär och resurser visas i AEM Forms användargränssnitt när synkroniseringsprocessen är klar.
+Som standard körs synkroniseringsschemaläggaren efter var tredje minut för att synkronisera alla resurser som ändrats och uppdaterats i databasen via LiveCyclet Workbench 11. Program som innehåller formulär och resurser visas i AEM Forms användargränssnitt när synkroniseringsprocessen är klar.
 
 ## Ändra intervall för synkroniseringsschemaläggaren {#change-interval-of-the-synchronization-scheduler}
 
@@ -52,7 +48,7 @@ Du kan använda **Synkronisera resurser från databas** om du vill synkronisera 
 
 ## Felsökning av synkroniseringsfel {#troubleshooting-synchronization-error}
 
-Du kan skapa nya program i arbetsflödesdesignern (LiveCycle Workbench).
+Du kan skapa nya program i arbetsflödesdesignern (LiveCyclet Workbench).
 
 Om det nyligen skapade programmet och en mapp på /content/dam/formsanddocuments har samma namn visas ett felmeddelande &quot;*Det finns redan en resurs med samma namn som det här programmet på rotnivå.*&quot; är loggad.
 

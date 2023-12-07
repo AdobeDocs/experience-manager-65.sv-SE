@@ -1,17 +1,13 @@
 ---
 title: Exempel för att integrera komponent för utkast och inlämning med databas
-seo-title: Sample for integrating drafts & submissions component with database
 description: Referera till implementering av anpassade data- och metadatatjänster för att integrera komponenter för utkast och inlämning i en databas.
-seo-description: Reference implementation of customized data and metadata services to integrate drafts and submissions component with a database.
-uuid: ccdb900e-2c2e-4ed3-8a88-5c97aa0092a1
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: publish
-discoiquuid: da96d3d8-a338-470a-8d20-55ea39bd15bf
 exl-id: 2e4f8f51-df02-4bbb-99bb-30181facd1e0
-source-git-commit: a5f3e33a6abe7ac1bbd610a8528fd599d1ffd2aa
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '1413'
+source-wordcount: '1418'
 ht-degree: 0%
 
 ---
@@ -27,9 +23,8 @@ Exemplet, som behandlas i det här dokumentet, är en referensimplementering av 
 >[!NOTE]
 >
 >* De exempel och konfigurationer som beskrivs i det här dokumentet är enligt MySQL 5.6.24 och du måste ersätta dem på lämpligt sätt för ditt databassystem.
->* Kontrollera att du har installerat den senaste versionen av AEM Forms tilläggspaket. En lista över tillgängliga paket finns i [AEM Forms](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) artikel.
+>* Kontrollera att du har installerat den senaste versionen av AEM Forms tilläggspaket. En lista över tillgängliga paket finns i [AEM Forms-versioner](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) artikel.
 >* Exempelpaketet fungerar bara med adaptiva Forms-sändningsåtgärder.
-
 
 ## Konfigurera och konfigurera exemplet {#set-up-and-configure-the-sample}
 
@@ -44,7 +39,7 @@ Utför följande steg på alla författare- och publiceringsinstanser för att i
 1. Gå till AEM på https://[*värd*]:[*port*]/crx/packmgr/.
 1. Klicka på **[!UICONTROL Upload Package]**.
 
-1. Bläddra för att välja **aem-fp-db-integration-sample-pkg-6.1.2.zip** paketera och klicka på **[!UICONTROL OK]**.
+1. Välj **aem-fp-db-integration-sample-pkg-6.1.2.zip** paketera och klicka **[!UICONTROL OK]**.
 1. Klicka **[!UICONTROL Install]** till bredvid paketet för att installera paketet.
 1. Gå till **[!UICONTROL AEM Web Console Configuration]**
 på https://[*värd*]:[*port*]/system/console/configMgr.
@@ -81,11 +76,12 @@ på https://[*värd*]:[*port*]/system/console/configMgr.
    Så här anger du ett annat namn för datatabellen:
 
    * I Web Console Configuration söker du efter och klickar på Exempel på implementering av Forms Portal Data Service. Du kan ändra värdena för datakällan och datatabellnamnet.
+
    >[!NOTE]
    >
    >Om du ändrar tabellnamnen anger du dem i formulärportalskonfigurationen.
 
-1. Låt andra konfigurationer vara som de är och klicka på **[!UICONTROL Save]**.
+1. Låt andra konfigurationer vara och klicka **[!UICONTROL Save]**.
 
 1. Databasanslutningen kan göras via den poolade datakällan för Apache Sling-anslutningen.
 1. För Apache Sling-anslutningen söker du efter och klickar för att öppna **[!UICONTROL Apache Sling Connection Pooled DataSource]** i redigeringsläge i webbkonsolkonfigurationen. Ange värdena för egenskaperna enligt följande tabell:
@@ -141,7 +137,7 @@ på https://[*värd*]:[*port*]/system/console/configMgr.
    <td>100000</td>
   </tr>
   <tr>
-   <td>Testa om Born</td>
+   <td>Testa om Borgen</td>
    <td>Markerad</td>
   </tr>
   <tr>
@@ -164,8 +160,7 @@ på https://[*värd*]:[*port*]/system/console/configMgr.
 >* JDBC-drivrutinen för MySQL ingår inte i exemplet. Se till att du har etablerat dig för den och ange den information som krävs för att konfigurera JDBC-anslutningspoolen.
 >* Peka författaren och publicera instanser för att använda samma databas. Värdet för URI-fältet för JDBC-anslutningen måste vara samma för alla författare- och publiceringsinstanser.
 
-
-1. Låt andra konfigurationer vara som de är och klicka på **[!UICONTROL Save]**.
+1. Låt andra konfigurationer vara och klicka **[!UICONTROL Save]**.
 
 1. Om du redan har en tabell i databasschemat går du vidare till nästa steg.
 
@@ -328,7 +323,7 @@ Databasimplementeringen av Forms Portal använder ytterligare metadatatabell. Ta
 Utför följande steg för att skapa [ett klientbibliotek](/help/sites-developing/clientlibs.md) och använd skriptet:
 
 1. Logga in på CRXDE och navigera till /etc/clientlibs/
-1. Skapa en nod av typen **cq:ClientLibraryFolder** och ange nodens namn. Till exempel, `validation`.
+1. Skapa en nod av typen **cq:ClientLibraryFolder** och ange namnet på noden. Till exempel: `validation`.
 
    Klicka på **[!UICONTROL Save All]**.
 

@@ -1,19 +1,15 @@
 ---
 title: AEM Adobe PhoneGap
-seo-title: AEM Adobe PhoneGap
 description: AEM integreras med PhoneGap så att du enkelt kan skapa appar med AEM sidor. Följ den här sidan för att komma igång med Adobe PhoneGap Enterprise.
-seo-description: AEM integrates with PhoneGap so that you can easily create apps using AEM pages. Follow this page to get started with Adobe PhoneGap Enterprise.
-uuid: bdd90cda-2489-4763-a90a-9c409d6e68ae
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: introduction
 content-type: reference
-discoiquuid: fbcdea8a-72e9-431b-9c32-dc02d4cdb9c8
 exl-id: d989e235-5993-4738-8523-5b9a5f6bf712
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '486'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -41,7 +37,7 @@ AEM Mobile är bara en av de två pelarna som utgör den kompletta AEM.
 
 Innan du börjar arbeta med AEM Mobile och följer stegen i den här guiden bör du känna till AEM och AEM Mobile Control Center. Se:
 
-[Kom igång med AEM](/help/sites-deploying/deploy.md)
+[Komma igång med AEM](/help/sites-deploying/deploy.md)
 
 [En genomgång av AEM Mobile Control Center](/help/mobile/phonegap-authoring-apps.md)
 

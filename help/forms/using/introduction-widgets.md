@@ -1,30 +1,26 @@
 ---
 title: Appearance Framework for adaptive and HTML5 forms
-seo-title: Appearance framework for adaptive and HTML5 forms
 description: Mobile Forms återger formulärmallar som HTML5-formulär. Dessa formulär använder jQuery-, Backbone.js- och Underscore.js-filer för utseendet och för att aktivera skript.
-seo-description: Mobile Forms render Form Templates as HTML5 forms. These forms use jQuery, Backbone.js and Underscore.js files for the appearance and to enable scripting.
-uuid: 183b8d71-44fc-47bf-8cb2-1cf920ffd23a
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: customization
-discoiquuid: 3c2a44a7-24e7-49ee-bf18-eab0e44efa42
 exl-id: 3458471a-9815-463e-8044-68631073863c
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '1170'
+source-wordcount: '1152'
 ht-degree: 1%
 
 ---
 
 # Appearance Framework for adaptive and HTML5 forms {#appearance-framework-for-adaptive-and-html-forms}
 
-Forms (adaptiva formulär och HTML 5-formulär) använder [jQuery](https://jquery.com/), [Backbone.js](https://backbonejs.org/) och [Understreck.js](https://underscorejs.org/) bibliotek för utseende och skript. Formulären använder också [jQuery-gränssnitt](https://jqueryui.com/) **Widgetar** arkitektur för alla interaktiva element (till exempel fält och knappar) i formuläret. Med den här arkitekturen kan formulärutvecklare använda en mängd tillgängliga jQuery-widgetar och plugin-program i Forms. Du kan också implementera formulärspecifik logik samtidigt som du hämtar in data från användare som leadDigits/trailDigits-restriktioner eller implementerar bildklausuler. Formulärutvecklare kan skapa och använda anpassade utseenden för att förbättra datainhämtningen och göra den mer användarvänlig.
+Forms (adaptiva formulär och HTML 5-formulär) använder [jQuery](https://jquery.com/), [Backbone.js](https://backbonejs.org/) och [Understreck.js](https://underscorejs.org/) bibliotek för utseende och skript. Formulären använder också [jQuery-gränssnitt](https://jqueryui.com/) **Widgetar** arkitektur för alla interaktiva element (till exempel fält och knappar) i formuläret. Med den här arkitekturen kan formulärutvecklare använda en mängd tillgängliga jQuery-widgetar och plugin-program i Forms. Du kan också implementera formulärspecifik logik samtidigt som du hämtar in data från användare som leadDigits/trailDigits-begränsningar eller implementerar bildklausuler. Formulärutvecklare kan skapa och använda anpassade utseenden för att förbättra datainhämtningen och göra den mer användarvänlig.
 
 Den här artikeln är avsedd för utvecklare med tillräcklig kunskap om jQuery- och jQuery-widgetar. Den ger insikt i utseenderamverket och gör det möjligt för utvecklare att skapa ett alternativt utseende för ett formulärfält.
 
 Utseenderamverket bygger på olika alternativ, händelser (utlösare) och funktioner för att fånga upp användarinteraktioner med formuläret och svarar på modelländringar för att informera slutanvändaren. Dessutom:
 
-* Ramverket innehåller en uppsättning alternativ för utseendet på ett fält. Dessa alternativ är nyckelvärdepar och indelade i två kategorier: vanliga alternativ och fälttypspecifika alternativ.
+* Ramverket innehåller en uppsättning alternativ för utseendet på ett fält. Dessa alternativ är nyckelvärdepar och indelade i två kategorier: gemensamma alternativ och fälttypsspecifika alternativ.
 * Utseendet, som en del av kontraktet, utlöser en uppsättning händelser som enter och exit.
 * Utseendet krävs för att implementera en uppsättning funktioner. Vissa funktioner är vanliga medan andra är specifika för fälttypsfunktioner.
 
@@ -72,7 +68,7 @@ Här följer de angivna globala alternativen. Dessa alternativ är tillgängliga
   </tr>
   <tr>
    <td>åtkomst</td>
-   <td>Kontroller som används för att komma åt innehållet i ett behållarobjekt, t.ex. ett delformulär.</td>
+   <td>Kontroller som används för att komma åt innehållet i ett behållarobjekt, till exempel ett delformulär.</td>
   </tr>
   <tr>
    <td>paraStyles</td>
@@ -87,7 +83,7 @@ Här följer de angivna globala alternativen. Dessa alternativ är tillgängliga
 
 Förutom dessa alternativ innehåller ramverket några andra alternativ som varierar beroende på fälttypen. Information om fältsspecifika alternativ visas nedan.
 
-### Interaktion med blankettens ramverk {#interaction-with-forms-framework}
+### Interaktion med formulärramverk {#interaction-with-forms-framework}
 
 För att interagera med formulärramverket utlöser en widget vissa händelser som gör att formulärskriptet kan fungera. Om widgeten inte genererar dessa händelser fungerar inte vissa av skripten som är skrivna i formuläret för det fältet.
 
@@ -125,19 +121,19 @@ Utseenderamverket anropar vissa funktioner i widgeten som implementeras i de anp
 <table>
  <tbody>
   <tr>
-   <th> -funktion</th>
+   <th>Funktion</th>
    <th>Beskrivning</th>
   </tr>
   <tr>
-   <td>fokus: function()</td>
+   <td>focus: function()</td>
    <td>Fokuserar på fältet.</td>
   </tr>
   <tr>
-   <td>klicka: function()</td>
+   <td>click: function()</td>
    <td>Fokuserar på fältet och anropar XFA_CLICK_EVENT.</td>
   </tr>
   <tr>
-   <td><p>markError:function(errorMessage, errorType)<br /> <br /> <em>errorMessage: string </em>som representerar felet<br /> <em>errorType: string ("warning"/"error")</em></p> <p><strong>Anteckning</strong>: Gäller endast för HTML5-formulär.</p> </td>
+   <td><p>markError:function(errorMessage, errorType)<br /> <br /> <em>errorMessage: string </em>som representerar felet<br /> <em>errorType: sträng ("warning"/"error")</em></p> <p><strong>Anteckning</strong>: Gäller endast för HTML5-formulär.</p> </td>
    <td>Skickar felmeddelande och feltyp till widgeten. Widgeten visar felet.</td>
   </tr>
   <tr>
@@ -160,7 +156,7 @@ Alla anpassade widgetar ska följa ovanstående specifikationer. Om du vill anv�
    <th>Beskrivning</th>
   </tr>
   <tr>
-   <td>flerradig</td>
+   <td>flera</td>
    <td>True if the field supports in a newline character, else false.</td>
   </tr>
   <tr>
@@ -188,11 +184,11 @@ Alla anpassade widgetar ska följa ovanstående specifikationer. Om du vill anv�
   </tr>
   <tr>
    <td>objekt<br /> </td>
-   <td>Array med objekt som ska visas som alternativ. Varje objekt innehåller två egenskaper -<br /> spara: värde att spara, visa: värde som ska visas.<br /> <br /> </td>
+   <td>Array med objekt som ska visas som alternativ. Varje objekt innehåller två egenskaper -<br /> spara: värde att spara, visa: värde att visa.<br /> <br /> </td>
   </tr>
   <tr>
    <td><p>redigerbar</p> <p><strong>Anteckning</strong>: Gäller endast för HTML5-formulär.<br /> </p> </td>
-   <td>Om värdet är true aktiveras anpassad textinmatning i widgeten.<br /> </td>
+   <td>Om värdet är true aktiveras anpassad text i widgeten.<br /> </td>
   </tr>
   <tr>
    <td>displayValue<br /> </td>
@@ -210,11 +206,11 @@ Alla anpassade widgetar ska följa ovanstående specifikationer. Om du vill anv�
 <table>
  <tbody>
   <tr>
-   <th> -funktion</th>
+   <th>Funktion</th>
    <th>Beskrivning</th>
   </tr>
   <tr>
-   <td><p>addItem:<em> function(itemValues)<br /> itemValues: objekt som innehåller visnings- och sparningsvärdet <br /> {sDisplayVal: &lt;displayvalue&gt;, sSaveVal: &lt;save value=""&gt;}</em></p> </td>
+   <td><p>addItem:<em> function(itemValues)<br /> itemValues: objekt som innehåller värdet för att visa och spara <br /> {sDisplayVal: &lt;displayvalue&gt;, sSaveVal: &lt;save value=""&gt;}</em></p> </td>
    <td>Lägger till ett objekt i listan.</td>
   </tr>
   <tr>
@@ -234,7 +230,7 @@ Alla anpassade widgetar ska följa ovanstående specifikationer. Om du vill anv�
 |---|---|
 | dataType | Sträng som representerar fältets datatyp (heltal/decimal). |
 | leadDigits | Högsta tillåtna radavståndssiffror i decimaltal. |
-| fracDigits | Högsta tillåtna decimaltal i bråktal. |
+| fracDigits | Högsta tillåtna decimaltal. |
 | noll | Strängbeteckning för noll i fältets nationella inställningar. |
 | decimal | Strängbeteckning för decimal i fältets nationella inställningar. |
 

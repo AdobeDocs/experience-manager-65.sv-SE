@@ -1,16 +1,14 @@
 ---
 title: Felsökning av Adobe Campaign Classic-integrering
 description: Lär dig hur du felsöker problem med Adobe Campaign Classic-integreringen.
-uuid: 835ac2c3-ef2f-4963-9047-aeda3647b114
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
 content-type: reference
-discoiquuid: b1d45f01-78de-423c-8f6b-5cb7067c3a2f
 exl-id: 317bab41-3504-4e46-9ddc-72e291a34e06
-source-git-commit: e85aacd45a2bbc38f10d03915e68286f0a55364e
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '815'
+source-wordcount: '802'
 ht-degree: 0%
 
 ---
@@ -84,11 +82,11 @@ Använd följande lösning på Adobe Campaign Classic-servern.
 
 ## Om Adobe Campaign Classic visar ett fel när du klickar på Synkronisera {#if-adobe-campaign-displays-an-error-when-clicking-the-synchronize-button}
 
-När du klickar på **Synkronisera** i Adobe Campaign Classic kan följande fel visas.
+När du klickar **Synkronisera** i Adobe Campaign Classic kan följande fel visas.
 
 * `Error while executing the method 'aemListContent' of service [nms:delivery](https://nmsdelivery/)`
 
-Kontrollera att den AEM URL:en som är konfigurerad i **Externa konton** i Adobe Campaign Classic kan nås från datorn.
+Kontrollera att den AEM anslutningsadressen som konfigurerats i **Externa konton** i Adobe Campaign Classic kan nås från datorn.
 
 Byt från `localhost` till en IP-adress för URL:en kan ofta lösa problemet.
 
@@ -122,9 +120,9 @@ at sun.security.ssl.AppOutputStream.write(Unknown Source)
 
 När du försöker synkronisera innehåll i Adobe Campaign Classic returnerar AEM en lista med nyhetsbrev. URL:erna till nyhetsbreven i listan kan dock vara HTTP-adresser i stället för HTTPS. När du väljer ett av objekten i listan inträffar ett fel. Det här felet kan inträffa med följande inställningar.
 
-* Värdbaserad Adobe Campaign med https för kommunikation med AEM Author
+* Värdbaserad Adobe Campaign med https för kommunikation med AEM författare
 * Återför proxy som avslutar SSL
-* AEM Author-instans på plats
+* Instans AEM författare
 
 Så här löser du problemet:
 
@@ -143,4 +141,4 @@ Felet kan visas `com.day.cq.mcm.campaign.servlets.util.ParameterMapper` i AEM lo
 
 Det här felet inträffar om `acMapping` egenskapen är inställd på ett annat värde än `recipient.firstName`skapas ett tomt värde i Adobe Campaign Manager.
 
-Om det här felet inträffar installerar du funktionspaket 6576 för AEM från [Paketresurs](/help/sites-administering/package-manager.md#package-share).
+Installera funktionspaket 6576 för AEM från [Paketresurs](/help/sites-administering/package-manager.md#package-share).

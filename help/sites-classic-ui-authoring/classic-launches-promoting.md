@@ -1,22 +1,20 @@
 ---
-title: Marknadsföra Launches
+title: Befordra lanseringar
 description: Du måste befordra startsidor för att kunna flytta tillbaka innehållet till källan (produktionen) innan du publicerar. När en startsida befordras ersätts motsvarande sida på källsidorna med innehållet på den befordrade sidan.
-uuid: 91f1c6ac-8c4e-4459-aaab-feaa32befc45
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: site-features
-discoiquuid: 8d38c6f7-8fea-4d27-992d-03b604b9541f
 legacypath: /content/docs/en/aem/6-0/author/site-page-features/launches
 exl-id: 3013adc3-bec6-4ecc-aefd-f8df2b86dfef
-source-git-commit: f4b6eb2ded17ec641f23a1fc3b977ce77169c8a1
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '314'
-ht-degree: 3%
+source-wordcount: '315'
+ht-degree: 0%
 
 ---
 
-# Marknadsföra Launches{#promoting-launches}
+# Befordra lanseringar{#promoting-launches}
 
 Du måste befordra startsidor för att kunna flytta tillbaka innehållet till källan (produktionen) innan du publicerar. När en startsida befordras ersätts motsvarande sida på källsidorna med innehållet på den befordrade sidan. Följande alternativ är tillgängliga när du befordrar en startsida:
 
@@ -28,7 +26,7 @@ Du måste befordra startsidor för att kunna flytta tillbaka innehållet till k�
 
 Om du vill befordra sidor utför du följande steg när du redigerar startsidan som du vill befordra:
 
-1. På **Sida** -flik i Sidekick, klicka **Promote Launch**.
+1. På **Sida** i Sidekick, klicka på **Promote Launch**.
 1. Ange vilka sidor som ska befordras:
 
    * (Standard) Om du bara vill befordra den aktuella sidan väljer du **Befordra sidändringar till produktionsversion**.
@@ -38,7 +36,7 @@ Om du vill befordra sidor utför du följande steg när du redigerar startsidan 
 1. Om du vill lägga till produktionssidorna i ett arbetsflödespaket väljer du **Lägg till i arbetsflödespaket** och välj sedan arbetsflödespaketet.
 1. Klicka **Befordra**.
 
-## Bearbeta befordrade sidor med AEM Workflow {#processing-promoted-pages-using-aem-workflow}
+## Bearbeta befordrade sidor med AEM arbetsflöde {#processing-promoted-pages-using-aem-workflow}
 
 Använd arbetsflödesmodeller för att utföra massbearbetning av befordrade startsidor:
 

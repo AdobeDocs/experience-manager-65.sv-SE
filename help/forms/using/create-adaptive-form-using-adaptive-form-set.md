@@ -1,29 +1,25 @@
 ---
 title: Skapa ett anpassat formulär med hjälp av en uppsättning anpassningsbara formulär
-seo-title: Create an adaptive form using a set of adaptive forms
 description: Med AEM Forms kan du sammanföra adaptiva formulär och ta fram ett enda stort anpassat formulär och förstå dess funktioner.
-seo-description: With AEM Forms, bring adaptive forms together to author a single large adaptive form, and understand its features.
-uuid: e52e4f90-8821-49ec-89ff-fbf07db69bd2
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
-discoiquuid: 264aa8c0-ba64-4768-b3d1-1b9baa6b4d72
 docset: aem65
 feature: Adaptive Forms
 exl-id: 4254c2cb-66cc-4a46-b447-bc5e32def7a0
-source-git-commit: e7a3558ae04cd6816ed73589c67b0297f05adce2
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '626'
+source-wordcount: '620'
 ht-degree: 0%
 
 ---
 
 # Skapa ett anpassat formulär med hjälp av en uppsättning anpassningsbara formulär{#create-an-adaptive-form-using-a-set-of-adaptive-forms}
 
-<span class="preview"> Adobe rekommenderar att man använder modern och utbyggbar datainhämtning [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) for [skapa ny Adaptive Forms](/help/forms/using/create-an-adaptive-form-core-components.md) eller [lägga till adaptiv Forms på AEM Sites-sidor](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-program, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptive Forms med grundläggande komponenter. </span>
+<span class="preview"> Adobe rekommenderar att man använder modern och utbyggbar datainhämtning [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) for [skapa ny Adaptive Forms](/help/forms/using/create-an-adaptive-form-core-components.md) eller [lägga till adaptiv Forms på AEM Sites-sidor](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-filer, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptiv Forms med baskomponenter. </span>
 
-## Översikt {#overview}
+## Ökning {#overview}
 
-I ett arbetsflöde, till exempel ett program för att öppna ett bankkonto, fyller dina användare i flera formulär. I stället för att be dem fylla i en uppsättning formulär kan du stapla formulären tillsammans och skapa ett stort formulär (överordnat formulär). När du lägger till ett anpassat formulär i det större formuläret läggs det till som en panel (underordnat formulär). Du lägger till en uppsättning med underordnade formulär för att skapa ett överordnat formulär. Du kan visa eller dölja paneler baserat på användarindata. Knappar i det överordnade formuläret, som Skicka och återställ, skriver över knapparna i det underordnade formuläret. Om du vill lägga till ett anpassat formulär i det överordnade formuläret kan du dra och släppa det anpassningsbara formuläret från resursläsaren (som adaptiva formulärfragment).
+I ett arbetsflöde, till exempel ett program för att öppna ett bankkonto, fyller dina användare i flera formulär. I stället för att be dem fylla i en uppsättning formulär kan du stapla formulären tillsammans och skapa ett stort formulär (överordnat formulär). När du lägger till ett anpassat formulär i det större formuläret läggs det till som en panel (underordnat formulär). Du lägger till en uppsättning med underordnade formulär för att skapa ett överordnat formulär. Du kan visa eller dölja paneler baserat på användarindata. Knappar i det överordnade formuläret, till exempel skicka och återställ, skriver över knapparna i det underordnade formuläret. Om du vill lägga till ett anpassat formulär i det överordnade formuläret kan du dra och släppa det anpassningsbara formuläret från resursläsaren (som adaptiva formulärfragment).
 
 Tillgängliga funktioner är:
 
@@ -41,7 +37,7 @@ Funktioner som oberoende redigering och lat inläsning ger prestandaförbättrin
 
 Du kan lägga till XSD-baserade adaptiva formulär och fragment i det överordnade formuläret. Det överordnade formulärets struktur är densamma som [alla anpassningsbara formulär](../../forms/using/prepopulate-adaptive-form-fields.md). När du lägger till ett anpassat formulär som ett underordnat formulär läggs det till som en panel i det överordnade formuläret. Data i ett bundet underordnat formulär lagras under `data`roten i `afBoundData` i det överordnade formulärets XML-schema.
 
-Kunderna fyller t.ex. i en ansökningsblankett. De två första fälten i formuläret är namn och identitet. Dess XML är:
+Kunderna fyller t.ex. i en ansökningsblankett. De två första fälten i formuläret är namn och identitet. XML:
 
 ```xml
 <afData>
@@ -77,7 +73,7 @@ Du lägger till ett annat formulär i programmet som gör att dina kunder kan fy
 </afData>
 ```
 
-Om du infogar ett annat formulär där kunderna kan ange sin hemadress ska du använda `bindref` `/application/houseAddress or /houseAddress.`XML ser ut så här:
+Om du infogar ett annat formulär där kunderna kan ange sin hemadress, ska du använda `bindref` `/application/houseAddress or /houseAddress.`XML ser ut så här:
 
 ```xml
 <afData>
@@ -137,7 +133,7 @@ Du kan lägga till ett anpassat formulär som ett underordnat formulär flera g�
 >
 >Om olika formulär/fragment mappas till samma underrot skrivs data över.
 
-## Lägga till ett anpassat formulär som ett underordnat formulär med hjälp av resursläsaren {#adding-an-adaptive-form-as-a-child-form-using-asset-browser}
+## Lägga till ett adaptivt formulär som ett underordnat formulär med hjälp av resursläsaren {#adding-an-adaptive-form-as-a-child-form-using-asset-browser}
 
 Utför följande steg för att lägga till ett anpassat formulär som ett underordnat formulär med hjälp av resursläsaren.
 

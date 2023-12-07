@@ -1,16 +1,12 @@
 ---
 title: Översikt över Forms arbetsflöde
-seo-title: Overview of Forms workflow
 description: Med Forms arbetsflöde kan man utforma, hantera och optimera humancentrerade processer. Med hjälp av arbetsflöden för blanketter kan man också hantera automatiserade affärsprocesslösningar som knyter samman system och människor.
-seo-description: Forms workflow lets users design, manage, and optimize human-centric processes. Using forms workflow, users can also manage automated business-process applications that connect systems and people.
-uuid: b28ada7c-de75-416a-b2c8-f6494be5330c
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/configuring_forms_workflow
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: 7d2a9de8-13d1-4981-9ba2-9654127556b8
 exl-id: 68a9d95a-d51c-4a97-ae36-d4cb16c6fac0
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '254'
 ht-degree: 0%
@@ -91,7 +87,7 @@ På varje Forms-arbetsflödessida i administrationskonsolen kan du utföra olika
    <td><p>Frånvarande</p></td>
    <td>
     <ul>
-     <li><p>Visa information om frånvaro för en användare</p></li>
+     <li><p>Visa användarens frånvaroinformation</p></li>
      <li><p>Ändra användarens status (antingen på eller utanför kontoret)</p></li>
      <li><p>Lägg till ett inaktivt datumintervall </p></li>
      <li><p>Ange vad som ska göras med uppgifter när användaren är frånvarande</p></li>

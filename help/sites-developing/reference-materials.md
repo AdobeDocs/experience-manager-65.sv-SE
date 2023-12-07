@@ -1,20 +1,16 @@
 ---
 title: API-stödlinjer
-seo-title: API Guides
 description: Dokumentation för API:er som AEM tillhandahåller för utveckling av program
-seo-description: Documentation for the APIs that AEM provides for developing applications
-uuid: d998b23c-5b0a-462f-a733-02cf979de2d0
 contentOwner: Guillaume Carlino
 topic-tags: introduction
 audience: developing
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/SITES
-discoiquuid: d8c9c2db-6709-409a-93d0-11b802763ada
 docset: aem65
 exl-id: 8d8a7237-8e87-4730-be90-2a18144fc65a
-source-git-commit: d6c875e85d553b8ef557b811c9fa43f46824f297
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '263'
+source-wordcount: '192'
 ht-degree: 0%
 
 ---
@@ -45,7 +41,7 @@ AEM Delivery and Content Management APIs:
    * [Aktivera JSON-export för en komponent](/help/sites-developing/json-exporter-components.md)
    * Se [Komponentdelen i användarhandboken för utveckling](/help/sites-developing/home.md) för mer information
 
-* **Resurser**: Med Assets HTTP API kan du skapa/läsa/uppdatera/ta bort-åtgärder (CRUD) för Assets, inklusive binära filer, metadata, återgivningar och kommentarer. Se [AEM Assets HTTP API](/help/assets/mac-api-assets.md)
+* **Resurser**: Med Assets HTTP API kan du skapa/läsa-uppdatera-ta bort (CRUD)-åtgärder för resurser, inklusive binära filer, metadata, återgivningar och kommentarer. Se [AEM ASSETS HTTP API](/help/assets/mac-api-assets.md)
 
 * **Innehållsfragment** (CF): [CF-stöd i Assets HTTP API](/help/assets/assets-api-content-fragments.md) och [AEM Assets API - innehållsfragment](https://www.adobe.io/experience-manager/reference-materials/6-5/assets-api-content-fragments/index.html)
 

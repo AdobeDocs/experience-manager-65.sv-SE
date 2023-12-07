@@ -1,19 +1,15 @@
 ---
 title: Arbeta med formulär i AEM Forms arbetsyta
-seo-title: Working with Formsets in AEM Forms workspace
 description: En formuläruppsättning är en samling HTML5-formulär som grupperas och presenteras som en enda formuläruppsättning för slutanvändarna. Lär dig hur du kan arbeta med formatuppsättningar i AEM Forms arbetsyta.
-seo-description: A formset is a collection of HTML5 forms grouped and presented as a single set of forms to end users. Learn how you can work with formsets in AEM Forms workspace.
-uuid: 1a5f3ce8-1d6a-497e-90d0-49765e40cf3b
 contentOwner: vishgupt
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
-discoiquuid: f550b747-2def-4317-9ef7-dc6c1e7bb404
 docset: aem65
 exl-id: 76a8f93f-eb8a-4e68-8626-efa6dc67668f
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '346'
+source-wordcount: '344'
 ht-degree: 0%
 
 ---
@@ -35,11 +31,11 @@ AEM Forms arbetsyta stöder formatuppsättningar. Med formuläruppsättningar ka
 
    ![2-1](assets/2-1.png)
 
-1. Klicka på **Format** väljer du den relevanta formuppsättningen i listan och klickar sedan på **OK**.
+1. Klicka på **Formset** väljer du den relevanta formuppsättningen i listan och klickar sedan på **OK**.
 
 1. Distribuera programmet efter uppdatering av andra relevanta processegenskaper.
 
-## Använda formatuppsättningar i AEM Forms arbetsyta {#using-formset-in-nbsp-aem-forms-workspace}
+## Använda formatuppsättningar på arbetsytan i AEM Forms {#using-formset-in-nbsp-aem-forms-workspace}
 
 När en formuläruppsättning är kopplad till en startpunkt kan startpunkten anropas från arbetsytan i AEM Forms, precis som vilken startpunkt som helst.
 
@@ -57,4 +53,4 @@ De åtgärder som stöds för formatuppsättningar via arbetsytan i AEM Forms ä
 
 >[!NOTE]
 >
->Om du vill förbättra prestandan när du flyttar från föregående och nästa formulär i en formuläruppsättning, ska du använda alla arbetsyteknappar (Bakåt, Nästa, Spara, Skicka och ... (Mer) inaktiveras tills det aktuella formuläret återges fullständigt.
+>Om du vill förbättra prestandan när du flyttar från föregående och nästa formulär i en formuläruppsättning inaktiveras alla arbetsyteknappar (Bakåt, Nästa, Spara, Skicka och ... (Mer)) tills det aktuella formuläret återges fullständigt.

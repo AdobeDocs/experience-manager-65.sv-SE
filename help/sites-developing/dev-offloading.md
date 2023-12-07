@@ -1,18 +1,14 @@
 ---
 title: Skapa och använda jobb för avlastning
-seo-title: Creating and Consuming Jobs for Offloading
 description: Funktionen Apache Sling Discovery innehåller ett Java-API som gör att du kan skapa JobManager-jobb och JobConsumer-tjänster som använder dem
-seo-description: The Apache Sling Discovery feature provides a Java API that enables you to create JobManager jobs and JobConsumer services that consume them
-uuid: d6a5beb0-0618-4b61-9b52-570862eac920
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: platform
 content-type: reference
-discoiquuid: e7b6b9ee-d807-4eb0-8e96-75ca1e66a4e4
 exl-id: 4e6f452d-0251-46f3-ba29-1bd85cda73a6
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '392'
+source-wordcount: '393'
 ht-degree: 0%
 
 ---
@@ -42,7 +38,7 @@ Jobb kräver inte nyttolaster. Nyttolasten är dock nödvändig om jobbet kräve
 Skapa en klient som anropar metoden JobManager.addJob för att skapa ett jobb som en automatiskt vald JobConsumer kör. Ange följande information för att skapa jobbet:
 
 * Ämne: Jobbämnet.
-* Namn: (Valfritt)
+* Namn: (valfritt)
 * Egenskapskarta: A `Map<String, Object>` objekt som innehåller ett obegränsat antal egenskaper, t.ex. indatanyttolastsökvägar och utdatanyttolastsökvägar. Det här Map-objektet är tillgängligt för det JobConsumer-objekt som kör jobbet.
 
 I följande exempeltjänst skapas ett jobb för ett givet ämne och en angiven nyttolastsökväg.
@@ -93,7 +89,7 @@ public class JobGeneratorImpl implements JobGenerator  {
 }
 ```
 
-Loggen innehåller följande meddelande när JobGeneratorImpl.createJob anropas för `com/adobe/example/offloading` och `/content/geometrixx/de/services` nyttolast:
+Loggen innehåller följande meddelande när JobGeneratorImpl.createJob anropas för `com/adobe/example/offloading` ämne och `/content/geometrixx/de/services` nyttolast:
 
 ```shell
 10.06.2013 15:43:33.868 *INFO* [JobHandler: /etc/workflow/instances/2013-06-10/model_1554418768647484:/content/geometrixx/en/company] com.adobe.example.offloading.JobGeneratorImpl Received request to make job for topic com/adobe/example/offloading and payload /content/geometrixx/de/services

@@ -1,17 +1,13 @@
 ---
 title: Startar och stoppar WebLogic-servern
-seo-title: Starting and stopping WebLogic Server
 description: Flera procedurer kräver att du startar eller stoppar instansen av WebLogic Server där du vill distribuera AEM formulärmoduler. I det här dokumentet beskrivs hur du startar och stoppar WebLogic-servern.
-seo-description: Several procedures require you to start or stop the instance of WebLogic Server where you want to deploy AEM forms modules. This document describes how to start and stop the WebLogic Server.
-uuid: 957787fe-4cea-4ecd-b49a-c33023c5c309
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/maintaining_the_application_server
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: c908d064-6596-473a-b218-22a2496c83f7
-source-git-commit: d1fc2ff44378276522c2ff3208f5b3bdc4484bba
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '601'
+source-wordcount: '603'
 ht-degree: 0%
 
 ---
@@ -54,7 +50,7 @@ Flera procedurer kräver att du startar eller stoppar instansen av WebLogic Serv
 
 ## Starta WebLogic-server {#start-weblogic-server}
 
-1. Gå till *[appserver root]*/user_projects/domains/*[appserverdomain]*.
+1. Från en kommandotolk går du till *[appserver root]*/user_projects/domains/*[appserverdomain]*.
 1. Ange följande kommando:
 
    * (Windows) `startWebLogic.cmd`
@@ -81,11 +77,11 @@ Administrationskonsolen för WebLogic Server är inte längre tillgänglig och k
    * (Linux, UNIX) ./ `startWebLogic.sh`
 
 1. Öppna administrationskonsolen för WebLogic-servern genom att skriva `https://[host name]:[port]/console` på URL-raden i en webbläsare, där *[port]* är den osäkra lyssningsporten. Portvärdet är som standard 7001.
-1. På inloggningsskärmen skriver du ditt administratörsanvändarnamn och lösenord och klickar på Logga in.
+1. På inloggningsskärmen skriver du ditt användarnamn och lösenord och klickar på Logga in.
 
 ## Starta nodhanteraren {#start-node-manager}
 
-1. Kontrollera att WebLogic Server körs.
+1. Kontrollera att WebLogic-servern körs.
 1. Från en ny kommandotolk går du till *[appserver root]*/server/bin.
 1. Ange följande kommando:
 
@@ -94,7 +90,7 @@ Administrationskonsolen för WebLogic Server är inte längre tillgänglig och k
 
 ## Stoppa nodhanteraren {#stop-node-manager}
 
-När du har stängt av WebLogic Server kan du stänga den kommandotolk som du kallade Node Manager från.
+När du har stängt av WebLogic Server kan du stänga den kommandotolk som du kallade Node Manager för.
 
 ## Starta en WebLogic-hanterad server {#start-a-weblogic-managed-server}
 

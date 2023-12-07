@@ -1,12 +1,11 @@
 ---
 title: Adobe Experience Manager Mobile - GDPR-beredskap
 description: Läs om hur Adobe Experience Manager kan hjälpa er med er GDPR-efterlevnadsskyldigheter.
-uuid: 817c434f-4b78-40f7-99d6-6efafdedb77e
 contentOwner: trushton
 exl-id: d06e675f-fb61-47da-85de-e0b50dd44153
-source-git-commit: 06a6d4e0ba2aeaefcfb238233dd98e8bbd6731da
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '694'
+source-wordcount: '683'
 ht-degree: 0%
 
 ---

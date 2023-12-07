@@ -1,18 +1,14 @@
 ---
 title: Namnkonventioner för tillgångstestning
-seo-title: Naming conventions for assets
 description: Noderna i databasen omfattas av namnkonventioner i Java Content Repository. Adobe Experience Manager inför dock ytterligare konventioner för resursnodernas namn.
-seo-description: Nodes in the repository are subject to naming conventions of the Java Content Repository. However, Adobe Experience Manager imposes further conventions for the name of asset nodes.
-uuid: 6b622a60-90e8-461e-9b67-42c11c7038f9
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: authoring
 content-type: reference
-discoiquuid: 55e66c66-0120-4ed4-94c5-d65a434bb59b
 exl-id: bb6a5913-0871-47c7-8641-936e98920ec0
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '128'
+source-wordcount: '131'
 ht-degree: 0%
 
 ---
@@ -28,7 +24,7 @@ Det klassiska användargränssnittet har tätare begränsningar:
 * Validerar resursnamnet när ett explicit nodnamn är:
 
    * en resurstitel tillhandahålls för konvertering till nodnamnet
-   * ett explicit nodnamn anges
+   * ett explicit nodnamn har angetts
 
 * Giltiga tecken (endast dessa tecken är giltiga när en resurs skapas i det klassiska användargränssnittet):
 

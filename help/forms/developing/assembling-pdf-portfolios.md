@@ -1,20 +1,16 @@
 ---
 title: Samla PDF Portfolio
-seo-title: Assembling PDF Portfolios
 description: Sammanställ en PDF-portfolio och kombinera flera olika typer av dokument, t.ex. Word-filer, bildfiler och PDF-dokument. Du kan sätta ihop en PDF-portfölj med ett Java API och ett Web Service API.
-seo-description: Assemble a PDF portfolio to combine several documents of various types, including word file, image files, and PDF documents. You can assemble a PDF portfolio using a Java API and a Web Service API.
-uuid: 1778c90b-9d26-466b-a7c7-401d737395e0
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/assembling_pdf_documents
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
-discoiquuid: 023f0d9e-bfde-4879-a839-085fadffb48e
 role: Developer
 exl-id: d2bd7c3e-4f75-4234-a7aa-ee8524430493
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '1828'
+source-wordcount: '1815'
 ht-degree: 0%
 
 ---
@@ -25,7 +21,7 @@ ht-degree: 0%
 
 Du kan sätta ihop ett PDF Portfolio med Assembler Java och webbtjänstens API. En portfölj kan kombinera flera dokument av olika typer, inklusive ordfiler, bildfiler (till exempel en jpeg-fil) och PDF-dokument. Portföljens layout kan anges till olika format som *Stödraster med förhandsvisning*, *På en bild* layout eller jämn *Rotera*.
 
-Följande bild är en skärmbild av en portfölj med *På en bild* formatlayout.
+Följande bild är en skärmbild av en portfölj med *På en bild* stillayout.
 
 ![ap_ap_portfolio](assets/ap_ap_portfolio.png)
 
@@ -95,7 +91,7 @@ Skapa en Assembler-tjänstklient innan du programmässigt utför en Assembler-å
 
 Ett DDX-dokument måste refereras till för att du ska kunna sätta ihop ett PDF Portfolio. Det här DDX-dokumentet måste innehålla `Portfolio`, `Navigator` och `PackageFiles` -element.
 
-**Referera till önskade dokument**
+**Referera till de dokument som krävs**
 
 Om du vill montera ett PDF Portfolio refererar du till alla filer som representerar de dokument som ska monteras. Skicka till exempel alla bildfiler som har angetts i DDX-dokumentet till Assembler-tjänsten. Observera att det finns referenser till dessa filer i det DDX-dokument som anges i det här avsnittet: *myImage.png* och *saint_bernard.jpg*.
 
@@ -139,7 +135,7 @@ Sätt ihop ett PDF Portfolio med hjälp av Assembler Service API (Java):
 
 1. Inkludera projektfiler.
 
-   Inkludera JAR-klientfiler, t.ex. adobe-assembler-client.jar, i Java-projektets klassökväg.
+   Inkludera JAR-klientfiler, som adobe-assembler-client.jar, i Java-projektets klassökväg.
 
 1. Skapa en PDF Assembler-klient.
 
@@ -148,7 +144,7 @@ Sätt ihop ett PDF Portfolio med hjälp av Assembler Service API (Java):
 
 1. Referera till ett befintligt DDX-dokument.
 
-   * Skapa en `java.io.FileInputStream` som representerar DDX-dokumentet genom att använda dess konstruktor och skicka ett strängvärde som anger platsen för DDX-filen.
+   * Skapa en `java.io.FileInputStream` -objekt som representerar DDX-dokumentet genom att använda dess konstruktor och skicka ett strängvärde som anger platsen för DDX-filen.
    * Skapa en `com.adobe.idp.Document` genom att använda konstruktorn och skicka `java.io.FileInputStream` -objekt.
 
 1. Referera till önskade dokument.
@@ -159,7 +155,7 @@ Sätt ihop ett PDF Portfolio med hjälp av Assembler Service API (Java):
    * Lägg till en post i `java.util.Map` genom att anropa dess `put` och skicka följande argument:
 
       * Ett strängvärde som representerar nyckelnamnet. Detta värde måste matcha värdet för källelementet som anges i DDX-dokumentet. (upprepa den här uppgiften för varje fil som krävs för att skapa en portfölj).
-      * A `com.adobe.idp.Document` som innehåller dokumentet PDF. (upprepa den här uppgiften för varje fil som krävs för att skapa en portfölj).
+      * A `com.adobe.idp.Document` -objekt som innehåller dokumentet PDF. (upprepa den här uppgiften för varje fil som krävs för att skapa en portfölj).
 
 1. Ange körningsalternativ.
 
@@ -186,7 +182,7 @@ Sätt ihop ett PDF Portfolio med hjälp av Assembler Service API (Java):
 
 **Se även**
 
-[Snabbstart (SOAP-läge): Samla ihop PDF Portfolio med Java API](/help/forms/developing/assembler-service-java-api-quick.md#quick-start-soap-mode-assembling-pdf-portfolios-using-the-java-api)
+[Snabbstart (SOAP-läge): Samla in PDF Portfolio med Java API](/help/forms/developing/assembler-service-java-api-quick.md#quick-start-soap-mode-assembling-pdf-portfolios-using-the-java-api)
 
 [Inkludera AEM Forms Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -202,13 +198,13 @@ Sätt ihop ett PDF Portfolio med Assembler Service API (webbtjänst):
 
    >[!NOTE]
    >
-   >Ersätt `localhost` med IP-adressen till den server som är värd för AEM Forms.
+   >Ersätt `localhost` med IP-adressen till den server där AEM Forms finns.
 
 1. Skapa en PDF Assembler-klient.
 
    * Skapa en `AssemblerServiceClient` genom att använda dess standardkonstruktor.
    * Skapa en `AssemblerServiceClient.Endpoint.Address` genom att använda `System.ServiceModel.EndpointAddress` konstruktor. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/AssemblerService?blob=mtom`). Du behöver inte använda `lc_version` -attribut. Det här attributet används när du skapar en tjänstreferens.
-   * Skapa en `System.ServiceModel.BasicHttpBinding` genom att hämta värdet för `AssemblerServiceClient.Endpoint.Binding` fält. Sänd returvärdet till `BasicHttpBinding`.
+   * Skapa en `System.ServiceModel.BasicHttpBinding` genom att hämta värdet för `AssemblerServiceClient.Endpoint.Binding` fält. Skicka returvärdet till `BasicHttpBinding`.
    * Ange `System.ServiceModel.BasicHttpBinding` objektets `MessageEncoding` fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
    * Aktivera grundläggande HTTP-autentisering genom att utföra följande åtgärder:
 
@@ -227,15 +223,15 @@ Sätt ihop ett PDF Portfolio med Assembler Service API (webbtjänst):
 
 1. Referera till önskade dokument.
 
-   * För varje indatafil skapar du en `BLOB` genom att använda dess konstruktor. The `BLOB` -objektet används för att lagra indatafilen.
+   * Skapa en `BLOB` genom att använda dess konstruktor. The `BLOB` -objektet används för att lagra indatafilen.
    * Skapa en `System.IO.FileStream` genom att anropa dess konstruktor och skicka ett strängvärde som representerar indatafilens filplats och det läge i vilket filen ska öppnas.
    * Skapa en bytearray som lagrar innehållet i `System.IO.FileStream` -objekt. Du kan bestämma storleken på bytearrayen genom att hämta `System.IO.FileStream` objektets `Length` -egenskap.
    * Fylla i bytearrayen med strömdata genom att anropa `System.IO.FileStream` objektets `Read` -metod. Skicka bytearrayen, startpositionen och strömlängden som ska läsas.
    * Fyll i `BLOB` genom att tilldela `MTOM` fält med bytearrayens innehåll.
    * Skapa en `MyMapOf_xsd_string_To_xsd_anyType` -objekt. Det här samlingsobjektet används för att lagra indatafiler som krävs för att skapa en PDF Portfolio.
-   * För varje indatafil skapar du en `MyMapOf_xsd_string_To_xsd_anyType_Item` -objekt.
+   * Skapa en `MyMapOf_xsd_string_To_xsd_anyType_Item` -objekt.
    * Tilldela ett strängvärde som representerar nyckelnamnet till `MyMapOf_xsd_string_To_xsd_anyType_Item` objektets `key` fält. Detta värde måste matcha värdet för elementet som anges i DDX-dokumentet. (Utför den här åtgärden för varje indatafil.)
-   * Tilldela `BLOB` objekt som lagrar indatafilen till `MyMapOf_xsd_string_To_xsd_anyType_Item` objektets `value` fält. (Utför den här åtgärden för varje dokument i PDF.)
+   * Tilldela `BLOB` det objekt som lagrar indatafilen till `MyMapOf_xsd_string_To_xsd_anyType_Item` objektets `value` fält. (Utför den här åtgärden för varje dokument i PDF.)
    * Lägg till `MyMapOf_xsd_string_To_xsd_anyType_Item` objekt till `MyMapOf_xsd_string_To_xsd_anyType` -objekt. Anropa `MyMapOf_xsd_string_To_xsd_anyType` objektets `Add` och skicka `MyMapOf_xsd_string_To_xsd_anyType` -objekt. (Utför den här åtgärden för varje dokument i PDF.)
 
 1. Ange körningsalternativ.

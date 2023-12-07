@@ -1,18 +1,14 @@
 ---
 title: Komma igång med HTML5-formulär
-seo-title: Getting started with HTML5 forms
 description: Börja med att distribuera AEM Forms tilläggspaket och importera befintliga HTML 5-formulär till AEM.
-seo-description: To get started, deploy AEM Forms add-on package and import existing HTML5 forms to AEM.
-uuid: e85e57ab-fe32-4b6f-819e-322047ae3240
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
-discoiquuid: f276d150-8936-4bfb-8475-7ca36815b233
 feature: Mobile Forms
 exl-id: a3245f05-6ea3-4f90-8981-bfa89d2e7335
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '230'
+source-wordcount: '228'
 ht-degree: 0%
 
 ---
@@ -29,6 +25,6 @@ HTML5-formulär har många funktioner som är mobilklara. Det hjälper er att ut
 
 När du har installerat AEM utför du följande steg för att importera Mobile Forms till AEM:
 
-* **Konfigurera och distribuera AEM Forms tilläggspaket:** Installera AEM Forms tilläggspaket för att aktivera Mobile Forms. Information om hur du installerar AEM Forms tilläggspaket finns i [Installera och konfigurera AEM Forms](/help/forms/using/installing-configuring-aem-forms-osgi.md).
+* **Konfigurera och distribuera AEM Forms tilläggspaket:** Installera AEM Forms tilläggspaket för att aktivera Mobile Forms. Mer information om hur du installerar AEM Forms tilläggspaket finns i [Installera och konfigurera AEM Forms](/help/forms/using/installing-configuring-aem-forms-osgi.md).
 
 * **Importera mobil-Forms:** Importera formulären från det lokala filsystemet till CRX-databasen. Mer information finns i [Hämta XDP- och PDF-dokument i AEM Forms](/help/forms/using/get-xdp-pdf-documents-aem.md).

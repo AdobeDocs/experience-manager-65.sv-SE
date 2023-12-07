@@ -1,18 +1,14 @@
 ---
 title: Skapa och konfigurera grupper
-seo-title: Creating and configuring groups
-description: Lär dig hur du skapar grupper manuellt eller dynamiskt, redigerar en grupp, visar information om en grupp eller tar bort en grupp.
-seo-description: Learn how to create groups manually or dynamically, edit a group, view details about a group, or delete a group.
-uuid: 8532d72b-270a-4fcf-b7a5-56fca979a5fe
+description: Lär dig skapa grupper manuellt eller dynamiskt, redigera en grupp, visa information om en grupp eller ta bort en grupp.
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/setting_up_and_organizing_users
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: 2058b501-65ce-4ad3-8e1b-b2eab896f70f
 exl-id: 72edd8d1-8573-4942-8ced-1a100af58d78
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '1569'
+source-wordcount: '1576'
 ht-degree: 0%
 
 ---
@@ -43,7 +39,7 @@ Om du använder innehållstjänster (borttagen) kan du markera alternativet för
    * Ange sökvillkoren i rutan Sök.
    * I listan In väljer du Användare, Grupper eller Användare och grupper.
    * Välj Namn, E-post eller Användar-ID i listan Använder.
-   * Markera domänen, markera antalet objekt som ska visas och klicka på Sök.
+   * Markera domänen, välj det antal objekt som ska visas och klicka på Sök.
    * I sökresultaten markerar du kryssrutorna för de användare och grupper som ska läggas till i den nya gruppen och klickar på OK.
 
 1. Klicka på Nästa.
@@ -63,7 +59,7 @@ I en dynamisk grupp väljer du inte de användare som tillhör gruppen separat. 
 
 Använd något av följande två sätt för att skapa dynamiska grupper:
 
-* Gör det möjligt att automatiskt skapa dynamiska grupper baserat på e-postdomäner som @adobe.com. När du aktiverar den här funktionen skapar Hantering av användare en dynamisk grupp för varje unik e-postdomän i AEM formulärdatabas. Använd ett cron-uttryck för att ange hur ofta användarhantering söker i AEM formulärdatabas efter nya e-postdomäner. Dessa dynamiska grupper läggs till i den lokala domänen DefaultDom och får namnet&quot;Alla användare med en *`[email domain]`* e-post-ID.&quot;
+* Gör det möjligt att automatiskt skapa dynamiska grupper baserat på e-postdomäner, som @adobe.com. När du aktiverar den här funktionen skapar Hantering av användare en dynamisk grupp för varje unik e-postdomän i AEM formulärdatabas. Använd ett cron-uttryck för att ange hur ofta användarhantering söker i AEM formulärdatabas efter nya e-postdomäner. Dessa dynamiska grupper läggs till i den lokala domänen DefaultDom och får namnet&quot;Alla användare med en *`[email domain]`* post-ID.&quot;
 * Skapa en dynamisk grupp baserat på angivna villkor, inklusive användarens e-postdomän, beskrivning, kanoniskt namn och domännamn. För att kunna tillhöra den dynamiska gruppen måste användaren uppfylla alla angivna villkor. Om du vill ställa in ett &quot;eller&quot;-villkor skapar du två separata dynamiska grupper och lägger till båda i en lokal grupp. Använd till exempel den metoden för att skapa en grupp användare som tillhör e-postdomänen @adobe.com eller vars kanoniska namn innehåller ou=adobe.com. Användarna behöver dock inte nödvändigtvis uppfylla båda villkoren.
 
 En dynamisk grupp innehåller bara användare. Den får inte innehålla andra grupper. En dynamisk grupp kan dock tillhöra en överordnad grupp.
@@ -75,9 +71,9 @@ En dynamisk grupp innehåller bara användare. Den får inte innehålla andra gr
 1. Ange när användarhanteraren ska söka efter nya e-postdomäner. Den här tiden bör vara efter domänsynkroniseringstiden eftersom skapandet av dynamiska grupper bara är logiskt om domänsynkroniseringen är slutförd.
 
    * Om du vill aktivera automatisk synkronisering dagligen anger du tiden i 24-timmarsformat i rutan Inträffar varje dag. När du sparar inställningarna konverteras det här värdet till ett cron-uttryck, som visas i rutan nedan.
-   * Om du vill schemalägga synkronisering på en viss dag i veckan eller månaden, eller under en viss månad, väljer du lämpligt cron-uttryck i rutan. Standardvärdet är `0 00 4 ? * *`(vilket innebär kontroll vid 4 A.M. varje dag).
+   * Om du vill schemalägga synkronisering på en viss dag i veckan eller månaden, eller under en viss månad, väljer du lämpligt cron-uttryck i rutan. Standardvärdet är `0 00 4 ? * *`(vilket innebär kontroll klockan 4.00 varje dag).
 
-      Användningen av cron-uttryck baseras på Quartz-systemet för jobbschemaläggning med öppen källkod, version 1.4.0.
+     Användningen av cron-uttryck baseras på Quartz-systemet för jobbplanering med öppen källkod, version 1.4.0.
 
 1. Klicka på Spara.
 
@@ -90,7 +86,7 @@ En dynamisk grupp innehåller bara användare. Den får inte innehålla andra gr
 
    >[!NOTE]
    >
-   >Attributen för e-post, beskrivning och kanoniskt namn är skiftlägeskänsliga när du använder operatorn Lika med. De är inte skiftlägeskänsliga med operatorerna Börjar med, Slutar med eller Innehåller.
+   >Attributen för e-post, beskrivning och kanoniskt namn är skiftlägeskänsliga när operatorn Lika används. De är inte skiftlägeskänsliga med operatorerna Börjar med, Slutar med eller Innehåller.
 
    **E-post:** Användarens e-postdomän, som `@adobe.com`.
 
@@ -115,8 +111,8 @@ En dynamisk grupp innehåller bara användare. Den får inte innehålla andra gr
 ## Visa information om en grupp {#view-details-about-a-group}
 
 1. I administrationskonsolen klickar du på Inställningar > Användarhantering > Användare och grupper.
-1. Välj Gruppera i listan In och klicka sedan på Sök. Sökresultaten visas längst ned på sidan. Du kan sortera listan genom att klicka på någon av kolumnrubrikerna.
-1. Klicka på namnet på gruppen för att visa information om den. Sidan Gruppinformation visas.
+1. I listan In väljer du Gruppera och klickar sedan på Sök. Resultatet av sökningen visas längst ned på sidan. Du kan sortera listan genom att klicka på någon av kolumnrubrikerna.
+1. Klicka på namnet på gruppen om du vill visa information om den. Sidan Gruppinformation visas.
 1. Om du vill visa direktmedlemmar i gruppen klickar du på Underordnade huvudkonton.
 
 ## Redigera en grupp {#edit-a-group}
@@ -126,7 +122,7 @@ En dynamisk grupp innehåller bara användare. Den får inte innehålla andra gr
 
    * Ange sökvillkoren i rutan Sök.
    * Välj Namn eller E-post i listan Använda.
-   * Välj Grupper i listan In.
+   * I listan In väljer du Grupper.
    * Markera domänen, markera antalet objekt som ska visas och klicka på Sök.
    * Klicka på namnet på gruppen som du vill redigera i sökresultaten.
 

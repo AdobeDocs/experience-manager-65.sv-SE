@@ -1,14 +1,12 @@
 ---
 title: Arbeta med Adobe Campaign
 description: Adobe Campaign är en uppsättning lösningar som gör att ni kan personalisera och leverera kampanjer i alla kanaler, både online och offline.
-uuid: 1f7b48e2-9ec2-4ee8-b017-78c9d2cac48e
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: personalization
-discoiquuid: 28582d42-ef24-4ca1-98e6-e02248fc9dea
 exl-id: 0954fd5f-cd70-4f2f-85e9-df1c7a3037e1
-source-git-commit: f4b6eb2ded17ec641f23a1fc3b977ce77169c8a1
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '126'
 ht-degree: 0%
@@ -22,14 +20,14 @@ Adobe Campaign är en uppsättning lösningar som gör att ni kan personalisera 
 I den här dokumentationen beskrivs hur du arbetar med Adobe Campaign:
 
 * Adobe Campaign Classic
-* Adobe Campaign Standard, som är den prenumerationsbaserade lösningen.
+* Adobe Campaign Standard, den prenumerationsbaserade lösningen.
 
 Se följande:
 
 * [Arbeta med Adobe Campaign Classic och Adobe Campaign Standard](/help/sites-authoring/campaign.md)
 * [Adobe Campaign Components](/help/sites-authoring/adobe-campaign-components.md)
 * [Skapa Adobe Campaign Forms i AEM](/help/sites-authoring/adobe-campaign-forms.md)
-* [Inrikta er på Adobe Campaign](/help/sites-authoring/target-adobe-campaign.md)
+* [Rikta in er på Adobe Campaign](/help/sites-authoring/target-adobe-campaign.md)
 
 Du måste ha [integrerad AEM med Adobe Campaign](/help/sites-administering/campaign.md).
 

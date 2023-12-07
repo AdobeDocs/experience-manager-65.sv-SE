@@ -1,18 +1,14 @@
 ---
 title: API:er för att arbeta med inskickade formulär på formulärportalen
-seo-title: APIs to work with submitted forms on forms portal
 description: AEM Forms tillhandahåller API:er som du kan använda för att fråga efter och vidta åtgärder för skickade formulärdata i formulärportalen.
-seo-description: AEM Forms provides APIs that you can use to query and take actions on submitted forms data in forms portal.
-uuid: c47c8392-e5a9-4c40-b65e-4a7f379a6b45
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: publish, developer-reference
-discoiquuid: 9457effd-3595-452f-a976-ad9eda6dc909
 feature: Forms Portal
 exl-id: a685889e-5d24-471c-926d-dbb096792bc8
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '541'
+source-wordcount: '538'
 ht-degree: 1%
 
 ---
@@ -78,11 +74,11 @@ Ange följande parametrar i begärande-URL:
    <td>Anger sökvägen till CRX-databasen där formuläret finns. Om du inte anger formulärsökvägen returneras ett tomt svar.<br /> </td>
   </tr>
   <tr>
-   <td><code>offset</code> (valfritt)</td>
+   <td><code>offset</code><br /> (valfritt)</td>
    <td>Anger startpunkten i resultatuppsättningens index. Standardvärdet är <strong>0</strong>.</td>
   </tr>
   <tr>
-   <td><code>limit</code> (valfritt)</td>
+   <td><code>limit</code><br /> (valfritt)</td>
    <td>Begränsar antalet resultat. Standardvärdet är <strong>30</strong>.</td>
   </tr>
   <tr>

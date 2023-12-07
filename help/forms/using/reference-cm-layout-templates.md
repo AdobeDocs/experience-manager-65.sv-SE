@@ -1,17 +1,13 @@
 ---
 title: Mallar för referensbrev
-seo-title: Reference letter templates
 description: AEM Forms innehåller layoutmallar för Correspondence Management-brev som du kan använda för att snabbt skapa brev.
-seo-description: AEM Forms provides Correspondence Management letter layout templates that you can use to create letters quickly.
-uuid: 3b2312d9-daa0-435b-976f-4969b54c5056
 products: SG_EXPERIENCEMANAGER/6.3/FORMS
 content-type: reference
 topic-tags: correspondence-management
-discoiquuid: afeb9f4d-3feb-4a0e-8884-e3ec1309b33b
 exl-id: 40d127b5-1ce6-41fb-ac4c-2bf7ae79da82
-source-git-commit: 1def8ff7bc90e2ab82ce8b50277a97da9709c78c
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '461'
+source-wordcount: '453'
 ht-degree: 0%
 
 ---
@@ -71,7 +67,7 @@ PDF-förhandsgranskning av ett brev som skapats med mallen Balanserat vänster
 
 ## Balanserad höger {#balanced-right}
 
-Mallen Balanced Right har företagslogotypen till vänster och ger utrymme för att ange mottagarnas adress på själva brevet. Mallen för balanserat höger innehåller också en sidfot som flödar om när brevet har flera sidor.
+Mallen Balanced Right har företagslogotypen till vänster och ger utrymme för att ange mottagarnas adress på själva brevet. Mallen för balanserat höger innehåller även en sidfot som flödar om när brevet har flera sidor.
 
 ![balanserad höger](assets/balancedright.png)
 
@@ -81,7 +77,7 @@ PDF förhandsgranskning av ett brev som skapats med mallen för balanserat höge
 
 Mallen Visual Left har ett sidohuvud till vänster på sidan med företagets logotyp placerad över sidhuvudet. Mallen Visual Left har ett ämnesfält men ingen sidfot.
 
-![visuell](assets/visualleft.png)
+![visuell vänster](assets/visualleft.png)
 
 PDF förhandsgranskning av ett brev som skapats med mallen Visual Left
 

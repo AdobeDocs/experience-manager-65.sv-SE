@@ -1,26 +1,22 @@
 ---
 title: Hantera användare och användargrupper
-seo-title: Managing Users and User Groups
 description: Användare av AEM Communities kan registrera sig själva och redigera sina profiler
-seo-description: Users of AEM Communities can self-register and edit their profiles
-uuid: aeba424e-ea7e-4da5-b94f-ea8af4caa7d2
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: administering
 content-type: reference
-discoiquuid: 774c2553-b629-456b-afa7-5713490f4a0a
 role: Admin
 exl-id: 4237085a-d70d-41de-975d-153f58336daa
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '1903'
+source-wordcount: '1901'
 ht-degree: 0%
 
 ---
 
 # Hantera användare och användargrupper {#managing-users-and-user-groups}
 
-## Översikt {#overview}
+## Ökning {#overview}
 
 I AEM Communities kan användarna själva registrera och redigera sina profiler i publiceringsmiljön. Med rätt tillstånd kan de också
 
@@ -52,7 +48,7 @@ När en ny användargruppwebbplats skapas skapas nya användargrupper dynamiskt 
 
 Namnen på grupperna genereras från namnet som anges för platsen under [communitysajt](sites-console.md#step13asitetemplate). Med de unika ID:na undviker du namnkonflikter för communitywebbplatser med liknande namn och communitygrupper på samma server.
 
-Om platsnamnet till exempel är *engagera*&quot; för en webbplats med namnet &quot;We.Retail Engage&quot; är en av användargrupperna som skapas:
+Om platsnamnet till exempel är *engagera*&quot; för en webbplats med namnet &quot; Engage&quot; skulle en av de användargrupper som skapades vara:
 
 * Community *Engagera* Medlemmar
 

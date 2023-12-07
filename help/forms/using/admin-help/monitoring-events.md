@@ -1,17 +1,13 @@
 ---
 title: Övervakningshändelser
-seo-title: Monitoring events
 description: När granskningsfunktionen är aktiverad kan du med dokumentsäkerhet övervaka vissa typer av händelser. Du kan enkelt söka efter och sortera händelselistan med dokumentsäkerhet.
-seo-description: When the auditing capability is enabled, document security enables you to monitor certain types of events. You can easily search and sort the events list using the document security.
-uuid: 22add6ff-536d-4cb9-8eac-b72cad5c3ecf
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/working_with_document_security
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: 379957bf-0634-4182-b269-1b010da4c90f
 feature: Document Security
 exl-id: 078b9ad1-16e2-40f4-92dc-e4093c0bb6ac
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '958'
 ht-degree: 0%
@@ -24,7 +20,7 @@ När granskningsfunktionen är aktiverad kan du med dokumentsäkerhet övervaka 
 
 **Användare:** Kan visa granskade händelser för sina policyskyddade dokument och för alla skyddade dokument som de tar emot och använder.
 
-**Koordinatorer för principuppsättning:** Kan visa granskade händelser, inklusive dokument- och principhändelser, för dokument som skyddas av policyer från sina uppsättningar av policyer.
+**Koordinatorer för principuppsättning:** Kan visa granskade händelser, inklusive dokument- och principhändelser, för dokument som skyddas av policyer från sina uppsättningar.
 
 **Administratörer:** Kan visa granskade händelser som är relaterade till alla policyskyddade dokument och användare. Administratörer kan även spåra andra typer av händelser, bland annat användare, dokument, principer och systemhändelser.
 
@@ -40,7 +36,7 @@ En misslyckad händelse registreras om en obehörig användare försöker visa e
 >
 >Misslyckade anonyma åtkomsthändelser för dokument kan loggas om en princip redigeras för att ta bort anonym åtkomst. När en godkänd mottagare försöker få åtkomst till ett dokument som den redigerade profilen skyddar, görs ett försök att få anonym åtkomst, men detta misslyckas.
 
-Om en princip tillåter anonym användaråtkomst men administratören senare inaktiverar anonym åtkomst för dokumentsäkerhet, kommer anonym åtkomst inte att kunna användas för dokument som skyddas med profilen och händelsen loggas inte.
+Om en princip tillåter anonym användaråtkomst men administratören senare inaktiverar anonym åtkomst för dokumentsäkerhet, kommer anonym åtkomst inte att kunna användas för dokument som skyddas med profilen och händelsen kommer inte att loggas.
 
 ## Aktivera händelsegranskning {#enable-event-auditing}
 
@@ -48,11 +44,11 @@ Dessa konfigurationskrav måste uppfyllas för att händelsegranskning ska kunna
 
 * Systemet eller administratören måste aktivera serverns granskningsfunktioner.
 
-   (Se [Konfigurera händelsegranskning och sekretessinställningar](/help/forms/using/admin-help/configuring-client-server-options.md#configuring-event-auditing-and-privacy-settings).)
+  (Se [Konfigurera händelsegranskning och sekretessinställningar](/help/forms/using/admin-help/configuring-client-server-options.md#configuring-event-auditing-and-privacy-settings).)
 
 * Granskning måste vara aktiverat för profilen som du använder för att skydda dokumentet. (Se [Skapa och redigera profiler](/help/forms/using/admin-help/creating-policies.md#creating-and-editing-policies).)
 
-## Sök efter en händelse {#search-for-an-event}
+## Söka efter en händelse {#search-for-an-event}
 
 Du kan söka i händelselistan och visa mer detaljerade beskrivningar om händelser. Detaljerade beskrivningar innehåller information om till exempel händelse-ID, beskrivning, IP-adress, organisation, vilken användare som påverkas, datum och tid då händelsen inträffade, nekade aktiviteter och offlinehändelser (när användare försöker använda ett dokument utan att vara anslutna till dokumentsäkerhet).
 
@@ -64,7 +60,7 @@ Du kan söka efter händelser på sidan Händelser genom att använda en kombina
 
 **Händelser som rör mina dokument:** Användarna kan hitta alla händelser som är relaterade till deras egna policyskyddade dokument. Användarna ser händelser som genereras av alla som hanterar deras dokument.
 
-**Koordinatorer för principuppsättning:** Kan visa granskade händelser, inklusive dokument- och principhändelser, för dokument som skyddas av policyer från sina uppsättningar av policyer. Dessa alternativ är tillgängliga:
+**Koordinatorer för principuppsättning:** Kan visa granskade händelser, inklusive dokument- och principhändelser, för dokument som skyddas av policyer från sina uppsättningar. Dessa alternativ är tillgängliga:
 
 **Dokumenthändelser där jag är koordinator för principuppsättning:** Koordinatorer för principuppsättningar som har behörighet att visa händelser kan hitta händelser som är relaterade till dokument som skyddas av profiler från deras principuppsättningar.
 
@@ -91,7 +87,7 @@ Du kan söka efter händelser på sidan Händelser genom att använda en kombina
 1. Välj ett datumintervallalternativ i datumlistan. Om du väljer Anpassade datum visas rutor där du anger datumet i formatet åååå/mm/dd, eller där du kan använda datumväljaren för att ange datumintervall:
 
    * Klicka på kalendern för att öppna datumväljaren.
-   * Använd pilarna för att hitta ett år och en månad.
+   * Använd pilarna för att hitta år och månad.
    * Klicka på en dag i månaden i kalendern.
    * Klicka på OK för att stänga datumväljaren.
 

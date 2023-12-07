@@ -1,15 +1,11 @@
 ---
 title: Forms Service
-seo-title: Forms Service
 description: Artikeln beskriver Forms-tjänsten och de formulärrelaterade uppgifter du kan utföra med tjänsten Forms.
-seo-description: The article describes Forms service and the form-related tasks you can perform using Forms service.
-uuid: 3258d3c2-8755-4815-8c97-b2cfb9a9dfd4
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: document_services
-discoiquuid: a9695d10-43ec-40eb-942f-7720abaa0973
 exl-id: bd1216e4-2248-484b-a3c1-c209da4ff94f
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '685'
 ht-degree: 0%
@@ -18,7 +14,7 @@ ht-degree: 0%
 
 # Forms Service {#forms-service}
 
-## Översikt {#overview}
+## Ökning {#overview}
 
 Med tjänsten Forms kan du skapa interaktiva klientapplikationer för datainhämtning som validerar, bearbetar, omvandlar och levererar blanketter som vanligtvis skapas i Designer. Forms-tjänsten återger alla formulärdesigner som du utvecklar som PDF-dokument.
 
@@ -32,7 +28,7 @@ Använd tjänsten Forms för att göra följande:
 
 ## Skapar PDF forms  {#creating-pdf-forms-nbsp}
 
-Använd formulärtjänsten för att skapa PDF forms för datainhämtning. Vanligtvis börjar du med en AEM Forms Designer-mall. Använd `renderPDFForm` (länk till Javadoc) Hur Forms-tjänsten ska konvertera den här mallen till ett PDF-formulär.
+Använd formulärtjänsten för att skapa PDF forms för datainhämtning. Vanligtvis börjar du med en AEM Forms Designer-mall. Använd `renderPDFForm` (länk till Javadoc) Hur Forms-tjänsten konverterar mallen till ett PDF-formulär.
 
 Den första parametern i `renderPDFForm` operation är namnet på mallfilen (till exempel `ExpenseClaim.xdp`). Du kan lagra mallfilen i ett lokalt filsystem, i en CRX-databas eller på en HTTP- eller FTP-plats. Du kan ange platsen för mallfilen genom att ange innehållsroten i `PDFFormRenderOptions` parametern för `renderPDFForm` operation. I Javadoc finns mer information om andra alternativ som du kan ange för `PDFFormRenderOptions` parameter.
 
@@ -44,7 +40,7 @@ Använd `exportData` (Javadoc) Forms-tjänstens åtgärd för att extrahera data
 
 ## Importera data till PDF forms {#importing-data-into-pdf-forms}
 
-Med tjänsten Forms kan du även sammanfoga formulär i PDF som skapats med antingen AEM Forms Designer eller `renderPDFForm` med XML-data. The `importData` (Javadoc) Forms-tjänsten godkänner PDF-blanketten och XML-data och returnerar ett PDF-formulär med data-XML.
+Med tjänsten Forms kan du även sammanfoga formulär i PDF som skapats med antingen AEM Forms Designer eller `renderPDFForm` -åtgärd med XML-data. The `importData` (Javadoc) Forms-tjänsten godkänner PDF-blanketten och XML-data och returnerar ett PDF-formulär med data-XML.
 
 ## Återge formulär som bygger på fragment {#rendering-forms-based-on-fragments}
 

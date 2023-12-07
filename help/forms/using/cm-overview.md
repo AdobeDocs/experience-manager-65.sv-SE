@@ -1,16 +1,12 @@
 ---
 title: Översikt över korrespondenshantering
-seo-title: Correspondence Management
 description: I det här avsnittet finns en översikt över Correspondence Management.
-seo-description: This topic gives you an overview of Correspondence Management.
-uuid: fa230c7e-fef1-4996-bdda-1637b36dac68
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: correspondence-management
-discoiquuid: 1291b395-a981-4ef9-b4f0-c0d3026c5f19
 feature: Correspondence Management
 exl-id: c7f1acf3-ec2b-4a71-83a4-c71981d4cefa
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '217'
 ht-degree: 0%
@@ -21,7 +17,7 @@ ht-degree: 0%
 
 ## Introduktion {#introduction}
 
-Correspondence Management centraliserar och hanterar framtagning, sammanställning och leverans av säkra, personaliserade och interaktiva korrespondenser. Det gör att ni snabbt kan sammanställa korrespondens från både förgodkänt och skräddarsytt material i en smidig process från det att det skapas till arkivering. Resultatet blir att era kunder får rätt kommunikation vid rätt tidpunkt på rätt sätt: aktuella, korrekta, praktiska, säkra och relevanta. Företaget maximerar värdet av kundinteraktioner och minimerar kostnader och risker med en smidig process som ger smidighet, snabbhet och produktivitet.
+Correspondence Management centraliserar och hanterar framtagning, sammanställning och leverans av säkra, personaliserade och interaktiva korrespondenser. Det gör att ni snabbt kan sammanställa korrespondens från både förgodkänt och skräddarsytt material i en smidig process från det att det skapas till arkivering. Resultatet blir att era kunder får rätt kommunikation vid rätt tidpunkt på rätt sätt: aktuell, korrekt, bekväm, säker och relevant. Företaget maximerar värdet av kundinteraktioner och minimerar kostnader och risker med en smidig process som är enkel, snabb och effektiv.
 
 ## Fördelar {#benefits}
 
@@ -47,4 +43,4 @@ Det förbättrar kundengagemanget och gör att ni kan:
 
 * Lägg till interaktiva tekniker för att möjliggöra en tvåvägskanal och minska mängden papper som skickas in
 * Protect-känslig information med inbyggd, komplett dokumentsäkerhet
-* Skicka korrespondens via den kommunikationskanal kunden föredrar, oavsett om det är e-post, mobil eller fax.
+* Skicka korrespondens via den kommunikationskanal som kunden föredrar, oavsett om det är e-post, mobil eller fax.

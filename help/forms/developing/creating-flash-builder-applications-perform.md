@@ -1,19 +1,15 @@
 ---
 title: Skapa Flashar Builder som utför SSO-autentisering med HTTP-tokens
-seo-title: Creating Flash Builder applicationsthat perform SSO authentication using HTTP tokens
 description: Skapa ett klientprogram med Flash Builder som utför SSO-autentisering (single sign on) med HTTP-tokens. Autentisera en användare för en åtgärd en gång och använd autentiseringen för att utföra flera AEM Forms-åtgärder.
-seo-description: Create a client application using Flash Builder that performs single-sign on (SSO) authentication using HTTP tokens. Authenticate a user for an operation once and use that authentication to perform multiple AEM Forms operations.
-uuid: 273db00a-a665-4e52-88fa-4fca06d05f8c
 contentOwner: admin
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: coding
-discoiquuid: 0ff30df7-b3ad-4c34-9644-87c689acc294
 role: Developer
 exl-id: 7f1f49e6-028c-47b6-a24d-a83bed40242e
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '1795'
+source-wordcount: '1783'
 ht-degree: 0%
 
 ---
@@ -71,7 +67,7 @@ Säkerhetstjänsten som konfigurerats på `/um/login` svarar genom att använda 
 
 **Inloggningsprocess**
 
-När ett klientprogram startas kan du göra en POST-förfrågan till `/um/login` säkerhetstjänst. Till exempel, `https://<your_serverhost>:<your_port>/um/login?um_no_redirect=true`. När begäran når användarhanterarens säkerhetstjänst utför den följande steg:
+När ett klientprogram startas kan du göra en POST-förfrågan till `/um/login` säkerhetstjänst. Till exempel: `https://<your_serverhost>:<your_port>/um/login?um_no_redirect=true`. När begäran når användarhanterarens säkerhetstjänst utför den följande steg:
 
 1. Den söker efter en cookie med namnet `lcAuthToken`. Om användaren redan har loggat in i ett annat Forms-program finns denna cookie. Om cookien hittas valideras innehållet.
 1. Om huvudbaserad enkel inloggning är aktiverad letar servern efter konfigurerade rubriker för att fastställa användarens identitet.

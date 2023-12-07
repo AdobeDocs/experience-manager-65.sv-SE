@@ -1,23 +1,21 @@
 ---
 title: Komma igång med processrapportering
 description: Stegen för att komma igång med AEM Forms om JEE Process Reporting
-uuid: 685cad39-da2c-411d-a0b0-201917438bcf
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: process-reporting
-discoiquuid: 7c1fcde0-b983-4b24-bc19-fcee1d4f096b
 docset: aem65
 exl-id: 1272e854-fa64-4bfd-b073-8fbcf210e9b5
-source-git-commit: 3d713021ac410ca2925a282c5dfca98ed4e483ee
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '1669'
+source-wordcount: '1672'
 ht-degree: 0%
 
 ---
 
 # Komma igång med processrapportering{#getting-started-with-process-reporting}
 
-Med Process Reporting kan AEM Forms-användare ställa frågor om AEM Forms-processer som för närvarande är definierade i AEM Forms-implementeringen. Processrapportering kommer dock inte åt data direkt från AEM Forms-databasen. Data publiceras först till Process Reporting-databasen på schemalagd basis (*av tjänsten ProcessDataPublisher &amp; ProcessDataStorage* s). Rapporterna och frågorna i Process Reporting genereras sedan från de processrapporteringsdata som publiceras till databasen. Processrapportering installeras som en del av modulen Forms Workflow.
+Med Process Reporting kan AEM Forms-användare ställa frågor om AEM Forms-processer som för närvarande är definierade i AEM Forms-implementeringen. Processrapportering kommer dock inte åt data direkt från AEM Forms-databasen. Data publiceras först till Process Reporting-databasen på schemalagd basis (*av tjänsten ProcessDataPublisher &amp; ProcessDataStorage* s). Rapporterna och frågorna i processrapportering genereras sedan från de processrapporteringsdata som publiceras till databasen. Processrapportering installeras som en del av modulen Forms Workflow.
 
 I den här artikeln beskrivs stegen för hur du aktiverar publicering av AEM Forms-data i Process Reporting-databasen. Därefter kan du använda processrapportering för att köra rapporter och frågor. Artikeln innehåller även de alternativ som är tillgängliga för att konfigurera Process Reporting Services.
 
@@ -59,7 +57,7 @@ Så här ändrar du publiceringsschemat:
 
 1. Lägg till JVM-argumentet `-Dreporting.publisher.cron = <expression>.`
 
-   Exempel: Följande huvuduttryck gör att Process Reporting publicerar AEM Forms-data i Process Reporting-databasen var femte timme:
+   Exempel: Följande cron-uttryck gör att Process Reporting publicerar AEM Forms-data i Process Reporting-databasen var femte timme:
 
    * `-Dreporting.publisher.cron = 0_0_0/5_*_*_?`
 
@@ -76,20 +74,20 @@ Så här ändrar du publiceringsschemat:
 
    Lägg till argumentet i rutan Allmänt om JVM-argument `-Dreporting.publisher.cron = <expression>.`
 
-   **Exempel**: Följande huvuduttryck gör att Process Reporting publicerar AEM Forms-data i Process Reporting-databasen var femte timme:
+   **Exempel**: Följande cron-uttryck gör att Process Reporting publicerar AEM Forms-data i Process Reporting-databasen var femte timme:
 
    * `-Dreporting.publisher.cron = 0_0_0/5_*_*_?`
 
-1. Klicka **Använd**, klicka på OK och sedan på **Spara direkt i den överordnad konfigurationen**.
+1. Klicka **Använd**, klicka på OK och sedan på **Spara direkt i huvudkonfigurationen**.
 1. Starta om AEM Forms Server-instansen.
 1. Stoppa AEM Forms Server-instansen.
 1. Logga in på WebLogic Administration Console. Standardadressen för WebLogic Administration Console är `https://[hostname]:[port]/console`.
 1. Klicka på under Ändringscenter **Lås och redigera**.
 1. Klicka på under Domänstruktur **Miljö** > **Servrar** och klicka på namnet på den hanterade servern i den högra rutan.
-1. På nästa skärm klickar du på **Konfiguration** tab > **Serverstart** -fliken.
+1. Klicka på knappen **Konfiguration** tab > **Serverstart** -fliken.
 1. Lägg till JVM-argumentet i rutan Argument `-Dreporting.publisher.cron = <expression>`.
 
-   **Exempel**: Följande huvuduttryck gör att Process Reporting publicerar AEM Forms-data i Process Reporting-databasen var femte timme:
+   **Exempel**: Följande cron-uttryck gör att Process Reporting publicerar AEM Forms-data i Process Reporting-databasen var femte timme:
 
    `-Dreporting.publisher.cron = 0_0_0/5_*_*_?`
 
@@ -108,7 +106,7 @@ Du kan använda administrationskonsolen för att konfigurera roten (**standard**
 
 #### Så här konfigurerar du lagringsplatser för processrapportering {#to-configure-the-process-reporting-repository-locations}
 
-1. Logga in på **Administration Console** med administratörsautentiseringsuppgifter. Standardwebbadressen för administrationskonsolen är `https://'[server]:[port]'/adminui`
+1. Logga in på **Administration Console** med administratörsuppgifter. Standardwebbadressen för administrationskonsolen är `https://'[server]:[port]'/adminui`
 1. Navigera till **Startsida** > **Tjänster** > **Program och tjänster** >**Tjänsthantering** och öppna **ProcessDataStorageProvider** service.
 
    ![process-data-storage-service](assets/process-data-storage-service.png)
@@ -133,7 +131,7 @@ Tjänsten ReportConfiguration används av Process Reporting för att konfigurera
 
 #### Så här konfigurerar du ReportingConfiguration-tjänsten {#to-configure-the-reportingconfiguration-service}
 
-1. Logga in på **Konfigurationshanteraren** med CRX-administratörsautentiseringsuppgifter. Konfigurationshanterarens standardwebbadress är `https://'[server]:[port]'/lc/system/console/configMgr`
+1. Logga in på **Konfigurationshanteraren** med CRX-administratörsuppgifter. Konfigurationshanterarens standardwebbadress är `https://'[server]:[port]'/lc/system/console/configMgr`
 1. Öppna **ReportingConfiguration** service.
 1. **Antal poster**
 
@@ -162,9 +160,9 @@ Tjänsten ReportConfiguration används av Process Reporting för att konfigurera
 
 Tjänsten ProcessDataPublisher importerar processdata från AEM Forms-databasen och publicerar data till tjänsten ProcessDataStorageProvider för lagring.
 
-#### Så här konfigurerar du tjänsten ProcessDataPublisher   {#to-configure-processdatapublisher-service-nbsp}
+#### Konfigurera tjänsten ProcessDataPublisher   {#to-configure-processdatapublisher-service-nbsp}
 
-1. Logga in på **Administration Console** med administratörsautentiseringsuppgifter.
+1. Logga in på **Administration Console** med administratörsuppgifter.
 
    Standardwebbadressen är `https://'server':port]/adminui/`.
 
@@ -178,7 +176,7 @@ Aktivera det här alternativet om du vill starta publiceringen av processdata. S
 
 Aktivera bara processrapportering när alla konfigurationer som är relaterade till processrapportkomponenter har konfigurerats korrekt.
 
-Du kan också använda det här alternativet för att inaktivera publicering av processdata när det inte längre behövs.
+Du kan också använda det här alternativet om du vill inaktivera publicering av processdata när det inte längre behövs.
 
 `Default`: `Off`
 
@@ -224,7 +222,7 @@ När du har konfigurerat Process Reporting kan du börja arbeta med Process Repo
 
 ### Logga in på processrapportering {#log-in-to-process-reporting}
 
-När du navigerar till URL:en för processrapportering (https://)&lt;server>:&lt;port>/lc/pr) visas inloggningsskärmen.
+När du navigerar till processrapportens URL (https://)&lt;server>:&lt;port>/lc/pr) visas inloggningsskärmen.
 
 Om du vill logga in i processrapporteringsmodulen anger du dina autentiseringsuppgifter.
 
@@ -270,7 +268,7 @@ Senaste uppdateringstid visar det senaste datumet och den senaste tiden fram til
 
 Mer information om datapubliceringstjänsten och hur du schemalägger den här tjänsten finns i [Schemalägg publicering av processdata](/help/forms/using/process-reporting/install-start-process-reporting.md#p-schedule-process-data-publishing-p) i artikeln Getting Started with Process Reporting.
 
-**Processrapportanvändare:** Det inloggade användarnamnet visas till höger om tiden för senaste uppdatering.
+**Procesrapporteringsanvändare:** Det inloggade användarnamnet visas till höger om tiden för senaste uppdatering.
 
 **Listruta med namnlist för Processrapportering:** Listrutan till höger i namnlisten Processrapportering innehåller följande alternativ:
 

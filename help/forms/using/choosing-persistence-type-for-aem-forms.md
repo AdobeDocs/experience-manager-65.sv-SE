@@ -1,17 +1,13 @@
 ---
 title: Välja en beständig typ för en AEM Forms-installation
-seo-title: Choosing a persistence type for an AEM Forms installation
 description: Välj en beständig typ klokt. Det hjälper er att bygga en effektiv och skalbar AEM Forms-miljö.
-seo-description: Choose a persistence type wisely. It helps you build an efficient and scale able AEM Forms environment.
-uuid: 1c692502-5039-4757-9358-1772772b3904
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: installing
 geptopics: SG_AEMFORMS/categories/jee
-discoiquuid: a972fb35-38a7-4b83-99bd-6a6dddf8043b
 role: Admin
 exl-id: 621fe107-f4ac-42b1-8c7b-8abbcaac7380
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '372'
 ht-degree: 1%
@@ -26,7 +22,7 @@ Persistence är ett sätt att lagra innehåll på de fysiska lagren. Den definie
 
 >[!NOTE]
 >
->LiveCycle ES4 SP1 använder tarPM-beständighet för att lagra innehåll.
+>LiveCyclet ES4 SP1 använder tarPM-beständighet för att lagra innehåll.
 
 I följande tabell visas alla beständighetstyper som stöds tillsammans med olika parametrar som hjälper dig att välja en beständig typ för din miljö:
 

@@ -1,20 +1,16 @@
 ---
 title: Installera och konfigurera Designer
-seo-title: Installing and configuring Designer
-description: Designer finns som fristående installationsprogram och medföljer också Workbench. Lär dig hur du installerar fristående Designer.
-seo-description: Designer is available as a stand-alone installer and is also bundled with Workbench. Learn how to install stand-alone Designer.
-uuid: c5b779d1-cb6a-48f4-87d6-48464753e516
+description: Designer finns som fristående installationsprogram och medföljer också Workbench. Lär dig installera fristående Designer.
 contentOwner: gtalwar
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: designer
 geptopics: SG_AEMFORMS/categories/jee
-discoiquuid: f3a5b5ce-2262-4d5d-a8ae-d59a3a4229e7
 docset: aem65
 role: Admin
 exl-id: 90503d29-e079-43f4-a5dc-ce90ed7844c6
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '476'
+source-wordcount: '471'
 ht-degree: 0%
 
 ---
@@ -41,7 +37,7 @@ Designer är tillgängligt som ett fristående installationsprogram och ingår �
 1. Fortsätt och ange dina uppgifter och serienumret på skärmen Personalisering.
 1. Om du godkänner licensavtalet fortsätter du genom att klicka på Nästa.
 1. (Valfritt) ändra standardinstallationssökvägen om du vill installera Designer på en valfri plats. Klicka på Nästa.
-1. Klicka på Bakåt om du vill ändra några inställningar. Klicka på Installera om du vill installera Designer.
+1. Klicka på Föregående om du vill ändra några inställningar. Klicka på Installera om du vill installera Designer.
 1. Klicka på Slutför när installationen är klar.
 
 Du kan också installera AEM Forms Designer via kommandoraden i passivt eller tyst läge.
@@ -52,7 +48,7 @@ Du kan också installera AEM Forms Designer via kommandoraden i passivt eller ty
 msiexec /i "<absolute path>\Designer.msi" /passive SERIALNUMBER=****-****-****-****-****-****
 ```
 
-* Tyst kommandoradsinstallation: Installationsprogrammet kör installationen utan att visa något användargränssnitt. Inga uppmaningar, meddelanden eller dialogrutor visas. När du har startat programmet kan du inte avbryta installationen.
+* Tyst kommandoradsinstallation: Installationsprogrammet kör installationen utan att visa ett användargränssnitt. Inga uppmaningar, meddelanden eller dialogrutor visas. När du har startat programmet kan du inte avbryta installationen.
 
 ```shell
 msiexec /i "<absolute path>\Designer.msi" /quiet SERIALNUMBER=****-****-****-****-****-****
@@ -78,7 +74,7 @@ Om du använder ett fristående installationsprogram för AEM Forms Designer utf
 +++**När användaren har version 6.5.15.0 av AEM Forms Designer**
 
 Om du använder ett fristående installationsprogram för AEM Forms Designer utför du följande steg:
-1. Ladda ned den senaste versionen av AEM Forms Designer från [Programdistributionsportal](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html).
+1. Hämta den senaste versionen av AEM Forms Designer från [Programdistributionsportal](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html).
 1. Installera den senaste versionen av AEM Forms Designer genom att dubbelklicka på den hämtade installationsfilen.
 
 +++

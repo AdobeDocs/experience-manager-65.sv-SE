@@ -1,25 +1,21 @@
 ---
 title: Skärmläsare för HTML5-formulär
-seo-title: Screen readers for HTML5 forms
 description: Visar en lista över skärmläsare som kan användas med HTML5-formulär.
-seo-description: Lists the screen readers supported with HTML5 forms.
-uuid: 035354e2-957f-4eb6-bc16-4ca96ec7ac74
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
-discoiquuid: 53c57180-7004-4534-9146-603f7770a6fe
 feature: Mobile Forms
 exl-id: 07d20c2f-7d13-48ac-8d58-b367eb194558
-source-git-commit: 18cfefb794382b5314b18a62645f1fba28d314a2
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '322'
+source-wordcount: '305'
 ht-degree: 0%
 
 ---
 
 # Skärmläsare för HTML5-formulär {#screen-readers-for-html-forms}
 
-Formulärkomponenter i HTML5 återger XFA-formulärmallen till HTML 5-format. Alla standardwebbläsare som stöder HTML5 kan återge dessa formulär. För att ge stöd för liknande datainhämtning i PDF och HTML 5 behålls layouten för PDF forms i HTML5-formulär.
+Formulärkomponenter i HTML5 återger XFA-formulärmallen till ett HTML5-format. Alla standardwebbläsare som stöder HTML5 kan återge dessa formulär. För att ge stöd för liknande datainhämtning i PDF och HTML 5 behålls layouten för PDF forms i HTML5-formulär.
 
 HTML5-formulär använder HTML som standard och gör det möjligt att använda vanliga hjälpmedelsverktyg för HTML för dessa formulär. Om ett formulär är utformat enligt bästa praxis för hjälpmedelsförberedda formulär fungerar det med alla skärmläsare som stöds. Dessutom är sådana formulär aktiverade för tangentbordsnavigering.
 

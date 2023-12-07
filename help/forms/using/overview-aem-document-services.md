@@ -1,18 +1,14 @@
 ---
 title: Översikt över AEM dokumenttjänster
-seo-title: Overview of AEM Document Services
 description: AEM Document Services är en uppsättning OSGi-tjänster för att skapa, sammanställa och skydda PDF-dokument.
-seo-description: AEM Document Services are a set of OSGi Services for creating, assembling, and securing PDF Documents.
-uuid: 439144b7-f805-4819-9ed9-a6e9e374b5ed
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: document_services
-discoiquuid: 10d406db-ac10-479b-b08b-d0735116a12b
 docset: aem65
 exl-id: 4c8a3877-1a3c-410d-ad1f-69c73ba4fcc1
-source-git-commit: 1683338f02d01d5d9843368955fa42f309718f26
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '1423'
+source-wordcount: '1413'
 ht-degree: 0%
 
 ---
@@ -27,7 +23,7 @@ ht-degree: 0%
 
 AEM Document Services är en uppsättning OSGi-tjänster för att skapa, sammanställa och skydda PDF-dokument. Dokumenttjänster innehåller följande tjänster:
 
-## Utdatatjänst {#output-service}
+## Output Service {#output-service}
 
 Med Output Service kan du skapa dokument i olika format, t.ex. PDF, laserskrivarformat och etikettskrivarformat. Laserskrivarformat är PostScript och Printer Control Language (PCL). I följande lista anges etikettskrivarformat:
 
@@ -47,10 +43,10 @@ När du använder utdatatjänsten för att sammanfoga XML-data med en formulärd
 Följande fyra utdatatjänster kan användas:
 
 * **generatePDFOuput**: Sammanfogar en formulärdesign med data för att generera ett PDF-dokument
-* **generatePrintedOutput**: Sammanfogar en formulärdesign med formulärdata för att generera ett dokument som ska skickas till antingen en laserskrivare eller en nätverksskrivare för etiketter
+* **generatePrintedOutput**: Sammanfogar en formulärdesign med formulärdata för att generera ett dokument som ska skickas till antingen en laserskrivare eller en nätverksskrivare
 
 * **generatePDFOutputBatch**: Sammanfogar flera mallar med flera dataposter i ett enda anrop för att generera en batch med PDF-filer. Det finns också ett alternativ för att generera ett enda PDF genom att kombinera alla PDF
-* **generatePrintedOutputBatch**: Sammanfogar flera mallar med flera dataposter i ett enda anrop för att generera en batch med utskriftsdokument (PS, PCL, ZPL, DPL, IPL, TPCL). Det finns också ett alternativ för att generera ett enda utskriftsdokument.
+* **generatePrintedOutputBatch**: Sammanfogar flera mallar med flera dataposter i ett enda anrop för att generera en batch med utskriftsdokument (PS,PCL,ZPL,DPL,IPL,TPCL). Det finns också ett alternativ för att generera ett enda utskriftsdokument.
 
 ## Assembler Service {#assembler-service}
 
@@ -101,14 +97,14 @@ Du kan använda en enkel indatamappning för att ange plats för källdokument o
 
 Med Doc Assurance-tjänsten kan du kryptera och dekryptera dokument, utöka Adobe Reader funktioner med ytterligare användarrättigheter och lägga till digitala signaturer i dina dokument. Användarna kan enkelt interagera med PDF forms och dokument, samtidigt som ni förbättrar säkerheten, arkiveringen och regelefterlevnaden.
 
-Tjänsten Doc Assurance innehåller tre tjänster: signatur-, krypterings- och läsartillägg.
+Tjänsten Doc Assurance innehåller tre tjänster: signatur, kryptering och läsartillägg.
 
 ### Signaturtjänst {#signature-service}
 
 Med signaturtjänsten kan du arbeta med digitala signaturer och dokument på AEM server. Signaturtjänsten används till exempel vanligtvis i följande situationer:
 
 * AEM certifierar ett formulär innan det skickas till en användare för att öppnas med Acrobat eller Adobe Reader.
-* AEM validerar en signatur som lagts till i ett formulär med Acrobat eller Adobe Reader.
+* Den AEM servern validerar en signatur som har lagts till i ett formulär med Acrobat eller Adobe Reader.
 * Den AEM servern signerar ett formulär för en offentlig notarius publicus.
 
 Signaturtjänsten får åtkomst till certifikat och autentiseringsuppgifter som lagras i förtroendearkivet.

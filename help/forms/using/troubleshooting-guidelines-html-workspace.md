@@ -1,25 +1,21 @@
 ---
 title: Felsökningsriktlinjer för arbetsytan i AEM Forms
-seo-title: Troubleshooting guidelines for AEM Forms workspace
 description: Aktivera loggar och använd felsökningsfunktionen i webbläsaren för att felsöka AEM Forms arbetsyta.
-seo-description: Enable logs and use debugger in browser to troubleshoot AEM Forms workspace.
-uuid: 07b8c8ed-f1ff-4be5-8005-251ff7b2ac85
 contentOwner: robhagat
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
-discoiquuid: 5dae9ed9-77a3-44f5-a94d-ca5c355c8730
 exl-id: a054b60a-5e89-4c98-87bc-35669988d160
-source-git-commit: d3923e5e693e7426ee57e81e203f31964a23af3a
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '734'
+source-wordcount: '704'
 ht-degree: 0%
 
 ---
 
 # Felsökningsriktlinjer för arbetsytan i AEM Forms {#troubleshooting-guidelines-for-aem-forms-workspace}
 
-I den här artikeln beskrivs hur du felsöker AEM Forms-arbetsytan genom att aktivera loggning och använda felsökningsfunktionen i en webbläsare. Här förklaras också några vanliga problem som du kan stöta på när du använder AEM Forms arbetsyta och deras temporära lösningar.
+I den här artikeln beskrivs hur du felsöker arbetsytan i AEM Forms genom att aktivera loggning och använda felsökningsfunktionen i en webbläsare. Här förklaras också några vanliga problem som du kan stöta på när du använder AEM Forms arbetsyta och deras temporära lösningar.
 
 ## Det går inte att installera AEM Forms-arbetsytans paket {#unable-to-install-aem-forms-workspace-package}
 
@@ -42,7 +38,7 @@ Du kan generera loggar på olika nivåer för att optimera felsökningen. I ett 
 
 I AEM Forms:
 
-* Lägg till `/log/<ComponentFile>/<LogLevel>` i webbadressen och tryck på `Enter`. All loggningsinformation för komponentfilen på den angivna loggnivån skrivs ut på konsolen.
+* Om du vill hämta loggningsinformation om en viss komponentfil lägger du till `/log/<ComponentFile>/<LogLevel>` i webbadressen och tryck på `Enter`. All loggningsinformation för komponentfilen på den angivna loggnivån skrivs ut på konsolen.
 
 * Om du vill hämta loggningsinformation för alla komponentfiler lägger du till `/log/all/trace` i webbadressen och tryck på `Enter`.
 
@@ -114,7 +110,7 @@ I AEM Forms:
    <td><p>userinfoView</p> </td>
   </tr>
   <tr>
-   <td><p>outOfficeView</p> </td>
+   <td><p>outtofofficeView</p> </td>
    <td><p>startpointModel</p> </td>
    <td><p>usersearchModel</p> </td>
   </tr>
@@ -157,9 +153,9 @@ Skript och format kan felsökas i olika webbläsare.
 
 * **Felsökning i IE**: Information om hur du felsöker AEM Forms arbetsyta i IE finns i: [https://learn.microsoft.com/en-us/office/dev/add-ins/testing/debug-add-ins-using-f12-tools-ie](https://learn.microsoft.com/en-us/office/dev/add-ins/testing/debug-add-ins-using-f12-tools-ie).
 
-* **Felsökning i Chrome**: Använd kortkommandot för att öppna felsökaren i Chrome: Ctrl+Skift+I. Mer information finns i: [https://developer.chrome.com/docs/extensions/mv3/tut_debugging/](https://developer.chrome.com/docs/extensions/mv3/tut_debugging/).
+* **Felsökning i Chrome**: Om du vill öppna felsökningsprogrammet i Chrome använder du kortkommandot: Ctrl+Skift+I. Mer information finns i: [https://developer.chrome.com/docs/extensions/mv3/tut_debugging/](https://developer.chrome.com/docs/extensions/mv3/tut_debugging/).
 
-* **Felsöka i Firefox**: Det finns flera tillägg för att felsöka skript och format i Firefox. Firebug är till exempel ett sådant felsökningsverktyg ([https://getfirebug.com](https://getfirebug.com)).
+* **Felsöka i Firefox**: Flera tillägg finns tillgängliga för felsökning av skript och format i Firefox. Firebug är till exempel ett sådant felsökningsverktyg ([https://getfirebug.com](https://getfirebug.com)).
 
 ## Vanliga frågor {#faqs}
 
@@ -172,8 +168,8 @@ Skript och format kan felsökas i olika webbläsare.
 1. Formuläret eller stödlinjen SWF återges inte i Google Chrome.
 
    1. Öppna chrome://plugins i Chrome om du vill visa tillgängliga plugin-program.
-   1. Se mer om plugin-programmet Adobe Flash® Player.
-   1. Inaktivera PepperFlash under plugin-programmet Adobe Flash Player.
+   1. Mer information finns i Adobe Flash® Player.
+   1. Inaktivera PepperFlash under plugin-programmet för Adobe Flash Player.
 
 1. Jag har anpassat AEM Forms-arbetsytan men kan inte se ändringarna.
 

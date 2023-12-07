@@ -1,18 +1,14 @@
 ---
 title: Exportera innehåll med hjälp av innehållsegenskaper
-seo-title: Using Content Properties to Export Content
 description: På följande sida visas Appegenskaper och -noder.
-seo-description: The following page shows App Properties and Nodes.
-uuid: 73f1832f-e457-47d0-a0e1-80af90897d31
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-on-demand-services-app
-discoiquuid: a3006835-b1d2-47d6-959a-cdb692e34e1e
 exl-id: db1c33c9-8539-436d-b4d0-3d5e6fd688ed
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '331'
+source-wordcount: '332'
 ht-degree: 0%
 
 ---
@@ -25,7 +21,7 @@ ht-degree: 0%
 
 Apparna representeras som *cq:Sidor* AEM.
 
-De delar samma gemensamma egenskaper som finns i *cq:Page* utöver de andra som visas nedan och som representerar egenskaper som stöder integrering.
+De delar samma gemensamma egenskaper som finns i *cq:Sida* utöver de andra som visas nedan och som representerar egenskaper som stöder integrering.
 
 ## Appegenskaper {#app-properties}
 
@@ -41,17 +37,17 @@ Följande tabell visar **Programegenskaper och noder**.
   <tr>
    <td>dps-cloudConfig</td>
    <td>String:Path</td>
-   <td><p>Sökväg till en konfigurerad Mobile On-Demand-Cloud Service. Används för AEM Mobile till Mobile On-Demand-åtgärder (API-anrop)</p> <p>Den här associationen konfigureras via panelen Hantera anslutning när en författare väljer en Cloud Service för mobil på begäran att koppla appen till.</p> </td>
+   <td><p>Sökväg till en konfigurerad Cloud Service för mobil on demand. Används för AEM Mobile till Mobile On-Demand-åtgärder (API-anrop)</p> <p>Den här associationen konfigureras via panelen Hantera anslutning när en författare väljer en Cloud Service för mobil på begäran att koppla appen till.</p> </td>
   </tr>
   <tr>
    <td>dps-exportTemplate</td>
    <td>String:Path</td>
-   <td><p>Sökväg till programmets exportkonfigurationer. Exportkonfigurationen är en mapp med två underordnade konfigurationsmallar för ContentSync-export.</p> <p><i>dps-article</i>: ContentSync-exportkonfiguration för att exportera artikelinnehåll</p> <p><i>dps-HTMLResources</i>: Konfiguration av ContentSync-export för att exportera delade resurser för program/artikel</p> </td>
+   <td><p>Sökväg till programmets exportkonfigurationer. Exportkonfigurationen är en mapp med två underordnade konfigurationsmallar för ContentSync-export.</p> <p><i>dps-article</i>: Konfiguration av ContentSync-export för att exportera artikelinnehåll</p> <p><i>dps-HTMLResources</i>: Konfiguration av ContentSync-export för att exportera delade resurser för program/artikel</p> </td>
   </tr>
   <tr>
    <td>dps-projectId</td>
    <td>Sträng</td>
-   <td><p>ID/URI för det Mobile On-Demand-projekt som den här appen är länkad/bunden till.</p> <p>Den här associationen konfigureras via panelen Hantera anslutning när en författare väljer projektet från en lista över tillgängliga projekt för den associerade Cloud Servicen Mobile On-Demand.</p> </td>
+   <td><p>ID/URI för det Mobile On-Demand-projekt som appen är länkad/bunden till.</p> <p>Den här associationen konfigureras via panelen Hantera anslutning när en författare väljer projektet från en lista över tillgängliga projekt för den associerade Cloud Servicen Mobile On-Demand.</p> </td>
   </tr>
   <tr>
    <td>dps-projectTitle</td>
@@ -81,7 +77,7 @@ Följande tabell visar **Programegenskaper och noder**.
   <tr>
    <td>sling:resourceType</td>
    <td>String:Path</td>
-   <td><p>Sökväg till en cq:Component som är eller utökar <i>mobileapps/core/components/instance.</i></p> <p>Detta medför att det finns och återges i Apps-katalogen.</p> </td>
+   <td><p>Sökväg till en cq:Component som är eller utökar <i>mobilappar/core/components/instance.</i></p> <p>Detta medför att det finns och återges i Apps-katalogen.</p> </td>
   </tr>
  </tbody>
 </table>

@@ -1,17 +1,13 @@
 ---
 title: Communities-prenumerationer
-seo-title: Communities Subscriptions
 description: Medlemmar i communityn interagerar med andra medlemmar via e-post
-seo-description: Community members interact with other members through email
-uuid: a4b98769-c219-4e18-8e80-9a806ab979ff
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: administering
 content-type: reference
-discoiquuid: 33c85af4-4c56-487a-ba60-55211cb9f72c
 role: Admin
 exl-id: 338be220-659a-459c-8e90-55e3a11ddeb0
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '351'
 ht-degree: 0%
@@ -20,7 +16,7 @@ ht-degree: 0%
 
 # Communities-prenumerationer {#communities-subscriptions}
 
-## Översikt {#overview}
+## Ökning {#overview}
 
 Från och med Communities [FP1](deploy-communities.md#latestfeaturepack)kan communitymedlemmar interagera med communityn via e-post med en funktion som kallas prenumerationer.
 
@@ -29,7 +25,7 @@ Prenumerationer liknar [meddelanden](notifications.md) som medlemmar kan prenume
 Det som skiljer prenumerationer från meddelanden är:
 
 * Medlemmar får inte prenumerera när de följer efter andra medlemmar.
-* Den enda åtgärd som medlemmar kan utföra är att välja `Email Subscriptions` efter.
+* Den enda åtgärd som medlemmar kan utföra är att välja `Email Subscriptions` när du följer.
 * När e-postsvar har konfigurerats kan medlemmar effektivt publicera innehåll genom att helt enkelt svara på det mottagna e-postmeddelandet.
 
 ### Krav {#requirements}
@@ -50,9 +46,9 @@ Komponenter måste konfigureras för att aktivera prenumerationer *och* följer.
 
 The **Följ** Med knappen kan du följa upp tävlingsbidrag som aktiviteter, prenumerationer och/eller meddelanden. Varje gång **Följ** är markerad går det att aktivera eller inaktivera en markering.
 
-Om någon av följande metoder är markerad ändras texten för knappen till **Följande**. Det går att välja `Unfollow All` för att växla mellan olika metoder.
+Om någon av följande metoder är markerad ändras texten till **Följande**. Det går att välja `Unfollow All` för att växla mellan olika metoder.
 
-The **Följ** knappen innehåller `Email Subscriptions` bara när ett forum, QnA eller blogg har konfigurerats för att aktivera e-postprenumerationer. Den här knappen visas:
+The **Följ** knappen kommer att innehålla `Email Subscriptions` bara när ett forum, QnA eller blogg har konfigurerats för att aktivera e-postprenumerationer. Den här knappen visas:
 
 * På huvudfunktionssidan för det aktiverade forumet, QnA eller bloggen Kommer att skicka ett e-postmeddelande för all aktivitet under den funktionen.
 

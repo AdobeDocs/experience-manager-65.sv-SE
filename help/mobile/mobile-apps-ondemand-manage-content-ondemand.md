@@ -1,18 +1,14 @@
 ---
 title: Hantera innehåll
-seo-title: Managing Content
 description: Innehållshanteringsåtgärder är byggstenar som används för att skapa och hantera innehåll i ett program. Följ den här sidan om du vill veta mer.
-seo-description: Content Management actions are the building blocks that help to create and manage content within an application. Follow this page to learn more.
-uuid: ab680836-133b-45b9-913c-e721b7e9fc04
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: authoring-on-demand-services-app
-discoiquuid: 89fc3701-0472-4629-95d3-da577581a0f0
 exl-id: 4e37e814-ceb6-4dfa-a4d3-754f15ca4edf
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '280'
+source-wordcount: '276'
 ht-degree: 0%
 
 ---
@@ -29,8 +25,8 @@ Innehållshanteringsåtgärder är byggstenar som används för att skapa och ha
 
 Om du tänker på en nättidskrift innehåller huvudinnehållet artiklar, annonser och omslag. Tre huvudtyper av mobilt on demand-innehåll kan skapas i AEM:
 
-* **Artiklar**: text som bygger på bilder för att förmedla information
-* **Banderoller:** vanligtvis grafiska marknadsföringslänkar
+* **Artiklar**: text baserad med bilder för att förmedla information
+* **Banderoller:** vanligtvis grafiska reklamlänkar
 * **Samlingar:** representerar en väldefinierad *bucket* fyllda med innehåll som artiklar eller banderoller som passar omslagets tema
 
 * **Delade resurser:** tillåter återanvändning eller delning av gemensamma delar mellan artiklar
@@ -41,7 +37,7 @@ Om du tänker på en nättidskrift innehåller huvudinnehållet artiklar, annons
 
 ## Skapa och hantera innehåll {#creating-and-managing-content}
 
-I följande avsnitt beskrivs hur du skapar och hanterar innehåll: artiklar, banners och samlingar. När du har lärt dig att skapa och hantera innehållet kan du se ytterligare ämnen, som att överföra delade resurser, publicera/avpublicera innehåll och förhandsgranska med Preflight.
+I följande avsnitt beskrivs hur du skapar och hanterar innehåll: artiklar, banners och samlingar. När du har lärt dig hur du skapar och hanterar innehållet kan du se ytterligare ämnen, som att överföra delade resurser, publicera/avpublicera innehåll och förhandsgranska med Preflight.
 
 * [Hantera artiklar](/help/mobile/mobile-on-demand-managing-articles.md)
 * [Hantera banners](/help/mobile/mobile-on-demand-managing-banners.md)

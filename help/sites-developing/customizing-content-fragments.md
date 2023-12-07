@@ -1,21 +1,19 @@
 ---
-title: Anpassa och utöka Content Fragments
-seo-title: Customizing and Extending Content Fragments
+title: Anpassa och utöka innehållsfragment
 description: Ett innehållsfragment utökar en standardresurs. Lär dig hur du kan anpassa dem.
-seo-description: A content fragment extends a standard asset. Learn how you can customize them.
 topic-tags: extending-aem
 content-type: reference
 docset: aem65
 exl-id: 08c88e70-4df9-4627-8a66-1fabe3aee50b
-source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '2794'
+source-wordcount: '2728'
 ht-degree: 0%
 
 ---
 
 
-# Anpassa och utöka Content Fragments{#customizing-and-extending-content-fragments}
+# Anpassa och utöka innehållsfragment{#customizing-and-extending-content-fragments}
 
 Ett innehållsfragment utökar en standardresurs, se:
 
@@ -531,7 +529,7 @@ Se [Mallar för innehållsfragment](/help/sites-developing/content-fragment-temp
 
 ## Komponenter för sidredigering {#components-for-page-authoring}
 
-Mer information finns i
+Mer information finns på
 
 * [Kärnkomponenter - komponent för innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html) (rekommenderas)
 * [Content Fragment Components - Components for Page Authoring](/help/sites-developing/components-content-fragments.md#components-for-page-authoring)

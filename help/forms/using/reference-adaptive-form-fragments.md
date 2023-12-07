@@ -1,17 +1,13 @@
 ---
 title: Referera till adaptiva formulärfragment
-seo-title: Reference adaptive form fragments
 description: AEM Forms har adaptiva formulärfragment som du kan använda som resurser för att snabbt skapa ett formulär.
-seo-description: AEM Forms provides adaptive form fragments that you can use as assets to create a form quickly.
-uuid: 85401274-6691-4726-8b70-b93fd46de053
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
-discoiquuid: a1229970-5a5a-4f76-a880-278f972587cc
 docset: aem65
 exl-id: 933c164e-7c39-4d2e-834b-53a3c2b4ec90
-source-git-commit: 1def8ff7bc90e2ab82ce8b50277a97da9709c78c
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '389'
+source-wordcount: '381'
 ht-degree: 0%
 
 ---
@@ -60,7 +56,7 @@ Inkluderar fält för att hämta telefonnummer och e-postadress.
 ## Kreditkortsinformation {#credit-card-information}
 
 Inkluderar fält för att samla in kreditkortsinformation som kan användas för att bearbeta betalningar.
-[ ![Information om kreditkort](assets/cc-info.png)](assets/cc-info-1.png)
+[![Information om kreditkort](assets/cc-info.png)](assets/cc-info-1.png)
 
 ## Aktuell anställning {#current-employment}
 

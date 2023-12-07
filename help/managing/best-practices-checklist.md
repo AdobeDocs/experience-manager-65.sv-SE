@@ -1,18 +1,14 @@
 ---
 title: Checklistan
-seo-title: The Checklist
 description: Projektchecklistor är avsedda som en uppsättning bästa metoder för projektleverans. De vägleder dig genom alla faser i projektets livscykel och ger dig möjlighet att övervaka din nuvarande status på hög nivå.
-seo-description: The Project Checklists are intended as a set of best practices for project delivery. They guide you through all phases of the project life cycle and provide high level monitoring of your current status.
-uuid: e8ab9042-4d54-445d-b104-23d5d38f58b6
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/MANAGING
 topic-tags: managing-checklist
 content-type: reference
-discoiquuid: 917b4fec-d5fe-4402-b69c-3c9645e6f934
 exl-id: 16851d65-df55-471a-8848-c73c28db8ac0
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '316'
+source-wordcount: '318'
 ht-degree: 0%
 
 ---
@@ -23,7 +19,7 @@ Projektchecklistor är avsedda som en uppsättning bästa metoder för projektle
 
 Det finns checklistor för varje person (roll) som ingår i ditt projekt. Dessa detaljerar slutprodukterna, uppdelade efter fas och milstolpe. De visar också de dokument som krävs för att generera slutprodukterna. Genom att spåra dokumentens status och kvalitet kan du övervaka statusen för projektet som helhet, vilket ger transparens och ansvar.
 
-## Hämta {#download}
+## Ladda ned {#download}
 
 AEM Project Best Practices Checklist v2
 
@@ -47,7 +43,7 @@ I kalkylbladet finns följande kalkylblad:
 
 För att kunna leverera ett projekt av hög kvalitet måste du fylla i alla objekt i checklistorna, helst för att:
 
-1. Checklistorna definieras enligt **[Persona](/help/managing/best-practices.md#persona)** (roll). Varje person bör använda checklistan för sin roll i projektet.
+1. Checklistorna definieras enligt **[Persona](/help/managing/best-practices.md#persona)** (roll) involverad. Varje person bör använda checklistan för sin roll i projektet.
 1. Checklistorna täcker **[Obligatoriska dokument](/help/managing/best-practices.md#required-documents)** och **[Leveranser](/help/managing/best-practices.md#deliverables)** för varje milstolpe - den relevanta personen måste ange lämpliga status- och kvalitetsfält.
 
    >[!NOTE]

@@ -1,19 +1,15 @@
 ---
 title: Certifikattyper som används av Acrobat Reader DC-tillägg
-seo-title: Certificate types used by Acrobat Reader DC extensions
 description: Lär dig mer om de certifikattyper som används av Acrobat Reader DC-tillägg.
-seo-description: Learn about the certificate types used by Acrobat Reader DC extensions.
-uuid: 93c02abc-2d5a-44ed-b93c-981afbd0553d
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/configuring_acrobat_reader_dc_extensions
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: 331b9317-87b5-4a96-a1bc-429675ff90c5
 exl-id: 800bffd5-0cdc-4251-bba4-e350f226f019
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '936'
-ht-degree: 2%
+source-wordcount: '944'
+ht-degree: 0%
 
 ---
 
@@ -40,7 +36,7 @@ Strängen innehåller följande element:
 
 **Användarrättigheter:** Beskriver vilken version av användarrättighetsalgoritmen som certifikatet kan användas för, till exempel V6.1. Den här versionen betecknar inte Acrobat- eller Acrobat Reader DC-tilläggen.
 
-**Profilkod:** Profilkoden är en kort beskrivning av fullständiga certifikategenskaper, till exempel P8. En lista över profilkoder som är associerade med varje filtyp finns i kolumnen Profilkod i tabellen i avsnittet Certifikatprofiler.
+**Profilkod:** Profilkoden är en kortfattad beskrivning av fullständiga certifikategenskaper, till exempel P8. En lista över profilkoder som är associerade med varje filtyp finns i kolumnen Profilkod i tabellen i avsnittet Certifikatprofiler.
 
 **Serienummer:** Varje certifikat som utfärdas av Adobe tilldelas ett serienummer, till exempel 0002054. Adobe Enterprise Support eller en Adobe Enterprise-kontorepresentant kan använda det här serienumret för att spåra certifikatet till en viss produktorder eller till en OEM-relation.
 
@@ -108,37 +104,37 @@ I följande tabell visas de certifikatprofiler som du kan stöta på när du ana
   </tr>
   <tr>
    <td><p>I10</p></td>
-   <td><p>Forms kan användas av OEM-tillverkare</p></td>
+   <td><p>Forms; kan användas av OEM-tillverkare</p></td>
    <td><p>Max</p></td>
    <td><p>Produktion och utvärdering</p></td>
   </tr>
   <tr>
    <td><p>I11</p></td>
-   <td><p>Forms kan användas av OEM-tillverkare</p></td>
+   <td><p>Forms; kan användas av OEM-tillverkare</p></td>
    <td><p>Max</p></td>
    <td><p>Produktion och utvärdering</p></td>
   </tr>
   <tr>
    <td><p>I12</p></td>
-   <td><p>Endast underskrift; kan användas av OEM-tillverkare</p></td>
+   <td><p>Endast signatur; kan användas av OEM-tillverkare</p></td>
    <td><p>Max</p></td>
    <td><p>Produktion och utvärdering</p></td>
   </tr>
   <tr>
    <td><p>I13</p></td>
-   <td><p>Endast offlinekommentarer; kan användas av OEM-tillverkare</p></td>
+   <td><p>Endast offlinekommentering - kan användas av OEM-tillverkare</p></td>
    <td><p>Max</p></td>
    <td><p>Produktion och utvärdering</p></td>
   </tr>
   <tr>
    <td><p>I14</p></td>
-   <td><p>Endast kommentarer. kan användas av OEM-tillverkare</p></td>
+   <td><p>Endast kommentarer; kan användas av OEM-tillverkare</p></td>
    <td><p>Max</p></td>
    <td><p>Produktion och utvärdering</p></td>
   </tr>
   <tr>
    <td><p>I15</p></td>
-   <td><p>Fullständigt tillstånd; kan användas av OEM-tillverkare</p></td>
+   <td><p>Fullständiga behörigheter; kan användas av OEM-tillverkare</p></td>
    <td><p>Max</p></td>
    <td><p>Produktion och utvärdering</p></td>
   </tr>
@@ -149,9 +145,9 @@ I följande tabell visas de certifikatprofiler som du kan stöta på när du ana
 
 Utvärderingscertifikat utfärdas till kunder och utvecklare så att de kan utvärdera och utveckla produktexempel. Dessa certifikats giltighetstid är mellan 60 och 90 dagar. De löper ut i slutet av den andra månaden efter den månad då uppgifterna om utfärdandet daterades.
 
-Certifikat för partnerintegrering utfärdas till Adobe affärspartners för att stödja programutveckling, integrering, prototyper och demonstration. Dessa certifikat gäller i två år från och med utfärdandedagen.
+Certifikat för partnerintegrering utfärdas till Adobe affärspartners för att stödja programutveckling, integrering, prototyper och demonstration. Dessa intyg är giltiga i två år från och med utfärdandedagen.
 
-Adobe certifikat för intern användning används i Adobe för att stödja programutveckling, integrering, prototyper och demonstration. Dessa certifikat gäller i två år från och med utfärdandedagen.
+Adobe certifikat för intern användning används i Adobe för att stödja programutveckling, integrering, prototyper och demonstration. Dessa intyg är giltiga i två år från och med utfärdandedagen.
 
 Produktionscertifikat utfärdas till kunder som köpt Acrobat Reader DC-tillägg. Dessa certifikat gäller under den maximala period som tillåts av certifikatutfärdaren (CA), vilket visas som *Max* i tabellen Certifikatprofiler.
 
@@ -159,7 +155,7 @@ Produktionscertifikat utfärdas till kunder som köpt Acrobat Reader DC-tillägg
 
 När du granskar Acrobat Reader DC-tilläggscertifikatet i Certifikatgranskaren kan du välja användningsrättighetsobjektet på fliken Information (om den är konfigurerad) för att se en detaljerad lista över de användningsrättigheter för Adobe Reader som certifikatet kan aktivera. De användarrättigheter som är aktiverade för ett visst dokument kan vara en delmängd av de som är aktiverade av certifikatet.
 
-Om det krävs kommentarer online i en icke-samarbetsmiljö kontaktar du supporten för Adobe för mer information. Egenskapen Mode matchar distributionstypen och är antingen *produktion* eller *utvärdering*.
+Om det krävs kommentarer online i en icke-samarbetsmiljö kontaktar du supporten för Adobe om du vill ha mer information. Egenskapen Mode matchar distributionstypen och är antingen *produktion* eller *utvärdering*.
 
 Tillåtna användningsrättigheter för Acrobat Reader DC-tillägg består av ett eller flera specifika element. Dessa element används i olika kombinationer för att uppnå olika typer av licensierad produktfunktionalitet.
 

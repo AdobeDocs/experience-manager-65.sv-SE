@@ -1,17 +1,13 @@
 ---
 title: Hantera inbjudna och lokala användarkonton
-seo-title: Managing invited and local user accounts
 description: Med dokumentsäkerhet kan du söka efter, visa, redigera, låsa, låsa upp och ta bort inbjudna och lokala användarkonton.
-seo-description: Using document security, you can search for, view, edit, lock, unlock, and delete invited and local user accounts.
-uuid: 0d0c717a-6e6e-4e42-96eb-3a7166e215ab
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/working_with_document_security
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: 65720eed-ab06-463f-9567-2fdc468b6219
 feature: Document Security
 exl-id: 23f71b34-a0cb-4664-bb8b-a60f33dc70d8
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '1196'
 ht-degree: 0%
@@ -35,7 +31,7 @@ Du kan även skicka registrerings-e-postmeddelanden manuellt till dina inbjudna 
 
 ## Lägg till en inbjuden användare {#add-an-invited-user}
 
-Du kan lägga till ett eller flera inbjudna användarkonton i dokumentskyddet samtidigt. Om du vill lägga till ett inbjudet användarkonto behöver du användarens e-postadress. När du lägger till en användare skickar dokumentsäkerheten ett registrerings-e-postmeddelande med en inbjudan till användaren att registrera sig.
+Du kan lägga till ett eller flera inbjudna användarkonton i dokumentskyddet samtidigt. Om du vill lägga till ett inbjudet användarkonto behöver du användarens e-postadress. När du lägger till en användare skickas ett registrerings-e-postmeddelande med en inbjudan till användaren att registrera sig.
 
 1. I administrationskonsolen klickar du på Tjänster > Dokumentsäkerhet > Inbjudna och lokala användare och sedan på Bjud in ny användare.
 1. Skriv e-postadresserna till de användare som du vill bjuda in. Ange flera adresser på en rad, avgränsade med kommatecken.
@@ -104,7 +100,7 @@ Om du tar bort ett användarkonto kan bara du eller en annan administratör åte
 
 ## Sök efter ett inbjudet användarkonto {#search-for-an-invited-user-account}
 
-Du kan söka efter inbjudna användarkonton med hjälp av en e-postadress.
+Du kan söka efter inbjudna användarkonton med en e-postadress.
 
 1. I administrationskonsolen klickar du på Tjänster > Dokumentsäkerhet > Inbjudna och lokala användare.
 1. Skriv användarens e-postadress i rutan Sök efter e-post och klicka sedan på Sök.

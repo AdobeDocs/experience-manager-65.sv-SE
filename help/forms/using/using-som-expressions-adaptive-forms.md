@@ -1,25 +1,21 @@
 ---
 title: Använda SOM-uttryck i adaptiva former
-seo-title: Using SOM expressions in adaptive forms
 description: Lär dig hur du extraherar SOM-uttryck för en panel i ett adaptivt formulär.
-seo-description: Learn how to extract SOM expressions of a panel of an adaptive form.
-uuid: c5d55aff-fb69-4a1c-96ea-fb3f9322cbb0
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
-discoiquuid: 13f00bb2-561f-4d64-8829-292c663abeab
 docset: aem65
 feature: Adaptive Forms
 exl-id: 6a158e18-b7d0-45fb-b4fc-4770e66982b4
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '348'
+source-wordcount: '344'
 ht-degree: 0%
 
 ---
 
 # Använda SOM-uttryck i adaptiva former{#using-som-expressions-in-adaptive-forms}
 
-Anpassade formulär modelleras som AEM sida, som representeras som JCR-innehållsstruktur i AEM. Nyckelelementet i innehållsstrukturen är noden guideContainer. Under guideContainer finns det rootPanel som kan innehålla kapslade paneler och fält.
+Anpassningsbara formulär modelleras som AEM sida, som representeras som JCR-innehållsstruktur i AEM. Nyckelelementet i innehållsstrukturen är noden guideContainer. Under guideContainer finns det rootPanel som kan innehålla kapslade paneler och fält.
 
 Du kan använda en skriptobjektmodell (SOM) för att referera till värden, egenskaper och metoder i en viss dokumentobjektmodell (DOM). En DOM organiserar minnesobjekt och egenskaper i en trädhierarki. A SOM expression references Fields/Draw elements and panels.
 

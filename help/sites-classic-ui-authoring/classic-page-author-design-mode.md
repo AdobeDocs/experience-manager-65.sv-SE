@@ -1,17 +1,15 @@
 ---
 title: Konfigurera komponenter i designläge
 description: När AEM är installerad i en körklar version är ett urval av komponenter omedelbart tillgängliga i sidosparken. Förutom dessa finns även andra komponenter tillgängliga. Du kan använda designläget för att aktivera/inaktivera sådana komponenter.
-uuid: 2cd5dad0-2f9c-4f34-aae8-1638d1445eb3
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: page-authoring
 content-type: reference
-discoiquuid: 10466b49-f8bd-4c2c-8106-b0c7ba054989
 docset: aem65
 exl-id: cb2d2d0d-feb4-4b89-8325-80f735816904
-source-git-commit: 75c6bb87bb06c5ac9378ccebf193b5416c080bb1
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '509'
+source-wordcount: '508'
 ht-degree: 0%
 
 ---
@@ -20,7 +18,7 @@ ht-degree: 0%
 
 När AEM är installerad i en körklar version är ett urval av komponenter omedelbart tillgängliga i sidosparken.
 
-Förutom dessa finns även andra komponenter tillgängliga. Du kan använda designläget för att [Aktivera/inaktivera sådana komponenter](#enabledisablecomponentsusingdesignmode). När det är aktiverat och finns på sidan kan du sedan använda designläget för att [konfigurera olika aspekter av komponentdesignen](#configuringcomponentsusingdesignmode) genom att redigera attributparametrarna.
+Förutom dessa finns även andra komponenter tillgängliga. Du kan använda designläget för att [Aktivera/inaktivera sådana komponenter](#enabledisablecomponentsusingdesignmode). När det är aktiverat och finns på sidan kan du sedan använda designläget för att [konfigurera komponentdesignens aspekter](#configuringcomponentsusingdesignmode) genom att redigera attributparametrarna.
 
 >[!NOTE]
 >
@@ -53,11 +51,11 @@ I designläget minimeras sidosparken och du kan konfigurera komponenter som är 
 
 1. En dialogruta öppnas med en lista över de komponentgrupper som visas i Sidekick tillsammans med de enskilda komponenterna som de innehåller.
 
-   Välj vad som krävs för att lägga till eller ta bort komponenterna som ska vara tillgängliga i sidosparken.
+   Välj vad som krävs för att lägga till, eller ta bort, de komponenter som ska vara tillgängliga i sidosparken.
 
    ![screen_shot_2012-02-08at103407am](assets/screen_shot_2012-02-08at103407am.png)
 
-1. The Sidekick minimeras i designläge. Genom att klicka på pilen kan du maximera sparken och återgå till redigeringsläget:
+1. Sidekick minimeras i designläge. Genom att klicka på pilen kan du maximera Sidekick och återgå till redigeringsläget:
 
    ![Sidekick minimerad](do-not-localize/sidekick-collapsed.png)
 
@@ -77,6 +75,6 @@ I designläget kan du även konfigurera attribut för de enskilda komponenterna.
 
 1. Klicka **OK** för att spara ändringarna.
 
-1. The Sidekick minimeras i designläge. Genom att klicka på pilen kan du maximera Sidekick och återgå till redigeringsläget:
+1. Sidekick minimeras i designläge. Genom att klicka på pilen kan du maximera Sidekick och återgå till redigeringsläget:
 
    ![Sidekick minimerad](do-not-localize/sidekick-collapsed-1.png)
