@@ -9,9 +9,9 @@ breadcrumb-title: Användarhandbok om Forms
 user-guide-description: Skapa, hantera, publicera och uppdatera digitala formulär.
 role: User
 feature: Forms Service
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: cf5da092fabbc7834108dc54d65eb97e160984ce
 workflow-type: tm+mt
-source-wordcount: '3911'
+source-wordcount: '3752'
 ht-degree: 0%
 
 ---
@@ -705,4 +705,5 @@ ht-degree: 0%
    + [Konfigurera och felsöka ett AEM Forms i JEE-serverkluster](developing/configure-server-cluster.md)
    + [Generera och arbeta med hashvärden i dynamisk PDF forms](developing/hashing-forms.md)
    + [Skicka inloggningsuppgifter med WS-Security-huvuden](developing/passing-credentials.md)
+   + [Det går inte att använda utdatatjänsten, Forms-tjänsten eller DoR-tjänsten (Document of Record)](/help/forms/using/connection-issues-with-output-forms-and-document-of-record-dor-services.md)
 
