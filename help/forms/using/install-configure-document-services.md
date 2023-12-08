@@ -4,9 +4,9 @@ description: Installera AEM Forms Document Services för att skapa, sammanställ
 topic-tags: installing
 role: Admin
 exl-id: 5d48e987-16c2-434b-8039-c82181d2e028
-source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
+source-git-commit: 6b24067c1808475044a612f21d5d4d2793c13e17
 workflow-type: tm+mt
-source-wordcount: '5342'
+source-wordcount: '5442'
 ht-degree: 0%
 
 ---
@@ -556,6 +556,16 @@ Assembler-tjänsten är beroende av tjänsten Reader Extensions, tjänsten Signa
   </tr>
  </tbody>
 </table>
+
+### (Endast Windows) Konfigurera registerpost för Microsoft® Project {#configure-registry-entry-for-microsoft-project}
+
+När du har installerat AEM Forms-tillägget och Microsoft® Project på datorn registrerar du ett bidrag för Microsoft® Project på 64-bitarsplatsen. Det underlättar körning av konverteringstester för Project till PDFG. Följande steg beskriver processen för registerposten:
+
+1. Öppna Registereditorn för Microsoft® Windows (regedit), öppna Registereditorn, gå till Start > Kör, skriv regedit och klicka på OK.
+1. Navigera till `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Adobe\Acrobat PDFMaker\<version>\Office\SupportedApp`och skapa en ny **Binärt värde** register och ändra namn på det till **Projekt**.
+1. Ändra datavärdet för det skapade binära registret till 01 och klicka på OK.
+1. Stäng registerposten.
+
 
 ## Kända fel och felsökning {#known-issues-and-troubleshooting}
 

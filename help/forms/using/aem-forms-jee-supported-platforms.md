@@ -7,9 +7,9 @@ geptopics: SG_AEMFORMS/categories/jee
 docset: aem65
 role: Admin
 exl-id: 74d22cf4-56b2-48f5-92d9-928eaa134866
-source-git-commit: 1630805be43ce9bb52a8fe1bbe50b2b934d4922c
+source-git-commit: 6b24067c1808475044a612f21d5d4d2793c13e17
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '3984'
 ht-degree: 0%
 
 ---
@@ -242,12 +242,12 @@ Adobe Experience Manager Forms kräver att en Java™ Virtual Machine körs, vil
    <td><p><strong>Patch-definitioner som stöds</strong></p> </td>
   </tr>
   <tr>
-   <td>Oracle WebLogic Server 12.2.1 (12c R2) (borttagen)</td>
+   <td>Oracle WebLogic Server 12.2.1 (12c R2) (borttagen) <sup>[9]</sup></td>
    <td>A: Stöds</td>
    <td>Service Pack och viktiga uppdateringar</td>
   </tr>
   <tr>
-   <td>Oracle WebLogic Server 14c </td>
+   <td>Oracle WebLogic Server 14c <sup>[9]</sup></td>
    <td>A: Stöds</td>
    <td>Service Pack och viktiga uppdateringar</td>
   </tr>
@@ -355,6 +355,9 @@ Tänk på följande undantag när du väljer en plattform för att konfigurera A
 1. AEM Forms i JEE stöder inte WebSphere®-programserver i CentOS.
 1. AEM Forms på JEE stöder inte rollbaserad åtkomstkontroll JBoss® (RBAC).
 1. AEM Forms på JEE har endast stöd för Java™ SE 11 (64 bitar) SDK för programserver JBoss® EAP 7.4.
+1. JDK-versioner som är högre än 1.8.0_281 stöds inte för WebLogic-servern. (FORMS-8498)
+1. [!DNL Microsoft® Windows Server 2019] stöder inte [!DNL MySQL 5.7] och [!DNL JBoss® EAP 7.1], [!DNL Microsoft® Windows Server 2019] stöder inte körklara installationer för [!DNL Experience Manager Forms 6.5.10.0 and later]. (CQDOC-18312)
+
 
 Tänk dessutom på följande när du väljer program för Adobe AEM Forms i JEE-distributioner:
 
@@ -407,7 +410,7 @@ Tänk dessutom på följande när du väljer program för Adobe AEM Forms i JEE-
   </tr>
   <tr>
    <td>EMC Documentum®</td>
-   <td>7.3</td>
+   <td>7,3</td>
   </tr>
   <tr>
    <td>IBM® FileNet</td>
@@ -419,7 +422,7 @@ Tänk dessutom på följande när du väljer program för Adobe AEM Forms i JEE-
   </tr>
   <tr>
    <td> IBM® Content Manager Client (borttagen)</td>
-   <td>8.5 </td>
+   <td>8,5 </td>
   </tr>
    <td>Microsoft® Sharepoint </td>
    <td>2019<br /> </td>

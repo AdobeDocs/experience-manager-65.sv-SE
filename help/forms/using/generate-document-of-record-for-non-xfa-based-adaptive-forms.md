@@ -7,14 +7,14 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 docset: aem65
 feature: Adaptive Forms
 exl-id: 7240897f-6b3a-427a-abc6-66310c2998f3
-source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
+source-git-commit: 6b24067c1808475044a612f21d5d4d2793c13e17
 workflow-type: tm+mt
-source-wordcount: '3404'
+source-wordcount: '3454'
 ht-degree: 0%
 
 ---
 
-# Generera arkivdokument för anpassningsbara formulär{#generate-document-of-record-for-adaptive-forms}
+# Generera arkivdokument för adaptiva formulär eller adaptiva formulärfragment {#generate-document-of-record-for-adaptive-forms}
 
 <span class="preview"> Adobe rekommenderar att man använder modern och utbyggbar datainhämtning [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) for [skapa ny Adaptive Forms](/help/forms/using/create-an-adaptive-form-core-components.md) eller [lägga till adaptiv Forms på AEM Sites-sidor](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-filer, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptiv Forms med baskomponenter. </span>
 
@@ -28,7 +28,7 @@ ht-degree: 0%
 
 Efter att ha skickat in ett formulär vill era kunder vanligtvis registrera, i utskrift eller i dokumentformat, den information de har fyllt i formuläret för framtida referens. Detta kallas för ett urkunder.
 
-I den här artikeln beskrivs hur du kan generera ett postdokument för anpassningsbara formulär.
+I den här artikeln beskrivs hur du kan generera ett postdokument för Adaptiv Forms eller Adaptiv formulärfragment.
 
 >[!NOTE]
 >
@@ -68,6 +68,8 @@ Automatiskt genererade urkunder har följande fördelar:
 Om du vill generera ett postdokument för adaptiva formulär behöver du följande komponenter:
 
 **Adaptiv form** Anpassat formulär som du vill skapa ett postdokument för.
+
+**Adaptivt formulärfragment** Anpassat formulärfragment som du vill generera ett postdokument för.
 
 **Basmall (rekommenderas)** XFA-mall (XDP-fil) skapad i AEM Designer. Basmallen används för att ange formaterings- och varumärkesinformation för postmalldokument.
 
@@ -273,7 +275,7 @@ Du kan också välja en formulärmodell när du skapar ett formulär.
    >
    >På fliken Formulärmodell väljer du **Schema** eller **Ingen** från **Välj från** nedrullningsbar meny. **[!UICONTROL Document of record is not supported for XFA-based or adaptive forms with Form Template as form model.]**
 
-1. Välj något av följande alternativ i avsnittet Dokumentmall på fliken Formulärmodell.
+1. Välj något av följande alternativ i avsnittet Dokumentmall på fliken Formulärmodell:
 
    **Ingen** Välj det här alternativet om du inte vill konfigurera postdokument för formuläret.
 
@@ -396,6 +398,10 @@ Dokumentet med postinställningar för en komponent är tillgängligt under dess
    * **[!UICONTROL Overflow]** > **[!UICONTROL Go to Content Area]** > Innehållsområdets namn: Börjar fylla det angivna innehållsområdet.
    * **[!UICONTROL Overflow]** > **[!UICONTROL Go To Page]** > Sidans namn: börjar fylla den angivna sidan.
 
+  >[!NOTE]
+  >
+  > Pagination-egenskapen är inte tillgänglig för adaptiva formulärfragment.
+
 Mer information om hur du använder sidbrytningar och använder flera mallsidor i ett postdokument finns i [Använda sidbrytning i ett postdokument](#apply-page-breaks-in-dor) och [Använda flera mallsidor i ett postdokument](#apply-multiple-master-pages-dor).
 
 **Inställningar för formulärnivå**
@@ -437,6 +443,9 @@ AEM Forms lägger till en andra mallsida på panelen och alla efterföljande pan
 1. Välj ![Spara](/help/forms/using/assets/save_icon.png) för att spara egenskaperna.
 AEM Forms använder den tredje mallsidan på panelen och alla efterföljande paneler i det anpassade formuläret.
 
+>[!NOTE]
+>
+> Du kan inte använda flera mallsidor på ett postdokument för ett anpassat formulärfragment.
 
 ## Viktiga saker att tänka på när du arbetar med postdokument {#key-considerations-when-working-with-document-of-record}
 

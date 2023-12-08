@@ -1,146 +1,194 @@
 ---
 title: Sammanfattning av nya funktioner | AEM 6.5 Forms
-description: De senaste funktionerna och förbättringarna i formulär och dokument i världens mest avancerade lösning för hantering av digitala upplevelser.
+description: De senaste funktionerna och förbättringarna av AEM formulär och dokument, världens mest avancerade lösning för hantering av digitala upplevelser.
 topic-tags: introduction
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 docset: aem65
 exl-id: 47b9de1f-b16a-424c-b8b4-e9d7b3dcca86
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: 6b24067c1808475044a612f21d5d4d2793c13e17
 workflow-type: tm+mt
-source-wordcount: '1241'
+source-wordcount: '546'
 ht-degree: 0%
 
 ---
 
 # Sammanfattning av nya funktioner | AEM 6.5 Forms{#new-features-summary-aem-forms}
 
-## Transaktionsrapporter {#transaction-reports}
-
-| Version | Artikellänk |
+| Produkt | Adobe Experience Manager 6.5 |
 | -------- | ---------------------------- |
-| AEM as a Cloud Service | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/forms-overview/latest-innovations.html) |
-| AEM 6.5 | Den här artikeln |
+| Version | 6.5.19.0 |
+| Typ | Service Pack-version |
+| Datum | Fredagen den 8 december 2023 |
+
+## Vad ingår i Adobe Experience Manager 6.5 Forms Service Pack 19 (6.5.19.0)
+
+Experience Manager 6.5.19.0 innehåller nya funktioner, viktiga förbättringar som kunderna efterfrågat, felkorrigeringar, prestanda, stabilitet och säkerhetsförbättringar som har släppts sedan den första tillgängligheten av 6.5 i april 2019. [Installera detta Service Pack](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/aem-forms-current-service-pack-installation-instructions.html) på Experience Manager 6.5.
+
+### Nya funktioner
+
+#### Nya adaptiva kärnkomponenter i formulär
+
+Lodräta flikar, villkor och kryssrutor läggs till för att öka formulärens skalbarhet.
+
+* **[Kryssrutekomponent](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/checkbox.html)**: Adaptiv Forms baserad på kärnkomponenter kan nu innehålla en kryssrutekomponent. Det gör att användare kan göra binära val, markera eller avmarkera ett visst alternativ. Det visas vanligtvis som en liten ruta som du kan klicka på eller peka på för att växla mellan två lägen: markerad och avmarkerad. Kryssrutan är ett vanligt formulärelement som används för att ange ett ja/nej- eller sant/falskt-val.
+
+* **[Villkorskomponent](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/terms-and-conditions.html)**: Adaptiv Forms baserad på kärnkomponenter kan nu innehålla en villkorskomponent. Det gör det möjligt för formulärförfattare att infoga ett specifikt avsnitt i formuläret där användarna presenteras med de villkor eller juridiska avtal som är kopplade till användningen av en tjänst, produkt eller plattform. Den här komponenten är utformad för att informera användare om de regler, bestämmelser och skyldigheter som de godkänner genom att skicka in formuläret.
+
+  ![Vertikala flikar, villkor och kryssrutekomponenter](/help/forms/using/assets/forms-components.png)
+
+* **[Lodräta flikar, komponent](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/vertical-tabs.html)**: Adaptiv Forms baserad på kärnkomponenter kan nu ordna formulärinnehåll i en lodrät lista med flikar, vilket ger en strukturerad och navigeringsbar layout. Om du använder vertikala flikar i ett formulär kan det förbättra användarupplevelsen genom att förenkla navigeringen och förbättra organisationen av formulärinnehållet, särskilt i situationer där ett formulär innehåller flera avsnitt eller komplex information.
+
+#### 64-bitarsversionen av AEM Forms Designer
+
+The [64-bitarsversionen av AEM Forms Designer](/help/forms/using/installing-configuring-designer.md) ger bättre prestanda, skalbarhet och minneshantering för att underlätta formulärframtagningen. Med 64-bitarsarkitekturen kan du enkelt hantera ännu större och mer komplexa projekt, vilket ger smidiga designarbetsflöden och optimerad effektivitet. Utöka dina formulärdesignmöjligheter och ta till vara framtiden för AEM Forms Designer med den här banbrytande releasen.
+
+#### Ansluta en adaptiv Forms med Microsoft® SharePoint List
+
+AEM Forms erbjuder OOTB-integrering för [skicka blankettdata direkt till SharePoint List](/help/forms/using/configuring-submit-actions.md#submit-to-microsoft&reg;-sharepoint-list)), så att du kan använda funktionerna i SharePoint Lists. Du kan konfigurera Microsoft® SharePoint List som en datakälla för en formulärdatamodell och använda Skicka med formulärdatamodellen för att ansluta ett anpassat formulär med SharePoint List.
+
+#### Stöd för att konfigurera Document of Record-egenskaper för adaptiva formulärfragment
+
+Nu kan du enkelt [anpassa dina adaptiva formulärfragment och fälten i Adaptiv formulärredigerare](/help/forms/using/generate-document-of-record-for-non-xfa-based-adaptive-forms.md).
 
 
-Med transaktionsrapporter kan du samla in och spåra antalet skickade formulär, bearbetade dokument och återgivna dokument. Målet med att spåra dessa transaktioner är att fatta ett välgrundat beslut om produktanvändningen och att balansera investeringar i maskinvara och programvara. Några exempel på transaktioner är:
+## Felkorrigeringar
 
-* Inlämning av ett adaptivt formulär, ett HTML5-formulär eller en formuläruppsättning
-* Återgivning av en utskrift eller webbversion av en interaktiv kommunikation
-* Konvertering av ett dokument från ett filformat till ett annat
+Versionen innehåller även korrigeringar för över 20 kundrapporterade problem. En detaljerad lista över korrigeringar som ingår i Service Pack finns i [versionsinformation](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/release-notes.html?lang=en#forms-6519)
 
-Mer information om hur du konfigurerar och använder transaktionsrapporter finns i [Översikt över transaktionsrapporter](../../forms/using/transaction-reports-overview.md).
 
-![En exempeltransaktionsrapport](assets/surface_transaction_reporting.png)
+## Installera Service Pack
 
-## Interaktiv kommunikation {#interactive-communications}
+Service Pack innehåller nya funktioner och felkorrigeringar för både AEM Forms på JEE och AEM Forms på OSGi. Installationsanvisningarna har ändrats jämfört med tidigare Service Pack. Installationsanvisningar finns i [Installationsanvisningar för AEM Forms Service Pack](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/aem-forms-current-service-pack-installation-instructions.html?lang=en).
 
-**Definiera visningsmönster för data**
 
-Nu kan man definiera [datavisningsmönster](create-interactive-communication.md#datadisplaypatterns) för fält, variabler och element i formulärdatamodell. Till exempel datum-, valuta- eller telefonformat.
 
-**Använd nya diagramtyper**
 
-Nu kan du lägga till [Kvadrantdiagram med flera serier](../../forms/using/chart-component-interactive-communications.md) till interaktiv kommunikation.
 
-**Sortera kolumner i en tabell**
 
-Nu kan du [sortera kolumner i en tabell](../../forms/using/create-interactive-communication.md#sortcolumns) i Interactive Communication. Du kan binda och sortera tabellkolumner med statisk text eller datamodellsobjekt.
+<!-- 
+## Transaction Reports {#transaction-reports}
 
-**Använda nya komponenter i en webbkanal**
 
-Nu kan du lägga till komponenterna Button och Separator i webbkanalen. Mer information finns i [Lägg till Button-komponent i webbkanalen](../../forms/using/create-interactive-communication.md#add-button-component-to-the-web-channel) och [Separatorkomponent i webbkanal](../../forms/using/create-interactive-communication.md#separatorcomponent).
 
-**Layoutläge för att ändra storlek på komponenter**
+Transaction reports lets you capture and track the number of submitted forms, processed documents, and rendered documents. The objective behind tracking these transactions is to make an informed decision about the product usage and rebalancing investments in hardware and software. Some examples of transactions include:
 
-Nu kan du växla till [Layoutläge](../../forms/using/resize-using-layout-mode.md) för att ändra storlek på komponenter i webbkanalen med ett WYSIWYG-gränssnitt.
+* Submission of an Adaptive Form, an HTML5 Form, or a Form Set
+* Rendition of a print or a web version of an interactive communication
+* Conversion of a document from one file format to another
 
-**Förbättringar av användbarheten**
+For information about configuring and using transaction reports, see [Transaction Reports Overview](../../forms/using/transaction-reports-overview.md).
 
-De som skapar interaktiv kommunikation kan nu använda olika lättanvända funktioner samtidigt som de skapar korrespondenser. Listan över åtgärder omfattar:
+![A sample transaction report](assets/surface_transaction_reporting.png)
 
-* [Utför ångra-gör-om-åtgärder i utskrifts- och webbkanaler](../../forms/using/create-interactive-communication.md#undoredoactions)
-* [Lägga till variabler i ett dokumentfragment med symbolen @](../../forms/using/texts-interactive-communications.md#searchvariables)
-* [Lägga till datamodellelement i ett dokumentfragment med symbolen @](../../forms/using/texts-interactive-communications.md#searchdatamodelproperties)
-* [Ta bort eller lägga till en webbkanal i en befintlig interaktiv kommunikation](../../forms/using/create-interactive-communication.md#edit-interactive-communication-properties)
-* [Binda datakällelement med fält och variabler med dra-och-släpp-åtgärder](../../forms/using/create-interactive-communication.md#binddatasourceelements)
-* [Markera obundna fält och variabler när du skapar interaktiv kommunikation](../../forms/using/create-interactive-communication.md#distinguishunboundfields)
-* [Utför ytterligare åtgärder som kopiera, gruppera eller annat på ärvda komponenter i en webbkanal](../../forms/using/create-interactive-communication.md#componenttoolbar)
+## Interactive Communications {#interactive-communications}
 
-**Förbättringar i synkroniseringsprocessen**
+**Define data display patterns**
 
-Det finns flera förbättringar i den automatiska webbkanalslayouten med hjälp av kanalen Skriv ut.
+Interactive Communication authors can now define [data display patterns](create-interactive-communication.md#datadisplaypatterns) for fields, variables, and form data model elements. For example, date, currency, or phone formats.
+
+**Use new types of charts**
+
+You can now add [Quadrant charts and charts with multiple series](../../forms/using/chart-component-interactive-communications.md) to Interactive Communications.
+
+**Sort columns in a table**
+
+You can now [sort columns of a table](../../forms/using/create-interactive-communication.md#sortcolumns) in the Interactive Communication. You can bind and sort table columns with static text or data model objects.
+
+**Use new components in a web channel**
+
+You can now add Button and Separator components to the web channel. For more information, see [Add Button component to the web channel](../../forms/using/create-interactive-communication.md#add-button-component-to-the-web-channel) and [Separator component in web channel](../../forms/using/create-interactive-communication.md#separatorcomponent).
+
+**Layout mode to resize components**
+
+You can now switch to [Layout mode](../../forms/using/resize-using-layout-mode.md) to resize components in the Web channel using a WYSIWYG interface.
+
+**Usability improvements**
+
+Interactive Communication authors can now utilize various easy-to-use operations while creating correspondences. The list of operations includes:
+
+* [Perform undo-redo actions in print and web channels](../../forms/using/create-interactive-communication.md#undoredoactions)
+* [Add variables in a document fragment using @ symbol](../../forms/using/texts-interactive-communications.md#searchvariables)
+* [Add data model elements in a document fragment using @ symbol](../../forms/using/texts-interactive-communications.md#searchdatamodelproperties)
+* [Delete or add a web channel to an existing Interactive Communication](../../forms/using/create-interactive-communication.md#edit-interactive-communication-properties)
+* [Bind data source elements with fields and variables using drag-and-drop actions](../../forms/using/create-interactive-communication.md#binddatasourceelements)
+* [Highlight unbound fields and variables while authoring Interactive Communication](../../forms/using/create-interactive-communication.md#distinguishunboundfields)
+* [Perform additional actions such as copy, group, or more on inherited components in a web channel](../../forms/using/create-interactive-communication.md#componenttoolbar)
+
+**Improvements in sync process**
+
+There are several improvements in the Web channel layout auto-generated using the Print channel.
 
 ![Interactive Communications Charts](assets/interactive-communication-charts.png)
 
-## Adaptiv Forms {#adaptive-forms}
+## Adaptive Forms {#adaptive-forms}
 
-### Använda Adobe Sign molnbaserade digitala signaturer i Adaptive Forms {#use-adobe-sign-s-cloud-based-digital-signatures-in-adaptive-forms}
+### Use Adobe Sign's cloud-based digital signatures in Adaptive Forms {#use-adobe-sign-s-cloud-based-digital-signatures-in-adaptive-forms}
 
-[Molnbaserade digitala signaturer](https://helpx.adobe.com/sign/kb/digital-certificate-providers.html) eller fjärrsignaturer är en ny generation av digitala signaturer som fungerar på datorer, mobila enheter och webben - och som uppfyller de högsta efterlevnads- och säkerhetsnivåerna för autentisering av signerare. Nu kan du [signera ett adaptivt formulär](../../forms/using/working-with-adobe-sign.md) med molnbaserade digitala signaturer.
+[Cloud-based digital signatures](https://helpx.adobe.com/sign/kb/digital-certificate-providers.html) or remote signatures are a new generation of digital signatures that work across desktop, mobile, and the web — and meet the highest levels of compliance and assurance for signer authentication. You can now [sign an Adaptive Form](../../forms/using/working-with-adobe-sign.md) with Cloud-based digital signatures.
 
-#### Bädda in ett adaptivt formulär eller interaktiv kommunikation i AEM Sites Single Page-program {#embed-an-adaptive-form-or-interactive-communcation-in-aem-sites-single-page-applications}
+#### Embed an Adaptive Form or Interactive Communication in AEM Sites Single Page Applications {#embed-an-adaptive-form-or-interactive-communcation-in-aem-sites-single-page-applications}
 
-Med AEM Forms kan du [sömlöst bädda in ett adaptivt formulär](../../forms/using/embed-adaptive-form-aem-sites-spa.md) eller Interaktiv kommunikation i ett AEM Sites-program för en enda sida (SPA). Det inbäddade adaptiva formuläret och den interaktiva kommunikationen fungerar fullt ut och användarna kan fylla i och skicka formuläret utan att behöva lämna sidan. Det hjälper användaren att hålla sig i rätt kontext för andra element på webbsidan och interagera samtidigt med det adaptiva formuläret eller den interaktiva kommunikationen.
+AEM Forms lets you [seamlessly embed an Adaptive Form](../../forms/using/embed-adaptive-form-aem-sites-spa.md) or Interactive Communication in an AEM Sites single page application (SPA). The embedded Adaptive Form and Interactive Communication is fully functional and users can fill and submit the form without leaving the page. It helps user remain in context of other elements on the web page and simultaneously interact with the adaptive form or Interactive Communication.
 
-#### Sortera kolumner i tabeller med adaptiva formulär {#sort-columns-of-adaptive-form-tables}
+#### Sort columns of Adaptive Form tables {#sort-columns-of-adaptive-form-tables}
 
-Du kan [sortera valfri kolumn i en tabell med adaptiva formulär](../../forms/using/adaptive-forms-tables.md#sortcolumnstable) i stigande eller fallande ordning. Du kan använda sortering på tabellkolumner med statisk text, datamodellsobjektegenskaper eller en kombination av statiska text- och datamodellsobjektsegenskaper.
+You can [sort any column of an Adaptive Form table](../../forms/using/adaptive-forms-tables.md#sortcolumnstable) in an ascending or descending order. You can apply sorting to table columns with static text, data model object properties, or a combination of static text and data model object properties.
 
-#### Begränsa tillgängligheten för adaptiva Forms-mallar till specifika sökvägar {#restrict-the-availability-of-adaptive-forms-templates-to-specific-paths}
+#### Restrict the availability of Adaptive Forms templates to specific paths {#restrict-the-availability-of-adaptive-forms-templates-to-specific-paths}
 
-Anpassade formulär har lagt till stöd för egenskapen cq:allowedPaths. Egenskapen [begränsar tillgången till adaptiva Forms-mallar till specifika sökvägar](creating-adaptive-form.md#adaptive-form-templates).
+Adaptive forms has added support for the cq:allowedPaths property. The property [restricts availability of Adaptive Forms templates to specific paths](creating-adaptive-form.md#adaptive-form-templates).
 
-#### Lägg till kryssrutor i det adaptiva formuläret dynamiskt {#add-check-boxes-to-the-adaptive-form-dynamically}
+#### Add check boxes to the Adaptive Form dynamically {#add-check-boxes-to-the-adaptive-form-dynamically}
 
-Nu kan du definiera regler för [lägga till kryssrutor i det adaptiva formuläret dynamiskt](../../forms/using/rule-editor.md#setpropertyrule) baserat på en anpassad funktion, ett formulärobjekt eller en objektegenskap.
+You can now define rules to [add checkboxes to the Adaptive Form dynamically](../../forms/using/rule-editor.md#setpropertyrule) based on custom function, a form object, or an object property.
 
-## AEM {#aem-workflows}
+## AEM Workflows {#aem-workflows}
 
-### Använd variabler i AEM arbetsflöden {#use-variables-in-aem-workflows}
+### Use variables in AEM Workflows {#use-variables-in-aem-workflows}
 
-Variabler möjliggör arbetsflödessteg för att lagra och skicka metadata mellan arbetsflödessteg vid körning. Du kan skapa olika typer av variabler för att lagra olika typer av data. Exempel: heltal, strängar, dokument eller instanser av formulärdatamodell. Vanligtvis använder du en variabel eller en samling variabler när du behöver fatta ett beslut baserat på det värde som den innehåller eller för att lagra information som du behöver senare i en process.
+Variables enable workflow steps to hold and pass metadata across workflow steps at runtime. You can create different types of variables for storing different types of data. For example, integers, strings, documents, or form data model instances. Typically, you use a variable or a collection of variables when you need to make a decision based on the value that it holds or to store information that you need later in a process.
 
-Variabler är ett tillägg till [MetaDataMap](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/metadata/MetaDataMap.html) -gränssnittet i den tidigare versionen. Det sparar tid när det gäller att utveckla anpassad ECMAScript-kod som används för att hämta och uppdatera metadatavärden. Du fortsätter att använda MetaDataMap-gränssnittet och ECMAScript-koden för att hantera metadata. Några fördelar med att använda variabler framför MetaDataMap och ECMAScript är:
+Variables are an extension of [MetaDataMap](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/metadata/MetaDataMap.html) interface available in the previous version. It helps save time spent in developing custom ECMAScript code used to retrieve and update metadata values. You continue using MetaDataMap interface and ECMAScript code to manipulate metadata. Some benefits of using variables over MetaDataMap and ECMAScript are:
 
-* Dynamisk lagring, uppdatering och användning av värden som lagras i en variabel i hela arbetsflödet utan att vara beroende av anpassad kod
-* Hämta och uppdatera värden direkt till en formulärdatamodell och en datafil (XML/JSON) för ett skickat formulär
-* Lagra kompletta dokument i en variabel för dokumentbearbetning
+* Dynamically store, update, and use values stored in a variable across the workflow without relying on custom code
+* Retrieve and update values directly to a form data model and data file (XML/JSON ) of a submitted form
+* Store complete documents in a variable to perform document processing
 
-Steget Gå till, eller Dela, och alla AEM Forms arbetsflödessteg har stöd för variabler. Du kan använda MetaDataMap-gränssnittet för att komma åt variabler i arbetsflödessteg som inte har inbyggt stöd för variabler. Mer information finns i [Variabler i AEM arbetsflöden](../../forms/using/variable-in-aem-workflows.md).
+The Go To step, OR Split step, and all AEM Forms workflow steps support variables. You can use MetaDataMap interface to access variables in workflow steps that do not have a native support for variables. For more information, see [Variables in AEM Workflows](../../forms/using/variable-in-aem-workflows.md).
 
-![Ställa in en variabel i ett arbetsflöde](assets/variable.png)
+![Setting a variable for in a workflow](assets/variable.png)
 
-#### Använda ett arbetsflöde med olika adaptiva Forms  {#use-a-workflow-with-different-adaptive-forms}
+#### Use a workflow with different Adaptive Forms  {#use-a-workflow-with-different-adaptive-forms}
 
-Du kan [ange ett anpassat formulär för tilldelningsuppgifterna](../../forms/using/aem-forms-workflow-step-reference.md#assign-task-step) och dokument med dokumentsteg för formulärbaserade arbetsflöden i körningsmiljön. Det gör att ett arbetsflöde kan fungera med olika adaptiva Forms. Du kan bestämma vilken metod som ska användas för att välja ett anpassat formulär när du utformar arbetsflödet. Det adaptiva formuläret kan placeras på en absolut sökväg, skickas som nyttolast till arbetsflödet eller vara tillgängligt på en sökväg som beräknas med en variabel.
+You can [specify an Adaptive Form for the assign task](../../forms/using/aem-forms-workflow-step-reference.md#assign-task-step) and document of record step of form-centric workflows on the runtime. It allows a workflow to work with different Adaptive Forms. You can decide the method to select an Adaptive Form while designing the workflow. The Adaptive Form can be located at an absolute path, submitted as payload to the workflow, or available at a path calculated using a variable.
 
-#### Använd de förbättrade loggningsfunktionerna i formulärbaserade arbetsflödessteg {#use-enhanced-logging-capabilities-of-forms-centric-workflow-steps}
+#### Use enhanced logging capabilities of forms-centric workflow steps {#use-enhanced-logging-capabilities-of-forms-centric-workflow-steps}
 
-Loggningsfunktionerna i blankettbaserade arbetsflödessteg är standardiserade. Nu kan alla formulärbaserade arbetsflödessteg producera loggar som är lika standardiserade. Det förbättrar felsökningshastigheten.
+Logging capabilities of forms-centric workflow steps are standardized. Now, all form-centric workflow steps produce similarly standardized logs. It helps improve debugging speed.
 
-## Dataintegrering {#data-integration}
+## Data Integration {#data-integration}
 
-Du kan nu:
+You can now:
 
-* [Validera indata](../../forms/using/work-with-form-data-model.md#automated-validation-of-input-data) baserat på en lista med begränsningar. Det säkerställer att bara giltiga data skickas till datakällan.
-* [Åsidosätt standardslutpunkt](../../forms/using/configure-data-sources.md#configure-soap-web-services) definieras i en WSDL-fil (Web Services Description Language).
+* [Validate input data](../../forms/using/work-with-form-data-model.md#automated-validation-of-input-data) based on a list of constraints. It helps ensure that only valid data is submitted to data source.
+* [Override default endpoint](../../forms/using/configure-data-sources.md#configure-soap-web-services) defined in a WSDL (Web Services Description Language) file.
 
-* [Åsidosätt standard](../../forms/using/configure-data-sources.md#configure-restful-web-services) [schema, värd och bassökväg](../../forms/using/configure-data-sources.md#configure-restful-web-services) definieras i Swagger-definitionsfilen.
+* [Override default](../../forms/using/configure-data-sources.md#configure-restful-web-services) [scheme, host, and base path](../../forms/using/configure-data-sources.md#configure-restful-web-services) defined in Swagger definition file.
 
-## Plattforms- och säkerhetsuppdateringar {#platform-and-security-updates}
+## Platform and Security updates {#platform-and-security-updates}
 
-### Viktiga plattformsuppdateringar {#major-platform-updates}
+### Major platform updates {#major-platform-updates}
 
-AEM Forms kan konfigureras med valfri kombination av operativsystem, programservrar, databaser, databasdrivrutiner, JDK, LDAP-servrar och e-postservrar som stöds. Nedan följer de största förändringarna i [plattformar som stöds](../../forms/using/aem-forms-jee-supported-platforms.md):
+AEM Forms can be set up using any combination of supported operating systems, application servers, databases, database drivers, JDK, LDAP servers, and email servers. The following are the major changes in [supported platforms](../../forms/using/aem-forms-jee-supported-platforms.md):
 
 <table>
  <tbody>
   <tr>
-   <td>Komponent</td>
-   <td>Stöd borttaget</td>
+   <td>Component</td>
+   <td>Support Removed</td>
   </tr>
   <tr>
-   <td>Operativsystem</td>
+   <td>Operating systems</td>
    <td>
     <ul>
      <li>Microsoft Windows Server 2012 R2</li>
@@ -149,23 +197,23 @@ AEM Forms kan konfigureras med valfri kombination av operativsystem, programserv
     </ul> </td>
   </tr>
   <tr>
-   <td>Programservrar<br /> </td>
+   <td>Application servers<br /> </td>
    <td>
     <ul>
-    <li>WebSphere Liberty-profil</li>
+    <li>WebSphere Liberty profile</li>
     <li>Oracle WebLogic</li>
     </ul> </td>
   </tr>
   <tr>
-   <td>Databaser</td>
+   <td>Databases</td>
    <td>
     <ul>
      <li>IBM DB2 <br /> </li>
-     <li>ORACLETS RAC</li>
+     <li>Oracle RAC</li>
     </ul> </td>
   </tr>
   <tr>
-   <td>LDAP-servrar</td>
+   <td>LDAP servers</td>
    <td>
     <ul>
      <li>Microsoft Active Directory 2012</li>
@@ -174,14 +222,14 @@ AEM Forms kan konfigureras med valfri kombination av operativsystem, programserv
     </ul> </td>
   </tr>
   <tr>
-   <td>E-postservrar</td>
+   <td>Email servers</td>
    <td>
     <ul>
      <li>IBM Lotus Domino 8.5.0 </li>
     </ul> </td>
   </tr>
   <tr>
-   <td>Kopplingar</td>
+   <td>Connectors</td>
    <td>
     <ul>
      <li>Connector for Microsoft Sharepoint 2013</li>
@@ -189,10 +237,10 @@ AEM Forms kan konfigureras med valfri kombination av operativsystem, programserv
     </ul> </td>
   </tr>
   <tr>
-   <td>AEM Forms<br /> </td>
+   <td>AEM Forms app<br /> </td>
    <td>
     <ul>
-     <li>Stöd för Windows 8.1</li>
+     <li>Windows 8.1 support</li>
     </ul> </td>
   </tr>
   <tr>
@@ -205,17 +253,19 @@ AEM Forms kan konfigureras med valfri kombination av operativsystem, programserv
  </tbody>
 </table>
 
-&#42; Kontakta Adobe Support för information om migrering till en annan plattform
+&#42; Contact Adobe Support for information on migrating to a different platform
 
-#### Nytt HTML5-baserat användargränssnitt {#new-html-based-uis}
+#### New HTML5-based UIs {#new-html-based-uis}
 
-I linje med det planerade EOL-programmet för Flash Player i Adobe och den övergripande inriktningen på att migrera Flash-baserat innehåll till öppna standarder har AEM 6.5 Forms ersatt det Flash-baserade gränssnittet för hälsoövervakning, processhantering, Reader-tillägg och användargränssnittet för kategorihantering i AEM Forms på JEE Administration Console med HTML5-baserat användargränssnitt.
+In line with planned EOL of Adobe Flash Player and overall direction of migrating Flash-based content to open standards, AEM 6.5 Forms has replaced Flash-based UI of Health Monitor, Process Management, Reader Extension, and Category Management UI of AEM Forms on JEE Administration Console with HTML5-based UI.
 
-#### Säkerhetsförbättringar {#security-improvements}
+#### Security improvements {#security-improvements}
 
-* AEM 6.5 Forms på JEE-administrationskonsolens gränssnitt baseras nu på Apache Struts 2.5.
-* AEM 6.5 Forms använder nu jQuery till 3.2.1 och jQuery UI 1.12.1. Se, [uppgraderingsdokumentation](/help/forms/home.md) för ändringens inverkan.
+* AEM 6.5 Forms on JEE administration console UI is now based on Apache Struts 2.5.
+* AEM 6.5 Forms now uses jQuery to 3.2.1 and jQuery UI 1.12.1. See, [upgrade documentation](/help/forms/home.md) for the impact of the change.
 
-#### Förbättrad tillgänglighet {#accessibility-improvements}
+#### Accessibility improvements {#accessibility-improvements}
 
-AEM 6.5 Forms har förbättrat tillgängligheten till AEM Forms Workspace.
+AEM 6.5 Forms has improved accessibility of AEM Forms Workspace. 
+!-->
+

@@ -3,9 +3,9 @@ title: Versionsinformation för [!DNL Adobe Experience Manager] 6.5
 description: Hitta versionsinformation, nyheter, installationsanvisningar och en detaljerad ändringslista för [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 4
 exl-id: cac14ac1-9cda-46ae-8aa3-94674bb79157
-source-git-commit: 04050f31742c926b45235595f6318929d3767bd8
+source-git-commit: 6b24067c1808475044a612f21d5d4d2793c13e17
 workflow-type: tm+mt
-source-wordcount: '3524'
+source-wordcount: '4205'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ ht-degree: 0%
 | -------- | ---------------------------- |
 | Version | 6.5.19.0 <!-- UPDATE FOR EACH NEW RELEASE --> |
 | Typ | Service Pack-version |
-| Datum | Torsdag 30 november 2023 <!-- UPDATE FOR EACH NEW RELEASE --> |
+| Datum | Torsdagen den 7 december 2023 <!-- UPDATE FOR EACH NEW RELEASE --> |
 | Hämta URL | [Programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.19.0.zip) <!-- UPDATE FOR EACH NEW RELEASE --> |
 
 ## Vad ingår i [!DNL Experience Manager] 6.5.19.0 {#what-is-included-in-aem-6519}
@@ -38,12 +38,30 @@ ht-degree: 0%
 
 * _REVIEWERS: WHAT ARE THE KEY FEATURES AND ENHANCEMENTS YOU WANT TO HIGHLIGHT IN THIS RELEASE?_ -->
 
-**Viktiga funktioner och förbättringar**
+## Viktiga funktioner och förbättringar
 
 Några av de viktigaste funktionerna och förbättringarna i den här versionen är följande:
 
 * Användare av sidredigeraren/bildkomponenten har aktiverat platser för att referera till resurser från Cloud Servicen Fjärrresurser. (SITES-13448, SITES-13433)
 * AEM har nu stöd för sortering på serversidan för snabbare projektnavigering i listvyn. Projektnoder sorteras baserat på den användarvalda kolumnen innan de visas i gränssnittet.
+
+### [!DNL Forms]
+
+* **Nya adaptiva kärnkomponenter i formulär**: Lodräta flikar, villkor och kryssruta läggs till för att öka formulärens skalbarhet.
+   * **[Kryssrutekomponent](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/checkbox.html)**: Adaptiv Forms baserad på kärnkomponenter kan nu innehålla en kryssrutekomponent. Det gör att användare kan göra binära val, markera eller avmarkera ett visst alternativ. Det visas vanligtvis som en liten ruta som du kan klicka på eller peka på för att växla mellan två lägen: markerad och avmarkerad. Kryssrutan är ett vanligt formulärelement som används för att ange ett ja/nej- eller sant/falskt-val.
+
+   * **[Villkorskomponent](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/terms-and-conditions.html)**: Adaptiv Forms baserad på kärnkomponenter kan nu innehålla en villkorskomponent. Det gör det möjligt för formulärförfattare att infoga ett specifikt avsnitt i formuläret där användarna presenteras med de villkor eller juridiska avtal som är kopplade till användningen av en tjänst, produkt eller plattform. Den här komponenten är utformad för att informera användare om de regler, bestämmelser och skyldigheter som de godkänner genom att skicka in formuläret.
+
+     ![Vertikala flikar, villkor och kryssrutekomponenter](/help/forms/using/assets/forms-components.png)
+
+   * **[Lodräta flikar, komponent](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/vertical-tabs.html)**: Adaptiv Forms baserad på kärnkomponenter kan nu ordna formulärinnehåll i en lodrät lista med flikar, vilket ger en strukturerad och navigeringsbar layout. Om du använder vertikala flikar i ett formulär kan det förbättra användarupplevelsen genom att förenkla navigeringen och förbättra organisationen av formulärinnehållet, särskilt i situationer där ett formulär innehåller flera avsnitt eller komplex information.
+
+* **[64-bitarsversionen av AEM Forms Designer](/help/forms/using/installing-configuring-designer.md)**: 64-bitarsversionen av AEM Forms Designer ger bättre prestanda, skalbarhet och minneshantering så att du kan skapa formulär. Med 64-bitarsarkitekturen kan du enkelt hantera ännu större och mer komplexa projekt, vilket ger smidiga designarbetsflöden och optimerad effektivitet. Utöka dina formulärdesignmöjligheter och ta till vara framtiden för AEM Forms Designer med den här banbrytande releasen.
+
+* **[Ansluta en adaptiv Forms med Microsoft® SharePoint List](/help/forms/using/configuring-submit-actions.md#submit-to-microsoft&reg;-sharepoint-list)**: AEM Forms erbjuder en OOTB-integrering för att skicka formulärdata direkt till SharePoint List, så att du kan använda funktionerna i SharePoint Lists. Du kan konfigurera Microsoft SharePoint List som en datakälla för en formulärdatamodell och använda Skicka med formulärdatamodellen för att ansluta ett anpassat formulär med SharePoint List.
+
+* **[Stöd för att konfigurera Document of Record-egenskaper för adaptiva formulärfragment](/help/forms/using/generate-document-of-record-for-non-xfa-based-adaptive-forms.md)**: Nu kan du enkelt anpassa dina adaptiva formulärfragment och fälten i den adaptiva formulärredigeraren.
+
 
 **Inaktuell funktion**
 
@@ -149,9 +167,11 @@ till
 
 ### [!DNL Forms]{#forms-6519}
 
-Korrigeringar i [!DNL Experience Manager] Forms levereras via ett separat tilläggspaket en vecka efter den schemalagda [!DNL Experience Manager] Lanseringsdatum för Service Pack. I det här fallet planeras AEM 6.5.19.0 Forms-tilläggspaketet för torsdagen den 30 november 2023. En lista över Forms-korrigeringar och förbättringar kommer att läggas till i det här avsnittet när utgåvan släpps.
+#### [!DNL Adaptive Forms]
 
-* Lägga till åtkomstkontrollista för `fd-cloudservice` användare kan läsa eller uppdatera Microsoft®-konfigurationerna under `cloudconfigs/microsoftoffice`. (FORMS-1142)
+<!-- Fixes in [!DNL Experience Manager] Forms are delivered through a separate add-on package one week after the scheduled [!DNL Experience Manager] Service Pack release date. In this case, the AEM 6.5.19.0 Forms add-on package release is scheduled for Thursday, November 30, 2023. A list of Forms fixes and enhancements would be added to this section post the release.-->
+
+<!--* Adding Access Control List for `fd-cloudservice` user to be able to read or update the Microsoft&reg; configurations under `cloudconfigs/microsoftoffice`. (FORMS-11142) -->
 
 <!--LEFT BULLET LIST HERE IN CASE OF REUSE BY FORMS IN THE FUTURE 
 * **Document Services**
@@ -166,6 +186,32 @@ Korrigeringar i [!DNL Experience Manager] Forms levereras via ett separat tillä
 <!--### Commerce{#commerce-6519}
 
 * A -->
+
+* När en användare lägger till ett verktygsfält i ett anpassat formulär, visar behållaretiketten felaktigt beteende eftersom den inte ändras till det språk som författaren valt för Forms. (FORMS-1371)
+* I AEM Forms Workspace väljer listrutan det första alternativet som standard i användargränssnittet. (FORMS-1346)
+* Språkkonfigurationen i AEM har ingen effekt om du använder språkområden med fem tecken och decimalavgränsaren inte återges korrekt i bokstaven. (FORMS-1344)
+* När en användare genererar XML-utdata med Workbench-processen misslyckas detta för några av filerna. (FORMS-1314)
+* När en användare genererar en förhandsgranskning för DOR (Document of record) på andra språk än engelska fungerar den inte. (FORMS-11106)
+* När en användare konverterar vissa bildfiler med PDFG i en OSGI-instans som är baserad på Linux med JDK11, konverteras den inte. (FORMS-11105)
+* När användare installerar AEM Forms-tillägget bryts innehållsträdspanelen i AEM Sites. (FORMS-10912)
+* När en användare kopierar datum med NVDA-skärmläsare från datumväljarkomponenten läses det inte korrekt. (FORMS-10805) 
+* I Forms regelredigerare kan användaren inte ange värdet för alternativknappen/kryssrutan när datavärdestypen är Boolean. (FORMS-10713)
+* När en användare lägger till objekt i ett adaptivt formulär läggs det till i omvänd ordning i en nedrullningsbar lista. (FORMS-10456)
+* När en listruta har rensats med regelredigeraren visas det första angivna värdet fortfarande, även om värdet har rensats. (FORMS-9963) 
+* Användarna kan inte komma åt formulärtiteln med skärmläsare som NVDA. (FORMS-8815) 
+* Användare kan inte komma åt underrubriken i ett formulär med skärmläsare som NVDA. (FORMS-8814) 
+* I HTML-formulärets sidkälla är åtkomstnyckelattributet tomt och fungerar inte. (FORMS-5753) 
+* I dialogrutan Om arbetsyta visas texten&quot;Adobe Experience Manager - Forms&quot; som text. (FORMS-5748)
+
+#### [!DNL Forms Designer]{#forms-designer-6519}
+
+* När en användare försöker läsa icke-interaktiv PDF forms via skärmläsare, läses eller hoppas vissa listobjekt över. (LC-3921645) 
+* När en användare går igenom de redigerbara fälten går det inte till alla PDF formulärfält på ett konsekvent sätt. (LC-3921631) 
+* Ordningen på taggarna ändras slumpmässigt i PDF, även om taggningen i Forms Designer är korrekt. (LC-3921313) 
+* En lista visas inte korrekt i taggarna i Adobe Acrobat Reader eller Adobe Acrobat DC. (LC-3921306)
+* Rubriknivåer som tilldelas korrekt i Forms Designer ändras slumpmässigt till `<P>` i Adobe Acrobat. (LC-3921305) 
+* I en tabell kan ID:t för ett objekt inte ändras när det har tilldelats. (LC-3921134) 
+* Om det finns sammanfogade celler i tabellen är inget GUI tillgängligt för att ange omfånget (rad och kolumn) och omfånget i en komplex tabell i AEM Forms Designer. (LC-3919532) 
 
 ### Foundation{#foundation-6519}
 
@@ -418,8 +464,6 @@ Du måste lägga till följande egenskaper i indexdefinitionsnoden för att få 
 
 #### Plattformar som stöds
 
-* JDK-versioner som är högre än 1.8.0_281 stöds inte för WebLogic JEE-server. (FORMS-8498, CQDOC-20383)
-* Som [!DNL Microsoft® Windows Server 2019] stöder inte [!DNL MySQL 5.7] och [!DNL JBoss® EAP 7.1], [!DNL Microsoft® Windows Server 2019] stöder inte körklara installationer för [!DNL Experience Manager Forms 6.5.10.0]. (CQDOC-18312)
 * JDK 11.0.20 stöds inte för installation av AEM Forms i JEE Installer. Endast JDK 11.0.19 och tidigare versioner stöds för installation av AEM Forms i JEE Installer. (FORMS-10659)
 
 #### Installation
@@ -467,13 +511,10 @@ Du löser problemet genom att leta reda på `<AEM_Forms_Installation_dir>\jboss\
 
 * När ett adaptivt formulär publiceras kommer alla dess beroenden, inklusive profiler, att publiceras på nytt, även om inga ändringar har gjorts i dem. (FORMS-10454)
 * När en användare väljer att konfigurera ett fält för första gången i ett adaptivt formulär visas inte alternativet att spara en konfiguration i egenskapsläsaren. Problemet åtgärdas genom att ett annat fält i det adaptiva formuläret konfigureras i samma redigerare.
-* När en omdirigerings-URL anges i stödlinjebehållaren för ett adaptivt formulär slutar den infogade signeringen att fungera. (FORMS-10493) Lös problemet genom att hämta och installera [programfix för 6.5.18.0](/help/release-notes/aem-forms-hotfix.md).
-* Alla DoR-mallar (Document of Record) kan inte publiceras. Endast engelska språkbaserade DoR-mallar och tillhörande Forms-baserade DoR-mallar publiceras. (FORMS-10535) Lös problemet genom att hämta och installera [programfix för 6.5.18.0](/help/release-notes/aem-forms-hotfix.md).
+* När användare utför en sändningsåtgärd misslyckas överföringen med ett fel:
+  ` javax.servlet.ServletException: java.lang.NoSuchMethodError`
+För att lösa problemet [kompilera om Sling-skript som JSP, Java och Sightly](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-16543.html?lang=en#resolution). (FORMS-8542)
 
-
-#### Interaktiv kommunikation
-
-* När du har uppgraderat till AEM Service Pack 18 går det inte att öppna den interaktiva kommunikationen med stora textbundna bilder i redigeringsläget. (FORMS-10578) Du löser problemet genom att installera [programfix för 6.5.18.0](/help/release-notes/aem-forms-hotfix.md).
 
 ## OSGi-paket och innehållspaket som ingår{#osgi-bundles-and-content-packages-included}
 
