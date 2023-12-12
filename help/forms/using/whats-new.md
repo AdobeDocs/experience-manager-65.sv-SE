@@ -5,9 +5,9 @@ topic-tags: introduction
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 docset: aem65
 exl-id: 47b9de1f-b16a-424c-b8b4-e9d7b3dcca86
-source-git-commit: 6b24067c1808475044a612f21d5d4d2793c13e17
+source-git-commit: 9b18d92ffabc141e83ba9a7c3694257d3dee1ea1
 workflow-type: tm+mt
-source-wordcount: '546'
+source-wordcount: '637'
 ht-degree: 0%
 
 ---
@@ -49,6 +49,11 @@ AEM Forms erbjuder OOTB-integrering för [skicka blankettdata direkt till ShareP
 #### Stöd för att konfigurera Document of Record-egenskaper för adaptiva formulärfragment
 
 Nu kan du enkelt [anpassa dina adaptiva formulärfragment och fälten i Adaptiv formulärredigerare](/help/forms/using/generate-document-of-record-for-non-xfa-based-adaptive-forms.md).
+
+#### Innehåller 64-bitarsversionen av XMLFM
+
+XMLFM:s 64-bitarsarkitektur ger bättre prestanda, skalbarhet och förbättrad minneshantering. Det är den första inbyggda 64-bitarstjänsten som körs på serversidan. Genom att utnyttja sin inneboende förmåga att komma åt betydligt större minnesresurser jämfört med sin 32-bitars motsvarighet, ger XMLFM 64-bitars smidig hantering av större arbetsbelastningar för återgivning. Denna milstolpe innebär inte bara ett prestandasprång utan även viktiga förbättringar av det systemspecifika tjänstramverket i AEM Forms-servern. Den här uppdateringen gör att AEM Forms-servern sömlöst stöder alla 64-bitars inbyggda tjänster.
+
 
 
 ## Felkorrigeringar

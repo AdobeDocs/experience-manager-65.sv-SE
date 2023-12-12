@@ -3,7 +3,7 @@ title: Versionsinformation för [!DNL Adobe Experience Manager] 6.5
 description: Hitta versionsinformation, nyheter, installationsanvisningar och en detaljerad ändringslista för [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 4
 exl-id: cac14ac1-9cda-46ae-8aa3-94674bb79157
-source-git-commit: 1c3df6ea88f1dfbab5d9df2dcd4907e72829287a
+source-git-commit: 9b18d92ffabc141e83ba9a7c3694257d3dee1ea1
 workflow-type: tm+mt
 source-wordcount: '4204'
 ht-degree: 0%
@@ -63,7 +63,6 @@ Några av de viktigaste funktionerna och förbättringarna i den här versionen 
 * **[Stöd för att konfigurera Document of Record-egenskaper för adaptiva formulärfragment](/help/forms/using/generate-document-of-record-for-non-xfa-based-adaptive-forms.md)**: Nu kan du enkelt anpassa dina adaptiva formulärfragment och fälten i den adaptiva formulärredigeraren.
 
 * **64-bitars XMLFM**: 64-bitarsitereringen av XMLFM ger bättre prestanda, skalbarhet och förbättrad minneshantering. Det är den första inbyggda 64-bitarstjänsten som körs på serversidan. Genom att utnyttja sin inneboende förmåga att komma åt betydligt större minnesresurser jämfört med sin 32-bitars motsvarighet, ger XMLFM 64-bitars smidig hantering av större arbetsbelastningar för återgivning. Denna milstolpe innebär inte bara ett prestandasprång utan även viktiga förbättringar av det systemspecifika tjänstramverket i AEM Forms-servern. Den här uppdateringen gör att AEM Forms-servern sömlöst stöder alla 64-bitars inbyggda tjänster.
-
 
 **Inaktuell funktion**
 
