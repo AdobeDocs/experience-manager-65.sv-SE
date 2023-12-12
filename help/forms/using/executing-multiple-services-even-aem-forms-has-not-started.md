@@ -1,9 +1,10 @@
 ---
 title: Körning av flera tjänster trots att AEM Forms inte har startat.
 description: Även om AEM Forms inte har startat helt, så behandlas flera tjänster.
-source-git-commit: 6b24067c1808475044a612f21d5d4d2793c13e17
+exl-id: 4ec40412-15b1-434b-a919-2cf23f48077c
+source-git-commit: faa628ac4a4631564141f68f3efc9d69a67e5c40
 workflow-type: tm+mt
-source-wordcount: '97'
+source-wordcount: '96'
 ht-degree: 0%
 
 ---
@@ -21,9 +22,4 @@ Lösningen gäller AEM Forms på JEE Server och AEM Forms på OSGi Server.
 
 ## Lösning {#solution}
 
-För att lösa problemet lägger användarna till ett argument `Dcom.adobe.livecycle.dsc.deferServiceStart=true` till [gruppfil](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/command-line-start-and-stop.html#windows-platform-start-bat-script-example) när servern startas.
-
-
-
-
-
+Lös problemet genom att lägga till ett argument `Dcom.adobe.livecycle.dsc.deferServiceStart=true` till [gruppfil](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/command-line-start-and-stop.html#windows-platform-start-bat-script-example) när servern startas.
