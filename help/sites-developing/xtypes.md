@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: components
 content-type: reference
 exl-id: 06ca4e6d-9ab7-4c5b-905c-07c448632f2b
-source-git-commit: 7d46ba0eaa73d9f7a67034ba81d7fa379aa0112c
+source-git-commit: 25c444e2093d118259925034e0d630ab0effc473
 workflow-type: tm+mt
-source-wordcount: '6381'
+source-wordcount: '3865'
 ht-degree: 0%
 
 ---
@@ -123,7 +123,7 @@ Nedan visas de tillgängliga xtyperna i Adobe Experience Manager:
 
   [CQ.Ext.chart.Chart](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.chart.Chart)
 
-  Paketet CQ.Ext.chart ger möjlighet att visualisera data med flash-baserade diagram. Varje diagram binds direkt till en CQ.Ext.data.Store som möjliggör automatiska uppdateringar av diagrammet. Om du vill ändra utseendet på ett diagram kan du läsa [chartStyle](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.chart.Chart) och [extraStyle](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.chart.Chart) config options.
+  Paketet CQ.Ext.chart ger möjlighet att visualisera data med flash-based charting. Varje diagram binds direkt till en CQ.Ext.data.Store som möjliggör automatiska uppdateringar av diagrammet. Om du vill ändra utseendet på ett diagram kan du läsa [chartStyle](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.chart.Chart) och [extraStyle](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.chart.Chart) config options.
 
 * kryssruta
 
@@ -251,7 +251,7 @@ Nedan visas de tillgängliga xtyperna i Adobe Experience Manager:
 
   [CQ.CustomContentPanel](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.CustomContentPanel)
 
-  CustomContentPanel är en speciell typ av panel som används i [CQ.Dialog](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Dialog): Dess innehåll hämtas från och skickas till en annan URL än de andra fälten i dialogrutan.
+  CustomContentPanel är en specialpanel som används i [CQ.Dialog](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Dialog): Dess innehåll hämtas från och skickas till en annan URL än de andra fälten i dialogrutan.
 
 * cykel
 
@@ -293,7 +293,7 @@ Nedan visas de tillgängliga xtyperna i Adobe Experience Manager:
 
   [CQ.Dialog](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Dialog)
 
-  Dialogrutan är en speciell typ av fönster med ett formulär i brödtexten och en knappgrupp i sidfoten. Det används vanligtvis för att redigera innehåll, men kan även visa enbart information.
+  Dialogrutan är ett särskilt fönster med ett formulär i brödtexten och en knappgrupp i sidfoten. Det används vanligtvis för att redigera innehåll, men kan även visa enbart information.
 
 * dialogfältange
 
@@ -463,7 +463,7 @@ Nedan visas de tillgängliga xtyperna i Adobe Experience Manager:
 
   [CQ.Ext.list.ListView](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.list.ListView)
 
-  CQ.Ext.list.ListView är en snabb och lätt implementering av en [Stödraster](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.grid.GridPanel) som en vy.
+  CQ.Ext.list.ListView är en snabb och lätt implementering av en [Stödrasterliknande](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.grid.GridPanel) vy.
 
 * livecopyproperties
 
@@ -793,7 +793,7 @@ Nedan visas de tillgängliga xtyperna i Adobe Experience Manager:
 
   [CQ.wcm.Statistics](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.Statistics)
 
-  Statistik visar sidavbildningarna som ett diagram. Med widgeten kan du välja en period. Statistiken ska visas för.
+  Statistik visar sidavbildningarna som ett diagram. Med widgeten kan du välja en period som statistiken ska visas för.
 
 * store
 
@@ -819,7 +819,7 @@ Nedan visas de tillgängliga xtyperna i Adobe Experience Manager:
 
   **Föråldrad: Använd [CQ.form.TableEdit2](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.TableEdit2) i stället.**
 
-* tableedit2
+* tableEdit2
 
   [CQ.form.TableEdit2](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.TableEdit2)
 
