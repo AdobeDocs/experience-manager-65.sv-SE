@@ -3,9 +3,9 @@ title: Tekniska krav
 description: En lista över de klient- och serverplattformar som stöds för Adobe Experience Manager.
 topic-tags: platform
 exl-id: 47529b9a-c4e5-434f-ac26-b01714ff863b
-source-git-commit: 6b24067c1808475044a612f21d5d4d2793c13e17
+source-git-commit: 6f2b16a51d4ad0f5c199ff41e8abe150c27ecc01
 workflow-type: tm+mt
-source-wordcount: '3625'
+source-wordcount: '3624'
 ht-degree: 0%
 
 ---
@@ -162,7 +162,7 @@ För att köra AEM 6.5 med en relationsdatabas som stöds krävs ett separat sup
 >
 **De flesta relationsdatabaser stöds för närvarande i Level-R på AEM 6.5, som innehåller stödkriterier och ett supportprogram enligt beskrivningen ovan.**
 
-### Servletmotorer/applikationsservrar {#servlet-engines-application-servers}
+### Servletmotorer/programservrar {#servlet-engines-application-servers}
 
 Adobe Experience Manager kan köras antingen som en fristående server (JAR-filen för snabbstart) eller som ett webbprogram i en tredjepartsprogramserver (WAR-filen).
 
@@ -203,8 +203,9 @@ Adobe Experience Manager fungerar med följande serverplattformar för produktio
 1. AEM Forms stöds på Ubuntu 20.04 LTS.
 1. Linux®-distribution stöds av Adobe Managed Services.
 
-   >[OBS!]
-För Linux-baserade servrar (OSGI- och JEE-stackar) kräver AEM Forms add-on körningsberoenden som:
+   >[!NOTE]
+   >
+   För Linux-baserade servrar (OSGI- och JEE-stackar) kräver AEM Forms add-on körningsberoenden som:
    * glibc.x86_64 (2.17-196)
    * libX11.x86_64 (1.6.7-4)
    * zlib.x86-64 (1.2.7-17)
@@ -212,14 +213,14 @@ För Linux-baserade servrar (OSGI- och JEE-stackar) kräver AEM Forms add-on kö
    * libXau.x86_64 (1.0.8-2.1.el7)
 
 1. Produktionsinstallationer i Microsoft® Windows stöds för kunder som uppgraderar till 6.5 och för icke-produktionsanvändning. Nya driftsättningar är på begäran för AEM Sites och Assets.
-1. AEM Forms stöds på Microsoft® Window Server utan Support-Level R-begränsningar.
+1. AEM Forms stöds på Microsoft® Windows Server utan begränsningar på supportnivå R.
 1. AEM Forms har tagit bort stödet för Microsoft® Windows Server 2016.
 
 >[!NOTE]
 >
 Om du installerar AEM Forms 6.5 måste du se till att du har installerat följande 32-bitars omdistribuerbara Microsoft® Visual C++.
 >
-* Microsoft® Visual C++ 2008 återdistribuerbar
+* Microsoft® Visual C++ 2008 omdistribuerbar
 * Återdistribuerbar Microsoft® Visual C++ 2010
 * Microsoft® Visual C++ 2012 återdistribuerbar
 * Microsoft® Visual C++ 2013 återdistribuerbar
@@ -234,9 +235,9 @@ För en molnbaserad miljö kan du titta på det senaste erbjudandet från produk
 
 Adobe erbjuder också Adobe Managed Services att distribuera AEM på Azure eller AWS. Adobe Managed Services förser experterna med erfarenhet och kompetens av att driftsätta och AEM i dessa molnmiljöer. Se [ytterligare dokumentation om Adobe Managed Services](https://business.adobe.com/products/experience-manager/managed-services.html?aemClk=t).
 
-I alla andra fall av distribution av AEM på Azure eller AWS, eller någon annan molnmiljö, finns stöd från Adobe i den virtuella beräkningsmiljön. Den virtuella miljön måste köras i enlighet med de tekniska specifikationer som anges på den här sidan. Alla rapporterade problem som rör AEM som körs i någon av dessa molnmiljöer måste kunna reproduceras oberoende av alla molntjänster som är specifika för molndatormiljön. Det vill säga om inte molntjänsten stöds som en del av de tekniska krav som anges på den här sidan, till exempel Azure Blob Storage eller AWS S3.
+I alla andra fall där AEM distribueras på Azure eller AWS, eller i någon annan molndatormiljö, finns stöd från Adobe i den virtuella datormiljön. Den virtuella miljön måste köras i enlighet med de tekniska specifikationer som anges på den här sidan. Alla rapporterade problem som rör AEM som körs i någon av dessa molnmiljöer måste kunna reproduceras oberoende av molntjänster som är specifika för molnmiljön. Det vill säga om inte molntjänsten stöds som en del av de tekniska krav som anges på den här sidan, till exempel Azure Blob Storage eller AWS S3.
 
-Adobe rekommenderar att du arbetar direkt med molnleverantören för att få rekommendationer om hur du ska distribuera AEM på Azure eller AWS utanför Adobe Managed Services. Eller i samarbete med Adobe partners som stöder driftsättningen av AEM i molnmiljön. Den valda molnleverantören eller partnern ansvarar för storleksspecifikationer, utformning och implementering av arkitekturen för att uppfylla dina specifika krav på prestanda, belastning, skalbarhet och säkerhet.
+Adobe rekommenderar att du arbetar direkt med molnleverantören för att få rekommendationer om hur du ska distribuera AEM på Azure eller AWS utanför Adobe Managed Services. Du kan också arbeta med Adobe-partners som stöder distributionen av AEM i valfri molnmiljö. Den valda molnleverantören eller partnern ansvarar för storleksspecifikationer, utformning och implementering av arkitekturen för att uppfylla dina specifika krav på prestanda, belastning, skalbarhet och säkerhet.
 
 ### Dispatcher Platforms (webbservrar) {#dispatcher-platforms-web-servers}
 
@@ -247,13 +248,13 @@ Följande webbservrar kan användas med Dispatcher version 4.3.2:
 | Plattform | Supportnivå |
 |---|---|
 | **Apache httpd 2.4.x** `[1,2]` | A: Stöds |
-| Microsoft® IIS 10 (Internet Information Server) | S: Stöds |
+| Microsoft® IIS 10 (Internet Information Server) | A: Stöds |
 | Microsoft® IIS 8.5 (Internet Information Server) | Z: Stöds inte |
 
-1. Webbservrar byggda baserat på Apache httpd-källkoden har lika mycket stöd som den version av httpd som den är baserad på. Om du är osäker kan du be Adobe om en bekräftelse av den supportnivå som gäller respektive serverprodukt. Följande fall:
+1. Webbservrar byggda baserat på Apache httpd-källkoden har lika mycket stöd som den version av httpd som den är baserad på. Om du är osäker kan du be Adobe om bekräftelse på supportnivån för respektive serverprodukt. Följande fall:
 
-   1. HTTP-servern byggdes med endast officiella Apache-källkodsdistributioner, eller
-   1. HTTP-servern levererades som en del av operativsystemet som den körs på. Exempel: IBM® HTTP Server, Oracle HTTP Server
+   1. HTTP-servern byggdes med enbart officiella källdistributioner av Apache, eller
+   1. HTTP-servern levererades som en del av det operativsystem där den körs. Exempel: IBM® HTTP Server, Oracle HTTP Server
 
 1. Dispatcher är inte tillgängligt för Apache 2.4.x för Windows-operativsystem.
 
@@ -301,12 +302,12 @@ Uppdateringar för Mozilla Firefox, Google Chrome och Microsoft® Edge var sjät
   <tr>
    <td>Mozilla Firefox last ESR [1]</td>
    <td>A: Stöds</td>
-   <td>S: Stöds</td>
+   <td>A: Stöds</td>
   </tr>
   <tr>
    <td>Apple Safari på macOS (Evergreen)</td>
    <td>S: Stöds</td>
-   <td>A: Stöds</td>
+   <td>S: Stöds</td>
   </tr>
   <tr>
    <td>Apple Safari 11.x på macOS</td>
@@ -331,7 +332,7 @@ Uppdateringar för Mozilla Firefox, Google Chrome och Microsoft® Edge var sjät
 
 ### Webbläsare som stöds för webbplatser {#supported-browsers-for-websites}
 
-I allmänhet är webbläsarstöd för webbplatser som återges av AEM Sites beroende av implementeringen av AEM sidmallar, design och komponentutdata, och det är därför den part som implementerar dessa delar som bestämmer.
+I allmänhet beror webbläsarstödet för webbplatser som återges av AEM Sites på implementeringen av AEM sidmallar, design och komponentutdata, och kontrolleras därför av den part som implementerar dessa delar.
 
 ### WebDAV-klienter {#webdav-clients}
 
@@ -409,11 +410,11 @@ Om språkinställningen är inställd så att LC_CTYPE inte är lika med `en_US.
 >
 Konstruktionen för flera noder kan resultera i minnesöverbelastning på en eller flera av noderna innan andra noder töms. När minnesöverbelastning inträffar kan kärnan bestämma sig för att avsluta processer (till exempel Image Server eller Platform Server) trots att det finns tillgängligt minne.
 >
-Därför rekommenderar Adobe att du, om du kör ett sådant system, stänger av NUMA med startalternativet **numa=off** för att undvika att kärnan dödar dessa processer.
+Därför rekommenderar Adobe att du stänger av NUMA med **numa=off** startalternativ för att undvika att kärnan tar bort dessa processer.
 
 >[!NOTE]
 >
-**Serverns värdnamn måste matchas:** Kontrollera att serverns värdnamn kan matchas till en IP-adress. Om det inte är möjligt lägger du till det fullständigt kvalificerade värdnamnet och IP-adressen i **/etc/hosts**:
+**Servervärdnamnet måste matcha:** Kontrollera att serverns värdnamn kan matchas till en IP-adress. Om det inte är möjligt lägger du till det fullständigt kvalificerade värdnamnet och IP-adressen i **/etc/hosts**:
 >
 `<ip address> <fully qualified hostname>`
 

@@ -9,9 +9,9 @@ breadcrumb-title: Användarhandbok om Forms
 user-guide-description: Skapa, hantera, publicera och uppdatera digitala formulär.
 role: User
 feature: Forms Service
-source-git-commit: 6b24067c1808475044a612f21d5d4d2793c13e17
+source-git-commit: 6f2b16a51d4ad0f5c199ff41e8abe150c27ecc01
 workflow-type: tm+mt
-source-wordcount: '3762'
+source-wordcount: '3765'
 ht-degree: 0%
 
 ---
@@ -699,7 +699,7 @@ ht-degree: 0%
    + [Det gick inte att återställa CRX-databasen](/help/forms/using/restore-crx-repository.md)
    + [Fel som inte är tillgängliga för tjänsten efter installation av AEM 6.5.15.0 Service Pack](/help/forms/using/aem-service-pack-installation-solution.md)
    + [AEM Forms JEE 6.5.15.0 Service Pack - installationsproblem i JBoss Linux-miljö](/help/forms/using/linux-jboss-installation-issue-on-sp15.md)
-   + [Köra flera tjänster även om AEM Forms inte har börjat fullständigt](/help/forms/using/executing-multiple-services-even-aem-forms-has-not-started.md)
+   + [Bearbetar dokument även om AEM Forms-servern inte är helt igång](/help/forms/using/processing-documents-even-if-aem-forms-server-not-fully-up.md)
    + [Det går inte att använda utdatatjänsten, Forms-tjänsten eller DoR-tjänsten (Document of Record)](/help/forms/using/connection-issues-with-output-forms-and-document-of-record-dor-services.md)
 + Äldre dokumentation {#legacy-documentation}
    + [Använda den körda skripttjänsten i AEM Forms på JEE Workbench för att skapa XML-data](developing/building-xml.md)
