@@ -3,9 +3,9 @@ title: Versionsinformation för [!DNL Adobe Experience Manager] 6.5
 description: Hitta versionsinformation, nyheter, installationsanvisningar och en detaljerad ändringslista för [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 4
 exl-id: cac14ac1-9cda-46ae-8aa3-94674bb79157
-source-git-commit: 9b18d92ffabc141e83ba9a7c3694257d3dee1ea1
+source-git-commit: d3f18320ca8a9a100e1aa6344a1c9424d0ff03ca
 workflow-type: tm+mt
-source-wordcount: '4204'
+source-wordcount: '4197'
 ht-degree: 0%
 
 ---
@@ -50,7 +50,7 @@ Några av de viktigaste funktionerna och förbättringarna i den här versionen 
 * **Nya adaptiva kärnkomponenter i formulär**: Lodräta flikar, villkor och kryssruta läggs till för att öka formulärens skalbarhet.
    * **[Kryssrutekomponent](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/checkbox.html)**: Adaptiv Forms baserad på kärnkomponenter kan nu innehålla en kryssrutekomponent. Det gör att användare kan göra binära val, markera eller avmarkera ett visst alternativ. Det visas vanligtvis som en liten ruta som du kan klicka på eller peka på för att växla mellan två lägen: markerad och avmarkerad. Kryssrutan är ett vanligt formulärelement som används för att ange ett ja/nej- eller sant/falskt-val.
 
-   * **[Villkorskomponent](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/terms-and-conditions.html)**: Adaptiv Forms baserad på kärnkomponenter kan nu innehålla en villkorskomponent. Det gör det möjligt för formulärförfattare att infoga ett specifikt avsnitt i formuläret där användarna presenteras med de villkor eller juridiska avtal som är kopplade till användningen av en tjänst, produkt eller plattform. Den här komponenten är utformad för att informera användare om de regler, bestämmelser och skyldigheter som de godkänner genom att skicka in formuläret.
+   * **[Villkorskomponent](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/terms-and-conditions.html)**: Adaptiv Forms baserad på kärnkomponenter kan nu innehålla en villkorskomponent. Det gör det möjligt för Forms-författare att införa ett specifikt avsnitt i formuläret där användarna presenteras med de villkor eller juridiska avtal som är kopplade till användningen av en tjänst, produkt eller plattform. Den här komponenten är utformad för att informera användare om de regler, bestämmelser och skyldigheter som de godkänner genom att skicka in formuläret.
 
      ![Vertikala flikar, villkor och kryssrutekomponenter](/help/forms/using/assets/forms-components.png)
 
@@ -58,11 +58,11 @@ Några av de viktigaste funktionerna och förbättringarna i den här versionen 
 
 * **[64-bitarsversionen av AEM Forms Designer](/help/forms/using/installing-configuring-designer.md)**: 64-bitarsversionen av AEM Forms Designer ger bättre prestanda, skalbarhet och minneshantering så att du kan skapa formulär. Med 64-bitarsarkitekturen kan du enkelt hantera ännu större och mer komplexa projekt, vilket ger smidiga designarbetsflöden och optimerad effektivitet. Utöka dina formulärdesignmöjligheter och ta till vara framtiden för AEM Forms Designer med den här banbrytande releasen.
 
-* **[Ansluta en adaptiv Forms med Microsoft® SharePoint List](/help/forms/using/configuring-submit-actions.md#submit-to-microsoft&reg;-sharepoint-list)**: AEM Forms erbjuder en OOTB-integrering för att skicka formulärdata direkt till SharePoint List, så att du kan använda funktionerna i SharePoint Lists. Du kan konfigurera Microsoft SharePoint List som en datakälla för en formulärdatamodell och använda Skicka med formulärdatamodellen för att ansluta ett anpassat formulär med SharePoint List.
+* **[Ansluta en adaptiv Forms med Microsoft® SharePoint List](/help/forms/using/configuring-submit-actions.md#submit-to-microsoft&reg;-sharepoint-list)**: AEM Forms erbjuder en OOTB-integrering för att skicka formulärdata direkt till SharePoint List, så att du kan använda funktionerna i SharePoint Lists. Du kan konfigurera Microsoft® SharePoint List som en datakälla för en formulärdatamodell och använda Skicka med formulärdatamodellen för att ansluta ett anpassat formulär med SharePoint List.
 
 * **[Stöd för att konfigurera Document of Record-egenskaper för adaptiva formulärfragment](/help/forms/using/generate-document-of-record-for-non-xfa-based-adaptive-forms.md)**: Nu kan du enkelt anpassa dina adaptiva formulärfragment och fälten i den adaptiva formulärredigeraren.
 
-* **64-bitars XMLFM**: 64-bitarsitereringen av XMLFM ger bättre prestanda, skalbarhet och förbättrad minneshantering. Det är den första inbyggda 64-bitarstjänsten som körs på serversidan. Genom att utnyttja sin inneboende förmåga att komma åt betydligt större minnesresurser jämfört med sin 32-bitars motsvarighet, ger XMLFM 64-bitars smidig hantering av större arbetsbelastningar för återgivning. Denna milstolpe innebär inte bara ett prestandasprång utan även viktiga förbättringar av det systemspecifika tjänstramverket i AEM Forms-servern. Den här uppdateringen gör att AEM Forms-servern sömlöst stöder alla 64-bitars inbyggda tjänster.
+* **64-bitars XMLFM**: 64-bitarsitereringen av XMLFM ger bättre prestanda, skalbarhet och förbättrad minneshantering. Det är den första inbyggda 64-bitarstjänsten som körs på serversidan. Genom att utnyttja sin inneboende förmåga att få tillgång till större minnesresurser jämfört med sin 32-bitars motsvarighet, ger XMLFM 64-bitars smidig hantering av större återgivningsarbetsbelastningar. Denna milstolpe innebär inte bara ett prestandasprång utan även viktiga förbättringar av det systemspecifika tjänstramverket i AEM Forms Server. Den här uppdateringen gör att AEM Forms Server stöder alla inbyggda 64-bitarstjänster.
 
 **Inaktuell funktion**
 
@@ -190,17 +190,17 @@ till
 
 * När en användare lägger till ett verktygsfält i ett anpassat formulär, visar behållaretiketten felaktigt beteende eftersom den inte ändras till det språk som författaren valt för Forms. (FORMS-1371)
 * I AEM Forms Workspace väljer listrutan det första alternativet som standard i användargränssnittet. (FORMS-1346)
-* Språkkonfigurationen i AEM har ingen effekt om du använder språkområden med fem tecken och decimalavgränsaren inte återges korrekt i bokstaven. (FORMS-1344)
+* Språkkonfigurationen i AEM påverkas inte om du använder språkområden med fem tecken och decimalavgränsaren inte återges korrekt i bokstaven. (FORMS-1344)
 * När en användare genererar XML-utdata med Workbench-processen misslyckas detta för några av filerna. (FORMS-1314)
 * När en användare genererar en förhandsgranskning för DOR (Document of record) på andra språk än engelska fungerar den inte. (FORMS-11106)
-* När en användare konverterar vissa bildfiler med PDFG i en OSGI-instans som är baserad på Linux med JDK11, konverteras den inte. (FORMS-11105)
+* När en användare konverterar vissa bildfiler med PDFG i en OSGI-instans som är baserad på Linux® med JDK11, konverteras den inte. (FORMS-11105)
 * När användare installerar AEM Forms-tillägget bryts innehållsträdspanelen i AEM Sites. (FORMS-10912)
 * När en användare kopierar datum med NVDA-skärmläsare från datumväljarkomponenten läses det inte korrekt. (FORMS-10805) 
 * I Forms regelredigerare kan användaren inte ange värdet för alternativknappen/kryssrutan när datavärdestypen är Boolean. (FORMS-10713)
 * När en användare lägger till objekt i ett adaptivt formulär läggs det till i omvänd ordning i en nedrullningsbar lista. (FORMS-10456)
 * När en listruta har rensats med regelredigeraren visas det första angivna värdet fortfarande, även om värdet har rensats. (FORMS-9963) 
 * Användarna kan inte komma åt formulärtiteln med skärmläsare som NVDA. (FORMS-8815) 
-* Användare kan inte komma åt underrubriken i ett formulär med skärmläsare som NVDA. (FORMS-8814) 
+* Användarna har inte åtkomst `Sub Title` i ett formulär med skärmläsare som NVDA. (FORMS-8814) 
 * I HTML-formulärets sidkälla är åtkomstnyckelattributet tomt och fungerar inte. (FORMS-5753) 
 * I dialogrutan Om arbetsyta visas texten&quot;Adobe Experience Manager - Forms&quot; som text. (FORMS-5748)
 
@@ -518,7 +518,7 @@ Du löser problemet genom att leta reda på `<AEM_Forms_Installation_dir>\jboss\
 * När en användare väljer att konfigurera ett fält för första gången i ett adaptivt formulär visas inte alternativet att spara en konfiguration i egenskapsläsaren. Problemet åtgärdas genom att ett annat fält i det adaptiva formuläret konfigureras i samma redigerare.
 * När användare utför en sändningsåtgärd misslyckas överföringen med ett fel:
   ` javax.servlet.ServletException: java.lang.NoSuchMethodError`
-För att lösa problemet [kompilera om Sling-skript som JSP, Java och Sightly](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-16543.html?lang=en#resolution). (FORMS-8542)
+För att lösa problemet [kompilera om Sling-skript som JSP, Java™ och Sightly](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-16543.html?lang=en#resolution). (FORMS-8542)
 
 
 ## OSGi-paket och innehållspaket som ingår{#osgi-bundles-and-content-packages-included}
