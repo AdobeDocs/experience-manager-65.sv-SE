@@ -5,9 +5,10 @@ contentOwner: Adobe
 feature: Asset Management,Metadata,Search
 role: User
 exl-id: 4b518ac0-5b8b-4d61-ac31-269aa1f5abe4
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+hide: true
+source-git-commit: 477c62b857ab98d8617c7bd8ba226019d42d330d
 workflow-type: tm+mt
-source-wordcount: '485'
+source-wordcount: '496'
 ht-degree: 2%
 
 ---
@@ -16,7 +17,7 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->Resursväljaren anropades [Resursväljaren](https://helpx.adobe.com/experience-manager/6-2/assets/using/asset-picker.html) i tidigare versioner av [!DNL Experience Manager].
+>The [Resursväljare](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/asset-selector.html?lang=en) anropades [Resursväljaren](https://helpx.adobe.com/experience-manager/6-2/assets/using/asset-picker.html) i tidigare versioner av [!DNL Experience Manager].
 
 Med resursväljaren kan du bläddra bland, söka efter och filtrera resurser i [!DNL Adobe Experience Manager] Resurser. Du kan också hämta metadata för resurser som du väljer med resursväljaren. Om du vill anpassa resursväljargränssnittet kan du starta det med parametrar för begäran som stöds. Dessa parametrar anger kontexten för resursväljaren för ett visst scenario.
 
@@ -58,3 +59,7 @@ Du kan skicka följande frågeparametrar i en URL för att starta resursväljare
    ![chlimage_1-443](assets/chlimage_1-443.png)
 
 1. Klicka på **[!UICONTROL Select]** i verktygsfältet.
+
+>[!MORELIKETHIS]
+>
+>* [Mikrofrontsväljare för resurs i AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/asset-selector.html?lang=en)
