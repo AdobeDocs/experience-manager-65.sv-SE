@@ -9,7 +9,7 @@ docset: aem65
 role: User, Admin
 feature: Workflow,Asset Management,Renditions
 exl-id: 3d9367ed-5a02-43aa-abd9-24fae457d4c5
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+source-git-commit: bf6566bb9e3e77924b89b31fc2ef4a59545a66da
 workflow-type: tm+mt
 source-wordcount: '1337'
 ht-degree: 0%
@@ -47,7 +47,7 @@ Genom att använda konsekventa och lämpliga namngivningsstrategier för filer o
 
 Du kan bearbeta resurser i en mapp som redan har en befintlig bearbetningsprofil som du senare ändrade.
 
-Anta att du har skapat en bildprofil och tilldelat den till en mapp. Bildobjekt som du överförde till mappen fick automatiskt bildprofilen tillämpad på resurserna. Men senare bestämmer du dig för att lägga till en ny smart beskärningsproportion i profilen. I stället för att nu låta markera och ladda upp resurserna till mappen igen kör du bara *Scene7: Återbearbeta resurser* arbetsflöde.
+Anta att du har skapat en bildprofil och tilldelat den till en mapp. Bildobjekt som du överförde till mappen fick automatiskt bildprofilen tillämpad på resurserna. Men senare bestämmer du dig för att lägga till en ny smart beskärningsproportion i profilen. I stället för att nu låta markera och ladda upp resurserna till mappen igen kör du bara *Dynamic Media Reprocess* <!-- *Scene7: Reprocess Assets* --> arbetsflöde.
 
 Du kan köra arbetsflödet för ombearbetning på en resurs som bearbetningen misslyckades för första gången. Även om du inte har redigerat en bearbetningsprofil eller använt en bearbetningsprofil kan du ändå köra arbetsflödet för ombearbetning på en mapp med resurser när som helst.
 
@@ -61,11 +61,11 @@ Se [Justera batchstorleken för arbetsflödet för ombearbetning](#adjusting-loa
 >
 >Migreringens publiceringsagent måste inaktiveras på Dynamic Media-servern så att arbetsflödet för ombearbetning fungerar som förväntat.
 
-<!-- Batch size is the number of assets that are amalgamated into a single IPS (Dynamic Media's Image Production System) job. When you run the Scene7: Reprocess Assets workflow, the job is triggered on IPS. The number of IPS jobs that are triggered is based on the total number of assets in the folder, divided by the batch size. For example, suppose you had a folder with 150 assets and a batch size of 50. In this case, three IPS jobs are triggered. The assets are updated when the entire batch size (50 in our example) is processed in IPS. The job then moves onto the next IPS job, and so on, until complete. If you increase the batch size, you may notice a longer delay with assets getting updated. -->
+<!-- Batch size is the number of assets that are amalgamated into a single IPS (Dynamic Media's Image Production System) job. When you run the Dynamic Media Reprocess workflow, the job is triggered on IPS. The number of IPS jobs that are triggered is based on the total number of assets in the folder, divided by the batch size. For example, suppose you had a folder with 150 assets and a batch size of 50. In this case, three IPS jobs are triggered. The assets are updated when the entire batch size (50 in our example) is processed in IPS. The job then moves onto the next IPS job, and so on, until complete. If you increase the batch size, you may notice a longer delay with assets getting updated. -->
 
 **Så här bearbetar du resurser i en mapp:**
 
-1. I Experience Manager går du från sidan Resurser till en mapp med resurser som har en bearbetningsprofil tilldelad och för vilken du vill tillämpa **[!UICONTROL Scene7: Reprocess Asset]** arbetsflöde,
+1. I Experience Manager går du från sidan Resurser till en mapp med resurser som har en bearbetningsprofil tilldelad och för vilken du vill tillämpa **[!UICONTROL Dynamic Media Reprocess]** arbetsflöde,
 
    Mappar som redan har tilldelats en bearbetningsprofil visas genom att profilens namn visas direkt under mappnamnet i kortvyn.
 
@@ -81,7 +81,7 @@ Se [Justera batchstorleken för arbetsflödet för ombearbetning](#adjusting-loa
    ![Bearbeta resursarbetsflöde 1](/help/assets/assets/reprocess-assets1.png)
 
 1. Välj **[!UICONTROL Start Workflow]**.
-1. Från **[!UICONTROL Start Workflow]** nedrullningsbar lista, välja **[!UICONTROL Scene7: Reprocess Assets]**.
+1. Från **[!UICONTROL Start Workflow]** nedrullningsbar lista, välja **[!UICONTROL Dynamic Media Reprocess]**.
 1. (Valfritt) I dialogrutan **Ange arbetsflödets titel** anger du ett namn för arbetsflödet i textfältet. Du kan använda namnet för att referera till arbetsflödesinstansen, om det behövs.
 
    ![Bearbeta resurser 2](/help/assets/assets/reprocess-assets2.png)
@@ -97,12 +97,12 @@ Se [Justera batchstorleken för arbetsflödet för ombearbetning](#adjusting-loa
 **Om du vill justera batchstorleken för arbetsflödet för ombearbetning:**
 
 1. I Experience Manager väljer du **[!UICONTROL Adobe Experience Manager]** för att komma åt den globala navigeringskonsolen väljer du **[!UICONTROL Tools]** (hammer) ikon > **[!UICONTROL Workflow]** > **[!UICONTROL Models]**.
-1. På sidan Arbetsflödesmodeller i kortvyn eller listvyn väljer du **[!UICONTROL Scene7: Reprocess Assets]**.
+1. På sidan Arbetsflödesmodeller i kortvyn eller listvyn väljer du **[!UICONTROL Dynamic Media Reprocess]**.
 
-   ![Sidan Arbetsflödesmodeller med Scene7: Arbetsflödet för att bearbeta resurser har valts i kortvyn](/help/assets/assets-dm/reprocess-assets7.png)
+   ![Sidan Arbetsflödesmodeller med arbetsflödet Dynamic Media Reprocess markerat i kortvyn](/help/assets/assets-dm/reprocess-assets7.png)
 
-1. I verktygsfältet väljer du **[!UICONTROL Edit]**. En ny flik i webbläsaren öppnar sidan Scene7: Reprocess Assets workflow model.
-1. På Scene7: Reprocess Assets workflow page, near the upper right corner, select **[!UICONTROL Edit]** för att låsa upp arbetsflödet.
+1. I verktygsfältet väljer du **[!UICONTROL Edit]**. En ny flik i webbläsaren öppnar sidan Dynamic Media arbetsflödesmodell för ombearbetning.
+1. På sidan Dynamic Media Reprocess workflow, i det övre högra hörnet, väljer du **[!UICONTROL Edit]** för att låsa upp arbetsflödet.
 1. I arbetsflödet väljer du Scene7 Batch Upload-komponenten för att öppna verktygsfältet och väljer sedan **[!UICONTROL Configure]** i verktygsfältet.
 
    ![Komponenten Scene7 Batch Upload](/help/assets/assets-dm/reprocess-assets8.png)
@@ -119,11 +119,11 @@ Se [Justera batchstorleken för arbetsflödet för ombearbetning](#adjusting-loa
 
 1. I det övre högra hörnet av **[!UICONTROL Batch Upload to Scene7 – Step Properties]** väljer **[!UICONTROL Done]**.
 
-1. I det övre högra hörnet av sidan Scene7: Reprocess Assets workflow model väljer du **[!UICONTROL Sync]**. När du ser **[!UICONTROL Synced]**, är arbetsflödets körningsmodell synkroniserad och klar att bearbeta resurser i en mapp igen.
+1. I det övre högra hörnet av modellsidan för arbetsflöde för Dynamic Media Reprocess väljer du **[!UICONTROL Sync]**. När du ser **[!UICONTROL Synced]**, är arbetsflödets körningsmodell synkroniserad och klar att bearbeta resurser i en mapp igen.
 
    ![Synkronisera arbetsflödesmodellen](/help/assets/assets-dm/reprocess-assets1.png)
 
-1. Stäng webbläsarfliken som visar arbetsflödesmodellen Scene7: Återbearbeta resurser.
+1. Stäng webbläsarfliken som visar arbetsflödesmodellen Dynamic Media Reprocess.
 
 <!--1. Return to the browser tab that has the open Workflow Models page, then press **Esc** to exit the selection.
 1. In the upper-left corner of the page, select **[!UICONTROL Adobe Experience Manager]** to access the global navigation console, then select the **[!UICONTROL Tools]** (hammer) icon > **[!UICONTROL General > CRXDE Lite]**.
@@ -143,4 +143,4 @@ Se [Justera batchstorleken för arbetsflödet för ombearbetning](#adjusting-loa
 
 1. On the menu bar of the CRXDE Lite page, select **[!UICONTROL Save All]**.
 1. In the upper-left corner of the page, select **[!UICONTROL CRXDE Lite]** to return to the main Experience Manager console
-1. Repeat steps 1-7 to re-synchronize the new batch size to the Scene7: Reprocess Assets workflow model.-->
+1. Repeat steps 1-7 to re-synchronize the new batch size to the Dynamic Media Reprocess workflow model.-->
