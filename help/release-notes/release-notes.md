@@ -3,9 +3,9 @@ title: Versionsinformation för [!DNL Adobe Experience Manager] 6.5
 description: Hitta versionsinformation, nyheter, installationsanvisningar och en detaljerad ändringslista för [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 4
 exl-id: cac14ac1-9cda-46ae-8aa3-94674bb79157
-source-git-commit: d3f18320ca8a9a100e1aa6344a1c9424d0ff03ca
+source-git-commit: 2118cecd8e66e41a1ce1c859cf62b1f18f7cb891
 workflow-type: tm+mt
-source-wordcount: '4197'
+source-wordcount: '4242'
 ht-degree: 0%
 
 ---
@@ -212,7 +212,8 @@ till
 * En lista visas inte korrekt i taggarna i Adobe Acrobat Reader eller Adobe Acrobat DC. (LC-3921306)
 * Rubriknivåer som tilldelas korrekt i Forms Designer ändras slumpmässigt till `<P>` i Adobe Acrobat. (LC-3921305) 
 * I en tabell kan ID:t för ett objekt inte ändras när det har tilldelats. (LC-3921134) 
-* Om det finns sammanfogade celler i tabellen är inget GUI tillgängligt för att ange omfånget (rad och kolumn) och omfånget i en komplex tabell i AEM Forms Designer. (LC-3919532) 
+* Om det finns sammanfogade celler i tabellen är inget GUI tillgängligt för att ange omfånget (rad och kolumn) och omfånget i en komplex tabell i AEM Forms Designer. (LC-3919532)
+  <!--* After applying AEM Service Pack 6.5.15.0 patch installer, notice generation fails intermittently  . (LC-3921530)-->
 
 ### Foundation{#foundation-6519}
 
@@ -517,8 +518,9 @@ Du löser problemet genom att leta reda på `<AEM_Forms_Installation_dir>\jboss\
 * När ett adaptivt formulär publiceras kommer alla dess beroenden, inklusive profiler, att publiceras på nytt, även om inga ändringar har gjorts i dem. (FORMS-10454)
 * När en användare väljer att konfigurera ett fält för första gången i ett adaptivt formulär visas inte alternativet att spara en konfiguration i egenskapsläsaren. Problemet åtgärdas genom att ett annat fält i det adaptiva formuläret konfigureras i samma redigerare.
 * När användare utför en sändningsåtgärd misslyckas överföringen med ett fel:
-  ` javax.servlet.ServletException: java.lang.NoSuchMethodError`
-För att lösa problemet [kompilera om Sling-skript som JSP, Java™ och Sightly](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-16543.html?lang=en#resolution). (FORMS-8542)
+  `javax.servlet.ServletException: java.lang.NoSuchMethodError`
+För att lösa problemet [kompilera om Sling-skript som JSP, Java och Sightly](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-16543.html?lang=en#resolution). (FORMS-8542)
+* När en användare försöker välja ett teckensnitt för sina PDF-dokument i Adminui under sökvägen Hem > Tjänster > PDF Generator > Adobe PDF-inställningar, visas teckensnittslistan tom. Användaren kan inte lägga till teckensnitt i listorna&quot;Inkludera alltid&quot; och&quot;Inkludera aldrig&quot;. (FORMS-12095)
 
 
 ## OSGi-paket och innehållspaket som ingår{#osgi-bundles-and-content-packages-included}
