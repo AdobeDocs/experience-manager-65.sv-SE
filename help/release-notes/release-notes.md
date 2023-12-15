@@ -3,9 +3,9 @@ title: Versionsinformation för [!DNL Adobe Experience Manager] 6.5
 description: Hitta versionsinformation, nyheter, installationsanvisningar och en detaljerad ändringslista för [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 4
 exl-id: cac14ac1-9cda-46ae-8aa3-94674bb79157
-source-git-commit: 287717e39ff58396de6d63a89e2b3d8fef4e6888
+source-git-commit: 8fc35ac465240cafdce5346f2f7e9ba15c8d1fef
 workflow-type: tm+mt
-source-wordcount: '4260'
+source-wordcount: '4305'
 ht-degree: 0%
 
 ---
@@ -522,7 +522,13 @@ Du löser problemet genom att leta reda på `<AEM_Forms_Installation_dir>\jboss\
   `javax.servlet.ServletException: java.lang.NoSuchMethodError`
 För att lösa problemet [kompilera om Sling-skript som JSP, Java™ och Sightly](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-16543.html?lang=en#resolution). (FORMS-8542)
 * Efter installation AEM Service Pack 6.5.14.0 och senare kan användare inte välja ett teckensnitt i JEE Admin-gränssnittet för PDF-dokument vid navigering till `Home` > `Services` > `PDF Generator` > `Adobe PDF Settings`, eftersom teckensnittslistan visas tom. (FORMS-12095)
-  <!--The font enumeration fails due to the missing Ps2Pdf service file.-->
+
+#### AEM Forms på JEE
+
+* Allvarliga säkerhetsluckor har rapporterats för Struts 2 RCE, ett populärt ramverk för webbapplikationer med öppen källkod för utveckling av Java EE-webbapplikationer. Adobe har släppt [AEM 6.5 Service Pack 19.1 (6.5.19.1)](/help/forms/using/mitigating-struts-2-rce-vulnerabilities-for-experience-manager-manager-form.md) för att åtgärda säkerhetsluckan i AEM Forms på JEE.
+
+
+<!--The font enumeration fails due to the missing Ps2Pdf service file.-->
 
 ## OSGi-paket och innehållspaket som ingår{#osgi-bundles-and-content-packages-included}
 
