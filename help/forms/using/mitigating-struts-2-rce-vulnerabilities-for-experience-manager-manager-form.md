@@ -1,14 +1,14 @@
 ---
-title: Minska STORLEK 2 RCE-sårbarhet för Experience Manager Forms
-description: Minska STORLEK 2 RCE-sårbarhet för Experience Manager Forms
+title: Minska riskerna för Struts 2 RCE för Experience Manager Forms i JEE
+description: Minska riskerna för Struts 2 RCE för Experience Manager Forms i JEE
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: Security
 geptopics: SG_AEMFORMS/categories/jee
 role: Admin
-source-git-commit: 61a2fe04805478f7eaf0484edd6a1874e8e96404
+source-git-commit: 531eed9bb6d7792a6da0104b533a505738a64786
 workflow-type: tm+mt
-source-wordcount: '455'
+source-wordcount: '459'
 ht-degree: 0%
 
 ---
