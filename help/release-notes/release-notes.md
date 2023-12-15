@@ -3,9 +3,9 @@ title: Versionsinformation för [!DNL Adobe Experience Manager] 6.5
 description: Hitta versionsinformation, nyheter, installationsanvisningar och en detaljerad ändringslista för [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 4
 exl-id: cac14ac1-9cda-46ae-8aa3-94674bb79157
-source-git-commit: 2118cecd8e66e41a1ce1c859cf62b1f18f7cb891
+source-git-commit: b5ecac71b07bfceb2708f20fe50965dec25e2194
 workflow-type: tm+mt
-source-wordcount: '4242'
+source-wordcount: '4231'
 ht-degree: 0%
 
 ---
@@ -145,7 +145,7 @@ till
 * Markering av flera dokumentfiltyper i filtret för resurstyp fungerar inte på sidkonsolen. Inga resultat hittas även om resultaten för en viss filtyp är tillgängliga. Därför kan man inte filtrera flera dokument. De måste använda flera dokumenttyper och måste filtrera en åt gången. (SITES-14047)
 * När du har uppgraderat en instans från AEM 6.5.17 och AEM 6.5.18, inifrån sidredigeraren, om du har valt **[!UICONTROL Publish Page]**, omdirigeras du till en URL som inte finns. Användaren bör omdirigeras till publiceringsguiden. (SITES-15856)
 * Överflödig kopiering från AEM Urklipp under en inklistring från operativsystemets Urklipp. (SITES-15704)
-* I Resurser, välja **[!UICONTROL Documents]**, sedan under **[!UICONTROL Filtertype]**, markera **[!UICONTROL Microsoft® Word]** eller **[!UICONTROL Microsoft® Excel]** visar inga resultat trots att det finns filer av båda typerna. (SITES-14837)
+* I Resurser, välja **[!UICONTROL Documents]**, sedan under **[!UICONTROL Filtertype]**, markera **[!UICONTROL Microsoft®® Word]** eller **[!UICONTROL Microsoft®® Excel]** visar inga resultat trots att det finns filer av båda typerna. (SITES-14837)
 
 ### [!DNL Assets]{#assets-6519}
 
@@ -519,9 +519,9 @@ Du löser problemet genom att leta reda på `<AEM_Forms_Installation_dir>\jboss\
 * När en användare väljer att konfigurera ett fält för första gången i ett adaptivt formulär visas inte alternativet att spara en konfiguration i egenskapsläsaren. Problemet åtgärdas genom att ett annat fält i det adaptiva formuläret konfigureras i samma redigerare.
 * När användare utför en sändningsåtgärd misslyckas överföringen med ett fel:
   `javax.servlet.ServletException: java.lang.NoSuchMethodError`
-För att lösa problemet [kompilera om Sling-skript som JSP, Java och Sightly](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-16543.html?lang=en#resolution). (FORMS-8542)
-* När en användare försöker välja ett teckensnitt för sina PDF-dokument i Adminui under sökvägen Hem > Tjänster > PDF Generator > Adobe PDF-inställningar, visas teckensnittslistan tom. Användaren kan inte lägga till teckensnitt i listorna&quot;Inkludera alltid&quot; och&quot;Inkludera aldrig&quot;. (FORMS-12095)
-
+För att lösa problemet [kompilera om Sling-skript som JSP, Java™ och Sightly](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-16543.html?lang=en#resolution). (FORMS-8542)
+* Efter installation AEM Service Pack 6.5.14.0 och senare kan användare inte välja ett teckensnitt i JEE Admin-gränssnittet för PDF-dokument vid navigering till `Home` > `Services` > `PDF Generator` > `Adobe PDF Settings`, eftersom teckensnittslistan visas tom. (FORMS-12095)
+  <!--The font enumeration fails due to the missing Ps2Pdf service file.-->
 
 ## OSGi-paket och innehållspaket som ingår{#osgi-bundles-and-content-packages-included}
 
