@@ -1,20 +1,20 @@
 ---
-title: Minska riskerna för Struts 2 RCE för Experience Manager Forms i JEE
-description: Minska riskerna för Struts 2 RCE för Experience Manager Forms i JEE
+title: Sårbarheter för Minska strängar 2 för Experience Manager Forms i JEE
+description: Sårbarheter för Minska strängar 2 för Experience Manager Forms i JEE
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: Security
 geptopics: SG_AEMFORMS/categories/jee
 role: Admin
-source-git-commit: 531eed9bb6d7792a6da0104b533a505738a64786
+source-git-commit: 5f5fcc10927d62cdfaeb0770c34052ceda02b2e8
 workflow-type: tm+mt
-source-wordcount: '459'
+source-wordcount: '479'
 ht-degree: 0%
 
 ---
 
 
-# Minska STORLEK 2 RCE-sårbarhet för Experience Manager Forms {#mitigatin-struts2-rce-vulnerabilities-for-aem-forms}
+# Säkerhetsluckor i Struts 2 för Experience Manager Forms {#mitigatin-struts2-rce-vulnerabilities-for-aem-forms}
 
 ## Problem
 
@@ -46,20 +46,22 @@ Du kan använda de manuella begränsningsstegen för att lösa problemet på AEM
    * patch-archive.bat
    * patch-archive.sh
 1. Öppna terminalfönstret och navigera till mappen som innehåller de extraherade filerna.
-1. Använd det manuella patchverktyget för att söka efter, lista och ersätta alla filer i filen struts2 jar. Så här söker och ersätter du filen struts2-core-2.5.30 jar och struts2-core.jar:
+1. Använd det manuella patchverktyget för att söka efter, lista och ersätta alla filer i filen struts2 jar. Verktyget kräver Internetanslutning eftersom beroenden hämtas vid körning. Kontrollera därför att du är ansluten till Internet innan du kör verktyget.
+
+Så här söker och ersätter du filen struts2-core-2.5.30 jar och struts2-core.jar:
 
 
 >[!BEGINTABS]
 
 >[!TAB Windows]
 
-1. Kör följande kommando för att lista alla struts2 jar-filer. Innan du kör kommandot måste du ersätta sökvägen i ovanstående kommando med sökvägen till AEM formulärserver:
+1. Kör följande kommando för att lista alla struts2 jar-filer. Ersätt sökvägen i kommandot med sökvägen till AEM Forms-servern innan du kör kommandot:
 
    ```
    patch-archive.bat -root=C:\Adobe\Adobe_Experience_Manager_Forms\...\export -pattern=.*struts2-core-2.5.30.jar$
    ```
 
-1. Kör följande kommandon i den angivna ordningen för rekursiv ersättning på plats. Innan du kör kommandot. Ersätt sökvägen i ovanstående kommando med sökvägen till AEM formulärserver och `struts2-core-2.5.33.jar` -fil.
+1. Kör följande kommandon i den angivna ordningen för rekursiv ersättning på plats. Innan du kör kommandot. Ersätt sökvägen i kommandot med sökvägen till din AEM Forms-server och `struts2-core-2.5.33.jar` -fil.
 
 
    ```
@@ -74,13 +76,13 @@ Du kan använda de manuella begränsningsstegen för att lösa problemet på AEM
 
 >[!TAB Linux]
 
-1. Kör följande kommando för att lista alla struts2 jar-filer. Innan du kör kommandot måste du ersätta sökvägen i ovanstående kommando med sökvägen till AEM formulärserver:
+1. Kör följande kommando för att lista alla struts2 jar-filer. Ersätt sökvägen i kommandot med sökvägen till AEM Forms-servern innan du kör kommandot:
 
    ```
    patch-archive.sh -root=\Users\labuser\Adobe\Adobe_Experience_Manager_Forms\...\export -pattern=.*struts2-core-2.5.30.jar$
    ```
 
-1. Kör följande kommandon i den angivna ordningen för rekursiv ersättning på plats. Innan du kör kommandot Ersätt sökvägen i ovanstående kommando med sökvägen till AEM formulärserver och till `struts2-core-2.5.33.jar` -fil.
+1. Kör följande kommandon i den angivna ordningen för rekursiv ersättning på plats. Innan du kör kommandot måste du ersätta sökvägen i kommandot med sökvägen till AEM Forms-servern och `struts2-core-2.5.33.jar` -fil.
 
    ```
    patch-archive.sh -root=\Users\labuser\Adobe\Adobe_Experience_Manager_Forms\...\export -pattern=.*struts2-core-2.5.30.jar$ -action=replace \temp\struts2-core-2.5.33.jar
