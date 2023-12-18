@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: Security
 geptopics: SG_AEMFORMS/categories/jee
 role: Admin
-source-git-commit: 5f5fcc10927d62cdfaeb0770c34052ceda02b2e8
+source-git-commit: e42d01f1e5e44b12b755c20f826331ddbad8ab58
 workflow-type: tm+mt
-source-wordcount: '479'
+source-wordcount: '524'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 ## Problem
 
-Allvarliga säkerhetsluckor har rapporterats för Struts 2 RCE, ett populärt ramverk för webbapplikationer med öppen källkod för utveckling av Java EE-webbapplikationer. Följande säkerhetsluckor har analyserats:
+Allvarliga säkerhetsluckor har rapporterats för Struts 2, ett populärt ramverk för webbapplikationer med öppen källkod för utveckling av Java EE-webbapplikationer. Följande säkerhetsluckor har analyserats:
 
 | Sårbarhet | Vad har påverkat? | Vad påverkas inte? |
 |---|---|---|
@@ -48,48 +48,62 @@ Du kan använda de manuella begränsningsstegen för att lösa problemet på AEM
 1. Öppna terminalfönstret och navigera till mappen som innehåller de extraherade filerna.
 1. Använd det manuella patchverktyget för att söka efter, lista och ersätta alla filer i filen struts2 jar. Verktyget kräver Internetanslutning eftersom beroenden hämtas vid körning. Kontrollera därför att du är ansluten till Internet innan du kör verktyget.
 
-Så här söker och ersätter du filen struts2-core-2.5.30 jar och struts2-core.jar:
+Om du vill söka efter och ersätta `struts2-core-2.5.30.jar` och `struts2-core.jar` filer:
+
 
 
 >[!BEGINTABS]
 
 >[!TAB Windows]
 
-1. Kör följande kommando för att lista alla struts2 jar-filer. Ersätt sökvägen i kommandot med sökvägen till AEM Forms-servern innan du kör kommandot:
+1. Kör följande kommando för att lista alla struts2 jar-filer. Innan du kör kommandot måste du ersätta sökvägen i kommandot med sökvägen till din AEM Forms-server:
+
 
    ```
    patch-archive.bat -root=C:\Adobe\Adobe_Experience_Manager_Forms\...\export -pattern=.*struts2-core-2.5.30.jar$
    ```
 
-1. Kör följande kommandon i den angivna ordningen för rekursiv ersättning på plats. Innan du kör kommandot. Ersätt sökvägen i kommandot med sökvägen till din AEM Forms-server och `struts2-core-2.5.33.jar` -fil.
+1. Kör följande kommandon i den angivna ordningen för rekursiv ersättning på plats. Innan du kör kommandot måste du ersätta sökvägen i kommandot med sökvägen till din AEM Forms-server och `struts2-core-2.5.33.jar` -fil.
+
 
 
    ```
    patch-archive.bat -root=C:\Adobe\Adobe_Experience_Manager_Forms\...\export -pattern=.*struts2-core-2.5.30.jar$ -action=replace C:\temp\struts2-core-2.5.33.jar
    
    
-   patch-archive.bat -root=C:\Users\labuser\Desktop\check -pattern=.*struts2-core.jar$ -action=replace C:\Users\labuser\Desktop\struts2-core.jar -action=replace C:\Users\labuser\Desktop\struts2-core.jar
+   patch-archive.bat -root=C:\Users\labuser\Desktop\check -pattern=.*struts2-core.jar$ -action=replace C:\Users\labuser\Desktop\struts2-core.jar        
    ```
+
+   Ovanstående steg korrigerar de EAR-filer som innehåller `struts2-core-2.5.30.jar` och `struts2-core.jar` filer.
+
+1. Avdistribuera den äldre EAR-filen och distribuera den patchade EAR-filen till programservern.
+
 
 1. Starta AEM Forms Server.
 
 
 >[!TAB Linux]
 
-1. Kör följande kommando för att lista alla struts2 jar-filer. Ersätt sökvägen i kommandot med sökvägen till AEM Forms-servern innan du kör kommandot:
+1. Kör följande kommando för att lista alla struts2 jar-filer. Innan du kör kommandot måste du ersätta sökvägen i kommandot med sökvägen till din AEM Forms-server:
+
 
    ```
-   patch-archive.sh -root=\Users\labuser\Adobe\Adobe_Experience_Manager_Forms\...\export -pattern=.*struts2-core-2.5.30.jar$
+   patch-archive.sh -root=/Users/labuser/Adobe.Adobe_Experience_Manager_Forms/.../export -pattern=.*struts2-core-2.5.30.jar$
    ```
 
-1. Kör följande kommandon i den angivna ordningen för rekursiv ersättning på plats. Innan du kör kommandot måste du ersätta sökvägen i kommandot med sökvägen till AEM Forms-servern och `struts2-core-2.5.33.jar` -fil.
+1. Kör följande kommandon i den angivna ordningen för rekursiv ersättning på plats. Innan du kör kommandot måste du ersätta sökvägen i kommandot med sökvägen till din AEM Forms-server och `struts2-core-2.5.33.jar` -fil.
+
 
    ```
-   patch-archive.sh -root=\Users\labuser\Adobe\Adobe_Experience_Manager_Forms\...\export -pattern=.*struts2-core-2.5.30.jar$ -action=replace \temp\struts2-core-2.5.33.jar
+   patch-archive.sh -root=/Users/labuser/Adobe/Adobe_Experience_Manager_Forms/.../export -pattern=.*struts2-core-2.5.30.jar$ -action=replace /temp/struts2-core-2.5.33.jar
    
    
-   patch-archive.sh -root=\Users\labuser\Desktop\check -pattern=.*struts2-core.jar$ -action=replace \Users\labuser\Desktop\struts2-core.jar -action=replace \Users\labuser\Desktop\struts2-core.jar
+   patch-archive.sh -root=/Users/labuser/Desktop/check -pattern=.*struts2-core.jar$ -action=replace /Users/labuser/Desktop/struts2-core.jar
    ```
+
+   Ovanstående steg korrigerar de EAR-filer som innehåller `struts2-core-2.5.30.jar` och `struts2-core.jar` filer.
+
+1. Avdistribuera den äldre EAR-filen och distribuera den patchade EAR-filen till programservern.
 
 1. Starta AEM Forms Server.
 
