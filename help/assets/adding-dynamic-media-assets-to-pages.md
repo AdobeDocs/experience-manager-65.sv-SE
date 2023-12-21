@@ -9,7 +9,7 @@ docset: aem65
 role: User, Admin
 exl-id: 62d4a38c-2873-4560-8d58-ad172288764d
 feature: Components,Publishing
-source-git-commit: 04050f31742c926b45235595f6318929d3767bd8
+source-git-commit: 75ac5b860e8456e6113de22677926e75d84f8715
 workflow-type: tm+mt
 source-wordcount: '3050'
 ht-degree: 5%
@@ -243,7 +243,7 @@ Redigera följande Dynamic Media-inställning genom att välja **[!UICONTROL Edi
 
   Du kan redigera följande avancerade inställningar genom att välja **[!UICONTROL Edit]** i komponenten.
 
-* **[!UICONTROL Enable Aspect Ration match]** - Välj det här alternativet om du vill att Dynamic Media ska välja en smart beskärningsåtergivning med de proportioner som bäst matchar originalbildens proportioner.
+* **[!UICONTROL Enable Aspect Ratio match]** - Välj det här alternativet om du vill att Dynamic Media ska välja en smart beskärningsåtergivning med de proportioner som bäst matchar originalbildens proportioner.
 
 * **[!UICONTROL Optimize for higher resolution devices]** - Markera (standard) kryssrutan för att tillåta optimering av DPR (Device Pixel Ratio).
 
