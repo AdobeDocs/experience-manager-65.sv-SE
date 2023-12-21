@@ -6,7 +6,7 @@ solution-title: Experience Cloud
 user-guide-description: Läs Adobe Experience Manager 6.5-dokumentationen och se hur det fungerar och vad programmet kan göra för dig.
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM 6.5
-source-git-commit: 4a4f464d4140cbb3882b57786b9003a89b7a9a43
+source-git-commit: 241e39ae402744ac200cfd9220245b080aec33af
 workflow-type: tm+mt
 source-wordcount: '7328'
 ht-degree: 1%
@@ -260,7 +260,7 @@ ht-degree: 1%
          + [Bästa praxis för översättning](https://experienceleague.adobe.com/docs/experience-manager-65/content/sites/administering/introduction/tc-bp.html)
          + [MSM Best Practices](https://experienceleague.adobe.com/docs/experience-manager-65/content/sites/administering/introduction/msm-best-practices.html)
          + [AEM Sites - GDPR-beredskap](/help/sites-administering/gdpr-compliance-sites.md)
-         + [Hantera GDPR-begäranden för AEM Foundation](https://experienceleague.adobe.com/docs/experience-manager-65/content/sites/administering/security/handling-gdpr-requests-for-aem-platform.html)
+         + [Hantera GDPR-begäranden för AEM Foundation](https://experienceleague.adobe.com/docs/experience-manager-65/content/security/handling-gdpr-requests-for-aem-platform.html)
          + [AEM Commerce - GDPR-beredskap](/help/sites-administering/gdpr-compliance-commerce.md)
       + Innehållshantering {#contentmanagement}
          + [Pakethanteraren](/help/sites-administering/package-manager.md)
@@ -1359,21 +1359,21 @@ ht-degree: 1%
          + [Headless och AEM](/help/sites-developing/headless/introduction.md)
          + Huvudlösa resor {#journeys}
             + Headless Developer Journey {#developer}
-               + [Förstå Headless i AEM](https://experienceleague.adobe.com/docs/experience-manager-65/headless/developer/overview.html)
-               + [Läs om CMS Headless Development](https://experienceleague.adobe.com/docs/experience-manager-65/headless/developer/learn-about.html)
-               + [Komma igång med AEM Headless as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-65/headless/developer/getting-started.html)
-               + [Vägen till din första upplevelse med AEM Headless](https://experienceleague.adobe.com/docs/experience-manager-65/headless/developer/path-to-first-experience.html)
-               + [Modellera innehåll som AEM innehållsmodeller](https://experienceleague.adobe.com/docs/experience-manager-65/headless/developer/model-your-content.html)
-               + [Få åtkomst till ditt innehåll via AEM-API:er](https://experienceleague.adobe.com/docs/experience-manager-65/headless/developer/access-your-content.html)
-               + [Så här uppdaterar du innehåll via AEM Assets API:er](https://experienceleague.adobe.com/docs/experience-manager-65/headless/developer/update-your-content.html)
-               + [Hur man sammanför allt](https://experienceleague.adobe.com/docs/experience-manager-65/headless/developer/put-it-all-together.html)
-               + [Så här lever du med ditt headless-program](https://experienceleague.adobe.com/docs/experience-manager-65/headless/developer/go-live.html)
-               + [Valfritt - Så här skapar du enkelsidiga program med AEM](https://experienceleague.adobe.com/docs/experience-manager-65/headless/developer/create-spa.html)
+               + [Förstå Headless i AEM](https://experienceleague.adobe.com/docs/experience-manager-65/content/headless/developer/overview.html)
+               + [Läs om CMS Headless Development](https://experienceleague.adobe.com/docs/experience-manager-65/content/headless/developer/learn-about.html)
+               + [Komma igång med AEM Headless as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-65/content/headless/developer/getting-started.html)
+               + [Vägen till din första upplevelse med AEM Headless](https://experienceleague.adobe.com/docs/experience-manager-65/content/headless/developer/path-to-first-experience.html)
+               + [Modellera innehåll som AEM innehållsmodeller](https://experienceleague.adobe.com/docs/experience-manager-65/content/headless/developer/model-your-content.html)
+               + [Få åtkomst till ditt innehåll via AEM-API:er](https://experienceleague.adobe.com/docs/experience-manager-65/content/headless/developer/access-your-content.html)
+               + [Så här uppdaterar du innehåll via AEM Assets API:er](https://experienceleague.adobe.com/docs/experience-manager-65/content/headless/developer/update-your-content.html)
+               + [Hur man sammanför allt](https://experienceleague.adobe.com/docs/experience-manager-65/content/headless/developer/put-it-all-together.html)
+               + [Så här lever du med ditt headless-program](https://experienceleague.adobe.com/docs/experience-manager-65/content/headless/developer/go-live.html)
+               + [Valfritt - Så här skapar du enkelsidiga program med AEM](https://experienceleague.adobe.com/docs/experience-manager-65/content/headless/developer/create-spa.html)
             + Headless Content Architect Journey {#architect}
-               + [AEM Headless Content Architect Journey Overview](https://experienceleague.adobe.com/docs/experience-manager-65/headless/architect/overview.html)
-               + [Innehållsmodellering för Headless med AEM - en introduktion](https://experienceleague.adobe.com/docs/experience-manager-65/headless/architect/introduction.html)
-               + [Lär dig grunderna i innehållsmodellering för Headless med AEM](https://experienceleague.adobe.com/docs/experience-manager-65/headless/architect/basics.html)
-               + [Läs om hur du skapar modeller för innehållsfragment i AEM](https://experienceleague.adobe.com/docs/experience-manager-65/headless/architect/model-structure.html)
+               + [AEM Headless Content Architect Journey Overview](https://experienceleague.adobe.com/docs/experience-manager-65/content/headless/architect/overview.html)
+               + [Innehållsmodellering för Headless med AEM - en introduktion](https://experienceleague.adobe.com/docs/experience-manager-65/content/headless/architect/introduction.html)
+               + [Lär dig grunderna i innehållsmodellering för Headless med AEM](https://experienceleague.adobe.com/docs/experience-manager-65/content/headless/architect/basics.html)
+               + [Läs om hur du skapar modeller för innehållsfragment i AEM](https://experienceleague.adobe.com/docs/experience-manager-65/content/headless/architect/model-structure.html)
          + Komma igång-guider {#getting-started}
             + [Introduktion](/help/sites-developing/headless/getting-started/introduction.md)
             + [Skapa en konfiguration](/help/sites-developing/headless/getting-started/create-configuration.md)
@@ -1396,14 +1396,14 @@ ht-degree: 1%
          + Leverans-API{#delivery-api}
             + [HTTP API för Assets](https://experienceleague.adobe.com/docs/experience-manager-65/content/assets/extending/mac-api-assets.html)
             + [Innehållsfragment REST API](https://experienceleague.adobe.com/docs/experience-manager-65/content/assets/extending/assets-api-content-fragments.html)
-            + [GraphQL API för innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-65/content/implementing/developing/headless/delivery-api/graphql-api-content-fragments.html)
+            + [GraphQL API för innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-65/content/assets/extending/graphql-api-content-fragments.html)
             + [Hantera GraphQL Endpoints](/help/sites-developing/headless/graphql-api/graphql-endpoint.md)
-            + [Använda GraphiQL IDE](https://experienceleague.adobe.com/docs/experience-manager-65/content/implementing/developing/headless/delivery-api/graphiql-ide.html)
-            + [Beständiga frågor](https://experienceleague.adobe.com/docs/experience-manager-65/content/implementing/developing/headless/delivery-api/persisted-queries.html)
+            + [Använda GraphiQL IDE](https://experienceleague.adobe.com/docs/experience-manager-65/content/assets/extending/graphiql-ide.html)
+            + [Beständiga frågor](https://experienceleague.adobe.com/docs/experience-manager-65/content/assets/extending/persisted-queries.html)
             + [Optimera GraphQL-frågor](/help/sites-developing/headless/graphql-api/graphql-optimization.md)
             + [Uppdatera dina innehållsfragment för optimerad GraphQL-filtrering](/help/sites-developing/headless/graphql-api/graphql-optimized-filtering-content-update.md)
-            + [Autentisering för fjärrfrågor AEM GraphQL-frågor om innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-65/content/implementing/developing/headless/delivery-api/graphql-authentication-content-fragments.html)
-            + [AEM GraphQL API med innehållsfragment - exempel på innehåll och frågor](https://experienceleague.adobe.com/docs/experience-manager-65/content/implementing/developing/headless/delivery-api/content-fragments-graphql-samples.html)
+            + [Autentisering för fjärrfrågor AEM GraphQL-frågor om innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-65/content/assets/extending/graphql-authentication-content-fragments.html)
+            + [AEM GraphQL API med innehållsfragment - exempel på innehåll och frågor](https://experienceleague.adobe.com/docs/experience-manager-65/content/assets/extending/content-fragments-graphql-samples.html)
       + Hybrid- och SPA AEM {#spas}
          + [Hybrid och SPA med AEM](https://business.adobe.com/content/dam/dx/us/en/products/experience-manager/sites/headless-content-management-system/pdfs/aem-hybrid-architecture-wp-1-18-19.pdf)
          + [SPA introduktion och genomgång](/help/sites-developing/spa-walkthrough.md)
