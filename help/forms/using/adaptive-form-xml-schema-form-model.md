@@ -1,20 +1,20 @@
 ---
 title: Hur skapar man adaptiva Forms med XML-schema?
 description: Lär dig hur du använder XML-schema som formulärmodell i ett adaptivt formulär. Du kan använda befintliga XSD-mallar för att skapa anpassningsbara formulär och dra och släppa schemaelement från XSD till ditt anpassningsbara formulär. Gräv djupare med ett exempel på ett XML-schema, lägg till specialegenskaper i fält med XML-schema och begränsa godtagbara värden för en adaptiv formulärkomponent.
-feature: Adaptive Forms
+feature: Adaptive Forms, Foundation Components
 role: User, Developer
 level: Beginner, Intermediate
 exl-id: 35d5859f-54c4-4d14-9c64-0d9291ef9029
-source-git-commit: e7a3558ae04cd6816ed73589c67b0297f05adce2
+source-git-commit: 4ecdcb2659b26043f95ba1dc3e907c33f65b8834
 workflow-type: tm+mt
-source-wordcount: '1130'
+source-wordcount: '1121'
 ht-degree: 0%
 
 ---
 
 # Skapa anpassningsbara formulär med XML-schema {#creating-adaptive-forms-using-xml-schema}
 
-<span class="preview"> Adobe rekommenderar att man använder modern och utbyggbar datainhämtning [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) for [skapa ny Adaptive Forms](/help/forms/using/create-an-adaptive-form-core-components.md) eller [lägga till adaptiv Forms på AEM Sites-sidor](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-program, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptive Forms med grundläggande komponenter. </span>
+<span class="preview"> Adobe rekommenderar att man använder modern och utbyggbar datainhämtning [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) for [skapa ny Adaptive Forms](/help/forms/using/create-an-adaptive-form-core-components.md) eller [lägga till adaptiv Forms på AEM Sites-sidor](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-filer, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptiv Forms med baskomponenter. </span>
 
 ## Förutsättningar {#prerequisites}
 
@@ -25,7 +25,7 @@ Att skapa ett anpassat formulär med ett XML-schema som formulärmodell kräver 
 
 ## Använda ett XML-schema som formulärmodell {#using-an-xml-schema-as-form-model}
 
-[!DNL Experience Manager Forms] har stöd för att skapa ett anpassat formulär genom att använda ett befintligt XML-schema som formulärmodell. Det här XML-schemat representerar strukturen i vilken data produceras eller används av det bakomliggande systemet i organisationen.
+[!DNL Experience Manager Forms] har stöd för att skapa ett adaptivt formulär genom att använda ett befintligt XML-schema som formulärmodell. Det här XML-schemat representerar strukturen i vilken data produceras eller förbrukas av det bakomliggande systemet i organisationen.
 
 De viktigaste funktionerna i ett XML-schema är:
 
@@ -69,10 +69,10 @@ Den här mappningen av XML-element med adaptiva formulärkomponenter är följan
   <tr>
    <td><code class="code">xs:enumeration
       </code></td>
-   <td>Nedrullningsbar listruta</td>
+   <td>Listruta</td>
   </tr>
   <tr>
-   <td>Alla komplexa element</td>
+   <td>Alla komplexa tytelement</td>
    <td>Panel</td>
   </tr>
  </tbody>
@@ -217,7 +217,7 @@ Du kan lägga till följande begränsningar i XML-schemaelement för att begrän
   <tr>
    <td><p><code>exclusiveMaximum</code></p> </td>
    <td><p>Boolean</p> </td>
-   <td><p>Om true måste det numeriska värdet eller datumet som anges i formulärets komponent vara mindre än det numeriska värdet eller datumet som anges för egenskapen maximum.</p> <p>Om värdet är false måste det numeriska värdet eller datumet som anges i formulärets komponent vara mindre än eller lika med det numeriska värdet eller datumet som anges för egenskapen maximum.</p> </td>
+   <td><p>Om värdet är true måste det numeriska värdet eller datumet som anges i formulärets komponent vara mindre än det numeriska värdet eller datumet som anges för egenskapen maximum.</p> <p>Om värdet är false måste det numeriska värdet eller datumet som anges i formulärets komponent vara mindre än eller lika med det numeriska värdet eller datumet som anges för egenskapen maximum.</p> </td>
    <td>
     <ul>
      <li>Numerisk ruta</li>
@@ -284,7 +284,7 @@ Du kan lägga till följande begränsningar i XML-schemaelement för att begrän
  </tbody>
 </table>
 
-## Vanliga frågor {#frequently-asked-questions}
+## Frågor och svar {#frequently-asked-questions}
 
 **Hur vet jag vilket element i trädet som är associerat med vilket XML-element?**
 
@@ -296,7 +296,7 @@ The <code>bindRef</code> fältet visar associationen mellan ett trädelement och
 
 >[!NOTE]
 >
->Attribut har en `@` symbolen i sina `bindRef`värde för att skilja dem från element. Till exempel, `/config/projectDetails/@duration`.
+>Attribut har en `@` symbolen i sina `bindRef`värde för att skilja dem från element. Till exempel: `/config/projectDetails/@duration`.
 
 **Varför kan jag inte dra enskilda element i ett delformulär (struktur som genereras från en komplex typ) för repeterbara delformulär (värdena minOcCours och maxOccurs är större än 1)?**
 
@@ -311,4 +311,4 @@ Du har två alternativ:
 
 **Vad är en bindRef?**
 
-A `bindRef` är anslutningen mellan en adaptiv formulärkomponent och ett schemaelement eller attribut. Det avgör `XPath` där värdet som hämtas från den här komponenten eller det här fältet är tillgängligt i XML-utdata. A `bindRef`används också när ett fältvärde fylls i i förväg från förfylld (förifylld) XML.
+A `bindRef` är anslutningen mellan en adaptiv formulärkomponent och ett schemaelement eller attribut. Det dikterar `XPath` där värdet som hämtas från den här komponenten eller det här fältet är tillgängligt i XML-utdata. A `bindRef`används också när ett fältvärde fylls i i förväg från förfylld (förifylld) XML.

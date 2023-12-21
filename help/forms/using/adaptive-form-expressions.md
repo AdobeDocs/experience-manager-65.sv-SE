@@ -4,11 +4,11 @@ description: Använd adaptiva formuläruttryck för att lägga till automatisk v
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 docset: aem65
-feature: Adaptive Forms
+feature: Adaptive Forms, Foundation Components
 exl-id: 048bd9e8-ef34-40fb-9f46-73743d7b47c8
-source-git-commit: 7d46ba0eaa73d9f7a67034ba81d7fa379aa0112c
+source-git-commit: 4ecdcb2659b26043f95ba1dc3e907c33f65b8834
 workflow-type: tm+mt
-source-wordcount: '2802'
+source-wordcount: '2781'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ JavaScript är uttrycksspråket i adaptiva formulär. Alla uttryck är giltiga J
 
 ## Bästa tillvägagångssätt för att skriva uttryck {#best-practices-for-writing-expressions}
 
-* När du skriver uttryck kan du använda namnet på fältet eller panelen för att komma åt fält och paneler. Använd egenskapen value om du vill komma åt ett fälts värde. Till exempel, `field1.value`
+* När du skriver uttryck kan du använda namnet på fältet eller panelen för att komma åt fält och paneler. Använd egenskapen value om du vill komma åt ett fälts värde. Exempel: `field1.value`
 * Använd unika namn för fält och paneler i hela formuläret. Det hjälper till att undvika eventuella konflikter med fältnamn som används när uttryck skrivs.
 * När du skriver flerradsuttryck kan du använda ett semikolon för att avsluta en -programsats.
 
@@ -69,7 +69,7 @@ Du kan använda åtkomstuttrycket för att aktivera eller inaktivera ett fält. 
 
 ### Beräkna uttryck {#calculate-expression}
 
-Beräkningsuttrycket används för att automatiskt beräkna värdet för ett fält med hjälp av ett uttryck. Vanligtvis används egenskapen value för andra fält i ett sådant uttryck. Till exempel, `field2.value + field3.value`. När värdet för `field2`eller `field3`ändras, uttrycket hämtas och värdet beräknas om.
+Beräkningsuttrycket används för att automatiskt beräkna värdet för ett fält med hjälp av ett uttryck. Vanligtvis används egenskapen value för andra fält i ett sådant uttryck. Till exempel: `field2.value + field3.value`. När värdet för `field2`eller `field3`ändras, uttrycket hämtas och värdet beräknas om.
 
 **Gäller för**: fält
 
@@ -144,7 +144,7 @@ I ovanstående exempel returneras uttrycket om det icke-tomma värdet inte match
 
 >[!NOTE]
 >
->Om du skriver ett valideringsuttryck för ett icke-obligatoriskt eller obligatoriskt fält utvärderas uttrycket oavsett fältets synlighetsstatus. Om du vill stoppa valideringen för de dolda fälten anger du egenskapen validationsDisabled i Initialization eller Value Commit Script till true. Till exempel, `this.validationsDisabled=true`
+>Om du skriver ett valideringsuttryck för ett icke-obligatoriskt eller obligatoriskt fält utvärderas uttrycket oavsett fältets synlighetsstatus. Om du vill stoppa valideringen för de dolda fälten anger du egenskapen validationsDisabled i Initialization eller Value Commit Script till true. Exempel: `this.validationsDisabled=true`
 
 ### Värde för implementeringsskript {#value-commit-script}
 

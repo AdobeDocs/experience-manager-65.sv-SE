@@ -3,10 +3,11 @@ title: Layoutfunktioner i anpassningsbara formulär
 description: Layout och utseende för anpassningsbara formulär på olika enheter styrs av layoutinställningarna. Förstå de olika layouterna och hur de ska användas.
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
+feature: Adaptive Forms, Foundation Components
+discoiquuid: 9459c414-eac9-4bd9-a773-cceaeb736c56
 docset: aem65
-feature: Adaptive Forms
 exl-id: 3db623a4-f1ad-4b7f-97e8-0be138aa8b26
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: d85fc98d9a31bc4014aef4311ba0f838c7ef619a
 workflow-type: tm+mt
 source-wordcount: '1190'
 ht-degree: 0%
