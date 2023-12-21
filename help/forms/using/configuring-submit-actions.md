@@ -6,9 +6,9 @@ topic-tags: author
 docset: aem65
 feature: Adaptive Forms, Foundation Components
 exl-id: 04efb4ad-cff6-4e05-bcd2-98102f052452
-source-git-commit: 9f88eeb6770c59f7a52db30f19f3a1a78cbc401b
+source-git-commit: 23dd80f0555ddec1ca422b13fbf0d45acf5ab6a8
 workflow-type: tm+mt
-source-wordcount: '2540'
+source-wordcount: '2543'
 ht-degree: 0%
 
 ---
@@ -169,14 +169,14 @@ När konfigurationen är klar använder du [Anropa ett Microsoft® Power Automat
 
 ## Skicka till Microsoft® SharePoint List{#submit-to-sharedrive}
 
-The **[!UICONTROL Submit to SharePoint]** Skicka åtgärd kopplar ett adaptivt formulär till en Microsoft® SharePoint-lagring. Du kan skicka formulärdatafilen, bifogade filer eller arkivdokument till den anslutna Microsoft® Sharepoint-lagringsplatsen.
+The **[!UICONTROL Submit to SharePoint]** skicka-åtgärd kopplar ett adaptivt formulär till en Microsoft® SharePoint-lagring. Du kan skicka formulärdatafilen, bifogade filer eller arkivdokument till den anslutna Microsoft® Sharepoint-lagringsplatsen.
 
 ### Ansluta ett anpassat formulär till Microsoft® SharePoint List {#connect-af-sharepoint-list}
 
-Använd [!UICONTROL Submit to SharePoint List] Skicka åtgärd i anpassad form:
+Så här ansluter du ett adaptivt formulär till Microsoft® SharePoint List:
 
 1. [Skapa en listkonfiguration för SharePoint](#create-sharepoint-list-configuration): Den ansluter AEM Forms till Microsoft® Sharepoint List Storage.
-1. [Använda Skicka med formulärdatamodellen i ett anpassat formulär](#use-submit-using-fdm): Det kopplar ditt adaptiva formulär till konfigurerade Microsoft® SharePoint.
+1. [Använd **Skicka med formulärdatamodell** skicka-åtgärd i adaptiv form](#use-submit-using-fdm): Dina data för anpassade formulär skickas till konfigurerade Microsoft® SharePoint.
 
 #### Skapa en listkonfiguration för SharePoint {#create-sharepoint-list-configuration}
 
