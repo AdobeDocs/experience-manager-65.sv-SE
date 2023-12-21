@@ -2,10 +2,10 @@
 title: Användarhandbok om AEM 6.5-redigering
 description: Upptäck de viktigaste begreppen för att skapa innehåll och redigering i AEM 6.5. Du hittar även information om hur du använder taggar, mallar och andra sidfunktioner.
 exl-id: 38f229b4-10b2-4a67-9821-a03718b82215
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: 7c691e275208287250f3540158a5e9948097b277
 workflow-type: tm+mt
-source-wordcount: '298'
-ht-degree: 14%
+source-wordcount: '266'
+ht-degree: 11%
 
 ---
 
@@ -27,7 +27,6 @@ Upptäck de viktigaste begreppen för att skapa innehåll och redigering i AEM 6
 | [Versionsinformation](/help/release-notes/home.md) | Innehåller viktig information om den senaste versionen av AEM, inklusive vad som är nytt, vilka plattformar som stöds, borttagna och borttagna funktioner samt kända fel. |
 | [Användarhandbok för Assets](/help/assets/home.md) | Lär dig hur du skapar, hanterar, levererar och optimerar digitala resurser. |
 | [Forms Användarhandbok](/help/forms/home.md) | Den här guiden beskriver hur du skapar, hanterar, publicerar och uppdaterar digitala formulär. |
-| [Användarhandbok för Communities](/help/communities/home.md) | Skapa onlineupplevelser som forum, användargrupper, utbildningsresurser och andra sociala funktioner. |
 | [Administratörshandbok](/help/sites-administering/home.md) | Förstå hur du administrerar AEM |
 | [Redigeringshandbok](/help/sites-authoring/home.md) | I den här handboken förklaras begreppen för redigering i AEM. |
 | [Användargränssnittets redigeringshandbok](/help/sites-classic-ui-authoring/home.md) | I den här handboken förklaras begreppen för redigering i AEM i det klassiska användargränssnittet. |
@@ -36,7 +35,6 @@ Upptäck de viktigaste begreppen för att skapa innehåll och redigering i AEM 6
 | [Utveckla användarhandbok](/help/sites-developing/home.md) | Lär dig hur du bygger ut AEM. |
 | [Hantera användarhandbok](/help/managing/home.md) | I den här guiden beskrivs hur du hanterar ett AEM projekt. |
 | [Handbok för Commerce](/help/commerce/home.md) | Läs mer om Commerce integration framework om AEM. |
-| [Mobile User Guide](/help/mobile/home.md) | I den här guiden beskrivs hur du skapar och hanterar innehåll för mobilprogram. |
 
 ## AEM
 

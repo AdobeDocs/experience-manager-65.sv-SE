@@ -7,10 +7,11 @@ breadcrumb-title: Användarhandbok om Communities
 user-guide-description: Skapa onlineupplevelser som forum, användargrupper, utbildningsresurser och andra sociala funktioner.
 feature: Communities
 role: User
-source-git-commit: 9f9f80eb4cb74b687c7fadd41d0f8ea4ee967865
+hide: true
+source-git-commit: e0db340b4fd4e4f7fe7ed623fb2ee9f1b789e39e
 workflow-type: tm+mt
-source-wordcount: '451'
-ht-degree: 5%
+source-wordcount: '423'
+ht-degree: 6%
 
 ---
 
@@ -21,7 +22,6 @@ ht-degree: 5%
 + Introduktion till AEM Communities {#introduction}
    + [Communities Sites](administer-landing.md)
    + [AEM Communities - översikt](overview.md)
-   + [Versionsinformation för AEM Communities](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/communities-release-notes.html)
    + [Komma igång med AEM Communities](getting-started.md)
    + [Inledande konfiguration](setup.md)
    + [Skapa en ny communitywebbplats](create-site.md)
@@ -34,7 +34,6 @@ ht-degree: 5%
    + [Konfigurera Dispatcher för Communities](dispatcher.md)
 + Administratör {#administer}
    + [Tjänsten för hantering av användare och användargenererat innehåll i AEM Communities](user-ugc-management-service.md)
-   + [Communities Sites](https://experienceleague.adobe.com/docs/experience-manager-65/communities/introduction/administer-landing.html)
    + [Communities-konsoler](consoles.md)
    + [Analyskonfiguration för communityfunktioner](analytics.md)
    + [Konfigurerar meddelanden](messaging.md)
@@ -153,4 +152,3 @@ ht-degree: 5%
    + [Aktivitetstrender](trends.md)
    + [Använda molnet för sociala taggar](tagcloud.md)
    + [Använda röstning](voting.md)
-   + [Skapa en exempelsida](https://experienceleague.adobe.com/docs/experience-manager-65/communities/develop/create-sample-page.html)

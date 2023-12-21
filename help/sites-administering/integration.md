@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
 content-type: reference
 exl-id: ee5e8ebb-773f-4aa6-9c3e-2cc3bf4a3bbd
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: 719dd7b30c8ce3f02fe46c632b1589fcc74a1759
 workflow-type: tm+mt
-source-wordcount: '104'
+source-wordcount: '102'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,6 @@ ht-degree: 0%
 * [Integrera med tredjepartstjänster](/help/sites-administering/third-party-services.md)
 * [Analyser med externa leverantörer](/help/sites-administering/external-providers.md)
 * [Katalogproducent](/help/sites-administering/catalog-producer.md)
-* [SharePoint Connector](/help/sites-administering/sharepoint-connector.md)
 * [Förstå, använda och strukturera smarta taggar](/help/assets/enhanced-smart-tags.md)
 
 Följande information finns om hur du integrerar AEM med andra Adobe- eller tredjepartstjänster:

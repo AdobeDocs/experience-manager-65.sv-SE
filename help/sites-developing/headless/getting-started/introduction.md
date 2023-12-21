@@ -2,7 +2,7 @@
 title: Starthandbok för Headless
 description: Med den här snabbstartsguiden lär du dig grunderna i Adobe Experience Manager (AEM) 6.5, med kraftfulla headless-funktioner som Content Models, Content Fragments och GraphQL API.
 exl-id: 55ebd893-b3cc-47c5-ad84-46df984197fb
-source-git-commit: b66ec42c35b5b60804015d340b8194bbd6ef3e28
+source-git-commit: 487136be68e04fd74affe43790587b37d4c3d3ef
 workflow-type: tm+mt
 source-wordcount: '298'
 ht-degree: 0%
@@ -23,7 +23,7 @@ I de Headless Getting Started Guides beskrivs en enkel väg för att skapa, hant
 >
 >Den här guiden för att komma igång förutsätter kunskap om både AEM och headless-teknik.
 >
->Om du inte har använt AEM eller utan huvud läser du i [Headless Documentation Journeys](/help/journey-headless/home.md) för en heltäckande introduktion till både headless och hur AEM klarar det.
+>Om du inte har använt AEM eller utan huvud läser du i [Headless Documentation Journeys](/help/journey-headless/overview.md) för en heltäckande introduktion till både headless och hur AEM klarar det.
 
 ## Målgrupp {#audience}
 

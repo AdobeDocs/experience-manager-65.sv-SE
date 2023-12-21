@@ -4,10 +4,10 @@ description: Lista med flytande upplevelser
 index: n
 feature: Authoring
 exl-id: 3ac61645-4873-4602-b740-2236aba5bc5e
-source-git-commit: 768576e300b655962adc3e1db20fc5ec06a5ba6c
+source-git-commit: 7c691e275208287250f3540158a5e9948097b277
 workflow-type: tm+mt
-source-wordcount: '346'
-ht-degree: 2%
+source-wordcount: '268'
+ht-degree: 1%
 
 ---
 
@@ -32,7 +32,7 @@ I följande tabeller definieras funktionerna i AEM flytande upplevelser och län
 
 |  |
 |---|
-| [Innehållsdatabas](/help/assets/manage-assets.md) |
+| [Innehållsarkiv](/help/assets/manage-assets.md) |
 | [Resurstyper](/help/assets/assets-formats.md) |
 | [Bildåtergivningar](/help/assets/image-presets.md) |
 | [Metadata och tagghantering](/help/assets/metadata.md) |
@@ -65,7 +65,7 @@ I följande tabeller definieras funktionerna i AEM flytande upplevelser och län
 | [Internationalisering](/help/sites-developing/i18n.md) |
 | [Översättning av innehåll](/help/sites-administering/translation.md) |
 | [Övervakning](/help/sites-deploying/monitoring-and-maintaining.md) |
-| [Säkerhetskopiering](/help/sites-administering/backup-and-restore.md) |
+| [Säkerhetskopiera](/help/sites-administering/backup-and-restore.md) |
 | [Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/introduction.html) |
 | [PIM-integrering](/help/sites-authoring/managing-product-information.md) |
 | [Projekt och uppgifter](/help/sites-authoring/projects.md) |
@@ -84,7 +84,5 @@ I följande tabeller definieras funktionerna i AEM flytande upplevelser och län
 
 * [Flytande upplevelser för användning i headless](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2017/aem-headless-usecases.html?lang=en)
 * [AEM: Vad, varför och hur?](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/content-services/overview.html?lang=en)
-* [Använda innehållstjänster](https://experienceleague.adobe.com/docs/experience-manager-65/mobile/developing/developing-content-services.html?lang=en)
-* [Utveckla mobilappar](https://experienceleague.adobe.com/docs/experience-manager-65/mobile/developing/developing-content-services.html?lang=en)
 * [Vanliga frågor om tredjepartsåtkomst](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/content-services/chapter-7.html?lang=en)
 * [Använda Sling API:er](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/component-basics.html#sling-models)
