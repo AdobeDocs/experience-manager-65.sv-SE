@@ -1,19 +1,19 @@
 ---
-title: Webbplatsadministration
-description: Lär dig hur du hanterar flerspråkiga webbplatser med Adobe Experience Manager.
+title: Hanterare och översättning av flera webbplatser
+description: Lär dig hur du återanvänder ditt innehåll i ditt projekt och hanterar flerspråkiga webbplatser i Adobe Experience Manager.
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: site-features
 content-type: reference
 exl-id: 8f11f5de-f5af-4ce7-a448-2b4299de2930
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: 4a4f464d4140cbb3882b57786b9003a89b7a9a43
 workflow-type: tm+mt
-source-wordcount: '352'
+source-wordcount: '365'
 ht-degree: 0%
 
 ---
 
-# Webbplatsadministration{#website-administration}
+# Hanterare och översättning av flera webbplatser {#msm-and-translation}
 
 Följande administrationsverktyg finns för att hantera webbplatser och sidor:
 

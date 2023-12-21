@@ -6,9 +6,9 @@ solution-title: Experience Cloud
 user-guide-description: Läs Adobe Experience Manager 6.5-dokumentationen och se hur det fungerar och vad programmet kan göra för dig.
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM 6.5
-source-git-commit: 097bded5ed2d1db6426dcb9ac4fa9582cdc213bf
+source-git-commit: 4a4f464d4140cbb3882b57786b9003a89b7a9a43
 workflow-type: tm+mt
-source-wordcount: '7327'
+source-wordcount: '7328'
 ht-degree: 1%
 
 ---
@@ -154,7 +154,7 @@ ht-degree: 1%
    + Administratör {#administering}
       + [Administrera användarhandboken - översikt](/help/sites-administering/home.md)
       + Webbplatsfunktioner {#introduction}
-         + [Webbplatsadministration](/help/sites-administering/msm-and-translation.md)
+         + [MSM och översättning](/help/sites-administering/msm-and-translation.md)
          + [Asynkrona jobb](/help/sites-administering/asynchronous-jobs.md)
          + [Återanvända innehåll: Multi Site Manager och Live Copy](/help/sites-administering/msm.md)
          + [Översiktskonsol för Live Copy](/help/sites-administering/msm-livecopy-overview.md)
