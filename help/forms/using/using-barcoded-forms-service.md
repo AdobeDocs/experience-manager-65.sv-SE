@@ -5,17 +5,17 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: document_services
 docset: aem65
-exl-id: edaf12be-473f-4175-b4e0-549b41159a55
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+feature: Document Services
+source-git-commit: 744cfcee691ea71f33cd56509f65d4f640d4c6e3
 workflow-type: tm+mt
-source-wordcount: '1022'
+source-wordcount: '1003'
 ht-degree: 0%
 
 ---
 
 # Barcoded Forms Service{#barcoded-forms-service}
 
-## Översikt {#overview}
+## Ökning {#overview}
 
 Tjänsten Barcoded Forms extraherar data från elektroniska bilder av streckkoder. Tjänsten accepterar TIFF och PDF som innehåller en eller flera streckkoder som indata och extraherar streckkodsdata. Streckkodsdata kan formateras på olika sätt, t.ex. XML, avgränsade strängar eller andra anpassade format som skapats med JavaScript.
 

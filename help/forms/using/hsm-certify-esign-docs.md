@@ -5,9 +5,10 @@ contentOwner: vishgupt
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: document_services
-source-git-commit: 4a4a75018e960733908f40c631a24203290be55c
+feature: Document Services
+source-git-commit: 744cfcee691ea71f33cd56509f65d4f640d4c6e3
 workflow-type: tm+mt
-source-wordcount: '655'
+source-wordcount: '650'
 ht-degree: 0%
 
 ---
@@ -95,7 +96,7 @@ Aliaset innehåller alla parametrar som krävs för en HSM eller token. Följ in
 1. Öppna **Konfigurationstjänst för HSM-autentiseringsuppgifter** och ange värden för följande fält:
 
    * **Alias för autentiseringsuppgifter**: Ange en sträng som används för att identifiera aliaset. Det här värdet används som en egenskap för vissa åtgärder för digitala signaturer, till exempel åtgärden Signera signaturfält.
-   * **DLL-sökväg**: Ange sökvägen till HSM- eller tokenklientbiblioteket på servern. Till exempel, `C:\Program Files\LunaSA\cryptoki.dll`. I en klustrad miljö måste du se till att alla servrar i klustret måste använda en identisk sökväg.
+   * **DLL-sökväg**: Ange sökvägen till HSM- eller tokenklientbiblioteket på servern. Till exempel: `C:\Program Files\LunaSA\cryptoki.dll`. I en klustrad miljö måste du se till att alla servrar i klustret måste använda en identisk sökväg.
    * **HSM-fäst**: Ange det lösenord som krävs för att komma åt enhetsnyckeln.
    * **HSM-kortplats-ID**: Ange en fackidentifierare av typen heltal. Kortplats-ID anges klient för klient. Den används för att identifiera den plats på HSM som innehåller den privata nyckeln för signering/certifiering.
 
