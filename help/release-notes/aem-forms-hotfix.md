@@ -1,17 +1,17 @@
 ---
-title: Programfix AEM Form Service Pack
-description: Tillhandahåller information om hur du hämtar och installerar snabbkorrigeringen för AEM Forms Service Pack
-source-git-commit: 169d407835098add0312b0d12c2c80035b525762
+title: Programfixar för AEM Forms
+description: Innehåller information om hur du hämtar och installerar en snabbkorrigering för AEM Forms.
+exl-id: 37287332-3c8d-4ddc-a77e-3c5ee332898b
+source-git-commit: 276b0122fb3d88c584dd6b2b4c2c6f6eda9d0537
 workflow-type: tm+mt
-source-wordcount: '259'
+source-wordcount: '200'
 ht-degree: 0%
 
 ---
 
+# Adobe Experience Manager Forms Hotfixes{#aem-form-hotfix}
 
-# Adobe Experience Manager Hotfixes{#aem-form-hotfix}
-
-Installationen av den senaste [AEM Service Pack](/help/release-notes/release-notes.md) Vi rekommenderar att du inkluderar säkerhet, prestanda, stabilitet och viktiga kundkorrigeringar och förbättringar som har släppts sedan Adobe Experience Manager 6.5 blev allmänt tillgängligt.
+I den här artikeln listas de viktiga korrigeringar som har implementerats för att åtgärda kända fel, förbättra systemstabiliteten och förbättra AEM Forms övergripande prestanda.
 
 ## Programfixar för Adaptive Forms {#hotfix-for-adaptive-forms}
 
@@ -19,8 +19,8 @@ Installationen av den senaste [AEM Service Pack](/help/release-notes/release-not
   <tbody>
   <tr>
     <td><strong>Datum</strong></td>
-    <td><strong>Programfixnamn</strong></td>
-    <td><strong>Korrigeringar</strong></td>
+    <td><strong>Hämtningslänk för snabbkorrigering (AEM Software Distribition link)</strong></td>
+    <td><strong>Åtgärdade problem</strong></td>
    </tr>
    <tr>
     <td>20 november 2023</td>
@@ -42,11 +42,11 @@ Installationen av den senaste [AEM Service Pack](/help/release-notes/release-not
     <tbody>
      </table>
 
-## Hämta och installera Hotfix {#download-install-hotfix}
+## Hämta och installera en programfix {#download-install-hotfix}
 
 Utför följande steg för att hämta och installera programfixen:
 
-1. Ladda ned [Hotfix](#hotfix-for-adaptive-forms) från SD-länken.
+1. Ladda ned [Hotfix](#hotfix-for-adaptive-forms) från Software Distribition link.
 1. Extrahera Hotfix-arkivfilen så att du kan hämta Experience Manager-paketfiler (.zip) och paketfiler (.jar).
-1. Överför och installera paketet (.zip) via Package Manager.
-1. Öppna konfigurationshanterarpaketen `https://server:host/system/console/bundles`, ladda upp och installera paketet (.jar).
+1. Överför och installera paketet (.zip) via [Pakethanteraren](https://experienceleague.adobe.com/docs/experience-manager-65/content/sites/administering/contentmanagement/package-manager.html?lang=es#accessing).
+1. Öppna konfigurationshanterarpaketen `https://server:host/system/console/bundles`, ladda upp och installera paketet (.jar). Programfixen är installerad.
