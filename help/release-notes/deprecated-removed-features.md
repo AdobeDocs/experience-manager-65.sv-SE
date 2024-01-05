@@ -2,9 +2,9 @@
 title: Borttagna funktioner i Adobe Experience Manager 6.5.
 description: Versionsinformation om borttagna funktioner i Adobe Experience Manager 6.5.
 exl-id: d9b6140a-c37d-4b90-a60c-01f471d65621
-source-git-commit: b0ba4e0c91d3c40acf5bf7336ba2af0c8c01cd32
+source-git-commit: 5c10c5d20338b696fdab2291c714a7d6313cca8a
 workflow-type: tm+mt
-source-wordcount: '1715'
+source-wordcount: '1684'
 ht-degree: 2%
 
 ---
@@ -32,7 +32,6 @@ Kunderna rekommenderas att granska om de använder funktionen/funktionen i den a
 | Område | Funktion | Ersättning | Version (SP) |
 |---|---|---|---|
 | Sites | The **Konfiguration AEM hanterad avsökning för Adobe** tjänst: `com.day.cq.polling.importer.impl.ManagedPollConfigImpl` | The **Sling-importeraren för Adobe AEM Analytics-rapport** service. Se Ansluta till Adobe Analytics och Skapa ramverk - [Konfigurera importintervallet](/help/sites-administering/adobeanalytics-connect.md#configuring-the-import-interval) | 6.5.19.0 |
-| Skärmar | ActiveMQ i AEM. ActiveMQ användes för kommunikation mellan två AEM publiceringsinstanser. | Adobe rekommenderar att kunderna använder belastningsutjämnare. |  |
 | [!DNL Sites] | Upplev fragmentegenskaper för **Status för sociala medier**. |   | 6.5.11.0 |
 | [!DNL Sites] | Mallar för innehållsfragment, för att skapa enkla innehållsfragment. | [Modellbaserade strukturerade innehållsfragment](/help/assets/content-fragments/content-fragments-models.md) nu. | 6.5.11.0 |
 | Integrering med Creative Cloud | AEM till mappdelning i Creative Cloud introducerades i AEM 6.2. Det ger kreativa användare tillgång till resurser från AEM, så att de kan öppna dem i [!DNL Creative Cloud] program och ladda upp nya filer eller spara ändringar i AEM. En ny funktion i Creative Cloud, Adobe Asset Link, ger en bättre användarupplevelse och kraftfullare åtkomst till AEM direkt inifrån Photoshop, InDesign och Illustrator. Adobe planerar inte att göra ytterligare förbättringar av integrationen mellan AEM och Creative Cloud Mappdelning. Funktionen ingår i AEM, men kunderna rekommenderas att använda ersättningslösningar. | Kunder rekommenderas att byta till nya integrationsfunktioner för Creative Cloud, som Adobe Asset Link eller AEM. |  |
@@ -76,7 +75,7 @@ I det här avsnittet visas funktioner som har tagits bort från AEM 6.5. Tidigar
 | Utvecklare | Ta bort `customJavaScriptPath` stöd i HTML Client Library Manager. | Ingen ersättning |  |
 | [!DNL Assets] | Funktionen för avlastning av resurser har tagits bort i [!DNL Adobe Experience Manager] 6.5. | Det finns ingen ersättning. |  |
 | Cache | `system/console/slingjsp` tas bort och är inte längre tillgängligt i AEM 6.5. | Klasser och något cacheminne lagras under paketet Apache Sling Commons FileSystem ClassLoader. Du kan kontrollera paketnumret i AEM webbkonsol och ta bort cachemappen direkt från filsystemet (`crx-quickstart/launchpad/felix/bundle<ID>`). |  |
-| Skärmar | Adobe planerar inte att ytterligare underhålla och uppdatera com.adobe.cq.screens.mq.active q-paketet och relaterade konfigurationer. | Det finns ingen ersättning. |  |
+| Skärmar | Aktiveringsq bundle support och relaterade konfigurationer har tagits bort. |  |  |
 
 <!-- ## Pre-announcement for next release {#pre-announcement-for-next-release}
 
