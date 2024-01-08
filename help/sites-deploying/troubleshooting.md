@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: deploying
 exl-id: 55576729-be9c-412e-92ac-4be90650c6fa
-source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
+source-git-commit: 3adf2b03ac4e227af2b33099c24ec177b8ea7e1b
 workflow-type: tm+mt
-source-wordcount: '1160'
+source-wordcount: '1227'
 ht-degree: 0%
 
 ---
@@ -73,13 +73,26 @@ Använd Java™-kommandoalternativen för att definiera minnesinställningar fö
 
 Ange minnesinställningsalternativet när du startar AEM WCM från kommandoraden. AEM WCM-skript för start/stopp eller anpassade skript för hantering AEM WCM-start kan också ändras för att definiera de nödvändiga minnesinställningarna.
 
-Om du redan har definierat stackstorleken till 512 MB kan du analysera minnesproblemet ytterligare genom att skapa en stackdump:
+Om du redan har definierat stackstorleken till 512 MB kan du analysera minnesproblemet ytterligare genom att skapa en stackdump.
 
 Använd följande kommando för att automatiskt skapa en stackdump när minnet tar slut:
 
 java -Xmx256m -XX:+HeapDumpOnOutOfMemoryError -jar &amp;ast;.jar
 
-Den här metoden genererar en stackdumpfil (**java_...hprof**) när minnet tar slut. Processen kan fortsätta att köras efter att stackdumpen har skapats. Vanligtvis räcker det med en stackdumpfil för att analysera problemet.
+Den här metoden genererar en stackdumpfil (**java_...hprof**) när minnet tar slut. Processen kan fortsätta att köras efter att stackdumpen har skapats.
+
+Det krävs ofta tre stackdumpfiler, som samlats in under en tidsperiod, för att analysera problemet:
+
+* Innan ett fel inträffar
+* Vid fel 1
+* Vid fel 2
+* *Helst är det också bra att samla in information efter att händelsen har lösts*
+
+Dessa kan jämföras för att se ändringar och hur objekt använder minne.
+
+>[!NOTE]
+>
+>Om du regelbundet samlar in sådan information, eller har erfarenhet av att läsa stackdumpar, kan en stackdumpfil vara tillräckligt för att analysera problemet.
 
 ### AEM välkomstskärm visas inte i webbläsaren när du dubbelklickat AEM QuickStart {#the-aem-welcome-screen-does-not-display-in-the-browser-after-double-clicking-aem-quickstart}
 
