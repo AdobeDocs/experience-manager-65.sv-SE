@@ -6,9 +6,9 @@ content-type: reference
 topic-tags: components
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 exl-id: 6d127e14-767e-46ad-aaeb-0ce9dd14d553
-source-git-commit: a56d5121a6ce11b42a6c30dae9e479564d16af27
+source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
 workflow-type: tm+mt
-source-wordcount: '528'
+source-wordcount: '471'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 Komponenter kan anpassas för att generera JSON-export av deras innehåll baserat på ett modellramverk.
 
-## Översikt {#overview}
+## Ökning {#overview}
 
 JSON-exporten baseras på [Sling Models](https://sling.apache.org/documentation/bundles/models.html)och på [Export av försäljningsmodell](https://sling.apache.org/documentation/bundles/models.html#exporter-framework-since-130) som i sig förlitar sig på [Jackson annotations](https://github.com/FasterXML/jackson-annotations/wiki/Jackson-Annotations)).
 
@@ -32,7 +32,7 @@ Först måste en segmentmodell definieras för komponenten.
 
 >[!NOTE]
 >
->Ett exempel på hur du använder modeller finns i [Utveckla export av försäljningsmodeller i AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/develop-sling-model-exporter.html?lang=en).
+>Ett exempel på hur du använder modeller finns i [Utveckla export av försäljningsmodeller i AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/develop-sling-model-exporter.html).
 
 Implementeringsklassen för Sling-modellen måste kommenteras med följande:
 
@@ -42,7 +42,7 @@ Implementeringsklassen för Sling-modellen måste kommenteras med följande:
 @JsonSerialize(as = MyComponent.class)
 ```
 
-Detta garanterar att komponenten kan exporteras fristående med `.model` väljaren och `.json` tillägg.
+Detta garanterar att din komponent kan exporteras fristående med `.model` väljaren och `.json` tillägg.
 
 Dessutom anger detta att klassen Sling Model kan anpassas till `ComponentExporter` gränssnitt.
 
@@ -62,7 +62,7 @@ Dessutom anger detta att klassen Sling Model kan anpassas till `ComponentExporte
 https://<server>:<port>/content/page.model.selector1.selector2.json
 ```
 
-I sådana fall gäller dock att `model` väljaren måste vara den första väljaren och tillägget måste vara `.json`.
+I sådana fall gäller dock att `model` måste vara den första väljaren och tillägget måste vara `.json`.
 
 ## Anteckna gränssnittet för segmenteringsmodellen {#annotate-the-sling-model-interface}
 

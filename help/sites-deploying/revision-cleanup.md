@@ -7,9 +7,9 @@ content-type: reference
 topic-tags: deploying
 feature: Configuring
 exl-id: e53c4c81-f62e-4b6d-929a-6649c8ced23c
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
 workflow-type: tm+mt
-source-wordcount: '5811'
+source-wordcount: '5752'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ Varje uppdatering av databasen skapar en innehållsändring. Det innebär att da
 
 Med AEM 6.3 och senare introducerades en onlineversion av den här funktionen som kallas Online Revision Cleanup. Jämfört med funktionen för rensning av offlineredigering, där AEM ska stängas av, kan rensning av onlinerevision köras när den AEM instansen är online. Rensa onlineändringar är aktiverat som standard och det är det rekommenderade sättet att rensa en revision.
 
-**Anteckning**: [Se videon](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/administration/use-online-revision-clean-up.html?lang=en) om du vill ha en introduktion och hur du använder funktionen för rensning av onlineversioner.
+**Anteckning**: [Se videon](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/administration/use-online-revision-clean-up.html) om du vill ha en introduktion och hur du använder funktionen för rensning av onlineversioner.
 
 Rensningsprocessen består av tre faser: **uppskattning**, **komprimering** och **rensa**. Beräkningen avgör om nästa fas (komprimering) ska köras eller inte baserat på hur mycket skräp som kan samlas in. Under komprimeringsfasen skrivs segment och tjärfiler om, utan att något innehåll som inte används tas bort. Rensa upp-fasen tar sedan bort de gamla segmenten, inklusive eventuellt skräp som de innehåller. Offlineläget kan vanligtvis frigöra mer utrymme eftersom onlineläget måste ta hänsyn till AEM som inte samlar in fler segment.
 

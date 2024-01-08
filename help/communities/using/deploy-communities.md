@@ -3,10 +3,10 @@ title: Distribuera webbgrupper
 description: Så här distribuerar du AEM Communities
 content-type: reference
 topic-tags: deploying
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
 workflow-type: tm+mt
-source-wordcount: '1761'
-ht-degree: 1%
+source-wordcount: '1705'
+ht-degree: 0%
 
 ---
 
@@ -268,7 +268,7 @@ Om du vill kopiera nyckelmaterialet från författaren till alla andra instanser
 
    * Leta reda på `com.adobe.granite.crypto.file` i det lokala filsystemet
 
-     Till exempel,
+     Exempel:
 
       * `<author-aem-install-dir>/crx-quickstart/launchpad/felix/bundle21`
       * The `bundle.info` filen identifierar paketet
@@ -356,8 +356,8 @@ Var särskilt försiktig med att använda rätt servernamn, inte `localhost`, i 
 
 Om du använder en Dispatcher läser du:
 
-* AEM [Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=en) dokumentation
-* [Installerar Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/dispatcher-install.html?lang=en)
+* AEM [Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html) dokumentation
+* [Installerar Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/dispatcher-install.html)
 * [Konfigurera Dispatcher för Communities](/help/communities/dispatcher.md)
 * [Kända fel](/help/communities/troubleshooting.md#dispatcher-refetch-fails)
 

@@ -4,7 +4,7 @@ description: Lista med flytande upplevelser
 index: n
 feature: Authoring
 exl-id: 3ac61645-4873-4602-b740-2236aba5bc5e
-source-git-commit: 7c691e275208287250f3540158a5e9948097b277
+source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
 workflow-type: tm+mt
 source-wordcount: '268'
 ht-degree: 1%
@@ -49,7 +49,7 @@ I följande tabeller definieras funktionerna i AEM flytande upplevelser och län
 |---|
 | [HTTP-API](/help/assets/mac-api-assets.md) |
 | [Strukturerade innehållsmodeller](/help/assets/content-fragments/content-fragments.md) |
-| [Innehållstjänster](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html?lang=en) |
+| [Innehållstjänster](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html) |
 | [Upplevelsefragment](/help/sites-authoring/experience-fragments.md) |
 | HTTP API för strukturerat innehåll (läs) |
 | HTTP API för strukturerat innehåll (CRUD) |
@@ -82,7 +82,7 @@ I följande tabeller definieras funktionerna i AEM flytande upplevelser och län
 
 ## Läs mer {#learn-more}
 
-* [Flytande upplevelser för användning i headless](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2017/aem-headless-usecases.html?lang=en)
-* [AEM: Vad, varför och hur?](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/content-services/overview.html?lang=en)
-* [Vanliga frågor om tredjepartsåtkomst](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/content-services/chapter-7.html?lang=en)
+* [Flytande upplevelser för användning i headless](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2017/aem-headless-usecases.html)
+* [AEM: Vad, varför och hur?](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/content-services/overview.html)
+* [Vanliga frågor om tredjepartsåtkomst](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/content-services/chapter-7.html)
 * [Använda Sling API:er](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/component-basics.html#sling-models)

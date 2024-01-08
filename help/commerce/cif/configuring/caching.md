@@ -2,9 +2,9 @@
 title: Cachelagring och prestanda
 description: Lär dig mer om de olika konfigurationer som är tillgängliga för att aktivera GraphQL- och innehållscachning för att optimera prestanda för implementeringen av din e-handel.
 exl-id: ecce64bf-5960-4ddb-b6e3-dad401038c11
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
 workflow-type: tm+mt
-source-wordcount: '849'
+source-wordcount: '818'
 ht-degree: 0%
 
 ---
@@ -51,7 +51,7 @@ Cachelagra AEM sidor eller fragment i [AEM](https://experienceleague.adobe.com/d
 
 Förutom rent AEM hanterat innehåll CIF en sida kan den vanligtvis visa e-handelsdata som hämtas dynamiskt från Adobe Commerce via GraphQL. Även om sidstrukturen i sig kanske aldrig ändras kan e-handelsinnehållet ändras, till exempel om vissa produktdata (till exempel namn eller pris) ändras i Adobe Commerce.
 
-För att säkerställa att CIF sidor kan cachelagras under en begränsad tid i AEM Dispatcher rekommenderar vi att du använder [Invalidering av tidsbaserad cache](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#configuring-time-based-cache-invalidation-enablettl) (kallas även TTL-baserad cachelagring) när CIF cachelagrar sidor i AEM Dispatcher. Den här funktionen kan konfigureras i AEM med den extra [ACS AEM Commons](https://adobe-consulting-services.github.io/acs-aem-commons/) paket.
+För att säkerställa att CIF sidor kan cachelagras under en begränsad tid i AEM Dispatcher rekommenderar vi att du använder [Invalidering av tidsbaserad cache](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#configuring-time-based-cache-invalidation-enablettl) (kallas även TTL-baserad cachelagring) när CIF cachelagrar sidor i AEM Dispatcher. Den här funktionen kan konfigureras i AEM med den extra [ACS AEM Commons](https://adobe-consulting-services.github.io/acs-aem-commons/) paket.
 
 Med TTL-baserad cachning definierar en utvecklare vanligtvis en eller flera cachningstider för valda AEM. Detta garanterar att CIF sidor bara cachelagras i AEM Dispatcher upp till den konfigurerade längden och att innehållet uppdateras ofta.
 

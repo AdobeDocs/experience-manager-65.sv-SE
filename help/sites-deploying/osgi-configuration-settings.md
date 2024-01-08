@@ -8,7 +8,7 @@ content-type: reference
 docset: aem65
 feature: Configuring
 exl-id: 19eedcf2-140a-452d-aa8f-6fd7f219e5f8
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
 workflow-type: tm+mt
 source-wordcount: '3360'
 ht-degree: 0%
@@ -35,7 +35,7 @@ Följande OSGi-konfigurationsinställningar (listade efter paket) är relevanta 
 
 >[!NOTE]
 >
->Diff-verktyget för OSGi-konfiguration, som ingår i [AEM](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17488.html?lang=en), kan användas för att lista OSGi-standardkonfigurationer.
+>Diff-verktyget för OSGi-konfiguration, som ingår i [AEM](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17488.html), kan användas för att lista OSGi-standardkonfigurationer.
 
 >[!NOTE]
 >
@@ -271,7 +271,7 @@ När du skapar en konfiguration ska du inte ändra fabrikskonfigurationen. Skapa
 
 >[!CAUTION]
 >
->När du ändrar inställningen för **Minify** eller **Gzip**, tar bort innehållet i cacheminnet för klienter. Se [Kunskapsbasartikel](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-16543.html?lang=en) för mer information.
+>När du ändrar inställningen för **Minify** eller **Gzip**, tar bort innehållet i cacheminnet för klienter. Se [Kunskapsbasartikel](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-16543.html) för mer information.
 
 >[!NOTE]
 >

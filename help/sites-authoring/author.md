@@ -2,9 +2,9 @@
 title: Redigering
 description: Begrepp som redigering och publicering i Adobe Experience Manager 6.5.
 exl-id: dcda537a-1bb2-4ce3-9904-40d158b47556
-source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
+source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
 workflow-type: tm+mt
-source-wordcount: '553'
+source-wordcount: '547'
 ht-degree: 0%
 
 ---
@@ -81,4 +81,4 @@ När AEM är en [communitywebbplats](/help/communities/overview.md), eller inneh
 
 #### Dispatcher {#dispatcher}
 
-Om du vill optimera prestanda för besökare på webbplatsen kan du **[Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=en)** implementerar belastningsutjämning och cachning.
+Om du vill optimera prestanda för besökare på webbplatsen kan du **[Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html)** implementerar belastningsutjämning och cachning.

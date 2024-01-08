@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: deploying
 exl-id: 85981463-189c-4f50-9d21-1d2f734b960a
-source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
+source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
 workflow-type: tm+mt
-source-wordcount: '1474'
+source-wordcount: '1387'
 ht-degree: 0%
 
 ---
@@ -50,7 +50,7 @@ En framtvingad avstängning medför AEM asynkron indexering i upp till 30 minute
 
 >[!NOTE]
 >
->För AEM 6.1 ska du se till att [AEM 6.1 CFP 11](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=en) är installerat.
+>För AEM 6.1 ska du se till att [AEM 6.1 CFP 11](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html) är installerat.
 
 I undantagsfall kan den trådpool som används för att hantera asynkron indexering bli överbelastad. Om du vill isolera indexeringsprocessen kan en trådpool konfigureras så att den förhindrar att andra AEM stör Oaks möjlighet att indexera innehåll i tid. I så fall gör du följande:
 

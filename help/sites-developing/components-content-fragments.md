@@ -1,6 +1,6 @@
 ---
 title: Komponenter för innehållsfragment
-description: Innehållsfragment i Adobe Experience Manager (AEM) skapas och hanteras som sidoberoende resurser
+description: Adobe Experience Manager (AEM) innehållsfragment skapas och hanteras som sidoberoende resurser
 contentOwner: AEM Docs
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: components
@@ -8,10 +8,10 @@ content-type: reference
 docset: aem65
 pagetitle: Components for Content Fragments
 exl-id: f2edd9b2-f231-42f3-a25e-428cd1d96c2a
-source-git-commit: b66ec42c35b5b60804015d340b8194bbd6ef3e28
+source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
 workflow-type: tm+mt
-source-wordcount: '961'
-ht-degree: 2%
+source-wordcount: '932'
+ht-degree: 0%
 
 ---
 
@@ -29,7 +29,7 @@ Se [API för hantering av innehållsfragment - klientsida](/help/sites-developin
 
 >[!CAUTION]
 >
->The [Kärnkomponent för innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/content-fragment-component.html?lang=en) rekommenderas nu. Se [Utveckla kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/overview.html?lang=en) för mer information.
+>The [Kärnkomponent för innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/content-fragment-component.html) rekommenderas nu. Se [Utveckla kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/overview.html) för mer information.
 >
 >I det här avsnittet beskrivs den ursprungliga komponenten som levererats för användning med innehållsfragment (**Innehållsfragment** i **Allmänt** grupp).
 
@@ -37,7 +37,7 @@ Se [API för hantering av innehållsfragment - klientsida](/help/sites-developin
 >
 >Se även [Innehållsfragment Konfigurera komponenter för återgivning](/help/sites-developing/content-fragments-config-components-rendering.md) för ytterligare information.
 
-Innehållsfragment i Adobe Experience Manager (AEM) [skapas och hanteras som sidoberoende resurser](/help/assets/content-fragments/content-fragments.md). Med dem kan du skapa kanalneutralt innehåll tillsammans med (eventuellt kanalspecifika) variationer. [Du kan sedan använda dessa fragment och deras variationer när du redigerar innehållssidorna](/help/sites-authoring/content-fragments.md). Du kan också använda en befintlig innehållsfragmentresurs med [dra den från resursläsaren till sidan](/help/sites-authoring/content-fragments.md#adding-a-content-fragment-to-your-page) (som för andra tillgångsbaserade komponenter, t.ex. bildkomponenten). Komponenten för innehållsfragment som inte finns i kartongen visar bara en [element](/help/assets/content-fragments/content-fragments.md#constituent-parts-of-a-content-fragment) av det refererade innehållsfragmentet. Med komponentdialogrutan kan du definiera [element, variation och intervall för fragmentstycken](/help/assets/content-fragments/content-fragments.md#constituent-parts-of-a-content-fragment) som du vill visa på sidan.
+Adobe Experience Manager (AEM) innehållsfragment är [skapat och hanterat som sidoberoende resurser](/help/assets/content-fragments/content-fragments.md). Med dem kan du skapa kanalneutralt innehåll tillsammans med (eventuellt kanalspecifika) variationer. [Du kan sedan använda dessa fragment och deras variationer när du redigerar innehållssidorna](/help/sites-authoring/content-fragments.md). Du kan också använda en befintlig innehållsfragmentresurs med [dra den från resursläsaren till sidan](/help/sites-authoring/content-fragments.md#adding-a-content-fragment-to-your-page) (som för andra tillgångsbaserade komponenter, t.ex. bildkomponenten). Komponenten för innehållsfragment som inte finns i kartongen visar bara en [element](/help/assets/content-fragments/content-fragments.md#constituent-parts-of-a-content-fragment) av det refererade innehållsfragmentet. Med komponentdialogrutan kan du definiera [element, variation och intervall för fragmentstycken](/help/assets/content-fragments/content-fragments.md#constituent-parts-of-a-content-fragment) som du vill visa på sidan.
 
 >[!NOTE]
 >

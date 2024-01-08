@@ -2,9 +2,9 @@
 title: Foundation Components
 description: Läs mer om Foundation Components i Adobe Experience Manager 6.5.
 exl-id: 278701f3-3f0c-45f4-90b7-c0e316a7da8a
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
 workflow-type: tm+mt
-source-wordcount: '7204'
+source-wordcount: '6872'
 ht-degree: 0%
 
 ---
@@ -210,7 +210,7 @@ Valfritt. Det maximala antalet objekt som du vill använda i Carousel.
 
 >[!NOTE]
 >
->Du kan skapa en anpassad karusellkomponent för Adobe Experience Manager som visar digitala resurser i AEM DAM. Se [Skapa anpassade Carousel-komponenter för Adobe Experience Manager](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=en).
+>Du kan skapa en anpassad karusellkomponent för Adobe Experience Manager som visar digitala resurser i AEM DAM. Se [Skapa anpassade Carousel-komponenter för Adobe Experience Manager](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html).
 
 ### Diagram {#chart}
 
@@ -245,7 +245,7 @@ I följande exempel visas ett exempel på diagramdata följt av det resulterande
 
 >[!NOTE]
 >
->Du kan skapa en anpassad AEM som visar data i AEM JCR. Mer information finns i [Visa Adobe Experience Manager-data i ett diagram](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=en).
+>Du kan skapa en anpassad AEM som visar data i AEM JCR. Mer information finns i [Visa Adobe Experience Manager-data i ett diagram](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html).
 
 ### Innehållsfragment {#content-fragment}
 
@@ -627,7 +627,7 @@ Efter konfigurationen visas innehållet exakt som på källsidan. Det faktum att
 
 ![chlimage_1-96](assets/chlimage_1-96.png)
 
-### Sökning {#searching}
+### Sök {#searching}
 
 >[!CAUTION]
 >
@@ -637,7 +637,7 @@ Sökkomponenten lägger till sökfunktioner på sidan.
 
 Du kan konfigurera
 
-* Sökning
+* Sök
 
    * **Nodtyper**
 
@@ -878,7 +878,7 @@ I följande exempel visas en textbildskomponent som visar bilden vänsterjustera
 
 >[!CAUTION]
 >
->Denna Foundation-komponent är föråldrad. Adobe rekommenderar att du använder [Huvudkomponenten för titel](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/list.html?lang=en) i stället.
+>Denna Foundation-komponent är föråldrad. Adobe rekommenderar att du använder [Huvudkomponenten för titel](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/list.html) i stället.
 
 Titelkomponenten kan antingen:
 

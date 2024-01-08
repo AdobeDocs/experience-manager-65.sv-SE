@@ -2,21 +2,21 @@
 title: AEM om innehåll och handel 2019
 description: Adobe Experience Manager Content and Commerce Release Notes 2019.
 exl-id: 7e61a75d-6b35-46ee-b88a-444c10b2708f
-source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
+source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
 workflow-type: tm+mt
-source-wordcount: '992'
-ht-degree: 6%
+source-wordcount: '946'
+ht-degree: 4%
 
 ---
 
-# GitHub-versionsöversikt för Commerce Integration Framework
+# Commerce integration framework GitHub Release Overview
 
 ## Releasedatum: november 2019
 
 | GitHub | Version | Detaljerade versionsinformation |
 |:-------|:-----:|---------------------:|
 | CIF | 0.7.1 | [Versionsinformation](https://github.com/adobe/commerce-cif-connector/releases) |
-| CIF-kärnkomponenter | 0.6.0 | [Versionsinformation](https://github.com/adobe/aem-core-cif-components/releases) |
+| CIF kärnkomponenter | 0.6.0 | [Versionsinformation](https://github.com/adobe/aem-core-cif-components/releases) |
 | CIF | 0.6.2 | [Versionsinformation](https://github.com/adobe/aem-cif-project-archetype/releases) |
 
 ### Nyheter {#what-is-new-november}
@@ -42,14 +42,14 @@ ht-degree: 6%
 | GitHub | Version | Detaljerade versionsinformation |
 |:-------|:-----:|---------------------:|
 | CIF | 0.6.0 | [Versionsinformation](https://github.com/adobe/commerce-cif-connector/releases) |
-| CIF-kärnkomponenter | 0.5.0 | [Versionsinformation](https://github.com/adobe/aem-core-cif-components/releases) |
+| CIF kärnkomponenter | 0.5.0 | [Versionsinformation](https://github.com/adobe/aem-core-cif-components/releases) |
 | CIF | 0.5.0 | [Versionsinformation](https://github.com/adobe/aem-cif-project-archetype/releases) |
 
 ### Nyheter {#what-is-new-october}
 
 * Helt redigerbara mallar för produktinformationssidor och produktlistsidor. Nu kan författare skapa mallar och dra och släppa produktlistor och produktinformationskomponenter på dessa mallar. Förutom att lägga till andra komponenter kan författarna nu ändra layouten på mallarna också, vilket ger dem obegränsad frihet att skapa fantastiska upplevelser som kombinerar marknadsförings- och e-handelsinnehåll.
 
-* Alla redigeringsvänliga CIF-kärnkomponenter har förbättrats med stöd för [AEM](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/style-system.html?lang=en). Exempelformat har angetts för produktlistkomponenten.
+* Alla redigeringsvänliga CIF kärnkomponenter har förbättrats till stöd för [AEM](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/style-system.html). Exempelformat har angetts för produktlistkomponenten.
 
 * Reaktionsbaserade komponenter på klientsidan för kontohantering. Den här versionen har stöd för följande funktioner: Logga in, Har du glömt lösenordet och Skapa ett konto.
 
@@ -64,7 +64,7 @@ ht-degree: 6%
 | GitHub | Version | Detaljerade versionsinformation |
 |:-------|:-----:|---------------------:|
 | CIF | 0.5.0 | [Versionsinformation](https://github.com/adobe/commerce-cif-connector/releases) |
-| CIF-kärnkomponenter | 0.4.0 | [Versionsinformation](https://github.com/adobe/aem-core-cif-components/releases) |
+| CIF kärnkomponenter | 0.4.0 | [Versionsinformation](https://github.com/adobe/aem-core-cif-components/releases) |
 | CIF | 0.4.0 | [Versionsinformation](https://github.com/adobe/aem-cif-project-archetype/releases) |
 
 ### Nyheter {#what-is-new-september}
@@ -86,7 +86,7 @@ ht-degree: 6%
 | GitHub | Version | Detaljerade versionsinformation |
 |:-------|:-----:|---------------------:|
 | CIF | 0.4.0 | [Versionsinformation](https://github.com/adobe/commerce-cif-connector/releases) |
-| CIF-kärnkomponenter | 0.3.0 | [Versionsinformation](https://github.com/adobe/aem-core-cif-components/releases) |
+| CIF kärnkomponenter | 0.3.0 | [Versionsinformation](https://github.com/adobe/aem-core-cif-components/releases) |
 | CIF | 0.3.0 | [Versionsinformation](https://github.com/adobe/aem-cif-project-archetype/releases) |
 
 ### Nyheter {#what-is-new-august}
@@ -114,12 +114,12 @@ ht-degree: 6%
 | GitHub | Version | Detaljerade versionsinformation |
 |:-------|:-----:|---------------------:|
 | CIF | 0.3.0 | [Versionsinformation](https://github.com/adobe/commerce-cif-connector/releases) |
-| CIF-kärnkomponenter | 0.2.0 | [Versionsinformation](https://github.com/adobe/aem-core-cif-components/releases) |
+| CIF kärnkomponenter | 0.2.0 | [Versionsinformation](https://github.com/adobe/aem-core-cif-components/releases) |
 | CIF | 0.2.0 | [Versionsinformation](https://github.com/adobe/aem-cif-project-archetype/releases) |
 
 ### Nyheter {#what-is-new-july}
 
-* Första CIF-arkitekturen som ger utvecklare flera distributionsalternativ: 1. Distribuera AEM Venia storefront 2. Driftsätt ställningar för ett nytt projekt 3. Använd CIF-element i ett befintligt projekt
+* Första CIF-arkitekturen som ger utvecklare flera distributionsalternativ: 1. Distribuera AEM Venia storefront 2. Driftsätt ställningar för ett nytt projekt 3. Använd CIF element i ett befintligt projekt
 
 * Katalognavigering på flera nivåer som stöder navigering genom kategorier och underkategorier.
 
@@ -140,7 +140,7 @@ ht-degree: 6%
 | GitHub | Version | Detaljerade versionsinformation |
 |:-------|:-----:|---------------------:|
 | CIF | 0.2.0 | [Versionsinformation](https://github.com/adobe/commerce-cif-connector/releases) |
-| CIF-kärnkomponenter | 0.1.0 | [Versionsinformation](https://github.com/adobe/aem-core-cif-components/releases) |
+| CIF kärnkomponenter | 0.1.0 | [Versionsinformation](https://github.com/adobe/aem-core-cif-components/releases) |
 
 ### Nyheter {#what-is-new-june}
 

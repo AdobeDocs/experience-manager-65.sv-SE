@@ -8,7 +8,7 @@ content-type: reference
 docset: aem65
 exl-id: 314a6409-398c-470b-8799-0c4e6f745141
 feature: Security
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
 workflow-type: tm+mt
 source-wordcount: '2959'
 ht-degree: 0%
@@ -43,7 +43,7 @@ Det är obligatoriskt att aktivera HTTPS-transportlagret på både författare- 
 
 ### Installera snabbkorrigeringar för säkerhet {#install-security-hotfixes}
 
-Kontrollera att du har installerat den senaste [Säkerhetsuppdateringar från Adobe](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/aem-releases-updates.html?lang=en).
+Kontrollera att du har installerat den senaste [Säkerhetsuppdateringar från Adobe](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/aem-releases-updates.html).
 
 ### Ändra standardlösenord för AEM- och OSGi-konsolens administratörskonton {#change-default-passwords-for-the-aem-and-osgi-console-admin-accounts}
 
@@ -108,11 +108,11 @@ Adobe rekommenderar att du definierar anpassade felhanterarsidor, särskilt för
 
 >[!NOTE]
 >
->Se [Hur skapar jag egna skript eller felhanterare?](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/full-stack/custom-error-page.html?lang=en) för mer information.
+>Se [Hur skapar jag egna skript eller felhanterare?](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/full-stack/custom-error-page.html) för mer information.
 
 ### Slutför checklista för utskickssäkerhet {#complete-dispatcher-security-checklist}
 
-AEM Dispatcher är en viktig del av din infrastruktur. Adobe rekommenderar att du slutför [Checklista för utskickssäkerhet](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/security-checklist.html?lang=en).
+AEM Dispatcher är en viktig del av din infrastruktur. Adobe rekommenderar att du slutför [Checklista för utskickssäkerhet](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/security-checklist.html).
 
 >[!CAUTION]
 >

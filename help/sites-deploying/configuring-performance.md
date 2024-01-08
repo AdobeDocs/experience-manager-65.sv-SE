@@ -7,7 +7,7 @@ content-type: reference
 topic-tags: configuring
 feature: Configuring
 exl-id: 5b0c9a8c-0f5f-46ee-a455-adb9b9d27270
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
 workflow-type: tm+mt
 source-wordcount: '6469'
 ht-degree: 1%
@@ -22,7 +22,7 @@ ht-degree: 1%
 >
 >Mer information om felsökning och korrigering av prestandaproblem finns även i [Prestandaträd](/help/sites-deploying/performance-tree.md).
 >
->Du kan även läsa en kunskapsbasartikel på [Tips för prestandajustering](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-performance.html?lang=en).
+>Du kan även läsa en kunskapsbasartikel på [Tips för prestandajustering](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-performance.html).
 
 Ett viktigt problem är den tid det tar för er webbplats att svara på besökarnas förfrågningar. Även om det här värdet varierar för varje begäran kan ett genomsnittligt målvärde definieras. När det här värdet har visat sig vara både genomförbart och underhållbart kan det användas för att övervaka webbplatsens prestanda och indikera utvecklingen av potentiella problem.
 
@@ -39,7 +39,7 @@ Den här miljön innehåller innehåll som du gör tillgängligt för användarn
 >[!NOTE]
 >
 >* När du har konfigurerat för prestandaoptimering följer du anvisningarna i [Tålig dag](/help/sites-developing/tough-day.md) för att testa miljön under tung belastning.
->* Se även [Prestandajusteringstips.](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-performance.html?lang=en)
+>* Se även [Prestandajusteringstips.](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-performance.html)
 
 ## Prestandaoptimeringsmetod {#performance-optimization-methodology}
 
@@ -201,7 +201,7 @@ Vissa aspekter av AEM (och/eller den underliggande databasen) kan konfigureras f
 
 >[!NOTE]
 >
->Se [Prestandaoptimering](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-performance.html?lang=en).
+>Se [Prestandaoptimering](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-performance.html).
 
 ### Sökindexering {#search-indexing}
 
@@ -476,7 +476,7 @@ När alla tester är slutförda, rapportera följande:
 
 ## Optimera prestanda när du använder Dispatcher {#optimizing-performance-when-using-the-dispatcher}
 
-The [Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=en) är Adobe och/eller belastningsutjämningsverktyg. När du använder Dispatcher bör du överväga att optimera webbplatsen för cacheprestanda.
+The [Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html) är Adobe och/eller belastningsutjämningsverktyg. När du använder Dispatcher bör du överväga att optimera webbplatsen för cacheprestanda.
 
 >[!NOTE]
 >
@@ -492,7 +492,7 @@ Dispatcher har flera inbyggda funktioner som du kan använda för att optimera p
 >
 >I allmänhet innebär många cachelagringsstrategier att du måste välja bra URL:er och inte förlita dig på dessa ytterligare data.
 >
->Med Dispatcher version 4.1.11 kan du även cachelagra svarshuvuden, se [Cachelagra HTTP-svarshuvuden](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#configuring-the-dispatcher-cache-cache).
+>Med Dispatcher version 4.1.11 kan du även cachelagra svarshuvuden, se [Cachelagra HTTP-svarshuvuden](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#configuring-the-dispatcher-cache-cache).
 >
 
 ### Beräkna Dispatcher-cachens förhållande {#calculating-the-dispatcher-cache-ratio}
@@ -528,7 +528,7 @@ Med Dispatcher version 4.1.11 kan du cachelagra svarshuvuden. Om du inte cachela
 
 #### Undvik URL-parametrar {#avoid-url-parameters}
 
-Undvik om möjligt URL-parametrar för sidor som du vill cachelagra. Om du till exempel har ett bildgalleri cachelagras aldrig följande URL (såvida inte Dispatcher är [konfigurerad](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#configuring-the-dispatcher-cache-cache)):
+Undvik om möjligt URL-parametrar för sidor som du vill cachelagra. Om du till exempel har ett bildgalleri cachelagras aldrig följande URL (såvida inte Dispatcher är [konfigurerad](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#configuring-the-dispatcher-cache-cache)):
 
 ```xml
 www.myCompany.com/pictures/gallery.html?event=christmas&amp;page=1
@@ -616,7 +616,7 @@ När det gäller att blanda begränsat och offentligt innehåll på en sida bör
 
 #### Fästiga anslutningar {#sticky-connections}
 
-[Fästanslutningar](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=en#the-benefits-of-load-balancing) se till att dokumenten för en användare är sammansatta på samma server. Om en användare lämnar den här mappen och senare återgår till den, stannar anslutningen fortfarande kvar. Om du vill lagra alla dokument som kräver klisterlappar för webbplatsen, definierar du en mapp. Försök att inte ha med andra dokument i den. Det här scenariot påverkar belastningsutjämningen om du använder personaliserade sidor och sessionsdata.
+[Fästanslutningar](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html#the-benefits-of-load-balancing) se till att dokumenten för en användare är sammansatta på samma server. Om en användare lämnar den här mappen och senare återgår till den, stannar anslutningen fortfarande kvar. Om du vill lagra alla dokument som kräver klisterlappar för webbplatsen, definierar du en mapp. Försök att inte ha med andra dokument i den. Det här scenariot påverkar belastningsutjämningen om du använder personaliserade sidor och sessionsdata.
 
 #### MIME-typer {#mime-types}
 

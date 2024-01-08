@@ -2,7 +2,7 @@
 title: Allmän versionsinformation för [!DNL Adobe Experience Manager] 6.5
 description: "[!DNL Adobe Experience Manager] 6.5 som beskriver versionsinformation, nyheter, hur man installerar och detaljerade ändringslistor."
 exl-id: b3d4a527-44ca-4eb6-b393-f3e8117cf1a6
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
 workflow-type: tm+mt
 source-wordcount: '4484'
 ht-degree: 0%
@@ -18,7 +18,7 @@ ht-degree: 0%
 | Version | 6,5 |
 | Typ | Större release |
 | Allmänt tillgänglighetsdatum | 8 april 2019 |
-| Rekommenderade uppdateringar | Se [AEM senaste uppdateringarna](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/aem-releases-updates.html?lang=en). |
+| Rekommenderade uppdateringar | Se [AEM senaste uppdateringarna](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/aem-releases-updates.html). |
 
 ### Trivia {#trivia}
 
@@ -115,7 +115,7 @@ Först levererad som en del av AEM 6.4 SP2, med AEM 6.5 får SPA support följan
 
 #### Headless Content Management {#headless-content-management}
 
-AEM kan hantera innehållet i olika format och från olika nivåer i högen. Vissa har funnits sedan 2008 med [Sling GET](https://sling.apache.org/documentation/bundles/rendering-content-default-get-servlets.html) och [POST Servlet](https://sling.apache.org/documentation/bundles/manipulating-content-the-slingpostservlet-servlets-post.html). Innehållstjänster ([Export av försäljningsmodell](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/develop-sling-model-exporter.html?lang=en)) introducerades i AEM 6.3 och är den metod som används av AEM SJ SDK för att hysa enkelsidiga appar. The [HTTP API for Assets](/help/assets/mac-api-assets.md) är ett CRUD-API, som utökades för AEM 6.5.
+AEM kan hantera innehållet i olika format och från olika nivåer i högen. Vissa har funnits sedan 2008 med [Sling GET](https://sling.apache.org/documentation/bundles/rendering-content-default-get-servlets.html) och [POST Servlet](https://sling.apache.org/documentation/bundles/manipulating-content-the-slingpostservlet-servlets-post.html). Innehållstjänster ([Export av försäljningsmodell](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/develop-sling-model-exporter.html)) introducerades i AEM 6.3 och är den metod som används av AEM SJ SDK för att hysa enkelsidiga appar. The [HTTP API for Assets](/help/assets/mac-api-assets.md) är ett CRUD-API, som utökades för AEM 6.5.
 
 Nya HTTP API-funktioner:
 
@@ -137,7 +137,7 @@ Designa, leverera och optimera effektivt upplevelser på alla digitala skärmar,
 * Anpassa efter plats eller konfiguration av data som utlöses av dynamiska platshållare.
 * Enhetliga insikter som bygger på Adobe Analytics integration i AEM Screens Player
 
-Mer information om ändringar i AEM Screens finns i versionsinformationen i [AEM Screens Användarhandbok](https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/aem-screens-introduction.html?lang=en).
+Mer information om ändringar i AEM Screens finns i versionsinformationen i [AEM Screens Användarhandbok](https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/aem-screens-introduction.html).
 
 #### Utveckling av komponenter och mallar {#component-amp-template-development}
 
@@ -357,7 +357,7 @@ Mer information finns på [Använda Adobe Stock-resurser i Experience Manager As
 
 [!DNL Experience Manager Assets Brand Portal] hjälper er att enkelt skaffa, effektivt kontrollera och på ett säkert sätt distribuera godkända resurser till externa leverantörer/myndigheter och interna företagsanvändare på olika enheter. Det bidrar till att effektivisera tillgångsdelningen, snabbar upp time-to-market för tillgångar och eliminerar risken för otillåten användning och obehörig åtkomst.
 
-Mer information finns i [Nyheter i Brand Portal](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/introduction/whats-new.html?lang=en).
+Mer information finns i [Nyheter i Brand Portal](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/introduction/whats-new.html).
 
 #### Anslutna resurser {#connectedassets}
 
@@ -596,4 +596,4 @@ Följande webbplatser är bara tillgängliga för kunder. Om du är kund och beh
 
 * Produktuppdateringar, patchar och paket för ytterligare funktionalitet i [Programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html).
 
-* [Kundsupport via Admin Console](https://adminconsole.adobe.com/). Mer information finns i [Ny Adobe-upplevelse för kundsupport](https://experienceleague.adobe.com/docs/customer-one/using/home.html?lang=en).
+* [Kundsupport via Admin Console](https://adminconsole.adobe.com/). Mer information finns i [Ny Adobe-upplevelse för kundsupport](https://experienceleague.adobe.com/docs/customer-one/using/home.html).

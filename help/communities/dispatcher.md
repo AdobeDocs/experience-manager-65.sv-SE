@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 content-type: reference
 topic-tags: deploying
 exl-id: fb4e3973-2193-4bb5-8120-bf2f3ec80112
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
 workflow-type: tm+mt
-source-wordcount: '653'
+source-wordcount: '601'
 ht-degree: 0%
 
 ---
@@ -23,11 +23,11 @@ För att ta reda på vad som är nödvändigt för din installation och webbplat
 
 * Kontakt [Kundtjänst](https://experienceleague.adobe.com/?support-solution=General&amp;support-tab=home#support)
 
-Se även huvudsidan [Dispatcher-dokumentation](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=en).
+Se även huvudsidan [Dispatcher-dokumentation](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html).
 
 ## Dispatcher Caching {#dispatcher-caching}
 
-### Översikt {#overview}
+### Ökning {#overview}
 
 Dispatcher-cachning för AEM Communities är en möjlighet för Dispatcher att hantera fullt cachelagrade versioner av en communitywebbplats sidor.
 
@@ -39,7 +39,7 @@ Om inställningen är aktiverad för Dispatcher-cachning läggs ett TTL-baserat 
 
 ### Krav {#requirements}
 
-* Dispatcher version 4.1.2 eller senare (se [Installerar Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/dispatcher-install.html?lang=en) för den senaste versionen)
+* Dispatcher version 4.1.2 eller senare (se [Installerar Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/dispatcher-install.html) för den senaste versionen)
 * [ACS AEM Commons-paket](https://adobe-consulting-services.github.io/acs-aem-commons/)
 
    * Version 3.3.2 eller senare
@@ -59,14 +59,14 @@ OSGi-konfigurationen **ACS AEM Commands - Dispatcher Cache Control Header - Max 
   ![avsändare](assets/dispatcher.png)
 
 * **Filtermönster**
-  *(obligatoriskt)* En eller flera sökvägar till communitysidor. Till exempel, `/content/sites/engage/(.*)`.
+  *(obligatoriskt)* En eller flera sökvägar till communitysidor. Till exempel: `/content/sites/engage/(.*)`.
 
 * **Maximal ålder för cachekontroll**
   *(obligatoriskt)* Högsta ålder (i sekunder) som ska läggas till i rubriken Cachekontroll. Värdet måste vara större än noll.
 
 ## Dispatcher-filter {#dispatcher-filters}
 
-Avsnittet /filter i `dispatcher.any` filen finns dokumenterad i [Konfigurera åtkomst till innehåll - /filter](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en).
+Avsnittet /filter i `dispatcher.any` filen finns dokumenterad i [Konfigurera åtkomst till innehåll - /filter](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html).
 
 I det här avsnittet beskrivs poster som troligtvis är nödvändiga för att funktionen i Communities ska fungera korrekt.
 
@@ -76,7 +76,7 @@ I följande exempel används egenskapsnamn som sannolikt måste ändras för att
 
 Se även:
 
-* [Dispatcher Security Checklist](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/security-checklist.html?lang=en)
+* [Dispatcher Security Checklist](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/security-checklist.html)
 
 >[!NOTE]
 >

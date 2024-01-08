@@ -1,15 +1,15 @@
 ---
 title: Enkel inloggning
-description: Lär dig hur du konfigurerar enkel inloggning (SSO) för en instans av Adobe Experience Manager (AEM).
+description: Lär dig konfigurera enkel inloggning (SSO) för en instans av Adobe Experience Manager (AEM).
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: configuring, Security
 content-type: reference
 feature: Configuring
 exl-id: 7d2e4620-c3a5-4f5a-9eb6-42a706479d41
-source-git-commit: 69346a710708ee659ee97e9fdc193c8ea2658fe6
+source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
 workflow-type: tm+mt
-source-wordcount: '742'
+source-wordcount: '723'
 ht-degree: 0%
 
 ---
@@ -37,11 +37,11 @@ Ange samma attributnamn för båda tjänsterna. Attributet ingår i `SimpleCrede
 
 Om du vill konfigurera enkel inloggning för en AEM instans konfigurerar du [Hanterare för SSO-autentisering](/help/sites-deploying/osgi-configuration-settings.md#adobegranitessoauthenticationhandler):
 
-1. När du arbetar med AEM finns det flera metoder för att hantera konfigurationsinställningarna för sådana tjänster. se [Konfigurerar OSGi](/help/sites-deploying/configuring-osgi.md) om du vill ha mer information och rekommenderade rutiner.
+1. När du arbetar med AEM finns det flera metoder för att hantera konfigurationsinställningarna för sådana tjänster. Se [Konfigurerar OSGi](/help/sites-deploying/configuring-osgi.md) om du vill ha mer information och rekommenderade rutiner.
 
    För NTLM:
 
-   * **Sökväg:** vid behov, till exempel `/`
+   * **Sökväg:** efter behov, till exempel `/`
    * **Rubriknamn**: `LOGON_USER`
    * **ID-format**: `^<DOMAIN>\\(.+)$`
 
@@ -49,17 +49,17 @@ Om du vill konfigurera enkel inloggning för en AEM instans konfigurerar du [Han
 
    För CoSign:
 
-   * **Sökväg:** vid behov, till exempel `/`
+   * **Sökväg:** efter behov, till exempel `/`
    * **Rubriknamn**: remote_user
    * **ID-format:** asIs
 
    För SiteMinder:
 
-   * **Sökväg:** vid behov, till exempel `/`
+   * **Sökväg:** efter behov, till exempel `/`
    * **Rubriknamn:** SM_USER
-   * **ID-format**: asIs
+   * **ID-format**: AsIs
 
-1. Bekräfta att enkel inloggning fungerar som det ska. inklusive tillstånd.
+1. Bekräfta att enkel inloggning fungerar som det ska, inklusive behörighet.
 
 >[!CAUTION]
 >
@@ -78,12 +78,12 @@ Om du vill konfigurera enkel inloggning för en AEM instans konfigurerar du [Han
 
 >[!NOTE]
 >
->Om du även använder [Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=en) med Microsoft® Internet Information Server (IIS) krävs ytterligare konfiguration i:
+>Om du även använder [Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html) med Microsoft® Internet Information Server (IIS) krävs ytterligare konfiguration i:
 >
 * `disp_iis.ini`
 * IIS
 >
-I `disp_iis.ini` set: (se [installera Dispatcher med Microsoft® Internet Information Server](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/dispatcher-install.html?lang=en#microsoft-internet-information-server) för fullständig information)
+I `disp_iis.ini` set: (se [installera Dispatcher med Microsoft® Internet Information Server](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/dispatcher-install.html#microsoft-internet-information-server) för fullständig information)
 >
 * `servervariables=1` (vidarebefordrar IIS-servervariabler som begäranrubriker till fjärrinstansen)
 * `replaceauthorization=1` (ersätter en rubrik med namnet&quot;Authorization&quot;, som inte är&quot;Basic&quot;, med motsvarande&quot;Basic&quot;)
@@ -95,7 +95,7 @@ I IIS:
 * enable **Integrerad Windows-autentisering**
 >
 
-Du kan se vilken autentiseringshanterare som används i vilken del av innehållsträdet som helst genom att använda **Autentiserare** Valmöjlighet i Felix Console. till exempel:
+Du kan se vilken autentiseringshanterare som används i vilken del av innehållsträdet som helst genom att använda **Autentiserare** till Felix Console, till exempel:
 
 `http://localhost:4502/system/console/slingauth`
 

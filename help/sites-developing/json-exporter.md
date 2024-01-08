@@ -6,10 +6,10 @@ content-type: reference
 topic-tags: components
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 exl-id: 647395c0-f392-427d-a998-e9ddf722b9f9
-source-git-commit: a56d5121a6ce11b42a6c30dae9e479564d16af27
+source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
 workflow-type: tm+mt
-source-wordcount: '431'
-ht-degree: 2%
+source-wordcount: '411'
+ht-degree: 0%
 
 ---
 
@@ -27,7 +27,7 @@ Med innehållsfragment som använder strukturerat innehåll kan du tillhandahål
 
 >[!NOTE]
 >
->Funktionen som beskrivs här är tillgänglig för alla kärnkomponenter eftersom [version 1.1.0 av kärnkomponenterna](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=en).
+>Funktionen som beskrivs här är tillgänglig för alla kärnkomponenter eftersom [version 1.1.0 av kärnkomponenterna](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html).
 
 ## JSON-exporterare med kärnkomponenter för innehållsfragment {#json-exporter-with-content-fragment-core-components}
 
@@ -49,7 +49,7 @@ Inom AEM uppnås leveransen med väljaren `model` och `.json` tillägg.
 
 Du kan också leverera innehållet i ett strukturerat innehållsfragment genom att specifikt rikta in det på det.
 
-Använd hela sökvägen till fragmentet (med hjälp av `jcr:content`). till exempel med ett suffix som
+Använd hela sökvägen till fragmentet (via `jcr:content`), till exempel med ett suffix som
 
 `.../jcr:content/root/responsivegrid/contentfragment.model.json`
 
@@ -71,15 +71,15 @@ Sidan kan innehålla antingen ett enda innehållsfragment eller flera komponente
 
   >[!NOTE]
   >
-  >Även om det inte är en standardimplementering [flera väljare stöds,](json-exporter-components.md#multiple-selectors) men `model` måste vara först.
+  >Även om det inte är en standardimplementering [flera väljare stöds,](json-exporter-components.md#multiple-selectors) men `model` måste vara den första.
 
 ### Ytterligare information {#further-information}
 
 Se även:
 
-* HTTP API för Assets
+* Resurser för HTTP API
 
-   * [HTTP API för Assets](/help/assets/mac-api-assets.md)
+   * [Resurser för HTTP API](/help/assets/mac-api-assets.md)
 
 * Sling Models:
 
@@ -99,4 +99,4 @@ Mer information finns i:
 * [Skapa med innehållsfragment](/help/sites-authoring/content-fragments.md)
 * [Aktivera JSON-export för en komponent](/help/sites-developing/json-exporter-components.md)
 
-* [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) och [Innehållsfragmentkomponent](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/content-fragment-component.html?lang=en)
+* [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) och [Innehållsfragmentkomponent](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/content-fragment-component.html)

@@ -7,10 +7,10 @@ topic-tags: components
 content-type: reference
 docset: aem65
 exl-id: aef0350f-4d3d-47f4-9c7e-5675efef65d9
-source-git-commit: 26c0411d6cc16f4361cfa9e6b563eba0bfafab1e
+source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
 workflow-type: tm+mt
-source-wordcount: '686'
-ht-degree: 1%
+source-wordcount: '683'
+ht-degree: 2%
 
 ---
 
@@ -54,7 +54,7 @@ Detta hjälper en utvecklare att:
 >Se
 >
 >* Kunskapsbasartikel, [Felsökning AEM TouchUI-problem](https://helpx.adobe.com/experience-manager/kb/troubleshooting-aem-touchui-issues.html)för fler tips och verktyg.
->* AEM Gems-session om [AEM 6.0 Developer Mode](https://experienceleague.adobe.com/docs/events/experience-manager-gems-recordings/gems2014/aem-developer-mode.html?lang=en).
+>* AEM Gems-session om [AEM 6.0 Developer Mode](https://experienceleague.adobe.com/docs/events/experience-manager-gems-recordings/gems2014/aem-developer-mode.html).
 >
 
 ## Öppnar utvecklarläge {#opening-developer-mode}
@@ -77,7 +77,7 @@ Detta visar ett komponentträd som:
 
 * Skapar konturer för kedjan med komponenter och mallar som återges på sidan (SLY, JSP osv.). Trädet kan expanderas för att visa kontext i hierarkin.
 * Visar datortiden på serversidan för återgivning av komponenten.
-* Gör att du kan expandera trädet och välja specifika komponenter i trädet. Markeringen ger åtkomst till komponentinformation. t.ex.
+* Gör att du kan expandera trädet och välja specifika komponenter i trädet. Markeringen ger åtkomst till komponentinformation, till exempel:
 
    * Databassökväg
    * Länkar till skript (används i CRXDE Lite)
@@ -94,7 +94,7 @@ Varje komponentpost kan visa (till exempel:
 
 ![chlimage_1-13](assets/chlimage_1-13.png)
 
-* **Visa detaljer**: en länk till en lista som visar
+* **Visa detaljer**: en länk till en lista som visar:
 
    * alla komponentskript som används för att återge komponenten.
    * databasens innehållssökväg för den här specifika komponenten.
@@ -114,7 +114,7 @@ Varje komponentpost kan visa (till exempel:
 
 >[!CAUTION]
 >
->Vissa länkar pekar på skript under `/libs`. Dessa är dock bara till för referens **får inte** redigera vad som helst under `/libs`, eftersom alla ändringar du gör kan gå förlorade. Det beror på att den här grenen kan ändras när du uppgraderar eller installerar en snabbkorrigering eller ett funktionspaket. Gör de ändringar du behöver under `/apps`. Se [Övertäckningar och åsidosättningar](/help/sites-developing/overlays.md).
+>Vissa länkar pekar på skript under `/libs`. De här är dock bara till för referens **får inte** redigera allt under `/libs`, eftersom alla ändringar du gör kan gå förlorade. Det beror på att den här grenen kan ändras när du uppgraderar eller installerar en snabbkorrigering eller ett funktionspaket. Gör de ändringar du behöver under `/apps`. Se [Övertäckningar och åsidosättningar](/help/sites-developing/overlays.md).
 
 ### Fel {#errors}
 

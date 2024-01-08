@@ -6,7 +6,7 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: best-practices
 exl-id: f2f968b8-b21c-487d-bc0d-ed60903bc4bf
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
 workflow-type: tm+mt
 source-wordcount: '1088'
 ht-degree: 1%
@@ -74,7 +74,7 @@ Analysen börjar med steg 0. Målet är att avgöra vilken enhet (Dispatcher, ex
   <tr>
    <td><strong>Steg 4</strong></td>
    <td>Kommer förfrågningar från Dispatcher?</td>
-   <td><p>Om du vill se om begäranden cachelagras på rätt sätt kontrollerar du <a href="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#debugging">Felsökningsdokumentation för Dispatcher</a>.<br /> </p> </td>
+   <td><p>Om du vill se om begäranden cachelagras på rätt sätt kontrollerar du <a href="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#debugging">Felsökningsdokumentation för Dispatcher</a>.<br /> </p> </td>
   </tr>
   <tr>
    <td><strong>Steg 5</strong></td>
@@ -158,7 +158,7 @@ Analysen börjar med steg 0. Målet är att avgöra vilken enhet (Dispatcher, ex
     <ol>
      <li><a href="/help/sites-deploying/monitoring-and-maintaining.md#out-of-memory">Slut på minne</a></li>
      <li><a href="/help/sites-deploying/troubleshooting.md">Mitt program orsakar fel av typen slut på minne</a></li>
-     <li><a href="https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17482.html?lang=en">Analysera minnesproblem.</a><br /> </li>
+     <li><a href="https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17482.html">Analysera minnesproblem.</a><br /> </li>
     </ol> </td>
   </tr>
   <tr>
@@ -225,20 +225,20 @@ Analysen börjar med steg 0. Målet är att avgöra vilken enhet (Dispatcher, ex
   <tr>
    <td><strong>Steg 31</strong></td>
    <td>Använd CDN framför Dispatcher</td>
-   <td><a href="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=en#using-dispatcher-with-a-cdn">Använda Dispatcher med ett CDN</a><br /> </td>
+   <td><a href="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html#using-dispatcher-with-a-cdn">Använda Dispatcher med ett CDN</a><br /> </td>
   </tr>
   <tr>
    <td><strong>Steg 32</strong></td>
    <td>Avlasta AEM server med sessionshantering på Dispatcher-nivå</td>
-   <td><p><a href="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#enabling-secure-sessions-sessionmanagement">Aktivera säkra sessioner</a></p> </td>
+   <td><p><a href="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#enabling-secure-sessions-sessionmanagement">Aktivera säkra sessioner</a></p> </td>
   </tr>
   <tr>
    <td><strong>Steg 33</strong></td>
    <td>Gör förfrågningar tillgängliga</td>
    <td>
     <ol>
-     <li><a href="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=en">Allmän Dispatcher-konfiguration</a></li>
-     <li><a href="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#configuring-the-dispatcher-cache-cache">Konfigurera Dispatcher Cache</a></li>
+     <li><a href="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html">Allmän Dispatcher-konfiguration</a></li>
+     <li><a href="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#configuring-the-dispatcher-cache-cache">Konfigurera Dispatcher Cache</a></li>
     </ol> <p>Så här förbättrar du cacheförhållandet: gör förfrågningar cachelagrade (Bästa tillvägagångssätt för Dispatcher)</p> <p>Titta också på inställningarna nedan för att optimera dina cachelagringskonfigurationer<br /> </p>
     <ol>
      <li>Ange en regel utan cache för HTTP-begäran som inte är GET</li>
@@ -250,26 +250,26 @@ Analysen börjar med steg 0. Målet är att avgöra vilken enhet (Dispatcher, ex
   <tr>
    <td><strong>Steg 34</strong></td>
    <td>Uppgradera Dispatcher-version</td>
-   <td><p>Du kan hämta den senaste Dispatcher-versionen på den här platsen:</p> <p><a href="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/release-notes.html?lang=en">Följ länk</a></p> </td>
+   <td><p>Du kan hämta den senaste Dispatcher-versionen på den här platsen:</p> <p><a href="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/release-notes.html">Följ länk</a></p> </td>
   </tr>
   <tr>
    <td><strong>Steg 35</strong></td>
    <td>Konfigurera Dispatcher</td>
-   <td><a href="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en">Konfigurera Dispatcher</a><br /> </td>
+   <td><a href="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html">Konfigurera Dispatcher</a><br /> </td>
   </tr>
   <tr>
    <td><strong>Steg 36</strong></td>
    <td>Kontrollera cacheminnets ogiltigförklaring</td>
    <td><br />
     <ul>
-     <li><a href="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/page-invalidate.html?lang=en#invalidating-dispatcher-cache-from-the-authoring-environment">Cacheinvalidering för författarnivån.</a></li>
-     <li><a href="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/page-invalidate.html?lang=en#invalidating-dispatcher-cache-from-a-publishing-instance">Cacheinvalidering för publiceringsnivån.</a></li>
+     <li><a href="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/page-invalidate.html#invalidating-dispatcher-cache-from-the-authoring-environment">Cacheinvalidering för författarnivån.</a></li>
+     <li><a href="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/page-invalidate.html#invalidating-dispatcher-cache-from-a-publishing-instance">Cacheinvalidering för publiceringsnivån.</a></li>
     </ul> </td>
   </tr>
   <tr>
    <td><strong>Steg 37 och 38</strong></td>
    <td>Lazyladdning</td>
-   <td><a href="https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2016/aem-web-performance.html?lang=en">Se Gem Session om AEM webbprestanda.</a><br /> </td>
+   <td><a href="https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2016/aem-web-performance.html">Se Gem Session om AEM webbprestanda.</a><br /> </td>
   </tr>
   <tr>
    <td><strong>Steg 39</strong></td>
@@ -289,7 +289,7 @@ Analysen börjar med steg 0. Målet är att avgöra vilken enhet (Dispatcher, ex
   <tr>
    <td><strong>Steg 49</strong></td>
    <td>Minska nyttolastens storlek</td>
-   <td><a href="/help/sites-deploying/osgi-configuration-settings.md">Aktivera Gzip</a> och <a href="https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2016/aem-web-performance.html?lang=en">minska bildstorleken</a>.<br /> </td>
+   <td><a href="/help/sites-deploying/osgi-configuration-settings.md">Aktivera Gzip</a> och <a href="https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2016/aem-web-performance.html">minska bildstorleken</a>.<br /> </td>
   </tr>
   <tr>
    <td><strong>Steg 42 och 43</strong></td>
@@ -321,7 +321,7 @@ Analysen börjar med steg 0. Målet är att avgöra vilken enhet (Dispatcher, ex
   <tr>
    <td><strong>Steg 50 och 51</strong></td>
    <td>JS-kodblockering</td>
-   <td><a href="https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2016/aem-web-performance.html?lang=en">https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2016/aem-web-performance.html?lang=en</a></td>
+   <td><a href="https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2016/aem-web-performance.html">https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2016/aem-web-performance.html</a></td>
   </tr>
  </tbody>
 </table>

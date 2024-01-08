@@ -7,9 +7,9 @@ topic-tags: managing
 content-type: reference
 docset: aem65
 exl-id: 5837ef4f-d4e0-49d7-a671-87d5547e0d98
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
 workflow-type: tm+mt
-source-wordcount: '2795'
+source-wordcount: '2843'
 ht-degree: 0%
 
 ---
@@ -115,7 +115,7 @@ Alla system körs, men det finns bättre datorprestanda. Den extra prestandan ä
 Beräkningen av hur många klusternoder som behövs baseras på de grundläggande kraven och specifika användningsfall för det aktuella webbprojektet:
 
 * När det gäller felsäkerhet är det nödvändigt att för alla miljöer fastställa hur allvarligt felet är och hur lång tid det tar för en klusternod att återställa felet.
-* När det gäller skalbarhet är antalet skrivåtgärder i grunden den viktigaste faktorn; se [Författare som arbetar parallellt](/help/managing/hardware-sizing-guidelines.md#authors-working-in-parallel) för redigeringsmiljön och [Samverkan i samhället](/help/managing/hardware-sizing-guidelines.md#socialcollaborationspecificconsiderations) för publiceringsmiljön. Belastningsutjämning kan upprättas för åtgärder som enbart använder systemet för att bearbeta läsåtgärder. Se [Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=en) för mer information.
+* När det gäller skalbarhet är antalet skrivåtgärder i grunden den viktigaste faktorn; se [Författare som arbetar parallellt](/help/managing/hardware-sizing-guidelines.md#authors-working-in-parallel) för redigeringsmiljön och [Samverkan i samhället](/help/managing/hardware-sizing-guidelines.md#socialcollaborationspecificconsiderations) för publiceringsmiljön. Belastningsutjämning kan upprättas för åtgärder som enbart använder systemet för att bearbeta läsåtgärder. Se [Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html) för mer information.
 
 ## Skapa miljöspecifika beräkningar {#author-environment-specific-calculations}
 
@@ -200,12 +200,12 @@ Cache-effektiviteten är avgörande för webbplatsens hastighet. I följande tab
 
 | Cachenivåer | Sidor/s (topp) | Miljoner sidor/dag (genomsnitt) |
 |---|---|---|
-| 100% | 1000-2000 | 35-70 |
-| 99% | 910 | 32 |
-| 95% | 690 | 25 |
-| 90% | 520 | 18 |
-| 60% | 220 | 8 |
-| 0% | 100 | 3.5 |
+| 100 % | 1000-2000 | 35-70 |
+| 99 % | 910 | 32 |
+| 95 % | 690 | 25 |
+| 90 % | 520 | 18 |
+| 60 % | 220 | 8 |
+| 0 % | 100 | 3,5 |
 
 >[!CAUTION]
 >

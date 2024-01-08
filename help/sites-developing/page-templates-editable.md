@@ -7,7 +7,7 @@ topic-tags: platform
 content-type: reference
 docset: aem65
 exl-id: dcb66b6d-d731-493e-8936-12d529f6cbde
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
 workflow-type: tm+mt
 source-wordcount: '3186'
 ht-degree: 0%
@@ -46,7 +46,7 @@ Det här dokumentet förutsätter att du redan är bekant med att skapa och redi
 >[!NOTE]
 >
 >Följande självstudiekurs kan också vara intressant för att konfigurera en redigerbar sidmall i ett nytt projekt:
->[Komma igång med AEM Sites del 2 - Skapa en bassida och mall](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/pages-templates.html?lang=en)
+>[Komma igång med AEM Sites del 2 - Skapa en bassida och mall](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/pages-templates.html)
 
 ## Skapa en ny mall {#creating-a-new-template}
 
@@ -70,7 +70,7 @@ När du skapar en redigerbar mall:
    * Strukturen gör att du kan definiera komponenter och innehåll för mallen.
    * Komponenter som definieras i mallstrukturen kan inte flyttas till en resultatsida eller tas bort från eventuella resultatsidor.
 
-      * Om du skapar en mall i en anpassad mapp utanför `We.Retail` exempelinnehåll kan du välja Foundation Components eller använda [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/overview.html?lang=en).
+      * Om du skapar en mall i en anpassad mapp utanför `We.Retail` exempelinnehåll kan du välja Foundation Components eller använda [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/overview.html).
 
    * Om du vill att sidförfattare ska kunna lägga till och ta bort komponenter lägger du till ett styckesystem i mallen.
    * Komponenter kan låsas upp och låsas igen så att du kan definiera ursprungligt innehåll.

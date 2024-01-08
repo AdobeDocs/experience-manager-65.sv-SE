@@ -2,9 +2,9 @@
 title: Skapa AEM projekt med Apache Maven
 description: I det här dokumentet beskrivs hur du konfigurerar ett AEM baserat på Apache Maven
 exl-id: 451913bf-bb1e-4444-aee5-968ac30b5c9d
-source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
+source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
 workflow-type: tm+mt
-source-wordcount: '149'
+source-wordcount: '129'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ AEM 6.5 följer de senaste bästa metoderna för pakethantering och projektstruk
 >Mer information finns i:
 >
 >* The [AEM projektstruktur](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html) i den AEM as a Cloud Service dokumentationen om hur du strukturerar moderna AEM projekt.
->* The [AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) dokumentation som visar hur du startar ett nytt AEM med hjälp av arkitypen.
->* The [Adobe Content Package Maven Plugin](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developer-tools/maven-plugin.html?lang=en#developer-tools) i den AEM as a Cloud Service dokumentationen om hur du distribuerar AEM program.
+>* The [AEM Project Archettype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) dokumentation som visar hur du startar ett nytt AEM med hjälp av arkitypen.
+>* The [Adobe Content Package Maven Plugin](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developer-tools/maven-plugin.html#developer-tools) i den AEM as a Cloud Service dokumentationen om hur du distribuerar AEM program.
 >
 >Alla tre dokumenten gäller för AEM 6.5.

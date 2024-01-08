@@ -6,7 +6,7 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
 content-type: reference
 exl-id: f244cfb5-5550-4f20-92f0-bb296e2bf76e
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
 workflow-type: tm+mt
 source-wordcount: '5236'
 ht-degree: 0%
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 Adobe Dynamic Media Classic är en värdbaserad lösning för att hantera, förbättra, publicera och leverera mediefiler för webben, mobiler, e-post och internetanslutna displayer samt tryck.
 
-Om du vill använda Dynamic Media Classic måste du konfigurera molnkonfigurationen så att Dynamic Media Classic och Adobe Experience Manager Assets kan samverka med varandra. I det här dokumentet beskrivs hur du konfigurerar Experience Manager och Dynamic Media Classic.
+Om du vill använda Dynamic Media Classic måste du konfigurera molnkonfigurationen så att Dynamic Media Classic och Adobe Experience Manager Assets kan interagera med varandra. I det här dokumentet beskrivs hur du konfigurerar Experience Manager och Dynamic Media Classic.
 
 Information om hur du använder alla Dynamic Media Classic-komponenter på en sida och arbetar med video finns i [Använd Dynamic Media Classic](../assets/scene7.md).
 
@@ -418,7 +418,7 @@ Om du inte vill att resurser som skickas till Dynamic Media Classic ska publicer
 Innan du kan skicka resurser till Dynamic Media Classic utan att publicera dem måste du konfigurera följande:
 
 1. [Använd Admin Console för att skapa ett supportärende](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/support-for-experience-cloud.ug.html). I ditt supportärende begär du att du aktiverar en säker förhandsgranskning för ditt Dynamic Media Classic-konto.
-1. [Konfigurera säker förhandsgranskning för ditt Dynamic Media Classic-konto](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/upload-publish/testing-assets-making-them-public.html?lang=en).
+1. [Konfigurera säker förhandsgranskning för ditt Dynamic Media Classic-konto](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/upload-publish/testing-assets-making-them-public.html).
 
 Detta är samma steg som du följer för att skapa säkra testinställningar i Dynamic Media Classic.
 

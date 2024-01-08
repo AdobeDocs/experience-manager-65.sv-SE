@@ -7,9 +7,9 @@ topic-tags: configuring
 content-type: reference
 feature: Configuring
 exl-id: 3777a1ba-cc4e-41b9-9098-236f8141925f
-source-git-commit: e2a3470784beb04c2179958ac6cb98861acfaa71
+source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
 workflow-type: tm+mt
-source-wordcount: '2113'
+source-wordcount: '2092'
 ht-degree: 0%
 
 ---
@@ -178,7 +178,7 @@ Användarhantering inom AEM (inklusive tilldelning av åtkomsträttigheter) finn
 
 Dispatcher är ett Adobe Experience Manager-verktyg för cachelagring, eller belastningsutjämning, eller båda. Den kan användas med en webbserver i företagsklass.
 
-Se [Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=en) för fullständig information, särskilt [Konfigurera Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en) om du vill ha mer konfigurationsinformation.
+Se [Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html) för fullständig information, särskilt [Konfigurera Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html) om du vill ha mer konfigurationsinformation.
 
 ### Konfigurerar AEM LiveCycle Connector {#configuring-aem-livecycle-connector}
 

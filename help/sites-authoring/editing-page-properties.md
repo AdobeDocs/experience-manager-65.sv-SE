@@ -2,10 +2,10 @@
 title: Redigera egenskaper för innehållssidor
 description: Definiera de egenskaper som krävs för en sida i Adobe Experience Manager.
 exl-id: 3cd9374f-6f16-40fb-97cf-5f9a750b8dd2
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
 workflow-type: tm+mt
-source-wordcount: '1871'
-ht-degree: 2%
+source-wordcount: '1855'
+ht-degree: 1%
 
 ---
 
@@ -88,7 +88,7 @@ Egenskaperna fördelas på flera flikar.
 
   >[!CAUTION]
   >
-  >Alternativa URL:er:
+  >Vanity URL:er:
   >
   >* Måste vara unikt. Kontrollera att värdet inte redan används av en annan sida.
   >* Använd inte regex-mönster.
@@ -187,20 +187,20 @@ Visar sidminiatyrbilden. Du kan:
 
 * **Delning i sociala medier**
 
-  Definierar de delningsalternativ som är tillgängliga på sidan. Visar de alternativ som är tillgängliga för [Dela kärnkomponent](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/sharing.html?lang=en).
+  Definierar de delningsalternativ som är tillgängliga på sidan. Visar de alternativ som är tillgängliga för [Dela kärnkomponent](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/sharing.html).
 
    * **Aktivera användardelning för Facebook**
    * **Aktivera användardelning för Pinterest**
    * **Önskad XF-variation**
 Definiera Experience Fragment-variation som används för att generera metadata för en sida
 
-### Cloud Services {#cloud-services}
+### Cloud Service {#cloud-services}
 
-* **Cloud Services**
+* **Cloud Service**
 
   Definiera egenskaper för [molntjänster](/help/sites-developing/extending-cloud-config.md).
 
-### Personanpassning {#personalization}
+### Personalisering {#personalization}
 
 * **ContextHub-konfigurationer**
 
