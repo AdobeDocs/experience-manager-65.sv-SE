@@ -2,9 +2,9 @@
 title: Användarhandbok om AEM 6.5-hantering
 description: Upptäck hur du kan hantera ett AEM projekt med stöd från nyckelresurser och en omfattande samling AEM 6.5 användarhandböcker.
 exl-id: 40597a93-b307-47ce-9a9a-c2e12b7dd0e2
-source-git-commit: 5ee9bc34128738967124855652c7b38c65d8779d
+source-git-commit: 02dd950111a45908f0a65deb9e5c28b4b119269f
 workflow-type: tm+mt
-source-wordcount: '84'
+source-wordcount: '90'
 ht-degree: 11%
 
 ---
@@ -14,6 +14,8 @@ ht-degree: 11%
 Upptäck hur du kan hantera ett AEM projekt utan problem, med stöd från nyckelresurser, tillsammans med bästa praxis och riktlinjer.
 
 ## Viktiga artiklar
+
+Viktiga artiklar i den här handboken är:
 
 * [Hantera projekt - checklista för bästa praxis](/help/managing/best-practices.md)
 * [Riktlinjer för maskinvarans storlek](/help/managing/hardware-sizing-guidelines.md)
