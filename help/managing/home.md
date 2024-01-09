@@ -2,16 +2,16 @@
 title: Användarhandbok om AEM 6.5-hantering
 description: Upptäck hur du kan hantera ett AEM projekt med stöd från nyckelresurser och en omfattande samling AEM 6.5 användarhandböcker.
 exl-id: 40597a93-b307-47ce-9a9a-c2e12b7dd0e2
-source-git-commit: 5a7729e1792bc5849682800781e31f41c6bb6e4a
+source-git-commit: 5ee9bc34128738967124855652c7b38c65d8779d
 workflow-type: tm+mt
-source-wordcount: '294'
-ht-degree: 10%
+source-wordcount: '84'
+ht-degree: 11%
 
 ---
 
 # Användarhandbok om AEM 6.5-hantering
 
-Upptäck hur du kan hantera ett AEM projekt med stöd från nyckelresurser och en omfattande samling AEM 6.5 användarhandböcker.
+Upptäck hur du kan hantera ett AEM projekt utan problem, med stöd från nyckelresurser, tillsammans med bästa praxis och riktlinjer.
 
 ## Viktiga artiklar
 
@@ -20,37 +20,3 @@ Upptäck hur du kan hantera ett AEM projekt med stöd från nyckelresurser och e
 * [Bästa praxis för hantering av SEO och URL](/help/managing/seo-and-url-management.md)
 * [AEM och riktlinjerna för webbtillgänglighet](/help/managing/web-accessibility.md)
 * [Adobe Experience Manager beredskap för dataskydd och dataintegritet](/help/managing/data-protection-and-privacy.md)
-
-## Viktiga AEM
-
-* [Komma igång med AEM](https://experienceleague.adobe.com/docs/experience-manager-65.html)
-* [Versionsinformation för AEM 6.5](/help/release-notes/home.md)
-* [Senaste dokumentationsuppdateringarna](https://helpx.adobe.com/experience-manager/documentation-updates.html)
-* [AEM](/help/sites-administering/security-checklist.md)
-
-## AEM 6.5 användarhandböcker
-
-| Användarhandbok | Beskrivning |
-|--- |---|
-| [Versionsinformation](/help/release-notes/home.md) | Innehåller viktig information om den senaste versionen av AEM, inklusive vad som är nytt, vilka plattformar som stöds, borttagna och borttagna funktioner samt kända fel |
-| [Användarhandbok för Assets](/help/assets/home.md) | Lär dig hur du skapar, hanterar, levererar och optimerar digitala resurser. |
-| [Forms Användarhandbok](/help/forms/home.md) | Den här guiden beskriver hur du skapar, hanterar, publicerar och uppdaterar digitala formulär. |
-| [Administratörshandbok](/help/sites-administering/home.md) | Förstå hur du administrerar AEM |
-| [Redigeringshandbok](/help/sites-authoring/home.md) | I den här handboken förklaras begreppen för redigering i AEM. |
-| [Användargränssnittets redigeringshandbok](/help/sites-classic-ui-authoring/home.md) | I den här handboken förklaras begreppen för redigering i AEM i det klassiska användargränssnittet. |
-| [Användarhandbok för skärmar](https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/aem-screens-introduction.html) | Lär dig mer om den digitala signeringslösningen för att publicera dynamiska och interaktiva digitala upplevelser. |
-| [Distribuera användarhandbok](/help/sites-deploying/home.md) | Den här guiden visar grunderna i AEM. |
-| [Utveckla användarhandbok](/help/sites-developing/home.md) | Lär dig hur du bygger ut AEM. |
-| [Hantera användarhandbok](/help/managing/home.md) | I den här guiden beskrivs hur du hanterar ett AEM projekt. |
-| [Handbok för Commerce](/help/commerce/home.md) | Läs mer om Commerce integration framework om AEM. |
-
-## AEM
-
-* [AEM självstudier](https://helpx.adobe.com/experience-manager/kt/index/aem-6-4-videos.html)
-* [Användarhandbok för Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html)
-* [Användarhandbok för HTML](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html)
-* [Användarhandbok för kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
-* [Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/introduction.html)
-* [GDPR-beredskap](/help/managing/data-protection-and-privacy.md)
-* [Experience League](https://guided.adobe.com/?promoid=K42KVXHD&amp;mv=other#solutions/experience-manager)
-* [AEM-communityforum](https://forums.adobe.com/community/experience-cloud/marketing-cloud/experience-manager)
