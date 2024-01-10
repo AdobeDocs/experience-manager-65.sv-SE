@@ -5,9 +5,9 @@ role: Admin
 feature: Integrations
 exl-id: 2660de7c-0281-4884-98d9-e78f20cf571c
 hide: true
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 2cf980f643e1896ecd581fec44f963d7eb44766d
 workflow-type: tm+mt
-source-wordcount: '1608'
+source-wordcount: '1583'
 ht-degree: 0%
 
 ---
@@ -60,6 +60,7 @@ Så här prenumererar du på händelserna:
 1. Gå till fliken Projektlänkade mappar i molntjänsterna.
 1. Länkad mappsökväg: Välj en mapp i DAM där du vill skapa de länkade mapparna. Om det lämnas tomt används /content/dam som standard. Se till att metadatamatchemat för Workfront Tools och Workfront-mappen för länkade mappar har tillämpats på den markerade mappen.
 1. Länkad mappstruktur: Ange kommaavgränsade värden. Varje värde ska `DE:<some-project-custom-form-field>`, Portfolio, Program, Year, Name eller lite Literal String Value (det här sista med citattecken). Den är för närvarande inställd på Portfolio, Program, År, DE:Projekttyp, Namn.
+1. Konfigurera behörigheter: Lägg till `jcr:all permissions` behörigheter till `/conf/workfront-tools/settings/cloudconfigs` for `wf-workfront-users` grupp.
 1. Skapa länkad mapptitel i Workfront med hjälp av kryssrutan Mappstrukturnamn bör vara markerad om mappens titel i Workfront ska innehålla alla mappar i strukturen. I annat fall är det den sista mappens namn.
 1. Med undermappsmappar kan du ange en lista med mappar som ska skapas som en underordnad mapp till den länkade mappen.
 1. Projektstatus: Välj status för projektet för att skapa den länkade mappen.
