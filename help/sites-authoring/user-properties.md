@@ -7,9 +7,9 @@ topic-tags: introduction
 content-type: reference
 docset: aem65
 exl-id: 6079431d-7d08-4973-8bb4-a8d10626a795
-source-git-commit: 474a726058b141985f52a0faec6161a34be1e9dc
+source-git-commit: 4b5b3ac41034bd4cc0f359b35cac0515b76ca64e
 workflow-type: tm+mt
-source-wordcount: '514'
+source-wordcount: '521'
 ht-degree: 4%
 
 ---
@@ -105,7 +105,7 @@ Varje användare kan ange vissa egenskaper för sig själv.
 
 * **Använd klassisk redigeringsmiljö**
 
-  Det här alternativet aktiverar [klassiskt användargränssnitt](/help/sites-classic-ui-authoring/home.md)-baserad framtagning av sidor. Standardgränssnittet används som standard.
+  Det här alternativet aktiverar [klassiskt användargränssnitt](/help/sites-classic-ui-authoring/classic-page-author-first-steps.md)-baserad framtagning av sidor. Standardgränssnittet används som standard.
 
 * **Aktivera startsidan för resurser**
 

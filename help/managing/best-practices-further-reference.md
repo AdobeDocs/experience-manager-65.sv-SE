@@ -6,7 +6,7 @@ products: SG_EXPERIENCEMANAGER/6.5/MANAGING
 topic-tags: managing-checklist
 content-type: reference
 exl-id: 36620e3e-ecdf-4062-bbef-65513362d691
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: d2c0dea636280c28e1d5a76d1c5375f21b6eb111
 workflow-type: tm+mt
 source-wordcount: '3699'
 ht-degree: 0%
@@ -34,7 +34,7 @@ Fundera på AEM du använder och hur designen påverkas, till exempel:
 * [Assets](/help/assets/assets.md)
 * [Taggar](/help/sites-administering/tags.md)
 * [Hantering och översättning av flera webbplatser](/help/sites-administering/msm-and-translation.md)
-* [Forms](/help/forms/home.md)
+* [Forms](/help/forms/using/introduction-aem-forms.md)
 * [Communities](/help/communities/deploy-communities.md)
 
 Kontrollera dessutom [Versionsinformation](/help/release-notes/release-notes.md), för de olika versionerna av AEM, för att se när nya funktioner lades till.

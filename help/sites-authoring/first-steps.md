@@ -1,18 +1,19 @@
 ---
 title: Första steget för författare när de skapar innehåll i AEM
-description: En översikt över de viktigaste uppgifterna som du använder när du redigerar innehåll med Adobe Experience Manager (AEM).
+description: Upptäck de viktigaste begreppen för att skapa innehåll och redigering i AEM 6.5. Du hittar även information om hur du använder taggar, mallar och andra sidfunktioner.
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: page-authoring
 content-type: reference
 docset: aem65
 exl-id: b2103774-1876-4bf8-a29a-2ba0d51e7914
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: fcf7f56fe04cffb077bb40d11429b0c425876489
 workflow-type: tm+mt
-source-wordcount: '405'
+source-wordcount: '413'
 ht-degree: 0%
 
 ---
+
 
 # Steg 1 för författare{#first-steps-for-authors}
 

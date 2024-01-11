@@ -2,7 +2,7 @@
 title: Skapa innehållssidor i AEM
 description: Vilka uppgifter som ska utföras när en innehållssida redigeras i Adobe Experience Manager 6.5.
 exl-id: 07528cf0-e67a-46b5-a3b2-d1b74ad2228f
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+source-git-commit: d2c0dea636280c28e1d5a76d1c5375f21b6eb111
 workflow-type: tm+mt
 source-wordcount: '317'
 ht-degree: 0%
@@ -19,7 +19,7 @@ Här följer två typer av översiktstyper för att skapa med AEM:
 
 >[!NOTE]
 >
->I det här avsnittet beskrivs de uppgifter som ska utföras när en innehållssida redigeras. Det finns många andra funktioner som är närbesläktade med sidutvecklingen och som beskrivs i andra avsnitt av [Redigeringshandbok](/help/sites-authoring/home.md).
+>I det här avsnittet beskrivs de uppgifter som ska utföras när en innehållssida redigeras. Det finns många andra funktioner som är närbesläktade med sidutvecklingen och som beskrivs i andra avsnitt av [Redigeringshandbok](/help/sites-authoring/first-steps.md).
 
 ## Snabböversikt över funktioner som används för att skapa sidor {#quick-overview-of-features-used-for-authoring-pages}
 

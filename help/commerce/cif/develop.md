@@ -7,9 +7,9 @@ doc-type: tutorial
 kt: 5826
 thumbnail: 39476.jpg
 exl-id: 48479725-8b52-4ff2-a599-d20958b26ee6
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: d2c0dea636280c28e1d5a76d1c5375f21b6eb111
 workflow-type: tm+mt
-source-wordcount: '869'
+source-wordcount: '797'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 Utveckla AEM handelsprojekt som bygger på Commerce integration framework (CIF) för AEM följer samma regler och bästa praxis som andra AEM projekt. Granska dessa först:
 
-- [Användarhandbok om AEM 6.5-utveckling](/help/sites-developing/home.md)
+- [Användarhandbok om AEM 6.5-utveckling](/help/sites-developing/getting-started.md)
 - [AEM Core Concepts](/help/sites-developing/the-basics.md)
 - [AEM - riktlinjer och bästa praxis](/help/sites-developing/dev-guidelines-bestpractices.md)
 - [Skapa AEM projekt med Apache Maven](/help/sites-developing/ht-projects-maven.md)

@@ -7,10 +7,10 @@ content-type: reference
 topic-tags: deploying
 docset: aem65
 exl-id: 3df0662a-0768-4b56-8b94-c517657b4bd9
-source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
+source-git-commit: d2c0dea636280c28e1d5a76d1c5375f21b6eb111
 workflow-type: tm+mt
-source-wordcount: '1804'
-ht-degree: 1%
+source-wordcount: '1792'
+ht-degree: 0%
 
 ---
 
@@ -287,9 +287,9 @@ AEM startar och dirigerar automatiskt om webbläsaren till rätt sida, vanligtvi
 
 När du har loggat in har du åtkomst till AEM. Mer information, beroende på din roll, finns i:
 
-* [Redigering](/help/sites-authoring/home.md)
+* [Redigering](/help/sites-authoring/first-steps.md)
 * [Administratör](/help/sites-administering/home.md)
-* [Utveckling](/help/sites-developing/home.md)
+* [Utvecklar](/help/sites-developing/getting-started.md)
 * [Hantera](/help/managing/best-practices.md)
 
 ## Avancerad distribution {#advanced-deployment}

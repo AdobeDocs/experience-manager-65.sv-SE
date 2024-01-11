@@ -5,7 +5,7 @@ topic-tags: installing
 docset: aem65
 role: Admin
 exl-id: 4b24a38a-c1f0-4c81-bb3a-39ce2c4892b1
-source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
+source-git-commit: d2c0dea636280c28e1d5a76d1c5375f21b6eb111
 workflow-type: tm+mt
 source-wordcount: '1567'
 ht-degree: 0%
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 Företag samlar in och bearbetar data från flera formulär, backend-system och andra datakällor. Behandlingen av data omfattar gransknings- och godkännandeprocedurer, repetitiva uppgifter och dataarkivering. Du kan till exempel granska ett formulär och konvertera det till PDF-dokument. När de görs manuellt kan de repetitiva uppgifterna ta mycket tid och många resurser.
 
-Du kan använda [Forms-centrerat arbetsflöde i OSGi](../../forms/using/aem-forms-workflow.md) för att snabbt skapa anpassningsbara formulärbaserade arbetsflöden. Dessa arbetsflöden kan hjälpa dig att automatisera arbetsflöden för granskning och godkännande, arbetsflöden för affärsprocesser och andra repetitiva uppgifter. Dessa arbetsflöden hjälper också till att bearbeta dokument (skapa, sammanställa, distribuera och arkivera PDF-dokument, lägga till digitala signaturer för att begränsa åtkomsten till dokument, avkoda streckkodsformulär med mera) och använda Adobe Sign-signaturarbetsflöden med formulär och dokument.
+Du kan använda [Forms-centrerat arbetsflöde i OSGi](../../forms/using/aem-forms-workflow.md) för att snabbt skapa anpassningsbara formulärbaserade arbetsflöden. Dessa arbetsflöden kan hjälpa dig att automatisera arbetsflöden för granskning och godkännande, arbetsflöden för affärsprocesser och andra repetitiva uppgifter. Dessa arbetsflöden hjälper också till att bearbeta dokument (skapa, sammanställa, distribuera och arkivera PDF-dokument, lägga till digitala signaturer för att begränsa åtkomsten till dokument, avkoda streckkodsformulär med mera) och använda Adobe Sign-signaturarbetsflöde med formulär och dokument.
 
 När de har konfigurerats kan dessa arbetsflöden utlösas manuellt för att slutföra en definierad process eller köras programmatiskt när användare skickar ett formulär eller interaktiv kommunikation. Funktionen ingår i AEM Forms tilläggspaket.
 
@@ -28,7 +28,7 @@ AEM Forms är en kraftfull plattform för större företag. Forms-centrerat arbe
 >
 >Med Forms-centrerat arbetsflöde i OSGi kan du snabbt skapa och distribuera arbetsflöden för olika uppgifter i OSGi-stacken, utan att behöva installera den fullständiga processhanteringsfunktionen på JEE-stacken. Se en [jämförelse](capabilities-osgi-jee-workflows.md) av de Forms-centrerade AEM arbetsflödena i OSGi och Process Management i JEE för att lära dig skillnaden och likheterna i funktionerna.
 >
->Om du väljer att installera processhanteringsfunktionen på JEE-stacken efter jämförelsen kan du läsa [Installera eller uppgradera AEM Forms på JEE](/help/forms/home.md) för detaljerad information om hur du installerar och konfigurerar JEE-stacken och processhanteringsfunktionerna.
+>Om du väljer att installera funktionen för processhantering på JEE-stacken efter jämförelsen kan du läsa [Installera eller uppgradera AEM Forms på JEE](/help/forms/using/introduction-aem-forms.md) för detaljerad information om hur du installerar och konfigurerar JEE-stacken och processhanteringsfunktionerna.
 
 ## Topologi för distribution {#deployment-topology}
 

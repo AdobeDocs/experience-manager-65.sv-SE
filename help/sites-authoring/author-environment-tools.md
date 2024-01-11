@@ -7,7 +7,7 @@ topic-tags: page-authoring
 content-type: reference
 docset: aem65
 exl-id: 3b3c118b-ca35-484b-a62e-7bec98953123
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+source-git-commit: d2c0dea636280c28e1d5a76d1c5375f21b6eb111
 workflow-type: tm+mt
 source-wordcount: '2246'
 ht-degree: 3%
@@ -103,7 +103,7 @@ Det faktiska utseendet och hanteringen beror på vilken enhetstyp du använder:
 
 ## Resursläsaren {#assets-browser}
 
-Resursläsaren visar alla [resurser](/help/assets/home.md) som är tillgängliga för direkt användning på den aktuella sidan.
+Resursläsaren visar alla [resurser](/help/assets/assets.md) som är tillgängliga för direkt användning på den aktuella sidan.
 
 Resursläsaren är en flik i sidopanelen tillsammans med [bläddra bland komponenter](/help/sites-authoring/author-environment-tools.md#components-browser)r och [innehållsträd](/help/sites-authoring/author-environment-tools.md#content-tree). Om du vill öppna eller stänga sidopanelen använder du ikonen längst upp till vänster i verktygsfältet:
 

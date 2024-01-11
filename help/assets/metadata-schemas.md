@@ -7,7 +7,7 @@ role: User,Admin
 feature: Metadata
 exl-id: 0dd322cd-ce97-4335-825d-71f72a5e438c
 hide: true
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+source-git-commit: d2c0dea636280c28e1d5a76d1c5375f21b6eb111
 workflow-type: tm+mt
 source-wordcount: '3408'
 ht-degree: 5%
@@ -55,7 +55,7 @@ Så här visar du en lista med formulär eller mallar i [!DNL Experience Manager
 | | <ul><li>[!UICONTROL video]</li></ul> | Schemaformulär för videomaterial med MIME-typ som `video/avi` och `video/mp4`. |
 | [!UICONTROL collection] | | Schemaformulär för samlingar. |
 | [!UICONTROL contentfragment] | | [Schemaformulär för innehållsfragment](/help/sites-developing/customizing-content-fragments.md). |
-| [!UICONTROL forms] | | Det här schemaformuläret är relaterat till [Adobe Experience Manager Forms](/help/forms/home.md). |
+| [!UICONTROL forms] | | Det här schemaformuläret är relaterat till [Adobe Experience Manager Forms](/help/forms/using/introduction-aem-forms.md). |
 | [!UICONTROL ugc_contentfragment] | | Schemaformulär för användargenererade innehållskomponenter och resurser som är integrerade i Experience Manager från sociala medier. |
 
 >[!NOTE]

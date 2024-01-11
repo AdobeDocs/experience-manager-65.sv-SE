@@ -6,9 +6,9 @@ solution-title: Experience Cloud
 user-guide-description: Läs Adobe Experience Manager 6.5-dokumentationen och se hur det fungerar och vad programmet kan göra för dig.
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM 6.5
-source-git-commit: 241e39ae402744ac200cfd9220245b080aec33af
+source-git-commit: 4be8b14ca9af543cec89c85ec5750f2065033406
 workflow-type: tm+mt
-source-wordcount: '7328'
+source-wordcount: '7297'
 ht-degree: 1%
 
 ---
@@ -17,8 +17,7 @@ ht-degree: 1%
 # Adobe Experience Manager 6.5 - dokumentation {#content}
 
 + Versionsinformation {#release-notes}
-   + [Versionsinformation för AEM 6.5](/help/release-notes/home.md)
-   + [Aktuella versionsinformation](/help/release-notes/release-notes.md)
+   + [Versionsinformation](/help/release-notes/release-notes.md)
    + Tidigare versionsinformation {#service-pack}
       + [6.5.18](/help/release-notes/previous/6.5.18.md)
       + [6.5.17](/help/release-notes/previous/6.5.17.md)
@@ -74,7 +73,6 @@ ht-degree: 1%
    + [Stöd för samma webbplats-cookie](/help/sites-administering/same-site-cookie-support.md)
 + Sites {#sites}
    + Redigering {#authoring}
-      + [Användarhandbok för redigering - översikt](/help/sites-authoring/home.md)
       + Viktiga uppgifter, verktyg och begrepp för AEM {#essentials}
          + [Steg 1 för författare](/help/sites-authoring/first-steps.md)
          + [Sidredigering](/help/sites-authoring/page-authoring.md)
@@ -270,7 +268,6 @@ ht-degree: 1%
          + [Innehållshantering för skärmar](/help/sites-administering/content-management-screens.md)
          + [WebDAV-åtkomst](/help/sites-administering/webdav-access.md)
    + Skapa klassiskt användargränssnitt {#classic-ui}
-      + [Översikt över redigeringshandboken för det klassiska användargränssnittet](/help/sites-classic-ui-authoring/home.md)
       + Introduktion till klassisk gränssnittsredigering {#introduction}
          + [Steg 1 för författare](/help/sites-classic-ui-authoring/classic-page-author-first-steps.md)
          + [Om du skriver i det klassiska gränssnittet](/help/sites-classic-ui-authoring/classicui.md)
@@ -340,7 +337,6 @@ ht-degree: 1%
          + [Arbeta med Dynamic Media](/help/sites-classic-ui-authoring/dynamic-media-assets.md)
          + [Namnkonventioner för tillgångstestning](/help/sites-classic-ui-authoring/asset-naming-conventions.md)
 + Assets {#assets}
-   + [[!DNL Assets] användarhandbok](/help/assets/home.md)
    + [Om DAM](/help/assets/assets.md)
    + [Metodtips för resurser](/help/assets/best-practices-for-assets.md)
    + [Tillgänglighet i [!DNL Assets]](/help/assets/accessibility.md)
@@ -504,7 +500,6 @@ ht-degree: 1%
       + [Installera [!DNL enhanced connector] for [!DNL Workfront]](/help/assets/workfront-connector-install.md)
       + [Konfigurera [!DNL enhanced connector] for [!DNL Workfront]](/help/assets/workfront-connector-configure.md)
 + Forms {#forms}
-   + [AEM 6.5 Forms Guide](/help/forms/home.md)
    + Versionsinformation {#release-notes-new-features}
       + [Nyheter](/help/forms/using/whats-new.md)
       + [Vanliga frågor](/help/forms/using/frequently-asked-questions-faq.md)
@@ -1192,9 +1187,8 @@ ht-degree: 1%
       + [Generera och arbeta med hashvärden i dynamisk PDF forms](/help/forms/developing/hashing-forms.md)
       + [Skicka inloggningsuppgifter med WS-Security-huvuden](/help/forms/developing/passing-credentials.md)
 + Innehåll och handel {#commerce}
-   + [AEM Content and Commerce](/help/commerce/home.md)
-   + [Betydande förändringar AEM innehåll och handel](/help/commerce/cif/changes.md)
    + [Introduktion och översikt](/help/commerce/cif/introduction.md)
+   + [Betydande förändringar AEM innehåll och handel](/help/commerce/cif/changes.md)
    + Integreringar {#integrations}
       + [Adobe Commerce](/help/commerce/cif/integrating/magento.md)
       + [Commerce Solution från tredje part](/help/commerce/cif/integrating/third-party.md)
@@ -1213,8 +1207,8 @@ ht-degree: 1%
          + [Anpassade HTTP-huvuden](/help/commerce/cif/configuring/custom-http-headers.md)
       + Utveckling {#developing}
          + [Utveckla med AEM](/help/commerce/cif/develop.md)
-         + [Formatera CIF-komponenter](/help/commerce/cif/customizing/style-cif-component.md)
-         + [Anpassa CIF-komponenter](/help/commerce/cif/customizing/customize-cif-components.md)
+         + [CIF](/help/commerce/cif/customizing/style-cif-component.md)
+         + [Anpassa CIF](/help/commerce/cif/customizing/customize-cif-components.md)
          + [Använda CIF katalogväljare](/help/commerce/cif/customizing/use-cif-pickers.md)
    + [Adobe Commerce PWA Studio](/help/commerce/cif/pwa-studio/getting-started.md)
    + [Migrering](/help/commerce/cif/migration.md)
@@ -1276,7 +1270,6 @@ ht-degree: 1%
    + [Vad är en dokumentationsresa?](/help/journey-documentation/home.md)
 + Implementera {#implementing}
    + Utveckling {#developing}
-      + [Utveckla användarhandboken - översikt](/help/sites-developing/home.md)
       + Introduktion för utvecklare {#introduction}
          + [Getting Started Developing AEM Sites - WKND Tutorial](/help/sites-developing/getting-started.md)
          + [AEM Core Concepts](/help/sites-developing/the-basics.md)
@@ -1529,7 +1522,6 @@ ht-degree: 1%
          + [Skapa platser för mobila enheter](/help/sites-developing/mobile.md)
          + [Emulatorer](/help/sites-developing/emulators.md)
    + Distribuerar {#deploying}
-      + [Distribuera användarhandbok](/help/sites-deploying/home.md)
       + Introduktion till AEM {#introduction}
          + [Introduktion till AEM](/help/sites-deploying/platform.md)
          + [Tekniska krav](/help/sites-deploying/technical-requirements.md)

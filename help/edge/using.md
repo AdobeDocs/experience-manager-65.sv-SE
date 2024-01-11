@@ -2,9 +2,9 @@
 title: Använda Edge Delivery Services
 description: Använda Edge Delivery Services
 exl-id: 6c9178b0-c8f3-4fc7-8614-8e71ffc2f0b8
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: d2c0dea636280c28e1d5a76d1c5375f21b6eb111
 workflow-type: tm+mt
-source-wordcount: '608'
+source-wordcount: '586'
 ht-degree: 1%
 
 ---

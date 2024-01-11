@@ -1,14 +1,15 @@
 ---
 title: Introduktion och översikt
-description: Introduktion och översikt av innehåll och handel. Experience Manager Commerce integration framework (CIF) rekommenderas av Adobe att integrera och utöka handelstjänster från Adobe Commerce och andra tredjepartslösningar med Experience Cloud.
+description: Lär dig hur du använder och administrerar AEM innehåll och handel, med användbara artiklar om integreringar och hur du kommer igång med AEM Storefront.
 thumbnail: introducing-aem-commerce.jpg
 exl-id: 52dad8f9-1812-42a3-8106-92b23f8517cd
-source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
+source-git-commit: fcf7f56fe04cffb077bb40d11429b0c425876489
 workflow-type: tm+mt
-source-wordcount: '867'
+source-wordcount: '838'
 ht-degree: 0%
 
 ---
+
 
 # Innehåll och handel {#content-commerce}
 

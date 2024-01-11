@@ -8,7 +8,7 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 docset: aem65
 exl-id: 8d8a7237-8e87-4730-be90-2a18144fc65a
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: d2c0dea636280c28e1d5a76d1c5375f21b6eb111
 workflow-type: tm+mt
 source-wordcount: '192'
 ht-degree: 0%
@@ -39,7 +39,7 @@ AEM Delivery and Content Management APIs:
 
    * [JSON-exporterare](/help/sites-developing/json-exporter.md)
    * [Aktivera JSON-export för en komponent](/help/sites-developing/json-exporter-components.md)
-   * Se [Komponentdelen i användarhandboken för utveckling](/help/sites-developing/home.md) för mer information
+   * Se [Komponentdelen i användarhandboken för utveckling](/help/sites-developing/getting-started.md) för mer information
 
 * **Resurser**: Med Assets HTTP API kan du skapa/läsa-uppdatera-ta bort (CRUD)-åtgärder för resurser, inklusive binära filer, metadata, återgivningar och kommentarer. Se [AEM ASSETS HTTP API](/help/assets/mac-api-assets.md)
 

@@ -6,10 +6,10 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: best-practices
 exl-id: 504c61c7-dcd3-412c-9239-d24a2b78e4b9
-source-git-commit: f7b24617dec77c6907798b1615debdc2329c9d80
+source-git-commit: 4b5b3ac41034bd4cc0f359b35cac0515b76ca64e
 workflow-type: tm+mt
-source-wordcount: '759'
-ht-degree: 1%
+source-wordcount: '727'
+ht-degree: 0%
 
 ---
 
@@ -49,7 +49,7 @@ Vi.Retail levereras som AEM exempelinnehåll. Om du vill använda [starta AEM so
 
 >[!CAUTION]
 >
->Vi.Retail bygger på den senaste AEM tekniken och stöder därför inte [Skapa klassiskt användargränssnitt](/help/sites-classic-ui-authoring/home.md).
+>Vi.Retail bygger på den senaste AEM tekniken och stöder därför inte [Skapa klassiskt användargränssnitt](/help/sites-classic-ui-authoring/classic-page-author-first-steps.md).
 
 ### Senaste version {#latest-version}
 
@@ -79,7 +79,7 @@ Tabellen nedan ger en översikt över de viktigaste funktionerna som är tillgä
 |---|---|---|
 | Globaliserad webbplatsstruktur | Språkmallsidor som live-kopieras till landsspecifika webbplatser | Inte tillgängligt |
 | Innehållsfragment | Tillgänglig | Inte tillgängligt |
-| Experience Fragments | Tillgänglig | Inte tillgängligt |
+| Upplevelsefragment | Tillgänglig | Inte tillgängligt |
 | Responsiv layout | För alla sidor | Endast Geometrixx Media |
 | Redigerbara mallar | För alla sidor | Inte tillgängligt |
 | HTL | Alla komponenter | Begränsad |
