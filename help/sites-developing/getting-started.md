@@ -1,6 +1,6 @@
 ---
 title: Getting Started Developing AEM Sites - WKND Tutorial
-description: Lär dig hur du bygger ut AEM. Läs mer om plattformen och komponenterna och hitta information om utvecklingsverktyg och personalisering.
+description: Lär dig hur du bygger ut din AEM-instans. Läs mer om plattformen och komponenterna och hitta information om utvecklingsverktyg och personalisering.
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
@@ -10,7 +10,7 @@ exl-id: 8314d7fe-0a46-453d-9592-f1bcd8c8f10a
 source-git-commit: fcf7f56fe04cffb077bb40d11429b0c425876489
 workflow-type: tm+mt
 source-wordcount: '211'
-ht-degree: 0%
+ht-degree: 10%
 
 ---
 

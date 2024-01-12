@@ -1,6 +1,6 @@
 ---
 title: Introduktion till [!DNL Adobe Experience Manager Assets]
-description: Skapa, hantera, bearbeta och distribuera digitalt material i Experience Manager. I dessa handledningar beskrivs de effektivaste strategierna, tillgänglighetsfunktioner och hur du använder AEM 6.5-resurser.
+description: Skapa, hantera, bearbeta och distribuera digitala resurser i Experience Manager.  I dessa handledningar beskrivs de effektivaste strategierna, tillgänglighetsfunktioner och hur du använder AEM 6.5-resurser.
 contentOwner: AG
 feature: Asset Management
 role: Leader, Architect, User
@@ -8,7 +8,7 @@ exl-id: 68239634-a2e8-414e-a866-cd8082641ee8
 source-git-commit: fcf7f56fe04cffb077bb40d11429b0c425876489
 workflow-type: tm+mt
 source-wordcount: '882'
-ht-degree: 0%
+ht-degree: 2%
 
 ---
 
