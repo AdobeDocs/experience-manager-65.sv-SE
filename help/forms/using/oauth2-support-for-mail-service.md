@@ -2,9 +2,9 @@
 title: Konfigurera OAuth2-baserad autentisering för Microsoft&reg; Office 365 e-postserverprotokoll
 description: Konfigurera OAuth2-baserad autentisering för Microsoft&reg; Office 365 e-postserverprotokoll
 exl-id: cd3da71f-892c-4fde-905f-71a64fb5d4e4
-source-git-commit: 99808cb38c5d376ccb7fb550c5212138890cec11
+source-git-commit: 020b92463371294706e9873e0d8962583d19ac52
 workflow-type: tm+mt
-source-wordcount: '996'
+source-wordcount: '980'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ AEM Forms erbjuder OAuth 2.0-stöd för integrering med Microsoft® Office 365-p
 
 1. Logga in på [https://portal.azure.com/](https://portal.azure.com/) och söka efter **Azure Active Directory** i sökfältet och klicka på resultatet.
 Du kan även bläddra direkt till [https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Overview](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Overview)
-1. Klicka **Lägg till** > **Appregistrering** > **Ny registrering**
+1. Klicka **Lägg till** > **Appregistrering** > **Ny registrering**.
 
    ![Appregistrering](/help/forms/using/assets/outh_outlook_microsoft_azure.png)
 
@@ -33,7 +33,7 @@ I ovanstående fall **Konton i alla organisationskataloger (alla Azure AD-katalo
 
    ![Hemlig nyckel](/help/forms/using/assets/azure_secretkey.png)
 
-1. Om du vill lägga till behörigheter går du till det nya programmet och väljer **API-behörigheter** > **Lägg till en behörighet** > **Microsoft® Graph** > **Delegerade behörigheter**
+1. Om du vill lägga till behörigheter går du till det nya programmet och väljer **API-behörigheter** > **Lägg till en behörighet** > **Microsoft® Graph** > **Delegerade behörigheter**.
 1. Markera kryssrutorna för behörigheterna nedan för appen och klicka på **Lägg till behörighet**:
 
    * `IMAP.AccessUser.All`
@@ -81,7 +81,7 @@ Därefter måste du generera behörighetskoden som beskrivs i följande steg:
 
    ![Tillåt behörighet](/help/forms/using/assets/azure_permission.png)
 
-1. När du tillåter det omdirigeras du till en ny URL som: `https://login.microsoftonline.com/common/oauth2/nativeclient?code=<code>&session_state=[session_id]`
+1. När du tillåter omdirigeras du till en ny URL som: `https://login.microsoftonline.com/common/oauth2/nativeclient?code=<code>&session_state=[session_id]`
 
 1. Kopiera värdet för `<code>` från ovanstående URL `0.ASY...` till `&session_state` i ovanstående URL.
 
@@ -134,7 +134,7 @@ Konfigurera nu e-posttjänsten på den senaste JEE-servern genom att logga in p�
 
    >[!NOTE]
    >
-   Om du vill ändra autentiseringsinställningen Auth 2.0 till grundläggande autentisering för en viss process i en workbench kan du ange **OAuth 2.0-autentisering** värdet som False under **Använd globala inställningar** i **Anslutningsinställningar** -fliken.
+   Om du vill kan du ändra autentiseringsinställningen Auth 2.0 till grundläggande autentisering för en viss process i en workbench. Om du vill göra det anger du **OAuth 2.0-autentisering** värdet som False under **Använd globala inställningar** i **Anslutningsinställningar** -fliken.
 
 ## Så här aktiverar du autenticeringsmeddelanden {#enable_oauth_task}
 
@@ -148,7 +148,7 @@ Konfigurera nu e-posttjänsten på den senaste JEE-servern genom att logga in p�
 
    >[!NOTE]
    >
-   Om du vill veta mer om aktivitetsmeddelanden [klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/administrator-help/manage-endpoints/configuring-email-endpoints.html#create-an-email-endpoint-for-the-complete-task-service).
+   Om du vill veta mer om aktivitetsmeddelanden [klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/content/forms/administrator-help/configuring-email-endpoints.html#create-an-email-endpoint-for-the-complete-task-service).
 
 ## Konfigurera e-postslutpunkt {#configure_email_endpoint}
 
@@ -162,7 +162,7 @@ Konfigurera nu e-posttjänsten på den senaste JEE-servern genom att logga in p�
 
    >[!NOTE]
    >
-   Om du vill ha mer information om hur du konfigurerar e-postslutpunkter klickar du på [Konfigurera en e-postslutpunkt](https://experienceleague.adobe.com/docs/experience-manager-65/forms/administrator-help/manage-endpoints/configuring-email-endpoints.html).
+   Om du vill ha mer information om hur du konfigurerar e-postslutpunkter klickar du på [Konfigurera en e-postslutpunkt](https://experienceleague.adobe.com/docs/experience-manager-65/content/forms/administrator-help/configuring-email-endpoints.html).
 
 ## Felsökning {#troubleshooting}
 
