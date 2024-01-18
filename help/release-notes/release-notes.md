@@ -3,9 +3,9 @@ title: Versionsinformation för [!DNL Adobe Experience Manager] 6.5
 description: Hitta versionsinformation, nyheter, installationsanvisningar och en detaljerad ändringslista för [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 4
 exl-id: cac14ac1-9cda-46ae-8aa3-94674bb79157
-source-git-commit: 2c5791e972deef5fe81768d10ad53acaf946332a
+source-git-commit: 5da11d1f1a8568c12cb9f6ccea9d71e61c1310c3
 workflow-type: tm+mt
-source-wordcount: '4280'
+source-wordcount: '4348'
 ht-degree: 0%
 
 ---
@@ -444,6 +444,39 @@ Du måste lägga till följande egenskaper i indexdefinitionsnoden för att få 
       "visualSimilaritySearch"
     ]
   "refresh": true
+  ```
+
+* När en GraphQL-fråga körs med valfria variabler, om ett specifikt värde är **not** som anges för den valfria variabeln betraktas värdet för den variabeln som en implicit `null`. Det innebär att filtret bara matchar `null` värden för motsvarande egenskap.
+
+  I frågan nedan, där inget värde har angetts för egenskapen `lastName`:
+
+  ```graphql
+  query getAuthorsFilteredByLastName($authorLastName: String) {
+  authorList(filter:
+    {
+      lastName: {_expressions: {value: $authorLastName}
+      }}) {
+    items {
+      lastName
+      }
+    }
+  }
+  ```
+
+  Endast författare med `lastName` egenskapen inställd på null returneras:
+
+  ```graphql
+  {
+  "data": {
+    "authorList": {
+      "items": [
+        {
+          "lastName": null
+        }
+      ]
+    }
+  }
+  }
   ```
 
 * Om du uppgraderar [!DNL Experience Manager] från 6.5.0 till 6.5.4 till senaste Service Pack på Java™ 11, se `RRD4JReporter` undantag i `error.log` -fil. Starta om instansen av [!DNL Experience Manager]. <!-- THIS BULLET POINT WAS UPDATED AS PER CQDOC-20021, JANUARY 23, 2023 -->
