@@ -3,9 +3,9 @@ title: Tekniska krav
 description: En lista över de klient- och serverplattformar som stöds för Adobe Experience Manager.
 topic-tags: platform
 exl-id: 47529b9a-c4e5-434f-ac26-b01714ff863b
-source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
+source-git-commit: fbf056b6b7dcbfcaa27744672c45a87316c5f761
 workflow-type: tm+mt
-source-wordcount: '3624'
+source-wordcount: '3642'
 ht-degree: 0%
 
 ---
@@ -75,7 +75,7 @@ Adobe rekommenderar dessa konfigurationer och ger full support som en del av sta
 
 ## Plattformar som stöds {#supported-platforms}
 
-### Virtuella Java-datorer™ {#java-virtual-machines}
+### Java™ Virtual Machines {#java-virtual-machines}
 
 Programmet kräver att en Java™ Virtual Machine körs, vilket tillhandahålls av Java™ Development Kit-distributionen (JDK).
 
@@ -113,11 +113,13 @@ Det finns olika alternativ för att distribuera Adobe Experience Manager-databas
 |---|---|---|
 | **Filsystem med TAR-filer** `[1]` | Databas | A: Stöds |
 | **Filsystem med datastore** `[1]` | Binärfiler | A: Stöds |
-| Lagra binärfiler i TAR-filer i filsystemet `[1]` | Binärer | Z: Stöds inte för produktion |
+| Lagra binärfiler i TAR-filer i filsystemet `[1]` | Binärfiler | Z: Stöds inte för produktion |
 | Amazon S3 | Binärfiler | A: Stöds |
 | Microsoft® Azure Blob Storage | Binärfiler | A: Stöds |
-| MongoDB Enterprise 4.4 | Databas | A: Stöds `[2, 3, 4]` |
-| MongoDB Enterprise 4.2 | Databasen | S: Stöds `[2, 3, 4]` |
+| MongoDB Enterprise 6.0 | Databas | A: Stöds `[3, 4]` |
+| MongoDB Enterprise 5.0 | Databas | A: Stöds `[3, 4]` |
+| MongoDB Enterprise 4.4 | Databas | A: Stöds `[2, 3, 4, 7]` |
+| MongoDB Enterprise 4.2 | Databas | A: Stöds `[2, 3, 4, 7]` |
 | MongoDB Enterprise 4.0 | Databas | Z: Stöds inte |
 | MongoDB Enterprise 3.6 | Databas | Z: Stöds inte |
 | MongoDB Enterprise 3.4 | Databas | Z: Stöds inte |
@@ -135,6 +137,7 @@ Det finns olika alternativ för att distribuera Adobe Experience Manager-databas
 1. Gäller endast AEM Forms:
    * Stöd för Oracle Database 12c har tagits bort och stöd för Oracle Database 19c har lagts till.
    * Borttaget stöd för Microsoft® SQL Server 2016 och utökat stöd för Microsoft® SQL Server 2019.
+1. Stöds inte för AEM Forms.
 
 >[!NOTE]
 >
@@ -152,11 +155,11 @@ Om du vill köra både författaren och publicera på MongoDB måste du köpa tv
 >
 Adobe kundtjänst hjälper dig att hantera kvalificeringsproblem som rör användningen av MongoDB med AEM.
 >
-Mer information finns i [MongoDB för Adobe Experience Manager](https://www.mongodb.com/lp/contact/mongodb-adobe-experience-manager).
+Mer information finns på [sidan](https://www.mongodb.com/lp/contact/mongodb-adobe-experience-manager) MongoDB för Adobe Experience Manager.
 
 >[!NOTE]
 >
-De relationsdatabaser som stöds enligt ovan är tredjepartsprogram och ingår inte i AEM licenspaket.
+Relationsdatabaser som stöds enligt listan ovan är programvara från tredje part och ingår inte i AEM licensieringspaket.
 >
 För att köra AEM 6.5 med en relationsdatabas som stöds krävs ett separat supportavtal med en databasleverantör. Adobe kundtjänst hjälper dig att hantera kvalificeringsproblem som rör användningen av relationsdatabaser med AEM 6.5.
 >
@@ -164,7 +167,7 @@ För att köra AEM 6.5 med en relationsdatabas som stöds krävs ett separat sup
 
 ### Servletmotorer/programservrar {#servlet-engines-application-servers}
 
-Adobe Experience Manager kan köras antingen som en fristående server (JAR-filen för snabbstart) eller som ett webbprogram i en tredjepartsprogramserver (WAR-filen).
+Adobe Experience Manager kan köras antingen som en fristående server (snabbstart-JAR-filen) eller som ett webbprogram i en tredjepartsprogramserver (WAR-filen).
 
 Den lägsta servlet API-version som krävs är Servlet 3.1
 
@@ -174,7 +177,7 @@ Den lägsta servlet API-version som krävs är Servlet 3.1
 | Oracle WebLogic Server 12.2 (12cR2) | Z: Stöds inte |
 | IBM® WebSphere® Application Server Continuous Delivery (LibertyProfile) med Web Profile 7.0 och IBM® JRE 1.8 | R: Begränsad support för nya kontrakt `[2]` |
 | IBM® WebSphere® Application Server 9.0 och IBM® JRE 1.8 | R: Begränsad support för nya kontrakt `[1]` `[2]` |
-| Apache Tomcat 8.5.x | R: Begränsat stöd för nya kontrakt `[2]` |
+| Apache Tomcat 8.5.x | R: Begränsad support för nya kontrakt `[2]` |
 | JBoss® EAP 7.2.x med JBoss® Application Server | Z: Stöds inte |
 | JBoss® EAP 7.1.4 med JBoss® Application Server | R: Begränsad support för nya kontrakt `[1]` `[2]` |
 | JBoss® EAP 7.0.x med JBoss® Application Server | Z: Stöds inte |
@@ -214,13 +217,13 @@ Adobe Experience Manager fungerar med följande serverplattformar för produktio
 
 1. Produktionsinstallationer i Microsoft® Windows stöds för kunder som uppgraderar till 6.5 och för icke-produktionsanvändning. Nya driftsättningar är på begäran för AEM Sites och Assets.
 1. AEM Forms stöds på Microsoft® Windows Server utan begränsningar på supportnivå R.
-1. AEM Forms har tagit bort stödet för Microsoft® Windows Server 2016.
+1. AEM Forms har tagit bort stöd för Microsoft® Windows Server 2016.
 
 >[!NOTE]
 >
-Om du installerar AEM Forms 6.5 måste du se till att du har installerat följande 32-bitars omdistribuerbara Microsoft® Visual C++.
+Om du installerar AEM Forms 6.5 ska du kontrollera att du har installerat följande 32-bitars omdistribuerbara Microsoft® Visual C++.
 >
-* Microsoft® Visual C++ 2008 omdistribuerbar
+* Microsoft® Visual C++ 2008 återdistribuerbar
 * Återdistribuerbar Microsoft® Visual C++ 2010
 * Microsoft® Visual C++ 2012 återdistribuerbar
 * Microsoft® Visual C++ 2013 återdistribuerbar
@@ -235,9 +238,9 @@ För en molnbaserad miljö kan du titta på det senaste erbjudandet från produk
 
 Adobe erbjuder också Adobe Managed Services att distribuera AEM på Azure eller AWS. Adobe Managed Services förser experterna med erfarenhet och kompetens av att driftsätta och AEM i dessa molnmiljöer. Se [ytterligare dokumentation om Adobe Managed Services](https://business.adobe.com/products/experience-manager/managed-services.html?aemClk=t).
 
-I alla andra fall där AEM distribueras på Azure eller AWS, eller i någon annan molndatormiljö, finns stöd från Adobe i den virtuella datormiljön. Den virtuella miljön måste köras i enlighet med de tekniska specifikationer som anges på den här sidan. Alla rapporterade problem som rör AEM som körs i någon av dessa molnmiljöer måste kunna reproduceras oberoende av molntjänster som är specifika för molnmiljön. Det vill säga om inte molntjänsten stöds som en del av de tekniska krav som anges på den här sidan, till exempel Azure Blob Storage eller AWS S3.
+I alla andra fall där AEM distribueras på Azure eller AWS, eller i någon annan molndatormiljö, finns stöd från Adobe i den virtuella datormiljön. Den virtuella miljön måste köras i enlighet med de tekniska specifikationer som anges på den här sidan. Alla rapporterade problem som rör AEM som körs i någon av dessa molnmiljöer måste kunna reproduceras oberoende av alla molntjänster som är specifika för molndatormiljön. Det vill säga, om inte molntjänsten stöds som en del av de tekniska krav som anges på den här sidan, till exempel Azure Blob-lagring eller AWS S3.
 
-Adobe rekommenderar att du arbetar direkt med molnleverantören för att få rekommendationer om hur du ska distribuera AEM på Azure eller AWS utanför Adobe Managed Services. Du kan också arbeta med Adobe-partners som stöder distributionen av AEM i valfri molnmiljö. Den valda molnleverantören eller partnern ansvarar för storleksspecifikationer, utformning och implementering av arkitekturen för att uppfylla dina specifika krav på prestanda, belastning, skalbarhet och säkerhet.
+Adobe rekommenderar att du arbetar direkt med molnleverantören för att få rekommendationer om hur du ska distribuera AEM på Azure eller AWS utanför Adobe Managed Services. Eller i samarbete med Adobe partners som stöder driftsättningen av AEM i molnmiljön. Den valda molnleverantören eller partnern ansvarar för storleksspecifikationer, utformning och implementering av arkitekturen för att uppfylla dina specifika krav på prestanda, belastning, skalbarhet och säkerhet.
 
 ### Dispatcher Platforms (webbservrar) {#dispatcher-platforms-web-servers}
 
@@ -248,19 +251,19 @@ Följande webbservrar kan användas med Dispatcher version 4.3.2:
 | Plattform | Supportnivå |
 |---|---|
 | **Apache httpd 2.4.x** `[1,2]` | A: Stöds |
-| Microsoft® IIS 10 (Internet Information Server) | A: Stöds |
+| Microsoft® IIS 10 (Internet Information Server) | S: Stöds |
 | Microsoft® IIS 8.5 (Internet Information Server) | Z: Stöds inte |
 
-1. Webbservrar byggda baserat på Apache httpd-källkoden har lika mycket stöd som den version av httpd som den är baserad på. Om du är osäker kan du be Adobe om bekräftelse på supportnivån för respektive serverprodukt. Följande fall:
+1. Webbservrar byggda baserat på Apache httpd-källkoden har lika mycket stöd som den version av httpd som den är baserad på. Om du är osäker kan du be Adobe om en bekräftelse av den supportnivå som gäller respektive serverprodukt. Följande fall:
 
    1. HTTP-servern byggdes med enbart officiella källdistributioner av Apache, eller
    1. HTTP-servern levererades som en del av det operativsystem där den körs. Exempel: IBM® HTTP Server, Oracle HTTP Server
 
-1. Dispatcher är inte tillgängligt för Apache 2.4.x för Windows-operativsystem.
+1. Dispatcher är inte tillgänglig för Apache 2.4.x för Windows.
 
 ## Klientplattformar som stöds {#supported-client-platforms}
 
-### Webbläsare som stöds för redigering av användargränssnitt {#supported-browsers-for-authoring-user-interface}
+### Webbläsare som stöds för redigeringsgränssnittet {#supported-browsers-for-authoring-user-interface}
 
 Adobe Experience Manager användargränssnitt fungerar med följande klientplattformar. Alla webbläsare testas med standarduppsättningen med plugin-program och tillägg.
 
@@ -297,7 +300,7 @@ Uppdateringar för Mozilla Firefox, Google Chrome och Microsoft® Edge var sjät
   <tr>
    <td>Mozilla Firefox (Evergreen)</td>
    <td>A: Stöds</td>
-   <td>A: Stöds</td>
+   <td>S: Stöds</td>
   </tr>
   <tr>
    <td>Mozilla Firefox last ESR [1]</td>
@@ -306,8 +309,8 @@ Uppdateringar för Mozilla Firefox, Google Chrome och Microsoft® Edge var sjät
   </tr>
   <tr>
    <td>Apple Safari på macOS (Evergreen)</td>
-   <td>S: Stöds</td>
-   <td>S: Stöds</td>
+   <td>A: Stöds</td>
+   <td>A: Stöds</td>
   </tr>
   <tr>
    <td>Apple Safari 11.x på macOS</td>
@@ -332,7 +335,7 @@ Uppdateringar för Mozilla Firefox, Google Chrome och Microsoft® Edge var sjät
 
 ### Webbläsare som stöds för webbplatser {#supported-browsers-for-websites}
 
-I allmänhet beror webbläsarstödet för webbplatser som återges av AEM Sites på implementeringen av AEM sidmallar, design och komponentutdata, och kontrolleras därför av den part som implementerar dessa delar.
+I allmänhet är webbläsarstöd för webbplatser som återges av AEM Sites beroende av implementeringen av AEM sidmallar, design och komponentutdata, och det är därför den part som implementerar dessa delar som bestämmer.
 
 ### WebDAV-klienter {#webdav-clients}
 
@@ -364,9 +367,9 @@ När en IP-adress måste anges kan du välja (efter behov) bland följande:
 
 * Ett servernamn. Exempel: `https://www.yourserver.com:4502`
 
-* Standardfallet tolkas `localhost` för både IPv4- och IPv6-nätverksinstallationer. Exempel: `https://localhost:4502`
+* Standardskiftläget för `localhost` tolkas för både IPv4- och IPv6-nätverksinstallationer. Exempel: `https://localhost:4502`
 
-### Krav för AEM Dynamic Media-tillägg {#requirements-for-aem-dynamic-media-add-on}
+### Krav för AEM Dynamic Media Add-on {#requirements-for-aem-dynamic-media-add-on}
 
 AEM Dynamic Media är inaktiverat som standard. Se här för att [aktivera Dynamic Media](/help/assets/config-dynamic.md#enabling-dynamic-media).
 
@@ -406,7 +409,7 @@ Om språkinställningen är inställd så att LC_CTYPE inte är lika med `en_US.
 
 >[!NOTE]
 >
-**NUMA-arkitektur:** System med processorer med AMD64 och Intel® EM64T är vanligtvis konfigurerade som icke-enhetliga minnesarkitekturplattformar (NUMA). Det innebär att kärnan konstruerar flera minnesnoder vid start i stället för att konstruera en enda minnesnod.
+**NUMA-arkitektur:** System med processorer med AMD64 och Intel® EM64T konfigureras vanligtvis som NUMA-plattformar (non-uniform memory architecture). Det vill säga, kärnan konstruerar flera minnesnoder vid uppstart i stället för att konstruera en enda minnesnod.
 >
 Konstruktionen för flera noder kan resultera i minnesöverbelastning på en eller flera av noderna innan andra noder töms. När minnesöverbelastning inträffar kan kärnan bestämma sig för att avsluta processer (till exempel Image Server eller Platform Server) trots att det finns tillgängligt minne.
 >
@@ -414,22 +417,22 @@ Därför rekommenderar Adobe att du stänger av NUMA med **numa=off** startalter
 
 >[!NOTE]
 >
-**Servervärdnamnet måste matcha:** Kontrollera att serverns värdnamn kan matchas till en IP-adress. Om det inte är möjligt lägger du till det fullständigt kvalificerade värdnamnet och IP-adressen i **/etc/hosts**:
+**Serverns värdnamn måste matchas:** Kontrollera att serverns värdnamn kan matchas till en IP-adress. Om det inte är möjligt lägger du till det fullständigt kvalificerade värdnamnet och IP-adressen i **/etc/hosts**:
 >
 `<ip address> <fully qualified hostname>`
 
 #### Windows {#windows}
 
 * Microsoft® Windows Server 2016
-* Växla utrymme motsvarande minst dubbelt så mycket fysiskt minne (RAM)
+* Växla utrymme som motsvarar minst dubbelt så mycket fysiskt minne (RAM)
 
-Installera Microsoft® Visual Studio 2010, 2013 och 2015 som kan distribueras om för x64 och x86 om du vill använda Dynamic Media i Windows.
+Om du vill använda Dynamic Media i Windows installerar du Microsoft® Visual Studio 2010, 2013 och 2015 redistributable för x64 och x86.
 
 För Windows x64:
 
-* Få Microsoft® Visual Studio 2010 återdistribuerbart på [https://www.microsoft.com/en-us/download/details.aspx?id=26999](https://www.microsoft.com/en-us/download/details.aspx?id=26999)
-* Få Microsoft® Visual Studio 2013 återdistribuerbart på [https://www.microsoft.com/en-us/download/details.aspx?id=40784](https://www.microsoft.com/en-us/download/details.aspx?id=40784)
-* Få Microsoft® Visual Studio 2015 återdistribuerbart på [https://www.microsoft.com/en-us/download/details.aspx?id=48145](https://www.microsoft.com/en-us/download/details.aspx?id=48145)
+* Få Microsoft® Visual Studio 2010 omdistribuerbart på [https://www.microsoft.com/en-us/download/details.aspx?id=26999](https://www.microsoft.com/en-us/download/details.aspx?id=26999)
+* Få Microsoft® Visual Studio 2013 omdistribuerbart på [https://www.microsoft.com/en-us/download/details.aspx?id=40784](https://www.microsoft.com/en-us/download/details.aspx?id=40784)
+* Få Microsoft® Visual Studio 2015 omdistribuerbart på [https://www.microsoft.com/en-us/download/details.aspx?id=48145](https://www.microsoft.com/en-us/download/details.aspx?id=48145)
 
 För Windows x86:
 
@@ -437,7 +440,7 @@ För Windows x86:
 * Få Microsoft® Visual Studio 2013 återdistribuerbart på [https://www.microsoft.com/en-in/download/details.aspx?id=40769](https://www.microsoft.com/en-in/download/details.aspx?id=40769)
 * Få Microsoft® Visual Studio 2015 återdistribuerbart på [https://www.microsoft.com/en-us/download/details.aspx?id=52685](https://www.microsoft.com/en-us/download/details.aspx?id=52685)
 
-#### macOS {#macos}
+#### macOS (på engelska) {#macos}
 
 * 10.9.x och senare
 * Stöds endast i demos- och testversioner
@@ -457,8 +460,8 @@ För Windows x86:
    <td>XPS, bildformat (BMP, GIF, JPEG, JPG, TIF, TIFF, PNG, JPX, JP2, J2K, J2C, JPC), HTML, HTM, DWG, DXF och DWF</td>
   </tr>
   <tr>
-   <td><a href="https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html">Acrobat 2017 Classic track</a> senaste versionen (inaktuell)</td>
-   <td>XPS, bildformat (BMP, GIF, JPEG, JPG, TIF, TIFF, PNG, JPX, JP2, J2K, J2C, JPC), HTML, HTM, DWG, DXF och DWF</td>
+   <td><a href="https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html">Senaste versionen av det klassiska spåret</a> Acrobat 2017 (borttagen)</td>
+   <td>XPS, bildformat (BMP, GIF, JPEG, JPG, TIF, TIFF, PNG, JPF, JPX, JP2, J2K, J2C, JPC), HTML, HTM, DWG, DXF och DWF</td>
   </tr>
   <tr>
    <td>Microsoft® Office 2019</td>
@@ -519,22 +522,22 @@ Dessutom
 
 ### Krav för AEM Forms Designer {#requirements-for-aem-forms-designer}
 
-* Microsoft® Windows® 2016 Server, Microsoft® Windows® 2019 Server eller Microsoft® Windows® 10
+* Microsoft Windows 2016 Server, Microsoft Windows 2019 Server eller Microsoft®®® Windows®®® 10
 * 1 GHz eller snabbare processor med stöd för PAE, NX och SSE2.
 * 1 GB RAM för 32-bitars eller 2 GB RAM för 64-bitars operativsystem
-* 16 GB diskutrymme för 32-bitars eller 20 GB för 64-bitars operativsystem
+* 16 GB diskutrymme för 32-bitars eller 20 GB diskutrymme för 64-bitars operativsystem
 * Grafikminne - 128 MB GPU (256 MB rekommenderas)
 * 2,35 GB ledigt hårddiskutrymme
-* Bildskärmsupplösning på 1 024 x 768 pixlar eller högre
-* Maskinvaruacceleration för video (valfritt)
+* 1024 X 768 pixlar eller högre bildskärmsupplösning
+* Maskinvaruacceleration för video (tillval)
 * Acrobat Pro DC, Acrobat Standard DC eller Adobe Acrobat Reader DC
-* Administrativ behörighet för att installera Designer
+* Administratörsbehörighet för att installera Designer
 * Microsoft Visual C++ 2019 (VC 14.28 eller senare) 32-bitars körningsmiljö för 32-bitars AEM Forms Designer
 * Microsoft Visual C++ 2019 (VC 14.28 eller senare), 64-bitars runtime för 64-bitars AEM Forms Designer (för både OSGI- och JEE-stacken)
 
 ### Krav för AEM Assets XMP metadata write-back {#requirements-for-aem-assets-xmp-metadata-write-back}
 
-XMP stöds och är aktiverat för följande plattformar och filformat:
+XMP-tillbakaskrivning stöds och aktiveras för följande plattformar och filformat:
 
 * **Operativsystem:**
 
@@ -547,4 +550,4 @@ XMP stöds och är aktiverat för följande plattformar och filformat:
 
 ### Krav för AEM Assets att bearbeta metadataintensiva resurser i Linux® {#assetsonlinux}
 
-XMPFilesProcessor-processen kräver att biblioteket GLIBC_2.14 fungerar. Använd en Linux®-kärna som innehåller GLIBC_2.14, till exempel Linux®-kärna version 3.1.x. Prestandan för bearbetning av resurser som innehåller en stor mängd metadata förbättras, till exempel PSD-filer. Om du använder en tidigare version av GLIBC uppstår fel i loggar som börjar med `com.day.cq.dam.core.impl.handler.xmp.NCommXMPHandler Failed to read XMP`.
+XMPFilesProcessor-processen kräver att biblioteket GLIBC_2.14 fungerar. Använd en Linux®-kärna som innehåller GLIBC_2.14, till exempel Linux®-kärna version 3.1.x. Prestandan för bearbetning av resurser som innehåller en stor mängd metadata förbättras, till exempel PSD-filer. Om du använder en tidigare version av GLIBC leder det till fel i loggar som börjar med `com.day.cq.dam.core.impl.handler.xmp.NCommXMPHandler Failed to read XMP`.
