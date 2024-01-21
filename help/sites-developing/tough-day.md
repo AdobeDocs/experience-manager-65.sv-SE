@@ -4,9 +4,9 @@ description: Tough Day-testet simulerar den dagliga belastningen för cirka 1 00
 topic-tags: testing
 content-type: reference
 exl-id: ceb9671c-57f9-4d81-94c0-0dbccd4d90a2
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+source-git-commit: 61c7955c5370b5341d097dc36d08b2b92b89517b
 workflow-type: tm+mt
-source-wordcount: '1824'
+source-wordcount: '1826'
 ht-degree: 0%
 
 ---
@@ -400,7 +400,7 @@ Tough Day 2 skapar en loggmapp i samma katalog som du körde Tough Day 2. Den h�
 * **toughday.log**: innehåller meddelanden som rör programtillståndet, felsökningsinformation och globala meddelanden.
 * **toughday_&lt;testname>.log**: meddelanden relaterade till det angivna testet.
 
-Loggarna skrivs inte över, efterföljande körningar lägger till meddelanden i de befintliga loggarna. Loggarna har flera nivåer. Mer information finns i ` [loglevel parameter](/help/sites-developing/tough-day.md#global-parameters)`.
+Loggarna skrivs inte över, efterföljande körningar lägger till meddelanden i de befintliga loggarna. Loggarna har flera nivåer. Mer information finns i [loglevel-parameter.](#global-parameters).
 
 <!--
 #### Example Usage {#example-usage}

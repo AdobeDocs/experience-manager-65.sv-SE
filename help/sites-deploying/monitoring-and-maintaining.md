@@ -8,9 +8,9 @@ content-type: reference
 docset: aem65
 feature: Configuring
 exl-id: d3375935-090d-4052-8234-68ef4ddbab6a
-source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
+source-git-commit: 783824ece92c12476505d695b961d782d7d70cb9
 workflow-type: tm+mt
-source-wordcount: '5793'
+source-wordcount: '5792'
 ht-degree: 0%
 
 ---
@@ -203,7 +203,7 @@ AEM WCM registrerar detaljerade loggar. När du har packat upp och startat Quick
 
 Rotation av loggfiler avser den process som begränsar filens tillväxt genom att skapa en fil regelbundet. I AEM anropas en loggfil `error.log` roteras en gång om dagen enligt följande regler:
 
-* The `error.log` filen får ett nytt namn enligt mönstret {original_filename} `.yyyy-MM-dd`. Den aktuella loggfilen får till exempel ett nytt namn den 11 juli 2010 `error.log-2010-07-10`, sedan en ny `error.og` skapas.
+* The `error.log` filen får ett nytt namn enligt mönstret `{original_filename}.yyyy-MM-dd`. Den aktuella loggfilen får till exempel ett nytt namn den 11 juli 2010 `error.log-2010-07-10`, sedan en ny `error.log` skapas.
 
 * Tidigare loggfiler tas inte bort, så det är ditt ansvar att rensa gamla loggfiler med jämna mellanrum för att begränsa diskanvändningen.
 
