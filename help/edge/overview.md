@@ -1,15 +1,15 @@
 ---
-title: Komma igång med Edge Delivery Services
-description: Komma igång med Edge Delivery Services
+title: Kom igång med Edge Delivery Services
+description: Kom igång med Edge Delivery Services
 exl-id: 8d2b2d6c-ae11-4829-842e-b186f5491713
 source-git-commit: d2c0dea636280c28e1d5a76d1c5375f21b6eb111
 workflow-type: tm+mt
 source-wordcount: '834'
-ht-degree: 0%
+ht-degree: 2%
 
 ---
 
-# Komma igång med Edge Delivery Services {#getstart-edge}
+# Kom igång med Edge Delivery Services {#getstart-edge}
 
 Med Edge Delivery Services levererar AEM exceptionella upplevelser som skapar engagemang och konverteringar. AEM gör det genom att leverera slagkraftiga upplevelser som är snabba att skapa och utveckla. Det är en sammanslagen uppsättning tjänster som möjliggör en snabb utvecklingsmiljö där författare snabbt kan uppdatera och publicera och nya webbplatser snabbt lanseras. Med Edge Delivery Services kan du öka konverteringsgraden, minska kostnaderna och skapa extrem innehållshastighet.
 

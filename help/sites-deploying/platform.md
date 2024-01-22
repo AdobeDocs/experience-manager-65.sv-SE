@@ -1,6 +1,6 @@
 ---
 title: Introduktion till AEM
-description: Lär dig mer om den AEM plattformen och dess viktigaste komponenter, inklusive installation och driftsättning av Adobe Experience Manager 6.5 samt om dess arkitektur, inklusive Adobe Managed Services molndriftsättning.
+description: Lär dig mer om AEM-plattformen och dess viktigaste komponenter, inklusive installation och driftsättning av Adobe Experience Manager 6.5 samt om dess arkitektur, inklusive driftsättning av molnet i Adobe Managed Services.
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: platform
@@ -10,7 +10,7 @@ exl-id: 8ee5f4ff-648d-45ea-a51e-894cd4385e62
 source-git-commit: fcf7f56fe04cffb077bb40d11429b0c425876489
 workflow-type: tm+mt
 source-wordcount: '776'
-ht-degree: 0%
+ht-degree: 4%
 
 ---
 
