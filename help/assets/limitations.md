@@ -8,7 +8,7 @@ geptopics: SG_SCENESEVENONDEMAND_PK/categories/ecatalogs
 feature: Dynamic Media Classic,Asset Management,Image Sets,Spin Sets,eCatalog
 role: User
 exl-id: e4d4059e-ac0b-42e7-910c-001310796574
-source-git-commit: 3fa8680480e0da1c58c99e8ce127ce228ab87803
+source-git-commit: cc219931430ba571745e6ef254a034a689acd1cf
 workflow-type: tm+mt
 source-wordcount: '308'
 ht-degree: 1%
@@ -57,7 +57,7 @@ Dynamic Media stöder inte följande kombinationer av webbläsare och operativsy
 <!-- CQDOC-19433 (original ticket)
 and CQDOC-19792 (removed as per this ticket December 5, 2022) -->
 
-Från och med den 30 april 2024 upphör Adobe Dynamic Media med stödet för följande:
+Från och med den 30 april 2024 upphör stödet för följande i Adobe Dynamic Media:
 
 * SSL (Secure Socket Layer) 2.0
 * SSL 3.0
