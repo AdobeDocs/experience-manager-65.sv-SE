@@ -6,9 +6,9 @@ solution-title: Experience Cloud
 user-guide-description: Läs Adobe Experience Manager 6.5-dokumentationen och se hur det fungerar och vad programmet kan göra för dig.
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM 6.5
-source-git-commit: 4be8b14ca9af543cec89c85ec5750f2065033406
+source-git-commit: d232bfdad7b8413eb015f6fe5dd3442cebf1001d
 workflow-type: tm+mt
-source-wordcount: '7297'
+source-wordcount: '7312'
 ht-degree: 1%
 
 ---
@@ -1180,6 +1180,7 @@ ht-degree: 1%
       + [Bearbetar dokument även om AEM Forms-servern inte är helt igång](/help/forms/using/processing-documents-even-if-aem-forms-server-not-fully-up.md)
       + [Det går inte att använda utdatatjänsten, Forms-tjänsten eller DoR-tjänsten (Document of Record)](/help/forms/using/connection-issues-with-output-forms-and-document-of-record-dor-services.md)
       + [Minska STORLEK 2 RCE-sårbarhet för Experience Manager Forms](/help/forms/using/mitigating-struts-2-rce-vulnerabilities-for-experience-manager-manager-form.md)
+      + [Det gick inte att säkerhetskopiera databasen vid uppgradering till AEM Forms Service Pack. 6.5.12.0](/help/forms/using/failed-to-back-up-the-database-on-upgrading-to-aem-forms-service-pack-6.5.12.0.md)
    + Äldre dokumentation {#legacy-documentation}
       + [Använda den körda skripttjänsten i AEM Forms på JEE Workbench för att skapa XML-data](/help/forms/developing/building-xml.md)
       + [Komprimera och dekomprimera filer med en AEM Forms på en anpassad JEE DSC](/help/forms/developing/compressing-decompressing-custom-dsc.md)
