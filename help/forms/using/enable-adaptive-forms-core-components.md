@@ -8,9 +8,9 @@ docset: aem65
 role: Admin, Developer
 feature: Adaptive Forms, Core Components
 exl-id: 6585ea71-6242-47d3-bc59-6f603cf507b6
-source-git-commit: 4a8155f754d1f71354717f5eb22511baab110916
+source-git-commit: 6cec9874bff54dea63562f7a880429d54e83ba79
 workflow-type: tm+mt
-source-wordcount: '953'
+source-wordcount: '969'
 ht-degree: 0%
 
 ---
@@ -105,12 +105,11 @@ Så här skapar du en AEM Archetype 41 eller [senare](https://github.com/adobe/a
 1. Uppdatera projektet så att det innehåller den senaste versionen av Forms Core Components:
 
    1. Öppna [AEM Archetype-projektmapp]/pom.xml för redigering.
-   1. Ange version av `core.forms.components.version` och `core.forms.components.af.version` till [senaste Forms Core Components](https://github.com/adobe/aem-core-forms-components/tree/release/650#system-requirements) och se till att båda har samma version som **Forms Core Components** som anges i tabellen och ange version av `core.wcm.components.version` som anges i **WCM-kärnkomponenter**.
+   1. Ange version av `core.forms.components.version` och `core.forms.components.af.version` till [senaste Forms Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/version.html#aem-as-form-version-history) och se till att båda har samma version som **Forms Core Components** som anges i tabellen och ange version av `core.wcm.components.version` som anges i [WCM-kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/versions.html).
 
       >[!WARNING]
       >
-      >* När du skapar ett Arketype-projekt med `version 45`, [AEM Archetype-projektmapp]/pom.xml ställer först in versionen av formulärets kärnkomponenter till `1.1.28`. Innan du bygger eller driftsätter Archetype-projektet ska du uppdatera komponentversionen för formulär till `1.1.26`.
-
+      >* När du skapar ett Arketype-projekt med version 45 är `[AEM Archetype Project Folder]/pom.xml` ställer först in versionen för formulärets kärnkomponenter till 1.1.28. Innan du bygger eller driftsätter Archetype-projektet ska du uppdatera formulärkärnkomponentens version till 1.1.26. Den senaste versionen finns i [AEM 6.5 Forms - versionshistorik](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/version.html#aem-as-form-version-history).
 
       >[!NOTE]
       >
