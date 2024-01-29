@@ -2,9 +2,9 @@
 title: Programfixar för AEM Forms
 description: Innehåller information om hur du hämtar och installerar en snabbkorrigering för AEM Forms.
 exl-id: 37287332-3c8d-4ddc-a77e-3c5ee332898b
-source-git-commit: 4c47fc5d03732d206c9eb18feb6e44018e936472
+source-git-commit: 4685a4babbec07dc09fe19c9264b4141b9989fbb
 workflow-type: tm+mt
-source-wordcount: '201'
+source-wordcount: '320'
 ht-degree: 0%
 
 ---
@@ -12,6 +12,10 @@ ht-degree: 0%
 # Adobe Experience Manager Forms Hotfixes{#aem-form-hotfix}
 
 I den här artikeln listas de viktiga korrigeringar som har implementerats för att åtgärda kända fel, förbättra systemstabiliteten och förbättra AEM Forms övergripande prestanda.
+
+>[!NOTE]
+>
+> Programfixarna är avsedda att vara kumulativa och omfattar alla föregående korrigeringar. När du tillämpar den senaste snabbkorrigeringen på en release åtgärdar den inte bara det senaste problemet utan även alla tidigare felkorrigeringar och förbättringar.
 
 ## Programfixar för Adaptive Forms {#hotfix-for-adaptive-forms}
 
@@ -21,6 +25,34 @@ I den här artikeln listas de viktiga korrigeringar som har implementerats för 
     <td><strong>Datum</strong></td>
     <td><strong>Länk för hämtning av snabbkorrigeringar (AEM Software Distribution link)</strong></td>
     <td><strong>Åtgärdade problem</strong></td>
+  </tr>
+  <tr>
+    <td>29 januari 2024</td>
+     <td>
+     <ul>
+     <li><a href="https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Ffd%2Fforms-foundation-qs-content-4.0.170-FORMS-12692-B0001.zip">Programfix för AEM Service Pack 6.5.19.0 för Windows på JEE-server</a> </li>
+     </ul>
+     </td>
+    <td>
+    <ul>
+    <li>På AEM Forms på JEE-servern kan inte HTML5 Forms som använder kontextsökvägen återges. (FORMS-12485).</li>
+    </ul>
+    </td>    
+  </tr>
+  <tr>
+    <td>29 januari 2024</td>
+     <td>
+     <ul>
+     <li><a href="https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Ffd%2Fadobe-aemfd-win-pkg-6.0.1016-004.zip">Programfix för AEM Service Pack 6.5.18.0 för Microsoft Windows</a> </li>
+     <li><a href="https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Ffd%2Fadobe-aemfd-linux-pkg-6.0.1016-004.zip">Programfix för AEM Service Pack 6.5.18.0 för Linux</a></li>
+     <li><a href="https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Ffd%2Fadobe-aemfd-osx-pkg-6.0.1016-004.zip">Programfix för AEM Service Pack 6.5.18.0 för Apple macOS</a></li>
+     </ul>
+     </td>
+    <td>
+    <ul>
+    <li> Komponenten OTB Scribble Signature kan inte återge för en förhandsgranskning i ett anpassat format. (FORMS-12073).</li>
+    </ul>
+    </td>    
    </tr>
    <tr>
     <td>20 november 2023</td>
@@ -38,9 +70,9 @@ I den här artikeln listas de viktiga korrigeringar som har implementerats för 
     <li>Interaktiv kommunikation med stora textbundna bilder kan inte öppnas i redigeringsläge. (FORMS-10578)</li>
     </ul>
     </td>    
-    </tr>
-    <tbody>
-     </table>
+  </tr>
+  <tbody>
+</table>
 
 ## Hämta och installera en programfix {#download-install-hotfix}
 
