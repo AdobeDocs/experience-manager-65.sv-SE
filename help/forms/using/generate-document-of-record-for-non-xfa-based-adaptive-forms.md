@@ -7,9 +7,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 docset: aem65
 feature: Adaptive Forms, Foundation Components
 exl-id: 7240897f-6b3a-427a-abc6-66310c2998f3
-source-git-commit: d85fc98d9a31bc4014aef4311ba0f838c7ef619a
+source-git-commit: 05f54e451c72b0a1690ba4a2ca50db87711a8094
 workflow-type: tm+mt
-source-wordcount: '3454'
+source-wordcount: '3479'
 ht-degree: 0%
 
 ---
@@ -29,6 +29,11 @@ ht-degree: 0%
 Efter att ha skickat in ett formulär vill era kunder vanligtvis registrera, i utskrift eller i dokumentformat, den information de har fyllt i formuläret för framtida referens. Detta kallas för ett urkunder.
 
 I den här artikeln beskrivs hur du kan generera ett postdokument för Adaptiv Forms eller Adaptiv formulärfragment.
+
+>[!NOTE]
+>
+> Stödet för att anpassa dina adaptiva formulärfragment och fälten i den adaptiva formulärredigeraren introducerades i AEM 6.5 Forms Service Pack 19 (6.5.19.0).
+
 
 >[!NOTE]
 >
