@@ -6,7 +6,7 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: platform
 content-type: reference
 exl-id: fe946b9a-b29e-4aa5-b973-e2a652417a55
-source-git-commit: 152b6078d6a19f8220564188d4d5d5a7bdee4146
+source-git-commit: ff9d054d0b08f5f98f5edb63975a0dbc8370d42f
 workflow-type: tm+mt
 source-wordcount: '565'
 ht-degree: 0%
@@ -65,7 +65,7 @@ Använd en `Session` instans för att skapa en `javax.jcr.Node` -instans. A `Nod
 Node root = session.getRootNode();
 ```
 
-När du har skapat en `Node`kan du till exempel utföra åtgärder som att skapa en annan nod och lägga till ett värde till den. I följande kod skapas två noder och ett värde läggs till i den andra noden.
+När du har skapat en `Node` kan du till exempel utföra åtgärder som att skapa en annan nod och lägga till ett värde till den. I följande kod skapas två noder och ett värde läggs till i den andra noden.
 
 ```java
 // Store content
