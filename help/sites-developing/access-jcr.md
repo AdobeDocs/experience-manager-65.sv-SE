@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: platform
 content-type: reference
 exl-id: fe946b9a-b29e-4aa5-b973-e2a652417a55
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: 152b6078d6a19f8220564188d4d5d5a7bdee4146
 workflow-type: tm+mt
-source-wordcount: '586'
+source-wordcount: '565'
 ht-degree: 0%
 
 ---
@@ -31,9 +31,9 @@ Mer information om hur du skickar frågor till Adobe CQ JCR med JCR-fråge-API:t
 
 ## Skapa en databasinstans {#create-a-repository-instance}
 
-Även om det finns olika sätt att ansluta till en databas och upprätta en anslutning använder den här utvecklingsartikeln en statisk metod som tillhör `org.apache.jackrabbit.commons.JcrUtils` klassen. Namnet på metoden är `getRepository`. Den här metoden tar en strängparameter som representerar URL:en för Adobe CQ-servern. Till exempel, `http://localhost:4503/crx/server`.
+Även om det finns olika sätt att ansluta till en databas och upprätta en anslutning använder den här utvecklingsartikeln en statisk metod som tillhör `org.apache.jackrabbit.commons.JcrUtils` klassen. Namnet på metoden är `getRepository`. Den här metoden tar en strängparameter som representerar URL:en för Adobe CQ-servern. Till exempel: `http://localhost:4503/crx/server`.
 
-The `getRepository`returnerar en `Repository`-instans, vilket visas i följande kodexempel.
+The `getRepository` returnerar en `Repository` -instans, vilket visas i följande kodexempel.
 
 ```java
 //Create a connection to the AEM JCR repository running on local host
@@ -42,14 +42,14 @@ Repository repository = JcrUtils.getRepository("http://localhost:4503/crx/server
 
 ## Skapa en sessionsinstans {#create-a-session-instance}
 
-The `Repository`-instansen representerar CRX-databasen. Du använder `Repository`-instans för att upprätta en session med databasen. Om du vill skapa en session anropar du `Repository`instansens `login`metod och skicka en `javax.jcr.SimpleCredentials` -objekt. The `login`returnerar en `javax.jcr.Session` -instans.
+The `Repository` -instansen representerar CRX-databasen. Du använder `Repository` -instans för att upprätta en session med databasen. Om du vill skapa en session anropar du `Repository` instansens `login` metod och skicka en `javax.jcr.SimpleCredentials` -objekt. The `login` returnerar en `javax.jcr.Session` -instans.
 
-Du skapar en `SimpleCredentials`genom att använda dess konstruktor och skicka följande strängvärden:
+Du skapar en `SimpleCredentials` genom att använda dess konstruktor och skicka följande strängvärden:
 
 * Användarnamn;
 * Motsvarande lösenord
 
-När du skickar den andra parametern anropar du String-objektets `toCharArray`-metod. Följande kod visar hur du anropar `login`metod som returnerar en `javax.jcr.Sessioninstance`.
+När du skickar den andra parametern anropar du String-objektets `toCharArray` -metod. Följande kod visar hur du anropar `login` metod som returnerar en `javax.jcr.Sessioninstance`.
 
 ```java
 //Create a Session instance
@@ -58,7 +58,7 @@ javax.jcr.Session session = repository.login( new SimpleCredentials("admin", "ad
 
 ## Skapa en nodinstans {#create-a-node-instance}
 
-Använd en `Session`instans för att skapa en `javax.jcr.Node` -instans. A `Node`-instans gör att du kan utföra nodåtgärder. Du kan till exempel skapa en nod. Om du vill skapa en nod som representerar rotnoden anropar du `Session`instansens `getRootNode` -metoden, vilket visas på följande kodrad.
+Använd en `Session` instans för att skapa en `javax.jcr.Node` -instans. A `Node` -instans gör att du kan utföra nodåtgärder. Du kan till exempel skapa en nod. Om du vill skapa en nod som representerar rotnoden anropar du `Session` instansens `getRootNode` -metoden, vilket visas på följande kodrad.
 
 ```java
 //Create a Node
@@ -75,7 +75,7 @@ day.setProperty("message", "Adobe CQ is part of the Adobe Digital Marketing Suit
 
 ## Hämta nodvärden {#retrieve-node-values}
 
-Om du vill hämta en nod och dess värde anropar du `Node`instansens `getNode`och skicka ett strängvärde som representerar den fullständigt kvalificerade sökvägen till noden. Tänk på nodstrukturen som skapades i föregående kodexempel. Om du vill hämta dagnoden anger du adobe/day enligt följande kod:
+Om du vill hämta en nod och dess värde anropar du `Node` instansens `getNode` och skicka ett strängvärde som representerar den fullständigt kvalificerade sökvägen till noden. Tänk på nodstrukturen som skapades i föregående kodexempel. Om du vill hämta dagnoden anger du adobe/day enligt följande kod:
 
 ```java
 // Retrieve content
@@ -86,7 +86,7 @@ System.out.println(node.getProperty("message").getString());
 
 ## Skapa noder i Adobe CQ Repository {#create-nodes-in-the-adobe-cq-repository}
 
-Följande Java™-kodexempel representerar en Java™-klass som ansluter till Adobe CQ, skapar en `Session`och lägger till nya noder. En nod tilldelas ett datavärde och sedan skrivs nodens värde och sökväg ut till konsolen. När du är klar med sessionen måste du logga ut.
+Följande Java™-kodexempel representerar en Java™-klass som ansluter till Adobe CQ, skapar en `Session` och lägger till nya noder. En nod tilldelas ett datavärde och sedan skrivs nodens värde och sökväg ut till konsolen. När du är klar med sessionen måste du logga ut.
 
 ```java
 /*
