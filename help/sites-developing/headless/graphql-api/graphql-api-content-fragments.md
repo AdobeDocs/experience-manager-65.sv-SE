@@ -3,9 +3,9 @@ title: AEM GraphQL API för användning med innehållsfragment
 description: Lär dig hur du använder innehållsfragment i Adobe Experience Manager (AEM) med AEM GraphQL API för leverans av headless-innehåll.
 feature: Content Fragments,GraphQL API
 exl-id: beae1f1f-0a76-4186-9e58-9cab8de4236d
-source-git-commit: 3d1c3ac74c9303a88d028d957e3da6aa418e71ba
+source-git-commit: 312e2477bb6a7cccab74cd4637d6a402f61052d7
 workflow-type: tm+mt
-source-wordcount: '4697'
+source-wordcount: '4708'
 ht-degree: 0%
 
 ---
@@ -719,7 +719,7 @@ För att aktivera cachelagring av beständiga frågor krävs följande uppdateri
   >
   >Dispatcher lägger till suffixet `.json` till alla beständiga fråge-URL:er, så att resultatet kan cachelagras.
   >
-  >Detta är för att säkerställa att frågan uppfyller Dispatcher-kraven för dokument som kan cachas.
+  >Detta är för att säkerställa att frågan uppfyller Dispatcher-kraven för dokument som kan cachas. Mer information finns i [Hur returnerar Dispatcher dokument?](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/troubleshooting/dispatcher-faq.html#how-does-the-dispatcher-return-documents%3F)
 
 * `<conf.dispatcher.d/filters/ams_publish_filters.any>`
 
