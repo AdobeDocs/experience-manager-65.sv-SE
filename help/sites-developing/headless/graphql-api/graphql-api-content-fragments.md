@@ -3,9 +3,9 @@ title: AEM GraphQL API för användning med innehållsfragment
 description: Lär dig hur du använder innehållsfragment i Adobe Experience Manager (AEM) med AEM GraphQL API för leverans av headless-innehåll.
 feature: Content Fragments,GraphQL API
 exl-id: beae1f1f-0a76-4186-9e58-9cab8de4236d
-source-git-commit: 5e56441d2dc9b280547c91def8d971e7b1dfcfe3
+source-git-commit: 3d1c3ac74c9303a88d028d957e3da6aa418e71ba
 workflow-type: tm+mt
-source-wordcount: '4781'
+source-wordcount: '4697'
 ht-degree: 0%
 
 ---
@@ -705,40 +705,28 @@ Cachelagring av beständiga frågor är inte aktiverat som standard i Dispatcher
 
 ### Aktivera cachelagring av beständiga frågor {#enable-caching-persisted-queries}
 
-Om du vill aktivera cachelagring av beständiga frågor definierar du variabeln Dispatcher `CACHE_GRAPHQL_PERSISTED_QUERIES`:
+För att aktivera cachelagring av beständiga frågor krävs följande uppdateringar av Dispatcher-konfigurationsfilerna:
 
-1. Lägg till variabeln i Dispatcher-filen `global.vars`:
+* `<conf.d/rewrites/base_rewrite.rules>`
 
-   ```xml
-   Define CACHE_GRAPHQL_PERSISTED_QUERIES
-   ```
+  ```xml
+  # Allow the dispatcher to be able to cache persisted queries - they need an extension for the cache file
+  RewriteCond %{REQUEST_URI} ^/graphql/execute.json
+  RewriteRule ^/(.*)$ /$1;.json [PT] 
+  ```
 
->[!NOTE]
->
->När Dispatcher-cachning är aktiverat för beständiga frågor med hjälp av `Define CACHE_GRAPHQL_PERSISTED_QUERIES` en `ETag` skickas till svaret av Dispatcher.
->
->Som standard är `ETag` har konfigurerats med följande direktiv:
->
->```
->FileETag MTime Size 
->```
->
->Den här inställningen kan dock orsaka problem när den används på de beständiga frågesvaren, eftersom den inte tar hänsyn till små ändringar i svaret.
->
->Att uppnå individuella `ETag` beräkningar på *var* ett unikt svar `FileETag Digest` -inställningen måste användas i dispatcherkonfigurationen:
->
->```xml
-><Directory />    
->   ...    
->   FileETag Digest
-></Directory> 
->```
+  >[!NOTE]
+  >
+  >Dispatcher lägger till suffixet `.json` till alla beständiga fråge-URL:er, så att resultatet kan cachelagras.
+  >
+  >Detta är för att säkerställa att frågan uppfyller Dispatcher-kraven för dokument som kan cachas.
 
->[!NOTE]
->
->Anpassa till [Dispatcher-krav för dokument som kan cachas](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/troubleshooting/dispatcher-faq.html#how-does-the-dispatcher-return-documents%3F)lägger Dispatcher till suffixet `.json` till alla beständiga fråge-URL:er, så att resultatet kan cachelagras.
->
->Det här suffixet läggs till av en omskrivningsregel när den beständiga frågecachelagringen är aktiverad.
+* `<conf.dispatcher.d/filters/ams_publish_filters.any>`
+
+  ```xml
+  # Allow GraphQL Persisted Queries & preflight requests
+  /0110 { /type "allow" /method '(GET|POST|OPTIONS)' /url "/graphql/execute.json*" }
+  ```
 
 ### CORS-konfiguration i Dispatcher {#cors-configuration-in-dispatcher}
 
