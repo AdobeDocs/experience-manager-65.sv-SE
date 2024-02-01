@@ -6,9 +6,9 @@ solution-title: Experience Cloud
 user-guide-description: Läs Adobe Experience Manager 6.5-dokumentationen och se hur det fungerar och vad programmet kan göra för dig.
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM 6.5
-source-git-commit: ac4d8a45478fbe48b1e3d43affeee935d7b7ca90
+source-git-commit: 26ffe17d1ddd116a749f7f02e84e91d5b9759ca8
 workflow-type: tm+mt
-source-wordcount: '7334'
+source-wordcount: '7329'
 ht-degree: 1%
 
 ---
@@ -1181,8 +1181,8 @@ ht-degree: 1%
       + [Bearbetar dokument även om AEM Forms-servern inte är helt igång](/help/forms/using/processing-documents-even-if-aem-forms-server-not-fully-up.md)
       + [Det går inte att använda utdatatjänsten, Forms-tjänsten eller DoR-tjänsten (Document of Record)](/help/forms/using/connection-issues-with-output-forms-and-document-of-record-dor-services.md)
       + [Minska STORLEK 2 RCE-sårbarhet för Experience Manager Forms](/help/forms/using/mitigating-struts-2-rce-vulnerabilities-for-experience-manager-manager-form.md)
+      + [Det gick inte att säkerhetskopiera databasen under uppgradering till 6.5.12.0 för MySQL](/help/forms/using/failed-to-back-up-the-database-on-upgrading-to-aem-forms-service-pack-6.5.12.0.md)
       + [Det går inte att skriva ut ett stort antal PDF på WorkBench i PDF](/help/forms/using/pdf-generation-service-fails-to-print-a-large-number-of-pdfs-on-workbench.md)
-      + [Det gick inte att säkerhetskopiera databasen vid uppgradering till AEM Forms Service Pack. 6.5.12.0](/help/forms/using/failed-to-back-up-the-database-on-upgrading-to-aem-forms-service-pack-6.5.12.0.md)
    + Äldre dokumentation {#legacy-documentation}
       + [Använda den körda skripttjänsten i AEM Forms på JEE Workbench för att skapa XML-data](/help/forms/developing/building-xml.md)
       + [Komprimera och dekomprimera filer med en AEM Forms på en anpassad JEE DSC](/help/forms/developing/compressing-decompressing-custom-dsc.md)

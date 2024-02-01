@@ -1,14 +1,14 @@
 ---
-title: Det gick inte att säkerhetskopiera den tidigare databasen på AEM Forms 6.5.12.0.
+title: Det gick inte att säkerhetskopiera databasen under uppgradering till 6.5.12.0 för MySQL.
 description: När en användare uppgraderar till Experience Manager 6.5.12.0 och klickar på "Uppgradera MySQL" kan konfigurationshanteraren inte säkerhetskopiera den tidigare Experience Manager Forms-databasen.
-source-git-commit: d232bfdad7b8413eb015f6fe5dd3442cebf1001d
+source-git-commit: bf974331157e21b28c0daa5b878ac927ce5a2304
 workflow-type: tm+mt
-source-wordcount: '98'
+source-wordcount: '106'
 ht-degree: 0%
 
 ---
 
-# Problem (#issue)
+# Det gick inte att säkerhetskopiera databasen under uppgradering till 6.5.12.0 för MySQL (#issue)
 
 När en användare uppgraderar till Experience Manager 6.5.12.0 och klickar på &quot;Uppgradera MySQL&quot; kan konfigurationshanteraren inte säkerhetskopiera den tidigare Experience Manager Forms-databasen. Felet visas:
 
