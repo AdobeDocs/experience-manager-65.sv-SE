@@ -7,10 +7,11 @@ feature-set: Experience Manager Assets,Experience Manager,Experience Manager Sit
 version: 6.5
 type: Documentation
 index: y
-source-git-commit: ee6e408668a523464632e53a01ba11eddec103f6
+recommendations: noDisplay
+source-git-commit: fc76dd7af48aa67380b0635589acf9322bff86fb
 workflow-type: tm+mt
-source-wordcount: '134'
-ht-degree: 4%
+source-wordcount: '131'
+ht-degree: 0%
 
 ---
 
@@ -25,7 +26,7 @@ Filen metadata.md innehåller metadata på postnivå som skickas till TOC.md-fil
 | solution-hub-url | Öppnar navet för utbildning och support. |
 | solution-icon | Visar lösningsikonen bredvid lösningsrubriken. Inte implementerat ännu. |
 | getting-started-url | Länk till startsidan. |
-| tutorials-url | Länka till självstudiekurser på video. |
+| tutorials-url | Länk till videokurser. |
 | mini-toc-nivåer | Anger antalet rubriknivåer som visas i den högra listen. Standardvärdet är 2. |
 | git-repo | Anger platsen för huvudrapporten för intern användning. |
 
