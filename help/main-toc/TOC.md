@@ -6,9 +6,9 @@ solution-title: Experience Cloud
 user-guide-description: Läs Adobe Experience Manager 6.5-dokumentationen och se hur det fungerar och vad programmet kan göra för dig.
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM 6.5
-source-git-commit: 26ffe17d1ddd116a749f7f02e84e91d5b9759ca8
+source-git-commit: 220e060de43758ce07e82bedcee8d26fb46a9a6f
 workflow-type: tm+mt
-source-wordcount: '7329'
+source-wordcount: '7333'
 ht-degree: 1%
 
 ---
@@ -626,6 +626,7 @@ ht-degree: 1%
       + [Använda CAPTCHA i anpassningsbara formulär](/help/forms/using/captcha-adaptive-forms.md)
       + [Nyckelord för adaptiva formulär](/help/forms/using/adaptive-forms-keywords.md)
       + [Tabeller i anpassningsbara former](/help/forms/using/adaptive-forms-tables.md)
+      + [Diagram i anpassningsbara former](/help/forms/using/adaptive-form-charts.md)
       + [Spara ett anpassat formulär automatiskt](/help/forms/using/auto-save-an-adaptive-form.md)
       + [Konfigurerar omdirigeringssida](/help/forms/using/configuring-redirect-page.md)
       + [Skapa hjälpmedelsförberedda adaptiva formulär](/help/forms/using/creating-accessible-adaptive-forms.md)
