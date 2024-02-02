@@ -4,9 +4,9 @@ description: Använd diagram i en anpassningsbar form för att göra formuläret
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 feature: Adaptive Forms, Foundation Components
-source-git-commit: 5c117d25a381b2cb85c2bf0715866dd5ad93572c
+source-git-commit: 53a6914792bb15773c8f91a2bb6295ab69b3b1bf
 workflow-type: tm+mt
-source-wordcount: '2001'
+source-wordcount: '2005'
 ht-degree: 0%
 
 ---
@@ -15,8 +15,8 @@ ht-degree: 0%
 
 ![Hero_Image](assets/charts_hero_image.jpg)
 
-Ett diagram eller diagram är en visuell representation av data. Det gör att ni kan komprimera stora mängder information till ett lättbegripligt och visuellt format, vilket gör att ni bättre kan visualisera, tolka och analysera komplexa data.
-AEM Forms tilläggspaket innehåller en färdig diagramkomponent. Du kan använda i dina adaptiva formulär och dokument för att visuellt återge tvådimensionella data i repeterbara paneler och tabeller. Med diagramkomponenten kan du lägga till och konfigurera följande typer av diagram:
+Ett diagram eller diagram är en visuell representation av data. Det gör att ni kan komprimera stora mängder information till ett lättbegripligt visuellt format, vilket gör att ni bättre kan visualisera, tolka och analysera komplexa data.
+AEM Forms tilläggspaket innehåller en färdig diagramkomponent. Du kan använda i dina adaptiva formulär och dokument för att visa tvådimensionella data i **repeterbara paneler** och **tabeller**. Med diagramkomponenten kan du lägga till och konfigurera följande typer av diagram:
 
 1. Cirkel
 1. Kolumn
@@ -41,7 +41,7 @@ Diagramkomponenten är som standard tillgänglig AEM sidofältet. Du kan dra och
 > 
 > Innan du konfigurerar diagrammet kontrollerar du att panelen eller tabellraden som du konfigurerar diagrammet för är repeterbar. Du kan ange minsta och högsta antal för repeterbara paneler eller tabellrader på fliken Upprepa inställningar i dialogrutan Redigera komponent.
 
-Om du vill konfigurera diagrammet högerklickar du på diagramkomponenten och klickar på Redigera för att öppna dialogrutan Redigera diagram. Dialogrutan innehåller flikarna Rubrik och text, Konfiguration, Avancerade alternativ och Format som du kan använda för att konfigurera diagrammet.
+Klicka på diagramkomponenten och klicka på ![Inställningar](cmppr1.png) för att öppna dialogrutan Redigera diagram. Dialogrutan innehåller flikarna Rubrik och text, Konfiguration, Avancerade alternativ och Format som du kan använda för att konfigurera diagrammet.
 
 ### Grundläggande {#basic}
 
@@ -51,7 +51,7 @@ På fliken Grundläggande kan du konfigurera följande egenskaper:
 
 * **Element name**: En identifierare för diagramelementet i JCR-innehållsstrukturen. Den är inte synlig i diagrammet men hjälper när du refererar till elementet från andra komponenter, skript och SOM-uttryck.
 * **Diagramtyp**: Anger vilken typ av diagram du vill generera. De tillgängliga alternativen är Cirkel, Ring, Stapel, Kolumn, Linje, Punkt, Punkt och Yta. I exemplet är diagramtypen Kolumn.
-* **Upprepande radnamn för datakälla**: Anger elementnamnet på tabellraden eller den repeterbara panel från vilken data ska hämtas. I exemplet är statementDetails elementnamnet på den repeterbara raden i tabellen Statement Details.
+* **Upprepande radnamn eller panelnamn för datakälla**: Anger elementnamnet på tabellraden eller den repeterbara panel från vilken data ska hämtas. I exemplet är statementDetails elementnamnet på den repeterbara raden i tabellen Statement Details.
 * **X-axel > Titel**: Anger X-axelns rubrik. I exemplet är rubriken för X-axeln Kategori.
 * **X-axel > Fält**: Anger elementnamnet på det fält (eller en cell i en tabell) som ska ritas på X-axeln. I exemplet är kategorier konfigurerade på X-axeln. Elementnamnet för tabellcellen i kategorikolumnen i exempeltabellen är kategori.
 * **X-axel > Använd funktion**: Anger den statistiska funktion som ska användas för att beräkna värdena på X-axeln. I exemplet är det valda alternativet Ingen. Mer information om funktioner finns i Använda funktioner i diagram.
@@ -64,7 +64,7 @@ På fliken Grundläggande kan du konfigurera följande egenskaper:
 * **Diagramspecifika konfigurationer**: Förutom vanliga konfigurationer finns följande diagramspecifika konfiguration tillgänglig:
 * **Innerradie**: tillgängligt för Donut-diagram för att ange radien (i pixlar) för den inre cirkeln i diagrammet.
 * **Linjefärg**: finns för linje-, linje- och punkt- samt ytdiagram för att ange det hexadecimala värdet för linjefärgen i diagrammet.
-* **Punktfärg**: tillgängligt för Point-, Line- och Point-diagram för att ange det hexadecimala värdet på färgen för punkterna i diagrammet.
+* **Punktfärg**: tillgängligt för Point- och Line- samt Point-diagram för att ange det hexadecimala värdet på färgen för punkterna i diagrammet.
 * **Områdesfärg**: tillgängligt för ytdiagram för att ange det hexadecimala värdet på färgen för området under raden i diagrammet.
 * **CSS-klass**: Ange namnet på en CSS-klass i CSS-klassfältet som ska användas för anpassad formatering i diagrammet.
 
@@ -78,7 +78,7 @@ För att uppnå detta måste du rita upp kategorier på X-axeln och på Y-axeln 
 
 ![Utdragsinformation](assets/statement-details.png)
 
-Kreditkortsutdraget som används i det här exemplet är ett adaptivt dokument och avsnittet med utdragsinformation är en tabell som ser ut så här i redigeringsläget.
+Kreditkortsutdraget som används i det här exemplet är ett adaptivt formulärdokument och avsnittet med utdragsinformation är en tabell som ser ut så här i redigeringsläget.
 
 ![Redigering av statusinformation](assets/statement-details-authoring.png)
 
@@ -87,7 +87,7 @@ Låt oss titta på följande krav och villkor för att generera diagrammet:
 * Diagrammet visar den totala kostnaden i varje kategori i tabellen Utdragsdetaljer.
 * Diagramtypen är Kolumn, men du kan välja vilken annan diagramtyp som helst.
 * Tabellraden i satsen Details-tabellen är upprepningsbar. Du kan konfigurera det i fältet Upprepa inställningar för tabellradegenskaperna.
-* Elementnamnet för raden är statementDetails. Du kan konfigurera det i tabellradegenskaperna.
+* Elementnamnet för raden är Satsinformation. Du kan konfigurera det i tabellradegenskaperna.
 * Elementnamnet för tabellcellen i kategorikolumnen är kategori. Du kan ange den textbundet. Markera cellen och tryck på redigeringsknappen.
 * Elementnamnet för tabellcellen i kolumnen Belopp är amount. Tabellcellen i kolumnen Belopp är också en numerisk ruta.
 * Med den angivna konfigurationen visas kolumndiagrammet i exemplet enligt följande. Varje färg motsvarar en kategori och enskilda radposter eller belopp för en kategori läggs till i diagrammet.
@@ -108,7 +108,7 @@ Gå till verktygsfältet för att växla till formateringsläge, **tryck>>Stil**
 
 ## Använda funktioner i diagram {#use-functions}
 
-Du kan konfigurera ett diagram så att statistiska funktioner används för att beräkna värden från källdata för plottning i diagrammet. Medan diagramkomponenten innehåller vissa inbyggda funktioner kan du skriva egna funktioner och göra dem tillgängliga för användning i diagramkonfigurationen.
+Du kan konfigurera ett diagram så att statistiska funktioner används för att beräkna värden från källdata för plottning i diagrammet. Även om diagramkomponenten har vissa inbyggda funktioner kan du skriva egna funktioner och göra dem tillgängliga för användning i diagramkonfigurationen.
 
 >[!NOTE]
 >
@@ -129,7 +129,7 @@ Följande funktioner är tillgängliga som standard med komponenten Chart:
 
 ### Anpassade funktioner {#custom-functions}
 
-Förutom att använda standardfunktionerna i diagram kan du skriva anpassade funktioner i JavaScript och göra dem tillgängliga i listan med funktioner i komponenten Chart.
+Förutom att använda standardfunktionerna i diagram kan du skriva [anpassade funktioner](/help/forms/using/rule-editor.md#custom-functions-in-rule-editor-custom-functions) i JavaScript och gör dem tillgängliga i listan med funktioner i komponenten Chart.
 
 En funktion tar en eller flera matriser och ett kategorinamn som indata och returnerar ett värde. Till exempel:
 
