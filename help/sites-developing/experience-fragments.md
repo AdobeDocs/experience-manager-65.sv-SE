@@ -7,14 +7,14 @@ topic-tags: extending-aem
 content-type: reference
 docset: aem65
 exl-id: c4fb1b5e-e15e-450e-b882-fe27b165ff9f
-source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
+source-git-commit: a9d59e00efe8f0c2cbfca51901c441a2d65b70f2
 workflow-type: tm+mt
-source-wordcount: '1782'
+source-wordcount: '1781'
 ht-degree: 0%
 
 ---
 
-# Experience Fragments{#experience-fragments}
+# Upplevelsefragment{#experience-fragments}
 
 ## Grunderna {#the-basics}
 
@@ -182,7 +182,7 @@ I sådana fall AEM tillhandahåller länkskrivarens providergränssnitt.
 
 >[!NOTE]
 >
->Det här gränssnittet introducerades i [AEM 6.5 SP1 (6.5.1.0)](/help/release-notes/previous/6.5.1.md).
+>Det här gränssnittet introducerades i [AEM 6.5 SP1 (6.5.1.0)](/help/release-notes/previous/6-5-1.md).
 
 För mer komplicerade fall omfattas de inte av [standard](#default-link-rewriting), AEM har Link Rewriter Provider Interface. Det här är en `ConsumerType` som ni kan implementera i era paket som en tjänst. Den åsidosätter de ändringar AEM utför på interna länkar för ett HTML-erbjudande som återges från en Experience Fragment. Med det här gränssnittet kan du anpassa processen att skriva om interna HTML-länkar så att de passar era affärsbehov.
 
@@ -216,7 +216,7 @@ Om du vill använda gränssnittet måste du först skapa ett paket som innehåll
 
 Den här tjänsten används för att ansluta till Experience Fragment Export till Target-omskrivning för att få tillgång till de olika länkarna.
 
-Till exempel, `ComponentService`:
+Till exempel: `ComponentService`:
 
 ```java
 import com.adobe.cq.xf.ExperienceFragmentLinkRewriterProvider;
