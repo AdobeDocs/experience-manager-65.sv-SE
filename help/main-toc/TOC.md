@@ -6,9 +6,9 @@ solution-title: Experience Cloud
 user-guide-description: Läs Adobe Experience Manager 6.5-dokumentationen och se hur det fungerar och vad programmet kan göra för dig.
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM 6.5
-source-git-commit: a9d59e00efe8f0c2cbfca51901c441a2d65b70f2
+source-git-commit: f41cb88406db23c2af8988f7ee584db95184c6c4
 workflow-type: tm+mt
-source-wordcount: '7333'
+source-wordcount: '7335'
 ht-degree: 1%
 
 ---
@@ -1217,6 +1217,8 @@ ht-degree: 1%
    + [Adobe Commerce PWA Studio](/help/commerce/cif/pwa-studio/getting-started.md)
    + [Migrering](/help/commerce/cif/migration.md)
    + Versionsinformation {#release-notes}
+      + [2024](/help/commerce/cif/release-notes/release-notes-2024.md)
+      + [2023](/help/commerce/cif/release-notes/release-notes-2023.md)
       + [2022](/help/commerce/cif/release-notes/release-notes-2022.md)
       + [2021](/help/commerce/cif/release-notes/release-notes-2021.md)
       + [2020](/help/commerce/cif/release-notes/release-notes-2020.md)
