@@ -3,9 +3,9 @@ title: Versionsinformation för [!DNL Adobe Experience Manager] 6.5
 description: Hitta versionsinformation, nyheter, installationsanvisningar och en detaljerad ändringslista för [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 4
 exl-id: cac14ac1-9cda-46ae-8aa3-94674bb79157
-source-git-commit: 6a5ff6df3939c6d1576327943b428f374e987bcb
+source-git-commit: fab43458811f70da7f80a23e689dfca54391a84a
 workflow-type: tm+mt
-source-wordcount: '4423'
+source-wordcount: '4425'
 ht-degree: 0%
 
 ---
@@ -554,7 +554,7 @@ För att lösa problemet [kompilera om Sling-skript som JSP, Java™ och Sightly
 * Efter installation AEM Service Pack 6.5.14.0 och senare kan användare inte välja ett teckensnitt i JEE Admin-gränssnittet för PDF-dokument vid navigering till `Home` > `Services` > `PDF Generator` > `Adobe PDF Settings`, eftersom teckensnittslistan visas tom. (FORMS-12095)
 <!-- When a form is signed using the OOTB Scribble Signature component, it appears in the image dialogue but does not preview and appears blank when you click on it. (FORMS-12073). A hotfix is available for this issue. To download and install the hotfix, see [Adobe Experience Manager Forms Hotfixes](/help/release-notes/aem-forms-hotfix.md) -->
 * I AEM Forms på JEE återges inte den HTML5 Forms som använder kontextsökvägen. (FORMS-12485, FORMS-12691). Det finns en programfix för den här utgåvan. Information om hur du hämtar och installerar snabbkorrigeringen finns i [Adobe Experience Manager Forms Hotfixes](/help/release-notes/aem-forms-hotfix.md).
-* Den anpassade funktionen stöder funktioner i ECMAScript version 5. Om den anpassade funktionen använder funktioner som stöds av ECMAScript version 6 eller senare, till exempel funktionerna let, const eller arrow, kan regelredigeraren inte öppnas.
+* Med adaptiv Forms kan du använda anpassade funktioner med ECMAScript version 5 eller tidigare. När en anpassad funktion använder ECMAScript version 6 eller senare, som &quot;let&quot;, &quot;const&quot; eller pilfunktioner, kanske regelredigeraren inte öppnas som den ska.
 
 #### AEM Forms på JEE
 
