@@ -3,9 +3,9 @@ title: Versionsinformation för [!DNL Adobe Experience Manager] 6.5
 description: Hitta versionsinformation, nyheter, installationsanvisningar och en detaljerad ändringslista för [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 4
 exl-id: cac14ac1-9cda-46ae-8aa3-94674bb79157
-source-git-commit: 5ab1fd033af0d6d5595fe41de003455ab9ba28a6
+source-git-commit: 6a5ff6df3939c6d1576327943b428f374e987bcb
 workflow-type: tm+mt
-source-wordcount: '4389'
+source-wordcount: '4423'
 ht-degree: 0%
 
 ---
@@ -554,6 +554,7 @@ För att lösa problemet [kompilera om Sling-skript som JSP, Java™ och Sightly
 * Efter installation AEM Service Pack 6.5.14.0 och senare kan användare inte välja ett teckensnitt i JEE Admin-gränssnittet för PDF-dokument vid navigering till `Home` > `Services` > `PDF Generator` > `Adobe PDF Settings`, eftersom teckensnittslistan visas tom. (FORMS-12095)
 <!-- When a form is signed using the OOTB Scribble Signature component, it appears in the image dialogue but does not preview and appears blank when you click on it. (FORMS-12073). A hotfix is available for this issue. To download and install the hotfix, see [Adobe Experience Manager Forms Hotfixes](/help/release-notes/aem-forms-hotfix.md) -->
 * I AEM Forms på JEE återges inte den HTML5 Forms som använder kontextsökvägen. (FORMS-12485, FORMS-12691). Det finns en programfix för den här utgåvan. Information om hur du hämtar och installerar snabbkorrigeringen finns i [Adobe Experience Manager Forms Hotfixes](/help/release-notes/aem-forms-hotfix.md).
+* Den anpassade funktionen stöder funktioner i ECMAScript version 5. Om den anpassade funktionen använder funktioner som stöds av ECMAScript version 6 eller senare, till exempel funktionerna let, const eller arrow, kan regelredigeraren inte öppnas.
 
 #### AEM Forms på JEE
 
