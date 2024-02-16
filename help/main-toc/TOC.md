@@ -6,7 +6,7 @@ solution-title: Experience Cloud
 user-guide-description: Läs Adobe Experience Manager 6.5-dokumentationen och se hur det fungerar och vad programmet kan göra för dig.
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM 6.5
-source-git-commit: f41cb88406db23c2af8988f7ee584db95184c6c4
+source-git-commit: 6dbec0f41396c2b41d5324c4ecf6f1f33b1d0780
 workflow-type: tm+mt
 source-wordcount: '7335'
 ht-degree: 1%
@@ -560,7 +560,7 @@ ht-degree: 1%
       + Konfigurera AEM Forms {#configure-aem-forms}
          + [Prestandajustering av AEM Forms-server](/help/forms/using/performance-tuning-aem-forms.md)
          + [Konfigurera cacheminne för adaptiva formulär](/help/forms/using/configure-adaptive-forms-cache.md)
-         + [Konfigurera AEM DS-inställningar](/help/forms/using/configuring-the-processing-server-url-.md)
+         + [Konfigurera AEM DS-inställningar](/help/forms/using/configuring-the-processing-server-url.md)
          + [Konfigurera synkroniseringsplaneraren](/help/forms/using/configure-synchronization-scheduler.md)
          + [Konfigurera anslutningsprogrammet för Microsoft SharePoint](https://help.adobe.com/en_US/AEMForms/6.1/SharePointConfig/index.html)
          + [Ansluta AEM Forms till Adobe LiveCycle](/help/forms/using/aem-livecycle-connector.md)
@@ -636,7 +636,7 @@ ht-degree: 1%
       + [Textbunden formatering av adaptiva formulärkomponenter](/help/forms/using/inline-style-adaptive-forms.md)
       + [Introduktion till formulärsekvenser i flera steg](/help/forms/using/introduction-form-sequence.md)
       + [Layoutfunktioner i anpassningsbara formulär](/help/forms/using/layout-capabilities-adaptive-forms.md)
-      + [Platshållartext i AEM Forms](/help/forms/using/placeholder-text-in-aem-forms-.md)
+      + [Platshållartext i AEM Forms](/help/forms/using/placeholder-text-in-aem-forms.md)
       + [Förhandsgranska ett formulär](/help/forms/using/previewing-forms.md)
       + [Återanvända adaptiva formulär](/help/forms/using/reusing-adaptive-forms.md)
       + [Avgränsningskomponent i adaptiva formulär](/help/forms/using/separator-component-in-adaptive-forms.md)

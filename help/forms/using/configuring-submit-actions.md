@@ -6,7 +6,7 @@ topic-tags: author
 docset: aem65
 feature: Adaptive Forms, Foundation Components
 exl-id: 04efb4ad-cff6-4e05-bcd2-98102f052452
-source-git-commit: 05f54e451c72b0a1690ba4a2ca50db87711a8094
+source-git-commit: 6dbec0f41396c2b41d5324c4ecf6f1f33b1d0780
 workflow-type: tm+mt
 source-wordcount: '2560'
 ht-degree: 0%
@@ -140,7 +140,7 @@ Mer information om Forms Portal och skicka-åtgärden finns i [Komponenten Utkas
 
 The **[!UICONTROL Invoke an AEM Workflow]** Åtgärden Skicka associerar ett anpassat formulär med ett [AEM](/help/sites-developing/workflows-models.md). När ett formulär skickas startar det associerade arbetsflödet automatiskt på författarinstansen. Du kan spara datafilen, bifogade filer och postdokument i mappen relativt eller under arbetsflödets eller variabelns nyttolast. Om arbetsflödet är markerat för extern datalagring är variabelalternativet tillgängligt och inte nyttolastalternativet. Du kan välja i listan över variabler som är tillgängliga för arbetsflödesmodellen. Om arbetsflödet markeras för extern datalagring i ett senare skede och inte när arbetsflödet skapas, kontrollerar du att de variabelkonfigurationer som krävs finns på plats.
 
-Innan du använder **Anropa ett AEM** skicka-åtgärd, [konfigurera inställningarna för Experience Manager DS](../../forms/using/configuring-the-processing-server-url-.md). Mer information om hur du skapar ett AEM arbetsflöde finns i [Formulärbaserade arbetsflöden i OSGi](../../forms/using/aem-forms-workflow.md).
+Innan du använder **Anropa ett AEM** skicka-åtgärd, [konfigurera inställningarna för Experience Manager DS](../../forms/using/configuring-the-processing-server-url.md). Mer information om hur du skapar ett AEM arbetsflöde finns i [Formulärbaserade arbetsflöden i OSGi](../../forms/using/aem-forms-workflow.md).
 
 Åtgärden Skicka placerar följande på arbetsflödets nyttolastplats. Observera dock att endast alternativet Variabel visas om arbetsflödesmodellen är markerad för extern datalagring, och inte nyttolastalternativet.
 

@@ -7,7 +7,7 @@ topic-tags: correspondence-management
 docset: aem65
 feature: Correspondence Management
 exl-id: 91ee4422-99c1-4907-a507-5968c6984f28
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: 6dbec0f41396c2b41d5324c4ecf6f1f33b1d0780
 workflow-type: tm+mt
 source-wordcount: '825'
 ht-degree: 0%
@@ -68,7 +68,7 @@ Om du vill associera postprocesser med brev eller interaktiv kommunikation måst
 
 1. logga in på `https://localhost:publishport/aem/forms`.
 1. Navigera till **[!UICONTROL Letters]** för att visa det publicerade brev som är tillgängligt på publiceringsinstansen.
-1. Konfigurera AEM DS-inställningar. Se [Konfigurera AEM DS-inställningar](../../forms/using/configuring-the-processing-server-url-.md).
+1. Konfigurera AEM DS-inställningar. Se [Konfigurera AEM DS-inställningar](../../forms/using/configuring-the-processing-server-url.md).
 
 >[!NOTE]
 >
