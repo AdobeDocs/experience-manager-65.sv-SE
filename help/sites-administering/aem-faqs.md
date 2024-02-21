@@ -2,9 +2,9 @@
 title: AEM frågor och svar
 description: Använd de här vanliga frågorna för att förstå, konfigurera och felsöka vanliga arbetsflöden och problem i AEM.
 exl-id: 182c464a-ff7a-467b-9eb5-8ffac335a87a
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+source-git-commit: 1a7805f063daf6f3dd07a2ff2d182e58fe7e63b8
 workflow-type: tm+mt
-source-wordcount: '1011'
+source-wordcount: '936'
 ht-degree: 0%
 
 ---
@@ -25,12 +25,6 @@ När det binära läget är aktiverat innehåller de distribuerade innehållspak
 
 Om du vill aktivera binär distribution distribuerar du med ett delat blobarkiv.
 Kontrollera `useBinaryReferences` i OSGI-konfigurationen med fabriks-PID ( `org.apache.sling.distribution.serialization.impl.vlt.VaultDistributionPackageBuilderFactory`*)* som din agent använder.
-
-#### Hur kan jag anpassa felmeddelandena när jag navigerar i sidhierarkin AEM webbplatskonsolen? {#how-can-i-customize-the-error-messages-while-navigating-page-hierarchy-in-aem-sites-console}
-
-Kontrollera nätverkspanelen (i Chrome-webbläsaren) där en personlig konfiguration (JS inte har miniatyrbildats).
-
-Visa `Initiator` för att avgöra vilken initierare som en begäran initierades i. Den innehåller filerna och radnumren som AJAX anropar från. Senare kan du spåra felhanteringsfunktionen och ändra felmeddelandet efter dina behov.
 
 #### Hur aktiverar jag behörigheter när du skapar en språkkopia för innehållsförfattare i AEM? {#how-to-enable-permissions-while-creating-language-copy-for-content-authors-in-aem}
 
