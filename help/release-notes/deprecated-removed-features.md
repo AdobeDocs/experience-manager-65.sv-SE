@@ -2,9 +2,9 @@
 title: Borttagna funktioner i Adobe Experience Manager 6.5.
 description: Versionsinformation om borttagna funktioner i Adobe Experience Manager 6.5.
 exl-id: d9b6140a-c37d-4b90-a60c-01f471d65621
-source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
+source-git-commit: 3443d331815ffb462890282a49e658693f157af0
 workflow-type: tm+mt
-source-wordcount: '1684'
+source-wordcount: '1710'
 ht-degree: 2%
 
 ---
@@ -31,8 +31,10 @@ Kunderna rekommenderas att granska om de använder funktionen/funktionen i den a
 
 | Område | Funktion | Ersättning | Version (SP) |
 |---|---|---|---|
+|   |   |   |   |
 | Sites | The **Konfiguration AEM hanterad avsökning för Adobe** tjänst: `com.day.cq.polling.importer.impl.ManagedPollConfigImpl` | The **Sling-importeraren för Adobe AEM Analytics-rapport** service. Se Ansluta till Adobe Analytics och Skapa ramverk - [Konfigurera importintervallet](/help/sites-administering/adobeanalytics-connect.md#configuring-the-import-interval) | 6.5.19.0 |
-| [!DNL Sites] | Upplev fragmentegenskaper för **Status för sociala medier**. |   | 6.5.11.0 |
+| Skärmar | ActiveMQ i Adobe Experience Manager (AEM). ActiveMQ användes för kommunikation mellan två AEM publiceringsinstanser. | Adobe rekommenderar att man nu använder en belastningsutjämnare. | 6.5.18.0 |
+| Upplev fragmentegenskaper för **Status för sociala medier**. |   | 6.5.11.0 |
 | [!DNL Sites] | Mallar för innehållsfragment, för att skapa enkla innehållsfragment. | [Modellbaserade strukturerade innehållsfragment](/help/assets/content-fragments/content-fragments-models.md) nu. | 6.5.11.0 |
 | Integrering med Creative Cloud | AEM till mappdelning i Creative Cloud introducerades i AEM 6.2. Det ger kreativa användare tillgång till resurser från AEM, så att de kan öppna dem i [!DNL Creative Cloud] program och ladda upp nya filer eller spara ändringar i AEM. En ny funktion i Creative Cloud, Adobe Asset Link, ger en bättre användarupplevelse och kraftfullare åtkomst till AEM direkt inifrån Photoshop, InDesign och Illustrator. Adobe planerar inte att göra ytterligare förbättringar av integrationen mellan AEM och Creative Cloud Mappdelning. Funktionen ingår i AEM, men kunderna rekommenderas att använda ersättningslösningar. | Kunder rekommenderas att byta till nya integrationsfunktioner för Creative Cloud, som Adobe Asset Link eller AEM. |  |
 | Assets | `AssetDownloadServlet` är inaktiverat som standard för publiceringsinstanserna. Mer information finns i [AEM checklista](/help/sites-administering/security-checklist.md). | Konfigurationen beskrivs i [AEM](/help/sites-administering/security-checklist.md). |  |
