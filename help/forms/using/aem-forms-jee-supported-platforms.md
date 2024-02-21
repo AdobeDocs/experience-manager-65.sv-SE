@@ -7,9 +7,9 @@ geptopics: SG_AEMFORMS/categories/jee
 docset: aem65
 role: Admin
 exl-id: 74d22cf4-56b2-48f5-92d9-928eaa134866
-source-git-commit: 667125e9f7f9f5c9fa438e1d55c0a059ceae64c3
+source-git-commit: 8ca683a973998e7b5d6a2f87210aaf324a5419ee
 workflow-type: tm+mt
-source-wordcount: '3984'
+source-wordcount: '4019'
 ht-degree: 0%
 
 ---
@@ -92,11 +92,11 @@ Adobe rekommenderar dessa konfigurationer och ger fullständig eller begränsad 
 >I och med version 6.5 stöds inte längre infrastrukturkomponenter som har den lägsta användningen bland Adobe-kunder, enligt följande:
 >
 >- IBM® DB2®-databas
-- IBM® AIX® och Sun Solaris™
+>- IBM® AIX® och Sun Solaris™
 >
-För nya installationer rekommenderar vi att man där det är möjligt driftsätter AEM Forms i den moderna OSGi-stacken för att använda de senaste innovationerna kring responsiv Adaptiv Forms för mobiler, interaktiv kommunikation i flera kanaler och dataintegrering i serverdelen med hjälp av Form Data Model.
+>För nya installationer rekommenderar vi att man där det är möjligt driftsätter AEM Forms i den moderna OSGi-stacken för att använda de senaste innovationerna kring responsiv Adaptiv Forms för mobiler, interaktiv kommunikation i flera kanaler och dataintegrering i serverdelen med hjälp av Form Data Model.
 >
-Adobe känner igen att befintliga användare måste fortsätta att distribuera AEM Forms på JEE-stacken. I sådana scenarier kräver Adobe att AEM Forms JEE distribueras på den infrastruktur som stöds enligt beskrivningen i den här dokumentationen. Om du uppgraderar till AEM 6.5 Forms och använder en plattform som inte stöds i den tidigare AEM Forms-versionen kan du kontakta Adobe Support för att få hjälp med att uppgradera till en plattform som stöds.
+>Adobe känner igen att befintliga användare måste fortsätta att distribuera AEM Forms på JEE-stacken. I sådana scenarier kräver Adobe att AEM Forms JEE distribueras på den infrastruktur som stöds enligt beskrivningen i den här dokumentationen. Om du uppgraderar till AEM 6.5 Forms och använder en plattform som inte stöds i den tidigare AEM Forms-versionen kan du kontakta Adobe Support för att få hjälp med att uppgradera till en plattform som stöds.
 
 ### Java™ Virtual Machines (JVM) {#java-virtual-machines-jvm}
 
@@ -144,8 +144,8 @@ Adobe Experience Manager Forms kräver att en Java™ Virtual Machine körs, vil
 
 >[!NOTE]
 >
-- Spåra säkerhetsbulletiner från Java™-leverantören för att säkerställa säkerheten i produktionsmiljöer och installera de senaste Java™-uppdateringarna.
-- AEM Forms på JEE har endast stöd för 64-bitars JVM i produktionsmiljöer.
+>- Spåra säkerhetsbulletiner från Java™-leverantören för att säkerställa säkerheten i produktionsmiljöer och installera de senaste Java™-uppdateringarna.
+>- AEM Forms på JEE har endast stöd för 64-bitars JVM i produktionsmiljöer.
 
 ### Databaser och CRX-beständighet {#databases-and-crx-persistence}
 
@@ -271,7 +271,7 @@ Adobe Experience Manager Forms kräver att en Java™ Virtual Machine körs, vil
 
 >[!NOTE]
 >
-IBM® WebSphere®-kluster stöds endast i Network Deployment-utgåvor.
+>IBM® WebSphere®-kluster stöds endast i Network Deployment-utgåvor.
 
 ### Serveroperativsystem {#server-operating-systems}
 
@@ -479,21 +479,21 @@ AEM Forms App har nu stöd för Apache Cordova. Följande plattformsspecifika ve
 
 >[!NOTE]
 >
-PDF Generator har endast stöd för engelska, franska, tyska och japanska versioner av de operativsystem och program som stöds.
+>PDF Generator har endast stöd för engelska, franska, tyska och japanska versioner av de operativsystem och program som stöds.
 >
-Dessutom:
+>Dessutom:
 >
-- PDF Generator stöder endast 32-bitarsversionen av Microsoft® Office Professional Plus och andra program som krävs för konvertering.
-- PDF Generator stöder inte Microsoft® Office 365.
-- PDF Generator-konverteringar för OpenOffice stöds bara i Windows och Linux®.
-- Funktionerna OCR PDF, Optimize PDF och Export PDF stöds endast i Windows.
-- En version av Acrobat medföljer AEM Forms för att aktivera PDF Generator. Programmeringsversionen ska endast användas med AEM Forms under AEM Forms-licensens löptid, för användning med AEM Forms PDF Generator. Mer information finns i AEM Forms produktbeskrivning för din distribution ([Lokal](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-on-premise.html) eller [Managed Services](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-managed-services.html))&quot;
-- Tjänsten PDF Generator stöder inte Microsoft® Windows 10.
--PDF Generator kan inte konvertera filer med Microsoft® Visio 2019. Du kan fortsätta använda Microsoft® Visio 2016 för att konvertera VSD- och VSDX-filer.
-- PDF Generator kan inte konvertera filer med Microsoft® Project 2019. Du kan fortsätta använda Microsoft® Project 2016 för att konvertera MPP-filer.
-- PDF Generator kan inte konvertera filer med Microsoft® Visio 2019.
-- PDF Generator kan inte konvertera filer med Microsoft® Project 2019.
->
+>- PDF Generator stöder endast 32-bitarsversionen av Microsoft® Office Professional Plus och andra program som krävs för konvertering.
+>- PDF Generator stöder inte Microsoft® Office 365.
+>- PDF Generator-konverteringar för OpenOffice stöds bara i Windows och Linux®.
+>- Funktionerna OCR PDF, Optimize PDF och Export PDF stöds endast i Windows.
+>- En version av Acrobat medföljer AEM Forms för att aktivera PDF Generator. Programmeringsversionen ska endast användas med AEM Forms under AEM Forms-licensens löptid, för användning med AEM Forms PDF Generator. Mer information finns i AEM Forms produktbeskrivning för din distribution ([Lokal](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-on-premise.html) eller [Managed Services](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-managed-services.html))&quot;
+>- Tjänsten PDF Generator stöder inte Microsoft® Windows 10.
+>-PDF Generator kan inte konvertera filer med Microsoft® Visio 2019. Du kan fortsätta använda Microsoft® Visio 2016 för att konvertera VSD- och VSDX-filer.
+>- PDF Generator kan inte konvertera filer med Microsoft® Project 2019. Du kan fortsätta använda Microsoft® Project 2016 för att konvertera MPP-filer.
+>- PDF Generator kan inte konvertera filer med Microsoft® Visio 2019.
+>- PDF Generator kan inte konvertera filer med Microsoft® Project 2019.
+>- Om Microsoft® Office-installationen inaktiveras eller inte licensieras av någon anledning, t.ex. att VL_KMS inte kan upprätta kommunikation under en period, kan konverteringen misslyckas tills installationen har återaktiverats eller licensierats på nytt.
 
 ### Undantag från tillgänglighetsstöd {#exceptions-to-accessibility-support}
 
@@ -607,7 +607,7 @@ Ytterligare krav finns i:
 
 >[!NOTE]
 >
-I Acrobat DC produktfamilj introduceras två spår för både Acrobat och Reader som är olika produkter:&quot;Classic&quot; och&quot;Continuous&quot;. Mer information och en jämförelse av de två spåren finns i [https://www.adobe.com/devnet-docs/acrobatetk/tools/AdminGuide/whatsnewdc.html](https://www.adobe.com/devnet-docs/acrobatetk/tools/AdminGuide/whatsnewdc.html).
+>I Acrobat DC produktfamilj introduceras två spår för både Acrobat och Reader som är olika produkter:&quot;Classic&quot; och&quot;Continuous&quot;. Mer information och en jämförelse av de två spåren finns i [https://www.adobe.com/devnet-docs/acrobatetk/tools/AdminGuide/whatsnewdc.html](https://www.adobe.com/devnet-docs/acrobatetk/tools/AdminGuide/whatsnewdc.html).
 
 ### Webbläsare {#browsers}
 
@@ -650,13 +650,13 @@ I Acrobat DC produktfamilj introduceras två spår för både Acrobat och Reader
 
 >[!NOTE]
 >
-Vissa webbläsarrelaterade undantag för stationära datorer är följande:
+>Vissa webbläsarrelaterade undantag för stationära datorer är följande:
 >
-- Safari stöds bara på Macintosh OS X.
-- Arbetsytan stöder Safari 5.1 i Macintosh OS X 10.6 och 10.7 med Acrobat DC eller senare. Mer information om Safari 5.1-kompatibilitet med Adobe Reader, Acrobat finns i [https://helpx.adobe.com/x-productkb/multi/safari-5-1-incompatible-reader.html](https://helpx.adobe.com/x-productkb/multi/safari-5-1-incompatible-reader.html).
-- Administration Console stöds inte i Safari.
-- Correspondence Management stöder inte Windows® Internet Explorer 9.0 för AEM 6.1-formulär.
-- Forms Portal stöder JAWS 14.0 skärmläsarprogram i Internet Explorer 11.
+>- Safari stöds bara på Macintosh OS X.
+>- Arbetsytan stöder Safari 5.1 i Macintosh OS X 10.6 och 10.7 med Acrobat DC eller senare. Mer information om Safari 5.1-kompatibilitet med Adobe Reader, Acrobat finns i [https://helpx.adobe.com/x-productkb/multi/safari-5-1-incompatible-reader.html](https://helpx.adobe.com/x-productkb/multi/safari-5-1-incompatible-reader.html).
+>- Administration Console stöds inte i Safari.
+>- Correspondence Management stöder inte Windows® Internet Explorer 9.0 för AEM 6.1-formulär.
+>- Forms Portal stöder JAWS 14.0 skärmläsarprogram i Internet Explorer 11.
 
 #### Mobila kunder {#mobile-clients}
 
@@ -687,7 +687,7 @@ Vissa webbläsarrelaterade undantag för stationära datorer är följande:
 
 >[!NOTE]
 >
-- Forms Portal stöds endast i Safari på iPad.
+>- Forms Portal stöds endast i Safari på iPad.
 
 ### AEM Forms {#aem-forms-workspace-app}
 
@@ -900,7 +900,7 @@ The following platforms are marked as deprecated with AEM Forms 6.5.10.0 release
 
 >[!NOTE]
 >
-En föråldrad plattform får support fram till nästa fullständiga installationsrelease eller tills tredjepartssupport för plattformen når sitt upphörande, beroende på vilket som inträffar först.
+> En föråldrad plattform får support fram till nästa fullständiga installationsrelease eller tills tredjepartssupport för plattformen når sitt upphörande, beroende på vilket som inträffar först.
 
 <!-- 
 - Oct 10, 2021
