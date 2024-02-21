@@ -7,9 +7,9 @@ topic-tags: managing
 content-type: reference
 docset: aem65
 exl-id: 5837ef4f-d4e0-49d7-a671-87d5547e0d98
-source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
+source-git-commit: b1012548630affd697edd27c90bdac4eeb35125f
 workflow-type: tm+mt
-source-wordcount: '2843'
+source-wordcount: '2832'
 ht-degree: 0%
 
 ---
@@ -147,13 +147,13 @@ I redigeringsmiljön är cachningseffektiviteten vanligtvis mycket lägre efters
 
 I redigeringsmiljön är antalet författare som arbetar parallellt och den belastning som deras interaktioner lägger till i systemet den viktigaste begränsningsfaktorn. Därför rekommenderar Adobe att du skalar ditt system baserat på det delade dataflödet.
 
-För sådana scenarier kör Adobe prestandatester på ett kluster med delade noder som inte innehåller några författare.
+För sådana scenarier utförde Adobe prestandatester på ett kluster av författare som inte har någon delad nod.
 
 * **Benchmark test 1a**
 Med ett aktivt-aktivt kluster utan delning av innehåll på 2 författarinstanser kan du beräkna den maximala genomströmningen med en inläsningsprofil där användarna utför en enkel övning av skapelsesidan utöver en basbelastning på 300 befintliga sidor, allt av liknande natur.
 
    * **Resultat**
-Maximalt dataflöde för en enkel sidskapandeövning, som ovan (betraktas som en transaktion), visar sig vara 2016 transaktioner/timme. Detta är en ökning på ungefär 16 % jämfört med en fristående författarinstans för samma test.
+Maximalt dataflöde för en enkel sidskapandeövning, som ovan anses vara en transaktion, är 2016 transaktioner/timme. Detta är en ökning på ungefär 16 % jämfört med en fristående författarinstans för samma test.
 
 * **Benchmark test 2b**
 Med ett aktivt-aktivt kluster utan delade data (ingen) på 2 författarinstanser beräknar du den maximala genomströmningen när inläsningsprofilen har en blandning av nya sidor (10 %), ändringar av befintliga sidor (80 %) och skapande och ändring av en sida i följd (10 %). Sidans komplexitet är densamma som i profilen för test 1. Den grundläggande ändringen av sidan görs genom att en bild läggs till och textinnehållet ändras. Även här utfördes övningen på en basbelastning på 300 sidor med komplexitet på samma sätt som i prestandatest 1.
@@ -179,7 +179,7 @@ Se även [Parallellisering](/help/managing/hardware-sizing-guidelines.md#paralle
 
 ### Maskinvarubaserad Recommendations {#hardware-recommendations}
 
-Vanligtvis kan du använda samma maskinvara för din författarmiljö som du rekommenderas för din publiceringsmiljö. Vanligtvis är webbplatstrafiken mycket lägre i redigeringssystemen, men cacheeffektiviteten är också lägre. Den grundläggande faktorn här är dock antalet författare som arbetar parallellt, tillsammans med den typ av åtgärder som görs i systemet. I allmänhet är AEM (i författarmiljön) mest effektivt vid skalning av läsåtgärder, med andra ord kan ett AEM skalas bra tillsammans med författare som utför grundläggande redigeringsåtgärder.
+Vanligtvis kan du använda samma maskinvara för din författarmiljö som du rekommenderas för din publiceringsmiljö. Vanligtvis är webbtrafiken lägre i redigeringssystemen, men cacheeffektiviteten är också lägre. Den grundläggande faktorn här är dock antalet författare som arbetar parallellt, tillsammans med den typ av åtgärder som görs i systemet. I allmänhet är AEM (i författarmiljön) mest effektivt vid skalning av läsåtgärder, med andra ord kan ett AEM skalas bra tillsammans med författare som utför grundläggande redigeringsåtgärder.
 
 Testerna på Adobe utfördes med operativsystemet Red Hat® 5.5, som körs på en Hewlett-Packard ProLiant DL380 G5-maskinvaruplattform med följande konfiguration:
 
@@ -281,7 +281,7 @@ Om du har en mer komplex webbplats behöver du också kraftfullare webbservrar s
 
 ## Ytterligare användningsspecifika beräkningar {#additional-use-case-specific-calculations}
 
-Förutom beräkningen för ett standardwebbprogram kan du behöva ta hänsyn till specifika faktorer för följande användningsområden. De beräknade värdena ska läggas till i standardberäkningen.
+Förutom beräkningen för ett standardwebbprogram bör du ta hänsyn till specifika faktorer för följande användningsområden. De beräknade värdena ska läggas till i standardberäkningen.
 
 ### Resursspecifika överväganden {#assets-specific-considerations}
 
@@ -291,13 +291,13 @@ Allokera minst 16 GB stackutrymme och konfigurera [!UICONTROL DAM Update Asset] 
 
 >[!NOTE]
 >
->Ett högre bildflöde innebär att datorresurserna måste kunna hålla jämna steg med I/O-system och omvänt. Om arbetsflöden till exempel startas vid import av bilder kan överföringen av många bilder via WebDAV orsaka en eftersläpning i arbetsflödena.
+Ett högre bildflöde innebär att datorresurserna måste kunna hålla jämna steg med I/O-systemet och omvänt. Om arbetsflöden till exempel startas vid import av bilder kan överföringen av många bilder via WebDAV orsaka en eftersläpning i arbetsflödena.
 >
->Om du använder separata diskar för tarPM, datalager och sökindex kan det hjälpa till att optimera I/O-beteendet för systemet (men vanligtvis är det bra att behålla sökindexet lokalt).
+Om du använder separata diskar för tarPM, datalager och sökindex kan det hjälpa till att optimera I/O-beteendet för systemet (men vanligtvis är det bra att behålla sökindexet lokalt).
 
 >[!NOTE]
 >
->Se även [Prestandahandbok för resurser](/help/sites-deploying/assets-performance-sizing.md).
+Se även [Prestandahandbok för resurser](/help/sites-deploying/assets-performance-sizing.md).
 
 ### Hanterare för flera platser {#multi-site-manager}
 

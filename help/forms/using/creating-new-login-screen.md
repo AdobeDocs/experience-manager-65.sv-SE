@@ -6,10 +6,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 docset: aem65
 exl-id: 5cb906b6-6a3c-498c-94f5-27a9071ea934
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 80e85ed78a26d784f4aa8e36c7de413cf9c03fa2
 workflow-type: tm+mt
-source-wordcount: '460'
-ht-degree: 2%
+source-wordcount: '444'
+ht-degree: 1%
 
 ---
 
@@ -53,7 +53,7 @@ Du kan ändra inloggningsskärmen för alla AEM Forms-moduler som använder inlo
 
 1. I mappen `en`utför du följande åtgärder:
 
-   1. Byt namn på mappen till det språknamn som du vill använda. Till exempel, `ar`.
+   1. Byt namn på mappen till det språknamn som du vill använda. Till exempel: `ar`.
 
    1. Ändra egenskapen `jcr:language` värde till `ar`(för `ar` mapp).
 
@@ -290,7 +290,7 @@ css.newLoginContentArea {
 1. Lägg till nya bilder i `/apps/livecycle/core/content/login`. Så här lägger du till bild:
 
    1. Installera WebDAV-klienten.
-   1. Navigera till `/apps/livecycle/core/content/login` mapp med hjälp av webDAV-klienten. Mer information finns i: [https://dev.day.com/docs/en/crx/current/how_to/webdav_access.html](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=en).
+   1. Navigera till `/apps/livecycle/core/content/login` mapp med hjälp av webDAV-klienten. Mer information finns i [WebDAV-åtkomst](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/webdav-access.html?lang=en).
 
    1. Lägg till nya bilder.
 

@@ -4,9 +4,9 @@ description: Tough Day-testet simulerar den dagliga belastningen för cirka 1 00
 topic-tags: testing
 content-type: reference
 exl-id: ceb9671c-57f9-4d81-94c0-0dbccd4d90a2
-source-git-commit: 61c7955c5370b5341d097dc36d08b2b92b89517b
+source-git-commit: b1012548630affd697edd27c90bdac4eeb35125f
 workflow-type: tm+mt
-source-wordcount: '1826'
+source-wordcount: '1825'
 ht-degree: 0%
 
 ---
@@ -49,7 +49,7 @@ java -jar toughday2.jar [--help | --help_full | --help_tests | --help_publish]  
 
 >[!NOTE]
 >
-Grovdag 2 har inget upprensningssteg. Därför bör du köra Tough Day 2 på en klonad mellanlagringsinstans och inte på huvudproduktionsinstansen. Mellanlagringsinstansen bör tas bort efter testerna.
+>Grovdag 2 har inget upprensningssteg. Därför bör du köra Tough Day 2 på en klonad mellanlagringsinstans och inte på huvudproduktionsinstansen. Mellanlagringsinstansen bör tas bort efter testerna.
 >
 
 ### Få hjälp {#getting-help}
@@ -330,7 +330,7 @@ eller
 
 >[!NOTE]
 >
-På grund av parallella körningar kommer det faktiska antalet testkörningar inte att vara exakt den mängd som konfigurerats i `count` parameter. Förväntade en avvikelse som är proportionerlig till antalet pågående trådar (styrs av `concurrency parameter`).
+>På grund av parallella körningar kommer det faktiska antalet testkörningar inte att vara exakt den mängd som konfigurerats i `count` parameter. Förväntade en avvikelse som är proportionerlig till antalet pågående trådar (styrs av `concurrency parameter`).
 
 ### Torr körning {#dry-run}
 

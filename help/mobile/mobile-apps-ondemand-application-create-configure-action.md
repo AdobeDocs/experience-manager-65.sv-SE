@@ -6,7 +6,7 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: authoring-on-demand-services-app
 exl-id: dbe81ead-dfaa-4af0-9b66-a14917a1bcc7
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 80e85ed78a26d784f4aa8e36c7de413cf9c03fa2
 workflow-type: tm+mt
 source-wordcount: '440'
 ht-degree: 0%
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 ## Skapa ett on demand-program {#creating-an-on-demand-application}
 
-Att skapa en app är ofta det första steget mot att skapa och hantera AEM Mobile On-Demand-innehåll, och det görs ofta på AEM administratörsnivå. Det representerar ett innehållskal som kan visas på mobila enheter, klart att visa innehåll som författaren skapat, t.ex. artiklar, bilder, samlingar och så vidare.
+Att skapa en app är ofta det första steget mot att skapa och hantera AEM Mobile On-Demand-innehåll, och det görs ofta på AEM administratörsnivå. Det representerar ett innehållskal som kan visas på mobila enheter och som är klart att visa innehåll som författaren skapat, till exempel artiklar, bilder och samlingar.
 
 Information om ditt program kan visas på kontrollpanelen eller i AEM Mobile Control Center.
 

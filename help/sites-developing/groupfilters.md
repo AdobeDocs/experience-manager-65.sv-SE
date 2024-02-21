@@ -8,9 +8,9 @@ content-type: reference
 docset: aem65
 legacypath: /content/docs/en/aem/6-0/develop/mobile/groupfilters
 exl-id: 419d2e19-1198-4ab5-9aa0-02ad18fe171d
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: 80e85ed78a26d784f4aa8e36c7de413cf9c03fa2
 workflow-type: tm+mt
-source-wordcount: '760'
+source-wordcount: '756'
 ht-degree: 0%
 
 ---
@@ -27,11 +27,11 @@ Utforma dina filter så att du kan använda kombinationer av dem för att defini
 
 När du har skapat ett filter kan du använda det i [gruppkonfiguration.](/help/sites-developing/mobile.md#creating-a-device-group)
 
-## Klassen Filter Java {#the-filter-java-class}
+## Klassen Filter Java™ {#the-filter-java-class}
 
-Ett enhetsgruppsfilter är en OSGi-komponent som implementerar [com.day.cq.wcm.mobile.api.device.DeviceGroupFilter](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/index.html?com/day/cq/wcm/mobile/api/device/DeviceGroupFilter.html) gränssnitt. När implementeringsklassen distribueras tillhandahåller den en filtertjänst som är tillgänglig för enhetsgruppskonfigurationer.
+Ett enhetsgruppsfilter är en OSGi-komponent som implementerar [com.day.cq.wcm.mobile.api.device.DeviceGroupFilter](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/index.html?com/day/cq/wcm/mobile/api/device/DeviceGroupFilter.html) gränssnitt. När implementeringsklassen distribueras tillhandahåller den en filtertjänst som är tillgänglig för enhetsgruppskonfigurationer.
 
-Den lösning som beskrivs i denna artikel använder Apache Felix Maven SCR Plugin för att underlätta utvecklingen av komponenten och tjänsten. Därför använder Java-klassen i exemplet `@Component`och `@Service` anteckningar. Klassen har följande struktur:
+Den lösning som beskrivs i denna artikel använder Apache Felix Maven SCR Plugin för att underlätta utvecklingen av komponenten och tjänsten. Därför används i Java™-klassen `@Component`och `@Service` anteckningar. Klassen har följande struktur:
 
 ```java
 package com.adobe.example.myapp;
@@ -63,7 +63,7 @@ public class myDeviceGroupFilter implements DeviceGroupFilter {
 }
 ```
 
-Du måste ange kod för följande metoder:
+Ange kod för följande metoder:
 
 * `getDescription`: Returnerar filterbeskrivningen. Beskrivningen visas i dialogrutan Konfiguration av enhetsgrupp.
 * `getTitle`: Returnerar namnet på filtret. Namnet visas när du väljer filter för enhetsgruppen.
@@ -93,7 +93,7 @@ The `matches` funktionReturnerar `true` om enhetens funktioner uppfyller alla fi
 * Namnet på användaragenten
 * Ett Map-objekt som innehåller enhetsfunktionerna. Kartnycklarna är WURFL™-funktionsnamnen och värdena är motsvarande värden från WURFL™-databasen.
 
-The [com.day.cq.wcm.mobile.api.devicespecs.DeviceSpecsConstants](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/index.html?com/day/cq/wcm/mobile/api/device/DeviceGroupFilter.html) -gränssnittet innehåller en delmängd av WURFL™-funktionsnamnen i statiska fält. Använd dessa fältkonstanter som nycklar när du hämtar värden från kartan över enhetsfunktioner.
+The [com.day.cq.wcm.mobile.api.devicespecs.DeviceSpecsConstants](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/index.html?com/day/cq/wcm/mobile/api/device/DeviceGroupFilter.html) -gränssnittet innehåller en delmängd av WURFL™-funktionsnamnen i statiska fält. Använd dessa fältkonstanter som nycklar när du hämtar värden från kartan över enhetsfunktioner.
 
 Följande kodexempel avgör till exempel om enheten stöder CSS:
 
@@ -175,7 +175,7 @@ Följande POM-kod är användbar om du använder Maven för att skapa program. P
 
 **Plugins:**
 
-* Apache Maven Compiler Plugin: Kompilerar Java-klasser från källkod.
+* Apache Maven Compiler Plugin: Kompilerar Java™-klasser från källkod.
 * Apache Felix Maven Bundle Plugin: Skapar paketet och manifestet
 * Apache Felix Maven SCR Plugin: Skapar komponentbeskrivningsfilen och konfigurerar tjänstkomponentens manifesthuvud.
 
