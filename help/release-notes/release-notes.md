@@ -2,9 +2,9 @@
 title: Versionsinformation för [!DNL Adobe Experience Manager] 6.5
 description: Hitta versionsinformation, nyheter, installationsanvisningar och en detaljerad ändringslista för [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 4
-source-git-commit: 2ffb77762af1969f3c93e7dd33cb3de9349375f8
+source-git-commit: f48e77068f286ff107bb2511660bf540fea32474
 workflow-type: tm+mt
-source-wordcount: '2861'
+source-wordcount: '2860'
 ht-degree: 0%
 
 ---
@@ -67,7 +67,7 @@ Några av de viktigaste funktionerna och förbättringarna i den här versionen 
 
 #### [!DNL Content Fragments]{#sites-contentfragments-6520}
 
-* Kapslade konfigurationsmappar stöds inte längre och mapparna för innehållsfragmentmodellen var inte längre synliga efter uppgradering till AEM 6.5.18 eller till AEM 6.5.19. (SITES-18110) MAJOR
+* Kapslade konfigurationsmappar stöds inte längre och mapparna för innehållsfragmentmodellen var inte längre synliga efter uppgradering till AEM 6.5.18 eller till AEM 6.5.19. (SITES-18110)
 * Vissa undermappar kan inte välja bland ärvda innehållsfragmentmodeller. Den måste ha stöd för mappar utan att ha `jcr:content` -egenskapen, även om DAM-mapparna som skapas via användargränssnittet har en sådan nod. (SITES-17943)
 
 #### [!DNL Content Fragments] - GRAPHQL API {#sites-graphql-api-6520}
@@ -156,13 +156,7 @@ Korrigeringar i [!DNL Experience Manager] Forms levereras via ett separat tillä
 
 * text -->
 
-#### [!DNL Forms Designer]{#forms-designer-6520}
-
-* text
-
-<!-- ### Foundation{#foundation-6520}
-
-* text -->
+### Foundation {#foundation-6520}
 
 #### Communities {#communities-6520}
 
@@ -181,17 +175,9 @@ Korrigeringar i [!DNL Experience Manager] Forms levereras via ett separat tillä
 * Aria-etiketten&quot;close&quot; är inte lokaliserad i **[!UICONTROL Assets]** > **[!UICONTROL Files]**, markerar en mapp och väljer sedan **[!UICONTROL Properties]** > **[!UICONTROL Permissions]** tab > member name. (NPR-41705)
 * Det finns ett trunkerat verktygstips för **[!UICONTROL Key Store Password]** på SSL-inställningssidan för språkområden ENG, FRA, KOR, DEU och PTB. (NPR-41367)
 
-<!-- #### Oak{#oak-6520}
-
-* text -->
-
 #### Plattform{#foundation-platform-6520}
 
 * Problem med att integrera Campaign med AEM som orsakas av att /api-servern inte returnerar rätt schema i href json. Orsaken var att AEM inte fick rubriken X-Forward-Proto som tvingade begäran att svara med ett HTTP-schema i stället för HTTPS. Därför bör man lägga till möjligheten att växla mellan schemaval baserat på en OSGI-konfiguration. (GRANITE-48454)
-
-<!-- #### Replication{#foundation-replication-6520}
-
-* text -->
 
 #### Sling{#foundation-sling-6520}
 
