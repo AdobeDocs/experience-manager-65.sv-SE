@@ -7,9 +7,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 docset: aem65
 feature: Adaptive Forms, Foundation Components
 exl-id: 7240897f-6b3a-427a-abc6-66310c2998f3
-source-git-commit: 05f54e451c72b0a1690ba4a2ca50db87711a8094
+source-git-commit: 22235790b2bfefaa1a3bf71f888f8eb343d9e1b7
 workflow-type: tm+mt
-source-wordcount: '3479'
+source-wordcount: '4120'
 ht-degree: 0%
 
 ---
@@ -460,3 +460,57 @@ Tänk på följande när du arbetar med urkunder för anpassade formulär.
 * Dokumentfragment i ett anpassat formulär visas inte i postdokumentet. Däremot stöds adaptiva formulärfragment.
 * Det finns inte stöd för innehållsbindning i dokument med poster som genererats för XML-schemabaserade adaptiva formulär.
 * Lokaliserad version av postdokument skapas på begäran för en språkinställning när användaren begär återgivningen av postdokumentet. Lokalisering av postdokument sker tillsammans med lokalisering av anpassat formulär. Mer information om lokalisering av dokument med post och adaptiva formulär finns i [Använda arbetsflöde för AEM översättning för att lokalisera anpassningsbara formulär och urkunder](/help/forms/using/using-aem-translation-workflow-to-localize-adaptive-forms.md).
+
+## Använda en anpassad XCI-fil
+
+En XCI-fil hjälper dig att ange olika egenskaper för ett dokument. <!-- Forms as a Cloud Service has a master XCI file.--> Du kan använda en anpassad XCI-fil för att åsidosätta en eller flera standardegenskaper som anges i den befintliga XCI-filen. Du kan till exempel välja att bädda in ett teckensnitt i ett dokument eller aktivera taggad egenskap för alla dokument. Följande tabell anger XCI-alternativen:
+
+| XCI-alternativ | Beskrivning |
+|--- |--- |
+| config/present/pdf/creator | Identifierar den som har skapat dokumentet med hjälp av posten Skapare i dokumentinformationsordlistan. Mer information om den här ordlistan finns i [Referenshandbok för PDF](https://opensource.adobe.com/dc-acrobat-sdk-docs/acrobatsdk/). |
+| config/present/pdf/producer | Identifierar dokumenttillverkaren med hjälp av posten Producer i dokumentinformationsordlistan. Mer information om den här ordlistan finns i [Referenshandbok för PDF](https://opensource.adobe.com/dc-acrobat-sdk-docs/acrobatsdk/). |
+| config/present/layout | Anger om utdata är en enda panel eller sidnumrerad. |
+| config/present/pdf/compression/level | Anger den komprimeringsgrad som ska användas när ett PDF-dokument skapas. |
+| config/present/pdf/fontInfo/embed | Styr teckensnittsinbäddning i utdatadokumentet. |
+| config/present/pdf/scriptModel | Styr om XFA-specifik information ska inkluderas i utdata-PDF-dokumentet. |
+| config/present/common/data/adjustData | Kontrollerar om XFA-programmet justerar data efter sammanslagningen. |
+| config/present/pdf/renderPolicy | Kontrollerar om genereringen av sidinnehåll görs på servern eller skjuts upp till klienten. |
+| config/present/common/locale | Anger den standardspråkinställning som används i utdatadokumentet. |
+| config/present/destination | Anger utdataformatet när det finns i ett aktuellt element. Anger vilken åtgärd som ska utföras när dokumentet öppnas i en interaktiv klient när det finns i ett openAction-element. |
+| config/present/output/type | Anger vilken typ av komprimering som ska användas för en fil eller vilken typ av utdata som ska skapas. |
+| config/present/common/temp/uri | Anger formulär-URI. |
+| config/present/common/template/base | Anger en basplats för URI:er i formulärdesignen. När det här elementet saknas eller är tomt används platsen för formulärdesignen som bas. |
+| config/present/common/log/to | Styr platsen dit loggdata eller utdata skrivs. |
+| config/present/output/to | Styr platsen dit loggdata eller utdata skrivs. |
+| config/present/script/currentPage | Anger den inledande sidan när dokumentet öppnas. |
+| config/present/script/exclude | Informerar Forms as a Cloud Service om vilka händelser som ska ignoreras. |
+| config/present/pdf/linearized | Anger om utdatadokumentet för PDF är linjärt. |
+| config/present/script/runScripts | Styr vilken uppsättning skript som Forms as a Cloud Service kör. |
+| config/present/pdf/tagged | Styr om taggar ska tas med i utdatadokumentet för PDF. Taggar i PDF är ytterligare information som ingår i ett dokument för att visa dokumentets logiska struktur. Taggar underlättar hjälpmedelsanvändningen och formateringen. Ett sidnummer kan till exempel taggas som en artefakt så att skärmläsaren inte omsluter den mitt i texten. Även om märkord gör ett dokument mer användbart, ökar de även storleken på dokumentet och bearbetningstiden för att skapa det. |
+| config/present/pdf/fontInfo/alwaysEmbed | Anger ett teckensnitt som är inbäddat i utdatadokumentet. |
+| config/present/pdf/fontInfo/neverEmbed | Anger ett teckensnitt som aldrig får bäddas in i utdatadokumentet. |
+| config/present/pdf/pdfa/part | Anger versionsnumret för den PDF/A-specifikation som dokumentet uppfyller. |
+| config/present/pdf/pdfa/amd | Anger ändringsnivån för PDF/A-specifikationen. |
+| config/present/pdf/pdfa/conformance | Anger överensstämmelsenivå med PDF/A-specifikationen. |
+| config/present/pdf/version | Anger vilken version av PDF-dokumentet som ska genereras |
+| config/present/pdf/version/map | Anger dokumentets reservteckensnitt |
+
+
+<!--
+
+### Use a custom XCI file in your AEM Forms environment
+
+  1. Add the custom XCI file to your development project.
+  1. Specify the following inline property:(/help/implementing/deploying/configuring-osgi.md)
+  1. Deploy the project to your AEM Forms environment. <!--Cloud Service environment
+  
+-->
+
+### Använd en anpassad XCI-fil i den lokala Forms-utvecklingsmiljön
+
+1. Överför XCI-filen till den lokala utvecklingsmiljön.
+1. Öppna <!--Cloud Service SDK--> konfigurationshanteraren. <!--The default URL is: <http://localhost:4502/system/console/configMgr>.-->
+1. Leta reda på och öppna **[!UICONTROL Adaptive Forms and Interactive Communication Web Channel]** konfiguration.
+1. Ange sökvägen till XCI-filen och klicka på **[!UICONTROL Save]**.
+
+
