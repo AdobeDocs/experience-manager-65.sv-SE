@@ -2,9 +2,9 @@
 title: Versionsinformation för [!DNL Adobe Experience Manager] 6.5
 description: Hitta versionsinformation, nyheter, installationsanvisningar och en detaljerad ändringslista för [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 4
-source-git-commit: 19fe527ce44d8ec5be50ebd32b46f13df96c52cc
+source-git-commit: 2ffb77762af1969f3c93e7dd33cb3de9349375f8
 workflow-type: tm+mt
-source-wordcount: '2900'
+source-wordcount: '2861'
 ht-degree: 0%
 
 ---
@@ -59,7 +59,7 @@ Några av de viktigaste funktionerna och förbättringarna i den här versionen 
 
 #### Administratörsgränssnitt{#sites-adminui-6520}
 
-* The `Workflow Title` fältet är markerat med `*` efter behov, men det finns ingen validering. (SITES-16491) NORMAL
+* The `Workflow Title` fältet är markerat med `*` efter behov, men det finns ingen validering. (SITES-16491)
 
 <!--#### Classic UI{#sites-classicui-6520}
 
@@ -68,12 +68,12 @@ Några av de viktigaste funktionerna och förbättringarna i den här versionen 
 #### [!DNL Content Fragments]{#sites-contentfragments-6520}
 
 * Kapslade konfigurationsmappar stöds inte längre och mapparna för innehållsfragmentmodellen var inte längre synliga efter uppgradering till AEM 6.5.18 eller till AEM 6.5.19. (SITES-18110) MAJOR
-* Vissa undermappar kan inte välja bland ärvda innehållsfragmentmodeller. Den måste ha stöd för mappar utan att ha `jcr:content` -egenskapen, även om DAM-mapparna som skapas via användargränssnittet har en sådan nod. (SITES-17943) NORMAL
+* Vissa undermappar kan inte välja bland ärvda innehållsfragmentmodeller. Den måste ha stöd för mappar utan att ha `jcr:content` -egenskapen, även om DAM-mapparna som skapas via användargränssnittet har en sådan nod. (SITES-17943)
 
 #### [!DNL Content Fragments] - GRAPHQL API {#sites-graphql-api-6520}
 
 <!-- REMOVED AS PER EMAIL FROM SAMEER DHAWAN FEBRUARY 19, 2024 * When upgrading AEM from 6.5.19.0 to 6.5.20.0, the path `/libs/cq/graphql/sites/graphiql` was getting deleted. (SITES-19530) CRITICAL -->
-* När en GraphQL-fråga körs till [filterresultat](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md#filtering) med valfria variabler, om ett specifikt värde är **not** som anges för den valfria variabeln ignoreras variabeln i filterutvärderingen. (SITES-17051) NORMAL
+* När en GraphQL-fråga körs till [filterresultat](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md#filtering) med valfria variabler, om ett specifikt värde är **not** som anges för den valfria variabeln ignoreras variabeln i filterutvärderingen. (SITES-17051)
 
 <!--#### [!DNL Content Fragments] - GraphQL Query Editor{#sites-graphql-query-editor-6520}
 
@@ -81,24 +81,24 @@ Några av de viktigaste funktionerna och förbättringarna i den här versionen 
 
 #### [!DNL Content Fragments] - REST API{#sites-restapi-6520}
 
-* Med uppgraderingen av `org.json` i biblioteket ändrades hur decimaltal avserialiserades. Innan de konverterades till &quot;som standard&quot; till &quot;Doubles&quot; och nu till BigDecimals. I stället ska egenskapsvärdena för metadata, som lagras med REST API, konverteras till Double från BigDecimal. (SITES-16857) NORMAL
+* Med uppgraderingen av `org.json` i biblioteket ändrades hur decimaltal avserialiserades. Innan de konverterades till &quot;som standard&quot; till &quot;Doubles&quot; och nu till BigDecimals. I stället ska egenskapsvärdena för metadata, som lagras med REST API, konverteras till Double från BigDecimal. (SITES-16857)
 
 #### Core Backend{#sites-core-backend-6520}
 
-* När Snabbpublicering av ett innehållsfragment används fortsätter inläsningen och publiceras inte. Snabbpublicering fungerar alltså inte för innehållsfragment efter en uppgradering av ett Service Pack från AEM 6.5.7 till AEM 6.5.17. När användaren testade hanterad publicering fungerade det. Men när de försökte med Snabbpublicering publicerades den inte. I synnerhet `com.day.cq.wcm.core.impl.reference.ActivationReferenceSearchBuilder` orsakade att systemet kraschade. (SITES-17311) MAJOR
-* Innehållsfragment kan inte serialiseras med Jackson-exporteraren: Sidan läses in när det finns ett innehållsfragment som refereras till på en sida (använder Jackson-exportkod) och taggar som har lagts till i ett innehållsfragment. (SITES-18096) NORMAL
+* När Snabbpublicering av ett innehållsfragment används fortsätter inläsningen och publiceras inte. Snabbpublicering fungerar alltså inte för innehållsfragment efter en uppgradering av ett Service Pack från AEM 6.5.7 till AEM 6.5.17. När användaren testade hanterad publicering fungerade det. Men när de försökte med Snabbpublicering publicerades den inte. I synnerhet `com.day.cq.wcm.core.impl.reference.ActivationReferenceSearchBuilder` orsakade att systemet kraschade. (SITES-17311)
+* Innehållsfragment kan inte serialiseras med Jackson-exporteraren: Sidan läses in när det finns ett innehållsfragment som refereras till på en sida (använder Jackson-exportkod) och taggar som har lagts till i ett innehållsfragment. (SITES-18096)
 
 #### Kärnkomponenter{#sites-core-components-6520}
 
-* Installation CIF Core Components package på AEM orsakar `:type` värdet på befintliga komponenter som ska ändras. Ändringen innebär att de inte längre återges på sidor som de har lagts till på. (SITES-17601) MAJOR
+* Installation CIF Core Components package på AEM orsakar `:type` värdet på befintliga komponenter som ska ändras. Ändringen innebär att de inte längre återges på sidor som de har lagts till på. (SITES-17601)
 
 #### Kampanjintegrering{#sites-campaign-integration-6520}
 
-* AEM använde en tillåtelselista-även kallad `whitelist`-på grund av en sårbarhetsrapport. Tillåtelselista hindrade kunderna från att använda de funktioner som behövdes. (SITES-16822) CRITICAL
+* AEM använde en tillåtelselista-även kallad `whitelist`-på grund av en sårbarhetsrapport. Tillåtelselista hindrade kunderna från att använda de funktioner som behövdes. (SITES-16822)
 
 #### Upplevelsefragment{#sites-experiencefragments-6520}
 
-* MSM for Experience Fragments har nu stöd för massutrullning till Experience Fragment-innehållsstrukturer som mappar och undermappar. (SITES-16004) MAJOR
+* MSM for Experience Fragments har nu stöd för massutrullning till Experience Fragment-innehållsstrukturer som mappar och undermappar. (SITES-16004)
 
 <!--#### Foundation Components (Legacy){#sites-foundation-components-legacy-6520}
 
@@ -110,31 +110,31 @@ Några av de viktigaste funktionerna och förbättringarna i den här versionen 
 
 #### MSM - Live-kopior{#sites-msm-live-copies-6520}
 
-* An &quot;`Is not modifiable`&quot;-undantag genereras när komponenten rullas ut. I synnerhet en `org.apache.sling.servlets.post.impl.operations.ModifyOperation` undantag inträffar under svarsbearbetningen. (SITES-18809) MAJOR
-* Det går inte att rulla ut ändringar i specifika Live-kopior av Experience Fragments. (SITES-17930) MAJOR
-* När en användare lägger till en anteckning i en komponent på en ritningssida och sedan placerar ut den, visas anteckningsantalet i Live Copy felaktigt. (SITES-17099) MAJOR
-* Knappen MSM-utfällning från överordnad sida till underordnad sida bryts i det grafiska användargränssnittet för pekfunktioner. När du väljer det här alternativet visas följande fel: `Uncaught TypeError: _g.shared is undefined`. (SITES-16991) MAJOR
+* An &quot;`Is not modifiable`&quot;-undantag genereras när komponenten rullas ut. I synnerhet en `org.apache.sling.servlets.post.impl.operations.ModifyOperation` undantag inträffar under svarsbearbetningen. (SITES-18809)
+* Det går inte att rulla ut ändringar i specifika Live-kopior av Experience Fragments. (SITES-17930)
+* När en användare lägger till en anteckning i en komponent på en ritningssida och sedan placerar ut den, visas anteckningsantalet i Live Copy felaktigt. (SITES-17099)
+* Knappen MSM-utfällning från överordnad sida till underordnad sida bryts i det grafiska användargränssnittet för pekfunktioner. När du väljer det här alternativet visas följande fel: `Uncaught TypeError: _g.shared is undefined`. (SITES-16991)
 
 #### Page Editor{#sites-pageeditor-6520}
 
-* Förhandsgranskningen av Forms Theme Editor är bruten. När Förhandsvisa är markerat visas bara en inläsningsikon. (SITES-17164) BLOCKER
+* Förhandsgranskningen av Forms Theme Editor är bruten. När Förhandsvisa är markerat visas bara en inläsningsikon. (SITES-17164)
 
 ### [!DNL Assets]{#assets-6520}
 
-* Det går inte att validera regelbaserade fält i hjälpen för metadataredigeraren och ett felmeddelande om att obligatoriska fält saknas visas. (ASSETS-31396) MAJOR
-* När PDF har flyttats till en annan plats visas **[!UICONTROL View Page]** försvinner. (ASSETS-30538) MAJOR
-* Det går inte att välja en bild med läsbehörighet. (ASSETS-32199) NORMALT
-* Det går inte att ändra kortstorleken i visningsinställningarna. (ASSETS-31667) NORMALT
-* Överföringen misslyckas när filtypen .oft överförs. (ASSETS-30109) NORMALT
-* När du försöker lägga till ett anpassat metadatafält som en extra kolumn i rapporten markeras inte kryssrutorna. (ASSETS-31671) MINOR
-* Resursflyttåtgärden fungerar inte korrekt i Experience Manager Service Pack 16. (ASSETS-30598) MINOR
+* Det går inte att validera regelbaserade fält i hjälpen för metadataredigeraren och ett felmeddelande om att obligatoriska fält saknas visas. (ASSETS-31396)
+* När PDF har flyttats till en annan plats visas **[!UICONTROL View Page]** försvinner. (ASSETS-30538)
+* Det går inte att välja en bild med läsbehörighet. (ASSETS-32199)
+* Det går inte att ändra kortstorleken i visningsinställningarna. (ASSETS-31667)
+* Överföringen misslyckas när filtypen .oft överförs. (ASSETS-30109)
+* När du försöker lägga till ett anpassat metadatafält som en extra kolumn i rapporten markeras inte kryssrutorna. (ASSETS-31671)
+* Resursflyttåtgärden fungerar inte korrekt i Experience Manager Service Pack 16. (ASSETS-30598)
 
 #### [!DNL Dynamic Media]{#assets-dm-6520}
 
-* När en resurs överförs till AEM `Update_asset` arbetsflödet aktiveras. Arbetsflödet avslutas dock aldrig. Arbetsflödet slutförs endast fram till produktöverföringssteget. Nästa steg är att ladda upp en Scene7-batch, men den processen kommer inte in i AEM. (ASSETS-30443) CRITICAL
-* Behöver ett bättre sätt att hantera icke-Dynamic Media-filmer på ett smidigt sätt i Dynamic Media-komponenten. Det här problemet gav ett undantagsfel som instansierade `dynamicmedia_sly.js`. (ASSETS-31301) MAJOR
-* Förhandsgranskning fungerar för alla resurser, anpassningsbara videouppsättningar och videoklipp. 403-fel genereras dock för `.m3u8` filer (som för övrigt fortfarande fungerar som offentliga länkar). (ASSETS-31882) MAJOR
-* The `scene7SmartCropProcessingStatus` status korrigerad. Metadata för Smart Crop-video används för att visa fel även när det lyckades. (ASSETS-31255) MINOR
+* När en resurs överförs till AEM `Update_asset` arbetsflödet aktiveras. Arbetsflödet avslutas dock aldrig. Arbetsflödet slutförs endast fram till produktöverföringssteget. Nästa steg är att ladda upp en Scene7-batch, men den processen kommer inte in i AEM. (ASSETS-30443)
+* Behöver ett bättre sätt att hantera icke-Dynamic Media-filmer på ett smidigt sätt i Dynamic Media-komponenten. Det här problemet gav ett undantagsfel som instansierade `dynamicmedia_sly.js`. (ASSETS-31301)
+* Förhandsgranskning fungerar för alla resurser, anpassningsbara videouppsättningar och videoklipp. 403-fel genereras dock för `.m3u8` filer (som för övrigt fortfarande fungerar som offentliga länkar). (ASSETS-31882)
+* The `scene7SmartCropProcessingStatus` status korrigerad. Metadata för Smart Crop-video används för att visa fel även när det lyckades. (ASSETS-31255)
 
 ### [!DNL Forms]{#forms-6520}
 
@@ -166,7 +166,7 @@ Korrigeringar i [!DNL Experience Manager] Forms levereras via ett separat tillä
 
 #### Communities {#communities-6520}
 
-* Diagnostik för användarsynkronisering misslyckas efter att användarsynkroniseringen har konfigurerats. (NPR-41693) NORMAL
+* Diagnostik för användarsynkronisering misslyckas efter att användarsynkroniseringen har konfigurerats. (NPR-41693)
 
 <!-- #### Content distribution{#foundation-content-distribution-6520}
 
@@ -174,12 +174,12 @@ Korrigeringar i [!DNL Experience Manager] Forms levereras via ett separat tillä
 
 #### Integreringar{#integrations-6520}
 
-* Ta bort all kod och alla beroenden för Adobe Search &amp; Promote från AEM 6.5. (NPR-40856) NORMAL
+* Ta bort all kod och alla beroenden för Adobe Search &amp; Promote från AEM 6.5. (NPR-40856)
 
 #### Lokalisering{#localization-6520}
 
-* Aria-etiketten&quot;close&quot; är inte lokaliserad i **[!UICONTROL Assets]** > **[!UICONTROL Files]**, markerar en mapp och väljer sedan **[!UICONTROL Properties]** > **[!UICONTROL Permissions]** tab > member name. (NPR-41705) MAJOR
-* Det finns ett trunkerat verktygstips för **[!UICONTROL Key Store Password]** på SSL-inställningssidan för språkområden ENG, FRA, KOR, DEU och PTB. (NPR-41367) NORMAL
+* Aria-etiketten&quot;close&quot; är inte lokaliserad i **[!UICONTROL Assets]** > **[!UICONTROL Files]**, markerar en mapp och väljer sedan **[!UICONTROL Properties]** > **[!UICONTROL Permissions]** tab > member name. (NPR-41705)
+* Det finns ett trunkerat verktygstips för **[!UICONTROL Key Store Password]** på SSL-inställningssidan för språkområden ENG, FRA, KOR, DEU och PTB. (NPR-41367)
 
 <!-- #### Oak{#oak-6520}
 
@@ -187,7 +187,7 @@ Korrigeringar i [!DNL Experience Manager] Forms levereras via ett separat tillä
 
 #### Plattform{#foundation-platform-6520}
 
-* Problem med att integrera Campaign med AEM som orsakas av att /api-servern inte returnerar rätt schema i href json. Orsaken var att AEM inte fick rubriken X-Forward-Proto som tvingade begäran att svara med ett HTTP-schema i stället för HTTPS. Därför bör man lägga till möjligheten att växla mellan schemaval baserat på en OSGI-konfiguration. (GRANITE-48454) MAJOR
+* Problem med att integrera Campaign med AEM som orsakas av att /api-servern inte returnerar rätt schema i href json. Orsaken var att AEM inte fick rubriken X-Forward-Proto som tvingade begäran att svara med ett HTTP-schema i stället för HTTPS. Därför bör man lägga till möjligheten att växla mellan schemaval baserat på en OSGI-konfiguration. (GRANITE-48454)
 
 <!-- #### Replication{#foundation-replication-6520}
 
@@ -195,21 +195,21 @@ Korrigeringar i [!DNL Experience Manager] Forms levereras via ett separat tillä
 
 #### Sling{#foundation-sling-6520}
 
-* The `org.apache.sling.resourceMerger` bundle 1.4.2 genererar ett undantag från AEM 6.5, Service Pack 17 och senare. Sling-resurskoncentrationen 1.4.4 bör ingå i Service Pack 20. (NPR-41630) NORMAL
+* The `org.apache.sling.resourceMerger` bundle 1.4.2 genererar ett undantag från AEM 6.5, Service Pack 17 och senare. Sling-resurskoncentrationen 1.4.4 bör ingå i Service Pack 20. (NPR-41630)
 
 #### Översättning{#foundation-translation-6520}
 
-* Efter distributionen av AEM 6.5 Service Pack 18 uppstod ett problem med fliken Filter i Översättningsregelredigeraren. När en kontext är markerad och du klickar på Redigera > Spara, visas ett dubbelt citattecken som HTML nästa gång du öppnar samma kontext. Översättningsreglerna sparades inte korrekt. (NPR-41624) MAJOR
-* Problem som rör översättningar av innehållsfragment, där de översatta strängarna skickas tillbaka från översättningsleverantören till AEM, men de sitter fast på `/content/projects` och inte uppdatera innehållsfragmenten. (NPR-41516) MAJOR
-* Ett felmeddelande visas när en språkkopia skapas. Det förekommer på en sida som har ett innehållsfragment som refereras i en sidegenskap, med hjälp av innehållsfragmentmodeller. (NPR-41441) MAJOR
-* Länkar i Experience Fragments justeras inte till rätt språk under Language Copy. I stället pekar Experience Fragment på det primära språkområdet. (NPR-41343) NORMAL
+* Efter distributionen av AEM 6.5 Service Pack 18 uppstod ett problem med fliken Filter i Översättningsregelredigeraren. När en kontext är markerad och du klickar på Redigera > Spara, visas ett dubbelt citattecken som HTML nästa gång du öppnar samma kontext. Översättningsreglerna sparades inte korrekt. (NPR-41624)
+* Problem som rör översättningar av innehållsfragment, där de översatta strängarna skickas tillbaka från översättningsleverantören till AEM, men de sitter fast på `/content/projects` och inte uppdatera innehållsfragmenten. (NPR-41516)
+* Ett felmeddelande visas när en språkkopia skapas. Det förekommer på en sida som har ett innehållsfragment som refereras i en sidegenskap, med hjälp av innehållsfragmentmodeller. (NPR-41441)
+* Länkar i Experience Fragments justeras inte till rätt språk under Language Copy. I stället pekar Experience Fragment på det primära språkområdet. (NPR-41343)
 
 #### Användargränssnitt{#foundation-ui-6520}
 
-* Konsolfel uppstår efter en uppgradering till AEM 6.5, Service Pack 18. Felet finns i `coralUI3.js` och inträffar när du väljer en nedrullningsbar meny i AEM. I synnerhet händer det med en `onOverlayToggle` -händelse. Felet `Uncaught TypeError: Cannot read properties of null (reading 'innerText')` visas. (NPR-41467) MAJOR
-* AEM **[!UICONTROL Tools]** > **[!UICONTROL General]** > **[!UICONTROL Tagging]** > **[!UICONTROL Create]** > **[!UICONTROL Create Tag]**, ange icke-latinska tecken i **Titel** fältet orsakar **Namn** fält som bara ska fyllas med bindestreck ( `-` ). (NPR-41623) NORMAL
-* Upphovsrättsåret är felaktigt i `About Adobe Experience Manager` -dialogrutan. (NPR-41526) NORMAL
-* Det finns oöversatta **[!UICONTROL Profile Properties]** strängar när användarinställningar redigeras. Inträffar i alla språkområden. (NPR-41365) NORMAL
+* Konsolfel uppstår efter en uppgradering till AEM 6.5, Service Pack 18. Felet finns i `coralUI3.js` och inträffar när du väljer en nedrullningsbar meny i AEM. I synnerhet händer det med en `onOverlayToggle` -händelse. Felet `Uncaught TypeError: Cannot read properties of null (reading 'innerText')` visas. (NPR-41467)
+* AEM **[!UICONTROL Tools]** > **[!UICONTROL General]** > **[!UICONTROL Tagging]** > **[!UICONTROL Create]** > **[!UICONTROL Create Tag]**, ange icke-latinska tecken i **Titel** fältet orsakar **Namn** fält som bara ska fyllas med bindestreck ( `-` ). (NPR-41623)
+* Upphovsrättsåret är felaktigt i `About Adobe Experience Manager` -dialogrutan. (NPR-41526)
+* Det finns oöversatta **[!UICONTROL Profile Properties]** strängar när användarinställningar redigeras. Inträffar i alla språkområden. (NPR-41365)
 
 <!-- #### WCM{#wcm-6520}
 
