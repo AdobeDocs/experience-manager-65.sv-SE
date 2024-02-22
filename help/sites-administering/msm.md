@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: site-features
 content-type: reference
 exl-id: 1e839845-fb5c-4200-8ec5-6ff744a96943
-source-git-commit: 6799f1d371734b69c547f3c0c68e1e633aa63229
+source-git-commit: fd30e16274b6d5f971120f4e360fc9d65ae21bec
 workflow-type: tm+mt
-source-wordcount: '2642'
+source-wordcount: '2665'
 ht-degree: 0%
 
 ---
@@ -151,6 +151,10 @@ MSM är direkt tillgängligt i användargränssnittet med hjälp av olika altern
 
 >[!NOTE]
 >
+>MSM kan användas med både sidor och [Upplevelsefragment](/help/sites-authoring/experience-fragments.md) eftersom dessa fragment ingår i en upplevelse (sida).
+
+>[!NOTE]
+>
 >Aspekter på MSM-funktioner används i flera andra Adobe Experience Manager-funktioner (AEM) (till exempel Launches, Catalog). I dessa fall hanteras live-kopian av den funktionen.
 
 ### Använda termer {#terms-used}
@@ -281,7 +285,7 @@ I föregående exempel `/content/we-retail/language-masters/en` är den globala 
 
 >[!NOTE]
 >
-Diagrammen och beskrivningarna i det här avsnittet representerar ögonblicksbilder av potentiella livekopior. De är inte heltäckande, men ger en översikt som framhäver specifika egenskaper.
+>Diagrammen och beskrivningarna i det här avsnittet representerar ögonblicksbilder av potentiella livekopior. De är inte heltäckande, men ger en översikt som framhäver specifika egenskaper.
 
 När du först skapar en live-kopia återspeglas de valda källsidorna på 1:1-basis i den aktiva kopian. Därefter kan nya resurser (sidor och/eller stycken) också skapas direkt i den aktiva kopian, så det är användbart att känna till dessa variationer och hur de påverkar synkroniseringen. Möjliga kompositioner:
 
@@ -303,7 +307,7 @@ Den grundläggande formen av en live-kopia har:
 
 #### Live Copy med icke-Live-Copy-sidor {#live-copy-with-non-live-copy-pages}
 
-När du skapar en live-kopia i AEM kan du se och navigera genom den aktiva kopieringsgrenen - och använda normal AEM på den aktiva kopieringsgrenen. Det innebär att du (eller en process) kan skapa resurser (sidor, stycken eller både och) inuti den aktiva kopian. Till exempel, `myCanadaOnlyProduct`.
+När du skapar en live-kopia i AEM kan du se och navigera genom den aktiva kopieringsgrenen - och använda normal AEM på den aktiva kopieringsgrenen. Det innebär att du (eller en process) kan skapa resurser (sidor, stycken eller både och) inuti den aktiva kopian. Till exempel: `myCanadaOnlyProduct`.
 
 * Sådana resurser har ingen aktiv relation till käll-/ritningssidorna och är inte synkroniserade.
 * Scenarier kan inträffa som MSM hanterar som specialfall. När du till exempel (eller en process) skapar en sida med samma position och namn i både källans/ritytans och live-kopians grenar. Information om sådana situationer finns i [MSM-utrullningskonflikter](/help/sites-administering/msm-rollout-conflicts.md) för mer information.
@@ -323,7 +327,7 @@ När du (eller en process) skapar en [sida i en befintlig live-kopia](#live-copy
 
 >[!NOTE]
 >
-Om du flyttar/byter namn på en sida i en livekopiegren behandlas detta (internt) som en kapslad live-kopia för att AEM ska kunna spåra relationerna.
+>Om du flyttar/byter namn på en sida i en livekopiegren behandlas detta (internt) som en kapslad live-kopia för att AEM ska kunna spåra relationerna.
 
 #### Skiktade Live-kopior {#stacked-live-copies}
 
@@ -384,7 +388,7 @@ En utrullningskonfiguration definierar när och hur en live-kopia synkroniseras 
 
   >[!NOTE]
   >
-  Du kan skapa anpassade åtgärder för instansen med Java™ API.
+  >Du kan skapa anpassade åtgärder för instansen med Java™ API.
 
 Utrullningskonfigurationer kan återanvändas så att mer än en live-kopia kan använda samma utrullningskonfiguration. Flera [utrullningskonfigurationer](/help/sites-administering/msm-sync.md#installed-rollout-configurations) ingår i en standardinstallation.
 
@@ -406,13 +410,13 @@ Du kan också [frigöra en live-kopia](/help/sites-administering/msm-livecopy.md
 
 >[!CAUTION]
 >
-Frigör är permanent och icke-reversibel.
+>Frigör är permanent och icke-reversibel.
 
 Koppla loss permanent tar bort den aktiva relationen mellan en live-kopia och dess planeringssida. Alla MSM-relevanta egenskaper tas bort från den aktiva kopian och de aktiva kopieringssidorna blir en fristående kopia.
 
 >[!NOTE]
 >
-Se [Koppla loss en Live-kopia](/help/sites-administering/msm-livecopy.md#detaching-a-live-copy) om du vill ha fullständig information, inklusive den relaterade effekten på underordnade och överordnade sidor.
+>Se [Koppla loss en Live-kopia](/help/sites-administering/msm-livecopy.md#detaching-a-live-copy) om du vill ha fullständig information, inklusive den relaterade effekten på underordnade och överordnade sidor.
 
 ## Standardsteg för att använda MSM {#standard-steps-for-using-msm}
 

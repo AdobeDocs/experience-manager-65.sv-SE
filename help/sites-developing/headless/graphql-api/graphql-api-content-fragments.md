@@ -3,9 +3,9 @@ title: AEM GraphQL API för användning med innehållsfragment
 description: Lär dig hur du använder innehållsfragment i Adobe Experience Manager (AEM) med AEM GraphQL API för leverans av headless-innehåll.
 feature: Content Fragments,GraphQL API
 exl-id: beae1f1f-0a76-4186-9e58-9cab8de4236d
-source-git-commit: 312e2477bb6a7cccab74cd4637d6a402f61052d7
+source-git-commit: 452813cf50110b515c181dba1ecbde4527808cfb
 workflow-type: tm+mt
-source-wordcount: '4708'
+source-wordcount: '4796'
 ht-degree: 0%
 
 ---
@@ -523,6 +523,53 @@ I följande exempel visas en fullständig fråga som filtrerar alla personer som
     items {
       lastName
       firstName
+    }
+  }
+}
+```
+
+När en GraphQL-fråga körs med valfria variabler, om ett specifikt värde är **not** som anges för den valfria variabeln ignoreras variabeln i filterutvärderingen. Det innebär att frågeresultaten innehåller alla värden, båda `null` och inte `null`, för egenskapen som är relaterad till filtervariabeln.
+
+>[!NOTE]
+>
+>Om en `null` värdet är *explicit* som anges för en sådan variabel, kommer filtret endast att matcha `null` värden för motsvarande egenskap.
+
+I frågan nedan, där inget värde har angetts för egenskapen `lastName`:
+
+```graphql
+query getAuthorsFilteredByLastName($authorLastName: String) {
+  authorList(filter:
+    {
+      lastName: {_expressions: {value: $authorLastName}
+      }}) {
+    items {
+      lastName
+    }
+  }
+}
+```
+
+Alla författare returneras:
+
+```graphql
+{
+  "data": {
+    "authorList": {
+      "items": [
+        {
+          "lastName": "Hammer"
+        },
+        {
+          "lastName": "Provo"
+        },
+        {
+          "lastName": "Wester"
+        },
+        {
+          "lastName": null
+        },
+         ...
+      ]
     }
   }
 }

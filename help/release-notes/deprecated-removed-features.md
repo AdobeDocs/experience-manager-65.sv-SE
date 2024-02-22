@@ -2,7 +2,7 @@
 title: Borttagna funktioner i Adobe Experience Manager 6.5.
 description: Versionsinformation om borttagna funktioner i Adobe Experience Manager 6.5.
 exl-id: d9b6140a-c37d-4b90-a60c-01f471d65621
-source-git-commit: 3443d331815ffb462890282a49e658693f157af0
+source-git-commit: a9b8980a5e6f0488f10c408cd18b83f3ff225058
 workflow-type: tm+mt
 source-wordcount: '1710'
 ht-degree: 2%
@@ -55,7 +55,8 @@ Kunderna rekommenderas att granska om de använder funktionen/funktionen i den a
 | Utvecklare | `Granite.Sling.js` klientbibliotek. Adobe planerar inte att ytterligare förbättra klientbiblioteket Granite.Sling.js som levereras som en del av distributionen (QuickStart). | Adobe rekommenderar att kunder som förlitar sig på att biblioteket kan koda om för att inte längre använda det. |  |
 | Utvecklare | Använda YUI för att komprimera/minimera JavaScript-klientbibliotek. Adobe planerar inte att uppdatera YUI-biblioteket ytterligare. Fram till AEM 6.4 var YUI standardinställning för att minimera JavaScript med möjlighet att växla till Google Closure Compiler (GCC). Från och med AEM 6.5 är GCC standard. | Adobe rekommenderar att man uppgraderar till AEM 6.5 för att gå över till GCC för implementering |  |
 | Utvecklare | Klassisk dialogruteredigerare i CRXDE Lite. Adobe planerar inte att ytterligare förbättra den klassiska dialogruteredigeraren för användargränssnittet som levereras som en del av distributionen (QuickStart) | Det finns ingen ersättning. |  |
-| Forms | AEM Forms integrering med AEM Mobile är föråldrad. | Det finns ingen ersättare. |  | Utvecklare | Klassisk dialogruteredigerare i CRXDE Lite. Adobe planerar inte att ytterligare förbättra den klassiska dialogruteredigeraren för användargränssnittet som levereras som en del av distributionen (QuickStart) | Det finns ingen ersättning. |  |
+| Forms | AEM Forms integrering med AEM Mobile är föråldrad. | Det finns ingen ersättare. |
+| Utvecklare | Klassisk dialogruteredigerare i CRXDE Lite. Adobe planerar inte att ytterligare förbättra den klassiska dialogruteredigeraren för användargränssnittet som levereras som en del av distributionen (QuickStart) | Det finns ingen ersättning. |  |
 | Utvecklare | Klientbibliotek med Lodash/underscore. Adobe planerar inte att ytterligare underhålla och uppdatera Lodash-/understreckklientbiblioteket som levereras som en del av distributionen (QuickStart). | Adobe rekommenderar att kunder som fortfarande behöver Lodash/underscore för sin kod lägger till den i sin projektkodbas. |  |
 
 ## Borttagna funktioner {#removed-features}

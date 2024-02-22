@@ -6,9 +6,9 @@ solution-title: Experience Cloud
 user-guide-description: Läs Adobe Experience Manager 6.5-dokumentationen och se hur det fungerar och vad programmet kan göra för dig.
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM 6.5
-source-git-commit: 6dbec0f41396c2b41d5324c4ecf6f1f33b1d0780
+source-git-commit: a4ece4c2e9128e61982fb45d90ee3c63352f8349
 workflow-type: tm+mt
-source-wordcount: '7335'
+source-wordcount: '7342'
 ht-degree: 1%
 
 ---
@@ -19,6 +19,7 @@ ht-degree: 1%
 + Versionsinformation {#release-notes}
    + [Versionsinformation](/help/release-notes/release-notes.md)
    + Tidigare versionsinformation {#service-pack}
+      + [6.5.19](/help/release-notes/previous/6-5-19.md)
       + [6.5.18](/help/release-notes/previous/6-5-18.md)
       + [6.5.17](/help/release-notes/previous/6-5-17.md)
       + [6.5.16](/help/release-notes/previous/6-5-16.md)
@@ -41,6 +42,7 @@ ht-degree: 1%
    + [Installationsanvisningar för AEM Forms Service Pack](/help/release-notes/aem-forms-current-service-pack-installation-instructions.md)
    + [AEM Forms JEE patch installer](/help/release-notes/jee-patch-installer-65.md)
    + [AEM Forms Service Pack Hotfix](/help/release-notes/aem-forms-hotfix.md)
+   + [Funktioner och förbättringar för Cumulative Key](/help/release-notes/cumulative-features-enhancements.md)
    + [Föråldrade och borttagna funktioner](/help/release-notes/deprecated-removed-features.md)
    + [Funktionsstatus för Touch UI](/help/release-notes/touch-ui-features-status.md)
 + Dokumentskydd {#security}
