@@ -6,14 +6,14 @@ role: User, Admin
 feature: Asset Reports,Asset Management
 exl-id: b4963a03-3496-4c6c-9d30-8812304d0e9f
 hide: true
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 93d0a38d13223a8580f54786bc4ffe149efe99f1
 workflow-type: tm+mt
-source-wordcount: '1096'
-ht-degree: 9%
+source-wordcount: '1089'
+ht-degree: 7%
 
 ---
 
-# Materialrapporter {#asset-reports}
+# Resursrapporter {#asset-reports}
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
@@ -96,7 +96,7 @@ Så här skapar du rapporter:
 
    ![Detaljsida för rapporten Filer](assets/files_report.png)
 
-   I rapporten **[!UICONTROL Link Share]** visas URL:er till resurser som delas med externa användare inifrån [!DNL Assets]. Den innehåller e-post-ID:n för den användare som delat resurserna, e-post-ID:n för de användare som resurserna delas med, delningsdatum och utgångsdatum för länken. Det går inte att anpassa kolumnerna.
+   The **[!UICONTROL Link Share]** rapporten visar URL:er till resurser som delas med externa användare inifrån [!DNL Assets]. Den innehåller e-post-ID:n för den användare som delat resurserna, e-post-ID:n för de användare som resurserna delas med, delningsdatum och utgångsdatum för länken. Det går inte att anpassa kolumnerna.
 
    The **[!UICONTROL Link Share]** , innehåller inga alternativ för undermappar och återgivningar eftersom den bara publicerar de delade URL:er som visas under `/var/dam/share`.
 
@@ -115,7 +115,8 @@ Så här skapar du rapporter:
 1. Klicka på **[!UICONTROL Create]** i verktygsfältet. Ett meddelande meddelar att rapportgenereringen har initierats.
 1. På [!UICONTROL Asset Reports] sidan baseras rapportgenereringsstatusen på rapportjobbets aktuella tillstånd, till exempel [!UICONTROL Success], [!UICONTROL Failed], [!UICONTROL Queued], eller [!UICONTROL Scheduled]. Samma status visas i inkorgen för meddelanden.Om du vill visa rapportsidan klickar du på rapportlänken. Du kan också markera rapporten och klicka på **[!UICONTROL View]** i verktygsfältet.
 
-   ![En genererad rapport](assets/report_page.png)
+   <!--![A generated report](assets/report_page.png)-->
+   [Rapportstatus](assets/report-status.JPG)
 
    Klicka **[!UICONTROL Download]** i verktygsfältet för att hämta rapporten i CSV-format.
 
