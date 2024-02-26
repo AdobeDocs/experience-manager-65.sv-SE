@@ -3,9 +3,9 @@ title: Tekniska krav
 description: En lista över de klient- och serverplattformar som stöds för Adobe Experience Manager.
 topic-tags: platform
 exl-id: 47529b9a-c4e5-434f-ac26-b01714ff863b
-source-git-commit: fbf056b6b7dcbfcaa27744672c45a87316c5f761
+source-git-commit: d5e7f0301259fdc12b507f9568befcc34ebe9408
 workflow-type: tm+mt
-source-wordcount: '3642'
+source-wordcount: '3644'
 ht-degree: 0%
 
 ---
@@ -141,29 +141,29 @@ Det finns olika alternativ för att distribuera Adobe Experience Manager-databas
 
 >[!NOTE]
 >
-Se [Distribuera webbgrupper](/help/communities/deploy-communities.md) om du vill ha mer information om AEM Communities.
+>Se [Distribuera webbgrupper](/help/communities/deploy-communities.md) om du vill ha mer information om AEM Communities.
 
 >[!NOTE]
 >
-MongoDB är ett program från tredje part och ingår inte i AEM licenspaket. Mer information finns i [MongoDB-licenspolicy](https://www.mongodb.com/licensing/server-side-public-license/faq) sida.
+>MongoDB är ett program från tredje part och ingår inte i AEM licenspaket. Mer information finns i [MongoDB-licenspolicy](https://www.mongodb.com/licensing/server-side-public-license/faq) sida.
 >
-För att få ut så mycket som möjligt av er AEM med MongoDB rekommenderar Adobe att ni har licenser för MongoDB Enterprise-versionen och får tillgång till professionell support. Se [Rekommenderade distributioner](/help/sites-deploying/recommended-deploys.md#prerequisites-and-recommendations-when-deploying-aem-with-mongomk) för mer information.
+>För att få ut så mycket som möjligt av er AEM med MongoDB rekommenderar Adobe att ni har licenser för MongoDB Enterprise-versionen och får tillgång till professionell support. Se [Rekommenderade distributioner](/help/sites-deploying/recommended-deploys.md#prerequisites-and-recommendations-when-deploying-aem-with-mongomk) för mer information.
 >
-Licensen innehåller en standarduppsättning av repliker, som består av en primär och två sekundära instanser som kan användas för antingen författaren eller publiceringsdistributionerna.
+>Licensen innehåller en standarduppsättning av repliker, som består av en primär och två sekundära instanser som kan användas för antingen författaren eller publiceringsdistributionerna.
 >
-Om du vill köra både författaren och publicera på MongoDB måste du köpa två separata licenser.
+>Om du vill köra både författaren och publicera på MongoDB måste du köpa två separata licenser.
 >
-Adobe kundtjänst hjälper dig att hantera kvalificeringsproblem som rör användningen av MongoDB med AEM.
+>Adobe kundtjänst hjälper dig att hantera kvalificeringsproblem som rör användningen av MongoDB med AEM.
 >
-Mer information finns på [sidan](https://www.mongodb.com/lp/contact/mongodb-adobe-experience-manager) MongoDB för Adobe Experience Manager.
+>Mer information finns på [sidan](https://www.mongodb.com/lp/contact/mongodb-adobe-experience-manager) MongoDB för Adobe Experience Manager.
 
 >[!NOTE]
 >
-Relationsdatabaser som stöds enligt listan ovan är programvara från tredje part och ingår inte i AEM licensieringspaket.
+>Relationsdatabaser som stöds enligt listan ovan är programvara från tredje part och ingår inte i AEM licensieringspaket.
 >
-För att köra AEM 6.5 med en relationsdatabas som stöds krävs ett separat supportavtal med en databasleverantör. Adobe kundtjänst hjälper dig att hantera kvalificeringsproblem som rör användningen av relationsdatabaser med AEM 6.5.
+>För att köra AEM 6.5 med en relationsdatabas som stöds krävs ett separat supportavtal med en databasleverantör. Adobe kundtjänst hjälper dig att hantera kvalificeringsproblem som rör användningen av relationsdatabaser med AEM 6.5.
 >
-**De flesta relationsdatabaser stöds för närvarande i Level-R på AEM 6.5, som innehåller stödkriterier och ett supportprogram enligt beskrivningen ovan.**
+>**De flesta relationsdatabaser stöds för närvarande i Level-R på AEM 6.5, som innehåller stödkriterier och ett supportprogram enligt beskrivningen ovan.**
 
 ### Servletmotorer/programservrar {#servlet-engines-application-servers}
 
@@ -208,12 +208,12 @@ Adobe Experience Manager fungerar med följande serverplattformar för produktio
 
    >[!NOTE]
    >
-   För Linux-baserade servrar (OSGI- och JEE-stackar) kräver AEM Forms add-on körningsberoenden som:
-   * glibc.x86_64 (2.17-196)
-   * libX11.x86_64 (1.6.7-4)
-   * zlib.x86-64 (1.2.7-17)
-   * libxcb.x86_64 (1.13-1.el7)
-   * libXau.x86_64 (1.0.8-2.1.el7)
+   >För Linux-baserade servrar (OSGI- och JEE-stackar) kräver AEM Forms add-on körningsberoenden som:
+   >* glibc.x86_64 (2.17-196)
+   >* libX11.x86_64 (1.6.7-4)
+   >* zlib.x86-64 (1.2.7-17)
+   >* libxcb.x86_64 (1.13-1.el7)
+   >* libXau.x86_64 (1.0.8-2.1.el7)
 
 1. Produktionsinstallationer i Microsoft® Windows stöds för kunder som uppgraderar till 6.5 och för icke-produktionsanvändning. Nya driftsättningar är på begäran för AEM Sites och Assets.
 1. AEM Forms stöds på Microsoft® Windows Server utan begränsningar på supportnivå R.
@@ -221,13 +221,13 @@ Adobe Experience Manager fungerar med följande serverplattformar för produktio
 
 >[!NOTE]
 >
-Om du installerar AEM Forms 6.5 ska du kontrollera att du har installerat följande 32-bitars omdistribuerbara Microsoft® Visual C++.
+>Om du installerar AEM Forms 6.5 ska du kontrollera att du har installerat följande 32-bitars omdistribuerbara Microsoft® Visual C++.
 >
-* Microsoft® Visual C++ 2008 återdistribuerbar
-* Återdistribuerbar Microsoft® Visual C++ 2010
-* Microsoft® Visual C++ 2012 återdistribuerbar
-* Microsoft® Visual C++ 2013 återdistribuerbar
-* Microsoft® Visual C++ 2019 (VC14.28 eller senare) återdistribuerbar
+>* Microsoft® Visual C++ 2008 återdistribuerbar
+>* Återdistribuerbar Microsoft® Visual C++ 2010
+>* Microsoft® Visual C++ 2012 återdistribuerbar
+>* Microsoft® Visual C++ 2013 återdistribuerbar
+>* Microsoft® Visual C++ 2019 (VC14.28 eller senare) återdistribuerbar
 
 
 ### Virtuella miljöer och molnmiljöer {#virtual-cloud-computing-environments}
@@ -271,9 +271,9 @@ Det AEM användargränssnittet är optimerat för större skärmar (vanligen bä
 
 >[!NOTE]
 >
-**Stöd för webbläsare med snabb lansering:**
+>**Stöd för webbläsare med snabb lansering:**
 >
-Uppdateringar för Mozilla Firefox, Google Chrome och Microsoft® Edge var sjätte månad. Adobe tillhandahåller uppdateringar för Adobe Experience Manager för att upprätthålla den supportnivå som anges nedan för kommande versioner av dessa webbläsare.
+>Uppdateringar för Mozilla Firefox, Google Chrome och Microsoft® Edge var sjätte månad. Adobe tillhandahåller uppdateringar för Adobe Experience Manager för att upprätthålla den supportnivå som anges nedan för kommande versioner av dessa webbläsare.
 
 <table>
  <tbody>
@@ -377,9 +377,9 @@ När Dynamic Media är aktiverat gäller följande ytterligare tekniska krav.
 
 >[!NOTE]
 >
-Dessa systemkrav **endast** gäller om du använder Dynamic Media - hybridläge; Dynamic Media - hybridläge har en inbäddad bildserver, som bara är certifierad på vissa operativsystem.
+>Dessa systemkrav **endast** gäller om du använder Dynamic Media - hybridläge; Dynamic Media - hybridläge har en inbäddad bildserver, som bara är certifierad på vissa operativsystem.
 >
-För Dynamic Media-kunder som kör Dynamic Media - Scene7-läge (dvs. **dynamicmedia_scene7** i körläge), finns det inga ytterligare systemkrav; bara samma systemkrav som AEM. Dynamic Media - Scene7-lägesarkitektur använder den molnbaserade bildtjänsten och inte den tjänst som är inbäddad i AEM.
+>För Dynamic Media-kunder som kör Dynamic Media - Scene7-läge (dvs. **dynamicmedia_scene7** i körläge), finns det inga ytterligare systemkrav; bara samma systemkrav som AEM. Dynamic Media - Scene7-lägesarkitektur använder den molnbaserade bildtjänsten och inte den tjänst som är inbäddad i AEM.
 
 #### Maskinvara {#hardware}
 
@@ -399,27 +399,27 @@ Om du använder Dynamic Media i Linux® måste följande krav vara uppfyllda:
 
 >[!NOTE]
 >
-Om språkinställningen är inställd så att LC_CTYPE inte är lika med `en_US.UTF-8`så att Dynamic Media inte fungerar. Om du vill se vilket värde det har skriver du&quot;locale&quot; i kommandotolken. Om den inte är korrekt inställd anger du LC_CTYPE-miljövariabeln till den tomma strängen genom att skriva &quot;export LC_CTYPE=&quot; innan du kör AEM.
+>Om språkinställningen är inställd så att LC_CTYPE inte är lika med `en_US.UTF-8`så att Dynamic Media inte fungerar. Om du vill se vilket värde det har skriver du&quot;locale&quot; i kommandotolken. Om den inte är korrekt inställd anger du LC_CTYPE-miljövariabeln till den tomma strängen genom att skriva &quot;export LC_CTYPE=&quot; innan du kör AEM.
 
 >[!NOTE]
 >
-**Inaktiverar SELinux:** Image Serving fungerar inte med SELinux aktiverat. Det här alternativet är aktiverat som standard. Du kan åtgärda problemet genom att redigera **/etc/selinux/config** och ändra SELinux-värdet från:
+>**Inaktiverar SELinux:** Image Serving fungerar inte med SELinux aktiverat. Det här alternativet är aktiverat som standard. Du kan åtgärda problemet genom att redigera **/etc/selinux/config** och ändra SELinux-värdet från:
 >
-`SELINUX=enforcing` **till** `SELINUX=disabled`
+>`SELINUX=enforcing` **till** `SELINUX=disabled`
 
 >[!NOTE]
 >
-**NUMA-arkitektur:** System med processorer med AMD64 och Intel® EM64T konfigureras vanligtvis som NUMA-plattformar (non-uniform memory architecture). Det vill säga, kärnan konstruerar flera minnesnoder vid uppstart i stället för att konstruera en enda minnesnod.
+>**NUMA-arkitektur:** System med processorer med AMD64 och Intel® EM64T konfigureras vanligtvis som NUMA-plattformar (non-uniform memory architecture). Det vill säga, kärnan konstruerar flera minnesnoder vid uppstart i stället för att konstruera en enda minnesnod.
 >
-Konstruktionen för flera noder kan resultera i minnesöverbelastning på en eller flera av noderna innan andra noder töms. När minnesöverbelastning inträffar kan kärnan bestämma sig för att avsluta processer (till exempel Image Server eller Platform Server) trots att det finns tillgängligt minne.
+>Konstruktionen för flera noder kan resultera i minnesöverbelastning på en eller flera av noderna innan andra noder töms. När minnesöverbelastning inträffar kan kärnan bestämma sig för att avsluta processer (till exempel Image Server eller Platform Server) trots att det finns tillgängligt minne.
 >
-Därför rekommenderar Adobe att du stänger av NUMA med **numa=off** startalternativ för att undvika att kärnan tar bort dessa processer.
+>Därför rekommenderar Adobe att du stänger av NUMA med **numa=off** startalternativ för att undvika att kärnan tar bort dessa processer.
 
 >[!NOTE]
 >
-**Serverns värdnamn måste matchas:** Kontrollera att serverns värdnamn kan matchas till en IP-adress. Om det inte är möjligt lägger du till det fullständigt kvalificerade värdnamnet och IP-adressen i **/etc/hosts**:
+>**Serverns värdnamn måste matchas:** Kontrollera att serverns värdnamn kan matchas till en IP-adress. Om det inte är möjligt lägger du till det fullständigt kvalificerade värdnamnet och IP-adressen i **/etc/hosts**:
 >
-`<ip address> <fully qualified hostname>`
+>`<ip address> <fully qualified hostname>`
 
 #### Windows {#windows}
 
@@ -504,25 +504,25 @@ För Windows x86:
 
 >[!NOTE]
 >
-PDF Generator har endast stöd för engelska, franska, tyska och japanska versioner av de operativsystem och program som stöds.
+>PDF Generator har endast stöd för engelska, franska, tyska och japanska versioner av de operativsystem och program som stöds.
 >
-Dessutom
+>Dessutom
 >
-* PDF Generator kräver en 32-bitarsversion av [Acrobat 2020 Classic track version 20.004.30006](https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html) eller Acrobat 2017 version 17.011.30078 för konverteringen.
-* PDF Generator-konverteringar för OpenOffice stöds bara i Windows och Linux®.
-* PDF Generator har endast stöd för 32-bitarsversionen av Microsoft® Office Professional Plus och andra program som krävs för konvertering i Windows.
-* PDF Generator stöder 32- och 64-bitarsversionerna av OpenOffice i Linux®.
-* PDF Generator stöder inte Microsoft® Office 365.
-* Funktionerna OCR PDF, Optimize PDF och Export PDF stöds endast i Windows.
-* En version av Acrobat medföljer AEM Forms för att aktivera PDF Generator. Programmatiskt få tillgång till den paketerade versionen endast med AEM Forms, under AEM Forms-licensens löptid, för användning med AEM Forms PDF Generator. Mer information finns i AEM Forms produktbeskrivning för din distribution ([Lokal](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-on-premise.html) eller [Managed Services](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-managed-services.html))
-* Tjänsten PDF Generator stöder inte Microsoft® Windows 10.
-* PDF Generator kan inte konvertera filer med Microsoft® Visio 2019. Du kan fortsätta använda Microsoft® Visio 2016 för att konvertera `.VSD` och `.VSDX` filer.
-* PDF Generator kan inte konvertera filer med Microsoft® Project 2019. Du kan fortsätta använda Microsoft® Project 2016 för att konvertera `.VSD` och `.VSDX` filer.
+>* PDF Generator kräver en 32-bitarsversion av [Acrobat 2020 Classic track version 20.004.30006](https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html) eller Acrobat 2017 version 17.011.30078 för konverteringen.
+>* PDF Generator-konverteringar för OpenOffice stöds bara i Windows och Linux®.
+>* PDF Generator har endast stöd för 32-bitarsversionen av Microsoft® Office Professional Plus och andra program som krävs för konvertering i Windows.
+>* PDF Generator stöder 32- och 64-bitarsversionerna av OpenOffice i Linux®.
+>* PDF Generator stöder inte Microsoft® Office 365.
+>* Funktionerna OCR PDF, Optimize PDF och Export PDF stöds endast i Windows.
+>* En version av Acrobat medföljer AEM Forms för att aktivera PDF Generator. Programmatiskt få tillgång till den paketerade versionen endast med AEM Forms, under AEM Forms-licensens löptid, för användning med AEM Forms PDF Generator. Mer information finns i AEM Forms produktbeskrivning för din distribution ([Lokal](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-on-premise.html) eller [Managed Services](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-managed-services.html))
+>* Tjänsten PDF Generator stöder inte Microsoft® Windows 10.
+>* PDF Generator kan inte konvertera filer med Microsoft® Visio 2019. Du kan fortsätta använda Microsoft® Visio 2016 för att konvertera `.VSD` och `.VSDX` filer.
+>* PDF Generator kan inte konvertera filer med Microsoft® Project 2019. Du kan fortsätta använda Microsoft® Project 2016 för att konvertera `.VSD` och `.VSDX` filer.
 >
 
 ### Krav för AEM Forms Designer {#requirements-for-aem-forms-designer}
 
-* Microsoft Windows 2016 Server, Microsoft Windows 2019 Server eller Microsoft®®® Windows®®® 10
+* Microsoft® Windows® 2016 Server, Microsoft® Windows® 2019 Server, Microsoft® Windows® 10 eller Windows® 11
 * 1 GHz eller snabbare processor med stöd för PAE, NX och SSE2.
 * 1 GB RAM för 32-bitars eller 2 GB RAM för 64-bitars operativsystem
 * 16 GB diskutrymme för 32-bitars eller 20 GB diskutrymme för 64-bitars operativsystem
