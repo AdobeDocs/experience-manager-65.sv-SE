@@ -3,9 +3,9 @@ title: AEM Forms JEE Patch Installer
 description: Lär dig hur du använder AEM Forms JEE Patch Installer för att åtgärda problem i AEM 6.5 Forms-komponenter.
 content-type: reference
 exl-id: 6b17472b-9226-4319-b305-4dba862d21af
-source-git-commit: 6b24067c1808475044a612f21d5d4d2793c13e17
+source-git-commit: d195ac80ee59439bab5b1219a2c1f16e93e3d22b
 workflow-type: tm+mt
-source-wordcount: '518'
+source-wordcount: '552'
 ht-degree: 0%
 
 ---
@@ -81,6 +81,10 @@ Om du har konfigurerat SAML-autentisering och har problem med stora IDP-metadata
    `um.saml.enable.large.xml=true`
 1. Starta om servern.
 1. Ta bort befintliga SAML-autentiseringsproviders och lägg till dem igen för befintliga domäner enligt beskrivningen i SAML-inställningarna.
+
+>[!NOTE]
+>
+> Du bör använda kommandot Ctrl + C för att starta om SDK:n. Om du startar om AEM SDK med alternativa metoder, till exempel genom att stoppa Java-processer, kan det leda till inkonsekvenser i den AEM utvecklingsmiljön.
 
 ## Påverkade moduler {#impacted-modules}
 

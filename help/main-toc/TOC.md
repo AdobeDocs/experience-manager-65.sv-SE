@@ -6,9 +6,9 @@ solution-title: Experience Cloud
 user-guide-description: Läs Adobe Experience Manager 6.5-dokumentationen och se hur det fungerar och vad programmet kan göra för dig.
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM 6.5
-source-git-commit: a4ece4c2e9128e61982fb45d90ee3c63352f8349
+source-git-commit: d195ac80ee59439bab5b1219a2c1f16e93e3d22b
 workflow-type: tm+mt
-source-wordcount: '7342'
+source-wordcount: '7348'
 ht-degree: 1%
 
 ---
@@ -1186,6 +1186,7 @@ ht-degree: 1%
       + [Minska STORLEK 2 RCE-sårbarhet för Experience Manager Forms](/help/forms/using/mitigating-struts-2-rce-vulnerabilities-for-experience-manager-manager-form.md)
       + [Det gick inte att säkerhetskopiera databasen under uppgradering till 6.5.12.0 för MySQL](/help/forms/using/failed-to-back-up-the-database-on-upgrading-to-aem-forms-service-pack-6-5-12-0.md)
       + [Det går inte att skriva ut ett stort antal PDF på WorkBench i PDF](/help/forms/using/pdf-generation-service-fails-to-print-a-large-number-of-pdfs-on-workbench.md)
+      + [Starta om AEM SDK](/help/forms/using/restart-aem-sdk.md)
    + Äldre dokumentation {#legacy-documentation}
       + [Använda den körda skripttjänsten i AEM Forms på JEE Workbench för att skapa XML-data](/help/forms/developing/building-xml.md)
       + [Komprimera och dekomprimera filer med en AEM Forms på en anpassad JEE DSC](/help/forms/developing/compressing-decompressing-custom-dsc.md)

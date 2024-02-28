@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: process-reporting
 docset: aem65
 exl-id: 1272e854-fa64-4bfd-b073-8fbcf210e9b5
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: d195ac80ee59439bab5b1219a2c1f16e93e3d22b
 workflow-type: tm+mt
-source-wordcount: '1672'
+source-wordcount: '1706'
 ht-degree: 0%
 
 ---
@@ -95,6 +95,10 @@ Så här ändrar du publiceringsschemat:
 1. Starta om AEM Forms Server-instansen.
 
 ![procesdatapublisherservice](assets/processdatapublisherservice.png)
+
+>[!NOTE]
+>
+> Du bör använda kommandot Ctrl + C för att starta om SDK:n. Om du startar om AEM SDK med alternativa metoder, till exempel genom att stoppa Java-processer, kan det leda till inkonsekvenser i den AEM utvecklingsmiljön.
 
 ### Tjänsten ProcessDataStorage {#processdatastorage-service}
 
@@ -275,3 +279,5 @@ Mer information om datapubliceringstjänsten och hur du schemalägger den här t
 * **[!UICONTROL Sync]**: Synkronisera den inbäddade Process Reporting-databasen med AEM Forms-databasen.
 * **[!UICONTROL Help]**: Visa hjälpdokumentationen om processrapportering.
 * **[!UICONTROL Logout]**: Logga ut från processrapportering
+
+

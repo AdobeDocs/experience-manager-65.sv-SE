@@ -7,9 +7,9 @@ topic-tags: manage
 noindex: true
 role: Admin
 exl-id: b87e07b1-4a19-4888-bad0-c0f5327b9ad3
-source-git-commit: 5af420c8e95fed88a8516cce27b8bbc7d3974e75
+source-git-commit: d195ac80ee59439bab5b1219a2c1f16e93e3d22b
 workflow-type: tm+mt
-source-wordcount: '426'
+source-wordcount: '453'
 ht-degree: 0%
 
 ---
@@ -38,5 +38,9 @@ AEM använder WebDAV-protokoll i Microsoft® Windows och SMB1 i macOS X för att
 1. I dialogrutan Lägg till i konfiguration för FormsManager avmarkerar du **[!UICONTROL Asynchronously Sync Resources]** och klicka **[!UICONTROL Save]**.
 1. Starta om AEM Forms Server. Efter omstarten är AEM Forms Server aktiverad för att acceptera och dela innehåll med AEM skrivbordsapp.
 1. Öppna appen och anslut till AEM Forms Server.
+
+   >[!NOTE]
+   >
+   > Du bör använda kommandot Ctrl + C för att starta om SDK:n. Om du startar om AEM SDK med alternativa metoder, till exempel genom att stoppa Java-processer, kan det leda till inkonsekvenser i den AEM utvecklingsmiljön.
 
    När anslutningen lyckades fyller programmet i `content/dam` och `content/dam/formsanddocuments` mappar. Förutom att flytta filer från ovanstående mappar till lokala mappar kan du använda appen för att flytta innehåll mellan automatiskt ifyllda mappar.

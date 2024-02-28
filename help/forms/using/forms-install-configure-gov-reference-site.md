@@ -4,9 +4,9 @@ description: Installera, konfigurera och anpassa ett AEM Forms-demopaket.
 contentOwner: anujkapo
 docset: aem65
 exl-id: 1fee474e-7da5-4ab2-881a-34b8e055aa29
-source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
+source-git-commit: d195ac80ee59439bab5b1219a2c1f16e93e3d22b
 workflow-type: tm+mt
-source-wordcount: '4486'
+source-wordcount: '4520'
 ht-degree: 0%
 
 ---
@@ -313,6 +313,10 @@ När molnkonfigurationen är klar kanske du vill testa formulärdatamodellen.
    >[!NOTE]
    >
    Det har rapporterats att en AEM Server måste startas om för att datakällan ska kunna bindas till FDM.
+
+   >[!NOTE]
+   >
+   Du bör använda kommandot Ctrl + C för att starta om SDK:n. Om du startar om AEM SDK med alternativa metoder, till exempel genom att stoppa Java-processer, kan det leda till inkonsekvenser i den AEM utvecklingsmiljön.
 
 #### Testa Forms datamodell (Derby) {#test-fdm-derby}
 

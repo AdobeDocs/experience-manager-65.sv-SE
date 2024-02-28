@@ -7,9 +7,9 @@ products: SG_EXPERIENCEMANAGER/6.4
 docset: aem65
 role: Admin
 exl-id: 3f150dd5-f486-4f16-9de9-035cde53b034
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: d195ac80ee59439bab5b1219a2c1f16e93e3d22b
 workflow-type: tm+mt
-source-wordcount: '996'
+source-wordcount: '1030'
 ht-degree: 0%
 
 ---
@@ -218,6 +218,10 @@ JBoss® Application Server använder 8080 som standard-HTTP-port. JBoss® har ä
 
 1. Spara och stäng filen.
 1. Starta om JBoss®-programservern.
+
+>[!NOTE]
+>
+> Du bör använda kommandot Ctrl + C för att starta om SDK:n. Om du startar om AEM SDK med alternativa metoder, till exempel genom att stoppa Java-processer, kan det leda till inkonsekvenser i den AEM utvecklingsmiljön.
 
 ## AEM Forms om JEE - säkerhetsfrågor {#aem-forms-on-jee-security-considerations}
 

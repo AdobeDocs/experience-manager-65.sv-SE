@@ -7,9 +7,9 @@ topic-tags: installing
 geptopics: SG_AEMFORMS/categories/jee
 role: Admin
 exl-id: 1e39455e-f588-42a2-91f5-daefcfed82a0
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: d195ac80ee59439bab5b1219a2c1f16e93e3d22b
 workflow-type: tm+mt
-source-wordcount: '931'
+source-wordcount: '965'
 ht-degree: 0%
 
 ---
@@ -57,6 +57,10 @@ Gör följande för att uppgradera från AEM 6.3 Forms eller AEM 6.4 Forms till 
       >När paketet har installerats uppmanas du att starta om AEM. **Stoppa inte servern omedelbart.** Innan du stoppar AEM Forms-servern väntar du tills meddelandena ServiceEvent REGISTERED och ServiceEvent UNREGISTERED inte visas i &lt;crx-repository>/error.log och loggen är stabil. Observera också att ett fåtal paket kan vara i installerat läge. Du kan ignorera dessa paketen.
 
 1. Starta om AEM.
+
+   >[!NOTE]
+   >
+   Du bör använda kommandot Ctrl + C för att starta om SDK:n. Om du startar om AEM SDK med alternativa metoder, till exempel genom att stoppa Java-processer, kan det leda till inkonsekvenser i den AEM utvecklingsmiljön.
 
 1. Utför efterinstallationsaktiviteter.
 

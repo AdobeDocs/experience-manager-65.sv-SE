@@ -6,9 +6,9 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/aem_forms_backup_and_recovery
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 exl-id: 01ec6ebc-6d80-4417-9604-c8571aebb57e
-source-git-commit: c4cd9a61a226ace2a72d60b5b7b7432de12cb873
+source-git-commit: d195ac80ee59439bab5b1219a2c1f16e93e3d22b
 workflow-type: tm+mt
-source-wordcount: '1486'
+source-wordcount: '1518'
 ht-degree: 0%
 
 ---
@@ -87,6 +87,10 @@ Innan du startar om Forms Server efter en återställning gör du följande:
 1. Se till att inga processer initieras från interna eller externa källor som Web-, SOAP- eller EJB-processinitierare förrän systemets normala funktion har validerats.
 
 Om huvuddatabasen AEM formulär flyttas eller ändras läser du de installationsguider som är relevanta för programservern för att få information om hur du uppdaterar databasanslutningsinformationen för AEM formulärdatakällor IDP_DS och EDC_DS.
+
+>[!NOTE]
+> 
+> Du bör använda kommandot Ctrl + C för att starta om SDK:n. Om du startar om AEM SDK med alternativa metoder, till exempel genom att stoppa Java-processer, kan det leda till inkonsekvenser i den AEM utvecklingsmiljön.
 
 ### Ändra värdnamn eller IP-adress för AEM formulär {#changing-the-aem-forms-hostname-or-ip-address}
 

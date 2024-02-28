@@ -8,9 +8,9 @@ geptopics: SG_AEMFORMS/categories/jee
 docset: aem65
 role: Admin
 exl-id: bb16017c-a1bf-40d8-a78d-827c05b7ee2e
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: d195ac80ee59439bab5b1219a2c1f16e93e3d22b
 workflow-type: tm+mt
-source-wordcount: '321'
+source-wordcount: '355'
 ht-degree: 0%
 
 ---
@@ -42,6 +42,10 @@ Se till att du har [AEM](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases
 
 1. Starta om servern när loggarna har stabiliserats.
 1. Använd flyttningsverktyget för att göra dina resurser kompatibla med 6.5.
+
+   >[!NOTE]
+   >
+   > Du bör använda kommandot Ctrl + C för att starta om SDK:n. Om du startar om AEM SDK med alternativa metoder, till exempel genom att stoppa Java-processer, kan det leda till inkonsekvenser i den AEM utvecklingsmiljön.
 
    Mer information finns i [migreringsverktyg](../../forms/using/migration-utility.md).
 

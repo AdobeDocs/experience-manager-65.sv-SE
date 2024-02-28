@@ -7,9 +7,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 noindex: true
 feature: Document Security
 exl-id: 91cbd1f1-d53d-455b-8d2c-6918b521db81
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: d195ac80ee59439bab5b1219a2c1f16e93e3d22b
 workflow-type: tm+mt
-source-wordcount: '639'
+source-wordcount: '673'
 ht-degree: 0%
 
 ---
@@ -60,6 +60,10 @@ En säker anslutning möjliggör ett smidigt informationsflöde mellan AEM Forms
    * **Tjänstnamn**: Lägg till RightsManagementService i listan över angivna tjänster.
 
    Klicka **Spara**. AEM är aktiverat för att söka efter dokumentsäkerhetsskyddade PDF- och Microsoft Office-dokument
+
+   >[!NOTE]
+   >
+   > Du bör använda kommandot Ctrl + C för att starta om SDK:n. Om du startar om AEM SDK med alternativa metoder, till exempel genom att stoppa Java-processer, kan det leda till inkonsekvenser i den AEM utvecklingsmiljön.
 
 ## Indexera ett exempel på ett policyskyddat PDF- eller Microsoft Office-dokument {#index-a-sample-policy-protected-pdf-or-microsoft-office-document}
 

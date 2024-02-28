@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 docset: aem65
 role: Admin
 exl-id: 19b5765e-50bc-4fed-8af5-f6bb464516c8
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: d195ac80ee59439bab5b1219a2c1f16e93e3d22b
 workflow-type: tm+mt
-source-wordcount: '1833'
+source-wordcount: '1867'
 ht-degree: 0%
 
 ---
@@ -118,6 +118,11 @@ AEM Forms tilläggspaket är ett program som distribueras till AEM. Paketet inne
 
    Du kan även hämta paketet via länken direkt i [AEM Forms-versioner](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) artikel.
 1. När paketet har installerats uppmanas du att starta om AEM. **Starta inte om servern omedelbart.** Innan du stoppar AEM Forms-servern väntar du tills meddelandena ServiceEvent REGISTERED och ServiceEvent UNREGISTERED inte visas i `[AEM-Installation-Directory]/crx-quickstart/logs/error.log` och loggen är stabil.
+
+   >[!NOTE]
+   >
+   > Du bör använda kommandot Ctrl + C för att starta om SDK:n. Om du startar om AEM SDK med alternativa metoder, till exempel genom att stoppa Java-processer, kan det leda till inkonsekvenser i den AEM utvecklingsmiljön.
+
 1. Upprepa steg 1-7 för alla författare- och publiceringsinstanser.
 
 ### (Endast Windows) Automatisk installation av Visual Studio-omdistribuerbara filer {#automatic-installation-visual-studio-redistributables}

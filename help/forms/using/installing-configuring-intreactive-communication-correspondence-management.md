@@ -5,9 +5,9 @@ topic-tags: installing
 docset: aem65
 role: Admin
 exl-id: 37fcfad9-2f84-4f0c-aed8-e4a5a3303a06
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: d195ac80ee59439bab5b1219a2c1f16e93e3d22b
 workflow-type: tm+mt
-source-wordcount: '1334'
+source-wordcount: '1368'
 ht-degree: 0%
 
 ---
@@ -98,6 +98,11 @@ AEM Forms tilläggspaket är ett program som distribueras till AEM. Paketet inne
    Du kan också hämta paketet via direktlänken i [AEM Forms-artiklarna](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=en) .
 
 1. När paketet har installerats uppmanas du att starta om AEM. **Starta inte om servern omedelbart.** Innan du stoppar AEM Forms Server väntar du tills meddelandena ServiceEvent REGISTERED och ServiceEvent UNREGISTERED slutar visas i [filen AEM-Installation-Directory]/crx-quickstart/logs/error.log och loggen är stabil.
+
+   >[!NOTE]
+   >
+   > Du bör använda kommandot Ctrl + C för att starta om SDK:n. Om du startar om AEM SDK med alternativa metoder, till exempel genom att stoppa Java-processer, kan det leda till inkonsekvenser i den AEM utvecklingsmiljön.
+
 1. Upprepa steg 1-7 för alla författare- och publiceringsinstanser.
 
 ## Konfiguration efter installation {#post-installation-configurations}
@@ -137,9 +142,9 @@ Utför följande steg på alla Author- och Publish-instanser för att lägga til
 
 #### Installera kompatibilitetspaket {#install-compatibility-package}
 
-Interaktiv kommunikation är standardmetoden och rekommenderas för att skapa kundkommunikation i AEM 6.5 Forms. Om du har uppgraderat eller migrerat från en tidigare version och tänker fortsätta använda brev (Correspondence Management) installerar du [AEMFD-kompatibilitetspaket](https://experienceleague.adobe.com/docs/experience-manager-65/forms/upgrade-aem-forms/aem-forms-osgi-upgrade/compatibility-package.html?lang=en).
+Interaktiv kommunikation är standard och rekommenderad metod för att skapa kundkommunikation i AEM 6.5 Forms. Om du har uppgraderat eller migrerat från en tidigare version och planerar att fortsätta använda bokstäver (Correspondence Management) installerar du AEMFD-kompatibilitetspaketet[](https://experienceleague.adobe.com/docs/experience-manager-65/forms/upgrade-aem-forms/aem-forms-osgi-upgrade/compatibility-package.html?lang=en).
 
-Med AEM fd-kompatibilitetspaketet kan du använda följande resurser från AEM 6.4 Forms, AEM 6.3 Forms och AEM 6.2 Forms på AEM 6.5 Forms:
+Med AEM kompatibilitetspaket kan du använda följande resurser från AEM 6.4 Forms, AEM 6.3 Forms och AEM 6.2 Forms på AEM 6.5 Forms:
 
 * Fragment av dokument
 * Bokstäver
@@ -176,10 +181,10 @@ Du kan aktivera SSL-kommunikation för formulärdatamodellen. Om du vill aktiver
 
 ## Nästa steg {#next-steps}
 
-Du har konfigurerat en miljö för interaktiv kommunikation och korrespondenshantering. Stegen för att använda funktionen är nu:
+Du har konfigurerat en miljö för att använda funktioner för interaktiv kommunikation och korrespondenshantering. Nu är stegen mot att använda funktionen:
 
 * [Översikt över korrespondenshantering](/help/forms/using/interactive-communications-overview.md)
 
-* [Skapa en interaktiv kommunikation](../../forms/using/create-interactive-communication.md)
+* [Skapa interaktiv kommunikation](../../forms/using/create-interactive-communication.md)
 
 * [Skapa ett brev för korrespondenshantering](../../forms/using/create-letter.md)

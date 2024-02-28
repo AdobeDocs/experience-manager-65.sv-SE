@@ -4,9 +4,9 @@ description: Installera AEM Forms Document Services för att skapa, sammanställ
 topic-tags: installing
 role: Admin
 exl-id: 5d48e987-16c2-434b-8039-c82181d2e028
-source-git-commit: 6b24067c1808475044a612f21d5d4d2793c13e17
+source-git-commit: d195ac80ee59439bab5b1219a2c1f16e93e3d22b
 workflow-type: tm+mt
-source-wordcount: '5442'
+source-wordcount: '5476'
 ht-degree: 0%
 
 ---
@@ -79,7 +79,7 @@ Innan du börjar installera och konfigurera AEM Forms Document Services bör du 
 >[!NOTE]
 >
 >* I Microsoft® Windows stöder PDF Generator konverteringsvägar för WebKit, Acrobat WebCapture och PhantomJS för att konvertera HTML-filer till PDF-dokument.
-* På UNIX-baserade operativsystem stöder PDF Generator konverteringsvägar för WebKit och PhantomJS för att konvertera HTML-filer till PDF-dokument.
+>* På UNIX-baserade operativsystem stöder PDF Generator konverteringsvägar för WebKit och PhantomJS för att konvertera HTML-filer till PDF-dokument.
 >
 
 ### Extra krav för UNIX-baserat operativsystem {#extrarequirements}
@@ -194,11 +194,11 @@ Om du ska använda tjänsten PDF Generator för att konvertera inbyggda filforma
 
 >[!NOTE]
 >
-* Om din AEM Forms-server är offline eller i en säker miljö och Internet inte är tillgängligt för att aktivera Adobe Acrobat, se [Aktivering offline](https://exception.licenses.adobe.com/aoes/aoes/v1/t1?locale=en) för instruktioner om hur du aktiverar sådana instanser av Adobe Acrobat.
-* Adobe Acrobat, Microsoft® Word, Excel och PowerPoint finns endast för Microsoft® Windows. Om du använder det UNIX-baserade operativsystemet måste du installera OpenOffice för att konvertera RTF-filer och Microsoft® Office-filer som stöds till PDF-dokument.
-* Stäng alla dialogrutor som visas när du har installerat Adobe Acrobat och tredjepartsprogram för alla användare som har konfigurerats att använda tjänsten PDF Generator.
-* Starta alla installerade program minst en gång. Stäng alla dialogrutor för alla användare som har konfigurerats att använda tjänsten PDF Generator.
-* [Kontrollera utgångsdatum för dina Adobe Acrobat-serienummer](https://helpx.adobe.com/enterprise/kb/volume-license-expiration-check.html) och ange ett datum för uppdatering av licensen eller [migrera ditt serienummer](https://www.adobe.com/devnet-docs/acrobatetk/tools/AdminGuide/licensing.html#migrating-your-serial-number) baserat på utgångsdatum.
+>* Om din AEM Forms-server är offline eller i en säker miljö och Internet inte är tillgängligt för att aktivera Adobe Acrobat, se [Aktivering offline](https://exception.licenses.adobe.com/aoes/aoes/v1/t1?locale=en) för instruktioner om hur du aktiverar sådana instanser av Adobe Acrobat.
+>* Adobe Acrobat, Microsoft® Word, Excel och PowerPoint finns endast för Microsoft® Windows. Om du använder det UNIX-baserade operativsystemet måste du installera OpenOffice för att konvertera RTF-filer och Microsoft® Office-filer som stöds till PDF-dokument.
+>* Stäng alla dialogrutor som visas när du har installerat Adobe Acrobat och tredjepartsprogram för alla användare som har konfigurerats att använda tjänsten PDF Generator.
+>* Starta alla installerade program minst en gång. Stäng alla dialogrutor för alla användare som har konfigurerats att använda tjänsten PDF Generator.
+>* [Kontrollera utgångsdatum för dina Adobe Acrobat-serienummer](https://helpx.adobe.com/enterprise/kb/volume-license-expiration-check.html) och ange ett datum för uppdatering av licensen eller [migrera ditt serienummer](https://www.adobe.com/devnet-docs/acrobatetk/tools/AdminGuide/licensing.html#migrating-your-serial-number) baserat på utgångsdatum.
 
 När du har installerat Acrobat öppnar du Microsoft® Word. På **Acrobat** flik, klicka **Skapa PDF** och konvertera en .doc- eller .docx-fil som finns på datorn till ett PDF-dokument. Om konverteringen lyckas är AEM Forms redo att använda Acrobat tillsammans med PDF Generator.
 
@@ -238,14 +238,14 @@ Ange miljövariabler för 64-bitars Java Development Kit, tredjepartsprogram och
 
 >[!NOTE]
 >
-* Alla miljövariabler och respektive sökvägar är skiftlägeskänsliga.
-* JAVA_HOME och Acrobat_PATH (endast Windows) är obligatoriska miljövariabler.
-* Miljövariabeln OpenOffice_PATH ställs in på installationsmappen i stället för på sökvägen till den körbara filen.
-* Ställ inte in miljövariabler för Microsoft® Office-program som Word, PowerPoint, Excel och Project, eller för AutoCAD. Om dessa program är installerade på servern startar tjänsten Generate PDF automatiskt dessa program.
-* Installera OpenOffice som /root på UNIX-baserade plattformar. Om OpenOffice inte är installerat som rot kan tjänsten PDF Generator inte konvertera OpenOffice-dokument till PDF-dokument. Om du måste installera och köra OpenOffice som en icke-rotanvändare anger du sudo-rättigheter till användaren som inte är rotanvändare.
-* Om du använder OpenOffice på en UNIX-baserad plattform kör du följande kommando för att ange variabeln path:
+>* Alla miljövariabler och respektive sökvägar är skiftlägeskänsliga.
+>* JAVA_HOME och Acrobat_PATH (endast Windows) är obligatoriska miljövariabler.
+>* Miljövariabeln OpenOffice_PATH ställs in på installationsmappen i stället för på sökvägen till den körbara filen.
+>* Ställ inte in miljövariabler för Microsoft® Office-program som Word, PowerPoint, Excel och Project, eller för AutoCAD. Om dessa program är installerade på servern startar tjänsten Generate PDF automatiskt dessa program.
+>* Installera OpenOffice som /root på UNIX-baserade plattformar. Om OpenOffice inte är installerat som rot kan tjänsten PDF Generator inte konvertera OpenOffice-dokument till PDF-dokument. Om du måste installera och köra OpenOffice som en icke-rotanvändare anger du sudo-rättigheter till användaren som inte är rotanvändare.
+>* Om du använder OpenOffice på en UNIX-baserad plattform kör du följande kommando för att ange variabeln path:
 >
-`export OpenOffice_PATH=/opt/openoffice.org4`
+>  `export OpenOffice_PATH=/opt/openoffice.org4`
 
 ### (Endast för IBM® WebSphere®) Konfigurera IBM® SSL-socketleverantör {#only-for-ibm-websphere-configure-ibm-ssl-socket-provider}
 
@@ -306,6 +306,10 @@ Du kan göra det möjligt för en icke-administratörsanvändare att använda tj
 1. Ange värdet för miljövariabeln till TRUE.
 1. Starta om AEM Forms.
 
+>[!NOTE]
+>
+> Du bör använda kommandot Ctrl + C för att starta om SDK:n. Om du startar om AEM SDK med alternativa metoder, till exempel genom att stoppa Java-processer, kan det leda till inkonsekvenser i den AEM utvecklingsmiljön.
+
 ### (Endast Windows) Inaktivera Kontroll av användarkonto (UAC) {#disable-user-account-control-uac}
 
 1. Gå till verktyget Systemkonfiguration **[!UICONTROL Start > Run]** och sedan ange **[!UICONTROL MSCONFIG]**.
@@ -332,7 +336,7 @@ Tjänsten PDF Generator tillhandahåller vägar eller metoder för WebKit, WebCa
 
 >[!NOTE]
 >
-När du installerar nya teckensnitt i teckensnittsmappen startar du om AEM Forms-instansen.
+>När du installerar nya teckensnitt i teckensnittsmappen startar du om AEM Forms-instansen.
 
 ### (Endast UNIX-baserade plattformar) Extra konfigurationer för konvertering från HTML till PDF  {#extra-configurations-for-html-to-pdf-conversion}
 
@@ -352,12 +356,12 @@ Kopiera Unicode-teckensnittet till någon av följande kataloger som passar ditt
 
 >[!NOTE]
 >
-* I Red Hat® Enterprise Linux® 6.x och senare finns inte Courier-teckensnitt tillgängliga. Hämta arkivet font-ibm-type1-1.0.3.zip för att installera teckensnittet Courier. Extrahera arkivet på /usr/share/fonts. Skapa en symbolisk länk från /usr/share/X11/fonts till /usr/share/fonts.
-* Ta bort alla .lst-teckensnittscachefiler från katalogerna Html2PdfSvc/bin och /usr/share/fonts.
-* Kontrollera att katalogerna /usr/lib/X11/fonts och /usr/share/fonts finns. Om katalogerna inte finns använder du ln-kommandot för att skapa en symbolisk länk från /usr/share/X11/fonts till /usr/lib/X11/fonts och en annan symbolisk länk från /usr/share/fonts till /usr/share/X11/fonts. Se även till att teckensnitten finns på /usr/lib/X11/fonts.
-* Kontrollera att alla teckensnitt (Unicode och icke-unicode) är tillgängliga i katalogen /usr/share/fonts eller /usr/share/X11/fonts.
-* När du kör PDF Generator som en icke-rotanvändare ska du ge icke-rotanvändaren läs- och skrivåtkomst till alla teckensnittskataloger.
-* När du installerar nya teckensnitt i teckensnittsmappen startar du om AEM Forms-instansen.
+>* I Red Hat® Enterprise Linux® 6.x och senare finns inte Courier-teckensnitt tillgängliga. Hämta arkivet font-ibm-type1-1.0.3.zip för att installera teckensnittet Courier. Extrahera arkivet på /usr/share/fonts. Skapa en symbolisk länk från /usr/share/X11/fonts till /usr/share/fonts.
+>* Ta bort alla .lst-teckensnittscachefiler från katalogerna Html2PdfSvc/bin och /usr/share/fonts.
+>* Kontrollera att katalogerna /usr/lib/X11/fonts och /usr/share/fonts finns. Om katalogerna inte finns använder du ln-kommandot för att skapa en symbolisk länk från /usr/share/X11/fonts till /usr/lib/X11/fonts och en annan symbolisk länk från /usr/share/fonts till /usr/share/X11/fonts. Se även till att teckensnitten finns på /usr/lib/X11/fonts.
+>* Kontrollera att alla teckensnitt (Unicode och icke-unicode) är tillgängliga i katalogen /usr/share/fonts eller /usr/share/X11/fonts.
+>* När du kör PDF Generator som en icke-rotanvändare ska du ge icke-rotanvändaren läs- och skrivåtkomst till alla teckensnittskataloger.
+>* När du installerar nya teckensnitt i teckensnittsmappen startar du om AEM Forms-instansen.
 >
 
 ## Installera AEM Forms-tilläggspaket {#install-aem-forms-add-on-package}
@@ -406,8 +410,8 @@ AEM Forms tilläggspaket är ett program som distribueras till AEM. Paketet inne
 
    >[!NOTE]
    >
-   Din rätt att använda teckensnitt som tillhandahålls av andra parter än Adobe regleras av de licensavtal som dessa parter ger dig med dessa teckensnitt och omfattas inte av din licens att använda Adobe. Adobe rekommenderar att du granskar och ser till att du följer alla tillämpliga licensavtal som inte är Adobe innan du använder teckensnitt som inte är Adobe med Adobe, särskilt när det gäller användning av teckensnitt i servermiljöer.
-När du installerar nya teckensnitt i teckensnittsmappen startar du om AEM Forms-instansen.
+   >Din rätt att använda teckensnitt som tillhandahålls av andra parter än Adobe regleras av de licensavtal som dessa parter ger dig med dessa teckensnitt och omfattas inte av din licens att använda Adobe. Adobe rekommenderar att du granskar och ser till att du följer alla tillämpliga licensavtal som inte är Adobe innan du använder teckensnitt som inte är Adobe med Adobe, särskilt när det gäller användning av teckensnitt i servermiljöer.
+   >När du installerar nya teckensnitt i teckensnittsmappen startar du om AEM Forms-instansen.
    >
 
 ### Konfigurera ett lokalt användarkonto för att köra tjänsten PDF Generator  {#configure-a-local-user-account-to-run-the-pdf-generator-service}
@@ -519,7 +523,7 @@ Utför följande steg för att konfigurera certifikaten:
 
    >[!NOTE]
    >
-   I produktionsmiljön ersätter du dina utvärderingsreferenser med produktionsuppgifter. Se till att du tar bort dina gamla inloggningsuppgifter för Reader Extensions innan du uppdaterar en inloggningsuppgift som har gått ut eller utvärderar den.
+   >I produktionsmiljön ersätter du dina utvärderingsreferenser med produktionsuppgifter. Se till att du tar bort dina gamla inloggningsuppgifter för Reader Extensions innan du uppdaterar en inloggningsuppgift som har gått ut eller utvärderar den.
 
 1. Klicka på **[!UICONTROL Save & Close]** på sidan **[!UICONTROL Edit User Settings]**.
 
@@ -599,7 +603,7 @@ The [Systemberedskap](#srt-configuration) kontrollerar om datorn är korrekt kon
 
    >[!NOTE]
    >
-   * Om systemberedskapsverktyget rapporterar att filen pdfgen.api inte är tillgänglig i Acrobat plug-ins-mappen kopierar du filen pdfgen.api från `[extracted-adobe-aemfd-pdfg-common-pkg]\jcr_root\libs\fd\pdfg\tools\adobe-aemfd-pdfg-utilities-[version]\plugins\x86_win32` till `[Acrobat_root]\Acrobat\plug_ins` katalog.
+   >* Om systemberedskapsverktyget rapporterar att filen pdfgen.api inte är tillgänglig i Acrobat plug-ins-mappen kopierar du filen pdfgen.api från `[extracted-adobe-aemfd-pdfg-common-pkg]\jcr_root\libs\fd\pdfg\tools\adobe-aemfd-pdfg-utilities-[version]\plugins\x86_win32` till `[Acrobat_root]\Acrobat\plug_ins` katalog.
 
 1. Navigera till `[Path_of_reports_folder]`. Öppna filen SystemReadinessTool.html. Verifiera rapporten och åtgärda problemen.
 
@@ -809,7 +813,7 @@ När du konverterar Microsoft Excel 2019 till PDF på Microsoft Windows Server 2
 * Standardskrivaren måste ställas in på Adobe PDF.
 
   >[!NOTE]
-  * För Apple macOS och Ubuntu OS behöver du inte konfigurera de ovannämnda inställningarna.
+  >* För Apple macOS och Ubuntu OS behöver du inte konfigurera de ovannämnda inställningarna.
 
 +++
 

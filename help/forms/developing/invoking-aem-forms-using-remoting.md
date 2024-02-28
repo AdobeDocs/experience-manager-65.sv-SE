@@ -7,9 +7,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: coding
 role: Developer
 exl-id: 94a48776-f537-4b4e-8d71-51b08e463cba
-source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
+source-git-commit: d195ac80ee59439bab5b1219a2c1f16e93e3d22b
 workflow-type: tm+mt
-source-wordcount: '4593'
+source-wordcount: '4604'
 ht-degree: 0%
 
 ---
@@ -619,7 +619,9 @@ Du kan använda administrationskonsolen för att ange om dokument är säkra nä
 
 >[!NOTE]
 >
-Om du vill konfigurera AEM Forms att acceptera osäkra dokument väljer du alternativet Tillåt osäker dokumentöverföring från Flex-program. Starta sedan om ett program eller en tjänst för att se till att inställningen börjar gälla.
+* Om du vill konfigurera AEM Forms att acceptera osäkra dokument väljer du alternativet Tillåt osäker dokumentöverföring från Flex-program. Starta sedan om ett program eller en tjänst för att se till att inställningen börjar gälla.
+* Du bör använda kommandot Ctrl + C för att starta om SDK:n. Om du startar om AEM SDK med alternativa metoder, till exempel genom att stoppa Java-processer, kan det leda till inkonsekvenser i den AEM utvecklingsmiljön.
+
 
 ### Snabbstart: Anropa en kort process genom att skicka ett säkert dokument med Remoting {#quick-start-invoking-a-short-lived-process-by-passing-a-secure-document-using-remoting}
 

@@ -8,9 +8,9 @@ docset: aem65
 feature: Adaptive Forms
 role: Admin
 exl-id: 2ed4d99e-0e90-4b21-ac17-aa6707a3ba7d
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: d195ac80ee59439bab5b1219a2c1f16e93e3d22b
 workflow-type: tm+mt
-source-wordcount: '802'
+source-wordcount: '819'
 ht-degree: 0%
 
 ---
@@ -124,6 +124,10 @@ The `<locale>` visas på `https://'[server]:[port]'/libs/cq/i18n/translator.html
 ### Starta om servern {#restart-the-server}
 
 Starta om AEM för att den tillagda språkinställningen ska börja gälla.
+
+>[!NOTE]
+>
+> Du bör använda kommandot Ctrl + C för att starta om SDK:n. Om du startar om AEM SDK med alternativa metoder, till exempel genom att stoppa Java-processer, kan det leda till inkonsekvenser i den AEM utvecklingsmiljön.
 
 ## Exempelbibliotek för att lägga till stöd för spanska {#sample-libraries-for-adding-support-for-spanish}
 

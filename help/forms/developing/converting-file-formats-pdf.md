@@ -7,9 +7,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 role: Developer
 exl-id: 10535740-e3c2-4347-a88f-86706ad699b4
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+source-git-commit: d195ac80ee59439bab5b1219a2c1f16e93e3d22b
 workflow-type: tm+mt
-source-wordcount: '7812'
+source-wordcount: '7848'
 ht-degree: 0%
 
 ---
@@ -36,13 +36,13 @@ Tjänsten Generate PDF använder inbyggda program för att konvertera följande 
 
 >[!NOTE]
 >
-Tjänsten Generate PDF stöder inte 64-bitarsversionerna av OpenOffice.
+>Tjänsten Generate PDF stöder inte 64-bitarsversionerna av OpenOffice.
 
 * Adobe Photoshop® CS2 för att konvertera PSD (endast Windows)
 
 >[!NOTE]
 >
-Photoshop CS3 och CS4 stöds inte eftersom de inte stöder Windows Server 2003 eller Windows Server 2008.
+>Photoshop CS3 och CS4 stöds inte eftersom de inte stöder Windows Server 2003 eller Windows Server 2008.
 
 * Adobe FrameMaker® 7.2 och 8 för att konvertera FM (endast Windows)
 * Adobe PageMaker® 7.0 för att konvertera PMD, PM6, P65 och PM (endast Windows)
@@ -82,7 +82,7 @@ Du kan utföra följande uppgifter med tjänsten Generate PDF:
 
 >[!NOTE]
 >
-Mer information om tjänsten Generate PDF finns i [Tjänstreferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
+>Mer information om tjänsten Generate PDF finns i [Tjänstreferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
 
 ## Konvertera Word-dokument till PDF-dokument {#converting-word-documents-to-pdf-documents}
 
@@ -90,11 +90,11 @@ I det här avsnittet beskrivs hur du kan använda Generate PDF API för att prog
 
 >[!NOTE]
 >
-Mer information om ytterligare filformat finns i [Stöd för fler filformat](converting-file-formats-pdf.md#adding-support-for-additional-native-file-formats).
+>Mer information om ytterligare filformat finns i [Stöd för fler filformat](converting-file-formats-pdf.md#adding-support-for-additional-native-file-formats).
 
 >[!NOTE]
 >
-Mer information om tjänsten Generate PDF finns i [Tjänstreferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
+>Mer information om tjänsten Generate PDF finns i [Tjänstreferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
 
 ### Sammanfattning av steg {#summary-of-steps}
 
@@ -202,7 +202,7 @@ Konvertera ett Microsoft Word-dokument till ett PDF-dokument med hjälp av API:t
 
    >[!NOTE]
    >
-   Ersätt `localhost` med IP-adressen till den server där AEM Forms finns.
+   >Ersätt `localhost` med IP-adressen till den server där AEM Forms finns.
 
 1. Skapa en Generate PDF-klient.
 
@@ -260,7 +260,7 @@ I det här avsnittet beskrivs hur du kan använda Generate PDF API för att prog
 
 >[!NOTE]
 >
-Mer information om tjänsten Generate PDF finns i [Tjänstreferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
+>Mer information om tjänsten Generate PDF finns i [Tjänstreferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
 
 ### Sammanfattning av steg {#summary_of_steps-1}
 
@@ -359,7 +359,7 @@ Konvertera HTML-innehåll till ett PDF-dokument med hjälp av API:t Generate PDF
 
    >[!NOTE]
    >
-   Ersätt `localhost` med IP-adressen till den server där AEM Forms finns.
+   >Ersätt `localhost` med IP-adressen till den server där AEM Forms finns.
 
 1. Skapa en Generate PDF-klient.
 
@@ -410,7 +410,7 @@ I det här avsnittet beskrivs hur du kan använda Generate PDF Java API och webb
 
 >[!NOTE]
 >
-Mer information om tjänsten Generate PDF finns i [Tjänstreferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
+>Mer information om tjänsten Generate PDF finns i [Tjänstreferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
 
 ### Sammanfattning av steg {#summary_of_steps-2}
 
@@ -510,7 +510,7 @@ Konvertera ett PDF-dokument till en RTF-fil med hjälp av API:t för Generate PD
 
    >[!NOTE]
    >
-   Ersätt `localhost` med IP-adressen till den server där AEM Forms finns.
+   >Ersätt `localhost` med IP-adressen till den server där AEM Forms finns.
 
 1. Skapa en Generate PDf-klient.
 
@@ -845,7 +845,7 @@ Om du skapar ett skript för ett internt program som inte stöds tidigare, måst
 
 >[!NOTE]
 >
-I det här sammanhanget innebär termen ytterligare innehållet i `appmon.[applicationname].addition.[locale].xml` -fil. En sådan fil anger åsidosättningar och tillägg till XML-filen i dialogrutan.
+>I det här sammanhanget innebär termen ytterligare innehållet i `appmon.[applicationname].addition.[locale].xml` -fil. En sådan fil anger åsidosättningar och tillägg till XML-filen i dialogrutan.
 
 Du kan också ändra XML-filen för ytterligare dialogrutor för ett internt program för följande syften:
 
@@ -858,7 +858,7 @@ Namnet på XML-filen för ytterligare dialogrutor måste ha formatet `appmon.[ap
 
 >[!NOTE]
 >
-Inget av de allmänna program som anges i konfigurationsfilen native2pdfconfig.xml har en primär dialogrute-XML-fil. Avsnittet [Lägga till eller ändra stöd för ett ursprungligt filformat](converting-file-formats-pdf.md#adding-or-modifying-support-for-a-native-file-format) beskriver sådana specifikationer.
+>Inget av de allmänna program som anges i konfigurationsfilen native2pdfconfig.xml har en primär dialogrute-XML-fil. Avsnittet [Lägga till eller ändra stöd för ett ursprungligt filformat](converting-file-formats-pdf.md#adding-or-modifying-support-for-a-native-file-format) beskriver sådana specifikationer.
 
 Beställning `windowList` element som visas som underordnade i `window` -element. (Se [Ordna elementen window och windowList](converting-file-formats-pdf.md#ordering-the-window-and-windowlist-elements).)
 
@@ -878,7 +878,7 @@ I den här proceduren beskrivs hur du uppdaterar tjänstkonfigurationsfilen Gene
 
 >[!NOTE]
 >
-Programmets namn anges som värdet för `GenericApp` element `name` -attribut. Värdet måste exakt matcha motsvarande namn som anges i skriptet som du utvecklar för det programmet. På samma sätt visas `GenericApp` element `displayName` -attributet ska exakt matcha motsvarande skripts `expectedWindow` fönsterbeskrivning. En sådan motsvarighet utvärderas efter att eventuella reguljära uttryck som visas i `displayName` eller `caption` attribut.
+>Programmets namn anges som värdet för `GenericApp` element `name` -attribut. Värdet måste exakt matcha motsvarande namn som anges i skriptet som du utvecklar för det programmet. På samma sätt visas `GenericApp` element `displayName` -attributet ska exakt matcha motsvarande skripts `expectedWindow` fönsterbeskrivning. En sådan motsvarighet utvärderas efter att eventuella reguljära uttryck som visas i `displayName` eller `caption` attribut.
 
 I det här exemplet ändrades standardkonfigurationsdata som medföljde tjänsten Generate PDF så att Anteckningar (inte Microsoft Word) skulle användas för att bearbeta filer med filnamnstillägget .txt. Innan den här ändringen utfördes specificerades Microsoft Word som det ursprungliga program som ska bearbeta sådana filer.
 
@@ -910,6 +910,10 @@ I det här exemplet ändrades standardkonfigurationsdata som medföljde tjänste
 Skapa en miljövariabel som anger platsen för det interna programmets körbara fil. Variabeln måste använda formatet `[applicationname]_PATH`, där *programnamn* måste exakt matcha det programnamn som används i XML-konfigurationsfilen och i skriptet, och där sökvägen till den körbara filen finns inom citattecken. Ett exempel på en sådan miljövariabel är `Photoshop_PATH`.
 
 När du har skapat den nya systemvariabeln måste du starta om servern som tjänsten Generate PDF är distribuerad på.
+
+>[!NOTE]
+>
+> Du bör använda kommandot Ctrl + C för att starta om SDK-servern. Om du startar om AEM SDK-servern med alternativa metoder, till exempel att stoppa Java-processer, kan det leda till inkonsekvenser i den AEM utvecklingsmiljön.
 
 **Skapa en systemvariabel i Windows XP-miljön**
 

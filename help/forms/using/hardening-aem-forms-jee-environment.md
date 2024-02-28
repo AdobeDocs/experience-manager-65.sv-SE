@@ -6,9 +6,9 @@ topic-tags: Security
 products: SG_EXPERIENCEMANAGER/6.4
 role: Admin
 exl-id: 6fb260f9-d0f8-431e-8d4e-535b451e4124
-source-git-commit: 451fb472e170a79f9854efadf9be1d4fe0628b94
+source-git-commit: d195ac80ee59439bab5b1219a2c1f16e93e3d22b
 workflow-type: tm+mt
-source-wordcount: '7662'
+source-wordcount: '7608'
 ht-degree: 0%
 
 ---
@@ -464,6 +464,10 @@ Du kan göra det möjligt för en icke-administratörsanvändare att använda PD
 1. Ange värdet för variabeln till TRUE.
 
 1. Starta om AEM Forms.
+
+>[!NOTE]
+>
+> Du bör använda kommandot Ctrl + C för att starta om SDK:n. Om du startar om AEM SDK med alternativa metoder, till exempel genom att stoppa Java-processer, kan det leda till inkonsekvenser i den AEM utvecklingsmiljön.
 
 ## Konfigurera AEM Forms på JEE för åtkomst utanför företaget {#configuring-aem-forms-on-jee-for-access-beyond-the-enterprise}
 

@@ -3,9 +3,9 @@ title: Skapa en hanterare för att bjuda in externa användare
 description: Lär dig hur du skapar en hanterare för att bjuda in externa användare. Tjänsten Rights Management gör det möjligt att bjuda in externa användare till Rights Management.
 role: Developer
 exl-id: b0416716-dcc9-4f80-986a-b9660a7c8f6b
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+source-git-commit: d195ac80ee59439bab5b1219a2c1f16e93e3d22b
 workflow-type: tm+mt
-source-wordcount: '1084'
+source-wordcount: '1118'
 ht-degree: 0%
 
 ---
@@ -233,6 +233,11 @@ Så här lägger du till externa användare att bjuda in med administrationskons
 
 1. Distribuera JAR-filen för den externa användarhanteraren med Workbench.
 1. Starta om programservern.
+
+   >[!NOTE]
+   >
+   > Du bör använda kommandot Ctrl + C för att starta om SDK:n. Om du startar om AEM SDK med alternativa metoder, till exempel genom att stoppa Java-processer, kan det leda till inkonsekvenser i den AEM utvecklingsmiljön.
+
 1. Logga in på administrationskonsolen.
 1. Klicka **[!UICONTROL Services]** > **[!UICONTROL Rights Management]** > **[!UICONTROL Configuration]** > Inbjuden **[!UICONTROL User Registration]**.
 1. Aktivera registrering av inbjudna användare genom att kontrollera **[!UICONTROL Enable invited user registration]** box. Under **[!UICONTROL Use Built-in registration system]**, klicka **[!UICONTROL No]**. Spara inställningarna.

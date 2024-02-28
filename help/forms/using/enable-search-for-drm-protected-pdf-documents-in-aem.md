@@ -8,9 +8,9 @@ geptopics: SG_AEMFORMS/categories/working_with_document_security
 docset: aem65
 feature: Document Security
 exl-id: 7cf17fb6-021a-473e-bc3b-27c317953002
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: d195ac80ee59439bab5b1219a2c1f16e93e3d22b
 workflow-type: tm+mt
-source-wordcount: '684'
+source-wordcount: '718'
 ht-degree: 0%
 
 ---
@@ -84,3 +84,7 @@ Du kan använda någon av följande metoder för att upprätta en säker anslutn
 1. Skapa en mapp i AEM Digital Asset Manager och överför profilskyddade PDF-dokument till den nya mappen.
 
    Nu kan du söka i principskyddade dokument med hjälp av AEM sökning.
+
+   >[!NOTE]
+   >
+   > Du bör använda kommandot Ctrl + C för att starta om SDK:n. Om du startar om AEM SDK med alternativa metoder, till exempel genom att stoppa Java-processer, kan det leda till inkonsekvenser i den AEM utvecklingsmiljön.

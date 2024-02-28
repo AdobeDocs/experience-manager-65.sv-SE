@@ -2,9 +2,9 @@
 title: Ytterligare steg för att få e-post med bilagor
 description: Lär dig hur du åtgärdar felet när du inte kan hämta e-post med bilagor för AEM Forms på JEE-plattformar.
 exl-id: 0d0713fb-d95a-4a95-91ef-9cdaea30e343
-source-git-commit: 000c22028259eb05a61625d43526a2e8314a1d60
+source-git-commit: 553aef43342a709dd8e645279999a71b9e0185f0
 workflow-type: tm+mt
-source-wordcount: '237'
+source-wordcount: '270'
 ht-degree: 0%
 
 ---
@@ -48,3 +48,7 @@ Användaren kan inte utföra åtgärder som Skicka PDF via e-post eller Inkluder
    * `sling.bootdelegation.activation=javax.activation.*`
 
 1. Starta om **JBoss®**.
+
+>[!NOTE]
+>
+> Du bör använda kommandot Ctrl + C för att starta om SDK:n. Om du startar om AEM SDK med alternativa metoder, till exempel genom att stoppa Java-processer, kan det leda till inkonsekvenser i den AEM utvecklingsmiljön.

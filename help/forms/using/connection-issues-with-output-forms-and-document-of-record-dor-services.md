@@ -5,13 +5,13 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 docset: aem65
 role: Admin
-source-git-commit: cf5da092fabbc7834108dc54d65eb97e160984ce
+exl-id: bd58099c-08cd-4056-afb6-a5935454429a
+source-git-commit: d195ac80ee59439bab5b1219a2c1f16e93e3d22b
 workflow-type: tm+mt
-source-wordcount: '134'
+source-wordcount: '168'
 ht-degree: 0%
 
 ---
-
 
 # Det går inte att använda utdatatjänsten, Forms-tjänsten eller DoR-tjänsten (Document of Record) {#unable-to-use-output-service-forms-service-or-document-of-record-service}
 
@@ -26,6 +26,10 @@ Så här löser du problemet:
 1. Stoppa din AEM 6.5 Forms-instans.
 1. Hämta och installera [64-bitarsversion av Microsoft Visual C++ Redistributable-paket för Visual Studio 2015, 2017, 2019 och 2022](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170#visual-studio-2015-2017-2019-and-2022) på den dator där AEM 6.5 Forms är installerat.
 1. Starta om AEM Forms-servern.
+
+   >[!NOTE]
+   >
+   > Du bör använda kommandot Ctrl + C för att starta om SDK:n. Om du startar om AEM SDK med alternativa metoder, till exempel genom att stoppa Java-processer, kan det leda till inkonsekvenser i den AEM utvecklingsmiljön.
 
 
 >[!NOTE]

@@ -2,9 +2,9 @@
 title: Installationsanvisningar för AEM Forms Patch för AEM Forms
 description: Installationsanvisningar för AEM Forms Service Pack för OSGi- och JEE-miljö
 exl-id: ae4c7e9d-9af8-4288-a6f9-e3bcbe7d153d
-source-git-commit: 531eed9bb6d7792a6da0104b533a505738a64786
+source-git-commit: d195ac80ee59439bab5b1219a2c1f16e93e3d22b
 workflow-type: tm+mt
-source-wordcount: '1690'
+source-wordcount: '1724'
 ht-degree: 0%
 
 ---
@@ -128,7 +128,8 @@ Navigera till rätt katalog och från ett skal och en typ `./aem65_cfp_install.b
 
 >[!NOTE]
 >
-> När du har installerat AEM Forms på JEE-Service Pack måste du ta bort Forms-tilläggspaketet från `crx-repository\install` innan appservern startas om. Hämta det senaste Forms-tilläggspaketet från [Programdistributionsportal](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html).
+>* När du har installerat AEM Forms på JEE-Service Pack måste du ta bort Forms-tilläggspaketet från `crx-repository\install` innan appservern startas om. Hämta det senaste Forms-tilläggspaketet från [Programdistributionsportal](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html).
+>* Du bör använda kommandot Ctrl + C för att starta om SDK:n. Om du startar om AEM SDK med alternativa metoder, till exempel genom att stoppa Java-processer, kan det leda till inkonsekvenser i den AEM utvecklingsmiljön.
 
 +++
 
@@ -173,7 +174,7 @@ Paketet installeras automatiskt.
 
   >[!NOTE]
   >
-  Service Pack för Experience Manager stöder inte installation av Bootstrap. <!-- UPDATE FOR EACH NEW RELEASE -->
+  >Service Pack för Experience Manager stöder inte installation av Bootstrap. <!-- UPDATE FOR EACH NEW RELEASE -->
 
   **Validera installationen**
 
@@ -205,7 +206,7 @@ Paketet installeras automatiskt.
 
 >[!NOTE]
 >
-Om du installerar AEM Forms Service Pack för relationsdatabas måste du säkerhetskopiera DB_schema.
+> Om du installerar AEM Forms Service Pack för relationsdatabas måste du säkerhetskopiera DB_schema.
 
 +++
 
@@ -223,7 +224,7 @@ Om du installerar AEM Forms Service Pack för relationsdatabas måste du säkerh
 >[!NOTE]
 >
 >
-Kontrollera att du har installerat Redistributable även om en tidigare version är installerad, för att säkerställa att den senaste versionen är tillgänglig.
+> Kontrollera att du har installerat Redistributable även om en tidigare version är installerad, för att säkerställa att den senaste versionen är tillgänglig.
 
 +++
 
@@ -244,7 +245,7 @@ Det finns två olika metoder som du kan använda för att installera automatiskt
 
   >[!NOTE]
   >
-  Service Pack för Experience Manager stöder inte installation av Bootstrap. <!-- UPDATE FOR EACH NEW RELEASE -->
+  >Service Pack för Experience Manager stöder inte installation av Bootstrap. <!-- UPDATE FOR EACH NEW RELEASE -->
 
   **Validera installationen**
 

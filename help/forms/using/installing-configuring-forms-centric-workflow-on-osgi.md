@@ -5,9 +5,9 @@ topic-tags: installing
 docset: aem65
 role: Admin
 exl-id: 4b24a38a-c1f0-4c81-bb3a-39ce2c4892b1
-source-git-commit: d2c0dea636280c28e1d5a76d1c5375f21b6eb111
+source-git-commit: d195ac80ee59439bab5b1219a2c1f16e93e3d22b
 workflow-type: tm+mt
-source-wordcount: '1567'
+source-wordcount: '1601'
 ht-degree: 0%
 
 ---
@@ -110,17 +110,22 @@ AEM Forms tilläggspaket är ett program som distribueras till AEM. Paketet inne
    Du kan också hämta paketet via direktlänken i [AEM Forms-artiklarna](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) .
 
 1. När paketet har installerats uppmanas du att starta om AEM. **Starta inte om servern omedelbart.** Innan du stoppar AEM Forms-servern väntar du tills meddelandena ServiceEvent REGISTERED och ServiceEvent UNREGISTERED slutar visas i [filen AEM-Installation-Directory]/crx-quickstart/logs/error.log och loggen är stabil.
-1. Upprepa steg 1-7 för alla författar- och publiceringsinstanser.
 
-## Konfigurationer efter installation {#post-installation-configurations}
+   >[!NOTE]
+   >
+   > Vi rekommenderar att du använder kommandot &quot;Ctrl + C&quot; för att starta om SDK:n. Om du startar om AEM SDK med alternativa metoder, till exempel att stoppa Java-processer, kan det leda till inkonsekvenser i AEM utvecklingsmiljö.
 
-AEM Forms har några obligatoriska och valfria konfigurationer. De obligatoriska konfigurationerna är bland annat att konfigurera BouncyCastle-bibliotek och serialiseringsagent. De valfria konfigurationerna inkluderar konfigurering av dispatcher och Adobe Target.
+1. Upprepa steg 1-7 för alla författare- och publiceringsinstanser.
+
+## Konfiguration efter installation {#post-installation-configurations}
+
+AEM Forms har några obligatoriska och valfria konfigurationer. De obligatoriska konfigurationerna inkluderar konfigurering av BouncyCastle-bibliotek och serialiseringsagent. De valfria konfigurationerna inkluderar konfigurering av dispatcher och Adobe Target.
 
 ### Obligatoriska konfigurationer efter installationen {#mandatory-post-installation-configurations}
 
 #### Konfigurera RSA- och BouncyCastle-bibliotek  {#configure-rsa-and-bouncycastle-libraries}
 
-Utför följande steg på alla författar- och publiceringsinstanser för att starta ombudet för biblioteken:
+Utför följande steg på alla författare- och publiceringsinstanser för att starta delegeringen av biblioteken:
 
 1. Stoppa den underliggande AEM.
 1. Öppna [AEM installationskatalog]\crx-quickstart\conf\sling.properties fil för redigering.
