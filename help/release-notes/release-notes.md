@@ -2,9 +2,9 @@
 title: Versionsinformation för [!DNL Adobe Experience Manager] 6.5
 description: Hitta versionsinformation, nyheter, installationsanvisningar och en detaljerad ändringslista för [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 4
-source-git-commit: c36ef1c1bd261864930039c4d60a930ead12482e
+source-git-commit: 21f39dc697a5aa3944834786a627e990e7f3ca7f
 workflow-type: tm+mt
-source-wordcount: '3366'
+source-wordcount: '3361'
 ht-degree: 0%
 
 ---
@@ -51,7 +51,7 @@ Några av de viktigaste funktionerna och förbättringarna i den här versionen 
    * ECDSA-elliptisk kurva P384 med SHA384-sammandragsalgoritm
    * ECDSA elliptisk kurva P512 med SHA512-algoritm
 * **Smidig kompatibilitet med Windows 11 för Forms Designer**: AEM Forms Designer har nu stöd för Windows 11, vilket ger smidig installation och drift. Användare kan tryggt uppgradera till Windows 11 utan att behöva installera om Forms Designer eller oroa sig för kompatibilitetsproblem, vilket ger ett avbrottsfritt arbetsflöde.
-* **Förbättrad tillgänglighet med en anpassad&quot;bildtextsroll&quot; i AEM Forms Designer**: AEM Forms Designer har nu en anpassad tillgänglighetsroll som kallas &quot;Bildtext&quot; som gör det möjligt för användare att skapa XDP-filer med anpassade bildtextelement. Den här funktionen förbättrar tillgängligheten genom att användarna kan integrera egna bildtexter i sina dokumentdesigner, vilket förbättrar integriteten och användarupplevelsen.
+* **Förbättrad tillgänglighet med en anpassad&quot;bildtextsroll&quot; i AEM Forms Designer**: AEM Forms Designer har nu en anpassad tillgänglighetsroll som kallas &quot;Bildtext&quot; som gör det möjligt för användare att skapa XDP-filer med anpassade bildtextelement. Den här funktionen förbättrar tillgängligheten genom att användarna kan integrera anpassade bildtexter i sina dokumentdesigner så att de kan förbättra integriteten och användarupplevelsen.
 
 <!-- ### [!DNL Forms]
 
@@ -152,32 +152,32 @@ Några av de viktigaste funktionerna och förbättringarna i den här versionen 
 
 #### [!DNL Adaptive Forms]
 
-* När en användare försöker att integrera AEM Forms med en utskicksplattform med en AEM publicerad URL, lägger de AEM inte till&quot;method=post&quot; när sidan återges, trots att POSTEN är inställd i skicka-åtgärden med URL:en. Det gör att e-postplattformen inte kan identifiera detta som ett formulär. (FORMS-1214)
+* När en användare försöker integrera AEM Forms till en utskicksplattform med en AEM publicerad URL, lägger AEM Forms inte till `method=post` när sidan återges. Problemet inträffar trots att `POST` anges i åtgärden skicka med URL:en. Det gör att e-postplattformen inte kan identifiera detta som ett formulär. (FORMS-1214)
 * När en användare väljer datumfältet med ett visningsmönster AEM Form Service Pack 6.5.18.0 kan användaren inte välja aktuellt datum med tangentbordet. (FORMS-12736)
 * I AEM Forms Service Pack 6.5.17.0 och Service Pack 6.5.18.0 visas en extra rad när en användare växlar mellan månader i kalenderwidgeten. (FORMS-1869)
 * När en användare klickar på en bild med&quot;Ta ett foto&quot; i komponenten Bilaga på en iOS-enhet läggs alla bilder till i mappen med samma namn. (FORMS-1224)
 * När en användare uppdaterar ett befintligt alternativ i en alternativknappsgrupp publiceras felaktiga översättningsvärden. (FORMS-12575)
-* När en användare lägger till tecken i ett adaptivt formulär på en Android-enhet får användaren skriva fler än det definierade maximala antalet tecken i textfältet vid fokus på Android-enheter. Även om det fungerar när en användare väljer indatatypen HTML5. (FORMS-12748)
-* På grund av matchande etiketter med Arial och Arial-etiketter kan skärmläsarna inte skilja mellan dessa. För att lösa problemet ersätts etiketten &quot;aria-marked-by&quot; med &quot;aria-describedby&quot; för formulärfälten. (FORMS-12436)
-* När en författare använder komponenten &quot;Adaptive Forms - Embed (v2)&quot; för att bädda in ett adaptivt formulär på sin webbplatssida och det inbäddade formuläret innehåller en CAPTCHA-komponent (CAPTCHA-tjänst -> reCAPTCHA, Inställningar -> reCAPTCHA-v2) återges inte webbplatssidan när användaren försöker visa webbsidan med &quot;View as Published&quot; på författaren -instans och felet visas som (FORMS-11859):
+* När en användare lägger till tecken i ett adaptivt formulär på en Android™-enhet kan användaren skriva fler än det definierade maximala antalet tecken i textfältet vid fokus på Android™-enheter. Det fungerar emellertid när en användare väljer indatatypen HTML5. (FORMS-12748)
+* På grund av matchande etiketter i Arial®, som är märkta med och Arial®, kan skärmläsarna inte skilja mellan dessa två. För att lösa problemet ersätts etiketten &quot;aria-marked-by&quot; med &quot;aria-describedby&quot; för formulärfälten. (FORMS-12436)
+* När en författare använder komponenten &quot;Adaptive Forms - Embed (v2)&quot; för att bädda in ett adaptivt formulär på sin webbplatssida och det inbäddade formuläret innehåller en CAPTCHA-komponent (CAPTCHA-tjänst -> reCAPTCHA, Inställningar -> reCAPTCHA-v2) återges inte webbplatssidan när användaren försöker visa webbsidan med &quot;View as Published&quot; på författaren -instans. Följande fel visas som (FORMS-11859):
   `Failed to construct 'URL': Invalid base URL at Object.renderRecaptcha`
 
 * När en användare försöker välja datumet med datumväljarkomponenten uppdateras inte värdet och NULL visas. (FORMS-12742, FORMS-12736)
 
-* När en användare uppgraderar till AEM Form Service Pack 6.5.19.0, efter att ha uppdaterat ett nytt språk till den befintliga ordlistan, sammanfogas den inte med raderna &quot;guideContainer&quot; för att lägga till en ny språkinställning i ett formulär. (FORMS-12947)
+* När en användare uppgraderar till AEM Form Service Pack 6.5.19.0, efter att ha uppdaterat ett nytt språk till den befintliga ordlistan, sammanfogas den inte med raderna &quot;guideContainer&quot; för att lägga till en språkinställning i ett formulär. (FORMS-12947)
 
-* På AEM Forms Service Pack 6.5.19.0 misslyckas webbtjänståtgärden för Java 11 med felet (FORMS-12329):
+* På AEM Forms Service Pack 6.5.19.0 misslyckas den anropade webbtjänståtgärden på Java™ 11 med felet (FORMS-12329):
   `java.lang.NoClassDefFoundError message:sun/misc/BASE64Decoder`
 
 * När en användare anropar&quot;receive&quot;-åtgärden för&quot;EmailService&quot; i AEM Forms Service Pack 6.5.18.0 genereras ett undantag (FORMS-12050):
   `java.util.ServiceConfigurationError: javax.mail.Provider: Provider com.sun.mail.imap.IMAPProvider not a subtype`
 
-* När FIPS-läget är aktiverat på AEM Forms Service Pack 6.5.18.0 misslyckas skapandet av en ny användare med standardinställningen DOM med felet (FORMS-11857):
+* När FIPS-läget är aktiverat på AEM Forms Service Pack 6.5.18.0 misslyckas skapandet av en användare med standardinställningen DOM med felet (FORMS-11857):
   `com.adobe.idp.cx.a: error seeding random number generator`
 
-* När en användare väljer teckensnitt i ADMINUI under sökvägen `Home>Services>PDF Generator>Adobe PDF Settings`, blir det inte markerat. Dessutom är listrutan med tillgängliga teckensnitt tom i en standardprofil eller en anpassad profil, så det är inte möjligt att anpassa underlistan till **Inkludera alltid** eller **Inkludera aldrig** gör det att användaren inte kan konfigurera teckensnittet för PDF med PDF Generator. Loggarna visar inga relevanta felmeddelanden. (FORMS-12095)
+* När en användare väljer teckensnitt i ADMINUI under sökvägen `Home>Services>PDF Generator>Adobe PDF Settings`, blir det inte markerat. Dessutom är listrutan med tillgängliga teckensnitt tom i en standardprofil eller en anpassad profil. Det är därför inte möjligt att anpassa underlistan till **Inkludera alltid** eller **Inkludera aldrig**. Användaren kan inte konfigurera teckensnittet för PDF med PDF Generator. Loggarna visar inga relevanta felmeddelanden. (FORMS-12095)
 
-* På AEM Forms Service Pack 6.5.18.0 kan användaren inte skapa nya säkerhetsinställningar. Inga fel- eller serverloggar visas, men ett popup-felmeddelande visas på skärmen. (FORMS-1212)
+* På AEM Forms Service Pack 6.5.18.0 kan användaren inte skapa säkerhetsinställningar, inga fel- eller serverloggar visas, men ett popup-felmeddelande visas på skärmen. (FORMS-1212)
 
 * När en användare av AEM Forms Service Pack 6.5.18.0 skickar ett adaptivt formulär i JEE-arbetsflödet skickas inte bilagan i det adaptiva formuläret till JEE-processen, vilket orsakar programfel. (FORMS-12232, FORMS-1228)
 
@@ -198,14 +198,14 @@ Några av de viktigaste funktionerna och förbättringarna i den här versionen 
 
 * När ett anpassat formulär publiceras på AEM Forms 6.5.18.0 publiceras alla beroenden, inklusive profiler, på nytt, även om inga ändringar har gjorts. (FORMS-10454)
 
-* När en användare väljer&quot;Microsoft SharePoint&quot; när han eller hon kör konfigurationshanteraren på AEM Forms 6.5.19.1 med JBoss Turnkey-konfiguration misslyckas installationen av Livecycle Jboss EAR och följande fel visas: (FORMS-12463)
+* När en användare väljer &quot;Microsoft SharePoint&quot; när konfigurationshanteraren körs på AEM Forms 6.5.19.1 med JBoss® Turnkey-konfiguration misslyckas installationen av LiveCyclet JBoss® EAR och följande fel visas: (FORMS-12463)
 
   ` Caused by: org.jboss.as.server.deployment.DeploymentUnitProcessingException: WFLYEE0031: Unable to process modules in application.xml for EAR ["/C:/AEM/jboss/bin/content/ adobe-livecycle-jboss.ear "], module file adobe-connectorformssharepoint-config-ejb.jar not found.`
 
 #### [!DNL Forms Designer] {#forms-designer-6520}
 
 
-* När en användare uppgraderar till AEM Forms Service Pack 6.5.18.0 misslyckas XDP:er som skickas via utdatatjänsten med alternativet tagged PDF aktiverat på grund av att undantagshantering saknas. (LC-3921757)
+* När en användare uppgraderar till AEM Forms Service Pack 6.5.18.0 misslyckas XDP-filer som skickas via utdatatjänsten med alternativet tagged PDF. Detta beror på att undantagshantering saknas. (LC-3921757)
 
 * När en användare skapar ett PDF med AEM Forms Designer, taggas rubriknivåer i hjälpmedelsträdet tillsammans med det grafiska elementet, till exempel en rektangulär ruta. (LC-3921687)
 
