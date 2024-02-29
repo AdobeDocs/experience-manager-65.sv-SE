@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: best-practices
 exl-id: 3405cdd3-3d1b-414d-9931-b7d7b63f0a6f
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: 4289c68feb51842b5649f7cff73c5c4bc38add6c
 workflow-type: tm+mt
-source-wordcount: '2230'
+source-wordcount: '2236'
 ht-degree: 0%
 
 ---
@@ -35,7 +35,7 @@ De två första klassificeringarna av frågor (indexlösa och dåligt begränsad
 
 Att inspektera varje möjligt resultat kallas att gå igenom.
 
-Eftersom varje potentiellt resultat måste kontrolleras, växer kostnaden för att fastställa det faktiska resultatet linjärt med antalet potentiella resultat.
+Eftersom varje potentiellt resultat måste kontrolleras, växer kostnaden för att fastställa det faktiska resultatet linjärt med antalet möjliga resultat.
 
 Genom att lägga till frågebegränsningar och justera index kan indexdata lagras i ett optimerat format som ger snabb resultathämtning och minskar eller eliminerar behovet av linjär kontroll av potentiella resultatuppsättningar.
 
@@ -119,7 +119,7 @@ Fler frågebegränsningar minskar antalet giltiga resultatuppsättningar och opt
 
 Utan en extra indexregel för `cq:tags` -egenskap, även fulltextfråga med en begränsning för `cq:tags` skulle fungera dåligt eftersom resultatet från indexet skulle returnera alla fulltextmatchningar. Begränsningen för cq:tags filtreras efter den.
 
-En annan orsak till postindexfiltrering är Access Control Lists, som ofta missas under utvecklingen. Kontrollera att frågan inte returnerar sökvägar som kanske inte är tillgängliga för användaren. Detta kan göras genom bättre innehållsstruktur och med relevant sökvägsbegränsning för frågan.
+En annan orsak till postindexfiltrering är Access Control Lists, som ofta missas under utvecklingen. Kontrollera att frågan inte returnerar sökvägar som kanske inte är tillgängliga för användaren. Det kan göras genom bättre innehållsstruktur och relevanta sökvägsbegränsningar för frågan.
 
 Ett praktiskt sätt att identifiera om Lucene-indexet returnerar många resultat för att returnera en liten delmängd som frågeresultat är att aktivera DEBUG-loggar för `org.apache.jackrabbit.oak.plugins.index.lucene.LucenePropertyIndex`. På så sätt kan du se hur många dokument som läses in från indexet. Antalet slutliga resultat jämfört med antalet inlästa dokument bör inte vara oproportionerligt. Mer information finns i [Loggning](/help/sites-deploying/configure-logging.md).
 
@@ -176,7 +176,7 @@ AEM stöder följande frågespråk:
 * JCR-SQL2
 * XPath
 
-I följande exempel används Query Builder som det vanligaste frågespråket som används av AEM utvecklare, men samma principer gäller för JCR-SQL2 och XPath.
+I följande exempel används Query Builder eftersom det är det vanligaste frågespråket som används av AEM utvecklare, men samma principer gäller för JCR-SQL2 och XPath.
 
 1. Lägg till en nodetypbegränsning så att frågan löses till ett befintligt Lucene-egenskapsindex.
 
@@ -466,7 +466,7 @@ Se därför till att index uppfyller frågor, förutom om kombinationen av sökv
 
    * Generera ett optimalt Lucence-egenskapsindex från XPath- eller JCR-SQL2-frågesatser.
 
-* **[AEM Chrome Plug-in](https://chrome.google.com/webstore/detail/aem-chrome-plug-in/ejdcnikffjleeffpigekhccpepplaode?hl=en-US)**
+* **_AEM Chrome Plug-in_** <!-- For whatever reason, the URL to this extension was causing too many redirects when doing the request so it was removed entirely to get rid of the error; users can easily look up the extension in Google instead. DO NOT ADD THE URL AGAIN!-->
 
-   * Webbläsartillägget Google Chrome som visar loggdata per begäran, inklusive utförda frågor och tillhörande frågeplaner, i webbläsarens Dev Tools Console.
-   * Kräver [Sling Log Tracer 1.0.2+](https://sling.apache.org/downloads.cgi) installeras och aktiveras på AEM.
+   * The _AEM Chrome Plug-in_ är ett webbläsartillägg för Google Chrome som visar loggdata per begäran, inklusive körningsfrågor och tillhörande frågeplaner, i webbläsarens Dev Tools Console.
+   * Du måste installera och aktivera [Sling Log Tracer 1.0.2+](https://sling.apache.org/downloads.cgi) AEM.

@@ -11,16 +11,16 @@ feature: Commerce Integration Framework
 kt: 4279
 thumbnail: customize-aem-cif-core-component.jpg
 exl-id: 8933942e-be49-49d3-bf0a-7225257e2803
-source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
+source-git-commit: 9677c3f08c139518e38d576d6008343fcc07e810
 workflow-type: tm+mt
-source-wordcount: '2306'
+source-wordcount: '2302'
 ht-degree: 0%
 
 ---
 
 # Anpassa Adobe Experience Manager CIF-komponenter {#customize-cif-components}
 
-The [CIF Venia Project](https://github.com/adobe/aem-cif-guides-venia) är en referenskodbas för att använda [CIF kärnkomponenter](https://github.com/adobe/aem-core-cif-components). I den här självstudiekursen utökar du [Product Teaser](https://github.com/adobe/aem-core-cif-components/tree/master/ui.apps/src/main/content/jcr_root/apps/core/cif/components/commerce/productteaser/v1/productteaser) om du vill visa ett anpassat attribut från Adobe Commerce. Du får också lära dig mer om GraphQL integrering mellan Adobe Experience Manager (AEM) och Adobe Commerce och de tilläggskopplingar som finns i CIF Core Components.
+The [CIF Venia Project](https://github.com/adobe/aem-cif-guides-venia) är en referenskodbas för att använda [CIF kärnkomponenter](https://github.com/adobe/aem-core-cif-components). I den här självstudiekursen utökar du [Product Teaser](https://github.com/adobe/aem-core-cif-components/tree/master/ui.apps/src/main/content/jcr_root/apps/core/cif/components/commerce/productteaser/v1/productteaser) om du vill visa ett anpassat attribut från Adobe Commerce. Du kan även läsa mer om GraphQL-integrationen mellan Adobe Experience Manager (AEM) och Adobe Commerce och de tilläggskopplingar som finns i CIF Core Components.
 
 >[!TIP]
 >
@@ -36,7 +36,7 @@ Varumärket Venia började nyligen tillverka vissa produkter med hjälp av håll
 
 Det krävs en lokal utvecklingsmiljö för att slutföra den här självstudiekursen. Detta inkluderar en instans av AEM som körs och som är konfigurerad och ansluten till en Adobe Commerce-instans. Granska kraven och stegen för [konfigurera en lokal utveckling med AEM](../develop.md). Om du vill följa självstudiekursen fullständigt måste du ha behörighet att lägga till [Attribut till en produkt](https://docs.magento.com/user-guide/catalog/product-attributes-add.html) i Adobe Commerce.
 
-Du behöver också GraphQL IDE som [GraphiQL](https://github.com/graphql/graphiql) eller ett webbläsartillägg för att köra kodexempel och självstudiekurser. Om du installerar ett webbläsartillägg måste du se till att det går att ange begäranrubriker. På Google Chrome [Altair GraphQL Client](https://chrome.google.com/webstore/detail/altair-graphql-client/flnheeellpciglgpaodhkhmapeljopja) är ett tillägg som kan utföra jobbet.
+Du behöver också GraphQL IDE som [GraphiQL](https://github.com/graphql/graphiql) eller ett webbläsartillägg för att köra kodexempel och självstudiekurser. Om du installerar ett webbläsartillägg måste du se till att det går att ange begäranrubriker. På Google Chrome _Altair GraphQL Client_ är ett tillägg som kan utföra jobbet.
 
 ## Klona Veniaprojektet {#clone-venia-project}
 
@@ -46,7 +46,7 @@ Du klonar [Venedig-projektet](https://github.com/adobe/aem-cif-guides-venia) och
 >
 >**Du kan använda ett befintligt projekt** (baserat på AEM Project Archetype med CIF inkluderat) och hoppa över det här avsnittet.
 
-1. Kör följande Git-kommando för att klona projektet:
+1. Kör följande Git-kommando så att du kan klona projektet:
 
    ```shell
    $ git clone git@github.com:adobe/aem-cif-guides-venia.git
@@ -59,7 +59,7 @@ Du klonar [Venedig-projektet](https://github.com/adobe/aem-cif-guides-venia) och
    $ mvn clean install -PautoInstallSinglePackage,cloud
    ```
 
-1. Lägg till nödvändiga OSGi-konfigurationer för att ansluta AEM till en Adobe Commerce-instans eller lägga till konfigurationerna i det nyskapade projektet.
+1. Lägg till nödvändiga OSGi-konfigurationer så att du kan ansluta AEM till en Adobe Commerce-instans eller lägga till konfigurationerna i det nya projektet.
 
 1. Nu bör du ha en fungerande version av en storefront som är ansluten till en Adobe Commerce-instans. Navigera till `US` > `Home` sida vid: [http://localhost:4502/editor.html/content/venia/us/en.html](http://localhost:4502/editor.html/content/venia/us/en.html).
 
@@ -91,7 +91,7 @@ Product Teaser Component utökas genom hela kursen. Som ett första steg lägger
 
 ## Lägg till ett anpassat attribut i Adobe Commerce {#add-custom-attribute}
 
-De produkter och produktdata som visas i AEM lagras i Adobe Commerce. Lägg sedan till ett nytt attribut för **Miljövänlig** som en del av produktattributet som anges med Adobe Commerce användargränssnitt.
+De produkter och produktdata som visas i AEM lagras i Adobe Commerce. Lägg sedan till ett attribut för **Miljövänlig** som en del av produktattributet som anges med Adobe Commerce användargränssnitt.
 
 >[!TIP]
 >
@@ -99,7 +99,7 @@ De produkter och produktdata som visas i AEM lagras i Adobe Commerce. Lägg seda
 
 1. Logga in på din Adobe Commerce-instans.
 1. Navigera till **Katalog** > **Produkter**.
-1. Uppdatera sökfiltret för att hitta **Konfigurerbar produkt** används när de läggs till Teaser-komponenten i föregående övning. Öppna produkten i redigeringsläge.
+1. Uppdatera sökfiltret så att du kan hitta **Konfigurerbar produkt** används när de läggs till Teaser-komponenten i föregående övning. Öppna produkten i redigeringsläge.
 
    ![Sök efter Valeria-produkt](../assets/customize-cif-components/search-valeria-product.png)
 
@@ -139,7 +139,7 @@ De produkter och produktdata som visas i AEM lagras i Adobe Commerce. Lägg seda
 
 Innan du hoppar in i AEM kod är det praktiskt att utforska [Adobe Commerce GraphQL](https://devdocs.magento.com/guides/v2.4/graphql/) med en GraphQL IDE. Adobe Commerce integrering med AEM görs huvudsakligen via en serie GraphQL-frågor. Att förstå och ändra GraphQL-frågor är ett av de viktigaste sätten att utöka CIF kärnkomponenter.
 
-Använd sedan en GraphQL-utvecklingsmiljö för att verifiera att `eco_friendly` har lagts till i produktattributuppsättningen. Skärmbilder i den här självstudiekursen använder [Altair GraphQL Client](https://chrome.google.com/webstore/detail/altair-graphql-client/flnheeellpciglgpaodhkhmapeljopja).
+Använd sedan en GraphQL-utvecklingsmiljö för att verifiera att `eco_friendly` har lagts till i produktattributuppsättningen. Skärmbilder i den här självstudien använder tillägget Google Chrome _Altair GraphQL Client_.
 
 1. Öppna GraphQL IDE och ange URL:en `http://<server>/graphql` i URL-fältet för den utvecklingsmiljö eller det tillägg du använder.
 2. Lägg till följande [produktfråga](https://devdocs.magento.com/guides/v2.4/graphql/queries/products.html) där `YOUR_SKU` är **SKU** av den produkt som använts i föregående undersökning:
@@ -186,7 +186,7 @@ Värdet för **Ja** är ett heltal av **1**. Detta är användbart när du skriv
 
 ## Uppdatera produktundervisningsmodellen {#updating-sling-model-product-teaser}
 
-Därefter ska du utöka produktTeaser affärslogik genom att implementera en Sling Model. [Sling Models](https://sling.apache.org/documentation/bundles/models.html), är anteckningsdrivna &quot;POJOs&quot; (Plain Old Java™ Objects) som implementerar någon av de affärslogik som komponenten behöver. Sling-modeller används med HTML-skript som en del av komponenten. Du följer [Delegeringsmönster för delningsmodeller](https://github.com/adobe/aem-core-wcm-components/wiki/Delegation-Pattern-for-Sling-Models) så att du kan utöka delar av den befintliga Product Teaser-modellen.
+Därefter utökar du affärslogiken i Product Teaser genom att implementera en Sling Model. [Sling Models](https://sling.apache.org/documentation/bundles/models.html) är anteckningsdrivna &quot;POJOs&quot; (Plain Old Java™ Objects) som implementerar någon av de affärslogik som komponenten behöver. Sling-modeller används med HTML-skript som en del av komponenten. Följ [Delegeringsmönster för delningsmodeller](https://github.com/adobe/aem-core-wcm-components/wiki/Delegation-Pattern-for-Sling-Models) så att du kan utöka delar av den befintliga Product Teaser-modellen.
 
 Sling Models implementeras som Java™ och finns i **kärna** för det genererade projektet.
 
@@ -200,7 +200,7 @@ Använd [den utvecklingsmiljö du vill](https://experienceleague.adobe.com/docs/
 
    En ny metod har redan lagts till med namnet `isShowBadge()` för att visa ett märke om produkten anses vara&quot;Nytt&quot;.
 
-1. Lägg till en ny metod, `isEcoFriendly()` till gränssnittet:
+1. Lägg till en metod `isEcoFriendly()` till gränssnittet:
 
    ```java
    @ProviderType
@@ -291,7 +291,7 @@ Detta är en ny metod för att kapsla in logiken som anger om produkten har `eco
    >
    >The `createdAt()` har implementerats som en del av [Produktgränssnitt](https://github.com/adobe/commerce-cif-magento-graphql/blob/master/src/main/java/com/adobe/cq/commerce/magento/graphql/ProductInterface.java). De flesta av de vanligaste schemaattributen har implementerats, så använd bara `addCustomSimpleField` för verkligt anpassade attribut.
 
-1. Lägg till en loggare som felsöker Java™-koden:
+1. Lägg till en längre behållare så att den kan hjälpa dig felsöka Java™-koden:
 
    ```java
    import org.slf4j.Logger;
@@ -326,17 +326,17 @@ Detta är en ny metod för att kapsla in logiken som anger om produkten har `eco
 
    I ovanstående metod `productRetriever` används för att hämta produkten och `getAsInteger()` -metoden används för att hämta värdet för `eco_friendly` -attribut. Baserat på de GraphQL-frågor du körde tidigare vet du att det förväntade värdet när `eco_friendly` attribute is set to &quot;**Ja**&quot; är i själva verket ett heltal av **1**.
 
-   Nu när delningsmodellen har uppdaterats måste komponentkoden uppdateras för att visa en indikator på **Miljövänlig** baserat på Sling-modellen.
+   När du nu uppdaterat segmentmodellen uppdaterar du komponentkoden så att den visar en indikator på **Miljövänlig** baserat på Sling-modellen.
 
 ## Anpassa koden för Product Teaser {#customize-markup-product-teaser}
 
 Ett vanligt tillägg för AEM är att ändra den kod som genereras av komponenten. Detta görs genom att åsidosätta [HTL-skript](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html) som komponenten använder för att återge sin kod. HTML Template Language (HTL) är ett lättviktsmallspråk som används AEM komponenter för att dynamiskt återge kod baserat på det innehåll som skapats, vilket gör att komponenterna kan återanvändas. Product Teaser kan till exempel återanvändas om och om igen för att visa olika produkter.
 
-I det här fallet vill du återge en banderoll ovanpå teaser för att ange att produkten är&quot;miljövänlig&quot; baserat på ett anpassat attribut. Designmönstret för [anpassa markeringen](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/customizing.html#customizing-the-markup) för en komponent är faktiskt standard för alla AEM, inte bara för AEM CIF.
+I det här fallet vill du återge en banderoll ovanpå teaser för att ange att produkten är&quot;miljövänlig&quot; baserat på ett anpassat attribut. Designmönstret för [anpassa markeringen](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/customizing.html#customizing-the-markup) för en komponent är standard för alla AEM komponenter, inte bara för AEM CIF.
 
 >[!NOTE]
 >
->Om du anpassar en komponent med hjälp av CIF produkt- och kategoriväljare som detta Product Teaser eller den CIF sidkomponenten ser du till att du inkluderar de nödvändiga `cif.shell.picker` clientlib för komponentdialogrutorna. Se [Användning av CIF produkt- och kategoriväljare](use-cif-pickers.md) för mer information.
+>Om du anpassar en komponent med hjälp av CIF produkt- och kategoriväljare som detta Product Teaser eller den CIF sidkomponenten måste du inkludera den `cif.shell.picker` clientlib för komponentdialogrutorna. Se [Användning av CIF produkt- och kategoriväljare](use-cif-pickers.md) för mer information.
 
 1. Navigera i och expandera dialogrutan `ui.apps` och expandera mapphierarkin till: `ui.apps/src/main/content/jcr_root/apps/venia/components/commerce/productteaser` och inspektera `.content.xml` -fil.
 
@@ -369,7 +369,7 @@ I det här fallet vill du återge en banderoll ovanpå teaser för att ange att 
 
    Observera att Sling-modellen för `MyProductTeaser` används och tilldelas `product` variabel.
 
-1. Ändra `productteaser.html` för att ringa `isEcoFriendly` metod som har använts i föregående övning:
+1. Redigera `productteaser.html` så att den anropar `isEcoFriendly` metod som har använts i föregående övning:
 
    ```html
    ...
