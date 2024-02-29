@@ -2,9 +2,9 @@
 title: Installationsanvisningar för AEM Forms Patch för AEM Forms
 description: Installationsanvisningar för AEM Forms Service Pack för OSGi- och JEE-miljö
 exl-id: ae4c7e9d-9af8-4288-a6f9-e3bcbe7d153d
-source-git-commit: d195ac80ee59439bab5b1219a2c1f16e93e3d22b
+source-git-commit: 181d5ffcefcf55aa75cfaf29c42dbd8d8d665398
 workflow-type: tm+mt
-source-wordcount: '1724'
+source-wordcount: '1728'
 ht-degree: 0%
 
 ---
@@ -15,9 +15,9 @@ ht-degree: 0%
 
 | Produkt | Adobe Experience Manager 6.5 Forms |
 |---|---|
-| Version | 6.5.19.0 (OSGi), 6.5.19.1 (JEE) |
+| Version | 6.5.20.0 |
 | Typ | Service Pack-version |
-| Datum | 8 december 2023 |
+| Datum | 29 februari 2024 |
 | Hämta URL | [Senaste AEM Forms Releases](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html) |
 
 >[!NOTE]
@@ -49,7 +49,8 @@ From AEM Service Pack 6.5.19.0 and onwards, XMLFM (XML output) will be available
 
 ## Hämta och installera Service Pack på ett AEM formulär i JEE-miljö {#download-and-install-for-jee-service-pack}
 
-![JEE-installation](/help/forms/using/assets/jeeinstallation.png)
+<!--
+![JEE Installation](/help/forms/using/assets/jeeinstallation.png) -->
 
 +++1. Säkerhetskopiera din befintliga miljö
 
@@ -71,7 +72,7 @@ From AEM Service Pack 6.5.19.0 and onwards, XMLFM (XML output) will be available
 
 +++
 
-+++ 3. Installera Microsoft Visual C++ Redistributable-paket
++++3. Installera Microsoft Visual C++ Redistributable-paket
 
 * Hämta och installera [64-bitarsversion av Microsoft Visual C++ Redistributable-paket för Visual Studio 2015, 2017, 2019 och 2022](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170#visual-studio-2015-2017-2019-and-2022) på den dator där AEM 6.5 Forms är installerat.
 
@@ -81,7 +82,7 @@ From AEM Service Pack 6.5.19.0 and onwards, XMLFM (XML output) will be available
 
 +++
 
-+++3. Installera AEM Forms på JEE-Service Pack:
++++4. Installera AEM Forms på JEE-Service Pack:
 
 1. Stoppa programservern.
 1. Extrahera **Installationsarkiv för AEM Forms på JEE Service Pack** till hårddisken:
@@ -108,7 +109,7 @@ Navigera till rätt katalog och från ett skal och en typ `./aem65_cfp_install.b
 
    * Avmarkera **Starta Configuration Manager** innan du klickar **[!UICONTROL Done]**. Kör **Konfigurationshanteraren** genom att använda **ConfigurationManager.bat** fil i `[aem-forms root]\configurationManager\bin`.
 
-   * Eller avmarkera **Starta Configuration Manager** innan du klickar **[!UICONTROL Done]**. Före körning **Konfigurationshanteraren** använda **ConfigurationManager.exe** eller **ConfigurationManager_IPv6.exe**, navigera till *`<AEMForms_Install_Dir>\configurationManager\bin`* och ersätta **ConfigurationManager.lax** och **ConfigurationManager_IPV6.lax** med de senaste [ConfigurationManager.lax](/help/assets/ConfigurationManager.lax) och [ConfigurationManager_IPV6.lax](/help/assets/ConfigurationManager_IPv6.lax) filer.
+   * Eller avmarkera **Starta Configuration Manager** innan du klickar **[!UICONTROL Done]**. Före körning **Konfigurationshanteraren** använda **ConfigurationManager.exe** eller **ConfigurationManager_IPv6.exe**, navigera till *`<AEMForms_Install_Dir>\configurationManager\bin`* och ersätta **ConfigurationManager.lax** och **ConfigurationManager_IPV6.lax** med de senaste [ConfigurationManager.lax](/help/assets/ConfigurationManager.lax) och [ConfigurationManager_IPV6.lax](/help/assets/ConfigurationManager_IPv6.lax) filer, söka efter och ersätta **axis-1.4.1.1.jar** med **axis-1.4.1.2.jar** i dessa två filer.
 
      >[!NOTE]
      >
@@ -133,7 +134,7 @@ Navigera till rätt katalog och från ett skal och en typ `./aem65_cfp_install.b
 
 +++
 
-+++4. Installera serverdelen (AEM Service Pack 6.5.14.0 eller tidigare)
++++5. Installera serverdelen (AEM Service Pack 6.5.14.0 eller tidigare)
 
 >[!NOTE]
 >
@@ -145,17 +146,17 @@ Så här hämtar och installerar du serverletsfragmentet:
 
 1. Om du inte har hämtat fragmentet hämtar du det från [Programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/featurepack/org.apache.felix.http.servlet-api-1.2.0_fragment_full.jar).
 
-1. Starta programservern, vänta på att loggarna ska stabiliseras och kontrollera paketläget.
+2. Starta programservern, vänta på att loggarna ska stabiliseras och kontrollera paketläget.
 
-1. Öppna Web Console Bundles. Standardwebbadressen är `http://[Server]:[Port]/system/console/bundles`.
+3. Öppna Web Console Bundles. Standardwebbadressen är `http://[Server]:[Port]/system/console/bundles`.
 
-1. Klicka på Installera/Uppdatera. Välj det hämtade fragmentet, `org.apache.felix.http.servlet-api-1.2.0_fragment_full.jar`. Klicka **Installera** eller **Uppdatera**. Vänta tills programservern har stabiliserats
+4. Klicka på Installera/Uppdatera. Välj det hämtade fragmentet, `org.apache.felix.http.servlet-api-1.2.0_fragment_full.jar`. Klicka **Installera** eller **Uppdatera**. Vänta tills programservern har stabiliserats
 
-1. Stoppa programservern.
+5. Stoppa programservern.
 
 +++
 
-+++5. Installera AEM Service Pack
++++6. Installera AEM Service Pack
 
 1. Starta om instansen innan installationen om instansen är i uppdateringsläge (när instansen uppdaterades från en tidigare version). Adobe rekommenderar att du startar om om den aktuella upptiden för en instans är hög.
 1. Ta en ögonblicksbild eller en ny säkerhetskopia av din [!DNL Experience Manager] -instans.
@@ -186,7 +187,7 @@ Paketet installeras automatiskt.
 
 +++
 
-+++6. Installera AEM Experience Manager Forms tilläggspaket
++++7. Installera AEM Experience Manager Forms tilläggspaket
 
 1. Kontrollera att du har installerat [!DNL Experience Manager] Service Pack.
 1. Ladda ned motsvarande tilläggspaket från Forms på [AEM Forms-versioner](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html) för ditt operativsystem.
@@ -197,8 +198,9 @@ Paketet installeras automatiskt.
 
 ## Hämta och installera Service Pack på en AEM i OSGi-miljö {#download-and-install-for-osgi-service-pack}
 
-![Installationssteg för OSGi](/help/forms/using/assets/osgiinstallation.png)
 
+<!-- ![OSGi Installation Steps](/help/forms/using/assets/osgiinstallation.png)
+-->
 
 +++1. Säkerhetskopiera din befintliga miljö
 

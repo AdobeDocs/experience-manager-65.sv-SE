@@ -1,15 +1,15 @@
 ---
-title: Konfigurera OAuth2-baserad autentisering för Microsoft&reg; Office 365 e-postserverprotokoll
-description: Konfigurera OAuth2-baserad autentisering för Microsoft&reg; Office 365 e-postserverprotokoll
+title: Konfigurera OAuth2-baserad autentisering för Microsoft® (Forms JEE OAuth); Office 365 e-postserverprotokoll
+description: Konfigurera OAuth2-baserad autentisering för Microsoft® (Forms JEE OAuth); Office 365 e-postserverprotokoll
 exl-id: cd3da71f-892c-4fde-905f-71a64fb5d4e4
-source-git-commit: 020b92463371294706e9873e0d8962583d19ac52
+source-git-commit: 2a67e7e54a72c31a4a0ab0a186be20a914222fa7
 workflow-type: tm+mt
-source-wordcount: '980'
+source-wordcount: '986'
 ht-degree: 0%
 
 ---
 
-# Integrera med e-postserverprotokoll för Microsoft® Office 365 {#oauth2-support-for-the-microsoft-mail-server-protocols}
+# Integrera AEM Forms med e-postserverprotokoll från Microsoft® Office 365 {#oauth2-support-for-the-microsoft-mail-server-protocols}
 
 AEM Forms erbjuder OAuth 2.0-stöd för integrering med Microsoft® Office 365-protokoll för e-postservrar, så att organisationer kan uppfylla kraven för e-post. Du kan använda Azure Active Directory (Azure AD) OAuth 2.0-autentiseringstjänsten för att ansluta till olika protokoll som IMAP, POP eller SMTP och få åtkomst till e-postdata för Office 365-användare. Nedan finns stegvisa instruktioner för hur du konfigurerar e-postserverprotokoll för Microsoft® Office 365 för autentisering med hjälp av tjänsten OAuth 2.0:
 
@@ -27,7 +27,7 @@ I ovanstående fall **Konton i alla organisationskataloger (alla Azure AD-katalo
    >
    > * För **Konton i alla organisationskataloger (alla Azure AD-kataloger - Multitenant)** Adobe rekommenderar att du använder ett arbetskonto i stället för ett personligt e-postkonto.
    > * **Endast personliga Microsoft®-konton** programmet stöds inte.
-   * Adobe rekommenderar att du använder **Multi-tenant och personligt Microsoft®-konto** program.
+   > * Adobe rekommenderar att du använder **Multi-tenant och personligt Microsoft®-konto** program.
 
 1. Nästa, gå till **Certifikat och hemligheter**, klicka **Ny klienthemlighet** och följ stegen på skärmen för att skapa en hemlighet. Observera detta hemliga värde för senare bruk.
 
@@ -56,7 +56,7 @@ I ovanstående fall **Konton i alla organisationskataloger (alla Azure AD-katalo
 
    >[!NOTE]
    >
-   Det är obligatoriskt att välja **Åtkomsttoken** och **ID-token** kryssrutor.
+   > Det är obligatoriskt att välja **Åtkomsttoken** och **ID-token** kryssrutor.
 
 1. Klicka **Ökning** i den vänstra rutan och kopiera värdena för **Program-ID (klient)**, **Katalog-ID (klientorganisation)** och **Klienthemlighet** för senare bruk.
 
@@ -72,7 +72,7 @@ Därefter måste du generera behörighetskoden som beskrivs i följande steg:
 
    >[!NOTE]
    >
-   Om det finns ett single tenant-program ersätter du `common` med `[tenantid]` i följande URL för generering av auktoriseringskod: `https://login.microsoftonline.com/[tenantid]/oauth2/v2.0/authorize?client_id=[[clientid]]&scope=IMAP.AccessAsUser.All%20POP.AccessAsUser.All%20SMTP.Send%20User.Read%20Mail.Read%20openid%20offline_access&response_type=code&redirect_uri=[redirect_uri]&prompt=login`
+   > Om det finns ett single tenant-program ersätter du `common` med `[tenantid]` i följande URL för generering av auktoriseringskod: `https://login.microsoftonline.com/[tenantid]/oauth2/v2.0/authorize?client_id=[[clientid]]&scope=IMAP.AccessAsUser.All%20POP.AccessAsUser.All%20SMTP.Send%20User.Read%20Mail.Read%20openid%20offline_access&response_type=code&redirect_uri=[redirect_uri]&prompt=login`
 
 1. När du skriver ovanstående URL omdirigeras du till inloggningsskärmen:
    ![Inloggningsskärm](/help/forms/using/assets/azure_loginscreen.png)
@@ -97,8 +97,8 @@ Därefter måste du generera en uppdateringstoken, som beskrivs i följande steg
 
    >[!NOTE]
    >
-   I ett single tenant-program använder du följande cURL-kommando och ersätt för att generera en uppdateringstoken `common` med `[tenantid]` in:
-   `curl -H "ContentType application/x-www-form-urlencoded" -d "client_id=[client-id]&scope=https%3A%2F%2Foutlook.office.com%2FIMAP.AccessAsUser.All%20https%3A%2F%2Foutlook.office.com%2FPOP.AccessAsUser.All%20https%3A%2F%2Foutlook.office.com%2FSMTP.Send%20https%3A%2F%2Foutlook.office.com%2FUser.Read%20https%3A%2F%2Foutlook.office.com%2FMail.Read%20offline_access&code=[code]&grant_type=authorization_code&redirect_uri=[redirect_uri]&client_secret=[secretkey_value]" -X POST https://login.microsoftonline.com/[tenantid]/oauth2/v2.0/token`
+   > I ett single tenant-program använder du följande cURL-kommando och ersätt för att generera en uppdateringstoken `common` med `[tenantid]` in:
+   >`curl -H "ContentType application/x-www-form-urlencoded" -d "client_id=[client-id]&scope=https%3A%2F%2Foutlook.office.com%2FIMAP.AccessAsUser.All%20https%3A%2F%2Foutlook.office.com%2FPOP.AccessAsUser.All%20https%3A%2F%2Foutlook.office.com%2FSMTP.Send%20https%3A%2F%2Foutlook.office.com%2FUser.Read%20https%3A%2F%2Foutlook.office.com%2FMail.Read%20offline_access&code=[code]&grant_type=authorization_code&redirect_uri=[redirect_uri]&client_secret=[secretkey_value]" -X POST https://login.microsoftonline.com/[tenantid]/oauth2/v2.0/token`
 
 1. Notera uppdateringstoken.
 
@@ -110,7 +110,7 @@ Konfigurera nu e-posttjänsten på den senaste JEE-servern genom att logga in p�
 
    >[!NOTE]
    >
-   Om du vill aktivera Autentiseringstjänsten Auto 2.0 måste du välja **Om SMTP-servern kräver autentisering (SMTP-autentisering)** kryssrutan.
+   > Om du vill aktivera Autentiseringstjänsten Auto 2.0 måste du välja **Om SMTP-servern kräver autentisering (SMTP-autentisering)** kryssrutan.
 
 1. Ange **Autentiseringsinställningar för Auto 2.0** as `True`.
 1. Kopiera värdena för **Klient-ID** och **Klienthemlighet** från Azure Portal.
@@ -123,8 +123,8 @@ Konfigurera nu e-posttjänsten på den senaste JEE-servern genom att logga in p�
 
    >[!NOTE]
    >
-   * Transportsäkerhetsprotokollet har följande giltiga värden: blank, SSL eller TLS. Ange värden för **SMTP-transportsäkerhet** och **Ta emot transportsäkerhet** till **TLS** för att aktivera autentiseringstjänsten.
-   * **POP3-protokoll** stöds inte för OAuth när e-postslutpunkter används.
+   >* Transportsäkerhetsprotokollet har följande giltiga värden: blank, SSL eller TLS. Ange värden för **SMTP-transportsäkerhet** och **Ta emot transportsäkerhet** till **TLS** för att aktivera autentiseringstjänsten.
+   >* **POP3-protokoll** stöds inte för OAuth när e-postslutpunkter används.
 
    ![Anslutningsinställningar](/help/forms/using/assets/oauth_connectionsettings.png)
 
@@ -134,7 +134,7 @@ Konfigurera nu e-posttjänsten på den senaste JEE-servern genom att logga in p�
 
    >[!NOTE]
    >
-   Om du vill kan du ändra autentiseringsinställningen Auth 2.0 till grundläggande autentisering för en viss process i en workbench. Om du vill göra det anger du **OAuth 2.0-autentisering** värdet som False under **Använd globala inställningar** i **Anslutningsinställningar** -fliken.
+   >Om du vill kan du ändra autentiseringsinställningen Auth 2.0 till grundläggande autentisering för en viss process i en workbench. Om du vill göra det anger du **OAuth 2.0-autentisering** värdet som False under **Använd globala inställningar** i **Anslutningsinställningar** -fliken.
 
 ## Så här aktiverar du autenticeringsmeddelanden {#enable_oauth_task}
 
@@ -148,7 +148,7 @@ Konfigurera nu e-posttjänsten på den senaste JEE-servern genom att logga in p�
 
    >[!NOTE]
    >
-   Om du vill veta mer om aktivitetsmeddelanden [klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/content/forms/administrator-help/configuring-email-endpoints.html#create-an-email-endpoint-for-the-complete-task-service).
+   > Om du vill veta mer om aktivitetsmeddelanden [klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/content/forms/administrator-help/configuring-email-endpoints.html#create-an-email-endpoint-for-the-complete-task-service).
 
 ## Konfigurera e-postslutpunkt {#configure_email_endpoint}
 
@@ -162,7 +162,7 @@ Konfigurera nu e-posttjänsten på den senaste JEE-servern genom att logga in p�
 
    >[!NOTE]
    >
-   Om du vill ha mer information om hur du konfigurerar e-postslutpunkter klickar du på [Konfigurera en e-postslutpunkt](https://experienceleague.adobe.com/docs/experience-manager-65/content/forms/administrator-help/configuring-email-endpoints.html).
+   > Om du vill ha mer information om hur du konfigurerar e-postslutpunkter klickar du på [Konfigurera en e-postslutpunkt](https://experienceleague.adobe.com/docs/experience-manager-65/content/forms/administrator-help/configuring-email-endpoints.html).
 
 ## Felsökning {#troubleshooting}
 

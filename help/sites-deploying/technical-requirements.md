@@ -3,9 +3,9 @@ title: Tekniska krav
 description: En lista över de klient- och serverplattformar som stöds för Adobe Experience Manager.
 topic-tags: platform
 exl-id: 47529b9a-c4e5-434f-ac26-b01714ff863b
-source-git-commit: d5e7f0301259fdc12b507f9568befcc34ebe9408
+source-git-commit: 52969d5ab0975871c872195ab13649fb815cead8
 workflow-type: tm+mt
-source-wordcount: '3644'
+source-wordcount: '3650'
 ht-degree: 0%
 
 ---
@@ -159,7 +159,7 @@ Det finns olika alternativ för att distribuera Adobe Experience Manager-databas
 
 >[!NOTE]
 >
->Relationsdatabaser som stöds enligt listan ovan är programvara från tredje part och ingår inte i AEM licensieringspaket.
+>De relationsdatabaser som stöds enligt ovan är tredjepartsprogram och ingår inte i AEM licenspaket.
 >
 >För att köra AEM 6.5 med en relationsdatabas som stöds krävs ett separat supportavtal med en databasleverantör. Adobe kundtjänst hjälper dig att hantera kvalificeringsproblem som rör användningen av relationsdatabaser med AEM 6.5.
 >
@@ -535,7 +535,9 @@ För Windows x86:
 * Microsoft Visual C++ 2019 (VC 14.28 eller senare) 32-bitars körningsmiljö för 32-bitars AEM Forms Designer
 * Microsoft Visual C++ 2019 (VC 14.28 eller senare), 64-bitars runtime för 64-bitars AEM Forms Designer (för både OSGI- och JEE-stacken)
 
-### Krav för AEM Assets XMP metadata write-back {#requirements-for-aem-assets-xmp-metadata-write-back}
+[Installera och konfigurera AEM Forms designer](/help/forms/using/installing-configuring-designer.md)
+
+### Krav för tillbakaskrivning av AEM Assets XMP-metadata {#requirements-for-aem-assets-xmp-metadata-write-back}
 
 XMP-tillbakaskrivning stöds och aktiveras för följande plattformar och filformat:
 
@@ -548,6 +550,6 @@ XMP-tillbakaskrivning stöds och aktiveras för följande plattformar och filfor
 
 * **Filformat**: JPEG, PNG, TIFF, PDF, INDD, AI och EPS.
 
-### Krav för AEM Assets att bearbeta metadataintensiva resurser i Linux® {#assetsonlinux}
+### Krav för AEM Assets för att bearbeta metadatatunga resurser i Linux® {#assetsonlinux}
 
-XMPFilesProcessor-processen kräver att biblioteket GLIBC_2.14 fungerar. Använd en Linux®-kärna som innehåller GLIBC_2.14, till exempel Linux®-kärna version 3.1.x. Prestandan för bearbetning av resurser som innehåller en stor mängd metadata förbättras, till exempel PSD-filer. Om du använder en tidigare version av GLIBC leder det till fel i loggar som börjar med `com.day.cq.dam.core.impl.handler.xmp.NCommXMPHandler Failed to read XMP`.
+XMPFilesProcessor-processen kräver att biblioteket GLIBC_2.14 fungerar. Använd en Linux®-kärna som innehåller GLIBC_2.14, till exempel Linux®-kärna version 3.1.x. Prestandan för bearbetning av resurser som innehåller en stor mängd metadata förbättras, till exempel PSD-filer. Om du använder en tidigare version av GLIBC uppstår fel i loggar som börjar med `com.day.cq.dam.core.impl.handler.xmp.NCommXMPHandler Failed to read XMP`.
