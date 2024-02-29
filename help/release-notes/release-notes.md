@@ -2,7 +2,7 @@
 title: Versionsinformation för [!DNL Adobe Experience Manager] 6.5
 description: Hitta versionsinformation, nyheter, installationsanvisningar och en detaljerad ändringslista för [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 4
-source-git-commit: fbdeaeca3fa05181682f94e8f71bd9bb6605762a
+source-git-commit: c36ef1c1bd261864930039c4d60a930ead12482e
 workflow-type: tm+mt
 source-wordcount: '3366'
 ht-degree: 0%
@@ -216,17 +216,6 @@ Några av de viktigaste funktionerna och förbättringarna i den här versionen 
 * När en användare skapar en XDP-tagg i AEM Forms Designer, vid utdata från PDF, kapslas inte knappformulärtaggen i den överordnade stycketaggen (p-tagg). (LC-3921719)
 
 * När en användare skapar en XDP-fil i AEM Forms Designer, i PDF-utdata när en användare navigerar genom formulärtaggarna, taggas även bakgrundsobjektet. (LC-3921687)
-
-<!--LEFT BULLET LIST HERE IN CASE OF REUSE BY FORMS IN THE FUTURE 
-* **Document Services**
-  * text
-* **Adaptive Forms** 
-  * text
-* **Accessibility**
-  * text
-* **Interactive Communications**
-  * text -->
-<!--### Commerce{#commerce-6520} * text -->
 
 ### Foundation {#foundation-6520}
 
