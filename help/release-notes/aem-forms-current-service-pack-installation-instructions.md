@@ -2,7 +2,7 @@
 title: Installationsanvisningar för AEM Forms Patch för AEM Forms
 description: Installationsanvisningar för AEM Forms Service Pack för OSGi- och JEE-miljö
 exl-id: ae4c7e9d-9af8-4288-a6f9-e3bcbe7d153d
-source-git-commit: 181d5ffcefcf55aa75cfaf29c42dbd8d8d665398
+source-git-commit: fbdeaeca3fa05181682f94e8f71bd9bb6605762a
 workflow-type: tm+mt
 source-wordcount: '1728'
 ht-degree: 0%
@@ -261,7 +261,7 @@ Det finns två olika metoder som du kan använda för att installera automatiskt
 
 +++
 
-+++4. Installera tilläggspaket för Adobe Experience Manager Forms (AEM)
++++5. Installera tilläggspaket för Adobe Experience Manager Forms (AEM)
 
 1. Kontrollera att du har installerat [!DNL Experience Manager] Service Pack.
 1. Ladda ned motsvarande tilläggspaket från Forms på [AEM Forms-versioner](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html) för ditt operativsystem.
