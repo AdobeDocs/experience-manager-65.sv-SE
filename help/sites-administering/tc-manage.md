@@ -2,9 +2,9 @@
 title: Hantera översättningsprojekt
 description: Lär dig hantera översättningsprojekt i Adobe Experience Manager.
 exl-id: 968bba02-98fe-4eaf-9937-ce5cfdf5b413
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+source-git-commit: 219338b497dae6356a68429e9e8ab02c9cfcc3b4
 workflow-type: tm+mt
-source-wordcount: '3504'
+source-wordcount: '3506'
 ht-degree: 2%
 
 ---
@@ -420,9 +420,15 @@ Om en redan översatt källsida måste [ändrat namn eller flyttat](/help/sites-
 1. Välj **Språk Kopior**.
 1. Välj de målspråk som du vill uppdatera.
 1. Välj **Uppdatera språkkopior**.
+
+   ![update-language-copies](assets/translation-move-to.png)
+
 1. Klicka **Uppdatera**. A [Starta](/help/sites-authoring/launches-promoting.md) skapas.
 1. Navigera till den önskade språkroten och markera den.
 1. Använda **Referenser** panel, markera **Startar**.
+
+   ![Promot-launch-translation](assets/promote-launch-translation.png)
+
 1. Klicka på Launch som skapades och klicka på **Befordra lansering**.
 
 Nu har källsidan flyttats och tillhörande språkkopia.
