@@ -3,8 +3,7 @@ title: Hur ansluter och skickar man data i adaptiva blanketter till Microsoft&re
 description: Stegvisa instruktioner för att ansluta och skicka data i anpassade formulär till Microsoft&reg; Power Automate.
 keywords: Adaptiv Forms Microsoft Power Automate, skicka adaptiva Forms-data till Microsoft Power Automate
 feature: Adaptive Forms, Foundation Components
-exl-id: a059627b-df12-454d-9e2c-cc56986b7de6
-source-git-commit: d85fc98d9a31bc4014aef4311ba0f838c7ef619a
+source-git-commit: 27eb8a53a198efd2cb059a2884b3b5ed60730806
 workflow-type: tm+mt
 source-wordcount: '1079'
 ht-degree: 0%
@@ -85,7 +84,7 @@ Utför följande åtgärder för att ansluta AEM Forms Author-instansen till Mic
 
    >[!NOTE]
    >
-   När du skapar ett adaptivt formulär anger du behållarnamnet i dialogrutan **[!UICONTROL Configuration Container]** fält.
+   >När du skapar ett adaptivt formulär anger du behållarnamnet i dialogrutan **[!UICONTROL Configuration Container]** fält.
 
 1. Välj på konfigurationssidan **[!UICONTROL Create]** att skapa [!DNL Microsoft®® Power Automate Flow Service] i AEM Forms.
 1. På **[!UICONTROL Configure Dataverse Service for Microsoft®® Power Automate]** sida, ange **[!UICONTROL Client ID]** (kallas även program-ID), **[!UICONTROL Client Secret]**, **[!UICONTROL OAuth URL]** och **[!UICONTROL Dynamic Environment URL]**. Använd klient-ID, klienthemlighet, OAuth URL och Dynamic Environment-URL för [Microsoft® Azure Active Directory-program](#ms-power-automate-application) som du skapade i föregående avsnitt. Använd alternativet Endpoints i användargränssnittet i Microsoft® Azure Active Directory för att hitta OAuth-URL
@@ -100,7 +99,7 @@ Utför följande åtgärder för att ansluta AEM Forms Author-instansen till Mic
 
    >[!NOTE]
    >
-   När du skapar ett adaptivt formulär anger du behållarnamnet i dialogrutan **[!UICONTROL Configuration Container]** fält.
+   >När du skapar ett adaptivt formulär anger du behållarnamnet i dialogrutan **[!UICONTROL Configuration Container]** fält.
 1. Välj på konfigurationssidan **[!UICONTROL Create]** att skapa [!DNL Microsoft®® Power Automate Flow Service] i AEM Forms.
 1. På **[!UICONTROL Configure Dataverse for Microsoft®® Power Automate]** sida, ange **[!UICONTROL Client ID]** (kallas även program-ID), **[!UICONTROL Client Secret]**, **[!UICONTROL OAuth URL]** och **[!UICONTROL Dynamic Environment URL]**. Använd klient-ID, Klienthemlighet, OAuth URL och Dynamics Environment-ID. Använd alternativet Endpoints i användargränssnittet i Microsoft® Azure Active Directory för att hitta OAuth-URL:en. Öppna [Mina flöden](https://us.flow.microsoft.com) och väljer Mina flöden använder det ID som anges i URL:en som Dynamics Environment ID.
 1. Välj **[!UICONTROL Connect]**. Logga in på ditt Microsoft® Azure-konto om du blir tillfrågad. Välj **[!UICONTROL Save]**.
@@ -126,7 +125,7 @@ Efter dig [Koppla samman en instans av AEM Forms Author med Microsoft® Power Au
 
 >[!NOTE]
 >
-Innan du skickar in det adaptiva formuläret ska du kontrollera att `When an HTTP Request is received` utlösaren med JSON Schema nedan läggs till i Power Automate-flödet.
+> Innan du skickar in det adaptiva formuläret ska du kontrollera att `When an HTTP Request is received` utlösaren med JSON Schema nedan läggs till i Power Automate-flödet.
 
 ```
         {
