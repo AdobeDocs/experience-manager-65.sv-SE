@@ -2,9 +2,9 @@
 title: Versionsinformation för [!DNL Adobe Experience Manager] 6.5
 description: Hitta versionsinformation, nyheter, installationsanvisningar och en detaljerad ändringslista för [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 4
-source-git-commit: 348b82f0bd0d99eeb771aa4ed2719ee10d8cee68
+source-git-commit: 53bfd33a8bbb10d0ed82968a115ed316f63efecb
 workflow-type: tm+mt
-source-wordcount: '3440'
+source-wordcount: '3442'
 ht-degree: 0%
 
 ---
@@ -464,9 +464,10 @@ Du måste lägga till följande egenskaper i indexdefinitionsnoden för att få 
 
 * Efter uppdatering från AEM 6.5 av Forms Service Pack 18 (6.5.18.0) eller AEM 6.5 av Forms Service Pack 19 (6.5.19.0) till AEM 6.5 av Forms Service Pack 20 (6.5.20.0) påträffas ett JSP-kompileringsfel. De kan inte öppna eller skapa anpassade formulär och de stöter på fel med andra AEM gränssnitt som sidredigeraren, AEM Forms gränssnitt och AEM Workflow editor. Ett felmeddelande som liknar följande visas:
 
-`Unable to compile class for JSP: An error occurred at line: 162 in the jsp file: /libs/granite/ui/components/coral/foundation/anchorbutton/anchorbutton.jsp The method transformLinkInUriIfExternal(String) is undefined for the type ComponentHelper`
+  `Unable to compile class for JSP: An error occurred at line: 162 in the jsp file: /libs/granite/ui/components/coral/foundation/anchorbutton/anchorbutton.jsp The method transformLinkInUriIfExternal(String) is undefined for the type ComponentHelper`
 
-Du kan kontakta Adobe support för att få en lösning på problemet.
+  Kontakta Adobe om du behöver hjälp med att lösa problemet.
+
 
 * Förifyllningstjänsten misslyckas med ett null-pekarundantag i Interactive Communications. (CQDOC-21355)
 
