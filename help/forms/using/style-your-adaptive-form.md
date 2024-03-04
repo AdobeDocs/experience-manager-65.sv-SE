@@ -4,9 +4,9 @@ description: Lär dig att skapa ett anpassat tema, formatera enskilda komponente
 topic-tags: introduction
 feature: Adaptive Forms
 exl-id: 7742c3ca-1755-44c5-b70f-61309f09d1b8
-source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
+source-git-commit: a361c194c238f0f2c999abfd77ca85e7697cb7bf
 workflow-type: tm+mt
-source-wordcount: '1872'
+source-wordcount: '1948'
 ht-degree: 0%
 
 ---
@@ -442,16 +442,77 @@ Vissa format gäller bara för en viss komponent. Sådana komponenter är format
 Du kan använda olika teckensnitt för att utforma ett anpassat formulär. Alla enheter som det adaptiva formuläret visas på kanske inte har de teckensnitt som används för att utforma det adaptiva formuläret. Du kan använda en webbteckensnittstjänst för att leverera nödvändiga teckensnitt till målenheten.
 
 [!DNL Adobe Fonts] är en tjänst i Web Fonts. Du kan konfigurera och använda tjänsten med adaptiva formulär. Används [!DNL Adobe Fonts] i adaptiv form:
+1. Sök i [bibliotek med Adobe-teckensnitt](https://fonts.adobe.com/) och välj teckensnitt för att formatera formuläret.
+<!--
+>[!NOTE]
+>
+>![typekit-to-adobe-fonts](assets/typekit-to-adobe-fonts.png) [!DNL Typekit] is now called Adobe Fonts and is included with Creative Cloud and other subscriptions. [Learn more](https://fonts.adobe.com/).-->
 
 >[!NOTE]
 >
->![typekit-to-adobe-fonts](assets/typekit-to-adobe-fonts.png) [!DNL Typekit] kallas nu Adobe Fonts och ingår i Creative Cloud och andra prenumerationer. [Läs mer](https://fonts.adobe.com/).
+> Du kan lägga till taggar eller filter för att förfina teckensnittslistan.
 
-1. Skapa en [Adobe Fonts](https://fonts.adobe.com/?ref=tk.com) skapar du ett kit, lägger till Myriad Pro-teckensnitt i paketet, publicerar paketet och hämtar Kit-ID:t. Det är nödvändigt att använda [!DNL Adobe Fonts] (Web Fonts) i adaptiv form.
-1. I AEM [!DNL Forms] Server, navigera till ![adobeexperienceManager](assets/adobeexperiencemanager.png) **[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL Tools]** ![hammare](assets/hammer.png) > **[!UICONTROL Adobe Fonts]**. Öppna nu en konfigurationsmapp. Om en konfiguration redan är tillgänglig klickar du på **[!UICONTROL Create]** för att skapa en instans.
+1. Klicka på knappen &lt;/> för att lägga till familjen i ett webbprojekt, om du skulle hitta ett typsnitt du gillar.
 
-   I dialogrutan Skapa konfiguration anger du en **Titel** för konfigurationen och klicka på **[!UICONTROL Create]**. Du omdirigeras till konfigurationssidan. I [!UICONTROL Edit Component] som visas **Paket-ID** och klicka **[!UICONTROL OK]**.
+   ![select-font-from-font-libary](assets/select-font-from-font-library.png)
 
-1. Konfigurera temat för att använda [!DNL Adobe Fonts] konfiguration. Öppna på författarinstansen **[!UICONTROL Global Theme]** i temaredigeraren. Gå till temaredigeraren **[!UICONTROL Theme Options]** ![temaalternativ](assets/theme-options.png) > **[!UICONTROL Configure]**. I **[!UICONTROL Adobe Fonts Configuration]** markerar du paketet och klickar på **[!UICONTROL Save]**.
+   Dialogrutan Lägg till teckensnitt i ett webbprojekt visas.
 
-   Teckensnitten som lagts till i **[!UICONTROL Adobe Fonts]** är tillgängliga för markering i **[!UICONTROL Text]** dragspelspanelen för alla komponenter.
+   >[!NOTE]
+   >
+   > Du kan bara lägga till teckensnitt i ditt webbprojekt om knappen &lt;/> är tillgänglig.
+
+2. Ge webbprojektet ett namn.
+3. Markera kryssrutorna för de teckensnittsvikter och format som du vill använda.
+
+   ![lägga till ett teckensnittsbibliotek](assets/add-a-font-window.png)
+
+4. Välj **Klicka** för att skapa projektet.
+5. Kopiera inbäddningskoden och URL-adressen från skärmen.
+   ![bädda in kod och URL](assets/font-add-url.png)
+
+6. Klicka **Klar** för att stänga webbprojektfönstret.
+7. Logga in i AEM och gå till URL `http://server:port/crx/de/index.jsp#`
+8. Skapa en mappstruktur i CRXDE, till exempel `/apps/[fontslibrary]/[customlibrary(clientlibrary)]`.
+9. Gå till den nyskapade `clientlibs` mapp och lägg till `allowProxy` och `categories` egenskaper.
+10. Navigera till `/apps/[fontslibrary]/[customlibrary(clientlibrary)]` och skapa en css-mapp.
+11. Gå till den skapade CSS-mappen och skapa en fil. Skapa till exempel en fil som `fonts.css` och klistra in inbäddningskoden tillsammans med URL:en.
+   ![Mappstruktur](/help/forms/using/assets/fonts-add-in-crxde.png)
+12. Spara ändringarna.
+
+>[!NOTE]
+>
+> Om du vill använda de tillagda anpassade teckensnitten i ett adaptivt formulär måste du se till att klientbibliotekets namn finns i **[!UICONTROL Client Library Category]** justerar med det namn som anges i kategorialternativet i mappen clientlib.
+
+De medföljande teckensnitten är nu tillgängliga för det adaptiva formuläret via följande anpassade teckensnittsklientbibliotek.
+
+
+<!--
+Create Adobe Fonts Configuration
+
+1. To create a API Token, go to **login** > **API Token** > **Make me a new API token**.
+
+   ![API token](/help/forms/using/assets/fonts-api-token.png)
+
+2. Once, you click **Make me a new API token**, a new token is generated. 
+3. Copy the generated token for future use.
+4. Now login to your AEM  author instance. On the author instance, go to **[!UICONTROL Tools]**>**[!UICONTROL Cloud Services]**> **[!UICONTROL Adobe Fonts]**.
+5. Select the configuration container and click **Create**. **[UICONTROL Create Adobe Fonts Configuration]** screen appears.
+    ![API token](/help/forms/using/adobe-font-configuration-screen.png)
+
+6. Spceify the name and paste the API token in the **[!UICONTROL Kit ID]** textbox.
+7. Click **Create**.
+
+
+
+The fonts added to the **[!UICONTROL Adobe Fonts]** are available for selection in the **[!UICONTROL Text]** accordion of all the components.
+1. In the theme editor, navigate to **[!UICONTROL Theme Options]** ![theme-options](assets/theme-options.png) > **[!UICONTROL Configure]**. 
+2. In the **[!UICONTROL Adobe Fonts Configuration]** field, select the kit, and click **[!UICONTROL Save]**.
+
+
+1. Create an [Adobe Fonts](https://fonts.adobe.com/?ref=tk.com) account, create a kit, add font Myriad Pro to the kit, publish the kit, and obtain the Kit ID. It is required to use [!DNL Adobe Fonts] (Web Fonts) in an adaptive form. 
+1. In the AEM [!DNL Forms] Server, navigate to ![adobeexperiencemanager](assets/adobeexperiencemanager.png) **[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL Tools]** ![hammer](assets/hammer.png) > **[!UICONTROL Adobe Fonts]**. Now, open a configuration folder. If a configuration is already available, click the **[!UICONTROL Create]** button to create an instance.
+
+   On the Create Configuration dialog, specify a **Title** for the configuration, and click **[!UICONTROL Create]**. You are redirected to the configuration page. In the [!UICONTROL Edit Component] dialog that appears, provide your **Kit ID** and click **[!UICONTROL OK]**. -->
+
+
