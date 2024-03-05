@@ -2,9 +2,9 @@
 title: Versionsinformation för [!DNL Adobe Experience Manager] 6.5
 description: Hitta versionsinformation, nyheter, installationsanvisningar och en detaljerad ändringslista för [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 4
-source-git-commit: 015c36cad1e7da98888609622cf2150842d40c66
+source-git-commit: 7b920927fe400c05f6c7a744d4cb7366db0cae86
 workflow-type: tm+mt
-source-wordcount: '3461'
+source-wordcount: '3462'
 ht-degree: 0%
 
 ---
@@ -470,11 +470,11 @@ Du måste lägga till följande egenskaper i indexdefinitionsnoden för att få 
 
    1. Ladda ned programfixen för ditt operativsystem:
 
-   * [Programfix för Microsoft Windows](/help/release-notes/assets/Hotfix-windows.zip)
-   * [Programfix för Linux](/help/release-notes/assets/Hotfix-Linux.zip)
-   * [Programfix för Apple macOS](/help/release-notes/assets/Hotfix-osx.zip)
+      * [Programfix för Microsoft Windows](/help/release-notes/assets/Hotfix-windows.zip)
+      * [Programfix för Linux](/help/release-notes/assets/Hotfix-Linux.zip)
+      * [Programfix för Apple macOS](/help/release-notes/assets/Hotfix-osx.zip)
 
-   1. Överför och installera paketet (.zip) via Package Manager.
+   1. Överför och installera paketet (.zip) via [Pakethanteraren](https://experienceleague.adobe.com/docs/experience-manager-65/content/sites/administering/contentmanagement/package-manager.html?lang=en#accessing).
 
 * Förifyllningstjänsten misslyckas med ett null-pekarundantag i Interactive Communications. (CQDOC-21355)
 
