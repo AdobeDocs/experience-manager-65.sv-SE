@@ -2,7 +2,7 @@
 title: Programfixar för AEM Forms
 description: Innehåller information om hur du hämtar och installerar en snabbkorrigering för AEM Forms.
 exl-id: 37287332-3c8d-4ddc-a77e-3c5ee332898b
-source-git-commit: 5ab1fd033af0d6d5595fe41de003455ab9ba28a6
+source-git-commit: 0aa929021aa724e4ec18d49fea26f8c0b0538bdc
 workflow-type: tm+mt
 source-wordcount: '322'
 ht-degree: 0%
@@ -50,7 +50,7 @@ I den här artikeln listas de viktiga korrigeringar som har implementerats för 
      </td>
     <td>
     <ul>
-    <li> Komponenten OTB Scribble Signature kan inte återge för en förhandsgranskning i ett anpassat format. (FORMS-12073).</li>
+    <li> Komponenten Skriptsignatur som är klar att användas kan inte återges för en förhandsgranskning i ett anpassat formulär. (FORMS-12073).</li>
     </ul>
     </td>    
    </tr>

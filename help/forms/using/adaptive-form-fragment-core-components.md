@@ -4,9 +4,9 @@ description: Adaptiv Forms har en funktion för att skapa ett formulärsegment, 
 topic-tags: author
 keywords: Lägg till adaptiva formulärfragment, adaptiva formulärfragment, Skapa ett formulärfragment, Lägga till ett fragment i ett adaptivt formulär, Hantera fragment
 feature: Adaptive Forms, Core Components
-source-git-commit: 304b1bf2e19942fb728944330512a83a9006cb2a
+source-git-commit: 518207a0d8a95ef17b0972855a58f124fb215c85
 workflow-type: tm+mt
-source-wordcount: '1837'
+source-wordcount: '1833'
 ht-degree: 0%
 
 ---
@@ -61,7 +61,7 @@ Du kan skapa ett adaptivt formulärfragment från grunden eller spara en panel i
 
 
 
-1. Klicka på Skapa **och sedan på****Öppna** för att öppna fragmentet, med en standardmall, i redigeringsläge. I redigeringsläget kan du lägga till alla adaptiva formulärkomponenter i fragmentet.
+1. Klicka på **Skapa** och sedan på **Öppna** för att öppna fragmentet, med en standardmall, i redigeringsläge. I redigeringsläget kan du lägga till alla adaptiva formulärkomponenter i fragmentet.
 
 <!-- For information about Adaptive Form components, see [Introduction to authoring Adaptive Forms](../../forms/using/introduction-forms-authoring.md). --> Om du dessutom har valt ett XML-schema eller en XDP-formulärmall som formulärmodell för fragmentet visas en ny flik som visar formulärmodellhierarkin i innehållssökaren. Du kan dra och släppa formulärmodellelement till fragmentet. De tillagda elementen för formulärmodell konverteras till formulärkomponenter samtidigt som de ursprungliga egenskaperna från den associerade XDP- eller XSD-filen behålls.
 
@@ -180,7 +180,7 @@ Du kan utföra flera åtgärder på adaptiva formulärfragment med hjälp av AEM
 ## Viktiga punkter att komma ihåg när du arbetar med fragment {#key-points-to-remember-when-working-with-fragments}
 
 * Kontrollera att fragmentnamnet är unikt. Fragmentet kan inte skapas om det finns ett befintligt fragment med samma namn.
-* Om du sparar en panel som ett fragment som innehåller ett annat XDP-fragment i ett XDP-baserat adaptivt formulär, binds det resulterande fragmentet automatiskt till det underordnade XDP-fragmentet. Om det finns ett XSD-baserat anpassat formulär binds det resulterande fragmentet till schemaroten.
+* Om du sparar en panel som ett fragment som innehåller ett annat XDP-fragment i ett XDP-baserat adaptivt formulär, binds det resulterande fragmentet automatiskt till det underordnade XDP-fragmentet. Om ett XSD-baserat anpassat formulär är det resulterande fragmentet bundet till schemaroten.
 * När du skapar ett adaptivt formulärfragment skapas en fragmentnod, som liknar noden guideContainer för ett adaptivt formulär i CRXDE Lite.
 * Ett fragment i ett adaptivt formulär som använder en annan formulärdatamodell stöds inte. Ett XDP-baserat fragment stöds till exempel inte i en XSD-baserad adaptiv form och omvänt.
 * Anpassade formulärfragment kan användas via fliken Adaptiva formulärfragment i AEM innehållssökaren.

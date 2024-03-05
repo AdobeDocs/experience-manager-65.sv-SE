@@ -1,7 +1,7 @@
 ---
 title: Det går inte att skriva ut ett stort antal PDF med WorkBench på PDF
 description: När en kund genererar ett stort antal PDF via tjänster som implementerats via WorkBench misslyckas utskriftstjänsten.
-source-git-commit: 9cdf22918f08fe505c3efd0ce43235e3442165d5
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
 source-wordcount: '775'
 ht-degree: 0%
@@ -42,7 +42,7 @@ Den största faktorn som påverkar minnesanvändningen är mängden data i ett f
 Ytterligare faktorer som du bör tänka på när du utformar formulärmallen för att förbättra minnesanvändningen:
 
 1. Använd inte statisk text för att etikettera ett fält. Använd i stället bildtexter i textfältet.
-2. Överanvänd inte rektanglar, linjer, objekt och tabeller.
+2. Använd inte för många rektanglar, linjer, objekt och tabeller.
 3. Undvik om möjligt att använda delformulär för RichText och Choice.
 4. Undvik överdriven användning av delformulär och kapslade delformulär.
 
@@ -50,7 +50,7 @@ Ytterligare faktorer som du bör tänka på när du utformar formulärmallen fö
 
 Eftersom vi är begränsade av det maximala processminnet och det minne som används av processen beror inte bara på datafilens storlek. Den är mycket nära kopplad till formulärdesignen och i viss utsträckning till den faktiska mängden data som sammanfogas i formuläret.
 
-Om formuläret har många små noder med små data kommer processen att uppta mer minne (och därmed gå snabbare ut ur minnet) än ett formulär som har mindre antal noder (även) med stora data.
+Om formuläret har många små noder med små data tar processen mer minne i anspråk (och därför går det snabbare att få slut på minne) än ett formulär som har färre antal noder (även) med stora data.
 
 Läs [Bilaga nedan](#appendix) om du vill ha mer information, där testresultaten baseras på utskriftsformuläret (PDF utan taggar). Om du använder taggad PDF-process ökar behovet av processminne. Det beror också på antalet fält i formuläret. Processminneskravet är ungefär 1,5 gånger större än PDF utan taggar.
 

@@ -5,7 +5,7 @@ content-type: reference
 docset: aem65
 feature: Release Information
 role: User, Admin
-source-git-commit: 4fab3f80e01c2b7c3e4ebdc4bffdedb6f5f39d11
+source-git-commit: 0aa929021aa724e4ec18d49fea26f8c0b0538bdc
 workflow-type: tm+mt
 source-wordcount: '2334'
 ht-degree: 0%
@@ -37,7 +37,7 @@ Se även [Versionsinformation om Adobe Experience Manager 6.5 Senaste Service Pa
 
 * **[64-bitarsversionen av AEM Forms Designer](/help/forms/using/installing-configuring-designer.md)**: 64-bitarsversionen av AEM Forms Designer ger bättre prestanda, skalbarhet och minneshantering så att du kan skapa formulär. Med 64-bitarsarkitekturen kan du enkelt hantera ännu större och mer komplexa projekt, vilket ger smidiga designarbetsflöden och optimerad effektivitet. Utöka dina formulärdesignmöjligheter och ta till vara framtiden för AEM Forms Designer med den här banbrytande releasen.
 
-* **[Ansluta en adaptiv Forms med Microsoft® SharePoint List](/help/forms/using/configuring-submit-actions.md#submit-to-microsoft&reg;-sharepoint-list)**: AEM Forms erbjuder en OOTB-integrering för att skicka formulärdata direkt till SharePoint List, så att du kan använda funktionerna i SharePoint Lists. Du kan konfigurera Microsoft® SharePoint List som en datakälla för en formulärdatamodell och använda Skicka med formulärdatamodellen för att ansluta ett anpassat formulär med SharePoint List.
+* **[Ansluta en adaptiv Forms med Microsoft® SharePoint List](/help/forms/using/configuring-submit-actions.md#submit-to-microsoft&reg;-sharepoint-list)**: AEM Forms är en körklar integrering för att skicka formulärdata direkt till SharePoint List, där du kan använda funktionerna i SharePoint Lists. Du kan konfigurera Microsoft® SharePoint List som en datakälla för en formulärdatamodell och använda Skicka med formulärdatamodellen för att ansluta ett anpassat formulär med SharePoint List.
 
 * **[Stöd för att konfigurera Document of Record-egenskaper för adaptiva formulärfragment](/help/forms/using/generate-document-of-record-for-non-xfa-based-adaptive-forms.md)**: Nu kan du enkelt anpassa dina adaptiva formulärfragment och fälten i den adaptiva formulärredigeraren.
 
