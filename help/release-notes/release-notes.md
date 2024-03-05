@@ -2,9 +2,9 @@
 title: Versionsinformation för [!DNL Adobe Experience Manager] 6.5
 description: Hitta versionsinformation, nyheter, installationsanvisningar och en detaljerad ändringslista för [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 4
-source-git-commit: 5f95281130f0f2cac6d115b59b828946c2f70d33
+source-git-commit: 015c36cad1e7da98888609622cf2150842d40c66
 workflow-type: tm+mt
-source-wordcount: '3438'
+source-wordcount: '3461'
 ht-degree: 0%
 
 ---
@@ -51,7 +51,7 @@ Några av de viktigaste funktionerna och förbättringarna i den här versionen 
    * ECDSA-elliptisk kurva P384 med SHA384-sammandragsalgoritm
    * ECDSA elliptisk kurva P512 med SHA512-algoritm
 * **Smidig kompatibilitet med Windows 11 för Forms Designer**: AEM Forms Designer har nu stöd för Windows 11, vilket ger smidig installation och drift. Användare kan tryggt uppgradera till Windows 11 utan att behöva installera om Forms Designer eller oroa sig för kompatibilitetsproblem, vilket ger ett avbrottsfritt arbetsflöde.
-* **Förbättrad tillgänglighet med en anpassad&quot;bildtextsroll&quot; i AEM Forms Designer**: AEM Forms Designer har nu en anpassad tillgänglighetsroll som kallas&quot;Bildtext&quot; för att skapa XDP-filer med anpassade bildtextelement. Den här funktionen förbättrar tillgängligheten genom att användarna kan integrera anpassade bildtexter i sina dokumentdesigner för att förbättra integriteten och användarupplevelsen.
+* **Förbättrad tillgänglighet med en anpassad&quot;bildtextsroll&quot; i AEM Forms Designer**: AEM Forms Designer har nu en anpassad tillgänglighetsroll som kallas &quot;Bildtext&quot; som gör det möjligt för användare att skapa XDP-filer med anpassade bildtextelement. Den här funktionen förbättrar tillgängligheten genom att användarna kan integrera anpassade bildtexter i sina dokumentdesigner så att de kan förbättra integriteten och användarupplevelsen.
 
 <!-- ### [!DNL Forms]
 
@@ -466,8 +466,15 @@ Du måste lägga till följande egenskaper i indexdefinitionsnoden för att få 
 
   `Unable to compile class for JSP: An error occurred at line: 162 in the jsp file: /libs/granite/ui/components/coral/foundation/anchorbutton/anchorbutton.jsp The method transformLinkInUriIfExternal(String) is undefined for the type ComponentHelper`
 
-  Kontakta Adobe om du behöver hjälp med att lösa problemet.
+  Så här löser du problemet:
 
+   1. Ladda ned programfixen för ditt operativsystem:
+
+   * [Programfix för Microsoft Windows](/help/release-notes/assets/Hotfix-windows.zip)
+   * [Programfix för Linux](/help/release-notes/assets/Hotfix-Linux.zip)
+   * [Programfix för Apple macOS](/help/release-notes/assets/Hotfix-osx.zip)
+
+   1. Överför och installera paketet (.zip) via Package Manager.
 
 * Förifyllningstjänsten misslyckas med ett null-pekarundantag i Interactive Communications. (CQDOC-21355)
 
