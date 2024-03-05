@@ -2,9 +2,9 @@
 title: Versionsinformation för [!DNL Adobe Experience Manager] 6.5
 description: Hitta versionsinformation, nyheter, installationsanvisningar och en detaljerad ändringslista för [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 4
-source-git-commit: 53bfd33a8bbb10d0ed82968a115ed316f63efecb
+source-git-commit: 5f95281130f0f2cac6d115b59b828946c2f70d33
 workflow-type: tm+mt
-source-wordcount: '3442'
+source-wordcount: '3438'
 ht-degree: 0%
 
 ---
@@ -51,7 +51,7 @@ Några av de viktigaste funktionerna och förbättringarna i den här versionen 
    * ECDSA-elliptisk kurva P384 med SHA384-sammandragsalgoritm
    * ECDSA elliptisk kurva P512 med SHA512-algoritm
 * **Smidig kompatibilitet med Windows 11 för Forms Designer**: AEM Forms Designer har nu stöd för Windows 11, vilket ger smidig installation och drift. Användare kan tryggt uppgradera till Windows 11 utan att behöva installera om Forms Designer eller oroa sig för kompatibilitetsproblem, vilket ger ett avbrottsfritt arbetsflöde.
-* **Förbättrad tillgänglighet med en anpassad&quot;bildtextsroll&quot; i AEM Forms Designer**: AEM Forms Designer har nu en anpassad tillgänglighetsroll som kallas &quot;Bildtext&quot; som gör det möjligt för användare att skapa XDP-filer med anpassade bildtextelement. Den här funktionen förbättrar tillgängligheten genom att användarna kan integrera anpassade bildtexter i sina dokumentdesigner så att de kan förbättra integriteten och användarupplevelsen.
+* **Förbättrad tillgänglighet med en anpassad&quot;bildtextsroll&quot; i AEM Forms Designer**: AEM Forms Designer har nu en anpassad tillgänglighetsroll som kallas&quot;Bildtext&quot; för att skapa XDP-filer med anpassade bildtextelement. Den här funktionen förbättrar tillgängligheten genom att användarna kan integrera anpassade bildtexter i sina dokumentdesigner för att förbättra integriteten och användarupplevelsen.
 
 <!-- ### [!DNL Forms]
 
