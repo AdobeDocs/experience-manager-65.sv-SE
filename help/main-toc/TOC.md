@@ -6,9 +6,9 @@ solution-title: Experience Cloud
 user-guide-description: Läs Adobe Experience Manager 6.5-dokumentationen och se hur det fungerar och vad programmet kan göra för dig.
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM 6.5
-source-git-commit: d195ac80ee59439bab5b1219a2c1f16e93e3d22b
+source-git-commit: e39c52bc658e3a286272d1c94106b17a2f5579ad
 workflow-type: tm+mt
-source-wordcount: '7348'
+source-wordcount: '7355'
 ht-degree: 1%
 
 ---
@@ -73,6 +73,7 @@ ht-degree: 1%
    + [Innehållsdispositionsfilter](/help/sites-administering/content-disposition-filter.md)
    + [Mappning av anpassade användargrupper i AEM 6.5](/help/sites-administering/cug-mapping.md)
    + [Stöd för samma webbplats-cookie](/help/sites-administering/same-site-cookie-support.md)
+   + [Borttagning av JWT-autentiseringsuppgifter i Adobe Developer Console](/help/sites-administering/jwt-credentials-deprecation-in-adobe-developer-console.md)
 + Sites {#sites}
    + Redigering {#authoring}
       + Viktiga uppgifter, verktyg och begrepp för AEM {#essentials}
