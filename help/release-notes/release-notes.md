@@ -2,9 +2,9 @@
 title: Versionsinformation för [!DNL Adobe Experience Manager] 6.5
 description: Hitta versionsinformation, nyheter, installationsanvisningar och en detaljerad ändringslista för [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 4
-source-git-commit: 70f52515fc877ad5f20e14c2a26a934d3dcdfe01
+source-git-commit: f00d2c88ba6727f8f8597fefeb467b612b23dea3
 workflow-type: tm+mt
-source-wordcount: '3462'
+source-wordcount: '3500'
 ht-degree: 0%
 
 ---
@@ -474,6 +474,8 @@ Du måste lägga till följande egenskaper i indexdefinitionsnoden för att få 
       * [Programfix för Apple macOS](/help/release-notes/assets/Hotfix-osx.zip)
 
    1. Överför och installera paketet (.zip) via [Pakethanteraren](https://experienceleague.adobe.com/docs/experience-manager-65/content/sites/administering/contentmanagement/package-manager.html?lang=en#accessing).
+
+   1. Starta om AEM Server och kontrollera aktiveringsstatus för alla paket när omstarten är klar. Du kan övervaka paketens status genom att gå till: `https://server:host/system/console/bundles`. Se till att alla paket är aktiva innan du fortsätter med ytterligare åtgärder.
 
 * Förifyllningstjänsten misslyckas med ett null-pekarundantag i Interactive Communications. (CQDOC-21355)
 
