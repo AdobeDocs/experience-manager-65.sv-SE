@@ -6,10 +6,10 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
 content-type: reference
 exl-id: ab41e540-1d43-4fc2-99d4-621ff2290e77
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: dac156251ae48e9d83e84ba6a4685689def9e396
 workflow-type: tm+mt
-source-wordcount: '314'
-ht-degree: 3%
+source-wordcount: '386'
+ht-degree: 2%
 
 ---
 
@@ -33,10 +33,8 @@ Det finns flera Adobe Campaign Classic-versioner (ACC). Stödet för integrering
 | ACC-version | Integrering med AEM 6.5 <br>On Premises | Integrering med AEM 6.5<br>AMS |
 |---|---|---|
 | [v7](https://experienceleague.adobe.com/docs/campaign-classic.html) | Stöds | Stöds |
-| [v8](https://experienceleague.adobe.com/docs/campaign-v8.html) | Stöds | Stöds |
-| Webbgränssnitt* | Stöds | Stöds |
-
-*Webbgränssnittet för Adobe Campaign Classic förväntas vara klart i slutet av 2023.
+| [v8-klientkonsol](https://experienceleague.adobe.com/docs/campaign-v8.html) | Stöds | Stöds |
+| [v8-webbanvändargränssnitt](https://experienceleague.adobe.com/docs/campaign-web/v8/campaign-web-home.html) | Stöds | Stöds |
 
 I följande dokumentation beskrivs hur du integrerar AEM med Adobe Campaign Classic.
 
@@ -46,6 +44,13 @@ I följande ytterligare dokumentation beskrivs hur du använder integreringen.
 
 * [E-postkärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/email/introduction.html) - Lär dig mer om de e-postkomponenter som du kan använda för att skapa Campaign-innehåll i AEM.
 * [Felsökning av Adobe Campaign Classic-integrering](/help/sites-administering/troubleshooting-campaignintegration.md) - Lär dig hur du åtgärdar de vanligaste problemen med AEM-ACC-integrering.
+
+
+I följande dokumentation beskrivs hur du integrerar AEM as a Cloud Service med Adobe Campaign v8-webbanvändargränssnittet.
+
+* [Hantera mallar med Adobe Experience Manager som en molntjänst i Adobe Campaign v8 Web User Interface](https://experienceleague.adobe.com/docs/campaign-web/v8/integrations/aem-content.html) - Lär dig steg för steg hur du konfigurerar och använder integreringen med AEM.
+* [Hantera resurser med Adobe Experience Manager som en molntjänst i Adobe Campaign v8-webbanvändargränssnitt](https://experienceleague.adobe.com/docs/campaign-web/v8/integrations/aem-assets.html) - Lär dig steg för steg hur du konfigurerar och använder integreringen med AEM Assets.
+
 
 ## Integrera med Adobe Campaign Standard {#acs}
 
