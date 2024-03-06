@@ -1,9 +1,9 @@
 ---
 title: Borttagning av JWT-autentiseringsuppgifter i Adobe Developer Console
 description: Läs om hur borttagning av JWT-autentiseringsuppgifter påverkar AEM i Adobe Developer Console
-source-git-commit: 18bee77ab6fcb2d635d389f929c1dd8e2bc25de5
+source-git-commit: 72974d27fecbd9c242f66e203b02463c22b93108
 workflow-type: tm+mt
-source-wordcount: '498'
+source-wordcount: '456'
 ht-degree: 0%
 
 ---
@@ -21,11 +21,6 @@ I den här artikeln finns ytterligare information om hur AEM 6.5-kunder ska hant
 Den största takten i nuläget är att AEM funktioner ännu inte stöder de nya autentiseringsuppgifterna för OAuth Server-till-Server. Support kommer snart - i mitten av april 2024 genom ett särskilt kompatibilitetspaket som installeras för AEM 6.5, om du kör den senaste Service Pack 20 eller tidigare (Service Pack 21 eller senare kommer att inkludera den automatiskt). Du kan ha fått ett e-postmeddelande med instruktioner om hur du migrerar JWT-inloggningsuppgifterna, men du kan vara säker på att du kan och bör hålla kvar när du migrerar autentiseringsuppgifterna tills AEM har stöd för den nya autentiseringstypen OAuth Server-till-Server.
 
 I avsnitten nedan listas de scenarier där kunderna måste (eller i vissa fall inte måste) ersätta sina JWT-referenser (Service Account) med OAuth Server-to-Server-autentiseringsuppgifter, när AEM har stöd för dem i mitten av april. [Läs om](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/#migration-overview) för att ersätta inloggningsuppgifterna i framtiden.
-
->[!NOTE]
->
->The [**AEM** Developer Console](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/development-guidelines.html#crxde-lite-and-developer-console) (notera **AEM** i namnet, vilket skiljer det från **Adobe** Developer Console) innehåller ett verktyg för att generera [JWT-token](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/generating-access-tokens-for-server-side-apis.html) används för server-till-server-API:er. Autentiseringsuppgifterna är inte föråldrade och kan fortsätta att användas.
-
 
 ## Integrera AEM med andra Adobe-lösningar {#integrating-aem-with-other-adobe-solutions}
 
