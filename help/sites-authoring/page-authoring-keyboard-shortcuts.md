@@ -6,7 +6,7 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: page-authoring
 content-type: reference
 exl-id: f4ca5c11-e3ff-4da5-bc4a-fd7e0aefffb5
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
 source-wordcount: '220'
 ht-degree: 0%
@@ -45,7 +45,7 @@ Du kan även använda olika kortkommandon för skrivbordsanvändare när du anv�
 
 >[!NOTE]
 >
->Kortkommandon för redigeraren är alltid aktiva oavsett om [konsolgenvägar har inaktiverats](/help/sites-authoring/keyboard-shortcuts.md#deactivating-keyboard-shortcuts).
+Kortkommandon för redigeraren är alltid aktiva oavsett om [konsolgenvägar har inaktiverats](/help/sites-authoring/keyboard-shortcuts.md#deactivating-keyboard-shortcuts).
 
 ## Operativspecifika modifieringstangenter {#os-specific-modifier-keys}
 

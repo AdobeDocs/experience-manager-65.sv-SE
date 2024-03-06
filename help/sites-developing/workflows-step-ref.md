@@ -7,9 +7,9 @@ topic-tags: extending-aem
 content-type: reference
 docset: aem65
 exl-id: 8de78bde-2fcb-4221-873e-59e347ff2d74
-source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
+source-git-commit: 518207a0d8a95ef17b0972855a58f124fb215c85
 workflow-type: tm+mt
-source-wordcount: '3229'
+source-wordcount: '3227'
 ht-degree: 0%
 
 ---
@@ -65,7 +65,7 @@ Följande egenskaper är tillgängliga för många arbetsflödesstegkomponenter 
 
 * **Meddela användare via e-post**
 
-   * Du kan meddela deltagarna genom att skicka ett e-postmeddelande när arbetsflödet når steget.
+   * Meddela deltagarna genom att skicka ett e-postmeddelande när arbetsflödet når steget.
    * Om det här alternativet är aktiverat skickas ett e-postmeddelande till användaren som definieras av egenskapen **Användare/grupp** eller till varje medlem i gruppen om en grupp har definierats.
 
 * **Användare/grupp**

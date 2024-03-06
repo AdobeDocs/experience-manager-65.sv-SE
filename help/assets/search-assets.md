@@ -7,10 +7,10 @@ feature: Search, Metadata
 role: User
 exl-id: 588433b2-564a-430f-9d04-480465ece2ad
 hide: true
-source-git-commit: 451fb472e170a79f9854efadf9be1d4fe0628b94
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
-source-wordcount: '5679'
-ht-degree: 4%
+source-wordcount: '5593'
+ht-degree: 3%
 
 ---
 
@@ -143,7 +143,7 @@ Du kan använda detta till din fördel genom att öka rankningen för vissa resu
 
 ### Söka efter liknande bilder {#visualsearch}
 
-Om du vill söka efter bilder som visuellt liknar en användarvald bild klickar du på alternativet **[!UICONTROL Find Similar]** i kortvyn för en bild eller i verktygsfältet. [!DNL Experience Manager] visar smarta taggade bilder från DAM-databasen som liknar den användarvalda bilden. Läs [Så här konfigurerar du likhetssökning](#configvisualsearch).
+Om du vill söka efter bilder som visuellt liknar en användarvald bild klickar du på alternativet **[!UICONTROL Find Similar]** i kortvyn för en bild eller i verktygsfältet. [!DNL Experience Manager] I visas smarta taggade bilder från DAM-databasen som liknar den bild som användaren har valt. Läs [Så här konfigurerar du likhetssökning](#configvisualsearch).
 
 ![Söka efter liknande bilder med hjälp av alternativet i kortvyn](assets/search_find_similar.png)
 
@@ -155,7 +155,7 @@ Från [!DNL Experience Manager] användargränssnitt, användare kan söka [Adob
 
 ### Dynamic Media-resurser {#dmassets}
 
-Du kan filtrera efter dynamiska mediebilder genom att välja **[!UICONTROL Dynamic Media]** > **[!UICONTROL Sets]** på panelen **[!UICONTROL Filters]**. Den filtrerar och visar resurser som bilduppsättningar, karuseller, blandade medieuppsättningar och rotationsuppsättningar.
+Du kan filtrera efter dynamiska mediebilder genom att välja **[!UICONTROL Dynamic Media]** > **[!UICONTROL Sets]** på panelen **[!UICONTROL Filters]**. Den filtrerar och visar resurser som bilduppsättningar, karuseller, blandade medieuppsättningar och snurruppsättningar.
 
 ### GQL-sökning med specifika värden i metadatafält {#gql-search}
 
@@ -305,7 +305,7 @@ Använd citattecken runt nyckelord för att hitta resurser som innehåller den e
 
 *Bild: Sökbeteende med och utan citattecken.*
 
-**Sök med asterisk som jokertecken**: Om du vill bredda sökningen använder du en asterisk före eller efter sökordet för att matcha ett valfritt antal tecken. Om du till exempel söker efter en körning utan asterisk returneras inga resurser som innehåller någon variant av ordet (inklusive i metadata). En asterisk ersätter ett valfritt antal tecken. Till exempel,
+**Sök med asterisk som jokertecken**: Om du vill bredda sökningen använder du en asterisk före eller efter sökordet för att matcha ett valfritt antal tecken. Om du till exempel söker efter en körning utan asterisk returneras inga resurser som innehåller någon variant av ordet (inklusive i metadata). En asterisk ersätter ett valfritt antal tecken. Exempel:
 
 * `run` returnerar resurser med nyckelordet exakt run
 * `run*` returnerar resurser med `running`, `run`, `runaway`och så vidare.
@@ -426,7 +426,7 @@ Du kan göra följande med de resurser du har sökt i [!DNL Experience Manager]:
 
 ### Sortera sökresultat {#sort}
 
-Sortera sökresultaten för att hitta de resurser som behövs snabbare. Du kan sortera sökresultaten i listvyn och endast när du väljer **[[!UICONTROL Files]](#searchui)** från **[!UICONTROL Filters]** -panelen. [!DNL Assets]I används serversortering för att snabbt sortera alla resurser (oavsett hur många) i en mapp eller i resultatet av en sökfråga. Sortering på serversidan ger snabbare och exaktare resultat än sortering på klientsidan.
+Sortera sökresultaten för att hitta de resurser som behövs snabbare. Du kan sortera sökresultaten i listvyn och endast när du väljer **[[!UICONTROL Files]](#searchui)** från **[!UICONTROL Filters]** -panelen. [!DNL Assets] använder sortering på serversidan för att snabbt sortera alla resurser (oavsett hur många) i en mapp eller resultaten av en sökfråga. Sortering på serversidan ger snabbare och exaktare resultat än sortering på klientsidan.
 
 I listvyn kan du sortera sökresultaten på samma sätt som du kan sortera resurser i valfri mapp. Sortering fungerar för de här kolumnerna - Namn, Titel, Status, Dimensioner, Storlek, Klassificering, Användning, Skapad, Ändrad, Publicerad, Arbetsflöde och Utcheckad.
 

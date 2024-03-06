@@ -7,9 +7,9 @@ content-type: reference
 topic-tags: deploying
 docset: aem65
 exl-id: baec7fc8-d48c-4bc6-b12b-4bf4eff695ea
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+source-git-commit: 518207a0d8a95ef17b0972855a58f124fb215c85
 workflow-type: tm+mt
-source-wordcount: '1759'
+source-wordcount: '1758'
 ht-degree: 0%
 
 ---
@@ -94,7 +94,7 @@ Fördelarna:
 
 ### Oak Cluster med MongoMK Failover för hög tillgänglighet i ett och samma datacenter {#oak-cluster-with-mongomk-failover-for-high-availability-in-a-single-datacenter}
 
-Detta innebär att flera Oak-instanser får åtkomst till en MongoDB-replikuppsättning i ett enda datacenter, vilket skapar ett aktivt kluster för AEM. Replikuppsättningar i MongoDB används för hög tillgänglighet och redundans i händelse av maskinvaru- eller nätverksfel.
+Detta innebär att flera Oak-instanser får åtkomst till en MongoDB-replikuppsättning i ett enda datacenter, vilket skapar ett aktivt kluster för AEM. Replikuppsättningar i MongoDB används för hög tillgänglighet och redundans vid maskinvaru- eller nätverksfel.
 
 ![chlimage_1-18](assets/chlimage_1-18.png)
 

@@ -2,7 +2,7 @@
 title: Så här modellerar du ditt innehåll
 description: I den här delen av AEM Headless Developer Journey lär du dig att modellera ditt innehåll för AEM Headless-leverans med hjälp av Content Modeling med Content Fragment Models och Content Fragments.
 exl-id: f75b433f-5a81-4259-a9f5-b58954b87970
-source-git-commit: 80e85ed78a26d784f4aa8e36c7de413cf9c03fa2
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
 source-wordcount: '1795'
 ht-degree: 0%
@@ -45,7 +45,7 @@ Den här artikeln bygger på dessa grundläggande funktioner så att du förstå
 
 *Det är en stor, dålig värld där ute*.
 
-Kanske, men kanske inte. Den är verkligen stor ***komplicerad*** världen där ute. Datamodellering används för att definiera en förenklad representation av ett mycket (mycket) litet underavsnitt, med hjälp av den specifika information som behövs för ett visst ändamål.
+Kanske, men kanske inte. Det är verkligen en överväldigande ***komplicerad*** världen där ute. Datamodellering används för att definiera en förenklad representation av ett mycket (mycket) litet underavsnitt, med hjälp av den specifika information som behövs för ett visst ändamål.
 
 >[!NOTE]
 >

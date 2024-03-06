@@ -7,9 +7,9 @@ content-type: reference
 topic-tags: configuring
 feature: Configuring
 exl-id: 5a305a5b-0c3d-413b-88c1-1f5abf7e1579
-source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
-source-wordcount: '2935'
+source-wordcount: '2939'
 ht-degree: 1%
 
 ---
@@ -348,9 +348,9 @@ Utveckla för AEM **prestanda och skalbarhet**. Här följer några tips som du 
 **GÖR INTE**
 
 * Använd inte JCR-API:er direkt om du kan
-* Ändra inte /libs, utan använd övertäckningar
+* Ändra inte /libs, utan använd i stället övertäckningar
 * Använd inte frågor där det är möjligt
-* Använd inte Sling Bindings för att få tillgång till OSGi-tjänster i Java™-kod, utan använd istället:
+* Använd inte Sling Bindings för att få OSGi-tjänster i Java™-kod, utan använd istället:
 
    * @Referens i en DS-komponent
    * @Injicera i en körningsmodell

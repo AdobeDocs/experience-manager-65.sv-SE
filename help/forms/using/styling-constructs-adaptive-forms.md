@@ -6,9 +6,9 @@ topic-tags: develop
 docset: aem65
 feature: Adaptive Forms, Foundation Components
 exl-id: 691608a6-be82-4d81-b876-427de997e5be
-source-git-commit: d85fc98d9a31bc4014aef4311ba0f838c7ef619a
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
-source-wordcount: '2348'
+source-wordcount: '2352'
 ht-degree: 0%
 
 ---
@@ -701,7 +701,7 @@ Det finns dessutom klasser för att formatera tabbnavigatorer (både vänster oc
   </tr>
   <tr>
    <td><p><code>nested_false</code></p> </td>
-   <td><p>Tabbnavigatorer (vänster och överst) som inte har kapslade/underordnade/underordnade navigatorer</p> </td>
+   <td><p>Tabbnavigatörer (vänster och överst) som inte har kapslade/underordnade/underordnade navigatorer</p> </td>
   </tr>
  </tbody>
 </table>

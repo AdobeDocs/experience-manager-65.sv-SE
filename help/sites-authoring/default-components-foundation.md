@@ -2,9 +2,9 @@
 title: Foundation Components
 description: Läs mer om Foundation Components i Adobe Experience Manager 6.5.
 exl-id: 278701f3-3f0c-45f4-90b7-c0e316a7da8a
-source-git-commit: d2c0dea636280c28e1d5a76d1c5375f21b6eb111
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
-source-wordcount: '6872'
+source-wordcount: '6873'
 ht-degree: 0%
 
 ---

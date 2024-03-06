@@ -6,16 +6,16 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: operations
 content-type: reference
 exl-id: 9c97f99e-d6ef-4817-8b2a-201ab22f2b38
-source-git-commit: 06a6d4e0ba2aeaefcfb238233dd98e8bbd6731da
+source-git-commit: 0aa929021aa724e4ec18d49fea26f8c0b0538bdc
 workflow-type: tm+mt
-source-wordcount: '485'
+source-wordcount: '465'
 ht-degree: 0%
 
 ---
 
 # Konfigurera komponenten Video {#configure-the-video-component}
 
-The [Videokomponent](/help/sites-authoring/default-components-foundation.md#video) Med kan du placera en fördefinierad, färdig videoresurs (OTB) på sidan.
+The [Videokomponent](/help/sites-authoring/default-components-foundation.md#video) Med kan du placera en fördefinierad, färdig videoresurs på sidan.
 
 För att korrekt omkodning ska ske installerar administratören FFmpeg separat. Se [Installera och konfigurera AEM](#install-ffmpeg). Administratörer kan också [Konfigurera videoprofiler](#configure-video-profiles) för användning med HTML5-element.
 
@@ -81,4 +81,4 @@ Till **konfigurera AEM** gör du så här:
 
 >[!NOTE]
 >
->Ändringar i standardarbetsflödesmodellerna som är färdiga att användas (OTB) bevaras inte när du uppgraderar AEM. Adobe rekommenderar att du kopierar de ändrade arbetsflödesmodellerna innan du redigerar dem. Kopiera till exempel OOTB [!UICONTROL DAM Update Asset] modellen innan du redigerar steget för FFmpeg-omkodning i [!UICONTROL DAM Update Asset] modell för att välja videoprofilnamn som fanns före uppgraderingen. Sedan kan du täcka över `/apps` nod som AEM kan hämta anpassade ändringar i OTB-modellen.
+>Ändringar i standardarbetsflödesmodellerna som är färdiga bevaras inte när du uppgraderar AEM. Adobe rekommenderar att du kopierar de ändrade arbetsflödesmodellerna innan du redigerar dem. Du kan till exempel kopiera den färdiga filen [!UICONTROL DAM Update Asset] modellen innan du redigerar steget för FFmpeg-omkodning i [!UICONTROL DAM Update Asset] modell för att välja videoprofilnamn som fanns före uppgraderingen. Sedan kan du täcka över `/apps` nod som AEM kan hämta anpassade ändringar i modellen som är klar att användas.

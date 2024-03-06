@@ -9,9 +9,9 @@ docset: aem65
 feature: Image Sets,Asset Management
 role: User, Admin
 exl-id: 2a536745-fa13-4158-8761-2ac5b6e1893e
-source-git-commit: 04050f31742c926b45235595f6318929d3767bd8
+source-git-commit: 886edbf0e98f5cdee176aaa0a7dffcf18b1a7cc2
 workflow-type: tm+mt
-source-wordcount: '2129'
+source-wordcount: '2207'
 ht-degree: 5%
 
 ---
@@ -38,8 +38,10 @@ När du skapar en bilduppsättning rekommenderar Adobe följande metodtips och t
 
 | Begränsningstyp | Bästa praxis | Begränsning har införts |
 | --- | --- | --- |
-| Antal dubblettresurser per uppsättning | Inga dubbletter | 20 |
+| Antal dubblettresurser per uppsättning | Inga dubbletter | 20‡ |
 | Maximalt antal bilder per uppsättning | 5-10 bilder per uppsättning | 1000 |
+
+‡ Bästa praxis är att inte ha duplicerade resurser i en uppsättning. Gränsen är 20 kopior för en enskild resurs. Om du lägger till ytterligare en dubblett för den resursen, inom den uppsättningen, returnerar begäran ett fel eller ignorerar dubbletten.
 
 Se även [Dynamic Media begränsningar](/help/assets/limitations.md).
 
@@ -141,8 +143,10 @@ När du skapar en bilduppsättning rekommenderar Adobe följande metodtips och t
 
 | Begränsningstyp | Bästa praxis | Begränsning har införts |
 | --- | --- | --- |
-| Antal dubblettresurser per uppsättning | Inga dubbletter | 20 |
+| Antal dubblettresurser per uppsättning | Inga dubbletter | 20‡ |
 | Maximalt antal bilder per uppsättning | 5-10 bilder per uppsättning | 1000 |
+
+‡ Bästa praxis är att inte ha duplicerade resurser i en uppsättning. Gränsen är 20 kopior för en enskild resurs. Om du lägger till ytterligare en dubblett för den resursen, inom den uppsättningen, returnerar begäran ett fel eller ignorerar dubbletten.
 
 Se även [Dynamic Media begränsningar](/help/assets/limitations.md).
 

@@ -6,7 +6,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: customization
 docset: aem65
 exl-id: 35b50573-0be8-469d-a1ac-f51b9aaa5fef
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: 0aa929021aa724e4ec18d49fea26f8c0b0538bdc
 workflow-type: tm+mt
 source-wordcount: '1265'
 ht-degree: 0%
@@ -121,7 +121,7 @@ Den anpassade mallen har samma format som standardmallen eftersom mallen referer
 
 1. Byt namn på den kopierade komponenten till `enrollmentpage`.
 
-1. **(Endast om du redan har en innehållssida)** Utför följande steg (a-d) om du har en befintlig `contentpage`-komponent för din webbplats. Om du inte har någon befintlig `contentpage`kan du lämna `resourceSuperType`så att den pekar på OTB-bassidan.
+1. **(Endast om du redan har en innehållssida)** Utför följande steg (a-d) om du har en befintlig `contentpage`-komponent för din webbplats. Om du inte har någon befintlig `contentpage`kan du lämna `resourceSuperType`egenskapen så att den pekar på den körklara bassidan.
 
    1. För `enrollmentpage` nod, ange egenskapens värde `sling:resourceSuperType` till mincompany/components/page/contentpage. The `contentpage` är bassidkomponenten för -platsen. Andra sidkomponenter kan utöka den. Ta bort skriptfiler under `enrollmentpage`, förutom `head.jsp`, `content.jsp`och `library.jsp`. The `sling:resourceSuperType` -komponent, som `contentpage` i det här fallet innehåller alla sådana skript. Sidhuvuden, inklusive navigeringsfält och sidfötter, ärvs från `contentpage` -komponenten.
 

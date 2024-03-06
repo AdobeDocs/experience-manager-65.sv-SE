@@ -5,9 +5,9 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: publish
 exl-id: 2e4f8f51-df02-4bbb-99bb-30181facd1e0
-source-git-commit: d195ac80ee59439bab5b1219a2c1f16e93e3d22b
+source-git-commit: 0aa929021aa724e4ec18d49fea26f8c0b0538bdc
 workflow-type: tm+mt
-source-wordcount: '1452'
+source-wordcount: '1448'
 ht-degree: 0%
 
 ---
@@ -230,7 +230,7 @@ på https://[*värd*]:[*port*]/system/console/configMgr.
    `key` varchar(255) NOT NULL,
    `id` varchar(60) NOT NULL,
    PRIMARY KEY (`id`,`key`),
-   CONSTRAINT ‘additionalmetadatatable_fk’ FOREIGN KEY (`id`) REFERENCES `metadata` (`id`) ON DELETE CASCADE
+   CONSTRAINT 'additionalmetadatatable_fk' FOREIGN KEY (`id`) REFERENCES `metadata` (`id`) ON DELETE CASCADE
    ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
    ```
 
@@ -397,7 +397,7 @@ Utför följande steg för att skapa [ett klientbibliotek](/help/sites-developin
 
    >[!NOTE]
    >
-   >Skriptet är avsett för widgetkomponenten för bifogad OTB-fil. Om du har anpassat widgeten för bifogade OTB-filer ändrar du skriptet ovan så att respektive ändringar införs.
+   >Skriptet är avsett för widgetkomponenten för bifogad fil som inte finns i kartongen. Om du har anpassat den färdiga widgeten för bifogade filer ändrar du skriptet ovan så att respektive ändringar införs.
 
 1. Lägg till följande egenskap i mappen som skapades i steg 2 och klicka på **[!UICONTROL Save All]**.
 

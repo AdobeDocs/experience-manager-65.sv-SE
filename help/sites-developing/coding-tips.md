@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: best-practices
 exl-id: 85ca35e5-6e2b-447a-9711-b12601beacdd
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
-source-wordcount: '860'
+source-wordcount: '857'
 ht-degree: 0%
 
 ---
@@ -58,7 +58,7 @@ Helst borde namn visa sin avsikt. Ett vanligt kodtest för när namn inte är s�
  </tbody>
 </table>
 
-### Upprepa inte dig själv  {#don-t-repeat-yourself}
+### Upprepa inte  {#don-t-repeat-yourself}
 
 DRY anger att samma koduppsättning aldrig ska dupliceras. Detta gäller även för exempelvis stränglitteraler. Kodduplicering öppnar dörren för defekter när något måste ändras och bör sökas ut och elimineras.
 

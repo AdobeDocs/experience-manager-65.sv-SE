@@ -6,7 +6,7 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: deploying
 exl-id: 3a90f1d2-e53f-4cc4-8122-024ad6500de0
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+source-git-commit: 0aa929021aa724e4ec18d49fea26f8c0b0538bdc
 workflow-type: tm+mt
 source-wordcount: '1168'
 ht-degree: 0%
@@ -175,7 +175,7 @@ Detta använder en enkel serverlayout med endast en Admin Server.
    * avkommentera sling.home initial parameter och ange den här sökvägen efter behov (se General Description)
    * Replikera filen web.xml
 
-* Distribuera AEM krigsfil som ett program (för de andra inställningarna används standardinställningarna)
+* Distribuera AEM krigsfil som ett program (använd standardinställningarna för de andra inställningarna)
 * Installationen kan ta tid..
 * Kontrollera att installationen har slutförts enligt beskrivningen ovan i den allmänna beskrivningen (t.ex. för att anpassa error.log)
 * Du kan ändra kontextroten på fliken Konfiguration i webbprogrammet i WebLogic `/console`

@@ -7,9 +7,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 docset: aem65
 feature: Correspondence Management
 exl-id: ba2e145d-51ee-4844-a9e1-9927971d25a1
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
-source-wordcount: '4431'
+source-wordcount: '4433'
 ht-degree: 0%
 
 ---
@@ -756,7 +756,7 @@ När du lägger till egenskapen sling:orderBefore för att ange kolumnplatsen m�
 
 ## Aktivera sökning efter anpassade egenskaper {#enable-search-for-custom-properties}
 
-Som standard innehåller inte fulltextsökning anpassade egenskaper som du lägger till i användargränssnittet med CRX/DE.
+Som standard innehåller fulltextsökning inte anpassade egenskaper som du lägger till i användargränssnittet med CRX/DE.
 
 Om du vill inkludera anpassade egenskaper i sökningen måste du tillåta indexering av anpassade egenskaper.
 

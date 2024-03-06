@@ -1,13 +1,13 @@
 ---
 title: Ljuslåda som ditt personliga bildgalleri
-description: Läs om ljuslådan som ditt personliga bildgalleri i Adobe Experience Manager Assets].
+description: Läs om ljuslådan som ditt eget bildgalleri i Adobe Experience Manager Assets].
 contentOwner: AG
 role: User, Admin
 feature: Developer Tools,Renditions
 exl-id: 7652663a-11ba-4a78-9a9f-221d514fe992
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
-source-wordcount: '239'
+source-wordcount: '237'
 ht-degree: 1%
 
 ---
@@ -16,11 +16,11 @@ ht-degree: 1%
 
 Ljuslådan är en särskild typ av samling som ger enkel åtkomst till resurser. Du kan snabbt komma åt Ljuslådan för att lägga till eller ta bort resurser. Det fungerar som ditt personliga bildgalleri.
 
-Om du är en [!DNL Adobe Experience Manager Assets] användare skapas ljuslådan automatiskt när du loggar in i programmet första gången. Den är exklusiv för din inloggning. Andra användare kan inte komma åt din ljuslåda.
+Om du är [!DNL Adobe Experience Manager Assets] användare skapas ljuslådan automatiskt när du loggar in i programmet första gången. Den är exklusiv för din inloggning. Andra användare kan inte komma åt din ljuslåda.
 
 ## Lägga till resurser i ljuslådan {#adding-assets-to-lightbox}
 
-1. Från [!DNL Assets] i användargränssnittet väljer du de resurser som du vill lägga till i ljuslådan.
+1. Från [!DNL Assets] väljer du de resurser som du vill lägga till i ljuslådan.
 1. Dra resurserna till **[!UICONTROL Drop in Lightbox]** zon. Frigör när släppzonen blir aktiv och etiketten ändras till **[!UICONTROL Drop to Add]**.
 
    ![add_to_lightbox](assets/add_to_lightbox.png)
@@ -31,7 +31,7 @@ Om du är en [!DNL Adobe Experience Manager Assets] användare skapas ljuslådan
 
    >[!NOTE]
    >
-   >Även om ljuslådan liknar en samling kan du inte utföra alla åtgärder som du normalt utför i samlingar. Du kan till exempel inte ta bort, dela eller visa inställningar för en ljuslåda. Dessutom kan du inte lägga till den i andra samlingar. Du kan dock redigera resurserna i en ljuslåda.
+   >Även om ljuslådan liknar en samling kan du inte utföra alla åtgärder som du normalt utför på samlingar. Du kan till exempel inte ta bort, dela eller visa inställningar för en ljuslåda. Dessutom kan du inte lägga till den i andra samlingar. Du kan dock redigera resurserna i en ljuslåda.
 
 ## Ta bort resurser från ljuslådan {#removing-assets-from-lightbox}
 

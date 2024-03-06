@@ -2,16 +2,16 @@
 title: Anpassade HTTP-huvuden
 description: Lär dig hur du konfigurerar anpassade HTTP-huvuden i Adobe Experience Manager Commerce.
 exl-id: 834aadac-c3be-4e7a-a3cb-349608810b40
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
-source-wordcount: '273'
+source-wordcount: '267'
 ht-degree: 0%
 
 ---
 
 # Anpassade HTTP-huvuden {#custom-http-headers}
 
-## Översikt {#overview}
+## Ökning {#overview}
 
 För att få bättre kontroll över sin serverdel kan författarna konfigurera anpassade HTTP-rubriker som skickas till e-handelsmotorn, tillsammans med de som redan skickats av CIF. Vanliga användningsfall är bland annat multibutiksinställningar där du kan använda HTTP-huvuden för att styra svaret från e-handelsserverdelen.
 

@@ -6,7 +6,7 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: introduction
 content-type: reference
 exl-id: 6ce6a204-db59-4ed2-8383-00c6afba82b4
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
 source-wordcount: '1775'
 ht-degree: 0%
@@ -89,7 +89,7 @@ Jag skulle modellera ett enkelt bloggsystem enligt följande. Till att börja me
 
 Jag tror att en av de saker som blir uppenbart är att innehållets struktur förstås utifrån exemplet utan några ytterligare förklaringar.
 
-Det som till en början kan vara oväntat är varför jag inte skulle lagra &quot;kommentarerna&quot; med &quot;posten&quot;, som beror på åtkomstkontroll som jag skulle vilja ha på ett rimligt hierarkiskt sätt.
+Det som till att börja med kan vara oväntat är varför jag inte skulle lagra&quot;kommentarerna&quot; med&quot;posten&quot;, som beror på åtkomstkontroll som jag skulle vilja ha tillämpad på ett rimligt hierarkiskt sätt.
 
 Med innehållsmodellen ovan kan jag enkelt låta den anonyma användaren&quot;skapa&quot; kommentarer, men behålla den anonyma användaren skrivskyddad för resten av arbetsytan.
 
@@ -97,7 +97,7 @@ Med innehållsmodellen ovan kan jag enkelt låta den anonyma användaren&quot;sk
 
 #### Förklaring {#explanation-3}
 
-Använd inte `clone()`, `merge()` eller `update()` metoder i programmet som bara har en arbetsyta är antagligen den rätta.
+Om du inte `clone()`, `merge()` eller `update()` metoder i programmet som bara har en arbetsyta är antagligen den rätta.
 
 &quot;Motsvarande noder&quot; är ett koncept som definieras i JCR-specifikationen. Det handlar i princip om noder som representerar samma innehåll, i olika så kallade arbetsytor.
 
@@ -164,7 +164,7 @@ Låt oss anta att jag tillåter &quot;referenser&quot; från ett dokument (a) ti
 
 Därför skulle jag antingen modellera dessa referenser som &quot;svag referens&quot; (i JCR v1.0 så här böjer det sig i princip ned till strängegenskaper som innehåller målnodens uuid) eller bara använda en sökväg. Ibland är banan mer meningsfull att börja med.
 
-Jag tror att det finns situationer där ett system verkligen inte fungerar om en referens är farlig, men jag kan inte komma på ett bra &quot;verkligt&quot; men ändå enkelt exempel från min direkta erfarenhet.
+Jag tror att det finns fall där ett system verkligen inte fungerar om en referens är farlig, men jag kan inte komma på ett bra &quot;verkligt&quot; men enkelt exempel från min direkta erfarenhet.
 
 ### Regel 6: Filer är filer. {#rule-files-are-files}
 

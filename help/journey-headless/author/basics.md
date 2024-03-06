@@ -2,10 +2,10 @@
 title: Lär dig grunderna i redigering
 description: Lär dig mer om hur du skapar innehåll för Headless CMS med hjälp av Content Fragments.
 exl-id: 125c4d0b-1572-4dba-823d-cdef2778f275
-source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
-source-wordcount: '1691'
-ht-degree: 1%
+source-wordcount: '1694'
+ht-degree: 0%
 
 ---
 
@@ -126,7 +126,7 @@ Du navigerar sedan genom de här mapparna för att skapa och redigera dina inneh
 
 Bara om..
 
-Du kommer antagligen att få en inledande mapp där du kan skapa dina mappar. Detta beror på att viss konfigurationsinformation måste tillämpas (vanligtvis av en utvecklare eller systemadministratör) på rotmappen. Det här intresserar dig förmodligen inte, men om det behövs kan du kontrollera **Konfiguration** i **Cloud Service** i mappen **Egenskaper**:
+Du kommer antagligen att få en inledande mapp där du kan skapa dina mappar. Detta beror på att viss konfigurationsinformation måste tillämpas (vanligtvis av en utvecklare eller systemadministratör) på rotmappen. Detta är antagligen inte av intresse för dig, men om det behövs kan du kontrollera **Konfiguration** i **Cloud Service** i mappen **Egenskaper**:
 
 ![Skapa mappegenskaper - Konfiguration](/help/journey-headless/author/assets/headless-journey-author-folder-03.png)
 
@@ -227,7 +227,7 @@ Nu när du har lärt dig grunderna är nästa steg att [Läs mer om referenser](
 
 ## Ytterligare resurser {#additional-resources}
 
-* [Redigeringsbegrepp](/help/sites-authoring/author.md)
+* [Authoring Concepts](/help/sites-authoring/author.md)
 
 * [Grundläggande hantering](/help/sites-authoring/basic-handling.md) - den här sidan är huvudsakligen baserad på **Webbplatser** konsol, men många/de flesta funktioner är också relevanta för redigering **Innehållsfragment** under **Resurser** konsol.
 

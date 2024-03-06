@@ -7,9 +7,9 @@ topic-tags: introduction
 content-type: reference
 docset: aem65
 exl-id: ef1a3997-feb4-4cb0-9396-c8335b69bb10
-source-git-commit: d2c0dea636280c28e1d5a76d1c5375f21b6eb111
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
-source-wordcount: '2963'
+source-wordcount: '2964'
 ht-degree: 1%
 
 ---
@@ -52,7 +52,7 @@ När en användare först kommer åt en konsol startas en produktnavigeringssjä
 
 Klicka **Nästa** för att gå vidare till nästa sida i översikten. Klicka **Stäng** eller klicka utanför översiktsdialogrutan för att stänga.
 
-Översikten startas om nästa gång du öppnar en konsol, såvida du inte antingen visar alla bilder eller markerar alternativet **Visa inte det här igen**.
+Översikten startas om nästa gång du öppnar en konsol, såvida du inte antingen visar alla bilder eller markerar alternativet **Visa inte detta igen**.
 
 ## Global navigering {#global-navigation}
 

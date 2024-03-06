@@ -2,9 +2,9 @@
 title: Hur skapar och arbetar man med hasharna i dynamiska PDF forms?
 description: Generera och arbeta med hashvärden i dynamiska PDF forms.
 exl-id: 026f5686-39ea-4798-9d1f-031f15941060
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
-source-wordcount: '1239'
+source-wordcount: '1182'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ Det krävs viss erfarenhet av AEM Forms i JEE Designer, liksom möjligheten att 
 
 Början
 
-När du vill dölja ett lösenord i ditt PDF-formulär och inte vill ha det i klartext i källkoden eller någon annanstans i PDF-dokumentet, är det viktigt att du vet hur du genererar och arbetar med hash-koderna MD4, MD5, SHA-1 och SHA-256.
+När du vill dölja ett lösenord i ditt PDF-formulär och inte vill ha det i klartext inuti källkoden eller någon annanstans i PDF-dokumentet, är det viktigt att du vet hur du genererar och arbetar med hash-koderna MD4, MD5, SHA-1 och SHA-256.
 
 Tanken är att dölja lösenordet genom att generera en unik hash och lagra hash-koden i PDF-dokumentet. Den här unika hashen kan genereras av olika hash-funktioner, och i den här artikeln visas hur du genererar dem i PDF-formuläret och hur du arbetar med dem.
 
@@ -109,7 +109,7 @@ if (soHASHING_SHA256.hex_sha256(this.rawValue) == passwd_man_hashed.rawValue){
 
 ## Vart ska du gå härifrån? {#next-steps}
 
-Var behöver du något sådant här? Ta till exempel ett PDF-formulär som innehåller fält som endast ska fyllas i av behöriga personer. Genom att skydda fälten med ett lösenord, som inte kan visas i klartext någonstans i dokumentet som i Sample_2.pdf, kan du se till att fälten bara är tillgängliga för användare som känner till lösenordet.
+Var behöver du något sådant här? Ta till exempel ett PDF-formulär som innehåller fält som endast ska fyllas i av behöriga personer. Genom att skydda fälten med ett lösenord, som inte kan visas i klartext någonstans i dokumentet som i Sample_2.pdf, kan du se till att dessa fält bara är tillgängliga för användare som känner till lösenordet.
 
 Jag rekommenderar att du fortsätter utforska de två exempelfilerna för PDF.  Du kan generera nya hash-värden med Sample_1.pdf och använda de genererade värdena för att ändra antingen lösenordet eller hash-funktionen som används i Sample_2.pdf.  Resurserna som listas i avsnittet Attribut innehåller även ytterligare information om hash-kodning och de specifika JavaScript-implementeringar som används i den här artikeln.
 

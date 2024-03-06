@@ -8,9 +8,9 @@ content-type: reference
 feature: Viewers
 role: User, Admin
 exl-id: 4e7f17ea-6985-4644-b91c-2c1299d01321
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: 518207a0d8a95ef17b0972855a58f124fb215c85
 workflow-type: tm+mt
-source-wordcount: '930'
+source-wordcount: '932'
 ht-degree: 0%
 
 ---
@@ -163,7 +163,7 @@ Hanteraren kräver också ett funktionsanrop för att snabbvyn ska fungera. Funk
      När variablerna från snabbvyn är mappade och funktionsanropet är på plats, skriver webbläsarkonsolen variabelvärdet till webbläsarkonsolen med den angivna exempelfunktionen.
 
 1. Du kan nu använda en funktion för att anropa ett enkelt popup-fönster i snabbvyn. I följande exempel används en `DIV` för en popup.
-1. Formatera popup-fönstret `DIV` på följande sätt. Lägg till egen formatering efter behov.
+1. Formatera popup-fönstret `DIV` på följande sätt. Lägg till egna format efter behov.
 
    ```xml
    <style type="text/css">

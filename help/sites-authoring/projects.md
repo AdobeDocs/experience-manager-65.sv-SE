@@ -2,10 +2,10 @@
 title: Projekt
 description: Med projekt kan du gruppera resurser i en enhet vars gemensamma, delade miljö gör det enkelt att hantera dina projekt.
 exl-id: 632c0608-2ab8-4a5b-8251-cd747535449b
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
-source-wordcount: '1359'
-ht-degree: 5%
+source-wordcount: '1360'
+ht-degree: 1%
 
 ---
 
@@ -22,7 +22,7 @@ Som användare kan du:
 
 ## Åtkomstkrav {#access-requirements}
 
-Projicerar en AEM standardfunktion och kräver ingen ytterligare konfiguration.
+Projicerar en AEM och kräver ingen ytterligare konfiguration.
 
 Men för användare i projekt som vill se andra användare/grupper medan de använder projekt, till exempel när de skapar projekt, skapar uppgifter/arbetsflöden eller visar och hanterar teamet, måste de användarna ha läsåtkomst på `/home/users` och `/home/groups`.
 
@@ -221,9 +221,9 @@ För kreativa projekt finns även andra roller, som fotografer. Du kan använda 
 
 ### Skapa grupp automatiskt {#auto-group-creation}
 
-När du skapar projektet och lägger till användare för de olika rollerna skapas grupper som är kopplade till projektet automatiskt för att hantera associerade behörigheter.
+När du skapar projektet och lägger till användare till de olika rollerna skapas grupper som är kopplade till projektet automatiskt för att hantera associerade behörigheter.
 
-Ett projekt med namnet Myproject skulle till exempel ha tre grupper, **Myproject Owners**, **Myproject Editors** och **Myproject Observers**.
+Ett projekt med namnet Myproject skulle till exempel ha tre grupper **Mina projektägare**, **Myproject Editors**, **Myproject-observatörer**.
 
 Om projektet tas bort tas dessa grupper bara bort om du väljer lämpligt alternativ [när du tar bort projektet.](/help/sites-authoring/touch-ui-managing-projects.md#deleting-a-project) En administratör kan även ta bort grupper manuellt i **verktyg** > **Säkerhet** > **Grupper**.
 

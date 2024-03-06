@@ -2,23 +2,23 @@
 title: Creating Accessible Content for Adobe Experience Manager (WCAG 2.1-överensstämmelse)
 description: Använd AEM för att göra webbinnehåll tillgängligt för och användbart för personer med funktionshinder
 exl-id: 2145d761-f51d-482b-a0e7-ef7500c4872f
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
-source-wordcount: '13806'
-ht-degree: 3%
+source-wordcount: '13636'
+ht-degree: 2%
 
 ---
 
-# Skapa tillgängligt innehåll (WCAG 2.1-överensstämmelse) {#creating-accessible-content-wcag-conformance}
+# Skapa hjälpmedelsanpassat innehåll (WCAG 2.1-överensstämmelse) {#creating-accessible-content-wcag-conformance}
 
-The [Web Content Accessibility Guidelines (WCAG) 2.1](https://www.w3.org/TR/WCAG/), upprättad av [en arbetsgrupp inom World Wide Web Consortium](https://www.w3.org/grupper/#Accessibility_guidelines_working_group), består av en uppsättning teknikoberoende riktlinjer och framgångskriterier som gör webbinnehåll tillgängligt för och användbart för personer med funktionshinder.
+The [Web Content Accessibility Guidelines (WCAG) 2.1](https://www.w3.org/TR/WCAG/), upprättad av [en arbetsgrupp inom World Wide Web Consortium](https://www.w3.org/groups/#Accessibility_Guidelines_Working_Group), består av en uppsättning teknikoberoende riktlinjer och framgångskriterier som gör webbinnehåll tillgängligt för och användbart för personer med funktionshinder.
 
 Som en introduktion tillhandahåller konsortiet en serie sektioner och styrkande dokument:
 
 * [Nya funktioner i WCAG 2.1](https://www.w3.org/TR/WCAG/#new-features-in-wcag-2-1)
-* [Så här uppfyller du WCAG 2.1](https://www.w3.org/WAI/WCAG21/quickref/)
-* [Understanding WCAG 2.1](https://www.w3.org/WAI/WCAG21/Understanding/)
-* [Techniques for WCAG 2.1](https://www.w3.org/WAI/WCAG21/Techniques/)
+* [Hur WCAG 2.1 fungerar](https://www.w3.org/WAI/WCAG21/quickref/)
+* [Om WCAG 2.1](https://www.w3.org/WAI/WCAG21/Understanding/)
+* [Tekniker för WCAG 2.1](https://www.w3.org/WAI/WCAG21/Techniques/)
 * [WCAG-dokument](https://www.w3.org/WAI/standards-guidelines/wcag/docs/)
 
 Se även:
@@ -331,7 +331,7 @@ Du kan se till att dina webbsidor får rätt struktur genom att använda följan
 
   >[!NOTE]
   >
-  >Som standard är dessa element och attribut inte direkt tillgängliga, men systemadministratören kan lägga till stöd för dessa värden i dialogrutan **Tabellegenskaper**[ (se Lägga till stöd för ytterligare HTML-element och attribut](/help/sites-administering/rte-accessible-content.md#add-support-for-more-html-elements-and-attributes).
+  >Som standard är dessa element och attribut inte direkt tillgängliga, men det är möjligt för systemadministratören att lägga till stöd för dessa värden i **Tabellegenskaper** (se [Stöd för ytterligare element och attribut i HTML](/help/sites-administering/rte-accessible-content.md#add-support-for-more-html-elements-and-attributes).
 
   Öppna **Tabell** där du kan välja **Tabellegenskaper** tab:
 
@@ -1191,7 +1191,7 @@ Där bildknappar används (till exempel **Bildknapp** komponenten i WKND-projekt
 
 I WKND-projektet, där det finns en grupp med relaterade kontroller, till exempel **Alternativgrupp**, kan en titel behövas för gruppen och enskilda kontroller. När du lägger till en uppsättning med alternativknappar i AEM visas den här grupptiteln i fältet **Titel**, medan enskilda titlar anges när alternativknapparna (**Objekt**) skapas.
 
-Det finns dock ingen programmatisk koppling mellan grupptiteln och alternativknapparna själva. Mallredigerare måste omsluta titeln i `fieldset` och `legend` -taggar för att skapa den här associationen och detta kan bara göras genom att redigera sidans källkod. En systemadministratör kan också lägga till stöd för dessa element så att de visas i dialogrutan **Fältegenskaper**[ (se Lägga till stöd för ytterligare HTML-element och attribut](/help/sites-administering/rte-accessible-content.md#add-support-for-more-html-elements-and-attributes)).
+Det finns dock ingen programmatisk koppling mellan grupptiteln och alternativknapparna själva. Mallredigerare måste omsluta titeln i `fieldset` och `legend` -taggar för att skapa den här associationen och detta kan bara göras genom att redigera sidans källkod. En systemadministratör kan också lägga till stöd för dessa element så att de visas i **Fältegenskaper** dialogruta (se [Stöd för ytterligare element och attribut i HTML](/help/sites-administering/rte-accessible-content.md#add-support-for-more-html-elements-and-attributes)).
 
 ###### Ytterligare överväganden för Forms {#additional-considerations-for-forms}
 
@@ -1250,7 +1250,7 @@ Syftet med detta kriterium är att hjälpa användare med funktionshinder att un
 
 Användare med funktionshinder kan vara mer benägna att göra misstag. Personer med lässvårigheter kan transponera siffror och bokstäver, och personer med motoriska funktionshinder kan råka ut för nycklar av misstag. Om användaren kan ångra åtgärder kan användaren rätta till ett misstag som kan få allvarliga följder. Genom att tillhandahålla möjligheten att granska och korrigera information kan användaren upptäcka ett misstag innan han eller hon vidtar en åtgärd som får allvarliga följder.
 
-Användarstyrda data är användaranpassade data som användaren kan ändra och/eller ta bort genom en avsiktlig åtgärd. Exempel på användare som kontrollerar sådana data är att uppdatera telefonnumret och adressen för användarens konto eller att ta bort en post med tidigare fakturor från en webbplats. Det refererar inte till sådant som Internet-loggar och övervakningsdata från sökmotorn som användaren inte kan visa eller interagera med direkt.
+Användarstyrda data är användaranpassade data som användaren kan ändra och/eller ta bort genom en avsiktlig åtgärd. Exempel på användare som kontrollerar sådana data är att uppdatera telefonnumret och adressen för användarens konto eller att ta bort en post med tidigare fakturor från en webbplats. Det refererar inte till sådant som Internet-loggar och data för sökmotorövervakning som användaren inte kan visa eller interagera med direkt.
 
 #### Hur man ska uppfylla kraven - Förebyggande av fel (rättsliga, finansiella, uppgifter) (3.3.4) {#how-to-meet-error-prevention-legal-financial-data}
 

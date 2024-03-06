@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: projects
 content-type: reference
 exl-id: 62586c8e-dab4-4be9-a44a-2c072effe3c0
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
-source-wordcount: '964'
+source-wordcount: '965'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ Med konsolen kan du skapa ett projekt, associera resurser med projektet och äve
 
 ## Åtkomstkrav {#access-requirements}
 
-Projicerar en AEM standardfunktion och kräver ingen ytterligare konfiguration.
+Projicerar en AEM och kräver ingen ytterligare konfiguration.
 
 Men för användare i projekt som vill se andra användare/grupper medan de använder projekt, till exempel när de skapar projekt, skapar uppgifter/arbetsflöden eller visar och hanterar teamet, måste de användarna ha läsåtkomst på `/home/users` och `/home/groups`.
 

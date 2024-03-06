@@ -6,10 +6,10 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: administering-adobe-phonegap-enterprise
 exl-id: 9f814204-8cd4-4ba9-9e25-3ff1b25c1955
-source-git-commit: 96e2e945012046e6eac878389b7332985221204e
+source-git-commit: 0aa929021aa724e4ec18d49fea26f8c0b0538bdc
 workflow-type: tm+mt
-source-wordcount: '632'
-ht-degree: 0%
+source-wordcount: '614'
+ht-degree: 1%
 
 ---
 
@@ -101,7 +101,7 @@ Medlemmar i gruppen app-admins kan skapa programinnehåll med samma behörighete
 
    >[!CAUTION]
    >
-   >/var/contentsync-åtkomst nekas OTB.
+   >/var/contentsync åtkomst nekas.
    >
    >Om du utelämnar läsbehörigheten kan tomma uppdateringspaket skapas och replikeras.
 
@@ -111,14 +111,14 @@ Medlemmar i gruppen app-admins kan skapa programinnehåll med samma behörighete
 
 Instrumentpaneler kan visa olika åtgärder baserat på de behörigheter som användaren har. Nedan beskrivs vilka åtgärder som är tillgängliga för varje platta.
 
-Förutom dessa behörigheter kan en åtgärd också visas/döljas baserat på hur det aktuella programmet är konfigurerat. Det finns t.ex. ingen punkt som visar åtgärden &#39;Remote Build&#39; om en PhoneGap-molnkonfiguration inte har tilldelats programmet. De här listas nedan under &#39;**Konfigurationsvillkor**-avsnitt.
+Förutom dessa behörigheter kan en åtgärd också visas/döljas baserat på hur det aktuella programmet är konfigurerat. Det finns till exempel ingen punkt som visar åtgärden &#39;Remote Build&#39; om en PhoneGap-molnkonfiguration inte har tilldelats programmet. De här listas nedan under &#39;**Konfigurationsvillkor**-avsnitt.
 
 ### Hantera apppanel {#manage-app-tile}
 
 Panelen har för närvarande inga åtgärder som kräver behörigheter, men informationssidan för programmet har följande åtgärder:
 
 * *Redigera* för app-author och app-admin (UI Trigger - jcr:write - on /content/phonegap/{suffix})
-* *Hämta* för app-author och app-admin (UI Trigger - på /content/phonegap/{suffix})
+* *Ladda ned* för app-author och app-admin (UI Trigger - på /content/phonegap/{suffix})
 
 Bilden nedan visar hämtnings- och redigeringsalternativen för ett program:
 

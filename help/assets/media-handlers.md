@@ -6,9 +6,9 @@ contentOwner: AG
 role: User
 feature: Workflow,Renditions
 exl-id: cfd6c981-1a35-4327-82d7-cf373d842cc3
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
-source-wordcount: '2085'
+source-wordcount: '2066'
 ht-degree: 1%
 
 ---
@@ -29,7 +29,7 @@ Mediehanterare är tjänster i [!DNL Assets] som utför specifika åtgärder på
 
 Följande mediehanterare är tillgängliga i [!DNL Assets] och hantera de vanligaste MIME-typerna:
 
-<!-- TBD: Java versions shouldn't be set to 1.5. Must be updated.
+<!-- TBD: Java versions should not be set to 1.5. Must be updated.
 -->
 
 | Hanterarnamn | Tjänstnamn (i systemkonsolen) | MIME-typer som stöds |
@@ -412,7 +412,7 @@ När du har utfört följande procedur, när du överför en TXT-fil till [!DNL 
      * * @return the number of words in the string
      * */
     private long wordCount(String text) {
-     // We need to keep track of the last character, if we have two whitespaces in a row we don't want to double count.
+     // We need to keep track of the last character, if we have two whitespaces in a row we do not want to double count.
      // The starting of the document is always a whitespace.
      boolean prevWhiteSpace = true;
      boolean currentWhiteSpace = true;
@@ -483,7 +483,7 @@ Installera [!DNL ImageMagick] på disken där [!DNL Experience Manager] server:
 
    >[!NOTE]
    >
-   >I vissa versioner av Windows kan kommandot convert misslyckas eftersom det står i konflikt med det inbyggda konverteringsverktyget som är en del av [!DNL Windows] installation. I det här fallet anger du den fullständiga sökvägen för [!DNL ImageMagick] som används för att konvertera bildfiler till miniatyrer. Till exempel, `"C:\Program Files\ImageMagick-6.8.9-Q16\convert.exe" -define jpeg:size=319x319 ${filename} -thumbnail 319x319 cq5dam.thumbnail.319.319.png`.
+   >I vissa versioner av Windows kan kommandot convert misslyckas eftersom det står i konflikt med det inbyggda konverteringsverktyget som är en del av [!DNL Windows] installation. I det här fallet anger du den fullständiga sökvägen för [!DNL ImageMagick] som används för att konvertera bildfiler till miniatyrer. Till exempel: `"C:\Program Files\ImageMagick-6.8.9-Q16\convert.exe" -define jpeg:size=319x319 ${filename} -thumbnail 319x319 cq5dam.thumbnail.319.319.png`.
 
 1. Om du vill se om verktyget fungerar som det ska lägger du till en JPG-bild i arbetskatalogen och kör kommandot convert `<image-name>.jpg -flip <image-name>-flipped.jpg` på kommandoraden. En speglad bild läggs till i katalogen. Lägg sedan till kommandoradssteget i **[!UICONTROL DAM Update Asset]** arbetsflöde.
 1. Gå till **[!UICONTROL Workflow]** konsol.

@@ -7,9 +7,9 @@ topic-tags: components
 content-type: reference
 legacypath: /content/docs/en/aem/6-0/develop/components/components-develop
 exl-id: 7ff92872-697c-4e66-b654-15314a8cb429
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
-source-wordcount: '4907'
+source-wordcount: '4843'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ När du börjar utveckla nya komponenter måste du förstå grunderna i deras st
 
 Den här processen innebär att man läser teorin och tittar på ett brett urval av komponentimplementeringar i en AEM. Det senare tillvägagångssättet är något komplicerat av det faktum att även om AEM har övergått till en ny standard, modern, pekaktiverad användarupplevelse, har det fortfarande stöd för det klassiska användargränssnittet.
 
-## Översikt {#overview}
+## Ökning {#overview}
 
 I det här avsnittet beskrivs viktiga koncept och problem som en introduktion till den information som behövs när du utvecklar egna komponenter.
 
@@ -604,7 +604,7 @@ Det finns många befintliga konfigurationer i databasen. Du kan enkelt söka eft
 
 Komponenter måste alltid återge viss HTML som är synlig för författaren, även när komponenten inte har något innehåll. I annat fall försvinner det visuellt från redigerarens gränssnitt, vilket gör det tekniskt möjligt men osynligt på sidan och i redigeraren. I så fall kan författarna inte markera och interagera med den tomma komponenten.
 
-Därför bör komponenter återge en platshållare så länge de inte återger några synliga utdata när sidan återges i sidredigeraren (när WCM-läget är `edit` eller `preview`).
+Därför bör komponenterna återge en platshållare så länge de inte återger några synliga utdata när sidan återges i sidredigeraren (när WCM-läget är `edit` eller `preview`).
 Den typiska HTML-koden för en platshållare är följande:
 
 ```HTML

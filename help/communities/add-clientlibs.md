@@ -7,9 +7,9 @@ topic-tags: developing
 content-type: reference
 docset: aem65
 exl-id: 569f2052-b4fe-4f7f-aec9-657217cba091
-source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
-source-wordcount: '702'
+source-wordcount: '690'
 ht-degree: 0%
 
 ---
@@ -83,7 +83,7 @@ I det här fallet är det bäst att ta med alla och så att de mer grundläggand
 
 * Namn: **`embed`**
 * Typ: **`String`**
-* Klicka på **`Multi`**
+* Klicka **`Multi`**
 * Värde: **`cq.social.scf`**
 
    * En dialogruta öppnas. Klicka **`+`** efter varje post för att lägga till följande clientlib-kategorier:
@@ -151,7 +151,7 @@ Läs in webbplatsen i webbläsaren och se om bakgrunden inte är en blå nyans.
 
 För närvarande finns det en minimalistisk sandlåda. Det kan vara värt att spara som ett paket så att du kan inaktivera servern när du spelar upp, om databasen blir skadad och du vill börja om. Byt namn på eller ta bort mappen crx-quickstart/, aktivera servern, ladda upp och installera det här sparade paketet och behöver inte upprepa dessa grundläggande steg.
 
-Det här paketet finns på [Skapa en exempelsida](/help/communities/create-sample-page.md) självstudiekurs för dem som inte vill vänta och börja spela!..
+Det här paketet finns på [Skapa en exempelsida](/help/communities/create-sample-page.md) självstudiekurs för dem som inte vill vänta och börja spela.
 
 Så här skapar du ett paket:
 

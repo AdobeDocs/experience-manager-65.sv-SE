@@ -7,9 +7,9 @@ topic-tags: spa
 content-type: reference
 docset: aem65
 exl-id: 7b34be66-bb61-4697-8cc8-428f7c63a887
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
-source-wordcount: '1644'
+source-wordcount: '1646'
 ht-degree: 0%
 
 ---
@@ -39,7 +39,7 @@ Mer information om SPA i AEM finns i följande dokument:
 
 ## Design {#design}
 
-Sidkomponenten för en SPA tillhandahåller inte elementen HTML i dess underordnade komponenter via JSP- eller HTML-filen. Den här åtgärden har delegerats till SPA ramverk. Representationen av underordnade komponenter eller modeller hämtas som en JSON-datastruktur från JCR. SPA komponenter läggs sedan till på sidan enligt den strukturen. Det här beteendet skiljer sidkomponentens ursprungliga brödkomposition från icke-SPA.
+Sidkomponenten för en SPA tillhandahåller inte elementen HTML i dess underordnade komponenter via JSP- eller HTL-filen. Den här åtgärden har delegerats till SPA ramverk. Representationen av underordnade komponenter eller modeller hämtas som en JSON-datastruktur från JCR. SPA komponenter läggs sedan till på sidan enligt den strukturen. Det här beteendet skiljer sidkomponentens ursprungliga brödkomposition från icke-SPA.
 
 ### Sidmodellshantering {#page-model-management}
 

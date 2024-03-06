@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: platform
 exl-id: 54b942f9-5dd9-4826-9a0a-028f2d7b8e41
-source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
+source-git-commit: 970e0a97d531d4cbae76119960972e54ef65dda0
 workflow-type: tm+mt
-source-wordcount: '2348'
+source-wordcount: '2313'
 ht-degree: 0%
 
 ---
@@ -233,7 +233,7 @@ Detta är ett predikat som bara kan filtreras och det går inte att använda ett
 
 * **hasPermission**
 
-  Kommaavgränsade JCR-behörigheter som den aktuella användarsessionen måste ALLA ha noden i fråga. Till exempel, `jcr:write`, `jcr:modifyAccessControl`.
+  Kommaavgränsade JCR-behörigheter som den aktuella användarsessionen måste ALLA ha noden i fråga. Till exempel: `jcr:write`, `jcr:modifyAccessControl`.
 
 ### språk {#language}
 
@@ -573,7 +573,7 @@ Stöder inte facetextrahering.
 
 * **alla**
 
-  (bool) Sök i hela taggens fulltext, det vill säga alla titlar, beskrivning och så vidare (har företräde framför&quot;l&quot; `ang`&quot;).
+  (bool) Sök i hela taggens fulltext, det vill säga alla titlar, beskrivning och så vidare. Har företräde framför&quot;l&quot; `ang`&quot;.
 
 ### type {#type}
 

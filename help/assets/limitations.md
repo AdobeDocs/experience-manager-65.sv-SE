@@ -8,9 +8,9 @@ geptopics: SG_SCENESEVENONDEMAND_PK/categories/ecatalogs
 feature: Dynamic Media Classic,Asset Management,Image Sets,Spin Sets,eCatalog
 role: User
 exl-id: e4d4059e-ac0b-42e7-910c-001310796574
-source-git-commit: cc219931430ba571745e6ef254a034a689acd1cf
+source-git-commit: 886edbf0e98f5cdee176aaa0a7dffcf18b1a7cc2
 workflow-type: tm+mt
-source-wordcount: '308'
+source-wordcount: '347'
 ht-degree: 1%
 
 ---
@@ -31,11 +31,12 @@ När du skapar en snurra uppsättning eller en bilduppsättning, eller överför
 | Resurs - begränsningstyp | Bästa praxis | Begränsning har införts |
 | --- | --- | --- |
 | **Bild** - Antal smarta beskärningar per bild | 5 | 100 |
-| **Alla uppsättningar** - Antal dubblettresurser per uppsättning | Inga dubbletter | 20 |
+| **Alla uppsättningar** - Antal dubblettresurser per uppsättning | Inga dubbletter | 20‡ |
 | **Alla uppsättningar** - Maximalt antal resurser per uppsättning | 5-10 bilder per uppsättning | 1000 |
 | **Rotation** - Maximalt antal rader/kolumner per 2D-uppsättning | 12-18 bilder per uppsättning | 1000 |
 | **PDF** - Maximalt antal sidor för PDF som ska användas för extrahering |  | 100 (för alla PDF) |
 
+‡ Bästa praxis är att inte ha duplicerade resurser i en uppsättning. Gränsen är 20 kopior för en enskild resurs. Om du lägger till ytterligare en dubblett för den resursen, inom den uppsättningen, returnerar begäran ett fel eller ignorerar dubbletten.
 <!-- See also [Dynamic Media limitations](/help/assets/limitations.md). -->
 
 ## Webbläsare och operativsystem som inte stöds för Dynamic Media {#unsupported-browser-os}

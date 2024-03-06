@@ -7,9 +7,9 @@ feature: Adaptive Forms, Foundation Components
 discoiquuid: 1a32eb24-db3b-4fad-b1c7-6326b5af4e5e
 docset: aem65
 exl-id: 2f276e9d-b3c1-48f7-a94a-bdf7eb15a031
-source-git-commit: ea90b8a180426461b9c4a77d4eb91cf86081e9bc
+source-git-commit: 0aa929021aa724e4ec18d49fea26f8c0b0538bdc
 workflow-type: tm+mt
-source-wordcount: '2361'
+source-wordcount: '2353'
 ht-degree: 0%
 
 ---
@@ -21,9 +21,9 @@ ht-degree: 0%
 | AEM as a Cloud Service | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/adaptive-form-fragments-core-components.html) |
 | AEM 6.5 | Den här artikeln |
 
-<span class="preview">Adobe rekommenderar att du använder de moderna och utökningsbara kärnkomponenterna](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) för datainhämtning [för att [skapa nya adaptiva Forms eller [lägga till adaptiv Forms](/help/forms/using/create-an-adaptive-form-core-components.md) på AEM Sites-sidor](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-filer, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs äldre metoder för att skapa adaptiv Forms med hjälp av grundläggande komponenter. </span>
+<span class="preview">Adobe rekommenderar att du använder de moderna och utökningsbara kärnkomponenterna](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) för datainhämtning [för att [skapa nya adaptiva Forms](/help/forms/using/create-an-adaptive-form-core-components.md) eller [lägga till adaptiv Forms på AEM Sites-sidor](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-filer, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs äldre metoder för att skapa adaptiv Forms med hjälp av grundläggande komponenter. </span>
 
-Alla formulär har utformats för ett specifikt ändamål, men det finns några vanliga segment i de flesta formulär, till exempel för att ge personliga uppgifter som namn och adress, familjeinformation, inkomstinformation och så vidare. Formulärutvecklare måste skapa dessa gemensamma segment varje gång ett nytt formulär skapas.
+Alla formulär har utformats för ett specifikt ändamål, men det finns några vanliga segment i de flesta formulär, till exempel för att ge personliga uppgifter som namn och adress, familjeinformation och inkomstinformation. Formulärutvecklare måste skapa dessa gemensamma segment varje gång ett nytt formulär skapas.
 
 Med adaptiva formulär kan du enkelt skapa formulärsegment som en panel eller en grupp fält endast en gång och återanvända dem i anpassade formulär. Dessa återanvändbara och fristående segment kallas adaptiva formulärfragment.
 
@@ -43,7 +43,7 @@ Du kan skapa ett adaptivt formulärfragment från grunden eller spara en panel i
 
    >[!NOTE]
    >
-   >Se till att du anger ett unikt namn för fragmentet. Om det redan finns ett annat fragment med samma namn kan fragmentet inte skapas.
+   >Se till att du anger ett unikt namn för fragmentet. Om det finns ett annat fragment med samma namn kan fragmentet inte skapas.
 
 1. Klicka för att öppna **Formulärmodell** -fliken och från **Välj från** väljer du en av följande modeller för fragmentet:
 
@@ -84,14 +84,14 @@ Om du dessutom har valt ett XML-schema eller en XDP-formulärmall som formulärm
 
    >[!NOTE]
    >
-   >Om panelen som du sparar som fragment innehåller en underordnad panel, kommer det resulterande fragmentet att inkludera dem.
+   >Om panelen som du sparar som fragment innehåller en underordnad panel, inkluderas de i det resulterande fragmentet.
 
 1. Ange följande information i dialogrutan Skapa fragment:
 
    * **Namn**: Namnet på fragmentet. Standardvärdet är panelens elementnamn. Det är ett obligatoriskt fält.
      >[!NOTE]
      >
-     >Se till att du anger ett unikt namn för fragmentet. Om det redan finns ett annat fragment med samma namn kan fragmentet inte skapas.
+     >Se till att du anger ett unikt namn för fragmentet. Om det finns ett annat fragment med samma namn kan fragmentet inte skapas.
 
    * **Titel**: Fragmentets namn. Standardvärdet är panelens namn.
 
@@ -99,11 +99,11 @@ Om du dessutom har valt ett XML-schema eller en XDP-formulärmall som formulärm
 
    * **Taggar**: Taggar metadata för fragmentet.
 
-   * **Målsökväg**: Databassökväg där fragmentet ska sparas. Om du inte anger en sökväg skapas en nod med samma namn som fragmentet bredvid noden som innehåller det adaptiva formuläret. Fragmentet sparas i den här noden.
+   * **Målsökväg**: Databassökväg där fragmentet sparas. Om du inte anger en sökväg skapas en nod med samma namn som fragmentet bredvid noden som innehåller det adaptiva formuläret. Fragmentet sparas i den här noden.
 
    * **Formulärmodell**: Beroende på formulärmodellen för det adaptiva formuläret visas **XML-schema**, **Formulärmall**, eller **Ingen**. Det är ett icke-redigerbart fält.
 
-   * **Fragmentmodellrot**: Visas endast i XSD-baserade adaptiva formulär. Den anger fragmentmodellens rot. Du kan **/** eller den komplexa XSD-typen i listrutan. Observera att du bara kan återanvända fragmentet i ett annat adaptivt formulär om du väljer den komplexa typen som fragmentmodellrot.
+   * **Fragmentmodellrot**: Visas endast i XSD-baserade adaptiva formulär. Den anger fragmentmodellens rot. Du kan **/** eller den komplexa XSD-typen i listrutan. Du kan bara återanvända fragmentet i ett annat anpassat formulär om du väljer den komplexa typen som fragmentmodellroten.
 Om du väljer **/** som fragmentmodellroten är hela XSD-trädet från roten synligt på fliken för adaptiv formulärdatamodell. För en fragmentmodellrot av en komplex typ visas bara de underordnade för den valda komplexa typen på fliken för adaptiv formulärdatamodell. Om du skapar ett fragment och väljer en komplex typ som **Fragmentmodellrot** kan du använda den var den komplexa typen än används, antingen i samma formulär eller i flera formulär.
 
    * **XSD-referens**: Visas endast i XSD-baserade adaptiva formulär. Den visar platsen för XML-schemat.
@@ -128,12 +128,12 @@ Om du väljer **/** som fragmentmodellroten är hela XSD-trädet från roten syn
 
 Alla fragment som du infogar i anpassningsbara formulär visas som en platshållarbild. Platshållaren visar titlar på upp till högst tio underordnade paneler i fragmentet. Du kan konfigurera AEM Forms så att hela avsnittet visas i stället för platshållarbilden.
 
-Utför följande steg för att visa fullständiga fragment i formulär:
+Utför följande steg så att du kan visa fullständiga fragment i formulär:
 
-1. Gå till konfigurationssidan för AEM webbkonsol på https:host *]:[*[*port*]/system/console/configMgr.
+1. Gå till konfigurationssidan för AEM webbkonsol på https:[*host*]:[*port*]/system/console/configMgr.
 
-1. Sök och klicka **[!UICONTROL Adaptive Form and Interactive Communication Web Channel Configuration]** för att öppna den i redigeringsläge.
-1. Inaktivera **[!UICONTROL Enable Placeholder in place of Fragment]** om du vill visa hela fragment i stället för platshållarbilden.
+1. Sök och välj **[!UICONTROL Adaptive Form and Interactive Communication Web Channel Configuration]** för att öppna den i redigeringsläge.
+1. Inaktivera **[!UICONTROL Enable Placeholder in place of Fragment]** så att du kan visa hela fragment i stället för platshållarbilden.
 
 ### Infoga ett fragment i ett anpassat formulär {#insert-a-fragment-in-an-adaptive-form}
 
@@ -172,7 +172,7 @@ Du kan ersätta eller ändra ett adaptivt formulärfragment med ett annat fragme
 
 ### Generera arkivdokument för adaptivt formulärfragment {#generate-DOR-for-fragments}
 
-Med hjälp av DOR (Document of Record) kan du spara information i formulären i utskrifts- eller dokumentformat. På så sätt kan du när som helst spåra kundinformation och du kan också använda arkiveringsdokumentet för att arkivera formulär och innehåll tillsammans i PDF-format. [Lär dig att generera ett urkunder för anpassade formulärfragment](/help/forms/using/generate-document-of-record-for-non-xfa-based-adaptive-forms.md).
+Med hjälp av DOR (Document of Record) kan du lagra information om formulären i utskrifts- eller dokumentformat. Det hjälper er att spåra kundinformation när som helst senare, och ni kan också använda arkiveringsdokumentet för att arkivera formulär och innehåll tillsammans i PDF-format. [Lär dig att generera ett urkunder för anpassade formulärfragment](/help/forms/using/generate-document-of-record-for-non-xfa-based-adaptive-forms.md).
 
 ### Använda ett formulärfragment flera gånger i ett adaptivt formulär {#using-form-fragment-mutiple-times-in-af}
 
@@ -253,14 +253,14 @@ Om du vill lokalisera ett adaptivt formulär som innehåller adaptiva formulärf
 
 >[!NOTE]
 >
->Lokaliseringstangenterna i fragmentet visas inte i XLIFF-filen för ett anpassat formulär.
+>Lokaliseringstangenterna i fragmentet visas inte i XLIFF-filen för ett adaptivt formulär.
 
 ## Viktiga punkter att komma ihåg när du arbetar med fragment {#key-points-to-remember-when-working-with-fragments}
 
 * Kontrollera att fragmentnamnet är unikt. Fragmentet kan inte skapas om det finns ett befintligt fragment med samma namn.
-* Om du sparar en panel som fragment som innehåller ett annat XDP-fragment i ett XDP-baserat adaptivt formulär, binds det resulterande fragmentet automatiskt till det underordnade XDP-fragmentet. Om det finns ett XSD-baserat anpassningsbart formulär binds det resulterande fragmentet till schemaroten.
-* När du skapar ett adaptivt formulärfragment skapas en fragmentnod, som liknar noden guideContainer för ett adaptivt formulär, i CRXDe Lite.
-* Ett fragment i ett adaptivt formulär som använder en annan formulärdatamodell stöds inte. Ett XDP-baserat fragment stöds till exempel inte i en XSD-baserad adaptiv form och vice versa.
+* Om du sparar en panel som ett fragment som innehåller ett annat XDP-fragment i ett XDP-baserat adaptivt formulär, binds det resulterande fragmentet automatiskt till det underordnade XDP-fragmentet. Om det finns ett XSD-baserat adaptivt formulär binds det resulterande fragmentet till schemaroten.
+* När du skapar ett adaptivt formulärfragment skapas en fragmentnod, som liknar noden guideContainer för ett adaptivt formulär i CRXDE Lite.
+* Ett fragment i ett adaptivt formulär som använder en annan formulärdatamodell stöds inte. Ett XDP-baserat fragment stöds till exempel inte i en XSD-baserad adaptiv form och omvänt.
 * Adaptiva formulärfragment kan användas via fliken Adaptiva formulärfragment i AEM innehållssökare.
 * Alla uttryck, skript och format i ett fristående adaptivt formulärfragment behålls när de infogas som referens eller bäddas in i ett adaptivt formulär.
 * Du kan inte redigera ett adaptivt formulärfragment, som infogas med referens, inifrån ett adaptivt formulär. Om du vill redigera kan du antingen redigera det fristående adaptiva formulärfragmentet eller bädda in fragmentet i det adaptiva formuläret.

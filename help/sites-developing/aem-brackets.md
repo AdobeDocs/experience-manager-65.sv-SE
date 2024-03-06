@@ -6,16 +6,16 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: development-tools
 content-type: reference
 exl-id: 829d8256-b415-4a44-a353-455ac16950f3
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
-source-wordcount: '937'
-ht-degree: 0%
+source-wordcount: '913'
+ht-degree: 1%
 
 ---
 
 # AEM Brackets Extension{#aem-brackets-extension}
 
-## Översikt {#overview}
+## Ökning {#overview}
 
 Tillägget AEM Brackets ger ett smidigt arbetsflöde för att redigera AEM komponenter och klientbibliotek och utnyttjar kraften i [Parenteser](https://brackets.io/) kodredigeraren som ger åtkomst från kodredigeraren till Photoshop-filer och -lager. Den enkla synkronisering som tillägget ger (ingen Maven eller filvalv krävs) ökar utvecklarens effektivitet och hjälper även gränssnittsutvecklare med begränsade AEM att delta i projekt. Det här tillägget har även stöd för [HTML-mallspråk (HTL)](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html), vilket minskar komplexiteten i JSP och gör komponentutvecklingen enklare och säkrare.
 
@@ -83,7 +83,7 @@ Om du vill synkronisera ditt innehåll till och från en AEM utvecklingsinstans 
 
 ![chlimage_1-55](assets/chlimage_1-55a.png)
 
-Med projektinställningarna kan du definiera:
+Med projektinställningarna kan du definiera följande:
 
 1. Server-URL (till exempel `http://localhost:4502`)
 1. Om servrar som inte har ett giltigt HTTPS-certifikat ska tolereras (håll inte markerat om det inte krävs)

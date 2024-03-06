@@ -5,9 +5,9 @@ content-type: reference
 topic-tags: customization
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 exl-id: 73b0057f-082d-4502-90e2-5e41b52c1185
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: 0aa929021aa724e4ec18d49fea26f8c0b0538bdc
 workflow-type: tm+mt
-source-wordcount: '789'
+source-wordcount: '790'
 ht-degree: 0%
 
 ---
@@ -65,7 +65,7 @@ Du skapar en **adaptiv mall** och tillämpa temat på mallen. Du kan sedan anvä
 
    **Mindre variabelfiler**: Detta är de filer där du definierar eller åsidosätter variabler som används för att definiera CSS-format.
 
-   Adaptiva formulär innehåller OTB-variabler som definieras i följande `.less` filer:
+   Adaptiva formulär har färdiga variabler som definieras i följande `.less` filer:
 
    * `/apps/clientlibs/fd/af/guidetheme/common/less/globalvariables.less`
    * `/apps/clientlibs/fd/af/guidetheme/common/less/layoutvariables.less`
@@ -107,7 +107,7 @@ Du skapar en **adaptiv mall** och tillämpa temat på mallen. Du kan sedan anvä
 
    **Mindre filer som blandas:** Du kan definiera de funktioner som accepterar variabler som argument. Utdata för dessa funktioner är de resulterande formaten. Använd dessa blandningar i olika format så att du slipper upprepa CSS-formaten.
 
-   Adaptiva former innehåller OTB-blandningar som definieras i:
+   Adaptiva formulär innehåller färdiga blandningar som definieras i:
 
    * `/apps/clientlibs/fd/af/guidetheme/common/less/adaptiveforms-mixins.less`
 
@@ -206,7 +206,7 @@ När du har skapat ett adaptivt formulärtema utför du följande steg för att 
 
 1. Inkludera temat som skapats i [skapa ett anpassat formulärtema](/help/forms/using/creating-custom-adaptive-form-themes.md#p-to-create-an-adaptive-form-theme-p) avsnitt, skapa en anpassad sida av typen `cq:Component`.
 
-   Till exempel, `/apps/myAfCustomizations/myAfPages/forestPage`
+   Exempel: `/apps/myAfCustomizations/myAfPages/forestPage`
 
    1. Lägg till en `sling:resourceSuperType` egenskap och ange dess värde som `fd/af/components/page/base`.
 

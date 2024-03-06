@@ -6,10 +6,10 @@ feature: Smart Tags, Search
 role: User
 exl-id: 5eff4a0f-30b1-4753-ad0b-002656eed972
 hide: true
-source-git-commit: 3d5e9ad8ee19756b05e5a77a3f748bc647fcf734
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
-source-wordcount: '1531'
-ht-degree: 3%
+source-wordcount: '1523'
+ht-degree: 1%
 
 ---
 
@@ -32,7 +32,7 @@ När en tagg har tränats och är klar kan tjänsten nu använda dessa taggar p�
 
 I bakgrunden använder Smart Content Service Adobe Sensei AI-ramverket för att träna sin bildigenkänningsalgoritm i er taggstruktur och affärsklonomi. Den här innehållsintelligensen används sedan för att tillämpa relevanta taggar på en annan uppsättning resurser.
 
-Smart Content Service är en molntjänst som är värd för [!DNL Adobe Developer Console]. Så här använder du [!DNL Adobe Experience Manager]måste systemadministratören integrera [!DNL Experience Manager] driftsättning med [!DNL Adobe Developer Console].
+Smart Content Service är en molntjänst som är värd för [!DNL Adobe Developer Console]. Så här använder du det i [!DNL Adobe Experience Manager]måste systemadministratören integrera [!DNL Experience Manager] driftsättning med [!DNL Adobe Developer Console].
 
 Här är sammanfattningsvis de viktigaste stegen för att använda tjänsten Smart Content:
 
@@ -45,7 +45,7 @@ Här är sammanfattningsvis de viktigaste stegen för att använda tjänsten Sma
 
 ## Förutsättningar och format som stöds {#prerequisites}
 
-Innan du kan använda Smart Content Service måste du ha/se till/göra följande för att kunna integrera med [!DNL Adobe Developer Console]:
+Innan du kan använda tjänsten för smart innehåll bör du kontrollera följande för att skapa en integrering på [!DNL Adobe Developer Console]:
 
 * Ett Adobe ID-konto med administratörsbehörighet för organisationen.
 * Aktivera tjänsten Smart Content Service för din organisation.
@@ -80,7 +80,7 @@ Tjänsten använder smarta taggar för resursåtergivningar av följande MIME-ty
 
 ## Onboarding {#onboarding}
 
-Tjänsten Smart Content Service kan köpas som tillägg till [!DNL Experience Manager]. När du har köpt funktionen skickas ett e-postmeddelande till administratören för organisationen med en länk till [!DNL Adobe I/O].
+Tjänsten Smart Content Service kan köpas som tillägg till [!DNL Experience Manager]. När du har köpt produkten skickas ett e-postmeddelande till administratören för organisationen med en länk till [!DNL Adobe I/O].
 
 Administratören kan följa länken för att integrera Smart Content Service med [!DNL Experience Manager]. Integrera tjänsten med [!DNL Experience Manager Assets], se [Konfigurera smarta taggar](config-smart-tagging.md).
 
@@ -99,7 +99,6 @@ Lägg till resurserna i en mapp och använd taggarna på varje resurs från egen
 >1. Utbildning är en oåterkallelig process. Adobe rekommenderar att du granskar taggarna i den välstrukturerade resursuppsättningen innan du utbildar Smart Content Service på taggarna.
 >1. Innan du utbildar dig för en tagg, se [Utbildningsriktlinjer för smarta innehållstjänster](/help/assets/config-smart-tagging.md#training-the-smart-content-service).
 >1. När du utbildar Smart Content Service för första gången rekommenderar Adobe att du utbildar den på minst två distinkta taggar.
-
 
 ## Förstå [!DNL Experience Manager] sökresultat med smarta taggar {#understandsearch}
 
@@ -183,14 +182,14 @@ Du kan också tilldela en tagg en högre rankning för att öka dess relevans f�
 1. I sökrutan söker du efter resurser som är baserade med en tagg som nyckelord.
 1. Granska sökresultaten för att identifiera en bild som du inte tycker är relevant för din sökning.
 1. Markera bilden och klicka på **[!UICONTROL Manage Tags]** i verktygsfältet.
-1. Från **[!UICONTROL Manage Tags]** Granska taggarna. Om du inte vill att bilden ska genomsökas baserat på en viss tagg markerar du taggen och klickar sedan på **[!UICONTROL Delete]** i verktygsfältet. Du kan även klicka på `x` symbol som visas bredvid ett märkord.
+1. Från **[!UICONTROL Manage Tags]** kan du granska taggarna. Om du inte vill att bilden ska genomsökas baserat på en viss tagg, markerar du taggen och klickar sedan på **[!UICONTROL Delete]** i verktygsfältet. Du kan även klicka på `x` symbol som visas bredvid ett märkord.
 1. Om du vill tilldela en tagg en högre rankning markerar du taggen och klickar på **[!UICONTROL Promote]** i verktygsfältet. Taggen som du höjer upp flyttas till **[!UICONTROL Tags]** -avsnitt.
 1. Klicka **[!UICONTROL Save]** och sedan klicka **[!UICONTROL OK]**
-1. Navigera till **[!UICONTROL Properties]** sida för bilden. Observera att taggen som du befordrade är mer relevant och visas tidigare i sökresultatet.
+1. Navigera till **[!UICONTROL Properties]** sida för bilden. Observera att taggen som du befordrade har fått större relevans och visas tidigare i sökresultatet.
 
 ## Tips och begränsningar {#tips-best-practices-limitations}
 
 * Använd de bilder som passar bäst för att utbilda modellen. Utbildningen kan inte återupptas eller så kan utbildningsmodellen inte tas bort. Hur korrekt taggningen är beror på den aktuella kursen, så gör det med omsorg.
-* Användningen av smarta innehållstjänster är begränsad till upp till 2 miljoner taggade bilder per år. Alla duplicerade bilder som bearbetas och taggas räknas som taggade bilder.
+* Användningen av smarta innehållstjänster är begränsad till 2 miljoner taggade bilder per år. Alla duplicerade bilder som bearbetas och taggas räknas som taggade bilder.
 * Om du kör taggningsarbetsflödet från tidslinjen kan du använda taggar på högst 15 resurser i taget.
 * Smarta taggar fungerar bara för bildformaten PNG och JPG. Resurser som stöds och som har återgivningar skapade i dessa två format taggas med smarta taggar.

@@ -2,9 +2,9 @@
 title: CRX/bundle och Start page service unavailable errors once latest 6.5.15.0 service pack is installed
 description: CRX/bundle och Start page service unavailable errors once latest 6.5.15.0 service pack is installed
 exl-id: dfe015a3-3a24-41c5-aede-8e086851d62b
-source-git-commit: e961f0c7107b4eacb0d5e50565cb64f5fa30e265
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
-source-wordcount: '348'
+source-wordcount: '276'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ Denna lösning gäller
 >
 >Felsökningsstegen gäller alla programservrar utom JBoss EAP 7.4.
 
-Efter installation [AEM 6.5.15.0 Service Pack](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.15.0.zip)Om det uppstår fel i CRX/bundle och startsidan när tjänsten inte är tillgänglig utför du följande steg:
+Efter installation [AEM 6.5.15.0 Service Pack](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.15.0.zip)Om det uppstår fel i CRX/bundle och startsidan, ska du utföra följande steg:
 
 1. Stoppa programservern.
 1. Navigera till `[aem-forms root]\crx-repository\launchpad\felix\bundle52`.

@@ -7,9 +7,9 @@ topic-tags: Security
 content-type: reference
 exl-id: ccd8577b-3bbf-40ba-9696-474545f07b84
 feature: Security
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
-source-wordcount: '1797'
+source-wordcount: '1737'
 ht-degree: 0%
 
 ---
@@ -17,17 +17,17 @@ ht-degree: 0%
 
 # Tjänstanvändare i Adobe Experience Manager (AEM) {#service-users-in-aem}
 
-## Översikt {#overview}
+## Ökning {#overview}
 
 Huvudsättet att få en administrativ session eller resurslösare i AEM var att använda `SlingRepository.loginAdministrative()` och `ResourceResolverFactory.getAdministrativeResourceResolver()` metoder från Sling.
 
-Ingen av dessa metoder har dock utformats runt [princip om minst privilegium](https://en.wikipedia.org/wiki/Principle_of_least_privilege) och gör det för enkelt för en utvecklare att inte planera för en lämplig struktur och motsvarande åtkomstkontrollnivåer (ACL) för sitt innehåll tidigt. Om det finns en säkerhetslucka i en sådan tjänst leder det ofta till eskalering av behörigheter till `admin` -användare, även om själva koden inte behöver administratörsbehörighet för att fungera.
+Ingen av dessa metoder har dock utformats runt [princip om minst privilegium](https://en.wikipedia.org/wiki/Principle_of_least_privilege). Det gör det för enkelt för en utvecklare att inte planera för en korrekt struktur och motsvarande åtkomstkontrollnivåer (ACL) för innehållet tidigt. Om det finns en säkerhetslucka i en sådan tjänst leder det ofta till eskalering av behörigheter till `admin` -användare, även om själva koden inte behöver administratörsbehörighet för att fungera.
 
 ## Så här fasar du ut administratörssessioner {#how-to-phase-out-admin-sessions}
 
 ### Prioritet 0: Är funktionen aktiv/nödvändig/borttagen? {#priority-is-the-feature-active-needed-derelict}
 
-Det kan finnas fall där adminsessionen inte används eller där funktionen är helt inaktiverad. Om så är fallet med implementeringen, se till att du tar bort funktionen helt eller passar in den med [NOP-kod](https://en.wikipedia.org/wiki/NOP).
+Det kan finnas fall där adminsessionen inte används eller där funktionen är helt inaktiverad. I så fall måste du ta bort funktionen helt eller anpassa den efter implementeringen [NOP-kod](https://en.wikipedia.org/wiki/NOP).
 
 ### Prioritet 1: Använd begärandesessionen {#priority-use-the-request-session}
 
@@ -57,7 +57,7 @@ Se även till att alla nya funktioner du utvecklar följer dessa principer:
    * Åtkomstkontroll ska kännas naturlig
    * Åtkomstkontrollen måste verkställas av databasen, inte av programmet
 
-* **Använd nodtyper**
+* **Använd nodetypes**
 
    * Begränsa uppsättningen egenskaper som kan anges
 
@@ -80,7 +80,7 @@ Vare sig du tillämpar åtkomstkontroll vid innehållsomstrukturering eller när
 
 ## Tjänstanvändare och mappningar {#service-users-and-mappings}
 
-Om ovanstående misslyckas erbjuder Sling 7 en tjänst för Mappning av tjänstanvändare, som gör det möjligt att konfigurera en mappning från paket till användare och två motsvarande API-metoder:
+Om ovanstående misslyckas erbjuder Sling 7 en tjänst för Mappning av tjänstanvändare, som gör att du kan konfigurera en mappning från paket till användare och två motsvarande API-metoder:
 
 * [`SlingRepository.loginService()`](https://sling.apache.org/apidocs/sling7/org/apache/sling/jcr/api/SlingRepository.html#loginService-java.lang.String-java.lang.String-)
 * [`ResourceResolverFactory.getServiceResourceResolver()`](https://sling.apache.org/apidocs/sling7/org/apache/sling/api/resource/ResourceResolverFactory.html#getServiceResourceResolver-java.util.Map-)
@@ -116,7 +116,7 @@ Om du vill ersätta administratörssessionen med en tjänstanvändare utför du 
 
 ## Skapa en tjänstanvändare {#creating-a-new-service-user}
 
-När du har verifierat att ingen användare i listan över AEM användare kan användas för ditt användningsfall och att motsvarande RTC-problem har godkänts, kan du lägga till den nya användaren i standardinnehållet.
+När du har verifierat att ingen användare i listan över AEM användare kan användas för ditt användningsfall och att motsvarande RTC-problem har godkänts lägger du till den nya användaren i standardinnehållet.
 
 Rekommenderad metod är att skapa en tjänstanvändare som ska använda databasutforskaren på *https://&lt;server>:&lt;port>/crx/explorer/index.jsp*
 
@@ -190,13 +190,13 @@ Om du vill lägga till en mappning från tjänsten till motsvarande systemanvän
 
    * Gå till webbkonsolen på *https://serverhost:serveraddress/system/console/configMgr*
    * Sök efter **Tillägg till användarmappningstjänsten för Apache Sling-tjänsten**
-   * Klicka på länken för att se om rätt konfiguration finns på plats.
+   * Klicka på länken för att se om rätt konfiguration finns.
 
 ## Hantera delade sessioner i tjänster {#dealing-with-shared-sessions-in-services}
 
 Samtal till `loginAdministrative()` visas ofta tillsammans med delade sessioner. Dessa sessioner hämtas vid aktivering av tjänsten och loggas bara ut när tjänsten har stoppats. Även om detta är vanligt leder det till två problem:
 
-* **Säkerhet:** Sådana administratörssessioner används för att cachelagra och returnera resurser eller andra objekt som är bundna till den delade sessionen. Senare i anropsstacken kan dessa objekt anpassas till sessioner eller resurslösare med utökad behörighet, och ofta är det inte tydligt för anroparen att det är en administratörssession som de arbetar med.
+* **Säkerhet:** Sådana administratörssessioner används för att cachelagra och returnera resurser eller andra objekt som är bundna till den delade sessionen. Senare i anropsstacken kan dessa objekt anpassas till sessioner eller resurslösare med förhöjd behörighet. Det är ofta inte tydligt för anroparen att det är en administratörssession som de arbetar med.
 * **Prestanda:** I Oak kan delade sessioner orsaka prestandaproblem och du bör inte använda dem.
 
 Den mest uppenbara lösningen för säkerhetsrisken är att helt enkelt ersätta `loginAdministrative()` ring med `loginService()` en till en användare med begränsad behörighet. Detta påverkar dock inte eventuella prestandaförsämringar. En möjlighet att begränsa detta är att kapsla in all begärd information i ett objekt som inte har någon koppling till sessionen. Skapa sedan (eller förstör) sessionen på begäran.

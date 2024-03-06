@@ -2,9 +2,9 @@
 title: Cachelagring och prestanda
 description: Lär dig mer om de olika konfigurationer som är tillgängliga för att aktivera GraphQL- och innehållscachning för att optimera prestanda för implementeringen av din e-handel.
 exl-id: ecce64bf-5960-4ddb-b6e3-dad401038c11
-source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
-source-wordcount: '818'
+source-wordcount: '821'
 ht-degree: 0%
 
 ---
@@ -43,7 +43,7 @@ venia/components/structure/navigation:true:10:600
 
 När du överväger [Referensarkiv för Venedig](https://github.com/adobe/aem-cif-guides-venia) används. Observera användningen av komponentens proxynamn `venia/components/structure/navigation`och **not** namnet på CIF navigeringskomponent (`core/cif/components/structure/navigation/v1/navigation`).
 
-Cachelagring för andra komponenter bör definieras på projektbasis, vanligtvis i samordning med cachning som konfigurerats på Dispatcher-nivå. Kom ihåg att det inte finns någon aktiv ogiltigförklaring av dessa cacher, så cachelagringstiden bör vara noggrann. Det finns inga värden för&quot;en storlek passar alla&quot; som matchar alla möjliga projekt och användningsexempel. Se till att du definierar en cachelagringsstrategi på projektnivå som bäst motsvarar projektets krav.
+Cachelagring för andra komponenter bör definieras på projektbasis, vanligtvis i samordning med cachning som konfigurerats på Dispatcher-nivå. Kom ihåg att det inte finns någon aktiv ogiltigförklaring av dessa cacheminnen, så cachelagringstiden bör vara noggrann. Det finns inga värden för&quot;en storlek passar alla&quot; som matchar alla möjliga projekt och användningsfall. Se till att du definierar en cachelagringsstrategi på projektnivå som bäst motsvarar projektets krav.
 
 ## Dispatcher Caching {#dispatcher}
 

@@ -8,7 +8,7 @@ content-type: reference
 docset: aem65
 feature: Multi Site Manager
 exl-id: ac24b8b4-b3ed-47fa-9a73-03f0c9e68ac8
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
 source-wordcount: '2672'
 ht-degree: 0%
@@ -60,7 +60,7 @@ I följande tabell visas de utrullningskonfigurationer som har installerats med 
   </tr>
   <tr>
    <td>Standardkonfiguration för utrullning</td>
-   <td>Standardkonfiguration för utrullning som gör det möjligt att starta en process vid utlösare för utrullning och kör åtgärder: skapa, uppdatera, ta bort innehåll och beställa underordnade noder.</td>
+   <td>Standardkonfiguration för utrullning som gör att du kan starta en process vid utlösare för utrullning och kör åtgärder: skapa, uppdatera, ta bort innehåll och beställa underordnade noder.</td>
    <td>Vid utrullning</td>
    <td>contentUpdate<br /> contentCopy<br /> contentDelete<br /> referencesUpdate<br /> productUpdate<br /> orderChildren</td>
   </tr>
@@ -108,7 +108,7 @@ I följande tabell visas de utrullningskonfigurationer som har installerats med 
   </tr>
   <tr>
    <td>DPS-publikationer, utrullningskonfiguration</td>
-   <td>DPS Publication-konfiguration som gör att du kan starta en utrullningsprocess vid utlösare för utrullning samtidigt som FolioProducer-bindningsegenskaper utesluts vid den första utrullningen</td>
+   <td>DPS Publication-konfigurering som gör att du kan starta en utrullningsprocess vid utlösare för utrullning samtidigt som du exkluderar FolioProducer-bindningsegenskaper vid den första utrullningen</td>
    <td>Vid utrullning</td>
    <td>contentUpdate<br /> contentCopy<br /> contentDelete<br /> referencesUpdate<br /> orderChildren<br /> dpsMetadataFilter</td>
   </tr>

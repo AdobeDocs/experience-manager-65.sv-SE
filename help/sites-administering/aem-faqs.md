@@ -2,7 +2,7 @@
 title: AEM frågor och svar
 description: Använd de här vanliga frågorna för att förstå, konfigurera och felsöka vanliga arbetsflöden och problem i AEM.
 exl-id: 182c464a-ff7a-467b-9eb5-8ffac335a87a
-source-git-commit: 1a7805f063daf6f3dd07a2ff2d182e58fe7e63b8
+source-git-commit: 0aa929021aa724e4ec18d49fea26f8c0b0538bdc
 workflow-type: tm+mt
 source-wordcount: '936'
 ht-degree: 0%
@@ -80,11 +80,11 @@ Se [Förstå skäl att uppgradera AEM](https://helpx.adobe.com/experience-manage
 
 Om användaren inte har borttagningsbehörighet under objektnoden när de överför filmfilerna misslyckas borttagningssegmentnoderna och överföringen startas om.
 
-#### Vilka är standardinställningarna för OTB-konfigurationer när du skapar en språkkopia? {#what-are-the-default-settings-for-ootb-configurations-while-creating-language-copy}
+#### Vilka är standardinställningarna för färdiga konfigurationer när du skapar en språkkopia? {#what-are-the-default-settings-for-ootb-configurations-while-creating-language-copy}
 
 När du skapar en språkkopia via Touch-gränssnittet (**Referenser** > **Uppdatera språkkopia**) skapas en ny DAM-mapp under det nya språket och resurserna refereras därifrån.
 
-Det här är standardinställningen för OTB-konfigurationer. Du kan ange **Översätt sidresurser** = **Översätt inte** i översättningskonfigurationer.
+Det här är standardinställningen för färdiga konfigurationer. Du kan ange **Översätt sidresurser** = **Översätt inte** i översättningskonfigurationer.
 AEM 6.4 **verktyg** > **Cloud Service** > **Översättningsmolntjänster**.
 
 #### Hur inaktiverar man en AEM som orsakar exponentiell tillväxt för AEM SegmentStore (AEM 6.3.1.1)? {#how-to-disable-an-aem-component-causing-exponential-growth-for-the-aem-segmentstore-aem}

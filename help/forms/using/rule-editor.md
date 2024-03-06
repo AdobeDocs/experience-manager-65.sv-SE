@@ -7,9 +7,9 @@ feature: Adaptive Forms, Foundation Components
 discoiquuid: 1b905e66-dc05-4f14-8025-62a78feef12a
 docset: aem65
 exl-id: c611a1f8-9d94-47f3-bed3-59eef722bf98
-source-git-commit: d85fc98d9a31bc4014aef4311ba0f838c7ef619a
+source-git-commit: 0aa929021aa724e4ec18d49fea26f8c0b0538bdc
 workflow-type: tm+mt
-source-wordcount: '6886'
+source-wordcount: '6890'
 ht-degree: 0%
 
 ---
@@ -79,7 +79,7 @@ Mer information om vilka regeltyper som finns i regelredigeraren finns i [Tillg�
 * Om du vill aktivera en åtgärd baserat på flera villkor bör du använda konstruktorn action-condition. Om du till exempel vill visa och dölja fält A genom att utvärdera villkor i fält B, C och D, använder du Visa eller Dölj regeltyp i fält A.
 * Använd villkorskonstruktion för villkorsåtgärd eller åtgärd om regeln innehåller en åtgärd för ett villkor.
 * Om en regel söker efter ett villkor och utför en åtgärd omedelbart när ett värde anges i ett fält eller när ett fält avslutas, rekommenderar vi att du skriver en regel med villkorsstyrd åtgärd eller med regeltypen När i fältet som villkoret utvärderas i.
-* Villkoret i regeln När utvärderas när en användare ändrar värdet på objektet som regeln När används på. Om du vill att åtgärden ska utlösas när värdet ändras på serversidan, som vid förifyllning av värdet, rekommenderar vi att du skriver en When-regel som utlöser åtgärden när fältet initieras.
+* Villkoret i regeln När utvärderas när en användare ändrar värdet på objektet som regeln När används på. Men om du vill att åtgärden ska utlösas när värdet ändras på serversidan, som att fylla i värdet i förväg, rekommenderar vi att du skriver en When-regel som utlöser åtgärden när fältet initieras.
 * När du skriver regler för nedrullningsbara listor, alternativknappar eller kryssruteobjekt fylls alternativen eller värdena för dessa formulärobjekt i förväg i regelredigeraren.
 
 ## Tillgängliga operatortyper och händelser i regelredigeraren {#available-operator-types-and-events-in-rule-editor}
@@ -739,7 +739,7 @@ Du kan utföra följande åtgärder på regler:
 
 * **Expandera/komprimera**: Innehållskolumnen i regellistan visar regelinnehållet. Om hela regelinnehållet inte visas i standardvyn väljer du ![expand-rule-content](assets/expand-rule-content.png) för att utöka den.
 
-* **Ändra ordning**: Alla nya regler som du skapar staplas längst ned i regellistan. Reglerna körs uppifrån och ned. Regeln längst upp körs först följt av andra regler av samma typ. Om du till exempel har reglerna When, Show, Enable och When vid första, andra, tredje respektive fjärde positionen uppifrån, kommer regeln When överst att köras först följt av regeln When vid den fjärde positionen. Sedan körs reglerna Visa och Aktivera.
+* **Ändra ordning**: Alla nya regler som du skapar staplas längst ned i regellistan. Reglerna körs uppifrån och ned. Regeln längst upp körs först, följt av andra regler av samma typ. Om du till exempel har reglerna When, Show, Enable och When vid den första, andra, tredje respektive fjärde positionen uppifrån, kommer regeln When överst att köras först följt av regeln When vid den fjärde positionen. Sedan körs reglerna Visa och Aktivera.
 Du kan ändra ordningen på en regel genom att trycka på ![sort-rules](assets/sort-rules.png) eller dra och släpp det i önskad ordning i listan.
 
 * **Redigera**: Om du vill redigera en regel markerar du kryssrutan bredvid regeltiteln. Ytterligare alternativ för att redigera och ta bort regeln visas. Välj **Redigera** om du vill öppna den markerade regeln i regelredigeraren i visuellt läge eller kodredigeringsläge beroende på vilket läge som används för att skapa regeln.

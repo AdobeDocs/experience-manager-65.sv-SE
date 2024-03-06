@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: best-practices
 exl-id: 6dfaa14d-5dcf-4e89-993a-8d476a36d668
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 0aa929021aa724e4ec18d49fea26f8c0b0538bdc
 workflow-type: tm+mt
-source-wordcount: '4598'
+source-wordcount: '4518'
 ht-degree: 0%
 
 ---
@@ -140,7 +140,7 @@ Rekommenderade värden är:
 * `-Doak.queryLimitInMemory=500000`
 * `-Doak.queryLimitReads=100000`
 
-I AEM 6.3 är de två ovanstående parametrarna förkonfigurerade OOTB och kan sparas via OSGi QueryEngineSettings.
+I AEM 6.3 är de två ovanstående parametrarna förkonfigurerade i körklart läge och kan sparas via OSGi QueryEngineSettings.
 
 Mer information finns under: [https://jackrabbit.apache.org/oak/docs/query/query-engine.html#Slow_Queries_and_Read_Limits](https://jackrabbit.apache.org/oak/docs/query/query-engine.html#Slow_Queries_and_Read_Limits)
 

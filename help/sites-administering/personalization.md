@@ -1,19 +1,19 @@
 ---
-title: Personanpassning
+title: Personalisering
 description: Lär dig mer om personalisering i Adobe Experience Manager för att ge användaren en skräddarsydd miljö med dynamiskt innehåll.
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: personalization
 content-type: reference
 exl-id: 3a550a33-b54b-4217-b9a6-b5a7971276ee
-source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
+source-git-commit: 518207a0d8a95ef17b0972855a58f124fb215c85
 workflow-type: tm+mt
 source-wordcount: '1696'
 ht-degree: 0%
 
 ---
 
-# Personanpassning {#personalization}
+# Personalisering {#personalization}
 
 ## Vad är personalisering? {#what-is-personalization}
 
@@ -44,7 +44,7 @@ Personalisering kan antingen vara:
 
 #### Explicit {#explicit}
 
-* Anpassning: Används för att göra val från olika innehållskällor.
+* Anpassning: användaren gör val från ett urval av innehållskällor.
 
 #### Implicit {#implicit}
 

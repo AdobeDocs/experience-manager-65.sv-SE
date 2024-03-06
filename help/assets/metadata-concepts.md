@@ -5,10 +5,10 @@ contentOwner: AG
 role: User, Admin
 feature: Metadata
 exl-id: 312fff5f-39c1-48c1-aa99-40feb72c2f59
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: abd3fbb5abb339d5b019fd2d7cf325404fb079e8
 workflow-type: tm+mt
-source-wordcount: '2705'
-ht-degree: 6%
+source-wordcount: '2653'
+ht-degree: 5%
 
 ---
 
@@ -134,7 +134,7 @@ Programspecifika metadata innehåller tekniska och beskrivande metadata. Om du a
 * CC - [!DNL Creative Commons].
 * [!DNL XMPRights].
 * PLUS - [Picture Licensing Universal System](https://www.useplus.com).
-* PRISM - [Publiceringskrav för branschstandardmetadata](https://www.idealliance.org/prism-metadata).
+* PRISM - [Publiceringskrav för branschstandardmetadata](https://www.w3.org/submissions/2020/SUBM-prism-20200910/Image_Guide.pdf).
 * PRL - PRISM Rights Language.
 * PUR - PRISM-användningsrättigheter.
 * `xmpPlus` - Integration av PLUS med XMP.
@@ -149,7 +149,7 @@ Programspecifika metadata innehåller tekniska och beskrivande metadata. Om du a
 ### Utskriftsspecifika metadata {#print-specific-metadata}
 
 * PDF och PDF/X - Adobe PDF och tredjepartsprogram.
-* PRISM - [Publiceringskrav för branschstandardmetadata](https://www.idealliance.org/prism-metadata).
+* PRISM - [Publiceringskrav för branschstandardmetadata](https://www.w3.org/submissions/2020/SUBM-prism-20200910/Image_Guide.pdf).
 * XMP - [!DNL Extensible Metadata Platform].
 * `xmpPG` - XMP metadata för sidindelad text.
 
@@ -202,7 +202,7 @@ Genom att skapa metadatadrivna arbetsflöden kan du automatisera vissa processer
 * Arbetsflödet kan kontrollera om ett copyrightmeddelande för en mediefil tillåter distribution eller inte. Systemet skickar alltså resursen till den ena servern eller den andra.
 * Ett arbetsflöde kan söka efter resurser utan fördefinierade, obligatoriska metadata eller resurser med *ogiltig* metadata.
 
-## XMP-metadata {#xmp-metadata}
+## XMP metadata {#xmp-metadata}
 
 XMP (Extensible Metadata Platform) är den metadatastandard som används av [!DNL Adobe Experience Manager Assets] för all metadatahantering. XMP har ett standardformat för att skapa, bearbeta och utbyta metadata för en mängd olika program.
 

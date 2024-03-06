@@ -5,9 +5,9 @@ topic-tags: introduction
 docset: aem65
 feature: Adaptive Forms
 exl-id: 77a05f83-ac9a-4221-85ac-439e82623a28
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
-source-wordcount: '905'
+source-wordcount: '913'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ ht-degree: 0%
 
 Söker du en mobilvänlig **formulärupplevelse** som förenklar registrering, ökar engagemanget och minskar handläggningstiden, **anpassningsbara formulär** passar dig perfekt. Adaptiva formulär ger en mobil, automatiserad och analysvänlig formulärupplevelse. Ni kan enkelt skapa formulär som är responsiva och interaktiva till sin natur, använda automatiserade processer för att minska administrativa och repetitiva uppgifter och använda dataanalys för att förbättra och personalisera den upplevelse kunderna har med era formulär.
 
-Den här självstudiekursen ger ett komplett ramverk för att skapa ett anpassningsbart formulär. Självstudiekursen är indelad i ett användningsfall och i flera guider. Varje guide hjälper dig att lära dig mer och lägga till nya funktioner i det adaptiva formulär som skapas i den här kursen. Du har ett fungerande anpassningsbart formulär efter varje guide. Guiden för att skapa ett anpassat formulär är tillgänglig. Efterföljande guider kommer snart att vara tillgängliga. I slutet av den här självstudiekursen kan du:
+Den här självstudiekursen ger ett komplett ramverk för att skapa ett anpassningsbart formulär. Självstudiekursen är indelad i ett användningsfall och i flera guider. Varje guide hjälper dig att lära dig mer och lägga till nya funktioner i det adaptiva formulär som skapas i den här kursen. Du har ett fungerande anpassningsbart formulär efter varje guide. Guiden för att skapa ett anpassat formulär är tillgänglig. Efterföljande guider kommer snart. I slutet av den här självstudiekursen kan du göra följande:
 
 * Skapa ett anpassningsbart formulär och en formulärdatamodell.
 * Formatera den anpassningsbara formen.
@@ -43,7 +43,7 @@ Webbplatsen körs på Adobe Experience Manager (AEM) och använder AEM [!DNL For
 
 ### Förutsättning {#prerequisite}
 
-* Konfigurera en [AEM författarinstans](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/deploy.html#author-and-publish-installs)
+* Konfigurera en [AEM författarinstans](https://experienceleague.adobe.com/docs/experience-manager-65/content/implementing/deploying/deploying/deploy.html#author-and-publish-installs)
 * Installera [AEM Forms-tillägg](../../forms/using/installing-configuring-aem-forms-osgi.md) on author instance.
 * Hämta JDBC-databasdrivrutin (JAR-fil) från databasprovidern. Exemplen i självstudiekursen är baserade på [!DNL MySQL] databas och användning [!DNL Oracle's] [MySQL JDBC-databasdrivrutin](https://dev.mysql.com/downloads/connector/j/5.1.html).
 
@@ -59,10 +59,10 @@ Adaptiva former är ny generation, engagerande, responsiva, dynamiska och anpass
 
 Mål:
 
-* Skapa ett anpassningsbart formulär där kunden kan lägga till en leveransadress
-* Layoutfält i ett anpassat formulär som visar och accepterar information från en kund
-* Skapa en Skicka-åtgärd för att skicka ett e-postmeddelande med formulärinnehåll
-* Förhandsgranska och skicka ett anpassat formulär
+* Skapa ett anpassningsbart formulär där kunden kan lägga till en leveransadress.
+* Layoutfält i ett anpassat formulär som visar och accepterar information från en kund.
+* Skapa en Skicka-åtgärd för att skicka ett e-postmeddelande som innehåller formulärinnehåll.
+* Förhandsgranska och skicka ett anpassat formulär.
 
 [![Se guiden](https://helpx.adobe.com/content/dam/help/en/marketing-cloud/how-to/digital-foundation/_jcr_content/main-pars/image_1250343773/see-the-guide-sm.png)](create-adaptive-form.md)
 
@@ -70,15 +70,15 @@ Mål:
 
 ![05-create-form-data-model-main_small](assets/05-create-form-data-model-main_small.png)
 
-En formulärdatamodell gör det möjligt att koppla ett anpassningsbart formulär till olika datakällor. AEM användarprofil, RESTful-webbtjänster, SOAP-baserade webbtjänster, OData-tjänster och relationsdatabaser. En formulärdatamodell är ett enhetligt datarepresentationsschema för affärsenheter och tjänster som är tillgängliga i anslutna datakällor. Du kan använda formulärdatamodellen med ett adaptivt formulär för att hämta, uppdatera, ta bort och lägga till data i anslutna datakällor.
+Med en formulärdatamodell kan du koppla ett anpassningsbart formulär till olika datakällor. AEM användarprofil, RESTful-webbtjänster, SOAP-baserade webbtjänster, OData-tjänster och relationsdatabaser. En formulärdatamodell är ett enhetligt datarepresentationsschema för affärsenheter och tjänster som är tillgängliga i anslutna datakällor. Du kan använda formulärdatamodellen med ett adaptivt formulär för att hämta, uppdatera, ta bort och lägga till data i anslutna datakällor.
 
 Mål:
 
-* Konfigurera webbplatsens databasinstans ([!DNL MySQL] databas) som datakällor
-* Skapa formulärdatamodellen med [!DNL MySQL] databas som en datakälla
-* Lägga till datamodellobjekt i formulärdatamodellen
-* Konfigurera läs- och skrivtjänster för formulärdatamodellen
-* Testa formulärdatamodell och konfigurerade tjänster med testdata
+* Konfigurera webbplatsens databasinstans ([!DNL MySQL] som en datakälla.
+* Skapa formulärdatamodellen med [!DNL MySQL] som en datakälla.
+* Lägg till datamodellsobjekt så att du kan skapa datamodellen.
+* Konfigurera läs- och skrivtjänster för formulärdatamodellen.
+* Testa formulärdatamodellen och konfigurerade tjänster med testdata.
 
 [![Se guiden](https://helpx.adobe.com/content/dam/help/en/marketing-cloud/how-to/digital-foundation/_jcr_content/main-pars/image_1250343773/see-the-guide-sm.png)](create-form-data-model.md)
 
@@ -86,12 +86,12 @@ Mål:
 
 ![07-apply-rules-to-adaptive-form_small](assets/07-apply-rules-to-adaptive-form_small.png)
 
-Anpassade formulär ger en redigerare som kan skriva regler för adaptiva formulärobjekt. Dessa regler definierar åtgärder som ska utlösas av formulärobjekt baserat på förinställda villkor, användarindata och användaråtgärder i formuläret. Det gör att man kan säkerställa att blanketterna blir korrekta och snabbare.
+Anpassade formulär ger en redigerare som kan skriva regler för adaptiva formulärobjekt. Dessa regler definierar åtgärder som ska utlösas av formulärobjekt baserat på förinställda villkor, användarindata och användaråtgärder i formuläret. Det bidrar till att säkerställa att blankettifyllnaden blir korrekt och snabbare.
 
 Mål:
 
-* Skapa och tillämpa regler för anpassade formulärfält
-* Använd regler för att aktivera datamodelltjänster för formulär för att uppdatera data till databasen
+* Skapa och tillämpa regler för anpassningsbara formulärfält.
+* Använd regler för att aktivera datamodelltjänster för formulär för att uppdatera data till databasen.
 
 [![Se guiden](https://helpx.adobe.com/content/dam/help/en/marketing-cloud/how-to/digital-foundation/_jcr_content/main-pars/image_1250343773/see-the-guide-sm.png)](apply-rules-to-adaptive-form-fields.md)
 
@@ -103,9 +103,9 @@ Adaptiva formulär ger teman och en [redigerare](../../forms/using/themes.md) f�
 
 Mål:
 
-* Använda ett tema i ett anpassat formulär
-* Skapa ett tema för anpassningsbara formulär med temaredigeraren
-* Använda webbteckensnitt i ett anpassat tema
+* Använd ett av temana i ett anpassat formulär.
+* Skapa ett tema för anpassningsbara formulär med temaredigeraren.
+* Använd Web Fonts i ett anpassat tema.
 
 [![Se guiden](https://helpx.adobe.com/content/dam/help/en/marketing-cloud/how-to/digital-foundation/_jcr_content/main-pars/image_1250343773/see-the-guide-sm.png)](style-your-adaptive-form.md)
 
@@ -117,8 +117,8 @@ Du kan publicera anpassningsbara formulär som ett fristående formulär (single
 
 Mål:
 
-* Publicera det adaptiva formuläret som en AEM sida
-* Bädda in det anpassningsbara formuläret i en AEM [!DNL Sites] Sida
-* Bädda in det adaptiva formuläret på en extern webbsida (en icke-AEM webbsida som finns på andra AEM)
+* Publicera det adaptiva formuläret som en AEM sida.
+* Bädda in det anpassningsbara formuläret i en AEM [!DNL Sites] Sida.
+* Bädda in det adaptiva formuläret på en extern webbsida (en icke-AEM webbsida som finns på andra AEM).
 
 [![Se guiden](https://helpx.adobe.com/content/dam/help/en/marketing-cloud/how-to/digital-foundation/_jcr_content/main-pars/image_1250343773/see-the-guide-sm.png)](publish-your-adaptive-form.md)

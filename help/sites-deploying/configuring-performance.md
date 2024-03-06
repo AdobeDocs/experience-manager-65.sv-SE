@@ -7,9 +7,9 @@ content-type: reference
 topic-tags: configuring
 feature: Configuring
 exl-id: 5b0c9a8c-0f5f-46ee-a455-adb9b9d27270
-source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
-source-wordcount: '6469'
+source-wordcount: '6470'
 ht-degree: 1%
 
 ---
@@ -509,7 +509,7 @@ Formeln för beräkning av cacheförhållandet är:
 
 Om det totala antalet begäranden till exempel är 129491 och antalet begäranden som hanteras av Publish-instansen är 58959 är cachekvoten: **(129491 - 58959)/129491= 54,5 %**.
 
-Om du inte har ett enda utgivar-/dispatcherpar lägger du till förfrågningar från alla avsändare och utgivare tillsammans för att få en korrekt mätning. Se även [Rekommenderade distributioner](/help/sites-deploying/recommended-deploys.md).
+Om du inte har någon personlig koppling mellan utgivaren och utgivaren kan du lägga till förfrågningar från alla avsändare och utgivare tillsammans för att få en korrekt mätning. Se även [Rekommenderade distributioner](/help/sites-deploying/recommended-deploys.md).
 
 >[!NOTE]
 >

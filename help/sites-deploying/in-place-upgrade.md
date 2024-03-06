@@ -4,9 +4,9 @@ description: Lär dig hur du uppgraderar till AEM 6.5 på plats.
 topic-tags: upgrading
 feature: Upgrading
 exl-id: aef6ef00-993c-4252-b0ad-ddc4917beaf7
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
-source-wordcount: '1238'
+source-wordcount: '1214'
 ht-degree: 0%
 
 ---

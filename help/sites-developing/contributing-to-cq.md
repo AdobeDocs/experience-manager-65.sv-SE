@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: introduction
 content-type: reference
 exl-id: 43fb4fa3-269a-4635-b055-4b7d787da21f
-source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
-source-wordcount: '2669'
+source-wordcount: '2635'
 ht-degree: 0%
 
 ---
@@ -95,7 +95,7 @@ Vi strävar efter att designa och koda funktioner på ett icke-mjukt sätt så a
 
 ### Onormal är New Normal {#abnormal-is-the-new-normal}
 
-Förlita dig inte på att du stänger av kopplingar. Se till att du rensar vid start. Onormal avslutning är normal avslutning.
+Förlita dig inte på att du stänger av kopplingar, se till att programmet rensas vid start. Onormal avslutning är normal avslutning.
 
 `shutdown == kill -9 == power outage`
 
@@ -113,7 +113,7 @@ Befintliga API:er kan och bör markeras som inaktuella när de är nyare, men b�
 
 Bakåtkompatibiliteten bör också beaktas när det gäller den allmänna konsekvensen i innehållsstrukturen och användarupplevelsen.
 
-## Viktiga begrepp {#core-concepts}
+## Kärnbegrepp {#core-concepts}
 
 **Författarinstans** - Av säkerhetsskäl, styrningsskäl och andra skäl delas instanser av AEM upp på en produktionsplats i instanser av Author och Publish. Mer information om distributionsarkitekturen (inklusive författare/publiceringsinstanser) finns i dokumentationen om AEM instanser.
 

@@ -8,9 +8,9 @@ content-type: reference
 docset: aem65
 legacypath: /content/docs/en/aem/6-0/develop/mobile/mobile
 exl-id: 21b2037a-685a-441d-aecd-865884253e03
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
-source-wordcount: '3720'
+source-wordcount: '3722'
 ht-degree: 0%
 
 ---
@@ -124,7 +124,7 @@ The **Webbplats för mobil demo inom detaljhandeln** använder följande mobila 
 
 #### Skapa en mobilkomponent {#creating-a-mobile-component}
 
-Det AEM mobilramverket gör det möjligt att utveckla komponenter som är känsliga för den enhet som skickar begäran. I följande kodexempel visas hur du använder det AEM Mobile API:t i en komponent-jsp och särskilt hur du gör det:
+Med det AEM mobilramverket kan du utveckla komponenter som är känsliga för den enhet som skickar begäran. I följande kodexempel visas hur du använder det AEM Mobile API:t i en komponent-jsp och särskilt hur du gör det:
 
 * Hämta enheten från begäran:
   `Device device = slingRequest.adaptTo(Device.class);`
@@ -355,7 +355,7 @@ AEM har stöd för enhetsidentifiering på klientsidan baserat på `BrowserMap`.
 
 >[!NOTE]
 >
-Mer information om integrering av klientbibliotek finns i [Använda HTML-bibliotek på klientsidan](/help/sites-developing/clientlibs.md).
+>Mer information om integrering av klientbibliotek finns i [Använda HTML-bibliotek på klientsidan](/help/sites-developing/clientlibs.md).
 
 ### Ange alternativa länkar {#providing-alternate-links}
 
@@ -374,7 +374,7 @@ När värdet för `cq:variantDomain` egenskap för en `cq:siteVariant` noden är
 
 >[!NOTE]
 >
-När du arbetar med AEM finns det flera metoder för att hantera konfigurationsinställningarna för sådana tjänster. Se [Konfigurerar OSGi](/help/sites-deploying/configuring-osgi.md) om du vill ha mer information och rekommenderade rutiner.
+>När du arbetar med AEM finns det flera metoder för att hantera konfigurationsinställningarna för sådana tjänster. Se [Konfigurerar OSGi](/help/sites-deploying/configuring-osgi.md) om du vill ha mer information och rekommenderade rutiner.
 
 ### Definiera en enhetsgruppsspecifik URL {#defining-a-device-group-specific-url}
 
@@ -384,7 +384,7 @@ BrowserMap är utformat på ett sådant sätt att definitioner för enhetsgruppe
 
 >[!NOTE]
 >
-Mer information finns i [Anpassad BrowserMap](#creatingacustomisedbrowsermap).
+>Mer information finns i [Anpassad BrowserMap](#creatingacustomisedbrowsermap).
 
 ### Definiera väljarbaserade URL:er {#defining-selector-based-urls}
 
@@ -410,7 +410,7 @@ Dessutom måste du manuellt anropa `BrowserMap.forwardRequest()` i `JavaScript` 
 
 >[!NOTE]
 >
-Mer information om integrering av klientbibliotek finns i [Använda HTML-bibliotek på klientsidan](/help/sites-developing/clientlibs.md).
+>Mer information om integrering av klientbibliotek finns i [Använda HTML-bibliotek på klientsidan](/help/sites-developing/clientlibs.md).
 
 När du har skapat en skräddarsydd `BrowserMap` klientbiblioteket, Adobe föreslår följande tillvägagångssätt:
 
@@ -520,7 +520,7 @@ Du kan tvinga enheten i en begäran att testa en specifik version av en webbplat
 
 >[!NOTE]
 >
-The `wcmmode` parametern är inställd på `disabled` för att simulera beteendet för en publiceringsinstans.
+>The `wcmmode` parametern är inställd på `disabled` för att simulera beteendet för en publiceringsinstans.
 
 Det åsidosättande enhetsvärdet lagras i en cookie så att du kan bläddra på webbplatsen utan att lägga till `device` parameter till varje `URL`.
 
@@ -528,7 +528,7 @@ Du måste alltså ringa samma `URL` med `device` ange till `browser` för att å
 
 >[!NOTE]
 >
-BrowserMap lagrar det åsidosättande enhetsvärdet i en cookie som kallas `BMAP_device`. Om du tar bort den här cookie-filen kan du vara säker på att CQ fungerar med rätt version av webbplatsen enligt den aktuella enheten (till exempel skrivbordet eller mobilen).
+>BrowserMap lagrar det åsidosättande enhetsvärdet i en cookie som kallas `BMAP_device`. Om du tar bort den här cookie-filen kan du vara säker på att CQ fungerar med rätt version av webbplatsen enligt den aktuella enheten (till exempel skrivbordet eller mobilen).
 
 ## Behandling av mobilförfrågningar {#mobile-request-processing}
 
@@ -564,7 +564,7 @@ The **Statistik** ser ut så här:
 
 >[!NOTE]
 >
-The **Statistik** sidan skapas första gången en mobil enhet kommer åt AEM och identifieras. Den är inte tillgänglig tidigare.
+>The **Statistik** sidan skapas första gången en mobil enhet kommer åt AEM och identifieras. Den är inte tillgänglig tidigare.
 
 Om du behöver generera en post i statistiken kan du göra så här:
 

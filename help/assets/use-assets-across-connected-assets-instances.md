@@ -7,9 +7,9 @@ role: User, Admin, Leader
 feature: Connected Assets,User and Groups
 exl-id: 4ceb49d8-b619-42b1-81e7-c3e83d4e6e62
 hide: true
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
-source-wordcount: '3791'
+source-wordcount: '3792'
 ht-degree: 14%
 
 ---
@@ -350,7 +350,7 @@ Följ de här stegen för att felsöka vanliga fel:
 
 * Om du inte kan söka efter fjärrresurser från [!UICONTROL Content Finder]kontrollerar du att de roller och behörigheter som krävs finns på plats.
 
-* En resurs som hämtats från fjärr-DAM kanske inte publiceras på en webbsida av en eller flera orsaker. Den finns inte på fjärrservern, saknar behörighet att hämta den eller så kan nätverksfel vara orsaken. Se till att resursen inte tas bort från fjärr-DAM. Se till att rätt behörigheter finns och att kraven är uppfyllda. Försök lägga till resursen på sidan igen och publicera den på nytt. Kontrollera i [listan över asynkrona jobb](/help/sites-administering/asynchronous-jobs.md) om fel uppstod vid hämtning av resurser.
+* En resurs som hämtats från fjärr-DAM kanske inte publiceras på en webbsida av en eller flera orsaker. Den finns inte på fjärrservern, saknar tillräcklig behörighet för att hämta den eller så kan nätverksfel vara orsaken. Se till att resursen inte tas bort från fjärr-DAM. Se till att rätt behörigheter finns och att kraven är uppfyllda. Försök lägga till resursen på sidan igen och publicera den på nytt. Kontrollera i [listan över asynkrona jobb](/help/sites-administering/asynchronous-jobs.md) om fel uppstod vid hämtning av resurser.
 
 * Om du inte har åtkomst till fjärr-DAM-distributionen från den lokala [!DNL Sites] ska du se till att cookies mellan webbplatser tillåts och [Stöd för samma webbplats-cookie](/help/sites-administering/same-site-cookie-support.md) är konfigurerad. Om cookies mellan webbplatser blockeras kan du distribuera [!DNL Experience Manager] kan inte autentiseras. Till exempel: [!DNL Google Chrome] i Incognito-läge kan blockera cookies från tredje part. Tillåt cookies i [!DNL Chrome] klickar du på ögonikonen i adressfältet, navigerar till **Webbplatsen fungerar inte** > **Blockerad** markerar du fjärr-DAM-URL:en och tillåter inloggningstokencookie. Alternativt, se [aktivera cookies från tredje part](https://support.google.com/chrome/answer/95647).
 

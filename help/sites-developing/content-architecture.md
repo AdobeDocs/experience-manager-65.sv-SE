@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: best-practices
 exl-id: bcebbdb4-20b9-4c2d-8a87-013549d686c1
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
-source-wordcount: '426'
+source-wordcount: '421'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 0%
 David&#39;s Model skrevs av David Nuescheler för flera år sedan, men idéerna är sanna i dag. De viktigaste grundsatserna i Davids modell är följande:
 
 * Data kommer först, strukturen senare. Kanske.
-* Låt inte innehållshierarkin hända.
+* Kör innehållshierarkin, låt den inte ske.
 * Arbetsytor är för `clone()`, `merge()`och `update()`.
 * Se upp för samma namn som syskon.
 * Referenser anses vara skadliga.

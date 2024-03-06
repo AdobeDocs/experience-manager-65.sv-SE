@@ -6,7 +6,7 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: extending-aem
 content-type: reference
 exl-id: ab0d4f2e-f761-4510-ba51-4a2dcea49601
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
 source-wordcount: '1609'
 ht-degree: 0%
@@ -105,7 +105,7 @@ Använd följande procedur för att lägga till variabler i listan:
 
 >[!CAUTION]
 >
->Vissa variabler i den här listan är **obligatoriskt** för att Adobe Analytics-anrop ska fungera korrekt (till exempel **currencyCode**, **charSet**)
+>Vissa variabler i den här listan är **obligatoriskt** för att Adobe Analytics-anrop ska fungera korrekt (till exempel **currencyCode**, **charSet**).
 >
 >Så även om de tas bort från själva ramverket kommer de fortfarande att få ett standardvärde när Adobe Analytics-anropet görs.
 

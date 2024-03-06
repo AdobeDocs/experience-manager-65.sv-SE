@@ -7,10 +7,10 @@ role: User, Admin
 feature: Collaboration,Adobe Asset Link,Desktop App
 exl-id: c7d589a3-1c5f-4ff0-879e-15e1c556f6dc
 hide: true
-source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
-source-wordcount: '3260'
-ht-degree: 14%
+source-wordcount: '3173'
+ht-degree: 9%
 
 ---
 
@@ -86,9 +86,9 @@ För att stödja användningsexemplen på resursfördelning bör andra lösninga
 * **Pågående arbeten eller pågående designarbeten (WIP):** En fas i en resurs livscykel där den genomgår flera ändringar och oftast inte är redo att delas med större team.
 * **Kreativa resurser:** [!DNL Assets] som är redo att delas med ett större team, eller som har valts ut eller godkänts av det kreativa teamet för att delas med marknadsförings- eller LOB-team.
 * **Godkännanden av resurser:** Godkännandeprocessen som körs för resurser som redan har överförts till DAM, som vanligtvis omfattar varumärkesgodkännanden, juridiska godkännanden och så vidare.
-* **Slutlig resurs:** En resurs som har genomgått alla godkännanden och all metadatataggning och är klar att användas av teamet. En sådan resurs lagras i DAM och är tillgänglig för alla (intresserade) användare. Den kan användas i marknadsföringskanaler eller av designteam för att skapa material.
-* **Mindre uppdatering/ändring av resurs:** En snabb och liten ändring av en digital resurs. Ändringarna är ofta retuscheringar, smärre redigeringar, resursgranskningar eller godkännanden (t.ex. omplacering, ändring av textstorlek, justering av mättnad/intensitet eller färg).
-* **Större uppdatering/ändring av resurs:** En arbetskrävande ändring av en digital resurs, som ibland tar lång tid att genomföra. Den omfattar vanligtvis flera ändringar. Resursen måste sparas flera gånger medan den uppdateras. Större resursuppdateringar medför oftast att resursen får statusen pågående arbete.
+* **Slutlig tillgång:** En resurs som har genomgått alla godkännanden/metadatataggar och är klar att användas av teamet. En sådan resurs lagras i DAM och är tillgänglig för alla (intresserade) användare. Den kan användas i marknadsföringskanaler eller av designteam för att skapa material.
+* **Mindre uppdatering/ändring av resurs:** En snabb och liten förändring av en digital resurs. Ändringarna är ofta retuscheringar, smärre redigeringar, resursgranskningar eller godkännanden (t.ex. omplacering, ändring av textstorlek, justering av mättnad/intensitet eller färg).
+* **Uppdatering/ändring av större tillgångar:** En förändring av en digital resurs som kräver mycket arbete och ibland måste göras under en längre tidsperiod. Den omfattar vanligtvis flera ändringar. Resursen måste sparas flera gånger medan den uppdateras. Större resursuppdateringar medför oftast att resursen får statusen pågående arbete.
 * **DAM:** Digitalt resurshanteringssystem. I det här dokumentet är det synonymt med [!DNL Experience Manager Assets], om inget annat anges.
 * **Designanvändare:** En kreatör som skapar digitalt material med Creative Cloud-program och -tjänster. I vissa fall är designanvändaren medlem i ett designteam och kan använda Creative Cloud, men skapar inte digitala resurser (som en designchef eller designteamschef).
 * **DAM-användare:** En typisk användare av ett DAM-system. Beroende på organisationen kan en DAM-användare vara en marknadsföringsanvändare eller en icke-marknadsföringsanvändare, till exempel en LOB-användare (Line-of-Business), bibliotekarie, säljare osv.
@@ -101,12 +101,12 @@ För att stödja användningsexemplen på resursfördelning bör andra lösninga
 
 Detta är en kort sammanfattning av de bästa sätten att [!DNL Experience Manager] och [!DNL Creative Cloud] integrering. Läs resten av det här dokumentet för att få en mer detaljerad förståelse för dessa.
 
-* **För designanvändare som arbetar i Photoshop, InDesign eller Illustrator:** Adobe Asset Link ger den bästa användarupplevelsen, inklusive ren hantering av pågående arbeten för resurser som checkats ut från [!DNL Experience Manager].
+* **För användare som arbetar i Photoshop, InDesign eller Illustrator:** Adobe Asset Link ger den bästa användarupplevelsen, inklusive ren hantering av pågående arbeten för resurser som checkats ut från [!DNL Experience Manager].
 * **För att förenkla åtkomsten till resurser från skrivbordet för alla generiska filformat eller program:** use [!DNL Experience Manager] datorprogram.
 * **Förstå varför och när resurser ska lagras i DAM:** Uppdateringar som ska göras tillgängliga för hela teamet i organisationen.
 * **Tänk på mängden resurser som delas:** Om ni använder mediedistribution kan styrning och säkerhet vara de viktigaste aspekterna. Överväg att använda verktyg som är byggda för att göra detta i stor skala, som varumärkesportalen.
 * **Förstå resursers livscykel:** Ta reda på hur resurser hanteras i organisationen av olika team
-* **Var försiktig med ofta sparade resurser:** Adobe Asset Link tar hand om det med PS, AI och ID. För andra program bör du inte utföra pågående arbete i mappade/delade mappar om du behöver alla ändringar i DAM
+* **Var försiktig med ofta sparade resurser:** Adobe Asset Link tar hand om det med PS, AI och ID. För andra program ska du inte utföra pågående uppgifter i mappad/delad mapp såvida du inte behöver alla ändringar i DAM
 
 ### Åtkomst till [!DNL Adobe Stock] resurser från [!DNL Assets] {#access-to-adobe-stock-assets-from-aem-assets}
 

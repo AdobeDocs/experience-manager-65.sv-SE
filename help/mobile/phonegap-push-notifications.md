@@ -6,9 +6,9 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-adobe-phonegap-enterprise
 exl-id: 375f2f40-1b98-4e21-adee-cbea274e6a2a
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
-source-wordcount: '3212'
+source-wordcount: '3156'
 ht-degree: 0%
 
 ---
@@ -289,7 +289,7 @@ Följ de här stegen för att skapa ett meddelande och skicka det.
 1. Skicka meddelandet
 
    * Leta reda på panelen Push Notifications (Push-meddelanden) på panelen Apps.
-   * Markera meddelandet eller klicka på informationsknappen längst ned till höger (. . .) för att visa listan med meddelanden. Den här listan anger också om ett meddelande är klart att skickas, om det redan har skickats eller om ett fel uppstod när meddelandet skickades.
+   * Markera meddelandet eller klicka på informationsknappen längst ned till höger (.. .) för att visa listan med meddelanden. Den här listan anger också om ett meddelande är klart att skickas, om det redan har skickats eller om ett fel uppstod när meddelandet skickades.
    * Markera kryssrutan för ett meddelande (endast) och klicka på knappen&quot;Skicka meddelande&quot; ovanför listan. Du har en chans att&quot;avbryta&quot; eller&quot;skicka&quot; meddelandet i den dialogruta som visas.
 
 1. Hantera resultaten

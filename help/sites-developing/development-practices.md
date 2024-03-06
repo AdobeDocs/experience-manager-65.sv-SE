@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: best-practices
 exl-id: 65b2029e-03c9-4df4-8579-2b15dbee1035
-source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
-source-wordcount: '615'
+source-wordcount: '617'
 ht-degree: 0%
 
 ---
@@ -64,4 +64,4 @@ Pojke Scout har en regel: &quot;Låt det vara bättre än du hittade det.&quot; 
 
 ### Undvik att implementera YAGNI-funktioner {#avoid-implementing-yagni-features}
 
-YAGNI-funktioner (du kommer inte att behöva dem) är saker som implementeras när vi förväntar oss att vi kommer att behöva något i framtiden, även om vi inte behöver det nu. Vi bör implementera det enklaste som kommer att fungera idag och använda kontinuerlig omfaktorisering för att säkerställa att systemarkitekturen utvecklas med de krav som ställs över tid. Detta gör att vi kan fokusera på det som är viktigt och förhindra att koden blottar och krypar funktioner.
+YAGNI-funktioner (du kommer inte att behöva det) är saker som implementeras när vi förväntar oss att vi kommer att behöva något i framtiden, även om vi inte behöver det nu. Vi bör implementera det enklaste som kommer att fungera idag och använda kontinuerlig omfaktorisering för att säkerställa att systemarkitekturen utvecklas med de krav som ställs över tid. Detta gör att vi kan fokusera på det som är viktigt och förhindra att koden blottar och krypar funktioner.

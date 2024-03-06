@@ -6,9 +6,9 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-on-demand-services-app
 exl-id: a6e59334-09e2-4bb8-b445-1868035da556
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
-source-wordcount: '2973'
+source-wordcount: '2971'
 ht-degree: 0%
 
 ---
@@ -43,7 +43,7 @@ Några av riktlinjerna för utveckling av Hanterare för innehållssynkroniserin
 
 >[!NOTE]
 >
->Aktivera *Felsökningsloggning för ContentSync* via OSGI-loggkonfigurationer på paket *com.day.cq.contentsync*. Detta gör att du kan spåra vad hanterarna har kört och om de har uppdaterat cachen och rapporterat att cachen har uppdaterats.
+>Aktivera *Felsökningsloggning för ContentSync* via OSGI-loggkonfigurationer på paket *com.day.cq.contentsync*. På så sätt kan du spåra vad hanterarna har kört och om de har uppdaterat cachen och rapporterat att cachen har uppdaterats.
 
 ## Konfigurera innehåll för innehållssynkronisering {#configuring-the-content-sync-content}
 

@@ -8,10 +8,10 @@ content-type: reference
 docset: aem65
 role: Admin
 exl-id: ecd30f5d-ad31-4482-96d3-c92f1cf91336
-source-git-commit: 00b6f2f03470aca7f87717818d0dfcd17ac16bed
+source-git-commit: 0aa929021aa724e4ec18d49fea26f8c0b0538bdc
 workflow-type: tm+mt
-source-wordcount: '2471'
-ht-degree: 1%
+source-wordcount: '2403'
+ht-degree: 0%
 
 ---
 
@@ -253,7 +253,7 @@ I varje AEM publiceringsinstans:
 
    De nodtyper som anges i den här egenskapen synkroniseras och meddelandeinformationen (bloggar och konfigurationer som följs) synkroniseras mellan olika utgivare.
 
-1. Lägg till alla mappar att synkronisera i **Distribuerade mappar**. Till exempel,
+1. Lägg till alla mappar att synkronisera i **Distribuerade mappar**. Exempel:
 
    `segments/scoring`
 
@@ -267,7 +267,7 @@ I varje AEM publiceringsinstans:
 
    `system`
 
-   `rep:cache` (eftersom vi använder kladdiga sessioner behöver vi inte synkronisera den här noden till olika utgivare).
+   `rep:cache` (eftersom klisterlappande sessioner används behöver du inte synkronisera den här noden till olika utgivare).
 
    ![user-sync-listner](assets/user-sync-listner.png)
 

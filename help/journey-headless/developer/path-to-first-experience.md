@@ -2,9 +2,9 @@
 title: Vägen till din första upplevelse med AEM utan headless
 description: I den här delen av den AEM Headless Developer Journey kommer du att förstå hur du implementerar din första headless-upplevelse i AEM, inklusive planeringsöverväganden, och också lära dig bästa praxis för att göra din väg så smidig som möjligt.
 exl-id: 64a87b6b-67ff-4d88-9dfb-c3e5de65bbe6
-source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
-source-wordcount: '1990'
+source-wordcount: '1951'
 ht-degree: 0%
 
 ---
@@ -106,7 +106,7 @@ Ett headless-projekt är inte bara framgångsrikt på grund av den teknik som an
 * Gruppera liknande innehåll i en mapp.
    * Det är troligare att en innehållsförfattare kopierar och klistrar in befintligt innehåll för att skapa nytt innehåll. Om du gör detta i samma mapp blir det därför effektivare.
    * AEM tillåter att tillåtna modeller anges per mapp så att **Skapa nytt** visas endast de modeller som stöds på den platsen.
-* Det går att förenkla skapandet av nya innehållsfragment i den infogade redigeraren för innehållsfragment om rotmappen är angiven i modellen. Sedan behöver inte administratören välja en plats, utan bara ange ett namn och kan börja redigera den nya referensen.
+* Det går att förenkla skapandet av nya innehållsfragment i den infogade redigeraren för innehållsfragment om rotmappen är angiven i modellen. Sedan behöver inte behandlaren välja en plats, utan bara ange ett namn och kan börja redigera den nya referensen.
 
 ### Skapa innehåll {#authoring}
 

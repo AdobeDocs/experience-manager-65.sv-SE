@@ -7,9 +7,9 @@ geptopics: SG_AEMFORMS/categories/jee
 docset: aem65
 role: Admin
 exl-id: 74d22cf4-56b2-48f5-92d9-928eaa134866
-source-git-commit: 3fe9b3d4cf6ddf7d64dbece7d62d7f18dfa183f2
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
-source-wordcount: '4054'
+source-wordcount: '4057'
 ht-degree: 0%
 
 ---
@@ -37,9 +37,9 @@ I det här dokumentet visas vilka klient- och serverplattformar som stöds för 
 >- En fullständig lista över undantag för serverplattformar som stöds finns i [Undantag för serverplattformar som stöds](../../forms/using/aem-forms-jee-supported-platforms.md#p-exceptions-to-supported-server-platforms-p).
 >- AEM Forms på JEE har endast stöd för engelska, franska, tyska och japanska versioner av de operativsystem och program som stöds.
 
-### Policy för uppgraderingar och support
+### Policy för uppgradering och support
 
-#### Fullständigt installationsprogram
+#### Full Installer
 
 - **Uppgraderingssupport för fullständiga installationsprogram**: Ett fullständigt installationsprogram släpps med varje sjätte AEM Service Pack-version. Ett fullständigt installationsprogram släpptes med version 6.5.12.0 och 6.5.18.0 SP. AEM Forms tillåter endast direktuppgraderingar från de två sista fullständiga installationsprogrammen. AEM Forms underlättar till exempel direktuppgradering till version 6.5.18.0 endast från de två sista fullständiga installationsprogrammen, nämligen 6.5.12.0 och 6.5.6.0. Om du behöver uppgradera från en tidigare uppgradering kan du använda en multi-hop-uppgradering för att först gå till en fullständig version som stöds och sedan till den senaste versionen.
 
@@ -144,7 +144,7 @@ Adobe Experience Manager Forms kräver att en Java™ Virtual Machine körs, vil
 
 >[!NOTE]
 >
->- Spåra säkerhetsbulletiner från Java™-leverantören för att säkerställa säkerheten och tryggheten i produktionsmiljöer och installera de senaste Java™-uppdateringarna.
+>- Spåra säkerhetsbulletiner från Java™-leverantören för att säkerställa säkerheten i produktionsmiljöer och installera de senaste Java™-uppdateringarna.
 >- AEM Forms på JEE har endast stöd för 64-bitars JVM i produktionsmiljöer.
 
 ### Databaser och CRX-beständighet {#databases-and-crx-persistence}
@@ -244,12 +244,12 @@ Adobe Experience Manager Forms kräver att en Java™ Virtual Machine körs, vil
   <tr>
    <td><p><strong> Plattform</strong></p> </td>
    <td><p><strong>Supportnivå</strong></p> </td>
-   <td><p><strong>Korrigeringsdefinitioner som stöds</strong></p> </td>
+   <td><p><strong>Patch-definitioner som stöds</strong></p> </td>
   </tr>
   <tr>
-   <td>Oracle WebLogic Server 12.2.1 (12c R2) (inaktuell) <sup>[9]</sup></td>
+   <td>Oracle WebLogic Server 12.2.1 (12c R2) (borttagen) <sup>[9]</sup></td>
    <td>A: Stöds</td>
-   <td>Service Pack och kritiska uppdateringar</td>
+   <td>Service Pack och viktiga uppdateringar</td>
   </tr>
   <tr>
    <td>Oracle WebLogic Server 14c <sup>[9]</sup></td>
@@ -356,10 +356,10 @@ Tänk på följande undantag när du väljer en plattform för att konfigurera A
 1. AEM Forms på JEE stöder inte och JBoss® på SUSE® Linux® Enterprise Server 12. Endast IBM® WebSphere® stöds i SUSE® Linux® Enterprise Server 12.
 1. AEM Forms på JEE stöder inte JDK med JBoss® annat än Oraclet Java™ SE.
 1. AEM Forms på JEE stöder inte JDK med andra IBM® WebSphere® än IBM® JDK.
-1. CRX-databasen har stöd för beständighet av typen tarMK, MongoDB och relationsdatabaser (RDBMK). Det går inte att ha två olika databassystem mellan programservern och CRX-databasen. I en AEM Forms på JEE-miljö kan du dock använda MongoMK med CRX-databas och en relationsdatabas som stöds med programserver.
-1. AEM Forms på JEE stöder inte WebSphere®-programserver på CentOS.
-1. AEM Forms på JEE stöder inte JBoss®-rollbaserad åtkomstkontroll (RBAC).
-1. AEM Forms på JEE har endast stöd för Oraclet Java™ SE 11 (64-bitars) SDK för programservern JBoss® EAP 7.4.
+1. CRX-databasen har stöd för beständighet av typen tarMK, MongoDB och relationsdatabaser (RDBMK). Du kan inte ha två olika databassystem mellan programservern och CRX-databasen. I en AEM Forms-miljö för JEE kan du emellertid använda MongoMK med CRX-databas och en relationsdatabas som stöds med programserver.
+1. AEM Forms i JEE stöder inte WebSphere®-programserver i CentOS.
+1. AEM Forms på JEE stöder inte rollbaserad åtkomstkontroll JBoss® (RBAC).
+1. AEM Forms på JEE har endast stöd för Java™ SE 11 (64 bitar) SDK för programserver JBoss® EAP 7.4.
 1. JDK-versioner som är högre än 1.8.0_281 stöds inte för WebLogic-servern. (FORMS-8498)
 1. JDK 11.0.20 stöds inte för installation av AEM Forms i JEE Installer. Endast JDK 11.0.19 och tidigare versioner stöds för installation av AEM Forms i JEE Installer.
 
@@ -574,12 +574,12 @@ Ytterligare krav finns i:
 - Maskinvarukrav: Intel® Pentium® 4 eller AMD®-motsvarighet, 1 GHz processor
 - Minst 1 024 × 768 pixlar eller högre bildskärmsupplösning med 16-bitars färg eller högre
 - TCP/IPv4- eller TCP/IPv6-nätverksanslutning till AEM Forms på JEE-server
-- Du måste ha administratörsbehörighet för att installera Workbench i Windows. Om du installerar med ett icke-administratörskonto ber installationsprogrammet dig att ange autentiseringsuppgifter för ett lämpligt konto.
+- Du måste ha administratörsbehörighet för att installera Workbench i Windows. Om du installerar med ett icke-administratörskonto uppmanas du att ange autentiseringsuppgifter för ett lämpligt konto.
 
 ### Designer {#designer}
 
 - Microsoft® Windows® 2016 Server, Microsoft® Windows® 2019 Server, Microsoft® Windows® 10 eller Windows® 11
-- processor med hastigheten 1 GHz eller snabbare med stöd för PAE, NX och SSE2.
+- 1 GHz eller snabbare processor med stöd för PAE, NX och SSE2.
 - 1 GB RAM för 32-bitars eller 2 GB RAM för 64-bitars operativsystem
 - 16 GB diskutrymme för 32-bitars eller 20 GB för 64-bitars operativsystem
 - Grafikminne - 128 MB GPU (256 MB rekommenderas)

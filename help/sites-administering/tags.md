@@ -6,10 +6,10 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: content
 content-type: reference
 exl-id: ff041ef0-e566-4373-818e-76680ff668d8
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 0aa929021aa724e4ec18d49fea26f8c0b0538bdc
 workflow-type: tm+mt
-source-wordcount: '1761'
-ht-degree: 1%
+source-wordcount: '1769'
+ht-degree: 2%
 
 ---
 

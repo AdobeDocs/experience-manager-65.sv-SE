@@ -2,10 +2,10 @@
 title: Så här uppdaterar du innehåll via AEM Assets API:er
 description: I den här delen av den AEM Headless Developer Journey kan du lära dig hur du använder REST API för att komma åt och uppdatera innehållet i dina innehållsfragment.
 exl-id: af29cb77-0210-4fc4-8d86-2a833d19b49f
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
-source-wordcount: '1066'
-ht-degree: 1%
+source-wordcount: '1029'
+ht-degree: 0%
 
 ---
 
@@ -45,7 +45,7 @@ Med Assets HTTP API kan du **Läs** innehållet, men det gör det också möjlig
 
 Resursens REST API är tillgängligt för varje körklar installation av en nyligen använd Adobe Experience Manager-version.
 
-## HTTP API för Assets {#assets-http-api}
+## Resurser för HTTP API {#assets-http-api}
 
 Resursens HTTP-API omfattar:
 
@@ -313,7 +313,7 @@ Nu när du är klar med den här delen av AEM Headless Developer Journey ska du:
 * Have experience with sample code and know how the API works in practice.
 -->
 
-<!-- The "How to put it all together" page isn't going to be published until the first public release of the Headless SDK. Temporarily commenting out the reference below. -->
+<!-- The "How to put it all together" page is not going to be published until the first public release of the Headless SDK. Temporarily commenting out the reference below. -->
 
 <!--You should continue your AEM headless journey by next reviewing the document [How to Put It All Together - Your App and Your Content in AEM Headless](put-it-all-together.md) where you learn how to take your AEM Headless project and prepare it for going live.-->
 
@@ -321,12 +321,12 @@ Du bör fortsätta den AEM resan utan trassel genom att nästa gång du granskar
 
 ## Ytterligare resurser {#additional-resources}
 
-* [HTTP API för Assets](/help/assets/mac-api-assets.md)
+* [Resurser för HTTP API](/help/assets/mac-api-assets.md)
 * [Innehållsfragment REST API](/help/assets/assets-api-content-fragments.md)
    * [API-referens](/help/assets/assets-api-content-fragments.md#api-reference)
 * [Adobe Experience Manager Assets API - innehållsfragment](https://www.adobe.io/experience-manager/reference-materials/6-5/assets-api-content-fragments/index.html)
 * [Arbeta med innehållsfragment](/help/assets/content-fragments/content-fragments.md)
-* [Grundläggande komponenter i AEM](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
+* [AEM kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
 * [CORS/AEM](https://helpx.adobe.com/experience-manager/kt/platform-repository/using/cors-security-article-understand.html)
 * [Video - Utveckla för CORS med AEM](https://helpx.adobe.com/experience-manager/kt/platform-repository/using/cors-security-technical-video-develop.html)
 * An [Introduktion till AEM som headless CMS](/help/sites-developing/headless/introduction.md)

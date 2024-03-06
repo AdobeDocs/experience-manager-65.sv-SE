@@ -7,9 +7,9 @@ topic-tags: administering
 content-type: reference
 role: Admin
 exl-id: aed9247c-eb81-470c-9fa4-a98c3df2dcaa
-source-git-commit: 451fb472e170a79f9854efadf9be1d4fe0628b94
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
-source-wordcount: '2620'
+source-wordcount: '2519'
 ht-degree: 0%
 
 ---
@@ -287,7 +287,7 @@ The [Adobe Granite OAuth-program och -leverantör](#adobe-granite-oauth-applicat
 
    >[!NOTE]
    >
-   >Grupper kan läggas till eller tas bort när som helst. Men befintliga användarmedlemskap påverkas inte. Automatiskt medlemskap gäller endast för nya användare som skapas efter den här fältuppdateringen. För webbplatser där anonyma användare är inaktiverade lägger du till användare i motsvarande community-medlemsgrupp som är avsedd för den stängda communitywebbplatsen.
+   >Grupper kan läggas till eller tas bort när som helst. Befintliga användarmedlemskap påverkas dock inte. Automatiskt medlemskap gäller endast för nya användare som skapas efter den här fältuppdateringen. För webbplatser där anonyma användare är inaktiverade lägger du till användare i motsvarande community-medlemsgrupp som är avsedd för den stängda communitywebbplatsen.
    >
 
 1. Välj **[!UICONTROL SAVE]** och **[!UICONTROL Publish]**.

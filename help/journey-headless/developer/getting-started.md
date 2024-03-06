@@ -2,9 +2,9 @@
 title: Kom igång med AEM Headless
 description: I den här delen av AEM Headless Developer Journey kan du läsa om AEM Headless-krav.
 exl-id: a94794a4-bf8b-4f3b-a761-3f02feedd5c0
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
-source-wordcount: '2998'
+source-wordcount: '2999'
 ht-degree: 0%
 
 ---

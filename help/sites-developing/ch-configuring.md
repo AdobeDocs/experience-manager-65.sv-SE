@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: personalization
 content-type: reference
 exl-id: 61208bd5-475b-40be-ba00-31bbbc952adf
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
-source-wordcount: '1726'
+source-wordcount: '1727'
 ht-degree: 0%
 
 ---
@@ -261,7 +261,7 @@ Använd CRXDE Lite för att ange egenskapen `debug` till **true** under:
 
 I tyst läge inaktiveras all felsökningsinformation. Till skillnad från det normala felsökningsalternativet, som kan anges separat för varje ContextHub-konfiguration, är tyst läge en global inställning som har företräde framför eventuella felsökningsinställningar på ContextHub-konfigurationsnivån.
 
-Detta är användbart för din publiceringsinstans där du inte vill ha någon felsökningsinformation alls. Eftersom det är en global inställning aktiveras den via OSGi.
+Detta är användbart för publiceringsinstansen där du inte vill ha någon felsökningsinformation alls. Eftersom det är en global inställning aktiveras den via OSGi.
 
 1. Öppna **Konfiguration av Adobe Experience Manager Web Console** på `http://<host>:<port>/system/console/configMgr`
 1. Sök efter **Adobe Granite ContextHub**

@@ -7,9 +7,9 @@ topic-tags: customization
 docset: aem65
 feature: Forms Portal
 exl-id: f889d996-77f7-4a4f-a637-da43fe1343c5
-source-git-commit: 000c22028259eb05a61625d43526a2e8314a1d60
+source-git-commit: 0aa929021aa724e4ec18d49fea26f8c0b0538bdc
 workflow-type: tm+mt
-source-wordcount: '1250'
+source-wordcount: '1246'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 Arbetskunskaper i HTML och CSS
 
-## Översikt {#overview}
+## Ökning {#overview}
 
 Med AEM Forms användargränssnitt kan du lägga till metadata i alla formulär. Anpassade metadata kan förbättra användarupplevelsen samtidigt som du listar och söker efter formulär i organisationen.
 
@@ -82,19 +82,19 @@ Nedan följer ett exempel på implementering av en anpassad mall där Forms Port
 
 En anpassad mall för valfri Forms Portal-komponent innehåller repeterbara och icke-repeterbara poster. Repeterbara poster är grundläggande enheter som ska tas upp i förteckningen. Exempel på upprepningsbara poster är komponenterna Sök och Lister, Utkast och överföringar samt Länka.
 
-Forms Portal innehåller en syntax där platshållare kan visa anpassade metadata/OTB-metadata. Platshållarna fylls i när resultatet av formulär, utkast eller inskickade formulär visas.
+Forms Portal innehåller en syntax för platshållare som kan visa anpassade/färdiga metadata. Platshållarna fylls i när resultatet av formulär, utkast eller inskickade formulär visas.
 
 Om du vill ta med en repeterbar post konfigurerar du värdet för attributet **data-repeterbar** till **true**.
 
 *I det exempel som beskrivs finns två Div-element högst upp i den anpassade mallen. Den första, med CSS-klassen&quot;__FP_boxes-container&quot;, fungerar som ett behållarelement för de formulär som visas. Den andra, med CSS-klassen&quot;__FP_boxes&quot;, är en mall för de grundläggande entiteterna, i det här fallet ett formulär. The **data-repeterbar**attributet i Div-elementet har värdet **true**.*
 
-Varje platshållare har en exklusiv OTB-metadatauppsättning. Om du vill visa anpassade metadata på en viss plats i formuläret lägger du till **${metadata_prop} property** på stället.
+Varje platshållare har en exklusiv metadatauppsättning som är färdig att användas. Om du vill visa anpassade metadata på en viss plats i formuläret lägger du till **${metadata_prop} property** på stället.
 
 *I exemplet används metadataegenskapen i flera instanser. Den används till exempel i **description**,**name**,**formUrl**,**htmlStyle**,**pdfUrl**,**pdfStyle**och **bana**på föreskrivet sätt.*
 
 ## Metadata utanför kartongen {#out-of-the-box-metadata}
 
-Olika Forms Portal-komponenter innehåller exklusiva uppsättningar OTB-metadata som du kan använda för att visa en lista.
+Olika Forms Portal-komponenter har exklusiva uppsättningar färdiga metadata som du kan använda för att visa upp en lista.
 
 ### Komponenten Search &amp; Lister {#search-amp-lister-component}
 
@@ -169,7 +169,7 @@ För rubrikrubriken i stödrastervyn är värdet för rubriken&quot;data-sortKey
 ## Tips, tricks och kända fel {#tips-tricks-and-known-issues}
 
 1. Använd inte enkla citattecken (&#39;) i någon anpassad mall.
-1. För anpassade metadata sparar du den här egenskapen på **jcr:innehåll/metadata** endast nod. Om du lagrar det på något annat ställe kan inte Forms Portal visa metadata.
+1. För anpassade metadata sparar du den här egenskapen på **jcr:innehåll/metadata** endast nod. Om du lagrar det på något annat ställe kan Forms Portal inte visa metadata.
 1. Kontrollera att namnet på anpassade metadata eller befintliga metadata inte innehåller ett kolon ( : ). Om det gör det kan du inte visa det i användargränssnittet.
 1. **data-repeterbar** har ingen betydelse för **Länk** -komponenten. Adobe rekommenderar att du undviker att använda den här egenskapen i mallen för en länkkomponent.
 

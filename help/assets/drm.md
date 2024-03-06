@@ -1,15 +1,15 @@
 ---
-title: Digital Rights Management tillgångar
+title: Digital Rights Management på tillgångar
 description: Lär dig hur du hanterar förfallotillstånd för mediefiler och information om licensierade mediefiler i [!DNL Experience Manager].
 contentOwner: AG
 role: User, Admin
 feature: DRM,Asset Management
 exl-id: a49cfd25-e8d9-492f-be5e-acab0cf67a28
 hide: true
-source-git-commit: 3d5e9ad8ee19756b05e5a77a3f748bc647fcf734
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
-source-wordcount: '1343'
-ht-degree: 6%
+source-wordcount: '1347'
+ht-degree: 7%
 
 ---
 
@@ -138,7 +138,7 @@ The [!DNL Assets] konsolen kan visa olika lägen för resurser. Beroende på det
 
 Den här funktionen tvingar till godkännande av licensavtalet innan du kan hämta en licensierad mediefil från [!DNL Adobe Experience Manager Assets].
 
-Om du väljer en skyddad resurs och klickar på **[!UICONTROL Download]** omdirigeras du till en licenssida där du godkänner licensavtalet. Om du inte godkänner licensavtalet kan du **[!UICONTROL Download]** är inte tillgängligt.
+Om du väljer en skyddad resurs och klickar på **[!UICONTROL Download]** omdirigeras du till en licenssida där du godkänner licensavtalet. Om du inte godkänner licensavtalet kan du **[!UICONTROL Download]** alternativet är inte tillgängligt.
 
 Om markeringen innehåller flera skyddade resurser markerar du en resurs i taget, godkänner licensavtalet och fortsätter att hämta resursen.
 
@@ -157,7 +157,7 @@ En tillgång anses vara skyddad om något av dessa villkor är uppfyllt:
 
 1. I kortvyn väljer du de resurser du vill hämta och klickar på **[!UICONTROL Download]**.
 1. På sidan **[!UICONTROL Copyright Management]** väljer du den resurs du vill hämta i listan.
-1. I [!UICONTROL License] välj **[!UICONTROL Agree]**. En bock visas bredvid resursen. Klicka på **[!UICONTROL Download]** alternativ.
+1. I [!UICONTROL License] fönster, välja **[!UICONTROL Agree]**. En bock visas bredvid resursen. Klicka på **[!UICONTROL Download]** alternativ.
 
    >[!NOTE]
    >

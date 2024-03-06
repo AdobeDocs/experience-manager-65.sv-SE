@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing
 content-type: reference
 exl-id: e10e1904-7016-4eb0-9408-36297285f378
-source-git-commit: 2c0e3052e32e32f794faa69177d5fdad95bec72f
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
-source-wordcount: '990'
+source-wordcount: '975'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ När du utvecklar en mobilapp finns det många nya problem som är specifika fö
 
 * Funktionell - Uppfyller appen alla krav?
 * Användbarhet - Är appen enkel att använda och förstå för kunden?
-* Prestanda - Vad händer under en plötslig användning? Är appelementen, som svepningar och carousel, snabba och tar inte bort upplevelsen?
+* Prestanda - Vad händer under en plötslig användning? Är appelementen, som svepningar och carousel, snabba och minskar inte upplevelsen?
 * Fel eller avbrott - Vad händer när ett inkommande samtal eller meddelande visas medan appen körs? Vad händer om ett nätverksfel eller en avstängning inträffar?
 * Installation och uppdateringar - Hur fungerar installationen? Hur skickas uppdateringar ut?
 * Teknisk - Använder din app för mycket ström från en enhet?

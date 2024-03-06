@@ -1,7 +1,7 @@
 ---
-source-git-commit: c4708cd2da9d2eb60c31a084bb055658c772ed03
+source-git-commit: 518207a0d8a95ef17b0972855a58f124fb215c85
 workflow-type: tm+mt
-source-wordcount: '170'
+source-wordcount: '171'
 ht-degree: 0%
 
 ---
@@ -9,7 +9,7 @@ ht-degree: 0%
 
 © Copyright 2021 Adobe. all rights reserved.
 
-Härmed beviljas alla som erhåller en kopia av denna programvara och tillhörande dokumentationsfiler (&quot;Programvaran&quot;) rätt att handla i Programvaran utan begränsning, inklusive utan begränsning rätten att använda, kopiera, modifiera, slå samman, publicera, distribuera, underlicensiera och/eller sälja kopior av Programvaran, samt att ge personer som Programvaran tillhandahålls rätt att göra detta, på följande villkor:
+Tillstånd ges, kostnadsfritt, till varje person som erhåller en kopia av denna programvara och tillhörande dokumentationsfiler (&quot;Programvaran&quot;), att handla i Programvaran utan begränsning, inklusive, utan begränsning, rätten att använda, kopiera, modifiera, slå samman, publicera, distribuera, underlicensiera och/eller sälja kopior av Programvaran, samt att ge personer till vilka Programvaran tillhandahålls rätt att göra detta, på följande villkor:
 
 Ovannämnda meddelande om upphovsrätt och detta tillståndsmeddelande ska finnas med i alla exemplar eller väsentliga delar av Programvaran.
 

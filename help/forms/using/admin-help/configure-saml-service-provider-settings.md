@@ -6,7 +6,7 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/configuring_user_management
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 exl-id: dd302cfb-eae1-4189-aa7b-9f2533ebd164
-source-git-commit: 4289c68feb51842b5649f7cff73c5c4bc38add6c
+source-git-commit: abd3fbb5abb339d5b019fd2d7cf325404fb079e8
 workflow-type: tm+mt
 source-wordcount: '595'
 ht-degree: 0%
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 SAML (Security Assertion Markup Language) är ett av de alternativ som du kan välja när du konfigurerar auktorisering för en företagsdomän eller hybriddomän. SAML används främst för att stödja enkel inloggning över flera domäner. När SAML är konfigurerat som din autentiseringsleverantör loggar användare in och autentiserar till AEM formulär via en angiven identitetsleverantör (IDP).
 
-En förklaring av SAML finns på [Security Assertion Markup Language (SAML) V2.0 Technical Overview](http://docs.oasis-open.org/security/saml/Post2.0/sstc-saml-tech-overview-2.0.html).
+En förklaring av SAML finns på [Security Assertion Markup Language (SAML) V2.0 Technical Overview](https://docs.oasis-open.org/security/saml/Post2.0/sstc-saml-tech-overview-2.0.html).
 
 1. I administrationskonsolen klickar du på Inställningar > Användarhantering > Konfiguration > Inställningar för SAML-tjänstleverantör.
 1. Ange ett unikt ID som ska användas som identifierare för implementeringen av AEM formulärleverantör i rutan Tjänstleverantörens enhets-ID. Du anger också detta unika ID när du konfigurerar din IDP (till exempel `um.lc.com`.) Du kan också använda den URL som används för att komma åt AEM formulär (till exempel `https://AEMformsserver`).

@@ -3,7 +3,7 @@ title: Konfigurera plugin-programmen för RTF-redigeraren
 description: Lär dig konfigurera plugin-programmen för Adobe Experience Manager Rich Text Editor så att enskilda funktioner aktiveras.
 contentOwner: AG
 exl-id: 6bfd6caa-a68a-40ba-9826-4ba02cd1dbfb
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
 source-wordcount: '4376'
 ht-degree: 0%

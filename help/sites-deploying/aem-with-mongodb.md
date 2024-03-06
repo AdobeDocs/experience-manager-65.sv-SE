@@ -7,9 +7,9 @@ topic-tags: platform
 content-type: reference
 docset: aem65
 exl-id: 70a39462-8584-4c76-a097-05ee436247b7
-source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
-source-wordcount: '6184'
+source-wordcount: '6185'
 ht-degree: 0%
 
 ---
@@ -355,7 +355,7 @@ Information om hur du justerar storleken på det interna WiredTiger-cacheminnet 
 
 NUMA (Non-Uniform Memory Access) gör att en kärna kan hantera hur minne mappas till processorkärnorna. Även om den här processen försöker göra minnesåtkomsten snabbare för kärnor som ser till att de kan komma åt de data som krävs, så stör NUMA MMAP införandet av ytterligare latens eftersom läsningar inte kan förutsägas. Därför måste NUMA inaktiveras för `mongod` på alla operativsystem som klarar detta.
 
-I ett NUMA-arkitekturminne är alltså anslutet till CPU:er och CPU:er är anslutna till en buss. I en SMP- eller UMA-arkitektur är minnet anslutet till bussen och delas av CPU:er. När en tråd allokerar minne på en NUMA-processor allokeras den enligt en princip. Standardinställningen är att tilldela minne som är kopplat till trådens lokala CPU, såvida det inte finns något ledigt utrymme, och då används minne från en ledig CPU till en högre kostnad. När minnet har tilldelats flyttas det inte mellan processorer. Allokeringen utförs av en princip som ärvs från den överordnade tråden, vilket i slutändan är den tråd som startade processen.
+I ett NUMA-arkitekturminne är alltså anslutet till CPU:er och CPU:er är anslutna till en buss. I en SMP- eller UMA-arkitektur är minnet anslutet till bussen och delas av CPU:er. När en tråd allokerar minne på en NUMA-processor allokeras den enligt en princip. Standardinställningen är att tilldela minne som är kopplat till trådens lokala CPU, såvida det inte finns något ledigt utrymme, och då används minne från en ledig CPU till en högre kostnad. När minnet har tilldelats flyttas det inte mellan CPU:er. Allokeringen utförs av en princip som ärvs från den överordnade tråden, vilket i slutändan är den tråd som startade processen.
 
 I många databaser som ser datorn som en enhetlig minnesarkitektur med flera kärnor leder detta scenario till att den första CPU:n blir full först och den sekundära CPU-fyllningen senare. Det är särskilt sant om en central tråd ansvarar för allokering av minnesbuffertar. Lösningen är att ändra NUMA-principen för huvudtråden som används för att starta `mongod` genom att köra följande kommando:
 
@@ -543,7 +543,7 @@ Utdata från det andra testet bör vara betydligt högre än det första, vilket
 
 >[!NOTE]
 >
-När du utför testerna ska du kontrollera I/O-användningsstatistik för de virtuella datorerna i operativsystemets övervakningssystem. Om de anger värden som är lägre än 100 procent för I/O-läsningar kan det vara problem med din virtuella dator.
+>När du utför testerna ska du kontrollera I/O-användningsstatistik för de virtuella datorerna i operativsystemets övervakningssystem. Om de anger värden som är lägre än 100 procent för I/O-läsningar kan det vara problem med din virtuella dator.
 
 **Testa skrivprestanda för den primära MongoDB-instansen**
 
@@ -654,7 +654,7 @@ Med CSP kan du finjustera principer. I ett komplext program måste emellertid CS
 
 >[!NOTE]
 >
-Mer information om hur det här fungerar finns i [OWASP Page on Content Security Policy](https://owasp.deteact.com/cheat/cheatsheets/Content_Security_Policy_Cheat_Sheet.html).
+>Mer information om hur det här fungerar finns i [OWASP Page on Content Security Policy](https://owasp.deteact.com/cheat/cheatsheets/Content_Security_Policy_Cheat_Sheet.html).
 
 ### Storleksändring {#sizing}
 
@@ -678,4 +678,4 @@ Om AEM körs på en distribution av en beständig MongoMK-hanterare, [sidnamn f�
 
 >[!NOTE]
 >
-Se [MongoDB-dokumentation](https://docs.mongodb.com/manual/reference/limits/) så att du kan bekanta dig med de kända begränsningarna och tröskelvärdena i MongoDB.
+>Se [MongoDB-dokumentation](https://docs.mongodb.com/manual/reference/limits/) så att du kan bekanta dig med de kända begränsningarna och tröskelvärdena i MongoDB.

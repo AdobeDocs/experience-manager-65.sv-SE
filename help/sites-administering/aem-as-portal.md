@@ -7,9 +7,9 @@ topic-tags: integration
 content-type: reference
 docset: aem65
 exl-id: b5f3d3a6-39c0-4aa5-8562-3cc6fa2b9e46
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+source-git-commit: 970e0a97d531d4cbae76119960972e54ef65dda0
 workflow-type: tm+mt
-source-wordcount: '6076'
+source-wordcount: '6074'
 ht-degree: 0%
 
 ---
@@ -612,7 +612,7 @@ När du implementerar en sådan tjänst ska du se till att ange **service.rankin
 | **Namn** | **Beskrivning** | **Standardbeteende** |
 |---|---|---|
 | Autentiserare | Tillhandahåller autentiseringsinformation till AEM | Använder en konfigurerbar teknisk användare för både författare och publicering. Du kan också använda enkel inloggning. |
-| HTMLRewriter | Skriver om länkar, bilder osv. | Skriver om AEM länkar till portallänkar, kan utökas av en UrlMapper och en TextMapper |
+| HTMLRewriter | Skriver om länkar och bilder | Skriver om AEM länkar till portallänkar, kan utökas av en UrlMapper och en TextMapper |
 | HttpClientService | Hanterar alla http-anslutningar | Standardimplementering |
 | LocaleHandler | Hanterar språkinformationen | Skriver om en länk till innehållet med avseende på språkområdet. |
 | LocaleDetector | Identifierar användarens språkområde. | Använder språkinställningen som tillhandahålls av portalen. |

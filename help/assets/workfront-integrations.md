@@ -5,9 +5,9 @@ role: Admin,Leader,Architect
 feature: Integrations
 exl-id: 57e2bffe-8094-4557-99c8-7b482681687e
 hide: true
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 0aa929021aa724e4ec18d49fea26f8c0b0538bdc
 workflow-type: tm+mt
-source-wordcount: '1154'
+source-wordcount: '1174'
 ht-degree: 0%
 
 ---
@@ -47,7 +47,7 @@ Se plattformsstödet och [krav för den förbättrade anslutningen](https://one.
 
 Nedan beskrivs de funktioner som är tillgängliga genom olika typer av integreringar mellan [!DNL Assets] och [!DNL Workfront].
 
-| Funktion | Beskrivning | [!DNL Workfront] och [!DNL Assets Essentials] *Ingen anslutning (OTB)* | [!DNL Workfront for Experience Manager enhanced connector] *Kräver anslutning* | Workfront och [!DNL Experience Manager as a Cloud Service] *Ingen anslutning (OTB)* |
+| Funktion | Beskrivning | [!DNL Workfront] och [!DNL Assets Essentials] *Ingen koppling (färdig)* | [!DNL Workfront for Experience Manager enhanced connector] *Kräver anslutning* | Workfront och [!DNL Experience Manager as a Cloud Service] *Ingen koppling (färdig)* |
 |----|----|----|-----|-----|
 | Distributionsmetoder | Lämpliga för vilka [!DNL Assets] erbjuder. | Assets Essentials | Adobe Managed Services, lokal | Cloud Service |
 | **Allmänt** |

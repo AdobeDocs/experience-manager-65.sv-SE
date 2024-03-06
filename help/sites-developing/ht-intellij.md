@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: development-tools
 content-type: reference
 exl-id: 5a79c79b-df65-4cb2-b9d4-eda994c992ec
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
-source-wordcount: '639'
+source-wordcount: '640'
 ht-degree: 1%
 
 ---
@@ -106,7 +106,7 @@ IntelliJ IDEA måste förstå var JSP:er för felsökning ska hittas. Eftersom I
 1. Träffa **+** och markera **JSR45-fjärr**
 1. Välj **Konfigurera** nästa **Programserver** och konfigurera en allmän server
 1. Ange en lämplig URL för startsidan om du vill öppna en webbläsare när du startar felsökningen
-1. Ta bort alla **Före start** uppgifter om du använder vlt autosync eller konfigurerar lämpliga Maven-uppgifter om du inte gör det
+1. Ta bort alla **Före start** uppgifter om du använder automatisk synkronisering eller konfigurerar lämpliga Maven-uppgifter om du inte gör det
 1. På **Start/anslutning** ruta, justera porten om det behövs
 1. Kopiera de kommandoradsargument som IntelliJ IDEA föreslår
 

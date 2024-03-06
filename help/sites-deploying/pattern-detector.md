@@ -8,16 +8,16 @@ content-type: reference
 docset: aem65
 feature: Upgrading
 exl-id: c42373e9-712e-4c11-adbb-4e3626e0b217
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
-source-wordcount: '516'
-ht-degree: 1%
+source-wordcount: '500'
+ht-degree: 0%
 
 ---
 
 # Utvärdera uppgraderingskomplexiteten med mönsteravkännaren
 
-## Översikt {#overview}
+## Ökning {#overview}
 
 Med den här funktionen kan du kontrollera om befintliga AEM är uppgraderingsbara genom att identifiera mönster som används:
 
@@ -30,7 +30,7 @@ Detta kan fungera som en bedömning av den utvecklingsinsats som är nödvändig
 
 Mönsteravkännaren släpps separat som en [ett paket](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/compatpack/pd-all-aem65) för alla AEM från 6.1 till 6.5 AEM 6.5. Den kan installeras med [Pakethanteraren](/help/sites-administering/package-manager.md).
 
-## Användning {#how-to-use}
+## Använda {#how-to-use}
 
 >[!NOTE]
 >
@@ -210,7 +210,7 @@ Med utdata:
 
 ## Identifieringsomfång {#scope}
 
-Mönsteravkännaren kan för närvarande kontrollera:
+För närvarande kan du kontrollera följande med Mönsteravkännare:
 
 * OSGi-paket matchar inte export och import
 * Dela resurstyper och supertyper (med innehållsövertäckningar för sökvägar)

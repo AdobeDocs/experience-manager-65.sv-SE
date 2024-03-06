@@ -2,9 +2,9 @@
 title: Redigera en extern SPA i Adobe Experience Manager
 description: I det här dokumentet beskrivs de rekommenderade stegen för att överföra en fristående SPA till en Adobe Experience Manager-instans, lägga till redigerbara innehållsavsnitt och aktivera redigering.
 exl-id: 25236af4-405a-4152-8308-34d983977e9a
-source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
-source-wordcount: '2432'
+source-wordcount: '2391'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 När du bestämmer vilken nivå av integration du vill ha mellan din externa SPA och Adobe Experience Manager (AEM) behöver du ofta kunna redigera och visa SPA i AEM.
 
-## Översikt {#overview}
+## Ökning {#overview}
 
 I det här dokumentet beskrivs de rekommenderade stegen för att överföra en fristående SPA till en AEM, lägga till redigerbara innehållsavsnitt och aktivera redigering.
 

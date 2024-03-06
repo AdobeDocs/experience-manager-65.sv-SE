@@ -5,7 +5,7 @@ topic-tags: introduction
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 docset: aem65
 exl-id: 47b9de1f-b16a-424c-b8b4-e9d7b3dcca86
-source-git-commit: d2c0dea636280c28e1d5a76d1c5375f21b6eb111
+source-git-commit: 0aa929021aa724e4ec18d49fea26f8c0b0538bdc
 workflow-type: tm+mt
 source-wordcount: '637'
 ht-degree: 0%
@@ -44,7 +44,7 @@ The [64-bitarsversionen av AEM Forms Designer](/help/forms/using/installing-conf
 
 #### Ansluta en adaptiv Forms med Microsoft® SharePoint List
 
-AEM Forms erbjuder OOTB-integrering för [skicka blankettdata direkt till SharePoint List](/help/forms/using/configuring-submit-actions.md#submit-to-microsoft&reg;-sharepoint-list)), så att du kan använda funktionerna i SharePoint Lists. Du kan konfigurera Microsoft® SharePoint List som en datakälla för en formulärdatamodell och använda Skicka med formulärdatamodellen för att ansluta ett anpassat formulär med SharePoint List.
+AEM Forms är en körklar integrering med [skicka blankettdata direkt till SharePoint List](/help/forms/using/configuring-submit-actions.md#submit-to-microsoft&reg;-sharepoint-list)), så att du kan använda funktionerna i SharePoint Lists. Du kan konfigurera Microsoft® SharePoint List som en datakälla för en formulärdatamodell och använda Skicka med formulärdatamodellen för att ansluta ett anpassat formulär med SharePoint List.
 
 #### Stöd för att konfigurera Document of Record-egenskaper för adaptiva formulärfragment
 

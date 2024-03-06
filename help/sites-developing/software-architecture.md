@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: best-practices
 exl-id: cd4f3b4c-5488-4ca7-9c1e-b4c819fda8e8
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: 0aa929021aa724e4ec18d49fea26f8c0b0538bdc
 workflow-type: tm+mt
-source-wordcount: '612'
+source-wordcount: '614'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 ## Designa för uppgraderingar {#design-for-upgrades}
 
-När du utökar OTB-beteenden är det viktigt att tänka på uppgraderingarna. Använd alltid anpassningar i katalogen /apps och lägg antingen över motsvarande noder i katalogen /libs eller använd sling:resourceSuperType för att utöka beteendet utanför rutan. Vissa ändringar kan behövas för att stödja en ny AEM, men den nya versionen bör inte skriva över dina anpassningar om den här metoden följs.
+När du utökar användningsklara beteenden är det viktigt att tänka på uppgraderingar. Använd alltid anpassningar i katalogen /apps och lägg antingen över motsvarande noder i katalogen /libs eller använd sling:resourceSuperType för att utöka beteendet utanför rutan. Vissa ändringar kan behövas för att stödja en ny AEM, men den nya versionen bör inte skriva över dina anpassningar om den här metoden följs.
 
 ### Återanvänd mallar och komponenter när det är möjligt {#reuse-template-and-components-when-possible}
 
@@ -51,7 +51,7 @@ I Robustness Principle står det att du bör vara försiktig i det du skickar, m
 
 ### Implementera toppar i sina egna moduler {#implement-spikes-in-their-own-modules}
 
-Spikes och testkod ingår i alla Agile-programimplementeringar. Men du vill vara säker på att de inte kommer in i produktionskodbasen utan lämplig nivå av övervakning. Därför rekommenderar vi att taggar skapas i en egen modul.
+Spikes och testkod ingår i alla Agile-programimplementeringar. Du bör dock se till att de inte tar sig in i produktionskodbasen utan lämplig tillsynsnivå. Därför rekommenderar vi att taggar skapas i en egen modul.
 
 ### Implementera skript för datamigrering i sin egen modul {#implement-data-migration-scripts-in-their-own-module}
 
