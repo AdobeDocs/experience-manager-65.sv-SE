@@ -7,9 +7,9 @@ topic-tags: mobile-web
 content-type: reference
 legacypath: /content/docs/en/aem/6-0/develop/mobile/responsive
 exl-id: c705710b-a94a-4f4f-affa-ddd4fc6cb0ec
-source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
+source-git-commit: db0e9d6105484b37e2e21e49bf0f95cef9da2a62
 workflow-type: tm+mt
-source-wordcount: '5363'
+source-wordcount: '5281'
 ht-degree: 0%
 
 ---
@@ -200,7 +200,7 @@ Om du till exempel vill skapa en ` [sling:OsgiConfig](/help/sites-deploying/conf
 
   The - `*alias*` suffix krävs eftersom MobileEmulatorProvider-tjänsten är en fabrikstjänst. Använd ett alias som är unikt för den här fabriken.
 
-* jcr:primaryType: `sling:OsgiConfig`
+* `jcr:primaryType`: `sling:OsgiConfig`
 
 Lägg till följande nodegenskap:
 

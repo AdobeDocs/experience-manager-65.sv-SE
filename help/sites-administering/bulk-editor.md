@@ -7,9 +7,9 @@ topic-tags: operations
 content-type: reference
 docset: aem65
 exl-id: c63e044c-4d2a-44d3-853b-8e7337e1ee03
-source-git-commit: 06a6d4e0ba2aeaefcfb238233dd98e8bbd6731da
+source-git-commit: db0e9d6105484b37e2e21e49bf0f95cef9da2a62
 workflow-type: tm+mt
-source-wordcount: '1159'
+source-wordcount: '1160'
 ht-degree: 0%
 
 ---
@@ -74,7 +74,7 @@ Så här använder du gruppredigeraren för att redigera flera objekt samtidigt:
   </tr>
   <tr>
    <td>Rotsökväg</td>
-   <td>Anger den rotsökväg som den gruppredigeraren söker efter.<br /> Till exempel, <code>/content/geometrixx/en</code>. I gruppredigeraren söks alla underordnade noder igenom.</td>
+   <td>Anger den rotsökväg som den gruppredigeraren söker efter.<br /> Till exempel: <code>/content/geometrixx/en</code>. I gruppredigeraren söks alla underordnade noder igenom.</td>
   </tr>
   <tr>
    <td>Frågeparametrar</td>
@@ -119,7 +119,8 @@ I exemplet ovan returneras alla sidor som uppfyller dina sökvillkor och visas m
 * **sökväg:** bara söknoder under den här sökvägen. Om du anger mer än en term med ett sökvägsprefix beaktas endast den sista termen.
 * **typ:** bara returnera noder av den angivna nodtypen. Detta inkluderar primära och blandade typer. Du kan ange flera kommaavgränsade nodtyper. GQL returnerar noder som är av någon av de angivna typerna.
 * **beställning:** sortera resultatet efter de angivna egenskaperna. Du kan ange flera kommaavgränsade egenskapsnamn. Om du vill ordna resultatet i fallande ordning lägger du bara till ett minustecken som prefix för egenskapsnamnet. Till exempel order:-name. Om du använder ett plustecken returneras resultatet i stigande ordning, vilket också är standard.
-* **gräns:** begränsar antalet resultat med ett intervall. Till exempel limit:10..20 Intervallet är nollbaserat, start är inkluderat och slut är exklusivt. Du kan även ange ett öppet intervall:limit:10.. eller limit:..20 Om punkterna utelämnas och endast ett värde anges, returnerar GQL högst detta antal resultat. Till exempel limit:10 (returnerar de första tio resultaten).
+* **gräns:** begränsar antalet resultat med ett intervall. Till exempel limit:10..20 Intervallet är nollbaserat, start är inkluderat och slut är exklusivt. Du kan också ange en öppen `interval:limit:10..` eller `limit:..20`
+Om punkterna utelämnas och endast ett värde anges, returnerar GQL högst detta antal resultat. Till exempel: `limit:10` (returnerar de första tio resultaten).
 
 ### Exporterar innehåll {#exporting-content}
 

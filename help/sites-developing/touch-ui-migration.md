@@ -7,9 +7,9 @@ content-type: reference
 topic-tags: introduction
 docset: aem65
 exl-id: 33dc1ee7-1e34-43d8-9265-c66535f5e002
-source-git-commit: 0aa929021aa724e4ec18d49fea26f8c0b0538bdc
+source-git-commit: db0e9d6105484b37e2e21e49bf0f95cef9da2a62
 workflow-type: tm+mt
-source-wordcount: '631'
+source-wordcount: '629'
 ht-degree: 0%
 
 ---
@@ -53,12 +53,12 @@ Tänk på följande stora skillnader mellan det klassiska gränssnittet och pekg
    <td><p>Dialognoder:</p>
     <ul>
      <li>Namn: <code>dialog</code></li>
-     <li>jcr:primaryType: <code>cq:Dialog</code></li>
+     <li><code>jcr:primaryType</code>: <code>cq:Dialog</code></li>
     </ul> </td>
    <td><p>Dialognoder:</p>
     <ul>
      <li>Namn: <code>cq:dialog</code></li>
-     <li>jcr:primaryType: <code>nt:unstructured</code></li>
+     <li><code>jcr:primaryType</code>: <code>nt:unstructured</code></li>
     </ul> </td>
   </tr>
   <tr>

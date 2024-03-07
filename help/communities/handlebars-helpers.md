@@ -4,9 +4,9 @@ description: Hanteringsfält Hjälpmetoder som underlättar arbete med SCF
 topic-tags: developing
 content-type: reference
 exl-id: bfb95cae-4b0f-4521-a113-042dc4005a63
-source-git-commit: 787e5a87f13498006e2ce897e85ee12704b58f09
+source-git-commit: db0e9d6105484b37e2e21e49bf0f95cef9da2a62
 workflow-type: tm+mt
-source-wordcount: '1453'
+source-wordcount: '1445'
 ht-degree: 1%
 
 ---
@@ -135,7 +135,7 @@ En hjälp som returnerar en formaterad datumsträng.
 
 * **format**: String
 
-  (Valfritt) Datumformatet som ska användas. Standardvärdet är &quot;YYY-MM-DDTHH:mm:ss.sssZ&quot; och resultatet visas som 2015-03-18T18:17:13-07:00&quot;
+  (Valfritt) Datumformatet som ska användas. Standardvärdet är &quot;`YYYY-MM-DDTHH:mm:ss.sssZ`och resultatet visas som &quot;`2015-03-18T18:17:13-07:00`&quot;
 
 ### Exempel {#examples-1}
 

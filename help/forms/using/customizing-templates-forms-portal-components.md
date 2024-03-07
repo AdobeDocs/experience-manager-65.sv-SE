@@ -7,9 +7,9 @@ topic-tags: customization
 docset: aem65
 feature: Forms Portal
 exl-id: f889d996-77f7-4a4f-a637-da43fe1343c5
-source-git-commit: 0aa929021aa724e4ec18d49fea26f8c0b0538bdc
+source-git-commit: db0e9d6105484b37e2e21e49bf0f95cef9da2a62
 workflow-type: tm+mt
-source-wordcount: '1246'
+source-wordcount: '1242'
 ht-degree: 0%
 
 ---
@@ -143,8 +143,8 @@ För rubrikrubriken i stödrastervyn är värdet för rubriken&quot;data-sortKey
 * **diffTime**: Skillnad mellan aktuell tid och den senaste sparåtgärden för utkastet. Alternativt kan du ange skillnaden mellan den aktuella tiden och den senast skickade åtgärden för överföringen.
 * **iconClass**: CSS-klass som används för att visa den första bokstaven i utkastet/sändningen. Forms Portal innehåller följande klasser med olika färgade bakgrunder.
 * **ägare**: Användare som skapade utkastet/sändningen.
-* **Idag**: Datum då utkastet eller inlämningen skapades i DD:MM:YYYY-format.
-* **TimeNow**: Tid då utkastet eller inlämningen skapades i HH:MM:SS 24-timmarsformat
+* **Idag**: Datum då utkastet eller inlämningen skapades `DD:MM:YYYY` format.
+* **TimeNow**: Tid då utkast eller inlämning skapades i `HH:MM:SS` 24-timmarsformat
 
 *Obs!*
 

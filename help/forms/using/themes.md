@@ -7,7 +7,7 @@ content-strategy: max-2018
 docset: aem65
 feature: Adaptive Forms, Foundation Components
 exl-id: 93c360a8-a9d9-4c4b-b7e2-2c44eaf4604c
-source-git-commit: d85fc98d9a31bc4014aef4311ba0f838c7ef619a
+source-git-commit: db0e9d6105484b37e2e21e49bf0f95cef9da2a62
 workflow-type: tm+mt
 source-wordcount: '6084'
 ht-degree: 0%
@@ -178,7 +178,7 @@ Lista med metaegenskaper för ett tema (finns på egenskapssidan för ett tema).
      <li>Den användardefinierade databassökvägen inom '/etc' där de klienter som motsvarar temat lagras.</li>
      <li>Standardvärde - '/etc/clientlibs/fd/themes' + relativ sökväg för temaresursen.</li>
      <li>Om platsen inte finns genereras mapphierarkin automatiskt.</li>
-     <li>När det här värdet ändras flyttas nodstrukturen för klientlib till den nya plats som anges.<br /> <em><strong>Obs!</strong> Om du ändrar standardplats för klientlib i CRXDE-databasen tilldelar <code>crx:replicate, rep:write, rep:glob:*, rep:itemNames:: js.txt, jcr:read </code>till <code>forms-users</code> och <code>crx:replicate</code>, <code>jcr:read </code>till <code>fd-service</code> på den nya platsen. Bifoga även en annan ACL genom att lägga till <code>deny jcr:addChildNodes</code> for <code>forms-user</code></em></li>
+     <li>När det här värdet ändras flyttas nodstrukturen för klientlib till den nya plats som anges.<br /> <em><strong>Obs!</strong> Om du ändrar standardplats för klientlib i CRXDE-databasen tilldelar <code>crx:replicate</code>, <code>rep:write</code>, <code>rep:glob:*</code>, <code>rep:itemNames::</code> <code>js.txt</code>, <code>jcr:read</code> till <code>forms-users</code> och <code>crx:replicate</code>, <code>jcr:read</code> till <code>fd-service</code> på den nya platsen. Bifoga även en annan ACL genom att lägga till <code>deny jcr:addChildNodes</code> for <code>forms-user</code></em></li>
     </ul> </td>
   </tr>
   <tr>

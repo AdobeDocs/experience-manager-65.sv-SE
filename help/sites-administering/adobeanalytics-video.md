@@ -7,10 +7,10 @@ topic-tags: integration
 content-type: reference
 docset: aem65
 exl-id: 5d51f898-b6d1-40ac-bdbf-127cda1dc777
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: db0e9d6105484b37e2e21e49bf0f95cef9da2a62
 workflow-type: tm+mt
-source-wordcount: '1745'
-ht-degree: 1%
+source-wordcount: '1754'
+ht-degree: 0%
 
 ---
 
@@ -117,7 +117,7 @@ I följande tabell beskrivs CQ-standardvariablerna som anges för metoden Milest
   </tr>
   <tr>
    <td>eventdata.a.media.segment </td>
-   <td>Innehåller information om det segment som har visats, till exempel 2:O:4-8 </td>
+   <td>Innehåller information om det segment som har visats, till exempel <code>2:O:4-8</code> </td>
   </tr>
  </tbody>
 </table>
@@ -317,7 +317,7 @@ Den här metoden liknar metoden milstolpar med skillnaden att de milstolpar som 
 
    **Exempelsamtal** till Adobe Analytics som använder exemplet ska se ut så här när du tittar på DigitalPulse Debugger:
 
-   ![lmilestones1](assets/lmilestones1.png)
+   ![milstolpar1](assets/lmilestones1.png)
 
    *The **pev3**variabeln som skickades i anropet innehåller följande information:*
 

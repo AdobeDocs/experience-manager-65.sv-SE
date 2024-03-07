@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
 content-type: reference
 exl-id: 11b0023e-34bd-4dfe-8173-5466db9fbe34
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: db0e9d6105484b37e2e21e49bf0f95cef9da2a62
 workflow-type: tm+mt
-source-wordcount: '1086'
+source-wordcount: '1078'
 ht-degree: 0%
 
 ---
@@ -98,10 +98,10 @@ Du kan försöka åtgärda problemet genom att göra följande:
 * Kontrollera åtkomstkontrollistor på `/etc/cloudservices`. Åtkomstkontrollistorna ska vara:
 
    * allow; jcr:read; webservice-support-serviclibfinder
-   * allow; jcr:read; all; rep:glob:&amp;ast;/defaults/&amp;ast;
-   * allow; jcr:read; all; rep:glob:&amp;ast;/default
-   * allow; jcr:read; all; rep:glob:&amp;ast;/public/&amp;ast;
-   * allow; jcr:read; all; rep:glob:&amp;ast;/public
+   * allow; jcr:read; alla; `rep:glob:`&amp;ast;`/defaults/`&amp;ast;
+   * allow; jcr:read; alla; `rep:glob:`&amp;ast;`/defaults`
+   * allow; jcr:read; alla; `rep:glob:`&amp;ast;`/public/`&amp;ast;
+   * allow; jcr:read; alla; `rep:glob:`&amp;ast;`/public`
 
 Mer information om hur du hanterar åtkomstkontrollistor finns i [Användaradministration och -säkerhet](/help/sites-administering/security.md#permissions-in-aem) sida.
 
