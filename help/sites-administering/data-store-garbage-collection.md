@@ -7,9 +7,9 @@ topic-tags: operations
 content-type: reference
 docset: aem65
 exl-id: 0dc4a8ce-5b0e-4bc9-a6f5-df2a67149e22
-source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
+source-git-commit: bd3c3c2f833e4d7e763e7726c5c75597523605d7
 workflow-type: tm+mt
-source-wordcount: '1891'
+source-wordcount: '1892'
 ht-degree: 0%
 
 ---
@@ -161,7 +161,7 @@ Det inbyggda veckounderhållet som finns via [Instrumentpanel för åtgärder](/
 >
 >Orsaken till att den inte körs samtidigt är att gamla (och oanvända) datalagringsfiler också säkerhetskopieras, så om det krävs att de återställs till en gammal version finns binärfilerna fortfarande kvar i säkerhetskopian.
 
-Om du inte vill köra skräpinsamlingen i datalagret med fönstret för veckounderhåll på kontrollpanelen för åtgärder, kan den även automatiseras med hjälp av widgeten eller surfa HTTP-klienter. Här följer ett exempel på hur du automatiserar säkerhetskopiering med hjälp av vändning:
+Om du inte vill köra skräpinsamlingen i datalagret med fönstret för veckounderhåll på kontrollpanelen för åtgärder, kan den även automatiseras med hjälp av widgeten eller surfa HTTP-klienter. Här följer ett exempel på hur du automatiserar skräpinsamlingen med hjälp av url:
 
 >[!CAUTION]
 >
