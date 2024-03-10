@@ -7,9 +7,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 role: Developer
 exl-id: 306cd40b-1831-45aa-9f58-3ab1983a68c5
-source-git-commit: c4cd9a61a226ace2a72d60b5b7b7432de12cb873
+source-git-commit: f349c8fd9c370ba589d217cd3b1d0521ae5c5597
 workflow-type: tm+mt
-source-wordcount: '1019'
+source-wordcount: '1007'
 ht-degree: 0%
 
 ---
@@ -40,7 +40,7 @@ Java API Quick Start (SOAP) är tillgängligt för Assembler-tjänsten
 
 [Snabbstart (SOAP-läge): Sammanställa flera XDP-fragment med Java API](assembler-service-java-api-quick.md#quick-start-soap-mode-assembling-multiple-xdp-fragments-using-the-java-api)
 
-AEM Forms-åtgärder kan utföras med AEM Forms starkt typade API och anslutningsläget bör anges till SOAP.
+AEM Forms-åtgärder kan utföras med AEM Forms starkt typbestämda API och anslutningsläget bör anges till SOAP.
 
 >[!NOTE]
 >
@@ -1687,7 +1687,7 @@ Följande kodexempel tar bort ett PDF-dokument med `PDFUtility`.
 
 >[!NOTE]
 >
-The `PDFUtility` kan bara redigera bort PDF som har markerats för bortredigering med Acrobat.
+>The `PDFUtility` kan bara redigera bort PDF som har markerats för bortredigering med Acrobat.
 
 ```java
 /*

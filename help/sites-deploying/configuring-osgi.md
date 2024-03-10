@@ -7,7 +7,7 @@ topic-tags: configuring
 content-type: reference
 feature: Configuring
 exl-id: 5ecd09a3-c4be-4361-9816-03106435346f
-source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
+source-git-commit: f349c8fd9c370ba589d217cd3b1d0521ae5c5597
 workflow-type: tm+mt
 source-wordcount: '1954'
 ht-degree: 0%
@@ -247,7 +247,7 @@ Så här lägger du till den nya konfigurationen i databasen:
    * Typ: efter behov.
    * Värde: efter behov.
 
-   Du behöver bara skapa egenskaper för de parametrar som du vill konfigurera, medan andra fortfarande använder standardvärdena enligt AEM.
+   Du får bara skapa egenskaper för de parametrar som du vill konfigurera, medan andra fortfarande använder de standardvärden som anges av AEM.
 
 1. Spara alla ändringar.
 

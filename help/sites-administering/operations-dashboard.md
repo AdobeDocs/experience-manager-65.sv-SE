@@ -8,9 +8,9 @@ content-type: reference
 docset: aem65
 exl-id: f9a88156-91a2-4c85-9bc9-8f23700c2cbd
 feature: Operations
-source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
+source-git-commit: f349c8fd9c370ba589d217cd3b1d0521ae5c5597
 workflow-type: tm+mt
-source-wordcount: '6061'
+source-wordcount: '5868'
 ht-degree: 0%
 
 ---
@@ -137,7 +137,7 @@ Att skapa en enskild hälsokontroll består av två steg: implementera en hälso
 
 En sammansatt hälsokontroll har till uppgift att sammanställa flera enskilda hälsokontroller som delar en uppsättning gemensamma funktioner. Den sammansatta hälsokontrollen för Säkerhet grupperar till exempel alla enskilda hälsokontroller som utför säkerhetsrelaterade kontroller. Det första steget för att skapa en sammansatt kontroll är att lägga till en OSGI-konfiguration. För att den ska kunna visas på kontrollpanelen för åtgärder måste en ny konfigurationsnod läggas till på samma sätt som en enkel kontroll.
 
-1. Gå till Web Configuration Manager i OSGI-konsolen. Öppna `https://serveraddress:port/system/console/configMgr`
+1. Gå till Web Configuration Manager i OSGI-konsolen. Åtkomst `https://serveraddress:port/system/console/configMgr`
 1. Sök efter den anropade posten **Apache Sling Composite Health Check**. När du har hittat den bör du tänka på att det redan finns två konfigurationer: en för systemkontrollerna och en annan för säkerhetskontrollerna.
 1. Skapa en konfiguration genom att trycka på plusknappen (+) till höger om konfigurationen. Ett nytt fönster visas enligt nedan:
 
@@ -199,7 +199,7 @@ En sammansatt hälsokontroll har till uppgift att sammanställa flera enskilda h
    <td><p>Längden på observationskön itererar över alla händelseavlyssnare och bakgrundsobservrar och jämför deras <code>queueSize </code>till sina <code>maxQueueSize</code> och:</p>
     <ul>
      <li>returnerar Kritisk status om <code>queueSize</code> värdet överskrider <code>maxQueueSize</code> värde (d.v.s. när händelser tas bort)</li>
-     <li>returnerar Varna om <code>queueSize</code> värdet är över <code>maxQueueSize * WARN_THRESHOLD</code> (standardvärdet är 0,75) </li>
+     <li>returnerar en varning om <code>queueSize</code> värdet är över <code>maxQueueSize * WARN_THRESHOLD</code> (standardvärdet är 0,75) </li>
     </ul> <p>Den maximala längden för varje kö kommer från olika konfigurationer (Oak och AEM) och kan inte konfigureras från den här hälsokontrollen. MBean för den här hälsokontrollen är <a href="http://localhost:4502/system/console/jmx/org.apache.sling.healthcheck%3Aname%3DObservationQueueLengthHealthCheck%2Ctype%3DHealthCheck">org.apache.sling.healthCheck:name=ObservationQueueLengthHealthCheck,type=HealthCheck</a>.</p> </td>
   </tr>
   <tr>
@@ -223,11 +223,11 @@ En sammansatt hälsokontroll har till uppgift att sammanställa flera enskilda h
    <td>Asynkrona index</td>
    <td><p>Kontrollen Asynkrona index:</p>
     <ul>
-     <li>returnerar Kritisk status om minst ett indexeringsfält misslyckas</li>
+     <li>returnerar en kritisk status om minst ett indexeringsfält misslyckas</li>
      <li>kontrollerar <code>lastIndexedTime</code> för alla indexeringsbanor och
       <ul>
-       <li>returnerar Kritisk status om det är mer än 2 timmar sedan </li>
-       <li>returnerar varningsstatus om det är mellan 2 timmar och 45 minuter sedan </li>
+       <li>returnerar en Kritisk status om det är mer än 2 timmar sedan </li>
+       <li>returnerar en varningsstatus om det är mellan 2 timmar och 45 minuter sedan </li>
        <li>returnerar OK-status om den är mindre än 45 minuter sedan </li>
       </ul> </li>
      <li>om inget av dessa villkor uppfylls returneras OK-statusen</li>
@@ -264,17 +264,17 @@ En sammansatt hälsokontroll har till uppgift att sammanställa flera enskilda h
      <code>maxNumQueueJobs</code> och
     </div>
     <ul>
-     <li>returnerar Critical om mer än <code>maxNumQueueJobs</code> finns i kön</li>
-     <li>returnerar Kritisk om det finns aktiva jobb som körs länge och är äldre än 1 timme</li>
-     <li>returnerar Kritisk om det finns jobb i kö och den senaste slutförda jobbtiden är äldre än 1 timme</li>
+     <li>returnerar ett kritiskt värde om mer än <code>maxNumQueueJobs</code> finns i kön</li>
+     <li>returnerar ett kritiskt värde om det finns tidskrävande aktiva jobb som är äldre än 1 timme</li>
+     <li>returnerar ett kritiskt värde om det finns jobb i kö och den senaste jobbtiden är äldre än 1 timme</li>
     </ul> <p>Endast parametern för maximalt antal jobb i kö kan konfigureras och har standardvärdet 1 000.</p> <p>MBean för den här hälsokontrollen är <a href="http://localhost:4502/system/console/jmx/org.apache.sling.healthcheck%3Aname%3DslingJobs%2Ctype%3DHealthCheck" target="_blank">org.apache.sling.healthCheck:name=slingJobs,type=HealthCheck</a>.</p> </td>
   </tr>
   <tr>
    <td>Begär prestanda</td>
    <td><p>Den här kontrollen tittar på <code>granite.request.metrics.timer</code> <a href="http://localhost:4502/system/console/slingmetrics" target="_blank">Sling-mått </a>och:</p>
     <ul>
-     <li>returnerar Kritisk om det 75:e percentilvärdet överstiger det kritiska tröskelvärdet (standardvärdet är 500 millisekunder)</li>
-     <li>returnerar Varna om det 75:e percentilvärdet överstiger varningströskeln (standardvärdet är 200 millisekunder)</li>
+     <li>returnerar ett kritiskt värde om det 75:e percentilvärdet överstiger det kritiska tröskelvärdet (standardvärdet är 500 millisekunder)</li>
+     <li>returnerar ett varningsmeddelande om det 75:e percentilvärdet överstiger varningsvärdet (standardvärdet är 200 millisekunder)</li>
     </ul> <p>MBean för den här hälsokontrollen är<em> </em><a href="http://localhost:4502/system/console/jmx/org.apache.sling.healthcheck%3Aname%3DrequestsStatus%2Ctype%3DHealthCheck" target="_blank">org.apache.sling.healthCheck:name=requestsStatus,type=HealthCheck</a>.</p> </td>
   </tr>
   <tr>
@@ -285,8 +285,8 @@ En sammansatt hälsokontroll har till uppgift att sammanställa flera enskilda h
    <td>Diskutrymme</td>
    <td><p>Kontrollen av diskutrymme finns på <code>FileStoreStats</code> MBean, hämtar storleken på nodarkivet och hur mycket diskutrymme som kan användas på partitionen Node Store, och:</p>
     <ul>
-     <li>returnerar Varna om det tillgängliga diskutrymmet till databasstorleken är mindre än varningströskeln (standardvärdet är 10)</li>
-     <li>returnerar Kritisk om det användbara diskutrymmet till databasstorleken är mindre än det kritiska tröskelvärdet (standardvärdet är 2)</li>
+     <li>returnerar en varning om det tillgängliga diskutrymmet till databasstorleken är mindre än varningsvärdet (standardvärdet är 10)</li>
+     <li>returnerar ett kritiskt värde om det tillgängliga diskutrymmet till databasstorleken är mindre än det kritiska tröskelvärdet (standardvärdet är 2)</li>
     </ul> <p>Båda tröskelvärdena kan konfigureras. Kontrollen fungerar bara på instanser med ett segmentlager.</p> <p>MBean för den här hälsokontrollen är <a href="http://localhost:4502/system/console/jmx/org.apache.sling.healthcheck%3Aname%3DDiskSpaceHealthCheck%2Ctype%3DHealthCheck" target="_blank">org.apache.sling.healthCheck:name=DiskSpaceHealthCheck,type=HealthCheck</a>.</p> </td>
   </tr>
   <tr>
@@ -309,15 +309,15 @@ En sammansatt hälsokontroll har till uppgift att sammanställa flera enskilda h
    <td>Kontroll av kodcache</td>
    <td><p>En hälsokontroll som verifierar flera JVM-förhållanden som kan utlösa ett CodeCache-fel i Java™ 7:</p>
     <ul>
-     <li>returnerar Varna om instansen körs på Java™ 7, med tömning av kodcache aktiverat</li>
-     <li>returnerar Varna om instansen körs på Java™ 7 och storleken på den reserverade kodcachen är mindre än ett minimivärde (standardvärdet är 90 MB)</li>
+     <li>returnerar en varning om instansen körs på Java™ 7, med tömning av kodcache aktiverat</li>
+     <li>returnerar ett varningsmeddelande om instansen körs på Java™ 7 och storleken på den reserverade kodcachen är mindre än ett minimivärde (standardvärdet är 90 MB)</li>
     </ul> <p>The <code>minimum.code.cache.size</code> tröskelvärdet kan konfigureras. Mer information om felet finns i <a href="https://bugs.java.com/bugdatabase/"> och sök sedan på fel ID 8012547</a>.</p> <p>MBean för den här hälsokontrollen är <a href="http://localhost:4502/system/console/jmx/org.apache.sling.healthcheck%3Aname%3DcodeCacheHealthCheck%2Ctype%3DHealthCheck" target="_blank">org.apache.sling.healthCheck:name=codeCacheHealthCheck,type=HealthCheck</a>.</p> </td>
   </tr>
   <tr>
    <td>Sökvägsfel för resurssökning</td>
    <td><p>Kontrollerar om det finns några resurser i sökvägen <code>/apps/foundation/components/primary</code> och:</p>
     <ul>
-     <li>returnerar Varna om det finns underordnade noder under <code>/apps/foundation/components/primary</code></li>
+     <li>returnerar en varning om det finns underordnade noder under <code>/apps/foundation/components/primary</code></li>
     </ul> <p>MBean för den här hälsokontrollen är <a href="http://localhost:4502/system/console/jmx/org.apache.sling.healthcheck%3Aname%3DresourceSearchPathErrorHealthCheck%2Ctype%3DHealthCheck" target="_blank">org.apache.sling.healthCheck:name=resourceSearchPathErrorHealthCheck,type=HealthCheck</a>.</p> </td>
   </tr>
  </tbody>
@@ -741,7 +741,7 @@ Du kan även hämta en `JSON` fil som sammanfattar instrumentpanelsinformationen
     </ul> </td>
   </tr>
   <tr>
-   <td>Underhållsåtgärder</td>
+   <td>Underhållsaktiviteter</td>
    <td>
     <ul>
      <li>en lista över misslyckade uppgifter</li>

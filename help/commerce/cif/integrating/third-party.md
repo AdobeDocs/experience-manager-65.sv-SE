@@ -1,16 +1,16 @@
 ---
-title: AEM och tredjeparts Commerce Integration med Commerce Integration Framework
-description: Företag kan behöva ytterligare e-handelslösningar från tredje part för att göra sin butik tillgänglig. Commerce Integration Framework (CIF) kan användas i sådana integreringsscenarier för att ansluta en tredjepartslösning för e-handel till Adobe Experience Manager med hjälp av I/O Runtime.
+title: AEM och tredjeparts Commerce Integration med hjälp av Commerce integration framework
+description: Företag kan behöva ytterligare e-handelslösningar från tredje part för att göra sin butik tillgänglig. Commerce integrationa frameworken (CIF) kan användas i sådana integreringsscenarier för att ansluta en e-handelslösning från tredje part till Adobe Experience Manager med hjälp av I/O Runtime.
 thumbnail: cif-third-party-architecture.jpg
 exl-id: e99899a4-df86-4108-991a-8b30d303a279
-source-git-commit: 1ef5593495b4bf22d2635492a360168bccc1725d
+source-git-commit: f349c8fd9c370ba589d217cd3b1d0521ae5c5597
 workflow-type: tm+mt
-source-wordcount: '507'
+source-wordcount: '489'
 ht-degree: 0%
 
 ---
 
-# AEM och tredjeparts Commerce Integration med Commerce Integration Framework {#aem-third-party}
+# AEM och tredjeparts handelsintegrering med hjälp av Commerce integration framework {#aem-third-party}
 
 Integrationen av lösningar från andra företag än Adobe Commerce är ett vanligt scenario för CIF. Tredjepartslösningar med olika API:er och scheman kopplas samman via ett integreringslager.
 
@@ -34,19 +34,19 @@ Du behöver inte implementera hela GraphQL-schemat, bara schemats objekt för at
 
 ## Användningsfall i serverdelen
 
-CIF utökar Experience Manager med produktkatalogåtkomst i realtid och verktyg för hantering av produktupplevelser. Denna smidiga integrering gör att författare kan komma åt e-handelsdata med inbäddade användargränssnitt när det behövs utan att lämna innehållskontexten.
+CIF utökar Experience Manager med tillgång till produktkataloger i realtid och verktyg för hantering av produktupplevelser. Denna smidiga integrering gör att författare kan komma åt e-handelsdata med inbäddade användargränssnitt när det behövs utan att lämna innehållskontexten.
 
 Integreringen av programmeringsgränssnitt för produktkataloger krävs för att låsa upp dessa användningsfall.
 
 ## Vanliga användningsfall
 
-[AEM CIF-kärnkomponenter](https://github.com/adobe/aem-core-cif-components) hämta och utbyta data via de CIF-stödda Adobe Commerce-API:erna. Om du vill återanvända komponenter måste respektive API implementeras.
+[AEM CIF kärnkomponenter](https://github.com/adobe/aem-core-cif-components) hämta och utbyta data via de Adobe Commerce-API:er CIF stöds. Om du vill återanvända komponenter måste respektive API implementeras.
 
 Rekommendationen för prestandakrävande komponenter på klientsidan är att kommunicera direkt med tredjepartslösningen för att undvika latens.
 
 ## Utveckla en integrering {#develop-integration}
 
-Adobe rekommenderar att du använder [Adobe I/O Runtime](https://developer.adobe.com/apis/experienceplatform/runtime.html) för integreringslagret. Den ingår i CIF-tillägget för tredje parter. Eftersom det fungerar med en mikrotjänstliknande metod är det lämpligt att integrera flera lösningar på ett enkelt sätt.
+Adobe rekommenderar att du använder [Adobe I/O Runtime](https://developer.adobe.com/apis/experienceplatform/runtime.html) för integreringslagret. Det ingår i CIF för tredje part. Eftersom det fungerar med en mikrotjänstliknande metod är det lämpligt att integrera flera lösningar på ett enkelt sätt.
 
 The [referensimplementering](https://github.com/adobe/commerce-cif-graphql-integration-reference) är en bra startpunkt för att bygga integreringen i e-handelslösningen. Även om det har stöd för GraphQL kan det även integreras med andra typer av API som REST.
 

@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 docset: aem65
 feature: Correspondence Management
 exl-id: 71754e41-45d7-4cc5-ba49-0748bd51c0cf
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: f349c8fd9c370ba589d217cd3b1d0521ae5c5597
 workflow-type: tm+mt
-source-wordcount: '6901'
+source-wordcount: '6902'
 ht-degree: 0%
 
 ---
@@ -207,7 +207,7 @@ Med funktionen Sök och ersätt kan du söka efter (och ersätta) alla textsträ
 
 ## Lista {#list}
 
-En lista är en grupp dokumentfragment, inklusive text, (andra) listor, villkor och bilder. Ordningen på listelementen kan vara fast eller redigerbar. När du skapar en bokstav kan du använda några eller alla listelement för att återanvända ett mönster med element. Listor fungerar i princip som mål som kan kapslas i andra mål.
+En lista är en grupp dokumentfragment, inklusive text eller (andra) listor, villkor och bilder. Ordningen på listelementen kan vara fast eller redigerbar. När du skapar en bokstav kan du använda några eller alla listelement för att återanvända ett mönster med element. Listor fungerar i princip som mål som kan kapslas i andra mål.
 
 ### Implementeringslistor {#implementing-lists}
 

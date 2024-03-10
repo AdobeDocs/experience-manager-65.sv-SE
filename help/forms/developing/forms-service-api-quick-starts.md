@@ -7,9 +7,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 role: Developer
 exl-id: acb33000-25b3-4471-9df9-b6e039ab2bda
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: f349c8fd9c370ba589d217cd3b1d0521ae5c5597
 workflow-type: tm+mt
-source-wordcount: '1530'
+source-wordcount: '1529'
 ht-degree: 0%
 
 ---
@@ -50,7 +50,7 @@ Följande snabbstarter är tillgängliga för tjänsten Forms:
 
 [Snabbstart (SOAP-läge): skicka dokument till Forms-tjänsten med Java](forms-service-api-quick-starts.md#quick-start-soap-mode-passing-documents-to-the-forms-service-using-the-java-api)
 
-Programlogik som använder Forms tjänst-API implementeras som Java™-servrar. AEM Forms-åtgärder kan utföras med AEM Forms starkt typade API och anslutningsläget bör anges till SOAP.
+Programlogik som använder Forms tjänst-API implementeras som Java™-servrar. AEM Forms-åtgärder kan utföras med AEM Forms starkt typbestämda API och anslutningsläget bör anges till SOAP.
 
 >[!NOTE]
 >
@@ -1378,7 +1378,7 @@ I följande kodexempel hanteras ett formulär som skickas som XML. Värdet för 
 
 >[!NOTE]
 >
-När en `com.adobe.idp.Document` objekt och `org.w3c.dom.Document` i samma applikation, fullständigt kvalificera `org.w3c.dom.Document`.
+>När en `com.adobe.idp.Document` objekt och `org.w3c.dom.Document` i samma applikation, fullständigt kvalificera `org.w3c.dom.Document`.
 
 ## Snabbstart (SOAP-läge): Hantera PDF forms som skickats som PDF med Java™ API {#quick-start-soap-mode-handling-pdf-forms-submitted-as-pdf-using-the-java-api}
 

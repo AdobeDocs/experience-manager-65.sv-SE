@@ -7,10 +7,10 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: page-authoring
 content-type: reference
 exl-id: 01c69aa9-2623-42dc-9e2d-62bc5e01cf0e
-source-git-commit: 5e56441d2dc9b280547c91def8d971e7b1dfcfe3
+source-git-commit: f349c8fd9c370ba589d217cd3b1d0521ae5c5597
 workflow-type: tm+mt
-source-wordcount: '9100'
-ht-degree: 4%
+source-wordcount: '9070'
+ht-degree: 5%
 
 ---
 
@@ -94,11 +94,11 @@ AEM lägger till en **Alt-text** till dina bilder som standard. För det klassis
 
 * Fil:
 
-En bild överförs från användarens hårddisk. Om du lägger till en bildkomponent på en sida och sedan väljer en bild från hårddisken, eller en annan källa, är standardvärdet för **Alt-text** är `file`. Värdet måste ändras i **Avancerat** fliken för bildegenskaper. Det här värdet visas inte i dialogrutan **Alt-text** men när värdet ändras visas det nya värdet i fältet.
+  En bild överförs från användarens hårddisk. Om du lägger till en bildkomponent på en sida och sedan väljer en bild från hårddisken, eller en annan källa, är standardvärdet för **Alt-text** är `file`. Värdet måste ändras i **Avancerat** fliken för bildegenskaper. Det här värdet visas inte i dialogrutan **Alt-text** men när värdet ändras visas det nya värdet i fältet.
 
 * Resurs:
 
-En bild läggs till från databasen med digitala resurser. Om du drar en bild från databasen med digitala resurser till en webbsida visas **Titel** och **Alt-text** värden för den bilden hämtas från metadata för den bilden.
+  En bild läggs till från databasen med digitala resurser. Om du drar en bild från databasen med digitala resurser till en webbsida visas **Titel** och **Alt-text** värden för den bilden hämtas från metadata för den bilden.
 
 >[!NOTE]
 >
@@ -113,7 +113,7 @@ En bild läggs till från databasen med digitala resurser. Om du drar en bild fr
 Det finns olika former av innehåll som inte är text, så textalternativets värde beror på vilken roll bilden spelar på webbsidan. Följande allmänna tumregler gäller:
 
 * Textalternativen bör vara kortfattade men ändå tydligt återge den viktiga information som icke-textinnehållet ger.
-* För långa beskrivningar (över 100 tecken) bör undvikas. Om ett textalternativ kräver mer information:
+* Långa beskrivningar (fler än 100 tecken) bör undvikas. Om ett textalternativ kräver mer information:
 
    * ge en kort beskrivning i den alternativa texten
    * och har en längre beskrivning i text på en annan plats på samma sida eller på en separat webbsida. Länka till den här separata beskrivningen genom att göra bilden till en länk eller genom att placera en textlänk bredvid bilden.
@@ -129,55 +129,55 @@ Specifika typer av icke-textinnehåll som kräver textalternativ kan vara:
 
 * Illustrativa foton:
 
-Det här är bilder på människor, objekt eller platser. Tänk på fotots roll på sidan. En lämplig textmotsvarighet är troligtvis *Foto av [object]*, men kan bero på den omgivande texten.
+  Det här är bilder på människor, objekt eller platser. Tänk på fotots roll på sidan. En lämplig textmotsvarighet är troligtvis *Foto av [object]*, men kan bero på den omgivande texten.
 
 * Ikoner:
 
-Små symboler (grafik) som förmedlar specifik information. De måste användas konsekvent på en sida och en webbplats. Alla förekomster av ikonen på en sida eller på en webbplats bör ha samma korta och koncisa textalternativ, såvida inte detta leder till onödig duplicering av intilliggande text.
+  Små symboler (grafik) som förmedlar specifik information. De måste användas konsekvent på en sida och en webbplats. Alla förekomster av ikonen på en sida eller på en webbplats bör ha samma korta och koncisa textalternativ, såvida inte detta leder till onödig duplicering av intilliggande text.
 
 * Diagram och diagram:
 
-Dessa representerar vanligtvis numeriska data. Ett alternativ för att tillhandahålla ett textalternativ kan vara att ta med en kort sammanfattning av huvudtrenderna som visas i diagrammet eller grafiken. Om det behövs kan du även ge en mer detaljerad beskrivning i texten med hjälp av **Beskrivning** fältet i **Avancerat** fliken för bildegenskaper. Du kan även tillhandahålla källdata i tabellformat någon annanstans på sidan eller webbplatsen.
+  Dessa representerar vanligtvis numeriska data. Ett alternativ för att tillhandahålla ett textalternativ kan vara att ta med en kort sammanfattning av huvudtrenderna som visas i diagrammet eller grafiken. Om det behövs kan du även ge en mer detaljerad beskrivning i texten med hjälp av **Beskrivning** fältet i **Avancerat** fliken för bildegenskaper. Du kan även tillhandahålla källdata i tabellformat någon annanstans på sidan eller webbplatsen.
 
-![Exempel på ett diagram. Nedan visas det bästa sättet att erbjuda ett alternativ.](assets/chlimage_1-2a.jpeg)
+  ![Exempel på ett diagram. Nedan visas det bästa sättet att erbjuda ett alternativ.](assets/chlimage_1-2a.jpeg)
 
-Om du vill ange ett alternativ för det här exempeldiagrammet lägger du till en koncis `alt` text till själva bilden och följ sedan bilden med ett fulltextalternativ.
+  Om du vill ange ett alternativ för det här exempeldiagrammet lägger du till en koncis `alt` text till själva bilden och följ sedan bilden med ett fulltextalternativ.
 
-```xml
-<p><img src="figure1.gif" alt="Figure 1" ></p>
-<p> Figure 1. Distribution of Articles by Journal Category.
-Pie chart: Language=68%, Education=14% and Science=18%.</p>
-```
+  ```xml
+  <p><img src="figure1.gif" alt="Figure 1" ></p>
+  <p> Figure 1. Distribution of Articles by Journal Category.
+  Pie chart: Language=68%, Education=14% and Science=18%.</p>
+  ```
 
->[!NOTE]
->
->Ovanstående utdrag används bara för att illustrera ordningen. Använd **Bild** i stället för `img src` som används ovan.
+  >[!NOTE]
+  >
+  >Ovanstående utdrag används bara för att illustrera ordningen. Använd **Bild** i stället för `img src` som används ovan.
 
-I AEM kan du använda en kombination av **Alt-text** och **Beskrivning** fält i bildens konfigurationsdialogruta - som i [Så här möts innehåll som inte är text (1.1.1)](#how-to-meet-non-text-content).
+  I AEM kan du använda en kombination av **Alt-text** och **Beskrivning** fält i bildens konfigurationsdialogruta - som i [Så här möts innehåll som inte är text (1.1.1)](#how-to-meet-non-text-content).
 
 * Kartor, diagram, flödesscheman:
 
-För grafik som tillhandahåller rumsliga data (till exempel. om du vill ha stöd för att beskriva relationer mellan objekt eller en process) kontrollerar du att nyckelmeddelandet finns i textformat. För kartor är det troligtvis opraktiskt att ange en fullständig textmotsvarighet, men om kartan tillhandahålls som ett sätt att hjälpa människor att hitta till en viss plats, kan kartbildens alternativa text kortfattat ange *Karta över X* anger du sedan en beskrivning av den platsen i text någon annanstans på sidan eller genom **Beskrivning** fältet i **Avancerat** -fliken i **Bild** -komponenten.
+  För grafik som tillhandahåller rumsliga data (till exempel. om du vill ha stöd för att beskriva relationer mellan objekt eller en process) kontrollerar du att nyckelmeddelandet finns i textformat. För kartor är det troligtvis opraktiskt att ange en fullständig textmotsvarighet, men om kartan tillhandahålls som ett sätt att hjälpa människor att hitta till en viss plats, kan kartbildens alternativa text kortfattat ange *Karta över X* anger du sedan en beskrivning av den platsen i text någon annanstans på sidan eller genom **Beskrivning** fältet i **Avancerat** -fliken i **Bild** -komponenten.
 
 * CAPTCHA:
 
-En CAPTCHA är en *Helt automatiserat offentligt kurstest för att skilja datorer och människor åt*. Det är en säkerhetskontroll som används på webbsidor för att skilja människor från skadliga program, men som kan orsaka tillgänglighetshinder. Det är bilder som kräver att användarna beskriver vad de ser för att klara ett säkerhetstest. Det går inte att ange ett textalternativ för bilden, så du måste istället överväga alternativa icke-grafiska lösningar.
+  En CAPTCHA är en *Helt automatiserat offentligt kurstest för att skilja datorer och människor åt*. Det är en säkerhetskontroll som används på webbsidor för att skilja människor från skadliga program, men som kan orsaka tillgänglighetshinder. Det är bilder som kräver att användarna beskriver vad de ser för att klara ett säkerhetstest. Det går inte att ange ett textalternativ för bilden, så du måste istället överväga alternativa icke-grafiska lösningar.
 
-W3C ger flera förslag, till exempel följande. Var och en av dessa metoder har sina egna fördelar och nackdelar.
+  W3C ger flera förslag, till exempel följande. Var och en av dessa metoder har sina egna fördelar och nackdelar.
 
-    * Logikpussel
-    * Användning av ljudutgång i stället för bilder
-    * Begränsade användningskonton och skräppostfilter.
+   * Logikpussel
+   * Användning av ljudutdata i stället för bilder
+   * Begränsade användningskonton och skräppostfilter.
 
 * Bakgrundsbilder:
 
-De här bilderna skapas med CSS (Cascading Style Sheets) i stället för HTML. Det går inte att ange ett alternativt textvärde. Därför bör bakgrundsbilder inte innehålla viktig textinformation. Om de gör det måste den här informationen också anges i sidans text.
+  De här bilderna skapas med CSS (Cascading Style Sheets) i stället för HTML. Det går inte att ange ett alternativt textvärde. Därför bör bakgrundsbilder inte innehålla viktig textinformation. Om de gör det måste den här informationen också anges i sidans text.
 
-Det är dock viktigt att en alternativ bakgrund visas när bilden inte kan visas.
+  Det är dock viktigt att en alternativ bakgrund visas när bilden inte kan visas.
 
->[!NOTE]
->
->Det bör finnas en lämplig kontrastnivå mellan bakgrunden och förgrundstexten. Kontrasten diskuteras mer ingående i [Kontrast (minimal) (1.4.3)](#contrast-minimum).
+  >[!NOTE]
+  >
+  >Det bör finnas en lämplig kontrastnivå mellan bakgrunden och förgrundstexten. Kontrasten diskuteras mer ingående i [Kontrast (minimal) (1.4.3)](#contrast-minimum).
 
 #### Mer information - Innehåll som inte är text (1.1.1) {#more-information-non-text-content}
 
@@ -219,7 +219,7 @@ Om du anger den här informationen i ett annat format, till exempel text (eller 
 
    * Ange en länk omedelbart före eller efter innehållet till en textavskrift av ljudinnehållet.
 
-  Avskriften ska vara en HTML-sida med en textmotsvarighet till allt tal och viktigt icke-talat innehåll. Det ska även ange vem som talar, en beskrivning av inställningen, röstuttryck och en beskrivning av eventuellt annat viktigt ljud.
+     Avskriften ska vara en HTML-sida med en textmotsvarighet till allt tal och viktigt icke-talat innehåll. Det ska även ange vem som talar, en beskrivning av inställningen, röstuttryck och en beskrivning av eventuellt annat viktigt ljud.
 
 * Om innehållet är en animering eller förinspelad video utan ljud:
 
@@ -388,122 +388,122 @@ Se till att webbsidorna får rätt struktur genom att:
 
 * **Använda rubriker:**
 
-Så länge du har tillgänglighetsfunktionerna aktiverade (se [AEM och tillgänglighet](/help/sites-administering/rte-accessible-content.md)), AEM erbjuder tre nivåer för sidrubriken. Du kan använda dessa för att identifiera avsnitt och underavsnitt för innehåll. Rubrik 1 är den högsta rubriknivån, rubrik 3 den lägsta. Systemadministratören kan konfigurera systemet så att fler rubriknivåer tillåts.
+  Så länge du har tillgänglighetsfunktionerna aktiverade (se [AEM och tillgänglighet](/help/sites-administering/rte-accessible-content.md)), AEM erbjuder tre nivåer för sidrubriken. Du kan använda dessa för att identifiera avsnitt och underavsnitt för innehåll. Rubrik 1 är den högsta rubriknivån, rubrik 3 den lägsta. Systemadministratören kan konfigurera systemet så att fler rubriknivåer tillåts.
 
-I följande bild visas ett exempel på de olika rubriktyperna.
+  I följande bild visas ett exempel på de olika rubriktyperna.
 
-![Rubrikerna H1 till H3 visas i listrutan (klassiskt användargränssnitt).](assets/chlimage_1-19a.png)
+  ![Rubrikerna H1 till H3 visas i listrutan (klassiskt användargränssnitt).](assets/chlimage_1-19a.png)
 
 * **Betonad text**:
 
-Använd eller elementet för att ange betoning. Använd inte rubriker för att markera text i stycken.
+  Använd eller elementet för att ange betoning. Använd inte rubriker för att markera text i stycken.
 
-    * Markera den text du vill framhäva;
-    * Klicka på ikonen **B** (för &amp;lt;strong&amp;gt;) eller ikonen **I** (för &amp;lt;em&amp;gt;) som visas i panelen **Properties** (kontrollera att HTML är markerat).
+   * Markera den text som du vill framhäva;
+   * Klicka på **B** ikon (för &lt;strong>) eller **I** ikon (för &lt;em>) visas i **Egenskaper** (se till att HTML är markerat).
 
->[!NOTE]
->
->RTE i en AEM standardinstallation är konfigurerad att använda:
->
->* &lt;b> for &lt;strong>
-* &lt;i> for &lt;em>
->
-De är i princip desamma, men och är att föredra eftersom de är semantiskt korrekta i html. Utvecklingsteamet kan konfigurera RTE-programmet så att det kan användas och (i stället för och) när projektinstansen utvecklas.
+  >[!NOTE]
+  >
+  >RTE i en AEM standardinstallation är konfigurerad att använda:
+  >
+  >* &lt;b> for &lt;strong>
+  * &lt;i> for &lt;em>
+  >
+  De är i princip desamma, men och är att föredra eftersom de är semantiskt korrekta i html. Utvecklingsteamet kan konfigurera RTE-programmet så att det kan användas och (i stället för och) när projektinstansen utvecklas.
 
 * **Använd listor**: Du kan använda HTML för att ange tre olika typer av listor:
 
    * The `<ul>` element används för *oordnad* punktlistor. Enskilda listobjekt identifieras med `<li>` -element.
 
-  i RTE använder du **Punktlista** -ikon.
+     i RTE använder du **Punktlista** -ikon.
 
    * The `<ol>` element används för *numrerad* listor. Enskilda listobjekt identifieras med `<li>` -element.
 
-  I RTE använder du **Numrerad lista** -ikon.
+     I RTE använder du **Numrerad lista** -ikon.
 
-Om du vill ändra befintligt innehåll till en viss listtyp markerar du lämplig text och väljer lämplig listtyp. Precis som i det tidigare exemplet som visar hur stycketext skrivs in, läggs de rätta listelementen automatiskt till i HTML, men du kan visa detta i källredigeringsvyn.
+  Om du vill ändra befintligt innehåll till en viss listtyp markerar du lämplig text och väljer lämplig listtyp. Precis som i det tidigare exemplet som visar hur stycketext skrivs in, läggs de rätta listelementen automatiskt till i HTML, men du kan visa detta i källredigeringsvyn.
 
->[!NOTE]
->
-The `<dl>` -elementet stöds inte av RTE.
+  >[!NOTE]
+  >
+  The `<dl>` -elementet stöds inte av RTE.
 
 * **Använd tabeller**:
 
-Datatabeller måste identifieras med tabellelement i HTML:
+  Datatabeller måste identifieras med tabellelement i HTML:
 
-    * en `&lt;table>`-element
-    * a `&lt;tr>`-element för varje rad i tabellen
-    * a `&lt;th>`-element för varje rad och kolumnrubrik
-    * a `&lt;td>`-element för varje datacell
+   * en `<table>` element
+   * a `<tr>` element för varje rad i tabellen
+   * a `<th>` element för varje rad och kolumnrubrik
+   * a `<td>` element för varje datacell
 
->[!NOTE]
->
-Tabeller ska realiseras med **Tabell** -komponenten. Även om tabeller kan skapas i Text-komponenten rekommenderas inte detta.
+  >[!NOTE]
+  >
+  Tabeller ska realiseras med **Tabell** -komponenten. Även om tabeller kan skapas i Text-komponenten rekommenderas inte detta.
 
-Tillgängliga tabeller använder dessutom följande element och attribut:
+  Tillgängliga tabeller använder dessutom följande element och attribut:
 
-    * The `&lt;caption>`-element används för att ge en synlig bildtext för tabellen. Bildtexter visas som standard centrerade ovanför tabellen, men kan placeras korrekt med CSS. Bildtexten är programmatiskt kopplad till tabellen och är därför en användbar metod för att ge en introduktion till innehållet.
-    * The `&lt;h3 class=&quot;summary&quot;>`-element hjälper icke-synkade användare att enklare förstå den information som presenteras i en tabell genom att ge en sammanfattning av vad en synkad användare kan se. Detta är särskilt användbart när komplexa eller okonventionella tabellayouter används (det här attributet visas inte i webbläsaren, det läses bara ut för hjälpfunktioner).
-    * The &quot;scope&quot; attribute of the `&lt;th>`-element används för att ange om en cell representerar en rubrik för en viss rad eller för en viss kolumn. Ett liknande sätt är att använda attributen header och id i komplexa tabeller, där dataceller kan kopplas till en eller flera rubriker.
+   * The `<caption>` -elementet används för att ange en synlig bildtext för tabellen. Bildtexter visas som standard centrerade ovanför tabellen, men kan placeras korrekt med CSS. Bildtexten är programmatiskt kopplad till tabellen och är därför en användbar metod för att ge en introduktion till innehållet.
+   * The `<h3 class="summary">` -elementet hjälper icke-synkade användare att enklare förstå den information som presenteras i en tabell genom att ge en sammanfattning av vad en synkad användare kan se. Detta är särskilt användbart när komplexa eller okonventionella tabellayouter används (det här attributet visas inte i webbläsaren, det läses bara ut för hjälpfunktioner).
+   * The `scope` attributet för `<th>` -element används för att ange om en cell representerar en rubrik för en viss rad eller för en viss kolumn. Ett liknande sätt är att använda attributen header och id i komplexa tabeller, där dataceller kan kopplas till en eller flera rubriker.
 
->[!NOTE]
->
-Som standard är dessa element och attribut inte direkt tillgängliga, men det är möjligt för systemadministratören att lägga till stöd för dessa värden i **Tabellegenskaper** (se [Stöd för ytterligare element och attribut i HTML](/help/sites-administering/rte-accessible-content.md#add-support-for-more-html-elements-and-attributes)).
+  >[!NOTE]
+  >
+  Som standard är dessa element och attribut inte direkt tillgängliga, men det är möjligt för systemadministratören att lägga till stöd för dessa värden i **Tabellegenskaper** (se [Stöd för ytterligare element och attribut i HTML](/help/sites-administering/rte-accessible-content.md#add-support-for-more-html-elements-and-attributes)).
 
-När en **Tabell** kan du konfigurera **Tabellegenskaper** genom att använda dialogrutan.
+  När en **Tabell** kan du konfigurera **Tabellegenskaper** genom att använda dialogrutan.
 
-    * en lämplig **Bildtext**.
-    * Ta helst bort alla standardvärden för **Width**, **Height**, **Border**, **Cellutfyllnad*, **Cellmellanrum**. eftersom dessa egenskaper kan anges i en global formatmall.
+   * lämplig **Bildtext**.
+   * Ta helst bort alla standardvärden för **Bredd**, **Höjd**, **Kant**, **Cellfyllnad** och **Cellmellanrum** eftersom dessa egenskaper kan anges i en global formatmall.
 
-![Dialogrutan Tabellegenskaper.](assets/chlimage_1-20a.png)
+  ![Dialogrutan Tabellegenskaper.](assets/chlimage_1-20a.png)
 
-Du kan sedan använda **Cellegenskaper** för att välja om cellen är en data- eller rubrikcell och, om det är en rubrikcell, om den hör till en rad eller kolumn eller både och:
+  Du kan sedan använda **Cellegenskaper** för att välja om cellen är en data- eller rubrikcell och, om det är en rubrikcell, om den hör till en rad eller kolumn eller både och:
 
-![Dialogrutan Anropa egenskaper. Ange en rad (vanligtvis den första) som en rubrikrad.](assets/chlimage_1-21a.png)
+  ![Dialogrutan Anropa egenskaper. Ange en rad (vanligtvis den första) som en rubrikrad.](assets/chlimage_1-21a.png)
 
 * **Komplexa datatabeller:**
 
-Om det finns komplexa tabeller med två eller flera rubriknivåer kan det hända att de grundläggande tabellegenskaperna inte räcker till för att ge all nödvändig strukturinformation. För den här typen av komplexa tabeller måste direkta relationer skapas mellan rubrikerna och deras relaterade celler med hjälp av **header** och **id** attribut. I tabellen nedan matchas till exempel rubriker och ID:n för att skapa en programmatisk association för hjälpmedelsanvändare.
+  Om det finns komplexa tabeller med två eller flera rubriknivåer kan det hända att de grundläggande tabellegenskaperna inte räcker till för att ge all nödvändig strukturinformation. För den här typen av komplexa tabeller måste direkta relationer skapas mellan rubrikerna och deras relaterade celler med hjälp av **header** och **id** attribut. I tabellen nedan matchas till exempel rubriker och ID:n för att skapa en programmatisk association för hjälpmedelsanvändare.
 
->[!NOTE]
->
-Attributet id är inte tillgängligt i en körklar installation. Den kan aktiveras genom att konfigurera HTML-regler och serialiseraren i textredigeraren.
+  >[!NOTE]
+  >
+  Attributet id är inte tillgängligt i en körklar installation. Den kan aktiveras genom att konfigurera HTML-regler och serialiseraren i textredigeraren.
 
->[!NOTE]
->
-Tabeller ska realiseras med **Tabell** -komponenten. Även om tabeller kan skapas i Text-komponenten rekommenderas inte detta.
+  >[!NOTE]
+  >
+  Tabeller ska realiseras med **Tabell** -komponenten. Även om tabeller kan skapas i Text-komponenten rekommenderas inte detta.
 
-```xml
-<table>
-   <tr>
-     <th rowspan="2" id="h">Homework</th>
-     <th colspan="3" id="e">Exams</th>
-     <th colspan="3" id="p">Projects</th>
-   </tr>
-   <tr>
-     <th id="e1" headers="e">1</th>
-     <th id="e2" headers="e">2</th>
-     <th id="ef" headers="e">Final</th>
-     <th id="p1" headers="p">1</th>
-     <th id="p2" headers="p">2</th>
-     <th id="pf" headers="p">Final</th>
-   </tr>
-   <tr>
-    <td headers="h">15%</td>
-    <td headers="e e1">15%</td>
-    <td headers="e e2">15%</td>
-    <td headers="e ef">20%</td>
-    <td headers="p p1">10%</td>
-    <td headers="p p2">10%</td>
-    <td headers="p pf">15%</td>
-   </tr>
-  </table>
-```
+  ```xml
+  <table>
+     <tr>
+       <th rowspan="2" id="h">Homework</th>
+       <th colspan="3" id="e">Exams</th>
+       <th colspan="3" id="p">Projects</th>
+     </tr>
+     <tr>
+       <th id="e1" headers="e">1</th>
+       <th id="e2" headers="e">2</th>
+       <th id="ef" headers="e">Final</th>
+       <th id="p1" headers="p">1</th>
+       <th id="p2" headers="p">2</th>
+       <th id="pf" headers="p">Final</th>
+     </tr>
+     <tr>
+      <td headers="h">15%</td>
+      <td headers="e e1">15%</td>
+      <td headers="e e2">15%</td>
+      <td headers="e ef">20%</td>
+      <td headers="p p1">10%</td>
+      <td headers="p p2">10%</td>
+      <td headers="p pf">15%</td>
+     </tr>
+    </table>
+  ```
 
-För att uppnå detta i AEM måste du lägga till markeringen direkt i källredigeringsläget.
+  För att uppnå detta i AEM måste du lägga till markeringen direkt i källredigeringsläget.
 
->[!NOTE]
->
-Den här funktionen är inte omedelbart tillgänglig i en standardinstallation. RTE måste konfigureras; HTML-regler och serialisering.
+  >[!NOTE]
+  >
+  Den här funktionen är inte omedelbart tillgänglig i en standardinstallation. RTE måste konfigureras; HTML-regler och serialisering.
 
 #### Mer information - Info och relationer (1.3.1) {#more-information-info-and-relationships}
 
@@ -675,8 +675,13 @@ Om bilder av text måste användas, använder du CSS för att ersätta bilder av
 * Nivå A
 * Pausa, Stoppa, Dölj: Följande gäller för flyttning, blinkning, rullning eller automatisk uppdatering:
 
-   * Rörelse, blinkning, rullning: För all rörlig, blinkande eller rullningsinformation som (a) startar automatiskt, (b) varar mer än fem sekunder och (c) presenteras parallellt med annat innehåll, finns det en mekanism som användaren kan pausa, stoppa eller dölja om inte rörelsen, blinkningen eller rullningen är en del av en aktivitet där det är nödvändigt.
-   * Automatisk uppdatering: För all automatiskt uppdaterad information som (a) startar automatiskt och (b) presenteras parallellt med annat innehåll finns det en funktion som användaren kan använda för att pausa, stoppa eller dölja eller styra uppdateringsfrekvensen, såvida inte den automatiska uppdateringen är en del av en aktivitet där det är nödvändigt.
+   * Flytta, blinka, rulla: För rörlig, blinkande eller rullningsinformation som
+      * a) startar automatiskt,
+      * b) varar mer än fem sekunder, och
+      * c) presenteras parallellt med annat innehåll, det finns en mekanism för användaren att pausa, stoppa eller dölja det såvida inte rörelsen, blinkningen eller rullningen är en del av en verksamhet där detta är nödvändigt,
+   * Automatisk uppdatering: För all information som uppdateras automatiskt
+      * a) startar automatiskt, och
+      * b) presenteras parallellt med annat innehåll, det finns en mekanism för användaren att pausa, stoppa eller dölja den eller att styra uppdateringens frekvens, såvida inte den automatiska uppdateringen är en del av en aktivitet där det är nödvändigt.
 
 Poängen är:
 
@@ -846,11 +851,11 @@ För att uppfylla det här kriteriet kan standardspråket på en webbsida identi
 
 * Om en sida är skriven på engelska är `<html>` -elementet ska vara:
 
-`<html lang = "en-gb">`
+  `<html lang = "en-gb">`
 
 * En sida som ska återges som amerikansk engelska bör anta följande standard:
 
-`<html lang = "en-us">`
+  `<html lang = "en-us">`
 
 I AEM anges sidans standardspråk när sidan skapas, men det kan också ändras när den redigeras, vilket du gör via **Assistenten** – fliken **Sida** – **Sidegenskaper ...** – fliken **Avancerat**.
 
@@ -955,11 +960,11 @@ Placeringen av etiketter är också viktig eftersom den hjälper dem att hitta r
 
 * Kryssrutor eller alternativknappar:
 
-Etiketterna placeras direkt till höger om fältet.
+  Etiketterna placeras direkt till höger om fältet.
 
 * Alla andra formulärkomponenter (till exempel textrutor, kombinationsrutor):
 
-Etiketterna placeras antingen direkt ovanför eller direkt till vänster om fältet.
+  Etiketterna placeras antingen direkt ovanför eller direkt till vänster om fältet.
 
 I enkla formulär med begränsad funktionalitet kan du märka en `Submit` kan fungera som etikett för intilliggande fält (till exempel `Search`). Detta är användbart när det kan vara svårt att hitta plats för etikettexten.
 

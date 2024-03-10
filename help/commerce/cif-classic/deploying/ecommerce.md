@@ -3,9 +3,9 @@ title: e-handel - översikt
 description: AEM generiska e-handelslösningen finns som en del av standardinstallationen och ger dig full funktionalitet i e-handelsramverket.
 feature: Commerce Integration Framework
 exl-id: 3567bd28-73aa-401a-8aa9-a62a99d2a613
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: f349c8fd9c370ba589d217cd3b1d0521ae5c5597
 workflow-type: tm+mt
-source-wordcount: '260'
+source-wordcount: '268'
 ht-degree: 0%
 
 ---
@@ -19,13 +19,13 @@ Adobe tillhandahåller två versioner av Commerce integrationa frameworken:
 |                         | CIF på plats | CIF Cloud |
 |-------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------|
 | AEM som stöds | AEM på plats eller AMS 6.x | AEM AMS 6.4 och 6.5 |
-| Back-end | - AEM, Java <br> - Monolitisk integrering, mappning före bygge (mall)<br> - JCR-databas | - ADOBE COMMERCE <br>- Java och JavaScript <br>- Inga handelsdata lagras i JCR-databasen |
+| Back-end | - AEM, Java™ <br> - Monolitisk integrering, mappning före bygge (mall)<br> - JCR-databas | - ADOBE COMMERCE <br>- Java och JavaScript <br>- Inga handelsdata lagras i JCR-databasen |
 | Front-end | AEM återgivna sidor på serversidan | Blandat sidprogram (hybridåtergivning) |
 | Produktkatalog | - Produktimport, redigerare, cachelagring i AEM <br>- Vanliga kataloger med AEM- eller proxysidor | - Ingen produktimport <br>- Allmänna mallar <br>- On demand-data via anslutning |
 | Skalbarhet | - Kan stödja upp till ett fåtal miljoner produkter (beroende på användningsfall) <br> - Cachelagring av Dispatcher | - Ingen volymbegränsning <br>- Cachelagring på Dispatcher eller CDN |
 | Standardiserad datamodell | Nej | Ja, Adobe Commerce GraphQL-schema |
 | Tillgänglighet | Ja:<br> - SAP Commerce Cloud (tillägget har uppdaterats för att stödja AEM 6.4 och Hybris 5 (standard) och bibehåller kompatibiliteten med Hybris 4 <br>- Salesforce Commerce Cloud (Connector open-sourced to support AEM 6.4) | Ja via öppen källkod via GitHub. <br> Adobe Commerce (Stöder 2.3.2 (standard) och är kompatibelt med 2.3.1). |
-| När ska du använda | Begränsad användning: För scenarier där små, statiska kataloger kan behöva importeras | Rekommenderad lösning i de flesta fall |
+| När ska du använda | Begränsad användning: För scenarier där små, importera statiska kataloger efter behov | Rekommenderad lösning i de flesta fall |
 
 
 ## Distribuera andra implementeringar {#deploying-other-implementations}

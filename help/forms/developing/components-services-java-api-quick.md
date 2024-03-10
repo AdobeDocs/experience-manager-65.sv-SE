@@ -7,9 +7,9 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: develop
 role: Developer
 exl-id: fe1198b5-4145-4dcd-ab8a-4015daaf89b7
-source-git-commit: c4cd9a61a226ace2a72d60b5b7b7432de12cb873
+source-git-commit: f349c8fd9c370ba589d217cd3b1d0521ae5c5597
 workflow-type: tm+mt
-source-wordcount: '430'
+source-wordcount: '428'
 ht-degree: 0%
 
 ---
@@ -32,7 +32,7 @@ Java™ API Quick Start (SOAP) är tillgängligt för komponenter och tjänster.
 [Snabbstart (SOAP-läge): Ta bort komponenter med Java](components-services-java-api-quick.md#quick-start-soap-mode-removing-components-using-the-java-api)
 
 
-AEM Forms-åtgärder kan utföras med AEM Forms starkt typade API och anslutningsläget bör anges till SOAP.
+AEM Forms-åtgärder kan utföras med AEM Forms starkt typbestämda API och anslutningsläget bör anges till SOAP.
 
 >[!NOTE]
 >
@@ -44,7 +44,7 @@ AEM Forms-åtgärder kan utföras med AEM Forms starkt typade API och anslutning
 
 >[!NOTE]
 >
-Om du har en anpassad komponent och använder SOAP- eller EJB-protokoll för att anropa DSC:er på samma lokala server, och dessa anrop slutar att fungera efter en uppgradering, använder du en startstrategi för den virtuella datorn. Använd DSC-anropsmetoden in-VM med ServiceClientFactory som standard och konstruera inte ServiceClientFactory med SOAP- eller EJB-protokoll.
+>Om du har en anpassad komponent och använder SOAP- eller EJB-protokoll för att anropa DSC:er på samma lokala server, och dessa anrop slutar att fungera efter en uppgradering, använder du en startstrategi för den virtuella datorn. Använd DSC-anropsmetoden in-VM med ServiceClientFactory som standard och konstruera inte ServiceClientFactory med SOAP- eller EJB-protokoll.
 
 ## Snabbstart (SOAP-läge): Distribuera en komponent med Java™ API {#quick-start-soap-mode-deploying-a-component-using-the-java-api}
 

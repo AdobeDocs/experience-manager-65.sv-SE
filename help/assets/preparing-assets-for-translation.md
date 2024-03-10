@@ -5,9 +5,9 @@ contentOwner: AG
 role: User, Admin
 feature: Projects
 exl-id: eee768e3-3eb4-46fa-b9ae-9ef8764a3a94
-source-git-commit: 7d46ba0eaa73d9f7a67034ba81d7fa379aa0112c
+source-git-commit: f349c8fd9c370ba589d217cd3b1d0521ae5c5597
 workflow-type: tm+mt
-source-wordcount: '430'
+source-wordcount: '431'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ I [!DNL Adobe Experience Manager Assets], inkluderas flerspråkiga resurser i ma
 
 Varje språkmapp kallas för en språkkopia. Rotmappen för en språkkopia, som kallas språkrot, identifierar språket för innehållet i språkkopian. Till exempel: */content/dam/it* är den italienska språkroten för den italienska språkversionen. Språkkopior måste använda en [korrekt konfigurerad språkrot](preparing-assets-for-translation.md#creating-a-language-root) så att rätt språk anges som mål när översättningar av källresurser utförs.
 
-Språkkopian som du ursprungligen lade till resurser för är det primära språket. Språkets primära språk är källan som översätts till andra språk. En exempelmapphierarki innehåller flera språkrötter:
+Språkkopian som du ursprungligen lade till resurser för är det primära språket. Det primära språket är källan som översätts till andra språk. En exempelmapphierarki innehåller flera språkrötter:
 
 ```shell
 /content
@@ -36,9 +36,9 @@ Språkkopian som du ursprungligen lade till resurser för är det primära språ
 
 Utför följande steg för att förbereda dina resurser för översättning:
 
-1. Skapa språkroten för din primära språkversion. Språkroten för den engelska språkkopian i exempelmapphierarkin är till exempel `/content/dam/en`. Kontrollera att språkroten är korrekt konfigurerad enligt informationen i [Skapa en språkrot](preparing-assets-for-translation.md#creating-a-language-root).
+1. Skapa språkroten för det primära språket. Språkroten för den engelska språkkopian i exempelmapphierarkin är till exempel `/content/dam/en`. Kontrollera att språkroten är korrekt konfigurerad enligt informationen i [Skapa en språkrot](preparing-assets-for-translation.md#creating-a-language-root).
 
-1. Lägg till resurser i ditt primära språk.
+1. Lägg till resurser på ditt primära språk.
 1. Skapa språkroten för varje målspråk som du behöver en språkkopia för.
 
 ## Skapa en språkrot {#creating-a-language-root}
@@ -61,7 +61,7 @@ Rotsidan för den italienska språkkopian av exempelhierarkin har till exempel `
 
 [!DNL Experience Manager] -gränssnittet har en **[!UICONTROL References]** som visar en lista med språkrötter som har skapats i [!DNL Assets].
 
-1. I [!DNL Assets] väljer du det språk du vill skapa språkkopior för.
+1. I [!DNL Assets] väljer du det primära språk som du vill skapa språkkopior för.
 1. Välj **[!UICONTROL References]** för att öppna [!UICONTROL Reference] fönster.
 
    ![chlimage_1-122](assets/chlimage_1-122.png)

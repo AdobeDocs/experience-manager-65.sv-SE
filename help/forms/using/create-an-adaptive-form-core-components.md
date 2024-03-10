@@ -9,9 +9,9 @@ docset: aem65
 role: Admin, Developer
 feature: Adaptive Forms, Core Components
 exl-id: ee596672-b0b5-42e9-a139-72f90287bf3b
-source-git-commit: 4a8155f754d1f71354717f5eb22511baab110916
+source-git-commit: f349c8fd9c370ba589d217cd3b1d0521ae5c5597
 workflow-type: tm+mt
-source-wordcount: '1666'
+source-wordcount: '1668'
 ht-degree: 0%
 
 ---
@@ -89,7 +89,7 @@ När du har öppnat formuläret för redigering kan du använda tillgängliga ad
 
 ## Konfigurera åtgärden Skicka för ett anpassat formulär {#configure-submit-action-for-form}
 
-Med en Skicka-åtgärd kan du välja målet för data som har hämtats via ett anpassat formulär. Den aktiveras när en användare klickar på knappen Skicka på ett anpassat formulär. Anpassade formulär innehåller några av de åtgärder som har vidtagits för att skicka in. Du kan också utöka en standardåtgärd för att skicka för att skapa en egen anpassad åtgärd. Så här konfigurerar du en Skicka-åtgärd för formuläret:
+Med en Skicka-åtgärd kan du välja målet för data som har hämtats med ett anpassat formulär. Den aktiveras när en användare klickar på knappen Skicka på ett anpassat formulär. Anpassade formulär innehåller några av de åtgärder som har vidtagits för att skicka in. Du kan också utöka en standardåtgärd för att skicka för att skapa en egen anpassad åtgärd. Så här konfigurerar du en Skicka-åtgärd för formuläret:
 
 1. Öppna innehållsläsaren och välj **[!UICONTROL Guide Container]** som ingår i det adaptiva formuläret.
 1. Klicka på egenskaperna för stödlinjebehållaren ![Stödlinjeegenskaper](/help/forms/using/assets/configure-icon.svg) -ikon. Dialogrutan Adaptiv formulärbehållare öppnas.

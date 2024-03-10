@@ -7,7 +7,7 @@ geptopics: SG_AEMFORMS/categories/working_with_document_security
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 feature: Document Security
 exl-id: 0eb6e769-97c1-41ee-8d12-91bece984947
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: f349c8fd9c370ba589d217cd3b1d0521ae5c5597
 workflow-type: tm+mt
 source-wordcount: '2167'
 ht-degree: 0%
@@ -94,7 +94,7 @@ När du återkallar eller återställer behörigheter för dokumentåtkomst gäl
 
 * Om dokumentet är online och stängt träder ändringen i kraft nästa gång mottagaren synkroniserar med dokumentsäkerheten genom att öppna ett profilskyddat dokument.
 * Om dokumentet är online och öppet börjar ändringen gälla när mottagaren stänger dokumentet.
-* Om dokumentet är offline (används utan internetanslutning, t.ex. på en bärbar dator), träder ändringen i kraft nästa gång mottagaren synkroniserar med dokumentsäkerheten.
+* Om dokumentet är offline, d.v.s. används utan internetanslutning, t.ex. på en bärbar dator, träder ändringen i kraft nästa gång mottagaren synkroniserar med dokumentsäkerheten.
 
 **Återkalla åtkomst till ett profilskyddat dokument**
 

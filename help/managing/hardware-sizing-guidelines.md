@@ -7,9 +7,9 @@ topic-tags: managing
 content-type: reference
 docset: aem65
 exl-id: 5837ef4f-d4e0-49d7-a671-87d5547e0d98
-source-git-commit: b1012548630affd697edd27c90bdac4eeb35125f
+source-git-commit: f349c8fd9c370ba589d217cd3b1d0521ae5c5597
 workflow-type: tm+mt
-source-wordcount: '2832'
+source-wordcount: '2830'
 ht-degree: 0%
 
 ---
@@ -125,7 +125,7 @@ I syfte att göra jämförelser har Adobe utvecklat några test för fristående
 Beräkna maximal genomströmning för en inläsningsprofil där användarna utför en enkel arbetsmoment på en basbelastning på 300 befintliga sidor som alla är av samma typ. Stegen som berördes var att logga in på webbplatsen, skapa en sida med SWF och bild/text, lägga till ett taggmoln och sedan aktivera sidan.
 
    * **Resultat**
-Maximalt dataflöde för en enkel sidskapandeövning som ovan (betraktas som en transaktion) befanns vara 1 730 transaktioner/timme.
+Maximalt dataflöde för en enkel sidskapandeövning som ovan - som betraktas som en transaktion - är 1 730 transaktioner/timme.
 
 * **Benchmark test 2**
 Beräkna maximal genomströmning när inläsningsprofilen har en blandning av nya sidor (10 %), ändringar av en befintlig sida (80 %) och sedan ändring av en sida i följd (10 %). Sidornas komplexitet är densamma som i profilen för test 1. Den grundläggande ändringen av sidan görs genom att en bild läggs till och textinnehållet ändras. Återigen utfördes övningen utöver en basbelastning på 300 sidor med samma komplexitet som definieras i test 1 av prestandan.
@@ -153,7 +153,7 @@ För sådana scenarier utförde Adobe prestandatester på ett kluster av förfat
 Med ett aktivt-aktivt kluster utan delning av innehåll på 2 författarinstanser kan du beräkna den maximala genomströmningen med en inläsningsprofil där användarna utför en enkel övning av skapelsesidan utöver en basbelastning på 300 befintliga sidor, allt av liknande natur.
 
    * **Resultat**
-Maximalt dataflöde för en enkel sidskapandeövning, som ovan anses vara en transaktion, är 2016 transaktioner/timme. Detta är en ökning på ungefär 16 % jämfört med en fristående författarinstans för samma test.
+Maximalt dataflöde för en enkel sidskapandeövning, som ovan - som betraktas som en transaktion - anses vara 2016 transaktioner/timme. Detta är en ökning på ungefär 16 % jämfört med en fristående författarinstans för samma test.
 
 * **Benchmark test 2b**
 Med ett aktivt-aktivt kluster utan delade data (ingen) på 2 författarinstanser beräknar du den maximala genomströmningen när inläsningsprofilen har en blandning av nya sidor (10 %), ändringar av befintliga sidor (80 %) och skapande och ändring av en sida i följd (10 %). Sidans komplexitet är densamma som i profilen för test 1. Den grundläggande ändringen av sidan görs genom att en bild läggs till och textinnehållet ändras. Även här utfördes övningen på en basbelastning på 300 sidor med komplexitet på samma sätt som i prestandatest 1.

@@ -7,9 +7,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 role: Developer
 exl-id: 985a6fc5-6675-4c25-80e4-34dcb658de72
-source-git-commit: c4cd9a61a226ace2a72d60b5b7b7432de12cb873
+source-git-commit: f349c8fd9c370ba589d217cd3b1d0521ae5c5597
 workflow-type: tm+mt
-source-wordcount: '555'
+source-wordcount: '553'
 ht-degree: 0%
 
 ---
@@ -36,7 +36,7 @@ Java™ API Quick Start (SOAP) finns för Endpoint Registry.
 
 [QuickStart: Hämta slutpunktsanslutningsinformation med Java](endpoint-registry-java-api-quick.md#quickstart-retrieving-endpoint-connector-information-using-the-java-api)
 
-AEM Forms-åtgärder kan utföras med AEM Forms starkt typade API och anslutningsläget bör anges till SOAP.
+AEM Forms-åtgärder kan utföras med AEM Forms starkt typbestämda API och anslutningsläget bör anges till SOAP.
 
 >[!NOTE]
 >
@@ -44,7 +44,7 @@ AEM Forms-åtgärder kan utföras med AEM Forms starkt typade API och anslutning
 
 >[!NOTE]
 >
-Du kan inte arbeta med slutpunkter genom att använda en webbtjänst.
+>Du kan inte arbeta med slutpunkter genom att använda en webbtjänst.
 
 ## QuickStart: Lägga till en EJB-slutpunkt med Java™ API {#quickstart-adding-an-ejb-endpoint-using-the-java-api}
 
@@ -251,7 +251,7 @@ I följande Java™-kodexempel läggs en bevakad mappslutpunkt till i en tjänst
 
 >[!NOTE]
 >
-Inkludera filen WatchedFolderEndpointConfigConstants.java i ditt projekt så att du kan kompilera och köra följande snabbstart. (Se [Konstanta filer för mappkonfigurationsvärden som bevakas](/help/forms/developing/programmatically-endpoints.md#watched-folder-configuration-values-constant-file).)
+>Inkludera filen WatchedFolderEndpointConfigConstants.java i ditt projekt så att du kan kompilera och köra följande snabbstart. (Se [Konstanta filer för mappkonfigurationsvärden som bevakas](/help/forms/developing/programmatically-endpoints.md#watched-folder-configuration-values-constant-file).)
 
 ```java
  /*
@@ -386,7 +386,7 @@ I följande Java™-kodexempel läggs en e-postslutpunkt till i en tjänst med n
 
 >[!NOTE]
 >
-Inkludera filen EmailEndpointConfigConstants.java i ditt projekt så att du kan kompilera och köra följande snabbstart. (Se [Konstantfil för e-postkonfigurationsvärden](/help/forms/developing/programmatically-endpoints.md#email-configuration-values-constant-file).)
+>Inkludera filen EmailEndpointConfigConstants.java i ditt projekt så att du kan kompilera och köra följande snabbstart. (Se [Konstantfil för e-postkonfigurationsvärden](/help/forms/developing/programmatically-endpoints.md#email-configuration-values-constant-file).)
 
 ```java
  /*

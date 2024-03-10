@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: best-practices
 exl-id: 6dfaa14d-5dcf-4e89-993a-8d476a36d668
-source-git-commit: 0aa929021aa724e4ec18d49fea26f8c0b0538bdc
+source-git-commit: f349c8fd9c370ba589d217cd3b1d0521ae5c5597
 workflow-type: tm+mt
-source-wordcount: '4518'
+source-wordcount: '4520'
 ht-degree: 0%
 
 ---
@@ -403,7 +403,7 @@ Här följer information om möjliga problem tillsammans med lösningar:
 
 ### Textförextrahering av binärfiler {#text-pre-extraction-of-binaries}
 
-Textförextrahering är processen att extrahera och bearbeta text från binärfiler, direkt från datalagret via en isolerad process, och direkt exponera den extraherade texten för efterföljande omindexering/indexering av Oak-index.
+Textförextrahering är processen att extrahera och bearbeta text från binärfiler, direkt från datalagret genom en isolerad process, och direkt exponera den extraherade texten för efterföljande omindexering/indexering av Oak-index.
 
 * Förextrahering av oak-text rekommenderas för indexering av Lucene-index i databaser med stora volymer filer (binärfiler) som innehåller extraherbar text (t.ex. PDF, Word-dokument, PPT, TXT och så vidare) som är kvalificerade för fulltextsökning via distribuerade Oak-index, t.ex. `/oak:index/damAssetLucene`.
 * Förextrahering av text ger endast fördelar vid omindexering/indexering av Lucene-index och NOT Oak-egenskapsindex, eftersom egenskapsindex inte extraherar text från binärfiler.

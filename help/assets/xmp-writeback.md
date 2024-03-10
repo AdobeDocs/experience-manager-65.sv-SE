@@ -6,9 +6,9 @@ role: User, Admin
 feature: Metadata
 exl-id: 82148ae5-37e9-4fc5-ada9-db3d91b29c33
 hide: true
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: f349c8fd9c370ba589d217cd3b1d0521ae5c5597
 workflow-type: tm+mt
-source-wordcount: '736'
+source-wordcount: '726'
 ht-degree: 4%
 
 ---
@@ -87,7 +87,7 @@ Filtrering av XMP metadata via tillåtelselista löser problemet genom att du ka
 
 1. Om du vill öppna Configuration Manager öppnar du `https://[aem_server]:[port]/system/console/configMgr`.
 1. Öppna **[!UICONTROL Adobe CQ DAM XmpFilter]** konfiguration.
-1. Om du vill använda filtrering via en tillåtelselista väljer du **[!UICONTROL Apply Allowlist to XMP Properties]** och ange de egenskaper som ska importeras i **[!UICONTROL Allowed XML Names for XMP filtering]** box.
+1. Om du vill använda filtrering via tillåtelselista väljer du **[!UICONTROL Apply Allowlist to XMP Properties]** och ange de egenskaper som ska importeras i **[!UICONTROL Allowed XML Names for XMP filtering]** box.
 
    ![chlimage_1-136](assets/chlimage_1-347.png)
 

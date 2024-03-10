@@ -2,7 +2,7 @@
 title: Komma åt och leverera innehållsfragment Headless Quick Start Guide
 description: Lär dig använda AEM Assets REST API för att hantera innehållsfragment och GraphQL API för headless-leverans av Content Fragment-innehåll.
 exl-id: 4664b3a4-4873-4f42-b59d-aadbfaa6072f
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: f349c8fd9c370ba589d217cd3b1d0521ae5c5597
 workflow-type: tm+mt
 source-wordcount: '555'
 ht-degree: 0%
@@ -25,7 +25,7 @@ Resten av guiden fokuserar på GraphQL åtkomst och leverans av innehållsfragme
 
 ## Leverera ett innehållsfragment med GraphQL {#how-to-deliver-a-content-fragment}
 
-Informationsarkitekterna måste utforma frågor så att deras kanalslutpunkter kan leverera innehåll. Dessa frågor måste bara beaktas en gång per slutpunkt och modell. För att komma igång-guiden behöver du bara skapa en.
+Informationsarkitekterna måste utforma frågor så att deras kanalslutpunkter kan leverera innehåll. Dessa frågor får endast övervägas en gång per slutpunkt och modell. I den här guiden för att komma igång får du bara skapa en.
 
 1. Logga in AEM och få åtkomst till [GraphiQL-gränssnitt](/help/sites-developing/headless/graphql-api/graphiql-ide.md):
    * Till exempel: `http://<host>:<port>/aem/graphiql.html`.
@@ -60,7 +60,7 @@ Informationsarkitekterna måste utforma frågor så att deras kanalslutpunkter k
 1. Klicka på **Kör fråga** (högerpil) eller använd `Ctrl-Enter` snabbtangenten och resultatet visas som JSON i den högra panelen.
    ![GraphiQL-resultat](assets/graphiql-results.png)
 
-1. Klicka på:
+1. Klicka:
    * **Dokument** längst upp till höger på sidan om du vill visa sammanhangsberoende dokumentation som hjälper dig att skapa frågor som anpassar sig till dina egna modeller.
    * **Historik** i det övre verktygsfältet om du vill visa tidigare frågor.
    * **Spara som** och **Spara** för att spara dina frågor, därefter kan du visa och hämta dem från **Beständiga frågor** panel och **Publicera**.

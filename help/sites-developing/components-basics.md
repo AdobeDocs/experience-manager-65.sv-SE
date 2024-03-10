@@ -7,7 +7,7 @@ topic-tags: components
 content-type: reference
 legacypath: /content/docs/en/aem/6-0/develop/components/components-develop
 exl-id: 7ff92872-697c-4e66-b654-15314a8cb429
-source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
+source-git-commit: f349c8fd9c370ba589d217cd3b1d0521ae5c5597
 workflow-type: tm+mt
 source-wordcount: '4843'
 ht-degree: 0%
@@ -1026,7 +1026,7 @@ The `cq:listeners` node (node type `cq:EditListenersConfig`) definierar vad som 
 >  * `aftermove`
 >  * `aftercopy`
 
-Händelsehanteraren kan implementeras med en anpassad implementering. Till exempel (där `project.customerAction` är en statisk metod):
+Händelsehanteraren kan implementeras med en anpassad implementering. Där `project.customerAction` är en statisk metod:
 
 `afteredit = "project.customerAction"`
 

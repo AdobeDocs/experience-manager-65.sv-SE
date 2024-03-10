@@ -8,7 +8,7 @@ content-type: reference
 docset: aem65
 exl-id: 39e35a07-140f-4853-8f0d-8275bce27a65
 feature: Security
-source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
+source-git-commit: f349c8fd9c370ba589d217cd3b1d0521ae5c5597
 workflow-type: tm+mt
 source-wordcount: '6650'
 ht-degree: 0%
@@ -322,7 +322,7 @@ while (isSupportedPath(path)) {
 
 #### Hantera CUG-principer efter huvudnamn {#managing-cug-policies-by-pincipal}
 
-De tillägg som definieras av `JackrabbitAccessControlManager` som tillåter redigering av åtkomstkontrollprinciper efter huvudnamn inte implementeras med CUG-åtkomstkontrollhantering, eftersom en CUG-princip per definition alltid påverkar alla huvudkonton: de som anges med `PrincipalSetPolicy` får läsåtkomst medan alla andra huvudobjekt inte kan läsa innehåll i trädet som definieras av målnoden.
+De tillägg som definieras av `JackrabbitAccessControlManager` som gör att du kan redigera åtkomstkontrollprinciper efter huvudnamn inte implementeras med CUG-åtkomstkontrollhantering, eftersom en CUG-princip per definition alltid påverkar alla huvudkonton: de som listas med `PrincipalSetPolicy` får läsåtkomst medan alla andra huvudobjekt inte kan läsa innehåll i trädet som definieras av målnoden.
 
 Motsvarande metoder returnerar alltid en tom principarray, men genererar inga undantag.
 

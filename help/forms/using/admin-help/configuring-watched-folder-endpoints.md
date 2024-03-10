@@ -6,9 +6,9 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/managing_endpoints
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 exl-id: ec169a01-a113-47eb-8803-bd783ea2c943
-source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
+source-git-commit: f349c8fd9c370ba589d217cd3b1d0521ae5c5597
 workflow-type: tm+mt
-source-wordcount: '7173'
+source-wordcount: '7192'
 ht-degree: 0%
 
 ---
@@ -239,8 +239,8 @@ Bevakade mapputdata kan vara ett enstaka dokument, en lista med dokument eller e
 
 Administratörer kan ange vilken typ av fil som kan anropa en tjänst. Du kan skapa flera filmönster för varje bevakad mapp. Ett filmönster kan vara någon av följande filegenskaper:
 
-* Filer med specifika filnamnstillägg, t.ex. &amp;ast;.dat, &amp;ast;.xml, &amp;ast;.pdf,;
-* Filer med specifika namn, till exempel data.&amp;ast;
+* Filer med specifika filnamnstillägg. Till exempel &amp;ast;.dat, &amp;ast;.xml, &amp;ast;.pdf
+* Filer med specifika namn. Till exempel data.&amp;ast;
 * Filer med sammansatta uttryck i namnet och tillägget, som i följande exempel:
 
    * Data[0-9][0-9][0-9].[dD][aA]port

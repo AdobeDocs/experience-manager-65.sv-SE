@@ -7,9 +7,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop, development-tools
 role: Developer
 exl-id: 1d4062ef-fb24-4527-b899-896ce757beda
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: f349c8fd9c370ba589d217cd3b1d0521ae5c5597
 workflow-type: tm+mt
-source-wordcount: '528'
+source-wordcount: '532'
 ht-degree: 0%
 
 ---
@@ -20,9 +20,9 @@ ht-degree: 0%
 
 Snabbstart för Adobe AEM Forms kan hjälpa dig att snabba upp arbetet med att utveckla program som interagerar med AEM Forms tjänster. *Snabbstart*&#x200B;är fullständiga program som du kan kopiera och klistra in i dina egna projekt och använda som utgångspunkt. Du kan köra en snabbstart för att se hur den fungerar och ändra den efter dina egna behov.
 
-AEM Forms-åtgärder kan utföras med AEM Forms starkt typade API och anslutningsläget bör anges till SOAP.
+AEM Forms-åtgärder kan utföras med AEM Forms starkt typbestämda API och anslutningsläget bör anges till SOAP.
 
-Java™-API Quick Start innehåller en lista över JAR-filer som krävs för att köra Java™-programmet. De flesta Java™ Quick Starts är konsolprogram som körs i `main`. Men Forms Java™-snabbstart av starkt typifierad API är implementerat som en Java™-servlet som körs i ett webbprogram.
+Java™-API Quick Start innehåller en lista över JAR-filer som krävs för att köra Java™-programmet. De flesta Java™ Quick Starts är konsolprogram som körs i `main`. Men Forms Java™-snabbstart av starkt typifierad API är implementerat som en Java™-server som körs i ett webbprogram.
 
 JAR-fillistan finns i ett kommentarsavsnitt i början av snabbstarten. Följande kommentar är till exempel i en snabbstart för utdata och är en typisk JAR-fillista som finns i varje Java™ snabbstart.
 
@@ -85,4 +85,4 @@ Snabbaste starten i *Programmera med AEM Forms i JEE* anropa en specifik tjänst
 
 >[!NOTE]
 >
-De flesta snabbstarter för webbtjänster skrivs i C# och använder .NET-ramverket. Du kan dock skapa klientprogramlogik som kan anropa AEM Forms-tjänster i alla utvecklingsmiljöer som stöder SOAP-standarder. (Se [Anropa AEM Forms med webbtjänster](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-web-services).)
+>De flesta snabbstarter för webbtjänster skrivs i C# och använder .NET-ramverket. Du kan dock skapa klientprogramlogik som kan anropa AEM Forms-tjänster i alla utvecklingsmiljöer som stöder SOAP-standarder. (Se [Anropa AEM Forms med webbtjänster](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-web-services).)

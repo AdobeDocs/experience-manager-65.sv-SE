@@ -2,7 +2,7 @@
 title: Creating Accessible Content for Adobe Experience Manager (WCAG 2.1-överensstämmelse)
 description: Använd AEM för att göra webbinnehåll tillgängligt för och användbart för personer med funktionshinder
 exl-id: 2145d761-f51d-482b-a0e7-ef7500c4872f
-source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
+source-git-commit: f349c8fd9c370ba589d217cd3b1d0521ae5c5597
 workflow-type: tm+mt
 source-wordcount: '13636'
 ht-degree: 2%
@@ -693,8 +693,13 @@ Följ riktlinjerna i [Så här uppfyller du kriterierna för framgång 2.2.1](ht
 * Kriteriet 2.2.2 lyckades
 * Nivå A
 * Pausa, Stoppa, Dölj: Följande gäller för flyttning, blinkning, rullning eller automatisk uppdatering:
-   * Rörelse, blinkning, rullning: För all rörlig, blinkande eller rullningsinformation som (a) startar automatiskt, (b) varar mer än fem sekunder och (c) presenteras parallellt med annat innehåll, finns det en mekanism som användaren kan pausa, stoppa eller dölja om inte rörelsen, blinkningen eller rullningen är en del av en aktivitet där det är nödvändigt.
-   * Automatisk uppdatering: För all automatiskt uppdaterad information som (a) startar automatiskt och (b) presenteras parallellt med annat innehåll finns det en funktion som användaren kan använda för att pausa, stoppa eller dölja eller styra uppdateringsfrekvensen, såvida inte den automatiska uppdateringen är en del av en aktivitet där det är nödvändigt.
+   * Flytta, blinka, rulla: För rörlig, blinkande eller rullningsinformation som
+      * a) startar automatiskt,
+      * b) varar mer än fem sekunder, och
+      * C) presenteras parallellt med annat innehåll, det finns en mekanism för användaren att pausa, stoppa eller dölja det såvida inte rörelsen, blinkningen eller rullningen är en del av en verksamhet där det är nödvändigt,
+   * Automatisk uppdatering: För all information som uppdateras automatiskt
+      * a) startar automatiskt, och
+      * b) presenteras parallellt med annat innehåll och det finns en mekanism för användaren att pausa, stoppa eller dölja den eller att styra uppdateringens frekvens, såvida inte den automatiska uppdateringen är en del av en aktivitet där det är nödvändigt.
 
 Poängen är:
 

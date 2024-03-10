@@ -6,9 +6,9 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/configuring_user_management
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 exl-id: e17fc114-eba5-4e1b-8e70-ad6af7008018
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: f349c8fd9c370ba589d217cd3b1d0521ae5c5597
 workflow-type: tm+mt
-source-wordcount: '972'
+source-wordcount: '955'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 ## Hur CSRF-attacker fungerar {#how-csrf-attacks-work}
 
-CSRF (Cross-site request formunoration) är en sårbarhet på en webbplats där en giltig användares webbläsare används för att skicka en skadlig begäran, eventuellt via en iFrame. Eftersom webbläsaren skickar cookies på domänbasis kan användarens data bli komprometterade om användaren är inloggad i ett program.
+CSRF (Cross-site request formunoration) är en sårbarhet på en webbplats där en giltig användares webbläsare används för att skicka en skadlig begäran, möjligen via en iFrame. Eftersom webbläsaren skickar cookies på domänbasis kan användarens data bli komprometterade om användaren är inloggad i ett program.
 
 Tänk dig till exempel ett scenario där du är inloggad på administrationskonsolen i en webbläsare. Du får ett e-postmeddelande som innehåller en länk. Du klickar på länken, vilket öppnar en ny flik i webbläsaren. Sidan som du öppnade innehåller en dold iFrame som gör en skadlig begäran till Forms Server med hjälp av cookien från din autentiserade AEM. Eftersom användarhantering tar emot en giltig cookie, godkänns begäran.
 

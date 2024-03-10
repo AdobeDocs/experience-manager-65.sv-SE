@@ -4,7 +4,7 @@ description: Tough Day-testet simulerar den dagliga belastningen för cirka 1 00
 topic-tags: testing
 content-type: reference
 exl-id: ceb9671c-57f9-4d81-94c0-0dbccd4d90a2
-source-git-commit: b1012548630affd697edd27c90bdac4eeb35125f
+source-git-commit: f349c8fd9c370ba589d217cd3b1d0521ae5c5597
 workflow-type: tm+mt
 source-wordcount: '1825'
 ht-degree: 0%
@@ -130,7 +130,7 @@ Du hittar de relevanta parametrarna i listan nedan:
 | `--port=<Val>` | Värdens port. | 4502 |  |
 | `--user=<Val>` | Användarnamnet för instansen. | admin |  |
 | `--password=<Val>` | Lösenord för den angivna användaren. | admin |  |
-| `--duration=<Val>` | Provningens varaktighet. Kan uttryckas i (**s**)sekunder, (**m**)minuter, (**h**)ours och (**d**)dagar. | 1d |  |
+| `--duration=<Val>` | Provningens varaktighet. Kan uttryckas i **s** sekunder, **m** minuter, **h** vår, och **d** säger. | 1d |  |
 | `--timeout=<Val>` | Hur länge ett test ska köras innan det avbryts och markeras som misslyckat. Uttryckt i sekunder. | 180 |  |
 | `--suite=<Val>` | Värdet kan vara en eller en lista (avgränsad med kommatecken) med fördefinierade testsviter. | tughday |  |
 | `--configfile=<Val>` | Den målformade dynamiska konfigurationsfilen. |  |  |

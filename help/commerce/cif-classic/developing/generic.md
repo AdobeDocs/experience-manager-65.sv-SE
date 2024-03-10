@@ -3,9 +3,9 @@ title: Utveckla (allmän)
 description: Integreringsramverket innehåller ett integreringslager med ett API som gör att du kan skapa AEM komponenter för e-handelsfunktioner.
 contentOwner: Guillaume Carlino
 exl-id: 1138a548-d112-4446-b0e1-b7a9ea7c7604
-source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
+source-git-commit: f349c8fd9c370ba589d217cd3b1d0521ae5c5597
 workflow-type: tm+mt
-source-wordcount: '1846'
+source-wordcount: '1856'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ Det finns flera färdiga AEM för att använda integreringslagret. För närvara
 * Kampanjer och kuponger
 * Katalog- och avsnittsritningar
 * Checka ut
-* Sökning
+* Sök
 
 Vid sökning finns en integreringsfunktion som gör att du kan använda sökningen i Adobe Experience Manager (AEM), en sökning från tredje part eller en kombination av dessa.
 
@@ -326,7 +326,7 @@ public class AxisFilter implements VariantFilter {
 
    * I det AEM allmänna fallet lagras kundvagnar i [ClientContext](/help/sites-administering/client-context.md)
 
-**Personanpassning**
+**Personalisering**
 
 * Driv alltid personaliseringen genom [ClientContext](/help/sites-administering/client-context.md).
 * En ClientContext `/version/` av kundvagnen skapas i samtliga fall:
@@ -471,7 +471,7 @@ Startpunkten för sökgränssnittet är `CommerceService#search` metod som retur
 
    * ClientContexten `SegmentMgr` löser segment och ClientContexten `CartMgr` löser kampanjer. Varje kampanj som är föremål för minst ett löst segment utlöses.
 
-      * Utlösta kampanjer skickas tillbaka till servern via ett AJAX samtal för att beräkna kundvagnen på nytt.
+      * Utlösta kampanjer skickas tillbaka till servern via ett AJAX anrop för att beräkna kundvagnen på nytt.
       * Utlösta kampanjer (och tillagda Vouchers) visas också på panelen ClientContext.
 
 Du kan lägga till/ta bort en verifikation från en kundvagn via `CommerceSession` API:

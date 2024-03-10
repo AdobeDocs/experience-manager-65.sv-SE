@@ -7,9 +7,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: coding
 role: Developer
 exl-id: 3139564f-9346-4933-8e39-2e1642bff097
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: f349c8fd9c370ba589d217cd3b1d0521ae5c5597
 workflow-type: tm+mt
-source-wordcount: '9887'
+source-wordcount: '9814'
 ht-degree: 0%
 
 ---
@@ -755,7 +755,7 @@ När du har skapat en servicereferens är datatyper som är kopplade till AEM Fo
 
 1. Skapa ett .NET-projekt med Microsoft Visual Studio 2008.
 1. I **Projekt** meny, välja **Lägg till tjänstreferens**.
-1. I **Adress** anger du WSDL för AEM Forms-tjänsten. Till exempel,
+1. I **Adress** anger du WSDL för AEM Forms-tjänsten. Exempel:
 
    ```java
     http://localhost:8080/soap/services/MyApplication/EncryptDocument?WSDL&lc_version=9.0.1
@@ -1553,7 +1553,7 @@ Följande exempel på C#-kod signerar ett interaktivt formulär som återges av 
                 try
                 {
                     //Because BLOB objects are used in both service references
-                    //it is necessary to fully-qualify the BLOB objects
+                    //it is necessary to fully qualify the BLOB objects
  
                     //Retrieve the form -- invoke the Forms service
                     SignInteractiveForm.ServiceReference2.BLOB formData = GetForm();

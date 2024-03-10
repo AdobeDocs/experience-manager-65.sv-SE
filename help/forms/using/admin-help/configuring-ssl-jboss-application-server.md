@@ -6,9 +6,9 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/configuring_ssl
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 exl-id: 8eb4f691-a66b-498e-8114-307221f63718
-source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
+source-git-commit: f349c8fd9c370ba589d217cd3b1d0521ae5c5597
 workflow-type: tm+mt
-source-wordcount: '907'
+source-wordcount: '904'
 ht-degree: 0%
 
 ---
@@ -76,7 +76,7 @@ I denna procedur:
    `keytool -import -alias "AEMForms Cert" -file`*AEMForms_cert* `.cer -keystore`*JAVA_HOME* `\jre\lib\security\cacerts`
 
 1. Typ `changeit` som lösenord. Det här lösenordet är standardlösenordet för en Java-installation och kan ha ändrats av systemadministratören.
-1. När du uppmanas till detta `Trust this certificate? [no]`:, typ `yes`. Bekräftelsen &quot;Certificate was added to keystore&quot; visas.
+1. När du uppmanas till detta `Trust this certificate? [no]`, typ `yes`. Bekräftelsen &quot;Certificate was added to keystore&quot; visas.
 1. Om du ansluter via SSL från Workbench installerar du certifikatet på Workbench-datorn.
 1. Öppna följande filer för redigering i en textredigerare:
 
