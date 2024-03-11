@@ -3,9 +3,9 @@ title: Versionsinformation för [!DNL Adobe Experience Manager] 6.5
 description: Hitta versionsinformation, nyheter, installationsanvisningar och en detaljerad ändringslista för [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 4
 exl-id: a52311b9-ed7a-432e-8f35-d045c0d8ea4c
-source-git-commit: 39261357c17ef565a39ebc441aed356d69b4d8f9
+source-git-commit: a0ad6c5d61a971c5210f7d6dd7ef85e5effab44a
 workflow-type: tm+mt
-source-wordcount: '3536'
+source-wordcount: '3741'
 ht-degree: 0%
 
 ---
@@ -469,17 +469,24 @@ Du måste lägga till följande egenskaper i indexdefinitionsnoden för att få 
   Så här löser du problemet:
 
    1. Ladda ned programfixen för ditt operativsystem:
-
       * [Programfix för Microsoft Windows](/help/release-notes/assets/Hotfix-windows.zip)
       * [Programfix för Linux](/help/release-notes/assets/Hotfix-Linux.zip)
       * [Programfix för Apple macOS](/help/release-notes/assets/Hotfix-osx.zip)
 
    1. Överför och installera paketet (.zip) via [Pakethanteraren](https://experienceleague.adobe.com/docs/experience-manager-65/content/sites/administering/contentmanagement/package-manager.html?lang=en#accessing).
-
    1. Starta om AEM Server och kontrollera aktiveringsstatus för alla paket när omstarten är klar. Du kan övervaka paketens status genom att gå till: `https://server:host/system/console/bundles`. Se till att alla paket är aktiva innan du fortsätter med ytterligare åtgärder.
 
 * Förifyllningstjänsten misslyckas med ett null-pekarundantag i Interactive Communications. (CQDOC-21355)
 * Med adaptiv Forms kan du använda anpassade funktioner med ECMAScript version 5 eller tidigare. När en anpassad funktion använder ECMAScript version 6 eller senare, som &quot;let&quot;, &quot;const&quot; eller pilfunktioner, kanske regelredigeraren inte öppnas som den ska.
+* Användarna kan inte skapa ett Correspondence Management-brev. När en användare skapar en bokstav visas ett felmeddelande med beskrivningen&quot;Objektobjekt&quot; och bokstaven skapas inte. Miniatyrbilder för layouter kan inte heller läsas in på skärmen där brevet skapas. (FORMS-13496)
+* Den interaktiva kommunikationstjänsten skapar PDF-dokumentet, men användarens data fylls inte i automatiskt i formulärfälten. Förifyllningstjänsten fungerar inte som förväntat. (FORMS-13413, FORMS-13493)
+* Det går inte att läsa in RnC-redigeraren (Review and Correct) för tjänsten automated forms conversion. (FORMS-13491)
+* Efter uppdatering från AEM 6.5 av Forms Service Pack 18 (6.5.18.0) eller AEM 6.5 av Forms Service Pack 19 (6.5.19.0) till AEM 6.5 av Forms Service Pack 20 (6.5.20.0) påträffas ett JSP-kompileringsfel. De kan inte öppna eller skapa anpassade formulär och de stöter på fel med andra AEM gränssnitt som sidredigeraren, AEM Forms gränssnitt och AEM Workflow editor. (FORMS-13492)
+
+Kunder kan installera den senaste AEM 6.5 Forms Service Pack för att lösa de ovannämnda problemen.  Här är direktlänkarna för de operativsystem som stöds:
+* [AEM 6.5 Forms Service Pack 20 för Apple macOS](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/fd/ADOBE-AEMFD-OSX-PKG-6.0.1192.zip)
+* [AEM 6.5 Forms Service Pack 20 för Microsoft Windows](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/fd/ADOBE-AEMFD-WIN-PKG-6.0.1192.zip)
+* [AEM 6.5 Forms Service Pack 20 för Linux](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/fd/ADOBE-AEMFD-LINUX-PKG-6.0.1192.zip)
 
 <!--Known issues in [!DNL Experience Manager] Forms are delivered through a separate add-on package one week after the scheduled [!DNL Experience Manager] Service Pack release date. In this case, the AEM 6.5.20.0 Forms add-on package release is scheduled for Thursday, February 29, 2024. A list of known issues for forms is added to this section post the release.-->
 
