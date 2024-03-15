@@ -6,24 +6,24 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 docset: aem65
 feature: Transaction Reports
 exl-id: bb812614-f4d8-4f57-bea2-8f7d31457039
-source-git-commit: 744cfcee691ea71f33cd56509f65d4f640d4c6e3
+source-git-commit: d0db00de6b767a12a9492bbbcec49a8c5d25ff27
 workflow-type: tm+mt
-source-wordcount: '551'
+source-wordcount: '476'
 ht-degree: 0%
 
 ---
 
-# Översikt över transaktionsrapporter{#transaction-reports-overview}
+# Transaktionsrapporter för AEM Forms på OSGi {#transaction-reports-overview}
 
-## Introduktion {#introduction}
+<!--## Introduction {#introduction}
 
-Med transaktionsrapporter i AEM Forms kan du räkna med alla transaktioner som har utförts sedan ett visst datum i din AEM Forms-distribution. Målet är att tillhandahålla information om produktanvändning och hjälpa företagsintressenter att förstå sina digitala bearbetningsvolymer. Exempel på transaktioner:
+Transaction reports in AEM Forms let you keep a count of all transactions taken place since a specified date on your AEM Forms deployment. The objective is to provide information about product usage and help business stakeholders understand their digital processing volumes. Examples of a transaction include:
 
-* Inlämning av ett anpassningsbart formulär, ett HTML5-formulär eller en formuläruppsättning
-* Återgivning av en utskrift eller webbversion av en interaktiv kommunikation
-* Konvertering av ett dokument från ett filformat till ett annat
+* Submission of an adaptive form, an HTML5 Form, or a form set
+* Rendition of a print or a web version of an interactive communication
+* Conversion of a document from one file format to another
 
-Mer information om vad som betraktas som en transaktion finns i [Fakturerbara API:er](../../forms/using/transaction-reports-billable-apis.md).
+For more information on what is considered a transaction, see [Billable APIs](../../forms/using/transaction-reports-billable-apis.md).-->
 
 Transaktionsregistrering är inaktiverat som standard. Du kan [aktivera transaktionsregistrering](../../forms/using/viewing-and-understanding-transaction-reports.md#setting-up-transaction-reports) från AEM webbkonsol. Du kan visa transaktionsrapporter om författare, bearbetning eller publicering. Visa transaktionsrapporter om författare eller bearbetningsinstanser för en sammanställd summa av alla transaktioner. Visa transaktionsrapporter på publiceringsinstanserna för att se antalet transaktioner som bara äger rum på den publiceringsinstans som rapporten körs från.
 
@@ -57,6 +57,6 @@ Transaktionsantalet replikeras baklänges från publiceringsinstanser till förf
 
 ## Relaterade artiklar {#related-articles}
 
-* [Visa och förstå transaktionsrapporter](../../forms/using/viewing-and-understanding-transaction-reports.md)
-* [Fakturerbara API:er för transaktionsrapporter](../../forms/using/transaction-reports-billable-apis.md)
-* [Registrera en transaktion för anpassade implementeringar](/help/forms/using/record-transaction-custom-implementation.md)
+* [Visa och förstå en transaktionsrapport för AEM Forms på OSGi](../../forms/using/viewing-and-understanding-transaction-reports.md)
+* [Transaction Reports Billable APIs for AEM Forms on OSGi](../../forms/using/transaction-reports-billable-apis.md)
+* [Registrera en transaktion för anpassade implementeringar för AEM Forms på OSGi](/help/forms/using/record-transaction-custom-implementation.md)

@@ -6,14 +6,14 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 docset: aem65
 feature: Transaction Reports
 exl-id: 3c7cbe1f-ac81-4df9-96b2-662cbc5f2075
-source-git-commit: 744cfcee691ea71f33cd56509f65d4f640d4c6e3
+source-git-commit: d0db00de6b767a12a9492bbbcec49a8c5d25ff27
 workflow-type: tm+mt
-source-wordcount: '861'
+source-wordcount: '881'
 ht-degree: 0%
 
 ---
 
-# Visa och förstå transaktionsrapporter{#viewing-and-understanding-transaction-reports}
+# Visa och förstå transaktionsrapporter för AEM Forms i OSGi{#viewing-and-understanding-transaction-reports}
 
 Med transaktionsrapporter kan du samla in och spåra antalet skickade formulär, bearbetade dokument och återgivna dokument. Målet med att spåra dessa transaktioner är att fatta ett välgrundat beslut om produktanvändningen och att balansera investeringar i maskinvara och programvara. Mer information finns i [AEM Forms Transaction Reports - översikt](../../forms/using/transaction-reports-overview.md).
 
@@ -88,6 +88,6 @@ Transaktionsrapportering placerar all information som visas i rapporten och viss
 
 ## Relaterade artiklar {#related-articles}
 
-* [Översikt över transaktionsrapporter](../../forms/using/transaction-reports-overview.md)
-* [Fakturerbara API:er för transaktionsrapporter](../../forms/using/transaction-reports-billable-apis.md)
-* [Registrera en transaktion för anpassade implementeringar](/help/forms/using/record-transaction-custom-implementation.md)
+* [Översikt över transaktionsrapporter för AEM Forms på OSGi](../../forms/using/transaction-reports-overview.md)
+* [Transaction Reports Billable APIs for AEM Forms on OSGi](../../forms/using/transaction-reports-billable-apis.md)
+* [Registrera en transaktion för anpassade implementeringar för AEM Forms på OSGi](/help/forms/using/record-transaction-custom-implementation.md)

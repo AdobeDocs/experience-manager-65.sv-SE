@@ -5,14 +5,15 @@ topic-tags: forms-manager
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 docset: aem65
 feature: Transaction Reports
-source-git-commit: 744cfcee691ea71f33cd56509f65d4f640d4c6e3
+exl-id: e92f1b59-79ef-40fa-af9a-7380cd701a75
+source-git-commit: d0db00de6b767a12a9492bbbcec49a8c5d25ff27
 workflow-type: tm+mt
-source-wordcount: '1719'
+source-wordcount: '1739'
 ht-degree: 0%
 
 ---
 
-# Fakturerbara API:er för transaktionsrapporter{#transaction-reports-billable-apis}
+# Transaction Reports Billable APIs for AEM Forms on OSGi {#transaction-reports-billable-apis}
 
 AEM Forms har flera API:er för att skicka formulär, bearbeta dokument och återge dokument. Vissa API:er räknas som transaktioner och andra kan användas. Det här dokumentet innehåller en lista över alla API:er som har redovisats som transaktioner i en transaktionsrapport. Här är några vanliga scenarier där ett fakturerbart API används:
 
@@ -500,6 +501,6 @@ Tilldela uppgifter och dokumenttjänster steg i formulärbaserade AEM arbetsflö
 
 ## Relaterade artiklar {#related-articles}
 
-* [Översikt över transaktionsrapporter](../../forms/using/transaction-reports-overview.md)
-* [Visa och förstå transaktionsrapporter](../../forms/using/viewing-and-understanding-transaction-reports.md)
-* [Registrera en transaktion för anpassade implementeringar](/help/forms/using/record-transaction-custom-implementation.md)
+* [Översikt över transaktionsrapporter för AEM Forms på OSGi](../../forms/using/transaction-reports-overview.md)
+* [Visa och förstå transaktionsrapporter för AEM Forms i OSGi](../../forms/using/viewing-and-understanding-transaction-reports.md)
+* [Registrera en transaktion för anpassade implementeringar för AEM Forms på OSGi](/help/forms/using/record-transaction-custom-implementation.md)

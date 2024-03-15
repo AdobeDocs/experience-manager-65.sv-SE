@@ -6,9 +6,9 @@ solution-title: Experience Cloud
 user-guide-description: Läs Adobe Experience Manager 6.5-dokumentationen och se hur det fungerar och vad programmet kan göra för dig.
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM 6.5
-source-git-commit: e39c52bc658e3a286272d1c94106b17a2f5579ad
+source-git-commit: d0db00de6b767a12a9492bbbcec49a8c5d25ff27
 workflow-type: tm+mt
-source-wordcount: '7355'
+source-wordcount: '7397'
 ht-degree: 1%
 
 ---
@@ -890,10 +890,16 @@ ht-degree: 1%
       + [Visa komponenter baserat på den mall som används](/help/forms/using/displaying-components-based-on-template.md)
       + [Skapa anpassade adaptiva formulärteman](/help/forms/using/creating-custom-adaptive-form-themes.md)
    + Transaktionsrapporter {#transaction-reports}
-      + [Översikt över transaktionsrapporter](/help/forms/using/transaction-reports-overview.md)
-      + [Visa och förstå transaktionsrapporter](/help/forms/using/viewing-and-understanding-transaction-reports.md)
-      + [Fakturerbara API:er för transaktionsrapporter](/help/forms/using/transaction-reports-billable-apis.md)
-      + [Registrera en transaktion för anpassade implementeringar](/help/forms/using/record-transaction-custom-implementation.md)
+      + [Översikt över transaktionsrapportering](/help/forms/using/transaction-reports-overview-jee-osgi.md)
+      + Transaktionsrapporter för AEM Forms på OSGi {#transaction-reports-osgi}
+         + [Transaktionsrapporter](/help/forms/using/transaction-reports-overview.md)
+         + [Visa och förstå transaktionsrapporter](/help/forms/using/viewing-and-understanding-transaction-reports.md)
+         + [Lista över fakturerbara API:er för AEM Forms i OSGi](/help/forms/using/transaction-reports-billable-apis.md)
+         + [Registrera en transaktion för anpassade implementeringar](/help/forms/using/record-transaction-custom-implementation.md)
+      + Transaktionsrapporter för AEM Forms på JEE {#transaction-reports-jee}
+         + [Aktivera och visa transaktionsrapporter](/help/forms/using/transaction-report-overview-jee.md)
+         + [Lista över fakturerbara API:er för AEM Forms i JEE](/help/forms/using/transaction-reports-billable-apis-jee.md)
+         + [Registrera en transaktion för anpassade komponent-API:er](/help/forms/using/record-transaction-custom-component-jee.md)
    + Administratörshjälp för AEM Forms i JEE {#administrator-help}
       + Kom igång {#get-started}
          + [Allmänna inställningar för AEM Forms](/help/forms/using/admin-help/configure-general-aem-forms-settings.md)
