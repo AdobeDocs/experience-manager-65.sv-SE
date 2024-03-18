@@ -3,9 +3,9 @@ title: Tekniska krav
 description: En lista över de klient- och serverplattformar som stöds för Adobe Experience Manager.
 topic-tags: platform
 exl-id: 47529b9a-c4e5-434f-ac26-b01714ff863b
-source-git-commit: 52969d5ab0975871c872195ab13649fb815cead8
+source-git-commit: b9a5b6f8f990a9dd0fcf77ea3972ad0c6f401831
 workflow-type: tm+mt
-source-wordcount: '3650'
+source-wordcount: '3652'
 ht-degree: 0%
 
 ---
@@ -202,7 +202,7 @@ Adobe Experience Manager fungerar med följande serverplattformar för produktio
 | Oracle Solaris™ 11 | Z: Stöds inte |
 | IBM® AIX® 7.2 | Z: Stöds inte |
 
-1. Linux® Kernel 2.6, 3. x, 4. x och 5. x innehåller derivat från distributionen av Red Hat®, inklusive Red Hat® Enterprise Linux®, CentOS, Oracle Linux® och Amazon Linux®. AEM Forms tilläggsfunktioner stöds endast i CentOS 7, Red Hat® Enterprise Linux® 7, Red Hat® Enterprise Linux® 8 och Red Hat® Enterprise Linux® 9.
+1. Linux® Kernel 2.6, 3. x, 4. x, 5. x och 6. x innehåller derivat från distributionen av Red Hat®, inklusive Red Hat® Enterprise Linux®, CentOS, Oracle Linux® och Amazon Linux®. AEM Forms tilläggsfunktioner stöds endast i CentOS 7, Red Hat® Enterprise Linux® 7, Red Hat® Enterprise Linux® 8 och Red Hat® Enterprise Linux® 9.
 1. AEM Forms stöds på Ubuntu 20.04 LTS.
 1. Linux®-distribution stöds av Adobe Managed Services.
 
@@ -250,11 +250,11 @@ Följande webbservrar kan användas med Dispatcher version 4.3.2:
 
 | Plattform | Supportnivå |
 |---|---|
-| **Apache httpd 2.4.x** `[1,2]` | A: Stöds |
+| **Apache httpd 2.4.x** `[1,2]` | S: Stöds |
 | Microsoft® IIS 10 (Internet Information Server) | S: Stöds |
 | Microsoft® IIS 8.5 (Internet Information Server) | Z: Stöds inte |
 
-1. Webbservrar byggda baserat på Apache httpd-källkoden har lika mycket stöd som den version av httpd som den är baserad på. Om du är osäker kan du be Adobe om en bekräftelse av den supportnivå som gäller respektive serverprodukt. Följande fall:
+1. Webbservrar som byggts utifrån Apache httpd-källkoden har lika mycket stöd som den version av httpd som den baseras på. Om du är osäker kan du be Adobe om en bekräftelse av den supportnivå som gäller respektive serverprodukt. Följande fall:
 
    1. HTTP-servern byggdes med enbart officiella källdistributioner av Apache, eller
    1. HTTP-servern levererades som en del av det operativsystem där den körs. Exempel: IBM® HTTP Server, Oracle HTTP Server
@@ -299,8 +299,8 @@ Det AEM användargränssnittet är optimerat för större skärmar (vanligen bä
   </tr>
   <tr>
    <td>Mozilla Firefox (Evergreen)</td>
-   <td>A: Stöds</td>
    <td>S: Stöds</td>
+   <td>A: Stöds</td>
   </tr>
   <tr>
    <td>Mozilla Firefox last ESR [1]</td>
@@ -330,7 +330,7 @@ Det AEM användargränssnittet är optimerat för större skärmar (vanligen bä
  </tbody>
 </table>
 
-1. Extended Support Release för Firefox [Läs mer på mozilla.org](https://www.mozilla.org/en-US/firefox/enterprise/)
+1. Extended Support Release av Firefox [Läs mer på mozilla.org](https://www.mozilla.org/en-US/firefox/enterprise/)
 1. stöd för Apple iPad
 
 ### Webbläsare som stöds för webbplatser {#supported-browsers-for-websites}
@@ -409,11 +409,11 @@ Om du använder Dynamic Media i Linux® måste följande krav vara uppfyllda:
 
 >[!NOTE]
 >
->**NUMA-arkitektur:** System med processorer med AMD64 och Intel® EM64T konfigureras vanligtvis som NUMA-plattformar (non-uniform memory architecture). Det vill säga, kärnan konstruerar flera minnesnoder vid uppstart i stället för att konstruera en enda minnesnod.
+>**NUMA-arkitektur:** System med processorer med AMD64 och Intel® EM64T konfigureras vanligtvis som NUMA-plattformar (non-uniform memory architecture). Det innebär att kärnan konstruerar flera minnesnoder vid start i stället för att konstruera en enda minnesnod.
 >
 >Konstruktionen för flera noder kan resultera i minnesöverbelastning på en eller flera av noderna innan andra noder töms. När minnesöverbelastning inträffar kan kärnan bestämma sig för att avsluta processer (till exempel Image Server eller Platform Server) trots att det finns tillgängligt minne.
 >
->Därför rekommenderar Adobe att du stänger av NUMA med **numa=off** startalternativ för att undvika att kärnan tar bort dessa processer.
+>Därför rekommenderar Adobe att du, om du kör ett sådant system, stänger av NUMA med startalternativet **numa=off** för att undvika att kärnan dödar dessa processer.
 
 >[!NOTE]
 >
@@ -438,7 +438,7 @@ För Windows x86:
 
 * Få Microsoft® Visual Studio 2010 återdistribuerbart på [https://www.microsoft.com/en-us/download/details.aspx?id=26999](https://www.microsoft.com/en-us/download/details.aspx?id=26999)
 * Få Microsoft® Visual Studio 2013 återdistribuerbart på [https://www.microsoft.com/en-in/download/details.aspx?id=40769](https://www.microsoft.com/en-in/download/details.aspx?id=40769)
-* Få Microsoft® Visual Studio 2015 återdistribuerbart på [https://www.microsoft.com/en-us/download/details.aspx?id=52685](https://www.microsoft.com/en-us/download/details.aspx?id=52685)
+* Få Microsoft® Visual Studio 2015 omdistribuerbart på [https://www.microsoft.com/en-us/download/details.aspx?id=52685](https://www.microsoft.com/en-us/download/details.aspx?id=52685)
 
 #### macOS (på engelska) {#macos}
 
@@ -537,7 +537,7 @@ För Windows x86:
 
 [Installera och konfigurera AEM Forms designer](/help/forms/using/installing-configuring-designer.md)
 
-### Krav för tillbakaskrivning av AEM Assets XMP-metadata {#requirements-for-aem-assets-xmp-metadata-write-back}
+### Krav för AEM Assets XMP metadata write-back {#requirements-for-aem-assets-xmp-metadata-write-back}
 
 XMP-tillbakaskrivning stöds och aktiveras för följande plattformar och filformat:
 
