@@ -4,9 +4,10 @@ description: Lär dig hur du driftsätter ett AEM headless Content and Commerce-
 topics: Commerce
 feature: Commerce Integration Framework
 exl-id: de7b8f05-b6b7-4105-84a5-940c16ebf2b4
-source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
+solution: Experience Manager,Commerce
+source-git-commit: 1751bfb32386685e3a159939113b9667b5e17f0e
 workflow-type: tm+mt
-source-wordcount: '769'
+source-wordcount: '722'
 ht-degree: 0%
 
 ---
@@ -106,7 +107,7 @@ Du hittar fullständiga exempel på båda konfigurationerna här: <https://githu
 
 För att visa GraphQL-slutpunkten förberedde Adobe några innehållsfragmentmodeller och data som exempel med hjälp av ett innehållspaket. Dessa delar fungerar tillsammans med React Components som medföljer PWA Studio.
 
-## Användning {#how-to-use}
+## Använda {#how-to-use}
 
 Det här tillägget är ett exempel på implementering av hur du ansluter ett PWA Studio-program med AEM för att hämta och återge innehåll via GraphQL.
 

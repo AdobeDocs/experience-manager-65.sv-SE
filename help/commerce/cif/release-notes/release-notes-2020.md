@@ -2,22 +2,23 @@
 title: AEM Content and Commerce Release Notes 2020
 description: Adobe Experience Manager Content and Commerce Release Notes 2020.
 exl-id: 440ecd8e-55dc-4606-8678-c65cda1d2b3a
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+solution: Experience Manager,Commerce
+source-git-commit: 1751bfb32386685e3a159939113b9667b5e17f0e
 workflow-type: tm+mt
-source-wordcount: '1352'
-ht-degree: 8%
+source-wordcount: '1257'
+ht-degree: 6%
 
 ---
 
-# GitHub-versionsöversikt för Commerce Integration Framework
+# Commerce integration framework GitHub Release Overview
 
 ## Releasedatum: november 2020
 
 | GitHub | Version | Detaljerade versionsinformation |
 |:-------|:-----:|---------------------:|
 | CIF | 1.6.0 | [Versionsinformation](https://github.com/adobe/commerce-cif-connector/releases) |
-| CIF-kärnkomponenter | 1.6.0 | [Versionsinformation](https://github.com/adobe/aem-core-cif-components/releases) |
-| CIF Venias referenswebbplats | 2020.12.01 | [Versionsinformation](https://github.com/adobe/aem-cif-guides-venia/releases) |
+| CIF kärnkomponenter | 1.6.0 | [Versionsinformation](https://github.com/adobe/aem-core-cif-components/releases) |
+| CIF Venia Reference Site | 2020.12.01 | [Versionsinformation](https://github.com/adobe/aem-cif-guides-venia/releases) |
 
 ### Nyheter {#what-is-new-november}
 
@@ -38,8 +39,8 @@ ht-degree: 8%
 | GitHub | Version | Detaljerade versionsinformation |
 |:-------|:-----:|---------------------:|
 | CIF | 1.5.0 | [Versionsinformation](https://github.com/adobe/commerce-cif-connector/releases) |
-| CIF-kärnkomponenter | 1.5.0 | [Versionsinformation](https://github.com/adobe/aem-core-cif-components/releases) |
-| CIF Venias referenswebbplats | 2020.10.27 | [Versionsinformation](https://github.com/adobe/aem-cif-guides-venia/releases) |
+| CIF kärnkomponenter | 1.5.0 | [Versionsinformation](https://github.com/adobe/aem-core-cif-components/releases) |
+| CIF Venia Reference Site | 2020.10.27 | [Versionsinformation](https://github.com/adobe/aem-cif-guides-venia/releases) |
 
 ### Nyheter {#what-is-new-october}
 
@@ -56,8 +57,8 @@ ht-degree: 8%
 | GitHub | Version | Detaljerade versionsinformation |
 |:-------|:-----:|---------------------:|
 | CIF | 1.4.0 | [Versionsinformation](https://github.com/adobe/commerce-cif-connector/releases) |
-| CIF-kärnkomponenter | 1.4.0 | [Versionsinformation](https://github.com/adobe/aem-core-cif-components/releases) |
-| CIF Venias referenswebbplats | 2020.10.2 | [Versionsinformation](https://github.com/adobe/aem-cif-guides-venia/releases) |
+| CIF kärnkomponenter | 1.4.0 | [Versionsinformation](https://github.com/adobe/aem-core-cif-components/releases) |
+| CIF Venia Reference Site | 2020.10.2 | [Versionsinformation](https://github.com/adobe/aem-cif-guides-venia/releases) |
 
 ### Nyheter {#what-is-new-september}
 
@@ -82,8 +83,8 @@ ht-degree: 8%
 | GitHub | Version | Detaljerade versionsinformation |
 |:-------|:-----:|---------------------:|
 | CIF | 1.3.0 | [Versionsinformation](https://github.com/adobe/commerce-cif-connector/releases) |
-| CIF-kärnkomponenter | 1.3.0 | [Versionsinformation](https://github.com/adobe/aem-core-cif-components/releases) |
-| CIF Venias referenswebbplats | 2020.9.2 | [Versionsinformation](https://github.com/adobe/aem-cif-guides-venia/releases) |
+| CIF kärnkomponenter | 1.3.0 | [Versionsinformation](https://github.com/adobe/aem-core-cif-components/releases) |
+| CIF Venia Reference Site | 2020.9.2 | [Versionsinformation](https://github.com/adobe/aem-cif-guides-venia/releases) |
 
 ### Nyheter {#what-is-new-august}
 
@@ -106,8 +107,8 @@ ht-degree: 8%
 | GitHub | Version | Detaljerade versionsinformation |
 |:-------|:-----:|---------------------:|
 | CIF | 1.2.0 | [Versionsinformation](https://github.com/adobe/commerce-cif-connector/releases) |
-| CIF-kärnkomponenter | 1.2.0 | [Versionsinformation](https://github.com/adobe/aem-core-cif-components/releases) |
-| CIF Venias referenswebbplats | 2020.8.14 | [Versionsinformation](https://github.com/adobe/aem-cif-guides-venia/releases) |
+| CIF kärnkomponenter | 1.2.0 | [Versionsinformation](https://github.com/adobe/aem-core-cif-components/releases) |
+| CIF Venia Reference Site | 2020.8.14 | [Versionsinformation](https://github.com/adobe/aem-cif-guides-venia/releases) |
 
 ### Nyheter {#what-is-new-july}
 
@@ -132,7 +133,7 @@ ht-degree: 8%
 | GitHub | Version | Detaljerade versionsinformation |
 |:-------|:-----:|---------------------:|
 | CIF | 1.1.0 | [Versionsinformation](https://github.com/adobe/commerce-cif-connector/releases) |
-| CIF-kärnkomponenter | 1.1.1 | [Versionsinformation](https://github.com/adobe/aem-core-cif-components/releases) |
+| CIF kärnkomponenter | 1.1.1 | [Versionsinformation](https://github.com/adobe/aem-core-cif-components/releases) |
 | CIF | 0.11.0 | [Versionsinformation](https://github.com/adobe/aem-cif-project-archetype/releases) |
 
 ### Nyheter {#what-is-new-june}
@@ -160,7 +161,7 @@ Detta är den första versionen av CIF Core Components som stöds i Adobe Experi
 | GitHub | Version | Detaljerade versionsinformation |
 |:-------|:-----:|---------------------:|
 | CIF | 1.0.0 | [Versionsinformation](https://github.com/adobe/commerce-cif-connector/releases) |
-| CIF-kärnkomponenter | 1.0.0 | [Versionsinformation](https://github.com/adobe/aem-core-cif-components/releases) |
+| CIF kärnkomponenter | 1.0.0 | [Versionsinformation](https://github.com/adobe/aem-core-cif-components/releases) |
 | CIF | 0.11.0 | [Versionsinformation](https://github.com/adobe/aem-cif-project-archetype/releases) |
 
 ### Nyheter {#what-is-new-may}
@@ -184,7 +185,7 @@ Detta är den första versionen av CIF Core Components som stöds i Adobe Experi
 | GitHub | Version | Detaljerade versionsinformation |
 |:-------|:-----:|---------------------:|
 | CIF | 0.10.0 | [Versionsinformation](https://github.com/adobe/commerce-cif-connector/releases) |
-| CIF-kärnkomponenter | 0.10.0 | [Versionsinformation](https://github.com/adobe/aem-core-cif-components/releases) |
+| CIF kärnkomponenter | 0.10.0 | [Versionsinformation](https://github.com/adobe/aem-core-cif-components/releases) |
 | CIF | 0.10.0 | [Versionsinformation](https://github.com/adobe/aem-cif-project-archetype/releases) |
 
 ### Nyheter {#what-is-new-april}
@@ -208,7 +209,7 @@ Detta är den första versionen av CIF Core Components som stöds i Adobe Experi
 | GitHub | Version | Detaljerade versionsinformation |
 |:-------|:-----:|---------------------:|
 | CIF | 0.9.0 | [Versionsinformation](https://github.com/adobe/commerce-cif-connector/releases) |
-| CIF-kärnkomponenter | 0.9.0 | [Versionsinformation](https://github.com/adobe/aem-core-cif-components/releases) |
+| CIF kärnkomponenter | 0.9.0 | [Versionsinformation](https://github.com/adobe/aem-core-cif-components/releases) |
 | CIF | 0.9.0 | [Versionsinformation](https://github.com/adobe/aem-cif-project-archetype/releases) |
 
 ### Nyheter {#what-is-new-february}
@@ -234,7 +235,7 @@ Detta är den första versionen av CIF Core Components som stöds i Adobe Experi
 | GitHub | Version | Detaljerade versionsinformation |
 |:-------|:-----:|---------------------:|
 | CIF | 0.8.0 | [Versionsinformation](https://github.com/adobe/commerce-cif-connector/releases) |
-| CIF-kärnkomponenter | 0.8.0 | [Versionsinformation](https://github.com/adobe/aem-core-cif-components/releases) |
+| CIF kärnkomponenter | 0.8.0 | [Versionsinformation](https://github.com/adobe/aem-core-cif-components/releases) |
 | CIF | 0.7.0 | [Versionsinformation](https://github.com/adobe/aem-cif-project-archetype/releases) |
 
 ### Nyheter {#what-is-new-january}

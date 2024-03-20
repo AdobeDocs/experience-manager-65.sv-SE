@@ -6,9 +6,10 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: personalization
 exl-id: 61a5875f-ad09-4971-a886-b0d88e0c9967
-source-git-commit: ae08247c7be0824151637d744f17665c3bd82f2d
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '548'
+source-wordcount: '546'
 ht-degree: 0%
 
 ---
@@ -31,7 +32,7 @@ Innehållet kan sedan anpassas efter besökarens behov och intressen, beroende p
 
 Segment definieras i [Konfigurera segmentering](/help/sites-administering/campaign-segmentation.md). De används för att styra det faktiska innehåll som ses av en viss målgrupp.
 
-## Segmenteringsterminologi {#segmentation-terminology}
+## Segmenteringstermin {#segmentation-terminology}
 
 Vid diskussion av segmentering används följande terminologi:
 
@@ -45,15 +46,15 @@ Vid diskussion av segmentering används följande terminologi:
 
 **Beteendeegenskaper** - Beteenden är sådana som relaterar till besökarens beteende på webbplatsen. Bland dessa finns:
 
-* Intresset på er webbplats; inklusive besökta sidor och köpta produkter.
-* Intresse för den webbplats som refererar. inklusive söktermer som används eller annonser som klickas.
-* Intresse av andra anläggningar. med verktyg som Spyjax.
-* Besökarlojalitet; Besöken ska pågå, besöksfrekvens.
+* Intresset på er webbplats, inklusive besökta sidor och köpta produkter.
+* Intresse för den refererande webbplatsen, inklusive söktermer som används eller annonser som klickas.
+* Intressen av andra sajter; bestäms med verktyg som Spyjax.
+* Besökarnas lojalitet; besökets varaktighet, besöksfrekvens.
 
 **Demografiska egenskaper** - Dessa är utvalda populationsegenskaper, bland annat:
 
 * Ålder
-* Inkomst
+* Intäkter
 * Familjestorlek
 * Civilstånd
 * Kön

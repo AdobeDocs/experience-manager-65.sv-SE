@@ -3,7 +3,8 @@ title: Introduktion och översikt
 description: Lär dig hur du använder och administrerar AEM-innehåll and Commerce med användbara artiklar om integreringar och hur du kommer igång med att använda AEM Storefront.
 thumbnail: introducing-aem-commerce.jpg
 exl-id: 52dad8f9-1812-42a3-8106-92b23f8517cd
-source-git-commit: fcf7f56fe04cffb077bb40d11429b0c425876489
+solution: Experience Manager,Commerce
+source-git-commit: 1751bfb32386685e3a159939113b9667b5e17f0e
 workflow-type: tm+mt
 source-wordcount: '838'
 ht-degree: 2%

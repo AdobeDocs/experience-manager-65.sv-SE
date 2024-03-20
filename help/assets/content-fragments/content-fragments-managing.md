@@ -4,9 +4,10 @@ description: Lär dig hur du använder Resurskonsolen för att hantera AEM inneh
 feature: Content Fragments
 role: User
 exl-id: 25c91a85-06ff-4666-a809-46778a689e25
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+solution: Experience Manager, Experience Manager Assets
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '1715'
+source-wordcount: '1712'
 ht-degree: 6%
 
 ---
@@ -299,16 +300,16 @@ Förutom standardalternativen [Tidslinje](/help/assets/manage-assets.md#timeline
 
 >[!NOTE]
 >
-Kommentarerna är:
+>Kommentarerna är:
 >
-* Standardfunktionalitet för alla resurser
-* Skapat i tidslinjen
-* Relaterat till fragmentresursen
+>* Standardfunktionalitet för alla resurser
+>* Skapat i tidslinjen
+>* Relaterat till fragmentresursen
 >
-Anteckningar (för innehållsfragment) är:
+>Anteckningar (för innehållsfragment) är:
 >
-* Anges i fragmentredigeraren
-* Specifik för ett markerat textsegment i fragmentet
+>* Anges i fragmentredigeraren
+>* Specifik för ett markerat textsegment i fragmentet
 >
 
 Till exempel:
@@ -339,7 +340,7 @@ De visas sida vid sida, där:
 
 >[!NOTE]
 >
-Du kan inte redigera fragmentinnehållet när du jämför fragment.
+>Du kan inte redigera fragmentinnehållet när du jämför fragment.
 
 ![jämföra](assets/cfm-managing-06.png)
 
@@ -357,9 +358,9 @@ Du kan återgå till en viss version av fragmentet:
 
 >[!CAUTION]
 >
-Om fragmentet är baserat på en modell bör du se till att [modellen har publicerats](/help/assets/content-fragments/content-fragments-models.md#publishing-a-content-fragment-model).
+>Om fragmentet är baserat på en modell bör du se till att [modellen har publicerats](/help/assets/content-fragments/content-fragments-models.md#publishing-a-content-fragment-model).
 >
-Om du publicerar ett innehållsfragment för vilket modellen ännu inte har publicerats, visas detta i en urvalslista och modellen publiceras med fragmentet.
+>Om du publicerar ett innehållsfragment för vilket modellen ännu inte har publicerats, visas detta i en urvalslista och modellen publiceras med fragmentet.
 
 Innehållsfragment måste publiceras för användning i publiceringsmiljön. De kan publiceras:
 
@@ -369,7 +370,7 @@ Innehållsfragment måste publiceras för användning i publiceringsmiljön. De 
 
 >[!CAUTION]
 >
-När ett fragment har publicerats och/eller refererats visar AEM en varning när en författare öppnar fragmentet för redigering igen. Detta är för att varna för att ändringar i fragmentet även påverkar de refererade sidorna.
+>När ett fragment har publicerats och/eller refererats visar AEM en varning när en författare öppnar fragmentet för redigering igen. Detta är för att varna för att ändringar i fragmentet även påverkar de refererade sidorna.
 
 ## Ta bort ett fragment {#deleting-a-fragment}
 
@@ -380,11 +381,11 @@ Ta bort ett fragment:
 
    >[!NOTE]
    >
-   The **Ta bort** åtgärden är inte tillgänglig som en snabbåtgärd.
+   >The **Ta bort** åtgärden är inte tillgänglig som en snabbåtgärd.
 
 3. Välj **Ta bort** i verktygsfältet.
 4. Bekräfta **Ta bort** åtgärd.
 
    >[!CAUTION]
    >
-   Om fragmentet redan finns på en sida visas ett varningsmeddelande och du måste bekräfta att du vill fortsätta med **Tvinga borttagning**. Fragmentet, tillsammans med dess innehållskomponentfragment, tas bort från alla innehållssidor.
+   >Om fragmentet redan finns på en sida visas ett varningsmeddelande och du måste bekräfta att du vill fortsätta med **Tvinga borttagning**. Fragmentet, tillsammans med dess innehållskomponentfragment, tas bort från alla innehållssidor.

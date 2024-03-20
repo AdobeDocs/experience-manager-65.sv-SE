@@ -5,9 +5,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
 role: Admin
 exl-id: d530dbb9-f95e-4329-9665-37faf8f7931b
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '2242'
+source-wordcount: '2184'
 ht-degree: 0%
 
 ---
@@ -158,13 +159,13 @@ Innan du installerar Workbench måste du kontrollera att miljön innehåller den
 
    >[!NOTE]
    >
-   Du kan fortsätta använda Designer som installerats med Acrobat 10 genom att lämna det här alternativet avmarkerat.
+   >Du kan fortsätta använda Designer som installerats med Acrobat 10 genom att lämna det här alternativet avmarkerat.
 
 1. Acceptera standardkatalogen enligt listan eller klicka på Välj och navigera till den katalog där du vill installera Workbench. Klicka sedan på Nästa.
 
    >[!NOTE]
    >
-   Installationskatalogsökvägen får inte innehålla tecknen # (pund) och $ (dollar).
+   >Installationskatalogsökvägen får inte innehålla tecknen # (pund) och $ (dollar).
 
 1. Granska förinstallationssammanfattningen och klicka på Installera. Installationsprogrammet visar installationsförloppet.
 1. Granska installationssammanfattningen. Välj Starta AEM Forms Workbench så att du kan starta Workbench och klicka sedan på Nästa.
@@ -184,7 +185,7 @@ Om du vill använda Workbench måste du ha en instans av AEM Forms igång, vanli
 
 >[!NOTE]
 >
-Om du har konfigurerat AEM Forms att använda EMC Documentum®- eller IBM® FileNet-databasprovidern och du vill logga in i en annan databas än den som är konfigurerad som standard i AEM formuläradministrationskonsol, anger du användarnamnet som username@Repository.
+>Om du har konfigurerat AEM Forms att använda EMC Documentum®- eller IBM® FileNet-databasprovidern och du vill logga in i en annan databas än den som är konfigurerad som standard i AEM formuläradministrationskonsol, anger du användarnamnet som username@Repository.
 
 ### Konfigurera timeout-inställningar {#configuring-timeout-settings}
 
@@ -196,7 +197,7 @@ Om du vill ansluta Workbench till en AEM Forms-server via HTTPS måste du se til
 
 >[!NOTE]
 >
-[Workbench_HOME] representerar katalogen där du installerade Workbench. Standardplatsen är C:\Program (x86)\Adobe Experience Manager forms Workbench.
+>[Workbench_HOME] representerar katalogen där du installerade Workbench. Standardplatsen är C:\Program (x86)\Adobe Experience Manager forms Workbench.
 
 Kontrollera att du ansluter till HTTPS med det namn som anges i certifikatet. Det här namnet är vanligtvis det fullständiga, kvalificerade värdnamnet.
 
@@ -205,7 +206,7 @@ Kontrollera att du ansluter till HTTPS med det namn som anges i certifikatet. De
 
    >[!NOTE]
    >
-   Om du vill exportera certifikatet öppnar du en webbläsare och loggar in på administrationskonsolen. Installera certifikatet i webbläsaren och exportera sedan certifikatet från webbläsaren till en tillfällig lagringsplats (eller direkt till [Workbench_HOME]/workbench/jre/lib/security directory).
+   >Om du vill exportera certifikatet öppnar du en webbläsare och loggar in på administrationskonsolen. Installera certifikatet i webbläsaren och exportera sedan certifikatet från webbläsaren till en tillfällig lagringsplats (eller direkt till [Workbench_HOME]/workbench/jre/lib/security directory).
 
 1. Kopiera certifikatet till [Workbench_HOME]/workbench/jre/lib/security directory.
 

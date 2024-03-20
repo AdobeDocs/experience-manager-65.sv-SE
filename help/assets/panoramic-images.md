@@ -1,5 +1,5 @@
 ---
-title: Panoramabilder
+title: Panorambilder
 description: Lär dig arbeta med panoramabilder i Dynamic Media.
 contentOwner: Rick Brough
 topic-tags: dynamic-media
@@ -9,10 +9,11 @@ docset: aem65
 feature: Panoramic Images,Asset Management
 role: User, Admin
 exl-id: 4d6fbeb1-94db-4154-9e41-b76033fb4398
-source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
+solution: Experience Manager, Experience Manager Assets
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '545'
-ht-degree: 4%
+source-wordcount: '548'
+ht-degree: 3%
 
 ---
 
@@ -22,7 +23,7 @@ I det här avsnittet beskrivs hur du arbetar med visningsprogrammet för panoram
 
 Se även [Hantera visningsförinställningar](/help/assets/managing-viewer-presets.md).
 
-![panoramic-image2](assets/panoramic-image2.png)
+![panoramabild2](assets/panoramic-image2.png)
 
 ## Överför resurser som ska användas med panoramabildsvisningsprogrammet {#uploading-assets-for-use-with-the-panoramic-image-viewer}
 

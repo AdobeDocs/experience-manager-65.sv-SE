@@ -5,10 +5,11 @@ contentOwner: AG
 role: Admin
 feature: Tagging,Smart Tags
 exl-id: 9f68804f-ba15-4f83-ab1b-c249424b1396
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+solution: Experience Manager, Experience Manager Assets
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '1981'
-ht-degree: 26%
+source-wordcount: '1964'
+ht-degree: 23%
 
 ---
 
@@ -59,7 +60,7 @@ Med ett offentligt certifikat kan du autentisera din profil på Adobe Developer 
 
    **[!UICONTROL Service URL]**: `https://smartcontent.adobe.io/<region where your Experience Manager author instance is hosted>`
 
-   Till exempel, `https://smartcontent.adobe.io/apac`. Du kan ange `na`, `emea`, eller `apac` som de områden där din Experience Manager-författarinstans finns.
+   Till exempel: `https://smartcontent.adobe.io/apac`. Du kan ange `na`, `emea`, eller `apac` som de områden där din Experience Manager-författarinstans finns.
 
    >[!NOTE]
    >
@@ -92,7 +93,7 @@ När ett certifikat har upphört att gälla är det inte längre tillförlitligt
 
 1. Logga in på [!DNL Experience Manager]-driftsättningen som administratör. Klicka på **[!UICONTROL Tools]** > **[!UICONTROL Security]** > **[!UICONTROL Users]**.
 
-1. Leta reda på och klicka på **[!UICONTROL dam-update-service]**-användaren. Klicka på fliken **[!UICONTROL Keystore]**.
+1. Leta reda på och klicka på **[!UICONTROL dam-update-service]**-användaren. Klicka **[!UICONTROL Keystore]** -fliken.
 
 1. Ta bort den befintliga **[!UICONTROL similaritysearch]**-nyckelbehållaren med det certifikat som upphört att gälla. Klicka på **[!UICONTROL Save & Close]**.
 
@@ -123,7 +124,7 @@ Om du vill använda API:er för tjänsten Smart Content skapar du en integrering
 
 1. Klicka på **[!UICONTROL Next]**.
 
-1. På sidan **[!UICONTROL Select product profiles]** markerar du **[!UICONTROL Smart Content Services]**. Klicka på **[!UICONTROL Save configured API]**.
+1. På **[!UICONTROL Select product profiles]** sida, markera **[!UICONTROL Smart Content Services]**. Klicka på **[!UICONTROL Save configured API]**.
 
    En sida visar mer information om konfigurationen. Behåll den här sidan öppen för att kopiera och lägga till värdena i [!UICONTROL Assets Smart Tagging Service Settings] av molnkonfigurationen i [!DNL Experience Manager] för att konfigurera smarta taggar.
 
@@ -157,9 +158,9 @@ När du har slutfört konfigurationen kan du använda en JMX MBean för att vali
 
 1. Gå till din [!DNL Experience Manager]-server på `https://[aem_server]:[port]`.
 
-1. Gå till **[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Web Console]** för att öppna OSGi-konsolen. Klicka på **[!UICONTROL Main]>[!UICONTROL JMX]**.
+1. Gå till **[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Web Console]** för att öppna OSGi-konsolen. Klicka **[!UICONTROL Main]>[!UICONTROL JMX]**.
 
-1. Klicka på `com.day.cq.dam.similaritysearch.internal.impl`. Det öppnar **[!UICONTROL SimilaritySearch Miscellaneous Tasks]**.
+1. Klicka på `com.day.cq.dam.similaritysearch.internal.impl`. Den öppnas **[!UICONTROL SimilaritySearch Miscellaneous Tasks]**.
 
 1. Klicka på `validateConfigs()`. I dialogrutan **[!UICONTROL Validate Configurations]** klickar du på **[!UICONTROL Invoke]**.
 
@@ -167,7 +168,7 @@ Valideringsresultaten visas i samma dialogruta.
 
 ### Aktivera smart taggning i [!UICONTROL DAM Update Asset] arbetsflöde (valfritt) {#enable-smart-tagging-in-the-update-asset-workflow-optional}
 
-1. I [!DNL Experience Manager] går du till **[!UICONTROL Tools]** > **[!UICONTROL Workflow]** > **[!UICONTROL Models]**.
+1. I [!DNL Experience Manager], gå till **[!UICONTROL Tools]** > **[!UICONTROL Workflow]** > **[!UICONTROL Models]**.
 
 1. Välj arbetsflödesmodellen **[!UICONTROL DAM Update Asset]** på sidan **[!UICONTROL Workflow Models]**.
 
@@ -200,7 +201,7 @@ Valideringsresultaten visas i samma dialogruta.
 
    *Bild: Konfigurera arbetsflödet för DAM-uppdatering av resurs för att lägga till smart tagg och välj ignorera flagga för smart tagg.*
 
-1. Klicka på **[!UICONTROL OK]** för att stänga processsteget och spara sedan arbetsflödet.
+1. Klicka **[!UICONTROL OK]** för att stänga processteget och sedan spara arbetsflödet.
 
 ## Utbilda tjänsten Smart Content {#training-the-smart-content-service}
 

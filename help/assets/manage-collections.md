@@ -7,9 +7,10 @@ role: User
 feature: Collections,Asset Management
 exl-id: 2117b2de-8024-4aa8-9ce0-68a156928356
 hide: true
-source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
+solution: Experience Manager, Experience Manager Assets
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '2048'
+source-wordcount: '2027'
 ht-degree: 10%
 
 ---
@@ -216,7 +217,7 @@ När du hämtar en samling hämtas hela resurshierarkin i samlingen, inklusive m
 
 1. Välj en eller flera samlingar som du vill hämta från samlingskonsolen.
 1. Klicka på **[!UICONTROL Download]** i verktygsfältet.
-1. I dialogrutan **[!UICONTROL Download]** klickar du på **[!UICONTROL Download]**. Om du vill hämta återgivningarna av resurserna i samlingen väljer du **[!UICONTROL Renditions]**. Välj **[!UICONTROL Email]** om du vill skicka ett e-postmeddelande till samlingens ägare.
+1. I **[!UICONTROL Download]** dialogruta, klicka **[!UICONTROL Download]**. Om du vill hämta återgivningarna av resurserna i samlingen väljer du **[!UICONTROL Renditions]**. Välj **[!UICONTROL Email]** om du vill skicka ett e-postmeddelande till samlingens ägare.
 
    När du väljer en samling som ska hämtas hämtas hela mapphierarkin under samlingen. Om du vill inkludera varje samling som du hämtar (inklusive resurser i underordnade samlingar som är kapslade under den överordnade samlingen) i en enskild mapp väljer du **[!UICONTROL Create separate folder for each asset]**.
 
@@ -271,7 +272,7 @@ Du kan köra ett arbetsflöde för resurserna i en samling. Om samlingen innehå
 1. Öppna **[!UICONTROL Timeline]** järnväg. Klicka ![uppåt](assets/do-not-localize/chevron-up-icon.png) och klicka **[!UICONTROL Start Workflow]**.
 1. I **[!UICONTROL Start Workflow]** väljer du en arbetsflödesmodell i listan. Välj till exempel **[!UICONTROL DAM Update Asset]** modell.
 1. Ange en titel för arbetsflödet och klicka på **[!UICONTROL Start]**.
-1. Klicka på **[!UICONTROL Proceed]** i dialogrutan. Arbetsflödet bearbetar alla resurser i den valda samlingen.
+1. Klicka på **[!UICONTROL Proceed]**. Arbetsflödet bearbetar alla resurser i den valda samlingen.
 
 >[!MORELIKETHIS]
 >

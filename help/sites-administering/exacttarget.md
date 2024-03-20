@@ -1,15 +1,16 @@
 ---
 title: Integrera med ExactTarget
-description: Lär dig hur du integrerar Adobe Experience Manager med ExactTarget.
+description: Lär dig integrera Adobe Experience Manager med ExactTarget.
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
 content-type: reference
 docset: aem65
 exl-id: 4183fe78-5055-4b77-8a54-55666e86a04e
-source-git-commit: 3885cc51f7e821cdb352737336a29f9c4f0c2f41
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '469'
+source-wordcount: '460'
 ht-degree: 1%
 
 ---
@@ -31,9 +32,9 @@ ExactTarget-konfigurationer kan läggas till med hjälp av molntjänster eller v
 
 ### Konfigurera ExactTarget med hjälp av molntjänster {#configuring-exacttarget-via-cloudservices}
 
-Så här skapar du en ExactTarget-konfiguration i Cloud Services:
+Så här skapar du en ExactTarget-konfiguration i Cloud Service:
 
-1. På välkomstsidan klickar du på **Cloud Services**. (Eller direkt åtkomst på `https://<hostname>:<port>/etc/cloudservices.html`.)
+1. Klicka på på välkomstsidan **Cloud Service**. (Eller direkt åtkomst på `https://<hostname>:<port>/etc/cloudservices.html`.)
 1. Klicka **ExactTarget** och sedan **Konfigurera**. Konfigurationsfönstret ExactTarget öppnas.
 
    ![chlimage_1-19](assets/chlimage_1-19.png)
@@ -49,7 +50,7 @@ Så här skapar du en ExactTarget-konfiguration i Cloud Services:
 
 1. Välj ett konto, om det är tillgängligt. Kontot är till för Enterprise 2.0-kunder. Klicka **OK**.
 
-   ExactTarget har konfigurerats. Du kan redigera konfigurationen genom att klicka på **Redigera**. Du kan gå till ExactTarget genom att klicka **Gå till ExactTarget**.
+   ExactTarget har konfigurerats. Du kan redigera konfigurationen genom att klicka på **Redigera**. Gå till ExactTarget genom att klicka **Gå till ExactTarget**.
 
 1. AEM har nu en datatilläggsfunktion. Du kan importera ExactTarget-datatilläggskolumner. Den kan konfigureras genom att klicka på plustecknet (+) som visas förutom den EXactTarget-konfiguration som skapades. Alla befintliga datatillägg kan väljas i listrutan. Mer information om hur du konfigurerar datatillägg finns i [ExactTarget-dokumentation](https://help.salesforce.com/s/articleView?id=sf.mc_es_data_extension_data_relationships_classic.htm&amp;type=5).
 
@@ -61,8 +62,8 @@ Så här skapar du en ExactTarget-konfiguration i Cloud Services:
 
 Så här skapar du en ExactTarget-konfiguration i verktygen:
 
-1. På välkomstsidan klickar du på **verktyg**. Eller navigera direkt genom att gå till `https://<hostname>:<port>/misadmin#/etc`.
-1. Välj **verktyg** sedan **Cloud Services, konfigurationer,** sedan **ExactTarget**.
+1. Klicka på på välkomstsidan **verktyg**. Eller navigera direkt genom att gå till `https://<hostname>:<port>/misadmin#/etc`.
+1. Välj **verktyg** sedan **Cloud Service, konfigurationer,** sedan **ExactTarget**.
 1. Klicka **Nytt** för att öppna fönstret **Create Page **.
 
    ![chlimage_1-34](assets/chlimage_1-3.jpeg)
@@ -74,5 +75,5 @@ Så här skapar du en ExactTarget-konfiguration i verktygen:
 
 Så här lägger du till flera konfigurationer:
 
-1. På välkomstsidan klickar du på **Cloud Services** och klicka **ExactTarget**. Klicka **Visa konfigurationer** som visas om en eller flera ExactTarget-konfigurationer är tillgängliga. Alla tillgängliga konfigurationer visas.
+1. Klicka på på välkomstsidan **Cloud Service** och klicka **ExactTarget**. Klicka **Visa konfigurationer** som visas om en eller flera ExactTarget-konfigurationer är tillgängliga. Alla tillgängliga konfigurationer visas.
 1. Klicka på **+** signera bredvid Tillgängliga konfigurationer. Då öppnas **Skapa konfigurationer** -fönstret. Följ den tidigare konfigurationsproceduren för att skapa en konfiguration.

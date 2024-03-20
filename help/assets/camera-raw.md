@@ -5,10 +5,11 @@ contentOwner: AG
 role: Admin
 feature: Developer Tools
 exl-id: 7159a908-4c36-42b4-bbb4-d7fb1be4ee1b
-source-git-commit: e24316cb9495a552960ae0620e4198f10a08b691
+solution: Experience Manager, Experience Manager Assets
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '331'
-ht-degree: 2%
+source-wordcount: '297'
+ht-degree: 3%
 
 ---
 
@@ -23,7 +24,7 @@ Du kan aktivera [!DNL Adobe Camera Raw] har stöd för att bearbeta råfilsforma
 Aktivera [!DNL Camera Raw] stöd i [!DNL Experience Manager Assets]gör du så här:
 
 1. Ladda ned [[!DNL Camera Raw] package](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/product/assets/aem-assets-cameraraw-pkg-1.4.8.zip) från [!DNL Software Distribution].
-1. Öppna `https://[aem_server]:[port]/workflow`. Öppna **[!UICONTROL DAM Update Asset]** arbetsflöde.
+1. Åtkomst `https://[aem_server]:[port]/workflow`. Öppna **[!UICONTROL DAM Update Asset]** arbetsflöde.
 1. Redigera **[!UICONTROL Process Thumbnails]** steg.
 1. Ange följande konfiguration i **[!UICONTROL Thumbnails]** tab:
 
@@ -36,8 +37,8 @@ Aktivera [!DNL Camera Raw] stöd i [!DNL Experience Manager Assets]gör du så h
 
    ![chlimage_1-129](assets/chlimage_1-335.png)
 
-1. Lägg till **[!UICONTROL Camera Raw/DNG Handler]** steg under **[!UICONTROL Process Thumbnails]** steg.
-1. I **[!UICONTROL Camera Raw/DNG Handler]** lägg till följande konfiguration i **[!UICONTROL Arguments]** tab:
+1. Lägg till **[!UICONTROL Camera Raw/DNG Handler]** steg nedanför **[!UICONTROL Process Thumbnails]** steg.
+1. I **[!UICONTROL Camera Raw/DNG Handler]** lägger du till följande konfiguration i **[!UICONTROL Arguments]** tab:
 
    * **[!UICONTROL Mime Types]**: `image/dng` och `image/x-raw-(.*)`
    * **[!UICONTROL Command]**:
@@ -63,7 +64,7 @@ Nu kan du importera Camera Raw-filer till Assets. När du har installerat det Ca
 
 ![chlimage_1-132](assets/chlimage_1-338.png)
 
-*Bild: Använd det här alternativet om du vill göra små ändringar i dina bilder.*
+*Bild: Använd alternativet om du vill göra små ändringar i dina bilder.*
 
 När du har sparat redigeringarna i en [!DNL Camera Raw] bild, en ny rendering `AdjustedPreview.jpg` genereras för bilden. För andra bildtyper förutom [!DNL Camera Raw]återspeglas ändringarna i alla återgivningar.
 

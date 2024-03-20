@@ -3,10 +3,12 @@ title: Lär dig använda GraphQL med AEM - exempelinnehåll och frågor
 description: Lär dig hur du använder GraphQL med AEM för att leverera innehåll utan problem genom att utforska exempelinnehåll och frågor.
 feature: Content Fragments,GraphQL API
 exl-id: 91c5f61c-9c15-4d72-9b9b-0c23f31e7cdc
-source-git-commit: 1481d613783089046b44d4652d38f7b4b16acc4d
+solution: Experience Manager, Experience Manager Sites
+role: Developer
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '1586'
-ht-degree: 1%
+source-wordcount: '1588'
+ht-degree: 0%
 
 ---
 
@@ -21,7 +23,6 @@ Lär dig hur du använder GraphQL med AEM för att leverera innehåll utan probl
 >* [Innehållsfragment](/help/assets/content-fragments/content-fragments.md)
 >* [Modeller för innehållsfragment](/help/assets/content-fragments/content-fragments-models.md)
 >* [AEM GraphQL API för användning med innehållsfragment](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md)
-
 
 Om du vill komma igång med GraphQL-frågor och hur de fungerar med AEM innehållsfragment kan det vara bra att se några praktiska exempel.
 
@@ -361,7 +362,7 @@ Om du skapar en variant som heter &quot;Berlin Center&quot; (`berlin_centre`), f
 Om du:
 
 * skapa olika taggar, namngivna `Tourism` : `Business`, `City Break`, `Holiday`
-* och tilldela dessa taggar till den Överordnad variationen av olika `City` instanser
+* och tilldela dessa taggar till mallvarianten av olika `City` instanser
 
 Sedan kan du använda en fråga för att returnera information om `name` och `tags`av alla poster som är taggade som Citybrytningar i `city`schema.
 
@@ -1149,10 +1150,10 @@ query {
 Dessa exempelfrågor är baserade på WKND-projektet. Den har följande:
 
 * Content Fragment Models available under:
-   `http://<hostname>:<port>/libs/dam/cfm/models/console/content/models.html/conf/wknd`
+  `http://<hostname>:<port>/libs/dam/cfm/models/console/content/models.html/conf/wknd`
 
 * Innehållsfragment (och annat innehåll) tillgängliga under:
-   `http://<hostname>:<port>/assets.html/content/dam/wknd/en`
+  `http://<hostname>:<port>/assets.html/content/dam/wknd/en`
 
 >[!NOTE]
 >
@@ -1246,7 +1247,7 @@ Detta exempel på frågor intervjuar:
 * för ett enda innehållsfragment av typen `article` vid en viss sökväg
    * inom den sökvägen, alla innehållsformat:
       * HTML
-      * Markdown
+      * Markering
       * Oformaterad text
       * JSON
 
@@ -1666,7 +1667,7 @@ De grundläggande fälten som definierar företaget är:
 
 | Fältnamn | Datatyp | Referens |
 |--- |--- |--- |
-| Företag | Enkelradig text |  |
+| Företagsnamn | Enkelradig text | |
 | VD | Fragmentreferens (enkel) | [Person](#model-person) |
 | Anställda | Fragmentreferens (multifält) | [Person](#model-person) |
 
@@ -1676,8 +1677,8 @@ Fälten som definierar en person, som också kan vara en medarbetare:
 
 | Fältnamn | Datatyp | Referens |
 |--- |--- |--- |
-| Namn | Enkelradig text |  |
-| Förnamn | Enkelradig text |  |
+| Namn | Enkelradig text | |
+| Förnamn | Enkelradig text | |
 | Utmärkelser | Fragmentreferens (multifält) | [Utmärkelse](#model-award) |
 
 #### Utmärkelse {#model-award}
@@ -1686,8 +1687,8 @@ Fälten som definierar en utmärkelse är:
 
 | Fältnamn | Datatyp | Referens |
 |--- |--- |--- |
-| Genväg/ID | Enkelradig text |  |
-| Titel | Enkelradig text |  |
+| Genväg/ID | Enkelradig text | |
+| Titel | Enkelradig text | |
 
 #### Ort {#model-city}
 
@@ -1695,10 +1696,10 @@ Fälten för att definiera en stad är:
 
 | Fältnamn | Datatyp | Referens |
 |--- |--- |--- |
-| Namn | Enkelradig text |  |
-| Land | Enkelradig text |  |
-| Population | Siffra |  |
-| Kategorier | Taggar |  |
+| Namn | Enkelradig text | |
+| Land | Enkelradig text | |
+| Population | Nummer | |
+| Kategorier | Taggar | |
 
 ### Exempel på innehållsfragment {#sample-content-fragments}
 
@@ -1706,7 +1707,7 @@ Följande fragment används för rätt modell.
 
 #### Företag {#fragment-company}
 
-| Företag | VD | Anställda |
+| Företagsnamn | VD | Anställda |
 |--- |--- |--- |
 | Apple | Steve Jobs | Duke Marsh<br>Max. textfält |
 |  Little Pony Inc. | Adam Smith | Lara Croft<br>Cutter Slade |
@@ -1716,7 +1717,7 @@ Följande fragment används för rätt modell.
 
 | Namn | Förnamn | Utmärkelser |
 |--- |--- |--- |
-| Lincoln |  Adobe |  |
+| Lincoln |  Adobe | |
 | Smith | Adam |   |
 | Slade |  Rensare |  Gameblitz<br>Gamestar |
 | Marmor |  Duke |   |   |

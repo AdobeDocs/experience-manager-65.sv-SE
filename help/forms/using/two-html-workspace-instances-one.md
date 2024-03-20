@@ -5,7 +5,8 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 exl-id: 32a546fc-e33f-46f9-ac3b-45eca0e12239
-source-git-commit: a56d5121a6ce11b42a6c30dae9e479564d16af27
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '296'
 ht-degree: 1%
@@ -18,7 +19,7 @@ Standardinstallationen och standardinställningarna för AEM Forms tillåter end
 
 AEM Forms-administratörer anpassar arbetsytan för att skapa två olika URL:er och gör två arbetsytor tillgängliga på samma server. I den här anpassningsartikeln kan du anta att de två arbetsytorna är tillgängliga på `https://'[server]:[port]'/lc/ws` och `https://'[server]:[port]':/lc/ws2`.
 
-Följ de här stegen för att konfigurera AEM Forms arbetsyta.
+Följ de här stegen för att konfigurera arbetsytan i AEM Forms.
 
 1. Installera Dev-paketet för AEM Forms-arbetsytan på servern. Se [dev-paket](/help/forms/using/introduction-customizing-html-workspace.md#p-crx-package-p), för instruktioner om hur du skapar den.
 1. Logga in på CRXDE Lite som administratör via `https://'[server]:[port]'/lc/crx/de/index.jsp`.

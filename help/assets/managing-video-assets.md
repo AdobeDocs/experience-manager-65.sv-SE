@@ -6,7 +6,8 @@ role: User
 feature: Asset Management
 exl-id: 21d3e0bd-5955-470a-8ca2-4d995c17eb4c
 hide: true
-source-git-commit: 0d30d42e606f1abcf20869c40ca87a78d496e2e7
+solution: Experience Manager, Experience Manager Assets
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '4998'
 ht-degree: 7%
@@ -488,7 +489,7 @@ När du avpublicerar en videoresurs i Experience Manager tas videon bort från Y
 
 1. Navigera till de videoresurser som du vill avpublicera från din YouTube-kanal.
 1. Välj en eller flera publicerade videoresurser i ett resursurvalsläge.
-1. I verktygsfältet klickar du på **[!UICONTROL Manage Publication]**. Välj ikonen med tre punkter (. . .) i verktygsfältet så **[!UICONTROL Manage Publication]** öppnas.
+1. I verktygsfältet klickar du på **[!UICONTROL Manage Publication]**. Välj ikonen med tre punkter (. .) i verktygsfältet så **[!UICONTROL Manage Publication]** öppnas.
 1. På sidan Hantera publikation väljer du **[!UICONTROL Unpublish]**.
 1. I det övre högra hörnet på sidan väljer du **[!UICONTROL Next]**.
 1. I det övre högra hörnet på sidan väljer du **[!UICONTROL Unpublish]**.

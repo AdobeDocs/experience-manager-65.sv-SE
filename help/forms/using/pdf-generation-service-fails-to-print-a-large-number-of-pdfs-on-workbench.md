@@ -1,7 +1,9 @@
 ---
 title: Det går inte att skriva ut ett stort antal PDF med WorkBench på PDF
 description: När en kund genererar ett stort antal PDF via tjänster som implementerats via WorkBench misslyckas utskriftstjänsten.
-source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
+exl-id: f3746b8e-4c38-447a-b5bf-d11fc77556f7
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '775'
 ht-degree: 0%

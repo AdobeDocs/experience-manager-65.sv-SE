@@ -6,7 +6,8 @@ content-type: reference
 topic-tags: author, correspondence-management
 feature: Adaptive Forms, Foundation Components
 exl-id: 01f4fdd3-fd2a-4e90-9c91-c1b05bbc2c6a
-source-git-commit: 4ecdcb2659b26043f95ba1dc3e907c33f65b8834
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '1192'
 ht-degree: 0%
@@ -46,10 +47,10 @@ I den här artikeln listas de kortkommandon som kan användas med Adaptiv formul
 
 >[!NOTE]
 >
->Flera val på en stationär enhet:
+Flera val på en stationär enhet:
 >
->* Windows: Ctrl-klicka på nödvändiga komponenter.
->* macOS: Kommando-klicka på nödvändiga komponenter.
+* Windows: Ctrl-klicka på nödvändiga komponenter.
+* macOS: Kommando-klicka på nödvändiga komponenter.
 >
 
 ## Theme Editor  {#themeeditor}
@@ -64,7 +65,7 @@ I den här artikeln listas de kortkommandon som kan användas med Adaptiv formul
 
 >[!NOTE]
 >
->Kortkommandon som är markerade med &#39;&amp;ast;&#39; fungerar både med Ctrl- och Kommando-tangenterna i macOS.
+Kortkommandon som är markerade med &#39;&amp;ast;&#39; fungerar både med Ctrl- och Kommando-tangenterna i macOS.
 
 ## Content Browser  {#contentbrowser}
 

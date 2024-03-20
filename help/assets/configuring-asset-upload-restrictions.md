@@ -5,10 +5,11 @@ contentOwner: AG
 role: Developer, Admin, Architect
 feature: Asset Management,Upload
 exl-id: 0e009b9a-54c4-4715-98ee-0207839f90f6
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+solution: Experience Manager, Experience Manager Assets
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '176'
-ht-degree: 31%
+source-wordcount: '178'
+ht-degree: 32%
 
 ---
 
@@ -16,7 +17,7 @@ ht-degree: 31%
 
 Du kan konfigurera [!DNL Adobe Experience Manager Assets] för att begränsa vilken typ av resurser som användare kan överföra. Det förhindrar oavsiktliga överföringar av oönskade format och skadliga filer. The `Day CQ DAM Asset Upload Restriction` kan du styra vilken typ av filer som användare kan överföra. Som standard [!DNL Assets] gör att användare kan överföra resurser av alla MIME-typer. Du kan dock konfigurera tjänsten så att den begränsar användare till att överföra filer av specifika MIME-typer.
 
-1. Öppna Configuration Manager-webbkonsolen. Öppna `https://[aem_server]:[port]/system/console/configMgr`.
+1. Öppna Configuration Manager-webbkonsolen. Åtkomst `https://[aem_server]:[port]/system/console/configMgr`.
 1. Öppna **[!UICONTROL Day CQ DAM Asset Upload Restriction]** i redigeringsläge. Som standard är **Tillåt alla MIME** är markerat, vilket gör att användare kan överföra filer av alla MIME-typer.
 
    ![chlimage_1-378](assets/chlimage_1-378.png)

@@ -6,9 +6,10 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: extending-aem
 content-type: reference
 exl-id: 20a19ee5-7113-4aca-934a-a42c415a8d93
-source-git-commit: 260f71acd330167572d817fdf145a018b09cbc65
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '563'
+source-wordcount: '552'
 ht-degree: 0%
 
 ---
@@ -28,11 +29,11 @@ De principer som har använts vid utvecklingen av konfigurationerna har baserats
 * Refereras från analysnoder via sökväg.
 * Enkelt att bygga ut.
 * Har flexibiliteten att klara mer komplexa konfigurationer, som [Adobe Analytics](/help/sites-administering/marketing-cloud.md#integrating-with-adobe-analytics).
-* Stöd för beroenden (t.ex. [Adobe Analytics](/help/sites-administering/marketing-cloud.md#integrating-with-adobe-analytics) plugin-program behöver [Adobe Analytics](/help/sites-administering/marketing-cloud.md#integrating-with-adobe-analytics) konfiguration).
+* Stöd för beroenden (till exempel [Adobe Analytics](/help/sites-administering/marketing-cloud.md#integrating-with-adobe-analytics) plugin-program behöver [Adobe Analytics](/help/sites-administering/marketing-cloud.md#integrating-with-adobe-analytics) konfiguration).
 
 ## Struktur {#structure}
 
-Konfigurationens grundsökväg är:
+Konfigurationernas grundsökväg är:
 
 `/etc/cloudservices`.
 
@@ -119,7 +120,7 @@ Innehållsmodellen lagras som `cq:Page` under:
 
 Konfigurationerna lagras under undernoden `jcr:content`.
 
-* Fasta egenskaper som definieras i en dialogruta ska lagras på `jcr:node` direkt.
+* Fasta egenskaper, som definieras i en dialogruta, ska lagras på `jcr:node` direkt.
 * Dynamiska element (med `parsys` eller `iparsys`) använder du en undernod för att lagra komponentdata.
 
 ```xml
@@ -137,7 +138,7 @@ Referensdokumentation om API:t finns i [com.day.cq.wcm.webservicesupport](https:
 
 ### AEM {#aem-integration}
 
-Tillgängliga tjänster visas i **Cloud Services** -fliken i **Sidegenskaper** dialogruta (för alla sidor som ärver från `foundation/components/page` eller `wcm/mobile/components/page`).
+Tillgängliga tjänster visas i **Cloud Service** -fliken i **Sidegenskaper** dialogruta (för alla sidor som ärver från `foundation/components/page` eller `wcm/mobile/components/page`).
 
 Fliken innehåller även:
 
@@ -148,7 +149,7 @@ Fliken innehåller även:
 
 När inloggningsuppgifter för tjänsten lagras bör alla lösenord krypteras.
 
-Du kan uppnå detta genom att lägga till ett dolt formulärfält. Det här fältet ska ha anteckningen `@Encrypted` i egenskapsnamnet, det vill säga, för `password` fältet som namnet skulle skrivas som:
+Du kan uppnå detta genom att lägga till ett dolt formulärfält. Det här fältet ska ha anteckningen `@Encrypted` i egenskapsnamnet, det vill säga för `password` fältet som namnet skulle skrivas som:
 
 `password@Encrypted`
 
@@ -204,7 +205,7 @@ Egenskapen krypteras sedan automatiskt (med `CryptoSupport` på `EncryptionPostP
   </tr>
   <tr>
    <td>visible</td>
-   <td>Synlighet i dialogrutan för sidegenskaper. visas som standard (valfritt)</td>
+   <td>Synlighet i dialogrutan för sidegenskaper, synlig som standard (valfritt)</td>
   </tr>
  </tbody>
 </table>

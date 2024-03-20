@@ -7,9 +7,10 @@ topic-tags: introduction
 content-type: reference
 docset: aem65
 exl-id: 408ac30c-60ab-4d6c-855c-d544af8d5cf9
-source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '2853'
+source-wordcount: '2791'
 ht-degree: 0%
 
 ---
@@ -22,7 +23,7 @@ AEM tillhandahåller **Biblioteksmappar på klientsidan**, som gör att du kan l
 
 ## Hur klientbibliotek fungerar i AEM {#how-client-side-libraries-work-in-aem}
 
-Standardsättet att inkludera ett klientbibliotek (dvs. en JS- eller CSS-fil) HTML på en sida är att bara inkludera en `<script>` eller `<link>` -taggen i JSP för den sidan, som innehåller sökvägen till filen i fråga. Till exempel,
+Standardsättet att inkludera ett klientbibliotek (dvs. en JS- eller CSS-fil) HTML på en sida är att bara inkludera en `<script>` eller `<link>` -taggen i JSP för den sidan, som innehåller sökvägen till filen i fråga. Exempel:
 
 ```xml
 ...

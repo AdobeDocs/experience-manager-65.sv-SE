@@ -7,16 +7,17 @@ topic-tags: correspondence-management
 docset: aem65
 feature: Correspondence Management
 exl-id: bf6d3edb-6bf7-4d3e-b042-d75cb8e39e3f
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '1351'
+source-wordcount: '1333'
 ht-degree: 0%
 
 ---
 
 # Lägg till anpassad åtgärd i resurslista-vyn{#add-custom-action-to-the-asset-listing-view}
 
-## Översikt {#overview}
+## Ökning {#overview}
 
 Med Correspondence Management-lösningen kan du lägga till anpassade åtgärder i användargränssnittet Hantera resurser.
 

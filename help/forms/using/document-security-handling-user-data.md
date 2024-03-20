@@ -5,9 +5,10 @@ topic-tags: grdp
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 role: Admin
 exl-id: 00c01a12-1180-4f35-9179-461bf177c787
-source-git-commit: 000c22028259eb05a61625d43526a2e8314a1d60
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '958'
+source-wordcount: '908'
 ht-degree: 0%
 
 ---
@@ -123,7 +124,7 @@ Select * from edcinviteduserentity where principalId = '<principal_id>';
 
 >[!NOTE]
 >
-Exportera data från `EdcAuditEntity` tabellen, använd [EventManager.exportEvents](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/programlc/javadoc/index.html?com/adobe/livecycle/rightsmanagement/client/EventManager.html) API som tar [EventSearchFilter](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/programlc/javadoc/com/adobe/livecycle/rightsmanagement/client/infomodel/EventSearchFilter.html) som en parameter för att exportera granskningsdata baserat på `principalId`, `policyId`, eller `licenseId`.
+>Exportera data från `EdcAuditEntity` tabellen, använd [EventManager.exportEvents](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/programlc/javadoc/index.html?com/adobe/livecycle/rightsmanagement/client/EventManager.html) API som tar [EventSearchFilter](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/programlc/javadoc/com/adobe/livecycle/rightsmanagement/client/infomodel/EventSearchFilter.html) som en parameter för att exportera granskningsdata baserat på `principalId`, `policyId`, eller `licenseId`.
 
 Om du vill få fram fullständiga data om en användare i systemet måste du få åtkomst till och exportera data från databasen för användarhantering. Mer information finns i [Forms användarhantering: Hantera användardata](/help/forms/using/user-management-handling-user-data.md).
 
@@ -148,7 +149,7 @@ Gör följande för att ta bort dokumentsäkerhetsdata för ett säkerhetsobjekt
 
    >[!NOTE]
    >
-   Ta bort data från `EdcAuditEntity` tabellen, använd [EventManager.deleteEvents](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/programlc/javadoc/index.html?com/adobe/livecycle/rightsmanagement/client/EventManager.html) API som tar [EventSearchFilter](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/programlc/javadoc/com/adobe/livecycle/rightsmanagement/client/infomodel/EventSearchFilter.html) som en parameter för att radera granskningsdata baserat på `principalId`, `policyId`, eller `licenseId`.
+   >Ta bort data från `EdcAuditEntity` tabellen, använd [EventManager.deleteEvents](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/programlc/javadoc/index.html?com/adobe/livecycle/rightsmanagement/client/EventManager.html) API som tar [EventSearchFilter](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/programlc/javadoc/com/adobe/livecycle/rightsmanagement/client/infomodel/EventSearchFilter.html) som en parameter för att radera granskningsdata baserat på `principalId`, `policyId`, eller `licenseId`.
 
 1. Aktiva och arkiverade XML-principfiler lagras i `EdcPolicyXmlEntity` och `EdcPolicyArchiveEntity` databastabeller. Så här tar du bort data för en användare från de här tabellerna:
 
@@ -158,7 +159,7 @@ Gör följande för att ta bort dokumentsäkerhetsdata för ett säkerhetsobjekt
 
    >[!NOTE]
    >
-   Ta bort hela blobben i `Principal` -taggen för ett huvud-ID eller princip-XML kan vara skadad eller oanvändbar.
+   >Ta bort hela blobben i `Principal` -taggen för ett huvud-ID eller princip-XML kan vara skadad eller oanvändbar.
 
    ```xml
    <ns2:Principal PrincipalNameType="USER">
@@ -205,7 +206,7 @@ Gör följande för att ta bort dokumentsäkerhetsdata för ett säkerhetsobjekt
 
    >[!NOTE]
    >
-   Administratörer kan söka efter, komma åt och ta bort användardata från andra användares personliga profiler i **[!UICONTROL Services > Document Security > My Policies]** med administrationskonsolen.
+   >Administratörer kan söka efter, komma åt och ta bort användardata från andra användares personliga profiler i **[!UICONTROL Services > Document Security > My Policies]** med administrationskonsolen.
 
 1. Ta bort data för huvuds-ID från användarhanteringsdatabasen. Detaljerade anvisningar finns i [Forms användarhantering | Hantera användardata](/help/forms/using/user-management-handling-user-data.md).
 1. Starta AEM Forms Server.

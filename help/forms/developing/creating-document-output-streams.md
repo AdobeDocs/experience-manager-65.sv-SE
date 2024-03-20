@@ -7,7 +7,8 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 role: Developer
 exl-id: a521bfac-f417-4002-9c5c-8d7794d3eec7
-source-git-commit: 5e56441d2dc9b280547c91def8d971e7b1dfcfe3
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '18860'
 ht-degree: 0%
@@ -383,7 +384,7 @@ Skapa ett PDF-dokument med hjälp av Output API (webbtjänsten):
 
 Du kan använda utdatatjänsten för att skapa ett PDF/A-dokument. Eftersom PDF/A är ett arkiveringsformat för långtidsbevaring av dokumentets innehåll, bäddas alla teckensnitt in och filen är okomprimerad. Därför är ett PDF/A-dokument vanligtvis större än ett PDF-standarddokument. Ett PDF/A-dokument innehåller inte heller ljud- och videoinnehåll. Precis som med andra Output Service-åtgärder tillhandahåller du både en formulärdesign och data som ska sammanfogas med en formulärdesign för att skapa ett PDF/A-dokument.
 
-Specifikationen PDF/A-1 består av två överensstämmelsenivåer, nämligen a och b. Den största skillnaden mellan de två är stödet för den logiska strukturen (hjälpmedel), som inte krävs för överensstämmelsenivå b. Oavsett överensstämmelsenivå anger PDF/A-1 att alla teckensnitt är inbäddade i det genererade PDF/A-dokumentet.
+Specifikationen PDF/A-1 består av två överensstämmelsenivåer, nämligen a och b. Den största skillnaden mellan de två är stöd för logisk struktur (hjälpmedel), som inte krävs för överensstämmelsenivå b. Oavsett överensstämmelsenivå anger PDF/A-1 att alla teckensnitt är inbäddade i det genererade PDF/A-dokumentet.
 
 Även om PDF/A är standarden för arkivering av dokument från PDF är det inte obligatoriskt att använda PDF/A för arkivering om ett standarddokument från PDF uppfyller företagets behov. Syftet med PDF/A-standarden är att upprätta en PDF-fil som kan lagras under lång tid och som uppfyller kraven på dokumentarkivering. En URL kan till exempel inte bäddas in i PDF/A eftersom URL:en kan bli ogiltig över tiden.
 

@@ -6,7 +6,8 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: personalization
 content-type: reference
 exl-id: 41898fa7-a369-4c63-8ccb-69eb3fa146a1
-source-git-commit: a56d5121a6ce11b42a6c30dae9e479564d16af27
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '637'
 ht-degree: 0%
@@ -15,19 +16,19 @@ ht-degree: 0%
 
 # Utökar ContextHub{#extending-contexthub}
 
-Definiera nya typer av ContextHub-butiker och moduler när de angivna lagren inte uppfyller dina lösningskrav.
+Definiera nya typer av ContextHub-butiker och moduler när de angivna inte uppfyller dina lösningskrav.
 
 ## Skapa anpassade butikskandidater {#creating-custom-store-candidates}
 
 ContextHub-butiker skapas från registrerade butikskandidater. Om du vill skapa en anpassad butik skapar och registrerar du en butikskandidater.
 
-JavaScript-filen som innehåller koden som skapar och registrerar lagringskandidaten måste inkluderas i en [biblioteksmapp för klient](/help/sites-developing/clientlibs.md#creating-client-library-folders). Mappens kategori måste matcha följande mönster:
+JavaScript-filen som innehåller koden som skapar och registrerar lagringskandidaten måste inkluderas i en [klientbiblioteksmapp](/help/sites-developing/clientlibs.md#creating-client-library-folders). Mappens kategori måste matcha följande mönster:
 
 ```xml
 contexthub.store.[storeType]
 ```
 
-The `[storeType]` en del av kategorin är `storeType` som butikskandidaten registreras med. (Se [Registrerar en ContextHub Store-kandidat](/help/sites-developing/ch-extend.md#registering-a-contexthub-store-candidate)). Till exempel för storeType för `contexthub.mystore`måste kategorin för klientbiblioteksmappen vara `contexthub.store.contexthub.mystore`.
+The `[storeType]` ingår i kategorin `storeType` som butikskandidaten registreras med. (Se [Registrerar en ContextHub Store-kandidat](/help/sites-developing/ch-extend.md#registering-a-contexthub-store-candidate)). Till exempel för storeType för `contexthub.mystore`måste kategorin för klientbiblioteksmappen vara `contexthub.store.contexthub.mystore`.
 
 ### Skapa en ContextHub Store-kandidat {#creating-a-contexthub-store-candidate}
 
@@ -51,7 +52,7 @@ I realiteten definierar dina anpassade butikskandidater ytterligare funktioner e
 
 ### Registrerar en ContextHub Store-kandidat {#registering-a-contexthub-store-candidate}
 
-Registrera en butikskandidat för att integrera den med ContextHub-ramverket så att butiker kan skapas utifrån det. Om du vill registrera en butikskandidat använder du [`registerStoreCandidate`](/help/sites-developing/contexthub-api.md#registerstorecandidate-store-storetype-priority-applies) funktionen i `ContextHub.Utils.storeCandidates` klassen.
+Registrera en butikskandidat för att integrera den med ContextHub-ramverket så att butiker kan skapas utifrån det. Använd [`registerStoreCandidate`](/help/sites-developing/contexthub-api.md#registerstorecandidate-store-storetype-priority-applies) funktionen i `ContextHub.Utils.storeCandidates` klassen.
 
 När du registrerar en butikskandidat anger du ett namn för butikstypen. När du skapar en butik från kandidaten använder du butikstypen för att identifiera den kandidat som den baseras på.
 
@@ -68,13 +69,13 @@ Normalt behövs bara en kandidat och prioriteten kan anges till `0`. Men om du �
 
 Skapa anpassade gränssnittsmodultyper när de [installerat med ContextHub](/help/sites-developing/ch-samplemodules.md) uppfyller inte dina krav. Om du vill skapa en gränssnittsmodultyp skapar du en gränssnittsmodulrenderare genom att utöka `ContextHub.UI.BaseModuleRenderer` och sedan registrera den med `ContextHub.UI`.
 
-Skapa en `Class` -objekt som innehåller den logik som återger UI-modulen. Klassen måste minst utföra följande åtgärder:
+Om du vill skapa en gränssnittsmodulrenderare skapar du en `Class` -objekt som innehåller den logik som återger UI-modulen. Klassen måste minst utföra följande åtgärder:
 
 * Utöka `ContextHub.UI.BaseModuleRenderer` klassen. Den här klassen är den grundläggande implementeringen för alla UI-modulrenderare. The `Class` objektet definierar en egenskap med namnet `extend` som du använder för att namnge den här klassen som den som utökas.
 
 * Ange en standardkonfiguration. Skapa en `defaultConfig` -egenskap. Den här egenskapen är ett objekt som innehåller de egenskaper som har definierats för [`contexthub.base`](/help/sites-developing/ch-samplemodules.md#contexthub-base-ui-module-type) UI-modulen och andra egenskaper som du behöver.
 
-Källan för `ContextHub.UI.BaseModuleRenderer` finns på /libs/granite/contexthub/code/ui/container/js/ContextHub.UI.BaseModuleRenderer.js. Om du vill registrera renderaren använder du [`registerRenderer`](/help/sites-developing/contexthub-api.md#registerrenderer-moduletype-renderer-dontrender) metoden `ContextHub.UI` klassen. Ange ett namn för modultypen. När administratörer skapar en gränssnittsmodul som baseras på den här renderaren anger de det här namnet.
+Källan för `ContextHub.UI.BaseModuleRenderer` finns på /libs/granite/contexthub/code/ui/container/js/ContextHub.UI.BaseModuleRenderer.js. Om du vill registrera renderaren använder du [`registerRenderer`](/help/sites-developing/contexthub-api.md#registerrenderer-moduletype-renderer-dontrender) metod för `ContextHub.UI` klassen. Ange ett namn för modultypen. När administratörer skapar en gränssnittsmodul som baseras på den här renderaren anger de det här namnet.
 
 Skapa och registrera återgivningsklassen i en anonym funktion som körs automatiskt. Följande exempel baseras på källkoden för gränssnittsmodulen contexthub.browserinfo. Den här gränssnittsmodulen är ett enkelt tillägg till `ContextHub.UI.BaseModuleRenderer` klassen.
 
@@ -103,10 +104,10 @@ Skapa och registrera återgivningsklassen i en anonym funktion som körs automat
 }());
 ```
 
-JavaScript-filen som innehåller koden som skapar och registrerar återgivaren måste inkluderas i en [biblioteksmapp för klient](/help/sites-developing/clientlibs.md#creating-client-library-folders). Mappens kategori måste matcha följande mönster:
+JavaScript-filen som innehåller koden som skapar och registrerar återgivaren måste inkluderas i en [klientbiblioteksmapp](/help/sites-developing/clientlibs.md#creating-client-library-folders). Mappens kategori måste matcha följande mönster:
 
 ```xml
 contexthub.module.[moduleType]
 ```
 
-The `[moduleType]` en del av kategorin är `moduleType` som modulåtergivaren registreras med. För `moduleType` av `contexthub.browserinfo`måste kategorin för klientbiblioteksmappen vara `contexthub.module.contexthub.browserinfo`.
+The `[moduleType]` ingår i kategorin `moduleType` som modulåtergivaren registreras med. För `moduleType` av `contexthub.browserinfo`måste kategorin för klientbiblioteksmappen vara `contexthub.module.contexthub.browserinfo`.

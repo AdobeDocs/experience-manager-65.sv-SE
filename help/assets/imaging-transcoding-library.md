@@ -5,9 +5,10 @@ contentOwner: AG
 role: Admin
 feature: Renditions,Developer Tools,Asset Processing
 exl-id: b67465f9-177c-49c4-b4eb-a1d6e09ac9a2
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+solution: Experience Manager, Experience Manager Assets
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '942'
+source-wordcount: '925'
 ht-degree: 0%
 
 ---
@@ -58,8 +59,8 @@ Du kan konfigurera följande alternativ för `-resize` parameter:
 
 * `X`: Fungerar ungefär som [!DNL Experience Manager]. Till exempel -resize 319.
 * `WxH`: Proportionerna behålls inte, till exempel `-resize 319x319`.
-* `Wx`: Fastställer bredden och beräknar höjden med bibehållna proportioner. Till exempel, `-resize 319x`.
-* `xH`: Korrigerar höjden och beräknar bredden med bibehållna proportioner. Till exempel, `-resize x319`.
+* `Wx`: Fastställer bredden och beräknar höjden med bibehållna proportioner. Till exempel: `-resize 319x`.
+* `xH`: Korrigerar höjden och beräknar bredden med bibehållna proportioner. Till exempel: `-resize x319`.
 
 ```shell
  -AllowUpsampling (Resizes smaller images)

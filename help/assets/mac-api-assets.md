@@ -3,12 +3,13 @@ title: "[!DNL Assets] HTTP API."
 description: Skapa, läsa, uppdatera, ta bort, hantera digitala resurser med HTTP API i [!DNL Adobe Experience Manager Assets].
 contentOwner: AG
 role: Developer
-feature: APIs,Assets HTTP API,Developer Tools
+feature: Assets HTTP API,Developer Tools
 exl-id: 6bc10f4e-a951-49ba-9c71-f568a7f2e40d
 hide: true
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+solution: Experience Manager, Experience Manager Assets
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '1731'
+source-wordcount: '1763'
 ht-degree: 0%
 
 ---
@@ -20,7 +21,7 @@ ht-degree: 0%
 | AEM as a Cloud Service | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/mac-api-assets.html?lang=en) |
 | AEM 6.5 | Den här artikeln |
 
-## Översikt {#overview}
+## Ökning {#overview}
 
 The [!DNL Assets] HTTP-API:t gör det möjligt att skapa, läsa, uppdatera och ta bort (CRUD) på digitala resurser, inklusive metadata, återgivningar och kommentarer, samt strukturerat innehåll med [!DNL Experience Manager] Innehållsfragment. Den exponeras vid `/api/assets` och implementeras som REST API. Den innehåller [stöd för innehållsfragment](/help/assets/assets-api-content-fragments.md).
 
@@ -106,7 +107,7 @@ The [!DNL Assets] HTTP API innehåller följande funktioner:
 
 **Förutsättningar**
 
-* Öppna `https://[aem_server]:[port]/system/console/configMgr`.
+* Åtkomst `https://[aem_server]:[port]/system/console/configMgr`.
 * Navigera till **[!UICONTROL Adobe Granite CSRF Filter]**.
 * Kontrollera egenskapen **[!UICONTROL Filter Methods]** innehåller: `POST`, `PUT`, `DELETE`.
 

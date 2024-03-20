@@ -5,10 +5,11 @@ contentOwner: AG
 role: Admin
 feature: Publishing
 exl-id: 5ba020a3-c36c-402b-a11b-d6b0426b03bf
-source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
+solution: Experience Manager, Experience Manager Assets
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '1557'
-ht-degree: 1%
+source-wordcount: '1523'
+ht-degree: 0%
 
 ---
 
@@ -134,8 +135,7 @@ Om du vill anpassa kan du redigera **[!UICONTROL Arguments]** -fliken i **[!UICO
 
 ![chlimage_1-96](assets/chlimage_1-289.png)
 
-* **Extraheringshanterare**: Välj den hanterare som du vill använda i popup-listan. En extraheringshanterare fungerar på en viss återgivning, som väljs av en relaterad `RenditionPicker` (se API:t för `ExtractionHandler`).
-I en standard [!DNL Experience Manager] installation av följande finns:
+* **Extraheringshanterare**: Välj den hanterare som du vill använda i popup-listan. En extraheringshanterare fungerar på en viss återgivning, som väljs av en relaterad `RenditionPicker` (se `ExtractionHandler` API). I en standard [!DNL Experience Manager] installation av följande finns:
    * Extraheringshandtag för IDML-export: Fungerar på `IDML` återgivning genererad i MediaExtract-steget.
 
 * **Sidnamn**: Ange det namn som du vill ska tilldelas till den resulterande sidan. Om det lämnas tomt är namnet&quot;page&quot; (eller ett derivat om&quot;page&quot; redan finns).

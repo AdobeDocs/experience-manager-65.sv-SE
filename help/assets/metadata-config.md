@@ -6,9 +6,10 @@ role: User, Admin
 feature: Metadata
 exl-id: 56c92b7f-e687-4ab5-a376-afa58bdb6ee0
 hide: true
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+solution: Experience Manager, Experience Manager Assets
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '1843'
+source-wordcount: '1821'
 ht-degree: 3%
 
 ---
@@ -145,7 +146,7 @@ To apply a metadata profile globally, follow these steps:
 Använd schemaredigeraren för mappmetadata i Forms för att skapa och redigera metadatascheman för mappar.
 
 1. I [!DNL Experience Manager] gränssnitt, gå till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Folder Metadata Schemas]**.
-1. På sidan [!UICONTROL Folder Metadata Schema Forms] klickar du på **[!UICONTROL Create]**.
+1. På [!UICONTROL Folder Metadata Schema Forms] sida, klicka **[!UICONTROL Create]**.
 1. Ange ett namn för formuläret och klicka på **[!UICONTROL Create]**. Det nya schemaformuläret visas i listan i [!UICONTROL Schema Forms] sida.
 
 ### Redigera schemaformulär för mappmetadata {#edit-folder-metadata-schema-forms}

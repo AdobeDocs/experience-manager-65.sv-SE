@@ -7,9 +7,10 @@ content-type: reference
 topic-tags: deploying
 docset: aem65
 exl-id: e626bdd8-b7ae-4de5-a0a0-47fb74c080d7
-source-git-commit: ae08247c7be0824151637d744f17665c3bd82f2d
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '300'
+source-wordcount: '291'
 ht-degree: 0%
 
 ---
@@ -24,9 +25,9 @@ Du kan välja att samla in användningsstatistik med hjälp av Touch-gränssnitt
 
 >[!NOTE]
 >
->Det finns olika regler för skydd av personuppgifter och integritet. inklusive t.ex. GDPR och CCPA. AEM Sites hjälper sina kunder med sina skyldigheter när det gäller skydd av personuppgifter och integritet. På den här sidan får kunderna hjälp med att välja (eller inte) av Aggregated Usage Statistics Collection.
+>Det finns olika regler för skydd av personuppgifter och integritet, bland annat GDPR och CCPA. AEM Sites hjälper sina kunder med sina skyldigheter när det gäller skydd av personuppgifter och integritet. På den här sidan får kunderna hjälp med att välja (eller inte) av Aggregated Usage Statistics Collection.
 >
->Mer information finns i [Adobe Sekretesscenter](https://www.adobe.com/privacy.html).
+>Mer information finns även i [Adobe Sekretesscenter](https://www.adobe.com/privacy.html).
 
 >[!NOTE]
 >
@@ -52,18 +53,18 @@ Första gången du startar AEM kan du välja att använda Touch-gränssnittet p�
 
 ## Anmäl dig med webbkonsolen {#opt-in-by-using-the-web-console}
 
-Du kan välja att delta (eller välja bort) med webbkonsolen på följande sätt:
+Du kan välja att delta (eller välja bort) genom att använda webbkonsolen på följande sätt:
 
 1. På AEM navigeringsskärm klickar du på **verktyg** och sedan **Operationer**.
 
    ![usage_statistiticsopsdashboard](assets/usage_statisticsopsdashboard.png)
 
-1. I åtgärdsfönstret klickar du på **Webbkonsol**.
+1. Klicka på **Webbkonsol**.
 
    ![usage_statistiticswebconsole](assets/usage_statisticswebconsole.png)
 
 1. Sök efter &quot;**Samling med aggregerad användningsstatistik**&quot;.
-1. Klicka på **Redigera** ikon.
+1. Klicka på **Redigera** -ikon.
 
    ![usage_staticCollectionEdit](assets/usage_statisticscollectionedit.png)
 

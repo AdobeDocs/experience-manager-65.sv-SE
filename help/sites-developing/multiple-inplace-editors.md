@@ -3,9 +3,10 @@ title: Konfigurera RTE för flera redigerare på plats.
 description: Skapa flera redigerare på plats i Adobe Experience Manager genom att konfigurera RTF-redigeraren.
 contentOwner: AG
 exl-id: 03030317-8b7d-408a-bdfd-619824d7260c
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '445'
+source-wordcount: '437'
 ht-degree: 0%
 
 ---
@@ -78,10 +79,10 @@ Så här konfigurerar du flera redigerare:
 1. På var och en av dessa noder (`cq:ChildEditorConfig`) definierar egenskaperna:
 
    * Namn: `type`.
-   * Värde: Namnet på den registrerade redigeraren på plats. till exempel `image` och `text`.
+   * Värde: Namnet på den registrerade redigeraren på plats, till exempel `image` och `text`.
 
    * Namn: `title`.
-   * Värde: Titeln som visas i komponentens lista över tillgängliga redigerare. Till exempel: `Image` och `Text`.
+   * Värde: Den titel som visas i komponentens urvalslista med tillgängliga redigerare. Till exempel: `Image` och `Text`.
 
 ### Ytterligare konfiguration för RTF-redigerare {#additional-configuration-for-rich-text-editors}
 
@@ -102,11 +103,11 @@ Konfigurationen för flera textredigerare är något annorlunda eftersom du kan 
 
 >[!NOTE]
 >
->För RTE gäller dock att `configPath` -egenskapen stöds när det bara finns en instans av textredigeraren (redigerbart delområde) i komponenten. Den här användningen av `configPath` har stöd för bakåtkompatibilitet med äldre användargränssnittsdialogrutor för komponenten.
+>För RTE gäller dock att `configPath` -egenskapen stöds när det bara finns en instans av textredigeraren (redigerbart delområde) i komponenten. Detta använder `configPath` har stöd för bakåtkompatibilitet med äldre användargränssnittsdialogrutor för komponenten.
 
 >[!CAUTION]
 >
->Namnge inte RTE-konfigurationsnoden som `config`. Annars är RTE-konfigurationerna bara tillgängliga för administratörer och inte för användarna i gruppen `content-author`.
+>Ge inte RTE-konfigurationsnoden namnet `config`. Annars är RTE-konfigurationerna bara tillgängliga för administratörer och inte för användarna i gruppen `content-author`.
 
 ## Kodexempel {#code-samples}
 
@@ -114,9 +115,8 @@ Koden för den här sidan finns på [aem-authoring-hybrideditors project on GitH
 
 ## Lägga till en lokal redigerare {#add-an-in-place-editor}
 
-Allmän information om hur du lägger till en redigerare på plats finns i dokumentet [anpassa sidredigering](/help/sites-developing/customizing-page-authoring-touch.md#add-new-in-place-editor).
+Allmän information om hur du lägger till en redigerare på plats finns i dokumentet [anpassa redigering av sidor](/help/sites-developing/customizing-page-authoring-touch.md#add-new-in-place-editor).
 
 >[!MORELIKETHIS]
 >
->* [Konfigurera RTF-redigerare i Experience Manager](/help/sites-administering/rich-text-editor.md).
-
+>* [Konfigurera RTF-redigeraren i Experience Manager](/help/sites-administering/rich-text-editor.md).

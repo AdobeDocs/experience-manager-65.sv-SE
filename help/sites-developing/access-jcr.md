@@ -6,7 +6,8 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: platform
 content-type: reference
 exl-id: fe946b9a-b29e-4aa5-b973-e2a652417a55
-source-git-commit: ff9d054d0b08f5f98f5edb63975a0dbc8370d42f
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '565'
 ht-degree: 0%
@@ -23,11 +24,11 @@ Du kan programmässigt ändra noder och egenskaper som finns i Adobe CQ-database
 
 >[!NOTE]
 >
-Om du vill använda JCR API:t lägger du till `jackrabbit-standalone-2.4.0.jar` till klassökvägen för ditt Java™-program. Du kan hämta JAR-filen från Java™ JCR API-webbsidan på [https://jackrabbit.apache.org/jcr/jcr-api.html](https://jackrabbit.apache.org/jcr/jcr-api.html).
+>Om du vill använda JCR API:t lägger du till `jackrabbit-standalone-2.4.0.jar` till klassökvägen för ditt Java™-program. Du kan hämta JAR-filen från Java™ JCR API-webbsidan på [https://jackrabbit.apache.org/jcr/jcr-api.html](https://jackrabbit.apache.org/jcr/jcr-api.html).
 
 >[!NOTE]
 >
-Mer information om hur du skickar frågor till Adobe CQ JCR med JCR-fråge-API:t finns i [Fråga Adobe Experience Manager-data med JCR API](https://helpx.adobe.com/experience-manager/using/querying-experience-manager-data-using1.html).
+>Mer information om hur du skickar frågor till Adobe CQ JCR med JCR-fråge-API:t finns i [Fråga Adobe Experience Manager-data med JCR API](https://helpx.adobe.com/experience-manager/using/querying-experience-manager-data-using1.html).
 
 ## Skapa en databasinstans {#create-a-repository-instance}
 

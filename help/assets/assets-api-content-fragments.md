@@ -5,14 +5,15 @@ feature: Content Fragments,Assets HTTP API
 role: Developer
 exl-id: 0f9efb47-a8d1-46d9-b3ff-a6c0741ca138
 hide: true
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+solution: Experience Manager, Experience Manager Assets
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '1961'
-ht-degree: 1%
+source-wordcount: '1902'
+ht-degree: 0%
 
 ---
 
-# Stöd för Content Fragments i AEM Assets HTTP API {#content-fragments-support-in-aem-assets-http-api}
+# Stöd för innehållsfragment i AEM Assets HTTP API {#content-fragments-support-in-aem-assets-http-api}
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
@@ -20,7 +21,7 @@ ht-degree: 1%
 | AEM 6.5 | Den här artikeln |
 
 
-## Översikt {#overview}
+## Ökning {#overview}
 
 Lär dig mer om stöd för innehållsfragment i Assets HTTP API, en viktig del AEM headless delivery feature.
 
@@ -382,7 +383,7 @@ Följande statuskoder kan ses under de relevanta omständigheterna:
 Här finns detaljerade API-referenser:
 
 * [Adobe Experience Manager Assets API - innehållsfragment](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/assets-api-content-fragments/index.html)
-* [HTTP API för Assets](/help/assets/mac-api-assets.md)
+* [Resurser för HTTP API](/help/assets/mac-api-assets.md)
 
    * [Tillgängliga funktioner](/help/assets/mac-api-assets.md#assets)
 

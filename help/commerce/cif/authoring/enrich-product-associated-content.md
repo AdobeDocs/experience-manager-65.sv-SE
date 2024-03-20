@@ -4,10 +4,11 @@ description: Läs om hur marknadsförare kan förbättra produktdata med tillhö
 sub-product: Commerce
 feature: Commerce Integration Framework
 exl-id: 1a069fbc-c036-419a-b585-6aa43e15de16
-source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
+solution: Experience Manager,Commerce
+source-git-commit: 1751bfb32386685e3a159939113b9667b5e17f0e
 workflow-type: tm+mt
 source-wordcount: '350'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -21,7 +22,7 @@ Läs om hur marknadsförare kan förbättra produktdata med tillhörande innehå
 
 Digitala resurser kan kopplas till en eller flera produkt-SKU:er. När den digitala resursen är associerad kan den upptäckas med nyckelordssökningar som baseras på SKU:n. Resursen visas också automatiskt som tillhörande innehåll när du redigerar en sida som innehåller den relevanta produkten, vilket gör det ännu enklare att skapa nästa digitala upplevelse
 
-## Experience Fragments
+## Upplevelsefragment
 
 >[!VIDEO](https://video.tv.adobe.com/v/333205/?quality=12&learn=on)
 

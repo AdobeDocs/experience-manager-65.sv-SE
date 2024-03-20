@@ -6,7 +6,8 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: Security
 content-type: reference
 exl-id: 01e9ab67-15e2-4bc4-9b8f-0c84bcd56862
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '904'
 ht-degree: 0%
@@ -73,9 +74,9 @@ Brandväggskonfigurationen är dynamisk och kan ändras när som helst genom att
 
    >[!NOTE]
    >
-   Du kan även nå konfigurationssidan direkt genom att gå till URL:en på:
+   >Du kan även nå konfigurationssidan direkt genom att gå till URL:en på:
    >
-   * `https://server:port/system/console/configMgr/com.adobe.cq.deserfw.impl.DeserializationFirewallImpl`
+   >* `https://server:port/system/console/configMgr/com.adobe.cq.deserfw.impl.DeserializationFirewallImpl`
 
 Den här konfigurationen innehåller loggning av tillåtelselista, blockeringslista och deserialisering.
 
@@ -107,7 +108,7 @@ Mer information om felsökning av problem med agenten finns i [Hantera fel med d
 
 >[!NOTE]
 >
-Om du lägger till `org.apache.commons.collections.functors` hälsokontrollen misslyckas alltid till tillåtelselista.
+>Om du lägger till `org.apache.commons.collections.functors` hälsokontrollen misslyckas alltid till tillåtelselista.
 
 ## Hantera fel med dynamisk agentinläsning {#handling-errors-with-dynamic-agent-loading}
 
@@ -123,11 +124,11 @@ Så här läser du in agenten manuellt:
 
    >[!NOTE]
    >
-   Kräver att du även använder alternativet -nofork CQ/AEM, tillsammans med lämpliga JVM-minnesinställningar, eftersom agenten inte är aktiverad på en forked JVM.
+   >Kräver att du även använder alternativet -nofork CQ/AEM, tillsammans med lämpliga JVM-minnesinställningar, eftersom agenten inte är aktiverad på en forked JVM.
 
    >[!NOTE]
    >
-   Adobe-distributionen av NotSoSerial Agent burk finns på `crx-quickstart/opt/notsoserial/` mapp för AEM.
+   >Adobe-distributionen av NotSoSerial Agent burk finns på `crx-quickstart/opt/notsoserial/` mapp för AEM.
 
 1. Stoppa och starta om JVM,
 

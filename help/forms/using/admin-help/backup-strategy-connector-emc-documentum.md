@@ -1,14 +1,15 @@
 ---
 title: Säkerhetskopieringsstrategi för Connector for EMC Documentum&reg; användare
-description: Kontrollera hur du skapar en säkerhetskopieringsstrategi för Connector for EMC Documentum&reg; -användare.
+description: Kontrollera hur du skapar en säkerhetskopieringsstrategi för Connector för EMC Documentum&reg;-användare.
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/aem_forms_backup_and_recovery
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 exl-id: b759b936-5907-4311-a5cc-60f321476368
-source-git-commit: 939132e8b461b51e1c49237e481243bcc5de3bf6
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '157'
+source-wordcount: '155'
 ht-degree: 0%
 
 ---

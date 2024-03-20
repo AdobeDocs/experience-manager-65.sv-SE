@@ -6,10 +6,11 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: correspondence-management
 feature: Correspondence Management
 exl-id: c9c007d0-c545-4738-b11b-4c50986342ee
-source-git-commit: ab3d016c7c9c622be361596137b150d8719630bd
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '845'
-ht-degree: 1%
+source-wordcount: '846'
+ht-degree: 0%
 
 ---
 
@@ -30,19 +31,19 @@ Correspondence Management har följande konfigurationsegenskaper:
   <tr>
    <td><p>Indrag</p> </td>
    <td>Indrag för moduler<p> </p> </td>
-   <td><p>12.7mm</p> </td>
+   <td><p>12,7 mm</p> </td>
    <td><p>Valfritt tal</p> </td>
   </tr>
   <tr>
    <td>Minsta numerisk bredd</td>
    <td>Minsta bredd som ska användas i punkt-/nummerfältet när numrerade listor används utom latinska nummer</td>
-   <td>8.0mm</td>
+   <td>8,0 mm</td>
    <td>Valfritt tal</td>
   </tr>
   <tr>
    <td><p>Minsta bredd för romerska siffror</p> </td>
    <td><p>Minsta bredd som ska användas på punkt-/nummerfältet när romerska siffror används</p> </td>
-   <td><p>12.7mm</p> </td>
+   <td><p>12,7 mm</p> </td>
    <td><p>Valfritt tal</p> </td>
   </tr>
   <tr>
@@ -157,7 +158,7 @@ Correspondence Management har följande konfigurationsegenskaper:
    <td><p>Dataredigeringsformat</p> </td>
    <td><p>Redigera dataformat. Detta används vid skrivning av data som String eller tolkning av data från String</p> </td>
    <td><p>locale=en_US; dateFormat=dd-MM-yyyy; numberDecimalSeparator=.; numberGroupSeparator=,; numberUseGroupSeparator=true</p> </td>
-   <td>--<p> </p> </td>
+   <td>—<p> </p> </td>
   </tr>
   <tr>
    <td><p>Hantera bokstavsinstanser vid publicering</p> </td>
@@ -240,7 +241,7 @@ Correspondence Management har följande konfigurationsegenskaper:
   <tr>
    <td><p>CM-användarrot</p> </td>
    <td><p>URL för mappen som innehåller alla Correspondence Management-användarresurser</p> </td>
-   <td><p>--</p> </td>
+   <td><p>—</p> </td>
    <td><p>Giltig mapplats</p> </td>
   </tr>
   <tr>

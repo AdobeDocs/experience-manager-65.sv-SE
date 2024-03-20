@@ -1,11 +1,12 @@
 ---
 title: "Självstudiekurs: Skapa formulärdatamodell"
-description: Lär dig hur du konfigurerar MySQL som datakälla, skapar FDM (Form Data Model), konfigurerar den och testar för AEM Forms.
+description: Lär dig hur du konfigurerar MySQL som datakälla, skapar formulärdatamodell (FDM), konfigurerar den och testar för AEM Forms.
 contentOwner: khsingh
 products: SG_EXPERIENCEMANAGER/6.3/FORMS
 docset: aem65
 exl-id: 40bc5af6-9023-437e-95b0-f85d3df7d8aa
-source-git-commit: 4158315c28412bb9498c7d49d21b3f4d72681fc6
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '1463'
 ht-degree: 0%
@@ -54,7 +55,7 @@ Gör följande för att konfigurera [!DNL MySQL] databas:
 1. Installera JDBC-drivrutin för [!DNL MySQL] databas som ett OSGi-paket:
 
    1. Ladda ned [!DNL MySQL] JDBC Driver OSGi Bundle från `http://www.java2s.com/ref/jar/download-orgosgiservicejdbc100jar-file.html`. <!-- This URL is an insecure link but using https is not possible -->
-   1. Logga in på AEM Author-instansen som administratör och gå till AEM [!DNL Forms] webbkonsolpaket. Standard-URL:en är [https://localhost:4502/system/console/bundles](https://localhost:4502/system/console/bundles).
+   1. Logga in på AEM [!DNL Forms] Author-instansen som administratör och gå till AEM webbkonsolpaket. Standard-URL:en är [https://localhost:4502/system/console/bundles](https://localhost:4502/system/console/bundles).
 
    1. Välj **[!UICONTROL Install/Update]**. En [!UICONTROL Upload / Install Bundles] dialogruta visas.
 

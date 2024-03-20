@@ -4,7 +4,8 @@ description: Lär dig hur du aktiverar vissa Content Fragment-funktioner i Confi
 feature: Content Fragments
 role: User
 exl-id: a9990b0c-56c7-4e61-bae9-98e19a7f364e
-source-git-commit: 2810e34f642f4643fa4dc24b31a57a68e9194e39
+solution: Experience Manager, Experience Manager Assets
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '272'
 ht-degree: 12%
@@ -17,7 +18,7 @@ Lär dig hur du aktiverar vissa Content Fragment-funktioner i Configuration Brow
 
 ## Aktivera funktionen för innehållsfragment för instansen {#enable-content-fragment-functionality-instance}
 
-Innan du använder innehållsfragment ska du använda **Konfigurationsläsaren** för att aktivera följande:
+Innan du använder innehållsfragment använder du **Konfigurationsläsaren** för att aktivera följande:
 
 * **Modeller för innehållsfragment** - obligatoriskt
 * **GraphQL Beständiga frågor** - valfritt
@@ -36,7 +37,7 @@ Om du vill aktivera funktionen för innehållsfragment måste du göra följande
 
 ### Aktivera funktionen för innehållsfragment i konfigurationsläsaren {#enable-content-fragment-functionality-in-configuration-browser}
 
-Till [använda vissa funktioner för innehållsfragment](#creating-a-content-fragment-model), **måste** först aktivera dem via **Konfigurationsläsaren**:
+Till [använda vissa funktioner för innehållsfragment](#creating-a-content-fragment-model), du **måste** först aktivera dem via **Konfigurationsläsaren**:
 
 >[!NOTE]
 >

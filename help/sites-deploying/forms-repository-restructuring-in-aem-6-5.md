@@ -6,16 +6,17 @@ content-type: reference
 topic-tags: repo_restructuring
 feature: Upgrading
 exl-id: d555422e-dc97-4d45-9525-4299d22315e2
-source-git-commit: 260f71acd330167572d817fdf145a018b09cbc65
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '511'
+source-wordcount: '519'
 ht-degree: 0%
 
 ---
 
 # Omstrukturering av Forms-lager i AEM 6.5{#forms-repository-restructuring-in-aem}
 
-Enligt beskrivning på överordnad [Omstrukturering av lager i AEM 6.5](/help/sites-deploying/repository-restructuring.md) som uppgraderar till AEM 6.5 ska använda den här sidan för att bedöma arbetsinsatsen i samband med databasändringar som påverkar AEM Forms-lösningen. Vissa ändringar kräver arbete under uppgraderingsprocessen för AEM 6.5, medan andra kan skjutas upp till en framtida uppgradering.
+Enligt beskrivning på överordnad [Omstrukturering av lager i AEM 6.5](/help/sites-deploying/repository-restructuring.md) på denna sida bör kunder som uppgraderar till AEM 6.5 använda denna sida för att bedöma arbetsinsatsen i samband med databasändringar som påverkar AEM Forms-lösningen. Vissa ändringar kräver arbete under uppgraderingsprocessen för AEM 6.5, medan andra kan skjutas upp till en framtida uppgradering.
 
 **Med 6.5-uppgradering**
 
@@ -77,13 +78,13 @@ Enligt beskrivning på överordnad [Omstrukturering av lager i AEM 6.5](/help/si
 | **Föregående plats** | `/etc/clientlibs/fd/fmaddon` |
 |---|---|
 | **Ny plats** | `/libs/fd/fmaddon` |
-| **Omstruktureringsvägledning** | Att ändra dessa klientlibs har aldrig rekommenderats eller fått stöd. Om du har gjort ändringar i dessa klientlibs bör de återställas till att använda den AEM koden. |
+| **Omstruktureringsvägledning** | Att ändra dessa klientlibs har aldrig rekommenderats eller fått stöd. Om du har gjort ändringar i dessa klientlibs bör du återställa dem så att du kan använda den AEM koden. |
 | **Anteckningar** | Ej tillämpligt |
 
 | **Föregående plats** | `/etc/aep` |
 |---|---|
 | **Ny plats** | `/var/fd/content/annotations` |
-| **Omstruktureringsvägledning** | Att ändra dessa klientlibs har aldrig rekommenderats eller fått stöd. Om du har gjort ändringar i dessa klientlibs bör de återställas till att använda den AEM koden. |
+| **Omstruktureringsvägledning** | Att ändra dessa klientlibs har aldrig rekommenderats eller fått stöd. Om du har gjort ändringar i dessa klientlibs bör du återställa dem så att du kan använda den AEM koden. |
 | **Anteckningar** | Ej tillämpligt |
 
 ## Före framtida uppgradering {#prior-to-upgrade}

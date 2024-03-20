@@ -7,9 +7,10 @@ topic-tags: integration
 content-type: reference
 docset: aem65
 exl-id: c7c0c705-ec16-40f5-ad08-193f82d01263
-source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '1439'
+source-wordcount: '1449'
 ht-degree: 0%
 
 ---
@@ -197,9 +198,9 @@ Om du tar bilden ovan som exempel visas **AEM** har följande egenskaper:
 >
 >Till exempel bredvid `prop3` du kan lägga till:
 >     `'`* `Adobe:'+pagedata.title+':'+pagedata.sitesection`\
-skicka *title* av en sida sammanfogad med *platshållare* använda *:* (kolon) och prefix med *Adobe* as `prop3`
+>skicka *title* av en sida sammanfogad med *platshållare* använda *:* (kolon) och prefix med *Adobe* as `prop3`
 >
 
 >[!CAUTION]
 >
-Endast en CQ-variabel kan mappas till en Adobe Analytics-variabel åt gången.
+>Endast en CQ-variabel kan mappas till en Adobe Analytics-variabel åt gången.

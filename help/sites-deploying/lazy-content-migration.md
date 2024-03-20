@@ -8,10 +8,11 @@ topic-tags: upgrading
 docset: aem65
 feature: Upgrading
 exl-id: 946c7c2a-806b-4461-a38b-9c2e5ef1e958
-source-git-commit: 3885cc51f7e821cdb352737336a29f9c4f0c2f41
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '687'
-ht-degree: 3%
+source-wordcount: '693'
+ht-degree: 0%
 
 ---
 
@@ -31,9 +32,9 @@ Målet är en effektiv exekvering, men den här uppgraderingsprocessen är synkr
 
 Eftersom detta vanligtvis även kräver att du justerar programmet, bör den här aktiviteten utföras tillsammans med motsvarande programdistribution.
 
-Nedan finns en fullständig lista över `CodeUpgradeTasks` som introducerades i 6.5:
+Nedan finns en fullständig lista över `CodeUpgradeTasks` som infördes i 6.5:
 
-| **Namn** | **Relevant** **för AEM versioner före** | **Migrering** **Typ** | **Detaljer** |
+| **Namn** | **Relevant** **för AEM versioner före** | **Migrering** **Typ** | **Information** |
 |---|---|---|---|
 | `Cq561ProjectContentUpgrade` | &lt; 5.6.1 | Omedelbar |  |
 | `Cq60MSMContentUpgrade` | &lt; 6.0 | Omedelbar | Identifierar alla `LiveRelationShips` från `VersionStorage` som har tagits bort och lägga till undantagsegenskap i överordnad |
@@ -54,8 +55,8 @@ Nedan finns en fullständig lista över `CodeUpgradeTasks` som introducerades i 
 | `CQ63ProcessingProfileConfigUpdate` | &lt; 6.3 | Omedelbar | Översätter egenskapen processingProfile (används till och med 6.1) i Assets så att den matchar strukturen 6.3 och senare. Justerar även profilens relativa sökvägar till **/conf** i stället för **/apps**. |
 | `CQ63ToolsMenuEntriesContentUpgrade` | &lt; 6.3 | Omedelbar | Uppgraderingsåtgärd som tar bort inaktuella menyposter i CRXDE Lite och Web Console om det finns en uppgradering. |
 | `CQ64CommunitiesConfigsCleanupTask` | &lt; 6.3 | Fördröjd | Flytta SRP-molnkonfigurationer, community watchwords-konfigurationer, rensa upp **/etc/social** och **/etc/enablement** (alla referenser och data måste justeras när en lat migrering körs - ingen programdel ska längre vara beroende av den här strukturen). |
-| `CQ64LegacyCloudSettingsCleanupTask` | &lt; 6.4 | Fördröjd | Rensar **/etc/molninställningar** (innehåller ContextHub-konfiguration). Konfigurationen migreras automatiskt vid första åtkomsten. Om Lazy Content Migration startas tillsammans med en uppgradering av det här innehållet i **/etc/molninställningar** måste bevaras via paketet innan uppgraderingen och installeras om för att den implicita omvandlingen ska komma igång, tillsammans med en efterföljande avinstallation av paketet efter att det har slutförts. |
+| `CQ64LegacyCloudSettingsCleanupTask` | &lt; 6.4 | Fördröjd | Rensar **/etc/molninställningar** (innehåller ContextHub-konfiguration). Konfigurationen migreras automatiskt vid första åtkomsten. Om Lazy Content Migration startas tillsammans med en uppgradering av innehållet i **/etc/molninställningar** måste bevaras via paketet innan uppgraderingen och installeras om för att den implicita omvandlingen ska komma igång, tillsammans med en efterföljande avinstallation av paketet efter att det har slutförts. |
 | `CQ64UsersTitleFixTask` | &lt; 6.4 | Fördröjd | Justerar den äldre rubrikstrukturen till titeln i användarprofilnoden. |
 | `CQ64CommerceMigrationTask` | &lt; 6.4 | Fördröjd | Migrera e-handelsinnehåll från **/etc/commerce** till **/var/commerce**. När migreringsinnehållet flyttas och referenser till flyttat innehåll uppdateras för att återspegla den nya platsen. |
-| `CQ65DMMigrationTask` | &lt; 6.5 | Fördröjd | Migrera äldre kataloginställningar och Dynamic Media-Cloud Services från **/etc** till **/conf** |
+| `CQ65DMMigrationTask` | &lt; 6.5 | Fördröjd | Migrera äldre kataloginställningar och Dynamic Media-Cloud Service från **/etc** till **/conf** |
 | `CQ65LegacyClientlibsCleanupTask` | &lt; 6.5 | Fördröjd | Rensa gamla klienter under **/etc/clientlibs** |

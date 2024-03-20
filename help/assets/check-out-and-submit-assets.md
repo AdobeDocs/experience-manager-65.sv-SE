@@ -6,10 +6,11 @@ role: User
 feature: Asset Management
 exl-id: 544ef73c-4e4b-433f-a173-fdf1c8f45d8e
 hide: true
-source-git-commit: 3d5e9ad8ee19756b05e5a77a3f748bc647fcf734
+solution: Experience Manager, Experience Manager Assets
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '439'
-ht-degree: 4%
+source-wordcount: '424'
+ht-degree: 3%
 
 ---
 
@@ -29,7 +30,7 @@ Den här funktionen förhindrar att andra användare åsidosätter ändringar so
 ## Checka ut resurser {#checking-out-assets}
 
 1. Från [!DNL Assets] väljer du den resurs du vill checka ut i användargränssnittet. Du kan också välja flera resurser att checka ut.
-1. Klicka på **[!UICONTROL Checkout]** i verktygsfältet. The **[!UICONTROL Checkout]** alternativ växlar till **[!UICONTROL Checkin]**.
+1. I verktygsfältet klickar du på **[!UICONTROL Checkout]**. The **[!UICONTROL Checkout]** alternativ växlar till **[!UICONTROL Checkin]**.
 Logga in som en annan användare om du vill kontrollera om andra användare kan redigera den utcheckade resursen. En låssymbol visas på miniatyrbilden för den resurs som du har checkat ut.
 
    ![chlimage_1-471](assets/chlimage_1-471.png)
@@ -61,14 +62,13 @@ Administratörer kan checka in resurser som är utcheckade av andra användare.
 
    ![chlimage_1-476](assets/chlimage_1-476.png)
 
-1. Klicka på **[!UICONTROL Release Lock]** i verktygsfältet. Resursen checkas in igen och är tillgänglig för redigering för andra användare.
+1. I verktygsfältet klickar du på **[!UICONTROL Release Lock]**. Resursen checkas in igen och är tillgänglig för redigering för andra användare.
 
-## God praxis och begränsningar {#tips-limitations}
+## Bästa praxis och begränsningar {#tips-limitations}
 
 * Du kan ta bort en *mapp* som innehåller utcheckade resursfiler. Innan du tar bort en mapp kontrollerar du att inga digitala resurser är utcheckade av användarna.
 
 >[!MORELIKETHIS]
 >
 >* [Förstå in- och utcheckning [!DNL Experience Manager] datorprogram](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html#how-app-works2)
->* [Videosjälvstudiekurs för att förstå hur du checkar in och checkar ut [!DNL Assets]](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/collaboration/check-in-and-check-out.html)
-
+>* [Videosjälvstudiekurs för att förstå incheckning och utcheckning [!DNL Assets]](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/collaboration/check-in-and-check-out.html)

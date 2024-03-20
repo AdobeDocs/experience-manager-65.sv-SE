@@ -7,7 +7,8 @@ topic-tags: integration
 content-type: reference
 docset: aem65
 exl-id: 9bf818f9-6e33-4557-b2e4-b0d4900f2a05
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '445'
 ht-degree: 0%
@@ -71,7 +72,7 @@ För den grundläggande konfigurationen:
 
 1. Klicka på + för att lägga till en ny konfiguration med dialogrutan. Tilldela åtminstone ett namn, till exempel Google Analytics:
 
-   ![Skapa en konfiguration](assets/analytics_addconfig.png)
+   ![Skapa konfiguration](assets/analytics_addconfig.png)
 
 1. Klicka **Skapa**&#x200B;öppnas fragmentdialogrutan omedelbart - klistra in lämpligt JavaScript-fragment i fältet:
 

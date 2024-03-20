@@ -8,16 +8,17 @@ topic-tags: deploying
 docset: aem65
 feature: Configuring
 exl-id: 1e34c5ca-9e08-4b2a-901c-ab28aeb4a807
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '616'
+source-wordcount: '592'
 ht-degree: 0%
 
 ---
 
 # Stöd för RDBMS i AEM 6.4{#rdbms-support-in-aem}
 
-## Översikt {#overview}
+## Ökning {#overview}
 
 Stöd för relationsdatabasbeständighet i AEM implementeras med Document Microkernel. Dokumentmikrokärnan är grunden som också används för implementering av MongoDB-beständighet.
 

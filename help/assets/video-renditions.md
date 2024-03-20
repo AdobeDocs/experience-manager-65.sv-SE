@@ -4,7 +4,9 @@ description: Lär dig hur du använder Adobe Experience Manager Assets för att 
 contentOwner: rbrough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 exl-id: a644558e-5be9-4ba2-b560-fc300497fbdf
-source-git-commit: 04050f31742c926b45235595f6318929d3767bd8
+solution: Experience Manager, Experience Manager Assets
+feature: Video
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '244'
 ht-degree: 1%
@@ -41,4 +43,4 @@ När du har konfigurerat proxyservern och skapat videoprofiler kan du ta med den
 >
 >Ljuduppspelning fungerar inte för OGG- och WAV-filer i Microsoft® Internet Explorer 11. Ett fel `Invalid Source` visas på sidan med tillgångsinformation för resurser med filnamnstillägget OGG eller WAV.
 >
-I MS® Edge och iPad spelas inte OGG-filer upp och ett formatfel som inte stöds genereras.
+>I MS® Edge och iPad spelas inte OGG-filer upp och ett formatfel som inte stöds genereras.

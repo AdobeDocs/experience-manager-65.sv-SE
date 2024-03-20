@@ -3,10 +3,11 @@ title: Åtgärder och funktioner i formulärcentrerade AEM arbetsflöden i OSGi-
 description: Åtgärder och funktioner i formulärcentrerade AEM arbetsflöden i OSGi- och AEM Forms JEE-arbetsflöden
 contentOwner: khsingh
 exl-id: 505b8988-b2b3-4222-b3cb-9b3c6259fdd2
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '925'
-ht-degree: 19%
+source-wordcount: '933'
+ht-degree: 17%
 
 ---
 

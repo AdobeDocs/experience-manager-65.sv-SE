@@ -1,19 +1,20 @@
 ---
-title: Vanliga frågor om leverans av innehåll med HTTP2
+title: HTTP2 Delivery of Content FAQ
 description: Lär dig mer om HTTP2-innehållsleverans och hur det kan öka det övergripande prestandan för ditt webbinnehåll.
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
 content-type: reference
 exl-id: 2428914c-5fb0-439e-a1ef-8ee30b890f58
-source-git-commit: 06a6d4e0ba2aeaefcfb238233dd98e8bbd6731da
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '757'
-ht-degree: 1%
+source-wordcount: '747'
+ht-degree: 0%
 
 ---
 
-# Vanliga frågor om leverans av innehåll med HTTP2{#http-delivery-of-content-faq}
+# HTTP2 Delivery of Content FAQ{#http-delivery-of-content-faq}
 
 Adobe är glada över att kunna meddela att HTTP/2-leverans av innehåll är tillgänglig. När du använder HTTP/2 observeras en generell prestandaökning.
 

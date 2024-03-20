@@ -7,7 +7,8 @@ topic-tags: page-authoring
 content-type: reference
 docset: aem65
 exl-id: 88af99df-846b-47b3-9b1f-68bfdfc40eb8
-source-git-commit: d2c0dea636280c28e1d5a76d1c5375f21b6eb111
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '5991'
 ht-degree: 0%
@@ -187,7 +188,7 @@ Valfritt. Det maximala antalet objekt som du vill använda i Carousel.
 
 >[!NOTE]
 >
->Du kan skapa en anpassad karusellkomponent för Adobe Experience Manager som visar digitala resurser i AEM DAM.
+Du kan skapa en anpassad karusellkomponent för Adobe Experience Manager som visar digitala resurser i AEM DAM.
 
 ### Diagram {#chart}
 
@@ -222,9 +223,9 @@ I följande exempel visas ett exempel på diagramdata följt av det resulterande
 
 >[!CAUTION]
 >
->Den fullständiga funktionen för hantering av innehållsfragment är endast tillgänglig med det pekoptimerade användargränssnittet.
+Den fullständiga funktionen för hantering av innehållsfragment är endast tillgänglig med det pekoptimerade användargränssnittet.
 >
->Komponenten Content Fragment kan visas i den klassiska användargränssnittets sidospark, men ytterligare funktioner är inte tillgängliga.
+Komponenten Content Fragment kan visas i den klassiska användargränssnittets sidospark, men ytterligare funktioner är inte tillgängliga.
 
 [Innehållsfragment](/help/sites-classic-ui-authoring/classic-page-author-content-fragments.md) skapas och hanteras som sidoberoende resurser. Du kan sedan använda dessa fragment och deras variationer när du redigerar innehållssidorna.
 
@@ -276,7 +277,7 @@ Det externa programmet är integrerat i styckesystemet på AEM, t.ex. när ett T
 
 >[!NOTE]
 >
->Beroende på ditt sätt att arbeta är andra alternativ tillgängliga för integrering av externa program, till exempel [Integrering av portlets](/help/sites-administering/aem-as-portal.md).
+Beroende på ditt sätt att arbeta är andra alternativ tillgängliga för integrering av externa program, till exempel [Integrering av portlets](/help/sites-administering/aem-as-portal.md).
 
 ### Flash {#flash}
 
@@ -330,11 +331,11 @@ Du kan antingen dra och släppa en bild från [Content Finder](/help/sites-class
 
 >[!NOTE]
 >
->Överföringens förlopp kan inte övervakas med Internet Explorer.
+Överföringens förlopp kan inte övervakas med Internet Explorer.
 >
->Internet Explorer-användare måste ladda upp bilden och klicka på **OK**&#x200B;öppnar du sedan bilden igen för att se den överförda filen i förhandsgranskningen och för att kunna utföra ändringar (d.v.s. beskära).
+Internet Explorer-användare måste ladda upp bilden och klicka på **OK**&#x200B;öppnar du sedan bilden igen för att se den överförda filen i förhandsgranskningen och för att kunna utföra ändringar (d.v.s. beskära).
 >
->Se [Certifierade plattformar](/help/release-notes/release-notes.md#certifiedplatforms) för mer information om HTML5-funktioner som används av AEM.
+Se [Certifierade plattformar](/help/release-notes/release-notes.md#certifiedplatforms) för mer information om HTML5-funktioner som används av AEM.
 
 När en bild har lästs in kan du konfigurera följande:
 
@@ -386,7 +387,7 @@ Den slutliga bilden (med **Titel** och **Beskrivning**) kan visas som:
 
 >[!CAUTION]
 >
->Även om behållarkomponenten Layout är tillgänglig i det klassiska användargränssnittet är dess fullständiga funktioner bara tillgängliga i det beröringsaktiverade användargränssnittet. Mer information finns på [Responsiv layout](/help/sites-classic-ui-authoring/classic-page-author-responsive-layout.md).
+Även om behållarkomponenten Layout är tillgänglig i det klassiska användargränssnittet är dess fullständiga funktioner bara tillgängliga i det beröringsaktiverade användargränssnittet. Mer information finns på [Responsiv layout](/help/sites-classic-ui-authoring/classic-page-author-responsive-layout.md).
 
 ### Lista {#list}
 
@@ -649,9 +650,9 @@ Bildspelskomponenten visar sedan upprepade gånger i sekvens, under en kort tid,
 
 >[!NOTE]
 >
->The **Tabell** -komponenten baseras på [RTF-redigerare](/help/sites-classic-ui-authoring/classic-page-author-rich-text-editor.md), vilket är **[Text](#text)** -komponenten.
+The **Tabell** -komponenten baseras på [RTF-redigerare](/help/sites-classic-ui-authoring/classic-page-author-rich-text-editor.md), vilket är **[Text](#text)** -komponenten.
 >
->Adobe rekommenderar att du använder **Tabell** för tabeller, även om de också kan skapas med **Text** -komponenten.
+Adobe rekommenderar att du använder **Tabell** för tabeller, även om de också kan skapas med **Text** -komponenten.
 
 The **Tabell** -komponenten är förkonfigurerad så att du kan skapa, fylla i och formatera en tabell. I dialogrutan kan du konfigurera tabellen och skapa innehållet från grunden eller genom att kopiera och klistra in ett kalkylblad eller en tabell från en extern redigerare, till exempel Excel, OpenOffice eller Anteckningar.
 
@@ -684,9 +685,9 @@ Mer information om märkord finns på [Använda taggar](/help/sites-classic-ui-a
 
 >[!NOTE]
 >
->The **Text** -komponenten baseras på [RTF-redigerare](/help/sites-classic-ui-authoring/classic-page-author-rich-text-editor.md), vilket är **[Tabell](#table)** -komponenten.
+The **Text** -komponenten baseras på [RTF-redigerare](/help/sites-classic-ui-authoring/classic-page-author-rich-text-editor.md), vilket är **[Tabell](#table)** -komponenten.
 >
->Adobe rekommenderar att du använder **Tabell** för tabeller, även om de också kan skapas med **Text** -komponenten.
+Adobe rekommenderar att du använder **Tabell** för tabeller, även om de också kan skapas med **Text** -komponenten.
 
 Med komponenten Text kan du ange ett textblock med en WYSIWYG-redigerare, med funktioner som finns i [RTF-redigerare](/help/sites-classic-ui-authoring/classic-page-author-rich-text-editor.md). Med ett urval ikoner kan du formatera texten, inklusive teckensnittsegenskaper, justering, länkar, listor och indrag.
 
@@ -796,11 +797,11 @@ När du har placerat en instans av komponenten på sidan kan du konfigurera föl
 
 >[!NOTE]
 >
->De format som stöds är:
+De format som stöds är:
 >
->* `.mp4`
->* `Ogg`
->* `FLV` (Flash video)
+* `.mp4`
+* `Ogg`
+* `FLV` (Flash video)
 >
 
 ## Kolumner {#columns}
@@ -835,7 +836,7 @@ Formulärkomponenter används för att skapa formulär som besökare kan skicka 
 
 >[!NOTE]
 >
->Se [Hjälp om AEM Forms](/help/forms/using/introduction-aem-forms.md) för information om AEM Forms.
+Se [Hjälp om AEM Forms](/help/forms/using/introduction-aem-forms.md) för information om AEM Forms.
 
 Forms är uppbyggt av flera olika komponenter:
 
@@ -857,7 +858,7 @@ I följande exempel visas ett exempelformulär. Den består av **Formulär** -ko
 
 >[!NOTE]
 >
->Information om hur du utvecklar och anpassar formulär finns på [Developing Forms page](/help/sites-developing/developing-forms.md). Den här formuläranpassningen inkluderar bland annat att lägga till åtgärder, begränsningar, förhandsladda fält och använda skript för att anropa en tjänst till åtgärd.
+Information om hur du utvecklar och anpassar formulär finns på [Developing Forms page](/help/sites-developing/developing-forms.md). Den här formuläranpassningen inkluderar bland annat att lägga till åtgärder, begränsningar, förhandsladda fält och använda skript för att anropa en tjänst till åtgärd.
 
 ### Inställningar som är gemensamma för (många) formulärkomponenter {#settings-common-to-many-form-components}
 
@@ -883,7 +884,7 @@ När du konfigurerar någon av formulärkomponenterna är följande flikar tillg
 
 >[!NOTE]
 >
->Fälten som visas varierar avsevärt beroende på den enskilda komponenten.
+Fälten som visas varierar avsevärt beroende på den enskilda komponenten.
 
 De här flikarna ger dig de parametrar som behövs. Flikarna beror på den enskilda komponenttypen, men kan innehålla följande:
 
@@ -1191,9 +1192,9 @@ Du kan ange olika parametrar, inklusive rubrik, beskrivning och elementnamn. Med
 
 >[!NOTE]
 >
->Använda **Inläsningssökväg för objekt** Du kan läsa in grupplistan med kryssrutor i förväg med värden.
+Använda **Inläsningssökväg för objekt** Du kan läsa in grupplistan med kryssrutor i förväg med värden.
 >
->Se [Förhandsladda formulärfält med flera värden](/help/sites-developing/developing-forms.md#preloading-form-fields-with-multiple-values).
+Se [Förhandsladda formulärfält med flera värden](/help/sites-developing/developing-forms.md#preloading-form-fields-with-multiple-values).
 
 ### Kreditkortsinformation {#credit-card-details}
 
@@ -1211,9 +1212,9 @@ Du kan ange en titel och vilka objekt som ska visas i listan. Med knapparna + oc
 
 >[!NOTE]
 >
->Använda **Inläsningssökväg för objekt** du kan läsa in listrutan i förväg med värden.
+Använda **Inläsningssökväg för objekt** du kan läsa in listrutan i förväg med värden.
 >
->Se [Förhandsladda formulärfält med flera värden](/help/sites-developing/developing-forms.md#preloading-form-fields-with-multiple-values).
+Se [Förhandsladda formulärfält med flera värden](/help/sites-developing/developing-forms.md#preloading-form-fields-with-multiple-values).
 
 ### Filöverföring {#file-upload}
 
@@ -1231,9 +1232,9 @@ Med den här komponenten kan du skapa ett dolt fält. Dessa dolda fält kan anv�
 
 >[!NOTE]
 >
->Du kan också anpassa formuläret för att visa eller dölja specifika formulärkomponenter enligt värdet i andra fält i formuläret. Att ändra synligheten för ett formulärfält är användbart när fältet bara behövs under specifika förhållanden.
+Du kan också anpassa formuläret för att visa eller dölja specifika formulärkomponenter enligt värdet i andra fält i formuläret. Att ändra synligheten för ett formulärfält är användbart när fältet bara behövs under specifika förhållanden.
 >
->Se [Visa och dölja formulärkomponenter](/help/sites-developing/developing-forms.md#showing-and-hiding-form-components).
+Se [Visa och dölja formulärkomponenter](/help/sites-developing/developing-forms.md#showing-and-hiding-form-components).
 
 ### Bildknapp {#image-button}
 
@@ -1282,9 +1283,9 @@ Du kan ange elementnamnet tillsammans med en titel och en beskrivning. Med knapp
 
 >[!NOTE]
 >
->Använda **Inläsningssökväg för objekt** du kan förhandsladda gruppen med värden.
+Använda **Inläsningssökväg för objekt** du kan förhandsladda gruppen med värden.
 >
->Se [Förhandsladda formulärfält med flera värden](/help/sites-developing/developing-forms.md#preloading-form-fields-with-multiple-values).
+Se [Förhandsladda formulärfält med flera värden](/help/sites-developing/developing-forms.md#preloading-form-fields-with-multiple-values).
 
 ### Skicka-knapp {#submit-button}
 

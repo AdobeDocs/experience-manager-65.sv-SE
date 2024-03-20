@@ -8,9 +8,10 @@ topic-tags: upgrading
 docset: aem65
 feature: Upgrading
 exl-id: b777fdca-e7a5-427a-9e86-688dd7cac636
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '834'
+source-wordcount: '860'
 ht-degree: 0%
 
 ---
@@ -59,7 +60,7 @@ För att göra det säkrare och enklare för kunderna att förstå vilka delar a
 
 >[!NOTE]
 >
-Dessa profiler används endast mot Sling-sökvägsbaserade mekanismer. Andra områden i **/libs** som ett klientbibliotek kan markeras som `Internal`, men kan ändå användas med standardinkludering av klientlib. Det är viktigt att kunden i dessa fall fortsätter att respektera den interna klassificeringen.
+>Dessa profiler används endast mot Sling-sökvägsbaserade mekanismer. Andra områden i **/libs** som ett klientbibliotek kan markeras som `Internal`, men kan ändå användas med standardinkludering av klientlib. Det är viktigt att kunden i dessa fall fortsätter att respektera den interna klassificeringen.
 
 #### Indikatorer för CRXDE Lite-innehållstyp {#crxde-lite-content-type-indicators}
 
@@ -81,9 +82,9 @@ Blandningar som används i CRXDE Lite visar innehållsnoder och träd som marker
 
 >[!NOTE]
 >
-Från och med AEM 6.5 rekommenderar Adobe att du använder mönsteravkännaren för att upptäcka åtkomstfel för innehåll. Mönsterdetektorrapporter är mer detaljerade, identifierar fler problem och minskar sannolikheten för falska positiva.
+>Från och med AEM 6.5 rekommenderar Adobe att du använder mönsteravkännaren för att upptäcka åtkomstfel för innehåll. Mönsterdetektorrapporter är mer detaljerade, identifierar fler problem och minskar sannolikheten för falska positiva.
 >
-Mer information finns i [Utvärdera uppgraderingskomplexiteten med mönsteravkännaren](/help/sites-deploying/pattern-detector.md).
+>Mer information finns i [Utvärdera uppgraderingskomplexiteten med mönsteravkännaren](/help/sites-deploying/pattern-detector.md).
 
 AEM 6.5 levereras med en hälsokontroll som varnar kunderna om överlagrat eller refererat innehåll används på ett sätt som inte är förenligt med innehållsklassificeringen.
 

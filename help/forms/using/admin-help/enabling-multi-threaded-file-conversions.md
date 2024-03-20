@@ -7,9 +7,10 @@ geptopics: SG_AEMFORMS/categories/working_with_pdf_generator
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 feature: PDF Generator
 exl-id: 402c1fd4-c6c8-494e-b452-b56a91c4a397
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '870'
+source-wordcount: '884'
 ht-degree: 0%
 
 ---
@@ -28,7 +29,7 @@ Som standard kan PDF Generator endast konvertera ett OpenOffice-, Microsoft® Wo
 
 >[!NOTE]
 >
-Flertrådade filkonverteringar stöds inte i Microsoft® Excel, Microsoft® Visio, Microsoft® Project eller Microsoft® Publisher.
+>Flertrådade filkonverteringar stöds inte i Microsoft® Excel, Microsoft® Visio, Microsoft® Project eller Microsoft® Publisher.
 
 Varje instans av OpenOffice eller PDFMaker startas med ett separat användarkonto. Varje användarkonto som du lägger till måste vara en giltig användare med administratörsbehörighet på Forms Server-datorn. I en klustrad miljö måste samma uppsättning användare vara giltiga för alla noder i klustret.
 
@@ -67,7 +68,7 @@ Om du kör OpenOffice, Microsoft® Word eller Microsoft® PowerPoint på Windows
 
    >[!NOTE]
    >
-   Kontrollera att du har tilldelat användarroller för system och PDFG till user1 och user2. Om du vill tilldela en PDFG-roll till en användare läser du [Lägg till ett användarkonto](enabling-multi-threaded-file-conversions.md#add-a-user-account)
+   >Kontrollera att du har tilldelat användarroller för system och PDFG till user1 och user2. Om du vill tilldela en PDFG-roll till en användare läser du [Lägg till ett användarkonto](enabling-multi-threaded-file-conversions.md#add-a-user-account)
 
 1. I /etc/sudoers-filen kan du söka efter och kommentera den här raden genom att lägga till ett nummertecken (#) i början av raden:
 
@@ -88,7 +89,7 @@ Om du kör OpenOffice, Microsoft® Word eller Microsoft® PowerPoint på Windows
 
 >[!NOTE]
 >
-OpenOffice måste vara installerat på en katalogplats som alla PDFG-användare har åtkomst till. Du kan verifiera detta genom att logga in som PDFG-användare och kontrollera om du kan starta OpenOffice utan problem.
+>OpenOffice måste vara installerat på en katalogplats som alla PDFG-användare har åtkomst till. Du kan verifiera detta genom att logga in som PDFG-användare och kontrollera om du kan starta OpenOffice utan problem.
 
 ### Lägg till ett användarkonto {#add-a-user-account}
 
@@ -97,7 +98,7 @@ OpenOffice måste vara installerat på en katalogplats som alla PDFG-användare 
 
    >[!NOTE]
    >
-   Om du konfigurerar användare för OpenOffice kan antalet instanser av OpenOffice inte vara större än antalet användarkonton som anges i det här steget.
+   >Om du konfigurerar användare för OpenOffice kan antalet instanser av OpenOffice inte vara större än antalet användarkonton som anges i det här steget.
 
 1. Starta om Forms Server.
 

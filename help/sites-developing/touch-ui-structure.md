@@ -6,10 +6,11 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: introduction
 content-type: reference
 exl-id: e562b289-5d8b-4fa8-ad1c-fff5f807a45e
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '855'
-ht-degree: 1%
+source-wordcount: '862'
+ht-degree: 3%
 
 ---
 
@@ -40,7 +41,7 @@ Om upplösningen till exempel ligger under 1 024 pixlar (som på en mobil enhet)
 Rubrikraden visar globala element som:
 
 * logotypen och den specifika produkt/lösning som du använder för närvarande. För AEM utgör detta också en länk till Global Navigation
-* Sökning
+* Sök
 * ikon för att komma åt hjälpresurserna
 * ikon för att komma åt andra lösningar
 * en indikator för (och åtkomst till) alla varningar eller inkorgsobjekt som väntar på dig

@@ -7,16 +7,17 @@ topic-tags: testing
 content-type: reference
 docset: aem65
 exl-id: c09cde0d-401c-437f-9ec8-a0530c1312d5
-source-git-commit: 1ef5593495b4bf22d2635492a360168bccc1725d
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '514'
+source-wordcount: '515'
 ht-degree: 0%
 
 ---
 
 # Definiera testfall{#defining-your-test-cases}
 
-Dina testfall ska baseras på:
+Dina testfall ska baseras på följande:
 
 **Användningsexempel**
 
@@ -29,8 +30,8 @@ Dina testfall ska baseras på:
 
 Provningarna bör tydligt definiera
 
-* Förutsättningar. dessa kan omfatta specifika system, konfigurationer eller provningsupplevelser.
-* Steg som skall följas. på en lämplig detaljnivå.
+* Förutsättningar; dessa kan omfatta specifika system, konfigurationer eller provningsupplevelser.
+* Steg som ska följas, på lämplig detaljnivå.
 * Förväntade resultat.
 * Tydliga kriterier för godkännande eller fel.
 
@@ -41,7 +42,7 @@ Möjligheten att automatisera testfall är attraktiv eftersom man slipper repeti
 Automatisering av testfall är dock en betydande investering, så vissa aspekter bör beaktas:
 
 * Kräv tid, arbete och erfarenhet för att konfigurera och konfigurera.
-* Om webbläsarbaserade uppdateringar är installerade finns det en ökad risk för problem. behöver ytterligare tid för att korrigera.
+* Om webbläsarbaserade uppdateringar är installerade finns det en ökad risk för problem, vilket kräver ytterligare tid för att korrigera.
 * Endast möjligt för stora projekt.
 * Bra när flera releaser genereras antingen för testning eller i den långsiktiga releasen.
 
@@ -51,7 +52,7 @@ När AEM testas är det av särskilt intresse med vissa detaljer:
 
 **Skapa och publicera miljöer**
 
-Även om det omfattas av [Miljö](/help/sites-developing/the-basics.md#environments)är det värt att betona en avgörande faktor AEM testning.
+Även om det ingår i [Miljö](/help/sites-developing/the-basics.md#environments)är det värt att betona en avgörande faktor AEM testning.
 
 AEM som två program:
 
@@ -71,9 +72,9 @@ Detta har vanligtvis en större uppsättning användare, där trafikvolymen inte
 
 Med andra ord måste de testas separat och med olika testfall.
 
-**Personanpassning**
+**Personalisering**
 
-Vid testning av personalisering ska varje enskilt användningsfall upprepas med flera användarkonton för att bevisa beteendet.
+Vid testning av personalisering ska varje enskilt användningsfall upprepas med hjälp av flera användarkonton för att bevisa beteendet.
 
 Kontrollera även att cachning fungerar korrekt.
 
@@ -81,7 +82,7 @@ Kontrollera även att cachning fungerar korrekt.
 
 I de flesta projekt installeras Dispatcher för cachelagring och belastningsutjämning.
 
-Testningen är svår (cachelagring sker på olika nivåer och på olika platser) och måste göras i svarta lådor. Viktiga aspekter att testa för är:
+Testningen är svår (cachelagring sker på olika nivåer och på olika platser) och måste göras i svarta lådor. Viktiga aspekter att testa:
 
 * **Noggrannhet**
 Ser till att webbplatsbesökaren kan se innehållsuppdateringar.

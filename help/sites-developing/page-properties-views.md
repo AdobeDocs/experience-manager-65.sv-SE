@@ -6,7 +6,8 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: extending-aem
 content-type: reference
 exl-id: 292874bf-2ee6-4638-937c-f8f26c93ca65
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '475'
 ht-degree: 0%
@@ -68,14 +69,14 @@ Som standard är [**Skapa sida** guide](/help/sites-authoring/managing-pages.md#
    >
    >    `/libs/wcm/foundation/components/basicpage/v1/basicpage/cq:dialog`
    >
-   Du kan dock ***måste*** ändrar ingenting i dialogrutan `/libs` bana.
+   >Du kan dock ***måste*** ändrar ingenting i dialogrutan `/libs` bana.
    >
-   Detta beror på innehållet i `/libs` skrivs över nästa gång du uppgraderar din instans (och kan mycket väl skrivas över när du installerar en snabbkorrigering eller ett funktionspaket).
+   >Detta beror på innehållet i `/libs` skrivs över nästa gång du uppgraderar din instans (och kan mycket väl skrivas över när du installerar en snabbkorrigering eller ett funktionspaket).
    >
-   Den rekommenderade metoden för konfiguration och andra ändringar är:
+   >Den rekommenderade metoden för konfiguration och andra ändringar är:
    >
-   1. Återskapa önskat objekt (d.v.s. som det finns i `/libs`) under `/apps`
-   1. Gör ändringar i `/apps`
+   >1. Återskapa önskat objekt (d.v.s. som det finns i `/libs`) under `/apps`
+   >1. Gör ändringar i `/apps`
 
 1. Ange `path` egenskap på `basic` för att peka på åsidosättningen av den grundläggande fliken (se även nästa steg). Till exempel:
 
@@ -99,7 +100,7 @@ Som standard är [**Skapa sida** guide](/help/sites-authoring/managing-pages.md#
 
 >[!NOTE]
 >
-Information om hur du konfigurerar sidegenskaper för användning med live-kopior finns i [Konfigurera MSM-lås på sidegenskaper](/help/sites-developing/extending-msm.md#configuring-msm-locks-on-page-properties-touch-enabled-ui) för mer information.
+>Information om hur du konfigurerar sidegenskaper för användning med live-kopior finns i [Konfigurera MSM-lås på sidegenskaper](/help/sites-developing/extending-msm.md#configuring-msm-locks-on-page-properties-touch-enabled-ui) för mer information.
 
 ## Exempelkonfiguration av sidegenskaper {#sample-configuration-of-page-properties}
 

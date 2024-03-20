@@ -7,9 +7,10 @@ topic-tags: upgrading
 content-type: reference
 feature: Upgrading
 exl-id: 85bc041e-0ab1-42de-8bcc-c98a175d7494
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '1337'
+source-wordcount: '1306'
 ht-degree: 0%
 
 ---
@@ -22,7 +23,7 @@ En av de största utmaningarna när det gäller att uppgradera Adobe Experience 
 
 I det här avsnittet beskrivs hur du använder Oak-run-verktyget för att indexera om databasen **före** som utför uppgraderingen, vilket minskar tiden för driftavbrott under den faktiska uppgraderingen. Stegen som presenteras kan användas på [Lucene](https://jackrabbit.apache.org/oak/docs/query/lucene.html) index för version AEM 6.4 och senare.
 
-## Översikt {#overview}
+## Ökning {#overview}
 
 I nya versioner av AEM införs ändringar i Oak-indexdefinitioner när funktionsuppsättningen utökas. Ändringar av Oak-index tvingar omindexering när AEM uppgraderas. Omindexering är dyrt för resursinstallationer eftersom text i resurser (till exempel text i pdf-fil) extraheras och indexeras. Med MongoMK-databaser bevaras data över nätverket vilket ytterligare ökar tiden för omindexering.
 

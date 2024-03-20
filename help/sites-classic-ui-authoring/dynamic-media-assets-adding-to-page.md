@@ -6,10 +6,11 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: authoring
 content-type: reference
 exl-id: d2ebfca5-19f9-4fa5-b142-b978f46a912f
-source-git-commit: f4b7566abfa0a8dbb490baa0e849de6c355a3f06
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '1552'
-ht-degree: 1%
+source-wordcount: '1519'
+ht-degree: 2%
 
 ---
 
@@ -25,28 +26,28 @@ Du lägger till Dynamic Media-resurser direkt på sidan om du använder Adobe Ex
 
 ## Lägga till en Dynamic Media-komponent på en sida {#adding-a-dynamic-media-component-to-a-page}
 
-Lägga till [!UICONTROL Dynamic Media] eller [!UICONTROL Interactive Media] -komponenten på en sida är densamma som att lägga till en komponent på en sida. The [!UICONTROL Dynamic Media] och [!UICONTROL Interactive Media] beskrivs närmare i följande avsnitt.
+Lägga till [!UICONTROL Dynamic Media] eller [!UICONTROL Interactive Media] -komponenten på en sida är densamma som att lägga till en komponent på en sida. The [!UICONTROL Dynamic Media] och [!UICONTROL Interactive Media] beskrivs mer ingående i följande avsnitt.
 
 Så här lägger du till en Dynamic Media-komponent/ett visningsprogram på en sida:
 
 1. Öppna den sida i Experience Manager där du vill lägga till Dynamic Media-komponenten.
 1. Om ingen Dynamic Media-komponent är tillgänglig väljer du linjalen i [!UICONTROL Sidekick] att ange **[!UICONTROL Design]** läge.
 1. Välj **[!UICONTROL Edit]** parsys.
-1. Välj **[!UICONTROL Dynamic Media]** så att du kan göra Dynamic Media-komponenterna tillgängliga.
+1. Välj **[!UICONTROL Dynamic Media]** så att Dynamic Media-komponenterna blir tillgängliga.
 
    >[!NOTE]
    >
    >Se [Konfigurera komponenter i designläge](/help/sites-authoring/default-components-designmode.md) för mer information.
 
 1. Återgå till **[!UICONTROL Edit]** genom att klicka på pennikonen i dialogrutan [!UICONTROL Sidekick].
-1. Dra **[!UICONTROL Dynamic Media]** eller **[!UICONTROL Interactive Media]** från **[!UICONTROL Other]** på sidan i den önskade platsen.
+1. Dra **[!UICONTROL Dynamic Media]** eller **[!UICONTROL Interactive Media]** -komponenten från **[!UICONTROL Other]** på sidan i den önskade platsen.
 1. Välj **[!UICONTROL Edit]** så att komponenten öppnas.
 1. [Redigera komponenten](#dynamic-media-component) vid behov.
 1. Välj **[!UICONTROL OK]** så att ändringarna sparas.
 
 ## Dynamic Media Components {#dynamic-media-components}
 
-[!UICONTROL Dynamic Media] och [!UICONTROL Interactive Media] finns i [!UICONTROL Sidekick] under **[!UICONTROL Dynamic Media]**. Du använder **[!UICONTROL Interactive Media]** -komponent för alla interaktiva resurser som interaktiv video, interaktiva bilder eller karuselluppsättningar. För alla andra Dynamic Media-komponenter använder du **[!UICONTROL Dynamic Media]** -komponenten.
+[!UICONTROL Dynamic Media] och [!UICONTROL Interactive Media] är tillgängliga i [!UICONTROL Sidekick] under **[!UICONTROL Dynamic Media]**. Du använder **[!UICONTROL Interactive Media]** -komponent för alla interaktiva resurser som interaktiv video, interaktiva bilder eller karuselluppsättningar. För alla andra Dynamic Media-komponenter använder du **[!UICONTROL Dynamic Media]** -komponenten.
 
 ![chlimage_1-71](assets/chlimage_1-71a.png)
 
@@ -65,7 +66,6 @@ Dynamic Media-komponenten är smart - beroende på om du lägger till en bild el
 >* Du har [aktiverad Dynamic Media](/help/assets/config-dynamic.md). Dynamic Media är inaktiverat som standard.
 >* Bilden har en pyramidformad fil. Bilder som importerats innan Dynamic Media har aktiverats har ingen pyramidfil.
 >
-
 
 #### När du arbetar med bilder {#when-working-with-images}
 
@@ -111,7 +111,7 @@ Det här alternativet är inte tillgängligt om du visar bilduppsättningar, snu
 
 Det här alternativet är inte tillgängligt om du visar bilduppsättningar, snurruppsättningar eller blandade medieuppsättningar.
 
-**[!UICONTROL Width and Height]** - Ange värdet i pixlar om du vill att bilden ska ha en fast storlek. Om du lämnar dessa värden tomma anpassas resursen.
+**[!UICONTROL Width and Height]** - Ange värdet i pixlar om du vill att bilden ska ha en fast storlek. Om du lämnar dessa värden tomma blir resursen anpassningsbar.
 
 #### När du arbetar med video {#when-working-with-video}
 
@@ -123,7 +123,7 @@ Du kan redigera följande [!UICONTROL Dynamic Media Settings] genom att klicka *
 
 >[!NOTE]
 >
->Som standard är videokomponenten i Dynamic Media adaptiv. Om du vill göra den till en fast storlek anger du den i komponenten med **[!UICONTROL Width]** och **[!UICONTROL Height]** i **[!UICONTROL Advanced]** -fliken.
+>Som standard är videokomponenten i Dynamic Media adaptiv. Om du vill ha en fast storlek anger du den i komponenten med **[!UICONTROL Width]** och **[!UICONTROL Height]** i **[!UICONTROL Advanced]** -fliken.
 
 **[!UICONTROL Viewer preset]** - Välj en befintlig förinställning för visningsprogrammet för video i listrutan. Om den visningsförinställning du söker efter inte visas måste du göra den synlig. Se [Hantera visningsförinställningar](/help/assets/managing-viewer-presets.md).
 
@@ -137,9 +137,9 @@ Du kan redigera följande [!UICONTROL Advanced] inställningar genom att klicka 
 
 I Experience Manager 6.2 när du installerar [FP-13480](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq620/featurepack/cq-6.2.0-featurepack-13480)kan du styra om en video levereras via en säker SSL-anslutning (HTTPS) eller en osäker anslutning (HTTP). Som standard ärvs videoleveransprotokollet automatiskt från inbäddningswebbsidans protokoll. Om webbsidan läses in via HTTPS levereras videon också via HTTPS. Och omvänt, om webbsidan finns på HTTP, levereras videon via HTTP. Normalt är standardbeteendet bra och du behöver inte göra några konfigurationsändringar. Du kan dock åsidosätta det här standardbeteendet. Lägg till `VideoPlayer.ssl=on` till slutet av en URL-sökväg eller till listan med andra parametrar för visningskonfiguration i ett inbäddat kodfragment. Båda åtgärderna tvingar till säker leverans av video.
 
-Mer information om säker videomaterial finns i `VideoPlayer.ssl` konfigurationsattribut i din URL-sökväg, se [Säker leverans av video](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/c-html5-video-viewer-20-securevideodelivery.html) i referenshandboken för visningsprogrammen. Förutom Video Viewer finns säker videoutgång för visningsprogram för Mixed Media och Interactive Video.
+Mer information om säker videomaterial och hur du använder `VideoPlayer.ssl` konfigurationsattribut i din URL-sökväg, se [Säker leverans av video](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/c-html5-video-viewer-20-securevideodelivery.html) i referenshandboken för visningsprogrammen. Förutom Video Viewer finns säker videoutgång för visningsprogram för Mixed Media och Interactive Video.
 
-### Interaktiv mediekomponent {#interactive-media-component}
+### Interaktiv mediakomponent {#interactive-media-component}
 
 Komponenten Interactive Media är till för de resurser som har interaktivitet i dem, till exempel hotspot-områden eller bildscheman. Om du har en interaktiv bild, interaktiv video eller karusellbanderoll använder du **[!UICONTROL Interactive Media]** -komponenten.
 
@@ -157,8 +157,8 @@ Du kan redigera följande **[!UICONTROL General]** inställningar genom att klic
 
 Du kan redigera följande **[!UICONTROL Add To Cart]** inställningar genom att klicka på **[!UICONTROL Edit]** i komponenten.
 
-**[!UICONTROL Show Product Asset]** - Som standard är det här värdet valt. Produktresursen visar en bild av produkten enligt definitionen i modulen Handel. Avmarkera kryssrutan om du inte vill visa produktresursen.
+**[!UICONTROL Show Product Asset]** - Som standard är det här värdet markerat. Produktresursen visar en bild av produkten enligt definitionen i modulen Handel. Avmarkera kryssrutan om du inte vill visa produktresursen.
 
-**[!UICONTROL Show Product Price]** - Som standard är det här värdet valt. Produktpriset visar priset för artikeln enligt definitionen i modulen Handel. Avmarkera kryssrutan om du inte vill visa produktpriset.
+**[!UICONTROL Show Product Price]** - Som standard är det här värdet markerat. Produktpriset visar priset för artikeln enligt definitionen i modulen Handel. Avmarkera kryssrutan om du inte vill visa produktpriset.
 
 **[!UICONTROL Show Product Form]** - Som standard är det här värdet inte markerat. Produktformuläret innehåller alla produktvarianter som storlek och färg. Avmarkera kryssrutan om du inte vill visa produktvarianterna.

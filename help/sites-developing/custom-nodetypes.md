@@ -6,10 +6,11 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: platform
 content-type: reference
 exl-id: bfd50aa9-579e-47d5-997d-ec764c782497
-source-git-commit: d3c40d1452217983b01245ec1c81111a3c4e7295
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '1866'
-ht-degree: 3%
+source-wordcount: '1848'
+ht-degree: 0%
 
 ---
 
@@ -127,7 +128,7 @@ Definierar nodtypen för en bakåtspårningsnod.
 
 ## Core {#core}
 
-### cq:Page {#cq-page}
+### cq:Sida {#cq-page}
 
 **Beskrivning**
 
@@ -158,12 +159,12 @@ Definierar en blandningstyp som markerar noder som pseudosidor. Med andra ord in
 Definierar standardnoden för sidinnehåll, med de minimala egenskaper som används av WCM.
 
 * `@prop jcr:title` - Rubrik för sidan.
-* `@prop jcr:description` - Beskrivning av den här sidan.
+* `@prop jcr:description` - Beskrivning av sidan.
 * `@prop cq:template` - Sökväg till mallen som användes för att skapa sidan.
 * `@prop cq:allowedTemplates` - Lista med reguljära uttryck som används för att bestämma sökvägarna till den tillåtna mallen.
 * `@prop pageTitle` - Rubriken visas i `<title>` -tagg.
 * `@prop navTitle` - Titel som används vid navigering.
-* `@prop hideInNav` - Anger om sidan ska döljas i navigeringen.
+* `@prop hideInNav` - Anger om sidan ska vara dold i navigeringen.
 * `@prop onTime` - Tid när den här sidan blir giltig.
 * `@prop offTime` - Tid när den här sidan blir ogiltig.
 * `@prop cq:lastModified` - Datum då sidan (eller dess stycken) senast ändrades.
@@ -232,7 +233,7 @@ Definierar en CQ-komponent.
 * `@prop dialogPath` - Sökväg till primär dialogruta (alternativ till dialogruta).
 * `@node design_dialog` - Design.
 * `@prop cq:cellName` - Namn på designcellen.
-* `@prop cq:isContainer` - Anger om det är en behållarkomponent. Tvingar cellnamnen för de underordnade komponenterna att användas i stället för sökvägsnamn. Till exempel `parsys` är en behållarkomponent. Om det här värdet inte definieras görs kontrollen utifrån förekomsten av ett `cq:childEditConfig`.
+* `@prop cq:isContainer` - Anger om det är en behållarkomponent. Tvingar cellnamnen för de underordnade komponenterna att användas i stället för sökvägsnamn. Till exempel `parsys` är en behållarkomponent. Om det här värdet inte definieras görs kontrollen baserat på förekomsten av en `cq:childEditConfig`.
 * `@prop cq:noDecoration` - Om true, ingen dekoration `div` -taggar ritas när komponenten tas med.
 * `@node cq:editConfig` - Den konfiguration som definierar parametrarna för redigeringsfältet.
 * `@node cq:childEditConfig` - Den redigeringskonfiguration som ärvs av underordnade komponenter.
@@ -316,9 +317,9 @@ Definierar konfigurationen för&quot;redigeringsfältet&quot;.
 
 Konfigurerar ett släppmål för en komponent. Namnet på den här noden används som ett ID för dra och släpp.
 
-* `@prop accept` - Förteckning över MIME-typer som accepteras av detta släppmål. till exempel `["image/*"]`
+* `@prop accept` - Lista över MIME-typer som accepteras av det här släppmålet, till exempel `["image/*"]`
 * `@prop groups` - Lista med dra och släpp-grupper som accepterar en källa.
-* `@prop propertyName` - Namnet på egenskapen som används för att lagra referensen.
+* `@prop propertyName` - Namnet på den egenskap som används för att lagra referensen.
 
 **Definition**
 
@@ -335,7 +336,7 @@ Konfigurerar ett släppmål för en komponent. Namnet på den här noden använd
 Definierar en virtuell CQ-komponent. Används för närvarande endast för den nya guiden Dra och släpp för komponenten.
 
 * `@prop jcr:title` - Den här komponentens namn.
-* `@prop jcr:description` - Beskrivning av den här komponenten.
+* `@prop jcr:description` - Beskrivning av komponenten.
 * `@node cq:editConfig` - Redigera konfiguration som definierar parametrarna för redigeringsfältet.
 * `@node cq:childEditConfig`- Redigera konfiguration som ärvs av underordnade komponenter.
 * `@node icon.png` - En fil som innehåller en karakteristisk ikon.
@@ -444,7 +445,7 @@ Behållarlista.
 
 **Beskrivning**
 
-Nodtypen `cq:attributes` är för ContentBus versionstaggar. Den här noden har bara en serie egenskaper; av vilka tre är fördefinierade &quot;created&quot;, &quot;csd&quot; och &quot;timestamp&quot;.
+Nodtypen `cq:attributes` är för ContentBus-versionstaggarna. Den här noden har bara en serie egenskaper, varav tre är fördefinierade&quot;skapad&quot;,&quot;csd&quot; och&quot;tidsstämpel&quot;.
 
 * `@prop created (long) mandatory copy` - Tidsstämpel för när versionsinformationen skapades, vanligtvis tiden för incheckning av den tidigare versionen eller tiden då sidan skapades.
 * `@prop csd (string) mandatory copy` - csd-standardattribut, kopia av egenskapen cq:csd för sidnoden
@@ -463,11 +464,11 @@ Nodtypen `cq:attributes` är för ContentBus versionstaggar. Den här noden har 
 
 **Beskrivning**
 
-Nodtypen `cq:contentPage` innehåller egenskaps- och undernoddefinitioner för innehållssidor i ContentBus. Endast när den här blandningstypen läggs till i en nod av typen `cq:page`blir en nod en innehållssida för ContentBus.
+Nodtypen `cq:contentPage` innehåller egenskaps- och undernoddefinitioner för ContentBus-innehållssidor. Endast när den här blandningstypen läggs till i en nod av typen `cq:page`blir en nod en innehållssida för ContentBus.
 
 Objekten i en `cq:Cq4ContentPage` är:
 
-* `@prop cq:csd` - Sidans ContentBus värdepapperscentral.
+* `@prop cq:csd` - Sidans ContentBus-värdepapperscentral.
 * `@node cq:content` - Sidans innehåll. Den underordnade noden finns inte om sidnoden är i läget &quot;Befintlig utan innehåll&quot; eller &quot;Borttagen&quot;.
 * `@node cq:attributes` - Listan med sidattribut, som tidigare kallades versionstaggar. Den här noden är obligatorisk för typen cq:contentPage. Attributnoden får en ny version när sidan får en ny version.
 
@@ -580,7 +581,7 @@ Definierar en LiveSync-blandning. Om en nod ingår i en LiveRelationship med en 
 
 Definierar en LiveSyncCanceled-blandning. Avbryt LiveSync-beteendet för en live-kopia (kontrollerad)-nod som kan vara inblandad i en LiveRelationship på grund av någon av dess överordnade noder.
 
-* `@prop cq:isCancelledForChildren` - Definierar om en LiveSync-åtgärd ska avbrytas. även för barn.
+* `@prop cq:isCancelledForChildren` - Definierar om en LiveSync avbryts, även för underordnade.
 
 **Definition**
 
@@ -1160,7 +1161,7 @@ Arbetsflödesstack
 
 **Beskrivning**
 
-Processhög
+Processstapel
 
 **Definition**
 

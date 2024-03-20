@@ -7,7 +7,8 @@ topic-tags: configuring, Security
 content-type: reference
 feature: Configuring
 exl-id: 7d2e4620-c3a5-4f5a-9eb6-42a706479d41
-source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '723'
 ht-degree: 0%
@@ -80,19 +81,20 @@ Om du vill konfigurera enkel inloggning för en AEM instans konfigurerar du [Han
 >
 >Om du även använder [Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html) med Microsoft® Internet Information Server (IIS) krävs ytterligare konfiguration i:
 >
-* `disp_iis.ini`
-* IIS
+>* `disp_iis.ini`
+>* IIS
 >
-I `disp_iis.ini` set: (se [installera Dispatcher med Microsoft® Internet Information Server](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/dispatcher-install.html#microsoft-internet-information-server) för fullständig information)
+>I `disp_iis.ini` set:
+>(se [installera Dispatcher med Microsoft® Internet Information Server](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/dispatcher-install.html#microsoft-internet-information-server) för fullständig information)
 >
-* `servervariables=1` (vidarebefordrar IIS-servervariabler som begäranrubriker till fjärrinstansen)
-* `replaceauthorization=1` (ersätter en rubrik med namnet&quot;Authorization&quot;, som inte är&quot;Basic&quot;, med motsvarande&quot;Basic&quot;)
+>* `servervariables=1` (vidarebefordrar IIS-servervariabler som begäranrubriker till fjärrinstansen)
+>* `replaceauthorization=1` (ersätter en rubrik med namnet&quot;Authorization&quot;, som inte är&quot;Basic&quot;, med motsvarande&quot;Basic&quot;)
 >
-I IIS:
+>I IIS:
 >
-* disable **Anonym åtkomst**
+>* disable **Anonym åtkomst**
 >
-* enable **Integrerad Windows-autentisering**
+>* enable **Integrerad Windows-autentisering**
 >
 
 Du kan se vilken autentiseringshanterare som används i vilken del av innehållsträdet som helst genom att använda **Autentiserare** till Felix Console, till exempel:
@@ -151,7 +153,7 @@ Du kan också använda följande bock-kommando för att skicka `TestHeader` sidh
 
 >[!NOTE]
 >
-När du använder parametern request i en webbläsare visas bara en del av HTML - utan CSS. Detta beror på att alla förfrågningar från HTML görs utan parametern request.
+>När du använder parametern request i en webbläsare visas bara en del av HTML - utan CSS. Detta beror på att alla förfrågningar från HTML görs utan parametern request.
 
 ## Ta bort AEM utloggningslänkar {#removing-aem-sign-out-links}
 

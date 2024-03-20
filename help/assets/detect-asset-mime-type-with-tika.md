@@ -5,10 +5,11 @@ contentOwner: AG
 role: Admin, Architect
 feature: Metadata,Developer Tools,Asset Management
 exl-id: a312466d-8d84-4c94-af85-1549afc61aed
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+solution: Experience Manager, Experience Manager Assets
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '146'
-ht-degree: 0%
+source-wordcount: '147'
+ht-degree: 1%
 
 ---
 
@@ -16,7 +17,7 @@ ht-degree: 0%
 
 Normalt [!DNL Adobe Experience Manager Assets] identifierar MIME-typen för resurser som du överför från filtillägget.
 
-Om du använder [!DNL Apache Tika] för att överföra resurser, [!DNL Assets] identifierar sin MIME-typ från innehållsströmmen under överföringen i stället för filtillägget.
+Om du [!DNL Apache Tika] för att överföra resurser, [!DNL Assets] identifierar sin MIME-typ från innehållsströmmen under överföringen i stället för filtillägget.
 
 Den här funktionen är inaktiverad som standard. Om du vill aktivera funktionen konfigurerar du **[!UICONTROL Day CQ DAM Mime Type]** tjänst från [!UICONTROL Configuration Manager].
 

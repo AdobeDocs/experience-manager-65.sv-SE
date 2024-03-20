@@ -7,16 +7,17 @@ topic-tags: correspondence-management
 docset: aem65
 feature: Correspondence Management
 exl-id: 9593ca2a-7f9e-4487-a1a5-ca44114bff17
-source-git-commit: 000c22028259eb05a61625d43526a2e8314a1d60
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '1092'
+source-wordcount: '1099'
 ht-degree: 0%
 
 ---
 
 # Anpassa gränssnitt för att skapa korrespondens{#customize-create-correspondence-ui}
 
-## Översikt {#overview}
+## Ökning {#overview}
 
 Med Correspondence Management kan ni ommärka sin lösningsmall för att få ett bättre varumärkesvärde och följa företagets varumärkesstandarder. När du ändrar användargränssnittet innebär det att du ändrar organisationslogotypen, som visas i det övre vänstra hörnet av användargränssnittet Create Correspondence.
 

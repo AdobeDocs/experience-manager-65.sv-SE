@@ -6,9 +6,10 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/managing_certificates_and_credentials
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 exl-id: facbeab2-de95-4778-894c-faa771d3391e
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '1323'
+source-wordcount: '1322'
 ht-degree: 0%
 
 ---
@@ -29,7 +30,7 @@ AEM formulär Med digitala signaturer kan du använda autentiseringsuppgifter so
 
 1. I administrationskonsolen klickar du på Inställningar > Pålitlig lagringshantering > HSM-autentiseringsuppgifter och sedan på Lägg till.
 1. I rutan Profilnamn skriver du en sträng som används för att identifiera aliaset. Det här värdet används som en egenskap för vissa åtgärder för digitala signaturer, till exempel åtgärden Signera signaturfält.
-1. I rutan PKCS11-bibliotek skriver du den fullständiga sökvägen till HSM-klientbiblioteket på servern. Till exempel, `c:\Program Files\LunaSA\cryptoki.dll`. I en klustrad miljö måste sökvägen vara identisk för alla servrar i klustret.
+1. I rutan PKCS11-bibliotek skriver du den fullständiga sökvägen till HSM-klientbiblioteket på servern. Till exempel: `c:\Program Files\LunaSA\cryptoki.dll`. I en klustrad miljö måste sökvägen vara identisk för alla servrar i klustret.
 1. Klicka på Testa HSM-anslutning. Om AEM kan ansluta till HSM-enheten visas ett meddelande om att HSM är tillgängligt. Klicka på Nästa.
 1. Använd antingen tokennamnet, kortplats-ID eller indexet för kortplatslista för att identifiera var inloggningsuppgifterna lagras i HSM.
 
@@ -44,7 +45,7 @@ AEM formulär Med digitala signaturer kan du använda autentiseringsuppgifter so
 
 1. I administrationskonsolen klickar du på Inställningar > Pålitlig lagringshantering > HSM-autentiseringsuppgifter och sedan på Lägg till.
 1. I rutan Profilnamn skriver du en sträng som används för att identifiera aliaset. Det här värdet används som en egenskap för vissa åtgärder för digitala signaturer, till exempel åtgärden Signera signaturfält.
-1. I rutan PKCS11-bibliotek skriver du den fullständiga sökvägen till HSM-klientbiblioteket på servern. Till exempel, `c:\Program Files\LunaSA\cryptoki.dll`. I en klustrad miljö måste sökvägen vara identisk för alla servrar i klustret.
+1. I rutan PKCS11-bibliotek skriver du den fullständiga sökvägen till HSM-klientbiblioteket på servern. Till exempel: `c:\Program Files\LunaSA\cryptoki.dll`. I en klustrad miljö måste sökvägen vara identisk för alla servrar i klustret.
 1. Markera kryssrutan Skapa offlineprofil. Klicka på Nästa.
 1. I listan HSM-enhet väljer du tillverkaren av den HSM-enhet där inloggningsuppgifterna lagras.
 1. I listan Facktyp väljer du Fack-ID, Fackindex eller Tokennamn och anger ett värde i rutan Fackinformation. AEM använder dessa inställningar för att avgöra var inloggningsuppgifterna lagras på HSM.

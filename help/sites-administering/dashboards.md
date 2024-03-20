@@ -6,9 +6,10 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: operations
 content-type: reference
 exl-id: 5b934e3a-f554-46ec-a913-8d570abb1503
-source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '825'
+source-wordcount: '832'
 ht-degree: 1%
 
 ---
@@ -61,7 +62,7 @@ Du kanske vill ha flera kontrollpaneler för att snabbt se information om ditt i
 
 ## Kontrollpanelskomponenter {#dashboard-components}
 
-### Översikt {#overview}
+### Ökning {#overview}
 
 Kontrollpanelskomponenter är bara vanliga [AEM](/help/sites-developing/developing-components-samples.md). I det här avsnittet beskrivs rapportkomponenter som levereras med AEM.
 
@@ -152,7 +153,7 @@ Den här komponenten visar ett diagram över det mer besökta avsnittet på en w
 
 ## Utöka instrumentpanel {#extending-dashboard}
 
-### Översikt {#overview-1}
+### Ökning {#overview-1}
 
 Kontrollpaneler är normala sidor ( `cq:Page`) kan därför alla komponenter användas för att sätta samman kontrollpaneler.
 

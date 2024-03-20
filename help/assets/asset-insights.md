@@ -6,9 +6,10 @@ role: User, Admin
 feature: Asset Insights,Asset Reports
 exl-id: 0130ac40-a72b-4caf-a10f-3c7d76eaa1e6
 hide: true
-source-git-commit: 3d5e9ad8ee19756b05e5a77a3f748bc647fcf734
+solution: Experience Manager, Experience Manager Assets
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '742'
+source-wordcount: '734'
 ht-degree: 3%
 
 ---
@@ -37,7 +38,7 @@ Om du vill att Assets Insights ska visa användningsstatistik för resurser mås
 Du kan visa bakgrundsmusik för resursinsikter från metadatasidan.
 
 1. Från [!DNL Assets] användargränssnitt, markera bilden och klicka sedan på **[!UICONTROL Properties]** i verktygsfältet.
-1. På sidan Egenskaper klickar du på **[!UICONTROL Insights]** -fliken.
+1. Klicka på **[!UICONTROL Insights]** -fliken.
 1. Granska användningsinformationen för resursen i **[!UICONTROL Insights]** -fliken. The **[!UICONTROL Score]** I avsnittet beskrivs den totala användningen av tillgångar och prestandan för en tillgång.
 
    Användningspoäng beskriver hur många gånger resursen används i olika lösningar.
@@ -46,16 +47,16 @@ Du kan visa bakgrundsmusik för resursinsikter från metadatasidan.
 
 1. Granska **[!UICONTROL Usage Statistics]** för att ta reda på vilka enheter resursen ingick i och vilka kreativa lösningar som nyligen använde den. Ju högre användning, desto större chans att resursen är populär bland användarna. Användningsdata visas under följande rubriker:
 
-   * **Tillgång**: Antalet gånger som tillgången var en del av en samling eller sammansatt tillgång
-   * **Webb och mobil**: Antalet gånger som resursen ingick i webbplatser och appar
-   * **Social**: Antalet gånger som resursen användes i lösningar som Adobe Social och Adobe Campaign
-   * **E-post**: Antalet gånger som resursen användes i e-postkampanjer
+   * **Tillgång**: Antal gånger som tillgången ingick i en samling eller sammansatt tillgång
+   * **Webb och mobil**: Antal gånger som resursen ingick i webbplatser och appar
+   * **Social**: Antal gånger som resursen användes i lösningar som Adobe Social och Adobe Campaign
+   * **E-post**: Antal gånger som resursen användes i e-postkampanjer
 
    ![användningsstatistik](assets/usage_statistics.png)
 
    >[!NOTE]
    >
-   >Eftersom funktionen Assets Insights (Resursinsikter) vanligtvis hämtar data från Adobe Analytics från lösningar med jämna mellanrum, kanske inte avsnittet Lösningar visar de senaste data. Den tidsperiod som data visas för beror på schemat för hämtningsåtgärden som Assets Insights kör för att hämta Analytics-data.
+   >Eftersom funktionen Assets Insights (Resursinsikter) vanligtvis hämtar data från Adobe Analytics från lösningar med jämna mellanrum, kan det hända att avsnittet Lösningar inte visar de senaste data. Den tidsperiod som data visas för beror på schemat för hämtningsåtgärden som Assets Insights kör för att hämta Analytics-data.
 
 1. Om du vill visa prestandastatistik för resursen grafiskt över en tidsperiod väljer du period i **[!UICONTROL Performance Statistics]** -avsnitt. Detaljer, inklusive klick och visningar, visas som trendlinjer i ett diagram.
 

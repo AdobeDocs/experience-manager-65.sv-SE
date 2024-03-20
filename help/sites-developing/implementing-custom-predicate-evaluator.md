@@ -7,9 +7,10 @@ topic-tags: platform
 content-type: reference
 docset: aem65
 exl-id: 72cbe589-14a1-40f5-a7cb-8960f02e0ebb
-source-git-commit: b66ec42c35b5b60804015d340b8194bbd6ef3e28
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '762'
+source-wordcount: '664'
 ht-degree: 0%
 
 ---
@@ -18,7 +19,7 @@ ht-degree: 0%
 
 I det här avsnittet beskrivs hur du utökar [Frågebyggaren](/help/sites-developing/querybuilder-api.md) genom att implementera en anpassad predikatutvärderare.
 
-## Översikt {#overview}
+## Ökning {#overview}
 
 The [Frågebyggaren](/help/sites-developing/querybuilder-api.md) erbjuder ett enkelt sätt att fråga innehållsdatabasen. CQ levereras med en uppsättning prediktiva utvärderare som hjälper dig att hantera dina data.
 
@@ -102,13 +103,13 @@ Genom att gruppera metadata för replikering med en anpassad predikatutvärderar
 
 >[!NOTE]
 >
-Inställningarna av nya Adobe Experience Manager-projekt (AEM) med hjälp av maven dokumenteras av [Skapa AEM projekt med Apache Maven](/help/sites-developing/ht-projects-maven.md).
+>Inställningarna av nya Adobe Experience Manager-projekt (AEM) med hjälp av maven dokumenteras av [Skapa AEM projekt med Apache Maven](/help/sites-developing/ht-projects-maven.md).
 
 Uppdatera först Maven-beroendena för ditt projekt. The `PredicateEvaluator` ingår i `cq-search` så den måste läggas till i filen Maven pom.xml.
 
 >[!NOTE]
 >
-Omfattningen av `cq-search` beroende är inställt på `provided` därför `cq-search` tillhandahålls av `OSGi` behållare.
+>Omfattningen av `cq-search` beroende är inställt på `provided` därför `cq-search` tillhandahålls av `OSGi` behållare.
 
 pom.xml
 
@@ -137,7 +138,7 @@ The `cq-search` projektet innehåller `AbstractPredicateEvaluator` abstrakt klas
 
 >[!NOTE]
 >
-I proceduren nedan beskrivs hur du skapar en `Xpath` -uttryck för att filtrera data. Ett annat alternativ är att implementera `includes` metod som markerar data på radbasis. Se [Java™-dokumentation](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/search/eval/PredicateEvaluator.html#includes28comdaycqsearchpredicatejavaxjcrqueryrowcomdaycqsearchevalevaluationcontext29) för mer information.
+>I proceduren nedan beskrivs hur du skapar en `Xpath` -uttryck för att filtrera data. Ett annat alternativ är att implementera `includes` metod som markerar data på radbasis. Se [Java™-dokumentation](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/search/eval/PredicateEvaluator.html#includes28comdaycqsearchpredicatejavaxjcrqueryrowcomdaycqsearchevalevaluationcontext29) för mer information.
 
 1. Skapa en Java™-klass som utökar `com.day.cq.search.eval.AbstractPredicateEvaluator`
 1. Anteckna din klass med en `@Component` gillar följande
@@ -165,11 +166,11 @@ I proceduren nedan beskrivs hur du skapar en `Xpath` -uttryck för att filtrera 
 
 >[!NOTE]
 >
-The `factory`måste vara en unik sträng som börjar med `com.day.cq.search.eval.PredicateEvaluator/`och avslutas med namnet på din egen `PredicateEvaluator`.
+>The `factory`måste vara en unik sträng som börjar med `com.day.cq.search.eval.PredicateEvaluator/`och avslutas med namnet på din egen `PredicateEvaluator`.
 
 >[!NOTE]
 >
-Namnet på `PredicateEvaluator` är predikatnamnet, som används när frågor skapas.
+>Namnet på `PredicateEvaluator` är predikatnamnet, som används när frågor skapas.
 
 1. Åsidosätt:
 

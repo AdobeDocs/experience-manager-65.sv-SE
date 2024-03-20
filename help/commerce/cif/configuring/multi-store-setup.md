@@ -7,9 +7,10 @@ activity: setup
 audience: administrator
 feature: Commerce Integration Framework
 exl-id: 1d4e9b7b-848b-4007-b884-dd48682d62e8
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+solution: Experience Manager,Commerce
+source-git-commit: 1751bfb32386685e3a159939113b9667b5e17f0e
 workflow-type: tm+mt
-source-wordcount: '384'
+source-wordcount: '369'
 ht-degree: 0%
 
 ---
@@ -34,7 +35,7 @@ Följ stegen nedan för att ansluta en AEM plats och AEM CIF kärnkomponenter s�
 
 2. Kontrollera att anslutningen mellan AEM &amp; Adobe Commerce fungerar.
 
-3. Skapa en underordnad konfiguration för CIF-Cloud Servicens konfiguration enligt följande:
+3. Skapa en underordnad konfiguration för den CIF Cloud Servicen enligt följande steg:
 
    * Gå AEM till Verktyg > Allmänt > [Konfigurationsläsaren](/help/sites-administering/configurations.md#using-configuration-browser)
    * Välj den baskonfiguration som du har skapat
@@ -57,6 +58,6 @@ Följ stegen nedan för att ansluta en AEM plats och AEM CIF kärnkomponenter s�
 ## Ytterligare resurser
 
 * [Adobe Commerce webbplatser, butiker och vyer](https://experienceleague.adobe.com/docs/commerce-admin/start/setup/websites-stores-views.html)
-* [AEM CIF Core Components - konfiguration av flera butiker/platser](https://github.com/adobe/aem-core-cif-components#multi-store--site-configuration)
+* [AEM CIF kärnkomponenter - konfiguration av flera butiker/platser](https://github.com/adobe/aem-core-cif-components#multi-store--site-configuration)
 * [Använda Multi-Site Manager](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/translation/multi-site-manager-feature-video-use.html)
 * [Återanvända innehåll: Multi Site Manager och Live Copy](/help/sites-administering/msm.md)

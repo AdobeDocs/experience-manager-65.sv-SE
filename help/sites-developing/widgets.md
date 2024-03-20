@@ -7,7 +7,8 @@ topic-tags: components
 content-type: reference
 docset: aem65
 exl-id: 56a9591c-cd78-42e8-a5d7-6b48581d6af6
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '4896'
 ht-degree: 0%
@@ -194,7 +195,7 @@ The **Flera paneler** visas på samma sätt som **Fullständig** men den är upp
 
 * Definieras av en nod (nodtyp = `cq:Dialog`, xtype = ` [tabpanel](/help/sites-developing/xtypes.md#tabpanel)`).
 * Visar tre flikar (nodtyp = `cq:Panel`).
-* Varje flik har två textfält (nodtyp = , xtyp = `cq:Widget`` [textfield](/help/sites-developing/xtypes.md#textfield)`).
+* Varje flik har två textfält (nodtyp = `cq:Widget`, xtyp = ` [textfield](/help/sites-developing/xtypes.md#textfield)`).
 * Definieras av noden:
   `/apps/extjstraining/components/dialogbasics/multipanel`
 * Renderas i json-format genom att begära:
@@ -331,9 +332,9 @@ The **Växla fält** visas ett fönster med en flik. Fliken har en kryssruta: n�
 
 Dess viktigaste egenskaper är:
 
-* Definieras av en nod (nodtyp = , xtyp = `cq:Dialog`` [dialog](/help/sites-developing/xtypes.md#dialog)`).
-* Visar en widget (nodtyp = , xtyp = ) med en `tabpanel` panel (nodtyp = ` [tabpanel](/help/sites-developing/xtypes.md#textpanel)``cq:Widget``cq:Panel`).
-* Panelen har en urvals-/kryssrutewidget (nodtyp = , xtype = , type = ) och en komprimerbar dialogfältuppsättningswidget (nodtyp = , xtype = ) som är dold som standard, med två textfältswidgetar (nodtyp = , xtype = `cq:Widget`` [dialogfieldset](/help/sites-developing/xtypes.md#dialogfieldset)`` [selection](/help/sites-developing/xtypes.md#selection)`` [textfield](/help/sites-developing/xtypes.md#textfield)`` [checkbox](/help/sites-developing/xtypes.md#checkbox)``cq:Widget``cq:Widget`).
+* Definieras av en nod (nodtyp = `cq:Dialog`, xtyp = ` [dialog](/help/sites-developing/xtypes.md#dialog)`).
+* Visar en `tabpanel` widget (nodtyp = `cq:Widget`, xtyp = ` [tabpanel](/help/sites-developing/xtypes.md#textpanel)`) med en panel (nodtyp = `cq:Panel`).
+* Panelen har en val-/kryssrutewidget (nodtyp = `cq:Widget`, xtype = ` [selection](/help/sites-developing/xtypes.md#selection)`, type = ` [checkbox](/help/sites-developing/xtypes.md#checkbox)`) och en komprimerbar dialogfältuppsättningswidget (nodtyp = `cq:Widget`, xtype = ` [dialogfieldset](/help/sites-developing/xtypes.md#dialogfieldset)`) som är dold som standard, med två textfältswidgetar (nodtyp = `cq:Widget`, xtype = ` [textfield](/help/sites-developing/xtypes.md#textfield)`).
 * Definieras av `togglefields` nod vid:
   `/apps/extjstraining/components/dynamicdialogs/togglefields`
 * Renderas i json-format genom att begära:
@@ -369,7 +370,7 @@ De färdiga widgetarna som levereras med AEM bör omfatta de flesta användnings
 
 De anpassade widgetarna och plugin-programmet ingår i komponenten som kallas **3. Anpassade widgetar** för **paketet Using ExtJS Widgets** . Så här inkluderar du den här komponenten på exempelsidan:
 
-1. Lägg till **3. Anpassade widgetar till exempelsidan från** fliken Använda ExtJS-widgetar **** i **Sidekick**.
+1. Lägg till **3. Anpassade widgetar** till exempelsidan från **fliken Använda ExtJS-widgetar** i **Sidekick**.
 1. Komponenten visar en titel, lite text och, när du klickar på **länken PROPERTIES** , egenskaperna för det stycke som lagras i databasen. Om du klickar igen döljs egenskaperna.
 Komponenten visas enligt följande:
 
@@ -404,7 +405,7 @@ Den anpassade `multifield` widget (xtype = `ejstcustom`):
 * Åsidosättningar `CQ.Ext.Component#initComponent` för att lägga till de tre fälten:
    * `allowField` är en [CQ.form.Selection](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html?class=CQ.form.Selection) objekt av typen &#39;select&#39;. optionsProvider är en konfiguration av Selection-objektet som initieras med optionsProvider-konfigurationen för CustomWidget som definierats i dialogrutan
    * `otherField` är en [CQ.Ext.form.TextField](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html?class=CQ.Ext.form.TextField) object
-* Åsidosätter metoderna `setValue`, `getValue`, och CQ.form.CompositeField](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html?class=CQ.form.CompositeField) [för att ange och `getRawValue` hämta värdet för CustomWidget med formatet:
+* Åsidosätter metoderna `setValue`, , och `getRawValue` CQ.form.CompositeField](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html?class=CQ.form.CompositeField) [för att ange och hämta värdet för CustomWidget `getValue`med formatet:
   `<allowField value>/<otherField value>, for example: 'Bla1/hello'`.
 * Registrerar sig själv som `ejstcustom`&#39; xtype:
   `CQ.Ext.reg('ejstcustom', Ejst.CustomWidget);`
@@ -419,7 +420,7 @@ I den anpassade **`Treebrowse`** widgetbaserade dialogrutan visas ett fönster m
 
 Den anpassade `treebrowse` dialogrutan:
 
-* Definieras av en nod (nodtyp = , xtyp = `cq:Dialog`` [dialog](/help/sites-developing/xtypes.md#dialog)`).
+* Definieras av en nod (nodtyp = `cq:Dialog`, xtyp = ` [dialog](/help/sites-developing/xtypes.md#dialog)`).
 * Visar ett `tabpanel` widget (nodtyp = `cq:Widget`, xtype = ` [tabpanel](/help/sites-developing/xtypes.md#tabpanel)`) som innehåller en panel (nodtyp = `cq:Widget`, xtype = ` [panel](/help/sites-developing/xtypes.md#panel)`).
 * Panelen har en anpassad widget (nodtyp = `cq:Widget`, xtype = `ejstbrowse`)
 * Definieras av `treebrowse` nod vid:

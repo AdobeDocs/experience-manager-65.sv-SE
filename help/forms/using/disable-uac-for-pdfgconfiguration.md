@@ -2,9 +2,10 @@
 title: Inaktivera UAC för PDFG-konfiguration för både JEE och OSGI
 description: Lär dig hur du kan inaktivera UAC för PDFG-konfiguration för att korrigera konvertering från Word till PDF.
 exl-id: 785b7bb4-7158-45ea-a1e5-eebf3dc3ebc3
-source-git-commit: 000c22028259eb05a61625d43526a2e8314a1d60
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '254'
+source-wordcount: '257'
 ht-degree: 0%
 
 ---

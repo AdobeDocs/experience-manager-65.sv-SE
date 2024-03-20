@@ -6,16 +6,17 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: correspondence-management
 feature: Correspondence Management
 exl-id: 9d43d9d4-5487-416c-b641-e807227ac056
-source-git-commit: 000c22028259eb05a61625d43526a2e8314a1d60
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '597'
+source-wordcount: '591'
 ht-degree: 0%
 
 ---
 
 # API:er för åtkomst till bokstavsinstanser {#apis-to-access-letter-instances}
 
-## Översikt {#overview}
+## Ökning {#overview}
 
 Med hjälp av användargränssnittet Skapa korrespondens för korrespondenshantering kan du spara utkast av pågående bokstavsinstanser och det finns skickade brevinstanser.
 
@@ -33,7 +34,8 @@ Correspondence Management exponerar API:er för att hämta bokstavsinstanser via
 
 >[!NOTE]
 >
->LetterInstanceService är en OSGI-tjänst och instansen kan hämtas med @Reference i Java™-klassen eller sling.getService(LetterInstanceService). klass) i JSP.
+>LetterInstanceService är en OSGI-tjänst och instansen kan hämtas med @Reference i Java™
+>Class eller sling.getService(LetterInstanceService). klass) i JSP.
 
 ### Använda getAllLetterInstances {#using-nbsp-getallletterinstances}
 
@@ -145,7 +147,7 @@ CCR-gränssnittet stöder parametern cmLetterInstanceId som kan användas för a
 
 >[!NOTE]
 >
-Du behöver inte ange cmLetterId eller cmLetterName/State/Version när du läser in korrespondensen igen, eftersom skickade data redan innehåller all information om korrespondensen som läses in igen. RandomNo används för att undvika problem med webbläsarens cache-lagring. Du kan använda en tidsstämpel som ett slumpmässigt tal.
+>Du behöver inte ange cmLetterId eller cmLetterName/State/Version när du läser in korrespondensen igen, eftersom skickade data redan innehåller all information om korrespondensen som läses in igen. RandomNo används för att undvika problem med webbläsarens cache-lagring. Du kan använda en tidsstämpel som ett slumpmässigt tal.
 
 ### Öppnar skickad bokstavsinstans {#opening-submitted-letter-instance}
 

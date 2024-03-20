@@ -1,14 +1,15 @@
 ---
 title: Internationaliserar gränssnittssträngar
-description: Java&trade; och JavaScript-API:er gör att du kan internationalisera strängar
+description: Java&trade; och JavaScript API:er gör att du kan internationalisera strängar
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: components
 exl-id: bc5b1cb7-a011-42fe-8759-3c7ee3068aad
-source-git-commit: a56d5121a6ce11b42a6c30dae9e479564d16af27
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '1097'
+source-wordcount: '1091'
 ht-degree: 0%
 
 ---
@@ -66,7 +67,7 @@ I18n i18n = new I18n(resourceBundle);
 
 #### Internationalisering av en sträng {#internationalizing-a-string}
 
-Använd `get` metoden `I18n` objekt för att internationalisera en sträng. Den enda obligatoriska parametern i `get` -metoden är strängen som ska internationaliseras. Strängen motsvarar en sträng i en Translator-ordlista. get-metoden söker upp strängen i ordlistan och returnerar översättningen för det aktuella språket.
+Använd `get` metod för `I18n` objekt för att internationalisera en sträng. Den enda obligatoriska parametern i `get` -metoden är strängen som ska internationaliseras. Strängen motsvarar en sträng i en Translator-ordlista. get-metoden söker upp strängen i ordlistan och returnerar översättningen för det aktuella språket.
 
 Det första argumentet i `get` Metoden måste följa följande regler:
 
@@ -82,7 +83,7 @@ i18n.get("Enter a search keyword");
 
 Ange [översättningstips](/help/sites-developing/i18n-translator.md#adding-changing-and-removing-strings) av den internationaliserade strängen för att skilja mellan dubblettsträngar i ordlistan. Använd den andra valfria parametern för `get` metod för att tillhandahålla översättningstips. Översättningstipset måste exakt matcha kommentaregenskapen för objektet i ordlistan.
 
-Ordlistan innehåller till exempel strängen `Request` två gånger: en gång som ett verb och en gång som ett substantiv. I följande kod inkluderas översättningstipset som ett argument i `get` metod:
+Ordlistan innehåller till exempel strängen `Request` två: en gång som ett verb och en gång som ett substantiv. I följande kod inkluderas översättningstipset som ett argument i `get` metod:
 
 ```java
 i18n.get("Request","A noun, as in a request for a web page");
@@ -90,7 +91,7 @@ i18n.get("Request","A noun, as in a request for a web page");
 
 #### Inkludera variabler i lokaliserade meningar {#including-variables-in-localized-sentences}
 
-Inkludera variabler i den lokaliserade strängen för att skapa sammanhangsbaserad betydelse i en mening. När du har loggat in i ett webbprogram visas till exempel meddelandet &quot;Welcome back Administrator&quot; på startsidan. Du har två meddelanden i inkorgen.&quot; Sidkontexten bestämmer användarnamnet och antalet meddelanden.
+Inkludera variabler i den lokaliserade strängen för att skapa sammanhangsbaserad betydelse i en mening. När du har loggat in i ett webbprogram visas till exempel meddelandet &quot;Welcome back Administrator&quot; på startsidan. Du har två meddelanden i din inkorg.&quot; Sidkontexten bestämmer användarnamnet och antalet meddelanden.
 
 [I ordlistan](/help/sites-developing/i18n-translator.md#adding-changing-and-removing-strings), representeras variablerna i strängar som index inom hakparenteser. Ange värdena för variablerna som argument för `get` -metod. Argumenten placeras efter översättningstipset och indexen motsvarar argumentens ordning:
 
@@ -102,7 +103,7 @@ Den internationaliserade strängen och översättningstipset måste exakt matcha
 
 #### Använda metoden Statisk hämtning {#using-the-static-get-method}
 
-The `I18N` klassen definierar en statisk `get` -metod som är användbar när du måste lokalisera några strängar. Förutom parametrarna för ett objekts `get` -metoden kräver den statiska metoden `SlingHttpRequest` eller `ResourceBundle` som du använder, beroende på hur du avgör vilket språk som användaren föredrar:
+The `I18N` klassen definierar en statisk `get` som är användbar när du måste lokalisera några strängar. Förutom parametrarna för ett objekts `get` -metoden kräver den statiska metoden `SlingHttpRequest` -objektet eller `ResourceBundle` som du använder, beroende på hur du avgör vilket språk som användaren föredrar:
 
 * Använd användarens språkinställning: Ange SlingHttpRequest som den första parametern.
 
@@ -113,9 +114,9 @@ The `I18N` klassen definierar en statisk `get` -metod som är användbar när du
 
 ### Internationalisering av strängar i JavaScript-kod {#internationalizing-strings-in-javascript-code}
 
-Med JavaScript API kan du lokalisera strängar på klienten. Som med [Java™ och JSP](#internationalizing-strings-in-java-and-jsp-code) JavaScript API gör att du kan identifiera strängar för att lokalisera, ge lokaliseringstips och ta med variabler i de lokaliserade strängarna.
+Med JavaScript API kan du lokalisera strängar på klienten. Som med [Java™ och JSP](#internationalizing-strings-in-java-and-jsp-code) JavaScript-API:t gör att du kan identifiera strängar för att lokalisera, ge lokaliseringstips och ta med variabler i de lokaliserade strängarna.
 
-The `granite.utils` [biblioteksmapp för klient](/help/sites-developing/clientlibs.md) innehåller JavaScript-API:t. Om du vill använda API:t inkluderar du den här klientbiblioteksmappen på sidan. Lokaliseringsfunktionerna använder `Granite.I18n` namnutrymme.
+The `granite.utils` [klientbiblioteksmapp](/help/sites-developing/clientlibs.md) innehåller JavaScript-API:t. Om du vill använda API:t inkluderar du den här klientbiblioteksmappen på sidan. Lokaliseringsfunktionerna använder `Granite.I18n` namnutrymme.
 
 Innan du presenterar lokaliserade strängar anger du språkområdet med `Granite.I18n.setLocale` funktion. Funktionen kräver språkkoden för språkområdet som ett argument:
 
@@ -123,7 +124,7 @@ Innan du presenterar lokaliserade strängar anger du språkområdet med `Granite
 Granite.I18n.setLocale("fr");
 ```
 
-Om du vill presentera en lokaliserad sträng använder du `Granite.I18n.get` funktion:
+Använd kommandot `Granite.I18n.get` funktion:
 
 ```
 Granite.I18n.get("string to localize");
@@ -142,7 +143,7 @@ Funktionsparametrarna skiljer sig från Java™ I18n.get-metoden:
 * Den andra parametern är en array med värden som ska matas in i stränglitteralen.
 * Den tredje parametern är lokaliseringstipset.
 
-I följande exempel används JavaScript för att lokalisera administratören för välkomstsidan. Du har två meddelanden i inkorgen.&quot; mening:
+I följande exempel används JavaScript för att lokalisera administratören för välkomstsidan. Du har två meddelanden i din inkorg.&quot; mening:
 
 ```
 Granite.I18n.setLocale("fr");

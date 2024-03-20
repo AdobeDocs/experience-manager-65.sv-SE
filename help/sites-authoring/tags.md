@@ -7,10 +7,11 @@ content-type: reference
 topic-tags: site-features
 docset: aem65
 exl-id: 49f95b31-92cd-4124-8c0f-c9802099fd0b
-source-git-commit: 27e5c7fea4e90873bf80f976e179b5af0088f550
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '563'
-ht-degree: 3%
+ht-degree: 0%
 
 ---
 
@@ -41,7 +42,7 @@ När du utformar innehållsstrukturen för en plats och metadatarammet för resu
 
 I redigeringsmiljön kan författare lägga till taggar genom att gå till sidegenskaperna och ange en eller flera taggar i **Taggar/nyckelord** fält.
 
-Tillämpa [fördefinierade taggar](/help/sites-administering/tags.md), i **Sidegenskaper** fönstret använder **Taggar** -fältet och **Markera taggar** -fönstret. Fliken **Standardtaggar** är standardnamnutrymmet, vilket innebär att taxonomin inte har prefixet `namespace-string:`. 
+Tillämpa [fördefinierade taggar](/help/sites-administering/tags.md), i **Sidegenskaper** fönstret använder **Taggar** -fältet och **Markera taggar** -fönstret. The **Standardtaggar** är standardnamnutrymmet, vilket betyder att det inte finns något `namespace-string:` som är förfixerade till taxonomin.
 
 ![Markera taggfönstret, använd X-knappen för att avmarkera de markerade taggarna](assets/chlimage_1-41.png)
 

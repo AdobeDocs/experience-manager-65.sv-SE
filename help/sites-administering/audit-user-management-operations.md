@@ -8,9 +8,10 @@ content-type: reference
 docset: aem65
 exl-id: 7a4406c9-2f98-4bf8-b32c-1ec1e7ff36f0
 feature: Operations
-source-git-commit: 96e2e945012046e6eac878389b7332985221204e
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '300'
+source-wordcount: '295'
 ht-degree: 1%
 
 ---
@@ -27,13 +28,13 @@ Förbättringen möjliggör granskning av CRUD-åtgärder (Skapa, Läs, Uppdater
 * En användare läggs till i en grupp
 * Behörighetsändringar för en befintlig användare eller grupp
 
-Som standard skrivs posterna till `error.log` -fil. För att underlätta övervakningen rekommenderar vi att de dirigeras om till en separat loggfil. Mer information om hur du gör detta i stycket nedan.
+Som standard skrivs posterna till `error.log` -fil. För att underlätta övervakningen rekommenderar vi att de dirigeras om till en separat loggfil. Mer information om hur du gör detta finns i stycket nedan.
 
 ## Omdirigera utdata till en separat loggfil {#redirecting-the-output-to-a-separate-log-file}
 
 Om du vill dirigera om loggningsutdata till en separat loggfil skapar du en **Loggningsloggare för Apache Sling** konfiguration. Låt oss använda `useraudit.log` som namnet på den separata filen i exemplet nedan.
 
-1. Gå till webbkonsolen genom att bläddra till *https://serveraddress:serverport/system/console/configMgr*
+1. Gå till webbkonsolen genom att gå till *https://serveraddress:serverport/system/console/configMgr*
 1. Sök efter **Konfiguration av loggningsloggare för Apache Sling**. Tryck sedan på + till höger om posten för att skapa en fabrikskonfiguration.
 1. Skapa följande konfiguration:
 

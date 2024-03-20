@@ -2,7 +2,8 @@
 title: Konfigurera inställningar för frånvaro
 description: Lär dig hur du konfigurerar frånvaroinställningar till din Adobe Experience Manager Forms-instans.
 exl-id: e4c9d74c-e08d-4675-91f2-4f9fc2f1bcea
-source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '793'
 ht-degree: 0%

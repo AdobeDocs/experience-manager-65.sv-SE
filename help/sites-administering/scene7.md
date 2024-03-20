@@ -6,7 +6,8 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
 content-type: reference
 exl-id: f244cfb5-5550-4f20-92f0-bb296e2bf76e
-source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '5236'
 ht-degree: 0%
@@ -377,7 +378,7 @@ När en resurs läggs till i Experience Manager Assets överförs den automatisk
 
 >[!NOTE]
 >
-Den största filstorleken för automatisk överföring från Experience Manager Assets till Dynamic Media Classic är 500 MB.
+>Den största filstorleken för automatisk överföring från Experience Manager Assets till Dynamic Media Classic är 500 MB.
 
 **Så här laddar du upp från Experience Manager Assets:**
 
@@ -387,7 +388,7 @@ Den största filstorleken för automatisk överföring från Experience Manager 
 
    >[!NOTE]
    >
-   Se [Konfigurera tillståndet (publicerat/opublicerat) för resurser som skickats till Dynamic Media Classic](#configuring-the-state-published-unpublished-of-assets-pushed-to-scene) om du vill ha information om hur du överför resurser till Dynamic Media Classic i ett opublicerat läge.
+   >Se [Konfigurera tillståndet (publicerat/opublicerat) för resurser som skickats till Dynamic Media Classic](#configuring-the-state-published-unpublished-of-assets-pushed-to-scene) om du vill ha information om hur du överför resurser till Dynamic Media Classic i ett opublicerat läge.
 
    ![screen_shot_2018-03-15at52501pm](assets/screen_shot_2018-03-15at52501pm.jpg)
 
@@ -398,8 +399,8 @@ Den största filstorleken för automatisk överföring från Experience Manager 
 
    >[!NOTE]
    >
-   * När du lägger till resurser efter automatisering och de inte placeras i CQ-målmappen, överförs de inte till Dynamic Media Classic.
-   * Experience Manager bäddar in alla metadata som XMP innan de överförs till Dynamic Media Classic, så att alla egenskaper på metadatanoden är tillgängliga i Dynamic Media Classic som XMP.
+   >* När du lägger till resurser efter automatisering och de inte placeras i CQ-målmappen, överförs de inte till Dynamic Media Classic.
+   >* Experience Manager bäddar in alla metadata som XMP innan de överförs till Dynamic Media Classic, så att alla egenskaper på metadatanoden är tillgängliga i Dynamic Media Classic som XMP.
 
 ### Konfigurera status (publicerad/opublicerad) för resurser som skickats till Dynamic Media Classic {#configuring-the-state-published-unpublished-of-assets-pushed-to-scene}
 
@@ -424,7 +425,7 @@ Detta är samma steg som du följer för att skapa säkra testinställningar i D
 
 >[!NOTE]
 >
-Om installationsmiljön är ett 64-bitars UNIX®-operativsystem kan du läsa [https://helpx.adobe.com/experience-manager/kb/enable-xmp-write-back-64-bit-redhat.html](https://helpx.adobe.com/experience-manager/kb/enable-xmp-write-back-64-bit-redhat.html) om andra konfigurationsalternativ som du måste ange.
+>Om installationsmiljön är ett 64-bitars UNIX®-operativsystem kan du läsa [https://helpx.adobe.com/experience-manager/kb/enable-xmp-write-back-64-bit-redhat.html](https://helpx.adobe.com/experience-manager/kb/enable-xmp-write-back-64-bit-redhat.html) om andra konfigurationsalternativ som du måste ange.
 
 #### Kända begränsningar för att överföra resurser i opublicerat läge  {#known-limitations-for-pushing-assets-in-unpublished-state}
 
@@ -435,13 +436,13 @@ Om du använder den här funktionen bör du tänka på följande begränsningar:
 
 >[!NOTE]
 >
-Om du vill publicera resurser direkt är det bäst att behålla **[!UICONTROL Enable Secure Preview]** ange till **[!UICONTROL Immediately]** och använder **[!UICONTROL Enable Automatic Upload]** -funktion.
+>Om du vill publicera resurser direkt är det bäst att behålla **[!UICONTROL Enable Secure Preview]** ange till **[!UICONTROL Immediately]** och använder **[!UICONTROL Enable Automatic Upload]** -funktion.
 
 ### Ange status för resurser som skickats till Dynamic Media Classic som opublicerade {#setting-the-state-of-assets-pushed-to-scene-as-unpublished}
 
 >[!NOTE]
 >
-Om en användare publicerar resursen i Experience Manager utlöses S7-resursen automatiskt till produktions-/liveresursen (resursen är inte längre i säker förhandsvisning/avpublicerad).
+>Om en användare publicerar resursen i Experience Manager utlöses S7-resursen automatiskt till produktions-/liveresursen (resursen är inte längre i säker förhandsvisning/avpublicerad).
 
 **Så här anger du status för resurser som skickats till Dynamic Media Classic som opublicerade:**
 
@@ -513,7 +514,7 @@ Endast en Dynamic Media Classic-konfiguration kan markeras som standard vid en v
 
    >[!NOTE]
    >
-   Om det bara finns en konfiguration väljer du **[!UICONTROL Default Configuration]** har ingen effekt.
+   >Om det bara finns en konfiguration väljer du **[!UICONTROL Default Configuration]** har ingen effekt.
 
 ### Konfigurera Ad-hoc-mappen {#configuring-the-ad-hoc-folder}
 
@@ -570,11 +571,11 @@ Du konfigurerar det godkända filformatet efter MIME-typ i OSGi-området (Open S
 
    >[!NOTE]
    >
-   Om du överför PSD-filer och vill bearbeta dem som mallar med lagerextraheringar anger du följande i **[!UICONTROL jobParam]** värdefält:
+   >Om du överför PSD-filer och vill bearbeta dem som mallar med lagerextraheringar anger du följande i **[!UICONTROL jobParam]** värdefält:
    >
-   `process=MaintainLayers&layerNaming=AppendName&createTemplate=true`
+   >`process=MaintainLayers&layerNaming=AppendName&createTemplate=true`
    >
-   Kontrollera att PSD-filen innehåller&quot;lager&quot;. Om det bara är en bild eller en bild med mask, bearbetas den som en bild eftersom det inte finns några lager att bearbeta.
+   >Kontrollera att PSD-filen innehåller&quot;lager&quot;. Om det bara är en bild eller en bild med mask, bearbetas den som en bild eftersom det inte finns några lager att bearbeta.
 
 1. I det övre vänstra hörnet på CRXDE Lite-sidan väljer du **[!UICONTROL Save All]**.
 
@@ -616,6 +617,6 @@ Om du har problem med att integrera Experience Manager med Dynamic Media Classic
 
 >[!CAUTION]
 >
-Det kan ta lång tid att importera mediefiler från ett befintligt Dynamic Media Classic-företagskonto och visa dem i Experience Manager. Se till att du anger en mapp i Dynamic Media Classic som inte har för många resurser. Rotmappen har till exempel ofta för många resurser.
+>Det kan ta lång tid att importera mediefiler från ett befintligt Dynamic Media Classic-företagskonto och visa dem i Experience Manager. Se till att du anger en mapp i Dynamic Media Classic som inte har för många resurser. Rotmappen har till exempel ofta för många resurser.
 >
-Om du vill testa integreringen ska rotmappen bara peka på en undermapp, i stället för på hela företaget.
+>Om du vill testa integreringen ska rotmappen bara peka på en undermapp, i stället för på hela företaget.

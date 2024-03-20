@@ -2,7 +2,8 @@
 title: Product Cockpit
 description: Arbeta med Product Cockpit som ger en enhetlig översikt över länkade produktkataloger och tillhörande innehåll.
 exl-id: 05ef2604-1d52-4397-a696-0b64717cc3cc
-source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
+solution: Experience Manager,Commerce
+source-git-commit: 1751bfb32386685e3a159939113b9667b5e17f0e
 workflow-type: tm+mt
 source-wordcount: '428'
 ht-degree: 0%
@@ -11,7 +12,7 @@ ht-degree: 0%
 
 # Product Cockpit {#product-cockpit}
 
-## Översikt {#overview}
+## Ökning {#overview}
 
 I Product Cockpit finns en enhetlig översikt över länkade produktkataloger och tillhörande innehåll. Allt associerat innehåll har länkar som snabbt kommer åt det från cockpit.
 

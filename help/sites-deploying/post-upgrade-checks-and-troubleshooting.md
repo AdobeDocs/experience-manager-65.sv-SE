@@ -8,9 +8,10 @@ content-type: reference
 docset: aem65
 feature: Upgrading
 exl-id: ceac2b52-6885-496d-9517-5fc7291ad070
-source-git-commit: 69346a710708ee659ee97e9fdc193c8ea2658fe6
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '1785'
+source-wordcount: '1793'
 ht-degree: 0%
 
 ---
@@ -32,9 +33,9 @@ Efter [Lokal uppgradering](/help/sites-deploying/in-place-upgrade.md) följande 
 * [Inledande validering av sidor](#main-pars-header-20827371)
 * [Använd AEM](#main-pars-header-215142387)
 
-* [Migrera AEM](#main-pars-header-1434457709)
+* [AEM](#main-pars-header-1434457709)
 
-* [Verifiera schemalagda underhållskonfigurationer](#main-pars-header-1552730183)
+* [Verifiera planerade underhållskonfigurationer](#main-pars-header-1552730183)
 
 * [Aktivera replikeringsagenter](#main-pars-header-823243751)
 
@@ -67,7 +68,7 @@ Här följer ett exempel på en rapport som visar ett paket som inte installerad
 
 **error.log**
 
-error.log bör granskas noggrant under och efter det att AEM startats med målversionen jar. Alla varningar och fel bör granskas. I allmänhet är det bäst att söka efter problem i början av loggen. Fel som inträffar senare i loggen kan i själva verket vara biverkningar av en rotorsak som anropas tidigt i filen. Om upprepade fel och varningar inträffar, se nedan för [Analysera problem med uppgraderingen](/help/sites-deploying/post-upgrade-checks-and-troubleshooting.md#analyzing-issues-with-the-upgrade).
+error.log bör granskas noggrant under och efter det att AEM startats med målversionen jar. Alla varningar och fel bör granskas. I allmänhet är det bäst att söka efter problem i början av loggen. Fel som inträffar senare i loggen kan i själva verket vara bieffekter av en rotorsak som anropas tidigt i filen. Om upprepade fel och varningar inträffar, se nedan för [Analysera problem med uppgraderingen](/help/sites-deploying/post-upgrade-checks-and-troubleshooting.md#analyzing-issues-with-the-upgrade).
 
 ### Verifiera OSGi Bundles {#verify-osgi-bundles}
 
@@ -93,11 +94,11 @@ Utför en inledande validering mot flera sidor i AEM. Om du uppgraderar en redig
 
 Använd eventuella relevanta AEM 6.5 Service Pack om de har släppts.
 
-### Migrera AEM {#migrate-aem-features}
+### AEM {#migrate-aem-features}
 
 Flera funktioner i AEM kräver ytterligare steg efter uppgraderingen. En fullständig lista över dessa funktioner och steg för att migrera dem i AEM 6.5 finns på [Uppgradera kod och anpassningar](/help/sites-deploying/upgrading-code-and-customizations.md) sida.
 
-### Verifiera schemalagda underhållskonfigurationer {#verify-scheduled-maintenance-configurations}
+### Verifiera planerade underhållskonfigurationer {#verify-scheduled-maintenance-configurations}
 
 #### Aktivera skräpinsamling för datalager {#enable-data-store-garbage-collection}
 
@@ -137,7 +138,7 @@ Om migreringen fortfarande misslyckas kan du ta reda på vad som är grundorsake
 
 ### Uppgraderingen kördes inte {#the-upgrade-did-not-run}
 
-Innan du startar förberedelsestegen bör du kontrollera att du kör **källa** först genom att köra den med kommandot Java™ -jar aem-quickstart.jar. Detta krävs för att säkerställa att filen quickstart.properties genereras korrekt. Om den saknas fungerar inte uppgraderingen. Du kan också kontrollera om filen finns genom att titta under `crx-quickstart/conf` i källinstansens installationsmapp. När du börjar AEM att uppgradera måste den också köras med kommandot Java™ -jar aem-quickstart.jar. Att starta från ett startskript startar inte AEM i uppgraderingsläge.
+Innan du startar förberedelsestegen måste du köra **källa** först genom att köra den med kommandot Java™ -jar aem-quickstart.jar. Detta krävs för att säkerställa att filen quickstart.properties genereras korrekt. Om den saknas fungerar inte uppgraderingen. Du kan också kontrollera om filen finns genom att titta under `crx-quickstart/conf` i källinstansens installationsmapp. När du börjar AEM att uppgradera måste den också köras med kommandot Java™ -jar aem-quickstart.jar. Att starta från ett startskript startar inte AEM i uppgraderingsläge.
 
 ### Paket och paket kunde inte uppdateras  {#packages-and-bundles-fail-to-update-}
 
@@ -157,7 +158,7 @@ Om dina anpassade paket inte växlar till det aktiva läget är det troligtvis s
 
 API som har tagits bort ska markeras som borttaget i en av de tidigare versionerna. Instruktioner om direktmigrering av koden finns i det här meddelandet om borttagning. Adobe planerar semantisk versionshantering där det är möjligt, så att versionerna kan visa på förändringar som går förlorade.
 
-Det är också bäst att kontrollera om den ändring som orsakade problemet var nödvändig och återställa den om så inte är fallet. Kontrollera också om versionsökningen av paketexporten ökade mer än nödvändigt efter strikt semantisk versionshantering.
+Det är också bäst att kontrollera om den ändring som orsakade problemet var nödvändig och återställa den om så inte är fallet. Kontrollera också om versionsökningen av paketexporten har ökat mer än nödvändigt efter strikt semantisk versionshantering.
 
 ### Felaktigt gränssnitt för plattformen {#malfunctioning-platform-ui}
 
@@ -169,7 +170,7 @@ Slutligen kontrollerar du om JavaScript inte kan hantera en felkonfiguration. De
 
 ### Felfungerande anpassade komponenter, mallar eller gränssnittstillägg {#malfunctioning-custom-components-templates-or-ui-extensions}
 
-Vanligtvis är orsaken till de här problemen densamma som för paket som inte har startats eller paket som inte installeras med den enda skillnaden att problemen börjar inträffa när komponenterna används för första gången.
+Vanligtvis är orsaken till de här problemen densamma som för paket som inte har startats eller paket som inte installeras med den enda skillnaden att problemen börjar när komponenterna används.
 
 Ett sätt att hantera felaktig egen kod är att först utföra röktester för att identifiera orsaken. När du har hittat det kan du titta på rekommendationerna i det här [link] i artikeln om hur du åtgärdar dem.
 

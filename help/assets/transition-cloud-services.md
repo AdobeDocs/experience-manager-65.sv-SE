@@ -4,10 +4,11 @@ description: Använd översättningsmolntjänster på mappar i Adobe Experience 
 role: Admin
 feature: Translation
 exl-id: f17a33d7-eb2f-406b-8d6c-a3bf564c8702
-source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
+solution: Experience Manager, Experience Manager Assets
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '357'
-ht-degree: 44%
+source-wordcount: '364'
+ht-degree: 45%
 
 ---
 

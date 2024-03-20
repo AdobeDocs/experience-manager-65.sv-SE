@@ -9,9 +9,10 @@ docset: aem65
 targetaudience: target-audience upgrader
 feature: Upgrading
 exl-id: 5242600c-2281-46f9-a347-d985b4e319b3
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '813'
+source-wordcount: '832'
 ht-degree: 0%
 
 ---
@@ -147,7 +148,7 @@ Den topologi som antas för det här avsnittet består av ett MongoMK Author-klu
 
 Den topologi som antas för det här avsnittet består av två TjärMK-publiceringsinstanser, framtagna av Dispatchers, som i sin tur står framför en belastningsutjämnare. Replikering sker från författarservern till TjärMK-publiceringsservergruppen.
 
-![tarmk-pub-farmv5](assets/tarmk-pub-farmv5.png)
+![tarmk-pub-farv5](assets/tarmk-pub-farmv5.png)
 
 ### Uppgraderingskörning {#upgrade-execution-2}
 

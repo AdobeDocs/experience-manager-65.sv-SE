@@ -5,9 +5,10 @@ contentOwner: Guillaume Carlino
 topic-tags: e-commerce
 content-type: reference
 exl-id: c342f789-2ff7-4802-99c7-c3699218fe47
-source-git-commit: 3400df1ecd545aa0fb0e3fcdcc24f629ce4c99ba
+solution: Experience Manager,Commerce
+source-git-commit: 1751bfb32386685e3a159939113b9667b5e17f0e
 workflow-type: tm+mt
-source-wordcount: '1704'
+source-wordcount: '1574'
 ht-degree: 1%
 
 ---
@@ -38,7 +39,7 @@ Efter installationen kan du konfigurera instansen:
 1. **Öppna redigeraren** för **Exempel på Solr-konfiguration för katalog**.
 
 1. Under **Katalogversioner** use **Lägg till katalogversion** att lägga till `outdoors-Staged` och `outdoors-Online` till listan.
-1. **Spara konfigurationen.**
+1. **Spara** konfigurationen.
 1. Öppna **SOLR-objekttyper** att lägga till **SOLR Sorts** till `ClothesVariantProduct`:
 
    * relevans (&quot;Relevans&quot;, poäng)
@@ -83,7 +84,7 @@ Efter installationen kan du konfigurera instansen:
 
    ![chlimage_1-39](/help/sites-administering/assets/chlimage_1-39a.png)
 
-1. **Spara ändringarna.**
+1. **Spara** ändringarna.
 1. Igen från **SOLR-objekttyper**, justera `price` ansiktet enligt följande skärmbilder. Som med `category`, dubbelklicka `price` för att öppna **Indexerad egenskap** tab:
 
    ![chlimage_1-40](/help/sites-administering/assets/chlimage_1-40a.png)
@@ -92,7 +93,7 @@ Efter installationen kan du konfigurera instansen:
 
    ![chlimage_1-41](/help/sites-administering/assets/chlimage_1-41a.png)
 
-1. **Spara ändringarna.**
+1. **Spara** ändringarna.
 1. Öppna **System**, **Fasettsökning** sedan **Åtgärdsguiden för indexering**. Starta ett cronjob:
 
    * **Indexeraråtgärd**: `full`

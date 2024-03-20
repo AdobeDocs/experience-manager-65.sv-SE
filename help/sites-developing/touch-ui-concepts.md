@@ -1,15 +1,16 @@
 ---
 title: Adobe Experience Manager Touch-aktiverade användargränssnitt
-description: Med Adobe Experience Manager 5.6 har Adobe introducerat ett nytt pekoptimerat gränssnitt med responsiv design för redigeringsmiljön
+description: Med Adobe Experience Manager 5.6 har Adobe introducerat ett nytt pekoptimerat användargränssnitt med responsiv design för redigeringsmiljön
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: introduction
 content-type: reference
 docset: aem65
 exl-id: f13ac6c2-16ab-422d-9005-ab0b49172271
-source-git-commit: 69346a710708ee659ee97e9fdc193c8ea2658fe6
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '2167'
+source-wordcount: '2147'
 ht-degree: 0%
 
 ---
@@ -27,7 +28,7 @@ Användargränssnittet med pekfunktioner innehåller:
 * Suite header som:
    * Visar logotypen
    * Tillhandahåller en länk till den globala navigeringen
-   * Tillhandahåller länk till andra allmänna åtgärder. till exempel Sök, Hjälp, Experience Cloud Solutions, Notifications och User Settings.
+   * Tillhandahåller länk till andra allmänna åtgärder, t.ex. Sök, Hjälp, Lösningar för Experience Cloud, Meddelanden och Användarinställningar.
 * Den vänstra listen (visas när den behövs och är dold) som kan visa:
    * Tidslinje
    * Referenser
@@ -52,7 +53,7 @@ Användargränssnittet med pekfunktioner innehåller:
 
 Det pekaktiverade användargränssnittet har utformats av Adobe för att ge en konsekvent användarupplevelse för flera produkter. Den bygger på följande:
 
-* **Coral UI** (CUI) en implementering av Adobe visuell stil för det beröringsaktiverade användargränssnittet. Coral UI innehåller allt som produkten/projektet/webbprogrammet behöver för att använda den visuella gränssnittsstilen.
+* **Coral UI** (CUI) en implementering av Adobe visuell stil för det beröringsaktiverade användargränssnittet. Coral UI innehåller allt som din produkt/ditt projekt/ditt webbprogram behöver för att använda den visuella gränssnittsstilen.
 * **Granite-gränssnitt** -komponenter byggs med Coral UI.
 
 De grundläggande principerna för det beröringskänsliga användargränssnittet är:
@@ -87,7 +88,7 @@ Granite är en Adobe Open Web-stack med olika komponenter:
 
 >[!NOTE]
 >
->Granite körs som ett öppet utvecklingsprojekt i Adobe: bidrag till koden, diskussioner och frågor görs från hela företaget.
+>Granite körs som ett öppet utvecklingsprojekt i Adobe: bidrag till koden, diskussioner och frågor görs i hela företaget.
 >
 >Granite är dock **not** ett öppen källkodsprojekt. Den bygger till stor del på flera öppen källkodsprojekt (särskilt Apache Sling, Felix, Jackrabbit och Lucene), men Adobe har en tydlig gräns mellan vad som är offentligt och vad som är internt.
 
@@ -114,10 +115,10 @@ Gränssnittet för Granite:
 * Använder RESTful-arkitekturen i Sling
 * Implementerar komponentbibliotek som är avsedda för att skapa innehållscentrerade webbprogram
 * Tillhandahåller detaljerade gränssnittswidgetar
-* Tillhandahåller ett standardgränssnitt
+* Tillhandahåller ett standardiserat standardgränssnitt
 * Är utökningsbar
 * Är utformad för både mobila och stationära enheter (respekterar mobilen först)
-* Kan användas i alla Granite-baserade plattformar/produkter/projekt. AEM
+* Kan användas i alla Granite-baserade plattformar/produkter/projekt, till exempel AEM
 
 ![chlimage_1-82](assets/chlimage_1-82.png)
 
@@ -152,9 +153,9 @@ Dessa levereras som en del av innehållspaketet:
 
 #### Serversida {#server-side}
 
-Detta formas av en samling slingkomponenter som gör att författaren kan *komponera* en webbapp snabbt. Utvecklaren utvecklar komponenter, författaren sätter ihop komponenterna till en webbapp. Serversidans roll är att förse klienten med hypermedia-råd (markup).
+Detta formas av en samling slingkomponenter som gör att författaren kan *komponera* en webbapp snabbt. Utvecklaren utvecklar komponenter, författaren sätter ihop komponenterna till en webbapp. Serversidans roll är att förse klienten med hypermedia-överkomlighet (markup).
 
-För närvarande finns komponenterna i Granite-databasen på:
+Komponenterna finns för närvarande i Granite-databasen på:
 
 `/libs/granite/ui/components/foundation`
 
@@ -173,7 +174,7 @@ Skillnaderna mellan GRUI och ExtJS (används för det klassiska användargränss
    <td><strong>Granite-gränssnitt</strong></td>
   </tr>
   <tr>
-   <td>Remote Procedure Call<br /> </td>
+   <td>Fjärrproceduranrop<br /> </td>
    <td>Tillståndsövergångar</td>
   </tr>
   <tr>
@@ -218,7 +219,7 @@ Syfte:
 Implementering:
 
 * Databasbaserad disposition och konfiguration
-* Användning av testutrustning som tillhandahålls av Granite-plattformen
+* Användning av testutrustning från Granitplattformen
 * JSP-mallar
 
 Det här biblioteket med grundkomponenter kan användas eller utökas av andra bibliotek.
@@ -254,7 +255,7 @@ När du uppgraderar ExtJS-kod för att använda GRA-gränssnittet ger följande 
 
 ### Granite UI Administration Components {#granite-ui-administration-components}
 
-The [Administrationskomponenter för GRI](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/index.html) bygga vidare på grundkomponenterna för att tillhandahålla generiska byggstenar som alla administrationsprogram kan implementera. Dessa omfattar bland annat följande:
+The [Administrationskomponenter för GRE](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/index.html) bygga vidare på grundkomponenterna för att tillhandahålla generiska byggstenar som alla administrationsprogram kan implementera. Dessa omfattar bland annat följande:
 
 * Globalt navigeringsfält
 * Rail (skelett)
@@ -263,7 +264,7 @@ The [Administrationskomponenter för GRI](https://developer.adobe.com/experience
 Syfte:
 
 * Enhetlig look och känsla för administrationstillämpningar
-* Rad för administrationsprogram
+* RAD för administrationsprogram
 
 Implementering:
 
@@ -275,7 +276,7 @@ Implementering:
 CoralUI.pdf
 
 [Hämta fil](assets/coralui.pdf)
-Coral UI (CUI) är en implementering av Adobe visuell stil för det pekaktiverade användargränssnittet som utformats för att ge en konsekvent användarupplevelse för flera produkter. Coral UI innehåller allt du behöver för att använda den visuella stil som används i redigeringsmiljön.
+Coral UI (CUI) är en implementering av Adobe visuell stil för det pekaktiverade användargränssnittet som är utformat för att ge en konsekvent användarupplevelse för flera produkter. Coral UI innehåller allt du behöver för att använda den visuella stil som används i redigeringsmiljön.
 
 >[!CAUTION]
 >
@@ -303,7 +304,7 @@ Coral UI är en samling byggstenar för utveckling av webbapplikationer.
 
 Varje modul är utformad för att vara modulär från början och utgör ett distinkt lager baserat på dess primära roll. Även om lagren har utformats för att stödja varandra kan de också användas oberoende av varandra vid behov. Detta gör det möjligt att implementera Corals användarupplevelse i vilken miljö som helst med stöd för HTML.
 
-Med Coral UI är det inte obligatoriskt att använda en viss utvecklingsmodell och/eller plattform. Det främsta målet för Coral är att tillhandahålla enhetlig och ren markering på HTML5, oberoende av den metod som faktiskt används för att generera markeringen. Detta kan användas för återgivning på klient- eller serversidan, mallar, JSP, PHP eller till och med Adobe Flash RIA-program - för att nämna några få.
+Med Coral UI är det inte obligatoriskt att använda en viss utvecklingsmodell och/eller plattform. Det främsta målet för Coral är att tillhandahålla enhetlig och ren markering på HTML5, oberoende av den metod som faktiskt används för att generera markeringen. Detta kan användas för återgivning på klient- eller serversidan, mallar, JSP, PHP eller till och med Adobe Flash-RIA-program - för att nämna några få.
 
 ### HTML Elements - markeringslagret {#html-elements-the-markup-layer}
 
@@ -324,7 +325,7 @@ Implementering:
 * Klasser definieras i LESS-filer
 * Ikoner definieras som teckensnittssprites
 
-Till exempel koden:
+Exempel:
 
 ```xml
 <button class="btn btn-large btn-primary" type="button">Large button</button>
@@ -437,7 +438,7 @@ En widget kan både utlösa och lyssna på anpassade händelser för att samarbe
 Syfte:
 
 * Implementera högnivågränssnittselement med komplext beteende
-* Utlösa och hantera händelser
+* Utlösar- och hanteringshändelser
 
 Implementering:
 

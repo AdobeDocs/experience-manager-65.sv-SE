@@ -5,9 +5,10 @@ contentOwner: AG
 role: Admin
 feature: Asset Management
 exl-id: e632dcdb-b2b9-45bc-89e7-337b44b6fc61
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+solution: Experience Manager, Experience Manager Assets
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '405'
+source-wordcount: '406'
 ht-degree: 0%
 
 ---
@@ -45,7 +46,7 @@ Du kan också göra några konfigurationsändringar i ett par arbetsflöden och 
 
 1. Aktivera [!UICONTROL Set last modified date] arbetsflöde.
 
-   The [!UICONTROL DAM MetaData Writeback] arbetsflödet konfigurerar det senast ändrade datumet för en resurs. Eftersom du inaktiverar det här arbetsflödet i steg 2, [!DNL Assets] kan inte längre hålla det senaste ändrade datumet för tillgångar uppdaterat. Aktivera därför *Ange senaste ändringsdatum* arbetsflöde för att säkerställa att de senaste ändrade datumen för mediefiler är aktuella. Resurser med inaktuella senast ändrade datum kan orsaka fel.
+   The [!UICONTROL DAM MetaData Writeback] arbetsflödet konfigurerar det senast ändrade datumet för en resurs. Eftersom du inaktiverar det här arbetsflödet i steg 2 [!DNL Assets] kan inte längre hålla det senaste ändrade datumet för tillgångar uppdaterat. Aktivera därför *Ange senaste ändringsdatum* arbetsflöde för att säkerställa att de senaste ändrade datumen för mediefiler är aktuella. Resurser med inaktuella senast ändrade datum kan orsaka fel.
 
 1. [Konfigurera översättningsintegreringsramverket](/help/sites-administering/tc-tic.md) om du vill sluta översätta resurbinärfiler. Avmarkera **[!UICONTROL Translate Assets]** alternativ under [!UICONTROL Assets] om du vill stoppa översättningen av resursbinärfiler.
 1. Översätt metadata/taggar för resurser med [Arbetsflöden för flera språk](multilingual-assets.md).

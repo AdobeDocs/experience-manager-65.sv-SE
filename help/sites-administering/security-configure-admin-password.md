@@ -6,16 +6,17 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: Security
 content-type: reference
 exl-id: b55ff9d5-8139-4ecf-ba09-5cf88207c5c4
-source-git-commit: 96e2e945012046e6eac878389b7332985221204e
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '302'
+source-wordcount: '304'
 ht-degree: 0%
 
 ---
 
 # Konfigurera administratörslösenordet vid installationen{#configure-the-admin-password-on-installation}
 
-## Översikt {#overview}
+## Ökning {#overview}
 
 Från och med version 6.3 tillåter Adobe Experience Manager (AEM) att administratörslösenordet ställs in med kommandoraden när en ny instans installeras.
 
@@ -31,7 +32,7 @@ Den här funktionen lägger till möjligheten att ange ett nytt administratörsl
 
 Den här funktionen aktiveras automatiskt om du väljer att installera AEM via kommandoraden, i stället för att dubbelklicka på JAR från en filsystemutforskare.
 
-Den allmänna syntaxen för att köra en AEM från kommandoraden är:
+Syntaxen för att köra en AEM från kommandoraden är:
 
 ```shell
 java -jar aem6.3.jar

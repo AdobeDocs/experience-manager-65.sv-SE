@@ -3,13 +3,14 @@ title: Hur ansluter och skickar man data i adaptiva blanketter till Microsoft&re
 description: Stegvisa instruktioner för att ansluta och skicka data i anpassade formulär till Microsoft&reg; Power Automate.
 keywords: Adaptiv Forms Microsoft Power Automate, skicka adaptiva Forms-data till Microsoft Power Automate
 feature: Adaptive Forms, Foundation Components
-source-git-commit: 27eb8a53a198efd2cb059a2884b3b5ed60730806
+exl-id: 3fd26ddb-d247-462f-a0f6-8af6166516c1
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '1079'
 ht-degree: 0%
 
 ---
-
 
 # Ansluta och skicka data i adaptiva blanketter till Microsoft® Power Automate {#connect-adaptive-form-with-power-automate}
 
@@ -192,4 +193,3 @@ Efter dig [Koppla samman en instans av AEM Forms Author med Microsoft® Power Au
 * [Skapa ett adaptivt formulär](create-an-adaptive-form-core-components.md)
 * [Konfigurera en Skicka-åtgärd](configuring-submit-actions.md)
 * [Adobe Experience Manager Connector for Microsoft® Power Automate](https://learn.microsoft.com/en-us/connectors/adobeexperiencemanag/)
-

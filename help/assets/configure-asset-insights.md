@@ -5,10 +5,11 @@ contentOwner: AG
 role: Architect, Admin
 feature: Asset Insights,Asset Reports
 exl-id: 67be0ae6-5939-40fe-bf8a-b8a2c2f68f15
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+solution: Experience Manager, Experience Manager Assets
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '235'
-ht-degree: 1%
+source-wordcount: '233'
+ht-degree: 2%
 
 ---
 
@@ -32,7 +33,7 @@ ht-degree: 1%
    *Bild: Konfigurera [!DNL Adobe Analytics] för Assets Insights i [!DNL Experience Manager].*
 
 1. Klicka på **[!UICONTROL Authenticate]**.
-1. Efter [!DNL Experience Manager] autentiserar dina inloggningsuppgifter från **[!UICONTROL Report Suite]** välj en [!DNL Adobe Analytics] Rapportera paket där du vill att Assets Insights ska hämta data. Klicka på **[!UICONTROL Add]**.
+1. Efter [!DNL Experience Manager] autentiserar dina inloggningsuppgifter från **[!UICONTROL Report Suite]** lista, välj en [!DNL Adobe Analytics] Rapportera paket där du vill att Assets Insights ska hämta data. Klicka på **[!UICONTROL Add]**.
 1. Efter [!DNL Experience Manager] ställer in din rapportsvit, klicka på **[!UICONTROL Done]**.
 
 ## Sidspårare {#page-tracker}

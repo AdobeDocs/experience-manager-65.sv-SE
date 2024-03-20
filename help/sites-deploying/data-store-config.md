@@ -6,9 +6,10 @@ topic-tags: deploying
 docset: aem65
 feature: Configuring
 exl-id: c1c90d6a-ee5a-487d-9a8a-741b407c8c06
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '3549'
+source-wordcount: '3476'
 ht-degree: 0%
 
 ---
@@ -236,7 +237,7 @@ Du kan använda konfigurationsfilen med alternativen nedan.
 | --- | --- | --- | --- |
 | accessKey | Åtkomstnyckel-ID för IAM-användaren med åtkomst till bucket. | | Ja, när IAM-roller inte används. |
 | secretsKey | Hemlig åtkomstnyckel för IAM-användaren med åtkomst till bucket. | | Ja, när IAM-roller inte används. |
-| cacheSize | Den lokala cachens storlek (i byte). | 64GB | Nej. |
+| cacheSize | Den lokala cachens storlek (i byte). | 64 GB | Nej. |
 | connectionTimeout | Ange väntetiden (i millisekunder) före timeout när anslutningen upprättas första gången. | 10000 | Nej. |
 | maxCachedBinarySize | Binärfiler som är mindre än eller lika med det här värdet (i byte) lagras i minnescachen. | 17408 (17 kB) | Nej. |
 | maxConnections | Ange maximalt antal tillåtna öppna HTTP-anslutningar. | 50 | Nej. |

@@ -7,9 +7,10 @@ topic-tags: Security
 content-type: reference
 exl-id: 8b2a2f1d-8286-4ba5-8fe2-627509c72a45
 feature: Security
-source-git-commit: 1ef5593495b4bf22d2635492a360168bccc1725d
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '490'
+source-wordcount: '481'
 ht-degree: 0%
 
 ---
@@ -22,7 +23,7 @@ Dessa är listade nedan tillsammans med en förklaring av hur CRX hanterar dem.
 
 ## 1. Injektion {#injection}
 
-* SQL - Förebyggs av design: Standarddatabaskonfigurationen innehåller ingen eller kräver en traditionell databas. Alla data lagras i innehållsdatabasen. All åtkomst är begränsad till autentiserade användare och kan endast utföras via JCR API. SQL stöds endast för sökfrågor (SELECT). Dessutom har SQL stöd för värdebindning.
+* SQL - Förhindrad av design: Standarddatabasinställningen innehåller ingen eller kräver en traditionell databas. Alla data lagras i innehållsdatabasen. All åtkomst är begränsad till autentiserade användare och kan endast utföras via JCR API. SQL stöds endast för sökfrågor (SELECT). Dessutom har SQL stöd för värdebindning.
 * LDAP - LDAP-injektion är inte möjlig eftersom autentiseringsmodulen filtrerar indata och utför användarimporten med bind-metoden.
 * OS - Ingen skalkörning utförs inifrån programmet.
 
@@ -62,7 +63,7 @@ Känsliga data, som autentiseringsuppgifter från tredje part, lagras i kryptera
 
 I databasen kan du ange [finstilt korniga privilegier (enligt JCR)](https://developer.adobe.com/experience-manager/reference-materials/spec/jcr/2.0/16_Access_Control_Management.html) för en viss användare eller grupp på en viss sökväg, via åtkomstkontrollposter. Åtkomstbegränsningar används av databasen.
 
-## 9. Otillräckligt skydd av transportlager {#insufficient-transport-layer-protection}
+## 9. Otillräckligt skydd av transportskikt {#insufficient-transport-layer-protection}
 
 Hanteras av serverkonfigurationen (använd till exempel bara HTTPS).
 

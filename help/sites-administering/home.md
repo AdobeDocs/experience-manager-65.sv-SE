@@ -2,7 +2,8 @@
 title: Användarhandbok om AEM 6.5-administration
 description: Läs om hur du administrerar AEM 6.5. Dessa användarhandböcker täcker webbplatsfunktioner, driftsättningsåtgärder, säkerhetsfunktioner, personalisering, integrering med mera.
 exl-id: 299c783a-1495-4c0d-8431-cd7de142a163
-source-git-commit: d2c0dea636280c28e1d5a76d1c5375f21b6eb111
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '63'
 ht-degree: 73%

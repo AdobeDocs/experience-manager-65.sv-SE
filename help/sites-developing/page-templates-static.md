@@ -7,9 +7,10 @@ topic-tags: platform
 content-type: reference
 docset: aem65
 exl-id: b934ac41-78b9-497f-ba95-b05ef1e5660e
-source-git-commit: 2810e34f642f4643fa4dc24b31a57a68e9194e39
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '1602'
+source-wordcount: '1601'
 ht-degree: 0%
 
 ---
@@ -21,7 +22,7 @@ En mall används för att skapa en sida och definierar vilka komponenter som kan
 Varje mall innehåller ett urval av komponenter som är tillgängliga för användning.
 
 * Mallar är inbyggda i [Komponenter](/help/sites-developing/components.md);
-* Komponenterna använder och tillåter åtkomst till widgetar och dessa används för att återge innehållet.
+* Komponenterna använder, och tillåter åtkomst till, widgetar och dessa används för att återge innehållet.
 
 >[!NOTE]
 >
@@ -98,7 +99,7 @@ En mall är en nod av typen cq:Template och har följande egenskaper och underor
 
 En mall är grunden för en sida.
 
-Om du vill skapa en sida måste mallen kopieras (nodträd) `/apps/<myapp>/template/<mytemplate>`) till motsvarande position i platsträdet: det här är vad som händer om en sida skapas med **Webbplatser** -fliken.
+Om du vill skapa en sida måste mallen kopieras (nodträd) `/apps/<myapp>/template/<mytemplate>`) till motsvarande position i platsträdet: detta händer om en sida skapas med **Webbplatser** -fliken.
 
 Den här kopieringsåtgärden ger även sidan dess ursprungliga innehåll (vanligtvis innehåll på översta nivån) och egenskapen sling:resourceType, sökvägen till sidkomponenten som används för att återge sidan (allt i den underordnade noden jcr:content).
 
@@ -117,10 +118,10 @@ En mall skapas under en nod av typen **cq:Template**.
 
 Du kan ange olika egenskaper, särskilt:
 
-* **jcr:title** - Mallens titel. visas i dialogrutan när du skapar en sida.
-* **jcr:description** - En beskrivning av mallen. visas i dialogrutan när du skapar en sida.
+* **jcr:title** - mallens rubrik; visas i dialogrutan när du skapar en sida.
+* **jcr:description** - beskrivning av mallen; visas i dialogrutan när du skapar en sida.
 
-Den här noden innehåller en jcr:content-nod (cq:PageContent) som används som bas för innehållsnoden på de resulterande sidorna; den här referensen, med sling:resourceType, den komponent som ska användas för att återge det faktiska innehållet på en ny sida.
+Den här noden innehåller en jcr:content-nod (cq:PageContent) som används som bas för innehållsnoden på de resulterande sidorna. Den här referensen använder sling:resourceType, den komponent som ska användas för återgivning av det faktiska innehållet på en ny sida.
 
 ![screen_shot_2012-02-13at64010pm](assets/screen_shot_2012-02-13at64010pm.png)
 
@@ -156,13 +157,13 @@ Om du vill se en lista över alla mallar i databasen gör du så här:
 1. På fliken Fråga
 1. Som **Typ**, markera **XPath**.
 
-1. I **Fråga** indatafält, ange följande sträng: //element(&#42;, cq:Template)
+1. I **Fråga** indatafält, ange följande sträng: //element()&#42;, cq:Template)
 
 1. Klicka **Kör**. Listan visas i resultatrutan.
 
 Oftast skapar du en befintlig mall och skapar en ny för eget bruk. Se [Utveckla sidmallar](#developing-page-templates) för mer information.
 
-Om du vill aktivera en befintlig mall för webbplatsen och du vill att den ska visas i dialogrutan **Skapa sida** när du skapar en sida direkt under **Webbplatser** från **Webbplatser** konsol anger du egenskapen allowedPaths för mallnoden till: **/content(/.&#42;)?**
+Om du vill aktivera en befintlig mall för webbplatsen och du vill att den ska visas i **Skapa sida** när du skapar en sida direkt under **Webbplatser** från **Webbplatser** konsol anger du egenskapen allowedPaths för mallnoden till: **/content(/.&#42;)?**
 
 ## Hur malldesigner används {#how-template-designs-are-applied}
 
@@ -190,7 +191,7 @@ Om det finns mer än en tillämplig design i de två sista fallen använder du d
 
 ### Beslutsträd {#decision-tree}
 
-Detta är en grafisk representation av [Design Path-upplösning](/help/sites-developing/page-templates-static.md#design-path-resolution) logik.
+Det här är en grafisk representation av [Design Path-upplösning](/help/sites-developing/page-templates-static.md#design-path-resolution) logik.
 
 ![design_path_resolution](assets/design_path_resolution.png)
 
@@ -205,7 +206,7 @@ I följande tabell beskrivs hur AEM väljer en design.
 <table>
  <tbody>
   <tr>
-   <td><strong>Söker efter design för<br /> </strong></td>
+   <td><strong>Hitta design för<br /> </strong></td>
    <td><strong>Det finns design för<br /> </strong></td>
    <td><strong>Design vald<br /> </strong></td>
    <td><strong>Kommentar</strong></td>
@@ -221,7 +222,7 @@ I följande tabell beskrivs hur AEM väljer en design.
    <td><code>leaf</code></td>
    <td><p><code>root</code></p> <p><code>branch</code></p> </td>
    <td><code>branch</code></td>
-   <td>Gå tillbaka till närmaste träff i trädet.</td>
+   <td>Gå tillbaka till den närmaste matchningen som är lägre i trädet.</td>
   </tr>
   <tr>
    <td><code>leaf</code></td>
@@ -277,7 +278,7 @@ Så här skapar du en mall baserad på en befintlig mall:
    >
    >Listan med tillgängliga mallar beror på den nya sidans plats och de placeringsbegränsningar som anges i respektive mall. Se [Malltillgänglighet](#templateavailibility).
 
-1. Ändra **jcr:title** för den nya mallnoden för att återspegla dess nya roll. Du kan även uppdatera **jcr:description** vid behov. Var noga med att ändra malltillgängligheten för sidan efter behov.
+1. Ändra **jcr:title** för den nya mallnoden för att återspegla dess nya roll. Du kan även uppdatera **jcr:description** om det är lämpligt. Var noga med att ändra malltillgängligheten för sidan efter behov.
 
    >[!NOTE]
    >
@@ -285,7 +286,7 @@ Så här skapar du en mall baserad på en befintlig mall:
 
    ![chlimage_1-88](assets/chlimage_1-88.png)
 
-1. Kopiera komponenten som mallen baseras på (anges av **sling:resourceType** egenskapen för **jcr:innehåll** -nod i mallen) för att skapa en instans.
+1. Kopiera komponenten som mallen är baserad på (anges av **sling:resourceType** egenskapen för **jcr:innehåll** -nod i mallen) för att skapa en instans.
 
    Komponenter lagras i **/apps/&lt;website-name>/components/&lt;component-name>**.
 
@@ -296,10 +297,10 @@ Så här skapar du en mall baserad på en befintlig mall:
 
    >[!NOTE]
    >
-   >Ändringar i **/apps/&lt;website>/templates/&lt;template-name>** -noden påverkar mallinstansen (som i urvalslistan).
+   >Ändringar som gjorts i **/apps/&lt;website>/templates/&lt;template-name>** -noden påverkar mallinstansen (som i urvalslistan).
    >
    >
-   Ändringar i **/apps/&lt;website>/components/&lt;component-name>** -noden påverkar innehållssidan som skapas när mallen används.
+   Ändringar som gjorts i **/apps/&lt;website>/components/&lt;component-name>** -noden påverkar innehållssidan som skapas när mallen används.
 
    Nu kan du skapa en sida på webbplatsen med den nya mallen.
 

@@ -5,9 +5,10 @@ contentOwner: Vishabh Gupta
 role: Admin
 feature: Asset Management
 exl-id: 3a9b44d4-1756-4ad5-91df-df8d53e82193
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+solution: Experience Manager, Experience Manager Assets
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '2942'
+source-wordcount: '2854'
 ht-degree: 0%
 
 ---
@@ -48,7 +49,7 @@ Adobe rekommenderar att du installerar [adobe-asset-link-config](https://experie
 
 1. Öppna Package Manager via webbgränssnittet i Experience Manager **[!UICONTROL Tools]** > **[!UICONTROL Deployment]** > **[!UICONTROL Package Share]**. Installera `adobe-asset-link-config` paket.
 
-1. Öppna **[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Web Console]**. Sök **[!UICONTROL Adobe Granite OAuth IMS Provider]** och klicka för att redigera den.
+1. Åtkomst **[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Web Console]**. Sök **[!UICONTROL Adobe Granite OAuth IMS Provider]** och klicka för att redigera den.
 
    Ange följande egenskaper och spara ändringarna.
 

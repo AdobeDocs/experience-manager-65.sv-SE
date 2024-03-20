@@ -6,9 +6,10 @@ feature: Asset Management
 role: Admin
 exl-id: edccf23c-087e-4253-babb-dd4c6610517d
 hide: true
-source-git-commit: 3d5e9ad8ee19756b05e5a77a3f748bc647fcf734
+solution: Experience Manager, Experience Manager Assets
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '187'
+source-wordcount: '179'
 ht-degree: 2%
 
 ---
@@ -24,18 +25,18 @@ ht-degree: 2%
 
 Om du vill automatisera översättningsarbetsflöden integrerar du översättningstjänster med [!DNL Experience Manager] och skapa projekt för översättning av resurser till flera språk. [!DNL Experience Manager] har stöd för arbetsflöden för översättning mellan människor och datorer.
 
-Översättning: De översatta resurserna returneras och importeras till [!DNL Experience Manager]. När översättningsleverantören är integrerad med [!DNL Experience Manager], skickas resurser automatiskt mellan [!DNL Experience Manager] och översättningsleverantören.
+Personlig översättning: De översatta resurserna returneras och importeras till [!DNL Experience Manager]. När översättningsleverantören är integrerad med [!DNL Experience Manager], skickas resurser automatiskt mellan [!DNL Experience Manager] och översättningsleverantören.
 
 Maskinöversättning: Maskinöversättningstjänsten översätter omedelbart metadata och taggar för resurser.
 
 Översättningsresurser innehåller följande:
 
-1. [Anslut Experience Manager till översättningstjänsten](/help/sites-administering/tc-tic.md#connecting-to-a-translation-service-provider)
+1. [Koppla Experience Manager till översättningstjänsten](/help/sites-administering/tc-tic.md#connecting-to-a-translation-service-provider)
 1. [Skapa konfigurationer för översättningsintegreringsramverk](/help/sites-administering/tc-tic.md)
 1. [Förbered resurser för översättning](preparing-assets-for-translation.md)
-1. [Använd översättningsmolntjänster på mappar](transition-cloud-services.md)
+1. [Tillämpa översättningsmolntjänster på mappar](transition-cloud-services.md)
 1. [Skapa översättningsprojekt](translation-projects.md)
 
-Om översättningstjänstleverantören inte tillhandahåller någon koppling att integrera med [!DNL Experience Manager], använder [alternativ process](/help/sites-administering/tc-manage.md#exporting-a-translation-job).
+Om översättningstjänstleverantören inte tillhandahåller någon koppling att integrera med [!DNL Experience Manager], använder en [alternativ process](/help/sites-administering/tc-manage.md#exporting-a-translation-job).
 
 Se även [Skapa översättningsprojekt för innehållsfragment](creating-translation-projects-for-content-fragments.md).

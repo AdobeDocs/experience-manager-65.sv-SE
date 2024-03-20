@@ -4,16 +4,17 @@ description: AEM Forms referenswebbplats visar hur man kan använda AEM Forms fu
 topic-tags: introduction
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 exl-id: bdfc0a20-1e98-47f9-a1d1-5af5b3ef15db
-source-git-commit: b9c164321baa3ed82ae87a97a325fcf0ad2f6ca0
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '1413'
+source-wordcount: '1414'
 ht-degree: 0%
 
 ---
 
 # Genomgång av referenswebbplats för rekrytering av medarbetare {#employee-recruitment-reference-site-walkthrough}
 
-## Översikt {#overview}
+## Ökning {#overview}
 
 Vi.Finance är en organisation som gör det möjligt för sökande att ansöka om anställning via referensportalen på webbplatsen. Organisationen använder även portalen för att hantera de sökandes intervjuer, planering av slutlistning och intern kommunikation. Webbplatsen hanterar följande:
 
@@ -22,20 +23,20 @@ Vi.Finance är en organisation som gör det möjligt för sökande att ansöka o
 * Intervjuprocess
 * Samling med information om kandidater
 * Kandidatbakgrundskontroll
-* Erbjudanden till utvalda anbudssökande rullas ut
+* Erbjudanden till utvalda anbudssökande
 
 >[!NOTE]
 >
->Personalrekryteringsexempel finns både på referenswebbplatserna We.Finance och We.Gov. De exempel, bilder och beskrivningar som används i genomgången använder referenswebbplatsen We.Finance. Du kan dock köra de här användningsexemplen och granska artefakter med hjälp av We.Gov också. Om du vill göra det ersätter du **vi-finansiering** med **we-gov** i de angivna URL-adresserna.
+>Personalrekryteringsexempel finns både på referenswebbplatserna We.Finance och We.Gov. De exempel, bilder och beskrivningar som används i genomgången använder referenswebbplatsen We.Finance. Du kan dock köra de här användningsexemplen och granska artefakter med Web.Gov. Om du vill göra det ersätter du **vi-finansiering** med **we-gov** i de angivna URL-adresserna.
 
 ### Arbetsflödesmodeller {#workflow-models-involved}
 
 Handlingen för rekrytering av personal omfattar två arbetsflöden:
 
-* Före intervjun - Vi finansierar arbetsflödet för rekrytering av medarbetare
+* Före intervjun - Vi finansierar arbetsflödet för personalrekrytering
 * Efter intervjun - Arbetsflödet för rekrytering av medarbetare efter intervjun är ekonomiskt
 
-Dessa arbetsflöden skapas i AEM och finns på:
+De här arbetsflödena skapas i AEM och finns på:
 
 `https://[authorHost]:[authorPort]/libs/cq/workflow/admin/console/content/models.html/etc/workflow/models/`
 
@@ -100,13 +101,13 @@ John Jacobs korthåller Sarah Rose profil för rekryteringschefens screening
 
 **Så här fungerar det**
 
-Skicka-åtgärden i jobbansökningsformuläret utlöser ett arbetsflöde som skapar en uppgift i John Jakobs inkorg för att visa programmet. När John, granskar och förkortar programmet, skapar arbetsflödet en uppgift i personalhanteraren, Glorias inkorg.
+Skicka-åtgärden i jobbansökningsformuläret utlöser ett arbetsflöde som skapar en uppgift i Johan Jakobs inkorg för att visa programmet. När John, granskar och förkortar programmet, skapar arbetsflödet en uppgift i personalhanteraren, Glorias inkorg.
 
 ### Se det själv {#see-it-yourself-1}
 
 Gå till `https://[publishHost]:[publishPort]/content/we-finance/global/en/login.html?resource=/aem/inbox.html`och logga in med jjacobs/password som användarnamn/lösenord för John Jacobs. Öppna Granska kandidatprofil och korta listan med den sökande.
 
-## Gloria granskar ansökan och godkänner den som ansöker om en intervju {#gloria-reviews-the-application-and-approves-the-applicant-for-an-interview}
+## Gloria granskar ansökan och godkänner sökanden för en intervju {#gloria-reviews-the-application-and-approves-the-applicant-for-an-interview}
 
 Gloria, anställningschef, får den genlistade profilen som en uppgift i sin AEM Inbox. Hon granskar den och godkänner kandidaten Sarah Rose för intervjun.
 
@@ -128,7 +129,7 @@ Gå till `https://[publishHost]:[publishPort]/content/we-finance/global/en/login
 
 Gå till `https://[publishHost]:[publishPort]/content/we-finance/global/en/login.html?resource=/aem/inbox.html` och logga in med stödraster/lösenord som användarnamn/lösenord för Gloria Rios. Öppna aktiviteten Granska kandidatprofil och klicka på Schemalägg intervju.
 
-## John Doe schemalägger en intervju {#john-doe-schedules-an-interview}
+## John Doe planerar en intervju {#john-doe-schedules-an-interview}
 
 John Doe får i uppdrag att schemalägga en intervju i sin inkorg. John Doe väljer och öppnar uppgiften och korrigerar intervjudatum och -tid, plats samt den HR-person som ansvarar för intervjun som John Jacob. John Doe klickar på Skicka inbjudan via e-post. Ett mejl skickas till Sarah och en uppgift tilldelas Gloria, anställningschef, för att intervjua Sarah.
 
@@ -174,17 +175,17 @@ Sarah Rose får ett mejl som meddelar henne att ytterligare information krävs f
 
 ![sarahroseemailmoreinformation](assets/sarahroseemailmoredetails.png)
 
-Sarah Rose får ett e-postmeddelande som meddelar att ytterligare information krävs för att behandla hennes ansökan om anställning
+Sarah Rose får ett mejl som meddelar att ytterligare information krävs för att behandla hennes ansökan om anställning
 
 Sarah klickar på länken Ange detaljer i e-postmeddelandet. Ett formulär visas. Sarah fyller i de uppgifter om utbildning och anställning som krävs enligt John Doe och klickar på Submit.
 
-![additionalinformation1](assets/additionalinformation1.png)
+![ytterligare information1](assets/additionalinformation1.png)
 
 Sarah öppnar det extra informationsformuläret genom att klicka på länken i e-postmeddelandet
 
-![additionalinformation2](assets/additionalinformation2.png)
+![ytterligare information2](assets/additionalinformation2.png)
 
-Sarah fyller i ytterligare information enligt John Doe och klickar på Skicka
+Sarah fyller i ytterligare information som John Doe begärt och klickar på Skicka
 
 ## John Doe granskar den valda kandidatprofilen för ytterligare information {#john-doe-reviews-the-selected-candidate-profile-for-the-additional-information-provided}
 

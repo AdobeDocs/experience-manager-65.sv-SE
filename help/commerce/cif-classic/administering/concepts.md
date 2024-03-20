@@ -3,9 +3,10 @@ title: Concepts
 description: Lär dig de allmänna koncepten för e-handel med Adobe Experience Manager.
 contentOwner: Guillaume Carlino
 exl-id: 290b2af6-257f-42f2-b809-1248227a4795
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+solution: Experience Manager,Commerce
+source-git-commit: 1751bfb32386685e3a159939113b9667b5e17f0e
 workflow-type: tm+mt
-source-wordcount: '4481'
+source-wordcount: '4439'
 ht-degree: 0%
 
 ---
@@ -576,7 +577,7 @@ En kampanj kan hållas antingen som en upplevelse eller direkt i kampanjen:
 >
 >[hybris](https://www.hybris.com/modules/promotion) och [hybrivouchers](https://www.hybris.com/en/modules/voucher) täcker allt som påverkar kundvagnen och är kopplat till priset. Marknadsföringsspecifikt innehåll (t.ex. banners). ingår inte i hybris-kampanjen.
 
-## Personanpassning {#personalization}
+## Personalisering {#personalization}
 
 ### Kundregistrering och konton {#customer-registration-and-accounts}
 
@@ -851,7 +852,7 @@ Kompatibilitet med betalkortsbranschen (PCI) kan uppnås.
 
 Ordningen bekräftas på skärmen och kan spåras med [orderspårning](#order-tracking).
 
-## Sökning {#search-features}
+## Sök {#search-features}
 
 ![chlimage_1-18](/help/sites-administering/assets/chlimage_1-18.png)
 

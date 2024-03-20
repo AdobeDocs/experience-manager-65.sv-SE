@@ -1,5 +1,5 @@
 ---
-title: Konfigurera AEM Assets med varumärkesportalen
+title: Konfigurera AEM Assets med Brand Portal
 description: Lär dig hur du konfigurerar AEM Assets med Brand Portal för publicering av resurser och samlingar till Brand Portal.
 topic-tags: brand-portal
 content-type: reference
@@ -9,15 +9,16 @@ feature: Brand Portal
 role: Admin
 exl-id: ae33181c-9eec-421c-be55-4bd019de40b8
 hide: true
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+solution: Experience Manager, Experience Manager Assets
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '2013'
-ht-degree: 9%
+source-wordcount: '1951'
+ht-degree: 4%
 
 ---
 
 
-# Konfigurera AEM Assets med varumärkesportalen {#configure-integration-65}
+# Konfigurera AEM Assets med Brand Portal {#configure-integration-65}
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
@@ -59,7 +60,7 @@ Du behöver följande för att konfigurera AEM Assets med varumärkesportalen:
 
 * En instans av AEM Assets Author som körs med senaste Service Pack
 * En Brand Portal tenant-URL
-* En användare med systemadministratörsbehörighet på IMS-organisationen för varumärkesportalens klient
+* En användare med systemadministratörsbehörighet för IMS-organisationen för Brand Portal-klienten
 
 [Hämta och installera AEM 6.5](#aemquickstart)
 
@@ -81,7 +82,7 @@ Detaljerade instruktioner finns i den aktuella [AEM 6.5 Service Pack versionsinf
 
 **Kontakta Adobe kundsupport** om du inte kan hitta det senaste AEM eller Service Pack.
 
-## Skapa en konfiguration {#configure-new-integration-65}
+## Skapa konfiguration {#configure-new-integration-65}
 
 Konfigurationen av AEM Assets med Brand Portal kräver konfigurationer i både AEM Assets Author-instansen och Adobe Developer Console.
 
@@ -102,10 +103,10 @@ Utför följande steg i den listade sekvensen om du konfigurerar AEM Assets med 
 1. [Hämta ett offentligt certifikat](#public-certificate)
 1. [Skapa JWT-anslutning (Service Account)](#createnewintegration)
 1. [Konfigurera ett IMS-konto](#create-ims-account-configuration)
-1. [Konfigurera molntjänsten](#configure-the-cloud-service)
-1. [Testa konfigurationen](#test-integration)
+1. [Konfigurera molntjänst](#configure-the-cloud-service)
+1. [Testa konfiguration](#test-integration)
 
-### Skapa IMS-konfigurationen {#create-ims-configuration}
+### Skapa IMS-konfiguration {#create-ims-configuration}
 
 IMS-konfigurationen autentiserar din AEM Assets Author-instans med Brand Portal-klienten.
 
@@ -114,7 +115,7 @@ IMS-konfigurationen har två steg:
 * [Hämta ett offentligt certifikat](#public-certificate)
 * [Konfigurera ett IMS-konto](#create-ims-account-configuration)
 
-### Hämta ett offentligt certifikat {#public-certificate}
+### Hämta offentligt certifikat {#public-certificate}
 
 Den offentliga nyckeln (certifikatet) autentiserar din profil på Adobe Developer Console.
 
@@ -294,7 +295,7 @@ Så här konfigurerar du IMS-kontot:
 
    ![Fönstret Brand Portal Configuration](assets/create-cloud-service.png)
 
-1. Klicka på **[!UICONTROL Save & Close]**. Molnkonfigurationen har skapats.
+1. Klicka på **[!UICONTROL Save & Close]**. Molnkonfigurationen skapas.
 
    Din AEM Assets Author-instans har nu konfigurerats med Brand Portal-klienten.
 
@@ -341,9 +342,9 @@ Så här konfigurerar du IMS-kontot:
 
 Du kan nu:
 
-* [Publicera resurser från AEM Assets till varumärkesportalen](../assets/brand-portal-publish-assets.md)
+* [Publicera material från AEM Assets till Brand Portal](../assets/brand-portal-publish-assets.md)
 * [Publicera material från Brand Portal till AEM Assets](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/asset-sourcing-in-brand-portal/brand-portal-asset-sourcing.html) - Resurshantering i Brand Portal
-* [Publicera mappar från AEM Assets till varumärkesportalen](../assets/brand-portal-publish-folder.md)
+* [Publicera mappar från AEM Assets till Brand Portal](../assets/brand-portal-publish-folder.md)
 * [Publicera samlingar från AEM Assets till varumärkesportalen](../assets/brand-portal-publish-collection.md)
 * [Publicera förinställningar, scheman och fasetter på varumärkesportalen](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/publish/publish-schema-search-facets-presets.html)
 * [Publicera taggar på varumärkesportalen](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/publish/brand-portal-publish-tags.html)
@@ -357,7 +358,7 @@ Om du vill uppgradera dina befintliga konfigurationer till Adobe Developer Conso
 
 1. [Verifiera jobb som körs](#verify-jobs)
 1. [Ta bort befintliga konfigurationer](#delete-existing-configuration)
-1. [Skapa en konfiguration](#configure-new-integration-65)
+1. [Skapa konfiguration](#configure-new-integration-65)
 
 ### Verifiera jobb som körs {#verify-jobs}
 

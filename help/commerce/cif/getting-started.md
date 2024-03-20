@@ -4,9 +4,10 @@ description: Lär dig hur du distribuerar ett projekt AEM innehåll och handel.
 topics: Commerce
 feature: Commerce Integration Framework
 exl-id: 92b964f8-6672-4f76-8a9f-5782c3ceb83f
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+solution: Experience Manager,Commerce
+source-git-commit: 1751bfb32386685e3a159939113b9667b5e17f0e
 workflow-type: tm+mt
-source-wordcount: '714'
+source-wordcount: '685'
 ht-degree: 0%
 
 ---
@@ -53,7 +54,7 @@ CIF Add-On tillhandahåller en GraphQL-proxyserver på `/api/graphql` som kan an
 
 ## Konfigurera butiker och kataloger {#catalog}
 
-Tillägget och [CIF-kärnkomponenter](https://github.com/adobe/aem-core-cif-components) kan användas på flera AEM webbplatsstrukturer som är anslutna till olika e-handelsbutiker (eller butiksvyer, och så vidare). Som standard distribueras CIF Add-On med en standardkonfiguration som ansluter till Adobe Commerce standardbutik och -katalog.
+Tillägget och [CIF kärnkomponenter](https://github.com/adobe/aem-core-cif-components) kan användas på flera AEM webbplatsstrukturer som är anslutna till olika e-handelsbutiker (eller butiksvyer, och så vidare). Som standard distribueras CIF Add-On med en standardkonfiguration som ansluter till Adobe Commerce standardbutik och -katalog.
 
 Den här konfigurationen kan justeras för projektet via konfigurationen för CIF Cloud Service enligt följande:
 

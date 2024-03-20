@@ -5,10 +5,11 @@ topic-tags: managing
 content-type: reference
 docset: aem65
 exl-id: b138f6d1-0870-4071-b96e-4a759ad9a76e
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+solution: Experience Manager, Experience Manager 6.5
+source-git-commit: 1751bfb32386685e3a159939113b9667b5e17f0e
 workflow-type: tm+mt
-source-wordcount: '3677'
-ht-degree: 40%
+source-wordcount: '3524'
+ht-degree: 38%
 
 ---
 
@@ -18,7 +19,7 @@ SEO (Search Engine Optimization) har blivit en viktig fråga för många marknad
 
 Det här dokumentet beskriver först några [Bästa praxis för SEO](#seo-best-practices) och rekommendationer om AEM. Sedan får du en närmare titt på några av de mer [komplexa implementeringsstegen](#aem-configurations) som togs upp i det första avsnittet.
 
-## SEO-metodtips {#seo-best-practices}
+## SEO Best Practices {#seo-best-practices}
 
 I det här avsnittet beskrivs några allmänna SEO-metodtips.
 
@@ -96,11 +97,11 @@ Följ följande steg för serverkonfigurationen för att se till att endast rät
 * Inkludera en favoritikonbild för webbplatsen.
 * Implementera en XML-platskarta för att göra det enklare för sökmotorer att crawla ditt innehåll. Se till att du inkluderar en mobilwebbplatskarta för mobiler och/eller responsiva webbplatser.
 
-## AEM-konfigurationer {#aem-configurations}
+## AEM {#aem-configurations}
 
 I det här avsnittet beskrivs implementeringsstegen för att konfigurera AEM med följande SEO-rekommendationer.
 
-### Använda Sling-väljare {#using-sling-selectors}
+### Använda delningsväljare {#using-sling-selectors}
 
 Tidigare var det vedertaget att använda frågeparametrar när man skapade ett företagswebbprogram.
 
@@ -110,7 +111,7 @@ Trenden de senaste åren har varit att ta bort parametrar för att göra URL-adr
 * Gör att du kan cachelagra sidorna på Dispatcher och förbättra säkerheten.
 * Gör att du kan adressera innehållet direkt, i stället för att ha en allmän servett som hämtar innehåll. Det ger dig de fördelar med ACL:er som du tillämpar på din databas och filter som du tillämpar på Dispatcher.
 
-#### Använda väljare för servletar {#using-selectors-for-servlets}
+#### Använda väljare för servrar {#using-selectors-for-servlets}
 
 AEM ger oss två alternativ när vi skriver servletar:
 
@@ -119,7 +120,7 @@ AEM ger oss två alternativ när vi skriver servletar:
 
 I följande exempel visas hur du registrerar servrar som följer både dessa mönster och fördelarna med att använda Sling-servrar.
 
-#### Bin-servletar (en nivå ned) {#bin-servlets-one-level-down}
+#### Fackservrar (en nivå ned) {#bin-servlets-one-level-down}
 
 **Bin**-servletar följer mönstret som många utvecklare är vana vid från J2EE-programmering. Servern är registrerad på en specifik sökväg som i AEM vanligtvis finns under `/bin`och du extraherar de begärda parametrarna från frågesträngen.
 
@@ -146,7 +147,7 @@ Några saker att ha i åtanke:
 * Om du vill skydda den här servern ska du implementera din egen anpassade säkerhetslogik i servleten.
 * Dispatcher måste konfigureras (med försiktighet) för att kunna visas `/bin/myApp/myServlet`. Att helt enkelt visa `/bin` ger åtkomst till vissa servletar som inte ska vara öppna för webbplatsens besökare.
 
-#### Sling-servletar (en nivå ned) {#sling-servlets-one-level-down}
+#### Sling-serverlets (en nivå ned) {#sling-servlets-one-level-down}
 
 Med **Sling**-servletar kan du registrera en servlet på motsatt sätt. I stället för att adressera en servett och ange det innehåll som du vill att serverboken ska återge baserat på frågeparametrarna, kan du adressera det innehåll som du vill ha. Och du anger vilken server som ska återge innehållet baserat på delningsväljare.
 
@@ -179,7 +180,7 @@ I AEM lagras alla webbplatser under `/content/my-brand/my-content`. Även om den
 
 I det här avsnittet beskrivs alternativen i AEM som används för att hantera URL:erna och hur de kan presenteras för användarna på ett mer läsbart och SEO-vänligt sätt.
 
-#### Alternativa URL:er {#vanity-urls}
+#### Vanity-URL:er {#vanity-urls}
 
 Om en författare vill att en sida ska vara tillgänglig från en andra plats i marknadsföringssyfte, kan det vara användbart att definiera alternativa URL:er, sida för sida, för AEM. Om du vill lägga till en alternativ URL för en sida ska du gå till den i konsolen **Webbplatser** och redigerar sidegenskaperna. Det finns ett avsnitt där du kan lägga till alternativa URL:er längst ned på fliken **Grundläggande**. Tänk på att sidans SEO-värde fragmenteras om sidan är tillgänglig via mer än en URL. Du kan dock undvika det här problemet genom att lägga till en kanonisk URL-tagg på sidan.
 
@@ -470,7 +471,7 @@ public class SitemapGeneratorImpl extends ResourceTreeSitemapGenerator {
 
 Dessutom kan de funktioner som implementeras för XML-webbplatskartor användas för olika användningsområden, t.ex. för att lägga till den kanoniska länken eller språkvarianterna på en sidas huvud. Se [SeoTags](https://javadoc.io/doc/com.adobe.cq.wcm/com.adobe.aem.wcm.seo/latest/com/adobe/aem/wcm/seo/SeoTags.html) för mer information.
 
-### Skapa 301-omdirigeringar för äldre URL:er {#creating-redirects-for-legacy-urls}
+### Skapa 301 omdirigeringar för äldre URL:er {#creating-redirects-for-legacy-urls}
 
 När du startar en webbplats med en ny struktur är det av två skäl viktigt att implementera och testa 301-omdirigeringar i Apache HTTP Server:
 

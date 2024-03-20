@@ -5,9 +5,10 @@ contentOwner: AG
 role: Developer
 feature: Asset Management
 exl-id: 2a08a7c1-8be9-42d1-9983-f9c8b12ea4e8
-source-git-commit: 1ef5593495b4bf22d2635492a360168bccc1725d
+solution: Experience Manager, Experience Manager Assets
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '248'
+source-wordcount: '229'
 ht-degree: 0%
 
 ---
@@ -32,7 +33,7 @@ Du kan konfigurera följande händelser så att de spelas in:
 * Hämtade resurser (HÄMTADE)
 * Resursversion (VERSIONED)
 * Resursversionen har återställts (RESTORED)
-* Metadata för resurs har uppdaterats (METADATA_UPDATED)
+* Resursmetadata har uppdaterats (METADATA_UPDATED)
 * Tillgång publicerad till externt system (PUBLISHED_EXTERNAL)
 * Resursens ursprungliga uppdaterade (ORIGINAL_UPDATED)
 * Resursåtergivning uppdaterad (RENDITION_UPDATED)

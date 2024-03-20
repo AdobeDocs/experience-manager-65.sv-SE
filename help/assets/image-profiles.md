@@ -1,5 +1,5 @@
 ---
-title: Bildprofiler för Dynamic Media
+title: Dynamic Media bildprofiler
 description: Skapa bildprofiler som innehåller inställningar för oskarp mask, smart beskärning eller smart färgruta eller båda, och tillämpa sedan profilen på en mapp med bildresurser.
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
@@ -8,14 +8,15 @@ content-type: reference
 feature: Image Profiles
 role: User, Admin
 exl-id: 67240ad0-1a7c-4e58-a518-1e36d771f1a1
-source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
+solution: Experience Manager, Experience Manager Assets
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '2944'
+source-wordcount: '2959'
 ht-degree: 4%
 
 ---
 
-# Bildprofiler för Dynamic Media {#image-profiles}
+# Dynamic Media bildprofiler {#image-profiles}
 
 När du överför bilder kan du beskära bilden automatiskt vid överföring genom att tillämpa en bildprofil på mappen.
 

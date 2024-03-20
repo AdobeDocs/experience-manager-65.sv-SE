@@ -6,7 +6,8 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/managing_services
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 exl-id: a6a10ff0-6f4d-42df-9b4e-f98a53cf1806
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '10702'
 ht-degree: 0%
@@ -221,7 +222,7 @@ Följande inställningar är tillgängliga för krypteringstjänsten.
 
 >[!NOTE]
 >
-Använd endast enkel autentisering (användarnamn och lösenord) när anslutningen skyddas via SSL (med LDAPS).
+>Använd endast enkel autentisering (användarnamn och lösenord) när anslutningen skyddas via SSL (med LDAPS).
 
 **Kompatibilitetsläge:**
 
@@ -429,7 +430,7 @@ Följande inställningar är tillgängliga för konfigurationstjänsten för Mic
 
 >[!NOTE]
 >
-Om offlinesupport har aktiverats och sedan inaktiverats uppdateras användarnas provisioneringsprofiler omedelbart, eller så snart de är online. Om en användare har arbetat offline återgår alla väntande uppgifter till uppgiftslistan och alla objekt i kön, inklusive väntande formulär, uppgifter och formulär som innehåller valideringsfel, tas bort från kön.
+>Om offlinesupport har aktiverats och sedan inaktiverats uppdateras användarnas provisioneringsprofiler omedelbart, eller så snart de är online. Om en användare har arbetat offline återgår alla väntande uppgifter till uppgiftslistan och alla objekt i kön, inklusive väntande formulär, uppgifter och formulär som innehåller valideringsfel, tas bort från kön.
 
 **Android:** Tillåter Android-enheter att ansluta till servern.
 
@@ -731,7 +732,7 @@ Om sökvägen inte är absolut men relativ skapas mappen i den bevakade mappen. 
 
 >[!NOTE]
 >
-Ju mindre resultatmapparna är, desto bättre prestanda blir Bevakade mappar. Om den beräknade belastningen för den bevakade mappen till exempel är 1 000 filer varje timme kan du prova ett mönster som `result/%Y%M%D%H` så att en ny undermapp skapas varje timme. Om inläsningen är mindre (till exempel 1 000 filer per dag) kan du använda ett mönster som `result/%Y%M%D`.
+>Ju mindre resultatmapparna är, desto bättre prestanda blir Bevakade mappar. Om den beräknade belastningen för den bevakade mappen till exempel är 1 000 filer varje timme kan du prova ett mönster som `result/%Y%M%D%H` så att en ny undermapp skapas varje timme. Om inläsningen är mindre (till exempel 1 000 filer per dag) kan du använda ett mönster som `result/%Y%M%D`.
 
 **Scenmapp:** Standardnamnet för scenmappen i den bevakade mappen.
 
@@ -813,7 +814,7 @@ Standardsäkerhetsprofiler installeras, som sedan kan konfigureras för att uppf
 
    >[!NOTE]
    >
-   Renderings- och skicka-tjänster som används med variablerna xfaForm, Document Form och Form körs alltid med användarkontot i System.
+   >Renderings- och skicka-tjänster som används med variablerna xfaForm, Document Form och Form körs alltid med användarkontot i System.
 
 1. Klicka på Lägg till huvudnamn för att ange behörigheter som användare och grupper har för tjänsten.
 1. På skärmen Välj huvudnamn visas de användare och grupper som är konfigurerade i Användarhantering. Om användaren eller gruppen som du vill använda inte visas använder du sökfunktionen för att hitta den. Klicka på ett användar- eller gruppnamn.

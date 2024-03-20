@@ -6,7 +6,8 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/aem_forms_backup_and_recovery
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 exl-id: d2dd381d-a7d2-4fec-a8ba-7ca037fd9dc1
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '2017'
 ht-degree: 0%
@@ -96,7 +97,7 @@ Konfigurera din DB2-databas så att den körs i arkivloggningsläge.
 
 >[!NOTE]
 >
-Om din AEM formulärmiljö har uppgraderats från en tidigare version av AEM formulär och använder DB2 stöds inte säkerhetskopiering online. I så fall måste du stänga AEM formulär och göra en offlinesäkerhetskopiering. Framtida versioner av AEM kommer att ha stöd för onlinesäkerhetskopiering för uppgraderingskunder.
+>Om din AEM formulärmiljö har uppgraderats från en tidigare version av AEM formulär och använder DB2 stöds inte säkerhetskopiering online. I så fall måste du stänga AEM formulär och göra en offlinesäkerhetskopiering. Framtida versioner av AEM kommer att ha stöd för onlinesäkerhetskopiering för uppgraderingskunder.
 
 IBM har en uppsättning verktyg och hjälpsystem som hjälper databasadministratörer att hantera säkerhetskopierings- och återställningsuppgifter:
 
@@ -132,7 +133,7 @@ Använd MySQLAdmin eller ändra INI-filerna i Windows för att konfigurera MySQL
 
 >[!NOTE]
 >
-Standardläget för binär loggning för MySQL är &quot;Statement&quot;, vilket är inkompatibelt med tabeller som används av Content Services (utgått). Om du använder binär loggning i det här standardläget misslyckas Content Services (Borttagen). Om ditt system innehåller innehållstjänster (borttaget) använder du loggningsläget Blandat. Om du vill aktivera&quot;blandad&quot; loggning lägger du till följande argument i filen my.ini: `binlog_format=mixed log-bin=logname`
+>Standardläget för binär loggning för MySQL är &quot;Statement&quot;, vilket är inkompatibelt med tabeller som används av Content Services (utgått). Om du använder binär loggning i det här standardläget misslyckas Content Services (Borttagen). Om ditt system innehåller innehållstjänster (borttaget) använder du loggningsläget Blandat. Om du vill aktivera&quot;blandad&quot; loggning lägger du till följande argument i filen my.ini: `binlog_format=mixed log-bin=logname`
 
 Du kan använda verktyget mysqldump för att få en fullständig säkerhetskopiering av databasen. Fullständig säkerhetskopiering krävs, men är inte alltid lämplig. De producerar stora säkerhetskopior och tar tid att generera. Om du vill göra en stegvis säkerhetskopiering måste du starta servern med `log-bin` enligt beskrivningen i föregående avsnitt. Varje gång MySQL-servern startas om slutar den skriva till den aktuella binära loggen, skapar en ny och från och med då blir den nya den aktuella. Du kan tvinga en brytare manuellt med `FLUSH LOGS SQL` -kommando. Efter den första fullständiga säkerhetskopieringen utförs efterföljande stegvisa säkerhetskopieringar med verktyget mysqladmin med `flush-logs` som skapar nästa loggfil.
 
@@ -193,6 +194,6 @@ Om du har installerat ytterligare teckensnitt i din AEM formulärmiljö måste d
 
 >[!NOTE]
 >
-Som standard finns de Adobe-teckensnitt som installeras med AEM formulär i `[aem-forms root]/fonts` katalog.
+>Som standard finns de Adobe-teckensnitt som installeras med AEM formulär i `[aem-forms root]/fonts` katalog.
 
 Om du initierar om operativsystemet på värddatorn och vill använda teckensnitt från det tidigare operativsystemet, bör innehållet i systemteckensnittskatalogen också säkerhetskopieras. (Mer information finns i dokumentationen för ditt operativsystem).

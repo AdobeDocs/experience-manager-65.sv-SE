@@ -10,7 +10,8 @@ role: User, Admin
 mini-toc-levels: 4
 exl-id: badd0f5c-2eb7-430d-ad77-fa79c4ff025a
 feature: Configuration,Scene7 Mode
-source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
+solution: Experience Manager, Experience Manager Assets
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '6121'
 ht-degree: 1%
@@ -121,7 +122,7 @@ Se [Installera funktionspaket 18912 för migrering av gruppresurser](/help/asset
    * **[!UICONTROL Company]** - namnet på Dynamic Media-kontot.
      >[!IMPORTANT]
      >
-     Endast en Dynamic Media-konfiguration i Cloud Service stöds i en instans av Experience Manager. Lägg inte till mer än en konfiguration. Flera Dynamic Media-konfigurationer i en Experience Manager-instans är _not_ som stöds eller rekommenderas av Adobe.
+     >Endast en Dynamic Media-konfiguration i Cloud Service stöds i en instans av Experience Manager. Lägg inte till mer än en konfiguration. Flera Dynamic Media-konfigurationer i en Experience Manager-instans är _not_ som stöds eller rekommenderas av Adobe.
 
      <!-- CQDOC-19579 and CQDOC-19612 -->
 
@@ -152,9 +153,9 @@ Om du vill markera en markerad mapp för synkronisering till Dynamic Media välj
 
    >[!NOTE]
    >
-   Det finns inget stöd för versionshantering i Dynamic Media - Scene7. Dessutom gäller fördröjd aktivering endast om **[!UICONTROL Publish Assets]** på sidan Redigera Dynamic Media-konfiguration är inställd på **[!UICONTROL Upon Activation]** och då endast tills resursen aktiveras första gången.
+   >Det finns inget stöd för versionshantering i Dynamic Media - Scene7. Dessutom gäller fördröjd aktivering endast om **[!UICONTROL Publish Assets]** på sidan Redigera Dynamic Media-konfiguration är inställd på **[!UICONTROL Upon Activation]** och då endast tills resursen aktiveras första gången.
    >
-   När en mediefil har aktiverats publiceras alla uppdateringar direkt till S7 Delivery.
+   >När en mediefil har aktiverats publiceras alla uppdateringar direkt till S7 Delivery.
 
 1. Välj **[!UICONTROL Save]**.
 1. För att på ett säkert sätt förhandsgranska Dynamic Media-innehåll innan det publiceras använder Experience Manager Author tokenbaserad validering och Experience Manager Author förhandsgranskar därmed Dynamic Media-innehåll som standard. Du kan dock tillåtslista fler IP-adresser för att ge användarna tillgång till säkert förhandsgranskningsmaterial. Information om hur du konfigurerar den här åtgärden i Experience Manager finns i [Konfigurera Dynamic Media Publish Setup för Image Server - fliken Säkerhet](/help/assets/dm-publish-settings.md#security-tab).
@@ -255,7 +256,7 @@ Om du tänker använda den här funktionen bör du vara medveten om följande kr
 
   >[!NOTE]
   >
-  Konfigurera Azure Blob-lagringen med en åtkomstnyckel och en hemlig nyckel eftersom den här stora överföringsfunktionen inte stöds med AzureSas i Blob-lagringskonfigurationen.
+  >Konfigurera Azure Blob-lagringen med en åtkomstnyckel och en hemlig nyckel eftersom den här stora överföringsfunktionen inte stöds med AzureSas i Blob-lagringskonfigurationen.
 
 * Oak&#39;s [Nedladdning av direkt binär åtkomst](https://jackrabbit.apache.org/oak/docs/features/direct-binary-access.html) är aktiverat (eko) *Överföring av direkt binär åtkomst* är inte obligatoriskt).
 
@@ -361,7 +362,7 @@ Se [Konfigurera bildförinställningar](/help/assets/managing-image-presets.md).
 
 >[!NOTE]
 >
-Som standard visas 15 renderingar när du väljer **[!UICONTROL Renditions]** och 15 visningsförinställningar när du väljer **[!UICONTROL Viewers]** i resursens detaljvy. Du kan öka den här gränsen. Se [Öka antalet bildförinställningar som visas](/help/assets/managing-image-presets.md#increasing-or-decreasing-the-number-of-image-presets-that-display) eller [Öka antalet visningsförinställningar som visas](/help/assets/managing-viewer-presets.md#increasing-the-number-of-viewer-presets-that-display).
+>Som standard visas 15 renderingar när du väljer **[!UICONTROL Renditions]** och 15 visningsförinställningar när du väljer **[!UICONTROL Viewers]** i resursens detaljvy. Du kan öka den här gränsen. Se [Öka antalet bildförinställningar som visas](/help/assets/managing-image-presets.md#increasing-or-decreasing-the-number-of-image-presets-that-display) eller [Öka antalet visningsförinställningar som visas](/help/assets/managing-viewer-presets.md#increasing-the-number-of-viewer-presets-that-display).
 
 #### Redigera MIME-typer för format som stöds {#editing-mime-types-for-supported-formats}
 
@@ -480,7 +481,7 @@ Det finns två element för definition, Matcha och Basnamn. Med dessa fält kan 
 
    >[!NOTE]
    >
-   Inaktiverade formulärfält utför ingen validering av att reguljära uttryck är korrekta. Resultatet av det reguljära uttryck som du skapar för varje element efter resultatraden visas. Det fullständiga reguljära uttrycket visas längst ned på sidan.
+   >Inaktiverade formulärfält utför ingen validering av att reguljära uttryck är korrekta. Resultatet av det reguljära uttryck som du skapar för varje element efter resultatraden visas. Det fullständiga reguljära uttrycket visas längst ned på sidan.
 
 1. Expandera varje element efter behov och ange de namnkonventioner som du vill använda.
 1. Gör något av följande om det behövs:
@@ -602,7 +603,7 @@ När snurruppsättningen överförs och publiceras aktiverar du namnet på det t
 
    >[!NOTE]
    >
-   Om kombinationen av reguljära uttryck för rader och kolumner inte kan avgöra positionen för resursen i den flerdimensionella rotationsinställningsarrayen, läggs resursen inte till i uppsättningen. Ett fel loggas också.
+   >Om kombinationen av reguljära uttryck för rader och kolumner inte kan avgöra positionen för resursen i den flerdimensionella rotationsinställningsarrayen, läggs resursen inte till i uppsättningen. Ett fel loggas också.
 
 1. Ange suffixet eller prefixet till basnamnet som du definierade i konventionen om namngivning av tillgångar för Ange namngivning och skapande av konvention.
 
@@ -658,7 +659,7 @@ Kön för Bevilja övergång används för **[!UICONTROL DAM Update Asset]** arb
 
    >[!NOTE]
    >
-   En textsökning är nödvändig i stället för en direkt URL eftersom OSGi PID genereras dynamiskt.
+   >En textsökning är nödvändig i stället för en direkt URL eftersom OSGi PID genereras dynamiskt.
 
 1. I **[!UICONTROL Maximum Parallel Jobs]** ändrar du talet till önskat värde.
 
@@ -682,7 +683,7 @@ Beviljad arbetsflödeskö används för icke-tillfälliga arbetsflöden. I Dynam
 
    >[!NOTE]
    >
-   En textsökning är nödvändig i stället för en direkt URL eftersom OSGi PID genereras dynamiskt.
+   >En textsökning är nödvändig i stället för en direkt URL eftersom OSGi PID genereras dynamiskt.
 
 1. I **[!UICONTROL Maximum Parallel Jobs]** ändrar du talet till önskat värde.
 
@@ -730,7 +731,7 @@ Om du använder Dynamic Media för bilder, video eller båda, kan du använda st
 
 >[!NOTE]
 >
-Filter gäller för MIME-typer och kan inte vara sökvägsspecifika.
+>Filter gäller för MIME-typer och kan inte vara sökvägsspecifika.
 
 #### Anpassa resursfilter för replikering {#customizing-asset-filters-for-replication}
 

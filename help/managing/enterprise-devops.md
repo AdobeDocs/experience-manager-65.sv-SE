@@ -6,10 +6,11 @@ products: SG_EXPERIENCEMANAGER/6.5/MANAGING
 topic-tags: managing
 content-type: reference
 exl-id: e67f848a-a8cd-4585-a734-e6b1de8a8d74
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+solution: Experience Manager, Experience Manager 6.5
+source-git-commit: 1751bfb32386685e3a159939113b9667b5e17f0e
 workflow-type: tm+mt
-source-wordcount: '982'
-ht-degree: 60%
+source-wordcount: '983'
+ht-degree: 58%
 
 ---
 
@@ -26,7 +27,7 @@ DevOps vill undvika problem som:
 * Glömda element: till exempel filer och konfigurationsinformation.
 * Avvikelser: till exempel mellan en utvecklares lokala miljö och andra miljöer.
 
-## Miljöer {#environments}
+## Miljö {#environments}
 
 En Adobe Experience Manager-driftsättning (AEM) består vanligtvis av flera miljöer som används för olika syften på olika nivåer:
 
@@ -68,7 +69,7 @@ Mellanlagringsmiljön bör vara en spegling av produktionsmiljön - konfiguratio
 * Den kan användas för sluttester (design, funktionalitet och gränssnitt) innan den distribueras till produktionsmiljöerna.
 * Även om det inte alltid är möjligt att ha samma mellanlagringsmiljö som produktionsmiljön bör den vara så lik som möjligt för att möjliggöra prestanda- och lasttestning.
 
-### Produktion – Author och Publish {#production-author-and-publish}
+### Produktion - Skapa och publicera {#production-author-and-publish}
 
 Produktionsmiljön består av de miljöer som behövs för att [författa och publicera](/help/sites-authoring/author.md#concept-of-authoring-and-publishing) implementeringen.
 

@@ -6,10 +6,11 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: development-tools
 content-type: reference
 exl-id: 00473769-c447-4966-a71e-117c669e0151
-source-git-commit: b703f356f9475eeeafb1d5408c650d9c6971a804
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '792'
-ht-degree: 1%
+source-wordcount: '746'
+ht-degree: 2%
 
 ---
 
@@ -17,7 +18,7 @@ ht-degree: 1%
 
 ![Cirkulärt bildmotiv för AEM för Eclipse.](do-not-localize/chlimage_1-9.png)
 
-## Översikt {#overview}
+## Ökning {#overview}
 
 &quot;AEM Developer Tools&quot; är en Eclipse-plugin som bygger på [Eclipse-plugin för Apache Sling](https://sling.apache.org/documentation/development/ide-tooling.html) som släpps under Apache License 2.
 

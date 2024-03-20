@@ -3,7 +3,8 @@ title: Använd layoutläget för att ändra storlek på komponenter för anpassn
 description: Definiera placeringen av komponenterna med det responsiva stödrastret som finns i layoutläget
 feature: Adaptive Forms, Foundation Components
 exl-id: 5cf76cb1-c92c-4aed-9945-37494fef2d29
-source-git-commit: d85fc98d9a31bc4014aef4311ba0f838c7ef619a
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '1090'
 ht-degree: 0%

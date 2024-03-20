@@ -6,7 +6,8 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 docset: aem65
 feature: Form Data Model
 exl-id: 7a1d9d57-66f4-4f20-91c2-ace5a71a52f2
-source-git-commit: 6b24067c1808475044a612f21d5d4d2793c13e17
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '1896'
 ht-degree: 0%
@@ -93,7 +94,7 @@ Du kan konfigurera AEM användarprofil med hjälp av konfigurationen för anslut
 
 >[!NOTE]
 >
->Konfiguration för molntjänstmappen krävs för konfigurering av molntjänster för RESTful-, SOAP- och OData-tjänster.
+Konfiguration för molntjänstmappen krävs för konfigurering av molntjänster för RESTful-, SOAP- och OData-tjänster.
 
 Alla konfigurationer av molntjänster i AEM konsolideras i `/conf` AEM i databasen. Som standard är `conf` mappen innehåller `global` mapp där du kan skapa molntjänstkonfigurationer. Du måste dock manuellt aktivera den för molnkonfigurationer. Du kan även skapa ytterligare mappar i `conf` för att skapa och organisera molntjänstkonfigurationer.
 
@@ -191,8 +192,8 @@ En OData-tjänst identifieras av tjänstens rot-URL. Om du vill konfigurera en O
 
 >[!NOTE]
 >
->Formulärdatamodellen stöder [OData version 4](https://www.odata.org/documentation/).
->Stegvisa anvisningar om hur du konfigurerar Microsoft Dynamics 365, online eller lokalt, finns i [Konfiguration av Microsoft Dynamics OData](/help/forms/using/ms-dynamics-odata-configuration.md).
+Formulärdatamodellen stöder [OData version 4](https://www.odata.org/documentation/).
+Stegvisa anvisningar om hur du konfigurerar Microsoft Dynamics 365, online eller lokalt, finns i [Konfiguration av Microsoft Dynamics OData](/help/forms/using/ms-dynamics-odata-configuration.md).
 
 1. Gå till **[!UICONTROL Tools > Cloud Services > Data Sources]**. Välj den mapp där du vill skapa en molnkonfiguration.
 
@@ -206,7 +207,7 @@ En OData-tjänst identifieras av tjänstens rot-URL. Om du vill konfigurera en O
 
    >[!NOTE]
    >
-   >Välj autentiseringstypen OAuth 2.0 om du vill ansluta till Microsoft Dynamics-tjänster med OData-slutpunkten som tjänstrot.
+   Välj autentiseringstypen OAuth 2.0 om du vill ansluta till Microsoft Dynamics-tjänster med OData-slutpunkten som tjänstrot.
 
 1. Välj **Skapa** för att skapa molnkonfigurationen för OData-tjänsten.
 

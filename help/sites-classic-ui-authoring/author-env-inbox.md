@@ -7,10 +7,11 @@ topic-tags: introduction
 content-type: reference
 docset: aem65
 exl-id: 52ea2ca2-eb1c-4bed-b52d-feef37c6afd6
-source-git-commit: fd937341e26edd0c3edfced8e862066ebc30f9a3
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '569'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -33,7 +34,7 @@ Så här visar du dina meddelanden:
 
    >[!NOTE]
    >
-   >Du kan även komma åt konsolen direkt i webbläsaren; till exempel:
+   >Du kan även komma åt konsolen direkt i webbläsaren, till exempel:
    >
    >
    >` https://<host>:<port>/libs/wcm/core/content/inbox.html`
@@ -55,7 +56,7 @@ Så här prenumererar du på meddelanden:
 
    >[!NOTE]
    >
-   >Du kan även komma åt konsolen direkt i webbläsaren; till exempel:
+   >Du kan även komma åt konsolen direkt i webbläsaren, till exempel:
    >
    >
    >`https://<host>:<port>/libs/wcm/core/content/inbox.html`
@@ -67,7 +68,7 @@ Så här prenumererar du på meddelanden:
 1. Välj meddelandekanal:
 
    * **Inkorg**: meddelanden visas i AEM Inkorg.
-   * **E-post**: meddelanden skickas via e-post till den e-postadress som är definierad i din användarprofil.
+   * **E-post**: meddelanden skickas via e-post till den e-postadress som har definierats i din användarprofil.
 
    >[!NOTE]
    >
@@ -77,12 +78,12 @@ Så här prenumererar du på meddelanden:
 
    * Aktiverad: när en sida har aktiverats.
    * Inaktiverad: när en sida har inaktiverats.
-   * Borttagen (syndikering): när en sida har tagits bort-replikerats, det vill säga när en borttagningsåtgärd som har utförts på en sida replikeras.
-När en sida tas bort eller flyttas replikeras en borttagningsåtgärd automatiskt: sidan tas bort på källinstansen där borttagningsåtgärden utfördes och på målinstansen som definierats av replikeringsagenterna.
+   * Borttagen (syndikering): När en sida har tagits bort-replikerats, d.v.s. när en borttagningsåtgärd som har utförts på en sida replikeras.
+När en sida tas bort eller flyttas replikeras en borttagningsåtgärd automatiskt: sidan tas bort från källinstansen där borttagningsåtgärden utfördes och på målinstansen som definierats av replikeringsagenterna.
 
    * Ändrad: när en sida har ändrats.
    * Skapad: när en sida har skapats.
-   * Borttagen: när en sida har tagits bort genom sidborttagningsåtgärden.
+   * Borttagen: När en sida har tagits bort via sidborttagningsåtgärden.
    * Utrullad: när en sida har rullats ut.
 
 1. Definiera sökvägarna för sidorna som du ska meddelas om:
@@ -91,7 +92,7 @@ När en sida tas bort eller flyttas replikeras en borttagningsåtgärd automatis
    * Klicka på **Bana** tabellcell och ange sökvägen, till exempel `/content/docs`.
 
    * Om du vill bli meddelad för alla sidor som tillhör underträdet anger du **Exakt?** till **Nej**.
-Om du bara vill få meddelanden om åtgärder på sidan som definieras av sökvägen anger du **Exakt?** till **Ja**.
+Om du bara vill bli meddelad om åtgärder på sidan som definieras av sökvägen anger du **Exakt?** till **Ja**.
 
    * Om du vill tillåta regeln anger du **Regel** till **Tillåt**. Om inställt på **Neka**, nekas regeln men tas inte bort och kan tillåtas senare.
 
@@ -101,7 +102,7 @@ Om du bara vill få meddelanden om åtgärder på sidan som definieras av sökv�
 
 ## Bearbetar dina meddelanden {#processing-your-notifications}
 
-Om du har valt att ta emot meddelanden i din AEM Inkorg fylls din inkorg i med meddelanden. Du kan [visa meddelanden](#viewing-your-notifications)väljer du sedan de meddelanden som krävs för att:
+Om du har valt att ta emot meddelanden i din AEM Inkorg fylls din inkorg i med meddelanden. Du kan [visa dina meddelanden](#viewing-your-notifications)väljer du sedan de meddelanden som krävs för att:
 
 * Godkänn den genom att klicka **Godkänn**: värdet i **Läs** kolumnen är inställd på **true**.
 

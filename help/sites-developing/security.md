@@ -2,9 +2,10 @@
 title: Dokumentskydd
 description: Programsäkerhet startar under utvecklingsfasen
 exl-id: c4f7f45f-224b-4fc3-b4b0-f5b21b8a466f
-source-git-commit: 1ef5593495b4bf22d2635492a360168bccc1725d
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '416'
+source-wordcount: '392'
 ht-degree: 0%
 
 ---
@@ -33,15 +34,15 @@ Det är viktigt att du anpassar den här konfigurationen efter dina egna säkerh
 >
 >Adobe rekommenderar att du alltid får tillgång till XSS-skydds-API:t med hjälp av [XSSAPI tillhandahålls av AEM](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/granite/xss/XSSAPI.html).
 
-En brandvägg för webbprogram, som [mod_security för Apache](https://www.modsecurity.org), kan ge tillförlitlig, central kontroll över distributionsmiljöns säkerhet och skydda mot tidigare oidentifierade serveröverskridande skriptattacker (cross-site scripting).
+En brandvägg för webbprogram, som [mod_security för Apache](https://www.modsecurity.org), kan ge tillförlitlig och central kontroll över distributionsmiljöns säkerhet och skydda mot tidigare oidentifierade serveröverskridande skriptattacker (cross-site scripting).
 
-## Tillgång till Cloud Service {#access-to-cloud-service-information}
+## Tillgång till information om Cloud Servicen {#access-to-cloud-service-information}
 
 >[!NOTE]
 >
 >Åtkomstkontrollistorna för den Cloud Service Information och de OSGi-inställningar som krävs för att skydda instansen automatiseras som en del av [Produktionsklar läge](/help/sites-administering/production-ready.md). Detta innebär att du inte behöver ändra konfigurationen manuellt, men vi rekommenderar ändå att du granskar dem innan du publicerar distributionen.
 
-När du [integrera AEM med Adobe Experience Cloud](/help/sites-administering/marketing-cloud.md)använder du [Konfigurationer av Cloud Service](/help/sites-developing/extending-cloud-config.md). Information om dessa konfigurationer, tillsammans med all statistik som samlas in, lagras i databasen. Adobe rekommenderar att du, om du använder den här funktionen, granskar om standardsäkerheten för den här informationen matchar dina krav.
+När du [integrera AEM med Adobe Experience Cloud](/help/sites-administering/marketing-cloud.md), du använder [Konfigurationer av Cloud Service](/help/sites-developing/extending-cloud-config.md). Information om dessa konfigurationer, tillsammans med all statistik som samlas in, lagras i databasen. Adobe rekommenderar att du, om du använder den här funktionen, granskar om standardsäkerheten för den här informationen matchar dina krav.
 
 Webbtjänsternas supportmodul skriver statistik och konfigurationsinformation under:
 

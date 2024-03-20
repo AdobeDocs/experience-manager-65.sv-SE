@@ -1,16 +1,18 @@
 ---
-title: Autentisering för Adobe Experience Manager GraphQL-fjärrfrågor om innehållsfragment
+title: Autentisering av Adobe Experience Manager GraphQL-fjärrfrågor för innehållsfragment
 description: Förstå den autentisering som krävs för fjärrfrågor till Adobe Experience Manager GraphQL för att säkra din headless-leverans av innehåll.
 feature: Content Fragments,GraphQL API
 exl-id: 167f3318-7bc7-48fc-aaa9-73da43433f2f
-source-git-commit: e068cee192c0837f1473802143e0793674d400e8
+solution: Experience Manager, Experience Manager Sites
+role: Developer
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '110'
 ht-degree: 0%
 
 ---
 
-# Autentisering för Adobe Experience Manager GraphQL-fjärrfrågor om innehållsfragment {#authentication-for-remote-aem-graphql-queries-on-content-fragments}
+# Autentisering av Adobe Experience Manager GraphQL-fjärrfrågor för innehållsfragment {#authentication-for-remote-aem-graphql-queries-on-content-fragments}
 
 Ett primärt användningsexempel för [Adobe Experience Manager (AEM) GraphQL API for Content Fragment Delivery](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md) är att acceptera fjärrfrågor från program eller tjänster från tredje part. Dessa fjärrfrågor kan kräva autentiserad API-åtkomst för säker leverans av headless-innehåll.
 
