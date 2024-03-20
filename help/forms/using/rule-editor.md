@@ -8,9 +8,9 @@ discoiquuid: 1b905e66-dc05-4f14-8025-62a78feef12a
 docset: aem65
 exl-id: c611a1f8-9d94-47f3-bed3-59eef722bf98
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: af30cfed8f039207c0363d1ace5ac2b2a1cf84ba
 workflow-type: tm+mt
-source-wordcount: '6890'
+source-wordcount: '6553'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 0%
 | AEM as a Cloud Service | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/add-rules-and-use-expressions-in-an-adaptive-form/rule-editor.html) |
 | AEM 6.5 | Den här artikeln |
 
-## Ökning {#overview}
+## Överblick {#overview}
 
 Regelredigeringsfunktionen i Adobe Experience Manager Forms gör det möjligt för användare och utvecklare av formulär att skriva regler för anpassningsbara formulärobjekt. Dessa regler definierar åtgärder som ska utlösas av formulärobjekt baserat på förinställda villkor, användarindata och användaråtgärder i formuläret. Det effektiviserar formulärifyllningen ytterligare och ger större precision och snabbhet.
 
@@ -39,7 +39,7 @@ Regelredigeraren har ett intuitivt och förenklat användargränssnitt för att 
 * Invoke a form data model service and perform an operation
 * Set property of an object -->
 
-Regelredigeraren ersätter skriptfunktionerna i AEM 6.1 Forms och tidigare versioner. Dina befintliga skript bevaras dock i den nya regelredigeraren. Mer information om hur du arbetar med befintliga skript i regelredigeraren finns i [Regelredigerarens effekt på befintliga skript](#impact-of-rule-editor-on-existing-scripts).
+Regelredigeraren ersätter skriptfunktionerna i AEM 6.1 Forms och tidigare versioner. Befintliga skript bevaras dock i den nya regelredigeraren. Mer information om hur du arbetar med befintliga skript i regelredigeraren finns i [Regelredigerarens effekt på befintliga skript](#impact-of-rule-editor-on-existing-scripts).
 
 Användare som läggs till i användargruppen för formulär kan skapa nya skript och redigera befintliga. Användare i gruppen för formuläranvändare kan använda skript men inte skapa eller redigera skript.
 
@@ -128,7 +128,7 @@ En lista har till exempel fyra alternativ: Röd, Blå, Grön och Gul. När regel
 
 ![multivalueDisplayOptions](assets/multivaluefcdisplaysoptions.png)
 
-När du skriver en When-regel kan du utlösa åtgärden Clear Value Of. Åtgärden Rensa värde för rensar värdet för det angivna objektet. Om du har Clear Value of som ett alternativ i -instruktionen When kan du skapa komplexa villkor med flera fält.
+När du skriver en When-regel kan du utlösa åtgärden Clear Value Of. Åtgärden Rensa värde för rensar värdet för det angivna objektet. Med alternativet Radera värde för i programsatsen When kan du skapa komplexa villkor med flera fält.
 
 ![clear value of](assets/clearvalueof.png)
 
@@ -219,7 +219,7 @@ När (valfritt):
 
 
 
-I följande exempel används värdet i `dependentid` fält som indata och ställer in värdet för `Relation` till utdata från `Relation` argument för `getDependent` datamodelltjänst.
+I följande exempel används värdet i `dependentid` field som indata och fältets värde `Relation` anges till utdata `Relation` från argumentet `getDependent` för formulärdatamodelltjänsten.
 
 ![set-value-web-service](assets/set-value-web-service.png)
 
@@ -227,7 +227,7 @@ Exempel på Ange värderegel med datamodelltjänst för formulär
 
 >[!NOTE]
 >
->Dessutom kan du använda Ange värde för regel för att fylla i alla värden i en nedrullningsbar listekomponent från utdata från en formulärdatamodelltjänst eller en webbtjänst. Se dock till att det utdataargument du väljer är av en arraytyp. Alla värden som returneras i en matris blir tillgängliga i den angivna listrutan.
+>Dessutom kan du använda Ange värde för regel för att fylla i alla värden i en nedrullningsbar listekomponent från utdata från en formulärdatamodelltjänst eller en webbtjänst. Se dock till att det utdataargument du väljer är av en arraytyp. Alla värden som returneras i en array blir tillgängliga i den angivna listrutan.
 
 ### Visa {#show}
 
@@ -375,7 +375,7 @@ På fliken Formulärobjekt visas en hierarkisk vy över alla objekt som finns i 
 
 De formulärobjekt som har en eller flera giltiga regler är markerade med en grön prick. Om någon av de regler som tillämpas på ett formulärobjekt är ogiltig markeras formulärobjektet med en gul punkt.
 
-Fliken Funktioner innehåller en uppsättning inbyggda funktioner, till exempel Summa av, Min av, Max av, Medelvärde av, Antal och Validera formulär. Du kan använda dessa funktioner för att beräkna värden i repeterbara paneler och tabellrader och använda dem i åtgärds- och villkorssatser när du skriver regler. Du kan dock skapa [anpassade funktioner](#custom-functions) också.
+Fliken Funktioner innehåller en uppsättning inbyggda funktioner, till exempel Summa av, Min av, Max av, Medelvärde av, Antal och Validera formulär. Du kan använda dessa funktioner för att beräkna värden i repeterbara paneler och tabellrader och använda dem i åtgärds- och villkorssatser när du skriver regler. Du kan dock också skapa [anpassade funktioner](#custom-functions) .
 
 ![Fliken Funktioner](assets/functions.png)
 
@@ -641,35 +641,36 @@ Syntax: `@this currentComponent`
 >
 >Kommentarer före anpassade funktioner används för sammanfattning. Sammanfattningen kan sträcka sig över flera rader tills en tagg påträffas. Begränsa storleken till en enda storlek om du vill ha en kortfattad beskrivning i regelbyggaren.
 
-**Lägga till en anpassad funktion**
+<!--
+**Adding a custom function**
 
-Du kan t.ex. lägga till en egen funktion som beräknar en kvadratyta. Sidlängd är användarens indata till den anpassade funktionen, som accepteras med en numerisk ruta i formuläret. Beräknade utdata visas i en annan numerisk ruta i formuläret. Om du vill lägga till en anpassad funktion måste du först skapa ett klientbibliotek och sedan lägga till det i CRX-databasen.
+For example, you want to add a custom function which calculates area of a square. Side length is the user input to the custom function, which is accepted using a numeric box in your form. The calculated output is displayed in another numeric box in your form. To add a custom function, you have to first create a client library, and then add it to the CRX repository.
 
-Utför följande steg för att skapa ett klientbibliotek och lägga till det i CRX-databasen.
+Perform the following steps to create a client library and add it in the CRX repository.
 
-1. Skapa ett klientbibliotek. Mer information finns i [Använda bibliotek på klientsidan](/help/sites-developing/clientlibs.md).
-1. Lägg till en egenskap i CRXDE `categories`med strängtypsvärde som `customfunction` till `clientlib` mapp.
+1. Create a client library. For more information, see [Using Client-Side Libraries](/help/sites-developing/clientlibs.md).
+2. In CRXDE, add a property `categories`with string type value as `customfunction` to the `clientlib` folder.
 
    >[!NOTE]
    >
-   >`customfunction`är en exempelkategori. Du kan välja vilket namn som helst för kategorin som du skapar i `clientlib`mapp.
+   >`customfunction`is an example category. You can choose any name for the category you create in the `clientlib`folder.
 
-När du har lagt till ditt klientbibliotek i CRX-databasen kan du använda det i ditt adaptiva formulär. Du kan använda den anpassade funktionen som en regel i formuläret. Utför följande steg för att lägga till klientbiblioteket i ditt adaptiva formulär.
+After you have added your client library in the CRX repository, use it in your adaptive form. It lets you use your custom function as a rule in your form. Perform the following steps to add the client library in your adaptive form.
 
-1. Öppna formuläret i redigeringsläge.
-Om du vill öppna ett formulär i redigeringsläge markerar du ett formulär och väljer **Öppna**.
-1. Markera en komponent i redigeringsläget och välj sedan ![fältnivå](assets/field-level.png) > **Adaptiv formulärbehållare** och sedan markera ![cmppr](assets/cmppr.png).
-1. Lägg till ditt klientbibliotek i sidofältet under Klientbibliotekets namn. ( `customfunction` i exemplet.)
+1. Open your form in edit mode.
+   To open a form in edit mode, select a form and select **Open**.
+1. In the edit mode, select a component, then select ![field-level](assets/field-level.png) &gt; **Adaptive Form Container**, and then select ![cmppr](assets/cmppr.png).
+1. In the sidebar, under Name of Client Library, add your client library. ( `customfunction` in the example.)
 
-   ![Lägga till klientbiblioteket för anpassade funktioner](assets/clientlib.png)
+   ![Adding the custom function client library](assets/clientlib.png)
 
-1. Markera den numeriska rutan och välj ![edit-rules](assets/edit-rules.png) för att öppna regelredigeraren.
-1. Välj **Skapa regel**. Använd alternativen som visas nedan för att skapa en regel som sparar indatavärdet i fyrkantiga värden i formulärutdatafältet.
-   [![Skapa en regel med anpassade funktioner](assets/add_custom_rule_new.png)](assets/add-custom-rule.png)Välj **Klar**. Din anpassade funktion har lagts till.
+1. Select the input numeric box, and select ![edit-rules](assets/edit-rules.png) to open the rule editor.
+1. Select **Create Rule**. Using options shown below, create a rule to save the squared value of the input in the Output field of your form.
+   [ ![Using custom functions to create a rule](assets/add_custom_rule_new.png)](assets/add-custom-rule.png)Select **Done**. Your custom function is added.
 
-#### Typer som stöds för funktionsdeklaration {#function-declaration-supported-types}
+#### Function declaration supported types {#function-declaration-supported-types}
 
-**Funktionssats**
+**Function Statement**
 
 ```javascript
 function area(len) {
@@ -677,9 +678,9 @@ function area(len) {
 }
 ```
 
-Den här funktionen ingår utan `jsdoc` kommentarer.
+This function is included without `jsdoc` comments.
 
-**Funktionsuttryck**
+**Function Expression**
 
 ```javascript
 var area;
@@ -690,7 +691,7 @@ area = function(len) {
 };
 ```
 
-**Funktionsuttryck och -programsats**
+**Function Expression and Statement**
 
 ```javascript
 var b={};
@@ -700,7 +701,7 @@ b.area = function(len) {
 }
 ```
 
-**Funktionsdeklaration som variabel**
+**Function Declaration as Variable**
 
 ```javascript
 /** */
@@ -711,9 +712,9 @@ var x1,
     x2 =5, x3 =true;
 ```
 
-Begränsning: den anpassade funktionen väljer bara den första funktionsdeklarationen från variabellistan, om den används tillsammans. Du kan använda funktionsuttryck för varje deklarerad funktion.
+Limitation: custom function picks only the first function declaration from the variable list, if together. You can use function expression for every function declared.
 
-**Funktionsdeklaration som objekt**
+**Function Declaration as Object**
 
 ```javascript
 var c = {
@@ -728,7 +729,10 @@ var c = {
 
 >[!NOTE]
 >
->Se till att du använder `jsdoc` för alla anpassade funktioner. Fast `jsdoc`kommentarer uppmuntras, innehåller en tom `jsdoc`-kommentar för att markera funktionen som anpassad funktion. Den aktiverar standardhantering av din anpassade funktion.
+>Ensure that you use `jsdoc` for every custom function. Although `jsdoc`comments are encouraged, include an empty `jsdoc`comment to mark your function as custom function. It enables default handling of your custom function.
+-->
+
+Du kan också använda anpassade funktioner i regelredigeraren. Instruktioner om hur du skapar anpassade funktioner finns i artikeln [Anpassade funktioner i Adaptive Forms](/help/forms/using/create-and-use-custom-functions.md).
 
 ## Hantera regler {#manage-rules}
 
