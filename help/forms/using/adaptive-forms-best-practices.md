@@ -3,12 +3,12 @@ title: Bästa tillvägagångssätt för arbete med anpassningsbara formulär
 description: Beskriver de bästa sätten att skapa ett AEM Forms-projekt, utveckla adaptiva formulär och optimera prestanda för AEM Forms-system.
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
-feature: Adaptive Forms, Foundation Components
+feature: Adaptive Forms, Foundation Components, Core Components
 exl-id: 5c75ce70-983e-4431-a13f-2c4c219e8dde
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: 474a14a247afecdd8415f75997279d1ecd394cda
 workflow-type: tm+mt
-source-wordcount: '4668'
+source-wordcount: '5504'
 ht-degree: 0%
 
 ---
@@ -355,5 +355,66 @@ En av de största utmaningarna för organisationer är att hantera personligt id
 
 * Använd en säker, extern lagringsplats som databas för att lagra data från utkast och skickade formulär. Se [Konfigurera extern lagring för utkast och skickade formulärdata](/help/forms/using/adaptive-forms-best-practices.md#external-storage).
 * Använd formulärkomponenten Villkor om du vill få uttryckligt medgivande från användaren innan du aktiverar automatiskt sparande. I det här fallet aktiverar du bara Spara automatiskt när användaren godkänner villkoren i villkorskomponenten.
+
+## Välj regelredigeraren, kodredigeraren eller anpassade klientlibs för det anpassade formuläret {#RuleEditor-CodeEditor-ClientLibs}
+
+### Regelredigerare {#rule-editor}
+
+<!--The AEM Forms Rule Editor offers predefined functions for defining rules in adaptive forms without extensive programming. It facilitates the implementation of conditional logic, data validation, and integration with external sources. This visual interface is especially valuable for business users and form designers, enabling them to create dynamic and complex rules with ease, here we discusss few use cases where rule editor allows you to:-->
+
+Regelredigeraren i AEM Forms har ett visuellt gränssnitt för att skapa och hantera regler, vilket minskar behovet av omfattande kodning. Det kan vara särskilt användbart för företagsanvändare eller formulärdesigners som inte har avancerade programmeringskunskaper men behöver definiera och underhålla affärsregler i formulären, här diskuterar vi få användningsfall där regelredigeraren tillåter dig:
+
+* <!-- Allows you --> Definiera affärsregler för formulären utan behov av omfattande programmering.
+* <!-- Use the Rule Editor when you need --> Använda villkorsstyrd logik i formulären. Detta inkluderar att visa eller dölja formulärelement, ändra fältvärden baserat på vissa villkor eller dynamiskt ändra formulärens beteende.
+* <!--When you want --> Regelredigeraren kan användas för att definiera valideringsvillkor om du vill tillämpa datavalideringsregler för formulärinskickade formulär.
+* <!-- When you need --> För att integrera formulären med externa datakällor (FDM) eller tjänster kan regelredigeraren hjälpa dig att definiera regler för hämtning, visning och ändring av data under formulärinteraktioner.
+* <!-- If you want -->Om du vill skapa dynamiska och interaktiva formulär som svarar på användaråtgärder kan du definiera regler som styr formulärelementens beteende i realtid i regelredigeraren.
+
+Regelredigeraren är tillgänglig för både AEM Forms Foundation-komponenter och Core-komponenter.
+
+### Kodredigeraren {#code-editor}
+
+Kodredigeraren är ett verktyg i Adobe Experience Manager (AEM) Forms som gör att du kan skriva egna skript och kod för mer komplexa och avancerade funktioner i dina formulär, här diskuterar vi några få användningsområden:
+
+* När du behöver implementera anpassad logik eller beteende på klientsidan som går utöver funktionerna i AEM Forms regelredigerare. Med kodredigeraren kan du skriva JavaScript-kod för att hantera komplexa interaktioner, beräkningar eller valideringar.
+* Om formuläret kräver bearbetning på serversidan eller integration med externa system kan du använda kodredigeraren för att skriva egna skript på serversidan. Du kan använda guideBridge API i kodredigeraren för att implementera komplex logik för formulärhändelser och objekt.
+* När du behöver skräddarsydda användargränssnitt som går utöver standardfunktionerna i AEM Forms-komponenterna kan du använda kodredigeraren för att implementera anpassade format, beteenden eller till och med skapa anpassade formulärkomponenter.
+* Om ditt formulär innehåller asynkrona åtgärder som asynkron datainläsning kan du använda kodredigeraren för att hantera dessa åtgärder med anpassad asynkron JavaScript-kod.
+
+Det är viktigt att komma ihåg att det krävs en god förståelse för JavaScript- och AEM Forms-arkitekturen när du använder kodredigeraren. När du implementerar anpassad kod måste du dessutom följa vedertagna standarder, följa säkerhetsriktlinjer och noga testa koden för att förhindra potentiella problem i produktionsmiljöer. Du kan implementera ett återanrop för FDM med kodredigeraren.
+
+Kodredigeraren är endast tillgänglig för AEM Forms Foundation Component. För komponenter med adaptiv Form Core kan du använda anpassade funktioner för att skapa egna formulärregler, som beskrivs i nästa avsnitt.
+
+### Anpassade funktioner {#custom-client-libs}
+
+Det kan vara bra att använda anpassade klientbibliotek i AEM Forms (Adobe Experience Manager Forms) i olika scenarier om du vill förbättra formulärens funktionalitet, format eller beteende. Här är några situationer där det kan vara lämpligt att använda anpassade klientbibliotek:
+
+* Om du behöver implementera en unik design eller ett varumärke för dina formulär som är mer än vad som finns i standardformateringsalternativen från AEM Forms, kan du välja att skapa anpassade klientbibliotek som styr utseendet och känslan.
+* När du behöver anpassad logik på klientsidan kan du återanvända metoder i flera formulär eller beteenden som inte kan uppnås med AEM Forms standardfunktioner. Detta kan innefatta dynamiska formulärinteraktioner, anpassad validering eller integrering med bibliotek från tredje part.
+* För att förbättra formulärens prestanda genom att optimera och minimera resurserna på klientsidan. Anpassade klientbibliotek kan användas för att paketera och komprimera JavaScript- och CSS-filer, vilket minskar den totala sidinläsningstiden.
+* När du behöver integrera ytterligare JavaScript-bibliotek eller ramverk som inte ingår i AEM Forms standardinställningar. Detta kan vara nödvändigt för funktioner som förbättrade datumväljare, diagram eller andra interaktiva komponenter.
+
+Innan du bestämmer dig för att använda anpassade klientbibliotek är det viktigt att tänka på underhållsinformation, potentiella konflikter med framtida uppdateringar och efterlevnad av bästa praxis. Se till att anpassningarna är väldokumenterade och testade så att du slipper problem under uppgraderingarna eller när du samarbetar med andra utvecklare.
+
+>[!NOTE]
+> Anpassad funktion finns för både AEM Forms Foundation-komponenter och Core-komponenter.
+
+**Fördelar med anpassade funktioner:**
+
+**Anpassade funktioner** ger en avsevärd fördel framför **Kodredigeraren** eftersom det ger en tydlig separation mellan innehåll och kod som förbättrar samarbetet och effektiviserar arbetsflödena. Du bör använda anpassade funktioner för följande fördelar:
+
+* **Använd smidigt versionshantering som Git:**
+   * Isoleringen av kod från innehåll minskar Git-konflikter avsevärt under innehållshantering och främjar en välordnad databas.
+   * Anpassade funktioner är användbara för projekt där flera medarbetare arbetar samtidigt.
+
+* **Tekniska fördelar:**
+   * Anpassade funktioner erbjuder modularitet och inkapsling.
+   * Moduler kan utvecklas, testas och underhållas oberoende av varandra.
+   * Förbättrar återanvändbarheten och underhållet av kod.
+
+* **Effektiv utvecklingsprocess:**
+   * Tack vare modulariteten kan utvecklare fokusera på specifika funktioner.
+   * Minskar bördan för utvecklarna genom att minska komplexiteten i hela kodbasen för en effektivare utvecklingsprocess.
+
 
 
