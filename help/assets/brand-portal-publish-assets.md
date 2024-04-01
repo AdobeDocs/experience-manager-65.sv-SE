@@ -11,9 +11,9 @@ role: User
 exl-id: 76652a16-cad6-4e95-9e66-41efec452b03
 hide: true
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: cbf8a5ac22049b3372a8282b9c061d7abeacc5dc
 workflow-type: tm+mt
-source-wordcount: '328'
+source-wordcount: '373'
 ht-degree: 39%
 
 ---
@@ -78,3 +78,15 @@ Gör så här för att schemalägga publicering av resurser på varumärkesporta
 Logga sedan in på Brand Portal för att se om de publicerade resurserna finns tillgängliga i Brand Portal gränssnitt.
 
 ![bp_landingpage](assets/bp_landingpage.png)
+
+## Visa publicerad fil eller mapp i Brand Portal {#view-published-file-folder}
+
+1. Logga in på gränssnittet för varumärkesportalen för att visa de publicerade resurserna (beroende på schemalagt datum eller tid).
+
+   ![bp_landingpage](assets/bp_landingpage.png)
+
+1. Växla till listvyn ![Listvy](assets/list-view.svg) om du vill visa resursens aktuella publiceringsstatus.
+
+<!--2. On the [Asset Reports page](#https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/admin/asset-reports), you can see the current state of the report job, for example, Success, Failed, Queued, or Scheduled.-->
+
+![genererad rapportstatus](assets/report-status.JPG)
