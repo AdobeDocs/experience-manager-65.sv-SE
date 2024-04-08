@@ -3,9 +3,9 @@ title: Versionsinformation för [!DNL Adobe Experience Manager] 6.5
 description: Hitta versionsinformation, nyheter, installationsanvisningar och en detaljerad ändringslista för [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 4
 exl-id: a52311b9-ed7a-432e-8f35-d045c0d8ea4c
-source-git-commit: 7f150219bce3036c0e330b7349e679fdf19797d1
+source-git-commit: f22f51b4d65abf4cf1f6e04952f873eca5119727
 workflow-type: tm+mt
-source-wordcount: '3664'
+source-wordcount: '3711'
 ht-degree: 0%
 
 ---
@@ -462,6 +462,7 @@ Du måste lägga till följande egenskaper i indexdefinitionsnoden för att få 
 
 * Från och med AEM 6.5.15, JavaScript-motorn i Rhino från ```org.apache.servicemix.bundles.rhino``` paket har ett nytt värdbeteende. Skript som använder strikt läge (```use strict;```) måste deklarera variablerna korrekt, annars körs de inte, utan genererar i stället ett körningsfel.
 
+* Installera taggning av relaterat innehåll direkt via ett officiellt uppdateringspaket (inklusive Service Pack, Security Service Pack, Extended Feature Packs, Cumulative Feature Packs, patchar o.s.v.), återställer languages-egenskapen för `/content/cq:tags` nod till standard. Det är därför nödvändigt att lägga till den från egenskaperna före installationen.
 
 ### Kända fel för AEM Forms {#known-issues-aem-forms-6520}
 

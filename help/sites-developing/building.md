@@ -8,9 +8,9 @@ content-type: reference
 feature: Tagging
 exl-id: d885520d-d0ed-45fa-8511-faa2495d667a
 solution: Experience Manager, Experience Manager Sites
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: f22f51b4d65abf4cf1f6e04952f873eca5119727
 workflow-type: tm+mt
-source-wordcount: '849'
+source-wordcount: '868'
 ht-degree: 0%
 
 ---
@@ -199,4 +199,4 @@ Det nya språket (finska) är nu tillgängligt i taggdialogrutan för sidegenska
 
 >[!CAUTION]
 >
->När du installerar ett Service Pack återställs språkegenskapen för noden /content/cq:tags till standardvärdet. Det är därför nödvändigt att lägga till den från egenskaperna före installationen.
+>Installera taggning av relaterat innehåll direkt via ett officiellt uppdateringspaket (inklusive Service Pack, Security Service Pack, Extended Feature Packs, Cumulative Feature Packs, patchar o.s.v.), återställer languages-egenskapen för `/content/cq:tags` nod till standard. Det är därför nödvändigt att lägga till den från egenskaperna före installationen.
