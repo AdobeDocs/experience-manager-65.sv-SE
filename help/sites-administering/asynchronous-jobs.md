@@ -3,7 +3,9 @@ title: Asynkrona jobb
 description: Adobe Experience Manager optimerar prestandan genom att asynkront slutföra vissa resurskrävande uppgifter.
 exl-id: 4af1bcfe-9f2e-44a4-8666-881f2dccc3bc
 solution: Experience Manager, Experience Manager Sites
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+feature: Developing
+role: Developer
+source-git-commit: 48d12388d4707e61117116ca7eb533cea8c7ef34
 workflow-type: tm+mt
 source-wordcount: '715'
 ht-degree: 83%
