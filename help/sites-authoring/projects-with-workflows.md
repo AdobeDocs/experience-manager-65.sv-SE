@@ -7,7 +7,9 @@ topic-tags: projects
 content-type: reference
 exl-id: 407fc164-291d-42f6-8c46-c1df9ba3d454
 solution: Experience Manager, Experience Manager Sites
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+feature: Authoring,Workflow
+role: User,Admin,Architect,Developer
+source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
 workflow-type: tm+mt
 source-wordcount: '783'
 ht-degree: 0%
@@ -23,7 +25,7 @@ De projektarbetsflöden som är tillgängliga från paketet innehåller följand
 * **Begär start** - Ett arbetsflöde som begär en start.
 * **Begär landningssida** - Det här arbetsflödet begär en landningssida.
 * **Begär e-post** - Arbetsflöde för att begära e-post.
-* **Fotofotografering och fotografering av produkter (handel)** - Mappar resurser med produkter
+* **Fotofoto och produktfoto (Commerce)** - Mappar resurser med produkter
 * **DAM Skapa och översätt kopia och DAM Skapa språkkopia** - Skapar översatta binärfiler, metadata och taggar för resurser och mappar.
 
 Beroende på vilken projektmall du väljer finns det vissa arbetsflöden:

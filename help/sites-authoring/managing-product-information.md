@@ -7,7 +7,9 @@ topic-tags: projects
 content-type: reference
 exl-id: c4eff50e-0d55-4a61-98fd-cc42138656cb
 solution: Experience Manager, Experience Manager Sites
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+feature: Authoring
+role: User,Admin,Architect,Developer
+source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
 workflow-type: tm+mt
 source-wordcount: '2888'
 ht-degree: 0%
@@ -59,7 +61,7 @@ Klicka på ett projekt och klicka sedan på **Lägg till arbete** på sidan med 
 
 A **Fotoprojekt för produkt** innehåller följande färdiga arbetsflöden:
 
-* **Arbetsflöde för produktfototagning (Commerce Integration)**: Det här arbetsflödet använder handelsintegrering med PIM-systemet (Product Information Management) för att automatiskt generera en lista över de valda produkterna (hierarki). Du kan visa produktdata som en del av resursmetadata när arbetsflödet är klart.
+* **Arbetsflöde för fotografering (Commerce Integration)**: Det här arbetsflödet använder handelsintegrering med PIM-systemet (Product Information Management) för att automatiskt generera en lista över de valda produkterna (hierarki). Du kan visa produktdata som en del av resursmetadata när arbetsflödet är klart.
 * **Fotofotografering**: Med det här arbetsflödet kan du skapa en lista i stället för att vara beroende av e-handelsintegrering. Den mappar de överförda bilderna till en CSV-fil i projektresursmappen.
 
 Använd **Fotofoto (Commerce Integration)** arbetsflöde för att mappa bildobjekt med produkterna i AEM. Det här arbetsflödet använder handelsintegrering för att länka de godkända bilderna till befintliga produktdata på platsen `/etc/commerce`.
@@ -139,7 +141,7 @@ Konfigurera **Fotofotografering** arbetsflöde:
 
 Du kan konfigurera ytterligare uppgifter för **Fotofotografering** arbetsflöde på ett liknande sätt.
 
-Utför samma steg för att konfigurera uppgifterna i **Arbetsflöde för produktfototagning (Commerce Integration)**.
+Utför samma steg för att konfigurera uppgifterna i **Arbetsflöde för fotografering (Commerce Integration)**.
 
 ## Starta ett projektarbetsflöde {#starting-a-project-workflow}
 

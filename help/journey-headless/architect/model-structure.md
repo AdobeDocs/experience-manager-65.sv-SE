@@ -2,10 +2,13 @@
 title: Läs om hur du skapar modeller för innehållsfragment i AEM
 description: Lär dig mer om koncept och mekanismer för att modellera innehåll för Headless CMS med Content Fragments Models.
 exl-id: b377e01f-e392-4ef5-a259-73ce9ff941d0
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+solution: Experience Manager, Experience Manager Sites
+feature: Headless,Content Fragments
+role: Admin, Architect,Data Architect
+source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
 workflow-type: tm+mt
 source-wordcount: '690'
-ht-degree: 2%
+ht-degree: 0%
 
 ---
 
@@ -108,7 +111,7 @@ Nu när du har lärt dig grunderna är nästa steg att börja skapa egna modelle
 
 ## Ytterligare resurser {#additional-resources}
 
-* [Redigeringsbegrepp](/help/sites-authoring/author.md)
+* [Authoring Concepts](/help/sites-authoring/author.md)
 
 * [Grundläggande hantering](/help/sites-authoring/basic-handling.md) - den här sidan är huvudsakligen baserad på **Webbplatser** konsol, men många/de flesta funktioner är också relevanta för navigering till och åtgärder på, **Modeller för innehållsfragment** under **Resurser** konsol.
 

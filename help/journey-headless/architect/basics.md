@@ -2,10 +2,13 @@
 title: Lär dig grunderna i innehållsmodellering
 description: Lär dig grunderna i att modellera innehåll för headless CMS med hjälp av innehållsfragment.
 exl-id: a53fef09-6495-4bb7-8df1-ba3c113d88f6
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+solution: Experience Manager, Experience Manager Sites
+feature: Headless,Content Fragments
+role: Admin, Architect,Data Architect
+source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
 workflow-type: tm+mt
 source-wordcount: '896'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -79,7 +82,7 @@ AEM innehåller följande datatyper som du kan använda för att modellera ditt 
 
 * Enkelradig text
 * Flerradstext
-* Siffra
+* Nummer
 * Boolean
 * Datum och tid
 * Uppräkning
@@ -153,7 +156,7 @@ Nu när du har lärt dig grunderna är nästa steg att [Läs om hur du skapar mo
 
    * [Modeller för innehållsfragment - datatyper](/help/assets/content-fragments/content-fragments-models.md#data-types)
 
-* [Redigeringsbegrepp](/help/sites-authoring/author.md)
+* [Authoring Concepts](/help/sites-authoring/author.md)
 
 * [Grundläggande hantering](/help/sites-authoring/basic-handling.md) - den här sidan är huvudsakligen baserad på **Webbplatser** konsol, men många/de flesta funktioner är också relevanta för redigering **Innehållsfragment** under **Resurser** konsol.
 

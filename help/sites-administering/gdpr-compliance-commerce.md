@@ -1,10 +1,12 @@
 ---
 title: AEM Commerce - GDPR-beredskap
-description: Lär dig mer om hur man hanterar GDPR-förfrågningar i AEM Commerce och hur man använder dem.
+description: Lär dig mer om hur du hanterar GDPR-förfrågningar i AEM Commerce och hur du använder dem.
 contentOwner: carlino
 exl-id: 3a483b9d-627a-41d3-8ac1-66f9c5e89ad5
 solution: Experience Manager, Experience Manager Sites
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+feature: Compliance
+role: Admin, Architect, Developer, Leader, User, Data Architect, Data Engineer
+source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
 workflow-type: tm+mt
 source-wordcount: '304'
 ht-degree: 0%
@@ -25,15 +27,15 @@ Europeiska unionens allmänna dataskyddsförordning om integritetsskydd får ver
 
 ![screen_shot_2018-03-22at11606](assets/screen_shot_2018-03-22at111606.jpg)
 
-Med Adobe körklara Commerce-integreringar är AEM upplevelselagret, konsumerar tjänster och skickar tillbaka data till kundens handelsplattform som körs i headlessläge.
+Med Adobe körklara Commerce-integreringar är AEM upplevelselagret, konsumerar tjänster och skickar tillbaka data till kundens e-handelsplattform som körs i headlessläge.
 
 För vissa e-handelsplattformar lagrar Adobe profilinformation ( `/home/users`) och e-handelstoken (för inloggning på e-handelsplattformen) i AEM. Läs [Hantera GDPR-begäranden för AEM](/help/sites-administering/handling-gdpr-requests-for-aem-platform.md).
 
 ![screen_shot_2018-03-22at11621](assets/screen_shot_2018-03-22at111621.jpg)
 
-## Hantera GDPR-förfrågningar för AEM {#handling-gdpr-requests-for-aem-commerce}
+## Hantera GDPR-begäranden för AEM Commerce {#handling-gdpr-requests-for-aem-commerce}
 
-För Salesforce-integreringen med Commerce Cloud lagrar AEM inte någon GDPR-relevant information. Vidarebefordra begäran till [Salesforce Cloud](https://documentation.b2c.commercecloud.salesforce.com/DOC1/index.jsp).
+För Salesforce-integreringen med Commerce Cloud lagrar AEM Commerce ingen GDPR-relevant information. Vidarebefordra begäran till [Salesforce Cloud](https://documentation.b2c.commercecloud.salesforce.com/DOC1/index.jsp).
 
 För hybris- och HCL WebSphere® Commerce-integreringar finns det vissa data i AEM. Använd [AEM GDPR-instruktioner](/help/sites-administering/handling-gdpr-requests-for-aem-platform.md) och fundera över följande frågor:
 
@@ -43,4 +45,4 @@ För hybris- och HCL WebSphere® Commerce-integreringar finns det vissa data i A
 
 >[!NOTE]
 >
->Ta en titt på [hybris wiki](https://wiki.hybris.com/) eller [HCL WebSphere® Commerce-dokumentation](https://help.hcltechsw.com/commerce/index.html), om det behövs.
+>Ta en titt på [hybris wiki](https://wiki.hybris.com/) eller [HCL WebSphere® Commerce - dokumentation](https://help.hcltechsw.com/commerce/index.html), om det behövs.

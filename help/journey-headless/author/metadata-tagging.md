@@ -2,10 +2,13 @@
 title: Läs om hur du definierar metadata och taggar för innehållsfragment
 description: Läs om hur du definierar metadata och taggar för innehållsfragment
 exl-id: b4cc1311-1ef7-409a-bd41-0456519b3436
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+solution: Experience Manager, Experience Manager Sites
+feature: Headless,Content Fragments
+role: Admin, Architect,Data Architect,Developer,User,Leader
+source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
 workflow-type: tm+mt
 source-wordcount: '257'
-ht-degree: 2%
+ht-degree: 0%
 
 ---
 
@@ -48,7 +51,7 @@ Nu kan du använda och börja skapa innehållsfragment för ditt projekt.
 
 ## Ytterligare resurser {#additional-resources}
 
-* [Metadata – fragmentegenskaper](/help/assets/content-fragments/content-fragments-metadata.md)
+* [Metadata - Fragmentegenskaper](/help/assets/content-fragments/content-fragments-metadata.md)
 
 * [Använda taggar](/help/sites-authoring/tags.md)
 

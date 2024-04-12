@@ -7,7 +7,9 @@ topic-tags: introduction
 content-type: reference
 exl-id: c58981a0-cdde-4593-b633-7f6898f8f5f5
 solution: Experience Manager, Experience Manager Sites
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+feature: Authoring
+role: User,Admin,Architect,Developer
+source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
 workflow-type: tm+mt
 source-wordcount: '383'
 ht-degree: 0%
@@ -24,7 +26,7 @@ Olika kortkommandon finns i hela AEM. Vissa gäller användning av konsoler, and
 
 ## Kortkommandon {#keyboard-shortcuts}
 
-Följande genvägar är tillgängliga för konsolerna Webbplatser, Handel, Skärmar, Resurser, Användare, Grupper, Projekt och Upplevelsefragment.
+Följande kortkommandon är tillgängliga för konsolerna Webbplatser, Commerce, Skärmar, Resurser, Användare, Grupper, Projekt och Upplevelsefragment.
 
 | Plats | Genväg | Beskrivning |
 |---|---|---|

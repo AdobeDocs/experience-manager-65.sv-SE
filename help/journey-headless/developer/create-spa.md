@@ -2,16 +2,19 @@
 title: Valfritt - Så här skapar du enkelsidiga program (SPA) med Adobe Experience Manager
 description: I den här valfria fortsättningen av Adobe Experience Manager (AEM) Headless Developer Journey får du lära dig hur AEM kan kombinera headless-leverans med traditionella CMS-funktioner i full hög och hur du kan skapa redigerbara SPA med hjälp av AEM ramverk för SPA.
 exl-id: 91eadda2-b881-4e4a-867f-8c5c54e8f8b4
-source-git-commit: 3885cc51f7e821cdb352737336a29f9c4f0c2f41
+solution: Experience Manager, Experience Manager Sites
+feature: Headless,Content Fragments
+role: Admin, Developer
+source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
 workflow-type: tm+mt
-source-wordcount: '1264'
+source-wordcount: '1257'
 ht-degree: 0%
 
 ---
 
 # Skapa enkelsidiga program (SPA) med AEM {#create-spa}
 
-I denna valfria fortsättning av [AEM Headless Developer Journey,](overview.md) Lär dig hur Adobe Experience Manager (AEM) kan kombinera headless-leverans med traditionella CMS-funktioner i full hög och hur du kan skapa redigerbara SPA med hjälp av AEM ramverk för SPA och integrera externa SPA, vilket möjliggör redigeringsfunktioner efter behov.
+I denna valfria fortsättning av [AEM Headless Developer Journey](overview.md) Lär dig hur Adobe Experience Manager (AEM) kan kombinera headless-leverans med traditionella CMS-funktioner i full hög och hur du kan skapa redigerbara SPA med hjälp av AEM ramverk för SPA och integrera externa SPA, vilket möjliggör redigeringsfunktioner efter behov.
 
 ## Story hittills {#story-so-far}
 
@@ -34,7 +37,7 @@ Den här artikeln bygger på dina kunskaper om AEM Headless genom att ingående 
 
 Det här dokumentet hjälper dig att förstå hur Single Page-program utvecklas med AEM ramverk för SPA. När du har läst det här dokumentet bör du:
 
-* Förstå den grundläggande funktionen i SPA Editor.
+* Förstå den grundläggande funktionen i SPA.
 * Lär dig grunderna för att skapa en fullt redigerbar SPA för AEM.
 * Förstå hur externa SPA kan integreras i AEM.
 * Förstå hur återgivning på serversidan ska implementeras eller inte.
@@ -54,7 +57,7 @@ Det finns flera krav innan du börjar arbeta med SPA i AEM.
 * Sandlådeåtkomst för testning av driftsättning av ditt projekt
 * Lokal utvecklingsinstans för datamodellering och -testning
 * Befintliga externa SPA (valfritt, beroende på vilken integrationsmodell som väljs)
-* AEM Project Archetype
+* AEM Project Archettype
 
 ## Vad är en SPA? {#what-is-a-spa}
 
@@ -127,4 +130,4 @@ Nedan följer ytterligare resurser som ger en djupdykning i några koncept som n
 * [Återgivning på serversidan](/help/sites-developing/spa-ssr.md) - Konfigurera SSR för AEM SPA
 * [SPA referensdokument](/help/sites-developing/spa-reference-materials.md) - JavaScript API-referenser och länkar till AEM med öppen källkod SPA GitHub-projekt
 * [Innehållsfragment](/help/assets/content-fragments/content-fragments.md) - Skapa innehållsfragment
-* [AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) - Maven-mall som skapar ett minimalt, metodbaserat Adobe Experience Manager-projekt (AEM) som utgångspunkt för din webbplats
+* [AEM Project Archettype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) - Maven-mall som skapar ett minimalt, metodbaserat Adobe Experience Manager-projekt (AEM) som utgångspunkt för din webbplats
