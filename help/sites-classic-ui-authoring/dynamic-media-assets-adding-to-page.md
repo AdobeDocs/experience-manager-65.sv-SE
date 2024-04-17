@@ -7,7 +7,9 @@ topic-tags: authoring
 content-type: reference
 exl-id: d2ebfca5-19f9-4fa5-b142-b978f46a912f
 solution: Experience Manager, Experience Manager Sites
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+feature: Authoring
+role: User
+source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
 workflow-type: tm+mt
 source-wordcount: '1519'
 ht-degree: 2%
@@ -157,7 +159,7 @@ Du kan redigera följande **[!UICONTROL General]** inställningar genom att klic
 
 Du kan redigera följande **[!UICONTROL Add To Cart]** inställningar genom att klicka på **[!UICONTROL Edit]** i komponenten.
 
-**[!UICONTROL Show Product Asset]** - Som standard är det här värdet markerat. Produktresursen visar en bild av produkten enligt definitionen i modulen Handel. Avmarkera kryssrutan om du inte vill visa produktresursen.
+**[!UICONTROL Show Product Asset]** - Som standard är det här värdet markerat. Produktresursen visar en bild av produkten enligt definitionen i modulen Commerce. Avmarkera kryssrutan om du inte vill visa produktresursen.
 
 **[!UICONTROL Show Product Price]** - Som standard är det här värdet markerat. Produktpriset visar priset för artikeln enligt definitionen i modulen Handel. Avmarkera kryssrutan om du inte vill visa produktpriset.
 

@@ -3,7 +3,9 @@ title: Dekoration-tagg
 description: När en komponent på en webbsida återges kan ett HTML-element genereras och den återgivna komponenten kapslas in i sig själv. För utvecklare har AEM en tydlig och enkel logik som styr de dekorationstaggar som omsluter komponenterna.
 exl-id: d049ebf1-7fa6-4d2c-86f9-b18e107092ea
 solution: Experience Manager, Experience Manager Sites
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+feature: Developing
+role: Developer
+source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
 workflow-type: tm+mt
 source-wordcount: '879'
 ht-degree: 0%

@@ -3,7 +3,9 @@ title: Redigera en extern SPA i Adobe Experience Manager
 description: I det här dokumentet beskrivs de rekommenderade stegen för att överföra en fristående SPA till en Adobe Experience Manager-instans, lägga till redigerbara innehållsavsnitt och aktivera redigering.
 exl-id: 25236af4-405a-4152-8308-34d983977e9a
 solution: Experience Manager, Experience Manager Sites
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+feature: Developing,SPA Editor
+role: Developer
+source-git-commit: 305227eff3c0d6414a5ae74bcf3a74309dccdd13
 workflow-type: tm+mt
 source-wordcount: '2391'
 ht-degree: 0%
