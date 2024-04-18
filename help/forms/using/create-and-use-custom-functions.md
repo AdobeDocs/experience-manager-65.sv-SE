@@ -5,15 +5,21 @@ keywords: Lägg till en anpassad funktion, använd en anpassad funktion, skapa e
 contentOwner: Ruchita Srivastav
 content-type: reference
 feature: Adaptive Forms, Core Components
-source-git-commit: d1348a964e664cf502f6eded14a1054641ebc740
+exl-id: a328b4a8-e8dd-42a0-b73b-94e76c7692a8
+source-git-commit: 91ab786cd7e0dd75b9ad15058a125605245ec5bb
 workflow-type: tm+mt
-source-wordcount: '1096'
+source-wordcount: '1111'
 ht-degree: 0%
 
 ---
 
 
 # Anpassade funktioner i Adaptive Forms (Core Components)
+
+| Version | Artikellänk |
+| -------- | ---------------------------- |
+| AEM as a Cloud Service | [Klicka här](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/create-and-use-custom-functions) |
+| AEM 6.5 | Den här artikeln |
 
 ## Introduktion
 
@@ -266,4 +272,3 @@ Nu kan du skapa en regel som använder anpassade funktioner i regelredigeraren:
 ![Lägga till klientbiblioteket för anpassade funktioner](/help/forms/using//assets/calculateage-customfunction.png)
 
 Nu ska vi förstå hur man konfigurerar och använder en anpassad funktion med [Regelredigerarens anropstjänst i AEM Forms](/help//forms/using/rule-editor.md).
-
