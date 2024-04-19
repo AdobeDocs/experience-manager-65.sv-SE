@@ -9,7 +9,7 @@ exl-id: 504c61c7-dcd3-412c-9239-d24a2b78e4b9
 solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+source-git-commit: bf99ad3710638ec823d3b17967e1c750d0405c77
 workflow-type: tm+mt
 source-wordcount: '727'
 ht-degree: 0%
@@ -35,10 +35,10 @@ Som AEM standardimplementering av referenser visar vi nu några av de mest kraft
 | [Globaliserad webbplatsstruktur](/help/sites-administering/tc-bp.md) | Vi.Retail innehåller språkmallar som kopieras live till landsspecifika sajter. | [Prova!](/help/sites-developing/we-retail-globalized-site-structure.md) |
 | [Responsiv layout](/help/sites-authoring/responsive-layout.md) | Alla sidor har en responsiv layout som anpassar sig dynamiskt till skärm- och enhetsstorlek. | [Prova!](/help/sites-developing/we-retail-responsive-layout.md) |
 | [Redigerbara mallar](/help/sites-developing/page-templates-editable.md) | Alla sidor är baserade på redigerbara mallar, som gör att icke-utvecklare kan anpassa och anpassa mallarna. | [Prova!](/help/sites-developing/we-retail-editable-templates.md) |
-| [HTML mallspråk](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html) | Alla komponenter är baserade på HTML |  |
+| [HTML mallspråk](https://experienceleague.adobe.com/en/docs/experience-manager-htl/content/overview) | Alla komponenter är baserade på HTML |  |
 | [eCommerce-funktioner](/help/commerce/cif-classic/developing/ecommerce.md) | Innehåller en produktkatalog |  |
 | [Communities-webbplatser](/help/communities/overview.md) | Låt besökarna delta i communitydiskussioner, läsa bloggar och mycket mer |  |
-| [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) | Alla komponenter baseras på de nya kärnkomponenterna och är mer användbara och användarkonfigurerbara. | [Prova!](/help/sites-developing/we-retail-core-components.md) |
+| [Kärnkomponenter](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/introduction) | Alla komponenter baseras på de nya kärnkomponenterna och är mer användbara och användarkonfigurerbara. | [Prova!](/help/sites-developing/we-retail-core-components.md) |
 | [Innehållsfragment](/help/assets/content-fragments/content-fragments.md) | Avsnittet&quot;We.Retail Experiences&quot; visar möjligheterna att återanvända innehåll med hjälp av innehållsfragment. | [Prova dem!](/help/sites-developing/we-retail-content-fragments.md) |
 | [Experience Fragments](/help/sites-authoring/experience-fragments.md) | Ett Experience Fragment är en grupp med en eller flera komponenter, inklusive innehåll och layout, som kan refereras till på sidor. | [Prova dem!](/help/sites-developing/we-retail-experience-fragments.md) |
 

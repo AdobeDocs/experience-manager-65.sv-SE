@@ -1,15 +1,16 @@
 ---
 title: Översikt över transaktionsrapporter för AEM Forms på JEE
-description: Räkna med alla formulär som skickas, återges, dokument som konverterats till ett format till ett annat och mycket mer
+description: Räkna med alla formulär som skickas, återges, dokument som konverterats till ett format till ett annat och mycket mer.
 feature: Transaction Reports
-source-git-commit: d0db00de6b767a12a9492bbbcec49a8c5d25ff27
+exl-id: 77e95631-6b0d-406e-a1b8-78f8d9cceb63
+source-git-commit: bf99ad3710638ec823d3b17967e1c750d0405c77
 workflow-type: tm+mt
 source-wordcount: '529'
 ht-degree: 0%
 
 ---
 
-# Aktivera och visa transaktionsrapport för AEM Forms på JEE {#transaction-reports-overview}
+# Aktivera och visa transaktionsrapporter för AEM Forms i JEE {#transaction-reports-overview}
 
 <!--Transaction reports in AEM Forms on JEE let you keep a count of all transactions taken place on your AEM Forms deployment. The objective is to provide information about product usage and helps business stakeholders understand their digital processing volumes. Examples of a transaction include:
 
@@ -74,7 +75,7 @@ For Jboss Cluster:
 ```
 
 Exempel på en exempeltransaktion:
-`[2024-02-28 06:11:27] [INFO] TransactionRecord{service=‘GeneratePDFService’, operation=‘HtmlFileToPDF’, internalService=‘GeneratePDFService’, internalOperation=‘HtmlFileToPDF’, transactionOperationType=‘CONVERT’, transactionCount=1, elapsedTime=1906, transactionDate=Wed Feb 28 06:11:25 UTC 2024}`
+`[2024-02-28 06:11:27] [INFO] TransactionRecord{service='GeneratePDFService', operation='HtmlFileToPDF', internalService='GeneratePDFService', internalOperation='HtmlFileToPDF', transactionOperationType='CONVERT', transactionCount=1, elapsedTime=1906, transactionDate=Wed Feb 28 06:11:25 UTC 2024}`
 
 #### Transaktionspost {#transaction-record-structure-jee}
 
@@ -96,8 +97,8 @@ TransactionRecord
 
 * **service**: Tjänstens namn.
 * **operation**: Åtgärdsnamn.
-* **internalService**: Anroparens namn vid ett internt anrop, annars samma som tjänstens namn.
-* **internalOperation**: Namnet på den anropande mottagaren vid ett internt anrop, annars samma som åtgärdsnamnet.
+* **internalService**: Anroparens namn om det finns ett internt anrop, annars samma som tjänstens namn.
+* **internalOperation**: Namnet på anropet i det finns ett internt anrop, i annat fall samma som åtgärdsnamnet.
 * **transactionOperationType**: Typ av transaktion (Skicka, Återge, Konvertera).
 * **transactionCount**: Totalt antal transaktioner.
 * **förfluten tid**: Tid mellan det att samtalet initierades och det svar som togs emot.
@@ -125,7 +126,7 @@ TransactionRecord
 
 Frekvensen för registrering av transaktioner bestäms av uppdateringsåtgärderna på servern för varje formulär som har skickats, återgetts eller konverterats.
 
-* I **kontrollpanel** om antalet transaktioner uppdateras regelbundet, standardvärdet är 1 minut. Du kan uppdatera frekvensen genom att ställa in systemegenskapen på `"com.adobe.idp.dsc.transaction.recordFrequency"`. I AEM Forms för JEE på JBoss® lägger du till `-Dcom.adobe.idp.dsc.transaction.recordFrequency=5` in `JAVA_OPTS` för att ställa in uppdateringsfrekvensen på 5 minuter.
+* I **kontrollpanel**, uppdateras antalet transaktioner regelbundet, standardvärdet är 1 minut. Du kan uppdatera frekvensen genom att ställa in systemegenskapen på `"com.adobe.idp.dsc.transaction.recordFrequency"`. I AEM Forms för JEE på JBoss® lägger du till `-Dcom.adobe.idp.dsc.transaction.recordFrequency=5` in `JAVA_OPTS` för att ställa in uppdateringsfrekvensen på 5 minuter.
 
 * I **transaktionsloggar** uppdateras varje transaktion omedelbart när ett formulär har skickats, återgetts eller konverterats.
 
