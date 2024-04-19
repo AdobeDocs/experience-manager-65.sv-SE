@@ -6,7 +6,7 @@ contentOwner: Ruchita Srivastav
 content-type: reference
 feature: Adaptive Forms, Core Components
 exl-id: a328b4a8-e8dd-42a0-b73b-94e76c7692a8
-source-git-commit: 91ab786cd7e0dd75b9ad15058a125605245ec5bb
+source-git-commit: a5b48f1f4072f3e10273ec90d6f505815fe584a3
 workflow-type: tm+mt
 source-wordcount: '1111'
 ht-degree: 0%
@@ -27,7 +27,6 @@ I AEM Forms 6.5 introducerades möjligheten att definiera JavaScript-funktioner 
 
 Med de anpassade funktionerna kan man bättre hantera blanketterna genom att underlätta hanteringen och bearbetningen av inmatade data. De möjliggör också dynamisk ändring av formulärbeteende baserat på fördefinierade kriterier.
 I Adaptiv Forms kan du använda anpassade funktioner i [regelredigerare för ett anpassat formulär](/help/forms/using/rule-editor.md) för att skapa specifika valideringsregler för formulärfält.
-
 Låt oss förstå hur den anpassade funktionen används där användare anger e-postadressen och du vill se till att den angivna e-postadressen har ett visst format (den innehåller symbolen&quot;@&quot; och ett domännamn). Skapa en anpassad funktion som&quot;ValidateEmail&quot;, som tar e-postadressen som indata och returnerar true om den är giltig och i annat fall false.
 
 ```javascript
