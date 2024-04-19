@@ -10,9 +10,9 @@ exl-id: c4fb1b5e-e15e-450e-b882-fe27b165ff9f
 solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+source-git-commit: fde290e30335b0785d12ea9b5ab6081b1401d230
 workflow-type: tm+mt
-source-wordcount: '1781'
+source-wordcount: '1795'
 ht-degree: 0%
 
 ---
@@ -100,6 +100,8 @@ Komponenter som inte använder den här konventionen beaktas inte.
 >[!CAUTION]
 >
 >***Endast*** [redigerbara mallar](/help/sites-developing/page-templates-editable.md) stöds för Experience Fragments.
+>
+>Upplevelsefragment kan bara användas på sidor som är baserade på redigerbara mallar.
 
 När du utvecklar en ny mall för Experience Fragments kan du följa standardmetoderna för en [redigerbar mall](/help/sites-developing/page-templates-editable.md).
 

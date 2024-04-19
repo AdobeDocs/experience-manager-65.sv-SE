@@ -5,9 +5,9 @@ exl-id: 1ff9ac47-9a3a-4a4e-8af8-bc73048e0409
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring,Experience Fragments
 role: User
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+source-git-commit: fde290e30335b0785d12ea9b5ab6081b1401d230
 workflow-type: tm+mt
-source-wordcount: '1489'
+source-wordcount: '1504'
 ht-degree: 3%
 
 ---
@@ -19,7 +19,7 @@ Ett Experience Fragment är en grupp med en eller flera komponenter, inklusive i
 An Experience Fragment:
 
 * Är en del av en upplevelse (sida).
-* Kan användas på flera sidor.
+* Kan användas på flera sidor (som baseras på redigerbara mallar).
 * Är baserad på en mall (endast redigerbar) för att definiera struktur och komponenter.
 * Den här mallen används för att skapa *rotsida* av Experience Fragment.
 * Består av en eller flera komponenter med layout i ett styckesystem.
@@ -251,6 +251,10 @@ Ni kan skapa olika upplevelsefragment beroende på era behov:
 Nu kan du använda din Experience Fragment när du redigerar dina sidor:
 
 1. Öppna en sida för redigering.
+
+   >[!NOTE]
+   >
+   >Sidan måste baseras på en redigerbar mall.
 
    Till exempel: [https://localhost:4502/editor.html/content/we-retail/language-masters/en/products/men.html](https://localhost:4502/editor.html/content/we-retail/language-masters/en/products/men.html)
 
