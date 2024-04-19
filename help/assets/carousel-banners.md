@@ -10,9 +10,9 @@ feature: Carousel Banners
 role: User, Admin
 exl-id: 53d34d3a-ecb6-4fa0-9665-60d21f48021e
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: a28883778c5e8fb90cbbd0291ded17059ab2ba7e
 workflow-type: tm+mt
-source-wordcount: '4594'
+source-wordcount: '4596'
 ht-degree: 2%
 
 ---
@@ -43,7 +43,7 @@ Spela en genomgång på [hur karusellbanderoller skapas](https://s7d5.scene7.com
 
 >[!NOTE]
 >
->Icke-administrativa användare måste läggas till i **[!UICONTROL dam-users]** för att kunna skapa eller redigera karusellbanners. Om du har problem med att skapa eller redigera kontaktar du systemadministratören som kan lägga till dig i **[!UICONTROL dam-users]** grupp.
+>Icke-administrativa användare måste läggas till i **[!UICONTROL `dam-users`]** för att kunna skapa eller redigera karusellbanners. Om du har problem med att skapa eller redigera kontaktar du systemadministratören som kan lägga till dig i **[!UICONTROL `dam-users`]** grupp.
 
 ## Snabbstart: Carousel banners {#quick-start-carousel-banners}
 
@@ -72,7 +72,7 @@ Så här kommer du igång snabbt med Carousel banners:
 
    I Carousels-uppsättningar navigerar användarna genom banderollbilder och väljer hotspot-områden eller bildscheman för att få tillgång till relevant innehåll.
 
-   Om du vill skapa en Carousel-uppsättning i resurser väljer du **[!UICONTROL Create]** väljer **[!UICONTROL Carousel Sets]**. Lägga till resurser i bildrutor och markera **[!UICONTROL Save]**. Du kan också redigera karusellens utseende och beteende direkt i redigeraren.
+   Om du vill skapa en Carousel-uppsättning i resurser väljer du **[!UICONTROL Create]** väljer **[!UICONTROL Carousel Sets]**. Lägg till resurser i varje bildruta och välj **[!UICONTROL Save]**. Du kan också redigera karusellens utseende och beteende direkt i redigeraren.
 
 1. [Lägga till aktiveringspunkter eller bildscheman i en bildbanderoll](#adding-hotspots-or-image-maps-to-an-image-banner).
 
@@ -98,7 +98,7 @@ Information om hur du redigerar Carousel-uppsättningar finns i [redigera Carous
 
 Börja med att identifiera dynamiska variabler som används av den befintliga Quickview-implementeringen så att du kan ange klickbara områden eller data från bildscheman korrekt när du skapar karuselluppsättningar i Experience Manager Assets.
 
-När du lägger till aktiveringspunkter eller bildscheman i en banderollbild i Experience Manager Assets tilldelar du en SKU och valfria ytterligare variabler till varje hotspot eller bildschema. Sådana variabler används senare för att matcha hotspot-områden eller bildscheman med QuickView-innehåll.
+När du lägger till aktiveringspunkter eller bildscheman i en banderollbild i Experience Manager Assets tilldelar du en SKU och valfria extra variabler till varje hotspot eller bildschema. Sådana variabler används senare för att matcha hotspot-områden eller bildscheman med QuickView-innehåll.
 
 >[!NOTE]
 >
@@ -186,7 +186,7 @@ Information om hur du överför bildbanderoller finns i [Överför resurser](/he
 
 >[!NOTE]
 >
->Icke-administrativa användare måste läggas till i **[!UICONTROL dam-users]** för att kunna skapa eller redigera karusellbanners. Om du har problem med att skapa eller redigera kontaktar du systemadministratören som kan lägga till dig i **[!UICONTROL dam-users]** grupp.
+>Icke-administrativa användare måste läggas till i **[!UICONTROL `dam-users`]** för att kunna skapa eller redigera karusellbanners. Om du har problem med att skapa eller redigera kontaktar du systemadministratören som kan lägga till dig i **[!UICONTROL `dam-users`]** grupp.
 
 **Så här skapar du Carousel-uppsättningar:**
 
@@ -277,7 +277,7 @@ Se även [Lägg till bildscheman](/help/assets/image-maps.md).
    * För aktiveringspunkter: På bilden väljer du en plats där du vill att aktiveringspunkten ska visas.
    * För bildscheman: Markera på bilden och dra sedan från det övre vänstra hörnet till det nedre högra hörnet för att skapa bildschemaområdet. Du kan justera storleken på bildschemat genom att dra i hörnen.
 
-   Om det behövs drar du hotspot- eller bildschemat till en ny plats. Lägg till ytterligare hotspot-områden eller bildscheman efter behov.
+   Om det behövs drar du hotspot- eller bildschemat till en ny plats. Lägg till fler hotspot-områden eller bildscheman efter behov.
 
    Om du vill ta bort ett hotspot- eller bildschema markerar du **[!UICONTROL Actions]** -fliken. Under rubriken **[!UICONTROL Maps & Hotspots]** i listrutan **[!UICONTROL Selected Type]** väljer du namnet på det hotspot-område eller bildschema som du vill ta bort. Välj **[!UICONTROL Trash]** -ikonen bredvid menyn och välj **[!UICONTROL Delete]**.
 
@@ -336,7 +336,7 @@ Se [Upplevelsefragment](/help/sites-authoring/experience-fragments.md).
 
 >[!NOTE]
 >
->Icke-administrativa användare måste läggas till i **[!UICONTROL dam-users]** för att kunna skapa eller redigera karusellbanners. Om du har problem med att skapa eller redigera kontaktar du systemadministratören som kan lägga till dig i **[!UICONTROL dam-users]** grupp.
+>Icke-administrativa användare måste läggas till i **[!UICONTROL `dam-users`]** för att kunna skapa eller redigera karusellbanners. Om du har problem med att skapa eller redigera kontaktar du systemadministratören som kan lägga till dig i **[!UICONTROL dam-users]** grupp.
 
 Du kan utföra olika redigeringsåtgärder på Carousel Sets, till exempel:
 

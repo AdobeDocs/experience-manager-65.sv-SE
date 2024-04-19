@@ -10,9 +10,9 @@ feature: Interactive Videos
 role: User, Admin
 exl-id: d118879d-c17b-43f3-9cc8-0405531b4d9f
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: a28883778c5e8fb90cbbd0291ded17059ab2ba7e
 workflow-type: tm+mt
-source-wordcount: '5883'
+source-wordcount: '5882'
 ht-degree: 1%
 
 ---
@@ -39,7 +39,7 @@ Om du vill se en interaktiv videoklipp i praktiken väljer du [Live Demos](https
 
 >[!NOTE]
 >
->Om du skapar en interaktiv video för att starta en webbsida när en användare väljer en miniatyrbild blockerar vissa enheter popup-webbsidan från att öppnas. I sådana fall måste du ändra inställningen för blockering av popup-fönster på enheten. På en Apple iPhone 6 går du till exempel till **[!UICONTROL Settings]** > **Safari** > **Blockera popup-fönster** och sedan flytta kontrollen till **[!UICONTROL Off]**. När du spelar upp en interaktiv video och väljer en miniatyrbild blir du nu tillfrågad om du vill öppna popup-fönstret. Om du accepterar öppnas webbsidan.
+>Om du skapar en interaktiv video för att starta en webbsida när en användare väljer en miniatyrbild blockerar vissa enheter popup-webbsidan från att öppnas. I sådana fall måste du ändra inställningen för blockering av popup-fönster på enheten. På en Apple iPhone 6 går du till exempel till **[!UICONTROL Settings]** > **Safari** > **Blockera popup-fönster** och sedan flytta kontrollen till **[!UICONTROL Off]**. När du spelar upp en interaktiv video och väljer en miniatyrbild får du nu en fråga om du vill öppna popup-fönstret. Om du accepterar öppnas webbsidan.
 
 ### Se hur interaktiva videor skapas {#watch-how-interactive-videos-are-created}
 
@@ -73,7 +73,7 @@ Interaktiva videosteg:
 1. **(Valfritt) Identifiera QuickView-variabler** - Börja med att identifiera dynamiska variabler som används i den befintliga QuickView-implementeringen. Du använder variablerna för att mappa produktminiatyrbilder till deras motsvarande produkt-snabbvyn när du skapar en interaktiv video. Se [(Valfritt) Identifiera QuickView-variabler](#optional-identifying-quickview-variables).
    *Det här steget krävs bara om alla följande är true*:
    * Du vill lägga till interaktivitet i videon genom att aktivera snabbvyn.
-   * Er implementering av Experience Manager gör *not* använda ett ramverk för e-handelsintegrering för att hämta produktdata till Experience Manager från alla e-handelslösningar som IBM® WebSphere® Commerce, Elastic Path, Hybris eller Intershop. Se [e-handelskoncept i Experience Manager Assets](/help/commerce/cif-classic/administering/concepts.md).
+   * Er implementering av Experience Manager gör *not* använda ett ramverk för e-handelsintegrering för att hämta produktdata till Experience Manager från alla e-handelslösningar som IBM® WebSphere® Commerce, Elastic Path, Hybris och Intershop. Se [e-handelskoncept i Experience Manager Assets](/help/commerce/cif-classic/administering/concepts.md).
 
 1. **(Valfritt) Skapa en förinställning för Interactive Video Viewer** - Anpassa utseendet och beteendet för olika komponenter som utgör spelaren, t.ex. videobandspelaren och de interaktiva miniatyrbilderna.
 Det är inte nödvändigt att skapa en egen förinställning för Interactive Video Viewer om du tänker använda förinställningarna för Interactive Video Viewer `Shoppable_Video_Light` eller `Shoppable_Video_Dark` i stället.
@@ -103,7 +103,7 @@ Om du använder en WCM-fil (Web Content Manager) från tredje part måste du int
 >Den här aktiviteten krävs bara om följande är sant:
 >
 >* Du vill lägga till interaktivitet i videon genom att aktivera snabbvyn.
->* Er implementering av Experience Manager gör *not* använda ett ramverk för e-handelsintegrering för att hämta produktdata till Experience Manager från alla e-handelslösningar som IBM® WebSphere® Commerce, Elastic Path, Hybris eller Intershop. Se [e-handelskoncept i Experience Manager Assets](/help/commerce/cif-classic/administering/concepts.md).
+>* Er implementering av Experience Manager gör *not* använda ett ramverk för e-handelsintegrering för att hämta produktdata till Experience Manager från alla e-handelslösningar som IBM® WebSphere® Commerce, Elastic Path, Hybris och Intershop. Se [e-handelskoncept i Experience Manager Assets](/help/commerce/cif-classic/administering/concepts.md).
 >
 >Om din implementering av Experience Manager använder e-handel kan du hoppa över den här uppgiften och fortsätta med nästa uppgift.
 
@@ -140,7 +140,7 @@ Under den här processen är det viktigt att du besöker olika delar av webbplat
 
 I det enklaste fallet är den enda variabeldelen i snabbvyns URL produktens SKU. I det här fallet är produktens SKU-värde den enda datadel som behövs för att lägga till miniatyrbilder i ett tidssegment i den interaktiva videon i Experience Manager.
 
-I komplexa fall har dock QuickView-URL:en olika element förutom produkt-SKU:n, till exempel kategori-ID, färgkod och storlekskod. I sådana fall blir varje sådant element en separat variabel i definitionen av miniatyrbildsdata i Experience Manager.
+I komplexa fall har dock QuickView-webbadressen olika element utöver produktversionen, till exempel kategori-ID, färgkod och storlekskod. I sådana fall blir varje sådant element en separat variabel i definitionen av miniatyrbildsdata i Experience Manager.
 
 Titta på följande exempel på QuickView-URL:er och deras resulterande miniatyrbildsvariabler:
 
@@ -335,7 +335,7 @@ När du har sparat den interaktiva videon öppnas videon direkt i förhandsvisni
       </tbody>
     </table>
 
-   Videons tidslinje använder så mycket skärmutrymme som det som finns tillgängligt för den. När du ändrar storlek på webbläsaren behåller segmenten som du lade till sin korrekta bredd.
+   Videons tidslinje använder så mycket skärmutrymme som det som finns tillgängligt för den. Därför behåller de segment som du har lagt till sin korrekta bredd när webbläsarens storlek ändras.
 
    Följande tre skärmbilder använder samma video. Observera att bredden på varje segment ändras beroende på inställningen för tidslinjens skala.
 
@@ -375,7 +375,7 @@ När du har sparat den interaktiva videon öppnas videon direkt i förhandsvisni
 
    * Ta bort ett segment
 
-     Markera det sista segmentet på tidslinjen och välj sedan i verktygsfältet **[!UICONTROL Delete Segment]**. Om två eller flera segment är markerade är funktionen Ta bort segment inaktiverad.
+     Markera det sista segmentet på tidslinjen och välj sedan i verktygsfältet **[!UICONTROL Delete Segment]**. Om två eller flera segment är markerade **[!UICONTROL Delete Segment]** är inaktiverat.
 
      Du kan bara ta bort det sista segmentet. Om du till exempel vill ta bort alla segment på tidslinjen måste du alltid markera det sista segmentet och sedan markera **[!UICONTROL Delete Segment]**.
 
@@ -414,7 +414,7 @@ När du har sparat den interaktiva videon öppnas videon direkt i förhandsvisni
       <td>Associera den markerade miniatyrbilden med en snabbvy</td> 
       <td><p>Under Åtgärdstyp väljer du <strong>Quickview</strong>.</p> <p>Om du är kund inom Experience Manager Sites och e-handel:</p> 
        <ul> 
-       <li>Observera att textfältet SKU-värde är förifyllt med den valda produktens SKU (Stock Keeping Unit), som är en unik identifierare för varje separat produkt eller tjänst som du erbjuder. Det här värdet fylls i automatiskt när bilden associeras med en produkt i Experience Manager Commerce.</li> 
+       <li>Observera att textfältet SKU-värde är förifyllt med den valda produktens SKU (Stock Keeping Unit), som är en unik identifierare för varje separat produkt eller tjänst som du erbjuder. Värdet fylls i automatiskt när bilden är kopplad till en produkt i Experience Manager Commerce.</li> 
        <li>Om den i förväg ifyllda SKU:n är felaktig väljer du produktväljarens ikon (förstoringsglas) för att öppna sidan Välj produkt. Markera den produkt du vill använda och markera sedan bockmarkeringen i det övre högra hörnet av sidan så att du kan gå tillbaka till Interactive Video Editor.</li> 
        </ul> <p> Om du <em>not</em> en Experience Manager Sites- eller e-handelskund</p> 
        <ul> 
@@ -476,7 +476,7 @@ När du har sparat den interaktiva videon öppnas videon direkt i förhandsvisni
 
    Sammanfoga två valda femsekunderssegment till ett segment på tio sekunder.
 
-   * **[!UICONTROL Split Segment]** - Du kan dela upp ett enskilt segment i två segment med samma tidsindelning. Om det redan finns produktminiatyrer för segmentet kombineras miniatyrbilderna till det vänstra segmentet.
+   * **[!UICONTROL Split Segment]** - Du kan dela upp ett enskilt segment i två lika långa segment. Om det redan finns produktminiatyrer för segmentet kombineras miniatyrbilderna till det vänstra segmentet.
 
      Markera det segment som du vill dela upp i halva på tidslinjen och markera sedan **[!UICONTROL Split Segment]** i verktygsfältet.
 
@@ -534,7 +534,7 @@ Den kopierade inbäddningskoden ställs in för en responsiv miljö så att den 
 >
 >Nu är du klar om du har lagt till interaktivitet med endast hyperlänkade webbsidor.
 >
->Om du däremot har lagt till någon interaktivitet som utlöser en snabbvy visas endast miniatyrbilderna bredvid den interaktiva videon. De är ännu inte integrerade med din befintliga snabbvy. I så fall måste du integrera den interaktiva videon med den befintliga snabbvyn på webbplatsen.
+>Om du däremot har lagt till någon interaktivitet som utlöser en snabbvy visas endast miniatyrbilderna bredvid den interaktiva videon. De är ännu inte integrerade med din befintliga snabbvy. I sådana fall måste du integrera den interaktiva videon med den befintliga snabbvyn på webbplatsen.
 
 **Exempel**
 
@@ -569,7 +569,7 @@ Observera att inbäddningskoden är standard:
 </script>
 ```
 
-Integrationen är lika enkel som att ta bort inbäddningskoden för video och ersätta den med den interaktiva inbäddningskoden för video från Experience Manager. Resultatet visas på följande URL. Även om det visar en interaktiv video på sidan är den ännu inte integrerad med den befintliga snabbvyn:
+Integrationen är lika enkel som att ta bort inbäddningskoden för video och ersätta den med den interaktiva inbäddningskoden för video från Experience Manager. Resultatet visas på följande URL-adress. Även om det visar en interaktiv video på sidan är den ännu inte integrerad med den befintliga snabbvyn:
 
 [https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-video/john-lewis/landing-1.html](https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-video/john-lewis/landing-1.html)
 
@@ -693,7 +693,7 @@ Du kan se hur dessa steg tillämpas på demowebbplatsen för att helt integrera 
 /datafeed/$CategoryId$-$SKU$.json
 ```
 
-Det är enkelt att rekonstruera URL:en i `quickViewActivate` hanterare använda `categoryId` och `sku` fält som är tillgängliga i `inData` objekt som skickas till hanteraren via visningsprogrammets kod enligt följande:
+Det är enkelt att rekonstruera URL:en i `quickViewActivate` hanterare med `categoryId` och `sku` fält som är tillgängliga i `inData` objekt som skickas till hanteraren via visningsprogrammets kod enligt följande:
 
 ```xml
 var sku=inData.sku;
@@ -707,7 +707,7 @@ Demonstrationswebbplatsen utlöser dialogrutan Snabb visning med en enkel `loadQ
 loadQuickView(quickViewUrl);
 ```
 
-Kontrollera slutligen att dialogrutan Snabbvy är kopplad till visningsprogrammets behållarelement. Standardkoden för inbäddning innehåller exempelsteg för att uppnå den här funktionen. Om du vill få en referens till visningsprogrammets behållarelement kan du använda följande kodrader:
+Kontrollera slutligen att dialogrutan Snabbvy är kopplad till visningsprogrammets behållarelement. Den inbäddade koden innehåller exempelsteg för att uppnå den här funktionen. Om du vill få en referens till visningsprogrammets behållarelement kan du använda följande kodrader:
 
 ```xml
 var sdkContainerId = s7interactivevideoviewer.getComponent("container").getInnerContainerId(); // get viewer container component

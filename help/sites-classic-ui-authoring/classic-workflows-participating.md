@@ -9,7 +9,7 @@ exl-id: 2f1a3a73-7a20-48c7-8f3e-54252f5fb71c
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
 role: User
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+source-git-commit: a28883778c5e8fb90cbbd0291ded17059ab2ba7e
 workflow-type: tm+mt
 source-wordcount: '541'
 ht-degree: 3%
@@ -40,7 +40,7 @@ Du kan utföra följande åtgärder för att bearbeta ett arbetsobjekt:
 
 * **Gå bakåt**
 
-  Om du upptäcker att ett steg, eller en serie steg, måste upprepas, kan du stega tillbaka. På så sätt kan du välja ett steg som inträffade tidigare i arbetsflödet för ombearbetning. Arbetsflödet återgår till det steg du anger och fortsätter sedan därifrån.
+  Om du upptäcker att ett steg, eller en serie steg, måste upprepas, kan du stega tillbaka. Detta gör att du kan välja ett steg som inträffade tidigare i arbetsflödet för ombearbetning. Arbetsflödet återgår till det steg du anger och fortsätter sedan därifrån.
 
 ## Delta i ett arbetsflöde {#participating-in-a-workflow}
 

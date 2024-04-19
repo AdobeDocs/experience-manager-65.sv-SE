@@ -1,6 +1,6 @@
 ---
 title: Återger Forms som HTML
-description: Använd tjänsten Forms för att återge formulär som HTML som svar på en HTTP-begäran från en webbläsare. Du kan använda Java API och Web Service API för att återge formulär som HTML.
+description: Använd tjänsten Forms för att återge formulär som HTML som svar på en HTTP-begäran från en webbläsare. Du kan använda Java&trade; API och Web Service API för att återge formulär som HTML.
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/rendering_forms
@@ -9,9 +9,9 @@ topic-tags: operations
 role: Developer
 exl-id: e6887e45-a472-41d4-9620-c56fd5b72b4c
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: a28883778c5e8fb90cbbd0291ded17059ab2ba7e
 workflow-type: tm+mt
-source-wordcount: '4104'
+source-wordcount: '4099'
 ht-degree: 0%
 
 ---
@@ -64,17 +64,17 @@ Du måste gå från panel till panel med `xfa.host.pageUp` och `xfa.host.pageDow
 >
 >Om du vill anpassa utseendet på knappen för digital signatur i HTML måste du ändra följande egenskaper i filen fscdigsig.css (i filen adobe-forms-ds.ear > adobe-forms-ds.war):
 
-**.fsc-ds-ssb**: Den här formatmallen kan användas om det finns ett tomt teckenfält.
+**`.fsc-ds-ssb`**: Den här formatmallen kan användas om det finns ett tomt teckenfält.
 
-**.fsc-ds-ssv**: Den här formatmallen kan användas om det finns ett fält för giltig signatur.
+**`.fsc-ds-ssv`**: Den här formatmallen kan användas om det finns ett fält för giltig signatur.
 
-**.fsc-ds-ssc**: Den här formatmallen kan användas om det finns ett giltigt signeringsfält men data har ändrats.
+**`.fsc-ds-ssc`**: Den här formatmallen kan användas om det finns ett giltigt signeringsfält men data har ändrats.
 
-**.fsc-ds-ssi**: Den här formatmallen kan användas om det finns ett ogiltigt teckenfält.
+**`.fsc-ds-ssi`**: Den här formatmallen kan användas om det finns ett ogiltigt teckenfält.
 
-**.fsc-ds-popup-bg**: Den här formatmallsegenskapen används inte.
+**`.fsc-ds-popup-bg`**: Den här formatmallsegenskapen används inte.
 
-**.fsc-ds-popup-btn**: Den här formatmallsegenskapen används inte.
+**.`fsc-ds-popup-btn`**: Den här formatmallsegenskapen används inte.
 
 ## Köra skript {#running-scripts}
 

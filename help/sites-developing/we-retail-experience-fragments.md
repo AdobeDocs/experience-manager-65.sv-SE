@@ -9,9 +9,9 @@ exl-id: e17ff611-122a-4d17-97af-071d0234dd16
 solution: Experience Manager, Experience Manager Sites
 feature: Experience Fragments,Developing
 role: Developer
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+source-git-commit: a28883778c5e8fb90cbbd0291ded17059ab2ba7e
 workflow-type: tm+mt
-source-wordcount: '242'
+source-wordcount: '241'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ An [Experience Fragment](/help/sites-authoring/experience-fragments.md) är en g
 
 De gör att en författare kan återanvända delar av en sida (ett fragment av en upplevelse) utan att behöva kopiera och klistra in innehållet.
 
-Detta har stöd för CMS-fall (headless Content Management System), där författare bara vill använda AEM för att skapa, men inte för att leverera till kunden. En dator/kontaktyta från tredje part kan sedan förbruka upplevelsen och sedan leverera till slutanvändaren.
+Detta har stöd för CMS-fall (headless Content Management System), där författare bara vill använda AEM för att skapa, men inte för att leverera till kunden. Ett system/kontaktyta från tredje part kan sedan förbruka upplevelsen och sedan leverera till slutanvändaren.
 
 >[!NOTE]
 >

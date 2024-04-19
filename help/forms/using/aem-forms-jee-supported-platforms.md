@@ -8,9 +8,9 @@ docset: aem65
 role: Admin
 exl-id: 74d22cf4-56b2-48f5-92d9-928eaa134866
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: d3822f4dee1b0d571aa06142f4a4f6e27874cf53
+source-git-commit: a28883778c5e8fb90cbbd0291ded17059ab2ba7e
 workflow-type: tm+mt
-source-wordcount: '4011'
+source-wordcount: '4010'
 ht-degree: 0%
 
 ---
@@ -722,7 +722,7 @@ Adobe stöder brådskande eller rekommenderade patchar som utfärdas av tredjepa
 
 Ibland stöder inte Adobe tredjepartsuppdateringar som förändrar de viktigaste funktionerna och därför inte fullständig bakåtkompatibilitet. Mer information om vilka uppdateringar som stöds finns i [Korrigeringsdefinitioner som stöds](https://helpx.adobe.com/aem-forms/aem-forms-third-party-software-patch.html) för specifika leverantörsprodukter och korrigeringstyperna som Adobe stöder.
 
-Under omständigheter som ligger utanför Adobe kontroll kan korrigeringsfiler från tredje part som gör anspråk på bakåtkompatibilitet ha negativ inverkan på Adobe-produkter eller kundmiljöer. I sådana fall rekommenderar Adobe att man utvärderar effekten av en brådskande korrigering från en tredje part innan man lägger in den i kritiska system. Adobe samarbetar med tredje part genom att göra rimliga affärsmässiga ansträngningar för att lösa sådana problem, antingen genom vanliga stödprogram för Adobe eller genom att tredje part åtgärdar problemet i sina lappar. Detta garanterar inte att en nyligen släppt korrigeringsfil från tredje part som kommer att stödjas av Adobe fungerar så som den dokumenteras av leverantören eller med AEM Forms på JEE.
+Under omständigheter som ligger utanför Adobe kontroll kan korrigeringsfiler från tredje part som gör anspråk på bakåtkompatibilitet ha negativ inverkan på Adobe-produkter eller kundmiljöer. I sådana fall rekommenderar Adobe att man bedömer vilken effekt en brådskande korrigering från en tredje part har innan man lägger in den i viktiga system. Adobe samarbetar med tredje part genom att göra rimliga affärsmässiga ansträngningar för att lösa sådana problem, antingen genom vanliga stödprogram för Adobe eller genom att tredje part åtgärdar problemet i sina lappar. Detta garanterar inte att en nyligen släppt korrigeringsfil från tredje part som kommer att stödjas av Adobe fungerar så som den dokumenteras av leverantören eller med AEM Forms på JEE.
 
 Adobe förbehåller sig rätten att ändra de referensplattformar från tredje part som stöds av en AEM Forms on JEE-release och de korrigeringsdefinitioner som stöds vid varje given tidpunkt.
 

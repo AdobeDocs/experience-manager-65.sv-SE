@@ -7,9 +7,9 @@ docset: aem65
 feature: Adaptive Forms, Foundation Components
 exl-id: fed67c23-a9b7-403e-9199-dfd527d5f209
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: a28883778c5e8fb90cbbd0291ded17059ab2ba7e
 workflow-type: tm+mt
-source-wordcount: '1228'
+source-wordcount: '1226'
 ht-degree: 0%
 
 ---
@@ -46,13 +46,13 @@ I artikeln används ett exempel som visar hur du synkroniserar det adaptiva form
 
 När du har överfört paketet kan du visa de här resurserna i användargränssnittet för AEM Forms.
 
-Installera paketet med hjälp av pakethanteraren: `https://<server>:<port>/crx/packmgr/index.jsp`
+Installera paketet med pakethanteraren: `https://<server>:<port>/crx/packmgr/index.jsp`
 
 Paketet innehåller följande resurser:
 
 1. `sample-form.xdp`: XFA-formulärmallen används som exempel
 
-1. `sample-xfa-af`: Det adaptiva formuläret som baseras på filen sample-form.xdp. Det här anpassningsbara formuläret innehåller dock inga fält. I nästa steg ska vi lägga till innehåll i det här anpassade formuläret.
+1. `sample-xfa-af`: Det adaptiva formuläret som baseras på filen sample-form.xdp. Det här anpassningsbara formuläret innehåller dock inga fält. I nästa steg lägger du till innehåll i det här anpassade formuläret.
 
 ### Lägg till innehåll i anpassningsbara formulär {#add-content-to-adaptive-form-br}
 
@@ -63,7 +63,7 @@ Paketet innehåller följande resurser:
 
 >[!NOTE]
 >
->I föregående steg skrev vi över en egenskap för ett fält i XDP-filen. Den här egenskapen kommer därför inte att synkroniseras om motsvarande egenskap i XDP-filen ändras senare.
+>I föregående steg skrev du över en egenskap för ett fält i XDP-filen. Den här egenskapen synkroniseras därför inte om motsvarande egenskap i XDP-filen redigeras senare.
 
 ## Identifiera ändringar i XDP-fil {#detecting-changes-in-xdp-file}
 
@@ -133,7 +133,7 @@ Fältet som har tagits bort är också markerat med en ikon som anger ett fel i 
 
 >[!NOTE]
 >
->De fält i det adaptiva formuläret som har en felaktig bindning (en ogiltig) `bindRef` i redigeringsdialogrutan) betraktas också som borttagna fält. Om författaren inte åtgärdar dessa fel och publicerar det adaptiva formuläret, behandlas fältet som ett normalt, obindat, adaptivt formulärfält och inkluderas i det obindade avsnittet i XML-utdatafilen.
+>De fält i det adaptiva formuläret som har en felaktig bindning (en ogiltig) `bindRef` i redigeringsdialogrutan) betraktas också som borttagna fält. Om författaren inte åtgärdar dessa fel och publicerar det adaptiva formuläret behandlas fältet som ett vanligt obundet adaptivt formulärfält och inkluderas i det obundna avsnittet i XML-utdatafilen.
 
 ## Nedladdningar {#downloads}
 

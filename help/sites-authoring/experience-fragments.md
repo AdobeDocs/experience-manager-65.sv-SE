@@ -5,9 +5,9 @@ exl-id: 1ff9ac47-9a3a-4a4e-8af8-bc73048e0409
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring,Experience Fragments
 role: User
-source-git-commit: b90b62418edfa9cef36d99de554a340fad07d978
+source-git-commit: a28883778c5e8fb90cbbd0291ded17059ab2ba7e
 workflow-type: tm+mt
-source-wordcount: '1509'
+source-wordcount: '1505'
 ht-degree: 3%
 
 ---
@@ -368,7 +368,7 @@ Använda `.plain.` -väljaren i URL-adressen kan du komma åt den vanliga HTML-�
 
 >[!NOTE]
 >
->Även om detta är tillgängligt direkt från webbläsaren, [det främsta syftet är att tillåta andra program (till exempel webbprogram från tredje part, anpassade mobilimplementeringar) att få tillgång till innehållet i Experience Fragment direkt, med endast URL:en](/help/sites-developing/experience-fragments.md#the-plain-html-rendition).
+>Även om detta är tillgängligt direkt från webbläsaren, [det främsta syftet är att tillåta andra program (till exempel webbprogram från tredje part, anpassade mobilimplementeringar) att komma åt innehållet i Experience Fragment direkt, med enbart URL:en](/help/sites-developing/experience-fragments.md#the-plain-html-rendition).
 
 ## Exportera Experience Fragments {#exporting-experience-fragments}
 

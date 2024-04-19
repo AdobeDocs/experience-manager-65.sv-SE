@@ -9,7 +9,7 @@ exl-id: 9fa3e531-11b3-4b8d-a87c-a08faf06f5b7
 solution: Experience Manager, Experience Manager Sites
 feature: Integration
 role: Admin
-source-git-commit: eae057caed533ef16bb541b4ad41b8edd7aaa1c7
+source-git-commit: a28883778c5e8fb90cbbd0291ded17059ab2ba7e
 workflow-type: tm+mt
 source-wordcount: '1615'
 ht-degree: 0%
@@ -282,7 +282,7 @@ Konfigurera Adobe Analytics-ramverket för att aktivera ad hoc-länkspårning.
 
 >[!NOTE]
 >
->Konfigurationen av XSS-antisamy finns nu i SLING under sökvägen **/libs/sling/xss.config.xml** och följande regler måste läggas till för ad hoc-länkning till arbetet:
+>Konfigurationen av XSS-antisamy finns nu i SLING under sökvägen **/libs/sling/xss.config.xml** och följande regler måste läggas till i ad hoc-avtal så att länkningen fungerar:
 
 #### Regeltillägg för ankartagg {#anchor-tag-rule-extension}
 

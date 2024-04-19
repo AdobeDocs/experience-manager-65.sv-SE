@@ -9,9 +9,9 @@ exl-id: 5e345ffd-4e9c-467f-8ebb-c798eeb61dea
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring,Personalization,Multi Site Manager
 role: User,Admin,Architect,Developer
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+source-git-commit: a28883778c5e8fb90cbbd0291ded17059ab2ba7e
 workflow-type: tm+mt
-source-wordcount: '2837'
+source-wordcount: '2838'
 ht-degree: 5%
 
 ---
@@ -210,7 +210,7 @@ Så här skapar du ett område som en livecopy:
 
 ## Länka webbplatser till ett område {#linking-sites-to-an-area}
 
-Du kan länka områden till antingen sidor eller till en plats. Områden ärvs av alla undersidor såvida inte dessa sidor överlappas av en mappning på en undersida. I allmänhet länkar du dock på webbplatsnivå.
+Du kan länka områden till antingen sidor eller till en plats. Områden ärvs av alla undersidor, såvida inte dessa sidor ligger över lager av en mappning på en undersida. I allmänhet länkar du dock på webbplatsnivå.
 
 När du länkar är bara de aktiviteter, upplevelser och erbjudanden från det valda området tillgängliga. Detta förhindrar oavsiktlig blandning av oberoende hanterat innehåll. Om inget annat område är konfigurerat används huvudområdet för varje varumärke.
 

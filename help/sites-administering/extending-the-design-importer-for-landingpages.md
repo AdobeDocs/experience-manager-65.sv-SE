@@ -10,9 +10,9 @@ exl-id: 1b8c6075-13c6-4277-b726-8dea7991efec
 solution: Experience Manager, Experience Manager Sites
 feature: Administering
 role: Admin
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+source-git-commit: a28883778c5e8fb90cbbd0291ded17059ab2ba7e
 workflow-type: tm+mt
-source-wordcount: '3442'
+source-wordcount: '3441'
 ht-degree: 0%
 
 ---
@@ -249,7 +249,7 @@ Denna CTA-komponent kan användas för att lägga till en textlänk på landning
 Egenskaper som stöds
 
 * Etikett, med fet stil, kursiv stil och understrykning
-* Mål-URL, stöder tredje part och AEM-URL
+* Mål-URL, stöder tredje part och AEM URL
 * Alternativ för sidåtergivning (samma fönster, nytt fönster, osv.)
 
 Taggen HTML om du vill ta med klickningen genom komponenten i den importerade zippen. Här mappas href till mål-URL, &quot;Visa produktinformation&quot; mappas till etikett och så vidare.
@@ -282,7 +282,7 @@ Egenskaper som stöds
 
 * Bildbeskärning, rotering
 * Hovringstext, beskrivning, storlek i px
-* Mål-URL, stöder tredje part och AEM-URL
+* Mål-URL, stöder tredje part och AEM URL
 * Alternativ för sidåtergivning (samma fönster, nytt fönster, osv.)
 
 Taggen HTML om du vill ta med en grafisk länkkomponent i det importerade postnumret. Här mappas href till target url, img src är återgivningsbilden, &quot;title&quot; tolkas som hover text osv.
@@ -368,11 +368,11 @@ Taggen HTML om du vill ta med en grafisk länkkomponent i det importerade postnu
 
 ### Parsys {#parsys}
 
-AEM är en behållarkomponent som kan innehålla andra AEM. Det går att lägga till en parsyskomponent i det importerade HTML. Detta gör att användaren kan lägga till/ta bort redigerbara AEM på landningssidan även efter att den har importerats.
+Komponenten AEM Parsys är en behållarkomponent som kan innehålla andra AEM komponenter. Det går att lägga till en Parsys-komponent i det importerade HTML. Detta gör att användaren kan lägga till/ta bort redigerbara AEM på landningssidan även efter att den har importerats.
 
 Styckesystemet ger användarna möjlighet att lägga till komponenter med hjälp av sidbrytaren.
 
-HTML-kod för att infoga en parsyskomponent ( `foundation/components/parsys`) i designpaketet HTML:
+HTML-kod för att infoga en Parsys-komponent ( `foundation/components/parsys`) i designpaketet HTML:
 
 ```xml
 <div data-cq-component="parsys">
@@ -384,8 +384,8 @@ HTML-kod för att infoga en parsyskomponent ( `foundation/components/parsys`) i 
 Att ta med markeringen ovan i HTML gör följande:
 
 * Infogar en AEM parsys-komponent (grund/komponenter/parsys) på landningssidan som skapas när designpaketet har importerats.
-* Initierar sidsparken med standardkomponenter. Du kan lägga till nya komponenter på landningssidan genom att dra komponenter från sidosparken till den parsytiska komponenten.
-* Två titelkomponenter är också en del av parsysen.
+* Initierar sidsparken med standardkomponenter. Du kan lägga till nya komponenter på landningssidan genom att dra komponenter från sidosparken till Parsys-komponenten.
+* Två titelkomponenter ingår också i Parsys.
 
 ### Mål {#target}
 
@@ -441,7 +441,7 @@ Om ingen kodning anges i det importerade HTML är standardkodningen som anges av
 
 ### Överläggningsmall {#overlaying-template}
 
-Mallen Tom landningssida kan överlagras genom att skapa en på: `/apps/<appName>/designimporter/templates/<templateName>`
+Mallen Tom landningssida kan vara över ett lager genom att skapa en på: `/apps/<appName>/designimporter/templates/<templateName>`
 
 Steg för att skapa en mall i AEM förklaras [här](/help/sites-developing/templates.md).
 
@@ -543,7 +543,7 @@ När du importerar designpaketet kan det uppstå flera fel, som beskrivs i det h
 
 ### Initiering av sidosparken med komponenter som är relevanta för landningssidan {#initialization-of-sidekick-with-landing-page-relevant-components}
 
-Om designpaketet innehåller en parsys-komponentkod börjar sidosparken visa relevanta komponenter för landningssidan efter importen. Du kan dra och släppa nya komponenter på den parsytiska komponenten på landningssidan. Du kan också gå till designläget och lägga till nya komponenter i sidosparken.
+Om designpaketet innehåller en Parsys-komponentkod börjar sidosparken visa relevanta komponenter för landningssidan efter importen. Du kan dra och släppa nya komponenter till Parsys-komponenten på landningssidan. Du kan också gå till designläget och lägga till nya komponenter i sidosparken.
 
 ### Felmeddelanden som visas vid import {#error-messages-displayed-during-import}
 

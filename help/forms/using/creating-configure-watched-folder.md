@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: publish
 exl-id: b15d8d3b-5e47-4c33-95fe-440fcf96be83
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: a28883778c5e8fb90cbbd0291ded17059ab2ba7e
 workflow-type: tm+mt
-source-wordcount: '1829'
+source-wordcount: '1831'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ Du kan använda användargränssnittet för bevakad mapp för att:
 Innan du konfigurerar en bevakad mapp bör du kontrollera följande:
 
 * Bevakade mappar är en avancerad funktion i AEM formulär. Det kräver AEM formulärtilläggspaket för att fungera. Kontrollera att rätt AEM Forms-tilläggspaket är installerat och konfigurerat.
-* Du kan skapa den bevakade mappen i en delad eller lokal lagringsplats. Se till att AEM formuläranvändare som är konfigurerade att köra den bevakade mappen har läs- och skrivbehörighet för den bevakade mappen.
+* Du kan skapa den bevakade mappen i ett delat lagringsutrymme eller ett lokalt lagringsutrymme. Se till att AEM formuläranvändare som är konfigurerade att köra den bevakade mappen har läs- och skrivbehörighet för den bevakade mappen.
 * Du kan använda en tjänst, ett arbetsflöde eller ett skript för att automatisera en åtgärd med bevakad mapp. Kontrollera att motsvarande tjänst, arbetsflöde eller skript har skapats och är redo att köras. Mer information om hur du skapar en tjänst, ett arbetsflöde och ett skript finns i [Olika metoder för bearbetning av filer](/help/forms/using/watched-folder-in-aem-forms.md#various-methods-for-processing-files).
 * En bevakad mapp har olika egenskaper, se [Egenskaper för bevakad mapp](watched-folder-in-aem-forms.md#watchedfolderproperties).
 

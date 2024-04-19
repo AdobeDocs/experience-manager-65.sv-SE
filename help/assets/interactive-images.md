@@ -10,9 +10,9 @@ feature: Interactive Images
 role: User, Admin
 exl-id: 8a609024-e9e6-4805-8306-48d095110eb6
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: a28883778c5e8fb90cbbd0291ded17059ab2ba7e
 workflow-type: tm+mt
-source-wordcount: '4096'
+source-wordcount: '4098'
 ht-degree: 0%
 
 ---
@@ -80,7 +80,7 @@ Se [Överföra en bildbanderoll](#uploading-an-image-banner).
 
 Börja med att identifiera dynamiska variabler som används i den befintliga QuickView-implementeringen så att du kan ange hotspot-data för att skapa den interaktiva bilden.
 
-När du lägger till aktiveringspunkter i en banderollbild i Experience Manager Assets måste du tilldela en SKU (Stock Keeping Unit) och valfria ytterligare variabler till varje hotspot. Sådana hotspot-variabler används senare för att matcha hotspot-områden med Quickview-innehåll.
+När du lägger till aktiveringspunkter i en banderollbild i Experience Manager Assets måste du tilldela varje hotspot en SKU (Stock Keeping Unit) och valfria extra variabler. Sådana hotspot-variabler används senare för att matcha hotspot-områden med Quickview-innehåll.
 
 Det är viktigt att kunna identifiera antalet och typen av variabler som ska kopplas till hotspot-data. Varje hotspot som läggs till i en banderollbild måste innehålla tillräckligt med information för att entydigt identifiera produkten i det befintliga backend-systemet.
 
@@ -113,7 +113,7 @@ Under den här processen är det viktigt att du besöker olika delar av webbplat
 
 I det enklaste fallet är den enda variabeldelen i snabbvyns URL produktens SKU. I det här fallet är SKU-värdet den enda datadel som du behöver för att lägga till aktiveringspunkter i banderollbilden.
 
-I komplexa fall har emellertid QuickView-URL:en olika element förutom SKU:n, till exempel kategori-ID, färgkod och storlekskod. I sådana fall är varje element en separat variabel i hotspot-datadefinitionen i den interaktiva bildfunktionen som kan köpas i Experience Manager Assets.
+I komplexa fall har emellertid QuickView-URL:en olika element utöver SKU:n, till exempel kategori-ID, färgkod och storlekskod. I sådana fall är varje element en separat variabel i hotspot-datadefinitionen i den interaktiva bildfunktionen som kan köpas i Experience Manager Assets.
 
 Titta på följande exempel på QuickView-URL:er och deras resulterande hotspot-variabler:
 
@@ -271,7 +271,7 @@ Se [(Valfritt) Förhandsgranska interaktiva bilder](#optional-previewing-interac
 
    1. I närheten av det övre vänstra hörnet på sidan Hantering av aktiveringspunkter väljer du **[!UICONTROL Hotspot]**.
    1. På bilden väljer du en plats där du vill att hotspot-området ska visas. Dra hotspot-området om det behövs för att justera dess placering.
-   1. Lägg till ytterligare hotspot-områden efter behov genom att upprepa steg a och b.
+   1. Lägg till ytterligare hotspot-områden efter behov genom att upprepa stegen a och b.
    1. (Valfritt) Om du vill ta bort en aktiveringspunkt markerar du den i bilden och väljer sedan **[!UICONTROL Delete]** (ikonen trashcan) under **[!UICONTROL Hotspots]** rubrik.
 
 1. Skriv namnet på aktiveringspunkten i textfältet Namn. Det här namnet visas också i listrutan Markerad aktiveringspunkt.
@@ -375,9 +375,9 @@ Integreringen är enkel som att ta bort `IMG` och ersätta den med den kopierade
 
 Om du vill tillämpa en beskärning på en interaktiv bild för en responsiv miljö kan du inkludera attributet Interactive Image configuration `ZoomView.iscommand` till banan. Komponenten `ZoomView` anropas och `iscommand` är det&quot;beskär&quot; bildserverkommando som du använder.
 
-Se [ZoomView.iscommand](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/command-reference-configuration-attributes-interactive-images/r-html5-aem-interactive-image-config-attrib-zoomview-iscommand.html) konfigurationsattribut.
+Se [ZoomView.iscommand](https://experienceleague.adobe.com/en/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/command-reference-configuration-attributes-interactive-images/r-html5-aem-interactive-image-config-attrib-zoomview-iscommand) konfigurationsattribut.
 
-Se [beskära](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-crop.html) kommando för att visa bilder.
+Se [beskära](https://experienceleague.adobe.com/en/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-crop) kommando för att visa bilder.
 
 Nu kan du integrera den interaktiva bilden med en befintlig Quickview på webbplatsen.
 

@@ -5,7 +5,7 @@ content-type: troubleshooting
 topic-tags: publish
 exl-id: 3c48660e-5e4f-4615-82d4-9f1f285c2a39
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: a28883778c5e8fb90cbbd0291ded17059ab2ba7e
 workflow-type: tm+mt
 source-wordcount: '853'
 ht-degree: 0%
@@ -30,7 +30,7 @@ ECMAScript är ett skriptspråk. Det används för skript och serverprogram på 
    * (Sökväg för steget Tilldela uppgift) `/apps/fd/dashboard/scripts/participantChooser`
    * (Sökväg för signering, steg) `/apps/fd/workflow/scripts/adobesign`
 
-1. Lägg till ECMAScript, som har logiken för att dynamiskt välja en användare, i .ecma-filen. Klicka på **[!UICONTROL Save All]**.
+1. Lägg till ECMAScript som har logik att dynamiskt välja en användare i .ecma-filen. Klicka på **[!UICONTROL Save All]**.
 
    Exempel på skript finns i [Exempel på ECMAScript för dynamiskt val av användare eller grupp](/help/forms/using/dynamically-select-a-user-or-group-for-aem-workflow.md#sample-ecmascripts-to-dynamically-choose-a-user-or-a-group).
 

@@ -10,9 +10,9 @@ exl-id: b5f3d3a6-39c0-4aa5-8562-3cc6fa2b9e46
 solution: Experience Manager, Experience Manager Sites
 feature: Administering
 role: Admin
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+source-git-commit: a28883778c5e8fb90cbbd0291ded17059ab2ba7e
 workflow-type: tm+mt
-source-wordcount: '6074'
+source-wordcount: '6073'
 ht-degree: 0%
 
 ---
@@ -140,7 +140,7 @@ Portleten kan konfigureras med följande inställningar:
 
 #### OSGi Web Console {#osgi-web-console}
 
-Anta att portalservern körs på värddatorns lokala värd, port 8080 och att AEM portletens webbprogram monteras i webbprogramskontexten *cqportlet*, webbadressen till webbkonsolen är `https://localhost:8080/cqportlet/cqbridge/system/console`. Standardanvändare och lösenord är **admin**.
+Anta att portalservern körs på värddatorns lokala värd, port 8080 och att AEM portletens webbprogram monteras i webbprogramskontexten *cqportlet*, webbadressen för webbkonsolen är `https://localhost:8080/cqportlet/cqbridge/system/console`. Standardanvändare och lösenord är **admin**.
 
 Öppna **Konfigurationer** och markera **Konfiguration av CQ-server för portalkatalog**. Här anger du bas-URL:en till författaren och publiceringsinstansen. Denna procedur beskrivs i [Konfigurera portleten](#configuring-the-portlet).
 

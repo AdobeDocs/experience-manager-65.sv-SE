@@ -7,9 +7,9 @@ topic-tags: document_services
 feature: Document Services
 exl-id: f2e4f509-cca2-44a3-9231-e1954b0fefe3
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: a28883778c5e8fb90cbbd0291ded17059ab2ba7e
 workflow-type: tm+mt
-source-wordcount: '6348'
+source-wordcount: '6346'
 ht-degree: 0%
 
 ---
@@ -4464,7 +4464,7 @@ Tjänsten PDF Generator tillhandahåller API:er för konvertering av inbyggda fi
 
 GeneratePDFService innehåller API:er för konvertering av olika filformat, till exempel .doc, .docx, .ppt, .pptx, .xls, .xlsx, .odp, .odt, .ods, .swf (utgått), .jpg, .bmp, .tif, .png, .html och många andra filformat till PDF. Det innehåller även API:er för att exportera PDF till olika filformat och optimera PDF. Tjänsten stöder följande API:er:
 
-* **createPDF**: Konverterar en filtyp som stöds till ett PDF-dokument. Det stöder filformat som Microsoft Word, Microsoft PowerPoint, Microsoft Excel och Microsoft Project. Förutom dessa program kan alla andra tredje parters generiska programtyper för generering av PDF också kopplas till API:t.
+* **createPDF**: Konverterar en filtyp som stöds till ett PDF-dokument. Det stöder filformat som Microsoft Word, Microsoft PowerPoint, Microsoft Excel och Microsoft Project. Förutom dessa program kan alla genererande applikationstyper från tredje part även kopplas till API:t.
 * **exportPDF**: Konverterar ett PDF-dokument till en filtyp som stöds. Metoden accepterar PDF som indata och exporterar innehållet i PDF i angivet filformat. Du kan exportera ett PDF-dokument i Encapsulated PostScript( eps), HTML 3.2( htm, html), HTML 4.01 med CSS 1.0( htm, html), JPEG( jpg, jpeg, jpe), JPEG2000( jpf, jpx, jp2, j2k, j2c, jpg) pc), Microsoft Word-dokument( doc, docx) Microsoft Excel-arbetsbok( xlsx), Microsoft PowerPoint-presentation( pptx), PNG( png), PostScript( ps), Rich Text Format( rtf), Text(Accessible)( txt), Text(Plain)( txt) TIFF(tif, tiff), XML 1.0( xml), PDF/A-1a(sRGB), PDF/A-1b, PDF/A-2a(sRGB), PDF/A-2b(sRGB), PDF/A-3a(sRGB), PDF/A-3b(sRGB). Du kan också ange [anpassade preflight-profiler](https://helpx.adobe.com/acrobat/using/preflight-profiles-acrobat-pro.html) för utdata från PDF.
 
 * **optimeraPDF**: Optimerar PDF-dokumentet och konverterar ett PDF-dokument från en typ till en annan. Metoden accepterar ett PDF-dokument som indata.
@@ -4512,7 +4512,7 @@ GeneratePDFService innehåller API:er för konvertering av olika filformat, till
 
 #### createPDF {#createpdf}
 
-API:t createPDF konverterar en filtyp som stöds till ett PDF-dokument. Det stöder olika filformat som Microsoft Word, Microsoft PowerPoint, Microsoft Excel och Microsoft Project. Förutom dessa program kan alla andra tredje parters generiska programtyper för generering av PDF också kopplas till API:t.
+API:t createPDF konverterar en filtyp som stöds till ett PDF-dokument. Det stöder olika filformat som Microsoft Word, Microsoft PowerPoint, Microsoft Excel och Microsoft Project. Förutom dessa program kan alla genererande applikationstyper från tredje part även kopplas till API:t.
 
 För konverteringen är bara ett fåtal parametrar obligatoriska. Ett indatadokument är en obligatorisk parameter. Du kan använda säkerhetsbehörigheter, utdatainställningar för PDF och metadatainformation senare för utdatadokumentet i PDF.
 

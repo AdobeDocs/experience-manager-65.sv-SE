@@ -9,9 +9,9 @@ exl-id: 3a90f1d2-e53f-4cc4-8122-024ad6500de0
 solution: Experience Manager, Experience Manager Sites
 feature: Deploying
 role: Admin
-source-git-commit: 48d12388d4707e61117116ca7eb533cea8c7ef34
+source-git-commit: a28883778c5e8fb90cbbd0291ded17059ab2ba7e
 workflow-type: tm+mt
-source-wordcount: '1168'
+source-wordcount: '1166'
 ht-degree: 0%
 
 ---
@@ -236,17 +236,17 @@ Före en distribution ska du läsa [Allmän beskrivning](#general-description) o
 
 * **Distribuera AEM webbprogram**
 
-   * Ladda ned AEM
-   * Gör dina konfigurationer i web.xml vid behov (se ovan i den allmänna beskrivningen)
+   * Ladda ned AEM.
+   * Gör dina konfigurationer i web.xml om det behövs (se ovan i den allmänna beskrivningen).
 
-      * Packa upp WEB-INF/web.xml
-      * ändra sling.run.modes-parameter för publicering
-      * avkommentera slinga.initial startparameter och ange den här sökvägen efter behov
-      * Replikera filen web.xml
+      * Packa upp WEB-INF/web.xml.
+      * Ändra parametern sling.run.modes till publish.
+      * Avkommentera sling.home initial parameter och ange den här sökvägen efter behov.
+      * Repackera filen web.xml.
 
-   * Byt namn AEM krigsfil till ROOT.war om du vill distribuera den som en rotwebbapp, byt namn på den till exempel aemauthor.war om du vill ha en aemauthor som kontextrot
-   * kopiera det till Tomcat-webbappen
-   * vänta tills AEM har installerats
+   * Byt namn AEM krigsfilen till ROOT.war om du vill distribuera den som en rotwebbapp. Byt namn på den till aemauthor.war om du vill ha en aemauthor som kontextrot.
+   * Kopiera den till Tomcat&#39;s webbapps folder.
+   * Vänta tills AEM har installerats.
 
 ## Felsökning {#troubleshooting}
 

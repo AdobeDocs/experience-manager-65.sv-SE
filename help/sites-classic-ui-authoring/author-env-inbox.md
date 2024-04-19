@@ -10,7 +10,7 @@ exl-id: 52ea2ca2-eb1c-4bed-b52d-feef37c6afd6
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
 role: User
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+source-git-commit: a28883778c5e8fb90cbbd0291ded17059ab2ba7e
 workflow-type: tm+mt
 source-wordcount: '569'
 ht-degree: 0%
@@ -106,8 +106,8 @@ Om du bara vill bli meddelad om åtgärder på sidan som definieras av sökväge
 
 Om du har valt att ta emot meddelanden i din AEM Inkorg fylls din inkorg i med meddelanden. Du kan [visa dina meddelanden](#viewing-your-notifications)väljer du sedan de meddelanden som krävs för att:
 
-* Godkänn den genom att klicka **Godkänn**: värdet i **Läs** kolumnen är inställd på **true**.
+* Acceptera genom att klicka **Godkänn**: värdet i **Läs** kolumnen är inställd på **true**.
 
-* Ta bort den genom att klicka **Ta bort**.
+* Eliminera det genom att klicka **Ta bort**.
 
 ![chlimage_1-5](assets/chlimage_1-5.jpeg)

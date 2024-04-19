@@ -7,9 +7,9 @@ role: User
 feature: Workflow,Renditions
 exl-id: cfd6c981-1a35-4327-82d7-cf373d842cc3
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: a28883778c5e8fb90cbbd0291ded17059ab2ba7e
 workflow-type: tm+mt
-source-wordcount: '2066'
+source-wordcount: '2043'
 ht-degree: 1%
 
 ---
@@ -18,13 +18,13 @@ ht-degree: 1%
 
 [!DNL Adobe Experience Manager Assets] innehåller en uppsättning standardarbetsflöden och mediehanterare för att bearbeta resurser. I ett arbetsflöde definieras de uppgifter som ska köras på resurserna och sedan delegeras de specifika uppgifterna till mediehanterarna, till exempel generering av miniatyrer eller metadataextrahering.
 
-Ett arbetsflöde kan konfigureras så att det körs automatiskt när en resurs av en viss MIME-typ överförs. Bearbetningsstegen definieras som en serie [!DNL Assets] mediehanterare. [!DNL Experience Manager] innehåller vissa [inbyggda hanterare,](#default-media-handlers) och ytterligare kan antingen [anpassad utveckling](#creating-a-new-media-handler) eller definieras genom att delegera processen till en [kommandoradsverktyg](#command-line-based-media-handler).
+Ett arbetsflöde kan konfigureras så att det körs automatiskt när en resurs av en viss MIME-typ överförs. Bearbetningsstegen definieras som en serie [!DNL Assets] mediehanterare. [!DNL Experience Manager] innehåller vissa [inbyggda hanterare](#default-media-handlers)och de extra kan antingen [anpassad utveckling](#creating-a-new-media-handler) eller definieras genom att delegera processen till en [kommandoradsverktyg](#command-line-based-media-handler).
 
-Mediehanterare är tjänster i [!DNL Assets] som utför specifika åtgärder på resurser. När till exempel en MP3-ljudfil överförs till [!DNL Experience Manager], utlöser ett arbetsflöde en MP3-hanterare som extraherar metadata och genererar en miniatyrbild. Mediehanterare används vanligtvis i kombination med arbetsflöden. De vanligaste MIME-typerna stöds i [!DNL Experience Manager]. Specifika uppgifter kan utföras på resurser genom att antingen utöka/skapa arbetsflöden, utöka/skapa mediehanterare eller inaktivera/aktivera mediehanterare.
+Mediehanterare är tjänster i [!DNL Assets] som utför specifika åtgärder på resurser. När till exempel en MP3-ljudfil överförs till [!DNL Experience Manager], utlöser ett arbetsflöde en MP3-hanterare som extraherar metadata och genererar en miniatyrbild. Mediehanterare används med arbetsflöden. De vanligaste MIME-typerna stöds i [!DNL Experience Manager]. Specifika åtgärder kan utföras på resurser genom att antingen utöka eller skapa arbetsflöden, utöka eller skapa mediehanterare eller inaktivera och aktivera mediehanterare.
 
 >[!NOTE]
 >
->Se [Format som stöds för resurser](assets-formats.md) en beskrivning av alla format som stöds av [!DNL Assets] och funktioner som kan användas för varje format.
+>Se [Resursformat som stöds](assets-formats.md) en beskrivning av alla format som stöds av [!DNL Assets] och funktioner som kan användas för varje format.
 
 ## Standardmediehanterare {#default-media-handlers}
 
@@ -38,7 +38,7 @@ Följande mediehanterare är tillgängliga i [!DNL Assets] och hantera de vanlig
 | [!UICONTROL TextHandler] | com.day.cq.dam.core.impl.handler.TextHandler | text/normal |
 | [!UICONTROL PdfHandler] | com.day.cq.dam.handler.standard.pdf.PdfHandler | <ul><li>application/pdf</li><li>program/illustrator</li></ul> |
 | [!UICONTROL JpegHandler] | com.day.cq.dam.core.impl.handler.JpegHandler | image/jpeg |
-| [!UICONTROL Mp3Handler] | com.day.cq.dam.handler.standard.mp3.Mp3Handler | audio/mpeg<br><b>Viktigt</b> - När du överför en MP3-fil är det [bearbetas med ett tredjepartsbibliotek](https://www.zxdr.it/programmi/SistEvolBDD/LibJava/doc/de/vdheide/mp3/MP3File.html). Biblioteket beräknar en icke korrekt ungefärlig längd om MP3 har variabel bithastighet (VBR). |
+| [!UICONTROL Mp3Handler] | com.day.cq.dam.handler.standard.mp3.Mp3Handler | audio/mpeg<br><b>Viktigt</b> - En överförd MP3-fil är [bearbetas med ett tredjepartsbibliotek](https://www.zxdr.it/programmi/SistEvolBDD/LibJava/doc/de/vdheide/mp3/MP3File.html). Biblioteket beräknar en icke korrekt ungefärlig längd om MP3 har variabel bithastighet (VBR). |
 | [!UICONTROL ZipHandler] | com.day.cq.dam.handler.standard.zip.ZipHandler | <ul><li>application/java-archive </li><li> application/zip</li></ul> |
 | [!UICONTROL PictHandler] | com.day.cq.dam.handler.standard.pict.PictHandler | bild/pict |
 | [!UICONTROL StandardImageHandler] | com.day.cq.dam.core.impl.handler.StandardImageHandler | <ul><li>image/gif </li><li> bild/png </li> <li>application/photoshop </li> <li>image/jpeg </li><li> bild/tiff </li> <li>image/x-ms-bmp </li><li> image/bmp</li></ul> |
@@ -65,9 +65,9 @@ Så här visar du de aktiva mediehanterarna:
 
 ## Använda mediehanterare i arbetsflöden för att utföra åtgärder på resurser {#using-media-handlers-in-workflows-to-perform-tasks-on-assets}
 
-Mediehanterare är tjänster som vanligtvis används i kombination med arbetsflöden.
+Mediehanterare är tjänster som används med arbetsflöden.
 
-[!DNL Experience Manager] har vissa standardarbetsflöden för att bearbeta resurser. Öppna arbetsflödeskonsolen och klicka på **[!UICONTROL Models]** flik: arbetsflödets titlar som börjar med [!DNL Assets] är de tillgångar som är specifika.
+[!DNL Experience Manager] har vissa standardarbetsflöden för att bearbeta resurser. Öppna arbetsflödeskonsolen och klicka på **[!UICONTROL Models]** flik: arbetsflödets titlar som börjar med [!DNL Assets] är tillgångsspecifika.
 
 Befintliga arbetsflöden kan utökas och nya kan skapas för att bearbeta resurser enligt specifika krav.
 
@@ -108,10 +108,10 @@ package my.own.stuff; /** * @scr.component inherit="true" * @scr.service */ publ
 
 Gränssnittet och klasserna omfattar:
 
-* `com.day.cq.dam.api.handler.AssetHandler` interface: Detta gränssnitt beskriver tjänsten som lägger till stöd för specifika MIME-typer. Om du lägger till en ny MIME-typ måste det här gränssnittet implementeras. Gränssnittet innehåller metoder för import och export av specifika dokument, för att skapa miniatyrbilder och extrahera metadata.
+* `com.day.cq.dam.api.handler.AssetHandler` interface: Detta gränssnitt beskriver tjänsten som lägger till stöd för specifika MIME-typer. Om du lägger till en MIME-typ måste det här gränssnittet implementeras. Gränssnittet innehåller metoder för import och export av specifika dokument, för att skapa miniatyrbilder och extrahera metadata.
 * `com.day.cq.dam.core.AbstractAssetHandler` class: Den här klassen fungerar som bas för alla andra tillgångshanterarimplementeringar och tillhandahåller vanliga funktioner.
 * Klassen `com.day.cq.dam.core.AbstractSubAssetHandler`:
-   * Den här klassen fungerar som bas för alla andra implementeringar av tillgångshanterare och tillhandahåller vanliga funktioner plus vanliga funktioner för extrahering av undertillgångar.
+   * Den här klassen fungerar som bas för alla andra implementeringar av tillgångshanterare och ger ofta använda funktioner plus vanliga funktioner för subresursextrahering.
    * Det bästa sättet att starta en implementering är att ärva från en tillhandahållen abstrakt implementering som tar hand om de flesta saker och tillhandahåller ett rimligt standardbeteende: klassen com.day.cq.dam.core.AbstractAssetHandler.
    * Den här klassen tillhandahåller redan en abstrakt tjänstbeskrivning. Om du ärver från den här klassen och använder maven-sling-plugin-programmet måste du ange att ärvningsflaggan ska vara true.
 
@@ -119,7 +119,7 @@ Följande metoder måste implementeras:
 
 * `extractMetadata()`: den här metoden hämtar alla tillgängliga metadata.
 * `getThumbnailImage()`: den här metoden skapar en miniatyrbild av den skickade resursen.
-* `getMimeTypes()`: den här metoden returnerar resursens MIME-typ(er).
+* `getMimeTypes()`: den här metoden returnerar resursens MIME-typer.
 
 Här är en exempelmall:
 
@@ -127,7 +127,7 @@ paketera my.own.stuff; /&amp;ast; &amp;ast; @scr.component inherit=&quot;true&qu
 
 Gränssnittet och klasserna omfattar:
 
-* `com.day.cq.dam.api.handler.AssetHandler` interface: Detta gränssnitt beskriver tjänsten som lägger till stöd för specifika MIME-typer. Om du lägger till en ny MIME-typ måste det här gränssnittet implementeras. Gränssnittet innehåller metoder för import och export av specifika dokument, för att skapa miniatyrbilder och extrahera metadata.
+* `com.day.cq.dam.api.handler.AssetHandler` interface: Detta gränssnitt beskriver tjänsten som lägger till stöd för specifika MIME-typer. Om du lägger till en MIME-typ måste det här gränssnittet implementeras. Gränssnittet innehåller metoder för import och export av specifika dokument, för att skapa miniatyrbilder och extrahera metadata.
 * `com.day.cq.dam.core.AbstractAssetHandler` class: Den här klassen fungerar som bas för alla andra tillgångshanterarimplementeringar och tillhandahåller vanliga funktioner.
 * `com.day.cq.dam.core.AbstractSubAssetHandler` class: Den här klassen fungerar som bas för alla andra implementeringar av tillgångshanterare och tillhandahåller vanliga funktioner plus vanliga funktioner för subresursextrahering.
 
@@ -144,8 +144,8 @@ När du har utfört följande procedur, när du överför en TXT-fil till [!DNL 
 1. Skapa i Eclipse `myBundle` [!DNL Maven] projekt:
 
    1. Klicka på i menyraden **[!UICONTROL File]** > **[!UICONTROL New]** > **[!UICONTROL Other]**.
-   1. Expandera dialogrutan [!DNL Maven] mapp, markera [!DNL Maven] projekt och klicka på **[!UICONTROL Next]**.
-   1. Markera kryssrutan Skapa ett enkelt projekt och rutan Använd standardplatser för arbetsytan och klicka sedan på **[!UICONTROL Next]**.
+   1. Expandera dialogrutan [!DNL Maven] väljer du [!DNL Maven] projekt, klicka sedan på **[!UICONTROL Next]**.
+   1. Markera kryssrutan Skapa ett enkelt projekt och rutan Använd standardplats för arbetsyta och klicka sedan på **[!UICONTROL Next]**.
    1. Definiera en [!DNL Maven] projekt:
 
       * Grupp-ID: `com.day.cq5.myhandler`.
@@ -155,10 +155,10 @@ När du har utfört följande procedur, när du överför en TXT-fil till [!DNL 
 
    1. Klicka på **[!UICONTROL Finish]**.
 
-1. Ange [!DNL Java] kompilator till version 1.5:
+1. Ange [!DNL Java™] kompilator till version 1.5:
 
    1. Högerklicka på `myBundle` projekt, välj [!UICONTROL Properties].
-   1. Välj [!UICONTROL Java Compiler] och ange följande egenskaper till 1.5:
+   1. Välj [!UICONTROL Java™ Compiler] och ange följande egenskaper till 1.5:
 
       * Kompilatorefterlevnadsnivå
       * Kompatibilitet med genererade .class-filer
@@ -283,16 +283,16 @@ När du har utfört följande procedur, när du överför en TXT-fil till [!DNL 
     </dependencies>
    ```
 
-1. Skapa paketet `com.day.cq5.myhandler` som innehåller [!DNL Java] klasser under `myBundle/src/main/java`:
+1. Skapa paketet `com.day.cq5.myhandler` som innehåller [!DNL Java™] klasser under `myBundle/src/main/java`:
 
    1. Under myBundle högerklickar du `src/main/java`, väljer Ny och sedan Packa.
    1. Ge den ett namn `com.day.cq5.myhandler` och klicka på Slutför.
 
-1. Skapa [!DNL Java] class `MyHandler`:
+1. Skapa [!DNL Java™] class `MyHandler`:
 
    1. I [!DNL Eclipse], under `myBundle/src/main/java`, högerklicka på `com.day.cq5.myhandler` paket. Välj [!UICONTROL New]sedan [!UICONTROL Class].
-   1. I dialogrutan ger du namnet [!DNL Java] class `MyHandler` och klicka [!UICONTROL Finish]. [!DNL Eclipse] skapar och öppnar filen `MyHandler.java`.
-   1. I `MyHandler.java` Ersätt den befintliga koden med följande och spara sedan ändringarna:
+   1. I dialogrutan ger du namnet [!DNL Java™] class `MyHandler` och klicka [!UICONTROL Finish]. [!DNL Eclipse] skapar och öppnar filen `MyHandler.java`.
+   1. I `MyHandler.java`, ersätt den befintliga koden med följande och spara sedan ändringarna:
 
    ```java
    package com.day.cq5.myhandler;
@@ -434,7 +434,7 @@ När du har utfört följande procedur, när du överför en TXT-fil till [!DNL 
    }
    ```
 
-1. Kompilera [!DNL Java] och skapa paketet:
+1. Kompilera [!DNL Java™] och skapa paketet:
 
    1. Högerklicka på `myBundle` projekt, välj **[!UICONTROL Run As]** sedan **[!UICONTROL Maven Install]**.
    1. Paketet `myBundle-0.0.1-SNAPSHOT.jar` (som innehåller den kompilerade klassen) skapas under `myBundle/target`.
@@ -445,20 +445,20 @@ När du har utfört följande procedur, när du överför en TXT-fil till [!DNL 
 
 ## Kommandoradsbaserad mediehanterare {#command-line-based-media-handler}
 
-[!DNL Experience Manager] gör att du kan köra valfritt kommandoradsverktyg i ett arbetsflöde för att konvertera resurser (till exempel [!DNL ImageMagick]) och lägga till den nya återgivningen i resursen. Du behöver bara installera kommandoradsverktyget på den skiva där [!DNL Experience Manager] server och för att lägga till och konfigurera ett processteg i arbetsflödet. Den anropade processen, anropad `CommandLineProcess`I kan du också filtrera efter specifika MIME-typer och skapa flera miniatyrbilder baserat på den nya återgivningen.
+[!DNL Experience Manager] gör att du kan köra valfritt kommandoradsverktyg i ett arbetsflöde för att konvertera resurser (till exempel [!DNL ImageMagick]) och lägga till den nya återgivningen i resursen. Installera bara kommandoradsverktyget på den disk som är värd för [!DNL Experience Manager] server och för att lägga till och konfigurera ett processteg i arbetsflödet. Den anropade processen, anropad `CommandLineProcess`, filtrerar också efter specifika MIME-typer och skapar flera miniatyrbilder baserat på den nya återgivningen.
 
 Följande konverteringar kan automatiskt köras och lagras i [!DNL Assets]:
 
 * EPS och AI-omvandling med [ImageMagick](https://www.imagemagick.org/script/index.php) och [Ghostscript](https://www.ghostscript.com/).
 * FLV-videotranskodning med [FFmpeg](https://ffmpeg.org/).
 * MP3-kodning med [LAME](https://lame.sourceforge.io/).
-* Ljudbearbetning med [SOX](https://sox.sourceforge.io/).
+* Ljudbearbetning med [SOX](https://sourceforge.net/projects/sox/).
 
 >[!NOTE]
 >
 >I andra system än Windows returnerar mpeg-verktyget ett fel när återgivningar genereras för en videoresurs som har ett enkelt citattecken (&#39;) i filnamnet. Om namnet på videofilen innehåller ett enkelt citattecken tar du bort det innan du överför det till [!DNL Experience Manager].
 
-The `CommandLineProcess` processen utför följande åtgärder i den ordning de anges:
+The `CommandLineProcess` utför följande åtgärder i den angivna ordningen:
 
 * Filtrerar filen enligt specifika MIME-typer, om det anges.
 * Skapar en tillfällig katalog på disken som är värd för [!DNL Experience Manager] server.
@@ -470,14 +470,14 @@ The `CommandLineProcess` processen utför följande åtgärder i den ordning de 
 
 ### Ett exempel som använder [!DNL ImageMagick] {#an-example-using-imagemagick}
 
-I följande exempel visas hur du ställer in kommandoradsprocesssteget så att varje gång en resurs med e-typen miMIME GIF eller TIFF läggs till i `/content/dam` på [!DNL Experience Manager] servern skapas en spegelvänd bild av originalet tillsammans med ytterligare tre miniatyrbilder (140x100, 48x48 och 10x250).
+I följande exempel visas hur du ställer in kommandoradsprocessteget så att varje gång en resurs med e-typen miMIME GIF eller TIFF läggs till `/content/dam` på [!DNL Experience Manager] servern skapas en speglad bild av originalet. Tre miniatyrbilder till: 140x100, 48x48 och 10x250 skapas också.
 
 Om du vill göra det använder du [!DNL ImageMagick]. [!DNL ImageMagick] är ett kostnadsfritt kommandoradsprogram som används för att skapa, redigera och komponera bitmappsbilder.
 
 Installera [!DNL ImageMagick] på disken där [!DNL Experience Manager] server:
 
 1. Installera [!DNL ImageMagick]: Se [ImageMagick-dokumentation](https://www.imagemagick.org/script/download.php).
-1. Konfigurera verktyget så att du kan köra konverteringen på kommandoraden.
+1. Konfigurera verktyget så att du kan köra ett kommandoradsverktyg `convert`.
 1. Kör följande kommando för att se om verktyget är korrekt installerat `convert -h` på kommandoraden.
 
    En hjälpskärm med alla möjliga alternativ för konverteringsverktyget visas.
@@ -506,7 +506,7 @@ Separera värdena för [!UICONTROL Process Arguments] med komma och börja inte 
 
 | Argument-Format | Beskrivning |
 |---|---|
-| mime:&lt;mime-type> | Valfritt argument. Processen används om resursen har samma MIME-typ som argumentet. <br>Flera MIME-typer kan definieras. |
+| mime:&lt;mime-type> | Valfritt argument. Processen används om resursen har samma MIME-typ som den i argumentet. <br>Flera MIME-typer kan definieras. |
 | tn:&lt;width>:&lt;height> | Valfritt argument. Processen skapar en miniatyrbild med de dimensioner som definieras i argumentet. <br>Flera miniatyrbilder kan definieras. |
 | cmd: &lt;command> | Definierar det kommando som körs. Syntaxen beror på kommandoradsverktyget. Endast ett kommando kan definieras. <br>Följande variabler kan användas för att skapa kommandot:<br>`${filename}`: indatafilens namn, till exempel original.jpg <br> `${file}`: den fullständiga sökvägen till indatafilen, till exempel `/tmp/cqdam0816.tmp/original.jpg` <br> `${directory}`: indatafilens katalog, till exempel `/tmp/cqdam0816.tmp` <br>`${basename}`: namnet på indatafilen utan filtillägg, till exempel originalfilen <br>`${extension}`: tillägg för indatafilen, till exempel JPG. |
 
@@ -514,7 +514,7 @@ Om [!DNL ImageMagick] är installerat på den disk som är värd för [!DNL Expe
 
 `mime:image/gif,mime:image/tiff,tn:140:100,tn:48:48,tn:10:250,cmd:convert ${directory}/${filename} -flip ${directory}/${basename}.flipped.jpg`
 
-När arbetsflödet körs gäller steget endast resurser som har `image/gif` eller `mime:image/tiff` as `mime-types`skapar den en vända bild av originalet, konverterar den till JPG och skapar tre miniatyrbilder med måtten 140x100, 48x48 och 10x250.
+När arbetsflödet körs gäller steget endast resurser som har `image/gif` eller `mime:image/tiff` as `mime-types`. Den skapar en vänd bild av originalet, konverterar det till JPG och skapar tre miniatyrbilder med måtten 140x100, 48x48 och 10x250.
 
 Använd följande [!UICONTROL Process Arguments] för att skapa de tre standardminiatyrbilderna med [!DNL ImageMagick]:
 

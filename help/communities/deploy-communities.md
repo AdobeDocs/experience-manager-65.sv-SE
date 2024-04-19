@@ -7,9 +7,9 @@ content-type: reference
 topic-tags: deploying
 docset: aem65
 exl-id: 5b3d572d-e73d-4626-b664-c985949469c9
-source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
+source-git-commit: a28883778c5e8fb90cbbd0291ded17059ab2ba7e
 workflow-type: tm+mt
-source-wordcount: '1653'
+source-wordcount: '1652'
 ht-degree: 0%
 
 ---
@@ -41,7 +41,7 @@ ht-degree: 0%
 
 **För [Funktioner i Communities](/help/communities/overview.md)**
 
-* Om en [publicera servergrupp](/help/sites-deploying/recommended-deploys.md#tarmk-farm), [identifiera den primära utgivaren](#primary-publisher)
+* Om en [publiceringsgrupp](/help/sites-deploying/recommended-deploys.md#tarmk-farm), [identifiera den primära utgivaren](#primary-publisher)
 
 * [Aktivera tunneltjänsten](#tunnel-service-on-author)
 * [Aktivera social inloggning](/help/communities/social-login.md#adobe-granite-oauth-authentication-handler)
@@ -84,7 +84,7 @@ AEM 6.5 Communities GA innehåller Communities-paketet. Läs mer om uppdateringa
 
 Från och med AEM 6.4 levereras uppdateringar av Communities som en del av AEM Cumulative Fix Packs och Service Packs.
 
-De senaste uppdateringarna av AEM 6.5 finns på [Adobe Experience Manager 6.4 Cumulative Fix Packs and Service Pack](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/aem-releases-updates.html).
+De senaste uppdateringarna av AEM 6.5 finns på [Adobe Experience Manager 6.4 Cumulative Fix Packs and Service Pack](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/aem-releases-updates).
 
 ### Tidigare versioner {#version-history}
 
@@ -168,7 +168,7 @@ Mer information finns på [Så här arbetar du med paket](/help/sites-administer
 
 I AEM Communities används en gemensam butik för att lagra användargenererat innehåll och kallas ofta [lagringsresursleverantör (SRP)](/help/communities/working-with-srp.md). Rekommenderade distributionscenter när de väljer ett SRP-alternativ för den gemensamma butiken.
 
-Den gemensamma lagringsplatsen har stöd för moderering och analys av användargenererat innehåll i publiceringsmiljön samtidigt som behovet av [replikering](/help/communities/sync.md) av UGC.
+Den gemensamma butiken stöder moderering och analys av användargenererat innehåll i publiceringsmiljön samtidigt som behovet av [replikering](/help/communities/sync.md) av UGC.
 
 * [Community Content Store](/help/communities/working-with-srp.md) : diskuterar SRP-lagringsalternativ för AEM Communities
 
@@ -208,7 +208,7 @@ För alla andra (sekundära) publiceringsinstanser i en publiceringsgrupp:
 
 Replikering används för webbplatsinnehåll som skapas i publiceringsmiljön, t.ex. communitygrupper, och hanterar medlemmar och medlemsgrupper från författarmiljön med hjälp av [tunneltjänst](#tunnel-service-on-author).
 
-För den primära utgivaren måste du se till att [Konfiguration för replikeringsagent](/help/sites-deploying/replication.md) identifierar publiceringsservern och den behöriga användaren korrekt. Den standardauktoriserade användaren, `admin,` har redan rätt behörigheter (är medlem i `Communities Administrators`).
+För den primära utgivaren måste du se till att [Konfiguration för replikeringsagent](/help/sites-deploying/replication.md) identifierar publiceringsservern och behöriga användare korrekt. Den standardauktoriserade användaren, `admin,` har redan rätt behörigheter (är medlem i `Communities Administrators`).
 
 För att andra användare ska ha rätt behörigheter måste de läggas till som medlem i `administrators` användargrupp (även medlem av `Communities Administrators`).
 
@@ -358,8 +358,8 @@ Var särskilt försiktig med att använda rätt servernamn, inte `localhost`, i 
 
 Om du använder en Dispatcher läser du:
 
-* AEM [Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html) dokumentation
-* [Installerar Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/dispatcher-install.html)
+* AEM [Dispatcher](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/aem-releases-updates) dokumentation
+* [Installerar Dispatcher](https://experienceleague.adobe.com/en/docs/experience-manager-dispatcher/using/getting-started/dispatcher-install)
 * [Konfigurera Dispatcher för Communities](/help/communities/dispatcher.md)
 * [Kända fel](/help/communities/troubleshooting.md#dispatcher-refetch-fails)
 

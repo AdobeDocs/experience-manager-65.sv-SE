@@ -10,10 +10,10 @@ role: User, Admin
 exl-id: 62d4a38c-2873-4560-8d58-ad172288764d
 feature: Components,Publishing
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: a28883778c5e8fb90cbbd0291ded17059ab2ba7e
 workflow-type: tm+mt
-source-wordcount: '3050'
-ht-degree: 5%
+source-wordcount: '3049'
+ht-degree: 6%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 5%
 
 Om du vill lägga till Dynamic Media-funktionalitet i resurser som du använder på dina webbplatser kan du lägga till **Dynamic Media**, **Interaktiva media**, **Panoramabilder**, eller **Video 360 Media** direkt på sidan. Du lägger till komponenter genom att öppna layoutläget och aktivera Dynamic Media-komponenterna. Sedan kan du lägga till komponenterna på sidan och lägga till resurser i komponenterna. Dynamic Media-komponenterna är smarta – de känner av om du lägger till en bild eller en video och konfigurationsalternativen ändras i enlighet med detta.
 
-Du lägger till Dynamic Media-resurser direkt på sidan om du använder Adobe Experience Manager som WCM-fil. Om du använder en tredje part för ditt WCM-system, kan du antingen [link](/help/assets/linking-urls-to-yourwebapplication.md) eller [embed](/help/assets/embed-code.md) dina resurser. Om du har en responsiv webbplats hos en extern leverantör läser du [Leverera optimerade bilder till en responsiv webbplats](/help/assets/responsive-site.md).
+Du lägger till Dynamic Media-resurser direkt på sidan om du använder Adobe Experience Manager som WCM-fil. Om ni använder en annan leverantör för innehållshanteringssystemet kan ni antingen [länka](/help/assets/linking-urls-to-yourwebapplication.md) eller [bädda in](/help/assets/embed-code.md) resurserna. Om du har en responsiv webbplats hos en extern leverantör läser du [Leverera optimerade bilder till en responsiv webbplats](/help/assets/responsive-site.md).
 
 >[!NOTE]
 >
@@ -301,7 +301,7 @@ Du kan redigera följande **[!UICONTROL General]** inställningar genom att väl
 
   Du kan redigera följande **[!UICONTROL Add To Cart]** inställningar genom att välja **[!UICONTROL Edit]** i komponenten.
 
-* **[!UICONTROL Show Product Asset]** - Som standard är det här värdet markerat. Produktresursen visar en bild av produkten enligt definitionen i modulen Handel. Avmarkera kryssrutan om du inte vill visa produktresursen.
+* **[!UICONTROL Show Product Asset]** - Som standard är det här värdet markerat. Produktresursen visar en bild av produkten enligt definitionen i modulen Commerce. Avmarkera kryssrutan om du inte vill visa produktresursen.
 
 * **[!UICONTROL Show Product Price]** - Som standard är det här värdet markerat. Produktpriset visar priset för artikeln enligt definitionen i modulen Handel. Avmarkera kryssrutan om du inte vill visa produktpriset.
 

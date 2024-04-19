@@ -6,7 +6,7 @@ role: Architect, Admin
 feature: Asset Reports
 exl-id: 14d02015-df00-4566-a098-de76eaf42605
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: a28883778c5e8fb90cbbd0291ded17059ab2ba7e
 workflow-type: tm+mt
 source-wordcount: '173'
 ht-degree: 0%
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 Page Tracker är en del av JavaScript-kod som du inkluderar i koden för tredjepartswebbplatser så att Adobe Analytics kan samla in användningsdata runt [!DNL Adobe Experience Manager Assets] på dessa webbplatser.
 
-Om du vill fånga händelser, t.ex. klick, som är specifika för resurser, inkluderar du även koden för inbäddning i koden för tredjepartswebbplatser.
+Om du vill fånga händelser, t.ex. klick som är specifika för resurser, inkluderar du även koden för inbäddning i koden för tredjepartswebbplatser.
 
 I följande exempelkod visas hur en webbsida som innehåller både sidspårningskod och inbäddningskod ser ut:
 
