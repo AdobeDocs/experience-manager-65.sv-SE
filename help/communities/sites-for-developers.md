@@ -1,19 +1,22 @@
 ---
-title: Grundläggande om communitysajter
-description: Exportera och ta bort communitysajter och skapa anpassade webbplatsmallar
+title: Grundläggande om communityn
+description: Exportera och ta bort communitywebbplatser och skapa anpassade webbplatsmallar
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
 exl-id: 1dc568cd-315c-4944-9a3e-e5d7794e5dc0
-source-git-commit: e161c37544c3391607cbe495644f3353b9f77fe3
+solution: Experience Manager
+feature: Communities
+role: Admin
+source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
-source-wordcount: '495'
+source-wordcount: '486'
 ht-degree: 0%
 
 ---
 
-# Grundläggande om communitysajter {#community-site-essentials}
+# Grundläggande om communityn {#community-site-essentials}
 
 ## Anpassad webbplatsmall {#custom-site-template}
 
@@ -36,7 +39,7 @@ Så här gör du:
 
 **Egenskap**: page-template
 
-**Typ**: Sträng
+**Typ**: String
 
 **Värde**: `template-name` (inget tillägg)
 
@@ -81,7 +84,7 @@ Det här är tillgängligt från [Konsolen Webbplatser i Communities](sites-cons
 
 UGC och anpassad kod ingår inte i communityplatspaketet.
 
-Om du vill exportera UGC använder du [AEM Communities UGC-migreringsverktyg](https://github.com/Adobe-Marketing-Cloud/aem-communities-ugc-migration), ett verktyg för migrering med öppen källkod som är tillgängligt på GitHub.
+Använd kommandot [AEM Communities UGC-migreringsverktyg](https://github.com/Adobe-Marketing-Cloud/aem-communities-ugc-migration), ett verktyg för migrering med öppen källkod som är tillgängligt på GitHub.
 
 ## Ta bort en communitywebbplats {#deleting-a-community-site}
 
@@ -119,7 +122,7 @@ All UGC kan tas bort eller för en specifik plats, till exempel:
 
 * `path=/content/usergenerated/asi/mongo/content/sites/engage`
 
-Detta tar endast bort användargenererat innehåll (som anges vid publicering) och inte redigerat innehåll (anges av författaren). Därför [skuggnoder](srp.md#shadownodes) påverkas inte.
+Detta tar endast bort användargenererat innehåll (som anges vid publicering) och inte redigerat innehåll (anges av författaren). Därför bör [skuggnoder](srp.md#shadownodes) påverkas inte.
 
 ### Användargrupper {#community-user-groups}
 
@@ -128,4 +131,4 @@ På alla författar- och publiceringsinstanser från [säkerhetskonsol](../../he
 * Förfixat med `community`
 * Följd av [unikt webbplats-ID](#community-unique-site-id)
 
-Till exempel, `community-engage-x0e11-members`.
+Till exempel: `community-engage-x0e11-members`.

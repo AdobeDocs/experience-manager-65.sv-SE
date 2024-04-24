@@ -7,9 +7,12 @@ topic-tags: authoring
 content-type: reference
 docset: aem65
 exl-id: d121dc05-7d15-44ba-8d2d-b59d6c6480c8
-source-git-commit: b8887b4a6f757352e9dbfdf074c10e9ccd6dbd4f
+solution: Experience Manager
+feature: Communities
+role: Admin
+source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
-source-wordcount: '954'
+source-wordcount: '952'
 ht-degree: 0%
 
 ---
@@ -147,11 +150,11 @@ När arvet har avbrutits går det att välja konfigurationsikonen för att öppn
 
 * **Omdirigeringsadress**
 
-  Ange URL-adressen till sidan som visas när meddelandet har skickats. Till exempel, `../messaging.html`.
+  Ange URL-adressen till sidan som visas när meddelandet har skickats. Till exempel: `../messaging.html`.
 
 * **Avbryt URL**
 
-  Ange URL-adressen till sidan som visas om avsändaren avbryter meddelandet. Till exempel, `../messaging.html`.
+  Ange URL-adressen till sidan som visas om avsändaren avbryter meddelandet. Till exempel: `../messaging.html`.
 
 * **Maximal längd för meddelandets ämne**
 

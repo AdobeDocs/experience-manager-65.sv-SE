@@ -9,14 +9,15 @@ audience: developer
 feature: Commerce Integration Framework
 exl-id: 1e7c3748-92b5-45f1-8dd9-f1816e3e34aa
 solution: Experience Manager,Commerce
-source-git-commit: 1751bfb32386685e3a159939113b9667b5e17f0e
+role: Admin, Developer
+source-git-commit: 10268f617b8a1bb22f1f131cfd88236e7d5beb47
 workflow-type: tm+mt
 source-wordcount: '563'
 ht-degree: 0%
 
 ---
 
-# AEM för innehåll och e-handel {#cif-pickers}
+# AEM och redigeringsväljare för Commerce {#cif-pickers}
 
 AEM Content &amp; Commerce Authoring innehåller en uppsättning redigeringsverktyg som hjälper AEM att effektivt arbeta med produktdata och kataloger för e-handel. Produktväljaren och kategoriväljaren är en del av CIF och används av de CIF kärnkomponenterna. Projekt kan använda de här väljarna i alla komponentdialogrutor för att välja produkter eller kategorier.
 

@@ -7,9 +7,12 @@ topic-tags: authoring
 content-type: reference
 docset: aem65
 exl-id: 05cfaab5-a12d-475f-9095-a9fb13571d0a
-source-git-commit: b8887b4a6f757352e9dbfdf074c10e9ccd6dbd4f
+solution: Experience Manager
+feature: Communities
+role: Admin
+source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
-source-wordcount: '733'
+source-wordcount: '741'
 ht-degree: 0%
 
 ---
@@ -109,7 +112,7 @@ Under **Kommentar** anger du om och hur kommentarer för överförda filer ska v
 
 * **Mönster för användargränssnittets omnämnande**
 
-  Ange den tillåtna mönstersträngen så att du taggar (@mention) den registrerade användaren i ett inlägg. Till exempel, `~{{familyName}}{{givenName}}`.
+  Ange den tillåtna mönstersträngen så att du taggar (@mention) den registrerade användaren i ett inlägg. Till exempel: `~{{familyName}}{{givenName}}`.
 
 * **Tillåt kopplade svar**
 

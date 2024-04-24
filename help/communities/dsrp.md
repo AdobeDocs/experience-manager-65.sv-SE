@@ -7,9 +7,11 @@ topic-tags: administering
 content-type: reference
 role: Admin
 exl-id: 15b3a594-efde-4702-9233-232ba1c7e5b0
-source-git-commit: f0dd1ac3ab9c17a8b331f5048d84ec97dd23924f
+solution: Experience Manager
+feature: Communities
+source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
-source-wordcount: '591'
+source-wordcount: '563'
 ht-degree: 0%
 
 ---

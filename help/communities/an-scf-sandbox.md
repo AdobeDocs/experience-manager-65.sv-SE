@@ -6,9 +6,12 @@ products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
 exl-id: 89858814-6625-4a56-8359-cc1eca402816
-source-git-commit: fd937341e26edd0c3edfced8e862066ebc30f9a3
+solution: Experience Manager
+feature: Communities
+role: Developer
+source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
-source-wordcount: '496'
+source-wordcount: '489'
 ht-degree: 0%
 
 ---
@@ -25,7 +28,7 @@ Den här självstudiekursen är främst avsedd för utvecklare som inte är AEM 
 
 Utvecklingen sker i en författarinstans, medan det är bäst att experimentera med webbplatsen i en publiceringsinstans.
 
-Stegen i den här självstudiekursen är:
+Stegen i den här självstudien är:
 
 * [Konfigurera webbplatsstruktur](setup-website.md)
 * [Ursprungligt sandlådeprogram](initial-app.md)
@@ -38,7 +41,7 @@ Stegen i den här självstudiekursen är:
 >
 >I den här självstudiekursen skapas ingen community-webbplats med de funktioner som skapas med [Konsolen Webbplatser i Communities](sites-console.md). I den här självstudiekursen beskrivs till exempel inte hur du konfigurerar inloggning, självregistrering, [social inloggning](social-login.md), meddelanden, profiler och så vidare.
 >
->Om du föredrar en enkel community-webbplats följer du [Skapa en exempelsida](create-sample-page.md) självstudiekurs.
+>Om du föredrar en enkel communitywebbplats ska du följa [Skapa en exempelsida](create-sample-page.md) självstudie.
 
 ## Förutsättningar {#prerequisites}
 
@@ -46,10 +49,10 @@ I den här självstudiekursen förutsätts att du har en AEM författare och en 
 
 Nedan följer några praktiska länkar för utvecklare som är nya för den AEM plattformen:
 
-* [Komma igång](../../help/sites-deploying/deploy.md#getting-started): för att distribuera AEM instanser.
+* [Komma igång](../../help/sites-deploying/deploy.md#getting-started): för distribution AEM instanser.
 
    * [Grunderna](../../help/sites-developing/the-basics.md): för utvecklare av webbplatser och funktioner.
-   * [Steg 1 för författare](../../help/sites-authoring/first-steps.md): för att skapa sidinnehåll.
+   * [Steg 1 för författare](../../help/sites-authoring/first-steps.md): för redigering av sidinnehåll.
 
 ## Använda CRXDE Lite Development Environment {#using-crxde-lite-development-environment}
 
@@ -61,15 +64,15 @@ När du har loggat in med administratörsbehörighet finns det olika sätt att f
 
    ![crxde-lite](assets/tools-crxde.png)
 
-2. Från [välkomstsida för klassiskt användargränssnitt](http://localhost:4502/welcome.html), rulla nedåt och klicka **[!UICONTROL CRXDE Lite]** i den högra panelen.
+2. Från [klassisk startsida för användargränssnitt](http://localhost:4502/welcome.html), rulla nedåt och klicka **[!UICONTROL CRXDE Lite]** i den högra panelen.
 
    ![classic-ui-crxde](assets/classic-ui-crxde.png)
 
-3. Bläddra direkt till `CRXDE Lite`: `<server>:<port>/crx/de`
+3. Gå direkt till `CRXDE Lite`: `<server>:<port>/crx/de`
 
    På en lokal författarinstans: [http://localhost:4502/crx/de](http://localhost:4502/crx/de)
 
-Om du vill arbeta med CRXDE Lite måste du logga in med utvecklar- eller administratörsbehörighet. För standardinstansen av localhost kan du logga in med
+Om du vill arbeta med CRXDE Lite måste du logga in med utvecklar- eller administratörsbehörighet. Du kan logga in med
 
 * `username: admin`
 * `password: admin`

@@ -6,10 +6,13 @@ products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 content-type: reference
 topic-tags: administering-on-demand-services-app
 exl-id: 95cbedaf-9a94-45fa-8ddb-15be7a09f86d
-source-git-commit: 96e2e945012046e6eac878389b7332985221204e
+solution: Experience Manager
+feature: Mobile
+role: Admin
+source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
-source-wordcount: '298'
-ht-degree: 1%
+source-wordcount: '291'
+ht-degree: 0%
 
 ---
 
@@ -29,9 +32,9 @@ ht-degree: 1%
 >
 >**Krav:**
 >
->Innan du börjar konfigurera din miljö för AEM Mobile On-demand Services finns mer information i [AEM Mobile Application Dashboard eller Control Center](/help/mobile/mobile-apps-ondemand-application-dashboard.md).
+>Innan du börjar konfigurera din miljö för AEM Mobile On-demand Services, se [AEM Mobile Application Dashboard eller Control Center](/help/mobile/mobile-apps-ondemand-application-dashboard.md).
 
-An ***AEM*** ansvarar för att lägga till ett program i AEM Mobile-katalogen, antingen genom att skapa ett program med hjälp av guiden Skapa eller genom att importera ett befintligt program. AEM som skapar ett program med AEM Mobile *guide* oftast väljer du en av de önskade programmallarna antingen bland Adobe färdiga referensexempel eller (vanligtvis) en anpassad programmall som skapas av *AEM utvecklare.*
+An ***AEM*** ansvarar för att lägga till ett program i AEM Mobile-katalogen, antingen genom att skapa ett program med hjälp av guiden Skapa eller genom att importera ett befintligt program. AEM som skapar ett program med AEM Mobile *guide* oftast väljer du en av de önskade programmallarna antingen bland Adobe färdiga referensexempel eller (vanligtvis) en anpassad programmall som skapas av *AEM.*
 
 >[!NOTE]
 >

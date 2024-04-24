@@ -3,7 +3,9 @@ title: Product Cockpit
 description: Arbeta med Product Cockpit som ger en enhetlig översikt över länkade produktkataloger och tillhörande innehåll.
 exl-id: 05ef2604-1d52-4397-a696-0b64717cc3cc
 solution: Experience Manager,Commerce
-source-git-commit: 1751bfb32386685e3a159939113b9667b5e17f0e
+feature: Commerce Integration Framework
+role: Admin, Developer
+source-git-commit: 10268f617b8a1bb22f1f131cfd88236e7d5beb47
 workflow-type: tm+mt
 source-wordcount: '428'
 ht-degree: 0%
@@ -34,7 +36,7 @@ Aktivering av mellanlagrade katalogfunktioner kräver autentisering. Se [Komma i
 
 ## Öppnar produktdockan {#opening-product-cockpit}
 
-Det enklaste sättet att komma åt produktdockan är via menyn&quot;Handel&quot; AEM huvudmenyn. Det går också att använda Omnissearch (sök efter handel) eller att öppna `https://<yourAEMInstance>/commerce.html`.
+Det enklaste sättet att komma åt produktdockan är via menyn Commerce AEM huvudmenyn. Du kan också använda Omnissearch (sök efter Commerce) eller öppna `https://<yourAEMInstance>/commerce.html`.
 
 ![AEM](/help/commerce/cif/assets/aem-menu.png)
 

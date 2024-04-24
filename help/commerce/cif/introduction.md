@@ -4,7 +4,9 @@ description: Lär dig hur du använder och administrerar AEM-innehåll and Comme
 thumbnail: introducing-aem-commerce.jpg
 exl-id: 52dad8f9-1812-42a3-8106-92b23f8517cd
 solution: Experience Manager,Commerce
-source-git-commit: 1751bfb32386685e3a159939113b9667b5e17f0e
+feature: Commerce Integration Framework
+role: Admin, Developer
+source-git-commit: 10268f617b8a1bb22f1f131cfd88236e7d5beb47
 workflow-type: tm+mt
 source-wordcount: '838'
 ht-degree: 2%
@@ -14,13 +16,13 @@ ht-degree: 2%
 
 # Innehåll och handel {#content-commerce}
 
-Med Adobe Experience Manager innehåll och e-handel kan varumärken skalas och utvecklas snabbare för att särskilja handelsupplevelser och fånga upp ökade webbutgifter. AEM Content and Commerce kombinerar de engagerande, flerkanaliga och personaliserade upplevelserna i Experience Manager med valfritt antal handelslösningar för att ge alla delar av kundresan olika upplevelser, minska tiden till värde och öka konverteringsgraden.
+Med Adobe Experience Manager innehåll och e-handel kan varumärken skalas och utvecklas snabbare för att särskilja handelsupplevelser och fånga upp ökade webbutgifter. AEM Content och Commerce kombinerar de engagerande, flerkanaliga och personaliserade upplevelserna i Experience Manager med ett obegränsat antal e-handelslösningar för att ge alla delar av kundresan olika upplevelser, minska time to value och öka konverteringsgraden.
 
-## Så kan innehåll och handel hjälpa kunderna att bli framgångsrika
+## Hur innehåll och Commerce hjälper kunderna att lyckas
 
-Med allt högre förväntningar på onlinehandelsupplevelser har varumärkena press på sig att leverera differentierade upplevelser och mer innehåll snabbare. Att implementera en plattform för innehållshantering kräver ofta stora tids- och budgetinvesteringar i utveckling av grundläggande element, som anpassade komponenter och redigeringsverktyg, och medför kostnader för underhåll och uppgraderingar. Experience Manager Sites erbjuder Content and Commerce som en tilläggsmodul för Experience Manager som innehåller färdiga komponenter för e-handel, redigeringsverktyg och en referensbutik som snabbar upp användningen, möjliggör smidigt samarbete mellan team och driver konverteringsprocessen framåt.
+Med allt högre förväntningar på onlinehandelsupplevelser har varumärkena press på sig att leverera differentierade upplevelser och mer innehåll snabbare. Att implementera en plattform för innehållshantering kräver ofta stora tids- och budgetinvesteringar i utveckling av grundläggande element, som anpassade komponenter och redigeringsverktyg, och medför kostnader för underhåll och uppgraderingar. Experience Manager Sites erbjuder Content och Commerce som en tilläggsmodul för Experience Manager som innehåller färdiga e-handelskomponenter, redigeringsverktyg och en referensbutik som snabbar upp arbetet, möjliggör smidigt samarbete mellan team och driver konverteringsprocessen framåt.
 
-Varumärken kan integrera Experience Manager med Adobe Commerce, en del av Adobe Experience Cloud och valfri e-handelsmotor. Med Experience Manager Content and Commerce kan varumärken
+Varumärken kan integrera Experience Manager med Adobe Commerce, en del av Adobe Experience Cloud och valfri e-handelsmotor. Med Experience Manager Content och Commerce kan varumärken
 
 * Skala och förnya snabbare
 * Skräddarsy upplevelser och öka konverteringsgraden
@@ -60,7 +62,7 @@ Kraftfulla CIF i AEM gör det möjligt för innehållsskapare att snabbt skapa k
 
 ### Tid till värde (TTV)
 
-Snabbare projektutveckling med [AEM kärnkomponenter](https://www.aemcomponents.dev/), [AEM Venia reference storefront](https://github.com/adobe/aem-cif-guides-venia), [AEM Project Archettype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html)och integreringsmönster för PWA (Headless Content and Commerce).
+Snabbare projektutveckling med [AEM kärnkomponenter](https://www.aemcomponents.dev/), [AEM Venia reference storefront](https://github.com/adobe/aem-cif-guides-venia), [AEM Project Archettype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html)och integreringsmönster för PWA (Headless Content och Commerce).
 
 CIF har tagits fram för kontinuerlig innovation med ett kontinuerligt uppdaterat tillägg som ger kunden tillgång till nya och förbättrade funktioner.
 

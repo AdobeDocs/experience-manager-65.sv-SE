@@ -4,7 +4,9 @@ description: Integreringsramverket innehåller ett integreringslager med ett API
 contentOwner: Guillaume Carlino
 exl-id: 1138a548-d112-4446-b0e1-b7a9ea7c7604
 solution: Experience Manager,Commerce
-source-git-commit: 1751bfb32386685e3a159939113b9667b5e17f0e
+feature: Commerce Integration Framework
+role: Admin, Developer
+source-git-commit: 10268f617b8a1bb22f1f131cfd88236e7d5beb47
 workflow-type: tm+mt
 source-wordcount: '1856'
 ht-degree: 0%
@@ -49,7 +51,7 @@ eCommerce-ramverket kan användas tillsammans med alla e-handelslösningar, och 
 
 * The `cq:commerceProvider` -egenskapen används också för att referera till lämplig definition för handelsfabrik.
 
-   * Till exempel en `cq:commerceProvider` -egenskapen med Geometrixx value korrelerar till OSGi-konfigurationen för **Dagens CQ Commerce Factory för Geometrixx-utomhusbruk** (`com.adobe.cq.commerce.hybris.impl.GeoCommerceServiceFactory`) - där parametern `commerceProvider` har även värdet `geometrixx`.
+   * Till exempel en `cq:commerceProvider` -egenskapen med Geometrixx value korrelerar till OSGi-konfigurationen för **Day CQ Commerce Factory for Geometrixx-Outdoor** (`com.adobe.cq.commerce.hybris.impl.GeoCommerceServiceFactory`) - där parametern `commerceProvider` har även värdet `geometrixx`.
    * Här kan ytterligare egenskaper konfigureras (när det är lämpligt och tillgängligt).
 
 I en AEM krävs en specifik implementering, till exempel:

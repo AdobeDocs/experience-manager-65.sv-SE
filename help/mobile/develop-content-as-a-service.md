@@ -5,10 +5,13 @@ contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 exl-id: 85e73679-684e-402f-8186-8b56d8bd9372
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+solution: Experience Manager
+feature: Mobile
+role: User
+source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
-source-wordcount: '978'
-ht-degree: 0%
+source-wordcount: '976'
+ht-degree: 1%
 
 ---
 
@@ -28,7 +31,7 @@ Detta inkluderar användning av resurser, webbplatsinnehåll, CAAS-innehåll (ov
 
 Det finns tre huvudtyper av material som Content Services levererar:
 
-1. **Assets**
+1. **Resurser**
 1. **Paketerat HTML-innehåll (HTML/CSS/JS)**
 1. **Kanaloberoende innehåll**
 

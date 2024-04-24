@@ -3,7 +3,9 @@ title: Adobe Experience Manager Content and Commerce Release Notes 2021
 description: Adobe Experience Manager Content and Commerce Release Notes 2021.
 exl-id: ec47c5f8-d4dd-469f-94df-5ee28f25d696
 solution: Experience Manager,Commerce
-source-git-commit: 1751bfb32386685e3a159939113b9667b5e17f0e
+feature: Commerce Integration Framework
+role: Admin, Developer
+source-git-commit: 10268f617b8a1bb22f1f131cfd88236e7d5beb47
 workflow-type: tm+mt
 source-wordcount: '1088'
 ht-degree: 4%
@@ -32,11 +34,11 @@ Granska de lägsta systemkraven i tabellen nedan för den CIF versionen som du a
 
 ### Nyheter {#what-is-new-november}
 
-* Utökade myAccount-komponenter som baseras på Commerce:s utökningsbara Premiere-komponenter
+* Utökade myAccount-komponenter som baseras på Commerce utbyggbara Premiere-komponenter
 
 ![Utökade komponenter för myAccount](/help/assets/CIF/extended-myAccount-components.png)
 
-* Författare kan skapa ad hoc-Commerce Product Recommendations med hjälp av ytterligare rekommendationstyper
+* Författare kan skapa ad hoc-produkter för Commerce Recommendations med hjälp av ytterligare rekommendationstyper
 
 * Stöd för presentkort i AEM Storefront
 
@@ -56,7 +58,7 @@ Granska de lägsta systemkraven i tabellen nedan för den CIF versionen som du a
 
 * Befintlig snabbkundvagn och utcheckning har ersatts med dedikerade AEM- och utcheckningssidor. Komponenterna på dessa sidor byggs med Adobe Commerce utökningsbara Premiere-komponenter
 
-* Handlare kan dölja vissa produktkatalogkategorier i navigeringen med Commerce-serverdelen. Den CIF kärnkomponenten för navigering respekterar e-handelsserverdelens konfiguration &quot;include in menu&quot; för att visa/dölja kategorier i navigering
+* Marknadsförare kan dölja vissa produktkatalogkategorier i navigeringen med hjälp av Commerce serverdel. Den CIF kärnkomponenten för navigering respekterar e-handelsserverdelens konfiguration &quot;include in menu&quot; för att visa/dölja kategorier i navigering
 
 * AEM Storefront Venia returnerar HTTP 404-fel om kategori eller produktsida inte hittas
 
@@ -142,9 +144,9 @@ Granska de lägsta systemkraven i tabellen nedan för den CIF versionen som du a
 ### Nyheter {#what-is-new-june}
 
 * Nya CIF för produkt- och kategorireferensdatatyper för innehållsfragment (Inkl. användargränssnitt för produkt-/kategoriväljare)
-* Ny kärnkomponent för Commerce Content Fragment
+* Ny kärnkomponent i Commerce Content Fragment
 * Heltextbaserad e-handelssökning stöds i AEM
-* Commerce Core Components stöder datainsamling i Adobe Commerce Sensei Recs
+* Commerce Core Components har stöd för Adobe Commerce Sensei Recs datainsamling
 * Förbättrade SEO-vänliga URL:er för kategorisidor
 * Stöd för anpassade HTTP-huvuden per plats/konfiguration
 
@@ -236,7 +238,7 @@ Granska de lägsta systemkraven i tabellen nedan för den CIF versionen som du a
 
 ### Nyheter {#what-is-new-january}
 
-* Produktupplevelsehantering: Ny egenskapsflik för Commerce för Assets och Experience Fragments. På den här fliken kan du länka resurser och Experience Fragments till produkter och kategorier. På fliken visas även realtidsdata för länkade e-handelsobjekt och en länk som visar information i produktkonsolen.
+* Product Experience Management: Ny egenskapsflik i Commerce för Assets och Experience Fragments. På den här fliken kan du länka resurser och Experience Fragments till produkter och kategorier. På fliken visas även realtidsdata för länkade e-handelsobjekt och en länk som visar information i produktkonsolen.
 
 ### Vad har förbättrats  {#what-is-improved-january}
 

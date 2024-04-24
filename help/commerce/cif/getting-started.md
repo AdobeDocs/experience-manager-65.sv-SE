@@ -1,20 +1,21 @@
 ---
-title: Komma igång med AEM
-description: Lär dig hur du distribuerar ett projekt AEM innehåll och handel.
+title: Komma igång med AEM innehåll och Commerce
+description: Lär dig hur du distribuerar ett AEM och Commerce-projekt.
 topics: Commerce
 feature: Commerce Integration Framework
 exl-id: 92b964f8-6672-4f76-8a9f-5782c3ceb83f
 solution: Experience Manager,Commerce
-source-git-commit: 1751bfb32386685e3a159939113b9667b5e17f0e
+role: Admin, Developer
+source-git-commit: 10268f617b8a1bb22f1f131cfd88236e7d5beb47
 workflow-type: tm+mt
 source-wordcount: '685'
 ht-degree: 0%
 
 ---
 
-# Komma igång med AEM {#start}
+# Komma igång med AEM innehåll och Commerce {#start}
 
-För att komma igång med AEM innehåll och handel måste du installera AEM Content and Commerce Add-On för AEM 6.5.
+För att komma igång med AEM och Commerce måste du installera AEM Content och Commerce Add-On för AEM 6.5.
 
 ## Lägsta programvarukrav
 
@@ -22,15 +23,15 @@ För att komma igång med AEM innehåll och handel måste du installera AEM Cont
 
 ## Onboarding {#onboarding}
 
-Introduktionen AEM innehåll och handel är en tvåstegsprocess:
+Introduktionen av AEM och Commerce är en tvåstegsprocess:
 
-1. Installera AEM Content and Commerce Add-on för AEM 6.5
+1. Installera AEM och Commerce Add-on för AEM 6.5
 
 2. Koppla AEM till e-handelslösningen
 
-### Installera AEM Content and Commerce Add-on för AEM 6.5 {#install-add-on}
+### Installera AEM och Commerce Add-on för AEM 6.5 {#install-add-on}
 
-Hämta och installera AEM Commerce Add-On för AEM 6.5 från [Programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html) portal.
+Hämta och installera AEM Commerce Add-on för AEM 6.5 från [Programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html) portal.
 
 Starta och installera AEM 6.5 Service Pack. Vi rekommenderar att du installerar det senaste tillgängliga Service Pack-paketet.
 
@@ -38,7 +39,7 @@ Starta och installera AEM 6.5 Service Pack. Vi rekommenderar att du installerar 
 >
 >Detta görs av CSE för AEM kunder som har hanterade tjänster.
 
-### Anslut AEM till ditt Commerce System {#connect}
+### Anslut AEM till ditt Commerce-system {#connect}
 
 AEM kan anslutas till alla handelssystem som har en tillgänglig GraphQL-slutpunkt för AEM. Dessa slutpunkter är vanligtvis offentligt tillgängliga eller kan anslutas via privata VPN-anslutningar eller lokala anslutningar beroende på de enskilda projektinställningarna.
 
@@ -48,7 +49,7 @@ Projekt som genereras av [AEM Project Archettype](https://github.com/adobe/aem-p
 
 Ersätt värdet för `url` in `com.adobe.cq.commerce.graphql.client.impl.GraphqlClientImpl~default.cfg.json` med GraphQL slutpunkt i e-handelssystemet. Denna konfiguration kan göras via OSGI-konsolen eller genom att distribuera OSGI-konfigurationen via projektet. Olika konfigurationer för staging- och produktionssystem stöds med olika AEM körningslägen.
 
-AEM Content and Commerce Add-On och CIF Core Components använder både anslutningar på serversidan och på klientsidan. Huvudkomponenterna CIF klientsidan och redigeringsverktygen för CIF tillägg ansluts som standard till `/api/graphql`. Detta kan vid behov justeras via CIF Cloud Service-konfigurationen (se nedan).
+Komponenterna AEM Content och Commerce Add-On och CIF Core använder både anslutningar på serversidan och på klientsidan. Huvudkomponenterna CIF klientsidan och redigeringsverktygen för CIF tillägg ansluts som standard till `/api/graphql`. Detta kan vid behov justeras via CIF Cloud Service-konfigurationen (se nedan).
 
 CIF Add-On tillhandahåller en GraphQL-proxyserver på `/api/graphql` som kan användas för [lokal utveckling](develop.md). För produktionsdistributioner rekommenderar vi starkt att du skapar en omvänd proxy till e-handelsplatsen för GraphQL via AEM Dispatcher eller andra nätverkslager (som CDN).
 
@@ -90,10 +91,10 @@ Följande egenskaper kan konfigureras:
 
 Konfigurationen som visas ovan är för referens. Projekten ska ha egna konfigurationer.
 
-Mer komplexa inställningar som använder flera AEM webbplatsstrukturer i kombination med olika e-handelskataloger finns i [Inställningar för Commerce Multi-Store](configuring/multi-store-setup.md) självstudie.
+Mer komplexa inställningar som använder flera AEM webbplatsstrukturer i kombination med olika e-handelskataloger finns i [Installation av Commerce Multi-Store](configuring/multi-store-setup.md) självstudie.
 
 ## Ytterligare resurser {#additional-resources}
 
 - [AEM Project Archettype](https://github.com/adobe/aem-project-archetype)
 - [AEM Venia Reference Store](https://github.com/adobe/aem-cif-guides-venia)
-- [Inställningar för Commerce Multi-Store](configuring/multi-store-setup.md)
+- [Installation av Commerce Multi-Store](configuring/multi-store-setup.md)

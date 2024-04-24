@@ -4,7 +4,8 @@ description: AEM generiska e-handelslösningen finns som en del av standardinsta
 feature: Commerce Integration Framework
 exl-id: 3567bd28-73aa-401a-8aa9-a62a99d2a613
 solution: Experience Manager,Commerce
-source-git-commit: 1751bfb32386685e3a159939113b9667b5e17f0e
+role: Admin, Developer
+source-git-commit: 10268f617b8a1bb22f1f131cfd88236e7d5beb47
 workflow-type: tm+mt
 source-wordcount: '268'
 ht-degree: 0%
@@ -20,7 +21,7 @@ Adobe tillhandahåller två versioner av Commerce integrationa frameworken:
 |                         | CIF på plats | CIF Cloud |
 |-------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------|
 | AEM som stöds | AEM på plats eller AMS 6.x | AEM AMS 6.4 och 6.5 |
-| Back-end | - AEM, Java™ <br> - Monolitisk integrering, mappning före bygge (mall)<br> - JCR-databas | - ADOBE COMMERCE <br>- Java och JavaScript <br>- Inga handelsdata lagras i JCR-databasen |
+| Back-end | - AEM, Java™ <br> - Monolitisk integrering, mappning före bygge (mall)<br> - JCR-databas | - ADOBE COMMERCE <br>- Java och JavaScript <br>- Inga Commerce-data lagras i JCR-databasen |
 | Front-end | AEM återgivna sidor på serversidan | Blandat sidprogram (hybridåtergivning) |
 | Produktkatalog | - Produktimport, redigerare, cachelagring i AEM <br>- Vanliga kataloger med AEM- eller proxysidor | - Ingen produktimport <br>- Allmänna mallar <br>- On demand-data via anslutning |
 | Skalbarhet | - Kan stödja upp till ett fåtal miljoner produkter (beroende på användningsfall) <br> - Cachelagring av Dispatcher | - Ingen volymbegränsning <br>- Cachelagring på Dispatcher eller CDN |

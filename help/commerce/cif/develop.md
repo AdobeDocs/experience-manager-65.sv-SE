@@ -1,5 +1,5 @@
 ---
-title: Utveckla AEM
+title: Utveckla AEM Commerce
 description: Lär dig hur du skapar ett e-handelsaktiverat AEM med AEM projekttyp. Lär dig hur du bygger och distribuerar projektet till en lokal utvecklingsmiljö.
 topics: Commerce, Development
 feature: Commerce Integration Framework
@@ -8,29 +8,30 @@ kt: 5826
 thumbnail: 39476.jpg
 exl-id: 48479725-8b52-4ff2-a599-d20958b26ee6
 solution: Experience Manager,Commerce
-source-git-commit: 1751bfb32386685e3a159939113b9667b5e17f0e
+role: Admin, Developer
+source-git-commit: 10268f617b8a1bb22f1f131cfd88236e7d5beb47
 workflow-type: tm+mt
 source-wordcount: '798'
 ht-degree: 0%
 
 ---
 
-# Utveckla AEM {#develop}
+# Utveckla AEM Commerce {#develop}
 
-Utveckla AEM handelsprojekt som bygger på Commerce integration framework (CIF) för AEM följer samma regler och bästa praxis som andra AEM projekt. Granska dessa först:
+Utveckla AEM Commerce-projekt baserade på Commerce integration framework (CIF) för AEM följer samma regler och bästa praxis som andra AEM projekt. Granska dessa först:
 
 - [Användarhandbok om AEM 6.5-utveckling](/help/sites-developing/getting-started.md)
 - [AEM Core Concepts](/help/sites-developing/the-basics.md)
 - [AEM - riktlinjer och bästa praxis](/help/sites-developing/dev-guidelines-bestpractices.md)
 - [Skapa AEM projekt med Apache Maven](/help/sites-developing/ht-projects-maven.md)
 
-## Lokal utveckling för AEM {#local}
+## Local Development for AEM Commerce {#local}
 
 En lokal utvecklingsmiljö rekommenderas för CIF.
 
 >[!NOTE]
 >
->Följande instruktioner hjälper dig att konfigurera en lokal AEM utvecklingsmiljö för AEM Commerce med CIF med fokus för AEM 6.5). Om du använder AEM as a Cloud Service kan du läsa [AEM Commerce as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content-and-commerce/home.html) dokumentation.
+>Följande instruktioner hjälper dig att konfigurera en lokal AEM för AEM Commerce med CIF med fokus för AEM 6.5). Om du använder AEM as a Cloud Service kan du läsa [AEM Commerce as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content-and-commerce/home.html) dokumentation.
 
 AEM Commerce Add-On för AEM 6.5 alias. CIF Add-On finns även för lokal utveckling och tillhandahålls som ett AEM. Den kan laddas ned från [Programdistributionsportal](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html) som ett funktionspaket.
 
@@ -48,7 +49,7 @@ Följande bör installeras lokalt:
 
 ### Åtkomst till CIF
 
-Tillägget CIF kan hämtas från [Programdistributionsportal](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html), söker du efter AEM Commerce add-on.
+Tillägget CIF kan hämtas från [Programdistributionsportal](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html), söker du efter AEM Commerce-tillägg.
 
 >[!TIP]
 >
@@ -157,7 +158,7 @@ Båda, ett projekt som genereras av [AEM Project Archettype](https://github.com/
 
 Ersätt värdet för `url` in `com.adobe.cq.commerce.graphql.client.impl.GraphqlClientImpl~default.cfg.json` med GraphQL slutpunkt i e-handelssystemet som används av projektet.
 
-AEM Commerce Add-On och CIF Core Components ansluter till e-handelsplatsen för GraphQL via AEM server och direkt via webbläsaren. Huvudkomponenter CIF klientsidan och redigeringsverktygen för CIF tillägg som standard ansluter till `/api/graphql`. Vid behov kan detta justeras via CIF Cloud Service-konfigurationen (se nedan).
+AEM Commerce Add-On och CIF Core Components ansluter till GraphQL-slutpunkten via AEM och direkt via webbläsaren. Huvudkomponenter CIF klientsidan och redigeringsverktygen för CIF tillägg som standard ansluter till `/api/graphql`. Vid behov kan detta justeras via CIF Cloud Service-konfigurationen (se nedan).
 
 Tillägget CIF tillhandahåller en GraphQL-proxyserver på `/api/graphql`. Om du inte tänker använda en lokal AEM Dispatcher rekommenderar vi att du även konfigurerar GraphQL proxyserver.
 

@@ -2,9 +2,12 @@
 title: Funktionsstatus för Touch UI
 description: Versionsinformation för [!DNL Adobe Experience Manager] Pekaktiverat användargränssnitt.
 exl-id: 7b71e8db-e8c6-4470-bc22-db3d4600b7fc
-source-git-commit: 6799f1d371734b69c547f3c0c68e1e633aa63229
+solution: Experience Manager
+feature: Release Information
+role: User,Admin,Architect,Developer
+source-git-commit: 10268f617b8a1bb22f1f131cfd88236e7d5beb47
 workflow-type: tm+mt
-source-wordcount: '1067'
+source-wordcount: '1076'
 ht-degree: 0%
 
 ---
@@ -51,7 +54,7 @@ Det här är en lista över funktioner som den klassiska administratören för a
 | Skapa ny live-kopia | Complete |  |
 | Skapa mapp | Complete |  |
 | Visa publiceringsstatus | Complete | Från och med AEM 6.5 visas arbetsflödets status i listvyn. |
-| Sökning | Complete |  |
+| Sök | Complete |  |
 | Kopiera och klistra in sida (duplicera) | Complete |  |
 | Flytta sidor | Complete |  |
 | Publicera sidor | Complete |  |

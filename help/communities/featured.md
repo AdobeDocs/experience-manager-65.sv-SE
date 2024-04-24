@@ -6,10 +6,13 @@ products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: authoring
 content-type: reference
 exl-id: 76b76e0e-531b-4f80-be70-68532ef81a7f
-source-git-commit: ab3d016c7c9c622be361596137b150d8719630bd
+solution: Experience Manager
+feature: Communities
+role: Admin
+source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
-source-wordcount: '328'
-ht-degree: 1%
+source-wordcount: '329'
+ht-degree: 0%
 
 ---
 
@@ -66,7 +69,7 @@ Under **[!UICONTROL Settings]** identifierar du innehållet som ska visas:
 
 * **[!UICONTROL Location of the Featured Content]**
 
-  *(Obligatoriskt)* Bläddra till sidan som innehåller det innehåll som kan vara aktuellt (komponenterna på den sidan måste vara konfigurerade för att tillåta aktuellt innehåll). Till exempel, `/content/sites/engage/en/forum`.
+  *(Obligatoriskt)* Bläddra till sidan som innehåller det innehåll som kan vara aktuellt (komponenterna på den sidan måste vara konfigurerade för att tillåta aktuellt innehåll). Till exempel: `/content/sites/engage/en/forum`.
 
 * **[!UICONTROL Display Limit]**
 

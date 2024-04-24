@@ -10,7 +10,8 @@ kt: 3456
 thumbnail: 3456-style-cif.jpg
 exl-id: 04d553be-c67d-4ecb-a23f-2694c2adfc2b
 solution: Experience Manager,Commerce
-source-git-commit: 1751bfb32386685e3a159939113b9667b5e17f0e
+role: Admin, Developer
+source-git-commit: 10268f617b8a1bb22f1f131cfd88236e7d5beb47
 workflow-type: tm+mt
 source-wordcount: '2338'
 ht-degree: 0%
@@ -86,7 +87,7 @@ Gör sedan en liten ändring av Teaser-stilen för att se hur `ui.frontend` modu
 
    ![ui.front.commerce, mapp](../assets/style-cif-component/ui-frontend-commerce-folder.png)
 
-   Observera att det finns flera Sass (`.scss`) filer under mappen. Det här är de Commerce-specifika formaten för varje Commerce-komponent.
+   Observera att det finns flera Sass (`.scss`) filer under mappen. Detta är de Commerce-specifika formaten för var och en av Commerce-komponenterna.
 
 1. Öppna filen `_productteaser.scss`.
 

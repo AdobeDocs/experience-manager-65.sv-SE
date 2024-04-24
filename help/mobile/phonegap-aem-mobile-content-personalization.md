@@ -6,9 +6,12 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-adobe-phonegap-enterprise
 exl-id: 70d7ee0d-2f6d-4f97-a6e2-b02d84a0ca42
-source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
+solution: Experience Manager
+feature: Mobile
+role: Admin
+source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
-source-wordcount: '2607'
+source-wordcount: '2571'
 ht-degree: 0%
 
 ---
@@ -51,7 +54,7 @@ Som en del av användar- och gruppinställningarna bör målaktivitetsgruppen l�
 >
 >Om du glömmer att lägga till de användare eller grupper som du vill ska ha tillgång till Admin Console i personaliseringen i gruppen target-activity-authors, kan användarna inte se personaliseringskonsolen.
 
-### Cloud Services {#cloud-services}
+### Cloud Service {#cloud-services}
 
 För att få målinriktat innehåll att fungera för mobilprogram finns det två tjänster som måste konfigureras: Adobe Target-tjänsten och Adobe-tjänsten för mobiltjänster. Adobe Target-tjänsten tillhandahåller motorn för bearbetning av klientförfrågningar och returnering av det anpassade innehållet. Tjänsten Adobe Mobile Services tillhandahåller anslutningen mellan Adobes tjänster och mobilprogrammet via filen ADBMomobileConfig.json som används av plugin-programmet AMS Cordova. Från AEM Mobile Dashboard kan du konfigurera programmet genom att lägga till de två tjänsterna.
 

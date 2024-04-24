@@ -7,9 +7,12 @@ topic-tags: authoring
 content-type: reference
 docset: aem65
 exl-id: 17081710-35e0-4f5b-9485-1f85c065fd70
-source-git-commit: 62d4a8b3af5031ccc539d78f7d06a8cd1fec7af1
+solution: Experience Manager
+feature: Communities
+role: Admin
+source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
-source-wordcount: '1376'
+source-wordcount: '1389'
 ht-degree: 0%
 
 ---
@@ -160,7 +163,7 @@ Under **Inställningar** -fliken, ange inställningar för ämnen (frågor) och 
 
 * **Mönster för användargränssnittets omnämnande**
 
-  Ange den tillåtna mönstersträngen för att tagga (@mention) den registrerade användaren i ett inlägg. Till exempel, `~{{familyName}}{{givenName}}`.
+  Ange den tillåtna mönstersträngen för att tagga (@mention) den registrerade användaren i ett inlägg. Till exempel: `~{{familyName}}{{givenName}}`.
 
 #### Fliken Användarmoderering {#user-moderation-tab}
 

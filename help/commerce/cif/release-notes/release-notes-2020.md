@@ -3,7 +3,9 @@ title: AEM Content and Commerce Release Notes 2020
 description: Adobe Experience Manager Content and Commerce Release Notes 2020.
 exl-id: 440ecd8e-55dc-4606-8678-c65cda1d2b3a
 solution: Experience Manager,Commerce
-source-git-commit: 1751bfb32386685e3a159939113b9667b5e17f0e
+feature: Commerce Integration Framework
+role: Admin, Developer
+source-git-commit: 10268f617b8a1bb22f1f131cfd88236e7d5beb47
 workflow-type: tm+mt
 source-wordcount: '1257'
 ht-degree: 6%
@@ -50,7 +52,7 @@ ht-degree: 6%
 
 * Sidorna Produktinformation och Produktlista utökas för att automatiskt fylla i SEO-metadata (som titel, metabeskrivning, meta-nyckelord) som konfigurerats inifrån Adobe Commerce administratörsgränssnitt
 
-* Fel i Commerce teaser-komponent har åtgärdats.
+* Commerce teaser Component bug har åtgärdats.
 
 ## Releasedatum: september 2020
 
@@ -90,7 +92,7 @@ ht-degree: 6%
 
 * Breadcrumb-komponenten har lagts till för att stödja innehålls- och e-handelssidor.
 
-* Fliken Commerce har lagts till i sidegenskaper för att visa CIF egenskaper för landningssida och upplevelsefragment.
+* Fliken Commerce har lagts till i sidegenskaperna för att visa CIF egenskaper för landningssida och Experience Fragments.
 
 * Sökfältskomponenten har förbättrats med stöd för alternativet att visa platshållartext
 

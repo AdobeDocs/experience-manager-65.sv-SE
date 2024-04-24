@@ -6,10 +6,13 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-adobe-phonegap-enterprise
 exl-id: fbeceb70-b199-478b-907b-253ed212ff99
-source-git-commit: 06a6d4e0ba2aeaefcfb238233dd98e8bbd6731da
+solution: Experience Manager
+feature: Mobile
+role: Admin
+source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
-source-wordcount: '673'
-ht-degree: 0%
+source-wordcount: '658'
+ht-degree: 1%
 
 ---
 
@@ -88,9 +91,9 @@ phonegap run ios
 >1. Kör `phonegap create helloWorld`
 >1. Navigera till helloWorld (cd helloWorld)
 >1. Kör `phonegap run android` (eller ersätt Android™ med iOS enligt ovan).
-1. Emulatorn öppnar och kör din nya PhoneGap-app med namnet&quot;Device Ready&quot; om JavaScript Bridge till native fungerar.
+>1. Emulatorn öppnar och kör din nya PhoneGap-app med namnet&quot;Device Ready&quot; om JavaScript Bridge till native fungerar.
 >
-Denna felsökning verifierar att PhoneGap CLI-utvecklingsmiljön körs korrekt.
+>Denna felsökning verifierar att PhoneGap CLI-utvecklingsmiljön körs korrekt.
 
 ## Felsöka JavaScript med felsökning i Safari och IOS {#debug-javascripts-with-safari-and-ios-debug}
 
@@ -151,7 +154,7 @@ Du kan ange brytpunkter var som helst i källan. När du interagerar med emulato
 
 >[!NOTE]
 >
-Håll musen om du vill se variabelvärdena i den aktuella metoden.
+>Håll musen om du vill se variabelvärdena i den aktuella metoden.
 
 ## Nästa steg {#the-next-steps}
 

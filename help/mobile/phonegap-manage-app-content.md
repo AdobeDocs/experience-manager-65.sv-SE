@@ -6,9 +6,12 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: authoring-adobe-phonegap-enterprise
 exl-id: 9d350935-129a-40d3-89f4-2e6f69676e5e
-source-git-commit: 96e2e945012046e6eac878389b7332985221204e
+solution: Experience Manager
+feature: Mobile
+role: Admin
+source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
-source-wordcount: '700'
+source-wordcount: '706'
 ht-degree: 1%
 
 ---
@@ -47,7 +50,7 @@ När innehållet har uppdaterats kan administratörer publicera en nyttolast fö
 
 Välj något av innehållspaketen i listan om du vill skapa eller redigera innehåll, till exempel skapa, redigera eller ta bort sidor, ändra navigerings- och sidordning, skapa eller uppdatera innehåll som text och media.
 
-Anteckning *allt är innehåll*, vilket innebär att programformat, text, media, sidor, navigering och målgruppsanpassning för innehåll kan redigeras och uppdateras i OTA, utan att man behöver besöka en appbutik.
+Anteckning *allt är innehåll*, vilket innebär att programformat, text, media, sidor, navigering och målgruppsanpassning för innehåll kan redigeras och uppdateras i OTA, utan att du behöver besöka en appbutik.
 
 För att redigera AEM Mobile-innehåll behöver *AEM författare *en god förståelse för redigeringsgränssnittet AEM innehåll: [Redigerar sidor i AEM.](/help/sites-authoring/qg-page-authoring.md)
 
@@ -57,9 +60,9 @@ Här, *AEM administratörer* kan snabbt och enkelt uppdatera sina appar för att
 
 ![chlimage_1-162](assets/chlimage_1-162.png)
 
-En gång *AEM Authors* har lagt till eller ändrat innehåll via panelen Hantera innehåll, *AEM administratörer* kan skicka ut dessa ändringar till kunder med en innehållspaketuppdatering.
+En gång *AEM* har lagt till eller ändrat innehåll via panelen Hantera innehåll, *AEM administratörer* kan skicka ut dessa ändringar till kunder med en innehållspaketuppdatering.
 
-Åtgärden Innehållspaket tillåter *AEM Author* för att skapa och redigera sidinnehåll medan utvecklingsteamet gör ändringar i utformningen och implementeringen av värdapplikationer, inklusive navigering, stil, logik, mallar och komponenter på serversidan och sedan skickar ut ändringarna till kunderna utan att behöva skicka in dem till de olika butikerna för distribution igen.
+Åtgärden Innehållspaket tillåter *AEM* för att skapa och redigera sidinnehåll medan utvecklingsteamet gör ändringar i utformningen och implementeringen av värdapplikationer, inklusive navigering, stil, logik, mallar och komponenter på serversidan och sedan skickar ut ändringarna till kunderna utan att behöva skicka in dem till de olika butikerna för distribution igen.
 
 **Publicera nytt eller uppdaterat innehåll**
 
@@ -67,7 +70,7 @@ Välj ett innehållspaket i rutan, i det här exemplet det engelska paketet. Obs
 
 ![chlimage_1-163](assets/chlimage_1-163.png)
 
-Välj sedan **Scen** åtgärd längst upp till höger för att skapa innehållsuppdateringen. Lägg till rätt uppdateringsinformation och tryck på Klar.
+Nästa steg är att välja **Scen** åtgärd längst upp till höger för att skapa innehållsuppdateringen. Lägg till rätt uppdateringsinformation och tryck på Klar.
 
 ![chlimage_1-164](assets/chlimage_1-164.png)
 

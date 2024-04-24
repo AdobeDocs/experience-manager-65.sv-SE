@@ -6,7 +6,9 @@ topic-tags: e-commerce
 content-type: reference
 exl-id: c342f789-2ff7-4802-99c7-c3699218fe47
 solution: Experience Manager,Commerce
-source-git-commit: 1751bfb32386685e3a159939113b9667b5e17f0e
+feature: Commerce Integration Framework
+role: Admin, Developer
+source-git-commit: 10268f617b8a1bb22f1f131cfd88236e7d5beb47
 workflow-type: tm+mt
 source-wordcount: '1574'
 ht-degree: 1%
@@ -159,7 +161,7 @@ En sådan struktur skapas av OSGi-tjänsten `DefaultImportHandler` som implement
 
 Strukturen som ska skapas vid import kan konfigureras för:
 
-&quot;**Standardimporthanterare för handelshybris för dagskvot**
+&quot;**Dag CQ Commerce Hybris - standardimporthanterare**
 `(com.adobe.cq.commerce.hybris.importer.DefaultImportHandler`)
 
 När du arbetar med AEM finns det flera metoder för att hantera konfigurationsinställningarna för sådana tjänster. Se [Konfigurerar OSGi](/help/sites-deploying/configuring-osgi.md) för fullständig information. Se även konsolen för en fullständig lista över konfigurerbara parametrar och deras standardvärden.
@@ -170,7 +172,7 @@ Svarsparsern kan konfigureras för att definiera egenskaper och attribut som ska
 
 1. Konfigurera OSGi-paketet:
 
-   **Standardsvarsparser för handelshybris i CQ**
+   **Dag CQ - Commerce Hybris - standardsvarsparser**
 (`com.adobe.cq.commerce.hybris.impl.importer.DefaultResponseParser`)
 
    Här kan du definiera olika alternativ och attribut som behövs för inläsning och mappning.
@@ -313,7 +315,7 @@ hybriskatalogen kan importeras till AEM med hjälp av satsimportör för hybris-
 
 De parametrar som används av importeraren kan konfigureras för:
 
-**Dag CQ Commerce Hybris Catalog Import**
+**Dag CQ Commerce Hybris Catalog Importer**
 ( `com.adobe.cq.commerce.hybris.impl.importer.DefaultHybrisImporter`)
 
 När du arbetar med AEM finns det flera metoder för att hantera konfigurationsinställningarna för sådana tjänster. Se [Konfigurerar OSGi](/help/sites-deploying/configuring-osgi.md) för fullständig information. Se även konsolen för en fullständig lista över konfigurerbara parametrar och deras standardvärden.
@@ -343,7 +345,7 @@ Sökvägen dit katalogen ska importeras.
 
 Så här tar du bort en eller flera produkter från katalogen:
 
-1. [Konfigurera tjänsten för OSGi](/help/sites-deploying/configuring-osgi.md) **Dag CQ Commerce Hybris Catalog Import**; se även [Konfigurera katalogimporteraren](#configure-the-catalog-importer).
+1. [Konfigurera tjänsten för OSGi](/help/sites-deploying/configuring-osgi.md) **Dag CQ Commerce Hybris Catalog Importer**; se även [Konfigurera katalogimporteraren](#configure-the-catalog-importer).
 
    Aktivera följande egenskaper:
 

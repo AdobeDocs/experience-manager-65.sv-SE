@@ -4,7 +4,9 @@ description: Lär dig de allmänna koncepten för e-handel med Adobe Experience 
 contentOwner: Guillaume Carlino
 exl-id: 290b2af6-257f-42f2-b809-1248227a4795
 solution: Experience Manager,Commerce
-source-git-commit: 1751bfb32386685e3a159939113b9667b5e17f0e
+feature: Commerce Integration Framework
+role: Admin, Developer
+source-git-commit: 10268f617b8a1bb22f1f131cfd88236e7d5beb47
 workflow-type: tm+mt
 source-wordcount: '4439'
 ht-degree: 0%
@@ -128,7 +130,7 @@ AEM e-handel genomförs med en e-handelsmotor:
 >
 >  Standardinstallationen AEM innehåller grunderna i [allmän e-handelsimplementering](/help/commerce/cif-classic/administering/generic.md).
 
-### Leverantörer av handel {#commerce-providers}
+### Commerce Providers {#commerce-providers}
 
 När du importerar data från en e-handelsmotor till din AEM e-handelsplats används en e-handelsleverantör för att förse importörerna med data. En e-handelsleverantör kan stödja flera importörer.
 
@@ -148,7 +150,7 @@ Vanligtvis måste ett projekt utveckla en egen, anpassad e-handelsleverantör so
 >
 >Importörerna använder CSV-filer. Det finns en beskrivning av det godkända schemat (med anpassade egenskaper tillåtna) i kommentarerna ovanför implementeringen.
 
-The [ProductServicesManager](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/commerce/pim/api/ProductServicesManager.html) underhåller (genom [OSGi](/help/sites-deploying/configuring.md#osgi-configuration-settings)) en lista över genomförandet av [ProductImporter](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/commerce/pim/api/ProductImporter.html) och [CatalogBlueprintImport](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/commerce/pim/api/CatalogBlueprintImporter.html) gränssnitt. Dessa listas i **Importör/handelsleverantör** listrutefält för importguiden (med `commerceProvider` egenskap som ett namn).
+The [ProductServicesManager](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/commerce/pim/api/ProductServicesManager.html) underhåller (genom [OSGi](/help/sites-deploying/configuring.md#osgi-configuration-settings)) en lista över genomförandet av [ProductImporter](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/commerce/pim/api/ProductImporter.html) och [CatalogBlueprintImport](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/commerce/pim/api/CatalogBlueprintImporter.html) gränssnitt. Dessa listas i **Importör/Commerce-leverantör** listrutefält för importguiden (med `commerceProvider` egenskap som ett namn).
 
 När en viss importör/e-handelsleverantör är tillgänglig från listrutan måste alla kompletterande uppgifter som den behöver definieras (beroende på importörens typ) i antingen
 
@@ -454,7 +456,7 @@ I katalogavsnitten finns exempel:
 
 På produktsidorna finns omfattande information om enskilda produkter. Dynamiska uppdateringar från återspeglas också, till exempel prisändringar som registreras i eCommerce-motorn.
 
-Produktsidorna är AEM sidor som använder **Produkt** -komponent, till exempel inom **Commerce Product** mall:
+Produktsidorna är AEM sidor som använder **Produkt** -komponent, till exempel inom **Commerce-produkt** mall:
 
 ![ecommerce_nairobirunnersgreen](/help/sites-administering/assets/ecommerce_nairobirunnersgreen.png)
 

@@ -6,9 +6,12 @@ products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: introduction
 content-type: reference
 exl-id: 4be199d8-963d-4807-b9bb-e23fa577c5f2
-source-git-commit: 96e2e945012046e6eac878389b7332985221204e
+solution: Experience Manager
+feature: Mobile
+role: User
+source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
-source-wordcount: '772'
+source-wordcount: '761'
 ht-degree: 0%
 
 ---
@@ -27,17 +30,17 @@ AEM innehåller flera verktyg som gör att du kan integrera ditt innehåll i mob
 
 Följande diagram visar hur de olika komponenterna i AEM Mobile och On-Demand Services passar ihop för att leverera innehåll till mobilappar.
 
-AEM kan betraktas som en testmiljö för att förhandsgranska appen och innehållet före publicering. medan AEM Mobile App är den slutliga app som har byggts för distribution.
+AEM kan betraktas som en testmiljö för att förhandsgranska appen och innehållet före publicering, medan AEM Mobile App är den sista app som har skapats för distribution.
 
 >[!NOTE]
 >
->Mer information om preflight-appen finns i [Använda AEM Preflight-appen](https://helpx.adobe.com/digital-publishing-solution/help/preflight-app.html) i hjälpen för AEM Mobile On-demand Services.
+>Mer information om preflight-appen finns i [Använda AEM Preflight-appen](https://helpx.adobe.com/digital-publishing-solution/help/preflight-app.html) i AEM Mobile On-demand Services Help.
 
 ![chlimage_1-171](assets/chlimage_1-171.png)
 
 >[!NOTE]
 >
->I bilden ovan krävs inte AEM Publish-instansen för ett typiskt distributionsscenario för AEM Mobile On-demand Services.
+>I diagrammet ovan krävs inte AEM Publish-instansen för ett vanligt distributionsscenario för AEM Mobile On-demand Services.
 
 ## Starta en ny mobilapp {#starting-a-new-mobile-app}
 
@@ -46,8 +49,8 @@ AEM Mobile är bara en av de två pelarna som utgör den kompletta AEM.
 För att starta en ny AEM Mobile-appupplevelse krävs det att rollerna är enhetliga innan man kan redigera innehåll. Följande roller utgör en startpunkt när du skapar ett AEM Mobile-program:
 
 * **Administratör**
-* **Developer**
-* **Författare**
+* **Utvecklare**
+* **Upphovsman**
 
 >[!NOTE]
 >
@@ -59,7 +62,7 @@ Innan användaren förstår roller och ansvarsområden bör han/hon ha grundliga
 
 ### AEM-administratör {#aem-administrator}
 
-An ***AEM*** ansvarar för att lägga till ett program i AEM Mobile-katalogen, antingen genom att skapa ett program med hjälp av guiden Skapa eller genom att importera ett befintligt program. AEM som skapar ett program med AEM Mobile *guide* oftast väljer du en av de önskade programmallarna antingen bland Adobe färdiga referensexempel eller (vanligtvis) en anpassad programmall som skapas av *AEM utvecklare.*
+An ***AEM*** ansvarar för att lägga till ett program i AEM Mobile-katalogen, antingen genom att skapa ett program med hjälp av guiden Skapa eller genom att importera ett befintligt program. AEM som skapar ett program med AEM Mobile *guide* oftast väljer du en av de önskade programmallarna antingen bland Adobe färdiga referensexempel eller (vanligtvis) en anpassad programmall som skapas av *AEM.*
 
 En AEM är ansvarig för följande när du skapar ett program med AEM Mobile On-demand Services:
 
@@ -72,9 +75,9 @@ Om du vill komma igång med en administratörs roller och ansvarsområden, se [A
 
 ## AEM Developer {#aem-developer}
 
-An **AEM** utökar och skapar anpassade webbmallar och komponenter så att *AEM Author *kan skapa tilltalande och engagerande mobilupplevelser. Dessa mallar och komponenter är inte bara optimerade för mobilappsvärlden. men kommunicera både till enheten och till AEM server (valfri fjärrserver) till slutpunkter för flerkanalstjänster. AEM inbyggda innehållsredigeraren används av *AEM Authors* för att skapa engagerande och relevanta upplevelser i appen, inklusive integrering med resten av Adobe Experience Cloud.
+An **AEM** utökar och skapar anpassade webbmallar och komponenter så att *AEM Author *kan skapa tilltalande och engagerande mobilupplevelser. Dessa mallar och komponenter är inte bara optimerade för mobilappsvärlden utan kommunicerar både med enheten och med AEM server (valfri fjärrserver) till slutpunkter för flerkanalstjänster. AEM inbyggda innehållsredigeraren används av *AEM* för att skapa engagerande och relevanta upplevelser i appen, inklusive integrering med resten av Adobe Experience Cloud.
 
-En AEM ansvarar för följande när du skapar ett program med AEM Mobile On-demand Services:
+En AEM utvecklare ansvarar för följande när de skapar ett program med AEM Mobile On-demand Services:
 
 * [Appmallar och komponenter](/help/mobile/app-templates-and-components1.md)
 * [Mobil med innehållssynkronisering](/help/mobile/mobile-ondemand-contentsync.md)
@@ -87,9 +90,9 @@ Om du vill komma igång med Developers roller och ansvarsområden, se [Utveckla 
 >
 >An *AEM* rollerna börjar och slutar inte med utvecklingen av mallar och komponenter. An *AEM* kan skapa ett helt nytt program i stället för att bara utöka det körklara referensimplementeringsexemplet.
 
-## AEM Author {#aem-author}
+## AEM {#aem-author}
 
-An ***AEM Author* (eller *Marknadsförare*)**använder de anpassade, utvecklade eller färdiga mallarna och komponenterna för att lägga till och redigera sidor, dra och släppa komponenter och lägga till media av alla typer från DAM, inklusive bilder, videor och textfragment (innehållsfragment). AEM inbyggda innehållsredigeraren används sedan av *AEM Authors* för att skapa engagerande och relevanta upplevelser i appen, inklusive integrering med resten av Adobe Experience Cloud.
+An ***AEM* (eller *Marknadsförare*)**använder de anpassade, utvecklade eller färdiga mallarna och komponenterna för att lägga till och redigera sidor, dra och släppa komponenter och lägga till media av alla typer från DAM, inklusive bilder, videor och textfragment (innehållsfragment). AEM inbyggda innehållsredigeraren används sedan av *AEM* för att skapa engagerande och relevanta upplevelser i appen, inklusive integrering med resten av Adobe Experience Cloud.
 
 AEM måste förstå följande när de skapar ett program med AEM Mobile On-demand Services:
 
@@ -103,4 +106,4 @@ Om du vill komma igång med en författares roller och ansvarsområden, se [AEM 
 
 >[!NOTE]
 >
->En AEM-författare ansvarar också för att ställa in tillstånd, skapa kort och layouter samt skicka push-meddelanden. Mer information om metoder för att skapa innehåll. hantera artiklar och samlingar, skapa banners, kort och layouter i AEM Mobile, se [AEM Mobile On Demand Portal](https://helpx.adobe.com/digital-publishing-solution/topics.html#dynamicpod_reference_2).
+>En AEM författare ansvarar också för att ställa in tillstånd, skapa kort och layouter samt skicka push-meddelanden. Mer information om metoder för att skapa innehåll, hantera artiklar och samlingar, skapa banners, kort och layouter i AEM Mobile finns i [AEM Mobile On Demand Portal](https://helpx.adobe.com/digital-publishing-solution/topics.html#dynamicpod_reference_2).

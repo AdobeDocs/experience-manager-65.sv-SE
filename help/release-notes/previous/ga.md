@@ -2,7 +2,10 @@
 title: Allmän versionsinformation för [!DNL Adobe Experience Manager] 6.5
 description: "[!DNL Adobe Experience Manager] 6.5 som beskriver versionsinformation, nyheter, hur man installerar och detaljerade ändringslistor."
 exl-id: b3d4a527-44ca-4eb6-b393-f3e8117cf1a6
-source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
+solution: Experience Manager
+feature: Release Information
+role: User,Admin,Architect,Developer
+source-git-commit: 10268f617b8a1bb22f1f131cfd88236e7d5beb47
 workflow-type: tm+mt
 source-wordcount: '4484'
 ht-degree: 0%
@@ -250,7 +253,7 @@ Mer information om ändringar i AEM Screens finns i versionsinformationen i [AEM
 * `s_code.js` H.27.5 ingår. Adobe rekommenderar att du byter implementering till `AppMeasurement.js`
 * `AppMeasurement.js` v1.8.0 ingår. Adobe rekommenderar att du använder [Adobe Experience Platform Launch](https://business.adobe.com/products/experience-platform/launch.html) att etablera AppMeasurement.js på webbplatsen.
 
-#### AEM och handel {#aem-commerce}
+#### AEM och Commerce {#aem-commerce}
 
 Commerce integrationa frameworken har förbättrats snabbare sedan AEM 6.4. [Läs mer här](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/content-and-commerce/integrations/magento.html).
 

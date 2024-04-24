@@ -7,9 +7,12 @@ topic-tags: developing
 content-type: reference
 docset: aem65
 exl-id: 470a382a-2aa7-449e-bf48-b5a804c5b114
-source-git-commit: 62d4a8b3af5031ccc539d78f7d06a8cd1fec7af1
+solution: Experience Manager
+feature: Communities
+role: Admin
+source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
-source-wordcount: '946'
+source-wordcount: '932'
 ht-degree: 0%
 
 ---
@@ -111,7 +114,7 @@ Så här visar du loggposter:
 
    * Loggfilen är på &lt;*server-install-dir*>/crx-quickstart/logs/&lt;*log-file-name*>.log
 
-   * Till exempel, `.../crx-quickstart/logs/scoring-debug.log`
+   * Exempel: `.../crx-quickstart/logs/scoring-debug.log`
 
 ![poänglogg](assets/scoring-log.png)
 

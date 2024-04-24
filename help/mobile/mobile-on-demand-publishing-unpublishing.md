@@ -6,9 +6,12 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: authoring-on-demand-services-app
 exl-id: 3924bb8f-27cb-4648-8be2-9444e9a58c66
-source-git-commit: 260f71acd330167572d817fdf145a018b09cbc65
+solution: Experience Manager
+feature: Mobile
+role: User
+source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
-source-wordcount: '274'
+source-wordcount: '271'
 ht-degree: 0%
 
 ---
@@ -27,7 +30,7 @@ När du känner till innehållshanteringsåtgärder för artiklar, banners och s
 
 ## Publicera/avpublicera innehållet {#publishing-unpublishing-the-content}
 
-Detta skiljer sig från en&quot;AEM-publicering&quot;. Du flyttar inte innehåll till en AEM Publish-serverinstans för att göra det offentligt synligt. Här informerar du Mobile On-Demand om att det valda innehållet ska publiceras i den aktiva appen Mobile On-Demand.
+Detta skiljer sig från en&quot;AEM-publicering&quot;. Du flyttar inte innehåll till en AEM publiceringsserverinstans för att göra den allmänt synlig. Här informerar du Mobile On-Demand om att det valda innehållet ska publiceras i den aktiva appen Mobile On-Demand.
 
 >[!NOTE]
 >
@@ -49,7 +52,7 @@ Det allmänna arbetsflödet för att publicera/avpublicera en artikel:
 
 ### Nästa steg {#the-next-steps}
 
-När du har lärt dig skapa och publicera innehåll kan du läsa följande:
+När du har lärt dig att skapa och publicera innehåll kan du läsa följande:
 
 * [Utveckla AEM för AEM Mobile On-demand Services](/help/mobile/aem-mobile-on-demand.md)
 * [Administrera innehåll för användning av AEM Mobile On-demand Services](/help/mobile/aem-mobile.md)

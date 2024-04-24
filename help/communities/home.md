@@ -2,7 +2,10 @@
 title: Adobe Experience Manager 6.5 Communities Guide
 description: Skapa onlineupplevelser som forum, användargrupper, utbildningsresurser och andra sociala funktioner. Bläddra i den här guiden som förklarar hur du distribuerar, administrerar, utvecklar och redigerar webbgrupper.
 exl-id: 63040353-d34c-4306-9e7a-584ba48d8ad5
-source-git-commit: d2c0dea636280c28e1d5a76d1c5375f21b6eb111
+solution: Experience Manager
+feature: Communities
+role: User
+source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
 source-wordcount: '67'
 ht-degree: 0%

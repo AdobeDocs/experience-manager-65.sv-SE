@@ -6,9 +6,12 @@ products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
 exl-id: 5ca58bc3-8505-4d91-9cd1-6b2e2671f1be
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+solution: Experience Manager
+feature: Communities
+role: Admin
+source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
-source-wordcount: '1477'
+source-wordcount: '1478'
 ht-degree: 0%
 
 ---
@@ -28,7 +31,7 @@ Fördelarna med ramverket:
 
 Utforska en författare eller publicera en instans med den interaktiva [Community Components Guide](components-guide.md).
 
-## Översikt {#overview}
+## Ökning {#overview}
 
 I SCF består en komponent av en SocialComponent POJO, en Handlebars JS-mall (som återger komponenten) och CSS (som formaterar komponenten).
 

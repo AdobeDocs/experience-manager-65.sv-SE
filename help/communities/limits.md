@@ -7,16 +7,18 @@ topic-tags: administering
 content-type: reference
 role: Admin
 exl-id: d00a8eb2-47ce-425a-a312-f043f82912be
-source-git-commit: f0dd1ac3ab9c17a8b331f5048d84ec97dd23924f
+solution: Experience Manager
+feature: Communities
+source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
-source-wordcount: '418'
+source-wordcount: '411'
 ht-degree: 0%
 
 ---
 
 # Gränser för medlemsbidrag {#member-contribution-limits}
 
-## Översikt {#overview}
+## Ökning {#overview}
 
 Med funktionen för begränsning av bidrag kan du begränsa bidragen från communitymedlemmar som ett sätt att skydda dig mot skräppost.
 

@@ -6,16 +6,19 @@ products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: authoring
 content-type: reference
 exl-id: eb5ce76a-bf28-4540-bc2d-3b5ecb8286f2
-source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
+solution: Experience Manager
+feature: Communities
+role: Admin
+source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
 source-wordcount: '360'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
 # Grunderna för communitykomponenter {#communities-components-basics}
 
-## Översikt {#overview}
+## Ökning {#overview}
 
 I redigeringsavsnittet i dokumentationen beskrivs hur du lägger till communityfunktioner AEM webbplatser i redigeringsläge för författare och beskriver komponentkonfigurationer.
 

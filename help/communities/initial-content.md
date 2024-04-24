@@ -6,10 +6,13 @@ products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
 exl-id: 068a0fff-ca48-4847-ba3f-d78416c97f6d
-source-git-commit: 62d4a8b3af5031ccc539d78f7d06a8cd1fec7af1
+solution: Experience Manager
+feature: Communities
+role: Developer
+source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
-source-wordcount: '457'
-ht-degree: 1%
+source-wordcount: '454'
+ht-degree: 0%
 
 ---
 
@@ -50,7 +53,7 @@ Nu när det finns en [sidmall](initial-app.md#createthepagetemplate)kan du skapa
    * Titel: `SCF Sandbox Site`
    * Namn: `an-scf-sandbox`
    * Välj **[!UICONTROL An SCF Sandbox Play Template]**
-   * Klicka på **[!UICONTROL Create]**
+   * Klicka **[!UICONTROL Create]**
 
    ![classic-ui-create-page](assets/classic-ui-create-page.png)
 
@@ -59,14 +62,14 @@ Nu när det finns en [sidmall](initial-app.md#createthepagetemplate)kan du skapa
    * Titel: `SCF Sandbox`
    * Namn: `en`
    * Välj **[!UICONTROL An SCF Sandbox Play Template]**
-   * Klicka på **[!UICONTROL Create]**
+   * Klicka **[!UICONTROL Create]**
 
 1. Markera den sida du skapade i Utforskarfönstret. `/Websites/SCF Sandbox Site/SCF Sandbox`och klicka **[!UICONTROL New]** > **[!UICONTROL New Page]**
 
    * Titel: `SCF Play`
    * Namn: `play`
    * Välj **[!UICONTROL An SCF Sandbox Play Template]**
-   * Klicka på **[!UICONTROL Create]**
+   * Klicka **[!UICONTROL Create]**
 
 1. Så här visas webbplatsen nu i webbplatskonsolen. Observera att underordnade sidor för objektet som är markerat i utforskarrutan visas i den högra rutan där de kan hanteras.
 
@@ -97,7 +100,7 @@ Databasen ska visas så här:
 
 ![classic-ui-database-path](assets/classic-ui-repository-path.png)
 
-* Klicka på **[!UICONTROL Save All]**
+* Klicka **[!UICONTROL Save All]**
 
 Om det blir problem med att spara konfigurationen loggar du in igen och konfigurerar igen.
 

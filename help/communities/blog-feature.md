@@ -7,9 +7,12 @@ topic-tags: authoring
 content-type: reference
 docset: aem65
 exl-id: 4650ac36-5506-4efc-be35-fac9e5a58f3d
-source-git-commit: b8887b4a6f757352e9dbfdf074c10e9ccd6dbd4f
+solution: Experience Manager
+feature: Communities
+role: Admin
+source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
-source-wordcount: '1670'
+source-wordcount: '1696'
 ht-degree: 0%
 
 ---
@@ -189,7 +192,7 @@ Under **Inställningar** anger du bloggens grundläggande funktioner:
 
 * **Mönster för användargränssnittets omnämnande**
 
-  Ange den tillåtna mönstersträngen för att tagga (@mention) den registrerade användaren i ett inlägg. Till exempel, `~{{familyName}}{{givenName}}`.
+  Ange den tillåtna mönstersträngen för att tagga (@mention) den registrerade användaren i ett inlägg. Till exempel: `~{{familyName}}{{givenName}}`.
 
 #### Fliken Användarmoderering {#user-moderation-tab}
 
@@ -267,7 +270,7 @@ Under **Inställningar för journalmarginallist** anger du datumformatet för ar
 
   *(Valfritt)* Platsen för bloggresursen som bloggartiklar ska listas från. Om det lämnas tomt används komponenten för resourceType `social/journal/components/hbs/journal` som visas på samma sida.
 
-   * Till exempel, `/content/sites/engage/en/blog/jcr:content/content/primary/blog`
+   * Exempel: `/content/sites/engage/en/blog/jcr:content/content/primary/blog`
 
 * **Förslagsgräns**
 

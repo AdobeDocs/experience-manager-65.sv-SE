@@ -8,16 +8,18 @@ content-type: reference
 docset: aem65
 role: Admin
 exl-id: 7d54928b-6512-4da9-a209-eb4488bf2b64
-source-git-commit: 0a4aca939c564720f63f055e9522e56942eaa128
+solution: Experience Manager
+feature: Communities
+source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
-source-wordcount: '2687'
+source-wordcount: '2644'
 ht-degree: 0%
 
 ---
 
 # Analyskonfiguration för communityfunktioner {#analytics-configuration-for-communities-features}
 
-## Översikt {#overview}
+## Ökning {#overview}
 
 Adobe Analytics och Adobe Experience Manager (AEM) är båda lösningar för Adobe Experience Cloud.
 
@@ -634,7 +636,7 @@ Forum-ämnet är för närvarande det enda exemplet på den här anpassningen:
 * Navigera till [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md). Till exempel: [https://localhost:4503/crx/de](https://localhost:4503/crx/de).
 
 * Under `jcr:content` nod i språkroten (till exempel `/content/sites/engage/en/jcr:content`), navigera till komponenten som konfigurerats för Analytics-rapportering.
-Till exempel, **`analytics/reportConfigs/social_forum_components_hbs_topic`**
+Exempel: **`analytics/reportConfigs/social_forum_components_hbs_topic`**
 
 * Observera de skapade tidsperioderna:
 

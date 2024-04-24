@@ -7,9 +7,12 @@ topic-tags: authoring
 content-type: reference
 docset: aem65
 exl-id: 30baebd9-13c5-4fde-a494-85601abc32a5
-source-git-commit: c667a1658e43bb5b61daede5f94256dae582a4fc
+solution: Experience Manager
+feature: Communities
+role: Admin
+source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
-source-wordcount: '979'
+source-wordcount: '983'
 ht-degree: 0%
 
 ---
@@ -163,13 +166,13 @@ Under **Resurstyper** anger du anpassad resourceType för nya instanser av `Comm
 
 * **Resurstyp för kommentar**
 
-  Navigera till resourceType för en utökad `comment` -komponent (en kommentar) i /apps. Till exempel, `/apps/social/commons/components/hbs/comments/comment`
+  Navigera till resourceType för en utökad `comment` -komponent (en kommentar) i /apps. Exempel: `/apps/social/commons/components/hbs/comments/comment`
 
   Den här resursen identifierar den resourceType för den UGC som skapas när en besökare publicerar en kommentar.
 
 * **Resurstyp för röstning**
 
-  Navigera till resourceType för en utökad `voting` i /apps. Till exempel, `/apps/social/components/hbs/voting`
+  Navigera till resourceType för en utökad `voting` i /apps. Exempel: `/apps/social/components/hbs/voting`
 
   Den här resursen identifierar resurstypen för användargenererat innehåll som skapas när en besökare publicerar en röst.
 

@@ -6,10 +6,13 @@ products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
 exl-id: 7ac0056c-a742-49f4-8312-2cf90ab9f23a
-source-git-commit: 62d4a8b3af5031ccc539d78f7d06a8cd1fec7af1
+solution: Experience Manager
+feature: Communities
+role: Developer
+source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
 source-wordcount: '575'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -173,9 +176,9 @@ I det här exemplet ställs rotsidan in statiskt för att dirigera om till den e
 * På fliken AVANCERAT
 
    * Bläddra till posten Omdirigering: **[!UICONTROL Websites]** > **[!UICONTROL SCF Sandbox Site]** > **[!UICONTROL SCF Sandbox]**
-   * Klicka på **[!UICONTROL OK]**
+   * Klicka **[!UICONTROL OK]**
 
-* Klicka på **[!UICONTROL OK]**
+* Klicka **[!UICONTROL OK]**
 
 När webbplatsen har publicerats dirigeras surfning till den engelska sidan om när du bläddrar till rotsidan för en publiceringsinstans.
 

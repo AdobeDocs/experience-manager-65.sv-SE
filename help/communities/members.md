@@ -7,9 +7,11 @@ topic-tags: administering
 content-type: reference
 role: Admin
 exl-id: b64e24d2-8407-484c-8216-8d328ef5fa4f
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+solution: Experience Manager
+feature: Communities
+source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
-source-wordcount: '910'
+source-wordcount: '913'
 ht-degree: 0%
 
 ---
@@ -17,7 +19,7 @@ ht-degree: 0%
 
 # Hanteringskonsoler för medlemmar och grupper {#members-groups-management-consoles}
 
-## Översikt {#overview}
+## Ökning {#overview}
 
 AEM Communities funktioner kräver ofta att besökarna är registrerade och inloggade innan de deltar i en community i publiceringsmiljön. Användarregistreringen behöver bara finnas i publiceringsmiljön och kallas ofta för *medlemmar* för att skilja dem från *användare* som registrerats i författarmiljön.
 
@@ -48,7 +50,7 @@ I författarmiljön kan du nå Medlemskonsolen för att hantera medlemmar som ä
 
 ![Medlemskonsolen](assets/member-console1.png)
 
-### Sökning {#search-features}
+### Sök {#search-features}
 
 Markera sidpanelsikonen till vänster på sidan `Members` för att växla mellan att öppna panelen på söksidan.
 

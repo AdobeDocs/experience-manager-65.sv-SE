@@ -1,17 +1,19 @@
 ---
-title: AEM och tredjeparts Commerce Integration med hjälp av Commerce integration framework
+title: AEM och tredjepartsintegrering med Commerce via Commerce integration framework
 description: Företag kan behöva ytterligare e-handelslösningar från tredje part för att göra sin butik tillgänglig. Commerce integrationa frameworken (CIF) kan användas i sådana integreringsscenarier för att ansluta en e-handelslösning från tredje part till Adobe Experience Manager med hjälp av I/O Runtime.
 thumbnail: cif-third-party-architecture.jpg
 exl-id: e99899a4-df86-4108-991a-8b30d303a279
 solution: Experience Manager,Commerce
-source-git-commit: 1751bfb32386685e3a159939113b9667b5e17f0e
+feature: Commerce Integration Framework
+role: Admin, Developer
+source-git-commit: 10268f617b8a1bb22f1f131cfd88236e7d5beb47
 workflow-type: tm+mt
 source-wordcount: '489'
 ht-degree: 0%
 
 ---
 
-# AEM och tredjeparts handelsintegrering med hjälp av Commerce integration framework {#aem-third-party}
+# AEM och tredjeparts-Commerce-integrering med Commerce integration framework {#aem-third-party}
 
 Integrationen av lösningar från andra företag än Adobe Commerce är ett vanligt scenario för CIF. Tredjepartslösningar med olika API:er och scheman kopplas samman via ett integreringslager.
 
@@ -57,7 +59,7 @@ Det här integreringslagret behövs inte om ett lager från tredje part är till
 
 Kopplingar är en bra början för projekt. De levereras med en e-handelslösningsspecifik anslutning och standard-API-mappning. Dessa kontakter byggs av tredje part och underhålls inte av Adobe. Kontakta respektive partner för mer information.
 
-* [SAP Commerce](https://github.com/diconium/commerce-cif-graphql-integration-hybris), skapat av Diconium
+* [SAP COMMERCE](https://github.com/diconium/commerce-cif-graphql-integration-hybris), skapat av Diconium
 * [Commercetools](https://github.com/diconium/commerce-cif-graphql-integration-commercetool), skapat av Diconium
 
 >[!TIP]

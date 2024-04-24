@@ -6,16 +6,19 @@ products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
 exl-id: 8af5ee58-19d7-47b6-b45d-e88006703a5d
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+solution: Experience Manager
+feature: Communities
+role: Admin
+source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
-source-wordcount: '1188'
+source-wordcount: '1158'
 ht-degree: 0%
 
 ---
 
 # Sök i Grundläggande {#search-essentials}
 
-## Översikt {#overview}
+## Ökning {#overview}
 
 Sökfunktionen är en viktig funktion i Adobe Experience Manager (AEM) Communities. Förutom [AEM](../../help/sites-deploying/queries-and-indexing.md) AEM Communities har [API för UGC-sökning](#ugc-search-api) för sökning av användargenererat innehåll (UGC). UGC har unika egenskaper eftersom de anges och lagras separat från andra AEM och användardata.
 

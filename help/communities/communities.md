@@ -6,20 +6,23 @@ products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
 exl-id: 3ed3768a-1b3c-45a1-a34c-61694cd407d9
-source-git-commit: 260f71acd330167572d817fdf145a018b09cbc65
+solution: Experience Manager
+feature: Communities
+role: Developer
+source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
-source-wordcount: '391'
-ht-degree: 1%
+source-wordcount: '390'
+ht-degree: 0%
 
 ---
 
 # Utveckla webbgrupper  {#developing-communities}
 
-## Översikt {#overview}
+## Ökning {#overview}
 
 Adobe Experience Manager (AEM) Communities förenklar framtagning och anpassning av communityfunktioner som forum, användargrupper, bloggar, frågor och svar, kalendrar, kommentarer, granskningar, omröstningar, betygsättning och uppdrag. Dessa funktioner gör att användargenererat innehåll (UGC) anges i publiceringsmiljön.
 
-Grunden för en [communitywebbplats](overview.md#communitiessites) är [ramverk för sociala komponenter](scf.md) (SCF). Skapandet av en community-webbplats börjar med att du väljer en [mall för communitywebbplats](sites-console.md) som består av [communityfunktioner](functions.md).
+Grunden för en [communitywebbplats](overview.md#communitiessites) är [ramverk för sociala komponenter](scf.md) (SCF). Skapa en community-webbplats börjar med att välja en [mall för communitywebbplats](sites-console.md) som består av [communityfunktioner](functions.md).
 
 En översikt och självstudiekurser för att komma igång finns på:
 
@@ -32,16 +35,16 @@ En översikt och självstudiekurser för att komma igång finns på:
 
 ## Rekommenderade distributioner {#recommended-deployments}
 
-* [Community-innehåll](working-with-srp.md): diskuterar de tillgängliga SRP-alternativen (Social Resource Provider) för en gemensam lagringsplats för användargenererat innehåll
+* [Community-innehåll](working-with-srp.md): diskuterar de tillgängliga SRP-valen (Social Resource Provider) för en gemensam lagringsplats för användargenererat innehåll
 * [Rekommenderade topologier för communities](topologies.md): diskuterar topologier baserat på användningsfall och SRP-val
 
 ## Ramverk för sociala komponenter {#social-component-framework}
 
 * [Ramverk för sociala komponenter](scf.md): översikt över ramverk och API:er.
-* [Hjälpmedel för SCF-handtag](handlebars-helpers.md): standardhjälpprogram och hur du skriver anpassade hjälpprogram.
+* [Hjälpmedel för SCF-handtag](handlebars-helpers.md): standardhjälpredor och hur du skriver anpassade hjälpprogram.
 * [Anpassning på klientsidan](client-customize.md): anpassa kod som körs i webbläsaren.
 * [Anpassning på serversidan](server-customize.md): anpassa kod som körs på servern.
-* [Lagringsresursleverantör (SRP)](srp.md): Översikt över lagring av communityinnehåll.
+* [Lagringsresursleverantör (SRP)](srp.md): översikt över lagring av communityinnehåll.
 * [Riktlinjer för kodning](code-guide.md): riktlinjer, tips och tricks.
 * [Community Components Guide](components-guide.md): interaktivt utvecklingsverktyg.
 
@@ -52,7 +55,7 @@ AEM Communities komponenter, funktioner och funktioner utgör byggstenarna för 
 * [Grundläggande om komponenter, funktioner och funktioner](essentials.md)
 * [Clientlibs for Communities Components](clientlibs.md)
 * [Community-funktioner](functions.md)
-* [Community-gruppmallar](tools-groups.md)
+* [Mallar för communitygrupper](tools-groups.md)
 * [Mallar för communitywebbplatser](sites.md)
 
 ## Community-medlemmar {#community-members}
@@ -66,7 +69,7 @@ AEM Communities komponenter, funktioner och funktioner utgör byggstenarna för 
 
 * [Grundläggande om communitygrupper](essentials-groups.md)
 * [Funktionen Grupper](functions.md#groups-function)
-* [Community-gruppmallar](tools-groups.md)
+* [Mallar för communitygrupper](tools-groups.md)
 * [Hantera användare och användargrupper](users.md)
 * [Community Groups for Authors](creating-groups.md)
 
@@ -78,7 +81,7 @@ AEM Communities komponenter, funktioner och funktioner utgör byggstenarna för 
 ## Självstudiekurser {#tutorials}
 
 * [Självstudiekurser på klientsidan](tutorials.md#client-side-customization)
-* [Självstudiekurser på serversidan](tutorials.md#server-side-customization)
+* [Självstudiekurser på servern](tutorials.md#server-side-customization)
 * [Instruktioner](tutorials.md#how-to-instructions)
 
 ## Felsökning {#troubleshooting}

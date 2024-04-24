@@ -6,7 +6,10 @@ products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
 exl-id: 1f60a0d4-a272-45e8-9742-4b706be8502e
-source-git-commit: f03d0ab9d0f491441378e16e1590d33651f064b5
+solution: Experience Manager
+feature: Communities
+role: Developer
+source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
 source-wordcount: '516'
 ht-degree: 1%
@@ -39,8 +42,8 @@ Koden i den här självstudiekursen beror på att huvudmappens namn är detsamma
 >* Nodnamn kan innehålla mellanslag, men när de används i en URI måste utrymmet kodas antingen som %20 eller +.
 >* Nodnamn kan innehålla bindestreck och understreck, men de måste kodas när de refereras som ett paketnamn i en Java™-fil. Både bindestreck och understreck escape-konverteras med understreck följt av deras Unicode-värde:
 >
-* bindestreck blir &#39;_002d&#39;
-* understreck blir &#39;_005f&#39;
+>   * bindestreck blir &#39;_002d&#39;
+>   * understreck blir &#39;_005f&#39;
 
 ## Konfigurera programkatalogen (/apps) {#setup-the-application-directory-apps}
 

@@ -1,19 +1,22 @@
 ---
-title: Community Components Guide
-description: Ett interaktivt utvecklingsverktyg för att komma igång med ramverket för sociala komponenter (SCF)
+title: Guide för communitykomponenter
+description: Ett interaktivt utvecklingsverktyg för att komma igång med ramverket för sociala komponenter
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
 exl-id: 12c0eae5-fd76-4480-a012-25d3312f3570
-source-git-commit: 681d1e6bd885b801b930e580d95645f160f17cea
+solution: Experience Manager
+feature: Communities
+role: Admin
+source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
-source-wordcount: '1178'
+source-wordcount: '1150'
 ht-degree: 0%
 
 ---
 
-# Community Components Guide  {#community-components-guide}
+# Guide för communitykomponenter  {#community-components-guide}
 
 Community Components Guide är ett interaktivt utvecklingsverktyg för [ramverk för sociala komponenter (SCF)](scf.md). Här finns en lista med tillgängliga komponenter för Adobe Experience Manager (AEM) Communities eller de mer komplexa funktioner som byggts av flera komponenter.
 
@@ -34,7 +37,7 @@ Interaktionen med komponenterna i Communities varierar beroende på:
 * Servern (författare eller publicerad).
 * Anger om besökaren är inloggad eller inte.
 * Om du är inloggad, de privilegier som tilldelats medlemmen.
-* Om standardmetoden för SRP [JSRP](jsrp.md), används.
+* Om standardmetoden för SRP, [JSRP](jsrp.md), används.
 
 Vid författare anger du redigeringsläget genom att infoga `editor.html` eller `cf#` som det första sökvägssegmentet efter servernamnet:
 
@@ -76,13 +79,13 @@ Huvudtexten i guiden visar:
 
 1. Titel: Namnet på den markerade komponenten
 1. [Klientbibliotek](#client-side-libraries): En lista över en eller flera obligatoriska kategorier
-1. [Inkluderande](scf.md#add-or-include-a-communities-component): Om komponenten kan inkluderas dynamiskt kan läget aktiveras i redigeringsläget för författare:
+1. [Inkluderande](scf.md#add-or-include-a-communities-component): Om komponenten kan inkluderas dynamiskt kan läget växlas i redigeringsläget för författare:
 
-   * Om den text som visas läggs till är: &quot;Den här komponenten inkluderas via dess parnod.&quot;
-   * Om det ingår är texten som visas: &quot;Den här komponenten inkluderas dynamiskt.&quot;
+   * Om den här texten läggs till visas den:&quot;Den här komponenten inkluderas via dess parnod.&quot;
+   * Om den här texten inkluderas visas den:&quot;Den här komponenten inkluderas dynamiskt.&quot;
    * Om den inte är inkluderbar visas ingen text
 
-1. Exempelkomponent eller funktion: en aktiv instans av komponenten eller funktionen. Om en komponent ändras kan den ändras med ändringar i mallarna, CSS och data som finns i flikavsnittet.
+1. Exempelkomponent eller -funktion: en aktiv instans av komponenten eller funktionen. Om en komponent ändras kan den ändras med ändringar i mallarna, CSS och data som finns i flikavsnittet.
 
 >[!NOTE]
 >
@@ -104,11 +107,11 @@ Under **Mallar** tab:
 
   Om alternativet inte är markerat används den befintliga resursen i databasen (en jcr-nod som är underordnad en par-nod).
 
-   * texten som visas är: &quot;Den här komponenten inkluderas via dess parnod.&quot;
+   * texten som visas är:&quot;Den här komponenten inkluderas via dess parnod.&quot;
 
   Om det här alternativet är markerat används sling för att dynamiskt inkludera en komponent i den underordnade nodens resourceType (en resurs som inte finns).
 
-   * texten som visas är: &quot;Den här komponenten inkluderas dynamiskt.&quot;
+   * texten som visas är:&quot;Den här komponenten inkluderas dynamiskt.&quot;
 
   Standard är avmarkerat.
 
@@ -120,9 +123,9 @@ När du använder guiden för en publiceringsinstans är det möjligt att upplev
 >
 >Tänk på att om SRP lämnas som standard till [JSRP](jsrp.md), kommer den UGC som anges i publiceringsinstansen endast att vara synlig vid publiceringen och kommer att *not* vara synlig från [moderering](moderate-ugc.md) konsol på författarinstansen.
 
-## Klientbibliotek {#client-side-libraries}
+## Bibliotek på klientsidan {#client-side-libraries}
 
-Klientsidans bibliotek (klientlibs) för varje komponent är de som *obligatoriskt* som ska refereras när komponenten placeras på en sida. Med klienten kan du hantera och optimera nedladdningen av JavaScript och CSS som används för att återge komponenten i webbläsaren.
+Klientsidans bibliotek (klientlibs) för varje komponent är de som *obligatoriskt* som ska refereras när komponenten placeras på en sida. Klientlibs är ett sätt att hantera och optimera nedladdningen av JavaScript och CSS som används för att återge komponenten i webbläsaren.
 
 Mer information finns på [Clientlibs for Communities Components](clientlibs.md).
 
@@ -142,7 +145,7 @@ När det här alternativet är aktiverat är varje SCF-komponent tillgänglig f�
 >
 >**Det här verktyget är skrivskyddat**. Ingen av de ändringar som gjorts i mallar, CSS eller data sparas i databasen.
 
-Om du snabbt vill experimentera med anpassningar kan du `scg:showIde`-egenskapen måste läggas till i komponentsidans innehåll-JCR-nod och ställas in på true.
+Om du snabbt vill experimentera med anpassningar `scg:showIde`-egenskapen måste läggas till i komponentsidans innehåll-JCR-nod och ställas in på true.
 
 Använda kommentarkomponenten som exempel, på antingen författaren eller publiceringsinstansen, inloggad med administratörsbehörighet:
 
@@ -152,7 +155,7 @@ Använda kommentarkomponenten som exempel, på antingen författaren eller publi
 
 1. Markera komponentens `jcr:content` nod
 
-   Till exempel, `/content/community-components/en/comments/jcr:content`
+   Exempel: `/content/community-components/en/comments/jcr:content`
 
 1. Lägg till en egenskap
 

@@ -1,16 +1,18 @@
 ---
-title: Redigering av handelsupplevelser
+title: Skapa Commerce Experience
 description: CIF utökar Adobe Experience Manager framtagning av e-handelsspecifika funktioner.
 exl-id: 2db51bd7-8fc7-4ae8-8d6f-e5035fbe954d
 solution: Experience Manager,Commerce
-source-git-commit: 1751bfb32386685e3a159939113b9667b5e17f0e
+feature: Commerce Integration Framework
+role: Admin, Developer
+source-git-commit: 10268f617b8a1bb22f1f131cfd88236e7d5beb47
 workflow-type: tm+mt
 source-wordcount: '713'
 ht-degree: 0%
 
 ---
 
-# Redigering av handelsupplevelser {#authoring-commerce-experiences}
+# Skapa Commerce Experience {#authoring-commerce-experiences}
 
 ## Ökning {#overview}
 
@@ -78,7 +80,7 @@ Då skapas en platshållarlänk som ersätts med en riktig länk när sidan åte
 
 ### Åtkomst till associerat produktinnehåll {#associated-content}
 
-Om 1:n-produkterna identifieras på en sida visas fliken &quot;Associerat Commerce Content&quot; automatiskt på sidopanelen. På den här fliken kan författare snabbt komma åt AEM som taggats med produkten (se [förbättra produktdata med tillhörande AEM](./enrich-product-associated-content.md) för mer information). På den här fliken finns listrutor som du kan använda för att filtrera efter innehållstyp och specifika produkter om det finns flera produkter på sidan. Att använda innehållet fungerar på samma sätt som att använda innehåll från fliken Resurser.
+Om 1:n-produkterna känns igen på en sida visas automatiskt fliken &quot;Associerat Commerce-innehåll&quot; på sidopanelen. På den här fliken kan författare snabbt komma åt AEM som taggats med produkten (se [förbättra produktdata med tillhörande AEM](./enrich-product-associated-content.md) för mer information). På den här fliken finns listrutor som du kan använda för att filtrera efter innehållstyp och specifika produkter om det finns flera produkter på sidan. Att använda innehållet fungerar på samma sätt som att använda innehåll från fliken Resurser.
 
 ![Sidopanel för produktdata](/help/commerce/cif/assets/authoring/associated-commerce-content-tab.png)
 

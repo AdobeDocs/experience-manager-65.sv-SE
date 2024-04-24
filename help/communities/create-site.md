@@ -7,9 +7,12 @@ topic-tags: introduction
 content-type: reference
 docset: aem65
 exl-id: d4c1895f-421c-4146-b94a-8d11065ef9e3
-source-git-commit: f03d0ab9d0f491441378e16e1590d33651f064b5
+solution: Experience Manager
+feature: Communities
+role: Admin
+source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
-source-wordcount: '1557'
+source-wordcount: '1535'
 ht-degree: 0%
 
 ---
@@ -96,7 +99,7 @@ Markera alla kryssrutor för [Användarhantering](/help/communities/sites-consol
 
 De taggar som används i communityinnehåll kontrolleras genom att AEM namnutrymmen som tidigare definierats i [Taggningskonsolen](/help/sites-administering/tags.md#tagging-console) (till exempel [Namnutrymme för självstudiekurs](/help/communities/setup.md#create-tutorial-tags)).
 
-Det är enkelt att hitta namnutrymmen med typsnittssökning. Till exempel,
+Det är enkelt att hitta namnutrymmen med typsnittssökning. Exempel:
 
 * Typ `tut`
 * Välj `Tutorial`
@@ -109,7 +112,7 @@ Det är enkelt att hitta namnutrymmen med typsnittssökning. Till exempel,
 
 Om du vill att en community-medlem (eller grupp av medlemmar) ska kunna uppleva webbplatsen som community-hanterare använder du typsnittssökningen och väljer medlemmens eller gruppens namn bland alternativen i listrutan.
 
-Till exempel,
+Exempel:
 
 * Typ `q`
 * Välj Quinn Harper

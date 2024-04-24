@@ -6,9 +6,12 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-adobe-phonegap-enterprise
 exl-id: daf7bf39-a105-46eb-ab7b-1c59484949e2
-source-git-commit: 1ef5593495b4bf22d2635492a360168bccc1725d
+solution: Experience Manager
+feature: Mobile
+role: Admin
+source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
-source-wordcount: '969'
+source-wordcount: '951'
 ht-degree: 0%
 
 ---
@@ -23,7 +26,7 @@ ht-degree: 0%
 
 I allmänhet verkar SPA mer avancerade än vanliga sidbaserade webbplatser, eftersom de vanligtvis läser in en hel HTML-sida **endast en gång** (inklusive CSS, JS och teckensnittsinnehåll som stöds). Läs sedan bara in exakt det som är nödvändigt varje gång ett ändrat läge inträffar i programmet. Vad som är nödvändigt för den här tillståndsändringen kan variera beroende på vilken uppsättning tekniker som väljs, men innehåller vanligtvis ett enda HTML-fragment som ersätter den befintliga vyn och körningen av ett JS-kodblock som gör att den nya vyn kan sammanställas och att mallåtergivning på klientsidan kan utföras om det behövs. Den här lägesändringens hastighet kan förbättras ytterligare genom stöd för mekanismer för mallcachelagring, eller till och med offlineåtkomst till mallinnehåll om Adobe PhoneGap används.
 
-AEM 6.1 stöder uppbyggnad och hantering av SPA via AEM. I den här artikeln beskrivs begreppen bakom SPA och hur de används [AngularJS](https://angularjs.org/) för att ta med ert varumärke till App Store och Google Play.
+AEM 6.1 stöder uppbyggnad och hantering av SPA via AEM appar. I den här artikeln beskrivs begreppen bakom SPA och hur de används [AngularJS](https://angularjs.org/) för att ta med ert varumärke till App Store och Google Play.
 
 ## SPA i AEM appar {#spa-in-aem-apps}
 
@@ -33,9 +36,9 @@ Single-Page Application Framework i AEM Apps möjliggör höga prestanda för en
 
 AEM Apps hanterar mycket av AngularJS-konfigurationen åt dig, inklusive att sätta samman appens modul på den översta nivån. Som standard heter den här modulen&quot;AEMAngularApp&quot; och skriptet som ansvarar för dess generering finns på /libs/mobileapps/components/angular/ng-page/angular-app-module.js.jsp.
 
-En del av initieringen av din app är att ange vilka AngularJS-moduler som appen är beroende av. Listan med moduler som används av din app anges av ett skript som finns på /libs/mobileapps/components/angular/ng-page/angular-module-list.js.jsp, och kan överlappas av dina egna programs sidkomponent för att dra in ytterligare AngularJS-moduler som din app kräver. Jämför till exempel ovanstående skript med implementeringen av Geometrixx (finns på /apps/geometrixx-outdoors-app/components/angular/ng-geometrixx-page/angular-module-list.js.jsp).
+En del av initieringen av din app är att ange vilka AngularJS-moduler som appen är beroende av. Listan med moduler som används av din app anges av ett skript som finns på /libs/mobileapps/components/angular/ng-page/angular-module-list.js.jsp, och kan överlappas av dina egna programs sidkomponent för att dra in ytterligare AngularJS-moduler som din app kräver. Du kan till exempel jämföra skriptet ovan med implementeringen av Geometrixx (finns på /apps/geometrixx-outdoors-app/components/angular/ng-geometrixx-page/angular-module-list.js.jsp).
 
-För att ge stöd för navigering mellan de olika lägena i din app, itererar skriptet angular-app-module igenom alla underordnade sidor på din programsida på den översta nivån för att generera en uppsättning rutter och konfigurerar varje sökväg på Angularnas $routeProvider-tjänst. Ett exempel på hur detta ser ut i praktiken finns i skriptet angular-app-module som genereras av Geometrixx Outdoors app-exemplet: (länk kräver en lokal instans) [http://localhost:4502/content/phonegap/conference-app/en/home.angular-app-module.js](http://localhost:4502/content/phonegap/conference-app/en/home.angular-app-module.js)
+För att ge stöd för navigering mellan de olika lägena i din app, itererar skriptet angular-app-module igenom alla underordnade sidor på din programsida på den översta nivån för att generera en uppsättning rutter och konfigurerar varje sökväg på Angularnas $routeProvider-tjänst. Ett exempel på hur detta ser ut i praktiken finns i skriptet angular-app-module som genereras av Geometrixx Outdoors app-exemplet: (link kräver en lokal instans) [http://localhost:4502/content/phonegap/conference-app/en/home.angular-app-module.js](http://localhost:4502/content/phonegap/conference-app/en/home.angular-app-module.js)
 
 När du loggar in på den genererade AEMAngularApp hittar du en serie vägar som anges enligt följande:
 
@@ -80,7 +83,7 @@ Om du vill ha ett mer komplext exempel på en kontrollenhet öppnar du skriptet 
 
 I exemplet ovan är parametern från `$routeParams` tas och sedan masseras till den katalogstruktur där JSON-data lagras. Genom att hantera SKU:n `id` på så sätt kan ni leverera en enda produktmall som kan återge produktdata för potentiellt tusentals olika produkter. Det här är en mycket mer skalbar modell som kräver en individuell väg för varje objekt i en (potentiellt) enorm produktdatabas.
 
-Det finns också två komponenter här: ng-product extenses with the data it extract from the above `$http` ring. Det finns också en ng-image på den här sidan som i sin tur ökar omfattningen med det värde som hämtas från svaret. På grund av Angularnas `$http` service, väntar varje komponent tålmodigt tills begäran är klar och det löfte den gav är uppfyllt.
+Det finns också två komponenter som arbetar här: ng-product ökar omfattningen med de data som extraheras ur ovanstående `$http` ring. Det finns också en ng-image på den här sidan som i sin tur ökar omfattningen med det värde som hämtas från svaret. På grund av Angularnas `$http` service, väntar varje komponent tålmodigt tills begäran är klar och det löfte den gav är uppfyllt.
 
 ## Nästa steg {#the-next-steps}
 

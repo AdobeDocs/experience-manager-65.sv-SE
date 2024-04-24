@@ -6,10 +6,13 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: authoring-on-demand-services-app
 exl-id: 357e75f8-2c98-4377-afef-016d58505b4d
-source-git-commit: 260f71acd330167572d817fdf145a018b09cbc65
+solution: Experience Manager
+feature: Mobile
+role: User
+source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
-source-wordcount: '273'
-ht-degree: 1%
+source-wordcount: '270'
+ht-degree: 0%
 
 ---
 
@@ -31,7 +34,7 @@ ht-degree: 1%
 
 ## AEM Mobile Author {#aem-mobile-author}
 
-An ***AEM Author* (eller *Marknadsförare*)**använder skräddarsydda eller färdiga mallar och komponenter för att lägga till och redigera sidor, dra och släppa komponenter och lägga till media av alla typer från DAM, inklusive bilder, videor och textfragment (innehållsfragment). AEM inbyggda innehållsredigeraren används sedan av *AEM Authors* för att skapa engagerande och relevanta upplevelser i appen, inklusive integrering med resten av Adobe Experience Cloud.
+An ***AEM* (eller *Marknadsförare*)**använder skräddarsydda eller färdiga mallar och komponenter för att lägga till och redigera sidor, dra och släppa komponenter och lägga till media av alla typer från DAM, inklusive bilder, videor och textfragment (innehållsfragment). AEM inbyggda innehållsredigeraren används sedan av *AEM* för att skapa engagerande och relevanta upplevelser i appen, inklusive integrering med resten av Adobe Experience Cloud.
 
 En AEM författare ansvarar för följande när de skapar ett program med AEM Mobile On-demand Services.
 
@@ -42,7 +45,7 @@ En AEM författare ansvarar för följande när de skapar ett program med AEM Mo
 * [Molnkonfiguration](/help/mobile/mobile-on-demand-associating-an-on-demand-app-to-cloud-configuration.md)
 * [Hantera innehåll](/help/mobile/mobile-apps-ondemand-manage-content-ondemand.md)
 
-Mer information om **Innehållstjänster**, se [Content Services - översikt](/help/mobile/develop-content-as-a-service.md) för att komma igång.
+Om du vill veta mer om **Innehållstjänster**, se [Content Services - översikt](/help/mobile/develop-content-as-a-service.md) för att komma igång.
 
 >[!NOTE]
 >

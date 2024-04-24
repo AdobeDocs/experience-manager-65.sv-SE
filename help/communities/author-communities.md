@@ -7,7 +7,10 @@ topic-tags: authoring
 content-type: reference
 docset: aem65
 exl-id: 4a49d14c-e6f0-4791-904e-8f30e47f7cde
-source-git-commit: b8887b4a6f757352e9dbfdf074c10e9ccd6dbd4f
+solution: Experience Manager
+feature: Communities
+role: Admin
+source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
 source-wordcount: '293'
 ht-degree: 1%
@@ -65,7 +68,7 @@ Se även de interaktiva [Community Components Guide](/help/communities/component
 | Relaterade frågor | [Frågor och svar](/help/communities/working-with-qna.md) |
 | Recensioner | [Recensioner](/help/communities/reviews.md) |
 | Sammanfattning av granskningar (visning) | [Recensioner](/help/communities/reviews.md) |
-| Sökning | [Sökning](/help/communities/search.md) |
+| Sök | [Sökning](/help/communities/search.md) |
 | Sökresultat | [Sökning](/help/communities/search.md) |
 | Social Tag Cloud | [Social Tag Cloud](/help/communities/tagcloud.md) |
 | Omröstning | [Omröstning](/help/communities/voting.md) |

@@ -6,9 +6,12 @@ products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: authoring
 content-type: reference
 exl-id: 170414a6-c40b-4ad2-9294-7c2266850c3d
-source-git-commit: 62d4a8b3af5031ccc539d78f7d06a8cd1fec7af1
+solution: Experience Manager
+feature: Communities
+role: Admin
+source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
-source-wordcount: '1205'
+source-wordcount: '1210'
 ht-degree: 0%
 
 ---
@@ -197,13 +200,13 @@ Under **[!UICONTROL Resource Types]** anger du anpassad resourceType för nya in
 
 * **[!UICONTROL Comment Resource Type]**
 
-  Navigera till resourceType för en utökad `comment`-komponent (en kommentar) i /apps. Till exempel, `/apps/social/commons/components/hbs/comments/comment`.
+  Navigera till resourceType för en utökad `comment`-komponent (en kommentar) i /apps. Till exempel: `/apps/social/commons/components/hbs/comments/comment`.
 
   Den här resursen identifierar den resourceType för den UGC som skapas när en besökare publicerar en kommentar.
 
 * **[!UICONTROL Voting Resource Type]**
 
-  Navigera till resourceType för en utökad `voting`i /apps. Till exempel, `/apps/social/components/hbs/voting`.
+  Navigera till resourceType för en utökad `voting`i /apps. Till exempel: `/apps/social/components/hbs/voting`.
 
   Den här resursen identifierar resurstypen för användargenererat innehåll som skapas när en besökare publicerar en röst.
 

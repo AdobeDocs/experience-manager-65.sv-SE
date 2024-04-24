@@ -9,16 +9,18 @@ docset: aem65
 tagskeywords: scoring, badging, badges, gamification
 role: Admin
 exl-id: 4aa857f7-d111-4548-8f03-f6d6c27acf51
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+solution: Experience Manager
+feature: Communities
+source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
-source-wordcount: '2851'
+source-wordcount: '2856'
 ht-degree: 0%
 
 ---
 
 # Communities Scoring and Badges {#communities-scoring-and-badges}
 
-## Översikt {#overview}
+## Ökning {#overview}
 
 AEM Communities poäng och badges ger möjlighet att identifiera och belöna communitymedlemmar.
 

@@ -8,16 +8,18 @@ content-type: reference
 docset: aem65
 role: Admin
 exl-id: 22276580-e6bc-41c5-9ac3-e8f291f676b7
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+solution: Experience Manager
+feature: Communities
+source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
-source-wordcount: '1510'
+source-wordcount: '1513'
 ht-degree: 0%
 
 ---
 
 # Moderating Community Content {#moderating-community-content}
 
-## Översikt {#overview}
+## Ökning {#overview}
 
 Community-innehåll, som också kallas användargenererat innehåll (UGC), skapas när en medlem (inloggad besökare) publicerar innehåll från en publicerad communitywebbplats genom interaktion med någon av följande communitykomponenter:
 
