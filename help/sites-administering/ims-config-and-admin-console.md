@@ -9,9 +9,9 @@ exl-id: 95eae97c-01c2-4f5c-8068-f504eab7c49e
 feature: Security
 solution: Experience Manager, Experience Manager Sites
 role: Admin
-source-git-commit: 48d12388d4707e61117116ca7eb533cea8c7ef34
+source-git-commit: 55bf7104dbd9b9fadf6cb37efa28084fe43393c3
 workflow-type: tm+mt
-source-wordcount: '1604'
+source-wordcount: '1603'
 ht-degree: 6%
 
 ---
@@ -127,7 +127,7 @@ Mer information om de nya gruppfunktionerna finns här:
 >
 >Användarsynkroniseringsverktyget måste registreras som ett Adobe I/O-klient-UMAPI enligt den procedur som beskrivs [här](https://adobe-apiplatform.github.io/umapi-documentation/en/UM_Authentication.html).
 >
->Adobe I/O Console Documentation finns [här](https://developer.adobe.com/developer-console/docs/guides/).
+>Adobe Developer Console Documentation finns [här](https://developer.adobe.com/developer-console/docs/guides/).
 >
 >
 >The [!DNL User Management] API:t som används av verktyget för användarsynkronisering beskrivs i det här [plats](https://adobe-apiplatform.github.io/umapi-documentation/en/).

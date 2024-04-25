@@ -5,9 +5,9 @@ contentOwner: anujkapo
 docset: aem65
 exl-id: 1fee474e-7da5-4ab2-881a-34b8e055aa29
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: 55bf7104dbd9b9fadf6cb37efa28084fe43393c3
 workflow-type: tm+mt
-source-wordcount: '4520'
+source-wordcount: '4519'
 ht-degree: 0%
 
 ---
@@ -503,7 +503,7 @@ Certifikatet som skapas i det här avsnittet kommer att användas för att skapa
 
 Se till att du har möjlighet att skapa en integrering inom din Adobe-domän om du inte kontaktar systemadministratören för att göra det.
 
-1. Navigera till [Adobe I/O Console](https://developer.adobe.com/console/).
+1. Navigera till [Adobe Developer Console](https://developer.adobe.com/console/).
 
 1. Klicka på Skapa integrering.
 
