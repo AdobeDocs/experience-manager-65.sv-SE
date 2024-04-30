@@ -6,9 +6,9 @@ exl-id: a52311b9-ed7a-432e-8f35-d045c0d8ea4c
 solution: Experience Manager
 feature: Release Information
 role: User,Admin,Architect,Developer
-source-git-commit: 10268f617b8a1bb22f1f131cfd88236e7d5beb47
+source-git-commit: 685d8016400570170dc02dc2be77651aea6e028c
 workflow-type: tm+mt
-source-wordcount: '3711'
+source-wordcount: '3759'
 ht-degree: 0%
 
 ---
@@ -43,8 +43,7 @@ ht-degree: 0%
 
 Några av de viktigaste funktionerna och förbättringarna i den här versionen är följande:
 
-* Dynamic Media stöder nu förlustfritt HEIC-bildformat för Apple iOS/iPadOS. Se [fmt](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-is-http-fmt.html?lang=en) i Dynamic Media Image Serving and Rendering API.
-
+* Dynamic Media stöder nu förlustfritt HEIC-bildformat för Apple iOS/iPadOS. Se [fmt](https://experienceleague.adobe.com/en/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-is-http-fmt) i Dynamic Media Image Serving and Rendering API.
 * Multisite Manager (MSM) har nu stöd för Experience Fragment-strukturer, inklusive mappar och undermappar, för effektiv gruppdistribution av Experience Fragments till Live Copies.
 
 ### [!DNL Forms]
@@ -145,6 +144,28 @@ Några av de viktigaste funktionerna och förbättringarna i den här versionen 
 
 #### [!DNL Dynamic Media]{#assets-dm-6520}
 
+* Från och med den 1 maj 2024 upphör Adobe Dynamic Media med stödet för följande:
+
+   * SSL (Secure Socket Layer) 2.0
+   * SSL 3.0
+   * TLS (Transport Layer Security) 1.0 och 1.1
+   * Följande svaga lärare i TLS 1.2:
+      * TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384
+      * TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA
+      * TLS_RSA_WITH_AES_256_GCM_SHA384
+      * TLS_RSA_WITH_AES_256_CBC_SHA256
+      * TLS_RSA_WITH_AES_256_CBC_SHA
+      * TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256
+      * TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA
+      * TLS_RSA_WITH_AES_128_GCM_SHA256
+      * TLS_RSA_WITH_AES_128_CBC_SHA256
+      * TLS_RSA_WITH_AES_128_CBC_SHA
+      * TLS_RSA_WITH_CAMELLIA_256_CBC_SHA
+      * TLS_RSA_WITH_CAMELLIA_128_CBC_SHA
+      * TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA
+      * TLS_RSA_WITH_SDES_EDE_CBC_SHA
+
+  Se även [Dynamic Media-begränsningar](/help/assets/limitations.md).
 * När en resurs överförs till AEM `Update_asset` arbetsflödet aktiveras. Arbetsflödet avslutas dock aldrig. Arbetsflödet slutförs endast fram till produktöverföringssteget. Nästa steg är att ladda upp en Scene7-batch, men den processen kommer inte in i AEM. (ASSETS-30443)
 * Behöver ett bättre sätt att hantera icke-Dynamic Media-filmer på ett smidigt sätt i Dynamic Media-komponenten. Det här problemet gav ett undantagsfel som instansierade `dynamicmedia_sly.js`. (ASSETS-31301)
 * Förhandsgranskning fungerar för alla resurser, anpassningsbara videouppsättningar och videoklipp. 403-fel genereras dock för `.m3u8` filer (som för övrigt fortfarande fungerar som offentliga länkar). (ASSETS-31882)
@@ -163,7 +184,7 @@ Några av de viktigaste funktionerna och förbättringarna i den här versionen 
 * När en användare uppdaterar ett befintligt alternativ i en alternativknappsgrupp publiceras felaktiga översättningsvärden. (FORMS-12575)
 * När en användare lägger till tecken i ett adaptivt formulär på en Android™-enhet kan användaren skriva fler än det definierade maximala antalet tecken i textfältet vid fokus på Android™-enheter. Det fungerar emellertid när en användare väljer indatatypen HTML5. (FORMS-12748)
 * På grund av matchande etiketter i Arial®, som är märkta med och Arial®, kan skärmläsarna inte skilja mellan dessa två. För att lösa problemet ersätts etiketten &quot;aria-marked-by&quot; med &quot;aria-describedby&quot; för formulärfälten. (FORMS-12436)
-* När en författare använder komponenten &quot;Adaptive Forms - Embed (v2)&quot; för att bädda in ett adaptivt formulär på sin webbplatssida och det inbäddade formuläret innehåller en CAPTCHA-komponent (CAPTCHA-tjänst -> reCAPTCHA, Inställningar -> reCAPTCHA-v2) återges inte webbplatssidan när användaren försöker visa webbsidan med &quot;View as Published&quot; på författaren -instans. Följande fel visas som (FORMS-11859):
+* En författare använder komponenten &quot;Adaptive Forms - Embed (v2)&quot; för att bädda in ett adaptivt formulär på sin sajtsida. När det inbäddade formuläret innehåller en CAPTCHA-komponent (CAPTCHA-tjänst > reCAPTCHA, Inställningar > reCAPTCHA-v2) återges inte webbplatssidan. Detta inträffar när användaren försöker visa webbplatssidan med&quot;Visa som publicerad&quot; på författarinstansen. Följande fel visas som (FORMS-11859):
   `Failed to construct 'URL': Invalid base URL at Object.renderRecaptcha`
 
 * När en användare försöker välja datumet med datumväljarkomponenten uppdateras inte värdet och NULL visas. (FORMS-12742, FORMS-12736)
@@ -202,11 +223,11 @@ Några av de viktigaste funktionerna och förbättringarna i den här versionen 
 
 * När ett anpassat formulär publiceras på AEM Forms 6.5.18.0 publiceras alla beroenden, inklusive profiler, på nytt, även om inga ändringar har gjorts. (FORMS-10454)
 
-* När en användare väljer &quot;Microsoft SharePoint&quot; när konfigurationshanteraren körs på AEM Forms 6.5.19.1 med JBoss® Turnkey-konfiguration misslyckas installationen av LiveCyclet JBoss® EAR och följande fel visas: (FORMS-12463)
+* När en användare väljer&quot;Microsoft® SharePoint&quot; när han eller hon kör konfigurationshanteraren på AEM Forms 6.5.19.1 med JBoss® Turnkey-konfiguration misslyckas installationen av LiveCyclet JBoss® EAR och följande fel visas: (FORMS-12463)
 
   ` Caused by: org.jboss.as.server.deployment.DeploymentUnitProcessingException: WFLYEE0031: Unable to process modules in application.xml for EAR ["/C:/AEM/jboss/bin/content/ adobe-livecycle-jboss.ear "], module file adobe-connectorformssharepoint-config-ejb.jar not found.`
 
-* När en användare skapar ett dokumentfragment med hjälp av formulärdatamodellen i AEM Forms Service Pack 6.5.19.0 visas variabelnamnen som odefinierade på sidopanelen, men variabelnamnen visas när de släpps på formulärpanelen eller när användaren klickar på dem. (FORMS-13238)
+* När en användare skapar ett dokumentfragment med hjälp av formulärdatamodellen i AEM Forms Service Pack 6.5.19.0 visas variabelnamnen som odefinierade på sidopanelen. Variabelnamnen visas emellertid när de tas bort från formulärpanelen eller när någon klickar på dem. (FORMS-13238)
 
 
 #### [!DNL Forms Designer] {#forms-designer-6520}
@@ -332,7 +353,7 @@ Anvisningar om hur du installerar Service Pack på Experience Manager Forms finn
 
 >[!NOTE]
 >
->Funktionen Adaptive Forms, som finns i [AEM 6.5 QuickStart](https://experienceleague.adobe.com/docs/experience-manager-65/content/implementing/deploying/deploying/deploy.html), är endast avsedd för prospektering och utvärdering. För produktion krävs en giltig licens för AEM Forms, eftersom Adaptive Forms-funktionaliteten kräver rätt licensiering.
+>Funktionen Adaptive Forms, som finns i [AEM 6.5 QuickStart](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/implementing/deploying/deploying/deploy), är endast avsedd för prospektering och utvärdering. För produktion krävs en giltig licens för AEM Forms, eftersom Adaptive Forms-funktionaliteten kräver rätt licensiering.
 
 ### Installera GraphQL Index Package för Experience Manager Content Fragments{#install-aem-graphql-index-add-on-package}
 
@@ -471,10 +492,10 @@ Du måste lägga till följande egenskaper i indexdefinitionsnoden för att få 
 
 * Förifyllningstjänsten misslyckas med ett null-pekarundantag i Interactive Communications. (CQDOC-21355)
 * Med adaptiv Forms kan du använda anpassade funktioner med ECMAScript version 5 eller tidigare. När en anpassad funktion använder ECMAScript version 6 eller senare, som &quot;let&quot;, &quot;const&quot; eller pilfunktioner, kanske regelredigeraren inte öppnas som den ska.
-* Användarna kan inte skapa ett Correspondence Management-brev. När en användare skapar en bokstav visas ett felmeddelande med beskrivningen&quot;Objektobjekt&quot; och bokstaven skapas inte. Miniatyrbilder för layouter kan inte heller läsas in på skärmen där brevet skapas. Du kan installera [senaste AEM 6.5 Form Service Pack 20 (6.5.20.0)](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html) för att lösa problemet. (FORMS-13496)
-* Den interaktiva kommunikationstjänsten skapar PDF-dokumentet, men användarens data fylls inte i automatiskt i formulärfälten. Förifyllningstjänsten fungerar inte som förväntat. Du kan installera [senaste AEM 6.5 Form Service Pack 20 (6.5.20.0)](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html) för att lösa problemet. (FORMS-13413, FORMS-13493)
-* Det går inte att läsa in RnC-redigeraren (Review and Correct) för tjänsten automated forms conversion. Du kan installera [senaste AEM 6.5 Form Service Pack 20 (6.5.20.0)](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html) för att lösa problemet. (FORMS-13491)
-* Efter uppdatering från AEM 6.5 av Forms Service Pack 18 (6.5.18.0) eller AEM 6.5 av Forms Service Pack 19 (6.5.19.0) till AEM 6.5 av Forms Service Pack 20 (6.5.20.0) påträffas ett JSP-kompileringsfel. De kan inte öppna eller skapa anpassade formulär och de stöter på fel med andra AEM gränssnitt som sidredigeraren, AEM Forms gränssnitt och AEM Workflow editor. Du kan installera [senaste AEM 6.5 Form Service Pack 20 (6.5.20.0)](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html) för att lösa problemet. (FORMS-13492)
+* Användarna kan inte skapa ett Correspondence Management-brev. När en användare skapar ett brev visas ett felmeddelande med beskrivningen`Object Object`&quot; visas och brevet skapas inte. Miniatyrbilder för layouter kan inte heller läsas in på skärmen där brevet skapas. Du kan installera [senaste AEM 6.5 Form Service Pack 20 (6.5.20.0)](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases) för att lösa problemet. (FORMS-13496)
+* Den interaktiva kommunikationstjänsten skapar PDF-dokumentet, men användarens data fylls inte i automatiskt i formulärfälten. Förifyllningstjänsten fungerar inte som förväntat. Du kan installera [senaste AEM 6.5 Form Service Pack 20 (6.5.20.0)](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases) för att lösa problemet. (FORMS-13413, FORMS-13493)
+* Det går inte att läsa in RnC-redigeraren (Review and Correct) för tjänsten automated forms conversion. Du kan installera [senaste AEM 6.5 Form Service Pack 20 (6.5.20.0)](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases) för att lösa problemet. (FORMS-13491)
+* Efter uppdatering från AEM 6.5 av Forms Service Pack 18 (6.5.18.0) eller AEM 6.5 av Forms Service Pack 19 (6.5.19.0) till AEM 6.5 av Forms Service Pack 20 (6.5.20.0) påträffas ett JSP-kompileringsfel. De kan inte öppna eller skapa anpassade formulär och de stöter på fel med andra AEM gränssnitt som sidredigeraren, AEM Forms gränssnitt och AEM Workflow editor. Du kan installera [senaste AEM 6.5 Form Service Pack 20 (6.5.20.0)](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases) för att lösa problemet. (FORMS-13492)
 
 <!--Customers can install the  latest AEM 6.5 Forms Service Pack to resolve the aforementioned issues.  Here are the direct links for the supported operating systems:
 * [AEM 6.5 Forms Service Pack 20 for Apple macOS](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/fd/ADOBE-AEMFD-OSX-PKG-6.0.1192.zip)
@@ -517,10 +538,10 @@ Följande textdokument listar de OSGi-paket och innehållspaket som ingår i det
 Dessa webbplatser är bara tillgängliga för kunder. Om du är kund och behöver åtkomst kontaktar du din kontoansvarige på Adobe.
 
 * [Nedladdning av produkt på licensing.adobe.com](https://licensing.adobe.com/)
-* [Kontakta Adobe kundsupport](https://experienceleague.adobe.com/docs/customer-one/using/home.html).
+* [Kontakta Adobe kundsupport](https://experienceleague.adobe.com/en/docs/customer-one/using/home).
 
 >[!MORELIKETHIS]
 >
 >* [[!DNL Experience Manager] produktsida](https://business.adobe.com/products/experience-manager/adobe-experience-manager.html)
->* [[!DNL Experience Manager] 6.5-dokumentation](https://experienceleague.adobe.com/docs/experience-manager-65.html)
+>* [[!DNL Experience Manager] 6.5-dokumentation](https://experienceleague.adobe.com/en/docs/experience-manager-65)
 >* [Prenumerera på produktuppdateringar med Adobe prioritet](https://www.adobe.com/subscription/priority-product-update.html)
