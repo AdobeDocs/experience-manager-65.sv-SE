@@ -6,9 +6,9 @@ exl-id: a52311b9-ed7a-432e-8f35-d045c0d8ea4c
 solution: Experience Manager
 feature: Release Information
 role: User,Admin,Architect,Developer
-source-git-commit: 685d8016400570170dc02dc2be77651aea6e028c
+source-git-commit: 4f4d5494d4e630e6f16f8a8e6a6a609925a91457
 workflow-type: tm+mt
-source-wordcount: '3759'
+source-wordcount: '3804'
 ht-degree: 0%
 
 ---
@@ -244,6 +244,12 @@ Några av de viktigaste funktionerna och förbättringarna i den här versionen 
 * När en användare skapar en XDP-tagg i AEM Forms Designer, vid utdata från PDF, kapslas inte knappformulärtaggen i den överordnade stycketaggen (p-tagg). (LC-3921719)
 
 * När en användare skapar en XDP-fil i AEM Forms Designer, i PDF-utdata när en användare navigerar genom formulärtaggarna, taggas även bakgrundsobjektet. (LC-3921687)
+
+#### [!DNL Document Services] {#forms-document-services-6520}
+
+* (Endast AEM Forms på JEE) Tjänsten PDF Generator kan inte räkna upp de teckensnitt som finns på servern. Därför är panelen för teckensnittsval på sidan Adobe PDF Settings i PDFG Admin UI tom, vilket förhindrar (undre) inbäddning av valda teckensnitt. (FORMS-12095)
+
+
 
 ### Foundation {#foundation-6520}
 
