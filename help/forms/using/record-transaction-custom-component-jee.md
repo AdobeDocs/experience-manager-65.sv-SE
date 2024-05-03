@@ -3,7 +3,8 @@ title: Registrera en transaktion för API:t för anpassade komponenter för AEM 
 description: Lär dig hur du använder TransactionRecorder API för att registrera transaktioner för en anpassad komponent.
 feature: Transaction Reports
 exl-id: 33e1868a-2a7f-4785-8571-95651e661e21
-source-git-commit: bf99ad3710638ec823d3b17967e1c750d0405c77
+role: Admin, User, Developer
+source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
 workflow-type: tm+mt
 source-wordcount: '218'
 ht-degree: 0%

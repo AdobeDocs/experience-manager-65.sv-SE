@@ -3,7 +3,8 @@ title: Det gick inte att säkerhetskopiera databasen under uppgradering till 6.5
 description: När en användare uppgraderar till Experience Manager 6.5.12.0 och klickar på "Uppgradera MySQL" kan konfigurationshanteraren inte säkerhetskopiera den tidigare Experience Manager Forms-databasen.
 exl-id: 1af000fa-439b-4ffd-8b5a-3ba45f0c524c
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+role: User, Developer
+source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
 workflow-type: tm+mt
 source-wordcount: '105'
 ht-degree: 0%
