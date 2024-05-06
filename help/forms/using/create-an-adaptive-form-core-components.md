@@ -8,11 +8,10 @@ topic-tags: Adaptive Forms
 docset: aem65
 role: Admin, Developer
 feature: Adaptive Forms, Core Components
-exl-id: ee596672-b0b5-42e9-a139-72f90287bf3b
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: d2be8d93c64ca18352a0e811605c526a8dae488f
 workflow-type: tm+mt
-source-wordcount: '1668'
+source-wordcount: '1729'
 ht-degree: 0%
 
 ---
@@ -166,6 +165,21 @@ Du kan använda förifyllningstjänsten för formulärdatamodell för att fylla 
    ![Klicka på ikonen för skiftnyckel för att öppna dialogrutan Adaptiv formulärbehållare för att konfigurera en omdirigeringssida eller ett tack för ditt meddelande](/help/forms/using/assets/adaptive-forms-container-prefill-service.png)
 1. Välj en formulärdatamodell. Öppna **[!UICONTROL Basic]** -fliken. I förifyllningstjänsten väljer du **[!UICONTROL Form Data Model Prefill Service]**.
 1. Klicka på **[!UICONTROL Done]**. Ditt adaptiva formulär har nu konfigurerats för att använda förifyllning av formulärdatamodell. Nu kan du använda [regelredigerare](rule-editor.md) om du vill skapa regler för förifyllning av formulärfält.
+
+## Hur byter jag namn på ett AEM anpassat formulär?{#rename-an-AEM-Adaptive-Form}
+
+Så här byter du namn på ett anpassat formulär:
+
+1. Välj ett anpassningsbart formulär i AEM Forms användargränssnitt.
+1. Klicka på **Egenskaper** på den övre rälen.
+
+   ![Egenskaper](/help/forms/using/assets/rename-form-properties.png)
+
+1. Ändra namnet på formuläret i dialogrutan **Titel** enligt bilden nedan.
+1. Klicka **Spara och stäng**.
+
+   ![Byta namn på ett AEM anpassat formulär](/help/forms/using/assets/rename-form-title.png)
+
 
 <!--
 ## Edit Form Model properties of an Adaptive Form {#edit-form-model}

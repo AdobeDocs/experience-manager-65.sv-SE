@@ -4,11 +4,10 @@ description: Lär dig hur du skapar ett anpassat formulär med [!DNL Experience 
 role: User, Developer
 level: Beginner
 feature: Adaptive Forms, Foundation Components
-exl-id: 2c25a8b7-73f7-40fb-a303-9446a708c8eb
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: d2be8d93c64ca18352a0e811605c526a8dae488f
 workflow-type: tm+mt
-source-wordcount: '1828'
+source-wordcount: '1889'
 ht-degree: 0%
 
 ---
@@ -210,3 +209,18 @@ Alternativet för att spara automatiskt är inte aktiverat som standard. Du kan 
    >Om du vill att alternativet Spara automatiskt ska fungera för anonyma användare måste du konfigurera Forms Common Configuration Service så att alla användare kan förhandsgranska, verifiera och signera formulär.
    >
    >Gå till Adobe Experience Manager Web Console-konfigurationen på `https://'[server]:[port]'system/console/configMgr` och redigera **[!UICONTROL Forms Common Configuration Service]** för att välja **[!UICONTROL All Users]** i **[!UICONTROL Allow]** och spara konfigurationen.
+
+
+## Hur byter jag namn på ett AEM anpassat formulär? {#rename-an-AEM-Adaptive-Form}
+
+Så här byter du namn på ett anpassat formulär:
+
+1. Välj ett anpassningsbart formulär i AEM Forms användargränssnitt.
+1. Klicka på **Egenskaper** på den övre rälen.
+
+   ![Egenskaper](/help/forms/using/assets/rename-form-properties.png)
+
+1. Ändra namnet på formuläret i dialogrutan **Titel** enligt bilden nedan.
+1. Klicka **Spara och stäng**.
+
+   ![Byta namn på ett AEM anpassat formulär](/help/forms/using/assets/rename-form-title.png)
