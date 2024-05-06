@@ -6,9 +6,9 @@ solution-title: Experience Cloud
 user-guide-description: Läs Adobe Experience Manager 6.5-dokumentationen och se hur det fungerar och vad programmet kan göra för dig.
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM 6.5
-source-git-commit: 52aa367a8d7ebff2f2e1355274ffe357979cac85
+source-git-commit: d5554718d663515d84878ff94555ac6cadcab891
 workflow-type: tm+mt
-source-wordcount: '7406'
+source-wordcount: '7408'
 ht-degree: 1%
 
 ---
@@ -19,6 +19,7 @@ ht-degree: 1%
 + Versionsinformation {#release-notes}
    + [Versionsinformation](/help/release-notes/release-notes.md)
    + Tidigare versionsinformation {#service-pack}
+      + [6.5.20](/help/release-notes/previous/6-5-20.md)
       + [6.5.19](/help/release-notes/previous/6-5-19.md)
       + [6.5.18](/help/release-notes/previous/6-5-18.md)
       + [6.5.17](/help/release-notes/previous/6-5-17.md)
@@ -1203,7 +1204,7 @@ ht-degree: 1%
       + [Skicka inloggningsuppgifter med WS-Security-huvuden](/help/forms/developing/passing-credentials.md)
 + Innehåll och handel {#commerce}
    + [Introduktion och översikt](/help/commerce/cif/introduction.md)
-   + [Betydande förändringar AEM innehåll och handel](/help/commerce/cif/changes.md)
+   + [Betydande ändringar av AEM och Commerce](/help/commerce/cif/changes.md)
    + Integreringar {#integrations}
       + [Adobe Commerce](/help/commerce/cif/integrating/magento.md)
       + [Commerce Solution från tredje part](/help/commerce/cif/integrating/third-party.md)

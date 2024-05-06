@@ -5,9 +5,9 @@ feature: Content Fragments,GraphQL API
 exl-id: beae1f1f-0a76-4186-9e58-9cab8de4236d
 solution: Experience Manager, Experience Manager Sites
 role: Developer
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: 47aac4b19bfbd29395fb09f3c27c981e7aa908f6
 workflow-type: tm+mt
-source-wordcount: '4796'
+source-wordcount: '4984'
 ht-degree: 0%
 
 ---
@@ -1047,6 +1047,39 @@ Om du till exempel vill ge åtkomst för begäranden med referenten `my.domain` 
 >Alla GraphQL [scheman](#schema-generation) (härleds från Content Fragment Models som har **Aktiverad**) går att läsa via GraphQL-slutpunkten.
 >
 >Den här funktionen innebär att du måste se till att det inte finns några känsliga data tillgängliga eftersom de kan läcka på det här sättet. Den innehåller till exempel information som kan finnas som fältnamn i modelldefinitionen.
+
+## Begränsningar {#limitations}
+
+För att skydda dig mot potentiella problem finns det standardbegränsningar för dina frågor:
+
+* Frågan får inte innehålla fler än 1M (1024 * 1024) tecken
+* Frågan får inte innehålla fler än 15000 token
+* Frågan får inte innehålla fler än 200000 blankstegstoken
+
+Du måste också vara medveten om:
+
+* Ett fältkonfliktsfel returneras när din GraphQL-fråga innehåller fält med samma namn i två (eller flera) modeller och följande villkor uppfylls:
+
+   * Så här:
+
+      * Två (eller flera modeller) används som möjliga referenser, när de definieras som tillåtna **Modelltyp** i Content Fragment-referensen.
+
+     och:
+
+      * Dessa två modeller har fält med ett gemensamt namn, vilket betyder att samma namn används i båda modellerna.
+
+     och
+
+      * Dessa fält har olika datatyper.
+
+   * Till exempel:
+
+      * När två (eller flera) fragment med olika modeller (till exempel `M1`, `M2`) används som möjliga referenser (Innehållsreferens eller Fragmentreferens) från ett annat fragment, till exempel `Fragment1` `MultiField/List`
+      * Och dessa två fragment med olika modeller (`M1`, `M2`) har fält med samma namn, men olika typer.
+Så här illustrerar du:
+         * `M1.Title` as `Text`
+         * `M2.Title` as `Text/MultiField`
+      * Ett fältkonfliktsfel uppstår om GraphQL-frågan innehåller `Title` fält.
 
 ## Autentisering {#authentication}
 
