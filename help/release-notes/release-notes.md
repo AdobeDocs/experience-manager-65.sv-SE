@@ -5,9 +5,9 @@ mini-toc-levels: 4
 solution: Experience Manager
 feature: Release Information
 role: User,Admin,Architect,Developer
-source-git-commit: d6435255835d91729519f7822b9677608b6b9f1e
+source-git-commit: 14b52e7763c4d83a4dcce593f155cb1bb8f56b97
 workflow-type: tm+mt
-source-wordcount: '2044'
+source-wordcount: '2337'
 ht-degree: 0%
 
 ---
@@ -32,7 +32,7 @@ ht-degree: 0%
 
 ## Vad ingår i [!DNL Experience Manager] 6.5.21.0 {#what-is-included-in-aem-6521}
 
-[!DNL Experience Manager] 6.5.21.0 innehåller nya funktioner, viktiga förbättringar som kunderna efterfrågat, felkorrigeringar, prestanda, stabilitet och säkerhetsförbättringar som har släppts sedan den första tillgängligheten av 6.5 i april 2019. [Installera detta Service Pack](#install) på [!DNL Experience Manager] 6.5.
+[!DNL Experience Manager] 6.5.21.0 innehåller nya funktioner, viktiga förbättringar som kunderna efterfrågat, felkorrigeringar, prestanda, stabilitet och säkerhetsförbättringar som släppts sedan den första tillgängligheten av 6.5 i april 2019. [Installera detta Service Pack](#install) på [!DNL Experience Manager] 6.5.
 
 <!-- UPDATE FOR EACH NEW RELEASE -->
 
@@ -56,7 +56,7 @@ Några av de viktigaste funktionerna och förbättringarna i den här versionen 
 
 #### Tillgänglighet {#sites-accessibility-6521}
 
-* The **[!UICONTROL Saved Searches]** etiketten är inte beständig. Platshållare används som den enda visuella etiketten för ett textfält.(SITES-3050)
+* The **[!UICONTROL Saved Searches]** etiketten är inte beständig. Platshållaren används som den enda visuella etiketten för ett textfält. (SITES-3050)
 
 #### Administratörsgränssnitt{#sites-adminui-6521}
 
@@ -69,7 +69,7 @@ Några av de viktigaste funktionerna och förbättringarna i den här versionen 
 #### [!DNL Content Fragments]{#sites-contentfragments-6521}
 
 * Fixed the double include of the form elements. (SITES-21109) BLOCKER
-* När du skapar ett innehållsfragment slutar knappen Stäng ibland att svara, vilket gör att hela sidan fryser och kräver en uppdatering av sidan för att stänga innehållsfragmentet. När det gäller problemet med att skapa en version skapar systemet en ny version av ett innehållsfragment även när användaren inte har gjort några ändringar, bara genom att interagera med textredigeraren eller ett textfält. (SITES-21187) MAJOR
+* När du skapar ett innehållsfragment slutar knappen Stäng ibland att svara, vilket gör att hela sidan fryser och kräver en uppdatering av sidan för att stänga innehållsfragmentet. När det gäller problemet med att skapa en version skapar systemet en ny version av ett innehållsfragment. Detta inträffar även när användaren inte har gjort några ändringar, bara genom att interagera med textredigeraren eller ett textfält. (SITES-21187) MAJOR
 
 
 #### [!DNL Content Fragments] - GRAPHQL API {#sites-graphql-api-6521}
@@ -110,15 +110,15 @@ Några av de viktigaste funktionerna och förbättringarna i den här versionen 
 
 #### Launches{#sites-launches-6521}
 
-* The `sourceRootResource` som konfigurerats i Launch-konfigurationen i CRXDE Lite pekar på innehåll som inte längre finns, vilket leder till en felfunktion när försök görs att ta bort starter. Du bör kunna ta bort starter även om sidan tas bort eller om sökvägen inte är samma. (SITES-20750)
+* The `sourceRootResource` som konfigurerats i Launch-konfigurationen i CRXDE Lite pekar på innehåll som inte längre finns, vilket leder till en felfunktion när försök görs att ta bort starter. Borttagningen startar även om sidan tas bort eller om sökvägen inte är samma. (SITES-20750)
 
 #### MSM - Live-kopior{#sites-msm-live-copies-6521}
 
-* Sidkomponenten har ett överlager för att lägga till tabbar i sidegenskaper. En av dem är sidkonfiguration och har en egenskap för att lägga till en URL för Experience Fragment. Länken som konfigurerats i sidegenskaperna för Experience Fragment ändras inte för språkkopior som skapats för den sidan. Den konfigurerade länken ska ändras med språkkopians URL. (SITES-19580) MAJOR
+* Sidkomponenten överlappade sidkomponenten för att lägga till tabbar i sidegenskaper. En av dem är sidkonfiguration och har en egenskap för att lägga till en URL för Experience Fragment. Länken som konfigurerats i sidegenskaperna för Experience Fragment ändras inte för språkkopior som skapats för den sidan. Den konfigurerade länken ska ändras med språkkopians URL. (SITES-19580) MAJOR
 
 #### Page Editor{#sites-pageeditor-6521}
 
-* I redigeringsläget används en grå bakgrund inkonsekvent, vilket inte överensstämmer med färgkontraststandarden WCAG (Web Content Accessibilty Guidelines). (SITES-20060)
+* I redigeringsläget används en grå bakgrund inkonsekvent, vilket inte överensstämmer med färgkontraststandarden WCAG (Web Content Accessibility Guidelines). (SITES-20060)
 
 ### [!DNL Assets]{#assets-6521}
 
@@ -163,24 +163,36 @@ Några av de viktigaste funktionerna och förbättringarna i den här versionen 
 
 ### Foundation {#foundation-6521}
 
-
-
 #### Apache Felix {#felix-6521}
 
 * Uppgraderingsproblem med AEM 6.5 Service Pack 19 (SP19) där programserverns kontextrotsökväg saknas för obehöriga begäranden till Apache Felix efter installation av SP19. Uppdatera till Apache Felix Web Management Console 4.9.8. (NPR-41933)
 
 * U
 
+#### Campaign{#campaign-6521}
+
+* AEM 6.5 Service Pack 15 genererar kontinuerliga felloggar med viktiga poster. Följande problem rapporterades:
+
+   * 404 INFO-fel för saknad resurs på sökväg `/libs/granite/ui/content/shell/start.html`
+   * Felloggpost för ett ohanterat SlingException på grund av `NullPointerException` på `CampaignsDataSourceServlet.java:147`
+
+  Felloggarna ska inte fyllas med ofta förekommande och stora felposter, och AEM ska fungera utan problem med saknade resurser eller undantag. (CQ-4357064)
+
 #### Communities {#communities-6521}
 
-* T
+* U
 
 #### Innehållsdistribution{#foundation-content-distribution-6521}
 
 * T
 
+#### Granit{#granite-6521}
+
+* **Ta bort** eller **Ändra** behörigheter kan inte väljas utan **Bläddra** behörighet i konfigurationsläsaren. GRANITE-51002
+
 #### Integreringar{#integrations-6521}
 
+* Angående `cq-target-integration`, måste ta bort icke-testad användning av Google Guava. (CQ-4357101)
 * Ersättning av autentiseringsuppgifter för tjänstkontot (JSON Web Token eller JWT) med autentiseringsuppgifterna för OAuth2 Server-till-Server (kallas även huvudkonton).(NPR-41994) MAJOR
 * Begäran om att skapa målgrupp misslyckas med konfigurationen av IMS (Identity Management System). (NPR-41888) MAJOR
 * När en kund försöker visa sidan Nyttolast visas inte innehållet korrekt på grund av en felaktig URL. Ett 404-fel visas. Felet orsakas av att en frågeteckensymbol saknas i URL:en, före frågeparametrarna. Det här problemet kräver att kunden manuellt infogar frågeteckensymbolen för att visa sidan Nyttolast korrekt. (NPR-41957)
@@ -190,6 +202,7 @@ Några av de viktigaste funktionerna och förbättringarna i den här versionen 
 #### Lokalisering{#localization-6521}
 
 * Textsträngen i mallredigeraren *`No video available.`* är inte lokaliserad. (SITES-13190)
+* Sträng efter att en användare har aktiverats eller inaktiverats lokaliseras inte i **verktyg** > **Säkerhet** > **Användare** > *any_user_name* > **Aktivera** > **OK** och markera *any_user_name* > **Inaktivera** > **OK**. (NPR-41737)
 
 #### Plattform{#foundation-platform-6521}
 
@@ -201,12 +214,17 @@ Några av de viktigaste funktionerna och förbättringarna i den här versionen 
 
 #### Översättning{#foundation-translation-6521}
 
+* Ett problem med AEM 6.5.19 körklar översättningsstatus som inte uppdateras som förväntat vid start. När du har importerat en översatt fil till ett översättningsjobb som är associerat med en AEM start förväntades statusen ändras till `Approved`. I stället ändrades statusen till `Ready for Review`, vilket inte är förväntat. (NPR-41756) MAJOR
 * När du skapar flera konfigurationer och går till översättningskonfigurationerna visas inte alla Cloud Service i användargränssnittet. Endast de första 40 elementen/mapparna visas, lazy loading utlöses men inget mer innehåll läggs till. (NPR-41829)
+* Förvrängda tecken förekommer för japanska på sidan Behörigheter i Touch-användargränssnittet. (NPR-41794)
 
 #### Användargränssnitt{#foundation-ui-6521}
 
+* In Tools > Security > Users > &lt;user_name> > Profiler, i **Redigera användarinställningar** dialogrutan stängs inte dialogrutan när du klickar på Avbryt. (NPR-41793) MAJOR
 * Graniten `pathfield` komponent vid `/libs/granite/ui/components/coral/foundation/form/pathfield` kan inte aktivera **[!UICONTROL Select]** när en resurs är markerad. När sökvägsfältet har öppnats och användaren har markerat kryssrutan för resursen, visas **[!UICONTROL Select]** knappen är inte aktiverad. Den ändras inte från grå till blå. (NPR-41970)
 * Det finns ett problem med referensfältet CFM (Content Fragment Model) i AEM. Trots att CFM-referensfältet är inställt som obligatoriskt kan användare klicka på Spara för att spara innehåll med icke-CFM-värden i vissa scenarier. Knappen Spara bör vara nedtonad (inte tillgänglig). (NPR-41894)
+* Standarddialogrutorna för Coral-användargränssnittet som använder `successresponse` åtgärden måste utlösa ett lyckat svar efter åtgärden. Men i AEM 6.5 Service Pack 19 anropas inte inläsningsåtgärden och inget meddelande visas. (NPR-41797)
+* AEM meddelandelänkar fungerar inte i AEM 6.5 Service Pack 18. När du uppgraderar till Service Pack 18 fungerar inte AEM meddelandelänkar när du markerar meddelandena via meddelandeknappen. (NPR-41792)
 
 #### WCM{#wcm-6521}
 
@@ -214,14 +232,14 @@ Några av de viktigaste funktionerna och förbättringarna i den här versionen 
 
 #### Arbetsflöde{#foundation-workflow-6521}
 
-* T
+* I AEM 6.5.18 uppstod upprepade fel vid borttagning från användarens metadatacache vid rensning. (NPR-41762)
 
 ## Installera [!DNL Experience Manager] 6.5.21.0{#install}
 
 <!-- Remaining content from here to bottom stays the same except for version updating as needed as per update team feedback. -->
 
 * [!DNL Experience Manager] 6.5.21.0 kräver [!DNL Experience Manager] 6.5. Se [uppgraderingsdokumentation](/help/sites-deploying/upgrade.md) för detaljerade anvisningar. <!-- UPDATE FOR EACH NEW RELEASE -->
-* Service Pack-nedladdning finns på Adobe [Programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.20.0.zip).
+* Service Pack-nedladdningen finns på Adobe [Programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.20.0.zip).
 * På en distribution med MongoDB och flera instanser installerar du [!DNL Experience Manager] 6.5.21.0 på en av författarinstanserna med hjälp av Package Manager.<!-- UPDATE FOR EACH NEW RELEASE -->
 
 >[!IMPORTANT]
@@ -236,7 +254,7 @@ Några av de viktigaste funktionerna och förbättringarna i den här versionen 
 
 1. Ta en ögonblicksbild eller en ny säkerhetskopia av din [!DNL Experience Manager] -instans.
 
-1. Hämta Service Pack från [Programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.20.0.zip). <!-- UPDATE FOR EACH NEW RELEASE -->
+1. Hämta Service Sack från [Programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.20.0.zip). <!-- UPDATE FOR EACH NEW RELEASE -->
 
 1. Öppna Pakethanteraren och välj **[!UICONTROL Upload Package]** för att överföra paketet. Mer information finns på [Pakethanteraren](/help/sites-administering/package-manager.md).
 
