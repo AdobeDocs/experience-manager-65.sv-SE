@@ -6,9 +6,9 @@ solution: Experience Manager
 feature: Release Information
 role: User,Admin,Architect,Developer
 exl-id: a52311b9-ed7a-432e-8f35-d045c0d8ea4c
-source-git-commit: 566230aa14f24c2401d1e77965b542825eeb7fc9
+source-git-commit: c165755c19ac64fdd253bff9163f48ddf4732623
 workflow-type: tm+mt
-source-wordcount: '3884'
+source-wordcount: '4022'
 ht-degree: 0%
 
 ---
@@ -530,6 +530,11 @@ Du måste lägga till följande egenskaper i indexdefinitionsnoden för att få 
 1. Stop the application server.
 
 -->
+* I ett adaptivt formulär som baseras på en XDP-fil med inbäddade skript i kryssrutor, körs inte skripten för element efter sådana kryssrutor. (FORMS-1424)
+* Rader i datumväljarwidgeten trunkeras när du går igenom flera månader i snabbwidgeten för fält med redigerings-/visningsmönster. (FORMS-13620)
+* Det går inte att skicka formulär när DOR-tjänsten (Document of Record) används i serverdelen. Felmeddelandet som påträffades är: &quot;Det gick inte att skicka åtgärden eftersom formulärresursen inte är korrekt tilldelad.&quot; (FORMS-13798)
+* När ett anpassat formulär skickas från en Adobe Experience Manager Publish-instans till ett Adobe Experience Manager-arbetsflöde, kan arbetsflödet inte spara de bifogade filerna. (FORMS-14209)
+* När du installerar AEM 6.5 Forms Service Pack 20-paket (AEM Forms tilläggspaket för SP20) uppvisar AEM Sites användargränssnitt en avsevärd prestandaförsämring. (FORMS-13791)
 
 ## OSGi-paket och innehållspaket som ingår{#osgi-bundles-and-content-packages-included}
 
