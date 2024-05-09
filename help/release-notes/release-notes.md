@@ -5,9 +5,10 @@ mini-toc-levels: 4
 solution: Experience Manager
 feature: Release Information
 role: User,Admin,Architect,Developer
-source-git-commit: 2e5754022fb40409500bb57b3b7576bf8ec9a605
+exl-id: a52311b9-ed7a-432e-8f35-d045c0d8ea4c
+source-git-commit: 566230aa14f24c2401d1e77965b542825eeb7fc9
 workflow-type: tm+mt
-source-wordcount: '3746'
+source-wordcount: '3884'
 ht-degree: 0%
 
 ---
@@ -489,6 +490,11 @@ Du måste lägga till följande egenskaper i indexdefinitionsnoden för att få 
 
 ### Kända fel för AEM Forms {#known-issues-aem-forms-6520}
 
+* I ett adaptivt formulär som baseras på en XDP-fil med inbäddade skript i kryssrutor, körs inte skripten för element efter sådana kryssrutor. (FORMS-1424)
+* Rader i datumväljarwidgeten trunkeras när du går igenom flera månader i snabbwidgeten för fält med redigerings-/visningsmönster. (FORMS-13620)
+* Det går inte att skicka formulär när DOR-tjänsten (Document of Record) används i serverdelen. Felmeddelandet som påträffades är: &quot;Det gick inte att skicka åtgärden eftersom formulärresursen inte är korrekt tilldelad.&quot; (FORMS-13798)
+* När ett anpassat formulär skickas från en Adobe Experience Manager Publish-instans till ett Adobe Experience Manager-arbetsflöde, kan arbetsflödet inte spara de bifogade filerna. (FORMS-14209)
+* När du installerar AEM 6.5 Forms Service Pack 20-paket (AEM Forms tilläggspaket för SP20) uppvisar AEM Sites användargränssnitt en avsevärd prestandaförsämring. (FORMS-13791)
 * Förifyllningstjänsten misslyckas med ett null-pekarundantag i Interactive Communications. (CQDOC-21355)
 * Med adaptiv Forms kan du använda anpassade funktioner med ECMAScript version 5 eller tidigare. När en anpassad funktion använder ECMAScript version 6 eller senare, som &quot;let&quot;, &quot;const&quot; eller pilfunktioner, kanske regelredigeraren inte öppnas som den ska.
 * Användarna kan inte skapa ett Correspondence Management-brev. När en användare skapar ett brev visas ett felmeddelande med beskrivningen`Object Object`&quot; visas och brevet skapas inte. Miniatyrbilder för layouter kan inte heller läsas in på skärmen där brevet skapas. Du kan installera [senaste AEM 6.5 Form Service Pack 20 (6.5.20.0)](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases) för att lösa problemet. (FORMS-13496)
