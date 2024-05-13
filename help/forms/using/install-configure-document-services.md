@@ -3,11 +3,10 @@ title: Installera och konfigurera dokumenttjänster
 description: Installera AEM Forms Document Services för att skapa, sammanställa, distribuera, arkivera PDF-dokument, lägga in digitala signaturer för att begränsa dokumentåtkomsten samt avkoda Barcoded Forms.
 topic-tags: installing
 role: Admin, User, Developer
-exl-id: 5d48e987-16c2-434b-8039-c82181d2e028
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+source-git-commit: acb023caf0a7e64fea9cf5d9198d672ee14c8d88
 workflow-type: tm+mt
-source-wordcount: '5476'
+source-wordcount: '5546'
 ht-degree: 0%
 
 ---
@@ -298,6 +297,10 @@ Användarkontot som används för att starta programservern kräver **Ersätta e
 1. Öppna Group Policy Editor för Microsoft® Windows. Klicka på om du vill öppna grupprincipredigeraren **[!UICONTROL Start]**, typ **gpedit.msc** i rutan Starta sökning och klicka på **[!UICONTROL Group Policy Editor]**.
 1. Navigera till **[!UICONTROL Local Computer Policy]** > **[!UICONTROL Computer Configuration]** > **[!UICONTROL Windows Settings]** > **[!UICONTROL Security Settings]** > **[!UICONTROL Local Policies]** > **[!UICONTROL User Rights Assignment]** och redigera **[!UICONTROL Replace a process level token]** och inkludera gruppen Administratörer.
 1. Lägg till användaren i posten Ersätt en processnivåtoken.
+
+>[!NOTE]
+>
+> Om AEM körs som en tjänst under LSA och det inte är nödvändigt att uttryckligen tilldela detta privilegium till en användare, innebär det att om inga andra program/komponenter är installerade förutom det som krävs för PDFG på den virtuella datorn, behöver du inte tilldela några andra konton till **Ersätta en token på processnivå till höger** och endast lokala tjänste- och nätverkstjänstkonton ska ha rätt.
 
 ### (Endast Windows) Aktivera tjänsten PDF Generator för icke-administratörer {#enable-the-pdf-generator-service-for-non-administrators}
 
