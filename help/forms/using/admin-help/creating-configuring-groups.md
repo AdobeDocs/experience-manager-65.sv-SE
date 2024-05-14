@@ -8,9 +8,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 exl-id: 72edd8d1-8573-4942-8ced-1a100af58d78
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+source-git-commit: 55421ab730382eb9aa603f898182865649f66349
 workflow-type: tm+mt
-source-wordcount: '1576'
+source-wordcount: '1573'
 ht-degree: 0%
 
 ---
@@ -68,7 +68,7 @@ En dynamisk grupp innehåller bara användare. Den får inte innehålla andra gr
 
 ### Skapa dynamiska grupper automatiskt baserat på e-postdomäner {#automatically-create-dynamic-groups-based-on-email-domains}
 
-1. I administrationskonsolen klickar du på Inställningar > Användarhantering > Konfiguration > Konfigurera avancerade systemattribut.
+1. Klicka på Inställningar > Användarhantering > Konfiguration > Konfigurera avancerade systemattribut.
 1. Markera kryssrutan under Automatiskt skapande av dynamisk grupp.
 1. Ange när användarhanteraren ska söka efter nya e-postdomäner. Den här tiden bör vara efter domänsynkroniseringstiden eftersom skapandet av dynamiska grupper bara är logiskt om domänsynkroniseringen är slutförd.
 
