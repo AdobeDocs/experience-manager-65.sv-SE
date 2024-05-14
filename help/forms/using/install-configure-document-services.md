@@ -4,13 +4,13 @@ description: Installera AEM Forms Document Services för att skapa, sammanställ
 topic-tags: installing
 role: Admin, User, Developer
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: acb023caf0a7e64fea9cf5d9198d672ee14c8d88
+exl-id: 5d48e987-16c2-434b-8039-c82181d2e028
+source-git-commit: 0a1a0d8e3a2794bda247e7b07a2ef9d9fcac7c13
 workflow-type: tm+mt
-source-wordcount: '5546'
+source-wordcount: '5503'
 ht-degree: 0%
 
 ---
-
 
 # Installera och konfigurera dokumenttjänster {#installing-and-configuring-document-services}
 
@@ -300,7 +300,7 @@ Användarkontot som används för att starta programservern kräver **Ersätta e
 
 >[!NOTE]
 >
-> Om AEM körs som en tjänst under LSA och det inte är nödvändigt att uttryckligen tilldela detta privilegium till en användare, innebär det att om inga andra program/komponenter är installerade förutom det som krävs för PDFG på den virtuella datorn, behöver du inte tilldela några andra konton till **Ersätta en token på processnivå till höger** och endast lokala tjänste- och nätverkstjänstkonton ska ha rätt.
+> Om AEM körs som en tjänst under LocalSystem-kontot (LSA) är det inte nödvändigt att uttryckligen tilldela detta privilegium till en användare, vilket anges ovan.
 
 ### (Endast Windows) Aktivera tjänsten PDF Generator för icke-administratörer {#enable-the-pdf-generator-service-for-non-administrators}
 
