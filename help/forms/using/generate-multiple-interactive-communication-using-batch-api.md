@@ -9,7 +9,7 @@ feature: Interactive Communication
 exl-id: f65d8eb9-4d2c-4a6e-825f-45bcfaa7ca75
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+source-git-commit: 066528bd9c2d7db9705a9d47ed6ea91a584129cb
 workflow-type: tm+mt
 source-wordcount: '2094'
 ht-degree: 0%
@@ -119,9 +119,7 @@ Du kombinerar data (poster) som sparats i en extern datakälla med en interaktiv
    1. Välj din hämtning eller få en tjänst från fältet Läs tjänst i rutan Redigera egenskaper.
    1. Välj pennikonen för lästjänstargumentet om du vill binda argumentet till ett Request Attribute och ange bindningsvärdet. Det binder tjänstargumentet till det angivna bindningsattributet eller det literala värdet, som skickas till tjänsten som ett argument för att hämta information som är associerad med det angivna värdet från datakällan.
 
-      <br>
-        I det här exemplet tar id-argumentet värdet för användarprofilens id-attribut och skickar det som ett argument till lästjänsten. Den läser och returnerar värden för associerade egenskaper från medarbetardatamodellobjektet för det angivna ID:t. Om du anger 00250 i id-fältet i formuläret läser lästjänsten information om medarbetaren med 00250 employee-id.
-        <br>
+      I det här exemplet tar id-argumentet värdet för användarprofilens id-attribut och skickar det som ett argument till lästjänsten. Den läser och returnerar värden för associerade egenskaper från medarbetardatamodellobjektet för det angivna ID:t. Om du anger 00250 i id-fältet i formuläret läser lästjänsten information om medarbetaren med 00250 employee-id.
 
       ![Konfigurera attribut för begäran](assets/request-attribute.png)
 
