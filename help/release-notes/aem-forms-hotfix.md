@@ -5,9 +5,9 @@ exl-id: 37287332-3c8d-4ddc-a77e-3c5ee332898b
 solution: Experience Manager
 feature: Release Information
 role: User,Admin,Architect,Developer
-source-git-commit: 10268f617b8a1bb22f1f131cfd88236e7d5beb47
+source-git-commit: 5e2799505bc6d69cd5898445a9300ad162ef74fd
 workflow-type: tm+mt
-source-wordcount: '322'
+source-wordcount: '518'
 ht-degree: 0%
 
 ---
@@ -28,6 +28,26 @@ I den här artikeln listas de viktiga korrigeringar som har implementerats för 
     <td><strong>Datum</strong></td>
     <td><strong>Länk för hämtning av snabbkorrigeringar (AEM Software Distribution link)</strong></td>
     <td><strong>Åtgärdade problem</strong></td>
+  </tr>
+  <tr>
+    <td>16 maj 2024</td>
+     <td>
+     <ul>
+     <li><a href="https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/fd/adobe-aemfd-win-pkg-6.0.1192-010.zip">Programfix för AEM Service Pack 6.5.20.0 för Microsoft Windows</a> </li>
+     <li><a href="https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/fd/adobe-aemfd-linux-pkg-6.0.1192-010.zip">Programfix för AEM Service Pack 6.5.20.0 för Linux </a> </li>
+     <li><a href="https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/fd/adobe-aemfd-osx-pkg-6.0.1192-010.zip">Programfix för AEM Service Pack 6.5.20.0 för Apple macOS</a> </li>
+     </ul>
+     </td>
+    <td>
+    <ul>
+    <li>I ett adaptivt formulär som baseras på en XDP-fil med inbäddade skript i kryssrutor, körs inte skripten för element efter sådana kryssrutor. Det finns en programfix för den här utgåvan. (FORMS-1424) </li>
+     <li> Rader i datumväljarwidgeten trunkeras när du går igenom flera månader i snabbwidgeten för fält med redigerings-/visningsmönster. Det finns en programfix för den här utgåvan. (FORMS-13620) </li>
+     <li>Det går inte att skicka formulär när DOR-tjänsten (Document of Record) används i serverdelen. Felmeddelandet som påträffades är: "Det gick inte att skicka åtgärden eftersom formulärresursen inte är korrekt tilldelad." (FORMS-13798) </li>
+     <li>När ett anpassat formulär skickas från en Adobe Experience Manager Publish-instans till ett Adobe Experience Manager-arbetsflöde, kan arbetsflödet inte spara de bifogade filerna.  (FORMS-14209) </li>
+     <li> När du installerar AEM 6.5 Forms Service Pack 20-paket (AEM Forms tilläggspaket för SP20) uppvisar AEM Sites användargränssnitt en avsevärd prestandaförsämring.  (FORMS-13791) </li>
+     <li>Förifyllningstjänsten misslyckas med ett null-pekarundantag i Interactive Communications. (CQDOC-21355)</li>
+    </ul>
+    </td>    
   </tr>
   <tr>
     <td>29 januari 2024</td>
