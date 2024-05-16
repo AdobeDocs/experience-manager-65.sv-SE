@@ -10,7 +10,7 @@ exl-id: 574e2fc2-6ebf-49b6-9b65-928237a8a34d
 solution: Experience Manager, Experience Manager Sites
 feature: Security
 role: Admin
-source-git-commit: 48d12388d4707e61117116ca7eb533cea8c7ef34
+source-git-commit: 9b766fe6e253782be3bc47849b4857216274ae20
 workflow-type: tm+mt
 source-wordcount: '828'
 ht-degree: 0%
@@ -183,13 +183,13 @@ Här nedan hittar du ett exempel på hur du skapar ett självsignerat certifikat
    openssl x509 -req -days 365 -in localhost.csr -signkey localhostprivate.key -out localhost.crt
    ```
 
-Konvertera den privata nyckeln till DER-format. Detta beror på att SSL-guiden kräver att nyckeln är i DER-format:
+1. Konvertera den privata nyckeln till DER-format. Detta beror på att SSL-guiden kräver att nyckeln är i DER-format:
 
-```shell
-openssl pkcs8 -topk8 -inform PEM -outform DER -in localhostprivate.key -out localhostprivate.der -nocrypt
-```
+   ```shell
+   openssl pkcs8 -topk8 -inform PEM -outform DER -in localhostprivate.key -out localhostprivate.der -nocrypt
+   ```
 
-Till sist skickar du **localhostprivate.der** som den privata nyckeln och **localhost.crt** som SSL/TLS-certifikat i steg 2 i den grafiska SSL/TLS-guiden som beskrivs i början av den här sidan.
+1. Till sist skickar du **localhostprivate.der** som den privata nyckeln och **localhost.crt** som SSL/TLS-certifikat i steg 2 i den grafiska SSL/TLS-guiden som beskrivs i början av den här sidan.
 
 ### Uppdatera SSL-/TLS-konfigurationen via cURL {#updating-the-ssl-tls-configuration-via-curl}
 
