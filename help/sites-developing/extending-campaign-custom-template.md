@@ -9,20 +9,27 @@ exl-id: de5c634a-c0d7-4e69-b941-d2fbfe83117d
 solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+source-git-commit: ad8f849384e58511de97611d1b26c4fc96022062
 workflow-type: tm+mt
-source-wordcount: '238'
-ht-degree: 3%
+source-wordcount: '313'
+ht-degree: 2%
 
 ---
 
 # Skapa en anpassad AEM med Adobe Campaign Form Components{#creating-custom-aem-page-template-with-adobe-campaign-form-components}
 
-På den här sidan beskrivs hur du skapar en anpassad sidmall som använder [Adobe Campaign Form](/help/sites-authoring/adobe-campaign-components.md) genom att undersöka hur mallen för Geometrixx utomhus ( `/apps/geometrixx-outdoors/components/page_campaign_profile`) är implementerat och pekar på viktig information som du kan behöva när du skapar en egen anpassad mall.
+På den här sidan beskrivs hur du skapar en anpassad sidmall som använder [Adobe Campaign Form](/help/sites-authoring/adobe-campaign-components.md) genom att undersöka hur mallen för Geometrixx utomhus (`/apps/geometrixx-outdoors/components/page_campaign_profile`) är implementerat och pekar på viktig information som du kan behöva när du skapar en egen anpassad mall.
 
 >[!NOTE]
 >
 >[E-post och formulärexempel är bara tillgängliga i Geometrixx](/help/sites-developing/we-retail.md). Hämta exempelinnehåll för Geometrixx från paketresurs.
+
+>[!CAUTION]
+>
+>AEM e-postkomponenter har tagits bort. På grund av e-postens natur, som sammanfogar innehåll och format, blir de e-postkomponenter som AEM tillhandahåller direkt i kartong av begränsad återanvändning för kunderna på grund av behovet av att implementera anpassade format i de komponenter som behövs för projekt.
+>
+>E-postkomponenter kan implementeras på projektnivå och de borttagna AEM e-postkomponenterna visar hur man kan uppnå detta. Använd dock inte de här inaktuella komponenterna i projekt.
+
 
 Om du vill skapa en anpassad AEM sidmall med hjälp av Adobe Campaign Form-komponenter måste du ha följande:
 
