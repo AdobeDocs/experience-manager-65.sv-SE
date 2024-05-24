@@ -1,6 +1,6 @@
 ---
 title: Video i Dynamic Media
-description: Lär dig hur du arbetar med video i Dynamic Media, t.ex. de bästa sätten att koda videoklipp, lägga till multiljud och multibildtexter i videoklipp samt miniatyrbilder.
+description: Lär dig hur du arbetar med video i Dynamic Media, t.ex. de bästa sätten att koda videofilmer, lägga till flera ljud- och bildtextspår i videoklipp samt videominiatyrer.
 mini-toc-levels: 3
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
@@ -11,9 +11,9 @@ feature: Asset Management
 role: User, Admin
 exl-id: 28cf9e39-cab4-4278-b6c9-e84cc31964db
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: a49af471c5fc2f799687173bff6cdcb21505740a
 workflow-type: tm+mt
-source-wordcount: '11027'
+source-wordcount: '11053'
 ht-degree: 1%
 
 ---
@@ -425,7 +425,7 @@ Anta till exempel att källvideon är 1 920 x 1 080. I följande tabell ger de t
 
 Dynamic Media rekommenderar att du använder MP4 H.264-videokodningsförinställningar. Eftersom MP4-filer använder H.264-videokodeken ger den video med hög kvalitet men i en komprimerad filstorlek.
 
-### Aktivera stöd för DASH, multi-subtitle och multi-audio-spår på ditt Dynamic Media-konto {#enable-dash}
+### Aktivera stöd för DASH, flera bildtexter och ljudspår på ditt Dynamic Media-konto {#enable-dash}
 
 **Aktivera DASH på ditt konto**
 DASH (Digital Adaptive Streaming over HTTP) är den internationella standarden för direktuppspelad video och används i stor utsträckning av olika videovisningsprogram. När DASH är aktiverat för ditt konto kan du välja mellan DASH eller HLS för adaptiv videoströmning. Eller så kan du välja båda med automatisk växling mellan spelare när **[!UICONTROL auto]** är valt som uppspelningstyp i visningsförinställningen.
@@ -444,15 +444,15 @@ Om du vill aktivera DASH på ditt konto krävs två steg:
 * Konfigurera Dynamic Media att använda DASH som du enkelt kan göra själv.
 * Konfigurera Experience Manager 6.5 för att använda DASH, vilket sker via ett kundsupportärende från Adobe som du skapar och skickar in.
 
-**Aktivera stöd för flera undertexter och flerljudspår på ditt konto**
+**Aktivera stöd för flera bildtexter och ljudspår på ditt konto**
 
-Samtidigt som du skapar ett Adobe Support-ärende där DASH ska aktiveras för ditt konto kan du även utnyttja att stödet för multi-subtitle och multi-audio track aktiveras automatiskt. När du har aktiverat bearbetas alla efterföljande videor som du överför med en ny serverdelsarkitektur som har stöd för att lägga till spår med flera undertexter och flera ljud i videoklipp.
+Samtidigt som du skapar ett supportärende för Adobe där DASH ska aktiveras för ditt konto kan du även utnyttja att ha stöd för flera bildtexter och ljudspår automatiskt aktiverat. När du har aktiverat bearbetas alla efterföljande videor som du överför med en ny backend-arkitektur som har stöd för att lägga till flera bildtexter och ljudspår i videoklipp.
 
 >[!IMPORTANT]
 >
->Alla videofilmer som du har överfört *före* stöd för flera undertexter och flerljudspår på ditt Dynamic Media-konto, [måste bearbetas på nytt](/help/assets/processing-profiles.md#reprocessing-assets). Det här steget för videoombearbetning är nödvändigt för att de ska kunna använda spår med flera undertexter och flera ljud. Video-URL:erna fortsätter att fungera och spelas upp som vanligt efter ombearbetningen.
+>Alla videofilmer som du har överfört *före* stöd för flera bildtexter och ljudspår på ditt Dynamic Media-konto, [måste bearbetas på nytt](/help/assets/processing-profiles.md#reprocessing-assets). Det här steget för videoombearbetning är nödvändigt för att de ska kunna använda flera bildtexter och ljudspår. Video-URL:erna fortsätter att fungera och spelas upp som vanligt efter ombearbetningen.
 
-**Så här aktiverar du stöd för DASH, multi-subtitle och multi-audio-spår på ditt Dynamic Media-konto:**
+**Så här aktiverar du stöd för DASH, flera bildtexter och flera ljudspår på ditt Dynamic Media-konto:**
 
 <!-- 1. **Configure Dynamic Media for DASH** - In Dynamic Media on Experience Manager 6.5, navigate to [https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr).
 
@@ -471,7 +471,7 @@ Samtidigt som du skapar ett Adobe Support-ärende där DASH ska aktiveras för d
 
    * Primärt kontaktnamn, e-postadress, telefon.
    * Namn på ditt Dynamic Media-konto.
-   * Ange att stöd för DASH, multi-subtitle och multi-audio-spår ska aktiveras på ditt Dynamic Media-konto på Experience Manager 6.5.
+   * Ange att stöd för DASH, flera bildtexter och flera ljudspår ska aktiveras på ditt Dynamic Media-konto på Experience Manager 6.5.
 
 1. Adobe kundsupport lägger till dig i kundens väntelista baserat på i vilken ordning förfrågningarna skickas.
 1. När Adobe är redo att hantera din begäran kontaktar kundsupporten dig för att koordinera och ange ett måldatum för aktiveringen.
@@ -479,7 +479,7 @@ Samtidigt som du skapar ett Adobe Support-ärende där DASH ska aktiveras för d
 1. Nu kan du göra något av följande:
 
    * Skapa [videovisningsförinställning](/help/assets/managing-viewer-presets.md#creating-a-new-viewer-preset) som vanligt.
-   * [Lägga till flera undertexter och flerljudspår](#add-msma) till videon.
+   * [Lägga till flera bildtexter och ljudspår](#add-msma) till videon.
 
 ## Visa videorapporter {#viewing-video-reports}
 
@@ -593,13 +593,13 @@ Använd [Referenshandbok för Adobe Dynamic Media-visningsprogram](https://exper
 
 
 
-## Stöd för flerrubriks- och flerljudspår för videofilmer i Dynamic Media{#about-msma}
+## Stöd för flera bildtexter och ljudspår för videofilmer i Dynamic Media{#about-msma}
 
-Med funktioner för multi-subtitle och multi-audio track i Dynamic Media kan du enkelt lägga till flera undertexter och ljudspår i en primär video. Detta innebär att videoklippen är tillgängliga för alla mottagare världen över. Du kan anpassa en enda publicerad primär video till en global publik på flera språk och följa riktlinjer för tillgänglighet för olika geografiska regioner. Författare kan också hantera undertexter och ljudspår från en enda flik i användargränssnittet.
+Med funktioner för flera bildtexter och ljudspår i Dynamic Media kan du enkelt lägga till flera undertexter och ljudspår i en primär video. Detta innebär att videoklippen är tillgängliga för alla mottagare världen över. Du kan anpassa en enda publicerad primär video till en global publik på flera språk och följa riktlinjer för tillgänglighet för olika geografiska regioner. Författare kan också hantera undertexter och ljudspår från en enda flik i användargränssnittet.
 
 ![Undertexter och ljudspår i Dynamic Media tillsammans med en tabell som visar överförda VTT-undertextfiler och överförda MP3-ljudspårfiler för en video.](assets-dm/msma-subtitle-audiotracks-tab.png)
 
-Några av användningsområdena för att lägga till multiundertexter och flerljudspår i den primära videon är bland annat följande:
+Några av användningsområdena för att lägga till flera bildtexter och ljudspår i den primära videon är bland annat följande:
 
 | Typ | Använd skiftläge |
 |--- |--- |
@@ -609,28 +609,28 @@ Några av användningsområdena för att lägga till multiundertexter och flerlj
 |  | Kommentarspår |
 |  | Beskrivande ljud |
 
-Alla [videoformat som stöds i Dynamic Media](/help/assets/assets-formats.md) och alla videovisningsprogram från Dynamic Media - förutom Dynamic Media *Video_360* visningsprogram - kan användas med multiundertexter och flerljudspår.
+Alla [videoformat som stöds i Dynamic Media](/help/assets/assets-formats.md) och alla videovisningsprogram från Dynamic Media - förutom Dynamic Media *Video_360* visningsprogram - kan användas med flera bildtexter och ljudspår.
 
-Funktioner för flera undertexter och flerljudspår är tillgängliga för ditt Dynamic Media-konto via en funktion som måste aktiveras (aktiveras) av Adobe kundsupport.
+Det finns funktioner för flera bildtexter och ljudspår för ditt Dynamic Media-konto via en funktion som måste aktiveras (aktiveras) av Adobe kundsupport.
 
-### Lägga till flera undertexter och flera ljudspår i videon {#add-msma}
+### Lägga till flera bildtexter och ljudspår i videon {#add-msma}
 
-Innan du lägger till spår med flera undertexter och flera ljud i videon måste du kontrollera att du redan har följande på plats:
+Innan du lägger till flera bildtexter och ljudspår i videon måste du kontrollera att du redan har följande på plats:
 
 * Dynamic Media är konfigurerat i en AEM miljö.
 * A [Dynamic Media videoprofil används på den mapp där videoklippen har importerats](/help/assets/video-profiles.md#applying-a-video-profile-to-folders).
-* [Spår för flera undertexter och flera ljud är aktiverat på ditt Dynamic Media-konto](#enable-dash).
+* [Flera bildtexter och ljudspår är aktiverade på ditt Dynamic Media-konto](#enable-dash).
 
 Undertexter och bildtexter som lagts till stöds i formaten WebVTT och Adobe VTT. Dessutom stöds tillagda ljudspårsfiler med MP3-format.
 
 >[!IMPORTANT]
 >
->Alla videofilmer som du har överfört *före* stöd för flera undertexter och flerljudspår på ditt Dynamic Media-konto, [måste bearbetas på nytt](/help/assets/processing-profiles.md#reprocessing-assets). Det här steget för videoombearbetning är nödvändigt för att de ska kunna använda spår med flera undertexter och flera ljud. Video-URL:erna fortsätter att fungera och spelas upp som vanligt efter ombearbetningen.
+>Alla videofilmer som du har överfört *före* stöd för flera bildtexter och ljudspår på ditt Dynamic Media-konto, [måste bearbetas på nytt](/help/assets/processing-profiles.md#reprocessing-assets). Det här steget för videoombearbetning är nödvändigt för att de ska kunna använda flera bildtexter och ljudspår. Video-URL:erna fortsätter att fungera och spelas upp som vanligt efter ombearbetningen.
 
-**Så här lägger du till multiundertexter och flerljudspår i videon:**
+**Så här lägger du till flera bildtexter och ljudspår i videon:**
 
 1. [Överför din primära video till en mapp](/help/assets/managing-video-assets.md#upload-and-preview-video-assets) som redan har tilldelats en videoprofil.
-1. Navigera till den överförda videoresursen som du vill lägga till spår med flera undertexter och flera ljud.
+1. Navigera till den överförda videoresursen som du vill lägga till flera bildtexter och ljudspår.
 1. Välj videoresurs i resursurvalsläget, antingen från listvyn eller kortvyn.
 1. I verktygsfältet väljer du ikonen Egenskaper (en cirkel med &quot;i&quot;).
    ![Markerad videoresurs med bockmarkering över videominiatyrbild och Visa egenskaper markerade i verktygsfältet.](assets-dm/msma-selectedasset-propertiesbutton.png)*Markerad videoresurs i kortvyn.*
@@ -853,7 +853,7 @@ Det går inte att hämta det ursprungliga ljudspåret som har extraherats från 
 
 >[!IMPORTANT]
 >
->Adobe rekommenderar att du [möjliggör funktioner för flera undertexter och flerljudspår](#enable-dash) på ditt Dynamic Media-konto. På så sätt kan du dra nytta av den senaste Dynamic Media backend-arkitekturen och ett förenklat arbetsflöde för att lägga till bildtexter, undertexter och ljudspår i videoklipp.
+>Adobe rekommenderar att du [möjliggör funktioner för flera bildtexter och ljudspår](#enable-dash) på ditt Dynamic Media-konto. På så sätt kan du dra nytta av den senaste Dynamic Media backend-arkitekturen och ett förenklat arbetsflöde för att lägga till bildtexter, undertexter och ljudspår i videoklipp.
 
 Du kan utöka räckvidden för dina videor till globala marknader genom att lägga till undertexter till enskilda videor eller till adaptiva videouppsättningar. Genom att lägga till undertextning slipper du att duplicera ljudet eller att du behöver använda inbyggda högtalare för att spela in ljudet igen för varje språk. Videon spelas upp på det språk den spelades in på. Undertexter på främmande språk visas så att personer på olika språk fortfarande kan förstå ljuddelen.
 
