@@ -1,19 +1,21 @@
 ---
 title: Konfigurera IMS-integreringar för AEM
 description: Lär dig hur du konfigurerar IMS-integreringar för AEM
-source-git-commit: ea7454fa57d503eb12efe5074c8a82ab3d8e280b
+source-git-commit: 8540b1af3c0779f692f829d4c61112d36bd81a00
 workflow-type: tm+mt
-source-wordcount: '437'
-ht-degree: 0%
+source-wordcount: '354'
+ht-degree: 1%
 
 ---
 
 
 # Konfigurera IMS-integreringar för AEM {#setting-up-ims-integrations-for-aem}
 
+<!--
+
 >[!NOTE]
 >
->Adobe-kunder använder [Adobe Developer Console](https://developer.adobe.com/console) för att generera autentiseringsuppgifter som möjliggör åtkomst till olika API:er. Kunderna väljer mellan olika typer av autentiseringsuppgifter, från OAuth Server-to-Server till Single-Page App. En av dessa autentiseringstyper, JWT-referenser (Service Account), har ersatts med autentiseringsuppgifterna för OAuth Server-till-Server med Service Pack 20. Den här ändringen kan porteras tillbaka till äldre Service Pack, från Service Pack 11 till Service Pack 20 med hjälp av en snabbkorrigering som du kan hämta här.
+>Adobe customers use [Adobe Developer Console](https://developer.adobe.com/console) to generate credentials that enable access to various APIs. Customers select from various credential types ranging from OAuth Server-to-Server to Single-Page App. One of those credential types, Service Account (JWT) credentials, has been deprecated in favor of the OAuth Server-to-Server credentials with Service Pack 20. This change can be back ported to older Service Packs, starting with Service Pack 11 up to Service Pack 20 with the use of a hotfix that you can download here. -->
 
 Adobe Experience Manager (AEM) kan integreras med många andra Adobe-lösningar. Exempel: Adobe Target, Adobe Analytics med flera.
 
