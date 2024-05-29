@@ -6,9 +6,9 @@ solution-title: Experience Cloud
 user-guide-description: Läs Adobe Experience Manager 6.5-dokumentationen och se hur det fungerar och vad programmet kan göra för dig.
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM 6.5
-source-git-commit: 9bacc16657c83329ff7b02dc8b233908e9deb2e1
+source-git-commit: b274d150ccffb93858de6a3a8f7e05441776d0fb
 workflow-type: tm+mt
-source-wordcount: '7406'
+source-wordcount: '7400'
 ht-degree: 1%
 
 ---
@@ -74,6 +74,7 @@ ht-degree: 1%
    + [Mappning av anpassade användargrupper i AEM 6.5](/help/sites-administering/cug-mapping.md)
    + [Stöd för samma webbplats-cookie](/help/sites-administering/same-site-cookie-support.md)
    + [Borttagning av JWT-autentiseringsuppgifter i Adobe Developer Console](/help/sites-administering/jwt-credentials-deprecation-in-adobe-developer-console.md)
+   + [Konfigurera IMS-integreringar för AEM](/help/sites-administering/setting-up-ims-integrations-for-aem.md)
 + Sites {#sites}
    + Redigering {#authoring}
       + Viktiga uppgifter, verktyg och begrepp för AEM {#essentials}
@@ -226,7 +227,6 @@ ht-degree: 1%
          + [Konfigurera länkspårning för Adobe Analytics](/help/sites-administering/adobeanalytics-link.md)
          + [Mappa komponentdata med Adobe Analytics-egenskaper](/help/sites-administering/adobeanalytics-mapping.md)
          + [Konfigurera videospårning för Adobe Analytics](/help/sites-administering/adobeanalytics-video.md)
-         + [Integrering med Adobe Analytics med IMS](/help/sites-administering/integration-analytics-ims.md)
          + [HTTP2 Delivery of Content FAQ](/help/sites-administering/scene7-http2faq.md)
          + [Felsöka Adobe Campaign-integreringen](/help/sites-administering/troubleshooting-campaignintegration.md)
          + [SharePoint Connector-licenser, copyrightmeddelanden och friskrivningsklausuler](/help/sites-administering/sharepoint-connector-licenses.md)
@@ -250,7 +250,6 @@ ht-degree: 1%
          + [Integrera med Adobe Marketing Cloud](/help/sites-administering/marketing-cloud.md)
          + [Konfigurera integreringen med Adobe Target manuellt](/help/sites-administering/target-configuring.md)
          + [Krav för integrering med Adobe Target](/help/sites-administering/target-requirements.md)
-         + [Integrering med Adobe Target med IMS](/help/sites-administering/integration-target-ims.md)
          + [Adobe-klassificeringar](/help/sites-administering/adobeanalytics-classifications.md)
          + [Lösningsintegrering](/help/sites-administering/integration.md)
          + [Exportera Experience Fragments till Adobe Target](/help/sites-administering/experience-fragments-target.md)

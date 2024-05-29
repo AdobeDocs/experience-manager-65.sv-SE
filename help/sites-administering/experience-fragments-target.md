@@ -10,38 +10,14 @@ exl-id: f2921349-de8f-4bc1-afa2-aeace99cfc5c
 solution: Experience Manager, Experience Manager Sites
 feature: Integration
 role: Admin
-source-git-commit: eae057caed533ef16bb541b4ad41b8edd7aaa1c7
+source-git-commit: dcb55b3b185fe5dccf52377a12556e33d818e410
 workflow-type: tm+mt
-source-wordcount: '1513'
+source-wordcount: '1438'
 ht-degree: 0%
 
 ---
 
 # Exportera Experience Fragments till Adobe Target{#exporting-experience-fragments-to-adobe-target}
-
->[!CAUTION]
->
->Vissa funktioner på den här sidan kräver att AEM 6.5.3.0 (eller senare) används.
->
->6.5.3.0:
->
->* **Externalizer-domäner** kan nu markeras.
->  **Obs!** Externalizer-domäner är bara relevanta för innehållet i Experience Fragment som skickas till Target, och inte för metadata som Visa erbjudandeinnehåll.
->
->6.5.2.0:
->
->* Upplevelsefragment kan exporteras till:
->
->   * standardarbetsytan.
->   * en namngiven arbetsyta som anges i molnkonfigurationen.
->   * **Obs!** För export till särskilda arbetsytor krävs Adobe Target Premium.
->
->* AEM måste [integrerat med Adobe Target med IMS](/help/sites-administering/integration-target-ims.md).
->
->AEM 6.5.0.0 och 6.5.1.0:
->
->* AEM Experience Fragments exporteras till standardarbetsytan i Adobe Target.
->* AEM måste integreras med Adobe Target enligt instruktionerna i [Integrera med Adobe Target](/help/sites-administering/target.md).
 
 Du kan exportera [Upplevelsefragment](/help/sites-authoring/experience-fragments.md)som har skapats i Adobe Experience Manager (AEM) till Adobe Target (Target). De kan sedan användas som erbjudanden i Target-aktiviteter för att testa och personalisera upplevelser i stor skala.
 
@@ -51,7 +27,13 @@ Det finns tre formatalternativ för att exportera ett Experience Fragment till A
 * JSON: Stöd för leverans av headless-innehåll
 * HTML &amp; JSON
 
-AEM Experience Fragments kan exporteras till standardarbetsytan i Adobe Target eller till användardefinierade arbetsytor för Adobe Target. Detta görs med Adobe Developer Console, som AEM [integrerat med Adobe Target med IMS](/help/sites-administering/integration-target-ims.md).
+AEM Experience Fragments kan exporteras till standardarbetsytan i Adobe Target eller till användardefinierade arbetsytor för Adobe Target. Detta görs med Adobe Developer Console, som AEM [integrerat med Adobe Target med IMS](/help/sites-administering/setting-up-ims-integrations-for-aem.md).
+
+>[!NOTE]
+>
+>[IMS-integreringar har nu konfigurerats med S2S OAuth](/help/sites-administering/setting-up-ims-integrations-for-aem.md).
+>
+>Tidigare konfigurationer gjordes med [JWT-autentiseringsuppgifter som nu är borttagna i Adobe Developer Console](/help/sites-administering/jwt-credentials-deprecation-in-adobe-developer-console.md).
 
 >[!NOTE]
 >
@@ -71,14 +53,17 @@ AEM Experience Fragments kan exporteras till standardarbetsytan i Adobe Target e
 
 ## Förutsättningar {#prerequisites}
 
->[!CAUTION]
->
->Vissa funktioner på den här sidan kräver att AEM 6.5.3.0 används.
-
 Du måste utföra olika åtgärder:
 
-1. Du måste [integrera AEM med Adobe Target med IMS](/help/sites-administering/integration-target-ims.md).
-2. Upplevelsefragment exporteras från AEM författarinstans, så du måste [Konfigurera AEM Link Externalizer](/help/sites-administering/target-requirements.md#configuring-the-aem-link-externalizer) på författarinstansen för att se till att alla referenser i Experience Fragment är externaliserade för webbleverans.
+1. Du måste [integrera AEM med Adobe Target med IMS](/help/sites-administering/setting-up-ims-integrations-for-aem.md).
+
+   >[!NOTE]
+   >
+   >[IMS-integreringar har nu konfigurerats med S2S OAut](/help/sites-administering/setting-up-ims-integrations-for-aem.md).
+   >
+   >Tidigare konfigurationer gjordes med [JWT-autentiseringsuppgifter som nu är borttagna i Adobe Developer Console](/help/sites-administering/jwt-credentials-deprecation-in-adobe-developer-console.md).
+
+1. Upplevelsefragment exporteras från AEM författarinstans, så du måste [Konfigurera AEM Link Externalizer](/help/sites-administering/target-requirements.md#configuring-the-aem-link-externalizer) på författarinstansen för att se till att alla referenser i Experience Fragment är externaliserade för webbleverans.
 
    >[!NOTE]
    >
