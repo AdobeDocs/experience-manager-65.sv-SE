@@ -7,9 +7,9 @@ role: User
 exl-id: 5eff4a0f-30b1-4753-ad0b-002656eed972
 hide: true
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: 45452acf73adc76aacebff9aa0dd42565abbd358
 workflow-type: tm+mt
-source-wordcount: '1523'
+source-wordcount: '1539'
 ht-degree: 1%
 
 ---
@@ -194,3 +194,9 @@ Du kan också tilldela en tagg en högre rankning för att öka dess relevans f�
 * Användningen av smarta innehållstjänster är begränsad till 2 miljoner taggade bilder per år. Alla duplicerade bilder som bearbetas och taggas räknas som taggade bilder.
 * Om du kör taggningsarbetsflödet från tidslinjen kan du använda taggar på högst 15 resurser i taget.
 * Smarta taggar fungerar bara för bildformaten PNG och JPG. Resurser som stöds och som har återgivningar skapade i dessa två format taggas med smarta taggar.
+
+>[!MORELIKETHIS]
+>
+>* [Översikt och utbildning av smarta taggar](enhanced-smart-tags.md)
+>* [Konfigurera smart taggning](config-smart-tagging.md)
+>* [Videosjälvstudiekurs om smarta taggar](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/metadata/image-smart-tags.html)

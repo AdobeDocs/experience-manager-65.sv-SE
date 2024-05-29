@@ -6,10 +6,10 @@ role: Admin
 feature: Tagging,Smart Tags
 exl-id: 9f68804f-ba15-4f83-ab1b-c249424b1396
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: 45452acf73adc76aacebff9aa0dd42565abbd358
 workflow-type: tm+mt
-source-wordcount: '1964'
-ht-degree: 23%
+source-wordcount: '2152'
+ht-degree: 21%
 
 ---
 
@@ -135,6 +135,13 @@ Om du vill använda API:er för tjänsten Smart Content skapar du en integrering
 
 ### Konfigurera Smart Content Service {#configure-smart-content-service}
 
+>[!CAUTION]
+>
+>Tidigare har konfigurationer som gjorts med JWT-autentiseringsuppgifter ersatts i Adobe Developer Console. Du kan inte skapa nya JWT-referenser efter 3 juni 2024. Sådana konfigurationer kan inte längre skapas eller uppdateras, men kan migreras till OAuth-konfigurationer.
+> Se [Konfigurera IMS-integreringar för AEM](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/setting-up-ims-integrations-for-aem-as-a-cloud-service)
+>Se [Steg för att konfigurera OAuth för lokala användare](#config-oauth-onprem)
+> Se [Felsöka smarta taggar för OAuth-autentiseringsuppgifter](#config-smart-tagging.md)
+
 Om du vill konfigurera integreringen använder du värdena för [!UICONTROL TECHNICAL ACCOUNT ID], [!UICONTROL ORGANIZATION ID], [!UICONTROL CLIENT SECRET]och [!UICONTROL CLIENT ID] fält från Adobe Developer Console-integreringen. Om du skapar en molnkonfiguration för smarta taggar kan du autentisera API-begäranden från [!DNL Experience Manager] distribution.
 
 1. I [!DNL Experience Manager], navigera till **[!UICONTROL Tools]** > **[!UICONTROL Cloud Service]** > **[!UICONTROL Legacy Cloud Services]** för att öppna [!UICONTROL Cloud Services] konsol.
@@ -151,6 +158,37 @@ Om du vill konfigurera integreringen använder du värdena för [!UICONTROL TECH
    | [!UICONTROL Technical Account ID] | [!UICONTROL TECHNICAL ACCOUNT ID] |
    | [!UICONTROL Organization ID] | [!UICONTROL ORGANIZATION ID] |
    | [!UICONTROL Client Secret] | [!UICONTROL CLIENT SECRET] |
+
+### Konfigurera OAuth för lokala användare {#config-oauth-onprem}
+
+#### Förutsättningar {#prereqs-config-oauth-onprem}
+
+Ett auktoriseringsomfång är en OAuth-sträng som innehåller följande krav:
+
+* Skapa en ny OAuth-integrering i [Developer Console](https://developer.adobe.com/console/user/servicesandapis) använda `ClientID`, `ClientSecretID`och `OrgID`.
+* Lägg till följande filer i den här sökvägen `/apps/system/config in crx/de`:
+   * `com.adobe.granite.auth.oauth.accesstoken.provider.<randomnumbers>.config`
+   * `com.adobe.granite.auth.ims.impl.IMSAccessTokenRequestCustomizerImpl.<randomnumber>.config`
+
+#### Konfigurera OAuth för lokala användare {#steps-config-oauth-onprem}
+
+1. Lägg till eller uppdatera nedanstående egenskaper i `com.adobe.granite.auth.oauth.accesstoken.provider.<randomnumbers>.config`:
+
+   * `auth.token.provider.authorization.grants="client_credentials"`
+   * `auth.token.provider.orgId="<OrgID>"`
+   * `auth.token.provider.default.claims=("\"iss\"\ :\ \"<OrgID>\"")`
+   * `auth.token.provider.scope="read_pc.dma_smart_content,\ openid,\ AdobeID,\ additional_info.projectedProductContext"`
+     `auth.token.validator.type="adobe-ims-similaritysearch"`
+   * Uppdatera `auth.token.provider.client.id` med klient-ID:t för den nya OAuth-konfigurationen.
+   * Uppdatera `auth.access.token.request` till `"https://ims-na1.adobelogin.com/ims/token/v3"`
+2. Byt namn på filen till `com.adobe.granite.auth.oauth.accesstoken.provider-<randomnumber>.config`.
+3. Utför stegen nedan i `com.adobe.granite.auth.ims.impl.IMSAccessTokenRequestCustomizerImpl.<randomnumber>.config`:
+   * Uppdatera egenskapen auth.ims.client.secrets med klienthemligheten från den nya OAuth-integreringen.
+   * Byt namn på filen till `com.adobe.granite.auth.ims.impl.IMSAccessTokenRequestCustomizerImpl-<randomnumber>.config`
+4. Spara alla ändringar i utvecklingskonsolen för innehållsdatabasen, till exempel CRXDE.
+5. Navigera till `/system/console/configMgr` och ersätt OSGi-konfigurationen från `.<randomnumber>` till `-<randomnumber>`.
+6. Ta bort den gamla konfigurationen för `"Access Token provider name: adobe-ims-similaritysearch"` in `/system/console/configMgr`.
+7. Starta om konsolen.
 
 ### Validera konfigurationen {#validate-the-configuration}
 
@@ -299,5 +337,6 @@ Om du vill kontrollera om Smart Content Service är utbildad i dina taggar i öv
 
 >[!MORELIKETHIS]
 >
+>* [Felsöka smarta taggar för OAuth-autentiseringsuppgifter](#config-smart-tagging.md)
 >* [Översikt och utbildning av smarta taggar](enhanced-smart-tags.md)
 >* [Videosjälvstudiekurs om smarta taggar](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/metadata/image-smart-tags.html)
