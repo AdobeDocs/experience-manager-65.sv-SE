@@ -6,7 +6,7 @@ role: Admin
 feature: Tagging,Smart Tags
 exl-id: 9f68804f-ba15-4f83-ab1b-c249424b1396
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 45452acf73adc76aacebff9aa0dd42565abbd358
+source-git-commit: 17a8dc53d77dfbc3dc3a4dc2f2176eaba3e1cb7c
 workflow-type: tm+mt
 source-wordcount: '2152'
 ht-degree: 21%
@@ -337,6 +337,6 @@ Om du vill kontrollera om Smart Content Service är utbildad i dina taggar i öv
 
 >[!MORELIKETHIS]
 >
->* [Felsöka smarta taggar för OAuth-autentiseringsuppgifter](#config-smart-tagging.md)
 >* [Översikt och utbildning av smarta taggar](enhanced-smart-tags.md)
+>* [Felsöka smarta taggar för OAuth-autentiseringsuppgifter](config-smart-tagging.md)
 >* [Videosjälvstudiekurs om smarta taggar](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/metadata/image-smart-tags.html)

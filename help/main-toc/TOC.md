@@ -6,9 +6,9 @@ solution-title: Experience Cloud
 user-guide-description: Läs Adobe Experience Manager 6.5-dokumentationen och se hur det fungerar och vad programmet kan göra för dig.
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM 6.5
-source-git-commit: b274d150ccffb93858de6a3a8f7e05441776d0fb
+source-git-commit: 671d35086981b5967c28b399050aef0e070ecddf
 workflow-type: tm+mt
-source-wordcount: '7400'
+source-wordcount: '7406'
 ht-degree: 1%
 
 ---
@@ -351,6 +351,7 @@ ht-degree: 1%
       + [Förhandsgranska 3D-resurser](/help/assets/previewing-3d-assets.md)
       + [Granska mappresurser och samlingar](/help/assets/bulk-approval.md)
       + [Förbättrade smarta taggar](/help/assets/enhanced-smart-tags.md)
+      + [Felsöka smarta taggar för OAuth-autentiseringsuppgifter](/help/assets/config-oauth.md)
       + [Aktivitetsström på tidslinjen](/help/assets/activity-stream.md)
       + [Bearbeta resurser](/help/assets/assets-workflow.md)
       + [Lägg till bildscheman](/help/assets/image-maps.md)
