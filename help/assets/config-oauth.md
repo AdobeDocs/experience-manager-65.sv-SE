@@ -4,9 +4,9 @@ description: Lär dig konfigurera smart taggning och förbättrad smart taggning
 role: Admin
 feature: Tagging,Smart Tags
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 109a608db0724050f6e505394da9138855ba992e
+source-git-commit: d8d821a64b39b312168733126de8929c04016ff1
 workflow-type: tm+mt
-source-wordcount: '855'
+source-wordcount: '884'
 ht-degree: 15%
 
 ---
@@ -41,7 +41,9 @@ En OAuth-konfiguration kräver följande krav:
    * `com.**adobe**.granite.auth.oauth.accesstoken.provider.<randomnumbers>.config`
    * `com.adobe.granite.auth.ims.impl.IMSAccessTokenRequestCustomizerImpl.<randomnumber>.config`
 
-### Konfigurera OAuth för lokala användare {#steps-config-oauth-onprem}
+### OAuth-konfiguration för befintliga AMS- och On-prem-användare {#steps-config-oauth-onprem}
+
+Stegen nedan kan utföras av systemadministratören. AMS-kunden kan kontakta Adobe eller lämna in en supportanmälan efter [supportprocess](https://experienceleague.adobe.com/?lang=en&amp;support-tab=home#support).
 
 1. Lägg till eller uppdatera nedanstående egenskaper i `com.adobe.granite.auth.oauth.accesstoken.provider.<randomnumbers>.config`:
 
@@ -52,14 +54,17 @@ En OAuth-konfiguration kräver följande krav:
      `auth.token.validator.type="adobe-ims-similaritysearch"`
    * Uppdatera `auth.token.provider.client.id` med klient-ID:t för den nya OAuth-konfigurationen.
    * Uppdatera `auth.access.token.request` till `"https://ims-na1.adobelogin.com/ims/token/v3"`
-2. Byt namn på filen till `com.adobe.granite.auth.oauth.accesstoken.provider-<randomnumber>.config`.
-3. Utför stegen nedan i `com.adobe.granite.auth.ims.impl.IMSAccessTokenRequestCustomizerImpl.<randomnumber>.config`:
+1. Byt namn på filen till `com.adobe.granite.auth.oauth.accesstoken.provider-<randomnumber>.config`.
+1. Utför stegen nedan i `com.adobe.granite.auth.ims.impl.IMSAccessTokenRequestCustomizerImpl.<randomnumber>.config`:
    * Uppdatera egenskapen auth.ims.client.secrets med klienthemligheten från den nya OAuth-integreringen.
    * Byt namn på filen till `com.adobe.granite.auth.ims.impl.IMSAccessTokenRequestCustomizerImpl-<randomnumber>.config`
-4. Spara alla ändringar i utvecklingskonsolen för innehållsdatabasen, till exempel CRXDE.
-5. Navigera till `/system/console/configMgr` och ersätt OSGi-konfigurationen från `.<randomnumber>` till `-<randomnumber>`.
-6. Ta bort den gamla OSGi-konfigurationen för `"Access Token provider name: adobe-ims-similaritysearch"` in `/system/console/configMgr`.
-7. Starta om konsolen.
+1. Spara alla ändringar i utvecklingskonsolen för innehållsdatabasen, till exempel CRXDE.
+<!--
+1. Navigate to `/system/console/configMgr` and replace the OSGi configuration from `.<randomnumber>` to `-<randomnumber>`.
+1. Delete the old OSGi configuration for `"Access Token provider name: adobe-ims-similaritysearch"` in `/system/console/configMgr`.
+-->
+1. I `System/console/configMgr`, ta bort de gamla konfigurationerna för `com.adobe.granite.auth.ims.impl.IMSAccessTokenRequestCustomizerImpl` och namn på åtkomsttokenleverantör `adobe-ims-similaritysearch`.
+1. Starta om konsolen.
 
 ## Validera konfigurationen {#validate-the-configuration}
 
