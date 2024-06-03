@@ -8,9 +8,9 @@ docset: aem65
 role: Admin,User
 exl-id: b5f6a54e-92d1-4631-a1d1-184f37d174b6
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+source-git-commit: 0e2c9c911ae824c55d958180a84f23079bae8263
 workflow-type: tm+mt
-source-wordcount: '2493'
+source-wordcount: '2492'
 ht-degree: 0%
 
 ---
@@ -57,7 +57,7 @@ Du kan inte hämta adaptiva formulär, interaktiv kommunikation, adaptiva formul
 
 Så här överför du Forms- och dokumentresurser:
 
->[!VIDEO](https://vimeo.com/)
+<!--[!VIDEO](https://vimeo.com/)-->
 
 1. Logga in på AEM Forms-instansen.
 1. Markera Experience Manager ![adobeexperienceManager](assets/adobeexperiencemanager.png) icon > navigation ![kompass](assets/compass.png) ikon > Forms > Forms &amp; Documents.
