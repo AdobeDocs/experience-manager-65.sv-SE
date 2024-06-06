@@ -10,9 +10,9 @@ role: User, Admin
 exl-id: 62d4a38c-2873-4560-8d58-ad172288764d
 feature: Components,Publishing
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: a28883778c5e8fb90cbbd0291ded17059ab2ba7e
+source-git-commit: ed7183efa57db6d97941e3acc99d126c2fc0f6c5
 workflow-type: tm+mt
-source-wordcount: '3049'
+source-wordcount: '3063'
 ht-degree: 6%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 6%
 
 Om du vill lägga till Dynamic Media-funktionalitet i resurser som du använder på dina webbplatser kan du lägga till **Dynamic Media**, **Interaktiva media**, **Panoramabilder**, eller **Video 360 Media** direkt på sidan. Du lägger till komponenter genom att öppna layoutläget och aktivera Dynamic Media-komponenterna. Sedan kan du lägga till komponenterna på sidan och lägga till resurser i komponenterna. Dynamic Media-komponenterna är smarta – de känner av om du lägger till en bild eller en video och konfigurationsalternativen ändras i enlighet med detta.
 
-Du lägger till Dynamic Media-resurser direkt på sidan om du använder Adobe Experience Manager som WCM-fil. Om ni använder en annan leverantör för innehållshanteringssystemet kan ni antingen [länka](/help/assets/linking-urls-to-yourwebapplication.md) eller [bädda in](/help/assets/embed-code.md) resurserna. Om du har en responsiv webbplats hos en extern leverantör läser du [Leverera optimerade bilder till en responsiv webbplats](/help/assets/responsive-site.md).
+Du kan lägga till Dynamic Media-resurser direkt på sidan om du använder Adobe Experience Manager som WCM-fil. Om ni använder en annan leverantör för innehållshanteringssystemet kan ni antingen [länka](/help/assets/linking-urls-to-yourwebapplication.md) eller [bädda in](/help/assets/embed-code.md) resurserna. Om du har en responsiv webbplats hos en extern leverantör läser du [Leverera optimerade bilder till en responsiv webbplats](/help/assets/responsive-site.md).
 
 >[!NOTE]
 >
@@ -119,7 +119,7 @@ Följande Dynamic Media-komponenter är tillgängliga:
 
 ### Dynamic Media-komponent {#dynamic-media-component}
 
-Dynamic Media-komponenten är smart. Oavsett om du lägger till en bild eller en video har du olika alternativ. Komponenten har stöd för bildförinställningar, bildbaserade visningsprogram som bilduppsättningar, snurra, blandade medieuppsättningar och video. Dessutom är visningsprogrammet responsivt - skärmstorleken ändras automatiskt baserat på skärmstorleken. Alla visningsprogram är HTML5-visningsprogram.
+Dynamic Media-komponenten är smart. Oavsett om du lägger till en bild eller en video har du olika alternativ. Komponenten har stöd för bildförinställningar, bildbaserade visningsprogram som bilduppsättningar, snurruppsättningar, blandade medieuppsättningar och video. Dessutom är visningsprogrammet responsivt - skärmstorleken ändras automatiskt baserat på skärmstorleken. Alla visningsprogram är HTML5-visningsprogram.
 
 >[!NOTE]
 >
@@ -155,7 +155,7 @@ Redigera följande Dynamic Media-inställningar genom att välja **[!UICONTROL E
 
   Det här alternativet är det enda tillgängliga alternativet om du visar bilduppsättningar, snurruppsättningar eller blandade medieuppsättningar. De visningsförinställningar som visas är smarta - endast relevanta visningsprogramförinställningar visas.
 
-* **[!UICONTROL Viewer modifiers]** - Visningsmodifierare har formen av namn=värde-par med en &amp;-avgränsare och du kan ändra visningsprogram enligt riktlinjerna i referenshandboken för visningsprogrammen. Ett exempel på en visningsmodifierare är `posterimage=img.jpg&caption=text.vtt,1` som anger en annan bild för videominiatyrbilden och associerar en undertextningsfil med videon.
+* **[!UICONTROL Viewer modifiers]** - Visningsmodifierare har formen av namn=värde-par med en &amp;-avgränsare och du kan ändra visningsprogram enligt riktlinjerna i referenshandboken för visningsprogrammen. Ett exempel på en visningsmodifierare är `posterimage=img.jpg&caption=text.vtt,1` som ställer in en annan bild för videominiatyrbilden och associerar en undertextningsfil med videon.
 
 * **[!UICONTROL Image preset]** - Välj en befintlig bildförinställning i listrutan. Om den bildförinställning du söker inte syns måste du göra den synlig. Se Hantera bildförinställningar. Du kan inte välja en visningsförinställning om du använder en bildförinställning och omvänt.
 
@@ -187,7 +187,7 @@ Redigera följande Dynamic Media-inställningar genom att välja **[!UICONTROL E
 
   Det här alternativet är inte tillgängligt om du visar bilduppsättningar, snurruppsättningar eller blandade medieuppsättningar.
 
-* **[!UICONTROL URL, Open in]** - Du kan ange att en resurs ska öppna en länk. Ange URL:en och Öppna i anger om du vill att den ska öppnas i samma fönster eller i ett nytt fönster.
+* **[!UICONTROL URL, Open in]** - Du kan ange att en resurs ska öppna en länk. Ange URL och i **Öppna i** ange om du vill att den ska öppnas i samma fönster eller i ett nytt fönster.
 
   Det här alternativet är inte tillgängligt om du visar bilduppsättningar, snurruppsättningar eller blandade medieuppsättningar.
 
@@ -250,7 +250,7 @@ Redigera följande Dynamic Media-inställning genom att välja **[!UICONTROL Edi
 
   The **[!UICONTROL Optimize for higher resolution devices]** visas bara när följande är sant:
 
-   * Under Förinställningstyp, **[!UICONTROL Smart Crop]** är markerat.
+   * Under Förinställningstyp **[!UICONTROL Smart Crop]** är markerat.
 
   ![inställning för enhetspixelproportioner för smart beskärning](/help/assets/assets-dm/dpr-smartcrop.png)
 
@@ -272,7 +272,7 @@ Redigera följande Dynamic Media-inställning genom att välja **[!UICONTROL Edi
 
 ### Interaktiv mediakomponent {#interactive-media-component}
 
-Komponenten Interactive Media är till för de resurser som har interaktivitet i dem, till exempel hotspot-områden eller bildscheman. Om du har en interaktiv bild, interaktiv video eller karusellbanderoll använder du **[!UICONTROL Interactive Media]** -komponenten.
+Komponenten Interactive Media är till för de resurser som har interaktivitet på dem, till exempel hotspot-områden eller bildscheman. Om du har en interaktiv bild, interaktiv video eller karusellbanderoll använder du **[!UICONTROL Interactive Media]** -komponenten.
 
 Komponenten Interactive Media är smart. Oavsett om du lägger till en bild eller en video har du olika alternativ. Dessutom är visningsprogrammet responsivt - skärmstorleken ändras automatiskt baserat på skärmstorleken. Alla visningsprogram är HTML5-visningsprogram.
 
@@ -301,11 +301,11 @@ Du kan redigera följande **[!UICONTROL General]** inställningar genom att väl
 
   Du kan redigera följande **[!UICONTROL Add To Cart]** inställningar genom att välja **[!UICONTROL Edit]** i komponenten.
 
-* **[!UICONTROL Show Product Asset]** - Som standard är det här värdet markerat. Produktresursen visar en bild av produkten enligt definitionen i modulen Commerce. Avmarkera kryssrutan om du inte vill visa produktresursen.
+* **[!UICONTROL Show Product Asset]** - Som standard är det här värdet markerat. Produktresursen visar en bild av produkten enligt definitionen i modulen Commerce. Avmarkera bockmarkeringen så att produktresursen inte visas.
 
-* **[!UICONTROL Show Product Price]** - Som standard är det här värdet markerat. Produktpriset visar priset för artikeln enligt definitionen i modulen Handel. Avmarkera kryssrutan om du inte vill visa produktpriset.
+* **[!UICONTROL Show Product Price]** - Som standard är det här värdet markerat. Produktpriset visar priset på artikeln enligt definitionen i Commerce-modulen. Avmarkera bockmarkeringen så att produktpriset inte visas.
 
-* **[!UICONTROL Show Product Form]** - Som standard är det här värdet inte markerat. Produktformuläret innehåller alla produktvarianter som storlek och färg. Avmarkera kryssrutan om du inte vill visa produktvarianterna.
+* **[!UICONTROL Show Product Form]** - Som standard är det här värdet inte markerat. Produktformuläret innehåller alla produktvarianter som storlek och färg. Avmarkera bockmarkeringen så att produktvarianterna inte visas.
 
 ### Panoramamakomponent {#panoramic-media-component}
 
@@ -333,7 +333,7 @@ Du kan redigera följande inställning genom att markera **[!UICONTROL Configure
 
 * **[!UICONTROL Viewer Preset]** - Välj ett befintligt visningsprogram i listrutan med förinställningar för visningsprogrammet.
 
-Om den visningsförinställning du söker efter inte visas kontrollerar du att den är publicerad. Publicera förinställningar för visningsprogrammet innan du använder dem. Se [Hantera visningsförinställningar](/help/assets/managing-viewer-presets.md).
+Om den visningsförinställning du sökte efter inte visas kontrollerar du att den är publicerad. Publicera förinställningar för visningsprogrammet innan du använder dem. Se [Hantera visningsförinställningar](/help/assets/managing-viewer-presets.md).
 
 ### Video 360 Media Component {#video-media-component}
 
@@ -347,13 +347,13 @@ Visningsprogrammet har inbyggt stöd för leverans av 360 videomaterial. Som sta
 
 Du kan redigera följande inställning genom att markera **[!UICONTROL Configure]** i komponenten.
 
-* **[!UICONTROL Viewer Preset]** - Välj ett befintligt visningsprogram i listrutan med förinställningar för visningsprogrammet. Använd Video360VR för slutanvändare som använder virtuella verklighetsglasögon. Innehåller grundläggande videouppspelningskontroller och funktioner för sociala medier. Använd Video360_social som innehåller grundläggande videouppspelningskontroller. Videoåtergivning sker i stereoläge. Manuell vypunktskontroll är inaktiverad men gyroskopisk kontroll är aktiverad. Det finns inga funktioner för sociala medier.
+* **[!UICONTROL Viewer Preset]** - Välj ett befintligt visningsprogram i listrutan med förinställningar för visningsprogrammet. Använd `Video360VR` för slutanvändare som använder virtuella verklighetsglasögon. Det innehåller grundläggande videouppspelningskontroller och funktioner för sociala medier. Använd `Video360_social` som innehåller grundläggande videouppspelningskontroller. Videoåtergivning sker i stereoläge. Manuell vypunktskontroll är inaktiverad men gyroskopisk kontroll är aktiverad. Det finns inga funktioner för sociala medier.
 
-Om den visningsförinställning du söker efter inte visas kontrollerar du att den är publicerad. Kontrollera att du publicerar förinställningarna för visningsprogrammet innan du använder dem. Se [Hantera visningsförinställningar](/help/assets/managing-viewer-presets.md).
+Om den visningsförinställning du sökte efter inte visas kontrollerar du att den är publicerad. Kontrollera att du publicerar förinställningarna för visningsprogrammet innan du använder dem. Se [Hantera visningsförinställningar](/help/assets/managing-viewer-presets.md).
 
 ### Använda HTTP/2 för att leverera Dynamic Media-material {#using-http-to-delivery-dynamic-media-assets}
 
-HTTP/2 är det nya, uppdaterade webbprotokollet som förbättrar kommunikationen mellan webbläsare och servrar. Det ger snabbare överföring av information och minskar mängden processorkraft som behövs. Dynamic Media-material kan nu levereras via HTTP/2 vilket ger bättre respons och laddningstider.
+HTTP/2 är det nya, uppdaterade webbprotokollet som förbättrar kommunikationen mellan webbläsare och servrar. Det ger snabbare överföring av information och minskar mängden processorkraft som behövs. Dynamic Media-material kan nu levereras via HTTP/2 som ger bättre respons och laddningstider.
 
 Se [HTTP2-leverans av innehåll](/help/assets/http2.md) om du vill ha fullständig information om hur du kommer igång med HTTP/2 med ditt Dynamic Media-konto.
 
@@ -362,6 +362,6 @@ Se [HTTP2-leverans av innehåll](/help/assets/http2.md) om du vill ha fullständ
 >* [Använda videospelaren i Experience Manager Dynamic Media](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/dynamic-media/video/dynamic-media-video-player-feature-video-use.html)
 >* [Använd interaktiv video med Experience Manager Dynamic Media](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/dynamic-media/video/dynamic-media-interactive-video-feature-video-use.html)
 >* [Förstå resursvisningsprogrammet med Experience Manager Dynamic Media](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/dynamic-media/viewers/dynamic-media-viewer-feature-video-understand.html)
->* [Använd anpassad videominiatyr med Experience Manager Dynamic Media](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/dynamic-media/video/dynamic-media-video-thumbnails-feature-video-use.html)
+>* [Använd en anpassad videominiatyr med Experience Manager Dynamic Media](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/dynamic-media/video/dynamic-media-video-thumbnails-feature-video-use.html)
 >* [Förstå färghantering med Experience Manager Dynamic Media](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/dynamic-media/images/dynamic-media-color-management-technical-video-setup.html)
 >* [Använda bildskärpa med Experience Manager Dynamic Media](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/dynamic-media/images/dynamic-media-image-sharpening-feature-video-use.html)

@@ -10,16 +10,16 @@ exl-id: 70a39462-8584-4c76-a097-05ee436247b7
 solution: Experience Manager, Experience Manager Sites
 feature: Deploying
 role: Admin
-source-git-commit: 48d12388d4707e61117116ca7eb533cea8c7ef34
+source-git-commit: a8203a6bccff821dd6ca3f63c196829379aabe55
 workflow-type: tm+mt
-source-wordcount: '6185'
+source-wordcount: '6192'
 ht-degree: 0%
 
 ---
 
 # Adobe Experience Manager med MongoDB{#aem-with-mongodb}
 
-Den här artikeln syftar till att förbättra kunskapen om uppgifter och överväganden som är nödvändiga för att distribuera AEM (Adobe Experience Manager) med MongoDB.
+Den här artikeln syftar till att förbättra kunskapen om de uppgifter och överväganden som är nödvändiga för att distribuera AEM (Adobe Experience Manager) med MongoDB.
 
 Mer distributionsrelaterad information finns i [Driftsättning och underhåll](/help/sites-deploying/deploy.md) i dokumentationen.
 
@@ -32,7 +32,7 @@ MongoDB används vanligtvis för att stödja AEM författardistributioner där n
 * stora volymer sidredigeringar,
 * Stora utrullningar eller aktiveringar.
 
-Kriterierna ovan gäller bara för författarinstanserna och inte för några publiceringsinstanser som ska vara TjärMK-baserade. Antalet användare refererar till autentiserade användare, eftersom författarinstanser inte tillåter oautentiserad åtkomst.
+Kriterierna ovan gäller bara för författarinstanserna och inte för publiceringsinstanser som ska vara TjärMK-baserade. Antalet användare refererar till autentiserade användare, eftersom författarinstanser inte tillåter oautentiserad åtkomst.
 
 Om villkoren inte uppfylls rekommenderar vi en aktiverings-/standby-distribution för att åtgärda tillgängligheten. Vanligtvis bör MongoDB övervägas i situationer där skalningskraven är mer än vad som kan uppnås med en enda maskinvaruartikel.
 
@@ -46,7 +46,7 @@ Nedan visas en minimal distribution för AEM på MongoDB. För enkelhetens skull
 
 ![chlimage_1-4](assets/chlimage_1-4.png)
 
-En minimal driftsättning kräver tre `mongod` instanser konfigurerade som en replikuppsättning. En instans väljs som primär och de andra instanserna är sekundära, med valet hanterat av `mongod`. Kopplade till varje instans är en lokal disk. Klustret kan alltså hantera inläsningen, och en genomströmning på minst 12 MB per sekund med mer än 3 000 I/O-åtgärder per sekund (IOPS) rekommenderas.
+En minimal driftsättning kräver tre `mongod` instanser konfigurerade som en replikuppsättning. En instans väljs som primär och de andra instanserna är sekundära, med valet hanterat av `mongod`. Kopplade till varje instans är en lokal disk. Klustret kan alltså hantera belastningen, och en minsta genomströmning på 12 MB per sekund med mer än 3 000 I/O-åtgärder per sekund (IOPS) rekommenderas.
 
 AEM författare är anslutna till `mongod` -instanser, där varje AEM kan ansluta till alla tre `mongod` -instanser. Skrivningar skickas till det primära och läsningar kan läsas från någon av instanserna. Trafiken distribueras baserat på inläsningen av en Dispatcher till någon av de aktiva AEM författarinstanserna. Oak-datalagret är en `FileDataStore`och MongoDB-övervakning tillhandahålls av MMS eller MongoDB Ops Manager beroende på platsen för distributionen. Operativsystemnivå och loggövervakning tillhandahålls av tredjepartslösningar som Splunk eller Ganglia.
 
@@ -60,7 +60,7 @@ En lista över vilka operativsystem som stöds för AEM 6 finns i [sidan Teknisk
 
 Virtualiserade miljöer stöds förutsatt att det finns god kommunikation mellan de olika tekniska team som kör projektet. Det här stödet omfattar det team som kör AEM, det team som äger operativsystemet och det team som hanterar den virtualiserade infrastrukturen.
 
-Det finns specifika krav som omfattar I/O-kapaciteten för MongoDB-instanserna, som måste hanteras av det team som hanterar den virtualiserade miljön. Om projektet använder en molndistribution, som Amazon Web Services, måste instanser etableras med tillräcklig I/O-kapacitet och konsekvens för att stödja MongoDB-instanserna. Annars fungerar MongoDB-processerna och Oak-databasen otillförlitligt och felaktigt.
+Det finns specifika krav som omfattar I/O-kapaciteten för MongoDB-instanserna som måste hanteras av det team som hanterar den virtualiserade miljön. Om projektet använder en molndistribution, som Amazon Web Services, måste instanser etableras med tillräcklig I/O-kapacitet och konsekvens för att stödja MongoDB-instanserna. Annars fungerar MongoDB-processerna och Oak-databasen otillförlitligt och felaktigt.
 
 I virtualiserade miljöer kräver MongoDB specifika I/O- och VM-konfigurationer för att säkerställa att lagringsmotorn i MongoDB inte har någon VMWare-resursallokeringsprinciper. En framgångsrik implementering säkerställer att det inte finns några hinder mellan de olika teamen och att alla är registrerade för att leverera de prestanda som krävs.
 
@@ -113,7 +113,7 @@ Det kräver en agent som är installerad på MongoDB-instansen som ansluter till
 * En övervakningsagent som kan övervaka `mongod` instans,
 * En säkerhetskopieringsagent som kan utföra schemalagda säkerhetskopieringar av data.
 
-Även om det är enklare att använda Cloud Manager för underhållsautomatisering av ett MongoDB-kluster är många av rutinuppgifterna inte nödvändiga, och varken använder dem för säkerhetskopiering eller säkerhetskopiering. Övervakning krävs dock när du väljer Cloud Manager för övervakning.
+Även om det är enklare att använda Cloud Manager för underhållsautomatisering av ett MongoDB-kluster är många av rutinuppgifterna inte nödvändiga, och varken använder dem för säkerhetskopiering eller säkerhetskopiering. När du väljer en Cloud Manager som ska övervakas måste du dock övervaka den.
 
 Mer information om MongoDB Cloud Manager finns i [MongoDB-dokumentation](https://docs.cloud.mongodb.com/).
 
@@ -125,7 +125,7 @@ MongoDB Ops Manager är samma programvara som MongoDB Cloud Manager. När Ops Ma
 
 Övervakning på operativsystemnivå krävs för att köra ett AEM MongoDB-kluster.
 
-Ganglia är ett bra exempel på ett sådant system och ger en bild av omfattningen och detaljerna av den information som krävs, utöver grundläggande hälsomått som CPU, genomsnittlig belastning och ledigt diskutrymme. För att kunna diagnostisera problem krävs information på lägre nivå, t.ex. entropingpoolnivåer, CPU I/O Wait, socketar i FIN_WAIT2-läge.
+Ganglia är ett bra exempel på ett sådant system och ger en bild av hur omfattande och detaljerad information som krävs utöver grundläggande hälsomått som CPU, genomsnittlig belastning och ledigt diskutrymme. För att kunna diagnostisera problem krävs information på lägre nivå, t.ex. entropingpoolnivåer, CPU I/O Wait, socketar i FIN_WAIT2-läge.
 
 ### Loggaggregering {#log-aggregation}
 
@@ -233,7 +233,7 @@ Vi rekommenderar att en beständig cachekonfiguration aktiveras för MongoDB-dis
 
 ### Stöd för operativsystem {#operating-system-support}
 
-MongoDB 2.6 använder en minnesmappad lagringsmotor som är känslig för vissa aspekter av operativsystemets nivåhantering mellan RAM och disk. Fråge- och läsprestanda för MongoDB-instansen använder sig av att undvika eller eliminera långsamma I/O-åtgärder som ofta kallas sidfel. Dessa problem är sidfel som gäller för `mongod` i synnerhet processen. Blanda inte ihop med sidfel på operativsystemnivå.
+MongoDB 2.6 använder en minnesmappad lagringsmotor som är känslig för vissa aspekter av operativsystemets nivåhantering mellan RAM och disk. Fråge- och läsprestanda för MongoDB-instansen använder sig av att undvika eller eliminera långsamma I/O-åtgärder som ofta kallas sidfel. Dessa problem är sidfel som gäller för `mongod` i synnerhet processen. Blanda inte ihop detta med sidfel på operativsystemnivå.
 
 För snabb åtgärd bör MongoDB-databasen bara komma åt data som redan finns i RAM-minnet. De data som de måste komma åt består av index och data. Den här samlingen med index och data kallas för arbetsuppsättningen. Om arbetsuppsättningen är större än den tillgängliga RAM MongoDB måste skicka in data från disken till en I/O-kostnad, och andra data som redan finns i minnet raderas. Om avlägsnandet medför att data läses in på nytt från disken, dominerar sidfelen och prestandan försämras. Om arbetsuppsättningen är dynamisk och variabel uppstår fler sidfel som stöd för åtgärder.
 
@@ -241,7 +241,7 @@ MongoDB kan köras i flera operativsystem, bland annat en mängd olika Linux®-v
 
 #### Linux® {#linux}
 
-* Inaktivera genomskinliga övertoningar och överstrålning. Se [Inställningar för genomskinliga stora sidor](https://docs.mongodb.com/manual/tutorial/transparent-huge-pages/) för mer information.
+* Stäng av de genomskinliga övertoningarna och överstrålningarna. Se [Inställningar för genomskinliga stora sidor](https://docs.mongodb.com/manual/tutorial/transparent-huge-pages/) för mer information.
 * [Justera inställningar för readahead](https://docs.mongodb.com/manual/administration/production-notes/#readahead) på de enheter som lagrar databasfilerna så att de passar ditt sätt att arbeta.
 
    * Om din arbetsuppsättning är större än det tillgängliga RAM-minnet och dokumentets åtkomstmönster är slumpmässigt bör du, för MMAPv1-lagringsmotorn, överväga att sänka läsbarheten till 32 eller 16. Utvärdera olika inställningar så att du kan hitta ett optimalt värde som maximerar det inbyggda minnet och minskar antalet sidfel.
@@ -340,7 +340,7 @@ Från och med 3.4 används som standard det interna cache-minnet för WiredTiger
 
 Som standard använder WiredTiger blockkomprimering för Snappy för alla samlingar och prefixkomprimering för alla index. Komprimeringsstandardinställningarna kan konfigureras på global nivå och kan även ställas in per samling och per index när du skapar samlingar och index.
 
-Olika representationer används för data i det interna WiredTiger-cacheminnet jämfört med formatet på disken:
+Olika representationer används för data i det interna WiredTiger-cacheminnet jämfört med i formatet på disken:
 
 * Data i filsystemets cache är samma som på disken-formatet, inklusive fördelarna med komprimering för datafiler. Filsystemets cache används av operativsystemet för att minska I/O-diskens storlek.
 
@@ -392,7 +392,7 @@ Kör bara på noderna. Mongod körs bara på de angivna noderna och använder ba
 Kör bara på de angivna processorerna (kärnor). Mongod körs bara på de angivna CPU:erna och använder bara minne som är tillgängligt på dessa CPU:er.
 
 * `--localalloc`
-Alltid allokera minne på den aktuella noden, men använd alla noder som tråden körs på. Om en tråd utför allokering används endast det minne som är tillgängligt för den processorn.
+Alltid allokera minne på den aktuella noden, men använd alla noder som tråden körs på. Om en tråd utför en allokering används endast det minne som är tillgängligt för den processorn.
 
 * `--preferred=<node>`
 Prioriterar allokering till en nod, men återgår till andra om den önskade noden är full. Relativ notation för att definiera en nod kan användas. Dessutom körs trådarna på alla noder.
@@ -567,13 +567,13 @@ Om du använder WMWare ESX för att hantera och driftsätta dina virtualiserade 
 1. Stäng av minnesballongfunktion
 1. Förallokera och reservera minne för de virtuella datorer som är värdar för MongoDB-databaser
 1. Använd I/O-kontroll för lagring för att tilldela tillräckligt med I/O till `mongod` -processen.
-1. Garantera processorresurser för de datorer som är värdar för MongoDB genom att ställa in [CPU-reservation](https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.hostclient.doc/GUID-6C9023B2-3A8F-48EB-8A36-44E3D14958F6.html?hWord=N4IghgNiBc4RB7AxmALgUwAQGEAKBVTAJ3QGcEBXIpMkAXyA)
+1. Garantera processorresurserna hos de datorer som är värdar för MongoDB genom att ställa in [CPU-reservation](https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.hostclient.doc/GUID-6C9023B2-3A8F-48EB-8A36-44E3D14958F6.html?hWord=N4IghgNiBc4RB7AxmALgUwAQGEAKBVTAJ3QGcEBXIpMkAXyA)
 
-1. Överväg att använda ParaVirtual I/O-drivrutiner. Se [kunskapsbasartikel](https://kb.vmware.com/selfservice/microsites/search.do?language=en_US&amp;cmd=displayKC&amp;externalId=1010398).
+1. Överväg att använda ParaVirtual I/O-drivrutiner. <!-- URL is a 404 See [knowledgebase article](https://kb.vmware.com/selfservice/microsites/search.do?language=en_US&cmd=displayKC&externalId=1010398).-->
 
 ### Amazon Web Services {#amazon-web-services}
 
-Dokumentation om hur du konfigurerar MongoDB med Amazon Web Services finns i [Konfigurera AWS-integrering](https://docs.cloud.mongodb.com/tutorial/configure-aws-settings/) artikel på MongoDB-webbplatsen.
+Dokumentation om hur du konfigurerar MongoDB med Amazon Web Services finns i [Konfigurera AWS-integrering](https://www.mongodb.com/docs/cloud-manager/tutorial/configure-aws-integration/) artikel på MongoDB-webbplatsen.
 
 ## Säkra MongoDB före distribution {#securing-mongodb-before-deployment}
 
@@ -595,7 +595,7 @@ Eftersom Dispatcher är tillståndslös kan den enkelt skalas vågrätt. I vissa
 
 Om du kör AEM utan en Dispatcher måste SSL-avslutning och belastningsutjämning utföras av ett annat program. Det är obligatoriskt eftersom sessioner måste ha tillhörighet till den AEM instansen som de skapas i, ett koncept som kallas klibbiga anslutningar. Orsaken är att uppdateringarna av innehållet har minimal fördröjning.
 
-Kontrollera [Dispatcher-dokumentation](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html) om du vill ha mer information om hur du konfigurerar den.
+Kontrollera [Dispatcher-dokumentation](https://experienceleague.adobe.com/en/docs/experience-manager-dispatcher/using/dispatcher) om du vill ha mer information om hur du konfigurerar den.
 
 ### Ytterligare konfiguration {#additional-configuration}
 

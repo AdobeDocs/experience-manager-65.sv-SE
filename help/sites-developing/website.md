@@ -10,7 +10,7 @@ exl-id: d7cf843c-c837-4b97-b6c5-0fbd6793bdd4
 solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
-source-git-commit: a28883778c5e8fb90cbbd0291ded17059ab2ba7e
+source-git-commit: ed7183efa57db6d97941e3acc99d126c2fc0f6c5
 workflow-type: tm+mt
 source-wordcount: '4919'
 ht-degree: 2%
@@ -477,7 +477,7 @@ Så här inkluderar du topnav i innehållsideskomponenten:
 
 #### Förbättra sidor med undertexter {#enhancing-pages-with-subtitles}
 
-Komponenten Sida definierar egenskaper som gör att du kan ange underrubriker för sidor. Lägg till undertexter med information om sidinnehållet.
+Komponenten Sida definierar egenskaper som gör att du kan ange bildtexter för sidor. Lägg till bildtexter som innehåller information om sidinnehållet.
 
 1. Öppna **Produkter** sida.
 1. På Sidekick **Sida** flik, klicka **Sidegenskaper**.
