@@ -5,9 +5,10 @@ mini-toc-levels: 4
 solution: Experience Manager
 feature: Release Information
 role: User,Admin,Architect,Developer
-source-git-commit: 6bf2d6409a15be02a247fab84caa743e8542da13
+exl-id: a52311b9-ed7a-432e-8f35-d045c0d8ea4c
+source-git-commit: 4035bfae6a525292ca71b182ebed2ac9839426b8
 workflow-type: tm+mt
-source-wordcount: '3009'
+source-wordcount: '3027'
 ht-degree: 0%
 
 ---
@@ -219,6 +220,12 @@ Korrigeringar i [!DNL Experience Manager] Forms levereras via ett separat tillä
 
 * Textsträngen i mallredigeraren *`No video available.`* är inte lokaliserad. (SITES-13190)
 * Sträng efter att en användare har aktiverats eller inaktiverats lokaliseras inte i **verktyg** > **Säkerhet** > **Användare** > *any_user_name* > **Aktivera** > **OK** och markera *any_user_name* > **Inaktivera** > **OK**. (NPR-41737)
+
+#### Oak {#foundation-oak-6521}
+
+* Prestandaregressionskorrigering - Undvik intervallfrågor på liknande villkor. (OAK-9481)
+
+* Ny Oak-version är 1.2.20.
 
 #### Plattform{#foundation-platform-6521}
 
@@ -484,4 +491,3 @@ Dessa webbplatser är bara tillgängliga för kunder. Om du är kund och behöve
 >* [[!DNL Experience Manager] produktsida](https://business.adobe.com/products/experience-manager/adobe-experience-manager.html)
 >* [[!DNL Experience Manager] 6.5-dokumentation](https://experienceleague.adobe.com/en/docs/experience-manager-65)
 >* [Prenumerera på produktuppdateringar för Adobe Priority](https://www.adobe.com/subscription/priority-product-update.html)
-
