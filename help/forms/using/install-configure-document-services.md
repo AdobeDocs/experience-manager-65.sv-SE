@@ -5,7 +5,7 @@ topic-tags: installing
 role: Admin, User, Developer
 solution: Experience Manager, Experience Manager Forms
 exl-id: 5d48e987-16c2-434b-8039-c82181d2e028
-source-git-commit: 0a1a0d8e3a2794bda247e7b07a2ef9d9fcac7c13
+source-git-commit: 7b0f8222408d43a298fa2036020963721cfbd1f9
 workflow-type: tm+mt
 source-wordcount: '5503'
 ht-degree: 0%
@@ -78,8 +78,8 @@ Innan du börjar installera och konfigurera AEM Forms Document Services bör du 
 
 >[!NOTE]
 >
->* I Microsoft® Windows stöder PDF Generator konverteringsvägar för WebKit, Acrobat WebCapture och PhantomJS för att konvertera HTML-filer till PDF-dokument.
->* På UNIX-baserade operativsystem stöder PDF Generator konverteringsvägar för WebKit och PhantomJS för att konvertera HTML-filer till PDF-dokument.
+>* I Microsoft® Windows stöder PDF Generator konverteringsvägar för WebKit, Acrobat WebCapture och WebToPDF för att konvertera HTML-filer till PDF-dokument.
+>* På UNIX-baserade operativsystem stöder PDF Generator konverteringsvägar för WebKit och WebToPDF för konvertering av HTML-filer till PDF.
 >
 
 ### Extra krav för UNIX-baserat operativsystem {#extrarequirements}
@@ -168,7 +168,7 @@ Om du använder ett UNIX-baserat operativsystem installerar du följande 32-bita
    * /usr/lib/libcrypto.so
    * /usr/lib/libssl.so
 
-* **(endast PDF Generator)** PDF Generator-tjänsten stöder WebKit- och PhantomJS-vägar för att konvertera HTML-filer till PDF-dokument. Installera nedanstående 64-bitarsbibliotek om du vill aktivera konvertering för PhantomJS-vägar. I allmänhet är dessa bibliotek redan installerade. Om något bibliotek saknas installerar du det manuellt:
+* **(endast PDF Generator)** Tjänsten PDF Generator har stöd för WebKit- och WebToPDF-vägar för konvertering av HTML-filer till PDF-dokument. Installera nedanstående 64-bitarsbibliotek om du vill aktivera konvertering för WebToPDF-vägar. I allmänhet är dessa bibliotek redan installerade. Om något bibliotek saknas installerar du det manuellt:
 
    * linux-gate.so.1
    * libz.so.1
@@ -336,7 +336,7 @@ Du kan undvika att få felmeddelanden genom att inaktivera Windows-felrapporteri
 
 ### (Endast Windows) Konfigurera konvertering från HTML till PDF {#configure-html-to-pdf-conversion}
 
-Tjänsten PDF Generator tillhandahåller vägar eller metoder för WebKit, WebCapture och PhantomJS för att konvertera HTML-filer till PDF-dokument. Om du vill aktivera konvertering för WebKit- och Acrobat WebCapture-vägar i Windows kopierar du Unicode-teckensnittet till katalogen %windir%\fonts.
+Tjänsten PDF Generator tillhandahåller vägar eller metoder för WebKit, WebCapture och WebToPDF för att konvertera HTML-filer till PDF-dokument. Om du vill aktivera konvertering för WebKit- och Acrobat WebCapture-vägar i Windows kopierar du Unicode-teckensnittet till katalogen %windir%\fonts.
 
 >[!NOTE]
 >
@@ -344,7 +344,7 @@ Tjänsten PDF Generator tillhandahåller vägar eller metoder för WebKit, WebCa
 
 ### (Endast UNIX-baserade plattformar) Extra konfigurationer för konvertering från HTML till PDF  {#extra-configurations-for-html-to-pdf-conversion}
 
-På UNIX-baserade plattformar stöder tjänsten PDF Generator WebKit och PhantomJS-vägar för att konvertera HTML-filer till PDF-dokument. Om du vill aktivera konvertering från HTML till PDF ska du göra följande konfigurationer som passar din önskade konverteringsväg:
+På UNIX-baserade plattformar har PDF Generator-tjänsten stöd för WebKit- och WebToPDF-vägar för konvertering av HTML-filer till PDF. Om du vill aktivera konvertering från HTML till PDF ska du göra följande konfigurationer som passar din önskade konverteringsväg:
 
 ### (Endast UNIX-baserade plattformar) Aktivera stöd för Unicode-teckensnitt (endast WebKit) {#enable-support-for-unicode-fonts-webkit-only}
 
@@ -485,7 +485,7 @@ I Microsoft® Windows används Adobe Acrobat för att konvertera de filformat so
 
 ### (Endast Windows) Konfigurera primär väg för konvertering från HTML till PDF {#configure-primary-route-for-html-to-pdf-conversion-windows-only}
 
-Tjänsten PDF Generator erbjuder flera vägar för att konvertera HTML-filer till PDF-dokument: Webkit, Acrobat WebCapture (endast Windows) och PhantomJS. Adobe rekommenderar att du använder PhantomJS-vägen eftersom den kan hantera dynamiskt innehåll och inte är beroende av 32-bitars bibliotek eller inte kräver några extra teckensnitt. Inte heller PhantomJS-vägen kräver sudo- eller root-åtkomst för att köra konverteringen.
+Tjänsten PDF Generator erbjuder flera vägar för att konvertera HTML-filer till PDF-dokument: Webkit, Acrobat WebCapture (endast Windows) och WebToPDF. Adobe rekommenderar att WebToPDF-vägen används eftersom den kan hantera dynamiskt innehåll och inte är beroende av 32-bitars bibliotek eller inte kräver några extra teckensnitt. WebToPDF-flödet kräver inte heller sudo- eller root-åtkomst för att köra konverteringen.
 
 Den primära standardvägen för konvertering från HTML till PDF är Webkit. Så här ändrar du konverteringsflödet:
 
@@ -583,7 +583,7 @@ När du har installerat AEM Forms-tillägget och Microsoft® Project på datorn 
 
 1. Navigera till `[crx-repository]/bedrock/svcnative/HtmlToPdfSvc/bin/`.
 
-1. Kör följande kommando för att lista alla bibliotek som behövs för konverteringen från HTML till PDF för PhantomJS.
+1. Kör följande kommando för att lista alla bibliotek som WebToPDF kräver för konvertering från HTML till PDF.
 
    `ldd phantomjs`
 
@@ -691,11 +691,11 @@ Innan du utför följande kontroller bör du kontrollera att [Systemberedskap](#
 
 * Se till att teckensnittskataloger läggs till i användargränssnittet för PDF Generator config.
 
-**Linux och Solaris (PhantomJS-konverteringsväg)**
+**Linux och Solaris (konverteringsväg för WebToPDF)**
 
-* Kontrollera att det finns ett 32-bitars bibliotek (libicudata.so.42) för Webkit-baserad HTMLToPDF-konvertering och att det finns 64-bitars (libicudata.so.42 libs för PhantomJS-baserad HTMLToPDF-konvertering.
+* Kontrollera att det finns ett 32-bitars bibliotek (libicudata.so.42) för Webkit-baserad HTMLToPDF-konvertering och att det finns 64-bitars (libicudata.so.42 libs för WebToPDF-baserad HTMLToPDF-konvertering.
 
-* Kör följande kommando för att lista saknade bibliotek för skenobjekt:
+* Kör följande kommando för att lista saknade bibliotek för WebToPDF:
 
   ```
   ldd phantomjs | grep not
