@@ -10,9 +10,9 @@ role: Admin, User, Developer
 feature: Forms Designer
 exl-id: 90503d29-e079-43f4-a5dc-ce90ed7844c6
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+source-git-commit: 09eae6e3550e9e8505c042e23d6569971841d441
 workflow-type: tm+mt
-source-wordcount: '595'
+source-wordcount: '767'
 ht-degree: 0%
 
 ---
@@ -37,9 +37,10 @@ ht-degree: 0%
 
 >[!NOTE]
 >
-> 64-bitarsversionen av designern introducerades med AEM 6.5 Forms Service Pack 19 (6.5.19.0).
+>* 64-bitarsversionen av designern introducerades med AEM 6.5 Forms Service Pack 19 (6.5.19.0).
+>* 32-bitarsversionen av designern är inaktuell sedan den släpptes [AEM Forms Service Pack 21 (6.5.21.0)](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases).
 
-
+Mer information om installationen av Forms Designer finns på [Frågor och svar](#fandq).
 
 ## Installera AEM Forms Designer {#install-designer}
 
@@ -104,3 +105,18 @@ Om du använder ett fristående installationsprogram för AEM Forms Designer utf
 1. Installera den senaste versionen av AEM Forms Designer genom att dubbelklicka på den hämtade installationsfilen.
 
 +++
+
+## Frågor och svar {#fandq}
+
+* **Kan en användare uppgradera direkt till 64 bitar?**
+   * Ja, man kan uppgradera direkt till 64-bitarsdesignern. Installera [SP19](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/fd/Designer-Patch/sp19_x64/aemforms_designer_6_5_0_wwe_win.zip) designer fullinstallerar och lägger sedan på en patch till designer.
+
+* **Kan användare ha både 32-bitars och 64-bitars installerat på datorn?**
+   * Nej, 32- och 64-bitarsinstallationer fungerar inte på samma dator. Användaren kan antingen ha en 32-bitars designer eller en 64-bitars designer.
+
+* **Hur kontrollerar man om en användare har en 64-bitars designer eller 32-bitars designer?**
+   * Det finns två sätt att kontrollera Forms Designer-versionen:
+
+      1. Öppna Designer, gå till Hjälp, klicka på Om designer så ser du versionsinformation för designer tillsammans med bitinformationen. 64-bitarsversionen är till exempel skriven i slutet så som visas här:
+         `6.5.21.20240522.1.161 | 64 bit`
+      1. Öppna Designer, uppe till vänster ser du en varumärkesikon som innehåller 64-bitarsinformation om produktnamnet.

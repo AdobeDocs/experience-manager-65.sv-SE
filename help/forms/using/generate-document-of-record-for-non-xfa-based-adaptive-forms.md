@@ -1,17 +1,16 @@
 ---
 title: Generera arkivdokument för anpassningsbara formulär
-description: Beskriver hur du kan generera en mall för ett postdokument (DoR) för adaptiva formulär.
+description: Beskriver hur du kan generera en urkund (DoR) för anpassade formulär.
 content-type: reference
 topic-tags: adaptive_forms, develop
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 docset: aem65
 feature: Adaptive Forms, Foundation Components
-exl-id: 7240897f-6b3a-427a-abc6-66310c2998f3
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+source-git-commit: f8013aeedb79f900158df2291f7f641353bb4c05
 workflow-type: tm+mt
-source-wordcount: '4119'
+source-wordcount: '4155'
 ht-degree: 0%
 
 ---
@@ -315,47 +314,52 @@ Om du vill lokalisera den varumärkesinformation som du anger på fliken Dokumen
 1. Välj ![dortab](/help/forms/using/assets/dortab.png). Fliken Dokument för post visas.
 1. Välj antingen standardmallen eller en anpassad mall för återgivning av postdokumentet. Om du väljer standardmallen visas en miniatyrförhandsvisning av postdokumentet under listrutan Mall.
 
-   ![brandingtemplate](/help/forms/using/assets/brandingtemplate.png)
+   ![brandingtemplate](/help/forms/using/assets/brandingtemplateupdate.png)
 
    Om du väljer en anpassad mall bläddrar du till en XDP-fil på AEM Forms-servern. Om du vill använda en mall som inte redan finns på din AEM Forms-server måste du först överföra XDP-filen till din AEM Forms-server.
 
-1. Beroende på om du väljer en standardmall eller en anpassad mall visas några eller alla följande egenskaper på fliken Dokument för post. Ange dessa korrekt:
+### Egenskaper för mallsida (#master-page-properties)
 
-   * **Logotypbild**: Du kan antingen välja att använda logotypbilden från det adaptiva formuläret, välja en från DAM eller överföra en från datorn.
-   * **Formulärtitel**
-   * **Sidhuvudstext**
-   * **Ansvarsfriskrivning**
-   * **Ansvarsfriskrivning**
-   * **Ansvarsfriskrivning**
-   * **Dekorfärg**: Den färg i vilken rubriktext och avgränsningslinjer återges i dokumentet eller posten PDF
-   * **Font Family**: Teckensnittsfamilj för texten i det registrerade PDF
-   * **Visa endast de valda värdena för komponenterna Kryssruta och Alternativknapp**
-   * **Avgränsare för flera markerade värden**
-   * **Inkludera formulärobjekt som inte är bundna till datamodell**
-   * **Uteslut dolda fält från postdokumentet**
-   * **Dölj beskrivning av paneler**
+Beroende på om du väljer en standardmall eller en anpassad mall visas några eller alla följande egenskaper för mallsidor på fliken Dokument av post, vilket visas i bilden ovan. Ange dessa korrekt:
 
-   Om den anpassade XDP-mallen som du väljer innehåller flera mallsidor visas egenskaperna för de sidorna i **[!UICONTROL content]** i **[!UICONTROL Document of Record]** -fliken.
+* **Logotypbild**: Du kan antingen välja att använda logotypbilden från det adaptiva formuläret, välja en från DAM eller överföra en från datorn.
+* **Formulärtitel**
+* **Sidhuvudstext**
+* **Ansvarsfriskrivning**
+* **Ansvarsfriskrivning**
+* **Ansvarsfriskrivning**
 
-   ![Egenskaper för mallsida](assets/master-page-properties.png)
+  <!--
+    * **Accent Color**: The color in which header text and separator lines are rendered in the document or record PDF
+    * **Font Family**: Font family of the text in the document of record PDF
+    * **For Check Box and Radio Button components, show only the selected values**
+    * **Separator for multiple selected value(s)**
+    * **Include form objects that are not bound to data model**
+    * **Exclude hidden fields from the document of record**
+    * **Hide description of panels**
+    -->
 
-   Mallsidans egenskaper är logotypbild, rubriktext, Formulärtitel, Ansvarsfriskrivning och Ansvarsfriskrivning. Du kan använda anpassningsbara formulär- eller XDP-mallegenskaper på postdokumentet. I AEM Forms används mallegenskaperna som standard på postdokumentet. Du kan också definiera egna värden för mallsidans egenskaper. Mer information om hur du använder flera mallsidor i ett postdokument finns i [Använda flera mallsidor i ett postdokument](#apply-multiple-master-pages-dor).
+  Om den anpassade XDP-mallen som du väljer innehåller flera mallsidor visas egenskaperna för de sidorna i **[!UICONTROL content]** i **[!UICONTROL Document of Record]** -fliken.
 
-   >[!NOTE]
-   >
-   >Om du använder en adaptiv formulärmall som har skapats med en version av Designer före 6.3, för att egenskaperna för accentfärg och teckensnittsfamilj ska fungera, kontrollerar du att följande finns i din adaptiva formulärmall under rotdelformuläret:
+  ![Egenskaper för mallsida](assets/master-page-properties.png)
 
-   ```xml
-   <proto>
-   <font typeface="Arial"/>
-   <fill>
-   <color value="4,166,203"/>
-   </fill>
-   <edge>
-   <color value="4,166,203"/>
-   </edge>
-   </proto>
-   ```
+  Mallsidans egenskaper är logotypbild, rubriktext, Formulärtitel, Ansvarsfriskrivning och Ansvarsfriskrivning. Du kan använda anpassningsbara formulär- eller XDP-mallegenskaper på postdokumentet. I AEM Forms används mallegenskaperna som standard på postdokumentet. Du kan också definiera egna värden för mallsidans egenskaper. Mer information om hur du använder flera mallsidor i ett postdokument finns i [Använda flera mallsidor i ett postdokument](#apply-multiple-master-pages-dor).
+
+  >[!NOTE]
+  >
+  >Om du använder en adaptiv formulärmall som har skapats med en version av Designer före 6.3, för att egenskaperna för accentfärg och teckensnittsfamilj ska fungera, kontrollerar du att följande finns i din adaptiva formulärmall under rotdelformuläret:
+
+  ```xml
+  <proto>
+  <font typeface="Arial"/>
+  <fill>
+  <color value="4,166,203"/>
+  </fill>
+  <edge>
+  <color value="4,166,203"/>
+  </edge>
+  </proto>
+  ```
 
 1. Om du vill spara ändringarna väljer du Klart.
 
@@ -413,8 +417,23 @@ Mer information om hur du använder sidbrytningar och använder flera mallsidor 
 
 **Inställningar för formulärnivå**
 
-* **Inkludera obundna fält i DoR:** När du anger egenskapen inkluderas obundna fält från schemabaserade adaptiva formulär i postdokumentet. Som standard är det sant.
-* **Uteslut fält från DoR om de är dolda:** Ange egenskapen för att exkludera dolda fält från [!UICONTROL Document of Record] när formulär skickas. När du aktiverar [Återvalidera på servern](/help/forms/using/configuring-submit-actions.md#server-side-revalidation-in-adaptive-form-server-side-revalidation-in-adaptive-form)beräknas de dolda fälten på nytt innan de utesluts från [!UICONTROL Document of Record].
+* **[!UICONTROL BASIC]**
+   * **Mall:** Du kan välja mallen Standard eller Egen.
+     ![alt-text](image.png)
+   * **Dekorfärg:** Du kan fördefiniera mallfärgen för [!UICONTROL Document of Record].
+   * **Teckensnittsfamilj:** Välj teckensnittstyp för [!UICONTROL Document of Record] texter.
+   * **Inkludera obundna fält i DoR:** Inställning av egenskapen inkluderar obundna fält från schemabaserade adaptiva formulär i [!UICONTROL Document of Record]. Som standard är det sant.
+   * **Uteslut fält från DoR om de är dolda:** Ange egenskapen för att exkludera dolda fält från [!UICONTROL Document of Record] när formulär skickas. När du aktiverar [Återvalidera på servern](/help/forms/using/configuring-submit-actions.md#server-side-revalidation-in-adaptive-form-server-side-revalidation-in-adaptive-form)beräknas de dolda fälten på nytt innan de utesluts från [!UICONTROL Document of Record]
+* **[!UICONTROL FORM FIELD PROPERTIES]**
+   * Om du kryssar för alternativet **Visa endast de markerade värdena för komponenten Kryssruta och Alternativknapp** genereras DoR-utdata med endast valda värden.
+   * Du kan välja Separator för flera markerade värden eller välja en annan typ av avgränsare.
+   * Justering
+      * Lodrätt
+      * Vågrät
+      * Samma som adaptiv form
+     >[!NOTE]
+     > Lodrät och vågrät justering gäller endast alternativknappar och kryssrutor
+* **[!UICONTROL MASTER PAGE PROPERTIES]** Klicka för mer information om [Egenskaper för mallsida](#master-page-properties-master-page-properties)
 
 ## Använda en sidbrytning i ett postdokument {#apply-page-breaks-in-dor}
 

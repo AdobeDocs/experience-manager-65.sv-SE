@@ -9,9 +9,9 @@ role: Admin, Developer
 feature: Adaptive Forms, Core Components
 exl-id: 9f9b35a3-0479-4179-9fad-994a482c96b6
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: aa8f8ea6ec3787cd1de76a72fe05f0993c2d6b22
 workflow-type: tm+mt
-source-wordcount: '1915'
+source-wordcount: '1933'
 ht-degree: 0%
 
 ---
@@ -35,6 +35,10 @@ AEM 6.5-miljön innehåller följande teman för Core Components based Adaptive 
 * [Tema Canvas](https://github.com/adobe/aem-forms-theme-canvas)
 * [WKND-tema](https://github.com/adobe/aem-forms-theme-wknd)
 * [EASEL-tema](https://github.com/adobe/aem-forms-theme-easel)
+* [FSI-tema](https://github.com/adobe/aem-forms-theme-fsi)
+* [Sjukvårdstema](https://github.com/adobe/aem-forms-theme-healthcare)
+* [Offentligt tema](https://github.com/adobe/aem-forms-theme-public)
+* [Tillverkningstema](https://github.com/adobe/aem-forms-theme-manufacturing)
 
 ## Om temats struktur {#understanding-structure-of-theme}
 
@@ -57,6 +61,8 @@ AEM Forms 6.5 innehåller följande teman för Core Components based Adaptive Fo
 * [Tema Canvas](https://github.com/adobe/aem-forms-theme-canvas)
 * [WKND-tema](https://github.com/adobe/aem-forms-theme-wknd)
 * [EASEL-tema](https://github.com/adobe/aem-forms-theme-easel)
+* [Offentligt tema](https://github.com/adobe/aem-forms-theme-public)
+* [Tillverkningstema](https://github.com/adobe/aem-forms-theme-manufacturing)
 
 Du kan [anpassa något av dessa teman för att skapa ett tema](#customize-a-theme-core-components).
 

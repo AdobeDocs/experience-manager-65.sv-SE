@@ -6,9 +6,9 @@ solution-title: Experience Cloud
 user-guide-description: Läs Adobe Experience Manager 6.5-dokumentationen och se hur det fungerar och vad programmet kan göra för dig.
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM 6.5
-source-git-commit: 79ae35f35d33a072480bd9cde19274d89c8ef903
+source-git-commit: bd661b0a73046e7ccfb07a430983857f753ed442
 workflow-type: tm+mt
-source-wordcount: '7408'
+source-wordcount: '7421'
 ht-degree: 1%
 
 ---
@@ -621,6 +621,8 @@ ht-degree: 1%
       + [Skapa och använda adaptiva Forms-fragment i ett adaptivt formulär](/help/forms/using/adaptive-form-fragment-core-components.md)
       + [Skapa teman för grundkomponentbaserade adaptiva Forms](/help/forms/using/create-or-customize-themes-for-adaptive-forms-core-components.md)
       + [Skapa och använda anpassade funktioner i ett adaptivt formulär](/help/forms/using/create-and-use-custom-functions.md)
+      + [Regelredigeraren](/help/forms/using/rule-editor-core-components.md)
+      + [Skapa och använda anpassade funktioner i en adaptiv Form Core-komponent](/help/forms/using/create-and-use-custom-functions-core-components.md)
       + [Skapa och använd anpassad felhanterare för Core Components-baserade Adaptive Forms](/help/forms/using/add-custom-error-handler-adaptive-forms-core-components.md)
    + Adaptiv Forms - grundläggande redigering {#adaptive-forms-basic-authoring}
       + [Bästa tillvägagångssätt för arbete med anpassningsbara formulär](/help/forms/using/adaptive-forms-best-practices.md)
