@@ -4,20 +4,19 @@ description: Med den anpassningsbara regelredigeraren i Forms kan du lägga till
 feature: Adaptive Forms, Core Components
 role: User
 level: Beginner, Intermediate
-source-git-commit: 7e9b4cc233d4040faf61241b3cbe52d26bfdba1e
+source-git-commit: f633fdfda531cc29ce6274e0367708cc4909a0cd
 workflow-type: tm+mt
-source-wordcount: '5398'
+source-wordcount: '5387'
 ht-degree: 0%
 
 ---
 
 # Lägga till regler i en adaptiv Form Core Components {#adaptive-forms-rule-editor}
 
-<span class="preview"> Den här artikeln innehåller innehåll för vissa förhandsversionsfunktioner. De här förhandsversionsfunktionerna är bara tillgängliga via [kanal för förhandsversion](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/release-notes/release-notes#forms). Funktionerna i förhandsversionen är:
+Den här artikeln innehåller de senaste funktionerna i regelredigeraren i adaptiva Forms Core-komponenter som är:
 * Stöd för implementering av kapslade villkor med&quot;När då-else-funktionen&quot;
 * Validera eller återställ paneler och formulär, inklusive fält
 * Stöd för moderna JavaScript-funktioner som att låta- och pilfunktioner (ES10-stöd) finns i anpassade funktioner.
-</span>
 
 Regelredigeraren gör det lättare för formuläranvändare och utvecklare att skriva regler på adaptiva formulärobjekt. Dessa regler definierar åtgärder som ska utlösas av formulärobjekt baserat på förinställda villkor, användarindata och användaråtgärder i formuläret. Det effektiviserar formulärifyllningen ytterligare och ger större precision och snabbhet.
 
@@ -39,15 +38,15 @@ Användare som lagts till i `forms-power-users` kan skapa skript och redigera be
 
 En regel är en kombination av åtgärder och villkor. I regelredigeraren omfattar åtgärderna aktiviteter som att dölja, visa, aktivera, inaktivera eller beräkna värdet för ett objekt i ett formulär. Villkor är booleska uttryck som utvärderas genom att kontroller och åtgärder utförs på ett formulärobjekts status, värde eller egenskap. Åtgärder utförs baserat på värdet ( `True` eller `False`) returneras genom att ett villkor utvärderas.
 
-Regelredigeraren innehåller en uppsättning fördefinierade regeltyper, till exempel När, Visa, Dölj, Aktivera, Inaktivera, Ange värde för och Validera, som hjälper dig att skriva regler. Med varje regeltyp kan du definiera villkor och åtgärder i en regel. Dokumentet förklarar varje regeltyp ytterligare i detalj.
+Regelredigeraren innehåller en uppsättning fördefinierade regeltyper, till exempel När, Visa, Dölj, Aktivera, Inaktivera, Ange värde för och Validera, som hjälper dig att skriva regler. Med varje regeltyp kan du definiera villkor och åtgärder i en regel. I dokumentet förklaras dessutom varje regeltyp i detalj.
 
 En regel följer vanligtvis någon av följande konstruktioner:
 
 **Condition-Action** I den här konstruktionen definierar en regel först ett villkor följt av en åtgärd som ska utlösas. Konstruktionen är jämförbar med `if-then statement` i programmeringsspråken.
 
-I regelredigeraren **När** regeltypen framtvingar konstruktorn för villkorsåtgärd.
+I regelredigeraren **tillämpar regeltypen When** konstruktionen condition-action.
 
-**Åtgärdsvillkor** I den här konstruktionen definierar en regel först en åtgärd som ska utlösas följt av villkor för utvärdering. En annan variant av den här konstruktionen är action-condition-alternate action, som också definierar en alternativ åtgärd som ska utlösas om villkoret returnerar False.
+**Action-Condition** I den här konstruktionen definierar en regel först en åtgärd som ska utlösas följt av villkor för utvärdering. En annan variant av den här konstruktionen är action-condition-alternate action, som också definierar en alternativ åtgärd som ska utlösas om villkoret returnerar False.
 
 Regeltyperna Visa, Dölj, Aktivera, Inaktivera, Ange värde för och Validera i regelredigeraren framtvingar regeltypen `action-condition` regelkonstruktion. Som standard är den alternativa åtgärden för Visa Dölj och Aktivera Inaktivera, och tvärtom. Du kan inte ändra den alternativa standardåtgärden.
 
@@ -158,15 +157,15 @@ Med regeltypen När kan du till exempel utvärdera ett villkor för olika formul
 
 _
 
-![Tillåtna flera fält i När](/help/forms/using/assets/allowed-multiple-field-when.png)
+![Tillåtna flera fält i](/help/forms/using/assets/allowed-multiple-field-when.png)
 
 
 
 
-##### Att tänka på när du använder funktionen Tillåtna flera fält i When-villkorsfunktionen
+##### Att tänka på när du använder Tillåtna flera fält i villkorsfunktionen
 
-* Se till att [huvudkomponent och specifikationsversion är inställd på den senaste versionen](https://github.com/adobe/aem-core-forms-components/tree/release/650) om du vill använda funktionen i regelredigeraren.
-* Om regler tillämpas på olika fält i villkoret När utlöses regeln även om endast ett av dessa fält ändras.
+* Kontrollera att kärnkomponenten och specifikationsversionen är inställd på [den senaste versionen](https://github.com/adobe/aem-core-forms-components/tree/release/650) för att använda den här funktionen i regelredigeraren.
+* Om regler tillämpas på olika fält i När-villkoret utlöses regeln även om bara ett av dessa fält ändras.
 
 
 <!--
@@ -269,11 +268,7 @@ The **Ange värdet för** regeltypen är inte tillgänglig för alla formulärob
 
 Ange värdet för objekt A till:
 
-(sträng ABC) ELLER
-(objektegenskap X för objekt C) ELLER
-(värde från en funktion) ELLER
-(värde från ett matematiskt uttryck) ELLER
-(utdatavärde för en datamodelltjänst).
+(sträng ABC) ELLER (objektegenskap X för objekt C) ELLER (värde från en funktion) ELLER (värde från ett matematiskt uttryck) ELLER (utdatavärde för en datamodelltjänst),
 
 När (valfritt):
 
@@ -287,9 +282,9 @@ Exempel på regel för att ange värde med tjänsten Formulärdatamodell.
 
 ### [!UICONTROL Show] {#show}
 
-Med hjälp av **[!UICONTROL Show]** regeltypen kan du skriva en regel för att visa eller dölja ett formulärobjekt baserat på om ett villkor är uppfyllt eller inte. Regeltypen Visa utlöser även åtgärden Dölj om villkoret inte uppfylls eller returneras `False`.
+Med hjälp av **[!UICONTROL Show]** regeltypen kan du skriva en regel för att visa eller dölja ett formulärobjekt baserat på om ett villkor är uppfyllt eller inte. Regeltypen Visa utlöser också åtgärden Dölj om villkoret inte uppfylls eller returnerar `False`.
 
-En vanlig Visa-regel är strukturerad på följande sätt:
+En typisk Visa-regel är strukturerad på följande sätt:
 
 `Show Object A;`
 
@@ -465,15 +460,15 @@ Du kan skriva regler med den visuella regelredigeraren <!-- or the code editor. 
 
 Låt oss först titta på hur man skriver regler med visuell redigerare.
 
-### Använda VisualEditor {#using-visual-editor}
+### Använda den visuella redigeraren {#using-visual-editor}
 
-Låt oss förstå hur du skapar en regel i VisualEditor med hjälp av följande exempelformulär.
+Låt oss förstå hur du skapar en regel i den visuella redigeraren med hjälp av följande exempelformulär.
 
-![Skapa-regel-exempel](assets/create-rule-example.png)
+![Create-rule-example](assets/create-rule-example.png)
 
-Avsnittet Lånekrav i exempelformuläret för låneansökan kräver att sökande anger sitt civilstånd, lön och, om de är gifta, sin makes lön. Baserat på användarens indata beräknar regeln beloppet för rätt till lån och visas i fältet Låneberättigande. Använd följande regler för att implementera scenariot:
+Avsnittet Lånekrav i exempelformuläret för låneansökan kräver att sökande anger sitt civilstånd, lön och, om de är gifta, sin makes lön. Baserat på användarindata beräknar regeln låneberättigandebeloppet och visas i fältet Låneberättigande. Använd följande regler för att implementera scenariot:
 
-* Fältet för makens lön visas endast när äktenskapsstatus är gift.
+* Fältet Makes/makas lön visas endast när civilståndet är Gift.
 * Låneberättigandebeloppet är 50 % av den totala lönen.
 
 Så här skriver du regler:
@@ -580,17 +575,17 @@ Så här skriver du regler:
 
    ![write-rules-visual-editor-15](assets/write-rules-visual-editor-15-cc.png)
 
-   I When-instruktionen:
+   I programsatsen When:
 
-   * Markera eller dra och släpp fältet i det första **[!UICONTROL Drop object or select here]** fältet på fliken **[!UICONTROL Marital Status]** Forms-objekt.
+   * Markera eller dra-och-släpp på fliken Forms-objekt på fliken **[!UICONTROL Marital Status]** fält i det första **[!UICONTROL Drop object or select here]** fält.
 
-   * Välj **[!UICONTROL is equal to]** från fältet **[!UICONTROL Select Operator]** .
+   * Välj **[!UICONTROL is equal to]** från **[!UICONTROL Select Operator]** fält.
 
    * Välj Sträng i det andra **[!UICONTROL Drop object or select here]** fältet och ange **[!UICONTROL Married]** i fältet **[!UICONTROL Enter a String]** .
 
-   Regeln visas slutligen på följande sätt i regelredigeraren.  ![write-rules-visual-editor-16](assets/write-rules-visual-editor-16-cc.png)
+   Regeln visas slutligen på följande sätt i regelredigeraren.  ![skriva- regler-visuell-redigerare-16](assets/write-rules-visual-editor-16-cc.png)
 
-1. Välj **[!UICONTROL Done]**. Den sparar regeln.
+1. Välj **[!UICONTROL Done]**. Det sparar regeln.
 
 1. Upprepa steg 7 till 14 för att definiera en annan regel som beräknar låneberättigandet om civilstånd är enkel. Regeln visas så här i regelredigeraren.
 
@@ -870,19 +865,19 @@ När datumet för inteckningen av egendomen som fyllts i av användaren har intr
 
 ![Villkor för datumuttryck](assets/dateexpressioncondition.png)
 
-När det ifyllda datumet är tidigare än det aktuella datumet visas textmeddelandet (Inkomst) i formuläret enligt följande:
+När det ifyllda datumet infaller tidigare än det aktuella datumet visas textmeddelandet (intäkt) enligt följande:
 
-![Villkoret för datumuttryck uppfyllt](assets/dateexpressionconditionmet.png)
+![Datumuttrycksvillkor uppfyllt](assets/dateexpressionconditionmet.png)
 
-## Villkor för nummerjämförelse {#number-comparison-conditions}
+## Nummerjämförelsevillkor {#number-comparison-conditions}
 
 Med regelredigeraren kan du skapa villkor som jämför två tal.
 
 Följande är ett exempelvillkor som visar ett statiskt textobjekt om antalet månader som en sökande bor på den aktuella adressen är mindre än 36.
 
-![Villkor för nummerjämförelse](assets/numbercomparisoncondition.png)
+![Villkor för jämförelse av tal](assets/numbercomparisoncondition.png)
 
-När användaren anger att han/hon bor på den aktuella bostadsadressen i mindre än 36 månader visas ett meddelande i formuläret om att det går att begära fler bosättningsbevis.
+När användaren anger att han eller hon har bott på den nuvarande bostadsadressen i mindre än 36 månader visas ett meddelande på blanketten om att mer bevis på bosättning kan begäras.
 
 ![Fler bevis har begärts](assets/additionalproofrequested.png)
 

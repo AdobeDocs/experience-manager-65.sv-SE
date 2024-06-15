@@ -6,9 +6,9 @@ solution: Experience Manager
 feature: Release Information
 role: User,Admin,Architect,Developer
 exl-id: a52311b9-ed7a-432e-8f35-d045c0d8ea4c
-source-git-commit: 1ba2782fcc81e5090dced4eed83a3a4911676f09
+source-git-commit: e3219d57e069e546b177015e675666a8b927fb49
 workflow-type: tm+mt
-source-wordcount: '3796'
+source-wordcount: '3802'
 ht-degree: 0%
 
 ---
@@ -199,7 +199,7 @@ Nedan följer en lista över tillgänglighetskorrigeringar i den här versionen:
 
 * När en användare försöker visa ett formulär på sidan som läses in, återges det inte. (FORMS-1394)
 * Datumindatafältkomponenten fungerar inte korrekt på Microsoft Edge i kompatibilitetsläget för Internet Explorer. (FORMS-1370)
-* Det gick inte att skicka ett e-postmeddelande med bifogad fil när korrigeringen för [additional-steps-to-use-email-with-attachments](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/forms/troubleshooting/additional-steps-to-use-email-with-attachments) utförs på servern. (FORMS-1427)
+* Det gick inte att skicka ett e-postmeddelande med bifogad fil när korrigeringen för [ytterligare steg för att använda e-post med bilagor](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/forms/troubleshooting/additional-steps-to-use-email-with-attachments) utförs på servern. (FORMS-1427)
 * I AEM Forms Workspace på Service Pack 18 (6.5.18.0) skadas dokumentfilen när en användare kommenterar ett överfört dokument. (FORMS-13735)
 * I AEM Forms Service Pack 18 (6.5.18.0), Service Pack 19 (6.5.19.0) eller Service Pack 20 (6.5.20.0) misslyckas sökningen när en användare försöker söka efter ett anpassat formulär från sidopanelen. (FORMS-14117)
 * När en användare redigerar ett formulär som har skapats på tyska och översatts till engelska, visas ett inkonsekvent språk mellan förhandsgranskningslägena och redigeringsläget. Detta gör att RadioButton- och Checkbox-komponenterna visas på engelska i Edit-läget och visas korrekt på tyska i Preview-läget. (FORMS-13910)
@@ -212,7 +212,7 @@ Nedan följer en lista över tillgänglighetskorrigeringar i den här versionen:
    * Vissa fält kan inte fylla i översatta data.
    * Vissa fält översätts inte till det nya språket trots att data har sparats i ordlistan.
 
-#### [!DNL Forms Designer] {#forms-desgner-6520}
+#### [!DNL Forms Designer] {#forms-desgner-6521}
 
 * När en användare lägger till en ny tabell i ett befintligt formulär med AEM Forms Designer i AEM Forms Service Pack 19 (6.5.19.0) kraschar det. (LC-3921978)
 * När en användare återger ett adaptivt formulär i Linux®-miljö, uppstår ett extra utrymme mellan fältkomponenterna. (LC-3921957)

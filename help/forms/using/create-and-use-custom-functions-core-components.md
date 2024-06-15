@@ -4,22 +4,21 @@ description: AEM Forms stöder anpassade funktioner som gör att användare kan 
 keywords: Lägg till en anpassad funktion, använd en anpassad funktion, skapa en anpassad funktion, använd anpassad funktion i regelredigeraren.
 content-type: reference
 feature: Adaptive Forms, Core Components
-source-git-commit: e7ad5c0149e428265598c806421131fe74fad350
+source-git-commit: f633fdfda531cc29ce6274e0367708cc4909a0cd
 workflow-type: tm+mt
-source-wordcount: '3386'
+source-wordcount: '3377'
 ht-degree: 0%
 
 ---
 
 # Anpassade funktioner i adaptiva Forms Core-komponenter
 
-<span class="preview"> Den här artikeln innehåller innehåll för funktioner i programmet för tidig användning. De här förhandsversionsfunktionerna är bara tillgängliga via [kanal för förhandsversion](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/release-notes/release-notes#forms). Funktionerna i förhandsversionen är:
-<!-- * Optional parameter support in Custom Functions-->
+I den här artikeln beskrivs hur du skapar anpassade funktioner med den senaste adaptiva Form Core-komponenten som har de senaste funktionerna, som:
 * Cachelagringsfunktion för anpassade funktioner
 * Globala omfångsobjekt och fältobjekt har stöd för anpassade funktioner
 * Stöd för moderna JavaScript-funktioner som låt- och pilfunktioner (ES10-stöd)
 
-Ange [senaste formulärversionen](https://github.com/adobe/aem-core-forms-components/tree/release/650) i AEM Forms Core Component-miljön för att använda förhandsversionsfunktionerna i Anpassade funktioner. </span>
+Ange [senaste formulärversionen](https://github.com/adobe/aem-core-forms-components/tree/release/650) i AEM Forms Core Component-miljön så att du kan använda de senaste funktionerna i Anpassade funktioner. </span>
 
 
 | Version | Artikellänk |
