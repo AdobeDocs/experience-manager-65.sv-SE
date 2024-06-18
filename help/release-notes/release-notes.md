@@ -6,9 +6,9 @@ solution: Experience Manager
 feature: Release Information
 role: User,Admin,Architect,Developer
 exl-id: a52311b9-ed7a-432e-8f35-d045c0d8ea4c
-source-git-commit: e3219d57e069e546b177015e675666a8b927fb49
+source-git-commit: 84e56b9e9552903fa210cd680a64c268d5e15626
 workflow-type: tm+mt
-source-wordcount: '3802'
+source-wordcount: '3800'
 ht-degree: 0%
 
 ---
@@ -527,16 +527,15 @@ Du måste lägga till följande egenskaper i indexdefinitionsnoden för att få 
 ### Kända fel för AEM Forms {#known-issues-aem-forms-6521}
 
 
-* När du har installerat AEM Forms JEE Service Pack 21 (6.5.21.0), om du hittar dubblettposter för Geode jars `(geode-*-1.15.1.jar and geode-*-1.15.1.2.jar)` under `<AEM_Forms_Installation>/lib/caching/lib` (FORMS-14926).
+* När du har installerat AEM Forms JEE Service Pack 21 (6.5.21.0), om du hittar dubblettposter för Geode jars `(geode-*-1.15.1.jar and geode-*-1.15.1.2.jar)` under `<AEM_Forms_Installation>/lib/caching/lib` (FORMS-14926) utför du följande steg för att lösa problemet:
 
-  Utför följande steg för att lösa problemet:
+   1. Stoppa positionerarna om de är igång.
+   1. Stoppa AEM.
+   1. Gå till `<AEM_Forms_Installation>/lib/caching/lib`.
+   1. Ta bort alla Geode-korrigeringsfiler utom `geode-*-1.15.1.2.jar`. Bekräfta att det bara är Geode-burkarna med `version 1.15.1.2` är närvarande.
+   1. Öppna kommandotolken i administratörsläge.
+   1. Installera Geode-korrigeringen med `geode-*-1.15.1.2.jar` -fil.
 
-   1. Stoppa positionerarna och servern i den angivna ordningen, om de körs.
-   1. Installera om patchen genom att köra patch-installationsprogrammet i administratörsläge (viktigt).
-   1. Bekräfta att det bara är Geode-burkarna med `version 1.15.1.2` är närvarande.
-
-  >[!NOTE]
-  > Ingen åtgärd krävs om bara Geode-burkarna med `version 1.15.1.2` är närvarande.
 
 ## OSGi-paket och innehållspaket som ingår{#osgi-bundles-and-content-packages-included}
 
