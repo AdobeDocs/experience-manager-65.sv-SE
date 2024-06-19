@@ -7,9 +7,9 @@ feature: Adaptive Forms, Foundation Components, Core Components
 exl-id: 5c75ce70-983e-4431-a13f-2c4c219e8dde
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+source-git-commit: 4637779a38e05b3a88adc644c52e574155cba4b5
 workflow-type: tm+mt
-source-wordcount: '5504'
+source-wordcount: '5538'
 ht-degree: 0%
 
 ---
@@ -63,6 +63,7 @@ Mer information finns i [Skapa AEM projekt med Apache Maven](/help/sites-develop
 När du väl har skapat AEM projekt kan du definiera en strategi för att skapa och anpassa anpassningsbara blankettmallar och komponenter.
 
 * En adaptiv formulärmall är en specialiserad AEM som definierar struktur och sidhuvud/sidfot-information i ett adaptivt formulär. En mall har förkonfigurerade layouter, format och grundstruktur för ett adaptivt formulär. AEM Forms innehåller färdiga mallar och komponenter som du kan använda för att skapa anpassningsbara formulär. Du kan dock skapa egna mallar och komponenter efter behov. Vi rekommenderar att du samlar in krav för ytterligare mallar och komponenter som du behöver i dina adaptiva formulär. Mer information finns i [Anpassa adaptiva formulär och komponenter](/help/forms/using/adaptive-forms-best-practices.md#customize-components).
+* Vi rekommenderar att du överför formulärpaketen med Form Managers användargränssnitt i stället för med CRX Package Manager-gränssnittet, eftersom överföring av paket via CRX Package Manager ibland kan leda till avvikelser.
 * Med AEM Forms kan du skapa anpassningsbara formulär baserade på följande formulärmodeller. Blankettmodellerna fungerar som gränssnitt för datautbyte mellan ett formulär och AEM och ger en XML-baserad struktur för dataflöde både innanför och utanför ett adaptivt formulär. Formulärmodellerna innehåller dessutom regler och begränsningar för anpassningsbara formulär i form av schema- och XFA-begränsningar.
 
    * **Ingen**: Anpassningsbara formulär som skapas med det här alternativet använder inte någon formulärmodell. Data-XML som genereras från sådana formulär har en platt struktur med fält och motsvarande värden.

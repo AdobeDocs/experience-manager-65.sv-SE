@@ -6,9 +6,9 @@ solution: Experience Manager
 feature: Release Information
 role: User,Admin,Architect,Developer
 exl-id: a52311b9-ed7a-432e-8f35-d045c0d8ea4c
-source-git-commit: 84e56b9e9552903fa210cd680a64c268d5e15626
+source-git-commit: 4637779a38e05b3a88adc644c52e574155cba4b5
 workflow-type: tm+mt
-source-wordcount: '3800'
+source-wordcount: '3884'
 ht-degree: 0%
 
 ---
@@ -41,18 +41,22 @@ ht-degree: 0%
 
 <!-- * _6.5.21.0 REVIEWERS: WHAT ARE THE KEY FEATURES AND ENHANCEMENTS THAT YOU WANT TO HIGHLIGHT IN THIS RELEASE?_ -->
 
+### [!DNL Forms]
+
 Några av de viktigaste funktionerna och förbättringarna i den här versionen är följande:
 
-* Ett nytt och enklare att använda autentiseringsuppgifter för server-till-server-autentisering, vilket ersätter de befintliga JWT-autentiseringsuppgifterna (Service Account). (NPR-41994)
-
-* Förbättringar av regelredigeraren i AEM Forms:
+* **Stöd för OAuth-autentiseringsuppgifter**: En ny och enklare att använda autentiseringsuppgifter för server-till-server-autentisering, som ersätter den befintliga JWT-autentiseringsuppgiften (Service Account). (NPR-41994)
+* **Förbättringar av regelredigeraren i AEM Forms**:
    * Stöd för implementering av kapslade villkor med `When-then-else` funktionalitet.
    * Validera eller återställ paneler och formulär, inklusive fält.
    * Stöd för moderna JavaScript-funktioner som att låta- och pilfunktioner (ES10-stöd) finns i de anpassade funktionerna.
-* Autotagg-API för hjälpmedel för PDF: AEM Forms på OSGi har nu stöd för det nya AutoTag-API:t som förbättrar PDF för tillgänglighetsstandarder genom att lägga till taggar: stycken och listor. Det gör PDF mer tillgängligt för användare med hjälpmedel.
-* Stöd för 16-bitars PNG: Tjänsten PDF Generator ImageToPdf har nu stöd för konvertering av PNG-filer med 16-bitars färgdjup.
-* Använd artefakter på enskilda textblock i XDP-filer: nu kan Forms Designer konfigurera inställningar för enskilda textblock i XDP-filer. Med den här funktionen kan du styra de element som behandlas som artefakter i det resulterande PDF. Dessa element, som sidhuvuden och sidfötter, är tillgängliga för hjälpmedelstekniker. De viktigaste funktionerna är att markera textblock som artefakter och att bädda in dessa inställningar i XDP-metadata. Forms Output-tjänsten tillämpar dessa inställningar under PDF-genereringen och ser till att PDF/UA-taggningen är korrekt.
-* AEM Forms Designer är certifierat med `GB18030:2022` standard. Med den här certifieringen stöder nu Forms Designer den kinesiska Unicode-teckenuppsättningen som gör att du kan ange kinesiska tecken i alla redigerbara fält och dialogrutor.
+* **Autotagg-API för hjälpmedel för PDF**: AEM Forms på OSGi har nu stöd för det nya AutoTag-API:t som förbättrar PDF för tillgänglighetsstandarder genom att lägga till taggar: stycken och listor. Det gör PDF mer tillgängligt för användare med hjälpmedel.
+* **Stöd för 16-bitars PNG**: PDF Generator ImageToPdf-tjänsten stöder nu konvertering av PNG-filer med 16-bitars färgdjup.
+* **Tillämpa artefakter på enskilda textblock i XDP-filer**: Forms Designer låter nu användare konfigurera inställningar för enskilda textblock i XDP-filer. Med den här funktionen kan du styra de element som behandlas som artefakter i det resulterande PDF. Dessa element, som sidhuvuden och sidfötter, är tillgängliga för hjälpmedelstekniker. De viktigaste funktionerna är att markera textblock som artefakter och att bädda in dessa inställningar i XDP-metadata. Forms Output-tjänsten tillämpar dessa inställningar under PDF-genereringen och ser till att PDF/UA-taggningen är korrekt.
+* **AEM Forms Designer är certifierat med `GB18030:2022` standard**: Med `GB18030:2022` certifieringen, nu har Forms Designer stöd för den kinesiska Unicode-teckenuppsättningen som gör att du kan ange kinesiska tecken i alla redigerbara fält och dialogrutor.
+* **Stöd för WebToPDF-flöde i JEE Server**: Tjänsten PDF Generator har nu stöd för WebToPDF-vägen för konvertering av HTML-filer till PDF-dokument på JEE, förutom Webkit- och WebCapture-vägarna (endast Windows). Även om WebToPDF-vägen redan är tillgänglig i OSGi har den nu utökats till att även omfatta i JEE. På både JEE- och OSGi-plattformarna stöder tjänsten PDF Generator följande vägar i olika operativsystem:
+   * **Windows**: Webkit, WebCapture, WebToPDF
+   * **Linux**: Webkit, WebToPDF
 
 
 ### [!DNL Assets]

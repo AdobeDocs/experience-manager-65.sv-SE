@@ -10,7 +10,7 @@ feature: HTML5 Forms
 exl-id: 85c9315e-1bc8-44a9-937e-af6fc7cf54d1
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+source-git-commit: 4637779a38e05b3a88adc644c52e574155cba4b5
 workflow-type: tm+mt
 source-wordcount: '2007'
 ht-degree: 0%
@@ -173,7 +173,6 @@ Det finns några vanliga frågor och svar om layout, skriptstöd och HTML5-formu
    Svar: HTML5-formulär har inte stöd för visningsmönster för flytande fält.
 
 1. Vilket format har datumfältet i HTML5 Forms?
-
 Svar: Datumfältet accepterar ISO-formatet ÅÅÅÅ-MM-DD. Om du anger ett datum i något annat format accepterar inte datumfältet formateringen förrän användaren tabbar ut ur fältet.
 
 ### Skript {#scripting}
